@@ -1,5 +1,5 @@
 ---
-title: Scriptgctype – výčet | Dokumentace Microsoftu
+title: Výčet SCRIPTGCTYPE – | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,15 +11,15 @@ caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0a5de3ea949203ad7a6dca0ea777fdbc9514ba6d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7fce16c756cf06c8cf01937114402832570a0cd3
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840236"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574396"
 ---
 # <a name="scriptgctype-enumeration"></a>SCRIPTGCTYPE – výčet
-Typ kolekce paměti k provedení. Používáno [IActiveScriptGarbageCollector::CollectGarbage](../../winscript/reference/iactivescriptgarbagecollector-collectgarbage.md) metody.  
+Typ uvolňování paměti, který má být proveden. Používá se v metodě [iactivescriptgarbagecollector –:: CollectGarbage](../../winscript/reference/iactivescriptgarbagecollector-collectgarbage.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -31,8 +31,8 @@ typedef enum tagSCRIPTGCTYPE {    SCRIPTGCTYPE_NORMAL           = 0,    SCRIPTGC
   
 |||  
 |-|-|  
-|SCRIPTGCTYPE_NORMAL|Normální uvolňování paměti proveďte. Celočíselná hodnota je 0.|  
-|SCRIPTGCTYPE_EXHAUSTIVE|Proveďte úplné uvolňování paměti. Celočíselná hodnota je 1.|  
+|SCRIPTGCTYPE_NORMAL|Proveďte normální uvolňování paměti. Celočíselná hodnota je 0.|  
+|SCRIPTGCTYPE_EXHAUSTIVE|Proveďte vyčerpávající shromažďování paměti. Celočíselná hodnota je 1.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Konstanty, výčty a kódy chyb aktivních skriptů](../../winscript/reference/active-script-constants-enumerations-and-error-codes.md)

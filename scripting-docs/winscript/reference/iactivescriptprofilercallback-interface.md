@@ -1,5 +1,5 @@
 ---
-title: Iactivescriptprofilercallback – rozhraní | Dokumentace Microsoftu
+title: Rozhraní Iactivescriptprofilercallback – | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,35 +11,35 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e8f64f187638af7f9ab4bf6b80e88fe6992c78e6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 9ae520dcb36e00dfaba8702db6294a5a47484b0a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63386079"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571710"
 ---
 # <a name="iactivescriptprofilercallback-interface"></a>IActiveScriptProfilerCallback – rozhraní
-Poskytuje metody, které jsou používány skriptovací stroj objekt profileru upozornit, pokud dojde k událostem. Toto rozhraní je implementováno v objektu profileru.  
+Poskytuje metody, které skriptovací stroj používá k oznamování objektu profileru, když dojde k událostem. Toto rozhraní je implementováno pomocí objektu profileru.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[IActiveScriptProfilerCallback::Initialize](../../winscript/reference/iactivescriptprofilercallback-initialize.md)|Volána k inicializaci objektu profileru pokaždé, když profilace je spuštěna na skriptovacím stroji.|  
-|[IActiveScriptProfilerCallback::Shutdown](../../winscript/reference/iactivescriptprofilercallback-shutdown.md)|Volá se, aby zdarma a uvolnění objektu profileru pokaždé, když je profilování zastaveno na skriptovacím stroji.|  
-|[IActiveScriptProfilerCallback::ScriptCompiled](../../winscript/reference/iactivescriptprofilercallback-scriptcompiled.md)|Profiler upozorní, že objekt, který skriptovací modul kompilaci skriptu.|  
-|[IActiveScriptProfilerCallback::FunctionCompiled](../../winscript/reference/iactivescriptprofilercallback-functioncompiled.md)|Profiler upozorní, že při kompilaci skriptu, který skriptovací modul narazil na funkci.|  
-|[IActiveScriptProfilerCallback::OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)|Upozorní objekt profileru, který skriptovací stroj je před spuštěním volání funkce, která není volání do modelu Document Object Model (DOM).|  
-|[IActiveScriptProfilerCallback::OnFunctionExit](../../winscript/reference/iactivescriptprofilercallback-onfunctionexit.md)|Profiler upozorní, že objekt, dokončení provádění funkce skriptovací stroj volání, které není volání do modelu DOM.|  
+|[IActiveScriptProfilerCallback::Initialize](../../winscript/reference/iactivescriptprofilercallback-initialize.md)|Volá se, aby se inicializoval objekt profileru, když se v skriptovacím modulu spustí profilace.|  
+|[IActiveScriptProfilerCallback::Shutdown](../../winscript/reference/iactivescriptprofilercallback-shutdown.md)|Volá se, aby se uvolnil a uvolnil objekt profileru, když se profilování zastaví na skriptovacím stroji.|  
+|[IActiveScriptProfilerCallback::ScriptCompiled](../../winscript/reference/iactivescriptprofilercallback-scriptcompiled.md)|Upozorní objekt profileru, že skriptovací stroj zkompiluje skript.|  
+|[IActiveScriptProfilerCallback::FunctionCompiled](../../winscript/reference/iactivescriptprofilercallback-functioncompiled.md)|Upozorní objekt profileru, že skriptovací stroj zaznamenal funkci při kompilování skriptu.|  
+|[IActiveScriptProfilerCallback::OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)|Upozorní objekt profileru, že skriptovací stroj provede volání funkce, která není volána do model DOM (Document Object Model) (DOM).|  
+|[IActiveScriptProfilerCallback::OnFunctionExit](../../winscript/reference/iactivescriptprofilercallback-onfunctionexit.md)|Upozorní objekt profileru, že skriptovací modul dokončil provádění volání funkce, které není voláním do modelu DOM.|  
   
 ## <a name="remarks"></a>Poznámky  
- Oznámení o volání funkce do modelu Document Object Model (DOM) poskytuje [iactivescriptprofilercallback2 – rozhraní](../../winscript/reference/iactivescriptprofilercallback2-interface.md).  
+ Oznámení volání funkcí do model DOM (Document Object Model) (DOM) je poskytováno [rozhraním iactivescriptprofilercallback2 –](../../winscript/reference/iactivescriptprofilercallback2-interface.md).  
   
 > [!NOTE]
-> Chcete-li přidat možnost spuštění a zastavení profilování při spuštění skriptu, volání těchto metod. Pomocí těchto metod můžete získat úplný zásobník volání, pokud [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] je spuštěna při spuštění nebo zastavení profilování.  
+> Chcete-li přidat možnost spustit a zastavit profilování při spuštění skriptu, zavolejte následující metody. Pomocí těchto metod můžete získat kompletní zásobník volání, pokud při spuštění nebo zastavení profilování běží [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)].  
 > 
-> - Volání [IActiveScriptProfilerControl2::CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md) pro oznámení profileru, které jste spustili profilace.  
->   - Volání [IActiveScriptProfilerControl2::PrepareProfilerStop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md) pro oznámení profileru, že vám brzy ukončí profilaci.  
+> - Voláním [iactivescriptprofilercontrol2 –:: CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md) upozorněte profileru, že jste spustili profilaci.  
+>   - Zavolejte [iactivescriptprofilercontrol2 –::P repareprofilerstop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md) pro upozorňování profileru, že brzy zastavíte profilaci.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Rozhraní profileru aktivních skriptů](../../winscript/reference/active-script-profiler-interfaces.md)

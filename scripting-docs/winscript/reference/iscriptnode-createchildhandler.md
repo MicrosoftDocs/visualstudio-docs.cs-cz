@@ -1,5 +1,5 @@
 ---
-title: IScriptNode::CreateChildHandler | Dokumentace Microsoftu
+title: 'Iscriptnode –:: CreateChildHandler | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bca8b30021d39638f3755bace2625bb38a44242d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9e024bb7d6a81b35994edddfe9e71666b0ee8df0
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787141"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573603"
 ---
 # <a name="iscriptnodecreatechildhandler"></a>IScriptNode::CreateChildHandler
-Přidá skriptletu jako podřízené instance `IScriptNode`.  
+Přidá skriptletu jako podřízenou instanci `IScriptNode`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,49 +46,49 @@ HRESULT CreateChildHandler(
   
 #### <a name="parameters"></a>Parametry  
  `pszDefaultName`  
- [in] Adresa výchozí název, který chcete přidružit k skriptletu.  
+ pro Adresa výchozího názvu, který se má přidružit k skriptletu.  
   
  `prgpszNames`  
- [v size_is (`cpszNames`)] seznam identifikátorů z plně kvalifikovaný název hostitele.  
+ [in, size_is (`cpszNames`)] Seznam identifikátorů z plně kvalifikovaného názvu na hostiteli.  
   
  `cpszNames`  
- [in] Počet identifikátorů v `prgpszNames` parametru.  
+ pro Počet identifikátorů v parametru `prgpszNames`.  
   
  `pszEvent`  
- [in] Adresa vyrovnávací paměti, která identifikuje název události spojené se skriptletem.  
+ pro Adresa vyrovnávací paměti, která identifikuje název události přidružené k skriptletu.  
   
  `pszDelimiter`  
- [in] Adresa koncového ze skriptu bloku oddělovač. Pro analýzu, hostitel obvykle používá oddělovač (například dvěma jednoduchými uvozovkami), k zjištění konce bloku skriptu.  
+ pro Adresa oddělovače bloku koncových skriptů. Pro účely analýzy hostitel obvykle používá oddělovač (například dvě jednoduché uvozovky) k detekci konce bloku skriptu.  
   
- Oddělovač umožňuje předzpracování skript, modul pro vytváření. Modul může například nahradit jednoduchou uvozovku s dvěma jednoduchými uvozovkami pro použití jako oddělovače. Modul zjistí, jak se používá jako oddělovač.  
+ Oddělovač umožňuje předzpracování modulu vytváření skriptů. Modul může například nahradit jednoduché uvozovky dvěma jednoduchými uvozovkami pro použití jako oddělovač. Modul určuje, jak je oddělovač použit.  
   
- Nastavte na hodnotu NULL, pokud žádný oddělovač slouží k identifikaci konec bloku skriptu.  
+ Nastavte na hodnotu NULL, pokud není použit žádný oddělovač k identifikaci konce bloku skriptu.  
   
  `ptiSignature`  
- [in] Informace o typu objektu funkce.  
+ pro Informace o typu pro objekt funkce.  
   
  `iMethodSignature`  
- [in] Index na funkci `ITypeInfo``ptiSignature` parametru.  
+ pro Index funkce v parametru `ITypeInfo``ptiSignature`.  
   
  `isn`  
- [in] Index pro podřízenou položku v nadřazeném prvku.  
+ pro Index podřízeného objektu v nadřazeném prvku.  
   
  `dwCookie`  
- [in] Aplikaci hodnotu definovanou uživatelem, který slouží k položce přidružit objekt hostitele.  
+ pro Hodnota definovaná aplikací, která se používá k přidružení položky k objektu hostitele.  
   
  `ppse`  
- [out] Adresa proměnné, která přijímá ukazatel `IScriptEntry` rozhraní instance podřízené.  
+ mimo Adresa proměnné, která přijímá ukazatel na `IScriptEntry` rozhraní podřízené instance.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Skriptletu určuje obslužné rutiny události. Tato metoda vytvoří skriptletu, pokud je volán `IScriptNode` objekt, který představuje webovou stránku. Tato metoda neproběhne úspěšně, pokud je volána jinými rozhraními.  
+ Skriptletu určuje obslužnou rutinu události. Tato metoda vytvoří skriptletu, pokud je volána objektem `IScriptNode`, který představuje webovou stránku. Tato metoda není úspěšná, pokud je volána jinými rozhraními.  
   
-## <a name="see-also"></a>Viz také  
- [Iscriptnode – rozhraní](../../winscript/reference/iscriptnode-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iscriptnode –](../../winscript/reference/iscriptnode-interface.md)  
  [IScriptEntry – rozhraní](../../winscript/reference/iscriptentry-interface.md)

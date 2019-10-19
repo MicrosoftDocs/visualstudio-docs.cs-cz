@@ -13,29 +13,29 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 67e16e2825f03c9ae452e639d6a086bee584ac95
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 56b2a749eb3553044bda5816639498a0682e37e0
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992558"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570083"
 ---
 # <a name="iactivescriptsite"></a>IActiveScriptSite
-Implementovat hostitelem pro vytvoření webu pro modul skriptu Windows. Tato lokalita bude obvykle spojené s kontejnerem všechny objekty, které jsou viditelné pro skript (například ovládací prvky ActiveX). Tento kontejner se obvykle odpovídají dokumentu nebo zobrazení stránky. Microsoft Internet Explorer by například vytvořit kontejner, pro každou stránku HTML, který se zobrazí. Každý ActiveX na stránce a skriptovací stroj, ovládací prvek (nebo jiné automatizační objekt) by vyčíslitelné v tomto kontejneru.  
+Implementováno hostitelem za účelem vytvoření webu pro skriptovací stroj Windows Obvykle bude tento web přidružen ke kontejneru všech objektů, které jsou viditelné ke skriptu (například ovládací prvky ActiveX). Obvykle bude tento kontejner odpovídat dokumentu nebo zobrazované stránce. Aplikace Microsoft Internet Explorer například vytvoří takový kontejner pro každou stránku HTML, která je zobrazena. Každý ovládací prvek ActiveX (nebo jiný objekt automatizace) na stránce a samotný skriptovací stroj by byl v rámci tohoto kontejneru vyčíslitelné.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
   
 |||  
 |-|-|  
 |Metoda|Popis|  
-|[IActiveScriptSite::GetLCID](../../winscript/reference/iactivescriptsite-getlcid.md)|Načte identifikátor národního prostředí, kterou hostitel používá pro zobrazení prvků uživatelského rozhraní.|  
-|[IActiveScriptSite::GetItemInfo](../../winscript/reference/iactivescriptsite-getiteminfo.md)|Získá informace o položce, která byla přidána na modul pomocí volání [IActiveScript::AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md) metody.|  
-|[IActiveScriptSite::GetDocVersionString](../../winscript/reference/iactivescriptsite-getdocversionstring.md)|Načte řetězec definované hostitele, který jednoznačně identifikuje aktuální verzi dokumentu z pohledu hostitele.|  
-|[IActiveScriptSite::OnScriptTerminate](../../winscript/reference/iactivescriptsite-onscriptterminate.md)|Volá se při dokončení provádění skriptu.|  
-|[IActiveScriptSite::OnStateChange](../../winscript/reference/iactivescriptsite-onstatechange.md)|Informuje o hostiteli, že skriptovací stroj změnil stavy.|  
-|[IActiveScriptSite::OnScriptError](../../winscript/reference/iactivescriptsite-onscripterror.md)|Informuje o hostiteli, provádění došlo k chybě při spuštění skriptu modulu.|  
-|[IActiveScriptSite::OnEnterScript](../../winscript/reference/iactivescriptsite-onenterscript.md)|Informuje o hostiteli, že byl zahájen skriptovací modul spouští kód skriptu.|  
-|[IActiveScriptSite::OnLeaveScript](../../winscript/reference/iactivescriptsite-onleavescript.md)|Informuje o hostiteli, skriptovací stroj vrátil z spuštěním skriptu kódu.|  
+|[IActiveScriptSite::GetLCID](../../winscript/reference/iactivescriptsite-getlcid.md)|Načte identifikátor národního prostředí, který hostitel používá pro zobrazení prvků uživatelského rozhraní.|  
+|[IActiveScriptSite::GetItemInfo](../../winscript/reference/iactivescriptsite-getiteminfo.md)|Získává informace o položce, která byla přidána do modulu prostřednictvím volání metody [IActiveScript:: AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md) .|  
+|[IActiveScriptSite::GetDocVersionString](../../winscript/reference/iactivescriptsite-getdocversionstring.md)|Načte řetězec definovaný v hostiteli, který jednoznačně identifikuje aktuální verzi dokumentu z pohledu hostitele.|  
+|[IActiveScriptSite::OnScriptTerminate](../../winscript/reference/iactivescriptsite-onscriptterminate.md)|Volá se po dokončení provádění skriptu.|  
+|[IActiveScriptSite::OnStateChange](../../winscript/reference/iactivescriptsite-onstatechange.md)|Informuje hostitele o změně stavů skriptovacího stroje.|  
+|[IActiveScriptSite::OnScriptError](../../winscript/reference/iactivescriptsite-onscripterror.md)|Informuje hostitele o tom, že došlo k chybě spuštění, když modul spustil skript.|  
+|[IActiveScriptSite::OnEnterScript](../../winscript/reference/iactivescriptsite-onenterscript.md)|Informuje hostitele, že skriptovací modul začal spouštět kód skriptu.|  
+|[IActiveScriptSite::OnLeaveScript](../../winscript/reference/iactivescriptsite-onleavescript.md)|Informuje hostitele o tom, že skriptovací stroj vrátil spouštěcí kód skriptu.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Rozhraní aktivních skriptů](../../winscript/reference/active-script-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteWindow::EnableModeless | Dokumentace Microsoftu
+title: 'IActiveScriptSiteWindow:: EnableModeless | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4f15135273b98a65903a5d03de87c541fc032cce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 756bda6209b6209ff14f6d67fef18faaed0b5618
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992923"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574129"
 ---
 # <a name="iactivescriptsitewindowenablemodeless"></a>IActiveScriptSiteWindow::EnableModeless
-Způsobí, že hostitel k povolení nebo zakázání její hlavní okno, stejně jako všechna nemodální dialogová okna.  
+Způsobí, že hostitel povolí nebo zakáže hlavní okno a také všechna nemodální dialogová okna.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,15 +37,15 @@ HRESULT EnableModeless(
   
 #### <a name="parameters"></a>Parametry  
  `fEnable`  
- [in] Příznak, který, pokud `TRUE`, umožňuje hlavní okno a nemodální dialogová okna nebo pokud `FALSE`, zakazuje je.  
+ pro Příznak, který, pokud `TRUE`, povolí hlavní okno a nemodální dialogová okna nebo, pokud `FALSE`, je zakáže.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` v případě úspěšného ověření nebo `E_FAIL` Pokud došlo k chybě.  
+ Vrátí `S_OK`, pokud bylo úspěšné, nebo `E_FAIL`, pokud došlo k chybě.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je stejné jako `IOleInPlaceFrame::EnableModeless` metody.  
+ Tato metoda je shodná s metodou `IOleInPlaceFrame::EnableModeless`.  
   
- Volání této metody mohou být vnořené.  
+ Volání této metody lze vnořovat.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScriptSiteWindow](../../winscript/reference/iactivescriptsitewindow.md)

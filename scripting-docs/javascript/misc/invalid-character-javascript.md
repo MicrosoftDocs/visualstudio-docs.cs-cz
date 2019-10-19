@@ -1,5 +1,5 @@
 ---
-title: Neplatný znak (JavaScript) | Dokumentace Microsoftu
+title: Neplatný znak (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,27 +14,27 @@ ms.assetid: b6a54a93-7fc9-459a-bdd6-f42d1ce40b5f
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6ec548ff629663e647d2d153ff87caa4edb1dd21
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 267dcc5af0870132a14c679c7fc26589d6b776c9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007136"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576576"
 ---
 # <a name="invalid-character-javascript"></a>Neplatný znak (JavaScript)
-Složený identifikátor pomocí znak (nebo znaky) nebyl rozpoznán jako platný podle [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] kompilátoru. Platné znaky se používají následující pravidla:  
+Zavedli jste identifikátor pomocí znaku (nebo znaků), který není rozpoznán jako platný kompilátorem [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]. Platné znaky používají následující pravidla:  
   
-- První znak musí být písmeno ASCII (velká nebo malá písmena) nebo podtržítko (_).  
+- První znak musí být písmeno ASCII (velká a malá písmena) nebo podtržítko (_).  
   
-- Následující znaky mohou být písmena, čísla nebo podtržítka ASCII.  
+- Další znaky můžou být písmena ASCII, číslice nebo podtržítka.  
   
-- Název identifikátoru nemůže být vyhrazené slovo.  
+- Název identifikátoru nemůže být rezervované slovo.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Vyhněte se použití znaky, které nejsou součástí [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] definice jazyka.  
+- Vyhněte se použití znaků, které nejsou součástí definice [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] jazyka.  
   
-## <a name="see-also"></a>Viz také  
- [Proměnné](../../javascript/variables-javascript.md)   
- [Speciální znaky](../../javascript/advanced/special-characters-javascript.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [proměnných](../../javascript/variables-javascript.md)  
+ @No__t_1 [speciálních znaků](../../javascript/advanced/special-characters-javascript.md)  
  [Datové typy](../../javascript/data-types-javascript.md)

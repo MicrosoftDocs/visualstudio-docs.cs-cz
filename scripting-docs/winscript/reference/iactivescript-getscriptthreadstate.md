@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::GetScriptThreadState | Dokumentace Microsoftu
+title: 'IActiveScript:: GetScriptThreadState | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a0066894830c111a8e0ad18f7acdc09d6114162e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 38f6ef4b0acdf6e3b746316bef8abe9a3f0f8225
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935604"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72578012"
 ---
 # <a name="iactivescriptgetscriptthreadstate"></a>IActiveScript::GetScriptThreadState
 Načte aktuální stav vlákna skriptu.  
@@ -38,27 +38,27 @@ HRESULT GetScriptThreadState(
   
 #### <a name="parameters"></a>Parametry  
  `stidThread`  
- [in] Identifikátor vlákna, pro který je požadován stavu, nebo jednu z následujících identifikátorů speciální vlákna:  
+ pro Identifikátor vlákna, pro které je stav požadován, nebo jeden z následujících speciálních identifikátorů vláken:  
   
 |Hodnota|Význam|  
 |-----------|-------------|  
-|SCRIPTTHREADID_BASE|Základní podprocesu. To znamená, že byla vytvořena instance vláken, ve kterém skriptovací stroje.|  
-|SCRIPTTHREADID_CURRENT|Aktuálně spuštěné vlákno.|  
+|SCRIPTTHREADID_BASE|Základní vlákno; To znamená vlákno, ve kterém se vytvořila instance skriptovacího stroje.|  
+|SCRIPTTHREADID_CURRENT|Aktuálně prováděné vlákno.|  
   
  `pstsState`  
- [out] Adresa proměnné, která přijímá stav označený vlákna. Stav je indikován jednu s názvem konstantní hodnoty, které jsou definované [scriptthreadstate – výčet](../../winscript/reference/scriptthreadstate-enumeration.md) výčtu. Pokud tento parametr identifikuje aktuální vlákno, může kdykoli změnit stav.  
+ mimo Adresa proměnné, která přijímá stav určeného vlákna. Stav je označen jednou z pojmenovaných konstantních hodnot definovaných výčtem [výčtu scriptthreadstate –](../../winscript/reference/scriptthreadstate-enumeration.md) . Pokud tento parametr neidentifikuje aktuální vlákno, stav se může kdykoli změnit.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
 |Návratová hodnota|Význam|  
 |------------------|-------------|  
-|`S_OK`|Úspěch.|  
+|`S_OK`|Nástup.|  
 |`E_POINTER`|Byl zadán neplatný ukazatel.|  
-|`E_UNEXPECTED`|Volání nebylo očekáváno (například skriptovací stroj má ještě nebyly načteny nebo inicializován).|  
+|`E_UNEXPECTED`|Volání nebylo očekáváno (například skriptovací stroj ještě nebyl načten nebo inicializován).|  
   
 ## <a name="remarks"></a>Poznámky  
- Tuto metodu lze volat z vlákna znaky bez výsledkem znaky popisek hostitele objektů nebo [iactivescriptsite –](../../winscript/reference/iactivescriptsite.md) rozhraní.  
+ Tuto metodu lze volat z nezákladních vláken, aniž by došlo k nezákladnímu popisku pro hostování objektů nebo rozhraní [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md) .  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScript](../../winscript/reference/iactivescript.md)

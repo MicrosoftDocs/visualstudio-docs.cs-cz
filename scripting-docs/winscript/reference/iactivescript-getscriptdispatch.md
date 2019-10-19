@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::GetScriptDispatch | Dokumentace Microsoftu
+title: 'IActiveScript:: GetScriptDispatch | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c329a4dbf42461369441b86f6d9ba18992916366
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ba53f2eccde18bd5b2d9c609ea680b50cb7261c9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935595"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575751"
 ---
 # <a name="iactivescriptgetscriptdispatch"></a>IActiveScript::GetScriptDispatch
-Načte `IDispatch` rozhraní pro metody a vlastnosti přidružené k aktuálně spuštěného skriptu.  
+Načte rozhraní `IDispatch` pro metody a vlastnosti přidružené k aktuálně běžícímu skriptu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,24 +38,24 @@ HRESULT GetScriptDispatch(
   
 #### <a name="parameters"></a>Parametry  
  `pstrItemName`  
- [in] Adresa vyrovnávací paměti, který obsahuje název položky, pro který volající potřebuje objekt přidružený odeslání. Pokud je tento parametr `NULL`, odeslání objekt obsahuje členy všechny globální metody a vlastnosti definované ve skriptu. Prostřednictvím `IDispatch` rozhraní a přidružených `ITypeInfo` rozhraní, můžete hostitele vyvolání metody skriptů nebo zobrazení a úpravám proměnných skriptu.  
+ pro Adresa vyrovnávací paměti obsahující název položky, pro kterou volající potřebuje přidružený objekt dispatch. Pokud je tento parametr `NULL`, objekt Dispatch obsahuje jako členy všechny globální metody a vlastnosti definované skriptem. Prostřednictvím rozhraní `IDispatch` a přidruženého rozhraní `ITypeInfo` může hostitel vyvolat metody skriptu nebo zobrazit a upravit proměnné skriptu.  
   
  `ppdisp`  
- [out] Adresa proměnné, která přijímá ukazatel na objekt přidružený ke skriptu globální metody a vlastnosti. Pokud skriptovací modul nepodporuje takový objekt `NULL` je vrácena.  
+ mimo Adresa proměnné, která přijímá ukazatel na objekt přidružený k globálním metodám a vlastnostem skriptu. Pokud skriptovací stroj takový objekt nepodporuje, `NULL` se vrátí.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
 |Návratová hodnota|Význam|  
 |------------------|-------------|  
-|`S_OK`|Úspěch.|  
+|`S_OK`|Nástup.|  
 |`E_INVALIDARG`|Argument byl neplatný.|  
 |`E_POINTER`|Byl zadán neplatný ukazatel.|  
-|`E_UNEXPECTED`|Volání nebylo očekáváno (například skriptovací stroj má ještě nebyly načteny nebo inicializován).|  
-|`S_FALSE`|Skriptovací modul nepodporuje odesílání objektu. `ppdisp` parametr je nastaven na hodnotu NULL.|  
+|`E_UNEXPECTED`|Volání nebylo očekáváno (například skriptovací stroj ještě nebyl načten nebo inicializován).|  
+|`S_FALSE`|Skriptovací stroj nepodporuje objekt Dispatch; parametr `ppdisp` je nastaven na hodnotu NULL.|  
   
 ## <a name="remarks"></a>Poznámky  
- Protože metody a vlastnosti lze přidat pomocí volání [IActiveScriptParse –](../../winscript/reference/iactivescriptparse.md) rozhraní, `IDispatch` rozhraní vrácený touto metodou dynamicky podporují nové metody a vlastnosti. Podobně platí `IDispatch::GetTypeInfo` metoda by měla vrátit nové, jedinečné `ITypeInfo` rozhraní po přidání metody a vlastnosti. Pamatujte však, že nesmí změnit jazykové moduly `IDispatch` rozhraní způsobem, který je nekompatibilní s žádným předchozí `ITypeInfo` vrácené rozhraní. To znamená, například, že hodnoty dispID bude nikdy znovu použita.  
+ Vzhledem k tomu, že metody a vlastnosti lze přidat voláním rozhraní [IActiveScriptParse](../../winscript/reference/iactivescriptparse.md) , může rozhraní `IDispatch` vrácené touto metodou dynamicky podporovat nové metody a vlastnosti. Podobně by metoda `IDispatch::GetTypeInfo` měla vracet nové jedinečné rozhraní `ITypeInfo`, když jsou přidány metody a vlastnosti. Upozorňujeme však, že tyto jazykové moduly nesmí měnit rozhraní `IDispatch` způsobem, který je nekompatibilní s jakýmkoli předchozím vráceným rozhraním `ITypeInfo`. Což implikuje například, že by se identifikátory SPID nikdy znovu nepoužily.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScript](../../winscript/reference/iactivescript.md)

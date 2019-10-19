@@ -1,5 +1,5 @@
 ---
-title: IEnumRemoteDebugApplications::Clone | Dokumentace Microsoftu
+title: 'Ienumremotedebugapplications –:: Clone | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 06b2eac008b0bccc3d0671e15658b5a189b5dcaa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0e8007505c6e7c4bc4c881b07c5247f0647824bc
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963270"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572009"
 ---
 # <a name="ienumremotedebugapplicationsclone"></a>IEnumRemoteDebugApplications::Clone
-Vytvoří čítač, který obsahuje stejného stavu jako aktuální enumerátor.  
+Vytvoří enumerátor, který obsahuje stejný stav jako aktuální enumerátor.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +37,17 @@ HRESULT Clone(
   
 #### <a name="parameters"></a>Parametry  
  `ppessd`  
- [out] Klon enumerátor.  
+ mimo Klon výčtu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda vytvoří enumerátor, který obsahuje stejného stavu jako aktuální enumerátor.  
+ Tato metoda vytvoří enumerátor, který obsahuje stejný stav jako aktuální enumerátor.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IEnumRemoteDebugApplications – rozhraní](../../winscript/reference/ienumremotedebugapplications-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Windows Script hostitele | Dokumentace Microsoftu
+title: Hostitelé Windows Script hostí | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,32 +13,32 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: eec1824bd3ba1a8acb7e3c540656151cd4b11d1f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8468f578ee44487acd2575e81e01d65969110437
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840041"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72568809"
 ---
 # <a name="windows-script-hosts"></a>Moduly Windows Script Host
-Při implementaci Microsoft Windows Script host, můžete bezpečně předpokládat, že skriptovací stroj jen volá [iactivescriptsite –](../winscript/reference/iactivescriptsite.md) rozhraní v kontextu základní vlákna tak dlouho, dokud hostitel provede následující akce:  
+Při implementaci programu Microsoft Windows Script Host můžete bezpečně předpokládat, že skriptovací stroj volá pouze rozhraní [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) v kontextu základního vlákna, dokud hostitel provede následující:  
   
-- Vybere základní podprocesu (obvykle vlákna, která obsahuje smyčky zpráv).  
+- Zvolí základní vlákno (obvykle vlákno, které obsahuje smyčku zpráv).  
   
-- Vytvoří instanci skriptovací stroj v základní vlákna.  
+- Vytvoří instanci skriptovacího stroje v základním vlákně.  
   
-- Volání skriptovací stroj metody pouze ze základní vlákna, s výjimkou tam, kde konkrétně, stejně jako v případě [IActiveScript::InterruptScriptThread](../winscript/reference/iactivescript-interruptscriptthread.md) a [IActiveScript::Clone](../winscript/reference/iactivescript-clone.md).  
+- Volá metody skriptovacího stroje pouze ze základního vlákna s výjimkou případů, kdy je to výslovně povoleno, jako v případě [IActiveScript:: InterruptScriptThread](../winscript/reference/iactivescript-interruptscriptthread.md) a [IActiveScript:: Clone](../winscript/reference/iactivescript-clone.md).  
   
-- Objekt odeslání skriptovací stroj volá pouze z základní vlákna.  
+- Volá objekt pro odeslání skriptovacího stroje ze základního vlákna.  
   
-- Zajistíte, že smyčka zpráv spustí v základní vlákna, pokud je zadaný popisovač okna.  
+- Zajistí, že se smyčka zpráv spustí v základním vlákně, pokud je k dispozici popisovač okna.  
   
-- Zajišťuje, že objekty v hostitelově objektu modelu pouze zdroj události v základní vlákna.  
+- Zajišťuje, aby objekty v objektovém modelu hostitele byly pouze zdrojovými událostmi v základním vlákně.  
   
-  Tato pravidla jsou automaticky následovaný všichni hostitelé s jedním vláknem. S omezeným přístupem modelu popsaného výše je záměrně dojde ke ztrátě dostatečně umožňující hostitele pro přerušení zablokované skript voláním [IActiveScript::InterruptScriptThread](../winscript/reference/iactivescript-interruptscriptthread.md) z jiného vlákna (iniciovaných obslužnou rutinu CTRL + BREAK nebo podobné), nebo do adresáře duplicitní skript v nové vlákno s použitím [IActiveScript::Clone](../winscript/reference/iactivescript-clone.md).  
+  Tato pravidla jsou automaticky následována všemi hostiteli s jedním vláknem. Výše popsaný model s omezením je záměrně uvolněn dostatečně, aby mohl hostitel přerušit zablokovaný skript voláním [IActiveScript:: InterruptScriptThread](../winscript/reference/iactivescript-interruptscriptthread.md) z jiného vlákna (iniciovaná obslužnou rutinou Ctrl + Break nebo like), nebo pro duplikaci skriptu v nové vlákno s použitím [IActiveScript:: Clone](../winscript/reference/iactivescript-clone.md).  
   
 ## <a name="remarks"></a>Poznámky  
- Žádná z těchto omezení platí pro hostitele, který vybere k implementaci volných vláken [iactivescriptsite –](../winscript/reference/iactivescriptsite.md) rozhraní a volných vláken objektový model. Můžete použít takový hostitel [IActiveScript –](../winscript/reference/iactivescript.md) rozhraní z libovolného vlákna bez omezení.  
+ Žádná z těchto omezení se nevztahují na hostitele, který se rozhodne implementovat rozhraní [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) s volnými vlákny a objektový model s volnými vlákny. Takový hostitel může používat rozhraní [IActiveScript](../winscript/reference/iactivescript.md) z libovolného vlákna bez omezení.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Skriptovací rozhraní systému Windows](../winscript/windows-script-interfaces.md)

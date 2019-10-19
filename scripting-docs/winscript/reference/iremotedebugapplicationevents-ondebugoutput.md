@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationEvents::OnDebugOutput | Dokumentace Microsoftu
+title: 'Iremotedebugapplicationevents –:: OnDebugOutput | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2c7f4c6572a7b06a8ab0ca78419b0bd6518f0e55
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 34b03f65dd25afdab5f438bcddb6dd0b7711644f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974459"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572738"
 ---
 # <a name="iremotedebugapplicationeventsondebugoutput"></a>IRemoteDebugApplicationEvents::OnDebugOutput
 Zpracovává událost výstupu ladicího programu.  
@@ -37,17 +37,17 @@ HRESULT OnDebugOutput(
   
 #### <a name="parameters"></a>Parametry  
  `pstr`  
- [in] Výstupní řetězec debug.  
+ pro Výstupní řetězec ladění.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda zpracovává událost výstupu ladicího programu.  
+ Tato metoda zpracovává výstupní událost ladicího programu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IRemoteDebugApplicationEvents – rozhraní](../../winscript/reference/iremotedebugapplicationevents-interface.md)

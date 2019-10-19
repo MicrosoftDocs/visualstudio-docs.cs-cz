@@ -1,5 +1,5 @@
 ---
-title: IDispError::GetHelpInfo | Dokumentace Microsoftu
+title: 'Idisperror –:: GetHelpInfo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fa831ff511ea507e03ca858b93383ff38ead9039
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a84e57e97bb781ad3ea0be1ac6766fd94f6f5c30
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446912"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573131"
 ---
 # <a name="idisperrorgethelpinfo"></a>IDispError::GetHelpInfo
-Vrátí cestu k souboru nápovědy a ID kontextu témat, která popisuje chybu, pokud je to možné.  
+Vrátí cestu k souboru nápovědy a ID kontextu tématu, které tuto chybu vysvětluje, pokud je to možné.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,26 +38,26 @@ HRESULT GetHelpInfo(
   
 #### <a name="parameters"></a>Parametry  
  `pbstrFileName`  
- [out] Řetězec, který obsahuje plně kvalifikovanou cestu souboru nápovědy. Pokud není dostupný žádný soubor nápovědy nebo dojde k chybě, vrácená hodnota je NULL.  
+ mimo Řetězec obsahující plně kvalifikovanou cestu k souboru s příponou. Pokud není k dispozici žádný soubor Help nebo dojde k chybě, vrácená hodnota je NULL.  
   
  `pdwContext`  
- [out] ID kontextové nápovědy k chybě. Pokud není dostupný žádný soubor nápovědy (Pokud `pbstrFileName` má hodnotu NULL), tento parametr nemá žádný význam.  
+ mimo ID kontextu nápovědu pro chybu. Pokud není k dispozici žádný soubor s nápovědě (Pokud `pbstrFileName` je NULL), nemá tento parametr žádný význam.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
-|`E_FAIL`|Došlo k chybě specifické pro zprostředkovatele.|  
-|`E_INVALIDARG`|`pbstrFileName` nebo `pdwContext` byla NULL.|  
-|`E_OUTOFMEMORY`|Zprostředkovatel nemohl přidělit paměť ke vrácení cesta k souboru nápovědy.|  
+|`E_FAIL`|Došlo k chybě specifické pro určitého poskytovatele.|  
+|`E_INVALIDARG`|`pbstrFileName` nebo `pdwContext` měla hodnotu NULL.|  
+|`E_OUTOFMEMORY`|Zprostředkovateli se nepovedlo přidělit dostatek paměti, ve kterém se má vrátit cesta k souboru v nápovědě.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda vrátí cestu k souboru nápovědy a ID kontextu témat, která popisuje chybu, pokud je to možné.  
+ Tato metoda vrátí cestu k souboru nápovědy a ID kontextu tématu, které chybu vysvětluje, pokud je to možné.  
   
 > [!NOTE]
 > Tato metoda není implementována.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDispError – rozhraní](../../winscript/reference/idisperror-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Text_document_array – struktura | Dokumentace Microsoftu
+title: Struktura TEXT_DOCUMENT_ARRAY | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,15 +13,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9d188729b68f8086da62d40ca28fc29945c8be7f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b52b382aa1e91e509672728a3c8f931bfeae27a9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840054"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572973"
 ---
-# <a name="textdocumentarray-structure"></a>TEXT_DOCUMENT_ARRAY – struktura
-Pole [idebugdocumenttext – rozhraní](../../winscript/reference/idebugdocumenttext-interface.md) objekty. Členy jsou přiděleny s CoTaskMemAlloc.  
+# <a name="text_document_array-structure"></a>TEXT_DOCUMENT_ARRAY – struktura
+Pole objektů [rozhraní IDebugDocumentText –](../../winscript/reference/idebugdocumenttext-interface.md) . Členové jsou přiděleni pomocí CoTaskMemAlloc.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ typedef struct tagTEXT_DOCUMENT_ARRAY{    DWORD dwCount;    [size_is(dwCount)] I
  Počet dokumentů.  
   
  `Members`  
- Sadu dokumentů.  
+ Sada dokumentů.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Konstanty, výčty a struktury ladicího programu aktivních skriptů](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

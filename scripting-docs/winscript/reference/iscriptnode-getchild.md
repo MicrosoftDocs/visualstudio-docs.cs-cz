@@ -1,5 +1,5 @@
 ---
-title: IScriptNode::GetChild | Dokumentace Microsoftu
+title: 'Iscriptnode –:: getpodřízená | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 78b5c84c6ed9b3de9593f0d6ff02df93a0e9ba77
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 27ddde527be1ea4148e4166581ab2cb1a71d15f7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787127"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573556"
 ---
 # <a name="iscriptnodegetchild"></a>IScriptNode::GetChild
-Vrací podřízeného, který je k zadanému indexu v uzlu.  
+Vrátí podřízenou položku, která se nachází na zadaném indexu v uzlu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,24 +38,24 @@ HRESULT GetChild(
   
 #### <a name="parameters"></a>Parametry  
  `isn`  
- [in] Index pro podřízenou položku v nadřazeném prvku.  
+ pro Index podřízeného objektu v nadřazeném prvku.  
   
  `ppsn`  
- [out] Adresa proměnné, která přijímá ukazatel `IScriptNode` rozhraní instance podřízené.  
+ mimo Adresa proměnné, která přijímá ukazatel na `IScriptNode` rozhraní podřízené instance.  
   
- Pro `IScriptNode` objekty, které představují webové stránky, tento parametr vrátí objekt, který obsahuje blok skriptu.  
+ U `IScriptNode` objektů, které reprezentují webovou stránku, vrátí tento parametr objekt, který obsahuje blok skriptu.  
   
- Pro `IScriptEntry` objekty, které určují blok skriptu, vrátí objekt, který určuje funkci, která tento parametr.  
+ Pro `IScriptEntry` objekty, které určují blok skriptu, tento parametr vrátí objekt, který určuje funkci.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pro `IScriptEntry` objekty, které určují objekt funkce a `IScriptScriptlet` objekty, tato metoda se nezdaří, protože neobsahuje žádné podřízené položky.  
+ Pro `IScriptEntry` objekty, které určují objekt funkce a pro `IScriptScriptlet` objekty, tato metoda se nezdařila, protože neexistují žádné podřízené položky.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IScriptNode – rozhraní](../../winscript/reference/iscriptnode-interface.md)

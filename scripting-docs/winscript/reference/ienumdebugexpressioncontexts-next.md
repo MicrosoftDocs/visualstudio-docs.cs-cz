@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugExpressionContexts::Next | Dokumentace Microsoftu
+title: 'Ienumdebugexpressioncontexts –:: Next | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5128ba9ac90fc99cfec81b2c81711547947bfa49
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 95314c7497a9b11be51d1e64df0310323300d281
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62807348"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577152"
 ---
 # <a name="ienumdebugexpressioncontextsnext"></a>IEnumDebugExpressionContexts::Next
-Načte zadaný počet segmentů v pořadí výčtu.  
+Načte zadaný počet segmentů v sekvenci výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,23 +39,23 @@ HRESULT Next(
   
 #### <a name="parameters"></a>Parametry  
  `celt`  
- [in] Počet segmentů, pro načtení.  
+ pro Počet segmentů, které se mají načíst.  
   
  `ppdec`  
- [out] Vrátí pole `IDebugExpressionContext` rozhraní, která představuje segmenty načítají.  
+ mimo Vrátí pole `IDebugExpressionContext` rozhraní, které představují segmenty, které jsou načítány.  
   
  `pceltFetched`  
- [out] Skutečný počet segmentů získaný enumerátor.  
+ mimo Skutečný počet segmentů načtených enumerátorem.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda načte zadaný počet segmentů v pořadí výčtu.  
+ Tato metoda načte zadaný počet segmentů v sekvenci výčtu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IEnumDebugExpressionContexts – rozhraní](../../winscript/reference/ienumdebugexpressioncontexts-interface.md)

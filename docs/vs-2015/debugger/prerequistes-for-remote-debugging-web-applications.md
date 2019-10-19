@@ -1,5 +1,5 @@
 ---
-title: Předpoklady pro vzdálené ladění webových aplikací | Dokumentace Microsoftu
+title: Předpoklady pro vzdálené ladění webových aplikací | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,22 +18,22 @@ caps.latest.revision: 30
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c13cfdeb90fae554479c7dc8a68261f40bc4cfc6
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: c8cbf0ae920be00980d270aae16d5e7d1f7a5313
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65690102"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574631"
 ---
-# <a name="prerequistes-for-remote-debugging-web-applications"></a>Předpoklady pro vzdálené ladění webových aplikací
+# <a name="prerequisites-for-remote-debugging-web-applications"></a>Předpoklady pro vzdálené ladění webových aplikací
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-S [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ladicího programu, můžete ladit webové aplikace transparentně na místním počítači nebo na vzdálený server. To znamená, že funkce ladicího programu stejným způsobem a umožňuje použití stejných funkcí na oba počítače. Pro vzdálené ladění fungovala správně, ale existují některé požadavky.  
+Pomocí ladicího programu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] můžete webovou aplikaci transparentně ladit na místním počítači nebo na vzdáleném serveru. To znamená, že ladicí program funguje stejným způsobem a umožňuje používat stejné funkce na každém počítači. Aby vzdálené ladění fungovalo správně, existují ale nějaké požadavky.  
   
-- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] komponenty vzdáleného ladění musí být nainstalován na serveru, který chcete ladit. Další informace najdete v tématu [nastavení do vzdáleného ladění](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c).  
+- na serveru, který chcete ladit, musí být nainstalované komponenty vzdáleného ladění [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Další informace najdete v tématu [Nastavení vzdáleného ladění](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c).  
   
-- Ve výchozím nastavení [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovní proces spuštěn jako proces ASPNET uživatele. V důsledku toho musí mít oprávnění správce na počítači kde [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] spuštění pro ladění. Název [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovní proces se liší podle scénáře ladění a verze služby IIS. Další informace najdete v tématu [jak: Hledání názvu procesu ASP.NET](../debugger/how-to-find-the-name-of-the-aspnet-process.md).  
+- Ve výchozím nastavení se pracovní proces [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] spouští jako proces uživatele ASPNET. V důsledku toho musíte mít v počítači, na kterém [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] spouští k ladění, oprávnění správce. Název pracovního procesu [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] se liší podle scénáře ladění a verze služby IIS. Další informace najdete v tématu [Postupy: hledání názvu procesu ASP.NET](../debugger/how-to-find-the-name-of-the-aspnet-process.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Ladění aplikací ASP.NET a AJAX](../debugger/debugging-aspnet-and-ajax-applications.md)   
+ [Ladění aplikací ASP.NET a AJAX](../debugger/debugging-aspnet-and-ajax-applications.md)    
  [Požadavky na systém](../debugger/aspnet-debugging-system-requirements.md)

@@ -1,5 +1,5 @@
 ---
-title: IMachineDebugManagerEvents::onAddApplication | Dokumentace Microsoftu
+title: 'Imachinedebugmanagerevents –:: onAddApplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f063e36296d6a5a77208bac2fe533274a6f9c07f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fe710ce9a126e344fc88024b7bf5fd2b993e31b3
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62965787"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576106"
 ---
 # <a name="imachinedebugmanagereventsonaddapplication"></a>IMachineDebugManagerEvents::onAddApplication
-Zpracovává událost, když aplikace se přidá do běhu seznamu aplikací.  
+Zpracovává událost při přidání aplikace do seznamu běžící aplikace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,21 +38,21 @@ HRESULT onAddApplication(
   
 #### <a name="parameters"></a>Parametry  
  `pda`  
- [in] Aplikace, která byla přidána do běhu seznamu aplikací.  
+ pro Aplikace, která se přidala do seznamu běžící aplikace  
   
  `dwAppCookie`  
- [in] Soubor cookie k dispozici při přidání aplikace do seznamu aplikací.  
+ pro Soubor cookie zadaný při přidání aplikace do seznamu aplikací  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda znamená, že aplikace byla přidána s běžící seznam aplikací.  
+ Tato metoda označuje, že aplikace byla přidána do seznamu běžící aplikace.  
   
-## <a name="see-also"></a>Viz také  
- [IMachineDebugManagerEvents Interface](../../winscript/reference/imachinedebugmanagerevents-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní imachinedebugmanagerevents –](../../winscript/reference/imachinedebugmanagerevents-interface.md)  
  [IMachineDebugManagerEvents::onRemoveApplication](../../winscript/reference/imachinedebugmanagerevents-onremoveapplication.md)

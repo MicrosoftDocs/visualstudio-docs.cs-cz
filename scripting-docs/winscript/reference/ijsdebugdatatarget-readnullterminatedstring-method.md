@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugdatatarget::readnullterminatedstring – metoda | Dokumentace Microsoftu
+title: 'IJsDebugDataTarget:: Readnullterminatedstring – – metoda | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 178a2d3705e4904de9253c02319f6ba94e567d76
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 67d6ee6c8dad81865767b0b944ef311fc0de0063
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62582361"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572399"
 ---
 # <a name="ijsdebugdatatargetreadnullterminatedstring-method"></a>IJsDebugDataTarget::ReadNullTerminatedString – metoda
 Přečte zadaný počet znaků z cíle.  
@@ -38,24 +38,24 @@ HRESULT ReadNullTerminatedString(
   
 #### <a name="parameters"></a>Parametry  
  `address`  
- [in] Adresa pro čtení z.  
+ pro Adresa, ze které se má číst.  
   
  `characterSize`  
  [in] velikost každého znaku v řetězci  
   
  `maxCharacters`  
- [in] Maximální počet znaků pro čtení. Hodnota maxCharacters by měla být přiměřená. Každá žádost o více než 128MB paměti se nezdaří.  Pokud řetězec je větší než vlastnost maxCharacters, bude výsledný řetězec zkrácen po maxCharacters.  
+ pro Maximální počet znaků, které mají být čteny. maxCharacters by měla být přiměřená. Žádná žádost o více než 128 MB paměti se nezdaří.  Pokud je řetězec větší než maxCharacters, výsledný řetězec se zkrátí po maxCharacters.  
   
  `pString`  
- [out] Čtení BSTR z cíle.  
+ mimo BSTR načtený z cíle.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="remarks"></a>Poznámky  
- Vrátí S_FALSE v případě zkrácen.  
+ Vrátí S_FALSE, pokud je zkrácený.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IJsDebugDataTarget – rozhraní](../../winscript/reference/ijsdebugdatatarget-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText::GetPositionOfContext | Dokumentace Microsoftu
+title: 'IDebugDocumentText –:: GetPositionOfContext | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6058502c076dd4f75dbbb44fdb161b889a965fec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: da759eb98a6cdd28066ddaa8aafe785ede337a6e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63008652"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572132"
 ---
 # <a name="idebugdocumenttextgetpositionofcontext"></a>IDebugDocumentText::GetPositionOfContext
-Vrátí pozici znaku oblast odpovídající kontext dokumentu.  
+Vrátí rozsah pozice znaků odpovídající kontextu dokumentu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,23 +39,23 @@ HRESULT GetPositionOfContext(
   
 #### <a name="parameters"></a>Parametry  
  `psc`  
- [in] Objekt kontextu dokumentu.  
+ pro Objekt kontextu dokumentu.  
   
  `pcCharacterPosition`  
- [out] Počáteční umístění pozice rozsahu znaků.  
+ mimo Počáteční umístění rozsahu pozice znaku  
   
  `cNumChars`  
- [out] Počet znaků v rozsahu.  
+ mimo Počet znaků v rozsahu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Kontext dokumentu, který je k dispozici v této metodě musí být přidružené s tímto dokumentem.  
+ K tomuto dokumentu musí být přidružen kontext dokumentu, který je k této metodě k dispozici.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugDocumentText – rozhraní](../../winscript/reference/idebugdocumenttext-interface.md)

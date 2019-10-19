@@ -1,5 +1,5 @@
 ---
-title: IDispError::GetDescription | Dokumentace Microsoftu
+title: 'Idisperror –:: GetDescription | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5505113ee650c6618be5a95bc77244daf90cfcb7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 8d1bb1c3516c2601707e1a0bcd69f4f8409514fe
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446945"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573140"
 ---
 # <a name="idisperrorgetdescription"></a>IDispError::GetDescription
 Vrátí textový popis chyby.  
@@ -37,21 +37,21 @@ HRESULT GetDescription(
   
 #### <a name="parameters"></a>Parametry  
  `pbstrDescription`  
- [out] Řetězec, který obsahuje stručný popis chyby.  
+ mimo Řetězec obsahující stručný popis chyby  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Text se vrátí v jazyce určeném identifikátor národního prostředí (LCID), který byl předán `IDispatchEx::InvokeEx` metody došlo k chybě.  
+ Text se vrátí v jazyce určeném identifikátorem národního prostředí (LCID), který byl předán `IDispatchEx::InvokeEx` pro metodu, která zjistila chybu.  
   
 > [!NOTE]
 > Tato metoda není implementována.  
   
-## <a name="see-also"></a>Viz také  
- [Idisperror – rozhraní](../../winscript/reference/idisperror-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní idisperror –](../../winscript/reference/idisperror-interface.md)  
  [IDispatchEx::InvokeEx](../../winscript/reference/idispatchex-invokeex.md)

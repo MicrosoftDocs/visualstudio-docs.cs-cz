@@ -1,5 +1,5 @@
 ---
-title: Script_e_reported – kód chyby | Dokumentace Microsoftu
+title: Kód chyby SCRIPT_E_REPORTED | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,15 +11,15 @@ caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4466869f4da6a0efe20955af6e6ef35ca9479f6c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0cc754d8a50e35e2a2731e6b036cd777795f9283
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840262"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574420"
 ---
-# <a name="scriptereported-error-code"></a>SCRIPT_E_REPORTED – kód chyby
-Skriptovací modul oznámil neošetřené výjimce až po hostitele prostřednictvím [IActiveScriptSite::OnScriptError](../../winscript/reference/iactivescriptsite-onscripterror.md). Tuto chybu můžete ignorovat hostitele.  
+# <a name="script_e_reported-error-code"></a>SCRIPT_E_REPORTED – kód chyby
+Skriptovací stroj oznámil neošetřenou výjimku hostiteli prostřednictvím [IActiveScriptSite:: OnScriptError](../../winscript/reference/iactivescriptsite-onscripterror.md). Hostitel může tuto chybu ignorovat.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -27,5 +27,5 @@ Skriptovací modul oznámil neošetřené výjimce až po hostitele prostřednic
 SCRIPT_E_REPORTED   0x80020101L  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Konstanty, výčty a kódy chyb aktivních skriptů](../../winscript/reference/active-script-constants-enumerations-and-error-codes.md)

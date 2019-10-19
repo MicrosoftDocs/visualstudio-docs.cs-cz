@@ -1,5 +1,5 @@
 ---
-title: IScriptNode::GetLanguage | Dokumentace Microsoftu
+title: 'Iscriptnode –:: GetLanguage | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 36b7076bf7f261e462802174c6f9014403606ac8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 26fd5db22346292585be3cea751eaa8be1c284a9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786955"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575697"
 ---
 # <a name="iscriptnodegetlanguage"></a>IScriptNode::GetLanguage
-Vrátí skriptovací jazyk, který používá aktuální uzel skriptu.  
+Vrátí skriptovací jazyk, který je používán aktuálním uzlem skriptu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +37,10 @@ HRESULT GetLanguage(
   
 #### <a name="parameters"></a>Parametry  
  `pbstr`  
- [out] Pokud uzel skript používá JScript nebo "VBScript", pokud uzel skript používá Visual Basic Scripting Edition (VBScript) vrátí "JScript".  
+ mimo Vrátí "JScript", pokud uzel skriptu používá jazyk JScript nebo "VBScript", pokud uzel skriptu používá jazyk VBScript (Visual Basic Scripting Edition).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
@@ -48,5 +48,5 @@ HRESULT GetLanguage(
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IScriptNode – rozhraní](../../winscript/reference/iscriptnode-interface.md)

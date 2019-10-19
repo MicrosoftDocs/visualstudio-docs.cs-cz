@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::SetName | Dokumentace Microsoftu
+title: 'IDebugApplication –:: SetName | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4ac0b253d5193fc507e2d74a2d9dbcdd893e9fdb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6a3e5115d4adc3fc3dfa93f10c90cb0d2b36f0e4
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990767"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571100"
 ---
 # <a name="idebugapplicationsetname"></a>IDebugApplication::SetName
 Nastaví název aplikace.  
@@ -37,20 +37,20 @@ HRESULT SetName(
   
 #### <a name="parameters"></a>Parametry  
  `pstrName`  
- [in] Název aplikace.  
+ pro Název aplikace  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Název zadaný v této metodě se vrátí v následných voláních `IRemoteDebugApplication::GetName` metody.  
+ Název zadaný pro tuto metodu je vrácen v následných voláních metody `IRemoteDebugApplication::GetName`.  
   
- Tato metoda by měla být volána před voláním `IProcessDebugManager::AddApplication` metody.  
+ Tato metoda by měla být volána před voláním metody `IProcessDebugManager::AddApplication`.  
   
-## <a name="see-also"></a>Viz také  
- [Idebugapplication – rozhraní](../../winscript/reference/idebugapplication-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní IDebugApplication –](../../winscript/reference/idebugapplication-interface.md)  
  [IProcessDebugManager::AddApplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)

@@ -1,5 +1,5 @@
 ---
-title: IObjectIdentity::IsEqualObject | Microsoft Docs
+title: 'Iobjectidentity –:: IsEqualObject | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c215a15a1239f07272079783366a1617c3a626e2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 636dfa07b1fc94dfec2273220aa4101f5cd085b1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944880"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571473"
 ---
 # <a name="iobjectidentityisequalobject"></a>IObjectIdentity::IsEqualObject
-Určuje, zda je objekt rovná aktuálnímu objektu.  
+Určuje, zda je objekt roven aktuálnímu objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,18 +37,18 @@ HRESULT IsEqualObject(
   
 #### <a name="parameters"></a>Parametry  
  `punk`  
- [in] Adresa objektu má být porovnán s aktuální objekt.  
+ pro Adresa objektu, který se má porovnat s aktuálním objektem.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
-|`S_OK`|Objekty jsou si rovny.|  
+|`S_OK`|Objekty jsou stejné.|  
 |`S_FALSE`|Objekty nejsou stejné.|  
   
 ## <a name="remarks"></a>Poznámky  
- Implementace `IsEqualObject` metoda by měla vrátit `S_OK` pouze v případě, objekty jsou identické.  
+ Implementace metody `IsEqualObject` by měla vracet `S_OK` pouze v případě, že objekty jsou identické.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IObjectIdentity – rozhraní](../../winscript/reference/iobjectidentity-interface.md)

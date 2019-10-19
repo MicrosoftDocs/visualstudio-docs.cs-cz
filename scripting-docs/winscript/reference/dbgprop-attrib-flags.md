@@ -1,5 +1,5 @@
 ---
-title: DBGPROP_ATTRIB_FLAGS | Dokumentace Microsoftu
+title: DBGPROP_ATTRIB_FLAGS | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -19,15 +19,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0324353d716430148b4b3c7b8adf9262e0dc3b7b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3170e310aa3177e2ca7a1dd81ead02bcc4050114
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955273"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572594"
 ---
-# <a name="dbgpropattribflags"></a>DBGPROP_ATTRIB_FLAGS
-Popisuje různé atributy pro `IDebugProperty`. Člen `DebugPropertyInfo` struktury.  
+# <a name="dbgprop_attrib_flags"></a>DBGPROP_ATTRIB_FLAGS
+Popisuje různé atributy pro `IDebugProperty`. Člen struktury `DebugPropertyInfo`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,59 +56,59 @@ DBGPROP_ATTRIB_NO_ATTRIB  =0x00000000,
   
 ## <a name="members"></a>Členové  
  DBGPROP_ATTRIB_NO_ATTRIB  
- Označuje žádné atributy.  
+ Neurčuje žádné atributy.  
   
  DBGPROP_ATTRIB_VALUE_IS_INVALID  
- Označuje, že hodnota ve `DebugPropertyInfo::bstrValue` není platný.  
+ Označuje, že hodnota v `DebugPropertyInfo::bstrValue` není platná.  
   
  DBGPROP_ATTRIB_VALUE_IS_EXPANDABLE  
- Znamená, že odkaz nebo vlastnost má podřízené položky.  
+ Označuje, že odkaz nebo vlastnost má podřízené položky.  
   
  DBGPROP_ATTRIB_VALUE_READONLY  
  Označuje, že hodnota je jen pro čtení.  
   
  DBGPROP_ATTRIB_ACCESS_PUBLIC  
- Určuje objekt, který má přístup public.  
+ Označuje objekt, který má veřejný přístup.  
   
  DBGPROP_ATTRIB_ACCESS_PRIVATE  
- Určuje objekt, který má privátní přístup.  
+ Označuje objekt, který má privátní přístup.  
   
  DBGPROP_ATTRIB_ACCESS_PROTECTED  
- Určuje objekt, který chrání přístup.  
+ Označuje objekt, který má chráněný přístup.  
   
  DBGPROP_ATTRIB_ACCESS_FINAL  
- Určuje objekt s posledním přístupem.  
+ Označuje objekt, který má konečný přístup.  
   
  DBGPROP_ATTRIB_STORAGE_GLOBAL  
- Určuje globální úložiště.  
+ Označuje globální úložiště.  
   
  DBGPROP_ATTRIB_STORAGE_STATIC  
- Určuje statické úložiště.  
+ Označuje statické úložiště.  
   
  DBGPROP_ATTRIB_STORAGE_FIELD  
- Určuje objekt, který je vlastnost.  
+ Označuje objekt, který je vlastností.  
   
  DBGPROP_ATTRIB_STORAGE_VIRTUAL  
- Označuje virtuálního úložiště.  
+ Indikuje virtuální úložiště.  
   
  DBGPROP_ATTRIB_TYPE_IS_CONSTANT  
- Označuje konstantní typ objektu.  
+ Označuje, že typ objektu je konstantní.  
   
  DBGPROP_ATTRIB_TYPE_IS_SYNCHRONIZED  
- Označuje, že tento slot je vlákno synchronizované.  
+ Indikuje, že je tento slot synchronizovaný z vlákna.  
   
  DBGPROP_ATTRIB_TYPE_IS_VOLATILE  
- Označuje, že tento slot je volatile s ohledem na trvalého úložiště.  
+ Označuje, že tento slot je volatile s ohledem na trvalé úložiště.  
   
  DBGPROP_ATTRIB_HAS_EXTENDED_ATTRIBS  
- Označuje, že tento slot má atributy nenabízející těchto předdefinovaných bitů.  
+ Označuje, že tato patice má nad rámec těchto předdefinovaných bitů atributy.  
   
  DBGPROP_ATTRIB_VALUE_IS_RETURN_VALUE  
- Označuje, že hodnota je návratová hodnota z funkce.  
+ Označuje, že hodnota je návratovou hodnotou z funkce.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto příznaky jsou také použít k filtrování podřízené objekty daného objektu. Hodnoty lze kombinovat s bitový operátor OR.  
+ Tyto příznaky slouží také k filtrování podřízených objektů objektu. Hodnoty mohou být kombinovány s bitovým operátorem OR.  
   
-## <a name="see-also"></a>Viz také  
- [Idebugproperty – rozhraní](../../winscript/reference/idebugproperty-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní idebugproperty –](../../winscript/reference/idebugproperty-interface.md)  
  [DebugPropertyInfo – struktura](../../winscript/reference/debugpropertyinfo-structure.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty::EnumMembers | Dokumentace Microsoftu
+title: 'Idebugproperty –:: Enummembers – | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 527bf9d3c51dad8ffe1645dc42081dc54189ad7b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5f8c5f2cbb107d55e9ffe602cb7d3492701de10c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979159"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72562416"
 ---
 # <a name="idebugpropertyenummembers"></a>IDebugProperty::EnumMembers
-Vytvoří výčet členů vlastnost.  
+Vytvoří výčet členů vlastnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,22 +40,22 @@ HRESULT EnumMembers (
   
 #### <a name="parameters"></a>Parametry  
  `dwFieldSpec`  
- [in] Určuje, `DBGPROP_INFO_FLAGS` konstanty, které určují pole ve strukturách vlastnost výčtu ladění, která mají být vyplněna.  
+ pro Určuje `DBGPROP_INFO_FLAGS` konstanty, které určují, která pole ve výčtu struktur vlastností ladění mají být vyplněna.  
   
  `nRadix`  
- [in] Základ, který se má použít při interpretaci jakékoli číselné informace.  
+ pro Číselná soustava, která se má použít při interpretaci libovolných číselných informací.  
   
  `refiid`  
- [in] Tento IID je předán pro filtrování enumerátor. Identifikátor IID je jedním z `IDebugPropertyEnumType` rozhraní, která dědí z `IDebugPropertyEnumType_All`.  
+ pro Tento identifikátor IID se předává pro filtrování čítače výčtu. IID je jedno z `IDebugPropertyEnumType` rozhraní, které dědí z `IDebugPropertyEnumType_All`.  
   
  `ppEnum`  
- [out] Vrátí `IEnumDebugPropertyInfo` rozhraní, které zobrazuje výčet vlastností člena.  
+ mimo Vrátí rozhraní `IEnumDebugPropertyInfo`, které vytváří výčet vlastností členů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Bude vracet platnou `HRESULT`, obvykle `S_OK`.  
+ Vrací platný `HRESULT`, obvykle `S_OK`.  
   
-## <a name="see-also"></a>Viz také  
- [Idebugproperty – rozhraní](../../winscript/reference/idebugproperty-interface.md)   
- [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)   
- [IDebugPropertyEnumType_All Interface](../../winscript/reference/idebugpropertyenumtype-all-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní idebugproperty –](../../winscript/reference/idebugproperty-interface.md)  
+ [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)    
+ @No__t_1 [rozhraní IDebugPropertyEnumType_All](../../winscript/reference/idebugpropertyenumtype-all-interface.md)  
  [IEnumDebugPropertyInfo – rozhraní](../../winscript/reference/ienumdebugpropertyinfo-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IApplicationDebugger::CreateInstanceAtDebugger | Dokumentace Microsoftu
+title: 'Iapplicationdebugger –:: CreateInstanceAtDebugger | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,18 +17,18 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 95489464128e706e755432bee991c5481f5af8bc
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: c15dc5d9b36a718ed41813bac46bc4b9415eb853
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63425831"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577893"
 ---
 # <a name="iapplicationdebuggercreateinstanceatdebugger"></a>IApplicationDebugger::CreateInstanceAtDebugger
-Povolí vytváření objektů v procesu ladicího programu pomocí kódu, který je mimo proces v ladicím programu.  
+Umožňuje vytváření objektů v procesu ladicího programu pomocí kódu, který je mimo proces ladicího programu.  
   
 > [!IMPORTANT]
-> Tato metoda by neměla být implementována, protože umožňuje nedůvěryhodný kód k vytvoření libovolného objektů ve vlákně důvěryhodné ladicího programu.  
+> Tato metoda by neměla být implementována, protože umožňuje nedůvěryhodnému kódu vytvářet libovolný objekt v důvěryhodném vlákně ladicího programu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,31 +44,31 @@ HRESULT CreateInstanceAtDebugger(
   
 #### <a name="parameters"></a>Parametry  
  `rclsid`  
- [in] Identifikátor (CLSID) objekt k vytvoření třídy.  
+ pro Identifikátor třídy (CLSID) objektu, který se má vytvořit  
   
  `pUnkOuter`  
- [in] Pokud `NULL`, není objekt vytváří jako součást agregace. V opačném případě `pUnkOuter` je ukazatel na agregovaný objekt `IUnknown` rozhraní (řízení `IUnknown`).  
+ pro Pokud `NULL`, objekt se nevytváří jako součást agregace. V opačném případě je `pUnkOuter` ukazatel na rozhraní `IUnknown` agregovaného objektu (řízení `IUnknown`).  
   
  `dwClsContext`  
- [in] Kontext spuštění spustitelného kódu. Hodnoty pocházejí z výčtu `CLSCTX`.  
+ pro Kontext pro spuštění spustitelného kódu. Hodnoty jsou pořízeny z `CLSCTX` výčtu.  
   
  `riid`  
- [in] Identifikátor rozhraní používaný ke komunikaci s objektem.  
+ pro Identifikátor rozhraní, který se používá ke komunikaci s objektem.  
   
  `ppvObject`  
- [out] Adresa proměnné ukazatele, která přijímá ukazatel rozhraní požadované `riid`. Po návratu úspěšné *`ppvObject` obsahuje ukazatel požadované rozhraní. Po selhání \* `ppvObject` obsahuje `NULL`.  
+ mimo Adresa ukazatele na proměnnou, která obdrží ukazatel rozhraní požadovaný v `riid`. Po úspěšném návratu `ppvObject` obsahuje požadovaný ukazatel rozhraní. Po selhání \* `ppvObject` obsahuje `NULL`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda delegoval vůči `CoCreateInstance`.  
+ Tato metoda deleguje `CoCreateInstance`.  
   
- Metoda teď není implementovaná.  
+ Metoda není aktuálně implementována.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IApplicationDebugger – rozhraní](../../winscript/reference/iapplicationdebugger-interface.md)

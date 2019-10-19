@@ -1,5 +1,5 @@
 ---
-title: Nelze přiřazovat hodnoty do výsledku funkce | Dokumentace Microsoftu
+title: Nelze přiřadit k výsledku funkce | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,15 +14,15 @@ ms.assetid: ee8ffb3a-1451-4cb3-99bf-5e9cf8b77d79
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 226056f139e45f432d757aff8f8774b013742de3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aca09fe3b516fbb8f27def982bf34a22d33d4ada
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946599"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572360"
 ---
 # <a name="cannot-assign-to-a-function-result"></a>Nelze přiřazovat hodnoty do výsledku funkce
-Jste se pokusili pro přiřazení hodnoty do výsledku funkce. Výsledek funkce může být přiřazen proměnné, ale nelze ji použít jako proměnná. Pokud chcete přiřadit novou hodnotu samotné funkce, vynechejte závorky (operátor volání funkce). Následující příklad ukazuje situaci, ve kterém se tato chyba je generována.  
+Pokusili jste se přiřadit hodnotu výsledku funkce. Výsledek funkce lze přiřadit proměnné, ale nelze ji použít jako proměnnou. Chcete-li k samotné funkci přiřadit novou hodnotu, vynechejte závorky (operátor volání funkce). Následující příklad ukazuje situaci, kdy se tato chyba generuje.  
   
 ```js
 myFunction() = 42;  // Attempting to assign the value 42 to the result of the function call.  
@@ -30,19 +30,19 @@ myFunction() = 42;  // Attempting to assign the value 42 to the result of the fu
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Nepoužívejte hodnotu výsledku volání funkce jako něco můžete *přiřadit*. Můžete přiřadit výsledek volání funkce *proměnné* když.  
+- Nepoužívejte hodnotu výsledku volání funkce jako objekt, ke kterému můžete *přiřadit*. Výsledek volání funkce můžete přiřadit *proměnné* i v případě, že.  
   
     ```JavaScript  
     myVar = myFunction(42);  
     ```  
   
-- Funkce můžete alternativně přiřadit samostatně (a ne její návratová hodnota) a proměnné.  
+- Alternativně můžete k proměnné přiřadit samotnou funkci (a nikoli její návratovou hodnotu).  
   
     ```JavaScript  
     myFunction = new Function("return 42;");  
     ```  
   
-## <a name="see-also"></a>Viz také  
- [Function – objekt](../../javascript/reference/function-object-javascript.md)   
- [Psaní kódu jazyka JavaScript](../../javascript/writing-javascript-code.md)   
+## <a name="see-also"></a>Viz také:  
+ [Objekt funkce](../../javascript/reference/function-object-javascript.md)    
+ [Psaní   kódu JavaScriptu](../../javascript/writing-javascript-code.md)  
  [Funkce](../../javascript/functions-javascript.md)

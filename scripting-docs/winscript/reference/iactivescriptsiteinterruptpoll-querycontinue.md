@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteInterruptPoll::QueryContinue | Microsoft Docs
+title: 'Iactivescriptsiteinterruptpoll –:: QueryContinue | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 63ce45c0973d65d240136d7b42aef0c078b00c9a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7ce2ad61b54dce510035dd8e97d0dfb2accbf7a7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992297"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572235"
 ---
 # <a name="iactivescriptsiteinterruptpollquerycontinue"></a>IActiveScriptSiteInterruptPoll::QueryContinue
-Umožňuje hostiteli k určení, zda by měla ukončit skriptu.  
+Umožňuje hostiteli určit, že se má skript ukončit.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,21 +34,21 @@ HRESULT QueryContinue();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Tato metoda nemá žádné parametry.  
+ Tato metoda nepřijímá žádné parametry.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
-|`S_OK`|Volání bylo úspěšné a hostitele povoluje skript, který chcete pokračovat v běhu.|  
-|`S_FALSE`|Že bylo volání úspěšné a hostitele požadavků, které skript ukončit.|  
+|`S_OK`|Volání bylo úspěšné a hostitel povoluje, aby skript pokračoval v běhu.|  
+|`S_FALSE`|Volání bylo úspěšné a hostitel požaduje ukončení skriptu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Hostované skriptu by měla ukončit, pokud návratová hodnota `QueryContinue` je metoda `S_OK`. Vrácená hodnota `S_FALSE` označuje, že hostitel výslovně požaduje, že skript ukončit.  
+ Hostovaný skript by měl skončit, pokud není vrácena návratová hodnota metody `QueryContinue` `S_OK`. Návratová hodnota `S_FALSE` označuje, že hostitel explicitně požaduje ukončení skriptu.  
   
- Použít s více vlákny hostitele `IActiveScript::InterruptScriptThread` metoda ukončení skriptu.  
+ Hostitel s více vlákny může použít metodu `IActiveScript::InterruptScriptThread` k ukončení skriptu.  
   
-## <a name="see-also"></a>Viz také  
- [IActiveScriptSiteInterruptPoll Interface](../../winscript/reference/iactivescriptsiteinterruptpoll-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iactivescriptsiteinterruptpoll –](../../winscript/reference/iactivescriptsiteinterruptpoll-interface.md)  
  [IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md)

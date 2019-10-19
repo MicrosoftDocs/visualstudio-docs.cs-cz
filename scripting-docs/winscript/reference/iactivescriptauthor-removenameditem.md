@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::RemoveNamedItem | Dokumentace Microsoftu
+title: 'Iactivescriptauthor –:: RemoveNamedItem | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 052704b9a1bef8c50c457e51438f0204813c2efe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cade532d2ca276237981855cafe12804307d0bb6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955142"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572843"
 ---
 # <a name="iactivescriptauthorremovenameditem"></a>IActiveScriptAuthor::RemoveNamedItem
-Odebere `NamedItem` objektů z oboru názvů skript, modul pro vytváření.  
+Odebere objekt `NamedItem` z oboru názvů modulu vytváření skriptů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,19 +37,19 @@ HRESULT RemoveNamedItem(
   
 #### <a name="parameters"></a>Parametry  
  `pszName`  
- [in] Adresa vyrovnávací paměti, který identifikuje `NamedItem` objektu, který chcete odebrat.  
+ pro Adresa vyrovnávací paměti, která identifikuje objekt `NamedItem`, který se má odebrat.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
-|`S_FALSE`|`NamedItem` Objektu není k dispozici v oboru skriptu pro vytváření modulu.|  
+|`S_FALSE`|Objekt `NamedItem` není přítomen v oboru názvů modulu vytváření skriptů.|  
   
 ## <a name="remarks"></a>Poznámky  
- [IActiveScript::AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md) slouží k vložení `NamedItem` objektu do skriptu pro vytváření oboru názvů vyhledávacího stroje.  
+ [IActiveScript:: AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md) se používá k vložení objektu `NamedItem` do oboru názvů modulu vytváření skriptů.  
   
-## <a name="see-also"></a>Viz také  
- [IActiveScriptAuthor Interface](../../winscript/reference/iactivescriptauthor-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iactivescriptauthor –](../../winscript/reference/iactivescriptauthor-interface.md)  
  [IActiveScriptAuthor::AddNamedItem](../../winscript/reference/iactivescriptauthor-addnameditem.md)

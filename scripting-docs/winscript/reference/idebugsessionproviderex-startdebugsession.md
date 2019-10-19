@@ -1,5 +1,5 @@
 ---
-title: IDebugSessionProviderEx:StartDebugSession | Dokumentace Microsoftu
+title: 'IDebugSessionProviderEx –: StartDebugSession | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fb120a9acca91014d7b8213a3ed0bd1ab575e118
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cfe26265d56b2179feeac2a9802940258074b1c7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934689"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574301"
 ---
 # <a name="idebugsessionproviderexstartdebugsession"></a>IDebugSessionProviderEx:StartDebugSession
-Spustí relaci ladění pomocí zadané aplikace.  
+Inicializuje relaci ladění se zadanou aplikací.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,21 +36,21 @@ HRESULT StartDebugSession(
   
 #### <a name="parameters"></a>Parametry  
  `pda`  
- [in] Určuje ladění aplikace.  
+ pro Určuje aplikaci ladění.  
   
  `fQuery`  
- [in] Hodnota TRUE označuje dotazu.  
+ pro Hodnota true označuje dotaz.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda spustí relaci ladění pomocí zadané aplikace. Ladicí program by měly volat `IRemoteDebugApplication::ConnectDebugger` před návratem z tohoto volání.  
+ Tato metoda inicializuje relaci ladění se zadanou aplikací. Ladicí program by měl volat `IRemoteDebugApplication::ConnectDebugger` před návratem z tohoto volání.  
   
-## <a name="see-also"></a>Viz také  
- [Idebugsessionproviderex – rozhraní](../../winscript/reference/idebugsessionproviderex-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní IDebugSessionProviderEx –](../../winscript/reference/idebugsessionproviderex-interface.md)  
  [IRemoteDebugApplication::ConnectDebugger](../../winscript/reference/iremotedebugapplication-connectdebugger.md)

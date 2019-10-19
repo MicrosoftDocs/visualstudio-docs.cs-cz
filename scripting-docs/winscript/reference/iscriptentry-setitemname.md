@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::SetItemName | Dokumentace Microsoftu
+title: 'Iscriptentry –:: SetItemName | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d25ac4977f1fca44d63767c372db169f8cb61ea6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7ba226704f5b064c86b52c1b349650d509b2b549
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787655"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575373"
 ---
 # <a name="iscriptentrysetitemname"></a>IScriptEntry::SetItemName
-Nastaví název položky, který identifikuje `IScriptEntry` objektu.  
+Nastaví název položky, která identifikuje objekt `IScriptEntry`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,21 +37,21 @@ HRESULT SetItemName(
   
 #### <a name="parameters"></a>Parametry  
  `psz`  
- [in] Adresa vyrovnávací paměti, který obsahuje název položky. Název položky se hostitel používá k identifikaci položky.  
+ pro Adresa vyrovnávací paměti, která obsahuje název položky. Název položky se používá hostitelem k identifikaci položky.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
-|`E_FAIL`|Metoda nebylo úspěšné.|  
+|`E_FAIL`|Metoda nebyla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pro `IScriptEntry` objekty, vrátí tato metoda `S_OK`.  
+ Pro `IScriptEntry` objekty vrátí tato metoda `S_OK`.  
   
- Pro `IScriptScriptlet` objekty (které jsou odvozeny z `IScriptEntry`), vrátí tato metoda `E_FAIL`. Pro `IScriptScriptlet` objekty, název položky je nastavený [IActiveScriptAuthor::AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md) a nedá se změnit.  
+ Pro `IScriptScriptlet` objekty (které jsou odvozeny z `IScriptEntry`) vrátí tato metoda `E_FAIL`. U `IScriptScriptlet` objektů je název položky nastavený pomocí [iactivescriptauthor –:: AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md) a nedá se změnit.  
   
-## <a name="see-also"></a>Viz také  
- [Iscriptentry – rozhraní](../../winscript/reference/iscriptentry-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iscriptentry –](../../winscript/reference/iscriptentry-interface.md)  
  [IScriptEntry::GetItemName](../../winscript/reference/iscriptentry-getitemname.md)

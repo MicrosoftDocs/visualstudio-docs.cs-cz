@@ -1,5 +1,5 @@
 ---
-title: Debugpropertyinfo – struktura | Dokumentace Microsoftu
+title: Struktura Debugpropertyinfo – | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 99208626b41f2463178bccecf73c21a1d15fa765
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 793c83b467460f0744abffe3f161f7510f56257a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955260"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575072"
 ---
 # <a name="debugpropertyinfo-structure"></a>DebugPropertyInfo – struktura
-Popisuje objekt hierarchickou povahu, který má název, typ a hodnotu. Slouží k popisu vlastnosti ladění lokální proměnné, parametry, sledovat proměnné a výrazy a zaregistruje.  
+Popisuje objekt hierarchického charakteru, který má název, typ a hodnotu. Slouží k popisu ladicích vlastností místních proměnných, parametrů, sledovacích proměnných a výrazů a registrů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,9 +43,9 @@ typedef struct DebugPropertyInfo{
   
 ## <a name="members"></a>Členové  
  dwValidFields  
- Výčtový datový typ, používá k určení, která pole jsou inicializovány.  
+ Výčtový datový typ použitý k určení, která pole jsou inicializována.  
   
- bstrName  
+ BSTR  
  Název vlastnosti v rámci kontextu.  
   
  bstrType  
@@ -55,15 +55,15 @@ typedef struct DebugPropertyInfo{
  Hodnota vlastnosti jako formátovaný řetězec.  
   
  bstrFullName  
- Celý název vlastnosti.  
+ Úplný název vlastnosti.  
   
  dwAttrib  
- Výčet, který určuje příznaky pro atributy vlastnosti ladění.  
+ Výčet, který určuje příznaky pro atributy vlastností ladění.  
   
  pDebugProp  
- `IDebugProperty` Popsal informace v tomto `DebugPropertyInfo` struktury.  
+ @No__t_0 popisují informace v této `DebugPropertyInfo` struktuře.  
   
-## <a name="see-also"></a>Viz také  
- [Idebugproperty – rozhraní](../../winscript/reference/idebugproperty-interface.md)   
- [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní idebugproperty –](../../winscript/reference/idebugproperty-interface.md)  
+ [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)    
  [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)

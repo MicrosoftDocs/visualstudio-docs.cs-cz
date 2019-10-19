@@ -1,5 +1,5 @@
 ---
-title: "'default' může být pouze jednou v příkazu 'switch' | Dokumentace Microsoftu"
+title: klíčové slovo default může být v příkazu switch uvedeno jenom jednou | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,21 +14,21 @@ ms.assetid: a94100f4-6ee5-4759-b635-9d309e47111e
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 24162efcc720d9c0073f8a5799c6278b8d3c8c62
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 90652e44a4bd0362f679be71d0d6401165487aec
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946352"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572882"
 ---
 # <a name="default-can-only-appear-once-in-a-switch-statement"></a>Klíčové slovo 'default' může být v příkazu 'switch' použito pouze jednou
-Pokusili jste se použít **výchozí** příkazu více než jednou v rámci příkazu switch. Výchozí případ je vždy posledního příkazu case v příkazu switch (to je případ propuštěním).  
+Pokusili jste se použít **výchozí** příkaz více než jednou v rámci příkazu switch. Výchozím případem je vždy poslední příkaz Case v příkazu switch (Jedná se o případ vzdálení).  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Odeberte všechny další **výchozí** malá a velká příkazy z vaší `switch` – příkaz (použijte na většině jeden výchozí case – příkaz v příkazu switch).  
+- Odeberte všechny další **výchozí** příkazy Case z příkazu `switch` (použijte maximálně jeden výchozí příkaz Case v příkazu switch).  
   
-## <a name="see-also"></a>Viz také  
- [Switch – příkaz](../../javascript/reference/switch-statement-javascript.md)   
- [Řízení toku programu](../../javascript/controlling-program-flow-javascript.md)   
+## <a name="see-also"></a>Viz také:  
+   [příkazu switch](../../javascript/reference/switch-statement-javascript.md)  
+ [Řízení   toku programu](../../javascript/controlling-program-flow-javascript.md)  
  [JavaScript – vyhrazená slova](../../javascript/reference/javascript-reserved-words.md)

@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::SetName | Dokumentace Microsoftu
+title: 'Iscriptentry –:: SetName | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f6476869a54921cfdac34e9f1ed202adef909ddf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d9dfa27c6c8c58c0ee1599e17e1da5b5f424e416
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787598"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575357"
 ---
 # <a name="iscriptentrysetname"></a>IScriptEntry::SetName
-Položky, které představují jeden objekt (například funkce) nastaví název objektu.  
+Pro položky, které reprezentují jeden objekt (například funkce), nastaví název objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +37,17 @@ HRESULT SetName(
   
 #### <a name="parameters"></a>Parametry  
  `psz`  
- [in] Nový název `IScriptEntry` objektu.  
+ pro Nový název objektu `IScriptEntry`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
- [Iscriptentry – rozhraní](../../winscript/reference/iscriptentry-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iscriptentry –](../../winscript/reference/iscriptentry-interface.md)  
  [IScriptEntry::GetName](../../winscript/reference/iscriptentry-getname.md)

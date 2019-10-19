@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteDebug::OnScriptErrorDebug | Dokumentace Microsoftu
+title: 'Iactivescriptsitedebug –:: OnScriptErrorDebug | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 50e8c7baa42d6f2f36dc71b768797dfe2a464bf3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 894767b3dae9db54e8bc438a82b27195308a4342
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992432"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572202"
 ---
 # <a name="iactivescriptsitedebugonscripterrordebug"></a>IActiveScriptSiteDebug::OnScriptErrorDebug
-Umožňuje inteligentního hostitele pro určení způsobu zpracování chyb za běhu.  
+Umožňuje inteligentnímu hostiteli určit, jakým způsobem se mají zpracovávat běhové chyby.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,23 +39,23 @@ HRESULT OnScriptErrorDebug(
   
 #### <a name="parameters"></a>Parametry  
  `pErrorDebug`  
- [in] Chyba za běhu, ke které došlo  
+ pro Chyba za běhu, ke které došlo  
   
  `pfEnterDebugger`  
- [out] Příznak označující, jestli se má předat chyby proveďte ladění JIT ladicí program.  
+ mimo Příznak označující, zda se má předat chyba ladicímu programu pro ladění JIT  
   
  `pfCallOnScriptErrorWhenContinuing`  
- [out] Příznak označující, jestli se má volat `IActiveScriptSite::OnScriptError` když se uživatel rozhodne pokračovat bez ladění.  
+ mimo Příznak označující, zda se má volat `IActiveScriptSite::OnScriptError`, když se uživatel rozhodne pokračovat bez ladění  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty patří, ale nejsou omezeny pouze na hodnotu v následující tabulce.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují, ale nejsou omezeny na hodnotu v následující tabulce.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Inteligentního hostitele tuto metodu můžete použít k určení způsobu zpracování chyb za běhu.  
+ Inteligentní hostitel může tuto metodu použít k určení způsobu zpracování chyb za běhu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScriptSiteDebug – rozhraní](../../winscript/reference/iactivescriptsitedebug-interface.md)

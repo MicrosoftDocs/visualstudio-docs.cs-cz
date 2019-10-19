@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationNode100::QueryIsChildNode | Microsoft Docs
+title: 'Idebugapplicationnode100 –:: QueryIsChildNode | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 959de620e1e556d92a51dcab0062fa6ff055ec46
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 761b2800415adbcf298eb96f2231a74195b2291c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446670"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574749"
 ---
 # <a name="idebugapplicationnode100queryischildnode"></a>IDebugApplicationNode100::QueryIsChildNode
-Určuje, zda zadaný dokument patří do jedné z podřízených uzlů tohoto uzlu.  
+Určuje, zda zadaný dokument patří do jednoho z podřízených uzlů tohoto uzlu.  
   
 > [!IMPORTANT]
-> [Idebugapplicationnode100 – rozhraní](../../winscript/reference/idebugapplicationnode100-interface.md) je implementováno pomocí PDM v10.0 a větší. Nachází se v souboru activdbg100.h.  
+> [Rozhraní idebugapplicationnode100 –](../../winscript/reference/idebugapplicationnode100-interface.md) je implementováno pomocí PDM v 10.0 a větší. Nachází se v souboru activdbg100.h.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ HRESULT QueryIsChildNode(        [in] IDebugDocument* pSearchKey        );
   
 #### <a name="parameters"></a>Parametry  
  `pSearchKey`  
- Klíč hledání.  
+ Klíč hledání  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugApplicationNode100 – rozhraní](../../winscript/reference/idebugapplicationnode100-interface.md)

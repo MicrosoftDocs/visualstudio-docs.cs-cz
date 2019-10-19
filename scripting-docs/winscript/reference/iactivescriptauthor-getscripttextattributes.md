@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::GetScriptTextAttributes | Dokumentace Microsoftu
+title: 'Iactivescriptauthor –:: GetScriptTextAttributes | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 75e0d5edf7cf2f83e814036cec56a1b19a89813e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f89c7b654cc2ac7248598ee6498a3a290d17e2ef
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955117"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72563147"
 ---
 # <a name="iactivescriptauthorgetscripttextattributes"></a>IActiveScriptAuthor::GetScriptTextAttributes
-Vrátí text atributy pro blok skriptu.  
+Vrátí atributy textu pro blok skriptu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,28 +41,28 @@ HRESULT GetScriptTextAttributes(
   
 #### <a name="parameters"></a>Parametry  
  `pszCode`  
- [v size_is (`cch`)] textového bloku skriptu. Tento řetězec nemá hodnotu NULL byl ukončen.  
+ [in, size_is (`cch`)] Text bloku skriptu Tento řetězec nemusí být ukončen znakem null.  
   
  `cch`  
- [in] Velikost použitou pro `pszCode` a `pattr` parametry.  
+ pro Velikost použitá pro parametry `pszCode` a `pattr`  
   
  `pszDelimiter`  
- [in] Adresa oddělovače end skriptu. Když `pszCode` je analyzován z toku textu, hostitel obvykle používá oddělovač (například dvěma jednoduchými uvozovkami), k zjištění konce skriptletu. Tento parametr nastavte na hodnotu NULL, pokud neexistuje žádný oddělovač pro určení konce bloku skriptu.  
+ pro Adresa oddělovače koncového skriptu. Pokud je `pszCode` analyzována z datového proudu, hostitel obvykle používá oddělovač (například dvě jednoduché uvozovky) k detekci konce skriptletu. Nastavte tento parametr na hodnotu NULL, pokud neexistuje oddělovač k identifikaci konce bloku skriptu.  
   
  `dwFlags`  
- [in] Příznaky, které jsou spojeny s atributy textu bloku skriptu. Může být kombinací následujícího:  
+ pro Příznaky, které jsou spojeny s atributy textu bloku skriptu. Může být kombinací následujících hodnot:  
   
-|Konstanta|Value|Popis|  
+|Konstanta|Hodnota|Popis|  
 |--------------|-----------|-----------------|  
-|GETATTRTYPE_DEPSCAN|0x0001|Identifikujte identifikátory, které mají atribut SOURCETEXT_ATTR_IDENTIFIER a identifikovat tečkou operátory, které mají atribut SOURCETEXT_ATTR_MEMBERLOOKUP.|  
-|GETATTRFLAG_THIS|0x0100|Určete aktuální objekt, který má atribut SOURCETEXT_ATTR_THIS.|  
-|GETATTRFLAG_HUMANTEXT|0x8000|Určete obsah a komentáře text řetězce, který má atribut SOURCETEXT_ATTR_HUMANTEXT.|  
+|GETATTRTYPE_DEPSCAN|0x0001|Identifikujte identifikátory, které mají atribut SOURCETEXT_ATTR_IDENTIFIER, a Identifikujte operátory tečka, které mají atribut SOURCETEXT_ATTR_MEMBERLOOKUP.|  
+|GETATTRFLAG_THIS|0x0100|Identifikujte aktuální objekt, který má atribut SOURCETEXT_ATTR_THIS.|  
+|GETATTRFLAG_HUMANTEXT|0x8000|Identifikujte obsah řetězce a text komentáře s atributem SOURCETEXT_ATTR_HUMANTEXT.|  
   
  `pattr`  
- [v out size_is (`cch`)] informace o barvě pro kód bloku skriptu.  
+ [in, out, size_is (`cch`)] Informace o barvách pro kód bloku skriptu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
@@ -70,6 +70,6 @@ HRESULT GetScriptTextAttributes(
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
- [IActiveScriptAuthor Interface](../../winscript/reference/iactivescriptauthor-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iactivescriptauthor –](../../winscript/reference/iactivescriptauthor-interface.md)  
  [SOURCE_TEXT_ATTR – výčet](../../winscript/reference/source-text-attr-enumeration.md)

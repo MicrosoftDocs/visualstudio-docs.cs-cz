@@ -1,5 +1,5 @@
 ---
-title: Vyvolána výjimka, která nebyla zachycena | Dokumentace Microsoftu
+title: Vyvolaná výjimka a nebyla zachycena | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,25 +14,25 @@ ms.assetid: b5235490-a8e7-42e3-804e-d85235bc6f05
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bae4ed0a335a9c12d16cb46208f77c4b66f12547
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 05a9e4f51d5daf7a9e1b1153acbbe8b76b539b72
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946326"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572852"
 ---
 # <a name="exception-thrown-and-not-caught"></a>Byla vyvolána výjimka, která nebyla zachycena
-Můžete zahrnout `throw` příkaz v kódu, ale nebyl uzavřený do složených závorek **zkuste** bloku, nebo byla již přidružené **catch** bloku zachytávat chyby. Jsou výjimky vyvolány v rámci **zkuste** blokovat, s využitím **throw** příkaz a zachycené mimo **zkuste** blokovat s **catch** příkaz.  
+Do kódu jste zahrnuli příkaz `throw`, který však nebyl uzavřený v rámci bloku **Try** , nebo nebyl k zachycení chyby přidružen žádný blok **catch** . Výjimky jsou vyvolány v rámci bloku **Try** pomocí příkazu **throw** a zachyceny mimo blok **Try** pomocí příkazu **catch** .  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Vložte kód, který může vyvolat výjimku v **zkuste** blokovat a zkontrolujte je odpovídající **catch** bloku.  
+- Uzavřete kód, který může vyvolat výjimku v bloku **Try** , a zajistěte, aby byl k dispozici odpovídající blok **catch** .  
   
-- Ujistěte se, že se že váš příkaz catch očekává správnou formu výjimky.  
+- Ujistěte se, že váš příkaz catch očekává správný tvar výjimky.  
   
-- Pokud je znovu vyvolána výjimka, ujistěte se, že existuje jiný odpovídajícího příkazu catch.  
+- Pokud je výjimka znovu vyvolána, ujistěte se, že existuje další odpovídající příkaz catch.  
   
-## <a name="see-also"></a>Viz také  
- [Error – objekt](../../javascript/reference/error-object-javascript.md)   
- [Throw – příkaz](../../javascript/reference/throw-statement-javascript.md)   
+## <a name="see-also"></a>Viz také:  
+ [Objekt Error](../../javascript/reference/error-object-javascript.md)    
+   [příkazu throw](../../javascript/reference/throw-statement-javascript.md)  
  [try...catch...finally – příkaz](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)

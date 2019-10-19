@@ -1,5 +1,5 @@
 ---
-title: Byl očekáván znak '=' (JavaScript) | Dokumentace Microsoftu
+title: Byl očekáván znak ' = ' (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,24 +14,24 @@ ms.assetid: a8ce6fbf-8663-4770-8fba-677d04c84825
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6950d78da99285e5aeeeefe002c8319b08721110
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 518140ebbddcee917a03bad6ec776e4c84b248d1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934942"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573395"
 ---
 # <a name="expected--javascript"></a>Byl očekáván znak '=' (JavaScript)
-Došlo k pokusu o vytvoření proměnné pro použití s příkazy podmíněné kompilace, ale není umístit znaménko rovná se mezi proměnné a hodnotu, kterou chcete přiřadit k ní.  
+Pokusili jste se vytvořit proměnnou, která se má použít s příkazy podmíněné kompilace, ale neumístilo stejné znaménko mezi proměnnou a hodnotu, kterou chcete přiřadit.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Přidejte znaménko rovná se. Příklad:  
+- Přidejte rovnítko. Příklad:  
   
     ```JavaScript  
     @set @myvar1 = 1  
     ```  
   
-## <a name="see-also"></a>Viz také  
- [Podmíněná kompilace](../../javascript/advanced/conditional-compilation-javascript.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [podmíněné kompilace](../../javascript/advanced/conditional-compilation-javascript.md)  
  [Proměnné podmíněné kompilace](../../javascript/advanced/conditional-compilation-variables-javascript.md)

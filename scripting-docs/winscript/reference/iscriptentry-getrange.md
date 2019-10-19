@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::GetRange | Dokumentace Microsoftu
+title: 'Iscriptentry –:: GetRange | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7baa284be4fa7f45f247df7f4b3d140869f254b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0a6e1b1600c93aa05bbe9669fb57a23a8c9344a1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787734"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575437"
 ---
 # <a name="iscriptentrygetrange"></a>IScriptEntry::GetRange
-Vrátí počáteční pozice a délka položky.  
+Vrátí počáteční pozici a délku položky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,27 +38,27 @@ HRESULT GetRange(
   
 #### <a name="parameters"></a>Parametry  
  `pichMin`  
- [out] Pro `IScriptEntry` objekty, které určují blok skriptu, vrátí hodnotu 0.  
+ mimo Pro `IScriptEntry` objekty, které určují blok skriptu, vrátí hodnotu 0.  
   
- Pro `IScriptEntry` objekty, které určují objektu funkce vrátí počáteční pozici funkce v aktuálním bloku skriptu.  
+ Pro `IScriptEntry` objekty, které určují objekt funkce, vrátí počáteční pozici funkce v aktuálním bloku skriptu.  
   
- Pro `IScriptScriptlet` objekty, vrátí hodnotu 0.  
+ U objektů `IScriptScriptlet` vrátí hodnotu 0.  
   
  `pcch`  
- [out] Pro `IScriptEntry` objekty, které určují blok skriptu, vrátí délku textu.  
+ mimo Pro `IScriptEntry` objekty, které určují blok skriptu, vrátí délku textu.  
   
- Pro `IScriptEntry` objekty, které určují funkce objektu, vrátí délku v definici funkce.  
+ Pro `IScriptEntry` objekty, které určují objekt funkce, vrátí délku definice funkce.  
   
- Pro `IScriptScriptlet` objekty, vrátí délku vstupu.  
+ U `IScriptScriptlet` objektů vrátí délku položky.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IScriptEntry – rozhraní](../../winscript/reference/iscriptentry-interface.md)

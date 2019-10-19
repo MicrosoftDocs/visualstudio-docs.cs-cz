@@ -1,5 +1,5 @@
 ---
-title: IMachineDebugManager::RemoveApplication | Dokumentace Microsoftu
+title: 'Imachinedebugmanager –:: RemoveApplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0ee70097ab87406d6ad39b244bdec61a72aea836
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 87951e55a7cfcfef1a366f79c380948c7651ed12
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977549"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573942"
 ---
 # <a name="imachinedebugmanagerremoveapplication"></a>IMachineDebugManager::RemoveApplication
-Odebere aplikaci ze spuštění seznam aplikací.  
+Odebere aplikaci ze seznamu běžící aplikace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,19 +37,19 @@ HRESULT RemoveApplication(
   
 #### <a name="parameters"></a>Parametry  
  `dwAppCookie`  
- [in] Soubor cookie k dispozici při přidání aplikace do seznamu aplikací.  
+ pro Soubor cookie zadaný při přidání aplikace do seznamu aplikací  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je volána metodou správce ladění procesu pokaždé, když `IProcessDebugManager::RemoveApplication` je volána.  
+ Tato metoda je volána správcem ladění procesu vždy, když je volána `IProcessDebugManager::RemoveApplication`.  
   
-## <a name="see-also"></a>Viz také  
- [IMachineDebugManager::AddApplication](../../winscript/reference/imachinedebugmanager-addapplication.md)   
- [IMachineDebugManager Interface](../../winscript/reference/imachinedebugmanager-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ [Imachinedebugmanager –:: AddApplication](../../winscript/reference/imachinedebugmanager-addapplication.md)    
+ @No__t_1 [rozhraní imachinedebugmanager –](../../winscript/reference/imachinedebugmanager-interface.md)  
  [IProcessDebugManager::RemoveApplication](../../winscript/reference/iprocessdebugmanager-removeapplication.md)

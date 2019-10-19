@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd90cb5eb55143a4a1916dfcee3f108ba7afb759
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
-ms.translationtype: HT
+ms.openlocfilehash: bbd99d260ba61d9e3ae9e877ecc1cefb1a22892e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72536041"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72569068"
 ---
 # <a name="general-debugging-options"></a>Obecné možnosti ladění
 
@@ -95,7 +95,7 @@ V podmínkách 2 a 3 je výjimka někdy zachycena spravovaným kódem v `mscorli
 
 **Přesměrovat text z okna výstup do**příkazového okna: pošle všechny zprávy ladicího programu, které by se obvykle zobrazovaly v okně **výstup** , do příkazového **podokna místo** toho.
 
-**Zobrazit nezpracovanou strukturu objektů v oknech proměnných**: vypne všechna přizpůsobení zobrazení struktury objektů. Další informace o úpravách zobrazení najdete v tématu [Vytvoření vlastních zobrazení spravovaných objektů](../debugger/create-custom-views-of-dot-managed-objects.md).
+**Zobrazit nezpracovanou strukturu objektů v oknech proměnných**: vypne všechna přizpůsobení zobrazení struktury objektů. Další informace o úpravách zobrazení najdete v tématu [Vytvoření vlastních zobrazení spravovaných objektů](../debugger/create-custom-views-of-managed-objects.md).
 
 **Potlačit optimalizaci JIT při načtení modulu (pouze spravované)** : ZAKÁŽE optimalizaci JIT spravovaného kódu při načtení modulu a kompilaci JIT při připojení ladicího programu. Zakázáním optimalizace může být snazší ladit některé problémy, i když na úkor výkonu. Pokud používáte Pouze můj kód, potlačení optimalizace JIT může způsobit, že se neuživatelský kód zobrazí jako uživatelský kód ("můj kód"). Další informace najdete v tématu [optimalizace a ladění JIT](../debugger/jit-optimization-and-debugging.md).
 

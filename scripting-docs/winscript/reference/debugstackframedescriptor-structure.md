@@ -1,5 +1,5 @@
 ---
-title: Debugstackframedescriptor – struktura | Dokumentace Microsoftu
+title: Struktura Debugstackframedescriptor – | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fddae48178ec6c56ce647f5c4f3a1bff3d81a980
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 910e08ec6d9982354eb71b50d5e916917808f140
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955191"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576556"
 ---
 # <a name="debugstackframedescriptor-structure"></a>Struktura DebugStackFrameDescriptor
 Vytváří výčet rámců zásobníku a slučuje výstup z několika enumerátorů ve stejném vláknu.  
@@ -41,22 +41,22 @@ typedef struct tagDebugStackFrameDescriptor {
   
 ## <a name="members"></a>Členové  
  `pdsf`  
- Orámovat objekt zásobníku.  
+ Objekt rámce zásobníku.  
   
  `dwMin`  
- Vyjádření závislé na počítači nižší řadu fyzické adresy přidružené k tento rámec zásobníku.  
+ Reprezentace závislá na počítači s nižším rozsahem fyzických adres spojených s tímto rámcem zásobníku.  
   
  `dwLim`  
- Závislé na počítači reprezentuje horní hranice fyzických adres spojených s Tento rámec zásobníku.  
+ Reprezentace závislého počítače na horním rozsahu fyzických adres přidružených k tomuto bloku zásobníku.  
   
  `fFinal`  
- Příznak, který označuje, že rámec je právě zpracovává.  
+ Příznak, který označuje, že je snímek zpracováván.  
   
  `punkFinal`  
- Pokud tento parametr není `NULL`má být spuštěn nový, a aktuální enumerátor sloučení by se měla zastavit. Objekt určuje, jak spustit nový výčet.  
+ Pokud tento parametr není `NULL`, je nutné zastavit aktuální sloučení enumerátoru a spustit nový. Objekt označuje, jak spustit nový výčet.  
   
 ## <a name="remarks"></a>Poznámky  
- Správce ladění procesu používá tuto strukturu řazení zásobníku z několika skriptovacích strojů. Podle konvence zásobníky růst dolů. V důsledku toho na architekturách, kde zásobníky růst, adresy by měl být doplněny párech.  
+ Správce procesu ladění používá tuto strukturu k řazení rámců zásobníku z více skriptovacích strojů. Podle konvence roste velikost zásobníků. V důsledku toho se v architekturách, ve kterých se rozšiřují hromádky, musí tyto adresy přidvojkovéhoně doplnit.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Konstanty, výčty a struktury ladicího programu aktivních skriptů](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

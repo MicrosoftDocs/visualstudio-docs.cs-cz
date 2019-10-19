@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::AddTypeLib | Dokumentace Microsoftu
+title: 'IActiveScript:: AddTypeLib | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c4943d1305c2f25de4eec9e782949a66827de879
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 254a5133d42689020eaaae290a1016de4b848100
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955088"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575812"
 ---
 # <a name="iactivescriptaddtypelib"></a>IActiveScript::AddTypeLib
-Obor názvů pro skript přidá knihovnu typů. Podobá se to `#include` direktiva v jazyce C/C++. Umožňuje, aby sada předdefinovaných položek, jako jsou definice tříd `typedefs`a s názvem konstanty mají být přidány do běhové prostředí skriptu k dispozici.  
+Přidá knihovnu typů do oboru názvů pro skript. To se podobá direktivě `#include` v C/C++. Povoluje sadu předdefinovaných položek, jako jsou definice třídy, `typedefs` a pojmenované konstanty, které mají být přidány do prostředí runtime dostupné pro skript.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,30 +40,30 @@ HRESULT AddTypeLib(
   
 #### <a name="parameters"></a>Parametry  
  `guidTypeLib`  
- [in] Identifikátor CLSID typu knihovny přidat.  
+ pro Identifikátor CLSID knihovny typů, která se má přidat  
   
  `dwMaj`  
- [in] Hlavní číslo verze.  
+ pro Číslo hlavní verze.  
   
  `dwMin`  
- [in] Číslo podverze.  
+ pro Číslo dílčí verze  
   
  `dwFlags`  
- [in] Příznaky možností. Může být následující:  
+ pro Příznaky možností. Může být následující:  
   
-|Value|Význam|  
+|Hodnota|Význam|  
 |-----------|-------------|  
-|SCRIPTTYPELIB_ISCONTROL|Knihovna typů popisuje ovládací prvek ActiveX používá hostitel.|  
+|SCRIPTTYPELIB_ISCONTROL|Knihovna typů popisuje ovládací prvek ActiveX používaný hostitelem.|  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
 |Návratová hodnota|Význam|  
 |------------------|-------------|  
-|`S_OK`|Úspěch.|  
+|`S_OK`|Nástup.|  
 |`E_INVALIDARG`|Argument byl neplatný.|  
-|`E_UNEXPECTED`|Volání nebylo očekáváno (například skriptovací stroj má ještě nebyly načteny nebo inicializován).|  
+|`E_UNEXPECTED`|Volání nebylo očekáváno (například skriptovací stroj ještě nebyl načten nebo inicializován).|  
 |`TYPE_E_CANTLOADLIBRARY`|Zadanou knihovnu typů nelze načíst.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScript](../../winscript/reference/iactivescript.md)

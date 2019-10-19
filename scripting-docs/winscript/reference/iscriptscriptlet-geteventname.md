@@ -1,5 +1,5 @@
 ---
-title: IScriptScriptlet::GetEventName | Dokumentace Microsoftu
+title: 'Iscriptscriptlet –:: GetEvent | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 56566c85aed88faadf740392ad3ec06aa848431e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fc56514800ad8388badf6e13a7fa6761b816969d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786754"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72561517"
 ---
 # <a name="iscriptscriptletgeteventname"></a>IScriptScriptlet::GetEventName
-Vrátí název události spojené se skriptletem.  
+Vrátí název události přidružené k skriptletu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,16 +37,16 @@ HRESULT GetEventName(
   
 #### <a name="parameters"></a>Parametry  
  `pbstr`  
- [out] Vyrovnávací paměť, která obsahuje název události, který je přidružen `IScriptScriptlet` objektu.  
+ mimo Vyrovnávací paměť obsahující název události, který je spojen s objektem `IScriptScriptlet`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IScriptScriptlet – rozhraní](../../winscript/reference/iscriptscriptlet-interface.md)

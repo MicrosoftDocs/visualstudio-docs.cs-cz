@@ -1,5 +1,5 @@
 ---
-title: Breakpoint_state – výčet | Dokumentace Microsoftu
+title: Výčet BREAKPOINT_STATE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,14 +17,14 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: faca5ef7bc89bc16d646f66fb897f1dc44eb831a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8c56a8b135a0aa9a4f8ddf91e146d4d64367bb2b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955357"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572632"
 ---
-# <a name="breakpointstate-enumeration"></a>Výčet BREAKPOINT_STATE
+# <a name="breakpoint_state-enumeration"></a>Výčet BREAKPOINT_STATE
 Označuje stav zarážky.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -41,9 +41,9 @@ typedef enum tagBREAKPOINT_STATE {
   
 |Člen|Popis|  
 |------------|-----------------|  
-|BREAKPOINT_DELETED|Zarážka už existuje, ale stále existují odkazy na něj.|  
-|BREAKPOINT_DISABLED|Zarážky existuje, ale je zakázán.|  
-|BREAKPOINT_ENABLED|Zarážky existuje a je povolená.|  
+|BREAKPOINT_DELETED|Zarážka už neexistuje, ale na ni se pořád odkazuje.|  
+|BREAKPOINT_DISABLED|Zarážka existuje, ale je zakázaná.|  
+|BREAKPOINT_ENABLED|Zarážka existuje a je povolená.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Konstanty, výčty a struktury ladicího programu aktivních skriptů](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

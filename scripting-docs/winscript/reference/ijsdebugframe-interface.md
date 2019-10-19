@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugframe – rozhraní | Dokumentace Microsoftu
+title: Rozhraní IJsDebugFrame | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,12 +11,12 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 57f5a848967148705a2b8dcd3f6b75dcb3a5db26
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 91fe8cdf91b0c2121f4a1a7f111794b0fbe36669
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62558000"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575108"
 ---
 # <a name="ijsdebugframe-interface"></a>IJsDebugFrame – metoda
 Představuje rámec zásobníku.  
@@ -31,18 +31,18 @@ IJsDebugFrame : public IUnknown;
   
 ### <a name="public-methods"></a>Veřejné metody  
   
-|Název|Popis|  
+|Name|Popis|  
 |----------|-----------------|  
-|[IJsDebugFrame::Evaluate – metoda](../../winscript/reference/ijsdebugframe-evaluate-method.md)|Vyhodnocení výrazu v kontextu tohoto rámce zásobníku.|  
-|[IJsDebugFrame::GetDebugProperty – metoda](../../winscript/reference/ijsdebugframe-getdebugproperty-method.md)|Vrátí prohlížeč vlastnost pro tento rámec zásobníku.|  
-|[IJsDebugFrame::GetDocumentPositionWithId – metoda](../../winscript/reference/ijsdebugframe-getdocumentpositionwithid-method.md)|Vrací aktuální pozici tohoto rámce zásobníku v rámci dokumentu uživatelské úrovni.|  
-|[IJsDebugFrame::GetDocumentPositionWithName – metoda](../../winscript/reference/ijsdebugframe-getdocumentpositionwithname-method.md)|Vrací aktuální pozici tohoto rámce zásobníku v rámci dokumentu uživatelské úrovni.|  
-|[IJsDebugFrame::GetName – metoda](../../winscript/reference/ijsdebugframe-getname-method.md)|Získá popisný název tohoto rámce zásobníku.|  
-|[IJsDebugFrame::GetReturnAddress – metoda](../../winscript/reference/ijsdebugframe-getreturnaddress-method.md)|Získá zpáteční adresu posunutou na "start" (viz GetStackRange) rámečku.|  
-|[IJsDebugFrame::GetStackRange – metoda](../../winscript/reference/ijsdebugframe-getstackrange-method.md)|Vrátí absolutní adresu rozsahu logického rámce zásobníku JavaScript.|  
+|[IJsDebugFrame::Evaluate – metoda](../../winscript/reference/ijsdebugframe-evaluate-method.md)|Vyhodnotit výraz v kontextu tohoto rámce zásobníku.|  
+|[IJsDebugFrame::GetDebugProperty – metoda](../../winscript/reference/ijsdebugframe-getdebugproperty-method.md)|Vrátí prohlížeč vlastností pro tento rámec zásobníku.|  
+|[IJsDebugFrame::GetDocumentPositionWithId – metoda](../../winscript/reference/ijsdebugframe-getdocumentpositionwithid-method.md)|Vrátí aktuální pozici tohoto rámce zásobníku v dokumentu na úrovni uživatele.|  
+|[IJsDebugFrame::GetDocumentPositionWithName – metoda](../../winscript/reference/ijsdebugframe-getdocumentpositionwithname-method.md)|Vrátí aktuální pozici tohoto rámce zásobníku v dokumentu na úrovni uživatele.|  
+|[IJsDebugFrame::GetName – metoda](../../winscript/reference/ijsdebugframe-getname-method.md)|Získá uživatelsky přívětivý název rámce zásobníku.|  
+|[IJsDebugFrame::GetReturnAddress – metoda](../../winscript/reference/ijsdebugframe-getreturnaddress-method.md)|Získá návratovou adresu vloženou na ' Start ' (viz Getstackrange –) snímku.|  
+|[IJsDebugFrame::GetStackRange – metoda](../../winscript/reference/ijsdebugframe-getstackrange-method.md)|Vrátí absolutní rozsah adres rámce logického zásobníku JavaScriptu.|  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace skriptovacích rozhraní systému Windows](../../winscript/reference/windows-script-interfaces-reference.md)

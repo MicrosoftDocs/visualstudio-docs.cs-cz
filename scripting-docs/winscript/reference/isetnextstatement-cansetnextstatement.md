@@ -1,5 +1,5 @@
 ---
-title: ISetNextStatement::CanSetNextStatement | Dokumentace Microsoftu
+title: 'ISetNextStatement –:: CanSetNextStatement | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: eb65faaf107c42b44201ea18c1150f8093b1654c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 56cf0b2e4afd7a86a087b37be4b23758a5b59720
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786612"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571840"
 ---
 # <a name="isetnextstatementcansetnextstatement"></a>ISetNextStatement::CanSetNextStatement
-Tato metoda určuje, zda lze nastavit bod provádění, která určuje dalšího příkazu ke spuštění kódu, do zadaného umístění.  
+Tato metoda určuje, zda bod provádění, který určuje další příkaz kódu, který má být spuštěn, lze nastavit na zadané umístění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,20 +36,20 @@ HRESULT CanSetNextStatement(
   
 #### <a name="parameters"></a>Parametry  
  `pStackFrame`  
- [in] Ukazatel na objekt rámce zásobníku.  
+ pro Ukazatel na objekt rámce zásobníku.  
   
  `pCodeContext`  
- [in] Ukazatel na objekt kontextu kódu.  
+ pro Ukazatel na objekt kontextu kódu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
-|`S_OK`|Ke kontextu zadaný kód je možné aktualizovat následující příkaz.|  
-|`S_FALSE`|Další příkaz nejde aktualizovat na kontext zadaného kódu.|  
+|`S_OK`|Následující příkaz lze aktualizovat na zadaný kontext kódu.|  
+|`S_FALSE`|Následující příkaz nelze aktualizovat na zadaný kontext kódu.|  
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [ISetNextStatement – rozhraní](../../winscript/reference/isetnextstatement-interface.md)

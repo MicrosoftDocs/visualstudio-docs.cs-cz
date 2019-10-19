@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::SetSignature | Dokumentace Microsoftu
+title: 'Iscriptentry –:: SetSignature | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 42740a0e6261317443b8c9cc23559a2f92f66540
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e381e642462fe56e661de9da0d8974dc7bf18b18
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787186"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575338"
 ---
 # <a name="iscriptentrysetsignature"></a>IScriptEntry::SetSignature
-Nastaví typ informace pro `IScriptEntry` objektu funkce.  
+Nastaví informace o typu `IScriptEntry` objektu funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,20 +38,20 @@ HRESULT SetSignature(
   
 #### <a name="parameters"></a>Parametry  
  `pti`  
- [in] Informace o typu.  
+ pro Informace o typu.  
   
  `iMethod`  
- [in] Metoda index `ITypeInfo` objektu.  
+ pro Index metody v objektu `ITypeInfo`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Nastavení informací o typu s použitím `IScriptEntry::SetSignature` nebo [IScriptNode::CreateChildHandler](../../winscript/reference/iscriptnode-createchildhandler.md). Informace o typu může být také generován položku založenou na reprezentaci vnitřního funkce.  
+ Informace o typu se nastavují pomocí `IScriptEntry::SetSignature` nebo [iscriptnode –:: CreateChildHandler](../../winscript/reference/iscriptnode-createchildhandler.md). Informace o typu mohou být vygenerovány také položkou na základě reprezentace vnitřní funkce.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IScriptEntry – rozhraní](../../winscript/reference/iscriptentry-interface.md)

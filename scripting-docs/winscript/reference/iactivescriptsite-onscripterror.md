@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSite::OnScriptError | Dokumentace Microsoftu
+title: 'IActiveScriptSite:: OnScriptError | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d76aa46cbbcdab9a3c5c7b561b91ee58cfcac4ac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9f0078b53515a881d7f2ac1475cf5565fa22a025
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992609"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570267"
 ---
 # <a name="iactivescriptsiteonscripterror"></a>IActiveScriptSite::OnScriptError
-Informuje o hostiteli, provádění došlo k chybě při spuštění skriptu modulu.  
+Informuje hostitele o tom, že došlo k chybě spuštění, když modul spustil skript.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +37,10 @@ HRESULT OnScriptError(
   
 #### <a name="parameters"></a>Parametry  
  `pase`  
- [in] Adresa objektu chyba [iactivescripterror –](../../winscript/reference/iactivescripterror.md) rozhraní. Hostitel může pomocí tohoto rozhraní k získání informací o chybě spuštění.  
+ pro Adresa rozhraní [IActiveScriptError](../../winscript/reference/iactivescripterror.md) objektu chyby Hostitel může toto rozhraní použít k získání informací o chybě spuštění.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` Pokud chyba byla zpracována správně nebo OLE definované jinak kód chyby.  
+ Vrátí `S_OK`, pokud byla chyba správně zpracována, nebo v opačném případě kód chyby definovaný OLE.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)

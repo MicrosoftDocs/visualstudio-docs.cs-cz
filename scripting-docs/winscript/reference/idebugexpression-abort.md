@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression::Abort | Dokumentace Microsoftu
+title: 'IDebugExpression –:: Abort | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cfaee56fffc7b28d04979f39b840d0b07cde2e08
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 508939b23be53acbff269744ae4035853f977ada
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978455"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575940"
 ---
 # <a name="idebugexpressionabort"></a>IDebugExpression::Abort
 Zastaví výraz.  
@@ -34,18 +34,18 @@ HRESULT Abort();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Tato metoda nemá žádné parametry.  
+ Tato metoda nepřijímá žádné parametry.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda se zastaví při nejbližší příležitosti vyhodnocení výrazu.  
+ Tato metoda zastaví vyhodnocení výrazu při nejbližší příležitosti.  
   
-## <a name="see-also"></a>Viz také  
- [Idebugexpression – rozhraní](../../winscript/reference/idebugexpression-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní IDebugExpression –](../../winscript/reference/idebugexpression-interface.md)  
  [IDebugExpression::Start](../../winscript/reference/idebugexpression-start.md)

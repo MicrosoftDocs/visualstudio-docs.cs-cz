@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31a66556e9476631fa0372b14e73eb8c6241fc63
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
-ms.translationtype: HT
+ms.openlocfilehash: 39be6feffb70dd43823af2af0fce719daafc6f78
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314198"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572483"
 ---
 # <a name="step-9-review-comment-and-test-your-code"></a>Krok 9: kontrola, komentář a testování kódu
 
@@ -65,7 +65,7 @@ Právě jste vytvořili něco, co funguje, a i když ještě není hotové, mů�
     > [!TIP]
     > Rozhraní IDE je sestaveno tak, aby bylo snadné psát kód a *fragmenty kódu* jsou jedním ze způsobů, jak to provést. Fragment kódu je zástupce, který se rozšíří na malý blok kódu.
     >
-    >  Můžete zobrazit všechny dostupné fragmenty kódu. Na panelu nabídek vyberte **nástroje**  > **Správce fragmentů kódů**. Pro C#je fragment kódu `if` v **jazyce Visual C#**  . Pro Visual Basic jsou fragmenty `if` v **podmíněných a smyčekch**  > **vzory kódu**. Pomocí tohoto správce můžete procházet existující fragmenty nebo přidávat vlastní fragmenty kódu.
+    >  Můžete zobrazit všechny dostupné fragmenty kódu. Na panelu nabídek vyberte **nástroje**  > **Správce fragmentů kódů**. Pro C#je fragment kódu `if` v **jazyce Visual C#**  . Pro Visual Basic jsou fragmenty `if` ve **vzorech kódu**  > **podmíněny a smyčky**. Pomocí tohoto správce můžete procházet existující fragmenty nebo přidávat vlastní fragmenty kódu.
     >
     >  Chcete-li aktivovat fragment při psaní kódu, zadejte jej a vyberte klávesu **TAB** . Mnoho fragmentů kódu se zobrazí v okně **technologie IntelliSense** , což je důvod, proč si vyberete klávesu **TAB** dvakrát: nejprve vyberte fragment kódu z okna **technologie IntelliSense** a potom pro určení rozhraní IDE, aby používal fragment. (Technologie IntelliSense podporuje fragment `if`, ale ne fragment `ifelse`.)
 

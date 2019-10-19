@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::SetText | Dokumentace Microsoftu
+title: 'Iscriptentry –:: SetText | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 17e716a7ad52cc5aeca18d02122edb9c457b14e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b0b39dcbd2b61e7236403948eaa91a76e0afee45
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787629"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573633"
 ---
 # <a name="iscriptentrysettext"></a>IScriptEntry::SetText
-Nastaví text, který odpovídá `IScriptEntry` bloku skriptu nebo zdrojový kód, který je součástí `IScriptScriptlet` obslužné rutiny události.  
+Nastaví text, který odpovídá bloku skriptu `IScriptEntry`, nebo zdrojový kód, který je obsažen v obslužné rutině události `IScriptScriptlet`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +37,10 @@ HRESULT SetText(
   
 #### <a name="parameters"></a>Parametry  
  `psz`  
- [in] Text `IScriptEntry` bloku skriptu nebo zdrojový kód `IScriptScriptlet` obslužné rutiny události.  
+ pro Text `IScriptEntry`ho bloku skriptu nebo zdrojový kód obslužné rutiny události `IScriptScriptlet`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
@@ -48,5 +48,5 @@ HRESULT SetText(
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IScriptEntry – rozhraní](../../winscript/reference/iscriptentry-interface.md)

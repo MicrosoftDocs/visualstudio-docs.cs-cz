@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::HandleBreakPoint | Dokumentace Microsoftu
+title: 'IDebugApplication –:: HandleBreakPoint | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5e3444e6eedde9576216552e41abb0e97aafa2d7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 30937817424e88f80cfa6afa8c874adfd2b2687b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63412383"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574965"
 ---
 # <a name="idebugapplicationhandlebreakpoint"></a>IDebugApplication::HandleBreakPoint
-Způsobí, že chcete blokovat aktuální vlákno a odešle oznámení této zarážky v ladicím programu integrovaného vývojového prostředí.  
+Způsobí, že aktuální vlákno zablokuje a pošle oznámení o zarážce do rozhraní IDE ladicího programu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,28 +38,28 @@ HRESULT HandleBreakPoint(
   
 #### <a name="parameters"></a>Parametry  
  `br`  
- [in] Důvod pro přerušení.  
+ pro Důvod pro přerušení  
   
  `pbra`  
- [out] Akce se má provést, když ladicí program pokračuje v aplikaci.  
+ mimo Akce, která se má provést, když ladicí program obnoví aplikaci.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Modul jazyka volá tuto metodu v kontextu vlákna, které narazí na zarážku. Tato metoda blokuje aktuální vlákno a odešle oznámení zarážku v ladicím programu integrovaného vývojového prostředí. Když ladicí program pokračuje v aplikaci, `pbra` parametr určuje, jaká akce se má provést.  
+ Jazykový modul volá tuto metodu v kontextu vlákna, které narazí na zarážku. Tato metoda zablokuje aktuální vlákno a pošle oznámení o zarážce do IDE ladicího programu. Když ladicí program obnoví aplikaci, parametr `pbra` určuje, jakou akci chcete provést.  
   
 > [!NOTE]
-> Modul jazyka může být volána vláknem provádění úkolů, například jako zobrazení výčtu zásobník snímků nebo vyhodnocení výrazů během zarážku.  
+> Modul jazyka může být volán vláknem k provádění úloh, jako je například zobrazení výčtu rámců zásobníku nebo vyhodnocování výrazů během zarážky.  
   
- Tato metoda způsobí, že `IApplicationDebugger::onHandleBreakPoint` volat.  
+ Tato metoda způsobí, že `IApplicationDebugger::onHandleBreakPoint` být volána.  
   
-## <a name="see-also"></a>Viz také  
- [Idebugapplication – rozhraní](../../winscript/reference/idebugapplication-interface.md)   
- [IApplicationDebugger::onHandleBreakPoint](../../winscript/reference/iapplicationdebugger-onhandlebreakpoint.md)   
- [Breakreason – výčet](../../winscript/reference/breakreason-enumeration.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní IDebugApplication –](../../winscript/reference/idebugapplication-interface.md)  
+ [Iapplicationdebugger –:: onHandleBreakPoint](../../winscript/reference/iapplicationdebugger-onhandlebreakpoint.md)    
+ @No__t_1 [výčtu breakreason –](../../winscript/reference/breakreason-enumeration.md)  
  [BREAKRESUMEACTION – výčet](../../winscript/reference/breakresumeaction-enumeration.md)

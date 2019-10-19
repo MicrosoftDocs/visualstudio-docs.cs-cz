@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::StartDebugSession | Dokumentace Microsoftu
+title: 'IDebugApplication –:: StartDebugSession | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a42fe61d67eedbe6f69350c7b5ec17726f43486e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a7fd27ec86485d39ee9f13997c1a2db7175afcde
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990697"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570981"
 ---
 # <a name="idebugapplicationstartdebugsession"></a>IDebugApplication::StartDebugSession
-Spustí výchozí ladicí program integrovaného vývojového prostředí (IDE) a připojí ladicí relace pro tuto aplikaci, pokud už není připojen.  
+Spustí výchozí ladicí program integrované vývojové prostředí (IDE) a připojí relaci ladění k této aplikaci, pokud ještě není připojená.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,17 +34,17 @@ HRESULT StartDebugSession();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Tato metoda nemá žádné parametry.  
+ Tato metoda nepřijímá žádné parametry.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda se používá k implementaci Ladění just-in-time.  
+ Tato metoda slouží k implementaci ladění za běhu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugApplication – rozhraní](../../winscript/reference/idebugapplication-interface.md)

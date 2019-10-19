@@ -1,5 +1,5 @@
 ---
-title: IScriptNode::GetCookie | Dokumentace Microsoftu
+title: 'Iscriptnode –:: GetCookie | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b05d184af3ecd6302fc05893600fd7026eeca3ad
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 91428ca617c5c9e7b2bf88fc9c405f1d1610de1a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787050"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572217"
 ---
 # <a name="iscriptnodegetcookie"></a>IScriptNode::GetCookie
-Vrátí hodnotu, která slouží k přidružení skriptletu hostitelský objekt definovaného aplikací.  
+Vrátí hodnotu definovanou aplikací, která se používá k přidružení skriptletu k objektu hostitele.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,18 +37,18 @@ HRESULT GetCookie(
   
 #### <a name="parameters"></a>Parametry  
  `pdwCookie`  
- [out] Pro `IScriptEntry` objektu, vrátí hodnotu souboru cookie definovaného aplikací.  
+ mimo Pro objekt `IScriptEntry` vrátí hodnotu souboru cookie definované aplikací.  
   
- Pro `IScriptNode` objekt, který představuje webovou stránku, vrátí hodnotu 0.  
+ Pro objekt `IScriptNode`, který představuje webovou stránku, vrátí hodnotu 0.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IScriptNode – rozhraní](../../winscript/reference/iscriptnode-interface.md)

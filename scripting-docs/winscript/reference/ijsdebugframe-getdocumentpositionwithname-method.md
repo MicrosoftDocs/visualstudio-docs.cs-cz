@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugframe::getdocumentpositionwithname – metoda | Dokumentace Microsoftu
+title: 'IJsDebugFrame:: Getdocumentpositionwithname – – metoda | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4d3b909f3a3ebc672bf6d0a014b519de685b1677
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b818ca4dc1ec4402973026668972507861c86f22
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62558149"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575126"
 ---
 # <a name="ijsdebugframegetdocumentpositionwithname-method"></a>IJsDebugFrame::GetDocumentPositionWithName – metoda
-Vrací aktuální pozici tohoto rámce zásobníku v rámci dokumentu uživatelské úrovni.  
+Vrátí aktuální pozici tohoto rámce zásobníku v dokumentu na úrovni uživatele.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,18 +37,18 @@ HRESULT GetDocumentPositionWithName(
   
 #### <a name="parameters"></a>Parametry  
  `pDocumentName`  
- [out] U statických skriptů adresa URL dokumentu. Pro dynamické skripty je vrácen název obsahující typ skriptu (například kód eval, kód funkce atd.).  
+ mimo Pro statické skripty adresa URL dokumentu. Pro dynamické skripty je vrácen název obsahující typ skriptu (například kód pro vyhodnocení, kód funkce atd.).  
   
  `pLine`  
- [out] řádek založený na 1 pozici v dokumentu.  
+ [out] pozice řádku na 1 v dokumentu.  
   
  `pColumn`  
- [out] řádek založený na 1 pozici v dokumentu.  
+ [out] pozice řádku na 1 v dokumentu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IJsDebugFrame – rozhraní](../../winscript/reference/ijsdebugframe-interface.md)

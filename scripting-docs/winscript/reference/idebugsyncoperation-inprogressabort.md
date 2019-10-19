@@ -1,5 +1,5 @@
 ---
-title: IDebugSyncOperation::InProgressAbort | Dokumentace Microsoftu
+title: 'IDebugSyncOperation –:: InProgressAbort | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a794ea70d6d2fe937afb311e6961d53f22bd7ac2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 40974c738c071e52648297ac90a0ab89d9681435
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63004829"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576672"
 ---
 # <a name="idebugsyncoperationinprogressabort"></a>IDebugSyncOperation::InProgressAbort
-Zruší probíhající operace v jiném vlákně.  
+Zruší probíhající operaci v jiném vlákně.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,10 +34,10 @@ HRESULT InProgressAbort();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Tato metoda nemá žádné parametry.  
+ Tato metoda nepřijímá žádné parametry.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
@@ -46,9 +46,9 @@ HRESULT InProgressAbort();
 |`E_ABORT`|Operaci nešlo dokončit.|  
   
 ## <a name="remarks"></a>Poznámky  
- Správce ladění procesu volá tuto metodu z v rámci vlákno ladicího programu pro zrušení operace, která probíhá v jiném vlákně.  
+ Správce procesu ladění volá tuto metodu z vlákna ladicího programu pro zrušení operace, která probíhá v jiném vlákně.  
   
- Pokud `InProgressAbort` metoda nemůže dokončit operaci, vrátí `E_ABORT` co nejdříve. Tato metoda může vrátit `E_NOTIMPL` Pokud operaci nelze zrušit.  
+ Pokud metoda `InProgressAbort` nemůže operaci dokončit, vrátí `E_ABORT` co nejrychleji. Tato metoda může vracet `E_NOTIMPL`, pokud operaci nelze zrušit.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugSyncOperation – rozhraní](../../winscript/reference/idebugsyncoperation-interface.md)

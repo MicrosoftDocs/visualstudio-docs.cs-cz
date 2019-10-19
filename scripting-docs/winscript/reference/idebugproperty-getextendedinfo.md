@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty::GetExtendedInfo | Dokumentace společnosti Microsoft
+title: 'Idebugproperty –:: GetExtendedInfo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 707474f786a8f88c0e08d887f2c2b09c8aaedc8e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 130d11c8ed6bb21210d129bb9aace779db3bd54b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979120"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72562391"
 ---
 # <a name="idebugpropertygetextendedinfo"></a>IDebugProperty::GetExtendedInfo
-Získá rozšířené informace o vlastnosti.  
+Získá Rozšířené informace o vlastnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,19 +39,19 @@ HRESULT GetExtendedInfo (
   
 #### <a name="parameters"></a>Parametry  
  `cInfos`  
- [in] Počet objektů rozšířené informace, které.  
+ pro Počet rozšířených informačních objektů  
   
  `rgguidExtendedInfo`  
- [in] Pole `GUID`s se předává tak, aby více položek rozšířené informace mohou být načteny současně.  
+ pro Pole `GUID`s je předáno, aby bylo možné načíst více položek rozšířených informací současně.  
   
  `pExtendedInfo`  
- [out] Vrátí pole `VARIANT`, které slouží k načtení informací o rozšířené vlastnosti.  
+ mimo Vrátí pole `VARIANT`s, které lze použít k načtení informací rozšířených vlastností.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Bude vracet platnou `HRESULT`, obvykle `S_OK`.  
+ Vrací platný `HRESULT`, obvykle `S_OK`.  
   
 ## <a name="remarks"></a>Poznámky  
- Toto rozhraní získá rozšířené informace pro tento objekt. Rozhraní API existuje pouze za účelem načtení informací, které se nepropůjčuje pro načtení pomocí `IDebugProperty::GetPropertyInfo`).  
+ Toto rozhraní získá rozšířené informace pro tento objekt. Rozhraní API existuje pouze pro účely načítání informací, které neslouží k načtení pomocí `IDebugProperty::GetPropertyInfo`).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugProperty – rozhraní](../../winscript/reference/idebugproperty-interface.md)

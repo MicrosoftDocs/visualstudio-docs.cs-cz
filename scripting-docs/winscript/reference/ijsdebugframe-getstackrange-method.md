@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugframe::getstackrange – metoda | Dokumentace Microsoftu
+title: 'IJsDebugFrame:: Getstackrange – – metoda | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 52dd6114d3ec462f91f8bce5e76f73c5487746ed
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d1ac3cbee9d16296632477f4128ec36370ab0d4a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62558213"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574044"
 ---
 # <a name="ijsdebugframegetstackrange-method"></a>IJsDebugFrame::GetStackRange – metoda
-Vrátí absolutní adresu rozsahu logického rámce zásobníku JavaScript.  
+Vrátí absolutní rozsah adres rámce logického zásobníku JavaScriptu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,18 +36,18 @@ HRESULT GetStackRange(
   
 #### <a name="parameters"></a>Parametry  
  `pStart`  
- [out] Nejspodnější ukazatel zásobníku rámce.  
+ mimo Dolní největší ukazatel zásobníku rámečku.  
   
  `pEnd`  
- [out] TOP nejhornější ukazatel zásobníku rámce.  
+ mimo Horní největší ukazatel stacku rámečku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je užitečná pro piecing společně trasování zásobníků shromážděných z více modulů – runtime. Počáteční a koncový ukazatel zásobníku může zahrnovat více rámců zásobníku fyzického počítače (pro interpretované snímky modulu runtime jazyka JavaScript). Start > konec se vzrůstajícím zásobníkem z vysoké na nízkou adresu.  
+ Tato metoda je užitečná pro piecing společně prokládaných trasování zásobníku shromážděných z více modulů runtime. Koncový bod zásobníku může zahrnovat několik snímků zásobníku fyzického počítače (pro interpretované snímky běhového prostředí JavaScript). Začněte > končit, protože zásobník roste od vysoké po nízkou adresu.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IJsDebugFrame – rozhraní](../../winscript/reference/ijsdebugframe-interface.md)

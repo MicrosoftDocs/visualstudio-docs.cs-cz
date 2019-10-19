@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptErrorDebug110::GetExceptionThrownKind | Dokumentace Microsoftu
+title: 'IActiveScriptErrorDebug110:: GetExceptionThrownKind | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a58add60560f22681f18225d844814e3547b671f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: d50ef1dfa3492fdc43a5010b624dae296c692722
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436074"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575058"
 ---
 # <a name="iactivescripterrordebug110getexceptionthrownkind"></a>IActiveScriptErrorDebug110::GetExceptionThrownKind
 Vrací hodnotu, která označuje druh vyvolané výjimky.  
   
 > [!IMPORTANT]
-> [Iactivescripterrordebug110 – rozhraní](../../winscript/reference/iactivescripterrordebug110-interface.md) je implementováno komponentou PDM verze 11.0 nebo novější. Nachází se v souboru activdbg100.h.  
+> [Rozhraní IActiveScriptErrorDebug110](../../winscript/reference/iactivescripterrordebug110-interface.md) je implementováno pomocí PDM verze 11,0 a vyšší. Nachází se v souboru activdbg100.h.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,14 +36,14 @@ HRESULT GetExceptionThrownKind(
   
 #### <a name="parameters"></a>Parametry  
  `pExceptionKind`  
- [out] Typ výjimky, která je vyvolána (například první příležitosti nebo neošetřená výjimka), reprezentovaný [výčet SCRIPT_ERROR_DEBUG_EXCEPTION_THROWN_KIND](../../winscript/reference/script-error-debug-exception-thrown-kind-enumeration.md) hodnota výčtu.  
+ mimo Druh výjimky, která je vyvolána (například první nebo Neošetřená), reprezentovaná hodnotou výčtu [výčtu SCRIPT_ERROR_DEBUG_EXCEPTION_THROWN_KIND](../../winscript/reference/script-error-debug-exception-thrown-kind-enumeration.md) .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScriptErrorDebug110 – rozhraní](../../winscript/reference/iactivescripterrordebug110-interface.md)

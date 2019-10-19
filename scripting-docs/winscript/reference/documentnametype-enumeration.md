@@ -1,5 +1,5 @@
 ---
-title: Documentnametype – výčet | Dokumentace Microsoftu
+title: Výčet DOCUMENTNAMETYPE – | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5ee258602c47951f4731dc1378542cc83d57d72b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 401eb759523ed1a33d24c3a298db0b3de2b7d5a7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955209"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575879"
 ---
 # <a name="documentnametype-enumeration"></a>Výčet DOCUMENTNAMETYPE
 Popisuje, jaký typ získat pro dokument.  
@@ -42,11 +42,11 @@ DOCUMENTNAMETYPE_UNIQUE_TITLE,} DOCUMENTNAMETYPE;
   
 |Člen|Popis|  
 |------------|-----------------|  
-|DOCUMENTNAMETYPE_APPNODE|Získává název se zobrazí ve stromu aplikace.|  
-|DOCUMENTNAMETYPE_TITLE|Získá název, jak je zobrazen v záhlaví okna prohlížeče.|  
+|DOCUMENTNAMETYPE_APPNODE|Získá název tak, jak se zobrazuje ve stromu aplikace.|  
+|DOCUMENTNAMETYPE_TITLE|Získá název tak, jak se zobrazuje v záhlaví prohlížeče.|  
 |DOCUMENTNAMETYPE_FILE_TAIL|Získá název souboru bez cesty.|  
 |DOCUMENTNAMETYPE_URL|Získá adresu URL dokumentu.|  
-|DOCUMENTNAMETYPE_UNIQUE_TITLE|Získá název s výčtu pro identifikaci.|  
+|DOCUMENTNAMETYPE_UNIQUE_TITLE|Získá název připojený ke výčtu pro identifikaci.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Konstanty, výčty a struktury ladicího programu aktivních skriptů](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

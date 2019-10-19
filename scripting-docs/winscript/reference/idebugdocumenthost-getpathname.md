@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHost::GetPathName | Dokumentace Microsoftu
+title: 'Idebugdocumenthost –:: getcesta | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 09e36411cdd378e78ac3bc59df5330eb8ecb47b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 33ebcde4cf1db28e199f13fae720374bd1b64763
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63008745"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72569277"
 ---
 # <a name="idebugdocumenthostgetpathname"></a>IDebugDocumentHost::GetPathName
-Vrátí úplnou cestu a název zdrojového souboru dokumentu.  
+Vrátí úplnou cestu a název souboru zdrojového souboru dokumentu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,21 +38,21 @@ HRESULT GetPathName(
   
 #### <a name="parameters"></a>Parametry  
  `pbstrLongName`  
- [out] Řetězec obsahující dlouhý název.  
+ mimo Řetězec obsahující dlouhé jméno.  
   
  `pfIsOriginalFile`  
- [out] Příznak, který je hodnota true v případě `pbstrLongName` odkazuje na původní soubor dokumentu, false v opačném případě.  
+ mimo Příznak, který má hodnotu true, pokud `pbstrLongName` odkazuje na původní soubor dokumentu, jinak false.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
-|`E_FAIL`|Žádný zdrojový soubor můžou vytvořit nebo určit.|  
+|`E_FAIL`|Nelze vytvořit ani určit zdrojový soubor.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda vrátí úplnou cestu a název zdrojového souboru dokumentu.  
+ Tato metoda vrátí úplnou cestu a název souboru zdrojového souboru dokumentu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugDocumentHost – rozhraní](../../winscript/reference/idebugdocumenthost-interface.md)

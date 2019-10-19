@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugdatatarget::writememory – metoda | Dokumentace Microsoftu
+title: 'IJsDebugDataTarget:: WriteMemory – – metoda | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 622de16cc5f755c5d69059a0e0f28d881121861c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 33cd23ad784e222f770dfd5c0e7c2d775aa55e42
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62558174"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572412"
 ---
 # <a name="ijsdebugdatatargetwritememory-method"></a>IJsDebugDataTarget::WriteMemory – metoda
-Čtení paměti cílového procesu.  
+Přečte paměť cílového procesu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,21 +37,21 @@ HRESULT WriteMemory(
   
 #### <a name="parameters"></a>Parametry  
  `address`  
- [in] Základní adresa, ze které probíhá zápis paměti v cílovém procesu.  
+ pro Základní adresa, ze které se má zapsat paměť cílového procesu.  
   
  `pMemory`  
- [in] Data, která mají být zapsána do adresního prostoru určeného procesu.  
+ pro Data, která mají být zapsána v adresním prostoru určeného procesu.  
   
  `size`  
- [in] Počet bajtů k zápisu do procesu.  
+ pro Počet bajtů, které mají být do procesu zapsány.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="remarks"></a>Poznámky  
- Předtím, než dojde k přenosu dat, systém ověří, že všechna data v základní adrese a paměti o zadané velikosti jsou přístupné pro zápis, a pokud není dostupný, funkce vyvolá chybu E_JsDEBUG_INVALID_MEMORY_ADDRESS.  
+ Před přenosem dat systém ověří, jestli jsou všechna data v základní adrese a paměti zadané velikosti dostupné pro přístup pro zápis, a pokud není dostupná, funkce vyvolá chybu E_JsDEBUG_INVALID_MEMORY_ADDRESS.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IJsDebugDataTarget – rozhraní](../../winscript/reference/ijsdebugdatatarget-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::GetCurrentScriptThreadID | Dokumentace Microsoftu
+title: 'IActiveScript:: GetCurrentScriptThreadID | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9e1b6e7bae7d78c18e11cd1aac8d0844fb9e90a5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dedb16e0c007ed05370fb54835f84f00784c1ae4
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935653"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575768"
 ---
 # <a name="iactivescriptgetcurrentscriptthreadid"></a>IActiveScript::GetCurrentScriptThreadID
-Načte identifikátor skriptovací stroj definované pro aktuálně spuštěné vlákno. Identifikátor lze použít v následných voláních metody řízení provádění vlákna skriptů, jako [IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md) metody.  
+Načte identifikátor definovaný skriptovacím modulem pro aktuálně spuštěné vlákno. Identifikátor lze použít v následných voláních ke skriptům pro provádění řídicích vláken, jako je například metoda [IActiveScript:: InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,13 +37,13 @@ HRESULT GetCurrentScriptThreadID(
   
 #### <a name="parameters"></a>Parametry  
  `pstidThread`  
- [out] Adresa proměnné, který přijímají identifikátor vlákna skript, který je spojený s aktuálním vláknem. Výklad tohoto identifikátoru je ponecháno na skriptovací stroj, ale může být pouze kopie identifikátor Windows. Pokud vlákno Win32 skončí, tento identifikátor se stane nepřiřazené a následně je možné přiřadit k jiné vlákno.  
+ mimo Adresa proměnné, která přijímá identifikátor vlákna skriptu přidružený k aktuálnímu vláknu. Výklad tohoto identifikátoru je ponechán na skriptovacím stroji, ale může to být pouze kopie identifikátoru vlákna systému Windows. Pokud je vlákno Win32 ukončeno, bude tento identifikátor nepřiřazen a následně lze následně přiřadit jinému vláknu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` v případě úspěšného ověření nebo `E_POINTER` Pokud byl zadán neplatný ukazatel.  
+ Vrátí `S_OK`, pokud bylo úspěšné, nebo `E_POINTER`, pokud byl zadán neplatný ukazatel.  
   
 ## <a name="remarks"></a>Poznámky  
- Tuto metodu lze volat z vlákna znaky bez výsledkem znaky popisek hostitele objektů nebo [iactivescriptsite –](../../winscript/reference/iactivescriptsite.md) rozhraní.  
+ Tuto metodu lze volat z nezákladních vláken, aniž by došlo k nezákladnímu popisku pro hostování objektů nebo rozhraní [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md) .  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScript](../../winscript/reference/iactivescript.md)

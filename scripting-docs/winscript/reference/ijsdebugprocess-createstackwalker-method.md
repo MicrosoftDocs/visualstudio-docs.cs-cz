@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugprocess::createstackwalker – metoda | Dokumentace Microsoftu
+title: 'IJsDebugProcess:: Createstackwalker – – metoda | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cb084b665467ae023bb885ee0de221f0409a0160
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 70f5d4885abba3d891526723d3ca1f174549c348
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62557730"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573829"
 ---
 # <a name="ijsdebugprocesscreatestackwalker-method"></a>IJsDebugProcess::CreateStackWalker – metoda
-Metoda výroby pro zásobník.  
+Metoda factory pro prohlížeč zásobníku  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,18 +36,18 @@ HRESULT CreateStackWalker(
   
 #### <a name="parameters"></a>Parametry  
  `threadId`  
- [in] ID vlákna.  
+ pro ID vlákna.  
   
  `ppStackWalker`  
- [out] Nový objekt zásobníku.  
+ mimo Nový objekt stack prohlížeč.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="remarks"></a>Poznámky  
- Vrátí E_JsDEBUG_UNKNOWN_THREAD, pokud vlákno neobsahuje JavaScript na něj. Tuto metodu lze volat pouze při zastavení cílového procesu.  
+ Vrátí E_JsDEBUG_UNKNOWN_THREAD, pokud vlákno neobsahuje JavaScript. Tato metoda může být volána pouze v případě, že cílový proces je zastaven.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IJsDebugProcess – rozhraní](../../winscript/reference/ijsdebugprocess-interface.md)

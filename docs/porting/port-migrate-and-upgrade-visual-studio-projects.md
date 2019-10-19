@@ -1,7 +1,7 @@
 ---
 title: Přenos, migrace a upgrade projektů
-description: Odkaz na podporu v aplikaci Visual Studio 2017 pro projekty vytvořené ve starších verzích sady Visual Studio a způsob, jakým se Visual Studio rozhodne, když potřebuje migrovat projekt.
-ms.date: 04/16/2019
+description: Odkaz na podporu projektů vytvořených v aktuální a dřívější verzi sady Visual Studio.
+ms.date: 10/17/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: 97eaada072a4ff0038ae7b57810b0d3318df1035
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
-ms.translationtype: HT
+ms.openlocfilehash: 7a348693dcae89c7d27b12f80dd4e21534a7bdec
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314173"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574151"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio"></a>Referenční dokumentace k migraci a upgradu projektu pro Visual Studio
 
 ::: moniker range="vs-2017"
 
-Každá nová verze sady Visual Studio obecně podporuje většinu předchozích typů projektů, souborů a dalších prostředků. S nimi můžete pracovat, [jak budete mít vždycky](../ide/solutions-and-projects-in-visual-studio.md)a za předpokladu, že nezáleží na novějších funkcích, Visual Studio se obecně snaží zachovat zpětnou kompatibilitu s předchozími verzemi, jako je Visual Studio 2015, Visual Studio 2013 a visual Studio 2012. (Další informace najdete v [poznámkách k verzi](/visualstudio/releasenotes/vs2017-relnotes/) , pro které jsou specifické funkce.)
+Každá verze sady Visual Studio obecně podporuje většinu předchozích typů projektů, souborů a dalších prostředků. S nimi můžete pracovat, [když máte vždycky](../ide/solutions-and-projects-in-visual-studio.md)a za předpokladu, že nezáleží na novějších funkcích, Visual Studio se pokusí zachovat zpětnou kompatibilitu s předchozími verzemi, jako je Visual Studio 2015, Visual Studio 2013 a Visual Studio 2012. (Další informace najdete v [poznámkách k verzi](/visualstudio/releasenotes/vs2017-relnotes/) , pro které jsou specifické funkce.)
 
 Podpora pro některé typy projektů se také mění v průběhu času. Novější verze sady Visual Studio již nemusí podporovat některé projekty vůbec nebo vyžaduje aktualizaci projektu tak, aby se už zpětně nekompatibilní. Aktuální stav při potížích s migrací najdete na [webu komunity vývojářů pro Visual Studio](https://developercommunity.visualstudio.com).
 
@@ -72,7 +72,7 @@ Pokud zde není zobrazený typ projektu nebo souboru, který by měl být, Projd
 | Visual Studio Tools pro Apache Cordova | Projekty lze otevřít v aplikaci Visual Studio 2017, ale nejsou zpětně kompatibilní. Po otevření projektu ze sady Visual Studio 2015 se zobrazí výzva, abyste povolili změny projektu. Tato změna upgraduje projekt tak, aby používal sady nástrojů místo `taco.json` souboru ke správě verzí knihovny Cordova, jejích platforem, modulů plug-in a jejích závislostí uzlů a npm. Další informace najdete v [Průvodci migrací](https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/first-steps/migrate-from-visual-studio-2015) . |
 | Nasazení webu (WDPROJ) | Podpora projektů nasazení webu byla v aplikaci Visual Studio 2012 odebrána s přidáním podpory publikační profil. Vzhledem k tomu, že v aplikaci Visual Studio 2017 není žádný ekvivalent, pro takové projekty neexistuje žádná Automatická cesta migrace. Místo toho otevřete soubor WDPROJ v textovém editoru a zkopírujte a vložte všechna vlastní nastavení do souboru pubxml (publikační profil), jak je popsáno v [StackOverflow](https://stackoverflow.com/a/12061065/1203388). |
 | Windows Communication Foundation programovací model Windows Workflow Foundation | Tento projekt můžete otevřít v aplikaci Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 a Visual Studio 2012 |
-| Windows Presentation Foundation | Tento projekt můžete otevřít v Visual Studio 2013, Visual Studio 2012 a Visual Studio 2010 SP1. |
+| Windows Presentation Foundation | Tento projekt můžete otevřít v aplikaci Visual Studio 2017, Visual Studio 2013, Visual Studio 2012 a Visual Studio 2010 SP1. |
 | Aplikace pro Windows Store a Phone | Projekty pro Windows Store 8,1 a 8,0 a Windows Phone 8,1 a 8,0 se v systému Visual Studio 2017 nepodporují. Chcete-li tyto aplikace udržovat, používejte nadále Visual Studio 2015. Chcete-li udržovat projekty pro Windows Phone 7.x, používejte Visual Studio 2012. |
 
 ## <a name="how-visual-studio-decides-when-to-migrate-a-project"></a>Jak aplikace Visual Studio rozhodne, kdy má být projekt migrován
@@ -112,11 +112,11 @@ Další diskuzi najdete v následujících článcích:
 
 ::: moniker range="vs-2019"
 
-Každá nová verze sady Visual Studio obecně podporuje většinu předchozích typů projektů, souborů a dalších prostředků. S nimi můžete pracovat, [jak budete mít vždycky](../ide/solutions-and-projects-in-visual-studio.md)a za předpokladu, že nezáleží na novějších funkcích, Visual Studio se obecně snaží zachovat zpětnou kompatibilitu s předchozími verzemi, jako je visual Studio 2017, visual Studio 2015, Visual Studio 2013 a Visual Studio 2012. (Další informace najdete v [poznámkách k verzi](/visualstudio/releases/2019/release-notes/) , pro které jsou specifické funkce.)
+Každá nová verze sady Visual Studio obecně podporuje většinu předchozích typů projektů, souborů a dalších prostředků. S nimi můžete pracovat, [když máte vždycky](../ide/solutions-and-projects-in-visual-studio.md)a za předpokladu, že nezáleží na novějších funkcích, Visual Studio se pokusí zachovat zpětnou kompatibilitu s předchozími verzemi, jako je visual Studio 2017, visual Studio 2015, Visual Studio 2013 a Visual. Studio 2012. (Další informace najdete v [poznámkách k verzi](/visualstudio/releases/2019/release-notes/) , pro které jsou specifické funkce.)
 
-Podpora pro některé typy projektů se také mění v průběhu času. Novější verze sady Visual Studio již nemusí podporovat některé projekty vůbec, nebo může vyžadovat aktualizaci projektu tak, aby se už zpětně nekompatibilní. Aktuální stav při potížích s migrací najdete v [komunitě vývojářů sady Visual Studio](https://developercommunity.visualstudio.com).
+Podpora pro některé typy projektů se v průběhu času mění. Novější verze sady Visual Studio již nemusí podporovat některé projekty vůbec, nebo může vyžadovat aktualizaci projektu tak, aby se už zpětně nekompatibilní. Aktuální stav při potížích s migrací najdete v [komunitě vývojářů sady Visual Studio](https://developercommunity.visualstudio.com).
 
-Tento článek poskytuje podrobné informace o typech projektů, které mohou být v aplikaci Visual Studio 2019 migrovány. Poskytuje také podrobnosti o typech projektů, které jsou zastaralé v aplikaci Visual Studio 2019 nebo jsou již brzy zastaralé. Článek vyloučí typy projektů, které již nejsou podporovány v aplikaci Visual Studio 2019 a nelze jej proto migrovat. Článek také vylučuje podporované typy projektů, u kterých nedochází k žádným problémům s migrací. Tento seznam najdete na [platformách cílení na platformy a v kompatibilitě](/visualstudio/releases/2019/compatibility).
+Tento článek poskytuje podrobné informace o typech projektů, které mohou být v aplikaci Visual Studio 2019 migrovány. Obsahuje také informace o typech projektů, které jsou zastaralé v aplikaci Visual Studio 2019 nebo jsou již brzy zastaralé. Článek vyloučí typy projektů, které již nejsou podporovány v aplikaci Visual Studio 2019 a nelze jej proto migrovat. Článek také vylučuje podporované typy projektů, u kterých nedochází k žádným problémům s migrací. Tento seznam najdete na [platformách cílení na platformy a v kompatibilitě](/visualstudio/releases/2019/compatibility).
 
 > [!IMPORTANT]
 > Některé typy projektů vyžadují, abyste nainstalovali konkrétní úlohy prostřednictvím Instalační program pro Visual Studio. Pokud nemáte nainstalovanou úlohu, Visual Studio ohlásí neznámý nebo nekompatibilní typ projektu. V takovém případě si Projděte možnosti instalace a zkuste to znovu. Podrobnosti o podpoře projektu v aplikaci Visual Studio 2019 najdete v článku [cílení na platformy a kompatibilita](/visualstudio/releases/2019/compatibility) .
@@ -162,7 +162,7 @@ Pokud zde není zobrazený typ projektu nebo souboru, který by měl být, Projd
 | Visual Studio Tools pro Apache Cordova | V aplikaci Visual Studio 2019 byla odebrána podpora pro Apache Cordova. Vzhledem k tomu, že v aplikaci Visual Studio 2019 není žádný ekvivalent, pro takové projekty neexistuje žádná Automatická cesta migrace.<br/><br/>Můžete použít rozšíření Cordova Tools for Visual Studio Code (které poskytuje podporu pro nejnovější verzi Cordova) nebo pokračovat v používání sady Visual Studio 2017. |
 | Nasazení webu (WDPROJ) | Podpora projektů nasazení webu byla v aplikaci Visual Studio 2012 odebrána s přidáním podpory publikační profil. Vzhledem k tomu, že v aplikaci Visual Studio 2019 není žádný ekvivalent, pro takové projekty neexistuje žádná Automatická cesta migrace. Místo toho otevřete soubor WDPROJ v textovém editoru a zkopírujte a vložte všechna vlastní nastavení do souboru pubxml (publikační profil), jak je popsáno v [StackOverflow](https://stackoverflow.com/a/12061065/1203388). |
 | Windows Communication Foundation programovací model Windows Workflow Foundation | Tento projekt můžete otevřít v aplikaci Visual Studio 2019, Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 a Visual Studio 2012. |
-| Windows Presentation Foundation | Tento projekt můžete otevřít v aplikaci Visual Studio 2017, Visual Studio 2013, Visual Studio 2012 a Visual Studio 2010 SP1. |
+| Windows Presentation Foundation | Tento projekt můžete otevřít v aplikaci Visual Studio 2019, Visual Studio 2017, Visual Studio 2013, Visual Studio 2012 a Visual Studio 2010 SP1. |
 | Aplikace Windows Phone | Projekty pro Windows Phone nejsou podporovány v aplikaci Visual Studio 2019. <br/><br/>K údržbě Windows Phone aplikací 8. x použijte Visual Studio 2015. Chcete-li udržovat projekty pro Windows Phone 7.x, používejte Visual Studio 2012. |
 | Aplikace pro Windows Store | Projekty JavaScript Universal Windows nejsou v aplikaci Visual Studio 2019 podporovány. Chcete-li zachovat tyto projekty, použijte Visual Studio 2017. <br/><br/>Sady SDK pro Windows 10 před aktualizací Windows 10 pádu Creators (Build 16299) se odebraly z instalačního programu sady Visual Studio 2019. Starší sady SDK si můžete stáhnout ručně nebo je změnit cílení na vaše projekty, aby používaly novější sady SDK.<br/><br/>Univerzální projekty Windows používající Project. JSON se nepodporují. Doporučujeme upgradovat tyto projekty, aby používaly odkazy na balíčky. Alternativně přidejte odkaz na Microsoft. NET. test. SDK Version 16.0.0.0 v souboru Project. JSON.<br/><br/>Projekty pro Windows Store 8,1 a 8,0 nejsou podporovány v aplikaci Visual Studio 2019. Chcete-li tyto aplikace udržovat, používejte nadále Visual Studio 2015. |
 | Xamarin | Rozšíření Xamarin Live Player pro Visual Studio a Visual Studio pro Mac se odebralo. Tím se odebere obrazovka párování a integrace. Místo toho použijte vestavěný prohlížeč pro Xamarin. Forms.<br/><br/>Emulátor sady Visual Studio pro Android se odebral z Instalační program pro Visual Studio. Místo toho použijte novou podporu technologie Hyper-V v emulátoru Google Android. |

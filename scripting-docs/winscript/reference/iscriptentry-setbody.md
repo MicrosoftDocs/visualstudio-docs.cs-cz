@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::SetBody | Dokumentace Microsoftu
+title: 'Iscriptentry –:: SetBody | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 46ebccb57885480d34d79cbd27e99dc6a35b343d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1af865c8366481204ee413377a083b09d8c97383
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787642"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575383"
 ---
 # <a name="iscriptentrysetbody"></a>IScriptEntry::SetBody
-Nastaví text, který je v těle `IScriptEntry` bloku skriptu nebo `IScriptScriptlet` skriptletu.  
+Nastaví text, který se nachází v těle `IScriptEntry` bloku skriptu nebo `IScriptScriptlet` skriptletu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,14 +37,14 @@ HRESULT SetBody(
   
 #### <a name="parameters"></a>Parametry  
  `psz`  
- [in] Pro `IScriptEntry` bloku skriptu `psz` je text uzavřený v značky skriptu.  
+ pro Pro `IScriptEntry` blok skriptu `psz` je text uzavřený ve značkách skriptu.  
   
- Pro `IScriptEntry` bloku funkce `psz` představuje tělo funkce.  
+ Pro blok `IScriptEntry` funkce je `psz` tělo funkce.  
   
- Pro `IScriptScriptlet` objektu (která je odvozena z `IScriptEntry`), `psz` je skript textu skriptletu.  
+ V případě objektu `IScriptScriptlet` (který je odvozen z `IScriptEntry`) je `psz` text skriptu pro skriptletu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
@@ -52,6 +52,6 @@ HRESULT SetBody(
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
- [Iscriptentry – rozhraní](../../winscript/reference/iscriptentry-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iscriptentry –](../../winscript/reference/iscriptentry-interface.md)  
  [IScriptEntry::GetBody](../../winscript/reference/iscriptentry-getbody.md)

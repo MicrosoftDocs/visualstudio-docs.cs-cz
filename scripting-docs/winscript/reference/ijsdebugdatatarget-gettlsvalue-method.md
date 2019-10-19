@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugdatatarget::gettlsvalue – metoda | Dokumentace Microsoftu
+title: 'IJsDebugDataTarget:: Gettlsvalue – – metoda | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 458aaab05f274983fdaf69c6e702502974665403
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: eecf9acf370656d5310a03d68ed74e10671a0bc2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62582807"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577607"
 ---
 # <a name="ijsdebugdatatargetgettlsvalue-method"></a>IJsDebugDataTarget::GetTlsValue – metoda
-Pro vlákno, který se právě ladí načte hodnotu ve slotu vlákno místní úložiště (TLS) pro zadaný index TLS.  
+Pro vlákno, které je laděno, načte hodnotu z slotu thread local Storage (TLS) pro zadaný index TLS.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,21 +37,21 @@ HRESULT GetTlsValue(
   
 #### <a name="parameters"></a>Parametry  
  `threadId`  
- [in] Vlákno spuštěné v cílovém procesu pro čtení z.  
+ pro Vlákno spuštěné v cílovém procesu, ze kterého se má číst.  
   
  `tlsIndex`  
- [in] Protokol TLS index, který byl přiřazen, když Cílový proces volal funkci TlsAlloc.  
+ pro Index TLS, který byl přidělen v případě, že cílový proces volal funkci TlsAlloc.  
   
  `pValue`  
- [out] Hodnota velikosti ukazatele, která byla uložena v patici TLS vlákna. Pokud je cílové vlákno 32bitové, horní 32 bitové této hodnoty bude nula.  
+ mimo Hodnota velikosti ukazatele, která byla uložena ve slotu TLS vlákna. Pokud je cílové vlákno 32-bit, horní 32-bitů této hodnoty bude nula.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="remarks"></a>Poznámky  
- Každý podproces procesu má vlastní pozici pro každý protokol TLS index.  
+ Každé vlákno procesu má vlastní slot pro každý index TLS.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IJsDebugDataTarget – rozhraní](../../winscript/reference/ijsdebugdatatarget-interface.md)

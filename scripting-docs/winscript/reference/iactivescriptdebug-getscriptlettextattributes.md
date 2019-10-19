@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptDebug::GetScriptletTextAttributes | Dokumentace Microsoftu
+title: 'Iactivescriptdebug –:: GetScriptletTextAttributes | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 781282b5c825954ada4fbb35daa2a97b379c3f13
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6a5dd9e219e51b001659225636396fe45ac815b9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955039"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572808"
 ---
 # <a name="iactivescriptdebuggetscriptlettextattributes"></a>IActiveScriptDebug::GetScriptletTextAttributes
-Vrátí text atributy pro libovolného skriptletu.  
+Vrátí atributy textu pro libovolný skriptletu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,41 +41,41 @@ HRESULT GetScriptletTextAttributes(
   
 #### <a name="parameters"></a>Parametry  
  `pstrCode`  
- [in] Textu skriptletu. Tento řetězec nemusí být null byl ukončen.  
+ pro Text skriptletu Tento řetězec nemusí být ukončený hodnotou null.  
   
  `uNumCodeChars`  
- [in] Počet znaků v textu skriptletu.  
+ pro Počet znaků v textu skriptletu  
   
  `pstrDelimiter`  
- [in] Adresa oddělovače end skriptletu. Když `pstrCode` je analyzován z toku textu, hostitel obvykle používá oddělovač, jako jsou například dvě jednoduché uvozovky ("), k zjištění konce skriptletu. Tento parametr určuje oddělovač, který používá hostitel a který umožňuje skriptovacímu stroji poskytovat některé podmíněné primitivní předzpracování (například nahrazení jednoduchou uvozovku ['] dvěma jednoduchými uvozovkami pro použití jako oddělovače). Jak přesně (a zda) skriptovací stroj používá tyto informace závisí na skriptovacím stroji. Tento parametr nastavte na hodnotu NULL, pokud hostitel nepoužili oddělovač pro označení konce skriptletu.  
+ pro Adresa oddělovače end-skriptletu. Pokud je `pstrCode` analyzována z datového proudu, hostitel obvykle používá oddělovač, jako je například dvě jednoduché uvozovky (' ') k detekci konce skriptletu. Tento parametr určuje oddělovač, který hostitel použil, a umožňuje skriptovacímu stroji poskytovat nějaký podmíněný primitivní předzpracování (například nahrazení jednoduché uvozovky ['] dvěma jednoduchými uvozovkami pro použití jako oddělovače). Jak (a pokud) skriptovací stroj tyto informace používá, závisí na skriptovacím stroji. Nastavte tento parametr na hodnotu NULL, pokud hostitel nepoužil oddělovač k označení konce skriptletu.  
   
  `dwFlags`  
- [in] Příznaky spojené se skriptletem. Může být kombinací těchto hodnot:  
+ pro Příznaky přidružené k skriptletu. Může být kombinací těchto hodnot:  
   
-|Konstanta|Value|Popis|  
+|Konstanta|Hodnota|Popis|  
 |--------------|-----------|-----------------|  
-|GETATTRTYPE_DEPSCAN|0x0001|Označuje, že identifikátory a tečka mají identifikovat SOURCETEXT_ATTR_IDENTIFIER a SOURCETEXT_ATTR_MEMBERLOOKUP příznaků, v uvedeném pořadí.|  
-|GETATTRFLAG_THIS|0x0100|Označuje, že se mají s příznakem SOURCETEXT_ATTR_THIS identifikovat identifikátor pro aktuální objekt.|  
-|GETATTRFLAG_HUMANTEXT|0x8000|Označuje, že se mají s příznakem SOURCETEXT_ATTR_HUMANTEXT identifikovat text řetězce obsah a komentáře.|  
+|GETATTRTYPE_DEPSCAN|0x0001|Označuje, že identifikátory a operátory tečka by měly být identifikovány pomocí příznaků SOURCETEXT_ATTR_IDENTIFIER a SOURCETEXT_ATTR_MEMBERLOOKUP, v uvedeném pořadí.|  
+|GETATTRFLAG_THIS|0x0100|Označuje, že identifikátor pro aktuální objekt by měl být identifikován pomocí příznaku SOURCETEXT_ATTR_THIS.|  
+|GETATTRFLAG_HUMANTEXT|0x8000|Označuje, že se má označovat obsah řetězce a text komentáře pomocí příznaku SOURCETEXT_ATTR_HUMANTEXT.|  
   
  `pattr`  
- [out v] Vyrovnávací paměť pro vrácený atributy obsahují.  
+ [in, out] Vyrovnávací paměť obsahující vracené atributy  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Inteligentního hostitele, který implementuje `IDebugDocumentText` rozhraní tuto metodu můžete použít k volání delegáta `IDebugDocumentText::GetText` metody.  
+ Inteligentní hostitel, který implementuje rozhraní `IDebugDocumentText`, může tuto metodu použít k delegování volání metody `IDebugDocumentText::GetText`.  
   
- Toto volání je k dispozici protože skriptlety bývají výrazy a mohou mít odlišnou syntaxi než blok skriptu. Pokud mají stejnou syntaxi, implementace této metody bude identické s implementací `GetScriptTextAttributes` metody.  
+ Toto volání je k dispozici, protože skriptlety by měl být výrazy a může mít jinou syntaxi než blok skriptu. Pokud mají stejnou syntaxi, implementace této metody bude shodná s implementací metody `GetScriptTextAttributes`.  
   
-## <a name="see-also"></a>Viz také  
- [Iactivescriptdebug – rozhraní](../../winscript/reference/iactivescriptdebug-interface.md)   
- [IActiveScriptDebug::GetScriptTextAttributes](../../winscript/reference/iactivescriptdebug-getscripttextattributes.md)   
- [IDebugDocumentText Interface](../../winscript/reference/idebugdocumenttext-interface.md)   
- [IDebugDocumentText::GetText](../../winscript/reference/idebugdocumenttext-gettext.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iactivescriptdebug –](../../winscript/reference/iactivescriptdebug-interface.md)  
+ [Iactivescriptdebug –:: GetScriptTextAttributes](../../winscript/reference/iactivescriptdebug-getscripttextattributes.md)    
+ @No__t_1 [rozhraní IDebugDocumentText –](../../winscript/reference/idebugdocumenttext-interface.md)  
+ [IDebugDocumentText –:: GetText](../../winscript/reference/idebugdocumenttext-gettext.md)    
  [SOURCE_TEXT_ATTR – výčet](../../winscript/reference/source-text-attr-enumeration.md)

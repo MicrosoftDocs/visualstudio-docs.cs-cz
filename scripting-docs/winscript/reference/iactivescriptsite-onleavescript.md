@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSite::OnLeaveScript | Dokumentace Microsoftu
+title: 'IActiveScriptSite:: OnLeaveScript | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: da39058a8f069c4799835108372d11849d86444e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e9d872948fea14998f9c6f8140467d6e4c83d056
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992669"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570329"
 ---
 # <a name="iactivescriptsiteonleavescript"></a>IActiveScriptSite::OnLeaveScript
-Informuje o hostiteli, skriptovací stroj vrátil z spuštěním skriptu kódu.  
+Informuje hostitele o tom, že skriptovací stroj vrátil spouštěcí kód skriptu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,10 +34,10 @@ HRESULT OnLeaveScript(void);
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` v případě úspěšného ověření.  
+ Pokud je úspěšná, vrátí `S_OK`.  
   
 ## <a name="remarks"></a>Poznámky  
- Skriptovací stroj musí tuto metodu volat před vrácením řízení volající aplikace, kterou zadali skriptovací stroj. Například pokud skript volá objekt, který potom aktivuje událost zpracovává skriptovací stroj skriptovací stroj musí volat [IActiveScriptSite::OnEnterScript](../../winscript/reference/iactivescriptsite-onenterscript.md) metodu před spuštěním události a musí volat `IActiveScriptSite::OnLeaveScript`po spuštění události návrat zpět k objektu, která vyvolala událost. Volání této metody mohou být vnořené. Všechna volání `IActiveScriptSite::OnEnterScript` vyžaduje odpovídající volání této metody.  
+ Skriptovací stroj musí volat tuto metodu před vrácením řízení do volající aplikace, která zadala skriptovací modul. Například pokud skript volá objekt, který potom vyvolá událost zpracovávanou skriptovacím modulem, skriptovací stroj musí před provedením události zavolat metodu [IActiveScriptSite:: OnEnterScript](../../winscript/reference/iactivescriptsite-onenterscript.md) a po provedení události musí volat `IActiveScriptSite::OnLeaveScript`. před návratem k objektu, který vyvolal událost. Volání této metody lze vnořovat. Každé volání `IActiveScriptSite::OnEnterScript` vyžaduje odpovídající volání této metody.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::RemoveStackFrameSniffer | Dokumentace Microsoftu
+title: 'IDebugApplication –:: RemoveStackFrameSniffer | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1462ff1382f3ccb844ccc98c6e6eec676a86c669
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 605daf51214ba5af9d6010b28be9569453ca7962
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990771"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571115"
 ---
 # <a name="idebugapplicationremovestackframesniffer"></a>IDebugApplication::RemoveStackFrameSniffer
-Odebere poskytovatele enumerátor rámce zásobníku z této aplikace.  
+Odebere zprostředkovatele výčtu rámců zásobníku z této aplikace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,19 +37,19 @@ HRESULT RemoveStackFrameSniffer(
   
 #### <a name="parameters"></a>Parametry  
  `dwCookie`  
- [in] Soubor cookie vrácený `AddStackFrameSniffer` metoda při přidání poskytovatele enumerátor rámce zásobníku.  
+ pro Soubor cookie vrácený metodou `AddStackFrameSniffer`, když se přidal poskytovatel výčtu rámců zásobníku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- `RemoveStackFrameSniffer` Metoda odstraní zprostředkovatele čítače výčtu rámce zásobníku z této aplikace.  
+ Metoda `RemoveStackFrameSniffer` odebere z této aplikace zprostředkovatele výčtu rámců zásobníku.  
   
-## <a name="see-also"></a>Viz také  
- [IDebugApplication::AddStackFrameSniffer](../../winscript/reference/idebugapplication-addstackframesniffer.md)   
- [Idebugapplication – rozhraní](../../winscript/reference/idebugapplication-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ [IDebugApplication –:: AddStackFrameSniffer](../../winscript/reference/idebugapplication-addstackframesniffer.md)    
+ @No__t_1 [rozhraní IDebugApplication –](../../winscript/reference/idebugapplication-interface.md)  
  [IDebugStackFrameSniffer – rozhraní](../../winscript/reference/idebugstackframesniffer-interface.md)

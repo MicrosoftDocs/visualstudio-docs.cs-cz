@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::StepOutComplete | Dokumentace Microsoftu
+title: 'IDebugApplication –:: StepOutComplete | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 04f8ecfb835199afa0a60f3fde3c8fbdc8812240
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f50d7e8a8936e52f4177450e7d163c4cfeaa55df
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990619"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571034"
 ---
 # <a name="idebugapplicationstepoutcomplete"></a>IDebugApplication::StepOutComplete
-Upozorní správce ladění procesu, že modul jazyka v režimu krokování se chystá vrátí výsledek volajícímu.  
+Upozorní správce ladění procesu, že jazykový modul v režimu jednoho kroku se bude vracet ke svému volajícímu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,17 +34,17 @@ HRESULT StepOutComplete();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Tato metoda nemá žádné parametry.  
+ Tato metoda nepřijímá žádné parametry.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Jazyk moduly volání této metody v režimu krokování těsně před plánovaným začátkem vrátí jejich volajícímu. Správce ladění procesu používá tuto příležitost upozornit všechny další skriptovacích strojů, které by mělo dojít při první příležitosti. Tato technika je krok jak mezi jazykové režimy jsou implementovány.  
+ Jazykové moduly volají tuto metodu v režimu jednoduchých kroků těsně předtím, než se vrátí volajícímu. Správce procesu ladění používá tuto příležitost k oznamování všech dalších skriptovacích strojů, které by měly být při první příležitosti přerušeny. Tímto postupem je implementace režimů kroků mezi jazyky.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugApplication – rozhraní](../../winscript/reference/idebugapplication-interface.md)

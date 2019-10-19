@@ -1,5 +1,5 @@
 ---
-title: Idebugextendedproperty – rozhraní | Dokumentace Microsoftu
+title: Rozhraní Idebugextendedproperty – | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,26 +13,26 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c1e042f75cf0ab0d8c4807c0c0db6ce04e8423f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 24a93cb3bd230e2489b58d78f6d414ba1df006ed
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945871"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572490"
 ---
 # <a name="idebugextendedproperty-interface"></a>IDebugExtendedProperty – rozhraní
 Rozšiřuje `IDebugProperty` rozhraní.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- Kromě metod zděděných z `IDebugProperty`, toto rozhraní poskytuje následující metody.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ Kromě metod zděděných z `IDebugProperty` toto rozhraní zpřístupňuje následující metody.  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[IDebugExtendedProperty::GetExtendedPropertyInfo](../../winscript/reference/idebugextendedproperty-getextendedpropertyinfo.md)|Získá `ExtendedDebugPropertyInfo` , který popisuje toto `IDebugExtendedProperty``.`|  
-|[IDebugExtendedProperty::EnumExtendedMembers](../../winscript/reference/idebugextendedproperty-enumextendedmembers.md)|Vytvoří výčet členy rozšířené vlastnosti.|  
+|[IDebugExtendedProperty::GetExtendedPropertyInfo](../../winscript/reference/idebugextendedproperty-getextendedpropertyinfo.md)|Získá `ExtendedDebugPropertyInfo`, který popisuje tento `IDebugExtendedProperty``.`|  
+|[IDebugExtendedProperty::EnumExtendedMembers](../../winscript/reference/idebugextendedproperty-enumextendedmembers.md)|Vytvoří výčet členů rozšířené vlastnosti.|  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: dbgprop.h  
+ Záhlaví: dbgprop. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugProperty – rozhraní](../../winscript/reference/idebugproperty-interface.md)

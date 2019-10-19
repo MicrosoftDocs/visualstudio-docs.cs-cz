@@ -1,5 +1,5 @@
 ---
-title: Nedefinovaný identifikátor | Dokumentace Microsoftu
+title: Nedefinovaný identifikátor | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,26 +14,26 @@ ms.assetid: 8c8000d9-dd14-487e-922d-98430024a0f6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ee928a945081d1ac1369a71d11f74f2c5db2b365
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b55b6d695cded9b7effac664dfca6ca9904e9d84
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63005911"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572551"
 ---
 # <a name="undefined-identifier"></a>Nedefinovaný identifikátor
-Pokusili jste se použít identifikátor, který [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] kompilátoru nebylo rozpoznáno. Nedefinovaná hodnota se vrátí při každém použití:  
+Pokusili jste se použít identifikátor, který kompilátor [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] nerozpozná. Nedefinovaná hodnota se vrátí pokaždé, když použijete:  
   
 - Proměnná, která neexistuje,  
   
-- Proměnná, která byla deklarována, ale nebyla nikdy hodnotu přiřazenou  
+- Proměnná, která je deklarovaná, ale nikdy jí nemá přiřazenou hodnotu.  
   
-- vlastnosti objektu, který neexistuje.  
+- vlastnost objektu, která neexistuje.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Deklarujte proměnnou **var** – příkaz (jako v `var` x;).  
+- Deklarujte proměnnou pomocí příkazu **var** (jako v `var` x;).  
   
-## <a name="see-also"></a>Viz také  
- [Proměnné](../../javascript/variables-javascript.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [proměnných](../../javascript/variables-javascript.md)  
  [Obor proměnné](../../javascript/advanced/variable-scope-javascript.md)

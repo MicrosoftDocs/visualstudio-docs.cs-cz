@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptStats::GetStat | Dokumentace Microsoftu
+title: 'Iactivescriptstats –:: GetState | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8befb3da4e4b6f060a5f58aedec3604afe70aefb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 096f1cf5b9bf8b5533bd5c36d33f014c747ff9aa
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992018"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574341"
 ---
 # <a name="iactivescriptstatsgetstat"></a>IActiveScriptStats::GetStat
-Vrátí jednu standardní skript statistiky.  
+Vrátí jednu ze standardních statistik skriptu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,28 +39,28 @@ HRESULT GetStat(
   
 #### <a name="parameters"></a>Parametry  
  `stid`  
- [in] Určuje, které statistiku k vrácení. Hodnota musí být:  
+ pro Určuje, která Statistika se má vrátit. Hodnota musí být:  
   
-|Konstanta|Value|Popis|  
+|Konstanta|Hodnota|Popis|  
 |--------------|-----------|-----------------|  
-|SCRIPTSTAT_STATEMENT_COUNT|1|Vrátí počet příkazů provést, protože spuštění skriptu nebo statistiku bylo obnoveno.|  
+|SCRIPTSTAT_STATEMENT_COUNT|první|Vrátí počet příkazů provedených od spuštění skriptu nebo resetování statistiky.|  
   
  `pluHi`  
- [out] Vysoká 32 bitů 64bitové celé číslo bez znaménka představující statistiky.  
+ mimo Vysoký 32 bitů 64 unsigned integer reprezentujících statistiku.  
   
  `pluLo`  
- [out] Nízká 32 bitů 64bitové celé číslo bez znaménka představující statistiky.  
+ mimo Dolních 32 bitů 64 unsigned integer představujících statistiku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty patří, ale nejsou omezeny pouze na hodnoty v následující tabulce.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují, ale nejsou omezeny na hodnoty v následující tabulce.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda vrátí jednu standardní skript statistiky.  
+ Tato metoda vrátí jednu ze standardních statistik skriptu.  
   
-## <a name="see-also"></a>Viz také  
- [IActiveScriptStats::GetStatEx](../../winscript/reference/iactivescriptstats-getstatex.md)   
+## <a name="see-also"></a>Viz také:  
+ [Iactivescriptstats –:: GetStatEx](../../winscript/reference/iactivescriptstats-getstatex.md)    
  [IActiveScriptStats – rozhraní](../../winscript/reference/iactivescriptstats-interface.md)

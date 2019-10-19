@@ -1,5 +1,5 @@
 ---
-title: Byl očekáván 'příkaz catch' | Dokumentace Microsoftu
+title: Byl očekáván typ catch | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,22 +14,22 @@ ms.assetid: f1cd947f-eba2-411e-8e84-8ca86f608643
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 941d49a530b14e2af64ddcb599dd775feb347de0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8cad981e4ba469f67645aca601e6b58c18e1fab6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935396"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573425"
 ---
 # <a name="expected-catch"></a>Byl očekáván příkaz 'catch'
-Použít zpracování výjimek **zkuste** blokovat, ale nezapsal přidruženého **catch** příkazu. Mechanismus zpracování výjimek vyžaduje, aby kód, který může selhat, spolu s kódem, který by neměl být spuštěn pokud dojde k výjimce uzavřou uvnitř **zkuste** bloku. Jsou výjimky vyvolány v rámci **zkuste** blokovat, s využitím **throw** příkaz a zachycené mimo **zkuste** blok s jednou nebo více **catch**příkazy.  
+Použili jste blok **Try** zpracování výjimek, ale nezapsali jste přidružený příkaz **catch** . Mechanismus zpracování výjimek vyžaduje, aby kód, který může selhat, a kód, který by neměl být proveden, pokud dojde k výjimce, je zabalen do bloku **Try** . Výjimky jsou vyvolány v rámci bloku **Try** pomocí příkazu **throw** a zachyceny mimo blok **Try** s jedním nebo více příkazy **catch** .  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Přidat přidruženého **catch** bloku.  
+- Přidejte přidružený blok **catch** .  
   
-- Zkuste použít **nakonec** blokovat místo **catch** bloku.  
+- Zkuste místo bloku **catch** použít blok **finally** .  
   
-## <a name="see-also"></a>Viz také  
- [Try... catch... finally – příkaz](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)   
+## <a name="see-also"></a>Viz také:  
+ [zkusit... zachytit... Příkaz finally](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)    
  [Error – objekt](../../javascript/reference/error-object-javascript.md)

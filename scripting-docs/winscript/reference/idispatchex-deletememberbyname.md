@@ -1,5 +1,5 @@
 ---
-title: IDispatchEx::DeleteMemberByName | Dokumentace Microsoftu
+title: IDispatchEx –::D eleteMemberByName | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dc7c8db4ab28e0bd0fcb48f352cb07595f72fd17
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2abb562f65885ee1d12f2ec9b2300fcddd3be37b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000887"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576613"
 ---
 # <a name="idispatchexdeletememberbyname"></a>IDispatchEx::DeleteMemberByName
 Odstraní člena podle názvu.  
@@ -38,28 +38,28 @@ HRESULT DeleteMemberByName(
   
 #### <a name="parameters"></a>Parametry  
  `bstrName`  
- Název člena, která se má odstranit.  
+ Název člena, který se má odstranit  
   
  `grfdex`  
- Určuje, zda je název člena malá a velká písmena. Může to být jedna z následujících hodnot:  
+ Určuje, zda rozlišující název člena rozlišuje velká a malá písmena. Může to být jedna z následujících hodnot:  
   
-|Value|Význam|  
+|Hodnota|Význam|  
 |-----------|-------------|  
-|fdexNameCaseSensitive|Požadavky, které vyhledávání názvů provést způsobem malá a velká písmena. Můžete ignorovat objektem, který nepodporuje vyhledávání malá a velká písmena.|  
-|fdexNameCaseInsensitive|Požadavky, které provést vyhledávání názvů písmen. Můžete ignorovat objektem, který nepodporuje vyhledávání velká a malá písmena.|  
+|fdexNameCaseSensitive|Požaduje, aby se vyhledávání názvů provádělo způsobem, který rozlišuje velká a malá písmena. Může být ignorováno objektem, který nepodporuje vyhledávání citlivé na velká a malá písmena.|  
+|fdexNameCaseInsensitive|Požaduje, aby se vyhledávání názvů provádělo způsobem, který nerozlišuje velká a malá písmena. Může být ignorováno objektem, který nepodporuje vyhledávání bez rozlišování velkých a malých písmen.|  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
 |||  
 |-|-|  
-|`S_OK`|Úspěch.|  
-|`S_FALSE`|Člen existuje, ale nejde odstranit.|  
+|`S_OK`|Nástup.|  
+|`S_FALSE`|Člen existuje, ale nelze jej odstranit.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud je člen odstraněn, je potřeba hodnota DISPID jsou dál platné pro `GetNextDispID`.  
+ Pokud je člen odstraněn, musí identifikátor DISPID zůstat platný pro `GetNextDispID`.  
   
- Pokud člen se zadaným názvem se odstraní a později je znovu vytvořit člena se stejným názvem, hodnota DISPID by měl být stejný. (Ať už jsou členy, které se liší pouze velikostí písma "stejné" závisí na objektu.)  
+ Pokud se člen s daným názvem odstraní a později se znovu vytvoří člen se stejným názvem, identifikátor DISPID by měl být stejný. (Zda jsou členy, které se liší pouze písmeny, jsou "stejné" závislé na objektu.)  
   
 ## <a name="example"></a>Příklad  
   
@@ -71,5 +71,5 @@ IDispatchEx *pdex;
 pdex->DeleteMemberByName(bstrName, fdexNameCaseSensitive);  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDispatchEx – rozhraní](../../winscript/reference/idispatchex-interface.md)

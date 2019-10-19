@@ -1,5 +1,5 @@
 ---
-title: Imachinedebugmanagercookie – rozhraní | Dokumentace Microsoftu
+title: Rozhraní Imachinedebugmanagercookie – | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,30 +13,30 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fdc02498360f2e3900012166474c5d1e35abd6ee
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6b39c286f389c99187b0f3250fc68af92ff5dcc8
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977679"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573889"
 ---
 # <a name="imachinedebugmanagercookie-interface"></a>IMachineDebugManagerCookie – rozhraní
-Podobně jako `IMachineDebugManager` rozhraní, `IMachineDebugManagerCookie` rozhraní podporuje ladění.  
+Podobně jako rozhraní `IMachineDebugManager` rozhraní `IMachineDebugManagerCookie` podporuje ladění souborů cookie.  
   
- Toto rozhraní (spolu s `IDebugCookie` rozhraní) povolení spouštět skripty v procesu ladicího programu skript bez nutnosti, že tyto skripty udržovat přehled o ladicím programu.  
+ Toto rozhraní (spolu s rozhraním `IDebugCookie`) umožňuje spouštění skriptů v procesu ladicího programu skriptu, aniž by vyžadovalo, aby ladicí program nadále sledoval tyto skripty.  
   
- Ladicí program volá `IDebugCookie::SetDebugCookie` metoda na proces ladění správce (PDM). PDM odešle tento soubor cookie spolu s všechny žádosti o přidání nebo odebrání aplikace skriptu do nebo z počítače ladění Manager (MDM), pomocí metody `IMachineDebugManagerCookie` rozhraní. MDM poté oznámí každý ladicí program změny, s výjimkou ten, který má tento soubor cookie.  
+ Ladicí program skriptu volá metodu `IDebugCookie::SetDebugCookie` ve Správci ladění procesu (PDM). Pak PDM tento soubor cookie pošle spolu s jakoukoli žádostí o přidání nebo odebrání aplikace skriptu do nebo ze Správce ladění počítače (MDM) pomocí metod `IMachineDebugManagerCookie` rozhraní. MDM pak oznámí každému ladicímu programu změny, s výjimkou toho, který má tento soubor cookie.  
   
- Kromě metod zděděných z `IUnknown`, `IMachineDebugManagerCookie` rozhraní poskytuje následující metody.  
+ Kromě metod zděděných z `IUnknown` rozhraní `IMachineDebugManagerCookie` zpřístupňuje následující metody.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[IMachineDebugManagerCookie::AddApplication](../../winscript/reference/imachinedebugmanagercookie-addapplication.md)|Přidá aplikaci do běhu seznamu aplikací.|  
-|[IMachineDebugManagerCookie::EnumApplications](../../winscript/reference/imachinedebugmanagercookie-enumapplications.md)|Vrátí enumerátor aktuální seznam spuštěných aplikací.|  
-|[IMachineDebugManagerCookie::RemoveApplication](../../winscript/reference/imachinedebugmanagercookie-removeapplication.md)|Odebere aplikaci ze spuštění seznam aplikací.|  
+|[IMachineDebugManagerCookie::AddApplication](../../winscript/reference/imachinedebugmanagercookie-addapplication.md)|Přidá aplikaci do seznamu běžící aplikace.|  
+|[IMachineDebugManagerCookie::EnumApplications](../../winscript/reference/imachinedebugmanagercookie-enumapplications.md)|Vrátí enumerátor pro aktuální seznam spuštěných aplikací.|  
+|[IMachineDebugManagerCookie::RemoveApplication](../../winscript/reference/imachinedebugmanagercookie-removeapplication.md)|Odebere aplikaci ze seznamu běžící aplikace.|  
   
-## <a name="see-also"></a>Viz také  
- [IMachineDebugManager Interface](../../winscript/reference/imachinedebugmanager-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní imachinedebugmanager –](../../winscript/reference/imachinedebugmanager-interface.md)  
  [IDebugCookie – rozhraní](../../winscript/reference/idebugcookie-interface.md)

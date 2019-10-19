@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerControl::StartProfiling | Dokumentace Microsoftu
+title: 'IActiveScriptProfilerControl:: StartProfiling | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 780886e4ca21abbe11580992244cee0d6a28b134
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cfc59dd43ac3eed433f92af2cdd0aefe40392c4a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993134"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571569"
 ---
 # <a name="iactivescriptprofilercontrolstartprofiling"></a>IActiveScriptProfilerControl::StartProfiling
-Spustí profilaci na skriptovacím stroji. Skriptovací modul vytváří instanci objektu profiler tím, že zavoláte na [CoCreateInstance](https://docs.microsoft.com/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
+Spustí profilování v skriptovacím stroji. Skriptovací stroj vytvoří instanci objektu profileru tak, že vyvolá volání funkce [CoCreateInstance](https://docs.microsoft.com/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,21 +36,21 @@ HRESULT StartProfiling(
   
 #### <a name="parameters"></a>Parametry  
  `clsidProfilerObject`  
- [in] Identifikátor (CLSID) objekt profileru, který chcete vytvořit třídy.  
+ pro Identifikátor třídy (CLSID) objektu profileru, který má být vytvořen.  
   
  `dwEventMask`  
- [in] 4bajtový bitová maska, která určuje typy událostí. Bity jsou definovány v [profiler_event_mask – výčet](../../winscript/reference/profiler-event-mask-enumeration.md).  
+ pro Bitová maska o velikosti 4 bajty, která určuje typy událostí. Bity jsou definované ve [výčtu PROFILER_EVENT_MASK](../../winscript/reference/profiler-event-mask-enumeration.md).  
   
  `dwContext`  
- [in] 4 bajty. hodnota, která je předána objektu profileru.  
+ pro Hodnota 4 bajty, která je předána objektu profileru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu HRESULT. Možné hodnoty jsou následující:  
+ Vrátí HRESULT. Možné hodnoty jsou následující:  
   
 |Návratová hodnota|Význam|  
 |------------------|-------------|  
 |`S_OK`|Metoda byla úspěšná.|  
-|`ACTIVPROF_E_PROFILER_PRESENT`|Profilace je již povolen.|  
+|`ACTIVPROF_E_PROFILER_PRESENT`|Profilace je už povolená.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScriptProfilerControl – rozhraní](../../winscript/reference/iactivescriptprofilercontrol-interface.md)

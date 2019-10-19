@@ -1,5 +1,5 @@
 ---
-title: IScriptNode::GetIndexInParent | Dokumentace Microsoftu
+title: 'Iscriptnode –:: GetIndexInParent | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 92f5ae074d65d2360bcfb3dda03903aa3c59209e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9251f65414a5ebd48ce56dae6a7dbfeec4e514e3
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786973"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575047"
 ---
 # <a name="iscriptnodegetindexinparent"></a>IScriptNode::GetIndexInParent
-Vrátí index objektu v seznamu podřízených nadřazeného objektu.  
+Vrátí index objektu v podřízeném seznamu nadřazených objektů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,12 +37,12 @@ HRESULT GetIndexInParent(
   
 #### <a name="parameters"></a>Parametry  
  `pisn`  
- [out] Vrátí index objektu v seznamu podřízených nadřazeného objektu.  
+ mimo Vrátí index objektu v podřízeném seznamu nadřazených objektů.  
   
- Pokud tato metoda je volána `IScriptNode` objekt, představuje webovou stránku, tento parametr vrátí hodnotu 0.  
+ Pokud je tato metoda volána objektem `IScriptNode`, který představuje webovou stránku, tento parametr vrátí hodnotu 0.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
@@ -50,5 +50,5 @@ HRESULT GetIndexInParent(
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IScriptNode – rozhraní](../../winscript/reference/iscriptnode-interface.md)

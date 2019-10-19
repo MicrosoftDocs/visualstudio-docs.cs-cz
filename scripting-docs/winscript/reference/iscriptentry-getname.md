@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::GetName | Dokumentace Microsoftu
+title: 'Iscriptentry –:: GetName | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d23843aa72ce5cf79f6442048b6493d17eb6ef64
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c99cda48a20efb41b2535645ccdb50be8bb6d6bc
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787767"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575441"
 ---
 # <a name="iscriptentrygetname"></a>IScriptEntry::GetName
-U položky, které představují jeden objekt (například funkce) vrátí název objektu.  
+Pro položky, které reprezentují jeden objekt (například funkce), vrátí název objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,19 +37,19 @@ HRESULT GetName(
   
 #### <a name="parameters"></a>Parametry  
  `pbstr`  
- [out] Název objektu reprezentovaného parametrem `IScriptEntry` bloku skriptu. Pokud položka nepředstavuje jeden objekt, je vrácena hodnota NULL.  
+ mimo Název objektu reprezentovaný blokem `IScriptEntry` skriptu. Pokud položka nepředstavuje jeden objekt, je vrácena hodnota NULL.  
   
- Podřízené položky představují jeden funkce objektu.  
+ Podřízené položky reprezentují jeden objekt funkce.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
- [Iscriptentry – rozhraní](../../winscript/reference/iscriptentry-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iscriptentry –](../../winscript/reference/iscriptentry-interface.md)  
  [IScriptNode:: CreateChildEntry](../../winscript/reference/iscriptnode-createchildentry.md)

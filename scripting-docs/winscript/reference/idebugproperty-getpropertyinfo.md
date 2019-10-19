@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty::GetPropertyInfo | Dokumentace Microsoftu
+title: 'Idebugproperty –:: GetPropertyInfo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 51cf7fae597d95b0d9098d6b2dc6950c2d06bfa0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e0698e09cd9643322a237a81d971248577fd97e0
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979146"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72562326"
 ---
 # <a name="idebugpropertygetpropertyinfo"></a>IDebugProperty::GetPropertyInfo
-Získá hodnotu `IDebugProperty` , který popisuje metody nebo indexovanou vlastnost.  
+Získá hodnotu `IDebugProperty`, která popisuje metodu nebo indexovanou vlastnost.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,18 +39,18 @@ HRESULT GetPropertyInfo (
   
 #### <a name="parameters"></a>Parametry  
  `dwFields`  
- [in] Určuje `DBGPROP_INFO_FLAGS` konstanty, které určují pole pro vyplnění navýšení kapacity `DebugPropertyInfo` struktury.  
+ pro Určuje konstanty `DBGPROP_INFO_FLAGS`, které určují, která pole se mají vyplnit ve `DebugPropertyInfo` struktuře.  
   
  `nRadix`  
- [in] Základ, který se má použít v jakékoli číselné informace o formátování.  
+ pro Číselná soustava, která se má použít při formátování číselných informací  
   
  `pPropertyInfo`  
- [out] Vrátí `DebugPropertyInfo` struktura, která popisuje vlastnosti.  
+ mimo Vrátí strukturu `DebugPropertyInfo`, která popisuje vlastnost.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Bude vracet platnou `HRESULT`, obvykle `S_OK`.  
+ Vrací platný `HRESULT`, obvykle `S_OK`.  
   
-## <a name="see-also"></a>Viz také  
- [Idebugproperty – rozhraní](../../winscript/reference/idebugproperty-interface.md)   
- [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní idebugproperty –](../../winscript/reference/idebugproperty-interface.md)  
+ [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)    
  [DebugPropertyInfo – struktura](../../winscript/reference/debugpropertyinfo-structure.md)

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthorProcedure::ParseProcedureText | Dokumentace Microsoftu
+title: Iactivescriptauthorprocedure –::P arseProcedureText | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c513b105a483d0f80510dff9c91fa2c3f09e0523
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 11a34843f30274ec78f1652c5ed5cd4dbcf2884a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955156"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572813"
 ---
 # <a name="iactivescriptauthorprocedureparseproceduretext"></a>IActiveScriptAuthorProcedure::ParseProcedureText
-Analyzuje kód procedury, přidá kód procedury text skriptu pro vytváření modulu a vytvoří `IScriptEntry` objekt, který odpovídá kódu procedury.  
+Analyzuje proceduru kódu, přidá text procedury kódu do modulu vytváření skriptů a vytvoří objekt `IScriptEntry`, který odpovídá proceduře kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,38 +44,38 @@ HRESULT ParseProcedureText(
   
 #### <a name="parameters"></a>Parametry  
  `pszCode`  
- [in] Text skriptu k analýze.  
+ pro Text skriptu, který se má analyzovat  
   
  `pszFormalParams`  
- [in] Adresa názvy formálních parametrů pro proceduru. Názvy parametrů musí být odděleny příslušné oddělovače pro skript, modul pro vytváření. Názvy nesmí být uzavřen v závorkách.  
+ pro Adresa formálních názvů parametrů pro proceduru. Názvy parametrů musí být odděleny příslušnými oddělovači pro modul vytváření skriptů. Názvy nesmí být uzavřeny do závorek.  
   
  `pszProcedureName`  
- [in] Adresa název procedury, který se má analyzovat.  
+ pro Adresa názvu procedury, která se má analyzovat.  
   
  `pszItemName`  
- [in] Adresa vyrovnávací paměti, který obsahuje název položky přidružené k `IScriptEntry` objektu.  
+ pro Adresa vyrovnávací paměti, která obsahuje název položky přidružené k objektu `IScriptEntry`.  
   
  `pszDelimiter`  
- [in] Adresa koncového ze skriptu bloku oddělovač. Když `pszCode` je analyzován z toku textu, hostitel obvykle používá oddělovač (například dvěma jednoduchými uvozovkami), k zjištění konce bloku skriptu. Tento parametr nastavte na hodnotu NULL, pokud neexistuje žádný oddělovač pro označení konce bloku skriptu.  
+ pro Adresa oddělovače bloku koncových skriptů. Pokud je `pszCode` analyzována z datového proudu, hostitel obvykle používá oddělovač (například dvě jednoduché uvozovky) k detekci konce bloku skriptu. Nastavte tento parametr na hodnotu NULL, pokud neexistuje oddělovač k označení konce bloku skriptu.  
   
  `dwCookie`  
- [in] Hodnotu definované aplikací, který je spojen s novými `IScriptEntry` objektu.  
+ pro Hodnota definovaná aplikací, která je přidružená k novému objektu `IScriptEntry`.  
   
  `dwFlags`  
- [in] Nepoužívá se.  
+ pro Nepoužívá se.  
   
  `pdispFor`  
- [in] Nepoužívá se.  
+ pro Nepoužívá se.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Aktuální [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] modul neimplementuje této metody.  
+ Aktuální [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] modul neimplementuje tuto metodu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScriptAuthorProcedure – rozhraní](../../winscript/reference/iactivescriptauthorprocedure-interface.md)

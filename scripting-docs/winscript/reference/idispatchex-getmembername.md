@@ -1,5 +1,5 @@
 ---
-title: IDispatchEx::GetMemberName | Dokumentace Microsoftu
+title: 'IDispatchEx –:: GetMember | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 155c8db6e772460ae8ad4e8b5a70ae5e67b49ec1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f68b0157e8e352b34885ae94d14026a51c4a6e97
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000875"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574111"
 ---
 # <a name="idispatchexgetmembername"></a>IDispatchEx::GetMemberName
-Načte název členu.  
+Načte název člena.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,17 +38,17 @@ HRESULT GetMemberName(
   
 #### <a name="parameters"></a>Parametry  
  `id`  
- Identifikuje člena. Používá `GetDispID` nebo `GetNextDispID` získat identifikátor odeslání.  
+ Identifikuje člena. K získání identifikátoru odeslání používá `GetDispID` nebo `GetNextDispID`.  
   
  `pbstrName`  
- Adresa `BSTR` , který přijímá název člena. Volající aplikace je zodpovědná za uvolnění tuto hodnotu.  
+ Adresa `BSTR` přijímajícího název člena. Volající aplikace zodpovídá za uvolnění této hodnoty.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
 |||  
 |-|-|  
-|`S_OK`|Úspěch.|  
+|`S_OK`|Nástup.|  
 |`DISP_E_UNKNOWNNAME`|Název nebyl znám.|  
   
 ## <a name="example"></a>Příklad  
@@ -74,7 +74,7 @@ HRESULT hr;
    }  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [IDispatchEx – rozhraní](../../winscript/reference/idispatchex-interface.md)   
- [IDispatchEx::GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní IDispatchEx –](../../winscript/reference/idispatchex-interface.md)  
+ [IDispatchEx –:: GetDispID](../../winscript/reference/idispatchex-getdispid.md)    
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)

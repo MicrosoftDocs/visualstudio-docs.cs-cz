@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame::GetDebugProperty | Dokumentace Microsoftu
+title: 'Idebugstackframe –:: GetDebugProperty – | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c6c8726474bee28a0022e0d86a7c051dbfda308d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 452c08bb0319167c0dfc1de86bf38a993e3cbad8
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934681"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574269"
 ---
 # <a name="idebugstackframegetdebugproperty"></a>IDebugStackFrame::GetDebugProperty
-Vrátí prohlížeč vlastnost pro aktuální rámec.  
+Vrátí prohlížeč vlastností pro aktuální rámec.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +37,17 @@ HRESULT GetDebugProperty(
   
 #### <a name="parameters"></a>Parametry  
  `ppDebugProp`  
- [out] Prohlížeč vlastností pro aktuální rámec.  
+ mimo Prohlížeč vlastností pro aktuální rámec.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda vrátí prohlížeč vlastnost pro aktuální rámec.  
+ Tato metoda vrátí prohlížeč vlastností pro aktuální rámec.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugStackFrame – rozhraní](../../winscript/reference/idebugstackframe-interface.md)

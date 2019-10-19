@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptStats::GetStatEx | Dokumentace Microsoftu
+title: 'Iactivescriptstats –:: GetStatEx | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3e5f25887d8fdd5b5fb774cc2e8619c1a93432c1
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 2ca7cdb81fd7e228b26bfaa12d45e81335674a74
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442780"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576126"
 ---
 # <a name="iactivescriptstatsgetstatex"></a>IActiveScriptStats::GetStatEx
-Vrátí statistiku pro vlastní skripty.  
+Vrátí statistiku vlastního skriptu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,16 +39,16 @@ HRESULT GetStatEx(
   
 #### <a name="parameters"></a>Parametry  
  `guid`  
- [in] Určuje, které statistiku k vrácení. Sémantika statistiky, které odpovídá konkrétní identifikátor GUID je zcela modul definované.  
+ pro Určuje, která Statistika se má vrátit. Sémantika, kterou statistiku odpovídají konkrétnímu identifikátoru GUID, je zcela definovaná modulem.  
   
  `pluHi`  
- [out] Vysoká 32 bitů 64bitové celé číslo bez znaménka představující statistiky.  
+ mimo Vysoký 32 bitů 64 unsigned integer reprezentujících statistiku.  
   
  `pluLo`  
- [out] Nízká 32 bitů 64bitové celé číslo bez znaménka představující statistiky.  
+ mimo Dolních 32 bitů 64 unsigned integer představujících statistiku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
@@ -56,11 +56,11 @@ HRESULT GetStatEx(
 |`E_NOTIMPL`|Metoda není implementována.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda umožňuje vlastní skriptovací stroj vrátit smysluplné statistiky pro vlastního hostitele.  
+ Tato metoda umožňuje vlastnímu skriptovacímu stroji vracet smysluplné statistiky pro vlastního hostitele.  
   
 > [!NOTE]
-> Tato metoda teď není implementovaná.  
+> Tato metoda není v současnosti implementována.  
   
-## <a name="see-also"></a>Viz také  
- [IActiveScriptStats::GetStat](../../winscript/reference/iactivescriptstats-getstat.md)   
+## <a name="see-also"></a>Viz také:  
+ [Iactivescriptstats –:: getstat](../../winscript/reference/iactivescriptstats-getstat.md)    
  [IActiveScriptStats – rozhraní](../../winscript/reference/iactivescriptstats-interface.md)

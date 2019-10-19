@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication::ConnectDebugger | Dokumentace Microsoftu
+title: 'Iremotedebugapplication –:: ConnectDebugger | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 189f0bcbcb5b45e1da477fa18b131aecc913a4c5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7ed0ddeffd55475e1be4c9fab1e567d61a4b6654
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944296"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572323"
 ---
 # <a name="iremotedebugapplicationconnectdebugger"></a>IRemoteDebugApplication::ConnectDebugger
-Ladicí program připojí k této aplikaci.  
+Připojí ladicí program k této aplikaci.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,19 +37,19 @@ HRESULT ConnectDebugger(
   
 #### <a name="parameters"></a>Parametry  
  `pad`  
- [in] Aby ladicí program připojil k této aplikaci.  
+ pro Ladicí program, který se má připojit k této aplikaci.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
-|`E_FAIL`|Ladicí program je již připojen k této aplikaci.|  
+|`E_FAIL`|Ladicí program je již k této aplikaci připojen.|  
   
 ## <a name="remarks"></a>Poznámky  
- Aplikace může mít pouze jeden ladicí program připojený v čase. Tato metoda selže, pokud ladicí program je již připojen.  
+ Aplikace může mít v jednom okamžiku připojen pouze jeden ladicí program. Tato metoda se nezdařila, pokud je ladicí program již připojen.  
   
-## <a name="see-also"></a>Viz také  
- [IRemoteDebugApplication::GetDebugger](../../winscript/reference/iremotedebugapplication-getdebugger.md)   
+## <a name="see-also"></a>Viz také:  
+ [Iremotedebugapplication –:: getdebugger](../../winscript/reference/iremotedebugapplication-getdebugger.md)    
  [IRemoteDebugApplication – rozhraní](../../winscript/reference/iremotedebugapplication-interface.md)

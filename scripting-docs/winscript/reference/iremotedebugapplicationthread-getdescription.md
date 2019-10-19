@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationThread::GetDescription | Dokumentace Microsoftu
+title: 'Iremotedebugapplicationthread –:: GetDescription | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c60e12eef269da46aea317611cb06223d0811ddc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5e49b9fd65d87bebb32764202efffcaec467eb2d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788193"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575257"
 ---
 # <a name="iremotedebugapplicationthreadgetdescription"></a>IRemoteDebugApplicationThread::GetDescription
 Získá popis a stav tohoto vlákna.  
@@ -38,20 +38,20 @@ HRESULT GetDescription(
   
 #### <a name="parameters"></a>Parametry  
  `pbstrDescription`  
- [out] Popis tohoto vlákna.  
+ mimo Popis tohoto vlákna.  
   
  `pbstrState`  
- [out] Popis stavu vlákna.  
+ mimo Popis stavu vlákna.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda načte popis a stav tohoto vlákna.  
+ Tato metoda získá popis a stav tohoto vlákna.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IRemoteDebugApplicationThread – rozhraní](../../winscript/reference/iremotedebugapplicationthread-interface.md)

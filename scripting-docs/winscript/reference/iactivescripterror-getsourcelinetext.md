@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptError::GetSourceLineText | Dokumentace Microsoftu
+title: 'IActiveScriptError:: GetSourceLineText | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 702f1655b244116e1bb7dca3d5fc90de3d1f5bdf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ded57f97ec40167bac34bf0f288c2e3d15a5c4b7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955003"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576920"
 ---
 # <a name="iactivescripterrorgetsourcelinetext"></a>IActiveScriptError::GetSourceLineText
-Načte řádku ve zdrojovém souboru, kde došlo k chybě skriptovací modul byl spuštěn skript.  
+Načte řádek ve zdrojovém souboru, ve kterém došlo k chybě, když skriptovací stroj spustil skript.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +37,10 @@ HRESULT GetSourceLineText(
   
 ## <a name="parameter"></a>Parametr  
  `pbstrSourceLine`  
- [out] Adresa vyrovnávací paměti, která přijímá řádku zdrojového kódu, ve kterém došlo k chybě.  
+ mimo Adresa vyrovnávací paměti, která obdrží řádek zdrojového kódu, ve kterém došlo k chybě.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` v případě úspěšného ověření nebo `E_FAIL` Pokud nebyl načten řádku ve zdrojovém souboru.  
+ Vrátí `S_OK`, pokud bylo úspěšné, nebo `E_FAIL`, pokud řádek ve zdrojovém souboru nebyl načten.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScriptError](../../winscript/reference/iactivescripterror.md)

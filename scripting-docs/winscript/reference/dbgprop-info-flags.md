@@ -1,5 +1,5 @@
 ---
-title: DBGPROP_INFO_FLAGS | Dokumentace Microsoftu
+title: DBGPROP_INFO_FLAGS | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -19,15 +19,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c63cf941bca1965fc4a2e3997f0c0b50ebc44035
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5b8131531292e0f88108942648073883050dd609
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955299"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572591"
 ---
-# <a name="dbgpropinfoflags"></a>DBGPROP_INFO_FLAGS
-Používá se k určení `DebugPropertyInfo` pole  
+# <a name="dbgprop_info_flags"></a>DBGPROP_INFO_FLAGS
+Slouží k určení `DebugPropertyInfo` polí.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,26 +45,26 @@ enum {
   
 ## <a name="members"></a>Členové  
  DBGPROP_INFO_NAME  
- Inicializuje `bstrName` pole.  
+ Inicializuje pole `bstrName`.  
   
  DBGPROP_INFO_TYPE  
- Inicializuje `bstrType` pole.  
+ Inicializuje pole `bstrType`.  
   
  DBGPROP_INFO_VALUE  
- Inicializuje `bstrValue` pole.  
+ Inicializuje pole `bstrValue`.  
   
  DBGPROP_INFO_FULLNAME  
- Inicializuje `bstrFullName` pole.  
+ Inicializuje pole `bstrFullName`.  
   
  DBGPROP_INFO_ATTRIBUTES  
- Inicializuje `dwAttrib` pole.  
+ Inicializuje pole `dwAttrib`.  
   
  DBGPROP_INFO_DEBUGPROP  
- Inicializuje `pDebugProp` pole s údajem `IDebugProperty` rozhraní.  
+ Inicializuje pole `pDebugProp`, které obsahuje rozhraní `IDebugProperty`.  
   
  DBGPROP_INFO_AUTOEXPAND  
- Určuje, že hodnota pole by měl obsahovat hodnotu automaticky rozbaleny, pokud je k dispozici pro tento typ objektu.  
+ Určuje, že pole hodnota by mělo obsahovat automaticky rozbalenou hodnotu, pokud je k dispozici, pro tento typ objektu.  
   
-## <a name="see-also"></a>Viz také  
- [Debugpropertyinfo – struktura](../../winscript/reference/debugpropertyinfo-structure.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [struktury debugpropertyinfo –](../../winscript/reference/debugpropertyinfo-structure.md)  
  [IDebugProperty – rozhraní](../../winscript/reference/idebugproperty-interface.md)

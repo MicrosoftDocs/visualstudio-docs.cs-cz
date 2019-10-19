@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::SetScriptSite | Dokumentace Microsoftu
+title: 'IActiveScript:: SetScriptSite | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3fdf5f3ae84d1a991d67170b5f2b02114b91ee05
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 063dcc7b580334bff9780e9c209b621ef7e25656
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935551"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575333"
 ---
 # <a name="iactivescriptsetscriptsite"></a>IActiveScript::SetScriptSite
-Informuje o tom skriptovacího stroje ze [iactivescriptsite –](../../winscript/reference/iactivescriptsite.md) lokality rozhraní, které jsou poskytovány tímto hostitelem. Volejte tuto metodu před všemi ostatními [IActiveScript –](../../winscript/reference/iactivescript.md) metody rozhraní se používá.  
+Informuje skriptovací stroj lokality rozhraní [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md) poskytované hostitelem. Tuto metodu volejte před použitím jakékoli jiné metody rozhraní [IActiveScript](../../winscript/reference/iactivescript.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,18 +37,18 @@ HRESULT SetScriptSite(
   
 #### <a name="parameters"></a>Parametry  
  `pScriptSite`  
- [in] Adresa hostitele zadaný skript serveru chcete přidružit k této instanci skriptovací stroj. Lokality musí jednoznačně přiřazen k této instanci skriptovací stroj; nemůže být sdílen s další skriptovací moduly.  
+ pro Adresa hostitelského skriptovacího serveru, který má být přidružen k této instanci skriptovacího modulu. Lokalita musí být jednoznačně přiřazena této instanci skriptovacího stroje; nedá se sdílet s jinými skriptovacími moduly.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
 |Návratová hodnota|Význam|  
 |------------------|-------------|  
-|`S_OK`|Úspěch.|  
-|`E_FAIL`|Došlo k nespecifikované chybě; skriptovací modul se nepodařilo dokončit inicializace webu.|  
+|`S_OK`|Nástup.|  
+|`E_FAIL`|Došlo k neurčené chybě. skriptovacímu stroji se nepovedlo dokončit inicializaci lokality.|  
 |`E_INVALIDARG`|Argument byl neplatný.|  
 |`E_POINTER`|Byl zadán neplatný ukazatel.|  
 |`E_UNEXPECTED`|Volání nebylo očekáváno (například web již byl nastaven).|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScript](../../winscript/reference/iactivescript.md)

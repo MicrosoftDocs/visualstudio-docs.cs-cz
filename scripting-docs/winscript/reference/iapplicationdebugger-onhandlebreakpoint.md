@@ -1,5 +1,5 @@
 ---
-title: IApplicationDebugger::onHandleBreakPoint | Dokumentace Microsoftu
+title: 'Iapplicationdebugger –:: onHandleBreakPoint | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: edf8816cd646596ce1f897dfd9d949790d52b7b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3796ea1f50f0c4bcf945dbc10592c048db22757b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991356"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577833"
 ---
 # <a name="iapplicationdebuggeronhandlebreakpoint"></a>IApplicationDebugger::onHandleBreakPoint
 Zpracovává událost zarážky.  
@@ -39,28 +39,28 @@ HRESULT onHandleBreakPoint(
   
 #### <a name="parameters"></a>Parametry  
  `prpt`  
- [in] Vlákno, kde došlo k zarážce.  
+ pro Vlákno, kde došlo k zarážce.  
   
  `br`  
- [in] Důvod pro zarážku.  
+ pro Důvod pro zarážku.  
   
  `pError`  
- [in] Informace o chybě modulu runtime, zadat, pokud hodnota `br` je BREAKREASON_ERROR.  
+ pro Informace o běhové chybě, pokud je hodnota `br` BREAKREASON_ERROR.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je volána při dosažení zarážky a `IDebugApplication::HandleBreakPoint` je volána.  
+ Tato metoda je volána, když je dosaženo zarážky a je volána `IDebugApplication::HandleBreakPoint`.  
   
- Aplikace budou pozastaveny, dokud ladicí program integrovaného vývojového prostředí volá `IRemoteDebugApplication::ResumeFromBreakPoint`.  
+ Aplikace zůstane pozastavena, dokud rozhraní IDE ladicího programu nevolá `IRemoteDebugApplication::ResumeFromBreakPoint`.  
   
-## <a name="see-also"></a>Viz také  
- [Iapplicationdebugger – rozhraní](../../winscript/reference/iapplicationdebugger-interface.md)   
- [IDebugApplication::HandleBreakPoint](../../winscript/reference/idebugapplication-handlebreakpoint.md)   
- [IRemoteDebugApplication::ResumeFromBreakPoint](../../winscript/reference/iremotedebugapplication-resumefrombreakpoint.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iapplicationdebugger –](../../winscript/reference/iapplicationdebugger-interface.md)  
+ [IDebugApplication –:: HandleBreakPoint](../../winscript/reference/idebugapplication-handlebreakpoint.md)    
+ [Iremotedebugapplication –:: ResumeFromBreakPoint](../../winscript/reference/iremotedebugapplication-resumefrombreakpoint.md)    
  [BREAKREASON – výčet](../../winscript/reference/breakreason-enumeration.md)

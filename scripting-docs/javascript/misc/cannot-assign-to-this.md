@@ -1,5 +1,5 @@
 ---
-title: Nelze přiřadit 'this' | Dokumentace Microsoftu
+title: Nejde přiřadit k této | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,32 +14,32 @@ ms.assetid: ba2b0a2b-f0f8-4698-b335-a4ab6c166671
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4a4ba5d852a7d131a88930dd66931c026074549b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 73baa77cc63e3a43ac30e70f66081bbc7ade3020
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946586"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572349"
 ---
 # <a name="cannot-assign-to-this"></a>Nelze přiřazovat do objektu 'this'
-Pokusili jste se přiřadit hodnotu **to**. **to** je [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] – klíčové slovo, který odkazuje na buď:
+Pokusili jste se přiřadit hodnotu k **tomuto**. **Toto** je klíčové slovo [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)], které odkazuje na jednu z těchto akcí:
 
-- objekt aktuálně provádění metody,
+- objekt, který aktuálně provádí metodu,
 
-- globální objekt, pokud neexistuje žádná metoda aktuální (nebo metoda nepatří do jiného objektu).
+- globální objekt, pokud neexistuje žádná aktuální metoda (nebo metoda nepatří do žádného jiného objektu).
 
-Metoda je [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] funkci, která prostřednictvím objektu, který je vyvolána. Uvnitř metody **to** – klíčové slovo je odkaz na objekt vyvolání metody prostřednictvím (Probíhá bude objekt vytvořený pomocí volání konstruktoru třídy s **nové** operátor).
+Metoda je [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] funkce, která je vyvolána prostřednictvím objektu. V rámci metody je **Toto** klíčové slovo odkazem na objekt, na který byla metoda volána (což se stane objektem vytvořeným voláním konstruktoru třídy s operátorem **New** ).
 
-Uvnitř metody, můžete použít **to** k odkazování na aktuální objekt, ale nelze přiřadit novou hodnotu **to**.
+V rámci metody můžete použít **tuto** možnost, chcete-li odkazovat na aktuální objekt, ale **nelze k němu**přiřadit novou hodnotu.
 
 ## <a name="to-correct-this-error"></a>Oprava této chyby
 
-- Nepokoušejte se přiřadit **to**. Pro přístup k vlastnosti nebo metody instance objektu, pomocí operátoru tečka (například **circle.radius**).
+- Nepokoušejte se přiřadit k **tomuto**. Pro přístup k vlastnosti nebo metodě vytvořeného objektu použijte operátor tečka (například **Circle. RADIUS**).
 
   > [!NOTE]
-  > Nelze pojmenovat proměnnou uživatel vytvořil **to**; je [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] vyhrazené slovo.
+  > **Tuto**proměnnou vytvořenou uživatelem nelze pojmenovat; je to [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] rezervované slovo.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [this – příkaz](../../javascript/reference/this-statement-javascript.md)
 - [Řešení potíží se skripty](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)

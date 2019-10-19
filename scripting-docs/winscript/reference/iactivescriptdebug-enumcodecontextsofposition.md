@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptDebug::EnumCodeContextsOfPosition | Dokumentace Microsoftu
+title: 'Iactivescriptdebug –:: EnumCodeContextsOfPosition | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c364d00941a65272b4d22cc7674a0f0e6178f099
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aedfe5d40d8f4086e30f3a62c070b8ccd5ef2388
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63009739"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572780"
 ---
 # <a name="iactivescriptdebugenumcodecontextsofposition"></a>IActiveScriptDebug::EnumCodeContextsOfPosition
-Používá inteligentního hostitele delegovat `IDebugDocumentContext::EnumCodeContexts` metody.  
+Používá inteligentní hostitel k delegování metody `IDebugDocumentContext::EnumCodeContexts`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,27 +40,27 @@ HRESULT EnumCodeContextsOfPosition(
   
 #### <a name="parameters"></a>Parametry  
  `dwSourceContext`  
- [in] Místní zdroj poskytnete `IActiveScriptParse::ParseScriptText` nebo `IActiveScriptParse::AddScriptlet`.  
+ pro Zdrojový kontext zadaný pro `IActiveScriptParse::ParseScriptText` nebo `IActiveScriptParse::AddScriptlet`.  
   
  `uCharacterOffset`  
- [in] Znak posun vzhledem k začátku skriptu.  
+ pro Posun znaku vzhledem k začátku textu skriptu.  
   
  `uNumChars`  
- [in] Počet znaků v tomto kontextu.  
+ pro Počet znaků v tomto kontextu.  
   
  `ppescc`  
- [out] Enumerátor kódu kontextech v zadaném rozsahu.  
+ mimo Enumerátor kontextů kódu v zadaném rozsahu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Inteligentního hostitele pomocí této metody můžete delegovat `IDebugDocumentContext::EnumCodeContexts` metody.  
+ Inteligentní hostitelé používají tuto metodu k delegování metody `IDebugDocumentContext::EnumCodeContexts`.  
   
-## <a name="see-also"></a>Viz také  
- [Iactivescriptdebug – rozhraní](../../winscript/reference/iactivescriptdebug-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iactivescriptdebug –](../../winscript/reference/iactivescriptdebug-interface.md)  
  [IDebugDocumentContext::EnumCodeContexts](../../winscript/reference/idebugdocumentcontext-enumcodecontexts.md)

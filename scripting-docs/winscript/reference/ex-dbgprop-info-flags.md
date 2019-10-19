@@ -1,5 +1,5 @@
 ---
-title: EX_DBGPROP_INFO_FLAGS | Dokumentace Microsoftu
+title: EX_DBGPROP_INFO_FLAGS | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 086a2b7544a95a302219ddc62c15c5b31dd1d9b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0094d49a7e528d312dc8206b02599651f192c6fb
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955227"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575844"
 ---
-# <a name="exdbgpropinfoflags"></a>EX_DBGPROP_INFO_FLAGS
-Používá se k určení `ExtendedDebugPropertyInfo` pole.  
+# <a name="ex_dbgprop_info_flags"></a>EX_DBGPROP_INFO_FLAGS
+Slouží k určení `ExtendedDebugPropertyInfo` polí.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,20 +41,20 @@ enum {
   
 ## <a name="members"></a>Členové  
  EX_DBGPROP_INFO_ID  
- Identifikátor pro vlastnost inicializuje.  
+ Inicializuje identifikátor vlastnosti.  
   
  EX_DBGPROP_INFO_NTYPE  
- Inicializuje typu vlastnosti.  
+ Inicializuje typ vlastnosti.  
   
  EX_DBGPROP_INFO_NVALUE  
- Inicializuje hodnoty vlastnosti.  
+ Inicializuje hodnotu vlastnosti.  
   
  EX_DBGPROP_INFO_LOCKBYTES  
- Inicializuje `plb` pole.  
+ Inicializuje pole `plb`.  
   
  EX_DBGPROP_INFO_DEBUGEXTPROP  
- Inicializuje `pDebugExtProp` pole s údajem `IDebugExtendedProperty` rozhraní.  
+ Inicializuje pole `pDebugExtProp`, které obsahuje rozhraní `IDebugExtendedProperty`.  
   
-## <a name="see-also"></a>Viz také  
- [Extendeddebugpropertyinfo – struktura](../../winscript/reference/extendeddebugpropertyinfo-structure.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [struktury extendeddebugpropertyinfo –](../../winscript/reference/extendeddebugpropertyinfo-structure.md)  
  [IDebugExtendedProperty – rozhraní](../../winscript/reference/idebugextendedproperty-interface.md)

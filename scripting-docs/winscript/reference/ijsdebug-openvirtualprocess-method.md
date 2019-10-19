@@ -1,5 +1,5 @@
 ---
-title: Ijsdebug::openvirtualprocess – metoda | Dokumentace Microsoftu
+title: 'IJsDebug:: OpenVirtualProcess – – metoda | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 97a055bf1550d74dc6b86d93ffdb9ca406afb43d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3de39beb28a68ec3b8e0d76b17a7e914a464ecfe
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62583591"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577749"
 ---
 # <a name="ijsdebugopenvirtualprocess-method"></a>IJsDebug::OpenVirtualProcess – metoda
-Metody výroby použité k vytvoření nového objektu virtuálního procesu.  
+Metoda factory používaná k vytvoření nového objektu virtuálního procesu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,24 +38,24 @@ HRESULT OpenVirtualProcess(
   
 #### <a name="parameters"></a>Parametry  
  `processId`  
- [in] Id procesu připojit ladicí program.  
+ pro ID procesu, ke kterému se má ladicí program připojit  
   
  `runtimeJsBaseAddress`  
- [in] Základní adresa, na které modulu runtime jazyka JavaScript načítal do cílového procesu.  
+ pro Základní adresa, na které se načte modul runtime jazyka JavaScript do cílového procesu.  
   
  `pDataTarget`  
- [in] Ladicí program zadané rozhraní pro dotaz na stav procesu.  
+ pro Rozhraní dodávané ladicím programem pro dotaz na stav procesu.  
   
  `ppProcess`  
- [out] Nový objekt procesu ladění  
+ mimo Nový objekt procesu ladění  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="remarks"></a>Poznámky  
- Vrátí E_JsDEBUG_MISMATCHED_RUNTIME, pokud Jscript9diag a Jscript9 se neshodují.  
+ Vrátí E_JsDEBUG_MISMATCHED_RUNTIME, pokud Jscript9diag a jscript9 se neshodují.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IJsDebug – rozhraní](../../winscript/reference/ijsdebug-interface.md)

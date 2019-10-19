@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::Attach | Dokumentace Microsoftu
+title: 'Idebugdocumenthelper –:: Attach | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8f4fbd1686d27e594b748ca97c82c645de1b93de
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3400a5bf6cd3e4a9726fdf4b2f20bbf43b9fc989
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62783132"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577036"
 ---
 # <a name="idebugdocumenthelperattach"></a>IDebugDocumentHelper::Attach
-Tento dokument se přidá do stromu dokumentu.  
+Přidá tento dokument do stromu dokumentu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,18 +37,18 @@ HRESULT Attach(
   
 #### <a name="parameters"></a>Parametry  
  `pddhParent`  
- [in] Stromu dokumentu místo, kam bude přidána v tomto dokumentu. Může mít hodnotu NULL.  
+ pro Strom dokumentů, do kterého bude tento dokument přidán. Může mít hodnotu NULL.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda přidá do dokumentu tento dokument stromu, pomocí `pddhParent` jako nadřazený. Pokud `pddhParent` je `NULL`, bude tento dokument nejvyšší úrovni dokumentu.  
+ Tato metoda přidá tento dokument do stromu dokumentu pomocí `pddhParent` jako nadřazeného objektu. Pokud je `pddhParent` `NULL`, bude dokument nejvyšší úrovně.  
   
-## <a name="see-also"></a>Viz také  
- [IDebugDocumentHelper::Detach](../../winscript/reference/idebugdocumenthelper-detach.md)   
+## <a name="see-also"></a>Viz také:  
+ [Idebugdocumenthelper –::D etach](../../winscript/reference/idebugdocumenthelper-detach.md)    
  [IDebugDocumentHelper – rozhraní](../../winscript/reference/idebugdocumenthelper-interface.md)

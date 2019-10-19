@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationThread::GetSystemThreadId | Dokumentace Microsoftu
+title: 'Iremotedebugapplicationthread –:: GetSystemThreadId | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9d5119db4108ef7fa0783bccc3f747fbd2ed26d0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 35c281047bd3333f8fdc3945ed97ad3f402c53a4
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788206"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575220"
 ---
 # <a name="iremotedebugapplicationthreadgetsystemthreadid"></a>IRemoteDebugApplicationThread::GetSystemThreadId
-Vrátí identifikátor operačního systému – závislé přidružené vlákno.  
+Vrátí identifikátor závislý na operačním systému přidružený k vláknu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +37,17 @@ HRESULT GetSystemThreadId(
   
 #### <a name="parameters"></a>Parametry  
  `dwThreadId`  
- [out] Operační systém – závislé na identifikátor přidružený k vláknu.  
+ mimo Identifikátor závislý na operačním systému přidružený k vláknu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Hodnota `dwThreadId` nemusí být jedinečný v rámci počítače.  
+ Hodnota `dwThreadId` nemusí být v různých počítačích jedinečná.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IRemoteDebugApplicationThread – rozhraní](../../winscript/reference/iremotedebugapplicationthread-interface.md)

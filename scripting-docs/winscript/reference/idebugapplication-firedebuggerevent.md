@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::FireDebuggerEvent | Dokumentace Microsoftu
+title: 'IDebugApplication –:: FireDebuggerEvent | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ad865f05cc70f462d65d6fbead4143b82a9fa489
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 00d895ed484e37f0ba38636a409876156ed97287
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990919"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575001"
 ---
 # <a name="idebugapplicationfiredebuggerevent"></a>IDebugApplication::FireDebuggerEvent
-Aktivuje se v generických událostí v ladicím programu `IApplicationDebugger` rozhraní.  
+Aktivuje obecnou událost pro `IApplicationDebugger` rozhraní ladicího programu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,26 +38,26 @@ HRESULT FireDebuggerEvent(
   
 #### <a name="parameters"></a>Parametry  
  `riid`  
- [in] Identifikátor GUID pro objekt.  
+ pro Identifikátor GUID objektu.  
   
  `punk`  
- [in] Objekt události ladicího programu předat.  
+ pro Objekt události, který bude předána ladicímu programu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
-|`E_NOTIMPL`|Metoda teď není implementovaná.|  
+|`E_NOTIMPL`|Metoda není aktuálně implementována.|  
   
 ## <a name="remarks"></a>Poznámky  
- Sémantika identifikátor GUID a `IUnknown` jsou zcela definované aplikací/ladicího programu.  
+ Sémantika identifikátoru GUID a `IUnknown` jsou definovány pro aplikace/ladicí program.  
   
- Tato metoda umožňuje vlastní rozšíření ladicího programu modelu; teď není implementovaná.  
+ Tato metoda umožňuje vlastní rozšíření modelu ladicího programu. v tuto chvíli není naimplementovaná.  
   
- Tato metoda způsobí, že `IApplicationDebugger::onDebuggerEvent` volat.  
+ Tato metoda způsobí, že `IApplicationDebugger::onDebuggerEvent` být volána.  
   
-## <a name="see-also"></a>Viz také  
- [Idebugapplication – rozhraní](../../winscript/reference/idebugapplication-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní IDebugApplication –](../../winscript/reference/idebugapplication-interface.md)  
  [IApplicationDebugger::onDebuggerEvent](../../winscript/reference/iapplicationdebugger-ondebuggerevent.md)

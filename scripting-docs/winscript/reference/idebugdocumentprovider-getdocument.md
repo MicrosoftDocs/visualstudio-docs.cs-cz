@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentProvider::GetDocument | Dokumentace Microsoftu
+title: 'Idebugdocumentprovider –:: GetDocument | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8f6b816f455d213cb81065f1909930bf50eeb415
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d9240f059023fee4f55f34c80087063638ec8ad6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970884"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572168"
 ---
 # <a name="idebugdocumentprovidergetdocument"></a>IDebugDocumentProvider::GetDocument
-Způsobí, že dokument, který má být vytvořena, pokud ještě neexistuje.  
+Způsobí vytvoření instance dokumentu, pokud ještě neexistuje.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +37,17 @@ HRESULT GetDocument(
   
 #### <a name="parameters"></a>Parametry  
  `ppssd`  
- [out] Ladění dokumentu odpovídající dokumentu.  
+ mimo Dokument ladění odpovídající dokumentu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda způsobí, že dokument, který má být vytvořena, pokud ještě neexistuje.  
+ Tato metoda způsobí vytvoření instance dokumentu, pokud ještě neexistuje.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugDocumentProvider – rozhraní](../../winscript/reference/idebugdocumentprovider-interface.md)

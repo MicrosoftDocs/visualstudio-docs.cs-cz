@@ -1,5 +1,5 @@
 ---
-title: ISimpleConnectionPoint::Unadvise | Dokumentace Microsoftu
+title: 'Isimpleconnectionpoint –:: Unadvise | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 189c07c10e93df9a61218b6a94a0b317999676d2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e00c172fd33eb0ccf27aaf28e0e2f692c1a353ab
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63001489"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571759"
 ---
 # <a name="isimpleconnectionpointunadvise"></a>ISimpleConnectionPoint::Unadvise
-Ukončí připojení k advisory dříve vytvořeno prostřednictvím `ISimpleConnectionPoint::Advise`.  
+Ukončí poradenské připojení, které bylo dříve vytvořeno prostřednictvím `ISimpleConnectionPoint::Advise`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +37,17 @@ HRESULT Unadvise(
   
 #### <a name="parameters"></a>Parametry  
  `dwCookie`  
- [in] Token připojení ukončit, protože vrácená `ISimpleConnectionPoint::Advise`.  
+ pro Token připojení, které se má ukončit, jak bylo vráceno z `ISimpleConnectionPoint::Advise`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Když advisory připojení bude ukončeno, bod připojení volání `Release` metodu na ukazatel, který byl uložen připojení během `ISimpleConnectionPoint::Advise` metoda. Které volají plánového `AddRef` , která byla provedena během `ISimpleConnectionPoint::Advise` když je spojovací bod volá advisory jímky `QueryInterface`.  
+ Při ukončení poradenského připojení volá spojovací bod metodu `Release` na ukazatel, který byl uložen pro připojení během metody `ISimpleConnectionPoint::Advise`. Toto volání obrátí `AddRef`, který byl proveden během `ISimpleConnectionPoint::Advise`, pokud spojovací bod volá `QueryInterface` informační jímky.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [ISimpleConnectionPoint – rozhraní](../../winscript/reference/isimpleconnectionpoint-interface.md)

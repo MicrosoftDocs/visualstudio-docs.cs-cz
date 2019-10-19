@@ -1,5 +1,5 @@
 ---
-title: Rozhraní aktivních skriptů Profiler | Dokumentace Microsoftu
+title: Rozhraní profileru aktivních skriptů | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,20 +11,20 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: eeadf0de5563a4882c067960559414167e729173
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 1e9395c392051e184bf61bea65e7ef7ac3c3fe2c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63422231"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572682"
 ---
 # <a name="active-script-profiler-interfaces"></a>Rozhraní profileru aktivních skriptů
-Aktivní rozhraní Profiler skriptů umožňují přijímat profilování události z [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] modul.  
+Rozhraní profileru aktivních skriptů umožňují přijímat události profilace z modulu [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)].  
   
- Soubor hlaviček activprof.h poskytuje rozhraní, které jsou uvedené v této části.  
+ Hlavičkový soubor activprof. h poskytuje rozhraní uvedená v této části.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- Následující rozhraní povolit profilaci:  
+ Profilace je povolená v následujících rozhraních:  
   
 - [IActiveScriptProfilerControl – rozhraní](../../winscript/reference/iactivescriptprofilercontrol-interface.md)  
   
@@ -42,14 +42,14 @@ Aktivní rozhraní Profiler skriptů umožňují přijímat profilování událo
   
 - [IActiveScriptProfilerHeapEnum – rozhraní](../../winscript/reference/iactivescriptprofilerheapenum-interface.md)  
   
-  V následující části jsou uvedeny výčty, které se používají pro profilování:  
+  V následující části jsou uvedeny výčty, které se používají k profilaci:  
   
 - [Konstanty, výčty a struktury profileru aktivních skriptů](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)  
   
 > [!NOTE]
-> Aktivní skriptovací rozhraní Profiler byly nejprve vydané s aplikací Internet Explorer 8. `IActiveScriptProfilerControl2` a `IActiveScriptProfilerCallback2` rozhraní se objevily nejdřív pomocí aplikace Internet Explorer 9. [Iactivescriptprofilercontrol3 – rozhraní](../../winscript/reference/iactivescriptprofilercontrol3-interface.md), [iactivescriptprofilercallback3 – rozhraní](../../winscript/reference/iactivescriptprofilercallback3-interface.md), a [iactivescriptprofilerheapenum – rozhraní](../../winscript/reference/iactivescriptprofilerheapenum-interface.md) byly rozhraní prvního vydání s aplikací Internet Explorer 10. [Iactivescriptprofilercontrol5 – rozhraní](../../winscript/reference/iactivescriptprofilercontrol5-interface.md) prvního vydání s aplikací Internet Explorer 11.  
+> Rozhraní profileru aktivních skriptů se nejdřív uvolnila v aplikaci Internet Explorer 8. Rozhraní `IActiveScriptProfilerControl2` a `IActiveScriptProfilerCallback2` byla nejprve vydaná s Internet Explorerem 9. Rozhraní [IActiveScriptProfilerControl3](../../winscript/reference/iactivescriptprofilercontrol3-interface.md)Interface, [rozhraní IActiveScriptProfilerCallback3](../../winscript/reference/iactivescriptprofilercallback3-interface.md)a rozhraní [IActiveScriptProfilerHeapEnum](../../winscript/reference/iactivescriptprofilerheapenum-interface.md) byly nejprve vydány s Internet Explorerem 10. [Rozhraní IActiveScriptProfilerControl5](../../winscript/reference/iactivescriptprofilercontrol5-interface.md) bylo nejprve vydáno v aplikaci Internet Explorer 11.  
 >   
-> V aplikaci Internet Explorer 8 a Internet Explorer 9, pouze [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] jazyk používá tato rozhraní pro podporu profilace skriptu.  
+> V aplikaci Internet Explorer 8 a Internet Explorer 9 používá tato rozhraní k podpoře profilování skriptů pouze jazyk [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)].  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace skriptovacích rozhraní systému Windows](../../winscript/reference/windows-script-interfaces-reference.md)

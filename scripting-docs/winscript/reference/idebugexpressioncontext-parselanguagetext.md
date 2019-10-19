@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionContext::ParseLanguageText | Dokumentace Microsoftu
+title: Idebugexpressioncontext –::P arseLanguageText | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 50f9f398b9193c776f8e2a823b78ce7b8da438b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0493adde76e029088b637be3c6aaf02c55caaace
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946274"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573163"
 ---
 # <a name="idebugexpressioncontextparselanguagetext"></a>IDebugExpressionContext::ParseLanguageText
-Vytvoří výrazu ladění pro zadaný text.  
+Vytvoří výraz ladění pro zadaný text.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,38 +41,38 @@ HRESULT ParseLanguageText(
   
 #### <a name="parameters"></a>Parametry  
  `pstrCode`  
- [in] Obsahuje text výrazu nebo příkazů.  
+ pro Poskytuje text výrazu nebo příkazu (y).  
   
  `nRadix`  
- [in] Číselná soustava k použití.  
+ pro Číselná soustava, která se má použít.  
   
  `pstrDelimiter`  
- [in] Oddělovač koncový ze skriptu blok. Když `pstrCode` je analyzován z toku textu, hostitel obvykle používá oddělovač, jako jsou například dvě jednoduché uvozovky ("), k zjištění konce bloku skriptu. Tento parametr určuje oddělovač, který používá hostitel a který umožňuje skriptovacímu stroji poskytovat některé podmíněné primitivní předzpracování (například nahrazení jednoduchou uvozovku ['] dvěma jednoduchými uvozovkami pro použití jako oddělovače). Jak přesně (a zda) skriptovací stroj používá tyto informace závisí na skriptovacím stroji. Nastavte tento parametr na `NULL` Pokud hostitel nepoužili oddělovač pro označení konce bloku skriptu.  
+ pro Oddělovač bloků na konci skriptu. Pokud je `pstrCode` analyzována z datového proudu, hostitel obvykle používá oddělovač, jako je například dvě jednoduché uvozovky (' ') k detekci konce bloku skriptu. Tento parametr určuje oddělovač, který hostitel použil, a umožňuje skriptovacímu stroji poskytovat nějaký podmíněný primitivní předzpracování (například nahrazení jednoduché uvozovky ['] dvěma jednoduchými uvozovkami pro použití jako oddělovače). Jak (a pokud) skriptovací stroj tyto informace používá, závisí na skriptovacím stroji. Nastavte tento parametr na `NULL`, pokud hostitel nepoužil oddělovač k označení konce bloku skriptu.  
   
  `dwFlags`  
- [in] Kombinace následující příznaky ladění text:  
+ pro Kombinace následujících příznaků ladicího textu:  
   
-|Konstanta|Value|Popis|  
+|Konstanta|Hodnota|Popis|  
 |--------------|-----------|-----------------|  
-|DEBUG_TEXT_ISEXPRESSION|0x00000001|Označuje, že text je výraz na rozdíl od příkazu. Tento příznak může mít vliv na způsob, ve kterém se analyzovat text v některých jazycích.|  
-|DEBUG_TEXT_RETURNVALUE|0x00000002|Pokud vrácená hodnota je k dispozici, použije se volající.|  
-|DEBUG_TEXT_NOSIDEEFFECTS|0x00000004|Nepovolit vedlejší účinky. Pokud je tento příznak nastaven, vyhodnocování výrazu by měl změnit bez běhový stav.|  
-|DEBUG_TEXT_ALLOWBREAKPOINTS|0x00000008|Umožňuje body přerušení během vyhodnocení textu. Pokud není nastavený tento příznak jsou ignorovány zarážky během vyhodnocení textu.|  
-|DEBUG_TEXT_ALLOWERRORREPORT|0x00000010|Umožňuje zprávy o chybách během vyhodnocení textu. Pokud není nastavený tento příznak pak nejsou hlášeny chyby k hostiteli během hodnocení.|  
-|DEBUG_TEXT_EVALUATETOCODECONTEXT|0x00000020|Označuje výraz k vyhodnocení na kontext kódu, spíše než spuštění samotný výraz|  
+|DEBUG_TEXT_ISEXPRESSION|0x00000001|Označuje, že text je výraz na rozdíl od příkazu. Tento příznak může mít vliv na způsob, jakým je text analyzován některými jazyky.|  
+|DEBUG_TEXT_RETURNVALUE|0x00000002|Pokud je vrácená hodnota k dispozici, bude ji volající používat.|  
+|DEBUG_TEXT_NOSIDEEFFECTS|0x00000004|Nepovolit vedlejší účinky. Pokud je tento příznak nastaven, vyhodnocení výrazu by neměl změnit žádný běhový stav.|  
+|DEBUG_TEXT_ALLOWBREAKPOINTS|0x00000008|Povoluje zarážky během vyhodnocování textu. Pokud tento příznak není nastaven, zarážky se při vyhodnocování textu ignorují.|  
+|DEBUG_TEXT_ALLOWERRORREPORT|0x00000010|Umožňuje zprávy o chybách během vyhodnocování textu. Není-li tento příznak nastaven, chyby nebudou při vyhodnocování hlášeny hostiteli.|  
+|DEBUG_TEXT_EVALUATETOCODECONTEXT|0x00000020|Určuje, že se má výraz vyhodnotit do kontextu kódu místo spuštění výrazu samotného.|  
   
  `ppe`  
- [out] Vrátí výraz ladění pro zadaný text.  
+ mimo Vrátí výraz Debug pro zadaný text.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda vytvoří výrazu ladění pro zadaný text.  
+ Tato metoda vytvoří výraz ladění pro zadaný text.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugExpressionContext – rozhraní](../../winscript/reference/idebugexpressioncontext-interface.md)

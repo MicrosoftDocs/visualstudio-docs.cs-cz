@@ -1,5 +1,5 @@
 ---
-title: IDispatchEx::DeleteMemberByDispID | Dokumentace Microsoftu
+title: IDispatchEx –::D eleteMemberByDispID | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 36eeeb4c28286bb5712be3908b47a5145e460597
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 38ead33fb51caff1103ca9abe6bc01f3e0aa6aa3
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000938"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576641"
 ---
 # <a name="idispatchexdeletememberbydispid"></a>IDispatchEx::DeleteMemberByDispID
-Odstraní člena podle DISPID.  
+Odstraní člena podle identifikátoru DISPID.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,20 +37,20 @@ HRESULT DeleteMemberByDispID(
   
 #### <a name="parameters"></a>Parametry  
  `id`  
- Identifikátor členu. Používá `GetDispID` nebo `GetNextDispID` získat identifikátor odeslání.  
+ Identifikátor člena. K získání identifikátoru odeslání používá `GetDispID` nebo `GetNextDispID`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
 |||  
 |-|-|  
-|`S_OK`|Úspěch.|  
-|`S_FALSE`|Člen existuje, ale nejde odstranit.|  
+|`S_OK`|Nástup.|  
+|`S_FALSE`|Člen existuje, ale nelze jej odstranit.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud je člen odstraněn, je potřeba hodnota DISPID jsou dál platné pro `GetNextDispID`.  
+ Pokud je člen odstraněn, musí identifikátor DISPID zůstat platný pro `GetNextDispID`.  
   
- Pokud člen se zadaným názvem se odstraní a později je znovu vytvořit člena se stejným názvem, hodnota DISPID by měl být stejný. (, Jestli jsou názvy členů, které se liší pouze velikostí písma "stejné" závisí na objektu.)  
+ Pokud se člen s daným názvem odstraní a později se znovu vytvoří člen se stejným názvem, identifikátor DISPID by měl být stejný. (Zda se názvy členů, které se liší pouze písmeny, jsou závislé na objektu.)  
   
 ## <a name="example"></a>Příklad  
   
@@ -64,7 +64,7 @@ if (SUCCEEDED(pdex->GetDispID(bstrName, fdexNameCaseSensitive, &dispid)))
     pdex->DeleteMemberByDispID(dispid);  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [IDispatchEx – rozhraní](../../winscript/reference/idispatchex-interface.md)   
- [IDispatchEx::GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní IDispatchEx –](../../winscript/reference/idispatchex-interface.md)  
+ [IDispatchEx –:: GetDispID](../../winscript/reference/idispatchex-getdispid.md)    
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)

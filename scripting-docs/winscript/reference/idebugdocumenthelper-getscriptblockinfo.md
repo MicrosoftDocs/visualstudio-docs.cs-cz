@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::GetScriptBlockInfo | Dokumentace Microsoftu
+title: 'Idebugdocumenthelper –:: GetScriptBlockInfo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d1984cdc19beb883dd7ee82f58497b11a8d781b0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5a92aa00d7997ceccc583c88a070f6fbc7d4359d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62549712"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576089"
 ---
 # <a name="idebugdocumenthelpergetscriptblockinfo"></a>IDebugDocumentHelper::GetScriptBlockInfo
-Načte rozsah znaků a skriptovací stroj odpovídající blok skriptu.  
+Načte rozsah znaků a skriptovací modul odpovídající bloku skriptu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,26 +40,26 @@ HRESULT GetScriptBlockInfo(
   
 #### <a name="parameters"></a>Parametry  
  `dwSourceContext`  
- [in] Místní zdroje v bloku skriptu.  
+ pro Zdrojový kontext pro blok skriptu.  
   
  `ppasd`  
- [out] Skriptovací stroj pro daný blok skriptu.  
+ mimo Skriptovací modul pro tento blok skriptu.  
   
  `piCharPos`  
- [out] Umístění začátku bloku skriptu.  
+ mimo Umístění začátku bloku skriptu.  
   
  `cChars`  
- [out] Počet znaků v bloku skriptu.  
+ mimo Počet znaků v bloku skriptu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda načte řadu znaků a skriptovací stroj odpovídající blok skriptu.  
+ Tato metoda načte rozsah znaků a skriptovací modul odpovídající bloku skriptu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugDocumentHelper – rozhraní](../../winscript/reference/idebugdocumenthelper-interface.md)

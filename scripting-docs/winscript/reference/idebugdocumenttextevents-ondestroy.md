@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextEvents::onDestroy | Dokumentace Microsoftu
+title: 'Idebugdocumenttextevents –:: Destroy | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 137329e48f6cb36e36f0196fa226303468eec88a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fd8162a33e61af0aab23d7414a2283ec60480960
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946749"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572919"
 ---
 # <a name="idebugdocumenttexteventsondestroy"></a>IDebugDocumentTextEvents::onDestroy
-Označuje, že zdrojový dokument zlikvidování a již není platný.  
+Indikuje, že původní dokument byl zničen a již není platný.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,17 +34,17 @@ HRESULT onDestroy();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Tato metoda nemá žádné parametry.  
+ Tato metoda nepřijímá žádné parametry.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda označuje, že došlo ke zničení zdrojový dokument a již není platný.  
+ Tato metoda označuje, že původní dokument byl zničen a již není platný.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugDocumentTextEvents – rozhraní](../../winscript/reference/idebugdocumenttextevents-interface.md)

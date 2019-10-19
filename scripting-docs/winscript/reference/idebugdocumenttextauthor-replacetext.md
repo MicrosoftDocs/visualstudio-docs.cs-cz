@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextAuthor::ReplaceText | Dokumentace Microsoftu
+title: 'Idebugdocumenttextauthor –:: ReplaceText | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 920b6851f5fea42597be7ec5dcc55350024abea9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: beca5d0ce19a38346ef9b03e39169769c90ea008
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946762"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572045"
 ---
 # <a name="idebugdocumenttextauthorreplacetext"></a>IDebugDocumentTextAuthor::ReplaceText
 Nahradí text v dokumentu.  
@@ -39,23 +39,23 @@ HRESULT ReplaceText(
   
 #### <a name="parameters"></a>Parametry  
  `cCharacterPosition`  
- [in] Počáteční umístění rozsahu znaků pro nahrazení.  
+ pro Počáteční umístění rozsahu znaků, který má být nahrazen.  
   
  `cNumToReplace`  
- [in] Počet znaků k nahrazení.  
+ pro Počet znaků, které mají být nahrazeny.  
   
  `pcharText[]`  
- [in] Vyrovnávací paměť obsahující nové znaků k nahrazení původní znaky.  
+ pro Vyrovnávací paměť obsahující nové znaky, které nahradí staré znaky.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda nahradí text v dokumentu.  
+ Tato metoda nahrazuje text v dokumentu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugDocumentTextAuthor – rozhraní](../../winscript/reference/idebugdocumenttextauthor-interface.md)

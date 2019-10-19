@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugExtendedPropertyInfo::Skip | Dokumentace Microsoftu
+title: 'Ienumdebugextendedpropertyinfo –:: Skip | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 87913f15f8799be0ad3f6616eeea53a8a627e3d0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8e5c187f3484154a2758b67300c98d4cb9fc9023
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963452"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574230"
 ---
 # <a name="ienumdebugextendedpropertyinfoskip"></a>IEnumDebugExtendedPropertyInfo::Skip
-Vynechá zadaný počet `ExtendedDebugPropertyInfo` struktury v sekvenci výčtu.  
+Přeskočí zadaný počet `ExtendedDebugPropertyInfo` struktur v sekvenci výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,11 +37,11 @@ HRESULT Skip(
   
 #### <a name="parameters"></a>Parametry  
  `celt`  
- [in] Počet `ExtendedDebugPropertyInfo` struktury v pořadí výčtu pro přeskočení.  
+ pro Počet `ExtendedDebugPropertyInfo` struktur v sekvenci výčtu k přeskočení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Bude vracet platnou `HRESULT`, obvykle `S_OK`. Vrátí `S_FALSE` a nastaví aktuální ukazatel na prvek na konci výčtu, pokud `celt` je větší než počet elementů vlevo v enumerátor.  
+ Vrací platný `HRESULT`, obvykle `S_OK`. Vrátí `S_FALSE` a nastaví ukazatel na element Current elementu na konec výčtu, pokud je `celt` větší než počet prvků zbývajících v enumerátoru.  
   
-## <a name="see-also"></a>Viz také  
- [IEnumDebugExtendedPropertyInfo Interface](../../winscript/reference/ienumdebugextendedpropertyinfo-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní ienumdebugextendedpropertyinfo –](../../winscript/reference/ienumdebugextendedpropertyinfo-interface.md)  
  [ExtendedDebugPropertyInfo – struktura](../../winscript/reference/extendeddebugpropertyinfo-structure.md)

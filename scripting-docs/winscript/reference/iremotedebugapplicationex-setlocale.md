@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationEx:SetLocale | Dokumentace Microsoftu
+title: 'Iremotedebugapplicationex –: SetLocale | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 23bcbd089803c2a2c61af688ec58e289c9a77616
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2cc67e0ebd9ee2584985fa7d14073ba2694cbfa5
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788362"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575303"
 ---
 # <a name="iremotedebugapplicationexsetlocale"></a>IRemoteDebugApplicationEx:SetLocale
 Nastaví jazyk pro lokalizaci ladicího programu.  
@@ -37,16 +37,16 @@ HRESULT SetLocale(
   
 #### <a name="parameters"></a>Parametry  
  `dwLangID`  
- [in] ID jazyka.  
+ pro ID jazyka  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [ISetNextStatement – rozhraní](../../winscript/reference/isetnextstatement-interface.md)

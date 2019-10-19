@@ -1,5 +1,5 @@
 ---
-title: Byl očekáván identifikátor (JavaScript) | Dokumentace Microsoftu
+title: Byl očekáván identifikátor (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,19 +14,19 @@ ms.assetid: 92eaa97f-7084-4618-9608-768b51a0600b
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7e60975e8f356e749e5e32adb2e773526ab63141
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8555ddde52602f5761be40cfcc752abd12697deb
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934975"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577297"
 ---
 # <a name="expected-identifier-javascript"></a>Byl očekáván identifikátor (JavaScript)
-Můžete použít něco jiného než identifikátor v kontextu byl požadován. Identifikátor může být:  
+Použili jste něco jiného než identifikátor v kontextu, ve kterém byl nějaký povinný. Identifikátor může být:  
   
-- Proměnná  
+- Proměnná,  
   
-- Vlastnost  
+- vlastnost,  
   
 - pole,  
   
@@ -34,7 +34,7 @@ Můžete použít něco jiného než identifikátor v kontextu byl požadován. 
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Změňte výraz tak, že identifikátor se zobrazí nalevo od znaménka rovnosti.  
+- Změňte výraz tak, aby byl identifikátor zobrazen vlevo od znaménka rovná se.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Používání polí](../../javascript/advanced/using-arrays-javascript.md)

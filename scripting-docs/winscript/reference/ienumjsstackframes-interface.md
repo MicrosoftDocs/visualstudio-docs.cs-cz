@@ -1,5 +1,5 @@
 ---
-title: IEnumJsStackFrames Interface | Microsoft Docs
+title: Rozhraní IEnumJsStackFrames | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,15 +11,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2e8302737fb4abf96c55d3ae70424cc03579b270
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b4a635a802ae84b8e839159f5e2f1c4c461e05ae
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963322"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572026"
 ---
 # <a name="ienumjsstackframes-interface"></a>IEnumJsStackFrames – rozhraní
-Implementovaný ladicí program k poskytování zásobníku unwind pro modul jscript9diag.dll pro JavaScript.  
+Implementováno ladicím programem pro poskytnutí unwind zásobníku pro Jscript9diag. dll pro JavaScript.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -31,13 +31,13 @@ IEnumJsStackFrames : public IUnknown;
   
 ### <a name="public-methods"></a>Veřejné metody  
   
-|Název|Popis|  
+|Name|Popis|  
 |----------|-----------------|  
-|[IEnumJsStackFrames::Next – metoda](../../winscript/reference/ienumjsstackframes-next-method.md)|Získá určený počet snímků.|  
-|[IEnumJsStackFrames::Reset – metoda](../../winscript/reference/ienumjsstackframes-reset-method.md)|Obnoví rámec zásobníku do polohy před první prvek.|  
+|[IEnumJsStackFrames::Next – metoda](../../winscript/reference/ienumjsstackframes-next-method.md)|Získá zadaný počet snímků.|  
+|[IEnumJsStackFrames::Reset – metoda](../../winscript/reference/ienumjsstackframes-reset-method.md)|Obnoví rámec zásobníku na pozici před prvním prvkem.|  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace skriptovacích rozhraní systému Windows](../../winscript/reference/windows-script-interfaces-reference.md)

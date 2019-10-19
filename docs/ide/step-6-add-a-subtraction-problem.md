@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8acc67aa82bb0d7cf81cf6794bfdbb4e0c912ebe
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
-ms.translationtype: HT
+ms.openlocfilehash: 4789248a129bcd41452af1184418f9f59ede7595
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314242"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72562576"
 ---
 # <a name="step-6-add-a-subtraction-problem"></a>Krok 6: Přidání problému odčítání
 V šesté části tohoto kurzu přidáte problém odčítání a naučíte se, jak provádět následující úlohy:
@@ -76,7 +76,7 @@ V šesté části tohoto kurzu přidáte problém odčítání a naučíte se, j
      [!code-vb[VbExpressTutorial3Step5_6#14](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_4.vb)]
      [!code-csharp[VbExpressTutorial3Step5_6#14](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_4.cs)]
 
-     V jazyce C#Visual je `&&` operátorem `logical and`. V Visual Basic je ekvivalentní operátor `AndAlso`. Tyto operátory označují "Pokud součet hodnot addend1 a addend2 se rovná hodnotě součtu NumericUpDown a pokud je minuend mínus subtrahend rovna hodnotě rozdílu NumericUpDown." Metoda `CheckTheAnswer()` vrátí `true` pouze v případě, že odpovědi na problémy sčítání a odčítání jsou správné.
+     V C#je `&&` operátorem `logical and`. V Visual Basic je ekvivalentní operátor `AndAlso`. Tyto operátory označují "Pokud součet hodnot addend1 a addend2 se rovná hodnotě součtu NumericUpDown a pokud je minuend mínus subtrahend rovna hodnotě rozdílu NumericUpDown." Metoda `CheckTheAnswer()` vrátí `true` pouze v případě, že odpovědi na problémy sčítání a odčítání jsou správné.
 
 4. Poslední část obslužné rutiny události Tick časovače nahraďte následujícím kódem, aby vyplnila správnou odpověď, když vyprší čas.
 

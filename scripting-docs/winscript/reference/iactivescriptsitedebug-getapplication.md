@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteDebug::GetApplication | Dokumentace Microsoftu
+title: 'Iactivescriptsitedebug –:: getapplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 75560ead40809c77e4768f8318d754a512e5d7ba
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e2ad81e3b6b1707f5a23271cf0abe3832266c07f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992638"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570117"
 ---
 # <a name="iactivescriptsitedebuggetapplication"></a>IActiveScriptSiteDebug::GetApplication
-Vrátí objekt ladění aplikace související s touto lokalitou skriptu.  
+Vrátí objekt aplikace ladění přidružený k tomuto webu skriptu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,19 +37,19 @@ HRESULT GetApplication(
   
 #### <a name="parameters"></a>Parametry  
  `ppda`  
- [out] Ukazatel na objekt aplikace ladění přidružené k lokalitě skriptu.  
+ mimo Ukazatel na objekt ladění aplikace přidružený k webu skriptu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
-|`E_NOTIMPL`|Hostitel nepodporuje přímo ladění.|  
+|`E_NOTIMPL`|Hostitel přímo nepodporuje ladění.|  
   
 ## <a name="remarks"></a>Poznámky  
- `GetApplication` Metoda poskytuje způsob, jakým inteligentního hostitele k definování tohoto objektu aplikace, ke kterému patří každý skript. Skriptovací stroje má pokusit o volat tuto metodu za účelem získání jejich obsahující aplikace a uchýlíte k `IProcessDebugManager::GetDefaultApplication` Pokud se to nezdaří.  
+ Metoda `GetApplication` poskytuje inteligentnímu hostiteli způsob, jakým má definovat objekt aplikace, ke kterému každý skript patří. Skriptovací stroje by se měly pokusit zavolat tuto metodu a získat tak jejich obsahující aplikaci a využít `IProcessDebugManager::GetDefaultApplication`, pokud se to nepovede.  
   
-## <a name="see-also"></a>Viz také  
- [Iactivescriptsitedebug – rozhraní](../../winscript/reference/iactivescriptsitedebug-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iactivescriptsitedebug –](../../winscript/reference/iactivescriptsitedebug-interface.md)  
  [IProcessDebugManager::GetDefaultApplication](../../winscript/reference/iprocessdebugmanager-getdefaultapplication.md)

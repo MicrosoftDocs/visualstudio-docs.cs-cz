@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugdatatarget::readmemory – metoda | Dokumentace Microsoftu
+title: 'IJsDebugDataTarget:: readMemory – – metoda | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 705fff3bf2d4be78897c18c5a4c61bd74a8c2230
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 84da36433cf3546b34d3e044bb113916c9798117
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62582353"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572430"
 ---
 # <a name="ijsdebugdatatargetreadmemory-method"></a>IJsDebugDataTarget::ReadMemory – metoda
-Čtení paměti cílového procesu.  
+Přečte paměť cílového procesu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,27 +39,27 @@ HRESULT ReadMemory(
   
 #### <a name="parameters"></a>Parametry  
  `address`  
- [in] Základní adresa, ze které probíhá čtení paměti cílového procesu.  
+ pro Základní adresa, ze které má být načtena paměť cílového procesu.  
   
  `flags`  
- [in] Příznaky určující chování ReadMemory.  
+ pro Příznaky ovládající chování readMemory –.  
   
  `pBuffer`  
- [out] Vyrovnávací paměť, která obdrží obsah z adresního prostoru cílového procesu. Při selhání není obsah této vyrovnávací paměti.  
+ mimo Vyrovnávací paměť, která přijímá obsah z adresního prostoru cílového procesu. V případě chyby není obsah této vyrovnávací paměti určen.  
   
  `size`  
- [in] Počet bajtů ke čtení z procesu.  
+ pro Počet bajtů, které mají být z procesu čteny.  
   
  `pBytesRead`  
- [out] Určuje počet bajtů přečtených z cílového procesu. Pokud je jsdebugallowpartialread čisté, při úspěchu tato hodnota bude vždy přesně stejné jako vstupní velikost. Pokud je zadáno JsDebugAllowPartialRead, při úspěchu bude tato hodnota větší než nula.  
+ mimo Určuje počet přečtených bajtů z cílového procesu. Pokud je JsDebugAllowPartialRead jasné, je tato hodnota vždy přesně shodná se vstupní velikostí. Pokud je zadána hodnota JsDebugAllowPartialRead (po úspěchu), bude tato hodnota větší než nula.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="remarks"></a>Poznámky  
- Vrátí hodnotu S_OK při úspěchu a kódy selhání se používají pro všechny chyby. Vrátí E_JsDEBUG_INVALID_MEMORY_ADDRESS, pokud adresa není platná. Další informace naleznete v JsDebugAllowPartialRead.  
+ Vrátí hodnotu S_OK při úspěchu a kódy selhání se používají pro všechny chyby. Vrátí E_JsDEBUG_INVALID_MEMORY_ADDRESS, pokud adresa není platná. Další informace najdete v tématu JsDebugAllowPartialRead.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IJsDebugDataTarget – rozhraní](../../winscript/reference/ijsdebugdatatarget-interface.md)

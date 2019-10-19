@@ -1,5 +1,5 @@
 ---
-title: IApplicationDebugger::onDebugOutput | Dokumentace Microsoftu
+title: 'Iapplicationdebugger –:: onDebugOutput | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ffe4d56357a96dac8d5155ac2f8bd5182adef47e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5ebbb7fb9f69af2f0977434a29015d79e8cf9178
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991082"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577849"
 ---
 # <a name="iapplicationdebuggerondebugoutput"></a>IApplicationDebugger::onDebugOutput
-Zpracovává událost výstupu ladění.  
+Zpracovává výstupní událost ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,20 +37,20 @@ HRESULT onDebugOutput(
   
 #### <a name="parameters"></a>Parametry  
  `pstr`  
- [in] Řetězec k zobrazení v ladicím programu.  
+ pro Řetězec, který se má zobrazit v ladicím programu  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Ladicí program obvykle zobrazí `pstr` v okně výstup.  
+ Ladicí program obvykle zobrazuje `pstr` v okně výstupu.  
   
- Tato metoda je volána, když `IDebugApplication::DebugOutput` je volána.  
+ Tato metoda je volána, když je volána `IDebugApplication::DebugOutput`.  
   
-## <a name="see-also"></a>Viz také  
- [Iapplicationdebugger – rozhraní](../../winscript/reference/iapplicationdebugger-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iapplicationdebugger –](../../winscript/reference/iapplicationdebugger-interface.md)  
  [IDebugApplication::DebugOutput](../../winscript/reference/idebugapplication-debugoutput.md)

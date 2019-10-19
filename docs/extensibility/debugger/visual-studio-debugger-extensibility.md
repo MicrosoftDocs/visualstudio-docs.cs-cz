@@ -1,5 +1,5 @@
 ---
-title: Rozšiřitelnost ladicího programu sady Visual Studio | Dokumentace Microsoftu
+title: Rozšiřitelnost ladicího programu sady Visual Studio | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,33 +11,33 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4184ae40a91e05b1110aed8d3e9b9c9edc64a06d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9f8a1c2148f25a1e97cfd1369770e056d1cb907d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321481"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72568965"
 ---
-# <a name="visual-studio-debugger-extensibility"></a>Rozšiřitelnost ladicího programu Visual Studio
-Visual Studio obsahuje ladicí program kód plně interaktivní zdroje, poskytuje efektivní a snadno použitelné nástroje pro sledování chyby v kódu ve svém programu. Ladicí program má úplnou podporu jazyka Visual Basic, C#, C/C++ a JavaScript. Nicméně s [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)], která je k dispozici [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=214453), jiných programovacích jazycích může být podporovaný v ladicím programu pomocí stejné bohaté funkce.
+# <a name="visual-studio-debugger-extensibility"></a>Rozšiřitelnost ladicího programu sady Visual Studio
+Visual Studio obsahuje plně interaktivní ladicí program zdrojového kódu, který poskytuje výkonný a snadno použitelný nástroj pro sledování chyb v programu. Ladicí program dokončí podporu Visual Basic, C#, C/C++a JavaScriptu. Avšak s [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)], který je k dispozici na webu [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=214453), mohou být v ladicím programu podporovány jiné programovací jazyky se stejnými funkcemi.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Ladicí program pro ladění součásti, které se následně specifické pro jazyk, který se právě ladí běžné front-endu (to znamená, uživatelského rozhraní). Pro nové jazyky, všechny, které je nezbytné pro podporu podle [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladicí program je vytvoření potřebné komponenty back-end, jako je například ladicí stroj (DE). Tento bod je tam, kde [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] je k dispozici ve.
+ @No__t_0 ladicí program je běžné front-end (tj. uživatelské rozhraní) k ladicím komponentám, které jsou v tuto chvíli specifické pro laděný jazyk. Pro nové jazyky, které jsou nezbytné pro podporu ladicího programu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], je vytvoření nezbytných back-endové komponenty, jako je například ladicí stroj (DE). Tady je místo, kde [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] přichází.
 
- [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] Zahrnuje úplný odkaz na všechny [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prvky potřebný k vytvoření nové DE. Kromě toho existují ukázek a kurzů, které vám pomůžou vám pomůžou začít.
+ @No__t_0 obsahuje kompletní odkaz na všechny [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prvky, které jsou nutné k vytvoření nového elementu DE. K dispozici jsou také ukázky a kurzy, které vám pomůžou začít.
 
- Úplnou ukázku systému projektu jazyka s podporu ladění, najdete v článku [IronPython ukázka](https://www.microsoft.com/download/details.aspx?id=55984).
+ Kompletní vzorek jazykového projektového systému s podporou ladění najdete v [ukázce ironpythonu](https://www.microsoft.com/download/details.aspx?id=55984).
 
- Následující části popisují, jak rozšířit pomocí ladicího programu [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)].
+ Následující části popisují, jak tento ladicí program rozšíříte pomocí [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)].
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Začínáme](../../extensibility/debugger/getting-started-with-debugger-extensibility.md) popisuje, co [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění nabídky a způsobu jejich instalace sady SDK.
+ [Začínáme](../../extensibility/debugger/getting-started-with-debugger-extensibility.md) Popisuje, co [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nabídky ladění a jak nainstalovat sadu SDK.
 
- [Vytvoření vlastního ladicího stroje](../../extensibility/debugger/creating-a-custom-debug-engine.md) dokumenty vlastní proces DE od přípravy programu pro Německo do odpojení DE.
+ [Vytvoření vlastního ladicího stroje](../../extensibility/debugger/creating-a-custom-debug-engine.md) Dokumentuje vlastní DE Process, od přípravy programu až po odpojení od DE.
 
- [Zápis vyhodnocovací filtr výrazů CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md) vysvětluje, zda je nutné napsat vyhodnocovače výrazů.
+ [Zápis vyhodnocovacího filtru výrazů CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md) Vysvětluje, zda je nutné napsat vyhodnocovací filtr výrazů.
 
- [Volba strategie implementace modulu ladění](../../extensibility/debugger/choosing-a-debug-engine-implementation-strategy.md) popisuje, jak implementovat vaše DE.
+ [Zvolit strategii implementace ladicího modulu](../../extensibility/debugger/choosing-a-debug-engine-implementation-strategy.md) Popisuje, jak implementovat správce DE.
 
- [Referenční dokumentace](../../extensibility/debugger/reference/reference-visual-studio-debugging-apis.md) dokumenty [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění v rozhraní API.
+ [Referenční informace](../../extensibility/debugger/reference/reference-visual-studio-debugging-apis.md) Dokumentuje rozhraní API pro [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění.
 
- [Ukázky](../../extensibility/debugger/visual-studio-debugging-samples.md) obsahuje odkazy na ukázky Chyba při vyhodnocování výrazu modulu runtime běžné jazyka a ukázku ladicí stroj.
+ [Ukázky](../../extensibility/debugger/visual-studio-debugging-samples.md) Obsahuje odkazy na ukázku vyhodnocení výrazu společného jazykového modulu runtime a ukázku ladicího stroje.

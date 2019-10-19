@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::Close | Dokumentace Microsoftu
+title: 'IActiveScript:: Close | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 53b71471ada55751de301391fdcc70387c1bb6c2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f858de42ef2948d218aac6c3194cc6af544da5e9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935676"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575784"
 ---
 # <a name="iactivescriptclose"></a>IActiveScript::Close
-Způsobí, že skriptovací stroj opustit všechny aktuálně načtené skriptu, přijít o jejím stavu a uvolnit všechny ukazatele rozhraní, které je jiné objekty, tedy zadáte uzavřeného stavu. Jímky událostí, text ihned prováděnou skriptu a vyvoláním makra, které jsou již probíhá jsou dokončeny před změny stavu (použijte [IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md) zrušit spuštěné vlákno skriptu). Tato metoda musí být volána vytváření hostitele před rozhraní je všeobecně dostupné, aby se zabránilo problémům cyklický odkaz.  
+Způsobí, že skriptovací modul opustí libovolný aktuálně načtený skript, ztratí jeho stav a uvolní všechny ukazatele rozhraní, které má, a to tak, aby vstoupily do zavřeného stavu. Jímka událostí, ihned spouštěný text skriptu a vyvolání makra, která již probíhá, jsou dokončeny před změnou stavu (pomocí [IActiveScript:: InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md) zrušení spuštěného vlákna skriptu). Tuto metodu musí volat vytvořením hostitele předtím, než se uvolní rozhraní, aby se předešlo problémům s cyklickými odkazy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,12 +36,12 @@ HRESULT Close(void);
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
-|Value|Význam|  
+|Hodnota|Význam|  
 |-----------|-------------|  
-|`S_OK`|Úspěch.|  
-|`E_UNEXPECTED`|Volání nebylo očekáváno (například skriptovací stroj už je v uzavřeném stavu).|  
-|`OLESCRIPT_S_PENDING`|Metoda byla úspěšně ve frontě, ale ještě nebyl změněn stav. Když změny stavu webu je volat zpět na [IActiveScriptSite::OnStateChange](../../winscript/reference/iactivescriptsite-onstatechange.md) metody.|  
-|`S_FALSE`|Metoda byla úspěšná, ale tento skript byl již uzavřen.|  
+|`S_OK`|Nástup.|  
+|`E_UNEXPECTED`|Volání nebylo očekáváno (například skriptovací stroj byl již v zavřeném stavu).|  
+|`OLESCRIPT_S_PENDING`|Metoda byla úspěšně zařazena do fronty, ale stav ještě nebyl změněn. V případě změny stavu bude lokalita volána zpět v metodě [IActiveScriptSite:: OnStateChange](../../winscript/reference/iactivescriptsite-onstatechange.md) .|  
+|`S_FALSE`|Metoda byla úspěšná, ale skript už je uzavřený.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScript](../../winscript/reference/iactivescript.md)

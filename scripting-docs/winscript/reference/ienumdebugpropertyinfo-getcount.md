@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugPropertyInfo::GetCount | Dokumentace Microsoftu
+title: 'Ienumdebugpropertyinfo –:: GetCount | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 06ed69926b47d8c40c3914acbd2b0208e55f709a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fea4872761dbc67a297400dba77f660ae2e3076b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963439"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574210"
 ---
 # <a name="ienumdebugpropertyinfogetcount"></a>IEnumDebugPropertyInfo::GetCount
-Získá počet `DebugPropertyInfo` struktury v enumerátor.  
+Získá počet `DebugPropertyInfo` struktur v enumerátoru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,11 +37,11 @@ HRESULT GetCount (
   
 #### <a name="parameters"></a>Parametry  
  `pcelt`  
- [out] Vrátí počet `DebugPropertyInfo` struktury v enumerátor.  
+ mimo Vrátí počet `DebugPropertyInfo` struktur v enumerátoru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Bude vracet platnou `HRESULT`, obvykle `S_OK`.  
+ Vrací platný `HRESULT`, obvykle `S_OK`.  
   
-## <a name="see-also"></a>Viz také  
- [IEnumDebugPropertyInfo Interface](../../winscript/reference/ienumdebugpropertyinfo-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní ienumdebugpropertyinfo –](../../winscript/reference/ienumdebugpropertyinfo-interface.md)  
  [DebugPropertyInfo – struktura](../../winscript/reference/debugpropertyinfo-structure.md)

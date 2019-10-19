@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText::GetText | Dokumentace Microsoftu
+title: 'IDebugDocumentText –:: GetText | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 63e1fee3531272f18c85c23ea83b8ca12920bd2a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e6472c40802fff4dad6e5ecc8f2729c95459e09f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970858"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572079"
 ---
 # <a name="idebugdocumenttextgettext"></a>IDebugDocumentText::GetText
-Načte znaky a/nebo znak atributy přidružené k pozici znaku rozsahu.  
+Načte znaky nebo atributy znaků přidružené k rozsahu pozice znaků.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,30 +41,30 @@ HRESULT GetText(
   
 #### <a name="parameters"></a>Parametry  
  `cCharacterPosition`  
- [in] Počáteční umístění pozice rozsahu znaků.  
+ pro Počáteční umístění rozsahu pozice znaku  
   
  `pcharText`  
- [out v] Vyrovnávací paměť textu znak. Vyrovnávací paměť musí být dostatečně velký pro uložení `cMaxChars` znaků. Pokud má parametr hodnotu NULL, metoda nevrátí znaků.  
+ [in, out] Znaková vyrovnávací paměť textu. Velikost vyrovnávací paměti musí být dostatečně velká, aby mohla pojmout `cMaxChars`é znaky. Pokud má tento parametr hodnotu NULL, metoda nevrátí znaky.  
   
  `pstaTextAttr`  
- [out v] Vyrovnávací paměť znak atributu. Vyrovnávací paměť musí být dostatečně velký pro uložení `cMaxChars` znaků. Pokud má parametr hodnotu NULL, metoda nevrátí atributy.  
+ [in, out] Vyrovnávací paměť atributu znaku. Velikost vyrovnávací paměti musí být dostatečně velká, aby mohla pojmout `cMaxChars`é znaky. Pokud má tento parametr hodnotu NULL, metoda nevrátí atributy.  
   
  `pcNumChars`  
- [out v] Vrátí počet znaků nebo atributy. Tento parametr musí být nastaven na hodnotu nula před voláním této metody.  
+ [in, out] Počet vrácených znaků nebo atributů. Před voláním této metody musí být tento parametr nastaven na hodnotu nula.  
   
  `cMaxChars`  
- [in] Počet znaků v rozsahu znaků pozici. Také určuje maximální počet znaků k vrácení.  
+ pro Počet znaků v rozsahu pozice znaku. Určuje také maximální počet znaků, které se mají vrátit.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda načte znaky a/nebo znak atributy přidružené k pozici znaku rozsahu. Umístění rozsahu znaků je určené pozici znaku a počet znaků.  
+ Tato metoda načte znaky nebo atributy znaků přidružené k rozsahu pozice znaků. Rozsah pozice znaku je určen znakovou polohou a počtem znaků.  
   
-## <a name="see-also"></a>Viz také  
- [IDebugDocumentText Interface](../../winscript/reference/idebugdocumenttext-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní IDebugDocumentText –](../../winscript/reference/idebugdocumenttext-interface.md)  
  [SOURCE_TEXT_ATTR – výčet](../../winscript/reference/source-text-attr-enumeration.md)

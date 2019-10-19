@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::HandleRuntimeError | Dokumentace Microsoftu
+title: 'IDebugApplication –:: HandleRuntimeError | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c2c9a8b15b5095ac346ba047d6668aada7647a31
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 2fd4ba2b811cd6c4e38c10a0c68c5808f2c0870a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63412437"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574323"
 ---
 # <a name="idebugapplicationhandleruntimeerror"></a>IDebugApplication::HandleRuntimeError
-Způsobí, že chcete blokovat aktuální vlákno a odešle oznámení o chybě integrovaného vývojového prostředí v ladicím programu.  
+Způsobí, že aktuální vlákno zablokuje a pošle oznámení o chybě do integrovaného vývojového prostředí (IDE) ladicího programu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,36 +41,36 @@ HRESULT HandleRuntimeError(
   
 #### <a name="parameters"></a>Parametry  
  `pErrorDebug`  
- [in] Chyba, ke které došlo.  
+ pro Chyba, ke které došlo.  
   
  `pScriptSite`  
- [in] Skript lokality vlákna.  
+ pro Skriptovací lokalita vlákna.  
   
  `pbra`  
- [out] Akce se má provést, když ladicí program pokračuje v aplikaci.  
+ mimo Akce, která se má provést, když ladicí program obnoví aplikaci.  
   
  `perra`  
- [out] Akce se má provést, když ladicí program pokračuje aplikace, pokud dojde k chybě.  
+ mimo Akce, která se má provést, když ladicí program obnoví aplikaci, pokud dojde k chybě.  
   
  `pfCallOnScriptError`  
- [out] Příznak, který je `TRUE` Pokud modul by měly volat `IActiveScriptSite::OnScriptError` metody.  
+ mimo Příznak, který je `TRUE`, pokud má modul zavolat metodu `IActiveScriptSite::OnScriptError`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Modul jazyka volá tuto metodu v kontextu vlákna, které způsobí chybu za běhu. Tato metoda způsobí, že chcete blokovat aktuální vlákno a odešle oznámení o chybě k odeslání do ladicího programu integrovaného vývojového prostředí. Když ladicí program IDE obnoví aplikace, vrátí tato metoda s akcí, jež mají být provedeny.  
+ Jazykový modul volá tuto metodu v kontextu vlákna, které způsobuje chybu za běhu. Tato metoda způsobí, že aktuální vlákno zablokuje a pošle oznámení o chybách k odeslání do rozhraní IDE ladicího programu. Když rozhraní IDE ladicího programu obnoví aplikaci, vrátí tato metoda s akcí, která má být provedena.  
   
 > [!NOTE]
-> Při selhání za běhu může být volána modul jazyka ve vláknu provádět tyto úkoly, jako výčet rámců zásobníku nebo vyhodnocení výrazů.  
+> V běhové chybě může být modul jazyka volán vláknem k provádění úkolů, jako je například zobrazení výčtu rámců zásobníku nebo vyhodnocení výrazů.  
   
-## <a name="see-also"></a>Viz také  
- [Idebugapplication – rozhraní](../../winscript/reference/idebugapplication-interface.md)   
- [Iactivescripterrordebug – rozhraní](../../winscript/reference/iactivescripterrordebug-interface.md)   
- [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)   
- [Breakresumeaction – výčet](../../winscript/reference/breakresumeaction-enumeration.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní IDebugApplication –](../../winscript/reference/idebugapplication-interface.md)  
+ @No__t_1 [rozhraní IActiveScriptErrorDebug –](../../winscript/reference/iactivescripterrordebug-interface.md)  
+ [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)    
+ @No__t_1 [výčtu breakresumeaction –](../../winscript/reference/breakresumeaction-enumeration.md)  
  [ERRORRESUMEACTION – výčet](../../winscript/reference/errorresumeaction-enumeration.md)

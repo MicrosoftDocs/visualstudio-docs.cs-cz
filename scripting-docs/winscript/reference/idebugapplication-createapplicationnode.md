@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::CreateApplicationNode | Dokumentace Microsoftu
+title: 'IDebugApplication –:: CreateApplicationNode | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 02a15a67d8f8b6171e9f5893c7f8cd15f79776b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 13e94a561ca78781167843124a86febb3ef13da2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991022"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573169"
 ---
 # <a name="idebugapplicationcreateapplicationnode"></a>IDebugApplication::CreateApplicationNode
-Vytvoří nový uzel aplikace, která souvisí s určitým dokumentem zprostředkovatele.  
+Vytvoří nový uzel aplikace, který je přidružený ke konkrétnímu poskytovateli dokumentů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +37,17 @@ HRESULT CreateApplicationNode(
   
 #### <a name="parameters"></a>Parametry  
  `ppdanNew`  
- [out] Uzel aplikace spojená s tímto poskytovatelem dokumentu.  
+ mimo Uzel aplikace přidružený k tomuto poskytovateli dokumentů  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Nový uzel aplikace se nezobrazí, dokud je připojen k nadřazený uzel.  
+ Nový uzel aplikace není viditelný, dokud není připojen k nadřazenému uzlu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugApplication – rozhraní](../../winscript/reference/idebugapplication-interface.md)

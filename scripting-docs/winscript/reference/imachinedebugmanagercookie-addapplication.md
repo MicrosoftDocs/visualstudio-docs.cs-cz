@@ -1,5 +1,5 @@
 ---
-title: IMachineDebugManagerCookie::AddApplication | Dokumentace Microsoftu
+title: 'Imachinedebugmanagercookie –:: AddApplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c71983dd5f1273679351bc45c1db2df62757d153
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: da436308c71a66d3070d42128d8da03ae88d2935
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977653"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573915"
 ---
 # <a name="imachinedebugmanagercookieaddapplication"></a>IMachineDebugManagerCookie::AddApplication
-Přidá aplikaci do běhu seznamu aplikací.  
+Přidá aplikaci do seznamu běžící aplikace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,25 +39,25 @@ HRESULT AddApplication(
   
 #### <a name="parameters"></a>Parametry  
  `pda`  
- [in] Aplikace s běžící seznam aplikací.  
+ pro Aplikace do seznamu běžící aplikace  
   
  `dwDebugAppCookie`  
- [in] Soubor cookie, který identifikuje ladění aplikace.  
+ pro Soubor cookie, který identifikuje ladicí aplikaci.  
   
  `pdwAppCookie`  
- [out] Soubor cookie, který slouží k odebrání počítače správce ladění aplikace.  
+ mimo Soubor cookie, který se používá k odebrání aplikace ze Správce ladění počítače.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je volána metodou správce ladění procesu pokaždé, když `IProcessDebugManager::AddApplication` je volána.  
+ Tato metoda je volána správcem ladění procesu vždy, když je volána `IProcessDebugManager::AddApplication`.  
   
-## <a name="see-also"></a>Viz také  
- [IMachineDebugManagerCookie Interface](../../winscript/reference/imachinedebugmanagercookie-interface.md)   
- [IMachineDebugManagerCookie::RemoveApplication](../../winscript/reference/imachinedebugmanagercookie-removeapplication.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní imachinedebugmanagercookie –](../../winscript/reference/imachinedebugmanagercookie-interface.md)  
+ [Imachinedebugmanagercookie –:: RemoveApplication](../../winscript/reference/imachinedebugmanagercookie-removeapplication.md)    
  [IProcessDebugManager::AddApplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)

@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugstackwalker – rozhraní | Dokumentace Microsoftu
+title: Rozhraní IJsDebugStackWalker | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,15 +11,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d06af2c509339d9499f66e1f267c54c69951e225
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3b06b8c1f9282c42599c798030440c30450ef6dd
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977809"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574018"
 ---
 # <a name="ijsdebugstackwalker-interface"></a>IJsDebugStackWalker – rozhraní
-Představuje zásobník pro zadaný podproces.  
+Představuje prohlížeč zásobníku pro zadané vlákno.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -31,15 +31,15 @@ IJsDebugStackWalker : public IUnknown;
   
 ### <a name="public-methods"></a>Veřejné metody  
   
-|Název|Popis|  
+|Name|Popis|  
 |----------|-----------------|  
 |[IJsDebugStackWalker::GetNext – metoda](../../winscript/reference/ijsdebugstackwalker-getnext-method.md)|Získá další snímek.|  
   
 ## <a name="remarks"></a>Poznámky  
- Zásobníky lze vytvořit pouze zatímco je cíl zastaven a jsou neplatné, jakmile opět pokračujete cílovém procesu.  
+ Průvodce zásobníky lze vytvořit pouze v případě, že cíl je zastaven a jsou po opětovném pokračování cílového procesu neplatné.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace skriptovacích rozhraní systému Windows](../../winscript/reference/windows-script-interfaces-reference.md)

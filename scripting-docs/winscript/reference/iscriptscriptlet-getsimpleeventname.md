@@ -1,5 +1,5 @@
 ---
-title: 'IScriptScriptlet:: GetSimpleEventName | Dokumentace Microsoftu'
+title: 'Iscriptscriptlet –:: GetSimpleEventName | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e767c260dcdda2d92a7d90f7fd12af6918ac16d4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 51b8d3b31c92006c4f5b91a874bbb9d66ffa0b1b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786886"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72561507"
 ---
 # <a name="iscriptscriptlet-getsimpleeventname"></a>IScriptScriptlet:: GetSimpleEventName
-Vrátí název jednoduché události, která souvisí s skriptletu. Toto je název jednoho slova, který neobsahuje žádné prázdné znaky.  
+Vrátí jednoduchý název události, který je přidružen k skriptletu. Jedná se o název jednoho slova, který neobsahuje žádné prázdné znaky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,16 +37,16 @@ HRESULT GetSimpleEventName(
   
 #### <a name="parameters"></a>Parametry  
  `pbstr`  
- [out] Vyrovnávací paměť, která obsahuje název jednoduché události, který je přidružen `IScriptScriptlet` objektu.  
+ mimo Vyrovnávací paměť obsahující jednoduchý název události, který je spojen s objektem `IScriptScriptlet`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IScriptScriptlet – rozhraní](../../winscript/reference/iscriptscriptlet-interface.md)

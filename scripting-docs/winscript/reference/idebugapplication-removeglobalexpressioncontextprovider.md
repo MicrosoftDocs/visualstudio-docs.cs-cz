@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::RemoveGlobalExpressionContextProvider | Microsoft Docs
+title: 'IDebugApplication –:: RemoveGlobalExpressionContextProvider | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 12ac95ee040d3813aa1fcac6358b8328c780a9d4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b4b948cea02d696b6c176e925adf9c95913be2cd
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990794"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571137"
 ---
 # <a name="idebugapplicationremoveglobalexpressioncontextprovider"></a>IDebugApplication::RemoveGlobalExpressionContextProvider
-Poskytovatel kontextu globální výraz odebere z této aplikace.  
+Odebere zprostředkovatele kontextu globálního výrazu z této aplikace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,18 +37,18 @@ HRESULT RemoveGlobalExpressionContextProvider(
   
 #### <a name="parameters"></a>Parametry  
  `dwCookie`  
- [in] Soubor cookie vrácený `AddGlobalExpressionContextProvider` metoda při přidání poskytovatele globální kontext.  
+ pro Soubor cookie vrácený metodou `AddGlobalExpressionContextProvider` při přidání zprostředkovatele globálního kontextu  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- `RemoveGlobalExpressionContextProvider` Metoda odstraní zprostředkovatele kontextu globálním výrazu z této aplikace.  
+ Metoda `RemoveGlobalExpressionContextProvider` odebere z této aplikace zprostředkovatele kontextu globálního výrazu.  
   
-## <a name="see-also"></a>Viz také  
- [IDebugApplication::AddGlobalExpressionContextProvider](../../winscript/reference/idebugapplication-addglobalexpressioncontextprovider.md)   
+## <a name="see-also"></a>Viz také:  
+ [IDebugApplication –:: AddGlobalExpressionContextProvider](../../winscript/reference/idebugapplication-addglobalexpressioncontextprovider.md)    
  [IDebugApplication – rozhraní](../../winscript/reference/idebugapplication-interface.md)

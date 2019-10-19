@@ -1,5 +1,5 @@
 ---
-title: Profiler_script_type – výčet | Dokumentace Microsoftu
+title: Výčet PROFILER_SCRIPT_TYPE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,14 +15,14 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ca90a566db422d75fefc44267ffe10504bb872ce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e08583f9bb914adfbd144715646991c6070f3f32
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62816782"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574575"
 ---
-# <a name="profilerscripttype-enumeration"></a>PROFILER_SCRIPT_TYPE – výčet
+# <a name="profiler_script_type-enumeration"></a>PROFILER_SCRIPT_TYPE – výčet
 Určuje typ skriptu.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -40,13 +40,13 @@ typedef enum {
   
 |Člen|Popis|  
 |------------|-----------------|  
-|PROFILER_SCRIPT_TYPE_USER|Určuje skript uživatelem zapsaný kód.|  
-|PROFILER_SCRIPT_TYPE_DYNAMIC|Určuje kód skriptu, který se vygeneruje dynamicky za běhu.|  
-|PROFILER_SCRIPT_TYPE_NATIVE|Určuje typ skriptu pro nativní funkce a objekty, které jsou definovány skriptovací stroj.|  
-|PROFILER_SCRIPT_TYPE_DOM|Určuje volání do Document Object Model (DOM) aplikace Internet Explorer, například volání `document.getElementById` metody.|  
+|PROFILER_SCRIPT_TYPE_USER|Určuje uživatelsky psaný kód skriptu.|  
+|PROFILER_SCRIPT_TYPE_DYNAMIC|Určuje kód skriptu, který je generován dynamicky během provádění.|  
+|PROFILER_SCRIPT_TYPE_NATIVE|Určuje typ skriptu pro nativní funkce a objekty, které jsou definovány skriptovacím modulem.|  
+|PROFILER_SCRIPT_TYPE_DOM|Určuje volání do model DOM (Document Object Model) (DOM) aplikace Internet Explorer, například volání metody `document.getElementById`.|  
   
-## <a name="see-also"></a>Viz také  
- [Aktivních skriptů Profiler konstanty, výčty a struktury](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)   
- [IActiveScriptProfilerCallback::ScriptCompiled](../../winscript/reference/iactivescriptprofilercallback-scriptcompiled.md)   
- [IActiveScriptProfilerCallback2::OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md)   
+## <a name="see-also"></a>Viz také:  
+ [Konstanty, výčty a struktury profileru aktivních skriptů](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)    
+ [Iactivescriptprofilercallback –:: ScriptCompiled](../../winscript/reference/iactivescriptprofilercallback-scriptcompiled.md)    
+ [Iactivescriptprofilercallback2 –:: OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md)    
  [IActiveScriptProfilerCallback2::OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)

@@ -1,5 +1,5 @@
 ---
-title: Iactivescriptprofilercontrol – rozhraní | Dokumentace Microsoftu
+title: Rozhraní IActiveScriptProfilerControl | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,23 +11,23 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 86f4fb8dea97930f717800a14a27740b76eb6c2e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ef127e3a4463d112b9ea424702fb2650c80cce7d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993056"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571596"
 ---
 # <a name="iactivescriptprofilercontrol-interface"></a>IActiveScriptProfilerControl – rozhraní
-Implementované skriptovací stroj, který podporuje vytváření profilů. Obvykle, objekt, který implementuje `IActiveScriptProfilerControl` také implementuje [IActiveScript –](../../winscript/reference/iactivescript.md) rozhraní. V takovém případě můžete získat popisovač `IActiveScriptProfilerControl` rozhraní voláním `IUnknown::QueryInterface` metodu na objekt. Rozhraní obsahuje potřebné metody pro spouštění a zastavování profilace na skriptovacím stroji.  
+Implementuje skriptovací modul, který podporuje profilování. Obvykle objekt, který implementuje `IActiveScriptProfilerControl`, implementuje také rozhraní [IActiveScript](../../winscript/reference/iactivescript.md) . V tomto případě můžete získat popisovač rozhraní `IActiveScriptProfilerControl` voláním metody `IUnknown::QueryInterface` objektu. Rozhraní poskytuje nezbytné metody pro zastavení a spuštění profilování v skriptovacím stroji.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[IActiveScriptProfilerControl::StartProfiling](../../winscript/reference/iactivescriptprofilercontrol-startprofiling.md)|Spustí profilaci na skriptovacím stroji.|  
-|[IActiveScriptProfilerControl::SetProfilerEventMask](../../winscript/reference/iactivescriptprofilercontrol-setprofilereventmask.md)|Profiler nastaví masky události v skriptovací stroj.|  
-|[IActiveScriptProfilerControl::StopProfiling](../../winscript/reference/iactivescriptprofilercontrol-stopprofiling.md)|Zastaví profilaci na skriptovacím stroji.|  
+|[IActiveScriptProfilerControl::StartProfiling](../../winscript/reference/iactivescriptprofilercontrol-startprofiling.md)|Spustí profilování v skriptovacím stroji.|  
+|[IActiveScriptProfilerControl::SetProfilerEventMask](../../winscript/reference/iactivescriptprofilercontrol-setprofilereventmask.md)|Nastaví masku události profileru v skriptovacím stroji.|  
+|[IActiveScriptProfilerControl::StopProfiling](../../winscript/reference/iactivescriptprofilercontrol-stopprofiling.md)|Zastaví profilování v skriptovacím stroji.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Rozhraní profileru aktivních skriptů](../../winscript/reference/active-script-profiler-interfaces.md)

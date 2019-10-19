@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::Close | Dokumentace Microsoftu
+title: 'IDebugApplication –:: Close | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8d93262e5875d5b51f7cf306409609671e8157cc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0445e9aed990da684efac6675e05183fd939973f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991042"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575579"
 ---
 # <a name="idebugapplicationclose"></a>IDebugApplication::Close
-Způsobí, že tato aplikace uvolnit všechny odkazy a zadejte neaktivním stavu.  
+Způsobí, že tato aplikace uvolní všechny odkazy a vstoupí do neaktivního stavu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,20 +34,20 @@ HRESULT Close();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Tato metoda nemá žádné parametry.  
+ Tato metoda nepřijímá žádné parametry.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Obvykle vlastník aplikace volá tuto metodu při ukončení aplikace.  
+ Obvykle vlastník aplikace volá tuto metodu, když dojde k ukončení aplikace.  
   
- Tato metoda způsobí, že `IApplicationDebugger::onClose` volat.  
+ Tato metoda způsobí, že `IApplicationDebugger::onClose` být volána.  
   
-## <a name="see-also"></a>Viz také  
- [Idebugapplication – rozhraní](../../winscript/reference/idebugapplication-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní IDebugApplication –](../../winscript/reference/idebugapplication-interface.md)  
  [IApplicationDebugger::onClose](../../winscript/reference/iapplicationdebugger-onclose.md)

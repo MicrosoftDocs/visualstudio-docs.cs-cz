@@ -1,5 +1,5 @@
 ---
-title: Source_text_attr – výčet | Dokumentace Microsoftu
+title: Výčet SOURCE_TEXT_ATTR | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,14 +13,14 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f34121ca50ae2467addb29809e7a3792063642ec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1dd0bbf08b6ddfdcfbffa494fdda9842004839b0
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840119"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573001"
 ---
-# <a name="sourcetextattr-enumeration"></a>SOURCE_TEXT_ATTR – výčet
+# <a name="source_text_attr-enumeration"></a>SOURCE_TEXT_ATTR – výčet
 Popisují atributy jednoho znaku zdrojového textu.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -31,24 +31,24 @@ enum enum_SOURCE_TEXT_ATTR{    SOURCETEXT_ATTR_KEYWORD    = 0x0001,    SOURCETEX
   
 ## <a name="members"></a>Členové  
   
-|Člen|Value|Popis|  
+|Člen|Hodnota|Popis|  
 |------------|-----------|-----------------|  
-|SOURCETEXT_ATTR_KEYWORD|0x0001|Znak, který je součástí klíčové slovo jazyka, například klíčové slovo jazyka VBScript `While`.|  
-|SOURCETEXT_ATTR_COMMENT|0x0002|Znak, který je součástí blok komentáře.|  
-|SOURCETEXT_ATTR_NONSOURCE|0x0004|Znak, který není součástí kompilované jazyk zdrojového textu. Například HTML okolní blok skriptu.|  
-|SOURCETEXT_ATTR_OPERATOR|0x0008|Znak, který je součástí operátor jazyka. Příklad:, aritmetický operátor **+**.|  
-|SOURCETEXT_ATTR_NUMBER|0x0010|Znak, který je součástí číselnou konstantu jazyka.  Například konstanty 3,14159.|  
-|SOURCETEXT_ATTR_STRING|0x0020|Znak, který je součástí jazyka řetězcová konstanta. Například řetězec "Hello World".|  
-|SOURCETEXT_ATTR_FUNCTION_START|0x0040|Znak, který označuje začátek bloku funkce|  
+|SOURCETEXT_ATTR_KEYWORD|0x0001|Znak je součástí klíčového slova jazyka, například klíčové slovo jazyka VBScript `While`.|  
+|SOURCETEXT_ATTR_COMMENT|0x0002|Znak je součástí bloku komentáře.|  
+|SOURCETEXT_ATTR_NONSOURCE|0x0004|Znak není součástí zdrojového textu zkompilovaného jazyka. Například HTML obklopující blok skriptu.|  
+|SOURCETEXT_ATTR_OPERATOR|0x0008|Znak je součástí operátoru jazyka. Například:, aritmetický operátor **+** .|  
+|SOURCETEXT_ATTR_NUMBER|0x0010|Znak je součástí číselné konstanty jazyka.  Například konstanta 3,14159.|  
+|SOURCETEXT_ATTR_STRING|0x0020|Znak je součástí konstanty řetězce jazyka. Například řetězec "Hello World".|  
+|SOURCETEXT_ATTR_FUNCTION_START|0x0040|Znak označuje začátek bloku funkce.|  
   
 ## <a name="remarks"></a>Poznámky  
- Obvykle `IDebugDocumentHost::GetScriptTextAttributes`, `IActiveScriptDebug::GetScriptletTextAttributes`, a `IActiveScriptDebug::GetScriptTextAttributes` metody vrátí jeden atribut text na znak, pokud:  
+ Metody `IDebugDocumentHost::GetScriptTextAttributes`, `IActiveScriptDebug::GetScriptletTextAttributes` a `IActiveScriptDebug::GetScriptTextAttributes` obvykle vrací jeden textový atribut na znak, pokud:  
   
-- Je nastavený příznak GETATTRTYPE_DEPSCAN, v takovém případě může metoda vrátit příznaky SOURCETEXT_ATTR_IDENTIFIER a SOURCETEXT_ATTR_MEMBERLOOKUP  
+- Příznak GETATTRTYPE_DEPSCAN je nastaven. v takovém případě může metoda vracet příznaky SOURCETEXT_ATTR_IDENTIFIER a SOURCETEXT_ATTR_MEMBERLOOKUP.  
   
-- Je nastavený příznak GETATTRFLAG_THIS, v takovém případě může metoda vrátit příznak SOURCETEXT_ATTR_THIS  
+- Příznak GETATTRFLAG_THIS je nastaven. v takovém případě může metoda vracet příznak SOURCETEXT_ATTR_THIS,  
   
-- Je nastavený příznak GETATTRFLAG_HUMANTEXT, v takovém případě může metoda vrátit SOURCETEXT_ATTR_HUMANTEXT příznak.  
+- Příznak GETATTRFLAG_HUMANTEXT je nastaven. v takovém případě může metoda vracet příznak SOURCETEXT_ATTR_HUMANTEXT.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Konstanty, výčty a struktury ladicího programu aktivních skriptů](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

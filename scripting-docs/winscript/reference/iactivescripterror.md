@@ -1,5 +1,5 @@
 ---
-title: Iactivescripterror – | Dokumentace Microsoftu
+title: IActiveScriptError | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,23 +13,23 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1ca783e2100fe74ed05499f9611a9b8f3399817f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ca4d3fe5ff90fc0d116814771308fa599052dba9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62954990"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576905"
 ---
 # <a name="iactivescripterror"></a>IActiveScriptError
-Objekt implementace tohoto rozhraní je předán [IActiveScriptSite::OnScriptError](../../winscript/reference/iactivescriptsite-onscripterror.md) metoda pokaždé, když skriptovací stroj dojde k neošetřené chybě. Hostitel pak volá metody pro tento objekt k získání informací o chyby, ke které došlo k chybě.  
+Objekt implementující toto rozhraní je předán metodě [IActiveScriptSite:: OnScriptError](../../winscript/reference/iactivescriptsite-onscripterror.md) vždy, když skriptovací modul narazí na neošetřenou chybu. Hostitel pak zavolá metody tohoto objektu, aby získal informace o chybě, ke které došlo.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
   
 |Metoda|Popis|  
 |------------|-----------------|  
 |[IActiveScriptError::GetExceptionInfo](../../winscript/reference/iactivescripterror-getexceptioninfo.md)|Načte informace o chybě.|  
-|[IActiveScriptError::GetSourcePosition](../../winscript/reference/iactivescripterror-getsourceposition.md)|Získá umístění ve zdrojovém kódu, kde došlo k chybě.|  
-|[IActiveScriptError::GetSourceLineText](../../winscript/reference/iactivescripterror-getsourcelinetext.md)|Načte řádku ve zdrojovém souboru, kde došlo k chybě.|  
+|[IActiveScriptError::GetSourcePosition](../../winscript/reference/iactivescripterror-getsourceposition.md)|Načte umístění ve zdrojovém kódu, kde došlo k chybě.|  
+|[IActiveScriptError::GetSourceLineText](../../winscript/reference/iactivescripterror-getsourcelinetext.md)|Načte řádek ve zdrojovém souboru, kde došlo k chybě.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Rozhraní aktivních skriptů](../../winscript/reference/active-script-interfaces.md)

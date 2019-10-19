@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::GetScriptState | Dokumentace Microsoftu
+title: 'IActiveScript:: GetScriptState | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0f9f3bedee9af9ae3cb145108d801f252267d5d2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d266e713879aafe1c5ca271d46b3030f3275460f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935745"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575725"
 ---
 # <a name="iactivescriptgetscriptstate"></a>IActiveScript::GetScriptState
-Načte aktuální stav skriptovací stroj. Tuto metodu lze volat z vlákna znaky bez výsledkem znaky popisek hostitele objektů nebo [iactivescriptsite –](../../winscript/reference/iactivescriptsite.md) rozhraní.  
+Načte aktuální stav skriptovacího stroje. Tuto metodu lze volat z nezákladních vláken, aniž by došlo k nezákladnímu popisku pro hostování objektů nebo rozhraní [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +37,10 @@ HRESULT GetScriptState(
   
 #### <a name="parameters"></a>Parametry  
  `pss`  
- [out] Adresa proměnné, která přijímá hodnotu podle [scriptstate – výčet](../../winscript/reference/scriptstate-enumeration.md) výčtu. Hodnota označuje aktuální stav skriptovací stroj spojené s volajícím vlákně.  
+ mimo Adresa proměnné, která přijímá hodnotu definovanou ve výčtu [výčtu scriptstate –](../../winscript/reference/scriptstate-enumeration.md) . Hodnota označuje aktuální stav skriptovacího modulu přidruženého k volajícímu vláknu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` v případě úspěšného ověření nebo `E_POINTER` Pokud byl zadán neplatný ukazatel.  
+ Vrátí `S_OK`, pokud bylo úspěšné, nebo `E_POINTER`, pokud byl zadán neplatný ukazatel.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScript](../../winscript/reference/iactivescript.md)

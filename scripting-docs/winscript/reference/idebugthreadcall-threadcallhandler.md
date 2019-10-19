@@ -1,5 +1,5 @@
 ---
-title: IDebugThreadCall::ThreadCallHandler | Dokumentace Microsoftu
+title: 'Idebugthreadcall –:: ThreadCallHandler | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d1802cdcdabe2ae462960378d0e869838cdaa6e5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 58e7d3facbd5a59bf7b81e3257c6daea7874141a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000920"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576660"
 ---
 # <a name="idebugthreadcallthreadcallhandler"></a>IDebugThreadCall::ThreadCallHandler
-Zpracovává volání ke spouštění kódu v jiném vlákně.  
+Zpracovává volání pro spuštění kódu v jiném vlákně.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,25 +39,25 @@ HRESULT ThreadCallHandler(
   
 #### <a name="parameters"></a>Parametry  
  `dwParam1`  
- [in] První parametr.  
+ pro První parametr  
   
  `dwParam2`  
- [in] Druhý parametr.  
+ pro Druhý parametr.  
   
  `dwParam3`  
- [in] Třetí parametr.  
+ pro Třetí parametr.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda obsluhuje volání ke spouštění kódu v vlákno ladicího programu.  
+ Tato metoda zpracovává volání pro spuštění kódu ve vlákně ladicího programu.  
   
-## <a name="see-also"></a>Viz také  
- [Idebugthreadcall – rozhraní](../../winscript/reference/idebugthreadcall-interface.md)   
- [IDebugApplication::SynchronousCallInDebuggerThread](../../winscript/reference/idebugapplication-synchronouscallindebuggerthread.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní idebugthreadcall –](../../winscript/reference/idebugthreadcall-interface.md)  
+ [IDebugApplication –:: SynchronousCallInDebuggerThread](../../winscript/reference/idebugapplication-synchronouscallindebuggerthread.md)    
  [IDebugApplicationThread::SynchronousCallIntoThread](../../winscript/reference/idebugapplicationthread-synchronouscallintothread.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::SynchronousCallInDebuggerThread | Dokumentace Microsoftu
+title: 'IDebugApplication –:: SynchronousCallInDebuggerThread | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d5460efaa3448c7812707e0baa7b2f5afe1d27a0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 134717b6ce30c87ccfb4bbb50ffe958717ae757f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990560"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574590"
 ---
 # <a name="idebugapplicationsynchronouscallindebuggerthread"></a>IDebugApplication::SynchronousCallInDebuggerThread
-Poskytuje mechanismus pro volající ke spouštění kódu v vlákno ladicího programu.  
+Poskytuje mechanismus pro volajícího pro spuštění kódu ve vlákně ladicího programu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,27 +40,27 @@ HRESULT SynchronousCallInDebuggerThread(
   
 #### <a name="parameters"></a>Parametry  
  `pptc`  
- [in] Objekt k volání.  
+ pro Objekt, který má být volán.  
   
  `dwParam1`  
- [in] První parametr předat `IDebugThreadCall::ThreadCallHandler` metody.  
+ pro První parametr, který se předá metodě `IDebugThreadCall::ThreadCallHandler`.  
   
  `dwParam2`  
- [in] Druhý parametr předat `IDebugThreadCall::ThreadCallHandler` metody.  
+ pro Druhý parametr, který se předá metodě `IDebugThreadCall::ThreadCallHandler`.  
   
  `dwParam3`  
- [in] Třetí parametr předat `IDebugThreadCall::ThreadCallHandler` metody.  
+ pro Třetí parametr, který se má předat metodě `IDebugThreadCall::ThreadCallHandler`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Jazyk modulů a hostitelé obvykle tuto metodu implementace pomocí volných vláken objekty nad jejich implementace jednoho vláken.  
+ Jazykové moduly a hostitelé obvykle používají tuto metodu k implementaci objektů s volnými vlákny nad svými implementacemi s jedním vláknem.  
   
-## <a name="see-also"></a>Viz také  
- [Idebugapplication – rozhraní](../../winscript/reference/idebugapplication-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní IDebugApplication –](../../winscript/reference/idebugapplication-interface.md)  
  [IDebugThreadCall – rozhraní](../../winscript/reference/idebugthreadcall-interface.md)

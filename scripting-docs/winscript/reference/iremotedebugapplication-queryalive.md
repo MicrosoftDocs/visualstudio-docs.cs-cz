@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication::QueryAlive | Microsoft Docs
+title: 'Iremotedebugapplication –:: QueryAlive | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: db17bd017b2fc1e1ca52ba8801eb1d197c4b3de7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3edc4fc007a2372c429b0bbece394cb1c30a2770
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944198"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577479"
 ---
 # <a name="iremotedebugapplicationqueryalive"></a>IRemoteDebugApplication::QueryAlive
-Určuje, zda je interaktivní aplikace.  
+Určuje, zda aplikace reaguje.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,19 +34,19 @@ HRESULT QueryAlive();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Tato metoda nemá žádné parametry.  
+ Tato metoda nepřijímá žádné parametry.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda určuje, zda je interaktivní aplikace. Implementace této metody by měla vždy vrátit `S_OK`.  
+ Tato metoda označuje, zda aplikace reaguje. Implementace této metody by měly vždycky vracet `S_OK`.  
   
- Pokud neočekávaně ukončí proces aplikace modelu COM vrátí chybu z sběrného systému proxy serveru pro volání této metody.  
+ Pokud se proces aplikace neočekávaně ukončí, model COM vrátí chybu z sběrného proxy serveru pro volání této metody.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IRemoteDebugApplication – rozhraní](../../winscript/reference/iremotedebugapplication-interface.md)

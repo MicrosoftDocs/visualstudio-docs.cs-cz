@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::BringDocumentContextToTop | Dokumentace Microsoftu
+title: 'Idebugdocumenthelper –:: BringDocumentContextToTop | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 41452331d03fdca53c8c7048a24adfd349c128ad
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 63b55844c260f693ab5d89ecd564ed6b6ecd32d6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62783092"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577023"
 ---
 # <a name="idebugdocumenthelperbringdocumentcontexttotop"></a>IDebugDocumentHelper::BringDocumentContextToTop
-Kontext tohoto dokumentu přináší do horní části v uživatelském rozhraní ladicího programu.  
+Přinese kontext tohoto dokumentu na začátek v uživatelském rozhraní ladicího programu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +37,17 @@ HRESULT BringDocumentContextToTop(
   
 #### <a name="parameters"></a>Parametry  
  `pddc`  
- Kontext dokumentu, aby si přenesli do horní části v uživatelském rozhraní ladicího programu.  
+ Kontext dokumentu, který se má přenést nahoru v uživatelském rozhraní ladicího programu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda kontextu tohoto dokumentu přináší do horní části v uživatelském rozhraní ladicího programu.  
+ Tato metoda v uživatelském rozhraní ladicího programu přináší kontext tohoto dokumentu na začátek.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugDocumentHelper – rozhraní](../../winscript/reference/idebugdocumenthelper-interface.md)

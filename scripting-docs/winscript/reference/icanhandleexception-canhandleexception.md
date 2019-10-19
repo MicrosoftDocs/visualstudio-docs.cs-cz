@@ -1,5 +1,5 @@
 ---
-title: ICanHandleException::CanHandleException | Dokumentace Microsoftu
+title: 'Icanhandleexception –:: CanHandleException | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 406787d5ee6811b80f9e6831e5a67cab8367e7d0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c536d35dcb9f0faca8b033ecd39aec520a2e260a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991388"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575712"
 ---
 # <a name="icanhandleexceptioncanhandleexception"></a>ICanHandleException::CanHandleException
-Určuje, pokud volající skriptovací stroj dokáže zpracovat zadané výjimky.  
+Určuje, zda volající skriptovací modul může zpracovat určenou výjimku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,22 +38,22 @@ HRESULT CanHandleException(
   
 #### <a name="parameters"></a>Parametry  
  `pExcepInfo`  
- [in] Ukazatel `EXCEPINFO` struktura obsahující informace, které budou nahlášeny, pokud se nenajde žádná obslužná rutina výjimky.  
+ pro Ukazatel na strukturu `EXCEPINFO` obsahující informace, které budou hlášeny, pokud nebyla nalezena žádná obslužná rutina výjimky.  
   
  `pvar`  
- [in] Hodnotu přiřazenou k výjimce, jako je hodnota vyvolané `throw` příkazu. Tento parametr může mít `NULL`.  
+ pro Hodnota spojená s výjimkou, jako je například hodnota vyvolaná příkazem `throw`. Tento parametr může být `NULL`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|`S_OK`|Volající může zpracovat výjimku|  
+|`S_OK`|Volající může zpracovat výjimku.|  
 |`E_FAIL`|Volající nemůže zpracovat výjimku.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud je volání `IDispatchEx::InvokeEx`, nebo podobné metody, výsledkem výjimka, modul kontroly skript pro volajícího v volající řetězu certifikátů vašeho skriptu, který podporuje `ICanHandleException` rozhraní a označuje, že ji může zpracovat výjimku. Pokud žádný volající může zpracovat výjimku, zastaví skriptovací stroj.  
+ Pokud volání `IDispatchEx::InvokeEx`, nebo podobná metoda, má za následek výjimku, skriptovací modul kontroluje volající v řetězu volajícího skriptu, který podporuje rozhraní `ICanHandleException` a označuje, že může zpracovat výjimku. Pokud žádný volající nedokáže zpracovat výjimku, skriptovací stroj se zastaví.  
   
-## <a name="see-also"></a>Viz také  
- [Icanhandleexception – rozhraní](../../winscript/reference/icanhandleexception-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní icanhandleexception –](../../winscript/reference/icanhandleexception-interface.md)  
  [IDispatchEx::InvokeEx](../../winscript/reference/idispatchex-invokeex.md)

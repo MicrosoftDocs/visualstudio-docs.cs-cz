@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugframe::getdocumentpositionwithid – metoda | Dokumentace Microsoftu
+title: 'IJsDebugFrame:: Getdocumentpositionwithid – – metoda | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 741fe323e787c57f5f05a25461eae87c98dba70f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f35f6fb84db95950fe83d571c9f5e5e7db9de1e8
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62558135"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573863"
 ---
 # <a name="ijsdebugframegetdocumentpositionwithid-method"></a>IJsDebugFrame::GetDocumentPositionWithId – metoda
-Vrací aktuální pozici tohoto rámce zásobníku v rámci dokumentu uživatelské úrovni.  
+Vrátí aktuální pozici tohoto rámce zásobníku v dokumentu na úrovni uživatele.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,18 +37,18 @@ HRESULT GetDocumentPositionWithId(
   
 #### <a name="parameters"></a>Parametry  
  `pDocumentId`  
- [out] Jedinečné ID pro zdrojový dokument (ukazatel na IDebugDocumentText).  
+ mimo Jedinečné ID zdrojového dokumentu (ukazatel na IDebugDocumentText –).  
   
  `pCharacterOffset`  
- [out] Odsazení znaku od nuly od začátku skriptu.  
+ mimo Posun znaku založený na nule od začátku skriptu.  
   
  `pStatementCharCount`  
- [out] Délka aktuálního příkazu, který začíná * pCharacterOffset, ve znacích.  
+ mimo Délka aktuálního příkazu, který začíná na * pCharacterOffset, ve znacích.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IJsDebugFrame – rozhraní](../../winscript/reference/ijsdebugframe-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptParse – | Dokumentace Microsoftu
+title: IActiveScriptParse | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,23 +13,23 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a987b4be3430f2ed8b0562f41b51a94797f96dc4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 81f64352c15dce233058d49b70e35da7e2238688
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63009335"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72561650"
 ---
 # <a name="iactivescriptparse"></a>IActiveScriptParse
-Pokud skript Windows modul umožňuje nezpracovaný text skriptlety kódu mají být přidány do skriptu nebo umožňuje textu výrazu, který se má vyhodnotit v době běhu implementuje `IActiveScriptParse` rozhraní. Pro interpretované skriptovací jazyky, které mají žádné nezávislé vývojovém prostředí, jako je například jazyk VBScript, to poskytuje alternativní mechanismus (jiné než `IPersist*`) Chcete-li získat kód skriptu do skriptovací stroj a připojit fragmenty skript do různých objektu události.  
+Pokud skriptovací stroj Windows umožňuje přidat nezpracovaný textový kód skriptlety do skriptu nebo umožňuje vyhodnotit text výrazu za běhu, implementuje rozhraní `IActiveScriptParse`. V případě interpretace skriptovacích jazyků, které nemají nezávislé vývojové prostředí, jako je například VBScript, je k dispozici alternativní mechanizmus (jiný než `IPersist*`) k získání kódu skriptu do skriptovacího stroje a k připojení fragmentů skriptů k různým událostem objektu. .  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[IActiveScriptParse::InitNew](../../winscript/reference/iactivescriptparse-initnew.md)|Inicializuje skriptovací stroj.|  
-|[IActiveScriptParse::AddScriptlet](../../winscript/reference/iactivescriptparse-addscriptlet.md)|Přidá skriptlet kódu do skriptu.|  
-|[IActiveScriptParse::ParseScriptText](../../winscript/reference/iactivescriptparse-parsescripttext.md)|Analyzuje daný skriptlet kódu, přidává deklarace do oboru názvů a hodnotí kód podle potřeby.|  
+|[IActiveScriptParse::InitNew](../../winscript/reference/iactivescriptparse-initnew.md)|Inicializuje skriptovací modul.|  
+|[IActiveScriptParse::AddScriptlet](../../winscript/reference/iactivescriptparse-addscriptlet.md)|Přidá do skriptu kód skriptletu.|  
+|[IActiveScriptParse::ParseScriptText](../../winscript/reference/iactivescriptparse-parsescripttext.md)|Analyzuje daný kód skriptletu, přidává deklarace do oboru názvů a podle potřeby vyhodnocuje kód.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Rozhraní aktivních skriptů](../../winscript/reference/active-script-interfaces.md)

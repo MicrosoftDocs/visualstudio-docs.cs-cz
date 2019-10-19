@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationNode::Close | Dokumentace Microsoftu
+title: 'IDebugApplicationNode –:: Close | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c634fd154c2470b1a154e5d1c9e97419a2e2e2b4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 928dc94a5d700b2cad6a7acfb59a409240be7dc3
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990517"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574831"
 ---
 # <a name="idebugapplicationnodeclose"></a>IDebugApplicationNode::Close
-Způsobí, že tato aplikace uvolnit všechny odkazy a zadejte neaktivním stavu.  
+Způsobí, že tato aplikace uvolní všechny odkazy a vstoupí do neaktivního stavu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,17 +34,17 @@ HRESULT Close();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Tato metoda nemá žádné parametry.  
+ Tato metoda nepřijímá žádné parametry.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Obvykle vlastník aplikace volá tuto metodu při ukončení aplikace.  
+ Obvykle vlastník aplikace volá tuto metodu, když dojde k ukončení aplikace.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugApplicationNode – rozhraní](../../winscript/reference/idebugapplicationnode-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::AddScriptlet | Dokumentace Microsoftu
+title: 'Iactivescriptauthor –:: AddScriptlet | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 64df7bd4c0d0dde303cdc15d7111688d14c7dc49
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3a349a848f282e6b3a228c7b17009e0261801be5
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935455"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577977"
 ---
 # <a name="iactivescriptauthoraddscriptlet"></a>IActiveScriptAuthor::AddScriptlet
-Přidá skriptlet kódu jako podřízený objekt úrovni kořenového adresáře `IScriptNode` objektu. Na hostiteli může mít pouze dvě úrovně plně kvalifikovaný název skriptletu.  
+Přidá kód skriptletu jako podřízený objekt `IScriptNode` kořenové úrovně. V hostiteli může plně kvalifikovaný název skriptletu mít jenom dvě úrovně.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,37 +44,37 @@ HRESULT AddScriptlet(
   
 #### <a name="parameters"></a>Parametry  
  `pszDefaultName`  
- [in] Adresa výchozí název, který chcete přidružit k skriptletu.  
+ pro Adresa výchozího názvu, který se má přidružit k skriptletu.  
   
  `pszCode`  
- [in] Adresa textu skriptletu.  
+ pro Adresa skriptletu textu  
   
  `pszItemName`  
- [in] Adresa vyrovnávací paměti nejvyšší úrovně identifikátor skriptletu plně kvalifikovaný název v hostiteli.  
+ pro Adresa vyrovnávací paměti identifikátoru nejvyšší úrovně plně kvalifikovaného názvu skriptletu na hostiteli.  
   
  `pszSubItemName`  
- [in] Adresa vyrovnávací paměti druhé úrovně identifikátor skriptletu plně kvalifikovaný název v hostiteli. Pokud název obsahuje pouze jednu úroveň nastavena na hodnotu NULL.  
+ pro Adresa vyrovnávací paměti identifikátoru druhé úrovně pro plně kvalifikovaný název skriptletu v hostiteli. Nastavte na hodnotu NULL, pokud má název jenom jednu úroveň.  
   
  `pszEventName`  
- [in] Adresa vyrovnávací paměti, který obsahuje název události, pro kterou je skriptletu obslužné rutiny události.  
+ pro Adresa vyrovnávací paměti, která obsahuje název události, pro kterou je skriptletu obslužná rutina události.  
   
  `pszDelimiter`  
- [in] Adresa koncového ze skriptu bloku oddělovač. Když `pszCode` je analyzován z toku textu, hostitel obvykle používá oddělovač (například dvěma jednoduchými uvozovkami), k zjištění konce bloku skriptu. Tento parametr nastavte na hodnotu NULL, pokud oddělovač neoznačí konec bloku skriptu.  
+ pro Adresa oddělovače bloku koncových skriptů. Pokud je `pszCode` analyzována z datového proudu, hostitel obvykle používá oddělovač (například dvě jednoduché uvozovky) k detekci konce bloku skriptu. Nastavte tento parametr na hodnotu NULL, pokud oddělovač neoznačí konec bloku skriptu.  
   
  `dwCookie`  
- [in] Aplikaci hodnotu definovanou uživatelem, který slouží k přidružení hostitelský objekt skriptletu.  
+ pro Hodnota definovaná aplikací, která se používá k přidružení skriptletu k objektu hostitele.  
   
  `dwFlags`  
- [in] Nepoužívá se.  
+ pro Nepoužívá se.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScriptAuthor – rozhraní](../../winscript/reference/iactivescriptauthor-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugPropertyInfo::Next | Dokumentace Microsoftu
+title: 'Ienumdebugpropertyinfo –:: Next | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b1568d2387422bebc86ce2b035ba997610833e85
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b99631c217ca56dce91512403dfb6623cd1e7641
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963413"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574201"
 ---
 # <a name="ienumdebugpropertyinfonext"></a>IEnumDebugPropertyInfo::Next
-Načte zadaný počet `DebugPropertyInfo` struktury v sekvenci výčtu.  
+Načte zadaný počet `DebugPropertyInfo` struktur v sekvenci výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,17 +39,17 @@ HRESULT Next (
   
 #### <a name="parameters"></a>Parametry  
  `celt`  
- [in] Počet `DebugPropertyInfo`struktury, která se má načíst.  
+ pro Počet `DebugPropertyInfo`structures, které mají být načteny.  
   
  `rgelt`  
- [out] Pole `DebugPropertyInfo` struktury načíst.  
+ mimo Bylo načteno pole `DebugPropertyInfo` struktury.  
   
  `pceltFetched`  
- [out] Vrátí počet `DebugPropertyInfo` struktury, ve skutečnosti načíst.  
+ mimo Vrátí počet skutečně načtených struktur `DebugPropertyInfo`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Bude vracet platnou `HRESULT`, obvykle `S_OK`.  
+ Vrací platný `HRESULT`, obvykle `S_OK`.  
   
-## <a name="see-also"></a>Viz také  
- [IEnumDebugPropertyInfo Interface](../../winscript/reference/ienumdebugpropertyinfo-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní ienumdebugpropertyinfo –](../../winscript/reference/ienumdebugpropertyinfo-interface.md)  
  [DebugPropertyInfo – struktura](../../winscript/reference/debugpropertyinfo-structure.md)

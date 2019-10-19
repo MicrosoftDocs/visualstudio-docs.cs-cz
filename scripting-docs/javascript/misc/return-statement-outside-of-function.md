@@ -1,5 +1,5 @@
 ---
-title: příkaz ' return' mimo funkci | Dokumentace Microsoftu
+title: příkaz ' Return ' mimo funkci | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,34 +14,34 @@ ms.assetid: 03568f9f-5f4f-4a10-a738-9a73f3832b9e
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 01ef96385d5fe3dccf14a7491e67983d39913280
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a90af6de8e2c238e3660111b19d13c1eaf628c9e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63006403"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573688"
 ---
 # <a name="return-statement-outside-of-function"></a>příkaz 'return' mimo funkci
-Použili jste `return` příkazu v globálním oboru kódu. `return` Příkaz objevit jenom v těle funkce.  
+Použili jste příkaz `return` v globálním rozsahu kódu. Příkaz `return` by měl být uveden pouze v těle funkce.  
   
- Volání funkce s `()` výrazu je operátor. Mají všechny výrazy hodnot. `return` prohlášení se používá k určení hodnoty vrácené funkcí. Obecný formát je následující:  
+ Volání funkce s operátorem `()` je výraz. Všechny výrazy mají hodnoty; příkaz `return` slouží k určení hodnoty vrácené funkcí. Formulář Obecné je:  
   
 ```js
   
 return [ expression ];  
 ```  
   
- Když `return` je proveden příkaz *výraz* vyhodnotí a vrátí hodnotu funkce. Pokud není žádný výraz **nedefinované** je vrácena.  
+ Při spuštění příkazu `return` se vyhodnotí *výraz* a vrátí se jako hodnota funkce. Pokud není žádný výraz, vrátí se **undefined** .  
   
- Spuštění funkce zastaví, když `return` je proveden příkaz, i když existují další příkazy stále zbývající v těle funkce. Výjimkou z tohoto pravidla je-li **vrátit** příkazu vyvolá se v rámci **zkuste** bloku, a existuje odpovídající **nakonec** bloku kódu  **Nakonec** blok se spustí předtím, než funkce vrátí.  
+ Spuštění funkce se zastaví při spuštění příkazu `return`, a to i v případě, že v těle funkce stále zbývá jiné příkazy. Výjimkou z tohoto pravidla je, pokud příkaz **return** nastane uvnitř bloku **Try** a existuje odpovídající blok **finally** , kód v bloku **finally** se spustí před vrácením funkce.  
   
- Pokud funkce vrátí, protože ji bez spuštění dosáhne konce tělo funkce `return` příkaz, vrácená hodnota je **nedefinované** hodnotu (to znamená, že výsledek funkce nelze použít jako součást rozsáhlejšího výrazu ).  
+ Pokud funkce vrátí, protože dosáhne konce těla funkce bez provedení příkazu `return`, vrácená hodnota je **nedefinovaná** hodnota (to znamená, že výsledek funkce nelze použít jako součást většího výrazu).  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Odeberte `return` příkaz od hlavní části kódu (globální rozsah).  
+- Odeberte příkaz `return` z hlavního těla vašeho kódu (globální rozsah).  
   
-## <a name="see-also"></a>Viz také  
- [Return – příkaz](../../javascript/reference/return-statement-javascript.md)   
- [Function – objekt](../../javascript/reference/function-object-javascript.md)   
+## <a name="see-also"></a>Viz také:  
+   [příkazu return](../../javascript/reference/return-statement-javascript.md)  
+ [Objekt funkce](../../javascript/reference/function-object-javascript.md)    
  [caller – vlastnost (Function)](../../javascript/reference/caller-property-function-javascript.md)

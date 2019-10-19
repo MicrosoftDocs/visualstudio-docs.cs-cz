@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f02827ebd5617485f180f4a16652b1cc841c41f4
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: 342a27571c9ad7b6ed1586fc762b2952ba86c3db
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314229"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575164"
 ---
 # <a name="step-7-add-multiplication-and-division-problems"></a>Krok 7: přidejte problémy násobení a dělení
 
@@ -48,7 +48,7 @@ V sedmé části tohoto kurzu přidáte problémy násobení a dělení, ale nej
      [!code-vb[VbExpressTutorial3Step7#17](../ide/codesnippet/VisualBasic/step-7-add-multiplication-and-division-problems_3.vb)]
      [!code-csharp[VbExpressTutorial3Step7#17](../ide/codesnippet/CSharp/step-7-add-multiplication-and-division-problems_3.cs)]
 
-     Pomocí klávesnice nemůžete snadno zadat znak násobení (×) a znaménko dělení (÷), takže vizuál C# a Visual Basic přijímají pro násobení znak hvězdičky (*) a lomítko (/) pro dělení.
+     Pomocí klávesnice nemůžete snadno zadat znak násobení (×) a znaménko dělení (÷), takže C# a Visual Basic přijmout hvězdičku (*) pro násobení a znak lomítka (/) pro dělení.
 
 4. Změňte poslední část obslužné rutiny události časovače <xref:System.Windows.Forms.Timer.Tick> tak, aby vyplnila správnou odpověď, když vyprší čas.
 

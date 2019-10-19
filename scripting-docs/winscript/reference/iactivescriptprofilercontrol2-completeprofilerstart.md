@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerControl2::CompleteProfilerStart | Dokumentace Microsoftu
+title: 'Iactivescriptprofilercontrol2 –:: CompleteProfilerStart | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,15 +13,15 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 36a1f5d6a1401e2860b65a29c8e383627e83c6be
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f0230ecb480792b5b24b7375f5b95926735d0a61
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993021"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571552"
 ---
 # <a name="iactivescriptprofilercontrol2completeprofilerstart"></a>IActiveScriptProfilerControl2::CompleteProfilerStart
-Oznámí profileru, které jste spustili profilaci na všechny příslušné skriptovacích strojů. Tímto způsobem můžete získat úplný zásobník volání, pokud [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] je spuštěna při spuštění profilace.  
+Upozorňuje profileru, že jste spustili profilaci pro všechny příslušné skriptovací moduly. Pomocí této metody můžete získat kompletní zásobník volání, pokud při spuštění profilace spustíte [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)].  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,19 +33,19 @@ HRESULT CompleteProfilerStart();
  Metoda nepřijímá žádné parametry.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu HRESULT. Možné hodnoty jsou následující:  
+ Vrátí HRESULT. Možné hodnoty jsou následující:  
   
 |Návratová hodnota|Význam|  
 |------------------|-------------|  
 |`S_OK`|Metoda byla úspěšná.|  
-|`E_FAIL`|Nelze spustit profilaci.|  
-|`S_FALSE`|Profilace byla spuštěna, když skript nebyl spuštěn.|  
-|`ACTIVPROF_E_PROFILER_ABSENT`|Profilace není povolená. Byl nastaven bez zpětného volání.|  
-|`E_OUTOFMEMORY`|Z důvodu podmínku na více instancí z důvodu nedostatku paměti nelze získat zásobník volání.|  
+|`E_FAIL`|Profilaci nelze spustit.|  
+|`S_FALSE`|Profilace byla spuštěna, když nebyl spuštěn skript.|  
+|`ACTIVPROF_E_PROFILER_ABSENT`|Profilace není povolená. Nebylo nastaveno žádné zpětné volání.|  
+|`E_OUTOFMEMORY`|Zásobník volání nelze získat z důvodu stavu mimo paměť.|  
   
 ## <a name="remarks"></a>Poznámky  
- Volání `IActiveScriptProfilerControl2::CompleteProfilerStart` zajistí, že jsou odesílány události pro funkce již v zásobníku volání. Tato metoda se má volat po procesu profilace spouští na libovolné skriptovací stroj, který je na aktuální kartě. Metodu lze volat pro jakékoli skriptovací stroj.  
+ Volání `IActiveScriptProfilerControl2::CompleteProfilerStart` zajišťuje odeslání událostí pro funkce, které jsou již v zásobníku volání. Tuto metodu je třeba volat po zahájení profilace na jakémkoli skriptovacím stroji, který je na aktuální kartě. Metodu lze volat pro libovolný skriptovací modul.  
   
-## <a name="see-also"></a>Viz také  
- [IActiveScriptProfilerControl2::PrepareProfilerStop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md)   
+## <a name="see-also"></a>Viz také:  
+ [Iactivescriptprofilercontrol2 –::P repareprofilerstop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md)    
  [IActiveScriptProfilerControl2 – rozhraní](../../winscript/reference/iactivescriptprofilercontrol2-interface.md)

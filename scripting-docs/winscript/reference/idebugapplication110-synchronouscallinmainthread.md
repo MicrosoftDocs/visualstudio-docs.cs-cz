@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication110::SynchronousCallInMainThread | Dokumentace Microsoftu
+title: 'Idebugapplication110 –:: SynchronousCallInMainThread | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d98f28f441096886c9ef7f26e63d876455a264e7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: db2b94d51cc5c9a65355aae7405fb162f564e0cc
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446364"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573655"
 ---
 # <a name="idebugapplication110synchronouscallinmainthread"></a>IDebugApplication110::SynchronousCallInMainThread
-Díky synchronní volání v hlavním vlákně.  
+Provede synchronní volání v hlavním vlákně.  
   
 > [!IMPORTANT]
-> [Idebugapplication110 – rozhraní](../../winscript/reference/idebugapplication110-interface.md) je implementováno komponentou Pdm verze 11.0 nebo novější. Nachází se v souboru activdbg100.h.  
+> [Rozhraní idebugapplication110 –](../../winscript/reference/idebugapplication110-interface.md) je implementováno pomocí PDM v 11.0 a větší. Nachází se v souboru activdbg100.h.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ HRESULT SynchronousCallInMainThread([in] IDebugThreadCall* pptc, [in] DWORD_PTR 
   
 #### <a name="parameters"></a>Parametry  
  `pptc`  
- [Idebugthreadcall – rozhraní](../../winscript/reference/idebugthreadcall-interface.md) objekt volat.  
+ Objekt [rozhraní idebugthreadcall –](../../winscript/reference/idebugthreadcall-interface.md) , který se má volat.  
   
  `dwParam1`  
  První parametr volání.  
@@ -48,5 +48,5 @@ HRESULT SynchronousCallInMainThread([in] IDebugThreadCall* pptc, [in] DWORD_PTR 
  `dwParam3`  
  Třetí parametr volání.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugApplication110 – rozhraní](../../winscript/reference/idebugapplication110-interface.md)

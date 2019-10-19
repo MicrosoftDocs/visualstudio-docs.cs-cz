@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationThread110::IsThreadCallable | Dokumentace Microsoftu
+title: 'Idebugapplicationthread110 –:: IsThreadCallable | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 90f0010a513adef67af1285ac15bc35d4573df57
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 5ff81190247454a4471a4150843d3fb0aaed5999
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440511"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574470"
 ---
 # <a name="idebugapplicationthread110isthreadcallable"></a>IDebugApplicationThread110::IsThreadCallable
-Určuje, zda toto vlákno je ve stavu, který bude zpracovávat volání bylo vytvořeno s použitím přepínání mechanismy, jako je například SynchronousCallInThread vlákno PDM.  
+Určuje, zda je toto vlákno ve stavu, který bude zpracovávat volání prováděná pomocí mechanismů přepínání vláken PDM, jako je například SynchronousCallInThread.  
   
 > [!IMPORTANT]
-> [Idebugapplicationthread110 – rozhraní](../../winscript/reference/idebugapplicationthread110-interface.md) je implementováno komponentou Pdm verze 11.0 nebo novější. Nachází se v souboru activdbg100.h.  
+> [Rozhraní idebugapplicationthread110 –](../../winscript/reference/idebugapplicationthread110-interface.md) je implementováno pomocí PDM v 11.0 a větší. Nachází se v souboru activdbg100.h.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ HRESULT IsThreadCallable([out, annotation("_Out_")] BOOL * pfIsCallable);
   
 #### <a name="parameters"></a>Parametry  
  `pfIsCallable`  
- [out] `true` Pokud vlákno je volatelná aplikacemi, jinak `false`.  
+ [out] `true`, pokud vlákno je volat, jinak `false`.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugApplicationThread110 – rozhraní](../../winscript/reference/idebugapplicationthread110-interface.md)

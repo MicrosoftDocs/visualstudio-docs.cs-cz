@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::AddNamedItem | Dokumentace Microsoftu
+title: 'IActiveScript:: AddNamedItem | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: db0a97c01d948a0c26850ebd1c3f47c6e3900614
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a343e38b944ca36da221da39832046c19b332230
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935794"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575816"
 ---
 # <a name="iactivescriptaddnameditem"></a>IActiveScript::AddNamedItem
-Přidá do oboru názvů skriptovací stroj název položky kořenové úrovně. Kořenovou položku je objekt s vlastností a metod, zdroj událostí nebo všechny tři.  
+Přidá název položky na kořenové úrovni do oboru názvů skriptovacího modulu. Položka kořenové úrovně je objekt s vlastnostmi a metodami, zdrojem události nebo všemi třemi.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,29 +38,29 @@ HRESULT AddNamedItem(
   
 #### <a name="parameters"></a>Parametry  
  `pstrName`  
- [in] Adresa vyrovnávací paměti, který obsahuje název položky, jak je zobrazuje ze skriptu. Název musí být jedinečný a trvalé.  
+ pro Adresa vyrovnávací paměti, která obsahuje název položky zobrazené ze skriptu. Název musí být jedinečný a trvalý.  
   
  `dwFlags`  
- [in] Příznaky spojené s položkou. Může být kombinací těchto hodnot:  
+ pro Příznaky přidružené k položce Může být kombinací těchto hodnot:  
   
-|Value|Význam|  
+|Hodnota|Význam|  
 |-----------|-------------|  
-|SCRIPTITEM_CODEONLY|Označuje, že pojmenovanou položku představuje objekt jen pro kód a že hostitel nemá žádné `IUnknown` mají být spojeny s tímto objektem pouze kód. Hostitel má jenom název pro tento objekt. Tento příznak by objektově orientované jazyků C++, vytvořte třídu. Ne všechny jazyky podporují tento příznak.|  
-|SCRIPTITEM_GLOBALMEMBERS|Označuje, že položka je kolekce globální vlastnosti a metody asociované s skriptu. Za normálních okolností byste skriptovací stroj ignorovat název objektu (jiné než za účelem použití jako soubor cookie pro [IActiveScriptSite::GetItemInfo](../../winscript/reference/iactivescriptsite-getiteminfo.md) metodu, nebo pro vyřešení explicitní oborů) a zobrazit její členy jako globální proměnné a metody. To umožňuje hostiteli rozšíření knihovny (běhové funkce a tak dále) k dispozici ke skriptu. Je ponecháno na vypořádat s názvem skriptovací stroj je v konfliktu (například když dvě položky SCRIPTITEM_GLOBALMEMBERS mají metody se stejným názvem), i když by neměl být vrácena chyba z důvodu této situaci.|  
-|SCRIPTITEM_ISPERSISTENT|Označuje, že položka by měla uložit, pokud je uložen skriptovací stroj. Podobně, nastavením tohoto příznaku označuje, že přechod zpět do stavu spuštění by měl uchovávat informace názvem a typem položky (skriptovací stroj musí však uvolnit všechny odkazy na rozhraní na objekt, který vede).|  
-|SCRIPTITEM_ISSOURCE|Označuje, že položka zdrojem událostí, které můžete skript jímky. Podřízené objekty (vlastnosti objektu, které jsou v samotné objekty) můžete také zdroje událostí do skriptu. Nejedná se o rekurzivní, ale poskytuje vhodný mechanismus pro běžné, například vytvoření kontejneru a všechny její členské ovládací prvky.|  
-|SCRIPTITEM_ISVISIBLE|Označuje, zda je název položky k dispozici v oboru názvu souboru, který umožňuje přístup k vlastnosti, metody a události položky. Podle konvence vlastnosti položky patří podřízené položky; proto všechny podřízený objekt vlastnosti a metody (a jejich podřízených rekurzivně) budou mít přístup.|  
-|SCRIPTITEM_NOCODE|Označuje, že položka je jednoduše název přidávané do oboru názvů vašeho skriptu a by neměla být zpracována jako položku, pro který kód by měl být přidružené. Bez tento příznak nastaven, například VBScript se vytvoří samostatný modul s názvem položky a C++ může vytvořit samostatný obálkovou třídu s názvem položky.|  
+|SCRIPTITEM_CODEONLY|Označuje, že pojmenovaná položka představuje objekt pouze s kódem a že hostitel nemá žádné `IUnknown` k tomuto objektu pouze s kódem. Hostitel má pouze název tohoto objektu. V objektově orientovaných jazycích, C++jako je tento příznak vytvoří třídu. Ne všechny jazyky podporují tento příznak.|  
+|SCRIPTITEM_GLOBALMEMBERS|Označuje, že položka je kolekcí globálních vlastností a metod přidružených ke skriptu. V normálním případě by skriptovací stroj ignoroval název objektu (jiný než pro účely jeho použití jako soubor cookie pro metodu [IActiveScriptSite:: GetItemInfo](../../winscript/reference/iactivescriptsite-getiteminfo.md) nebo pro řešení explicitního oboru) a zveřejňuje své členy jako globální proměnné a metody. To umožňuje hostiteli, aby rozšířil knihovnu (běhové funkce atd.), která je k dispozici pro skript. Je ponecháno na skriptovacím stroji, který se zabývat konflikty názvů (například když dvě SCRIPTITEM_GLOBALMEMBERS položky mají metody se stejným názvem), i když by v důsledku této situace neměla být vrácena chyba.|  
+|SCRIPTITEM_ISPERSISTENT|Indikuje, že by měla být položka uložena, pokud je uložen skriptovací modul. Podobně nastavení tohoto příznaku označuje, že přechod zpátky do inicializovaného stavu by měl uchovávat název položky a informace o typu (skriptovací stroj musí nicméně uvolnit všechny ukazatele na rozhraní na aktuálním objektu).|  
+|SCRIPTITEM_ISSOURCE|Označuje, že položka je zdrojem událostí, které může skript zajímky. Podřízené objekty (vlastnosti objektu, které jsou v samotných objektech) mohou také zdrojové události skriptu. Toto není rekurzivní, ale poskytuje pohodlný mechanizmus pro běžný případ, například vytvoření kontejneru a všech jeho členských ovládacích prvků.|  
+|SCRIPTITEM_ISVISIBLE|Označuje, že název položky je k dispozici v oboru názvů skriptu a umožňuje přístup k vlastnostem, metodám a událostem položky. Podle konvence vlastnosti položky zahrnují podřízené položky položky; Proto budou k dispozici všechny vlastnosti podřízeného objektu a metody (a jejich podřízené, rekurzivně).|  
+|SCRIPTITEM_NOCODE|Označuje, že položka je jednoduše názvem přidaným do oboru názvů skriptu a neměla by být považována za položku, ke které by měl být kód přidružen. Například bez nastaveného tohoto příznaku vytvoří jazyk VBScript samostatný modul pro pojmenovanou položku a C++ může vytvořit samostatnou obálkovou třídu pro pojmenovanou položku.|  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
 |Návratová hodnota|Význam|  
 |------------------|-------------|  
-|`S_OK`|Úspěch.|  
+|`S_OK`|Nástup.|  
 |`E_INVALIDARG`|Argument byl neplatný.|  
 |`E_POINTER`|Byl zadán neplatný ukazatel.|  
-|`E_UNEXPECTED`|Volání nebylo očekáváno (například skriptovací stroj má ještě nebyly načteny nebo inicializován).|  
+|`E_UNEXPECTED`|Volání nebylo očekáváno (například skriptovací stroj ještě nebyl načten nebo inicializován).|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScript](../../winscript/reference/iactivescript.md)

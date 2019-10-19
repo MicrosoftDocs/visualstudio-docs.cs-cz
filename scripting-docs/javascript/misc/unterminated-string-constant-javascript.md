@@ -1,5 +1,5 @@
 ---
-title: Neukončená řetězcová konstanta (JavaScript) | Dokumentace Microsoftu
+title: Neukončená řetězcová konstanta (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,23 +14,23 @@ ms.assetid: 5083809e-9828-4aea-b9b0-80f46d6f3812
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c3c5f38ba41e2cadfd0a8234413c63cc96b6744a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a140c7587d4ca00c66590a471cfb32827cf5f780
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435642"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575882"
 ---
 # <a name="unterminated-string-constant-javascript"></a>Neukončená řetězcová konstanta (JavaScript)
-Vaše řetězcová konstanta s uzavírací uvozovka neukončil. Řetězcové konstanty musí uzavřeny v uvozovkách.  
+Neukončili jste řetězcovou konstantu s uzavíracím znakem uvozovky. Řetězcové konstanty musí být uzavřeny uvnitř dvojice uvozovek.  
   
 > [!NOTE]
-> Můžete použít odpovídající dvojice jednoduchých nebo dvojitých uvozovek. V řetězcích uzavřených jednoduchých uvozovek mohou být obsaženy dvojité uvozovky a v řetězcích uzavřených dvojitých uvozovek mohou být obsaženy jednoduché uvozovky.  
+> Můžete použít párové páry jednoduchých nebo dvojitých uvozovek. Dvojité uvozovky mohou být obsaženy v řetězcích ohraničených jednoduchými uvozovkami a jednoduché uvozovky mohou být obsaženy v rámci řetězců obklopených dvojitými uvozovkami.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Přidáte uzavírací uvozovky na konci řetězce.  
+- Přidejte uzavírací uvozovky na konec řetězce.  
   
-## <a name="see-also"></a>Viz také  
- [String – objekt](../../javascript/reference/string-object-javascript.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [objektu řetězce](../../javascript/reference/string-object-javascript.md)  
  [toString – metoda (Object)](../../javascript/reference/tostring-method-object-javascript.md)

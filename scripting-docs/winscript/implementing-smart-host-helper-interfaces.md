@@ -1,5 +1,5 @@
 ---
-title: Implementace pomocných rozhraní inteligentního hostitele | Dokumentace Microsoftu
+title: Implementace pomocných rozhraní inteligentního hostitele | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,44 +13,44 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a9a5b94a25a838845acab2ce1c49295b0b28d425
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9b387999d71690deaf5bea30a07439677065d63d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62976185"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574375"
 ---
 # <a name="implementing-smart-host-helper-interfaces"></a>Implementace pomocných rozhraní inteligentního hostitele
-[Idebugdocumenthelper – rozhraní](../winscript/reference/idebugdocumenthelper-interface.md) rozhraní výrazně zjednodušuje úlohy vytvoření inteligentního hostitele pro ladění aktivní, protože obsahuje implementace pro mnoho rozhraní nutná pro inteligentní hostování.  
+Rozhraní [rozhraní idebugdocumenthelper –](../winscript/reference/idebugdocumenthelper-interface.md) značně zjednodušuje úlohu vytváření inteligentního hostitele pro aktivní ladění, protože poskytuje implementace pro mnoho rozhraní nezbytných pro inteligentní hostování.  
   
- Chcete-li být inteligentního hostitele pomocí `IDebugDocumentHelper`, hostitelské aplikace musíte udělat jenom tři věci:  
+ Aby se mohl jednat o inteligentního hostitele pomocí `IDebugDocumentHelper`, musí hostitelská aplikace dělat jenom tři věci:  
   
-1. `CoCreate` Správce ladění procesu a používá [iprocessdebugmanager – rozhraní](../winscript/reference/iprocessdebugmanager-interface.md) rozhraní pro přidání aplikace do seznamu laditelné aplikací.  
+1. `CoCreate` Správce ladění procesu a použijte rozhraní [rozhraní IProcessDebugManager –](../winscript/reference/iprocessdebugmanager-interface.md) k přidání aplikace do seznamu laděných aplikací.  
   
-2. Vytvoření dokumentu nápovědu ladicího programu pro každý skript objektu, použití [IProcessDebugManager::CreateDebugDocumentHelper](../winscript/reference/iprocessdebugmanager-createdebugdocumenthelper.md) metody. Ujistěte se, že jsou definovány název dokumentu, nadřazený dokument, text a blocích skriptu.  
+2. Vytvořte pomocníka dokumentu ladění pro každý objekt skriptu pomocí metody [IProcessDebugManager –:: CreateDebugDocumentHelper](../winscript/reference/iprocessdebugmanager-createdebugdocumenthelper.md) . Ujistěte se, že je definovaný název dokumentu, nadřazený dokument, text a bloky skriptu.  
   
-3. Implementace [iactivescriptsitedebug – rozhraní](../winscript/reference/iactivescriptsitedebug-interface.md) rozhraní na objekt, který implementuje [iactivescriptsite –](../winscript/reference/iactivescriptsite.md) rozhraní (která je potřebná pro aktivní skriptování). Pouze netriviální metodu na `IActiveScriptSiteDebug` rozhraní jednoduše deleguje do pomocné rutiny.  
+3. Implementujte rozhraní [rozhraní iactivescriptsitedebug –](../winscript/reference/iactivescriptsitedebug-interface.md) pro váš objekt, které implementuje rozhraní [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) (které je nutné pro aktivní skriptování). Jediná netriviální metoda v rozhraní `IActiveScriptSiteDebug` jednoduše deleguje pomocníka.  
   
-   Volitelně můžete implementovat hostitele [idebugdocumenthost – rozhraní](../winscript/reference/idebugdocumenthost-interface.md) rozhraní, pokud ho potřebujete další kontrolu nad barvy syntaxe, vytvoření kontextu dokumentu a další rozšířené funkce.  
+   Volitelně může hostitel implementovat rozhraní [rozhraní idebugdocumenthost –](../winscript/reference/idebugdocumenthost-interface.md) , pokud potřebuje větší kontrolu nad barevnou syntaxí, vytvářením kontextu dokumentu a dalšími rozšířenými funkcemi.  
   
-   Hlavním omezením na pomocné rutiny inteligentního hostitele je, že dokáže zpracovat pouze dokumenty, jejichž obsah změnit nebo zmenšit po byly přidány (i když můžete rozbalit dokumenty). Pro mnoho inteligentního hostitele ale funkce, které poskytuje je přesně toho, co je potřeba.  
+   Hlavním omezením pomocníka pro inteligentní hostitele je, že může zpracovávat pouze dokumenty, jejichž obsah se po přidání nebo zmenšování mění (i když se dokumenty můžou rozbalit). Pro mnoho inteligentních hostitelů ale funkce, které poskytuje, je přesně to, co je potřeba.  
   
-   Každý krok podrobněji v následujících částech.  
+   Následující části podrobně popisují jednotlivé kroky.  
   
 ## <a name="create-an-application-object"></a>Vytvoření objektu aplikace  
- Před použitím pomocné rutiny inteligentního hostitele, je potřeba vytvořit [idebugapplication – rozhraní](../winscript/reference/idebugapplication-interface.md) objekt reprezentující aplikaci v ladicím programu.  
+ Předtím, než bude možné použít pomocníka inteligentního hostitele, je nutné vytvořit objekt [rozhraní IDebugApplication –](../winscript/reference/idebugapplication-interface.md) , který bude reprezentovat vaši aplikaci v ladicím programu.  
   
-#### <a name="to-create-an-application-object"></a>Chcete-li vytvořit objekt aplikace  
+#### <a name="to-create-an-application-object"></a>Vytvoření objektu aplikace  
   
-1. Vytvoření instance procesu ladění pomocí správce `CoCreateInstance`.  
+1. Vytvořte instanci správce ladění procesu pomocí `CoCreateInstance`.  
   
-2. Volání [IProcessDebugManager::CreateApplication](../winscript/reference/iprocessdebugmanager-createapplication.md).  
+2. Zavolejte [IProcessDebugManager –:: CreateApplication](../winscript/reference/iprocessdebugmanager-createapplication.md).  
   
-3. Název nastavení aplikace s použitím [IDebugApplication::SetName](../winscript/reference/idebugapplication-setname.md).  
+3. Nastavte název aplikace pomocí [IDebugApplication –:: SetName](../winscript/reference/idebugapplication-setname.md).  
   
-4. Přidání objektu aplikace do seznamu laditelné aplikací s použitím [IProcessDebugManager::AddApplication](../winscript/reference/iprocessdebugmanager-addapplication.md).  
+4. Přidejte objekt aplikace do seznamu laděných aplikací pomocí [IProcessDebugManager –:: AddApplication](../winscript/reference/iprocessdebugmanager-addapplication.md).  
   
-     Následující kód popisuje proces, ale nezahrnuje kontroly chyb nebo jinými programovacími technikami robustní.  
+     Následující kód popisuje proces, ale nezahrnuje kontrolu chyb nebo jiné robustní programovací techniky.  
   
     ```cpp
     CoCreateInstance(CLSID_ProcessDebugManager, NULL,  
@@ -62,47 +62,47 @@ ms.locfileid: "62976185"
     g_ppdm->AddApplication(g_pda, &g_dwAppCookie);  
     ```  
   
-## <a name="using-idebugdocumenthelper"></a>Idebugdocumenthelper – použití  
+## <a name="using-idebugdocumenthelper"></a>Použití Idebugdocumenthelper –  
   
-#### <a name="to-use-the-helper-minimal-sequence-of-steps"></a>Použití pomocné rutiny (minimální posloupnost kroků)  
+#### <a name="to-use-the-helper-minimal-sequence-of-steps"></a>Použití pomocníka (minimální sekvence kroků)  
   
-1. Pro každý dokument hostitele, vytvořte pomocné rutiny pomocí [IProcessDebugManager::CreateDebugDocumentHelper](../winscript/reference/iprocessdebugmanager-createdebugdocumenthelper.md).  
+1. U každého hostitelského dokumentu vytvořte pomoc pomocí [IProcessDebugManager –:: CreateDebugDocumentHelper](../winscript/reference/iprocessdebugmanager-createdebugdocumenthelper.md).  
   
-2. Volání [IDebugDocumentHelper::Init](../winscript/reference/idebugdocumenthelper-init.md) na pomocné rutiny, uvádějí název, atributy dokumentu a tak dále.  
+2. Zavolejte [idebugdocumenthelper –:: init](../winscript/reference/idebugdocumenthelper-init.md) v pomocné rutině, která má název, atributy dokumentu a tak dále.  
   
-3. Volání [IDebugDocumentHelper::Attach](../winscript/reference/idebugdocumenthelper-attach.md) s nadřazenou pomocné rutiny pro dokument (nebo hodnota NULL, pokud dokument je kořenový adresář) k definování pozice dokumentu ve stromové struktuře a zprůhlední ladicímu programu.  
+3. Zavolejte [idebugdocumenthelper –:: Attach](../winscript/reference/idebugdocumenthelper-attach.md) s doplňkovou doplňkovou nápovědu pro dokument (nebo hodnotu null, pokud je dokument kořenový) pro definování pozice dokumentu ve stromu a jeho viditelnosti ladicímu programu.  
   
-4. Volání [IDebugDocumentHelper::AddDBCSText](../winscript/reference/idebugdocumenthelper-adddbcstext.md) nebo [IDebugDocumentHelper::AddUnicodeText](../winscript/reference/idebugdocumenthelper-addunicodetext.md) pro definování textového dokumentu. (Toto můžete volat vícekrát, pokud dokument se stáhne postupně jako v případě prohlížeče.)  
+4. Pro definování textu dokumentu zavolejte [idebugdocumenthelper –:: AddDBCSText](../winscript/reference/idebugdocumenthelper-adddbcstext.md) nebo [Idebugdocumenthelper –:: AddUnicodeText](../winscript/reference/idebugdocumenthelper-addunicodetext.md) . (Tyto můžou být volány víckrát, pokud se dokument stahuje přírůstkově, jako v případě prohlížeče.)  
   
-5. Volání [IDebugDocumentHelper::DefineScriptBlock](../winscript/reference/idebugdocumenthelper-definescriptblock.md) k definování oblastí pro každý blok skriptu a přidruženého skriptovacího stroje.  
+5. Zavolejte [idebugdocumenthelper –::D efinescriptblock](../winscript/reference/idebugdocumenthelper-definescriptblock.md) pro definování rozsahů pro každý blok skriptu a přidružené skriptovací stroje.  
   
-## <a name="implementing-iactivescriptsitedebug"></a>Iactivescriptsitedebug – implementace  
- K implementaci [IActiveScriptSiteDebug::GetDocumentContextFromPosition](../winscript/reference/iactivescriptsitedebug-getdocumentcontextfromposition.md), získat odpovídající zadanou webovou stránku pomocné rutiny a pak získat počátečního dokumentu v kontextu daného zdroje odsazení nastavte následujícím způsobem:  
+## <a name="implementing-iactivescriptsitedebug"></a>Implementace Iactivescriptsitedebug –  
+ K implementaci [iactivescriptsitedebug –:: GetDocumentContextFromPosition](../winscript/reference/iactivescriptsitedebug-getdocumentcontextfromposition.md), získání pomocné rutiny odpovídající dané lokalitě a získání počátečního posunu dokumentu pro daný zdrojový kontext následujícím způsobem:  
   
 ```cpp
 pddh->GetScriptBlockInfo(dwSourceContext, NULL, &ulStartPos, NULL);  
 ```  
   
- V dalším kroku pomocí Pomocníka pro vytvoření nového dokumentu kontextu daného znaku posunu:  
+ Dále pomocí pomocné rutiny vytvořte nový kontext dokumentu pro daný posun znaku:  
   
 ```cpp
 pddh->CreateDebugDocumentContext(ulStartPos + uCharacterOffset, cChars, &pddcNew);  
 ```  
   
- K implementaci [IActiveScriptSiteDebug::GetRootApplicationNode](../winscript/reference/iactivescriptsitedebug-getrootapplicationnode.md), jednoduše zavolejte `IDebugApplication::GetRootNode` (zděděno z [IRemoteDebugApplication::GetRootNode](../winscript/reference/iremotedebugapplication-getrootnode.md)).  
+ Pro implementaci [iactivescriptsitedebug –:: GetRootApplicationNode](../winscript/reference/iactivescriptsitedebug-getrootapplicationnode.md)jednoduše zavolejte `IDebugApplication::GetRootNode` (zděděné z [Iremotedebugapplication –:: GetRootNode](../winscript/reference/iremotedebugapplication-getrootnode.md)).  
   
- K implementaci [IDebugDocumentHelper::GetDebugApplicationNode](../winscript/reference/idebugdocumenthelper-getdebugapplicationnode.md), jednoduše vrátí `IDebugApplication` jste původně vytvořili pomocí Správce ladění procesu.  
+ K implementaci [idebugdocumenthelper –:: GetDebugApplicationNode](../winscript/reference/idebugdocumenthelper-getdebugapplicationnode.md)jednoduše vraťte `IDebugApplication`, který jste původně vytvořili pomocí Správce ladění procesů.  
   
-## <a name="the-optional-idebugdocumenthost-interface"></a>Volitelné idebugdocumenthost – rozhraní  
- Hostitel může poskytnout implementaci [idebugdocumenthost – rozhraní](../winscript/reference/idebugdocumenthost-interface.md) pomocí [IDebugDocumentHelper::SetDebugDocumentHost](../winscript/reference/idebugdocumenthelper-setdebugdocumenthost.md) nabízí větší kontrolu nad pomocné rutiny. Tady jsou některé z klíčových věcí rozhraní hostitele umožňuje provádět:  
+## <a name="the-optional-idebugdocumenthost-interface"></a>Volitelné rozhraní Idebugdocumenthost –  
+ Hostitel může poskytnout implementaci [rozhraní idebugdocumenthost –](../winscript/reference/idebugdocumenthost-interface.md) pomocí [Idebugdocumenthelper –:: SetDebugDocumentHost](../winscript/reference/idebugdocumenthelper-setdebugdocumenthost.md) a dát mu tak větší kontrolu nad pomocníkem. Tady jsou některé klíčové věci, které rozhraní hostitele umožňuje:  
   
-- Přidání pomocí textu [IDebugDocumentHelper::AddDeferredText](../winscript/reference/idebugdocumenthelper-adddeferredtext.md) tak, aby hostitel není nutné poskytnout skutečnými znaky okamžitě. Pokud znaky jsou ve skutečnosti nepotřebujete, bude volat pomocné rutiny [IDebugDocumentHost::GetDeferredText](../winscript/reference/idebugdocumenthost-getdeferredtext.md) na hostiteli.  
+- Přidejte text pomocí [idebugdocumenthelper –:: AddDeferredText](../winscript/reference/idebugdocumenthelper-adddeferredtext.md) , aby hostitel nemusel ihned zadávat skutečné znaky. Pokud jsou tyto znaky skutečně požadovány, bude pomoc volat [idebugdocumenthost –:: GetDeferredText](../winscript/reference/idebugdocumenthost-getdeferredtext.md) na hostiteli.  
   
-- Přepište výchozí barevné zvýrazňování syntaxe poskytuje pomocné rutiny. Volání pomocné rutiny [IDebugDocumentHost::GetScriptTextAttributes](../winscript/reference/idebugdocumenthost-getscripttextattributes.md) k určení barevné zvýraznění pro rozsah znaků návrat na jeho výchozí implementace, pokud hostitel `E_NOTIMPL`.  
+- Přepsat výchozí barvy syntaxe poskytované pomocníkem. Pomoc volá [idebugdocumenthost –:: GetScriptTextAttributes](../winscript/reference/idebugdocumenthost-getscripttextattributes.md) k určení barvy pro určitý rozsah znaků, který se vrátí k výchozí implementaci, pokud hostitel vrátí `E_NOTIMPL`.  
   
-- Zadejte řídící neznámou dokumentu kontextů vytvořené pomocné rutiny implementací [IDebugDocumentHost::OnCreateDocumentContext](../winscript/reference/idebugdocumenthost-oncreatedocumentcontext.md). To umožňuje hostiteli přepsání funkce výchozí implementaci kontextu dokumentu.  
+- Poskytněte řízení neznámé pro kontexty dokumentů vytvořené pomocníkem implementací [idebugdocumenthost –:: OnCreateDocumentContext](../winscript/reference/idebugdocumenthost-oncreatedocumentcontext.md). To umožňuje hostiteli přepsat funkčnost výchozí implementace kontextu dokumentu.  
   
-- Zadejte název cesty v systému souborů pro dokument. Některé ladění uživatelských rozhraní pomocí to umožňující uživateli upravit a uložit změny do dokumentu. [IDebugDocumentHost::NotifyChanged](../winscript/reference/idebugdocumenthost-notifychanged.md) se volá se, aby upozornil hostitele po uložení dokumentu.  
+- Zadejte název cesty v systému souborů pro dokument. Některé ladění uživatelská rozhraní toto používá, aby uživatel mohl upravovat a ukládat změny v dokumentu. [Idebugdocumenthost –:: NotifyChanged](../winscript/reference/idebugdocumenthost-notifychanged.md) je volána pro oznamování hostitele po uložení dokumentu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přehled ladění aktivních skriptů](../winscript/active-script-debugging-overview.md)

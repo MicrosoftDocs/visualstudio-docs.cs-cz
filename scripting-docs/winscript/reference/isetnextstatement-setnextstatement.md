@@ -1,5 +1,5 @@
 ---
-title: ISetNextStatement::SetNextStatement | Dokumentace Microsoftu
+title: 'ISetNextStatement –:: SetNextStatement | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3f4add20384684b24a630a0799c50a9aaae58034
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e8b940e603deb0aa9715e89b49eb1afdd28832ac
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786292"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571907"
 ---
 # <a name="isetnextstatementsetnextstatement"></a>ISetNextStatement::SetNextStatement
-Tato metoda aktualizuje další kontext kódu, která může spustit skript překladač.  
+Tato metoda aktualizuje další kontext kódu, který překladač skriptu může spustit.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,13 +36,13 @@ HRESULT SetNextStatement(
   
 #### <a name="parameters"></a>Parametry  
  `pStackFrame`  
- [in] Ukazatel na objekt rámce zásobníku.  
+ pro Ukazatel na objekt rámce zásobníku.  
   
  `pCodeContext`  
- [in] Ukazatel na objekt kontextu kódu.  
+ pro Ukazatel na objekt kontextu kódu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
@@ -50,5 +50,5 @@ HRESULT SetNextStatement(
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [ISetNextStatement – rozhraní](../../winscript/reference/isetnextstatement-interface.md)

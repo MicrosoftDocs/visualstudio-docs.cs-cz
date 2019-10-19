@@ -1,5 +1,5 @@
 ---
-title: Výčet JsDebugReadMemoryFlags | Dokumentace Microsoftu
+title: Výčet JsDebugReadMemoryFlags | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c908fdbf17b13b84355dff208b7f3106bfc72087
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a1757678f20a01221ae46e1535d3190cd463d724
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830459"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571699"
 ---
 # <a name="jsdebugreadmemoryflags-enumeration"></a>Výčet JsDebugReadMemoryFlags
 Příznaky pro určení chování při čtení paměti  
@@ -35,13 +35,13 @@ enum JsDebugReadMemoryFlags{   None = 0,   JsDebugAllowPartialRead= 0x1} JsDebug
   
 ### <a name="values"></a>Hodnoty  
   
-|Název|Popis|  
+|Name|Popis|  
 |----------|-----------------|  
-|`JsDebugAllowPartialRead`|Označuje, že volající vyžaduje úspěšné pouze pokud úspěšné čtení část paměti operace čtení. Pokud je nastaveno, bude vyvolána chyba E_JsDEBUG_INVALID_MEMORY_ADDRESS pouze pokud je "Adresa" neplatná. Pokud tento příznak není zaškrtnut, bude vyvolána chyba E_JsDEBUG_INVALID_MEMORY_ADDRESS, pokud libovolnou část požadované paměti nečitelná.|  
-|`None`|Označuje, že volající vyžaduje výchozí chování pro ReadMemory.|  
+|`JsDebugAllowPartialRead`|Označuje, že volající chce, aby operace čtení proběhla úspěšně, pokud byla pouze část paměti úspěšně načtena. Pokud je tato možnost nastavena, bude vyvolána chyba E_JsDEBUG_INVALID_MEMORY_ADDRESS pouze v případě, že adresa je neplatná. Pokud je tento příznak nejasný, bude vyvolána chyba E_JsDEBUG_INVALID_MEMORY_ADDRESS, pokud kterákoli část požadované paměti byla nečitelná.|  
+|`None`|Označuje, že volající chce výchozí chování pro readMemory –.|  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace skriptovacích rozhraní systému Windows](../../winscript/reference/windows-script-interfaces-reference.md)

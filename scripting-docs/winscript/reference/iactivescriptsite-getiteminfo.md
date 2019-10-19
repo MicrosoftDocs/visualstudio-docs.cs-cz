@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSite::GetItemInfo | Dokumentace Microsoftu
+title: 'IActiveScriptSite:: GetItemInfo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 997245f8e4fd43ac2162587f07e4c8711af7caac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3c0458f42466a264c30a440b1b14a028a2457f12
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992735"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570925"
 ---
 # <a name="iactivescriptsitegetiteminfo"></a>IActiveScriptSite::GetItemInfo
-Umožňuje získat informace o položce přidán s skriptovací stroj [IActiveScript::AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md) metody.  
+Umožňuje skriptovacímu stroji získat informace o položce přidané pomocí metody [IActiveScript:: AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,34 +40,34 @@ HRESULT GetItemInfo(
   
 #### <a name="parameters"></a>Parametry  
  `pstrName`  
- [in] Název přidružený k položce, jak je uvedeno v [IActiveScript::AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md) metody.  
+ pro Název přidružený k položce, jak je uvedeno v metodě [IActiveScript:: AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md) .  
   
  `dwReturnMask`  
- [in] Bitová maska určující, jaké informace o položce by měla být vrácena. Skriptovací modul by měl požádat o minimální množství informací je to možné, protože některé z návratových parametrů (například `ITypeInfo`) může trvat docela dlouho načíst nebo vytvořit. Může být kombinací následujícího:  
+ pro Bitová maska určující, jaké informace o položce mají být vráceny. Skriptovací modul by měl vyžadovat minimální možný objem informací, protože některé návratové parametry (například `ITypeInfo`) mohou trvat značnou dobu, než se načtou nebo vygenerují. Může být kombinací následujících hodnot:  
   
-|Value|Význam|  
+|Hodnota|Význam|  
 |-----------|-------------|  
-|SCRIPTINFO_IUNKNOWN|Vrátí `IUnknown` rozhraní pro tuto položku.|  
-|SCRIPTINFO_ITYPEINFO|Vrátí `ITypeInfo` rozhraní pro tuto položku.|  
+|SCRIPTINFO_IUNKNOWN|Vrátí rozhraní `IUnknown` pro tuto položku.|  
+|SCRIPTINFO_ITYPEINFO|Vrátí rozhraní `ITypeInfo` pro tuto položku.|  
   
  `ppunkItem`  
- [out] Adresa proměnné, která přijímá ukazatel `IUnknown` rozhraní přidružené k dané položce. Můžete používat skriptovací stroj `IUnknown::QueryInterface` metodu k získání `IDispatch` rozhraní pro položku. Tento parametr přijímá hodnotu NULL, pokud `dwReturnMask` nezahrnuje SCRIPTINFO_IUNKNOWN hodnotu. Také pokud neexistuje žádný objekt přidružený název položky; přijímá hodnotu NULL Tento mechanismus umožňuje vytvořit jednoduchou třídu při přidání pojmenované položky s příznakem SCRIPTITEM_CODEONLY nastavit [IActiveScript::AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md) metody.  
+ mimo Adresa proměnné, která obdrží ukazatel na rozhraní `IUnknown` přidružené k dané položce. Skriptovací stroj může pomocí metody `IUnknown::QueryInterface` získat rozhraní `IDispatch` pro položku. Tento parametr obdrží hodnotu NULL, pokud `dwReturnMask` nezahrnuje hodnotu SCRIPTINFO_IUNKNOWN. Také obdrží hodnotu NULL, pokud k názvu položky není přidružen žádný objekt; Tento mechanismus slouží k vytvoření jednoduché třídy, pokud byla pojmenovaná položka přidána s příznakem SCRIPTITEM_CODEONLY nastaveným v metodě [IActiveScript:: AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md) .  
   
  `ppTypeInfo`  
- [out] Adresa proměnné, která přijímá ukazatel `ITypeInfo` rozhraní přidružené k položce. Tento parametr přijímá hodnotu NULL, pokud `dwReturnMask` nezahrnuje SCRIPTINFO_ITYPEINFO hodnotu, nebo pokud informace o typu není k dispozici pro tuto položku. Pokud není k dispozici informace o typu, objektu nelze zdroje událostí a název vazby musí dají realizovat s využitím `IDispatch::GetIDsOfNames` metody. Všimněte si, `ITypeInfo` rozhraní načíst popisuje položky coclass (TKIND_COCLASS), protože objekt může podporovat více rozhraní a události. Pokud položka podporuje `IProvideMultipleTypeInfo` rozhraní, `ITypeInfo` načíst rozhraní je stejný jako pozici nula `ITypeInfo` , který by byl získán, pomocí `IProvideMultipleTypeInfo::GetInfoOfIndex` metody.  
+ mimo Adresa proměnné, která obdrží ukazatel na rozhraní `ITypeInfo` přidružené k položce. Tento parametr obdrží hodnotu NULL, pokud `dwReturnMask` nezahrnuje hodnotu SCRIPTINFO_ITYPEINFO, nebo pokud pro tuto položku nejsou k dispozici informace o typu. Pokud informace o typu nejsou k dispozici, objekt nemůže mít zdrojové události a vazba názvu musí být realizovaná pomocí metody `IDispatch::GetIDsOfNames`. Všimněte si, že rozhraní `ITypeInfo` načteno popisuje třídu coclass (TKIND_COCLASS) položky, protože objekt může podporovat více rozhraní a rozhraní události. Pokud položka podporuje rozhraní `IProvideMultipleTypeInfo`, načtené `ITypeInfo` rozhraní je stejné jako index nula `ITypeInfo`, který by byl získán pomocí metody `IProvideMultipleTypeInfo::GetInfoOfIndex`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
 |Návratová hodnota|Význam|  
 |------------------|-------------|  
-|`S_OK`|Úspěch.|  
+|`S_OK`|Nástup.|  
 |`E_INVALIDARG`|Argument byl neplatný.|  
 |`E_POINTER`|Byl zadán neplatný ukazatel.|  
 |`TYPE_E_ELEMENTNOTFOUND`|Položka se zadaným názvem nebyla nalezena.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda načte jenom informace o indikován `dwReturnMask` parametr; to zvyšuje výkon. Například pokud `ITypeInfo` rozhraní není potřeba pro některou položku, se jednoduše nezadá v `dwReturnMask`.  
+ Tato metoda načte pouze informace, které jsou označeny parametrem `dwReturnMask`; Tím se zlepší výkon. Například pokud `ITypeInfo` rozhraní není pro položku nutné, není určena pouze v `dwReturnMask`.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)

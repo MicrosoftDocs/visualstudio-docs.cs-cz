@@ -1,5 +1,5 @@
 ---
-title: Návěstí nebylo nalezeno | Dokumentace Microsoftu
+title: Popisek nebyl nalezen | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,24 +14,24 @@ ms.assetid: 79e32926-b03f-457b-997c-2bb2ec8a1ec5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 72b63c699b09081e843f36daeec3fcc556ebaf4a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4acfb93808a588ed7efb4e256627f816e26a0137
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007370"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573785"
 ---
 # <a name="label-not-found"></a>Návěstí nebylo nalezeno
-Provedli jste odkaz na popisek, který neexistuje. Popisky lze použít k označení bloky kódu, ale v rámci zadaného oboru, musí být jedinečný.  
+Vytvořili jste odkaz na popisek, který neexistuje. Popisky lze použít k označení bloků kódu, ale v rámci zadaného rozsahu musí být jedinečné.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Zkontrolujte, že píšete není název popisku.  
+- Ujistěte se, že jste nezadali název popisku.  
   
-- Zkontrolujte všechny odkazy na jmenovky se provedly popisky, které byly definovány v aktuálním oboru (to zahrnuje dopředné definic).  
+- Zajistěte, aby všechny odkazy na štítky byly vytvořeny na jmenovky, které byly definovány v aktuálním oboru (včetně předávajících definic).  
   
-## <a name="see-also"></a>Viz také  
- [Příkaz s popiskem](../../javascript/reference/labeled-statement-javascript.md)   
- [Switch – příkaz](../../javascript/reference/switch-statement-javascript.md)   
- [BREAK – příkaz](../../javascript/reference/break-statement-javascript.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [příkazu s popisky](../../javascript/reference/labeled-statement-javascript.md)  
+   [příkazu switch](../../javascript/reference/switch-statement-javascript.md)  
+   [příkazu break](../../javascript/reference/break-statement-javascript.md)  
  [continue – příkaz](../../javascript/reference/continue-statement-javascript.md)

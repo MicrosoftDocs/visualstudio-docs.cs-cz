@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugprocess::createbreakpoint – metoda | Dokumentace Microsoftu
+title: 'IJsDebugProcess:: Createbreakpoint – – metoda | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b398b93c2e7b5ad43abd35d385407b39c0c980f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2b0a4d595a11dc54829c467a0aace9601042fa08
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62557969"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575095"
 ---
 # <a name="ijsdebugprocesscreatebreakpoint-method"></a>IJsDebugProcess::CreateBreakPoint – metoda
-Nastaví zarážku na pozici zadaného dokumentu.  
+Nastaví zarážku na zadané pozici dokumentu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,24 +39,24 @@ HRESULT CreateBreakPoint(
   
 #### <a name="parameters"></a>Parametry  
  `documentId`  
- [in] Ukazatel na IDebugDocumentText.  
+ pro Ukazatel na IDebugDocumentText –.  
   
  `characterOffset`  
- [in] Znak posun od začátku souboru.  
+ pro Posun znaků od začátku souboru.  
   
  `characterCount`  
- [in] Délka textu dokumentu, ve kterém být vložena zarážka.  
+ pro Délka textu dokumentu, do nějž má být vložena zarážka  
   
  `isEnabled`  
- [in] Určuje, zda je povolena zarážka.  
+ pro Určuje, zda je povolena zarážka.  
   
  `ppDebugBreakPoint`  
- [out] Objekt představující zarážku, který byl vytvořen.  
+ mimo Objekt představující zarážku, která byla vytvořena.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IJsDebugProcess – rozhraní](../../winscript/reference/ijsdebugprocess-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugframe::getName – metoda | Dokumentace Microsoftu
+title: 'IJsDebugFrame:: GetName – Metoda | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 314a365a76533343ef14db513856a7ab16168677
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e78bd7c5b63737cd1a34d50ca6629eb173f40efb
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62558226"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573871"
 ---
 # <a name="ijsdebugframegetname-method"></a>IJsDebugFrame::GetName – metoda
-Získá popisný název tohoto rámce zásobníku.  
+Získá uživatelsky přívětivý název rámce zásobníku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,12 +35,12 @@ HRESULT GetName(
   
 #### <a name="parameters"></a>Parametry  
  `pName`  
- [out] Název rámce zásobníku.  
+ mimo Název rámce zásobníku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IJsDebugFrame – rozhraní](../../winscript/reference/ijsdebugframe-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Extendeddebugpropertyinfo – struktura | Dokumentace Microsoftu
+title: Struktura Extendeddebugpropertyinfo – | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1fe0eef00d2bf064a8a002925f4ba5607d36f31c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 09f3c5a219fca9ec9b881e2ae8363aae4d48e03f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955178"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575839"
 ---
 # <a name="extendeddebugpropertyinfo-structure"></a>ExtendedDebugPropertyInfo – struktura
-Rozšiřuje `DebugPropertyInfo` strukturu s další členy, chcete-li charakterizovat rozšířené vlastnosti.  
+Rozšiřuje strukturu `DebugPropertyInfo` o další členy pro charakterizaci rozšířené vlastnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +48,7 @@ typedef struct ExtendedDebugPropertyInfo{
   
 ## <a name="members"></a>Členové  
  `dwValidFields`  
- Výčtový datový typ, používá k určení, která pole jsou inicializovány.  
+ Výčtový datový typ použitý k určení, která pole jsou inicializována.  
   
  `bstrName`  
  Název vlastnosti v rámci kontextu.  
@@ -60,32 +60,32 @@ typedef struct ExtendedDebugPropertyInfo{
  Hodnota vlastnosti jako formátovaný řetězec.  
   
  `bstrFullName`  
- Celý název vlastnosti.  
+ Úplný název vlastnosti.  
   
  `dwAttrib`  
- Výčet, který určuje příznaky pro atributy vlastnosti ladění.  
+ Výčet, který určuje příznaky pro atributy vlastností ladění.  
   
  `pDebugProp`  
- `IDebugProperty` objekt odpovídající této `ExtendedDebugPropertyInfo`.  
+ `IDebugProperty` objekt odpovídající tomuto `ExtendedDebugPropertyInfo`.  
   
  `nDISPID`  
- Identifikátor odeslání.  
+ ID odeslání.  
   
  `nType`  
- Rozšířené vlastnosti typu.  
+ Rozšířený typ vlastnosti.  
   
  `varValue`  
- Rozšířené vlastnosti hodnotu, pokud lze zobrazit v typu VARIANT.  
+ Hodnota rozšířené vlastnosti, pokud se může vejít do varianty.  
   
  `plbValue`  
- Počet bajtů skutečná data hodnoty vlastnosti.  
+ Skutečné datové bajty hodnoty vlastnosti.  
   
  `pDebugExtProp`  
- `IDebugExtendedProperty` objekt odpovídající této `ExtendedDebugPropertyInfo`.  
+ `IDebugExtendedProperty` objekt odpovídající tomuto `ExtendedDebugPropertyInfo`.  
   
-## <a name="see-also"></a>Viz také  
- [Debugpropertyinfo – struktura](../../winscript/reference/debugpropertyinfo-structure.md)   
- [Idebugproperty – rozhraní](../../winscript/reference/idebugproperty-interface.md)   
- [Idebugextendedproperty – rozhraní](../../winscript/reference/idebugextendedproperty-interface.md)   
- [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [struktury debugpropertyinfo –](../../winscript/reference/debugpropertyinfo-structure.md)  
+ @No__t_1 [rozhraní idebugproperty –](../../winscript/reference/idebugproperty-interface.md)  
+ @No__t_1 [rozhraní idebugextendedproperty –](../../winscript/reference/idebugextendedproperty-interface.md)  
+ [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)    
  [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)

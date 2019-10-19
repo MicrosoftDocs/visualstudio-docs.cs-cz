@@ -1,5 +1,5 @@
 ---
-title: IProcessDebugManager::CreateApplication | Dokumentace Microsoftu
+title: 'IProcessDebugManager –:: CreateApplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 10d7f2246b327393a810170f5b133f2885186c3a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5be4c67168a43ec405a6d4ed857b9772fdddd1e9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944811"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577113"
 ---
 # <a name="iprocessdebugmanagercreateapplication"></a>IProcessDebugManager::CreateApplication
-Vytvoří nový objekt ladění aplikací pro tuto aplikaci.  
+Vytvoří nový objekt ladění aplikace pro tuto aplikaci.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,18 +37,18 @@ HRESULT CreateApplication(
   
 #### <a name="parameters"></a>Parametry  
  `ppda`  
- [out] Objekt ladění aplikace pro tuto aplikaci.  
+ mimo Objekt aplikace ladění pro tuto aplikaci.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Objekt vytvořený pomocí této metody nemá žádný název a není přidán do běhu seznamu aplikací. Použití `IProcessDebugManager::AddApplication` přidání ladění aplikace do seznamu aplikací.  
+ Objekt vytvořený touto metodou nemá žádný název a není přidaný do seznamu spuštěných aplikací. K přidání ladicí aplikace do seznamu aplikací použijte `IProcessDebugManager::AddApplication`.  
   
-## <a name="see-also"></a>Viz také  
- [IProcessDebugManager Interface](../../winscript/reference/iprocessdebugmanager-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní IProcessDebugManager –](../../winscript/reference/iprocessdebugmanager-interface.md)  
  [IProcessDebugManager::AddApplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)

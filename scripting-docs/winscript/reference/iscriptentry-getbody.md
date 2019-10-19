@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::GetBody | Dokumentace Microsoftu
+title: 'Iscriptentry –:: GetBody | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7f8f1ad24660401d575af2724b788387fd546af8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aba6019f4729f1b4a31933a4ca93c0eddf6159a2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787876"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575490"
 ---
 # <a name="iscriptentrygetbody"></a>IScriptEntry::GetBody
-Vrátí text, který odpovídá do těla `IScriptEntry` skriptovém bloku, blok funkce nebo skriptletu.  
+Vrátí text, který odpovídá textu `IScriptEntry` bloku skriptu, bloku funkce nebo skriptletu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,16 +37,16 @@ HRESULT GetBody(
   
 #### <a name="parameters"></a>Parametry  
  `pbstr`  
- [out] Text, který je v těle jednoho z následujících akcí:  
+ mimo Text v těle jedné z následujících:  
   
-- `IScriptEntry` Bloku skriptu  
+- Blok skriptu `IScriptEntry`  
   
-- `IScriptEntry` Funkce v bloku – funkce  
+- Funkce `IScriptEntry` v bloku funkce  
   
-- `IScriptEntry` Skriptletu obslužné rutiny události  
+- Obslužná rutina události `IScriptEntry` skriptletu  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
@@ -54,5 +54,5 @@ HRESULT GetBody(
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IScriptEntry – rozhraní](../../winscript/reference/iscriptentry-interface.md)

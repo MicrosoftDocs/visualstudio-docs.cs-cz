@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::AddGlobalExpressionContextProvider | Microsoft Docs
+title: 'IDebugApplication –:: AddGlobalExpressionContextProvider | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 278811ae7c7f853396efb5f41a92a5350176943a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 429e87def1e17a6abac92ce2d3538960659cfaeb
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991098"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573465"
 ---
 # <a name="idebugapplicationaddglobalexpressioncontextprovider"></a>IDebugApplication::AddGlobalExpressionContextProvider
-Přidá zprostředkovatele kontextu globální výraz do této aplikace.  
+Přidá do této aplikace zprostředkovatele kontextu globálního výrazu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,21 +38,21 @@ HRESULT AddGlobalExpressionContextProvider(
   
 #### <a name="parameters"></a>Parametry  
  `pdsfs`  
- [in] Zprostředkovatel globální kontext pro přidání do této aplikace.  
+ pro Globální zprostředkovatel kontextu, který se má přidat do této aplikace.  
   
  `pdwCookie`  
- [out] Soubor cookie, který slouží k odebrání tohoto zprostředkovatele kontextu globálním výrazu aplikace.  
+ mimo Soubor cookie, který se používá k odebrání tohoto zprostředkovatele kontextu globálního výrazu z aplikace.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda přidá poskytovatele kontextu globální výraz do této aplikace.  
+ Tato metoda přidá do této aplikace zprostředkovatele kontextu globálního výrazu.  
   
-## <a name="see-also"></a>Viz také  
- [Idebugapplication – rozhraní](../../winscript/reference/idebugapplication-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní IDebugApplication –](../../winscript/reference/idebugapplication-interface.md)  
  [IDebugApplication::RemoveGlobalExpressionContextProvider](../../winscript/reference/idebugapplication-removeglobalexpressioncontextprovider.md)

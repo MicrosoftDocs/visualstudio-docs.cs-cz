@@ -1,5 +1,5 @@
 ---
-title: Byl očekáván ')' v regulárním výrazu (JavaScript) | Dokumentace Microsoftu
+title: V regulárním výrazu (JavaScript) byl očekáván znak ') | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,23 +14,23 @@ ms.assetid: 2087ba1d-9783-4d40-b609-e8542f579f7f
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7daf5d876f68168ce0b58ea2cc9b52a309107bc6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 7c10449df9ef3331949695b7423da3eb08b65433
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446528"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577542"
 ---
 # <a name="expected--in-regular-expression-javascript"></a>V regulárním výrazu byl očekáván znak ')' (JavaScript)
-Proběhl pokus o vytvoření zachycení regulárních výrazů, kontrolní výraz nebo skupiny, ale neobsahuje pravou závorku. Závorky mají několik účely v regulárních výrazech. Především se používají k zachycení dílčí výrazy, zadejte kontrolních výrazů nebo seskupení vzory tak, aby položky lze považovat za jednu jednotku podle *, +,?, a tak dále.  
+Pokusili jste se vytvořit zachycení regulárního výrazu, kontrolní výraz nebo skupinu, ale neobsahovaly uzavírací závorky. Kulaté závorky mají v regulárních výrazech několik účelů. Primárně se používají k zachycení dílčích výrazů, k určení kontrolních výrazů nebo ke seskupování vzorů, aby bylo možné položky zacházet jako s jednou jednotkou *, +,? a tak dále.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Přidáte úplně vpravo pravými závorkami.  
+- Přidejte pravé kulaté závorky.  
   
     > [!NOTE]
-    > Pokud chcete najít jeden závorky, před něj zpětné lomítko - \\(– tak, aby nebyl interpretován jako znak zvláštní podle [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)].  
+    > Pokud chcete, aby se shodovala s jednou závorkou, vystavte ji pomocí zpětného lomítka-\\ (-tak, že není interpretována jako speciální znak [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)].  
   
-## <a name="see-also"></a>Viz také  
- [Objekt regulárního výrazu](../../javascript/reference/regular-expression-object-javascript.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [objektu regulárního výrazu](../../javascript/reference/regular-expression-object-javascript.md)  
  [Syntaxe regulárního výrazu (JavaScript)](https://msdn.microsoft.com/library/1400241x)

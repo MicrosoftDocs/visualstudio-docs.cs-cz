@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugStackFrames::Reset | Dokumentace Microsoftu
+title: 'IEnumDebugStackFrames –:: resetovat | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 76cb09ef9456f0dccf3bd034914c9988dd0ff187
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ddd97d60d40eaa15a5ed3e17cc87a0d9ffb197cf
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963335"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574866"
 ---
 # <a name="ienumdebugstackframesreset"></a>IEnumDebugStackFrames::Reset
-Návrat na začátek sekvence výčtu.  
+Obnoví posloupnost výčtu na začátek.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,17 +34,17 @@ HRESULT Reset();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Tato metoda nemá žádné parametry.  
+ Tato metoda nepřijímá žádné parametry.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda návrat na začátek sekvence výčtu.  
+ Tato metoda obnoví posloupnost výčtu na začátek.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IEnumDebugStackFrames – rozhraní](../../winscript/reference/ienumdebugstackframes-interface.md)

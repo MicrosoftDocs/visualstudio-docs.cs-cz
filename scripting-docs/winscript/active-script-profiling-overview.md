@@ -1,5 +1,5 @@
 ---
-title: Přehled profilace aktivních skriptů | Dokumentace Microsoftu
+title: Přehled profilace aktivních skriptů | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,35 +13,35 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 777d20ecb51b09b282f88dc08464727b9ff2a945
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 2ce6f7fe29fca2cd17c3dfcce76dac40e422aba4
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432980"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572729"
 ---
 # <a name="active-script-profiling-overview"></a>Přehled profilace aktivních skriptů
-[Aktivní rozhraní Profiler skriptů](../winscript/reference/active-script-profiler-interfaces.md) povolit profilaci skriptovací stroje. Aktivní profilace skriptu se skládá z následujících částí:  
+[Rozhraní profileru aktivních skriptů](../winscript/reference/active-script-profiler-interfaces.md) umožňují profilování skriptovacího stroje. Profilace aktivních skriptů se skládá z následujících částí:  
   
-- Modul jazyka  
+- Jazykový modul  
   
 - Hostitel  
   
 - profiler  
   
-## <a name="language-engine"></a>Modul jazyka  
- Modul jazyka spustí skript. Poskytuje metody, které umožní profilování kód skriptu, jak se spouští. Když je povolená profilace, jazyk modul přijímá identifikátor třídy (CLSID) profileru objekt modelu COM jako argument. Vytvoří instanci objektu COM profileru a pak zavolá do profileru, pokud dojde k různým událostem.  
+## <a name="language-engine"></a>Jazykový modul  
+ Jazykový modul skript spustí. Poskytuje metody, které umožňují profilování kódu skriptu při jeho spuštění. Když je profilace povolená, modul jazyka převezme identifikátor třídy (CLSID) objektu COM profileru jako argument. Vytvoří instanci objektu modelu COM profileru a potom zavolá do profileru, když dojde k různým událostem.  
   
- Implementuje modul jazyka [iactivescriptprofilercontrol – rozhraní](../winscript/reference/iactivescriptprofilercontrol-interface.md).  
+ Jazykový modul implementuje [rozhraní IActiveScriptProfilerControl](../winscript/reference/iactivescriptprofilercontrol-interface.md).  
   
 > [!NOTE]
-> [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] CLR kontroluje JS_PROFILER proměnnou prostředí při vytváření k určení, zda by měla být povolená profilace. Pokud tato proměnná je nastavena na identifikátor CLSID profileru, modul runtime jazyka vytvoří instanci objektu COM profileru, použití hodnotu proměnné k určení, které profileru, chcete-li vytvořit.  
+> Modul runtime [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] při vytváření kontroluje proměnnou prostředí JS_PROFILER, aby určil, zda má být povoleno profilování. Pokud je tato proměnná nastavená na CLSID profileru, modul runtime jazyka vytvoří instanci objektu modelu COM profileru pomocí hodnoty proměnné k určení, který Profiler se má vytvořit.  
   
 ## <a name="host"></a>Hostitel  
- Hostitel vytvoří modul jazyka a poskytuje modul jazyka pomocí skriptů, které má být proveden. Inteligentního hostitele také poskytuje kontext dokumentu, který je možné poskytovat lepší informace při ladění nebo profilování pomocí ladicího programu a profileru.  
+ Hostitel vytvoří jazykový modul a poskytuje jazykový modul se skripty, které mají být spuštěny. Inteligentní hostitel také poskytuje kontext dokumentu, který může použít ladicí program nebo profiler k poskytování lepších informací při ladění nebo profilování.  
   
 ## <a name="profiler"></a>profiler  
- Pokud dojde k různým událostem profiler obdrží volání z modulu jazyka. Profiler musí být registrován jako objekt modelu COM a musí implementovat [iactivescriptprofilercallback – rozhraní](../winscript/reference/iactivescriptprofilercallback-interface.md) rozhraní.  
+ Profiler přijme volání z jazykového modulu, když dojde k různým událostem. Profiler musí být zaregistrován jako objekt modelu COM a musí implementovat rozhraní [rozhraní iactivescriptprofilercallback –](../winscript/reference/iactivescriptprofilercallback-interface.md) .  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Rozhraní profileru aktivních skriptů](../winscript/reference/active-script-profiler-interfaces.md)

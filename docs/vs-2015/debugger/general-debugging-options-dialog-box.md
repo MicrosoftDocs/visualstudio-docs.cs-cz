@@ -1,5 +1,5 @@
 ---
-title: Obecné, ladění, dialogové okno Možnosti | Dokumentace Microsoftu
+title: Obecné, ladění, dialogové okno Možnosti | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -22,167 +22,167 @@ caps.latest.revision: 50
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 47db517bfb75d81785e910d1dd166ac83ddb2fcb
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 6c53af4a8e0f42708ab94d7206a9c0cc54819798
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66261661"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573542"
 ---
 # <a name="general-debugging-options-dialog-box"></a>Obecné, ladění, dialogové okno Možnosti
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Nástroje / Možnosti / ladění / Obecné** stránka umožňuje nastavit následující možnosti:  
+Na stránce**Nástroje/možnosti/ladění/obecné** lze nastavit následující možnosti:  
   
- **Zeptat se před smazáním všech zarážek**  
- Vyžaduje potvrzení před dokončením **smazat všechny zarážky** příkazu.  
+ **Dotázat se před smazáním všech zarážek**  
+ Vyžaduje potvrzení před dokončením příkazu **Odstranit všechny zarážky** .  
   
  **Přerušit všechny procesy při přerušení jednoho procesu**  
- Současně ukončí všechny procesy, ke kterým je připojen ladicí program, když dojde k přerušení.  
+ Současně přeruší všechny procesy, ke kterým je připojen ladicí program, když dojde k přerušení.  
   
- **Přerušit, pokud výjimky kříží třídu AppDomain nebo spravované/nativní hranice**  
- Ve spravovaném nebo kombinovaném režimu ladění, může modul CLR zachytit výjimky, které překračují hranice aplikační domény nebo spravované/nativní hranice, pokud jsou splněny následující podmínky:  
+ **Přerušit při výjimkách mezi doménou AppDomain nebo spravované/nativní hranice**  
+ V případě ladění spravovaného nebo kombinovaného režimu může modul common language runtime zachytit výjimky, které překračují hranice aplikační domény, nebo spravované/nativní hranice, pokud jsou splněné následující podmínky:  
   
- 1\) když nativní kód volá spravovaný kód pomocí zprostředkovatele komunikace s objekty COM a spravovaný kód vyvolá výjimku. Zobrazit [představení zprostředkovatele komunikace s objekty COM](https://msdn.microsoft.com/library/8bd62e68-383d-407f-998b-29aa0ce0fd67).  
+ 1 \), když nativní kód volá spravovaný kód pomocí zprostředkovatele komunikace s objekty COM a spravovaný kód vyvolá výjimku. Viz [Úvod do zprostředkovatele komunikace s objekty COM](https://msdn.microsoft.com/library/8bd62e68-383d-407f-998b-29aa0ce0fd67).  
   
- 2\) když spravovaný kód spuštěný v aplikační doméně 1 volá spravovaný kód v aplikační doméně 2, a vyvolá výjimku, kód v aplikační doméně 2. Zobrazit [programování pomocí domén aplikace](https://msdn.microsoft.com/bd36055b-56bd-43eb-b4d8-820c37172131).  
+ 2 \) Pokud spravovaný kód spuštěný v aplikační doméně 1 volá spravovaný kód v aplikační doméně 2 a kód v aplikační doméně 2 vyvolá výjimku. Viz téma [programování s aplikačními doménami](https://msdn.microsoft.com/bd36055b-56bd-43eb-b4d8-820c37172131).  
   
- 3\) když kód volá funkci pomocí reflexe a funkce vyvolá výjimku. Zobrazit [reflexe](https://msdn.microsoft.com/library/d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775).  
+ 3 \), když kód volá funkci pomocí reflexe a funkce vyvolá výjimku. Viz [reflexe](https://msdn.microsoft.com/library/d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775).  
   
- V 2) a 3), je výjimka někdy zachycena spravovaným kódem v `mscorlib` místo modul common language runtime. Tato možnost nemá vliv na zastavení při výjimkách zachycených podle `mscorlib`.  
+ V 2) a 3) je výjimka někdy zachycena spravovaným kódem v `mscorlib` namísto modulu CLR (Common Language Runtime). Tato možnost neovlivňuje přerušení u výjimek zachycených `mscorlib`.  
   
  **Povolit ladění na úrovni adres**  
- Umožňuje používat pokročilé funkce pro ladění na úrovni adresy ( **zpětný překlad** okně **zaregistruje** okna a zarážky adresy).  
+ Povoluje rozšířené funkce pro ladění na úrovni adresy (okno **zpětný překlad** , okno **Registry** a zarážky adres).  
   
  **Zobrazit zpětný překlad, pokud není k dispozici zdroj**  
- Automaticky zobrazí **zpětný překlad** okno při pokusu o ladění kódu pro zdroj, který je k dispozici.  
+ Automaticky zobrazí okno **zpětný překlad** při pokusu o ladění kódu, pro který není k dispozici zdroj.  
   
  **Povolit filtry zarážek**  
- Umožňuje nastavit filtry zarážky tak, že se ovlivní pouze specifické procesy, vlákna nebo počítače.  
+ Umožňuje nastavit filtry na zarážekch, aby ovlivnily pouze konkrétní procesy, vlákna nebo počítače.  
   
- **Povolit Pomocníka pro výjimky**  
- Pouze pro spravovaný kód. Spravované výjimky otevřít dialogové okno pomocníka výjimky.  Zobrazit [pomocníka pro výjimky](https://msdn.microsoft.com/library/992892ac-9d52-44cc-bf09-b44bfc5befeb).  
+ **Povolit pomocníka pro výjimky**  
+ Pouze pro spravovaný kód. Spravované výjimky otevřete dialogové okno Pomocník pro výjimky.  Viz [Pomocník pro výjimky](https://msdn.microsoft.com/library/992892ac-9d52-44cc-bf09-b44bfc5befeb).  
   
- **Vrátit zásobník volání v případě neošetřených výjimek**  
- Způsobí, že **zásobník volání** okno vrátit zásobník volání do bodu předtím, než došlo k neošetřené výjimce.  
+ **Vrátit zásobník volání v neošetřených výjimkách**  
+ Způsobí, že okno **zásobník volání** vrátí zpět zásobník volání do bodu před tím, než došlo k neošetřené výjimce.  
   
- **Povolit volbu pouze vlastní kód**  
- Ladicí program zobrazí a vstoupí do uživatelského kódu ("můj kód") pouze, ignoruje systémový kód a jiný kód, který je optimalizován nebo který nemá žádné symboly ladění.  
+ **Povolit Pouze můj kód**  
+ Ladicí program zobrazí pouze postup v uživatelském kódu ("můj kód"), ignoruje systémový kód a jiný kód, který je optimalizován nebo který neobsahuje symboly ladění.  
   
- **Zobrazit všechny členy pro objekty jiných uživatelů v oknech proměnných (pouze Visual Basic)**  
- Zapne zobrazení neveřejných členů v objektech, které jsou v neuživatelském kódu (ne "můj kód").  
+ **Zobrazit všechny členy pro objekty, které nejsou uživatelem, v oknech proměnných (jenom Visual Basic)**  
+ Zapne zobrazení neveřejných členů v objektech, které jsou v neuživatelském kódu (nikoli "můj kód").  
   
- **Varovat při žádném uživatelském kódu při spuštění**  
- Když ladění začíná s povolena funkce pouze můj kód, tato možnost vás upozorní, pokud neexistuje žádný uživatelský kód ("můj kód").  
+ **Upozornit, pokud při spuštění žádný uživatelský kód**  
+ Když se ladění spustí s povoleným Pouze můj kód, tato možnost vás upozorní, pokud není k dispozici žádný uživatelský kód ("můj kód").  
   
- **.NET Framework, povolit krokování zdrojových kódů**  
- Umožňuje ladicímu programu vstup do zdroje rozhraní.NET Framework. Povolením této možnosti automaticky zakážete pouze můj kód rozhraní .NET Framework symboly budou staženy do umístění mezipaměti. Můžete změnit umístění mezipaměti v **možnosti** dialogovém okně **ladění** kategorie, **symboly** stránky.  
+ **Povolit krokování zdroje .NET Framework**  
+ Umožňuje ladicímu programu krokovat se .NET Framework zdroji. Když se tato možnost povolí automaticky, zakáže se Pouze můj kód .NET Framework symboly se stáhnou do umístění mezipaměti. Umístění mezipaměti můžete změnit v dialogovém okně **Možnosti** , kategorie **ladění** , stránka **symboly** .  
   
  **Krokovat přes vlastnosti a operátory (pouze spravované)**  
- Ladicí program zabraňuje krokování s vnořením do vlastností a operátorů ve spravovaném kódu.  
+ Brání ladicímu programu v krokování do vlastností a operátorů ve spravovaném kódu.  
   
- **Povolit vyhodnocování vlastností a jiných implicitních volání funkcí**  
- Zapne automatické hodnocení vlastností a implicitní funkce se volá v oknech proměnných a **QuickWatch** dialogové okno.  
+ **Povolit vyhodnocování vlastností a další volání implicitních funkcí**  
+ Zapne automatické vyhodnocení vlastností a volání implicitních funkcí v oknech proměnné a v dialogovém okně **QuickWatch** .  
   
- **Volání funkce pro převod řetězce na objektech v oknech proměnné (C# a pouze pro jazyk JavaScript)**  
- Provede volání rozhraní řetězec implicitní převod při vyhodnocování objektů v oknech proměnných. Proto je výsledek zobrazen jako řetězec namísto názvu typu. Platí pouze při ladění v kódu jazyka C#. Toto nastavení lze přepsat pomocí atributu DebuggerDisplay (viz [pomocí atributu DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md)).  
+ **Funkce pro převod řetězce volání u objektů v oknech proměnnýchC# (a jenom JavaScript)**  
+ Provede volání převodu implicitního řetězce při vyhodnocování objektů v oknech proměnných. Proto je výsledek zobrazen jako řetězec namísto názvu typu. Platí pouze při ladění v C# kódu. Toto nastavení může být přepsáno atributem DebuggerDisplay (viz [použití atributu DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md)).  
   
  **Povolit podporu zdrojového serveru**  
- Sdělí ladicímu programu sady Visual Studio, aby získal zdrojové soubory ze zdrojových serverů, které implementují SrcSrv (`srcsrv.dll`) protokolu. Team Foundation Server a ladění nástroje pro Windows jsou dva servery zdroje, které implementují protokol. Další informace o nastavení SrcSrv naleznete v dokumentaci k ladění nástroje pro Windows. Kromě toho najdete v článku [zadejte symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
+ Instruuje ladicí program sady Visual Studio, aby získal zdrojové soubory ze zdrojových serverů, které implementují protokol SrcSrv (`srcsrv.dll`). Team Foundation Server a ladicí nástroje pro Windows jsou dva zdrojové servery, které implementují protokol. Další informace o instalaci SrcSrv najdete v dokumentaci k ladicím nástrojům pro systém Windows. Kromě toho si přečtěte téma [určení symbolu (. pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
   
 > [!IMPORTANT]
-> Protože čtení souborů PDB může spustit libovolný kód v souborech, ujistěte se, že serveru důvěřujete.  
+> Vzhledem k tomu, že čtení souborů. pdb může spustit libovolný kód v souborech, ujistěte se, že důvěřujete serveru.  
   
- **Vytisknout diagnostickou zprávu zdrojového serveru do okna výstup**  
- Pokud je povolena podpora zdrojového serveru, toto nastavení zapne diagnostické zobrazení.  
+ **Vytiskne diagnostické zprávy zdrojového serveru do okna výstup.**  
+ Pokud je povolená podpora zdrojového serveru, toto nastavení zapne diagnostické zobrazení.  
   
- **Povolit zdrojový server pro sestavení částečné důvěryhodnosti (pouze spravované)**  
- Pokud je povolena podpora zdrojového serveru, toto nastavení potlačí výchozí chování nenačítání zdrojů pro sestavení částečné důvěryhodnosti.  
+ **Povolí zdrojový server pro sestavení částečné důvěryhodnosti (pouze spravované).**  
+ Pokud je povolená podpora zdrojového serveru, toto nastavení přepíše výchozí chování při načítání nenačtených zdrojů pro sestavení s částečným vztahem důvěryhodnosti.  
   
- **Zvýraznění celého řádku pro zarážky a aktuální příkaz**  
- Pokud ladicí program zvýrazní zarážku nebo aktuální příkaz, jde zvýraznit celý řádek.  
+ **Pro zarážky a aktuální příkaz zvýraznit celý řádek**  
+ Když ladicí program zvýrazní zarážku nebo aktuální příkaz, zvýrazní celý řádek.  
   
- **Vyžadovat zdrojové soubory přesně shodovaly s originály**  
- Dává pokyn ladicímu programu k ověření, že zdrojový soubor odpovídá verzi zdrojového kódu k sestavení spustitelného souboru, který ladíte. Pokud verze neodpovídá, budete vyzváni k vyhledání odpovídajícího zdroje. Pokud není nalezen odpovídající zdroj, zdrojový kód se nezobrazí během ladění.  
+ **Vyžadovat, aby se zdrojové soubory přesně shodovaly s původní verzí**  
+ Instruuje ladicí program, aby ověřil, zda zdrojový soubor odpovídá verzi zdrojového kódu používané k sestavení spustitelného souboru, který ladíte. Pokud se verze neshoduje, zobrazí se výzva k vyhledání odpovídajícího zdroje. Pokud se nenalezne shodný zdroj, během ladění se nezobrazí zdrojový kód.  
   
  **Přesměrovat text z okna výstup do příkazového podokna**  
- Odešle všechny zprávy, které by se obvykle zobrazily v ladicího programu **výstup** okna **okamžité** okno místo.  
+ Odesílá všechny zprávy ladicího programu, které by se obvykle zobrazovaly v okně **výstup** , do okna **okamžité** .  
   
- **Zobrazit nezpracovanou strukturu objektů v oknech proměnných.**  
- Vypne všechny úpravy zobrazení struktury objektu. Další informace o přizpůsobení zobrazení naleznete v tématu [vytváření vlastních zobrazení spravovaných objektů](../debugger/create-custom-views-of-dot-managed-objects.md).  
+ **Zobrazit nezpracovanou strukturu objektů v oknech proměnných**  
+ Vypne všechna přizpůsobení zobrazení struktury objektů. Další informace o úpravách zobrazení najdete v tématu [Vytvoření vlastních zobrazení spravovaných objektů](../debugger/create-custom-views-of-managed-objects.md).  
   
- **Potlačení optimalizace JIT při načtení modulu (pouze spravované)**  
- Zakáže optimalizaci JIT spravovaného kódu, když je modul je načten a JIT je zkompilován, zatímco je připojen ladicí program. Zakázání optimalizace může usnadnit práci ladění některých problémů, i když za cenu výkonu. Pokud používáte pouze můj kód, potlačení JIT optimalizace může způsobit kódu nepocházejícího od uživatele jako uživatelského kódu ("můj kód").  
+ **Potlačit optimalizaci JIT při načtení modulu (pouze spravované)**  
+ Zakáže optimalizaci JIT spravovaného kódu při načtení modulu a při připojení ladicího programu je zkompilován kompilátor JIT. Zakázáním optimalizace může být snazší ladit některé problémy, i když na úkor výkonu. Pokud používáte Pouze můj kód, potlačení optimalizace JIT může způsobit, že se neuživatelský kód zobrazí jako uživatelský kód ("můj kód").  
   
- **Varovat, pokud žádné symboly při spuštění (pouze nativní)**  
- Zobrazí dialogové okno upozornění při pokusu o ladění programu, pro které ladicí program neobsahuje žádné informace o symbolu.  
+ **Upozornit, pokud při spuštění nejsou žádné symboly (jenom nativní)**  
+ Při pokusu o ladění programu, pro který ladicí program neobsahuje žádné informace o symbolech, se zobrazí dialogové okno s upozorněním.  
   
- **Varovat, pokud je při spuštění zakázáno ladění skriptu**  
- Zobrazí dialogové okno upozornění, když ladicí program se spustí s ladění skriptů zakázáno.  
+ **Zobrazit upozornění, pokud je při spuštění zakázáno ladění skriptu**  
+ Zobrazí dialogové okno s upozorněním, když se ladicí program spustí se zakázaným laděním skriptu.  
   
- **Načtení exportů dll**  
- Načte tabulky exportu knihovny dll. Informace o symbolech z tabulky exportu knihovny dll může být užitečné při práci s Windows zprávy, postupů Windows (WindowProcs), objekty COM nebo zařazování nebo libovolnou knihovnou dll pro kterou nemáte symboly. Informace o exportu knihovny dll pro čtení zahrnují nadměrné. Proto tato možnost je ve výchozím nastavení vypnuta.  
+ **Načtení exportů DLL**  
+ Načte exportní tabulky knihovny DLL. Informace o symbolech z tabulek exportu knihovny DLL mohou být užitečné, pokud pracujete se zprávami systému Windows, postupy systému Windows (WindowProcs), objekty COM nebo zařazování nebo libovolnou knihovnou DLL pro kterou nemáte symboly. Čtení informací o exportu knihovny DLL zahrnuje režii. Proto tato možnost je ve výchozím nastavení vypnuta.  
   
- Chcete-li zjistit, jaké symboly jsou k dispozici v exportní tabulce knihovny DLL, použijte `dumpbin /exports`. Symboly jsou k dispozici pro všechny 32bitové verzi systému dll. V článku `dumpbin /exports` výstupu uvidíte přesný název funkce, včetně jiných než alfanumerických znaků. To je užitečné pro nastavení zarážky na funkci. Názvy funkcí z tabulky exportu knihovny dll může zobrazit ořezané jinde v ladicím programu. Volání jsou uvedena v pořadí volání s aktuální funkcí (nejhlouběji vnořených) nahoře. Další informace najdete v tématu [dumpbin/EXPORTS](https://msdn.microsoft.com/library/2971ab7e-4ee6-478b-9c85-cda42a4ce1bf).  
+ Chcete-li zjistit, jaké symboly jsou k dispozici v exportní tabulce knihovny DLL, použijte `dumpbin /exports`. Symboly jsou k dispozici pro všechny 32y systémové knihovny DLL. Načtením výstupu `dumpbin /exports` můžete zobrazit přesný název funkce, včetně jiných než alfanumerických znaků. To je užitečné pro nastavení zarážky na funkci. Názvy funkcí z tabulky exportu knihovny DLL mohou být v ladicím programu zkráceny jinde. Volání jsou uvedena v pořadí volání s aktuální funkcí (nejhlouběji vnořených) nahoře. Další informace najdete v tématu [Výpis paměti bin/EXPORTS](https://msdn.microsoft.com/library/2971ab7e-4ee6-478b-9c85-cda42a4ce1bf).  
   
  **Zobrazit diagram paralelních zásobníků zdola nahoru**  
- Určuje směr, ve kterém jsou zobrazeny balíčky v **paralelní zásobníky** okna.  
+ Určuje směr zobrazení zásobníků v okně **paralelní zásobníky** .  
   
- **Ignorovat výjimky přístupu k paměti GPU, pokud zapsaná data nezměnila hodnotu**  
+ **Ignorovat výjimky přístupu k paměti GPU, pokud nezapsaná data nezměnila hodnotu**  
  Ignoruje konflikty časování, které byly zjištěny během ladění, pokud se data nezměnila. Další informace najdete v tématu [ladění kódu GPU](../debugger/debugging-gpu-code.md).  
   
  **Použít spravovaný režim kompatibility**  
- Nahradí výchozí modul ladění pomocí starší verze, chcete-li povolit tyto scénáře:  
+ Nahradí výchozí ladicí stroj starší verzí, aby bylo možné tyto scénáře povolit:  
   
-- Používáte jazyk rozhraní .NET Framework než C#, VB, nebo F# , který obsahuje vlastní vyhodnocení výrazu (to zahrnuje C++vyhodnocovací).  
+- Používáte .NET Framework jazyk jiný než C#, vb nebo F# , který poskytuje svůj vlastní vyhodnocovací filtr výrazů (zahrnuje C++/CLI).  
   
-- Chcete povolit funkce upravit a pokračovat pro projekty v jazyce C++ při ladění ve smíšeném režimu.  
+- V případě ladění ve smíšeném režimu chcete povolit C++ možnost upravit a pokračovat pro projekty.  
   
-  Všimněte si, že zvolíte kompatibility spravovaného režimu zakáže některé funkce, které jsou implementovány pouze ve výchozím ladicím modulu.  
+  Všimněte si, že volba spravovaného režimu kompatibility zakáže některé funkce, které jsou implementované jenom ve výchozím ladicím modulu.  
   
-  **Použít režim kompatibility nativní**  
-  Pokud je vybraná tato možnost, ladicí program používá nativní ladicí program sady Visual Studio 2010 místo nové nativní ladicí program.  
+  **Použít nativní režim kompatibility**  
+  Pokud je vybrána tato možnost, ladicí program použije nativní ladicí program sady Visual Studio 2010 místo nového nativního ladicího programu.  
   
-  Tuto možnost by měla používat při ladění kódu .NET, C++, protože nového modulu pro ladění nepodporuje vyhodnocování výrazů .NET C++. Povolení nativní režim kompatibility zakáže však řadu funkcí, které závisí na aktuální implementace ladicí program k provozu. Například starý modul nemá mnoho vizualizéry pro předdefinované typy, jako jsou `std::string` v projektech Visual Studio 2015.   Chcete zajistit optimální práci ladění v těchto případech použijte projektů Visual Studio 2013.  
+  Tuto možnost byste měli použít při ladění kódu .NET C++ , protože nový ladicí stroj nepodporuje vyhodnocování výrazů .NET. C++ Povolení nativního režimu kompatibility však zakáže mnoho funkcí, které závisí na aktuální implementaci ladicího programu. Starší verze modulu například nemá mnoho vizualizací pro předdefinované typy, jako je `std::string` v projektech sady Visual Studio 2015.  V těchto případech použijte Visual Studio 2013 projekty pro optimální prostředí ladění.  
   
-  **Použít starší verze vyhodnocovače výrazů C# a VB**  
-  Ladicí program použije vyhodnocovače výrazů Visual Studio 2013 C# /VB místo vyhodnocovače výrazů Visual Studio 2015 roslynu.  
+  **Použít starší verze C# a vyhodnocovací filtry výrazů VB**  
+  Ladicí program použije filtry výrazů Visual Studio 2013 C#/VB místo vyhodnocovacích vyhodnocení výrazu založeného na Roslyn sady Visual Studio 2015.  
   
-  **Upozornit při opakovaném použití vlastních vizualizérů ladění s potenciálně nebezpečnými procesy (pouze spravované)**  
-  Visual Studio vás upozorní, když používáte vlastní vizualizér, na kterém běží kód v procesu laděného procesu, protože by mohl být spuštěn nebezpečný kód.  
+  **Upozornit, když se používají vlastní vizualizace ladicího programu pro potenciálně nebezpečné procesy (jenom spravované)**  
+  Visual Studio vás upozorní, když používáte vlastní Vizualizér ladicího programu, který spouští kód v procesu laděného procesu, protože by mohl běžet nezabezpečený kód.  
   
-  **Povolit přidělování haldy při ladění Windows (pouze nativní)**  
-  Umožňuje haldy ladění systému windows k vylepšení diagnostiky haldy. Povolením této možnosti bude mít vliv na výkon ladění.  
+  **Povolit přidělování haldy ladění systému Windows (jenom nativní)**  
+  Povolí haldě ladění systému Windows vylepšení diagnostiky haldy. Povolení této možnosti ovlivní výkon ladění.  
   
-  **Povolit ladění uživatelských rozhraní nástroje pro XAML**  
-  Live Visual Tree a Live prozkoumejte vlastnost windows se zobrazí při spuštění ladění (F5) typ projektu podporovaná. Další informace najdete v tématu [vlastnosti kontrolovat XAML při ladění](../debugger/inspect-xaml-properties-while-debugging.md).  
+  **Povolit ladicí nástroje uživatelského rozhraní pro XAML**  
+  Živý vizuální strom a vlastnost prozkoumat v reálném čase se zobrazí při spuštění ladění (F5) podporovaného typu projektu. Další informace naleznete v tématu [Kontrola vlastností XAML při ladění](../debugger/inspect-xaml-properties-while-debugging.md).  
   
-  **Zobrazit náhled vybraných elementů v dynamickém vizuálním stromu**  
-  Prvek XAML, jehož kontext je vybraná také vybraný v **Live Visual Tree** okna.  
+  **Zobrazit náhled vybraných elementů v živém vizuálním stromu**  
+  V okně **živého vizuálního stromu** se také vybere element XAML, jehož kontext je vybraný.  
   
-  **Zobrazit nástroje runtime v aplikaci**  
-  Ukazuje, **Live Visual Tree** příkazy na panelu nástrojů v hlavním okně aplikace XAML, která je právě laděna. Tato možnost byla zavedena v aplikaci Visual Studio 2015 Update 2.  
+  **Zobrazit běhové nástroje v aplikaci**  
+  Zobrazuje příkazy **živého vizuálního stromu** na panelu nástrojů v hlavním okně aplikace XAML, které je laděno. Tato možnost byla představena v aktualizaci Visual Studio 2015 Update 2.  
   
-  **Při ladění povolit diagnostické nástroje**  
-  **Diagnostické nástroje** při ladění, zobrazí se okno. Další informace najdete v tématu [integrované v ladicím programu profilace](/visualstudio/profiling/running-profiling-tools-with-or-without-the-debugger).  
+  **Povolit Diagnostické nástroje při ladění**  
+  Při ladění se zobrazí okno **diagnostické nástroje** . Další informace najdete v tématu [profilování integrované v ladicím programu](/visualstudio/profiling/running-profiling-tools-with-or-without-the-debugger).  
   
-  **Zobrazit časem, který uplynul při ladění**  
-  V okně kódu zobrazí uplynulý čas dané metody volání při ladění.  
+  **Zobrazit uplynulý čas PerfTip při ladění**  
+  V okně Code (kód) se zobrazí uplynulý čas daného volání metody při ladění.  
   
-  **Povolit operaci upravit a pokračovat**  
-  Můžete použít upravit a pokračovat funkce při ladění.  
+  **Povolit úpravy a pokračovat**  
+  Během ladění můžete použít funkci upravit a pokračovat.  
   
-  **Povolit nativní upravit a pokračovat**  
-  Můžete použít upravit a pokračovat funkce při ladění nativního kódu C++. Další informace najdete v tématu [upravit a pokračovat (Visual C++)](../debugger/edit-and-continue-visual-cpp.md).  
+  **Povolit nativní úpravu a pokračování**  
+  Při ladění nativního C++ kódu můžete použít funkci upravit a pokračovat. Další informace najdete v tématu [Úpravy a pokračování (vizuál C++)](../debugger/edit-and-continue-visual-cpp.md).  
   
   **Použít změny při pokračování (jenom nativní)**  
-  Visual Studio automaticky zkompiluje a použije změny nezpracovaných kódu, které jste provedli, když budete pokračovat procesu ze stavu pozastavení. Pokud není vybrána, můžete použít změny pomocí položky "Použít změny kódu" v nabídce ladění.  
+  Visual Studio automaticky zkompiluje a použije všechny nedokončené změny v kódu, které jste provedli při pokračování procesu ze stavu přerušení. Pokud není vybrána, můžete použít změny pomocí položky použít změny kódu v nabídce ladění.  
   
-  **Upozornit na starý kód (pouze nativní)**  
-  Získáte upozornění na starý kód.  
+  **Upozornit na starý kód (jenom nativní)**  
+  Získejte upozornění na zastaralý kód.  
   
-  **Povolit předkompilování (pouze nativní)**  
-  Předkompilace je povolen.  
+  **Povolení předkompilování (pouze nativní)**  
+  Předkompilace je povolena.  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění v sadě Visual Studio](../debugger/debugging-in-visual-studio.md)

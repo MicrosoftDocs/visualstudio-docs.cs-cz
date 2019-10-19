@@ -1,5 +1,5 @@
 ---
-title: Rozhraní ladicího programu aktivních skriptů | Dokumentace společnosti Microsoft
+title: Rozhraní ladicího programu aktivních skriptů | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -14,21 +14,21 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ed8ff0361396deaaffd46f14ca1fc38869988593
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 477374d93e4d8d5139197dcd49fef0e930e5ff32
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63422452"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572698"
 ---
 # <a name="active-script-debugger-interfaces"></a>Rozhraní ladicího programu aktivních skriptů
-Soubory hlaviček activdbg.h a souboru activdbg100.h poskytují rozhraní, výčty a struktury uvedené v této části. Jsou určeny pro ladění skriptu.  
+Hlavičkové soubory activdbg. h a activdbg100. h poskytují rozhraní, výčty a struktury uvedené v této části. Jsou pro ladění skriptu.  
   
 > [!NOTE]
-> `IJSDebug*` Rozhraní a `IEnumJsStackFrames` rozhraní první se objevily v aplikaci Internet Explorer 11 pro ladění nativního kódu pomocí skriptu. Hlavičkový soubor pro tato rozhraní je jscript9diag.h.  
+> Rozhraní `IJSDebug*` a rozhraní `IEnumJsStackFrames` byly nejprve vydány v aplikaci Internet Explorer 11 pro ladění nativního kódu pomocí skriptu. Hlavičkový soubor pro tato rozhraní je Jscript9diag. h.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- Následující rozhraní povolit jazykově neutrální, nezávislá na hostitele ladění:  
+ Následující rozhraní umožňují jazykově neutrální ladění:  
   
 - [Konstanty, výčty a struktury ladicího programu aktivních skriptů](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)  
   
@@ -178,9 +178,9 @@ Soubory hlaviček activdbg.h a souboru activdbg100.h poskytují rozhraní, výč
   
 - [IWebAppDiagnosticsObjectInitialization – rozhraní](../../winscript/reference/iwebappdiagnosticsobjectinitialization-interface.md)  
   
-  V následující části jsou uvedeny konstanty, výčty a struktury pro ladění:  
+  V následující části jsou uvedeny konstanty, výčty a struktury používané pro ladění:  
   
 - [Konstanty, výčty a struktury ladicího programu aktivních skriptů](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přehled ladění aktivních skriptů](../../winscript/active-script-debugging-overview.md)

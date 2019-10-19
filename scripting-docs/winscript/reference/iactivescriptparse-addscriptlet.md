@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptParse::AddScriptlet | Dokumentace Microsoftu
+title: 'IActiveScriptParse:: AddScriptlet | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ee5d76060789118e9051c2d8dcc5fc570617f6a8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c1b4ac460afea1efd538c64224d84afef49d1a67
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62954951"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573528"
 ---
 # <a name="iactivescriptparseaddscriptlet"></a>IActiveScriptParse::AddScriptlet
-Přidá skriptlet kódu do skriptu. Tato metoda se používá v prostředích, kde trvalý stav souboru, který je vzájemně propojeny s dokumentem hostitele a hostitele je zodpovědný za obnovení skript, nikoli prostřednictvím `IPersist*` rozhraní. Primární příklady jsou skriptovací jazyky HTML, které umožňují skriptlety kód vložený v dokumentu HTML připojené na vnitřní události (například ONCLICK="button1.text='Exit" ").  
+Přidá do skriptu kód skriptletu. Tato metoda se používá v prostředích, kde je trvalý stav skriptu propojen s hostitelským dokumentem a hostitel je zodpovědný za obnovení skriptu, nikoli prostřednictvím rozhraní `IPersist*`. Hlavní příklady jsou skriptovací jazyky HTML, které umožňují připojení skriptlety kódu vloženého do dokumentu HTML k vnitřním událostem (například při kliknutí = "Button1. text =" Exit ").  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,56 +47,56 @@ HRESULT AddScriptlet(
   
 #### <a name="parameters"></a>Parametry  
  `pstrDefaultName`  
- [in] Adresa výchozí název, který chcete přidružit k skriptletu. Pokud skriptletu neobsahuje informace o názvech (stejně jako v předchozím příkladu ONCLICK), tento název se použije k identifikaci skriptletu. Pokud je tento parametr `NULL`, skriptovací stroj vyrábí jedinečný název v případě potřeby.  
+ pro Adresa výchozího názvu, který se má přidružit k skriptletu. Pokud skriptletu neobsahuje informace o pojmenování (jako v předchozím příkladu klikněte výše), tento název se použije k identifikaci skriptletu. Pokud je tento parametr `NULL`, skriptovací stroj vytvoří jedinečný název, pokud je to nutné.  
   
  `pstrCode`  
- [in] Adresa textu skriptletu k přidání. Výklad tohoto řetězce závisí na skriptovacím jazyce.  
+ pro Adresa skriptletu textu, který se má přidat Výklad tohoto řetězce závisí na skriptovacím jazyce.  
   
  `pstrItemName`  
- [in] Adresa vyrovnávací paměti, který obsahuje název položky přidružené k této skriptletu. Tento parametr navíc `pstrSubItemName`, určuje objekt, pro kterou je skriptletu obslužné rutiny události.  
+ pro Adresa vyrovnávací paměti, která obsahuje název položky přidružené k tomuto skriptletu. Tento parametr, kromě `pstrSubItemName`, identifikuje objekt, pro který je skriptletu obslužná rutina události.  
   
  `pstrSubItemName`  
- [in] Adresa vyrovnávací paměti, který obsahuje název `subobject` s názvem předmětu, se kterou souvisí tato skriptletu; tento název musí být nalezena v informace o typu s názvem položky. Tento parametr hodnotu NULL v případě, že skriptlet má být spojen s požadovanou pojmenovanou položku `subitem`. Tento parametr navíc `pstrItemName`, identifikuje konkrétní objektu, pro kterou je skriptletu obslužné rutiny události.  
+ pro Adresa vyrovnávací paměti obsahující název `subobject` pojmenované položky, ke které je přidružen tento skriptletu; Tento název musí být nalezen v informacích o typu pojmenované položky. Tento parametr má hodnotu NULL, pokud má být skriptletu přidružen k pojmenované položce namísto `subitem`. Tento parametr, kromě `pstrItemName`, identifikuje konkrétní objekt, pro který je skriptletu obslužná rutina události.  
   
  `pstrEventName`  
- [in] Adresa vyrovnávací paměti, který obsahuje název události, pro kterou je skriptletu obslužné rutiny události.  
+ pro Adresa vyrovnávací paměti obsahující název události, pro kterou je skriptletu obslužná rutina události.  
   
  `pstrDelimiter`  
- [in] Adresa oddělovače end skriptletu. Když `pstrCode` parametr je analyzován z toku textu, hostitel obvykle používá oddělovač, jako jsou například dvě jednoduché uvozovky ("), k zjištění konce skriptletu. Tento parametr určuje oddělovač, který používá hostitel a který umožňuje skriptovacímu stroji poskytovat některé podmíněné primitivní předzpracování (například nahrazení jednoduchou uvozovku ['] dvěma jednoduchými uvozovkami pro použití jako oddělovače). Jak přesně (a zda) skriptovací stroj umožňuje použití těchto informací závisí na skriptovacím stroji. Tento parametr nastavte na hodnotu NULL, pokud hostitel nepoužili oddělovač pro označení konce skriptletu.  
+ pro Adresa oddělovače end-skriptletu. Pokud je parametr `pstrCode` analyzován z datového proudu, hostitel obvykle používá oddělovač, například dvě jednoduché uvozovky (' ') k detekci konce skriptletu. Tento parametr určuje oddělovač, který hostitel použil, a umožňuje skriptovacímu stroji poskytovat nějaký podmíněný primitivní předzpracování (například nahrazení jednoduché uvozovky ['] dvěma jednoduchými uvozovkami pro použití jako oddělovače). Stejně tak, jak (a pokud) skriptovací stroj používá tyto informace, závisí na skriptovacím stroji. Nastavte tento parametr na hodnotu NULL, pokud hostitel nepoužil oddělovač k označení konce skriptletu.  
   
  `dwSourceContextCookie`  
- [in] Hodnota definované aplikací, která se používá pro účely ladění.  
+ pro Hodnota definovaná aplikací, která se používá pro účely ladění.  
   
  `ulStartingLineNumber`  
- [in] Založený na nule hodnota, která určuje, který řádek, začne analýza.  
+ pro Hodnota založená na nule, která určuje, na který řádek bude analýza začínat.  
   
  `dwFlags`  
- [in] Příznaky spojené se skriptletem. Může být kombinací následujícího:  
+ pro Příznaky přidružené k skriptletu. Může být kombinací následujících hodnot:  
   
 |Návratová hodnota|Význam|  
 |------------------|-------------|  
-|SCRIPTTEXT_ISVISIBLE|Označuje, že text skriptu by měly být viditelné (a tedy volatelný názvem) jako globální metoda v oboru názvu skriptu.|  
-|SCRIPTTEXT_ISPERSISTENT|Označuje, že by měla uložit kód přidaný během volání, pokud je uložen skriptovací stroj (například pomocí volání `IPersist*::Save`), nebo pokud skriptovací stroj obnoven pomocí přechodu zpět do stavu spuštění. Další informace o tomto stavu najdete v článku stavy se skriptovacím modulem.|  
+|SCRIPTTEXT_ISVISIBLE|Indikuje, že by měl být text skriptu viditelný (a proto se dá volat pomocí názvu) jako globální metoda v názvovém prostoru skriptu.|  
+|SCRIPTTEXT_ISPERSISTENT|Označuje, že kód přidaný během tohoto volání by měl být uložen, pokud je uložen skriptovací stroj (například prostřednictvím volání `IPersist*::Save`), nebo pokud je skriptovací modul resetován pomocí přechodu zpět do inicializovaného stavu. Další informace o tomto stavu najdete v tématu stavy skriptovacího stroje.|  
   
- `pbstrName` ,  
- [out] Skutečný název používaný k identifikaci skriptletu. Toto je v pořadí podle priority: název v textu skriptletu explicitně zadán, výchozí název zadaný v `pstrDefaultName`, nebo jedinečný název syntetizovat skriptovací modul.  
+ `pbstrName`,  
+ mimo Skutečný název, který slouží k identifikaci skriptletu. To má být v pořadí podle priority: název explicitně zadaný v skriptletu textu, výchozí název zadaný v `pstrDefaultName` nebo jedinečný název, který je vysyntetizuje skriptovací stroj.  
   
- `pexcepinfo` ,  
- [out] Adresa struktury obsahující informace o výjimce. Tato struktura by měl být vyplněno, pokud se vrátí DISP_E_EXCEPTION.  
+ `pexcepinfo`,  
+ mimo Adresa struktury obsahující informace o výjimce. Tato struktura by měla být vyplněna, pokud je vráceno DISP_E_EXCEPTION.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
 |Návratová hodnota|Význam|  
 |------------------|-------------|  
-|`S_OK`|Úspěch.|  
-|`DISP_E_EXCEPTION`|Při analýze skriptletu došlo k výjimce. `pexcepinfo` Parametr obsahuje informace o výjimce.|  
+|`S_OK`|Nástup.|  
+|`DISP_E_EXCEPTION`|Při analýze skriptletu došlo k výjimce. Parametr `pexcepinfo` obsahuje informace o výjimce.|  
 |`E_INVALIDARG`|Argument byl neplatný.|  
-|`E_NOTIMPL`|Tato metoda není podporována. skriptovací modul nepodporuje přidávání skriptlety zpracování událostí.|  
+|`E_NOTIMPL`|Tato metoda není podporována; skriptovací stroj nepodporuje přidávání skriptletyování událostí.|  
 |`E_POINTER`|Byl zadán neplatný ukazatel.|  
-|`E_UNEXPECTED`|Volání nebylo očekáváno (například skriptovací stroj má ještě nebyly načteny nebo inicializován) a proto se nezdařilo.|  
-|`OLESCRIPT_E_INVALIDNAME`|Zadaný výchozí název je neplatný v tomto skriptovací jazyk.|  
-|`OLESCRIPT_E_SYNTAX`|Ve skriptletu došlo k nespecifikované chybě syntaxe.|  
+|`E_UNEXPECTED`|Volání nebylo očekáváno (například skriptovací stroj ještě nebyl načten nebo inicializován), a proto selhal.|  
+|`OLESCRIPT_E_INVALIDNAME`|Zadaný výchozí název není v tomto skriptovacím jazyce platný.|  
+|`OLESCRIPT_E_SYNTAX`|V skriptletu došlo k nespecifikované chybě syntaxe.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScriptParse](../../winscript/reference/iactivescriptparse.md)

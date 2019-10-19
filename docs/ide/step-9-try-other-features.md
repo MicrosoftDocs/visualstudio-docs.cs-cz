@@ -1,5 +1,5 @@
 ---
-title: 'Krok 9: Vyzkoušení dalších funkcí'
+title: 'Krok 9: Vyzkoušejte jiné funkce'
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -10,14 +10,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aff87247afb79d62867da9e55f7a059192789d79
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: e5af132efde0c1a49e5404fa602363aab0554e6f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118851"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572463"
 ---
-# <a name="step-9-try-other-features"></a>Krok 9: Vyzkoušení dalších funkcí
+# <a name="step-9-try-other-features"></a>Krok 9: Vyzkoušejte jiné funkce
 Chcete-li získat další informace, zkuste změnit ikony a barvy, přidat časovač hry a zvuky. Chcete-li, aby hra byla náročnější, zkuste zvětšit hrací plochu a upravte časovač.
 
 Pokud si chcete stáhnout dokončenou verzi ukázky, přečtěte si [ukázku s kurzem kompletní porovnávací hru](https://code.msdn.microsoft.com/Complete-Matching-Game-4cffddba).
@@ -32,12 +32,12 @@ Pokud si chcete stáhnout dokončenou verzi ukázky, přečtěte si [ukázku s k
 - Přidejte časovač hry, který sleduje, jak dlouho hráči trvá, než vyhraje.
 
     > [!TIP]
-    > K tomu můžete přidat popisek pro zobrazení uplynulého času ve formuláři nad <xref:System.Windows.Forms.TableLayoutPanel>a přidat další časovač pro sledování času. Použijte kód ke spuštění časovače, když hráč zahájí hru, a zastavení časovače, jakmile hráč spojí poslední dvě ikony.
+    > K tomu můžete přidat popisek, který zobrazí uplynulý čas ve formuláři nad <xref:System.Windows.Forms.TableLayoutPanel> a do formuláře přidejte další časovač, abyste mohli sledovat čas. Použijte kód ke spuštění časovače, když hráč zahájí hru, a zastavení časovače, jakmile hráč spojí poslední dvě ikony.
 
 - Pokud hráč najde shodu, přidejte zvuk, jiný zvuk, když hráč odkryje dvě ikony, které neodpovídají, a třetí zvuk, když program znovu skryje ikony.
 
     > [!TIP]
-    > Chcete-li přehrát zvuky, můžete použít <xref:System.Media> obor názvů. Další informace najdete v tématu [přehráníC#zvuku v aplikaci model Windows Forms App ()](http://youtu.be/qOh4ooHg1UU) nebo [o tom, jak přehrát zvuk v Visual Basic](http://youtu.be/-4oPDeQrtMs) .
+    > Chcete-li přehrát zvuky, můžete použít obor názvů <xref:System.Media>. Další informace najdete v tématu [přehráníC#zvuku v aplikaci model Windows Forms App ()](http://youtu.be/qOh4ooHg1UU) nebo [o tom, jak přehrát zvuk v Visual Basic](http://youtu.be/-4oPDeQrtMs) .
 
 - Udělejte hru obtížnější tím, že zvětšíte hrací plochu.
 
@@ -48,8 +48,6 @@ Pokud si chcete stáhnout dokončenou verzi ukázky, přečtěte si [ukázku s k
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud si nevíte rady nebo máte otázky k programování, můžete zveřejnit svůj dotaz na jednom z diskuzních fór MSDN. Viz [Visual Basic Fórum](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral) a [vizuální C# Fórum](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral).
+- K dispozici jsou užitečné bezplatné video výukové materiály. Další informace o programování v Visual Basic najdete v tématu [Visual Basic základy: vývoj pro absolutní začátečníky](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners). Další informace o programování v C#nástroji najdete v tématu [ C# základy: vývoj pro absolutní začátečníky](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners).
 
-- K dispozici jsou užitečné bezplatné video výukové materiály. Další informace o programování v Visual Basic najdete v tématu [Visual Basic základy: Vývoj pro absolutní začátečníky](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners). Další informace o programování v vizuálů C#najdete v tématu [ C# základy: Vývoj pro absolutní začátečníky](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners).
-
-- Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si krok 8: Přidejte metodu k ověření, zda hráč zvítězil](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md).
+- Pokud se chcete vrátit k předchozímu kroku kurzu, přečtěte si [Krok 8: Přidání metody pro ověření, zda hráč zvítězil](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md).

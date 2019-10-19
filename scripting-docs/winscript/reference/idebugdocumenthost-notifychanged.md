@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHost::NotifyChanged | Dokumentace Microsoftu
+title: 'Idebugdocumenthost –:: NotifyChanged | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6e65383bcfe875f0e38fffc870d5176d86433d8f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a4fc0c744887eb3592c4d94c520f33da86812bfc
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939180"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72569185"
 ---
 # <a name="idebugdocumenthostnotifychanged"></a>IDebugDocumentHost::NotifyChanged
-Upozorňuje hostitele, že zdrojový dokument se uložil a že jeho obsah je třeba aktualizovat.  
+Upozorní hostitele, že byl uložen zdrojový soubor dokumentu a že jeho obsah by měl být obnoven.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,17 +34,17 @@ HRESULT NotifyChanged();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Tato metoda nemá žádné parametry.  
+ Tato metoda nepřijímá žádné parametry.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda upozorňuje hostitele, že zdrojový dokument se uložil a že jeho obsah je třeba aktualizovat.  
+ Tato metoda upozorní hostitele, že byl uložen zdrojový soubor dokumentu a že jeho obsah by měl být obnoven.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugDocumentHost – rozhraní](../../winscript/reference/idebugdocumenthost-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteDebugEx::OnCanNotJITScriptErrorDebug | Microsoft Docs
+title: 'Iactivescriptsitedebugex –:: OnCanNotJITScriptErrorDebug | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,17 +17,17 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4c643478da37b5a66c22b201ef8f8248df02e4ec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7358d2b372f0801b8c45816e1fc36018b37799b2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992346"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572179"
 ---
 # <a name="iactivescriptsitedebugexoncannotjitscripterrordebug"></a>IActiveScriptSiteDebugEx::OnCanNotJITScriptErrorDebug
-Informuje o tom, že hostitel o Chyba za běhu skriptu při ladění procesu Správce JIT ladicí program nenajde.  
+Informuje hostitele o chybě za běhu skriptu, když správce ladění procesu nenalezne ladicí program skriptu přesně v čase.  
   
- Implementace ladicího programu v hostiteli, zpracovávejte [IActiveScriptSiteDebug::OnScriptErrorDebug](../../winscript/reference/iactivescriptsitedebug-onscripterrordebug.md). Založené na akci uživatele, hostitele můžete připojit ladicí program a vrátit, nebo vrátit spouštění v ladicím programu OnScriptErrorDebug `pfEnterDebugger` parametru. Byste měli také implementovat toto rozhraní k odeslání oznámení o chybě za běhu i v případě, že neexistují žádné externí ladicích programů, které může být interpretován pomocí Správce ladění procesu.  
+ Chcete-li implementovat ladicí program na hostitele, měli byste zpracovat [iactivescriptsitedebug –:: OnScriptErrorDebug](../../winscript/reference/iactivescriptsitedebug-onscripterrordebug.md). Na základě akce uživatele může hostitel buď připojit ladicí program a vrátit se, nebo vrátit začátek ladicího programu v parametru OnScriptErrorDebug `pfEnterDebugger`. Toto rozhraní byste měli taky implementovat, aby se zobrazilo oznámení o chybě za běhu i v případě, že neexistují externí ladicí programy, které by bylo možné interpretovat pomocí Správce ladění procesů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,20 +40,20 @@ HRESULT OnCanNotJITScriptErrorDebug(
   
 #### <a name="parameters"></a>Parametry  
  `pErrorDebug`  
- [in] Chyba za běhu, ke které došlo.  
+ pro Došlo k chybě za běhu.  
   
  `pfCallOnScriptErrorWhenContinuingt`  
- [out] Zda má být volána [IActiveScriptSiteDebug::OnScriptErrorDebug](../../winscript/reference/iactivescriptsitedebug-onscripterrordebug.md) Pokud se uživatel rozhodne pokračovat bez ladění.  
+ mimo Určuje, zda má být volána možnost [iactivescriptsitedebug –:: OnScriptErrorDebug](../../winscript/reference/iactivescriptsitedebug-onscripterrordebug.md) , pokud se uživatel rozhodne pokračovat bez ladění.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Byste měli také implementovat toto rozhraní k odeslání oznámení.  
+ Toto rozhraní byste měli taky implementovat, aby se zobrazilo oznámení.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScriptSiteDebugEx – rozhraní](../../winscript/reference/iactivescriptsitedebugex-interface.md)

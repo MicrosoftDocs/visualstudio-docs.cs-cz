@@ -1,5 +1,5 @@
 ---
-title: Neočekávaný kvantifikátor (JavaScript) | Dokumentace Microsoftu
+title: Neočekávaný kvantifikátor (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,39 +14,39 @@ ms.assetid: ba6d34f9-2d6f-486c-a929-6cd9818be322
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 52b98875b560e4863a93849cf99c2f8756cd438a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2070ec6ad01eb62c6be9b6b9acfc91cba7bc863d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63005888"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572536"
 ---
 # <a name="unexpected-quantifier-javascript"></a>Neočekávaný kvantifikátor (JavaScript)
-Při vytváření vaší vyhledávací vzor regulárního výrazu, vytvoříte prvek modelu s faktorem neplatné opakování. Například vzor  
+Při vytváření vzoru hledání regulárního výrazu jste vytvořili prvek vzoru s neplatným faktorem opakování. Například vzor  
   
 ```js
 /^+/  
 ```  
   
- je neplatné. protože elementu ^ (začátku vstupu) nemůže mít faktor opakování. Následující tabulka uvádí prvky, které nelze mít faktory opakování.  
+ je neplatné, protože element ^ (začátek vstupu) nemůže mít faktor opakování. V následující tabulce jsou uvedeny prvky, které nemůžou mít faktory opakování.  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|^|Začátku vstupu|  
+|^|Začátek vstupu|  
 |$|Konec vstupu|  
 |\b|Hranice slova|  
-|\B|Mimoslovní hranic|  
+|\B|Hranice jiné než slova|  
 |*|Nula nebo více opakování|  
 |+|Jeden nebo více opakování|  
-|?|Žádný nebo jeden opakování|  
-|{n}|n opakování|  
-|{n,}|n nebo další opakování|  
-|{n,m}|Z n až m, včetně opakování|  
+|?|Nula nebo jedna opakování|  
+|n|n opakování|  
+|{n,}|n nebo více opakování|  
+|{n, m}|Od n do m opakování, včetně|  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Zajistěte, aby že vaše vyhledávací vzor prvek obsahuje pouze faktory právní opakování.  
+- Zajistěte, aby element vzoru hledání obsahoval pouze platné faktory opakování.  
   
-## <a name="see-also"></a>Viz také  
- [Objekt regulárního výrazu](../../javascript/reference/regular-expression-object-javascript.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [objektu regulárního výrazu](../../javascript/reference/regular-expression-object-javascript.md)  
  [Syntaxe regulárního výrazu (JavaScript)](https://msdn.microsoft.com/library/1400241x)

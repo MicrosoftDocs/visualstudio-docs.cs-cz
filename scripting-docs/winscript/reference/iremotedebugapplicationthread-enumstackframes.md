@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationThread::EnumStackFrames | Dokumentace Microsoftu
+title: 'Iremotedebugapplicationthread –:: EnumStackFrames | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 96ca35779ea9f113fc96e485f028f1e74058990a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7dc4c6798d006679ac93250175e9ca4d69683f0c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788445"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575284"
 ---
 # <a name="iremotedebugapplicationthreadenumstackframes"></a>IRemoteDebugApplicationThread::EnumStackFrames
-Vrátí enumerátor pro rámce zásobníku spojené s tímto vláknem.  
+Vrátí enumerátor pro rámce zásobníku přidružené k tomuto vláknu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +37,17 @@ HRESULT EnumStackFrames(
   
 #### <a name="parameters"></a>Parametry  
  `ppedsf`  
- [out] Čítač pro rámce zásobníku spojené s tímto vláknem.  
+ mimo Enumerátor pro rámce zásobníku přidružené k tomuto vláknu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda musí být volána z zarážku. Enumerátor rámce zásobníku by měl vrátit snímky spuštění v horní části zásobníku, počínaje nedávno vložené rámce.  
+ Tato metoda musí být volána v rámci zarážky. Enumerátor rámce zásobníku by měl vracet snímky začínající v horní části zásobníku počínaje posledním vloženým snímkem.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IRemoteDebugApplicationThread – rozhraní](../../winscript/reference/iremotedebugapplicationthread-interface.md)

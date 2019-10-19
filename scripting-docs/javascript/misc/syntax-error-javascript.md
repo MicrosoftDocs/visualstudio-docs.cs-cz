@@ -1,5 +1,5 @@
 ---
-title: Chyba syntaxe (JavaScript) | Dokumentace Microsoftu
+title: Chyba syntaxe (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,21 +14,21 @@ ms.assetid: e4a9d980-f3ef-4092-b192-bf4a45981d30
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f924dc1745dfe17265a750d4159f52643eb5c5ef
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 39a1d803229dd614d0022ca14eb79b39f27f88b8
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63006441"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575636"
 ---
 # <a name="syntax-error-javascript"></a>Chyba syntaxe (JavaScript)
-Vytvořen příkaz, který je v rozporu jeden nebo více pravidel gramatické [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)].  
+Vytvořili jste příkaz, který porušuje některá gramatická pravidla [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)].  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Zkontrolujte syntaxi aplikace na uvedené číslo řádku.  
+- Dvakrát ověřte syntaxi programu na označeném čísle řádku.  
   
-- Vyhledejte formát kulatých závorek nebo složených závorek.  
+- Vyhledejte nepřímo přímé závorky nebo složené závorky.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Error – objekt](../../javascript/reference/error-object-javascript.md)

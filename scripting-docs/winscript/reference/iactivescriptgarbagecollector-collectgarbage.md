@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptGarbageCollector::CollectGarbage | Dokumentace Microsoftu
+title: 'Iactivescriptgarbagecollector –:: CollectGarbage | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,15 +11,15 @@ caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: db8683534e449b2cdd8fcdb344c245d93da8fafc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0539ed2cb3540cf33ceaaa15827c3ca08c156698
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62954964"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573587"
 ---
 # <a name="iactivescriptgarbagecollectorcollectgarbage"></a>IActiveScriptGarbageCollector::CollectGarbage
-Hostitel aktivních skriptů volá tuto metodu za účelem spustit uvolňování paměti.  
+Aktivní Hostitel skriptu volá tuto metodu, aby se spustilo uvolňování paměti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -29,10 +29,10 @@ HRESULT CollectGarbage(        SCRIPTGCTYPE scriptgctype    );
   
 #### <a name="parameters"></a>Parametry  
  `scriptgctype`  
- [in] [Scriptgctype – výčet](../../winscript/reference/scriptgctype-enumeration.md) , který určuje, jestli se má provést normální nebo úplné uvolňování paměti.  
+ pro [Výčet scriptgctype –](../../winscript/reference/scriptgctype-enumeration.md) , který určuje, jestli se má provádět normální nebo vyčerpávající uvolňování paměti.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu HRESULT.  
+ Vrátí HRESULT.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScriptGarbageCollector – rozhraní](../../winscript/reference/iactivescriptgarbagecollector-interface.md)

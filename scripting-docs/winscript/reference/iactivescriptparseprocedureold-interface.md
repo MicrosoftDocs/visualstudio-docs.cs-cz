@@ -1,5 +1,5 @@
 ---
-title: Iactivescriptparseprocedureold – rozhraní | Dokumentace Microsoftu
+title: Rozhraní Iactivescriptparseprocedureold – | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,25 +17,25 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 520d3f1414447abfc7c018d36853b72aefbbf15f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 4558a0cab2aea9b56db2759bb80b1287cd33ce87
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63386173"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571422"
 ---
 # <a name="iactivescriptparseprocedureold-interface"></a>IActiveScriptParseProcedureOld – rozhraní
-Umožňuje textem zdrojového kódu pro postupy mají být přidány do skriptu. U interpretovaných skriptovací jazyky, které nemají nezávislé vývojovém prostředí, jako je například jazyk VBScript, získáte alternativní mechanismus (jiné než `IActiveScriptParse` nebo `IPersist*`) přidat skript procedury do oboru názvů.  
+Umožňuje přidat do skriptu text zdrojového kódu pro procedury. V případě interpretace skriptovacích jazyků, které nemají nezávislé vývojové prostředí, jako je například VBScript, tato možnost poskytuje alternativní mechanismus (jiný než `IActiveScriptParse` nebo `IPersist*`) pro přidání procedur skriptu do oboru názvů.  
   
 > [!NOTE]
-> Toto rozhraní je zastaralé nahrazený `IActiveScriptParseProcedure` rozhraní.  
+> Toto rozhraní je zastaralé namísto rozhraní `IActiveScriptParseProcedure`.  
   
 ## <a name="methods"></a>Metody  
- Kromě metod zděděných z `IUnknown`, `IActiveScriptParseProcedureOld` rozhraní poskytuje následující metody.  
+ Kromě metod zděděných z `IUnknown` rozhraní `IActiveScriptParseProcedureOld` zpřístupňuje následující metody.  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[IActiveScriptParseProcedureOld::ParseProcedureText](../../winscript/reference/iactivescriptparseprocedureold-parseproceduretext.md)|Analyzuje daný kód postupu a postup přidá do oboru názvů.|  
+|[IActiveScriptParseProcedureOld::ParseProcedureText](../../winscript/reference/iactivescriptparseprocedureold-parseproceduretext.md)|Analyzuje daný postup kódu a přidá proceduru do oboru názvů.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScriptParseProcedure](../../winscript/reference/iactivescriptparseprocedure.md)

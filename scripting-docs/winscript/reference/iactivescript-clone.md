@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::Clone | Dokumentace Microsoftu
+title: 'IActiveScript:: Clone | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bec912596c792a67f65434062bc0d0ed11bd3fb9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fbaad29cb31af26a0f26a1c679a900192fc77041
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935702"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575802"
 ---
 # <a name="iactivescriptclone"></a>IActiveScript::Clone
-Klonuje aktuální skriptovací stroj (bez jakékoli aktuální stav provádění), vrátí načíst skriptovací stroj, který nemá žádná lokalita v aktuálním vlákně. Vlastnosti tohoto nového skriptovacího stroje budou stejné vlastnosti, které by měly být původní skriptovací stroj v Pokud byly postoupí zpět do stavu spuštění.  
+Naklonuje aktuální skriptovací stroj (mínus aktuální stav spuštění) a vrátí načtený skriptovací stroj, který nemá v aktuálním vlákně žádný web. Vlastnosti tohoto nového skriptovacího modulu budou stejné jako vlastnosti, které by původní skriptovací stroj měl v případě, že byl přepnut zpátky do inicializovaného stavu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,24 +37,24 @@ HRESULT Clone(
   
 #### <a name="parameters"></a>Parametry  
  `ppscript`  
- [out] Adresa proměnné, která přijímá ukazatel [IActiveScript –](../../winscript/reference/iactivescript.md) rozhraní klonovaný skriptovací stroj. Hostitel musí vytvořit web a volání [IActiveScript::SetScriptSite](../../winscript/reference/iactivescript-setscriptsite.md) metoda u nového skriptovacího stroje předtím, než je v inicializovaném stavu a tedy použitelné.  
+ mimo Adresa proměnné, která přijímá ukazatel na rozhraní [IActiveScript](../../winscript/reference/iactivescript.md) naklonovaného skriptovacího modulu. Hostitel musí vytvořit lokalitu a volat metodu [IActiveScript:: SetScriptSite](../../winscript/reference/iactivescript-setscriptsite.md) v novém skriptovacím stroji předtím, než bude v inicializovaném stavu, a proto lze použít.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
 |Návratová hodnota|Význam|  
 |------------------|-------------|  
-|`S_OK`|Úspěch.|  
+|`S_OK`|Nástup.|  
 |`E_NOTIMPL`|Tato metoda není podporována.|  
 |`E_POINTER`|Byl zadán neplatný ukazatel.|  
-|`E_UNEXPECTED`|Volání nebylo očekáváno (například skriptovací stroj má ještě nebyly načteny nebo inicializován).|  
+|`E_UNEXPECTED`|Volání nebylo očekáváno (například skriptovací stroj ještě nebyl načten nebo inicializován).|  
   
 ## <a name="remarks"></a>Poznámky  
- `IActiveScript::Clone` Je metoda optimalizace `IPersist*::Save`, `CoCreateInstance`, a `IPersist*::Load`, takže se stav nové skriptovací modul by měl být stejný jako kdyby byly stavu původní skriptovací stroj uložit a načíst do nového skriptovacího stroje. V klonovaném skriptovací stroj jsou duplicitní položky s názvem, ale konkrétní objekt ukazatele pro každou položku jsou zapomněli a jsou získány pomocí [IActiveScriptSite::GetItemInfo](../../winscript/reference/iactivescriptsite-getiteminfo.md) metody. To umožňuje identické objektový model vlákno vstupní body (modelu objektu apartment) který se má použít.  
+ Metoda `IActiveScript::Clone` je optimalizace `IPersist*::Save`, `CoCreateInstance` a `IPersist*::Load`, takže stav nového skriptovacího stroje by měl být stejný, jako kdyby byl uložen do nového skriptovacího stroje a byl načten do nového skriptovacího stroje. Pojmenované položky jsou duplikovány v naklonovaném skriptovacím modulu, ale konkrétní ukazatele objektu pro každou položku jsou zapomenuté a jsou získány pomocí metody [IActiveScriptSite:: GetItemInfo](../../winscript/reference/iactivescriptsite-getiteminfo.md) . To umožňuje použít identický objektový model s vstupními body pro vlákno (model Apartment).  
   
- Tato metoda se používá pro hostitele s více vlákny serverů, které můžete spouštět více instancí stejného skriptu. Skriptovací stroj může vrátit `E_NOTIMPL`, v takovém hostiteli stejného výsledku dosáhnout duplikování trvalý stav a vytvořte novou instanci třídy skriptovací stroj s `IPersist*` rozhraní.  
+ Tato metoda se používá pro hostitele serverů s více vlákny, které mohou spouštět více instancí stejného skriptu. Skriptovací stroj může vracet `E_NOTIMPL`. v takovém případě může hostitel dosáhnout stejného výsledku tak, že duplikuje trvalý stav a vytvoří novou instanci skriptovacího stroje s rozhraním `IPersist*`.  
   
- Tuto metodu lze volat z vlákna znaky bez výsledkem znaky popisek hostitele objektů nebo [iactivescriptsite –](../../winscript/reference/iactivescriptsite.md) rozhraní.  
+ Tuto metodu lze volat z nezákladních vláken, aniž by došlo k nezákladnímu popisku pro hostování objektů nebo rozhraní [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md) .  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScript](../../winscript/reference/iactivescript.md)

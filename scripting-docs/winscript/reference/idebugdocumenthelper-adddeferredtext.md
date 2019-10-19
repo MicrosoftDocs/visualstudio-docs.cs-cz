@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::AddDeferredText | Dokumentace Microsoftu
+title: 'Idebugdocumenthelper –:: AddDeferredText | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b2f2a7c134142668613cc38cee9357e42cb95096
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 1aae73e44059b1f07fa4cb54f40cdcd12e564a8f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433932"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577043"
 ---
 # <a name="idebugdocumenthelperadddeferredtext"></a>IDebugDocumentHelper::AddDeferredText
-Pomocná rutina upozorní, že daný text je k dispozici, ale neposkytuje znaky.  
+Upozorní pomocníka, že je daný text k dispozici, ale neposkytuje tyto znaky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,13 +38,13 @@ HRESULT AddDeferredText(
   
 #### <a name="parameters"></a>Parametry  
  `cChars`  
- [in] Počet znaků (Unicode) Chcete-li přidat.  
+ pro Počet znaků, které se mají přidat (Unicode)  
   
  `dwTextStartCookie`  
- [in] Hostitel definované souboru cookie, který představuje počáteční pozici textu.  
+ pro Soubor cookie definovaný hostitelem, který představuje počáteční pozici textu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
@@ -52,15 +52,15 @@ HRESULT AddDeferredText(
 |`E_FAIL`|Metoda se nezdařila.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda umožňuje hostiteli odložit poskytuje znaky, které chcete přidat, dokud nejsou potřeba, přičemž pomocné rutiny pro generování přesné oznámení a informace o velikosti. `dwTextStartCookie` Parametr je soubor cookie, určené hostitele, který představuje počáteční pozici textu. Následující volání `IDebugDocumentText::GetText` musíte zadat Tento soubor cookie. Například v hostiteli, který reprezentuje text v DBCS, může být soubor cookie bajtovým posunem.  
+ Tato metoda umožňuje hostiteli odložit znaky pro přidání do doby, než jsou potřeba, a umožnit pomáhajícímu generovat přesná oznámení a informace o velikosti. Parametr `dwTextStartCookie` je soubor cookie definovaný hostitelem, který představuje počáteční pozici textu. Tento soubor cookie musí poskytovat další volání `IDebugDocumentText::GetText`. Například v hostiteli, který představuje text ve znakové sadě DBCS, může být soubor cookie posun bajtů.  
   
- Předpokládá se, že jediné volání `IDebugDocumentText::GetText` můžete získat znaky z více volání `AddDeferredText`. Pomocné třídy mohou také požádat o stejný rozsah znaků odložené více než jednou.  
+ Předpokládá se, že jedno volání `IDebugDocumentText::GetText` může získat znaky z více volání `AddDeferredText`. Pomocné třídy se také mohou zeptat na stejný rozsah odložených znaků více než jednou.  
   
 > [!NOTE]
-> Volání `AddDeferredText` by neměl být směšovat s voláními `AddUnicodeText` nebo `AddDBCSText`. Pokud k tomu dojde, `E_FAIL` je vrácena.  
+> Volání `AddDeferredText` by se neměla kombinovat s voláními `AddUnicodeText` nebo `AddDBCSText`. Pokud k tomu dojde, `E_FAIL` se vrátí.  
   
-## <a name="see-also"></a>Viz také  
- [IDebugDocumentHelper Interface](../../winscript/reference/idebugdocumenthelper-interface.md)   
- [IDebugDocumentHelper::AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)   
- [IDebugDocumentHelper::AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní idebugdocumenthelper –](../../winscript/reference/idebugdocumenthelper-interface.md)  
+ [Idebugdocumenthelper –:: AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)    
+ [Idebugdocumenthelper –:: AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)    
  [IDebugDocumentText::GetText](../../winscript/reference/idebugdocumenttext-gettext.md)

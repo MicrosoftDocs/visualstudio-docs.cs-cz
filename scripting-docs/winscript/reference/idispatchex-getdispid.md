@@ -1,5 +1,5 @@
 ---
-title: IDispatchEx::GetDispID | Dokumentace Microsoftu
+title: 'IDispatchEx –:: GetDispID | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 95ab1d72e5b2f608c51ac6e56be1986df8945ec2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 57f0faf6004e2219600f0dbd63749a7e65ca438c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000863"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576600"
 ---
 # <a name="idispatchexgetdispid"></a>IDispatchEx::GetDispID
-Název jednoho člena se mapuje na jeho odpovídající identifikátor DISPID, který můžete použít v následných voláních na `IDispatchEx::InvokeEx`.  
+Mapuje jeden název členu na jeho odpovídající identifikátor DISPID, který se pak může použít při dalších voláních `IDispatchEx::InvokeEx`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,36 +39,36 @@ HRESULT GetDispID(
   
 #### <a name="parameters"></a>Parametry  
  `bstrName`  
- Předaný název má být namapována.  
+ Předaný název, který se má namapovat  
   
  `grfdex`  
- Určuje možnosti pro získání identifikátor členu. To může být kombinací následujícího:  
+ Určuje možnosti získání identifikátoru člena. Může se jednat o kombinaci následujících hodnot:  
   
-|Value|Význam|  
+|Hodnota|Význam|  
 |-----------|-------------|  
-|fdexNameCaseSensitive|Požadavky, které vyhledávání názvů provést způsobem malá a velká písmena. Mohou být ignorovány objektem, který nepodporuje vyhledávání malá a velká písmena.|  
-|fdexNameEnsure|Požadavky, že člen vytvoří, pokud ještě neexistuje. Nový člen by měl být vytvořen s hodnotou `VT_EMPTY`.|  
-|fdexNameImplicit|Označuje, že je volající hledání členem konkrétní název objekty při základního objektu nebyl explicitně zadán.|  
-|fdexNameCaseInsensitive|Požadavky, které provést vyhledávání názvů písmen. Mohou být ignorovány objektem, který nepodporuje vyhledávání velká a malá písmena.|  
+|fdexNameCaseSensitive|Požaduje, aby se vyhledávání názvů provádělo způsobem, který rozlišuje velká a malá písmena. Může být ignorováno objektem, který nepodporuje vyhledávání citlivé na velká a malá písmena.|  
+|fdexNameEnsure|Požaduje, aby byl člen vytvořen, pokud ještě neexistuje. Nový člen by měl být vytvořen s hodnotou `VT_EMPTY`.|  
+|fdexNameImplicit|Indikuje, že volající vyhledává objekty pro člena určitého názvu, pokud není explicitně zadaný základní objekt.|  
+|fdexNameCaseInsensitive|Požaduje, aby se vyhledávání názvů provádělo způsobem, který nerozlišuje velká a malá písmena. Může být ignorováno objektem, který nepodporuje vyhledávání bez rozlišování velkých a malých písmen.|  
   
  `pid`  
- Ukazatel na volající – přidělené místo pro příjem DISPID výsledek. Pokud dojde k chybě, `pid` obsahuje DISPID_UNKNOWN.  
+ Ukazatel na umístění přidělené volajícímu pro získání výsledku DISPID. Pokud dojde k chybě, `pid` obsahuje DISPID_UNKNOWN.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
 |||  
 |-|-|  
-|`S_OK`|Úspěch.|  
-|`E_OUTOFMEMORY`|Nedostatek paměti.|  
+|`S_OK`|Nástup.|  
+|`E_OUTOFMEMORY`|Nedostatek paměti|  
 |`DISP_E_UNKNOWNNAME`|Název nebyl znám.|  
   
 ## <a name="remarks"></a>Poznámky  
- `GetDispID` je možné místo `GetIDsOfNames` získat hodnota DISPID pro daného člena.  
+ `GetDispID` lze použít místo `GetIDsOfNames` k získání DISPID pro daného člena.  
   
- Protože `IDispatchEx` umožňuje přidávání a odstraňování členů sadu hodnoty dispID není zůstal neměnný po dobu životnosti objektu.  
+ Vzhledem k tomu, že `IDispatchEx` umožňuje přidání a odstranění členů, sada identifikátorů DISPID nezůstane pro životnost objektu konstantní.  
   
- Nevyužité `riid` parametr `IDispatch::GetIDsOfNames` byla odebrána.  
+ Nepoužitý parametr `riid` v `IDispatch::GetIDsOfNames` byl odebrán.  
   
 ## <a name="example"></a>Příklad  
   
@@ -82,5 +82,5 @@ BSTR bstrName;
    // Use dispid  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDispatchEx – rozhraní](../../winscript/reference/idispatchex-interface.md)

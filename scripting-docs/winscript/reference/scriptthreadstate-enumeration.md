@@ -1,5 +1,5 @@
 ---
-title: Scriptthreadstate – výčet | Dokumentace Microsoftu
+title: Výčet SCRIPTTHREADSTATE – | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 906a309b25a1fe606fb37f8cbab70040e5a4c46f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bc4ef840310c27ccbadce2ed4f632514b555ef98
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840184"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575659"
 ---
 # <a name="scriptthreadstate-enumeration"></a>SCRIPTTHREADSTATE – výčet
-Určuje stav vlákna v skriptovací stroj. Tento výčet je používán [IActiveScript::GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md) metody.  
+Určuje stav vlákna ve skriptovacím stroji. Tento výčet používá metoda [IActiveScript:: GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,8 +40,8 @@ typedef enum tagSCRIPTTHREADSTATE {
   
 |||  
 |-|-|  
-|SCRIPTTHREADSTATE_NOTINSCRIPT|Zadané vlákno není aktuálně skriptované událostí, zpracování okamžitě provést text skriptu, nebo spuštění skriptu makra.|  
-|SCRIPTTHREADSTATE_RUNNING|Zadané vlákno je aktivně skriptované událostí, zpracování okamžitě provést text skriptu, nebo spuštění skriptu makra.|  
+|SCRIPTTHREADSTATE_NOTINSCRIPT|Zadané vlákno aktuálně neobsluhuje událost skriptu, zpracovává okamžitě text skriptu nebo spouští makro skriptu.|  
+|SCRIPTTHREADSTATE_RUNNING|Zadané vlákno aktivně obsluhuje událost skriptu, zpracovává okamžitě text skriptu nebo spouští makro skriptu.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Konstanty, výčty a kódy chyb aktivních skriptů](../../winscript/reference/active-script-constants-enumerations-and-error-codes.md)

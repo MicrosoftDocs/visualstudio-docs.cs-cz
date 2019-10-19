@@ -1,5 +1,5 @@
 ---
-title: IScriptNode::GetParent | Dokumentace Microsoftu
+title: 'Iscriptnode –:: GetParent | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1c990b5ba5c3d03d319e0eeced282c92cfbb5281
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 58ef5f88f4404d57a7edad3590fba1d2614faec6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786853"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572553"
 ---
 # <a name="iscriptnodegetparent"></a>IScriptNode::GetParent
-Vrátí `IScriptNode` objekt, který je nadřazeného člena objektu.  
+Vrátí objekt `IScriptNode`, který je nadřazený objektem objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,20 +37,20 @@ HRESULT GetParent(
   
 #### <a name="parameters"></a>Parametry  
  `ppsnParent`  
- [out] Adresa proměnné, která přijímá ukazatel `IScriptNode` rozhraní nadřazená instance.  
+ mimo Adresa proměnné, která přijímá ukazatel na `IScriptNode` rozhraní nadřazené instance.  
   
- Pokud třída implementuje `IScriptEntry` nebo `IScriptScriptlet`, `IScriptNode` je vrácen objekt.  
+ Pokud třída implementuje `IScriptEntry` nebo `IScriptScriptlet`, je vrácen objekt `IScriptNode`.  
   
- Pokud třída implementuje `IScriptNode` (představující webovou stránku), vrátí se hodnota NULL.  
+ Pokud třída implementuje `IScriptNode` (představuje webovou stránku), je vrácena hodnota NULL.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IScriptNode – rozhraní](../../winscript/reference/iscriptnode-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerCallback::OnFunctionEnter | Dokumentace Microsoftu
+title: 'Iactivescriptprofilercallback –:: OnFunctionEnter | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1b8410fba08c1799d88532266c022d811c9553fd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6157638353712d6f376fa1eb46a68980b493a5c3
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993381"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571683"
 ---
 # <a name="iactivescriptprofilercallbackonfunctionenter"></a>IActiveScriptProfilerCallback::OnFunctionEnter
-Upozorní objekt profileru, který skriptovací stroj je před spuštěním volání funkce, která není volání do modelu Document Object Model (DOM).  
+Upozorní objekt profileru, že skriptovací stroj provede volání funkce, která není volána do model DOM (Document Object Model) (DOM).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,17 +35,17 @@ HRESULT OnFunctionEnter(
   
 #### <a name="parameters"></a>Parametry  
  `scriptId`  
- [in] Jedinečné ID skript, který je součástí funkce. Toto ID je přiřazena službou skriptovací stroj.  
+ pro Jedinečné ID skriptu, jehož funkce je součástí. Toto ID přiřadí skriptovací stroj.  
   
  `functionId`  
- [in] Jedinečné ID funkce. Toto ID je přiřazena službou skriptovací stroj.  
+ pro Jedinečné ID funkce Toto ID přiřadí skriptovací stroj.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Skriptovací modul se ignoruje vrácenou hodnotu této metody.  
+ Skriptovací stroj ignoruje vrácenou hodnotu této metody.  
   
 ## <a name="remarks"></a>Poznámky  
- Pro volání modelu DOM, volá skriptovací stroj [IActiveScriptProfilerCallback2::OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md) místo `IActiveScriptProfilerCallback::OnFunctionEnter`. Je to z důvodu velkého počtu jedinečných metody a vlastnosti v modelu DOM.  
+ V případě volání DOM skriptovací modul volá [iactivescriptprofilercallback2 –:: OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md) namísto `IActiveScriptProfilerCallback::OnFunctionEnter`. Důvodem je velký počet jedinečných metod a vlastností v modelu DOM.  
   
-## <a name="see-also"></a>Viz také  
- [IActiveScriptProfilerCallback::OnFunctionExit](../../winscript/reference/iactivescriptprofilercallback-onfunctionexit.md)   
+## <a name="see-also"></a>Viz také:  
+ [Iactivescriptprofilercallback –:: OnFunctionExit](../../winscript/reference/iactivescriptprofilercallback-onfunctionexit.md)    
  [IActiveScriptProfilerCallback – rozhraní](../../winscript/reference/iactivescriptprofilercallback-interface.md)

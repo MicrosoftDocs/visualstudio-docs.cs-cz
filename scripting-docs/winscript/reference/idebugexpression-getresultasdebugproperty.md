@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression::GetResultAsDebugProperty | Dokumentace Microsoftu
+title: 'IDebugExpression –:: GetResultAsDebugProperty | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 06d9b513d40450e20bb87f07c460bef7ce2678c1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 104c42f02d02be386711e687f02d333425834948
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978494"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575931"
 ---
 # <a name="idebugexpressiongetresultasdebugproperty"></a>IDebugExpression::GetResultAsDebugProperty
-Vrátí výsledek vyhodnocení výrazu jako vlastnost ladění a návratová hodnota operace.  
+Vrátí výsledek vyhodnocení výrazu jako vlastnost ladění a návratové hodnoty operace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,24 +38,24 @@ HRESULT GetResultAsDebugProperty(
   
 #### <a name="parameters"></a>Parametry  
  `phrResult`  
- [out] Návratová hodnota operace.  
+ mimo Návratová hodnota operace.  
   
  `ppdp`  
- [out] Vlastnosti ladění pro výraz.  
+ mimo Vlastnost ladění pro výraz  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
-|`E_PENDING`|Operace je stále čekající na vyřízení.|  
+|`E_PENDING`|Tato operace stále čeká na vyřízení.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda vrací výsledek vyhodnocení výrazu jako `IDebugProperty` a operace `HRESULT`.  
+ Tato metoda vrací výsledek vyhodnocení výrazu jako `IDebugProperty` a `HRESULT` operace.  
   
- Tato metoda vrátí `S_OK` a `phrResult` vrátí `E_ABORT` Pokud `Abort` operaci zruší.  
+ Tato metoda vrací `S_OK` a `phrResult` vrátí `E_ABORT`, pokud `Abort` přeruší operaci.  
   
-## <a name="see-also"></a>Viz také  
- [Idebugexpression – rozhraní](../../winscript/reference/idebugexpression-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní IDebugExpression –](../../winscript/reference/idebugexpression-interface.md)  
  [IDebugExpression::Abort](../../winscript/reference/idebugexpression-abort.md)
