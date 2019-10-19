@@ -1,5 +1,5 @@
 ---
-title: 'CA1812: Vyhněte se nevytvořeným instancím vnitřních tříd | Dokumentace Microsoftu'
+title: 'CA1812: Vyhněte se nevytváření instancí vnitřních tříd | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,33 +12,33 @@ helpviewer_keywords:
 - CA1812
 ms.assetid: 1bb92a42-322a-44cc-98a8-8858212c1e1f
 caps.latest.revision: 28
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f44dcb010dd9c62d130913efd590a4c1b651de50
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f5a36ee8cffc221d15243ff72e2e71558e867319
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157982"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645399"
 ---
-# <a name="ca1812-avoid-uninstantiated-internal-classes"></a>CA1812: Vyhněte se nevytvořeným instancím interních tříd
+# <a name="ca1812-avoid-uninstantiated-internal-classes"></a>CA1812: Vyhněte se nevytvořeným instancím vnitřních tříd
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|AvoidUninstantiatedInternalClasses|
 |CheckId|CA1812|
-|Kategorie|Microsoft.Performance|
+|Kategorie|Microsoft. Performance|
 |Narušující změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
  Instance typu na úrovni sestavení není vytvořena kódem v sestavení.
 
 ## <a name="rule-description"></a>Popis pravidla
- Toto pravidlo pokusí vyhledat volání jednoho z konstruktorů typu a oznámí porušení, pokud se nenajde žádný volání.
+ Toto pravidlo se pokusí vyhledat volání jednoho z konstruktorů typu a oznámí porušení, pokud není nalezeno žádné volání.
 
- Následující typy nejsou prozkoumat toto pravidlo:
+ Toto pravidlo nezkoumá následující typy:
 
 - Typy hodnot
 
@@ -48,29 +48,29 @@ ms.locfileid: "68157982"
 
 - Delegáty
 
-- Typy generované kompilátoru pole
+- Typy polí generovaných kompilátorem
 
-- Typy, které se nedá vytvořit instance, které definují `static` (`Shared` v jazyce Visual Basic) metody pouze.
+- Typy, jejichž instance se nedají vytvořit a které definují `static` (`Shared` pouze v Visual Basic).
 
-  Pokud použijete <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute?displayProperty=fullName> na sestavení, které se právě analyzuje, toto pravidlo nedojde na žádné konstruktory, které jsou označeny jako `internal` protože nemůže určit, zda pole se používá jiným `friend` sestavení.
+  Použijete-li <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute?displayProperty=fullName> na sestavení, které je analyzováno, toto pravidlo nebude provedeno na žádném konstruktoru, který je označen jako `internal`, protože nemůžete určit, zda je pole používáno jiným `friend`m sestavením.
 
-  I když toto omezení v nelze vyřešit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] analýzy kódu, externí samostatné FxCop se vrátí na interní konstruktory každý `friend` sestavení je k dispozici v analýze.
+  I když nemůžete toto omezení obejít [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] analýze kódu, externí samostatné FxCop proběhne na vnitřních konstruktorech, pokud je v analýze přítomno každé `friend` sestavení.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, typ odeberte nebo přidejte kód, který ji používá. Pokud typ obsahuje pouze statické metody, přidejte jeden z následujících na typ pro zabránění kompilátoru generování výchozí veřejný konstruktor instance:
+ Chcete-li opravit porušení tohoto pravidla, odeberte typ nebo přidejte kód, který ho používá. Pokud typ obsahuje pouze statické metody, přidejte jeden z následujících typů do typu, čímž zabráníte kompilátoru v generování výchozího veřejného konstruktoru instance:
 
-- Soukromý konstruktor pro typy, které se zaměřují [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] verze 1.0 a 1.1.
+- Privátní konstruktor pro typy, které cílí na [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] verze 1,0 a 1,1.
 
-- `static` (`Shared` v jazyce Visual Basic) modifikátor pro typy, které se zaměřují [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)].
+- Modifikátor `static` (`Shared` in Visual Basic) pro typy, které cílí na [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)].
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění tohoto pravidla. Doporučujeme vám, že je potlačení tohoto upozornění v těchto situacích:
+ Z tohoto pravidla je bezpečné potlačit upozornění. Toto upozornění doporučujeme potlačit v následujících situacích:
 
-- Třída je vytvořená prostřednictvím reflexe pozdní vazby metod, jako <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>.
+- Třída je vytvořena pomocí metod reflexe s pozdní vazbou, jako je <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>.
 
-- Modul runtime se automaticky vytvoří třídu nebo [!INCLUDE[vstecasp](../includes/vstecasp-md.md)]. Například třídy, které implementují <xref:System.Configuration.IConfigurationSectionHandler?displayProperty=fullName> nebo <xref:System.Web.IHttpHandler?displayProperty=fullName>.
+- Třída je vytvořena automaticky modulem runtime nebo [!INCLUDE[vstecasp](../includes/vstecasp-md.md)]. Například třídy, které implementují <xref:System.Configuration.IConfigurationSectionHandler?displayProperty=fullName> nebo <xref:System.Web.IHttpHandler?displayProperty=fullName>.
 
-- Třídy je předán jako parametr obecného typu, který má nové omezení. Například následující příklad vyvolá toto pravidlo.
+- Třída je předána jako parametr obecného typu, který má nové omezení. Například následující příklad vyvolá toto pravidlo.
 
   ```csharp
   internal class MyClass
@@ -91,7 +91,7 @@ ms.locfileid: "68157982"
   mc.Create();
   ```
 
-  V takových situacích doporučujeme že potlačení tohoto upozornění.
+  V těchto situacích doporučujeme toto upozornění potlačit.
 
 ## <a name="related-rules"></a>Související pravidla
  [CA1811: Vyhněte se nevolanému místnímu kódu](../code-quality/ca1811-avoid-uncalled-private-code.md)

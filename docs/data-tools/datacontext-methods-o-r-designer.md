@@ -1,60 +1,60 @@
 ---
-title: Metody DataContext (Návrhář O-R)
+title: Metody DataContext (O-R Designer)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c149f4e5-3b61-4c33-892e-3e26d47f3eeb
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 83ca0059e576683571435764914bf0087eded2fa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0e81f2337931f565e0068a852bf9b8284350690c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62567123"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648544"
 ---
-# <a name="datacontext-methods-or-designer"></a>Metody DataContext (O/R Designer)
+# <a name="datacontext-methods-or-designer"></a>Metody DataContext (Návrhář relací objektů)
 
-<xref:System.Data.Linq.DataContext> metody (v kontextu [LINQ to SQL nástroje v sadě Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)) jsou metody <xref:System.Data.Linq.DataContext> třídu, která spuštění uložených procedur a funkcí v databázi.
+metody <xref:System.Data.Linq.DataContext> (v kontextu [LINQ to SQL nástrojů v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)) jsou metody třídy <xref:System.Data.Linq.DataContext>, které spouštějí uložené procedury a funkce v databázi.
 
-<xref:System.Data.Linq.DataContext> Třída je [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] třídu, která funguje jako přenos mezi databází systému SQL Server a [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] tříd entit namapována na tuto databázi. <xref:System.Data.Linq.DataContext> Třída obsahuje metody pro připojení k databázi a manipulace s daty v databázi a informace o připojovacím řetězci. Ve výchozím nastavení <xref:System.Data.Linq.DataContext> třída obsahuje několik metod, které bude možné volat, například <xref:System.Data.Linq.DataContext.SubmitChanges%2A> metodu, která odešle aktualizovaná data z [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] třídy do databáze. Můžete také vytvořit další <xref:System.Data.Linq.DataContext> metody, které se mapují na uložené procedury a funkce. Jinými slovy, volání těchto metod vlastní Spustí uloženou proceduru nebo funkci v databázi do kterého <xref:System.Data.Linq.DataContext> metoda mapována. Můžete přidat nové metody <xref:System.Data.Linq.DataContext> třídy stejně, jako byste přidali metody rozšíření libovolné třídy. Nicméně v diskuzích k žádostem o <xref:System.Data.Linq.DataContext> metody v kontextu **O/R Designer**, je <xref:System.Data.Linq.DataContext> metody, které se mapují na uložené procedury a funkce, které byly diskutovány.
+Třída <xref:System.Data.Linq.DataContext> je [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] třída, která funguje jako trubka mezi SQL Server databází a třídami [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] entit mapovanými na tuto databázi. Třída <xref:System.Data.Linq.DataContext> obsahuje informace o připojovacím řetězci a metody pro připojení k databázi a manipulaci s daty v databázi. Ve výchozím nastavení třída <xref:System.Data.Linq.DataContext> obsahuje několik metod, které lze volat, například metodu <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, která odesílá aktualizovaná data z třídy [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] do databáze. Můžete také vytvořit další <xref:System.Data.Linq.DataContext> metody, které jsou mapovány na uložené procedury a funkce. Jinými slovy, volání těchto vlastních metod spustí uloženou proceduru nebo funkci v databázi, ke které je namapována metoda <xref:System.Data.Linq.DataContext>. Můžete přidat nové metody do <xref:System.Data.Linq.DataContext> třídy stejně, jako byste přidali metody pro rozšiřování libovolné třídy. V diskusích o metodách <xref:System.Data.Linq.DataContext> v kontextu **návrháře o/R**je však <xref:System.Data.Linq.DataContext> metod, které jsou mapovány na uložené procedury a funkce, které jsou popsány.
 
 ## <a name="methods-pane"></a>Podokno metody
 
-<xref:System.Data.Linq.DataContext> metody, které se mapují na uložené procedury a funkce jsou zobrazeny v **metody** podokně **O/R Designer**. **Metody** podokně je po straně podokna **entity** podokně (hlavní návrhová plocha). **Metody** podokno obsahuje seznam všech <xref:System.Data.Linq.DataContext> metody, které jste vytvořili pomocí **O/R Designer**. Ve výchozím nastavení **metody** podokně je prázdný, přetáhněte uložené procedury nebo funkce z **Průzkumníka serveru** nebo **Průzkumník databáze** na **Návrháře relací objektů**  vytvořit <xref:System.Data.Linq.DataContext> metody a naplňte jimi **metody** podokně. Další informace najdete v tématu [jak: Vytvoření metod DataContext namapovaných na uložené procedury a funkce (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md).
+<xref:System.Data.Linq.DataContext> metody, které se mapují k uloženým procedurám a funkcím, se zobrazí v podokně **metody** **návrháře pro/R**. Podokno **metody** je podokno podél strany podokna **entity** (hlavní návrhová plocha). Podokno **metody** obsahuje seznam všech <xref:System.Data.Linq.DataContext> metod, které jste vytvořili pomocí **návrháře o/R**. Ve výchozím nastavení je podokno **metody** prázdné. Přetažením uložených procedur nebo funkcí z **Průzkumník serveru** nebo z **Průzkumníka databáze** do **návrháře o/R** vytvoříte <xref:System.Data.Linq.DataContext> metody a naplníte podokno **metody** . Další informace naleznete v tématu [How to: Create DataContext Methods namapované na uložené procedury a funkce (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md).
 
 > [!NOTE]
-> Otevření a zavření podokno metody kliknutím pravým tlačítkem myši **O/R Designer** a pak levým na **skrýt podokno metody** nebo **zobrazit podokno metody**, nebo použijte klávesovou zkratku  **CTRL**+**1**.
+> Otevřete a zavřete podokno metody kliknutím pravým tlačítkem myši na **Návrhář pro/R** a následným kliknutím na **Skrýt podokno metody** nebo **Zobrazit podokno metody**nebo pomocí klávesové zkratky **CTRL** +**1**.
 
 ## <a name="two-types-of-datacontext-methods"></a>Dva typy metod DataContext
 
-Metody DataContext jsou tyto metody, které se mapují na uložené procedury a funkce v databázi. Můžete vytvořit a přidat jednu metodu DataContext na **metody** podokně **O/R Designer**. Existují dva odlišné typy <xref:System.Data.Linq.DataContext> metody; ty, které vrátí jeden nebo více sad výsledků dotazu a ty, které nejsou:
+Metody DataContext jsou metody, které jsou mapovány na uložené procedury a funkce v databázi. Metody DataContext můžete vytvořit a přidat v podokně **metody** **návrháře pro/R**. Existují dva různé typy <xref:System.Data.Linq.DataContext> metod; ty, které vracejí jednu nebo více sad výsledků, a ty, které nezahrnují:
 
-- <xref:System.Data.Linq.DataContext> metody, které vrací jeden nebo více sad výsledků dotazu:
+- <xref:System.Data.Linq.DataContext> metody, které vracejí jednu nebo více sad výsledků dotazu:
 
-   Vytvořit tento druh <xref:System.Data.Linq.DataContext> metodu, když vaše aplikace potřebuje pouze pro spouštění uložených procedur a funkcí v databázi a výsledky jsou vráceny. Další informace najdete v tématu [jak: Vytvoření metod DataContext namapovaných na uložené procedury a funkce (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md), System.Data.Linq.ISingleResult\<T >, a <xref:System.Data.Linq.IMultipleResults>.
+   Vytvořte tento druh metody <xref:System.Data.Linq.DataContext>, když vaše aplikace stačí spustit uložené procedury a funkce v databázi a vracet výsledky. Další informace naleznete v tématu [How to: Create DataContext Methods namapované na uložené procedury a funkce (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md), System. data. Linq. ISingleResult \<T > a <xref:System.Data.Linq.IMultipleResults>.
 
-- <xref:System.Data.Linq.DataContext> metody, které nevracejí sad výsledků dotazu: například vloží aktualizace a odstraní pro konkrétní entitu třídu.
+- <xref:System.Data.Linq.DataContext> metody, které nevracejí sady výsledků dotazu: například vložení, aktualizace a odstranění pro konkrétní třídu entity.
 
-   Vytvořit tento druh <xref:System.Data.Linq.DataContext> metodu, pokud má vaše aplikace pro spuštění uložené procedury místo použití výchozí [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] chování při ukládání změněných dat mezi třídu entity a databází. Další informace najdete v tématu [jak: Přiřazení uložených procedur za účelem aktualizace, vložení a odstranění (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).
+   Vytvořte tento druh metody <xref:System.Data.Linq.DataContext>, pokud má aplikace spouštět uložené procedury místo použití výchozího [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] chování pro ukládání upravených dat mezi třídou entity a databází. Další informace naleznete v tématu [Postupy: přiřazení uložených procedur pro provádění aktualizací, vkládání a odstraňování (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).
 
 ## <a name="return-types-of-datacontext-methods"></a>Návratové typy metod DataContext
 
-Při přetažení uložených procedur a funkcí z **Průzkumníka serveru** nebo **Průzkumník databáze** na **O/R Designer**, návratový typ vytvořeného <xref:System.Data.Linq.DataContext> Metoda se liší v závislosti na tom, kde je vyřadit položku. Přetažení položek přímo do existující entity třídy vytvoří <xref:System.Data.Linq.DataContext> metoda s návratovým typem třídy entity; přetažení položek na prázdnou oblast **O/R Designer** (v obou podokno) vytvoří <xref:System.Data.Linq.DataContext> – metoda který vrací automaticky generovanému typu. Automaticky generovaný typ má název, který odpovídá uloženou proceduru nebo název funkce a vlastnosti, které mapují na pole vrácené uloženou proceduru nebo funkci.
+Když přetáhnete uložené procedury a funkce z **Průzkumník serveru** nebo **Průzkumníka databáze** do **návrháře o/R**, návratový typ generované <xref:System.Data.Linq.DataContext> metody se liší v závislosti na tom, kde položku vyřadíte. Vyřazení položek přímo na existující třídu entity vytvoří metodu <xref:System.Data.Linq.DataContext> s návratovým typem třídy entity; vyřazení položek do prázdné oblasti **návrháře o/R** (v obou podoknech) vytvoří metodu <xref:System.Data.Linq.DataContext>, která vrátí automaticky generovaný typ. Automaticky generovaný typ má název, který se shoduje s uloženou procedurou nebo názvem funkce a vlastnostmi, které jsou mapovány na pole vracené uloženou procedurou nebo funkcí.
 
 > [!NOTE]
-> Můžete změnit návratový typ <xref:System.Data.Linq.DataContext> metoda po přidání do podokna metody. Zkontrolovat nebo změnit návratový typ <xref:System.Data.Linq.DataContext> metoda, vyberte ho a zkontrolujte **návratový typ** vlastnost **vlastnosti** okna. Další informace najdete v tématu [jak: Změna návratového typu metody DataContext (O/R Designer)](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md).
+> Můžete změnit návratový typ metody <xref:System.Data.Linq.DataContext> poté, co ji přidáte do podokna metody. Chcete-li zkontrolovat nebo změnit návratový typ metody <xref:System.Data.Linq.DataContext>, vyberte ji a v okně **vlastnosti** Zkontrolujte vlastnost **návratový typ** . Další informace naleznete v tématu [Postupy: Změna návratového typu metody DataContext (O/R Designer)](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md).
 
-Objekty, které můžete přetáhnout z databáze na plochu návrháře relací objektů jsou pojmenovány automaticky na základě názvu objekty v databázi. Pokud přetáhnete na stejný objekt více než jednou, číslo se přidá na konec nový název, který odlišuje názvy. Pokud názvy databázových objektů obsahují mezery nebo znaky nepodporované v jazyce Visual Basic nebo C#, se nahradí mezery nebo neplatné znaky podtržítkem.
+Objekty, které přetáhnete z databáze na plochu návrháře O/R, se pojmenují automaticky na základě názvu objektů v databázi. Pokud přetáhnete stejný objekt více než jednou, přidá se číslo na konec nového názvu, který rozlišuje názvy. Pokud názvy objektů databáze obsahují mezery nebo znaky nejsou podporovány v Visual Basic nebo C#, je místo nebo neplatný znak nahrazen podtržítkem.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Nástroje LINQ to SQL v sadě Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
 - [Uložené procedury](/dotnet/framework/data/adonet/sql/linq/stored-procedures)
 - [Postupy: Vytvoření metod DataContext namapovaných na uložené procedury a funkce (Návrhář relací objektů)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)
 - [Postupy: Přiřazení uložených procedur za účelem aktualizací, vkládání a odstraňování (Návrhář relací objektů)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)
 - [Návod: Přizpůsobení chování tříd entit při vložení, aktualizaci a odstranění](../data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes.md)
-- [Návod: Vytvoření LINQ na třídy SQL (Návrhář O-R)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
+- [Návod: vytváření tříd LINQ to SQL (Návrhář O-R)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
