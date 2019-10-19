@@ -7,17 +7,17 @@ helpviewer_keywords:
 - TFSConfig
 - CodeIndex command [Team Foundation Server]
 ms.assetid: b79568d4-6a64-4ca9-a1ee-3e57f92a9c5c
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: edd794d647d0af63edd133a65fbaad569e067e21
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 378a5965f8ca9e9cc2d1c7214180e99f080d7873
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924092"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72630964"
 ---
 # <a name="codeindex-command"></a>CodeIndex – – příkaz
 
@@ -44,16 +44,16 @@ TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /
 |`CollectionId`|Určuje identifikační číslo kolekce projektu.|
 |`ServerPath`|Určuje cestu k souboru kódu.|
 
-|**Možnost**|**Popis**|
+|**Nastavení**|**Popis**|
 |----------------| - |
 |**/indexingStatus**|Zobrazit stav a konfiguraci služby indexování kódu.|
-|**/setIndexing:** [ &#124; vypnuto &#124; keepupOnly]|-   **zapnuto**: Spustit indexování všech sad změn.<br />-   **vypnuto**: Zastavit indexování všech sad změn.<br />-   **keepupOnly**: Zastavte indexování dříve vytvořených sad změn a zahajte indexování pouze nových sad změn.|
-|**/ignorelist:** [přidat &#124; odebrání &#124; zobrazení &#124; RemoveAll]`ServerPath`<br /><br /> Můžete použít zástupný znak (*) na začátku, na konci nebo na obou koncích cesty serveru.|Určuje seznam souborů kódu a jejich cesty, které nechcete indexovat.<br /><br /> -   **Přidat**: Přidejte soubor, který nechcete indexovat, do seznamu ignorovaných souborů.<br />-   **remove**: Odeberte soubor, který chcete indexovat, ze seznamu ignorovaných souborů.<br />-   **removeAll**: Vymažte seznam ignorovaných souborů a spusťte indexování všech souborů.<br />-   **Zobrazit**: Zobrazit všechny soubory, které nejsou indexovány.|
+|**/setIndexing:** [on &#124; off &#124; keepupOnly]|-    **:** začátek indexování všech sad změn.<br />-   **vypnuto**: zastavit indexování všech sad změn.<br />-   **keepupOnly**: Zastavte indexování dříve vytvořených sad změn a zahajte indexování pouze nových sad změn.|
+|**/ignorelist:** [přidat &#124; odebrání &#124; RemoveAll &#124; zobrazení] `ServerPath`<br /><br /> Můžete použít zástupný znak (*) na začátku, na konci nebo na obou koncích cesty serveru.|Určuje seznam souborů kódu a jejich cesty, které nechcete indexovat.<br /><br /> -   **Přidat**: přidejte soubor, který nechcete indexovat, do seznamu ignorovaných souborů.<br />-   **Odebrat**: ze seznamu ignorovaných souborů odeberte soubor, který chcete indexovat.<br />-   **RemoveAll**: Vymažte seznam ignorovaných souborů a spusťte indexování všech souborů.<br />-   **zobrazení**: Zobrazit všechny soubory, které nejsou indexovány.|
 |**/listLargeFiles [/FileCount:** `FileCount` **/minSize:** `MinSize`]|Zobrazuje zadaný počet souborů, které přesahují zadanou velikost v KB. Pak můžete použít možnost **/ignorelist** k vyloučení těchto souborů z indexování.|
 |**/reindexAll**|Vymažte dříve indexovaná data a znovu spusťte indexování.|
 |**/destroyCodeIndex [/noPrompt]**|Odstraňte index kódu a odeberte všechna indexovaná data. Nevyžaduje potvrzení, pokud použijete možnost **/NoPrompt** .|
-|**/temporaryDataSizeLimit**: [zobrazení &#124; <`SizeInGBs`> &#124; zakázat]|Určuje, kolik dočasných dat, která CodeLens vytvoří při zpracování sad změn. Výchozí limit je 2 GB.<br /><br /> -   **Zobrazit**: Zobrazí aktuální limit velikosti.<br />-   `SizeInGBs`: Změňte limit velikosti.<br />-   **Zakázat**: Odeberte limit velikosti.<br /><br /> Toto omezení je zaškrtnuto před tím, než CodeLens zpracuje novou sadu změn. Pokud dočasná data překročí tento limit, CodeLens pozastaví zpracování minulých sad změn, nikoli nových. CodeLens restartuje zpracování po vyčištění dat a klesne pod tento limit. Automatické čištění se spustí jednou denně. To znamená, že dočasná data mohou překročit tento limit, dokud nebude spuštěno čištění.|
-|**/indexHistoryPeriod**: [Zobrazit &#124; všechny &#124; <`NumberOfMonths`>]|Určuje, jak dlouho se má indexovat historie změn indexovat. To má vliv na to, kolik historie CodeLens ukazuje. Výchozí limit je 12 měsíců. To znamená, že CodeLens zobrazuje historii změn jenom za posledních 12 měsíců.<br /><br /> -   **Zobrazit**: Zobrazí aktuální počet měsíců.<br />-   **vše**: Indexovat veškerou historii změn<br />-   `NumberOfMonths`: Změna počtu měsíců použitých k indexování historie změn|
+|**/temporaryDataSizeLimit**: [zobrazení &#124; < `SizeInGBs` > &#124; zakázat]|Určuje, kolik dočasných dat, která CodeLens vytvoří při zpracování sad změn. Výchozí limit je 2 GB.<br /><br /> -   **zobrazení**: Zobrazit omezení aktuální velikosti.<br />-    `SizeInGBs`: Změňte limit velikosti.<br />-   **Zakázat**: odebrat omezení velikosti.<br /><br /> Toto omezení je zaškrtnuto před tím, než CodeLens zpracuje novou sadu změn. Pokud dočasná data překročí tento limit, CodeLens pozastaví zpracování minulých sad změn, nikoli nových. CodeLens restartuje zpracování po vyčištění dat a klesne pod tento limit. Automatické čištění se spustí jednou denně. To znamená, že dočasná data mohou překročit tento limit, dokud nebude spuštěno čištění.|
+|**/indexHistoryPeriod**: [zobrazit &#124; všechny &#124; < `NumberOfMonths` >]|Určuje, jak dlouho se má indexovat historie změn indexovat. To má vliv na to, kolik historie CodeLens ukazuje. Výchozí limit je 12 měsíců. To znamená, že CodeLens zobrazuje historii změn jenom za posledních 12 měsíců.<br /><br /> -   **zobrazení**: zobrazí aktuální počet měsíců.<br />-   **All**: indexovat veškerou historii změn.<br />-    `NumberOfMonths`: změňte počet měsíců použitých k indexování historie změn.|
 |**/CollectionName:** `CollectionName`|Určuje název kolekce projektu, na které se má spustit příkaz **CodeIndex –** . Vyžaduje se, pokud nepoužíváte **/CollectionID**.|
 |**/collectionId:** `CollectionId`|Určuje identifikační číslo kolekce projektu, na které se má spustit příkaz **CodeIndex –** . Vyžaduje se, pokud nepoužíváte **/CollectionName**.|
 

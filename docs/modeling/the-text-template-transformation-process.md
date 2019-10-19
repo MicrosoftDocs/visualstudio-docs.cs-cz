@@ -4,60 +4,60 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, transformation process
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 271d9625ba5c41599af6c92504b3f17a166a2ee7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 518c06f8630ad9fa7742f7b3e85ac27263cd0a86
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63001374"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72605810"
 ---
 # <a name="the-text-template-transformation-process"></a>Proces transformace textových šablon
-Proces transformace textových šablon přijímá jako vstupní soubor textové šablony a vygeneruje nový textový soubor jako výstup. Například textové šablony můžete použít ke generování kódu jazyka Visual Basic nebo C#, nebo můžete vygenerovat zprávu ve formátu HTML.
+Proces transformace textové šablony převede soubor textové šablony jako vstup a vygeneruje nový textový soubor jako výstup. Můžete například použít šablony textu k vygenerování Visual Basic nebo C# kódu nebo můžete vygenerovat sestavu HTML.
 
- Tři komponenty účasti v tomto procesu: modul, hostitele a procesory direktiv. Modul řídí procesu. komunikuje se službou hostitele a procesor direktiv pro vytvoření výstupního souboru. Hostitel poskytuje všechny interakce s prostředím, jako je hledání souborů a sestavení. Procesor direktiv přidá funkce, jako je například čtení dat ze souboru XML nebo databáze.
+ Tyto tři komponenty se účastní tohoto procesu: modul, hostitel a procesory direktiv. Modul řídí proces; komunikuje s hostitelem a procesorem direktiv, aby vytvořil výstupní soubor. Hostitel poskytuje jakoukoli interakci s prostředím, jako je například vyhledání souborů a sestavení. Procesor direktiv přidává funkce, jako je například čtení dat ze souboru XML nebo databáze.
 
- Proces transformace textových šablon se provádí ve dvou krocích. Modul nejprve vytvoří dočasnou třídu, která se nazývá vygenerované třídy transformace. Tato třída obsahuje kód, který je generován direktivy a řídicí bloky. Potom modul zkompiluje a spustí vygenerované třídy transformace pro vytvoření výstupního souboru.
+ Proces transformace textové šablony se provádí ve dvou krocích. Za prvé vytvoří modul dočasnou třídu, která je známá jako vygenerovaná transformační třída. Tato třída obsahuje kód, který je generován direktivami a řídicími bloky. Poté modul zkompiluje a spustí generovanou třídu transformace pro vytvoření výstupního souboru.
 
 ## <a name="components"></a>Komponenty
 
-|Součást|Popis|Přizpůsobitelné (Ano/Ne)|
+|Součást|Popis|Přizpůsobitelné (ano/ne)|
 |-|-|-|
-|Modul|Komponenta modulu řídí proces transformace textových šablon|Ne.|
-|Hostitel|Hostitel je rozhraní mezi modul a uživatelského prostředí. Visual Studio je hostitel procesu transformace textu.|Ano. Můžete vytvořit vlastního hostitele.|
-|Procesory direktiv|Procesory direktiv jsou třídy, které zpracovávají direktivy v textových šablonách. Můžete použít direktivy předávat data do textové šablony ze vstupního zdroje.|Ano. Můžete napsat vlastní procesory direktiv|
+|Jádra|Komponenta Engine řídí proces transformace textové šablony.|Ne.|
+|Hostitel|Hostitel je rozhraní mezi modulem a uživatelským prostředím. Visual Studio je hostitelem procesu transformace textu.|Ano. Můžete napsat vlastního hostitele.|
+|Procesory direktiv|Procesory direktiv jsou třídy, které zpracovávají direktivy v textových šablonách. Direktivy můžete použít k poskytnutí dat pro textovou šablonu ze vstupního zdroje.|Ano. Můžete psát vlastní procesory direktiv.|
 
 ## <a name="the-engine"></a>Modul
- Modul přijímá jako řetězec z hostitele, která zpracovává všechny soubory, které se používají v transformace procesu šablony. Modul následně požádá hostitele najít všechny vlastní procesory direktiv a další aspekty životního prostředí. Modul se potom zkompiluje a spustí vygenerované třídy transformace. Modul vrátí generovaný text na hostitele, který obvykle uloží text do souboru.
+ Modul obdrží šablonu jako řetězec z hostitele, který zpracovává všechny soubory, které jsou používány v procesu transformace. Modul pak vyzve hostitele k vyhledání jakýchkoli vlastních procesorů směrnice a dalších aspektů prostředí. Modul pak zkompiluje a spustí generovanou transformační třídu. Modul vrátí vygenerovaný text na hostitele, který obvykle ukládá text do souboru.
 
 ## <a name="the-host"></a>Hostitel
- Hostitel je zodpovědná za nic, které se týkají prostředí mimo proces transformace, včetně následujících:
+ Hostitel zodpovídá za cokoli, co souvisí s prostředím mimo proces transformace, včetně následujících:
 
-- Hledání textu a binárních souborů požadoval modul nebo procesor direktiv. Hostitel může prohledáním adresáře a globální mezipaměti sestavení k vyhledání sestavení. Hostitele můžete vyhledat kód vlastního procesoru direktiv pro tento motor. Hostitel můžete také najít a čtení textových souborů a vrátí jejich obsah jako řetězce.
+- Hledání textu a binárních souborů požadovaných modulem nebo procesorem direktiv. Hostitel může vyhledat sestavení v adresářích a v globální mezipaměti sestavení (GAC). Hostitel může vyhledat vlastní kód procesoru direktiv pro modul. Hostitel může také vyhledat a číst textové soubory a vracet jejich obsah jako řetězce.
 
-- Poskytuje seznam standardní sestavení a obory názvů, které se používají modulem vytvořit vygenerované třídy transformace.
+- Poskytování seznamů standardních sestavení a oborů názvů, které modul používá k vytvoření vygenerované třídy transformace.
 
-- Poskytování doménu aplikace, který se používá, když modul zkompiluje a spustí vygenerované třídy transformace. Pokud chcete ochránit před chybami v kódu šablony hostitele aplikace se používá zvláštní aplikační doména.
+- Poskytnutí domény aplikace, která se používá, když modul zkompiluje a spustí generovanou třídu transformace. K ochraně hostitelské aplikace před chybami v kódu šablony se používá samostatná aplikační doména.
 
 - Zápis vygenerovaného výstupního souboru.
 
-- Nastavení výchozí přípona pro generovaný soubor.
+- Nastavení výchozí přípony pro vygenerovaný výstupní soubor.
 
-- Zpracování chyb transformace textové šablony. Hostitele můžete například zobrazit chyby v uživatelském rozhraní nebo zápis do souboru. (V sadě Visual Studio se zobrazí chyby v okně chybové zprávy.)
+- Zpracování chyb transformace šablony textu. Například hostitel může zobrazit chyby v uživatelském rozhraní nebo je zapsat do souboru. (V aplikaci Visual Studio se chyby zobrazují v okně chybové zprávy.)
 
-- Poskytuje hodnotu požadovaného parametru, pokud uživatel má direktivu volána bez zadání hodnoty. Procesoru direktiv můžete zadat název směrnice a parametr a požádejte hostitele tak, aby zadat výchozí hodnotu, pokud jej obsahuje.
+- Poskytnutí požadované hodnoty parametru, pokud uživatel volal direktivu bez zadání hodnoty. Procesor direktiv může zadat název direktivy a parametr a požádat hostitele, aby poskytl výchozí hodnotu, pokud má jednu z nich.
 
-## <a name="directives-and-directive-processors"></a>Direktivy a procesorů pro direktivy
- Direktivy je příkaz v textové šabloně. Poskytuje parametry pro proces generování. Obvykle direktivy definovat zdroje a typ modelu nebo ostatní vstupy a příponu názvu souboru výstupního souboru.
+## <a name="directives-and-directive-processors"></a>Procesory direktiv a direktiv
+ Direktiva je příkaz v textové šabloně. Poskytuje parametry procesu generování. Obvykle direktivy definují zdroj a typ modelu nebo jiného vstupu a příponu názvu výstupního souboru.
 
- Procesor direktiv může zpracovat jeden nebo více direktiv. Při transformaci šablony, je třeba mít nainstalovanou procesor direktiv, který můžete řešit pomocí direktivy v šabloně.
+ Procesor direktiv může zpracovat jednu nebo více direktiv. Při transformaci šablony je nutné nainstalovat procesor direktiv, který se může zabývat direktivami ve vaší šabloně.
 
- Direktivy fungovat tak, že přidáte kód do vygenerované třídy transformace. Direktivy textové šablony a procesy modulu direktiv volání volání vytvoří vygenerované třídy transformace. Po úspěšně zavolat direktivu zbytek kódu, který napíšete do textové šablony se můžete spolehnout na funkce, které poskytuje tato direktiva. Například můžete provést následující volání `import` direktiv v šabloně:
+ Direktivy fungují přidáním kódu do vygenerované třídy transformace. Direktivy voláte z textové šablony a modul zpracovává všechna volání direktiv při vytváření vygenerované třídy transformace. Po úspěšném volání direktivy může zbytek kódu, který píšete v textové šabloně, spoléhat na funkčnost, kterou poskytuje tato direktiva. Například můžete provést následující volání direktivy `import` v šabloně:
 
  `<#@ import namespace="System.Text" #>`
 
- Převede standardní procesoru direktiv pro `using` prohlášení do vygenerované třídy transformace. Pak můžete použít `StringBuilder` třídy ve zbytku kódu bez kvalifikace ho jako šablonu `System.Text.StringBuilder`.
+ Procesor standardní směrnice převede tento údaj na příkaz `using` ve vygenerované třídě transformace. Pak můžete použít třídu `StringBuilder` ve zbytku kódu šablony bez toho, aby byla kvalifikována jako `System.Text.StringBuilder`.

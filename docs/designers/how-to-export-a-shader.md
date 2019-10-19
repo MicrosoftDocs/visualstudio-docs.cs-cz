@@ -3,43 +3,43 @@ title: 'Postupy: Exportování shaderu'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0bd48bf4-9792-4456-a545-e462a2be668d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d0a962fe941f676369c4c3575647610df809d58
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c05e40b76d60a5602cee1cb67b5c3094fb94d249
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844394"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72635552"
 ---
 # <a name="how-to-export-a-shader"></a>Postupy: Export shaderu
 
-Tento článek popisuje způsob použití **návrháře shaderu** exportovat shader orientovaného grafu Shader Language (DGSL) tak, aby ho můžete používat ve vaší aplikaci.
+Tento článek ukazuje, jak pomocí **Návrháře shaderu** exportovat shader DGSL (Direct Graph shader Language), abyste ho mohli použít ve své aplikaci.
 
 ## <a name="export-a-shader"></a>Export shaderu
 
-Po vytvoření shaderu pomocí návrháře shaderu a mohli ho používat ve vaší aplikaci, je nutné ho exportovat ve formátu, který se rozumí grafiky rozhraní API. Exportování shaderu různými způsoby pro různé potřeby.
+Po vytvoření shaderu pomocí Návrháře shaderu a před jeho použitím v aplikaci je nutné ho exportovat ve formátu, který vaše grafické rozhraní API zná. Shader můžete vyexportovat různými způsoby pro splnění různých potřeb.
 
-1. V sadě Visual Studio, otevřete **vizuální graf shaderu (.dgsl)** souboru.
+1. V aplikaci Visual Studio otevřete soubor **grafu Visual shader (. DGSL)** .
 
-     Pokud nemáte k dispozici **vizuální graf shaderu (.dgsl)** soubor otevřít, jej vytvořte podle pokynů v [jak: Vytvoření shaderu základní barvy](../designers/how-to-create-a-basic-color-shader.md).
+     Pokud nemáte soubor **grafu vizuálních shaderů (. DGSL)** otevřený, vytvořte ho tak, jak je popsáno v tématu [How to: Create a Basic Color shader](../designers/how-to-create-a-basic-color-shader.md).
 
-2. Na **návrháře shaderu** nástrojů, zvolte **Upřesnit** > **exportovat** > **exportovat jako**. **Exportovat Shader** zobrazí se dialogové okno.
+2. Na panelu nástrojů **Návrháře shaderů** vyberte **upřesnit**  > **exportovat**  > **exportovat jako**. Zobrazí se dialogové okno **exportovat shader** .
 
-3. V **uložit jako typ** rozevírací seznam, vyberte formát, který chcete exportovat.
+3. V rozevíracím seznamu **Uložit jako typ** vyberte formát, který chcete exportovat.
 
-     Tady jsou formáty, které můžete použít:
+     Můžete zvolit následující formáty:
 
-     **HLSL Pixel Shader (\*.hlsl)** exportuje shaderu High Level Shader Language (HLSL) zdrojového kódu. Tato možnost umožňuje upravit shader tak později, i když je nasazena v aplikaci. Proto může být snazší ladit a opravovat kód založený na problémy koncových uživatelů, ale také usnadňuje uživatelům upravte svůj shader nežádoucí způsoby – například k získání nespravedlivou výhodu v konkurenční hru. Také může zvýšit zatížení doba shaderu.
+     **HLSL pixel shader (\*. HLSL)** Exportuje shader jako zdrojový kód HLSL (High Level shader Language). Tato možnost umožňuje změnit shader později i po jeho nasazení v aplikaci. To může zjednodušit ladění a opravování kódu na základě problémů koncových uživatelů, ale také usnadňuje uživateli upravit váš shader nežádoucím způsobem – například pro získání nerovné výhody v konkurenční hře. Může také prodloužit dobu načítání shaderu.
 
-     **Kompilovaný Pixel Shader (\*.cso)** exportuje shaderu HLSL bajtového kódu. Tato možnost umožňuje upravit shader tak později, i když je nasazena v aplikaci. Proto může být snazší ladit a opravovat kód založený na problémy koncových uživatelů, ale protože shader je předem kompilovaných, narůstání režii navíc runtime shaderu při načtení aplikace. Dostatečně zkušení uživatelé můžete upravit shader tak stále nežádoucím způsobem, ale kompilace shaderu to kvůli tomu podstatně obtížnější.
+     **Kompilovaný pixel shader (\*. CSO)** Exportuje shader jako HLSLový kód. Tato možnost umožňuje změnit shader později i po jeho nasazení v aplikaci. To může zjednodušit ladění a opravování kódu na základě problémů koncových uživatelů, ale vzhledem k tomu, že shader je předem zkompilován, neposkytuje dodatečnou režii za běhu, když je shader načten aplikací. Dostatečně zkušení uživatelé mohou i nadále upravovat shader nevyžádanými způsoby, ale kompilování shaderu to dělá mnohem obtížnější.
 
-     **Hlaviček jazyka C++ (\*.h)** exportuje jako záhlaví ve stylu jazyka C, který definuje bajtové pole obsahující HLSL bajtový kód shaderu. Tato možnost může být časově náročnější, ladit a opravovat kód založený na problémy koncových uživatelů, protože aplikace musí být překompilovány Pokud chcete otestovat opravy. Ale vzhledem k tomu, že tato možnost je těžké, i když není možné upravit shader po nasazení v aplikaci, představuje většina potíže s uživateli, který chce nežádoucím způsobem upravit shader.
+     **Header (\*. h) C++**  Exportuje shader jako záhlaví ve stylu jazyka C, které definuje bajtové pole obsahující HLSL bajt. Tato možnost může být časově náročná na ladění a opravování kódu na základě problémů koncových uživatelů, protože aplikace musí být znovu zkompilována pro otestování opravy. Vzhledem k tomu, že tato možnost je obtížné, ale není nemožné, pro úpravu shaderu po jeho nasazení v aplikaci, prezentuje největší obtíže uživateli, který chce změnit shader nevyžádanými způsoby.
 
-4. V **název_souboru** – pole se seznamem, zadejte název pro exportované shaderu a klikněte na tlačítko **Uložit** tlačítko.
+4. V poli se seznamem **název souboru** zadejte název exportovaného shaderu a pak klikněte na tlačítko **Uložit** .
 
 ## <a name="see-also"></a>Viz také:
 

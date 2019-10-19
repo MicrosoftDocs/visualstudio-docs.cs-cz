@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Log switch [devenv.exe]
 - /Log Devenv switch
 ms.assetid: ae23c4ae-2376-4fe3-b8d2-81d34e61c8ba
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b2e11cb36176aec94528019cdd19bb5fa86c92b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bc37f4cd7441fc7945ca1762d16300c18d9ecbfe
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946801"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72610374"
 ---
 # <a name="log-devenvexe"></a>/Log (devenv.exe)
 
-Zaznamená veškerou aktivitu do souboru protokolu pro řešení potíží. Tento soubor se zobrazí poté, co jste volat `devenv /log` alespoň jednou. Ve výchozím nastavení soubor protokolu je umístěn zde:
+Zaznamená veškerou aktivitu do souboru protokolu pro řešení potíží. Tento soubor se zobrazí poté, co byl alespoň jednou volán `devenv /log`. Ve výchozím nastavení se nachází soubor protokolu:
 
-**%APPDATA%\\Microsoft\\VisualStudio\\**\<Version\>**\\ActivityLog.xml**
+**% Data% \\Microsoft \\VisualStudio \\** \<Version \> **\\ActivityLog. XML**
 
-kde \<verze\> je verze sady Visual Studio. Můžete ale zadat jiný název a cesta k souboru.
+kde \<Version \> je verze sady Visual Studio. Je však možné zadat jinou cestu a název souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,17 +37,17 @@ devenv /Log NameOfLogFile
 
 - *NameOfLogFile*
 
-  Povinný parametr. Úplná cesta a název souboru protokolu uložte.
+  Požadováno. Úplná cesta a název souboru protokolu, do kterého se má uložit.
 
 ## <a name="remarks"></a>Poznámky
 
 Tento přepínač musí být uvedeny na konci příkazového řádku po všech ostatních přepínačích.
 
-Protokol je zapsán pouze pro všechny instance sady Visual Studio, které jste otevřeli pomocí `/Log` přepnout.
+Protokol je zapsán pouze pro všechny instance aplikace Visual Studio, které jste otevřeli pomocí přepínače `/Log`.
 
 ## <a name="example"></a>Příklad
 
-Tento příklad přesměruje protokolování, aby se `MyVSLog.xml` souboru do domovského adresáře uživatele.
+Tento příklad přesměruje protokolování do souboru `MyVSLog.xml` v domovském adresáři uživatele.
 
 ```shell
 devenv /log "%USERPROFILE%\MyVSLog.xml"

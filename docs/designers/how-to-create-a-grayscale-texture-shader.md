@@ -3,19 +3,19 @@ title: 'Postupy: Vytvoření shaderu textury stupňů šedé'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 79181d81-44af-445e-9a18-03483dd70260
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a8e0295864986ad5cfae2f304f5b0f802f2fb12
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: d8217cc83004be3d4a15ff26743724d553f70d44
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924304"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72635562"
 ---
-# <a name="how-to-create-a-grayscale-texture-shader"></a>Postupy: Vytvoření shaderu textury stupňů šedé
+# <a name="how-to-create-a-grayscale-texture-shader"></a>Postupy: vytvoření shaderu textury ve stupních šedi
 
 Tento článek ukazuje, jak pomocí Návrháře shaderu a jazyka DGSL (Direct Graph shader) vytvořit shader textury ve stupních šedi. Tento shader upraví hodnotu barvy RGB ukázky textury a pak ji použije společně s neupravenou hodnotou Alpha k nastavení konečné barvy.
 
@@ -25,18 +25,18 @@ Můžete implementovat shader textury ve stupních šedi úpravou hodnoty barvy 
 
 Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nástrojů** .
 
-1. Vytvořte základní shader textury, jak je popsáno v [tématu How to: Vytvoří základní shader](../designers/how-to-create-a-basic-texture-shader.md)textury.
+1. Vytvořte základní shader textury, jak je popsáno v tématu [How to: Create a Basic textur shader](../designers/how-to-create-a-basic-texture-shader.md).
 
 2. Odpojte terminál **RGB** uzlu **ukázkové textury** z terminálu **RGB** konečného uzlu **barvy** . V režimu **výběru** zvolte terminál **RGB** pro uzel **Ukázka textury** a pak zvolte možnost **přerušení propojení**. Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
 
-3. Přidejte do grafu rozsytost uzlu. V **sadě nástrojů**v části **filtry**vyberte možnost **desytost** a přesuňte ji na návrhovou plochu.
+3. Přidejte do grafu **rozsytost** uzlu. V **sadě nástrojů**v části **filtry**vyberte možnost **desytost** a přesuňte ji na návrhovou plochu.
 
-4. Vypočítá hodnotu ve stupních šedi pomocí uzlu desytost. V režimu **výběru** přesuňte terminál **RGB** uzlu **vzorku textury** do terminálu **RGB** uzlu desytost.
+4. Vypočítá hodnotu ve stupních šedi pomocí uzlu **desytost** . V režimu **výběru** přesuňte terminál **RGB** uzlu **vzorku textury** do terminálu **RGB** uzlu **desytost** .
 
     > [!NOTE]
-    > Ve výchozím nastavení rozodstínů šedi uzel plně rozsytost vstupní barvy a používá ke konverzi standardní tloušťky světelnosti. Můžete změnit způsob, jakým se rozumělý uzel chová, změnou hodnoty vlastnosti **světelnosti** nebo pouze částečně rozuměle vstupní barvou. Chcete-li částečně desytost vstupní barvy, zadejte skalární hodnotu v rozsahu [0, 1) až k procentu terminálu rozsyceného uzlu.
+    > Ve výchozím nastavení rozodstínů šedi **uzel plně rozsytost vstupní** barvy a používá ke konverzi standardní tloušťky světelnosti. Můžete změnit způsob, jakým se rozumělý **uzel chová** , změnou hodnoty vlastnosti **světelnosti** nebo pouze částečně rozuměle vstupní barvou. Chcete-li částečně desytost vstupní barvy, zadejte skalární hodnotu v rozsahu [0, 1) až k **procentu** terminálu **rozsyceného** uzlu.
 
-5. Propojte hodnotu barvy ve stupních šedi s konečnou barvou. Přesuňte **výstupní** terminál uzlu desytost do terminálu **RGB** **konečného uzlu barvy** .
+5. Propojte hodnotu barvy ve stupních šedi s konečnou barvou. Přesuňte **výstupní** terminál uzlu **desytost** do terminálu **RGB** **konečného uzlu barvy** .
 
 Následující ilustrace znázorňuje dokončený graf shaderu a náhled shaderu, který se použije pro datovou krychli.
 
@@ -49,7 +49,7 @@ Některé tvary mohou pro některé shadery poskytnout lepší náhled. Další 
 
 ## <a name="see-also"></a>Viz také:
 
-- [Postupy: Použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [Postupy: Použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
 - [Postupy: Export shaderu](../designers/how-to-export-a-shader.md)
 - [Editor obrázků](../designers/image-editor.md)
 - [Návrhář shaderů](../designers/shader-designer.md)

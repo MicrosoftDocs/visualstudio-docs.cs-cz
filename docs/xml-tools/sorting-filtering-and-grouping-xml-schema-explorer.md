@@ -3,17 +3,17 @@ title: Řazení, filtrování a seskupování v Průzkumníkovi schémat XML
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 4a914de0-9ffc-4526-9603-92e460e52513
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: daa629b4c26abf7b6ce801c30ea6f6fd41fbaa48
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 6bf9226f3b491a39c7ef5936667cabd789c6a457
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926721"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72604582"
 ---
 # <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>Řazení, filtrování a seskupování (Průzkumník schémat XML)
 
@@ -43,33 +43,33 @@ K dispozici jsou následující možnosti řazení. Výchozí hodnota je **Sort 
 
 Když je vybrána možnost **Seřadit podle typu** , globální uzly jsou seřazeny v následujícím pořadí. Uzly jsou pak seřazené podle abecedy v rámci každé skupiny.
 
-1. `import`sortiment.
+1. uzly `import`.
 
-2. `include`sortiment.
+2. uzly `include`.
 
-3. `redefine`sortiment.
+3. uzly `redefine`.
 
-4. `attribute`sortiment.
+4. uzly `attribute`.
 
-5. `attributeGroup`sortiment.
+5. uzly `attributeGroup`.
 
-6. `complexType`sortiment.
+6. uzly `complexType`.
 
-7. `simpleType`sortiment.
+7. uzly `simpleType`.
 
-8. `element`sortiment.
+8. uzly `element`.
 
-9. `group`sortiment.
+9. uzly `group`.
 
 ### <a name="sort-by-name"></a>Seřadit podle názvu
 
 Když je vybraná možnost **Seřadit podle názvu** , globální uzly se seřadí v následujícím pořadí:
 
-1. `import`uzly (v abecedním pořadí oborů názvů).
+1. uzly `import` (v abecedním pořadí oborů názvů).
 
-2. `include`uzly (v abecedním pořadí `schemaLocation` atributů).
+2. uzly `include` (v abecedním pořadí atributů `schemaLocation`).
 
-3. `redefine`uzly (v abecedním pořadí `schemaLocation` atributů).
+3. uzly `redefine` (v abecedním pořadí atributů `schemaLocation`).
 
 4. Další globální uzly v abecedním pořadí.
 

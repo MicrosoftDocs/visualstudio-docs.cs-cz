@@ -1,5 +1,5 @@
 ---
-title: 'CA2145: Transparentní metody nesmějí být doplněny pomocí SuppressUnmanagedCodeSecurityAttribute | Dokumentace Microsoftu'
+title: 'CA2145: transparentní metody by neměly být dekorované s použitím SuppressUnmanagedCodeSecurityAttribute | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -8,17 +8,17 @@ f1_keywords:
 - CA2145
 ms.assetid: 81970700-b438-4b3b-9239-16887e16f7b7
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b6a7c1b5684181098ef0bec1cde430f401ba1136
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6bffa680fa39014ffa96feec997b5eca63ee08ff
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142631"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72610213"
 ---
-# <a name="ca2145-transparent-methods-should-not-be-decorated-with-the-suppressunmanagedcodesecurityattribute"></a>CA2145: Transparentní metody by neměly být doplněny o SuppressUnmanagedCodeSecurityAttribute
+# <a name="ca2145-transparent-methods-should-not-be-decorated-with-the-suppressunmanagedcodesecurityattribute"></a>CA2145: Transparentní metody nesmějí být doplněny pomocí SuppressUnmanagedCodeSecurityAttribute
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -29,13 +29,13 @@ ms.locfileid: "68142631"
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Transparentní metoda, metodu, která je označena <xref:System.Security.SecuritySafeCriticalAttribute> metody nebo typ, který obsahuje metodu je označené <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> atribut.
+ Transparentní metoda, metoda, která je označena metodou <xref:System.Security.SecuritySafeCriticalAttribute> nebo typem, který obsahuje metodu, je označena atributem <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>.
 
 ## <a name="rule-description"></a>Popis pravidla
- Metody upravené pomocí <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> atribut mají implicitní LinkDemand umístěn na jakoukoli metodu, která je volá. Tento LinkDemand vyžaduje, aby byl volající kód kritický z hlediska zabezpečení. Označení metody, která používá SuppressUnmanagedCodeSecurity s <xref:System.Security.SecurityCriticalAttribute> atribut zviditelňuje tento požadavek pro volající metody.
+ Metody dekorované pomocí atributu <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> mají implicitní LinkDemand umístěný na jakékoli metodě, která ji volá. Tento LinkDemand vyžaduje, aby byl volající kód kritický z hlediska zabezpečení. Označení metody, která používá SuppressUnmanagedCodeSecurity s atributem <xref:System.Security.SecurityCriticalAttribute>, tento požadavek je pro volající metody jasnější.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, označte metodu nebo typ s <xref:System.Security.SecurityCriticalAttribute> atribut.
+ Chcete-li opravit porušení tohoto pravidla, označte metodu nebo typ pomocí atributu <xref:System.Security.SecurityCriticalAttribute>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.

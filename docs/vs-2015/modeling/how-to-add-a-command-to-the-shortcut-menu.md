@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání příkazu do místní nabídky | Dokumentace Microsoftu'
+title: 'Postupy: Přidání příkazu do místní nabídky | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -9,358 +9,355 @@ helpviewer_keywords:
 - walkthroughs [Domain-Specific Language Tools]
 ms.assetid: cd550399-05fc-4dbf-be4c-f5094bb752ce
 caps.latest.revision: 24
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5bcb562d89ee68320c48cc778be3294a2af5c719
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 1d218f5f560a7ae2c95d7e7ae0e20002f922e257
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63426944"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72602073"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>Postupy: Přidání příkazu do místní nabídky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Příkazy nabídky můžete přidat do vašeho jazyka specifického pro doménu (DSL), tak, aby vaši uživatelé můžou provádět úlohy, které se týkají vašeho DSL. Příkazy se zobrazují v nabídce kontextu (místní), po kliknutí pravým tlačítkem myši v diagramu. Příkaz můžete definovat tak, aby se zobrazí jenom v nabídce za určitých okolností. Například můžete provést příkaz viditelné pouze v případě, že uživatel klikne na určité typy prvek nebo prvky v konkrétní stavy.  
-  
- Stručně řečeno kroky probíhají v projektu DslPackage následujícím způsobem:  
-  
-1. [Příkaz v Commands.vsct deklarovat](#VSCT)  
-  
-2. [Aktualizovat číslo verze balíčku v Package.tt](#version). Budete muset udělat při každé změně Commands.vsct  
-  
-3. [Zápis metod ve třídě CommandSet](#CommandSet) zviditelnit příkazu a definovat, co chcete provést příkaz.  
-  
-   Ukázky najdete v tématu [Visualization and Modeling SDK webu](http://go.microsoft.com/fwlink/?LinkID=185579).  
-  
+Příkazy nabídky můžete přidat do jazyka DSL (Domain-Specific Language), aby uživatelé mohli provádět úlohy, které jsou specifické pro vaši DSL. Příkazy se zobrazí v místní nabídce (místní), když uživatelé na diagram klikne pravým tlačítkem myši. Můžete definovat příkaz, aby se v nabídce zobrazoval pouze v určitých případech. Příkaz lze například zobrazit pouze v případě, že uživatel klikne na konkrétní typy prvku nebo prvky v určitých stavech.
+
+ V souhrnu jsou kroky provedeny v projektu DslPackage následujícím způsobem:
+
+1. [Deklarovat příkaz v Commands. vsct](#VSCT)
+
+2. [Aktualizujte číslo verze balíčku v Package.TT](#version). To je nutné provést pokaždé, když změníte příkazy. vsct
+
+3. [Metody zápisu do třídy CommandSet](#CommandSet) , aby příkaz byl viditelný a definoval, co má příkaz dělat.
+
+   Ukázky najdete na [webu sady SDK pro vizualizaci a modelování](http://go.microsoft.com/fwlink/?LinkID=185579).
+
 > [!NOTE]
-> Můžete také upravit chování některé existující příkazy, jako je vyjmutí, vložení, Vybrat vše a tisk přepsáním metody v CommandSet.cs. Další informace najdete v tématu [jak: Úprava příkazu standardní nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).  
-  
-## <a name="defining-a-command-using-mef"></a>Definování příkazu pomocí MEF  
- Spravované rozšíření Framework (MEF) obsahuje alternativní metodu pro definování příkazy nabídky v nabídce diagramu. Jeho primárním účelem je umožnit DSL prodloužit vámi nebo jiné smluvní strany. Uživatele můžete nainstalovat jenom DSL nebo nainstalovat DSL a rozšíření. MEF, ale také snižuje práci po počáteční pracovní umožňující MEF v DSL definující příkazy místní nabídky.  
-  
- V tomto tématu použijte metodu, pokud:  
-  
-1. Můžete definovat příkazy v nabídkách než místní nabídce klikněte pravým tlačítkem.  
-  
-2. Můžete definovat konkrétní seskupení příkazů v nabídce.  
-  
-3. Nechcete povolit ostatním uživatelům rozšíření DSL, své vlastní příkazy.  
-  
-4. Chcete definovat jeden příkaz.  
-  
-   V opačném případě zvažte použití metody rozhraní MEF pro definovat příkazy. Další informace najdete v tématu [rozšíření vašeho DSL pomocí MEF](../modeling/extend-your-dsl-by-using-mef.md).  
-  
-## <a name="VSCT"></a> Příkaz v Commands.Vsct deklarovat  
- Příkazy nabídky jsou deklarovány v DslPackage\Commands.vsct. Tyto definice zadejte popisky, které položky nabídky a kde jsou uvedeny v nabídkách.  
-  
- Soubor, který upravíte, Commands.vsct, importuje definice z několika .h souborů, které jsou umístěné v adresáři *cesta pro instalaci sady Visual Studio SDK*\VisualStudioIntegration\Common\Inc. Zahrnuje také GeneratedVsct.vsct, který je generován z definice DSL.  
-  
- Další informace o souborech .vsct najdete v tématu [tabulky příkazů aplikace Visual Studio (. Vsct) soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).  
-  
-#### <a name="to-add-the-command"></a>Chcete-li přidat příkaz  
-  
-1. V **Průzkumníka řešení**v části **DslPackage** projektu, otevřete Commands.vsct.  
-  
-2. V `Commands` elementu, definujte jedno nebo více tlačítek a skupinu. A *tlačítko* je položku v nabídce. A *skupiny* oddíl v nabídce. Pokud chcete definovat tyto položky, přidejte následující prvky:  
-  
-    ```  
-    <!-- Define a group - a section in the menu -->  
-    <Groups>  
-      <Group guid="guidCustomMenuCmdSet" id="grpidMyMenuGroup" priority="0x0100">  
-        <!-- These symbols are defined in GeneratedVSCT.vsct -->  
-        <Parent guid="guidCmdSet" id="menuidContext" />  
-      </Group>  
-    </Groups>  
-    <!-- Define a button - a menu item - inside the Group -->  
-    <Buttons>  
-      <Button guid="guidCustomMenuCmdSet" id="cmdidMyContextMenuCommand"  
-        priority="0x0100" type="Button">  
-        <Parent guid="guidCustomMenuCmdSet" id="grpidMyMenuGroup"/>  
-        <!-- If you do not want to place the command in your own Group,   
-             use Parent guid="guidCmdSet" id="grpidContextMain".  
-             These symbols are defined in GeneratedVSCT.vsct -->  
-        <CommandFlag>DynamicVisibility</CommandFlag>  
-        <Strings>  
-          <ButtonText>My Context Menu Command</ButtonText>  
-        </Strings>  
-      </Button>  
-    </Buttons>  
-    ```  
-  
+> Můžete také změnit chování některých existujících příkazů, jako je například vyjmout, vložit, vybrat vše a tisknout přepsáním metod v CommandSet.cs. Další informace naleznete v tématu [How to: Modify a Standard a Command nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
+
+## <a name="defining-a-command-using-mef"></a>Definování příkazu pomocí MEF
+ Rozhraní Managed Extension Framework (MEF) poskytuje alternativní metodu definování příkazů nabídky v nabídce diagramu. Jeho hlavním účelem je umožnit, aby linka DSL rozšířila vámi nebo jiné strany. Uživatelé si můžou zvolit, že budou instalovat jenom DSL, nebo můžou nainstalovat jak DSL, tak rozšíření. Rozhraní MEF však také zkracuje práci s definováním příkazů místní nabídky po počáteční práci, která povoluje rozhraní MEF na DSL.
+
+ Použijte metodu v tomto tématu, pokud:
+
+1. Příkazy nabídky můžete definovat i v jiných nabídkách, než v místní nabídce pravého tlačítka myši.
+
+2. Chcete v nabídce definovat konkrétní seskupení příkazů.
+
+3. Nechcete ostatním uživatelům umožnit rozšiřování DSL pomocí vlastních příkazů.
+
+4. Chcete definovat pouze jeden příkaz.
+
+   V opačném případě zvažte použití metody MEF k definování příkazů. Další informace najdete v tématu věnovaném [rozšiřování DSL pomocí MEF](../modeling/extend-your-dsl-by-using-mef.md).
+
+## <a name="VSCT"></a>Deklarovat příkaz v Commands. vsct
+ Příkazy nabídky jsou deklarovány v DslPackage\Commands.vsct. Tyto definice určují popisky položek nabídky a tam, kde se zobrazují v nabídkách.
+
+ Soubor, který upravujete, Commands. vsct, importuje definice z několika souborů. h, které jsou umístěny v adresáři *Instalační cesta sady Visual Studio SDK*\VisualStudioIntegration\Common\Inc. Obsahuje taky GeneratedVsct. vsct, který se generuje z definice DSL.
+
+ Další informace o souborech. vsct naleznete v tématu [tabulka příkazů sady Visual Studio (. Vsct) soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
+
+#### <a name="to-add-the-command"></a>Přidání příkazu
+
+1. V **Průzkumník řešení**v projektu **DslPackage** otevřete příkazy Commands. vsct.
+
+2. V prvku `Commands` definujte jedno nebo více tlačítek a skupinu. *Tlačítko* je položka v nabídce. *Skupina* je oddílem v nabídce. Chcete-li definovat tyto položky, přidejte následující prvky:
+
+    ```
+    <!-- Define a group - a section in the menu -->
+    <Groups>
+      <Group guid="guidCustomMenuCmdSet" id="grpidMyMenuGroup" priority="0x0100">
+        <!-- These symbols are defined in GeneratedVSCT.vsct -->
+        <Parent guid="guidCmdSet" id="menuidContext" />
+      </Group>
+    </Groups>
+    <!-- Define a button - a menu item - inside the Group -->
+    <Buttons>
+      <Button guid="guidCustomMenuCmdSet" id="cmdidMyContextMenuCommand"
+        priority="0x0100" type="Button">
+        <Parent guid="guidCustomMenuCmdSet" id="grpidMyMenuGroup"/>
+        <!-- If you do not want to place the command in your own Group,
+             use Parent guid="guidCmdSet" id="grpidContextMain".
+             These symbols are defined in GeneratedVSCT.vsct -->
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>My Context Menu Command</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+    ```
+
     > [!NOTE]
-    > Každé tlačítko nebo skupiny je určený identifikátor GUID a identifikátor celé číslo. Můžete vytvořit několik skupin a tlačítka se stejným GUID. Musí však mít různé identifikátory. Názvy GUID a ID názvy jsou přeloženy na skutečné identifikátory GUID a číselné ID v `<Symbols>` uzlu.  
-  
-3. Přidáte omezení viditelnosti pro příkaz tak, aby se načetl pouze v rámci jazyka specifického pro doménu. Další informace najdete v tématu [visibilityconstraints – Element](../extensibility/visibilityconstraints-element.md).  
-  
-     Chcete-li to provést, přidejte následující prvky v `CommandTable` elementu po `Commands` elementu.  
-  
-    ```  
-    <VisibilityConstraints>  
-      <!-- Ensures the command is only loaded for this DSL -->  
-      <VisibilityItem guid="guidCustomMenuCmdSet" id="cmdidMyContextMenuCommand"  
-        context="guidEditor"/>  
-    </VisibilityConstraints>  
-    ```  
-  
-4. Definujte názvy, které jste použili pro identifikátory GUID a ID. Chcete-li to provést, přidejte `Symbols` element v `CommandTable` elementu po `Commands` elementu.  
-  
-    ```  
-    <Symbols>  
-      <!-- Substitute a unique GUID for the placeholder: -->  
-      <GuidSymbol name="guidCustomMenuCmdSet"  
-        value="{00000000-0000-0000-0000-000000000000}" >  
-        <IDSymbol name="grpidMyMenuGroup" value="0x01001"/>  
-        <IDSymbol name="cmdidMyContextMenuCommand" value="0x00001"/>  
-      </GuidSymbol>  
-    </Symbols>  
-    ```  
-  
-5. Nahraďte `{000...000}` s identifikátorem GUID, který identifikuje skupiny a položkami nabídky. Chcete-li získat nový identifikátor GUID, použijte **Create GUID** nástroj **nástroje** nabídky.  
-  
+    > Každé tlačítko nebo skupina je identifikován identifikátorem GUID a IDENTIFIKÁTORem celého čísla. Můžete vytvořit několik skupin a tlačítek se stejným identifikátorem GUID. Musí mít ale jiná ID. Názvy identifikátorů GUID a názvy ID jsou přeloženy na skutečné identifikátory GUID a číselné identifikátory v uzlu `<Symbols>`.
+
+3. Přidejte omezení viditelnosti pro příkaz tak, aby bylo načteno pouze do kontextu vašeho jazyka specifického pro doménu. Další informace naleznete v tématu [VisibilityConstraints element](../extensibility/visibilityconstraints-element.md).
+
+     Chcete-li to provést, přidejte následující prvky do prvku `CommandTable` za elementem `Commands`.
+
+    ```
+    <VisibilityConstraints>
+      <!-- Ensures the command is only loaded for this DSL -->
+      <VisibilityItem guid="guidCustomMenuCmdSet" id="cmdidMyContextMenuCommand"
+        context="guidEditor"/>
+    </VisibilityConstraints>
+    ```
+
+4. Zadejte názvy, které jste použili pro identifikátory GUID a ID. Chcete-li to provést, přidejte prvek `Symbols` do prvku `CommandTable` za element `Commands`.
+
+    ```
+    <Symbols>
+      <!-- Substitute a unique GUID for the placeholder: -->
+      <GuidSymbol name="guidCustomMenuCmdSet"
+        value="{00000000-0000-0000-0000-000000000000}" >
+        <IDSymbol name="grpidMyMenuGroup" value="0x01001"/>
+        <IDSymbol name="cmdidMyContextMenuCommand" value="0x00001"/>
+      </GuidSymbol>
+    </Symbols>
+    ```
+
+5. Nahraďte `{000...000}` identifikátorem GUID, který identifikuje vaše skupiny a položky nabídky. Chcete-li získat nový identifikátor GUID, použijte nástroj **Create GUID** v nabídce **nástroje** .
+
     > [!NOTE]
-    > Pokud chcete přidat další skupiny nebo položky nabídky, můžete použít stejný identifikátor GUID. Ale musíte použít nové hodnoty `IDSymbols`.  
-  
-6. V kódu, který jste zkopírovali z tohoto postupu nahraďte každý výskyt následující řetězce s vlastními řetězci:  
-  
-    - `grpidMyMenuGroup`  
-  
-    - `cmdidMyContextMenuCommand`  
-  
-    - `guidCustomMenuCmdSet`  
-  
-    - `My Context Menu Command`  
-  
-## <a name="version"></a> Aktualizace verze balíčku v Package.tt  
- Kdykoli přidat nebo změnit příkazu, aktualizujte `version` parametr <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> , která je použita na třídě balíčku ještě před vydáním nové verze jazyka specifického pro doménu.  
-  
- Protože třída balíčku je definováno ve vytvořeném souboru, aktualizujte atribut v souboru textové šablony, který generuje soubor Package.cs.  
-  
-#### <a name="to-update-the-packagett-file"></a>K aktualizaci souboru Package.tt  
-  
-1. V **Průzkumníka řešení**v **DslPackage** v projektu **GeneratedCode** složku, otevřete soubor Package.tt.  
-  
-2. Vyhledejte `ProvideMenuResource` atribut.  
-  
-3. Přírůstek `version` parametr atributu, což je druhý parametr. Pokud chcete, můžete napsat název parametru explicitně na vás upozorní na její účel. Příklad:  
-  
-     `[VSShell::ProvideMenuResource("1000.ctmenu", version: 2 )]`  
-  
-## <a name="CommandSet"></a> Definuje chování příkazu  
- Některé příkazy, které jsou implementovány v dílčí třídě, která je deklarována v DslPackage\GeneratedCode\CommandSet.cs již vašeho DSL. Přidání nových příkazů, musí tato třída rozšířit tak, že vytvoříte nový soubor, který obsahuje deklaraci částečné stejné třídy. Název třídy je obvykle  *\<YourDslName >* `CommandSet`. To je užitečné začněte tím, že název třídy ověření a zkontrolujete jeho obsah.  
-  
- Třída set příkazu je odvozen z <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>.  
-  
-#### <a name="to-extend-the-commandset-class"></a>Rozšíření třídy CommandSet  
-  
-1. V Průzkumníku řešení v projektu DslPackage otevřete složku GeneratedCode a podívejte se do části CommandSet.tt a otevřete její vygenerovaný soubor CommandSet.cs. Poznámka: obor názvů a název první třídy, která je definována existuje. Například může se zobrazit:  
-  
-     `namespace Company.Language1`  
-  
-     `{ ...  internal partial class Language1CommandSet : ...`  
-  
-2. V **DslPackage**, vytvořte složku s názvem **vlastní kód**. V této složce, vytvořte nový soubor třídy s názvem `CommandSet.cs`.  
-  
-3. V novém souboru zápisu částečná deklarace, který má stejný obor názvů a název jako vygenerovanou dílčí třídu. Příklad:  
-  
-     `namespace Company.Language1 /* Make sure this is correct */`  
-  
-     `{ internal partial class Language1CommandSet { ...`  
-  
-     **Poznámka:** Pokud jste použili k vytvoření nového souboru šablony třídy, je nutné opravit obor názvů a název třídy.  
-  
-### <a name="extend-the-command-set-class"></a>Rozšíření třídy sady příkazů  
- Příkaz set kódu obvykle muset importujte následující obory názvů:  
-  
-```  
-using System;  
-using System.Collections.Generic;  
-using System.ComponentModel.Design;   
-using System.Linq;  
-using Microsoft.VisualStudio.Modeling;  
-using Microsoft.VisualStudio.Modeling.Diagrams;  
-using Microsoft.VisualStudio.Modeling.Shell;  
-```  
-  
- Nastavte obor názvů a název třídy tak, aby odpovídala těm v generované CommandSet.cs:  
-  
-```  
-namespace Company.Language1 /* Make sure this is correct */  
-{  
-  // Same class as the generated class.  
-  internal partial class Language1CommandSet   
-  {  
-```  
-  
- Musíte definovat dvě metody, jednu pro určení, kdy bude příkaz viditelný na místní nabídku a druhým k provedení příkazu. Tyto metody nejsou přepsání; Místo toho je zaregistrujete v seznamu příkazů.  
-  
-### <a name="define-when-the-command-will-be-visible"></a>Definujte, kdy bude příkaz viditelný  
- Pro každý příkaz definovat `OnStatus...` metodu, která určuje, zda příkaz zobrazí v nabídce, a určuje, zda bude povoleno nebo šedá. Nastavte `Visible` a `Enabled` vlastnosti `MenuCommand`, jak je znázorněno v následujícím příkladu. Tato metoda je volána, aby bylo možné vytvořit nabídku pokaždé, když uživatel klepne pravým tlačítkem myši diagram, musí pracovat rychle.  
-  
- V tomto příkladu je příkaz viditelný pouze v případě, že uživatel vybral konkrétní typ tvar a je povoleno pouze v případě alespoň jeden z vybraných elementů v určitém stavu. V příkladu je založen na šabloně DSL diagramu třídy a typy, které jsou definovány v DSL jsou ClassShape a ModelClass:  
-  
-```  
-private void OnStatusMyContextMenuCommand(object sender, EventArgs e)  
-{  
-  MenuCommand command = sender as MenuCommand;  
-  command.Visible = command.Enabled = false;  
-  foreach (object selectedObject in this.CurrentSelection)  
-  {  
-    ClassShape shape = selectedObject as ClassShape;  
-    if (shape != null)  
-    {  
-      // Visibility depends on what is selected.  
-      command.Visible = true;  
-      ModelClass element = shape.ModelElement as ModelClass;  
-      // Enabled depends on state of selection.  
-      if (element != null && element.Comments.Count == 0)  
-      {  
-        command.Enabled = true;  
-        return; // seen enough  
-} } } }  
-```  
-  
- Následující fragmenty jsou často užitečné při OnStatus metody:  
-  
-- `this.CurrentSelection`. Obrazec, který klikli pravým tlačítkem myši uživatele je vždy součástí tohoto seznamu. Pokud uživatel klikne na prázdnou část diagramu, diagramu je jediným členem seznamu.  
-  
-- `this.IsDiagramSelected()` - `true` Pokud uživatel klikne na prázdnou část diagramu.  
-  
-- `this.IsCurrentDiagramEmpty()`  
-  
-- `this.IsSingleSelection()` -uživatel nevybrali více objektů  
-  
-- `this.SingleSelection` – vybraný tvar nebo diagram, který klikli pravým tlačítkem myši uživatele  
-  
-- `shape.ModelElement as MyLanguageElement` -prvku modelu reprezentovány ve tvaru.  
-  
-  Ujistěte se, v rámci obecných pokynů, `Visible` vlastnost závisí na vybrané a ujistěte se, `Enabled` vlastnosti závisí na stavu vybraných elementů.  
-  
-  Metodu OnStatus nesmí změnit stav Store.  
-  
-### <a name="define-what-the-command-does"></a>Definujte, co dělá příkaz  
- Pro každý příkaz definovat `OnMenu...` metodu, která provádí požadované akce, když uživatel klepne na příkaz nabídky.  
-  
- Pokud provedete změny k prvkům modelu, musíte tak učinit v transakci. Další informace najdete v tématu [jak: Úprava příkazu standardní nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).  
-  
- V tomto příkladu `ClassShape`, `ModelClass`, a `Comment` jsou typy, které jsou definovány v DSL, která je odvozena z třídy Diagram DSL šablony.  
-  
-```  
-private void OnMenuMyContextMenuCommand(object sender, EventArgs e)  
-{  
-  MenuCommand command = sender as MenuCommand;  
-  Store store = this.CurrentDocData.Store;  
-  // Changes to elements and shapes must be performed in a Transaction.  
-  using (Transaction transaction =  
-       store.TransactionManager.BeginTransaction("My command"))  
-  {  
-    foreach (object selectedObject in this.CurrentSelection)  
-    {  
-      // ClassShape is defined in my DSL.  
-      ClassShape shape = selectedObject as ClassShape;  
-      if (shape != null)  
-      {  
-        // ModelClass is defined in my DSL.  
-        ModelClass element = shape.ModelElement as ModelClass;  
-        if (element != null)  
-        {  
-          // Do required action here - for example:  
-  
-          // Create a new element. Comment is defined in my DSL.  
-          Comment newComment = new Comment(element.Partition);  
-          // Every element must be the target of an embedding link.  
-          element.ModelRoot.Comments.Add(newComment);  
-          // Set properties of new element.  
-          newComment.Text = "This is a comment";  
-          // Create a reference link to existing object.  
-          element.Comments.Add(newComment);  
-        }  
-      }  
-    }  
-    transaction.Commit(); // Don't forget this!  
-  }  
-}  
-```  
-  
- Další informace o tom, jak přejít z objektu v modelu a o tom, jak vytvořit objekty a propojení najdete v tématu [jak: Úprava příkazu standardní nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).  
-  
-### <a name="register-the-command"></a>Zaregistrovat příkaz  
- Opakujte v jazyce C# deklarace, které jste provedli v části symboly CommandSet.vsct hodnoty GUID a ID:  
-  
-```  
-private Guid guidCustomMenuCmdSet =   
-    new Guid("00000000-0000-0000-0000-000000000000");  
-private const int grpidMyMenuGroup = 0x01001;  
-private const int cmdidMyContextMenuCommand = 1;  
-```  
-  
- Použijte stejnou hodnotu GUID jako vložený v **Commands.vsct**.  
-  
+    > Pokud přidáte více skupin nebo položek nabídky, můžete použít stejný identifikátor GUID. Je však nutné pro `IDSymbols` použít nové hodnoty.
+
+6. V kódu, který jste zkopírovali z tohoto postupu, nahraďte všechny výskyty následujících řetězců vlastními řetězci:
+
+    - `grpidMyMenuGroup`
+
+    - `cmdidMyContextMenuCommand`
+
+    - `guidCustomMenuCmdSet`
+
+    - `My Context Menu Command`
+
+## <a name="version"></a>Aktualizace verze balíčku v Package.tt
+ Kdykoli přidáte nebo změníte příkaz, aktualizujte parametr `version` <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute>, který se použije na třídu balíčku před vydáním nové verze vašeho jazyka specifického pro doménu.
+
+ Vzhledem k tomu, že třída balíčku je definována ve vygenerovaném souboru, aktualizujte atribut v souboru textové šablony, který generuje soubor Package.cs.
+
+#### <a name="to-update-the-packagett-file"></a>Aktualizace souboru Package.tt
+
+1. V **Průzkumník řešení**v projektu **DslPackage** ve složce **GeneratedCode** otevřete soubor Package.tt.
+
+2. Vyhledejte atribut `ProvideMenuResource`.
+
+3. Zvyšte parametr `version` atributu, který je druhým parametrem. Pokud chcete, můžete název parametru napsat explicitně a připomenout vám jeho účel. Příklad:
+
+     `[VSShell::ProvideMenuResource("1000.ctmenu", version: 2 )]`
+
+## <a name="CommandSet"></a>Definování chování příkazu
+ Vaše DSL už obsahuje některé příkazy, které jsou implementované v částečné třídě deklarované v DslPackage\GeneratedCode\CommandSet.cs. Chcete-li přidat nové příkazy, je nutné tuto třídu roztáhnout vytvořením nového souboru, který obsahuje částečnou deklaraci stejné třídy. Název třídy je obvykle *\<YourDslName >* `CommandSet`. Je vhodné začít tím, že ověříte název třídy a zkontrolujete její obsah.
+
+ Třída sady příkazů je odvozena z <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>.
+
+#### <a name="to-extend-the-commandset-class"></a>Postup rozšiřování třídy CommandSet
+
+1. V Průzkumník řešení v projektu DslPackage otevřete složku GeneratedCode a potom se podívejte do části CommandSet.tt a otevřete její vygenerovaný soubor CommandSet.cs. Poznamenejte si obor názvů a název první třídy, která je zde definována. Může se například zobrazit:
+
+     `namespace Company.Language1`
+
+     `{ ...  internal partial class Language1CommandSet : ...`
+
+2. V **DslPackage**vytvořte složku s názvem **vlastní kód**. V této složce vytvořte nový soubor třídy s názvem `CommandSet.cs`.
+
+3. V novém souboru zapište částečnou deklaraci, která má stejný obor názvů a název jako vygenerovaná částečná třída. Příklad:
+
+     `namespace Company.Language1 /* Make sure this is correct */`
+
+     `{ internal partial class Language1CommandSet { ...`
+
+     **Poznámka:** Pokud jste použili šablonu třídy k vytvoření nového souboru, je nutné opravit obor názvů i název třídy.
+
+### <a name="extend-the-command-set-class"></a>Rozšíří třídu sady příkazů.
+ Kód sady příkazů obvykle bude potřebovat importovat následující obory názvů:
+
+```
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.Design;
+using System.Linq;
+using Microsoft.VisualStudio.Modeling;
+using Microsoft.VisualStudio.Modeling.Diagrams;
+using Microsoft.VisualStudio.Modeling.Shell;
+```
+
+ Upravte obor názvů a název třídy tak, aby odpovídaly hodnotám ve vygenerovaných CommandSet.cs:
+
+```
+namespace Company.Language1 /* Make sure this is correct */
+{
+  // Same class as the generated class.
+  internal partial class Language1CommandSet
+  {
+```
+
+ Je nutné definovat dvě metody, jednu pro určení, kdy bude příkaz viditelný v místní nabídce, a druhý k provedení příkazu. Tyto metody nejsou popsány. místo toho je zaregistrujete do seznamu příkazů.
+
+### <a name="define-when-the-command-will-be-visible"></a>Definovat, kdy bude příkaz viditelný
+ Pro každý příkaz definujte `OnStatus...` metodu, která určuje, zda se příkaz zobrazí v nabídce a zda bude povolen nebo šedý. Nastavte `Visible` a `Enabled` vlastnosti `MenuCommand`, jak je znázorněno v následujícím příkladu. Tato metoda je volána za účelem vytvoření místní nabídky pokaždé, když uživatel klikne pravým tlačítkem myši na diagram, takže musí pracovat rychle.
+
+ V tomto příkladu je příkaz viditelný pouze v případě, že uživatel vybral konkrétní typ obrazce a je povolen pouze v případě, že je alespoň jeden z vybraných prvků v určitém stavu. Příklad je založen na šabloně třídy DSL diagramu tříd a ClassShape a ModelClass jsou typy, které jsou definovány v DSL:
+
+```
+private void OnStatusMyContextMenuCommand(object sender, EventArgs e)
+{
+  MenuCommand command = sender as MenuCommand;
+  command.Visible = command.Enabled = false;
+  foreach (object selectedObject in this.CurrentSelection)
+  {
+    ClassShape shape = selectedObject as ClassShape;
+    if (shape != null)
+    {
+      // Visibility depends on what is selected.
+      command.Visible = true;
+      ModelClass element = shape.ModelElement as ModelClass;
+      // Enabled depends on state of selection.
+      if (element != null && element.Comments.Count == 0)
+      {
+        command.Enabled = true;
+        return; // seen enough
+} } } }
+```
+
+ Následující fragmenty jsou často užitečné v metodách stavu:
+
+- `this.CurrentSelection`. Tvar, na který uživatel klikne pravým tlačítkem, je vždy zahrnut v tomto seznamu. Pokud uživatel klikne na prázdnou část diagramu, diagram je jediným členem tohoto seznamu.
+
+- `this.IsDiagramSelected()`  -  `true`, pokud uživatel klikl na prázdnou část diagramu.
+
+- `this.IsCurrentDiagramEmpty()`
+
+- `this.IsSingleSelection()` – uživatel nevybrali více objektů.
+
+- `this.SingleSelection` – tvar nebo diagram, na který uživatel klikne pravým tlačítkem myši
+
+- `shape.ModelElement as MyLanguageElement` – prvek modelu reprezentovaný tvarem.
+
+  V rámci obecných pokynů nastavte vlastnost `Visible` závisí na tom, co je vybráno, a nastavte vlastnost `Enabled` závisí na stavu vybraných prvků.
+
+  Metoda-status by neměla měnit stav úložiště.
+
+### <a name="define-what-the-command-does"></a>Definice příkazu
+ Pro každý příkaz Definujte metodu `OnMenu...`, která provede požadovanou akci, když uživatel klikne na příkaz nabídky.
+
+ Pokud provedete změny prvků modelu, je nutné provést v rámci transakce. Další informace naleznete v tématu [How to: Modify a Standard a Command nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
+
+ V tomto příkladu jsou `ClassShape`, `ModelClass` a `Comment` typy, které jsou definovány v DSL, která je odvozena od šablony třídy pro schéma DSL.
+
+```
+private void OnMenuMyContextMenuCommand(object sender, EventArgs e)
+{
+  MenuCommand command = sender as MenuCommand;
+  Store store = this.CurrentDocData.Store;
+  // Changes to elements and shapes must be performed in a Transaction.
+  using (Transaction transaction =
+       store.TransactionManager.BeginTransaction("My command"))
+  {
+    foreach (object selectedObject in this.CurrentSelection)
+    {
+      // ClassShape is defined in my DSL.
+      ClassShape shape = selectedObject as ClassShape;
+      if (shape != null)
+      {
+        // ModelClass is defined in my DSL.
+        ModelClass element = shape.ModelElement as ModelClass;
+        if (element != null)
+        {
+          // Do required action here - for example:
+
+          // Create a new element. Comment is defined in my DSL.
+          Comment newComment = new Comment(element.Partition);
+          // Every element must be the target of an embedding link.
+          element.ModelRoot.Comments.Add(newComment);
+          // Set properties of new element.
+          newComment.Text = "This is a comment";
+          // Create a reference link to existing object.
+          element.Comments.Add(newComment);
+        }
+      }
+    }
+    transaction.Commit(); // Don't forget this!
+  }
+}
+```
+
+ Další informace o tom, jak přecházet z objektu na objekt v modelu a o tom, jak vytvořit objekty a odkazy, naleznete v tématu [How to: Modify a příkaz standardní nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
+
+### <a name="register-the-command"></a>Registrace příkazu
+ Opakujte v C# deklaracích hodnot GUID a ID, které jste provedli v části symboly v CommandSet. vsct:
+
+```
+private Guid guidCustomMenuCmdSet =
+    new Guid("00000000-0000-0000-0000-000000000000");
+private const int grpidMyMenuGroup = 0x01001;
+private const int cmdidMyContextMenuCommand = 1;
+```
+
+ Použijte stejnou hodnotu GUID, jakou jste vložili do **příkazů Commands. vsct**.
+
 > [!NOTE]
-> Pokud změníte části symboly VSCT souboru, je nutné změnit tyto deklarace tak, aby odpovídaly. Také by se měl zvýšit číslo verze v Package.tt  
-  
- Zaregistrujte vaše příkazy nabídek jako součást této sady příkazů. `GetMenuCommands()` je volána při inicializaci diagramu:  
-  
-```  
-protected override IList<MenuCommand> GetMenuCommands()  
-{  
-  // Get the list of generated commands.  
-  IList<MenuCommand> commands = base.GetMenuCommands();  
-  // Add a custom command:  
-  DynamicStatusMenuCommand myContextMenuCommand =  
-    new DynamicStatusMenuCommand(  
-      new EventHandler(OnStatusMyContextMenuCommand),  
-      new EventHandler(OnMenuMyContextMenuCommand),  
-      new CommandID(guidCustomMenuCmdSet, cmdidMyContextMenuCommand));  
-  commands.Add(myContextMenuCommand);  
-  // Add more commands here.  
-  return commands;  
-}   
-```  
-  
-## <a name="test-the-command"></a>Testování příkazu  
- Sestavte a spusťte DSL v experimentální instanci sady Visual Studio. Příkaz se zobrazí v místní nabídce v situacích, které jste zadali.  
-  
-#### <a name="to-exercise-the-command"></a>K příkazu  
-  
-1. Na **Průzkumníka řešení** nástrojů, klikněte na tlačítko **Transformovat všechny šablony**.  
-  
-2. Stisknutím klávesy **F5** znovu sestavte řešení a spusťte ladění jazyka specifického pro doménu v experimentální sestavení.  
-  
-3. V experimentální sestavení Otevřete diagram vzorku.  
-  
-4. Klikněte pravým tlačítkem na jednotlivé položky v diagramu, chcete-li ověřit, že příkaz správně povolené nebo zakázané a odpovídajícím způsobem zobrazený nebo skrytý, v závislosti na vybrané položky.  
-  
-## <a name="troubleshooting"></a>Poradce při potížích  
- **Příkaz v nabídce nezobrazí:**  
-  
-- Příkaz se zobrazí jenom v ladění instance sady Visual Studio, dokud nenainstalujete balíček DSL. Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](../modeling/deploying-domain-specific-language-solutions.md).  
-  
-- Ujistěte se, že je experimentální vzorku správnou příponu názvu souboru pro tento DSL. Pokud chcete zkontrolovat příponu názvu souboru, otevřete DslDefinition.dsl v instanci hlavní aplikace Visual Studio. V Průzkumníku DSL, klikněte pravým tlačítkem na uzel Editor a pak klikněte na vlastnosti. V okně Vlastnosti zkontrolujte vlastnost FileExtension.  
-  
-- Měli jste [zvýší číslo verze balíčku](#version)?  
-  
-- Nastavte zarážku na začátku OnStatus metodu. Ji by měl přerušit, když kliknete pravým tlačítkem na libovolnou část diagramu.  
-  
-   **Není volána metoda OnStatus**:  
-  
-  - Ujistěte se, že identifikátory GUID a ID v kódu CommandSet shodovat s hodnotami v části symboly Commands.vsct.  
-  
-  - Commands.vsct Ujistěte se, že identifikátor GUID a ID v každé nadřazený uzel identifikovat správné nadřazené skupiny.  
-  
-  - V příkazovém řádku aplikace Visual Studio zadejte devenv/Setup exp /rootsuffix. Potom restartujte instanci ladění aplikace Visual Studio.  
-  
-- Projděte skrze OnStatus metodu k ověření tohoto příkazu. Viditelné a příkaz. Povolena je nastaveno na hodnotu true.  
-  
-  **Nesprávné nabídce text se zobrazí, nebo příkazu se zobrazí ve špatné místo**:  
-  
-- Ujistěte se, že je kombinací identifikátoru GUID a ID jedinečné pro tento příkaz.  
-  
-- Ujistěte se, že jste odinstalovali starší verze balíčku.  
-  
-## <a name="see-also"></a>Viz také  
- [Psaní kódu pro úpravu jazyka specifického pro doménu specifického](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
- [Postupy: Úprava příkazu standardní nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)   
- [Nasazení řešení jazyka specifického pro doménu](../modeling/deploying-domain-specific-language-solutions.md)   
- [Ukázkový kód: Diagramy okruh](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+> Pokud změníte oddíl symboly v souboru VSCT, je nutné změnit také tyto deklarace, aby odpovídaly. Měli byste také zvýšit číslo verze v Package.tt.
+
+ Zaregistrujte příkazy nabídky jako součást této sady příkazů. `GetMenuCommands()` se volá jednou při inicializaci diagramu:
+
+```
+protected override IList<MenuCommand> GetMenuCommands()
+{
+  // Get the list of generated commands.
+  IList<MenuCommand> commands = base.GetMenuCommands();
+  // Add a custom command:
+  DynamicStatusMenuCommand myContextMenuCommand =
+    new DynamicStatusMenuCommand(
+      new EventHandler(OnStatusMyContextMenuCommand),
+      new EventHandler(OnMenuMyContextMenuCommand),
+      new CommandID(guidCustomMenuCmdSet, cmdidMyContextMenuCommand));
+  commands.Add(myContextMenuCommand);
+  // Add more commands here.
+  return commands;
+}
+```
+
+## <a name="test-the-command"></a>Testování příkazu
+ Sestavte a spusťte DSL v experimentální instanci aplikace Visual Studio. Příkaz by měl být zobrazen v místní nabídce v situacích, které jste zadali.
+
+#### <a name="to-exercise-the-command"></a>Postup při cvičení příkazu
+
+1. Na panelu nástrojů **Průzkumník řešení** klikněte na možnost **transformovat všechny šablony**.
+
+2. Stisknutím klávesy **F5** znovu sestavte řešení a spusťte ladění jazyka specifického pro doménu v experimentálním sestavení.
+
+3. V experimentálním sestavení otevřete vzorový diagram.
+
+4. Kliknutím pravým tlačítkem myši na různé položky v diagramu ověřte, zda je příkaz správně povolen nebo zakázán a odpovídajícím způsobem zobrazen nebo skryt v závislosti na vybrané položce.
+
+## <a name="troubleshooting"></a>Poradce při potížích
+ **Příkaz se nezobrazuje v nabídce:**
+
+- Příkaz se zobrazí pouze v instancích ladění sady Visual Studio, dokud nenainstalujete balíček DSL. Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](../modeling/deploying-domain-specific-language-solutions.md).
+
+- Ujistěte se, že experimentální ukázka má pro tuto DSL správnou příponu názvu souboru. Chcete-li ověřit příponu názvu souboru, Otevřete DslDefinition. DSL v hlavní instanci aplikace Visual Studio. Pak v Průzkumníku DSL klikněte pravým tlačítkem myši na uzel editoru a pak klikněte na vlastnosti. V okno Vlastnosti Projděte vlastnost přípona.
+
+- Provedli jste [zvýšení čísla verze balíčku](#version)?
+
+- Nastavte zarážku na začátku své metody stavu. Měla by se přerušit, když kliknete pravým tlačítkem myši na jakoukoli část diagramu.
+
+   **Metoda-status není volána**:
+
+  - Ujistěte se, že identifikátory GUID a ID v kódu CommandSet se shodují s hodnotami v části symboly příkazů. vsct.
+
+  - V příkazu Commands. vsct se ujistěte, že identifikátor GUID a ID v každém nadřazeném uzlu identifikují správnou nadřazenou skupinu.
+
+  - Do příkazového řádku sady Visual Studio zadejte devenv/rootsuffix exp/Setup. Pak restartujte instanci ladění sady Visual Studio.
+
+- Projděte si metodu "-stav", abyste ověřili, že příkaz. Visible a příkaz. Vlastnost Enabled je nastavena na hodnotu true.
+
+  **Zobrazí se nesprávný text nabídky nebo se příkaz zobrazí na nesprávném místě**:
+
+- Ujistěte se, že kombinace identifikátoru GUID a ID je pro tento příkaz jedinečná.
+
+- Ujistěte se, že jste odinstalovali starší verze balíčku.
+
+## <a name="see-also"></a>Viz také
+ [Psaní kódu pro přizpůsobení jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md) [Postup: Změna standardního příkazu nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md) [nasazení ukázkového jazyka specifického pro doménu](../modeling/deploying-domain-specific-language-solutions.md) [ukázkový kód: diagramy okruhů](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)

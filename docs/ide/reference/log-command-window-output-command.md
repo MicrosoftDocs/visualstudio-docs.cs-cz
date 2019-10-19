@@ -8,21 +8,21 @@ helpviewer_keywords:
 - log Command window output command
 - View.LogCommandWindowOutput command
 ms.assetid: d4ecec35-5af4-4954-8d60-2cd24583fbb4
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ab2dfea4c51ee33407088c208aea351732b8a4a
-ms.sourcegitcommit: 9753c7544cec852ca5efd0834e0956d9e53a5734
+ms.openlocfilehash: 2056cf335f2cf6024e6ebb4b5daff72e54dd9d50
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043520"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72610434"
 ---
-# <a name="log-command-window-output-command"></a>Protokolovat příkaz výstupu příkazového okna
+# <a name="log-command-window-output-command"></a>Okno výstupu příkazů protokolu – příkaz
 
-Zkopíruje všechny vstup a výstup z **příkaz** okna do souboru.
+Zkopíruje všechny vstupy a výstupy z **příkazového** okna do souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,41 +33,41 @@ Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]
 ## <a name="arguments"></a>Arguments
 
 `filename`\
-Volitelné. Název souboru protokolu. Ve výchozím nastavení je soubor vytvořen ve složce profilu uživatele. Pokud název souboru již existuje, protokol je připojen na konec existující soubor. Pokud není určen žádný soubor, poslední zadaný soubor se používá. Pokud neexistuje žádný předchozí soubor je vytvořen výchozí soubor protokolu, volá cmdline.log.
+Volitelné. Název souboru protokolu. Ve výchozím nastavení se soubor vytvoří ve složce profilu uživatele. Pokud název souboru již existuje, protokol je připojen na konec stávajícího souboru. Pokud není zadán žádný soubor, je použit poslední zadaný soubor. Pokud žádný z předchozích souborů neexistuje, vytvoří se výchozí soubor protokolu s názvem cmdline. log.
 
 > [!TIP]
-> Chcete-li změnit umístění pro uložení souboru protokolu, zadejte úplnou cestu souboru, ohraničená uvozovkami, pokud cesta obsahuje mezery.
+> Pokud chcete změnit umístění, kam se soubor protokolu uloží, zadejte úplnou cestu k souboru, která je ohraničená uvozovkami, pokud cesta obsahuje mezery.
 
 ## <a name="switches"></a>Přepínače
 
-/on\
-Volitelné. Spuštění protokolu **příkaz** okno v zadaném souboru a přidá soubor s novými informacemi.
+parametry/on
+Volitelné. Spustí protokol pro **příkazové** okno v zadaném souboru a připojí soubor s novými informacemi.
 
-/off\
-Volitelné. V protokolu se zastaví **příkaz** okna.
+/off.
+Volitelné. Zastaví protokol okna **příkazového** řádku.
 
-/overwrite\
-Volitelné. Pokud soubor zadaný v `filename` argument odpovídá existující soubor, soubor se přepíše.
+/overwrite
+Volitelné. Pokud soubor zadaný v argumentu `filename` odpovídá existujícímu souboru, je soubor přepsán.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud není určen žádný soubor, vytvoří se soubor cmdline.log ve výchozím nastavení. Ve výchozím nastavení je alias pro tento příkaz protokolu.
+Pokud není zadaný žádný soubor, ve výchozím nastavení se vytvoří soubor cmdline. log. Ve výchozím nastavení je alias tohoto příkazu protokolem.
 
 ## <a name="examples"></a>Příklady
 
-Tento příklad vytvoří nový soubor protokolu, cmdlog a spustí příkaz protokolu.
+Tento příklad vytvoří nový soubor protokolu cmdlog a spustí protokol příkazů.
 
 ```cmd
 >Tools.LogCommandWindowOutput cmdlog
 ```
 
-Tento příklad zastaví protokolování příkazy.
+Tento příklad zastaví příkazy protokolování.
 
 ```cmd
 >Tools.LogCommandWindowOutput /off
 ```
 
-Tento příklad pokračuje v protokolování příkazy v předchozích souboru protokolu.
+Tento příklad obnoví protokolování příkazů v dříve použitém souboru protokolu.
 
 ```cmd
 >Tools.LogCommandWindowOutput /on
@@ -76,6 +76,6 @@ Tento příklad pokračuje v protokolování příkazy v předchozích souboru p
 ## <a name="see-also"></a>Viz také:
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
-- [Okno příkazového řádku](../../ide/reference/command-window.md)
-- [Pole najít/příkaz](../../ide/find-command-box.md)
-- [Visual Studio aliasy příkazů](../../ide/reference/visual-studio-command-aliases.md)
+- [okno Příkaz](../../ide/reference/command-window.md)
+- [Pole Najít/příkaz](../../ide/find-command-box.md)
+- [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

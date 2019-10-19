@@ -1,5 +1,5 @@
 ---
-title: Práce s diagramy tříd (návrhář tříd) | Dokumentace Microsoftu
+title: Práce s diagramy tříd (Návrhář tříd) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,60 +13,58 @@ helpviewer_keywords:
 - class structure
 ms.assetid: 37908cb7-f77b-4698-a4f9-3c21e5440fee
 caps.latest.revision: 29
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c3243f43176f2d62edbc33f66ce2da85f32c26c7
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 2ff02c3aeab131c0b9a2423c2cb2376d9f0ee618
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65698120"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72602405"
 ---
 # <a name="working-with-class-diagrams-class-designer"></a>Práce s diagramy tříd (návrhář tříd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Třída diagramy vám pomůžou pochopit, struktura třídy projektů jiné kódování napsaná (nebo, který jste napsali před delší dobu). Můžete využít k přizpůsobení, sdílet a prezentovat informace o projektu s ostatními.  
-  
- Prvním krokem při zobrazení informací o projektu je vytvoření diagramu tříd, který se zobrazí, co chcete zobrazit. Další informace najdete v tématu [zobrazování typů a vztahů (návrhář tříd)](../ide/viewing-types-and-relationships-class-designer.md). Můžete vytvořit více diagramů tříd v projektu, který slouží k zobrazení různých zobrazení projektu, zvolená podmnožinu typů v projektu nebo podmnožinu vybrané členy typů.  
-  
- Kromě definujete, co se zobrazí každý diagram tříd, můžete také změnit způsob, který se zobrazí informace; Další informace najdete v tématu [jak: Přizpůsobení diagramů tříd (návrhář tříd)](../ide/how-to-customize-class-diagrams-class-designer.md).  
-  
- Po mají doladíte jeden nebo více diagramů tříd, zkopírují se do dokumentů Microsoft Office a vytisknout nebo exportovat jako soubory obrázků. Další informace najdete v tématu [jak: Kopírování elementů diagramu tříd do dokumentu Microsoft Office (návrhář tříd)](../ide/how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer.md), [jak: Tisk diagramů tříd (návrhář tříd)](../ide/how-to-print-class-diagrams-class-designer.md) a [jak: Export diagramů tříd jako obrázky (návrhář tříd)](../ide/how-to-export-class-diagrams-as-images-class-designer.md).  
-  
+Diagramy tříd vám pomohou pochopit strukturu tříd projektů, které jiní uživatelé napsali (nebo které jste napsali dlouhou dobu). Můžete je použít k přizpůsobení, sdílení a prezentaci informací o projektu s ostatními.
+
+ Prvním krokem při prezentaci informací o projektu je vytvoření diagramu tříd, který zobrazuje, co chcete zobrazit. Další informace najdete v tématu [zobrazení typů a vztahů (návrhář tříd)](../ide/viewing-types-and-relationships-class-designer.md). Můžete vytvořit více diagramů tříd pro projekt, které lze použít k zobrazení odlišného zobrazení projektu, zvolené podmnožiny typů projektu nebo zvolené podmnožiny členů typů.
+
+ Kromě určení toho, jaký diagram tříd se zobrazuje, můžete také změnit způsob, jakým se informace zobrazují; Další informace naleznete v tématu [How to: Customizing Diagrams Classes (návrhář tříd)](../ide/how-to-customize-class-diagrams-class-designer.md).
+
+ Po vyladění jednoho nebo více diagramů tříd je můžete zkopírovat do systém Microsoft Office dokumentů a vytisknout je, nebo je exportovat jako soubory obrázků. Další informace naleznete v tématu [Postupy: kopírování prvků diagramu tříd do systém Microsoft Office dokumentu (návrhář tříd)](../ide/how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer.md), [Postupy: Tisk diagramů tříd (návrhář tříd)](../ide/how-to-print-class-diagrams-class-designer.md) a [Postupy: exportování diagramů tříd jako obrázků (návrhář tříd)](../ide/how-to-export-class-diagrams-as-images-class-designer.md).
+
 > [!NOTE]
-> Návrhář tříd nesleduje umístění zdrojových souborů, takže změna strukturu projektu nebo přesunutí zdrojové soubory v projektu může způsobit návrhář tříd ke ztrátě informací o typu, zejména zdrojový typ definice typu základní třídy a přidružení typů. Může se objevit chyba, jako je **je návrhář tříd nemůže zobrazit tento typ**. Pokud tak učiníte, přetáhněte do diagramu tříd znovu a znovu zobrazit přemístění nebo upravila zdrojový kód.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Postupy: Přidání diagramů tříd do projektů (Návrhář tříd)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)  
-  
- Popisuje postup přidání diagramů tříd do projektů.  
-  
- [Postupy: Přizpůsobení diagramů tříd (Návrhář tříd)](../ide/how-to-customize-class-diagrams-class-designer.md)  
-  
- Poskytuje informace o tom, jak přizpůsobení diagramů tříd.  
-  
- [Postupy: Kopírování elementů diagramu tříd do dokumentu Microsoft Office (Návrhář tříd)](../ide/how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer.md)  
-  
- Vysvětluje, jak zkopírovat z diagramu tříd do dokumentu sady Office.  
-  
- [Postupy: Export diagramů tříd jako obrázků (Návrhář tříd)](../ide/how-to-export-class-diagrams-as-images-class-designer.md)  
-  
- Popisuje postup exportování diagramů tříd jako obrázků.  
-  
- [Postupy: Tisk diagramů tříd (Návrhář tříd)](../ide/how-to-print-class-diagrams-class-designer.md)  
-  
- Vysvětluje, jak tisk diagramů tříd.  
-  
- [Postupy: Přidání komentářů do diagramů tříd (Návrhář tříd)](../ide/how-to-add-comments-to-class-diagrams-class-designer.md)  
-  
- Popisuje postup přidání komentářů do diagramu tříd.  
-  
- [Odstranění tvaru typu a jeho základního kódu](../ide/how-to-customize-class-diagrams-class-designer.md#DeleteTypeShapeAndCode)  
-  
- Popisuje, jak odebrat obrazce z diagramů tříd.  
-  
-## <a name="see-also"></a>Viz také  
- [Zobrazování typů a vztahů (návrhář tříd)](../ide/viewing-types-and-relationships-class-designer.md)   
- [Postupy: Přizpůsobení diagramů tříd (návrhář tříd)](../ide/how-to-customize-class-diagrams-class-designer.md)   
- [Postupy: Odebrání tvarů typu z diagramů tříd (návrhář tříd)](https://msdn.microsoft.com/ae41897d-d066-4b8c-bb9b-05436e12ff39)
+> Návrhář tříd nesleduje umístění zdrojových souborů, takže změna struktury projektu nebo přesunutí zdrojových souborů v projektu může způsobit, že Návrhář tříd ztratí záznam o typu, zejména zdrojový typ typu typedef, základní třídy nebo typy přidružení. Může se zobrazit chyba, například **Návrhář tříd není možné zobrazit tento typ**. Pokud tak učiníte, znovu přetáhněte změněný nebo znovu umístěný zdrojový kód do diagramu tříd a znovu ho zobrazte.
+
+## <a name="in-this-section"></a>V tomto oddílu
+ [Postupy: Přidání diagramů tříd do projektů (Návrhář tříd)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)
+
+ Popisuje, jak přidat diagramy tříd do projektů.
+
+ [Postupy: Přizpůsobení diagramů tříd (Návrhář tříd)](../ide/how-to-customize-class-diagrams-class-designer.md)
+
+ Poskytuje informace o tom, jak přizpůsobit diagramy tříd.
+
+ [Postupy: Kopírování elementů diagramu tříd do dokumentu systému Microsoft Office (Návrhář tříd)](../ide/how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer.md)
+
+ Vysvětluje, jak kopírovat z diagramu tříd do dokumentu sady Office.
+
+ [Postupy: Export diagramů tříd jako obrázky (Návrhář tříd)](../ide/how-to-export-class-diagrams-as-images-class-designer.md)
+
+ Popisuje způsob exportu diagramů tříd jako obrázků.
+
+ [Postupy: Tisk diagramů tříd (Návrhář tříd)](../ide/how-to-print-class-diagrams-class-designer.md)
+
+ Vysvětluje, jak tisknout diagramy tříd.
+
+ [Postupy: Přidání komentářů do diagramů tříd (Návrhář tříd)](../ide/how-to-add-comments-to-class-diagrams-class-designer.md)
+
+ Popisuje, jak přidat komentáře do diagramu tříd.
+
+ [Odstranění tvaru typu a jeho základního kódu](../ide/how-to-customize-class-diagrams-class-designer.md#DeleteTypeShapeAndCode)
+
+ Popisuje, jak odebrat tvary z diagramů tříd.
+
+## <a name="see-also"></a>Viz také
+ [Zobrazení typů a vztahů (návrhář tříd)](../ide/viewing-types-and-relationships-class-designer.md) [Postupy: přizpůsobení diagramů tříd (návrhář tříd)](../ide/how-to-customize-class-diagrams-class-designer.md) [Postupy: Odebrání tvarů typu z diagramů tříd (návrhář tříd)](https://msdn.microsoft.com/ae41897d-d066-4b8c-bb9b-05436e12ff39)

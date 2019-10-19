@@ -1,106 +1,106 @@
 ---
-title: Ladění šablon stylů XSLT
+title: Ladit šablony stylů XSLT
 ms.date: 03/05/2019
 ms.topic: conceptual
 ms.assetid: 3db9fa5a-f619-4cb6-86e7-64b364e58e5d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e787ca3d2d29f04d6af27a5f36f1f84c9d0bc9f4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0c1f774757acc293091f19a783ed93f34647d494
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808467"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72604615"
 ---
-# <a name="walkthrough-debug-an-xslt-style-sheet"></a>Návod: Ladění šablony stylů XSLT
+# <a name="walkthrough-debug-an-xslt-style-sheet"></a>Návod: ladění šablony stylů XSLT
 
-Kroky v tomto názorném postupu ukazují, jak použít ladicí program XSLT. Kroky zahrnují zobrazení proměnné, nastavovat zarážky a krokování kódu. Ladicí program umožňuje spustit jeden řádek kódu v čase.
+Kroky v tomto návodu ukazují, jak používat ladicí program XSLT. Postup zahrnuje proměnné pro zobrazení, nastavení zarážek a krokování kódu. Ladicí program umožňuje spustit kód po jednotlivých řádcích.
 
-Příprava pro tento návod, nejprve zkopírovat dva [ukázkové soubory](#sample-files) do místního počítače. Jedna je šablony stylů a jeden je soubor XML, který použijeme jako vstup pro šablony stylů. Šablony stylů, které používáme v tomto podrobném návodu, najde všechny knihy, jejichž cena je nižší než průměrnou cenu knih.
+Pro přípravu k tomuto návodu nejdřív zkopírujte dva [ukázkové soubory](#sample-files) do místního počítače. Jedna je předloha se styly a jedna je soubor XML, který použijeme jako vstup do šablon stylů. V tomto návodu se v šabloně stylů používá vyhledáváme všechny knihy, jejichž cena je nižší než průměrná cena za knihu.
 
 > [!NOTE]
-> Ladicí program XSLT je dostupná pouze v edici Enterprise systému Visual Studio.
+> Ladicí program XSLT je k dispozici pouze v edici Enterprise sady Visual Studio.
 
 ## <a name="start-debugging"></a>Spustit ladění
 
-1. Z **souboru** nabídce zvolte **otevřít** > **souboru**.
+1. V nabídce **soubor** klikněte na příkaz **otevřít**  > **soubor**.
 
-2. Vyhledejte *níže average.xsl* soubor a zvolte **otevřít**.
+2. Vyhledejte soubor *below-Average. xsl* a klikněte na tlačítko **otevřít**.
 
-   Šablony stylů se otevře v editoru XML.
+   Šablona stylů se otevře v editoru XML.
 
-3. Klikněte na tlačítko Procházet (**...** ) na **vstup** pole v okně Vlastnosti dokumentu. (Pokud **vlastnosti** okno se nezobrazuje, klepněte pravým tlačítkem myši na otevření souboru v editoru a klikněte na tlačítko **vlastnosti**.)
+3. Klikněte na tlačítko pro procházení ( **...** ) v poli **input** okna vlastností dokumentu. (Pokud se okno **vlastnosti** nezobrazí, klikněte pravým tlačítkem myši kamkoli na otevřený soubor v editoru a pak zvolte **vlastnosti**.)
 
-4. Vyhledejte *books.xml* souboru a klikněte na tlačítko **otevřít**.
+4. Vyhledejte soubor *Books. XML* a pak zvolte **otevřít**.
 
-   Tím se nastaví zdrojový soubor dokumentu, který slouží k transformaci XSLT.
+   Tím se nastaví zdrojový soubor dokumentu, který se používá pro transformaci XSLT.
 
-5. Nastavte [zarážku](../debugger/using-breakpoints.md) na řádku 12 *níže average.xsl*. Provést několika způsoby:
+5. Nastavte [zarážku](../debugger/using-breakpoints.md) na řádku 12 souboru *below-Average. xsl*. Můžete to udělat jedním z několika způsobů:
 
-   - Klikněte na okraj editoru na řádek 12.
+   - Klikněte na okraj editoru na řádku 12.
 
-   - Klikněte na libovolné místo na řádku 12 a potom stiskněte klávesu **F9**.
+   - Klikněte kamkoli na řádek 12 a pak stiskněte **F9**.
 
-   - Klikněte pravým tlačítkem myši `xsl:if` počáteční značka a klikněte na tlačítko **zarážku** > **vložit zarážku**.
+   - Klikněte pravým tlačítkem na značku `xsl:if` Start a pak zvolte **zarážku**  > **Vložit zarážku**.
 
-      ![Vložit zarážku v souboru XSL v sadě Visual Studio](media/insert-breakpoint.PNG)
+      ![Vložit zarážku v souboru XSL v aplikaci Visual Studio](media/insert-breakpoint.PNG)
 
-6. V panelu nabídky zvolte **XML** > **spustit ladění XSLT** (nebo stiskněte klávesu **Alt**+**F5**).
+6. Na panelu nabídek vyberte **XML**  > **Spustit ladění XSLT** (nebo stiskněte klávesu **ALT** +**F5**).
 
-   Spuštění ladění procesu.
+   Spustí se proces ladění.
 
-   V editoru, ladicího programu je umístěn na `xsl:if` elementu šablony stylů. Další soubor s názvem *níže average.xml* otevře v editoru; Toto je výstupní soubor, který naplní se jako každý uzel ve vstupním souboru *books.xml* se zpracovává.
+   V editoru je ladicí program umístěn v prvku `xsl:if` v šabloně stylů. V editoru se otevře jiný soubor s názvem *below-Average. XML* . Toto je výstupní soubor, který se naplní jako každý uzel ve vstupních *knihách souborů. XML* .
 
-   **Automatické hodnoty**, **lokální**, a **kukátko 1** okna se zobrazí v dolní části okna nástroje Visual Studio. **Lokální** okně se zobrazí všechny místní proměnné a jejich aktuálními hodnotami. To zahrnuje proměnné definované v šabloně stylů a také proměnné, které ladicí program používá ke sledování uzly, které jsou momentálně v kontextu.
+   Okna **Automatické**hodnoty, **místní**hodnoty a **kukátko 1** se zobrazí v dolní části okna sady Visual Studio. V okně **místní** hodnoty se zobrazí všechny místní proměnné a jejich aktuální hodnoty. To zahrnuje proměnné definované v šabloně stylů a také proměnné, které ladicí program používá ke sledování uzlů, které jsou aktuálně v kontextu.
 
 ## <a name="watch-window"></a>Kukátko – okno
 
-Přidáme do dvou proměnných **kukátko 1** okna tak, aby se po zpracování vstupního souboru jsme můžete zkontrolovat jejich hodnoty. (Můžete také použít **lokální** okna proměnných, které chcete sledovat, již existuje-li zkoumat hodnoty.)
+Do okna **kukátko 1** přidáte dvě proměnné, abychom mohli analyzovat jejich hodnoty, když se zpracuje vstupní soubor. (Můžete také použít okno **místní** hodnoty k prohlédnutí hodnot, pokud proměnné, které chcete sledovat, již existují.)
 
-1. Z **ladění** nabídce zvolte **Windows** > **Watch** > **kukátko 1**.
+1. V nabídce **ladění** vyberte možnost **Windows**  > **sledovat**  > **kukátko 1**.
 
-   **Kukátko 1** okno stane viditelnou.
+   Okno **kukátko 1** se zobrazí.
 
-2. Typ `$bookAverage` v **název** pole a potom stiskněte klávesu **Enter**.
+2. Do pole **název** zadejte `$bookAverage` a potom stiskněte klávesu **ENTER**.
 
-   Hodnota `$bookAverage` proměnné zobrazí v **hodnotu** pole.
+   Hodnota proměnné `$bookAverage` se zobrazí v poli **hodnota** .
 
-3. Na dalším řádku, zadejte `self::node()` v **název** pole a potom stiskněte klávesu **Enter**.
+3. Na dalším řádku zadejte do pole **název** `self::node()` a potom stiskněte klávesu **ENTER**.
 
-   `self::node()` je výraz XPath, který se vyhodnotí jako aktuální uzel kontextu. Hodnota `self::node()` výraz XPath je první uzel knihy. To změní, když jsme průběhu transformace.
+   `self::node()` je výraz XPath, který je vyhodnocen na aktuální kontextový uzel. Hodnota výrazu XPath `self::node()` je první uzel knihy. Tím se změny provedou v průběhu transformace.
 
-4. Rozbalte `self::node()` uzel a potom rozbalte uzel kdo má hodnotu `price`.
+4. Rozbalte uzel `self::node()` a poté rozbalte položku uzel, který je hodnotou `price`.
 
-   ![Okno kukátka během ladění XSLT v sadě Visual Studio](media/xslt-debugging-watch-window.png)
+   ![okno Kukátko při ladění XSLT v aplikaci Visual Studio](media/xslt-debugging-watch-window.png)
 
-   Můžete zobrazit hodnotu cenu knih pro aktuální uzel knihy a porovnat `$bookAverage` hodnotu. Vzhledem k tomu knihy cena je nižší než průměr, `xsl:if` podmínka by být úspěšné při pokračování ladění procesu.
+   Můžete zobrazit hodnotu ceny za knihu pro aktuální uzel knihy a porovnat ji s `$bookAverage` hodnotou. Vzhledem k tomu, že se cena za knihu nachází pod průměrem, `xsl:if` podmínka by měla být při pokračování procesu ladění úspěšná.
 
 ## <a name="step-through-the-code"></a>Krokovat kód
 
-1. Stisknutím klávesy **F5** pokračujte.
+1. Pokračujte stisknutím klávesy **F5** .
 
-   Protože splněna první uzel knihy `xsl:if` podmínka, uzel kniha je přidána do *níže average.xml* výstupního souboru. Ladicí program pokračuje v provádění, dokud je znovu umístěn na `xsl:if` element v šabloně stylů. Ladicí program je teď umístěný na druhém uzlu adresáře v *books.xml* souboru.
+   Vzhledem k tomu, že první uzel knihy splnil stav `xsl:if`, uzel Book se přidá do výstupního souboru *below-Average. XML* . Ladicí program bude pokračovat, dokud nebude znovu umístěn v prvku `xsl:if` v šabloně stylů. Ladicí program je nyní umístěn na druhém uzlu Book v souboru *Books. XML* .
 
-   V **kukátko 1** okno, `self::node()` hodnota nezmění na druhý uzel knihy. Prozkoumáním hodnota elementu cena můžete určit, že cena je vyšší než průměr, tedy `xsl:if` podmínka by selhat.
+   V okně **kukátko 1** se hodnota `self::node()` změní na druhý uzel Book. Prozkoumáním hodnoty cenového prvku můžete zjistit, že cena je nad průměrem, takže `xsl:if` podmínka by měla selhat.
 
-2. Stisknutím klávesy **F5** pokračujte.
+2. Pokračujte stisknutím klávesy **F5** .
 
-   Protože druhý uzel knihy nesplňuje `xsl:if` podmínku, uzel knihy není přidán do *níže average.xml* výstupního souboru. Ladicí program pokračuje v provádění, dokud je znovu umístěn na `xsl:if` element v šabloně stylů. Ladicí program je nyní umístěn na třetí `book` uzlu *books.xml* souboru.
+   Vzhledem k tomu, že druhý uzel knihy nesplňuje podmínky `xsl:if`, uzel Book není přidán do výstupního souboru *below-Average. XML* . Ladicí program bude pokračovat, dokud nebude znovu umístěn v prvku `xsl:if` v šabloně stylů. Ladicí program je nyní umístěn na třetím `book` uzlu v souboru *Books. XML* .
 
-   V **kukátko 1** okno, `self::node()` hodnota nezmění na třetí uzel knihy. Porovnáním hodnoty `price` element, můžete určit, že cena je nižší než průměr. `xsl:if` Podmínku uspěli.
+   V okně **kukátko 1** se hodnota `self::node()` změní na uzel třetí knihy. Prozkoumáním hodnoty `price` elementu můžete určit, že cena je nižší než průměr. Podmínka `xsl:if` by měla být úspěšná.
 
-3. Stisknutím klávesy **F5** pokračujte.
+3. Pokračujte stisknutím klávesy **F5** .
 
-   Vzhledem k tomu, `xsl:if` byla splněna podmínka, třetí kniha je přidána do *níže average.xml* výstupní soubor. Byly zpracovány všechny knihy v dokumentu XML a ladicí program se zastaví.
+   Vzhledem k tomu, že podmínka `xsl:if` byla splněna, třetí kniha je přidána do výstupního souboru *below-Average. XML* . Všechny knihy v dokumentu XML byly zpracovány a ladicí program se zastaví.
 
 ## <a name="sample-files"></a>Ukázkové soubory
 
-Následující dva soubory jsou používány návodu.
+Následující dva soubory jsou používány v tomto návodu.
 
-### <a name="below-averagexsl"></a>below-average.xsl
+### <a name="below-averagexsl"></a>Below-Average. xsl
 
 ```xml
 <?xml version='1.0'?>
@@ -123,7 +123,7 @@ Následující dva soubory jsou používány návodu.
 </xsl:stylesheet>
 ```
 
-### <a name="booksxml"></a>Books.XML
+### <a name="booksxml"></a>Books. XML
 
 ```xml
 <?xml version='1.0'?>

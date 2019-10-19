@@ -1,5 +1,5 @@
 ---
-title: 'CA1506: Vyhněte se nadměrnému párování tříd | Dokumentace Microsoftu'
+title: 'CA1506: Vyhněte se nadměrnému párování tříd | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CA1506
 ms.assetid: 9f0943c0-e802-4e3f-8798-2ab8653ddc80
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1c5a5e070892f7efc096b0f8e24952bb9d139969
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e85ac61e404ac9bc1afb9459716c2395233c5080
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68189290"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72607410"
 ---
 # <a name="ca1506-avoid-excessive-class-coupling"></a>CA1506: Vyhněte se nadměrnému párování tříd
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,22 +29,22 @@ ms.locfileid: "68189290"
 |-|-|
 |TypeName|AvoidExcessiveClassCoupling|
 |CheckId|CA1506|
-|Kategorie|Microsoft.Maintainability|
+|Kategorie|Microsoft. udržovatelnost|
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Typ nebo metoda je párována s mnoho jiných typů.
+ Typ nebo metoda jsou spojeny s mnoha dalšími typy.
 
 ## <a name="rule-description"></a>Popis pravidla
  Toto pravidlo měří párování tříd podle počtu jedinečných odkazů na typ, které typ nebo metoda obsahuje.
 
- Typy a metody, které mají vysokým stupněm párování tříd může být obtížné udržovat. Je vhodné mít typy a metody, které vykazují nízké párování a vysokou soudržnost.
+ Typy a metody s vysokým stupněm párování tříd může být obtížné udržovat. Je dobrým zvykem mít typy a metody, které mají slabý spoj a vysokou soudržnost.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Pokud chcete vyřešit toto porušení, zkuste změnit návrh typu nebo metodě, abyste snížili počet typů, ke kterým je připojen.
+ Chcete-li toto porušení opravit, zkuste změnit návrh typu nebo metody tak, aby se snížil počet typů, ke kterým je párování.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Vylučte toto upozornění, když se tento typ nebo metoda je stále považovány za udržovatelného bez ohledu na jeho velký počet závislostí na jiné typy.
+ Toto upozornění vylučte, pokud je typ nebo metoda stále považována za udržovatelnou bez ohledu na jejich velký počet závislostí na jiných typech.
 
 ## <a name="see-also"></a>Viz také
- [Upozornění udržovatelnosti](../code-quality/maintainability-warnings.md) [měření složitosti a udržovatelnosti spravovaného kódu](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)
+ [Upozornění na udržovatelnost](../code-quality/maintainability-warnings.md) při [Měření složitosti a udržovatelnosti spravovaného kódu](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)

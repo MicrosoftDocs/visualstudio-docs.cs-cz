@@ -3,53 +3,53 @@ title: Vlastnosti dokumentu XML, okno Vlastnosti
 ms.date: 03/05/2019
 ms.topic: reference
 ms.assetid: 9dbb34d9-02ea-4201-b445-c98a0eb0d6db
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 679ac529708a49d18025672ce8f880c4f7710471
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 99102248a9456de3a2b3aeba28e54de4299fae40
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808129"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72604160"
 ---
 # <a name="xml-document-properties-properties-window"></a>Vlastnosti dokumentu XML, okno Vlastnosti
 
-**Vlastnosti** okno obsahuje základní informace o dokumentu, který je aktivní v editoru XML. Vlastnosti, které jsou k dispozici se liší v závislosti na typu dokumentu XML, který je aktuálně aktivní.
+Okno **vlastnosti** poskytuje základní informace o dokumentu, který je aktivní v editoru XML. Vlastnosti, které jsou k dispozici, se liší v závislosti na typu dokumentu XML, který je aktuálně aktivní.
 
 > [!NOTE]
-> Všechny vlastnosti dokumentu XML se ukládají do řešení. V důsledku toho není nutné znovu zadat tyto hodnoty při příštím otevření řešení.
+> Všechny vlastnosti dokumentu XML jsou uloženy v řešení. V důsledku toho není nutné znovu zadávat tyto hodnoty při příštím otevření řešení.
 
 **Kódování**
 
-Znak kódování souboru. Změna této vlastnosti také změny kódování atributu v deklaraci XML a naopak. Nové kódování se používá ke kódování souboru při uložení souboru.
+Kódování znaků souboru. Změna této vlastnosti také změní atribut Encoding v deklaraci XML a naopak. Nové kódování se použije ke kódování souboru při uložení souboru.
 
 **Vstup**
 
-Vstupní dokument přidružené šablony stylů XSLT. Používá se **spustit XSLT** příkazy, například **XML** > **spustit XSLT bez ladění**. Dokument lze vybrat pomocí Procházet (**...** ) tlačítko.
+Vstupní dokument přidružený k šabloně stylů XSLT. Je používán příkazy **Spustit XSLT** , například **XML**  > **Spustit XSLT bez ladění**. Dokument lze vybrat pomocí tlačítka Procházet ( **...** ).
 
-Tato vlastnost je viditelná pouze v případě, že soubor XSLT je otevřen v editoru.
+Tato vlastnost je viditelná pouze v případě, že je soubor XSLT otevřen v editoru.
 
 **Output**
 
 Soubor, který je generován při transformaci dokumentu XML.
 
-Pokud soubor není zadán, výchozí název souboru je generován a základě `method` atribut na `xsl:output` element, který určuje příponu souboru. Výchozí soubor se nachází v dočasném adresáři aktuálního uživatele.
+Pokud není zadán soubor, je vygenerován výchozí název souboru na základě atributu `method` u elementu `xsl:output`, který určuje příponu souboru. Výchozí soubor se nachází v dočasném adresáři aktuálního uživatele.
 
 **Schémata**
 
-Schémata pro ověřování. Tlačítko otevře **schémata XSD** dialogové okno, které lze použít pro výběr schémat použití.
+Schémata, která se mají použít pro ověření Tlačítko otevře dialogové okno **schémata XSD** , které lze použít k výběru schémat, která chcete použít.
 
-Můžete také zadat cestu k schémata. Pokud nejsou zadány více schémat, každá cesta schématu musí být uzavřen do dvojitých uvozovek.
+Můžete také zadat cestu k schématům. Pokud je zadáno více schémat, je nutné každou cestu schématu uzavřít do dvojitých uvozovek.
 
-**Šablona stylů**
+**Šablony**
 
-Soubor XSLT, který slouží k transformaci dokumentu při **spustit ladění XSLT** a **spustit XSLT bez ladění** příkazy se používají. Pokud je toto pole prázdné, editor používá hodnotu podle `xml-stylesheet` zpracování instrukcí z dokumentu nebo vás vyzve k zadání názvu souboru.
+Soubor XSLT, který se používá k transformaci dokumentu při **spuštění ladění XSLT** a **spuštění XSLT bez** příkazů pro ladění. Pokud je toto pole prázdné, použije editor hodnotu poskytnutou v dokumentu pokyn pro zpracování `xml-stylesheet` nebo se zobrazí výzva k zadání názvu souboru.
 
-Při úpravách souboru XSLT, tato vlastnost slouží k určení, zda by měl být jiné šablony stylů nepoužívá, pokud **spustit ladění XSLT** nebo **spustit XSLT bez ladění** příkaz. Chcete například provést při úpravách šablony stylů, která je součástí nadřazené šablony stylů.
+Při úpravách souboru XSLT lze pomocí této vlastnosti určit, že by měla být použita jiná šablona stylů, pokud je vybrána možnost **Spustit ladění XSLT** nebo **Spustit XSLT bez příkazu ladit** . Můžete to třeba udělat, když upravujete šablonu stylů, která je obsažena v nadřazené šabloně stylů.
 
 ## <a name="see-also"></a>Viz také:
 
-- [XML editor](../xml-tools/xml-editor.md)
+- [Editor XML](../xml-tools/xml-editor.md)
