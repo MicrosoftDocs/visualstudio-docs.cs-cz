@@ -4,150 +4,150 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, models
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d629c0049966d0520e0e40d23b0fd41798ccf2b6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 42cbc0ea5694e462faf6d3995bc68723a3f522e7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63386986"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72605845"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Porozumění modelům, třídám a vztahům
-Jazyka specifického pro doménu (DSL) je definován v jeho souboru definice DSL, společně s jakýkoli vlastní program kód, který může zapisovat. Většina programového kódu v řešení DSL je generována z tohoto souboru.
+Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společně s jakýmkoli vlastním programovým kódem, který můžete napsat. Většina kódu programu v řešení DSL je vygenerována z tohoto souboru.
 
- Toto téma popisuje funkce centrální v definici DSL.
+ Toto téma vysvětluje hlavní funkce definice DSL.
 
 ## <a name="the-dsl-definition"></a>Definice DSL
- Když otevřete `Dsl\DslDefinition.dsl`, Visual Studio okno vypadá podobně jako na následujícím obrázku.
+ Když otevřete `Dsl\DslDefinition.dsl`, okno aplikace Visual Studio bude vypadat jako na následujícím obrázku.
 
  ![Návrhář DSL](../modeling/media/dsl_designer.png)
 
- V definici DSL diagramu se zobrazí nejdůležitější informace v definici DSL. Další informace, které je také součástí DslDefinition.dsl, se zobrazí v Průzkumníku DSL, který je obvykle v části diagramu. Pracujete s diagram pro nejčastěji používané úkoly a Průzkumník DSL pokročilejší úpravy.
+ Nejdůležitější informace v definici DSL se zobrazí v diagramu definice DSL. Další informace, které jsou také součástí DslDefinition. DSL, se zobrazí v Průzkumníku DSL, která se obvykle zobrazuje na straně diagramu. Pracujete s diagramem pro nejčastější úlohy a s Průzkumníkem DSL pro pokročilejší přizpůsobení.
 
- Diagramem definice DSL ukazuje doménové třídy, které definují prvků modelu a vztahy, které definují propojení mezi elementy modelu. Také ukazuje obrazců a konektorů, které se používají k zobrazení prvků modelu pro uživatele.
+ Diagram definice DSL zobrazuje doménové třídy, které definují prvky modelu, a vztahy, které definují propojení mezi prvky modelu. Zobrazuje také obrazce a konektory, které jsou použity k zobrazení prvků modelu uživateli.
 
- ![Návrhář DSL s plavecké dráhy](../modeling/media/dsl_desinger.png)
+ ![Návrhář DSL s plaveckou dráhou](../modeling/media/dsl_desinger.png)
 
- Když vyberete položku v definici DSL v diagramu nebo v Průzkumníku DSL, zobrazí se informace o ho v okně Vlastnosti. Další informace může být zobrazen v okně podrobností DSL.
+ Když vyberete položku v definici DSL buď v diagramu, nebo v Průzkumníku DSL, informace o ní se zobrazí v okno Vlastnosti. V okně Podrobnosti DSL se můžou zobrazit další informace.
 
 ### <a name="models-are-instances-of-dsls"></a>Modely jsou instance DSL
- A *modelu* je instance tohoto kódu DSL vytvořené uživatelem. Model obsahuje prvky modelu, které jsou instancemi třídy domény, které definujete a propojení mezi elementy, které jsou instancemi vztahy domén, které definujete. Model může mít také obrazců a konektorů, které budou zobrazovat prvků modelu a odkazy v diagramu. Definice DSL zahrnuje třídy tvar, konektor třídy a třídu diagramu.
+ *Model* je instance vaší DSL vytvořeného uživatelem. Model obsahuje prvky modelu, které jsou instancemi tříd domény, které definujete, a propojení mezi prvky, které jsou instancemi doménových vztahů, které definujete. Model může mít také obrazce a spojnice, které zobrazují prvky modelu a odkazy v diagramu. Definice DSL obsahuje třídy tvarů, třídy konektorů a třídu pro diagram.
 
- Je také označován jako definici DSL *doménový model*. Definice DSL nebo domény model je návrhu reprezentace jazyka specifického pro doménu, zatímco model je za běhu instance jazyka specifického pro doménu.
+ Definice DSL se také označuje jako *doménový model*. Definice nebo doménový model DSL je reprezentace jazyka specifického pro doménu, zatímco model je instance modulu runtime pro jazykově specifické domény.
 
-## <a name="domain-classes-define-model-elements"></a>Doménové třídy definují elementů modelu
- Doménové třídy umožňují vytvářet různé prvky v této doméně a doménové vztahy jsou propojení mezi elementy. Jedná se o reprezentaci návrhu prvků a odkazy, které bude vytvořena instance pro uživatele jazyka specifického pro návrh při vytváření své modely.
+## <a name="domain-classes-define-model-elements"></a>Třídy domény definují prvky modelu
+ Doménové třídy slouží k vytvoření různých prvků v doméně a vztahy domény jsou propojením mezi prvky. Jedná se o reprezentace prvků a odkazů, které budou vytvářet instance uživatelů v jazyce specifickém pro návrh při vytváření jejich modelů.
 
- Tento obrázek ukazuje modelu, který byl vytvořen uživatelem Hudba library DSL. Hudba alb jsou reprezentované pomocí polí, které obsahují seznamy skladeb. Vašim animátorům jsou reprezentovány zaoblenými polí a jsou připojené do alb, ke kterým přispěli.
+ Tento obrázek znázorňuje model, který byl vytvořen uživatelem knihovny hudby DSL. Hudební alba jsou reprezentovaná poli obsahujícími seznamy písní. Interprety jsou reprezentovány pomocí kulatého rohového pole a jsou propojeny s alba, ke kterým přispěli.
 
- ![Instance modelu generované DSL](../modeling/media/music_instance.png)
+ ![Model instance generované DSL](../modeling/media/music_instance.png)
 
- Definice DSL odděluje dva aspekty. Vzhled elementů modelu v diagramu modelu je definována pomocí obrazce a spojnice třídy. Informace v modelu je definováno pomocí třídy domény a vztahy domén.
+ Definice DSL odděluje dvě aspekty. Vzhled prvků modelu v diagramu modelu je definován pomocí tříd tvarů a tříd konektorů. Informace přenesené v modelu jsou definované pomocí doménových tříd a doménových vztahů.
 
- Následující obrázek znázorňuje doménovými třídami a vztahy v definici DSL knihovna.
+ Následující ilustrace znázorňuje třídy domény a vztahy v definici DSL knihovny hudby.
 
- ![Vztahy vložení a referenční informace](../modeling/media/music_classes.png)
+ ![Vztahy vložení a odkazování](../modeling/media/music_classes.png)
 
- Na obrázku znázorňuje čtyři doménové třídy: Hudba, fotoalba, interpreta a skladby. Doménové třídy definují vlastnosti domény, například název, nadpis a tak dále. Instance modelu jsou hodnoty některých z těchto vlastností zobrazí v diagramu.
+ Ilustrace znázorňuje čtyři doménové třídy: hudbu, album, interpret a skladba. Třídy domény definují vlastnosti domény, jako je název, název a tak dále. V modelu instance jsou hodnoty některých z těchto vlastností zobrazeny v diagramu.
 
- Třídy, aby se vztahy domén: MusicHasAlbums MusicHasArtists, AlbumbHasSongs a ArtistAppearedOnAlbums. Vztahy mít například 1..1, násobnosti 0.. *. Například každý skladby musí mít relaci ke přesně jeden alba prostřednictvím AlbumHasSongs vztahu. Každý alba může mít libovolný počet skladeb.
+ Mezi třídami jsou doménové vztahy: MusicHasAlbums, MusicHasArtists, AlbumbHasSongs a ArtistAppearedOnAlbums. Relace mají násobnost, například 1.. 1, 0.. *. Například každá skladba musí být v relaci k přesně jednomu albu prostřednictvím vztahu AlbumHasSongs. Každé album může mít libovolný počet písní.
 
-### <a name="rearranging-the-dsl-definition-diagram"></a>Změna uspořádání diagramem definice DSL
- Všimněte si, že doménová třída může zobrazit několikrát v definici DSL diagramu, alba stejně jako na tomto obrázku. Je vždy jeden hlavní zobrazení a můžou být některé *odkaz* zobrazení.
+### <a name="rearranging-the-dsl-definition-diagram"></a>Změna uspořádání diagramu definice DSL
+ Všimněte si, že se doménová třída může několikrát zobrazit v diagramu definice DSL, jako album na tomto obrázku. K dispozici je vždy jedno hlavní zobrazení a může existovat několik zobrazení *odkazů* .
 
- Chcete-li uspořádat diagramem definice DSL, můžete:
+ Chcete-li změnit uspořádání diagramu definice DSL, můžete:
 
-- Zaměnit hlavní a odkazovat pomocí zobrazení **přenést stromu zde** a **rozdělit strom** příkazy. Klikněte pravým tlačítkem na jednu doménovou třídu najdete v těchto příkazů.
+- Proměňte hlavní a referenční zobrazení pomocí příkazů **přenést strom zde** a **rozdělit stromové** příkazy. Kliknutím pravým tlačítkem myši na jednu doménovou třídu zobrazíte tyto příkazy.
 
-- Změnit pořadí doménové třídy a třídy tvar stisknutím kombinace kláves Ctrl + šipka nahoru a Ctrl + šipka dolů.
+- Přeuspořádat třídy domény a třídy tvarů stisknutím kombinace kláves Ctrl + šipka nahoru a Ctrl + šipka dolů.
 
-- Sbalit či rozbalit třídy pomocí ikony v pravém horním rohu každé obrazce.
+- Sbalte nebo rozbalte třídy pomocí ikony v pravém horním rohu jednotlivých tvarů.
 
-- Kliknutím na znaménko minus (-) v dolní části doménovou třídu sbalení části stromu.
+- Rozbalíte části stromu kliknutím na znaménko mínus (-) v dolní části doménové třídy.
 
 ## <a name="inheritance"></a>Dědičnost
- Doménové třídy lze definovat pomocí dědičnosti. Chcete-li vytvořit odvození dědičnosti, klikněte na nástroj dědičnosti, klikněte na tlačítko odvozené třídy a pak klikněte na základní třídu. Prvek modelu má všechny vlastnosti, které jsou definovány ve třídě vlastní domény, společně se všemi vlastnostmi zděděné ze základní třídy. Také dědí její role ve vztazích.
+ Třídy domény lze definovat pomocí dědičnosti. Chcete-li vytvořit odvození dědičnosti, klikněte na nástroj dědičnost, klikněte na odvozenou třídu a potom klikněte na základní třídu. Prvek modelu má všechny vlastnosti, které jsou definovány na své vlastní doménové třídy, spolu se všemi vlastnostmi děděnými ze základní třídy. Zároveň zdědí své role v relacích.
 
- Dědičnost lze také mezi relace, obrazců a konektorů. Dědičnost musí zůstat ve stejné skupině. Obrazec nemůže dědit z třídy domény.
+ Dědičnost se dá použít taky mezi relacemi, obrazci a konektory. Dědičnost musí zůstat ve stejné skupině. Obrazec nemůže dědit z doménové třídy.
 
 ## <a name="domain-relationships"></a>Doménové vztahy
- Prvky modelu lze propojit vztahy. Odkazy jsou vždy binární; spojují právě dva elementy. Ale libovolný prvek může mít mnoho odkazů na jiné objekty, a může existovat i více než jedno propojení mezi stejného páru prvků.
+ Prvky modelu mohou být propojeny pomocí vztahů. Odkazy jsou vždycky binární; propojí přesně dva prvky. Libovolný element ale může mít mnoho odkazů na jiné objekty a může dokonce být více než jedno propojení mezi stejnou dvojicí prvků.
 
- Stejně jako můžete definovat různé třídy prvky, můžete definovat různé třídy odkazy. Třída odkaz se nazývá *doménového vztahu*. Doménovým vztahem Určuje, jaké třídy element její instance může připojit. Každý konec prvku relace je volána *role*, a doménového vztahu definuje názvy pro dvě role, stejně jako pro samotnou relaci.
+ Stejně jako můžete definovat různé třídy prvků, můžete definovat různé třídy odkazů. Třída odkazu se nazývá *doménový vztah*. Doménový vztah určuje, ke kterým třídám prvků se může připojit. Každý konec relace se nazývá *role*a doménová relace definuje názvy pro tyto dvě role a také pro samotný vztah.
 
- Existují dva typy vztahů domény: vložení vztah a vztah odkazu. V definici DSL diagramu vkládání vztahy mají čar na každou roli a referenční stavy mají přerušované čáry.
+ Existují dva typy doménových vztahů: vkládání vztahů a referenčních vztahů. V diagramu definice DSL mají relace vložení plné čáry pro každou roli a referenční relace mají přerušované čáry.
 
-### <a name="embedding-relationships"></a>Vkládání relace
- Každý prvek v modelu, s výjimkou jeho kořenové složky je cílem jednoho vkládání propojení. Proto celý model tvoří jeden strom vkládání odkazů. Vztah obsažení představuje členství ve skupině nebo vlastnictví. Dva prvky modelu, které se týkají tímto způsobem se také označují jako nadřazené a podřízené. Podřízené říká, že je vložený v nadřazeném prvku.
+### <a name="embedding-relationships"></a>Relace vložení
+ Každý prvek v modelu, s výjimkou jeho kořenu, je cílem jednoho odkazu vložení. Proto celý model tvoří jednu stromovou strukturu odkazů vložení. Vztah vložení představuje omezení nebo vlastnictví. Dva prvky modelu, které jsou spojeny tímto způsobem, jsou označovány také jako nadřazené a podřízené. Podřízená položka je označována jako vložená v nadřazeném prvku.
 
- Vkládání odkazy se nezobrazují obvykle explicitně jako konektory v diagramu. Místo toho že jsou obvykle reprezentováno členství ve skupině. Diagram je reprezentován kořen modelu a prvky vložené v ní jsou zobrazeny jako tvary v diagramu.
+ Odkazy na vložení nejsou obvykle zobrazeny explicitně jako spojnice v diagramu. Místo toho jsou obvykle reprezentované zahrnutím. Kořen modelu je reprezentován diagramem a prvky, které jsou v něm vloženy, jsou zobrazeny jako obrazce v diagramu.
 
- V příkladu má kořenová třída Hudba vztah obsažení MusicHasAlbums do alb, jehož vkládání AlbumHasSongs k skladby. Skladby se zobrazují jako položky v seznamu v každé Album. Hudba má také vkládání MusicHasArtists interpreta třídu, jejíž instance se zobrazí také jako tvary v diagramu.
+ V příkladu má hudba pro kořenovou třídu MusicHasAlbums vztah vložení do alba, který má vložení AlbumHasSongs do Song. Skladby se zobrazují jako položky v seznamu uvnitř každého alba. Hudba také obsahuje vložení MusicHasArtists do třídy umělec, jejíž instance se také zobrazí jako tvary v diagramu.
 
- Ve výchozím nastavení jsou vložené prvky automaticky odstraněna při odstranění svých nadřazených složek.
+ Ve výchozím nastavení jsou vložené prvky automaticky odstraněny při odstranění jejich nadřazených prvků.
 
- Při uložení modelu do souboru v podobě XML vložené prvky vnořit do svých nadřazených složek, pokud jste upravili serializace.
+ Když je model uložen do souboru ve formátu XML, vložené prvky jsou vnořené uvnitř svých nadřazených prvků, pokud jste neupravili serializaci.
 
 > [!NOTE]
-> Vkládání není stejný jako dědičnosti. Podřízené položky v vztah obsažení nedědí vlastnosti nadřazeného objektu. Vložení je typ propojení mezi elementy modelu. Dědičnost je vztah mezi třídami a neslouží k vytvoření propojení mezi elementy modelu.
+> Vložení není stejné jako dědičnost. Podřízené položky v relaci vložení nedědí vlastnosti nadřazené položky. Vložení je typ propojení mezi prvky modelu. Dědičnost je vztah mezi třídami a nevytváří propojení mezi prvky modelu.
 
-### <a name="embedding-rules"></a>Vkládání pravidla
- Každý prvek v modelu instance musí být cílem přesně jedno propojení vkládání, s výjimkou kořenu modelu.
+### <a name="embedding-rules"></a>Pravidla vložení
+ Každý prvek v modelu instance musí být cílem přesně jednoho odkazu vložení, s výjimkou kořene modelu.
 
- Proto se každá domény Neabstraktní třída s výjimkou kořenové třídy musí být cílem alespoň jeden vztah obsažení nebo musí dědit ze základní třídy vložení. Třída může být cílem nejmíň dva vkládání, ale jeho prvky modelu instance může mít pouze jeden nadřazený prvek v čase. Násobnost z cíle na zdroj musí být 0.. 1 nebo 1..1.
+ Proto každá neabstraktní doménová třída, kromě kořenové třídy, musí být cílem alespoň jedné relace vložení, nebo musí dědit vložení ze základní třídy. Třída může být cílem dvou nebo více vložení, ale její prvky modelu instance mohou mít pouze jednu nadřazenou položku v jednom okamžiku. Násobnost z cíle na zdroj musí být 0.. 1 nebo 1.. 1.
 
-### <a name="the-explorer-displays-the-embedding-tree"></a>Vložení stromu se zobrazí v Průzkumníku
- Vaše definice DSL také vytvoří Průzkumníka, které uživatelé uvidí spolu s jejich diagramu modelu.
+### <a name="the-explorer-displays-the-embedding-tree"></a>V Průzkumníkovi se zobrazí strom pro vložení
+ Definice DSL také vytvoří Průzkumníka, který se uživatelům zobrazí společně s diagramem modelu.
 
  ![Vygenerovaný Průzkumník DSL](../modeling/media/music_explorer.png)
 
- V Průzkumníku ukazuje všechny prvky v modelu, včetně těch, u kterých nebyly definovány žádné obrazce. Ukazuje elementů a vztahů obsažení, ale neodkazuje vztahy.
+ V Průzkumníkovi se zobrazí všechny prvky v modelu, i ty, pro které nejsou definovány žádné tvary. Zobrazuje elementy a vkládání vztahů, ale ne referenčních vztahů.
 
- Zobrazit hodnoty vlastnosti domény elementu, uživatel vybere elementu, buď v diagramu modelu, nebo v Průzkumníku modelů a otevře v okně Vlastnosti. Zobrazí všechny domény vlastnosti, včetně těch, které se zobrazí v diagramu. V tomto příkladu skladeb má název a rozšířením podle tematických, ale pouze hodnota názvu se zobrazí v diagramu.
+ Chcete-li zobrazit hodnoty vlastností domény elementu, uživatel vybere prvek, buď v diagramu modelu, nebo v Průzkumníku modelů a otevře okno Vlastnosti. Zobrazí se všechny vlastnosti domény, včetně těch, které nejsou v diagramu zobrazené. V příkladu má každá skladba název i Žánr, ale v diagramu je zobrazená jenom hodnota názvu.
 
-## <a name="reference-relationships"></a>Referenční stavy
- Referenční vztah představuje jakýkoli druh vztahu, který není vkládání.
+## <a name="reference-relationships"></a>Referenční relace
+ Vztah odkazu představuje jakýkoli druh relace, která není vložena.
 
- Referenční stavy se obvykle zobrazují v diagramu jako konektory mezi tvary.
+ Referenční relace se obvykle zobrazují v diagramu jako spojnice mezi obrazci.
 
- V reprezentaci XML pro model, je reprezentována pomocí odkazu mezi dvěma prvky *monikery.* To znamená, že jsou tyto monikery názvy, které jedinečně identifikují každý prvek v modelu. Uzel XML pro každý prvek modelu obsahuje uzel, který určuje název relace a zástupného názvu elementu.
+ V jazyce XML reprezentace modelu je odkaz na odkaz mezi dvěma prvky reprezentován pomocí *monikerů.* To znamená, že monikery jsou názvy, které jednoznačně identifikují každý prvek v modelu. Uzel XML pro každý prvek modelu obsahuje uzel, který určuje název vztahu a moniker druhého prvku.
 
 ## <a name="roles"></a>Role
- Každý doménového vztahu má dvě role, zdrojová role a cílová role.
+ Každý doménový vztah má dvě role, zdrojovou roli a cílovou roli.
 
- Na následujícím obrázku, řádek mezi **vydavatele** doménové třídy a **PublisherCatalog** doménového vztahu je zdrojové role. Řádek mezi doménový vztah a **alba** doménové třídy je cílová role.
+ Na následujícím obrázku je čára mezi třídou domény **vydavatele** a doménovou rolí **PublisherCatalog** zdrojová role. Řádkem mezi doménovým vztahem a doménovou třídou **alba** je cílová role.
 
  ![Role a vlastnosti.](../modeling/media/propertycode.png)
 
- Názvy přidružené k relaci jsou zvlášť důležité při psaní kódu programu, který prochází skrz modelu. Například při sestavování řešení DSL generované třídy vydavatel má vlastnost katalog, který je kolekce alb. Třída alba má vlastnost Publisher, který je jedna instance třídy vydavatele.
+ Názvy přidružené k relaci jsou obzvláště důležité při psaní kódu programu, který projde modelem. Například při sestavování řešení DSL má Vydavatel generovaných tříd katalog vlastností, který je kolekcí alb. Album třídy má vydavatele vlastností, který je jedinou instancí třídy Vydavatel.
 
- Při vytvoření relace v definici DSL názvy vlastností a vztahů jsou uvedeny výchozí hodnoty. Můžete je však změnit.
+ Když vytvoříte relaci v definici DSL, názvy vlastností a vztahů jsou zadané výchozí hodnoty. Můžete je ale změnit.
 
-## <a name="multiplicities"></a>Násobnosti
- Násobnosti zadejte počet prvků, může mít stejný atribut role v doménového vztahu. V příkladu, nula to-many (0..\*) nastavení násobnosti **katalogu** role určuje, že všechny instance **vydavatele** doménová třída může mít tolik  **PublisherCatalog** vztah odkazuje, jak si ho.
+## <a name="multiplicities"></a>Mnohočetnostmi
+ Násobnosti určují, kolik prvků může mít stejnou roli v relaci domény. V příkladu nastavení násobnosti nula (0.. \*) v roli **Catalog** určuje, že jakákoli instance třídy domény **vydavatele** může mít tolik odkazů na **PublisherCatalog** vztahů, jak je chcete dát.
 
- Konfigurace násobnosti atributu role elementu tak, že zadáte v diagramu nebo úpravou `Multiplicity` vlastnost **vlastnosti** okno. Následující tabulka popisuje nastavení pro tuto vlastnost.
+ Nastavte násobnost role buď zadáním v diagramu, nebo úpravou vlastnosti `Multiplicity` v okně **vlastnosti** . Následující tabulka popisuje nastavení pro tuto vlastnost.
 
-|Násobnost typu|Popis|
+|Typ násobnosti|Popis|
 |-|-|
-|0.. * (nula n)|Každá instance třídy domény může mít více instancí relace nebo žádné instance vztahu.|
-|0..1 (nula do jednoho)|Každá instance třídy domény může obsahovat více než jednu instanci relace nebo žádné instance vztahu.|
-|1..1 (jeden)|Každá instance doménová třída může mít jednu instanci relace. Nelze vytvořit více než jednu instanci této relace z libovolné instance třídy role. Pokud je povoleno ověření, se zobrazí chyba ověření při jakékoli instance třídy role nemá žádná instance vztahu.|
-|1.. * (jeden na mnoho)|Každá instance třídy na roli, která má tento násobnost může mít více instancí relace a každá instance musí mít alespoň jednu instanci relace. Pokud je povoleno ověření, se zobrazí chyba ověření při jakékoli instance třídy role nemá žádná instance vztahu.|
+|0.. * (nula až mnoho)|Každá instance doménové třídy může mít více instancí relace nebo žádné instance relace.|
+|0.. 1 (nula až jedna)|Každá instance doménové třídy nemůže mít více než jednu instanci relace nebo žádné instance relace.|
+|1.. 1 (jeden)|Každá instance doménové třídy může mít jednu instanci relace. Z jakékoli instance třídy role nemůžete vytvořit více než jednu instanci této relace. Pokud je povoleno ověřování, zobrazí se chyba ověření v případě, že jakákoli instance třídy role nemá žádnou instanci relace.|
+|1.. * (jedna až mnoho)|Každá instance třídy v roli, která má tuto násobnost, může mít více instancí relace a každá instance musí mít alespoň jednu instanci vztahu. Pokud je povoleno ověřování, zobrazí se chyba ověření v případě, že jakákoli instance třídy role nemá žádnou instanci relace.|
 
 ## <a name="domain-relationships-as-classes"></a>Doménové vztahy jako třídy
- Odkaz je vyjádřena v Store jako instance LinkElement, což je odvozené třídy ModelElement. Tyto vlastnosti můžete definovat v diagramu modelu domény v doménové vztahy.
+ Odkaz je reprezentován ve Storu jako instance LinkElement, která je odvozenou třídou třídy ModelElement. Tyto vlastnosti můžete definovat v diagramu doménového modelu u doménových vztahů.
 
- Lze také nastavit vztah zdroj nebo cíl jiné vztahy. V diagramu modelu domény, klikněte pravým tlačítkem na vztah domény a pak klikněte na **zobrazit jako třída**. Do pole další třídy se zobrazí. Vztahy pak můžete připojit k němu.
+ Můžete také vytvořit vztah mezi zdrojem a cílem jiných vztahů. V diagramu doménového modelu klikněte pravým tlačítkem na doménový vztah a pak klikněte na **Zobrazit jako třídu**. Zobrazí se další pole třídy. K němu pak můžete připojit relace.
 
- Částečně prostřednictvím dědičnosti, můžete definovat vztah, stejně jako s doménovými třídami. Vyberte odvozený vztah a nastavte **základnímu vztahu** v okně Vlastnosti.
+ Relaci můžete definovat částečně děděním, stejně jako u doménových tříd. Vyberte odvozený vztah a nastavte **základní vztah** v okno Vlastnosti.
 
- Odvozený vztah se specializuje na jejím základním vztahem. Doména třídy, kterou it, které odkazy by měl být odvozen od nebo stejná jako propojenou relací základní třídy. V modelu je vytvořen odkaz odvozený vztah, je instance odvozené a základních vztahů. V kódu programu můžete přejít na protilehlé straně odkazu pomocí vlastnosti vygeneruje základní nebo odvozené třídy.
+ Odvozený vztah se specializuje na základní vztah. Třídy domény, na které odkazuje, by měly být odvozeny od nebo stejné jako třídy propojené základní relací. Je-li v modelu vytvořen odkaz odvozeného vztahu, jedná se o instanci odvozeného i základního vztahu. V programovém kódu můžete přejít na opačný konec odkazu pomocí vlastností generovaných buď základní třídou, nebo odvozenou třídou.
 
 ## <a name="see-also"></a>Viz také
 
-- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

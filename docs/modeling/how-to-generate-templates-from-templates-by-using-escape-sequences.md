@@ -4,24 +4,24 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, generating templates from templates
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7872b9bf55ad5d712ac01edf10c4b9df2a82feea
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 1a9afe2670bb086627407a9f1bc674edfc2fe354
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263688"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72605472"
 ---
 # <a name="how-to-generate-templates-from-templates-by-using-escape-sequences"></a>Postupy: Generování šablon ze šablon pomocí řídicích sekvencí
-Můžete vytvořit textové šablony, která vytvoří jiné textové šablony jako jeho vygenerovaný textový výstup. Chcete-li to provést, musíte použít řídicí sekvence od sebe odděluje textové šablony značky. Pokud nepoužijete řídicí sekvence, generované textové šablony se mají předem definované význam. Další informace o použití řídicích sekvencí v textových šablonách naleznete v tématu [pomocí řídicích sekvencí v textových šablonách](../modeling/using-escape-sequences-in-text-templates.md).
+Můžete vytvořit textovou šablonu, která vytvoří další textovou šablonu jako vygenerovaný textový výstup. K tomu je nutné použít řídící sekvence k vymezení tagů textových šablon. Pokud nepoužíváte řídicí sekvence, vaše vytvořená šablona textu bude mít předem definovaný význam. Další informace o použití řídicích sekvencí v textových šablonách naleznete v tématu [Použití řídicích sekvencí v textových šablonách](../modeling/using-escape-sequences-in-text-templates.md).
 
-### <a name="to-generate-a-text-template-from-within-a-text-template"></a>Ke generování textové šablony z v rámci textové šablony
+### <a name="to-generate-a-text-template-from-within-a-text-template"></a>Vygenerování textové šablony v rámci textové šablony
 
-- Použít zpětné lomítko (\\) jako řídicí znak vytvářel potřebné značky v rámci textové šablony pro direktivy, příkazy, výrazy a funkce v samostatném textovém souboru šablony třídy.
+- Pomocí zpětného lomítka (\\) jako řídicího znaku vytvořte potřebné značky značek v rámci textové šablony pro direktivy, příkazy, výrazy a funkce třídy v samostatném souboru textové šablony.
 
     ```
     \<#@ directive \#>
@@ -31,7 +31,7 @@ Můžete vytvořit textové šablony, která vytvoří jiné textové šablony j
     ```
 
 ## <a name="example"></a>Příklad
- Následující příklad používá řídicí znaky pro vytvoření textové šablony z textové šablony. `output` – Direktiva nastaví cílový typ souboru pro typ souboru textové šablony (.tt).
+ Následující příklad používá řídicí znaky k vytvoření textové šablony z textové šablony. Direktiva `output` nastaví typ cílového souboru na typ souboru textové šablony (. TT).
 
 ```csharp
 \<#@ output extension=".tt" \#>
@@ -52,7 +52,7 @@ XmlDocument xDoc = new XmlDocument();
 \#>
 ```
 
- Vygenerovaný textový výstup je textové šablony.
+ Generovaný textový výstup je textová šablona.
 
 ```
 <#@ output extension=".tt" #>
