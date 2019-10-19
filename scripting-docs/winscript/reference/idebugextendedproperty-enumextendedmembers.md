@@ -1,5 +1,5 @@
 ---
-title: IDebugExtendedProperty::EnumExtendedMembers | Dokumentace Microsoftu
+title: 'Idebugextendedproperty –:: EnumExtendedMembers | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c7e14d1bc8937221960d938f1bbfae8e307830f2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f6fd225be9504254965eab77b912f50fb5c777e3
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946142"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576395"
 ---
 # <a name="idebugextendedpropertyenumextendedmembers"></a>IDebugExtendedProperty::EnumExtendedMembers
-Vytvoří výčet členy rozšířené vlastnosti.  
+Vytvoří výčet členů rozšířené vlastnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,18 +39,18 @@ HRESULT EnumExtendedMembers(
   
 #### <a name="parameters"></a>Parametry  
  `dwFieldSpec`  
- [in] Určuje, že EX_DBGPROP_INFO_FLAGS konstanty, které určují, že pole výčet Rozšířené ladicí vlastnosti struktury, která mají být vyplněna.  
+ pro Určuje konstanty EX_DBGPROP_INFO_FLAGS, které určují pole ve výčtech rozšířených vlastností ladění, které mají být vyplněny.  
   
  `nRadix`  
- [in] Základ, který se má použít při interpretaci jakékoli číselné informace.  
+ pro Číselná soustava, která se má použít při interpretaci libovolných číselných informací.  
   
  `ppeepi`  
- [out] Vrátí `IEnumDebugExtendedPropertyInfo` rozhraní, které zobrazuje výčet vlastností člena.  
+ mimo Vrátí rozhraní `IEnumDebugExtendedPropertyInfo`, které vytváří výčet vlastností členů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Bude vracet platnou `HRESULT`, obvykle `S_OK`.  
+ Vrací platný `HRESULT`, obvykle `S_OK`.  
   
-## <a name="see-also"></a>Viz také  
- [Idebugextendedproperty – rozhraní](../../winscript/reference/idebugextendedproperty-interface.md)   
- [EX_DBGPROP_INFO_FLAGS](../../winscript/reference/ex-dbgprop-info-flags.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní idebugextendedproperty –](../../winscript/reference/idebugextendedproperty-interface.md)  
+ [EX_DBGPROP_INFO_FLAGS](../../winscript/reference/ex-dbgprop-info-flags.md)    
  [ExtendedDebugPropertyInfo – struktura](../../winscript/reference/extendeddebugpropertyinfo-structure.md)

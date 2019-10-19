@@ -1,5 +1,5 @@
 ---
-title: IActiveScript – | Dokumentace Microsoftu
+title: IActiveScript | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,33 +13,33 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5b7e3a0172a798eab9a743f446dff3d339a785b2
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 7a33db2bcbcb356a508fec2e6bc5449a899a1299
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436086"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577240"
 ---
 # <a name="iactivescript"></a>IActiveScript
-Poskytuje metody, které jsou nezbytné k inicializaci skriptovací stroj. Skriptovací stroj musí implementovat `IActiveScript` rozhraní.  
+Poskytuje metody potřebné k inicializaci skriptovacího stroje. Skriptovací stroj musí implementovat rozhraní `IActiveScript`.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[IActiveScript::SetScriptSite](../../winscript/reference/iactivescript-setscriptsite.md)|Informuje o tom skriptovacího stroje ze [iactivescriptsite –](../../winscript/reference/iactivescriptsite.md) poskytované hostitelem lokality.|  
-|[IActiveScript::GetScriptSite](../../winscript/reference/iactivescript-getscriptsite.md)|Načte objekt lokality přidružený modul skriptu Windows.|  
-|[IActiveScript::SetScriptState](../../winscript/reference/iactivescript-setscriptstate.md)|Vloží skriptovací stroj do zadaného stavu.|  
-|[IActiveScript::GetScriptState](../../winscript/reference/iactivescript-getscriptstate.md)|Načte aktuální stav skriptovací stroj.|  
-|[IActiveScript::Close](../../winscript/reference/iactivescript-close.md)|Způsobí, že skriptovací stroj opustit všechny aktuálně načtené skriptu, přijít o jejím stavu a uvolnit všechny ukazatele rozhraní, které je jiné objekty, tedy zadáte uzavřeného stavu.|  
-|[IActiveScript::AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md)|Přidá do oboru názvů skriptovací stroj název položky kořenové úrovně.|  
-|[IActiveScript::AddTypeLib](../../winscript/reference/iactivescript-addtypelib.md)|Přidá knihovnu typů do oboru skriptu.|  
-|[IActiveScript::GetScriptDispatch](../../winscript/reference/iactivescript-getscriptdispatch.md)|Načte `IDispatch` rozhraní pro spouštění skriptu.|  
-|[IActiveScript::GetCurrentScriptThreadID](../../winscript/reference/iactivescript-getcurrentscriptthreadid.md)|Načte identifikátor skriptovací stroj definované pro aktuálně spuštěné vlákno.|  
-|[IActiveScript::GetScriptThreadID](../../winscript/reference/iactivescript-getscriptthreadid.md)|Načte identifikátor skriptovací stroj definované pro vlákno přidružené k dané vlákno Microsoft Win32.|  
+|[IActiveScript::SetScriptSite](../../winscript/reference/iactivescript-setscriptsite.md)|Informuje skriptovací stroj [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md) webu od hostitele.|  
+|[IActiveScript::GetScriptSite](../../winscript/reference/iactivescript-getscriptsite.md)|Načte objekt lokality přidružený ke skriptovacímu stroji Windows.|  
+|[IActiveScript::SetScriptState](../../winscript/reference/iactivescript-setscriptstate.md)|Umístí skriptovací stroj do zadaného stavu.|  
+|[IActiveScript::GetScriptState](../../winscript/reference/iactivescript-getscriptstate.md)|Načte aktuální stav skriptovacího stroje.|  
+|[IActiveScript::Close](../../winscript/reference/iactivescript-close.md)|Způsobí, že skriptovací modul opustí libovolný aktuálně načtený skript, ztratí jeho stav a uvolní všechny ukazatele rozhraní, které má, a to tak, aby vstoupily do zavřeného stavu.|  
+|[IActiveScript::AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md)|Přidá název položky na kořenové úrovni do oboru názvů skriptovacího stroje.|  
+|[IActiveScript::AddTypeLib](../../winscript/reference/iactivescript-addtypelib.md)|Přidá knihovnu typů do oboru názvů pro skript.|  
+|[IActiveScript::GetScriptDispatch](../../winscript/reference/iactivescript-getscriptdispatch.md)|Načte rozhraní `IDispatch` spouštěného skriptu.|  
+|[IActiveScript::GetCurrentScriptThreadID](../../winscript/reference/iactivescript-getcurrentscriptthreadid.md)|Načte identifikátor definovaný skriptovacím modulem pro aktuálně spuštěné vlákno.|  
+|[IActiveScript::GetScriptThreadID](../../winscript/reference/iactivescript-getscriptthreadid.md)|Načte identifikátor definovaný skriptovacím modulem pro vlákno přidružené k danému vláknu Microsoft Win32.|  
 |[IActiveScript::GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md)|Načte aktuální stav vlákna skriptu.|  
-|[IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md)|Přeruší provádění spuštěné vlákno skriptu.|  
-|[IActiveScript::Clone](../../winscript/reference/iactivescript-clone.md)|Klonuje aktuální skriptovací stroj (bez jakékoli aktuální stav provádění), vrátí načíst skriptovací stroj, který nemá žádná lokalita v aktuálním vlákně.|  
+|[IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md)|Přeruší provádění spuštěného vlákna skriptu.|  
+|[IActiveScript::Clone](../../winscript/reference/iactivescript-clone.md)|Naklonuje aktuální skriptovací stroj (mínus aktuální stav spuštění) a vrátí načtený skriptovací stroj, který nemá v aktuálním vlákně žádný web.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace skriptovacích rozhraní systému Windows](../../winscript/reference/windows-script-interfaces-reference.md)

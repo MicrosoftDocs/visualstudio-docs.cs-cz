@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerCallback::Initialize | Dokumentace Microsoftu
+title: 'Iactivescriptprofilercallback –:: Initialize | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 66ef6dc37e1f2f8117e440089ee36958d616dda0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bbbd61d6b3c10dcfffe2df215cc5a60d685dd803
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993355"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576444"
 ---
 # <a name="iactivescriptprofilercallbackinitialize"></a>IActiveScriptProfilerCallback::Initialize
-Volána k inicializaci objektu profileru pokaždé, když profilace je spuštěna na skriptovacím stroji.  
+Volá se, aby se inicializoval objekt profileru, když se v skriptovacím modulu spustí profilace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,17 +34,17 @@ HRESULT Initialize(
   
 #### <a name="parameters"></a>Parametry  
  `dwContext`  
- [in] 4bajtový hodnotu, která je předána [IActiveScriptProfilerControl::StartProfiling](../../winscript/reference/iactivescriptprofilercontrol-startprofiling.md).  
+ pro Hodnota 4 bajty, která je předána do [IActiveScriptProfilerControl:: StartProfiling](../../winscript/reference/iactivescriptprofilercontrol-startprofiling.md).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu HRESULT. Možné hodnoty jsou následující:  
+ Vrátí HRESULT. Možné hodnoty jsou následující:  
   
 |Návratová hodnota|Význam|  
 |------------------|-------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud objekt profileru nelze inicializovat metodu, měla by vrátit chybu HRESULT oznámit skriptovací stroj. V takovém případě by měly skriptovací stroj přímo volat [IActiveScriptProfilerCallback::Shutdown](../../winscript/reference/iactivescriptprofilercallback-shutdown.md)předáním HRESULT v parametru a uvolněte objektu profileru.  
+ Pokud metoda nemůže inicializovat objekt profileru, měl by vrátit chybu HRESULT, aby upozornil skriptovací modul. V takovém případě skriptovací modul by měl přímo volat metodu [iactivescriptprofilercallback –:: Shutdown](../../winscript/reference/iactivescriptprofilercallback-shutdown.md), předávat HRESULT v parametru a pak uvolnit objekt profileru.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScriptProfilerCallback – rozhraní](../../winscript/reference/iactivescriptprofilercallback-interface.md)

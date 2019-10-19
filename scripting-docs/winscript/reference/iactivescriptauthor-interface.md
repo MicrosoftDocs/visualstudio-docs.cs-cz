@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor Interface | Microsoft Docs
+title: Rozhraní Iactivescriptauthor – | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,36 +13,36 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6b3d9725d72f5213aadc3d9400bef87cecb20ba0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ed0734fa48d58a5eae779c75c838c09215ed60a0
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63009726"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576160"
 ---
 # <a name="iactivescriptauthor-interface"></a>IActiveScriptAuthor – rozhraní
-Představuje objekt pro vytváření služeb, včetně technologie IntelliSense a kolaci informace.  
+Představuje služby vytváření obsahu, včetně IntelliSense a kompletování informací.  
   
- Kromě metod zděděných z `IUnknown`, `IActiveScriptAuthor` rozhraní poskytuje následující metody.  
+ Kromě metod zděděných z `IUnknown` rozhraní `IActiveScriptAuthor` zpřístupňuje následující metody.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[IActiveScriptAuthor::AddNamedItem](../../winscript/reference/iactivescriptauthor-addnameditem.md)|Přidá název položky kořenové úrovně skriptu pro vytváření oboru názvů vyhledávacího stroje. A *kořenovou položku* je objekt obsahující vlastnosti a metody a mohou obsahovat také zdroj událostí.|  
-|[IActiveScriptAuthor::AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md)|Přidá skriptlet kódu jako podřízený objekt úrovni kořenového adresáře `IScriptNode` objektu. Na hostiteli plně kvalifikovaný název skriptletu může mít pouze dvě úrovně.|  
-|[IActiveScriptAuthor::AddTypeLib](../../winscript/reference/iactivescriptauthor-addtypelib.md)|Přidá knihovnu typů do oboru skriptu.|  
-|[IActiveScriptAuthor::GetChars](../../winscript/reference/iactivescriptauthor-getchars.md)|Vrátí sadu znaků dokončení pro dokončení požadované kontext.|  
+|[IActiveScriptAuthor::AddNamedItem](../../winscript/reference/iactivescriptauthor-addnameditem.md)|Přidá název položky na kořenové úrovni do oboru názvů modulu vytváření skriptů. *Položka kořenové úrovně* je objekt, který může obsahovat vlastnosti a metody a může také obsahovat zdroj události.|  
+|[IActiveScriptAuthor::AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md)|Přidá kód skriptletu jako podřízený objekt `IScriptNode` kořenové úrovně. V hostiteli může mít plně kvalifikovaný název skriptletu jenom dvě úrovně.|  
+|[IActiveScriptAuthor::AddTypeLib](../../winscript/reference/iactivescriptauthor-addtypelib.md)|Přidá knihovnu typů do oboru názvů pro skript.|  
+|[IActiveScriptAuthor::GetChars](../../winscript/reference/iactivescriptauthor-getchars.md)|Vrací sadu dokončovacích znaků pro požadovaný kontext dokončení.|  
 |[IActiveScriptAuthor::GetEventHandler](../../winscript/reference/iactivescriptauthor-geteventhandler.md)|Vrátí skriptletu, který má zadané atributy.|  
-|[IActiveScriptAuthor::GetInfoFromContext](../../winscript/reference/iactivescriptauthor-getinfofromcontext.md)|Vrátí zadejte informace a pozice ukotvení pro daný znak do bloku kódu. To poskytuje informace pro člena, technologie IntelliSense, globální seznamy a tipy pro parametr.|  
+|[IActiveScriptAuthor::GetInfoFromContext](../../winscript/reference/iactivescriptauthor-getinfofromcontext.md)|Vrátí informace o typu a pozice ukotvení pro daný znak v bloku kódu. Poskytuje informace pro členské technologie IntelliSense, globální seznamy a popisy parametrů.|  
 |[IActiveScriptAuthor::GetLanguageFlags](../../winscript/reference/iactivescriptauthor-getlanguageflags.md)|Vrátí informace o jazyce.|  
-|[IActiveScriptAuthor::GetRoot](../../winscript/reference/iactivescriptauthor-getroot.md)|Vrátí `IScriptNode` kořen stromu skript autora.|  
-|[IActiveScriptAuthor::GetScriptletTextAttributes](../../winscript/reference/iactivescriptauthor-getscriptlettextattributes.md)|Vrací atributy textu skriptletu.|  
-|[IActiveScriptAuthor::GetScriptTextAttributes](../../winscript/reference/iactivescriptauthor-getscripttextattributes.md)|Vrátí text atributy blok skriptu.|  
-|[IActiveScriptAuthor::IsCommitChar](../../winscript/reference/iactivescriptauthor-iscommitchar.md)|Vrátí hodnotu určující, zda daný znak měli potvrdit dokončování příkazů aplikací.|  
-|[IActiveScriptAuthor::ParseScriptText](../../winscript/reference/iactivescriptauthor-parsescripttext.md)|Analyzuje text skriptu, přidá text pro vytváření skriptu pro vytváření modulu a vytvoří `IScriptEntry` objekt, který odpovídá bloku skriptu.|  
-|[IActiveScriptAuthor::RemoveNamedItem](../../winscript/reference/iactivescriptauthor-removenameditem.md)|Odebere `NamedItem` objektů z oboru názvů skript, modul pro vytváření.|  
-|[IActiveScriptAuthor::RemoveTypeLib](../../winscript/reference/iactivescriptauthor-removetypelib.md)|Odebere ze skriptu pro vytváření oboru názvů modul knihovny typů.|  
+|[IActiveScriptAuthor::GetRoot](../../winscript/reference/iactivescriptauthor-getroot.md)|Vrátí `IScriptNode` kořen stromu skriptu autora.|  
+|[IActiveScriptAuthor::GetScriptletTextAttributes](../../winscript/reference/iactivescriptauthor-getscriptlettextattributes.md)|Vrátí atributy textu skriptletu.|  
+|[IActiveScriptAuthor::GetScriptTextAttributes](../../winscript/reference/iactivescriptauthor-getscripttextattributes.md)|Vrátí atributy textu bloku skriptu.|  
+|[IActiveScriptAuthor::IsCommitChar](../../winscript/reference/iactivescriptauthor-iscommitchar.md)|Vrátí hodnotu, která označuje, zda má daný znak potvrdit příkaz doplňováním aplikací.|  
+|[IActiveScriptAuthor::ParseScriptText](../../winscript/reference/iactivescriptauthor-parsescripttext.md)|Analyzuje text skriptu, přidá text do modulu vytváření skriptů pro vytváření a vytvoří objekt `IScriptEntry`, který odpovídá bloku skriptu.|  
+|[IActiveScriptAuthor::RemoveNamedItem](../../winscript/reference/iactivescriptauthor-removenameditem.md)|Odebere objekt `NamedItem` z oboru názvů modulu vytváření skriptů.|  
+|[IActiveScriptAuthor::RemoveTypeLib](../../winscript/reference/iactivescriptauthor-removetypelib.md)|Odebere knihovnu typů z oboru názvů modulu vytváření skriptů.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Rozhraní pro vytváření aktivních skriptů](../../winscript/reference/active-script-authoring-interfaces.md)

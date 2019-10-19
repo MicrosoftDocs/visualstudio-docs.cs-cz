@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame::GetLanguageString | Dokumentace Microsoftu
+title: 'Idebugstackframe –:: GetLanguageString | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cab0c0ab317754305ca2440748dd680e31750d8a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 83abb038cd8bc018d84cd0c5ddd2a413f8a02248
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934656"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576759"
 ---
 # <a name="idebugstackframegetlanguagestring"></a>IDebugStackFrame::GetLanguageString
-Vrátí krátký nebo long textový popis jazyka.  
+Vrátí krátký nebo dlouhý textový popis jazyka.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,20 +38,20 @@ HRESULT GetLanguageString(
   
 #### <a name="parameters"></a>Parametry  
  `fLong`  
- [in] Příznak, kde `TRUE` vrátí dlouhý popis a `FALSE` vrátí krátký popis.  
+ pro Příznak, kde `TRUE` vrátí dlouhý popis a `FALSE` vrátí krátký popis.  
   
  `pbstrLanguage`  
- [out] Popis jazyka.  
+ mimo Popis jazyka  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Obvykle Pokud `fLong` je `FALSE`, tato metoda poskytuje pouze název jazyk přidružený k rámce zásobníku. Když `fLong` je `TRUE`, tato metoda může také popis plné verze produktu.  
+ Pokud je například `fLong` `FALSE`, tato metoda poskytuje pouze název jazyka asociovaného s rámcem zásobníku. Pokud je `fLong` `TRUE`, tato metoda může poskytovat úplný popis produktu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugStackFrame – rozhraní](../../winscript/reference/idebugstackframe-interface.md)

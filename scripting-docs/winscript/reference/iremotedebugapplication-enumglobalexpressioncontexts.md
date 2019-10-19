@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication::EnumGlobalExpressionContexts | Dokumentace Microsoftu
+title: 'Iremotedebugapplication –:: EnumGlobalExpressionContexts | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 92ab12dc9944c328e744c7f39252facb8e91a3f7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 594dc2c09a76cd6027a9abcb38b5951768cceef9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944274"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576829"
 ---
 # <a name="iremotedebugapplicationenumglobalexpressioncontexts"></a>IRemoteDebugApplication::EnumGlobalExpressionContexts
-Vytvoří výčet kontexty globální výraz pro všechny jazyky, které jsou spuštěné v této aplikaci.  
+Vytvoří výčet kontextů globálních výrazů pro všechny jazyky běžící v této aplikaci.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +37,17 @@ HRESULT EnumGlobalExpressionContexts(
   
 #### <a name="parameters"></a>Parametry  
  `ppedec`  
- [out] Enumerátor, který obsahuje seznam kontexty globální výraz pro všechny jazyky, které jsou spuštěné v této aplikaci.  
+ mimo Enumerátor, který uvádí kontexty globálních výrazů pro všechny jazyky běžící v této aplikaci.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda vytvoří výčet kontexty globální výraz pro všechny jazyky, které jsou spuštěné v této aplikaci.  
+ Tato metoda provede výčet kontextů globálních výrazů pro všechny jazyky běžící v této aplikaci.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IRemoteDebugApplication – rozhraní](../../winscript/reference/iremotedebugapplication-interface.md)

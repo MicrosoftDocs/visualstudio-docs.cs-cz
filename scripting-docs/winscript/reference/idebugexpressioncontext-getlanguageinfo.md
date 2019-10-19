@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionContext::GetLanguageInfo | Dokumentace Microsoftu
+title: 'Idebugexpressioncontext –:: GetLanguageInfo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ed5546f07a81d9c2825f3dbdc4f2bb28887948f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5e6dd3d3bb254cd91f411da3b6b587bc37c3a777
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946287"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576413"
 ---
 # <a name="idebugexpressioncontextgetlanguageinfo"></a>IDebugExpressionContext::GetLanguageInfo
 Vrátí název a identifikátor GUID pro jazyk, který vlastní tento kontext.  
@@ -38,20 +38,20 @@ HRESULT GetLanguageInfo(
   
 #### <a name="parameters"></a>Parametry  
  `pbstrLanguageName`  
- [out] Název jazyka.  
+ mimo Název jazyka  
   
  `pLanguageID`  
- [out] Jedinečné id pro daný jazyk.  
+ mimo Jedinečné ID pro jazyk  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda vrátí název a identifikátor GUID pro jazyk, který vlastní tento kontext.  
+ Tato metoda vrátí název a identifikátor GUID pro jazyk, který je vlastníkem tohoto kontextu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugExpressionContext – rozhraní](../../winscript/reference/idebugexpressioncontext-interface.md)

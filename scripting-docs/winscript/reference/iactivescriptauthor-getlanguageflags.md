@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::GetLanguageFlags | Dokumentace Microsoftu
+title: 'Iactivescriptauthor –:: GetLanguageFlags | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d9f1a68db05ac0d909108ce77587ae4b071c9a2b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 68da16513050bd87642be2c96212a330a0916608
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935468"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576193"
 ---
 # <a name="iactivescriptauthorgetlanguageflags"></a>IActiveScriptAuthor::GetLanguageFlags
 Vrátí informace o jazyce.  
@@ -37,25 +37,25 @@ HRESULT GetLanguageFlags(
   
 #### <a name="parameters"></a>Parametry  
  `pgrfasa`  
- [out] Příznaky, které obsahují informace o jazyce. Může být kombinací následujícího:  
+ mimo Příznaky obsahující informace o jazyce Může být kombinací následujících hodnot:  
   
-|Konstanta|Value|Popis|  
+|Konstanta|Hodnota|Popis|  
 |--------------|-----------|-----------------|  
-|fasaPreferInternalHandler|0x0001|Jazyk upřednostňuje skript vytvoření obslužné rutiny událostí ve skriptu pro vytváření modulu namísto aplikace.|  
-|fasaSupportInternalHandler|0x0002|Jazyk podporuje vytvořen skriptem modul pro vytváření obslužných rutin událostí skriptu.|  
-|fasaCaseSensitive|0x0004|Skriptovací jazyk je velká a malá písmena.|  
+|fasaPreferInternalHandler|0x0001|Jazyk upřednostňuje vytváření obslužných rutin událostí skriptu místo aplikace pomocí modulu vytváření skriptů.|  
+|fasaSupportInternalHandler|0x0002|Jazyk podporuje obslužné rutiny událostí skriptů vytvořené modulem vytváření skriptů.|  
+|fasaCaseSensitive|0x0004|Skriptovací jazyk rozlišuje velká a malá písmena.|  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud skript pro tvorbu modul spravuje obslužné rutiny událostí, vaše aplikace měla zavolat `CreateChildHandler` ze `IScriptEntry` objektu. Tím se vytvoří `IScriptScriptlet` objekt, který odpovídá obslužné rutiny události. Modul také přidá obslužnou rutinu události k položce skriptu. Obslužná rutina události je prázdná funkce, která obsahuje informace o zadané podpisu.  
+ Pokud modul pro vytváření skriptů spravuje obslužné rutiny událostí, měla by vaše aplikace volat `CreateChildHandler` z objektu `IScriptEntry`. Tím se vytvoří objekt `IScriptScriptlet`, který odpovídá obslužné rutině události. Modul také přidá obslužnou rutinu události do položky skriptu. Obslužná rutina události je prázdná funkce, která obsahuje zadané informace o podpisu.  
   
- Pokud vaše aplikace spravuje obslužné rutiny událostí, měla by volat `CreateChildHandler` ze `IScriptNode` objekt, který reprezentuje skriptletu obslužné rutiny události. Tím se vytvoří `IScriptScriptlet` objekt, který je spojen se skriptletem obslužné rutiny události. Aplikace má také přidejte prázdnou funkci jako událost obslužné rutiny na nový nebo existující `IScriptEntry` objektu.  
+ Pokud vaše aplikace spravuje obslužné rutiny událostí, měla by volat `CreateChildHandler` z objektu `IScriptNode`, který představuje obslužnou rutinu události skriptletu. Tím se vytvoří objekt `IScriptScriptlet`, který je přidružen k obslužné rutině události skriptletu. Aplikace také musí přidat prázdnou funkci jako obslužnou rutinu události do nového nebo existujícího objektu `IScriptEntry`.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IActiveScriptAuthor – rozhraní](../../winscript/reference/iactivescriptauthor-interface.md)

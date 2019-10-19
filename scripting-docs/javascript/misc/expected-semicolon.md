@@ -1,5 +1,5 @@
 ---
-title: Byl očekáván středník (;) | Dokumentace Microsoftu
+title: Byl očekáván znak '; ' | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,23 +14,23 @@ ms.assetid: 3070cc6c-1138-4655-a7ac-723379f48f94
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9e5d0418f09d208d8919a2c431c818e236b62b29
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 27d9a36a36c3783048cdb7afb6c06da09bd21456
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62433718"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576453"
 ---
 # <a name="expected-"></a>Byl očekáván znak ';'
-Došlo k pokusu umístit více než jeden příkaz na řádku, ale není oddělte je středníkem. K ukončení příkazy se používají středníky. I když můžete umístit několik příkazů na jednom řádku, každé z nich musí být oddělené z dalšího oddělte středníkem.  
+Pokusili jste se umístit více než jeden příkaz na řádek, ale oddělili jsme je středníkem. K ukončení příkazů se používají středníky. I když můžete umístit několik příkazů na jeden řádek, každý z nich musí být oddělený středníkem.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Označuje konec každého příkazu oddělte středníkem.  
+- Označte konec každého příkazu středníkem.  
   
-- Ujistěte se, že volání funkce použijte závorky správně.  
+- Zajistěte, aby vaše funkce správně používala kulaté závorky.  
   
-- Ujistěte se, že není nezapomněli středníky v záhlaví **pro** smyčky.  
+- Ujistěte se, že jste nezapomněli středníky v hlavičce smyčky **for** .  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Psaní kódu jazyka JavaScript](../../javascript/writing-javascript-code.md)

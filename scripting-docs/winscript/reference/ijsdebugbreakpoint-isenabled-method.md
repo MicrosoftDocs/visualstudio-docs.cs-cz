@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugbreakpoint::IsEnabled – metoda | Dokumentace Microsoftu
+title: 'IJsDebugBreakPoint:: deaktived – metoda | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b99df17f73896b4dd04481315b04e1672a56285a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 25d66b7f8691a74eac77e9a90ec610fa21ec688e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62583090"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577674"
 ---
 # <a name="ijsdebugbreakpointisenabled-method"></a>IJsDebugBreakPoint::IsEnabled – metoda
 Určuje, zda je povolena zarážka.  
@@ -35,15 +35,15 @@ HRESULT IsEnabled(
   
 #### <a name="parameters"></a>Parametry  
  `pIsEnabled`  
- [out] Vrátí hodnotu PRAVDA, pokud je povolena zarážka; v opačném případě vrátí hodnotu false.  
+ mimo Vrátí hodnotu true, pokud je zarážka povolena; v opačném případě vrátí hodnotu false.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="remarks"></a>Poznámky  
- Vrátí e_unexpected, je-li voláno v odstraněné zarážce.  
+ Vrátí E_UNEXPECTED, pokud se volá na odstraněnou zarážku.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IJsDebugBreakPoint – rozhraní](../../winscript/reference/ijsdebugbreakpoint-interface.md)

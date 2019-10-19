@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 460eb832b94a1826d2d8f990b76a2afe90f992c8
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
-ms.translationtype: HT
+ms.openlocfilehash: bb6f0600d8bdfe8c736305ffd31788edb9d817a6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314099"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576296"
 ---
 # <a name="step-2-create-a-random-addition-problem"></a>Krok 2: vytvoření náhodného přidání problému
 
@@ -73,7 +73,7 @@ V druhé části tohoto kurzu uděláte nenáročný kvíz přidáním matematic
      Když zadáte tečku po objektu, IntelliSense zobrazí seznam členů objektu, jako jsou vlastnosti, metody a události.
 
     > [!NOTE]
-    > Při použití metody `Next()` s objektem `Random`, například při volání `randomizer.Next(50)`, získáte náhodné číslo, které je menší než 50 (od 0 do 49). V tomto příkladu jste volali `randomizer.Next(51)`. Použili jste 51 a ne 50, aby se dvě náhodná čísla přidala k odpovědi, která je od 0 do 100. Pokud předáte 50 metodě `Next()`, zvolí číslo od 0 do 49, takže nejvyšší možná odpověď je 98, ne 100. Po prvním dvou příkazech, které jsou spuštěny v metodě, každá z těchto dvou celočíselných proměnných, **addend1** a **addend2**, drží náhodné číslo od 0 do 50. Tento snímek obrazovky ukazuje C# vizuální kód, ale IntelliSense funguje stejným způsobem jako Visual Basic.
+    > Při použití metody `Next()` s objektem `Random`, například při volání `randomizer.Next(50)`, získáte náhodné číslo, které je menší než 50 (od 0 do 49). V tomto příkladu jste volali `randomizer.Next(51)`. Použili jste 51 a ne 50, aby se dvě náhodná čísla přidala k odpovědi, která je od 0 do 100. Pokud předáte 50 metodě `Next()`, zvolí číslo od 0 do 49, takže nejvyšší možná odpověď je 98, ne 100. Po prvním dvou příkazech, které jsou spuštěny v metodě, každá z těchto dvou celočíselných proměnných, **addend1** a **addend2**, drží náhodné číslo od 0 do 50. Tento snímek obrazovky C# ukazuje kód, ale IntelliSense funguje stejným způsobem jako Visual Basic.
 
      Prohlédněte si blíže tyto příkazy.
 

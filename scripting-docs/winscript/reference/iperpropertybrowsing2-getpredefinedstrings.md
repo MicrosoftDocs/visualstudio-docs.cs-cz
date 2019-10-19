@@ -1,5 +1,5 @@
 ---
-title: IPerPropertyBrowsing2::GetPredefinedStrings | Dokumentace Microsoftu
+title: 'Iperpropertybrowsing2 –:: GetPredefinedStrings | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5a5f71ba91c65a8d99d831c777fc47fe9233fc18
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 55ade724dd9ee5d59feb9d04c5b525ca839a9cec
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944857"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576777"
 ---
 # <a name="iperpropertybrowsing2getpredefinedstrings"></a>IPerPropertyBrowsing2::GetPredefinedStrings
-Umožňuje volajícímu naplnit pole se seznamem spočítaný počet pole ukazatelů na řetězec, které představují potenciální hodnoty této vlastnosti.  
+Umožňuje volajícímu vyplnit seznam se počítaným polem ukazatelů na řetězec, který představuje potenciální hodnoty pro tuto vlastnost.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,16 +39,16 @@ HRESULT GetPredefinedStrings(
   
 #### <a name="parameters"></a>Parametry  
  `dispid`  
- [in] Identifikátor odeslání vlastnost, pro kterou volající požaduje seznam řetězců.  
+ pro Identifikátor odeslání vlastnosti, pro kterou volající požaduje seznam řetězců  
   
  `pCaStrings`  
- [out] Ukazatel na strukturu pole přidělené volajícímu, spočítaný počet, který obsahuje počet prvků a adresa přidělena metoda pole ukazatelů na řetězec. Jestliže metoda selže, žádná paměť je přidělena a obsah struktury nejsou definovány.  
+ mimo Ukazatel na vypočtenou strukturu pole přidělenou volajícímu, která obsahuje počet prvků a adresu pole ukazatelů řetězce, které jsou přiděleny metodě. Pokud se metoda nezdařila, není přidělena žádná paměť a obsah struktury není definován.  
   
  `pCaCookies`  
- [out] Ukazatel na strukturu pole přidělené volajícímu, spočítaný počet, který obsahuje počet prvků a adresa přidělena metoda pole typu DWORD. Jestliže metoda selže, žádná paměť je přidělena a obsah struktury nejsou definovány.  
+ mimo Ukazatel na vypočtenou strukturu pole přidělenou volajícímu, která obsahuje počet prvků a adresu pole hodnot typu DWORD přidělených metodou. Pokud se metoda nezdařila, není přidělena žádná paměť a obsah struktury není definován.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Bude vracet platnou `HRESULT`, obvykle `S_OK`.  
+ Vrací platný `HRESULT`, obvykle `S_OK`.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IPerPropertyBrowsing2 – rozhraní 1](../../winscript/reference/iperpropertybrowsing2-interface-1.md)

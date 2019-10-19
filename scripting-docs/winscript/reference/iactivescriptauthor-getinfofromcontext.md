@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::GetInfoFromContext | Microsoft Docs
+title: 'Iactivescriptauthor –:: GetInfoFromContext | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e4fe885e116019608dd8d748c3cbdaff5d31dd2a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 457b2ad1bda3226caf3604e3ccd6b976f01bca83
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935383"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576216"
 ---
 # <a name="iactivescriptauthorgetinfofromcontext"></a>IActiveScriptAuthor::GetInfoFromContext
-Vrátí zadejte informace a pozice ukotvení pro daný znak do bloku kódu. To poskytuje informace pro člena, technologie IntelliSense, globální seznamy a tipy pro parametr.  
+Vrátí informace o typu a pozice ukotvení pro daný znak v bloku kódu. Poskytuje informace pro členské technologie IntelliSense, globální seznamy a popisy parametrů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,18 +46,18 @@ HRESULT GetInfoFromContext(
   
 #### <a name="parameters"></a>Parametry  
  `pszCode`  
- [in] Adresa řetězec bloku kódu sloužícího ke generování informace výsledky.  
+ pro Adresa řetězce bloku kódu použitého k vygenerování výsledků informací.  
   
  `cchCode`  
- [in] Délka bloku kódu.  
+ pro Délka bloku kódu.  
   
  `ichCurrentPosition`  
- [in] Pozice znaku vzhledem k začátku bloku.  
+ pro Pozice znaku relativní vzhledem k začátku bloku  
   
  `dwListTypesRequested`  
- [in] Typy seznamů požadavku. Může být kombinací následujícího:  
+ pro Požadované typy seznamu. Může být kombinací následujících hodnot:  
   
-|Konstanta|Value|Popis|  
+|Konstanta|Hodnota|Popis|  
 |--------------|-----------|-----------------|  
 |SCRIPT_CMPL_NOLIST|0x0000|Žádný seznam.|  
 |SCRIPT_CMPL_MEMBERLIST|0x0001|Seznam členů.|  
@@ -65,36 +65,36 @@ HRESULT GetInfoFromContext(
 |SCRIPT_CMPL_PARAMLIST|0x0004|Seznam parametrů metody volání.|  
 |SCRIPT_CMPL_GLOBALLIST|0x0008|Globální seznam.|  
   
- Typ SCRIPT_CMPL_GLOBALLIST je považován za výchozí dokončení položky, kterou můžete kombinovat pomocí operátoru OR s ostatními položkami dokončení. Skript, modul pro vytváření nejdřív pokusí k naplnění informací o typu pro jiné položky seznamu dokončení. Pokud se to nepodaří, naplní se modul pro SCRIPT_CMPL_GLOBALLIST.  
+ Typ SCRIPT_CMPL_GLOBALLIST se považuje za výchozí položku dokončení, kterou lze kombinovat pomocí operátoru OR s dalšími položkami dokončení. Modul pro vytváření skriptů se nejprve pokusí naplnit informace o typu pro ostatní položky seznamu dokončení. Pokud se to nepovede, modul naplní pro SCRIPT_CMPL_GLOBALLIST.  
   
  `pdwListTypesProvided`  
- [out] Typ seznamu.  
+ mimo Zadaný typ seznamu.  
   
  `pichListAnchorPosition`  
- [out] Počáteční index, který obsahuje aktuální pozici kontextu. Počáteční index je relativní vzhledem k začátku bloku.  
+ mimo Počáteční index kontextu, který obsahuje aktuální pozici. Počáteční index je relativní vzhledem k začátku bloku.  
   
- To je vyplněný pouze tehdy, když `dwListTypesRequested` SCRIPT_CMPL_MEMBERLIST, SCRIPT_CMPL_ENUMLIST nebo SCRIPT_CMPL_GLOBALLIST. U jiných typů požadovaný seznam výsledek nedefinován.  
+ Tato hodnota se naplní jenom v případě, že `dwListTypesRequested` zahrnuje SCRIPT_CMPL_MEMBERLIST, SCRIPT_CMPL_ENUMLIST nebo SCRIPT_CMPL_GLOBALLIST. U ostatních požadovaných typů seznamů není výsledek definován.  
   
  `pichFuncAnchorPosition`  
- [out] Počáteční index, který obsahuje aktuální pozici volání funkce. Počáteční index je relativní vzhledem k začátku bloku.  
+ mimo Počáteční index volání funkce, který obsahuje aktuální pozici. Počáteční index je relativní vzhledem k začátku bloku.  
   
- To je vyplněný pouze v případě volání funkce je kontext, který obsahuje aktuální pozici a když `dwListTypesRequested` zahrnuje SCRIPT_CMPL_PARAMLIST. V opačném případě výsledek není definován.  
+ Tato hodnota je naplněna pouze v případě, že kontext obsahující aktuální pozici je volání funkce a když `dwListTypesRequested` zahrnuje SCRIPT_CMPL_PARAMLIST. V opačném případě není výsledek definován.  
   
  `pmemid`  
- [out] MEMBERID funkci, jak je definováno podle typu ve službě `IProvideMultipleClassInfo``ppunk` výstupní parametr.  
+ mimo MEMBERID funkce, jak je definováno typem v parametru `IProvideMultipleClassInfo``ppunk` out.  
   
- To je vyplněný pouze tehdy, když `dwListTypesRequested` zahrnuje SCRIPT_CMPL_PARAMLIST.  
+ Tato hodnota se naplní jenom v případě, že `dwListTypesRequested` zahrnuje SCRIPT_CMPL_PARAMLIST.  
   
  `piCurrentParameter`  
- [out] Index parametru, který obsahuje aktuální pozici. Pokud je aktuální pozice na název funkce, je vrácena hodnota -1.  
+ mimo Index parametru, který obsahuje aktuální pozici. Pokud je aktuální pozice na názvu funkce, vrátí se – 1.  
   
- `piCurrentParameter` Hodnota se vyplní pouze tehdy, když `dwListTypesRequested` zahrnuje SCRIPT_CMPL_PARAMLIST.  
+ Hodnota `piCurrentParameter` je naplněna pouze v případě, že `dwListTypesRequested` zahrnuje SCRIPT_CMPL_PARAMLIST.  
   
  `ppunk`  
- Informace o typu, který je k dispozici ve formě `IProvideMultipleClassInfo` objektu.  
+ Informace o typu, které jsou k dispozici ve formě objektu `IProvideMultipleClassInfo`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
@@ -102,6 +102,6 @@ HRESULT GetInfoFromContext(
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
- [IProvideMultipleClassInfo Interface](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.iprovidemultipleclassinfo)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní IProvideMultipleClassInfo](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.iprovidemultipleclassinfo)  
  [IActiveScriptAuthor – rozhraní](../../winscript/reference/iactivescriptauthor-interface.md)

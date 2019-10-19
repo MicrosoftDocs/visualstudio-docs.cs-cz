@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication::ResumeFromBreakPoint | Dokumentace Microsoftu
+title: 'Iremotedebugapplication –:: ResumeFromBreakPoint | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5844381188cb03c99ab0a44ed9b9e0fdbab67e6e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7fead9c14efbe73bd006a5ff3e1cfb10ad40404b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944173"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577463"
 ---
 # <a name="iremotedebugapplicationresumefrombreakpoint"></a>IRemoteDebugApplication::ResumeFromBreakPoint
-Pokračuje v aplikaci, která je aktuálně v zarážku.  
+Pokračuje v aplikaci, která je aktuálně v zarážce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,25 +39,25 @@ HRESULT ResumeFromBreakPoint(
   
 #### <a name="parameters"></a>Parametry  
  `prptFocus`  
- [in] Pro krokování režimy, vlákna, který má být ovlivněn krokování režimu.  
+ pro V případě režimů krokování je vlákno ovlivněné režimem krokování.  
   
  `bra`  
- [in] Akce, který se má provést při obnovení aplikace.  
+ pro Akce, která se má provést při obnovení aplikace  
   
  `era`  
- [in] Akce provedená v případě, že aplikace zastavila z důvodu chyby.  
+ pro Akce, která má být provedena v případě, že aplikace byla zastavena z důvodu chyby.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda pokračuje v aplikaci, která je aktuálně v zarážku.  
+ Tato metoda pokračuje v aplikaci, která je aktuálně v zarážce.  
   
-## <a name="see-also"></a>Viz také  
- [Iremotedebugapplication – rozhraní](../../winscript/reference/iremotedebugapplication-interface.md)   
- [Breakresumeaction – výčet](../../winscript/reference/breakresumeaction-enumeration.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iremotedebugapplication –](../../winscript/reference/iremotedebugapplication-interface.md)  
+ @No__t_1 [výčtu breakresumeaction –](../../winscript/reference/breakresumeaction-enumeration.md)  
  [ERRORRESUMEACTION – výčet](../../winscript/reference/errorresumeaction-enumeration.md)

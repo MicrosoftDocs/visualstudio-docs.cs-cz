@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugbreakpoint::Disable – metoda | Dokumentace Microsoftu
+title: 'IJsDebugBreakPoint: metoda:D metody | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 24584d0e9708dab4879ceb26f0af5e142936210a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 51e4be2abc8b5a507e091b330de1779cfb14b57e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62583240"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577738"
 ---
 # <a name="ijsdebugbreakpointdisable-method"></a>IJsDebugBreakPoint::Disable – metoda
-Zakažte zarážky.  
+Zakáže zarážku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,10 +34,10 @@ HRESULT Disable(void);
 ## <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="remarks"></a>Poznámky  
- Vrátí e_unexpected, je-li voláno v odstraněné zarážce. Vrátí S_FALSE, je-li voláno v již zakázané zarážce.  
+ Vrátí E_UNEXPECTED, pokud se volá na odstraněnou zarážku. Vrátí S_FALSE, pokud je volána na již zakázané zarážce.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** jscript9diag.h  
+ **Záhlaví:** Jscript9diag. h  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IJsDebugBreakPoint – rozhraní](../../winscript/reference/ijsdebugbreakpoint-interface.md)

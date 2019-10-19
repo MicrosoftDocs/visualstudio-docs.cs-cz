@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::GetScriptletTextAttributes | Dokumentace Microsoftu
+title: 'Iactivescriptauthor –:: GetScriptletTextAttributes | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cb8f1b5aac6df8d8659fa323f3f1efcb7721d97f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4cd0090b9ade47ad37acf6d285ec7f072f1ea5af
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955054"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576173"
 ---
 # <a name="iactivescriptauthorgetscriptlettextattributes"></a>IActiveScriptAuthor::GetScriptletTextAttributes
-Vrací atributy textu skriptletu.  
+Vrátí atributy textu skriptletu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,36 +41,36 @@ HRESULT GetScriptletTextAttributes(
   
 #### <a name="parameters"></a>Parametry  
  `pszCode`  
- [v size_is (`cch`)] textu skriptletu. Tento řetězec nemá hodnotu NULL byl ukončen.  
+ [in, size_is (`cch`)] Text skriptletu Tento řetězec nemusí být ukončen znakem null.  
   
  `cch`  
- [in] Velikost použitou pro `pszCode` a `pattr` parametry.  
+ pro Velikost použitá pro parametry `pszCode` a `pattr`  
   
  `pszDelimiter`  
- [in] Adresa oddělovače end skriptletu. Když `pszCode` je analyzován z toku textu, hostitel obvykle používá oddělovač (například dvěma jednoduchými uvozovkami), k zjištění konce skriptletu. Tento parametr nastavte na hodnotu NULL, pokud žádný oddělovač slouží k označení konce skriptletu.  
+ pro Adresa oddělovače end-skriptletu. Pokud je `pszCode` analyzována z datového proudu, hostitel obvykle používá oddělovač (například dvě jednoduché uvozovky) k detekci konce skriptletu. Nastavte tento parametr na hodnotu NULL, pokud není použit žádný oddělovač k identifikaci konce skriptletu.  
   
  `dwFlags`  
- [in] Příznaky, které jsou spojeny s atributy textu skriptletu. Může být kombinací těchto hodnot.  
+ pro Příznaky, které jsou spojeny s textovými atributy skriptletu. Může se jednat o kombinaci následujících hodnot.  
   
 |Konstanta|Hodnota|Popis|  
 |--------------|-----------|-----------------|  
-|GETATTRTYPE_DEPSCAN|0x0001|Identifikujte identifikátory, které mají atribut SOURCETEXT_ATTR_IDENTIFIER a identifikovat tečkou operátory, které mají atribut SOURCETEXT_ATTR_MEMBERLOOKUP.|  
-|GETATTRFLAG_THIS|0x0100|Určete aktuální objekt, který má atribut SOURCETEXT_ATTR_THIS.|  
-|GETATTRFLAG_HUMANTEXT|0x8000|Určete obsah a komentáře text řetězce, který má atribut SOURCETEXT_ATTR_HUMANTEXT.|  
+|GETATTRTYPE_DEPSCAN|0x0001|Identifikujte identifikátory, které mají atribut SOURCETEXT_ATTR_IDENTIFIER, a Identifikujte operátory tečka, které mají atribut SOURCETEXT_ATTR_MEMBERLOOKUP.|  
+|GETATTRFLAG_THIS|0x0100|Identifikujte aktuální objekt, který má atribut SOURCETEXT_ATTR_THIS.|  
+|GETATTRFLAG_HUMANTEXT|0x8000|Identifikujte obsah řetězce a text komentáře s atributem SOURCETEXT_ATTR_HUMANTEXT.|  
   
  `pattr`  
- [v out size_is (`cch`)] informace o barvě skriptlet kódu.  
+ [in, out, size_is (`cch`)] Informace o barvách pro skriptletu kód.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
- [IActiveScriptAuthor Interface](../../winscript/reference/iactivescriptauthor-interface.md)   
- [IActiveScriptAuthor::GetScriptTextAttributes](../../winscript/reference/iactivescriptauthor-getscripttextattributes.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iactivescriptauthor –](../../winscript/reference/iactivescriptauthor-interface.md)  
+ [Iactivescriptauthor –:: GetScriptTextAttributes](../../winscript/reference/iactivescriptauthor-getscripttextattributes.md)    
  [SOURCE_TEXT_ATTR – výčet](../../winscript/reference/source-text-attr-enumeration.md)

@@ -1,5 +1,5 @@
 ---
-title: IProcessDebugManager::AddApplication | Dokumentace Microsoftu
+title: 'IProcessDebugManager –:: AddApplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 206baa92ae8d2803b2b07f4966565755a1785d61
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 47ad8132b9b51efa5f5c2f260e48441e5da64c42
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944972"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576815"
 ---
 # <a name="iprocessdebugmanageraddapplication"></a>IProcessDebugManager::AddApplication
-Přidá aplikaci do seznamu Správce ladění počítače spuštěných aplikací.  
+Přidá aplikaci do seznamu spuštěných aplikací Správce ladění počítače.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,21 +38,21 @@ HRESULT AddApplication(
   
 #### <a name="parameters"></a>Parametry  
  `pda`  
- [in] Ladění aplikací pro přidání do seznamu spuštěných aplikací.  
+ pro Ladicí aplikace, která se má přidat do seznamu spuštěných aplikací.  
   
  `pdwAppCookie`  
- [out] Soubor cookie, který slouží k odebrání počítače správce ladění aplikace.  
+ mimo Soubor cookie, který se používá k odebrání aplikace ze Správce ladění počítače.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda přidá aplikaci do běhu seznamu aplikací v počítači správce ladění.  
+ Tato metoda přidá aplikaci do seznamu běžící aplikace ve Správci ladění počítače.  
   
-## <a name="see-also"></a>Viz také  
- [IProcessDebugManager Interface](../../winscript/reference/iprocessdebugmanager-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní IProcessDebugManager –](../../winscript/reference/iprocessdebugmanager-interface.md)  
  [IProcessDebugManager::RemoveApplication](../../winscript/reference/iprocessdebugmanager-removeapplication.md)

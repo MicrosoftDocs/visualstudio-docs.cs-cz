@@ -1,5 +1,5 @@
 ---
-title: Byl očekáván ']' v regulárním výrazu (JavaScript) | Dokumentace Microsoftu
+title: V regulárním výrazu byl očekáván znak '] ' (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,23 +14,23 @@ ms.assetid: 1ca2079a-44dd-479f-a1e3-e04a14d0739e
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 66fa8ba2396185bd402e4bc31a3da6b1f8bf95ab
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 9af38a5fa754a811416f1a998b90946345f3e4a2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446499"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576483"
 ---
 # <a name="expected--in-regular-expression-javascript"></a>V regulárním výrazu byl očekáván znak ']' (JavaScript)
-Se pokusil vytvořit třídu znaků shody regulárního výrazu, ale neobsahuje pravou závorku. Jednotlivý znak literálu kombinace lze sestavit do třídy znaků tak, že je umístíte do hranatých závorek. Třída znaků odpovídá jeden libovolný znak, který ji obsahuje. Například / [abc] / odpovídá jakémukoli znaku z písmen "a", "b" nebo "c".  
+Pokusili jste se vytvořit třídu znaků pro porovnávání regulárního výrazu, ale neobsahovala pravou hranatou závorku. Jednotlivé znakové kombinace literálů lze sestavit do tříd znaků jejich umístěním do závorek. Třída znaků odpovídá jakémukoli libovolnému znaku, který obsahuje. Například/[abc]/odpovídá libovolnému z písmen "a", "b" nebo "c".  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Přidejte pravou závorku regulárnímu výrazu.  
+- Do regulárního výrazu přidejte pravou hranatou závorku.  
   
     > [!NOTE]
-    > Pokud chcete odpovídat jedné závorky, před něj zpětné lomítko - \\[– aby nebyl interpretován jako znak zvláštní podle [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)].  
+    > Pokud chcete, aby se shodovala s jednou závorkou, zastavte ji s zpětným lomítkem-\\ [-proto není interpretována jako speciální znak [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)].  
   
-## <a name="see-also"></a>Viz také  
- [Objekt regulárního výrazu](../../javascript/reference/regular-expression-object-javascript.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [objektu regulárního výrazu](../../javascript/reference/regular-expression-object-javascript.md)  
  [Syntaxe regulárního výrazu (JavaScript)](https://msdn.microsoft.com/library/1400241x)

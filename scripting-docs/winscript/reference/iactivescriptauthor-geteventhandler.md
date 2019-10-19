@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::GetEventHandler | Dokumentace Microsoftu
+title: 'Iactivescriptauthor –:: geteventhandler | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7bba60df6485ddaac0363a3416739efd7be69389
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c69b32f0040ea6d52e0712b8e1813cc5a0b40c58
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935630"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576220"
 ---
 # <a name="iactivescriptauthorgeteventhandler"></a>IActiveScriptAuthor::GetEventHandler
 Vrátí skriptletu, který má zadané atributy.  
@@ -41,29 +41,29 @@ HRESULT GetEventHandler(
   
 #### <a name="parameters"></a>Parametry  
  `pdisp`  
- [in] `IDispatch` Objekt, který odpovídá `NamedItem` skriptletu je připojen.  
+ pro Objekt `IDispatch`, který odpovídá `NamedItem`, ke kterému je připojen skriptletu.  
   
  `pszItem`  
- [in] Adresa vyrovnávací paměti nejvyšší úrovně identifikátor skriptletu plně kvalifikovaný název v hostiteli.  
+ pro Adresa vyrovnávací paměti identifikátoru nejvyšší úrovně plně kvalifikovaného názvu skriptletu na hostiteli.  
   
  `pszSubItem`  
- [in] Adresa vyrovnávací paměti druhé úrovně identifikátor skriptletu plně kvalifikovaný název v hostiteli. Pokud název obsahuje pouze jednu úroveň nastavena na hodnotu NULL.  
+ pro Adresa vyrovnávací paměti identifikátoru druhé úrovně pro plně kvalifikovaný název skriptletu v hostiteli. Nastavte na hodnotu NULL, pokud má název jenom jednu úroveň.  
   
  `pszEvent`  
- [in] Adresa vyrovnávací paměti, který obsahuje název události. Skriptletu je obslužnou rutinu události pro tuto událost.  
+ pro Adresa vyrovnávací paměti, která obsahuje název události. Skriptletu je obslužná rutina události pro tuto událost.  
   
  `ppse`  
- [out] Adresa proměnné, která přijímá ukazatel `IScriptEntry` rozhraní, který má zadané atributy skriptletu.  
+ mimo Adresa proměnné, která přijímá ukazatel na `IScriptEntry` rozhraní skriptletu, které má zadané atributy.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
- [IActiveScriptAuthor Interface](../../winscript/reference/iactivescriptauthor-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iactivescriptauthor –](../../winscript/reference/iactivescriptauthor-interface.md)  
  [IScriptEntry – rozhraní](../../winscript/reference/iscriptentry-interface.md)

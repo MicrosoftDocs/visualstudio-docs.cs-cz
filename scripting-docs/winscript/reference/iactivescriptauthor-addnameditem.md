@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::AddNamedItem | Dokumentace Microsoftu
+title: 'Iactivescriptauthor –:: AddNamedItem | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 19
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 95bc529db8129c4e9af1ed9f9dc3d91de9686223
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: f0d2f08a49fdc768e87152bf486ce48687c79e68
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63411395"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577246"
 ---
 # <a name="iactivescriptauthoraddnameditem"></a>IActiveScriptAuthor::AddNamedItem
-Přidá název položky kořenové úrovně skriptu pro vytváření oboru názvů vyhledávacího stroje. A *kořenovou položku* je objekt obsahující vlastnosti a metody a mohou obsahovat také zdroj událostí.  
+Přidá název položky na kořenové úrovni do oboru názvů modulu vytváření skriptů. *Položka kořenové úrovně* je objekt, který může obsahovat vlastnosti a metody a může také obsahovat zdroj události.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,32 +39,32 @@ HRESULT AddNamedItem(
   
 #### <a name="parameters"></a>Parametry  
  `pszName`  
- [in] Název položky, jak zobrazit ze skriptu. Název musí být jedinečný a trvalé.  
+ pro Název položky zobrazený ve skriptu Název musí být jedinečný a trvalý.  
   
  `dwFlags`  
- [in] Příznaky, které jsou spojeny s pojmenovanou položku. Může být kombinací následujícího:  
+ pro Příznaky, které jsou spojeny s pojmenovanou položkou. Může být kombinací následujících hodnot:  
   
 |Konstanta|Hodnota|Popis|  
 |--------------|-----------|-----------------|  
-|SCRIPTITEM_ISVISIBLE|0x00000002|Označuje, zda je název položky k dispozici v oboru skriptu. To umožňuje přístup k události, metody a vlastnosti položky.<br /><br /> Podle konvence vlastnosti položky zahrnout členy podřízené položky. Proto všechny podřízený objekt vlastnosti a metody (a jejich podřízených členů, rekurzivně) jsou k dispozici.|  
-|SCRIPTITEM_ISSOURCE|0x00000004|Určuje zdroj položky události, že skript může mít skript obslužných rutin událostí.|  
-|SCRIPTITEM_GLOBALMEMBERS|0x00000008|Označuje, že položka je kolekce globálních vlastností a metod, které jsou spojeny pomocí skriptu. Její členy jsou vytvořené jako globální proměnné a metody.|  
-|SCRIPTITEM_ISPERSISTENT|0x00000040|Označuje, že položky by měla uložit, pokud je uložený skript, modul pro vytváření.|  
-|SCRIPTITEM_CODEONLY|0x00000200|Označuje, že pojmenovanou položku představuje objekt pouze kód a nemá žádné členy, aby mohli vytvářet.|  
-|SCRIPTITEM_NOCODE|0x00000400|Označuje, že pojmenované položka je pouze název přidávané a nemá žádné položky k vytvoření.|  
+|SCRIPTITEM_ISVISIBLE|0x00000002|Označuje, že název položky je k dispozici v oboru názvů skriptu. To umožňuje přístup k vlastnostem, metodám a událostem položky.<br /><br /> Podle konvence vlastnosti položky zahrnují podřízené členy položky. Proto jsou všechny vlastnosti podřízeného objektu a metody (a jejich dceřiné členy rekurzivně) přístupné.|  
+|SCRIPTITEM_ISSOURCE|0x00000004|Označuje události zdroje položky, které skript může mít obslužné rutiny událostí skriptu.|  
+|SCRIPTITEM_GLOBALMEMBERS|0x00000008|Označuje, že položka je kolekcí globálních vlastností a metod, které jsou přidruženy ke skriptu. Její členové jsou vytvořeni jako globální proměnné a metody.|  
+|SCRIPTITEM_ISPERSISTENT|0x00000040|Označuje, že položka má být uložena, pokud je uložen modul pro vytváření skriptů.|  
+|SCRIPTITEM_CODEONLY|0x00000200|Označuje, že pojmenovaná položka představuje objekt pouze s kódem a nemá člena pro vytváření.|  
+|SCRIPTITEM_NOCODE|0x00000400|Označuje, že pojmenovaná položka je pouze přidaný název a nemá nic k vytváření.|  
   
  `pdisp`  
- [in] `IDispatch` z `NamedItem` objekt, který se používá ke shromažďování metody, vlastnosti nebo zdroj událostí.  
+ pro @No__t_0 objektu `NamedItem`, který se používá ke shromažďování metod, vlastností nebo zdroje událostí.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
- [IActiveScriptAuthor Interface](../../winscript/reference/iactivescriptauthor-interface.md)   
+## <a name="see-also"></a>Viz také:  
+ @No__t_1 [rozhraní iactivescriptauthor –](../../winscript/reference/iactivescriptauthor-interface.md)  
  [IActiveScriptAuthor::RemoveNamedItem](../../winscript/reference/iactivescriptauthor-removenameditem.md)

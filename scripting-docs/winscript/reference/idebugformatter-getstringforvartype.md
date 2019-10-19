@@ -1,5 +1,5 @@
 ---
-title: IDebugFormatter::GetStringForVarType | Dokumentace Microsoftu
+title: 'Idebugformatter –:: GetStringForVarType | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3d83df97ac9cb6c38d989470b71da93aceb5d50b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b9b498f5b37a9fc34b0926d9c0a5601d89dde7c7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979211"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576350"
 ---
 # <a name="idebugformattergetstringforvartype"></a>IDebugFormatter::GetStringForVarType
-Vrátí řetězec, který představuje dané hodnota VARTYPE.  
+Vrátí řetězec, který představuje danou hodnotu VARTYPE.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,23 +39,23 @@ HRESULT GetStringForVarType(
   
 #### <a name="parameters"></a>Parametry  
  `vt`  
- [in] VARTYPE k reprezentaci jako řetězec.  
+ pro VARTYPE, který se reprezentuje jako řetězec.  
   
  `ptdescArrayType`  
- [in] Pole struktur, které popisují typy.  
+ pro Pole struktury, které popisují typy.  
   
  `pbstr`  
- [out] Řetězec představující `vt`.  
+ mimo Řetězec představující `vt`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Metoda vrátí řetězec, který představuje dané hodnota VARTYPE.  
+ Metoda vrátí řetězec, který představuje danou hodnotu VARTYPE.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugFormatter – rozhraní](../../winscript/reference/idebugformatter-interface.md)

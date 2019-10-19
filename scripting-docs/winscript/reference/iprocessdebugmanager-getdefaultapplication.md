@@ -1,5 +1,5 @@
 ---
-title: IProcessDebugManager::GetDefaultApplication | Dokumentace Microsoftu
+title: 'IProcessDebugManager –:: GetDefaultApplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6fec84a60863b426f2f65c26e2375262b109d635
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b3532177c32e0d7eb0b7a67a445845cee753d316
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62953969"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576801"
 ---
 # <a name="iprocessdebugmanagergetdefaultapplication"></a>IProcessDebugManager::GetDefaultApplication
-Vrátí výchozí objekt aplikace pro aktuální proces.  
+Vrátí výchozí aplikační objekt pro aktuální proces.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,19 +37,19 @@ HRESULT GetDefaultApplication(
   
 #### <a name="parameters"></a>Parametry  
  `ppda`  
- [out] Objekt ladění aplikace pro tuto aplikaci.  
+ mimo Objekt aplikace ladění pro tuto aplikaci.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda vytvoří nový objekt ladění aplikace a přidá jej do běhu seznam aplikací, v případě potřeby.  
+ Tato metoda vytvoří nový objekt ladění aplikace a přidá ho do seznamu běžící aplikace v případě potřeby.  
   
- Moduly jazyka by měl používat aplikaci určené `GetDefaultApplication` metody, pokud jsou spuštěné na hostitele, který neposkytuje aplikace.  
+ Jazykové moduly by měly používat aplikaci určenou metodou `GetDefaultApplication`, pokud jsou spuštěny v hostiteli, který neposkytuje aplikaci.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IProcessDebugManager – rozhraní](../../winscript/reference/iprocessdebugmanager-interface.md)

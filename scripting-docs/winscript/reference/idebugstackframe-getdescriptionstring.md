@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame::GetDescriptionString | Dokumentace Microsoftu
+title: 'Idebugstackframe –:: GetDescriptionString | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f870c6dbc654f8465d201c53443228153ce4a68b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7eb29574d240a02073721046cec65bdf483b3eb0
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934614"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576750"
 ---
 # <a name="idebugstackframegetdescriptionstring"></a>IDebugStackFrame::GetDescriptionString
-Vrátí krátký nebo long textový popis rámce zásobníku.  
+Vrátí krátký nebo dlouhý textový popis rámce zásobníku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,20 +38,20 @@ HRESULT GetDescriptionString(
   
 #### <a name="parameters"></a>Parametry  
  `fLong`  
- [in] Příznak, kde `TRUE` vrátí dlouhý popis a `FALSE` vrátí krátký popis.  
+ pro Příznak, kde `TRUE` vrátí dlouhý popis a `FALSE` vrátí krátký popis.  
   
  `pbstrDescription`  
- [out] Popis rámce zásobníku.  
+ mimo Popis rámce zásobníku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrátí `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Obvykle Pokud `fLong` je `FALSE`, tato metoda poskytuje pouze název funkce související s rámce zásobníku. Když `fLong` je `TRUE`, tato metoda může taky poskytnout parametry funkce a další relevantní informace.  
+ Pokud je například `fLong` `FALSE`, tato metoda poskytuje pouze název funkce asociované s rámcem zásobníku. Pokud je `fLong` `TRUE`, může tato metoda také poskytnout parametry funkce a další relevantní informace.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [IDebugStackFrame – rozhraní](../../winscript/reference/idebugstackframe-interface.md)
