@@ -7,17 +7,17 @@ helpviewer_keywords:
 - data [Visual Studio], LINQ to Entities
 - data [Visual Studio], querying an EDM
 ms.assetid: 2cd873cf-b010-49f2-a278-bb1277aaa934
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 677e423e456c448204d39a286509fa93aa5c57b8
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: ab73d46ddedb0afc62b0825852fefbaa78875864
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925332"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72638309"
 ---
 # <a name="work-with-a-conceptual-model-wcf-data-services"></a>Práce s koncepčním modelem (WCF Data Services)
 
@@ -27,8 +27,8 @@ Můžete použít koncepční modely s aplikacemi WCF Data Services. Následují
 
 | Téma | Popis |
 | - | - |
-| [Postupy: Spouštění dotazů datové služby](/dotnet/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services) | Ukazuje, jak zadávat dotazy na datovou službu z aplikace .NET. |
-| [Postupy: Výsledky dotazu projektu](/dotnet/framework/data/wcf/how-to-project-query-results-wcf-data-services) | Ukazuje, jak omezit množství dat vrácených prostřednictvím dotazu datové služby. |
+| [Postupy: spouštění dotazů datové služby](/dotnet/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services) | Ukazuje, jak zadávat dotazy na datovou službu z aplikace .NET. |
+| [Postupy: výsledky dotazu na projekt](/dotnet/framework/data/wcf/how-to-project-query-results-wcf-data-services) | Ukazuje, jak omezit množství dat vrácených prostřednictvím dotazu datové služby. |
 
 Když použijete koncepční model, můžete definovat, jaký druh dat je platný v jazyce, který odpovídá vaší doméně. V modelu můžete definovat platná data nebo můžete přidat ověřování do operací, které provádíte v entitě nebo datové službě.
 
@@ -36,14 +36,14 @@ Následující témata ukazují, jak přidat ověřování do WCF Data Services 
 
 |Téma|Popis|
 |-----------|-----------------|
-|[Postupy: Zachytávání zpráv datových služeb](/dotnet/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services)|Ukazuje, jak přidat ověřování do operace datové služby.|
+|[Postupy: zachycení zpráv datových služeb](/dotnet/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services)|Ukazuje, jak přidat ověřování do operace datové služby.|
 
  V následujících tématech se dozvíte, jak vytvářet, aktualizovat a odstraňovat data prováděním operací s entitami.
 
 |Téma|Popis|
 |-----------|-----------------|
-|[Postupy: Přidání, úprava a odstranění entit](/dotnet/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services)|Ukazuje, jak vytvořit, aktualizovat a odstranit data entity v datové službě.|
-|[Postupy: Definování vztahů mezi entitami](/dotnet/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services)|Ukazuje, jak vytvořit nebo změnit relace v datové službě.|
+|[Postupy: Přidání, úpravy a odstranění entit](/dotnet/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services)|Ukazuje, jak vytvořit, aktualizovat a odstranit data entity v datové službě.|
+|[Postupy: definování vztahů mezi entitami](/dotnet/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services)|Ukazuje, jak vytvořit nebo změnit relace v datové službě.|
 
 ## <a name="see-also"></a>Viz také:
 
