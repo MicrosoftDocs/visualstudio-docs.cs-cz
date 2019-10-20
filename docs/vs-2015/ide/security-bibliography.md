@@ -1,5 +1,5 @@
 ---
-title: Bibliografie k zabezpečení | Dokumentace Microsoftu
+title: Bibliografická zabezpečení | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -8,27 +8,24 @@ helpviewer_keywords:
 - security [Visual Studio], additional information
 ms.assetid: 3e839007-c388-4fc4-a6d1-8127cd207750
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 454e71026eeee3cbd76c95038ba59fb709b8d88f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9de71524ec3aa0138b41bcbcc441e85f33784345
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68203516"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672901"
 ---
 # <a name="security-bibliography"></a>Bibliografie k zabezpečení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Toto jsou vybrané prostředky, které jsou k dispozici online a tisku na předmět vývoji bezpečných aplikací a konfigurace zabezpečení prostředí:  
-  
-## <a name="microsoft-web-sites"></a>Weby společnosti Microsoft  
- [Microsoft Security](https://www.microsoft.com/security)  
- Zjistěte, jak funguje, Microsoft vám pomůže ochránit vaše aplikace a systémy zabezpečené, z plochy na úrovni sítě systémy s odkazy na zdroje informací o zabezpečení pro IT specialisty, vývojáře a domácí uživatelé.  
-  
- [Zabezpečení prostředků na webu MSDN](https://www.microsoft.com/msrc?rtc=1)  
- Provede vás k orientovaných na vývojáře dokumentaci, ukázky kódu, technické články a další zdroje informací pro vývoj zabezpečených aplikací.  
-  
- [Microsoft TechNet Security](https://www.microsoft.com/securityengineering)  
- Obsahuje odkazy na nejdůležitější technické informace o zabezpečení pro profesionálům a "Power Users".
+Níže jsou vybrané prostředky dostupné online a tištěné v předmětu vývoje zabezpečených aplikací a konfigurací zabezpečených prostředí:
+
+## <a name="microsoft-web-sites"></a>Webové stránky společnosti Microsoft
+ [Zabezpečení Microsoftu](https://www.microsoft.com/security) Přečtěte si, jak Microsoft pracuje na tom, jak zajistit zabezpečení vašich aplikací a systémů, od stolních počítačů až po systémy na úrovni sítě, s odkazy na prostředky zabezpečení pro odborníky v oblasti IT, vývojáře a domácí uživatele.
+
+ [Prostředky zabezpečení na webu MSDN](https://www.microsoft.com/msrc?rtc=1) Provede vás v dokumentaci zaměřené na vývojáře, ukázky kódu, technické články a další materiály pro vývoj zabezpečených aplikací.
+
+ [Microsoft TechNet Security](https://www.microsoft.com/securityengineering) Obsahuje odkazy na nejdůležitější technické informace o zabezpečení pro odborníky v oblasti informačních technologií a "Power Users".

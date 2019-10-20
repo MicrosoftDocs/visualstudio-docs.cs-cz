@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Aktualizace existujících šablon | Dokumentace Microsoftu'
+title: 'Postupy: Aktualizace existujících šablon | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,62 +10,58 @@ helpviewer_keywords:
 - project templates, updating existing templates
 ms.assetid: d585e45b-7fe2-45fa-9cf3-7f2bc060f3c4
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 26482e844a4850efb1c50b15e51e4153baf1f9ab
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4b56cf11057957b0eb99fc065ed26af10d8adfbd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68186266"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670575"
 ---
 # <a name="how-to-update-existing-templates"></a>Postupy: Aktualizace existujících šablon
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Po vytvoření šablony a soubory zkomprimujte do souboru .zip, můžete upravit šablonu. Můžete to provést ručně změnou soubory v šabloně, nebo tak, že vyexportujete novou šablonu z projektu, který je založen na šabloně.  
-  
-## <a name="using-the-export-template-wizard-to-update-an-existing-template"></a>Pomocí Průvodce exportem šablony, a aktualizovat existující šablony  
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] poskytuje **exportovat šablonu** průvodce, který slouží k aktualizaci existující šablony.  
-  
-#### <a name="to-use-export-template-to-update-an-existing-template"></a>Chcete-li exportovat šablonu použít k aktualizaci existující šablony  
-  
-1. Na **souboru** nabídky, klikněte na tlačítko **nový** a potom klikněte na tlačítko **nový projekt**.  
-  
-2. Vyberte šablonu, kterou chcete aktualizovat, zadejte název a umístění dočasného projektu a klikněte na tlačítko **OK**.  
-  
-3. Upravit projekt v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
-  
-4. Na **souboru** nabídky, klikněte na tlačítko **exportovat šablonu**a použít **exportovat šablonu** Průvodce vytvořením nové šablony.  
-  
-5. Po aktualizovanou šablonu zkomprimována do souboru .zip, odstraňte starý soubor ZIP šablony.  
-  
-## <a name="manually-updating-an-existing-template"></a>Ruční aktualizace existujících šablon  
- Můžete aktualizovat existující šablony mimo [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tak, že upravíte soubor v komprimovaném souboru ZIP.  
-  
-#### <a name="to-manually-update-an-existing-template"></a>Chcete-li ručně aktualizovat existující šablony  
-  
-1. Vyhledejte soubor .zip, který obsahuje šablonu. Ve výchozím nastavení je tento soubor umístěn ve Documents\Visual Studio *verze*\My exportované šablony\\.  
-  
-2. Extrahujte soubor ZIP.  
-  
-3. Upravit nebo odstranit aktuální soubory šablon nebo přidejte nové soubory do šablony.  
-  
-4. Otevřít, upravit a uložit XML souboru .vstemplate pro zpracování aktualizované chování nebo nové soubory. Další informace o schématu .vstemplate naleznete v tématu [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md). Další informace o můžete parametrizovat ve zdrojových souborech najdete v tématu [parametry šablony](../ide/template-parameters.md)  
-  
-5. Vyberte soubory do šablony, klikněte pravým tlačítkem, klikněte na tlačítko **odeslat**a potom klikněte na tlačítko **komprimovaná složka (metoda ZIP)** . Do souboru .zip jsou komprimované soubory, které jste vybrali.  
-  
-6. Vložte nový soubor ZIP ve stejném adresáři jako starý soubor .zip.  
-  
-7. Odstraňte extrahované soubory šablony a starý soubor ZIP šablony.  
-  
-8. Spuštění (jako správce) instance Developer Command Prompt (v nabídce start v části **Visual Studio 2010 a Visual Studio Tools/Developer Command Prompt**).  
-  
-9. Spusťte následující příkaz: `devenv /installvstemplates`.  
-  
-## <a name="see-also"></a>Viz také  
- [Přizpůsobení šablon](../ide/customizing-project-and-item-templates.md)   
- [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)   
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [Parametry šablony](../ide/template-parameters.md)   
- [Postupy: Vytváření úvodních sad](../ide/how-to-create-starter-kits.md)
+Po vytvoření šablony a komprimaci souborů do souboru s příponou. zip budete možná chtít šablonu upravit. To můžete provést ručně změnou souborů v šabloně nebo exportováním nové šablony z projektu, který je založen na šabloně.
+
+## <a name="using-the-export-template-wizard-to-update-an-existing-template"></a>Aktualizace existující šablony pomocí Průvodce exportem šablony
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] poskytuje průvodce **exportem šablony** , který se dá použít k aktualizaci existující šablony.
+
+#### <a name="to-use-export-template-to-update-an-existing-template"></a>Použití šablony pro export k aktualizaci existující šablony
+
+1. V nabídce **soubor** klikněte na příkaz **Nový** a potom klikněte na **Nový projekt**.
+
+2. Vyberte šablonu, kterou chcete aktualizovat, zadejte název a umístění pro dočasný projekt a klikněte na tlačítko **OK**.
+
+3. Upravte projekt v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+
+4. V nabídce **soubor** klikněte na položku **Exportovat šablonu**a pomocí průvodce **exportem šablony** vytvořte novou šablonu.
+
+5. Po komprimaci aktualizované šablony do souboru. zip odstraňte starý soubor Template. zip.
+
+## <a name="manually-updating-an-existing-template"></a>Ruční aktualizace stávající šablony
+ Existující šablonu můžete aktualizovat mimo [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] úpravou souborů v komprimovaném souboru ZIP.
+
+#### <a name="to-manually-update-an-existing-template"></a>Ruční aktualizace stávající šablony
+
+1. Vyhledejte soubor. zip, který obsahuje šablonu. Ve výchozím nastavení se tento soubor nachází ve složce \My Documents\Visual Studio *verze*\My Exported templates \\.
+
+2. Extrahujte soubor. zip.
+
+3. Upravte nebo odstraňte aktuální soubory šablon nebo přidejte nové soubory do šablony.
+
+4. Otevřete, upravte a uložte soubor XML. vstemplate pro zpracování aktualizovaných chování nebo nových souborů. Další informace o schématu. vstemplate naleznete v tématu [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md). Další informace o tom, co můžete ve zdrojových souborech parametrizovat, najdete v tématu [parametry šablony](../ide/template-parameters.md) .
+
+5. Vyberte soubory v šabloně, klikněte pravým tlačítkem myši, klikněte na **Odeslat do**a pak klikněte na **komprimovanou složku (ZIP)** . Soubory, které jste vybrali, se komprimují do souboru ZIP.
+
+6. Vložte nový soubor. zip do stejného adresáře jako starý soubor. zip.
+
+7. Odstraňte extrahované soubory šablon a starý soubor Template. zip.
+
+8. Spusťte (jako správce) instanci Developer Command Prompt (v nabídce Start v části **Visual Studio 2010/Visual Studio Tools/Developer Command Prompt**).
+
+9. Spusťte následující příkaz: `devenv /installvstemplates`.
+
+## <a name="see-also"></a>Viz také
+ [Přizpůsobení šablon](../ide/customizing-project-and-item-templates.md) [Vytvoření šablon projektů a položek](../ide/creating-project-and-item-templates.md) [referenční šablona schématu šablon sady Visual Studio referenční](../extensibility/visual-studio-template-schema-reference.md) [](../ide/template-parameters.md) [informace k: Vytváření startovních sad](../ide/how-to-create-starter-kits.md)

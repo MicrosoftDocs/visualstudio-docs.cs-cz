@@ -25,15 +25,15 @@ helpviewer_keywords:
 - toolbars [Visual Studio], customizing in the IDE
 ms.assetid: b570ae2f-5302-45dc-9cc9-8d4d1ad50603
 caps.latest.revision: 31
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 91223021ce6f05b91d47e7b7019fb0c5c02243db
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 500debe6faa62079c6a93185bac409e7a3bf2813
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63416789"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667995"
 ---
 # <a name="how-to-customize-menus-and-toolbars-in-visual-studio"></a>Postupy: Přizpůsobení nabídek a panelů nástrojů v sadě Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "63416789"
 Visual Studio si můžete přizpůsobit nejen tak, že přidáte nebo odeberete panely nástrojů a nabídky na řádku nabídek, ale také tak, že přidáte nebo odeberete příkazy na jakémkoli daném panelu nástrojů nebo nabídce.
 
 > [!WARNING]
-> Po přizpůsobení panelu nástrojů nebo nabídky, ujistěte se, že jeho zaškrtávací políčko zaškrtnuto v **vlastní** dialogové okno. V opačném případě se vaše změny po ukončení a opětovném spuštění sady Visual Studio nezachovají.
+> Po přizpůsobení panelu nástrojů nebo nabídky se ujistěte, že jeho zaškrtávací políčko zůstane zaškrtnuté v dialogovém okně **přizpůsobit** . V opačném případě se vaše změny po ukončení a opětovném spuštění sady Visual Studio nezachovají.
 
  **V tomto tématu:**
 
@@ -53,78 +53,78 @@ Visual Studio si můžete přizpůsobit nejen tak, že přidáte nebo odeberete 
 
 - [Obnovení nabídky nebo panelu nástrojů](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#bkmk_reset)
 
-## <a name="bkmk_addmenu"></a> Přidání, odebrání nebo přesunutí nabídky na řádku nabídek
+## <a name="bkmk_addmenu"></a>Přidání, odebrání nebo přesunutí nabídky na řádku nabídek
 
-1. V panelu nabídky zvolte **nástroje**, **vlastní**.
+1. Na řádku nabídek klikněte na **nástroje**, **přizpůsobit**.
 
-     **Vlastní** zobrazí se dialogové okno.
+     Otevře se dialogové okno **přizpůsobit** .
 
-2. Na **příkazy** kartu, ponechte **nabídek** vybraný přepínač, ponechte **nabídek** vybrán v seznamu vedle této možnosti a pak proveďte jednu z následujících sad pomocí následujících kroků:
+2. Na kartě **příkazy** ponechte vybraný přepínač **panelu nabídek** , v seznamu vedle této možnosti vyberte **panel nabídek** a pak proveďte jednu z následujících sad kroků:
 
-    - Chcete-li přidat nabídku, zvolte **přidat novou nabídku** tlačítko, zvolte **změnit výběr** tlačítko a pak zadejte název nabídky, kterou chcete přidat.
+    - Chcete-li přidat nabídku, klikněte na tlačítko **Přidat novou nabídku** , klikněte na tlačítko **změnit výběr** a potom zadejte název nabídky, kterou chcete přidat.
 
-         ![Ukazuje, jak přidat nabídku dialogové okno Přizpůsobit](../ide/media/addmenu.png "PřidatNabídku")
+         ![Dialogové okno přizpůsobit, které ukazuje, jak přidat nabídku](../ide/media/addmenu.png "Akci")
 
-    - Chcete-li nabídku odebrat, zvolte jej v **ovládací prvky** seznamu a klikněte na tlačítko **odstranit** tlačítko.
+    - Pokud chcete nabídku odebrat, zvolte ji v seznamu **ovládací prvky** a klikněte na tlačítko **Odstranit** .
 
-    - Přejděte do nabídky v rámci řádku nabídek zvolte z nabídky **ovládací prvky** seznamu a klikněte na tlačítko **přesunout nahoru** nebo **přesunout dolů** tlačítko.
+    - Chcete-li přesunout nabídku v rámci řádku nabídek, zvolte nabídku v seznamu **ovládací prvky** a potom klikněte na tlačítko **Přesunout nahoru** nebo **Přesunout dolů** .
 
-## <a name="bkmk_addtoolbar"></a> Přidání, odebrání nebo přesunutí panelu nástrojů
+## <a name="bkmk_addtoolbar"></a>Přidání, odebrání nebo přesunutí panelu nástrojů
 
-1. V panelu nabídky zvolte **nástroje**, **vlastní**.
+1. Na řádku nabídek klikněte na **nástroje**, **přizpůsobit**.
 
-     **Vlastní** zobrazí se dialogové okno.
+     Otevře se dialogové okno **přizpůsobit** .
 
-2. Na **nástrojů** kartu, proveďte jednu z následujících sad kroků:
+2. Na kartě **panel nástrojů** proveďte jednu z následujících sad kroků:
 
-    - Chcete-li přidat panel nástrojů, zvolte **nový** tlačítko, zadejte název panelu nástrojů, které chcete přidat a potom klikněte **OK** tlačítko.
+    - Chcete-li přidat panel nástrojů, klikněte na tlačítko **Nový** , zadejte název panelu nástrojů, který chcete přidat, a poté klikněte na tlačítko **OK** .
 
-         ![Ukazuje, jak přidat panel nástrojů dialogové okno Přizpůsobit](../ide/media/addtoolbar.png "AddToolbar")
+         ![Dialogové okno přizpůsobit, které ukazuje, jak přidat panel nástrojů](../ide/media/addtoolbar.png "AddToolbar")
 
-    - Chcete-li vlastní panel nástrojů odebrat, zvolte jej v **panely nástrojů** seznamu a klikněte na tlačítko **odstranit** tlačítko.
+    - Chcete-li odebrat vlastní panel nástrojů, zvolte jej v seznamu **panely nástrojů** a pak klikněte na tlačítko **Odstranit** .
 
         > [!IMPORTANT]
         > Můžete odstranit panely nástrojů, které vytvoříte, ale ne výchozí panely nástrojů.
 
-    - Chcete-li přesunout do jiné umístění ukotvení panelu nástrojů, zvolte jej v **panely nástrojů** klikněte na položku **změnit výběr** tlačítko a pak v zobrazeném seznamu zvolte umístění.
+    - Chcete-li přesunout panel nástrojů do jiného umístění ukotvení, zvolte jej v seznamu **panely nástrojů** , klikněte na tlačítko **změnit výběr** a potom zvolte umístění v seznamu, který se zobrazí.
 
          Panel nástrojů můžete také přetáhnout pomocí jeho levého okraje na libovolné místo v hlavní oblasti ukotvení.
 
         > [!NOTE]
-        > Další informace o možnostech zlepšení použitelnosti a přístupnosti panelů nástrojů naleznete v tématu [jak: Nastavení možností usnadnění přístupu IDE](../ide/reference/how-to-set-ide-accessibility-options.md).
+        > Další informace o tom, jak zlepšit použitelnost a přístupnost panelů nástrojů, naleznete v tématu [How to: set a ACCESSIBILITY IDE Options](../ide/reference/how-to-set-ide-accessibility-options.md).
 
-## <a name="bkmk_customize"></a> Přizpůsobení nabídky nebo panelu nástrojů
+## <a name="bkmk_customize"></a>Přizpůsobení nabídky nebo panelu nástrojů
 
-1. V panelu nabídky zvolte **nástroje**, **vlastní**.
+1. Na řádku nabídek klikněte na **nástroje**, **přizpůsobit**.
 
-     **Vlastní** zobrazí se dialogové okno.
+     Otevře se dialogové okno **přizpůsobit** .
 
-2. Na **příkazy** kartu, zvolte přepínač pro typ prvku, který chcete upravit.
+2. Na kartě **příkazy** klikněte na tlačítko možností pro typ prvku, který chcete přizpůsobit.
 
 3. V seznamu pro daný typ prvku zvolte nabídku nebo panel nástrojů, který chcete upravit, a pak proveďte jednu z následujících skupin kroků:
 
-    - Chcete-li přidat příkaz, zvolte **přidat příkaz** tlačítko.
+    - Chcete-li přidat příkaz, klikněte na tlačítko **Přidat příkaz** .
 
-         V **přidat příkaz** dialogového okna zvolte položku v **kategorie** , zvolte položku v **příkazy** seznamu a klikněte na tlačítko **OK**tlačítko.
+         V dialogovém okně **Přidat příkaz** zvolte položku v seznamu **kategorie** , zvolte položku v seznamu **příkazy** a pak klikněte na tlačítko **OK** .
 
-         ![Příkaz dialogové okno Přidat v sadě Visual Studio](../ide/media/addcommand.png "AddCommand")
+         ![Dialogové okno Přidat příkaz v aplikaci Visual Studio](../ide/media/addcommand.png "Použijete AddCommand menucommandsetgui")
 
-    - Chcete-li příkaz odstranit, zvolte jej v **ovládací prvky** seznamu a klikněte na tlačítko **odstranit** tlačítko.
+    - Pokud chcete příkaz Odstranit, vyberte ho v seznamu **ovládací prvky** a pak klikněte na tlačítko **Odstranit** .
 
-    - Chcete-li změnit pořadí příkazů, zvolte příkaz v **ovládací prvky** seznamu a klikněte na tlačítko **nahoru** nebo **přesunout dolů** tlačítko.
+    - Chcete-li změnit pořadí příkazů, zvolte příkaz v seznamu **ovládací prvky** a potom klikněte na tlačítko **Přesunout nahoru** nebo **Přesunout dolů** .
 
-    - Chcete-li příkazy rozdělit do skupin, zvolte příkaz v **ovládací prvky** klikněte na položku **změnit výběr** tlačítko a pak zvolte **začít vytvářet skupinu** v zobrazené nabídce.
+    - Chcete-li rozdělit příkazy do skupin, zvolte příkaz v seznamu **ovládací prvky** , klikněte na tlačítko **změnit výběr** a potom v zobrazené nabídce zvolte možnost **zahájit skupinu** .
 
-## <a name="bkmk_reset"></a> Obnovení nabídky nebo panelu nástrojů
+## <a name="bkmk_reset"></a>Obnovení nabídky nebo panelu nástrojů
 
-1. V panelu nabídky zvolte **nástroje**, **vlastní**.
+1. Na řádku nabídek klikněte na **nástroje**, **přizpůsobit**.
 
-     **Vlastní** zobrazí se dialogové okno.
+     Otevře se dialogové okno **přizpůsobit** .
 
-2. Na **příkazy** kartu, zvolte přepínač pro typ prvku, který chcete obnovit.
+2. Na kartě **příkazy** klikněte na tlačítko možností pro typ prvku, který chcete obnovit.
 
 3. V seznamu pro daný typ prvku zvolte nabídku nebo panel nástrojů, které chcete obnovit.
 
-4. Zvolte **změnit výběr** tlačítko a pak zvolte **resetování** v zobrazené nabídce.
+4. Klikněte na tlačítko **změnit výběr** a potom v zobrazené nabídce zvolte možnost **obnovit** .
 
-     Můžete také obnovit všechny nabídky a panely nástrojů výběrem **Obnovit vše** tlačítko.
+     Kliknutím na tlačítko **Obnovit vše** můžete také obnovit všechny nabídky a panely nástrojů.

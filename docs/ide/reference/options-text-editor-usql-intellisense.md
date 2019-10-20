@@ -1,57 +1,57 @@
 ---
-title: Options, Text Editor, U-SQL, IntelliSense
+title: Možnosti, textový editor, U-SQL, IntelliSense
 ms.date: 01/17/2019
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.U-SQL.IntelliSense
 - VS.ToolsOptionsPages.Text_Editor.HQL.IntelliSense
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d915019775b1eeb1a1f091bb389e5d5aa8e21e8c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 04f7a66884238856ba6988b9f1e8c648f4ff1d16
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778196"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666646"
 ---
-# <a name="options-text-editor-u-sql-intellisense"></a>Options, Text Editor, U-SQL, IntelliSense
+# <a name="options-text-editor-u-sql-intellisense"></a>Možnosti, textový editor, U-SQL, IntelliSense
 
-Použití **IntelliSense** stránky možností změnit některá nastavení textového editoru pro U-SQL. Chcete-li získat přístup k této stránce Možnosti, zvolte **nástroje** > **možnosti**a klikněte na tlačítko **textový Editor** > **U-SQL**  >  **IntelliSense**.
+Pomocí stránky možnosti **technologie IntelliSense** můžete změnit některá nastavení textového editoru u-SQL. Chcete-li získat přístup k této stránce Možnosti, zvolte **nástroje**  > **Možnosti**a pak zvolte **textový Editor**  > **U-SQL**  > **IntelliSense**.
 
-## <a name="intellisense-settings"></a>IntelliSense Settings
+## <a name="intellisense-settings"></a>Nastavení IntelliSense
 
-Zaškrtněte políčko Povolit **rychlé informace** nebo **Intellisense**. Rychlé informace zobrazí úplnou deklaraci, když ukazatel myši najedete myší do proměnné.
+Zaškrtnutím políčka povolíte **rychlé informace** nebo **IntelliSense**. Rychlé informace zobrazí úplnou deklaraci ukazatele myši nad proměnnou.
 
 ## <a name="completion-lists"></a>Seznamy dokončení
 
-- **Zobrazit seznam dokončení po zadání znaku**
+- **Po zadání znaku zobrazit seznam dokončení**
 
-   Pokud je vybraná tato možnost, IntelliSense zobrazí seznam pro doplňování automaticky při zadávání. Pokud tuto možnost nevyberete, doplňování technologie IntelliSense je stále k dispozici z nabídky technologie IntelliSense nebo stisknutím klávesy **Ctrl** + **MEZERNÍK**.
+   Když je vybraná tato možnost, IntelliSense po zahájení psaní automaticky zobrazí seznam dokončení. Pokud tuto možnost nevyberete, doplňování technologie IntelliSense je stále k dispozici v nabídce IntelliSense nebo stiskněte **klávesovou zkratku Ctrl**  + **MEZERNÍK**.
 
 - **Umístit klíčová slova do seznamů dokončení**
 
-   Pokud je vybraná tato možnost, technologie IntelliSense obsahuje klíčová slova v seznamu dokončení.
+   Když je vybraná tato možnost, IntelliSense zahrnuje klíčová slova v seznamu pro doplňování.
 
 - **Umístit fragmenty kódu do seznamů dokončení**
 
-   Pokud je vybraná tato možnost, technologie IntelliSense obsahuje fragmenty kódu v seznamu dokončení.
+   Pokud je vybrána tato možnost, technologie IntelliSense obsahuje fragmenty kódu v seznamu pro doplňování.
 
 ## <a name="selection-in-completion-list"></a>Výběr v seznamu dokončení
 
-- **Potvrdit zadáním následujících znaků**
+- **Potvrďte zadáním následujících znaků.**
 
-   Toto pole ukazuje znaky, které způsobují návrh aktuálně zvýrazněný dokončení seznamu pro potvrzení. Můžete přidat nebo odebrat znaky z tohoto seznamu.
+   Toto pole zobrazuje znaky, které způsobují, že aktuálně zvýrazněný návrh seznamu dokončení bude potvrzen. V tomto seznamu můžete přidat nebo odebrat znaky.
 
 - **Potvrdit stisknutím mezerníku**
 
-   Pokud je vybraná tato možnost, můžete seznam návrhů zvýrazněné dokončení potvrdit stisknutím mezerníku.
+   Když je vybraná tato možnost, můžete zvýrazněný návrh seznamu dokončení potvrdit stisknutím mezerníku.
 
-- **Na konci úplně napsaného slova ENTER přidat nový řádek**
+- **Přidat nový řádek na konci plně zadaného slova při zadání**
 
-   Pokud je vybráno, je automaticky přidán nový řádek a kurzor se přesune na nový řádek po zadání všech znaků pro návrh seznamu dokončení.
+   Když se tato možnost vybere, automaticky se přidá nový řádek a při zadání všech znaků pro návrh seznamu pro dokončení se kurzor přesune na nový řádek.
 
 ## <a name="see-also"></a>Viz také:
 

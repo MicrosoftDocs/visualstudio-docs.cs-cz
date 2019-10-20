@@ -1,5 +1,5 @@
 ---
-title: Možnosti formátování editor U-SQL
+title: Možnosti formátování editoru U-SQL
 ms.date: 01/17/2019
 ms.topic: reference
 f1_keywords:
@@ -8,46 +8,46 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.U-SQL.Formatting.Indentation
 - VS.ToolsOptionsPages.Text_Editor.U-SQL.Formatting
 - VS.ToolsOptionsPages.Text_Editor.U-SQL.Formatting.General
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c402033efe31b4cbbddbe02b73aec7be08914fc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d1e57470c1afa0fad97265bdcebff4fd9a2a0a43
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778362"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666668"
 ---
-# <a name="options-text-editor-u-sql-formatting"></a>Options, Text Editor, U-SQL, Formatting
+# <a name="options-text-editor-u-sql-formatting"></a>Možnosti, textový editor, U-SQL, formátování
 
-Použití **formátování** možnosti stránky lze nastavit možnosti formátování kódu v editoru kódu. Chcete-li získat přístup k této stránce Možnosti, zvolte **nástroje** > **možnosti**. V **možnosti** dialogového okna zvolte **textový Editor** > **U-SQL** > **formátování**.
+Pomocí stránky možnosti **formátování** můžete nastavit možnosti formátování kódu v editoru kódu. Chcete-li získat přístup k této stránce Možnosti, vyberte možnost **nástroje**  > **Možnosti**. V dialogovém okně **Možnosti** vyberte možnost **textový editor**  >  formátování**U-SQL**  > .
 
-## <a name="general-page"></a>Obecná stránka
+## <a name="general-page"></a>Stránka Obecné
 
-### <a name="general-settings"></a>Obecná nastavení
+### <a name="general-settings"></a>Obecné nastavení
 
-Tato nastavení ovlivňují *při* editoru kódu se týká možnosti formátování kódu.
+Tato nastavení mají vliv na to, *kdy* Editor kódu aplikuje možnosti formátování na kód.
 
-- **Automaticky formátovat ukončený výraz při zadání středníku**
+- **Automaticky formátovat dokončený příkaz při zadání středníku**
 
-   Pokud je vybráno, formátuje příkazy při výběru klávesu středník podle možnosti formátování pro editor vybrané.
+   Když je tato možnost vybrána, formátuje příkazy při výběru středníku klíče v závislosti na možnostech formátování vybraných pro Editor.
 
 - **Automaticky formátovat při vložení**
 
-   Pokud je vybráno, formátuje text, který je vložen do editoru podle možnosti formátování pro editor vybrané.
+   Když se tato možnost vybere, zformátuje text, který se vloží do editoru, aby odpovídal možnostem formátování vybraným pro Editor.
 
-## <a name="preview-windows"></a>Ve verzi Preview systému windows
+## <a name="preview-windows"></a>Náhled oken
 
-**Odsazení**, **nové řádky**, a **mezery** podstránky každý zobrazit okno náhledu dole. V okně verze preview demonstruje účinek jednotlivých možností. Pokud chcete použít okno náhledu, vyberte možnost formátování. Okno náhledu ukazuje příklad vybrané možnosti. Když se změní nastavení výběrem zaškrtávacího políčka, okno náhledu se zaktualizuje a zobrazí vliv nové nastavení.
+**Odsazení**, **nové řádky**a **mezery** na jednotlivých stránkách zobrazují v dolní části okno náhledu. V okně náhledu se zobrazí efekt jednotlivých možností. Chcete-li použít okno náhledu, vyberte možnost formátování. V okně náhledu se zobrazí příklad vybrané možnosti. Když změníte nastavení tak, že vyberete zaškrtávací políčko, okno náhledu se aktualizuje a zobrazí efekt nového nastavení.
 
-### <a name="indentation-remarks"></a>Odsazení poznámky
+### <a name="indentation-remarks"></a>Poznámky k odsazení
 
-Možnosti odsazení **karty** stránky pro každý jazyk jenom určit, kde editoru kódu umístí kurzor po stisknutí klávesy **Enter** na konci řádku. Možnosti odsazení pod **formátování** použít, když kód je ve formátu automaticky, například:
+Možnosti odsazení na stránkách **karet** pro jednotlivé jazyky určují, kde Editor kódu umístí kurzor po stisknutí klávesy **ENTER** na konci řádku. Možnosti odsazení v části **formátování** platí, pokud je kód automaticky naformátován, například:
 
-- Při vkládání kódu do souboru při **automaticky formátovat při vložení** zaškrtnuto
-- Když ručně zadali chystáte formátovat blok
+- Když vložíte kód do souboru při výběru **automaticky formátovat při vložení**
+- Když je blok, který je naformátován, zadán ručně
 
 ## <a name="see-also"></a>Viz také:
 

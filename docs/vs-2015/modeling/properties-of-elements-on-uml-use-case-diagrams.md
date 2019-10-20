@@ -1,5 +1,5 @@
 ---
-title: Vlastnosti elementů v UML použijte diagramy případu | Dokumentace Microsoftu
+title: Vlastnosti prvků v diagramech případů použití UML | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -11,42 +11,41 @@ helpviewer_keywords:
 - use case diagrams, properties
 ms.assetid: 2728fb26-a275-4fce-8a2c-5a78af6bee04
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b52afab80bc22c03dc5ff980b937cad53869f5db
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: db3dc649d979c87960a42d38ffa211e352be175b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444416"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671418"
 ---
 # <a name="properties-of-elements-on-uml-use-case-diagrams"></a>Vlastnosti elementů v diagramech případů použití UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Každý prvek v diagramu v diagramu případu použití UML má vlastnosti. Pokud chcete zobrazit vlastnosti elementu, klikněte pravým tlačítkem na elementu v diagramu nebo v **Průzkumníku modelů UML** a potom klikněte na tlačítko **vlastnosti**. Vlastnosti se zobrazí v **vlastnosti** okna.  
-  
+V diagramu případu použití UML mají jednotlivé prvky v diagramu vlastnosti. Chcete-li zobrazit vlastnosti prvku, klikněte pravým tlačítkem myši na prvek v diagramu nebo v **Průzkumníku modelů UML** a poté klikněte na možnost **vlastnosti**. Vlastnosti se zobrazí v okně **vlastnosti** .
+
 > [!NOTE]
-> Toto téma se věnuje vlastnosti elementů v diagramech případů použití UML. Další informace o tom, jak přečíst diagramy činnosti UML, naleznete v tématu [diagramy případů použití UML: Referenční dokumentace](../modeling/uml-use-case-diagrams-reference.md). Další informace o tom, jak nakreslit diagramy činnosti UML, naleznete v tématu [diagramy případů použití UML: Pokyny pro](../modeling/uml-use-case-diagrams-guidelines.md).  
-  
-## <a name="properties-of-elements"></a>Vlastnosti elementů  
-  
-|Vlastnost|Výchozí|Prvek|Popis|  
-|--------------|-------------|-------------|-----------------|  
-|**Název**|Výchozí název|Všechny|Určuje element.|  
-|**Kvalifikovaný název**|Balíček:: Název|Všechny|Jednoznačně identifikuje elementu. Předponu úplný název balíčku, který jej obsahuje.|  
-|**Pracovní položky**|související 0|Všechny|Počet pracovních položek, které jsou spojené s tímto prvkem. Přidružení pracovních položek, naleznete v tématu [propojení prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).|  
-|**Popis**|(žádné)|Všechny|Můžete nastavit obecné poznámky o prvku tady.|  
-|**Barva**|(výchozí)|Všechny|Barva obrazce. Na rozdíl od dalších vlastností, to není vlastnost elementu, který tvar zobrazí.|  
-|**Cesta k bitové kopii**|(žádné)|objekt actor|Cesta k souboru obrázku, který se má použít místo výchozí ikona objektu actor. Ikona by měl být soubor prostředků v rámci projektu sady Visual Studio.|  
-|**Témata**|(žádné)|Případ použití|Podsystém nebo jiný typ, který vlastní případu použití.<br /><br /> Můžete ho nastavit tak, že v podsystému v diagramu případu použití.|  
-|**Viditelnost**|Public|Používat subsystém případu, objekt Actor|**Veřejné** – viditelné globálně.<br /><br /> **Balíček** – viditelné v rámci balíčku.|  
-|**IsAbstract**|False|Používat subsystém případu, objekt Actor|Při hodnotě true se typ nedá vytvořit instance a slouží jako základ pro specializaci pomocí jiné definice.|  
-|**Instance je vytvořena nepřímo**|Pravda|Subsystém|Subsystém existuje pouze jako artefakt návrhu. V době běhu existují jen jeho části.|  
-|**Hypertextový odkaz**|(žádné)|Artefakt|Adresa URL nebo cesta diagramu nebo dokument, ke kterému artefaktu s odkazem.|  
-  
- Seznam vlastností asociace, naleznete v tématu [vlastnosti přidružení v UML diagramech tříd](../modeling/properties-of-associations-on-uml-class-diagrams.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Diagramy případů použití UML: Referenční dokumentace](../modeling/uml-use-case-diagrams-reference.md)   
- [Diagramy případů použití UML: Pokyny](../modeling/uml-use-case-diagrams-guidelines.md)
+> Toto téma se týká vlastností prvků v diagramech případů použití UML. Další informace o tom, jak číst diagramy činnosti UML, najdete v tématu [Diagramy případů použití UML: referenční informace](../modeling/uml-use-case-diagrams-reference.md). Další informace o tom, jak kreslit diagramy činnosti UML, najdete v tématu [Diagramy případů použití UML: pokyny](../modeling/uml-use-case-diagrams-guidelines.md).
+
+## <a name="properties-of-elements"></a>Vlastnosti prvků
+
+|Vlastnost|Výchozí|Prvek|Popis|
+|--------------|-------------|-------------|-----------------|
+|**Jméno**|Výchozí název|Všechny|Identifikuje element.|
+|**Kvalifikovaný název**|Balíček:: Name|Všechny|Identifikuje element jedinečně. Předpona s úplným názvem balíčku, který jej obsahuje.|
+|**Pracovní položky**|0 přidruženo|Všechny|Počet pracovních položek spojených s tímto prvkem. Chcete-li přidružit pracovní položky, přečtěte si téma [propojení prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).|
+|**Popis**|nTato|Všechny|Zde můžete vytvořit Obecné poznámky k elementu.|
+|**Barevných**|výchozí|Všechny|Barva obrazce Na rozdíl od jiných vlastností není to vlastnost elementu, který obrazec zobrazuje.|
+|**Cesta k obrázku**|nTato|Tříd|Cesta k souboru obrázku, který má být použit místo výchozí ikony objektu actor Ikona by měla být soubor prostředků v projektu sady Visual Studio.|
+|**Studijní**|nTato|Případ použití|Podsystém nebo jiný typ, který vlastní případ použití.<br /><br /> Můžete ji nastavit umístěním případu použití na podsystém v diagramu.|
+|**Viditelnost**|Public|Případ použití, objekt actor, podsystém|Celosvětově viditelné.<br /><br /> **Balíček** – viditelné v rámci balíčku.|
+|**-Abstract**|False|Případ použití, objekt actor, podsystém|Je-li nastavena hodnota true, nelze vytvořit instanci typu a je určena jako základ pro specializaci jinými definicemi.|
+|**Je nepřímo vytvořena instance**|Podmínka|provozuschopn|Podsystém existuje pouze jako artefakt návrhu. V době běhu pouze jeho části.|
+|**Cíl**|nTato|Artefaktu|Adresa URL nebo cesta k souboru diagramu nebo dokumentu, ke kterému artefakt poskytuje odkaz|
+
+ Seznam vlastností přidružení naleznete v tématu [Vlastnosti přidružení v diagramech tříd UML](../modeling/properties-of-associations-on-uml-class-diagrams.md).
+
+## <a name="see-also"></a>Viz také
+ [Diagramy případů použití UML: referenční](../modeling/uml-use-case-diagrams-reference.md) [Diagramy případů použití UML: pokyny](../modeling/uml-use-case-diagrams-guidelines.md)

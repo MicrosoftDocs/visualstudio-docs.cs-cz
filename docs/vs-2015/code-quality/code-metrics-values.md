@@ -1,5 +1,5 @@
 ---
-title: Hodnoty metrik kódu | Dokumentace Microsoftu
+title: Hodnoty metrik kódu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -10,46 +10,46 @@ helpviewer_keywords:
 - measure code quality
 ms.assetid: bc38831e-2083-4ea4-8527-ee41499a342f
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f103a1239996e1f68fb6dae7a9f0a41f55ad858e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 23dba7b7c29c05b55af2c461f36bdaa4b46b948f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437091"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667726"
 ---
 # <a name="code-metrics-values"></a>Hodnoty metrik kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Metriky kódu je sada softwarových opatření, která vývojářům poskytují lepší přehled o kódu, který že vyvíjí. S využitím metrik kódu, vývojáři můžete pochopit, jaké typy nebo metody by měly být přepracována nebo více důkladně otestovali. Vývojové týmy můžete identifikovat potenciální rizika, porozumět aktuálnímu stavu projektu a sledování průběhu během vývoje softwaru.  
-  
-## <a name="software-measurements"></a>Měření softwaru  
- Následující seznam ukazuje výsledky metrik kódu, který [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vypočítá:  
-  
-- **Index udržovatelnosti** – vypočítá hodnotu indexu 0 až 100, který představuje relativní snadností údržbu kódu. Vysoká hodnota znamená vyšší udržovatelnosti. Barevně odlišeny hodnocení je možné rychle identifikovat míst v kódu. Zelená hodnocení je 20 až 100 a označuje, že kód je dobrou udržovatelnost. Žlutý hodnocení je od 10 do 19 a označuje, že je mírně udržovatelný kód. Červené hodnocení je hodnocení 0 až 9 a označuje nízkou udržovatelnost.  
-  
-- **Cyklomatická složitost** – měří strukturální složitost kódu. Vytvoří se to vynásobením počtu odlišný kód cest v toku programu. Program, který se má komplexní řízení toku bude vyžadovat další testů k dosažení dobré kód pokrytí a bude méně udržovatelný.  
-  
+Metriky kódu jsou sada softwarových opatření, která vývojářům poskytují lepší přehled o kódu, který vyvíjí. Díky využití metrik kódu můžou vývojáři pochopit, které typy a metody by se měly přepracovat nebo podrobně testovat. Vývojové týmy můžou identifikovat potenciální rizika, pochopit aktuální stav projektu a sledovat průběh během vývoje softwaru.
+
+## <a name="software-measurements"></a>Měření softwaru
+ V následujícím seznamu jsou uvedeny výsledky metrik kódu, které [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vypočítá:
+
+- **Index udržovatelnosti** – vypočítá hodnotu indexu mezi 0 a 100, která představuje relativní snadné udržování kódu. Vysoká hodnota znamená lepší udržovatelnost. Barevná hodnocení lze použít k rychlé identifikaci problémů v kódu. Zelené hodnocení je mezi 20 a 100 a indikuje, že kód má dobrou udržovatelnost. Žluté hodnocení je mezi 10 a 19 a označuje, že je kód moderovanější. Červené hodnocení je hodnocení mezi 0 a 9 a označuje nízkou udržovatelnost.
+
+- **Cyklomatická složitá** – měří strukturální složitost kódu. Vytvoří se tak, že se vypočítává počet různých cest kódu v toku programu. Program, který má složitý tok řízení, bude vyžadovat více testů pro dosažení dobrého pokrytí kódu a bude méně udržovatelný.
+
     > [!NOTE]
-    > V některých případech se výpočet cyklomatická složitost metody v [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] se liší od předchozích verzí. Další informace najdete v tématu "Změny v aplikaci Visual Studio 2010 složité výpočty části kódu" z [potíží metriky kódu](../code-quality/troubleshooting-code-metrics-issues.md).  
-  
-- **Hloubka dědičnosti** – označuje počet definice tříd, které rozšiřují do kořene hierarchie tříd. Čím hlouběji v hierarchii více obtížné pochopit, kde jsou definovány konkrétní metody a pole může být nebo / a Předefinovaná.  
-  
-- **Třída párování** – měří párování na jedinečné třídy prostřednictvím parametrů, místní proměnné, návratové typy, volání metod, vytváření instancí obecného nebo šablony, základní třídy, implementací rozhraní, polí definovaných pro externí typy, a atribut dekorace. Software dobrý návrh přikazuje, typy a metody by měly mít vysokou soudržnost a nízkou párování. Vysoká párování označuje návrh, který je obtížné opakovaně používat a spravovat z důvodu jeho mnoho vzájemných závislostí na jiné typy.  
-  
-- **Řádky kódu** – určuje přibližný počet řádků v kódu. Počet je založena na kód IL a není proto přesný počet řádků v souboru se zdrojovým kódem. Velmi vysoký počet může znamenat, že typ nebo metoda se pokouší příliš mnoho práce a by měl být rozdělení. Může také znamenat, že tento typ nebo metoda může být obtížné spravovat.  
-  
-## <a name="anonymous-methods"></a>Anonymní metody  
- *Anonymní metoda* je právě metodu, která nemá žádný název. Anonymní metody se nejčastěji používají k předání bloku kódu jako parametr delegátu. Výsledky metrik pro anonymní metody, která je deklarována v členu, například metoda nebo přístupový objekt, jsou spojeny s člena, který deklaruje metodu. Nejsou přidružené člena, který volá metodu.  
-  
- Další informace o způsobu metriky kódu s anonymními metodami najdete v tématu [anonymní metody a analýza kódu](../code-quality/anonymous-methods-and-code-analysis.md).  
-  
-## <a name="generated-code"></a>Generovaný kód  
- Některé softwarové nástroje, kompilátory generují kód, který se přidá do projektu a že pro vývojáře projekt nezobrazí nebo by neměly měnit. Metriky kódu, většinou ignoruje generovaného kódu při výpočtu hodnoty metrik. To umožňuje hodnoty metrik tak, aby odrážely co může vývojář zobrazit a měnit.  
-  
- Kód generovaný pro model Windows forms není ignorována, protože je kód, který se může zobrazit a měnit vývojáře.  
-  
-## <a name="see-also"></a>Viz také  
+    > V některých případech se výpočet složitosti cyklomatická pro metodu v [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] liší od předchozích verzí. Další informace najdete v části "změny v části výpočty složitosti kódu sady Visual Studio 2010" [řešení potíží s metrikami kódu](../code-quality/troubleshooting-code-metrics-issues.md).
+
+- **Hloubka dědičnosti** – určuje počet definicí třídy, které se rozšířily do kořenového adresáře hierarchie tříd. Hlubší hierarchie je obtížnější pochopit, kde jsou konkrétní metody a pole definovány nebo/a předefinovány.
+
+- **Párování tříd** – měří přihlašování k jedinečným třídám prostřednictvím parametrů, místních proměnných, návratových typů, volání metod, obecných nebo šablonových instancí, základních tříd, implementací rozhraní, polí definovaných pro externí typy a atributů. dekorace. Dobrý návrh softwaru určuje, že typy a metody by měly mít vysokou soudržnost a malý spoj. Vysoké propojení indikuje návrh, který je obtížné znovu použít a udržovat z důvodu jeho mnoha vzájemných závislostí na jiných typech.
+
+- **Řádky kódu** – určuje přibližný počet řádků v kódu. Počet je založen na kódu IL a není tak přesný počet řádků v souboru zdrojového kódu. Velmi vysoký počet může ukazovat, že typ nebo metoda se snaží provést příliš mnoho práce a měla by být rozdělena. Může také indikovat, že typ nebo metoda může být obtížné udržovat.
+
+## <a name="anonymous-methods"></a>Anonymní metody
+ *Anonymní metoda* je pouze metoda, která nemá žádný název. Anonymní metody se nejčastěji používají k předání bloku kódu jako parametru delegáta. Výsledky metrik pro anonymní metodu, která je deklarována v členu, jako je například metoda nebo přistupující objekt, jsou přidruženy ke členu, který deklaruje metodu. Nejsou přidruženy ke členu, který volá metodu.
+
+ Další informace o tom, jak metriky kódu považují anonymní metody, naleznete v tématu [anonymní metody a analýza kódu](../code-quality/anonymous-methods-and-code-analysis.md).
+
+## <a name="generated-code"></a>Generovaný kód
+ Některé softwarové nástroje a kompilátory generují kód, který je přidán do projektu a který vývojář projektu buď nevidí, nebo by neměl být změněn. Ve většině případů metriky kódu ignorují generovaný kód při výpočtu hodnot metrik. To umožňuje hodnotám metriky odrážet, co může vývojář zobrazit a změnit.
+
+ Kód vygenerovaný pro Windows Forms není ignorován, protože se jedná o kód, který může vývojář zobrazit a změnit.
+
+## <a name="see-also"></a>Viz také
  [Měření složitosti a udržovatelnosti spravovaného kódu](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)

@@ -1,5 +1,5 @@
 ---
-title: Index tipy pro hledání | Dokumentace Microsoftu
+title: Tipy pro hledání v rejstříku | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,55 +11,54 @@ helpviewer_keywords:
 - Help Viewer 2.0, index search tips
 ms.assetid: f9ffa8e9-3ece-419d-a465-f9c2c21fd4ba
 caps.latest.revision: 8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1072d38adac020a1b9976d17f98ddf8882d7cb22
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f7994f1c0c7281fc9902e15a3fd60293905abc4f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68178818"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670457"
 ---
 # <a name="index-search-tips"></a>Tipy pro vyhledávání v rejstříku
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Máte přístup k informacím v indexu zadáním klíčových slov. Toto téma navrhuje vhodné způsoby, jak pomocí indexu v nápovědě.  
-  
-## <a name="index-search-tips"></a>Tipy pro vyhledávání v rejstříku  
- Pomocí indexu je procesu přímočaré. ale vědět, jak se nejlépe zadejte klíčová slova můžete produktivnější indexu vyhledávání.  
-  
-### <a name="general-guidelines"></a>Obecné pokyny  
-  
-- Projděte si index položky. Ne všechna témata jsou indexovány stejným způsobem, a ten, který nejvíce může pomoci při může být vyšší nebo nižší v seznamu, než jste očekávali.  
-  
-- Vynechte články, jako je například "e" nebo "the", protože je index ignoruje.  
-  
-- Reverse slova, která zadáte Pokud nenajdete položky, které jste očekávali.  
-  
-     Pokud žádné odpovídající položky "ladění kódu vnořeného sestavení" nezobrazovala, zkuste například zadat, "sestavení kódu, ladění vloženého".  
-  
-- Použití filtrů s **Index** kartu ke snížení počtu výsledků.  
-  
-### <a name="syntax-tips"></a>Syntaxe tipy  
- Pokud nenajdete položku slovo nebo frázi, které jste zadali, zkuste následující:  
-  
-- Zadejte první několik písmen, nebo kořenový slova. Zadáním dílčí řetězec můžete získat na témata, která byla indexované klíčová slova, která jsou množného nebo jednotného čísla.  
-  
-     Zadejte například "vlastnosti" spusťte hledání nad vlastnosti a vlastnosti.  
-  
-- Zadejte gerund (-ing) formy akce pro úlohu chcete provést. Chcete-li najít konkrétnější index položky, přidejte slovo, které popisuje přesně to, co chcete.  
-  
-     Zadejte například "spuštěno", chcete-li získat další položky nebo "spuštěné programy" získat méně.  
-  
-- Zadejte přídavných samostatné jmen. Chcete-li zúžit výsledky, přidejte slovo, které popisuje přesně to, co chcete.  
-  
-     Zadejte například "Modelu COM +" získat širokou škálu položky nebo "komponenty modelu COM +" získat méně.  
-  
-- Zadejte synonymum aplikace word nebo příkaz, který hledáte.  
-  
-     Například pokud jste zadali gerund "building" "vytváření" místo toho vyzkoušet.  
-  
-## <a name="see-also"></a>Viz také  
- [Tipy pro fulltextové vyhledávání](../ide/full-text-search-tips.md)   
- [Vyhledávání informací](../ide/locate-information.md)
+Informace v indexu můžete vyhledat zadáním klíčových slov. V tomto tématu se dozvíte o užitečných způsobech hledání nápovědy pomocí indexu.
+
+## <a name="index-search-tips"></a>Tipy pro vyhledávání v rejstříku
+ Použití indexu je přímým procesem, který je přímo předáván; Nicméně pochopíte, jak nejlépe zadat klíčová slova můžou zvýšit produktivitu hledání v indexu.
+
+### <a name="general-guidelines"></a>Obecné pokyny
+
+- Procházejte položkami indexu. Ne všechna témata jsou indexována stejným způsobem a ta, která by mohla nejvíc pomáhat, může být v seznamu vyšší nebo nižší, než jste očekávali.
+
+- Vynechejte články, jako je "a" nebo "a", protože je index ignoruje.
+
+- Pokud nenajdete položky, které jste očekávali, Přeměňte slova, která zadáte.
+
+     Například pokud "ladění vloženého kódu sestavení" nezobrazuje žádné relevantní položky, zkuste zadat, "kód sestavení, vložené ladění".
+
+- Pro snížení počtu výsledků použijte filtry s kartou **index** .
+
+### <a name="syntax-tips"></a>Tipy k syntaxi
+ Pokud nenajdete položku pro zadané slovo nebo frázi, vyzkoušejte následující:
+
+- Zadejte několik prvních písmen (neboli kořen) slova. Když zadáte částečný řetězec, můžete získat témata, která byla indexována pomocí klíčových slov, která jsou v jednotném nebo množném čísle.
+
+     Například zadáním "VELKÁ2" zahájíte vyhledávání nad vlastnostmi a vlastností.
+
+- Zadejte gerund (-li) formuláře pro úlohu, kterou chcete dokončit. Pokud chcete najít konkrétnější položky indexu, přidejte Word, který přesně popisuje, co chcete.
+
+     Zadejte například "spuštěno", chcete-li získat více položek nebo "spuštěné programy" a získat tak méně.
+
+- Zadejte samostatné přídavné jméno. Pokud chcete výsledky zúžit, přidejte Word, který přesně popisuje, co chcete.
+
+     Zadejte například "COM+" pro získání široké škály položek nebo "komponent modelu COM+", abyste získali méně.
+
+- Zadejte synonymum hledaného slova nebo příkazu, který hledáte.
+
+     Pokud jste například zadali gerund "budova", zkuste místo toho vytvořit.
+
+## <a name="see-also"></a>Viz také
+ [Tipy pro fulltextové vyhledávání](../ide/full-text-search-tips.md) [najít informace](../ide/locate-information.md)

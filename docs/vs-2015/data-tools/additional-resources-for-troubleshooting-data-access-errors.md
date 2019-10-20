@@ -1,5 +1,5 @@
 ---
-title: Další zdroje informací pro řešení potíží s dat přístup chyby | Dokumentace Microsoftu
+title: Další zdroje informací pro řešení potíží s chybami přístupu k datům | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -227,44 +227,37 @@ helpviewer_keywords:
 - datasets [Visual Basic], troubleshooting
 ms.assetid: 357c9f0a-9d59-4db4-9b7c-b96cad839961
 caps.latest.revision: 33
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
-ms.openlocfilehash: 851a1f87cce5f4030a9ba5a4701b6c0055859f10
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b304b31447c0a43e37a333516a3a79c71070bd4e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68143088"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72673022"
 ---
 # <a name="additional-resources-for-troubleshooting-data-access-errors"></a>Další prostředky pro odstraňování chyb přístupu k datům
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pomoc při řešení problémů s chybami a upozorněními můžete najít na veřejných fórech Microsoft Developer Network (MSDN). V následující tabulce jsou uvedeny údaje týkající se diskusních fór dostupných na webové stránce MSDN.  
-  
- [Windows Forms – datová ovládací prvky a datové vazby](http://go.microsoft.com/fwlink/?LinkId=160179)  
- Poskytuje fórum pro otázky týkající se obecné diskuse o přístupu k datům v modelu Windows Forms.  
-  
- [Fórum pro datové sady ADO.NET](http://go.microsoft.com/fwlink/?LinkId=160180)  
- Poskytuje fórum pro otázky týkající se obecné diskuse o datových sadách.  
-  
- [ADO.NET Entity Framework a LINQ to Entities](http://go.microsoft.com/fwlink/?LinkId=191520)  
- Poskytuje fórum pro otázky týkající se obecné diskuse o aplikacích Entity Framework a jazyce LINQ to Entities.  
-  
- [Fórum služby WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=160181)  
- Poskytuje fórum pro otázky týkající se obecné diskuse o datových službách.  
-  
- [Fórum pro SQL Server Data Access](http://go.microsoft.com/fwlink/?LinkID=160184)  
- Poskytuje fórum pro otázky týkající se obecné diskuse o přístupu k datům v systému Microsoft SQL Server.  
-  
- [Technologie LINQ to SQL fórum](http://go.microsoft.com/fwlink/?LinkId=160183)  
- Poskytuje fórum pro otázky týkající se obecné diskuse o technologii Linq to SQL.  
-  
- [Fórum zprostředkovatelé dat ADO.NET](http://go.microsoft.com/fwlink/?LinkId=160182)  
- Poskytuje fórum pro otázky týkající se obecné diskuse o různých poskytovatelích dat rozhraní .NET Framework.  
-  
- Informace o řešení potíží s připojením k SQL serveru najdete v tématu [postupy řešení potíží s připojením k databázovému stroji SQL serveru](http://go.microsoft.com/fwlink/?LinkID=246151).  
-  
-## <a name="see-also"></a>Viz také  
+Pomoc s chybami a upozorněními při řešení potíží najdete ve veřejných fórech MSDN (Microsoft Developer Network). V následující tabulce jsou uvedeny údaje týkající se diskusních fór dostupných na webové stránce MSDN.
+
+ [Model Windows Forms datové ovládací prvky a datová vazba](http://go.microsoft.com/fwlink/?LinkId=160179) Poskytuje fórum pro otázky týkající se obecné diskuse o přístupu k datům v model Windows Forms.
+
+ [Fórum ADO.NET DataSet](http://go.microsoft.com/fwlink/?LinkId=160180) Poskytuje fórum pro otázky týkající se obecné diskuse o datových sadách.
+
+ [ADO.NET Entity Framework a LINQ to Entities](http://go.microsoft.com/fwlink/?LinkId=191520) Poskytuje fórum pro otázky týkající se obecné diskuse o Entity Frameworkch aplikacích a LINQ to Entitiesm jazyce.
+
+ [Fórum WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=160181) Poskytuje fórum pro otázky týkající se obecné diskuse o datových službách.
+
+ [Fórum pro přístup k datům SQL Server](http://go.microsoft.com/fwlink/?LinkID=160184) Poskytuje fórum pro otázky týkající se obecné diskuse o přístupu k datům v Microsoft SQL Server.
+
+ [Fórum LINQ to SQL](http://go.microsoft.com/fwlink/?LinkId=160183) Poskytuje fórum pro otázky týkající se Obecné diskuze technologie LINQ to SQL.
+
+ [Fórum poskytovatelé dat ADO.NET](http://go.microsoft.com/fwlink/?LinkId=160182) Poskytuje fórum pro otázky týkající se obecné diskuse o různých .NET Frameworkch poskytovatelích dat.
+
+ Informace o tom, jak řešit potíže s připojením k SQL Server, najdete v tématu [jak řešit potíže s připojením k databázovému stroji SQL Server](http://go.microsoft.com/fwlink/?LinkID=246151).
+
+## <a name="see-also"></a>Viz také
  [Visual Studio Data Tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)

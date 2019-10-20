@@ -1,5 +1,5 @@
 ---
-title: Knihovna obrázků | Dokumentace Microsoftu
+title: Knihovna obrázků | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-designers
@@ -14,24 +14,24 @@ helpviewer_keywords:
 - bitmaps [Visual Studio], Image Library
 ms.assetid: f7a2e7c8-3b9f-4f8e-a6a8-000d72e3811d
 caps.latest.revision: 31
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 915d5a2784ed6135d4083f0ad44c7a86b8969e55
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: c86506395ee388c7481fa8a5e9ee32320a63c030
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65680949"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664095"
 ---
 # <a name="the-visual-studio-image-library"></a>Knihovna obrázků sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Knihovna obrázků Visual Studio obsahuje obrázky aplikace, které se zobrazí v aplikaci Microsoft Visual Studio, Microsoft Windows, systému Office a další software od Microsoftu. Tato sada více než 1 000 obrázků je možné vytvářet aplikace, které vypadají vizuálně konzistentně se softwarem společnosti Microsoft.
+Knihovna obrázků sady Visual Studio obsahuje bitové kopie aplikace, které se zobrazují v Microsoft Visual Studio, Microsoft Windows, systému Office a dalším softwaru společnosti Microsoft. Tato sada více než 1 000 imagí se dá použít k vytváření aplikací, které vypadají vizuálně konzistentně se softwarem Microsoftu.
 
- [Stáhnout knihovna obrázků sady Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=275090)
+ [Stáhnout knihovnu imagí sady Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=275090)
 
- Knihovna obrázků je rozdělena do pěti kategorií: Společné prvky, akce, poznámky, ikony a objekty. Soubory Readme jsou u společných elementů a typů ikon zahrnuté ve formátu PDF. Obsahují informace o tom, jak pomocí těchto bitových kopií odpovídajícím způsobem ve svých aplikacích.
+ Knihovna obrázků je rozdělena na pět kategorií: běžné prvky, akce, poznámky, ikony a objekty. Soubory Readme jsou součástí formátu PDF pro běžné prvky a typy ikon. Obsahují informace o tom, jak tyto obrázky ve svých aplikacích vhodně použít.
 
 ## <a name="see-also"></a>Viz také
  [Obrázky, rastrové obrázky a metasoubory](https://msdn.microsoft.com/library/7152b45b-a55c-49bc-8c78-ae002a844f71)

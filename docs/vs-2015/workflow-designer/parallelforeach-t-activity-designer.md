@@ -1,5 +1,5 @@
 ---
-title: ParallelForEach&lt;T&gt; Návrhář aktivity | Dokumentace Microsoftu
+title: Návrhář aktivit &gt; ParallelForEach &lt;T | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -8,47 +8,45 @@ f1_keywords:
 - System.Activities.Statements.ParallelForEach`1.UI
 ms.assetid: e93a4843-aef2-4d3e-9a0a-a2d3d1411aa7
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 825906f3de1b2d40d96dc19ed45d2a368d889994
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4c659e941a8503a0d5ff601fea23fcec69b2bbcf
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63002303"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672603"
 ---
-# <a name="parallelforeachlttgt-activity-designer"></a>ParallelForEach&lt;T&gt; návrháře aktivit
-<xref:System.Activities.Statements.ParallelForEach%601> Aktivita vytváří výčet prvků kolekce a provede vloženým příkazem pro každý prvek kolekce paralelně, který je asynchronně ve stejném vlákně. Tuto aktivitu toku řízení místo použijte <xref:System.Activities.Statements.Sequence> aktivitu, pokud se očekává, že podřízené aktivity této aktivity přejít nečinnosti.  
-  
- <xref:System.Activities.Statements.ParallelForEach%601> Má aktivita <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> vlastnost, která obsahuje uživatelem zadaný [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] výrazu. <xref:System.Activities.Statements.ParallelForEach%601> Aktivita vyhodnotí tuto vlastnost po dokončení každé větve. Pokud je vyhodnocen jako **true**, pak bude <xref:System.Activities.Statements.ParallelForEach%601> dokončení aktivity bez provedení další větve. Pokud <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> nevyhodnocuje na **true**, pak bude <xref:System.Activities.Statements.ParallelForEach%601> aktivity se dokončí po dokončení všech jeho podřízených aktivit.  
-  
-## <a name="the-parallelforeacht-activity"></a>ParallelForEach\<T > aktivity  
- <xref:System.Activities.Statements.ParallelForEach%601> Vytvoří výčet jeho hodnoty a plány <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> pro každou hodnotu výčtu na. Pouze plány <xref:System.Activities.Statements.ParallelForEach%601.Body%2A>. Jak se provádí tělo závisí na tom, zda <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> přejde nečinnosti.  
-  
- Pokud <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> nepřekračuje nečinný, se provede v obráceném pořadí protože naplánované aktivity jsou zpracovány jako zásobník, nejprve spustí poslední naplánované aktivity. Například, pokud máte kolekci {1,2,3,4}v <xref:System.Activities.Statements.ParallelForEach%601> a použít **WriteLine** jako text pro zápis hodnoty navýšení kapacity. Máte 4, 3, 2, 1 tisknout v konzole. Důvodem je, že **WriteLine** nepřekračuje nečinnosti, po 4 **WriteLine** získali naplánované aktivity, jsou provedeny pomocí chování zásobníku (první dovnitř poslední ven).  
-  
- Ale pokud máte činnosti <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> , který můžete přejít nečinný, jako je <xref:System.ServiceModel.Activities.Receive> aktivity nebo <xref:System.Activities.Statements.Delay> aktivity. Není proč čekat na jejich dokončení. <xref:System.Activities.Statements.ParallelForEach%601> Přejde na další naplánované aktivitu tělo a zkuste ji spustit. Pokud se nepovede, která aktivitu nečinnosti, <xref:System.Activities.Statements.ParallelForEach%601> přesune na znovu na další aktivitu tělo.  
-  
-### <a name="using-the-parallelforeacht-activity-designer"></a>Použití ParallelForEach\<T > návrháře aktivit  
- **ParallelForEach\<T >** návrháře aktivit najdete v **tok řízení** kategorii **nástrojů**, který přistupuje po kliknutí  **Panel nástrojů** karty na levé straně [!INCLUDE[wfd2](../includes/wfd2-md.md)] (případně vyberte možnost **nástrojů** z **zobrazení** nabídky nebo CTRL + ALT + X.)  
-  
- **ParallelForEach\<T >** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřazené k [!INCLUDE[wfd2](../includes/wfd2-md.md)] povrch bez ohledu na to návrháři aktivit jsou obvykle umístěny, pro například, uvnitř **pořadí** návrháře aktivit. Po vyřazení do [!INCLUDE[wfd2](../includes/wfd2-md.md)], vytváří <xref:System.Activities.Statements.ParallelForEach%601> aktivitu, která ve výchozím nastavení obsahuje <xref:System.Activities.Activity.DisplayName%2A> z **ParallelForEach\<Int32 >.**  
-  
-### <a name="parallelforeacht-properties-in-the-workflow-designer"></a>ParallelForEach\<T > vlastnosti v Návrháři postupu provádění  
- V následující tabulce jsou uvedeny nejužitečnější <xref:System.Activities.Statements.ParallelForEach%601> vlastnosti aktivit a popisuje, jak se používají v návrháři.  
-  
-|Název vlastnosti|Požadováno|Použití|  
-|-------------------|--------------|-----------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje popisný Zobrazovaný název návrháře aktivit v záhlaví. Výchozí hodnota je **ParallelForEach\<Int32 >**. Hodnota může volitelně můžete upravit v **vlastnosti** mřížky nebo přímo v hlavičce návrháře aktivit.|  
-|<xref:System.Activities.Statements.ParallelForEach%601.Body%2A>|False|Aktivity ke spuštění pro každou položku v kolekci. Chcete-li přidat <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> aktivity, rozevírací aktivitu z panelu nástrojů do **tělo** pole na **ParallelForEach\<T >** Návrhář aktivity s text nápovědy "Aktivity Sem přetáhněte".|  
-|**TypeArgument**|Pravda|Typ položky v <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> kolekci specifikované souborem obecný parametr *T*. Ve výchozím nastavení **TypeArgument** je nastavena na **Int32**. Chcete-li změnit typ T v **ParallelForEach\<T >** Návrhář aktivity, změňte hodnotu **TypeArgument** – pole se seznamem v mřížce vlastností.|  
-|<xref:System.Activities.Statements.ParallelForEach%601.Values%2A>|Pravda|Kolekce položek, které chcete iterovat. Chcete-li nastavit <xref:System.Activities.Statements.ParallelForEach%601.Values%2A>, zadejte [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] výrazu v **hodnoty** pole na **ForEach\<T >** návrháře aktivit v poli s text nápovědy "Zadejte výraz jazyka" nebo v **Hodnoty** pole na **vlastnosti** okna.|  
-|<xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>||Vyhodnocuje po každé iteraci dokončí. Pokud je vyhodnocen jako true, pak plánované čekající na zrušení iterací. Pokud není tato vlastnost nastavena, všechny plánované příkazy spustit až do dokončení.|  
-  
- Ve výchozím nastavení iterace smyčky je název položky. Můžete změnit název proměnné iterátoru v **ForEach** pole **ParallelForEach\<T >** návrháře aktivit. Iterace smyčky můžete použít ve výrazech v podřízených položek <xref:System.Activities.Statements.ParallelForEach%601> aktivity.  
-  
-## <a name="see-also"></a>Viz také  
- [Pořadí](../workflow-designer/sequence-activity-designer.md)   
- [paralelní](../workflow-designer/parallel-activity-designer.md)   
- [Tok řízení](../workflow-designer/control-flow-activity-designers.md)
+# <a name="parallelforeachlttgt-activity-designer"></a>Návrhář aktivity &gt; ParallelForEach &lt;T
+Aktivita <xref:System.Activities.Statements.ParallelForEach%601> vytvoří výčet prvků kolekce a provede vložený příkaz pro každý prvek kolekce paralelně, který je asynchronně ve stejném vlákně. Tuto aktivitu řízení toku použijte místo aktivity <xref:System.Activities.Statements.Sequence>, pokud se očekává, že se podřízené aktivity této aktivity dostanou nečinné.
+
+ Aktivita <xref:System.Activities.Statements.ParallelForEach%601> má vlastnost <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>, která obsahuje [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]ho výrazu zadaného uživatelem. Aktivita <xref:System.Activities.Statements.ParallelForEach%601> vyhodnotí tuto vlastnost po dokončení každé větve. Pokud se vyhodnotí jako **true**, <xref:System.Activities.Statements.ParallelForEach%601> aktivita se dokončí bez provedení ostatních větví. Pokud se <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> nevyhodnotí jako **true**, pak se <xref:System.Activities.Statements.ParallelForEach%601> aktivita dokončí po dokončení všech jejích podřízených aktivit.
+
+## <a name="the-parallelforeacht-activity"></a>Aktivita > ParallelForEach \<T
+ <xref:System.Activities.Statements.ParallelForEach%601> vytvoří výčet svých hodnot a naplánuje <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> pro každou hodnotu, na které se vytváří výčet. Naplánuje jenom <xref:System.Activities.Statements.ParallelForEach%601.Body%2A>. Způsob provádění textu závisí na tom, zda <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> nečinných.
+
+ Pokud se <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> nečinný, provede se v obráceném pořadí, protože naplánované aktivity jsou zpracovávány jako zásobník, nejprve se spustí poslední naplánovaná aktivita. Například pokud máte kolekci {1,2,3,4}in <xref:System.Activities.Statements.ParallelForEach%601> a jako tělo použijte **WriteLine** jako text k zápisu hodnoty. V konzole máte 4, 3, 2, 1. Je to proto, že se **WriteLine** nepracuje, takže když se naplánuje 4 aktivity **WriteLine** , provedou se pomocí chování zásobníku (první v poslední době).
+
+ Pokud ale máte v <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> aktivity, které můžou jít nečinné, jako je aktivita <xref:System.ServiceModel.Activities.Receive> nebo aktivita <xref:System.Activities.Statements.Delay>. Pak není nutné čekat na jejich dokončení. <xref:System.Activities.Statements.ParallelForEach%601> přejde na další plánovaný subjekt aktivity a pokusí se ji spustit. Pokud je tato aktivita nečinná, <xref:System.Activities.Statements.ParallelForEach%601> se znovu přesune k dalšímu těle aktivity.
+
+### <a name="using-the-parallelforeacht-activity-designer"></a>Použití návrháře aktivit > ParallelForEach \<T
+ Návrhář aktivity **ParallelForEach \<T >** lze najít v kategorii **toku řízení** v **sadě nástrojů**, ke které se dostanete kliknutím na kartu **panelu nástrojů** na levé straně [!INCLUDE[wfd2](../includes/wfd2-md.md)] (případně vyberte  **Panel nástrojů** v nabídce **zobrazení** nebo CTRL + ALT + X.)
+
+ Návrhář aktivity **ParallelForEach \<T >** lze přetáhnout ze **sady nástrojů** a vyřadit na [!INCLUDE[wfd2](../includes/wfd2-md.md)] plochu všude, kde jsou obvykle umístěna návrháři aktivit, například uvnitř návrháře aktivity **sekvence** . Po přetažení do [!INCLUDE[wfd2](../includes/wfd2-md.md)] vytvoří aktivitu <xref:System.Activities.Statements.ParallelForEach%601>, která ve výchozím nastavení obsahuje <xref:System.Activities.Activity.DisplayName%2A> **\<Int32 > pro ParallelForEach.**
+
+### <a name="parallelforeacht-properties-in-the-workflow-designer"></a>ParallelForEach \<T > vlastnosti v Návrhář postupu provádění
+ Následující tabulka uvádí nejužitečnější vlastnosti <xref:System.Activities.Statements.ParallelForEach%601> aktivity a popisuje, jak se používají v návrháři.
+
+|Název vlastnosti|Požadováno|Použití|
+|-------------------|--------------|-----------|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje popisný zobrazovaný název návrháře aktivit v hlavičce. Výchozí hodnota je **ParallelForEach \<Int32 >** . Hodnota může být volitelně upravena v mřížce **vlastnosti** nebo přímo v hlavičce návrháře aktivit.|
+|<xref:System.Activities.Statements.ParallelForEach%601.Body%2A>|False|Aktivita, která se má spustit pro každou položku v kolekci. Chcete-li přidat aktivitu <xref:System.Activities.Statements.ParallelForEach%601.Body%2A>, přetáhněte aktivitu z panelu nástrojů do pole **text** v Návrháři aktivity v **\<T ParallelForEach >** a v části text nápovědy "Sem přetáhněte aktivitu".|
+|**Pro TypeArgument**|Podmínka|Typ položek v kolekci <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> určených obecným parametrem *t*. Ve výchozím nastavení je **pro TypeArgument** nastaveno na hodnotu **Int32**. Chcete-li změnit typ T v Návrháři aktivity **\<T > ParallelForEach** , změňte hodnotu pole se seznamem **pro TypeArgument** v mřížce vlastností.|
+|<xref:System.Activities.Statements.ParallelForEach%601.Values%2A>|Podmínka|Kolekce položek, které se mají iterovat Chcete-li nastavit <xref:System.Activities.Statements.ParallelForEach%601.Values%2A>, zadejte výraz [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] do pole **hodnoty** v návrháři **\<T >** návrháře aktivit v poli s textem nápovědy "zadejte výraz VB" nebo v poli **hodnoty** v okně **vlastnosti** .|
+|<xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>||Vyhodnoceno po dokončení každé iterace. Pokud se vyhodnotí jako true, naplánované probíhající iterace se zruší. Pokud tato vlastnost není nastavená, všechny naplánované příkazy se spustí až do dokončení.|
+
+ Ve výchozím nastavení je iterátor smyčky pojmenovaný Item. Název proměnné iterátoru můžete změnit v poli **foreach** v **ParallelForEach \<T >** designeru aktivity. Iterátor smyčky lze použít ve výrazech podřízených objektů aktivity <xref:System.Activities.Statements.ParallelForEach%601>.
+
+## <a name="see-also"></a>Viz také
+ [Sekvence](../workflow-designer/sequence-activity-designer.md) [paralelního](../workflow-designer/parallel-activity-designer.md) [řízení toku](../workflow-designer/control-flow-activity-designers.md)

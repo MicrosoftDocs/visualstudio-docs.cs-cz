@@ -1,5 +1,5 @@
 ---
-title: 'CA1804: Odeberte nepoužívané místní hodnoty | Dokumentace Microsoftu'
+title: 'CA1804: odebrat nepoužívané národní prostředí | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,40 +12,40 @@ helpviewer_keywords:
 - CA1804
 ms.assetid: cc332e67-6543-4813-bd8a-6f6fc75bf22a
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 38fe76bbdf2fdafa69ca12caf4f131a05f783954
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 824a65e765f21748b97292beea64ea6c9bd64a1b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68143121"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671553"
 ---
-# <a name="ca1804-remove-unused-locals"></a>CA1804: Odeberte nepoužívané lokální hodnoty
+# <a name="ca1804-remove-unused-locals"></a>CA1804: Odeberte nepoužívané místní hodnoty
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|RemoveUnusedLocals|
 |CheckId|CA1804|
-|Kategorie|Microsoft.Performance|
+|Kategorie|Microsoft. Performance|
 |Narušující změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
- Metoda deklaruje místní proměnnou, ale nepoužívá proměnnou s výjimkou pravděpodobně jako příjemce příkazu přiřazení. Pro analýzu tímto pravidlem testované sestavení musí být sestaveny s ladicími informacemi a přidružené programového souboru databáze (PDB) musí být k dispozici.
+ Metoda deklaruje místní proměnnou, ale nepoužívá proměnnou, kromě toho, že se může jednat o příjemce příkazu přiřazení. Pro analýzu podle tohoto pravidla musí být testované sestavení sestaveno s ladicími informacemi a přidružený soubor databáze programu (PDB) musí být k dispozici.
 
 ## <a name="rule-description"></a>Popis pravidla
  Nepoužívané místní proměnné a zbytečná přiřazení zvětšují velikost sestavení a snižují výkon.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, odeberte nebo použijte místní proměnnou. Všimněte si, že kompilátor jazyka C#, která je součástí [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] odebere nepoužívané místní proměnné při `optimize` je povolená možnost.
+ Chcete-li opravit porušení tohoto pravidla, odeberte nebo použijte místní proměnnou. Všimněte si, C# že kompilátor, který je součástí [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)], odebere nepoužívané místní proměnné, pokud je povolená možnost `optimize`.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Potlačit upozornění tohoto pravidla, je-li proměnná byla kompilátoru, protože ho. Je také bezpečné upozornění tohoto pravidla můžete potlačit nebo zakážete pravidlo, pokud výkon a údržba kódu nejsou primární obavy.
+ Potlačí upozornění z tohoto pravidla, pokud byla proměnná vyvolána kompilátorem. Je také bezpečné potlačit upozornění z tohoto pravidla nebo zakázat pravidlo, pokud není výkon a údržba kódu primárními aspekty.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje několik nepoužívané místní proměnné.
+ Následující příklad ukazuje několik nepoužitých místních proměnných.
 
  [!code-csharp[FxCop.Performance.UnusedLocals#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Performance.UnusedLocals/cs/FxCop.Performance.UnusedLocals.cs#1)]
  [!code-vb[FxCop.Performance.UnusedLocals#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Performance.UnusedLocals/vb/FxCop.Performance.UnusedLocals.vb#1)]

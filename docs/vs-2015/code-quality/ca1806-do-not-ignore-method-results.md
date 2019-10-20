@@ -1,5 +1,5 @@
 ---
-title: 'CA1806: Neignorujte výsledky metody | Dokumentace Microsoftu'
+title: 'CA1806: neignorujte výsledky metody | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,88 +12,88 @@ helpviewer_keywords:
 - DoNotIgnoreMethodResults
 ms.assetid: fd805687-0817-481e-804e-b62cfb3b1076
 caps.latest.revision: 27
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 117e26fca367c8cf00604bebe01a00f4df58a0ee
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f68ab71d9ce4fab1b0612f15d866c58e302a317e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437400"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671498"
 ---
 # <a name="ca1806-do-not-ignore-method-results"></a>CA1806: Neignorujte výsledky metody
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||  
-|-|-|  
-|TypeName|DoNotIgnoreMethodResults|  
-|CheckId|CA1806|  
-|Kategorie|Microsoft.Usage|  
-|Narušující změna|Pevné|  
-  
-## <a name="cause"></a>Příčina  
- Existuje několik možných důvodů pro toto upozornění:  
-  
-- Nový objekt je vytvořen, ale nepoužilo.  
-  
-- Volá metodu, která vytvoří a vrátí nový řetězec a nový řetězec se nikdy nepoužívá.  
-  
-- COM nebo P/Invoke metoda, která vrátí HRESULT nebo kód chyby, který se nikdy nepoužívá. Popis pravidla  
-  
-  Vytváření zbytečné objektů a související uvolňování nepoužívané objektu dojít ke snížení výkonu.  
-  
-  Řetězce jsou neměnné a metod, jako je například String.ToUpper vrací novou instanci řetězce místo úpravy instanci řetězce ve volání metody.  
-  
-  Ignorování HRESULT nebo kód chyby může vést k neočekávanému chování chybových podmínek a ujednání nedostatku prostředků.  
-  
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení  
- Pokud metoda A vytvoří novou instanci objektu B, který se nikdy nepoužívá, předejte instanci jako argument jiné metodě, nebo přiřaďte instanci proměnné. Pokud vytvoření objektu je zbytečné, odeberte něm- nebo -  
-  
- Pokud metoda A volá metodu B, ale nepoužívá novou instanci řetězce, který vrací metoda B. Předejte instanci jako argument jiné metodě, přiřaďte instanci proměnné. Nebo odebrat volání, pokud je zbytečné.  
-  
- -nebo-  
-  
- Pokud metoda A volá metodu B, ale nepoužívá HRESULT nebo kód chyby, který metoda vrátí. Použijte výsledek v podmíněném příkazu, výsledek přiřaďte proměnné nebo předejte jako argument jiné metodě.  
-  
-## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění  
- Nepotlačujte upozornění tohoto pravidla, pokud při vytvoření objektu slouží některé účelu.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje třídu, která se bude ignorovat, výsledek volání String.Trim.  
-  
-<!-- TODO: review snippet reference  [!CODE [FxCop.Usage.DoNotIgnoreMethodResults#1](FxCop.Usage.DoNotIgnoreMethodResults#1)]  -->  
-  
-## <a name="example"></a>Příklad  
- Následující příklad opravuje předchozí porušení přiřazením výsledek String.Trim zpět do proměnné, které byla volána pro.  
-  
-<!-- TODO: review snippet reference  [!CODE [FxCop.Usage.DoNotIgnoreMethodResults2#1](FxCop.Usage.DoNotIgnoreMethodResults2#1)]  -->  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje metodu, která nepoužívá objekt, který vytvoří.  
-  
+|||
+|-|-|
+|TypeName|DoNotIgnoreMethodResults|
+|CheckId|CA1806|
+|Kategorie|Microsoft. Usage|
+|Narušující změna|Bez přerušení|
+
+## <a name="cause"></a>příčina
+ Toto upozornění může mít několik možných důvodů:
+
+- Vytvoří se nový objekt, ale nikdy se nepoužije.
+
+- Metoda, která vytvoří a vrátí nový řetězec, je volána a nový řetězec se nikdy nepoužije.
+
+- Metoda COM nebo volání nespravovaného kódu, která vrací hodnotu HRESULT nebo kód chyby, který se nikdy nepoužívá. Popis pravidla
+
+  Zbytečným vytvářením objektů a přidruženým uvolňováním paměti nevyužitého objektu, který snižuje výkon.
+
+  Řetězce jsou neměnné a metody, jako je String. ToUpper vrací novou instanci řetězce namísto úpravy instance řetězce v volající metodě.
+
+  Ignorování HRESULT nebo kód chyby může vést k neočekávanému chování v chybových stavech nebo v podmínkách s nízkými prostředky.
+
+## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+ Pokud metoda A vytvoří novou instanci objektu B, který se nikdy nepoužívá, předejte instanci jako argument jiné metodě nebo přiřaďte instanci proměnné. Pokud je vytvoření objektu zbytečné, odeberte ho.-nebo-
+
+ Pokud metoda volá metodu B, ale nepoužívá novou instanci řetězce, kterou metoda B vrátí. Předejte instanci jako argument jiné metodě, přiřaďte instanci proměnné. Nebo odeberte volání, pokud není nutné.
+
+ -nebo-
+
+ Pokud metoda volá metodu B, ale nepoužívá HRESULT nebo kód chyby, který metoda vrátí. Použijte výsledek v podmíněném příkazu, přiřaďte výsledek proměnné nebo ji předejte jako argument jiné metodě.
+
+## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
+ Potlačit upozornění z tohoto pravidla, pokud se nejedná o vytvoření objektu, který slouží k nějakému účelu.
+
+## <a name="example"></a>Příklad
+ Následující příklad ukazuje třídu, která ignoruje výsledek volání String. trim.
+
+<!-- TODO: review snippet reference  [!CODE [FxCop.Usage.DoNotIgnoreMethodResults#1](FxCop.Usage.DoNotIgnoreMethodResults#1)]  -->
+
+## <a name="example"></a>Příklad
+ Následující příklad opravuje předchozí porušení přiřazením výsledku String. střih zpět na proměnnou, na které byla volána.
+
+<!-- TODO: review snippet reference  [!CODE [FxCop.Usage.DoNotIgnoreMethodResults2#1](FxCop.Usage.DoNotIgnoreMethodResults2#1)]  -->
+
+## <a name="example"></a>Příklad
+ Následující příklad ukazuje metodu, která nepoužívá objekt, který je vytvořen.
+
 > [!NOTE]
-> Toto porušení nelze reprodukovat v jazyce Visual Basic.  
-  
+> Toto porušení nelze reprodukovat v Visual Basic.
+
  [!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults3#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults3/cpp/FxCop.Usage.DoNotIgnoreMethodResults3.cpp#1)]
  [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults3#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults3/cs/FxCop.Usage.DoNotIgnoreMethodResults3.cs#1)]
- [!code-vb[FxCop.Usage.DoNotIgnoreMethodResults3#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults3/vb/FxCop.Usage.DoNotIgnoreMethodResults3.vb#1)]  
-  
-## <a name="example"></a>Příklad  
- Následující příklad opravuje předchozí porušení odebráním nepotřebných vytvoření objektu.  
-  
+ [!code-vb[FxCop.Usage.DoNotIgnoreMethodResults3#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults3/vb/FxCop.Usage.DoNotIgnoreMethodResults3.vb#1)]
+
+## <a name="example"></a>Příklad
+ Následující příklad opravuje předchozí porušení odebráním zbytečného vytvoření objektu.
+
  [!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults4#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults4/cpp/FxCop.Usage.DoNotIgnoreMethodResults4.cpp#1)]
  [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults4#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults4/cs/FxCop.Usage.DoNotIgnoreMethodResults4.cs#1)]
- [!code-vb[FxCop.Usage.DoNotIgnoreMethodResults4#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults4/vb/FxCop.Usage.DoNotIgnoreMethodResults4.vb#1)]  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje metodu, která metoda nativní funkce GetShortPathName vrátí kód chyby: ignoruje.  
-  
+ [!code-vb[FxCop.Usage.DoNotIgnoreMethodResults4#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults4/vb/FxCop.Usage.DoNotIgnoreMethodResults4.vb#1)]
+
+## <a name="example"></a>Příklad
+ Následující příklad ukazuje metodu, která ignoruje kód chyby, který vrátí nativní metoda GetShortPathName.
+
  [!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults5#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults5/cpp/FxCop.Usage.DoNotIgnoreMethodResults5.cpp#1)]
- [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults5#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults5/cs/FxCop.Usage.DoNotIgnoreMethodResults5.cs#1)]  
-  
-## <a name="example"></a>Příklad  
- Následující příklad opravuje předchozí porušení chybový kód a došlo k výjimce při volání selže.  
-  
+ [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults5#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults5/cs/FxCop.Usage.DoNotIgnoreMethodResults5.cs#1)]
+
+## <a name="example"></a>Příklad
+ Následující příklad opravuje předchozí porušení kontrolou kódu chyby a vyvoláním výjimky při selhání volání.
+
  [!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults6#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults6/cpp/FxCop.Usage.DoNotIgnoreMethodResults6.cpp#1)]
  [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults6#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults6/cs/FxCop.Usage.DoNotIgnoreMethodResults6.cs#1)]

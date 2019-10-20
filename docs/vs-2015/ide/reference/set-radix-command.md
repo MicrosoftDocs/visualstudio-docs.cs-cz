@@ -1,5 +1,5 @@
 ---
-title: Nastavit základ – příkaz | Dokumentace Microsoftu
+title: Nastavit základ příkazu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,40 +11,36 @@ helpviewer_keywords:
 - Debug.SetRadix command
 ms.assetid: 6ffd1554-7530-4da4-b5f5-e276a5034f3b
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bee6368931dc47b78186ec870039ab292960fa77
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 050cbe6e639f4177694d9af3ecbc0b768065b7d9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68163323"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665422"
 ---
 # <a name="set-radix-command"></a>Nastavit základ – příkaz
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Nastaví nebo vrátí číselný základ slouží k zobrazení hodnot typu integer.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-Debug.SetRadix [10 | 16 | hex | dec]  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `10` nebo `16` nebo `hex` nebo `dec`  
- Volitelné. Určuje desetinné číslo (10 nebo dec) nebo šestnáctkové číslo (maximálně 16 šestnáctkových). Pokud je argument vynechán, je vrácena aktuální hodnota Číselná soustava.  
-  
-## <a name="example"></a>Příklad  
- V tomto příkladu nastaví prostředí tak, aby zobrazení celočíselné hodnoty v šestnáctkovém formátu.  
-  
-```  
->Debug.SetRadix hex  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)   
- [Okno příkazového řádku](../../ide/reference/command-window.md)   
- [Pole najít/příkaz](../../ide/find-command-box.md)   
- [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)
+Nastaví nebo vrátí číselnou základnu použitou k zobrazení celočíselných hodnot.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+Debug.SetRadix [10 | 16 | hex | dec]
+```
+
+## <a name="arguments"></a>Arguments
+ `10` nebo `16` nebo `hex` nebo `dec` volitelné. Označuje desetinné číslo (10 nebo DEC) nebo hexadecimální (16 nebo hex). Pokud je argument vynechán, je vrácena aktuální hodnota základu.
+
+## <a name="example"></a>Příklad
+ Tento příklad nastaví prostředí tak, aby zobrazovalo celočíselné hodnoty v šestnáctkovém formátu.
+
+```
+>Debug.SetRadix hex
+```
+
+## <a name="see-also"></a>Viz také
+ [Příkazy](../../ide/reference/visual-studio-commands.md) [příkazového](../../ide/reference/command-window.md) řádku [find/Command](../../ide/find-command-box.md) v příkazu Visual Studio Command a Command [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

@@ -1,5 +1,5 @@
 ---
-title: 'CA2231: Přetižte operátor equals při přepsání ValueType.Equals | Dokumentace Microsoftu'
+title: 'CA2231: operátor Overload se rovná přepisování ValueType. Equals | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -13,33 +13,33 @@ helpviewer_keywords:
 - CA2231
 ms.assetid: 114c0161-261a-40ad-8b2c-0932d6909d2a
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 679df7b916740ad1a45d624f9f50d38c94d64caf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 308c970eb21faa7e725559d0451706899b62fd19
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201562"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662820"
 ---
-# <a name="ca2231-overload-operator-equals-on-overriding-valuetypeequals"></a>CA2231: Přetižte operátor rovnosti při přetížení ValueType.Equals
+# <a name="ca2231-overload-operator-equals-on-overriding-valuetypeequals"></a>CA2231: Přetižte operátor equals při přepsání ValueType.Equals
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|OverloadOperatorEqualsOnOverridingValueTypeEquals|
 |CheckId|CA2231|
-|Kategorie|Microsoft.Usage|
-|Narušující změna|Pevné|
+|Kategorie|Microsoft. Usage|
+|Narušující změna|Bez přerušení|
 
 ## <a name="cause"></a>příčina
- Hodnotový typ přepisuje <xref:System.Object.Equals%2A?displayProperty=fullName> , ale neimplementuje operátor rovnosti.
+ Hodnotový typ přepisuje <xref:System.Object.Equals%2A?displayProperty=fullName>, ale neimplementuje operátor rovnosti.
 
 ## <a name="rule-description"></a>Popis pravidla
- Ve většině programovacích jazyků neexistuje žádný výchozí implementace operátoru rovnosti (==) pro typy hodnot. Pokud svůj oblíbený programovací jazyk podporuje přetížení operátoru, měli byste zvážit, implementoval operátor rovnosti. Musí být shodná s jeho chování <xref:System.Object.Equals%2A>.
+ Ve většině programovacích jazyků neexistuje žádná výchozí implementace operátoru rovnosti (= =) pro typy hodnot. Pokud váš programovací jazyk podporuje přetížení operátorů, měli byste uvažovat o implementaci operátoru rovnosti. Chování by mělo být stejné jako u <xref:System.Object.Equals%2A>.
 
- V implementaci přetížení operátoru rovnosti nelze použít výchozí operátor rovnosti. To způsobí přetečení zásobníku. K implementaci operátor rovnosti, použijte metodu Object.Equals v implementaci. Příklad:
+ Nelze použít výchozí operátor rovnosti v přetížené implementaci operátoru rovnosti. Uděláte to tak, že dojde k přetečení zásobníku. K implementaci operátoru rovnosti použijte metodu Object. Equals v implementaci. Příklad:
 
 ```vb
 If (Object.ReferenceEquals(left, Nothing)) Then
@@ -59,10 +59,10 @@ return left.Equals(right);
  Chcete-li opravit porušení tohoto pravidla, implementujte operátor rovnosti.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění tohoto pravidla; Doporučujeme však, že pokud je to možné zadat operátor rovnosti.
+ Je bezpečné potlačit upozornění od tohoto pravidla; Nicméně doporučujeme, abyste zadali operátor rovnosti, pokud je to možné.
 
 ## <a name="example"></a>Příklad
- Následující příklad definuje typ, který porušuje tato pravidla.
+ Následující příklad definuje typ, který je v rozporu s tímto pravidlem.
 
  [!code-csharp[FxCop.Usage.EqualsGetHashCode#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.EqualsGetHashCode/cs/FxCop.Usage.EqualsGetHashCode.cs#1)]
 
@@ -73,7 +73,7 @@ return left.Equals(right);
 
  [CA2226: Operátory by měly mít symetrické přetížení](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
 
- [CA2224: Přepište equals při přetížení operátoru rovnosti](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
+ [CA2224: Přepište Equals při přetížení operátoru rovnosti](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
 
  [CA2218: Přepište GetHashCode při přepsání Equals](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)
 

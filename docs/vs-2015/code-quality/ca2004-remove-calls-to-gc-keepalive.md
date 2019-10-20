@@ -1,5 +1,5 @@
 ---
-title: 'CA2004: Odeberte volání uvolňování paměti. KeepAlive | Dokumentace Microsoftu'
+title: 'CA2004: odeberte volání GC. Udržení naživu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CA2004
 ms.assetid: bc543b5b-23eb-4b45-abc2-9325cd254ac2
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e75ab22212945e5a6b4465e1e1f64ca48a9daa4a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e34a8e7d4860a599155554410e13df5a6eb3bfe1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68189042"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672495"
 ---
 # <a name="ca2004-remove-calls-to-gckeepalive"></a>CA2004: Odeberte volání GC.KeepAlive
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "68189042"
 |Narušující změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
- Použití třídy `SafeHandle` ale stále obsahovat volání `GC.KeepAlive`.
+ Třídy používají `SafeHandle`, ale pořád obsahují volání `GC.KeepAlive`.
 
 ## <a name="rule-description"></a>Popis pravidla
- Pokud převádíte na `SafeHandle` využití, odeberte veškerá volání `GC.KeepAlive` (objekt). V tomto případě by neměl mít třídy volání `GC.KeepAlive`, za předpokladu, že nemají finalizační metodu, ale spoléhají na `SafeHandle` dokončete popisovač operačního systému pro ně.  I když náklady při volání k opuštění `GC.KeepAlive` může být nepatrné měřený podle výkonu, vnímání, který volání `GC.KeepAlive` je nezbytné nebo dostatečná k vyřešení problému, který již neexistuje provede kód obtížnější životnost Udržujte.
+ Pokud převádíte na `SafeHandle` využití, odeberte všechna volání `GC.KeepAlive` (Object). V takovém případě třídy by neměly muset volat `GC.KeepAlive` za předpokladu, že nemají finalizační metodu, ale spoléhat na `SafeHandle` k dokončení popisovače operačního systému pro ně.  I když náklady na ukončení volání `GC.KeepAlive` mohou být zanedbatelné podle výkonu, vnímání, že volání `GC.KeepAlive` je buď nezbytné, nebo postačuje k vyřešení potíží s životností, která již možná neexistuje, způsobuje, že by se kód těžší udržovat.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Odeberte volání `GC.KeepAlive`.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Toto upozornění můžete potlačit pouze v případě, že není technicky správné pro převod na `SafeHandle` využití ve své třídě.
+ Toto upozornění můžete potlačit pouze v případě, že není technicky správné pro převod na použití `SafeHandle` ve vaší třídě.

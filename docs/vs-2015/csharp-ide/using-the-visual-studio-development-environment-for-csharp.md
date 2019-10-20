@@ -1,5 +1,5 @@
 ---
-title: Použití vývojového prostředí pro C# | Dokumentace Microsoftu
+title: Použití vývojového prostředí pro C# | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - Visual C#, development environment
 ms.assetid: e10e2cba-641f-47a3-88a3-6748965254d7
 caps.latest.revision: 29
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6e5b52e74eac3e9301ebb10d91c560929b1ef313
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 0cd8d8f2be0a653189130de6b38c8586957948d9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65688034"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72673160"
 ---
-# <a name="using-the-visual-studio-development-environment-for-c"></a>Použití vývojového prostředí sady Visual Studio pro jazyk C\#
+# <a name="using-the-visual-studio-development-environment-for-c"></a>Použití vývojového prostředí sady Visual Studio pro jazyk C \#
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Integrovaného vývojového prostředí (IDE) sady Visual Studio je kolekce vývojové nástroje, které jsou vystaveny prostřednictvím běžného uživatelského rozhraní. Některé nástroje jsou sdíleny s jinými [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] jazyků a některé nástroje, jako je například kompilátor jazyka C# jsou jedinečné pro jazyk Visual C#. Toto téma obsahuje odkazy na nejdůležitější nástroje jazyka Visual C#.
+Integrované vývojové prostředí (IDE) sady Visual Studio je sada vývojářských nástrojů, které jsou vystaveny prostřednictvím běžného uživatelského rozhraní. Některé nástroje jsou sdíleny s jinými [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] jazyky a některé, jako je C# například kompilátor, jsou jedinečné pro vizuál. C# Toto téma obsahuje odkazy na nejdůležitější nástroje jazyka Visual C#.
 
 ## <a name="related-topics"></a>Související témata
 
@@ -52,5 +52,5 @@ Integrovaného vývojového prostředí (IDE) sady Visual Studio je kolekce výv
 ## <a name="see-also"></a>Viz také
 
 - [C#](https://msdn.microsoft.com/library/7f4f8103-7068-4f1d-92c7-3c4519b6edbc)
-- [Začínáme s jazykem C#](https://msdn.microsoft.com/library/d6ec050f-3956-4737-8030-a4fa3521d29f)
-- [Referenční dokumentace jazyka C#](https://msdn.microsoft.com/library/06de3167-c16c-4e1a-b3c5-c27841d4569a)
+- [Začínáme sC#](https://msdn.microsoft.com/library/d6ec050f-3956-4737-8030-a4fa3521d29f)
+- [C#Odkaz](https://msdn.microsoft.com/library/06de3167-c16c-4e1a-b3c5-c27841d4569a)

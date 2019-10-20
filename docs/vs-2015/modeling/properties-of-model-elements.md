@@ -1,31 +1,31 @@
 ---
-title: Vlastnosti elementů modelu | Dokumentace Microsoftu
+title: Vlastnosti prvků modelu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
 ms.topic: reference
 ms.assetid: 884d66aa-cb2d-4be0-ae45-8360a01f1c7d
 caps.latest.revision: 8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 34e9c1cb4457210f95ede0d574530d2fb5ebcdeb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 22f7da98d349da2d80019750b18c0ed5a1bbb3bc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68154854"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671377"
 ---
 # <a name="properties-of-model-elements"></a>Vlastnosti elementů modelu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato část obsahuje seznam vlastností, které se zobrazí v okně Vlastnosti při výběru prvku v definici DSL diagramu nebo v Průzkumníku DSL.  
-  
- V některých případech se další vlastnosti najdete v okně podrobností DSL.  
-  
-## <a name="related-sections"></a>Související oddíly  
- [Přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md)  
-  
- [Přepisování a rozšiřování vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md)  
-  
+Tato část obsahuje seznam vlastností, které se zobrazí v okno Vlastnosti, když vyberete prvek v diagramu definice DSL nebo v Průzkumníku DSL.
+
+ V některých případech je možné v okně Podrobnosti DSL najít další vlastnosti.
+
+## <a name="related-sections"></a>Související oddíly
+ [Přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md)
+
+ [Přepisování a rozšiřování vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md)
+
  [Jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md)

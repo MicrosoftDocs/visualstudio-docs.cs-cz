@@ -1,5 +1,5 @@
 ---
-title: Pravidla šířící změny v modelu | Dokumentace Microsoftu
+title: Pravidla šířící změny v modelu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -9,210 +9,209 @@ helpviewer_keywords:
 - Domain-Specific Language, rules
 ms.assetid: 1690a38a-c8f5-4bc6-aab9-015771ec6647
 caps.latest.revision: 32
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 29950be152c140a8315f96f8752b1fa906c3f801
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 901d809b5f194bb4e66990b0a0e946be2521bbb5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442930"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671290"
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>Pravidla šířící změny v modelu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete vytvořit pravidlo úložiště, které rozšíří změnu z jednoho elementu do druhého v produktu Visualization and Modeling SDK (vmsdk následující položky). Když dojde ke změně k libovolnému prvku v Store, jsou naplánovány pravidla má být spuštěna, většinou když nejkrajnější transakce se potvrzeny. Existují různé typy pravidel pro různé druhy událostí, jako je například přidání elementu nebo jejím odstranění. Pravidla můžete připojit na konkrétní typy prvků, tvary nebo diagramů. Mnoho integrovaných funkcí, které jsou definovány pomocí pravidel: například pravidla ujistěte se, že diagramu se aktualizuje při změně modelu. Doménově specifického jazyka můžete přizpůsobit tak, že přidáte vlastní pravidla.  
+Můžete vytvořit pravidlo obchodu a rozšířit změnu z jednoho prvku na jiný v rámci vizualizace a modelování SDK (VMSDK). Když dojde ke změně jakéhokoli prvku v úložišti, pravidla se naplánují na spouštění, obvykle v případě, kdy je nejvzdálenější transakce potvrzena. Existují různé typy pravidel pro různé druhy událostí, jako je například přidání prvku nebo jeho odstranění. Můžete připojit pravidla ke konkrétním typům prvků, tvarů nebo diagramů. Mnoho vestavěných funkcí je definovaných pravidly: například pravidla zajišťují, že se diagram při změně modelu aktualizuje. Jazyk specifický pro doménu můžete přizpůsobit přidáním vlastních pravidel.
 
- Pravidla Store jsou vhodné pro šíření změn v úložišti – to znamená, že se změní na prvky modelu, relace, tvary nebo konektory a jejich domény vlastnosti. Pravidla nelze spustit, když uživatel spustí příkaz zpět nebo znovu. Místo toho správce transakcí zajišťuje, že obsah úložiště jsou obnovena do správného stavu. Pokud chcete změny na prostředky mimo úložiště, použijte Store události. Další informace najdete v tématu [obslužné rutiny rozšíření změny mimo the Model událostí](../modeling/event-handlers-propagate-changes-outside-the-model.md).  
+ Pravidla úložišť jsou zvláště užitečná pro rozšiřování změn v obchodě – to znamená změny prvků modelu, vztahů, tvarů nebo konektorů a jejich vlastností domény. Pravidla se nespustí, když uživatel vyvolá příkazy k vrácení zpět nebo znovu. Místo toho správce transakcí zajistí, že se obsah úložiště obnoví do správného stavu. Pokud chcete rozšířit změny prostředků mimo Store, použijte ukládání událostí. Další informace najdete v tématu [obslužné rutiny událostí rozšiřovat změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
- Předpokládejme například, že chcete určit, že pokaždé, když se uživatel (nebo váš kód) vytvoří nový prvek typu ExampleDomainClass, další prvek jiného typu je vytvořen v jiné části modelu. Může zapisovat AddRule a přidružte jej k ExampleDomainClass. Měli byste napsat kód v pravidlo můžete vytvořit další prvek.  
+ Předpokládejme například, že chcete určit, že pokud uživatel (nebo váš kód) vytvoří nový prvek typu ExampleDomainClass, je v jiné části modelu vytvořen další prvek jiného typu. Můžete napsat AddRule a přidružit ho k ExampleDomainClass. V pravidle byste napsali kód pro vytvoření dalšího elementu.
 
-```csharp  
-using System;  
-using System.Collections.Generic;  
-using System.Linq;  
-using Microsoft.VisualStudio.Modeling;  
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.VisualStudio.Modeling;
 
-namespace ExampleNamespace  
-{  
- // Attribute associates the rule with a domain class:  
- [RuleOn(typeof(ExampleDomainClass), FireTime=TimeToFire.TopLevelCommit)]  
- // The rule is a class derived from one of the abstract rules:  
- class MyAddRule : AddRule  
- {  
-  // Override the abstract method:  
-  public override void ElementAdded(ElementAddedEventArgs e)  
-  {  
-    base.ElementAdded(e);  
-    ExampleDomainClass element = e.ModelElement;  
-    Store store = element.Store;  
-    // Ignore this call if we're currently loading a model:  
-    if (store.TransactionManager.CurrentTransaction.IsSerializing)   
-       return;  
+namespace ExampleNamespace
+{
+ // Attribute associates the rule with a domain class:
+ [RuleOn(typeof(ExampleDomainClass), FireTime=TimeToFire.TopLevelCommit)]
+ // The rule is a class derived from one of the abstract rules:
+ class MyAddRule : AddRule
+ {
+  // Override the abstract method:
+  public override void ElementAdded(ElementAddedEventArgs e)
+  {
+    base.ElementAdded(e);
+    ExampleDomainClass element = e.ModelElement;
+    Store store = element.Store;
+    // Ignore this call if we're currently loading a model:
+    if (store.TransactionManager.CurrentTransaction.IsSerializing)
+       return;
 
-    // Code here propagates change as required – for example:  
-      AnotherDomainClass echo = new AnotherDomainClass(element.Partition);  
-      echo.Name = element.Name;  
-      echo.Parent = element.Parent;    
-    }  
-  }  
- // The rule must be registered:  
- public partial class ExampleDomainModel  
- {  
-   protected override Type[] GetCustomDomainModelTypes()  
-   {  
-     List<Type> types = new List<Type>(base.GetCustomDomainModelTypes());  
-     types.Add(typeof(MyAddRule));  
-     // If you add more rules, list them here.   
-     return types.ToArray();  
-   }  
- }  
-}  
+    // Code here propagates change as required – for example:
+      AnotherDomainClass echo = new AnotherDomainClass(element.Partition);
+      echo.Name = element.Name;
+      echo.Parent = element.Parent;
+    }
+  }
+ // The rule must be registered:
+ public partial class ExampleDomainModel
+ {
+   protected override Type[] GetCustomDomainModelTypes()
+   {
+     List<Type> types = new List<Type>(base.GetCustomDomainModelTypes());
+     types.Add(typeof(MyAddRule));
+     // If you add more rules, list them here.
+     return types.ToArray();
+   }
+ }
+}
 
-```  
+```
 
 > [!NOTE]
-> Kód pravidlo by měl změnit stav pouze prvky uvnitř Store; To znamená pravidlo by měl změnit pouze prvky modelu, relace, tvary, konektory, diagramů nebo jejich vlastností. Pokud chcete změny na prostředky mimo úložišti, definujte Store události. Další informace najdete v tématu [obslužné rutiny rozšíření změny mimo the Model událostí](../modeling/event-handlers-propagate-changes-outside-the-model.md)  
+> Kód pravidla by měl změnit pouze stav prvků v rámci úložiště; To znamená, že pravidlo by mělo měnit pouze prvky modelu, relace, obrazce, konektory, diagramy nebo jejich vlastnosti. Pokud chcete rozšířit změny prostředků mimo Store, definujte události úložiště. Další informace najdete v tématu [obslužné rutiny událostí rozšiřovat změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md) .
 
-### <a name="to-define-a-rule"></a>Chcete definovat pravidlo  
+### <a name="to-define-a-rule"></a>Definování pravidla
 
-1. Definovat pravidlo, protože třídy s předponou `RuleOn` atribut. Atribut přidruží pravidlo doménovými třídami, relací nebo elementů diagramu. Pravidla se použijí na každou instanci této třídy, které mohou být abstraktní.  
+1. Definujte pravidlo jako třídu s předponou atributu `RuleOn`. Atribut přidruží pravidlo k jedné z vašich doménových tříd, relací nebo prvků diagramu. Pravidlo bude použito na všechny instance této třídy, což může být abstraktní.
 
-2. Registrovat pravidla tak, že přidáte do sady vrácené `GetCustomDomainModelTypes()` v třídě modelu domény.  
+2. Zaregistrujte pravidlo tím, že ho přidáte do sady vrácené `GetCustomDomainModelTypes()` ve třídě doménového modelu.
 
-3. Třídy pravidla odvození od některého z abstraktní třídy pravidla a napsat kód metoda spuštění.  
+3. Odvození třídy pravidla z jedné z abstraktních tříd pravidla a zápis kódu metody spuštění.
 
-   Následující části popisují postup podrobněji.  
+   Následující části popisují tyto kroky podrobněji.
 
-### <a name="to-define-a-rule-on-a-domain-class"></a>Chcete-li definovat pravidla na doménovou třídu  
+### <a name="to-define-a-rule-on-a-domain-class"></a>Definování pravidla pro doménovou třídu
 
-- V souboru vlastního kódu, definovat třídu a prefix <xref:Microsoft.VisualStudio.Modeling.RuleOnAttribute> atribut:  
+- V souboru vlastního kódu Definujte třídu a prefixujte ji pomocí atributu <xref:Microsoft.VisualStudio.Modeling.RuleOnAttribute>:
 
-    ```  
-    [RuleOn(typeof(ExampleElement),   
-         // Usual value – but required, because it is not the default:  
-         FireTime = TimeToFire.TopLevelCommit)]   
-    class MyRule ...  
+    ```
+    [RuleOn(typeof(ExampleElement),
+         // Usual value – but required, because it is not the default:
+         FireTime = TimeToFire.TopLevelCommit)]
+    class MyRule ...
 
-    ```  
+    ```
 
-- Typ subjektu v prvním parametru může být doménovou třídou, doménového vztahu, tvaru, konektoru nebo diagramu. Obvykle použít pravidla pro doménovými třídami a vztahy.  
+- Typ subjektu v prvním parametru může být doménová třída, doménová relace, tvar, spojnice nebo diagram. Obvykle použijete pravidla na doménové třídy a vztahy.
 
-     `FireTime` Je obvykle `TopLevelCommit`. Tím se zajistí, že se provede pouze po provedení všech primární změny transakce. Alternativ jsou vložené, která spustí pravidlo brzy po provedení změny; a LocalCommit, která spustí pravidlo na konci aktuální transakce (která nemusí být nejkrajnější). Můžete také nastavit prioritu pravidlo, které ovlivňují pořadí řazení ve frontě, ale jedná o metodu nespolehlivé dosažení výsledků podle svých požadavků.  
+     @No__t_0 je obvykle `TopLevelCommit`. Tím se zajistí, že se pravidlo spustí až po provedení všech primárních změn transakce. Alternativy jsou vložené, takže pravidlo se po změně spustí brzo; a LocalCommit, který spouští pravidlo na konci aktuální transakce (což nemusí být nejvzdálenější). Můžete také nastavit prioritu pravidla, aby ovlivnilo jeho pořadí ve frontě, ale toto je nespolehlivější způsob dosažení potřebného výsledku.
 
-- Abstraktní třídy můžete zadat jako typy předmětů.  
+- Jako typ subjektu můžete zadat abstraktní třídu.
 
-- Toto pravidlo se vztahuje na všechny instance třídy předmět.  
+- Pravidlo se vztahuje na všechny instance třídy Subject.
 
-- Výchozí hodnota pro `FireTime` je TimeToFire.TopLevelCommit. To způsobí, že pravidlo se spustí při nejkrajnější transakce se potvrzeny. Alternativou je TimeToFire.Inline. To způsobí, že pravidlo se spustí ihned po aktivační událost.  
+- Výchozí hodnota pro `FireTime` je TimeToFire. TopLevelCommit. To způsobí, že se pravidlo spustí při potvrzení vnější transakce. Alternativou je TimeToFire. inline. To způsobí, že se pravidlo provede brzo po aktivaci události.
 
-### <a name="to-register-the-rule"></a>Pravidla registrace  
+### <a name="to-register-the-rule"></a>Postup při registraci pravidla
 
-- Přidat třídu pravidlo do seznamu typů vrácených `GetCustomDomainModelTypes` v doménovém modelu:  
+- Přidejte třídu pravidel do seznamu typů vrácených `GetCustomDomainModelTypes` v doménovém modelu:
 
-    ```  
-    public partial class ExampleDomainModel  
-     {  
-       protected override Type[] GetCustomDomainModelTypes()  
-       {  
-         List<Type> types = new List<Type>(base.GetCustomDomainModelTypes());  
-         types.Add(typeof(MyAddRule));  
-         // If you add more rules, list them here.   
-         return types.ToArray();  
-       }  
-     }  
+    ```
+    public partial class ExampleDomainModel
+     {
+       protected override Type[] GetCustomDomainModelTypes()
+       {
+         List<Type> types = new List<Type>(base.GetCustomDomainModelTypes());
+         types.Add(typeof(MyAddRule));
+         // If you add more rules, list them here.
+         return types.ToArray();
+       }
+     }
 
-    ```  
+    ```
 
-- Pokud si nejste jisti názvem třídy modelu domény, vyhledejte v souboru **Dsl\GeneratedCode\DomainModel.cs**  
+- Pokud si nejste jisti názvem vaší třídy doménového modelu, podívejte se do souboru **Dsl\GeneratedCode\DomainModel.cs**
 
-- Tento kód napište vlastní kód souboru ve vašem projektu DSL.  
+- Tento kód napište do vlastního souboru kódu v projektu DSL.
 
-### <a name="to-write-the-code-of-the-rule"></a>Psaní kódu pravidla  
+### <a name="to-write-the-code-of-the-rule"></a>Zápis kódu pravidla
 
-- Třída pravidla odvození od některého z následujících základních tříd:  
+- Odvodit třídu pravidla z jedné z následujících základních tříd:
 
-  |                             Základní třída                              |                                                                                                                                                                                                                                                                                                                                                                              Trigger                                                                                                                                                                                                                                                                                                                                                                              |
+  |                             Základní třída                              |                                                                                                                                                                                                                                                                                                                                                                              Signálu                                                                                                                                                                                                                                                                                                                                                                              |
   |---------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-  |           <xref:Microsoft.VisualStudio.Modeling.AddRule>            |                                                                                                                                                                                                                                                                                                                        Přidání elementu, odkaz nebo tvar.<br /><br /> To lze použijte k detekci nové relace, kromě nových elementů.                                                                                                                                                                                                                                                                                                                        |
-  |          <xref:Microsoft.VisualStudio.Modeling.ChangeRule>          | Hodnota vlastnosti domény se změní. Argument metody obsahuje staré a nové hodnoty.<br /><br /> Obrazce, toto pravidlo aktivováno, když předdefinované `AbsoluteBounds` změny vlastností, pokud se přesune na obrazec.<br /><br /> V mnoha případech je snazší přepsat `OnValueChanged` nebo `OnValueChanging` v obslužné rutině vlastnost. Tyto metody jsou volány bezprostředně před a po provedení změny. Naopak se pravidlo spustí obvykle na konci transakce. Další informace najdete v tématu [obslužné rutiny změny hodnoty vlastnosti domény](../modeling/domain-property-value-change-handlers.md). **Poznámka:**  Toto pravidlo není aktivováno, když vytvoříte nebo odstraníte odkaz. Místo toho zápis `AddRule` a `DeleteRule` pro doménový vztah. |
-  |         <xref:Microsoft.VisualStudio.Modeling.DeletingRule>         |                                                                                                                                                                                                                                                                                                             Aktivováno, když elementu nebo propojení je odstranit. Vlastnost ModelElement.IsDeleting platí až do konce transakce.                                                                                                                                                                                                                                                                                                              |
-  |          <xref:Microsoft.VisualStudio.Modeling.DeleteRule>          |                                                                                                                                                                                                       Provádí při elementu nebo propojení se odstranil. Toto pravidlo se spustí po byly provedeny všechny ostatní pravidla, včetně DeletingRules. ModelElement.IsDeleting má hodnotu false a ModelElement.IsDeleted má hodnotu true. Povolit pro následné vrácení zpět, se ve skutečnosti neodebere element z paměti, ale je odebrán z Store.ElementDirectory.                                                                                                                                                                                                       |
-  |           <xref:Microsoft.VisualStudio.Modeling.MoveRule>           |                                                                                                                                                                                                                                                                                                           Element je přesouvat z jednoho úložiště pro oddíl do druhého.<br /><br /> (Všimněte si, že to se nevztahuje na pozici grafické obrazce.)                                                                                                                                                                                                                                                                                                            |
-  |     <xref:Microsoft.VisualStudio.Modeling.RolePlayerChangeRule>     |                                                                                                                                                                                                                                                                                                                 Toto pravidlo platí pouze pro vztahy domén. Se aktivuje, pokud přiřadíte prvek modelu explicitně na oba konce tohoto odkazu.                                                                                                                                                                                                                                                                                                                 |
-  | <xref:Microsoft.VisualStudio.Modeling.RolePlayerPositionChangeRule> |                                                                                                                                                                                                                                                                                                                   Aktivováno, když odkazů do nebo z elementu není řazení změněno pomocí metody MoveBefore nebo MoveToIndex na odkaz.                                                                                                                                                                                                                                                                                                                    |
-  |   <xref:Microsoft.VisualStudio.Modeling.TransactionBeginningRule>   |                                                                                                                                                                                                                                                                                                                                                              Spustit při transakci.                                                                                                                                                                                                                                                                                                                                                              |
-  |  <xref:Microsoft.VisualStudio.Modeling.TransactionCommittingRule>   |                                                                                                                                                                                                                                                                                                                                                      Spustit transakci blížící se odešlou.                                                                                                                                                                                                                                                                                                                                                      |
-  |  <xref:Microsoft.VisualStudio.Modeling.TransactionRollingBackRule>  |                                                                                                                                                                                                                                                                                                                                                     Spustit, když transakce je vrácena zpět.                                                                                                                                                                                                                                                                                                                                                     |
+  |           <xref:Microsoft.VisualStudio.Modeling.AddRule>            |                                                                                                                                                                                                                                                                                                                        Přidá se element, odkaz nebo tvar.<br /><br /> Tuto kombinaci použijte k detekci nových vztahů kromě nových prvků.                                                                                                                                                                                                                                                                                                                        |
+  |          <xref:Microsoft.VisualStudio.Modeling.ChangeRule>          | Hodnota vlastnosti domény se změnila. Argument metody poskytuje staré a nové hodnoty.<br /><br /> U obrazců se toto pravidlo aktivuje při změně předdefinované vlastnosti `AbsoluteBounds`, pokud je obrazec přesunutý.<br /><br /> V mnoha případech je pohodlnější přepsat `OnValueChanged` nebo `OnValueChanging` v obslužné rutině vlastností. Tyto metody jsou volány bezprostředně před a po změně. Naproti tomu se pravidlo obvykle spouští na konci transakce. Další informace najdete v tématu [obslužné rutiny změny hodnoty vlastnosti domény](../modeling/domain-property-value-change-handlers.md). **Poznámka:**  Toto pravidlo se neaktivuje, když se vytvoří nebo odstraní odkaz. Místo toho zapište `AddRule` a `DeleteRule` doménového vztahu. |
+  |         <xref:Microsoft.VisualStudio.Modeling.DeletingRule>         |                                                                                                                                                                                                                                                                                                             Aktivuje se, když se chystá odstranění elementu nebo odkazu. Vlastnost ModelElement. má hodnotu true do konce transakce.                                                                                                                                                                                                                                                                                                              |
+  |          <xref:Microsoft.VisualStudio.Modeling.DeleteRule>          |                                                                                                                                                                                                       Provede se při odstranění elementu nebo odkazu. Pravidlo je spuštěno po provedení všech ostatních pravidel, včetně DeletingRules. ModelElement. IsDeleted je false a ModelElement. IsDeleted má hodnotu true. Aby bylo možné provést následné zrušení, prvek není ve skutečnosti odebrán z paměti, ale je odebrán z Store. ElementDirectory.                                                                                                                                                                                                       |
+  |           <xref:Microsoft.VisualStudio.Modeling.MoveRule>           |                                                                                                                                                                                                                                                                                                           Prvek je přesunut z jednoho oddílu úložiště do jiného.<br /><br /> (Všimněte si, že to nesouvisí s grafickým umístěním tvaru.)                                                                                                                                                                                                                                                                                                            |
+  |     <xref:Microsoft.VisualStudio.Modeling.RolePlayerChangeRule>     |                                                                                                                                                                                                                                                                                                                 Toto pravidlo se vztahuje pouze na doménové vztahy. Je aktivována, pokud explicitně přiřadíte prvek modelu ke konci propojení.                                                                                                                                                                                                                                                                                                                 |
+  | <xref:Microsoft.VisualStudio.Modeling.RolePlayerPositionChangeRule> |                                                                                                                                                                                                                                                                                                                   Aktivováno, když je řazení odkazů na prvek nebo z prvku změněno pomocí metod MoveBefore nebo MoveToIndex na odkazu.                                                                                                                                                                                                                                                                                                                    |
+  |   <xref:Microsoft.VisualStudio.Modeling.TransactionBeginningRule>   |                                                                                                                                                                                                                                                                                                                                                              Provede se při vytvoření transakce.                                                                                                                                                                                                                                                                                                                                                              |
+  |  <xref:Microsoft.VisualStudio.Modeling.TransactionCommittingRule>   |                                                                                                                                                                                                                                                                                                                                                      Provedeno v případě, že transakce bude potvrzena.                                                                                                                                                                                                                                                                                                                                                      |
+  |  <xref:Microsoft.VisualStudio.Modeling.TransactionRollingBackRule>  |                                                                                                                                                                                                                                                                                                                                                     Provedeno v případě, že transakce bude vrácena zpět.                                                                                                                                                                                                                                                                                                                                                     |
 
-- Každá třída má metodu, která je přepsat. Typ `override` ve své třídě jej zjistit. Parametr této metody určuje prvek, který mění.  
+- Každá třída má metodu, kterou přepíšete. Zadejte `override` ve vaší třídě, abyste ji mohli zjistit. Parametr této metody identifikuje prvek, který se mění.
 
-  Všimněte si následujících o pravidlech:  
+  Všimněte si následujících bodů pravidel:
 
-1. Sadu změn v rámci transakce, které může aktivovat více pravidel. Pravidla jsou obvykle spouštěny, když nejkrajnější transakce se potvrzeny. Jsou prováděna v nespecifikovaném pořadí.  
+1. Sada změn v transakci může aktivovat mnoho pravidel. Pravidla jsou obvykle spouštěna při potvrzení vnější transakce. Jsou spouštěny v nespecifikovaném pořadí.
 
-2. Pravidlo je vždy spuštěn v transakci. Proto není muset vytvořit novou transakci provést změny.  
+2. Pravidlo je vždy spuštěno v rámci transakce. Proto není nutné vytvářet novou transakci, aby bylo možné provádět změny.
 
-3. Pravidla nejsou provedeny, když transakce je vrácena zpět, nebo když se provádí operace vrácení zpět nebo znovu. Tyto operace obnovit veškerý obsah Store do předchozího stavu. Proto pokud vaše pravidlo změní stav něco mimo Store, se nemusí mějte synchronism s Store obsahu. Pokud chcete aktualizovat stav mimo Store, je vhodnější použít události. Další informace najdete v tématu [obslužné rutiny rozšíření změny mimo the Model událostí](../modeling/event-handlers-propagate-changes-outside-the-model.md).  
+3. Pravidla nejsou provedena, pokud je transakce vrácena zpět nebo když jsou provedeny operace vrácení zpět nebo opakování. Tyto operace obnoví veškerý obsah úložiště do předchozího stavu. Proto pokud vaše pravidlo změní stav všeho, co je mimo obchod, nemusí v synchronism s obsahem úložiště zůstat. Chcete-li aktualizovat stav mimo úložiště, je lepší používat události. Další informace najdete v tématu [obslužné rutiny událostí rozšiřovat změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
-4. Některá pravidla jsou spouštěny, když je model načtenou ze souboru. Chcete-li zjistit, jestli je v průběhu načítání nebo ukládání, použijte `store.TransactionManager.CurrentTransaction.IsSerializing`.  
+4. Některá pravidla se spustí, když je model načten ze souboru. Chcete-li určit, zda probíhá načítání nebo ukládání, použijte `store.TransactionManager.CurrentTransaction.IsSerializing`.
 
-5. Pokud vaše pravidlo vytvoří další pravidlo aktivuje, se přidá na konec seznamu jeho spuštění a budou spuštěny před dokončením transakce. DeletedRules jsou spuštěny za všemi ostatními pravidly. Jedno pravidlo můžete spustit v mnoha případech v transakci, jednou pro každou změnu.  
+5. Pokud kód pravidla vytvoří další aktivační procedury pravidel, budou přidány na konec seznamu pro vypálení a spustí se před dokončením transakce. DeletedRules se spustí po všech ostatních pravidlech. Jedno pravidlo může běžet mnohokrát v transakci, a to jednou při každé změně.
 
-6. K předávání informací do a z pravidel, můžete ukládat informace `TransactionContext`. Toto je jenom slovník, který je udržován během transakce. To je uvolněna při transakci skončí. Argumenty události z každé pravidlo poskytnutí přístupu k němu. Mějte na paměti, že pravidla nejsou provedeny v předvídatelné pořadí.  
+6. Chcete-li předat informace do a z pravidel, můžete ukládat informace v `TransactionContext`. Toto je pouze slovník, který je udržován během transakce. Je uvolněna v případě, že transakce skončí. Argumenty události v každém pravidle poskytují přístup k ní. Mějte na paměti, že pravidla se nespouštějí v předvídatelném pořadí.
 
-7. Použijte pravidla po zvážení další možnosti. Pokud chcete aktualizovat při změně hodnoty vlastnosti, představte si třeba použití počítané vlastnosti. Pokud chcete omezit velikost nebo umístění obrazce, použijte `BoundsRule`. Pokud chcete reagovat na změnu v hodnotě vlastnosti, přidejte `OnValueChanged` obslužné rutiny vlastnosti. Další informace najdete v tématu [šířící změny a reakce na](../modeling/responding-to-and-propagating-changes.md).  
+7. Pravidla použijte po zvážení dalších možností. Například pokud chcete aktualizovat vlastnost při změně hodnoty, zvažte použití počítané vlastnosti. Chcete-li omezit velikost nebo umístění tvaru, použijte `BoundsRule`. Pokud chcete reagovat na změnu v hodnotě vlastnosti, přidejte do vlastnosti obslužnou rutinu `OnValueChanged`. Další informace najdete v tématu [reagování na změny a šíření změn](../modeling/responding-to-and-propagating-changes.md).
 
-## <a name="example"></a>Příklad  
- Následující příklad aktualizuje vlastnosti při vytváření instance vztah domény propojení dvou prvků. Toto pravidlo se aktivuje, nikoli pouze v případě, že uživatel vytvoří odkaz v diagramu, ale i pokud programového kódu vytvoří odkaz.  
+## <a name="example"></a>Příklad
+ Následující příklad aktualizuje vlastnost při vytvoření instance doménového vztahu pro propojení dvou prvků. Pravidlo se aktivuje nejen v případě, že uživatel vytvoří odkaz na diagram, ale také v případě, že kód programu vytvoří odkaz.
 
- K otestování v tomto příkladu, vytvoření DSL pomocí šablony toku úkolů řešení a vložte následující kód do souboru v projektu Dsl. Sestavení a spuštění řešení a otevřít ukázkový soubor v ladění projektu. Odkaz na komentář nakreslete mezi obrazec komentáře a prvku toku. V komentáři, změní se na sestavu na nejnovější elementu, který umožňuje připojení.  
+ Tento příklad otestujete tak, že vytvoříte DSL pomocí šablony řešení Flow úlohy a do souboru v projektu DSL vložíte následující kód. Sestavte a spusťte řešení a otevřete vzorový soubor v projektu ladění. Nakreslete odkaz na komentář mezi obrazcem komentáře a prvkem toku. Text v komentáři se změní na sestavu s posledním prvkem, ke kterému jste ho připojili.
 
- V praxi měli byste obvykle napsat DeletRule pro každý AddRule.  
+ V praxi byste obvykle napsali DeleteRule pro každou AddRule.
 
-```  
-using System;  
-using System.Collections.Generic;  
-using System.Linq;  
-using System.Text;  
-using Microsoft.VisualStudio.Modeling;  
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Microsoft.VisualStudio.Modeling;
 
-namespace Company.TaskRuleExample  
-{  
+namespace Company.TaskRuleExample
+{
 
-  [RuleOn(typeof(CommentReferencesSubjects))]  
-  public class RoleRule : AddRule  
-  {  
+  [RuleOn(typeof(CommentReferencesSubjects))]
+  public class RoleRule : AddRule
+  {
 
-    public override void ElementAdded(ElementAddedEventArgs e)  
-    {  
-      base.ElementAdded(e);  
-      CommentReferencesSubjects link = e.ModelElement as CommentReferencesSubjects;  
-      Comment comment = link.Comment;  
-      FlowElement subject = link.Subject;  
-      Transaction current = link.Store.TransactionManager.CurrentTransaction;  
-      // Don't want to run when we're just loading from file:  
-      if (current.IsSerializing) return;  
-      comment.Text = "Flow has " + subject.FlowTo.Count + " outgoing connections";  
-    }  
+    public override void ElementAdded(ElementAddedEventArgs e)
+    {
+      base.ElementAdded(e);
+      CommentReferencesSubjects link = e.ModelElement as CommentReferencesSubjects;
+      Comment comment = link.Comment;
+      FlowElement subject = link.Subject;
+      Transaction current = link.Store.TransactionManager.CurrentTransaction;
+      // Don't want to run when we're just loading from file:
+      if (current.IsSerializing) return;
+      comment.Text = "Flow has " + subject.FlowTo.Count + " outgoing connections";
+    }
 
-  }  
+  }
 
-  public partial class TaskRuleExampleDomainModel  
-  {  
-    protected override Type[] GetCustomDomainModelTypes()  
-    {  
-      List<Type> types = new List<Type>(base.GetCustomDomainModelTypes());  
-      types.Add(typeof(RoleRule));  
-      return types.ToArray();  
-    }  
-  }  
+  public partial class TaskRuleExampleDomainModel
+  {
+    protected override Type[] GetCustomDomainModelTypes()
+    {
+      List<Type> types = new List<Type>(base.GetCustomDomainModelTypes());
+      types.Add(typeof(RoleRule));
+      return types.ToArray();
+    }
+  }
 
-}  
+}
 
-```  
+```
 
-## <a name="see-also"></a>Viz také  
- [Obslužné rutiny události šířící změny mimo Model](../modeling/event-handlers-propagate-changes-outside-the-model.md)   
- [Umístění a velikost obrazce omezení BoundsRules](../modeling/boundsrules-constrain-shape-location-and-size.md)
+## <a name="see-also"></a>Viz také
+ [Obslužné rutiny událostí šíří změny mimo](../modeling/event-handlers-propagate-changes-outside-the-model.md) [umístění a velikost tvaru modelu BoundsRules omezení](../modeling/boundsrules-constrain-shape-location-and-size.md)

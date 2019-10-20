@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání, aktualizace nebo odebrání odkazu na službu WCF Data | Dokumentace Microsoftu'
+title: 'Postupy: Přidání, aktualizace nebo odebrání odkazu na službu WCF Data Service | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -12,86 +12,86 @@ helpviewer_keywords:
 - ADO.NET Data Service reference
 ms.assetid: 892ebf37-3af4-472e-8744-92837677d611
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 970f3828319e2e9c016baa66bb1e5fc2032b81ce
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 89a667e3254be8161d4defb54d524756a5eb02fc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387041"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670009"
 ---
-# <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>Postupy: Přidání, aktualizace nebo odebrání odkazu na datovou službu WCF
+# <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>Postupy: Přidání, aktualizace nebo odebrání odkazu na službu WCF Data Service
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-A *odkaz na službu* umožňuje přístup k jedné nebo více projektu [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)]. Použití **přidat odkaz na službu** dialogové okno pro hledání [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] v aktuálním řešení místně, v místní síti nebo na Internetu.  
-  
- [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
-  
-## <a name="adding-a-service-reference"></a>Přidání odkazu na službu  
-  
-#### <a name="to-add-a-reference-to-an-external-service"></a>Chcete-li přidat odkaz na externí služby  
-  
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na název projektu, který chcete přidat službu a pak klikněte na tlačítko **přidat odkaz na službu**.  
-  
-     **Přidat odkaz na službu** zobrazí se dialogové okno.  
-  
-2. V **adresu** pole, zadejte adresu URL pro službu a pak klikněte na tlačítko **Přejít** k vyhledání služby. Pokud služba implementuje uživatelské jméno a heslo zabezpečení, vám může zobrazit výzva k zadání uživatelského jména a hesla.  
-  
+*Odkaz na službu* umožňuje projektu přístup k jednomu nebo více [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)]. Pomocí dialogového okna **Přidat odkaz na službu** můžete vyhledat [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] v aktuálním řešení, místně, v místní síti nebo na internetu.
+
+ [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
+
+## <a name="adding-a-service-reference"></a>Přidání odkazu na službu
+
+#### <a name="to-add-a-reference-to-an-external-service"></a>Přidání odkazu na externí službu
+
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na název projektu, do kterého chcete službu přidat, a poté klikněte na položku **Přidat odkaz na službu**.
+
+     Zobrazí se dialogové okno **Přidat odkaz na službu** .
+
+2. Do pole **adresa** zadejte adresu URL služby a potom kliknutím na tlačítko **Přejít** vyhledejte službu. Pokud služba implementuje zabezpečení uživatelského jména a hesla, může se zobrazit výzva k zadání uživatelského jména a hesla.
+
     > [!NOTE]
-    > Služby by měly odkazovat pouze z důvěryhodného zdroje. Přidávání odkazů z nedůvěryhodných zdrojů může ohrozit zabezpečení.  
-  
-     Můžete také vybrat adresu URL **adresu** seznam, který ukládá předchozí 15 adresy URL, na kterých byla nalezena platná metadata služby.  
-  
-     Při hledání se zobrazí indikátor průběhu. Hledání v každém okamžiku může ukončit kliknutím na **Zastavit**.  
-  
-3. V **služby** seznamu, rozbalte uzel pro službu, kterou chcete použít a vyberte sadu entit.  
-  
-4. V **Namespace** , zadejte obor názvů, který chcete použít pro odkaz na pole.  
-  
-5. Klikněte na tlačítko **OK** přidáte odkaz na projekt.  
-  
-     Klient služby (proxy) je generován a metadata, která popisuje službu se přidá do souboru app.config.  
-  
-#### <a name="to-add-a-reference-to-a-service-in-the-current-solution"></a>Chcete-li přidat odkaz na službu v aktuálním řešení  
-  
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na název projektu, který chcete přidat službu a pak klikněte na tlačítko **přidat odkaz na službu**.  
-  
-     **Přidat odkaz na službu** zobrazí se dialogové okno.  
-  
-2. Klikněte na tlačítko **zjistit**.  
-  
-     Všechny služby (obojí [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] a služby WCF) v aktuálním řešení se přidají do **služby** seznamu.  
-  
-3. V **služby** seznamu, rozbalte uzel pro službu, kterou chcete použít a vyberte sadu entit.  
-  
-4. V **Namespace** , zadejte obor názvů, který chcete použít pro odkaz na pole.  
-  
-5. Klikněte na tlačítko **OK** přidáte odkaz na projekt.  
-  
-     Klient služby (proxy) je generován a metadata, která popisuje službu se přidá do souboru app.config.  
-  
-## <a name="updating-a-service-reference"></a>Aktualizuje se odkaz na službu  
- Datový Model Entity pro [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] někdy změní. Pokud k tomu dojde, je třeba aktualizovat odkaz na službu.  
-  
-#### <a name="to-update-a-service-reference"></a>Chcete-li aktualizovat odkaz na službu  
-  
-- V **Průzkumníka řešení**, klikněte pravým tlačítkem na odkaz na službu a pak klikněte na tlačítko **aktualizovat odkaz na službu**.  
-  
-     Odkaz je aktualizována z původního umístění a klient služby je vygenerován tak, aby odrážela všechny změny v metadatech, zobrazí se dialogové okno průběhu.  
-  
-## <a name="removing-a-service-reference"></a>Odebírá se odkaz na službu  
- Pokud je již nejsou déle používány odkaz na službu, můžete ho odebrat z vašeho řešení.  
-  
-#### <a name="to-remove-a-service-reference"></a>Chcete-li odebrat odkaz na službu  
-  
-- V **Průzkumníka řešení**, klikněte pravým tlačítkem na odkaz na službu a pak klikněte na tlačítko **odstranit**.  
-  
-     Klient služby bude odebrán z řešení a metadat, který popisuje službu se odebere ze souboru app.config.  
-  
+    > Měli byste odkazovat jenom na služby z důvěryhodného zdroje. Přidání odkazů z nedůvěryhodného zdroje může ohrozit zabezpečení.
+
+     Můžete také vybrat adresu URL ze seznamu **adres** , ve kterém jsou uloženy předchozí 15 adres URL, na kterých byla nalezena platná metadata služby.
+
+     Při provádění vyhledávání se zobrazí indikátor průběhu. Hledání můžete kdykoli zastavit kliknutím na tlačítko **zastavit**.
+
+3. V seznamu **služby** rozbalte uzel pro službu, kterou chcete použít, a vyberte sadu entit.
+
+4. Do pole **obor názvů** zadejte obor názvů, který chcete použít pro referenci.
+
+5. Kliknutím na tlačítko **OK** přidejte odkaz na projekt.
+
+     Je vygenerován klient služby (proxy) a do souboru App. config je přidána metadata, která popisují službu.
+
+#### <a name="to-add-a-reference-to-a-service-in-the-current-solution"></a>Přidání odkazu na službu v aktuálním řešení
+
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na název projektu, do kterého chcete službu přidat, a poté klikněte na položku **Přidat odkaz na službu**.
+
+     Zobrazí se dialogové okno **Přidat odkaz na službu** .
+
+2. Klikněte na tlačítko **zjistit**.
+
+     Do seznamu **služeb** se přidají všechny služby ([!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] i WCF) v aktuálním řešení.
+
+3. V seznamu **služby** rozbalte uzel pro službu, kterou chcete použít, a vyberte sadu entit.
+
+4. Do pole **obor názvů** zadejte obor názvů, který chcete použít pro referenci.
+
+5. Kliknutím na tlačítko **OK** přidejte odkaz na projekt.
+
+     Je vygenerován klient služby (proxy) a do souboru App. config je přidána metadata, která popisují službu.
+
+## <a name="updating-a-service-reference"></a>Aktualizuje se odkaz na službu.
+ Model EDM (Entity Data Model) pro [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] se někdy změní. V takovém případě je nutné aktualizovat odkaz na službu.
+
+#### <a name="to-update-a-service-reference"></a>Aktualizace odkazu na službu
+
+- V **Průzkumník řešení**klikněte pravým tlačítkem na odkaz na službu a pak klikněte na **aktualizovat odkaz na službu**.
+
+     Dialogové okno průběh se zobrazí, když se aktualizuje odkaz z jeho původního umístění a klient služby se znovu vygeneruje, aby odrážel všechny změny v metadatech.
+
+## <a name="removing-a-service-reference"></a>Odebrání odkazu na službu
+ Pokud se už odkaz na službu nepoužívá, můžete ho odebrat z řešení.
+
+#### <a name="to-remove-a-service-reference"></a>Odebrání odkazu na službu
+
+- V **Průzkumník řešení**klikněte pravým tlačítkem na odkaz na službu a pak klikněte na **Odstranit**.
+
+     Klient služby se odebere z řešení a metadata, která popisují službu, se odeberou ze souboru App. config.
+
     > [!NOTE]
-    > Veškerý kód, který odkazuje na odkaz na službu muset odebrat ručně.  
-  
-## <a name="see-also"></a>Viz také  
+    > Jakýkoli kód, který odkazuje na odkaz na službu, bude nutné odebrat ručně.
+
+## <a name="see-also"></a>Viz také
  [Služby Windows Communication Foundation a služby WCF Data Services v sadě Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

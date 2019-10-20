@@ -1,64 +1,61 @@
 ---
-title: 'Krok 2: Spusťte svůj Program | Dokumentace Microsoftu'
+title: 'Krok 2: spuštění programu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: 9a8fe90e-c97b-4e98-b6c8-0c6b3962c49d
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c7e8a28180270a5093bdeb59f45fde9e6838a6ba
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 12bce61c7d860f56142c25dd15dea3ac8ad21f9c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434044"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671862"
 ---
-# <a name="step-2-run-your-program"></a>Krok 2: Spuštění programu
+# <a name="step-2-run-your-program"></a>Krok 2: Spusťte svůj program
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Když vytvoříte nové řešení, sestavíte ve skutečnosti program, který se spouští. Mnoho neprovádí ještě – zobrazí pouze prázdné okno zobrazující **Form1** v záhlaví programu. Ale běží, jak brzy zjistíte.  
-  
- ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo")video verzi tohoto tématu naleznete v tématu [kurz 1: Vytvoření prohlížeče obrázků v jazyce Visual Basic - Video 1](http://go.microsoft.com/fwlink/?LinkId=205209) nebo [kurz 1: Vytvoření prohlížeče obrázků v C# -Video 1](http://go.microsoft.com/fwlink/?LinkId=205199). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídek a jiných prvcích uživatelského rozhraní. Nicméně koncepty a postupy fungují podobně jako v aktuální verzi sady Visual Studio.  
-  
-### <a name="to-run-your-program"></a>Ke spuštění programu  
-  
-1. Použijte jednu z následujících metod ke spuštění programu.  
-  
-    - Zvolte **F5** klíč.  
-  
-    - V panelu nabídky zvolte **ladění**, **spustit ladění**.  
-  
-    - Na panelu nástrojů **spustit ladění** tlačítko, které se zobrazí takto.  
-  
-         ![Spuštění ladění tlačítka panelu nástrojů](../ide/media/express-icondebug.png "Express_IconDebug")  
-Spustit ladění tlačítka panelu nástrojů  
-  
-2. Visual Studio spustí program a zobrazí se okno **Form1** se zobrazí. Následující diagram znázorňuje program, že jste právě vytvořili. Program je spuštěn a můžete se do něj brzo přidávat.  
-  
-     ![Formuláře Windows spuštěný program aplikace](../ide/media/express-firstrun.png "Express_FirstRun")  
-Spuštěn program aplikace Windows Form  
-  
-3. Přejděte zpět do integrovaného vývojového prostředí (IDE) sady Visual Studio a podívejte se na nový panel nástrojů. Když spustíte program zobrazí e další tlačítka na panelu nástrojů. Tato tlačítka umožňují provádět akce, jako je zastavení a spuštění programu a pomáhají sledovat všechny chyby, které je možné, že. V tomto příkladu používáme pouze ho ke spuštění a zastavení programu.  
-  
-     ![Ladění nástrojů](../ide/media/express-debugtoolbar.png "Express_DebugToolbar")  
-Panel nástrojů ladění  
-  
-4. Použijte jednu z následujících metod k zastavení programu.  
-  
-    - Na panelu nástrojů **Zastavit ladění** tlačítko.  
-  
-    - V panelu nabídky zvolte **ladění**, **Zastavit ladění**.  
-  
-    - Výběrem tlačítka X v horním rohu **Form1** okna.  
-  
+Při vytváření nového řešení jste vytvořili program, ve kterém je spuštěný. Ještě mnoho není, ale zobrazuje pouze prázdné okno, které v záhlaví zobrazuje **Form1** . Ale spustí se, jak se chystáte zjistit.
+
+ ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-video 1](http://go.microsoft.com/fwlink/?LinkId=205209) nebo [kurz 1: vytvoření prohlížeče obrázků ve C# videu 1](http://go.microsoft.com/fwlink/?LinkId=205199). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
+
+### <a name="to-run-your-program"></a>Spuštění programu
+
+1. Použijte jednu z následujících metod ke spuštění programu.
+
+    - Klikněte na klávesu **F5** .
+
+    - Na řádku nabídek klikněte na položku **ladit**, **Spustit ladění**.
+
+    - Na panelu nástrojů klikněte na tlačítko **Spustit ladění** , které se zobrazí takto.
+
+         ![Spustit ladění – tlačítko panelu nástrojů](../ide/media/express-icondebug.png "Express_IconDebug") Spustit ladění – tlačítko panelu nástrojů
+
+2. Visual Studio spustí program a zobrazí se okno s názvem **Form1** . Následující diagram znázorňuje program, který jste právě sestavili. Program je spuštěn a později do něj přidáte.
+
+     ![Běžící program aplikace formuláře Windows](../ide/media/express-firstrun.png "Express_FirstRun") Běžící program aplikace formuláře Windows
+
+3. Vraťte se do integrovaného vývojového prostředí (IDE) sady Visual Studio a podívejte se na nový panel nástrojů. Další tlačítka se zobrazí na panelu nástrojů při spuštění programu. Tato tlačítka umožňují provádět akce, jako je zastavení a spuštění programu, a pomohou vám sledovat případné chyby. V tomto příkladu ho pouze používáme ke spuštění a zastavení programu.
+
+     ![Panel nástrojů ladění](../ide/media/express-debugtoolbar.png "Express_DebugToolbar") Panel nástrojů ladění
+
+4. K zastavení programu použijte jednu z následujících metod.
+
+    - Na panelu nástrojů klikněte na tlačítko **Zastavit ladění** .
+
+    - Na řádku nabídek klikněte na položku **ladit**, **Zastavit ladění**.
+
+    - Klikněte na tlačítko X v horním rohu okna **Form1** .
+
     > [!NOTE]
-    > Spustíte-li program zevnitř rozhraní IDE, nazývá *ladění* vzhledem k tomu, že je obvykle děláte za účelem vypátrání a opravení chyb v programu. I když je tento program malý a ve skutečnosti ještě nic neumí, jde stále o skutečný program. Můžete postupujte stejným způsobem ke spuštění a ladění ostatních programů. Další informace o ladění, naleznete v tématu [základy ladicího programu](../debugger/debugger-basics.md).  
-  
-### <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat  
-  
-- Přechod k dalšímu kroku výukového programu naleznete v tématu [krok 3: Nastavte vlastnosti svého formuláře](../ide/step-3-set-your-form-properties.md).  
-  
-- Chcete-li vrátit k předchozímu kroku tutoriálu, přečtěte si téma [krok 1: Vytvořte projekt Formulářové aplikace Windows](../ide/step-1-create-a-windows-forms-application-project.md).
+    > Když spustíte program zevnitř rozhraní IDE, nazývá se to *ladění* , protože to obvykle provedete tak, že v programu vyhledáte a opravíte chyby (chyby). I když je tento program malý a ve skutečnosti ještě nic nedělá, je to stále skutečný program. Stejný postup můžete použít ke spuštění a ladění dalších programů. Další informace o ladění naleznete v tématu [Základy ladicího programu](../debugger/debugger-basics.md).
+
+### <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
+
+- Pokud chcete přejít na další krok kurzu, přečtěte si [článek krok 3: nastavení vlastností formuláře](../ide/step-3-set-your-form-properties.md).
+
+- Chcete-li se vrátit k předchozímu kroku kurzu, přečtěte si téma [Krok 1: vytvoření projektu aplikace model Windows Forms](../ide/step-1-create-a-windows-forms-application-project.md).

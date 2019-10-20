@@ -1,36 +1,32 @@
 ---
-title: Vytváření sad pravidel analýzy kódu vlastní | Dokumentace Microsoftu
+title: Vytváření vlastních sad pravidel analýzy kódu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 ms.assetid: 88db3a0a-1b92-496d-9fae-b2bb980f5933
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f6d848c2f32f51a14c03d8b321f05b6b60143a87
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 19b7079f2a24e6a904a2d1266e7605f0e56e5dae
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142331"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667680"
 ---
 # <a name="creating-custom-code-analysis-rule-sets"></a>Vytváření vlastních sad pravidel Analýzy kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete použít pravidla analýzy kódu pro spravovaný projekt kódu tak, že zadáte sadu pravidel, která obsahuje jeden nebo více pravidel. Sad standardních pravidel společnosti Microsoft poskytují skupin pravidel, která jsou uspořádána podle funkce a hloubku. Pravidla pro pokynů základní návrhu a Microsoft rozšířená pravidla pokynů návrhu například obsahovat pravidla, která se soustřeďují na použitelnosti a udržovatelnosti problémy s přidání důraz na pojmenování pravidla v sadě pravidel Extended.  
-  
- Můžete také vytvořit vlastní sady pravidel, která kombinuje dvě nebo více standardních sad pravidel nebo, který určuje pravidla v jedné nebo více sad standardních pravidel. Uložení vlastního pravidla nastaví na soubor .ruleset a můžete je zadat v několika projektech kódu.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Postupy: Vytvoření vlastní sady pravidel](../code-quality/how-to-create-a-custom-rule-set.md)  
- Popisuje, jak vytvořit vlastní pravidlo nastavit úpravou jednoho nebo více sad standardních pravidel.  
-  
- [Práce s Editorem sad pravidel](../code-quality/working-in-the-code-analysis-rule-set-editor.md)  
- Popisuje způsob použití editoru sad pravidel k seskupení, řazení, filtrování a upravit pravidla analýzy kódu v vlastní sady pravidel.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace sady pravidel nástroje Analýza kódu](../code-quality/code-analysis-rule-set-reference.md)   
- [Analýza kvality spravovaného kódu](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)   
- [Analýza kvality kódu C/C++ pomocí nástroje Analýza kódu](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md)
+Pravidla analýzy kódu můžete použít pro projekt spravovaného kódu zadáním sady pravidel, která obsahuje jedno nebo více pravidel. Standardní sady pravidel společnosti Microsoft poskytují skupiny pravidel, která jsou uspořádána podle funkcí a hloubky. Například pravidla obecných zásad návrhu a pravidla rozšířené zásady návrhu společnosti Microsoft obsahují pravidla, která se zaměřují na problémy s použitelností a udržovatelnosti, s přidáním důrazu na pravidla pojmenování v rozšířené sadě pravidel.
+
+ Můžete také vytvořit vlastní sadu pravidel, která kombinuje dvě nebo více standardních sad pravidel nebo které určují pravidla v jedné nebo více standardních sadách pravidel. Vlastní sady pravidel uložíte do souboru. ruleset a můžete je zadat v několika projektech kódu.
+
+## <a name="in-this-section"></a>V tomto oddílu
+ [Postupy: Vytvoření vlastní sady pravidel](../code-quality/how-to-create-a-custom-rule-set.md) Popisuje, jak vytvořit vlastní sadu pravidel úpravou jedné nebo více standardních sad pravidel.
+
+ [Práce v editoru sad pravidel](../code-quality/working-in-the-code-analysis-rule-set-editor.md) Popisuje způsob použití editoru sad pravidel k seskupování, řazení, filtrování a úpravám pravidel analýzy kódu v sadě vlastních pravidel.
+
+## <a name="see-also"></a>Viz také
+ [Referenční dokumentace sady pravidel analýzy kódu](../code-quality/code-analysis-rule-set-reference.md) [Analýza spravovaného kódu](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md) [Analýza kvalityC++ kódu C/kódu pomocí analýzy kódu](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md)

@@ -1,5 +1,5 @@
 ---
-title: Neutrální jazyky zdrojů pro lokalizaci | Dokumentace Microsoftu
+title: Neutrální jazyky zdrojů pro lokalizaci | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,37 +13,33 @@ helpviewer_keywords:
 - neutral resources
 ms.assetid: ef064995-3b84-4698-a708-9689b7723533
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: da39ed9373daaa1dbef21ad36931ce97ea1f1e1b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 85e0be0172f27732f8efeb882cbcde5b9c6aef3d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62558265"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670391"
 ---
 # <a name="neutral-resources-languages-for-localization"></a>Neutrální jazyky zdrojů pro lokalizaci
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-<xref:System.Resources.NeutralResourcesLanguageAttribute> Třída určuje jazykovou verzi prostředků zahrnuté v hlavním sestavení. Tento atribut se používá jako vylepšení výkonu, tak, aby <xref:System.Resources.ResourceManager> objekt neprohledává za prostředky, které jsou zahrnuty v hlavním sestavení.  
-  
- Následující kód ukazuje, jak nastavit jazyk neutrální prostředky. Kód je možné použít ve skriptu sestavení nebo v souboru AssemblyInfo.vb nebo AssemblyInfo.cs.  
-  
-```vb  
-' Set neutral resources language for assembly.  
-<Assembly: NeutralResourcesLanguageAttribute("en")>  
-  
-```  
-  
-```csharp  
-// Set neutral resources language for assembly.  
-[assembly: NeutralResourcesLanguageAttribute("en")]  
-```  
-  
-## <a name="see-also"></a>Viz také  
- <xref:System.Resources.ResourceManager>   
- [Představení mezinárodních aplikací založených na rozhraní .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md)   
- [Hierarchická organizace zdrojů pro lokalizaci](../ide/hierarchical-organization-of-resources-for-localization.md)   
- [Lokalizace aplikací](../ide/localizing-applications.md)   
- [Globalizace a lokalizace aplikací](../ide/globalizing-and-localizing-applications.md)
+Třída <xref:System.Resources.NeutralResourcesLanguageAttribute> určuje jazykovou verzi prostředků obsažených v hlavním sestavení. Tento atribut se používá jako zvýšení výkonu, aby objekt <xref:System.Resources.ResourceManager> nehledal prostředky, které jsou zahrnuty v hlavním sestavení.
+
+ Následující kód ukazuje, jak nastavit neutrální jazyk prostředků. Kód lze umístit buď do skriptu sestavení, nebo do souboru AssemblyInfo. vb nebo AssemblyInfo.cs.
+
+```vb
+' Set neutral resources language for assembly.
+<Assembly: NeutralResourcesLanguageAttribute("en")>
+
+```
+
+```csharp
+// Set neutral resources language for assembly.
+[assembly: NeutralResourcesLanguageAttribute("en")]
+```
+
+## <a name="see-also"></a>Viz také
+ <xref:System.Resources.ResourceManager> [Seznámení s mezinárodními aplikacemi na základě .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md) [hierarchické organizace prostředků pro lokalizaci](../ide/hierarchical-organization-of-resources-for-localization.md) [aplikací](../ide/localizing-applications.md) [, které využívají globalizaci a lokalizaci aplikací](../ide/globalizing-and-localizing-applications.md)

@@ -1,5 +1,5 @@
 ---
-title: Umístění a velikost obrazce omezení BoundsRules | Dokumentace Microsoftu
+title: Umístění a velikost obrazce omezení BoundsRules | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -8,65 +8,64 @@ helpviewer_keywords:
 - Domain-Specific Language, events
 ms.assetid: 4d08e541-fc67-4e68-bf31-30d346aa2aa0
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d09be82be084767bfb2d300a1877e95456a957b4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7d660189ede0848216eb44d6ef49fe9c93a06ec8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68159663"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672732"
 ---
 # <a name="boundsrules-constrain-shape-location-and-size"></a>Umístění a velikost obrazce omezení BoundsRules
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-A *hranice pravidlo* je třída, která definuje omezení na velikost a umístění obrazce. Poskytuje metodu, která se nazývá opakovaně, když uživatel přetahuje rohů nebo stranách obrazec nebo obrazce.  
-  
- Následující příklad omezí tvorbě obdélníkového tvaru bude panel s pevnou velikostí, vodorovný nebo svislý. Když uživatel přetáhne rohů nebo strany, osnovy převrátí mezi dvě konfigurace povolených výšky a šířky.  
-  
- Rozsah pravidla, je třída odvozena z <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules>. V obrazci je vytvořena instance pravidla:  
-  
-```  
-using Microsoft.VisualStudio.Modeling.Diagrams; ...  
-public partial class BarShape  
-{  
-  /// <summary>  
-  /// Rule invoked when the user is resizing a shape.  
-  /// </summary>  
-  public override BoundsRules BoundsRules  
-  { get { return new BarBoundsRule(); } }  
-}  
-/// <summary>  
-/// Rule invoked when the user is changing a shape's outline.  
-/// Provides real-time mouse rubber-band feedback, so must work fast.  
-/// </summary>  
-public class BarBoundsRule: BoundsRules  
-{   
-  public override RectangleD GetCompliantBounds   
-     (ShapeElement shape, RectangleD proposedBounds)  
-  {  
-    double thickness = 0.1;  
-    if (proposedBounds.Height > proposedBounds.Width)  
-    {  
-      // There is a minimum width for a shape; the width  
-      // will actually be set to the lesser of   
-      // thickness and that minimum.  
-      return new RectangleD(proposedBounds.Location,   
-            new SizeD(thickness, proposedBounds.Height));  
-    }  
-    else  
-    {  
-      // There is a minimum height for a shape; the   
-      // height will actually be set to the lesser of   
-      // thickness and that minimum.  
-      return new RectangleD(proposedBounds.Location,   
-         new SizeD(proposedBounds.Width, thickness));  
-} } }  
-```  
-  
- Všimněte si, že umístění a velikost může být omezena potřebujete.  
-  
-## <a name="see-also"></a>Viz také  
- <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules>   
- [Reagování na změny a šíření změn](../modeling/responding-to-and-propagating-changes.md)
+*Pravidlo vázané na hranice* je třída, která definuje omezení velikosti a umístění tvaru. Poskytuje metodu, která se volá opakovaně, když uživatel přetáhne tvar nebo rohy nebo strany obrazce.
+
+ Následující příklad omezuje obdélníkový tvar tak, aby byl pruhem pevné velikosti, buď vodorovně nebo svisle. Když uživatel přetáhne rohy nebo strany, obrys se Překlopí mezi dvě povolené Konfigurace výšky a šířky.
+
+ Pravidlo Bounds je třída odvozená od <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules>. Instance pravidla se vytvoří v obrazci:
+
+```
+using Microsoft.VisualStudio.Modeling.Diagrams; ...
+public partial class BarShape
+{
+  /// <summary>
+  /// Rule invoked when the user is resizing a shape.
+  /// </summary>
+  public override BoundsRules BoundsRules
+  { get { return new BarBoundsRule(); } }
+}
+/// <summary>
+/// Rule invoked when the user is changing a shape's outline.
+/// Provides real-time mouse rubber-band feedback, so must work fast.
+/// </summary>
+public class BarBoundsRule: BoundsRules
+{
+  public override RectangleD GetCompliantBounds
+     (ShapeElement shape, RectangleD proposedBounds)
+  {
+    double thickness = 0.1;
+    if (proposedBounds.Height > proposedBounds.Width)
+    {
+      // There is a minimum width for a shape; the width
+      // will actually be set to the lesser of
+      // thickness and that minimum.
+      return new RectangleD(proposedBounds.Location,
+            new SizeD(thickness, proposedBounds.Height));
+    }
+    else
+    {
+      // There is a minimum height for a shape; the
+      // height will actually be set to the lesser of
+      // thickness and that minimum.
+      return new RectangleD(proposedBounds.Location,
+         new SizeD(proposedBounds.Width, thickness));
+} } }
+```
+
+ Všimněte si, že umístění i velikost mohou být omezeny, pokud chcete.
+
+## <a name="see-also"></a>Viz také
+ <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules> [reagování na změny a šíření změn](../modeling/responding-to-and-propagating-changes.md)

@@ -1,5 +1,5 @@
 ---
-title: Návrhář aktivity Persist | Dokumentace Microsoftu
+title: Návrhář aktivity trvalého uložení | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -8,34 +8,33 @@ f1_keywords:
 - System.Activities.Statements.Persist.UI
 ms.assetid: be8648dd-3eb9-4a50-8ec1-57a8be804692
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f87997178f98e9e632b756b5a4440c19544b5c86
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 60a63dd4036863641646e85a89f5018cba786802
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62971248"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672628"
 ---
 # <a name="persist-activity-designer"></a>Návrhář aktivity Persist
-**Trvalého** Návrhář aktivity se používá k vytvoření a konfigurace <xref:System.Activities.Statements.Persist> aktivity.  
-  
-## <a name="the-persist-activity"></a>Uchování aktivity  
- <xref:System.Activities.Statements.Persist> Aktivity uloží pracovní postup na disk, pokud je to možné. <xref:System.Activities.Statements.Persist> Aktivitu nelze v zóně není trvalost jako je třeba provést v rámci <xref:System.Activities.Statements.TransactionScope> aktivity. Pokud použijete <xref:System.Activities.Statements.Persist> aktivity v oboru bez trvalost, dojde k výjimce za běhu.  
-  
-### <a name="using-the-persist-activity-designer"></a>Použití Návrhář aktivity Persist  
- **Trvalého** návrháře aktivit najdete v **Runtime** kategorie **nástrojů**, který přistupuje po kliknutí **nástrojů** Karta (případně vyberte možnost **nástrojů** z **zobrazení** nabídky nebo CTRL + ALT + X.)  
-  
- **Trvalého** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřazené k [!INCLUDE[wfd2](../includes/wfd2-md.md)] surface všude, kde aktivity jsou obvykle umístěny, například jako uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří <xref:System.Activities.Statements.Persist> aktivity s výchozím **DisplayName** trvalého. <xref:System.Activities.Activity.DisplayName%2A> Můžete upravovat v záhlaví **trvalého** Návrhář aktivity nebo v **DisplayName** pole mřížku vlastností.  
-  
-### <a name="the-persist-properties"></a>Zachovat vlastnosti  
- Následující tabulka ukazuje <xref:System.Activities.Statements.Persist> vlastnosti a popisuje, jak se používají v návrháři. Tyto vlastnosti můžete upravit v mřížce vlastností a některé z nich bylo možné upravovat ve [!INCLUDE[wfd2](../includes/wfd2-md.md)] povrchu.  
-  
-|Název vlastnosti|Požadováno|Použití|  
-|-------------------|--------------|-----------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Popisný název <xref:System.Activities.Statements.Persist> aktivity. Výchozí hodnota je zachovat. I když zobrazovaný název není bezpodmínečně nutné, je osvědčeným postupem použít zobrazovaný název.|  
-  
-## <a name="see-also"></a>Viz také  
- [Modul runtime](../workflow-designer/runtime-activity-designers.md)   
- [TerminateWorkflow](../workflow-designer/terminateworkflow-activity-designer.md)
+Návrhář **trvalé** aktivity se používá k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.Persist>.
+
+## <a name="the-persist-activity"></a>Aktivita trvalosti
+ Aktivita <xref:System.Activities.Statements.Persist> ukládá pracovní postup na disk, pokud je to možné. Aktivitu <xref:System.Activities.Statements.Persist> nelze provést v zóně bez trvalého uložení, například v rámci aktivity <xref:System.Activities.Statements.TransactionScope>. Pokud používáte aktivitu <xref:System.Activities.Statements.Persist> v oboru, který není trvalý, výjimka je vyvolána za běhu.
+
+### <a name="using-the-persist-activity-designer"></a>Použití návrháře trvalé aktivity
+ Návrháře **trvalých** aktivit lze najít v kategorii **runtime** sady **nástrojů**, ke které se dostanete kliknutím na kartu **panel** nástrojů (případně můžete vybrat možnost **Sada nástrojů** v nabídce **zobrazení** nebo CTRL + ALT + X).)
+
+ Návrhář **trvalé** aktivity lze přetáhnout ze **sady nástrojů** a vyřadit na [!INCLUDE[wfd2](../includes/wfd2-md.md)] plochu všude, kde jsou obvykle umístěny aktivity, například uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří aktivita <xref:System.Activities.Statements.Persist> s výchozím **názvem DisplayName** trvalého uložení. @No__t_0 lze upravit v záhlaví návrháře **trvalé** aktivity nebo v poli **DisplayName** v mřížce vlastností.
+
+### <a name="the-persist-properties"></a>Trvalé vlastnosti
+ V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.Persist> a popisuje, jak se používají v návrháři. Tyto vlastnosti se dají upravovat v mřížce vlastností a některé z nich je možné upravovat na [!INCLUDE[wfd2](../includes/wfd2-md.md)] povrchu.
+
+|Název vlastnosti|Požadováno|Použití|
+|-------------------|--------------|-----------|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Popisný název aktivity <xref:System.Activities.Statements.Persist>. Výchozí hodnota je trvalá. I když zobrazovaný název není nezbytně nutný, je vhodné použít zobrazovaný název.|
+
+## <a name="see-also"></a>Viz také
+ [Běhové](../workflow-designer/runtime-activity-designers.md) [TerminateWorkflow](../workflow-designer/terminateworkflow-activity-designer.md)

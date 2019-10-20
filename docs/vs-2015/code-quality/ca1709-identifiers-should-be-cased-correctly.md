@@ -1,5 +1,5 @@
 ---
-title: 'CA1709: Identifikátory by měly být správně formátováno | Dokumentace Microsoftu'
+title: 'CA1709: identifikátory by měly být použita správně | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,57 +12,57 @@ helpviewer_keywords:
 - IdentifiersShouldBeCasedCorrectly
 ms.assetid: f633d1a7-4ca4-40ae-b207-ec571c5fb083
 caps.latest.revision: 30
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b447b111cedc30aa23f3aaad0fbc964a5d8a2bd2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3c8022a9dfba3012e8c81523b076b7bbfbb6ee8d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68189167"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669184"
 ---
 # <a name="ca1709-identifiers-should-be-cased-correctly"></a>CA1709: Malá a velká písmena identifikátorů by měla být použita správně
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejnovější dokumentaci k sadě Visual Studio, naleznete v tématu [CA1709: Identifikátory by měly být správně formátováno](https://docs.microsoft.com/visualstudio/code-quality/ca1709-identifiers-should-be-cased-correctly).  
-  
-|||  
-|-|-|  
-|TypeName|IdentifiersShouldBeCasedCorrectly|  
-|CheckId|CA1709|  
-|Kategorie|Microsoft.Naming|  
-|Narušující změna|Zásadní – při aktivaci pro sestavení, oborů názvů, typy, členy a parametry.<br /><br /> Bez konce – při vyvolání v parametrech obecného typu.|  
-  
-## <a name="cause"></a>příčina  
- Název identifikátoru není správně formátováno.  
-  
- \- nebo –  
-  
- Název identifikátoru obsahuje dvoupísmenné zkratky a druhý písmena jsou malá písmena.  
-  
- \- nebo –  
-  
- Název identifikátoru obsahuje zkratka tři nebo více velkých písmen.  
-  
-## <a name="rule-description"></a>Popis pravidla  
- Zásady vytváření názvů poskytují obecný vzhled knihovnám využívajících common language runtime. To snižuje učit se, která vyžaduje nové knihovny softwaru a zvyšuje důvěru zákazníků, že byla vyvinuta knihovny někdo, kdo má odborných znalostí v vývoj spravovaného kódu.  
-  
- Podle konvence používají názvy parametrů camelCase; obor názvů, typů a členů názvy používat Pascal velká a malá písmena. V názvu ve formátu camelCase první písmena jsou malá písmena a je první písmeno zbývající slov v názvu na velká písmena. Příklady-ve formátu camelCase názvů, které jsou "packetSniffer", "ioFile" a "fatalErrorCode". Název stylu jazyka Pascal je velké písmeno první písmeno a je první písmeno zbývající slov v názvu na velká písmena. Příklady názvů Pascal malými a velkými písmeny, které jsou "PacketSniffer", "IOFile" a "FatalErrorCode".  
-  
- Toto pravidlo rozdělí slova malých a velkých písmen podle názvu a kontroluje všechny slova dvoupísmenné seznamem běžná slova dvou písmen, jako je například "V" nebo "My". Pokud není nalezena shoda, slovo je považován za zkratka. Kromě toho toto pravidlo předpokládá, že našla zkratka, pokud název obsahuje buď čtyři velká písmena v řádku nebo v řádku na konec názvu tři velká písmena.  
-  
- Podle konvence dvoupísmenné zkratky používat všechna velká písmena a zkratky tři nebo více znaků používat Pascal velká a malá písmena. Následující příklady používají tyto zásady vytváření názvů: "DB", "Vy", "Cpa" a "Ecma". Následující příklady porušují Tato konvence: ' Vstup/výstup', 'XML' a "Amerického ministerstva obrany" a pro názvy nonparameter, "xp" a "panelu".  
-  
- "ID" je speciální malými a velkými písmeny způsobit porušení tohoto pravidla. 'Id' není zkratka, ale je zkratkou pro "Identifikace".  
-  
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení  
- Změňte název tak, že je správně formátováno.  
-  
-## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění  
- Je bezpečné pro potlačení tohoto upozornění, pokud máte vlastní zásady vytváření názvů, nebo pokud tento identifikátor představuje název správný, například název společnosti nebo technologie.  
-  
- Můžete také přidat konkrétní podmínky, zkratky a zkratky, které do vlastního slovníku analýzy kódu. Podmínky zadané ve slovníku nezpůsobí porušení tohoto pravidla. Další informace najdete v tématu [jak: Přizpůsobení slovníku analýzy kódu](../code-quality/how-to-customize-the-code-analysis-dictionary.md)  
-  
-## <a name="related-rules"></a>Související pravidla  
- [CA1708: Identifikátory by se měly lišit o více než velikostí písmen](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [CA1709: identifikátory by měly být použita správně](https://docs.microsoft.com/visualstudio/code-quality/ca1709-identifiers-should-be-cased-correctly).
+
+|||
+|-|-|
+|TypeName|IdentifiersShouldBeCasedCorrectly|
+|CheckId|CA1709|
+|Kategorie|Microsoft. pojmenování|
+|Narušující změna|Přerušení – při vyvolání v sestaveních, oborech názvů, typech, členech a parametrech.<br /><br /> Nerozdělitelné – při vyvolání v parametrech obecného typu|
+
+## <a name="cause"></a>příčina
+ Název identifikátoru není správně použita.
+
+ \- nebo-
+
+ Název identifikátoru obsahuje zkratku se dvěma písmeny a druhé písmeno je malými písmeny.
+
+ \- nebo-
+
+ Název identifikátoru obsahuje akronym o třech nebo více velkých písmenech.
+
+## <a name="rule-description"></a>Popis pravidla
+ Zásady vytváření názvů poskytují běžný vzhled pro knihovny, které cílí na modul CLR (Common Language Runtime). Tím se zmenší výuková křivka, která je požadována pro nové knihovny softwaru, a zvyšuje důvěru zákazníků, že knihovna byla vyvinuta někým, kdo má zkušenosti s vývojem spravovaného kódu.
+
+ Podle konvence názvy parametrů používají ve stylu CamelCase velká a malá písmena; obor názvů, typ a názvy členů používají velká a malá písmena Pascal. V názvu ve stylu CamelCase-použita je první písmeno malé písmeno a první písmeno všech zbývajících slov v názvu je velkými písmeny. Příklady názvů ve stylu CamelCase-použita jsou "packetSniffer", "ioFile" a "fatalErrorCode". V názvu Pascal-použita je první písmeno velkými písmeny a první písmeno všech zbývajících slov v názvu je velkými písmeny. Příklady názvů Pascal-použita jsou "PacketSniffer", "IOFile" a "FatalErrorCode".
+
+ Toto pravidlo rozdělí název na slova na základě velkých a malých písmen a kontroluje všechna slova v seznamu běžných dvou písmen, například "in" nebo "my". Pokud se shoda nenajde, slovo se považuje za akronym. Kromě toho toto pravidlo předpokládá, že našla akronym, když název obsahuje buď čtyři velká písmena v řádku, nebo tři velká písmena v řádku na konci názvu.
+
+ Podle konvence používají akronym se dvěma písmeny všechna velká písmena a akronymy se třemi nebo více znaky používají velká a malá písmena Pascal. V následujících příkladech se používají tyto zásady vytváření názvů: ' DB ', ' CR ', ' CPA ' a ' ECMA '. Následující příklady porušují konvenci: ' IO ', ' XML ' a ' DoD ' a pro názvy neparametrs, ' XP ' a ' cpl '.
+
+ ' ID ' je speciální – použita způsob porušení tohoto pravidla. ' ID ' není akronym, ale zkratka pro ' Identification '.
+
+## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+ Změňte název tak, aby byl použita správně.
+
+## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
+ Toto upozornění je bezpečné potlačit, pokud máte vlastní konvence pojmenování, nebo pokud identifikátor představuje správný název, například název společnosti nebo technologie.
+
+ Můžete také přidat konkrétní výrazy, zkratky a zkratky, které jsou k vlastnímu slovníku nástroje Code Analysis. U podmínek zadaných ve vlastním slovníku nebude porušení tohoto pravidla způsobovat. Další informace najdete v tématu [Postup: přizpůsobení slovníku analýzy kódu.](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
+
+## <a name="related-rules"></a>Související pravidla
+ [CA1708: Identifikátory by se měly lišit více než použitím malých a velkých písmen](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)

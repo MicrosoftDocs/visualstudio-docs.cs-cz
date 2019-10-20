@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Použití příkazu Obklopit s fragmenty kódu | Dokumentace Microsoftu'
+title: 'Postupy: použití příkazu obklopit s fragmenty kódu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,55 +9,54 @@ helpviewer_keywords:
 - snippets [C#], using Surround With
 ms.assetid: 23e5288e-7897-417a-9ded-cf60dfc889ee
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f2fd696e5d1ac30fda19a53490bd494305d4fd82
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cdb635854d298b8a1eabc81019f7b18c2f50eecc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68186152"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670554"
 ---
-# <a name="how-to-use-surround-with-code-snippets"></a>Postupy: Použití příkazu Obklopit s fragmenty kódu
+# <a name="how-to-use-surround-with-code-snippets"></a>Postupy: Použití příkazu Obklopit s s fragmenty kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Následující postupy popisují způsob použití příkazu Obklopit s fragmenty kódu. Obklopit s fragmenty kódu jsou k dispozici tři způsoby: pomocí klávesové zkratky, prostřednictvím nabídky Úpravy a v místní nabídce.  
-  
-### <a name="to-use-surround-with-code-snippets-through-keyboard-shortcut"></a>Použití příkazu Obklopit s fragmenty kódu pomocí klávesové zkratky  
-  
-1. V sadě Visual Studio IDE otevřete soubor, který chcete upravit.  
-  
-2. V editoru kódu, vyberte text, který se před a za.  
-  
-3. Zadejte CTRL + K, CTRL + S.  
-  
-4. Fragment kódu vyberte ze seznamu fragment kódu pomocí myši nebo zadáním názvu fragmentu kódu a stisknutím klávesy TAB nebo ENTER.  
-  
-### <a name="to-use-surround-with-code-snippets-through-the-edit-menu"></a>Použití příkazu Obklopit s fragmenty kódu prostřednictvím nabídky Upravit  
-  
-1. V sadě Visual Studio IDE otevřete soubor, který chcete upravit.  
-  
-2. V editoru kódu, vyberte text, který se před a za.  
-  
-3. Z **upravit** nabídce vyberte možnost **IntelliSense** a pak vyberte **obklopit fragmentem** příkazu.  
-  
-4. Vyberte fragment kódu z Vkládací modul fragmentu kódu a stiskněte klávesu tabulátor nebo ENTER.  
-  
-     Můžete případně zadejte název fragmentu kódu a stiskněte klávesu tabulátor nebo ENTER.  
-  
-### <a name="to-use-surround-with-code-snippets-through-the-context-menu"></a>Použití příkazu Obklopit s fragmenty kódu pomocí místní nabídky  
-  
-1. V sadě Visual Studio IDE otevřete soubor, který chcete upravit.  
-  
-2. V editoru kódu, vyberte text, který se před a za.  
-  
-3. Klikněte pravým tlačítkem na vybraný text a pak vyberte **obklopit fragmentem** příkazu v místní nabídce.  
-  
-4. Vyberte fragment kódu z Vkládací modul fragmentu kódu a stiskněte klávesu tabulátor nebo ENTER.  
-  
-     Můžete případně zadejte název fragmentu kódu a stiskněte klávesu tabulátor nebo ENTER.  
-  
-## <a name="see-also"></a>Viz také  
- [Fragmenty kódu jazyka Visual C#](../ide/visual-csharp-code-snippets.md)   
- [Sběrač fragmentů kódu](../ide/reference/code-snippet-picker.md)
+Následující postupy popisují, jak používat funkce obklopit s fragmenty kódu. Obklopit – pomocí fragmentů kódu jsou k dispozici tři způsoby: prostřednictvím klávesové zkratky, pomocí nabídky upravit a pomocí kontextové nabídky.
+
+### <a name="to-use-surround-with-code-snippets-through-keyboard-shortcut"></a>Použití příkazu obklopit s fragmenty kódu prostřednictvím klávesové zkratky
+
+1. V integrovaném vývojovém prostředí sady Visual Studio otevřete soubor, který máte v úmyslu upravit.
+
+2. V editoru kódu vyberte text k obklopení.
+
+3. Zadejte CTRL + K, CTRL + S.
+
+4. Vyberte fragment kódu ze seznamu fragmentů kódu pomocí myši nebo zadáním názvu fragmentu kódu a stisknutím klávesy TAB nebo ENTER.
+
+### <a name="to-use-surround-with-code-snippets-through-the-edit-menu"></a>Použití příkazu obklopit s fragmenty kódu prostřednictvím nabídky upravit
+
+1. V integrovaném vývojovém prostředí sady Visual Studio otevřete soubor, který máte v úmyslu upravit.
+
+2. V editoru kódu vyberte text k obklopení.
+
+3. V nabídce **Upravit** vyberte **IntelliSense** a pak vyberte příkaz **s ohraničením** .
+
+4. Vyberte fragment kódu z Inserter fragmentu kódu a stiskněte tabulátor nebo ENTER.
+
+     Případně můžete zadat název fragmentu kódu a stisknout klávesu TAB nebo ENTER.
+
+### <a name="to-use-surround-with-code-snippets-through-the-context-menu"></a>Použití příkazu obklopit s fragmenty kódu v místní nabídce
+
+1. V integrovaném vývojovém prostředí sady Visual Studio otevřete soubor, který máte v úmyslu upravit.
+
+2. V editoru kódu vyberte text k obklopení.
+
+3. Klikněte pravým tlačítkem myši na vybraný text a potom v místní nabídce vyberte příkaz **uzavřít pomocí** příkazu.
+
+4. Vyberte fragment kódu z Inserter fragmentu kódu a stiskněte tabulátor nebo ENTER.
+
+     Případně můžete zadat název fragmentu kódu a stisknout klávesu TAB nebo ENTER.
+
+## <a name="see-also"></a>Viz také
+ [Visual C# Code fragmenty](../ide/visual-csharp-code-snippets.md) – [výběr fragment kódu](../ide/reference/code-snippet-picker.md)

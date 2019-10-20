@@ -3,17 +3,17 @@ title: Úpravy stylu objektů
 titleSuffix: Blend for Visual Studio
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 44c7cdc4de5e67c73f5ebab40de75d7dcb484ed9
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 225a9e85493711a1e2903c1f6a632ae68f31136f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451008"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668826"
 ---
 # <a name="modify-the-style-of-objects-in-blend-for-visual-studio"></a>Úprava stylu objektů v Blend pro Visual Studio
 
@@ -75,7 +75,7 @@ V dialogovém okně **vytvořit prostředek stylu** můžete buď pojmenovat sty
 
 > [!NOTE]
 > Pro každý typ ovládacího prvku nelze vytvářet styly ani šablony. Pokud je ovládací prvek nepodporuje, tlačítko s popisem cesty se nezobrazí nad návrhovou plochou.
-> Chcete-li se vrátit do oboru úprav hlavního dokumentu, klikněte na příkaz **vrátit rozsah a** ![Return rozsah na ikonu @ no__t-2.
+> Pokud se chcete vrátit do oboru úprav hlavního dokumentu, klikněte na **vrátit rozsah a** ![Return rozsah na ikonu ](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png).
 
 ### <a name="apply-a-style-or-template-to-a-control"></a>Použití stylu nebo šablony pro ovládací prvek
 
@@ -93,7 +93,7 @@ Vizuální stavy umožňují změnit vzhled ovládacího prvku na základě jeho
 
 ![Myš nad stavem](../designers/media/a95c671a-5639-40b9-83db-1e6b214330d5.png)
 
-**Podívejte se na krátké video:** @no__t 1Play tlačítko @ no__t-2 [spravovat stav ovládacích prvků WPF](https://www.youtube.com/watch?v=m0PlkF5i6uw).
+**Podívejte se na krátké video:** ![Play tlačítko ](../designers/media/bldadminconsoleinitialconfigicon.PNG) [spravovat stav ovládacích prvků WPF](https://www.youtube.com/watch?v=m0PlkF5i6uw).
 
 ## <a name="resources-create-colors-styles-and-templates-and-reuse-them-later"></a>Prostředky: vytvořit barvy, styly a šablony a později je znovu použít
 

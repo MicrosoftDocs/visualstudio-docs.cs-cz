@@ -6,28 +6,28 @@ ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: 745d74ae-e48c-4fd9-a755-4354b81b9f8a
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5aeeb8bf9ec70a7288316c8b4c6baa337c232621
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 3fdedf3fd9463b25e2c825a0a2d43b069049a2cb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871728"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671232"
 ---
 # <a name="run-unit-tests-on-uml-extensions"></a>Spouštění testování částí v rozšířeních UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Abychom vám pomohli udržet kód v průběhu po sobě jdoucích změn, doporučujeme napsat testy jednotek a provádět je v rámci běžného procesu sestavení. Další informace najdete v tématu [svůj kód testu jednotek](../test/unit-test-your-code.md). Chcete-li nastavit testy pro rozšíření modelování sady Visual Studio, budete potřebovat některé klíčové informace. Souhrn:
+Abychom vám pomohli udržet kód v průběhu po sobě jdoucích změn, doporučujeme napsat testy jednotek a provádět je v rámci běžného procesu sestavení. Další informace najdete v tématu [testování částí kódu](../test/unit-test-your-code.md). Chcete-li nastavit testy pro rozšíření modelování sady Visual Studio, budete potřebovat některé klíčové informace. V souhrnu:
 
 - [Nastavení testu jednotek pro rozšíření VSIX](#Host)
 
-   Spusťte testy s hostitelským adaptérem sady VS IDE. Každou testovací metodu nahraďte `[HostType("VS IDE")]`předponou. Tento hostitelský adaptér se [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] spustí při spuštění testů.
+   Spusťte testy s hostitelským adaptérem sady VS IDE. Každou testovací metodu zaprefixujte pomocí `[HostType("VS IDE")]`. Tento hostitelský adaptér se spustí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] při spuštění testů.
 
 - [Přístup k DTE a úložišti ModelStore](#DTE)
 
-   Obvykle budete muset otevřít model a jeho diagramy a získat přístup `IModelStore` k při inicializaci testu.
+   Obvykle budete muset otevřít model a jeho diagramy a přistupovat k `IModelStore` při inicializaci testu.
 
 - [Otevření diagramu modelu](#Opening)
 
@@ -35,7 +35,7 @@ Abychom vám pomohli udržet kód v průběhu po sobě jdoucích změn, doporuč
 
 - [Provádění změn ve vláknu UI](#UiThread)
 
-   Testy, které provádějí změny v úložišti modelu, musí být provedeny ve vlákně UI. K tomu můžete `Microsoft.VSSDK.Tools.VsIdeTesting.UIThreadInvoker` použít.
+   Testy, které provádějí změny v úložišti modelu, musí být provedeny ve vlákně UI. Pro tuto možnost můžete použít `Microsoft.VSSDK.Tools.VsIdeTesting.UIThreadInvoker`.
 
 - [Testování příkazů, gest a dalších komponent MEF](#MEF)
 
@@ -53,15 +53,15 @@ Abychom vám pomohli udržet kód v průběhu po sobě jdoucích změn, doporuč
 ## <a name="Host"></a>Nastavení testu jednotek pro rozšíření VSIX
  Metody v rozšířeních modelování obvykle pracují s diagramem, který je již otevřen. Metody používají importy MEF, například **IDiagramContext** a **ILinkedUndoContext**. Vaše testovací prostředí musí nastavit tento kontext před spuštěním testů.
 
-#### <a name="to-set-up-a-unit-test-that-executes-in-includevsprvsincludesvsprvs-mdmd"></a>Nastavení testu jednotek, který se spustí v[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
+#### <a name="to-set-up-a-unit-test-that-executes-in-includevsprvsincludesvsprvs-mdmd"></a>Nastavení testu jednotek, který se provádí v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
 
 1. Vytvořte projekt rozšíření UML a projekt testování částí.
 
     1. **Projekt rozšíření UML.** Obvykle to vytvoříte pomocí šablon projektů pro příkazy, gesta nebo ověřování. Například viz [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
 
-    2. **Projekt testování částí.** Další informace najdete v tématu [svůj kód testu jednotek](../test/unit-test-your-code.md).
+    2. **Projekt testování částí.** Další informace najdete v tématu [testování částí kódu](../test/unit-test-your-code.md).
 
-2. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Vytvořte řešení, které obsahuje projekt modelování UML. Toto řešení budete používat jako počáteční stav vašich testů. Mělo by být oddělené od řešení, ve kterém zapisujete rozšíření UML a testy jednotek. Další informace najdete v tématu [vytváření projektů a diagramů modelování UML](../modeling/create-uml-modeling-projects-and-diagrams.md).
+2. Vytvořte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení, které obsahuje projekt modelování UML. Toto řešení budete používat jako počáteční stav vašich testů. Mělo by být oddělené od řešení, ve kterém zapisujete rozšíření UML a testy jednotek. Další informace najdete v tématu [vytváření projektů a diagramů modelování UML](../modeling/create-uml-modeling-projects-and-diagrams.md).
 
 3. **V projektu rozšíření UML**upravte soubor. csproj jako text a ujistěte se, že následující řádky ukazují `true`:
 
@@ -82,24 +82,24 @@ Abychom vám pomohli udržet kód v průběhu po sobě jdoucích změn, doporuč
 
     - *Váš projekt rozšíření UML*
 
-    - **EnvDTE.dll**
+    - **EnvDTE. dll**
 
-    - **Microsoft.VisualStudio.ArchitectureTools.Extensibility.dll**
+    - **Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost. dll**
 
-    - **Microsoft.VisualStudio.ComponentModelHost.dll**
+    - **Microsoft. VisualStudio. ComponentModelHost. dll**
 
-    - **Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll**
+    - **Microsoft. VisualStudio. QualityTools. UnitTestFramework. dll**
 
-    - **Microsoft.VisualStudio.Uml.Interfaces.dll**
+    - **Microsoft. VisualStudio. Uml. Interfaces. dll**
 
-    - **Microsoft.VSSDK.TestHostFramework.dll**
+    - **Microsoft. VSSDK. TestHostFramework. dll**
 
-6. Prefixujte atribut `[HostType("VS IDE")]` na každou testovací metodu, včetně inicializačních metod.
+6. Prefixujte atribut `[HostType("VS IDE")]` ke každé testovací metodě, včetně inicializačních metod.
 
      Tím se zajistí, že se test spustí v experimentální instanci aplikace Visual Studio.
 
 ## <a name="DTE"></a>Přístup k DTE a úložišti ModelStore
- Napište metodu pro otevření projektu modelování v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Obvykle je vhodné otevřít řešení pouze jednou v každém testovacím běhu. Chcete-li spustit metodu pouze jednou, předponu metody s `[AssemblyInitialize]` atributem. Nezapomeňte, že pro každou testovací metodu budete potřebovat také atribut [HostType ("VS IDE")].  Příklad:
+ Napíšete metodu pro otevření projektu modelování v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Obvykle je vhodné otevřít řešení pouze jednou v každém testovacím běhu. Chcete-li spustit metodu pouze jednou, předponu metody s atributem `[AssemblyInitialize]`. Nezapomeňte, že pro každou testovací metodu budete potřebovat také atribut [HostType ("VS IDE")].  Příklad:
 
 ```csharp
 using EnvDTE;
@@ -167,7 +167,7 @@ namespace UnitTests
  Pokud instance <xref:EnvDTE.Project?displayProperty=fullName> představuje projekt modelování, můžete jej přetypovat na a z [IModelingProject](/previous-versions/ee789474(v=vs.140)).
 
 ## <a name="Opening"></a>Otevření diagramu modelu
- Pro každý test nebo třídu testů obvykle chcete pracovat s otevřeným diagramem. Následující příklad používá `[ClassInitialize]` atribut, který spustí tuto metodu před jinými metodami v této třídě testu. Znovu nezapomeňte, že pro každou testovací metodu budete potřebovat také atribut [HostType ("VS IDE")]:
+ Pro každý test nebo třídu testů obvykle chcete pracovat s otevřeným diagramem. Následující příklad používá atribut `[ClassInitialize]`, který spustí tuto metodu před jinými metodami v této třídě testu. Znovu nezapomeňte, že pro každou testovací metodu budete potřebovat také atribut [HostType ("VS IDE")]:
 
 ```csharp
 //
@@ -232,7 +232,7 @@ using Microsoft.VSSDK.Tools.VsIdeTesting;
 ```
 
 ## <a name="MEF"></a>Testování příkazu, gesta a dalších komponent MEF
- Komponenty MEF používají deklarace vlastností, které mají `[Import]` atribut a jehož hodnoty jsou nastaveny podle jejich hostitelů. Obvykle tyto vlastnosti zahrnují IDiagramContext, SVsServiceProvider a ILinkedUndoContext. Při testování metody, která používá některou z těchto vlastností, je nutné před spuštěním testované metody nastavit jejich hodnoty. Například pokud jste napsali rozšíření příkazu podobné tomuto kódu:
+ Komponenty MEF používají deklarace vlastností, které mají atribut `[Import]` a jehož hodnoty jsou nastaveny podle jejich hostitelů. Obvykle tyto vlastnosti zahrnují IDiagramContext, SVsServiceProvider a ILinkedUndoContext. Při testování metody, která používá některou z těchto vlastností, je nutné před spuštěním testované metody nastavit jejich hodnoty. Například pokud jste napsali rozšíření příkazu podobné tomuto kódu:
 
 ```
 
@@ -287,7 +287,7 @@ using Microsoft.VSSDK.Tools.VsIdeTesting;
 ...}
 ```
 
- Pokud chcete otestovat metodu, která přebírá importovanou vlastnost jako parametr, můžete importovat vlastnost do vaší třídy testu a použít `SatisfyImportsOnce` ji na testovací instanci. Příklad:
+ Pokud chcete otestovat metodu, která přebírá importovanou vlastnost jako parametr, můžete importovat vlastnost do vaší třídy testu a použít `SatisfyImportsOnce` pro testovací instanci. Příklad:
 
 ```
 
@@ -376,7 +376,7 @@ testInstance.PublicMethod1();
 Assert.AreEqual("hello", testInstance.privateField1_Accessor);
 ```
 
- Definování přístupových objektů pomocí reflexe je to způsob, který doporučujeme nejméně. Starší verze [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nástroje poskytují nástroj, který automaticky vytvořil přístupovou metodu pro každou soukromou metodu. I když je to pohodlné, naše prostředí má za následek to, že má za následek testy jednotek, které jsou velmi silně spojeny s interní strukturou aplikace, kterou testuje. Výsledkem je další práce při změně požadavků nebo architektury, protože testy je třeba změnit společně s implementací. Všechny chybné předpoklady v návrhu implementace jsou také integrovány do testů, takže testy nenaleznou chyby.
+ Definování přístupových objektů pomocí reflexe je to způsob, který doporučujeme nejméně. Starší verze [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] poskytly nástroj, který automaticky vytvořil přístupovou metodu pro každou soukromou metodu. I když je to pohodlné, naše prostředí má za následek to, že má za následek testy jednotek, které jsou velmi silně spojeny s interní strukturou aplikace, kterou testuje. Výsledkem je další práce při změně požadavků nebo architektury, protože testy je třeba změnit společně s implementací. Všechny chybné předpoklady v návrhu implementace jsou také integrovány do testů, takže testy nenaleznou chyby.
 
 ## <a name="see-also"></a>Viz také
  [Anatomie testu jednotek](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144) [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md) [UML – rychlý zápis pomocí textu](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)

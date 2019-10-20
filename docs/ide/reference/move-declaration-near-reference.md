@@ -1,45 +1,45 @@
 ---
-title: Přesunutí proměnné deklarace do blízkosti odkazu
+title: Přesunout deklaraci proměnné poblíž odkazu
 ms.date: 01/26/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: e23c5c8d6ea0895f9e5a78e726bb7a7cede071bb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c0a82b48a556e26866393661d4b87836db765abb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62540593"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666502"
 ---
-# <a name="move-declaration-near-reference-refactoring"></a>Přesunutí deklarace do blízkosti odkazu refaktoring
+# <a name="move-declaration-near-reference-refactoring"></a>Přesunout deklaraci do blízkosti referenčního faktoru
 
 Tento refaktoring platí pro:
 
 - C#
 
-**Co:** Umožňuje přechod deklarace proměnných blíž k jejich využití.
+**Co:** Umožňuje přesunout deklarace proměnných blíž na jejich použití.
 
-**Kdy:** Deklarace proměnných, které mohou být v užší máte.
+**Když:** Máte deklarace proměnných, které mohou být v užším oboru.
 
-**Proč:** To může nechte, jak je, ale mohou způsobit problémy čitelnost nebo skrytí informace. Toto je příležitost dobře se Refaktorovat pro lepší čitelnost.
+**Proč:** Můžete ponechat, jak je, ale to může způsobit problémy s čitelností nebo skrývání informací. Je to možnost Refaktorovat, aby se zlepšila čitelnost.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte ukazatel myši v deklaraci proměnné.
+1. Umístěte kurzor do deklarace proměnné.
 
 1. Dále proveďte jednu z následujících akcí:
 
-   - **Klávesnice**
-      - Stisknutím klávesy **Ctrl**+**.** aktivační událost **rychlé akce a Refaktoringy** nabídky a vybereme **přesunutí deklarace do blízkosti odkazu** z automaticky otevíraného okna okno náhledu.
-   - **Myši**
-      - Klikněte pravým tlačítkem na kód, vyberte **rychlé akce a Refaktoringy** nabídky a vybereme **přesunutí deklarace do blízkosti odkazu** z automaticky otevíraného okna okno náhledu.
+   - **Kombinace**
+      - Stiskněte klávesu **Ctrl** + **.** Chcete-li aktivovat nabídku **rychlé akce a refaktoring** a v místní nabídce okna náhledu vyberte **přesunout deklaraci deklarace v blízkosti odkazu** .
+   - **Stisknut**
+      - Klikněte na kód pravým tlačítkem, vyberte nabídku **rychlé akce a refaktoring** a v místní nabídce okna Náhled vyberte **přesunout deklaraci deklarace v blízkosti odkazu** .
 
-1. Až budete spokojení s změny, stiskněte klávesu **Enter** nebo klikněte na opravit v nabídce a změny budou potvrzeny.
+1. Až budete s změnou spokojeni, stiskněte klávesu **ENTER** nebo klikněte na opravit v nabídce a změny se potvrdí.
 
 Příklad:
 

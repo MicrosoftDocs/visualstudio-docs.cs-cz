@@ -1,5 +1,5 @@
 ---
-title: 'CA2224: Přepište equals při přetížení operátoru rovnosti | Dokumentace Microsoftu'
+title: 'CA2224: přepište Equals při přetížení operátoru rovnosti | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - CA2224
 ms.assetid: 7312afd9-84ba-417f-923e-7a159b53bf70
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b4c16ed5858f18456af59c4cc26f2e0d56e6006a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d35052bb2a1efb1a466ffc67c95c83e5b3a76533
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142470"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671882"
 ---
 # <a name="ca2224-override-equals-on-overloading-operator-equals"></a>CA2224: Přepište Equals při přetížení operátoru rovnosti
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,85 +30,85 @@ ms.locfileid: "68142470"
 |-|-|
 |TypeName|OverrideEqualsOnOverloadingOperatorEquals|
 |CheckId|CA2224|
-|Kategorie|Microsoft.Usage|
-|Narušující změna|Pevné|
+|Kategorie|Microsoft. Usage|
+|Narušující změna|Bez přerušení|
 
 ## <a name="cause"></a>příčina
  Veřejný typ implementuje operátor rovnosti, ale nepřepisuje <xref:System.Object.Equals%2A?displayProperty=fullName>.
 
 ## <a name="rule-description"></a>Popis pravidla
- Operátor rovnosti má být syntakticky pohodlný způsob, jak přistupovat k funkcím <xref:System.Object.Equals%2A> metody. Pokud se rozhodnete implementovat operátor rovnosti, musí být shodná s svou logikou <xref:System.Object.Equals%2A>.
+ Operátor rovnosti má být syntakticky pohodlný způsob, jak získat přístup k funkcím metody <xref:System.Object.Equals%2A>. Při implementaci operátoru rovnosti musí být jeho logika shodná s <xref:System.Object.Equals%2A>.
 
- Kompilátor jazyka C# vyvolá upozornění, pokud váš kód poruší toto pravidlo.
+ C# Kompilátor vydá upozornění, pokud váš kód narušuje toto pravidlo.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, buď odstranit implementace operátoru rovnosti, nebo přepsat <xref:System.Object.Equals%2A> a mít dvě metody vrací stejné hodnoty. Pokud operátor rovnosti nezavádí nekonzistentní chování, porušení zásad můžete vyřešit tím, že poskytuje implementace <xref:System.Object.Equals%2A> , která volá <xref:System.Object.Equals%2A> metodu v základní třídě.
+ Chcete-li opravit porušení tohoto pravidla, měli byste buď odebrat implementaci operátoru rovnosti, nebo přepsat <xref:System.Object.Equals%2A> a mít dvě metody vracet stejné hodnoty. Pokud operátor rovnosti nezavádí nekonzistentní chování, můžete opravit porušení poskytnutím implementace <xref:System.Object.Equals%2A>, která volá metodu <xref:System.Object.Equals%2A> v základní třídě.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění tohoto pravidla, je-li operátor rovnosti vrací stejnou hodnotu jako zděděná implementace metody <xref:System.Object.Equals%2A>. Vzorový oddíl obsahuje typ, který může bezpečně potlačit upozornění tohoto pravidla.
+ V případě, že operátor rovnosti vrací stejnou hodnotu jako zděděnou implementaci <xref:System.Object.Equals%2A>, je bezpečné potlačit upozornění od tohoto pravidla. Oddíl příkladu obsahuje typ, který by mohl bezpečně potlačit upozornění od tohoto pravidla.
 
-## <a name="examples-of-inconsistent-equality-definitions"></a>Příklady definice nekonzistentní rovnosti
+## <a name="examples-of-inconsistent-equality-definitions"></a>Příklady nekonzistentních definic rovnosti
 
 ### <a name="description"></a>Popis
- Následující příklad ukazuje typ s nekonzistentní definice rovnosti. `BadPoint` Změní význam rovnosti poskytnutím vlastní implementace operátoru rovnosti, ale nepřepisuje <xref:System.Object.Equals%2A> tak, aby se chová stejně.
+ Následující příklad ukazuje typ s nekonzistentními definicemi rovnosti. `BadPoint` mění význam rovnosti tím, že poskytuje vlastní implementaci operátoru rovnosti, ale nepřepisuje <xref:System.Object.Equals%2A> tak, aby se choval stejně.
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Usage.OperatorEqualsRequiresEquals#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperatorEqualsRequiresEquals/cs/FxCop.Usage.OperatorEqualsRequiresEquals.cs#1)]
 
 ## <a name="example"></a>Příklad
- Následující kód testy chování `BadPoint`.
+ Následující kód testuje chování `BadPoint`.
 
  [!code-csharp[FxCop.Usage.TestOperatorEqualsRequiresEquals#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.TestOperatorEqualsRequiresEquals/cs/FxCop.Usage.TestOperatorEqualsRequiresEquals.cs#1)]
 
  Tento příklad vytvoří následující výstup.
 
- **= ([0] 1,1) a, b = ([1] 2,2) jsou stejné? Ne**
- **== b? Ne**
-**a1 a a jsou stejná? Ano**
-**a1 ==? Ano**
-**b a bcopy jsou stejné? Ne**
-**b == bcopy? Ano**
+ **a = ([0] 1, 1) a b = ([1] 2, 2) jsou stejné? Bez** 
+**a = b? **Neodpovídají žádné 
+**a1 a a. Ano** 
+**a1 = = a? Ano** 
+**b a bcopy jsou stejné? **Ne
+**b = = bcopy? Ano**
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ, který technicky poruší toto pravidlo, ale nechová nekonzistentní způsobem.
+ Následující příklad ukazuje typ, který je technicky v rozporu s tímto pravidlem, ale nepracuje nekonzistentním způsobem.
 
  [!code-csharp[FxCop.Usage.ValueTypeEquals#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.ValueTypeEquals/cs/FxCop.Usage.ValueTypeEquals.cs#1)]
 
 ## <a name="example"></a>Příklad
- Následující kód testy chování `GoodPoint`.
+ Následující kód testuje chování `GoodPoint`.
 
  [!code-csharp[FxCop.Usage.TestValueTypeEquals#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.TestValueTypeEquals/cs/FxCop.Usage.TestValueTypeEquals.cs#1)]
 
  Tento příklad vytvoří následující výstup.
 
- **= (1,1) a, b = (2,2) jsou stejné? Ne**
- **== b? Ne**
-**a1 a a jsou stejná? Ano**
-**a1 ==? Ano**
-**b a bcopy jsou stejné? Ano**
-**b == bcopy? Ano**
+ **a = (1, 1) a b = (2, 2) jsou stejné? Bez** 
+**a = b? **Neodpovídají žádné 
+**a1 a a. Ano** 
+**a1 = = a? Ano** 
+**b a bcopy jsou stejné? Ano** 
+**b = = bcopy? Ano**
 ## <a name="class-example"></a>Příklad třídy
 
 ### <a name="description"></a>Popis
- Následující příklad ukazuje třídu (odkaz), který porušuje tato pravidla.
+ Následující příklad ukazuje třídu (odkazový typ), která toto pravidlo porušuje.
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Usage.OverrideEqualsClassViolation#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OverrideEqualsClassViolation/cs/FxCop.Usage.OverrideEqualsClassViolation.cs#1)]
 
 ## <a name="example"></a>Příklad
- V následujícím příkladu řeší porušení zásady tak, že přepíšete <xref:System.Object.Equals%2A?displayProperty=fullName>.
+ Následující příklad opravuje porušení přepsáním <xref:System.Object.Equals%2A?displayProperty=fullName>.
 
  [!code-csharp[FxCop.Usage.OverrideEqualsClassFixed#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OverrideEqualsClassFixed/cs/FxCop.Usage.OverrideEqualsClassFixed.cs#1)]
 
 ## <a name="structure-example"></a>Příklad struktury
 
 ### <a name="description"></a>Popis
- Následující příklad ukazuje strukturu (typ hodnoty), který porušuje tato pravidla.
+ Následující příklad ukazuje strukturu (typ hodnoty), která toto pravidlo porušuje.
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Usage.OverrideEqualsStructViolation#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OverrideEqualsStructViolation/cs/FxCop.Usage.OverrideEqualsStructViolation.cs#1)]
 
 ## <a name="example"></a>Příklad
- V následujícím příkladu řeší porušení zásady tak, že přepíšete <xref:System.ValueType.Equals%2A?displayProperty=fullName>.
+ Následující příklad opravuje porušení přepsáním <xref:System.ValueType.Equals%2A?displayProperty=fullName>.
 
  [!code-csharp[FxCop.Usage.OverrideEqualsStructFixed#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OverrideEqualsStructFixed/cs/FxCop.Usage.OverrideEqualsStructFixed.cs#1)]
 

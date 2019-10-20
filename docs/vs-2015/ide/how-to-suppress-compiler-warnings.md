@@ -1,70 +1,70 @@
 ---
-title: 'Postupy: Potlačení upozornění kompilátoru | Dokumentace Microsoftu'
+title: 'Postupy: potlačení upozornění kompilátoru | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: 31827b17-f933-413d-b28a-b19f903b64ca
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 994b29fb4592d55a04389896ee9db8848dceda67
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: aeb404c479edec5dec89f28e80584d435f5c370a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65695384"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670647"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>Postupy: Potlačení upozornění kompilátoru
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zadáním jednoho nebo více druhů upozornění kompilátoru, že nechcete, aby mohla obsahovat můžete declutter protokolu sestavení. Například můžete použít tuto techniku ke kontrole některé, ale ne všechny informace, které se automaticky vygeneruje, když nastavíte úroveň podrobností protokolu sestavení na Normal, Detailed nebo diagnostiky. Další informace o podrobnosti najdete v tématu [jak: Zobrazování, ukládání a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md).
+Protokol sestavení můžete zaměnit zadáním jednoho nebo více druhů upozornění kompilátoru, které nechcete, aby obsahovaly. Můžete například použít tuto techniku ke kontrole některých, ale ne všech informací, které jsou generovány automaticky při nastavení podrobností protokolu sestavení na normální, podrobné nebo diagnostické. Další informace o podrobnostech najdete v tématu [Postup: zobrazení, uložení a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md).
 
-### <a name="to-suppress-specific-warnings-for-visual-c-or-f"></a>Potlačit specifická upozornění pro vizuál C# nebo F\#
+### <a name="to-suppress-specific-warnings-for-visual-c-or-f"></a>Chcete-li potlačit specifická C# upozornění pro Visual nebo F \#
 
-1. V **Průzkumníka řešení**, vyberte projekt, ve kterém chcete potlačit upozornění.
+1. V **Průzkumník řešení**vyberte projekt, ve kterém chcete potlačit upozornění.
 
-2. V panelu nabídky zvolte **zobrazení**, **stránky vlastností**.
+2. Na panelu nabídek vyberte možnost **zobrazení**, **stránky vlastností**.
 
-3. Zvolte **sestavení** stránky.
+3. Vyberte stránku **sestavení** .
 
-4. V **potlačit upozornění** pole, zadejte chybových kódů upozornění, která chcete potlačit, oddělené středníky a poté znovu sestavte řešení.
+4. V poli **potlačit upozornění** určete chybové kódy upozornění, která chcete potlačit, oddělte je středníky a pak znovu sestavte řešení.
 
-### <a name="to-suppress-specific-warnings-for-visual-c"></a>Chcete-li potlačit specifická upozornění jazyka Visual C++
+### <a name="to-suppress-specific-warnings-for-visual-c"></a>Chcete-li potlačit specifická upozornění pro vizuálC++
 
-1. V **Průzkumníka řešení**, vyberte projekt nebo zdrojového souboru, ve kterém chcete potlačit upozornění.
+1. V **Průzkumník řešení**vyberte projekt nebo zdrojový soubor, ve kterém chcete potlačit upozornění.
 
-2. V panelu nabídky zvolte **zobrazení**, **stránky vlastností**.
+2. Na panelu nabídek vyberte možnost **zobrazení**, **stránky vlastností**.
 
-3. Zvolte **vlastnosti konfigurace** kategorie, zvolte **C/C++** kategorie a klikněte na tlačítko **Upřesnit** stránky.
+3. Zvolte kategorii **Vlastnosti konfigurace** , zvolte kategorii **CC++ /** kategorie a potom zvolte stránku **Upřesnit** .
 
 4. Proveďte jeden z následujících kroků:
 
-    - V **zakázat specifická upozornění** zadejte chybových kódů upozornění, která chcete potlačit, oddělené středníky.
+    - V poli **Zakázat specifická upozornění** určete chybové kódy upozornění, která chcete potlačit, a oddělte je středníkem.
 
-    - V **zakázat specifická upozornění** zvolte **upravit** a zobrazte další možnosti.
+    - V poli **Zakázat specifická upozornění** vyberte možnost **Upravit** a zobrazte další možnosti.
 
-5. Zvolte **OK** tlačítko a pak znovu sestavte řešení.
+5. Klikněte na tlačítko **OK** a pak znovu sestavte řešení.
 
-## <a name="suppressing-warnings-for-visual-basic"></a>Potlačení upozornění v jazyce Visual Basic
+## <a name="suppressing-warnings-for-visual-basic"></a>Potlačení upozornění pro Visual Basic
 
-Upozornění kompilátoru specifické pro jazyk Visual Basic lze skrýt tak, že upravíte soubor .vbproj pro projekt. Můžete také použít [stránka kompilovat, Návrhář projektu](../ide/reference/compile-page-project-designer-visual-basic.md) potlačit upozornění podle kategorie. Další informace najdete v tématu [Konfigurace upozornění v jazyce Visual Basic](../ide/configuring-warnings-in-visual-basic.md).
+Můžete skrýt specifická upozornění kompilátoru pro Visual Basic úpravou souboru. vbproj pro projekt. Můžete také použít [stránku kompilovat, Návrhář projektu](../ide/reference/compile-page-project-designer-visual-basic.md) pro potlačení upozornění podle kategorie. Další informace najdete v tématu [Konfigurace upozornění v Visual Basic](../ide/configuring-warnings-in-visual-basic.md).
 
-#### <a name="to-suppress-specific-warnings-for-visual-basic"></a>Chcete-li potlačit specifická upozornění v jazyce Visual Basic
+#### <a name="to-suppress-specific-warnings-for-visual-basic"></a>Chcete-li potlačit specifická upozornění pro Visual Basic
 
-1. V **Průzkumníka řešení**, vyberte projekt, ve kterém chcete potlačit upozornění.
+1. V **Průzkumník řešení**vyberte projekt, ve kterém chcete potlačit upozornění.
 
-2. V panelu nabídky zvolte **projektu**, **uvolnit projekt**.
+2. V panelu nabídek vyberte položku **projekt**, **Uvolnit projekt**.
 
-3. V **Průzkumníka řešení**, otevřete místní nabídku pro projekt a klikněte na tlačítko **upravit**_ProjectName_**.vbproj**.
+3. V **Průzkumník řešení**otevřete místní nabídku pro projekt a pak zvolte **Upravit**_ProjectName_ **. vbproj**.
 
-    Soubor projektu je otevřený v editoru kódu.
+    Soubor projektu je otevřen v editoru kódu.
 
-4. Vyhledejte `<NoWarn></NoWarn>` prvek v konfiguraci sestavení, které vytváříte.
+4. Vyhledejte prvek `<NoWarn></NoWarn>` v konfiguraci sestavení, se kterou sestavíte.
 
-    Následující příklad ukazuje `<NoWarn></NoWarn>` element tučným písmem pro ladění konfiguraci buildu na x x86 platformy:
+    Následující příklad ukazuje prvek `<NoWarn></NoWarn>` v tučném textu pro konfiguraci sestavení ladění na platformě x86:
 
    ```xml
    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -81,7 +81,7 @@ Upozornění kompilátoru specifické pro jazyk Visual Basic lze skrýt tak, že
      </PropertyGroup>
    ```
 
-5. Přidejte jedno nebo více čísel upozornění jako hodnotu `<NoWarn>` elementu. Pokud zadáte více čísel upozornění, oddělte je středníkem, jak ukazuje následující příklad.
+5. Přidejte jedno nebo více čísel upozornění jako hodnotu prvku `<NoWarn>`. Pokud zadáte více čísel upozornění, oddělte je čárkami, jak ukazuje následující příklad.
 
    ```xml
    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -98,13 +98,13 @@ Upozornění kompilátoru specifické pro jazyk Visual Basic lze skrýt tak, že
      </PropertyGroup>
    ```
 
-6. Uložte změny do souboru .vbproj.
+6. Uložte změny do souboru. vbproj.
 
-7. V panelu nabídky zvolte **projektu**, **znovu načíst projekt**.
+7. V panelu nabídek vyberte položku **projekt**, **znovu načíst projekt**.
 
-8. V panelu nabídky zvolte **sestavení**, **znovu sestavit řešení**.
+8. Na panelu nabídek vyberte **sestavení**, znovu **Sestavit řešení**.
 
-    **Výstup** okno přestane zobrazovat upozornění, která jste zadali.
+    V okně **výstup** se již nezobrazuje upozornění, která jste zadali.
 
    Další informace najdete v tématu [/nowarn](https://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83).
 

@@ -1,5 +1,5 @@
 ---
-title: Procházet a vybrat typ dialogovému oknu rozhraní .NET (starší verze) | Dokumentace Microsoftu
+title: Procházet a vybrat dialogové okno typ .NET (starší verze) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - Browse and Select a .NET Type dialog box
 ms.assetid: 1e66c9bc-94b2-46e2-bedf-871752e5f917
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d1ba2a1276ba5c752b712c6131048546ca8f69ec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1e5045a62d0a654af968d50e0c309bcf8104b5cc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977464"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668978"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box-legacy"></a>Dialogové okno Procházet a vybrat typ .NET (starší verze)
-Toto téma popisuje, jak používat **Procházet a vybrat typ .NET** dialogové okno v starší [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] potřeba cílit na platformu [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].  
-  
- V **vlastnosti** okno, když vyberete vlastnosti, které zpracují typ rozhraní .NET Framework v odkazovaném sestavení, symbol tří teček **[...]**  se zobrazí na konci vlastnosti textového pole. Kliknutím **[...]**  otevře **Procházet a vybrat typ .NET** dialogové okno. V tomto dialogovém okně můžete vybrat typ stromovém zobrazení odkazovaných sestavení. Například při použití návrháře aktivit v **vlastnosti** okna, klikněte na tlačítko **základní třída** symbol tří teček **[...]**  vybrat jinou základní třídu pro aktivitu ze stromu odkazovaných sestavení.  
-  
- Následující tabulka popisuje prvky uživatelského rozhraní (UI) **Procházet a vybrat typ .NET** dialogové okno.  
-  
-|Prvek uživatelského rozhraní (UI)|Popis|  
-|----------------|-----------------|  
-|**Název typu:**|Jméno aktuálně vybraného typu.|  
-|**Typ**|Levé podokno zobrazuje stromovou strukturu odkazovaných sestavení. Pravý panel zobrazuje typy, které jsou k dispozici pro výběr z odkazované sestavení vybrali v levém podokně.|  
-  
-## <a name="see-also"></a>Viz také  
+Toto téma popisuje, jak použít dialogové okno **Procházet a vybrat typ .NET** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+
+ V okně **vlastnosti** po výběru vlastností, které přijímají typ .NET Framework v odkazovaném sestavení, se na konci textového pole vlastnosti zobrazí tři tečky **[...]** . Kliknutím na **[...]** se otevře dialogové okno **Procházet a vybrat typ .NET** . V tomto dialogovém okně můžete vybrat typ ze stromového zobrazení odkazovaných sestavení. Například při použití návrháře aktivity klikněte v okně **vlastnosti** na tři tečky **základní třídy** **[...]** a vyberte další základní třídu pro aktivitu z odkazovaného stromu sestavení.
+
+ Následující tabulka popisuje prvky uživatelského rozhraní (UI) v dialogovém okně **Procházet a vybrat typ .NET** .
+
+|Prvek uživatelského rozhraní (UI)|Popis|
+|----------------|-----------------|
+|**Název typu:**|Název aktuálně vybraného typu.|
+|**Textový**|V levém podokně se zobrazuje stromové zobrazení odkazovaných sestavení. Pravé podokno zobrazuje typy dostupné pro výběr z odkazovaného sestavení vybraného v levém podokně.|
+
+## <a name="see-also"></a>Viz také
  [Používání starší verze návrháře aktivit](../workflow-designer/using-the-legacy-activity-designer.md)

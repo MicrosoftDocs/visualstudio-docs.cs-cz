@@ -1,5 +1,5 @@
 ---
-title: Odemknout Visual Studio 2015 | Microsoft Docs"
+title: Odemčení sady Visual Studio 2015 | Microsoft Docs "
 titleSuffix: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
@@ -7,70 +7,70 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: ffb580a1-8b5d-48f5-b811-87f8036f50ea
 caps.latest.revision: 12
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0e1fc8e9bcb6f70a2665303eb6cac353a3f87bd9
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a71a045661c48fd36733ecd8d2266470667a5c35
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435088"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670597"
 ---
 # <a name="how-to-unlock-visual-studio"></a>Jak odemknout Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete si vyzkoušet Visual Studio zdarma až po dobu 30 dnů. Při přihlašování do integrovaného vývojového prostředí můžete rozšířit 90 dnů zkušebního období. Chcete-li pokračovat pomocí sady Visual Studio můžete odemknout rozhraní IDE podle
+Aplikaci Visual Studio můžete vyhodnotit zdarma až po dobu 30 dnů. Když se přihlásíte k prostředí IDE, můžete zkušební dobu rozšíříte o 90 dní. Chcete-li pokračovat v používání sady Visual Studio, můžete prostředí IDE odemknout pomocí
 
-1. prostřednictvím online předplatného.
+1. používání online předplatného.
 
-2. zadání kódu product key.
+2. zadání kódu Product Key.
 
-## <a name="to-unlock-visual-studio-using-an-online-subscription"></a>Pro odemknutí prostřednictvím online předplatného Visual Studio.
- K odemknutí sady Visual Studio prostřednictvím online předplatného MSDN nebo Visual Studio přidružené k účtu Microsoft nebo pracovní nebo školní účet:
+## <a name="to-unlock-visual-studio-using-an-online-subscription"></a>Odemčení sady Visual Studio pomocí online předplatného
+ Chcete-li odemknout aplikaci Visual Studio pomocí předplatného MSDN nebo Visual Studio Online, které je přidruženo k účet Microsoft nebo pracovnímu nebo školnímu účtu:
 
-1. Klikněte na tlačítko "Sign in" v pravém horním rohu integrovaného vývojového prostředí (nebo přejděte na soubor > Nastavení účtu a otevřete dialogové okno nastavení účtu a klikněte na tlačítko "Sign in".)
+1. Klikněte na tlačítko přihlásit v pravém horním rohu integrovaného vývojového prostředí (nebo přejděte na soubor > Nastavení účtu, otevřete dialogové okno nastavení účtu a klikněte na tlačítko Přihlásit se).
 
-2. Zadejte přihlašovací údaje pro účet Microsoft nebo pracovní nebo školní účet. Visual Studio najdete předplatné MSDN nebo Visual Studio Team Services předplatné spojené s vaším účtem.
+2. Zadejte přihlašovací údaje pro účet Microsoft nebo pracovní nebo školní účet. Visual Studio najde předplatné MSDN nebo Visual Studio Team Services předplatné spojené s vaším účtem.
 
 > [!IMPORTANT]
-> Visual Studio online přidružených předplatných automaticky vyhledá, když se připojíte k účtu Visual Studio Team Services z okna nástroje Průzkumník týmových projektů. Když se připojíte k účtu Visual Studio Team Services, můžete přihlásit pomocí Microsoft a pracovní nebo školní účty. Pokud pro tento uživatelský účet existuje s online předplatným, sada Visual Studio automaticky odemknout rozhraní IDE za vás.
+> Když se připojíte k účtu Visual Studio Team Services z okna nástroje Team Explorer, Visual Studio automaticky vyhledá přidružené online předplatné. Když se připojíte k účtu Visual Studio Team Services, můžete se přihlásit pomocí Microsoft i pracovních nebo školních účtů. Pokud pro tento uživatelský účet existuje online předplatné, Visual Studio automaticky odemkne integrované vývojové prostředí (IDE).
 
-## <a name="to-unlock-visual-studio-with-a-product-key"></a>K odemknutí sady Visual Studio s kódem product key
+## <a name="to-unlock-visual-studio-with-a-product-key"></a>Odemčení sady Visual Studio s použitím kódu Product Key
 
-1. Vyberte **soubor > Nastavení účtu** otevřete dialogové okno nastavení účtu a klikněte na "**licence s kódem Product Key**" propojení.
+1. Vyberte **soubor > nastavení účtu** a otevřete dialogové okno nastavení účtu a klikněte na odkaz**licence s použitím kódu Product Key**.
 
-2. Zadejte kód product key v poskytnutém prostoru.
+2. Zadejte kód Product Key v zadaném prostoru.
 
 > [!TIP]
-> Předběžné verze sady Visual Studio nemají žádné kódy product key. Musíte se přihlásit k prostředí IDE používat předběžné verze.
+> Předprodejní verze sady Visual Studio nemají kódy Product Key. Abyste mohli používat předběžné verze, musíte se přihlásit k integrovanému vývojovému prostředí.
 
-## <a name="addressing-license-problem-states"></a>Základní adresování stavy problém licence
+## <a name="addressing-license-problem-states"></a>Stavy řešení potíží s licencemi
 
-### <a name="updating-stale-licenses"></a>Aktualizuje se zastaralé licence
- Možná jste viděli pod zprávu, že vaše licence bude zastaralé v sadě Visual Studio.
+### <a name="updating-stale-licenses"></a>Aktualizace zastaralých licencí
+ Možná jste viděli následující zprávu, že vaše licence v nástroji Visual Studio prochází.
 
- ![Dialogové okno informace uživatele sady Visual Studio](../ide/media/vs2013-userinfo.png "VS2013_UserInfo")
+ ![Dialogové okno informace o uživateli sady Visual Studio](../ide/media/vs2013-userinfo.png "VS2013_UserInfo")
 
- Tato zpráva znamená, že vaše předplatné může být stále platná, licenci, kterou token Visual Studio používá k zajištění aktuálnosti vaše předplatné se aktualizují a je prošlá kvůli jednomu z následujících důvodů:
+ Tato zpráva znamená, že i když může být předplatné stále platné, aplikace Visual Studio s tokenem licence zachová aktuální předplatné a v důsledku toho je zastaralá kvůli jednomu z následujících důvodů:
 
-1. Nepoužili sady Visual Studio nebo měli bez připojení k Internetu pro určité časové období prodloužit.
+1. Nepoužívali jste aplikaci Visual Studio nebo nemáte k dispozici žádné připojení k Internetu po delší dobu.
 
 2. Odhlásili jste se od sady Visual Studio.
 
-   Předtím, než půjde zastaralé token licence, zobrazí Visual Studio nejprve varovnou zprávu s výzvou, abyste znovu zadejte svoje přihlašovací údaje.
+   Před ukončením licenčního tokenu se v aplikaci Visual Studio nejprve zobrazí varovná zpráva s výzvou k opětovnému zadání přihlašovacích údajů.
 
-   Pokud není znovu zadat přihlašovací údaje tokenu se začne přejít zastaralé. Pokud k tomu dojde, dialogové okno nastavení účtu zjistíte, kolik dní zbývá před plně vyprší platnost tokenu. Po vypršení platnosti tokenu, je potřeba znovu zadat přihlašovací údaje pro tento účet nebo licenci s jinou metodu výše, než budete pokračovat, pomocí sady Visual Studio.
+   Pokud nezadáte svoje přihlašovací údaje znovu, začne se token zastaralý. Pokud k tomu dojde, zobrazí se v dialogovém okně nastavení účtu, kolik dní zbývá před vypršením platnosti tokenu. Po vypršení platnosti tokenu budete muset znovu zadat svoje přihlašovací údaje pro tento účet nebo licenci s jinou metodou výše, než budete moct pokračovat v používání sady Visual Studio.
 
 > [!IMPORTANT]
-> Pokud používáte Visual Studio po delší dobu v prostředích s omezením nebo bez připojení k Internetu, by měl použít kód product key k odemknutí sady Visual Studio, aby se předešlo výpadkům.
+> Pokud používáte Visual Studio pro rozšířené tečky v prostředích s omezeným nebo žádným přístupem k Internetu, měli byste použít kód Product Key k odemknutí sady Visual Studio, abyste se vyhnuli přerušení.
 
-### <a name="updating-expired-licenses"></a>Aktualizuje se licence s vypršenou platností
- Pokud vaše předplatné vypršelo úplně a už nebude mít přístupová práva ke službě Visual Studio, musíte mít:
+### <a name="updating-expired-licenses"></a>Aktualizace licencí s vypršenou platností
+ Pokud vašemu předplatnému vypršela platnost a už nemáte přístupová práva k aplikaci Visual Studio, musíte:
 
-1. Prodlužte platnost vašeho předplatného. Pokud chcete zobrazit další informace o licenci, kterou používáte, přejděte na soubor > dialogové okno nastavení účtu a podívejte se na informace o licenci na pravé straně dialogového okna.
+1. Obnovte si předplatné. Pokud chcete zobrazit další informace o licenci, kterou používáte, přejděte na dialogové okno nastavení účtu > a podívejte se na informace o licencích na pravé straně dialogového okna.
 
-2. Pokud máte jiné předplatné přidružené k jinému účtu, tento účet přidat do seznamu všech účtů na levé straně soubor > Nastavení účtu dialogové okno kliknutím na "Přidat účet..." odkaz.
+2. Pokud máte jiné předplatné přidružené k jinému účtu, přidejte tento účet do seznamu všechny účty na levé straně dialogového okna nastavení účtu >, a to tak, že kliknete na Přidat účet... propojit.
 
 ## <a name="see-also"></a>Viz také
  [Přihlášení k sadě Visual Studio](../ide/signing-in-to-visual-studio.md)

@@ -1,73 +1,73 @@
 ---
-title: Řízení barvy, stylu čáry a ostatních vlastností obrazce | Dokumentace Microsoftu
+title: Řízení barvy, stylu čáry a dalších vlastností obrazce | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: c06d0066-24aa-4c65-b91c-c2089b81ec8d
 caps.latest.revision: 4
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cff60ca7fc76563db73c4fc839688e0fba4ab975
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d5d296f5ab3f5c584558b373b57c175fb2bacef4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68159653"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667859"
 ---
 # <a name="controlling-color-line-style-and-other-shape-properties"></a>Řízení barvy, stylu čáry a ostatních vlastností obrazce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Některé vlastnosti obrazce, jako je barva by bylo možné "vystavit" – to znamená, propojené na doménovou vlastnost obrazce. Ostatní uživatelé mají přímo se dá řídit.  
-  
-## <a name="exposing-a-property"></a>Vystavení vlastností  
- Některé vlastnosti obrazce, jako je barva může být propojený hodnoty vlastnosti domény.  
-  
- V definici DSL vyberte obrazec, konektoru nebo diagramu třídy. V kontextové nabídce, zvolte **přidat vystavený**a klikněte na tlačítko Vlastnosti, třeba Barva výplně.  
-  
- Doménová vlastnost, kterou můžete nastavit v kódu programu nebo jako uživatel nyní má obrazec.  
-  
-## <a name="dynamically-updating-an-exposed-property"></a>Dynamické aktualizace vystavené vlastnosti  
- Obvykle nechcete se ujistit vlastnost vystavené závisí na jiné vlastnosti. Můžete například obrazec, který chcete červenou pokaždé, když se konkrétní doménová vlastnost, která je menší než nula. Pokud chcete nastavit tuto závislost, vytvořit [pravidlo](../modeling/rules-propagate-changes-within-the-model.md). Příklad:  
-  
-```csharp  
-using System;  
-using System.Collections.Generic;  
-using System.Linq;  
-using Microsoft.VisualStudio.Modeling;  
-using Microsoft.VisualStudio.Modeling.Diagrams;  
-namespace ExampleNamespace  
-{  
- // Attribute associates the rule with class:  
- [RuleOn(typeof(CarShape), FireTime = TimeToFire.TopLevelCommit)]  
- // The rule is a class derived from one of the abstract rules:  
- class CarShapeAddRule : AddRule  
- {  
- // Override the abstract method:  
- public override void ElementAdded(ElementAddedEventArgs e)  
- {  
- base.ElementAdded(e);  
- CarShape shape = e.ModelElement as CarShape;  
- Store store = shape.Store;  
- // Ignore this call if we're currently loading a model:  
- if (store.TransactionManager.CurrentTransaction.IsSerializing)   
-  return;  
- Car car = shape.ModelElement as Car;  
- // Code here propagates change as required - for example:  
- shape.FillColor = car.Somebool ? System.Drawing.Color.Red : System.Drawing.Color.Green;   
- }  
-}  
- // The rule must be registered:  
- public partial class ExampleDomainModel  
- {  
- protected override Type[] GetCustomDomainModelTypes()  
- {  
-  List<Type> types = new List<Type>(base.GetCustomDomainModelTypes());  
-  types.Add(typeof(CarShapeAddRule));  
-  // If you add more rules, list them here.   
-  return types.ToArray();  
- }  
- }  
-}  
+Některé vlastnosti obrazce, jako je například Color, můžou být vystavené – to je propojeno s doménovou vlastností obrazce. Ostatní musí být řízeny přímo.
+
+## <a name="exposing-a-property"></a>Vystavení vlastnosti
+ Některé vlastnosti obrazce, jako je například barva, mohou být propojeny s hodnotou doménové vlastnosti.
+
+ V definici DSL vyberte třídu Shape, spojnice nebo diagram. V místní nabídce vyberte možnost **Přidat vystaveno**a pak zvolte požadovanou vlastnost, například barva výplně.
+
+ Tvar má nyní doménovou vlastnost, kterou můžete nastavit v programovém kódu nebo jako uživatel.
+
+## <a name="dynamically-updating-an-exposed-property"></a>Dynamická aktualizace vystavené vlastnosti
+ Obvykle chcete, aby vystavená vlastnost byla závislá na jiné vlastnosti. Například můžete chtít, aby se v případě, že je určitá doménová vlastnost menší než nula, tvar popnul. Chcete-li tuto závislost provést, vytvořte [pravidlo](../modeling/rules-propagate-changes-within-the-model.md). Příklad:
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.VisualStudio.Modeling;
+using Microsoft.VisualStudio.Modeling.Diagrams;
+namespace ExampleNamespace
+{
+ // Attribute associates the rule with class:
+ [RuleOn(typeof(CarShape), FireTime = TimeToFire.TopLevelCommit)]
+ // The rule is a class derived from one of the abstract rules:
+ class CarShapeAddRule : AddRule
+ {
+ // Override the abstract method:
+ public override void ElementAdded(ElementAddedEventArgs e)
+ {
+ base.ElementAdded(e);
+ CarShape shape = e.ModelElement as CarShape;
+ Store store = shape.Store;
+ // Ignore this call if we're currently loading a model:
+ if (store.TransactionManager.CurrentTransaction.IsSerializing)
+  return;
+ Car car = shape.ModelElement as Car;
+ // Code here propagates change as required - for example:
+ shape.FillColor = car.Somebool ? System.Drawing.Color.Red : System.Drawing.Color.Green;
+ }
+}
+ // The rule must be registered:
+ public partial class ExampleDomainModel
+ {
+ protected override Type[] GetCustomDomainModelTypes()
+ {
+  List<Type> types = new List<Type>(base.GetCustomDomainModelTypes());
+  types.Add(typeof(CarShapeAddRule));
+  // If you add more rules, list them here.
+  return types.ToArray();
+ }
+ }
+}
 ```

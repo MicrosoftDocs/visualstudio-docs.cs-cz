@@ -1,5 +1,5 @@
 ---
-title: 'CA2229: Implementovat Serializační konstruktory | Dokumentace Microsoftu'
+title: 'CA2229: implementace konstruktorů serializace | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,43 +12,43 @@ helpviewer_keywords:
 - ImplementSerializationConstructors
 ms.assetid: 8e04d5fe-dfad-445a-972e-0648324fac45
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 41e296a979557a42a96c2f57ce49610d88b98a40
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 56d53717afc8cd966903e75f77e1745de0031745
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201580"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662849"
 ---
-# <a name="ca2229-implement-serialization-constructors"></a>CA2229: Implementujte serializační konstruktory
+# <a name="ca2229-implement-serialization-constructors"></a>CA2229: Implementovat serializační konstruktory
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|ImplementSerializationConstructors|
 |CheckId|CA2229|
-|Kategorie|Microsoft.Usage|
-|Narušující změna|Pevné|
+|Kategorie|Microsoft. Usage|
+|Narušující změna|Bez přerušení|
 
 ## <a name="cause"></a>příčina
- Tento typ implementuje <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> rozhraní, delegáta nebo rozhraní a je splněna jedna z následujících podmínek:
+ Typ implementuje rozhraní <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>, není delegátem nebo rozhraním a platí jedna z následujících podmínek:
 
-- Typ nemá konstruktor, který přijímá <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> objektu a <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> objektu (podpis serializace konstruktoru).
+- Typ nemá konstruktor, který přebírá objekt <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> a objekt <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> (signatura konstruktoru serializace).
 
-- Typ nezapečetěná a modifikátor přístupu pro jeho Serializační konstruktor není chráněné (řady).
+- Typ je nezapečetěný a modifikátor přístupu pro svůj Serializační konstruktor není chráněný (Family).
 
-- Typ je zapečetěná a modifikátor přístupu pro jeho Serializační konstruktor není soukromý.
+- Typ je zapečetěný a modifikátor přístupu pro svůj Serializační konstruktor není privátní.
 
 ## <a name="rule-description"></a>Popis pravidla
- Toto pravidlo platí pro typy, které podporují vlastní serializace. Typ podporuje vlastní serializace v případě, že implementuje <xref:System.Runtime.Serialization.ISerializable> rozhraní. Serializační konstruktor je potřeba deserializovat, nebo znovu vytvořit objekty, které byl serializován pomocí <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> metody.
+ Toto pravidlo je relevantní pro typy, které podporují vlastní serializaci. Typ podporuje vlastní serializaci, pokud implementuje rozhraní <xref:System.Runtime.Serialization.ISerializable>. Konstruktor serializace je vyžadován k deserializaci nebo opětovnému vytvoření objektů, které byly serializovány pomocí metody <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName>.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Implementací konstruktoru serializace se vyřeší porušení tohoto pravidla. Pro zapečetěnou třídu musí být konstruktor soukromý. V ostatních případech musí být chráněný.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte porušení tohoto pravidla. Typ nesmí být deserializaci a nebude fungovat v mnoha scénářích.
+ Potlačit porušení pravidla Typ nebude deserializovatelný a nebude fungovat v mnoha scénářích.
 
 ## <a name="example"></a>Příklad
  Následující příklad ukazuje typ, který splňuje pravidlo.

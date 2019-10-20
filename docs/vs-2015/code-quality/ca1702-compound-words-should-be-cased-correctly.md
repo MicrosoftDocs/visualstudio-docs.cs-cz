@@ -1,5 +1,5 @@
 ---
-title: 'CA1702: Složených slov by měla být správně formátováno | Dokumentace Microsoftu'
+title: 'CA1702: složená slova by se měla použita správně | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,49 +12,48 @@ helpviewer_keywords:
 - CompoundWordsShouldBeCasedCorrectly
 ms.assetid: 05481245-7ad8-48c3-a456-3aa44b6160a6
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 91a3945c6ef212ba664119a822123f326cdefc5c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 76ce346430a249b562f00e17c3173e79128d1708
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65676398"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669258"
 ---
 # <a name="ca1702-compound-words-should-be-cased-correctly"></a>CA1702: Malá a velká písmena složených slov by měla být použita správně
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejnovější dokumentaci k sadě Visual Studio, naleznete v tématu [CA1702: Složených slov by měla být správně formátováno](https://docs.microsoft.com/visualstudio/code-quality/ca1702-compound-words-should-be-cased-correctly).  
-  
-|||  
-|-|-|  
-|TypeName|CompoundWordsShouldBeCasedCorrectly|  
-|CheckId|CA1702|  
-|Kategorie|Microsoft.Naming|  
-|Narušující změna|Při ukončování pro sestavení vyvolala.<br /><br /> Bez konce – při vyvolání na parametry typu.|  
-  
-## <a name="cause"></a>Příčina  
- Název identifikátoru obsahuje více slov a alespoň jedno ze slov se zdá být složené slovo, které není správně formátováno.  
-  
-## <a name="rule-description"></a>Popis pravidla  
- Název identifikátoru je rozdělený do slov, které jsou založeny na velká a malá písmena. Každá kombinace souvislých dvě slova je zaškrtnuté políčko knihovnou kontroly pravopisu společnosti Microsoft. Pokud je rozpoznána, vytvoří identifikátor porušení tohoto pravidla. Příklady složených slov, které způsobují porušení: "Kontrolního součtu" a "MultiPart", která by měla být malá a velká použita jako "Kontrolního součtu" a "Multipart", v uvedeném pořadí. Z důvodu předchozí běžné použití několika výjimkami jsou součástí pravidla a jsou označeny několik jednotlivá slova, jako je například "Panel nástrojů" a "Název_souboru", který by měl být notaci jako dvě různá slova (v tomto případě "Panel nástrojů" a "Název_souboru").  
-  
- Zásady vytváření názvů poskytují obecný vzhled knihovnám využívajících common language runtime. To snižuje učit se, která vyžaduje nové knihovny softwaru a zvyšuje důvěru zákazníků, že byla vyvinuta knihovny někdo, kdo má odborných znalostí v vývoj spravovaného kódu.  
-  
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení  
- Změňte název tak, že je správně formátováno.  
-  
-## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění  
- Je bezpečné potlačit upozornění tohoto pravidla, je-li obě části složené slovo, které jsou rozpoznány modulem slovníku a cílem je používat dvě slova.  
-  
-## <a name="related-rules"></a>Související pravidla  
- [CA1701: Složených slov prostředku řetězců by měla správně formátováno.](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)  
-  
- [CA1709: Identifikátory by měly správně formátováno.](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)  
-  
- [CA1708: Identifikátory by se měly lišit o více než velikostí písmen](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Pokyny pro pojmenování](https://msdn.microsoft.com/library/fc076d66-9b5f-42d3-aa65-61d970c794a3)   
- [Konvence pro malá a velká písmena](https://msdn.microsoft.com/library/4c4ea526-9203-486f-b72d-29d61c5b3c6d)
+Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA1702: složená slova by měla být použita správně](https://docs.microsoft.com/visualstudio/code-quality/ca1702-compound-words-should-be-cased-correctly).
+
+|||
+|-|-|
+|TypeName|CompoundWordsShouldBeCasedCorrectly|
+|CheckId|CA1702|
+|Kategorie|Microsoft. pojmenování|
+|Narušující změna|Přerušení – při vyvolání na sestavení.<br /><br /> Bez přerušení – při vyvolání v parametrech typu.|
+
+## <a name="cause"></a>příčina
+ Název identifikátoru obsahuje více slov a nejméně jedno z těchto slov se jeví jako složené slovo, které není správně použita.
+
+## <a name="rule-description"></a>Popis pravidla
+ Název identifikátoru je rozdělen na slova, která jsou založena na velikosti písmen. Každá souvislá kombinace dvou slov je kontrolována knihovnou kontroly pravopisu společnosti Microsoft. Pokud je rozpoznáno, identifikátor vytvoří porušení pravidla. Příklady složených slov, která způsobují porušení, jsou "kontrolní součet" a "MultiPart", které by měly být použita jako "kontrolní součet" a "multipart". Kvůli předchozímu běžnému využití jsou do pravidla integrována několik výjimek a několik jednoduchých slov je označeno jako "panel nástrojů" a "filename", které by se měly použita jako dvě odlišná slova (v tomto případě "panel nástrojů" a "FileName").
+
+ Zásady vytváření názvů poskytují běžný vzhled pro knihovny, které cílí na modul CLR (Common Language Runtime). Tím se zmenší výuková křivka, která je požadována pro nové knihovny softwaru, a zvyšuje důvěru zákazníků, že knihovna byla vyvinuta někým, kdo má zkušenosti s vývojem spravovaného kódu.
+
+## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+ Změňte název tak, aby byl použita správně.
+
+## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
+ Z tohoto pravidla je bezpečné potlačit upozornění, pokud slovník pravopisu rozpozná obě části složeného slova a záměr je použít dvě slova.
+
+## <a name="related-rules"></a>Související pravidla
+ [CA1701: Malá a velká písmena složených slov prostředku řetězců by měla být použita správně](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+
+ [CA1709: Malá a velká písmena identifikátorů by měla být použita správně](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+
+ [CA1708: Identifikátory by se měly lišit více než použitím malých a velkých písmen](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+
+## <a name="see-also"></a>Viz také
+ [Zásady vytváření názvů](https://msdn.microsoft.com/library/fc076d66-9b5f-42d3-aa65-61d970c794a3) – [konvence psaní velkých písmen](https://msdn.microsoft.com/library/4c4ea526-9203-486f-b72d-29d61c5b3c6d)

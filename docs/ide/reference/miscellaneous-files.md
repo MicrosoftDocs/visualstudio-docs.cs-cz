@@ -1,5 +1,5 @@
 ---
-title: Různé soubory
+title: Ostatní soubory
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Miscellaneous Files folder
 - files [Visual Studio], miscellaneous
 ms.assetid: 5b96640b-8efe-48a4-8d0a-1ae3f9587e44
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3787ce7cd6c7355c86b6e6ef077311c603265fc1
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 6fb01d0ce09778866074cc8f303c3e4da60f0de1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461425"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668973"
 ---
-# <a name="miscellaneous-files"></a>Různé soubory
+# <a name="miscellaneous-files"></a>Ostatní soubory
 
 Můžete chtít použít Editor sady Visual Studio pro práci se soubory nezávisle na projektu nebo řešení. Když máte otevřené řešení, můžete otevřít a upravit soubory bez jejich přidání do řešení nebo projektu. Soubory, se kterými chcete pracovat nezávisle, se nazývají různé soubory. Různé soubory jsou externí pro řešení a projekty, nejsou zahrnuty v sestaveních a nelze je zahrnout do řešení pod správou zdrojových kódů.
 

@@ -6,129 +6,129 @@ helpviewer_keywords:
 - Web performance tests, walkthroughs
 - Web performance tests, data binding (database)
 ms.assetid: 2ada376d-f168-455d-9643-6acb535360c1
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e6fad5424e74c8a65ea8ce889412b834cda6a790
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 8c17a1ce7b2bf775933be6e9bea3dd299d9fe717
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180156"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665436"
 ---
 # <a name="add-a-data-source-to-a-web-performance-test"></a>Přidání zdroje dat do testu výkonnosti webu
 
-Vytvoření vazby dat, poskytující různé hodnoty pro stejný test, například, poskytují různé hodnoty do formuláře Parametry post.
+Vázání dat k poskytnutí různých hodnot stejnému testu, například k poskytnutí různých hodnot parametrům post formuláře.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-![Vazba dat do testu výkonnosti webu](../test/media/web_test_databinding_conceptual.png)
+![Vázání dat k testu výkonnosti webu](../test/media/web_test_databinding_conceptual.png)
 
-Chceme použít ukázkovou aplikaci ASP.NET. Má tři *.aspx* stránky – výchozí stránku, červenou stránku a modrou stránku. Výchozí stránka obsahuje na přepínač pro výběr červeného nebo modrého tlačítka a tlačítka Odeslat. Další dvě *.aspx* stránky jsou velmi jednoduché. Jeden má popisek s názvem červený a druhý má popisek s názvem modrý. Pokud zvolíte odeslání na výchozí stránce, zobrazíme jednu z ostatních stránek. Můžete stáhnout [ColorWebApp](https://code.msdn.microsoft.com/Sample-ColorWebApp-76ff7506) ukázkový nebo stačí postupovat podle vlastní webové aplikace.
+Budeme používat ukázkovou aplikaci ASP.NET. Má tři stránky *. aspx* – výchozí stránku, červenou stránku a modrou stránku. Výchozí stránka obsahuje ovládací prvek přepínač pro výběr červeného nebo modrého tlačítka a tlačítka Odeslat. Ostatní dvě stránky *aspx* jsou velmi jednoduché. Jeden má popisek s názvem Red a druhý má popisek s názvem modrý. Když zvolíte odeslat na výchozí stránce, zobrazíme jednu z dalších stránek. Můžete si stáhnout ukázku [ColorWebApp](https://code.msdn.microsoft.com/Sample-ColorWebApp-76ff7506) nebo jenom sledovat vlastní webovou aplikaci.
 
-![Spuštění webové aplikace, které má být testována](../test/media/web_test_databinding_runwebapp.png)
+![Spuštění webové aplikace, která se má testovat](../test/media/web_test_databinding_runwebapp.png)
 
-Řešení by měl také obsahovat testu výkonnosti webu, který prochází stránkami webové aplikace.
+Vaše řešení by mělo také zahrnovat test výkonnosti webu, který prochází stránky webové aplikace.
 
-![Řešení s testu výkonnosti webu](../test/media/web_test_databinding_solution.png)
+![Řešení s testem výkonnosti webu](../test/media/web_test_databinding_solution.png)
 
 ## <a name="create-a-sql-database"></a>Vytvoření databáze SQL
 
 ::: moniker range="vs-2017"
 
-1. Pokud nemáte Visual Studio Enterprise, můžete ho stáhnout [stahování sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) stránky.
+1. Pokud nemáte Visual Studio Enterprise, můžete si ho stáhnout ze stránky [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) .
 
-2. Vytvoření databáze SQL.
+2. Vytvořte databázi SQL.
 
-     ![Přidat novou databázi SQL.](../test/media/web_test_databinding_sql_addnewdb.png)
+     ![Přidat novou databázi SQL](../test/media/web_test_databinding_sql_addnewdb.png)
 
 3. Vytvořte projekt databáze.
 
-     ![Vytvoření nového projektu z databáze](../test/media/web_test_databinding_sql_addnewdbproject.png)
+     ![Vytvořit nový projekt z databáze](../test/media/web_test_databinding_sql_addnewdbproject.png)
 
-4. Přidání tabulky do databázového projektu.
+4. Přidejte tabulku do projektu databáze.
 
-     ![Přidá novou tabulku na databázový projekt](../test/media/web_test_databinding_sql_addnewdbtablename.png)
+     ![Přidat novou tabulku do projektu databáze](../test/media/web_test_databinding_sql_addnewdbtablename.png)
 
 5. Přidejte pole do tabulky.
 
-     ![Přidejte pole do tabulky](../test/media/web_test_databinding_sql_addnewdbaddfields.png)
+     ![Přidat pole do tabulky](../test/media/web_test_databinding_sql_addnewdbaddfields.png)
 
-6. Publikujte projekt databáze.
+6. Publikování databázového projektu.
 
-     ![Publikujte projekt databáze z Průzkumníka řešení](../test/media/web_test_databinding_sql_addnewdbpublish.png)
+     ![Publikovat databázový projekt z Průzkumník řešení](../test/media/web_test_databinding_sql_addnewdbpublish.png)
 
-7. Přidání dat do pole.
+7. Přidejte data do polí.
 
-     ![Přidání dat do pole](../test/media/web_test_databinding_sql_addnewfieldsadddata.png)
+     ![Přidat data do polí](../test/media/web_test_databinding_sql_addnewfieldsadddata.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-1. Pokud nemáte Visual Studio Enterprise, můžete ho stáhnout [stahování sady Visual Studio](https://visualstudio.microsoft.com/downloads) stránky.
+1. Pokud nemáte Visual Studio Enterprise, můžete si ho stáhnout ze stránky [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) .
 
-2. Vytvoření databáze SQL.
+2. Vytvořte databázi SQL.
 
-     ![Přidat novou databázi SQL.](../test/media/web_test_databinding_sql_addnewdb.png)
+     ![Přidat novou databázi SQL](../test/media/web_test_databinding_sql_addnewdb.png)
 
 3. Vytvořte projekt databáze.
 
-     ![Vytvoření nového projektu z databáze](../test/media/web_test_databinding_sql_addnewdbproject.png)
+     ![Vytvořit nový projekt z databáze](../test/media/web_test_databinding_sql_addnewdbproject.png)
 
-4. Přidání tabulky do databázového projektu.
+4. Přidejte tabulku do projektu databáze.
 
-     ![Přidá novou tabulku na databázový projekt](../test/media/web_test_databinding_sql_addnewdbtablename.png)
+     ![Přidat novou tabulku do projektu databáze](../test/media/web_test_databinding_sql_addnewdbtablename.png)
 
 5. Přidejte pole do tabulky.
 
-     ![Přidejte pole do tabulky](../test/media/web_test_databinding_sql_addnewdbaddfields.png)
+     ![Přidat pole do tabulky](../test/media/web_test_databinding_sql_addnewdbaddfields.png)
 
-6. Publikujte projekt databáze.
+6. Publikování databázového projektu.
 
-     ![Publikujte projekt databáze z Průzkumníka řešení](../test/media/web_test_databinding_sql_addnewdbpublish.png)
+     ![Publikovat databázový projekt z Průzkumník řešení](../test/media/web_test_databinding_sql_addnewdbpublish.png)
 
-7. Přidání dat do pole.
+7. Přidejte data do polí.
 
-     ![Přidání dat do pole](../test/media/web_test_databinding_sql_addnewfieldsadddata.png)
+     ![Přidat data do polí](../test/media/web_test_databinding_sql_addnewfieldsadddata.png)
 
 ::: moniker-end
 
 ## <a name="add-the-data-source"></a>Přidat zdroj dat
 
-1. Přidáte zdroj dat.
+1. Přidejte zdroj dat.
 
-     ![Přidání zdroje dat do testu výkonnosti webu](../test/media/web_test_databinding_sql_adddatasource.png)
+     ![Přidat zdroj dat do testu výkonnosti webu](../test/media/web_test_databinding_sql_adddatasource.png)
 
-2. Zvolte typ zdroje dat a pojmenujte ho.
+2. Vyberte typ zdroje dat a pojmenujte ho.
 
-     ![Název zdroje databáze](../test/media/web_test_databinding_sql_adddatasourcedialog.png)
+     ![Pojmenování zdroje databáze](../test/media/web_test_databinding_sql_adddatasourcedialog.png)
 
-3. Umožňuje vytvořte připojení.
+3. Vytvořte připojení.
 
-     ![Tlačítko nové připojení](../test/media/web_test_databinding_sql_adddatasourcedialogconnectionnew.png)
+     ![Zvolit nové připojení](../test/media/web_test_databinding_sql_adddatasourcedialogconnectionnew.png)
 
      Zadejte podrobnosti připojení.
 
-     ![Zadejte vlastnosti připojení databáze SQL](../test/media/web_test_databinding_sql_adddatasourcedialogconnection.png)
+     ![Zadejte vlastnosti připojení k databázi SQL.](../test/media/web_test_databinding_sql_adddatasourcedialogconnection.png)
 
 4. Vyberte tabulku, kterou chcete použít pro test.
 
-     ![Přidat tabulku barvy jako zdroj dat](../test/media/web_test_databinding_sql_adddatasourcedialogaddtable.png)
+     ![Přidat tabulku barev jako zdroj dat](../test/media/web_test_databinding_sql_adddatasourcedialogaddtable.png)
 
-     Tabulka je vázána na test.
+     Tabulka je svázána s testem.
 
-     ![Přidat uzel zdrojů dat do testu výkonnosti webu](../test/media/web_test_databinding_requestnodeadded_mdb.png)
+     ![Uzel zdroje dat přidání do testu výkonnosti webu](../test/media/web_test_databinding_requestnodeadded_mdb.png)
 
-5. Uložte tento test.
+5. Uložte test.
 
-## <a name="bind-the-data"></a>Svázat data
+## <a name="bind-the-data"></a>Svázání dat
 
-1. Vytvoření vazby **ColorName** pole.
+1. Navažte pole **Color** .
 
-     ![Svázat pole ColorName RadioButtonList1 hodnotu](../test/media/web_test_databinding_sql_binddatasource.png)
+     ![Navázání pole Color k hodnotě RadioButtonList1](../test/media/web_test_databinding_sql_binddatasource.png)
 
-2. Otevřít *Local.testsettings* ve **Průzkumníka řešení** a vyberte **jedno spuštění na řádek zdroje dat** možnost.
+2. V **Průzkumník řešení** otevřete soubor *Local. testsettings* a vyberte jednu možnost **Spustit na řádek zdroje dat** .
 
      ![Upravit soubor nastavení testu](../test/media/web_test_databinding_sql_testsettings.png)
 
@@ -138,51 +138,51 @@ Chceme použít ukázkovou aplikaci ASP.NET. Má tři *.aspx* stránky – vých
 
 1. Spusťte test.
 
-     ![Spuštění testu výkonnosti webu Ověření vazby](../test/media/web_test_databinding_sql_runtest.png)
+     ![Spustit test výkonnosti webu pro ověření vazby](../test/media/web_test_databinding_sql_runtest.png)
 
-     Pro každý řádek dat se zobrazují dva běhy. Běh 1 odešle požadavek na stránku *Red.aspx*, a běh 2 odešle požadavek na stránku *Blue.aspx*.
+     Pro každý řádek dat se zobrazí dva běhy. Spuštění 1 odešle požadavek na stránku *Red. aspx*a spuštění 2 odešle požadavek na stránku *Blue. aspx*.
 
      ![Výsledky testovacího běhu](../test/media/web_test_databinding_sql_runresults.png)
 
-     Když se navážete na zdroj dat, můžete porušit výchozí pravidlo odpovídání URL. V takovém případě je chyba při spuštění 2 způsobena pravidlem, které se očekává, že *Red.aspx* stránky z původního záznamu testu, ale datové vazby nyní směruje na *Blue.aspx* stránky.
+     Při vytváření vazby na zdroj dat můžete narušit výchozí pravidlo adresy URL odpovědi. V tomto případě Chyba v běhu 2 je způsobena pravidlem, které očekává stránku *Red. aspx* z původního záznamu testu, ale datovou vazbu je nyní směruje na stránku *Blue. aspx* .
 
-2. Opravte chybu ověření odstraněním **adresa URL odpovědi** ověřovací pravidla a znovu spusťte test.
+2. Opravte chybu ověřování tak, že odstraníte pravidlo pro ověření **adresy URL odpovědi** a znovu spustíte test.
 
-     ![Odstranit ověřovacího pravidla odpověď URL](../test/media/web_test_databinding_sql_deleteresponseurl.png)
+     ![Odstraní pravidlo pro ověření adresy URL odpovědi.](../test/media/web_test_databinding_sql_deleteresponseurl.png)
 
-     Test výkonnosti webu nyní předává pomocí datové vazby.
+     Test výkonnosti webu nyní projde pomocí datové vazby.
 
-     ![Test byl úspěšný, použití datových vazeb](../test/media/web_test_databinding_sql_deleteresponseurlrunresults.png)
+     ![Test průchodů pomocí datové vazby](../test/media/web_test_databinding_sql_deleteresponseurlrunresults.png)
 
-## <a name="q--a"></a>Dotazy a odpovědi
+## <a name="q--a"></a>Otázka & A
 
-### <a name="q-what-databases-can-i-use-as-a-data-source"></a>Č Jaké databáze je možné použít jako zdroj dat?
+### <a name="q-what-databases-can-i-use-as-a-data-source"></a>Otázka: Jaké databáze lze použít jako zdroj dat?
 
-**URČITÉHO** Můžete použít následující:
+**A:** Můžete použít následující:
 
 - Microsoft SQL Azure.
 
-- Všechny verze systému Microsoft SQL Server 2005 nebo novější.
+- Všechny verze Microsoft SQL Server 2005 nebo novější.
 
 - Soubor databáze Microsoft SQL Server (včetně SQL Express).
 
-- Ovladač Microsoft ODBC.
+- Rozhraní Microsoft ODBC.
 
-- Soubor aplikace Microsoft Access pomocí zprostředkovatele rozhraní .NET Framework pro OLE DB.
+- Soubor aplikace Microsoft Access s použitím poskytovatele .NET Framework pro OLE DB.
 
-- Oracle 7.3, 8i, 9i nebo 10g.
+- Oracle 7,3, 8i, 9i nebo 10g.
 
-### <a name="q-how-do-i-use-a-comma-separated-value-csv-text-file-as-a-data-source"></a>Č Návody jako zdroj dat použít textový soubor s oddělovači (CSV)?
+### <a name="q-how-do-i-use-a-comma-separated-value-csv-text-file-as-a-data-source"></a>Otázka: Návody jako zdroj dat použít textový soubor s oddělovači (CSV)?
 
-**URČITÉHO** Tady je postup:
+**A:** Tady je postup:
 
-1. Vytvořte složku k uspořádání vašich artefaktů databáze projektů a přidejte položku.
+1. Vytvořte složku pro uspořádání artefaktů databáze projektů a přidejte položku.
 
-     ![Přidat novou položku do složky dat](../test/media/web_test_databinding_foldernewitem.png)
+     ![Přidat novou položku do složky data](../test/media/web_test_databinding_foldernewitem.png)
 
 2. Vytvořte textový soubor.
 
-     ![Pojmenujte nový textový soubor ColorData.csv](../test/media/web_test_databinding_foldernewitemtextfile.png)
+     ![Pojmenujte nový textový soubor ColorData. csv.](../test/media/web_test_databinding_foldernewitemtextfile.png)
 
 3. Upravte textový soubor a přidejte následující:
 
@@ -192,74 +192,74 @@ Chceme použít ukázkovou aplikaci ASP.NET. Má tři *.aspx* stránky – vých
     1,Blue
     ```
 
-4. Postupujte podle kroků v [přidat zdroj dat](#add-the-data-source), ale zvolte soubor CSV jako zdroj dat.
+4. Použijte postup v části [Přidat zdroj dat](#add-the-data-source), ale jako zdroj dat vyberte soubor CSV.
 
-     ![Zadejte název a zvolte soubor CSV](../test/media/web_test_databinding_adddatasourcedialog.png)
+     ![Zadejte název a vyberte soubor CSV.](../test/media/web_test_databinding_adddatasourcedialog.png)
 
-### <a name="q-what-if-my-existing-csv-file-does-not-contain-column-headers"></a>Č Co když existující soubor CSV neobsahuje záhlaví sloupců?
+### <a name="q-what-if-my-existing-csv-file-does-not-contain-column-headers"></a>Otázka: Co když můj existující soubor CSV neobsahuje záhlaví sloupců?
 
-**URČITÉHO** Pokud nemůžete přidat záhlaví sloupců, můžete použít soubor s popisem schématu, který zachází se souborem CSV jako s databází.
+**A:** Pokud nemůžete přidat záhlaví sloupců, můžete použít soubor s popisem schématu, který zachází se souborem CSV jako s databází.
 
-1. Přidat nový textový soubor s názvem *schema.ini*.
+1. Přidejte nový textový soubor s názvem *Schema. ini*.
 
-     ![Přidat soubor schema.ini](../test/media/web_test_databinding_schemafile.png)
+     ![Přidat soubor Schema. ini](../test/media/web_test_databinding_schemafile.png)
 
-2. Upravit *schema.ini* soubor a přidejte informace, které popisují strukturu vašich dat. Například soubor schématu popisující soubor CSV může vypadat takto:
+2. Úpravou souboru *Schema. ini* přidejte informace, které popisují strukturu vašich dat. Například soubor schématu popisující soubor CSV může vypadat takto:
 
     ```text
     [testdata.csv]
     ColNameHeader=False
     ```
 
-3. Přidáte zdroj dat do testu.
+3. Přidejte zdroj dat do testu.
 
-     ![Přidání zdroje dat do testu výkonnosti webu](../test/media/web_test_databinding_sql_adddatasource.png)
+     ![Přidat zdroj dat do testu výkonnosti webu](../test/media/web_test_databinding_sql_adddatasource.png)
 
-4. Pokud používáte *schema.ini* souboru, zvolte **databáze** (nikoli soubor CSV) jako zdroj dat a pojmenujte ho.
+4. Pokud používáte soubor *Schema. ini* , vyberte jako zdroj dat možnost **databáze** (ne soubor CSV) a pojmenujte ji.
 
-     ![Přidání databázového zdroje dat](../test/media/web_test_databinding_adddatasourcecolortext.png)
+     ![Přidat zdroj dat databáze](../test/media/web_test_databinding_adddatasourcecolortext.png)
 
 5. Vytvořte nové připojení.
 
-     ![Tlačítko nové připojení](../test/media/web_test_databinding_sql_adddatasourcedialogconnectionnew.png)
+     ![Zvolit nové připojení](../test/media/web_test_databinding_sql_adddatasourcedialogconnectionnew.png)
 
-6. Vyberte zprostředkovatele dat .NET Framework pro OLE DB.
+6. Vyberte .NET Framework Zprostředkovatel dat OLE DB.
 
-     ![Vyberte zprostředkovatele dat OLE DB .NET framework](../test/media/web_test_databinding_adddatasourcecolortext2.png)
+     ![Vyberte poskytovatele dat OLE DB .NET Framework.](../test/media/web_test_databinding_adddatasourcecolortext2.png)
 
-7. Zvolte **Advanced**.
+7. Klikněte na tlačítko **Upřesnit**.
 
-     ![Zvolte pokročilé](../test/media/web_test_databinding_advanced.png)
+     ![Zvolit pokročilé](../test/media/web_test_databinding_advanced.png)
 
-8. Pro vlastnosti zprostředkovatele vyberte Microsoft.Jet.OLEDB.4.0 a poté nastavte **rozšířené vlastnosti** k textu. HDR = NO.
+8. U vlastnosti poskytovatel vyberte Microsoft. Jet. OLEDB. 4.0 a pak nastavte **Rozšířené vlastnosti** na text. HDR = NO.
 
-     ![Použití rozšířených vlastností](../test/media/web_test_databinding_advancedproperties.png)
+     ![Použít pokročilé vlastnosti](../test/media/web_test_databinding_advancedproperties.png)
 
-9. Zadejte název složky, která obsahuje soubor schématu a vyzkoušejte připojení.
+9. Zadejte název složky, která obsahuje soubor schématu a otestujte připojení.
 
-     ![Zadejte cestu ke složce data](../test/media/web_test_databinding_adddatasourcecolortext5.png)
+     ![Zadejte cestu ke složce dat.](../test/media/web_test_databinding_adddatasourcecolortext5.png)
 
 10. Vyberte soubor CSV, který chcete použít.
 
-     ![Vyberte textový soubor](../test/media/web_test_databinding_adddatasourcecolortext6.png)
+     ![Vyberte textový soubor.](../test/media/web_test_databinding_adddatasourcecolortext6.png)
 
-     Po dokončení se zobrazí soubor CSV jako tabulku.
+     Po dokončení se soubor CSV zobrazí jako tabulka.
 
-     ![Zdroj dat, které jsou přidány do testu](../test/media/web_test_databinding_adddatasourcecolortext7.png)
+     ![Zdroj dat přidaný do testu](../test/media/web_test_databinding_adddatasourcecolortext7.png)
 
-### <a name="q-how-do-i-use-an-xml-file-as-a-data-source"></a>Č Návody jako zdroj dat použít soubor XML?
+### <a name="q-how-do-i-use-an-xml-file-as-a-data-source"></a>Otázka: Návody použít soubor XML jako zdroj dat?
 
-**URČITÉHO** Ano.
+**A:** Ano.
 
-1. Vytvořte složku k uspořádání vašich artefaktů databáze projektů a přidejte položku.
+1. Vytvořte složku pro uspořádání artefaktů databáze projektů a přidejte položku.
 
-     ![Přidat novou položku do složky dat](../test/media/web_test_databinding_foldernewitem.png)
+     ![Přidat novou položku do složky data](../test/media/web_test_databinding_foldernewitem.png)
 
-2. Vytvořte soubor XML.
+2. Vytvoří soubor XML.
 
-     ![Přidání souboru ColorData.xml](../test/media/web_test_databinding_additemxmlfile.png)
+     ![Přidat soubor ColorData. XML](../test/media/web_test_databinding_additemxmlfile.png)
 
-3. Upravte soubor XML a přidejte svá data:
+3. Upravte soubor XML a přidejte data:
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -275,25 +275,25 @@ Chceme použít ukázkovou aplikaci ASP.NET. Má tři *.aspx* stránky – vých
     </ColorData>
     ```
 
-4. Postupujte podle kroků v [přidat zdroj dat](#add-the-data-source), ale zvolte soubor XML jako zdroj dat.
+4. Použijte postup v části [Přidat zdroj dat](#add-the-data-source), ale jako zdroj dat vyberte soubor XML.
 
-     ![Zadejte název a vyberte soubor XML](../test/media/web_test_databinding_adddatasourcedialogxml.png)
+     ![Zadejte název a vyberte soubor XML.](../test/media/web_test_databinding_adddatasourcedialogxml.png)
 
-### <a name="q-can-i-add-data-binding-to-a-web-service-request-that-uses-soap"></a>Č Můžu přidat datovou vazbu k požadavku webové služby, který používá protokol SOAP?
+### <a name="q-can-i-add-data-binding-to-a-web-service-request-that-uses-soap"></a>Otázka: mohu přidat datovou vazbu k požadavku webové služby, který používá protokol SOAP?
 
-**URČITÉHO** Ano, kód SOAP XML je nutné ručně změnit.
+**A:** Ano, kód SOAP XML je nutné ručně změnit.
 
-1. Ve stromové struktuře požadavku a v okně Vlastnosti vyberte požadavek webové služby, zvolte tři tečky (...) ve vlastnosti tělo řetězce.
+1. Ve stromové struktuře žádosti vyberte požadavek webové služby a v okno Vlastnosti vyberte tři tečky (...) ve vlastnosti tělo řetězce.
 
      ![Upravit tělo řetězce webové služby](../test/media/web_test_databinding_webservicerequest.png)
 
-2. Nahraďte hodnoty v těle SOAP hodnotami vázaných na data pomocí následující syntaxe:
+2. Nahraďte hodnoty v těle SOAP hodnotami vázanými daty pomocí následující syntaxe:
 
     ```xml
     {{DataSourceName.TableName.ColumnName}}
     ```
 
-    Pokud například máte následující kód:
+    Například pokud máte následující kód:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -319,4 +319,4 @@ Chceme použít ukázkovou aplikaci ASP.NET. Má tři *.aspx* stránky – vých
     </soap:Envelope>
     ```
 
-3. Uložte tento test.
+3. Uložte test.

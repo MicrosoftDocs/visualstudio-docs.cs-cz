@@ -1,5 +1,5 @@
 ---
-title: 'CA2230: Použijte parametry pro proměnné argumenty | Dokumentace Microsoftu'
+title: 'CA2230: použijte parametry pro proměnné argumenty | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - UseParamsForVariableArguments
 ms.assetid: bf98b733-4855-4110-9f16-eba5a9e79421
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8b833f520c574c32f90ff1ec5e20a9671184b78a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a690544a7ed03094587a2aaf1c44b7ed68e8f2a9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65685100"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662832"
 ---
 # <a name="ca2230-use-params-for-variable-arguments"></a>CA2230: Použijte parametry pro proměnné argumenty
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,27 +29,27 @@ ms.locfileid: "65685100"
 |-|-|
 |TypeName|UseParamsForVariableArguments|
 |CheckId|CA2230|
-|Kategorie|Microsoft.Usage|
+|Kategorie|Microsoft. Usage|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>Příčina
- Veřejný nebo chráněný typ obsahuje veřejná nebo chráněná metoda, která používá `VarArgs` konvence volání.
+## <a name="cause"></a>příčina
+ Veřejný nebo chráněný typ obsahuje veřejnou nebo chráněnou metodu, která používá konvenci volání `VarArgs`.
 
 ## <a name="rule-description"></a>Popis pravidla
- `VarArgs` Konvence volání se používá některé metody definicemi přijímajícími proměnný počet parametrů. Metoda použití `VarArgs` konvence volání není specifikace CLS (Common Language) předpisy a nemusí být přístupné napříč programovacími jazyky.
+ Konvence volání `VarArgs` se používá s některými definicemi metod, které přebírají proměnný počet parametrů. Metoda používající konvenci volání `VarArgs` není kompatibilní se specifikací CLS (Common Language Specification) a nemusí být přístupná v různých programovacích jazycích.
 
- V jazyce C# `VarArgs` konvence volání se používá při seznamu parametrů metod končí `__arglist` – klíčové slovo. Jazyk Visual Basic nepodporuje `VarArgs` volání konvence a Visual C++ umožňuje použití pouze v nespravovaném kódu, který používá tři tečky `...` zápis.
+ V C#je konvence volání `VarArgs` použita, když seznam parametrů metody končí klíčovým slovem `__arglist`. Visual Basic nepodporuje konvenci volání `VarArgs` a vizuál C++ umožňuje jeho použití pouze v nespravovaném kódu, který používá notaci elipsy `...`.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla v jazyce C#, použijte [params](https://msdn.microsoft.com/library/1690815e-b52b-4967-8380-5780aff08012) – klíčové slovo místo `__arglist`.
+ Chcete-li opravit porušení tohoto pravidla v C#, použijte klíčové slovo [params](https://msdn.microsoft.com/library/1690815e-b52b-4967-8380-5780aff08012) namísto `__arglist`.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje dva způsoby, ten, který porušuje pravidla a ten, který splňuje pravidlo.
+ Následující příklad ukazuje dvě metody, jeden, který porušuje pravidlo a jeden, který splňuje pravidlo.
 
  [!code-csharp[FxCop.Usage.UseParams#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.UseParams/cs/FxCop.Usage.UseParams.cs#1)]
 
 ## <a name="see-also"></a>Viz také
- <xref:System.Reflection.CallingConventions?displayProperty=fullName> [Jazyková nezávislost a jazykově nezávislé komponenty](https://msdn.microsoft.com/library/4f0b77d0-4844-464f-af73-6e06bedeafc6)
+ nezávislá <xref:System.Reflection.CallingConventions?displayProperty=fullName> [jazyka a součásti nezávislé na jazyce](https://msdn.microsoft.com/library/4f0b77d0-4844-464f-af73-6e06bedeafc6)

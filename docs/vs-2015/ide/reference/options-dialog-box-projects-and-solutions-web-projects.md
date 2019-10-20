@@ -1,5 +1,5 @@
 ---
-title: Možnosti dialogové okno, projekty a řešení, webové projekty | Dokumentace Microsoftu
+title: Dialogové okno Možnosti, projekty a řešení, webové projekty | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -8,29 +8,27 @@ f1_keywords:
 - VS.ToolsOptionsPages.Projects.WebProjects
 ms.assetid: ea813046-1ae6-4c9f-9784-dc41494101b9
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f6e9fb8731c50080e30dfe6686d69bd57fa14a3c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: ddb8688822f4465d313130e5505ff67a93413956
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65674501"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668870"
 ---
 # <a name="options-dialog-box-projects-and-solutions-web-projects"></a>Dialogové okno Možnosti, Projekty a řešení, Webové projekty
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Nastaví webového serveru, který bude používat webové projekty pro vývoj v rámci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na tlačítko **možnosti nástrojů**. Rozbalte **projekty a řešení** a potom klikněte na tlačítko **webové projekty**.  
-  
- Při spuštění webový projekt v sadě Visual Studio (například pomocí F5 nebo Ctrl + F5), Visual Studio ve výchozím nastavení používá vývojový Server sady Visual Studio. Další informace najdete v tématu [webové servery v sadě Visual Studio pro webové projekty ASP.NET](https://msdn.microsoft.com/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
-  
+Nastaví webový server, který budou webové projekty používat pro vývoj v rámci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na tlačítko **Nástroje možnosti**. Rozbalte **projekty a řešení** a potom klikněte na **webové projekty**.
+
+ Ve výchozím nastavení, když spustíte webový projekt v aplikaci Visual Studio (například pomocí F5 nebo CTRL + F5), Visual Studio používá vývojový server sady Visual Studio. Další informace naleznete v tématu [webové servery v aplikaci Visual Studio pro webové projekty ASP.NET](https://msdn.microsoft.com/31d4f588-df59-4b7e-b9ea-e1f2dd204328).
+
 > [!NOTE]
-> Dostupné možnosti v dialogových oknech, názvy a umístění příkazů, které vidíte, mohou lišit od informací uvedených v nápovědě v závislosti na aktivních nastaveních nebo edici. Tato stránka nápovědy byl zapsán s **nastavení webu** v úvahu. Chcete-li zobrazit nebo změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="settings"></a>Nastavení  
- **Použít 64bitovou verzi služby IIS Express pro weby a projekty**  
- Vyberte tuto možnost používat službu IIS Express namísto vývojový Server sady Visual Studio. Další informace najdete v tématu [Úvod do služby IIS Express](http://go.microsoft.com/?linkid=9747914) a [Přehled služby IIS Express](http://go.microsoft.com/?linkid=9747915). Tato možnost je ve výchozím nastavení zakázaná.  
-  
- **Varovat před spuštěním webové aplikace, když zjistí chyby v seznamu chyb**  
- Pokud je toto políčko zaškrtnuté, zobrazí se upozornění, pokud se pokusíte spustit webovou aplikaci, když není proveďte kompilaci bez chyby.
+> Možnosti dostupné v dialogových oknech a názvy a umístění příkazů nabídky, které vidíte, se mohou lišit od toho, co je popsáno v nápovědě v závislosti na aktivních nastaveních nebo edici. Tato stránka Help byla napsána s ohledem na **Nastavení webu** . Chcete-li zobrazit nebo změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="settings"></a>Nastavení
+ **Použití 64 verze IIS Express pro weby a projekty** Tuto možnost vyberte, pokud chcete použít IIS Express místo vývojového serveru sady Visual Studio. Další informace najdete v tématu [představujeme IIS Express](http://go.microsoft.com/?linkid=9747914) a [IIS Express Overview](http://go.microsoft.com/?linkid=9747915). Tato možnost je ve výchozím nastavení zakázána.
+
+ **Upozornit před spuštěním webových aplikací, když se v seznamu chyb nacházejí chyby** Pokud je toto políčko zaškrtnuté, zobrazí se upozornění, pokud se pokusíte webovou aplikaci spustit, když nebude zkompilována bez chyb.

@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno Konfigurace motivu (starší verze) | Dokumentace Microsoftu
+title: Dialogové okno Konfigurace motivu (starší verze) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -11,33 +11,32 @@ helpviewer_keywords:
 - Theme Configuration dialog box
 ms.assetid: 9e6d182a-c4d9-4e71-b2b9-02f675fc2b29
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 825ccbf0750c1b8ac07fe02ea87ae6eddee4f455
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8171c6dcfe285ade07531896893915d0e209e0c1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62976755"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670197"
 ---
 # <a name="theme-configuration-dialog-box-legacy"></a>Dialogové okno Konfigurace motivu (starší verze)
-Toto téma popisuje, jak používat **konfigurace motivu** dialogové okno v starší [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] potřeba cílit na platformu [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].  
-  
- Motiv určuje barvu pozadí a popředí, styly, ikony a další vizuální prvky pracovního postupu. Motivy pro opakované použití můžete šetřit tak další pracovní postupy.  
-  
- Vytvořte a upravte motivy s využitím **konfigurace motivu** dialogové okno. Chcete-li otevřít dialogové okno, vyberte **vytvořit nový motiv** na **pracovního postupu** nabídku nebo klikněte pravým tlačítkem pracovní postup návrhové ploše a vyberte **vytvořit nový motiv**.  
-  
- Následující tabulka popisuje prvky uživatelského rozhraní (UI) **konfigurace motivu** dialogové okno.  
-  
-|Prvek uživatelského rozhraní (UI)|Popis|  
-|----------------|-----------------|  
-|**Název motivu:**|Název, který identifikuje motivu v [motivy, Návrhář postupu provádění, Options Dialog Box (starší verze)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md). Změnit název je generován pro nové motivy.|  
-|**Umístění motivu:**|Název souboru a cestu k souboru motivu. Změnit název je generován pro nové motivy na základě názvu vygenerovaný motiv. Pokud změníte název vygenerovaný motivu, můžete chtít změnit název souboru tak, aby odpovídaly název motivu.|  
-|**...**|Kliknutím vyberte umístění pro uložení souboru motivu pracovního postupu, který používá příponu názvu souboru .wtm. Vybraná cesta se bude zobrazovat v **umístění motivu** textového pole.|  
-|**Vyberte návrháře a nakonfigurujte vlastnosti:**|V levém podokně zobrazí seznam stromového zobrazení aktivity, pro které se dají přizpůsobit v motivu. Vybrat aktivitu ve stromovém zobrazení a vlastnosti motivu aktivity se zobrazí v podokně vlastností, který má v pravém podokně se stromovým zobrazením. Klikněte na tlačítko Vlastnosti a změňte tuto hodnotu.|  
-|**Preview**|Kliknutím zobrazíte okno pro zobrazení náhledu změn vlastnosti.|  
-  
-## <a name="see-also"></a>Viz také  
- [Dialogové okno Možnosti motivy, Návrhář pracovního postupu (starší verze)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md)   
- [Nápověda k uživatelskému rozhraní návrháře pro programovací model Windows Workflow Foundation](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)
+Toto téma popisuje, jak používat dialogové okno **Konfigurace motivu** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+
+ Motiv definuje barvy pozadí a popředí, styly, ikony a další vizuální prvky pracovního postupu. Motivy můžete uložit k opakovanému použití jinými pracovními postupy.
+
+ Motivy můžete vytvářet a upravovat pomocí dialogového okna **Konfigurace motivu** . Chcete-li otevřít dialogové okno, vyberte možnost **vytvořit nový motiv** v nabídce **pracovní postup** nebo klikněte pravým tlačítkem myši na návrhovou plochu pracovního postupu a vyberte možnost **vytvořit nový motiv**.
+
+ Následující tabulka popisuje prvky uživatelského rozhraní (UI) v dialogovém okně **Konfigurace motivu** .
+
+|Prvek uživatelského rozhraní (UI)|Popis|
+|----------------|-----------------|
+|**Název motivu:**|Název, který identifikuje motiv v [dialogovém okně Themes, Návrhář postupu provádění, Options (starší verze)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md). Pro nové motivy se vygeneruje měnitelné jméno.|
+|**Umístění motivu:**|Název souboru a cesta k souboru motivu. Název souboru se změnami se vygeneruje pro nové motivy založené na názvu vygenerovaného motivu. Pokud změníte název vygenerovaného motivu, budete pravděpodobně chtít změnit název souboru tak, aby odpovídal názvu motivu.|
+|**...**|Kliknutím vyberte umístění pro uložení souboru motivu pracovního postupu, který používá příponu názvu souboru. WTM. Vybraná cesta bude zobrazená v textovém poli **umístění motivu** .|
+|**Vyberte návrháře a nakonfigurujte vlastnosti:**|V levém podokně se zobrazí stromové zobrazení aktivit, pro které lze motiv přizpůsobit. Ve stromovém zobrazení vyberte aktivitu a v podokně vlastnosti, která je napravo od podokna stromového zobrazení, se zobrazí vlastnosti pro aktivitu. Kliknutím na vlastnost změňte její hodnotu.|
+|**Tisk**|Kliknutím zobrazíte okno, ve kterém můžete zobrazit náhled efektů změny vlastností.|
+
+## <a name="see-also"></a>Viz také
+ [Motivy, Návrhář postupu provádění, dialogové okno Možnosti (zastaralé)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md) [starší verze návrháře pro NÁPOVĚDU k programovací model Windows Workflow Foundation UI](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)

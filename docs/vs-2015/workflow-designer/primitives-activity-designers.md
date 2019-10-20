@@ -1,54 +1,50 @@
 ---
-title: Návrháři aktivit primitiv | Dokumentace Microsoftu
+title: Návrháři aktivit primitiv | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
 ms.topic: reference
 ms.assetid: 0a2b613e-dc04-49a1-a787-caec2ec63b90
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ed26f1522913c0a8b395a0c058f73f66843eb1df
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 90794b658204fb955e6dfaebed0377f91d9792ba
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62971274"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672531"
 ---
 # <a name="primitives-activity-designers"></a>Návrháři aktivit primitiv
-Návrháři aktivit primitiv slouží k vytvoření a konfigurace různých činností v <xref:System.Activities.Statements> obor názvů, jako je například přiřazení a zpoždění. V tématech obsažené v této části najdete pokyny, jak používat [!INCLUDE[wfd2](../includes/wfd2-md.md)] návrhářů aktivit a šablony.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Assign](../workflow-designer/assign-activity-designer.md)  
- Používá k vytvoření a konfigurace <xref:System.Activities.Statements.Assign> aktivity.  
-  
- [Delay](../workflow-designer/delay-activity-designer.md)  
- Umožňuje vytvořit a nakonfigurovat <xref:System.Activities.Statements.Delay> aktivity.  
-  
- [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md)  
- Používá k vytvoření a konfigurace <xref:System.Activities.Statements.InvokeMethod> aktivity.  
-  
- [WriteLine](../workflow-designer/writeline-activity-designer.md)  
- Umožňuje vytvořit a nakonfigurovat <xref:System.Activities.Statements.WriteLine> aktivity.  
-  
-## <a name="reference"></a>Odkaz  
-  
-## <a name="related-sections"></a>Související oddíly  
- [Tok řízení](../workflow-designer/control-flow-activity-designers.md)  
-  
- [Vývojový diagram](../workflow-designer/flowchart-activity-designers.md)  
-  
- [Messaging](../workflow-designer/messaging-activity-designers.md)  
-  
- [Modul runtime](../workflow-designer/runtime-activity-designers.md)  
-  
- [Transakce](../workflow-designer/transaction-activity-designers.md)  
-  
- [Kolekce](../workflow-designer/collection-activity-designers.md)  
-  
- [Zpracování chyb](../workflow-designer/error-handling-activity-designers.md)  
-  
+Návrháři aktivity primitivních aktivit slouží k vytváření a konfiguraci různých aktivit v oboru názvů <xref:System.Activities.Statements>, jako je například přiřazení a zpoždění. Témata v této části poskytují pokyny pro použití [!INCLUDE[wfd2](../includes/wfd2-md.md)] aktivity a návrháře šablon.
+
+## <a name="in-this-section"></a>V tomto oddílu
+ [Přiřadit](../workflow-designer/assign-activity-designer.md) Slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.Assign>.
+
+ [Zpoždění](../workflow-designer/delay-activity-designer.md) Slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.Delay>.
+
+ [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md) Slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.InvokeMethod>.
+
+ [WriteLine](../workflow-designer/writeline-activity-designer.md) Slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.WriteLine>.
+
+## <a name="reference"></a>Odkaz
+
+## <a name="related-sections"></a>Související oddíly
+ [Tok řízení](../workflow-designer/control-flow-activity-designers.md)
+
+ [Vývojový diagram](../workflow-designer/flowchart-activity-designers.md)
+
+ [Messaging](../workflow-designer/messaging-activity-designers.md)
+
+ [Modul runtime](../workflow-designer/runtime-activity-designers.md)
+
+ [Transakce](../workflow-designer/transaction-activity-designers.md)
+
+ [Kolekce](../workflow-designer/collection-activity-designers.md)
+
+ [Zpracování chyb](../workflow-designer/error-handling-activity-designers.md)
+
 ## <a name="see-also"></a>Viz také
 
--[Používání návrhářů aktivit](../workflow-designer/using-the-activity-designers.md)
+-[pomocí návrháře aktivit](../workflow-designer/using-the-activity-designers.md)

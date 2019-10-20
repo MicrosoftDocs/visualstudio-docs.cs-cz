@@ -1,5 +1,5 @@
 ---
-title: Vlastnosti operací v UML diagramech tříd | Dokumentace Microsoftu
+title: Vlastnosti operací v diagramech tříd UML | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -10,68 +10,64 @@ helpviewer_keywords:
 - UML, element properties
 ms.assetid: 4128f3e2-3a51-4edf-b3e4-b7f170a32f6b
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f98a3211bebf832009b84fac0fc1305a4162c610
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 67d752fa802deef5dcc40fdfa4d762dc6edb1d0d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68154825"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671352"
 ---
 # <a name="properties-of-operations-on-uml-class-diagrams"></a>Vlastnosti operací v diagramech tříd UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V diagramu tříd UML lze přidat *operace* u tříd a rozhraní. Operace je metoda nebo funkce, která může provádět instance třídy nebo rozhraní.  
+V diagramu tříd UML můžete přidat *operace* do tříd a rozhraní. Operace je metoda nebo funkce, kterou lze provést instancí třídy nebo rozhraní.
 
- Chcete-li přidat operaci, klikněte pravým tlačítkem na třídu nebo rozhraní, přejděte na **přidat**a potom klikněte na tlačítko **operace**.  
+ Chcete-li přidat operaci, klikněte pravým tlačítkem myši na třídu nebo rozhraní, přejděte na položku **Přidat**a poté klikněte na příkaz **operace**.
 
- Pokud operace třídy v diagramu nejsou viditelné, klikněte na Rozbalit dvojitou šipku v horní části třídy nebo rozhraní. Pokud se zobrazí **operace** záhlaví, klikněte na tlačítko **[+]** tím rozbalíte operace.  
+ Pokud nejsou operace třídy v diagramu viditelné, klikněte na tlačítko Rozbalit dvojitou šipku v horní části třídy nebo rozhraní. Pokud vidíte hlavičku **operace** , kliknutím na **[+]** rozbalte část operace.
 
-## <a name="signature-of-an-operation"></a>Podpis operace  
- Podpis operace je řádek text, který představuje třídu nebo rozhraní v diagramu tříd UML. Má následující tvar:  
+## <a name="signature-of-an-operation"></a>Podpis operace
+ Signatura operace je řádek textu, který je reprezentován v třídě nebo rozhraní v diagramu tříd UML. Má následující formát:
 
- \+ OperationName (Parametr1: Type1 [*]...) : Vlastnost ReturnType [\*]  
+ \+ OperationName (parametr1: typ1 [*],...): ReturnType [\*]
 
- \+ označuje public viditelnost. Povolené hodnoty jsou – (privátní), # (chráněný), ~ (balíček).  
+ \+ označuje veřejnou viditelnost. Ostatní povolené hodnoty jsou-(Private), # (Protected), ~ (Package).
 
- `OperationName` je podtržený, pokud **Is Static** vlastnost má hodnotu true a je kurzíva-li **je abstraktní** vlastnost má hodnotu true.  
+ `OperationName` je podtržena v případě, že je **statická** vlastnost true a je kurzívou, pokud je hodnota **abstract** vlastnosti true.
 
- `: ReturnType` je vynechána, pokud je definována bez návratového typu.  
+ `: ReturnType` je vynechán, pokud není definován žádný návratový typ.
 
- `[*]` označuje násobnosti atributu parametr nebo návratový typ elementu. To je vynechána, pokud je násobnost 1.  
+ `[*]` označuje násobnost parametru nebo návratového typu. Pokud je násobnost 1, je vynechána.
 
- V části Další úplný popis těchto vlastností.  
+ Úplný popis těchto vlastností najdete v další části.
 
-## <a name="properties"></a>Vlastnosti  
- Toto jsou vlastnosti operace ve třídě nebo rozhraní v diagramu tříd UML.  
+## <a name="properties"></a>Vlastnosti
+ Jedná se o vlastnosti operace v rámci třídy nebo rozhraní v diagramu tříd UML.
 
- Pokud chcete zobrazit vlastnosti operace, klikněte pravým tlačítkem na operaci v dané třídy nebo rozhraní v diagramu a klikněte na **vlastnosti**. Vlastnosti se zobrazí v **vlastnosti** okna.  
+ Chcete-li zobrazit vlastnosti operace, klikněte pravým tlačítkem myši na operaci ve třídě nebo rozhraní v diagramu a potom klikněte na příkaz **vlastnosti**. Vlastnosti se zobrazí v okně **vlastnosti** .
 
 |      Vlastnost       |   Výchozí    |                                                                                                                                                                                 Popis                                                                                                                                                                                 |
 |---------------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|      **Název**       | (nové jméno) |                                                                                                                                                                Musí být jedinečné v rámci nadřazeného typu.                                                                                                                                                                 |
-|   **Parametry**    |    (žádné)    |      Seznam, který má tvar <em>název</em> **:** <em>typ</em> **,** <em>název</em> **:**  <em>Typ</em> **,...** Klikněte na tlačítko **[...]**  můžete upravit seznam.<br /><br /> Typy mohou být primitivní typy nebo typy, které jsou definovány v modelu. Pokud zadáte název pro nový typ této vlastnosti, typ se přidají do **nespecifikované typy** části Průzkumníku modelů UML.      |
-|   **Návratový typ**   |    (žádné)    |                                                                               **(žádné)** , nebo primitivní typ nebo typ, který je definován v modelu. Pokud zadáte název pro nový typ této vlastnosti, typ se přidají do **nespecifikované typy** části Průzkumníku modelů UML.                                                                                |
-| **Vstupních**  |    (žádné)    |                                                                                                                         Určení vztahu mezi stav systému před a po spuštění operace nepovinnou podmínku.                                                                                                                         |
-|  **Předběžné podmínky**  |    (žádné)    |                                                                                                                            Nepovinnou podmínku určující předpoklady o stavu systému před provedením operace zahájí vykonávání.                                                                                                                            |
-| **Text podmínek** |    (žádné)    |                                                                                                                                                       Volitelná omezení pro hodnoty vrácené operací.                                                                                                                                                       |
-|   **Viditelnost**    |    Public    |                  Povolené hodnoty a znaky, které se zobrazí v signatuře jsou:<br /><br /> **+ Veřejné** – viditelné globálně<br /><br /> **-Privátní** – nejsou viditelné mimo vlastnící typ<br /><br /> **# Chráněné** – viditelné pro typy odvozené od vlastníka<br /><br /> **~ Balíček** – viditelné pro ostatní typy v rámci stejného balíčku.                   |
-|    **podpis**    |  +*Name*()   |                                                                                      Shrnuje viditelnost, název, parametry a návratový typ této operace. Tyto vlastnosti můžete změnit úpravou signatura v diagramu nebo úpravou jednotlivé vlastnosti.                                                                                      |
-|   **Pracovní položky**    | související 0 |                                                                                                  Počet přidružené pracovní položky. Jen pro čtení.<br /><br /> Další informace najdete v tématu [propojení prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).                                                                                                  |
-|   **Souběžnost**   |  Sekvenční  | **Sekvenční** – tato operace je nebo bude navrženy bez řízení souběžnosti. Souběžné volání této operace může způsobit selhání.<br /><br /> **Chráněné** -operace bude automaticky blokovat, dokud další výskyty byly dokončeny.<br /><br /> **Souběžné** – operace je navržený tak, aby více volání k němu mohou být prováděna současně. |
-|    **Je statická**    |    False     |                                                                                                  Při hodnotě true se tato operace se sdílí mezi všechny instance tohoto typu.<br /><br /> Při hodnotě true se název operace podtržené kde se zobrazí v diagramu.                                                                                                   |
-|   **Je abstraktní**   |    False     |                                                                                                                                        Pokud je hodnota true, není žádný kód související s touto operací. Proto vlastnící třída je abstraktní.                                                                                                                                         |
-|     **List**     |    False     |                                                                                                                                              Návrhář si klade za cíl, že tuto operaci nelze přepsat v odvozených třídách.                                                                                                                                              |
-|    **Je dotaz**     |    False     |                                                                                                 Při hodnotě true se nebudou provedeny žádné významné změny stavu systému touto operací. Proto ji je možné, například v rámci testu ke kontrole stavu systému.                                                                                                  |
-|  **Násobnost**   |      1       |                                 **1** – samostatná hodnota ze zadaného typu.<br /><br /> **0..1** -může být `null`.<br /><br /> \* -kolekci hodnot zadaného typu.<br /><br /> **1..\\**  \* - kolekce obsahuje alespoň jednu hodnotu.<br /><br /> *n* `..` *m* – kolekce, která obsahuje mezi `n` a `m` hodnoty.                                  |
-|   **Je seřazen**    |    False     |                                                                                                                                             Při hodnotě true se vytváří kolekce sekvenční seznamu. Pro **násobnost** více než 1.                                                                                                                                              |
-|    **Je jedinečný**    |    False     |                                                                                                                                         Pokud je hodnota true, nejsou v kolekci žádné duplicitní hodnoty. Pro **násobnost** více než 1.                                                                                                                                         |
+|      **Jméno**       | (nový název) |                                                                                                                                                                By měl být jedinečný v rámci nadřazeného typu.                                                                                                                                                                 |
+|   **Parametry**    |    nTato    |      Seznam s <em>názvem</em>**formuláře:** <em>typ</em> **,** <em>název</em> **:** <em>typ</em> **,....** Seznam upravíte kliknutím na **[...]** .<br /><br /> Typy mohou být primitivní typy nebo typy, které jsou definovány v modelu. Pokud zadáte název nového typu v této vlastnosti, bude do oddílu **neurčené typy** v PRŮZKUMNÍKOVI modelů UML přidán typ.      |
+|   **Návratový typ**   |    nTato    |                                                                               **(žádný)** , nebo primitivní typ, nebo typ, který je definován v modelu. Pokud zadáte název nového typu v této vlastnosti, bude do oddílu **neurčené typy** v PRŮZKUMNÍKOVI modelů UML přidán typ.                                                                                |
+| **Následné podmínky**  |    nTato    |                                                                                                                         Volitelná podmínka určující vztah mezi stavem systému před a po provedení operace.                                                                                                                         |
+|  **Předběžné podmínky**  |    nTato    |                                                                                                                            Volitelná podmínka určující předpoklady stavu systému před zahájením operace.                                                                                                                            |
+| **Podmínky textu** |    nTato    |                                                                                                                                                       Volitelné omezení pro hodnoty vrácené operací.                                                                                                                                                       |
+|   **Viditelnost**    |    Public    |                  Povolené hodnoty a znaky, které se zobrazují v signatuře, jsou:<br /><br /> **+ Veřejný** – viditelné globálně<br /><br /> **-Private** -není viditelné mimo vlastnící typ<br /><br /> **# Protected** – Visible s typy odvozenými od vlastníka<br /><br /> **~ Balíček** – viditelný pro jiné typy v rámci stejného balíčku.                   |
+|    **Označení**    |  *název*+ ()   |                                                                                      Shrnuje viditelnost, název, parametry a návratový typ této operace. Tyto vlastnosti můžete změnit úpravou signatury v diagramu nebo úpravou jednotlivých vlastností.                                                                                      |
+|   **Pracovní položky**    | 0 přidruženo |                                                                                                  Počet přidružených pracovních položek Jen pro čtení.<br /><br /> Další informace naleznete v tématu [propojování prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).                                                                                                  |
+|   **Souběžnost**   |  Navazující  | **Sekvenční** – operace je nebo bude navržena bez řízení souběžnosti. Volání této operace současně může vést k chybám.<br /><br /> **Guard** – operace se automaticky zablokuje, dokud se nedokončí jiné instance.<br /><br /> **Souběžná** operace je navržena tak, aby bylo možné současně spustit více volání. |
+|    **Je statický**    |    False     |                                                                                                  Pokud má hodnotu true, tato operace se sdílí mezi všemi instancemi tohoto typu.<br /><br /> Pokud je hodnota true, název operace bude podtržen, kde se zobrazí v diagramu.                                                                                                   |
+|   **Je abstraktní**   |    False     |                                                                                                                                        Pokud je nastaveno na true, k této operaci není přidružen žádný kód. Vlastnící třída proto je abstraktní.                                                                                                                                         |
+|     **Je list**     |    False     |                                                                                                                                              Návrhář chce, aby tato operace nemohla být přepsána v odvozených třídách.                                                                                                                                              |
+|    **Je dotaz**     |    False     |                                                                                                 V případě hodnoty true nejsou touto operací provedeny žádné významné změny stavu systému. Proto jej lze použít například v testu ke kontrole stavu systému.                                                                                                  |
+|  **Násobnost**   |      první       |                                 **1** – jediná hodnota zadaného typu.<br /><br /> **0.. 1** – lze `null`.<br /><br /> \* – kolekce hodnot zadaného typu.<br /><br /> **1.. \\** \*-kolekce obsahující alespoň jednu hodnotu.<br /><br /> *n* `..` *m* – kolekce, která obsahuje hodnoty `n` a `m`.                                  |
+|   **Je seřazen**    |    False     |                                                                                                                                             V případě hodnoty true tvoří kolekce sekvenční seznam. Pro **násobnost** větší než 1.                                                                                                                                              |
+|    **Je jedinečný**    |    False     |                                                                                                                                         Pokud má hodnotu true, v kolekci nejsou žádné duplicitní hodnoty. Pro **násobnost** větší než 1.                                                                                                                                         |
 
-## <a name="see-also"></a>Viz také  
- [Diagramy tříd UML: Referenční dokumentace](../modeling/uml-class-diagrams-reference.md)   
- [Vlastnosti typů v diagramech tříd UML](../modeling/properties-of-types-on-uml-class-diagrams.md)   
- [Vlastnosti atributů v diagramech tříd UML](../modeling/properties-of-attributes-on-uml-class-diagrams.md)   
- [Vlastnosti přidružení v diagramech tříd UML](../modeling/properties-of-associations-on-uml-class-diagrams.md)   
- [Diagramy tříd UML: Pokyny](../modeling/uml-class-diagrams-guidelines.md)
+## <a name="see-also"></a>Viz také
+ [Diagramy tříd UML: referenční](../modeling/uml-class-diagrams-reference.md) [vlastnosti typů v diagramech tříd UML](../modeling/properties-of-types-on-uml-class-diagrams.md) [vlastnosti atributů v](../modeling/properties-of-attributes-on-uml-class-diagrams.md) diagramech tříd UML [Vlastnosti přidružení v diagramech](../modeling/properties-of-associations-on-uml-class-diagrams.md) tříd UML diagramy tříd [UML: pokyny](../modeling/uml-class-diagrams-guidelines.md)

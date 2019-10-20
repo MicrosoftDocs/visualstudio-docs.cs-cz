@@ -1,5 +1,5 @@
 ---
-title: Příkaz nastavit aktuální vlákno | Dokumentace Microsoftu
+title: Nastavit aktuální příkaz vlákna | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,39 +11,35 @@ helpviewer_keywords:
 - Debug.SetCurrentThread command
 ms.assetid: 9917ed1d-6c30-4d94-b2f0-69acce74f1b2
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 107303082202cb1dbb162ef9dfb845c2f6564df4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 67bf0d37e6f734fa4b3229488bc3eee2732c3063
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68163334"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665449"
 ---
 # <a name="set-current-thread-command"></a>Nastavit aktuální vlákno – příkaz
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Nastaví zadaný podproces jako aktuální vlákno.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-Debug.SetCurrentThread index  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `index`  
- Povinný parametr. Vybere vlákno podle jejich indexu.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
->Debug.SetCurrentThread 1  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)   
- [Okno příkazového řádku](../../ide/reference/command-window.md)   
- [Pole najít/příkaz](../../ide/find-command-box.md)   
- [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)
+Nastaví zadané vlákno jako aktuální vlákno.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+Debug.SetCurrentThread index
+```
+
+## <a name="arguments"></a>Arguments
+ `index` nutné. Vybere vlákno podle jeho indexu.
+
+## <a name="example"></a>Příklad
+
+```
+>Debug.SetCurrentThread 1
+```
+
+## <a name="see-also"></a>Viz také
+ [Příkazy](../../ide/reference/visual-studio-commands.md) [příkazového](../../ide/reference/command-window.md) řádku [find/Command](../../ide/find-command-box.md) v příkazu Visual Studio Command a Command [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

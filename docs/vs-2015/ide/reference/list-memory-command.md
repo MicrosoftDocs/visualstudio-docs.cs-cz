@@ -1,5 +1,5 @@
 ---
-title: Paměť – příkaz seznamu | Dokumentace Microsoftu
+title: Výpis paměti – příkaz | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -12,81 +12,71 @@ helpviewer_keywords:
 - list memory command
 ms.assetid: a84de361-a6a6-4f6d-96aa-a0d4a424371e
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 884dda624d5405ec017b544afd223be0bebc97e9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2630402e03d1256f63e542818a9066745206d2c5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68199161"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672749"
 ---
 # <a name="list-memory-command"></a>Listovat paměť – příkaz
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Zobrazí obsah určeného rozsahu paměti.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]  
-[/Hex|Signed|Unsigned] [expression]  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `expression`  
- Volitelné. Adresa paměti, ze kterého se má zahájit zobrazování paměti.  
-  
-## <a name="switches"></a>Přepínače  
- / ANSI&#124;kódování Unicode  
- Volitelné. Zobrazení paměti jako odpovídající počet bajtů paměti, ANSI nebo Unicode znaky.  
-  
- / Počet:`number`  
- Volitelné. Určuje počet bajtů paměti k zobrazení, počínaje `expression`.  
-  
- / Formát:`formattype`  
- Volitelné. Formát typu pro zobrazení informací o paměti v **paměti** okno; je pravděpodobně být OneByte TwoBytes, FourBytes, EightBytes, Float (32bitová verze) nebo dvakrát (64 bitů). Pokud použijete OneByte `/Unicode` není k dispozici.  
-  
- / Hex&#124;podepsané&#124;bez znaménka  
- Volitelné. Určuje formát zobrazení čísel: jako podepsaný držitelem, bez znaménka nebo šestnáctkové.  
-  
-## <a name="remarks"></a>Poznámky  
- Místo psaní si kompletní **Debug.listmemory –** příkazu se všechny přepínače, můžete vyvolat příkaz předdefinované aliasy using s určitým přepínači přednastaveny tak, aby zadané hodnoty. Například místo zadávání:  
-  
-```  
->Debug.ListMemory /Format:float /Count:30 /Unicode  
-```  
-  
- můžete psát:  
-  
-```  
->df /Count:30 /Unicode  
-```  
-  
- Tady je seznam dostupné aliasy pro **Debug.listmemory –** příkaz:  
-  
-|Alias|Příkaz a přepínače|  
-|-----------|--------------------------|  
-|**d**|Debug.listmemory –|  
-|**da**|Debug.listmemory – /Ansi|  
-|**db**|Debug.listmemory – /Format:OneByte|  
-|**dc**|Debug.listmemory – /Format:FourBytes /Ansi|  
-|**dd**|Debug.listmemory – /Format:FourBytes|  
-|**df**|Debug.listmemory – /Format:Float|  
-|**dq**|Debug.listmemory – /Format:EightBytes|  
-|**du**|Debug.listmemory – Unicode|  
-  
-## <a name="example"></a>Příklad  
-  
-```  
->Debug.ListMemory /Format:float /Count:30 /Unicode  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Příkaz listovat zásobník volání](../../ide/reference/list-call-stack-command.md)   
- [Listovat vlákna – příkaz](../../ide/reference/list-threads-command.md)   
- [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)   
- [Okno příkazového řádku](../../ide/reference/command-window.md)   
- [Pole najít/příkaz](../../ide/find-command-box.md)   
- [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)
+Zobrazí obsah zadaného rozsahu paměti.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]
+[/Hex|Signed|Unsigned] [expression]
+```
+
+## <a name="arguments"></a>Arguments
+ `expression` volitelné. Adresa paměti, ze které se má začít zobrazovat paměť
+
+## <a name="switches"></a>Přepínače
+ /ANSI&#124;Unicode je volitelné. Zobrazí paměť jako znaky odpovídající bajtům paměti, a to buď ANSI nebo Unicode.
+
+ /Count: `number` nepovinný. Určuje, kolik bajtů paměti se má zobrazit, počínaje `expression`.
+
+ /Format: `formattype` volitelné. Typ formátu pro zobrazení informací o paměti v okně **paměti** ; může být OneByte, TwoBytes, FourBytes, EightBytes, float (32-bit) nebo Double (64-bit). Pokud se používá OneByte, `/Unicode` není k dispozici.
+
+ &#124;Nepodepsané znaménko/hex&#124;je volitelné. Určuje formát pro zobrazení čísel: jako podepsaný, unsigned nebo hexadecimální.
+
+## <a name="remarks"></a>Poznámky
+ Místo zapsání kompletního příkazu **Debug. ListMemory –** se všemi přepínači můžete vyvolat příkaz pomocí předdefinovaných aliasů s určitými přepínači předem zadaným hodnotám. Například namísto zadání:
+
+```
+>Debug.ListMemory /Format:float /Count:30 /Unicode
+```
+
+ můžete napsat:
+
+```
+>df /Count:30 /Unicode
+```
+
+ Tady je seznam dostupných aliasů pro příkaz **Debug. ListMemory –** :
+
+|Alias|Příkazy a přepínače|
+|-----------|--------------------------|
+|**trojrozměrné**|Debug. ListMemory –|
+|**&**|Ladit. ListMemory –/ANSI|
+|**inženýr**|Debug. ListMemory –/Format: OneByte|
+|**DC**|Debug. ListMemory –/Format: FourBytes/ANSI|
+|**DD**|Debug. ListMemory –/Format: FourBytes|
+|**příznak**|Debug. ListMemory –/Format: float|
+|**DQ**|Debug. ListMemory –/Format: EightBytes|
+|**du**|Ladit. ListMemory –/Unicode|
+
+## <a name="example"></a>Příklad
+
+```
+>Debug.ListMemory /Format:float /Count:30 /Unicode
+```
+
+## <a name="see-also"></a>Viz také
+ Vypsat seznam příkazů výpisu [zásobníku volání](../../ide/reference/list-call-stack-command.md) [příkaz](../../ide/reference/list-threads-command.md) [příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md) [příkaz](../../ide/reference/command-window.md) [Najít/příkazové](../../ide/find-command-box.md) okno [Visual Studio aliasy příkazů](../../ide/reference/visual-studio-command-aliases.md)

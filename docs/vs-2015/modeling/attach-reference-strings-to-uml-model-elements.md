@@ -1,5 +1,5 @@
 ---
-title: Připojení referenčních řetězců k prvkům modelu UML | Dokumentace Microsoftu
+title: Připojení referenčních řetězců k prvkům modelu UML | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -8,41 +8,39 @@ helpviewer_keywords:
 - UML - extending, reference strings
 ms.assetid: 15dbed99-efce-42fe-a768-714a5804e7d1
 caps.latest.revision: 11
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bd5a1ae4abc2e0b5c508b7b77160bbf8da3bb45e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7726379258ef474b57f1ca4a924413cd93cf80bb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68203228"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672794"
 ---
 # <a name="attach-reference-strings-to-uml-model-elements"></a>Připojení referenčních řetězců k prvkům modelu UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete napsat kód k připojení libovolného řetězců k prvkům modelu. Řetězec může být například identifikátor URI v mezipaměti výsledek výpočtu nebo ModelBus odkaz na prvek v jiného modelu. Každý řetězec je obsažený v objektu IReference. Pro každý prvek modelu lze připojit libovolný počet objektů IReference.  
-  
- Každý objekt IReference má název. Můžete použít tento název označuje, jak by měl být interpretován hodnota odkazu. Můžete například nastavit název "URI" k označení, že hodnota by měl být interpretován jako identifikátor URI. Existují některé předdefinované referenční název hodnoty používají nástroje pro modelování.  
-  
-## <a name="attaching-a-reference-to-an-ielement"></a>Odkaz na IElement připojení  
- Chcete-li použít následující metody, musíte přidat odkaz na:  
-  
- Microsoft.VisualStudio.ArchitectureTools.Extensibility.dll  
-  
- Tato direktiva je vhodné vložit ve vašem kódu:  
-  
- `using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;`  
-  
-|Volání metody|Popis|  
-|-----------------|-----------------|  
-|`element.AddReference (nameString, valueString, duplicatesAllowed)`|Vytvoří `IReference` s daným názvem a hodnotou řetězce a odkazy na `element`. Vrátí `IReference`.<br /><br /> Vyvolá výjimku, pokud `duplicatesAllowed` má hodnotu false a není už `IReference` se stejným názvem připojené k `element`.|  
-|`element.GetReferences(name)`|Vrátí všechny `IReference` objekty jsou propojeny s `element` , které mají daný `name`.|  
-|`element.DeleteAllReferences(name)`|Odstraní všechny `IReference` objekty propojený prvek, který se zadaným názvem.|  
-|`reference.Delete()`|To odstraní `IReference`.|  
-|`ReferenceConstants.WorkItem`|Hodnota pro název odkazy na pracovní položku.|  
-  
-## <a name="see-also"></a>Viz také  
- [Definování obslužné rutiny odkazu pracovní položky](../modeling/define-a-work-item-link-handler.md)   
- [Definování a instalace rozšíření modelování](../modeling/define-and-install-a-modeling-extension.md)   
- [Programování pomocí rozhraní API UML](../modeling/programming-with-the-uml-api.md)
+Můžete napsat kód pro připojení libovolných řetězců k prvkům modelu. Řetězec může být například identifikátor URI, výsledek výpočtu uložený v mezipaměti nebo ModelBus odkaz na element v jiném modelu. Každý řetězec je obsažen v objektu IReference. K jednotlivým prvkům modelu lze připojit libovolný počet objektů IReference.
+
+ Každý objekt IReference má název. Tento název můžete použít k určení, jak by měla být interpretována hodnota odkazu. Například můžete nastavit název na "URI", aby označoval, že hodnota by měla být interpretována jako identifikátor URI. Existují některé předdefinované hodnoty referenčního názvu používané nástroji pro modelování.
+
+## <a name="attaching-a-reference-to-an-ielement"></a>Připojení odkazu k IElement
+ Chcete-li použít následující metody, je nutné přidat odkaz na:
+
+ Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost. dll
+
+ Tuto direktivu byste měli vložit do svého kódu:
+
+ `using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;`
+
+|Volání metody|Popis|
+|-----------------|-----------------|
+|`element.AddReference (nameString, valueString, duplicatesAllowed)`|Vytvoří `IReference` s danými řetězci názvů a hodnot a propojí ho s `element`. Vrátí `IReference`.<br /><br /> Vyvolá výjimku, pokud `duplicatesAllowed` je false a již existuje `IReference` se stejným názvem připojeným k `element`.|
+|`element.GetReferences(name)`|Vrátí všechny objekty `IReference` propojené s `element`, které mají daný `name`.|
+|`element.DeleteAllReferences(name)`|Odstraní všechny objekty `IReference` spojené s prvkem, který má daný název.|
+|`reference.Delete()`|Odstraní tento `IReference`.|
+|`ReferenceConstants.WorkItem`|Hodnota, která slouží k pojmenování odkazů na pracovní položky.|
+
+## <a name="see-also"></a>Viz také
+ [Definice obslužné rutiny propojení pracovní položky](../modeling/define-a-work-item-link-handler.md) [definovat a instalovat programování rozšíření pro modelování](../modeling/define-and-install-a-modeling-extension.md) [pomocí rozhraní API UML](../modeling/programming-with-the-uml-api.md)

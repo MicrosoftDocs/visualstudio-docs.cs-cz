@@ -2,17 +2,17 @@
 title: Volání transformací textu v rozšíření VS
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bf32a1722ec8029840566b7602ba78f84adb7ec
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 8729a96d236fd565f31c827ebff6911dbc0b81d6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870508"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667770"
 ---
 # <a name="invoke-text-transformation-in-a-visual-studio-extension"></a>Vyvolání transformace textu v rozšíření sady Visual Studio
 
@@ -36,11 +36,11 @@ string result = t4.ProcessTemplate(filePath, System.IO.File.ReadAllText(filePath
 
 ## <a name="pass-parameters-to-the-template"></a>Předání parametrů do šablony
 
- Do šablony můžete předávat parametry. V šabloně můžete získat hodnoty parametrů pomocí `<#@parameter#>` direktivy.
+ Do šablony můžete předávat parametry. V šabloně můžete získat hodnoty parametrů pomocí direktivy `<#@parameter#>`.
 
- Jako typ parametru je nutné použít typ, který lze serializovat nebo zařadit. To znamená, že typ musí být deklarován s <xref:System.SerializableAttribute>, nebo musí být odvozen od. <xref:System.MarshalByRefObject> Toto omezení je nezbytné, protože textová šablona se vykonává v samostatné doméně AppDomain. Všechny předdefinované typy, jako je **System. String** a **System. Int32** , jsou serializovatelné.
+ Jako typ parametru je nutné použít typ, který lze serializovat nebo zařadit. To znamená, že typ musí být deklarován s <xref:System.SerializableAttribute>, nebo musí být odvozen od <xref:System.MarshalByRefObject>. Toto omezení je nezbytné, protože textová šablona se vykonává v samostatné doméně AppDomain. Všechny předdefinované typy, jako je **System. String** a **System. Int32** , jsou serializovatelné.
 
- Pro předání hodnot parametrů může volající kód umístit hodnoty buď do `Session` slovníku, nebo <xref:System.Runtime.Remoting.Messaging.CallContext>do.
+ Pro předání hodnot parametrů může volající kód umístit hodnoty buď do slovníku `Session`, nebo do <xref:System.Runtime.Remoting.Messaging.CallContext>.
 
  Následující příklad používá obě metody k transformaci krátké testovací šablony:
 
@@ -79,7 +79,7 @@ string result = t4.ProcessTemplate("",
 
 Všechny chyby, které vznikají při zpracování, se zobrazí v okně chyby sady Visual Studio. Kromě toho můžete být upozorněni na chyby zadáním zpětného volání, které implementuje [ITextTemplatingCallback](/previous-versions/visualstudio/visual-studio-2012/bb932397(v=vs.110)).
 
-Pokud chcete výsledný řetězec zapsat do souboru, možná budete chtít zjistit, jaké přípony souborů a kódování byly zadány v `<#@output#>` direktivě v šabloně. Tyto informace budou do zpětného volání rovněž předány. Další informace najdete v tématu [direktiva výstupu T4](../modeling/t4-output-directive.md).
+Pokud chcete výsledný řetězec zapsat do souboru, možná budete chtít zjistit, jaké přípony souborů a kódování byly zadány v direktivě `<#@output#>` v šabloně. Tyto informace budou do zpětného volání rovněž předány. Další informace najdete v tématu [direktiva výstupu T4](../modeling/t4-output-directive.md).
 
 ```csharp
 void ProcessMyTemplate(string MyTemplateFile)
@@ -138,8 +138,8 @@ Můžete předat hodnoty z textové šablony pomocí třídy parametru, která j
 
 ## <a name="related-articles"></a>Související články
 
-Vygenerování textu z předzpracované textové šablony: `TransformText()` Zavolejte metodu generované třídy. Další informace najdete v tématu [generování textu v době běhu s textovými šablonami T4](../modeling/run-time-text-generation-with-t4-text-templates.md).
+Pro vygenerování textu z předzpracované textové šablony: volejte metodu `TransformText()` generované třídy. Další informace najdete v tématu [generování textu v době běhu s textovými šablonami T4](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
 Chcete-li vygenerovat text mimo rozšíření sady Visual Studio: Definujte vlastního hostitele. Další informace najdete v tématu [zpracování textových šablon pomocí vlastního hostitele](../modeling/processing-text-templates-by-using-a-custom-host.md).
 
-Vygenerování zdrojového kódu, který lze později zkompilovat a spustit: Zavolejte metodu [PreprocessTemplate](/previous-versions/visualstudio/visual-studio-2012/ee844321(v=vs.110)) [ITextTemplating](/previous-versions/visualstudio/visual-studio-2012/bb932392(v=vs.110)).
+Pro generování zdrojového kódu, který lze později zkompilovat a spustit: zavolejte metodu [PreprocessTemplate](/previous-versions/visualstudio/visual-studio-2012/ee844321(v=vs.110)) [ITextTemplating](/previous-versions/visualstudio/visual-studio-2012/bb932392(v=vs.110)).
