@@ -6,52 +6,52 @@ ms.technology: vs-ide-code-analysis
 ms.topic: reference
 helpviewer_keywords:
 - FxCopCmd errors
-ms.author: gewarren
-author: gewarren
+ms.author: jillfra
+author: jillre
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d723065e224058b7e269299aad2900f97a1425d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 85441e90bfecc89688ce0ba6ec0ae10082562f0e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62936644"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667596"
 ---
-# <a name="fxcopcmd-tool-errors"></a>Fxcopcmd – chyby nástroje
+# <a name="fxcopcmd-tool-errors"></a>Chyby nástroje FxCopCmd
 
-Fxcopcmd – nebere v úvahu všechny chyby, chcete-li být závažné. Pokud fxcopcmd – má dostatek informací k provedení částečné analýzy, provede analýzu a sestavy chyb, ke kterým došlo. Kód chyby, která je 32bitové celé číslo, obsahuje bitová kombinace číselných hodnot, které odpovídají chyby.
+FxCopCmd nepovažuje všechny chyby za závažné. Pokud má FxCopCmd dostatek informací pro provedení částečné analýzy, provede analýzu a nahlásí chyby, ke kterým došlo. Kód chyby, který je 32 celé číslo, obsahuje bitovou kombinaci číselných hodnot, které odpovídají chybám.
 
-Následující tabulka popisuje kódů chyb vrácených nástrojem fxcopcmd –:
+Následující tabulka popisuje kódy chyb vrácené funkcí FxCopCmd:
 
 |Chyba|Číselná hodnota|
 |-----------|-------------------|
 |Žádné chyby|0x0|
 |Chyba analýzy|0x1|
-|Pravidlo výjimky|0x2|
-|Chyba při načítání projektu|0x4|
-|Chyba při načítání sestavení|0x8|
-|Chyba při načítání knihovny pravidlo|0x10|
-|Chyba při načítání sestavy importu|0x20|
-|Chyba výstupu|0x40|
-|Chyba přepínač příkazového řádku|0x80|
-|Chyba při inicializaci|0x100|
-|Chyba odkazy na sestavení|0x200|
+|Výjimky pravidla|0x2|
+|Chyba načtení projektu|0x4|
+|Chyba načtení sestavení|0x8|
+|Chyba načtení knihovny pravidel|0x10|
+|Chyba při importu načtení sestavy|0x20|
+|Výstupní chyba|0x40|
+|Chyba přepínače příkazového řádku|0x80|
+|Chyba inicializace|0x100|
+|Chyba odkazů na sestavení|0x200|
 |BuildBreakingMessage|0x400|
-|Došlo k neznámé chybě|0x1000000|
+|Neznámá chyba|0x1000000|
 
-**Chyba analýzy** dochází k závažným chybám. Znamená to, že analýzu nelze dokončit. Pokud se používá, kód chyby: také obsahuje základní příčiny závažná chyba. Následující podmínky generovat závažné chyby:
+Pro závažné chyby se vrátí **Chyba analýzy** . Indikuje, že se analýza nedala dokončit. V případě potřeby kód chyby také obsahuje původní příčinu závažné chyby. Následující podmínky generují závažné chyby:
 
-- Analýzy nelze provést z důvodu nedostatečné vstup.
+- Analýzu nelze provést z důvodu nedostatečného vstupu.
 
-- Analýzy došlo k výjimce, která není zpracována fxcopcmd –.
+- Analýza vyvolala výjimku, která není zpracována nástrojem FxCopCmd.
 
-- Zadaný soubor projektu nebyl nalezen nebo je poškozený.
+- Zadaný soubor projektu nebyl nalezen nebo je poškozen.
 
-- Možnost výstupu se nezadalo nebo nebylo možné zapsat soubor.
+- Možnost Output nebyla zadána nebo soubor nelze zapsat.
 
 > [!NOTE]
-> Fxcopcmd – návratový kód **sestavení odkazuje na chyby** 0x200 sám o sobě je varování spíše než chybu. Tento návratový kód znamená, že, který chybí některé nepřímé odkazy, ale, že byl schopen zpracovat je fxcopcmd –. Toto upozornění znamená, že je možné, že některé výsledky analýzy mohl být ohrožený. Nakládat s **sestavení odkazuje na chyby** za chybu, pokud se zkombinuje s jakýkoli návratový kód.
+> Sestavení návratového kódu FxCopCmd **odkazuje na chybu** 0x200 samotným upozorněním, nikoli chybou. Tento návratový kód označuje, že chybí nepřímý odkaz, ale který FxCopCmd byl schopný je zpracovat. Upozornění znamená, že existuje možnost, že některé výsledky analýzy mohou být ohroženy. Považovat **chybu odkazů na sestavení** za chybu, pokud je kombinována s jakýmkoli jiným návratovým kódem.
 
 ## <a name="see-also"></a>Viz také:
 

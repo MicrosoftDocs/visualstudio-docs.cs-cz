@@ -6,24 +6,24 @@ ms.technology: vs-ide-test
 ms.topic: reference
 ms.assetid: cf4000b4-91b5-4b3f-a00d-cc8d192467c2
 caps.latest.revision: 22
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4817fdd346f8c60d061eaa18d9e8a335a5b26ea2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 95f321d3f025ffc96477e288d6657f991bd90b30
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68199735"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672098"
 ---
 # <a name="testing-store-apps-with-visual-studio"></a>Testování aplikací pro Store se sadou Visual Studio
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio obsahuje testovací nástroje, které vám pomůže zkontrolovat, že je aplikace pro Store v nejvyšší kvalitě.
+Visual Studio obsahuje testovací nástroje, které vám pomůžou zajistit, aby vaše aplikace pro Store byla nejvyšší kvalita.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
 |||
 |-|-|
-|[Vytváření a spouštění testů jednotek](../test/create-and-run-unit-tests-for-a-store-app-in-visual-studio.md)|Vytvoření a spuštění testování částí na Store app ze sady Visual Studio.|
-|[Analýza kvality kódu pomocí analýzy statického kódu](../test/analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)|Najdete problémy, které je obtížné rozpoznat při ladění a testování s využitím nástrojů pro analýzu kódu sady Visual Studio.|
+|[Vytváření a spouštění testů jednotek](../test/create-and-run-unit-tests-for-a-store-app-in-visual-studio.md)|Vytvářejte a spouštějte testy jednotek v aplikaci ze Storu ze sady Visual Studio.|
+|[Analýza kvality kódu pomocí analýzy statického kódu](../test/analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)|Najděte problémy, které se obtížně zjišťují při ladění a testování pomocí nástrojů pro analýzu kódu sady Visual Studio.|

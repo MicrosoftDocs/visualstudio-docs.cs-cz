@@ -1,69 +1,69 @@
 ---
-title: Generování kódu z jazyka specifického pro doménu | Dokumentace Microsoftu
+title: Generování kódu z jazyka specifického pro doménu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: e3706cc9-2afd-456a-a879-68425a248ebc
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 63e1b48a7582294c200b1e30147d85a9b26165d4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 32cafb9e68fc2535ed3b570022a59d284f4c4cae
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68182808"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666101"
 ---
 # <a name="generating-code-from-a-domain-specific-language"></a>Vytváření kódu z jazyka specifického pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Microsoft [!INCLUDE[dsl](../includes/dsl-md.md)] poskytuje efektivní způsob, jak generovat kód, dokumenty, konfigurační soubory a další artefakty z dat ve modely. Pomocí [!INCLUDE[dsl](../includes/dsl-md.md)], můžete vytvořit sadu tříd, které představují data a můžete napsat textové šablony v třídách názvy a vlastnosti odrážet tato data.  
-  
- Třeba společnost Fabrikam má soubor XML jména zákazníka a e-mailové adresy. Jejich vývojáři vytvářet model, ve kterém je zákazník třídu s názvem vlastnosti a e-mailu. Zapisují několik textových šablon ke zpracování dat, včetně tento fragment, který vytvoří tabulku ze všech zákazníků jako součást stránky HTML:  
-  
-```  
-<table>  
-<# foreach (Customer c in ContactList) {  #>  
-  <tr><td> <#= c.FullName #> </td>   
-      <td> <#= c.EmailAddress #> </td> </tr>  
-<# } #>  </table>  
-```  
-  
- Při zpracování databáze zákazníka, je do úložiště modelu čtení souboru XML. A *procesor direktiv*, které byly vytvořeny pomocí [!INCLUDE[dsl](../includes/dsl-md.md)], zpřístupní třídu Customer kód v textové šabloně. Mnoho šablon textu je možné spustit na stejné úložiště.  
-  
- Textové šablony jsou nezbytné k [!INCLUDE[dsl](../includes/dsl-md.md)]. Používají se k vygenerování zdrojového kódu pro elementy modelu domény stejně jako u sady VSPackage a ovládací prvky, které se používají k integraci nástroje s [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
-  
- Tato část popisuje některé ze způsobů, jak vytvořit, upravit a ladění textové šablony používané [!INCLUDE[dsl](../includes/dsl-md.md)].  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Přístup k modelům z textových šablon](../modeling/accessing-models-from-text-templates.md)  
-  
- Poskytuje základní informace o odkazech jazyka specifického pro doménu v textových šablonách.  
-  
- [Návod: Ladění textové šablony přistupující k modelu](../modeling/walkthrough-debugging-a-text-template-that-accesses-a-model.md)  
-  
- Popisuje postup řešení potíží a ladění textové šablony, který odkazuje na jazyka specifického pro doménu.  
-  
- [Návod: Připojení hostitele k procesoru vygenerovaných direktiv](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)  
-  
- Popisuje postup připojení vlastního hostitele k procesoru vygenerovaných direktiv.  
-  
- [Příkaz DslTextTransform](../modeling/the-dsltexttransform-command.md)  
-  
- Popisuje souboru příkazů, které provádí TextTransform spustitelný soubor na příkazovém řádku pro textové šablony, které odkazují na jazyky specifickými pro doménu.  
-  
-## <a name="reference"></a>Reference  
- [Zápis textové šablony T4](../modeling/writing-a-t4-text-template.md)  
-  
- Poskytuje syntaxi direktivy textové šablony a řídicí bloky.  
-  
-## <a name="related-sections"></a>Související oddíly  
- [Vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)  
-  
- Tento článek vysvětluje proces transformace textových šablon.  
-  
- [Vytvoření kódu v procesu sestavení](../modeling/code-generation-in-a-build-process.md)  
-  
- Přečtěte si toto téma, pokud jsou generování souborů z DSL na serveru sestavení.
+Microsoft [!INCLUDE[dsl](../includes/dsl-md.md)] poskytuje účinný způsob, jak vygenerovat kód, dokumenty, konfigurační soubory a jiné artefakty z dat reprezentovaných v modelech. Pomocí [!INCLUDE[dsl](../includes/dsl-md.md)] můžete vytvořit sadu tříd, které představují vaše data, a můžete napsat šablony textu do tříd, jejichž názvy a vlastnosti tyto údaje odrážejí.
+
+ Například společnost Fabrikam má soubor XML s názvy zákazníků a e-mailovými adresami. Jejich vývojáři vytvoří model, ve kterém je zákazník třídy, s vlastnostmi název a e-mail. Napíší několik textových šablon pro zpracování dat, včetně tohoto fragmentu, který vytvoří tabulku všech zákazníků jako součást stránky HTML:
+
+```
+<table>
+<# foreach (Customer c in ContactList) {  #>
+  <tr><td> <#= c.FullName #> </td>
+      <td> <#= c.EmailAddress #> </td> </tr>
+<# } #>  </table>
+```
+
+ Když se zpracuje databáze zákazníka, soubor XML se přečte do úložiště modelu. *Procesor direktiv*vytvořený pomocí [!INCLUDE[dsl](../includes/dsl-md.md)] zpřístupňuje třídu Customer pro kód v textové šabloně. Mnoho textových šablon lze spustit proti stejnému úložišti.
+
+ Šablony textu jsou nezbytné pro [!INCLUDE[dsl](../includes/dsl-md.md)]. Slouží k vygenerování zdrojového kódu pro prvky doménového modelu a také pro sady VSPackage a ovládací prvky, které se používají k integraci nástrojů s [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+
+ Tato část popisuje některé způsoby, jak vytvářet, upravovat a ladit textové šablony používané v [!INCLUDE[dsl](../includes/dsl-md.md)].
+
+## <a name="in-this-section"></a>V tomto oddílu
+ [Přístup k modelům z textových šablon](../modeling/accessing-models-from-text-templates.md)
+
+ Poskytuje základní informace o tom, jak odkazovat na jazyk specifický pro doménu v textových šablonách.
+
+ [Návod: Ladění textové šablony přistupující k modelu](../modeling/walkthrough-debugging-a-text-template-that-accesses-a-model.md)
+
+ Popisuje postup řešení potíží a ladění v textové šabloně, která odkazuje na jazyk specifický pro doménu.
+
+ [Návod: Připojení hostitele k procesoru vygenerovaných direktiv](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)
+
+ Popisuje, jak připojit vlastního hostitele k procesoru vygenerovaných direktiv.
+
+ [Příkaz DslTextTransform](../modeling/the-dsltexttransform-command.md)
+
+ Popisuje soubor příkazů, který spustí spustitelný soubor TextTransform v příkazovém řádku pro textové šablony, které odkazují na jazyky specifické pro doménu.
+
+## <a name="reference"></a>Odkaz
+ [Zápis textové šablony T4](../modeling/writing-a-t4-text-template.md)
+
+ Poskytuje syntaxi direktiv textových šablon a řídicích bloků.
+
+## <a name="related-sections"></a>Související oddíly
+ [Vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
+
+ Vysvětluje proces transformace textové šablony.
+
+ [Vytvoření kódu v procesu sestavení](../modeling/code-generation-in-a-build-process.md)
+
+ Pokud generujete soubory z DSL na serveru sestavení, přečtěte si toto téma.

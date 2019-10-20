@@ -1,5 +1,5 @@
 ---
-title: Možnosti, textový Editor, C#, formátování vzorků | Dokumentace Microsoftu
+title: Možnosti, textový editor, C#formátování | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -23,40 +23,40 @@ helpviewer_keywords:
 - Text Editor Options dialog box, formatting
 ms.assetid: 5a7bb668-1d0c-4ffe-9508-24592813162e
 caps.latest.revision: 29
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f75d2b73946a006057945b1e68f018a358e38279
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 5371b7180aed462910a57daeb9bf5d43f2ecfedb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65674203"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662290"
 ---
 # <a name="options-text-editor-c-formatting"></a>Možnosti, textový editor, C#, formátování
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Použití **formátování** dialogové okno stránky vlastností pro nastavení možností pro formátování kódu v editoru kódu. Toto dialogové okno, klikněte na tlačítko **možnosti** na **nástroje** nabídky, rozbalte **textový Editor**, rozbalte **jazyka C#** a potom klikněte na tlačítko  **Formátování**.  
-  
+Dialogové okno Stránka vlastností **formátování** slouží k nastavení možností formátování kódu v editoru kódu. Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na tlačítko **Možnosti** v nabídce **nástroje** , rozbalte položku **textový editor**, rozbalte položku **C#** a klikněte na možnost **formátování**.
+
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="general-settings"></a>Obecné nastavení  
- Obecné nastavení vliv na použití možností formátování kódu v editoru kódu.  
-  
-## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
-  
-|Popisek|Popis|  
-|-----------|-----------------|  
-|**Automaticky formátovat ukončený výraz při;**|Pokud je vybráno, formátuje příkazy po dokončení podle možnosti formátování pro Editor kódu pro vybrané. Pokud nechcete, aby se v editoru kódu pro úpravu příkazů, zrušte zaškrtnutí tohoto políčka.|  
-|**Automaticky formátovat dokončený blok při}**|Pokud je vybráno, formáty bloky podle možnosti formátování pro Editor kódu vybrali co nejdříve po dokončení bloku kódu kódu. Pokud nechcete, aby se v editoru kódu pro úpravu bloky, zrušte zaškrtnutí tohoto políčka.|  
-|**Upravit odsazení při vložení**|Pokud je vybráno, formátuje text vložit do editoru kódu podle možnosti formátování pro Editor kódu vybrali. Vymazat toto políčko, nechcete-li vložit text, který má být změněn.|  
-  
-## <a name="preview-window"></a>Okno náhledu  
- **Odsazení**, **nové řádky**, **mezery**, a **obtékání** možnosti podokna zobrazíte okno náhledu. V okně verze preview demonstruje účinek jednotlivých možností. Pokud chcete použít okno náhledu, vyberte možnost formátování. Okno náhledu ukazuje příklad vybrané možnosti. Když změníte nastavení, například když zaškrtnete nebo zrušíte zaškrtnutí políčka okno náhledu se zaktualizuje a zobrazí efekt nové nastavení.  
-  
-## <a name="remarks"></a>Poznámky  
- Možnosti odsazení **karty** stránky pro každý jazyk jenom určit, kde editoru kódu umístí kurzor po stisknutí klávesy ENTER na konci řádku. Odsazení možnosti v části **formátování** použít, když kód je ve formátu automaticky, například po vložení kódu do souboru při **upravit odsazení při vložení** je vybraná a kdy se bloku ve formátu je zadali ručně.  
-  
-## <a name="see-also"></a>Viz také  
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="general-settings"></a>Obecné nastavení
+ Obecné nastavení ovlivňuje způsob, jakým Editor kódu aplikuje možnosti formátování kódu.
+
+## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
+
+|Popisek|Popis|
+|-----------|-----------------|
+|**Automaticky formátovat dokončený příkaz na;**|Pokud je tato možnost vybrána, formátuje příkazy při dokončení podle možností formátování vybraných pro Editor kódu. Pokud nechcete, aby Editor kódu měnil příkazy, zrušte zaškrtnutí tohoto políčka.|
+|**Automaticky formátovat dokončený blok na}**|Je-li vybrána tato možnost, formátuje bloky kódu podle možností formátování vybraných pro Editor kódu ihned po dokončení bloku kódu. Pokud nechcete, aby Editor kódu změnil bloky, zrušte zaškrtnutí tohoto políčka.|
+|**Upravit odsazení při vložení**|Když je tato možnost vybrána, formátuje text vložený do editoru kódu, aby odpovídal možnostem formátování vybraným pro Editor kódu. Pokud nechcete, aby se vkládaný text změnil, zrušte zaškrtnutí tohoto políčka.|
+
+## <a name="preview-window"></a>Okno náhledu
+ Podokna možností **odsazení**, **nové řádky**, **mezery**a **zalamování** jednotlivých oken zobrazují okno náhledu. V okně náhledu se zobrazí efekt jednotlivých možností. Chcete-li použít okno náhledu, vyberte možnost formátování. V okně náhledu se zobrazí příklad vybrané možnosti. Když změníte nastavení, například když zaškrtnete nebo zrušíte zaškrtnutí políčka, okno náhledu se aktualizuje a zobrazí efekt nového nastavení.
+
+## <a name="remarks"></a>Poznámky
+ Možnosti odsazení na stránkách **karet** pro jednotlivé jazyky určují, kde Editor kódu umístí kurzor po stisknutí klávesy ENTER na konci řádku. Možnosti odsazení v části **formátování** platí, pokud je kód automaticky naformátován, například při vložení kódu do souboru, když je vybrána možnost **upravit odsazení při vložení** a když je formátovaný blok zadán ručně.
+
+## <a name="see-also"></a>Viz také
  [Obecné, Prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)

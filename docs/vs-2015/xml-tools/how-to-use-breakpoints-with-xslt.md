@@ -1,61 +1,61 @@
 ---
-title: 'Postupy: Používání zarážek v XSLT | Dokumentace Microsoftu'
+title: 'Postupy: použití zarážek s XSLT | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: bf7bbc2c-71dc-4cac-a6fc-add6b27d92ed
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: df2fb0c6505bc5fa756443bd50fdb31ff151e7d7
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 0519c3ab19e7d36aa26ea2f462c8a4571b9f8b32
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65673679"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656298"
 ---
-# <a name="how-to-use-breakpoints-with-xslt"></a>Postupy: Používání zarážek v XSLT
+# <a name="how-to-use-breakpoints-with-xslt"></a>Postupy: použití zarážek s XSLT
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete nastavit zarážky v šabloně stylů XSLT, nebo ve zdrojovém dokumentu XML. Pokud nastavíte zarážku na značku, při spuštění zarážce přejde k další příkaz, který obsahuje informace o řádku zdroje.  
-  
- Další informace najdete v tématu [základní informace o ladění: Zarážky](https://msdn.microsoft.com/752a02c2-0ac7-4c8b-aa1b-4b2b3b21152e).  
-  
-## <a name="set-a-breakpoint-in-a-style-sheet"></a>Nastavte zarážku v šabloně stylů  
- Zarážky lze nastavit na počáteční značky, koncovými značkami a textové uzly šablony stylů XSLT. Zarážky můžete také nastavit na kód v bloku skriptu.  
-  
-#### <a name="to-set-a-breakpoint-in-a-style-sheet"></a>Chcete-li nastavit zarážku v šabloně stylů  
-  
-1. Otevření šablony stylů v editoru XML.  
-  
-2. Umístěte kurzor myši v místě zarážky, klikněte pravým tlačítkem, přejděte na **zarážku**a klikněte na tlačítko **vložit zarážku**.  
-  
-3. Klikněte na tlačítko Procházet na tlačítko Procházet (**...** ) na **vstup** pole v okně Vlastnosti dokumentu.  
-  
-4. Vyhledejte zdrojový dokument XML a klikněte na tlačítko **otevřít**.  
-  
-     Tím se nastaví zdrojový soubor dokumentu, který slouží k transformaci XSLT.  
-  
-5. Klikněte na tlačítko **ladění XSL** tlačítko na panelu nástrojů editoru XML.  
-  
-## <a name="set-a-breakpoint-in-an-xml-source-document"></a>Nastavit zarážku ve zdrojovém dokumentu XML  
- Zarážky lze nastavit na elementy, atributy, uzel oboru názvů, komentáře, instrukce pro zpracování a textové uzly zdrojovém dokumentu XML. Nelze nastavit zarážku na uzel dokumentu nebo na uzel oboru názvů, který je zděděn z nadřazeného elementu.  
-  
-#### <a name="to-set-a-breakpoint-in-an-xml-source-document"></a>Chcete-li nastavit zarážku ve zdrojovém dokumentu XML  
-  
-1. Otevřete dokument XML v editoru XML.  
-  
-2. Umístěte kurzor myši v místě zarážky, klikněte pravým tlačítkem, přejděte na **zarážku**a klikněte na tlačítko **vložit zarážku**.  
-  
-3. Klikněte na tlačítko Procházet na tlačítko Procházet (**...** ) na **šablony stylů** pole v okně Vlastnosti dokumentu.  
-  
-4. Vyhledejte zdrojový dokument XML a klikněte na tlačítko **otevřít**.  
-  
-     Tím se nastaví zdrojový soubor dokumentu, který slouží k transformaci XSLT.  
-  
-5. Klikněte na tlačítko **ladění XSL** tlačítko na panelu nástrojů editoru XML.  
-  
-## <a name="see-also"></a>Viz také  
+Můžete nastavit zarážky v šabloně stylů XSLT nebo ve zdrojovém dokumentu XML. Pokud nastavíte zarážku na značku, při spuštění se zarážka přesune k dalšímu příkazu, který obsahuje informace o řádku zdroje.
+
+ Další informace najdete v tématu [základy ladění: zarážky](https://msdn.microsoft.com/752a02c2-0ac7-4c8b-aa1b-4b2b3b21152e).
+
+## <a name="set-a-breakpoint-in-a-style-sheet"></a>Nastavení zarážky v šabloně stylů
+ Zarážky lze nastavit u počátečních značek, koncových značek a textových uzlů šablony stylů XSLT. Zarážky lze také nastavit pro kód v bloku skriptu.
+
+#### <a name="to-set-a-breakpoint-in-a-style-sheet"></a>Nastavení zarážky v šabloně stylů
+
+1. Otevřete šablonu stylů v editoru XML.
+
+2. Umístěte kurzor na umístění zarážky, klikněte pravým tlačítkem myši, přejděte na **zarážku**a klikněte na **Vložit zarážku**.
+
+3. Klikněte na tlačítko Procházet procházením ( **...** ) v poli **input** okna vlastností dokumentu.
+
+4. Vyhledejte zdrojový dokument XML a klikněte na **otevřít**.
+
+     Tím se nastaví zdrojový soubor dokumentu, který se používá pro transformaci XSLT.
+
+5. Klikněte na tlačítko **LADIT XSL** na panelu nástrojů editoru XML.
+
+## <a name="set-a-breakpoint-in-an-xml-source-document"></a>Nastavení zarážky ve zdrojovém dokumentu XML
+ Zarážky lze nastavit u elementů, atributů, uzlu oboru názvů, komentářů, instrukcí pro zpracování a textových uzlů zdrojového dokumentu XML. Nelze nastavit zarážku na uzlu dokumentu nebo na uzlu oboru názvů, který je zděděn z nadřazeného elementu.
+
+#### <a name="to-set-a-breakpoint-in-an-xml-source-document"></a>Nastavení zarážky ve zdrojovém dokumentu XML
+
+1. Otevřete dokument XML v editoru XML.
+
+2. Umístěte kurzor na umístění zarážky, klikněte pravým tlačítkem myši, přejděte na **zarážku**a klikněte na **Vložit zarážku**.
+
+3. Klikněte na tlačítko Procházet procházením ( **...** ) v poli **StyleSheet** okna vlastností dokumentu.
+
+4. Vyhledejte zdrojový dokument XML a klikněte na **otevřít**.
+
+     Tím se nastaví zdrojový soubor dokumentu, který se používá pro transformaci XSLT.
+
+5. Klikněte na tlačítko **LADIT XSL** na panelu nástrojů editoru XML.
+
+## <a name="see-also"></a>Viz také
  [Návod: Ladění šablony stylů XSLT](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)

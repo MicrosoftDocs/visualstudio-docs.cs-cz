@@ -11,77 +11,77 @@ helpviewer_keywords:
 - wavy underlines
 - Text Editor Options dialog box, IntelliSense
 ms.assetid: 3466dedb-e5f4-424c-8dd8-e4941b2f4fc2
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7e7e76e025c2c426a83f00c1cf2af830eb1c26a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2d1e330788b72ff0b4395d1e5d531d1d233f59e7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778681"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666231"
 ---
 # <a name="options-text-editor-c-intellisense"></a>Možnosti, textový editor, C#, IntelliSense
 
-Použití **IntelliSense** možnosti stránky pro úpravu nastavení, která ovlivňují chování technologie IntelliSense pro C#. Chcete-li získat přístup k této stránce Možnosti, zvolte **nástroje** > **možnosti**a klikněte na tlačítko **textový Editor**  >  **C#**  >  **IntelliSense**.
+Stránka možnosti **technologie IntelliSense** slouží k úpravě nastavení, která mají vliv na chování technologie C#IntelliSense pro. Chcete-li získat přístup k této stránce Možnosti, zvolte **nástroje**  > **Možnosti**a pak zvolte**C#** **textový editor**  >   > **IntelliSense**.
 
-**IntelliSense** stránka možností obsahuje následující možnosti:
+Stránka možnosti **technologie IntelliSense** obsahuje následující možnosti:
 
 ## <a name="completion-lists"></a>Seznamy dokončení
 
 - Zobrazit seznam dokončení po zadání znaku *
 
-   Pokud je vybraná tato možnost, IntelliSense zobrazí seznam pro doplňování automaticky při zadávání. Pokud není vybraná tato možnost, je stále k dispozici z dokončování IntelliSense **IntelliSense** nabídky nebo stisknutím klávesy **Ctrl**+**místo**.
+   Když je vybraná tato možnost, IntelliSense po zahájení psaní automaticky zobrazí seznam dokončení. Pokud tato možnost není vybrána, bude dokončování technologie IntelliSense stále k dispozici v nabídce **technologie IntelliSense** nebo stisknutí klávesy **CTRL** +**MEZERNÍK**.
 
-- Zobrazit seznam dokončení po odstranění znaku
+- Po odstranění znaku zobrazit seznam dokončení
 
-- Zvýraznit odpovídající části položek seznamu dokončení
+- Zvýraznit vyhovující části položek seznamu dokončení
 
-- Zobrazovat filtry položek dokončení
+- Zobrazit filtry položek dokončení
 
-## <a name="snippets-behavior"></a>Chování fragmentů
+## <a name="snippets-behavior"></a>Chování fragmentů kódu
 
 - Nikdy Nezahrnovat fragmenty
 
-   Pokud je vybraná tato možnost, technologie IntelliSense nikdy Přidá aliasy pro C# fragmenty do seznamu dokončení kódu.
+   Je-li vybrána tato možnost, technologie IntelliSense nikdy nepřidá aliasy pro C# fragmenty kódu do seznamu dokončení.
 
-- Vždy zahrnovat fragmenty
+- Vždy zahrnout fragmenty kódu
 
-   Pokud je vybraná tato možnost, technologie IntelliSense přidá do seznamu dokončení aliasy pro fragmenty kódu v C#. V případě, kdy alias fragment kódu je stejný jako klíčové slovo, například [třída](/dotnet/csharp/language-reference/keywords/class), klíčové slovo je nahrazena klávesovou zkratku. Další informace najdete v tématu [ C# fragmenty kódu](../../ide/visual-csharp-code-snippets.md).
+   Pokud je vybrána tato možnost, technologie IntelliSense přidá aliasy pro C# fragmenty kódu do seznamu dokončení. V případě, že je alias fragmentu kódu stejný jako klíčové slovo, například [Třída](/dotnet/csharp/language-reference/keywords/class), klíčové slovo je nahrazeno zástupcem. Další informace naleznete v tématu [ C# fragmenty kódu](../../ide/visual-csharp-code-snippets.md).
 
-- Zahrnovat fragmenty po?-je zadaný Tabulátor za identifikátor
+- Zahrnout fragmenty kódu při zadání?-Tab po identifikátoru
 
-   Pokud je vybraná tato možnost, technologie IntelliSense Přidá aliasy pro C# fragmenty kódu pro dokončení seznamu při **?** + **Kartu** stisknutí za identifikátor
+   Pokud je vybrána tato možnost, technologie IntelliSense přidá aliasy pro C# fragmenty kódu do seznamu dokončení při stisknutí klávesy TAB na**kartě** **?** + po identifikátoru.
 
 ## <a name="enter-key-behavior"></a>Chování klávesy ENTER
 
-- Nikdy přidat nový řádek enter
+- Nikdy Nepřidávat nový řádek při zadání
 
-   Určuje, že nový řádek nikdy přidán automaticky po výběru nějaké položky v seznamu dokončení a stisknutím klávesy **Enter**.
+   Určuje, že se nový řádek nikdy nepřidá automaticky po výběru položky v seznamu pro dokončení a stisknutím klávesy **ENTER**.
 
-- Přidat nový řádek jenom enter po konci úplně napsaného slova
+- Přidat nový řádek při stisknutí ENTER po konci plně zadaného slova
 
-   Určuje, že pokud zadání všech znaků pro položku v seznamu dokončení a potom stiskněte klávesu **Enter**, se automaticky přidá nový řádek a kurzor se přesune na nový řádek.
+   Určuje, že pokud zadáte všechny znaky pro položku v seznamu pro doplňování a potom stisknete klávesu **ENTER**, automaticky se přidá nový řádek a kurzor se přesune na nový řádek.
 
-   Pokud zadáte například `else` a potom stiskněte klávesu **Enter**, v editoru se zobrazí následující:
+   Pokud například zadáte `else` a potom stisknete klávesu **ENTER**, zobrazí se v editoru následující:
 
    `else`
 
    `|` (umístění kurzoru)
 
-   Nicméně pokud zadáte pouze `el` a potom stiskněte klávesu **Enter**, v editoru se zobrazí následující:
+   Pokud však zadáte pouze `el` a stisknete klávesu **ENTER**, zobrazí se v editoru následující:
 
    `else|` (umístění kurzoru)
 
-- Vždy přidat nový řádek enter
+- Vždy přidat nový řádek při zadání
 
-   Určuje, že pokud zadáte *jakékoli* znaků pro položku v seznamu dokončení a poté stiskněte klávesu **Enter**, se automaticky přidá nový řádek a kurzor se přesune na nový řádek.
+   Určuje, že pokud zadáte *některý* ze znaků pro položku v seznamu pro doplňování a stisknete klávesu **ENTER**, automaticky se přidá nový řádek a kurzor se přesune na nový řádek.
 
-## <a name="show-name-suggestions"></a>Zobrazit název návrhy
+## <a name="show-name-suggestions"></a>Zobrazit návrhy názvů
 
-Automatický objekt název dokončení provádí pro členy, které jste nedávno vybrali.
+Provede automatické dokončování názvů objektů pro členy, které jste naposledy vybrali.
 
 ## <a name="see-also"></a>Viz také:
 

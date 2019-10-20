@@ -15,19 +15,19 @@ helpviewer_keywords:
 - Options dialog box, General Environment
 - General Environment Options dialog box
 - Environment Options dialog box
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb1dbbcc4adf8305aad119ac8a4cb223e0f89902
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 36e7efa9176b2e685463330b3ca8dbd714ec4555
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180280"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660052"
 ---
-# <a name="options-dialog-box-environment--general"></a>Dialogové okno Možnosti: Obecné \> prostředí
+# <a name="options-dialog-box-environment--general"></a>Dialogové okno Možnosti: prostředí \> obecné
 
 Tato stránka slouží ke změně barevných motivů, nastavení stavového řádku a přidružení přípon souborů mezi další možnosti pro integrované vývojové prostředí (IDE). K dialogovému oknu **Možnosti** můžete přistupovat otevřením nabídky **nástroje** , výběrem **Možnosti**, otevřením složky **prostředí** a kliknutím na stránku **Obecné** . Pokud se tato stránka v seznamu nezobrazí, zaškrtněte políčko **Zobrazit všechna nastavení** v dialogovém okně **Možnosti** .
 
@@ -50,7 +50,7 @@ Nabídky používají ve výchozím nastavení styl písmen názvů. Zrušte tut
 Tato možnost povoluje nebo zakazuje sledování bodů monitorování a DPI (nebo *PMA*) na palec. Když je povolený PMA, uživatelské rozhraní sady Visual Studio se zobrazí ostře v jakémkoli monitorování a konfigurace rozlišení DPI, včetně různých monitorů. K povolení PMA potřebujete Windows 10 Update 2018 nebo novější a .NET Framework 4,8 nebo novější. (Tato možnost se zobrazí šedě, pokud tyto dva požadavky nejsou splněny.)
 
 > [!TIP]
-> - Windows 10 obsahuje nastavení, které říká, že se **Windows snaží opravit aplikace, aby**se rozmazaný. Zapnutí nastavení systému Windows má zanedbatelný efekt, pokud máte zaškrtnuté políčko **optimalizovat vykreslování pro obrazovky s různou hustotou pixelů** .
+> - Windows 10 obsahuje nastavení, které říká, že se **Windows snaží opravit aplikace, aby se rozmazaný**. **Zapnutí nastavení systému** Windows má zanedbatelný efekt, pokud máte zaškrtnuté políčko **optimalizovat vykreslování pro obrazovky s různou hustotou pixelů** .
 > - Windows 10 zahrnuje také **Poradce při potížích s kompatibilitou programů**. Nedoporučujeme řešit vzhled sady Visual Studio pomocí tohoto poradce při potížích.
 
 ::: moniker-end
@@ -62,7 +62,7 @@ Určuje, zda sada Visual Studio nastaví automatické nastavení pro vizuální 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Windows 10 obsahuje nastavení, které říká, že se **Windows snaží opravit aplikace, aby**se rozmazaný. Zapnutí tohoto nastavení se doporučuje, pokud se Visual Studio na monitoru neostří. Zvažte upgrade na [Visual Studio 2019](https://visualstudio.microsoft.com/downloads), který výrazně vylepšuje přehlednost zobrazení, protože se jedná o každou monitorovanou aplikaci pro monitorování bodů na palec.
+> Windows 10 obsahuje nastavení, které říká, že se **Windows snaží opravit aplikace, aby se rozmazaný**. Zapnutí tohoto nastavení se doporučuje, **Pokud se Visual** Studio na monitoru neostří. Zvažte upgrade na [Visual Studio 2019](https://visualstudio.microsoft.com/downloads), který výrazně vylepšuje přehlednost zobrazení, protože se jedná o každou monitorovanou aplikaci pro monitorování bodů na palec.
 
 ::: moniker-end
 

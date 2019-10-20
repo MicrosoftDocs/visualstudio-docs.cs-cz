@@ -4,21 +4,21 @@ ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.F%2523.Code_Fixes
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a73991702455fab54baf868499634e1a4f5bbf48
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: a5c736be59c257d98085831971d6b7b9dc2a0ef3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870749"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666269"
 ---
-# <a name="options-text-editor--f--code-fixes"></a>Nastavení Editor textu > F# > opravy kódu
+# <a name="options-text-editor--f--code-fixes"></a>Možnosti: textový editor > F# > opravy kódu
 
-Pomocí stránky možnosti oprav kódu můžete určit nastavení, které může pomáhat identifikovat chyby kódu a nabízet řešení. Chcete-li získat přístup k této stránce Možnosti, zvolte**možnost** **nástroje** > a pak zvolte možnost**opravy kódu** **editoru** > **F#**  > textu.
+Pomocí stránky možnosti oprav kódu můžete určit nastavení, které může pomáhat identifikovat chyby kódu a nabízet řešení. Chcete-li získat přístup k této stránce Možnosti, zvolte **nástroje**  > **Možnosti**a pak zvolte**F#** **textový editor**  >   > **opravy kódu**.
 
 ## <a name="code-fixes"></a>Opravy kódu
 
@@ -28,11 +28,11 @@ Pomocí stránky možnosti oprav kódu můžete určit nastavení, které může
 
 - **Vždy umístit otevřené příkazy na nejvyšší úroveň**
 
-  Pokud je toto políčko zaškrtnuté a zadáte `open` příkaz v kódu, je umístěn na nejvyšší úrovni.
+  Pokud je toto políčko zaškrtnuto a zadáte `open` příkaz v kódu, je umístěn na nejvyšší úrovni.
 
 - **Odebrat nepoužívané otevřené příkazy**
 
-  Pokud je toto políčko zaškrtnuté, dokumenty se analyzují pro nepoužité `open` příkazy a v [rychlé akci](../quick-actions.md) se zobrazí akce, která odebere všechny nepoužité `open` příkazy.
+  Pokud je toto políčko zaškrtnuté, dokumenty se analyzují pro nepoužité `open` příkazy a v [rychlé akci](../quick-actions.md) se zobrazí akce, která odebere všechny nepoužité příkazy `open`.
 
 - **Analyzovat a navrhovat opravy pro nepoužívané hodnoty**
 

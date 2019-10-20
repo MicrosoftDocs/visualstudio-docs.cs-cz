@@ -4,59 +4,59 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain properties
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ca2401333f7678b821b5c6fa68f7953a91996d0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: bc7d4ef8e281cd56b7a585d516cd5d48028a00f8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440025"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653710"
 ---
 # <a name="calculated-and-custom-storage-properties"></a>Vypočtené a vlastní vlastnosti úložiště
-Všechny vlastnosti domény v jazyka specifického pro doménu (DSL) je možné zobrazit v diagramu a v Průzkumníku jazyk uživatele a je přístupný pomocí kódu programu. Vlastnosti se však liší v tak, že jejich hodnoty jsou uloženy.
+Všechny vlastnosti domény v jazyce DSL (Domain Specific Language) lze zobrazit uživateli v diagramu a ve vašem jazykovém Průzkumníku a lze k němu přistupovat prostřednictvím kódu programu. Vlastnosti se ale liší ve způsobu, jakým jsou uložené jejich hodnoty.
 
-## <a name="kinds-of-domain-properties"></a>Typy vlastností domény
- V definici DSL, můžete nastavit **druh** vlastnictví domény, jak je uvedeno v následující tabulce:
+## <a name="kinds-of-domain-properties"></a>Typy doménových vlastností
+ V definici DSL můžete nastavit **druh** doménové vlastnosti, jak je uvedeno v následující tabulce:
 
-|Druh vlastnosti domény|Popis|
+|Druh doménové vlastnosti|Popis|
 |-|-|
-|**Standardní** (výchozí)|Doménová vlastnost, která se uloží do *ukládání* a serializovaná do souboru.|
-|**Vypočítá**|Vlastnost domény jen pro čtení, není uložen v úložišti, které se počítá z jiných hodnot.<br /><br /> Například `Person.Age` může počítají na základě `Person.BirthDate`.<br /><br /> Je nutné zadat kód, který provede výpočet. Obvykle vypočítat hodnotu z jiné domény vlastnosti. Ale můžete také použít externí prostředky.|
-|**Vlastní úložiště**|Doménová vlastnost, která se neuloží, přímo v úložišti, ale může být get a set.<br /><br /> Je nutné zadat metody, které získat a nastavit hodnotu.<br /><br /> Například `Person.FullAddress` by mohly být uloženy v `Person.StreetAddress`, `Person.City`, a `Person.PostalCode`.<br /><br /> Můžete také přístup k externím prostředkům, třeba když chcete získávat a nastavovat hodnoty z databáze.<br /><br /> Váš kód by neměl nastavit hodnoty v úložišti při `Store.InUndoRedoOrRollback` má hodnotu true. Zobrazit [transakce a vlastní nastavení](#setters).|
+|**Standardní** (výchozí)|Doménová vlastnost, která je uložena v *úložišti* a serializována do souboru.|
+|**Vypočíst**|Vlastnost domény jen pro čtení, která není uložena v úložišti, ale je počítána z jiných hodnot.<br /><br /> @No__t_0 lze například vypočítat z `Person.BirthDate`.<br /><br /> Je nutné zadat kód, který provede výpočet. Obvykle se počítá hodnota z jiných doménových vlastností. Můžete ale také použít externí prostředky.|
+|**Vlastní úložiště**|Doménová vlastnost, která se neukládá přímo do úložiště, ale může být Get i set.<br /><br /> Je nutné zadat metody, které získají a nastavují hodnotu.<br /><br /> Například `Person.FullAddress` mohl být uložen v `Person.StreetAddress`, `Person.City` a `Person.PostalCode`.<br /><br /> Můžete také získat přístup k externím prostředkům, například k získání a nastavení hodnot z databáze.<br /><br /> Váš kód by neměl nastavovat hodnoty v úložišti, pokud je `Store.InUndoRedoOrRollback` true. Viz [transakce a vlastní settery](#setters).|
 
-## <a name="providing-the-code-for-a-calculated-or-custom-storage-property"></a>Poskytuje kód pro vlastnost počítané nebo vlastní úložiště
- Pokud nastavíte typ doménová vlastnost, která chcete počítané nebo vlastní úložiště, je nutné zadat přístupové metody. Při sestavování řešení se zpráva o chybě říct, co je potřeba.
+## <a name="providing-the-code-for-a-calculated-or-custom-storage-property"></a>Poskytnutí kódu pro vypočítanou nebo vlastní vlastnost úložiště
+ Pokud nastavíte druh doménové vlastnosti na počítané nebo vlastní úložiště, budete muset zadat přístupové metody. Při sestavování řešení vám zpráva o chybě bude informovat o tom, co je potřeba.
 
-#### <a name="to-define-a-calculated-or-custom-storage-property"></a>Chcete-li definovat počítané nebo vlastní vlastnosti úložiště
+#### <a name="to-define-a-calculated-or-custom-storage-property"></a>Definování vypočítané nebo vlastní vlastnosti úložiště
 
-1. V DslDefinition.dsl, vyberte vlastnost domény v diagramu nebo v **Průzkumník DSL**.
+1. V DslDefinition. DSL vyberte vlastnost doména buď v diagramu, nebo v **Průzkumníku DSL**.
 
-2. V **vlastnosti** okno, nastavte **druh** pole **vypočtené** nebo **vlastní úložiště**.
+2. V okně **vlastnosti** nastavte pole **druh** na **počítané** nebo **vlastní úložiště**.
 
-     Ujistěte se, že jste také nastavili své **typ** na co chcete.
+     Ujistěte se, že jste také nastavili svůj **typ** na to, co chcete.
 
-3. Klikněte na tlačítko **Transformovat všechny šablony** na panelu nástrojů **Průzkumníka řešení**.
+3. Klikněte na možnost **transformovat všechny šablony** na panelu nástrojů **Průzkumník řešení**.
 
-4. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+4. V nabídce **sestavení** klikněte na **Sestavit řešení**.
 
-     Zobrazí se tato chybová zpráva: "*YourClass* neobsahuje definici pro Get*YourProperty*."
+     Zobrazí se následující chybová zpráva: "*YourClass* neobsahuje definici pro Get*YourProperty*".
 
-5. Klikněte dvakrát na chybovou zprávu.
+5. Dvakrát klikněte na chybovou zprávu.
 
-     Dsl\GeneratedCode\DomainClasses.cs nebo DomainRelationships.cs otevře. Nad volání metody zvýrazněný, komentář vás vyzve k zadání implementace u metody Get*YourProperty*().
+     Otevře se Dsl\GeneratedCode\DomainClasses.cs nebo DomainRelationships.cs. Nad zvýrazněným voláním metody komentář vás vyzve k poskytnutí implementace pro Get*YourProperty*().
 
     > [!NOTE]
-    > Tento soubor je vygenerován z DslDefinition.dsl. Pokud jste tento soubor upravit, vaše změny budou ztraceny při příštím kliknutí na **Transformovat všechny šablony**. Místo toho přidejte požadovanou metodu v samostatném souboru.
+    > Tento soubor je vygenerovaný z DslDefinition. DSL. Pokud tento soubor upravíte, změny budou při příštím kliknutí na **transformovat všechny šablony**ztraceny. Místo toho přidejte požadovanou metodu do samostatného souboru.
 
-6. Vytvořte nebo otevřete soubor třídy do samostatné složky, například CustomCode\\*YourDomainClass*. cs.
+6. Vytvořte nebo otevřete soubor třídy v samostatné složce, například CustomCode \\*YourDomainClass*. cs.
 
-     Ujistěte se, že obor názvů je stejný jako v generovaném kódu.
+     Ujistěte se, že obor názvů je stejný jako ve vygenerovaném kódu.
 
-7. Napište částečnou implementaci doménové třídy v souboru třídy. Ve třídě, zapsat definice pro chybějící `Get` metodu, která se podobá následujícímu příkladu:
+7. V souboru třídy zapište částečnou implementaci doménové třídy. Ve třídě napište definici pro chybějící `Get` metodu, která se podobá následujícímu příkladu:
 
     ```
     namespace Company.FamilyTree
@@ -66,7 +66,7 @@ Všechny vlastnosti domény v jazyka specifického pro doménu (DSL) je možné 
     }  }
     ```
 
-8. Pokud nastavíte **druh** k **vlastní úložiště**, budete taky muset zadat `Set` metoda. Příklad:
+8. Pokud nastavíte **druh** na **vlastní úložiště**, budete taky muset zadat `Set` metodu. Příklad:
 
     ```
     void SetAgeValue(int value)
@@ -75,20 +75,20 @@ Všechny vlastnosti domény v jazyka specifického pro doménu (DSL) je možné 
             System.DateTime.Today.Year - value; }
     ```
 
-     Váš kód by neměl nastavit hodnoty v úložišti při `Store.InUndoRedoOrRollback` má hodnotu true. Zobrazit [transakce a vlastní nastavení](#setters).
+     Váš kód by neměl nastavovat hodnoty v úložišti, pokud je `Store.InUndoRedoOrRollback` true. Viz [transakce a vlastní settery](#setters).
 
 9. Sestavte a spusťte řešení.
 
-10. Otestujte vlastnost. Ujistěte se, že zkusíte **zpět** a **znovu**.
+10. Otestujte vlastnost. Ujistěte se, že se pokusíte **vrátit zpět** a **znovu provést**akci.
 
-## <a name="setters"></a> Transakce a vlastní nastavení
- Metoda Set vlastnosti vlastní úložiště není nutné spustíte transakci, protože je obvykle volána metoda v aktivní transakci.
+## <a name="setters"></a>Transakce a vlastní Settery
+ V metodě set vlastnosti vlastního úložiště není nutné otevřít transakci, protože metoda je obvykle volána uvnitř aktivní transakce.
 
- Ale metodu Set může také volat Pokud uživatel vyvolá zpět nebo znovu, nebo pokud transakce je vrácena zpět. Když <xref:Microsoft.VisualStudio.Modeling.Store.InUndoRedoOrRollback%2A> má hodnotu true, metodu Set by se měly chovat následovně:
+ Nicméně Metoda set může být volána také v případě, že uživatel vyvolá vrácení akce zpět nebo znovu, nebo pokud transakce je vrácena zpět. Pokud <xref:Microsoft.VisualStudio.Modeling.Store.InUndoRedoOrRollback%2A> má hodnotu true, vaše metoda Set by se měla chovat takto:
 
-- To by neměla provést změny v úložišti, jako je například přiřazení hodnoty k jiné vlastnosti domény. Správce akcí zpět nastaví jejich hodnoty.
+- V tomto úložišti by se neměly dělat změny, jako je například přiřazení hodnot k jiným doménovým vlastnostem. Správce vrácení zpět nastaví své hodnoty.
 
-- Ale to by měl aktualizovat všem externím prostředkům, jako jsou databáze nebo obsah souboru nebo objekty mimo úložiště. Tím se zajistí, že jsou uchovávány v synchronism s hodnotami v úložišti.
+- Měla by však aktualizovat jakékoli externí prostředky, jako jsou databáze nebo soubory nebo objekty mimo úložiště. Tím zajistíte, že se budou uchovávat v synchronism s hodnotami ve Storu.
 
   Příklad:
 
@@ -105,7 +105,7 @@ void SetAgeValue(int value)
 }
 ```
 
- Další informace o transakcích najdete v tématu [navigace a aktualizace modelu v programovém kódu](../modeling/navigating-and-updating-a-model-in-program-code.md).
+ Další informace o transakcích naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
 ## <a name="see-also"></a>Viz také
 

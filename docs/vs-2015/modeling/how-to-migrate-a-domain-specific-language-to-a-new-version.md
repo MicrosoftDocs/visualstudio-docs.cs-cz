@@ -1,90 +1,90 @@
 ---
-title: 'Postupy: Migrace jazyka specifického pro doménu na novou verzi | Dokumentace Microsoftu'
+title: 'Postupy: migrace jazyka specifického pro doménu na novou verzi | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: 6a1ae073-443e-45ca-8bc9-9b944362b449
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7f3cefc7c6e2a78d757bb931a430f09c6da103c1
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 45f7b38f7dbb6ea470b2d9e186dc8e6bf4b33b1e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65681049"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657332"
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>Postupy: Migrace jazyka specifického pro doménu na novou verzi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete migrovat projekty, které definice a používání jazyka specifického pro doménu na [!INCLUDE[vs2010](../includes/vs2010-md.md)] oproti verzi [!INCLUDE[dsl](../includes/dsl-md.md)] , který byl distribuován s [!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)].  
-  
- Nástroj pro migraci se poskytuje jako součást [!INCLUDE[vssdk_current_long](../includes/vssdk-current-long-md.md)]. Tento nástroj převede [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projekty a řešení, které používají nebo definovat nástroje DSL.  
-  
- Nástroj pro migraci musíte spustit explicitně: se nespustí automaticky při otevření řešení v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Nástroje a dokument obsahuje podrobné pokyny najdete v této cestě:  
-  
- **%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**  
-  
-## <a name="before-you-migrate-your-dsl-projects"></a>Před migraci vašich projektů DSL  
- Nástroj pro migraci změní [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] soubory projektu (**.csproj**) a soubory řešení (**.sln**).  
-  
-#### <a name="to-prepare-projects-for-migration"></a>Příprava migrace projektů.  
-  
-- Ujistěte se, **.csproj** a **.sln** lze zapisovat soubory. Pokud jsou pod správou zdrojových kódů, ujistěte se, že jsou rezervovány.  
-  
-- Vytvořte kopii složky, které máte v úmyslu migrovat.  
-  
-## <a name="migrating-a-collection-of-projects"></a>Migrace kolekce projektů  
-  
-#### <a name="to-migrate-dsl-projects-and-solutions-to-visual-studio-2010"></a>K migraci DSL projekty a řešení pro Visual Studio 2010  
-  
-1. Spusťte nástroj pro migraci DSL.  
-  
-   - Můžete dvakrát klikněte na panel nástrojů v Průzkumníku Windows (nebo Průzkumníka souborů) nebo spusťte nástroj z příkazového řádku. Tento nástroj je v tomto umístění:  
-  
-        **%ProgramFiles%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**  
-  
-2. Zvolte složku, která obsahuje řešení a projekty, které chcete převést.  
-  
-   - Zadejte cestu do pole v horní části stránky nástroje, nebo klikněte na tlačítko **Procházet**.  
-  
-     Nástroj pro migraci zobrazí strom projektů, které definují nebo použijte DSL. Každý projekt, který používá zahrnuje stromu **Microsoft.VisualStudio.Modeling.Sdk** nebo **TextTemplating** sestavení.  
-  
-3. Kontrola stromu projektů a zrušte zaškrtnutí políčka projekty, které nechcete převést.  
-  
-   - Vyberte projekt nebo řešení zobrazíte seznam změn, které způsobí, že nástroj.  
-  
+Můžete migrovat projekty, které definují a používají jazyk specifický pro doménu [!INCLUDE[vs2010](../includes/vs2010-md.md)] z verze [!INCLUDE[dsl](../includes/dsl-md.md)], která byla distribuována s [!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)].
+
+ K dispozici je nástroj pro migraci, který je součástí [!INCLUDE[vssdk_current_long](../includes/vssdk-current-long-md.md)]. Nástroj převádí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projekty a řešení, která používají nebo definují nástroje DSL.
+
+ Nástroj pro migraci musíte spustit explicitně: při otevření řešení v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] se nespustí automaticky. Nástroj a podrobný dokument s pokyny najdete v této cestě:
+
+ **% Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
+
+## <a name="before-you-migrate-your-dsl-projects"></a>Před migrací projektů DSL
+ Nástroj pro migraci upraví [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] soubory projektu ( **. csproj**) a soubory řešení ( **. sln**).
+
+#### <a name="to-prepare-projects-for-migration"></a>Příprava projektů pro migraci.
+
+- Ujistěte se, že je možné zapsat soubory **. csproj** a **. sln** . Pokud se nacházejí pod správou zdrojových kódů, ujistěte se, že jsou rezervovány.
+
+- Vytvořte kopii složek, které máte v úmyslu migrovat.
+
+## <a name="migrating-a-collection-of-projects"></a>Migrace kolekce projektů
+
+#### <a name="to-migrate-dsl-projects-and-solutions-to-visual-studio-2010"></a>Migrace projektů a řešení DSL do sady Visual Studio 2010
+
+1. Spusťte nástroj pro migraci DSL.
+
+   - Můžete dvakrát kliknout na nástroj v Průzkumníkovi Windows (nebo v Průzkumníku souborů) nebo spustit nástroj z příkazového řádku. Tento nástroj je v tomto umístění:
+
+        **%ProgramFiles%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
+
+2. Vyberte složku, která obsahuje řešení a projekty, které chcete převést.
+
+   - Zadejte cestu do pole v horní části nástroje nebo klikněte na tlačítko **Procházet**.
+
+     Nástroj pro migraci zobrazuje strom projektů, které definují nebo používají DSL. Strom zahrnuje každý projekt, který používá sestavení **Microsoft. VisualStudio. Modeling. SDK** nebo **TextTemplating** .
+
+3. Zkontrolujte strom projektů a zrušte kontrolu projektů, které nechcete převést.
+
+   - Vyberte projekt nebo řešení, abyste zobrazili seznam změn, které nástroj provede.
+
        > [!NOTE]
-       > Zaškrtávací políčka, které se zobrazují vedle názvu složky nemají žádný vliv. Je třeba rozbalit složky ke kontrole projekty a řešení.  
-  
-4. Převod projektů.  
-  
-   1. Klikněte na tlačítko **převést**.  
-  
-        Před každý soubor projektu je převést, kopie _projektu_**.csproj** budou uloženy jako _projektu_**. vs2008.csproj**  
-  
-        Kopírování jednotlivých _řešení_**.sln** budou uloženy jako _řešení_**. vs2008.sln**  
-  
-   2. Prozkoumejte všechny neúspěšné převody, které jsou hlášeny.  
-  
-        V textovém okně jsou hlášeny chyby. Kromě toho stromové zobrazení ukazuje rvená vlaječka v každém uzlu, který se nepovedlo převést. Můžete kliknout na uzel, který má získat další informace o této chybě.  
-  
-5. **Transformovat všechny šablony** v řešení obsahující úspěšně převeden projekty.  
-  
-   1. Otevřete řešení.  
-  
-   2. Klikněte na tlačítko **Transformovat všechny šablony** tlačítko v hlavičce Průzkumníku řešení.  
-  
+       > Políčka, která se zobrazí vedle názvu složky, nemají žádný účinek. Aby bylo možné zkontrolovat projekty a řešení, je nutné rozbalit složky.
+
+4. Převeďte projekty.
+
+   1. Klikněte na tlačítko **převést**.
+
+        Před převodem každého souboru projektu se uloží kopie _Project_ **. csproj** jako _Project_ **. vs2008. csproj.**
+
+        Kopii každého _řešení_ **. sln** se uloží jako _Solution_ **. vs2008. sln.**
+
+   2. Prozkoumejte všechny neúspěšné převody, které se nahlásily.
+
+        Chyby jsou hlášeny v okně text. Stromové zobrazení navíc zobrazuje červený příznak na každém uzlu, který se nepovedlo převést. Kliknutím na uzel můžete získat další informace o tomto selhání.
+
+5. **Transformuje všechny šablony** v řešení obsahujících úspěšně převedené projekty.
+
+   1. Otevřete řešení.
+
+   2. Klikněte na tlačítko **transformovat všechny šablony** v záhlaví Průzkumník řešení.
+
        > [!NOTE]
-       > Tento krok můžete provést zbytečné. Další informace najdete v tématu [jak automatizovat Transformovat všechny šablony](https://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a).  
-  
-6. Aktualizujte váš vlastní kód v projektech převedený.  
-  
-   - Pokus o sestavení projektů a prozkoumejte všechny chyby.  
-  
-   - Otestujte návrháře.  
-  
-## <a name="see-also"></a>Viz také  
- [Co je nového v produktu Visualization and Modeling SDK](../misc/what-s-new-in-visualization-and-modeling-sdk.md)
+       > Tento krok je potřeba provést zbytečné. Další informace najdete v tématu [Jak automatizovat transformaci všech šablon](https://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a).
+
+6. Aktualizujte vlastní kód v převedených projektech.
+
+   - Pokuste se sestavit projekty a prozkoumat případné chyby.
+
+   - Otestujte návrháře.
+
+## <a name="see-also"></a>Viz také
+ [Co je nového ve vizualizaci a sadě SDK pro modelování](../misc/what-s-new-in-visualization-and-modeling-sdk.md)

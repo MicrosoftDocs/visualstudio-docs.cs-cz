@@ -6,50 +6,50 @@ f1_keywords:
 - vs.dsltools.dsldesigner.swimlane
 helpviewer_keywords:
 - Domain-Specific Language, swimlane
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab2e10eed7452bf58390513bed68fac3f4c9a0f6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5180581b0a0934c049d9c4ea199fa3396a1d1237
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62823902"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658124"
 ---
 # <a name="properties-of-swimlanes"></a>Vlastnosti drah
-Plaveckých drah můžete přidat do diagramu. Plaveckých drah rozdělit svislý nebo vodorovný oblasti diagramu. Můžete definovat další obrazce, která se zobrazí uvnitř plaveckých drah. Další informace najdete v tématu [jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md). Další informace o tom, jak pomocí těchto vlastností najdete v tématu [přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md).
+Do diagramu můžete přidat plavecké dráhy. Plavecké dráhy rozdělí diagram na svislé nebo vodorovné oblasti. Můžete definovat další obrazce, které se mají zobrazit v rámci plaveckých drah. Další informace najdete v tématu [Definování jazyka specifického pro doménu](../modeling/how-to-define-a-domain-specific-language.md). Další informace o tom, jak tyto vlastnosti používat, najdete v tématu [přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
- Plaveckých drah mít vlastnosti, které jsou uvedeny v následující tabulce.
+ Plavecké dráhy mají vlastnosti, které jsou uvedeny v následující tabulce.
 
 |Vlastnost|Popis|Výchozí|
 |-|-|-|
-|Barva výplně těla|Barva výplně těla plavecké.|White|
-|Barva výplně záhlaví|Barva výplně záhlaví plavecké.|DarkGray|
-|Barva oddělovače|Barva oddělovací čáry.|LightGray|
-|Styl oddělovací čáry|Styl oddělovací čáry (`Solid`, `Dash`, `Dot`, `DashDot`, `DashDotDot`, nebo `Custom`).|`Dash`|
-|Tloušťka oddělovací|Tloušťka oddělovací čáry v palcích.|0.03125|
-|Barva textu|Barva, která je použitá pro dekoratéry textu přidružené k této plavecké dráhy.|Black|
+|Barva výplně textu|Barva výplně těla plavecké dráhy.|White|
+|Barva výplně záhlaví|Barva výplně záhlaví plavecké dráhy|DarkGray|
+|Barva oddělovače|Barva oddělovací čáry|LightGray|
+|Styl čáry oddělovače|Styl oddělovací čáry (`Solid`, `Dash`, `Dot`, `DashDot`, `DashDotDot` nebo `Custom`).|`Dash`|
+|Tloušťka oddělovače|Tloušťka oddělovací čáry v palcích|0,03125|
+|Barva textu|Barva, která se používá pro text dekoratéry, která je spojená s touto plaveckou dráhou.|zůstane|
 |Modifikátor přístupu|Úroveň přístupu třídy (`public` nebo `internal`).|Public|
-|Vlastní atributy|Použít k přidání atributů do třídy kód, který je generován z této plavecké dráhy.|\<žádné >|
-|Generuje Double odvozené|Pokud `True`, se vygeneruje základní třídu a částečné třídy (pro podporu přizpůsobení pomocí přepisů). Další informace najdete v tématu [přepisování a rozšiřování třídy generované v](../modeling/overriding-and-extending-the-generated-classes.md).|False|
-|Má vlastní konstruktor|Pokud `True`, poskytneme vám vlastního konstruktoru ve zdrojovém kódu. Další informace najdete v tématu [přepisování a rozšiřování třídy generované v](../modeling/overriding-and-extending-the-generated-classes.md).|False|
-|Modifikátor dědičnosti|Popisuje druh dědičnosti třídy zdrojový kód, který je generován z plavecké (`none`, `abstract` nebo `sealed`).|žádná|
-|Základní Plavecká dráha|Základní třída této plavecké dráhy.|(žádné)|
-|Název|Název této plavecké dráhy.|Aktuální název|
-|Obor názvů|Obor názvů, který je přidružen k této plavecké dráhy.|Aktuální obor názvů|
-|Popis typu|Jak je definován popisek (`fixed`, `variable`, nebo `none`). Pokud `fixed`, pak hodnota `Fixed Tooltip Text` vlastnost se používá; Pokud `variable`, pak je popis definovaný ve vlastním kódu.|\<žádné >|
-|Poznámky|Neformální poznámky přidružené k této plavecké dráhy.|\<žádné >|
-|Zarovnání|Vodorovné nebo svislé zarovnání.|Svisle|
-|Počáteční výška|Počáteční výška této plavecké dráhy v palcích. Vztahuje se jenom u vodorovných plaveckých drah.|0|
-|Počáteční šířka|Počáteční šířka této plavecké dráhy v palcích. Vztahuje se jenom u svislých plaveckých drah.|0|
-|Zpřístupní barvu textu|Pokud `True`, může uživatel nastavit barvu plaveckou dráhou ve vygenerovaném návrháři. Nastavit, klikněte pravým tlačítkem myši na obrazec plavecké dráhy a klikněte na tlačítko **přidat vystavený**.|False|
-|Popis|Používá se k dokumentu vygenerovaného návrháře.|\<žádné >|
-|Zobrazovaný název|Název, který se zobrazí ve vygenerovaném návrháři k odkazování na této plavecké dráhy třídy.|\<žádné >|
-|Pevný Text popisu tlačítka|Text, který se používá pro pevný popis.|\<žádné >|
-|Klíčové slovo nápovědy|Klíčové slovo, je použít k indexování nápovědy klávesy F1 pro této plavecké dráhy.|\<žádné >|
+|Vlastní atributy|Slouží k přidání atributů do třídy kódu, která je vygenerována z této plavecké dráhy.|\<none >|
+|Generuje dvojitou odvozenou|Pokud `True`, bude vygenerována jak základní třída, tak i částečná třída (pro podporu přizpůsobení prostřednictvím přepsání). Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md).|False|
+|Má vlastní konstruktor|Pokud `True`, bude ve zdrojovém kódu k dispozici vlastní konstruktor. Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md).|False|
+|Modifikátor dědičnosti|Popisuje druh dědění třídy zdrojového kódu, který je generován z plavecké dráhy (`none`, `abstract` nebo `sealed`).|žádná|
+|Základní plavecká dráha|Základní třída této plavecké dráhy.|nTato|
+|Name|Název této plavecké dráhy.|Aktuální název|
+|Obor názvů|Obor názvů, který je přidružen k této plavecké dráze.|Aktuální obor názvů|
+|Typ popisu|Jak je definován popis tlačítka (`fixed`, `variable` nebo `none`). Je-li `fixed`, je použita hodnota vlastnosti `Fixed Tooltip Text`; Pokud `variable`, je popis tlačítka definován ve vlastním kódu.|\<none >|
+|Poznámky|Neformální poznámky, které jsou spojeny s touto plaveckou dráhou.|\<none >|
+|Zarovnání|Vodorovné nebo svislé zarovnání|Svislé|
+|Počáteční výška|Počáteční výška této plavecké dráhy v palcích Platí pouze pro horizontální plavecké dráhy.|0,8|
+|Počáteční Šířka|Počáteční šířka této plavecké dráhy v palcích Platí pouze pro vertikální plavecké dráhy.|0,8|
+|Zpřístupňuje barvu textu|Pokud `True`, může uživatel nastavit barvu plavecké dráhy ve vygenerovaném návrháři. Pokud to chcete nastavit, klikněte pravým tlačítkem myši na obrazec plavecká dráha a klikněte na **Přidat vystavené**.|False|
+|Popis|Slouží k dokumentování vygenerovaného návrháře.|\<none >|
+|Zobrazované jméno|Název, který se zobrazí ve vygenerovaném návrháři, aby odkazoval na tuto třídu plavecké dráhy.|\<none >|
+|Pevný text popisu|Text, který se používá pro pevný popis.|\<none >|
+|Klíčové slovo Help|Klíčové slovo, které se používá k indexování Nápověda F1 pro tuto plaveckou dráhu.|\<none >|
 
 ## <a name="see-also"></a>Viz také
 
-- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

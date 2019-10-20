@@ -1,5 +1,5 @@
 ---
-title: Vývoj aplikací pomocí návrháře postupu provádění | Dokumentace Microsoftu
+title: Vývoj aplikací pomocí Návrhář postupu provádění | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -14,59 +14,52 @@ helpviewer_keywords:
 - Workflow Designer [WFD], overview
 ms.assetid: 4cd062b1-b496-4668-bbc1-ee85545e066d
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9eea79978b7b61de1e56d787b5a4cd9797be1aa6
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 848300c54800e229ee1f487fc415bad45d982a6c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65704789"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656827"
 ---
 # <a name="developing-applications-with-the-workflow-designer"></a>Vývoj aplikací pomocí návrháře postupu provádění
-[!INCLUDE[wfd1](../includes/wfd1-md.md)] Vizuálního návrháře a ladicí program pro grafický procesu vytváření a ladění [!INCLUDE[wf](../includes/wf-md.md)] aplikací v [!INCLUDE[netfx40_long](../includes/netfx40-long-md.md)] , která je hostována v [!INCLUDE[vs2010](../includes/vs2010-md.md)] vývojové prostředí. Umožňuje sestavit aplikace složený pracovního postupu, knihovna aktivit nebo [!INCLUDE[indigo1](../includes/indigo1-md.md)] službu pomocí šablony a návrháři aktivit. [!INCLUDE[crabout](../includes/crabout-md.md)] pracovní postupy, najdete v článku [Windows Workflow Foundation &#91;rozhraní .NET Framework 4&#93;](https://msdn.microsoft.com/library/9a23ea6b-d600-483e-89cd-8889cfec5f66).  
-  
- Následuje několik nových funkcí návrhu, které tuto novou verzi nastavit [!INCLUDE[wfd2](../includes/wfd2-md.md)] kromě starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)]:  
-  
-- [!INCLUDE[wfd2](../includes/wfd2-md.md)] Se vytvořil pomocí [!INCLUDE[avalon1](../includes/avalon1-md.md)]. To vylepšuje možnosti návrháře aktivit a zvyšuje výkon u velkých a složitých pracovních postupů.  
-  
-- Vlastní aktivity jsou teď navržené s [!INCLUDE[avalon2](../includes/avalon2-md.md)], pomocí XAML a programovací model pro vytváření návrháři aktivit je zjednodušené.  
-  
-- Vývojový diagram aktivity byl implementován, takže teď můžete zobrazit tok programu pomocí známých vývojový diagram modelování style.  
-  
-- [!INCLUDE[wfd2](../includes/wfd2-md.md)] Má nové proměnné návrháře, který umožňuje deklarovat a nastavovat jejich obory proměnné v rámci své pracovní postupy jejich vazbu na aktivity.  
-  
-- V [!INCLUDE[vs2010](../includes/vs2010-md.md)], [!INCLUDE[wfd2](../includes/wfd2-md.md)] poskytuje úplné funkce IntelliSense při vytváření výrazy jazyka Visual Basic v rámci vaší [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)] pracovních postupů.  
-  
-- Možnosti ladění teď rozšíří do XAML, což vám umožní nastavit zarážky v definici pracovního postupu XAML a krokování s vnořením do kódu XAML za běhu, který poskytuje podobné ve spravovaném kódu.  
-  
-- Změna hostování [!INCLUDE[wfd2](../includes/wfd2-md.md)] mimo [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] je výrazně zjednodušené porovnání s předchozími verzemi současnosti vyžaduje jenom pár řádků kódu.  
-  
-- Nové <xref:System.Activities.Statements.Flowchart> aktivita a její [vývojový diagram](../workflow-designer/flowchart-activity-designer.md) můžete vizualizovat váš tok programu pomocí známých vývojový diagram modelování style.  
-  
-- Byly vylepšeny zasílání zpráv aktivity díky tomu umožňuje zapisovat plně deklarativního (žádný kód) [!INCLUDE[indigo1](../includes/indigo1-md.md)] služby.  
-  
-- **Přidat odkaz na službu...** funkce umožňuje generovat aktivity automaticky, které k webovým službám.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Používání návrháře postupu provádění](../workflow-designer/using-the-workflow-designer.md)  
- Ukazuje, jak vytvořit nové aktivity a projekty pracovního postupu pomocí integrované návrháře a jak použít jiné nástroje poskytované systémem návrháře pro zpracování argumentů, proměnných, výrazů, importy a navigace s popisem cesty.  
-  
- [Používání návrhářů aktivit](../workflow-designer/using-the-activity-designers.md)  
- Popisuje kategorie aktivit a šablony a jejich designery, které jsou k dispozici systému.  
-  
- [Ladění pracovních postupů pomocí návrháře postupu provádění](../workflow-designer/debugging-workflows-with-the-workflow-designer.md)  
- Popisují, jak provádět tradiční ladění procedur i ladění XAML a výrazy.  
-  
- [Nápověda k uživatelskému rozhraní návrháře postupu provádění](../workflow-designer/workflow-designer-ui-help.md)  
- Obsahuje témata pro dialogová okna poskytuje kontextové nápovědy [!INCLUDE[wfd1](../includes/wfd1-md.md)], a také pokyny, funkce prostředí návrháře, klávesové zkratky a chybové zprávy.  
-  
- [Vývoj aplikací pracovních postupů určených pro .NET Framework verze 3.0 nebo 3.5](../workflow-designer/developing-workflow-applications-targeting-the-dotnet-3-0-or-dotnet-3-5-framework.md)  
- Obsahuje pokyny, pomocí starší verze návrháře, který se zaměřuje [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].  
-  
- [Změna hostování návrháře &#91;ukázky WF&#93;](https://msdn.microsoft.com/library/b676ad31-5f64-4d84-9a36-b4d7113a2f4d)  
- Tento příklad ukazuje, jak vytvořit rozložení WPF tak, aby obsahovala návrháře.  
-  
- [Návrháři vlastních aktivit](https://msdn.microsoft.com/library/dcf14dca-ce6d-4278-96ba-062f0a679075)  
- Tato část obsahuje ukázkové aktivity, které používají vlastní návrháři zobrazení v Návrháři pracovních postupů.
+@No__t_0 je vizuální Návrhář a ladicí program pro grafické sestavování a ladění aplikací [!INCLUDE[wf](../includes/wf-md.md)] v [!INCLUDE[netfx40_long](../includes/netfx40-long-md.md)], které jsou hostovány ve vývojovém prostředí [!INCLUDE[vs2010](../includes/vs2010-md.md)]. Umožňuje vytvořit neseparovaný aplikační pracovní postup, knihovnu aktivit nebo [!INCLUDE[indigo1](../includes/indigo1-md.md)] službu prostřednictvím použití šablon a návrhářů aktivit. pracovní postupy [!INCLUDE[crabout](../includes/crabout-md.md)] najdete v [programovací model Windows Workflow Foundation &#91;.NET Framework 4&#93;](https://msdn.microsoft.com/library/9a23ea6b-d600-483e-89cd-8889cfec5f66).
+
+ Následující seznam obsahuje několik nových funkcí návrhu, které nastavují tuto novou verzi [!INCLUDE[wfd2](../includes/wfd2-md.md)] kromě starších verzí [!INCLUDE[wfd2](../includes/wfd2-md.md)]:
+
+- @No__t_0 je sestaven pomocí [!INCLUDE[avalon1](../includes/avalon1-md.md)]. Tím se zlepší prostředí návrháře aktivit a zlepší se výkon u rozsáhlých i složitých pracovních postupů.
+
+- Vlastní aktivity jsou teď navržené pomocí [!INCLUDE[avalon2](../includes/avalon2-md.md)], použití XAML a programovací model pro vytváření návrhářů aktivit je zjednodušený.
+
+- Byla implementována aktivita vývojového diagramu, takže můžete vizualizovat tok programu pomocí známého stylu modelování vývojového diagramu.
+
+- @No__t_0 má nového návrháře proměnných, který umožňuje deklarovat a oborovat proměnné v rámci vašich pracovních postupů, svázat je s aktivitami.
+
+- V [!INCLUDE[vs2010](../includes/vs2010-md.md)] [!INCLUDE[wfd2](../includes/wfd2-md.md)] při vytváření Visual Basic výrazů v rámci pracovních postupů [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)] nabízí úplné funkce IntelliSense.
+
+- Prostředí ladění teď rozšiřuje na XAML, což vám umožní nastavit zarážky v definici pracovního postupu XAML a krokovat kód XAML za běhu, což nabízí podobné možnosti jako ve spravovaném kódu.
+
+- Opětovné hostování [!INCLUDE[wfd2](../includes/wfd2-md.md)] mimo [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] je výrazně zjednodušené v porovnání s předchozími verzemi, nyní vyžaduje pouze pár řádků kódu.
+
+- Nová aktivita <xref:System.Activities.Statements.Flowchart> a její [vývojový diagram](../workflow-designer/flowchart-activity-designer.md) vám umožní vizualizovat tok programu pomocí známého stylu modelování vývojového diagramu.
+
+- Byly vylepšeny aktivity zasílání zpráv, což vám umožňuje psát plně deklarativní (žádný kód) [!INCLUDE[indigo1](../includes/indigo1-md.md)] služby.
+
+- **Přidat odkaz na službu...** funkce umožňují automaticky generovat aktivity, které přistupují k webovým službám.
+
+## <a name="in-this-section"></a>V tomto oddílu
+ [Použití Návrhář postupu provádění](../workflow-designer/using-the-workflow-designer.md) Ukazuje, jak vytvořit nové aktivity a projekty pracovního postupu pomocí předdefinovaných návrhářů a jak používat jiné nástroje, které Návrhář poskytuje ke zpracování argumentů, proměnných, výrazů, importů a navigace s popisem cesty.
+
+ [Používání návrháře aktivit](../workflow-designer/using-the-activity-designers.md) Popisuje kategorie aktivit a šablon a jejich designerů, které jsou k dispozici v systému.
+
+ [Ladění pracovních postupů pomocí Návrhář postupu provádění](../workflow-designer/debugging-workflows-with-the-workflow-designer.md) Popište, jak provádět tradiční ladicí postupy a také ladit XAML a výrazy.
+
+ [Návrhář postupu provádění – pomáhat s uživatelským rozhraním](../workflow-designer/workflow-designer-ui-help.md) Obsahuje témata nápovědy k kontextové nápovědě pro dialogová okna, která poskytuje [!INCLUDE[wfd1](../includes/wfd1-md.md)], a také pokyny k funkcím návrháře prostředí, klávesových zkratek a chybových zpráv.
+
+ [Vývoj aplikací pracovních postupů cílících na rozhraní .net 3,0 nebo .net 3,5 Framework](../workflow-designer/developing-workflow-applications-targeting-the-dotnet-3-0-or-dotnet-3-5-framework.md) Obsahuje pokyny k používání starší verze návrháře, který cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+
+ [ &#91;Ukázky&#93; WF](https://msdn.microsoft.com/library/b676ad31-5f64-4d84-9a36-b4d7113a2f4d) pro opětovné hostování v Návrháři Tento příklad ukazuje, jak vytvořit rozložení WPF, aby obsahovalo návrháře.
+
+ [Vlastní návrháři aktivit](https://msdn.microsoft.com/library/dcf14dca-ce6d-4278-96ba-062f0a679075) Tato část obsahuje ukázky aktivity, které používají vlastní návrháře pro zobrazení v Návrháři pracovních postupů.

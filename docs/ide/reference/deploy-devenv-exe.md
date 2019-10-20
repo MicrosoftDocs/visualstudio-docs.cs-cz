@@ -8,21 +8,21 @@ helpviewer_keywords:
 - deploying applications [Visual Studio], after build
 - /Deploy Devenv switch
 ms.assetid: e47c8723-df08-4645-aa2d-0c956e7ccca2
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 835891689d376d06bda31b050394ae4e61315a8f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4ff5f79b2482c2e025957872892a585e08bbfa8d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970393"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661666"
 ---
 # <a name="deploy-devenvexe"></a>/Deploy (devenv.exe)
 
-Nasadí řešení po sestavení nebo opětovné sestavení. Platí pro pouze projekty spravovaného kódu.
+Nasadí řešení po sestavení nebo opětovném sestavení. Vztahuje se pouze na projekty spravovaného kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,35 +34,35 @@ devenv SolutionName /Deploy [SolnConfigName [/Project ProjName [/ProjectConfig P
 
 - *SolutionName*
 
-  Povinný parametr. Úplná cesta a název souboru řešení.
+  Požadováno. Úplná cesta a název souboru řešení.
 
 - *SolnConfigName*
 
-  Volitelné. Název konfigurace řešení (například `Debug` nebo `Release`) se použije k vytvoření řešení s názvem v *SolutionName*. Pokud je k dispozici více než jedné platformě řešení, musíte zadat také platformy (například `Debug|Win32`). Pokud tento argument není zadána nebo prázdný řetězec (`""`), nástroj použije aktivní konfigurace řešení.
+  Volitelné. Název konfigurace řešení (například `Debug` nebo `Release`), který se má použít k sestavení řešení s názvem v názvu *řešení*. Pokud je k dispozici více než jedna platforma řešení, je nutné zadat také platformu (například `Debug|Win32`). Pokud tento argument není zadán nebo je prázdný řetězec (`""`), nástroj použije aktivní konfiguraci řešení.
 
 - `/Project` *ProjName*
 
-  Volitelné. Cesta a název souboru projektu v rámci řešení. Můžete zadat zobrazovaný název projektu nebo relativní cesta z *SolutionName* složku do souboru projektu. Můžete také zadat úplnou cestu a název souboru projektu.
+  Volitelné. Cesta a název souboru projektu v rámci řešení. Můžete zadat zobrazovaný název projektu nebo relativní cestu ze složky *řešení* do souboru projektu. Můžete také zadat úplnou cestu a název souboru projektu.
 
 - `/ProjectConfig` *ProjConfigName*
 
-  Volitelné. Konfigurace sestavení názvy projektu (například `Debug` nebo `Release`) má být použit při vytváření `/Project` s názvem. Pokud je k dispozici více než jedné platformě řešení, musíte zadat také platformy (například `Debug|Win32`). Pokud je tento přepínač zadaný, přepíše *SolnConfigName* argument.
+  Volitelné. Názvy konfigurace sestavení projektu (například `Debug` nebo `Release`), které mají být použity při vytváření `/Project` s názvem. Pokud je k dispozici více než jedna platforma řešení, je nutné zadat také platformu (například `Debug|Win32`). Pokud je tento přepínač zadán, přepíše argument *SolnConfigName* .
 
 - `/Out` *OutputFilename*
 
-  Volitelné. Název souboru, který chcete odeslat nástroj výstupního. Pokud soubor již existuje, nástroj připojil výstupu na konci souboru.
+  Volitelné. Název souboru, do kterého chcete odeslat výstup nástroje. Pokud soubor již existuje, nástroj připojí výstup na konec souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-Zadaný projekt musí být projekt nasazení. Pokud zadaný projekt není projekt nasazení, když se pro nasazení projektu, který je sestavený Build, selže s chybou.
+Zadaný projekt musí být projekt nasazení. Pokud zadaný projekt není projektem nasazení, pokud je projekt sestaven pro nasazení, dojde k chybě s chybou.
 
-Uzavření řetězců, které obsahují mezery v dvojitých uvozovkách.
+Uzavřete řetězce, které obsahují mezery, do dvojitých uvozovek.
 
-Souhrnné informace o sestavení, včetně chyb, lze zobrazit v **příkaz** okna, nebo do jakéhokoli souboru protokolu zadaný [/Out](out-devenv-exe.md) přepnout.
+Souhrnné informace o sestaveních, včetně chyb, lze zobrazit v **příkazovém** okně nebo v jakémkoli souboru protokolu zadaného pomocí přepínače [/out](out-devenv-exe.md) .
 
 ## <a name="example"></a>Příklad
 
-Tento příklad nasadí projekt `CSharpWinApp`, použije `Release` konfigurace sestavení projektu v rámci `MySolution`.
+Tento příklad nasadí `CSharpWinApp` projektu pomocí konfigurace sestavení projektu `Release` v rámci `MySolution`.
 
 ```shell
 devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /deploy Release /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Release
@@ -71,8 +71,8 @@ devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /deploy Release /p
 ## <a name="see-also"></a>Viz také:
 
 - [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)
-- [/ Project (devenv.exe)](../../ide/reference/project-devenv-exe.md)
-- [/ Sestavení (devenv.exe)](../../ide/reference/build-devenv-exe.md)
-- [/ Clean (devenv.exe)](../../ide/reference/clean-devenv-exe.md)
-- [/ Sestavení (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
-- [/ Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)
+- [/Project (devenv. exe)](../../ide/reference/project-devenv-exe.md)
+- [/Build (devenv. exe)](../../ide/reference/build-devenv-exe.md)
+- [/Clean (devenv. exe)](../../ide/reference/clean-devenv-exe.md)
+- [/Rebuild (devenv. exe)](../../ide/reference/rebuild-devenv-exe.md)
+- [/Out (devenv. exe)](../../ide/reference/out-devenv-exe.md)

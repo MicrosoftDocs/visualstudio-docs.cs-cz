@@ -1,60 +1,60 @@
 ---
-title: Použít rozdělení na zpoždění stimulace pro zátěžové testování
+title: Použít distribuci na zpoždění stimulace pro zátěžové testování
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - load tests, test mix model
 ms.assetid: ae8b35f9-d465-4d72-8d7d-7b56ae6ffd22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d3ef8ecfefd1d614570b4d73808d3e5736d77230
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3241017a381370f215ed4f9211ae646dc6c80b65
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979338"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664832"
 ---
-# <a name="how-to-apply-distribution-to-pacing-delay-for-a-user-pace-test-mix-model"></a>Postupy: Použít rozdělení na zpoždění pro kroku model kombinace testů uživatele stimulace
+# <a name="how-to-apply-distribution-to-pacing-delay-for-a-user-pace-test-mix-model"></a>Postupy: použití distribuce na zpoždění stimulace pro model kombinace testů tempa uživatele
 
-Po vytvoření zátěžového testu s použitím **nového Průvodce zátěžovým testem**, chcete-li změnit vlastnosti ve scénáři podle potřebám a cílům testování můžete použít Editor zátěžového testu.
+Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem**můžete pomocí Editor zátěžového testu změnit vlastnosti scénáře tak, aby splňovaly potřeby testování a cíle.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-**Použít rozdělení na zpoždění stimulace** je nastavena pomocí **vlastnosti** okna. Vlastnosti scénáře zátěžového testu se upravit pomocí editoru zátěžových testů.
+Vlastnost **použít rozdělení do stimulace Delay** je nastavena pomocí okna **vlastnosti** . Vlastnosti scénáře zátěžového testu se upravují pomocí Editor zátěžového testu.
 
 > [!NOTE]
-> **Použít rozdělení na zpoždění stimulace** vlastnost se projeví pouze v případě *načíst poměru testů* je nakonfigurovaný založený na kroku uživatele. Další informace najdete v tématu [úpravy modelů kombinací testů a určení pravděpodobnosti, že virtuální uživatel spustí test](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md).
+> Vlastnost **použít distribuci do stimulace Delay** se vztahuje pouze v případě, že je *kombinace zátěžového testu* konfigurována na základě tempa uživatele. Další informace najdete v tématu [Úpravy modelů kombinace textu a určení pravděpodobnosti, že virtuální uživatel spustí test](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md).
 
-Hodnota **použít rozdělení na zpoždění stimulace** lze nastavit na hodnotu true nebo false:
+Hodnotu pro **zpoždění použití rozdělení na stimulace** lze nastavit buď na hodnotu true, nebo na hodnotu false:
 
-- **Hodnota TRUE**: Tento scénář platí normální statistické rozložení zpoždění, která jsou určena podle hodnoty v **testů na uživatele za hodinu** sloupec **upravit kombinaci testů** dialogové okno. Další informace najdete v tématu [úpravy modelů kombinací testů a určení pravděpodobnosti, že virtuální uživatel spustí test](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md).
+- **True**: scénář aplikuje normální statistické prodlevy, které jsou určené hodnotou ve sloupci **testy na uživatele za hodinu** v dialogovém okně **Upravit kombinaci testů** . Další informace najdete v tématu [Úpravy modelů kombinace textu a určení pravděpodobnosti, že virtuální uživatel spustí test](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md).
 
-     Předpokládejme například, že máte **testů na uživatele za hodinu** hodnotu **upravit kombinaci testů** dialogové okno pro test nastavena na dva uživatele za hodinu. Pokud **použít rozdělení na zpoždění stimulace** je nastavena na **True**, normální statistické rozdělení se použije na čekací dobu mezi testy. Testy budou stále spuštěny dva testy za hodinu, ale nemusí být nutně 30 minut, než mezi nimi. První test spustit až čtyři minuty a druhý test za 45 minut.
+     Předpokládejme například, že máte **testy na hodnotu uživatel za hodinu** v dialogovém okně **Upravit kombinaci testů** pro sadu testů na dva uživatele za hodinu. Pokud je vlastnost **použít distribuci na stimulace Delay** nastavená na **hodnotu true**, použije se pro čekací dobu mezi testy normální statistická distribuce. Testy budou i nadále běžet dvakrát za hodinu, ale nemusí to nutně trvat 30 minut zpoždění. První test může běžet po čtyřech minutách a druhý test po 45 minutách.
 
-- **False**: Testy spuštěny tempem, které jste zadali pro hodnotu v **testů na uživatele za hodinu** sloupec **upravit kombinaci testů** dialogové okno. Další informace najdete v tématu [úpravy modelů kombinací testů a určení pravděpodobnosti, že virtuální uživatel spustí test](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md).
+- **False**: testy se spouští podle tempa, který jste zadali pro hodnotu ve sloupci **testy na uživatele za hodinu** v dialogovém okně **Upravit kombinaci testů** . Další informace najdete v tématu [Úpravy modelů kombinace textu a určení pravděpodobnosti, že virtuální uživatel spustí test](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md).
 
-     Předpokládejme například, že máte **testů na uživatele za hodinu** hodnotu **upravit kombinaci testů** dialogové okno pro test nastavena na dva uživatele za hodinu. Pokud **použít rozdělení na zpoždění stimulace** je nastavena na **False**, udělujete žádné volnost při spuštění testů. Test se spouští každých 30 minut. Tím zajistíte, že provést dva testy za hodinu.
+     Předpokládejme například, že máte **testy na hodnotu uživatel za hodinu** v dialogovém okně **Upravit kombinaci testů** pro sadu testů na dva uživatele za hodinu. Pokud je vlastnost **použít rozdělení na zpoždění stimulace** nastavena na **hodnotu false**, neposkytnete žádné Leeway při spuštění testů. Test se spustí každých 30 minut. Tím zajistíte, že spustíte dvě testy za hodinu.
 
-## <a name="to-specify-the-apply-distribution-to-pacing-delay-property-setting-for-a-scenario"></a>Chcete-li určit použít rozdělení na zpoždění stimulace vlastnosti pro scénář
+## <a name="to-specify-the-apply-distribution-to-pacing-delay-property-setting-for-a-scenario"></a>Určení nastavení vlastnosti použít distribuci na zpoždění stimulace pro scénář
 
 1. Otevřete zátěžový test.
 
-   **Editoru zátěžových testů** se zobrazí. Zobrazí se strom zátěžového testu.
+   Zobrazí se **Editor zátěžového testu** . Zobrazí se strom zátěžového testu.
 
-2. V **scénáře** složky strom zátěžového testu, vyberte uzel scénář, který chcete použít nemusely rozdělení na.
+2. Ve složce **scénáře** ve stromové struktuře zátěžového testu vyberte uzel scénáře, pro který chcete stimulace distribuci použít.
 
-3. Na **zobrazení** nabídce vyberte možnost **okno vlastností**.
+3. V nabídce **zobrazení** vyberte **okno Vlastnosti**.
 
-   Kategorie a vlastnosti scénáře jsou zobrazeny v **vlastnosti** okna.
+   Kategorie a vlastnosti scénáře se zobrazí v okně **vlastnosti** .
 
-4. V hodnotě vlastnosti pro **použít rozdělení na zpoždění stimulace**, vyberte buď **True** nebo **False**.
+4. V hodnotě vlastnosti pro **zpoždění použít rozdělení na stimulace**vyberte **true** nebo **false**.
 
-5. Vyberte **souboru** > **Uložit**. Teď můžete spustit zátěžový test pomocí nového **použít rozdělení na zpoždění stimulace** hodnotu.
+5. Vyberte **soubor**  > **Uložit**. Nyní můžete spustit zátěžový test s novou hodnotou **zpoždění použít rozdělení na stimulace** .
 
 ## <a name="see-also"></a>Viz také:
 
-- [Úpravy scénářů zátěžových testů](../test/edit-load-test-scenarios.md)
-- [Návod: Vytvoření a spuštění zátěžového testu](../test/walkthrough-create-and-run-a-load-test.md)
+- [Upravit scénáře zátěžového testu](../test/edit-load-test-scenarios.md)
+- [Návod: Vytvoření a spuštění zátěžového testu](../test/walkthrough-create-and-run-a-load-test.md)
 - [Kontrolery testů a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md)
 - [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md)

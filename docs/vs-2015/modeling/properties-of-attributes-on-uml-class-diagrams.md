@@ -1,5 +1,5 @@
 ---
-title: Vlastnosti atributů v UML diagramech tříd | Dokumentace Microsoftu
+title: Vlastnosti atributů v diagramech tříd UML | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -10,66 +10,62 @@ helpviewer_keywords:
 - UML, element properties
 ms.assetid: ba01e064-7424-4e72-98fa-42fa1c30e153
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 24575f125c07a016bef4742e010cbdd51f6c75e9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: de32eba5fc6e4afc21d62f4432d9317d85408ffd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68154866"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652070"
 ---
 # <a name="properties-of-attributes-on-uml-class-diagrams"></a>Vlastnosti atributů v diagramech tříd UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V diagramu tříd UML lze přidat *atributy* u tříd a rozhraní. Atribut definuje hodnoty, které lze připojit k instancím typu třídy nebo rozhraní.  
+V diagramu tříd UML lze přidat *atributy* do tříd a rozhraní. Atribut definuje hodnoty, které mohou být připojeny k instancím třídy nebo rozhraní.
 
- Chcete-li přidat atribut, klikněte pravým tlačítkem na třídu nebo rozhraní, přejděte na **přidat**a potom klikněte na tlačítko **atribut**.  
+ Chcete-li přidat atribut, klikněte pravým tlačítkem myši na třídu nebo rozhraní, přejděte na **Přidat**a potom klikněte na **atribut**.
 
- Pokud se atributy třídy v diagramu se nezobrazí, klikněte na dvojitou šipku v horní části třídy nebo rozhraní a rozbalte ho. Pokud se zobrazí **atributy** záhlaví, klikněte na tlačítko **[+]** tím rozbalíte atributy.  
+ Pokud atributy třídy v diagramu nejsou viditelné, rozbalte kliknutím na dvojitou šipku v horní části třídy nebo rozhraní. Pokud vidíte záhlaví **atributů** , kliknutím na **[+]** rozbalte oddíl atributy.
 
-## <a name="signature-of-an-attribute"></a>Signatura atributu  
- Signatura atributu je řádek, který představuje třídu nebo rozhraní v diagramu tříd UML. Má tento formát:  
+## <a name="signature-of-an-attribute"></a>Podpis atributu
+ Signatura atributu je řádek, který představuje v třídě nebo rozhraní v diagramu tříd UML. Má tento formát:
 
-```  
-+ AttributeName : TypeName [*]  
-```  
+```
++ AttributeName : TypeName [*]
+```
 
- \+ označuje public viditelnost. Povolené hodnoty jsou – (privátní), # (chráněný), ~ (balíček).  
+ \+ označuje veřejnou viditelnost. Ostatní povolené hodnoty jsou-(Private), # (Protected), ~ (Package).
 
- `AttributeName` je podtržený, pokud atribut není statické.  
+ `AttributeName` je podtržena, pokud je atribut statický.
 
- `: TypeName` je vynechána, pokud atribut nemá žádný typ.  
+ `: TypeName` se vynechá, pokud atribut nemá žádný typ.
 
- `[*]` označuje násobnosti. To je vynechána, pokud je násobnost 1.  
+ `[*]` označuje násobnost. Pokud je násobnost 1, je vynechána.
 
-## <a name="properties"></a>Vlastnosti  
- Následující tabulka popisuje vlastnosti atribut ve třídě nebo rozhraní v diagramu tříd UML.  
+## <a name="properties"></a>Vlastnosti
+ Následující tabulka popisuje vlastnosti atributu v třídě nebo rozhraní v diagramu tříd UML.
 
- Můžete zobrazit vlastnosti atributu, klikněte pravým tlačítkem na atribut v dané třídy nebo rozhraní v diagramu a klikněte na **vlastnosti**. Vlastnosti se zobrazí v okně Vlastnosti.  
+ Chcete-li zobrazit vlastnosti atributu, klikněte pravým tlačítkem myši na atribut ve třídě nebo rozhraní v diagramu a potom klikněte na příkaz **vlastnosti**. Vlastnosti se zobrazí v okno Vlastnosti.
 
- Chcete-li zobrazit vlastnosti atributu, pravým tlačítkem myši a potom klikněte na **vlastnosti**.  
+ Chcete-li zobrazit vlastnosti atributu, klikněte na něj pravým tlačítkem myši a poté klikněte na příkaz **vlastnosti**.
 
-|   **Vlastnost**    | **Default**  |                                                                                                                                                                                                         Popis                                                                                                                                                                                                          |
+|   **Majetek**    | **Default**  |                                                                                                                                                                                                         Popis                                                                                                                                                                                                          |
 |-------------------|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Výchozí hodnota** |   (prázdné)    |                                                                                                                                                                               Hodnota atributu při vytváření instance klasifikátoru.                                                                                                                                                                                |
-| **Je jen pro čtení**  |    False     |                                                                                                                                                                                    Při hodnotě true nelze změnit hodnotu atributu.                                                                                                                                                                                    |
-|   **Je statická**   |    False     |                                                                                                                    Při hodnotě true se jednu hodnotu pro tento atribut sdílí mezi všechny instance tohoto typu.<br /><br /> Při hodnotě true je podtržený název atributu, kde se zobrazí v diagramu.                                                                                                                    |
-|     **Název**      | (nové jméno) |                                                                                                                                                                                        Musí být jedinečné v rámci vlastnící třídění.                                                                                                                                                                                        |
-|     **Typ**      |    (žádné)    |                                                Primitivní typ, jako **celé číslo**, nebo typ, který je definován v modelu. Neprimitivní typy nelze používat jako **desítkové** vzhledem k tomu, že hodnota musí být kódovány v metadatech. Pokud zadáte název pro nový typ této vlastnosti, typ se přidají do **nespecifikované typy** části Průzkumníku modelů UML.                                                 |
-|  **Viditelnost**   |    Public    |                                     Povolené hodnoty a znaků, které se zobrazí v signatuře jsou následující:<br /><br /> **+ Veřejné** – viditelné globálně<br /><br /> **-Privátní** – nejsou viditelné mimo vlastnící typ<br /><br /> **# Chráněné** – viditelné pro typy odvozené od vlastníka<br /><br /> **~ Balíček** – viditelné pro ostatní typy v rámci stejného balíčku.                                      |
-|  **Pracovní položky**   | související 0 |                                                                                                                          Počet přidružené pracovní položky. Jen pro čtení.<br /><br /> Další informace najdete v tématu [propojení prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).                                                                                                                           |
-|    **List**    |    False     |                                                                                                                                                                    Pokud je hodnota true, není určený k tomu předefinování tento atribut v odvozených typech.                                                                                                                                                                     |
-|  **Je odvozen**   |    False     |                                                                                                              Při hodnotě true se tento atribut se počítá od jiné atributy. Úhlopříčně, například počítají na základě šířku a výšku. Podrobnosti by měly být napsány v **popis** nebo připojeného komentáře.                                                                                                              |
-|  **Popis**  |   (prázdné)    |                                                                                                                                                                        Pro obecné poznámky nebo k definování omezení hodnot v atributu.                                                                                                                                                                        |
-| **Násobnost**  |      1       | **1** – tento atribut je samostatná hodnota ze zadaného typu.<br /><br /> **0..1** – tento atribut může mít hodnotu `null`.<br /><br /> **\\** \* – Hodnota tohoto atributu je kolekce hodnot.<br /><br /> **1..\\**  \* – hodnota tohoto atributu je kolekce, která obsahuje alespoň jednu hodnotu.<br /><br /> *n* **..** *m* – hodnota tohoto atributu je kolekce, který obsahuje od *n* a *m* hodnoty. |
-|  **Je seřazen**   |    False     |                                                                                                                                                                    Při hodnotě true se vytváří kolekce sekvenční seznamu. Pro **násobnost** více než 1.                                                                                                                                                                     |
-|   **Je jedinečný**   |    False     |                                                                                                                                                                Pokud je hodnota true, nejsou v kolekci žádné duplicitní hodnoty. Pro **násobnost** více než 1.                                                                                                                                                                |
+| **Výchozí hodnota** |   obsahovat    |                                                                                                                                                                               Hodnota atributu při vytvoření instance třídění.                                                                                                                                                                                |
+| **Je jen pro čtení**  |    False     |                                                                                                                                                                                    Při hodnotě true se hodnota atributu nedá změnit.                                                                                                                                                                                    |
+|   **Je statický**   |    False     |                                                                                                                    Je-li nastavena hodnota true, je jedna hodnota pro tento atribut sdílena mezi všemi instancemi tohoto typu.<br /><br /> Je-li nastavena hodnota true, název atributu je podtržen, kde se zobrazí v diagramu.                                                                                                                    |
+|     **Jméno**      | (nový název) |                                                                                                                                                                                        By měl být jedinečný v rámci vlastnícího třídění.                                                                                                                                                                                        |
+|     **Textový**      |    nTato    |                                                Primitivní typ, jako je například **celé číslo**nebo typ, který je definován v modelu. Nemůžete použít neprimitivní typy, jako je například **Decimal** , protože hodnota musí být kódována v metadatech. Pokud zadáte název nového typu v této vlastnosti, bude do oddílu **neurčené typy** v PRŮZKUMNÍKOVI modelů UML přidán typ.                                                 |
+|  **Viditelnost**   |    Public    |                                     Povolené hodnoty a znaky, které se zobrazí v signatuře, jsou následující:<br /><br /> **+ Veřejný** – viditelné globálně<br /><br /> **-Private** -není viditelné mimo vlastnící typ<br /><br /> **# Protected** – Visible s typy odvozenými od vlastníka<br /><br /> **~ Balíček** – viditelný pro jiné typy v rámci stejného balíčku.                                      |
+|  **Pracovní položky**   | 0 přidruženo |                                                                                                                          Počet přidružených pracovních položek Jen pro čtení.<br /><br /> Další informace naleznete v tématu [propojování prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).                                                                                                                           |
+|    **Je list**    |    False     |                                                                                                                                                                    Je-li nastavena hodnota true, není určena k povolení předefinování tohoto atributu v odvozených typech.                                                                                                                                                                     |
+|  **Je odvozen**   |    False     |                                                                                                              Je-li nastavena hodnota true, je tento atribut vypočítán z jiných atributů. Například úhlopříčně počítané z šířky a výšky. Podrobnosti by měly být zapsány v **popisu** nebo připojeném komentáři.                                                                                                              |
+|  **Popis**  |   obsahovat    |                                                                                                                                                                        Pro obecné poznámky nebo pro definování omezení pro hodnoty v atributu.                                                                                                                                                                        |
+| **Násobnost**  |      první       | **1** – tento atribut má jednu hodnotu zadaného typu.<br /><br /> **0.. 1** – tento atribut může mít hodnotu `null`.<br /><br /> **\\** \* – hodnota tohoto atributu je kolekcí hodnot.<br /><br /> **1.. \\** \* – hodnota atributu je kolekce, která obsahuje alespoň jednu hodnotu.<br /><br /> *n* **...** *m* – hodnota tohoto atributu je kolekce, která obsahuje hodnoty *n* a *m* . |
+|  **Je seřazen**   |    False     |                                                                                                                                                                    V případě hodnoty true tvoří kolekce sekvenční seznam. Pro **násobnost** větší než 1.                                                                                                                                                                     |
+|   **Je jedinečný**   |    False     |                                                                                                                                                                Pokud má hodnotu true, v kolekci nejsou žádné duplicitní hodnoty. Pro **násobnost** větší než 1.                                                                                                                                                                |
 
-## <a name="see-also"></a>Viz také  
- [Diagramy tříd UML: Referenční dokumentace](../modeling/uml-class-diagrams-reference.md)   
- [Vlastnosti typů v diagramech tříd UML](../modeling/properties-of-types-on-uml-class-diagrams.md)   
- [Vlastnosti operací v diagramech tříd UML](../modeling/properties-of-operations-on-uml-class-diagrams.md)   
- [Diagramy tříd UML: Pokyny](../modeling/uml-class-diagrams-guidelines.md)   
- [Diagramy tříd UML: Pokyny](../modeling/uml-class-diagrams-guidelines.md)
+## <a name="see-also"></a>Viz také
+ [Diagramy tříd UML: referenční](../modeling/uml-class-diagrams-reference.md) [vlastnosti typů v](../modeling/properties-of-types-on-uml-class-diagrams.md) diagramech tříd UML [vlastnosti operací v](../modeling/properties-of-operations-on-uml-class-diagrams.md) diagramech tříd UML [Diagram tříd: pokyny](../modeling/uml-class-diagrams-guidelines.md) [diagramy](../modeling/uml-class-diagrams-guidelines.md) tříd UML: pokyny

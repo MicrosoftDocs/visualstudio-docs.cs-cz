@@ -1,5 +1,5 @@
 ---
-title: 'CA2108: Revize deklarativních zabezpečení na hodnotách | Dokumentace Microsoftu'
+title: 'CA2108: Projděte si deklarativní zabezpečení u hodnot typu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - CA2108
 ms.assetid: d62bffdd-3826-4d52-a708-1c646c5d48c2
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f6a17bf57f00923cfd31bd477f211ba66169672a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a05b7098d75d368f893b2504f7663675611bc0ce
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65687371"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658727"
 ---
-# <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108: Zkontrolujte deklarativní zabezpečení u typů hodnot
+# <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108: Zkontrolujte deklarativní zabezpečení na hodnotách
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -30,34 +30,34 @@ ms.locfileid: "65687371"
 |TypeName|ReviewDeclarativeSecurityOnValueTypes|
 |CheckId|CA2108|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>Příčina
- Veřejný nebo chráněný hodnotový typ je zabezpečen pomocí [Data a modelování](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6) nebo [požadavky propojení](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d).
+## <a name="cause"></a>příčina
+ Veřejný nebo chráněný typ hodnoty je zabezpečený [daty a modelováním](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6) nebo [požadavky propojení](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d).
 
 ## <a name="rule-description"></a>Popis pravidla
- Typy hodnot jsou přiděleny a inicializován pomocí jejich výchozí konstruktory před další konstruktory. Pokud hodnota typ je zabezpečen pomocí s požadavkem nebo LinkDemand a volající nemá oprávnění, které splňují kontrola zabezpečení, některý konstruktor jiné než výchozí hodnota se nezdaří a bude vyvolána výjimka zabezpečení. Typ hodnoty není uvolněný; je ponechána ve stavu, nastavte jeho výchozí konstruktor. Nepředpokládejte, že volající, který předá instance typu hodnoty má oprávnění k vytváření a přístup k instanci.
+ Typy hodnot jsou přiděleny a inicializovány jejich výchozími konstruktory předtím, než se spustí jiné konstruktory. Pokud je typ hodnoty zabezpečený požadavkem nebo LinkDemand a volající nemá oprávnění, která splní kontrolu zabezpečení, jakýkoliv jiný konstruktor než výchozí selže a vyvolá se výjimka zabezpečení. Typ hodnoty není navrácený; je ponechán ve stavu nastaveném jeho výchozím konstruktorem. Nepředpokládají, že volající, který předává instanci typu hodnoty, má oprávnění vytvořit nebo získat přístup k instanci.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Pokud odeberete z typu kontroly zabezpečení a použití zabezpečení na úrovni metoda zkontroluje místo něj nelze opravit porušení tohoto pravidla. Všimněte si, že oprava porušení tímto způsobem nezabrání volajícím s nedostatečná oprávnění od získání instance typu hodnoty. Ujistěte se, že instance typu hodnoty ve svém výchozím stavu není zveřejnit citlivé informace a nelze použít škodlivých způsobem.
+ Porušení tohoto pravidla nelze opravit, Pokud neodeberete kontrolu zabezpečení z daného typu a na svém místě použijete kontrolu zabezpečení na úrovni metod. Všimněte si, že vyřešení porušení tímto způsobem nezabrání volajícím s nedostatečnými oprávněními v získání instancí typu hodnoty. Je nutné zajistit, aby instance typu hodnoty ve svém výchozím stavu nezveřejnila citlivé informace, a nelze ji použít škodlivou způsobem.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Upozornění tohoto pravidla můžete potlačit, pokud jakýkoli volající můžete získat instance typu hodnoty ve svém výchozím stavu bez představující ohrožení zabezpečení.
+ Můžete potlačit upozornění z tohoto pravidla, pokud kterýkoli volající může získat instance typu hodnoty ve svém výchozím stavu bez ohrožení zabezpečení.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje knihovnu obsahující hodnotový typ, který porušuje tato pravidla. Všimněte si, `StructureManager` typ předpokládá, že volající, který předá instance typu hodnoty má oprávnění k vytváření a přístup k instanci.
+ Následující příklad ukazuje knihovnu obsahující typ hodnoty, který toto pravidlo porušuje. Všimněte si, že typ `StructureManager` předpokládá, že volající, který předává instanci typu hodnoty má oprávnění vytvořit nebo získat přístup k instanci.
 
  [!code-csharp[FxCop.Security.DemandOnValueType#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.DemandOnValueType/cs/FxCop.Security.DemandOnValueType.cs#1)]
 
 ## <a name="example"></a>Příklad
- Následující aplikace ukazuje slabé stránky knihovny.
+ Následující aplikace demonstruje slabé stránky knihovny.
 
  [!code-csharp[FxCop.Security.TestDemandOnValueType#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.TestDemandOnValueType/cs/FxCop.Security.TestDemandOnValueType.cs#1)]
 
  Tento příklad vytvoří následující výstup.
 
- **Struktura vlastního konstruktoru: Požadavek se nezdařil. ** 
- **Nové hodnoty SecuredTypeStructure 100 100**
-**nové hodnoty SecuredTypeStructure 200 200**
+ **Vlastní konstruktor struktury: požadavek se nezdařil.** 
+**New Values SecuredTypeStructure 100 100** 
+**New values SecuredTypeStructure 200 200**
 ## <a name="see-also"></a>Viz také
- [Požadavky na propojení](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) [Data a modelování](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)
+ [Propojení vyžaduje](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) [data a modelování](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)

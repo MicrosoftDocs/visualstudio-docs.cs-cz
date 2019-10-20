@@ -1,5 +1,5 @@
 ---
-title: Možnosti, textový Editor, C / C++, experimentální | Dokumentace Microsoftu
+title: Možnosti, textový editor, C-C++, experimentální | Microsoft Docs
 ms.date: 11/15/2016
 ms.topic: reference
 f1_keywords:
@@ -8,62 +8,55 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.C\C++.Experimental
 ms.assetid: b9e9dda2-350c-460d-b368-37d6c5342eee
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0d4406d1fc30115cc7002da24c71d2274131ce74
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 7e9d1464481b33bc5fbf5e73bc09a6da4eb082c7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65674522"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662353"
 ---
-# <a name="options-text-editor-cc-experimental"></a>Možnosti, textový Editor, C/C++, experimentální
+# <a name="options-text-editor-cc-experimental"></a>Možnosti, textový editor, C/C++, experimentální
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Změnou tyto možnosti můžete změnit chování související se technologie IntelliSense a procházení databází, když programujete v jazyce C nebo C++.  
-  
- Pro přístup k této stránce v **možnosti** dialogové okno, v levém podokně rozbalte **textový Editor**, rozbalte **C/C++** a klikněte na tlačítko **experimentální**.  
-  
- Tyto funkce jsou dostupné v instalaci sady Visual Studio 2015 Update 1 RC.  
-  
+Změnou těchto možností můžete změnit chování související s technologií IntelliSense a databází procházení při programování v jazyce C nebo C++.
+
+ Chcete-li získat přístup k této stránce, v dialogovém okně **Možnosti** rozbalte v levém podokně položku **textový editor**, rozbalte položku **C++C/** a pak zvolte možnost **experimentální**.
+
+ Tyto funkce jsou k dispozici v instalaci sady Visual Studio 2015 Update 1 RC.
+
 > [!NOTE]
-> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Zobrazit [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="browsingnavigation"></a>Procházení a navigace  
- **Zapnout nový databázový stroj**  
- Tím by měl automaticky urychlí naplnění databáze a urychlit všechny databázové operace (s bez ztráty přesnosti) pro operace, jako **přejít k definici** a **najít všechny odkazy**. (Pouze zavřete a znovu otevřete řešení, aby se změny projevily, není nutné restartovat Visual Studio)  
-  
-## <a name="intellisense"></a>IntelliSense  
- **Člen seznamu tečky na šipku**  
- Nahradí "." znaky->' Pokud se dá použít pro seznam členů.  
-  
-## <a name="refactoring"></a>Refaktoring  
- **Povolit extrakci funkce**  
- Extrahovat vybraný kód ke svojí funkci a nahraďte kód pomocí volání na tuto novou funkci. Chcete-li použít tuto funkci, klikněte pravým tlačítkem na vybraný kód a vyberte **rychlé akce**, nebo jednoduše stisknout klávesovou zkratku Ctrl + tečka [Ctrl +.] výchozí.  
-  
- **Povolit změnit signaturu**  
- Přidat, změnit pořadí a odstranit parametrů funkce a šíří změny do všech lokalit volání. Přístup k této funkci, klikněte pravým tlačítkem na veškeré využití nad funkce a vyberte **rychlé akce**, nebo jednoduše stisknout klávesovou zkratku Ctrl + tečka [Ctrl +.] výchozí.  
-  
-## <a name="text-editor"></a>Textový editor  
- **Povolit rozbalení oborů**  
- Pokud je povoleno, je možné ohraničit vybraný text pomocí složených závorek zadáním "{" v textovém editoru.  
-  
- **Povolit rozbalení prioritu**  
- Pokud je povoleno, je možné ohraničit vybraný text v závorkách zadáním "(" v textovém editoru.  
-  
- Funkce editoru textu v Galerii Visual Studio, najdete v seznamu [tady](http://go.microsoft.com/fwlink/?LinkId=692016). Příkladem je [C++ rychlých oprav](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f), která podporuje následující:  
-  
-- **Přidat chybějící #include** -navrhuje relevantní #include pro neznámý symboly ve vašem kódu  
-  
-- **Přidat direktivu using obor názvů/plnému symbol** – podobně jako předchozí položce, ale pro obory názvů  
-  
-- **Přidat chybějící středníkem**  
-  
-- **Nápověda MSDN** -prohledat knihovnu MSDN pro chybové zprávy  
-  
-  Můžete buď při najetí myší nad vlnovku pro získání žárovky, nebo použijte výchozí klávesovou zkratku Ctrl + tečka (Ctrl +.). Všimněte si, že pro klávesové zkratky, vaše blikající kurzor o nemusí být umístěna na konkrétní chyba nebo token může být jednoduše na stejném řádku jako chyba, která se má vyvolat návrhy pro všechno, co je na daném řádku.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností editoru pro konkrétní jazyk](../../ide/reference/setting-language-specific-editor-options.md)   
- [Refaktoring v jazyce C++ (VC blogu)](http://blogs.msdn.com/b/vcblog/archive/2014/11/14/all-about-c-refactoring-in-visual-studio-2015-preview.aspx)
+> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Viz [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="browsingnavigation"></a>Procházení/navigace
+ **Povolit nový databázový stroj** To by mělo automaticky zrychlit naplnění databáze a zrychlit všechny operace databáze (bez ztráty přesnosti) pro operace, jako je například **Přejít k definici** a **Najít všechny odkazy**. (Stačí zavřít a znovu otevřít řešení, aby se změny projevily. není nutné restartovat Visual Studio.)
+
+## <a name="intellisense"></a>IntelliSense
+ **Seznam členů s tečkami na šipku** Nahradí '. ' s '-> ', pokud je použit pro seznam členů.
+
+## <a name="refactoring"></a>Refaktoring
+ **Povolit extrakci funkce** Extrahujte vybraný kód do vlastní funkce a nahraďte kód voláním nové funkce. Chcete-li získat přístup k této funkci, klikněte pravým tlačítkem myši na vybraný kód a vyberte **rychlé akce**, nebo jednoduše stiskněte výchozí klávesovou zkratku CTRL + tečka [CTRL +.].
+
+ **Povolit změnu signatury** Umožňuje přidat, změnit pořadí a odstranit parametry funkce a rozšířit změny na všechny lokality volání. Přístup k této funkci získáte tak, že kliknete pravým tlačítkem na jakékoli použití funkce a vyberete **rychlé akce**, nebo jednoduše stisknete výchozí klávesovou zkratku CTRL + tečka [CTRL +.].
+
+## <a name="text-editor"></a>Textový editor
+ **Povolit rozbalení oborů** Pokud je povoleno, můžete vybraný text uzavřít do složených závorek zadáním "{" do textového editoru.
+
+ **Povolit rozbalení priority** Pokud je povoleno, můžete vybraný text uzavřít závorkami zadáním ' (' do textového editoru.
+
+ Další funkce textového editoru v galerii sady Visual Studio najdete v [tomto](http://go.microsoft.com/fwlink/?LinkId=692016)seznamu. Příkladem jsou [ C++ rychlé opravy](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f), které podporují následující:
+
+- **Přidat chybějící #include** – navrhuje relevantní #include pro neznámé symboly v kódu
+
+- **Přidat pomocí oboru názvů nebo plně kvalifikovat symbol** podobný předchozí položce, ale pro obory názvů
+
+- **Přidat chybějící středník**
+
+- **Nápovědu MSDN** – prohledejte vaše chybové zprávy na webu MSDN
+
+  Chcete-li získat žárovku žárovky nebo použít výchozí klávesovou zkratku CTRL + tečka (CTRL +.), můžete buď najeďte myší na vlnovku. Všimněte si, že u klávesové zkratky není potřeba blikající kurzor umístit na konkrétní chybu nebo token; k vyvolání návrhů na cokoli na daném řádku můžete jednoduše použít stejný řádek jako chyba.
+
+## <a name="see-also"></a>Viz také
+ Nastavení refaktoringu [možností editoru specifických](../../ide/reference/setting-language-specific-editor-options.md) [pro C++ jazyk (blog VC)](http://blogs.msdn.com/b/vcblog/archive/2014/11/14/all-about-c-refactoring-in-visual-studio-2015-preview.aspx)

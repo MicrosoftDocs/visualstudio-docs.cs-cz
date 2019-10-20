@@ -1,5 +1,5 @@
 ---
-title: Uložení datové sady ve formátu XML | Dokumentace Microsoftu
+title: Uložení datové sady jako XML | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -16,38 +16,38 @@ helpviewer_keywords:
 - saving data
 ms.assetid: 68b8327c-ae05-49ff-b9ba-99183e70b52c
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2e4331b59c532e681c7e10ab8e43b953e9f72b18
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e64c3c17934e5cdc5d6ca1f510c7164b86a77c1a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62559554"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652853"
 ---
 # <a name="save-a-dataset-as-xml"></a>Uložení datové sady ve formátu XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Data XML v datové sadě je možný voláním dostupné metody XML v datové sadě. K ukládání dat ve formátu XML, lze volat buď <xref:System.Data.DataSet.GetXml%2A> metoda nebo <xref:System.Data.DataSet.WriteXml%2A> metodu <xref:System.Data.DataSet>.  
-  
- Volání <xref:System.Data.DataSet.GetXml%2A> metoda vrátí řetězec, který obsahuje data ze všech tabulek dat v datové sadě, který je formátován jako XML.  
-  
- Volání <xref:System.Data.DataSet.WriteXml%2A> metoda odesílá data ve formátu XML do souboru, který zadáte.  
-  
-### <a name="to-save-the-data-in-a-dataset-as-xml-to-a-variable"></a>Chcete-li uložit data v datové sadě ve formátu XML do proměnné  
-  
-- <xref:System.Data.DataSet.GetXml%2A> Metoda vrátí hodnotu <xref:System.String>. To znamená, že deklarujete proměnnou typu <xref:System.String> a přiřaďte ho výsledky <xref:System.Data.DataSet.GetXml%2A> metody.  
-  
+Data XML v datové sadě jsou přístupná voláním dostupných metod jazyka XML na datové sadě. Chcete-li uložit data ve formátu XML, můžete zavolat buď metodu <xref:System.Data.DataSet.GetXml%2A>, nebo metodu <xref:System.Data.DataSet.WriteXml%2A> <xref:System.Data.DataSet>.
+
+ Volání metody <xref:System.Data.DataSet.GetXml%2A> vrátí řetězec, který obsahuje data ze všech tabulek dat v datové sadě, která je formátována jako XML.
+
+ Volání metody <xref:System.Data.DataSet.WriteXml%2A> odesílá data ve formátu XML do souboru, který zadáte.
+
+### <a name="to-save-the-data-in-a-dataset-as-xml-to-a-variable"></a>Uložení dat v datové sadě jako XML do proměnné
+
+- Metoda <xref:System.Data.DataSet.GetXml%2A> vrací <xref:System.String>. to znamená, že deklarujete proměnnou typu <xref:System.String> a přiřadíte jí výsledky metody <xref:System.Data.DataSet.GetXml%2A>.
+
      [!code-csharp[VbRaddataSaving#12](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Class1.cs#12)]
-     [!code-vb[VbRaddataSaving#12](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Class1.vb#12)]  
-  
-### <a name="to-save-the-data-in-a-dataset-as-xml-to-a-file"></a>Chcete-li uložit data v datové sadě ve formátu XML do souboru  
-  
-- <xref:System.Data.DataSet.WriteXml%2A> Metoda má několik přetížení. Následující kód ukazuje, jak uložit data do souboru. Deklarujte proměnnou a přiřaďte ho platnou cestu k uložení souboru.  
-  
+     [!code-vb[VbRaddataSaving#12](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Class1.vb#12)]
+
+### <a name="to-save-the-data-in-a-dataset-as-xml-to-a-file"></a>Uložení dat v datové sadě jako XML do souboru
+
+- Metoda <xref:System.Data.DataSet.WriteXml%2A> má několik přetížení. Následující kód ukazuje, jak uložit data do souboru. Deklarujte proměnnou a přiřaďte jí platnou cestu k uložení souboru do.
+
      [!code-csharp[VbRaddataSaving#13](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Class1.cs#13)]
-     [!code-vb[VbRaddataSaving#13](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Class1.vb#13)]  
-  
-## <a name="see-also"></a>Viz také  
+     [!code-vb[VbRaddataSaving#13](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Class1.vb#13)]
+
+## <a name="see-also"></a>Viz také
  [Ukládání dat zpět do databáze](../data-tools/save-data-back-to-the-database.md)

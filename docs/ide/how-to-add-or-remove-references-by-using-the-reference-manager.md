@@ -16,19 +16,19 @@ helpviewer_keywords:
 - referencing components, removing references
 - references [Visual Studio], removing
 - referencing components, assemblies not listed
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 584c807670e5e5ba0bc4fa1b381dca30474212e7
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: e302b5c4df73f8fcdadf766a1fe1d8dc0731c261
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787890"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654825"
 ---
-# <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>Postupy: Přidání nebo odebrání odkazů pomocí správce odkazů
+# <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>Postupy: Přidání nebo odebrání odkazů pomocí Správce odkazů
 
 Dialogové okno Správce odkazů můžete použít k přidání a správě odkazů na komponenty, které jste vy, společnost Microsoft nebo jinou společnost vyvinuli. Pokud vyvíjíte univerzální aplikaci pro Windows, váš projekt automaticky odkazuje na všechny správné knihovny dll Windows SDK. Pokud vyvíjíte aplikaci .NET, projekt automaticky odkazuje na *mscorlib. dll*. Některá rozhraní API rozhraní .NET jsou vystavena v součástech, které je nutné přidat ručně. Odkazy na komponenty modelu COM nebo vlastní komponenty je nutné přidat ručně.
 
@@ -50,7 +50,7 @@ Dialogové okno Správce odkazů zobrazuje na levé straně různé kategorie v 
 
 ## <a name="add-a-reference"></a>Přidat odkaz
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **odkazy** nebo **závislosti** a vyberte možnost **Přidat odkaz**. Můžete také kliknout pravým tlačítkem myši na uzel projektu a vybrat možnost **Přidat** > **odkaz**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **odkazy** nebo **závislosti** a vyberte možnost **Přidat odkaz**. Můžete také kliknout pravým tlačítkem na uzel projektu a vybrat **přidat**  > **odkaz**.
 
    Otevře se **Správce odkazů** a zobrazí seznam dostupných odkazů podle skupin.
 
@@ -60,7 +60,7 @@ Dialogové okno Správce odkazů zobrazuje na levé straně různé kategorie v 
 
 Na kartě **sestavení** jsou uvedena všechna sestavení .NET, která jsou k dispozici pro odkazování. Na kartě **sestavení** se nezobrazí žádná sestavení z globální mezipaměti sestavení (GAC), protože sestavení v mezipaměti GAC jsou součástí prostředí modulu runtime. Pokud nasadíte nebo zkopírujete aplikaci, která obsahuje odkaz na sestavení, které je registrováno v globální mezipaměti sestavení (GAC), sestavení nebude nasazeno nebo zkopírováno s aplikací bez ohledu na nastavení **Kopírovat místní** . Další informace naleznete v tématu [Správa odkazů v projektu](../ide/managing-references-in-a-project.md).
 
-<xref:EnvDTE>Pokud ručně přidáte odkaz na jakýkoli obor názvů EnvDTE (, <xref:EnvDTE80>, <xref:EnvDTE90> <xref:EnvDTE90a>, nebo <xref:EnvDTE100>), nastavte vlastnost **Embed Interop Types** odkazu na **false** v  **Okno Vlastnosti** . Nastavení této vlastnosti na **hodnotu true** může způsobit problémy sestavení z důvodu určitých vlastností EnvDTE, které nelze vložit.
+Pokud ručně přidáte odkaz na jakýkoli obor názvů EnvDTE (<xref:EnvDTE>, <xref:EnvDTE80>, <xref:EnvDTE90>, <xref:EnvDTE90a> nebo <xref:EnvDTE100>), nastavte vlastnost **Embed Interop Types** odkazu na **false** v okně **vlastnosti** . Nastavení této vlastnosti na **hodnotu true** může způsobit problémy sestavení z důvodu určitých vlastností EnvDTE, které nelze vložit.
 
 Všechny desktopové projekty obsahují implicitní odkaz na **mscorlib**. Visual Basic projekty obsahují implicitní odkaz na <xref:Microsoft.VisualBasic>. Všechny projekty obsahují implicitní odkaz na **System. Core**, i když je odebrán ze seznamu odkazů.
 
@@ -72,7 +72,7 @@ Karta **sestavení** se skládá ze dvou dílčích karet:
 
    Pro projekty, které necílí na rozhraní .NET Core nebo Univerzální platforma Windows, karta **rozhraní** vytváří výčet sestavení z cíleného rozhraní. Uživatel musí přidat všechny odkazy, které aplikace vyžaduje.
 
-   Univerzální projekty Windows obsahují odkazy na všechna sestavení v cílovém rozhraní ve výchozím nastavení. V spravovaných projektech uzel jen pro čtení ve složce **odkazy** v **Průzkumník řešení** označuje odkaz na celé rozhraní. Proto karta **rozhraní** nevytvoří výčet žádného sestavení z rozhraní a místo toho zobrazí následující zprávu: Na všechna sestavení rozhraní je již odkazováno. K prozkoumání odkazů v rozhraní prosím použijte Prohlížeč objektů.
+   Univerzální projekty Windows obsahují odkazy na všechna sestavení v cílovém rozhraní ve výchozím nastavení. V spravovaných projektech uzel jen pro čtení ve složce **odkazy** v **Průzkumník řešení** označuje odkaz na celé rozhraní. Proto karta **rozhraní** nevytvoří výčet žádného sestavení z rozhraní a místo toho zobrazí následující zprávu: "všechna sestavení rozhraní jsou již odkazována. K prozkoumání odkazů v rozhraní prosím použijte Prohlížeč objektů.
 
 2. **Rozšíření** uvádí všechna sestavení, která vyvinuli externí dodavatelé komponent a ovládacích prvků pro rozšíření cíleného rozhraní. Podle účelu dané aplikace mohou být tato sestavení potřebná.
 
@@ -88,7 +88,7 @@ Karta **sestavení** se skládá ze dvou dílčích karet:
 
    A starší verze [identifikátor cílového rozhraní .NET Framework]
 
-   Například pokud je projekt .NET Framework cílen na 32. NETFramework\v4.0\AssemblyFoldersEx, vypíše **rozšíření** sestavení, která jsou registrována v části *\.\Microsoft*, *\Microsoft\. NETFramework\v3.5\AssemblyFoldersEx*, *\Microsoft\.NETFramework\v3.0\AssemblyFoldersEx*a *\.\Microsoft NETFramework\v2.0\AssemblyFoldersEx*.
+   Například pokud je projekt .NET Framework cílen na 32-bit počítače, **rozšíření** vytvoří výčet sestavení, která jsou registrována v rámci *\Microsoft \.NETFramework \v4.0\assemblyfoldersex*, *\Microsoft \.NETFramework \v3.5\ AssemblyFoldersEx*, *\Microsoft \.NETFramework \V3.0\assemblyfoldersex*a *\Microsoft \.NETFramework \v2.0\assemblyfoldersex*.
 
 Některé součásti v seznamu nemusí být zobrazeny v závislosti na verzi rozhraní projektu. K tomu může dojít při splnění následujících podmínek:
 
@@ -111,7 +111,7 @@ Měli byste se vyhnout přidávání odkazů na soubory do výstupů jiného pro
 
   - Další adresáře projektu ve stejném řešení. (Tato sestavení můžete najít pomocí karty **projekty** .)
 
-  \- nebo –
+  \- nebo-
 
 - Nastavte klíč registru, který určuje umístění sestavení, která se mají zobrazit:
 
@@ -127,11 +127,11 @@ Měli byste se vyhnout přidávání odkazů na soubory do výstupů jiného pro
 
   - `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\<VersionMinimum>\AssemblyFoldersEx\MyAssemblies]@="<AssemblyLocation>"`
 
-  VersionMinimum je nejnižší verze architektury, která se používá. *\<\>* *Pokud\<jeVersionMinimum\>* v 3.0, složky zadané v *AssemblyFoldersEx* platí pro projekty, které cílí na .NET Framework 3,0 a novější.
+  *\<VersionMinimum \>* je nejnižší verze architektury, která se používá. Pokud *\<VersionMinimum \>* je v 3.0, složky zadané v *AssemblyFoldersEx* platí pro projekty, které cílí na .NET Framework 3,0 a novější.
 
-  *AssemblyLocationjeadresářsestavení,kterásemajízobrazitvdialogovémokněPřidatodkaz,napříkladC:\MyAssemblies\>. \<*
+  *\<AssemblyLocation \>* je adresář sestavení, která se mají zobrazit v dialogovém okně **Přidat odkaz** , například *C:\MyAssemblies*.
 
-  Vytvoření klíče registru pod `HKEY_LOCAL_MACHINE` uzlem umožní všem uživatelům zobrazit sestavení v zadaném umístění v dialogovém okně **Přidat odkaz** . Vytvoření klíče registru pod `HKEY_CURRENT_USER` uzlem má vliv pouze na nastavení pro aktuálního uživatele.
+  Vytvoření klíče registru pod uzlem `HKEY_LOCAL_MACHINE` umožňuje všem uživatelům zobrazit sestavení v zadaném umístění v dialogovém okně **Přidat odkaz** . Vytvoření klíče registru pod uzlem `HKEY_CURRENT_USER` má vliv pouze na nastavení pro aktuálního uživatele.
 
   Znovu otevřete dialogové okno **Přidat odkaz** . Sestavení by se měla zobrazit na kartě **.NET** . Pokud ne, ujistěte se, že se sestavení nacházejí v zadaném adresáři *AssemblyLocation* , restartujte Visual Studio a zkuste to znovu.
 
@@ -151,7 +151,7 @@ Přidejte odkaz na sdílený projekt na kartě **sdílené projekty** v dialogov
 ## <a name="universal-windows-tab"></a>Karta univerzální pro Windows
 
 Karta **Universal Windows** obsahuje všechny sady SDK, které jsou specifické pro platformy, na kterých běží operační systémy Windows.
-Tato karta má dvě podskupiny: **Jádro** a **rozšíření**.
+Tato karta má dvě podskupiny: **jádro** a **rozšíření**.
 
 ### <a name="core-subgroup"></a>Podskupina Core
 
@@ -186,11 +186,11 @@ Vyhněte se přidávání odkazů na soubory do výstupů jiného projektu ve st
 
 Nemůžete procházet sadu SDK a přidat ji do projektu. Můžete přejít pouze k souboru (například sestavení nebo *. winmd*) a přidat ho do projektu.
 
-Při odkazování na soubor winmd je očekávané rozložení, že  *\<název souboru >. winmd*,  *\<filename >. dll*a  *\<filename >. pri* se nacházejí společně. Pokud odkazujete na soubor WinMD v následujících scénářích, do výstupního adresáře projektu budou zkopírovány neúplné sady souborů a v důsledku toho dojde k chybám při sestavení a za běhu.
+Při odkazování na soubor WinMD je očekávané rozložení, že *\<FileName >. winmd*, *\<FileName >. dll*a *\<FileName >. pri* jsou umístěny vedle sebe. Pokud odkazujete na soubor WinMD v následujících scénářích, do výstupního adresáře projektu budou zkopírovány neúplné sady souborů a v důsledku toho dojde k chybám při sestavení a za běhu.
 
-- **Nativní komponenta**: nativní projekt vytvoří jednu winmd pro každou nesouvislou sadu oborů názvů a jednu knihovnu DLL, která se skládá z implementace. Soubory WinMDs budou mít nesouvislé názvy. Při odkazování na tento soubor nativní komponenty nástroj MSBuild nerozpozná, že s názvem soubory WinMD vytvořit jednu komponentu. V důsledku toho se zkopírují jenom identicky pojmenovaný  *\<název souboru >. dll* a  *\<filename >. winmd* a dojde k chybám za běhu. Pokud chcete tento problém obejít, vytvořte sadu SDK rozšíření. Další informace najdete v tématu [Vytvoření sady SDK (Software Development Kit](../extensibility/creating-a-software-development-kit.md)).
+- **Nativní komponenta**: nativní projekt vytvoří jednu winmd pro každou nesouvislou sadu oborů názvů a jednu knihovnu DLL, která se skládá z implementace. Soubory WinMDs budou mít nesouvislé názvy. Při odkazování na tento soubor nativní komponenty nástroj MSBuild nerozpozná, že s názvem soubory WinMD vytvořit jednu komponentu. V důsledku toho budou zkopírovány pouze identicky pojmenované *\<FileName >. dll* a *\<FileName >. winmd* a dojde k chybám za běhu. Pokud chcete tento problém obejít, vytvořte sadu SDK rozšíření. Další informace najdete v tématu [Vytvoření sady SDK (Software Development Kit](../extensibility/creating-a-software-development-kit.md)).
 
-- **Spotřebovávání ovládacích prvků**: ovládací prvek XAML je přinejmenším tvořen  *\<názvem souboru >. winmd*,  *\<filename >. dll*,  *\<filename >. pri*, *\<XAML >. XAML a ImageName >* . jpg.  *\<* Po sestavení projektu se soubory prostředků, které jsou spojeny s odkazem na soubor, nezkopírují do výstupního adresáře projektu a pouze  *\<filename >. winmd*,  *\<filename >. dll* a  *\<Název souboru >. pri* se zkopíruje. Chyba sestavení je protokolována, aby informovala uživatele o tom, že zdroje  *\<>. XAML* a  *\<ImageName >. jpg* chybí. Aby sestavení proběhlo úspěšně, bude uživatel muset ručně zkopírovat tyto soubory prostředků do výstupního adresáře projektu pro sestavení a ladění/dobu běhu. Pokud chcete tento problém obejít, buď vytvořte sadu rozšíření SDK podle kroků v části [Vytvoření sady Software Development Kit](../extensibility/creating-a-software-development-kit.md) nebo upravte soubor projektu a přidejte následující vlastnost:
+- Používání **ovládacích prvků**: ovládací prvek XAML je přinejmenším tvořen *\<FileName >. winmd* *\<FileName >. dll*, *\<FileName >. pri*, *\<XamlName >. XAML*a *@no__t_ 10ImageName >. jpg*. Když je projekt sestaven, soubory prostředků, které jsou přidruženy k odkazu na soubor, nebudou zkopírovány do výstupního adresáře projektu a pouze *\<FileName >. winmd* *\<FileName >. dll* a *\<FileName >. pri* se zkopíruje. Chyba sestavení je protokolována, aby informovala uživatele o tom, že prostředky *\<XamlName >. XAML* a *\<ImageName >. jpg* chybí. Aby sestavení proběhlo úspěšně, bude uživatel muset ručně zkopírovat tyto soubory prostředků do výstupního adresáře projektu pro sestavení a ladění/dobu běhu. Pokud chcete tento problém obejít, buď vytvořte sadu rozšíření SDK podle kroků v části [Vytvoření sady Software Development Kit](../extensibility/creating-a-software-development-kit.md) nebo upravte soubor projektu a přidejte následující vlastnost:
 
     ```xml
     <PropertyGroup>
@@ -203,7 +203,7 @@ Při odkazování na soubor winmd je očekávané rozložení, že  *\<název so
 
 ## <a name="recent"></a>Nedávné
 
-**Sestavení**, **com**, **Windows**a **procházení** jednotlivých podporovaných karet, které vyčíslují seznam komponent, které byly nedávno přidány do projektů.
+**Sestavení**, **com**, **Windows**a **procházení** jednotlivých **podporovaných karet,** které vyčíslují seznam komponent, které byly nedávno přidány do projektů.
 
 ## <a name="search"></a>Hledat
 

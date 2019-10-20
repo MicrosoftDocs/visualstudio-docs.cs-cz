@@ -1,22 +1,22 @@
 ---
-title: Generování metody
+title: Vygenerovat metodu
 ms.date: 01/26/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d815b638033e16796c90a362207b820bfe7cc57d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c85e3f849d7d74f326c1cf330b0e2c338d78fc6a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794811"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668336"
 ---
-# <a name="generate-a-method-in-visual-studio"></a>Generovat metodu v sadě Visual Studio
+# <a name="generate-a-method-in-visual-studio"></a>Generování metody v aplikaci Visual Studio
 
-Tato generace kód platí pro:
+Tato generace kódu platí pro:
 
 - C#
 
@@ -24,43 +24,43 @@ Tato generace kód platí pro:
 
 **Co:** Umožňuje okamžitě přidat metodu do třídy.
 
-**Kdy:** Zavádí nové metody a chcete správně, automaticky deklarovat.
+**Když:** Zavádíte novou metodu a chcete ji správně deklarovat automaticky.
 
-**Proč:** Můžete deklarovat metody a parametrů než začnete používat, ale tato funkce bude automaticky generovat deklarace.
+**Proč:** Metodu a parametry můžete deklarovat před jejím použitím, ale tato funkce bude tuto deklaraci generovat automaticky.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor na řádek níž se nachází červená vlnovka. Červená vlnovka označuje metodu, která ještě neexistuje.
+1. Umístěte kurzor na řádek, kde je červená vlnovka. Červená vlnovka označuje metodu, která ještě neexistuje.
 
    - C#:
 
-       ![Zvýrazněný kód jazyka C#](media/method-highlight-cs.png)
+       ![Zvýrazněný kódC#](media/method-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Zvýrazněný kód jazyka Visual Basic](media/method-highlight-vb.png)
+       ![Zvýrazněný kód VB](media/method-highlight-vb.png)
 
 2. Dále proveďte jednu z následujících akcí:
 
-   - **Klávesnice**
-      - Stisknutím klávesy **Ctrl**+**.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
-   - **Myši**
-      - Klikněte pravým tlačítkem a vyberte **rychlé akce a Refaktoringy** nabídky.
-      - Červená vlnovka ukazatel myši a klikněte ![Chyba žárovky](media/error-bulb.png) ikona, která se zobrazí.
-      - Klikněte na ![Chyba žárovky](media/error-bulb.png) ikona, která se zobrazí u levého okraje, pokud textový kurzor na řádek s červená vlnovka.
+   - **Kombinace**
+      - Stiskněte klávesu **Ctrl** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
+   - **Stisknut**
+      - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
+      - Najeďte myší na červenou vlnovkou a klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
+      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí na levém okraji, pokud se na řádku již nachází textový kurzor s červenou vlnovkou
 
-      ![Vytvoření náhledu – metoda](media/method-preview-cs.png)
+      ![Vygenerovat ukázkovou metodu](media/method-preview-cs.png)
 
-3. Vyberte **generovat metodu** z rozevírací nabídky.
+3. V rozevírací nabídce vyberte **generovat metodu** .
 
    > [!TIP]
-   > Použití **náhled změn** odkaz v dolní části okna náhledu [zobrazíte všechny změny](../../ide/preview-changes.md) , který bude proveden před zvolení požadované možnosti.
+   > Pomocí odkazu **Náhled změn** v dolní části okna Preview [zobrazíte všechny změny](../../ide/preview-changes.md) , které budou provedeny před provedením výběru.
 
-   Metoda se vytvoří s parametry odvodit z jeho využití.
+   Metoda je vytvořena s parametry odvozenými z jejího použití.
 
    - C#:
 
-       ![Generovat výsledek metody jazyka C#](media/method-result-cs.png)
+       ![Generovat výsledek metodyC#](media/method-result-cs.png)
 
    - Visual Basic:
 

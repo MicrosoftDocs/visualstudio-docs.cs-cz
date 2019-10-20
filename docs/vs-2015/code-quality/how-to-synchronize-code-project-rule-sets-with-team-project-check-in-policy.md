@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Synchronizace sad pravidel projektu kódu pomocí zásady vracení se změnami projektu týmu | Dokumentace Microsoftu'
+title: 'Postupy: synchronizace sady pravidel projektu kódu se zásadou vrácení se změnami týmového projektu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -8,63 +8,63 @@ f1_keywords:
 - vs.codeanalysis.selecttfsruleset
 ms.assetid: 9b02f934-2db6-41ec-aaff-9c31ceec2f04
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 32558f746745fdcb717aa7c218f996924418ae79
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3c6e7550940f9d2efa5ca228123310f1b861ee76
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201306"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651603"
 ---
-# <a name="how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy"></a>Postupy: Synchronizace sad pravidel projektu kódu pomocí zásad vracení zpět se změnami týmového projektu
+# <a name="how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy"></a>Postupy: Synchronizace sady pravidel projektu kódu se zásadou vracení se změnami týmového projektu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Synchronizovat nastavení analýzy kódu pro projekty kódu mají zásady vrácení se změnami pro týmový projekt tak, že zadáte sadu pravidel, která obsahuje aspoň pravidla, která jsou uvedená v pravidle nastavit zásady vrácení se změnami. Váš vedoucí vývojář může informovat o název a umístění sada pravidel pro zásadu vrácení se změnami. Jeden z následujících možností můžete zajistit, že analýzy kódu pro projekt používá správné sady pravidel:  
-  
-- Pokud zásady vrácení se změnami používá jedné sady předdefinovaných pravidel společnosti Microsoft, otevřete dialogové okno Vlastnosti projektu kódu, zobrazení stránky pro analýzu kódu a vyberte pravidlo, nastavte na stránce analýzy kódu v nastavení projektu kódu. Společnost Microsoft sad standardních pravidel jsou automaticky nainstalován se sadou Visual Studio jsou nastaveny na jen pro čtení a by neměla být upravována. Pokud se neupravují sady pravidel, pravidel zásad a nastaví místní pravidlo zaručeno tak, aby odpovídaly.  
-  
-- Pokud zásady vrácení se změnami používá vlastní sady pravidel, proveďte operaci načíst v souboru sady pravidel v rámci správy verzí, chcete-li vytvořit místní kopii. V nastavení analýzy kódu pro projekt kódu zadejte tento místní umístění. Pravidla zaručeno splněno, pokud je aktuální pravidlo pro nastavení zásady vrácení se změnami.  
-  
-     Pokud namapujete umístění ovládacího prvku verze do místní složky, který je ve stejné relaci do kořenového adresáře projektu týmu jako kód projektu, umístění pravidla se nastaví pomocí relativní cesty. Relativní cesta se zajistí, že nastavení projektů kód pro analýzu kódu lze přesunout do jiných počítačů.  
-  
-- Upravte kopii tohoto pravidla pro nastavení zásady vrácení se změnami pro projekt kódu. Ujistěte se, že nové sady pravidel obsahuje všechna pravidla v zásadách vrácení se změnami a ostatní pravidla, které chcete zahrnout. Ujistěte se, že vaše sada pravidel obsahuje všechna pravidla v pravidle, nastavte pro zásadu vrácení se změnami.  
-  
-### <a name="to-specify-a-microsoft-standard-rule-set"></a>Chcete-li určit standardních pravidel společnosti Microsoft nastavit  
-  
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt kódu a potom klikněte na tlačítko **vlastnosti**.  
-  
-2. Klikněte na tlačítko **analýza kódu**.  
-  
-3. V **spustit tuto sadu pravidel** klikněte na možnost zásad vrácení se změnami sadu pravidel.  
-  
-### <a name="to-specify-a-custom-check-in-policy-rule-set"></a>Chcete-li určit sadu pravidel vlastních zásad vrácení se změnami  
-  
-1. V případě potřeby proveďte operaci načíst v souboru sady pravidel, která určuje zásady vrácení se změnami.  
-  
-2. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt kódu a potom klikněte na tlačítko **vlastnosti**.  
-  
-3. Klikněte na tlačítko **analýza kódu**.  
-  
-4. V **spustit tuto sadu pravidel** klikněte na možnost  **\<Procházet... >** .  
-  
-5. V **otevřít** dialogového okna zadejte soubor sady pravidel zásad vrácení se změnami.  
-  
-### <a name="to-create-a-custom-rule-set-for-a-code-project"></a>Chcete-li vytvořit vlastní pravidlo nastavte pro projekt kódu  
-  
-1. Postupujte podle jednoho z postupů dříve v tomto tématu vyberte zásadu vrácení se změnami týmového projektu na stránce analýzy kódu v dialogovém okně nastavení projektu.  
-  
-2. Klikněte na tlačítko **otevřít**.  
-  
-3. Přidání nebo odebrání pravidla pomocí editoru sad pravidel.  
-  
-     Další informace najdete v tématu [vytvoření vlastní sady pravidel](../code-quality/creating-custom-code-analysis-rule-sets.md).  
-  
-4. Uložte upravený pravidlo nastavte soubor .ruleset v místním počítači nebo na cestu UNC.  
-  
-5. Otevřete dialogové okno Vlastnosti projektu kódu a zobrazit **analýzy kódu** stránky.  
-  
-6. V **spustit tuto sadu pravidel** klikněte na možnost  **\<Procházet... >** .  
-  
-7. V **otevřít** dialogového okna zadejte soubor sady pravidel.
+Synchronizujete nastavení analýzy kódu pro projekty kódu se zásadou vrácení se změnami pro týmový projekt zadáním sady pravidel, která obsahuje alespoň pravidla zadaná v sadě pravidel pro zásadu vrácení se změnami. Váš vedoucí vývojář může informovat o názvu a umístění sady pravidel pro zásadu vrácení se změnami. Pomocí jedné z následujících možností lze zajistit, aby analýza kódu pro projekt používala správnou sadu pravidel:
+
+- Pokud zásada vracení se změnami používá jednu z předdefinovaných sad pravidel společnosti Microsoft, otevřete dialogové okno Vlastnosti pro projekt kódu, zobrazte stránku Analýza kódu a vyberte sadu pravidel na stránce Analýza kódu v nastavení projektu kódu. Standardní sady pravidel společnosti Microsoft jsou automaticky nainstalovány se sadou Visual Studio, jsou nastaveny jen pro čtení a neměly by být upravovány. Pokud se sady pravidel neupravují, pravidla v zásadách a v místních pravidlech se budou zaručit, aby odpovídala.
+
+- Pokud zásada vracení se změnami používá vlastní sadu pravidel, vytvořte místní kopii provedením operace Get v souboru sady pravidel ve správě verzí. Pak zadejte toto místní umístění v nastavení analýzy kódu pro projekt kódu. Je zaručeno, že pravidla budou shodná s tím, zda je sada pravidel pro zásady vracení se změnami v aktuálním stavu.
+
+     Pokud namapujete umístění správy verzí na místní složku, která je ve stejné relaci jako projekt kódu, je umístění pravidla nastaveno pomocí relativní cesty. Relativní cesta zajišťuje, že nastavení projektu kódu pro analýzu kódu lze přesunout do jiných počítačů.
+
+- Přizpůsobení kopie sady pravidel pro zásadu vrácení se změnami pro projekt kódu. Ujistěte se, že nová sada pravidel obsahuje všechna pravidla v zásadách vrácení se změnami a všechna další pravidla, která chcete zahrnout. Musíte se ujistit, že sada pravidel obsahuje všechna pravidla v sadě pravidel pro zásadu vrácení se změnami.
+
+### <a name="to-specify-a-microsoft-standard-rule-set"></a>Určení standardní sady pravidel společnosti Microsoft
+
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt kódu a pak klikněte na **vlastnosti**.
+
+2. Klikněte na **Analýza kódu**.
+
+3. V seznamu **Spustit tuto sadu pravidel** klikněte na sadu pravidel zásad vracení se změnami.
+
+### <a name="to-specify-a-custom-check-in-policy-rule-set"></a>Určení sady pravidel zásad pro vlastní vracení se změnami
+
+1. V případě potřeby proveďte operaci získat v souboru sady pravidel, který určuje zásadu vrácení se změnami.
+
+2. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt kódu a pak klikněte na **vlastnosti**.
+
+3. Klikněte na **Analýza kódu**.
+
+4. V seznamu **Spustit tuto sadu pravidel** klikněte na **\<Browse... >** .
+
+5. V dialogovém okně **otevřít** zadejte soubor sady pravidel zásad vracení se změnami.
+
+### <a name="to-create-a-custom-rule-set-for-a-code-project"></a>Vytvoření vlastní sady pravidel pro projekt kódu
+
+1. Použijte jeden z postupů uvedených výše v tomto tématu a vyberte zásadu vrácení se změnami týmového projektu na stránce Analýza kódu v dialogovém okně nastavení projektu.
+
+2. Klikněte na **otevřít**.
+
+3. Přidejte nebo odeberte pravidla pomocí editoru sad pravidel.
+
+     Další informace najdete v tématu [vytváření vlastních sad pravidel](../code-quality/creating-custom-code-analysis-rule-sets.md).
+
+4. Uložte upravenou sadu pravidel do souboru. ruleset v místním počítači nebo na cestu UNC.
+
+5. Otevřete dialogové okno Vlastnosti pro projekt kódu a zobrazte stránku **Analýza kódu** .
+
+6. V seznamu **Spustit tuto sadu pravidel** klikněte na **\<Browse... >** .
+
+7. V dialogovém okně **otevřít** zadejte soubor sady pravidel.

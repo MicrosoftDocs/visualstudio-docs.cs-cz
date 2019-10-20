@@ -3,27 +3,27 @@ title: Použití uložených procedur v LINQ to SQL k aktualizaci dat (Návrhá�
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e88224ab-ff61-4a3a-b6b8-6f3694546cac
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3dfb55425934f00de41af7997ed1ed4b5a9bcf42
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 019bf6b115fc526e39a3bc65bd9d0607c1a976db
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253003"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648394"
 ---
-# <a name="how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-or-designer"></a>Postupy: Přiřazení uložených procedur za účelem aktualizací, vkládání a odstraňování (Návrhář relací objektů)
+# <a name="how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-or-designer"></a>Postupy: přiřazení uložených procedur pro provádění aktualizací, vkládání a odstraňování (Návrhář O/R)
 
-Uložené procedury lze přidat do **návrháře o/R** a spustit jako typické <xref:System.Data.Linq.DataContext> metody. Lze je také použít k přepsání výchozího LINQ to SQL chování při spuštění, které provádí vložení, aktualizace a odstranění, když jsou změny uloženy z tříd entit do databáze (například při volání <xref:System.Data.Linq.DataContext.SubmitChanges%2A> metody).
+Uložené procedury lze přidat do **návrháře o/R** a spustit jako typické metody <xref:System.Data.Linq.DataContext>. Lze je také použít k přepsání výchozího LINQ to SQL chování při spuštění, které provádí vložení, aktualizace a odstranění, když jsou změny uloženy z tříd entit do databáze (například při volání metody <xref:System.Data.Linq.DataContext.SubmitChanges%2A>).
 
 > [!NOTE]
 > Pokud uložená procedura vrátí hodnoty, které je třeba odeslat zpět klientovi (například hodnoty vypočtené v uložené proceduře), vytvořte výstupní parametry v uložených procedurách. Pokud nemůžete použít výstupní parametry, zapište implementaci částečné metody, nemusíte se spoléhat na přepsání vygenerovaná návrhářem O/R. Po úspěšném dokončení operací vložení nebo aktualizace musí být členové namapované na hodnoty generované databází nastaveny na příslušné hodnoty. Další informace najdete v tématu [zodpovědnosti vývojáře při přepisu výchozího chování](/dotnet/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior).
 
 > [!NOTE]
-> LINQ to SQL zpracovává hodnoty generované databázemi automaticky pro sloupce identity (automatické zvýšení), ROWGUIDCOL (GUID generovaný identifikátor GUID) a časové razítko. Hodnoty generované databází v jiných typech sloupců neočekávaně způsobí hodnotu null. Chcete-li vrátit hodnoty generované databází, je třeba ručně nastavit <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> **hodnotu true** a <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> na jednu z následujících možností: [AutoSync. Always](<xref:System.Data.Linq.Mapping.AutoSync.Always>), AutoSync. [INSERT](<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>)nebo [AutoSync. inupdate](<xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>).
+> LINQ to SQL zpracovává hodnoty generované databázemi automaticky pro sloupce identity (automatické zvýšení), ROWGUIDCOL (GUID generovaný identifikátor GUID) a časové razítko. Hodnoty generované databází v jiných typech sloupců neočekávaně způsobí hodnotu null. Chcete-li vrátit hodnoty generované databází, je třeba ručně nastavit <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> na **hodnotu true** a <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> na jednu z následujících možností: [AutoSync. Always](<xref:System.Data.Linq.Mapping.AutoSync.Always>), [AutoSync. při vložení](<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>)nebo [AutoSync. inupdate](<xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>).
 
 ## <a name="configure-the-update-behavior-of-an-entity-class"></a>Konfigurace chování aktualizace třídy entity
 
@@ -39,7 +39,7 @@ Ve výchozím nastavení logika aktualizace databáze (vložení, aktualizace a 
 
 3. Přetáhněte uloženou proceduru do **návrháře o/R**.
 
-     Uložená procedura je přidána do podokna metody jako <xref:System.Data.Linq.DataContext> metoda. Další informace najdete v tématu [metod DataContext (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
+     Uložená procedura je přidána do podokna metody jako metoda <xref:System.Data.Linq.DataContext>. Další informace naleznete v tématu [metody DataContext (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
 
 4. Vyberte třídu entity, pro kterou chcete použít uloženou proceduru pro provádění aktualizací.
 
@@ -51,7 +51,7 @@ Ve výchozím nastavení logika aktualizace databáze (vložení, aktualizace a 
 
 8. V seznamu **přizpůsobit** vyberte požadovanou uloženou proceduru.
 
-9. Zkontrolujte seznam **argumentů metody** a **vlastností třídy** a ověřte, zda jsou **argumenty metody** namapovány na příslušné **vlastnosti třídy**. Namapujte argumenty původní metody (`Original_<ArgumentName>`) na původní vlastnosti (`<PropertyName> (Original)`) pro `Update` příkazy a `Delete` .
+9. Zkontrolujte seznam **argumentů metody** a **vlastností třídy** a ověřte, zda jsou **argumenty metody** namapovány na příslušné **vlastnosti třídy**. Namapujte argumenty původní metody (`Original_<ArgumentName>`) na původní vlastnosti (`<PropertyName> (Original)`) pro příkazy `Update` a `Delete`.
 
     > [!NOTE]
     > Ve výchozím nastavení jsou argumenty metody mapovány na vlastnosti třídy, pokud se názvy shodují. Pokud se názvy změněných vlastností již neshodují mezi tabulkou a třídou entity, může být nutné vybrat vlastnost ekvivalentní třídy pro mapování na, pokud Návrhář nemůže určit správné mapování.
@@ -67,5 +67,5 @@ Chcete-li se vrátit k používání výchozí logiky modulu runtime pro aktuali
 
 - [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [Metody DataContext](../data-tools/datacontext-methods-o-r-designer.md)
-- [Technologie LINQ to SQL (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/index)
+- [LINQ to SQL (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/index)
 - [Operace vložení, aktualizace a odstranění (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/insert-update-and-delete-operations)

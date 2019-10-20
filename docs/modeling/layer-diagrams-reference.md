@@ -15,17 +15,17 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0de634ee62387e50fed89e4465842b2801748f45
-ms.sourcegitcommit: 0f44ec8ba0263056ad04d2d0dc904ad4206ce8fc
+ms.openlocfilehash: 7711d0b0f369f43cc7becf92cbdcfc986cd3a6a8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766157"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661485"
 ---
 # <a name="dependency-diagrams-reference"></a>Diagramy závislostí: Referenční dokumentace
 
@@ -48,7 +48,7 @@ Použijte diagram závislosti, který vám umožní provádět následující ú
 
 - Posílit zamýšlenou architekturu během vývoje a údržby kódu tím, že zahrnete ověření pomocí operací vrácení se změnami a sestavování.
 
-Toto téma popisuje prvky, které lze použít v diagramu závislostí. Podrobnější informace o tom, jak vytvářet a kreslit diagramy závislostí, [najdete v tématu Diagramy závislostí: Pokyny](../modeling/layer-diagrams-guidelines.md). Další informace o vzorech vrstvení najdete na [webu vzory & postupy](http://go.microsoft.com/fwlink/?LinkId=145794).
+Toto téma popisuje prvky, které lze použít v diagramu závislostí. Podrobnější informace o vytváření a vykreslování diagramů závislostí najdete v tématu [diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md). Další informace o vzorech vrstvení najdete na [webu vzory & postupy](http://go.microsoft.com/fwlink/?LinkId=145794).
 
 ## <a name="reading-dependency-diagrams"></a>Čtení diagramů závislostí
 
@@ -58,9 +58,9 @@ Následující tabulka popisuje prvky, které můžete použít v diagramu závi
 
 |**Automatického**|**Element**|**Popis**|
 |-|-|-|
-|1|**Vrstvení**|Logická skupina fyzických artefaktů ve vašem systému. Tyto artefakty mohou být obory názvů, projekty, třídy, metody a tak dále.<br /><br /> Chcete-li zobrazit artefakty, které jsou propojeny s vrstvou, otevřete místní nabídku pro vrstvu a pak zvolte možnost **Zobrazit odkazy** a otevřete **Průzkumníka vrstev**.<br /><br /> Další informace naleznete v tématu [Průzkumník vrstev](#Explorer).<br /><br /> -   **Zakázané závislosti oboru názvů** – určuje, že artefakty přidružené k této vrstvě nemůžou záviset na zadaných oborech názvů.<br />-   **Zakázané obory názvů** – určuje, že artefakty přidružené k této vrstvě nesmí patřit do zadaných oborů názvů.<br />-   **Povinné obory názvů** – určuje, že artefakty přidružené k této vrstvě musí patřit do jednoho ze zadaných oborů názvů.|
-|2|**Závislost**|Označuje, že jedna vrstva může použít funkci v jiné vrstvě, ale ne naopak.<br /><br /> -   **Direction** – určuje směr závislosti.|
-|3|**Obousměrná závislost**|Označuje, že jedna vrstva může používat funkci v jiné vrstvě a naopak.<br /><br /> -   **Direction** – určuje směr závislosti.|
+|první|**Vrstvení**|Logická skupina fyzických artefaktů ve vašem systému. Tyto artefakty mohou být obory názvů, projekty, třídy, metody a tak dále.<br /><br /> Chcete-li zobrazit artefakty, které jsou propojeny s vrstvou, otevřete místní nabídku pro vrstvu a pak zvolte možnost **Zobrazit odkazy** a otevřete **Průzkumníka vrstev**.<br /><br /> Další informace naleznete v tématu [Průzkumník vrstev](#Explorer).<br /><br /> -   **zakázané závislosti oboru názvů** – určuje, že artefakty přidružené k této vrstvě nemůžou záviset na zadaných oborech názvů.<br />-   **zakázané obory názvů** – určuje, že artefakty přidružené k této vrstvě nesmí patřit do zadaných oborů názvů.<br />-   **požadované obory názvů** – určuje, že artefakty přidružené k této vrstvě musí patřit do jednoho ze zadaných oborů názvů.|
+|odst|**Závislosti**|Označuje, že jedna vrstva může použít funkci v jiné vrstvě, ale ne naopak.<br /><br /> -   **směr** – určuje směr závislosti.|
+|3|**Obousměrná závislost**|Označuje, že jedna vrstva může používat funkci v jiné vrstvě a naopak.<br /><br /> -   **směr** – určuje směr závislosti.|
 |4|**Vytvořena**|Slouží k přidání obecných poznámek do diagramu nebo prvků v diagramu.|
 |5|**Odkaz na komentář**|Slouží k propojení komentářů s prvky v diagramu.|
 
@@ -76,7 +76,7 @@ Jednotlivé vrstvy můžete propojit s artefakty ve vašem řešení, jako jsou 
 
 Další informace o propojování vrstev a artefaktů naleznete v tématu:
 
-- [Diagramy závislostí: Pokyny](../modeling/layer-diagrams-guidelines.md)
+- [Diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md)
 
 - [Vytváření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md)
 
@@ -93,7 +93,7 @@ V diagramu závislostí otevřete místní nabídku pro jednu nebo více vrstev 
 |-|-|
 |**Kategorie**|Typ artefaktu, jako je například třída, obor názvů, zdrojový soubor a tak dále|
 |**Vrstvení**|Vrstva, která odkazuje na artefakt|
-|**Podporuje ověřování**|Je-li **nastavena hodnota true**, proces ověření vrstvy může ověřit, zda projekt odpovídá závislostem na nebo z tohoto prvku.<br /><br /> Je-li nastavena **hodnota false**, odkaz se neúčastní procesu ověřování vrstvy.<br /><br /> Další informace najdete v tématu [diagramy závislostí: Pokyny](../modeling/layer-diagrams-guidelines.md).|
+|**Podporuje ověřování**|Je-li **nastavena hodnota true**, proces ověření vrstvy může ověřit, zda projekt odpovídá závislostem na nebo z tohoto prvku.<br /><br /> Je-li nastavena **hodnota false**, odkaz se neúčastní procesu ověřování vrstvy.<br /><br /> Další informace najdete v tématu [diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md).|
 |**RID**|Odkaz na propojený artefakt|
 
 ## <a name="see-also"></a>Viz také:

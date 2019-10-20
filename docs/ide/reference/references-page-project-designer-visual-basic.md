@@ -10,17 +10,17 @@ helpviewer_keywords:
 - References page in Project Designer
 - Project Designer, References page
 ms.assetid: 5a47c595-e084-401c-86e1-74e0bf74fd86
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbc53a1582a2a4f76de2ea402544137405f5d9f3
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 9a92523f182300c17a3e6b08ad04ba2b6049be6c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926138"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655641"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>Stránka Odkazy, návrhář projektu (Visual Basic)
 
@@ -56,7 +56,7 @@ Vyberte **odkaz** pro přidání odkazu na projekt pomocí dialogového okna Př
 
 Vyberte **webový odkaz** a přidejte webový odkaz do projektu pomocí dialogového okna **Přidat webový odkaz** .
 
- **odebrat**
+ **Odebrány**
 
 V seznamu **odkazy** vyberte jeden nebo více odkazů a kliknutím na toto tlačítko jej odstraňte.
 
@@ -68,7 +68,7 @@ Vyberte webový odkaz v seznamu **odkazy** a kliknutím na toto tlačítko ho ak
 
 V tomto poli můžete zadat vlastní obor názvů a kliknutím na **Přidat import uživatele** ho přidat do seznamu oborů názvů.
 
-Můžete vytvořit aliasy pro uživatelem importované obory názvů. Provedete to tak, že zadáte alias a obor názvů=do*oboru názvů*aliasu formátu. To je užitečné, pokud používáte dlouhé obory názvů, například: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http`.
+Můžete vytvořit aliasy pro uživatelem importované obory názvů. Provedete to tak, že zadáte alias a obor názvů ve formátu *alias* =*obor názvů*. To je užitečné, pokud používáte dlouhé obory názvů, například: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http`.
 
  **Přidat import uživatele**
 
@@ -82,11 +82,11 @@ V tomto seznamu jsou uvedeny všechny dostupné obory názvů. Jsou vybrána za�
 
 V seznamu obory názvů vyberte obor názvů zadaný uživatelem, zadejte název, který chcete nahradit, v poli **importované obory názvů** a potom kliknutím na toto tlačítko přejděte na nový obor názvů. Tlačítko je aktivní pouze v případě, že vybraný obor názvů je ten, který jste přidali do seznamu pomocí tlačítka **Přidat import uživatele** . Můžete přidat:
 
-- Třídy nebo obory názvů, <xref:System.Math?displayProperty=fullName>například.
+- Třídy nebo obory názvů, například <xref:System.Math?displayProperty=fullName>.
 
 - Import s aliasy, například `VB=Microsoft.VisualBasic`.
 
-- Obory názvů XML, `<xmlns:xsl="http://www.w3.org/1999/XSL/Transform">`například.
+- Obory názvů XML, například `<xmlns:xsl="http://www.w3.org/1999/XSL/Transform">`.
 
 ## <a name="see-also"></a>Viz také
 

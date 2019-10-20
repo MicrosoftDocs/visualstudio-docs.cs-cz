@@ -1,5 +1,5 @@
 ---
-title: Přizpůsobení modelu pomocí profilů a stereotypů | Dokumentace Microsoftu
+title: Přizpůsobení modelu pomocí profilů a stereotypů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -10,39 +10,39 @@ helpviewer_keywords:
 - UML model, customizing
 ms.assetid: fd607157-0d3a-4583-a84e-427a4b2a5acb
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f7e9aee38208a96ab75318a86810359392b5b8e1
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 4f83fcf3ea500e0640a226b80d3d3c0e2c7ed869
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433347"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655092"
 ---
 # <a name="customize-your-model-with-profiles-and-stereotypes"></a>Přizpůsobení modelu pomocí profilů a stereotypů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V sadě Visual Studio můžete přizpůsobit standardní prvky modelu UML, jako jsou třídy a komponenty, jak je přizpůsobit pro konkrétní účely. Můžete použít *stereotyp* na prvek modelu, která může měnit prvku seznamu vlastností. Stereotypy, které jsou definovány v rámci kolekce volá *profily*.  
-  
- Tuto funkci podporovat kterou verzí sady Visual Studio najdete v tématu [podporované verze pro nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
-  
- Použití stereotypu, propojte balíček k profilu. To vám umožní použít Stereotypy, které jsou definovány v profilu na prvky v balíčku. Některé profily nainstalují společně se sadou Visual Studio. Kromě toho můžete definovat vlastní profily.  
-  
- V seznamu vlastnosti elementu lze nastavit stereotypy. Pro hlavní druhy obrazců v diagramu použité Stereotypy zobrazí také ve tvaru, jak je znázorněno v příkladu.  
-  
- ![Třída UML se stereotypu. ](../modeling/media/uml-class-stereotype.png "UML_class_stereotype")  
-  
+V aplikaci Visual Studio můžete upravit standardní prvky modelu UML, jako jsou třídy a komponenty, abyste je mohli přizpůsobit pro konkrétní účely. *Stereotyp* lze použít na prvek modelu, který může změnit seznam vlastností elementu. Stereotypy jsou definovány v rámci kolekcí nazývaných *profily*.
+
+ Chcete-li zjistit, které verze aplikace Visual Studio tuto funkci podporují, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+
+ Chcete-li použít stereotyp, propojíte balíček s profilem. To umožňuje použít stereotypy, které jsou definovány v profilu, na prvky v balíčku. Některé profily jsou nainstalovány společně se sadou Visual Studio. Kromě toho můžete definovat vlastní profily.
+
+ Stereotypy lze nastavit v seznamu vlastností elementu. U hlavních druhů tvarů v diagramu se použité stereotypy zobrazí také v obrazci, jak je znázorněno v příkladu.
+
+ ![Třída UML se stereotypem](../modeling/media/uml-class-stereotype.png "UML_class_stereotype")
+
 > [!NOTE]
-> Pokud používáte profil k vytvoření modelu a pak model sdílíte s jinými uživateli, bude moci zobrazit Stereotypy, pokud máte v počítači nainstalovanou stejný profil.  
-  
-## <a name="related-topics"></a>Související témata  
-  
-|Název|Popis|  
-|-----------|-----------------|  
-|[Přidávání stereotypů k elementům modelu UML](../modeling/add-stereotypes-to-uml-model-elements.md)|Umístění prvku modelu v balíčku, propojení balíček do profilu a použití stereotyp na elementu.|  
-|[Standardní stereotypy pro modely UML](../modeling/standard-stereotypes-for-uml-models.md)|Standardní L2 profilů UML a L3 jsou nainstalovány se sadou Visual Studio a každý model je spojen s je ve výchozím nastavení. Poskytují Stereotypy, které můžete použít k přidání poznámek ke své modely.<br /><br /> Můžete například použít stereotyp «specifikace» na třídu k označení, že je určena pouze k definování externě viditelného chování její instance|  
-|[Definování profilu pro rozšíření UML](../modeling/define-a-profile-to-extend-uml.md)|Můžete definovat vlastní stereotypů a nástroje, které jsou přizpůsobené pro oblast vlastní aplikace.<br /><br /> Například pokud vyvíjíte bankovní software, můžete definovat stereotyp "Účet", který lze použít na třídy. Může pak použít diagramy tříd k popisu různých typů účtů a jejich vztahy.|  
-|[Instalace profilu UML](../modeling/install-a-uml-profile.md)|Pokud někdo udělil profilu UML, můžete ho nainstalovat ve vašem počítači.|  
-|[Definování vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md)|Vlastní položku sady nástrojů není nutné opakovaně nastavení stereotypu pro nové prvky.|  
-|[Barva tříd UML podle stereotypu](http://code.msdn.microsoft.com/UML-Color-Classes-by-07de2b70)|Tento ukázkový kód rozšiřuje diagramy UML. Automaticky nastaví barvu tvaru UML podle stereotypu elementu.|
+> Pokud k vytvoření modelu použijete profil a potom model nasdílíte s někým jiným, nebudou se tyto stereotypy zobrazovat, pokud na jejich počítači nenainstalujete stejný profil.
+
+## <a name="related-topics"></a>Související témata
+
+|Název|Popis|
+|-----------|-----------------|
+|[Přidávání stereotypů k elementům modelu UML](../modeling/add-stereotypes-to-uml-model-elements.md)|Umístění prvku modelu do balíčku, propojení balíčku s profilem a použití stereotypu k elementu.|
+|[Standardní stereotypy pro modely UML](../modeling/standard-stereotypes-for-uml-models.md)|Standard UML profily L2 a L3 se instalují se sadou Visual Studio a každý model je ve výchozím nastavení propojený s nimi. Poskytují stereotypy, které můžete použít k přidání poznámek k vašim modelům.<br /><br /> Například můžete použít stereotyp «Specification» na třídu, která označuje, že je určena pouze k definování externě viditelného chování instancí,|
+|[Definování profilu pro rozšíření UML](../modeling/define-a-profile-to-extend-uml.md)|Můžete definovat vlastní stereotypy a nástroje, které jsou přizpůsobené vaší vlastní oblasti aplikace.<br /><br /> Pokud například vyvíjíte bankovní software, můžete definovat stereotyp «účet», který lze použít na třídy. Pak můžete použít diagramy tříd k popisu různých typů účtu a jejich vztahů.|
+|[Instalace profilu UML](../modeling/install-a-uml-profile.md)|Pokud vám někdo dal profil UML, můžete ho nainstalovat do svého počítače.|
+|[Definování vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md)|Vlastní položka sady nástrojů vám ušetří v opakovaném nastavení stereotypu pro nové prvky.|
+|[Barevné třídy UML podle stereotypu](http://code.msdn.microsoft.com/UML-Color-Classes-by-07de2b70)|Tento vzorový kód rozšiřuje diagramy UML. Automaticky nastaví barvu obrazce UML podle stereotypu prvku.|

@@ -5,17 +5,17 @@ ms.topic: reference
 helpviewer_keywords:
 - naming conventions [EditorConfig]
 - EditorConfig naming conventions
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13da6cd34df3996fe837aee89ce4f379027dd409
-ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
+ms.openlocfilehash: 8ff6c9885bd01a94cc36046faf71067e1fe9c17b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72000155"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650904"
 ---
 # <a name="net-naming-conventions-for-editorconfig"></a>Konvence vytváření názvů .NET pro EditorConfig
 
@@ -23,7 +23,7 @@ Konvence pojmenování se týkají názvů prvků kódu, jako jsou třídy, vlas
 
 Pro každou konvenci pojmenování musíte zadat symboly, na které se vztahuje, styl pojmenování a závažnost pro vynucování konvence, a to pomocí vlastností popsaných níže. Pořadí vlastností není důležité.
 
-Začněte tím, že zvolíte název pravidla pro pojmenování, které použijete v každé vlastnosti, které jsou potřeba k úplnému popisu pravidla. Například `public_members_must_be_capitalized` je dobrým popisným názvem pravidla pro pojmenování. Tato stránka bude odkazovat na název, který jste zvolili jako **< namingRuleTitle @ no__t-1** v následujících oddílech.
+Začněte tím, že zvolíte název pravidla pro pojmenování, které použijete v každé vlastnosti, které jsou potřeba k úplnému popisu pravidla. @No__t_0 je například dobrý popisný název pravidla pojmenování. Tato stránka bude odkazovat na název, který jste zvolili jako **< namingRuleTitle \>** v následujících oddílech.
 
 ## <a name="symbols"></a>Symboly
 
@@ -31,7 +31,7 @@ Nejprve Identifikujte skupinu symbolů, na které se má pravidlo pojmenování 
 
 `dotnet_naming_rule.<namingRuleTitle>.symbols = <symbolTitle>`
 
-Zadejte název skupiny symbolů tak, že nahradíte hodnotu **< symbolTitle @ no__t-1** popisným názvem, například `public_symbols`. V třech názvech vlastností, které popisují, na které symboly se pravidlo aplikuje, se použije hodnota **< symbolTitle @ no__t-1** .
+Zadejte název skupiny symbolů tak, že nahradíte hodnotu **< symbolTitle \>** s popisným názvem, například `public_symbols`. V třech názvech vlastností, které popisují, na kterých symbolech se pravidlo aplikuje, použijete hodnotu **< symbolTitle \>** .
 
 ### <a name="kinds-of-symbols"></a>Druhy symbolů
 
@@ -41,16 +41,16 @@ Chcete-li popsat druh symbolů pro použití pravidla pojmenování, určete vla
 
 V následujícím seznamu jsou uvedeny možné hodnoty a můžete zadat více hodnot tak, že je oddělíte čárkami.
 
-- \* (k určení všech symbolů použijte tuto hodnotu)
+- \* (použijte tuto hodnotu k určení všech symbolů)
 - – obor názvů
 - třída
-- – Struktura
+- struct
 - rozhraní
-- Výčet
-- Vlastnost
+- enum
+- property
 - – metoda
 - pole
-- událost
+- event
 - delegát
 - parametr
 - type_parameter
@@ -68,13 +68,13 @@ V následujícím seznamu jsou uvedeny možné hodnoty a můžete zadat více ho
 - \* (tuto hodnotu použijte k určení všech úrovní přístupnosti)
 - public
 - interní nebo přítel
-- privátní
+- private
 - protected
-- chráněno @ no__t-0internal nebo protected_friend
-- privátní @ no__t – 0protected
+- chráněné \_internal nebo protected_friend
+- privátní \_protected
 - local
 
-   Úroveň přístupnosti `local` se vztahuje na symboly definované v rámci metody. Je užitečné pro definování konvencí pojmenování pro symboly, jejichž přístupnost nejde zadat v kódu. Například pokud zadáte `applicable_accessibilities = local` u konvencí pojmenování pro konstanty (`required_modifiers = const`), pravidlo se vztahuje pouze na konstanty definované v rámci metody a nikoli na ty, které jsou definovány v typu.
+   Úroveň přístupnosti `local` platí pro symboly definované v rámci metody. Je užitečné pro definování konvencí pojmenování pro symboly, jejichž přístupnost nejde zadat v kódu. Například pokud zadáte `applicable_accessibilities = local` v konvenci pojmenování pro konstanty (`required_modifiers = const`), pravidlo se vztahuje pouze na konstanty definované v rámci metody a nikoli na ty, které jsou definovány v typu.
 
    ```csharp
    class TypeName
@@ -98,19 +98,19 @@ Chcete-li popsat modifikátory symbolů, na které má pravidlo pojmenování pl
 
 V následujícím seznamu jsou uvedeny povolené hodnoty (oddělené více hodnot čárkami):
 
-- `abstract` Nebo `must_inherit`
+- `abstract` nebo `must_inherit`
 - `async`
 - `const`
 - `readonly`
-- `static` Nebo `shared`
+- `static` nebo `shared`
 
    > [!NOTE]
-   > Pokud máte pravidlo pojmenování pro symboly `static` nebo `shared`, použije se také pro symboly `const`, protože jsou implicitně statické. Pokud nechcete, aby pravidlo pojmenování `static` mělo platit pro symboly `const`, vytvořte samostatné pravidlo pojmenování pro symboly `const`.
+   > Pokud máte pravidlo pro pojmenování `static` nebo `shared` symboly, používá se také pro `const` symboly, protože jsou implicitně statické. Pokud nechcete, aby pravidlo pro pojmenování `static` použito pro `const` symboly, vytvořte pro `const` symboly samostatné pravidlo pojmenování.
 
 Pravidlo pojmenování odpovídá podpisům, které mají *všechny* modifikátory zadané v `required_modifiers`. Pokud tuto vlastnost vynecháte, použije se výchozí hodnota prázdného seznamu, to znamená, že pro shodu nejsou vyžadovány žádné konkrétní modifikátory. To znamená, že modifikátory symbolu nemají žádný vliv na to, zda je toto pravidlo použito nebo ne.
 
 > [!TIP]
-> Nezadávejte hodnotu `*` pro `required_modifiers`. Místo toho stačí vynechat vlastnost `required_modifiers` úplně a vaše pravidlo pojmenování bude platit pro libovolný druh modifikátoru.
+> Nezadávejte hodnotu `*` pro `required_modifiers`. Místo toho jednoduše vynechejte vlastnost `required_modifiers` úplně a vaše pravidlo pro pojmenování se použije na libovolný druh modifikátoru.
 
 ## <a name="style"></a>Styl
 
@@ -118,7 +118,7 @@ Teď, když jste identifikovali skupinu symbolů pro použití pravidla pojmenov
 
 `dotnet_naming_rule.<namingRuleTitle>.style = <styleTitle>`
 
-Zadejte název Style tak, že nahradíte hodnotu **< styleTitle @ no__t-1** popisným názvem, například `first_word_upper_case_style`. V názvech vlastností, které popisují styl pojmenování (předpona, přípona, znak oddělovače slov a velká písmena), použijete hodnotu **< styleTitle @ no__t-1** . Pomocí jedné nebo více z těchto vlastností popište svůj styl.
+Zadejte název Style tak, že nahradíte hodnotu **< styleTitle \>** s popisným názvem, například `first_word_upper_case_style`. Použijete hodnotu **< styleTitle \>** v názvech vlastností, které popisují styl pojmenování (předpona, přípona, znak oddělovače slov a velká písmena). Pomocí jedné nebo více z těchto vlastností popište svůj styl.
 
 ### <a name="require-a-prefix"></a>Vyžadovat předponu
 
@@ -148,14 +148,14 @@ Povolené hodnoty pro tuto vlastnost jsou:
 
 - pascal_case
 - camel_case
-- First @ no__t-0word_upper
-- všechny @ no__t-0upper
+- první \_word_upper
+- všechny \_upper
 - all_lower
 
 > [!NOTE]
 > Jako součást stylu pojmenování musíte zadat styl s velkými písmeny, jinak se styl pojmenování může ignorovat.
 
-## <a name="severity"></a>severity
+## <a name="severity"></a>Závažnost
 
 Chcete-li popsat závažnost porušení pravidla pojmenování, určete vlastnost v následujícím formátu:
 
@@ -163,7 +163,7 @@ Chcete-li popsat závažnost porušení pravidla pojmenování, určete vlastnos
 
 Následující tabulka uvádí povolené hodnoty závažnosti a jejich význam:
 
-severity | Efekt
+Závažnost | Efekt
 ------------ | -------------
 žádná | Pravidlo je zcela potlačené.
 refaktoring nebo tichá | Pokud se tento styl nesleduje, nezobrazujte na uživateli žádné údaje. Nicméně automaticky generovaný kód se řídí tímto stylem.
@@ -196,7 +196,7 @@ Pokud nezadáte žádná vlastní pravidla pojmenování, Visual Studio použije
 
 - Pro třídy, struktury, výčty, vlastnosti a události s `public`, `private`, `internal`, `protected` nebo `protected_internal` přístupnost je výchozí styl pojmenování písma Pascal.
 
-- Pro rozhraní s `public`, `private`, `internal`, `protected` nebo `protected_internal` přístupnost, je výchozím stylem pojmenování znak písma v jazyce Pascal s požadovanou předponou **I**.
+- Pro rozhraní s `public`, `private`, `internal`, `protected` nebo `protected_internal` přístupnost je výchozím stylem pojmenování velká písmena jazyka Pascal s požadovanou předponou **I**.
 
 ## <a name="example"></a>Příklad
 
@@ -216,11 +216,11 @@ dotnet_naming_style.first_word_upper_case_style.capitalization = first_word_uppe
 dotnet_naming_rule.public_members_must_be_capitalized.severity = suggestion
 ```
 
-Následující snímek obrazovky ukazuje účinek této zásady vytváření názvů v editoru. Dvě veřejné proměnné byly pojmenovány bez velkých písmen prvního písmene. Jedna je `const` a jedna z nich je `readonly`. Vzhledem k tomu, že se pravidlo pojmenování vztahuje pouze na symboly `readonly`, zobrazí se návrh pravidla pojmenování pouze proměnnou `readonly`.
+Následující snímek obrazovky ukazuje účinek této zásady vytváření názvů v editoru. Dvě veřejné proměnné byly pojmenovány bez velkých písmen prvního písmene. Jeden je `const` a druhý je `readonly`. Vzhledem k tomu, že pravidlo pojmenování platí jenom pro `readonly` symboly, zobrazuje se návrh pravidla pojmenování jenom v `readonly` proměnné.
 
 ![Návrh pravidla pojmenování](media/editorconfig-naming-rule-suggestion.png)
 
-Teď změníte závažnost narušení na `warning`:
+Teď změníte závažnost porušování na `warning`:
 
 ```ini
 dotnet_naming_rule.public_members_must_be_capitalized.severity = warning
@@ -236,4 +236,4 @@ Pokud soubor kódu zavřete a znovu otevřete, místo zobrazení návrhu pod por
 - [Konvence formátování](editorconfig-formatting-conventions.md)
 - [Roslyn zásady vytváření názvů](https://github.com/dotnet/roslyn/blob/master/.editorconfig#L63)
 - [Vytvoření možností přenosného vlastního editoru](../ide/create-portable-custom-editor-options.md)
-- [EditorConfig nastavení konvence psaní kódu .NET](editorconfig-code-style-settings-reference.md)
+- [Nastavení konvence kódování .NET pro EditorConfig](editorconfig-code-style-settings-reference.md)

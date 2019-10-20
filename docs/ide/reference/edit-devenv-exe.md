@@ -7,21 +7,21 @@ helpviewer_keywords:
 - Devenv, /Edit switch
 - /Edit Devenv switch
 ms.assetid: 02b3d6e7-a2b1-4d83-a747-aa8c2fb758b7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f0eb7cab3b1bc764f663cd647811928510281e8
-ms.sourcegitcommit: ba5e072c9fedeff625a1332f22dcf3644d019f51
+ms.openlocfilehash: 37d49dd7d191ad470639debc50fbed23d5066233
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432014"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654489"
 ---
 # <a name="edit-devenvexe"></a>/Edit (devenv.exe)
 
-Zadaný soubor se otevře v existující instanci sady Visual Studio.
+Otevře zadaný soubor v existující instanci aplikace Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,25 +31,25 @@ devenv /Edit [File1[ FileN]...]
 
 ## <a name="arguments"></a>Arguments
 
-- *File1*
+- *Soubor1*
 
-  Volitelné. Soubor otevřete v existující instanci sady Visual Studio. Pokud neexistuje žádná instance sady Visual Studio, se vytvoří novou instanci se zjednodušeným rozložením okna a otevře se nástroj *File1* v nové instanci.
+  Volitelné. Soubor, který se má otevřít v existující instanci sady Visual Studio. Pokud žádná instance sady Visual Studio neexistuje, vytvoří se nová instance se zjednodušeným rozložením okna a nástroj otevře v nové instanci příkaz *Soubor1* .
 
 - *FileN*
 
-  Volitelné. Nejméně jeden další soubor otevřete v existující instanci sady Visual Studio.
+  Volitelné. Jeden nebo více dalších souborů, které mají být otevřeny v existující instanci aplikace Visual Studio.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud soubor není zadána, získá existující instanci sady Visual Studio fokus. Pokud není určen žádný soubor a neexistuje žádná instance sady Visual Studio, nástroj vytvoří instanci se zjednodušeným rozložením okna.
+Pokud není zadán soubor, existující instance sady Visual Studio obdrží fokus. Pokud není zadán žádný soubor a instance aplikace Visual Studio neexistuje, nástroj vytvoří instanci s zjednodušeným rozložením okna.
 
-Je-li existující instanci aplikace Visual Studio do modálního stavu, soubor se otevře v existující instanci když Visual Studio se ukončí modální stav. Například tato situace může nastat, když [dialogové okno Možnosti](../../ide/reference/options-dialog-box-visual-studio.md) je otevřený.
+Pokud je existující instance sady Visual Studio v modálním stavu, otevře se soubor v existující instanci, když Visual Studio ukončí modální stav. Tato situace může nastat například v případě, že je [dialogové okno Možnosti](../../ide/reference/options-dialog-box-visual-studio.md) otevřené.
 
-Pokud je více než jednu instanci sady Visual Studio otevřené, je soubor otevřený v naposledy otevřeným instance.
+Je-li otevřeno více než jedna instance sady Visual Studio, soubor je otevřen v naposledy otevřené instanci.
 
 ## <a name="example"></a>Příklad
 
-První příklad otevře soubor `MyFile.cs` v existující instanci sady Visual Studio. Pokud instanci aplikace Visual Studio neexistuje, nástroj otevře soubor v nové instanci. Druhý příklad je podobné, s výjimkou toho, aby se otevřela tři soubory, nikoli pouze jeden soubor.
+První příklad otevře soubor `MyFile.cs` v existující instanci aplikace Visual Studio. Pokud instance sady Visual Studio neexistuje, nástroj otevře soubor v nové instanci. Druhý příklad je podobný, s tím rozdílem, že otevírá tři soubory místo pouze jednoho souboru.
 
 ```shell
 devenv /edit MyFile.cs

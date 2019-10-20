@@ -1,5 +1,5 @@
 ---
-title: Stránka Možnosti, vlastnosti uzlu prostředí | Dokumentace Microsoftu
+title: Stránka možnosti, vlastnosti uzlu prostředí | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,160 +9,156 @@ helpviewer_keywords:
 - Tools Options settings, Environment node properties
 ms.assetid: 26dca41f-91fc-4ca7-9103-3da402baa1d5
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 64deddd3ae8323298ad04e5a1a3a78e93c21a87a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 6c7b6370793068ff07f30066ddd51b72dcc924b3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65674710"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668703"
 ---
 # <a name="options-page-environment-node-properties"></a>Stránka Možnosti, vlastnosti uzlu prostředí
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Tento dokument popisuje stránky (nebo kolekce vlastností), které jsou přidruženy **prostředí** kategorie, `DTE.Properties("Environment", <Property Page>)`, nástroje **možnosti** dialogové okno. Název každého pododdílu je volání, které slouží k přístupu k vlastnosti kolekce a v tabulce v každém pododdílu jsou uvedeny vlastnosti v kolekci.  
-  
-## <a name="general"></a>Obecné  
- `DTE.Properties("Environment", "General")`  
-  
-|Název položky vlastnosti|Value|Popis|  
-|------------------------|-----------|-----------------|  
-|ShowStatusBar|Get/Set (Boolean)|Určuje, zda je viditelný stavový řádek.|  
-|WindowMenuContainsNItems|Získá nebo nastaví (krátký)|Určuje, jak okna dokumentu jsou obsaženy v dolní části nabídky Windows.|  
-|MRUListContainsNItems|Získá nebo nastaví (krátký)|Určuje, kolik souborů se zobrazí v podnabídce "Naposledy použitých".|  
-|Animace|Get/Set (Boolean)|Určuje, zda integrovaného vývojového prostředí (IDE) používá animace ve stavovém řádku.|  
-|AnimationSpeed|Získá nebo nastaví (krátký)||  
-|AutoAdjustExperience|Get/Set (Boolean)|Automaticky přizpůsobí vzhled v závislosti na výkonu klienta.|  
-|RichClientExperienceOptions|Get/Set (Enum)|Umožňuje vzhled plně funkčního klienta s hodnotami v <xref:EnvDTE100.vsRichClientExperienceOptions>.|  
-|CloseButtonActiveTabOnly|Get/Set (Boolean)|Určuje, zda **Zavřít** tlačítko se zobrazí pouze na aktivní kartě.|  
-|AutohidePinActiveTabOnly|Get/Set (Boolean)|Určuje, zda **automaticky skrýt** ovlivní pouze aktivní kartě.|  
-  
-## <a name="add-inmacros-security"></a>Přidat doplňků/maker zabezpečení  
- `DTE.Properties("Environment", "AddinMacrosSecurity")`  
-  
-|Název položky vlastnosti|Value|Popis|  
-|------------------------|-----------|-----------------|  
-|MacrosEnabled|Get/Set (Boolean)|Umožňuje spuštění maker.|  
-|AddinsEnabled|Get/Set (Boolean)|Umožňuje doplňků pro načtení.|  
-|LoadAddinsFromTheWeb|Get/Set (Boolean)|Umožňuje doplňků pro načtení z adresy URL na webu.|  
-  
-## <a name="documents"></a>Dokumenty  
- `DTE.Properties("Environment", "Documents")`  
-  
-|Název položky vlastnosti|Hodnota|Popis|  
-|------------------------|-----------|-----------------|  
-|ReuseSavedActiveDocWindow|Get/Set (Boolean)|Určuje, zda otevření nového souboru opětovně používá aktuální okno dokumentu Pokud je aktuální dokument uložen. `false` znamená, že vždy otevřít nové okno dokumentu pro každý dokument otevřít.|  
-|DetectFileChangesOutsideIDE|Get/Set (Boolean)|Určuje, zda prostředí automaticky načte soubory otevřené v integrovaném vývojovém prostředí, když se operační systém upozornění rozhraní IDE, že soubory byly změněny na disku.|  
-|AutoloadExternalChanges|Get/Set (Boolean)|Určuje, zda zjistil, že externí změny otevírat dokumenty automaticky znovu načtěte upravený soubor, pokud není upraven v otevřeném dokumentu. Pokud se upraví otevřít dokument a tato vlastnost je `true`, pak IDE zobrazí výzvu, jako kdyby byla tato vlastnost `false`.|  
-|InitializeOpenFileFromCurrentDocument|Get/Set (Boolean)|Určuje, zda <xref:EnvDTE.DTEClass.OpenFile%2A> příkaz nasazení nasazuje adresář a název souboru z poslední aktivní dokument nebo na posledním místě otevřít soubor.|  
-|MiscFilesProjectSavesLastNItems|Získá nebo nastaví (krátký)|Určuje, kolik souborů záznamů různé soubory projektu. V důsledku toho se zobrazí, co naposledy otevřeném jako vedlejší soubor na disku při dalším použití integrovaného vývojového prostředí.|  
-|ShowMiscFilesProject|Get/Set (Boolean)|Určuje, zda je zobrazen ostatních souborech projektu.|  
-|CheckForConsisentLineEndings|Get/Set (Boolean)|Kontroly konce řádků při načtení souboru.|  
-|SaveDocsAsUnicodeWhenDataLoss|Get/Set (Boolean)|Ukládá dokumenty znakové sady Unicode, pokud data nelze uložit v znakové stránce.|  
-|DontShowGlobalUndoChangeLossDialog|Get/Set (Boolean)|Zobrazí upozornění, když bude globální akce zpět upravovat ostatní upravené soubory.|  
-|AllowEditingReadOnlyFiles|Get/Set (Boolean)|Povolí úpravy souborů pouze pro čtení, ale dáme upozornění při snaze k jejich uložení.|  
-|DocumentDockPreference|Get/Set (Enum)|<xref:EnvDTE100.vsDocumentDockPreferenceOptions>. Pozice v kartě a ve kterých se mají vložit otevřený dokument.|  
-  
-## <a name="extension-manager"></a>správce rozšíření  
- `DTE.Properties("Environment", "ExtensionManager")`  
-  
-|Název položky vlastnosti|Hodnota|Popis|  
-|------------------------|-----------|-----------------|  
-|EnableAdminExtensions|Get/Set (Boolean)|Načte rozšíření vázaná na uživatele při spuštění sady Visual Studio v části přihlašovací údaje správce. Po změně této hodnoty je třeba restartovat Visual Studio.|  
-|EnableOnline|Get/Set (Boolean)|Umožňuje přístup k rozšíření v Galerii Visual Studio.|  
-|AutomaticallyCheckForUpdates|Get/Set (Boolean)|Automaticky vyhledá aktualizace nainstalované rozšíření.|  
-  
-## <a name="find-and-replace"></a>hledání a nahrazování  
- `DTE.Properties("Environment", "FindAndReplace")`  
-  
-|Název položky vlastnosti|Hodnota|Popis|  
-|------------------------|-----------|-----------------|  
-|ShowWarningMessages|Get/Set (Boolean)|Zobrazí upozornění.|  
-|InitializeFromEditor|Get/Set (Boolean)|Automaticky naplní **najít** pole s textem z editoru.|  
-|ShowMessageBoxes|Get/Set (Boolean)|Zobrazí informační zprávy.|  
-|HideWindowsAfterMatchFromQuickFindReplace|Get/Set (Boolean)|Skryje **najít a nahradit** okno po shoda je vyhledán pomocí **rychlé hledání** nebo **rychlého nahrazení**.|  
-  
-## <a name="import-and-export-settings"></a>Nastavení importu a exportu  
- `DTE.Properties("Environment", "Import and Export Settings")`  
-  
-|Název položky vlastnosti|Hodnota|Popis|  
-|------------------------|-----------|-----------------|  
-|TrackTeamSettings|Get/Set (Boolean)|Použije nastavení v souboru určeném TeamSettingsFile.|  
-|TeamSettingsFile|Získá nebo nastaví (String)|Název souboru, který má nastavení týmu.|  
-|AutoSaveFile|Získá nebo nastaví (String)|Název souboru, kde se automaticky uloží uživatelská nastavení.|  
-  
-## <a name="international-settings"></a>Mezinárodní nastavení  
- `DTE.Properties("Environment", "International")`  
-  
-|Název položky vlastnosti|Value|Popis|  
-|------------------------|-----------|-----------------|  
-|Jazyk|Získá nebo nastaví (String)|Hodnota LCID pro aktuální jazyk pro Visual Studio.|  
-  
-## <a name="keyboard"></a>Klávesnice  
- `DTE.Properties("Environment", "Keyboard")`  
-  
-|Název položky vlastnosti|Value|Popis|  
-|------------------------|-----------|-----------------|  
-|Schéma|Získá nebo nastaví (String)|Vrátí řetězec, který obsahuje vestavěné schéma, řetězec obsahující úplnou cestu souboru .vsk, který je načten nebo "(výchozí)" Pokud se žádný soubor .vsk, který je načten.|  
-  
-## <a name="projects-and-solution"></a>Projekty a řešení  
- `DTE.Properties("Environment", "ProjectsAndSolution")`  
-  
-|Název položky vlastnosti|Hodnota|Popis|  
-|------------------------|-----------|-----------------|  
-|OnRunOrPreview|Získá nebo nastaví (String)|Určuje, zda integrovaného vývojového prostředí všechno, co ukládat před náhledem nebo spuštěním sestavením projektu.|  
-|ProjectsLocation|Získá nebo nastaví (String)|Určuje výchozí adresář kde **přidat projekt** dialogové okno uloží nové projekty.|  
-|ShowOutputWindowBeforeBuild|Get/Set (Boolean)|Určuje, zda od sestavení se zobrazí **výstup** okna.|  
-|ShowTaskListAfterBuild|Get/Set (Boolean)|Určuje, zda operace neúspěšné sestavení se zobrazí **seznamu úkolů** po dokončení sestavení.|  
-|TrackFileSelectionInExplorer|Get/Set (Boolean)|Určuje, zda je aktuální položky sledována v **Průzkumníka řešení**.|  
-|AlwaysShowSolutionNode|Get/Set (Boolean)|Určuje, zda se zobrazí uzel řešení.|  
-|OnlySaveStartupProjectsAndDependencies|Get/Set (Boolean)|Určuje, zda operace ukládání projektů po spuštění a jejich závislé soubory.|  
-|ShowAdvancedBuildConfigurations|Get/Set (Boolean)|Určuje, zda se zobrazí upřesněné konfigurace sestavení.|  
-|ConcurrentBuilds|Získá nebo nastaví (String)|Určuje maximální počet paralelně sestavovaných projektů, které mohou nastat.|  
-|SaveNewProjects|Get/Set (Boolean)|Určuje, jestli se po vytvoření automaticky uloží nové projekty.|  
-|PromptForRenameSymbol|Get/Set (Boolean)|Určuje, zda chcete vyzvat k symbolickému přejmenování, když jsou soubory přejmenovat.|  
-|OnRunWhenErrors|Get/Set (Enum)|Určuje chování při spuštění, když se sestavení dokončilo s chybami.|  
-|OnRunWhenOutOfDate|Get/Set (Enum)|Určuje chování při spuštění, když projekt není aktuální.|  
-|ProjectTemplatesLocation|Získá nebo nastaví (String)|Adresář, který obsahuje šablony projektů uživatele.|  
-|ProjectItemTemplatesLocation|Získá nebo nastaví (String)|Adresář, který obsahuje šablon položek uživatele.|  
-|DefaultBehaviorForStartupProjects|Získá nebo nastaví (String)||  
-|MSBuildOutputVerbosity|Získá nebo nastaví (String)|Určuje úroveň podrobností pro výstup sestavení.|  
-  
-## <a name="startup"></a>Třída pro spuštění  
- `DTE.Properties("Environment", "Startup")`  
-  
-|Název položky vlastnosti|Value|Popis|  
-|------------------------|-----------|-----------------|  
-|OnStartUp|Get/Set (Enum)|Akce se má provést při spuštění z <xref:EnvDTE.vsStartUp>, s hodnotami 0 až 5:<br /><br /> -   0: Otevřít domovskou stránku<br />-   1: Načíst poslední načtené řešení<br />-   2: Zobrazit **otevřít projekt** dialogové okno<br />-   3: Zobrazit **nový projekt** dialogové okno<br />-   4: Zobrazit prázdné prostředí<br />-   5: Zobrazit úvodní stránku|  
-|StartPageRSSUrl|Získá nebo nastaví (String)|Adresa URL pro informační kanál RSS informačního kanálu, který se používá při spuštění.|  
-|StartPageRefreshDownloadedContent|Get/Set (Boolean)|Úvodní stránka se aktualizuje po každé průchodu intervalu zadaném ve StartPageRefreshInterval.|  
-|StartPageRefreshInterval|Získá nebo nastaví (krátký)|Interval v minutách, chcete-li aktualizovat úvodní stránku.|  
-  
-## <a name="tasklist"></a>Seznamu úkolů  
- `DTE.Properties("Environment", "TaskList")`  
-  
-|Název položky vlastnosti|Value|Popis|  
-|------------------------|-----------|-----------------|  
-|ConfirmTaskDeletion|Get/Set (Boolean)|Určuje, zda potvrzovací okno se zobrazí při odstraňování úlohy **seznamu úkolů**.|  
-|WarnOnAddingHiddenItem|Get/Set (Boolean)|Určuje, zda se zobrazí upozornění při přidávání uživatele úlohu, která se nezobrazí.|  
-|DontShowFilePaths|Get/Set (Boolean)|Určuje, jestli se má zobrazit celé cesty souborů v seznamu úkolů.|  
-|CommentTokens|SafeArray|Vrátí pole SafeArray komentářů k tomuto tokenu hodnoty. Každý obsahuje pole, `Name` (řetězec) a `Priority` (<xref:EnvDTE.vsTaskPriority>, vysoká, střední nebo nízká).|  
-  
-## <a name="web-browser"></a>Webový prohlížeč  
- `DTE.Properties("Environment", "WebBrowser")`  
-  
-|Název položky vlastnosti|Value|Popis|  
-|------------------------|-----------|-----------------|  
-|Domovská stránka|Získá nebo nastaví (String)|Představuje adresu URL domovské stránky.|  
-|SearchPage|Získá nebo nastaví (String)|Představuje adresu URL stránky vyhledávání.|  
-|ViewSourceIn|Get/Set (Enum)|<xref:EnvDTE.vsBrowserViewSource> (Externí zdroj, návrh,).|  
-|ViewSourceExternalProgram|Získá nebo nastaví (String)|Cesta v prohlížeči externího zdroje.|  
-  
-## <a name="see-also"></a>Viz také  
- [Řízení nastavení možností](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d)   
- [Určování názvů položky vlastností na stránkách možností](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)   
- [Stránka Možnosti, vlastnosti uzlu barev a písem](../../ide/reference/options-page-fonts-and-colors-node-properties.md)   
- [Stránka Možnosti, vlastnosti uzlu textového editoru](../../ide/reference/options-page-text-editor-node-properties.md)   
- [Prostředí, dialogové okno Možnosti](../../ide/reference/environment-options-dialog-box.md)
+Tento dokument popisuje stránky (nebo kolekce vlastností), které jsou spojeny s kategorií **prostředí** , `DTE.Properties("Environment", <Property Page>)` dialogového okna **Možnosti** . Název každého dílčího oddílu je volání, které se používá pro přístup k kolekci vlastností a tabulka v každém pododdílu obsahuje seznam vlastností v kolekci.
+
+## <a name="general"></a>Obecné
+ `DTE.Properties("Environment", "General")`
+
+|Název položky vlastnosti|Hodnota|Popis|
+|------------------------|-----------|-----------------|
+|ShowStatusBar|Get/Set (Boolean)|Určuje, zda je stavový řádek viditelný.|
+|WindowMenuContainsNItems|Získat nebo nastavit (krátký)|Určuje způsob, jakým jsou okna dokumentu obsažena v dolní části nabídky systému Windows.|
+|MRUListContainsNItems|Získat nebo nastavit (krátký)|Určuje, kolik souborů se zobrazí v podnabídce Naposledy použité.|
+|Animace|Get/Set (Boolean)|Určuje, zda integrované vývojové prostředí (IDE) používá animaci ve stavovém řádku.|
+|AnimationSpeed|Získat nebo nastavit (krátký)||
+|AutoAdjustExperience|Get/Set (Boolean)|Automaticky upraví vizuální prostředí v závislosti na výkonu klienta.|
+|RichClientExperienceOptions|Get/Set (Enum)|Umožňuje bohatě vizuální prostředí klienta s hodnotami v <xref:EnvDTE100.vsRichClientExperienceOptions>.|
+|CloseButtonActiveTabOnly|Get/Set (Boolean)|Určuje, zda je tlačítko **Zavřít** zobrazeno pouze na aktivní kartě.|
+|AutohidePinActiveTabOnly|Get/Set (Boolean)|Určuje, zda má tlačítko pro **automatické skrývání** vliv pouze na aktivní kartu.|
+
+## <a name="add-inmacros-security"></a>Zabezpečení doplňků/maker
+ `DTE.Properties("Environment", "AddinMacrosSecurity")`
+
+|Název položky vlastnosti|Hodnota|Popis|
+|------------------------|-----------|-----------------|
+|MacrosEnabled|Get/Set (Boolean)|Umožňuje spuštění maker.|
+|AddinsEnabled|Get/Set (Boolean)|Umožňuje načíst doplňky.|
+|LoadAddinsFromTheWeb|Get/Set (Boolean)|Umožňuje načíst doplňky z adresy URL na webu.|
+
+## <a name="documents"></a>Dokumenty
+ `DTE.Properties("Environment", "Documents")`
+
+|Název položky vlastnosti|Hodnota|Popis|
+|------------------------|-----------|-----------------|
+|ReuseSavedActiveDocWindow|Get/Set (Boolean)|Určuje, zda otevírání nového souboru znovu použije aktuální okno dokumentu, pokud je aktuální dokument uložen. `false` znamená vždy otevřít nové okno dokumentu pro každý otevřený dokument.|
+|DetectFileChangesOutsideIDE|Get/Set (Boolean)|Určuje, zda prostředí automaticky znovu načte soubory otevřené v integrovaném vývojovém prostředí (IDE), když operační systém upozorní rozhraní IDE na to, že soubory byly na disku změněny.|
+|AutoloadExternalChanges|Get/Set (Boolean)|Určuje, zda se při změně otevřeného dokumentu automaticky znovu načte upravený soubor a otevře se soubor s otevřenými externími úpravami. Pokud je otevřený dokument upraven a tato vlastnost je `true`, pak rozhraní IDE vyzve, jako by byla tato vlastnost `false`.|
+|InitializeOpenFileFromCurrentDocument|Get/Set (Boolean)|Určuje, zda <xref:EnvDTE.DTEClass.OpenFile%2A> příkaz vyhodnotí název adresáře a souboru z posledního aktivního dokumentu nebo z posledního místa, v němž jste otevřeli soubor.|
+|MiscFilesProjectSavesLastNItems|Získat nebo nastavit (krátký)|Určuje, kolik souborů soubory aplikace různé soubory zaznamená. V důsledku toho vidíte, co jste nedávno otevřeli jako různé soubory na disku při dalším použití rozhraní IDE.|
+|ShowMiscFilesProject|Get/Set (Boolean)|Určuje, zda je zobrazen projekt různé soubory.|
+|CheckForConsisentLineEndings|Get/Set (Boolean)|Kontroluje konzistenci konců řádků při zatížení souboru.|
+|SaveDocsAsUnicodeWhenDataLoss|Get/Set (Boolean)|Ukládá dokumenty jako znakovou sadu Unicode, pokud data nelze uložit ve znakové stránce.|
+|DontShowGlobalUndoChangeLossDialog|Get/Set (Boolean)|Zobrazí upozornění, pokud bude globální akce zpět upravovat ostatní upravené soubory.|
+|AllowEditingReadOnlyFiles|Get/Set (Boolean)|Umožňuje upravovat soubory jen pro čtení, ale při pokusu o jejich uložení dejte pozor na upozornění.|
+|DocumentDockPreference|Get/Set (Enum)|<xref:EnvDTE100.vsDocumentDockPreferenceOptions>. Pozice na kartách, do kterých se má vložit otevřený dokument|
+
+## <a name="extension-manager"></a>správce rozšíření
+ `DTE.Properties("Environment", "ExtensionManager")`
+
+|Název položky vlastnosti|Hodnota|Popis|
+|------------------------|-----------|-----------------|
+|EnableAdminExtensions|Get/Set (Boolean)|Načte rozšíření pro jednotlivé uživatele, když je aplikace Visual Studio spuštěna v rámci pověření správce. Po změně této hodnoty je nutné restartovat aplikaci Visual Studio.|
+|EnableOnline|Get/Set (Boolean)|Umožňuje přístup k rozšířením v galerii sady Visual Studio.|
+|AutomaticallyCheckForUpdates|Get/Set (Boolean)|Automaticky zjišťuje aktualizace nainstalovaných rozšíření.|
+
+## <a name="find-and-replace"></a>hledání a nahrazování
+ `DTE.Properties("Environment", "FindAndReplace")`
+
+|Název položky vlastnosti|Hodnota|Popis|
+|------------------------|-----------|-----------------|
+|ShowWarningMessages|Get/Set (Boolean)|Zobrazí varovné zprávy.|
+|InitializeFromEditor|Get/Set (Boolean)|Automaticky vyplní pole **Najít** s textem z editoru.|
+|ShowMessageBoxes|Get/Set (Boolean)|Zobrazí informační zprávy.|
+|HideWindowsAfterMatchFromQuickFindReplace|Get/Set (Boolean)|Skryje okno **Najít a nahradit** po nalezení shody pomocí **rychlého hledání** nebo **rychlého nahrazení**.|
+
+## <a name="import-and-export-settings"></a>Nastavení importu a exportu
+ `DTE.Properties("Environment", "Import and Export Settings")`
+
+|Název položky vlastnosti|Hodnota|Popis|
+|------------------------|-----------|-----------------|
+|TrackTeamSettings|Get/Set (Boolean)|Používá nastavení v souboru určeném parametrem TeamSettingsFile.|
+|TeamSettingsFile|Get/Set (String)|Název souboru, který obsahuje nastavení týmu.|
+|AutoSaveFile|Get/Set (String)|Název souboru, do kterého se budou automaticky ukládat uživatelská nastavení|
+
+## <a name="international-settings"></a>Mezinárodní nastavení
+ `DTE.Properties("Environment", "International")`
+
+|Název položky vlastnosti|Hodnota|Popis|
+|------------------------|-----------|-----------------|
+|Jazyk|Get/Set (String)|Hodnota LCID pro aktuální jazyk sady Visual Studio.|
+
+## <a name="keyboard"></a>Klávesnice
+ `DTE.Properties("Environment", "Keyboard")`
+
+|Název položky vlastnosti|Hodnota|Popis|
+|------------------------|-----------|-----------------|
+|Schéma|Get/Set (String)|Vrátí řetězec, který obsahuje předdefinované schéma, řetězec obsahující úplnou cestu souboru. VSK, který je načten, nebo "(výchozí)", pokud není načten soubor. VSK.|
+
+## <a name="projects-and-solution"></a>Projekty a řešení
+ `DTE.Properties("Environment", "ProjectsAndSolution")`
+
+|Název položky vlastnosti|Hodnota|Popis|
+|------------------------|-----------|-----------------|
+|OnRunOrPreview|Get/Set (String)|Určuje, zda IDE uloží vše před zobrazením náhledu nebo spuštěním sestaveného projektu.|
+|ProjectsLocation|Get/Set (String)|Určuje výchozí adresář, do kterého se v dialogovém okně **Přidat projekt** ukládají nové projekty.|
+|ShowOutputWindowBeforeBuild|Get/Set (Boolean)|Určuje, zda se při spuštění sestavení zobrazí okno **výstup** .|
+|ShowTaskListAfterBuild|Get/Set (Boolean)|Určuje, zda neúspěšná operace sestavení po dokončení sestavení zobrazí **seznam úkolů** .|
+|TrackFileSelectionInExplorer|Get/Set (Boolean)|Určuje, zda je aktuální položka sledována v **Průzkumník řešení**.|
+|AlwaysShowSolutionNode|Get/Set (Boolean)|Určuje, zda je zobrazen uzel řešení.|
+|OnlySaveStartupProjectsAndDependencies|Get/Set (Boolean)|Určuje, zda jsou operace ukládání omezeny na spouštěné projekty a jejich závislé soubory.|
+|ShowAdvancedBuildConfigurations|Get/Set (Boolean)|Určuje, zda jsou zobrazeny rozšířené konfigurace sestavení.|
+|ConcurrentBuilds|Get/Set (String)|Určuje maximální počet paralelních sestavení projektu, které mohou nastat.|
+|SaveNewProjects|Get/Set (Boolean)|Určuje, zda jsou po vytvoření automaticky uloženy nové projekty.|
+|PromptForRenameSymbol|Get/Set (Boolean)|Určuje, zda se má při přejmenování souborů zobrazovat výzva k zadání symbolického názvu.|
+|OnRunWhenErrors|Get/Set (Enum)|Určuje chování při spuštění, když se sestavení dokončilo s chybami.|
+|OnRunWhenOutOfDate|Get/Set (Enum)|Určuje chování, které se spustí, když projekt není aktuální.|
+|ProjectTemplatesLocation|Get/Set (String)|Adresář, který obsahuje šablony projektu uživatele.|
+|ProjectItemTemplatesLocation|Get/Set (String)|Adresář, který obsahuje šablony uživatelských položek.|
+|DefaultBehaviorForStartupProjects|Get/Set (String)||
+|MSBuildOutputVerbosity|Get/Set (String)|Určuje úroveň podrobností pro výstup sestavení.|
+
+## <a name="startup"></a>Úvod
+ `DTE.Properties("Environment", "Startup")`
+
+|Název položky vlastnosti|Hodnota|Popis|
+|------------------------|-----------|-----------------|
+|Při spuštění|Get/Set (Enum)|Akce, která se má provést při spuštění, od <xref:EnvDTE.vsStartUp> s hodnotami od 0 do 5:<br /><br /> -0: otevřít domovskou stránku<br />-1: načtení posledního načteného řešení<br />-2: zobrazení dialogového okna **Otevřít projekt**<br />-3: zobrazení dialogového okna **Nový projekt**<br />-4: zobrazení prázdného prostředí<br />-5: Zobrazit úvodní stránku|
+|StartPageRSSUrl|Get/Set (String)|Adresa URL informačního kanálu RSS, který se používá při spuštění.|
+|StartPageRefreshDownloadedContent|Get/Set (Boolean)|Aktualizuje úvodní stránku po každém průchodu intervalu zadaného v StartPageRefreshInterval.|
+|StartPageRefreshInterval|Získat nebo nastavit (krátký)|Interval obnovování úvodní stránky v minutách|
+
+## <a name="tasklist"></a>TaskList
+ `DTE.Properties("Environment", "TaskList")`
+
+|Název položky vlastnosti|Hodnota|Popis|
+|------------------------|-----------|-----------------|
+|ConfirmTaskDeletion|Get/Set (Boolean)|Určuje, zda se při odstraňování úloh z **seznam úkolů**Zobrazuje potvrzovací pole.|
+|WarnOnAddingHiddenItem|Get/Set (Boolean)|Určuje, zda se zobrazí upozornění při přidávání úkolu uživatele, který nebude zobrazen.|
+|DontShowFilePaths|Get/Set (Boolean)|Určuje, zda se mají v Seznam úkolů zobrazovat úplné cesty k souborům.|
+|CommentTokens|SafeArray|Vrátí hodnotu SafeArray hodnot tokenu komentáře. Každé má pole, `Name` (String) a `Priority` (<xref:EnvDTE.vsTaskPriority>, vysoká, střední nebo nízká).|
+
+## <a name="web-browser"></a>Webový prohlížeč
+ `DTE.Properties("Environment", "WebBrowser")`
+
+|Název položky vlastnosti|Hodnota|Popis|
+|------------------------|-----------|-----------------|
+|Domovské stránky|Get/Set (String)|Představuje adresu URL domovské stránky.|
+|SearchPage|Get/Set (String)|Představuje adresu URL vyhledávací stránky.|
+|ViewSourceIn|Get/Set (Enum)|<xref:EnvDTE.vsBrowserViewSource> (zdroj, návrh, externí).|
+|ViewSourceExternalProgram|Get/Set (String)|Cesta k externímu prohlížeči zdrojového kódu.|
+
+## <a name="see-also"></a>Viz také
+ [Řízení nastavení možností](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d) [Určení názvů položek vlastností na](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa) stránce Možnosti stránky možnosti [, písma a barvy](../../ide/reference/options-page-fonts-and-colors-node-properties.md) [Stránka možnosti, vlastnosti uzlu textový editor](../../ide/reference/options-page-text-editor-node-properties.md) [dialogové okno Možnosti prostředí](../../ide/reference/environment-options-dialog-box.md)

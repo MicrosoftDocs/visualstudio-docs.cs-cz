@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Projects and Solutions Options dialog box
 - Options dialog box, Projects and Solutions
 ms.assetid: 2801f24e-a138-488a-ae3c-e1f99a678ac0
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31d829a668a2c9690333315c30904623187fe51d
-ms.sourcegitcommit: f42b5318c5c93e2b5ecff44f408fab8bcdfb193d
+ms.openlocfilehash: 783cdf5cef127a39958f14a2dc5ece9a45fcee62
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976740"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655724"
 ---
-# <a name="options-dialog-box-projects-and-solutions--general"></a>Dialogové okno Možnosti: Projekty a řešení \> – obecné
+# <a name="options-dialog-box-projects-and-solutions--general"></a>Dialogové okno Možnosti: projekty a řešení \> obecné
 
-Pomocí této stránky můžete definovat chování sady Visual Studio související s projekty a řešeními. Chcete-li získat přístup k těmto možnostem, vyberte možnost **nástroje** > , rozbalte položku **projekty a řešení**a pak vyberte možnost **Obecné**.
+Pomocí této stránky můžete definovat chování sady Visual Studio související s projekty a řešeními. Chcete-li získat přístup k těmto možnostem, vyberte možnost **nástroje**  > **Možnosti**, rozbalte položku **projekty a řešení**a pak vyberte možnost **Obecné**.
 
 Na stránce **Obecné** jsou k dispozici následující možnosti.
 
@@ -87,17 +87,17 @@ Pokud je tato možnost vybrána, obnoví stav uzlů v Průzkumník řešení s o
 
 ## <a name="open-sdk-style-project-files-with-double-click-or-the-enter-key"></a>Otevřete soubory projektu ve stylu sady SDK dvojitým kliknutím nebo klávesou ENTER.
 
-Pokud je vybrána tato možnost a dvakrát kliknete na uzel projektu ve stylu sady SDK v Průzkumník řešení nebo jej vyberete a potom stisknete klávesu **ENTER**, soubor projektu (například \*soubor. csproj) se otevře jako XML v editoru. Pokud je tato možnost Odstraněná, poklikejte na uzel projektu ve stylu sady SDK v Průzkumník řešení nebo jeho výběr a stisknutí klávesy **ENTER** má vliv na rozbalení nebo sbalení pouze uzlu.
+Pokud je vybrána tato možnost a dvakrát kliknete na uzel projektu ve stylu sady SDK v Průzkumník řešení nebo jej vyberete a potom stisknete klávesu **ENTER**, soubor projektu (například \* soubor. csproj) se otevře jako XML v editoru. Pokud je tato možnost Odstraněná, poklikejte na uzel projektu ve stylu sady SDK v Průzkumník řešení nebo jeho výběr a stisknutí klávesy **ENTER** má vliv na rozbalení nebo sbalení pouze uzlu.
 
 Pokud tuto možnost nemáte zaškrtnuté a chcete upravit soubor projektu ve stylu sady SDK, klikněte pravým tlačítkem myši na uzel projektu v Průzkumník řešení a vyberte **Upravit soubor projektu**. Pro jiné typy projektů je nutné nejprve uvolnit projekt před jeho úpravou v aplikaci Visual Studio.
 
 > [!TIP]
-> *Projekt ve stylu sady SDK*nebo [sada SDK projektu](../../msbuild/how-to-use-project-sdk.md)mají novější a efektivnější formát souboru projektu, který byl představen nástrojem MSBuild 15,0. Projekt `Sdk` vestylusadySDK`<Project Sdk="Microsoft.NET.Sdk">`obsahuje atribut prvku,například.`Project` Sada Visual Studio vytvoří projekt ve stylu sady SDK při vytváření nového projektu .NET Core v jedné ze šablon sady Visual Studio, například.
+> *Projekt ve stylu sady SDK*nebo [sada SDK projektu](../../msbuild/how-to-use-project-sdk.md)mají novější a efektivnější formát souboru projektu, který byl představen nástrojem MSBuild 15,0. Projekt ve stylu sady SDK obsahuje atribut `Sdk` u prvku `Project`, například `<Project Sdk="Microsoft.NET.Sdk">`. Sada Visual Studio vytvoří projekt ve stylu sady SDK při vytváření nového projektu .NET Core v jedné ze šablon sady Visual Studio, například.
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
 
-- [Dialogové okno Možnosti: Umístění projektů a \> řešení](projects-solutions-locations-options.md)
+- [Dialogové okno Možnosti: projekty a řešení \> umístění](projects-solutions-locations-options.md)
 - [Dialogové okno Možnosti, projekty a řešení, sestavení a spuštění](../../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)
 - [Dialogové okno Možnosti, Projekty a řešení, Webové projekty](../../ide/reference/options-dialog-box-projects-and-solutions-web-projects.md)

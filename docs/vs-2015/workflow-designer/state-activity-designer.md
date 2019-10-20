@@ -1,5 +1,5 @@
 ---
-title: Návrhář aktivity stavu | Dokumentace Microsoftu
+title: Návrhář aktivity stavu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -9,32 +9,30 @@ f1_keywords:
 ms.assetid: 9455ab37-93a0-4c46-9eb8-b6611ca23167
 caps.latest.revision: 5
 author: steved0x
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9cb5185bdef35d383e92082160e9f4b1dda5451f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2c1eea76a2593f4c0de817b8439361bd1be37b5c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62937094"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663200"
 ---
 # <a name="state-activity-designer"></a>Návrhář aktivity State
-A <xref:System.Activities.Statements.State> představuje stavu, ve kterém může být stavového stroje v.  
-  
-## <a name="using-the-state-activity-designer"></a>Pomocí Návrhář aktivity State  
- Přidat <xref:System.Activities.Statements.State> do pracovního postupu, přetáhněte **stavu** Návrhář aktivity z **stavového stroje** část **nástrojů** a umístěte ho na <xref:System.Activities.Statements.StateMachine> aktivity [!INCLUDE[wfd1](../includes/wfd1-md.md)] povrchu. A <xref:System.Activities.Statements.State> aktivity může být přetaženy <xref:System.Activities.Statements.StateMachine> a přechody přidat později; nebo přechodu lze vytvořit jako <xref:System.Activities.Statements.State> aktivity se zahodí. Přidání <xref:System.Activities.Statements.State> aktivity a vytvoření přechodu v jednom kroku, přetáhněte **stavu** aktivita z **stavového stroje** část **nástrojů** a při najetí myší nad druhým Stav v Návrháři pracovních postupů. Když přetaženou <xref:System.Activities.Statements.State> je před jiným <xref:System.Activities.Statements.State>, čtyři trojúhelníky se zobrazí kolem nich <xref:System.Activities.Statements.State>. Pokud <xref:System.Activities.Statements.State> se ukončí na jednom ze čtyř trojúhelníků, přidá se do stavového stroje a vytvoření přechodu ze zdroje <xref:System.Activities.Statements.State> do vynechané cíle <xref:System.Activities.Statements.State>. Další informace najdete v tématu [přechod](../workflow-designer/transition-activity-designer.md).  
-  
-### <a name="state-activity-properties-in-the-workflow-designer"></a>Vlastnosti stavu aktivity v Návrháři postupu provádění  
- Následující tabulka ukazuje <xref:System.Activities.Statements.State> vlastnosti, které lze nastavit pomocí návrháře pracovních postupů a popisuje, jak se používají v návrháři. Některé z těchto vlastností můžete upravovat v mřížce vlastností a některé lze upravit na návrhové ploše.  
-  
-|Název vlastnosti|Požadováno|Použití|  
-|-------------------|--------------|-----------|  
-|<xref:System.Activities.Statements.State.DisplayName%2A>|False|Určuje popisný název <xref:System.Activities.Statements.State> návrháře aktivit v záhlaví. Výchozí hodnota je **stavu**. Hodnotu lze upravit v mřížce vlastností nebo přímo v hlavičce návrháře aktivit. <xref:System.Activities.Statements.State.DisplayName%2A> Se používá v navigace s popisem cesty, který se zobrazí v horní části návrháře postupu provádění.<br /><br /> I když <xref:System.Activities.Statements.State.DisplayName%2A> není bezpodmínečně nutné, je osvědčeným postupem je použití jednoho.|  
-|<xref:System.Activities.Statements.State.Entry%2A>|False|Určuje akci, která nastane, pokud se tento stav je převeden na. Při <xref:System.Activities.Statements.State> aktivity rozbalen, tuto hodnotu můžete nastavit tak, že přetáhnete aktivity z **nástrojů** a vyřadit ho do **položka** oddíl stavu.|  
-|<xref:System.Activities.Statements.State.Exit%2A>|False|Určuje akci, která nastane, pokud se tento stav se postoupí klávesou. Při <xref:System.Activities.Statements.State> aktivity rozbalen, tuto hodnotu můžete nastavit tak, že přetáhnete aktivity z **nástrojů** a vyřadit ho do **ukončovací** oddíl stavu.|  
-|<xref:System.Activities.Statements.State.Transitions%2A>|False|Obsahuje seznam možných přechodů, které pocházejí z <xref:System.Activities.Statements.State>. Každá položka v seznamu obsahuje odkaz na přidruženou <xref:System.Activities.Statements.Transition> a cíl <xref:System.Activities.Statements.State>. Kliknutím na odkaz se přepnout návrháře na rozbalené zobrazení <xref:System.Activities.Statements.Transition> nebo <xref:System.Activities.Statements.State>.|  
-  
-## <a name="see-also"></a>Viz také  
- [StateMachine](../workflow-designer/statemachine-activity-designer.md)   
- [FinalState](../workflow-designer/finalstate-activity-designer.md)   
- [Transition](../workflow-designer/transition-activity-designer.md)
+@No__t_0 představuje stav, ve kterém může být Stavový počítač v.
+
+## <a name="using-the-state-activity-designer"></a>Použití návrháře aktivity stavu
+ Chcete-li přidat <xref:System.Activities.Statements.State> k pracovnímu postupu, přetáhněte návrháře aktivity **stavu** z části **Stavový počítač** v **panelu nástrojů** a přetáhněte jej na <xref:System.Activities.Statements.StateMachine> aktivitu na [!INCLUDE[wfd1](../includes/wfd1-md.md)] ploše. @No__t_0 aktivitu lze přetáhnout na <xref:System.Activities.Statements.StateMachine> a přechody přidané později. nebo je možné vytvořit přechod, protože aktivita <xref:System.Activities.Statements.State> je vyřazena. Chcete-li přidat aktivitu <xref:System.Activities.Statements.State> a vytvořit přechod v jednom kroku, přetáhněte aktivitu **stavu** z části **Stavový počítač** v **sadě nástrojů** a umístěte ji do jiného stavu v Návrháři postupu. Když je přetažené <xref:System.Activities.Statements.State> nad jiným <xref:System.Activities.Statements.State>, zobrazí se kolem ostatních <xref:System.Activities.Statements.State> čtyři trojúhelníky. Pokud je <xref:System.Activities.Statements.State> přehozena na jeden ze čtyř trojúhelníků, přidá se do stavového počítače a ze zdrojového <xref:System.Activities.Statements.State> se vytvoří přechod na vyřazený cílový <xref:System.Activities.Statements.State>. Další informace najdete v tématu [přechod](../workflow-designer/transition-activity-designer.md).
+
+### <a name="state-activity-properties-in-the-workflow-designer"></a>Vlastnosti aktivity stavu v Návrhář postupu provádění
+ V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.State>, které lze nastavit pomocí návrháře pracovních postupů, a popisuje, jak se používají v návrháři. Některé z těchto vlastností lze upravit v mřížce vlastností a některé lze upravovat na návrhové ploše.
+
+|Název vlastnosti|Požadováno|Použití|
+|-------------------|--------------|-----------|
+|<xref:System.Activities.Statements.State.DisplayName%2A>|False|Určuje popisný název návrháře <xref:System.Activities.Statements.State> aktivity v hlavičce. Výchozí hodnota je **State (stav**). Hodnotu lze upravit v mřížce vlastností nebo přímo v záhlaví návrháře aktivit. @No__t_0 se používá v navigaci s popisem cesty, které se zobrazí v horní části návrháře pracovních postupů.<br /><br /> I když <xref:System.Activities.Statements.State.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.State.Entry%2A>|False|Určuje akci, která nastane, když je tento stav převeden na. Pokud je aktivita <xref:System.Activities.Statements.State> rozbalena, lze tuto hodnotu nastavit přetažením aktivity z **panelu nástrojů** a jejím přetažením do oddílu **vstup** ve stavu.|
+|<xref:System.Activities.Statements.State.Exit%2A>|False|Určuje akci, která nastane, když je tento stav přepnut z. Při rozbalení aktivity <xref:System.Activities.Statements.State> lze tuto hodnotu nastavit přetažením aktivity z **panelu nástrojů** a jejím přeřazením do **ukončovacího** oddílu daného stavu.|
+|<xref:System.Activities.Statements.State.Transitions%2A>|False|Zobrazuje seznam možných přechodů pocházejících z <xref:System.Activities.Statements.State>. Každá položka v seznamu obsahuje odkaz na související <xref:System.Activities.Statements.Transition> a cílový <xref:System.Activities.Statements.State>. Po kliknutí na odkaz dojde k přepnutí návrháře na rozšířené zobrazení <xref:System.Activities.Statements.Transition> nebo <xref:System.Activities.Statements.State>.|
+
+## <a name="see-also"></a>Viz také
+ [Přechod](../workflow-designer/transition-activity-designer.md) na [StateMachine](../workflow-designer/statemachine-activity-designer.md) [FinalState](../workflow-designer/finalstate-activity-designer.md)

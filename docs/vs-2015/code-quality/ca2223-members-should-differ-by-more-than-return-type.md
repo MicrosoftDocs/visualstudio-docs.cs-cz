@@ -1,5 +1,5 @@
 ---
-title: 'CA2223: Členy by se měly lišit o více než návratový typ | Dokumentace Microsoftu'
+title: 'CA2223: členy by se měly lišit o více než návratový typ | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,40 +12,40 @@ helpviewer_keywords:
 - MembersShouldDifferByMoreThanReturnType
 ms.assetid: eb326d9f-50d9-48cb-84be-d41c84a8fe09
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 6a460cd01d671d347e1cd126d009fe19e140cc69
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1fab269e8f583f8b55f52eb70a5a813450f8a184
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201596"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658896"
 ---
-# <a name="ca2223-members-should-differ-by-more-than-return-type"></a>CA2223: Členy by se měly lišit více než návratovým typem
+# <a name="ca2223-members-should-differ-by-more-than-return-type"></a>CA2223: Členy by se měly lišit o více než návratový typ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|MembersShouldDifferByMoreThanReturnType|
 |CheckId|CA2223|
-|Kategorie|Microsoft.Usage|
+|Kategorie|Microsoft. Usage|
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Dvě veřejné nebo chráněné členy mají podpisy, které jsou stejné s výjimkou návratovým typem.
+ Dva veřejné nebo chráněné členy mají signatury, které jsou stejné s výjimkou návratového typu.
 
 ## <a name="rule-description"></a>Popis pravidla
- I když se modul common language runtime umožňuje používat návratové typy k rozlišení mezi jinak identickými členy, tato funkce není v Common Language Specification ani je to běžná funkce programovacích jazycích rozhraní .NET. Když členové liší pouze návratovým typem, vývojáře a nástroje pro vývoj nemusí správně mezi nimi rozlišovat.
+ I když modul CLR (Common Language Runtime) umožňuje použití návratových typů k rozlišení mezi ostatními identickými členy, tato funkce není součástí specifikace CLS, ani není běžnou funkcí programovacích jazyků .NET. Pokud se členové liší jenom návratovým typem, vývojáři a vývojové nástroje nemusí mezi nimi správně rozlišovat.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, změňte návrh členů tak, aby byly jedinečné, pouze na základě jejich názvy a typy parametrů, nebo nezveřejňujte členy.
+ Chcete-li opravit porušení tohoto pravidla, změňte návrh členů tak, aby byly jedinečné v závislosti pouze na jejich názvech a typech parametrů, nebo nezveřejňujte členy.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje v jazyk Microsoft intermediate language (MSIL), typ, který porušuje tato pravidla. Všimněte si, že nelze toto pravidlo porušeno pomocí jazyka C# nebo Visual Basic .NET.
+ Následující příklad v jazyce MSIL (Microsoft Intermediate Language) zobrazuje typ, který toto pravidlo porušuje. Všimněte si, že toto pravidlo nelze narušit pomocí C# ani Visual Basic .NET.
 
 ```
 

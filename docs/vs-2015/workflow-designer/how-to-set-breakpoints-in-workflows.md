@@ -1,44 +1,42 @@
 ---
-title: 'Postupy: Nastavení zarážek v pracovních postupech | Dokumentace Microsoftu'
+title: 'Postupy: nastavení zarážek v pracovních postupech | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
 ms.topic: reference
 ms.assetid: e41b21c9-c061-4358-8e2f-eb5e412864a8
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 47d53ad2579ce24f6d5fde2503a0acc98b4f7f5c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 2d1bbb18a9015b52b3d65cb8f8fd02674693abc0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444126"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659142"
 ---
-# <a name="how-to-set-breakpoints-in-workflows"></a>Postupy: Nastavení zarážek v pracovních postupech
-Při použití [!INCLUDE[wfd1](../includes/wfd1-md.md)], můžete nastavit zarážky na grafické pracovních postupů, jako byste to udělali v kódu jazyka Visual Basic nebo C#. Podle očekávání, zastaví provádění pracovního postupu u každé zarážky, které jste nastavili.  
-  
- Zarážka má tři stavy: *Čekající*, *vázán*, a *chyba*. Pokud nastavíte zarážku, čeká na vyřízení a je reprezentována solid červenou ikonu. Při načítání pracovního postupu typu modulu runtime vázán. Pokud zadáte nesprávný formát pro zarážku, jako je například název aktivity, která není platná, zobrazí se okno aplikace chyba. Zarážka je přidána do okna zarážky, ale je označena s malým "x".  
-  
+# <a name="how-to-set-breakpoints-in-workflows"></a>Postupy: nastavení zarážek v pracovních postupech
+Když použijete [!INCLUDE[wfd1](../includes/wfd1-md.md)], můžete nastavit zarážky v grafických pracovních postupech tak, jak byste to provedete C# v Visual Basic nebo kódu. Jak bylo očekáváno, spuštění pracovního postupu se zastaví v každé zarážce, kterou jste nastavili.
+
+ Zarážka má tři stavy: *nevyřízené*, *vázané*a *chybové*. Při nastavení zarážky čeká na vyřízení a je reprezentována plnou červenou ikonou. Když modul runtime načetl typ pracovního postupu, bude se jednat o vazbu. Pokud zadáte nesprávný formát pro zarážku, například název aktivity, který není platný, zobrazí se chybové okno. Zarážka je stále přidána do okna zarážky, ale je označena malým znakem "x".
+
 > [!NOTE]
-> Nastavení zarážek v pracovních postupech, vyvolali se nepodporuje.  
-> 
+> Nastavení zarážek u vyvolaných pracovních postupů se nepodporuje.
+>
 > [!WARNING]
-> Ujistěte se, že vyberete možnost **povolit volbu pouze vlastní kód (pouze spravované)** z **nástroje**, **možnosti**, **ladění** nabídku před ladění. Pokud máte dvou sekvencí, které jsou vnořené uvnitř jiné pořadí a nastavit bod přerušení na první vnitřní pořadí, stisknutím klávesy **F11** nebude ladění do druhé vnitřní pořadí, pokud <strong>povolit volbu pouze vlastní kód (pouze spravované)</strong>možnost není vybraná.  
-> 
+> Než budete ladit, ujistěte se, že jste v nabídce **nástroje**, **Možnosti**, **ladění** vybrali možnost **Povolit pouze můj kód (pouze spravované)** . Pokud máte dvě sekvence vnořené v jiné sekvenci a nastavíte bod přerušení na první vnitřní sekvenci, klávesa **F11** se nebude ladit do druhé vnitřní sekvence, pokud není vybraná možnost <strong>Povolit pouze můj kód (pouze spravované)</strong>.
+>
 > [!WARNING]
-> V pracovním postupu nebudete získáte zarážky pokud úplná cesta k vlastnosti souboru XAML není přesné. Úplná cesta k souboru XAML není přesné po přesunutí projektu nebo řešení do jiné složky nebo do jiného počítače. Vyberte kombinaci kláves Ctrl + S uložte a aktualizujte vlastnost úplnou cestu.  
-  
-### <a name="to-set-a-breakpoint-on-an-activity-in-the-design-view"></a>Chcete-li nastavit zarážku pro aktivitu v návrhovém zobrazení  
-  
-1. Vyberte aktivitu má ladicí program na přerušení na.  
-  
-2. Na **ladění** nabídce vyberte možnost **Přepnout zarážku**. Červená ikona se zobrazí v levém horním okrajem aktivity.  
-  
-     Alternativně můžete také stisknout klávesovou zkratku **F9** klíče po výběru aktivity nebo je můžete klikněte pravým tlačítkem na aktivitu a vyberte **zarážku** pak **vložit zarážku**v místní nabídce.  
-  
-## <a name="see-also"></a>Viz také  
- [Postupy: Vyvolání ladicího programu pracovních postupů](../workflow-designer/how-to-invoke-the-workflow-debugger.md)   
- [Ladění pracovních postupů pomocí návrháře postupu provádění](../workflow-designer/debugging-workflows-with-the-workflow-designer.md)   
- [Postupy: Ladění XAML pomocí návrháře postupu provádění](../workflow-designer/how-to-debug-xaml-with-the-workflow-designer.md)
+> Zarážky v pracovním postupu se neobjeví, pokud je vlastnost Úplná cesta k souboru XAML nepřesná. Úplná cesta k souboru XAML není po přesunutí projektu nebo řešení do jiné složky nebo jiného počítače přesná. Vyberte CTRL + S a uložte a aktualizujte vlastnost Úplná cesta.
+
+### <a name="to-set-a-breakpoint-on-an-activity-in-the-design-view"></a>Nastavení zarážky u aktivity v zobrazení Návrh
+
+1. Vyberte aktivitu, na které má být ladicí program přerušen.
+
+2. V nabídce **ladění** vyberte možnost **Přepnout zarážku**. V levém horním rohu aktivity se zobrazí červená ikona.
+
+     Alternativně můžete také po výběru aktivity stisknout klávesu **F9** , nebo můžete kliknout pravým tlačítkem myši na aktivitu a vybrat **zarážku** a pak **Vložit zarážku** z kontextové nabídky.
+
+## <a name="see-also"></a>Viz také
+ [Postupy: volání pracovních postupů ladění ladicího programu pracovního postupu](../workflow-designer/how-to-invoke-the-workflow-debugger.md) [s Návrhář postupu provádění](../workflow-designer/debugging-workflows-with-the-workflow-designer.md) [postupy: ladění XAML pomocí Návrhář postupu provádění](../workflow-designer/how-to-debug-xaml-with-the-workflow-designer.md)

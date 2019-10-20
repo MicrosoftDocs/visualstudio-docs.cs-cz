@@ -1,42 +1,37 @@
 ---
-title: Součásti editoru XML | Dokumentace Microsoftu
+title: Komponenty editoru XML | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 417ec1ca-e2fa-4496-87cb-ac04c9f26741
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e3b07c7c1009b4f8c9f3d92ccb611e3b64319d19
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: dbbe5e1590cdc32f19c6c9131af629f97a75a6b7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65703267"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669470"
 ---
 # <a name="xml-editor-components"></a>Součásti editoru XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato část popisuje oken editoru XML a dialogových oknech. Protože editoru jazyka XML je založena na textový Editor, některé z integrovaného vývojového prostředí (IDE) je nakonfigurován pomocí obecných nastavení textového editoru.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Různé, XML, Textový editor, dialogové okno Možnosti](../xml-tools/miscellaneous-xml-text-editor-options-dialog-box.md)  
- Tento článek popisuje nastavení automatického dokončování a schéma pro Editor XML.  
-  
- [Vlastnosti dokumentu XML, okno Vlastnosti](../xml-tools/xml-document-properties-properties-window.md)  
- Popisuje informace o dokumentu, který je k dispozici.  
-  
- [Formátování, XML, Textový editor, dialogové okno Možnosti](../xml-tools/formatting-xml-text-editor-options-dialog-box.md)  
- Tento článek popisuje nastavení, které řídí, jak atributy jsou ve formátu, jak zvládnout smíšený obsah a tak dále.  
-  
- [Dialogové okno Schémata XML](../xml-tools/xml-schemas-dialog-box.md)  
- Popisuje postup výběru schématu XML. Chcete přidružit k dokumentu XML.  
-  
-## <a name="related-sections"></a>Související oddíly  
- [Postupy: Nastavení hlavního editoru](https://msdn.microsoft.com/704e4a7b-2162-4bed-8a47-f4f6ffec98c2)  
- Popisuje, jak nastavit obecných nastavení, jako je například zobrazení, dokončování příkazů a tak dále.  
-  
-## <a name="see-also"></a>Viz také  
+Tato část popisuje okna editorů a dialogových oken editoru XML. Vzhledem k tomu, že je editor XML založený na textovém editoru, některé integrované vývojové prostředí (IDE) je nakonfigurované pomocí obecného nastavení textového editoru.
+
+## <a name="in-this-section"></a>V tomto oddílu
+ [Různé, XML, textový editor, dialogové okno Možnosti](../xml-tools/miscellaneous-xml-text-editor-options-dialog-box.md) Popisuje nastavení automatického dokončování a schématu pro editor XML.
+
+ [Vlastnosti dokumentu XML, okno vlastností](../xml-tools/xml-document-properties-properties-window.md) Popisuje základní informace o dokumentu, které jsou k dispozici.
+
+ [Formátování, XML, textový editor, dialogové okno Možnosti](../xml-tools/formatting-xml-text-editor-options-dialog-box.md) Popisuje nastavení, která řídí formátování atributů, způsobu zpracování smíšeného obsahu a tak dále.
+
+ [Schéma XML – dialogové okno](../xml-tools/xml-schemas-dialog-box.md) Popisuje, jak vybrat schéma XML pro přidružení k dokumentu XML.
+
+## <a name="related-sections"></a>Související oddíly
+ [Postupy: nastavení obecných možností editoru](https://msdn.microsoft.com/704e4a7b-2162-4bed-8a47-f4f6ffec98c2) Popisuje, jak nastavit obecná nastavení, například zobrazení, dokončování příkazů a tak dále.
+
+## <a name="see-also"></a>Viz také
  [Editor XML](../xml-tools/xml-editor.md)

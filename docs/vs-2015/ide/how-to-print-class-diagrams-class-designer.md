@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Tisk diagramů tříd (návrhář tříd) | Dokumentace Microsoftu'
+title: 'Postupy: Tisk diagramů tříd (Návrhář tříd) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,29 +9,28 @@ helpviewer_keywords:
 - class diagrams, printing
 ms.assetid: 62c87425-3446-41fb-943c-1f86397883c8
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 98ee448c7e8bd2429f575aeb022a2a12e943bc1b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 318ae5314fe8a33e2c421c9532dafc08ceee3ca6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68144918"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651753"
 ---
-# <a name="how-to-print-class-diagrams-class-designer"></a>Postupy: Tisk diagramů tříd (návrhář tříd)
+# <a name="how-to-print-class-diagrams-class-designer"></a>Postupy: Tisk diagramů tříd
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete vytisknout diagram tříd pomocí funkce tisku sady Visual Studio.  
-  
-### <a name="to-print-a-class-diagram"></a>Tisk diagramu tříd  
-  
-1. Zobrazte diagram tříd. (V případě potřeby vyberte kartu diagram třídy zobrazíte ji.)  
-  
-2. Klikněte na tlačítko **tisk** na **souboru** nabídky.  
-  
-     Vytiskne celého diagramu tříd. Všimněte si, že může být potřeba upravit nastavení v dialogovém okně stránky instalační program pro tisk na odpovídající velikost.  
-  
-## <a name="see-also"></a>Viz také  
- [Postupy: Kopírování elementů diagramu tříd do dokumentu Microsoft Office (návrhář tříd)](../ide/how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer.md)   
- [Postupy: Export diagramů tříd jako obrázků (Návrhář tříd)](../ide/how-to-export-class-diagrams-as-images-class-designer.md)
+Diagram třídy lze vytisknout pomocí funkce Print v aplikaci Visual Studio.
+
+### <a name="to-print-a-class-diagram"></a>Tisk diagramu tříd
+
+1. Zobrazení diagramu tříd. (Pokud je to nutné, vyberte kartu diagram tříd k zobrazení.)
+
+2. V nabídce **soubor** klikněte na **Tisk** .
+
+     Vytiskne se celý diagram tříd. Všimněte si, že možná budete muset upravit nastavení v dialogovém okně nastavení stránky, aby se vytiskla vhodná velikost.
+
+## <a name="see-also"></a>Viz také
+ [Postupy: kopírování elementů diagramu tříd do dokumentu systém Microsoft Office (návrhář tříd)](../ide/how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer.md) [Postupy: Export diagramů tříd jako obrázků (návrhář tříd)](../ide/how-to-export-class-diagrams-as-images-class-designer.md)

@@ -1,5 +1,5 @@
 ---
-title: Popis toku řízení pomocí fragmentů v sekvenčních diagramech UML | Dokumentace Microsoftu
+title: Popis toku řízení pomocí fragmentů v sekvenčních diagramech UML | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -14,123 +14,121 @@ helpviewer_keywords:
 - sequence diagrams, control flow
 ms.assetid: efcc0949-be7e-4cf4-99ef-47c36b3803ae
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c296be2e3a00efcdf48bdd6e4442e88fc32b3695
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 40f48891107c2eb3250b6b050e00c3650812d386
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63422542"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669819"
 ---
 # <a name="describe-control-flow-with-fragments-on-uml-sequence-diagrams"></a>Popis toku řízení pomocí fragmentů v sekvenčních diagramech UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V sekvenčním diagramu UML *kombinované fragmenty* umožňují zobrazit smyčky, větve a další možnosti.  
-  
- Do kombinovaného fragmentu se skládá z jedné nebo více *interakce operandy*, a každá z těchto obklopuje jeden nebo více zpráv, interakcí nebo kombinované fragmenty.  
-  
+*Kombinované fragmenty* v sekvenčním diagramu UML umožňují zobrazit cykly, větve a další alternativy.
+
+ Kombinovaný fragment se skládá z jednoho nebo více *operandů interakce*a každý z nich obsahuje jednu nebo více zpráv, interakce používá nebo kombinované fragmenty.
+
 > [!NOTE]
-> Toto téma se věnuje fragmentů v sekvenčních diagramech. Další informace o tom, jak číst sekvenčních diagramech UML, naleznete v tématu [UML Sequence Diagrams: Referenční dokumentace](../modeling/uml-sequence-diagrams-reference.md). Další informace o tom, jak nakreslit sekvenční diagramy UML, naleznete v tématu [UML Sequence Diagrams: Pokyny pro](../modeling/uml-sequence-diagrams-guidelines.md).  
-  
- ![Kombinované Fragment používá dva operandy interakce](../modeling/media/uml-seqfragments.png "UML_SeqFragments")  
-  
- Prvky zobrazené na obrázku jsou následující.  
-  
-1. Do kombinovaného fragmentu. Existuje několik druhů kombinované fragmenty. V tomto příkladu je Alt kombinovaného fragmentu, což vám umožní zobrazit, že může dojít, alternativní pořadí zpráv.  
-  
-2. Operandy interakce. Každý kombinovaného fragmentu obsahuje alespoň jeden operand interakce, které mohou obsahovat zprávy, interakcí a menší kombinované fragmenty. V tomto příkladu kombinaci kláves Alt fragment má dvě operace interakce zobrazující dvě alternativní pořadí zpráv.  
-  
-3. Operandem interakce můžete vybrat samostatně kliknutím dovnitř. V tomto příkladu je vybraná operand nejvyšší interakce, tak, aby uvidíte jeho hranice. Obvykle je viditelná pouze zřejmý mezi operandy interakce.  
-  
+> Toto téma se týká fragmentů v sekvenčních diagramech. Další informace o tom, jak číst sekvenční diagramy UML, najdete v tématu [sekvenční diagramy UML: referenční informace](../modeling/uml-sequence-diagrams-reference.md). Další informace o vykreslování sekvenčních diagramů UML najdete v tématu [sekvenční diagramy UML: pokyny](../modeling/uml-sequence-diagrams-guidelines.md).
+
+ ![Kombinovaný fragment se dvěma operandy interakce](../modeling/media/uml-seqfragments.png "UML_SeqFragments")
+
+ Prvky zobrazené na obrázku jsou následující.
+
+1. Kombinovaný fragment. Existuje několik druhů kombinovaných fragmentů. V tomto příkladu je Kombinovaný fragment kombinace kláves ALT, který můžete použít k zobrazení, zda mohou nastat alternativní posloupnosti zpráv.
+
+2. Operandy interakce. Každý Kombinovaný fragment obsahuje alespoň jeden operand interakce, který může obsahovat zprávy, použití interakce a menší kombinované fragmenty. V tomto příkladu má Kombinovaný fragment ALT dvě operace interakce, které zobrazují dvě alternativní posloupnosti zpráv.
+
+3. Jednotlivé operandy interakce můžete vybrat samostatně kliknutím dovnitř. V tomto příkladu je vybrána horní operand interakce, aby bylo možné zobrazit jeho hranici. Obvykle je viditelný pouze dělicí čára mezi operandy interakce.
+
     > [!NOTE]
-    > Vyberte horní interakce operand, že nesmí kliknete na tlačítko Zavřít příliš do horní části kombinovaného fragmentu.  
-  
-4. Chrání. Operandem interakce může poskytnout ochranu. Popisuje podmínky, pod kterým bude provedena zprávy uvnitř operand interakce.  
-  
-## <a name="creating-combined-fragments"></a>Vytvoření kombinované fragmenty  
- Seznam typů fragment můžete vytvořit, naleznete v tématu [typy kombinovat Fragment](#KindsOfFragment).  
-  
-#### <a name="to-create-a-combined-fragment"></a>K vytvoření kombinovaného fragmentu  
-  
-1. Vyberte jednu zprávu nebo s posloupností zpráv, všechny začíná stejné výskyt životnosti nebo spuštění.  
-  
+    > Chcete-li vybrat horní operand interakce, nemusíte kliknout na horní část kombinovaného fragmentu.
+
+4. Chrání. Každému operandu interakce můžete dát ochranu. Popisuje podmínku, pod kterou budou provedeny zprávy uvnitř operandu interakce.
+
+## <a name="creating-combined-fragments"></a>Vytváření kombinovaných fragmentů
+ Seznam druhů fragmentů, které můžete vytvořit, najdete v tématu [typy kombinovaného fragmentu](#KindsOfFragment).
+
+#### <a name="to-create-a-combined-fragment"></a>Vytvoření kombinovaného fragmentu
+
+1. Vyberte jednu zprávu nebo posloupnost zpráv, které začínají stejnou životností nebo výskytem spuštění.
+
    > [!NOTE]
-   > Pokud vyberete více než jedna zpráva, že musí tvořit bez přerušení pořadí.  
-  
-2. Klikněte pravým tlačítkem na zprávy, přejděte na **obklopit fragmentem**a potom klikněte na typ kombinovaného fragmentu, můžete se například **Alt kombinovat Fragment**.  
-  
-    Zobrazí se nové kombinovaného fragmentu. Určuje typ, který jste vybrali, jako například kombinovaného fragmentu záhlaví **Alt**.  
-  
-    Uvnitř kombinovaného fragmentu je fragment, která obsahuje zprávy, které jste vybrali.  
-  
-   Můžete přidat další interakce operandy pro některé druhy kombinovaného fragmentu.  
-  
-   Po změně uspořádání zpráv do kombinovaného fragmentu, zvolte **změnit uspořádání rozložení** v místní nabídce pro změnu velikosti kombinovaného fragmentu rámce.  
-  
-#### <a name="to-add-a-new-interaction-operand-to-a-combined-fragment"></a>Chcete-li přidat nový operand interakce do kombinovaného fragmentu  
-  
-1. Klikněte pravým tlačítkem na prázdné místo uvnitř operand interakce (2), mimo všechny obsažené fragment a pod nadpisem kombinovaného fragmentu.  
-  
-2. Přejděte na **přidat**.  
-  
-3. Klikněte na tlačítko **interakce Operand před**, nebo **Operand interakce po**.  
-  
-4. Můžete taky přidat zprávy uvnitř nové operand interakce pomocí nástrojů, zprávy, nebo zkopírováním a vložením existující zprávy.  
-  
-   Můžete nastavit **Guard** vlastnost operand interakce popisují podmínky, ve kterých se provádějí zprávy dovnitř. Například v **smyčky** kombinovat fragment, vám pomůže ochranného zařízení zadat podmínky, během které smyčky pokračuje. V **Alt** kombinovat fragment, můžete zadat samostatné podmínku pro každý operand interakce.  
-  
-#### <a name="to-set-the-guard-of-an-interaction-operand"></a>Chcete-li nastavit guard operand interakce  
-  
-1. Klikněte do prázdného místa v operandu interakce (2), mimo všechny obsažené fragment.  
-  
-    Ohraničení výběru se zobrazí kolem operand interakce a kolem podmínku.  
-  
-    Záhlaví **vlastnosti** okno zobrazuje **interakce Operand**.  
-  
-2. Zadejte podmínku.  
-  
-    Podmínka se zobrazí v horní části fragmentu (4).  
-  
-   Můžete nastavit vlastnosti některé druhy kombinované fragmenty.  
-  
-#### <a name="to-set-or-view-the-properties-of-a-combined-fragment"></a>Nastavit nebo zobrazit vlastnosti kombinovaného fragmentu  
-  
-- Klikněte pravým tlačítkem na název kombinovaného fragmentu a potom klikněte na tlačítko **vlastnosti**.  
-  
+   > Pokud vyberete více než jednu zprávu, musí vytvořit nepřerušovanou sekvenci.
+
+2. Klikněte pravým tlačítkem myši na jednu ze zpráv, ukažte na možnost **prostorový s**a pak klikněte na druh kombinovaného fragmentu, který chcete, jako je například kombinace **kombinace kláves ALT**.
+
+    Zobrazí se nový Kombinovaný fragment. Nadpis označuje druh kombinovaného fragmentu, který jste vybrali, například **ALT**.
+
+    Uvnitř kombinovaného fragmentu je k dispozici fragment obsahující zprávy, které jste vybrali.
+
+   K některým druhům kombinovaného fragmentu můžete přidat další operandy interakce.
+
+   Po změně uspořádání zpráv v rámci kombinovaného fragmentu vyberte možnost změnit **uspořádání rozložení** v místní nabídce, aby se změnila velikost kombinovaného rámce fragmentu.
+
+#### <a name="to-add-a-new-interaction-operand-to-a-combined-fragment"></a>Přidání nového operandu interakce do kombinovaného fragmentu
+
+1. Klikněte pravým tlačítkem myši na prázdné místo v rámci operandu interakce (2), mimo libovolný obsažený fragment a pod nadpisem kombinovaného fragmentu.
+
+2. Přejděte na **Přidat**.
+
+3. Klikněte na **operand interakce před**nebo **operand interakce po**.
+
+4. Do nového operandu interakce můžete přidat zprávy pomocí nástrojů pro zprávy nebo zkopírováním a vložením existujících zpráv.
+
+   Vlastnost **Guard** operandu interakce můžete nastavit tak, aby popsala podmínky, za kterých se zprávy uvnitř nich provádějí. Například v kombinovaných fragmentech **smyčky** můžete použít Guard k určení podmínky, během které smyčka pokračuje. V kombinovaném fragmentu **ALT** můžete zadat samostatnou podmínku pro každý operand interakce.
+
+#### <a name="to-set-the-guard-of-an-interaction-operand"></a>Nastavení ochrany operandu interakce
+
+1. Klikněte na prázdné místo uvnitř operandu interakce (2), mimo libovolný obsažený fragment.
+
+    Kolem operandu interakce se zobrazí ohraničení výběru a kolem podmínky Guard.
+
+    Nadpis v okně **vlastnosti** zobrazuje **operand interakce**.
+
+2. Zadejte podmínku Guard.
+
+    Podmínka se zobrazí u horní části fragmentu (4).
+
+   Můžete nastavit vlastnosti některých druhů kombinovaných fragmentů.
+
+#### <a name="to-set-or-view-the-properties-of-a-combined-fragment"></a>Nastavení nebo zobrazení vlastností kombinovaného fragmentu
+
+- Klikněte pravým tlačítkem na název kombinovaného fragmentu a pak klikněte na **vlastnosti**.
+
     > [!NOTE]
-    > Různé druhy kombinovaného fragmentu mají různé vlastnosti.  
-  
-## <a name="KindsOfFragment"></a> Druhy kombinovaného fragmentu  
-  
-### <a name="fragments-describing-control-flow"></a>Fragmenty popis toku řízení  
- Jednoduchý sekvenční diagram ukazuje pouze jeden typická posloupnost. Následující typy kombinované fragmenty slouží k popisu změn, které mohou nastat v různých případech.  
-  
-|Typ fragmentu|Popis|  
-|-------------------|-----------------|  
-|**Odhlásit se**|Volitelné. Vloží sekvenci, která můžou nebo nemusí dojít. Můžete určit, v guard, podmínky, ve kterém se vyskytuje.|  
-|**ALT**|Obsahuje seznam fragmenty, které obsahují alternativní pořadí zpráv. Pouze jeden posloupnost ve všech případech mohou oprávnění.<br /><br /> Ochranu můžete umístit v každém fragmentu k označení, za jakých podmínek můžete spustit. Ochranu z **else** označuje fragment, který se má spustit žádné guard má hodnotu true. Pokud jsou všechny chrání false a není žádná **else**, potom žádný fragmentů spustí.|  
-|**smyčka**|Fragment zopakuje některé počtu opakování. V ochranného zařízení můžete určit podmínky, pod kterou by měla opakovat.<br /><br /> Smyčka kombinované fragmenty mít vlastnosti **Min** a **maximální**, který udává minimální a maximální počet případů, kdy se fragment můžete opakovat. Výchozí hodnota je bez omezení.|  
-|**Konec**|Pokud se provádí tento fragment, opuštění zbývající části sekvence. Ochranného zařízení můžete použít k označení stavu, ve kterém dojde k přerušení.|  
-|**Pamětích**|Paralelní. Události v tyto fragmenty mohou být prokládané.|  
-|**Kritická**|Použít v rámci pamětích nebo Seq fragment. Označuje, že zprávy v tomto fragmentu nesmí být proloženy další zprávy.|  
-|**SEQ**|Existují dva nebo více fragmentů operand. Zprávy týkající se stejnou životnost se musí vyskytovat v pořadí tyto fragmenty. Tam, kde nezahrnují stejné životnosti, zprávy z různých fragmenty mohou být prokládané paralelně.|  
-|**Striktní**|Existují dva nebo více fragmentů operand. Tyto fragmenty se musí objevit v daném pořadí.|  
-  
-### <a name="fragments-about-how-to-interpret-the-sequence"></a>Fragmenty o tom, jak interpretovat sekvence  
- Ve výchozím nastavení oznámením sekvenční diagram řadu zprávy, které se může stát. Další zprávy v systému, může stát, že jste se rozhodli zobrazit v diagramu.  
-  
- Chcete-li změnit toto vyhodnocení je možné následující typy fragment.  
-  
-|Typ fragmentu|Popis|  
-|-------------------|-----------------|  
-|**Vezměte v úvahu**|Určuje seznam zpráv, které popisuje tento fragment. Další zprávy může dojít v běžící systém, ale nejsou důležité pro účely tohoto popisu.<br /><br /> Zadejte v seznamu **zprávy** vlastnost.|  
-|**Ignorovat**|Seznam zpráv, které tento fragment nepopisuje. Může dojít v běžící systém, ale nejsou důležité pro účely tohoto popisu.<br /><br /> Zadejte v seznamu **zprávy** vlastnost.|  
-|**Kontrolní výraz**|Operand fragment určuje pouze platné pořadí. Obvykle se používá v rámci fragment zvažte nebo ignorovat.|  
-|**záporné**|Pořadí uvedené v tomto fragmentu nesmí dojít. Obvykle se používá v rámci fragment zvažte nebo ignorovat.|  
-  
-## <a name="see-also"></a>Viz také  
- [Sekvenční diagramy UML: Pokyny](../modeling/uml-sequence-diagrams-guidelines.md)   
- [Sekvenční diagramy UML: Referenční dokumentace](../modeling/uml-sequence-diagrams-reference.md)   
- [Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md)
+    > Různé druhy kombinovaného fragmentu mají různé vlastnosti.
+
+## <a name="KindsOfFragment"></a>Druhy kombinovaného fragmentu
+
+### <a name="fragments-describing-control-flow"></a>Fragmenty popisující tok řízení
+ Jednoduchý sekvenční diagram zobrazuje jenom jednu typickou sekvenci. Pomocí následujících typů kombinovaných fragmentů můžete popsat variace, ke kterým může dojít v různých případech.
+
+|Typ fragmentu|Popis|
+|-------------------|-----------------|
+|**Přihlásit**|Volitelné. Vloží sekvenci, která může nebo nemusí nastat. V poli Guard můžete určit podmínku, za kterou dojde.|
+|**ALT**|Obsahuje seznam fragmentů, které obsahují alternativní posloupnosti zpráv. V některých případech dojde pouze k jedné sekvenci.<br /><br /> Do každého fragmentu můžete umístit Guard, abyste označili, pod jakým podmíněným stavem může běžet. Guard **Else** označuje fragment, který by se měl spustit, pokud žádné jiné Guard neplatí. Pokud jsou všechny ochranné kryty nepravdivé a neexistují žádné **Další**, nespustí se žádné z fragmentů.|
+|**Procházet**|Fragment se několikrát opakuje. V poli Guard můžete určit podmínku, pod kterou by se měla opakovat.<br /><br /> Kombinované fragmenty smyčky mají vlastnosti **minimum** a **Maximum**, které označují minimální a maximální počet pokusů, kolikrát může být fragment opakován. Výchozí hodnota není nijak omezena.|
+|**Rozdělován**|Pokud se tento fragment spustí, zbývající část sekvence se odopustila. Můžete použít Guard k označení podmínky, ve které dojde k přerušení.|
+|**Nemají**|Zpracování. Události v fragmentech je možné pronechávat.|
+|**Kritické**|Používá se v rámci fragmentu par nebo Seq. Označuje, že zprávy v tomto fragmentu nesmí být prokládané s ostatními zprávami.|
+|**SEQ**|Existují dva nebo více fragmentů operandů. Zprávy týkající se stejné životnosti se musí nacházet v pořadí fragmentů. Pokud nezahrnují stejné životnosti, mohou být zprávy z různých fragmentů prokládané paralelně.|
+|**Zásadní**|Existují dva nebo více fragmentů operandů. Fragmenty musí nastat v uvedeném pořadí.|
+
+### <a name="fragments-about-how-to-interpret-the-sequence"></a>Fragmenty o tom, jak interpretovat sekvenci
+ Sekvenční diagram ve výchozím nastavení uvádí řadu zpráv, ke kterým může dojít. V běžícím systému se další zprávy mohou vyskytnout, že jste se nerozhodli zobrazit v diagramu.
+
+ Ke změně této interpretace lze použít následující typy fragmentů.
+
+|Typ fragmentu|Popis|
+|-------------------|-----------------|
+|**Byste**|Určuje seznam zpráv, které tento fragment popisuje. V běžícím systému se můžou vyskytovat další zprávy, ale pro účely tohoto popisu nejsou významné.<br /><br /> Zadejte seznam do vlastnosti **Messages** .|
+|**Ohled**|Seznam zpráv, které tento fragment nepopisuje. Mohou nastat ve spuštěném systému, ale nejsou významné pro účely tohoto popisu.<br /><br /> Zadejte seznam do vlastnosti **Messages** .|
+|**Uplatňuje**|Fragment operandu určuje pouze platné sekvence. Obvykle se používá v rámci typu "vzít" nebo ignorovat fragment.|
+|**Výdej**|Sekvence zobrazená v tomto fragmentu nesmí nastat. Obvykle se používá v rámci typu "vzít" nebo ignorovat fragment.|
+
+## <a name="see-also"></a>Viz také
+ [Sekvenční diagramy UML: pokyny](../modeling/uml-sequence-diagrams-guidelines.md) pro [sekvenční diagramy UML: referenční informace](../modeling/uml-sequence-diagrams-reference.md) k [úpravám modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md)

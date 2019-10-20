@@ -5,17 +5,17 @@ ms.date: 07/11/2018
 ms.topic: reference
 helpviewer_keywords:
 - F# features [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: fef50748942aaa800cf1181e4c8f8b8a030f99ee
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 176504ceb7c80a36028e7d5f1806aa598cdf708e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211312"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645369"
 ---
 # <a name="develop-with-visual-f-in-visual-studio"></a>Vývoj s využitím vizuálu F# v aplikaci Visual Studio
 
@@ -23,7 +23,7 @@ Tento článek obsahuje informace o funkcích sady Visual Studio F# pro vývoj.
 
 ## <a name="install-f-support"></a>Instalace F# podpory
 
-Pro vývoj v F# nástroji v aplikaci Visual Studio nejprve nainstalujte úlohu **vývoj pro desktopy .NET** , pokud jste to ještě neudělali. Úlohy sady Visual Studio nainstalujete prostřednictvím instalační program pro Visual Studio, které můžete otevřít tak, že vyberete **nástroje** > **získat nástroje a funkce**.
+Pro vývoj v F# nástroji v aplikaci Visual Studio nejprve nainstalujte úlohu **vývoj pro desktopy .NET** , pokud jste to ještě neudělali. Úlohy sady Visual Studio nainstalujete prostřednictvím Instalační program pro Visual Studio, které můžete otevřít tak, že vyberete **nástroje**  > **získat nástroje a funkce**.
 
 ![Úloha vývoj desktopových aplikací .NET v aplikaci Visual Studio](media/dotnet-desktop-development-workload.png)
 
@@ -72,9 +72,9 @@ Následující tabulka shrnuje funkce ve vlastnostech projektu pro F#:
 
 Následující tabulka shrnuje nastavení specifická pro F#:
 
-|Stránka Návrháře projektu|Nastavení|Popis|
+|Stránka Návrháře projektu|Nastavením|Popis|
 | - |-------|-----------|
-|Sestavení|Generovat volání funkce tail|Pokud je tato možnost vybrána, umožňuje použití instrukce koncového jazyka MSIL (Microsoft Intermediate Language). To způsobí, že bude rámec zásobníku znovu použit pro funkce tail. Ekvivalent možnosti kompilátoru `--tailcalls` .|
+|Sestavení|Generovat volání funkce tail|Pokud je tato možnost vybrána, umožňuje použití instrukce koncového jazyka MSIL (Microsoft Intermediate Language). To způsobí, že bude rámec zásobníku znovu použit pro funkce tail. Odpovídá možnosti kompilátoru `--tailcalls`.|
 |Sestavení|Další příznaky|Umožňuje zadat další možnosti příkazového řádku kompilátoru.|
 
 ## <a name="code-and-text-editor-features"></a>Funkce kódu a textového editoru
@@ -98,13 +98,13 @@ V F#nástroji jsou podporovány následující funkce editoru kódu a textu sady
 |Převést na tabulátory|Převede mezery na tabulátory.|Ano|
 |Zabarvení typu|Zobrazuje názvy definovaných typů ve speciální barvě.|Ano|
 |Rychlé hledání. Viz okno rychlé hledání, najít a nahradit.|Umožňuje vyhledávat v souboru nebo v projektu.|Ano|
-|+Přejít na definici**kliknutím** CTRL|Umožňuje podržet **klávesu CTRL** a kliknout na F# symbol a vyvolat přejít k definici.|Ano|
+|**Ctrl** +**kliknutím** přejít k definici|Umožňuje podržet **klávesu CTRL** a kliknout na F# symbol a vyvolat přejít k definici.|Ano|
 |Přejít k definici z QuickInfo|Klikněte na symboly v popiscích, které vyvolávají přejít k definici.|Ano|
-|Přejít na vše|Umožňuje globální, přibližné a navigační navigace pro všechny F# konstrukce prostřednictvím **CTRL**+**T**.|Ano|
+|Přejít na vše|Umožňuje globální, přibližné a navigační navigace pro všechny F# konstrukce prostřednictvím **CTRL** +**t**.|Ano|
 |Přejmenování na řádku|Přejmenuje všechny výskyty vloženého symbolu.|Ano|
 |Najít všechny odkazy|Vyhledá všechny výskyty symbolu v základu kódu.|Ano|
 |Zjednodušení opravy názvu kódu|Odebere nepotřebné kvalifikátory F# pro symboly.|Ano|
-|Odebrat opravu `open` nepoužívaného kódu příkazu|Odebere všechny nepotřebné `open` příkazy v dokumentu.|Ano|
+|Odebrat nepoužitou opravu kódu příkazu `open`|Odebere všechny nepotřebné `open` příkazy v dokumentu.|Ano|
 |Oprava kódu nepoužité hodnoty|Navrhuje přejmenovat nepoužitý identifikátor na podtržítko.|Ano|
 
 Obecné informace o úpravách kódu v aplikaci Visual Studio a funkcích textového editoru naleznete [v tématu Write code in the Editor](writing-code-in-the-code-and-text-editor.md).
@@ -118,8 +118,8 @@ Následující tabulka shrnuje podporované funkce IntelliSense a nepodporuje je
 |Automaticky implementovat rozhraní|Generuje zástupné kódy kódu pro metody rozhraní.|Ano|
 |Fragmenty kódu|Vloží kód z knihovny běžných kódových konstrukcí do témat.|Ne|
 |Dokončit slovo|Ukládá text tak, že při psaní dokončí slova a jména.|Ano|
-|Automatické dokončování|Když je tato možnost povolená, způsobí, že při psaní se při psaní slova vybere první shoda, a ne čekání na výběr jednoho nebo**více kláves** **CTRL**+.|Ano|
-|Nabídka dokončování symbolů v neotevřených oborech názvů|Při automatickém dokončení je navržen odpovídající symbol, který je umístěn v neotevřeném oboru názvů, nabídka k dokončení s odpovídajícím `open` příkazem, pokud je vybrána možnost.|Ano|
+|Automatické dokončování|Když je tato možnost povolená, způsobí, že při psaní se při psaní slovo dokončí, takže se nebudete muset v případě, že vyberete jednu, nebo stisknout **Ctrl** +**MEZERNÍK**.|Ano|
+|Nabídka dokončování symbolů v neotevřených oborech názvů|Při automatickém dokončení je navržen odpovídající symbol, který je umístěn v neotevřeném oboru názvů, nabídka k dokončení s odpovídajícím příkazem `open`, pokud je vybrána možnost.|Ano|
 |Generovat elementy kódu|Umožňuje generovat kód zástupné procedury pro nejrůznější konstrukce.|Ne|
 |Vypsat členy|Když zadáte operátor přístupu ke členu (.), zobrazí se členové pro typ.|Ano|
 |Uspořádat pomocí/otevřít|Uspořádá obory názvů odkazované příkazy **pomocí** příkazů C# nebo direktiv **Open** v F#.|Ne|
@@ -144,7 +144,7 @@ Následující tabulka shrnuje funkce, které jsou k dispozici při ladění F# 
 |Místní hodnoty – okno|Zobrazuje místně definované hodnoty a proměnné.|Ano|
 |Spustit ke kurzoru|Umožňuje spustit kód až do chvíle, kdy je dosaženo řádku obsahujícího kurzor.|Ano|
 |Krokovat s vnořením|Umožňuje pokračovat v provádění a přesun do libovolného volání funkce.|Ano|
-|Krok přes|Umožňuje provést předběžné spuštění v aktuálním bloku zásobníku a přesunout minulé volání funkce.|Ano|
+|Krokovat|Umožňuje provést předběžné spuštění v aktuálním bloku zásobníku a přesunout minulé volání funkce.|Ano|
 
 Obecné informace o ladicím programu sady Visual Studio naleznete [v tématu ladění v aplikaci Visual Studio](../debugger/index.yml).
 

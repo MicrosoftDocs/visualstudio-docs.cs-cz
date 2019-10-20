@@ -1,45 +1,45 @@
 ---
-title: Návrhář postupu provádění – Návrhář aktivity TransactionScope
+title: Návrhář aktivity Návrhář postupu provádění-TransactionScope
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.TransactionScope.UI
 ms.assetid: 8d7ebfc6-7478-4888-b3b0-b14f296096af
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e84312518c19ef2a041091c5e2439dd7fb312c69
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b5d557fb91c52c33022a161bada169d4332bac6b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62433965"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649824"
 ---
 # <a name="transactionscope-activity-designer"></a>Návrhář aktivity TransactionScope
 
-**TransactionScope** Návrhář aktivity se používá k vytvoření a konfigurace <xref:System.Activities.Statements.TransactionScope> aktivity.
+Návrhář aktivity **TransactionScope** slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.TransactionScope>.
 
-## <a name="the-transactionscope-activity"></a>Aktivity TransactionScope
+## <a name="the-transactionscope-activity"></a>Aktivita TransactionScope
 
-<xref:System.Activities.Statements.TransactionScope> Aktivity spustí obsaženou aktivitu v rámci jedné transakce. Potvrzení transakce, kdy <xref:System.Activities.Statements.TransactionScope.Body%2A> aktivity a všechny ostatní účastníci transakce byly úspěšně dokončeny.
+Aktivita <xref:System.Activities.Statements.TransactionScope> spustí obsaženou aktivitu v jedné transakci. Transakce se potvrdí po úspěšném dokončení aktivity <xref:System.Activities.Statements.TransactionScope.Body%2A> a všech ostatních účastníků v transakci.
 
-### <a name="using-the-transactionscope-activity-designer"></a>Pomocí návrháře aktivity TransactionScope
+### <a name="using-the-transactionscope-activity-designer"></a>Pomocí návrháře aktivit TransactionScope
 
-Přístup **TransactionScope** návrháře aktivit v **transakce** kategorii **nástrojů**. **TransactionScope** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřadit na povrch návrháře postupu provádění bez ohledu na to aktivity jsou obvykle umístěny, například jako uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří <xref:System.Activities.Statements.TransactionScope> aktivity s výchozím <xref:System.Activities.Activity.DisplayName%2A> TransactionScope. <xref:System.Activities.Activity.DisplayName%2A> Hodnota se dá upravit v záhlaví **TransactionScope** Návrhář aktivity nebo **DisplayName** pole mřížku vlastností.
+Přihlaste se k Návrháři aktivit **TransactionScope** v kategorii **transakce** sady **nástrojů**. Návrhář aktivity **TransactionScope** lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu všude, kde jsou obvykle umístěny aktivity, například uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří aktivita <xref:System.Activities.Statements.TransactionScope> s výchozím <xref:System.Activities.Activity.DisplayName%2A> objektu TransactionScope. Hodnotu <xref:System.Activities.Activity.DisplayName%2A> lze upravit v záhlaví návrháře aktivit **TransactionScope** nebo v poli **DisplayName** v mřížce vlastností.
 
 ### <a name="the-transactionscope-properties"></a>Vlastnosti objektu TransactionScope
 
-Následující tabulka ukazuje <xref:System.Activities.Statements.TransactionScope> vlastnosti a popisuje, jak se používají v návrháři. <xref:System.Activities.Activity.DisplayName%2A> a <xref:System.Activities.Statements.TransactionScope.Body%2A> na plochu návrháře postupu provádění můžete upravit vlastnosti. Ale další vlastnosti nutné upravit v mřížce vlastností.
+V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.TransactionScope> a popisuje, jak se používají v návrháři. Vlastnosti <xref:System.Activities.Activity.DisplayName%2A> a <xref:System.Activities.Statements.TransactionScope.Body%2A> lze upravovat na Návrhář postupu provádění povrchu. Ostatní vlastnosti však musí být upraveny v mřížce vlastností.
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Volitelné jméno <xref:System.Activities.Statements.TransactionScope> aktivity. Výchozí hodnota je objekt TransactionScope. I když <xref:System.Activities.Activity.DisplayName%2A> hodnota není bezpodmínečně nutné, je osvědčeným postupem je použití jednoho.|
-|<xref:System.Activities.Statements.TransactionScope.Body%2A>|Pravda|Určuje aktivity ke spuštění v rámci jedné transakce. Chcete-li přidat <xref:System.Activities.Statements.TransactionScope.Body%2A> aktivity, rozevírací aktivitu z **nástrojů** do **text** pole na **TransactionScope** Návrhář aktivity s text nápovědy "přetáhněte aktivitu sem".|
-|<xref:System.Activities.Statements.TransactionScope.IsolationLevel%2A>|Pravda|Určuje, <xref:System.Transactions.IsolationLevel> to <xref:System.Activities.Statements.TransactionScope>.|
-|<xref:System.Activities.Statements.TransactionScope.Timeout%2A>|False|Určuje dobu (ve formátu jako 00:00:00, který označuje hodiny: minuty: sekundy), který má k dokončení transakce. Výchozí hodnota je 1 minuta (00: 01:00).|
-|[System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure](https://msdn.microsoft.com/library/system.activities.statements.transactionscope.abortinstanceontransactionfailure.aspx)|Pravda|Určuje hodnotu, která určuje, zda pracovní postup by měl být zrušen Pokud přerušení transakce.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Volitelný popisný název aktivity <xref:System.Activities.Statements.TransactionScope>. Výchozím nastavením je objekt TransactionScope. I když hodnota <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutná, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.TransactionScope.Body%2A>|Podmínka|Určuje aktivitu, která má být spuštěna v rámci jedné transakce. Chcete-li přidat aktivitu <xref:System.Activities.Statements.TransactionScope.Body%2A>, přetáhněte aktivitu ze **sady nástrojů** do pole **text** v Návrháři aktivity **TransactionScope** pomocí textu nápovědy "Sem přetáhněte aktivitu".|
+|<xref:System.Activities.Statements.TransactionScope.IsolationLevel%2A>|Podmínka|Určuje <xref:System.Transactions.IsolationLevel> pro tento <xref:System.Activities.Statements.TransactionScope>.|
+|<xref:System.Activities.Statements.TransactionScope.Timeout%2A>|False|Určuje časový interval (formátovaný jako 00:00:00, který označuje hodiny: minuty: sekundy), po kterou musí být transakce dokončena. Výchozí hodnota je 1 minuta (00:01:00).|
+|[System. Activities. Statements. TransactionScope. AbortInstanceOnTransactionFailure](https://msdn.microsoft.com/library/system.activities.statements.transactionscope.abortinstanceontransactionfailure.aspx)|Podmínka|Určuje hodnotu, která určuje, zda má být pracovní postup přerušen v případě přerušení transakce.|
 
 ## <a name="see-also"></a>Viz také:
 

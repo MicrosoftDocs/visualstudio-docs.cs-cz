@@ -12,54 +12,54 @@ helpviewer_keywords:
 - application architecture
 - architecture [Visual Studio ALM], modeling
 - application modeling
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be731ea81baaaa6e9f04b7546bc26ccea0549389
-ms.sourcegitcommit: 6a19c5ece38a70731496a38f2ef20676ff18f8a4
+ms.openlocfilehash: f669b8e0b737aa945641d1e7a32c7c05bee3c711
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476634"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654345"
 ---
 # <a name="analyze-and-model-your-architecture"></a>Analýza a modelování vaší architektury
 
-Zajistěte, aby že vaše aplikace splňuje požadavky na architekturu pomocí sady Visual Studio architektura a modelování nástroje pro návrh a modelování vaší aplikace.
+Zajistěte, aby vaše aplikace splňovala požadavky na architekturu pomocí architektury sady Visual Studio a nástrojů pro modelování pro návrh a modelování vaší aplikace.
 
-* Snadněji pochopit stávající kód programu pomocí sady Visual Studio můžete vizualizovat strukturu kódu, chování a vztahy.
+* Snadnější pochopení stávajícího programového kódu pomocí sady Visual Studio k vizualizaci struktury kódu, chování a vztahů.
 
-* Informování týmu v potřebu respektování závislostí architektury.
+* Informujte tým o nutnosti respektovat závislosti architektury.
 
-* Vytvářejte modely s různými úrovněmi detailů v průběhu životního cyklu aplikací v rámci vašeho vývojového procesu.
+* Vytvářejte modely v rámci životního cyklu aplikace na různých úrovních v rámci svého procesu vývoje.
 
-Zobrazit [scénář: Změna návrhu pomocí vizualizace a modelování](../modeling/scenario-change-your-design-using-visualization-and-modeling.md).
+Viz [scénář: Změna návrhu pomocí vizualizace a modelování](../modeling/scenario-change-your-design-using-visualization-and-modeling.md).
 
-## <a name="article-reference"></a>Odkaz na článek
+## <a name="article-reference"></a>Reference k článku
 
 |||
 |-|-|
-|**Vizualizace kódu**:<br /><br />– Podívejte organizaci a vztahy kódu vytvořením map kódu. Vizualizace závislostí mezi sestavení, oborů názvů, třídy, metody a tak dále.<br />– Podívejte na strukturu třídy a členy pro konkrétní projekt tak, že vytvoříte diagramů tříd z kódu.<br />-Vyhledání konfliktů mezi kódu a jeho návrhu tak, že vytvoříte diagramy závislostí za účelem ověření kódu.|- [Vizualizace kódu](../modeling/visualize-code.md)<br />- [Práce s třídami a ostatními typy (návrhář tříd)](../ide/class-designer/designing-and-viewing-classes-and-types.md)<br />- [Video: Porozumění celkové koncepci kódu pomocí map kódu Visual Studio 2015](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)<br />- [Video: Ověření závislostí architektury v reálném čase](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)|
-|**Definice architektury**:<br /><br />-Definovat a vynucovat omezení závislosti mezi komponentami váš kód tak, že vytvoříte diagramů závislostí.|- [Video: Ověření závislosti architektury pomocí sady Visual Studio (kanál 9)](https://channel9.msdn.com/Events/Connect/2016/170)|
-|**Ověřování systému s požadavky a určené návrhu:**<br /><br />-Validate závislostí kódu pomocí diagramů závislostí, které popisují zamýšlenou architekturu a Neumožnit změny, které může být v konfliktu s návrhem.|- [Video: Ověření závislosti architektury pomocí sady Visual Studio (kanál 9)](https://channel9.msdn.com/Events/Connect/2016/170)|
-|**Přizpůsobení modelů a diagramů**:<br /><br />-Vytvořte vlastní jazyky specifickými pro doménu.|- [Sada Modeling SDK pro Visual Studio – jazyky specifické pro doménu](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|
-|**Generování textu s použitím šablony T4**:<br /><br />– Použijte textové bloky a logiky ovládacího prvku uvnitř šablony pro vygenerování souborů založený na textu.<br /> – T4 šablony sestavení pomocí nástroje MSBuild součástí sady Visual Studio|- [Generování kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md)|
-|**Sdílení modelů, diagramy a map kódu pomocí správy verzí Team Foundation**:<br /><br />-Map kódu, projekty a umístěte diagramů závislostí v rámci správy verzí Team Foundation, můžete je sdílet.| |
+|**Vizualizovat kód**:<br /><br />– Podívejte se na organizaci a vztahy kódu vytvořením map kódu. Vizualizujte závislosti mezi sestaveními, obory názvů, třídami, metodami a tak dále.<br />– Podívejte se na strukturu třídy a členy pro konkrétní projekt vytvořením diagramů tříd z kódu.<br />– Vyhledejte konflikty mezi vaším kódem a jeho návrh vytvořením diagramů závislostí pro ověření kódu.|- [vizualizace kódu](../modeling/visualize-code.md)<br />- [práce s třídami a jinými typy (návrhář tříd)](../ide/class-designer/designing-and-viewing-classes-and-types.md)<br />- [video: Seznámení s návrhem z kódu pomocí map kódu Visual Studio 2015](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)<br />- [video: ověření závislostí architektury v reálném čase](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)|
+|**Definovat architekturu**:<br /><br />– Definovat a vynutit omezení závislostí mezi komponentami vašeho kódu vytvořením diagramů závislostí.|- [video: ověření závislostí architektury pomocí sady Visual Studio (Channel 9)](https://channel9.msdn.com/Events/Connect/2016/170)|
+|**Ověřte svůj systém s požadavky a zamýšleným návrhem:**<br /><br />– Ověřte závislosti kódu pomocí diagramů závislostí, které popisují zamýšlenou architekturu a zabraňují změnám, které by mohly být v konfliktu s návrhem.|- [video: ověření závislostí architektury pomocí sady Visual Studio (Channel 9)](https://channel9.msdn.com/Events/Connect/2016/170)|
+|**Přizpůsobení modelů a diagramů**:<br /><br />– Vytvořte vlastní jazyky specifické pro doménu.|[sada SDK pro -  Modeling pro Visual Studio – jazyky specifické pro doménu](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|
+|**Generovat text pomocí šablon T4**:<br /><br />– Použijte textové bloky a ovládací logiku v šablonách k vygenerování textových souborů.<br /> -T4 šablona sestavení pomocí nástroje MSBuild, který je součástí sady Visual Studio|- [generování kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md)|
+|**Sdílení modelů, diagramů a map kódu pomocí správy verzí Team Foundation**:<br /><br />– Vložte mapy kódu, projekty a diagramy závislosti v rámci správy verzí Team Foundation, abyste je mohli sdílet.| |
 
-Jaké edice sady Visual Studio podporují jednotlivé funkce najdete v tématu [podpora edice nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)
+Pokud chcete zjistit, které edice sady Visual Studio podporují jednotlivé funkce, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport) .
 
 ## <a name="types-of-models-and-typical-uses"></a>Typy modelů a typické použití
 
 ### <a name="code-maps"></a>Mapy kódu
 
-Mapy kódu vám umožní zjistit, organizaci a vztahy v kódu.
+Mapy kódu vám pomůžou vidět organizaci a vztahy v kódu.
 
-**Obvyklá využití:**
+**Typická použití:**
 
-- Zkontrolujte kód programu to vám umožní lépe pochopit jeho strukturu a její závislosti, jak ji aktualizovat a odhad nákladů na navrhované změny.
+- Projděte si kód programu, abyste mohli lépe pochopit jeho strukturu a její závislosti, jak je aktualizovat a odhadnout náklady na navrhované změny.
 
-**Přejděte na téma:**
+**Si**
 
 - [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)
 - [Použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)
@@ -67,33 +67,33 @@ Mapy kódu vám umožní zjistit, organizaci a vztahy v kódu.
 
 ### <a name="dependency-diagrams"></a>Diagramy závislostí
 
-Diagramy závislostí umožňují definovat strukturu aplikace jako sada vrstvy nebo bloky s explicitní závislosti. Živé ověření ukazuje konfliktů mezi závislostmi v kódu a závislostmi je popsaný na diagram závislostí.
+Diagramy závislostí umožňují definovat strukturu aplikace jako sadu vrstev nebo bloků s explicitními závislostmi. Při živém ověřování se zobrazí konflikty mezi závislostmi v kódu a závislostmi popsanými v diagramu závislostí.
 
-**Obvyklá využití:**
+**Typická použití:**
 
-- Stabilizace struktury aplikace pomocí množství změn průběhu své životnosti.
-- Zjišťování konfliktů nechtěné závislosti před vrácením se změnami kódu.
+- Stabilizací struktury aplikace prostřednictvím mnoha změn během jejího života.
+- Před vrácením změn kódu se objevují neúmyslné konflikty závislostí.
 
-**Přejděte na téma:**
+**Si**
 
 - [Vytváření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md)
 - [Diagramy závislostí: Referenční dokumentace](../modeling/layer-diagrams-reference.md)
 - [Ověřování kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md)
 
-### <a name="domain-specific-language-dsl"></a>Jazyka specifického pro doménu (DSL)
+### <a name="domain-specific-language-dsl"></a>Jazyk specifický pro doménu (DSL)
 
-DSL je zápis, který návrh pro konkrétní účel. V sadě Visual Studio má obvykle grafickou podobu.
+DSL je zápis, který navrhujete pro určitý účel. V aplikaci Visual Studio je obvykle grafický.
 
-**Obvyklá využití:**
+**Typická použití:**
 
-- Vytvořit nebo nakonfigurovat částí aplikace. Práce je vyžadována k vývoji zápisem a nástroje. Výsledkem může být lepší vhodný k vaší doméně než přizpůsobení UML.
-- Pro velké projekty nebo řádky produktů, kde se investice do vývoje DSL a jeho nástrojů vrácený jeho použití ve více než jeden projekt.
+- Generování nebo konfigurace částí aplikace Práce je nutná pro vývoj zápisu a nástrojů. Výsledkem může být lepší přizpůsobení vaší doméně než přizpůsobení UML.
+- Pro velké projekty nebo v řádcích produktů, kde investice do vývoje DSL a jejích nástrojů se vrátí pomocí jejího použití ve více než jednom projektu.
 
-**Přejděte na téma:**
+**Si**
 
 - [Sada Modeling SDK pro Visual Studio – jazyky specifické pro doménu](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)
 
 ## <a name="see-also"></a>Viz také:
 
-- [Co je nového pro modelování v sadě Visual Studio 2017](../modeling/what-s-new-for-design-in-visual-studio.md)
+- [Co je nového pro modelování v aplikaci Visual Studio 2017](../modeling/what-s-new-for-design-in-visual-studio.md)
 - [DevOps a správa životního cyklu aplikací](/azure/devops/user-guide/devops-alm-overview)

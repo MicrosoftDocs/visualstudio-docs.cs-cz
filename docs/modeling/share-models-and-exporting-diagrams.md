@@ -5,48 +5,48 @@ ms.topic: conceptual
 helpviewer_keywords:
 - UML model, sharing
 - UML diagrams, saving
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3cb1699db54691e81c49b686c245d96f9b5a5442
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1e1b958b9226a0a8ded0f886af81efc3b1b5aaf9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63003379"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670735"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>Sdílení modelů a export diagramů
-V sadě Visual Studio můžete sdílet s kolegy v několika ohledech modelů a diagramů.
+V aplikaci Visual Studio můžete sdílet modely a diagramy s kolegy několika způsoby.
 
- Chcete-li zjistit, jaké edice sady Visual Studio podporují tuto funkci, přečtěte si téma [podpora edice nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+ Pokud chcete zjistit, které edice sady Visual Studio podporují tuto funkci, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-## <a name="working-on-a-model-as-a-team"></a>V rámci modelu práci v týmu
- Uživatelé sady Visual Studio můžete vytvářet a upravovat orientované grafy, modely a diagramy závislostí.
+## <a name="working-on-a-model-as-a-team"></a>Práce na modelu jako tým
+ Uživatelé sady Visual Studio mohou vytvářet a upravovat modely, diagramy závislostí a řízené grafy.
 
- Různí uživatelé můžou pracovat současně na modelu, ale by měla fungovat v různých balíčcích.
+ Různí uživatelé můžou pracovat současně s modelem, ale měli by pracovat na různých balíčcích.
 
- Návrhy o uspořádání modely ve střední a velké projekt, naleznete v tématu [strukturování řešení modelování](../modeling/structure-your-modeling-solution.md).
+ Návrhy na uspořádání modelů ve středním nebo velkém projektu najdete v tématu [Struktura řešení modelování](../modeling/structure-your-modeling-solution.md).
 
-## <a name="reading-and-reviewing-models"></a>Čtení a revizi modelů
- Pomocí některých verzích sady Visual Studio (která nelze vytvářet modely) členové týmu mohou číst modely, modelování diagramů a grafů, ale nemůžete je upravovat.  Chcete-li zjistit, jaké edice sady Visual Studio podporují tuto funkci, přečtěte si téma [podpora edice nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+## <a name="reading-and-reviewing-models"></a>Čtení a kontrola modelů
+ Členové týmu, kteří používají některé verze sady Visual Studio (které nemůžou vytvářet modely), můžou číst modely, diagramy modelování a směrované grafy, ale nemůžou je upravovat.  Pokud chcete zjistit, které edice sady Visual Studio podporují tuto funkci, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
- Diagram závislostí lze otevřít pouze v rámci modelu, ve kterém byla vytvořena. Pokud chcete poskytnout přístup k diagramu, je nutné zadat proto přístup ke všem modelování projektu soubory, nebo zkopíruje z nich.
+ Diagram závislosti lze otevřít pouze v modelu, ve kterém byl vytvořen. Chcete-li poskytnout přístup k diagramu, je proto nutné poskytnout přístup ke všem souborům projektu modelování nebo k jejich kopiím.
 
- Další informace najdete v tématu [čtení modelů a diagramů v jiných edicích nástroje Visual Studio](../modeling/read-models-and-diagrams-in-other-visual-studio-editions.md).
+ Další informace najdete v tématu [čtení modelů a diagramů v jiných edicích sady Visual Studio](../modeling/read-models-and-diagrams-in-other-visual-studio-editions.md).
 
-## <a name="using-diagrams-in-documents-and-presentations"></a>Použití diagramů v dokumenty a prezentace
- Části diagramů můžete zkopírovat do dokumentů nebo prezentace. Můžete také vytisknout diagramy, například se soubory XPS.
+## <a name="using-diagrams-in-documents-and-presentations"></a>Používání diagramů v dokumentech a prezentacích
+ Části diagramů můžete kopírovat do dokumentů nebo prezentací. Můžete také tisknout diagramy, například soubory XPS.
 
- Další informace najdete v tématu [exportování diagramů jako obrázků](../modeling/export-diagrams-as-images.md).
+ Další informace najdete v tématu [Export diagramů jako obrázků](../modeling/export-diagrams-as-images.md).
 
 ## <a name="related-topics"></a>Související témata
 
 |Název|Popis|
 |-|-|
-|[Strukturování řešení modelování](../modeling/structure-your-modeling-solution.md)|Sdílení modely ve velkém nebo středním projektu.|
-|[Exportování diagramů jako obrázků](../modeling/export-diagrams-as-images.md)|Můžete kopírovat části diagramů do aplikací, jako jsou PowerPoint a Word nebo vytisknout diagram pro soubor ve formátu XPS.|
+|[Strukturování řešení modelování](../modeling/structure-your-modeling-solution.md)|Sdílení modelů ve velkém nebo středním projektu.|
+|[Exportování diagramů jako obrázků](../modeling/export-diagrams-as-images.md)|Části diagramů můžete kopírovat do aplikací, jako je například PowerPoint nebo Word, nebo tisknout diagram do souboru XPS.|
 |[Analýza a modelování architektury](../modeling/analyze-and-model-your-architecture.md)|Přehled modelů a diagramů.|
 
 ## <a name="see-also"></a>Viz také

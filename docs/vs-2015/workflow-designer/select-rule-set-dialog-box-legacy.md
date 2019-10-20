@@ -1,5 +1,5 @@
 ---
-title: Vyberte dialogové okno nastavit pravidla (starší verze) | Dokumentace Microsoftu
+title: Dialogové okno vybrat sadu pravidel (starší verze) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -10,41 +10,38 @@ helpviewer_keywords:
 - Select Rule Set dialog box
 ms.assetid: cb2bc3f9-7730-4fb2-9f7b-303a9d9f0c8e
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6b3c2a7e23aba13cbe843c33510a81b66ba2b815
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 24f17d6f07840f666dd1bb130be172ffa9d22cd3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445422"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663320"
 ---
 # <a name="select-rule-set-dialog-box-legacy"></a>Dialogové okno Vybrat sadu pravidel (starší verze)
-Toto téma popisuje, jak používat **vybrat sadu pravidel** dialogové okno v starší [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] potřeba cílit na platformu [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].  
-  
- **Vybrat sadu pravidel** slouží dialogové okno Vybrat sadu pravidel, který vám pomůže s [aktivitě PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019) aktivity. Informace o tom, jak získat přístup **vybrat sadu pravidel** dialogovém okně naleznete v tématu [jak: Vytvoření sady pravidel aktivit zásad (starší verze)](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md).  
-  
- Následující tabulka popisuje prvky uživatelského rozhraní (UI) **vybrat sadu pravidel** dialogové okno.  
-  
-|Prvek uživatelského rozhraní (UI)|Popis|  
-|----------------|-----------------|  
-|**Nový...**|Kliknutím otevřete [pravidlo nastavte dialogové okno editoru (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) vytvořit novou podmínku pravidla.|  
-|**Upravit...**|Kliknutím otevřete [pravidlo nastavte dialogové okno editoru (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) upravit vybrané pravidlo podmínku.|  
-|**Přejmenování...**|Kliknutím otevřete dialogové okno umožňuje přejmenovat vybranou sadu pravidel.|  
-|**Delete**|Kliknutím můžete odstranit vybranou sadu pravidel.|  
-|**Náhled sady pravidel**|Zobrazuje pravidla v sadě vybrané pravidlo.|  
-|**OK**|Klikněte na přiřazení vybranou sadu pravidel, která **aktivitě PolicyActivity** aktivity.|  
-  
- Další informace o tom, jak vytvářet a upravovat sady pravidel najdete v tématu [pravidlo nastavte dialogové okno editoru (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md).  
-  
+Toto téma popisuje, jak používat dialogové okno **vybrat sadu pravidel** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+
+ Dialogové okno **vybrat sadu pravidel** se používá k výběru sady pravidel, kterou můžete použít s aktivitou [sady](http://go.microsoft.com/fwlink?LinkID=65019) . Informace o tom, jak získat přístup k dialogovému oknu **vybrat sadu pravidel** , naleznete v tématu [How to: Create a sady Rule Set (starší verze)](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md).
+
+ Následující tabulka popisuje prvky uživatelského rozhraní (UI) v dialogovém okně **vybrat sadu pravidel** .
+
+|Prvek uživatelského rozhraní (UI)|Popis|
+|----------------|-----------------|
+|**Nové...**|Kliknutím otevřete [dialogové okno editor sad pravidel (zastaralé)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) a vytvořte novou podmínku pravidla.|
+|**Upravit...**|Kliknutím otevřete [dialogové okno editor sad pravidel (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) , ve kterém můžete upravit vybranou podmínku pravidla.|
+|**Přejmenovat...**|Kliknutím otevřete dialogové okno, které slouží k přejmenování vybrané sady pravidel.|
+|**Delete**|Kliknutím odstraníte vybranou sadu pravidel.|
+|**Sada pravidel Preview**|Zobrazí pravidla ve vybrané sadě pravidel.|
+|**Ok**|Kliknutím přiřadíte vybranou sadu pravidel k aktivitě **sady** .|
+
+ Další informace o tom, jak vytvářet a upravovat sady pravidel, najdete v tématu [dialogové okno editor sad pravidel (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md).
+
 > [!WARNING]
-> Editor pravidel starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] cílit na platformu, která se používá [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] není podporováno cílení na více verzí.  
-  
- Další informace o podmínkách najdete v tématu [podmínky použití v pracovních postupech](http://go.microsoft.com/fwlink?LinkID=65009).  
-  
-## <a name="see-also"></a>Viz také  
- [Aktivitě PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)   
- [Sada pravidel dialogové okno Editor (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md)   
- [Pomocí aktivit zásad aktivity](http://go.microsoft.com/fwlink?LinkID=65004)   
- [Pomocí podmínek v pracovních postupech](http://go.microsoft.com/fwlink?LinkID=65009)
+> Editor pravidel pro starší [!INCLUDE[wfd2](../includes/wfd2-md.md)], který se používá k cílení na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] nepodporuje cílení na více verzí.
+
+ Další informace o podmínkách najdete v tématu [použití podmínek v pracovních postupech](http://go.microsoft.com/fwlink?LinkID=65009).
+
+## <a name="see-also"></a>Viz také
+ [](http://go.microsoft.com/fwlink?LinkID=65019) [Dialogové okno Editor sady pravidel sady (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) [s použitím aktivity sady](http://go.microsoft.com/fwlink?LinkID=65004) [pomocí podmínek v pracovních postupech](http://go.microsoft.com/fwlink?LinkID=65009)

@@ -1,19 +1,19 @@
 ---
-title: 'CA2153: Vyhněte se zpracování výjimek v poškozeném stavu | Dokumentace Microsoftu'
+title: 'CA2153: Vyhněte se zpracování výjimek poškozených stavů | Microsoft Docs'
 ms.date: 11/15/2016
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: 418cc9cb-68ad-47e9-a6c8-a48b9c35db45
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f8999c2e4622505526524f2a09a5f33259955974
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9d4ca2668f2d6241e9a3cca88b4722ee5348abc3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142568"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667413"
 ---
 # <a name="ca2153-avoid-handling-corrupted-state-exceptions"></a>CA2153: Vyhněte se zpracování výjimek v poškozeném stavu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -23,34 +23,34 @@ ms.locfileid: "68142568"
 |TypeName|AvoidHandlingCorruptedStateExceptions|
 |CheckId|CA2153|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Narušující změna|Bez přerušení|
 
 ## <a name="cause"></a>příčina
- [Poškozený stav výjimek (rozšíření na straně klienta)](https://msdn.microsoft.com/magazine/dd419661.aspx) znamenat, že paměť poškození existuje v procesu. Toto zachycení nepovolí selhání procesu může vést k ohrožení zabezpečení, pokud útočník lze umístit do oblasti paměti poškozená zneužití.
+ [Poškozené výjimky stavu (rozšíření)](https://msdn.microsoft.com/magazine/dd419661.aspx) označují, že v procesu existuje poškození paměti. Pokud by útočník mohl zneužít do poškozené oblasti paměti, může to místo toho zachytit, než umožní selhání procesu způsobit chyby zabezpečení.
 
 ## <a name="rule-description"></a>Popis pravidla
- Rozšíření na straně klienta Určuje, že stav procesu byl poškozený a není zachycena v systému. V poškozeném stavu scénáři obecné obslužné rutiny pouze zachytí výjimku Pokud označíte metodu správné `HandleProcessCorruptedStateExceptions` atribut. Ve výchozím nastavení [Common Language Runtime (CLR)](https://msdn.microsoft.com/library/8bs2ecf4.aspx) nebude volat obslužné rutiny catch pro rozšíření na straně klienta.
+ Rozšíření na straně serveru označuje, že stav procesu je poškozený a nebyl zachycen systémem. V případě poškozeného stavu je obecná obslužná rutina zachycena pouze v případě, že svou metodu označíte pomocí správného atributu `HandleProcessCorruptedStateExceptions`. Ve výchozím nastavení nebude modul [CLR (Common Language Runtime)](https://msdn.microsoft.com/library/8bs2ecf4.aspx) vyvolat obslužné rutiny catch pro rozšíření.
 
- Povolení proces při selhání bez zachycování tyto druhy výjimek je nejbezpečnější možnosti, jako i protokolování kódu můžou útočníci zneužít ohrožená místa chyby poškození paměti.
+ Povolení selhání procesu bez zachycení těchto typů výjimek je nejbezpečnější možností, protože i kód protokolování může útočníkům umožnit zneužít chyby poškození paměti.
 
- Toto upozornění se aktivuje při zachycování rozšíření na straně klienta pomocí obecné obslužné rutině, která zachytává všechny výjimky, jako je například catch(exception) nebo catch (bez specifikací výjimek).
+ Toto upozornění se aktivuje při zachycení rozšíření pomocí obecné obslužné rutiny, která zachytává všechny výjimky, například catch (Exception) nebo catch (bez specifikace výjimek).
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li vyřešit tato upozornění by měl proveďte jednu z následujících akcí:
+ Chcete-li vyřešit toto upozornění, proveďte jednu z následujících akcí:
 
- 1. Odeberte `HandleProcessCorruptedStateExceptions` atribut. To obnoví na výchozí chování za běhu, ve kterém nejsou předán obslužné rutiny zachytávání rozšíření na straně klienta.
+ 1. Odeberte atribut `HandleProcessCorruptedStateExceptions`. Vrátí se k výchozímu chování modulu runtime, kde rozšíření nejsou předány obslužným rutinám catch.
 
- 2. Odeberte obslužnou rutinu obecný zachytávací in preference of obslužných rutin, které zachytit specifické výjimky typy.  To může zahrnovat rozšíření na straně klienta za předpokladu, že kód obslužné rutiny můžete bezpečně jejich zpracování (velmi výjimečných).
+ 2. Odeberte obslužnou rutinu obecné catch v předvolbách obslužných rutin, které zachycují konkrétní typy výjimek.  To může zahrnovat rozšíření za předpokladu, že kód obslužné rutiny může bezpečně zpracovat (velmi zřídka).
 
- 3. Znovu vyvolejte rozšíření na straně klienta v obslužné rutiny catch, který zajišťuje výjimky je předán do volajícího a bude mít za následek ukončení spuštěného procesu.
+ 3. Znovu vyvolejte rozšíření v popisovači catch, který zajistí, že je výjimka předána volajícímu a bude mít za následek ukončení běžícího procesu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
 
-## <a name="pseudo-code-example"></a>Příklad pseudo kódu
+## <a name="pseudo-code-example"></a>Příklad kódu pseudo-code
 
-### <a name="violation"></a>Porušení
- Pseudo následující kód znázorňuje, zjistí toto pravidlo.
+### <a name="violation"></a>Selhání
+ Následující pseudo kód ilustruje vzor zjištěný tímto pravidlem.
 
 ```
 [HandleProcessCorruptedStateExceptions]
@@ -69,7 +69,7 @@ void TestMethod1()
 ```
 
 ### <a name="solution-1"></a>Řešení 1
- Odebrání atributu HandleProcessCorruptedExceptions zajistí, že k výjimkám nebude zpracován.
+ Odebráním atributu HandleProcessCorruptedExceptions se zajistí, že výjimky nebudou zpracovány.
 
 ```
 void TestMethod1()
@@ -90,7 +90,7 @@ void TestMethod1()
 ```
 
 ### <a name="solution-2"></a>Řešení 2
- Odebrat obslužnou rutinu obecný zachytávací a zachytit pouze typy určité výjimky.
+ Odeberte obslužnou rutinu General catch a zachyťte pouze konkrétní typy výjimek.
 
 ```
 void TestMethod1()
@@ -111,7 +111,7 @@ void TestMethod1()
 ```
 
 ### <a name="solution-3"></a>Řešení 3
- Opětovné vyvolání výjimky.
+ Znovu vyvolejte výjimku.
 
 ```
 void TestMethod1()

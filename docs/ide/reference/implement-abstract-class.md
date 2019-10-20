@@ -1,71 +1,71 @@
 ---
-title: Implementovat abstraktní třídu
+title: Implementace abstraktní třídy
 ms.date: 01/26/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e5e1d05e0142a0185909ff590ff507fb53c7dc0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3f8d61e6e2632d62d7244ec0918e56816c3a028e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62823159"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662480"
 ---
-# <a name="implement-an-abstract-class-in-visual-studio"></a>Implementace abstraktní třídy v sadě Visual Studio
+# <a name="implement-an-abstract-class-in-visual-studio"></a>Implementace abstraktní třídy v aplikaci Visual Studio
 
-Tato generace kód platí pro:
+Tato generace kódu platí pro:
 
 - C#
 
 - Visual Basic
 
-**Co:** Umožňuje okamžitě generovat kód potřebný k implementaci abstraktní třídu.
+**Co:** Umožňuje hned vygenerovat kód potřebný k implementaci abstraktní třídy.
 
-**Kdy:** Chcete dědí z abstraktní třídy.
+**Když:** Chcete dědit z abstraktní třídy.
 
-**Proč:** Ručně je možné implementovat všechny abstraktní členy jeden po druhém, ale tato funkce automaticky vygeneruje všechny podpisy metod.
+**Proč:** Můžete ručně implementovat všechny abstraktní členy jednou po jedné, ale tato funkce automaticky vygeneruje všechny signatury metod.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor na řádek níž se nachází červená vlnovka, která určuje mají dědí z abstraktní třídy, ale neimplementovali všechny požadované členy.
+1. Umístěte kurzor na řádek, kde je červená vlnovka, která indikuje, že jste zdědili od abstraktní třídy, ale neimplementovali všechny požadované členy.
 
    - C#:
 
-       ![Zvýrazněný kód jazyka C#](media/abstract-highlight-cs.png)
+       ![Zvýrazněný kódC#](media/abstract-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Zvýrazněný kód jazyka Visual Basic](media/abstract-highlight-vb.png)
+       ![Zvýrazněný kód VB](media/abstract-highlight-vb.png)
 
 2. Dále proveďte jednu z následujících akcí:
 
-   - **Klávesnice**
-      - Stisknutím klávesy **Ctrl**+**.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
-   - **Myši**
-      - Klikněte pravým tlačítkem a vyberte **rychlé akce a Refaktoringy** nabídky.
-      - Červená vlnovka ukazatel myši a klikněte ![Chyba žárovky](media/error-bulb.png) ikona, která se zobrazí.
-      - Klikněte na ![Chyba žárovky](media/error-bulb.png) ikona, která se zobrazí u levého okraje, pokud textový kurzor na řádek s červená vlnovka.
+   - **Kombinace**
+      - Stiskněte klávesu **Ctrl** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
+   - **Stisknut**
+      - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
+      - Najeďte myší na červenou vlnovkou a klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
+      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí na levém okraji, pokud se na řádku již nachází textový kurzor s červenou vlnovkou
 
-   ![Implementace třídy ve verzi preview](media/abstract-preview-cs.png)
+   ![Implementovat třídu Preview](media/abstract-preview-cs.png)
 
-3. Vyberte **implementace abstraktní třídy** z rozevírací nabídky.
+3. V rozevírací nabídce vyberte **implementovat abstraktní třídu** .
 
    > [!TIP]
-   > - Použití **náhled změn** odkaz v dolní části okna náhledu [zobrazíte všechny změny](../../ide/preview-changes.md) , který bude proveden před zvolení požadované možnosti.
-   > - Použití **dokumentu**, **projektu**, a **řešení** odkazy v dolní části okna ve verzi preview vytvořit správnou metodu podpisy v rámci více tříd, které dědí vlastnosti z abstraktní třídy.
+   > - Pomocí odkazu **Náhled změn** v dolní části okna Preview [zobrazíte všechny změny](../../ide/preview-changes.md) , které budou provedeny před provedením výběru.
+   > - Použijte odkazy **dokumentu**, **projektu**a **řešení** v dolní části okna Preview k vytvoření správných signatur metod napříč více třídami, které dědí z abstraktní třídy.
 
-   Abstraktní metoda podpisy jsou vytvořeny a jsou připravené k implementaci.
+   Signatury abstraktní metody jsou vytvořeny a jsou připraveny k implementaci.
 
    - C#:
 
-       ![Implementace třídy výsledekC#](media/abstract-result-cs.png)
+       ![Implementovat výsledek třídyC#](media/abstract-result-cs.png)
 
    - Visual Basic:
 
-       ![Implementace třídy výsledek VB](media/abstract-result-vb.png)
+       ![Implementovat výsledek třídy VB](media/abstract-result-vb.png)
 
 ## <a name="see-also"></a>Viz také:
 

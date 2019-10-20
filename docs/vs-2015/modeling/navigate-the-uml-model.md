@@ -8,15 +8,15 @@ helpviewer_keywords:
 - UML API
 ms.assetid: 6d789b6d-2aa9-4ceb-92c4-84a300065a76
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c98aefb5e3dc0090338233ca5b05b4ebc6460719
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 7b90d8b532b004a7cbdaeed762300a0daf9ab45c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871779"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668548"
 ---
 # <a name="navigate-the-uml-model"></a>Procházení modelu UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,20 +45,20 @@ Toto téma představuje hlavní typy modelu UML.
 
  Odstraníte-li prvek z modelu, dojde k automatickému odstranění všech relací, ve kterých je součást obsažena a vlastnost na druhém konci je aktualizována.
 
- Pokud specifikace UML přiřadí násobnost 0.. 1 k vlastnosti, může mít hodnotu `null`. Násobnost s maximálním limitem větším než 1 znamená, že vlastnost .NET má typ: `IEnumerable<`*Zadejte*`>`.
+ Pokud specifikace UML přiřadí násobnost 0.. 1 k vlastnosti, může mít hodnotu `null`. Násobnost s maximálním limitem větším než 1 znamená, že vlastnost .NET má typ: `IEnumerable<`*typ* `>`.
 
  Další informace o přecházení mezi vztahy najdete v tématu [navigace s rozhraním API UML](../modeling/navigate-relationships-with-the-uml-api.md).
 
 ### <a name="the-ownership-tree"></a>Strom vlastnictví
  Model obsahuje strom objektů [IElement](/previous-versions/dd516035(v=vs.140)) . Každý prvek má vlastnosti `OwnedElements` a `Owner`.
 
- Ve většině případů cíle `Owner` vlastností a `OwnedElements` odkazují také na jiné vlastnosti, které mají konkrétnější názvy. Například každá operace UML je vlastněna třídou UML. Proto [IOperation](/previous-versions/dd481186(v=vs.140)) má vlastnost s názvem [IOperation. Class](/previous-versions/dd473473%28v%3dvs.140%29)a v každém objektu [](/previous-versions/dd481186(v=vs.140)) `Class == Owner`IOperation.
+ Ve většině případů cíle `Owner` a `OwnedElements` vlastností odkazují i na jiné vlastnosti, které mají konkrétnější názvy. Například každá operace UML je vlastněna třídou UML. Proto [IOperation](/previous-versions/dd481186(v=vs.140)) má vlastnost s názvem [IOperation. Class](/previous-versions/dd473473%28v%3dvs.140%29)a v každém objektu [IOperation](/previous-versions/dd481186(v=vs.140)) `Class == Owner`.
 
- Nejvyšší prvek stromu, který nemá žádného vlastníka, je `AuxiliaryConstructs.IModel`. IModel je obsažen `IModelStore`v, ve kterém je [IModelStore. root](/previous-versions/ee789368(v=vs.140)).
+ Nejvyšší prvek stromu, který nemá žádného vlastníka, je `AuxiliaryConstructs.IModel`. IModel je obsažen v `IModelStore`, ve kterém je [IModelStore. root](/previous-versions/ee789368(v=vs.140)).
 
  Každý prvek modelu je vytvořen s vlastníkem. Další informace najdete v tématu [vytváření elementů a vztahů v modelech UML](../modeling/create-elements-and-relationships-in-uml-models.md).
 
- ![Diagram tříd: Model, diagram, tvar a element](../modeling/media/uml-mm1.png)
+ ![Diagram tříd: model, diagram, tvar a element](../modeling/media/uml-mm1.png)
 
 ## <a name="shapes-and-diagrams"></a>Tvary a diagramy
  Prvky v modelu UML lze zobrazit v diagramech. Různé typy diagramů mohou zobrazovat různé podtypy IElement.
@@ -70,13 +70,13 @@ Toto téma představuje hlavní typy modelu UML.
  Další informace o obrazcích naleznete v tématu [zobrazení modelu UML v diagramech](../modeling/display-a-uml-model-on-diagrams.md).
 
 ## <a name="access-to-the-model-in-extensions"></a>Přístup k modelu v rozšířeních
- V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšířeních definovaných jako komponenty MEF můžete deklarovat vlastnosti, které importují informace z kontextu, ve kterém je rozšíření spuštěno.
+ V rozšířeních [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] definovaných jako komponenty MEF můžete deklarovat vlastnosti, které importují informace z kontextu, ve kterém je rozšíření spuštěno.
 
 |Typ atributu|K čemu poskytuje přístup|Další informace|
 |--------------------|----------------------------------|----------------------|
-|Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation<br /><br /> .IDiagramContext<br /><br /> (v Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost. dll)|Aktuální diagram fokusu|[Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md)|
-|Microsoft. VisualStudio. Modeling. ExtensionEnablement<br /><br /> .ILinkedUndoContext<br /><br /> (v Microsoft. VisualStudio. Modeling. SDK. [Version]. dll)|Umožňuje seskupit změny do transakcí.|[Propojení aktualizací modelu UML pomocí transakcí](../modeling/link-uml-model-updates-by-using-transactions.md)|
-|Microsoft. VisualStudio. Shell. SVsServiceProvider<br /><br /> (v Microsoft. VisualStudio. Shell. unmutable. [Version]. dll)|Hostitel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Odtud získáte přístup k souborům, projektům a dalším aspektům.|[Otevření modelu UML pomocí rozhraní API sady Visual Studio](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md)|
+|Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost. Presentation<br /><br /> . IDiagramContext<br /><br /> (v Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost. dll)|Aktuální diagram fokusu|[Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md)|
+|Microsoft. VisualStudio. Modeling. ExtensionEnablement<br /><br /> . ILinkedUndoContext<br /><br /> (v Microsoft. VisualStudio. Modeling. SDK. [Version]. dll)|Umožňuje seskupit změny do transakcí.|[Propojení aktualizací modelu UML pomocí transakcí](../modeling/link-uml-model-updates-by-using-transactions.md)|
+|Microsoft. VisualStudio. Shell. SVsServiceProvider<br /><br /> (v Microsoft. VisualStudio. Shell. unmutable. [Version]. dll)|@No__t_0 hostitele. Odtud získáte přístup k souborům, projektům a dalším aspektům.|[Otevření modelu UML pomocí rozhraní API sady Visual Studio](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md)|
 
 ### <a name="to-get-the-context"></a>Získání kontextu
  Deklarujte jedno nebo obě následující rozhraní v rámci třídy rozšíření:
@@ -120,13 +120,13 @@ foreach (IShape<IInterface> in
 ```
 
 ## <a name="accessing-another-model-or-diagrams"></a>Přístup k jinému modelu nebo diagramům
- Můžete:
+ Můžeš:
 
-- Pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sběrnice modelu můžete vytvořit propojení mezi prvky v různých modelech. Další informace najdete v tématu [Integrace modelů UML s jinými modely a nástroji](../modeling/integrate-uml-models-with-other-models-and-tools.md).
+- Pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sběrnice modelů můžete vytvářet propojení mezi prvky v různých modelech. Další informace najdete v tématu [Integrace modelů UML s jinými modely a nástroji](../modeling/integrate-uml-models-with-other-models-and-tools.md).
 
-- Načtěte projekt modelování a diagramy v režimu jen pro čtení, bez toho, aby se [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] zobrazily v uživatelském rozhraní. Další informace najdete v tématu [čtení modelu UML v programovém kódu](../modeling/read-a-uml-model-in-program-code.md).
+- Načtěte projekt modelování a diagramy v režimu jen pro čtení bez toho, aby byly viditelné v uživatelském rozhraní [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Další informace najdete v tématu [čtení modelu UML v programovém kódu](../modeling/read-a-uml-model-in-program-code.md).
 
-- Otevřete projekt modelování a jeho diagramy v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]a potom přejděte k obsahu. Další informace najdete v tématu [otevření modelu UML pomocí rozhraní API sady Visual Studio](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md).
+- Otevřete projekt modelování a jeho diagramy v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a pak přejděte k obsahu. Další informace najdete v tématu [otevření modelu UML pomocí rozhraní API sady Visual Studio](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md).
 
 ## <a name="see-also"></a>Viz také:
 

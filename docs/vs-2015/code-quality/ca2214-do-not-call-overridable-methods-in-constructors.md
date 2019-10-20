@@ -1,5 +1,5 @@
 ---
-title: 'CA2214: Nevolejte přepisovatelné metody v konstruktorech | Dokumentace Microsoftu'
+title: 'CA2214: Nevolejte přepsatelné metody v konstruktorech | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - DoNotCallOverridableMethodsInConstructors
 ms.assetid: 335b57ca-a6e8-41b4-a20e-57ee172c97c3
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0a2e107429bb48b2bf17a625e25866a19c7781b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 78702298bab484a95bb8108150415ec0b31ede7d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142418"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662914"
 ---
 # <a name="ca2214-do-not-call-overridable-methods-in-constructors"></a>CA2214: Nevolejte přepisovatelné metody v konstruktorech
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,29 +29,29 @@ ms.locfileid: "68142418"
 |-|-|
 |TypeName|DoNotCallOverridableMethodsInConstructors|
 |CheckId|CA2214|
-|Kategorie|Microsoft.Usage|
-|Narušující změna|Pevné|
+|Kategorie|Microsoft. Usage|
+|Narušující změna|Bez přerušení|
 
 ## <a name="cause"></a>příčina
- Konstruktor nezapečetěný typ volání virtuální metody definované ve své třídě.
+ Konstruktor nezapečetěného typu volá virtuální metodu definovanou ve své třídě.
 
 ## <a name="rule-description"></a>Popis pravidla
- Při volání virtuální metody, skutečný typ, který se spustí metodu není vybraná až do spuštění. Pokud konstruktor volání virtuální metody, je možné, že se neprovedlo konstruktoru pro instanci, která vyvolá metodu.
+ Při volání virtuální metody není skutečný typ, který spouští metodu, vybrán do doby běhu. Když konstruktor volá virtuální metodu, je možné, že konstruktor instance, která volá metodu, není proveden.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, nevolejte virtuální metody tohoto typu z konstruktorů tohoto typu.
+ Chcete-li opravit porušení tohoto pravidla, Nevolejte virtuální metody typu v rámci konstruktorů typu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění na toto pravidlo. Chcete-li odstranit volání virtuální metody by se měla změnit konstruktoru.
+ Nepotlačujte upozornění na toto pravidlo. Konstruktor by měl být přepracován, aby se vyloučilo volání virtuální metody.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje účinek porušení tohoto pravidla. Testovací aplikace vytvoří instanci `DerivedType`, což způsobí, že její základní třídě (`BadlyConstructedType`) konstruktor ke spuštění. `BadlyConstructedType`pro konstruktor nesprávně volání virtuální metody `DoSomething`. Jak ukazuje výstup, `DerivedType.DoSomething()` spustí a nebude tak před `DerivedType`v konstruktoru.
+ Následující příklad ukazuje účinek porušení tohoto pravidla. Testovací aplikace vytvoří instanci `DerivedType`, což způsobí spuštění konstruktoru základní třídy (`BadlyConstructedType`). konstruktor `BadlyConstructedType` nesprávně volá virtuální metodu `DoSomething`. Jak výstup ukazuje, `DerivedType.DoSomething()` provádění a provede před tím, než se spustí konstruktor `DerivedType`.
 
  [!code-csharp[FxCop.Usage.CtorVirtual#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.CtorVirtual/cs/FxCop.Usage.CtorVirtual.cs#1)]
  [!code-vb[FxCop.Usage.CtorVirtual#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.CtorVirtual/vb/FxCop.Usage.CtorVirtual.vb#1)]
 
  Tento příklad vytvoří následující výstup.
 
- **Volání konstruktoru base.** 
-**Odvozené DoSomething nazývá - inicializovat? Ne**
-**volání odvozené ctor.**
+ **Volání základního konstruktoru ctor.** 
+**odvozené DoSomething se říká inicializovat? Žádné** 
+**volání odvozeného konstruktoru ctor.**

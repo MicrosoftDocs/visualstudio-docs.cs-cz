@@ -1,32 +1,32 @@
 ---
-title: Options, Text Editor, F#, Advanced
+title: Možnosti, textový editor, F#, Upřesnit
 ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.F%2523.Advanced
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3e28bd5b7ace34995dbf0778d59f42b5c5d383aa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aacc2b6aa47f7a250b161187146accc51736b586
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778980"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668948"
 ---
-# <a name="options-text-editor-f-advanced"></a>Options, Text Editor, F#, Advanced
+# <a name="options-text-editor-f-advanced"></a>Možnosti, textový editor, F#, Upřesnit
 
-Použití **Upřesnit** změnit některá nastavení textového editoru pro stránky možností F#. Chcete-li získat přístup k této stránce Možnosti, zvolte **nástroje** > **možnosti**a klikněte na tlačítko **textový Editor**  >  **F#**  >  **Advanced**.
+Pomocí stránky **Upřesnit** možnosti můžete změnit některá nastavení textového editoru pro F#. Chcete-li získat přístup k této stránce Možnosti, zvolte **nástroje**  > **Možnosti**a pak zvolte**F#** **textový editor**  >   > **Upřesnit**.
 
-## <a name="block-structure-guides"></a>Vodítka pro strukturu bloku
+## <a name="block-structure-guides"></a>Vodítka struktury bloku
 
-Pokud je vybráno, svislé čáry zobrazí v editoru tento řádek nahoru strukturovaný kód bloky, které vám umožní snadno identifikovat jednotlivé bloky kódu.
+Je-li vybrána tato možnost, zobrazí se v editoru svislé čáry, které se zařadí do strukturovaných bloků kódu, což vám umožní snadno identifikovat jednotlivé bloky kódu.
 
 ## <a name="outlining"></a>Sbalování
 
-Toto políčko zaškrtnuto, se automaticky vymezí soubor kódu, který vytvoří sbalitelnou bloky kódu.
+Toto políčko zaškrtněte, pokud chcete automaticky vytvořit návrh souboru s kódem, který vytvoří sbalitelný blok kódu.
 
 ## <a name="see-also"></a>Viz také:
 

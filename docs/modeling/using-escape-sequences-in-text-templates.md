@@ -4,37 +4,37 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, escape sequences
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b48748c5c5d071e724be3ff35eca457f36385baa
-ms.sourcegitcommit: 6a19c5ece38a70731496a38f2ef20676ff18f8a4
+ms.openlocfilehash: 4e03f5eafc00b8431725ed06da10371a93692fb5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476616"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662921"
 ---
 # <a name="use-escape-sequences-in-text-templates"></a>Použití řídicích sekvencí v textových šablonách
 
-Můžete použít řídicích sekvencí v textových šablonách mají vygenerovat značky textové šablony a (v jazyce C# jenom kód) řídicí řídicí znaky a uvozovky.
+Pomocí řídicích sekvencí v textových šablonách můžete vygenerovat značky textových šablon a C# (pouze v kódu) pro řídicí znaky a uvozovky.
 
-Otevření a zavření značky pro blok kódu standardní do výstupního souboru vytisknete řídicí značky následujícím způsobem:
+Chcete-li vytisknout značky Open a Close pro standardní blok kódu do výstupního souboru, zařídí značky následujícím způsobem:
 
 ```
 \<# ... \#>
 ```
 
-Můžete provést stejným způsobem pracovat s další textové šablony směrnice a kód bloku značky.
+Můžete to samé provést s jinou direktivou textové šablony a Tagy bloku kódu.
 
-Pokud obsahuje blok textu řetězce používá k uvození textové šablony značky, může použít řídicí sekvence, které následující:
+Pokud textový blok obsahuje řetězce, které slouží k řídicím značkám textové šablony, můžete použít následující sekvence Escape:
 
-- Pokud je sudý počet řídicí předchází značku textové šablony (\\) znaky šablony analyzátor bude obsahovat polovinu řídicí znaky a obsahovat sekvenci jako značku textové šablony. Například, pokud existují čtyři řídicích znaků v textové šabloně, bude existovat dva "\\" znaků v generovaném souboru.
+- Pokud je před značkou textové šablony uveden sudý počet znaků escape (\\), analyzátor šablony bude obsahovat polovinu řídicích znaků a zahrnout sekvenci jako značku textové šablony. Například pokud jsou v textové šabloně čtyři řídicí znaky, ve vygenerovaném souboru budou dva "\\" znaky.
 
-- Pokud je značka šablony textu předchází lichý počet řídicí (\\) znaků, analyzátor šablona bude obsahovat polovinu "\\" znaků plus vlastní značku (\<# nebo #>). Značka se nepovažuje za značkou template text.
+- Pokud je před značkou textové šablony uveden lichý počet řídicích znaků (\\), analyzátor šablony bude obsahovat polovinu znaků "\\" a samotné značky (\< # nebo # >). Značka není považována za značku textové šablony.
 
-- Pokud se řídicí sekvence (\\) kdekoli jinde v libovolném pořadí, než ve kterém se řídicí sekvence řídicího znaku nebo uvozovky (v jazyce C# pouze) se objeví znak, znak, který bude výstup přímo.
+- Pokud se znak escape (\\) nachází kdekoli jinde v jiné sekvenci, než kde řídí řídicí znak nebo uvozovku (pouze v C# ), bude znak přímo výstupem.
 
 ## <a name="see-also"></a>Viz také:
 

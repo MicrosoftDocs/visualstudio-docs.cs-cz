@@ -5,44 +5,44 @@ ms.topic: conceptual
 helpviewer_keywords:
 - text templates, custom directive processors
 - walkthroughs [text templates], directive processor
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 661d8670f857240fdd4ed7714ca389c851d83601
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 73473a549c774cd0f4302404e2ca3a450cc2e6d2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935357"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666985"
 ---
 # <a name="walkthrough-create-a-custom-directive-processor"></a>Návod: Vytvoření vlastního procesoru direktiv
 
-*Procesory direktiv* fungují tak, že přidáte kód *vygenerované třídy transformace*. Při volání *směrnice* z *textové šablony*, zbytek kódu, který napíšete do textové šablony může záviset na funkčnosti, která poskytuje tato direktiva.
+*Procesory direktiv* fungují přidáním kódu do *vygenerované třídy transformace*. Pokud voláte *direktivu* z *textové šablony*, zbytek kódu, který napíšete do textové šablony, může spoléhat na funkčnost, kterou poskytuje tato direktiva.
 
-Můžete si vytvořit své vlastní procesory direktiv. To vám pak umožní textové šablony přizpůsobit. Vytvoření vlastního procesoru direktiv vytvoříte třídu, která dědí buď z <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> nebo <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>.
+Můžete si vytvořit své vlastní procesory direktiv. To vám pak umožní textové šablony přizpůsobit. Chcete-li vytvořit vlastní procesor direktiv, vytvoříte třídu, která dědí z <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> nebo <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>.
 
 Mezi úlohy popsané v tomto návodu patří:
 
 - Vytvoření vlastního procesoru direktiv
 
-- Registrace procesoru direktiv
+- Zaregistrujte procesor direktiv.
 
 - Testování procesoru direktiv
 
 ## <a name="create-a-custom-directive-processor"></a>Vytvoření vlastního procesoru direktiv
 
-V tomto návodu vytvoříte vlastní procesor direktiv. Přidáte vlastní direktivu, která přečte soubor XML, uloží ho <xref:System.Xml.XmlDocument> proměnnou a zpřístupní prostřednictvím vlastnosti. V části „Testování procesoru direktiv“ získáte pomocí této vlastnosti v textové šabloně přístup k tomuto souboru XML.
+V tomto návodu vytvoříte vlastní procesor direktiv. Přidáte vlastní direktivu, která přečte soubor XML, uloží ho do proměnné <xref:System.Xml.XmlDocument> a zpřístupní ji prostřednictvím vlastnosti. V části „Testování procesoru direktiv“ získáte pomocí této vlastnosti v textové šabloně přístup k tomuto souboru XML.
 
 Volání vlastní direktivy vypadá následovně:
 
 `<#@ CoolDirective Processor="CustomDirectiveProcessor" FileName="<Your Path>DocFile.xml" #>`
 
-Vlastní procesor direktiv přidá proměnnou a vlastnost do vygenerované třídy transformace. Direktiva, kterou píšete <xref:System.CodeDom> třídy pro vytvoření kódu, který stroj přidá do vygenerované třídy transformace. <xref:System.CodeDom> Třídy vytvoření kódu v obou Vizuálu C# nebo Visual Basic, v závislosti na jazyce určeném `language` parametr `template` – direktiva. Jazyk procesoru direktiv a jazyk textové šablony, ke které tento procesor direktiv přistupuje, se nemusejí shodovat.
+Vlastní procesor direktiv přidá proměnnou a vlastnost do vygenerované třídy transformace. Direktiva, kterou napíšete, používá třídy <xref:System.CodeDom> k vytvoření kódu, který modul přidá do generované třídy transformace. Třídy <xref:System.CodeDom> vytvářejí kód v vizuálu C# nebo Visual Basic v závislosti na jazyku zadaném v parametru `language` direktivy `template`. Jazyk procesoru direktiv a jazyk textové šablony, ke které tento procesor direktiv přistupuje, se nemusejí shodovat.
 
 Kód, který direktiva vytvoří, vypadá takto:
 
@@ -80,15 +80,15 @@ End Property
 1. V sadě Visual Studio vytvořte projekt knihovny tříd jazyka C# nebo Visual Basic s názvem CustomDP.
 
     > [!NOTE]
-    > Pokud chcete procesor direktiv nainstalovat na více než jednom počítači, je vhodnější použít projekt rozšíření aplikace Visual Studio (VSIX) a zahrnout do rozšíření soubor .pkgdef. Další informace najdete v tématu [nasazení vlastního procesoru direktiv](../modeling/deploying-a-custom-directive-processor.md).
+    > Chcete-li nainstalovat procesor direktiv ve více než jednom počítači, je vhodnější použít projekt rozšíření aplikace Visual Studio (VSIX) a zahrnout soubor. pkgdef do rozšíření. Další informace najdete v tématu [nasazení vlastního procesoru direktiv](../modeling/deploying-a-custom-directive-processor.md).
 
-2. Přidejte odkazy na tato sestavení:
+2. Přidat odkazy na tato sestavení:
 
-    - **Microsoft.VisualStudio.TextTemplating.\*.0**
+    - **Microsoft. VisualStudio. TextTemplating. \*.0**
 
-    - **Microsoft.VisualStudio.TextTemplating.Interfaces.\*.0**
+    - **Microsoft. VisualStudio. TextTemplating. Interfaces. \*.0**
 
-3. Nahraďte kód v **Class1** následujícím kódem. Tento kód definuje třídu CustomDirectiveProcessor, která dědí z <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> třídy a implementuje nezbytné metody.
+3. Nahraďte kód v **Class1** následujícím kódem. Tento kód definuje třídu CustomDirectiveProcessor, která dědí z třídy <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> a implementuje nezbytné metody.
 
     ```csharp
     using System;
@@ -599,22 +599,22 @@ End Property
     End Namespace
     ```
 
-4. Pouze v jazyce Visual Basic, otevřete **projektu** nabídky a klikněte na tlačítko **vlastnosti CustomDP**. Na **aplikace** kartě **kořenový obor názvů**, odstraňte výchozí hodnotu `CustomDP`.
+4. Pouze pro Visual Basic otevřete nabídku **projekt** a klikněte na příkaz **vlastnosti CustomDP**. Na kartě **aplikace** v **kořenovém oboru názvů**odstraňte výchozí hodnotu `CustomDP`.
 
-5. Na **souboru** nabídky, klikněte na tlačítko **Uložit vše**.
+5. V nabídce **soubor** klikněte na **Uložit vše**.
 
-6. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+6. V nabídce **sestavení** klikněte na **Sestavit řešení**.
 
 ### <a name="build-the-project"></a>Sestavení projektu
 
-Sestavte projekt. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+Sestavte projekt. V nabídce **sestavení** klikněte na **Sestavit řešení**.
 
-## <a name="register-the-directive-processor"></a>Registrace procesoru direktiv
+## <a name="register-the-directive-processor"></a>Zaregistrujte procesor direktiv.
 
-Než zavolat direktivu z textové šablony v sadě Visual Studio, musíte přidat klíč registru pro procesor direktiv.
+Předtím, než můžete volat direktivu z textové šablony v aplikaci Visual Studio, je nutné přidat klíč registru pro procesor direktiv.
 
 > [!NOTE]
-> Pokud chcete procesor direktiv nainstalovat na více než jednom počítači, je lepší definovat rozšíření aplikace Visual Studio (VSIX), která zahrnuje *.pkgdef* soubor spolu se sestavením. Další informace najdete v tématu [nasazení vlastního procesoru direktiv](../modeling/deploying-a-custom-directive-processor.md).
+> Pokud chcete nainstalovat procesor direktiv ve více než jednom počítači, je lepší definovat rozšíření sady Visual Studio (VSIX), které obsahuje soubor *. pkgdef* spolu s vaším sestavením. Další informace najdete v tématu [nasazení vlastního procesoru direktiv](../modeling/deploying-a-custom-directive-processor.md).
 
 Klíče procesoru direktiv se v registru nacházejí na následujícím místě:
 
@@ -635,11 +635,11 @@ V tomto oddílu přidáte na stejné místo v registru klíč pro vlastní pro
 
 ### <a name="to-add-a-registry-key-for-the-directive-processor"></a>Přidání klíče registru pro procesor direktiv
 
-1. Spustit `regedit` pomocí nabídky Start nebo příkazového řádku.
+1. Spusťte příkaz `regedit` pomocí nabídky Start nebo příkazového řádku.
 
-2. Přejděte do umístění **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\\*.0\TextTemplating\DirectiveProcessors**a klikněte na uzel.
+2. Přejděte do umístění **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio \\ \* 0 \ TextTemplating\DirectiveProcessors**a klikněte na uzel.
 
-   V 64bitových systémech použijte **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\\\*.0\TextTemplating\DirectiveProcessors**
+   V 64 systémech použijte **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio \\ \*.0 \ TextTemplating\DirectiveProcessors**
 
 3. Přidejte nový klíč s názvem CustomDirectiveProcessor.
 
@@ -650,19 +650,19 @@ V tomto oddílu přidáte na stejné místo v registru klíč pro vlastní pro
 
 5. Přidejte novou řetězcovou hodnotu s názvem CodeBase, jejíž hodnota se shoduje s cestou k souboru CustomDP.dll, který jste vytvořili dříve v tomto návodu.
 
-     Cesta může například vypadat `C:\UserFiles\CustomDP\bin\Debug\CustomDP.dll`.
+     Cesta může například vypadat jako `C:\UserFiles\CustomDP\bin\Debug\CustomDP.dll`.
 
      Klíč registru by měl mít následující hodnoty:
 
-   | Název | Typ | Data |
+   | Name | Typ | Data |
    |-|-|-|
    | (Výchozí) | REG_SZ | (hodnota nenastavena) |
    | Třída | REG_SZ | CustomDP.CustomDirectiveProcessor |
-   | CodeBase | REG_SZ | <strong>\<Cesta k vašemu řešení ></strong>CustomDP\bin\Debug\CustomDP.dll |
+   | CodeBase | REG_SZ | <strong>\<Path k řešení ></strong> CustomDP\bin\Debug\CustomDP.dll |
 
      Pokud jste sestavení vložili do mezipaměti GAC, měly by tyto hodnoty vypadat takto:
 
-   | Název | Typ | Data |
+   | Name | Typ | Data |
    |-|-|-|
    | (Výchozí) | REG_SZ | (hodnota nenastavena) |
    | Třída | REG_SZ | CustomDP.CustomDirectiveProcessor |
@@ -674,16 +674,16 @@ V tomto oddílu přidáte na stejné místo v registru klíč pro vlastní pro
 
 Při testování procesoru direktiv potřebujete napsat textovou šablonu, která ho zavolá.
 
-V tomto příkladu volá textová šablona direktivu a předá název souboru XML, který obsahuje dokumentaci pro soubor třídy. Textová šablona se používá <xref:System.Xml.XmlDocument> vlastnost, kterou direktiva vytvoří, přejde na soubor XML a vytiskne komentáře k dokumentaci.
+V tomto příkladu volá textová šablona direktivu a předá název souboru XML, který obsahuje dokumentaci pro soubor třídy. Textová šablona používá vlastnost <xref:System.Xml.XmlDocument>, kterou direktiva vytvoří pro procházení XML a vytisknutí dokumentačních komentářů.
 
 ### <a name="to-create-an-xml-file-for-use-in-testing-the-directive-processor"></a>Vytvoření souboru XML pro testování procesoru direktiv
 
-1. Vytvořte soubor s názvem *DocFile.xml* pomocí libovolného textového editoru (například Poznámkový blok).
+1. Pomocí libovolného textového editoru (například Poznámkový blok) vytvořte soubor s názvem *DocFile. XML* .
 
     > [!NOTE]
-    > Tento soubor můžete vytvořit na libovolném místě (například *C:\Test\DocFile.xml*).
+    > Tento soubor můžete vytvořit v jakémkoli umístění (například *C:\Test\DocFile.XML*).
 
-2. Přidejte následující text do souboru XML:
+2. Do souboru XML přidejte následující:
 
     ```xml
     <?xml version="1.0"?>
@@ -732,12 +732,12 @@ V tomto příkladu volá textová šablona direktivu a předá název souboru 
 
 2. Přidejte nový soubor textové šablony s názvem TestDP.tt.
 
-3. Ujistěte se, že **Custom Tool** vlastnost souboru testdp.TT nastavena na `TextTemplatingFileGenerator`.
+3. Ujistěte se, že vlastnost **Custom Tool** třídy TestDP.TT je nastavená na `TextTemplatingFileGenerator`.
 
-4. Změňte obsah souboru TestDP.tt na následující text.
+4. Změňte obsah TestDP.tt na následující text.
 
     > [!NOTE]
-    > Nahraďte řetězec `<YOUR PATH>` s cestou *DocFile.xml* souboru.
+    > Nahraďte řetězec `<YOUR PATH>` cestou k souboru *DocFile. XML* .
 
     Jazyk textové šablony se nemusí shodovat s jazykem procesoru direktiv.
 
@@ -824,17 +824,17 @@ V tomto příkladu volá textová šablona direktivu a předá název souboru 
     ```
 
     > [!NOTE]
-    > V tomto příkladu, hodnota proměnné `Processor` parametr `CustomDirectiveProcessor`. Hodnota `Processor` parametru musí odpovídat názvu klíče registru procesoru.
+    > V tomto příkladu je hodnota parametru `Processor` `CustomDirectiveProcessor`. Hodnota parametru `Processor` musí odpovídat názvu klíče registru procesoru.
 
-5. Na **souboru** nabídce zvolte **Uložit vše**.
+5. V nabídce **soubor** klikněte na příkaz **Uložit vše**.
 
 ### <a name="to-test-the-directive-processor"></a>Testování procesoru direktiv
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na souboru TestDP.tt a pak klikněte na tlačítko **spustit vlastní nástroj**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na TestDP.TT a pak klikněte na **Spustit vlastní nástroj**.
 
-   Pro uživatele jazyka Visual Basic, testdp.txt nemusí v **Průzkumníka řešení** ve výchozím nastavení. Chcete-li zobrazit všechny soubory přiřazené k projektu, otevřete **projektu** nabídky a klikněte na tlačítko **zobrazit všechny soubory**.
+   V případě Visual Basic uživatelů se ve výchozím nastavení nemusí ve **Průzkumník řešení** zobrazit TestDP. txt. Chcete-li zobrazit všechny soubory, které jsou přiřazeny k projektu, otevřete nabídku **projekt** a klikněte na možnost **Zobrazit všechny soubory**.
 
-2. V **Průzkumníka řešení**, rozbalte uzel TestDP.txt a potom dvakrát klikněte na panel TestDP.txt a otevře se v editoru.
+2. V **Průzkumník řešení**rozbalte uzel TestDP. txt a potom poklikejte na TestDP. txt a otevře se v editoru.
 
     Zobrazí se vygenerovaný textový výstup. Výstup by měl vypadat takto:
 
@@ -868,16 +868,16 @@ V tomto příkladu volá textová šablona direktivu a předá název souboru 
       value:  A value tag is used to describe the property value
     ```
 
-## <a name="add-html-to-generated-text"></a>Přidání kódu HTML k vygenerovanému textu
+## <a name="add-html-to-generated-text"></a>Přidat HTML do vygenerovaného textu
 
 Po otestování vlastního procesoru direktiv můžete k vygenerovanému textu přidat kód HTML.
 
 ### <a name="to-add-html-to-the-generated-text"></a>Přidání kódu HTML k vygenerovanému textu
 
-1. Nahraďte kód v *souboru TestDP.tt* následujícím kódem. Kód HTML je zvýrazněn. Nezapomeňte nahradit řetězec `YOUR PATH` s cestou *DocFile.xml* souboru.
+1. Kód v *TestDP.TT* nahraďte následujícím kódem. Kód HTML je zvýrazněn. Nezapomeňte řetězec `YOUR PATH` nahradit cestou k souboru *DocFile. XML* .
 
     > [!NOTE]
-    > Dodatečné otevírací \<# a zavírací #> značky oddělují kód příkazu od značek HTML.
+    > Další značky Open \< # a Close # > oddělují kód příkazu od značek HTML.
 
     ```csharp
     <#@ assembly name="System.Xml" #>
@@ -959,8 +959,8 @@ Po otestování vlastního procesoru direktiv můžete k vygenerovanému textu 
     </body></html>
     ```
 
-2. Na **souboru** nabídky, klikněte na tlačítko **uložit TestDP.txt**.
+2. V nabídce **soubor** klikněte na příkaz **Uložit TestDP. txt**.
 
-3. Chcete-li zobrazit ve výstupu v prohlížeči v **Průzkumníka řešení**, klikněte pravým tlačítkem na soubor TestDP.htm a klikněte na tlačítko **zobrazit v prohlížeči**.
+3. Chcete-li zobrazit výstup v prohlížeči, klikněte v **Průzkumník řešení**pravým tlačítkem myši na TestDP. htm a klikněte na tlačítko **Zobrazit v prohlížeči**.
 
-   Výstup by měl být stejný jako původní text, s výjimkou má formát HTML. Název každé položky se zobrazí tučným písmem.
+   Výstup by měl být stejný jako původní text s tím rozdílem, že má použit formát HTML. Název každé položky se zobrazí tučně.

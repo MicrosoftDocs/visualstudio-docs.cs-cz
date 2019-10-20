@@ -1,5 +1,5 @@
 ---
-title: Úpravy modelů a diagramů UML | Dokumentace Microsoftu
+title: Úpravy modelů a diagramů UML | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -18,327 +18,325 @@ helpviewer_keywords:
 - UML, diagrams
 ms.assetid: 87affd40-8127-4ee9-9d3a-ad977abe2ed6
 caps.latest.revision: 86
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 446e6eb6231ff4d744f22bd3d1ba4fa6dcca6525
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 6585fbfa7c16e710633e81841b4c8eb380f9f564
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823189"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669729"
 ---
 # <a name="edit-uml-models-and-diagrams"></a>Úpravy modelů a diagramů UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete vytvořit a upravit model UML prostřednictvím zobrazení poskytuje několik různých typů diagramu. Zadáním různých perspektiv ve vašem systému tyto diagramy vám pomůže pochopit a probrat různé aspekty návrhu a požadavků. Visual Studio poskytuje šablony pro pět nejčastěji používané typy diagramu UML.  
-  
- Tuto funkci podporovat kterou verzí sady Visual Studio najdete v tématu [podporované verze pro nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
-  
- Toto téma popisuje postupy pro úpravy modelu, které jsou společné mezi různé typy. Další informace, které jsou specifické pro konkrétní typy diagramů, naleznete v tématu [vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md).  
-  
-## <a name="in-this-topic"></a>V tomto tématu  
-  
-- [Diagramy UML jsou zobrazením tohoto modelu UML](#Views)  
-  
-- [Vytváření diagramů pomocí modelování UML](#Creating)  
-  
-- [Vytvoření diagramů modelování UML](#Drawing)  
-  
-- [Úpravy obrazců a konektorů](#Editing)  
-  
-- [Ruší se provedené změny do modelu](#Undo)  
-  
-- [Sdílení prvků mezi diagramů](#Sharing)  
-  
-- [Kopírování prvků a skupiny souvisejících elementů](#Copying)  
-  
-- [Odstranění prvku modelu a jeho zobrazení](#Deleting)  
-  
-- [Hledání textu v diagramu](#Searching)  
-  
-- [Příprava diagramu pro prezentaci](#presentation)  
-  
-- [Rozšíření návrhářů UML](#extensions)  
-  
-## <a name="Views"></a> Diagramy UML jsou zobrazením tohoto modelu UML  
- Můžete vytvořit a použít diagramy UML pouze v projekty modelování. Další informace o vytváření projektů a diagramů naleznete v tématu [vytvořit modelování projektů a diagramů UML](../modeling/create-uml-modeling-projects-and-diagrams.md).  
-  
-- Projekt modelování obsahuje jednoho modelu UML. Každý diagram UML v projektu je zobrazení modelu UML.  
-  
-- Zobrazí se model v **Průzkumníku modelů UML**. Na **architektura** nabídky, přejděte k **Windows**a potom klikněte na tlačítko **Průzkumníku modelů UML**.  
-  
-- Všechny obrazce v diagramu je zobrazení elementu v modelu. Umístíte-li nový obrazec v diagramu, vytváření nového elementu v modelu.  
-  
-- Soubor projektu, když uložíte jakýkoliv diagram, Visual Studio uloží celý model, všechny jeho diagramy a modelování.  
-  
-## <a name="Creating"></a> Vytváření diagramů pomocí modelování UML  
-  
-1. Na **architektura** klikněte na tlačítko nabídky v sadě Visual Studio **nové UML nebo diagramu vrstev**.  
-  
-2. Vyberte a zadejte název vašeho diagramu.  
-  
-3. V **přidat do projektu modelování**, vyberte existující projekt modelování nebo **vytvořte nový projekt modelování**.  
-  
-   > [!NOTE]
-   > Diagram modelování musí existovat v projektu modelování.  
-  
-   Diagram můžete také přidat do existujícího projektu modelování v Průzkumníku řešení. Klikněte pravým tlačítkem na projekt modelování, přejděte na **přidat**a potom klikněte na tlačítko **nová položka**.  
-  
-#### <a name="to-create-an-empty-uml-modeling-project"></a>Chcete-li vytvořit prázdný projekt modelování UML  
-  
-- Na **souboru** nabídky, přejděte na **nový**, klikněte na tlačítko **projektu**a v **nový projekt** dialogové okno, dvakrát klikněte na panel **modelování Projekty**.  
-  
-  Další informace o tom, jak spravovat projekty modelování, naleznete v tématu [vytvořit modelování projektů a diagramů UML](../modeling/create-uml-modeling-projects-and-diagrams.md).  
-  
-## <a name="Drawing"></a> Vytvoření diagramů modelování UML  
- Diagram modelování zobrazí kolekci prvků modelu propojených vztahů. Každý prvek se zobrazí jako tvar a každá relace se zobrazí jako konektor mezi dvěma tvary.  
-  
- Existují dva druhy nástroje, jeden pro prvky a jeden pro relace. Například v diagramu tříd UML nástrojů **třídy** je nástroj elementu a **přidružení** je nástroj vztah.  
-  
-> [!NOTE]
-> Pokud chcete informace, které jsou specifické pro konkrétní diagram typy, najdete v článku [vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md).  
-  
-#### <a name="to-create-elements-and-relationships-in-a-uml-modeling-diagram"></a>K vytváření elementů a vztahů v diagramu modelování UML  
-  
-1. Vytvoření prvku modelu, nástroj prvek v sadě nástrojů klikněte na a pak klikněte na tlačítko diagram, ve kterém chcete, aby se zobrazí. Po vytvoření elementu, upravte jeho velikost a tvar přetáhněte její úchyty.  
-  
-    V některých případech můžete umístit nový prvek do jiného elementu. Například v diagramu tříd UML může umístit třídy uvnitř balíčku.  
-  
-   > [!NOTE]
-   > Pokud nevidíte panel nástrojů, klikněte na tlačítko **nástrojů** na **zobrazení** nabídky.  
-  
-2. K vytvoření relace, klikněte na nástroj relace, klikněte na prvek, kde chcete spustit relaci a klikněte na tlačítko elementu, kde chcete, aby ukončit.  
-  
-    Různé typy vztahů, může začínat ani končit na různé typy prvků. Například v diagramu tříd UML vztah přidružení nesmí začínat ani skončí prvek komentář.  
-  
-   > [!NOTE]
-   > Pokud chcete použít stejný nástroj několikrát, klikněte na nástroj dvakrát. Jakmile budete hotovi, klikněte na tlačítko **ukazatel** nástroj.  
-  
-   V některých typech diagramy můžete také nakreslit jednoduché obrazce. Tyto tvary, které nejsou součástí modelu, ale můžete je použít k přitažení pozornosti ke část diagramu a jeho rozdělení na různé oblasti.  
-  
-## <a name="Editing"></a> Úpravy obrazců a konektorů  
- Při změně velikosti nebo barva obrazce nebo přesměrovat konektor, neexistuje žádný vliv na základní model. Ale při přejmenování obrazec v diagramu nebo v Průzkumníku modelů UML, odpovídající prvek je přejmenovat v Průzkumníku modelů UML a ostatní diagramy, které se tento element.  
-  
-> [!NOTE]
-> Neexistuje jednoduchý způsob, jak vytvořit nové položky panelu nástrojů, z nichž můžete vytvářet skupiny elementy nebo elementy s libovolným vlastnosti. Další informace najdete v tématu [definování vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md).  
-  
- Následující obrázek ukazuje, jak změnit velikost tvaru nebo jeho název.  
-  
- ![Úprava prvku modelu](../modeling/media/uml-drawadjust1.png "UML_DrawAdjust1")  
-  
-> [!TIP]
-> Integrované příkazy nezahrnujte příkaz pro elegantně zarovnání tvarů. Však můžete snadno vytvořit vlastní zarovnání příkazu zkopírováním kódem v příkladu v [zobrazení modelu UML v diagramech](../modeling/display-a-uml-model-on-diagrams.md).  
-  
- Následující obrázek ukazuje, jak upravit trasu a pozice konektor nebo jeho popisků.  
-  
- ![Nastavení konektoru](../modeling/media/uml-drawadjust2.png "UML_DrawAdjust2")  
-  
-#### <a name="to-move-one-end-of-a-connector-to-another-shape"></a>Na jednom konci spojnice přesunout do jiného obrazce  
-  
-1. Proveďte jednu z těchto akcí:  
-  
-   - Stisknutím klávesy **CTRL** a přesunout do konce.  
-  
-     \- nebo –  
-  
-   - Klikněte pravým tlačítkem na konektor a potom klikněte na tlačítko **volání metody Reconnect**.  
-  
-2. Klikněte na konci spojnice, ke které chcete přesunout.  
-  
-3. Klikněte na tvar, který chcete přesunout do konektoru.  
-  
-#### <a name="to-change-color-or-other-properties-of-an-element-relationship-or-diagram"></a>Změna barvy nebo dalších vlastností elementu, relace, nebo diagram  
-  
-- Klikněte na prvek a nastavit pole **vlastnosti** okna.  
-  
-     Pokud nevidíte **vlastnosti** okna, klikněte pravým tlačítkem na elementu a klikněte na **vlastnosti.**  
-  
-#### <a name="to-zoom-in-and-out-on-a-modeling-diagram"></a>Přiblížení a oddálení v diagramu modelování  
-  
-- Stiskněte a podržte **CTRL** klávesu otočení kolečka myši.  
-  
-     \- nebo –  
-  
-- Stiskněte a podržte **CTRL + SHIFT**a potom klikněte na tlačítko myši doleva nebo doprava.  
-  
-     \- nebo –  
-  
-- Na **návrháři architektury** nástrojů, klikněte na znaménko plus ( **+** ) nebo minus ( **-** ), nebo zvolit úroveň zvětšení.  
-  
-## <a name="Searching"></a> Hledání v diagramu  
- Funkce Rychlé hledání najdete položky v diagramu. Je nutné nastavit **oblast hledání:** k **aktuální dokument**.  
-  
-#### <a name="to-search-for-text-in-a-modeling-diagram"></a>K vyhledání textu v diagramu modelování  
-  
-1. Stisknutím klávesy **CTRL + F**.  
-  
-     \- nebo –  
-  
-     Na **upravit** nabídky, přejděte k **najít a nahradit**a potom klikněte na tlačítko **rychlé hledání**.  
-  
-    > [!NOTE]
-    > V **najít a nahradit** dialogové okno, musí zůstat **Hledat v** pole nastaveno **aktuální dokument**. Další možnosti nejsou podporovány.  
-  
-2. Zadejte text, který chcete vyhledat a potom klikněte na **najít další**.  
-  
-    > [!NOTE]
-    > Pokud je text, který má být nalezena uvnitř sbaleného obrazce, budou zvýrazněny tvaru. Rozbalte obrazec a potom klikněte na tlačítko **najít další** znovu.  
-  
-## <a name="Undo"></a> Ruší se provedené změny do modelu  
- Lze vrátit zpět a znovu změny provedené do modelu a diagramů pomocí **zpět** a **znovu** příkazy na **upravit** nabídky.  
-  
- **Každý projekt modelování nemá jedné sadě změn.** Všechny změny provedené modelu a diagramy jsou uloženy v tomto zásobníku. Zásobník obsahuje také změny fokus z jednoho diagramu do druhého. Příkaz Undo obrátí změny v tomto zásobníku.  
-  
- Například Řekněme, že můžete provádět tyto operace: Proveďte změnu Diagram1; Změňte fokus na Diagram 2; Změňte Diagram2. Při vrácení změn zpět první vrátíte zpět poslední změny; Další vrácení zpět se zpět do diagramu 1; přesunout fokus a třetí zpět vrátíte zpět změnu na hodnotu 1 diagramu.  
-  
- **Zavření diagramu zkrátí sady změn.** Pokud zavřete diagram nelze vrátit zpět změny, které jste provedli v tomto diagramu a modelu nebo některý z jeho diagramy dřívější změny nejde vrátit zpět.  
-  
- **Nelze vrátit zpět, když upravujete vlastnosti.** Když upravujete vlastnosti v okně Vlastnosti, nebo popisek v diagramu, je pouze vrátit zpět změny provedené v této vlastnosti. Stisknutím klávesy ENTER proveďte změny ve vlastnosti, nebo ji zrušte stisknutím klávesy ESC. Budete pak moct vrátit zpět změny v modelu a diagramů.  
-  
- **Zavření diagramu bez uložení nemusí mít požadovaný efekt, které očekáváte.** Je-li provést nějaké změny a potom diagram zavřete bez uložení, provedené změny budou zachovány stále v modelu. Se doporučuje zavřít celý model, pokud budete chtít udělat bez uložení.  
-  
-## <a name="Sharing"></a> Sdílení prvků mezi diagramů  
- Můžete vytvořit konkrétní instanci prvku modelu v diagramech objevit více než jednou. To platí pro třídy, rozhraní, komponenty, případy použití a objekty actor.  
-  
- To je užitečné, pokud chcete zobrazit různé skupiny vztahů v různých diagramech. Například na jednom diagramu ukázat přidružení mezi třídami zákazníka a adresu. Na jiném může zobrazit třídu adresu znovu, s jeho přidružením k poštovní směrovací číslo oblasti.  
-  
- Vlastnosti prvku modelu, například jeho název můžete změnit výběrem některé z jeho zobrazení na jakýkoliv diagram nebo tak, že ji vyberete v Průzkumníku modelů UML.  
-  
- Každý typ diagramu můžou zobrazit jen některé typy prvku modelu. Například nelze zobrazit případ použití v diagramu komponent. Následující postupy proto bude fungovat pouze pro některé kombinace prvek modelu a diagram.  
-  
-#### <a name="to-add-a-new-view-of-a-model-element-by-using-uml-model-explorer"></a>Přidat nové zobrazení prvku modelu s použitím Průzkumníka modelů UML  
-  
-1. Chcete-li otevřít **Průzkumníku modelů UML**na **architektura** nabídky, přejděte **Windows**a potom klikněte na **Průzkumníku modelů UML**.  
-  
-2. Přetáhněte prvku modelu z **Průzkumníku modelů UML** kompatibilní diagramu ve stejném projektu.  
-  
-     Obrazec za předpokladu, že se zobrazení prvku modelu, které mohou být kromě zobrazení na jiných diagramů nebo na stejném diagramu.  
-  
-    > [!NOTE]
-    > Účinek se liší, když přetahujete třídy nebo komponenty do sekvenčního diagramu. V takovém případě se vytvoří nové životnosti, jehož typ je této třídě nebo komponenty. Další informace najdete v tématu [UML Sequence Diagrams: Pokyny pro](../modeling/uml-sequence-diagrams-guidelines.md).  
-  
-#### <a name="to-add-a-new-view-of-a-model-element-by-using-paste-reference"></a>Přidat nové zobrazení prvku modelu s použitím Vložit odkaz  
-  
-1. Klikněte pravým tlačítkem na existující prvek a potom klikněte na tlačítko **kopírování**.  
-  
-    - Můžete zkopírovat několik elementů ve stejnou dobu. Podržte stisknutou klávesu CTRL a klikněte na každý prvek, klikněte pravým tlačítkem na jeden z nich a pak klikněte na tlačítko **kopírování**.  
-  
-2. Klikněte pravým tlačítkem na prázdnou část diagramu kompatibilní a potom klikněte na tlačítko **vložit odkaz**.  
-  
-     Zobrazí se jiný pohled stejného elementu.  
-  
-    > [!NOTE]
-    > Tím se liší od **vložit** příkaz, který vytvoří nový prvek v modelu. Další informace najdete v tématu [kopírování prvků a skupiny souvisejících prvků](#Copying).  
-  
-> [!NOTE]
-> Pokud chcete přidat do zobrazení diagramu dvou prvků modelu, které jsou již připojeny relací, zobrazení relace se také zobrazí v diagramu. Toto zobrazení můžete odstranit pouze tak, že odeberete některý z prvků v diagramu nebo tak, že odstraníte relaci z modelu.  
-  
-## <a name="Copying"></a> Kopírování prvků a skupiny souvisejících elementů  
- Můžete zkopírovat a vložit prvky modelu, a můžete zkopírovat a vložit skupiny prvků spolu s vztahy mezi nimi.  
-  
-> [!NOTE]
-> **Vložit** a **vložit odkaz** příkazy mají různé účinky. **Vložit** vytvoří nové elementy, jejichž vlastnosti jsou podobné těm zkopírované elementy. **Vložit odkaz** vytvoří nová zobrazení stejné prvky.  
-  
-#### <a name="to-copy-elements-and-their-relationships"></a>Zkopírujte prvky a jejich vztahy  
-  
-1. V diagramu s prvky, které chcete zkopírovat vyberte jeden nebo více prvků.  
-  
-    > [!NOTE]
-    > Vztahy s výjimkou nelze kopírovat v rámci skupiny prvků.  
-  
-2. Na **upravit** nabídky, klikněte na tlačítko **kopírování**.  
-  
-3. Pokud chcete kopírovat prvky do jiného diagramu, vytvořte nový diagram nebo otevřete existující diagram.  
-  
-4. Na **upravit** nabídky, klikněte na tlačítko **vložit**.  
-  
-    - Zkopíruje prvky se zobrazí spolu s kopií všechny vztahy, které jsou propojeny mezi nimi.  
-  
-    - Každý nový prvek bude mít nový automaticky vygenerovaným názvem.  
-  
-5. Upravte podle polohy, názvy a další vlastnosti nové prvky a vztahy.  
-  
-> [!NOTE]
-> Prvek modelu z jednoho modelu nelze zkopírovat do jiného, například pokud máte dva modely ve stejném řešení. Avšak prvky z jednoho diagramu můžete zkopírovat do jiného.  
-  
-#### <a name="to-copy-an-entire-diagram"></a>Zkopírujte celý diagram  
-  
-1. Vytvoření nového diagramu.  
-  
-2. Vybrat všechny elementy v diagramu existující, je zkopírujte a vložte je do nového.  
-  
-   Diagram nelze replikovat zkopírováním a vložením v Průzkumníku řešení.  
-  
-## <a name="Deleting"></a> Odstranění prvku modelu a jeho zobrazení  
- Některé typy prvků, konkrétně třídění, můžete odebrat z diagramu bez jejich odstranění z modelu. Třídění jsou hlavní prvky, které jsou zobrazeny v diagramech tříd, diagramů komponent a diagramy případů použití. Můžete se zobrazí na více než jeden diagram. Pro tyto typy elementů jsou dva různé příkazy: **Odebrat z diagramu** a **odstranit z modelu**.  
-  
- Naopak když odstraníte relaci z diagramu, vždy odstraňujete ho z modelu.  
-  
-> [!NOTE]
-> Některé typy prvků v diagramu UML mají popisky. Když vyberete takovýchto prvků kreslením obdélník kolem sebe, je možné vybrat popisky, ale ne prvky, které vlastní tyto popisky. Odstranění podmnožinu prvků, které jsou vybrány tímto způsobem se nepodporuje. Pokud chcete vybrat podmnožinu těchto prvků, stiskněte a podržte **CTRL** klávesu klikněte na každý prvek.  
-  
-#### <a name="to-remove-a-classifiers-view-from-a-diagram"></a>Odebrání třídění zobrazení diagramu  
-  
-- Klikněte pravým tlačítkem na elementu v diagramu a potom klikněte na **odebrat z diagramu**.  
-  
-  \- nebo –  
-  
-- Klikněte na tlačítko elementu v diagramu a potom stiskněte klávesu **odstranit** klíč.  
-  
-  - Toto zobrazení elementu zmizí. Ale zůstává elementu v modelu a se stále nachází v **Průzkumníku modelů UML**. Zobrazení stejného elementu také zůstane.  
-  
-  - Každý konektor, který končí na tento obrazec se odebere z diagramu, ale vztah představuje zůstane v modelu. Uvidíte relaci v **Průzkumníku modelů UML** pod **vztahy**, v části každý prvek, který se připojuje.  
-  
-#### <a name="to-delete-an-element-from-the-model"></a>Chcete-li odstranit prvek z modelu  
-  
-- Klikněte pravým tlačítkem na element buď v **Průzkumníku modelů UML** nebo v diagramu a pak klikněte na tlačítko **odstranit z modelu**.  
-  
-  - Prvek je odstraněn z každý diagram, ve kterém se zobrazí.  
+Model UML můžete vytvořit a upravit pomocí zobrazení poskytovaných několika různými typy diagramu. Díky různým perspektivám v systému vám tyto diagramy pomůžou pochopit a diskutovat o různých aspektech návrhu a požadavků. Visual Studio poskytuje šablony pro pět nejčastěji používaných typů diagramu UML.
 
-  - Každý vztah, který končí na tento element je také odstranit z modelu.  
-  
-#### <a name="to-delete-a-relationship-from-the-model"></a>Odstranění relace z modelu  
-  
-- Klikněte pravým tlačítkem na vztah v diagramu nebo v **Průzkumníku modelů UML**a potom klikněte na tlačítko **odstranit z modelu**.  
-  
+ Chcete-li zjistit, které verze aplikace Visual Studio tuto funkci podporují, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+
+ Toto téma popisuje techniky pro úpravu modelu, které jsou společné mezi různými typy diagramů. Další informace, které jsou specifické pro konkrétní typy diagramů, najdete v tématu [vytvoření modelů pro vaši aplikaci](../modeling/create-models-for-your-app.md).
+
+## <a name="in-this-topic"></a>V tomto tématu
+
+- [Diagramy UML jsou zobrazení modelu UML](#Views)
+
+- [Vytváření diagramů modelování UML](#Creating)
+
+- [Kreslení diagramů modelování UML](#Drawing)
+
+- [Úpravy obrazců a konektorů](#Editing)
+
+- [Rušení změn modelu](#Undo)
+
+- [Sdílení prvků mezi diagramy](#Sharing)
+
+- [Kopírování prvků a skupin souvisejících prvků](#Copying)
+
+- [Odstranění prvku modelu nebo jeho zobrazení](#Deleting)
+
+- [Hledání textu v diagramu](#Searching)
+
+- [Příprava diagramu pro prezentaci](#presentation)
+
+- [Rozšíření návrhářů UML](#extensions)
+
+## <a name="Views"></a>Diagramy UML jsou zobrazení modelu UML
+ Diagramy UML můžete vytvářet a používat pouze v projektech modelování. Další informace o tom, jak vytvářet diagramy a projekty, najdete v tématu [vytváření projektů a diagramů modelování UML](../modeling/create-uml-modeling-projects-and-diagrams.md).
+
+- Projekt modelování obsahuje jeden model UML. Každý diagram UML v projektu je zobrazení modelu UML.
+
+- Model můžete zobrazit v **Průzkumníku modelů UML**. V nabídce **Architektura** přejděte na **okna**a potom klikněte na **Průzkumník modelů UML**.
+
+- Každý obrazec v diagramu je zobrazením elementu v modelu. Když umístíte nový tvar do diagramu, vytváříte nový prvek v modelu.
+
+- Když uložíte libovolný diagram, Visual Studio uloží celý model, všechny jeho diagramy a soubor projektu modelování.
+
+## <a name="Creating"></a>Vytváření diagramů modelování UML
+
+1. V nabídce **Architektura** v aplikaci Visual Studio klikněte na **Nový UML nebo Diagram vrstev**.
+
+2. Vyberte a pojmenujte diagram.
+
+3. V rámci **Přidat do projektu modelování**vyberte existující projekt modelování nebo vyberte **vytvořit nový projekt modelování**.
+
+   > [!NOTE]
+   > Diagram modelování musí existovat v rámci projektu modelování.
+
+   Diagram můžete také přidat do existujícího projektu modelování v Průzkumník řešení. Klikněte pravým tlačítkem na projekt modelování, přejděte na **Přidat**a klikněte na **Nová položka**.
+
+#### <a name="to-create-an-empty-uml-modeling-project"></a>Vytvoření prázdného projektu modelování UML
+
+- V nabídce **soubor** přejděte na příkaz **Nový**, klikněte na **projekt**a v dialogovém okně **Nový projekt** poklikejte na **projekty modelování**.
+
+  Další informace o tom, jak spravovat projekty modelování, najdete v tématu [vytváření projektů a diagramů modelování UML](../modeling/create-uml-modeling-projects-and-diagrams.md).
+
+## <a name="Drawing"></a>Kreslení diagramů modelování UML
+ Diagram modelování zobrazuje kolekci prvků modelu propojených pomocí vztahů. Každý prvek se zobrazí jako obrazec a každá relace se zobrazí jako spojnice mezi dvěma tvary.
+
+ Existují dva druhy nástrojů – jeden pro elementy a jeden pro vztahy. Například na panelu nástrojů diagramu tříd UML je **Třída** nástrojem prvku a **přidružení** je nástroj relace.
+
+> [!NOTE]
+> Pokud chcete informace, které jsou specifické pro konkrétní typy diagramů, přečtěte si téma [vytvoření modelů pro vaši aplikaci](../modeling/create-models-for-your-app.md).
+
+#### <a name="to-create-elements-and-relationships-in-a-uml-modeling-diagram"></a>Vytváření elementů a vztahů v diagramu modelování UML
+
+1. Chcete-li vytvořit prvek modelu, klikněte na nástroj prvku v panelu nástrojů a pak klikněte na diagram, ve kterém se má zobrazit. Po vytvoření prvku upravte jeho velikost a tvar přetažením jeho táhel.
+
+    V některých případech můžete umístit nový prvek uvnitř jiného elementu. Například v diagramu tříd UML můžete umístit třídu do balíčku.
+
+   > [!NOTE]
+   > Pokud sadu nástrojů nemůžete zobrazit, klikněte v nabídce **zobrazení** na **panel nástrojů** .
+
+2. Chcete-li vytvořit relaci, klikněte na nástroj relace, klikněte na prvek, ve kterém chcete spustit relaci, a poté klikněte na prvek, kde má být ukončen.
+
+    Různé typy vztahů mohou začínat nebo končit na různých typech prvků. Například v diagramu tříd UML nemůže relace přidružení začínat ani končit na elementu Comment.
+
+   > [!NOTE]
+   > Chcete-li použít stejný nástroj několikrát, dvakrát klikněte na nástroj. Po dokončení klikněte na nástroj **ukazatel** .
+
+   U některých druhů diagramů můžete také kreslit jednoduché tvary. Tyto tvary nejsou součástí modelu, ale můžete je použít k upoutání pozornosti na části diagramu nebo k jejich rozdělení do různých oblastí.
+
+## <a name="Editing"></a>Úpravy obrazců a konektorů
+ Když změníte velikost nebo barevný tvar nebo přesměrujete spojnici, neplatí to pro základní model. Pokud však přejmenujete tvar v diagramu nebo v Průzkumníku modelů UML, odpovídající element je přejmenován v Průzkumníku modelů UML a v jakémkoli jiném diagramu, který tento prvek prezentuje.
+
+> [!NOTE]
+> Existuje jednoduchý způsob, jak vytvořit nové položky sady nástrojů, ze kterých lze vytvořit skupiny prvků, nebo prvky s vlastní volbou vlastností. Další informace najdete v tématu [definice vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md).
+
+ Následující obrázek ukazuje, jak změnit velikost tvaru nebo jeho názvu.
+
+ ![Úprava prvku modelu](../modeling/media/uml-drawadjust1.png "UML_DrawAdjust1")
+
+> [!TIP]
+> Předdefinované příkazy neobsahují příkaz pro úhledné zarovnání tvarů. Můžete však snadno vytvořit vlastní příkaz pro zarovnání zkopírováním kódu v příkladu v části [zobrazení modelu UML v diagramech](../modeling/display-a-uml-model-on-diagrams.md).
+
+ Následující obrázek ukazuje, jak upravit trasu a polohu spojnice nebo jejích popisků.
+
+ ![Úprava konektoru](../modeling/media/uml-drawadjust2.png "UML_DrawAdjust2")
+
+#### <a name="to-move-one-end-of-a-connector-to-another-shape"></a>Přesunutí jednoho konce spojnice na jiný tvar
+
+1. Proveďte jednu z těchto akcí:
+
+   - Stiskněte klávesu **CTRL** a přesuňte konec.
+
+     \- nebo-
+
+   - Klikněte pravým tlačítkem na konektor a pak klikněte na **znovu připojit**.
+
+2. Klikněte na konec konektoru, který chcete přesunout.
+
+3. Klikněte na tvar, na který chcete spojnici přesunout.
+
+#### <a name="to-change-color-or-other-properties-of-an-element-relationship-or-diagram"></a>Změna barvy nebo jiných vlastností prvku, vztahu nebo diagramu
+
+- Klikněte na prvek a nastavte pole v okně **vlastnosti** .
+
+     Pokud se okno **vlastnosti** nezobrazí, klikněte pravým tlačítkem myši na prvek a potom klikněte na příkaz **Vlastnosti.**
+
+#### <a name="to-zoom-in-and-out-on-a-modeling-diagram"></a>Přiblížení a oddálení diagramu modelování
+
+- Stisknutím a podržením klávesy **CTRL** při otočení kolečka myši.
+
+     \- nebo-
+
+- Stiskněte a podržte **kombinaci kláves CTRL + SHIFT**a potom klikněte na levé nebo pravé tlačítko myši.
+
+     \- nebo-
+
+- Na panelu nástrojů **Návrháře architektury** klikněte na znaménko plus ( **+** ) nebo mínus ( **-** ) nebo vyberte úroveň přiblížení.
+
+## <a name="Searching"></a>Hledání v diagramu
+ Funkce rychlého hledání bude vyhledávat položky v diagramu. Je nutné nastavit **Oblast hledání:** na **aktuální dokument**.
+
+#### <a name="to-search-for-text-in-a-modeling-diagram"></a>Hledání textu v diagramu modelování
+
+1. Stiskněte **kombinaci kláves CTRL + F**.
+
+     \- nebo-
+
+     V nabídce **Upravit** přejděte na **Najít a nahradit**a pak klikněte na **Rychlé hledání**.
+
+    > [!NOTE]
+    > V dialogovém okně **Najít a nahradit** musíte ponechat pole **Hledat v** nastavené na **aktuální dokument**. Ostatní možnosti nejsou podporovány.
+
+2. Zadejte text, který chcete najít, a potom klikněte na **Najít další**.
+
+    > [!NOTE]
+    > Pokud je text, který chcete najít, ve sbaleném tvaru, bude zvýrazněn tvar. Rozbalte tvar a pak znovu klikněte na **Najít další** .
+
+## <a name="Undo"></a>Rušení změn modelu
+ Změny, které jste provedli v modelu a diagramech, můžete vrátit zpět a znovu pomocí příkazů **zpět** a **znovu** v nabídce **Upravit** .
+
+ **Každý projekt modelování má jeden zásobník změn.** Všechny změny, které provedete v modelu a diagramech, se v tomto zásobníku uchovávají. Zásobník obsahuje také změny fokusu z jednoho diagramu na druhý. Příkaz zpět obrátí změny v tomto zásobníku.
+
+ Řekněme například, že provedete tyto operace: Udělejte změnu na Diagram1; změnit fokus na diagram 2; Změňte diagram2. Při vrácení změn zpět vrátí poslední změnu zpět. Při dalším vrácení se fokus přesune zpátky na diagram 1; a třetí akce zpět vrátí změnu na diagram 1.
+
+ **Zavření diagramu zkrátí zásobník změn.** Pokud diagram zavřete, nemůžete vrátit zpět změny provedené v tomto diagramu a nemůžete vrátit zpět předchozí změny modelu ani žádné z jeho diagramů.
+
+ **Při úpravách vlastnosti nelze operaci vrátit zpět.** Při úpravách vlastnosti v okno Vlastnosti nebo v popisku diagramu můžete vrátit pouze změny, které jste v dané vlastnosti udělali. Změnu ve vlastnosti dokončíte stisknutím klávesy ENTER nebo kliknutím na tlačítko Storno ji zrušit stisknutím klávesy ESC. Pak budete moci vrátit změny v modelu a diagramech.
+
+ **Zavření diagramu bez uložení nemusí mít očekávaný efekt.** Pokud provedete nějaké změny a pak diagram zavřete bez uložení, změny se v modelu pořád zachovají. Pokud to chcete provést bez uložení, doporučujeme celý model zavřít.
+
+## <a name="Sharing"></a>Sdílení prvků mezi diagramy
+ Konkrétní instanci prvku modelu můžete v diagramech Zobrazit více než jednou. To platí pro třídy, rozhraní, komponenty, případy použití a aktéry.
+
+ To je užitečné, pokud chcete zobrazit různé skupiny vztahů v různých diagramech. Například v jednom diagramu můžete zobrazit přidružení mezi třídami zákazníka a adresy. Na jiném diagramu můžete znovu zobrazit třídu adres s její asociací k poštovní oblasti.
+
+ Můžete změnit vlastnosti prvku modelu, jako je jeho název, výběrem kteréhokoli z jeho zobrazení v jakémkoli diagramu nebo jeho výběrem v Průzkumníku modelů UML.
+
+ Každý druh diagramu může zobrazit pouze některé druhy prvku modelu. Například nelze zobrazit případ použití v diagramu komponent. Proto následující postupy budou fungovat pouze pro některé kombinace prvku modelu a diagramu.
+
+#### <a name="to-add-a-new-view-of-a-model-element-by-using-uml-model-explorer"></a>Přidání nového zobrazení prvku modelu pomocí Průzkumníka modelů UML
+
+1. Chcete-li otevřít **Průzkumníka modelů UML**, v nabídce **Architektura** přejděte na položku **okna**a klikněte na možnost **Průzkumník modelů UML**.
+
+2. Přetáhněte prvek modelu z **Průzkumníka modelů UML** do kompatibilního diagramu ve stejném projektu.
+
+     Zobrazí se obrazec, který poskytuje zobrazení prvku modelu, což může být mimo zobrazení v jiných diagramech nebo ve stejném diagramu.
+
+    > [!NOTE]
+    > Když přetáhnete třídu nebo komponentu do sekvenčního diagramu, efekt se liší. V takovém případě je vytvořena nová životnost, jejíž typ je tato třída nebo komponenta. Další informace najdete v tématu [sekvenční diagramy UML: pokyny](../modeling/uml-sequence-diagrams-guidelines.md).
+
+#### <a name="to-add-a-new-view-of-a-model-element-by-using-paste-reference"></a>Přidání nového zobrazení prvku modelu pomocí odkazu pro vložení
+
+1. Klikněte pravým tlačítkem na existující prvek a pak klikněte na **Kopírovat**.
+
+    - Můžete kopírovat několik prvků současně. Podržte stisknutou klávesu CTRL a klikněte na jednotlivé prvky, klikněte na jednu z nich pravým tlačítkem myši a pak klikněte na **Kopírovat**.
+
+2. Klikněte pravým tlačítkem myši na prázdnou část kompatibilního diagramu a potom klikněte na příkaz **Vložit odkaz**.
+
+     Zobrazí se jiné zobrazení stejného prvku.
+
+    > [!NOTE]
+    > To se liší od příkazu pro **vložení** , který vytvoří nový prvek v modelu. Další informace naleznete v tématu [kopírování prvků a skupin souvisejících prvků](#Copying).
+
+> [!NOTE]
+> Pokud přidáte do zobrazení diagramu dvou prvků modelu, které jsou již propojeny pomocí relace, zobrazí se v diagramu také zobrazení vztahu. Toto zobrazení lze odstranit pouze odebráním jednoho z prvků z diagramu, nebo odstraněním vztahu z modelu.
+
+## <a name="Copying"></a>Kopírování prvků a skupin souvisejících prvků
+ Prvky modelu lze kopírovat a vkládat a můžete kopírovat a vkládat skupiny prvků spolu s relacemi mezi nimi.
+
+> [!NOTE]
+> Příkazy pro **vložení** a **vložení** mají různé účinky. **Vložení** vytvoří nové prvky, jejichž vlastnosti jsou jako prvky kopírovaných prvků. **Vložení odkazu** vytvoří nová zobrazení stejného prvku.
+
+#### <a name="to-copy-elements-and-their-relationships"></a>Kopírování prvků a jejich vztahů
+
+1. V diagramu s prvky, které chcete kopírovat, vyberte jeden nebo více prvků.
+
+    > [!NOTE]
+    > Relace s výjimkou nemůžete kopírovat jako součást skupiny prvků.
+
+2. V nabídce **Upravit** klikněte na příkaz **Kopírovat**.
+
+3. Chcete-li kopírovat prvky do jiného diagramu, vytvořte nový diagram nebo otevřete existující diagram.
+
+4. V nabídce **Upravit** klikněte na příkaz **Vložit**.
+
+    - Kopie prvků se zobrazí spolu s kopiemi vztahů, které mezi nimi propojuje.
+
+    - Každý nový prvek bude mít nový automaticky generovaný název.
+
+5. Upravte pozice, názvy a další vlastnosti nových prvků a vztahů.
+
+> [!NOTE]
+> Prvek modelu nelze kopírovat z jednoho modelu do jiného, například pokud máte dva modely ve stejném řešení. Prvky můžete ale kopírovat z jednoho diagramu na jiný.
+
+#### <a name="to-copy-an-entire-diagram"></a>Zkopírování celého diagramu
+
+1. Vytvořte nový diagram.
+
+2. Vyberte všechny prvky v existujícím diagramu, zkopírujte je a vložte do nového.
+
+   Diagram nelze replikovat zkopírováním a vložením do Průzkumník řešení.
+
+## <a name="Deleting"></a>Odstranění prvku modelu nebo jeho zobrazení
+ Některé druhy prvků, konkrétně třídění, lze z diagramu odebrat, aniž byste je museli odstraňovat z modelu. Klasifikátory jsou hlavní prvky, které se zobrazují v diagramech tříd, diagramech komponent a diagramech případů použití. Můžou se objevit ve více než jednom diagramu. Pro tyto typy prvků existují dva samostatné příkazy: **Odebrat z diagramu** a **Odstranit z modelu**.
+
+ Naopak když odstraníte relaci z diagramu, vždy ji odstraníte z modelu.
+
+> [!NOTE]
+> Některé druhy prvků v diagramu UML mají popisky. Když vyberete tyto prvky kreslením obdélníku kolem nich, je možné vybrat popisky, ale ne prvky, které tyto popisky vlastní. Odstranění podmnožiny prvků, které jsou vybrány tímto způsobem, není podporováno. Chcete-li vybrat podmnožinu těchto prvků, stiskněte a podržte stisknutou klávesu **CTRL** a klikněte na jednotlivé prvky.
+
+#### <a name="to-remove-a-classifiers-view-from-a-diagram"></a>Odebrání zobrazení klasifikátoru z diagramu
+
+- Klikněte pravým tlačítkem na prvek v diagramu a pak klikněte na **Odebrat z diagramu**.
+
+  \- nebo-
+
+- Klikněte na prvek v diagramu a potom stiskněte klávesu **Delete** .
+
+  - Toto zobrazení elementu zmizí. Element však zůstane v modelu a stále jej můžete najít v **Průzkumníku modelů UML**. Všechna ostatní zobrazení stejného prvku také zůstanou.
+
+  - Všechny konektory, které se ukončí tímto tvarem, se z diagramu odeberou, ale vztah, který představuje, zůstane v modelu. V **Průzkumníku modelů UML** pod položkou **relace**můžete v rámci každého elementu, který se připojuje, zobrazit vztah.
+
+#### <a name="to-delete-an-element-from-the-model"></a>Odstranění elementu z modelu
+
+- Klikněte pravým tlačítkem myši na prvek v **Průzkumníku modelů UML** nebo v diagramu a pak klikněte na **Odstranit z modelu**.
+
+  - Prvek je odstraněn z každého diagramu, na kterém je zobrazen.
+
+  - Z modelu se odstraní také všechny relace, které se ukončí v tomto elementu.
+
+#### <a name="to-delete-a-relationship-from-the-model"></a>Odstranění vztahu z modelu
+
+- Klikněte pravým tlačítkem na vztah v diagramu nebo v **Průzkumníku modelů UML**a pak klikněte na **Odstranit z modelu**.
+
     > [!CAUTION]
-    > Relaci nelze odebrat z diagramu bez odebrání z modelu.  
-  
-     Relace je odstranit z modelu a se odstraní ze všech diagramů, na kterém se zobrazí.  
-  
-## <a name="presentation"></a> Příprava diagramu pro prezentaci  
- Tyto funkce umožňují přitažení pozornosti ke konkrétní části diagramu, přidejte vysvětlení nebo rozdělte diagramu do různých oblastí zájmu.  
-  
-- Libovolnou část diagramu můžete zkopírovat do Word, PowerPoint nebo jiného dokumentu. Vyberte obrazců a konektorů, klikněte pravým tlačítkem a pak klikněte na tlačítko **kopírování**.  
-  
-- Lze změnit barvu všech obrazec nebo spojnici. Vyberte jeden nebo více obrazců a změňte **barva** vlastnost. Pokud nevidíte **vlastnosti** okna, stisknutím klávesy **F4**.  
-  
-- V diagramech některých druhů můžete kreslení čar, obdélníky a symbol tří teček z **jednoduché obrazce** části panelu nástrojů. Tyto obrazce netvoří součást modelu UML.  
-  
-- Popisek oblasti, můžete přetáhnout komentář ze sady nástrojů a nastavte jeho **Transparent** vlastnost **True**. Jako jednoduché obrazce komentáře nejsou součástí modelu UML a nezobrazují se v Průzkumníku modelů UML.  
-  
-- Přidat poznámky a vysvětlení k prvkům modelu, můžete vytvořit poznámky a propojit je s prvky.  
-  
-- Chcete-li elegantně zarovnat sloupec nebo řádek tvary v diagramu, můžete nainstalovat příkazu Zarovnat obrazce. Toto je k dispozici jako ukázka rozšíření UML:  [UML: Příkaz pro zarovnání tvarů](http://code.msdn.microsoft.com/UML-command-to-Align-4139c0d7)  
-  
-### <a name="to-export-a-diagram-as-an-image"></a>Chcete-li exportovat diagram jako obrázek  
- Další informace najdete v tématu [exportování diagramů jako obrázků](../modeling/export-diagrams-as-images.md).  
-  
-## <a name="extensions"></a> Rozšíření návrhářů UML  
- Můžete přidat nové funkce nástroje UML a přizpůsobit diagram zápis svých potřeb. Další informace najdete v tématu [modelů a diagramů UML rozšířit](../modeling/extend-uml-models-and-diagrams.md).  
-  
- Nejsou k dispozici několik rozšíření vzorku. Můžete buď jen nainstalovat a používat je, nebo jejich zdrojový kód můžete použít jako základ pro vlastní rozšíření. Ukázky patří:  
-  
-|||  
-|-|-|  
-|[Zarovnání tvarů](http://code.msdn.microsoft.com/UML-command-to-Align-4139c0d7)|Příkaz nabídky, který vám pomůže přehledné diagramu.|  
-|[Odkaz na webu docs](http://code.msdn.microsoft.com/Link-UML-elements-to-0adbf5a8)|Propojte libovolný prvek UML záhlaví Word, PowerPoint snímky, soubory libovolného typu, diagramy UML nebo další prvky UML. Propojení lze jednoduše přetažením. Později můžete dvakrát kliknout elementu, který chcete zobrazit propojenou položku. Můžete například propojit případy použití specifikace aplikace Word nebo diagramy činnosti podrobné a akce, které scénáře snímky.|  
-|[Rychlé položka](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)|Rychlé vytváření modelu pomocí zadání textu. Užitečné pro zaznamenání myšlenky v schůzky.|  
-|[Barva podle stereotypu](http://code.msdn.microsoft.com/UML-Color-Classes-by-07de2b70)|Třídy barvy podle stereotypu. Můžete jednoduše rozšířit kód pro vlastní stereotypy.|  
-|[Modelování domény](http://code.msdn.microsoft.com/UML-Domain-Modeling-6df6f7f4)|Vhodné výchozí hodnoty pro obchodní modely. Přidružení jsou zobrazeny bez šipek ve výchozím nastavení, a operace se nezobrazí ve třídách.|  
-  
-## <a name="see-also"></a>Viz také  
- [Vytvoření modelování projektů a diagramů UML](../modeling/create-uml-modeling-projects-and-diagrams.md)   
- [Analýza a modelování vaší architektury](../modeling/analyze-and-model-your-architecture.md)   
- [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)
+    > Nemůžete odebrat relaci z diagramu, aniž byste ji odebrali z modelu.
+
+     Vztah je odstraněn z modelu a je odstraněn z každého diagramu, na kterém je zobrazen.
+
+## <a name="presentation"></a>Příprava diagramu pro prezentaci
+ Následující funkce vám pomůžou nakreslit pozornost na konkrétní části diagramu, přidat vysvětlení nebo rozdělit diagram do různých oblastí, které vás zajímají.
+
+- Jakoukoli část diagramu můžete zkopírovat do Wordu, PowerPointu nebo jiného dokumentu. Vyberte požadované tvary a konektory, klikněte pravým tlačítkem myši a potom klikněte na tlačítko **Kopírovat**.
+
+- Barvu libovolného tvaru nebo konektoru lze změnit. Vyberte jeden nebo více tvarů a změňte vlastnost **Color** . Pokud se okno **vlastnosti** nezobrazí, stiskněte **F4**.
+
+- V diagramech některých druhů můžete kreslit čáry, obdélníky a elipsy z části **jednoduchých tvarů** v sadě nástrojů. Tyto tvary netvoří součást modelu UML.
+
+- Chcete-li popsat oblast, můžete přetáhnout komentář ze sady nástrojů a potom nastavit jeho **průhlednou** vlastnost na **hodnotu true**. Podobně jako jednoduché tvary netvoří komentáře součást modelu UML a nezobrazují se v Průzkumníku modelů UML.
+
+- Chcete-li přidat poznámky a vysvětlení k prvkům modelu, můžete vytvořit komentáře a propojit je s prvky.
+
+- Chcete-li v diagramu v grafu sjednotit zarovnání sloupcových nebo řádkových tvarů, můžete nainstalovat příkaz Zarovnat tvary. Tato akce je k dispozici jako ukázka rozšíření UML: [UML: příkaz pro zarovnání obrazců](http://code.msdn.microsoft.com/UML-command-to-Align-4139c0d7)
+
+### <a name="to-export-a-diagram-as-an-image"></a>Export diagramu jako obrázku
+ Další informace najdete v tématu [Export diagramů jako obrázků](../modeling/export-diagrams-as-images.md).
+
+## <a name="extensions"></a>Rozšíření návrhářů UML
+ Do nástrojů UML můžete přidat nové funkce a přizpůsobit zápis diagramu vlastním potřebám. Další informace najdete v tématu věnovaném [rozšiřování modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md).
+
+ K dispozici je několik ukázkových rozšíření. Můžete je buď nainstalovat a používat, nebo můžete použít svůj zdrojový kód jako základ pro vlastní rozšíření. Mezi tyto ukázky patří:
+
+|||
+|-|-|
+|[Zarovnat obrazce](http://code.msdn.microsoft.com/UML-command-to-Align-4139c0d7)|Příkaz nabídky, který vám pomůže uklizený diagram.|
+|[Odkaz na dokumenty](http://code.msdn.microsoft.com/Link-UML-elements-to-0adbf5a8)|Propojte libovolný element UML s nadpisy aplikace Word, snímky aplikace PowerPoint, soubory libovolného typu, diagramy UML nebo jiné prvky UML. Odkaz lze vytvořit jednoduše přetažením. Později můžete dvakrát kliknout na prvek a zobrazit tak propojenou položku. Například můžete propojit případy použití se specifikacemi slov nebo podrobnými diagramy aktivit a akcemi na snímky scénářů.|
+|[Rychlá položka](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)|Vytvářejte model rychle pomocí zadávání textu. Užitečné pro zaznamenávání nápadů na schůzkách.|
+|[Barva podle stereotypu](http://code.msdn.microsoft.com/UML-Color-Classes-by-07de2b70)|Třídy barev podle stereotypu Kód můžete snadno roztáhnout, aby fungoval pro vlastní stereotypy.|
+|[Modelování domén](http://code.msdn.microsoft.com/UML-Domain-Modeling-6df6f7f4)|Pohodlné výchozí hodnoty pro obchodní modely. Asociace se ve výchozím nastavení zobrazují bez šipek a operace se v třídách neobjeví.|
+
+## <a name="see-also"></a>Viz také
+ [Vytváření projektů a diagramů modelování UML](../modeling/create-uml-modeling-projects-and-diagrams.md) [Analýza a modelování architektury](../modeling/analyze-and-model-your-architecture.md) [vytvoření modelů pro vaši aplikaci](../modeling/create-models-for-your-app.md)

@@ -1,5 +1,5 @@
 ---
-title: Options, Text Editor, C#, Advanced | Microsoft Docs
+title: Možnosti, textový editor, C#, Upřesnit | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -17,68 +17,57 @@ helpviewer_keywords:
 - XML documentation, creating
 ms.assetid: 947f9d9a-b0f3-408d-9866-d82895bcee31
 caps.latest.revision: 26
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 73148f8c3f569f3d585f6127b7ec713c766b0f8b
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 4f2d11e78c2402a6541bc87748ed6ba348ba80fc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65674254"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662323"
 ---
 # <a name="options-text-editor-c-advanced"></a>Možnosti, textový editor, C#, upřesnit
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Použijte toto dialogové okno Upravit nastavení editoru formátování, refaktoring kódu a dokumentační komentáře XML pro jazyk Visual C#. Toto dialogové okno, klikněte na tlačítko **možnosti** na **nástroje** nabídky, rozbalte **textový Editor** složky, rozbalte **jazyka C#** a potom klikněte na tlačítko  **Pokročilé**.  
-  
+Toto dialogové okno slouží k úpravě nastavení formátování editoru, refaktoringu kódu a dokumentačních komentářů XML pro vizuál C#. Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na tlačítko **Možnosti** v nabídce **nástroje** , rozbalte **C#** složku **textový editor** , rozbalte položku a klikněte na tlačítko **Upřesnit**.
+
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="outlining"></a>Sbalování  
- Po otevření souborů vstoupit do režimu sbalování  
- Pokud je vybráno, automaticky popisuje, jak soubor kódu, který vytvoří sbalitelnou bloky kódu. Při prvním otevření souboru #regions bloky a bloky neaktivního kódu sbalte.  
-  
-## <a name="editor-help"></a>Nápověda k editoru  
- Underline chyby v editoru  
- Identifikuje chyby sestavení v kódu. Pokud je vybraná tato možnost, zobrazí se podtržení vlnovkou barvy, které mají zvláštní význam:  
-  
-- Chyby analýzy jsou červené.  
-  
-- Chyby sestavení jsou modrá.  
-  
-- Upozornění sestavení jsou zelená.  
-  
-- Neplatný [upravit a pokračovat](../../debugger/edit-and-continue.md) úpravy jsou fialový.  
-  
-  Přesuňte ukazatel nad segmentu podtržené kódu zobrazíte popisek s informacemi o chybě.  
-  
-  Zobrazit živé sémantické chyby  
-  Identifikuje určité chyby při kompilaci bez explicitní kompilace, například, deklarace a používání neznámého typu nebo odkazuje na neznámou vlastnost.  
-  
-  Zvýrazňovat odkazy na _symbol pod kurzorem  
-  Když se kurzor uvnitř symbol, nebo když kliknete na symbol, jsou zvýrazněny všechny instance tohoto symbolu v souboru kódu.  
-  
-## <a name="refactoring"></a>Refaktoring  
- Zkontrolujte výsledky refaktoring  
- Zobrazí **výsledky ověření** dialogové okno při pokusu o Refaktorovat kód, který obsahuje chyby sestavení, nebo když refaktoring by způsobilo odkaz kód k vytvoření vazby na něco jiného než jeho původní vazby.  
-  
- Upozornit na členy s odkazy na generovaný kompilátorem  
- Zobrazí dialogové okno upozornění při pokusu o Refaktorovat člena, který má stejný název jako odkaz na generovaný kompilátorem.  
-  
-## <a name="xml-documentation-comments"></a>Dokumentační komentáře XML  
- Generování komentářů k dokumentaci XML pro / / / / /  
- Pokud je vybráno, vloží \<summary > počáteční a koncové značky pro dokumentační komentáře XML automaticky po zadání Úvod / / / / / komentář. Další informace o dokumentaci XML, naleznete v tématu [dokumentační komentáře XML](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199).  
-  
-## <a name="implement-interface"></a>Implementovat rozhraní  
- Obklopit s #region generovaného kódu  
- Vloží #region \< *název rozhraní*> člen kolem metody, když se implementovat rozhraní nebo implementovat rozhraní explicitně se používá.  
-  
-## <a name="organize-usings"></a>Uspořádat direktivy using  
- Umístit nejdřív direktivy "System", při řazení direktiv Using  
- Pokud je vybráno, `System` pomocí direktivy zobrazí před dalšími direktiv using. Další informace najdete v tématu [řazení direktiv Using](../../misc/sort-usings.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Dokumentační komentáře XML](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199)   
- [Nastavení možností editoru pro konkrétní jazyk](../../ide/reference/setting-language-specific-editor-options.md)   
- [Visual C# IntelliSense](../../ide/visual-csharp-intellisense.md)
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="outlining"></a>Sbalování
+ Přejít do režimu sbalení, když se otevřou soubory, když jsou vybrané, automaticky se vyberou do souboru kódu, který vytvoří sbalitelný blok kódu. Při prvním otevření souboru #regions bloky a neaktivní bloky kódu budou sbaleny.
+
+## <a name="editor-help"></a>Pomocník s editorem
+ Podtržené chyby v editoru identifikují chyby sestavení v kódu. Je-li vybrána tato možnost, jsou podtrženy vlnovkou v barvách, které mají zvláštní význam:
+
+- Chyby analýzy jsou červené.
+
+- Chyby sestavení jsou modré.
+
+- Upozornění sestavení jsou zelená.
+
+- Neplatné úpravy [úprav a pokračování](../../debugger/edit-and-continue.md) jsou fialové.
+
+  Přesunutím ukazatele myši na podtržený segment kódu zobrazíte popis tlačítka s informacemi o chybě.
+
+  Zobrazit sémantické chyby při kompilaci identifikují určité chyby kompilace bez explicitní kompilace, například deklarování a použití neznámého typu nebo odkazování na neznámou vlastnost.
+
+  Zvýrazněte odkazy na symbol pod kurzorem, když je kurzor umístěn uvnitř symbolu, nebo když kliknete na symbol, všechny instance tohoto symbolu v souboru kódu jsou zvýrazněny.
+
+## <a name="refactoring"></a>Refaktoring
+ Při kontrole výsledků refaktoringu se zobrazí dialogové okno **výsledky ověření** při pokusu o refaktorování kódu, který obsahuje chyby sestavení, nebo když refaktoring způsobí, že se odkaz na kód sváže s jiným objektem, než má původní vazba.
+
+ Upozornění na členy pomocí odkazů generovaných kompilátorem zobrazí dialogové okno s upozorněním, když se pokusíte Refaktorovat člen, který má stejný název jako odkaz generovaný kompilátorem.
+
+## <a name="xml-documentation-comments"></a>Dokumentační komentáře XML
+ Generovat komentáře dokumentace XML pro///Pokud je tato možnost vybrána, vloží \<summary > počáteční a koncové značky pro dokumentační komentáře XML poté, co zadáte Úvod do komentáře. Další informace o dokumentaci XML najdete v [dokumentaci k dokumentaci XML](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199).
+
+## <a name="implement-interface"></a>Implementovat rozhraní
+ Obklopení vygenerovaného kódu pomocí #region vloží #region \<*název rozhraní*, > člen kolem metod při explicitním implementaci rozhraní nebo implementaci rozhraní.
+
+## <a name="organize-usings"></a>Uspořádat direktivy using
+ Nejprve umístit direktivy System při řazení direktivy using, `System` direktivy using se zobrazí před jinými direktivami using. Další informace najdete v tématu [řazení pomocí](../../misc/sort-usings.md).
+
+## <a name="see-also"></a>Viz také
+ [Dokumentace k dokumentaci XML](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199) [Nastavení možností editoru pro konkrétní jazyk](../../ide/reference/setting-language-specific-editor-options.md) [vizuální C# IntelliSense](../../ide/visual-csharp-intellisense.md)

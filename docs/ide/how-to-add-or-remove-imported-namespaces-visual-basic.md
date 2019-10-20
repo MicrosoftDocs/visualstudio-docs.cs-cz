@@ -9,23 +9,23 @@ helpviewer_keywords:
 - imported namespaces [Visual Studio]
 - references [Visual Studio], imported namespaces
 ms.assetid: 44cebec3-0ea0-47c2-8406-4edeab6a997e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c443f966265f70a729e2fd433353c4856a1f8c6
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 8ff6ad1a07440b27b679fa3f749c24a6d3157dbd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924053"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654658"
 ---
 # <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>Postupy: Přidání nebo odebrání importovaných oborů názvů (Visual Basic)
 
-Import oboru názvů umožňuje použít prvky z tohoto oboru názvů ve vašem kódu bez úplného zařazení prvku. Například pokud `Create` chcete získat přístup k metodě `System.Messaging.MessageQueue` ve třídě `System.Messaging` , můžete importovat obor názvů a pouze odkazovat na prvek, který potřebujete v kódu jako `MessageQueue.Create`.
+Import oboru názvů umožňuje použít prvky z tohoto oboru názvů ve vašem kódu bez úplného zařazení prvku. Například pokud chcete získat přístup k metodě `Create` ve třídě `System.Messaging.MessageQueue`, můžete importovat `System.Messaging` obor názvů a pouze odkazovat na prvek, který potřebujete v kódu jako `MessageQueue.Create`.
 
-Importované obory názvů jsou spravovány na stránce **odkazy** v **Návrháři projektu**. Importy, které zadáte v tomto dialogovém okně, jsou předány přímo kompilátoru ( */Imports*) a platí pro všechny soubory v projektu. `Imports` Použijte příkaz pro použití oboru názvů v jednom souboru zdrojového kódu.
+Importované obory názvů jsou spravovány na stránce **odkazy** v **Návrháři projektu**. Importy, které zadáte v tomto dialogovém okně, jsou předány přímo kompilátoru ( */Imports*) a platí pro všechny soubory v projektu. Použijte příkaz `Imports` pro použití oboru názvů v jednom souboru zdrojového kódu.
 
 ### <a name="to-add-an-imported-namespace"></a>Přidání importovaného oboru názvů
 
@@ -36,7 +36,7 @@ Importované obory názvů jsou spravovány na stránce **odkazy** v **Návrhá�
 3. V seznamu **importované obory názvů** zaškrtněte políčko pro obor názvů, který chcete přidat.
 
     > [!NOTE]
-    > Aby bylo možné importovat, musí být obor názvů v odkazované součásti. Pokud se obor názvů v seznamu nezobrazí, budete muset přidat odkaz na komponentu, která ho obsahuje. Další informace najdete v tématu [Správa odkazů v projektu](managing-references-in-a-project.md).
+    > Aby bylo možné importovat, musí být obor názvů v odkazované součásti. Pokud se obor názvů v seznamu nezobrazí, budete muset přidat odkaz na komponentu, která ho obsahuje. Další informace naleznete v tématu [Správa odkazů v projektu](managing-references-in-a-project.md).
 
 ### <a name="to-remove-an-imported-namespace"></a>Odebrání importovaného oboru názvů
 
@@ -47,9 +47,9 @@ Importované obory názvů jsou spravovány na stránce **odkazy** v **Návrhá�
 3. V seznamu **importované obory názvů** zrušte zaškrtnutí políčka pro obor názvů, který chcete odebrat.
 
 ## <a name="user-imports"></a>Importy uživatelů
-Importy uživatelů umožňují importovat konkrétní třídu v rámci oboru názvů, nikoli celý obor názvů. Například vaše aplikace může mít import pro <xref:System.Diagnostics> obor názvů, ale jediná třída v rámci tohoto oboru názvů, které vás zajímá, `Debug` je třída. Můžete definovat <xref:System.Diagnostics.Debug> jako import uživatele a pak odebrat import pro <xref:System.Diagnostics>.
+Importy uživatelů umožňují importovat konkrétní třídu v rámci oboru názvů, nikoli celý obor názvů. Například vaše aplikace může mít import pro obor názvů <xref:System.Diagnostics>, ale jediná třída v rámci tohoto oboru názvů, o kterou vás zajímá, je `Debug` třída. Můžete definovat <xref:System.Diagnostics.Debug> jako import uživatele a pak odebrat import pro <xref:System.Diagnostics>.
 
-Pokud se později rozhodnete, že jste si sami mysleli `EventLog` , že skutečně jste potřebovali, můžete <xref:System.Diagnostics.EventLog> zadat jako import a přepsat <xref:System.Diagnostics.Debug> uživatele pomocí funkce aktualizace.
+Pokud se později rozhodnete, že jste si sami rozmysleli, že se skutečně `EventLog` třída, kterou jste potřebovali, mohli byste do <xref:System.Diagnostics.EventLog> zadat import a přepsat <xref:System.Diagnostics.Debug> pomocí funkce aktualizace.
 
 ### <a name="to-add-a-user-import"></a>Přidání importu uživatele
 

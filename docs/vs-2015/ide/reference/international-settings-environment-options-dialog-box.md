@@ -1,5 +1,5 @@
 ---
-title: Mezinárodní nastavení, prostředí, dialogové okno Možnosti | Dokumentace Microsoftu
+title: Mezinárodní nastavení, prostředí, dialogové okno Možnosti | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -16,29 +16,28 @@ helpviewer_keywords:
 - languages, specifying default
 ms.assetid: e3a8815c-6995-4099-8e88-34f91fad55b2
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a42a05c453c328dc156cadb86c9abc55d587c467
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 26ed1ef8941db17c9cc087a80afcad2b4ce982de
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65674304"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650824"
 ---
 # <a name="international-settings-environment-options-dialog-box"></a>Mezinárodní nastavení, prostředí, dialogové okno Možnosti
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Stránka mezinárodní nastavení umožňuje změnit výchozí jazyk v případě, že máte více než jedna jazyková verze sady integrovaného vývojového prostředí (IDE) na vašem počítači nainstalovaný. Můžete přístup k tomuto dialogovému oknu výběrem **možnosti** z **nástroje** nabídky a následným výběrem možnosti **mezinárodní nastavení** z **prostředí** složky. Pokud se tato stránka se nezobrazí v seznamu, vyberte **zobrazit všechna nastavení** v **možnosti** dialogové okno.  
-  
+Stránka mezinárodní nastavení umožňuje změnit výchozí jazyk, pokud máte na počítači nainstalovanou více než jednu jazykovou verzi integrovaného vývojového prostředí (IDE). K tomuto dialogovému oknu se dostanete tak, že v nabídce **nástroje** vyberete **Možnosti** a pak zvolíte **mezinárodní nastavení** ze složky **prostředí** . Pokud se tato stránka v seznamu nezobrazuje, vyberte v dialogovém okně **Možnosti** možnost **Zobrazit všechna nastavení** .
+
 > [!NOTE]
-> Dostupné možnosti v dialogových oknech, názvy a umístění příkazů, které vidíte, mohou lišit od informací uvedených v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
- **Jazyk**  
- Zobrazí seznam dostupných jazyků pro jazykové verze nainstalovaného produktu. Tato možnost není dostupná, pokud máte více než jedna jazyková verze na vašem počítači nainstalovaný. Pokud více jazyků produktů nebo smíšený jazyk instalace produktů sdílet prostředí, se změní výběr jazyka na **totéž jako Windows Microsoft**.  
-  
+> Možnosti dostupné v dialogových oknech a názvy a umístění příkazů nabídky, které vidíte, se mohou lišit od toho, co je popsáno v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+ **Jazyk** Obsahuje seznam dostupných jazyků pro nainstalované jazykové verze produktu. Tato možnost není k dispozici, pokud v počítači nemáte nainstalovanou více než jednu jazykovou verzi. Pokud se prostředí sdílí s více jazyky produktů nebo instalací smíšeného jazyka produktů, je výběr jazyka změněn na **stejný jako v systému Microsoft Windows**.
+
 > [!CAUTION]
-> V systému s více jazyky, které jsou nainstalované nástroje sestavení jazyka Visual C++ (cl.exe, link.exe, nmake.exe, bscmake.exe a související soubory) nejsou ovlivněny toto nastavení. Tyto nástroje používat verzi pro poslední jazyk nainstalovaný a nástroje pro dříve nainstalované jazyky jsou přepsat, protože sestavení nástroje Visual C++ se nepoužívá model satelitní knihovny DLL.  
-  
-## <a name="see-also"></a>Viz také  
+> V systému, v němž je nainstalováno více jazyků C++ , nejsou tímto nastavením ovlivněny nástroje pro Visual Build (CL. exe, Link. exe, NMAKE. exe, BSCMAKE. exe a související soubory). Tyto nástroje používají verzi pro poslední nainstalovaný jazyk a nástroje pro dříve instalovaný jazyk jsou přepsány, protože nástroje pro Visual C++ Build nepoužívají model satelitní knihovny DLL.
+
+## <a name="see-also"></a>Viz také
  [Prostředí, dialogové okno Možnosti](../../ide/reference/environment-options-dialog-box.md)

@@ -1,5 +1,5 @@
 ---
-title: 'CA2212: Neoznačujte obsluhované součásti pomocí WebMethod | Dokumentace Microsoftu'
+title: 'CA2212: neoznačujte obsluhované součásti pomocí WebMethod | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,37 +12,37 @@ helpviewer_keywords:
 - DoNotMarkServicedComponentsWithWebMethod
 ms.assetid: 774bc55d-e588-48ee-8f38-c228580feca2
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 6f2e89705e36407e39103296e3eee70482e3d03f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2ee166f8bbc14e66968cd4f7c265331854905ac9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142482"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662948"
 ---
-# <a name="ca2212-do-not-mark-serviced-components-with-webmethod"></a>CA2212: Neoznačujte obsluhované komponenty pomocí WebMethod
+# <a name="ca2212-do-not-mark-serviced-components-with-webmethod"></a>CA2212: Neoznačujte obsluhované součásti pomocí WebMethod
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|DoNotMarkServicedComponentsWithWebMethod|
 |CheckId|CA2212|
-|Kategorie|Microsoft.Usage|
+|Kategorie|Microsoft. Usage|
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Metoda v typu, která dědí z <xref:System.EnterpriseServices.ServicedComponent?displayProperty=fullName> je označené <xref:System.Web.Services.WebMethodAttribute?displayProperty=fullName>.
+ Metoda v typu, který dědí z <xref:System.EnterpriseServices.ServicedComponent?displayProperty=fullName>, je označena atributem <xref:System.Web.Services.WebMethodAttribute?displayProperty=fullName>.
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.Web.Services.WebMethodAttribute> platí pro metody v rámci webové služby XML, které byly vytvořeny pomocí technologie ASP.NET; Díky metodu volat ze vzdálených webových klientů. Metody a třídy musí být veřejné a provádění ve webové aplikaci ASP.NET. <xref:System.EnterpriseServices.ServicedComponent> typy jsou hostované aplikace COM + a využívat služby COM +. <xref:System.Web.Services.WebMethodAttribute> neplatí pro <xref:System.EnterpriseServices.ServicedComponent> typy, protože nejsou určeny pro stejné scénáře. Konkrétně, přidání atributu do <xref:System.EnterpriseServices.ServicedComponent> – metoda neprovede metodu volat ze vzdálených webových klientů. Protože <xref:System.Web.Services.WebMethodAttribute> a <xref:System.EnterpriseServices.ServicedComponent> metody mají konfliktní chování a budou požadavky na kontext a tok transakcí, chování metody v některých případech nesprávné.
+ <xref:System.Web.Services.WebMethodAttribute> platí pro metody v rámci webové služby XML, které byly vytvořeny pomocí ASP.NET; umožňuje volat metodu ze vzdálených webových klientů. Metoda a třída musí být veřejné a musí být spouštěny ve webové aplikaci v ASP.NET. typy <xref:System.EnterpriseServices.ServicedComponent> hostují aplikace modelu COM+ a můžou používat služby COM+. <xref:System.Web.Services.WebMethodAttribute> se nepoužije na typy <xref:System.EnterpriseServices.ServicedComponent>, protože nejsou určené pro stejné scénáře. Konkrétně přidáním atributu do metody <xref:System.EnterpriseServices.ServicedComponent> nezpůsobí, že se metoda bude volat ze vzdálených webových klientů. Vzhledem k tomu, že <xref:System.Web.Services.WebMethodAttribute> a metoda <xref:System.EnterpriseServices.ServicedComponent> mají konfliktní chování a požadavky pro kontext a tok transakcí, chování metody bude v některých scénářích nesprávné.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, odeberte atribut z <xref:System.EnterpriseServices.ServicedComponent> metody.
+ Chcete-li opravit porušení tohoto pravidla, odeberte atribut z metody <xref:System.EnterpriseServices.ServicedComponent>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění na toto pravidlo. Nejsou žádné scénáře, kde kombinaci těchto prvků je správná.
+ Nepotlačujte upozornění na toto pravidlo. Neexistují žádné scénáře, ve kterých je kombinace těchto prvků správná.
 
 ## <a name="see-also"></a>Viz také
  <xref:System.EnterpriseServices.ServicedComponent?displayProperty=fullName><xref:System.Web.Services.WebMethodAttribute?displayProperty=fullName>

@@ -3,54 +3,54 @@ title: Nepodporované scénáře ladění v návrháři postupu provádění
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 6adbe379-41d0-4681-9cd0-b91f187c3c2c
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 9cda710a3a2f4945e96e706479996da0a1fa7e12
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+author: jillre
+ms.openlocfilehash: bfc4e0995a9abb88f73ff27186ed4e0d1dc81648
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825734"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649777"
 ---
 # <a name="unsupported-debugging-scenarios-in-the-workflow-designer"></a>Nepodporované scénáře ladění v návrháři postupu provádění
 
-Návrháře postupu provádění nepodporuje následující scénáře ladění:
+Návrhář postupu provádění nepodporuje následující scénáře ladění:
 
-- Provádění nelze pokračovat, až se upravil kód.
+- Po úpravě kódu nelze provádění pokračovat.
 
-- Spuštění nemůže pokračovat z libovolného bodu v pracovním postupu (nastavit další).
+- Provádění nemůže pokračovat z libovolného bodu v pracovním postupu (nastavení Next).
 
-- Provádění nelze pokračovat, dokud nenastane kurzoru (Spustit ke kurzoru).
+- Provádění nemůže pokračovat, dokud se kurzor nedosáhne (spustí se kurzorem).
 
-- Chcete-li ladit pracovní postupy vytvořené v kódu bez použití návrháře nelze použít Návrháře postupu provádění.
+- Návrháře pracovních postupů nelze použít k ladění pracovních postupů vytvořených v kódu bez použití návrháře.
 
-- Pracovní postupy vytvořené v dřívějších verzích Windows Workflow Foundation (WF) není možné ladit v rozhraní .NET Framework 4 nebo novější.
+- Pracovní postupy vytvořené v dřívějších verzích programovací model Windows Workflow Foundation (WF) se nedají ladit v .NET Framework 4 nebo novějším.
 
-- Zarážky nelze zadat u propojení mezi aktivitami nebo <xref:System.Activities.Statements.Flowchart> uzly.
+- U propojení mezi aktivitami nebo uzly <xref:System.Activities.Statements.Flowchart> nelze definovat zarážky.
 
-- Během ladění není k dispozici do schránky.
+- Schránka není během ladění k dispozici.
 
-- Zarážky nejsou zachovány při jsou aktivity kopírování a vložení.
+- Zarážky nejsou uchovávány, když jsou zkopírovány nebo vloženy aktivity.
 
 - V okně zásobník volání nelze nastavit zarážky pracovního postupu.
 
-- Při vytváření zarážky v návrháři **řádku** a **znak** nastavení v **Nová zarážka** nepoužívají dialogového okna.
+- Při vytváření zarážek v návrháři se nepoužijí nastavení **řádku** a **znaku** v dialogovém okně **Nová zarážka** .
 
-- Zarážka okna nebo v místní nabídce nepodporuje následující sloupce nebo možnosti pro ladění pracovního postupu:
+- Okno zarážky nebo místní nabídka nepodporuje následující sloupce nebo možnosti ladění pracovního postupu:
 
   - Podmínka
 
-  - Počet přístupů
+  - Počet volání
 
-  - Při průchodu
+  - Při volání
 
   - Funkce
 
   - Data
 
-  - Proces
+  - Přihlášení
 
   - Přejít na zpětný překlad

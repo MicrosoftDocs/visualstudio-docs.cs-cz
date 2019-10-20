@@ -2,33 +2,33 @@
 title: Vložení diagramu do formuláře Windows
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b2ed12175e986178d43ffe5e3da8b85e2ab22e5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b0f6bbcfdfcf57902979d73b0181547cf779777b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62994584"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653754"
 ---
 # <a name="embed-a-diagram-in-a-windows-form"></a>Vložení diagramu do formuláře Windows
 
-DSL diagram můžete vložit v ovládacím prvku Windows, které se zobrazí v okně aplikace Visual Studio.
+Diagram DSL lze vložit do ovládacího prvku systému Windows, který se zobrazí v okně aplikace Visual Studio.
 
-## <a name="embed-a-dsl-diagram-in-a-windows-control"></a>Vložení diagramu do DSL v ovládacím prvku Windows
+## <a name="embed-a-dsl-diagram-in-a-windows-control"></a>Vložení diagramu DSL do ovládacího prvku Windows
 
-1. Přidat nový **uživatelský ovládací prvek** soubor do projektu DslPackage.
+1. Přidejte do projektu DslPackage nový soubor **uživatelského ovládacího prvku** .
 
-2. Přidejte ovládací prvek Panel uživatelského ovládacího prvku. Tento panel bude obsahovat DSL Diagram.
+2. Přidejte ovládací prvek panel do uživatelského ovládacího prvku. Tento panel bude obsahovat diagram DSL.
 
      Přidejte další ovládací prvky, které požadujete.
 
-     Nastavte vlastnosti ukotvení ovládacích prvků.
+     Nastavte vlastnosti kotvy ovládacích prvků.
 
-3. V Průzkumníku řešení klikněte pravým tlačítkem myši na soubor uživatelského ovládacího prvku a klikněte na tlačítko **zobrazit kód**. Přidejte tento konstruktor a proměnné do kódu:
+3. V Průzkumník řešení klikněte pravým tlačítkem myši na soubor uživatelského ovládacího prvku a klikněte na možnost **Zobrazit kód**. Přidejte tento konstruktor a proměnnou do kódu:
 
     ```csharp
     internal UserControl1(MyDSLDocView docView, Control content)
@@ -63,13 +63,13 @@ DSL diagram můžete vložit v ovládacím prvku Windows, které se zobrazí v o
     } } } }
     ```
 
-5. Chcete-li otestovat DSL, stiskněte **F5** a otevření ukázkového souboru modelu. Diagramu se zobrazí uvnitř ovládacího prvku. Panelu nástrojů a dalších funkcí normálně pracovat.
+5. Chcete-li otestovat DSL, stiskněte klávesu **F5** a otevřete ukázkový soubor modelu. Diagram se zobrazí uvnitř ovládacího prvku. Sada nástrojů a další funkce pracují normálně.
 
-## <a name="update-the-form-using-store-events"></a>Aktualizovat formulář pomocí úložiště událostí
+## <a name="update-the-form-using-store-events"></a>Aktualizace formuláře pomocí událostí úložiště
 
-1. V Návrháři formulářů, přidejte **ListBox** s názvem `listBox1`. Bude se zobrazovat seznam prvků modelu. Je synchronizován s použitím modelu *uložení událostí*. Další informace najdete v tématu [obslužné rutiny rozšíření změny mimo the Model událostí](../modeling/event-handlers-propagate-changes-outside-the-model.md).
+1. V návrháři formuláře přidejte **seznam** s názvem `listBox1`. Tím se zobrazí seznam elementů v modelu. Je synchronizován s modelem pomocí *událostí úložiště*. Další informace najdete v tématu [obslužné rutiny událostí rozšiřovat změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
-2. V souboru vlastního kódu přepište další metody pro třídu DocView:
+2. V souboru vlastního kódu přepište další metody do třídy objekt DocView:
 
     ```csharp
     partial class MyDSLDocView
@@ -110,7 +110,7 @@ DSL diagram můžete vložit v ovládacím prvku Windows, které se zobrazí v o
      }
     ```
 
-3. V kódu uživatelského ovládacího prvku vložte metody k naslouchání pro prvky, přidat nebo odebrat:
+3. Do kódu za uživatelským ovládacím prvkem vložte metody pro poslech přidaných a odebraných prvků:
 
     ```csharp
     public partial class UserControl1 : UserControl { ...
@@ -137,9 +137,9 @@ DSL diagram můžete vložit v ovládacím prvku Windows, které se zobrazí v o
     }
     ```
 
-4. Chcete-li otestovat DSL, stiskněte **F5** a v experimentální instanci sady Visual Studio, otevřete ukázkový soubor modelu.
+4. K otestování DSL stiskněte klávesu **F5** a v experimentální instanci sady Visual Studio otevřete vzorový soubor modelu.
 
-     Všimněte si, že pole se seznamem zobrazuje seznam prvků modelu a jestli je správně po jakékoli přidání nebo odstranění a zpět a znovu.
+     Všimněte si, že seznam obsahuje seznam prvků v modelu a že je správný po přidání nebo odstranění a po vrácení a opakování.
 
 ## <a name="see-also"></a>Viz také:
 

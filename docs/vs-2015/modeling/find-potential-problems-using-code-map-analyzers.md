@@ -1,5 +1,5 @@
 ---
-title: Nalezení potenciálních problémů pomocí analyzátorů mapy kódu | Dokumentace Microsoftu
+title: Nalezení potenciálních problémů pomocí analyzátorů mapy kódu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -12,43 +12,41 @@ helpviewer_keywords:
 - graph documents, analyzing
 ms.assetid: 9dd799a7-f7eb-42ff-8612-b19dde7ff4eb
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cd771cf35ef684edd8d5c9dd82436759ec9443a3
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: fc5d185640c9623a2213aaf7ad50fa68a088b15c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437501"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669620"
 ---
 # <a name="find-potential-problems-using-code-map-analyzers"></a>Nalezení potenciálních problémů pomocí analyzátorů mapy kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Spusťte analyzátory na mapách kódu, abyste mohli snadno identifikovat kód, který může být příliš složitý nebo který může být nutné zlepšování. Například můžete použít tyto analyzátory:  
-  
-|**Kód, který se má najít**|**Prozkoumat tyto oblasti zobrazíte, zda**|  
-|-------------------------------|--------------------------------------------|  
-|Smyčky nebo cyklické závislosti|Můžete zjednodušit jejich a zvažte, jestli můžete přerušit tyto cykly.|  
-|Moc velký počet závislostí|Provádějí příliš mnoho funkcí nebo zjistit dopad změny těchto oblastí. Minimální číslo závislostí se bude zobrazovat mapu kódu ve správném formátu. Abyste mohli snadněji udržovat, změnit, testování a znovu použít, zvažte, jestli Refaktorovat tyto oblasti tak, aby větší přehlednost jsou definovány, nebo určuje, zda je možné sloučit kód, který provádí podobné funkce jako kód.|  
-|Žádné závislosti.|Potřeby nebo zda byste měli odebrat tento kód.|  
-  
-## <a name="analyze-code-maps"></a>Analýza map kódu  
-  
-1. Na panelu nástrojů Mapa **rozložení**, **analyzátory**a potom analyzátor, který chcete spustit:  
-  
-   |**Analyzer**|**K identifikaci uzlů, který**|  
-   |------------------|--------------------------------|  
-   |**Analyzátor cyklické odkazy**|Cyklické závislosti jsou na sobě navzájem. **Poznámka:**  Cyklické závislosti, které jsou v **obecných typů** skupiny nejsou zobrazeny na mapě, získáte rozbalením skupiny.|  
-   |**Najít analyzátor rozbočovače**|Jsou v horním 25 % vysoce připojených uzlů<br /><br /> **Chcete-li skrýt všechny uzly na mapě**<br /><br /> -Otevřete místní nabídku pro mapu, zvolte **Upřesnit**, **vyberte**, **Skrýt nevybrané**.<br />     Na mapě skryje nevybraných uzlů a analyzátor identifikuje nových uzlů jako centra.|  
-   |**Analyzátor neodkazované uzly**|Nemají odkazy z jiných uzlů. **Upozornění:**  Ověření všech těchto případech před za předpokladu, že kód se nepoužívá. Určité závislosti, jako je například XAML závislosti a závislosti za běhu nelze nalézt staticky v kódu.|  
-  
-   Analyzátorů mapy kódu bude nadále spuštěna po jejich použití. Pokud změníte na mapě, žádné použité Analyzátory se automaticky znovu zpracovat mapa aktualizovaná. Chcete-li zastavit spuštěný analyzátor, na panelu nástrojů mapy, zvolte **rozložení**, **analyzátory**. Vypněte vybrané analyzátor.  
-  
+Spuštění analyzátorů v mapách kódu vám usnadní identifikaci kódu, který může být příliš složitý nebo který může být potřeba zlepšit. Můžete například použít tyto analyzátory:
+
+|**Chcete-li najít kód, který má**|**Zkontrolujte tyto oblasti a zjistěte, zda**|
+|-------------------------------|--------------------------------------------|
+|Cykly nebo cyklické závislosti|Můžete je zjednodušit a zvážit, zda můžete tyto cykly přerušit.|
+|Příliš mnoho závislostí|Provádějí příliš mnoho funkcí nebo určují dopad změny těchto oblastí. V mapě kódu ve správném formátu se zobrazí minimální počet závislostí. Aby bylo možné zjednodušit správu, změnu, testování a opakované použití kódu, zvažte, zda můžete tyto oblasti Refaktorovat, aby byly mnohem jasně definovány nebo zda lze sloučit kód, který provádí podobné funkce.|
+|Žádné závislosti|Jsou nezbytné nebo zda byste měli tento kód odebrat.|
+
+## <a name="analyze-code-maps"></a>Analyzovat mapy kódu
+
+1. Na panelu nástrojů mapa zvolte **rozložení**, **analyzátory**a pak analyzátor, který chcete spustit:
+
+   |**MBSA**|**K identifikaci uzlů, které**|
+   |------------------|--------------------------------|
+   |**Analyzátor cyklických odkazů**|Cyklické závislosti na sobě navzájem. **Poznámka:**  Cyklické závislosti, které jsou ve skupině **obecných typů** , se při rozbalení skupiny nezobrazují na mapě.|
+   |**Najít analyzátor Center**|Jsou v horním 25% uzlů s vysokou úrovní připojení<br /><br /> **Skrytí všech ostatních uzlů na mapě**<br /><br /> -Otevřete místní nabídku pro mapu, zvolte možnost **Upřesnit**, **Vybrat**a **Skrýt nevybrané**.<br />     Mapa skryje nevybrané uzly a analyzátor identifikuje nové uzly jako centra.|
+   |**Analyzátor neodkazované uzly**|Nemají odkazy z jiných uzlů. **Upozornění:**  Před za předpokladu, že se kód nepoužívá, ověřte každý z těchto případů. Některé závislosti, například závislosti XAML a závislosti za běhu, nelze v kódu nalézt staticky.|
+
+   Analyzátory mapování kódu budou po použití nadále spouštěny. Změníte-li mapu, všechny použité analyzátory budou automaticky znovu zpracovat aktualizované mapování. Chcete-li zastavit spuštění analyzátoru, na panelu nástrojů mapa vyberte možnost **rozložení**, **analyzátory**. Vypněte vybraný analyzátor.
+
 > [!TIP]
-> Pokud máte mapu velmi velké, může způsobit spuštěný analyzátor nedostatku paměti výjimky. Pokud k tomu dojde, upravit mapu ke snížení jeho rozsah nebo vygenerovat menší a potom spustit Analyzátor.  
-  
-## <a name="see-also"></a>Viz také  
- [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)   
- [Použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)   
- [Mapování metod v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)
+> Pokud máte velmi velkou mapu, může spuštění analyzátoru způsobit výjimku z důvodu nedostatku paměti. Pokud k tomu dojde, upravte mapu tak, aby omezila svůj rozsah nebo vygenerovala menší hodnotu, a pak spusťte analyzátor.
+
+## <a name="see-also"></a>Viz také
+ [Mapování závislostí ve vašich řešeních](../modeling/map-dependencies-across-your-solutions.md) [použití map kódu k ladění](../modeling/use-code-maps-to-debug-your-applications.md) [metod mapy aplikací v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)

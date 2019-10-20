@@ -6,18 +6,18 @@ ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.assetid: 0fa335fd-e442-448f-913f-25a19df90a93
 caps.latest.revision: 8
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 93a62b6fe5493b78a3c18c1adb87761cdb894670
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: e8b3ea10b96a63bd18098030dc884ac3f3383353
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871548"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657189"
 ---
 # <a name="using-microsoftvisualstudiotesttoolsunittesting-members-in-unit-tests"></a>Používání členů oboru názvů Microsoft.VisualStudio.TestTools.UnitTesting při testování částí
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-Rozhraní testování částí podporuje testování částí v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Při kódování testů jednotek použijte třídy a <xref:Microsoft.VisualStudio.TestTools.UnitTesting> členy v oboru názvů. Můžete je použít, když jste napsali test jednotky od začátku nebo pokud chcete remotivovat test jednotek, který byl vygenerován z testovaného kódu.
+Rozhraní testování částí podporuje testování částí v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Při kódování testů jednotek použijte třídy a členy v oboru názvů <xref:Microsoft.VisualStudio.TestTools.UnitTesting>. Můžete je použít, když jste napsali test jednotky od začátku nebo pokud chcete remotivovat test jednotek, který byl vygenerován z testovaného kódu.
 
 ## <a name="groups-of-elements"></a>Skupiny prvků
  Abychom vám pomohli poskytnout jasný přehled rozhraní testování částí, Tato část uspořádá prvky oboru názvů UnitTesting do skupin souvisejících funkcí.
@@ -30,7 +30,7 @@ Rozhraní testování částí podporuje testování částí v [!INCLUDE[vsprvs
 > `[TestClassAttribute()]`
 
 ### <a name="elements-used-for-data-driven-testing"></a>Prvky používané pro testování řízené daty
- Pomocí následujících prvků nastavte testy jednotek řízené daty. Další informace naleznete v tématu [How to: Vytvoření testu](../test/how-to-create-a-data-driven-unit-test.md) jednotek řízeného daty a [Názorný postup: Použití konfiguračního souboru k definování zdroje](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)dat.
+ Pomocí následujících prvků nastavte testy jednotek řízené daty. Další informace najdete v tématu [Postupy: vytvoření testu a testování částí řízených daty](../test/how-to-create-a-data-driven-unit-test.md) [: použití konfiguračního souboru k definování zdroje dat](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md).
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataAccessMethod>
 
@@ -88,7 +88,7 @@ Rozhraní testování částí podporuje testování částí v [!INCLUDE[vsprvs
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute>
 
 ## <a name="the-testcontext-class"></a>Třída TestContext
- Následující atributy a hodnoty, které jsou přiřazeny, se zobrazí v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] okno Vlastnosti pro konkrétní testovací metodu. Tyto atributy nejsou určeny pro použití v kódu testu jednotek. Místo toho mají vliv na způsob použití nebo spuštění testu jednotky, a to buď prostřednictvím integrovaného vývojového prostředí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)](IDE), [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nebo pomocí testovacího stroje. Například některé z těchto atributů se zobrazí jako sloupce v okně Test Manager a v Výsledky testů okně, což znamená, že je můžete použít k seskupení a seřazení testů a výsledků testů. Jeden z takových atributů je TestPropertyAttribute, který použijete k přidání libovolných metadat k jednotkovým testům. Můžete ji například použít k uložení názvu testu průchodu, který tento test pokrývá, označením testu jednotky pomocí `[TestProperty("TestPass", "Accessibility")]`. Nebo ho můžete použít k uložení indikátoru typu testu, který je: `[TestProperty("TestKind", "Localization")]`. Vlastnost, kterou vytvoříte pomocí tohoto atributu, a hodnota vlastnosti, kterou přiřadíte, se zobrazí v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] okno Vlastnosti pod položkou **test**pro daný nadpis.
+ Následující atributy a hodnoty, které jsou přiřazeny, se zobrazí v okno Vlastnosti [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pro konkrétní testovací metodu. Tyto atributy nejsou určeny pro použití v kódu testu jednotek. Místo toho mají vliv na způsob použití nebo spuštění testu jednotky, a to buď prostřednictvím integrovaného vývojového prostředí (IDE) [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], nebo pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] testovacího stroje. Například některé z těchto atributů se zobrazí jako sloupce v okně Test Manager a v Výsledky testů okně, což znamená, že je můžete použít k seskupení a seřazení testů a výsledků testů. Jeden z takových atributů je TestPropertyAttribute, který použijete k přidání libovolných metadat k jednotkovým testům. Můžete ji například použít k uložení názvu testu průchodu, který tento test pokrývá, označením testu jednotky pomocí `[TestProperty("TestPass", "Accessibility")]`. Nebo ho můžete použít k uložení indikátoru typu testu, který je: `[TestProperty("TestKind", "Localization")]`. Vlastnost, kterou vytvoříte pomocí tohoto atributu a hodnotu vlastnosti, kterou přiřadíte, se zobrazí v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] okno Vlastnosti pod položkou **test dle**nadpisu.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>
 
@@ -111,7 +111,7 @@ Rozhraní testování částí podporuje testování částí v [!INCLUDE[vsprvs
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection>
 
 ## <a name="attributes-used-for-generating-reports"></a>Atributy používané pro generování sestav
- Atributy v této části se vztahují na testovací metodu, kterou upraví na entity v projektové hierarchii [!INCLUDE[esprtfs](../includes/esprtfs-md.md)] týmového projektu.
+ Atributy v této části se vztahují na testovací metodu, kterou upraví na entity v hierarchii projektu [!INCLUDE[esprtfs](../includes/esprtfs-md.md)] týmového projektu.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.CssIterationAttribute>
 

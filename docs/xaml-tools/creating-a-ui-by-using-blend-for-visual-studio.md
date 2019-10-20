@@ -5,17 +5,17 @@ ms.date: 07/31/2019
 ms.topic: conceptual
 f1_keywords:
 - Blend.Start.Dev12
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 558d58e41e96e0425d53760fcc1b9a9dfb459e44
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: f3955d494d4c04e85eba0541c0cf09749e8ab4de
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450795"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649712"
 ---
 # <a name="blend-for-visual-studio-overview"></a>Přehled Blend pro Visual Studio
 
@@ -62,7 +62,7 @@ Přejděte do okna assets (prostředky) a zobrazte naposledy použitý prostřed
 
 ## <a name="assets-window"></a>Okno prostředků
 
-Okno **assets (prostředky** ) obsahuje všechny dostupné ovládací prvky a je podobné jako **Sada nástrojů v sadě** Visual Studio. Kromě ovládacích prvků najdete vše, co můžete přidat na návrhovou plochu v okně **assety** , včetně stylů, médií, chování a efektů. Chcete-li otevřít okno **assety** , zvolte možnost **Zobrazit**@no__t 2**prostředky okno** nebo stiskněte klávesovou **zkratku CTRL**+**ALT**+**X**.
+Okno **assets (prostředky** ) obsahuje všechny dostupné ovládací prvky a je podobné jako **Sada nástrojů v sadě** Visual Studio. Kromě ovládacích prvků najdete vše, co můžete přidat na návrhovou plochu v okně **assety** , včetně stylů, médií, chování a efektů. Chcete-li otevřít okno **assety** , zvolte možnost **Zobrazit**  > **assets Window** nebo stiskněte klávesu **CTRL** +**ALT** +**X**.
 
 ![Okno prostředků v Blend pro Visual Studio](media/blend-assets-window.png)
 

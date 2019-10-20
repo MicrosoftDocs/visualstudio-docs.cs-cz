@@ -5,20 +5,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - text templates, build tasks
 - text templates, transforming by using msbuild
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d26c0b464341bee7bce0b46bfdbcc89e0248a81
-ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.openlocfilehash: 9c9cc0d8a40970e2ec36030ab3121d6fc02748e2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163122"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654202"
 ---
 # <a name="invoke-text-transformation-in-the-build-process"></a>Vyvolat transformaci textu v procesu sestavení
 
@@ -49,7 +49,7 @@ Pokud je [Server sestavení](/azure/devops/pipelines/agents/agents) spuštěn v 
 - % ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Community\Common7\IDE\PublicAssemblies
 
   - Microsoft. VisualStudio. TextTemplating. Modeling. 15.0. dll
-  
+
 > [!TIP]
 > Pokud při spouštění cílů sestavení TextTemplating na serveru sestavení získáte `MissingMethodException` pro metodu Microsoft. CodeAnalysis, ujistěte se, že jsou sestavení Roslyn v adresáři s názvem *Roslyn* , který je ve stejném adresáři jako spustitelný soubor sestavení (například  *MSBuild. exe*).
 
@@ -65,7 +65,7 @@ V souboru .vbproj nebo .csproj vyhledejte řádek podobný následujícímu:
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`
 
-\- nebo –
+\- nebo-
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`
 
@@ -116,11 +116,11 @@ Do souboru projektu lze vložit některé vlastnosti, které slouží k řízen
     ```
 
      Ve výchozím nastavení úloha T4 MSBuild znovu generuje výstupní soubor, pokud je starší než:
-     
+
      - soubor šablony
      - Všechny zahrnuté soubory
      - všechny soubory, které byly dříve čteny šablonou nebo procesorem direktiv, kterou používá
-     
+
      Toto je výkonnější test závislosti, než který je použit příkazem **Transform All Templates** v aplikaci Visual Studio, který porovnává pouze data šablony a výstupní soubor.
 
 Pokud chcete v projektu provést pouze transformace textu, vyvolejte úlohu TransformAll:
@@ -135,7 +135,7 @@ U příkazu TransformFile lze použít zástupné znaky:
 
 `msbuild dsl.csproj /t:Transform /p:TransformFile="GeneratedCode\**\*.tt"`
 
-## <a name="source-control"></a>Správy zdrojového kódu
+## <a name="source-control"></a>Správa zdrojového kódu
 
 Systém správy zdrojového kódu není nijak integrován. Můžete ale přidat vlastní rozšíření, například pro rezervaci a vrácení se změnami vygenerovaného souboru. Ve výchozím nastavení se úloha transformace textu vyhne přepsání souboru, který je označen jen pro čtení. Při výskytu takového souboru se v Seznam chyb sady Visual Studio zaznamená chyba a úloha se nezdařila.
 
@@ -164,7 +164,7 @@ Transformace textu se provede před všemi ostatními úlohami v procesu sestav
 
 V `AfterTransform` můžete odkazovat na seznamy souborů:
 
-- GeneratedFiles – seznam souborů zapsaných procesem. Pro soubory, které přepsaly existující soubory jen pro čtení, `%(GeneratedFiles.ReadOnlyFileOverwritten)` budou pravdivé. Tyto soubory lze rezervovat ze správy zdrojového kódu.
+- GeneratedFiles – seznam souborů zapsaných procesem. U souborů, které přepsaly existující soubory jen pro čtení, bude `%(GeneratedFiles.ReadOnlyFileOverwritten)` true. Tyto soubory lze rezervovat ze správy zdrojového kódu.
 
 - NonGeneratedFiles – seznam souborů určených jen pro čtení, které nebyly přepsány.
 
@@ -184,7 +184,7 @@ Tyto vlastnosti používá pouze nástroj MSBuild. Neovlivňují generování k�
 </ItemGroup>
 ```
 
-Užitečná složka pro přesměrování na je `$(IntermediateOutputPath)`.
+Užitečnou složkou pro přesměrování je `$(IntermediateOutputPath)`.
 
 Pokud zadáte název výstupního souboru, bude mít přednost před rozšířením zadaným v direktivě Output v šablonách.
 
@@ -252,7 +252,7 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 ```
 
 > [!NOTE]
-> `ResolveParameterValue` načte data z `T4ParameterValues` pouze při použití nástroje MSBuild. Při transformaci šablony pomocí sady Visual Studio mají parametry výchozí hodnoty.
+> `ResolveParameterValue` získá data z `T4ParameterValues` pouze při použití nástroje MSBuild. Při transformaci šablony pomocí sady Visual Studio mají parametry výchozí hodnoty.
 
 ## <a name="msbuild"></a>Použít vlastnosti projektu v direktivách Assembly a include
 
@@ -283,9 +283,9 @@ Nyní můžete vlastnost projektu použít v direktivách assembly a include:
 
 Tyto direktivy získají z T4parameterValues hodnoty v hostitelích MSBuild i Visual Studio.
 
-## <a name="q--a"></a>Dotazy a odpovědi
+## <a name="q--a"></a>Otázka & A
 
-**Why chcete transformovat šablony na serveru sestavení? V aplikaci Visual Studio už byly transformované šablony před vrácením kódu se změnami.**
+**Proč bych chtěl transformovat šablony na serveru sestavení? V aplikaci Visual Studio už byly transformované šablony před vrácením kódu se změnami**
 
 Pokud aktualizujete zahrnutý soubor nebo jiný soubor načtený šablonou, Visual Studio soubor netransformuje automaticky. Transformace šablon v rámci sestavení zajistí, že vše je aktuální.
 
@@ -303,13 +303,13 @@ Pokud aktualizujete zahrnutý soubor nebo jiný soubor načtený šablonou, Visu
 
 ::: moniker range="vs-2017"
 
-- V šabloně pro MSbuild je dobré doprovodné materiály na `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets`
+- V šabloně pro MSbuild s vlastností T4 je dobré doprovodné materiály na `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets`
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- V šabloně pro MSbuild je dobré doprovodné materiály na `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets`
+- V šabloně pro MSbuild s vlastností T4 je dobré doprovodné materiály na `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets`
 
 ::: moniker-end
 

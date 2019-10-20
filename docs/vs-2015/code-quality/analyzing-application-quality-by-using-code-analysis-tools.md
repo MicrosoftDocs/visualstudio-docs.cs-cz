@@ -1,5 +1,5 @@
 ---
-title: Analýza kvality aplikace pomocí nástrojů pro analýzu kódu | Dokumentace Microsoftu
+title: Analýza kvality aplikace pomocí nástrojů pro analýzu kódu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,47 +12,37 @@ helpviewer_keywords:
 - team-based development, analyzing application quality
 ms.assetid: 21680516-ddb5-446d-90d4-19d94f6ec699
 caps.latest.revision: 26
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 83fbe8b372d021e0cec4faccfd0b22fcaa8af30d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c0b46c8efb681a067d5a9e74369ed73c43f1568f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157102"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671106"
 ---
 # <a name="analyzing-application-quality-by-using-code-analysis-tools"></a>Analýza kvality aplikace pomocí nástrojů pro analýzu kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V tomto oddílu  
- [Analýza kvality spravovaného kódu](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)  
- Visual Studio analýzy kódu pro spravovaný kód poskytuje informace o spravovaných sestaveních, například porušení programování a návrhu pravidel stanovených v pokyny pro návrh rozhraní Microsoft .NET. Upozornění identifikují jakékoli relevantní problémy programování a návrhu a kdy je možné, poskytují informace o tom, jak tento problém vyřešit.  
-  
- [Analýza kvality kódu C/C++ pomocí nástroje Analýza kódu](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md)  
- Nástroj Analýza kódu C/C++ poskytuje informace pro vývojáře o možných chyb v jejich zdrojový kód C/C++. Běžné chyby kódování, kterou nástroj hlásí zahrnout přetečení vyrovnávací paměti, neinicializovaná paměť, přístupů přes ukazatel, ukazatel s hodnotou null a nevracení paměti a prostředků.  
-  
- [Použití sad pravidel k seskupování pravidel analýzy kódu](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)  
- Vybrat a vytvořit *sad pravidel* má použít pro váš projekt.  
-  
- [Chyby aplikace Analýzy kódu](../code-quality/code-analysis-application-errors.md)  
- Opravte chyby ve funkci analýzy kódu.  
-  
- [Zvýšení kvality kódu použitím zásad vracení se změnami týmového projektu](../code-quality/enhancing-code-quality-with-team-project-check-in-policies.md)  
- Při použití Team Foundation verze ovládacího prvku (TFVC), můžete vytvořit zásady vrácení se změnami pro týmové projekty, které vynucení postupů, které vedou k efektivnější vývoj skupiny a lepší kód. Zásady vrácení se změnami jsou pravidla, která jsou nastavena na úrovni týmového projektu a vynucena na vývojových prostředích před kódu může být vráceny se změnami.  
-  
-### <a name="code-analysis-for-drivers"></a>Analýza kódu pro ovladače  
- Nástroji pro analýzu kódu může pomoci vylepšení stability a spolehlivosti ovladač systematicky analýzou ovladač zdrojový kód.  
-  
- [Analýza kvality ovladač pomocí nástrojů pro analýzu kódu](/windows-hardware/drivers/devtest/tools-for-verifying-drivers)  
- Analýza kódu pro ovladače statické ověření za kompilace nástroj, který zjistí základní chyby v programech jazyka C a C++ kódování a zahrnuje specializovaná modul, který slouží ke zjištění chyby v kódu ovladače režimu jádra (primárně). Statické ovladač ověřovatel (SDV) je nástroj statické ověření systematicky analyzuje zdrojový kód ovladače režimu jádra Windows. SDV Určuje, zda ovladač správně komunikuje jádra operačního systému Windows.  
-  
- [Ovladače upozornění analýzy kódu pro](http://go.microsoft.com/fwlink/?LinkId=225920)  
- Popisuje upozornění, která hlásí analýzy kódu pro ovladače, pokud zjistí možnou chybu v kódu ovladače.  
-  
-## <a name="related-tasks"></a>Související úlohy  
- [Měření složitosti a udržovatelnosti spravovaného kódu](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)  
- Vložte sem zadejte popis.  
-  
- [Testování částí kódu](../test/unit-test-your-code.md)  
- Vložte sem zadejte popis.
+V této části [Analýza spravovaného](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md) kódu sada Visual Studio Code Analysis pro spravovaný kód poskytuje informace o spravovaných sestaveních, jako jsou porušení pravidel programování a návrhu stanovených v Microsoft .NET Framework design. Pokyny. Varovné zprávy identifikují relevantní problémy s programováním a návrhem a, pokud je to možné, poskytují informace o tom, jak tento problém vyřešit.
+
+ [Analýza kvality kóduC++ c/kódu pomocí nástroje Analýza kódu](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md) nástroj CC++ /Code Analysis poskytuje vývojářům informace o možných chybách v kódu C/C++ source. Běžné chyby kódování hlášené nástrojem zahrnují přetečení vyrovnávací paměti, neinicializovaná paměť, zpětné odkazy na ukazatel s hodnotou null a paměti a nevrácené prostředky.
+
+ [Použití sad pravidel k seskupení pravidel analýzy kódu](../code-quality/using-rule-sets-to-group-code-analysis-rules.md) Vyberte a vytvořte *sady pravidel* , které chcete použít pro váš projekt.
+
+ [Chyby aplikace analýzy kódu](../code-quality/code-analysis-application-errors.md) Opravte chyby ve funkci analýzy kódu.
+
+ [Zvýšení kvality kódu pomocí zásad vracení zpět se změnami týmového projektu](../code-quality/enhancing-code-quality-with-team-project-check-in-policies.md) Při použití Správa verzí Team Foundation (TFVC) můžete vytvořit zásady vracení se změnami pro týmové projekty, které vynutily postupy, které vedou k lepšímu kódu a efektivnějšímu vývoji skupin. Zásady vrácení se změnami jsou pravidla, která se nastavují na úrovni týmového projektu a vynutila v vývojářských počítačích před tím, než se kód může vrátit se změnami.
+
+### <a name="code-analysis-for-drivers"></a>Analýza kódu pro ovladače
+ Nástroje pro analýzu kódu mohou pomoci zlepšit stabilitu a spolehlivost svého ovladače systematickou analýzou zdrojového kódu ovladače.
+
+ [Analýza kvality ovladače pomocí nástrojů pro analýzu kódu](/windows-hardware/drivers/devtest/tools-for-verifying-drivers) Analýza kódu pro ovladače je nástroj pro statické ověření při kompilaci, který detekuje základní chyby kódování v jazyce C C++ a programech a obsahuje specializovaný modul, který je určen k detekci chyb v (primárně) kódu ovladače režimu jádra. SDV (static Driver Verifier) je statický ověřovací nástroj, který systematicky analyzuje zdrojový kód ovladačů režimu jádra systému Windows. SDV Určuje, zda ovladač správně spolupracuje s jádrem operačního systému Windows.
+
+ [Upozornění analýzy kódu pro ovladače](http://go.microsoft.com/fwlink/?LinkId=225920) Popisuje upozornění, která analyzuje kód pro ovladače, když detekuje možnou chybu v kódu ovladače.
+
+## <a name="related-tasks"></a>Související úlohy
+ [Měření složitosti a udržovatelnosti spravovaného kódu](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md) Sem vložte popis.
+
+ [Testování částí kódu](../test/unit-test-your-code.md) Sem vložte popis.

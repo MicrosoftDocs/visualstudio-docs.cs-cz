@@ -2,81 +2,81 @@
 title: Pokyny pro tvorbu textových šablon T4
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ce316f87e47a7846fc30f480c8e2bf197f38051d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a0b1a8c70a0e7ec95e0545ecf3caf932f582b3c5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993467"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667280"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>Pokyny pro tvorbu textových šablon T4
 
-Tyto obecné pokyny mohou být užitečné, pokud jsou generování programového kódu nebo jiných prostředků aplikace v sadě Visual Studio. Nejsou k nápravě pravidla.
+Tyto obecné pokyny mohou být užitečné, pokud generujete kód programu nebo jiné prostředky aplikace v aplikaci Visual Studio. Nejedná se o pevná pravidla.
 
-## <a name="guidelines-for-design-time-t4-templates"></a>Pokyny pro šablony T4 návrhu
+## <a name="guidelines-for-design-time-t4-templates"></a>Pokyny pro šablony T4 v době návrhu
 
-Šablony T4 návrhu jsou šablony, které generují kód v projektu sady Visual Studio v době návrhu. Další informace najdete v tématu [vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
+Šablony T4 v době návrhu jsou šablony, které generují kód v projektu sady Visual Studio v době návrhu. Další informace najdete v tématu [generování kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
 
-Generovat proměnnou aspektech vaší aplikace.
+Vygenerujte aspekty proměnných aplikace.
 
-Generování kódu je zvláště užitečná pro tyto aspekty aplikace, která může změnit během projektu, nebo se změní mezi různými verzemi aplikace. Tyto proměnné aspekty oddělte od více invariantní aspekty, tak, aby můžete snadněji určit, co se má vygenerovat. Například pokud vaše aplikace poskytuje web, samostatné standardní stránky obsluhující funkce od logiky, která definuje navigační cesty z jedné stránky na jiný.
+Generování kódu je nejužitečnější pro tyto aspekty aplikace, které se mohou změnit během projektu, nebo se změní mezi různými verzemi aplikace. Jednotlivé aspekty proměnných oddělte z dalších nevariantních aspektů, abyste mohli snadněji určit, co má být vygenerováno. Například pokud vaše aplikace poskytuje web, oddělte standardní stránku obsluhující funkce z logiky, která definuje navigační cesty z jedné stránky na druhou.
 
-Kódování proměnné aspekty v jedné nebo více zdrojových modelů.
+Zakódovat aspekty proměnných v jednom nebo více zdrojových modelech.
 
-Model je soubor nebo databáze, která přečte každou šablonu k získání konkrétní hodnoty pro proměnné části kódu, který se má vygenerovat. Modelů může být databáze a soubory XML návrh, diagramů nebo jazyky specifickými pro doménu. Obvykle jeden model se používá ke generování mnoha soubory v projektu sady Visual Studio. Každý soubor je vygenerován ze samostatné šablony.
+Model je soubor nebo databáze, které Každá šablona načítá pro získání konkrétních hodnot proměnných kódu, který má být vygenerován. Modely můžou být databáze, soubory XML vlastního návrhu, diagramů nebo jazyků specifických pro doménu. Typicky jeden model se používá ke generování mnoha souborů v projektu sady Visual Studio. Jednotlivé soubory jsou vygenerovány ze samostatné šablony.
 
-V projektu můžete použít více než jeden model. Můžete definovat model pro navigaci mezi stránkami web a samostatný model pro rozložení stránky.
+V projektu můžete použít více než jeden model. Můžete například definovat model navigace mezi webovými stránkami a samostatný model pro rozložení stránek.
 
-Model zaměřte se na uživatelské požadavky a slovník, ne na implementaci.
+Zaměřte se na potřeby uživatelů a slovník, ne na implementaci.
 
-Například v aplikaci Web, které očekáváte modelu, který má odkazovat na webové stránky a hypertextových odkazů.
+Například v aplikaci webu byste očekávali, že model bude odkazovat na webové stránky a hypertextové odkazy.
 
-V ideálním případě zvolte způsob prezentace, která vyhovuje druh informací, které představuje model. Model navigačních cesty, které prostřednictvím webu může být například diagram polí a šipky.
+V ideálním případě vyberte formu prezentace, která bude vyhovovat druhu informací, které model představuje. Například model navigačních cest prostřednictvím webu může být diagramem polí a šipek.
 
-Otestujte generovaného kódu.
+Otestujte generovaný kód.
 
-Použijte ruční nebo automatické testy k ověření, že výsledný kód pracuje uživatelé potřebují. Zabránění generování testů ze stejného modelu, ve kterém je kód vygenerován.
+Pomocí ručních nebo automatizovaných testů ověřte, zda výsledný kód funguje tak, jak uživatelé vyžadují. Vyhněte se generování testů ze stejného modelu, ze kterého je generován kód.
 
-V některých případech obecné testy můžete provést na modelu přímo. Můžete například napsat test, který zajistí, že každé stránky na webu může být dosažitelný podle navigace z jiného.
+V některých případech lze obecné testy provádět přímo v modelu. Můžete například napsat test, který zajistí, že na každou stránku na webu lze dosáhnout navigace z jiné.
 
-Povolit pro vlastní kód: generovat částečné třídy.
+Povolení pro vlastní kód: generování částečných tříd.
 
-Povolit pro kód, který píšete ručně kromě pro vygenerovaný kód. Neobvyklé, že schéma generování kódu budete moci účet pro všechny možné změny, které mohou nastat. Proto by se měl přidat nebo přepsat vygenerovaný kód. Kde generované materiál je v jazyce .NET, jako C# nebo Visual Basic jsou zvláště užitečné dvou strategií:
+Umožněte, aby kód, který píšete rukou, byl kromě vygenerovaného kódu. Není neobvyklé, že pro schéma generování kódu bude možné přihlédnout ke všem možným variantám, které by mohly nastat. Proto byste měli očekávat, že chcete přidat nebo přepsat některý z generovaný kód. Pokud je vygenerovaný materiál v jazyce .NET, jako je C# například nebo Visual Basic, jsou obzvláště užitečné dvě strategie:
 
-- Generované třídy by měl být neúplná. Umožňuje přidávat obsah do generovaného kódu.
+- Generované třídy by měly být částečné. To umožňuje přidat obsah do vygenerovaného kódu.
 
-- Třídy by měly být generovány v párech, jeden z nich dědí. Základní třída by měla obsahovat všechny generované metody a vlastnosti a odvozená třída může obsahovat pouze konstruktory. To umožňuje ručně psanou k přepsání metod generovaného kódu.
+- Třídy by měly být vygenerovány ve dvojicích, jedna dědí z druhé. Základní třída by měla obsahovat všechny vygenerované metody a vlastnosti a odvozená třída by měla obsahovat pouze konstruktory. To umožňuje vašemu ručnímu kódu přepsat kteroukoli z vygenerovaných metod.
 
-V jiných generované jazycích, jako jsou XML, použijte `<#@include#>` směrnice jednoduché kombinacích ručně psanou a vygenerovaný obsah. Ve složitějších případech bude pravděpodobně pro zápis, který kombinuje vygenerovaný soubor se všechny soubory ručně psanou krok následného zpracování.
+V jiných generovaných jazycích, jako je XML, použijte direktivu `<#@include#>` k provádění jednoduchých kombinací ručně napsaných a generovaných obsahu. Ve složitějších případech možná budete muset napsat krok následného zpracování, který kombinuje vygenerovaný soubor se všemi ručně zapsanými soubory.
 
-Přesuňte běžné materiál do vkládané soubory nebo šablony běhu.
+Přesuňte společný materiál do zahrnutých souborů nebo šablon run-time.
 
-Vyhněte se opakující se podobně jako bloky textu a kódu ve více šablonách, použijte `<#@ include #>` směrnice. Další informace najdete v tématu [T4 – direktiva zahrnují](../modeling/t4-include-directive.md).
+Chcete-li se vyhnout opakujícím se podobným blokům textu a kódu ve více šablonách, použijte direktivu `<#@ include #>`. Další informace najdete v tématu [direktiva T4 include](../modeling/t4-include-directive.md).
 
-Můžete také vytvářet šablony textu za běhu v samostatném projektu a pak je volejte z šablony návrhu. Chcete-li to provést, použijte `<#@ assembly #>` směrnice pro přístup k samostatného projektu.
+V samostatném projektu můžete také vytvořit textové šablony Run-Time a pak je volat pomocí šablony pro dobu návrhu. K tomu použijte direktivu `<#@ assembly #>` pro přístup k samostatnému projektu.
 
 Zvažte přesunutí velkých bloků kódu do samostatného sestavení.
 
-Pokud máte velké kód bloky a bloky s funkcí třídy, může být užitečné k přesunutí některé tento kód do metody, které se kompilují do samostatného projektu. Můžete použít `<#@ assembly #>` směrnice získat přístup ke kódu v šabloně. Další informace najdete v tématu [T4 – Direktiva Assembly](../modeling/t4-assembly-directive.md).
+Pokud máte velké bloky kódu a bloky funkcí třídy, může být užitečné přesunout část tohoto kódu do metod, které kompilujete v samostatném projektu. Pro přístup k kódu v šabloně můžete použít direktivu `<#@ assembly #>`. Další informace naleznete v tématu [direktiva T4 pro sestavení](../modeling/t4-assembly-directive.md).
 
-Metody můžete umístit v abstraktní třída může dědit vlastnosti šablony. Abstraktní třída musí dědit z <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName>. Další informace najdete v tématu [T4 – direktiva Template](../modeling/t4-template-directive.md).
+Metody lze umístit do abstraktní třídy, kterou může šablona dědit. Abstraktní třída musí dědit z <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName>. Další informace najdete v tématu [direktiva šablony T4](../modeling/t4-template-directive.md).
 
-Generovat kód, nikoli konfigurační soubory.
+Vygeneruje kód, nikoli konfigurační soubory.
 
-Jedním ze způsobů vytváření proměnných aplikace je zapsat obecný programový kód, který přijímá konfigurační soubor. Aplikace napsané tímto způsobem je velmi flexibilní a můžete překonfigurovat při změně obchodních požadavků, bez nutnosti opětovného sestavení aplikace. Nevýhod tohoto přístupu je, že aplikace budou provádět méně dobře než konkrétnější aplikace. Také jeho kód programu bude obtížné číst a spravovat, částečně, protože má vždy řešit nejvíce obecných typů.
+Jednou z metod zápisu proměnné aplikace je zápis obecného programového kódu, který přijímá konfigurační soubor. Aplikace napsaná tímto způsobem je velmi flexibilní a je možné ji překonfigurovat, když se změní obchodní požadavky, aniž by bylo nutné aplikaci znovu sestavit. Nevýhodou tohoto přístupu je však, že aplikace bude provádět méně dobře než konkrétní aplikace. I jeho programový kód bude obtížnější číst a udržovat, částečně z toho důvodu, že se vždy zabývat nejobecnější typy.
 
-Oproti tomu může být silného typu aplikace, jejichž proměnné části jsou generovány před kompilací. Díky tomu je mnohem jednodušší a spolehlivější a napsat ručně psanou kód ji integrovat s generované částí softwaru.
+Naproti tomu aplikace, jejíž proměnné jsou generovány před kompilací, může být silného typu. To je mnohem jednodušší a spolehlivější pro zápis rukou psaného kódu a jeho integraci s generovanými částmi softwaru.
 
-Pokud chcete získat úplné výhodou generování kódu, pokusu o generování programového kódu namísto konfigurační soubory.
+Chcete-li získat úplný přínos pro generování kódu, pokuste se vygenerovat kód programu místo konfiguračních souborů.
 
-Použijte kód generovaný složku.
+Použijte vygenerovanou složku kódu.
 
-Umístěte šablony a generované soubory ve složce projektu s názvem **kód generovaný**, aby byl vymazat, že se nejedná soubory, které by měl být upravován přímo. Pokud vytvoříte vlastní kód pro přepsání nebo přidat do generované třídy, umístěte do složky s názvem tyto třídy **vlastního kódu**. Struktura obvyklou pro projekty vypadá takto:
+Umístěte šablony a generované soubory do složky projektu s názvem **generovaný kód**, aby bylo jasné, že se nejedná o soubory, které by měly být upravovány přímo. Pokud vytvoříte vlastní kód pro přepsání nebo přidání do generovaných tříd, umístěte tyto třídy do složky, která má název **vlastní kód**. Struktura typického projektu vypadá takto:
 
 ```
 MyProject
@@ -91,31 +91,31 @@ MyProject
    AnotherClass.cs
 ```
 
-## <a name="guidelines-for-run-time-preprocessed-t4-templates"></a>Pokyny pro šablony T4 za běhu (Předzpracovaných)
+## <a name="guidelines-for-run-time-preprocessed-t4-templates"></a>Pokyny pro šablony s podporou procesu run-time (předzpracované) T4
 
-Přesuňte běžné materiál do zděděné šablony.
+Přesuňte společný materiál do děděných šablon.
 
-Dědičnost můžete použít ke sdílení metody a bloky textu mezi textových šablon T4. Další informace najdete v tématu [T4 – direktiva Template](../modeling/t4-template-directive.md).
+Dědičnost můžete použít ke sdílení metod a textových bloků mezi textovými šablonami T4. Další informace najdete v tématu [direktiva šablony T4](../modeling/t4-template-directive.md).
 
-Můžete také zahrnout soubory, které mají šablony běhu.
+Můžete také použít vložené soubory, které mají šablony Run-Time.
 
 Přesuňte velké části kódu do částečné třídy.
 
-Každá šablona běhu generuje definice částečné třídy, která má stejný název jako šablona. Můžete napsat kód soubor, který obsahuje jiné částečné deklaraci stejné třídy. Do třídy tímto způsobem můžete přidat metody, pole a konstruktory. Tyto členy můžete volat z bloků kódu v šabloně.
+Každá šablona za běhu generuje definici částečné třídy, která má stejný název jako šablona. Můžete napsat soubor kódu, který obsahuje další částečnou definici stejné třídy. Tímto způsobem můžete přidat metody, pole a konstruktory do třídy. Tyto členy mohou být volány z bloků kódu v šabloně.
 
-Výhodou to je, že kód je snazší psát, protože technologie IntelliSense není k dispozici. Kromě toho můžete dosáhnout lepší oddělení mezi prezentaci a logiku.
+Výhodou je, že kód je snazší psát, protože je k dispozici IntelliSense. Můžete také dosáhnout lepšího oddělení prezentace a základní logiky.
 
-Například v **MyReportText.tt**:
+Například v **MyReportText.TT**:
 
 `The total is: <#= ComputeTotal() #>`
 
-V **MyReportText Methods.cs**:
+V **MyReportText-Methods.cs**:
 
 `private string ComputeTotal() { ... }`
 
-Povolit pro vlastní kód: poskytují Rozšiřovací body.
+Povolení pro vlastní kód: poskytnutí rozšiřovacích bodů.
 
-Vezměte v úvahu generování virtuální metody v \<#+ třídy funkce blokuje #>. To umožňuje jediné šabloně pro použití v mnoha kontextech beze změn. Místo úpravy šablony, můžete vytvořit odvozené třídy, která zajišťuje minimální další logiku. Odvozená třída může být buď regulárních kódu nebo může být šablona běhu.
+Zvažte generování virtuálních metod v \< # + třídy funkcí Blocks # >. Tato možnost umožňuje použít jedinou šablonu v mnoha kontextech bez úprav. Místo změny šablony můžete vytvořit odvozenou třídu, která poskytuje minimální další logiku. Odvozená třída může být buď pravidelný kód, nebo může být šablonou run-time.
 
 Například v MyStandardRunTimeTemplate.tt:
 
@@ -137,21 +137,21 @@ class FabrikamTemplate : MyStandardRunTimeTemplate
 
 ## <a name="guidelines-for-all-t4-templates"></a>Pokyny pro všechny šablony T4
 
-Shromažďování dat nezávislá na infrastruktuře generování textu.
+Oddělení shromažďování dat od generování textu.
 
-Zkuste se vyhnout kombinování výpočetní výkon a textové bloky. V každé textové šablony, použijte první \<kód # block #> k nastavení proměnných a provádění složitých výpočtů. Z první blok textu na konec šablony nebo první \<funkci třídy #+ blokovat #>, vyhněte se dlouho výrazy a vyhnout se tak smyček a podmíněné výrazy pokud neobsahují textové bloky. Tento postup vytvoří šablonu čitelnější a udržovat.
+Snažte se vyhnout smíchání výpočtů a textových bloků. V každé textové šabloně použijte první \< # Code Block # > k nastavení proměnných a provádění složitých výpočtů. Od prvního bloku textu až po konec šablony nebo první \< # + třídy bloku funkce # >, vyhněte se dlouhým výrazům a vyhněte se cyklům a podmíněným výjimkám, pokud neobsahují textové bloky. Tento postup usnadňuje čtení a údržbu šablony.
 
-Nepoužívejte `.tt` vložených souborů.
+Nepoužívejte `.tt` pro zahrnuté soubory.
 
-Použít jinou příponu, například `.ttinclude` vložených souborů. Použití `.tt` pouze pro soubory, které mají být zpracovány jako za běhu nebo návrhových textových šablon. V některých případech může sada Visual Studio rozpozná `.tt` soubory a automaticky nastaví jeho vlastnosti pro zpracování.
+Pro zahrnuté soubory použijte jinou příponu názvu souboru, například `.ttinclude`. Použijte `.tt` jenom pro soubory, které chcete zpracovat buď jako textové šablony Run-Time nebo v době návrhu. V některých případech sada Visual Studio rozpozná `.tt` soubory a automaticky nastaví jejich vlastnosti pro zpracování.
 
-Spuštění každou šablonu jako dlouhodobý prototyp.
+Spusťte každou šablonu jako pevný prototyp.
 
-Zápis příklad kódu nebo textu, který chcete vygenerovat a ujistěte se, zda je správný. Potom změňte jeho příponu na .tt a postupně vkládat kód, který upraví obsah tak čtení modelu.
+Napište příklad kódu nebo textu, který chcete vygenerovat, a ujistěte se, že je správný. Pak změňte jeho příponu na. TT a přírůstkově vložte kód, který upraví obsah, a to tak, že načtou model.
 
-Zvažte použití typu modelů.
+Zvažte použití typových modelů.
 
-I když můžete vytvořit schéma XML nebo databáze pro modely, může být užitečné k vytvoření jazyka specifického pro doménu (DSL). DSL má výhodu v tom, že se vygeneruje třídu pro každý uzel ve schématu a vlastnosti představují atributy. To znamená, že můžete naprogramovat z hlediska obchodní model. Příklad:
+I když můžete vytvořit schéma XML nebo databáze pro vaše modely, může být užitečné vytvořit jazyk specifický pro doménu (DSL). DSL má výhodu, že generuje třídu, která představuje každý uzel ve schématu a vlastnosti pro reprezentaci atributů. To znamená, že můžete programovat na základě obchodního modelu. Příklad:
 
 ```
 Team Members:
@@ -161,13 +161,13 @@ Team Members:
 <# } #>
 ```
 
-Zvažte použití diagramů pro své modely.
+Zvažte použití diagramů pro vaše modely.
 
-Mnoho modelů prezentovány a co nejefektivněji spravovat jednoduše jako text tabulek, zejména v případě, že jsou velmi velké.
+Mnoho modelů je efektivně prezentováno a spravováno jednoduše jako textové tabulky, zejména v případě, že jsou velmi velké.
 
-Však pro některé druhy obchodní požadavky, je důležité, abyste zjednodušili komplexní sadu vztahů a pracovním postupům a diagramy se nejlíp hodí střední. Výhodou diagramu je, že je snadno můžete projednávat s uživateli a další zainteresované uživatele. Generování kódu z modelu na úrovni obchodní požadavky, se být váš kód zvýšení flexibility při změně požadavků.
+U některých druhů obchodních požadavků ale je důležité objasnit složitou sadu vztahů a pracovních toků a diagramy představují nejvhodnější médium. Výhodou diagramu je, že je snadné diskutovat s uživateli a dalšími zúčastněnými stranami. Vygenerováním kódu z modelu na úrovni obchodních požadavků zajistíte flexibilitu kódu při změně požadavků.
 
-Vlastní typ diagramu můžete také navrhnout jako jazyka specifického pro doménu (DSL). Kód lze vygenerovat z UML a DSL. Další informace najdete v tématu [analýza a modelování architektury](../modeling/analyze-and-model-your-architecture.md).
+Můžete také navrhnout vlastní typ diagramu jako jazyk specifický pro doménu (DSL). Kód lze vygenerovat z UML i z DSL. Další informace najdete v tématu [Analýza a modelování architektury](../modeling/analyze-and-model-your-architecture.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,5 +1,5 @@
 ---
-title: Možnosti, textový Editor, všechny jazyky | Dokumentace Microsoftu
+title: Možnosti, textový editor, všechny jazyky | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -17,85 +17,73 @@ helpviewer_keywords:
 - virtual space
 ms.assetid: 49ee7306-9d46-4170-850f-a1716171752d
 caps.latest.revision: 25
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e3d62bf388725b454d771e8cdd59ec963775eeb1
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: ebe2da1dec9917a792f3e4e02516a79cff605c80
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65674756"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662405"
 ---
 # <a name="options-text-editor-all-languages"></a>Možnosti, textový editor, všechny jazyky
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Toto dialogové okno umožňuje změnit výchozí chování editoru kódu. Tato nastavení platí také pro jiné editory založen na editoru kódu, jako je HTML návrháře zobrazení zdroje. Chcete-li otevřít toto dialogové okno, vyberte **možnosti** z **nástroje** nabídky. V rámci **textový Editor** složky, rozbalte **všechny jazyky** podsložky a klikněte na tlačítko **Obecné**.  
-  
+Toto dialogové okno umožňuje změnit výchozí chování editoru kódu. Tato nastavení platí také pro ostatní editory na základě editoru kódu, jako je například zobrazení zdroje v Návrháři HTML. Chcete-li otevřít toto dialogové okno, vyberte možnost **Možnosti** v nabídce **nástroje** . V rámci složky **textový editor** rozbalte podsložku **všechny jazyky** a zvolte možnost **Obecné**.
+
 > [!CAUTION]
-> Tato stránka nastaví výchozí možnosti pro všechny vývojářské jazyky. Mějte na paměti, že obnovení možnost v tomto dialogovém okně resetuje Obecné možnosti ve všech jazycích na jakékoli volby jsou tady vyberete. Chcete-li změnit možnosti textového editoru pro právě jeden jazyk, rozbalte podsložku pro daný jazyk a vyberte jeho možnosti.  
-  
- Zatržení šedým se zobrazí, když byla vybrána možnost na stránkách Obecné možnosti pro některé programovací jazyky, ale ne pro ostatní uživatele.  
-  
+> Tato stránka nastaví výchozí možnosti pro všechny vývojové jazyky. Mějte na paměti, že při resetování možnosti v tomto dialogu dojde k resetování obecných možností ve všech jazycích na jakékoli vybrané možnosti. Chcete-li změnit možnosti textového editoru pouze pro jeden jazyk, rozbalte podsložku pro daný jazyk a vyberte její stránky možností.
+
+ Po výběru možnosti na stránkách Obecné možnosti pro některé programovací jazyky, ale ne pro jiné, se zobrazí šedá značka zaškrtnutí.
+
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="statement-completion"></a>Doplňování výrazů  
- Automatický seznam členů  
- Při výběru rozbalovací seznam dostupných členů, vlastnosti, hodnoty nebo metody se zobrazí v IntelliSense při psaní v editoru. Vyberte libovolnou položku ze seznamu místní nabídky k vložení položky do kódu. Tato volba umožňuje **rýt pokročilé členy** možnost.  
-  
- Skrýt členy rozšířené úrovně  
- Při výběru, zkrátí seznamy dokončení rozbalovací příkaz tím, že zobrazuje pouze ty položky, které jsou obvykle používány. Další položky jsou filtrovány ze seznamu.  
-  
- Informace o parametrech  
- Pokud je vybráno, zobrazí se pod kurzor v editoru se všechny její dostupné parametry úplnou syntaxi pro deklaraci aktuální nebo proceduru. Zobrazí se další parametr, který můžete přiřadit tučným písmem.  
-  
-## <a name="settings"></a>Nastavení  
- Povolit virtuální prostor  
- Pokud je vybraná tato možnost a **zalamování** je zaškrtnutí zrušeno, můžete kliknout na libovolné místo za koncem řádku v editoru kódu a typu. Tato funkce slouží k umístění komentářů na bod konzistentní vzhledem k vedle vašeho kódu.  
-  
- Zalamování řádků  
- Pokud je vybráno, jakékoli její části řádek, který rozšiřuje vodorovně nad rámec oblasti Zobrazit editor automaticky zobrazí na dalším řádku. Tato volba umožňuje **brazit piktogramy pro zalamování řádků** možnost.  
-  
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="statement-completion"></a>Doplňování výrazů
+ Automaticky vypsat členy Pokud jsou vybrány, budou při psaní v editoru v technologii IntelliSense zobrazeny automaticky otevírané seznamy dostupných členů, vlastností, hodnot nebo metod. Výběrem libovolné položky v rozevíracím seznamu vložte položku do kódu. Výběrem této možnosti povolíte možnost **Skrýt pokročilé členy** .
+
+ Skrýt pokročilé členy Pokud je vybrána, zkrátí seznamy pro doplňování příkazů zobrazením pouze těch nejčastěji používaných položek. Další položky jsou filtrovány ze seznamu.
+
+ Informace o parametrech Pokud je tato možnost vybrána, zobrazí se pod kurzorem v editoru Úplná syntaxe pro aktuální deklaraci nebo proceduru se všemi dostupnými parametry. Další parametr, který můžete přiřadit, se zobrazí tučně.
+
+## <a name="settings"></a>Nastavení
+ Povolit virtuální prostor, pokud je vybrána tato možnost a **zalamování** řádků je vymazáno, můžete kliknout kamkoli za konec řádku v editoru kódu a zadat. Tato funkce se dá použít k umístění komentářů v konzistentním bodě vedle vašeho kódu.
+
+ Zalamování řádků, pokud je vybráno, všechny části řádku, které přesahují horizontálně nad zobrazitelnou oblast editoru, se automaticky zobrazí na dalším řádku. Výběrem této možnosti povolíte možnost **Zobrazit vizuální glyfy pro zalamování řádků** .
+
 > [!NOTE]
-> **Virtuální prostor** zapnuté funkce chvíli off **zalamování** zapnutý.  
-  
- Brazit piktogramy pro zalamování řádků  
- Při výběru, zobrazí se ukazatel vrátit šipku kde dlouhý řádek zalamuje na další řádek.  
-  
- ![Snímek obrazovky LineBreakSymbol](../../ide/reference/media/linebreak.gif "linebreak")  
-  
- Pokud nechcete zobrazovat tyto indikátory, zrušte zaškrtnutí tohoto políčka.  
-  
+> Funkce **virtuálního prostoru** je vypnuta, když je zapnuto **zalamování řádků** .
+
+ Zobrazit vizuální glyfy pro zalamování řádků, pokud je vybraná, zobrazí se indikátor návratové šipky, kde se dlouhá čára zalomí na druhý řádek.
+
+ ![Snímek obrazovky LineBreakSymbol](../../ide/reference/media/linebreak.gif "LineBreak")
+
+ Tuto možnost zrušte, pokud nechcete zobrazit tyto indikátory.
+
 > [!NOTE]
-> Tyto šipky připomenutí nejsou přidány do kódu a ne k tisku. Jsou pouze pro referenci.  
-  
- Použít příkazů Vyjmout nebo kopírovat na prázdné řádky, pokud nebyla vybrána žádná položka  
- Tato možnost nastaví chování editoru, když umístíte kurzor na prázdný řádek, nothing, vyberte a zkopírujte nebo vyjmutí.  
-  
-- Pokud je vybraná tato možnost, prázdný řádek zkopíruje nebo vyjmutí. Pokud pak vložíte, je vložen nový, prázdný řádek.  
-  
-- Pokud tato možnost vybrána, příkaz Cut odstraní prázdné řádky. Nicméně se zajistilo uchování dat do schránky. Proto pokud použijete příkaz Paste, je vložit obsah naposledy zkopírovaný do schránky. Pokud není nic se zkopírovala dříve, není nic vloženo.  
-  
-  Toto nastavení nemá žádný vliv na kopírování nebo vyjmutí, když řádek není prázdný. Pokud není nic vybráno, celý řádek zkopíruje nebo vyjmutí. Pokud pak vložte text celý řádek a jeho ukončovacího znaku jsou vloženy.  
-  
+> Tyto šipky připomenutí nejsou přidány do kódu a netiskou. Jsou pouze pro referenci.
+
+ Použít příkazy Vyjmout nebo kopírovat na prázdné řádky, když není vybrána tato možnost nastaví chování editoru při umístění kurzoru na prázdný řádek, vyberte Nothing a pak zkopírujte nebo vyjměte.
+
+- Pokud je vybrána tato možnost, je prázdný řádek zkopírován nebo vyjmut. Pokud pak vložíte nový, prázdný řádek se vloží.
+
+- Pokud je tato možnost vymazána, příkaz Vyjmout Odstraní prázdné řádky. Data ve schránce jsou ale zachovaná. Proto pokud použijete příkaz pro vložení, obsah naposledy zkopírovaný do schránky se vloží. Pokud jste nic nezkopírovali, nic se nevloží.
+
+  Toto nastavení nemá žádný vliv na kopírování nebo vyjmutí, pokud řádek není prázdný. Pokud není nic vybráno, je celý řádek zkopírován nebo vyvyjmut. Pokud vložíte, text celého řádku a jeho EndLine objektu SourceLocation znak se vloží.
+
 > [!TIP]
-> Chcete-li zobrazit ukazatele pro mezery, tabulátory a konce řádků a proto odlišit odsazené řádky z řádků, které jsou zcela prázdný, vyberte **Upřesnit** z **upravit** nabídku a zvolte **prázdné zobrazení Místo**.  
-  
-## <a name="display"></a>Displej  
- Čísla řádků  
- Pokud je vybráno, číslo řádku vedle každého řádku kódu.  
-  
+> Chcete-li zobrazit indikátory pro mezery, tabulátory a konce řádků, a odlišit odsazené řádky od řádků, které jsou zcela prázdné, v nabídce **Upravit** vyberte možnost **Upřesnit** a zvolte možnost **Zobrazit prázdné znaky**.
+
+## <a name="display"></a>Displej
+ Čísla řádků: Pokud je vybrána, číslo řádku se zobrazí vedle každého řádku kódu.
+
 > [!NOTE]
-> Tato čísla řádků nejsou přidány do kódu a ne k tisku. Jsou pouze pro referenci.  
-  
- Povolit navigaci adres URL jedním kliknutím  
- Pokud je vybráno, ukazatel myši se změní ukazující ruku během přes adresu URL v editoru. Můžete kliknout na adresu URL pro zobrazení stránky označené ve webovém prohlížeči.  
-  
- Navigační panel  
- Pokud je vybráno, zobrazí **navigační panel** v horní části stránky editoru kódu. Jeho rozevíracího seznamu **objekty** a **členy** seznamy umožňují vybrat určitý objekt v kódu, vyberte z jejích členů a přejde na deklaraci vybraného členu v editoru kódu.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti, textový Editor, všechny jazyky, karty](../../ide/reference/options-text-editor-all-languages-tabs.md)   
- [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)   
- [Používání atributu IntelliSense](../../ide/using-intellisense.md)
+> Tato čísla řádků nejsou přidána do kódu a netiskou. Jsou pouze pro referenci.
+
+ Když vyberete možnost navigace URL jedním kliknutím, ukazatel myši se změní na ukazující ruku, jak se předává přes adresu URL v editoru. Kliknutím na adresu URL můžete ve webovém prohlížeči zobrazit označenou stránku.
+
+ Navigační panel je-li vybrán, zobrazí **navigační panel** v horní části editoru kódu. Jeho **objekty** DropDown a seznamy **členů** umožňují zvolit konkrétní objekt v kódu, vybrat z jeho členů a přejít k deklaraci vybraného člena v editoru kódu.
+
+## <a name="see-also"></a>Viz také
+ [Možnosti, textový editor, všechny jazyky,](../../ide/reference/options-text-editor-all-languages-tabs.md) [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md) [pomocí technologie IntelliSense](../../ide/using-intellisense.md)

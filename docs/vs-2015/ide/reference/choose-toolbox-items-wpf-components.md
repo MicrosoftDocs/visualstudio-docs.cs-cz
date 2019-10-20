@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Choose Toolbox Items dialog box, WPF Components tab
 ms.assetid: 6ce1d178-88c0-4295-8915-59fdeedabb11
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3f17ac56038c5f6c1d4de026546410ece438e375
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 5c7967635d8e5d64907587fcd1a9b4d84a31d569
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869933"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660919"
 ---
 # <a name="choose-toolbox-items-wpf-components"></a>Výběr položek sady nástrojů, součásti WPF
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ Tato karta dialogového okna **zvolit položky sady nástrojů** zobrazí seznam
 - Pokud je vybráno zaškrtávací políčko vedle komponenty, zobrazí se v **sadě nástrojů**ikona této součásti.
 
   > [!TIP]
-  > Chcete-li přidat instanci ovládacího prvku WPF do dokumentu projektu otevřeného pro úpravy, přetáhněte ikonu **panelu nástrojů** na zobrazení Návrh plochu. Výchozí značky a kód pro komponentu jsou vloženy do projektu, který je připraven k úpravám. Další informace najdete v tématu [jak: Správa okna](https://msdn.microsoft.com/a022c3fe-298c-4a59-a48f-b050da90ebc2) panelu nástrojů a [postup: Manipulace s kartami](https://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db)sady nástrojů.
+  > Chcete-li přidat instanci ovládacího prvku WPF do dokumentu projektu otevřeného pro úpravy, přetáhněte ikonu **panelu nástrojů** na zobrazení Návrh plochu. Výchozí značky a kód pro komponentu jsou vloženy do projektu, který je připraven k úpravám. Další informace naleznete v tématu [How to: manage a Window panel nástrojů](https://msdn.microsoft.com/a022c3fe-298c-4a59-a48f-b050da90ebc2) a [How to: manipulace s kartami nástrojů](https://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db).
 
 - Pokud je zaškrtnutí políčka vedle komponenty vymazáno, bude z **panelu nástrojů** odebrána odpovídající ikona.
 
@@ -56,19 +56,19 @@ Tato karta dialogového okna **zvolit položky sady nástrojů** zobrazí seznam
  **Jazyk** Zobrazuje lokalizovaný jazyk sestavení, který obsahuje vybraný ovládací prvek WPF.
 
 ## <a name="limitations"></a>Omezení
- Přidání vlastního ovládacího prvku nebo <xref:System.Windows.Controls.UserControl> sady nástrojů má následující omezení.
+ Přidání vlastního ovládacího prvku nebo <xref:System.Windows.Controls.UserControl> do panelu nástrojů má následující omezení.
 
 - Funguje pouze pro vlastní ovládací prvky definované mimo aktuální projekt.
 
 - Se neaktualizuje správně při změně konfigurace řešení z ladění na verzi nebo z verze na ladění. Důvodem je, že odkaz není odkazem na projekt, ale je místo toho pro sestavení na disku. Pokud je ovládací prvek součástí aktuálního řešení, při změně z ladění na verzi je váš projekt nadále odkazovat na ladicí verzi ovládacího prvku.
 
-  Navíc platí, že pokud jsou metadata v době návrhu použita na vlastní ovládací prvek a tato metadata určují, že [ToolboxBrowsableAttribute](/previous-versions/visualstudio/visual-studio-2010/bb547991(v=vs.100)) je nastaven `false`na, ovládací prvek se nezobrazí v sadě nástrojů.
+  Navíc platí, že pokud jsou metadata návrhu použita na vlastní ovládací prvek a tato metadata určují, že [ToolboxBrowsableAttribute](/previous-versions/visualstudio/visual-studio-2010/bb547991(v=vs.100)) je nastavena na `false`, ovládací prvek se nezobrazí v sadě nástrojů.
 
-  Můžete odkazovat na ovládací prvky přímo v zobrazení XAML mapováním oboru názvů a sestavení pro váš ovládací prvek. Další informace najdete v tématu [jak: Importujte obor názvů do XAML](https://msdn.microsoft.com/6cda7c7a-369c-47dd-9c2d-13a35dcf737c).
+  Můžete odkazovat na ovládací prvky přímo v zobrazení XAML mapováním oboru názvů a sestavení pro váš ovládací prvek. Další informace naleznete v tématu [How to: import oboru názvů do jazyka XAML](https://msdn.microsoft.com/6cda7c7a-369c-47dd-9c2d-13a35dcf737c).
 
 ## <a name="see-also"></a>Viz také:
 
 - [Dialogové okno zvolit položky sady nástrojů (Visual Studio)](https://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)
 - [Panel nástrojů](../../ide/reference/toolbox.md)
-- [Postupy: Použití ovládacího prvku WPF třetí strany v aplikaci WPF](https://msdn.microsoft.com/f4c0b601-3818-4f9f-85e5-77905f3b427f)
+- [Postupy: použití ovládacího prvku WPF třetí strany v aplikaci WPF](https://msdn.microsoft.com/f4c0b601-3818-4f9f-85e5-77905f3b427f)
 - [Návrhář WPF](https://msdn.microsoft.com/c6c65214-8411-4e16-b254-163ed4099c26)

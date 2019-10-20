@@ -1,5 +1,5 @@
 ---
-title: Analýza kódu, Návrhář projektu | Dokumentace Microsoftu
+title: Analýza kódu, Návrhář projektu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,59 +11,45 @@ helpviewer_keywords:
 - Project Designer, Code Analysis page
 ms.assetid: 71743d26-4da5-4f7d-a403-7ab96cf2ef2e
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fa2aa4b3055ff49f59da329ea828e0dbcfc8ec05
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.openlocfilehash: 7c14396c8ebaba2b45587d70e44fa41ba8f2742b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62419933"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660873"
 ---
 # <a name="code-analysis-project-designer"></a>Analýza kódu, návrhář projektu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Obsahuje nástroj pro analýzu kódu, který můžete se rozhodnout spustit na vašem kódu. Informace o sestavení, kterou nástroj hlásí, například porušení programování a návrhu pravidel stanovených v pokyny pro návrh rozhraní Microsoft .NET Framework.  
-  
-## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
- Povolit analýzu kódu  
- Povolí nebo zakáže analýzy kódu pro váš projekt.  
-  
- Pravidla návrhu  
- Povolí nebo zakáže pravidla návrhu. Můžete také rozšířit tuto položku k povolení nebo zakázání jednotlivá pravidla.  
-  
- Pravidla globalizace  
- Povolí nebo zakáže pravidla globalizace. Můžete také rozšířit tuto položku k povolení nebo zakázání jednotlivá pravidla.  
-  
- Pravidla interoperability  
- Povolí nebo zakáže pravidla interoperability. Můžete také rozšířit tuto položku k povolení nebo zakázání jednotlivá pravidla.  
-  
- Pravidla udržovatelnosti  
- Povolí nebo zakáže pravidla udržovatelnosti. Můžete také rozšířit tuto položku k povolení nebo zakázání jednotlivá pravidla.  
-  
- Pravidla mobility  
- Povolí nebo zakáže pravidla mobility. Můžete také rozšířit tuto položku k povolení nebo zakázání jednotlivá pravidla.  
-  
- Pravidla pojmenování  
- Povolí nebo zakáže pravidla pojmenování. Můžete také rozšířit tuto položku k povolení nebo zakázání jednotlivá pravidla.  
-  
- Pravidla výkonu  
- Povolí nebo zakáže pravidla výkonu. Můžete také rozšířit tuto položku k povolení nebo zakázání jednotlivá pravidla.  
-  
- Pravidla přenositelnosti  
- Povolí nebo zakáže pravidla přenositelnosti. Můžete také rozšířit tuto položku k povolení nebo zakázání jednotlivá pravidla.  
-  
- Pravidla spolehlivosti  
- Povolí nebo zakáže pravidla spolehlivosti. Můžete také rozšířit tuto položku k povolení nebo zakázání jednotlivá pravidla.  
-  
- Pravidla zabezpečení  
- Povolí nebo zakáže pravidla zabezpečení. Můžete také rozšířit tuto položku k povolení nebo zakázání jednotlivá pravidla.  
-  
- Pravidla používání  
- Povolí nebo zakáže použití pravidla. Můžete také rozšířit tuto položku k povolení nebo zakázání jednotlivá pravidla.  
-  
-## <a name="see-also"></a>Viz také  
- [Analýza kódu pro spravovaný kód upozornění](../../code-quality/code-analysis-for-managed-code-warnings.md)   
- [Analýza kódu pro spravovaný kód přehled](../../code-quality/code-analysis-for-managed-code-overview.md)   
- [Návod: Analýza defektů spravovaného kódu](../../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)
+Obsahuje nástroj pro analýzu kódu, který se můžete rozhodnout pro spuštění v kódu. Nástroj hlásí informace o vašich sestaveních, jako jsou porušení pravidel programování a návrhu stanovených v pokynech pro návrh Microsoft .NET Framework.
+
+## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
+ Povolit analýzu kódu povolí nebo zakáže analýzu kódu pro váš projekt.
+
+ Pravidla návrhu povolují nebo zakážou pravidla návrhu. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+
+ Pravidla globalizace povolují nebo zakážou pravidla globalizace. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+
+ Pravidla interoperability povolují nebo zakážou pravidla interoperability. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+
+ Pravidla udržovatelnosti povolují nebo zakážou pravidla údržby. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+
+ Pravidla mobility povolují nebo zakážou pravidla mobility. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+
+ Pravidla pojmenování povolují nebo zakážou pravidla pojmenování. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+
+ Pravidla výkonu povolují nebo zakážou pravidla výkonu. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+
+ Pravidla přenositelnosti povolují nebo zakážou pravidla přenositelnosti. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+
+ Pravidla spolehlivosti povolují nebo zakážou pravidla spolehlivosti. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+
+ Pravidla zabezpečení povolují nebo zakážou pravidla zabezpečení. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+
+ Pravidla použití povolují nebo zakážou pravidla použití. Tuto položku můžete také rozšířit a povolit nebo zakázat jednotlivá pravidla.
+
+## <a name="see-also"></a>Viz také
+ Přehled [analýzy kódu pro spravovaný kód upozornění](../../code-quality/code-analysis-for-managed-code-warnings.md) [analýzy kódu pro spravovaný kód](../../code-quality/code-analysis-for-managed-code-overview.md) [Návod: Analýza spravovaného kódu pro vady kódu](../../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)

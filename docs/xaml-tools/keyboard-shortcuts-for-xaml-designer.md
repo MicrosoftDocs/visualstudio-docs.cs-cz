@@ -3,15 +3,15 @@ title: Klávesové zkratky pro Návrhář XAML
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 40211cc7-294a-4943-85a4-941ad6418dad
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f104d554a86a49cce05f4e115db30122bcc3af42
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: fededb6127c306c9cecfca5bde479b0b80972212
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450746"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650919"
 ---
 # <a name="keyboard-shortcuts-for-xaml-designer"></a>Klávesové zkratky pro Návrhář XAML
 

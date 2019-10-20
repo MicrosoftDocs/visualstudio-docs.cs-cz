@@ -8,42 +8,42 @@ helpviewer_keywords:
 - code analysis, dependency graphs
 - dependency graphs, analyzing code
 - graph documents, analyzing
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fd3bb1537d0e985e91f93ea094ec546ed9a6092
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5f55d4d3c4470d32d9779f7adf06934f10ac618e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62994433"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657484"
 ---
 # <a name="find-potential-problems-using-code-map-analyzers"></a>Nalezení potenciálních problémů pomocí analyzátorů mapy kódu
 
-Spusťte analyzátory na mapách kódu, abyste mohli snadno identifikovat kód, který může být příliš složitý nebo který může být nutné zlepšování. Například můžete použít tyto analyzátory:
+Spuštění analyzátorů v mapách kódu vám usnadní identifikaci kódu, který může být příliš složitý nebo který může být potřeba zlepšit. Můžete například použít tyto analyzátory:
 
-|**Kód, který se má najít**|**Prozkoumat tyto oblasti zobrazíte, zda**|
+|**Chcete-li najít kód, který má**|**Zkontrolujte tyto oblasti a zjistěte, zda**|
 |-|-|
-|Smyčky nebo cyklické závislosti|Můžete zjednodušit jejich a zvažte, jestli můžete přerušit tyto cykly.|
-|Moc velký počet závislostí|Provádějí příliš mnoho funkcí nebo zjistit dopad změny těchto oblastí. Minimální číslo závislostí se bude zobrazovat mapu kódu ve správném formátu. Abyste mohli snadněji udržovat, změnit, testování a znovu použít, zvažte, jestli Refaktorovat tyto oblasti tak, aby větší přehlednost jsou definovány, nebo určuje, zda je možné sloučit kód, který provádí podobné funkce jako kód.|
-|Žádné závislosti.|Potřeby nebo zda byste měli odebrat tento kód.|
+|Cykly nebo cyklické závislosti|Můžete je zjednodušit a zvážit, zda můžete tyto cykly přerušit.|
+|Příliš mnoho závislostí|Provádějí příliš mnoho funkcí nebo určují dopad změny těchto oblastí. V mapě kódu ve správném formátu se zobrazí minimální počet závislostí. Aby bylo možné zjednodušit správu, změnu, testování a opakované použití kódu, zvažte, zda můžete tyto oblasti Refaktorovat, aby byly mnohem jasně definovány nebo zda lze sloučit kód, který provádí podobné funkce.|
+|Žádné závislosti|Jsou nezbytné nebo zda byste měli tento kód odebrat.|
 
-## <a name="analyze-code-maps"></a>Analýza map kódu
+## <a name="analyze-code-maps"></a>Analyzovat mapy kódu
 
-Na panelu nástrojů Mapa **rozložení** > **analyzátory**a potom analyzátor, který chcete spustit:
+Na panelu nástrojů mapa zvolte **rozložení**  > **analyzátory**a pak analyzátor, který chcete spustit:
 
-|**Analyzer**|**K identifikaci uzlů, který**|
+|**MBSA**|**K identifikaci uzlů, které**|
 |-|-|
-|**Analyzátor cyklické odkazy**|Cyklické závislosti jsou na sobě navzájem. **Poznámka:**  Cyklické závislosti, které jsou v **obecných typů** skupiny nejsou zobrazeny na mapě, získáte rozbalením skupiny.|
-|**Najít analyzátor rozbočovače**|Jsou v horním 25 % vysoce připojených uzlů<br /><br /> **Chcete-li skrýt všechny uzly na mapě**<br /><br /> -Otevřete místní nabídku pro mapu, zvolte **Upřesnit**, **vyberte**, **Skrýt nevybrané**.<br />     Na mapě skryje nevybraných uzlů a analyzátor identifikuje nových uzlů jako centra.|
-|**Analyzátor neodkazované uzly**|Nemají odkazy z jiných uzlů. **Upozornění:**  Ověření všech těchto případech před za předpokladu, že kód se nepoužívá. Určité závislosti, jako je například XAML závislosti a závislosti za běhu nelze nalézt staticky v kódu.|
+|**Analyzátor cyklických odkazů**|Cyklické závislosti na sobě navzájem. **Poznámka:**  Cyklické závislosti, které jsou ve skupině **obecných typů** , se při rozbalení skupiny nezobrazují na mapě.|
+|**Najít analyzátor Center**|Jsou v horním 25% uzlů s vysokou úrovní připojení<br /><br /> **Skrytí všech ostatních uzlů na mapě**<br /><br /> -Otevřete místní nabídku pro mapu, zvolte možnost **Upřesnit**, **Vybrat**a **Skrýt nevybrané**.<br />     Mapa skryje nevybrané uzly a analyzátor identifikuje nové uzly jako centra.|
+|**Analyzátor neodkazované uzly**|Nemají odkazy z jiných uzlů. **Upozornění:**  Před za předpokladu, že se kód nepoužívá, ověřte každý z těchto případů. Některé závislosti, například závislosti XAML a závislosti za běhu, nelze v kódu nalézt staticky.|
 
-Analyzátorů mapy kódu bude nadále spuštěna po jejich použití. Pokud změníte na mapě, žádné použité Analyzátory se automaticky znovu zpracovat mapa aktualizovaná. Chcete-li zastavit spuštěný analyzátor, na panelu nástrojů mapy, zvolte **rozložení** > **analyzátory**. Vypněte vybrané analyzátor.
+Analyzátory mapování kódu budou po použití nadále spouštěny. Změníte-li mapu, všechny použité analyzátory budou automaticky znovu zpracovat aktualizované mapování. Chcete-li zastavit spuštění analyzátoru, na panelu nástrojů mapa vyberte možnost **rozložení**  > **analyzátory**. Vypněte vybraný analyzátor.
 
 > [!TIP]
-> Pokud máte mapu velmi velké, může způsobit spuštěný analyzátor nedostatku paměti výjimky. Pokud k tomu dojde, upravit mapu ke snížení jeho rozsah nebo vygenerovat menší a potom spustit Analyzátor.
+> Pokud máte velmi velkou mapu, může spuštění analyzátoru způsobit výjimku z důvodu nedostatku paměti. Pokud k tomu dojde, upravte mapu tak, aby omezila svůj rozsah nebo vygenerovala menší hodnotu, a pak spusťte analyzátor.
 
 ## <a name="see-also"></a>Viz také:
 

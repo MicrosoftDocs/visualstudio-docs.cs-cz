@@ -7,23 +7,23 @@ helpviewer_keywords:
 - run-time errors, warnings
 - warnings, configuring
 ms.assetid: 99cf4781-bd4d-47b4-91b9-217933509f82
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ba037dd93c64fc15d8d540880d075ea7005685b
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 2c71c352040898874cd90a397db6b8c7321ff39d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924119"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652078"
 ---
 # <a name="configuring-warnings-in-visual-basic"></a>Konfigurace upozornění v Visual Basic
 
-[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] Kompilátor obsahuje sadu upozornění na kód, který může způsobit chyby v době běhu. Tyto informace můžete použít k zápisu čisticího a rychlejšího kódu s méně chybami. Například kompilátor vytvoří upozornění, když se uživatel pokusí vyvolat člena nepřiřazené proměnné objektu, vrátit se z funkce bez nastavení návratové hodnoty nebo spustit `Try` blok s chybami v logice pro zachycení výjimek.
+Kompilátor [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] obsahuje sadu upozornění na kód, který může způsobit chyby v době běhu. Tyto informace můžete použít k zápisu čisticího a rychlejšího kódu s méně chybami. Například kompilátor vytvoří upozornění, když se uživatel pokusí vyvolat člena nepřiřazené proměnné objektu, vrátit se z funkce bez nastavení návratové hodnoty nebo spustit `Try` blok s chybami v logice k zachycení výjimek.
 
-Někdy kompilátor poskytuje další logiku pro uživatele, aby se uživatel mohl soustředit na místo toho, aby se mohl zaměřit na úkol, nikoli na Předvídání možných chyb. V předchozích verzích systému [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]byla **možnost Option Strict** použita k omezení [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] další logiky, kterou poskytuje kompilátor. Konfigurace upozornění vám umožní omezit tuto logiku podrobněji na úrovni jednotlivých upozornění.
+Někdy kompilátor poskytuje další logiku pro uživatele, aby se uživatel mohl soustředit na místo toho, aby se mohl zaměřit na úkol, nikoli na Předvídání možných chyb. V předchozích verzích [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] byla použita **možnost Option Strict** k omezení další logiky, kterou poskytuje kompilátor [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]. Konfigurace upozornění vám umožní omezit tuto logiku podrobněji na úrovni jednotlivých upozornění.
 
 Můžete chtít přizpůsobit projekt a vypnout některá upozornění, která nejsou relevantní pro vaši aplikaci, a zároveň zapínat jiná upozornění na chyby. Tato stránka vysvětluje, jak zapnout a vypnout jednotlivá upozornění.
 
@@ -32,7 +32,7 @@ Existují dva různé způsoby konfigurace upozornění: můžete je nakonfiguro
 
 Na kartě **kompilovat** stránky **Návrháře projektu** můžete zapnout a vypnout upozornění. Zaškrtnutím políčka **Zakázat všechna upozornění** zakážete všechna upozornění. Pokud chcete považovat všechna upozornění za chyby, vyberte možnost **považovat všechna upozornění za chyby** . Některá jednotlivá upozornění je možné v zobrazené tabulce přepínat jako chyby nebo upozornění podle potřeby.
 
-Pokud je **možnost Strict** nastavená na **vypnuto**, upozornění související s **možností Option Strict** nelze zpracovat nezávisle na sobě. Pokud je **možnost Strict** nastavená na **zapnuto**, jsou přidružená upozornění považována za chyby bez ohledu na jejich stav. Když je **možnost Strict** nastavená na **Custom** `/optionstrict:custom` zadáním příkazu v kompilátoru příkazového řádku, **možnost striktní** varování se dá zapnout nebo vypnout nezávisle.
+Pokud je **možnost Strict** nastavená na **vypnuto**, upozornění související s **možností Option Strict** nelze zpracovat nezávisle na sobě. Pokud je **možnost Strict** nastavená na **zapnuto**, jsou přidružená upozornění považována za chyby bez ohledu na jejich stav. Když je **možnost Strict** nastavená na **Custom** zadáním `/optionstrict:custom` v kompilátoru příkazového řádku, **možnost striktní** varování se dá zapnout nebo vypnout nezávisle.
 
 Možnost příkazového řádku **/warnaserror** kompilátoru lze také použít k určení, zda jsou upozornění považována za chyby. Do této možnosti můžete přidat seznam oddělený čárkami a určit tak, která upozornění mají být považována za chyby nebo upozornění pomocí příkazu + nebo-. Následující tabulka popisuje možné možnosti.
 
@@ -63,59 +63,59 @@ Tato tabulka příkladů argumentů příkazového řádku popisuje, co každý 
 Následuje seznam upozornění, které můžete chtít považovat za chyby.
 
 ### <a name="implicit-conversion-warning"></a>Upozornění implicitního převodu
-Vygenerováno pro instance implicitního převodu. Nezahrnují implicitní převody z vnitřního číselného typu na řetězec při použití `&` operátoru. Výchozí pro nové projekty jsou vypnuté.
+Vygenerováno pro instance implicitního převodu. Nezahrnují implicitní převody z vnitřního číselného typu na řetězec při použití operátoru `&`. Výchozí pro nové projekty jsou vypnuté.
 
-ÚČET 42016
+ID: 42016
 
 ### <a name="late-bound-method-invocation-and-overload-resolution-warning"></a>Volání metody s pozdní vazbou a upozornění na rozlišení přetížení
 Vygenerováno pro instance pozdní vazby. Výchozí pro nové projekty jsou vypnuté.
 
-ÚČET 42017
+ID: 42017
 
 ### <a name="operands-of-type-object-warnings"></a>Operandy typu "Object" – upozornění
-Vygenerováno, pokud dojde `Object` k operandům typu, které by vytvořily chybu s **možností Strict On**. Výchozí pro nové projekty jsou zapnuté.
+Vygenerováno, pokud dojde k operandům typu `Object`, které by vytvořily chybu s **možností Strict On**. Výchozí pro nové projekty jsou zapnuté.
 
-ÚČET 42018 a 42019
+ID: 42018 a 42019
 
 ### <a name="declarations-require-as-clause-warnings"></a>Deklarace vyžadují upozornění klauzule AS.
-Vygenerováno při deklaraci proměnné, funkce nebo vlastnosti chybějící `As` klauzule by vytvořilo chybu s **možností Strict On**. Proměnné, které nemají přiřazený typ, se považují za typ `Object`. Výchozí pro nové projekty jsou zapnuté.
+Vygenerováno, když deklarace proměnné, funkce nebo vlastnosti, která postrádá klauzuli `As`, by vytvořila chybu s **možností Strict On**. K proměnným, které nemají přiřazený typ, se předpokládá, že jsou typu `Object`. Výchozí pro nové projekty jsou zapnuté.
 
-ÚČET 42020 (deklarace proměnné), 42021 (deklarace funkce) a 42022 (deklarace vlastnosti).
+ID: 42020 (deklarace proměnné), 42021 (deklarace funkce) a 42022 (deklarace vlastnosti).
 
 ### <a name="possible-null-reference-exception-warnings"></a>Možná upozornění na výjimku null Reference
 Vygenerováno při použití proměnné předtím, než jí byla přiřazena hodnota. Výchozí pro nové projekty jsou zapnuté.
 
-ÚČET 42104, 42030
+ID: 42104, 42030
 
 ### <a name="unused-local-variable-warning"></a>Upozornění na nepoužitou místní proměnnou
 Vygenerováno při deklaraci místní proměnné, ale nikdy se na ni neříká. Výchozí hodnota je zapnuto.
 
-ÚČET 42024
+ID: 42024
 
 ### <a name="access-of-shared-member-through-instance-variable-warning"></a>Přístup ke sdílenému členu prostřednictvím upozornění na proměnnou instance
 Vygenerováno při přístupu ke sdílenému členu prostřednictvím instance může mít vedlejší účinky nebo při přístupu ke sdílenému členu prostřednictvím proměnné instance není pravá strana výrazu nebo je předávána jako parametr. Výchozí pro nové projekty jsou zapnuté.
 
-ÚČET 42025
+ID: 42025
 
 ### <a name="recursive-operator-or-property-access-warnings"></a>Rekurzivní operátor nebo upozornění na přístup k vlastnosti
 Vygenerováno, když tělo rutiny používá stejný operátor nebo vlastnost, v níž je definována. Výchozí pro nové projekty jsou zapnuté.
 
-ÚČET 42004 (operátor), 42026 (vlastnost)
+ID: 42004 (operátor), 42026 (vlastnost)
 
 ### <a name="function-or-operator-without-return-value-warning"></a>Funkce nebo operátor bez upozornění na návratovou hodnotu
-Vygenerováno v případě, že funkce nebo operátor nemá zadanou návratovou hodnotu. To zahrnuje vynechání `Set` pro implicitní místní proměnnou se stejným názvem jako funkce. Výchozí pro nové projekty jsou zapnuté.
+Vygenerováno v případě, že funkce nebo operátor nemá zadanou návratovou hodnotu. To zahrnuje vynechání `Set` implicitní místní proměnné se stejným názvem jako funkce. Výchozí pro nové projekty jsou zapnuté.
 
-ÚČET 42105 (funkce), 42016 (operátor)
+ID: 42105 (funkce), 42016 (operátor)
 
 ### <a name="overloads-modifier-used-in-a-module-warning"></a>Modifikátor přetížení použitý v modulu upozornění
-Vygenerováno při `Overloads` použití `Module`v. Výchozí pro nové projekty jsou zapnuté.
+Vygenerováno při použití `Overloads` v `Module`. Výchozí pro nové projekty jsou zapnuté.
 
-ÚČET 42028
+ID: 42028
 
 ### <a name="duplicate-or-overlapping-catch-blocks-warnings"></a>Duplicitní nebo překrývající se výstrahy catch Blocks
-Vygenerováno `Catch` , když není blok nikdy dosažen z důvodu jeho vztahu `Catch` k jiným blokům, které byly definovány. Výchozí pro nové projekty jsou zapnuté.
+Vygenerováno při nedosažení `Catch`ho bloku z důvodu jeho vztahu k jiným blokům `Catch`, které byly definovány. Výchozí pro nové projekty jsou zapnuté.
 
-ÚČET 42029, 42031
+ID: 42029, 42031
 
 ## <a name="see-also"></a>Viz také:
 

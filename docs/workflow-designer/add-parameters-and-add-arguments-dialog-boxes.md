@@ -1,37 +1,37 @@
 ---
-title: 'Návrhář pracovního postupu: Přidat parametry a přidat argumenty dialogových oknech'
+title: 'Návrhář postupu provádění: Přidání parametrů & dialogová okna Přidat argumenty'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - AddParameters.UI
 ms.assetid: a21fb4fe-134b-40b0-8497-86b842940ca1
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 7acb273430ac2dea8bc1f95a5c9a6e5c1d45c6f5
-ms.sourcegitcommit: 13ab9a5ab039b070b9cd9251d0b83dd216477203
+author: jillre
+ms.openlocfilehash: 78f773776c3285b60b2747c74e11a90ff08dba8a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177730"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650754"
 ---
 # <a name="add-parameters-and-add-arguments-dialog-boxes"></a>Dialogová okna Přidat parametry a Přidat argumenty
 
-Následující tabulka popisuje prvky uživatelského rozhraní (UI) **přidat parametry** dialogové okno používané <xref:System.Activities.Statements.InvokeMethod> návrháře:
+Následující tabulka popisuje prvky uživatelského rozhraní (UI) dialogového okna **přidat parametry** používané návrhářem <xref:System.Activities.Statements.InvokeMethod>:
 
 |||
 |-|-|
-|**Směr**|Určuje, zda parametr představuje tok dat do metody mimo metodu, nebo obojí.|
-|**Typ**|Název typu nový parametr.|
-|**Hodnota**|Výraz jazyka Visual Basic, kterého chcete přiřadit nový parametr výchozí hodnotu|
+|**Směr**|Určuje, zda parametr představuje tok dat do metody, mimo metodu nebo obojí.|
+|**Textový**|Název typu nového parametru.|
+|**Hodnota**|Výraz Visual Basic, který se používá k přiřazení výchozí hodnoty k novému parametru.|
 
-Následující tabulka popisuje prvky uživatelského rozhraní (UI) **Přidat argumenty** dialogové okno používané <xref:System.Activities.Statements.InvokeDelegate> návrháře:
+Následující tabulka popisuje prvky uživatelského rozhraní (UI) dialogového okna **Přidat argumenty** používané návrhářem <xref:System.Activities.Statements.InvokeDelegate>:
 
 |||
 |-|-|
-|**Název**|Název argumentu.|
-|**Směr**|Určuje, zda argument představuje tok dat do delegáta z delegáta nebo obojí.|
-|**Typ**|Název typu argumentu nové.|
-|**Hodnota**|Hodnota se použije pro tuto instanci argument delegáta.|
+|**Jméno**|Název argumentu.|
+|**Směr**|Určuje, zda argument představuje tok dat do delegáta, z delegáta nebo obojí.|
+|**Textový**|Název typu nového argumentu.|
+|**Hodnota**|Hodnota, která se má použít pro tuto instanci argumentu delegáta.|

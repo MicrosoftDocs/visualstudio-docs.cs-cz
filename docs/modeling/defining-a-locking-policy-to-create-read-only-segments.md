@@ -2,105 +2,105 @@
 title: Definování zásady zamykání pro vytváření segmentů jen pro čtení
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22eaa971035b4b202ecb76b3f1d29e286516a69b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 13ab824d1d277478dc2feec2803303d136a92830
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445829"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653944"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>Definování zásady zamykání pro vytváření segmentů jen pro čtení
-Rozhraní API neměnnosti sady Visual Studio Visualization and Modeling SDK umožňuje aplikaci uzamknout část nebo celý model jazyka specifického pro doménu (DSL), aby ji lze číst, ale nebyl změněn. Tato možnost jen pro čtení může použít, třeba tak, aby uživatel požádat o vaši kolegové mohli opatřit poznámkami a zkontrolujte modelu DSL, ale můžete zakázat možnost měnit původní.
+Rozhraní neměnnosti API sady Visual Studio pro vizualizaci a modelování umožňuje programu uzamknout část nebo celý model DSL (Domain-Specific Language), aby jej bylo možné číst, ale nikoli měnit. Tuto možnost lze použít například k tomu, aby uživatel mohl požádat o přístup k modelu DSL a zkontrolovat ho, aby se v něm změnil originál.
 
- Kromě toho, jak vytvořit DSL, můžete definovat *uzamčení zásad.* Zásady zamykání definuje zámky, které jsou povolené, nejsou povolené nebo povinné. Například při publikování DSL je vstupní kontroly mohou pobídnout vývojářům třetích stran ho rozšířit pomocí nových příkazů. Ale můžete také použít zásady zamykání a zabrání tak jejich změnu stavu jen pro čtení zadaného součásti modelu.
+ Kromě toho můžete jako autora DSL definovat *zásady uzamykání.* Zásady zamykání definují, které zámky jsou povolené, nejsou povolené nebo povinné. Když například publikujete DSL, můžete vývojářům třetích stran vyzvat, aby ho rozšířili novými příkazy. Můžete ale také použít zásady uzamykání, které jim zabrání v změně stavu jen pro čtení určených částí modelu.
 
 > [!NOTE]
-> Zásady zamykání může být požadavky propojení obcházeny pomocí operace reflection. Poskytuje jasný hranice pro vývojáře třetích stran, ale neposkytuje silné zabezpečení.
+> Zásady zamykání lze obejít pomocí reflexe. Poskytuje jasné hranice pro vývojáře třetích stran, ale neposkytuje silné zabezpečení.
 
- Další informace a ukázky jsou k dispozici v sadě Visual Studio [Visualization and Modeling SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db) webu.
+ Další informace a ukázky jsou k dispozici na webu sady Visual Studio pro [vizualizaci a modelování sady SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db) .
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="setting-and-getting-locks"></a>Nastavení a získání uzamčení
- Zámky můžete nastavit v úložišti, v oddílu nebo na jednotlivý prvek. Tento příkaz například zabránit odstranění prvku modelu a zároveň zabrání jeho vlastnosti mění:
+## <a name="setting-and-getting-locks"></a>Nastavení a získání zámků
+ Zámky můžete nastavit pro úložiště, na oddíl nebo na jednotlivé prvky. Například tento příkaz zabrání odstranění prvku modelu a zároveň zabrání změně jeho vlastností:
 
 ```csharp
 using Microsoft.VisualStudio.Modeling.Immutability; ...
 element.SetLocks(Locks.Delete | Locks.Property);
 ```
 
- Ostatní hodnoty zámek je možné zabránit změnám v relace, vytváření elementu Automat, pohyb mezi oddíly a znovu pořadí odkazy v roli.
+ Další hodnoty zámku lze použít k zabránění změnám v relacích, vytváření prvků, pohybu mezi oddíly a k přeřazení odkazů v roli.
 
- Zámky použít s uživatelskými akcemi a programového kódu. Pokud se pokusí provést změnu, kód programu `InvalidOperationException` bude vyvolána výjimka. Uzamčení se ignorují v operaci vrácení zpět nebo znovu.
+ Zámky platí pro akce uživatele i pro programový kód. Pokud se programový kód pokusí provést změnu, bude vyvolána `InvalidOperationException`. Zámky jsou ignorovány v operaci vrácení zpět nebo znovu.
 
- Můžete zjistit, zda má element žádný zámek v dané sadě s použitím `IsLocked(Locks)` a aktuální sadu zámky v elementu lze získat pomocí `GetLocks()`.
+ Můžete zjistit, zda má prvek libovolný zámek v dané sadě pomocí `IsLocked(Locks)` a můžete získat aktuální sadu zámků na elementu pomocí `GetLocks()`.
 
- Můžete nastavit zámek bez použití transakcí. Zámek databáze není součástí úložiště. Pokud nastavíte zámku v reakci na změnu hodnoty v úložišti, třeba v OnValueChanged, byste měli povolit změny, které jsou součástí operace vrácení zpět.
+ Můžete nastavit zámek bez použití transakce. Databáze zámků není součástí úložiště. Pokud nastavíte zámek jako reakci na změnu hodnoty v úložišti, například v OnValueChanged, měli byste povolit změny, které jsou součástí operace vrácení zpět.
 
- Tyto metody jsou metody rozšíření, které jsou definovány v <xref:Microsoft.VisualStudio.Modeling.Immutability> oboru názvů.
+ Tyto metody jsou rozšiřující metody, které jsou definovány v oboru názvů <xref:Microsoft.VisualStudio.Modeling.Immutability>.
 
-### <a name="locks-on-partitions-and-stores"></a>Zámky na oddíly a úložišť
- Zámky lze také použít na oddíly a úložišti. Zámek, který je nastaven na oddíl se vztahuje na všechny prvky v oddílu. Proto se například následující příkaz zabrání všechny prvky v oddílu odstraňuje, bez ohledu na stavy jejich vlastní zámky. Nicméně, druhý uzamkne, jako `Locks.Property` stále může být nastavena na jednotlivé prvky:
+### <a name="locks-on-partitions-and-stores"></a>Zámky na oddílech a úložištích
+ Zámky je také možné použít na oddíly a úložiště. Zámek, který je nastaven u oddílu, se vztahuje na všechny prvky v oddílu. Například následující příkaz zabrání odstranění všech prvků v oddílu bez ohledu na stavy jejich vlastních zámků. Nicméně jiné zámky, například `Locks.Property`, mohou být nastaveny na jednotlivé prvky:
 
 ```csharp
 partition.SetLocks(Locks.Delete);
 ```
 
- Zámek, který je nastaven na Store se vztahuje na všechny prvky, bez ohledu na nastavení tohoto Uzamknout na oddíly a prvky.
+ Zámek, který je nastaven na Storu, se vztahuje na všechny jeho prvky bez ohledu na nastavení tohoto zámku oddílů a prvků.
 
 ### <a name="using-locks"></a>Použití zámků
- Zámky můžete použít k implementaci systémů, jako jsou následující příklady:
+ Můžete použít zámky k implementaci schémat, jako jsou následující příklady:
 
-- Zakáže změny na všechny prvky a vztahy s výjimkou těch, které představují komentáře. To umožňuje uživatelům umožňuje anotaci modelu bez provedení změn.
+- Zakažte změny u všech elementů a vztahů s výjimkou těch, které reprezentují komentáře. To umožňuje uživatelům přidávat poznámky k modelu beze změny.
 
-- Zakáže změny v oddílu výchozí, ale povolit změny v oddílu diagramu. Uživatel může změnit uspořádání diagramu, ale základní model nelze změnit.
+- Zakažte změny ve výchozím oddílu, ale Povolte změny v oddílu diagramu. Uživatel může změnit uspořádání diagramu, ale nemůže změnit příslušný model.
 
-- Zakáže změny Store s výjimkou skupinu uživatelů, kteří jsou registrovány v samostatné databáze. Pro ostatní uživatele jsou v diagramu a modelu jen pro čtení.
+- Zakažte změny v úložišti s výjimkou skupiny uživatelů, kteří jsou zaregistrovaní v samostatné databázi. Pro ostatní uživatele je diagram a model určen jen pro čtení.
 
-- Zakáže změny modelu, pokud vlastnost typu Boolean diagramu je nastavena na hodnotu true. Zadejte příkaz, který tuto vlastnost změnit. Díky tomu uživatelé, kteří jsou Nedovolte, aby byly změny omylem.
+- Zakažte změny modelu, pokud je vlastnost Boolean diagramu nastavená na hodnotu true. Zadejte příkaz nabídky pro změnu této vlastnosti. To pomáhá zajistit, že uživatelé nedělají žádné změny omylem.
 
-- Zakažte přidání a odstranění prvků a vztahů určité třídy, ale umožňují změny vlastností. To uživatelům poskytuje pevné formuláře, ve které probírají vlastnosti.
+- Zakazuje přidávání a mazání prvků a vztahů konkrétních tříd, ale umožňuje změny vlastností. Tato možnost uživatelům poskytuje pevnou formu, ve které mohou vlastnosti vyplnit.
 
-## <a name="lock-values"></a>Zámku hodnoty
- Zámky lze nastavit na Store, oddílu nebo jednotlivé ModelElement. Je na zámků `Flags` výčet: zkombinováním hodnot pomocí "&#124;".
+## <a name="lock-values"></a>Zamknout hodnoty
+ Zámky je možné nastavit u úložiště, oddílu nebo jednotlivých ModelElement. Zámky jsou `Flags` výčet: hodnoty lze kombinovat pomocí '&#124;'.
 
-- Zámky ModelElement vždy zahrnovat zámky jeho oddílu.
+- Zámky ModelElement vždy zahrnují zámky jejího oddílu.
 
-- Zámky oddílu vždy zahrnovat zámky Store.
+- Zámky oddílu vždycky zahrnují zámky ze Storu.
 
-  Nelze nastavit zámek na oddíl nebo úložiště a současně zakázat zámek na jednotlivý element.
+  Nemůžete nastavit zámek na oddíl nebo úložiště a zároveň zakázat zámek u jednotlivého prvku.
 
-|Value|To znamená pokud `IsLocked(Value)` má hodnotu true|
+|Hodnota|Význam, pokud je `IsLocked(Value)` true|
 |-|-|
-|Žádný|Bez omezení.|
-|Vlastnost|Vlastnosti domény prvků nelze změnit. To se nevztahuje na vlastnosti, které jsou generovány podle role doménové třídy v relaci.|
-|Přidejte|Nelze vytvořit nové prvky a odkazy v oddílu nebo úložiště.<br /><br /> Nevztahuje se na `ModelElement`.|
-|Přesunout|Element nelze přesouvat mezi oddíly, pokud `element.IsLocked(Move)` má hodnotu true, nebo pokud `targetPartition.IsLocked(Move)` má hodnotu true.|
-|Odstranit|Element nelze odstranit, pokud je nastavení tohoto uzamknout elementu samotného nebo na některý z prvků, do které by odstranění rozšíření, jako je například vložené prvky a tvary.<br /><br /> Můžete použít `element.CanDelete()` ke zjištění, zda elementu je možné odstranit.|
-|Změna pořadí|Řazení odkazy na roleplayer nelze změnit.|
-|RolePlayer|Sada odkazů, které jsou zdrojem na tento element nejde změnit. Například nové prvky nemůže být vložený, v rámci tohoto elementu. Odkazy, pro které tento element je cílem to nemá vliv.<br /><br /> Pokud tento prvek je odkaz, nejsou ovlivněny její zdroj a cíl.|
-|Všechny|Bitový operátor OR ostatní hodnoty.|
+|Žádné|Bez omezení.|
+|Vlastnost|Vlastnosti domény prvků nelze změnit. Toto neplatí pro vlastnosti, které jsou generovány rolí doménové třídy v relaci.|
+|Přidejte|V oddílu nebo v úložišti nelze vytvořit nové prvky a odkazy.<br /><br /> Nedá se použít pro `ModelElement`.|
+|Pøesunout|Element nelze přesunout mezi oddíly, pokud `element.IsLocked(Move)` má hodnotu true, nebo pokud má `targetPartition.IsLocked(Move)` hodnotu true.|
+|Odstranit|Element nelze odstranit, je-li tento zámek nastaven na samotném prvku nebo na některé prvky, na které by se rozšířilo odstranění, jako jsou vložené prvky a tvary.<br /><br /> Pomocí `element.CanDelete()` můžete zjistit, zda lze prvek odstranit.|
+|Změnit pořadí|Řazení odkazů na RolePlayer se nedá změnit.|
+|RolePlayer|Sadu odkazů, které jsou nasource v tomto prvku, nelze změnit. Například nové prvky nemohou být vloženy do tohoto elementu. To nemá vliv na odkazy, pro které je tento prvek cílem.<br /><br /> Pokud je tento prvek odkazem, nebude ovlivněn jeho zdroj a cíl.|
+|Všechny|Bitové nebo jiné hodnoty.|
 
-## <a name="locking-policies"></a>Zásady uzamčení
- Jako autoři DSL, můžete definovat *uzamčení zásad*. Zásady zamykání moderates operace SetLocks(), takže je může zakázat konkrétní zámky nastavit nebo stanoví, že konkrétní zámků musí být nastavena. Obvykle použijete zásady zamykání na bránit uživatelům nebo vývojářům ze omylem orgán je zamýšlené použití souboru DSL, stejným způsobem, že můžete deklarovat proměnnou `private`.
+## <a name="locking-policies"></a>Zásady uzamykání
+ Jako autor DSL můžete definovat *zásady zamykání*. Zásady zamykání rozkládají operaci SetLocks (), aby bylo možné zabránit konkrétním zámkům v nastavení nebo pověření, aby bylo možné konkrétní zámky nastavit. Obvykle byste použili zásady uzamykání k tomu, aby uživatelům nebo vývojářům nechtěně contravening zamýšlené použití DSL, a to stejným způsobem, jakým můžete deklarovat proměnnou `private`.
 
- Také vám pomůže zásady zamykání nastavit zámky u všech elementů závisí na typu elementu. Důvodem je, že `SetLocks(Locks.None)` je volána vždy, když se element nejprve vytvoří nebo deserializovat ze souboru.
+ Můžete také použít zásady uzamykání k nastavení zámků pro všechny elementy závislé na typu elementu. Důvodem je, že `SetLocks(Locks.None)` je vždy volána při prvním vytvoření nebo deserializaci prvku ze souboru.
 
- Nelze však pomocí zásad se liší v průběhu své životnosti zámky u elementu. K dosažení tohoto efektu, byste měli použít volání `SetLocks()`.
+ Nemůžete však použít zásadu pro změnu zámků v prvku během své životnosti. K dosažení tohoto efektu byste měli použít volání `SetLocks()`.
 
- K definování zásady zamykání, budete muset:
+ Chcete-li definovat zásady zamykání, musíte:
 
 - Vytvořte třídu, která implementuje <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy>.
 
-- Přidejte tuto třídu do služby, které jsou k dispozici prostřednictvím DocData tohoto kódu DSL.
+- Přidejte tuto třídu ke službám, které jsou k dispozici prostřednictvím DocData vaší DSL.
 
-### <a name="to-define-a-locking-policy"></a>K definování zásady zamykání
- <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> obsahuje následující definice:
+### <a name="to-define-a-locking-policy"></a>Definování zásady zamykání
+ <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> má následující definici:
 
 ```csharp
 public interface ILockingPolicy
@@ -111,7 +111,7 @@ public interface ILockingPolicy
 }
 ```
 
- Tyto metody jsou volány při je provedeno volání `SetLocks()` na Store, oddílu nebo ModelElement. V každé metodě jsou součástí navrhovaných sadu zámky. Může vrátit sadu navrhované nebo můžete sčítání a odečítání zámky.
+ Tyto metody jsou volány, když je provedeno volání `SetLocks()` v úložišti, oddílu nebo ModelElement. V každé metodě máte k dispozici navrhovanou sadu zámků. Navrhovanou sadu můžete vrátit nebo můžete přidat a odečíst zámky.
 
  Příklad:
 
@@ -142,16 +142,16 @@ namespace Company.YourDsl.DslPackage // Change
     }
 ```
 
- Abyste měli jistotu, že uživatelé mohou vždy odstranit prvky, i v případě, že volání jiného kódu `SetLocks(Lock.Delete):`
+ Chcete-li se ujistit, že uživatelé mohou vždy odstraňovat prvky, i když jiné volání kódu `SetLocks(Lock.Delete):`
 
  `return proposedLocks & (Locks.All ^ Locks.Delete);`
 
- Chcete zakázat změnu v hodnotě vlastnosti každý prvek MyClass:
+ Chcete-li zakázat změnu ve všech vlastnostech každého elementu MyClass:
 
  `return element is MyClass ? (proposedLocks | Locks.Property) : proposedLocks;`
 
-### <a name="to-make-your-policy-available-as-a-service"></a>Aby vaše zásady dostupný jako služba
- Ve vaší `DslPackage` projektu, přidejte nový soubor, který obsahuje kód, který se podobá následujícímu příkladu:
+### <a name="to-make-your-policy-available-as-a-service"></a>Zpřístupnění zásad jako služby
+ V projektu `DslPackage` přidejte nový soubor obsahující kód, který se podobá následujícímu příkladu:
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;

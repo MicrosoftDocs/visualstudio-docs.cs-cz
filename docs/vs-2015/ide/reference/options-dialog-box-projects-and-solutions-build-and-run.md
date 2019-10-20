@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno Možnosti, projekty a řešení, sestavit a spustit | Dokumentace Microsoftu
+title: Dialogové okno Možnosti, projekty a řešení, sestavení a spuštění | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,69 +13,58 @@ helpviewer_keywords:
 - debugger, run options
 ms.assetid: c884976e-c0df-4c6d-8e3a-856ea2bd547c
 caps.latest.revision: 24
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a0ce02a76d32a967e2c7e5f06818b5838337f9b1
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 9b7eb229c5938165607b797205b94a318e3303b3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433681"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655190"
 ---
-# <a name="options-dialog-box--projects-and-solutions-build-and-run"></a>Dialogové okno Možnosti, projekty a řešení, sestavit a spustit
+# <a name="options-dialog-box--projects-and-solutions-build-and-run"></a>Dialogové okno Možnosti, Projekty a řešení, Sestavit a spustit
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-V tomto dialogovém okně můžete zadat maximální počet projekty Visual C++ nebo Visual C#, které můžete vytvářet ve stejnou dobu, určité výchozí chování sestavení a některá nastavení protokolu sestavení. Chcete-li otevřít **možnosti** dialogového okna zvolte **nástroje**, **možnosti** na řádku nabídek. Chcete-li získat přístup k této sadě možností, rozbalte **projekty a řešení**a klikněte na tlačítko **sestavíte a spustíte**.  
-  
-## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
- **maximální počet paralelních projektu sestavení**  
- Určuje maximální počet projekty Visual C++ a Visual C#, které můžete vytvářet ve stejnou dobu. K optimalizaci procesu sestavení, je maximální číslo sestavení paralelního projektu automaticky nastaví počet procesorů počítače. Maximální počet je 32.  
-  
- **Pouze při spuštění sestavit projekty a závislosti**  
- Spouštěný projekt a jeho závislosti jsou vytvořeny-li toto zaškrtávací políčko je zaškrtnuto, pokud zvolíte klávesu F5; Zvolte **ladění**, **Start** v nabídce panelu; nebo zvolte **sestavení**, **sestavení** na řádku nabídek. Všechny projekty, závislosti a soubory řešení jsou vytvořeny, pokud toto políčko není zaškrtnuto, pokud zvolíte klávesu F5; Zvolte **ladění**, **Start** v nabídce panelu; nebo zvolte **sestavení**, **sestavení** na řádku nabídek. Tato možnost je ve výchozím nastavení zaškrtnuto.  
-  
- **Spustit, pokud projekty jsou zastaralé**  
+V tomto dialogovém okně můžete zadat maximální počet vizuálních C++ nebo vizuálních C# projektů, které lze současně sestavit, určité výchozí chování sestavení a některá nastavení protokolu sestavení. Chcete-li otevřít dialogové okno **Možnosti** , klikněte na položku **nástroje**, **Možnosti** na panelu nabídek. Chcete-li získat přístup k této sadě možností, rozbalte položku **projekty a řešení**a pak zvolte možnost **Sestavit a spustit**.
+
+## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
+ **maximální počet paralelně sestavovaných projektů** Určuje maximální počet vizuálních C++ a vizuálních C# projektů, které lze současně sestavit. Pro optimalizaci procesu sestavení je maximální počet paralelních sestavení projektu automaticky nastaven na počet procesorů počítače. Maximální hodnota je 32.
+
+ **Při běhu sestavovat pouze spouštěné projekty a závislosti** Pouze projekt po spuštění a jeho závislosti jsou vytvořeny, pokud je toto políčko zaškrtnuto, když zvolíte klávesu F5; Vyberte **ladění**, **Spustit** na řádku nabídek; nebo klikněte na tlačítko **sestavit**, **sestavit** na řádku nabídek. Všechny projekty, závislosti a soubory řešení jsou vytvořeny, pokud je toto políčko zaškrtnuto, pokud zvolíte klávesu F5; Vyberte **ladění**, **Spustit** na řádku nabídek; nebo klikněte na tlačítko **sestavit**, **sestavit** na řádku nabídek. Ve výchozím nastavení je tato možnost prázdná.
+
+ **Spustit, pokud jsou projekty zastaralé**
  > [!NOTE]
-> Tento seznam se vztahuje na [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] pouze pro projekty.  
-  
- Ve výchozím nastavení, zobrazí se zpráva Pokud konfigurace projektu je zastaralý. když stisknutím klávesy F5 nebo vyberte **ladění**, **Start** na řádku nabídek. Můžete určit, zda chcete i přesto se projekt sestavil a určuje, zda se zobrazí zpráva. Tuto možnost použijte k určení, zda zpráva se zobrazí a jaké chování sestavení by měl být pokud zpráva se nezobrazí.  
-  
- **Vždy sestavovat**  
- Do pole zpráva se nezobrazí a sestavení projektu bez ohledu na aktuální konfiguraci. Tato možnost je nastavena, když vyberete **tento dialog již příště nezobrazovat** pole ve zprávě a klikněte na tlačítko **Ano** tlačítko.  
-  
- **Nikdy nesestavovat**  
- Do pole zpráva se nezobrazí a projekt není sestaven. Tato možnost je nastavena, když vyberete **tento dialog již příště nezobrazovat** pole ve zprávě a klikněte na tlačítko **ne** tlačítko.  
-  
- **Dotázat se na sestavení**  
- Zobrazí okno se zprávou pokaždé, když konfigurace projektu je zastaralý.  
-  
- **Při spuštění, při sestavení nebo dojde k chybě nasazení**  
- Pokud při spuštění sestavení z dojde k chybám sestavení **sestavení** nabídky, se zobrazí zpráva. Můžete zadat, jestli se má pokračovat spuštěním aplikace a určuje, zda zpráva se zobrazí pokaždé, když se chyby, která sestavení. Tuto možnost použijte k určení, zda zpráva se zobrazí a jaké chování je třeba pokud se nezobrazí zpráva.  
-  
+> Tento seznam se vztahuje pouze na [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] projekty.
+
+ Ve výchozím nastavení se zobrazí zpráva, pokud je konfigurace projektu zastaralá, když vyberete klávesu F5 nebo kliknete na položku **ladit**, **Spustit** na řádku nabídek. Můžete určit, zda má být projekt sestaven, a zda se zobrazí zpráva. Tuto možnost použijte k určení, zda se zobrazí zpráva a co by mělo být chování sestavení, pokud se zpráva nezobrazí.
+
+ **Vždy sestavit** Okno se zprávou se nezobrazí a projekt se sestaví bez ohledu na aktuální konfiguraci. Tato možnost se nastaví, když ve zprávě zaškrtnete políčko **znovu nezobrazovat toto dialogové okno** a pak kliknete na tlačítko **Ano** .
+
+ **Nikdy nevytvářet** Okno se zprávou se nezobrazí a projekt není sestaven. Tato možnost se nastaví, když ve zprávě zaškrtnete políčko **znovu nezobrazovat toto dialogové okno** a pak kliknete na tlačítko **ne** .
+
+ **Dotázat se na sestavení** Zobrazí okno se zprávou pokaždé, když je konfigurace projektu neaktuální.
+
+ **Při spuštění, když dojde k chybám sestavení nebo nasazení** Pokud dojde k chybám sestavení při spuštění sestavení z nabídky **sestavení** , zobrazí se zpráva. Můžete určit, zda chcete pokračovat spuštěním aplikace a zda se zpráva zobrazuje pokaždé, když dojde k chybám sestavení. Tuto možnost použijte, chcete-li určit, zda se zobrazí zpráva a co by mělo být použito, pokud se zpráva nezobrazí.
+
 > [!NOTE]
-> Tato možnost se vztahuje na [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] pouze pro projekty.  
-  
- **Dotázat se na spuštění**  
- Zobrazí okno se zprávou, které chyby sestavení pokaždé, když dojde k.  
-  
- **Nespouštět**  
- Nezobrazuje okno se zprávou a aplikace není spuštěna. Tato možnost je nastavena, když vyberete **tento dialog již příště nezobrazovat** zaškrtněte políčko v okně se zprávou a klikněte na tlačítko **ne** tlačítko.  
-  
- **Spustit starou verzi**  
- Do pole zpráva se nezobrazí a nově vytvořený verze aplikace není spuštěna. Tato možnost je nastavena, když vyberete **tento dialog již příště nezobrazovat** zaškrtněte políčko v okně se zprávou a klikněte na tlačítko **Ano** tlačítko.  
-  
- **Nové řešení použít aktuálně zvolený projekt jako spouštěný projekt**  
- Pokud je toto políčko zaškrtnuto, nová řešení použít aktuálně zvolený projekt jako projekt po spuštění.  
-  
- **Podrobnost výstupu sestavení projektu nástroje MSBuild**  
- Určuje, kolik informací se zobrazí v **výstup** okna pro sestavení.  
-  
- **Úroveň podrobností MSBuild projektu sestavení protokolu souborů**  
+> Tato možnost se vztahuje pouze na [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] projekty.
+
+ **Dotázat se na spuštění** Zobrazí okno se zprávou pokaždé, když dojde k chybám sestavení.
+
+ **Nespouštět** Okno se zprávou se nezobrazí a aplikace se nespustí. Tato možnost je nastavena, když zaškrtnete políčko **příště nezobrazovat toto dialogové okno** v okně se zprávou a pak klikněte na tlačítko **ne** .
+
+ **Spustit starou verzi** Okno se zprávou se nezobrazí a nově vytvořená verze aplikace se nespustí. Tato možnost se nastaví, když v okně se zprávou zaškrtnete políčko **příště nezobrazovat toto dialogové okno** a pak klikněte na tlačítko **Ano** .
+
+ **Pro nová řešení použijte aktuálně vybraný projekt jako spouštěný projekt** . Pokud je toto políčko zaškrtnuté, nová řešení použijí aktuálně vybraný projekt jako spouštěný projekt.
+
+ **Podrobnosti výstupu sestavení projektu nástroje MSBuild** Určuje, kolik informací se zobrazí v okně **výstup** pro sestavení.
+
+ **Podrobnosti souboru protokolu sestavení projektu nástroje MSBuild**
  > [!NOTE]
-> Tato možnost se týká pouze projektů Visual C++.  
-  
- Určuje, kolik informací je zapsána do souboru protokolu sestavení, které se nacházejí v \\... \\ *ProjectName*\Debug\\*ProjectName*. log.  
-  
-## <a name="see-also"></a>Viz také  
+> Tato možnost se vztahuje pouze C++ na projekty vizuálů.
+
+ Určuje, kolik informací je zapsáno do souboru protokolu sestavení, který je umístěn v \\... \\*ProjectName*\debug. \\*ProjectName*. log.
+
+## <a name="see-also"></a>Viz také
  [Kompilace a sestavení](../../ide/compiling-and-building-in-visual-studio.md)

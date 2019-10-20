@@ -1,333 +1,329 @@
 ---
-title: Vytvoření jazyka specifického pro doménu formulářů Windows | Dokumentace Microsoftu
+title: Vytvoření jazyka specifického pro doménu založeného na model Windows Forms | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: 452318ff-8ecf-46d0-8ca0-4013d0cdafaf
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b93518a6ca5fa6464bf8f2e72f11cfa90b4dd4dd
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: cea3b76575e1da2e846e230580c6cfa50ef9b207
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825595"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651267"
 ---
 # <a name="creating-a-windows-forms-based-domain-specific-language"></a>Vytvoření doménově specifického jazyka založeného na Windows Forms
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Windows Forms slouží k zobrazení stavu modelu jazyka specifického pro doménu (DSL), namísto použití DSL diagram. Toto téma vás provede vazbu formuláře Windows k DSL, pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Visualization and Modeling SDK.  
+Model Windows Forms můžete použít k zobrazení stavu modelu DSL (Domain-Specific Language) namísto použití diagramu DSL. Toto téma vás provede vazbou formuláře Windows na DSL pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vizualizace a modelování sady SDK.
 
- ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
-Instance DSL zobrazující uživatelské rozhraní formulář Windows a Průzkumníka modelu.  
+ ![DSL&#45;WPF&#45;2](../modeling/media/dsl-wpf-2.png "DSL – WPF-2") Instance DSL, která zobrazuje uživatelské rozhraní formuláře Windows a Průzkumník modelů.
 
-## <a name="creating-a-windows-forms-dsl"></a>Vytvoření prvku Windows Forms DSL  
- **Minimální návrháře WinForm** DSL šablona vytvoří minimální DSL, který můžete upravit tak, aby vyhovoval vašim požadavkům.  
+## <a name="creating-a-windows-forms-dsl"></a>Vytvoření model Windows Forms DSL
+ Šablona DSL pro **Návrháře minimálního DataGridView** vytvoří minimální DSL, kterou můžete upravit tak, aby vyhovovala vašim požadavkům.
 
-#### <a name="to-create-a-minimal-winforms-dsl"></a>Chcete-li vytvořit minimální WinForms DSL  
+#### <a name="to-create-a-minimal-winforms-dsl"></a>Vytvoření minimálního počtu WinForms DSL
 
-1. Vytvoření DSL z **minimální návrháře WinForm** šablony.  
+1. Vytvořte DSL ze šablony **minimálního návrháře DataGridView** .
 
-    V tomto názorném postupu se předpokládá, že následující názvy:  
+    V tomto návodu se předpokládají následující názvy:
 
    |                       |                 |
    |-----------------------|-----------------|
    | Název řešení a DSL |     FarmApp     |
-   |       Obor názvů       | Company.FarmApp |
+   |       Obor názvů       | Společnost. FarmApp |
 
-2. Experimentujte s počáteční příklad, který poskytuje šablony:  
+2. Experimentujte s úvodním příkladem, který šablona poskytuje:
 
-   1. Transformujte všechny šablony.  
+   1. Transformujte všechny šablony.
 
-   2. Sestavení a spuštění ukázky (**CTRL + F5**).  
+   2. Sestavte a spusťte ukázku (**CTRL + F5**).
 
-   3. V experimentální instanci sady Visual Studio, otevřete `Sample` soubor v ladění projektu.  
+   3. V experimentální instanci aplikace Visual Studio otevřete soubor `Sample` v ladění projektu.
 
-        Všimněte si, že se zobrazí v ovládacím prvku Windows Forms.  
+        Všimněte si, že se zobrazuje v ovládacím prvku model Windows Forms.
 
-        Můžete také vidět prvky zobrazí v Průzkumníku modelu.  
+        Můžete také zobrazit prvky modelu zobrazené v Průzkumníkovi.
 
-        Přidat některé prvky ve formuláři nebo v Průzkumníku a Všimněte si, že se zobrazí na další.  
+        Přidejte některé prvky ve formuláři nebo v Průzkumníku a Všimněte si, že se zobrazují v jiném zobrazení.
 
-   V instanci hlavní aplikace [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], Všimněte si, že informace o řešení DSL následující body:  
+   V hlavní instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] si všimněte následujících bodů řešení DSL:
 
-- `DslDefinition.dsl` neobsahuje žádné elementy diagramu. Je to proto, že diagramy DSL nebudeme používat k zobrazení instance modely tento DSL. Místo toho vytvoří vazbu mezi formuláři Windows a modelu a prvky ve formuláři se zobrazí modelu.  
+- `DslDefinition.dsl` neobsahuje žádné prvky diagramu. Důvodem je, že nebudete používat diagramy DSL k zobrazení modelů instancí této DSL. Místo toho navážete formulář Windows na model a prvky ve formuláři zobrazí model.
 
-- Kromě `Dsl` a `DslPackage` projekty, řešení obsahuje projekt třetí s názvem `UI.` **uživatelského rozhraní** projekt obsahuje definici ovládacího prvku Windows Forms. `DslPackage` závisí na `UI`, a `UI` závisí na `Dsl`.  
+- Kromě projektů `Dsl` a `DslPackage` obsahuje řešení také třetí projekt s názvem `UI.` projekt**uživatelského rozhraní** obsahuje definici model Windows Formsho ovládacího prvku. `DslPackage` závisí na `UI` a `UI` závisí na `Dsl`.
 
-- V `DslPackage` projektu `UI\DocView.cs` obsahuje kód, který zobrazí ovládacího prvku Windows Forms, který je definován v `UI` projektu.  
+- V projektu `DslPackage` `UI\DocView.cs` obsahuje kód, který zobrazuje ovládací prvek model Windows Forms, který je definován v projektu `UI`.
 
-- `UI` Projekt obsahuje ukázkový pracovní ovládacího prvku formuláře vázán na DSL. Ale nebude fungovat, pokud jste změnili definici DSL. `UI` Projekt obsahuje:  
+- @No__t_0 projekt obsahuje pracovní ukázku ovládacího prvku formuláře vázaného na DSL. Po změně definice DSL ale nebude fungovat. @No__t_0 projekt obsahuje:
 
-  - Windows Forms třídu s názvem `ModelViewControl`.  
+  - Model Windows Forms třídy s názvem `ModelViewControl`.
 
-  - Soubor s názvem `DataBinding.cs` , který obsahuje další částečnou definici z `ModelViewControl`. Chcete-li zobrazit jeho obsah v **Průzkumníka řešení**, otevřete místní nabídku pro soubor a zvolte **zobrazit kód**.  
+  - Soubor s názvem `DataBinding.cs`, který obsahuje další částečnou definici `ModelViewControl`. Chcete-li zobrazit jeho obsah, v **Průzkumník řešení**otevřete místní nabídku souboru a vyberte možnost **Zobrazit kód**.
 
-### <a name="about-the-ui-project"></a>Informace o projektu uživatelského rozhraní  
- Při aktualizaci souboru definice DSL definovat vlastní DSL, budete muset aktualizovat ovládacího prvku `UI` projektu k zobrazení vašeho DSL. Na rozdíl od `Dsl` a `DslPackage` projekty, ukázka `UI` projektu negeneruje z `DslDefinitionl.dsl`. Můžete přidat soubory .tt ke generování kódu, pokud chcete, i když v tomto názorném postupu, který není součástí.  
+### <a name="about-the-ui-project"></a>O projektu uživatelského rozhraní
+ Při aktualizaci souboru definice DSL pro definování vlastní DSL budete muset aktualizovat ovládací prvek v projektu `UI`, aby se zobrazila vaše DSL. Na rozdíl od `Dsl` a `DslPackage` projekty není ukázkový `UI` projekt generován ze `DslDefinitionl.dsl`. Můžete přidat soubory. TT pro vygenerování kódu, pokud chcete, i když to není pokryto v tomto návodu.
 
-## <a name="updating-the-dsl-definition"></a>Aktualizaci definice DSL  
- Následující definice DSL se používá v tomto názorném postupu.  
+## <a name="updating-the-dsl-definition"></a>Aktualizace definice DSL
+ V tomto návodu se používá následující definice DSL.
 
- ![DSL&#45;Wpf&#45;1](../modeling/media/dsl-wpf-1.png "DSL-Wpf-1")  
+ ![DSL&#45;WPF&#45;1](../modeling/media/dsl-wpf-1.png "DSL – WPF-1")
 
-#### <a name="to-update-the-dsl-definition"></a>Chcete-li aktualizovat definici DSL  
+#### <a name="to-update-the-dsl-definition"></a>Aktualizace definice DSL
 
-1. Otevřete DslDefinition.dsl v Návrháři DSL.  
+1. Otevřete DslDefinition. DSL v Návrháři DSL.
 
-2. Odstranit **ExampleElement**  
+2. Odstranit **ExampleElement**
 
-3. Přejmenovat **ExampleModel** doménovou třídu `Farm`.  
+3. Přejmenujte třídu domény **ExampleModel** na `Farm`.
 
-     Nabízí další doménu vlastnosti s názvem `Size` typu **Int32**, a `IsOrganic` typu **logická**.  
-
-    > [!NOTE]
-    > Pokud odstraníte třídu kořenové domény a pak vytvořte nový kořen, budete muset obnovit vlastnost kořenová třída editoru. V **Průzkumník DSL**vyberte **Editor**. V okně Vlastnosti nastavte **kořenová třída** k `Farm`.  
-
-4. Použití **doménovou třídu s názvem** nástroj k vytvoření následujících doménové třídy:  
-
-    - `Field` – Zadejte to další doménovou vlastnost s názvem `Size`.  
-
-    - `Animal` – V okně Vlastnosti nastavte **modifikátor dědičnosti** k **abstraktní**.  
-
-5. Použití **doménové třídy** vytvořte následující třídy:  
-
-    - `Sheep`  
-
-    - `Goat`  
-
-6. Použití **dědičnosti** nástroj aby `Goat` a `Sheep` dědí `Animal`.  
-
-7. Použití **obsažení** nástroj pro vložení `Field` a `Animal` pod `Farm`.  
-
-8. Můžete chtít přehledné diagramu. Chcete-li snížit počet duplicitních prvků, použijte **přenést zde podstrom** příkazu v místní nabídce prvky listu.  
-
-9. **Transformovat všechny šablony** na panelu nástrojů Průzkumníku řešení.  
-
-10. Sestavení **Dsl** projektu.  
+     Poskytněte dodatečné doménové vlastnosti s názvem `Size` typu **Int32**a `IsOrganic` typu **Boolean**.
 
     > [!NOTE]
-    > V této fázi nebude ostatních projektů se sestaví bez chyb. Chceme sestavení projektu Dsl tak, aby byla k dispozici v Průvodci zdroje dat jeho sestavení.  
+    > Pokud odstraníte kořenovou třídu domény a pak vytvoříte nový kořenový adresář, budete muset resetovat vlastnost kořenové třídy editoru. V **Průzkumníku DSL**vyberte **Editor**. Pak v okno Vlastnosti nastavte **kořenovou třídu** na `Farm`.
 
-## <a name="updating-the-ui-project"></a>Aktualizuje se projekt uživatelského rozhraní  
- Nyní můžete vytvořit nového uživatelského ovládacího prvku, který se zobrazí informace, které je uložen v modelu DSL. Nejjednodušší způsob, jak připojit uživatelský ovládací prvek modelu je prostřednictvím datové vazby. Datové vazby adaptér typ s názvem **ModelingBindingSource** je navržená speciálně pro připojení k rozhraní vmsdk následující položky DSL.  
+4. Pomocí nástroje **pojmenované doménové třídy** vytvořte následující doménové třídy:
 
-#### <a name="to-define-your-dsl-model-as-a-data-source"></a>Chcete-li definovat jako zdroj dat modelu DSL  
+    - `Field` – poskytněte tuto vlastnost další doménu s názvem `Size`.
 
-1. Na **Data** nabídce zvolte **zobrazit zdroje dat**.  
+    - `Animal` – v okno Vlastnosti nastavte **Modifikátor dědičnosti** na **abstract**.
 
-     **Zdroje dat** otevře se okno.  
+5. Pomocí nástroje **doménová třída** vytvořte následující třídy:
 
-     Zvolte **přidat nový zdroj dat**. **Průvodce konfigurací zdroje dat** otevře.  
+    - `Sheep`
 
-2. Zvolte **objekt**, **Další**.  
+    - `Goat`
 
-     Rozbalte **Dsl**, **Company.FarmApp**a vyberte **farmy**, což je kořenová třída modelu. Zvolte **Dokončit**.  
+6. Pomocí nástroje **dědičnosti** `Goat` a `Sheep` převezmou z `Animal`.
 
-     V Průzkumníku řešení klikněte **uživatelského rozhraní** projekt nyní obsahuje **Properties\DataSources\Farm.datasource**  
+7. Pomocí nástroje pro **vkládání** vložte `Field` a `Animal` v části `Farm`.
 
-     V okně zdroje dat se zobrazí vlastnosti a vztahy třídy modelu.  
+8. Možná budete chtít diagram uklizený. Chcete-li snížit počet duplicitních prvků, použijte příkaz **přenést podstrom** v místní nabídce prvků listu.
 
-     ![DslWpf&#45;3](../modeling/media/dslwpf-3.png "DslWpf-3")  
+9. **Transformuje všechny šablony** na panelu nástrojů Průzkumník řešení.
 
-#### <a name="to-connect-your-model-to-a-form"></a>K připojení vašeho modelu do formuláře  
+10. Sestavte projekt **DSL** .
 
-1. V **uživatelského rozhraní** projektu, odstraňte všechny existující soubory CS.  
+    > [!NOTE]
+    > V této fázi nebudou ostatní projekty sestaveny bez chyb. Chceme však sestavit projekt DSL, aby jeho sestavení bylo k dispozici v Průvodci zdrojem dat.
 
-2. Přidat nový **uživatelský ovládací prvek** soubor s názvem `FarmControl` k **uživatelského rozhraní** projektu.  
+## <a name="updating-the-ui-project"></a>Aktualizuje se projekt uživatelského rozhraní.
+ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou zobrazeny informace, které jsou uloženy v modelu DSL. Nejjednodušší způsob, jak připojit uživatelský ovládací prvek k modelu, je prostřednictvím datových vazeb. Typ adaptéru datové vazby s názvem **ModelingBindingSource** je speciálně navržený pro propojení DSL s non-VMSDK rozhraními.
 
-3. V **zdroje dat** okna, v rozevírací nabídce **farmy**, zvolte **podrobnosti**.  
+#### <a name="to-define-your-dsl-model-as-a-data-source"></a>Definování modelu DSL jako zdroje dat
 
-    Ponechejte výchozí nastavení pro ostatní vlastnosti.  
+1. V nabídce **data** klikněte na možnost **Zobrazit zdroje dat**.
 
-4. V návrhovém zobrazení otevřete FarmControl.cs.  
+     Otevře se okno **zdroje dat** .
 
-    Přetáhněte **farmy** z okna zdroje dat do FarmControl.  
+     Vyberte možnost **Přidat nový zdroj dat**. Otevře se **Průvodce konfigurací zdroje dat** .
 
-    Sadu ovládacích prvků se zobrazí, jeden pro každou vlastnost. Vlastnosti relace nelze vytvořit ovládací prvky.  
+2. Vyberte **objekt**, **Další**.
 
-5. Odstranit **farmBindingNavigator**. To je také automaticky generovány v `FarmControl` návrháře, ale není užitečné pro tuto aplikaci.  
+     Rozbalte **DSL**, **Company. FarmApp**a vyberte **farmu**, která je kořenovou třídou vašeho modelu. Klikněte na tlačítko **Dokončit**.
 
-6. Pomocí nástrojů, vytvořte dvě instance **DataGridView**a pojmenujte je `AnimalGridView` a `FieldGridView`.  
+     V Průzkumník řešení projekt **uživatelského rozhraní** nyní obsahuje **Properties\DataSources\Farm.DataSource**
+
+     Vlastnosti a vztahy třídy modelu se zobrazí v okně zdroje dat.
+
+     ![DslWpf&#45;3](../modeling/media/dslwpf-3.png "DslWpf-3")
+
+#### <a name="to-connect-your-model-to-a-form"></a>Připojení modelu k formuláři
+
+1. V projektu **uživatelského rozhraní** odstraňte všechny existující soubory. cs.
+
+2. Přidejte do projektu **uživatelského rozhraní** nový soubor **uživatelského ovládacího prvku** s názvem `FarmControl`.
+
+3. V okně **zdroje dat** vyberte v rozevírací nabídce v části **farma**možnost **Podrobnosti**.
+
+    Pro ostatní vlastnosti ponechte výchozí nastavení.
+
+4. Otevřete FarmControl.cs v návrhovém zobrazení.
+
+    Přetáhněte **farmu** z okna zdroje dat do FarmControl.
+
+    Zobrazí se sada ovládacích prvků, jedna pro každou vlastnost. Vlastnosti vztahu negenerují ovládací prvky.
+
+5. Odstraňte **farmBindingNavigator**. To je také automaticky vygenerováno v Návrháři `FarmControl`, ale není vhodné pro tuto aplikaci.
+
+6. Pomocí panelu nástrojů vytvořte dvě instance **ovládacího prvku DataGridView**a pojmenujte je `AnimalGridView` a `FieldGridView`.
 
    > [!NOTE]
-   > Alternativní krokem je přetáhnout položky pole a zvířat z okna zdroje dat na ovládací prvek. Tato akce automaticky vytvoří datových mřížek a vazby mezi zobrazení mřížky a zdrojem dat. Nicméně tato vazba nefunguje správně pro DSL. Proto je vhodnější vytvořit datových mřížek a vazby ručně.  
+   > Alternativním krokem je přetahování položek zvířat a polí z okna zdroje dat do ovládacího prvku. Tato akce automaticky vytvoří datovou mřížku a vazby mezi zobrazením mřížky a zdrojem dat. Tato vazba však pro DSL správně nefunguje. Proto je lepší vytvořit datovou mřížku a vazby ručně.
 
-7. Pokud nebude obsahovat panelu nástrojů **ModelingBindingSource** nástroj, přidejte ji. V místní nabídce **Data** kartě **zvolit položky**. V **zvolit položky nástrojů** dialogového okna, vyberte **ModelingBindingSource** z **karta rozhraní .NET**.  
+7. Pokud sada nástrojů neobsahuje nástroj **ModelingBindingSource** , přidejte ji. V místní nabídce na kartě **data** vyberte **možnost zvolit položky**. V dialogovém okně **zvolit položky sady nástrojů** vyberte na **kartě .NET Framework**možnost **ModelingBindingSource** .
 
-8. Pomocí nástrojů, vytvořte dvě instance **ModelingBindingSource**a pojmenujte je `AnimalBinding` a `FieldBinding`.  
+8. Pomocí panelu nástrojů vytvořte dvě instance **ModelingBindingSource**a pojmenujte je `AnimalBinding` a `FieldBinding`.
 
-9. Nastavte **DataSource** vlastnosti každého **ModelingBindingSource** k **farmBindingSource**.  
+9. Nastavte vlastnost **DataSource** každého **ModelingBindingSource** na **farmBindingSource**.
 
-     Nastavte **DataMember** vlastnost **zvířat** nebo **pole**.  
+     Nastavte vlastnost **DataMember** na hodnotu **zvířata** nebo **pole**.
 
-10. Nastavte **DataSource** vlastnosti `AnimalGridView` k `AnimalBinding`a `FieldGridView` k `FieldBinding`.  
+10. Nastavte vlastnosti **DataSource** `AnimalGridView` na `AnimalBinding` a `FieldGridView` na `FieldBinding`.
 
-11. Upravte rozložení ovládacího prvku farmy, aby vaše to zkusit.  
+11. Upravte rozložení ovládacího prvku farmy na svou chuť.
 
-    **ModelingBindingSource** je adaptér, který provádí několik funkcí, které jsou specifické pro DSL:  
+    **ModelingBindingSource** je adaptér, který provádí několik funkcí specifických pro DSL:
 
-- Aktualizace objektu v transakci Store vmsdk následující položky.  
+- Rozbalí aktualizace do transakce VMSDK Store.
 
-   Například když uživatel odstraní řádek z zobrazení mřížky dat, pravidelné vazby způsobí výjimka transakce.  
+   Například když uživatel odstraní řádek z mřížky zobrazení dat, regulární vazba by způsobila výjimku transakce.
 
-- Zajišťuje, že když uživatel vybere řádek, v okně vlastností zobrazuje vlastnosti odpovídající prvek modelu, namísto řádek mřížky dat.  
+- Zajistí, že když uživatel vybere řádek, okno Vlastnosti zobrazí vlastnosti odpovídajícího prvku modelu namísto řádku datové mřížky.
 
-  ![DslWpf4](../modeling/media/dslwpf4.png "DslWpf4")  
-  Schéma propojení mezi zdroji dat a zobrazení.  
+  ![DslWpf4](../modeling/media/dslwpf4.png "DslWpf4") Schéma propojení mezi zdroji dat a zobrazeními.
 
-#### <a name="to-complete-the-bindings-to-the-dsl"></a>K dokončení vazby na DSL  
+#### <a name="to-complete-the-bindings-to-the-dsl"></a>Dokončení vazby na DSL
 
-1. Přidejte následující kód v samostatném souboru kódu v **uživatelského rozhraní** projektu:  
+1. Přidejte následující kód do samostatného souboru kódu v projektu **uživatelského rozhraní** :
 
-    ```csharp  
-    using System.ComponentModel;  
-    using Microsoft.VisualStudio.Modeling;  
-    using Microsoft.VisualStudio.Modeling.Design;  
+    ```csharp
+    using System.ComponentModel;
+    using Microsoft.VisualStudio.Modeling;
+    using Microsoft.VisualStudio.Modeling.Design;
 
-    namespace Company.FarmApp  
-    {  
-      partial class FarmControl  
-      {  
-        public IContainer Components { get { return components; } }  
+    namespace Company.FarmApp
+    {
+      partial class FarmControl
+      {
+        public IContainer Components { get { return components; } }
 
-        /// <summary>Binds the WinForms data source to the DSL model.  
-        /// </summary>  
-        /// <param name="nodelRoot">The root element of the model.</param>  
-        public void DataBind(ModelElement modelRoot)  
-        {  
-          WinFormsDataBindingHelper.PreInitializeDataSources(this);  
-          this.farmBindingSource.DataSource = modelRoot;  
-          WinFormsDataBindingHelper.InitializeDataSources(this);  
-        }  
-      }  
-    }  
-    ```  
+        /// <summary>Binds the WinForms data source to the DSL model.
+        /// </summary>
+        /// <param name="nodelRoot">The root element of the model.</param>
+        public void DataBind(ModelElement modelRoot)
+        {
+          WinFormsDataBindingHelper.PreInitializeDataSources(this);
+          this.farmBindingSource.DataSource = modelRoot;
+          WinFormsDataBindingHelper.InitializeDataSources(this);
+        }
+      }
+    }
+    ```
 
-2. V **DslPackage** projektu, upravit **DslPackage\DocView.tt** aktualizace definicí následující proměnné:  
+2. V projektu **DslPackage** upravte **DslPackage\DocView.TT** tak, aby se aktualizovala následující definice proměnné:
 
-    ```csharp  
-    string viewControlTypeName = "FarmControl";  
-    ```  
+    ```csharp
+    string viewControlTypeName = "FarmControl";
+    ```
 
-## <a name="testing-the-dsl"></a>Testování DSL  
- DSL řešení teď můžete sestavit a spustit, i když může být vhodné případná zlepšení další rozšíření později.  
+## <a name="testing-the-dsl"></a>Testování DSL
+ Řešení DSL teď může sestavovat a spouštět, i když možná budete chtít později přidat další vylepšení.
 
-#### <a name="to-test-the-dsl"></a>K otestování DSL  
+#### <a name="to-test-the-dsl"></a>Otestování DSL
 
-1. Sestavte a spusťte řešení.  
+1. Sestavte a spusťte řešení.
 
-2. V experimentální instanci sady Visual Studio, otevřete **ukázka** souboru.  
+2. V experimentální instanci aplikace Visual Studio otevřete **vzorový** soubor.
 
-3. V **FarmApp Explorer**, otevřete místní nabídku na **farmy** kořenový uzel a zvolte **přidat nové Goat**.  
+3. V **Průzkumníku FarmApp**otevřete místní nabídku na kořenovém uzlu **farmy** a vyberte možnost **Přidat novou kozy**.
 
-     `Goat1` Zobrazí se v **zvířat** zobrazení.  
+     `Goat1` se zobrazí v zobrazení **zvířata** .
 
     > [!WARNING]
-    > Nabídku je nutné použít na **farmy** uzlu, ne **zvířat** uzlu.  
+    > Je nutné použít místní nabídku uzlu **farma** , nikoli uzel **zvířata** .
 
-4. Vyberte **farmy** kořenový uzel a zobrazte její vlastnosti.  
+4. Vyberte kořenový uzel **farmy** a zobrazte jeho vlastnosti.
 
-     Ve formě zobrazení změnit **název** nebo **velikost** farmy.  
+     V zobrazení formulář změňte **název** nebo **Velikost** farmy.
 
-     Když přejdete mimo každé pole ve formuláři, odpovídající změny vlastností v okně Vlastnosti.  
+     Když opustíte jednotlivá pole ve formuláři, odpovídající vlastnosti se změní v okno Vlastnosti.
 
-## <a name="enhancing-the-dsl"></a>Rozšíření DSL  
+## <a name="enhancing-the-dsl"></a>Vylepšení DSL
 
-#### <a name="to-make-the-properties-update-immediately"></a>Chcete-li vlastnosti aktualizovat hned  
+#### <a name="to-make-the-properties-update-immediately"></a>Postup aktualizace vlastností hned
 
-1. V návrhovém zobrazení FarmControl.cs vyberte jednoduché pole, jako je název, velikost nebo IsOrganic.  
+1. V zobrazení Návrh FarmControl.cs vyberte jednoduché pole, jako je název, velikost nebo anorganické.
 
-2. V okně Vlastnosti rozbalte **DataBindings** a otevřete **(rozšířené)** .  
+2. V okno Vlastnosti rozbalte položku **DataBindings** a otevřete **(rozšířené)** .
 
-     V **formátování a rozšířené vazby** dialogového okna, v části **režim aktualizace zdroje dat**, zvolte **OnPropertyChanged –** .  
+     V dialogu **formátování a rozšířené vazby** klikněte v části **režim aktualizace zdroje dat**na možnost **přepropertychanged**.
 
-3. Sestavte a spusťte řešení.  
+3. Sestavte a spusťte řešení.
 
-     Ověřte, že když změníte obsah pole odpovídající vlastnost okamžitě změny modelu farmy.  
+     Ověřte, že při změně obsahu pole se okamžitě změní odpovídající vlastnost modelu farmy.
 
-#### <a name="to-provide-add-buttons"></a>K poskytování tlačítka pro přidání  
+#### <a name="to-provide-add-buttons"></a>Poskytnutí tlačítek přidat
 
-1. V návrhovém zobrazení FarmControl.cs vytvoření tlačítka na formuláři pomocí panelu nástrojů.  
+1. V zobrazení Návrh FarmControl.cs použijte panel nástrojů k vytvoření tlačítka na formuláři.
 
-    Upravit název a text na tlačítku, třeba `New Sheep`.  
+    Upravte název a text tlačítka, například `New Sheep`.
 
-2. Otevřete kódu na pozadí tlačítka (například tím, že na ni poklikáte).  
+2. Otevřete kód za tlačítkem (například poklikáním myši).
 
-    Upravte následujícím způsobem:  
+    Upravte ho následujícím způsobem:
 
-   ```csharp  
-   private void NewSheepButton_Click(object sender, EventArgs e)  
-   {  
-     using (Transaction t = farm.Store.TransactionManager.BeginTransaction("Add sheep"))  
-     {  
-       elementOperations.MergeElementGroup(farm,  
-         new ElementGroup(new Sheep(farm.Partition)));  
-       t.Commit();  
-     }  
-   }  
+   ```csharp
+   private void NewSheepButton_Click(object sender, EventArgs e)
+   {
+     using (Transaction t = farm.Store.TransactionManager.BeginTransaction("Add sheep"))
+     {
+       elementOperations.MergeElementGroup(farm,
+         new ElementGroup(new Sheep(farm.Partition)));
+       t.Commit();
+     }
+   }
 
-   // The following code is shared with other add buttons:  
-   private ElementOperations operationsCache = null;  
-   private ElementOperations elementOperations  
-   {  
-     get  
-     {  
-       if (operationsCache == null)  
-       {  
-         operationsCache = new ElementOperations(farm.Store, farm.Partition);  
-       }  
-       return operationsCache;  
-     }  
-   }  
-   private Farm farm  
-   {  
-     get { return this.farmBindingSource.DataSource as Farm; }  
-   }  
+   // The following code is shared with other add buttons:
+   private ElementOperations operationsCache = null;
+   private ElementOperations elementOperations
+   {
+     get
+     {
+       if (operationsCache == null)
+       {
+         operationsCache = new ElementOperations(farm.Store, farm.Partition);
+       }
+       return operationsCache;
+     }
+   }
+   private Farm farm
+   {
+     get { return this.farmBindingSource.DataSource as Farm; }
+   }
 
-   ```  
+   ```
 
-    Také je potřeba vložit následující direktivy:  
+    Budete také muset vložit následující direktivu:
 
-   ```csharp  
+   ```csharp
 
-   using Microsoft.VisualStudio.Modeling;  
+   using Microsoft.VisualStudio.Modeling;
 
-   ```  
+   ```
 
-3. Přidání tlačítek podobné koz a polí.  
+3. Přidejte podobné tlačítka pro kozy a pole.
 
-4. Sestavte a spusťte řešení.  
+4. Sestavte a spusťte řešení.
 
-5. Ověřte, že nové tlačítko přidá položka. Nová položka by se zobrazit v Průzkumníku FarmApp a v zobrazení mřížky příslušná data.  
+5. Ověřte, že tlačítko Nový přidá položku. Nová položka by se měla zobrazit v Průzkumníkovi FarmApp i v příslušném zobrazení mřížky dat.
 
-    Je třeba možnost upravit název elementu v zobrazení mřížky dat. Můžete také odstranit ji z něj.  
+    Měli byste být schopni upravit název prvku v zobrazení tabulky dat. Můžete ho také odstranit z těchto.
 
-   ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
+   ![DSL&#45;WPF&#45;2](../modeling/media/dsl-wpf-2.png "DSL – WPF-2")
 
-### <a name="about-the-code-to-add-an-element"></a>O kódu pro přidání elementu  
- Pro nový prvek tlačítka následující alternativní kód je poněkud jednodušší.  
+### <a name="about-the-code-to-add-an-element"></a>O kódu pro přidání elementu
+ U tlačítek nového elementu je následující alternativní kód mírně jednodušší.
 
-```csharp  
-private void NewSheepButton_Click(object sender, EventArgs e)  
-{  
-  using (Transaction t = farm.Store.TransactionManager.BeginTransaction("Add sheep"))  
-  {  
-    farm.Animals.Add(new Sheep(farm.Partition)); ;  
-    t.Commit();  
-  }  
-}  
+```csharp
+private void NewSheepButton_Click(object sender, EventArgs e)
+{
+  using (Transaction t = farm.Store.TransactionManager.BeginTransaction("Add sheep"))
+  {
+    farm.Animals.Add(new Sheep(farm.Partition)); ;
+    t.Commit();
+  }
+}
 
-```  
+```
 
- Tento kód však není nastavena výchozí název pro novou položku. Nejde spustit všechny přizpůsobené sloučení, které může jste definovali v **direktivy sloučení elementů** nástroje DSL, a nejde ho spustit jakýkoli kód vlastní sloučení, které byly definovány.  
+ Tento kód však pro novou položku nenastaví výchozí název. Nespustí žádné přizpůsobené sloučení, které jste pravděpodobně definovali v **direktivách sloučení elementů** DSL, a nespustí žádný vlastní slučovací kód, který může být definován.
 
- Proto doporučujeme použít <xref:Microsoft.VisualStudio.Modeling.ElementOperations> k vytvoření nových prvků. Další informace najdete v tématu [přizpůsobení vytvoření a přesunutí elementu](../modeling/customizing-element-creation-and-movement.md).  
+ Proto doporučujeme použít <xref:Microsoft.VisualStudio.Modeling.ElementOperations> k vytváření nových elementů. Další informace naleznete v tématu [přizpůsobení vytváření a přesunu prvku](../modeling/customizing-element-creation-and-movement.md).
 
-## <a name="see-also"></a>Viz také  
- [Jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md)   
- [Psaní kódu pro úpravu jazyka specifického pro doménu specifického](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
- [Sada Modeling SDK pro Visual Studio – jazyky specifické pro doménu](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)
+## <a name="see-also"></a>Viz také
+ [Definování kódu specifického](../modeling/how-to-define-a-domain-specific-language.md) [pro doménu psaní kódu pro přizpůsobení jazykové](../modeling/writing-code-to-customise-a-domain-specific-language.md) [sady SDK pro specifické domény pro sadu Visual Studio – jazyky specifické pro doménu](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)

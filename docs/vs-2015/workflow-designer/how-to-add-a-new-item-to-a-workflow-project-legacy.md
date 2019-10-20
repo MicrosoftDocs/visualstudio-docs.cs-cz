@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidat novou položku do projektu pracovního postupu (starší verze) | Dokumentace Microsoftu'
+title: 'Postupy: Přidání nové položky do projektu pracovního postupu (starší verze) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -11,41 +11,41 @@ helpviewer_keywords:
 - activities, adding to workflow projects
 ms.assetid: 130cd83d-942d-437b-bbb5-8088ec0a6d79
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0d607300bc42bd0428655a9590ab2e6dcc2a7043
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 46f6e9daafc2688b9bea75cba9eddd8c8a53c9bb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62954775"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656672"
 ---
 # <a name="how-to-add-a-new-item-to-a-workflow-project-legacy"></a>Postupy: Přidání nové položky do projektu pracovního postupu (starší verze)
-Po vytvoření projektu pracovního postupu pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)] poskytované [!INCLUDE[vs2010](../includes/vs2010-md.md)] , zaměřuje na buď [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)], můžete přidat [!INCLUDE[wf](../includes/wf-md.md)] položek a ostatní známý [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] položky do projektu.  
-  
- Následující tabulce jsou uvedeny [!INCLUDE[wf2](../includes/wf2-md.md)] položky, které přidáte do projektu pracovního postupu.  
-  
-|Položka|Popis|  
-|----------|-----------------|  
-|Aktivita|Aktivita s definicí aktivity v kódu návrhář kódu souboru a uživatele v samostatném souboru kódu.|  
-|Aktivita (s rozdělením kódu)|Definice activity vyjádřený jako pracovní postup značek a kódem uživatele v samostatném souboru kódu.|  
-|Sekvenční pracovní postup (kód)|Sekvenční pracovní postup s definicí pracovního postupu v kódu návrhář kódu souboru a uživatele v samostatném souboru kódu.|  
-|Sekvenční pracovní postup (s rozdělením kódu)|Sekvenční pracovní postup s definicí pracovního postupu vyjádřenou jako pracovní postup značek a kódem uživatele v samostatném souboru kódu.|  
-|Pracovní postup stavového stroje (kód)|Pracovní postup stavového stroje s definicí pracovního postupu v kódu návrhář kódu souboru a uživatele v samostatném souboru kódu.|  
-|Pracovní postup stavového stroje (s rozdělením kódu)|Pracovní postup stavového stroje s definicí pracovního postupu vyjádřenou jako pracovní postup značek a kódem uživatele v samostatném souboru kódu.|  
-  
-### <a name="to-add-a-new-item-to-a-workflow-project"></a>Chcete-li přidat novou položku do projektu pracovního postupu  
-  
-1. Na **projektu** nabídky, klikněte na tlačítko **přidat novou položku**.  
-  
-     **Přidat novou položku** zobrazí se dialogové okno.  
-  
-2. Vyberte položku.  
-  
-     V předchozí tabulce jsou uvedeny dostupné možnosti Windows Workflow Foundation.  
-  
-3. Klikněte na tlačítko **přidat** přidání položky do projektu pracovního postupu.  
-  
-## <a name="see-also"></a>Viz také  
+Po vytvoření projektu pracovního postupu pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)] poskytované [!INCLUDE[vs2010](../includes/vs2010-md.md)], která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] můžete přidat [!INCLUDE[wf](../includes/wf-md.md)] položky a další známé [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] položky do projektu.
+
+ V následující tabulce jsou uvedeny [!INCLUDE[wf2](../includes/wf2-md.md)] položky, které můžete přidat do projektu pracovního postupu.
+
+|Položkami|Popis|
+|----------|-----------------|
+|Aktivita|Aktivita s definicí aktivity v souboru kódu návrháře a kódem uživatele v samostatném souboru kódu.|
+|Aktivita (s rozdělením kódu)|Definice aktivity vyjádřená jako značka pracovního postupu a kód uživatele v samostatném souboru kódu.|
+|Sekvenční pracovní postup (kód)|Sekvenční pracovní postup s definicí pracovního postupu v souboru kódu návrháře a kódem uživatele v samostatném souboru kódu.|
+|Sekvenční pracovní postup (s rozdělením kódu)|Sekvenční pracovní postup s definicí pracovního postupu vyjádřený jako značka pracovního postupu a kód uživatele v samostatném souboru kódu.|
+|Pracovní postup stavového stroje (kód)|Pracovní postup stavového stroje s definicí pracovního postupu v souboru návrháře kódu a kódem uživatele v samostatném souboru kódu.|
+|Pracovní postup stavového stroje (s rozdělením kódu)|Pracovní postup stavového stroje s definicí pracovního postupu vyjádřený jako značka pracovního postupu a kód uživatele v samostatném souboru kódu.|
+
+### <a name="to-add-a-new-item-to-a-workflow-project"></a>Přidání nové položky do projektu pracovního postupu
+
+1. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
+
+     Otevře se dialogové okno **Přidat novou položku** .
+
+2. Vyberte položku.
+
+     V předchozí tabulce jsou uvedené dostupné výběry programovací model Windows Workflow Foundation.
+
+3. Kliknutím na tlačítko **Přidat** přidejte položku do projektu pracovního postupu.
+
+## <a name="see-also"></a>Viz také
  [Vytváření projektů pracovních postupů starších verzí](../workflow-designer/creating-legacy-workflow-projects.md)

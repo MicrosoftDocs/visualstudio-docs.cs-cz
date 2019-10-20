@@ -1,35 +1,35 @@
 ---
-title: Návrhář postupu provádění – Pokud návrháře aktivit
+title: Návrhář aktivity Návrhář postupu provádění – if
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.If.UI
 ms.assetid: 930a8fa2-db98-43e9-ad6d-a85cc7a6519a
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 762199906bbb84701c044b5fa9f3f3b8c6fdfdae
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4e0c08d655393a953e1abae9d33086d43e281500
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949198"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650229"
 ---
 # <a name="if-activity-designer"></a>Návrhář aktivity If
 
-<xref:System.Activities.Statements.If> Aktivity vyhodnocuje podmínku a provede aktivitu v závislosti na výsledcích hodnocení. Tato aktivita je nejužitečnější při použití procedurální modelování styl programování. <xref:System.Activities.Statements.If> Aktivity mohou být vnořené uvnitř <xref:System.Activities.Statements.Sequence> aktivity nebo <xref:System.Activities.Statements.Parallel> aktivity, například. Pokud používáte <xref:System.Activities.Statements.Flowchart> aktivity, zvažte použití <xref:System.Activities.Statements.FlowDecision> aktivity místo.
+Aktivita <xref:System.Activities.Statements.If> vyhodnocuje podmínku a spustí aktivitu v závislosti na výsledcích tohoto vyhodnocení. Tato aktivita je nejužitečnější při použití stylu procedurálního modelování programování. Aktivita <xref:System.Activities.Statements.If> může být vnořená v rámci aktivity <xref:System.Activities.Statements.Sequence> nebo aktivity <xref:System.Activities.Statements.Parallel>, například. Pokud používáte aktivitu <xref:System.Activities.Statements.Flowchart>, zvažte místo toho použití <xref:System.Activities.Statements.FlowDecision> aktivity.
 
-## <a name="if-properties-in-the-workflow-designer"></a>Pokud vlastnosti v Návrháři postupu provádění
+## <a name="if-properties-in-the-workflow-designer"></a>Pokud se v Návrhář postupu provádění vlastnosti
 
-V následující tabulce jsou uvedeny nejužitečnější <xref:System.Activities.Statements.If> vlastnosti aktivit a popisuje, jak je používat v návrháři.
+Následující tabulka uvádí nejužitečnější vlastnosti <xref:System.Activities.Statements.If> aktivity a popisuje jejich použití v návrháři.
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Statements.If.Condition%2A>|Pravda|Podmínka, která určuje, které podřízené aktivity ke spuštění. Chcete-li nastavit <xref:System.Activities.Statements.If.Condition%2A>, zadejte výraz jazyka Visual Basic v **podmínku** pole na **Pokud** aktivity návrháře nebo v mřížce vlastností.|
-|<xref:System.Activities.Statements.If.Else%2A>|False|Aktivita spustit, když <xref:System.Activities.Statements.If.Condition%2A> je **false**. Přidat aktivitu, která provádí <xref:System.Activities.Statements.If.Else%2A> větev, přetáhněte aktivitu z **nástrojů** do **Else** pole na **Pokud** Návrhář aktivity s text nápovědy " Sem přetáhněte aktivitu".|
-|<xref:System.Activities.Statements.If.Then%2A>|False|Aktivita spustit, když <xref:System.Activities.Statements.If.Condition%2A> je **true**. Přidat aktivitu, která provádí <xref:System.Activities.Statements.If.Then%2A> větev, přetáhněte aktivitu z **nástrojů** do **pak** pole na **Pokud** Návrhář aktivity s text nápovědy " Sem přetáhněte aktivitu".|
+|<xref:System.Activities.Statements.If.Condition%2A>|Podmínka|Podmínka, která určuje, která podřízená aktivita má být provedena. Chcete-li nastavit <xref:System.Activities.Statements.If.Condition%2A>, zadejte výraz Visual Basic do pole **Podmínka** v Návrháři aktivity **if** nebo v mřížce vlastností.|
+|<xref:System.Activities.Statements.If.Else%2A>|False|Aktivita, která se má provést, pokud je <xref:System.Activities.Statements.If.Condition%2A> **false** Chcete **-li přidat** aktivitu, která je spouštěna <xref:System.Activities.Statements.If.Else%2A> větví, přetáhněte aktivitu ze **sady nástrojů** do pole **Else** v Návrháři aktivity s textem nápovědy "Sem přetáhněte aktivitu".|
+|<xref:System.Activities.Statements.If.Then%2A>|False|Aktivita, která se má provést, pokud je <xref:System.Activities.Statements.If.Condition%2A> **true**. Chcete-li přidat aktivitu, která je spouštěna <xref:System.Activities.Statements.If.Then%2A> větví, přetáhněte aktivitu ze **sady nástrojů** do pole **a** v Návrháři aktivity **if** s textem nápovědy "Sem přetáhněte aktivitu".|
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,5 +1,5 @@
 ---
-title: Prostředky pro odstraňování chyb integrovaného vývojového prostředí | Dokumentace Microsoftu
+title: Zdroje informací pro řešení potíží s integrovaným vývojovým prostředím | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -91,28 +91,28 @@ f1_keywords:
 - vs.webclient.help.general
 ms.assetid: 8f866eb5-a206-4c16-807e-96a0f2c0e645
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 97edc5419cb552f853a75817564a69dd175ec54b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5198c541deb4680d19e2b15ae0e672b831dbb13e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68203679"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665551"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Zdroje pro řešení potíží obsahovaly chyby vývojového prostředí.
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Ne všechny chybové zprávy mají konkrétní související téma nápovědy. Informace v chybové zprávě není vám pomůžou vyřešit problém, naleznete další prostředky, například články znalostní báze, komunitu vývojářů nebo odbornou pomoc.  
-  
-## <a name="knowledge-base-articles"></a>Články znalostní báze  
- Ve znalostní bázi (KB) je možné hledat online články týkající se problémů s produktem. Ne všechny problémy mají odpovídající článek ve znalostní bázi, ale chyby, se kterými se setkal velký počet zákazníků, jsou obvykle uvedeny. Články znalostní BÁZE je k dispozici na [Microsoft Support](http://go.microsoft.com/fwlink/?linkid=1782) webu.  
-  
-## <a name="the-developer-community"></a>Komunita vývojářů  
- Fóra umožňují interakci s dalšími vývojáři a také zaměstnanci společnosti Microsoft. Pokud narazíte na chybu, pro kterou nelze nalézt řešení, je možné poslat otázky týkající se problému na fórum. Také je možné prohledat diskusní skupiny a zjistit, zda někdo z ostatních psal o stejném problému.  
-  
- Fóra, blogy, chaty a ostatní prostředky je k dispozici na [technické komunity společnosti Microsoft](https://techcommunity.microsoft.com/) webu.  
-  
-## <a name="product-support"></a>Podpora produktu  
- Pokud jste ještě další dotazy po vyzkoušení jiných zdrojů, můžete kontaktujte služby podpory společnosti Microsoft najdete [Microsoft Support](http://go.microsoft.com/fwlink/?linkid=1782) webu. Informace o podpoře produktu ve vaší oblasti najdete v tématu [kontaktujte nás](../../ide/talk-to-us.md).
+Ne všechny chybové zprávy mají konkrétní související téma nápovědy. Pokud informace v chybové zprávě při řešení tohoto problému neumožňují, můžete si prostudovat jiné prostředky, jako jsou články znalostní báze, komunita vývojářů nebo Podpora produktů.
+
+## <a name="knowledge-base-articles"></a>Články znalostní báze
+ Ve znalostní bázi (KB) je možné hledat online články týkající se problémů s produktem. Ne všechny problémy mají odpovídající článek ve znalostní bázi, ale chyby, se kterými se setkal velký počet zákazníků, jsou obvykle uvedeny. Na webu [Podpora Microsoftu](http://go.microsoft.com/fwlink/?linkid=1782) můžete získat přístup k článkům znalostní báze.
+
+## <a name="the-developer-community"></a>Komunita vývojářů
+ Fóra umožňují interakci s dalšími vývojáři a také zaměstnanci společnosti Microsoft. Pokud narazíte na chybu, pro kterou nelze nalézt řešení, je možné poslat otázky týkající se problému na fórum. Také je možné prohledat diskusní skupiny a zjistit, zda někdo z ostatních psal o stejném problému.
+
+ K fórům, blogům, chatům a dalším prostředkům můžete přistupovat na webu [technické komunity Microsoftu](https://techcommunity.microsoft.com/) .
+
+## <a name="product-support"></a>Podpora produktu
+ Pokud máte i po vyzkoušení dalších prostředků nějaké dotazy, můžete kontaktovat služby podpory společnosti Microsoft na webu [Podpora Microsoftu](http://go.microsoft.com/fwlink/?linkid=1782) . Informace o podpoře produktu dostupné ve vaší oblasti najdete v tématu o [komunikaci s námi](../../ide/talk-to-us.md).

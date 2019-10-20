@@ -2,69 +2,69 @@
 title: Nastavení jedinečné vlastnosti automatizace pro ovládací prvky UPW za účelem testování
 ms.date: 05/31/2018
 ms.topic: conceptual
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - uwp
-author: gewarren
-ms.openlocfilehash: fd939162ff4063a66ac0afe1e6830a0d3b32bab2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+author: jillre
+ms.openlocfilehash: 845ed1502f86f9b0de678182bd0dc77b9b7617c7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62429386"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660014"
 ---
-# <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>Nastavit jedinečnou vlastnost automatizace pro ovládacích prvků UPW pro účely testování
+# <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>Nastavení jedinečné vlastnosti automatizace pro ovládací prvky UWP pro testování
 
-Pokud chcete spustit programové testy UI pro aplikace UWP založené na XAML, musí být každý ovládací prvek identifikován jedinečnou vlastnost automatizace. Můžete přiřadit jedinečné vlastnosti automatizace založená na typu ovládacího prvku XAML v aplikaci.
+Chcete-li spustit programové testy uživatelského rozhraní pro aplikaci UWP založené na jazyce XAML, musí být každý ovládací prvek identifikován jedinečnou vlastností automatizace. Můžete přiřadit jedinečnou vlastnost Automation založenou na typu ovládacího prvku jazyka XAML v aplikaci.
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
-## <a name="static-xaml-definition"></a>Statické definice XAML
+## <a name="static-xaml-definition"></a>Statická definice XAML
 
-Chcete-li určit jedinečné vlastnosti automatizace pro ovládací prvek, který je definován v souboru XAML, můžete nastavit **AutomationProperties.AutomationId** nebo **AutomationProperties.Name** implicitně nebo explicitně, jak ukazují příklady, které následují. Některé z těchto hodnot nastavení poskytuje jedinečnou vlastnost automatizace, který slouží k identifikaci ovládacího prvku, když vytvoříte programové záznamu testu nebo akce uživatelského rozhraní ovládacího prvku.
+Chcete-li zadat jedinečnou vlastnost automatizace pro ovládací prvek, který je definován v souboru XAML, můžete nastavit **Vlastnosti automatizace. AutomationId** nebo **AutomationProperties.Name** implicitně nebo explicitně, jak je znázorněno v následujících příkladech. Nastavení jedné z těchto hodnot poskytuje ovládacímu prvku jedinečnou vlastnost automatizace, která se dá použít k identifikaci ovládacího prvku při vytváření programového testu uživatelského rozhraní nebo záznamu akce.
 
-### <a name="set-the-property-implicitly"></a>Nastavte vlastnost implicitně
+### <a name="set-the-property-implicitly"></a>Nastavit vlastnost implicitně
 
-Nastavte **AutomationProperties.AutomationId** k **ButtonX** pomocí **název** vlastnost v XAML pro ovládací prvek.
+Nastavte **Vlastnosti automatizace. AutomationId** na **ButtonX** pomocí vlastnosti **Name** v XAML ovládacího prvku.
 
 ```xaml
 <Button Name="ButtonX" Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />
 ```
 
-Nastavte **AutomationProperties.Name** k **ButtonY** pomocí **obsahu** vlastnost v XAML pro ovládací prvek.
+Nastavte **AutomationProperties.Name** na **tlačítko** pomocí vlastnosti **Content** v XAML ovládacího prvku.
 
 ```xaml
 <Button Content="ButtonY" Height="31" HorizontalAlignment="Left" Margin="23,76,0,0" VerticalAlignment="Top" Width="140" Click="ButtonY_Click" />
 ```
 
-### <a name="set-the-property-explicitly"></a>Explicitně nastavit vlastnost
+### <a name="set-the-property-explicitly"></a>Nastavit vlastnost explicitně
 
-Nastavte **AutomationProperties.AutomationId** k **ButtonX** explicitně v XAML pro ovládací prvek.
+Nastavte **Vlastnosti automatizace. AutomationId** na **ButtonX** explicitně v jazyce XAML pro ovládací prvek.
 
 ```xaml
 <Button AutomationProperties.AutomationId="ButtonX" Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />
 ```
 
-Nastavte **AutomationProperties.Name** k **ButtonY** explicitně v XAML pro ovládací prvek.
+Nastavte **AutomationProperties.Name** na **tlačítko** explicitně v jazyce XAML ovládacího prvku.
 
 ```xaml
 <Button AutomationProperties.Name="ButtonY" Height="31" HorizontalAlignment="Left" Margin="23,76,0,0" VerticalAlignment="Top" Width="140" Click="ButtonY_Click" />
 ```
 
-## <a name="assign-unique-names"></a>Přiřazení jedinečných názvů
+## <a name="assign-unique-names"></a>Přiřadit jedinečné názvy
 
-V programu Blend pro Visual Studio, můžete vybrat možnosti pro přiřazení jedinečných názvů interaktivní prvky jako tlačítka, seznamy, pole se seznamem a textová pole, které poskytuje jedinečné hodnoty pro ovládací prvky **AutomationProperties.Name**.
+V Blend pro Visual Studio můžete vybrat možnost pro přiřazení jedinečných názvů k interaktivním prvkům, jako jsou tlačítka, seznamy, pole se seznamem a textová pole, která poskytují ovládací prvky jedinečné hodnoty pro **AutomationProperties.Name**.
 
-Chcete-li přiřadit jedinečné názvy pro existující ovládací prvky, vyberte **nástroje** > **pojmenovat interaktivní prvky**.
+Chcete-li přiřadit jedinečné názvy existujícím ovládacím prvkům, vyberte **nástroje**  > **název interaktivní prvky**.
 
-![Pojmenovat interaktivní prvky v programu Blend for Visual Studio](../test/media/cuit_windowsstoreproperty_blend_1.png)
+![Pojmenování interaktivních prvků v Blend pro Visual Studio](../test/media/cuit_windowsstoreproperty_blend_1.png)
 
-Automaticky poskytnout jedinečné názvy pro nové ovládací prvky, které přidáte, vyberte **nástroje** > **možnosti** otevřít **možnosti** dialogového okna. Vyberte **návrháře XAML** a pak vyberte **automaticky pojmenovat interaktivní prvky při vytváření**. Vyberte **OK** zavřete dialogové okno.
+Chcete-li automaticky zadat jedinečné názvy pro nové ovládací prvky, které přidáte, vyberte **nástroje**  > **Možnosti** pro otevření dialogového okna **Možnosti** . Vyberte **Návrhář XAML** a pak **při vytváření automaticky pojmenovat interaktivní prvky**. Kliknutím na **tlačítko OK** zavřete dialogové okno.
 
 ## <a name="use-a-data-template"></a>Použití šablony dat
 
-Můžete definovat jednoduchý šablony pomocí **ItemTemplate** k vázání hodnot v seznamu proměnných:
+Můžete definovat jednoduchou šablonu pomocí šablony **ItemTemplate** k navázání hodnot v poli se seznamem na proměnné:
 
 ```xaml
 <ListBox Name="listBox1" ItemsSource="{Binding Source={StaticResource employees}}">
@@ -79,7 +79,7 @@ Můžete definovat jednoduchý šablony pomocí **ItemTemplate** k vázání hod
 </ListBox>
 ```
 
-Můžete také použít šablony s **ItemContainerStyle** k vázání hodnot do proměnných:
+K navázání hodnot na proměnné můžete použít také šablonu s **ItemContainerStyle** :
 
 ```xaml
 <ListBox Name="listBox1" ItemsSource="{Binding Source={StaticResource employees}}">
@@ -99,10 +99,10 @@ Můžete také použít šablony s **ItemContainerStyle** k vázání hodnot do 
 </ListBox>
 ```
 
-U obou těchto příkladech, je nutné pak přepsat **ToString()** metoda **vlastnost ItemSource**, jak je znázorněno v následujícím příkladu kódu pomocí. Tento kód, zajišťuje, že **AutomationProperties.Name** hodnota je nastavena a je jedinečný, protože nelze nastavit jedinečnou vlastnost automatizace pro každou položku seznamu vázaných na data pomocí vazby. Jedinečná hodnota pro nastavení **automatizace Properties.Name** v tomto případě je dostačující.
+V obou těchto příkladech je nutné přepsat metodu **ToString ()** **vlastnost ItemSource**, jak je znázorněno v následujícím příkladu kódu. Tento kód zajistí, že hodnota **AutomationProperties.Name** je nastavena a je jedinečná, protože nemůžete nastavit jedinečnou vlastnost Automation pro každou položku seznamu vázaného na data pomocí vazby. V tomto případě je v tomto případě nastavovaná jedinečná hodnota pro **Properties.Name Automation** .
 
 > [!NOTE]
-> Tento přístup vnitřní obsah položky seznamu, můžete také nastavit na řetězec ve třídě zaměstnance pomocí vazby. Jak je znázorněno v příkladu, ovládací prvek tlačítko každou položku seznamu je přiřazen jedinečný automatizace id, které je ID zaměstnance.
+> Pomocí tohoto přístupu může být vnitřní obsah položky seznamu také nastaven na řetězec ve třídě Employee prostřednictvím vazby. Jak je znázorněno v příkladu, je ovládacímu prvku tlačítko v každé položce seznamu přiřazeno jedinečné ID automatizace, což je ID zaměstnance.
 
 ```csharp
 Employee[] employees = new Employee[]
@@ -121,9 +121,9 @@ public override string ToString()
 }
 ```
 
-## <a name="use-a-control-template"></a>Použít šablonu ovládacího prvku
+## <a name="use-a-control-template"></a>Použití šablony ovládacího prvku
 
-Šablony ovládacího prvku můžete použít tak, aby každý výskyt určitého typu získá jedinečnou vlastnost automatizace, když je definována v kódu. Vytvořit šablonu tak, aby **AutomationProperty** váže k jedinečné ID v instanci ovládacího prvku. Následující XAML ukazuje jeden ze způsobů vytvoření touto vazbou pomocí šablony ovládacího prvku:
+Můžete použít šablonu ovládacího prvku, aby každá instance konkrétního typu získala jedinečnou vlastnost Automation, když je definována v kódu. Vytvořte šablonu, aby se **AutomationProperty** váže k jedinečnému ID v instanci ovládacího prvku. Následující kód XAML ukazuje jeden z přístupů k vytvoření této vazby pomocí šablony ovládacího prvku:
 
 ```xaml
 <Style x:Key="MyButton" TargetType="Button">
@@ -140,7 +140,7 @@ public override string ToString()
 </Style>
 ```
 
-Při definování dvě instance pomocí této šablony ovládacího prvku tlačítko ID služby automation je nastaven na jedinečný řetězec obsahu pro ovládací prvky v šabloně, jak je znázorněno v následující XAML:
+Pokud definujete dvě instance tlačítka pomocí této šablony ovládacích prvků, ID automatizace je nastaveno na jedinečný řetězec obsahu pro ovládací prvky v šabloně, jak je znázorněno v následujícím kódu XAML:
 
 ```xaml
 <Button Content="Button1" Style="{StaticResource MyButton}" Width="140"/>
@@ -149,7 +149,7 @@ Při definování dvě instance pomocí této šablony ovládacího prvku tlač�
 
 ### <a name="dynamic-controls"></a>Dynamické ovládací prvky
 
-Pokud máte ovládací prvky, které se vytvářejí dynamicky z vašeho kódu a nebyl vytvořen staticky nebo prostřednictvím šablon v souborech XAML, je nutné nastavit **obsahu** nebo **název** vlastnosti ovládacího prvku. Tato akce zajistí, že každý dynamický ovládací prvek má jedinečnou vlastnost automatizace. Například pokud máte zaškrtávací políčko, musí se zobrazí, když vyberete položku seznamu, můžete nastavit tyto vlastnosti, jak je znázorněno zde:
+Pokud máte ovládací prvky, které jsou vytvářeny dynamicky z kódu a nejsou vytvořeny staticky nebo prostřednictvím šablon v souborech XAML, je nutné nastavit vlastnosti **obsahu** nebo **názvu** ovládacího prvku. Tato akce zajistí, že má každý dynamický ovládací prvek jedinečnou vlastnost Automation. Například pokud máte zaškrtávací políčko, které se musí zobrazit při výběru položky seznamu, můžete nastavit tyto vlastnosti, jak je znázorněno zde:
 
 ```csharp
 private void CreateCheckBox(string txt, StackPanel panel)

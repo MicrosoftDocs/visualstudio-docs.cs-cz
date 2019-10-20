@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Podpora včasného testování funkcí generování před využitím | Dokumentace Microsoftu'
+title: 'Návod: Podpora testování s prvními testy pomocí funkce generovat z použití | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,185 +9,171 @@ helpviewer_keywords:
 - Test-First Development
 ms.assetid: 764c17a4-cd95-4c23-bf63-d92d9c5adfb2
 caps.latest.revision: 68
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b1dd1598d73cdbd77bc6fe0cb35e639c0fb484b0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f40ed5f3070f177d1c914495f78a223364d64ae4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443432"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662678"
 ---
-# <a name="walkthrough-test-first-support-with-the-generate-from-usage-feature"></a>Návod: Podpora včasného testování funkcí generování před využitím
+# <a name="walkthrough-test-first-support-with-the-generate-from-usage-feature"></a>Návod: Podpora včasného testování s funkcí Generování před využitím
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Toto téma popisuje způsob použití [Generovat z využití](../misc/generate-from-usage.md) funkci, která podporuje vývoj s včasným testu.  
-  
- *Nejprve otestovat vývoj* je přístup k softwaru návrhu, ve kterém nejprve zápis testů jednotek, které jsou založeny na specifikacích produktu a potom napsat zdrojový kód, který je potřeba provést testy úspěšné. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] podporuje včasného testování vývoj vygenerováním nové typy a členy ve zdrojovém kódu při prvním odkazu je v testovacích případů, předtím, než jsou definovány.  
-  
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] generuje nové typy a členové s minimálním přerušením do svého pracovního postupu. Můžete vytvořit zástupné procedury pro typy, metody, vlastnosti, pole nebo konstruktory bez opuštění vaší aktuální umístění v kódu. Když otevřete dialogové okno pro určení možností pro generování typů, zaměřuje vrátí okamžitě v aktuálně otevřeném souboru při zavření dialogového okna.  
-  
- Generovat z využití funkce jde použít s rozhraní pro testování, které se integrují s [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. V tomto tématu je ukázáno Microsoft Unit Testing Framework.  
-  
- [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
-  
-### <a name="to-create-a-windows-class-library-project-and-a-test-project"></a>Chcete-li vytvořit projekt knihovny tříd Windows a projekt testů  
-  
-1. V [!INCLUDE[csprcs](../includes/csprcs-md.md)] nebo [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], vytvořte nový projekt knihovny tříd Windows. Pojmenujte ji `GFUDemo_VB` nebo `GFUDemo_CS`podle toho, jaký jazyk používáte.  
-  
-2. V **Průzkumníka řešení**, klikněte pravým tlačítkem na ikonu řešení v horní části, přejděte na **přidat**a potom klikněte na tlačítko **nový projekt**. V **nový projekt** v dialogu **typy projektů** podokně nalevo, klikněte na tlačítko **Test**.  
-  
-3. V **šablony** podokně klikněte na tlačítko **projekt testu jednotek** a přijměte výchozí název UnitTestProject1. Následující obrázek znázorňuje dialogových oken, když se objeví v [!INCLUDE[csprcs](../includes/csprcs-md.md)]. V [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], vypadá podobně jako dialogové okno.  
-  
-     ![Dialogové okno Nový projekt testů](../ide/media/newproject-test.png "NewProject_Test")  
-Dialogové okno Nový projekt  
-  
-4. Klikněte na tlačítko **OK** zavřete **nový projekt** dialogové okno.
+Toto téma ukazuje, jak použít funkci [Generovat z použití](../misc/generate-from-usage.md) , která podporuje vývoj na prvním testu.
 
-5. Ve vašem projektu třídy v **Průzkumníka řešení**, klikněte pravým tlačítkem na **odkazy** položku a klikněte na tlačítko **přidat odkaz**.
+ *Vývoj pro první test* je přístup k návrhu softwaru, ve kterém jste nejprve zapisovali testy jednotek na základě specifikací produktu, a pak napíšete zdrojový kód, který je požadován k úspěšnému provedení testů. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] podporuje vývoj na prvním testu tím, že generuje nové typy a členy ve zdrojovém kódu při jejich prvním odkazování v testovacích případech, než jsou definované.
 
-6. V **správce odkazů** dialogu **projekty** a pak vyberte projektu jednotkového testu.
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] generuje nové typy a členy s minimálním přerušením pracovního postupu. Můžete vytvořit zástupné procedury pro typy, metody, vlastnosti, pole nebo konstruktory, aniž byste opustili aktuální umístění v kódu. Když otevřete dialogové okno pro zadání možností pro generování typů, při zavření dialogového okna se fokus vrátí hned na aktuální otevřený soubor.
 
-7. Klikněte na tlačítko **OK** zavřete **správce odkazů** dialogové okno.
+ Funkci generovat z použití lze použít s testovacími architekturami, které jsou integrovány s [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. V tomto tématu je znázorněno rozhraní testování částí společnosti Microsoft.
 
-8. V **Class1** okamžitě po poslední existující soubor **pomocí** příkazy, přidejte **pomocí** příkaz pro testovací projekt:
+ [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
-    * V jazyce Visual Basic přidejte `Using UnitTestProject1`
-    
-    * In C#, add `using UnitTestProject1;`
-    
-9. Uložení vašeho řešení. Nyní jste připraveni začít psaní testů  
-  
-### <a name="to-generate-a-new-class-from-a-unit-test"></a>Ke generování novou třídu testu jednotek  
-  
-1. Testovací projekt obsahuje soubor s názvem UnitTest1. Dvakrát klikněte na tento soubor v **Průzkumníka řešení** ho otevřete v editoru kódu. Vygenerované třídy testu a testovací metody.  
-  
-2. Vyhledejte prohlášení pro třídu `UnitTest1` a přejmenujte ho na `AutomobileTest`. V jazyce C# Pokud `UnitTest1()` konstruktor je k dispozici, přejmenujte ho na `AutomobileTest()`.  
-  
+### <a name="to-create-a-windows-class-library-project-and-a-test-project"></a>Vytvoření projektu knihovny tříd Windows a testovacího projektu
+
+1. V [!INCLUDE[csprcs](../includes/csprcs-md.md)] nebo [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] vytvořte nový projekt knihovny tříd Windows. Pojmenujte ho `GFUDemo_VB` nebo `GFUDemo_CS`, podle toho, který jazyk používáte.
+
+2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na ikonu řešení v horní části, přejděte na **Přidat**a pak klikněte na **Nový projekt**. V dialogovém okně **Nový projekt** klikněte v podokně **typy projektů** na levé straně na **test**.
+
+3. V podokně **šablony** klikněte na možnost **projekt testování částí** a přijměte výchozí název UnitTestProject1. Následující ilustrace zobrazuje dialogové okno, když se zobrazí v [!INCLUDE[csprcs](../includes/csprcs-md.md)]. V [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] bude dialogové okno vypadat podobně.
+
+     ![Dialogové okno Nový projekt testů](../ide/media/newproject-test.png "NewProject_Test") Nový projekt – dialogové okno
+
+4. Kliknutím na tlačítko **OK** zavřete dialogové okno **Nový projekt** .
+
+5. V projektu třídy klikněte v **Průzkumník řešení**pravým tlačítkem myši na položku **odkazy** a klikněte na **Přidat odkaz**.
+
+6. V dialogovém okně **Správce odkazů** vyberte **projekty** a potom vyberte projekt testování částí.
+
+7. Kliknutím na tlačítko **OK** zavřete dialogové okno **Správce odkazů** .
+
+8. V souboru **Class1** hned za poslední z existujících příkazů **using** přidejte příkaz **using** pro testovací projekt:
+
+    * V Visual Basic přidejte `Using UnitTestProject1`
+
+    * V C#přidejte `using UnitTestProject1;`
+
+9. Uložte své řešení. Teď jste připraveni začít psát testy.
+
+### <a name="to-generate-a-new-class-from-a-unit-test"></a>Vygenerování nové třídy z testu jednotek
+
+1. Testovací projekt obsahuje soubor s názvem UnitTest1. Dvojím kliknutím na tento soubor v **Průzkumník řešení** otevřete v editoru kódu. Byla vygenerována testovací třída a testovací metoda.
+
+2. Vyhledejte deklaraci pro třídu `UnitTest1` a přejmenujte ji na `AutomobileTest`. V C#případě, že je přítomen konstruktor `UnitTest1()`, přejmenujte jej na `AutomobileTest()`.
+
     > [!NOTE]
-    > Technologie IntelliSense teď poskytuje dvě možnosti pro doplňování příkazů IntelliSense: *doplňovacím režimem* a *režim návrhu*. Použijte režim návrhu pro situace, ve kterých se používají třídy a členy, než jsou definovány. Při otevření okno technologie IntelliSense můžete stisknutím CTRL + ALT + MEZERNÍK, chcete-li přepnout mezi doplňovacím režimem a režimem návrhu. Zobrazit [pomocí technologie IntelliSense](../ide/using-intellisense.md) Další informace. Režim návrhu vám pomůže při psaní `Automobile` v dalším kroku.  
-  
-3. Vyhledejte `TestMethod1()` metoda a přejmenujte ho na `DefaultAutomobileIsInitializedCorrectly()`. V této metodě vytvoření nové instance třídy s názvem `Automobile`, jak je znázorněno na následujících obrázcích. Zobrazí se podtržení vlnovkou, což znamená chybu v době kompilace a inteligentní značky se zobrazí v části název typu. Přesné umístění inteligentní značky se liší v závislosti na tom, zda používáte [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] nebo [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
-  
-     ![Inteligentní značky podtržení v jazyce Visual Basic](../ide/media/genclass-underlinevb.png "GenClass_UnderlineVB")  
-Visual Basic  
-  
-     ![Inteligentní značky podtržení v jazyce C&#35;](../ide/media/genclass-underline.png "GenClass_Underline")  
-Visual C#  
-  
-4. Umístěte ukazatel myši nad inteligentních značek zobrazíte chybovou zprávu s oznámením, že žádný typ s názvem `Automobile` dosud nebylo definováno. Kliknutím na inteligentní značku nebo stiskněte klávesy CTRL +. (CTRL + období) otevřete místní nabídku Generovat z využití, jak je znázorněno na následujících obrázcích.  
-  
-     ![Inteligentní značky kontextové nabídky v jazyce Visual Basic](../ide/media/genclass-smartvb.png "GenClass_SmartVB")  
-Visual Basic  
-  
-     ![Inteligentní značky kontextové nabídky v jazyce C&#35;](../ide/media/genclass-smartcs.png "GenClass_SmartCS")  
-Visual C#  
-  
-5. Nyní máte dvě možnosti. Můžete kliknout na **generovat "Třídy Automobile"** vytvořte nový soubor v projektu testu a jeho naplnění prázdnou třídu s názvem `Automobile`. Toto je rychlý způsob, jak vytvořit novou třídu do nového souboru, který má výchozí modifikátory přístupu v aktuálním projektu. Můžete také kliknout na **generovat nový typ** otevřít **generovat nový typ** dialogové okno. To poskytuje možnosti, které zahrnují vložení třídy v existující soubor a přidání souboru do jiného projektu.  
-  
-     Klikněte na tlačítko **generovat nový typ** otevřít **generovat nový typ** dialogové okno, která je znázorněna na následujícím obrázku. V **projektu** klikněte na možnost **GFUDemo_VB** nebo **GFUDemo_CS** dáte pokyn, aby [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] přidat soubor do projektu zdrojového kódu namísto testovacího projektu.  
-  
-     ![Generovat dialogové okno Nový typ](../ide/media/genotherdialog.png "GenOtherDialog")  
-Generovat dialogové okno Nový typ  
-  
-6. Klikněte na tlačítko **OK** zavřete dialogové okno a vytvořte nový soubor.  
-  
-7. V **Průzkumníka řešení**, podívejte se do části GFUDemo_VB nebo GFUDemo_CS uzel projektu pro ověření, že nové Automobile.vb nebo Automobile.cs soubor existuje. V editoru kódu, zaměřuje je stále v `AutomobileTest.DefaultAutomobileIsInitializedCorrectly`. Můžete pokračovat v psaní testu se minimálně přerušení.  
-  
-### <a name="to-generate-a-property-stub"></a>Pro vygenerování provizorního kódu vlastnosti  
-  
-1. Předpokládejme, že specifikace uvádí, že `Automobile` třídy mají dvě veřejné vlastnosti s názvem `Model` a `TopSpeed`. Tyto vlastnosti je nutné inicializovat s výchozími hodnotami `"Not specified"` a `-1` pomocí výchozího konstruktoru. Následující test jednotky se ověří, že výchozí konstruktor nastaví vlastnosti pro jejich správnou výchozí hodnoty.  
-  
-     Přidejte následující řádek kódu, který `DefaultAutomobileIsInitializedCorrectly`.  
-  
+    > Technologie IntelliSense nyní nabízí dvě alternativy dokončování příkazů technologie IntelliSense: *režim dokončování* a *režim návrhu*. Režim návrhu použijte pro situace, ve kterých se třídy a členy používají předtím, než budou definovány. Po otevření okna technologie IntelliSense můžete stisknutím kombinace kláves CTRL + ALT + MEZERNÍK přepínat mezi režimem dokončení a režimem návrhu. Další informace najdete v tématu [použití technologie IntelliSense](../ide/using-intellisense.md) . Režim návrhu vám pomůže při psaní `Automobile` v dalším kroku.
+
+3. Vyhledejte metodu `TestMethod1()` a přejmenujte ji na `DefaultAutomobileIsInitializedCorrectly()`. V rámci této metody vytvořte novou instanci třídy s názvem `Automobile`, jak je znázorněno na následujícím obrázku. Zobrazí se vlnové podtržení, které indikuje chybu při kompilaci, a v rámci názvu typu se zobrazí inteligentní značka. Přesné umístění inteligentní značky se liší v závislosti na tom, zda používáte [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] nebo [!INCLUDE[csprcs](../includes/csprcs-md.md)].
+
+     ![Podtržení inteligentních značek v Visual Basic](../ide/media/genclass-underlinevb.png "GenClass_UnderlineVB") Visual Basic
+
+     ![Podtržení inteligentních značek&#35; v jazyce C](../ide/media/genclass-underline.png "GenClass_Underline") VisualC#
+
+4. Umístěte ukazatel myši na inteligentní značku, aby se zobrazila chybová zpráva oznamující, že ještě není definovaný žádný typ s názvem `Automobile`. Klikněte na inteligentní značku nebo stiskněte klávesy CTRL +. (CTRL + tečka) otevřete místní nabídku generovat z použití, jak je znázorněno na následujících obrázcích.
+
+     ![Místní nabídka inteligentních značek v Visual Basic](../ide/media/genclass-smartvb.png "GenClass_SmartVB") Visual Basic
+
+     ![Místní nabídka inteligentních značek v&#35; jazyce C](../ide/media/genclass-smartcs.png "GenClass_SmartCS") VisualC#
+
+5. Nyní máte dvě možnosti. Můžete kliknout na **vygenerovat třídu auto** a vytvořit nový soubor v testovacím projektu a naplnit ho prázdnou třídou s názvem `Automobile`. Toto je rychlý způsob, jak vytvořit novou třídu v novém souboru s modifikátory výchozích možností přístupu v aktuálním projektu. Můžete také kliknout na možnost **generovat nový typ** a otevřít tak dialogové okno **generovat nový typ** . To poskytuje možnosti, které zahrnují vložení třídy do existujícího souboru a přidání souboru do jiného projektu.
+
+     Kliknutím na možnost **generovat nový typ** otevřete dialogové okno **generovat nový typ** , které je znázorněno na následujícím obrázku. V seznamu **projekt** klikněte na **GFUDemo_VB** nebo **GFUDemo_CS** a poskytněte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], aby se soubor přidal do projektu zdrojového kódu namísto testovacího projektu.
+
+     ![Dialogové okno generovat nový typ](../ide/media/genotherdialog.png "GenOtherDialog") Dialogové okno generovat nový typ
+
+6. Kliknutím na tlačítko **OK** zavřete dialogové okno a vytvořte nový soubor.
+
+7. V **Průzkumník řešení**vyhledejte v uzlu projektu GFUDemo_VB nebo GFUDemo_CS, zda je k dispozici nový soubor automobil. VB nebo Automobile.cs. V editoru kódu je fokus stále v `AutomobileTest.DefaultAutomobileIsInitializedCorrectly`. Můžete pokračovat v psaní testu s minimálním přerušením.
+
+### <a name="to-generate-a-property-stub"></a>Vygenerování zástupné procedury vlastnosti
+
+1. Předpokládat, že specifikace produktu uvádí, že třída `Automobile` má dvě veřejné vlastnosti s názvem `Model` a `TopSpeed`. Tyto vlastnosti musí být inicializovány s výchozími hodnotami `"Not specified"` a `-1` výchozím konstruktorem. Následující test jednotek ověří, zda výchozí konstruktor nastaví vlastnosti na jejich správné výchozí hodnoty.
+
+     Přidejte následující řádek kódu pro `DefaultAutomobileIsInitializedCorrectly`.
+
      [!code-csharp[VbTDDWalkthrough#1](../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/unittest1.cs#1)]
-     [!code-vb[VbTDDWalkthrough#1](../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/unittest1.vb#1)]  
-  
-     Vzhledem k tomu, že kód odkazuje na dva nedefinovanými vlastnostmi `Automobile`, zobrazí se inteligentní značky. Kliknutím na inteligentní značku pro `Model` a potom klikněte na tlačítko **generování provizorního kódu vlastnosti**. Generování provizorního kódu vlastnosti pro `TopSpeed` vlastnost také.  
-  
-     V `Automobile` tříd, typy nové vlastnosti jsou správně odvodit z kontextu.  
-  
-     Následující obrázek znázorňuje místní nabídce inteligentních značek.  
-  
-     ![Generovat vlastnost místní nabídky v jazyce Visual Basic](../ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
-Visual Basic  
-  
-     ![Generate Property context menu in C&#35;](../ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
-Visual C#  
-  
-### <a name="to-locate-the-source-code"></a>Vyhledejte zdrojový kód  
-  
-1. Použití **přejít na** funkce Přejít k souboru zdrojového kódu Automobile.cs nebo Automobile.vb, aby mohli ověřit, že byly vytvořeny nové vlastnosti.  
-  
-     **Přejít na** funkce vám umožní rychle zadat textový řetězec, jako je název typu nebo část názvu a přejděte do požadovaného umístění po kliknutí na prvek v seznamu výsledků.  
-  
-     Otevřít **přejít na** dialogové okno kliknutím v editoru kódu a stisknutím klávesy CTRL +, (CTRL + čárka). V textovém poli zadejte `automobile`. Klikněte na tlačítko **Automobile** třídy v seznamu a potom klikněte na tlačítko **OK**.  
-  
-     **Přejít na** je okno zobrazeno na následujícím obrázku.  
-  
-     ![Dialogové okno Přejít na](../ide/media/navigate-2.png "Navigate_2")  
-Navigovat na okno  
-  
-### <a name="to-generate-a-stub-for-a-new-constructor"></a>Generování zástupných procedur pro nový konstruktor  
-  
-1. V této testovací metody, bude generovat konstruktor zástupnou proceduru, která bude inicializovat `Model` a `TopSpeed` vlastnosti hodnoty, které zadáte. Později přidáte další kód pro dokončení testu. Přidat následující dodatečné testovací metodu do vaší `AutomobileTest` třídy.  
-  
+     [!code-vb[VbTDDWalkthrough#1](../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/unittest1.vb#1)]
+
+     Vzhledem k tomu, že kód odkazuje na dvě nedefinované vlastnosti v `Automobile`, zobrazí se inteligentní značka. Klikněte na inteligentní značku pro `Model` a pak klikněte na **vygenerovat zástupnou proceduru vlastnosti**. Vygenerujte také zástupnou proceduru vlastnosti pro vlastnost `TopSpeed`.
+
+     Ve třídě `Automobile` jsou typy nových vlastností správně odvozeny z kontextu.
+
+     Následující ilustrace znázorňuje místní nabídku inteligentních značek.
+
+     ![Vytvořit místní nabídku vlastnosti v Visual Basic](../ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB") Visual Basic
+
+     ![Vytvořit kontextovou nabídku vlastnosti v&#35; jazyce C](../ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS") VisualC#
+
+### <a name="to-locate-the-source-code"></a>Vyhledání zdrojového kódu
+
+1. Pomocí funkce **Přejít k** přejděte k souboru se zdrojovým kódem Automobile.cs nebo automobil. vb, abyste mohli ověřit, že byly vygenerovány nové vlastnosti.
+
+     Funkce **Přejít k** vám umožňuje rychle zadat textový řetězec, jako je například název typu nebo část názvu, a přejít na požadované místo kliknutím na prvek v seznamu výsledků.
+
+     Kliknutím na tlačítko v editoru kódu a stisknutím kombinace kláves CTRL + (CTRL + čárka) otevřete dialogové okno **Přejít k** . Do textového pole zadejte `automobile`. V seznamu klikněte na třídu **automobil** a pak klikněte na **OK**.
+
+     Na následujícím obrázku je vidět okno **Přejít k** .
+
+     ![Přejít k dialogovému oknu](../ide/media/navigate-2.png "Navigate_2") Přejít na okno
+
+### <a name="to-generate-a-stub-for-a-new-constructor"></a>Vygenerování zástupné procedury pro nový konstruktor
+
+1. V této testovací metodě vygenerujete zástupnou proceduru konstruktoru, která inicializuje `Model` a `TopSpeed` vlastností tak, aby měly hodnoty, které zadáte. Později přidáte další kód pro dokončení testu. Přidejte následující další testovací metodu do třídy `AutomobileTest`.
+
      [!code-csharp[VbTDDWalkthrough#2](../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/intermediate.cs#2)]
-     [!code-vb[VbTDDWalkthrough#2](../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/intermediate.vb#2)]  
-  
-2. Kliknutím na inteligentní značku v rámci konstruktoru nové třídy a pak klikněte na tlačítko **generovat konstruktor se zakázaným inzerováním**. V `Automobile` třídy souboru, Všimněte si, že nový konstruktor má prověřit, názvy místních proměnných, které se používají ve volání konstruktoru, nalezené vlastnosti, které mají stejné názvy v `Automobile` třídy a zadaný kód v těle konstruktoru na ukládání hodnot argumentů v `Model` a `TopSpeed` vlastnosti. (V [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], `_model` a `_topSpeed` polí v konstruktoru nové jsou implicitně definovaný pomocné pole `Model` a `TopSpeed` vlastnosti.)  
-  
-3. Jakmile vygenerujete nový konstruktor, podtržení vlnovkou se zobrazí pod volání výchozího konstruktoru v `DefaultAutomobileIsInitializedCorrectly`. Chybová zpráva uvádí, že `Automobile` třída nemá žádný konstruktor, který nepřijímá žádné argumenty. Pokud chcete generovat explicitní výchozí konstruktor, který nemá žádné parametry, klikněte na inteligentní značku a potom klikněte na **generovat konstruktor se zakázaným inzerováním**.  
-  
-### <a name="to-generate-a-stub-for-a-method"></a>Generování zástupných procedur pro metodu  
-  
-1. Předpokládejme, že specifikace uvádí, že nový `Automobile` můžou být přepnuté do stavu spuštění, pokud jeho `Model` a `TopSpeed` vlastnosti jsou nastaveny na jinou hodnotu než výchozí hodnoty. Přidejte následující řádky do `AutomobileWithModelNameCanStart` metody.  
-  
+     [!code-vb[VbTDDWalkthrough#2](../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/intermediate.vb#2)]
+
+2. V konstruktoru New Class klikněte na inteligentní značku a pak klikněte na **vygenerovat zástupnou proceduru vygenerovat konstruktor**. V souboru `Automobile` třídy si všimněte, že nový konstruktor zkontroloval názvy místních proměnných, které se používají ve volání konstruktoru, nalezené vlastnosti, které mají stejné názvy ve třídě `Automobile` a dodávají kód v těle konstruktoru pro uložení hodnoty argumentů ve vlastnostech `Model` a `TopSpeed`. (V [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] pole `_model` a `_topSpeed` v novém konstruktoru jsou implicitně definovaná zálohovací pole pro `Model` a `TopSpeed` vlastnosti.)
+
+3. Po vygenerování nového konstruktoru se pod voláním výchozího konstruktoru v `DefaultAutomobileIsInitializedCorrectly` zobrazí vlnové podtržení. Chybová zpráva uvádí, že třída `Automobile` nemá žádný konstruktor, který přebírá nula argumentů. Chcete-li vygenerovat explicitní výchozí konstruktor, který nemá parametry, klikněte na inteligentní značku a pak klikněte na **vygenerovat zástupnou proceduru pro vygenerování konstruktoru**.
+
+### <a name="to-generate-a-stub-for-a-method"></a>Vygenerování zástupné procedury pro metodu
+
+1. Předpokládá se, že specifikace uvádí, že nový `Automobile` může být přepnut do běžícího stavu, pokud jsou vlastnosti `Model` a `TopSpeed` nastavené na jinou hodnotu než výchozí hodnoty. Do metody `AutomobileWithModelNameCanStart` přidejte následující řádky.
+
      [!code-csharp[VbTDDWalkthrough#3](../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/unittest1.cs#3)]
-     [!code-vb[VbTDDWalkthrough#3](../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/unittest1.vb#3)]  
-  
-2. Klikněte na inteligentní značku a `myAuto.Start` metoda volání a pak klikněte na **generovat pahýl metody**.  
-  
-3. Klikněte na inteligentní značku a `IsRunning` vlastnosti a pak klikněte na tlačítko **generování provizorního kódu vlastnosti**. `Automobile` Třída nyní obsahuje následující kód.  
-  
+     [!code-vb[VbTDDWalkthrough#3](../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/unittest1.vb#3)]
+
+2. Klikněte na inteligentní značku pro volání metody `myAuto.Start` a pak klikněte na **vygenerovat zástupnou proceduru metody**.
+
+3. Klikněte na inteligentní značku vlastnosti `IsRunning` a pak klikněte na **vygenerovat zástupnou proceduru vlastnosti**. Třída `Automobile` nyní obsahuje následující kód.
+
      [!code-csharp[VbTDDWalkthrough#4](../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/intermediate.cs#4)]
-     [!code-vb[VbTDDWalkthrough#4](../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/intermediate.vb#4)]  
-  
-### <a name="to-run-the-tests"></a>Ke spuštění testů  
-  
-1. Na **Jednotkový Test** nabídky, přejděte k **spustit jednotkové testy**a potom klikněte na tlačítko **všechny testy**. Tento příkaz spustí všechny testy ve všech testovacích architektur, které jsou určeny pro aktuální řešení.  
-  
-     V tomto případě existují dva testy a oba jsou neúspěšné, podle očekávání. `DefaultAutomobileIsInitializedCorrectly` Test selže, protože `Assert.IsTrue` podmínka vrátí `False`. `AutomobileWithModelNameCanStart` Test selže, protože `Start` metodu `Automobile` třída vyvolá výjimku.  
-  
-     **Výsledky testů** je okno zobrazeno na následujícím obrázku.  
-  
-     ![Výsledky testu, který selhal](../ide/media/testsfailed.png "TestsFailed")  
-okno výsledků testu  
-  
-2. V **výsledky testu** okna, dvakrát klikněte na každý řádek výsledků testu přejděte do umístění jednotlivých selhání testu.  
-  
-### <a name="to-implement-the-source-code"></a>K implementaci zdrojového kódu  
-  
-1. Přidejte následující kód do výchozího konstruktoru tak, `Model`, `TopSpeed` a `IsRunning` vlastnosti jsou inicializovány na jejich správnou výchozí hodnoty `"Not specified"`, `-1`, a `True` (`true`).  
-  
+     [!code-vb[VbTDDWalkthrough#4](../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/intermediate.vb#4)]
+
+### <a name="to-run-the-tests"></a>Spuštění testů
+
+1. V nabídce **Test jednotky** ukažte na **Spustit testy jednotek**a potom klikněte na **všechny testy**. Tento příkaz spustí všechny testy ve všech testovacích rozhraních, která jsou zapsána pro aktuální řešení.
+
+     V tomto případě existují dvě testy a obě selžou, podle očekávání. Test `DefaultAutomobileIsInitializedCorrectly` se nezdařil, protože podmínka `Assert.IsTrue` vrací `False`. Test `AutomobileWithModelNameCanStart` se nezdařil, protože metoda `Start` ve třídě `Automobile` vyvolá výjimku.
+
+     Následující obrázek ukazuje **výsledky testů** okno.
+
+     ![Výsledky testů, které selhaly](../ide/media/testsfailed.png "TestsFailed") Výsledky testů okno
+
+2. V okně **výsledky testů** dvakrát klikněte na každý řádek výsledku testu, abyste přešli do umístění jednotlivých selhání testu.
+
+### <a name="to-implement-the-source-code"></a>Implementace zdrojového kódu
+
+1. Přidejte následující kód do výchozího konstruktoru tak, aby byly všechny vlastnosti `Model`, `TopSpeed` a `IsRunning` všechny inicializovány na jejich správné výchozí hodnoty `"Not specified"`, `-1` a `True` (`true`).
+
      [!code-csharp[VbTDDWalkthrough#5](../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/automobile.cs#5)]
-     [!code-vb[VbTDDWalkthrough#5](../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/automobile.vb#5)]  
-  
-2. Když `Start` metoda je volána, měli nastavit `IsRunning` příznak na hodnotu true pouze tehdy, pokud `Model` nebo `TopSpeed` vlastnosti jsou nastaveny na jinou hodnotu než výchozí hodnoty. Odeberte `NotImplementedException` z metody body a přidejte následující kód.  
-  
+     [!code-vb[VbTDDWalkthrough#5](../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/automobile.vb#5)]
+
+2. Když je volána metoda `Start`, měla by nastavit příznak `IsRunning` na hodnotu true, pouze pokud jsou vlastnosti `Model` nebo `TopSpeed` nastaveny na jinou hodnotu než jejich výchozí hodnota. Odeberte `NotImplementedException` z těla metody a přidejte následující kód.
+
      [!code-csharp[VbTDDWalkthrough#6](../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/automobile.cs#6)]
-     [!code-vb[VbTDDWalkthrough#6](../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/automobile.vb#6)]  
-  
-### <a name="to-run-the-tests-again"></a>Znovu spustit testy  
-  
-1. Na **testovací** nabídky, přejděte k **spustit**a potom klikněte na tlačítko **všechny testy v řešení**. Tentokrát testy jsou úspěšné. **Výsledky testů** je okno zobrazeno na následujícím obrázku.  
-  
-     ![Výsledky testu, který předává](../ide/media/testspassed.png "TestsPassed")  
-okno výsledků testu  
-  
-## <a name="see-also"></a>Viz také  
- [Generování před využitím](../misc/generate-from-usage.md)   
- [Psaní kódu](../ide/writing-code-in-the-code-and-text-editor.md)   
- [Používání atributu IntelliSense](../ide/using-intellisense.md)   
- [Testování částí kódu](../test/unit-test-your-code.md)
+     [!code-vb[VbTDDWalkthrough#6](../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/automobile.vb#6)]
+
+### <a name="to-run-the-tests-again"></a>Chcete-li spustit testy znovu
+
+1. V nabídce **test** přejděte na příkaz **Spustit**a potom klikněte na možnost **všechny testy v řešení**. Tentokrát testy proběhnou. Následující obrázek ukazuje **výsledky testů** okno.
+
+     ![Výsledky testů, které byly úspěšné](../ide/media/testspassed.png "TestsPassed") Výsledky testů okno
+
+## <a name="see-also"></a>Viz také
+ [Generuje se z použití](../misc/generate-from-usage.md) při [psaní kódu](../ide/writing-code-in-the-code-and-text-editor.md) [pomocí technologie IntelliSense](../ide/using-intellisense.md) [testování částí kódu](../test/unit-test-your-code.md)

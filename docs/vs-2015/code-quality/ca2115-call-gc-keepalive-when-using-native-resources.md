@@ -1,5 +1,5 @@
 ---
-title: 'CA2115: Volání uvolňování paměti. KeepAlive při použití nativních zdrojů | Dokumentace Microsoftu'
+title: 'CA2115: volání GC. Udržení naživu při použití nativních prostředků | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - CallGCKeepAliveWhenUsingNativeResources
 ms.assetid: f00a59a7-2c6a-4bbe-a1b3-7bf77d366f34
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: c035c05480279012fba1101c3a60b020d34b1890
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: e0aa10cc453919a2a79ee6d3d46db95c19d8756e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65687345"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658702"
 ---
-# <a name="ca2115-call-gckeepalive-when-using-native-resources"></a>CA2115: Volejte GC.KeepAlive při použití nativních prostředků
+# <a name="ca2115-call-gckeepalive-when-using-native-resources"></a>CA2115: Volejte GC.KeepAlive při použití nativních zdrojů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -30,33 +30,33 @@ ms.locfileid: "65687345"
 |TypeName|CallGCKeepAliveWhenUsingNativeResources|
 |CheckId|CA2115|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>Příčina
- Metoda deklarovaného v typu s finalizační metoda odkazuje <xref:System.IntPtr?displayProperty=fullName> nebo <xref:System.UIntPtr?displayProperty=fullName> pole, ale nevolá <xref:System.GC.KeepAlive%2A?displayProperty=fullName>.
+## <a name="cause"></a>příčina
+ Metoda deklarovaná v typu s finalizační metodou odkazuje na <xref:System.IntPtr?displayProperty=fullName> nebo <xref:System.UIntPtr?displayProperty=fullName> pole, ale nevolá <xref:System.GC.KeepAlive%2A?displayProperty=fullName>.
 
 ## <a name="rule-description"></a>Popis pravidla
- Uvolňování paměti dokončí objektu, pokud neexistují žádné další odkazy na ni ve spravovaném kódu. Nespravované odkazy na objekty nebrání uvolňování paměti. Toto pravidlo zjistí chyby, které mohou nastat, protože nespravovaný prostředek je finalizován v době, kdy je stále používán nespravovaným kódem.
+ Uvolňování paměti dokončí objekt, pokud na něj nejsou žádné další odkazy ve spravovaném kódu. Nespravované odkazy na objekty nebrání uvolňování paměti. Toto pravidlo zjistí chyby, které mohou nastat, protože nespravovaný prostředek je finalizován v době, kdy je stále používán nespravovaným kódem.
 
- Toto pravidlo předpokládá, že <xref:System.IntPtr> a <xref:System.UIntPtr> ukládání pole ukazatelů na nespravované prostředky. Protože účel finalizační metodu pro uvolnění nespravovaných prostředků, pravidlo předpokládá, že finalizační metoda uvolní nespravovaný prostředek, který ukazuje ukazatel pole. Toto pravidlo předpokládá také, že metoda odkazuje na pole ukazatel k předání tohoto nespravovaného prostředku do nespravovaného kódu.
+ Toto pravidlo předpokládá, že pole <xref:System.IntPtr> a <xref:System.UIntPtr> ukládají ukazatele na nespravované prostředky. Vzhledem k tomu, že účelem finalizační metody je uvolnit nespravované prostředky, pravidlo předpokládá, že finalizační metoda uvolní nespravovaný prostředek, na který odkazuje pole ukazatelů. Toto pravidlo také předpokládá, že metoda odkazuje na pole ukazatele na předání nespravovaného prostředku do nespravovaného kódu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, přidejte volání <xref:System.GC.KeepAlive%2A> metody, předejte aktuální instanci (`this` v C# a C++) jako argument. Umístěte volání za posledním řádkem kódu, kde musí být chráněné objekt z kolekce uvolnění paměti. Ihned po volání <xref:System.GC.KeepAlive%2A>, objekt je znovu považovat za připravené pro uvolnění paměti za předpokladu, že neexistují žádné spravované odkazy na ni.
+ Chcete-li opravit porušení tohoto pravidla, přidejte do metody volání <xref:System.GC.KeepAlive%2A> a předejte aktuální instanci (`this` v C# a C++) jako argument. Umístěte volání za poslední řádek kódu, kde musí být objekt chráněn z uvolňování paměti. Ihned po volání <xref:System.GC.KeepAlive%2A> je objekt znovu považován za připravený pro uvolňování paměti za předpokladu, že na něj nejsou žádné spravované odkazy.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Toto pravidlo do určité míry vyhodnotit, které můžou vést k počet falešně pozitivních výsledků. Můžete bezpečně potlačit upozornění tohoto pravidla, pokud:
+ Toto pravidlo vytváří některé předpoklady, které mohou vést k falešně pozitivním hodnotám. Upozornění můžete v tomto pravidle bezpečně potlačit, pokud:
 
-- Finalizační metoda neuvolní obsah <xref:System.IntPtr> nebo <xref:System.UIntPtr> pole odkazuje metodu.
+- Finalizační metoda neuvolní obsah pole <xref:System.IntPtr> nebo <xref:System.UIntPtr>, na které odkazuje metoda.
 
-- Metoda nepředává <xref:System.IntPtr> nebo <xref:System.UIntPtr> pole do nespravovaného kódu.
+- Metoda nepředá pole <xref:System.IntPtr> nebo <xref:System.UIntPtr> do nespravovaného kódu.
 
-  Pečlivě si prostudujte ostatní zprávy před jejich vyloučení. Toto pravidlo zjistí chyby, které je obtížné reprodukovat a ladění.
+  Pečlivě zkontrolujte další zprávy, než je vyloučíte. Toto pravidlo detekuje chyby, které je obtížné rekládat a ladit.
 
 ## <a name="example"></a>Příklad
- V následujícím příkladu `BadMethod` nezahrnuje volání `GC.KeepAlive` a proto porušuje pravidlo. `GoodMethod` obsahuje opraveným kódem.
+ V následujícím příkladu `BadMethod` neobsahuje volání `GC.KeepAlive`, a proto porušuje pravidlo. `GoodMethod` obsahuje opravený kód.
 
 > [!NOTE]
-> V tomto příkladu je pseudo kód, i když kód zkompiluje a spustí, upozornění není aktivováno, protože nespravovaný prostředek není vytvoření nebo uvolnění.
+> Tento příklad je pseudo kód, i když se kód zkompiluje a spustí, upozornění není aktivováno, protože nespravovaný prostředek není vytvořen nebo je uvolněn.
 
  [!code-csharp[FxCop.Security.IntptrAndFinalize#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.IntptrAndFinalize/cs/FxCop.Security.IntptrAndFinalize.cs#1)]
 

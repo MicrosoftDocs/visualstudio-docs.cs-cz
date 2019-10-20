@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Hledání témat v obsahu | Dokumentace Microsoftu'
+title: 'Postupy: hledání témat v obsahu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,47 +13,46 @@ helpviewer_keywords:
 - table of contents filtering [Help Viewer 2.0]
 ms.assetid: 8b98464d-2b05-4710-ad68-5647e78c6b7b
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8ab015fdfd459dbb13e81deed0fe0cc89f71cd1f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 4dccd82ea260c6d113ffaf077922c5e22946bbbd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63416692"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651890"
 ---
 # <a name="how-to-find-topics-in-the-table-of-contents"></a>Postupy: Hledání témat v obsahu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V **obsah** kartu, můžete použít obsah (TOC) k nalezení informací o. Obsah je rozšiřitelný seznam, který obsahuje všechna témata v nainstalovaných knihách. Usnadnění informace o tom, jak procházení obsahu naleznete v tématu [klávesové zkratky (Help Viewer)](../ide/shortcut-keys-help-viewer.md).  
-  
+Na kartě **obsah** můžete k vyhledání informací použít obsah (obsah). Obsah je rozšiřitelný seznam, který obsahuje všechna témata v nainstalovaných knihách. Informace o usnadnění procházení obsahu najdete v tématu [klávesové zkratky (Help Viewer)](../ide/shortcut-keys-help-viewer.md).
+
 > [!IMPORTANT]
-> Rozsah témat dostupných v obsahu závisí na filtru, který jste vybrali.  
-  
-## <a name="filter-the-toc"></a>Filtrování obsahu  
- Můžete filtrovat-li zúžit rozsah témat, která se zobrazí v obsahu **obsah** kartu. Zobrazí v seznamu jenom v případě, že obsahují kořen termínu, který zadáte. Například pokud zadáte "problém" jako filtr, pouze produkty, které obsahují text "problém" nebo "problém" zobrazí. Uzly, jejichž nadpisy neobsahují daný výraz, jsou sbaleny do jednoho uzlu se třemi tečkami (...).  
-  
-#### <a name="to-filter-the-toc"></a>Filtrování obsahu  
-  
-1. Zvolte **obsah** kartu.  
-  
-2. V **filtrovat obsahy** text zadejte termín.  
-  
+> Rozsah témat dostupných v obsahu závisí na zvoleném filtru.
+
+## <a name="filter-the-toc"></a>Filtrování obsahu
+ OBSAH můžete filtrovat, chcete-li zúžit rozsah témat, která se zobrazí na kartě **obsah** . názvy se v seznamu zobrazí pouze v případě, že obsahují kořen zadaného termínu. Pokud například zadáte "řešení potíží" jako filtr, zobrazí se pouze názvy obsahující "Poradce při potížích" nebo "řešení potíží". Uzly, jejichž názvy neobsahují termín, jsou sbaleny do jednoho uzlu se třemi tečkami (...).
+
+#### <a name="to-filter-the-toc"></a>Filtrování obsahu
+
+1. Vyberte kartu **obsah** .
+
+2. Do textového pole **obsah filtru** Zadejte termín.
+
 > [!NOTE]
-> Pokud filtru trvá dlouhou dobu spuštění, můžete zobrazit výsledky rychleji pomocí `title:` operátoru pro rozšířené hledání.  
-  
-## <a name="synchronize-a-topic-with-the-toc"></a>Synchronizace tématu s obsahem  
- Pokud jste otevřeli téma pomocí rejstříku nebo funkcí fulltextového vyhledávání, můžete určit, kde je v tomto tématu v obsahu pomocí synchronizace obsahu s oknem tématu.  
-  
-#### <a name="to-synchronize-the-toc-with-the-topic-window"></a>Synchronizace obsahu s oknem tématu  
-  
-1. Zobrazte téma.  
-  
-2. Klikněte na tlačítko **zobrazit téma v obsahu** tlačítko na panelu nástrojů nebo stisknutím kláves Ctrl + S.  
-  
-     **Obsah** kartě se otevře a zobrazí se umístění tématu v obsahu.  
-  
-## <a name="see-also"></a>Viz také  
- [Vyhledejte informace](../ide/locate-information.md)   
- [Microsoft Help Viewer 2.2](../ide/microsoft-help-viewer.md)
+> Pokud spuštění filtru trvá dlouhou dobu, můžete výsledky zobrazit rychleji pomocí operátoru rozšířeného hledání `title:`.
+
+## <a name="synchronize-a-topic-with-the-toc"></a>Synchronizace tématu s obsahem
+ Pokud jste otevřeli téma pomocí funkce index nebo fulltextového vyhledávání, můžete určit, kde se toto téma nachází v obsahu, pomocí synchronizace obsahu s oknem tématu.
+
+#### <a name="to-synchronize-the-toc-with-the-topic-window"></a>Synchronizace obsahu s oknem tématu
+
+1. Zobrazit téma.
+
+2. Klikněte na tlačítko **Zobrazit téma v obsahu** na panelu nástrojů nebo stiskněte klávesy CTRL + S.
+
+     Karta **obsah** se otevře a zobrazí umístění tématu v obsahu.
+
+## <a name="see-also"></a>Viz také
+ [Najít](../ide/locate-information.md) [Microsoft Help Viewer](../ide/microsoft-help-viewer.md) informací

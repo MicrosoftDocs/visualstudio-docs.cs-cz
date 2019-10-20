@@ -1,5 +1,5 @@
 ---
-title: Změnit možnosti spuštění
+title: Změna spouštěcího prostředí
 ms.date: 02/01/2017
 ms.topic: conceptual
 f1_keywords:
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Start Page [Visual Studio]
 - customizing Start Page [Visual Studio]
 - Visual Studio Start Page
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c8b31f033b9c04871e57836dd263071d87a24fda
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b0a415c8a61e360ed1bcc323214d4144b2875cc0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62824253"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652542"
 ---
-# <a name="customize-startup"></a>Upravit spuštění
+# <a name="customize-startup"></a>Přizpůsobení spuštění
 
-Spuštění prostředí pro Visual Studio můžete upravit několika různými způsoby, jako je například otevírání řešení nejnovější nebo jenom prázdný vývojové prostředí.
+Prostředí pro spouštění sady Visual Studio můžete přizpůsobit několika různými způsoby, jako je například otevření nejnovějšího řešení nebo pouze prázdného vývojového prostředí.
 
 ::: moniker range="vs-2017"
 
@@ -30,21 +30,21 @@ Můžete také zobrazit vlastní úvodní stránku, což je stránka XAML Window
 
 ::: moniker-end
 
-## <a name="to-change-the-startup-item"></a>Chcete-li změnit položku při spuštění
+## <a name="to-change-the-startup-item"></a>Změna položky po spuštění
 
-1. V panelu nabídky zvolte **nástroje** > **možnosti**.
+1. Na panelu nabídek vyberte možnost **nástroje**  > **Možnosti**.
 
-2. Rozbalte **prostředí**a klikněte na tlačítko **spuštění**.
+2. Rozbalte položku **prostředí**a pak zvolte možnost **po spuštění**.
 
 ::: moniker range="vs-2017"
 
-3. V **při spuštění** seznamu, vyberte položku, který se zobrazí po spuštění sady Visual Studio.
+3. V seznamu **při spuštění** vyberte položku, která se má zobrazit po spuštění sady Visual Studio.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. V **při spuštění, otevřete** klikněte na položku co byste chtěli po spuštění sady Visual Studio. Můžete si vybrat z **počáteční okno** (které vám umožní otevřít nového nebo existujícího projektu), **nejnovější řešení**, nebo **prázdné prostředí**.
+3. V rozevíracím seznamu **při spuštění** vyberte možnost co se má stát po spuštění sady Visual Studio. Můžete zvolit z **okna Start** (což umožňuje otevřít nový nebo existující projekt), nejnovější **řešení**nebo **prázdné prostředí**.
 
 ::: moniker-end
 
@@ -52,23 +52,23 @@ Můžete také zobrazit vlastní úvodní stránku, což je stránka XAML Window
 
 ## <a name="to-show-a-custom-start-page"></a>Zobrazení vlastní úvodní stránky
 
-Je možné [vytvořit vlastní úvodní stránky](../extensibility/creating-a-custom-start-page.md) pomocí sady Visual Studio SDK, nebo použijte takový, který už někdo jiný vytvořil. Například můžete najít na vlastní úvodní stránky [Visual Studio Marketplace](https://marketplace.visualstudio.com/search?target=VS&category=Tools&vsVersion=&subCategory=Start%20Pages&sortBy=Downloads).
+Pomocí sady Visual Studio SDK můžete [vytvořit vlastní úvodní stránku](../extensibility/creating-a-custom-start-page.md) , nebo ji použít jako jiný uživatel, který již byl vytvořen. Můžete například najít vlastní úvodní stránky na [Visual Studio Marketplace](https://marketplace.visualstudio.com/search?target=VS&category=Tools&vsVersion=&subCategory=Start%20Pages&sortBy=Downloads).
 
-Chcete-li nainstalovat vlastní úvodní stránku, otevřete *VSIX* souboru, nebo zkopírujte a vložte soubory úvodní stránky do *%USERPROFILE%\Documents\Visual Studio 2017\StartPages* složky v počítači.
+Chcete-li nainstalovat vlastní úvodní stránku, otevřete soubor *. vsix* nebo zkopírujte a vložte soubory počáteční stránky do složky *%UserProfile%\Documents\Visual Studio 2017 \ StartPages* na vašem počítači.
 
-### <a name="to-select-which-custom-start-page-to-display"></a>Chcete-li vybrat kterou vlastní úvodní stránku zobrazení
+### <a name="to-select-which-custom-start-page-to-display"></a>Výběr vlastní úvodní stránky k zobrazení
 
-1. V panelu nabídky zvolte **nástroje** > **možnosti**.
+1. Na panelu nabídek vyberte možnost **nástroje** > **Možnosti**.
 
-1. Rozbalte **prostředí**a klikněte na tlačítko **spuštění**.
+1. Rozbalte položku **prostředí**a pak zvolte možnost **po spuštění**.
 
-1. V **přizpůsobit úvodní stránku** , zvolte na stránce, který chcete.
+1. V seznamu **Přizpůsobit úvodní stránku** vyberte požadovanou stránku.
 
 > [!TIP]
-> Pokud chyba na vlastní úvodní stránce způsobí, že Visual Studio selhání, můžete otevřít Visual Studio v nouzovém režimu a potom nastavte ho na použití výchozí úvodní stránku. Zobrazit [/safemode (devenv.exe)](../ide/reference/safemode-devenv-exe.md).
+> Pokud chyba na vlastní úvodní stránce způsobí selhání sady Visual Studio, můžete otevřít sadu Visual Studio v bezpečném režimu a pak ji nastavit tak, aby používala výchozí úvodní stránku. Viz [/safemode (devenv. exe)](../ide/reference/safemode-devenv-exe.md).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Přizpůsobení prostředí IDE sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md)
+- [Přizpůsobení integrovaného vývojového prostředí sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md)
 
 ::: moniker-end

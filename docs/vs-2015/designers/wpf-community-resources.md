@@ -1,36 +1,36 @@
 ---
-title: Komunitní materiály pro WPF | Dokumentace Microsoftu
+title: Komunitní materiály pro WPF | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 89604bcf-da25-4180-a1d2-c5f22ab67bb6
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 63a4e207172d4f726091691985e7d1f84bb2e708
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0c2e58686c1369847fdeb0d83aaac6c65341aa08
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68187456"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663923"
 ---
 # <a name="wpf-community-resources"></a>Komunitní prostředky pro WPF
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Microsoft poskytuje širokou škálu materiálů community je nutné další informace o diskutovat a poskytnout zpětnou vazbu na Windows Presentation Foundation (WPF), včetně blogy vytvářené členové týmu WPF a od předních členů komunity, fóra a zpětná vazba webu Microsoft Connect System Center.
+Microsoft zveřejňuje celou řadu komunitních prostředků, abyste se dozvěděli o Windows Presentation Foundation (WPF), včetně blogů vyprodukovaných členy týmu WPF a vedoucí komunity, fóra a názory na Microsoft Connect. Centre.
 
 ## <a name="community"></a>Komunita
- [Fórum pro WPF](http://go.microsoft.com/fwlink/?LinkId=187440)
+ [Fórum WPF](http://go.microsoft.com/fwlink/?LinkId=187440)
 
  [Stack Overflow](http://stackoverflow.com/questions/tagged/wpf)
 
- [Týmový Blog WPF](http://blogs.msdn.com/b/wpf/)
+ [Týmový blog WPF](http://blogs.msdn.com/b/wpf/)
 
  [Sada nástrojů WPF na webu CodePlex](http://wpf.codeplex.com/)
 
- [Středisko pro vývojáře Windows Presentation Foundation](https://www.visualstudio.com/features/wpf-vs)
+ [Centrum pro vývojáře Windows Presentation Foundation](https://www.visualstudio.com/features/wpf-vs)
 
 ## <a name="see-also"></a>Viz také
 

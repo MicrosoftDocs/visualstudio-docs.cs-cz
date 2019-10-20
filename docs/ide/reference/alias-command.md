@@ -11,23 +11,23 @@ helpviewer_keywords:
 - command aliases
 - alias command
 ms.assetid: bdf857df-b5d5-450f-8c10-a6fd4dccc130
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 396db6e08da211a801361328416d97622ee3eac8
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 48fa131514f82ec13538b8f5a0662fde7388ddea
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926343"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651993"
 ---
 # <a name="alias-command"></a>Alias – příkaz
 Vytvoří nový alias pro úplný příkaz, úplný příkaz a argumenty nebo jiný alias.
 
 > [!TIP]
-> Při `>alias` psaní bez argumentů se zobrazí aktuální seznam aliasů a jejich definice.
+> Zadáním `>alias` bez argumentů se zobrazí aktuální seznam aliasů a jejich definice.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,7 +46,7 @@ Volitelné. Úplný název příkazu nebo existující alias a všechny parametr
 /Delete nebo/del nebo/D\
 Volitelné. Odstraní zadaný alias a odebere ho z automatického dokončování.
 
-/Reset po vyčištění\
+/Reset po vyčištění
 Volitelné. Obnoví původní nastavení seznamu předem definovaných aliasů. To znamená, že obnoví všechny předdefinované aliasy a odstraní všechny aliasy definované uživatelem.
 
 ## <a name="remarks"></a>Poznámky
@@ -54,16 +54,16 @@ Vzhledem k tomu, že aliasy představují příkazy, musí být umístěny na za
 
 Při vydávání tohoto příkazu byste měli zahrnout přepínače hned za příkaz, nikoli za aliasy, jinak bude samotný přepínač zahrnut jako součást řetězce aliasu.
 
-`/reset` Přepínač požádá o potvrzení před obnovením aliasů. Neexistuje žádná krátká forma `/reset`.
+Přepínač `/reset` před obnovením aliasů vyžádá o potvrzení. Neexistuje žádná krátká forma `/reset`.
 
 ## <a name="examples"></a>Příklady
-Tento příklad vytvoří nový alias `upper`, pro kompletní příkaz Edit. MakeUpperCase.
+Tento příklad vytvoří nový alias, `upper` pro příkaz Complete. MakeUpperCase.
 
 ```cmd
 >Tools.Alias upper Edit.MakeUpperCase
 ```
 
-Tento příklad odstraní alias, `upper`.
+Tento příklad odstraní alias `upper`.
 
 ```cmd
 >Tools.alias /delete upper

@@ -1,5 +1,5 @@
 ---
-title: Návrhář aktivity Rethrow | Dokumentace Microsoftu
+title: Návrhář aktivity opětovného vyvolání | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -8,35 +8,33 @@ f1_keywords:
 - System.Activities.Statements.Rethrow.UI
 ms.assetid: 9cfa2eda-395f-4cf3-9154-83fadd4f7452
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8b023a42da1c862927606c4bec0215120a5e5a11
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c65469242a60c64d6f31bfaea4fdbbf2d5251a34
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62937754"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663360"
 ---
 # <a name="rethrow-activity-designer"></a>Návrhář aktivity Rethrow
-**Znovu vyvolejte** Návrhář aktivity se používá k vytvoření a konfigurace <xref:System.Activities.Statements.Rethrow> aktivity.  
-  
-## <a name="the-rethrow-activity"></a>Aktivita Přegenerování  
- <xref:System.Activities.Statements.Rethrow> Aktivita vyvolá dříve vyvolané výjimky. Tato aktivita se dá použít jenom v <xref:System.Activities.Statements.Catch> obslužné rutiny v <xref:System.Activities.Statements.TryCatch> aktivity.  
-  
-### <a name="using-the-rethrow-activity-designer"></a>Návrhář aktivity ReThrow pomocí  
- **Znovu vyvolejte** návrháře aktivit najdete v **zpracování chyb** kategorii **nástrojů**, který přistupuje po kliknutí **nástrojů**karty na levé straně [!INCLUDE[wfd2](../includes/wfd2-md.md)] (případně vyberte možnost **nástrojů** z **zobrazení** nabídky nebo CTRL + ALT + X.)  
-  
- **Znovu vyvolejte** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřazené k [!INCLUDE[wfd2](../includes/wfd2-md.md)] surface všude, kde aktivity jsou obvykle umístěny, například jako uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří <xref:System.Activities.Statements.Rethrow> aktivity s výchozím **DisplayName** o vyvolání výjimky. <xref:System.Activities.Activity.DisplayName%2A> Hodnota se dá upravit v záhlaví **znovu vyvolejte** Návrhář aktivity nebo **DisplayName** pole mřížku vlastností.  
-  
-### <a name="the-rethrow-properties"></a>Vlastnosti Rethrow  
- Následující tabulka ukazuje <xref:System.Activities.Statements.Rethrow> vlastnosti a popisuje, jak se používají v návrháři.  
-  
-|Název vlastnosti|Požadováno|Použití|  
-|-------------------|--------------|-----------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje volitelný popisný název <xref:System.Activities.Statements.Rethrow> aktivity. Výchozí hodnota je Přegenerování.|  
-  
-## <a name="see-also"></a>Viz také  
- [Kolekce](../workflow-designer/collection-activity-designers.md)   
- [vyvolání výjimky](../workflow-designer/throw-activity-designer.md)   
- [TryCatch](../workflow-designer/trycatch-activity-designer.md)
+Návrhář aktivity opětovného **vyvolání** slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.Rethrow>.
+
+## <a name="the-rethrow-activity"></a>Aktivita opětovného vyvolání
+ Aktivita <xref:System.Activities.Statements.Rethrow> vyvolá dříve vyvolanou výjimku. Tuto aktivitu lze použít pouze v obslužné rutině <xref:System.Activities.Statements.Catch> v aktivitě <xref:System.Activities.Statements.TryCatch>.
+
+### <a name="using-the-rethrow-activity-designer"></a>Pomocí návrháře aktivity opětovného vyvolání
+ Návrhář aktivity opětovného **vyvolání** lze najít v kategorii **zpracování chyb** v **sadě nástrojů**, ke které se dostanete kliknutím na kartu **panelu nástrojů** na levé straně [!INCLUDE[wfd2](../includes/wfd2-md.md)] (případně vyberte **panel nástrojů** z  **Zobrazit** nabídku nebo CTRL + ALT + X.)
+
+ Návrhář aktivity opětovného **vyvolání** lze přetáhnout ze **sady nástrojů** a vyřadit na [!INCLUDE[wfd2](../includes/wfd2-md.md)] plochu všude, kde jsou obvykle umístěny aktivity, například uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří aktivita <xref:System.Activities.Statements.Rethrow> s výchozím **zobrazovaným názvem** pro vyvolání. Hodnotu <xref:System.Activities.Activity.DisplayName%2A> lze upravit v záhlaví návrháře aktivity opětovného **vyvolání** nebo v poli **DisplayName** v mřížce vlastností.
+
+### <a name="the-rethrow-properties"></a>Vlastnosti opětovného vyvolání
+ V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.Rethrow> a popisuje, jak se používají v návrháři.
+
+|Název vlastnosti|Požadováno|Použití|
+|-------------------|--------------|-----------|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje nepovinný popisný název aktivity <xref:System.Activities.Statements.Rethrow>. Výchozí hodnota je znovu vyvolána.|
+
+## <a name="see-also"></a>Viz také
+ [Kolekce](../workflow-designer/collection-activity-designers.md) [throw](../workflow-designer/throw-activity-designer.md) [TryCatch](../workflow-designer/trycatch-activity-designer.md)

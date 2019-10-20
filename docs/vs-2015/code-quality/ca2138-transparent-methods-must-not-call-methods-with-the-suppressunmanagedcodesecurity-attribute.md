@@ -1,5 +1,5 @@
 ---
-title: 'CA2138: Transparentní metody nesmějí volat metody s atributem suppressunmanagedcodesecurity | Dokumentace Microsoftu'
+title: 'CA2138: transparentní metody nesmí volat metody s atributem SuppressUnmanagedCodeSecurity | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -8,17 +8,17 @@ f1_keywords:
 - CA2138
 ms.assetid: a14c4d32-f079-4f3a-956c-a1657cde0f66
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 4e9a9e10f928efe6bcff6fb3d49c1b1cd7b1bd1c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 65e00d319bff3bbfd3c441c6b60ed8a703e69251
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68154292"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654805"
 ---
-# <a name="ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute"></a>CA2138: Transparentní metody nesmí volat metody s atributem SuppressUnmanagedCodeSecurity
+# <a name="ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute"></a>CA2138: Transparentní metody nesmějí volat metody s atributem SuppressUnmanagedCodeSecurity
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -29,15 +29,15 @@ ms.locfileid: "68154292"
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Transparentní metoda zabezpečení volá metodu, která je označena <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> atribut.
+ Transparentní metoda zabezpečení volá metodu, která je označena atributem <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>.
 
 ## <a name="rule-description"></a>Popis pravidla
- Toto pravidlo je vyvoláno na jakékoli transparentní metodě, která přímo volá nativní kód, například pomocí prostřednictvím P/Invoke (nespravovaného) volání. P/Invoke a modelu COM interop metody, které jsou označené <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> atribut výsledkem LinkDemand provádí proti volání metody. Protože transparentního kódu zabezpečení nemůže vyhovovat LinkDemands, kód také nelze volat metody, které jsou označeny atributem SuppressUnmanagedCodeSecurity nebo metody třídy, která je označena atributem SuppressUnmanagedCodeSecurity. Metoda se nezdaří, nebo vyžádání se převedou na úplný požadavek.
+ Toto pravidlo je vyvoláno na jakékoli transparentní metodě, která volá přímo do nativního kódu, například pomocí volání metody volání nespravovaného kódu (Invoke). Metody volání nespravovaného volání a modelu COM, které jsou označeny atributem <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>, mají za následek, že se v LinkDemand provádí v rámci volající metody. Vzhledem k tomu, že kód transparentní pro zabezpečení nemůže naplnit LinkDemand, kód také nemůže volat metody, které jsou označeny atributem SuppressUnmanagedCodeSecurity, nebo metody třídy, které jsou označeny atributem SuppressUnmanagedCodeSecurity. Metoda se nezdaří nebo se požadavek převede na úplný požadavek.
 
- Porušení tohoto pravidla vede k <xref:System.MethodAccessException> v modelu transparentnosti zabezpečení úrovně 2 a k úplnému pro <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> v modelu transparentnosti úrovně 1.
+ Porušení tohoto pravidla vede na <xref:System.MethodAccessException> v modelu transparentnosti zabezpečení úrovně 2 a na plné poptávce pro <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> v modelu transparentnosti úrovně 1.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, odeberte <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> atribut a označit metody <xref:System.Security.SecurityCriticalAttribute> nebo <xref:System.Security.SecuritySafeCriticalAttribute> atribut.
+ Chcete-li opravit porušení tohoto pravidla, odeberte atribut <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> a označte metodu atributem <xref:System.Security.SecurityCriticalAttribute> nebo <xref:System.Security.SecuritySafeCriticalAttribute>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.

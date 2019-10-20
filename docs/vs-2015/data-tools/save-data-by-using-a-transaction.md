@@ -1,5 +1,5 @@
 ---
-title: Ukládání dat pomocí transakce | Dokumentace Microsoftu
+title: Uložení dat pomocí transakce | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -16,48 +16,48 @@ helpviewer_keywords:
 - data [Visual Studio], saving
 ms.assetid: 8b835e8f-34a3-413d-9bb5-ebaeb87f1198
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b93c512bafd8b15682ed081c7778660ef52fd1f7
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 85f3584073523e748168faf569aa918ba912fbf8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65692506"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652836"
 ---
 # <a name="save-data-by-using-a-transaction"></a>Ukládání dat pomocí transakce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ukládání dat v transakci pomocí <xref:System.Transactions> oboru názvů. Použití <xref:System.Transactions.TransactionScope> objektu k účasti v transakci, která se automaticky spravuje za vás.  
-  
- Projekty nejsou vytvořeny pomocí odkazu na sestavení System.Transactions, je třeba ručně přidat odkaz na projektech, které používají transakce.  
-  
+Data uložíte v transakci pomocí <xref:System.Transactions> oboru názvů. K účasti v transakci, která je pro vás automaticky spravovaná, použijte objekt <xref:System.Transactions.TransactionScope>.
+
+ Projekty nejsou vytvořeny s odkazem na sestavení System. Transactions, takže je nutné ručně přidat odkaz na projekty, které používají transakce.
+
 > [!NOTE]
-> <xref:System.Transactions> Obor názvů je podporován v systému Windows 2000 nebo novější.  
-  
- Nejjednodušší způsob, jak implementovat transakce je k vytvoření instance <xref:System.Transactions.TransactionScope> objekt `using` příkazu. (Další informace najdete v tématu [příkazu Using](https://msdn.microsoft.com/library/665d1580-dd54-4e96-a9a9-6be2a68948f1), a [příkaz using](https://msdn.microsoft.com/library/afc355e6-f0b9-4240-94dd-0d93f17d9fc3).) Kód, který běží v rámci `using` příkaz účastní v transakci.  
-  
- Chcete-li zapsat transakci, zavolejte <xref:System.Transactions.TransactionScope.Complete%2A> metody jako poslední příkaz v pomocí blokovat.  
-  
- Chcete-li vrátit zpět transakci, vyvolat výjimku před voláním <xref:System.Transactions.TransactionScope.Complete%2A> metody.  
-  
- Další informace najdete v tématu [uložit data v rámci transakce](../data-tools/save-data-in-a-transaction.md).  
-  
-### <a name="to-add-a-reference-to-the-systemtransactions-dll"></a>Chcete-li přidat odkaz na knihovnu dll System.Transactions  
-  
-1. Na **projektu** nabídce vyberte možnost **přidat odkaz**.  
-  
-2. Na **.NET** kartu (**systému SQL Server** kartu pro projekty na SQL serveru) vyberte **System.Transactions**a pak vyberte **OK**.  
-  
-     Odkaz na System.Transactions.dll je přidá do projektu.  
-  
-### <a name="to-save-data-in-a-transaction"></a>Chcete-li uložit data v transakci  
-  
-- Přidejte kód pro uložení dat v rámci nástroje pomocí příkazu, který obsahuje transakci. Následující kód ukazuje, jak vytvořit a vytvoření instance <xref:System.Transactions.TransactionScope> objektu v pomocí příkazu:  
-  
+> Obor názvů <xref:System.Transactions> je podporován ve Windows 2000 nebo novějším.
+
+ Nejjednodušší způsob, jak implementovat transakci, je vytvořit instanci objektu <xref:System.Transactions.TransactionScope> v příkazu `using`. (Další informace naleznete v tématu [using](https://msdn.microsoft.com/library/665d1580-dd54-4e96-a9a9-6be2a68948f1)a [using Statement](https://msdn.microsoft.com/library/afc355e6-f0b9-4240-94dd-0d93f17d9fc3).) Kód, který je spuštěn v rámci příkazu `using`, se účastní transakce.
+
+ Chcete-li transakci potvrdit, zavolejte metodu <xref:System.Transactions.TransactionScope.Complete%2A> jako poslední příkaz v bloku using.
+
+ Chcete-li transakci vrátit zpět, vyvolejte výjimku před voláním metody <xref:System.Transactions.TransactionScope.Complete%2A>.
+
+ Další informace najdete v tématu [uložení dat v transakci](../data-tools/save-data-in-a-transaction.md).
+
+### <a name="to-add-a-reference-to-the-systemtransactions-dll"></a>Přidání odkazu na knihovnu DLL System. Transactions
+
+1. V nabídce **projekt** vyberte možnost **Přidat odkaz**.
+
+2. Na kartě **.NET** (**SQL Server** pro SQL Server projekty) vyberte **System. Transactions**a pak vyberte **OK**.
+
+     Do projektu se přidá odkaz na System. Transactions. dll.
+
+### <a name="to-save-data-in-a-transaction"></a>Uložení dat v transakci
+
+- Přidejte kód pro uložení dat v rámci příkazu Using, který obsahuje transakci. Následující kód ukazuje, jak vytvořit a vytvořit instanci objektu <xref:System.Transactions.TransactionScope> v příkazu Using:
+
      [!code-csharp[VbRaddataSaving#11](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form2.cs#11)]
-     [!code-vb[VbRaddataSaving#11](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form2.vb#11)]  
-  
-## <a name="see-also"></a>Viz také  
+     [!code-vb[VbRaddataSaving#11](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form2.vb#11)]
+
+## <a name="see-also"></a>Viz také
  [Ukládání dat zpět do databáze](../data-tools/save-data-back-to-the-database.md)

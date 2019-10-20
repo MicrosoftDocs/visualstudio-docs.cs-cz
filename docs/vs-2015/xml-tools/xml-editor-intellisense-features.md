@@ -1,124 +1,122 @@
 ---
-title: Funkce IntelliSense editoru XML | Dokumentace Microsoftu
+title: Funkce technologie IntelliSense v editoru XML | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 2b26f214-cc3a-46bf-b260-14eb8e599182
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9c691eea7417e882ee3b73e9f2adc538714b486a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9cd10f9eb0e2899394788c3b19348892837426db
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68158572"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669468"
 ---
 # <a name="xml-editor-intellisense-features"></a>Funkce IntelliSense editoru XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-XML Editor poskytuje úplné funkce IntelliSense srovnatelná s hodnotou jiné editory jazyk v sadě Visual Studio. Tato část vysvětluje, jak můžete pomocí technologie IntelliSense se schéma XML definice jazyk (XSD) a dokumentů XSLT.  
-  
-## <a name="intellisense-in-an-xsd-document"></a>Technologie IntelliSense v XSD dokumentu  
- Po schéma je spojen s vaším dokumentem, získáte rozevírací seznam očekávané prvky kdykoli zadáte `"<"` nebo klikněte na tlačítko **zobrazit seznam členů objektu** tlačítko na panelu nástrojů editoru XML. Informace o tom, jak přidružit schémat XML dokumentů najdete v tématu [ověření dokumentu XML](../xml-tools/xml-document-validation.md).  
-  
- Když zadáte místo z uvnitř počáteční značku, budete mít také rozevírací seznam zobrazující všechny atributy, které mohou být přidány do aktuálního prvku.  
-  
- Po zadání `"="` pro hodnotu atributu nebo úvodní uvozovka pro hodnotu, je také získat seznam možných hodnot pro tento atribut. Hodnoty jsou zobrazeny pouze, pokud schéma obsahuje výčtové hodnoty přes `xsd:enumeration` omezující vlastnosti, nebo pokud je atribut `Boolean` typu. Také poskytuje seznam kódů známých jazyků, technologie IntelliSense pro `xml:lang` ani na žádného `simpleType` , která je odvozena z `xsd:language`. Technologie IntelliSense seznam známých `targetNamespace` poskytuje hodnoty pro deklarace oboru názvů.  
-  
- Když zadáte také poskytuje technologie IntelliSense seznam možných hodnot `">"` zavřete počáteční značku, pokud je element `simpleType`. Chování prvků se podobá chování pro atributy, které jsou popsané v předchozím odstavci.  
-  
- Popisy tlačítek se zobrazí také na seznamy IntelliSense na základě `xsd:annotation` a `xsd:documentation` informace nalézt v přidružené schéma.  
-  
-## <a name="intellisense-in-an-xslt-document"></a>Technologie IntelliSense v dokumentu XSLT  
- Jakmile přidáte do dokumentu XSLT s názvem šablony nebo atribut, můžete vložit následující technologie IntelliSense:  
-  
-- Atribut nastavit názvy.  
-  
-- Režimy šablony.  
-  
-- Názvy šablon.  
-  
-- Názvy parametrů pro danou režimu.  
-  
-- Názvy parametrů pro danou uvedené šabloně.  
-  
-  Další informace najdete v tématu [názorný postup: Používání XSLT IntelliSense](../xml-tools/walkthrough-using-xslt-intellisense.md) tématu.  
-  
-## <a name="auto-completion"></a>Automatické dokončování  
- XML editor také umožňuje úpravy XML jednodušší vyplněním požadované syntaxe XML pro vás. Například zadejte následující počáteční značku:  
-  
- `<book>`  
-  
- XML editor vyplní koncovou značku a umístí kurzor po počáteční značce. Následuje příklad ("&#124;" poznámky pozice kurzoru):  
-  
- `<book>`&#124;`</book>`  
-  
- Vzhledem k tomu, že hodnoty atributů musí mít vždy uvozovky, vyplní editoru jazyka XML v nabídkách za vás. Například zadejte následující příkaz:  
-  
- `<book title=`  
-  
- XML editor přidá uvozovky a umístí kurzor mezi uvozovky:  
-  
- `<book title="`&#124;`"`  
-  
- Obdobně editoru XML také následující syntaxi XML automaticky vloží za vás:  
-  
-- Konec instrukce pro zpracování:  `?>`  
-  
-- Konec bloku CDATA: `]]>`  
-  
-- Ukončit komentář: `-->`  
-  
-- Konec deklarace DTD: `>`  
-  
-  XML Editor má také možnost Vložit obor názvů deklarace, pokud vyberete element kvalifikovaný obor názvů nebo atribut z seznam technologie IntelliSense a obor názvů pro tento atribut nebo element není v oboru.  
-  
-  Například, pokud jste vybrali `e:Book` prvku ze seznamu technologie IntelliSense, kde předpona, která je vázán na `http://books` obor názvů, který nebyl deklarován v dokumentu XML editor vloží požadovaný obor názvů deklarace za vás. Výsledný text XML je následující:  
-  
-  `<e:Book xmlns:e="http://books"`  
-  
-## <a name="brace-matching"></a>Párování závorek  
- XML editor poskytuje zvýraznění získáte okamžitou zpětnou vazbu na prvek, který jste právě zavřeli závorek. Můžete také použít klávesovou zkratku (CTRL +]) přecházet z jednoho závorek k odpovídající závorce.  
-  
- XML editor se to dělá pro následující položky:  
-  
-- Odpovídající počáteční a koncovou značku.  
-  
-- Nějaká dvojice "\<" nebo ">" ostrých závorek.  
-  
-- Začátek a konec komentáře.  
-  
-- Začátek a konec instrukce pro zpracování.  
-  
-- Začátek a konec bloky CDATA.  
-  
-- Začátek a konec deklarace DTD.  
-  
-- Levé a pravé uvozovky u atributů.  
-  
-## <a name="modifying-the-intellisense-options"></a>Úprava možnosti technologie IntelliSense  
- Ve výchozím nastavení jsou povoleny funkce IntelliSense a automatické dokončování. Můžete to však změnit úpravou nastavení možnosti nástrojů.  
-  
- **Automatické vložení** část **různé** ovládací prvky stránek následující chování:  
-  
-|Name|Popis|  
-|----------|-----------------|  
-|Zavřít značky|Vloží uzavírací značky pro nové prvky.|  
-|Uvozovky atributu|Když zadáte nový název atributu, vloží uvozovky u hodnot atributů.|  
-|Další kód|Dokončení komentáře, CDATA, DOCTYPE, pokyny pro zpracování a dalších deklarací značek.|  
-  
-#### <a name="to-change-the-auto-completion-behavior"></a>Chcete-li změnit chování automatického dokončování  
-  
-1. Vyberte **možnosti** z **nástroje** nabídky.  
-  
-2. Rozbalte **textový Editor**, rozbalte **XML**a vyberte **různé**.  
-  
-3. Ujistěte se, všechny změny **automatické vkládání** části a klikněte na tlačítko **OK**.  
-  
-## <a name="see-also"></a>Viz také  
- [XML Editor](../xml-tools/xml-editor.md)   
- [Používání atributu IntelliSense](../ide/using-intellisense.md)   
- [Návod: Používání IntelliSense pro XSLT](../xml-tools/walkthrough-using-xslt-intellisense.md)
+Editor XML poskytuje úplné funkce technologie IntelliSense srovnatelné s jinými jazykovými editory, které jsou součástí sady Visual Studio. V této části se dozvíte, jak můžete používat technologii IntelliSense s dokumenty XSD (XML Schema Definition Language) a XSLT.
+
+## <a name="intellisense-in-an-xsd-document"></a>IntelliSense v dokumentu XSD
+ Po přiřazení schématu k vašemu dokumentu získáte rozevírací seznam očekávaných prvků pokaždé, když zadáte `"<"` nebo kliknutím na tlačítko **Zobrazit seznam členů objektu** na panelu nástrojů editoru XML. Informace o tom, jak přidružit schémata k dokumentům XML, naleznete v tématu [ověření dokumentu XML](../xml-tools/xml-document-validation.md).
+
+ Při psaní prostoru zevnitř počáteční značky získáte také rozevírací seznam obsahující všechny atributy, které lze přidat do aktuálního prvku.
+
+ Když zadáte `"="` pro hodnotu atributu nebo počáteční uvozovku pro hodnotu, získáte také seznam možných hodnot pro tento atribut. Hodnoty jsou poskytnuty pouze v případě, že schéma poskytuje výčtové hodnoty prostřednictvím `xsd:enumeration` omezující vlastnosti, nebo pokud je atribut typu `Boolean`. Seznam známých kódů jazyků technologie IntelliSense je také k dispozici pro `xml:lang` nebo jakýkoli `simpleType` odvozený z `xsd:language`. Seznam IntelliSense známých hodnot `targetNamespace` je k dispozici pro deklarace oboru názvů.
+
+ K dispozici je také seznam možných hodnot technologie IntelliSense, pokud zadáte `">"` pro zavření počáteční značky, je-li prvek `simpleType`. Chování pro prvky je podobné chování atributů popsaných v předchozím odstavci.
+
+ Popisy se zobrazí také na těchto seznamech IntelliSense na základě `xsd:annotation` a `xsd:documentation` informací, které se nacházejí v přidruženém schématu.
+
+## <a name="intellisense-in-an-xslt-document"></a>IntelliSense v dokumentu XSLT
+ Po přidání pojmenované šablony nebo atributu do dokumentu XSLT lze pomocí technologie IntelliSense vložit následující:
+
+- Názvy sady atributů.
+
+- Režimy šablon.
+
+- Názvy šablon.
+
+- Názvy parametrů pro daný režim.
+
+- Názvy parametrů pro danou pojmenovanou šablonu.
+
+  Další informace naleznete v tématu [Návod: použití XSLT IntelliSense](../xml-tools/walkthrough-using-xslt-intellisense.md) .
+
+## <a name="auto-completion"></a>Automatické dokončování
+ Editor XML také usnadňuje úpravy XML vyplněním požadované syntaxe XML za vás. Pokud například zadáte následující počáteční značku:
+
+ `<book>`
+
+ Editor XML vyplní koncovou značku a umístí kurzor za počáteční značku. Následuje příklad tohoto příkladu ("&#124;" se zaznamená jako pozice kurzoru):
+
+ `<book>`&#124;`</book>`
+
+ Vzhledem k tomu, že hodnoty atributu musí mít vždy uvozovky, editor XML vyplní uvozovky. Pokud například zadáte následující:
+
+ `<book title=`
+
+ Editor XML přidá uvozovky a umístí kurzor mezi uvozovky:
+
+ `<book title="`&#124;`"`
+
+ Podobně editor XML také automaticky vloží následující syntaxi XML za vás:
+
+- Konec instrukcí pro zpracování: `?>`
+
+- Konec bloku CDATA: `]]>`
+
+- Konec komentáře: `-->`
+
+- Konec deklarace DTD: `>`
+
+  Editor XML má také možnost vložit deklaraci oboru názvů, pokud vyberete kvalifikovaný atribut oboru názvů nebo atribut ze seznamu technologie IntelliSense a obor názvů pro tento element nebo atribut ještě není v oboru.
+
+  Například pokud vyberete prvek `e:Book` ze seznamu IntelliSense, kde je předpona svázána s oborem názvů `http://books`, který nebyl deklarován v dokumentu, vloží editor XML požadovanou deklaraci oboru názvů. Následuje výsledný text XML:
+
+  `<e:Book xmlns:e="http://books"`
+
+## <a name="brace-matching"></a>Spárování složených závorek
+ Editor XML nabízí zvýraznění složených závorek, které poskytuje okamžitou zpětnou vazbu na prvky, které jste právě zavřeli. Můžete také použít klávesovou zkratku (CTRL +]) a přeskočit jednu složenou závorku k párové závorce.
+
+ Editor XML provede následující položky:
+
+- Porovnání počátečních a koncových značek.
+
+- Libovolný pár "\<" nebo ">" lomených závorek.
+
+- Začátek a konec komentářů
+
+- Začátek a konec instrukcí pro zpracování.
+
+- Začátek a konec bloků CDATA.
+
+- Začátek a konec deklarací DTD
+
+- Otevírání a zavírání uvozovek u atributů.
+
+## <a name="modifying-the-intellisense-options"></a>Změna možností technologie IntelliSense
+ Funkce IntelliSense a automatické dokončování jsou ve výchozím nastavení povoleny. Můžete to ale změnit úpravou nastavení nástrojů – možnosti.
+
+ Část **Automatické vložení** stránky **různé** určuje následující chování:
+
+|Name|Popis|
+|----------|-----------------|
+|Zavřít značky|Vloží uzavírací značky pro nové prvky.|
+|Uvozovky atributů|Vloží uvozovky hodnot atributů při zadání nového názvu atributu.|
+|Jiné značky|Dokončí komentáře, CDATA, DOCTYPE, pokyny pro zpracování a další deklarace značek.|
+
+#### <a name="to-change-the-auto-completion-behavior"></a>Změna chování automatického dokončování
+
+1. V nabídce **nástroje** vyberte **možnost možnosti** .
+
+2. Rozbalte položku **textový editor**, rozbalte položku **XML**a vyberte možnost **různé**.
+
+3. Proveďte jakékoli změny v části **Automatické vložení** a klikněte na tlačítko **OK**.
+
+## <a name="see-also"></a>Viz také
+ [Editor XML](../xml-tools/xml-editor.md) [pomocí IntelliSense](../ide/using-intellisense.md) [– Návod: použití IntelliSense XSLT](../xml-tools/walkthrough-using-xslt-intellisense.md)

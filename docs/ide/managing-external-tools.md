@@ -6,50 +6,50 @@ f1_keywords:
 - vs.externaltools
 helpviewer_keywords:
 - external tools [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3562ed9ebf2d62ab002ac227486218c8c38ad337
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1caf72ea2dccd9dfe2978726834e8066a9f5b56b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62535672"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652394"
 ---
 # <a name="manage-external-tools"></a>Správa externích nástrojů
 
-Můžete volat z externích nástrojů v sadě Visual Studio s použitím **nástroje** nabídky. Jsou k dispozici několik výchozích nástrojů **nástroje** nabídky a můžete přizpůsobit tak, že přidáte další vlastní spustitelné soubory v nabídce.
+Externí nástroje můžete volat v rámci sady Visual Studio pomocí nabídky **nástroje** . V nabídce **nástroje** je k dispozici několik výchozích nástrojů a nabídku můžete přizpůsobit přidáním dalších vlastních spustitelných souborů.
 
-## <a name="tools-available-on-the-tools-menu"></a>Nástroje, které jsou k dispozici v nabídce Nástroje
+## <a name="tools-available-on-the-tools-menu"></a>Nástroje dostupné v nabídce nástroje
 
-**Nástroje** nabídka obsahuje několik předdefinovaných příkazů, včetně:
+Nabídka **nástroje** obsahuje několik integrovaných příkazů, včetně:
 
 ::: moniker range="vs-2017"
 
-* **Rozšíření a aktualizace** k [spravovat rozšíření sady Visual Studio](finding-and-using-visual-studio-extensions.md)
-* **Správce fragmentů kódu** k [uspořádání fragmenty kódu](code-snippets.md)
-* **Vlastní** k [přizpůsobení nabídek a panelů nástrojů](how-to-customize-menus-and-toolbars-in-visual-studio.md)
-* **Možnosti** k [nastavit širokou škálu různých možností pro rozhraní IDE sady Visual Studio a další nástroje](reference/options-dialog-box-visual-studio.md)
+* **Rozšíření a aktualizace** pro [správu rozšíření sady Visual Studio](finding-and-using-visual-studio-extensions.md)
+* **Správce fragmentů kódu** pro [uspořádání fragmentů kódu](code-snippets.md)
+* **Přizpůsobení** pro [přizpůsobení nabídek a panelů nástrojů](how-to-customize-menus-and-toolbars-in-visual-studio.md)
+* **Možnosti** pro [Nastavení nejrůznějších různých možností pro integrované vývojové prostředí (IDE) sady Visual Studio a další nástroje](reference/options-dialog-box-visual-studio.md)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-* **Správce fragmentů kódu** k [uspořádání fragmenty kódu](code-snippets.md)
-* **Vlastní** k [přizpůsobení nabídek a panelů nástrojů](how-to-customize-menus-and-toolbars-in-visual-studio.md)
-* **Možnosti** k [nastavit širokou škálu různých možností pro rozhraní IDE sady Visual Studio a další nástroje](reference/options-dialog-box-visual-studio.md)
+* **Správce fragmentů kódu** pro [uspořádání fragmentů kódu](code-snippets.md)
+* **Přizpůsobení** pro [přizpůsobení nabídek a panelů nástrojů](how-to-customize-menus-and-toolbars-in-visual-studio.md)
+* **Možnosti** pro [Nastavení nejrůznějších různých možností pro integrované vývojové prostředí (IDE) sady Visual Studio a další nástroje](reference/options-dialog-box-visual-studio.md)
 
 ::: moniker-end
 
-## <a name="add-new-tools-to-the-tools-menu"></a>Přidání nových nástrojů v nabídce Nástroje
+## <a name="add-new-tools-to-the-tools-menu"></a>Přidání nových nástrojů do nabídky nástroje
 
-Můžete přidat externího nástroje, aby se zobrazovaly na **nástroje** nabídky.
+Můžete přidat externí nástroj, který se zobrazí v nabídce **nástroje** .
 
-1. Otevřít **externích nástrojů** dialogové okno výběrem **nástroje** > **externích nástrojů**.
+1. Otevřete dialogové okno **externí nástroje** výběrem **nástrojů**  > **externích nástrojů**.
 
-1. Klikněte na tlačítko **přidat**a potom vyplňte informace. Například způsobí, že následující položku **Windows Explorer** otevřete v adresáři souboru aktuálně máte otevřený v sadě Visual Studio:
+1. Klikněte na **Přidat**a potom zadejte informace. Například následující položka způsobí, že **Průzkumník Windows** se otevře v adresáři souboru, který aktuálně máte otevřený v aplikaci Visual Studio:
 
    * Název: `Open File Location`
 
@@ -57,11 +57,11 @@ Můžete přidat externího nástroje, aby se zobrazovaly na **nástroje** nabí
 
    * Argumenty: `/root, "$(ItemDir)"`
 
-   ![Dialogové okno externí nástroje](media/external-tools-dialog.png)
+   ![Dialog externích nástrojů – dialogové okno](media/external-tools-dialog.png)
 
-Následuje úplný seznam argumentů, které se dá použít při definování externího nástroje:
+Následuje úplný seznam argumentů, které lze použít při definování externího nástroje:
 
-|Název|Argument|Popis|
+|Name|Argument|Popis|
 |----------|--------------|-----------------|
 |Cesta položky|$(ItemPath)|Celý název souboru aktuálního souboru (jednotka + cesta + název souboru).|
 |Adresář položky|$(ItemDir)|Adresář aktuálního souboru (jednotka + cesta).|
@@ -73,16 +73,16 @@ Následuje úplný seznam argumentů, které se dá použít při definování e
 |Cílová cesta|$(TargetPath)|Úplný název souboru položky, která má být sestavena (jednotka + cesta + název souboru).|
 |Cílový adresář|$(TargetDir)|Adresář položky, která má být sestavena.|
 |Cílový název|$(TargetName)|Název souboru položky, která má být sestavena.|
-|Cílová přípona|$(TargetExt)|Přípona názvu souboru položky, která má být sestavena.|
+|Cílová Přípona|$(TargetExt)|Přípona názvu souboru položky, která má být sestavena.|
 |Binární složka|$(BinDir)|Konečné umístění binárního souboru, který má být sestaven (definované jako jednotka + cesta).|
-|Adresář projektu|$(ProjectDir)|Adresář aktuálního projektu (jednotka + cesta).|
-|Název souboru projektu|$(ProjectFileName)|Název souboru aktuálního projektu (jednotka + cesta + název souboru).|
+|Adresář projektu|$ (ProjectDir)|Adresář aktuálního projektu (jednotka + cesta).|
+|Název souboru projektu|$ (ProjectFileName)|Název souboru aktuálního projektu (jednotka + cesta + název souboru).|
 |Adresář řešení|$(SolutionDir)|Adresář aktuálního řešení (jednotka + cesta).|
 |Název souboru řešení|$(SolutionFileName)|Název souboru aktuálního řešení (jednotka + cesta + název souboru).|
 
 > [!NOTE]
-> Stavový řádek IDE zobrazuje **aktuálního řádku** a **aktuálního sloupce** proměnné k označení, kde se kurzor nachází v aktivním **Editor kódu**. **Aktuální Text** proměnné vrací text nebo kód vybraný v tomto umístění.
+> Stavový řádek IDE zobrazuje **aktuální řádek** a **aktuální proměnné sloupce** , které označují, kde je kurzor umístěn v aktivním **editoru kódu**. **Aktuální textová** proměnná vrátí text nebo kód vybraný v tomto umístění.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Nástroje sestavení C/C++](/cpp/build/reference/c-cpp-build-tools)
+- [Nástroje CC++ /Build](/cpp/build/reference/c-cpp-build-tools)

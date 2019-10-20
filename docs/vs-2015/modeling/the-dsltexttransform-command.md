@@ -1,5 +1,5 @@
 ---
-title: Příkaz DslTextTransform | Dokumentace Microsoftu
+title: Příkaz DslTextTransform | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - Domain-Specific Language, commands
 ms.assetid: 7d025d0b-6543-4a49-9f6b-8b8cfcad77ee
 caps.latest.revision: 32
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 220ceab29cb2b9bc1b117a98326d22c3c546a162
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 599bf14a3d37fbd6bdff111f79e658f44624792b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62548493"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658464"
 ---
 # <a name="the-dsltexttransform-command"></a>Příkaz DslTextTransform
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-DslTextTransform.cmd je skript, který volá TextTransform.exe a spustí pomocí běžné možnosti. DslTextTransformation.cmd můžete použít k automatizaci noční sestavení z vašeho [!INCLUDE[dsl](../includes/dsl-md.md)] projekty. Další informace najdete v tématu [generování souborů pomocí nástroje TextTransform](../modeling/generating-files-with-the-texttransform-utility.md).  
-  
- DslTextTransform.cmd se nachází v následujícím adresáři:  
-  
- **\<Visual Studio SDK Installation Path>\VisualStudioIntegration\Tools\Bin**  
-  
- Jako vstup pro DslTextTransform.cmd lze zadat následující argumenty:  
-  
-- Výstupní adresář projektu s modelem domény.  
-  
-- Výstupní adresář projektu definice návrháře.  
-  
-- Umístění souboru textové šablony.  
-  
-  DslTextTransform.cmd zpracovává zadaný textový soubor šablony pomocí procesorů pro direktivy výchozí a sestavení. Pokud vytvoříte vlastní procesory direktiv, můžete vytvořit vlastní dávkový soubor, který volá TextTransform.exe. V tomto souboru služby batch můžete zadat sestavení a přidružené vlastní procesory direktiv.
+DslTextTransform. cmd je skript, který volá TextTransform. exe a spouští ho se společnými možnostmi. Pomocí DslTextTransformation. cmd můžete automatizovat noční sestavení vašich [!INCLUDE[dsl](../includes/dsl-md.md)]ch projektů. Další informace najdete v tématu [generování souborů pomocí nástroje TextTransform](../modeling/generating-files-with-the-texttransform-utility.md).
+
+ DslTextTransform. cmd je umístěn v následujícím adresáři:
+
+ **Instalační cesta k sadě \<Visual Studio SDK > \VisualStudioIntegration\Tools\Bin**
+
+ Jako vstup do DslTextTransform. cmd můžete zadat následující argumenty:
+
+- Výstupní adresář projektu doménového modelu.
+
+- Výstupní adresář projektu definice návrháře.
+
+- Umístění souboru textové šablony
+
+  DslTextTransform. cmd zpracuje zadaný textový soubor šablony pomocí výchozích procesorů a sestavení direktiv. Pokud vytváříte vlastní procesory direktiv, můžete vytvořit vlastní dávkový soubor, který bude volat TextTransform. exe. V tomto dávkovém souboru můžete zadat vaše sestavení a přidružené vlastní procesory direktiv.

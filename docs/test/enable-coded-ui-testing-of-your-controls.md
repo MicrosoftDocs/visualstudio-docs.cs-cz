@@ -2,17 +2,17 @@
 title: Povolení programového testování uživatelského rozhraní pro vaše ovládací prvky
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 98eb2df0d846fa542ec01b30ad5abfffa62ff54f
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+author: jillre
+ms.openlocfilehash: ea58dc703c5ad860683017c39d9d37d9b5cccd04
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918265"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664946"
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>Povolení programového testování uživatelského rozhraní pro vaše ovládací prvky
 
@@ -33,11 +33,11 @@ Pokud implementujete přístupnost, Tvůrce programového testu uživatelského 
 ![Záznam&#95;UI](../test/media/cuit_record.png)
 
 ### <a name="to-support-record-and-playback-property-validation-and-navigation-for-a-windows-forms-control"></a>Podpora záznamu a přehrávání, ověřování vlastností a navigace pro ovládací prvek model Windows Forms
-Implementujte přístupnost pro váš ovládací prvek, jak je uvedeno v následujícím postupu, a podrobně vysvětleno <xref:System.Windows.Forms.AccessibleObject>v.
+Implementujte přístupnost pro váš ovládací prvek, jak je uvedeno v následujícím postupu, a podrobně vysvětleno v <xref:System.Windows.Forms.AccessibleObject>.
 
 ![UI&#95;přístupný](../test/media/cuit_accessible.png)
 
-1. Implementujte třídu, která je odvozena z <xref:System.Windows.Forms.Control.ControlAccessibleObject>a <xref:System.Windows.Forms.Control.AccessibilityObject%2A> přepište vlastnost, která vrátí objekt vaší třídy.
+1. Implementujte třídu, která je odvozena z <xref:System.Windows.Forms.Control.ControlAccessibleObject> a přepište vlastnost <xref:System.Windows.Forms.Control.AccessibilityObject%2A>, která vrátí objekt vaší třídy.
 
     ```csharp
     public partial class ChartControl : UserControl
@@ -62,18 +62,18 @@ Implementujte přístupnost pro váš ovládací prvek, jak je uvedeno v násled
     }
     ```
 
-2. Přepište <xref:System.Windows.Forms.AccessibleObject.GetChildCount%2A> vlastnosti a metody <xref:System.Windows.Forms.AccessibleObject.Role%2A>přístupného <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> objektu <xref:System.Windows.Forms.AccessibleObject.State%2A>.
+2. Přepište <xref:System.Windows.Forms.AccessibleObject.Role%2A>, <xref:System.Windows.Forms.AccessibleObject.State%2A>, <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> a <xref:System.Windows.Forms.AccessibleObject.GetChildCount%2A> vlastnosti a metody přístupového objektu.
 
-3. Implementujte další objekt usnadnění pro podřízený ovládací prvek a přepište <xref:System.Windows.Forms.Control.AccessibilityObject%2A> vlastnost podřízeného ovládacího prvku tak, aby vracela objekt usnadnění.
+3. Implementujte další objekt usnadnění pro podřízený ovládací prvek a přepište vlastnost <xref:System.Windows.Forms.Control.AccessibilityObject%2A> podřízeného ovládacího prvku tak, aby vracela objekt usnadnění.
 
-4. <xref:System.Windows.Forms.AccessibleObject.Name%2A> <xref:System.Windows.Forms.AccessibleObject.Parent%2A> Přepište<xref:System.Windows.Forms.AccessibleObject.Role%2A>vlastnosti,,, ,<xref:System.Windows.Forms.AccessibleObject.State%2A>, a<xref:System.Windows.Forms.AccessibleObject.Navigate%2A>ametody objektu usnadnění podřízeného ovládacího prvku. <xref:System.Windows.Forms.AccessibleObject.Bounds%2A> <xref:System.Windows.Forms.AccessibleObject.Select%2A>
+4. Přepište <xref:System.Windows.Forms.AccessibleObject.Bounds%2A>, <xref:System.Windows.Forms.AccessibleObject.Name%2A>, <xref:System.Windows.Forms.AccessibleObject.Parent%2A>, <xref:System.Windows.Forms.AccessibleObject.Role%2A>, <xref:System.Windows.Forms.AccessibleObject.State%2A>, <xref:System.Windows.Forms.AccessibleObject.Navigate%2A> a <xref:System.Windows.Forms.AccessibleObject.Select%2A>ch vlastností a metod objektu přístupnosti podřízeného ovládacího prvku.
 
 > [!NOTE]
-> V tomto tématu se začíná ukázka přístupnosti v <xref:System.Windows.Forms.AccessibleObject>nástroji a potom se v této ukázce vytvoří ve zbývajících postupech. Pokud chcete vytvořit funkční verzi ukázky přístupnosti, vytvořte konzolovou aplikaci a potom nahraďte kód v *program.cs* ukázkovým kódem. Přidejte odkazy na přístupnost, System. Drawing a System. Windows. Forms. Chcete-li odstranit upozornění sestavení, změňte **typy spolupráce pro vložení** pro přístupnost na **false** . Výstupní typ projektu lze změnit z **konzolové aplikace** na **aplikaci systému Windows** , aby se okno konzoly nezobrazovalo při spuštění aplikace.
+> V tomto tématu se začíná ukázka přístupnosti v <xref:System.Windows.Forms.AccessibleObject> a potom se v této ukázce vytvoří ve zbývajících postupech. Pokud chcete vytvořit funkční verzi ukázky přístupnosti, vytvořte konzolovou aplikaci a potom nahraďte kód v *program.cs* ukázkovým kódem. Přidejte odkazy na přístupnost, System. Drawing a System. Windows. Forms. Chcete-li odstranit upozornění sestavení, změňte **typy spolupráce pro vložení** pro přístupnost na **false** . Výstupní typ projektu lze změnit z **konzolové aplikace** na **aplikaci systému Windows** , aby se okno konzoly nezobrazovalo při spuštění aplikace.
 
 ## <a name="support-custom-property-validation-by-implementing-a-property-provider"></a>Podpora ověřování vlastních vlastností implementací zprostředkovatele vlastností
 
-Po implementaci základní podpory pro záznam a přehrávání a ověřování vlastností můžete nastavit vlastní vlastnosti ovládacího prvku k dispozici pro programové testy uživatelského rozhraní implementací <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider> modulu plug-in. Následující procedura například vytvoří poskytovatele vlastností, který umožňuje programovým testům uživatelského rozhraní získat přístup k vlastnosti State pro podřízené ovládací prvky CurveLegend ovládacího prvku grafu:
+Po implementaci základní podpory pro záznam a přehrávání a ověřování vlastností můžete nastavit vlastní vlastnosti ovládacího prvku k dispozici pro programové testy uživatelského rozhraní implementací modulu plug-in <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>. Následující procedura například vytvoří poskytovatele vlastností, který umožňuje programovým testům uživatelského rozhraní získat přístup k vlastnosti State pro podřízené ovládací prvky CurveLegend ovládacího prvku grafu:
 
 ![UI&#95;CustomProps](../test/media/cuit_customprops.png)
 
@@ -81,7 +81,7 @@ Po implementaci základní podpory pro záznam a přehrávání a ověřování 
 
 ![UI&#95;props](../test/media/cuit_props.png)
 
-1. Přepište <xref:System.Windows.Forms.AccessibleObject.Description%2A> vlastnost přístupného objektu legendy křivky tak, aby předávala hodnoty vlastností v řetězci popisu. Více hodnot oddělte středníkem (;).
+1. Přepište vlastnost <xref:System.Windows.Forms.AccessibleObject.Description%2A> objektu přístupné legendy křivky tak, aby v řetězci popisu předávala hodnoty vlastností. Více hodnot oddělte středníkem (;).
 
     ```csharp
     public class CurveLegendAccessibleObject : AccessibleObject
@@ -101,7 +101,7 @@ Po implementaci základní podpory pro záznam a přehrávání a ověřování 
 
 1. Vytvořte balíček rozšíření pro test uživatelského rozhraní pro váš ovládací prvek vytvořením projektu knihovny tříd. Přidejte odkazy na přístupnost, Microsoft. VisualStudio. TestTools. UITesting, Microsoft. VisualStudio. TestTools. UITest. Common a Microsoft. VisualStudio. TestTools. extension. Změňte **typy spolupráce pro vložení** pro přístupnost na **false**.
 
-1. Přidat třídu poskytovatele vlastností, která je odvozena <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>z:
+1. Přidejte třídu poskytovatele vlastností, která je odvozena z <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>:
 
     ```csharp
     using System;
@@ -120,17 +120,17 @@ Po implementaci základní podpory pro záznam a přehrávání a ověřování 
     }
     ```
 
-1. Implementací názvů vlastností a popisovačů vlastností do vytvořte <xref:System.Collections.Generic.Dictionary%602>zprostředkovatele vlastností.
+1. Implementací názvů vlastností a popisovačů vlastností do <xref:System.Collections.Generic.Dictionary%602> implementovat zprostředkovatele vlastností.
 
-1. Přepsání <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.GetControlSupportLevel%2A?displayProperty=fullName> k označení toho, že vaše sestavení poskytuje podporu pro konkrétní ovládací prvek a jeho podřízené prvky.
+1. Přepište <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.GetControlSupportLevel%2A?displayProperty=fullName> pro indikaci, že vaše sestavení poskytuje podporu pro ovládací prvek a jeho podřízené prvky.
 
-1. Přepsat zbývající abstraktní metody<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider?displayProperty=fullName>
+1. Přepsat zbývající abstraktní metody <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider?displayProperty=fullName>
 
-1. Přidejte třídu balíčku rozšíření, která je odvozena <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>z.
+1. Přidejte třídu balíčku rozšíření, která je odvozena z <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>.
 
-1. `UITestExtensionPackage` Definujte atribut pro sestavení.
+1. Definujte atribut `UITestExtensionPackage` pro sestavení.
 
-1. V rámci třídy balíčku rozšíření přepište <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage.GetService%2A?displayProperty=fullName> , aby vracel třídu poskytovatele vlastností, když je vyžádán poskytovatel vlastností.
+1. V rámci třídy balíčku rozšíření přepište <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage.GetService%2A?displayProperty=fullName> a vraťte třídu poskytovatele vlastností, když je požadován zprostředkovatel vlastností.
 
 1. Přepište zbývající abstraktní metody a vlastnosti <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>.
 
@@ -141,7 +141,7 @@ Po implementaci základní podpory pro záznam a přehrávání a ověřování 
 
 ## <a name="support-code-generation-by-implementing-a-class-to-access-custom-properties"></a>Podpora generování kódu implementací třídy pro přístup k vlastním vlastnostem
 
-Když Tvůrce programového testu uživatelského rozhraní generuje kód ze záznamu relace, používá <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl> třídu pro přístup k ovládacím prvkům.
+Když Tvůrce programového testu uživatelského rozhraní generuje kód ze záznamu relace, používá třídu <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl> pro přístup k ovládacím prvkům.
 
 Pokud jste implementovali poskytovatele vlastností k poskytnutí přístupu k vlastním vlastnostem ovládacího prvku, můžete přidat specializovanou třídu, která se používá pro přístup k těmto vlastnostem. Přidání specializované třídy zjednodušuje vygenerovaný kód.
 
@@ -153,9 +153,9 @@ Pokud jste implementovali poskytovatele vlastností k poskytnutí přístupu k v
 
 1. Implementujte vlastní vlastnosti ovládacího prvku jako vlastnosti třídy.
 
-1. Přepište <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.GetSpecializedClass%2A?displayProperty=fullName> metodu poskytovatele vlastnosti tak, aby vracela typ nové třídy pro podřízené ovládací prvky legendy křivky.
+1. Přepište metodu <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.GetSpecializedClass%2A?displayProperty=fullName> poskytovatele vlastností, aby vracela typ nové třídy pro podřízené ovládací prvky legendy křivky.
 
-1. Přepište <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.GetPropertyNamesClassType%2A> metodu poskytovatele vlastností, aby vracela typ nové metody ' PropertyNames ' třídy.
+1. Přepište metodu <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.GetPropertyNamesClassType%2A> poskytovatele vlastností, aby vracela typ nové metody ' PropertyNames ' třídy.
 
 ## <a name="support-intent-aware-actions-by-implementing-an-action-filter"></a>Akce podporující záměry podpory implementací filtru akcí
 
@@ -169,7 +169,7 @@ Když aplikace Visual Studio zaznamená test, zachytí každou událost myši a 
 
 1. Přepsat [ProcessRule](/previous-versions/visualstudio/visual-studio-2012/dd987281(v=vs.110)). Tento příklad nahrazuje akci dvakrát kliknout pomocí akce jediného kliknutí.
 
-1. Přidejte filtr akce do <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage.GetService%2A> metody balíčku rozšíření.
+1. Přidejte filtr akce do metody <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage.GetService%2A> balíčku rozšíření.
 
 1. Sestavte binární soubory a zkopírujte je do *%ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages*.
 

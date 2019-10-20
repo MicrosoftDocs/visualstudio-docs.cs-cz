@@ -1,32 +1,32 @@
 ---
-title: 'Upozornění: změny byly provedeny na dialogovém okně Konfigurace chování, které nebyly použity'
+title: Upozornění – v dialogovém okně Konfigurovat chování byly provedeny změny, které nebyly aplikovány.
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: ce5822dd-4f10-4c86-b707-7766837be216
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ae3b86be9ec26f9bb8c9b8978a6276169262933d
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: ad2a108c0ce4162beecd77ac0a761d4950904156
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65457893"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648046"
 ---
-# <a name="warning-changes-have-been-made-to-the-configure-behavior-dialog-box-that-have-not-been-applied"></a>Upozornění: V dialogovém okně konfigurace chování došlo ke změnám, které nebyly použity.
+# <a name="warning-changes-have-been-made-to-the-configure-behavior-dialog-box-that-have-not-been-applied"></a>Upozornění: byly provedeny změny v dialogovém okně Konfigurovat chování, které nebylo použito.
 
-Upozornění: Změny byly provedeny na dialogovém okně Konfigurace chování, které nebyly použity. Chcete-li aplikovat provedené změny?
+Upozornění: V dialogovém okně Konfigurovat chování byly provedeny změny, které nebyly aplikovány. Chcete změny použít?
 
-**Konfigurace chování** dialogové okno umožňuje konfigurovat `Insert`, `Update`, a `Delete` chování pro všechny třídy, které jsou k dispozici. Tato zpráva se zobrazí, když vyberete nový **třídy** a **chování** kombinace a předchozí změnu nebyl dosud nebyly použity.
+Dialogové okno **Konfigurovat chování** umožňuje nakonfigurovat `Insert`, `Update` a `Delete` chování pro všechny dostupné třídy. Tato zpráva se zobrazí, když vyberete novou kombinaci **třídy** a **chování** a předchozí změna ještě nebyla použita.
 
-## <a name="change-options"></a>Změna možností
+## <a name="change-options"></a>Změnit možnosti
 
-- Chcete-li použít změny a pokračovat, klikněte na tlačítko **Ano**. Tato změna uplatní pro vybrané **třídy** a **chování**.
+- Chcete-li použít změnu a pokračovat, klikněte na tlačítko **Ano**. Tato změna se aplikuje na vybranou **třídu** a **chování**.
 
-- Pokud chcete zrušit předchozí změnu a pokračovat, klikněte na tlačítko **ne**.
+- Chcete-li zrušit předchozí změnu a pokračovat, klikněte na tlačítko **ne**.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Nástroje LINQ to SQL v sadě Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

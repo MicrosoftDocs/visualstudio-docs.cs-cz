@@ -1,39 +1,39 @@
 ---
-title: Vyloučení ze služby Windows Information Protection
+title: Výjimka ze systému Windows Information Protection
 ms.date: 06/01/2018
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 714d85ea41674563922903f5bf38db04ffc2fbce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ab08ea1f3a4c66c026de781f2d39a0bc9d08af96
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978120"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650870"
 ---
-# <a name="configure-visual-studio-as-a-wip-exempt-app"></a>Konfigurace sady Visual Studio jako aplikaci WIP – výjimka
+# <a name="configure-visual-studio-as-a-wip-exempt-app"></a>Konfigurace sady Visual Studio jako aplikace s výjimkou nedokončené výroby
 
-[Windows Information Protection](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip) (WIP) pomáhá chránit podniková data, abyste zabránili úniku prostřednictvím aplikace, jako jsou e-mailu, sociálních médií a veřejného cloudu, které jsou mimo firemní ovládacího prvku. WIP pomáhá chránit před úniky dat na zařízeních ve vlastnictví společnosti a osobních zařízeních bez vyžadování změny prostředí nebo jiných aplikací.
+[Windows Information Protection](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip) (NV) pomáhá chránit podniková data před únikem aplikací, jako jsou e-mail, sociální média a veřejný cloud, které jsou mimo podniková řízení. Nedokončená výroba pomáhá chránit před náhodnými úniky dat na zařízeních vlastněných podnikem a na osobních zařízeních, aniž by se musely měnit vaše prostředí nebo jiné aplikace.
 
-*Kompatibilních s* aplikace pro WIP se očekává podniková data zabránit v přechodu do nechráněné síťových umístění a vyhnout se šifrováním osobní údaje. Visual Studio není aplikaci s podporou WIP, takže nebude fungovat v prostředích s podporou WIP, pokud je to s výjimkou. Postupujte podle kroků v tomto článku, která sadě Visual Studio do funkce na počítač s podporou WIP.
+Očekává se, že aplikace *podporou* pro nedokončenou výrobu budou bránit podnikovým datům v nechráněných síťových umístěních a nebude se šifrovat osobní údaje. Visual Studio není aplikace podporou, takže nefunguje v prostředí s povolenými nedokončenými výrobou, pokud ji nechcete vyloučit. Použijte postup v tomto článku, pokud chcete, aby aplikace Visual Studio fungovala na počítači s podporou nedokončené výroby.
 
-## <a name="configure-vs-as-a-wip-exempt-app"></a>Konfigurace VS jako aplikace s výjimkou WIP
+## <a name="configure-vs-as-a-wip-exempt-app"></a>Konfigurace VS as a aplikace s výjimkou nedokončené výroby
 
-Můžete od WIP omezení s výjimkou sady Visual Studio, ale stále mohla používat podniková data. WIP výjimkou aplikací můžete připojit k podnikové cloudové prostředky pomocí IP adresy nebo názvu hostitele. Bez šifrování se použije a bude mít aplikace přístup místní soubory.
+Aplikaci Visual Studio můžete vyloučit z omezení nedokončené výroby, ale pořád jim umožní používat podniková data. Aplikace s výjimkou nedokončené výroby se můžou připojovat k prostředkům v podnikovém cloudu pomocí IP adresy nebo názvu hostitele. Nepoužívá se žádné šifrování a aplikace má přístup k místním souborům.
 
-Pokud chcete určit výjimku pro aplikaci Visual Studio z WIP, postupujte [kroky pro desktopové aplikace s výjimkou](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure#exempt-apps-from-a-wip-policy).
+Pokud chcete aplikaci Visual Studio vyloučit z nedokončené výroby, postupujte podle [kroků pro vyloučení desktopové aplikace](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure#exempt-apps-from-a-wip-policy).
 
-## <a name="create-a-wip-exempt-applocker-policy-file"></a>Vytvořte soubor zásad nástroje AppLocker WIP – výjimka
+## <a name="create-a-wip-exempt-applocker-policy-file"></a>Vytvořit soubor zásad AppLockeru s výjimkou nedokončených výrob
 
-Vzhledem k tomu, že sada Visual Studio obsahuje více binárních souborů, [vytvořit soubor zásad nástroje AppLocker WIP výjimkou](/windows/security/threat-protection/windows-defender-application-control/applocker/run-the-automatically-generate-rules-wizard). AppLocker umožňuje automaticky generovat pravidla pro všechny soubory ve složce.
+Vzhledem k tomu, že Visual Studio obsahuje více binárních souborů, [vytvořte soubor zásad AppLockeru bez NEdokončené výroby](/windows/security/threat-protection/windows-defender-application-control/applocker/run-the-automatically-generate-rules-wizard). AppLocker umožňuje automaticky generovat pravidla pro všechny soubory ve složce.
 
-## <a name="add-appcompat-to-the-enterprise-cloud-resource-policy"></a>Přidat AppCompat podnikové zásady prostředků cloudu
+## <a name="add-appcompat-to-the-enterprise-cloud-resource-policy"></a>Přidání AppCompat do zásad podnikového cloudového prostředku
 
-Chcete-li určit, kde se Visual Studio můžete přistupovat k podnikovým datům ve vaší síti, postupujte podle těchto [kroky k definování, kde můžou chráněné aplikace najít a odeslat podniková data](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure#choose-where-apps-can-access-enterprise-data). Pokud chcete zastavit Windows blokovat připojení ke cloudovým prostředkům prostřednictvím IP adresy, ujistěte se, že chcete přidat /\*AppCompat\*/ řetězec, který se nastavení.
+Chcete-li určit, kam má aplikace Visual Studio přistupovat k podnikovým datům ve vaší síti, postupujte podle těchto [kroků a definujte, kam mohou chráněné aplikace najít a odeslat podniková data](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure#choose-where-apps-can-access-enterprise-data). Pokud chcete systému Windows zabránit v blokování připojení ke cloudovým prostředkům prostřednictvím IP adresy, nezapomeňte do tohoto nastavení přidat řetězec/\*AppCompat \*/.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Chování aplikace s WIP](/windows/security/information-protection/windows-information-protection/app-behavior-with-wip)
+- [Chování aplikace s nedokončenou výrobou](/windows/security/information-protection/windows-information-protection/app-behavior-with-wip)

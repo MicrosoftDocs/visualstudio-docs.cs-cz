@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Určení událostí sestavení (C#)'
+title: 'Postupy: určení událostí sestavení (C#)'
 ms.date: 03/21/2019
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -15,14 +15,14 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9484d6977c6896253197215ce185579518448da8
-ms.sourcegitcommit: 0f5f7955076238742f2071d286ad8e896f3a6cad
+ms.openlocfilehash: a28f491ea5af53546f66e066bf8f78575708bc57
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68483707"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656591"
 ---
-# <a name="how-to-specify-build-events-c"></a>Postupy: Určení událostí sestavení (C#)
+# <a name="how-to-specify-build-events-c"></a>Postupy: určení událostí sestavení (C#)
 
 Pomocí událostí sestavení můžete zadat příkazy, které se spustí před spuštěním sestavení nebo po dokončení sestavení. Události sestavení se spustí pouze v případě, že sestavení úspěšně dosáhne těchto bodů v procesu sestavení.
 
@@ -44,21 +44,21 @@ Při sestavení projektu se události před sestavením přidají do souboru s n
 5. V poli **příkazový řádek události po sestavení** zadejte syntaxi události sestavení.
 
    > [!NOTE]
-   > Přidejte příkaz před všechny příkazy po sestavení, které spouštějí soubory *. bat.* `call` Například `call C:\MyFile.bat` nebo `call C:\MyFile.bat call C:\MyFile2.bat`.
+   > Přidejte příkaz `call` před všechny příkazy po sestavení, které spouštějí soubory *. bat* . Například `call C:\MyFile.bat` nebo `call C:\MyFile.bat call C:\MyFile2.bat`.
 
 6. V poli **Spustit událost po sestavení** určete, za jakých podmínek se má spustit událost po sestavení.
 
    > [!NOTE]
    > Chcete-li přidat syntaxi s délkou, nebo vybrat makra sestavení z [dialogového okna Příkazový řádek události před sestavením/po sestavení](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md), klikněte na tlačítko se třemi tečkami ( **...** ) a zobrazte textové pole.
 
-   Syntaxe události sestavení může obsahovat jakýkoli příkaz, který je platný na příkazovém řádku nebo v souboru *. bat* . Název dávkového souboru by měl předcházet `call` , aby bylo zajištěno, že budou provedeny všechny následné příkazy.
+   Syntaxe události sestavení může obsahovat jakýkoli příkaz, který je platný na příkazovém řádku nebo v souboru *. bat* . Název dávkového souboru by měl předcházet `call`, aby bylo zajištěno, že budou provedeny všechny následné příkazy.
 
    > [!NOTE]
    > Pokud událost před sestavením nebo po sestavení není úspěšně dokončena, můžete ukončit sestavení tím, že se akce události ukončí s kódem jiným než nula (0), což označuje úspěšnou akci.
 
 ## <a name="example"></a>Příklad
 
-Následující postup ukazuje, jak nastavit minimální verzi operačního systému v manifestu aplikace pomocí příkazu *. exe* , který je volán z události po sestavení (soubor *. exe. manifest* v adresáři projektu). Minimální verze operačního systému je číslo se čtyřmi částmi, například 4.10.0.0. Pro nastavení minimální verze operačního systému příkaz změní `<dependentOS>` část manifestu:
+Následující postup ukazuje, jak nastavit minimální verzi operačního systému v manifestu aplikace pomocí příkazu *. exe* , který je volán z události po sestavení (soubor *. exe. manifest* v adresáři projektu). Minimální verze operačního systému je číslo se čtyřmi částmi, například 4.10.0.0. Chcete-li nastavit minimální verzi operačního systému, příkaz změní část `<dependentOS>` manifestu:
 
 ```xml
 <dependentOS>
@@ -72,13 +72,13 @@ Následující postup ukazuje, jak nastavit minimální verzi operačního syst�
 
 1. Vytvořte nový projekt **konzolové aplikace** pro příkaz. Pojmenujte projekt **ChangeOSVersionCS**.
 
-2. V *program.cs*přidejte následující řádek do dalších `using` příkazů v horní části souboru:
+2. V *program.cs*přidejte následující řádek do dalších direktiv `using` v horní části souboru:
 
    ```csharp
    using System.Xml;
    ```
 
-3. V oboru názvů nahraďte implementaci `Program` třídy následujícím kódem: `ChangeOSVersionCS`
+3. V oboru názvů `ChangeOSVersionCS` nahraďte implementaci `Program` třídy následujícím kódem:
 
    ```csharp
    class Program
@@ -148,9 +148,9 @@ Dále vyvolejte tento příkaz v události po sestavení pro úpravu manifestu a
 
 4. Publikujte projekt kliknutím na **Publikovat nyní**.
 
-   Soubor manifestu je sestaven a uložen do *C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe.manifest*. Chcete-li zobrazit manifest, klikněte pravým tlačítkem myši na soubor, klikněte na možnost **otevřít**v aplikaci, vyberte **možnost vybrat program v seznamu**a pak klikněte na tlačítko Poznámkový **blok**.
+   Soubor manifestu je sestaven a uložen do *C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe.manifest*. Chcete-li zobrazit manifest, klikněte pravým tlačítkem myši na soubor, klikněte na možnost **otevřít**v aplikaci, vyberte **možnost vybrat program v seznamu**a pak klikněte na tlačítko **Poznámkový blok**.
 
-   Vyhledejte v souboru `<osVersionInfo>` element. Například verze může být:
+   V souboru vyhledejte `<osVersionInfo>` element. Například verze může být:
 
    ```xml
    <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
@@ -164,7 +164,7 @@ Dále vyvolejte tento příkaz v události po sestavení pro úpravu manifestu a
 
    Při sestavování projektu tento příkaz změní minimální verzi operačního systému v manifestu aplikace na 5.1.2600.0.
 
-   Vzhledem k tomu, že `$(TargetPath).manifest`  makrovyjadřujeúplnoucestuprovytvářenýspustitelnýsoubor,určímanifestaplikacevytvořenývadresáři`$(TargetPath)` bin. Publikování zkopíruje tento manifest do umístění pro publikování, které jste nastavili dříve.
+   Vzhledem k tomu, že makro `$(TargetPath)` vyjadřuje úplnou cestu pro vytvářený spustitelný soubor, `$(TargetPath).manifest` určuje manifest aplikace vytvořený v adresáři *bin* . Publikování zkopíruje tento manifest do umístění pro publikování, které jste nastavili dříve.
 
 7. Publikujte projekt znovu.
 
@@ -178,5 +178,5 @@ Dále vyvolejte tento příkaz v události po sestavení pro úpravu manifestu a
 
 - [Stránka události sestavení, Návrhář projektu (C#)](../ide/reference/build-events-page-project-designer-csharp.md)
 - [Dialogové okno Příkazový řádek události před sestavením/po sestavení](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)
-- [Postupy: Zadat události sestavení (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)
+- [Postupy: určení událostí sestavení (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)
 - [Kompilace a sestavení](../ide/compiling-and-building-in-visual-studio.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Generování kódu pomocí textových šablon | Dokumentace Microsoftu'
+title: 'Návod: vytvoření kódu pomocí textových šablon | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -9,417 +9,416 @@ helpviewer_keywords:
 - walkthroughs [text templates]
 ms.assetid: 24602ade-baca-425e-a6ce-be09a2c7f7e1
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 37abc4862b12ab11239b2dd8a24b8c18acab2a51
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 29a455194e64ee30186941cb67b014170426cce0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446699"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659254"
 ---
-# <a name="walkthrough-generating-code-by-using-text-templates"></a>Návod: Generování kódu pomocí textových šablon
+# <a name="walkthrough-generating-code-by-using-text-templates"></a>Návod: Vytvoření kódu pomocí textových šablon
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Generování kódu umožňuje vytvářet programový kód, který je silně typované a ještě můžete snadno změnit při změně modelu zdroje. Tento rozdíl oproti alternativní postup psaní naprosto obecné program, který přijímá konfigurační soubor, který je flexibilnější, ale výsledky v kódu, který není ani tak snadno přečíst a změnit, ani tyto dobrého výkonu. Tento návod ukazuje tuto výhodu.  
-  
-## <a name="typed-code-for-reading-xml"></a>Zadaný kód XML pro čtení  
- Obor názvů System.Xml poskytuje k dispozici komplexní nástroje pro načítání dokumentu XML a pak ho volně přejdete v paměti. Bohužel na všech uzlech mají stejného typu XmlNode. Proto je velmi snadné vytvořit programovací chyby, jako je nesprávného typu podřízený uzel nebo nesprávné atributů byl očekáván.  
-  
- V tomto příkladu projektu šablona načte ukázkový soubor XML a vygeneruje třídy, které odpovídají každého typu uzlu. V kódu ručně psanou můžete použít tyto třídy pro navigaci souboru XML. Aplikace můžete použít také u jiných souborů, které používají stejné typy uzlů. Účelem ukázkový soubor XML je poskytnout příklady, všechny typy uzlů, které chcete, aby se vaše aplikace.  
-  
+Generování kódu umožňuje vytvářet kód programu, který je silného typu a který lze snadno změnit při změně zdrojového modelu. Na rozdíl od tohoto alternativní techniky psaní zcela obecného programu, který přijímá konfigurační soubor, který je flexibilnější, ale má za následek, že není snadné ho číst a měnit, ani takový dobrý výkon. Tento názorný postup ukazuje tuto výhodu.
+
+## <a name="typed-code-for-reading-xml"></a>Typový kód pro čtení XML
+ Obor názvů System. XML poskytuje komplexní nástroje pro načtení dokumentu XML a jeho navigaci v paměti. Všechny uzly však mají stejný typ, XmlNode. Je proto velmi snadné dělat chyby programování, například očekávat špatný typ podřízeného uzlu nebo nesprávné atributy.
+
+ V tomto příkladu projektu šablona čte ukázkový soubor XML a generuje třídy, které odpovídají každému typu uzlu. V kódu psané rukou můžete použít tyto třídy pro navigaci v souboru XML. Můžete také spustit aplikaci na všech ostatních souborech, které používají stejné typy uzlů. Účelem ukázkového souboru XML je poskytnout příklady všech typů uzlů, se kterými se má aplikace zabývat.
+
 > [!NOTE]
-> Aplikace [xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765), který je součástí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], můžete ze souborů XML vygenerovat třídy silného typu. Jako příklad je k dispozici šablona je vidět tady.  
-  
- Tady je ukázkový soubor:  
-  
-```  
-<?xml version="1.0" encoding="utf-8" ?>  
-<catalog>  
-  <artist id ="Mike%20Nash" name="Mike Nash Quartet">  
-    <song id ="MikeNashJazzBeforeTeatime">Jazz Before Teatime</song>  
-    <song id ="MikeNashJazzAfterBreakfast">Jazz After Breakfast</song>  
-  </artist>  
-  <artist id ="Euan%20Garden" name="Euan Garden">  
-    <song id ="GardenScottishCountry">Scottish Country Garden</song>  
-  </artist>  
-</catalog>  
-```  
-  
- V projektu, že tento návod vytvoří, můžete napsat následující kód a technologie IntelliSense vyzve správné názvy atributů a podřízených při psaní:  
-  
-```  
-Catalog catalog = new Catalog(xmlDocument);  
-foreach (Artist artist in catalog.Artist)  
-{  
-  Console.WriteLine(artist.name);  
-  foreach (Song song in artist.Song)  
-  {  
-    Console.WriteLine("   " + song.Text);  
-  }  
-}  
-```  
-  
- Oproti to netypového kódu, který můžete například napsat bez šablony:  
-  
-```  
-XmlNode catalog = xmlDocument.SelectSingleNode("catalog");  
-foreach (XmlNode artist in catalog.SelectNodes("artist"))  
-{  
-    Console.WriteLine(artist.Attributes["name"].Value);  
-    foreach (XmlNode song in artist.SelectNodes("song"))  
-    {  
-         Console.WriteLine("   " + song.InnerText);  
-     }  
-}  
-```  
-  
- Ve verzi silného typu způsobí změnu schématu XML změny třídám. Kompilátor bude zvýraznění částí kódu aplikace, které se musí změnit. Ve verzi netypový kód, který používá obecný kód XML neexistuje žádná taková podpora.  
-  
- V tomto projektu jeden soubor šablony slouží ke generování třídy, které umožní zadané verze.  
-  
-## <a name="setting-up-the-project"></a>Nastavení projektu  
-  
-### <a name="create-or-open-a-c-project"></a>Vytvoření nebo otevření projektu v jazyce C#  
- Tento postup můžete použít jakéhokoli kódu projektu. Tento návod používá projektu v jazyce C# a pro účely testování použijeme konzolovou aplikaci.  
-  
-##### <a name="to-create-the-project"></a>Vytvoření projektu  
-  
-1. Na **souboru** klikněte na nabídku **nový** a potom klikněte na tlačítko **projektu**.  
-  
-2. Klikněte na tlačítko **Visual C#** uzel a potom v **šablony** podokně klikněte na tlačítko **konzolové aplikace.**  
-  
-### <a name="add-a-prototype-xml-file-to-the-project"></a>Přidání souboru XML prototyp do projektu  
- Účelem tohoto souboru je poskytnout ukázky typy uzlů XML, které chcete, aby vaše aplikace bude moct číst. To může být soubor, který se použije pro testování vašich aplikací. Šablona vytvoří třída jazyka C# pro každý typ uzlu v tomto souboru.  
-  
- Soubor by měl být součástí projektu tak, aby ho mohou číst šablonu, ale nebude součástí kompilované aplikace.  
-  
-##### <a name="to-add-an-xml-file"></a>Přidání souboru XML  
-  
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt, klikněte na tlačítko **přidat** a potom klikněte na tlačítko **nová položka**.  
-  
-2. V **přidat novou položku** dialogu **soubor XML** z **šablony** podokně.  
-  
-3. Přidejte ukázkový obsah do souboru.  
-  
-4. V tomto návodu, pojmenujte soubor `exampleXml.xml`. Nastavení obsahu souboru má být XML je znázorněno v předchozí části.  
-  
-   .  
-  
-### <a name="add-a-test-code-file"></a>Přidat soubor kódu testu  
- Přidejte do projektu soubor jazyka C# a zápis do něj ukázku, kterou chcete být schopni napsat kód. Příklad:  
-  
-```  
-using System;  
-namespace MyProject  
-{  
-  class CodeGeneratorTest  
-  {  
-    public void TestMethod()  
-    {  
-      Catalog catalog = new Catalog(@"..\..\exampleXml.xml");  
-      foreach (Artist artist in catalog.Artist)  
-      {  
-        Console.WriteLine(artist.name);  
-        foreach (Song song in artist.Song)  
-        {  
-          Console.WriteLine("   " + song.Text);  
-} } } } }  
-```  
-  
- V této fázi se nepodaří tento kód zkompilovat. Při psaní šablony, vygeneruje třídy, které umožňují ji proběhla úspěšně.  
-  
- Výstup této funkce test známé obsahu ukázkový soubor XML může prohlédnout komplexnější test. Ale v tomto návodu budeme spokojeni při kompilaci testovací metody.  
-  
-### <a name="add-a-text-template-file"></a>Přidat soubor textové šablony  
- Přidejte soubor textové šablony a nastavte výstup rozšíření "cs".  
-  
-##### <a name="to-add-a-text-template-file-to-your-project"></a>Chcete-li přidat do projektu soubor textové šablony  
-  
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt, klikněte na tlačítko **přidat**a potom klikněte na tlačítko **nová položka**.  
-  
-2. V **přidat novou položku** dialogové okno Vyberte **textové šablony** z **šablony** podokně.  
-  
+> Aplikace [XSD. exe](http://go.microsoft.com/fwlink/?LinkId=178765), která je součástí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], může generovat třídy silného typu ze souborů XML. Zde uvedená šablona je uvedena jako příklad.
+
+ Tady je ukázkový soubor:
+
+```
+<?xml version="1.0" encoding="utf-8" ?>
+<catalog>
+  <artist id ="Mike%20Nash" name="Mike Nash Quartet">
+    <song id ="MikeNashJazzBeforeTeatime">Jazz Before Teatime</song>
+    <song id ="MikeNashJazzAfterBreakfast">Jazz After Breakfast</song>
+  </artist>
+  <artist id ="Euan%20Garden" name="Euan Garden">
+    <song id ="GardenScottishCountry">Scottish Country Garden</song>
+  </artist>
+</catalog>
+```
+
+ V projektu, který tento návod sestaví, můžete napsat kód jako následující a IntelliSense zobrazí výzvu se správným atributem a podřízenými názvy při psaní:
+
+```
+Catalog catalog = new Catalog(xmlDocument);
+foreach (Artist artist in catalog.Artist)
+{
+  Console.WriteLine(artist.name);
+  foreach (Song song in artist.Song)
+  {
+    Console.WriteLine("   " + song.Text);
+  }
+}
+```
+
+ Naproti tomu Netypový kód, který můžete napsat bez šablony:
+
+```
+XmlNode catalog = xmlDocument.SelectSingleNode("catalog");
+foreach (XmlNode artist in catalog.SelectNodes("artist"))
+{
+    Console.WriteLine(artist.Attributes["name"].Value);
+    foreach (XmlNode song in artist.SelectNodes("song"))
+    {
+         Console.WriteLine("   " + song.InnerText);
+     }
+}
+```
+
+ Ve verzi silného typu bude změna schématu XML mít za následek změny tříd. Kompilátor zvýrazní části kódu aplikace, které je třeba změnit. V netypové verzi, která používá obecný kód XML, neexistuje žádná taková podpora.
+
+ V tomto projektu se k vygenerování tříd, které vytvářejí typovou verzi, používá jeden soubor šablony.
+
+## <a name="setting-up-the-project"></a>Nastavení projektu
+
+### <a name="create-or-open-a-c-project"></a>Vytvoření nebo otevření C# projektu
+ Tuto techniku můžete použít pro libovolný projekt kódu. Tento návod používá C# projekt a pro účely testování používáme konzolovou aplikaci.
+
+##### <a name="to-create-the-project"></a>Vytvoření projektu
+
+1. V nabídce **soubor** klikněte na příkaz **Nový** a potom klikněte na **projekt**.
+
+2. Klikněte na **uzel C# vizuálů** a potom v podokně **šablony** klikněte na **Konzolová aplikace.**
+
+### <a name="add-a-prototype-xml-file-to-the-project"></a>Přidat do projektu prototypový soubor XML
+ Účelem tohoto souboru je poskytnout vzorky typů uzlů XML, které mají být schopné číst aplikace. Může se jednat o soubor, který se bude používat k testování vaší aplikace. Šablona vytvoří C# třídu pro každý typ uzlu v tomto souboru.
+
+ Soubor by měl být součástí projektu, aby jej šablona mohla číst, ale nebude integrován do kompilované aplikace.
+
+##### <a name="to-add-an-xml-file"></a>Přidání souboru XML
+
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt, klikněte na tlačítko **Přidat** a poté klikněte na položku **Nová položka**.
+
+2. V dialogovém okně **Přidat novou položku** vyberte v podokně **šablony** možnost **soubor XML** .
+
+3. Přidejte do souboru ukázkový obsah.
+
+4. V tomto návodu pojmenujte soubor `exampleXml.xml`. Nastavte obsah souboru tak, aby byl XML zobrazený v předchozí části.
+
+   .
+
+### <a name="add-a-test-code-file"></a>Přidat soubor testovacího kódu
+ Přidejte do C# projektu soubor a zapište do něj ukázku kódu, který chcete zapisovat. Příklad:
+
+```
+using System;
+namespace MyProject
+{
+  class CodeGeneratorTest
+  {
+    public void TestMethod()
+    {
+      Catalog catalog = new Catalog(@"..\..\exampleXml.xml");
+      foreach (Artist artist in catalog.Artist)
+      {
+        Console.WriteLine(artist.name);
+        foreach (Song song in artist.Song)
+        {
+          Console.WriteLine("   " + song.Text);
+} } } } }
+```
+
+ V této fázi se tento kód nedaří zkompilovat. Při psaní šablony vygenerujete třídy, které jim umožní úspěch.
+
+ Komplexnější test může zkontrolovat výstup této testovací funkce proti známému obsahu ukázkového souboru XML. V tomto návodu ale budeme při kompilaci testovací metody spokojeni.
+
+### <a name="add-a-text-template-file"></a>Přidat textový soubor šablony
+ Přidejte textový soubor šablony a nastavte rozšíření Output na. cs.
+
+##### <a name="to-add-a-text-template-file-to-your-project"></a>Přidání souboru textové šablony do projektu
+
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt, klikněte na tlačítko **Přidat**a poté klikněte na položku **Nová položka**.
+
+2. V dialogovém okně **Přidat novou položku** vyberte v podokně **šablony** **text šablona** .
+
    > [!NOTE]
-   > Ujistěte se, že přidáte textové šablony a ne Předzpracované textové šablony.  
-  
-3. V souboru v direktivě šablony změnit `hostspecific` atribut `true`.  
-  
-    Tato změna vám umožní kód šablony pro získání přístupu k [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] služby.  
-  
-4. V direktivě output změňte atribut rozšíření "cs" tak, aby tato šablona vygeneruje soubor jazyka C#. V projektu jazyka Visual Basic by ho změňte na "VB".  
-  
-5. Uložte soubor. V této fázi soubor textové šablony by měl obsahovat tyto řádky:  
-  
-   ```  
-   <#@ template debug="false" hostspecific="true" language="C#" #>  
-   <#@ output extension=".cs" #>  
-   ```  
-  
-   .  
-  
-   Všimněte si, že soubor cs zobrazí v Průzkumníku řešení jako pobočka souboru šablony. Můžete ho zobrazit kliknutím na [+] vedle názvu souboru šablony. Tento soubor je vygenerován ze souboru šablony při každém uložení nebo přesunutí výběru směrem od souboru šablony. Vygenerovaný soubor se zkompiluje jako součást vašeho projektu.  
-  
-   Pro usnadnění práce při vývoji soubor šablony, uspořádat okna soubor šablony a vygenerovaný soubor tak, aby si ji můžete zobrazit vedle sebe. Díky tomu můžete zobrazit okamžitě výstup šablony. Můžete si všimnout, že pokud generuje šablona neplatný kód jazyka C#, chyby se zobrazí v okně chybové zprávy.  
-  
-   Veškeré úpravy, které můžete provést přímo v generovaném souboru budou ztraceny, při každém uložení souboru šablony. Si proto Vyhněte se úpravám vygenerovaný soubor, nebo upravit pouze pro krátké experimentů. Někdy je užitečné si vyzkoušet krátký fragment kódu v generovaném souboru, kde je technologie IntelliSense v operaci, a zkopírujte ho do souboru šablony.  
-  
-## <a name="developing-the-text-template"></a>Vývoj textové šablony  
- Následující doporučené pokyny agilního vývoje bude vyvíjíme šablony do menších krůčcích vymazání některé chyby na každý přírůstek, dokud testovací kód správně zkompiluje a spustí.  
-  
-### <a name="prototype-the-code-to-be-generated"></a>Prototyp chcete vygenerovat kód  
- Testovací kód vyžaduje třídu pro každý uzel v souboru. Proto se některé chyby kompilace přestane být zobrazována Pokud připojit tyto řádky do šablony a pak ho uložte:  
-  
-```  
-class Catalog {}   
-class Artist {}  
-class Song {}  
-```  
-  
- Díky tomu můžete zjistit, co je potřeba, ale deklarace by měl být vygenerován z typy uzlů v ukázkovém souboru XML. Odstraňte tyto experimentální řádky ze šablony.  
-  
-### <a name="generate-application-code-from-the-model-xml-file"></a>Generovat kód aplikace ze souboru XML modelu  
- Ke čtení souboru XML a generovat deklarace třídy, nahraďte obsah následujícím kódem šablony šablony:  
-  
-```  
-<#@ template debug="false" hostspecific="true" language="C#" #>  
-<#@ output extension=".cs" #>  
-<#@ assembly name="System.Xml"#>  
-<#@ import namespace="System.Xml" #>  
-<#  
- XmlDocument doc = new XmlDocument();  
- // Replace this file path with yours:  
- doc.Load(@"C:\MySolution\MyProject\exampleXml.xml");  
- foreach (XmlNode node in doc.SelectNodes("//*"))  
- {  
-#>  
-  public partial class <#= node.Name #> {}  
-<#  
- }  
-#>  
-```  
-  
- Cesta k souboru nahraďte správnou cestu k projektu.  
-  
- Všimněte si, že oddělovače bloku kódu `<#...#>`. Tyto oddělovače párování fragment kódu programu, která generuje text. Oddělovače blok výrazu `<#=...#>` párování výraz, který lze vyhodnotit na řetězec.  
-  
- Když vytváříte šablonu, která generuje zdrojový kód pro vaši aplikaci, pracujete se sekvenčním dva texty a samostatné programu. Program uvnitř bloku oddělovače kód se spustí pokaždé, když uložíte šablonu nebo přesunutí výběru na další okno. Text, který generuje, který se zobrazí vně oddělovače, se zkopíruje do generovaného souboru a stane součástí kódu aplikace.  
-  
- `<#@assembly#>` – Direktiva se chová jako odkaz, zpřístupnění sestavení kód šablony. Seznam sestavení viděli šablonou je oddělené od seznamu odkazů v projektu aplikace.  
-  
- `<#@import#>` – Direktiva funguje stejně jako `using` příkaz, abyste mohli používat krátké názvy tříd v importované oboru názvů.  
-  
- Bohužel, i když se tato šablona vygeneruje kód, vytvoří deklaraci třídy pro každý uzel v ukázkový soubor XML, tak, že pokud existuje několik instancí `<song>` uzel, zobrazí se několik deklarací skladby třídy.  
-  
-### <a name="read-the-model-file-then-generate-the-code"></a>Čtení souboru modelu a generování kódu  
- Mnoho textové šablony se řídí vzorem ve kterém první část šablony, přečte zdrojový soubor a druhá část vygeneruje šablonu. Musíme přečíst všechny ukázkový soubor v slouží ke shrnutí typy uzlů, které obsahuje a potom generovat deklarace tříd. Jiné `<#@import#>` je potřeba, takže můžeme použít `Dictionary<>:`  
-  
-```  
-<#@ template debug="false" hostspecific="true" language="C#" #>  
-<#@ output extension=".cs" #>  
-<#@ assembly name="System.Xml"#>  
-<#@ import namespace="System.Xml" #>  
-<#@ import namespace="System.Collections.Generic" #>  
-<#  
- // Read the model file  
- XmlDocument doc = new XmlDocument();  
- doc.Load(@"C:\MySolution\MyProject\exampleXml.xml");  
- Dictionary <string, string> nodeTypes =   
-        new Dictionary<string, string>();  
- foreach (XmlNode node in doc.SelectNodes("//*"))  
- {  
-   nodeTypes[node.Name] = "";  
- }  
- // Generate the code  
- foreach (string nodeName in nodeTypes.Keys)  
- {  
-#>  
-  public partial class <#= nodeName #> {}  
-<#  
- }  
-#>  
-```  
-  
-### <a name="add-an-auxiliary-method"></a>Přidání pomocné metody  
- Řídicí blok funkcí třídy je blok, ve kterém můžete definovat pomocné metody. Blok je ohraničen `<#+...#>` a musí být uvedena jako poslední blok v souboru.  
-  
- Pokud dáváte přednost názvy tříd začínat velkým písmenem, můžete nahradit následující kód šablony poslední část šablony:  
-  
-```  
-// Generate the code  
- foreach (string nodeName in nodeTypes.Keys)  
- {  
-#>  
-  public partial class <#= UpperInitial(nodeName) #> {}  
-<#  
- }  
-#>  
-<#+  
- private string UpperInitial(string name)  
- { return name[0].ToString().ToUpperInvariant() + name.Substring(1); }  
-#>  
-```  
-  
- V této fázi .cs vygenerovaný soubor obsahuje následující deklarace:  
-  
-```  
-public partial class Catalog {}  
-public partial class Artist {}  
-public partial class Song {}  
-```  
-  
- Další podrobnosti, jako je například vlastnosti podřízené uzly, atributy a vnitřní text můžete přidat pomocí stejným způsobem.  
-  
-### <a name="accessing-the-visual-studio-api"></a>Přístup k rozhraní API sady Visual Studio  
- Nastavení `hostspecific` atribut `<#@template#>` – direktiva umožňuje získat přístup k šabloně [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozhraní API. Šablona může být využit k získání umístění souborů projektu, abyste se vyhnuli použití absolutní cestu k souboru v kódu šablony.  
-  
-```  
-<#@ template debug="false" hostspecific="true" language="C#" #>  
-...  
-<#@ assembly name="EnvDTE" #>  
-...  
-EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)  
-                       .GetService(typeof(EnvDTE.DTE));  
-// Open the prototype document.  
-XmlDocument doc = new XmlDocument();  
-doc.Load(System.IO.Path.Combine(dte.ActiveDocument.Path, "exampleXml.xml"));  
-```  
-  
-## <a name="completing-the-text-template"></a>Dokončení textové šablony  
- Následující obsah šablony generuje kód, který umožňuje testovací kód kompilace a spuštění.  
-  
-```  
-<#@ template debug="false" hostspecific="true" language="C#" #>  
-<#@ output extension=".cs" #>  
-<#@ assembly name="System.Xml" #>  
-<#@ assembly name="EnvDTE" #>  
-<#@ import namespace="System.Xml" #>  
-<#@ import namespace="System.Collections.Generic" #>  
-using System;using System.Collections.Generic;using System.Linq;using System.Xml;namespace MyProject{  
-<#  
- // Map node name --> child name --> child node type  
- Dictionary<string, Dictionary<string, XmlNodeType>> nodeTypes = new Dictionary<string, Dictionary<string, XmlNodeType>>();  
-  
- // The Visual Studio host, to get the local file path.  
- EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)  
-                       .GetService(typeof(EnvDTE.DTE));  
- // Open the prototype document.  
- XmlDocument doc = new XmlDocument();  
- doc.Load(System.IO.Path.Combine(dte.ActiveDocument.Path, "exampleXml.xml"));  
- // Inspect all the nodes in the document.  
- // The example might contain many nodes of the same type,   
- // so make a dictionary of node types and their children.  
- foreach (XmlNode node in doc.SelectNodes("//*"))  
- {  
-   Dictionary<string, XmlNodeType> subs = null;  
-   if (!nodeTypes.TryGetValue(node.Name, out subs))  
-   {  
-     subs = new Dictionary<string, XmlNodeType>();  
-     nodeTypes.Add(node.Name, subs);  
-   }  
-   foreach (XmlNode child in node.ChildNodes)  
-   {  
-     subs[child.Name] = child.NodeType;  
-   }   
-   foreach (XmlNode child in node.Attributes)  
-   {  
-     subs[child.Name] = child.NodeType;  
-   }  
- }  
- // Generate a class for each node type.  
- foreach (string className in nodeTypes.Keys)  
- {  
-    // Capitalize the first character of the name.  
-#>  
-    partial class <#= UpperInitial(className) #>  
-    {      private XmlNode thisNode;      public <#= UpperInitial(className) #>(XmlNode node)       { thisNode = node; }  
-  
-<#  
-    // Generate a property for each child.  
-    foreach (string childName in nodeTypes[className].Keys)  
-    {  
-      // Allow for different types of child.  
-      switch (nodeTypes[className][childName])  
-      {  
-         // Child nodes:  
-         case XmlNodeType.Element:  
-#>  
-      public IEnumerable<<#=UpperInitial(childName)#>><#=UpperInitial(childName) #>      {         get         {            foreach (XmlNode node in                thisNode.SelectNodes("<#=childName#>"))              yield return new <#=UpperInitial(childName)#>(node);       } }  
-<#  
-         break;  
-         // Child attributes:  
-         case XmlNodeType.Attribute:  
-#>  
-      public string <#=childName #>      { get { return thisNode.Attributes["<#=childName#>"].Value; } }  
-<#  
-         break;  
-         // Plain text:  
-         case XmlNodeType.Text:  
-#>  
-      public string Text  { get { return thisNode.InnerText; } }  
-<#  
-         break;  
-       } // switch  
-     } // foreach class child  
-  // End of the generated class:  
-#>  
-   }   
-<#  
- } // foreach class  
-  
-   // Add a constructor for the root class   
-   // that accepts an XML filename.  
-   string rootClassName = doc.SelectSingleNode("*").Name;  
-#>  
-   partial class <#= UpperInitial(rootClassName) #>   {      public <#= UpperInitial(rootClassName) #>(string fileName){        XmlDocument doc = new XmlDocument();        doc.Load(fileName);        thisNode = doc.SelectSingleNode("<#=rootClassName#>");}   }}  
-<#+  
-   private string UpperInitial(string name)  
-   {  
-      return name[0].ToString().ToUpperInvariant() + name.Substring(1);  
-   }  
-#>  
-```  
-  
-### <a name="running-the-test-program"></a>Spuštění programu testu  
- Ve funkci main konzolové aplikace bude spuštěno následující řádky testovací metody. Stisknutím klávesy F5 spusťte program v režimu ladění:  
-  
-```  
-using System;  
-namespace MyProject  
-{ class Program  
-  { static void Main(string[] args)  
-    { new CodeGeneratorTest().TestMethod();  
-      // Allow user to see the output:  
-      Console.ReadLine();  
-} } }  
-```  
-  
-### <a name="writing-and-updating-the-application"></a>Psaní a aktualizace aplikace  
- Aplikace je teď možné psát v styl silného typu pomocí vygenerovaných tříd, namísto použití obecný kód XML.  
-  
- Při změně schématu XML, lze snadno generovat nové třídy. Kompilátor vám sdělí vývojář, ve kterém se musí aktualizovat kód aplikace.  
-  
- Pokud chcete znovu vygenerovat třídy při změně ukázkový soubor XML, klikněte na tlačítko **Transformovat všechny šablony** v panelu nástrojů Průzkumníka řešení.  
-  
-## <a name="conclusion"></a>Závěr  
- Tento názorný postup ukazuje několik technik a výhody generování kódu:  
-  
-- *Generování kódu* je vytvoření část zdrojového kódu aplikace *modelu*. Model obsahuje informace ve formě vhodné k doméně aplikace a může změnit během životního cyklu aplikace.  
-  
-- Silné typování je jednou z výhod generování kódu. Zatímco model představuje informace ve formě vhodnější pro uživatele, umožňuje generovaného kódu ostatních částech aplikace se informace o použití sadu typů.  
-  
-- Technologie IntelliSense a kompilátor vám pomůžou vytvořit kód, který používá schéma modelu, pokud píšete nový kód pro i když dojde k aktualizaci schématu.  
-  
-- Přidávání souboru jednou šablonou znamená přístupnější aplikaci do projektu může poskytovat i tyto výhody.  
-  
-- Textové šablony můžete vyvinuli a testovat rychle a postupně.  
-  
-  V tomto podrobném návodu kód programu skutečně nevygeneruje instance modelu, reprezentativní vzorek souborů XML, které budou zpracovávat aplikace. V rámci formálnější přístupu schématu XML by vstup do šablony ve formě souboru XSD nebo definice jazyka specifického pro doménu. Tento přístup usnadníme pro šablonu, kterou chcete určit vlastnosti například násobnosti relace.  
-  
-## <a name="troubleshooting-the-text-template"></a>Řešení potíží s textové šablony  
- Pokud jste viděli šablona transformace nebo kompilace chyby **seznam chyb**, nebo pokud nevygeneroval výstupního souboru, je možné řešit textové šablony pomocí technik popsaných v [generování Soubory pomocí nástroje TextTransform](../modeling/generating-files-with-the-texttransform-utility.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)   
- [Zápis textové šablony T4](../modeling/writing-a-t4-text-template.md)
+   > Ujistěte se, že jste přidali textovou šablonu, nikoli předzpracovaná textovou šablonu.
+
+3. V souboru v direktivě šablony změňte atribut `hostspecific` na `true`.
+
+    Tato změna umožní kódu šablony získat přístup k [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] službám.
+
+4. V direktivě Output změňte atribut Extension na ". cs", aby šablona vygenerovala C# soubor. V Visual Basic projektu byste ho změnili na ". vb".
+
+5. Uložte soubor. V této fázi by soubor textové šablony měl obsahovat tyto řádky:
+
+   ```
+   <#@ template debug="false" hostspecific="true" language="C#" #>
+   <#@ output extension=".cs" #>
+   ```
+
+   .
+
+   Všimněte si, že soubor. cs se zobrazí v Průzkumník řešení jako dceřiná položka souboru šablony. Můžete ji zobrazit kliknutím na [+] vedle názvu souboru šablony. Tento soubor je vygenerován ze souboru šablony vždy, když uložíte nebo přesunete fokus mimo soubor šablony. Vygenerovaný soubor se zkompiluje jako součást projektu.
+
+   Pro usnadnění práce při vývoji souboru šablony uspořádejte okna souboru šablony a vygenerovaný soubor, abyste je viděli vedle sebe. To vám umožní hned zobrazit výstup šablony. Všimněte si také, že pokud Šablona generuje neplatný C# kód, zobrazí se v okně chybová zpráva chyby.
+
+   Všechny úpravy, které provedete přímo ve vygenerovaném souboru, budou ztraceny při každém uložení souboru šablony. Proto byste se buď vyhnuli úpravám vygenerovaného souboru, nebo je jenom upravovat jenom pro krátké experimenty. Někdy je vhodné vyzkoušet krátký fragment kódu ve vygenerovaném souboru, kde je technologie IntelliSense v provozu, a pak ji zkopírovat do souboru šablony.
+
+## <a name="developing-the-text-template"></a>Vývoj textové šablony
+ Po dosažení osvědčených rad pro agilní vývoj budeme vyvíjet šablonu v malých krocích, takže se v každém přírůstku vymaže některé chyby, dokud testovací kód nebude zkompilován a správně spuštěn.
+
+### <a name="prototype-the-code-to-be-generated"></a>Vytvoření prototypu kódu, který se má vygenerovat
+ Testovací kód vyžaduje třídu pro každý uzel v souboru. Proto některé chyby kompilace zmizí, pokud tyto řádky připojíte k šabloně a uložíte je:
+
+```
+class Catalog {}
+class Artist {}
+class Song {}
+```
+
+ To vám pomůže zjistit, co je potřeba, ale deklarace by se měly vygenerovat z typů uzlů v ukázkovém souboru XML. Odstraňte tyto experimentální řádky ze šablony.
+
+### <a name="generate-application-code-from-the-model-xml-file"></a>Generování kódu aplikace ze souboru XML modelu
+ Chcete-li číst soubor XML a generovat deklarace třídy, nahraďte obsah šablony následujícím kódem šablony:
+
+```
+<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Xml"#>
+<#@ import namespace="System.Xml" #>
+<#
+ XmlDocument doc = new XmlDocument();
+ // Replace this file path with yours:
+ doc.Load(@"C:\MySolution\MyProject\exampleXml.xml");
+ foreach (XmlNode node in doc.SelectNodes("//*"))
+ {
+#>
+  public partial class <#= node.Name #> {}
+<#
+ }
+#>
+```
+
+ Nahraďte cestu k souboru správnou cestou k vašemu projektu.
+
+ Všimněte si oddělovačů bloků kódu `<#...#>`. Tyto oddělovače jsou v závorkách fragment kódu programu, který generuje text. Oddělovače bloku výrazu `<#=...#>` hranaté závorky výraz, který lze vyhodnotit na řetězec.
+
+ Když píšete šablonu, která generuje zdrojový kód pro vaši aplikaci, pracujete se dvěma samostatnými texty programu. Program uvnitř oddělovačů bloků kódu se spouští při každém uložení šablony nebo přesunutí fokusu do jiného okna. Text, který generuje, který se zobrazí mimo oddělovače, je zkopírován do generovaného souboru a bude se jednat o část kódu vaší aplikace.
+
+ Direktiva `<#@assembly#>` se chová jako odkaz, takže sestavení je k dispozici pro kód šablony. Seznam sestavení, která jsou vidět šablonou, je oddělený od seznamu odkazů v projektu aplikace.
+
+ Direktiva `<#@import#>` funguje jako příkaz `using` a umožňuje v importovaném oboru názvů používat krátké názvy tříd.
+
+ I když tato šablona generuje kód, vytvoří deklaraci třídy pro každý uzel v ukázkovém souboru XML, aby v případě, že existuje několik instancí `<song>` uzlu, se zobrazí několik deklarací skladby třídy.
+
+### <a name="read-the-model-file-then-generate-the-code"></a>Přečtěte si soubor modelu a potom kód vygenerujte.
+ Mnoho textových šablon se řídí vzorem, ve kterém první část šablony čte zdrojový soubor a druhá část šablonu vygeneruje. Musíme načíst celý vzorový soubor pro shrnutí typů uzlů, které obsahuje, a pak vygenerovat deklarace třídy. Je potřeba další `<#@import#>`, abyste mohli používat `Dictionary<>:`
+
+```
+<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Xml"#>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#
+ // Read the model file
+ XmlDocument doc = new XmlDocument();
+ doc.Load(@"C:\MySolution\MyProject\exampleXml.xml");
+ Dictionary <string, string> nodeTypes =
+        new Dictionary<string, string>();
+ foreach (XmlNode node in doc.SelectNodes("//*"))
+ {
+   nodeTypes[node.Name] = "";
+ }
+ // Generate the code
+ foreach (string nodeName in nodeTypes.Keys)
+ {
+#>
+  public partial class <#= nodeName #> {}
+<#
+ }
+#>
+```
+
+### <a name="add-an-auxiliary-method"></a>Přidat pomocnou metodu
+ Řídicí blok funkce třídy je blok, ve kterém můžete definovat pomocné metody. Blok je oddělený `<#+...#>` a musí se nacházet jako poslední blok v souboru.
+
+ Pokud upřednostňujete názvy tříd, které začínají velkým písmenem, můžete poslední část šablony nahradit následujícím kódem šablony:
+
+```
+// Generate the code
+ foreach (string nodeName in nodeTypes.Keys)
+ {
+#>
+  public partial class <#= UpperInitial(nodeName) #> {}
+<#
+ }
+#>
+<#+
+ private string UpperInitial(string name)
+ { return name[0].ToString().ToUpperInvariant() + name.Substring(1); }
+#>
+```
+
+ V této fázi obsahuje generovaný soubor. cs následující deklarace:
+
+```
+public partial class Catalog {}
+public partial class Artist {}
+public partial class Song {}
+```
+
+ Další podrobnosti, jako jsou vlastnosti podřízených uzlů, atributů a vnitřního textu, lze přidat pomocí stejného přístupu.
+
+### <a name="accessing-the-visual-studio-api"></a>Přístup k rozhraní API sady Visual Studio
+ Nastavení atributu `hostspecific` direktivy `<#@template#>` umožňuje šabloně získat přístup k rozhraní [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] API. Šablona může použít k získání umístění souborů projektu, aby nedocházelo k použití absolutní cesty k souboru v kódu šablony.
+
+```
+<#@ template debug="false" hostspecific="true" language="C#" #>
+...
+<#@ assembly name="EnvDTE" #>
+...
+EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
+                       .GetService(typeof(EnvDTE.DTE));
+// Open the prototype document.
+XmlDocument doc = new XmlDocument();
+doc.Load(System.IO.Path.Combine(dte.ActiveDocument.Path, "exampleXml.xml"));
+```
+
+## <a name="completing-the-text-template"></a>Dokončování textové šablony
+ Následující obsah šablony generuje kód, který umožňuje zkompilovat a spustit testovací kód.
+
+```
+<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="EnvDTE" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Collections.Generic" #>
+using System;using System.Collections.Generic;using System.Linq;using System.Xml;namespace MyProject{
+<#
+ // Map node name --> child name --> child node type
+ Dictionary<string, Dictionary<string, XmlNodeType>> nodeTypes = new Dictionary<string, Dictionary<string, XmlNodeType>>();
+
+ // The Visual Studio host, to get the local file path.
+ EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
+                       .GetService(typeof(EnvDTE.DTE));
+ // Open the prototype document.
+ XmlDocument doc = new XmlDocument();
+ doc.Load(System.IO.Path.Combine(dte.ActiveDocument.Path, "exampleXml.xml"));
+ // Inspect all the nodes in the document.
+ // The example might contain many nodes of the same type,
+ // so make a dictionary of node types and their children.
+ foreach (XmlNode node in doc.SelectNodes("//*"))
+ {
+   Dictionary<string, XmlNodeType> subs = null;
+   if (!nodeTypes.TryGetValue(node.Name, out subs))
+   {
+     subs = new Dictionary<string, XmlNodeType>();
+     nodeTypes.Add(node.Name, subs);
+   }
+   foreach (XmlNode child in node.ChildNodes)
+   {
+     subs[child.Name] = child.NodeType;
+   }
+   foreach (XmlNode child in node.Attributes)
+   {
+     subs[child.Name] = child.NodeType;
+   }
+ }
+ // Generate a class for each node type.
+ foreach (string className in nodeTypes.Keys)
+ {
+    // Capitalize the first character of the name.
+#>
+    partial class <#= UpperInitial(className) #>
+    {      private XmlNode thisNode;      public <#= UpperInitial(className) #>(XmlNode node)       { thisNode = node; }
+
+<#
+    // Generate a property for each child.
+    foreach (string childName in nodeTypes[className].Keys)
+    {
+      // Allow for different types of child.
+      switch (nodeTypes[className][childName])
+      {
+         // Child nodes:
+         case XmlNodeType.Element:
+#>
+      public IEnumerable<<#=UpperInitial(childName)#>><#=UpperInitial(childName) #>      {         get         {            foreach (XmlNode node in                thisNode.SelectNodes("<#=childName#>"))              yield return new <#=UpperInitial(childName)#>(node);       } }
+<#
+         break;
+         // Child attributes:
+         case XmlNodeType.Attribute:
+#>
+      public string <#=childName #>      { get { return thisNode.Attributes["<#=childName#>"].Value; } }
+<#
+         break;
+         // Plain text:
+         case XmlNodeType.Text:
+#>
+      public string Text  { get { return thisNode.InnerText; } }
+<#
+         break;
+       } // switch
+     } // foreach class child
+  // End of the generated class:
+#>
+   }
+<#
+ } // foreach class
+
+   // Add a constructor for the root class
+   // that accepts an XML filename.
+   string rootClassName = doc.SelectSingleNode("*").Name;
+#>
+   partial class <#= UpperInitial(rootClassName) #>   {      public <#= UpperInitial(rootClassName) #>(string fileName){        XmlDocument doc = new XmlDocument();        doc.Load(fileName);        thisNode = doc.SelectSingleNode("<#=rootClassName#>");}   }}
+<#+
+   private string UpperInitial(string name)
+   {
+      return name[0].ToString().ToUpperInvariant() + name.Substring(1);
+   }
+#>
+```
+
+### <a name="running-the-test-program"></a>Spuštění testovacího programu
+ V hlavní aplikaci konzoly budou na následujících řádcích spouštěny testovací metody. Stisknutím klávesy F5 spusťte program v režimu ladění:
+
+```
+using System;
+namespace MyProject
+{ class Program
+  { static void Main(string[] args)
+    { new CodeGeneratorTest().TestMethod();
+      // Allow user to see the output:
+      Console.ReadLine();
+} } }
+```
+
+### <a name="writing-and-updating-the-application"></a>Zápis a aktualizace aplikace
+ Aplikace může být nyní napsána ve stylu silného typu pomocí vygenerovaných tříd namísto použití obecného kódu XML.
+
+ Při změně schématu XML lze snadno vygenerovat nové třídy. Kompilátor sdělí vývojářům, kde musí být aktualizován kód aplikace.
+
+ Pokud chcete třídy znovu vygenerovat, když se změní ukázkový soubor XML, klikněte na tlačítko **transformovat všechny šablony** na panelu nástrojů Průzkumník řešení.
+
+## <a name="conclusion"></a>Závěr
+ Tento názorný postup ukazuje několik technik a výhod generování kódu:
+
+- *Generování kódu* je vytvoření části zdrojového kódu vaší aplikace z *modelu*. Model obsahuje informace, které jsou vhodné pro doménu aplikace, a může se změnit po dobu života aplikace.
+
+- Silné psaní je jedna z výhod generování kódu. I když model představuje informace ve formuláři lépe vhodné pro uživatele, generovaný kód umožňuje ostatním částem aplikace pracovat s informacemi pomocí sady typů.
+
+- IntelliSense a kompilátor vám pomůžou vytvořit kód, který odpovídá schématu modelu, při psaní nového kódu a při aktualizaci schématu.
+
+- Přidání jednoho nekomplikovaného souboru šablony do projektu může poskytnout tyto výhody.
+
+- Textovou šablonu lze vyvíjet a testovat rychle a postupně.
+
+  V tomto návodu je programový kód skutečně vygenerován z instance modelu, což je reprezentativní příklad souborů XML, které aplikace zpracuje. V rámci příznivějšího přístupu bude schéma XML vstupem do šablony, ve formě souboru. XSD nebo definice jazyka specifického pro doménu. Tento přístup by usnadnil, aby šablona určila vlastnosti, jako je násobnost vztahu.
+
+## <a name="troubleshooting-the-text-template"></a>Poradce při potížích s textovou šablonou
+ Pokud jste viděli transformaci šablony nebo chyby kompilace v **Seznam chyb**, nebo pokud výstupní soubor nebyl vygenerován správně, můžete řešit problémy s textovou šablonou pomocí technik popsaných v tématu [generování souborů pomocí TextTransform Nástroj](../modeling/generating-files-with-the-texttransform-utility.md).
+
+## <a name="see-also"></a>Viz také
+ Vytváření [kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md) s [psaním textové šablony T4](../modeling/writing-a-t4-text-template.md)

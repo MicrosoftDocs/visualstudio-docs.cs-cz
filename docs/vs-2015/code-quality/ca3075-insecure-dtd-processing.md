@@ -1,19 +1,19 @@
 ---
-title: 'CA3075: Zpracování nezabezpečené specifikace DTD | Dokumentace Microsoftu'
+title: 'CA3075: nezabezpečené zpracování DTD | Microsoft Docs'
 ms.date: 11/15/2016
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: 65798d66-7a30-4359-b064-61a8660c1eed
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 694b72327d8e059fe12a227afdab79219081ef92
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 7cf9da2f295d94ac68c74039458f4cdbfda3ae5c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65693413"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661626"
 ---
 # <a name="ca3075-insecure-dtd-processing"></a>CA3075: Zpracování nezabezpečené specifikace DTD
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -23,59 +23,59 @@ ms.locfileid: "65693413"
 |TypeName|InsecureDTDProcessing|
 |CheckId|CA3075|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>Příčina
- Pokud používáte nezabezpečené <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> instance nebo odkaz na externí entity zdroje, analyzátor může přijmout nedůvěryhodné vstupní tak zveřejnit citlivé informace, které útočníci.
+## <a name="cause"></a>příčina
+ Pokud používáte nezabezpečené <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> instance nebo odkazujete na zdroje externích entit, může analyzátor přijmout nedůvěryhodné vstupní a únik citlivých informací útočníkům.
 
 ## <a name="rule-description"></a>Popis pravidla
- A [dokumentu typ definice (DTD)](https://msdn.microsoft.com/library/aa468547.aspx) je jedním ze dvou způsobů analyzátor jazyka XML můžete určit platnosti dokumentu, podle definice [World Wide Web Consortium (W3C) značky XML (Extensible Language) 1.0](http://www.w3.org/TR/2008/REC-xml-20081126/). Toto pravidlo vyhledá vlastnosti a instance, kde je nedůvěryhodná data přijat upozornit vývojáře o potenciál [informacím](https://msdn.microsoft.com/library/4064c89f-afa6-444a-aa7e-807ef072131c) hrozeb, které mohou vést k [útok na dostupnost služby (DoS)](https://msdn.microsoft.com/library/dfb150f3-d598-4697-a5e6-6779e4f9b600) útoky. Toto pravidlo aktivuje, když:
+ [Definice typu dokumentu (DTD)](https://msdn.microsoft.com/library/aa468547.aspx) je jedním ze dvou způsobů, jak může analyzátor XML určit platnost dokumentu, jak je definováno v [konsorcium World Wide Web (W3C) jazyk XML (Extensible Markup Language) (XML) 1,0](http://www.w3.org/TR/2008/REC-xml-20081126/). Toto pravidlo vyhledává vlastnosti a instance, kde jsou přijímána nedůvěryhodná data, aby upozornila vývojáře na potenciální hrozby [zpřístupnění informací](https://msdn.microsoft.com/library/4064c89f-afa6-444a-aa7e-807ef072131c) , což může vést k útokům DOS [(Denial of Service)](https://msdn.microsoft.com/library/dfb150f3-d598-4697-a5e6-6779e4f9b600) . Toto pravidlo se aktivuje v těchto případech:
 
-- Je zapnutá DtdProcessing <xref:System.Xml.XmlReader> instanci, která přeloží externí entity XML pomocí <xref:System.Xml.XmlUrlResolver>.
+- DtdProcessing je povolena na instanci <xref:System.Xml.XmlReader>, která řeší externí entity XML pomocí <xref:System.Xml.XmlUrlResolver>.
 
-- <xref:System.Xml.XmlNode.InnerXml%2A> Nastavenou v souboru XML.
+- Vlastnost <xref:System.Xml.XmlNode.InnerXml%2A> v kódu XML je nastavena.
 
-- <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> je nastavena na analýzy.
+- vlastnost <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> je nastavena na hodnotu analyzovat.
 
-- Nedůvěryhodný vstup zpracována pomocí <xref:System.Xml.XmlResolver> místo <xref:System.Xml.XmlSecureResolver> .
+- Nedůvěryhodný vstup se zpracovává pomocí <xref:System.Xml.XmlResolver> místo <xref:System.Xml.XmlSecureResolver>.
 
-- Objekt XmlReader.<xref:System.Xml.XmlReader.Create%2A> Metoda je volána s nezabezpečené <xref:System.Xml.XmlReaderSettings> instance nebo vůbec žádné instance.
+- Objekt XmlReader. <xref:System.Xml.XmlReader.Create%2A> Metoda je vyvolána s nezabezpečenou <xref:System.Xml.XmlReaderSettings> instancí nebo vůbec žádnou instancí.
 
-- <xref:System.Xml.XmlReader> je vytvořen s nezabezpečené výchozí nastavení nebo hodnoty.
+- Vytvoří se <xref:System.Xml.XmlReader> s nezabezpečenými výchozími nastaveními nebo hodnotami.
 
-  Ve všech těchto případech je výsledek stejný: obsah buď soubor systému nebo síťových sdílených složek z počítače, kde je zpracování souboru XML se zveřejní pro útočníka, který pak mohou být použity jako vektor DoS.
+  V každém z těchto případů je výsledek stejný: obsah buď ze systému souborů, nebo síťových sdílených složek z počítače, ve kterém je soubor XML zpracován, bude vystaven útočníkovi, který se pak může použít jako vektor DoS.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
 
-- Zachytit a zpracovat všechny výjimky XmlTextReader správně, aby se zabránilo zpřístupnění informací cestu.
+- Zachyťte a zpracujte všechny výjimky XmlTextReader správně, aby nedocházelo k odhalení informací o cestách.
 
-- Použití <xref:System.Xml.XmlSecureResolver> omezit prostředky, ke kterým přístup XmlTextReader.
+- Použijte  <xref:System.Xml.XmlSecureResolver> k omezení prostředků, ke kterým má aplikace XmlTextReader přístup.
 
-- Nejsou povoleny <xref:System.Xml.XmlReader> otevřete všem externím prostředkům tak, že nastavíte <xref:System.Xml.XmlResolver> vlastnost **null**.
+- Nepovolujte  <xref:System.Xml.XmlReader> otevírat žádné externí prostředky nastavením vlastnosti <xref:System.Xml.XmlResolver> na **hodnotu null**.
 
-- Ujistěte se, že <xref:System.Data.DataViewManager.DataViewSettingCollectionString%2A> vlastnost <xref:System.Data.DataViewManager> přiřazena z důvěryhodného zdroje.
+- Zajistěte, aby byla vlastnost <xref:System.Data.DataViewManager.DataViewSettingCollectionString%2A> <xref:System.Data.DataViewManager> přiřazena z důvěryhodného zdroje.
 
-  Rozhraní .NET 3.5 a starší
+  .NET 3,5 a starší
 
-- Zakázat zpracování DTD, pokud pracujete se sekvenčním nedůvěryhodných zdrojů tak, že nastavíte <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> vlastnost **true** .
+- Pokud pracujete s nedůvěryhodnými zdroji, zakažte zpracování DTD nastavením vlastnosti  <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> na **hodnotu true** .
 
-- Pomocí třídy XmlTextReader má vyžádané dědičnosti úplný vztah důvěryhodnosti. Zobrazit [požadavky na dědičnost](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9) Další informace.
+- Třída XmlTextReader má úplný požadavek dědičnosti vztahu důvěryhodnosti. Další informace najdete v tématu [požadavky dědičnosti](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9) .
 
-  Rozhraní .NET 4 a novější
+  .NET 4 a novější
 
-- Nedoporučujeme povolovat DtdProcessing, pokud pracujete s nedůvěryhodných zdrojů tak, že nastavíte vlastnost DtdProcessing [zakázat nebo ignorovat](https://msdn.microsoft.com/library/system.xml.dtdprocessing.aspx)
+- Pokud pracujete s nedůvěryhodnými zdroji, vyhněte se povolení DtdProcessing nastavením vlastnosti DtdProcessing na [zakázat nebo ignorovat](https://msdn.microsoft.com/library/system.xml.dtdprocessing.aspx)
 
-- Zajistěte, aby metoda Load() XmlReader instance ve všech případech InnerXml.
+- Zajistěte, aby metoda Load () přebírá instanci XmlReader ve všech případech InnerXml.
 
 > [!NOTE]
-> Toto pravidlo může vykazovat některé platné instance XmlSecureResolver počet falešně pozitivních výsledků. Pracujeme na řešení tohoto problému mid 2016.
+> Toto pravidlo může v některých platných instancích XmlSecureResolver hlásit falešně pozitivní výsledky. Pracujeme na řešení tohoto problému od Mid 2016.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Pokud si nejste jisti, že vstup je znám jako z důvěryhodného zdroje, nepotlačujte pravidlo z tohoto upozornění.
+ Pokud si nejste jistí, že je vstup z důvěryhodného zdroje známý, nedoporučujeme z tohoto upozornění pravidlo potlačit.
 
-## <a name="pseudo-code-examples"></a>Příklady pseudo kódu
+## <a name="pseudo-code-examples"></a>Příklady kódu pseudo
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System.IO;
@@ -119,7 +119,7 @@ class TestClass
 }
 ```
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System.Xml;
@@ -207,7 +207,7 @@ public static void TestMethod(string xml)
 }
 ```
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System.IO;
@@ -248,7 +248,7 @@ namespace TestNamespace
 }
 ```
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System.Xml;
@@ -285,7 +285,7 @@ namespace TestNamespace
 }
 ```
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System.Xml;

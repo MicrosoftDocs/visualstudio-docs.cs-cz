@@ -15,39 +15,39 @@ helpviewer_keywords:
 - dependency graphs, customizing
 - graph documents, grouping nodes
 - dependency graphs, assigning categories and properties
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c9e41b99e7f2dd9349bc04bd4988dbf103095c94
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 7d871a6aa8cff6e06f02e61407d2c9e59e03cd65
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441638"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654036"
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>Přizpůsobení map kódu úpravou souborů DGML
 
-Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup Language (.dgml). Můžete třeba upravit prvků, které mají určit vlastní styly, přiřadit vlastnosti a kategorie prvky kódu a odkazy, nebo propojit dokumenty nebo adresy URL pro prvky kódu a odkazy. Další informace o prvcích dgml lze NALÉZT v tématu [orientovaného grafu jazyka přímého značení (DGML) odkaz](../modeling/directed-graph-markup-language-dgml-reference.md).
+Chcete-li přizpůsobit mapu kódu, můžete upravit svůj soubor. dgml (Directed Graph Markup Language). Můžete například upravit prvky a zadat vlastní styly, přiřadit vlastnosti a kategorie k prvkům kódu a propojením nebo propojit dokumenty nebo adresy URL s prvky kódu nebo odkazy. Další informace o elementech DGML naleznete v tématu [Reference k jazyku DGML (Direct Graph Markup Language)](../modeling/directed-graph-markup-language-dgml-reference.md).
 
-Úpravou souboru .dgml mapy kódu v textovém editoru nebo editoru XML. Pokud mapování je součástí řešení sady Visual Studio, vyberte ho v **Průzkumníka řešení**, otevřete místní nabídku a zvolte **otevřít v programu**, **Editor (textový) XML**.
+Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je mapa součástí řešení sady Visual Studio, vyberte ji v **Průzkumník řešení**, otevřete místní nabídku a zvolte možnost **otevřít v** **editoru XML (text)** .
 
 > [!NOTE]
-> K vytvoření kódových map, musíte mít Visual Studio Enterprise edition. Při úpravě mapy kódu v sadě Visual Studio se vyčistí všechny nepoužívané prvky a atributy DGML odstraněním při uložení souboru .dgml. Vytvoří také prvky kódu automaticky při ručním přidání nových propojení. Při ukládání souboru .dgml mohou být všechny atributy, které byly přidány do prvku, uspořádány podle abecedy.
+> Chcete-li vytvořit mapy kódu, musíte mít edici Visual Studio Enterprise. Když upravíte mapu kódu v aplikaci Visual Studio, vyčistí všechny nepoužívané prvky DGML a atributy jejich odstraněním při uložení souboru. dgml. Také automaticky vytvoří prvky kódu při ručním přidání nových odkazů. Při ukládání souboru .dgml mohou být všechny atributy, které byly přidány do prvku, uspořádány podle abecedy.
 
-## <a name="OrganizeNodes"></a> Seskupit elementy kódu
- Můžete přidat nové skupiny nebo převést existující uzly do skupiny.
+## <a name="OrganizeNodes"></a>Seskupit prvky kódu
+ Můžete přidat nové skupiny nebo převést existující uzly na skupinu.
 
-1. V textovém editoru nebo editoru XML otevřete soubor .dgml.
+1. Otevřete soubor. dgml v textovém editoru nebo editoru XML.
 
-2. Chcete-li převést prvek kódu do skupiny, vyhledejte `<Node/>` – element pro daný element kódu.
+2. Chcete-li převést prvek kódu na skupinu, vyhledejte prvek `<Node/>` pro daný prvek kódu.
 
-    \- nebo –
+    \- nebo-
 
-    Chcete-li přidat novou skupinu, vyhledejte `<Nodes>` oddílu. Přidat nový `<Node/>` elementu.
+    Chcete-li přidat novou skupinu, vyhledejte část `<Nodes>`. Přidejte nový prvek `<Node/>`.
 
-3. V `<Node/>` elementu, přidejte `Group` atribut k určení, zda daná skupina zobrazovat rozbalená nebo sbalená. Příklad:
+3. V elementu `<Node/>` přidejte atribut `Group` pro určení, zda se skupina zobrazuje jako rozbalená nebo sbalená. Příklad:
 
    ```xml
    <Nodes>
@@ -56,13 +56,13 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
    </Nodes>
    ```
 
-4. V `<Links>` části, ujistěte se, že `<Link/>` element, který má následující atributy existují pro každý vztah mezi prvek skupiny kódu a jeho podřízené prvky kódu:
+4. V části `<Links>` se ujistěte, že `<Link/>` prvek, který má následující atributy, existuje pro každý vztah mezi prvkem kódu skupiny a jeho podřízenými prvky kódu:
 
-   - A `Source` atribut, který určuje prvek skupiny kódu
+   - Atribut `Source`, který určuje prvek kódu skupiny
 
-   - A `Target` atribut, který určuje podřízený element kódu
+   - Atribut `Target`, který určuje podřízený element kódu
 
-   - A `Category` atribut, který určuje `Contains` vztah mezi prvek skupiny kódu a jeho podřízený element kódu
+   - Atribut `Category`, který určuje `Contains` vztah mezi prvkem kódu skupiny a jeho podřízeným prvkem kódu
 
      Příklad:
 
@@ -75,14 +75,14 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
    </Links>
    ```
 
-    Další informace o `Category` atributu naleznete v tématu [přiřadit kategorie pro prvky kódu a odkazy](#AssignCategories).
+    Další informace o atributu `Category` naleznete v tématu [přiřazení kategorií k prvkům kódu a propojením](#AssignCategories).
 
-## <a name="ChangeGraphStyle"></a> Změnit styl mapy
- Úpravou souboru .dgml na mapě můžete změnit barvu pozadí a barvy ohraničení mapy. Chcete-li změnit styl prvky kódu a odkazy, [změnit styl prvky kódu a odkazy](#Highlight).
+## <a name="ChangeGraphStyle"></a>Změnit styl mapy
+ Můžete změnit barvu pozadí a barvu ohraničení mapy úpravou souboru. dgml mapy. Chcete-li změnit styl prvků kódu a odkazů, přečtěte si téma [Změna stylu prvků kódu a odkazů](#Highlight).
 
-1. V textovém editoru nebo editoru XML otevřete soubor .dgml.
+1. Otevřete soubor. dgml v textovém editoru nebo editoru XML.
 
-2. V `<DirectedGraph>` prvku, přidejte některou z následujících atributů pro změnu stylu:
+2. V elementu `<DirectedGraph>` přidejte libovolné z následujících atributů pro změnu stylu:
 
      Barvu pozadí
 
@@ -105,25 +105,25 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
     </DirectedGraph>
     ```
 
-## <a name="Highlight"></a> Změna stylu prvků kódu a odkazy
+## <a name="Highlight"></a>Změna stylu prvků kódu a odkazů
 
 ### <a name="CreateCustomStyles"></a>
- Použití vlastních stylů na následujících prvků kódu:
+ Vlastní styly lze použít pro následující prvky kódu:
 
-- Prvky jednoho kódu a odkazy
+- Jednoduché prvky kódu a odkazy
 
-- Skupiny prvky kódu a odkazy
+- Skupiny prvků kódu a odkazy
 
-- Skupiny prvky kódu a odkazy na základě určitých podmínek
+- Skupiny prvků kódu a odkazy na základě určitých podmínek
 
 > [!TIP]
-> Pokud máte opakující se styly napříč mnoha prvků kódu nebo odkazy, můžete zvážit tyto prvky kódu nebo propojení použit kategorii a pak na tuto kategorii použít styl. Další informace najdete v tématu [přiřadit kategorie pro prvky kódu a odkazy](#AssignCategories) a [přiřazení vlastností prvky kódu a odkazy](#AssignProperties).
+> Pokud máte opakující se styly napříč mnoha prvky kódu nebo odkazy, můžete zvážit použití kategorie na tyto prvky kódu nebo odkazy a poté použití stylu na tuto kategorii. Další informace naleznete v tématu [přiřazení kategorií prvkům kódu a propojení](#AssignCategories) a [přiřazení vlastností prvkům kódu a propojením](#AssignProperties).
 
-##### <a name="to-apply-a-custom-style-to-a-single-code-element"></a>Použití vlastního stylu na jediného prvku kódu
+##### <a name="to-apply-a-custom-style-to-a-single-code-element"></a>Použití vlastního stylu na jeden prvek kódu
 
-1. V textovém editoru nebo editoru XML otevřete soubor .dgml.
+1. Otevřete soubor. dgml v textovém editoru nebo editoru XML.
 
-2. Najít element kódu `<Node/>` elementu. Přidejte některou z těchto atributů pro přizpůsobení stylu:
+2. Vyhledejte prvek `<Node/>` elementu kódu. Přidejte libovolné z těchto atributů pro přizpůsobení stylu:
 
      Barvu pozadí
 
@@ -179,7 +179,7 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
     FontStyle="FontStyleName"
     ```
 
-     Například můžete zadat `Italic` jako styl textu.
+     Můžete například zadat `Italic` jako styl textu.
 
      Textura
 
@@ -187,7 +187,7 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
     Style="Glass"
     ```
 
-     - nebo –
+     - ani
 
     ```xml
     Style="Plain"
@@ -195,7 +195,7 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
 
      Obrazec
 
-     Pro nahrazení obrazce ikonou, nastavte `Shape` vlastnost `None` a nastavit `Icon` na cestu umístění souboru s ikonou.
+     Chcete-li tvar nahradit ikonou, nastavte vlastnost `Shape` na hodnotu `None` a vlastnost `Icon` nastavte na cestu se souborem ikony.
 
     ```xml
     Shape="ShapeFilePathLocation"
@@ -212,11 +212,11 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
 
 ##### <a name="to-apply-a-custom-style-to-a-single-link"></a>Aplikace vlastního stylu na jedno propojení
 
-1. V textovém editoru nebo editoru XML otevřete soubor .dgml.
+1. Otevřete soubor. dgml v textovém editoru nebo editoru XML.
 
-2. Najít `<Link/>` element, který obsahuje názvy prvek kódu zdrojový a cílový element kódu.
+2. Vyhledejte prvek `<Link/>`, který obsahuje názvy prvku zdrojového kódu a cílového prvku kódu.
 
-3. V `<Link/>` prvku, přidejte některou z následujících atributů pro přizpůsobení stylu:
+3. V elementu `<Link/>` přidejte libovolný z následujících atributů pro přizpůsobení stylu:
 
      Barva obrysu a šipky
 
@@ -244,13 +244,13 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
     </Links>
     ```
 
-##### <a name="to-apply-custom-styles-to-a-group-of-code-elements-or-links"></a>Použití vlastních stylů na skupinu prvky kódu nebo odkazy
+##### <a name="to-apply-custom-styles-to-a-group-of-code-elements-or-links"></a>Použití vlastních stylů pro skupinu prvků kódu nebo odkazů
 
-1. V textovém editoru nebo editoru XML otevřete soubor .dgml.
+1. Otevřete soubor. dgml v textovém editoru nebo editoru XML.
 
-2. Pokud `<Styles></Styles>` element neexistuje, přidejte jej pod `<DirectedGraph></DirectedGraph>` elementu po `<Links></Links>` elementu.
+2. Pokud `<Styles></Styles>` element neexistuje, přidejte jej pod prvek `<DirectedGraph></DirectedGraph>` za element `<Links></Links>`.
 
-3. V `<Styles></Styles>` element v části `<Style/>` elementu a zadat následující atributy:
+3. V elementu `<Styles></Styles>` v rámci elementu `<Style/>` a určete následující atributy:
 
    - `TargetType="Node` &#124; `Link | Graph"`
 
@@ -260,11 +260,11 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
 
      Pro použití vlastního stylu na všechny cílové typy nepoužívejte podmínku.
 
-##### <a name="to-apply-a-conditional-style-to-groups-of-code-elements-or-links"></a>Pro použití podmíněného stylu na skupiny kódu elementy nebo propojení
+##### <a name="to-apply-a-conditional-style-to-groups-of-code-elements-or-links"></a>Použití podmíněného stylu pro skupiny prvků kódu nebo odkazů
 
-1. V textovém editoru nebo editoru XML otevřete soubor .dgml.
+1. Otevřete soubor. dgml v textovém editoru nebo editoru XML.
 
-2. V `<Style/>` elementu, přidejte `<Condition/>` element, který obsahuje `Expression` atribut zadat výraz, který vrací logickou hodnotu.
+2. V elementu `<Style/>` přidejte `<Condition/>` prvek, který obsahuje atribut `Expression` k určení výrazu, který vrací logickou hodnotu.
 
     Příklad:
 
@@ -272,13 +272,13 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
    <Condition Expression="MyCategory"/>
    ```
 
-    - nebo –
+    - ani
 
    ```xml
    <Condition Expression="MyCategory > 100"/>
    ```
 
-    - nebo –
+    - ani
 
    ```xml
    <Condition Expression="HasCategory('MyCategory')"/>
@@ -286,33 +286,33 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
 
     Tento výraz používá následující syntaxi BNF (Backus-Naur Form):
 
-    \<Expression> ::= \<BinaryExpression> &#124; \<UnaryExpression> &#124; "("\<Expression>")" &#124; \<MemberBindings> &#124; \<Literal> &#124; \<Number>
+    \<Expression >:: = \<BinaryExpression > &#124; \<UnaryExpression > &#124; "(" \<Expression > ")" &#124; \<MemberBindings &#124; > \<Literal > &#124; 1Number >
 
-    \<BinaryExpression> ::= \<Expression> \<Operator> \<Expression>
+    \<BinaryExpression >:: = \<Expression > \<Operator > \<Expression >
 
-    \<UnaryExpression> ::= "!" \<Výraz > &#124; "+" \<výrazu > &#124; "-" \<výrazu >
+    \<UnaryExpression >:: = "!"  \<Expression > &#124; "+" \<Expression > &#124; "-" \<Expression >
 
-    \<Operator >:: = "<" &#124; "\<=" &#124; "=" &#124; "> =" &#124; ">" &#124; "! =" &#124; "nebo" &#124; "a" &#124; "+" &#124; "*" &#124; "/" &#124; "-"
+    \<Operator >:: = "<" &#124; "\< =" &#124; "=" &#124; "> =" &#124; ">" &#124; "! =" &#124; "nebo" &#124; "a" &#124; "+ &#124; " "* &#124; &#124; " "-"
 
-    \<MemberBindings >:: = \<MemberBindings > &#124; \<MemberBinding > "." \<MemberBinding >
+    \<MemberBindings >:: = \<MemberBindings > &#124; \<MemberBinding > "."  \<MemberBinding >
 
-    \<MemberBinding> ::= \<MethodCall> &#124; \<PropertyGet>
+    \<MemberBinding >:: = \<MethodCall > &#124; \<PropertyGet >
 
-    \<MethodCall >:: = \<identifikátor > "(" \<MethodArgs > "")""
+    \<MethodCall >:: = \<Identifier > "(" \<MethodArgs > ")"
 
-    \<PropertyGet> ::= Identifier
+    \<PropertyGet >:: = Identifier
 
-    \<MethodArgs> ::= \<Expression> &#124; \<Expression> "," \<MethodArgs> &#124; \<empty>
+    \<MethodArgs >:: = \<Expression > &#124; \<Expression > "," \<MethodArgs &#124; > \<empty >
 
-    \<Identifier> ::= [^. ]*
+    \<Identifier >:: = [^. ]*
 
-    \<Literal >:: = jedné nebo dvojitými uvozovkami řetězcový literál
+    \<Literal >:: = řetězcový literál s jedním nebo dvojitým uvozovkami
 
-    \<Číslo >:: = řetězec číslic s volitelnou desetinnou čárkou
+    \<Number >:: = řetězec číslic s nepovinnou desetinnou čárkou
 
-    Lze zadat více `<Condition/>` elementy, které musí být pravda, pokud chcete použít styl.
+    Můžete zadat více `<Condition/>` prvků, které musí všechny mít hodnotu true pro použití stylu.
 
-3. Na dalším řádku za `<Condition/>` element, přidejte jeden nebo více `<Setter/>` prvky k určení `Property` atribut a pevnou `Value` atribut nebo počítaný `Expression` atributu použít pro mapy, prvky kódu nebo odkazy, které splňují Podmínka.
+3. Na dalším řádku po `<Condition/>` elementu přidejte jeden nebo více `<Setter/>` prvků pro určení `Property` atribut a pevný `Value` atribut nebo vypočtený atribut `Expression`, který se má použít pro mapu, prvky kódu nebo odkazy, které splňují podmínku.
 
     Příklad:
 
@@ -320,7 +320,7 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
    <Setter Property="BackGround" Value="Green"/>
    ```
 
-   Jako jednoduchý Úplný příklad, následující podmínka určuje to, že prvek kódu zobrazí zeleně nebo červeně podle toho, jestli jeho `Passed` kategorie je nastavena na `True` nebo `False`:
+   V rámci jednoduchého kompletního příkladu následující podmínka Určuje, že se prvek kódu zobrazuje zeleně nebo červeně na základě toho, zda je jeho kategorie `Passed` nastavena na `True` nebo `False`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -346,7 +346,7 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
 
  Následující tabulka obsahuje některé ukázkové podmínky, které lze použít:
 
- Nastavení velikosti písma jako funkce počtu řádků kódu, která rovněž změní velikost prvku kódu. Tento příklad používá jeden podmíněný výraz k nastavení více vlastností, `FontSize` a `FontFamily`.
+ Nastavte velikost písma jako funkci počtu řádků kódu, čímž se také změní velikost elementu kódu. V tomto příkladu se používá jeden podmíněný výraz pro nastavení více vlastností `FontSize` a `FontFamily`.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -369,15 +369,15 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
 </DirectedGraph>
 ```
 
- Nastavit barvu pozadí prvku kódu na základě `Coverage` vlastnost. Styly jsou vyhodnocovány v pořadí, ve kterém se zobrazí, podobně jako `if-else` příkazy.
+ Nastaví barvu pozadí prvku kódu na základě vlastnosti `Coverage`. Styly jsou vyhodnocovány v pořadí, ve kterém jsou zobrazeny, podobně jako příkazy `if-else`.
 
  V tomto příkladu:
 
-1. Pokud `Coverage` hodnotu > 80, pak nastavte `Background` nastavena na zelenou.
+1. Pokud je `Coverage` > 80, nastavte vlastnost `Background` na zelenou.
 
-2. Else if `Coverage` > 50, pak nastavte `Background` na odstín oranžové nastavenou na hodnotu `Coverage` vlastnost.
+2. Jinak, pokud je `Coverage` > 50, pak nastavte vlastnost `Background` na odstín oranžová na základě hodnoty vlastnosti `Coverage`.
 
-3. Jinak nastavte `Background` na odstín červené nastavenou na hodnotu `Coverage` vlastnost.
+3. V opačném případě nastavte vlastnost `Background` na odstín červené na základě hodnoty vlastnosti `Coverage`.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -406,7 +406,7 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
 </DirectedGraph>
 ```
 
- Nastavte `Shape` vlastnost `None` tak, aby ikona nahradila obrazec. Použití `Icon` vlastnosti k určení umístění ikony.
+ Nastavte vlastnost `Shape` na `None`, aby ikona nahradila tvar. Pomocí vlastnosti `Icon` určete umístění ikony.
 
 ```xml
 <DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
@@ -435,14 +435,14 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
 </DirectedGraph>
 ```
 
-## <a name="AssignProperties"></a> Přiřazení vlastností pro prvky kódu a odkazy
- Prvky kódu a odkazy můžete uspořádat přiřazením vlastností. Například můžete vybrat prvky kódu, které mají specifické vlastnosti, takže můžete seskupit, změnit jejich styl nebo je skrýt.
+## <a name="AssignProperties"></a>Přiřadit vlastnosti k prvkům kódu a odkazům
+ Můžete uspořádat prvky kódu a odkazy tím, že jim přiřadíte vlastnosti. Můžete například vybrat prvky kódu, které mají specifické vlastnosti, abyste je mohli seskupit, změnit jejich styl nebo je skrýt.
 
-#### <a name="to-assign-a-property-to-a-code-element"></a>Přiřazení vlastnosti pro prvek kódu
+#### <a name="to-assign-a-property-to-a-code-element"></a>Přiřazení vlastnosti prvku kódu
 
-1. V textovém editoru nebo editoru XML otevřete soubor .dgml.
+1. Otevřete soubor. dgml v textovém editoru nebo editoru XML.
 
-2. Najít `<Node/>` – element pro daný element kódu. Zadejte název vlastnosti a její hodnotu. Příklad:
+2. Vyhledejte prvek `<Node/>` pro daný prvek kódu. Zadejte název vlastnosti a její hodnotu. Příklad:
 
     ```xml
     <Nodes>
@@ -450,7 +450,7 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
     </Nodes>
     ```
 
-3. Přidat `<Property/>` elementu `<Properties>` pro zadání atributů, jako je například viditelný název a datový typ:
+3. Přidejte `<Property/>` element do oddílu `<Properties>`, abyste určili atributy, jako je zobrazovaný název a datový typ:
 
     ```xml
     <Properties>
@@ -460,11 +460,11 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
 
 #### <a name="to-assign-a-property-to-a-link"></a>Přiřazení vlastnosti propojení
 
-1. V textovém editoru nebo editoru XML otevřete soubor .dgml.
+1. Otevřete soubor. dgml v textovém editoru nebo editoru XML.
 
-2. Najít `<Link/>` element, který obsahuje názvy prvek kódu zdrojový a cílový element kódu.
+2. Vyhledejte prvek `<Link/>`, který obsahuje názvy prvku zdrojového kódu a cílového prvku kódu.
 
-3. V `<Node/>` elementu, zadejte název vlastnosti a její hodnotu. Příklad:
+3. V prvku `<Node/>` zadejte název vlastnosti a její hodnotu. Příklad:
 
     ```xml
     <Links>
@@ -472,7 +472,7 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
     </Links>
     ```
 
-4. Přidat `<Property/>` elementu `<Properties>` pro zadání atributů, jako je například viditelný název a datový typ:
+4. Přidejte `<Property/>` element do oddílu `<Properties>`, abyste určili atributy, jako je zobrazovaný název a datový typ:
 
     ```xml
     <Properties>
@@ -480,16 +480,16 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
     </Properties>
     ```
 
-## <a name="AssignCategories"></a> Přiřadit kategorie pro prvky kódu a odkazy
- Následující části ukazují, jak můžete uspořádat prvky kódu pomocí přiřazení kategorií a jak můžete vytvořit hierarchické kategorie, které vám pomohou organizovat prvky kódu a přidání atributů do podřízených kategorií pomocí dědičnosti.
+## <a name="AssignCategories"></a>Přiřazení kategorií prvkům kódu a odkazům
+ Následující části ukazují, jak lze uspořádat prvky kódu přiřazením kategorií k těmto prvkům a jak lze vytvořit hierarchické kategorie, které vám pomohou organizovat prvky kódu a přidávat atributy do podřízených kategorií pomocí dědičnosti.
 
-#### <a name="to-assign-a-category-to-a-code-element"></a>Chcete přiřadit kategorii k prvek kódu
+#### <a name="to-assign-a-category-to-a-code-element"></a>Přiřazení kategorie k elementu kódu
 
-- V textovém editoru nebo editoru XML otevřete soubor .dgml.
+- Otevřete soubor. dgml v textovém editoru nebo editoru XML.
 
-- Najít `<Node/>` – element pro element kódu, který chcete.
+- Vyhledejte prvek `<Node/>` pro prvek kódu, který chcete.
 
-- V `<Node/>` elementu, přidejte `Category` atribut k určení názvu kategorie. Příklad:
+- Do prvku `<Node/>` přidejte atribut `Category` a zadejte název kategorie. Příklad:
 
     ```xml
     <Nodes>
@@ -497,7 +497,7 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
     </Nodes>
     ```
 
-     Přidat `<Category/>` elementu `<Categories>` tak, aby vám `Label` atributu pro určení zobrazovaného textu dané kategorie:
+     Přidejte `<Category/>` element do oddílu `<Categories>`, abyste mohli použít atribut `Label` k určení zobrazovaného textu pro tuto kategorii:
 
     ```xml
     <Categories>
@@ -507,11 +507,11 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
 
 #### <a name="to-assign-a-category-to-a-link"></a>Přiřazení kategorie propojení
 
-1. V textovém editoru nebo editoru XML otevřete soubor .dgml.
+1. Otevřete soubor. dgml v textovém editoru nebo editoru XML.
 
-2. Najít `<Link/>` element, který obsahuje názvy prvek kódu zdrojový a cílový element kódu.
+2. Vyhledejte prvek `<Link/>`, který obsahuje názvy prvku zdrojového kódu a cílového prvku kódu.
 
-3. V `<Link/>` elementu, přidejte `Category` atribut k určení názvu kategorie. Příklad:
+3. Do prvku `<Link/>` přidejte atribut `Category` a zadejte název kategorie. Příklad:
 
     ```xml
     <Links>
@@ -519,7 +519,7 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
     </Links>
     ```
 
-4. Přidat `<Category/>` elementu `<Categories>` tak, aby vám `Label` atributu pro určení zobrazovaného textu dané kategorie:
+4. Přidejte `<Category/>` element do oddílu `<Categories>`, abyste mohli použít atribut `Label` k určení zobrazovaného textu pro tuto kategorii:
 
     ```xml
     <Categories>
@@ -529,9 +529,9 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
 
 #### <a name="to-create-hierarchical-categories"></a>Vytvoření hierarchických kategorií
 
-1. V textovém editoru nebo editoru XML otevřete soubor .dgml.
+1. Otevřete soubor. dgml v textovém editoru nebo editoru XML.
 
-2. Přidat `<Category/>` – element pro nadřazenou kategorii a přidejte `BasedOn` atribut podřízené kategorie `<Category/>` elementu.
+2. Přidejte prvek `<Category/>` pro nadřazenou kategorii a poté přidejte atribut `BasedOn` do prvku `<Category/>` podřízené kategorie.
 
      Příklad:
 
@@ -549,38 +549,38 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
     </Categories>
     ```
 
-     V tomto příkladu pozadí `MyFirstNode` zelený protože jeho `Category` dědí atribut `Background` atribut `MyParentCategory`.
+     V tomto příkladu je pozadí `MyFirstNode` zelený, protože jeho atribut `Category` dědí atribut `Background` `MyParentCategory`.
 
-## <a name="AddReferences"></a> Propojit dokumenty nebo adresy URL pro prvky kódu a odkazy
- Můžete propojit dokumenty nebo adresy URL pro prvky kódu nebo k propojení úpravou souboru .dgml na mapě a přidání `Reference` atribut `<Node/>` – element pro element kódu nebo `<Link/>` – element pro odkaz. Pak můžete otevřít a zobrazit tento obsah z elementu kódu nebo odkaz. `Reference` Atribut určuje cestu k obsahu. To může být cesta relativní k umístění souboru .dgml nebo absolutní cesta.
+## <a name="AddReferences"></a>Propojení dokumentů a adres URL s prvky kódu a odkazy
+ Dokumenty nebo adresy URL můžete propojit s prvky kódu nebo odkazy úpravou souboru. dgml mapy a přidáním atributu `Reference` do prvku `<Node/>` pro prvek kódu nebo prvku `<Link/>` pro odkaz. Pak můžete tento obsah otevřít a zobrazit z prvku kódu nebo odkazu. Atribut `Reference` Určuje cestu k tomuto obsahu. To může být cesta relativní k umístění souboru .dgml nebo absolutní cesta.
 
 > [!CAUTION]
 > Pokud použijete relativní cestu a soubor .dgml bude přesunut do jiného umístění, pak tuto cestu nebude možné interpretovat. Při pokusu o otevření a zobrazení propojeného obsahu, dojde k chybě oznamující, že obsah nelze zobrazit.
 
- Můžete například chtít propojit následujících prvků kódu:
+ Například může být vhodné propojit následující prvky kódu:
 
-- Chcete-li popsat změny třídy, měli byste připojit URL prvek kódu práce, dokumentu nebo jiného souboru .dgml na prvek kódu pro třídu.
+- Chcete-li popsat změny třídy, můžete propojit adresu URL prvku pracovního kódu, dokumentu nebo jiného souboru. dgml k elementu kódu pro třídu.
 
-- Měli byste připojit diagram závislostí do skupinového elementu kódu, který reprezentuje vrstvu v logické architektuře softwaru.
+- Diagram závislostí můžete propojit s prvkem kódu skupiny, který představuje vrstvu v logické architektuře softwaru.
 
-- Chcete-li zobrazit další informace o komponentě, která zpřístupňuje rozhraní, může připojit diagram součásti na prvek kódu pro rozhraní.
+- Chcete-li zobrazit další informace o komponentě, která zpřístupňuje rozhraní, můžete propojit diagram komponent k elementu kódu pro toto rozhraní.
 
-- Prvek kódu propojte pracovní položky serveru Team Foundation Server nebo chyb nebo jiných informací, které se vztahuje na prvek kódu.
+- Propojení prvku kódu s Team Foundation Server pracovní položky nebo chyby nebo nějaké další informace, které se vztahují k elementu kódu.
 
-#### <a name="to-link-a-document-or-url-to-a-code-element"></a>Odkaz na prvek kódu dokumentu nebo adresy URL
+#### <a name="to-link-a-document-or-url-to-a-code-element"></a>Odkazování dokumentu nebo adresy URL na prvek kódu
 
-1. V textovém editoru nebo editoru XML otevřete soubor .dgml.
+1. Otevřete soubor. dgml v textovém editoru nebo editoru XML.
 
-2. Najít `<Node/>` – element pro element kódu, který chcete.
+2. Vyhledejte prvek `<Node/>` pro prvek kódu, který chcete.
 
 3. Proveďte jednu z úloh z následující tabulky:
 
-    Jediného prvku kódu
+    Jeden prvek kódu
 
-   - V `<Node/>` nebo `<Link/>` elementu, přidejte `Reference` atribut k určení umístění prvku kódu.
+   - V prvku `<Node/>` nebo `<Link/>` přidejte atribut `Reference` pro určení umístění prvku kódu.
 
      > [!NOTE]
-     > Může mít pouze jeden `Reference` atribut na prvek.
+     > Pro každý prvek lze mít pouze jeden atribut `Reference`.
 
      Příklad:
 
@@ -593,19 +593,19 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
    </Properties>
    ```
 
-    Několik prvků kódu
+    Více elementů kódu
 
-   1. V `<Node/>` nebo `<Link/>` elementu, přidáte nový atribut k určení umístění každého odkazu.
+   1. V prvku `<Node/>` nebo `<Link/>` přidejte nový atribut pro určení umístění každého odkazu.
 
-   2. V `<Properties>` části:
+   2. V části `<Properties>`:
 
-      1. Přidat `<Property/>` – element pro každý nový typ odkazu.
+      1. Přidejte `<Property/>` element pro každý nový typ odkazu.
 
-      2. Nastavte `Id` atribut pro název nového atributu odkazu.
+      2. Nastavte atribut `Id` na název nového referenčního atributu.
 
-      3. Přidat `IsReference` atribut a nastavte ho na `True` odkazovat na prvek kódu zobrazí **přejděte na odkaz** nabídku.
+      3. Přidejte atribut `IsReference` a nastavte jej na `True`, aby se odkaz zobrazil v místní nabídce prvku kódu **Přejít na odkaz** .
 
-      4. Použití `Label` atributu pro určení zobrazovaného textu na prvek kódu **přejděte na odkaz** nabídku.
+      4. Použijte atribut `Label` k určení zobrazovaného textu v místní nabídce **Přejít na odkaz** elementu kódu.
 
       Příklad:
 
@@ -619,11 +619,11 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
    </Properties>
    ```
 
-    Na mapě zobrazí podtržený název prvku kódu. Když otevřete místní nabídku pro prvek kódu nebo odkaz, zobrazí se **přejděte na odkaz** místní nabídka, která obsahuje elementy propojeného kódu můžete zvolit.
+    Na mapě se název prvku kódu zobrazuje podtrženo. Když otevřete místní nabídku pro prvek kódu nebo odkaz, zobrazí se místní nabídka **Přejít na odkaz** , která obsahuje prvky propojeného kódu, které můžete vybrat.
 
-4. Použití `ReferenceTemplate` atributu pro zadání běžného řetězce, jako je například adresu URL, která je použita více odkazy místo tohoto řetězce v referenci.
+4. Použijte atribut `ReferenceTemplate` k určení společného řetězce, jako je například adresa URL, která je používána více odkazy namísto opakování řetězce v odkazu.
 
-    `ReferenceTemplate` Atribut určuje zástupný symbol pro hodnotu odkazu. V následujícím příkladu `{0}` zástupný symbol v `ReferenceTemplate` atribut se nahradí hodnoty `MyFirstReference` a `MySecondReference` atributy v `<Node/>` element vznikne úplná cesta:
+    Atribut `ReferenceTemplate` Určuje zástupný symbol pro hodnotu odkazu. V následujícím příkladu bude zástupný symbol `{0}` v atributu `ReferenceTemplate` nahrazen hodnotami atributů `MyFirstReference` a `MySecondReference` v prvku `<Node/>` pro vytvoření úplné cesty:
 
    ```xml
    <Nodes>
@@ -636,7 +636,7 @@ Přizpůsobení map kódu, můžete upravit jeho soubor Directed Graph Markup La
    </Properties>
    ```
 
-5. Chcete-li zobrazit prvku odkazovaného kódu nebo prvky kódu z mapy, otevřete místní nabídku pro prvek kódu nebo odkaz. Zvolte **přejděte na odkaz** a pak na prvek kódu.
+5. Chcete-li zobrazit odkazový prvek kódu nebo prvky kódu z mapy, otevřete místní nabídku pro prvek kódu nebo odkaz. Zvolte **Přejít na odkaz** a poté prvek kódu.
 
 ## <a name="see-also"></a>Viz také
 

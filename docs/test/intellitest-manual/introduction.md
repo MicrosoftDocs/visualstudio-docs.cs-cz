@@ -1,54 +1,54 @@
 ---
-title: Přehled | Nástroj pro testování Microsoft IntelliTest Developer
+title: Přehled | Nástroj Microsoft IntelliTest Developer test Tool
 ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Visual Studio IntelliTest developer testing tool
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 5aa67bd32f6895e4e1dfc4e7c558bc3bc0d8001b
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+author: jillre
+ms.openlocfilehash: 94bd67ecb4646e3b8079d2d1aadda097c655af4c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65461496"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653176"
 ---
 # <a name="overview-of-microsoft-intellitest"></a>Přehled Microsoft IntelliTest
 
-IntelliTest umožňuje najít chyby již v rané fázi a snižuje náklady na údržbu testů. Pomocí automatizovaných a transparentní přístup testování, Intellitestu můžete vygenerovat Release candidate sady testování pro kód .NET. Generování testu suite můžete dále řídí *vlastností správnosti* zadáte. IntelliTest se i vyvíjet sady testů automaticky s vyvíjí testovaného kódu.
+IntelliTest vám umožňuje najít chyby brzy a snížit náklady na údržbu testů. Pomocí automatizovaného a transparentního testovacího přístupu může IntelliTest vygenerovat kandidátskou sadu testů pro váš kód .NET. Generace sady testů lze dále prověřit *vlastnostmi správnosti* , které zadáte. IntelliTest také automaticky vyvíjí testovací sadu, když se vyvíjí kód v rámci testu.
 
-**Testy charakteristiku** IntelliTest umožňuje určit chování kódu z hlediska sadu tradiční jednotkové testy.
-Testovací sada může sloužit jako sada regrese, které tvoří základ pro zvládnutí složitost spojenou s refaktoring starší verze nebo neznámého kódu.
+**Testy charakterizace** IntelliTest umožňuje určit chování kódu v souvislosti se sadou tradičních testů jednotek.
+Taková sada testů může být použita jako regresní sada, která vytváří základ pro řešení složitosti spojené s refaktoringem staršího nebo neznámého kódu.
 
-**Praktická testovací vstup generování** IntelliTest používá analýzy kódu otevřete a omezení řešení přístup k automatickému generování přesné testovací vstupní hodnoty; obvykle bez nutnosti zásahu uživatele. Pro komplexní typy objektů se automaticky generuje objekty pro vytváření. Vstupní generování testu můžete Průvodce rozšířením a konfigurace továrny tak, aby vyhovoval vašim požadavkům. Byly zadány jako kontrolní výrazy v kódu se také použít automaticky k další vygenerování testovacích vstupní vlastnosti správnosti.
+**Generování vstupních testů s asistencí** IntelliTest používá k automatickému vygenerování přesných vstupních hodnot testu a přístup k řešení pro analýzu a omezení kódu. obvykle bez nutnosti zásahu uživatele. U složitých typů objektů automaticky generuje továrny. Vytváření testovacího vstupu můžete nastavit tak, že rozšíříte a nakonfigurujete továrny tak, aby vyhovovaly vašim požadavkům. Vlastnosti správnosti zadané jako kontrolní výrazy v kódu se použijí také automaticky k dalšímu seznámení s vytvářením vstupních testů.
 
-**Integrace integrovaného vývojového prostředí** IntelliTest je plně integrován do integrovaného vývojového prostředí sady Visual Studio. Všechny informace shromážděné během generování sady testů (např. automaticky generované vstupů, výstup z kódu, vygenerované testovací případy a jejich průchodu nebo neúspěch stav) se zobrazí v rámci rozhraní IDE sady Visual Studio. Můžete snadno iterovat mezi opravu kódu a znovu spustit inteligentní testování, aniž byste museli opustit integrované vývojové prostředí sady Visual Studio.
-Testy mohou být uloženy do řešení jako projekt testování částí a bude možné automaticky detekovat později pomocí Visual Studio Test Explorer.
+**Integrace IDE** IntelliTest je plně integrovaná do integrovaného vývojového prostředí (IDE) sady Visual Studio. V integrovaném vývojovém prostředí sady Visual Studio se zobrazí všechny informace shromážděné během generování sady testů (například automaticky generované vstupy, výstup z vašeho kódu, vygenerované testovací případy a jejich stav úspěch nebo selhání). Můžete snadno iterovat mezi opravou kódu a IntelliTest, aniž byste opustili integrované vývojové prostředí (IDE) sady Visual Studio.
+Testy mohou být uloženy do řešení jako projekt testu jednotek a následně budou automaticky zjišťovány v Průzkumníku testů sady Visual Studio.
 
-**Doplňují existující testování postupů** použití IntelliTest doplnit existující testování postupy, že již mohou následovat.
+**Doplnit stávající postupy testování** Pomocí IntelliTest můžete doplnit všechny stávající postupy testování, které už možná sledujete.
 
 Pokud chcete testovat:
 
-* Algoritmy přes primitivní datové nebo primitivní datové pole:
-  * zápis [parametrizované testy částí](test-generation.md#parameterized-unit-testing)
-* Algoritmy složitých dat, jako je například kompilátor:
-  * umožní IntelliTest nejprve generovat abstraktní znázornění dat a informační kanál algoritmus
-  * umožnit vytváření instancí pomocí funkce IntelliTest [vytváření vlastních objektů](input-generation.md#objects) a výstupních dat podmínek a pak vyvolejte algoritmus
-* Kontejnery dat:
-  * zápis [parametrizované testy částí](test-generation.md#parameterized-unit-testing)
-  * umožnit vytváření instancí pomocí funkce IntelliTest [vytváření vlastních objektů](input-generation.md#objects) a výstupních dat podmínek a vyvolat metodu kontejneru a potom spusťte opětovnou kontrolu výstupních podmínek
-  * zápis [parametrizované testy částí](test-generation.md#parameterized-unit-testing) , které volají různé metody provedení, v závislosti na hodnoty parametrů
-* Existující kódové základně:
-  * pomocí Průvodce Intellitestu sady Visual Studio můžete začít tím, že generování sadu [parametrizované testy částí (vloží)](test-generation.md#parameterized-unit-testing)
+* Algoritmy pro primitivní data nebo pole primitivních dat:
+  * zapsat [parametrizované testy jednotek](test-generation.md#parameterized-unit-testing)
+* Algoritmy pro složitá data, jako je například kompilátor:
+  * IntelliTest nejdřív vygenerujte abstraktní reprezentaci dat a pak ji zapíše do algoritmu.
+  * Umožněte IntelliTest instance sestavení pomocí [vlastních objektů pro vytvoření](input-generation.md#objects) a invariantní data a potom tento algoritmus vyvolejte.
+* Datové kontejnery:
+  * zapsat [parametrizované testy jednotek](test-generation.md#parameterized-unit-testing)
+  * Umožněte IntelliTest instance sestavení pomocí [vlastních objektů pro vytvoření](input-generation.md#objects) a invariantní data a potom volejte metodu kontejneru a znovu zkontrolujte invariantní.
+  * zapsat [parametrizované testy jednotek](test-generation.md#parameterized-unit-testing) , které volají různé metody implementace, v závislosti na hodnotách parametrů
+* Existující základ kódu:
+  * Začněte tím, že vygenerujete sadu [parametrizovaných testů jednotek (umístí)](test-generation.md#parameterized-unit-testing) pomocí Průvodce IntelliTest sady Visual Studio.
 
-## <a name="the-hello-world-of-intellitest"></a>Hello World intellitestu
+## <a name="the-hello-world-of-intellitest"></a>Hello World IntelliTest
 
-IntelliTest najde vstupy relevantní pro otestované program, to znamená, slouží ke generování známý **Hello World!** řetězec. Předpokladem je, že jste vytvořili C# založené na MSTest testovací projekt a přidat odkaz na **Microsoft.Pex.Framework**. Pokud používáte jiný testovací rozhraní, vytvořte C# knihovna tříd a najdete v dokumentaci rozhraní framework test v nastavení projektu.
+IntelliTest vyhledá vstupy relevantní testovanému programu, což znamená, že ho můžete použít k vygenerování slavných **Hello World!** řetezce. To předpokládá, že jste vytvořili testovací C# projekt založený na MSTest a Přidali jste odkaz na **Microsoft. Pex. Framework**. Pokud používáte jiné testovací rozhraní, vytvořte knihovnu C# tříd a přečtěte si dokumentaci k testovacímu rozhraní, jak nastavit projekt.
 
-Následující příklad vytvoří dvě omezení na parametr s názvem **hodnotu** tak, aby IntelliTest vygeneruje požadovaný řetězec:
+Následující příklad vytvoří dvě omezení pro parametr s názvem **hodnota** tak, aby IntelliTest vygeneroval požadovaný řetězec:
 
 ```csharp
 using System;
@@ -67,18 +67,18 @@ public partial class HelloWorldTest {
 }
 ```
 
-Jakmile zkompilovat a spustit, Intellitestu generuje sadu testů, jako je následující:
+Po kompilaci a provedení IntelliTest vygeneruje sadu testů, jako je následující sada:
 
 1. ""
-2. "\0\0\0\0\0"
-3. "Hello"
-4. "\0\0\0\0\0\0"
+2. "\ 0 \ 0 \ 0 \ 0 \ 0"
+3. Hello
+4. "\ 0 \ 0 \ 0 \ 0 \ 0 \ 0"
 5. "Hello\0"
 6. "Hello\0\0"
 7. "Hello\0World!"
 8. "Hello World!"
 
-Čtení [generování testů jednotek s Intellitestem](../../test/generate-unit-tests-for-your-code-with-intellitest.md) pochopit, kde jsou uloženy vygenerované testy. Kód generovaný test by měl obsahovat testu, jako je například následující kód:
+Přečtěte si téma [generování testů jednotek pomocí IntelliTest](../../test/generate-unit-tests-for-your-code-with-intellitest.md) k pochopení, kde jsou vygenerované testy uloženy. Vygenerovaný testovací kód by měl zahrnovat test, jako je například následující kód:
 
 ```csharp
 [TestMethod]
@@ -90,7 +90,7 @@ public void HelloWorldThrowsException167()
 }
 ```
 
-Je to snadné!
+To je to snadné!
 
 ## <a name="limitations"></a>Omezení
 
@@ -99,56 +99,56 @@ Tato část popisuje omezení IntelliTest:
 * [Nondeterminism](#nondeterminism)
 * [Souběžnost](#concurrency)
 * [Nativní kód .NET](#native-code)
-* [Platforma](#platform)
+* [Platformy](#platform)
 * [Jazyk](#language)
-* [Symbolického uvažování](#symbolic-reasoning)
+* [Symbolický důvod](#symbolic-reasoning)
 * [Trasování zásobníku](#incorrect-stack-traces)
 
 ### <a name="nondeterminism"></a>Nondeterminism
 
-IntelliTest předpokládá, že je analyzované program deterministický. Pokud není, IntelliTest se cyklus, dokud nedosáhne vysvětlení vázán.
+IntelliTest předpokládá, že analyzovaný program je deterministický. Pokud to tak není, IntelliTest se zacykluje, dokud nedosáhne hranice průzkumu.
 
-IntelliTest bere v úvahu program, který se bez determistic, pokud závisí na vstupy, které nemůžeme mít pod kontrolou IntelliTest.
+IntelliTest považuje program za nedetermisticý, pokud spoléhá na vstupy, které IntelliTest nemůže ovládat.
 
-IntelliTest ovládací prvky na zadané vstupy [parametrizované testy částí](test-generation.md#parameterized-unit-testing) a které byly získány z [PexChoose](static-helper-classes.md#pexchoose).
-V tomto smyslu výsledky volání neinstrumentované nebo nespravovaného kódu se také považují za "vstupy" instrumentované aplikace, ale IntelliTest je řídit. Pokud tok řízení programu závisí na konkrétní hodnoty pocházejí z těchto externích zdrojů, Intellitestu nelze "řídit" program směrem k dříve nepokrytý oblasti.
+IntelliTest řídí vstupy poskytované pro [parametrizované testy jednotek](test-generation.md#parameterized-unit-testing) a získané z [PexChoose](static-helper-classes.md#pexchoose).
+V tomto smyslu se výsledky volání nespravovaného nebo neinstrumentované kódu považují také za "vstupy" do instrumentované aplikace, ale IntelliTest je nedokáže ovládat. Pokud tok řízení programu závisí na konkrétních hodnotách přicházejících z těchto externích zdrojů, IntelliTest nemůže "řídit" program směrem k dříve nekrytým oblastem.
 
-Kromě toho program se považuje za jiných determistic Pokud změny hodnot z externích zdrojů, když znovu spustit program. V takových případech IntelliTest ztratí kontrolu nad provádění programu a hledání se stane neefektivní.
+Kromě toho je program považován za nedetermisticný, pokud se při opětovném spuštění programu změní hodnoty z externích zdrojů. V takových případech IntelliTest ztratí kontrolu nad spuštěním programu a jeho hledání se neefektivně.
 
-Někdy není zřejmé Pokud k tomu dojde. Vezměte v úvahu následující příklady:
+V některých případech to není zřejmé, pokud k tomu dojde. Vezměte v úvahu následující příklady:
 
-* Výsledkem **GetHashCode()** metoda je poskytována nespravovaného kódu a není předvídatelný.
-* **System.Random** třída používá aktuální systémový čas k zajištění skutečně náhodné hodnoty.
-* **System.DateTime** třída poskytuje aktuální čas, který není pod kontrolou IntelliTest.
+* Výsledek metody **GetHashCode ()** je poskytován nespravovaným kódem a není předvídatelný.
+* Třída **System. Random** používá aktuální systémový čas k zajištění skutečně náhodných hodnot.
+* Třída **System. DateTime** poskytuje aktuální čas, který není pod ovládacím prvkem IntelliTest.
 
 ### <a name="concurrency"></a>Souběžnost
 
-IntelliTest nezpracovává s více vlákny.
+IntelliTest nezpracovává programy s více vlákny.
 
 ### <a name="native-code"></a>Nativní kód
 
-IntelliTest nerozumí nativního kódu, jako je například x86 pokyny zavolaném prostřednictvím **P/Invoke**. Nemůže určit způsob převodu těchto volání do omezení, která mohou být předány [Řešitel omezení](input-generation.md#constraint-solver).
-I pro kód .NET se může analyzovat jenom kód, který jej instrumentovat. IntelliTest se nedá instrumentovat některých částí **mscorlib**, včetně knihovnu reflexe. **Konstruktor DynamicMethod** nemůže být instrumentované.
+IntelliTest nerozumí nativnímu kódu, jako jsou například instrukce x86 volané prostřednictvím **P/Invoke**. Nevíte, jak přeložit taková volání na omezení, která lze předat [Řešiteli omezení](input-generation.md#constraint-solver).
+I pro kód .NET může analyzovat pouze kód IT nástroje. IntelliTest nemůže instrumentovat určité části **knihovny mscorlib**, včetně knihovny reflexe. **Konstruktor DynamicMethod neplatná** nelze instrumentovat.
 
-Navrhovaná alternativní řešení je, aby zkušební režim, kde tyto metody jsou umístěny v typech v dynamickém sestavení. Ale i v případě, že jsou některé metody neinstrumentované, IntelliTest se pokouší zakrýt největší instrumentované kódu, jako je to možné.
+Navrhovaná alternativní řešení je mít testovací režim, ve kterém se tyto metody nacházejí v typech v dynamickém sestavení. Nicméně i v případě, že některé metody nejsou instrumentované, IntelliTest se pokusí pokrýt co nejvíc instrumentované kódu.
 
 ### <a name="platform"></a>Platforma
 
-IntelliTest se podporuje jenom na X86, 32 bitů. NETframework.
+IntelliTest je podporován pouze v x86, 32-bit. NETframework.
 
 ### <a name="language"></a>Jazyk
 
-V zásadě můžete analyzovat IntelliTest libovolného programy .NET vytvořené v kterémkoli jazyce platformy .NET. Ale v sadě Visual Studio podporuje pouze C#.
+V zásadě IntelliTest dokáže analyzovat libovolný program .NET, který je napsán v jakémkoli jazyce .NET. V aplikaci Visual Studio však podporuje pouze C#.
 
-### <a name="symbolic-reasoning"></a>Symbolického uvažování
+### <a name="symbolic-reasoning"></a>Symbolický důvod
 
-IntelliTest používá automatické [Řešitel omezení](input-generation.md#constraint-solver) k určení hodnot, které jsou relevantní pro testovací a testovaném programu. Nicméně jsou možnosti řešení omezení a stále bude, omezené.
+IntelliTest používá Řešitel automatického [omezení](input-generation.md#constraint-solver) k určení, které hodnoty jsou relevantní pro test a program v testovaném programu. Nicméně Možnosti řešitele omezení jsou a vždycky budou omezené.
 
-### <a name="incorrect-stack-traces"></a>Trasování zásobníku nesprávný
+### <a name="incorrect-stack-traces"></a>Nesprávná trasování zásobníku
 
-Protože IntelliTest zachytí a "znovu vyvolá" výjimky v každé metodě instrumentované čísla řádků v trasování zásobníku nebudou správná. Jedná se o omezení podle návrhu "přegenerování" instrukce.
+Vzhledem k tomu, že IntelliTest catch a "rethrows" výjimky v každé instrumentované metodě, čísla řádků v trasování zásobníku nebudou správná. Toto omezení je záměrné návrhem instrukce "Rethrow".
 
 ## <a name="further-reading"></a>Další čtení
 
-* [Úvodní blogový příspěvek](https://devblogs.microsoft.com/devops/introducing-smart-unit-tests/).
+* [Úvodní Blogový příspěvek](https://devblogs.microsoft.com/devops/introducing-smart-unit-tests/).
 * [Generování testů částí pro kód pomocí funkce IntelliTest](../../test/generate-unit-tests-for-your-code-with-intellitest.md)

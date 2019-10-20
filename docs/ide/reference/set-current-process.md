@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Debug.SetCurrentProcess command
 - Set Current Process command
 ms.assetid: 1e016ebd-aadd-411f-a606-03bf69d3f8aa
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8d4c23934ddb6a838344eb6252f6002a5ecf10d
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 6545962f374ea850808c11a3c9c79e0a04602027
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926088"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655475"
 ---
 # <a name="set-current-process"></a>Nastavit aktuální proces
 Nastaví zadaný proces jako aktivní proces v ladicím programu.
@@ -30,10 +30,10 @@ Debug.SetCurrentProcess index
 ## <a name="arguments"></a>Arguments
 `index`
 
-Povinný parametr. Index procesu.
+Požadováno. Index procesu.
 
 ## <a name="remarks"></a>Poznámky
-Můžete se připojit k více procesům při ladění, ale v Dubber je v daném okamžiku aktivní pouze jeden proces. Pomocí `SetCurrentProcess` příkazu můžete nastavit aktivní proces.
+Můžete se připojit k více procesům při ladění, ale v Dubber je v daném okamžiku aktivní pouze jeden proces. K nastavení aktivního procesu lze použít příkaz `SetCurrentProcess`.
 
 ## <a name="example"></a>Příklad
 

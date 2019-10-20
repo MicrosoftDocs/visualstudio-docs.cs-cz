@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno Příkazový řádek události po sestavení události před sestavením | Dokumentace Microsoftu
+title: Událost před sestavením – dialogové okno Příkazový řádek události po sestavení | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -31,67 +31,60 @@ helpviewer_keywords:
 - build events, macros
 ms.assetid: d49b2c57-24bf-4fb2-8351-5c4b6cca938f
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 213535d983f95f304b8e0fba3241fa502577f0f4
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b42c219620a669a8fa27a7ce847dc571a4075288
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438058"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662170"
 ---
 # <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>Dialogové okno Příkazový řádek události před sestavením/po sestavení
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Můžete zadat před nebo po sestavení událostí [stránka události sestavení, Návrhář projektu (C#)](../../ide/reference/build-events-page-project-designer-csharp.md) přímo v úpravách pole, nebo ho můžete vybrat makra před instrumentací a po sestavení ze seznamu dostupných maker.  
-  
+Můžete zadat události před nebo po sestavení pro [stránku události sestavení, Návrhář projektuC#()](../../ide/reference/build-events-page-project-designer-csharp.md) přímo v poli pro úpravy nebo můžete vybrat možnost makra před a po sestavení ze seznamu dostupných maker.
+
 > [!NOTE]
-> Události před sestavením nebudou spuštěny, pokud je aktuální projekt a není aktivováno žádné sestavení.  
-  
-## <a name="ui-element-list"></a>Seznam prvků uživatelského rozhraní  
- **Pole pro úpravy příkazového řádku**  
- Obsahuje události, které chcete spustit pro před sestavením nebo po sestavení.  
-  
+> Události před sestavením se nespustí, pokud je projekt aktuální a není spuštěno žádné sestavení.
+
+## <a name="ui-element-list"></a>Seznam prvků uživatelského rozhraní
+ **Textové pole příkazového řádku** Obsahuje události pro spuštění před sestavením nebo po sestavení.
+
 > [!NOTE]
-> Přidat `call` než vše post-build příkazy, které spouštějí soubory .bat. Například `call C:\MyFile.bat` nebo `call C:\MyFile.bat call C:\MyFile2.bat`.  
-  
- **Makra**  
- Rozbalí textové pole k zobrazení seznamu maker vložit do textového pole pro příkazový řádek.  
-  
- **Tabulky – makro**  
- Obsahuje seznam dostupná makra a její hodnotu. Popis jednotlivých naleznete v tématu makra níže. Můžete vybrat pouze jedno makro najednou k vložení do textového pole příkazového řádku.  
-  
- **Vložit**  
- Vložení informací do příkazového řádku textové pole – makro vybraný v tabulce – makro.  
-  
-### <a name="macros"></a>Makra  
- Můžete použít některý z těchto maker určit umístění pro soubory, nebo chcete-li získat skutečný název výstupního souboru v případě více výběrů. Tato makra nerozlišují malá a velká písmena.  
-  
-|– Makro|Popis|  
-|-----------|-----------------|  
-|`$(ConfigurationName)`|Název aktuální konfigurace projektu, například "Debug".|  
-|`$(OutDir)`|Cesta k adresáři výstupního souboru relativní vzhledem k adresáři projektu. To se přeloží na hodnotu pro vlastnost výstupní adresář. Její součástí zpětné lomítko na konci "\\".|  
-|`$(DevEnvDir)`|Instalační adresář sady Visual Studio (definované s jednotku a cestu); zahrnuje koncové lomítko "\\".|  
-|`$(PlatformName)`|Název aktuální cílové platformy. Například "AnyCPU".|  
-|`$(ProjectDir)`|Adresář projektu (definované s jednotku a cestu); zahrnuje koncové lomítko "\\".|  
-|`$(ProjectPath)`|Absolutní cesta název projektu (definované s diskovou jednotku, základním názvem a příponou).|  
-|`$(ProjectName)`|Základní název projektu.|  
-|`$(ProjectFileName)`|Název souboru projektu (definované s základní příponu názvu souboru).|  
-|`$(ProjectExt)`|Přípona souboru projektu. Zahrnuje "." před příponu souboru.|  
-|`$(SolutionDir)`|Adresář řešení (definované s jednotku a cestu); zahrnuje koncové lomítko "\\".|  
-|`$(SolutionPath)`|Absolutní cesta název řešení (definované s diskovou jednotku, základním názvem a příponou).|  
-|`$(SolutionName)`|Základní název řešení.|  
-|`$(SolutionFileName)`|Název souboru řešení (definované s základní příponu názvu souboru).|  
-|`$(SolutionExt)`|Přípona souboru řešení. Zahrnuje "." před příponu souboru.|  
-|`$(TargetDir)`|Adresář primárního výstupního souboru pro sestavení (definuje se jednotku a cestu). Její součástí zpětné lomítko na konci "\\".|  
-|`$(TargetPath)`|Absolutní cesta název primárního výstupního souboru pro sestavení (definuje se jednotky, cesty, základním názvem a příponou).|  
-|`$(TargetName)`|Základní název primárního výstupního souboru pro sestavení.|  
-|`$(TargetFileName)`|Název souboru primárního výstupního souboru pro sestavení (definované jako základní příponu názvu souboru).|  
-|`$(TargetExt)`|Přípona primárního výstupního souboru pro sestavení. Zahrnuje "." před příponu souboru.|  
-  
-## <a name="see-also"></a>Viz také  
- [Specifikace vlastních událostí sestavení v sadě Visual Studio](../../ide/specifying-custom-build-events-in-visual-studio.md)   
- [Stránka události sestavení, Návrhář projektu (C#)](../../ide/reference/build-events-page-project-designer-csharp.md)   
- [Postupy: Určení událostí sestavení (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)   
- [Postupy: Určení událostí sestavení (C#)](../../ide/how-to-specify-build-events-csharp.md)
+> Přidejte příkaz `call` před všechny příkazy po sestavení, které spouštějí soubory. bat. Například `call C:\MyFile.bat` nebo `call C:\MyFile.bat call C:\MyFile2.bat`.
+
+ **Makra** Rozbalí pole pro úpravy a zobrazí seznam maker, která se mají vložit do příkazového řádku pro úpravy.
+
+ **Tabulka maker** Vypíše dostupná makra a její hodnotu. Popis každého najdete v tématu makra níže. V případě, že chcete vložit do textového pole příkazového řádku, můžete vybrat pouze jedno makro.
+
+ **Vložit** Vloží do příkazového řádku textové pole makro vybrané v tabulce maker.
+
+### <a name="macros"></a>Makra
+ Pomocí kterékoli z těchto maker můžete určit umístění souborů nebo získat skutečný název vstupního souboru v případě vícenásobného výběru. U těchto maker nejsou rozlišována velká a malá písmena.
+
+|Podokně|Popis|
+|-----------|-----------------|
+|`$(ConfigurationName)`|Název aktuální konfigurace projektu, například "ladit".|
+|`$(OutDir)`|Cesta k adresáři výstupního souboru, relativní vzhledem k adresáři projektu. Tím se přeloží hodnota vlastnosti výstupní adresář. Obsahuje koncové zpětné lomítko ' \\ '.|
+|`$(DevEnvDir)`|Instalační adresář aplikace Visual Studio (definovaný s jednotkou a cestou); obsahuje koncové zpětné lomítko ' \\ '.|
+|`$(PlatformName)`|Název aktuálně cílené platformy. Například "AnyCPU".|
+|`$(ProjectDir)`|Adresář projektu (definovaný s jednotkou a cestou); obsahuje koncové zpětné lomítko ' \\ '.|
+|`$(ProjectPath)`|Absolutní cesta k názvu projektu (definovaná s jednotkou, cestou, základním názvem a příponou souboru).|
+|`$(ProjectName)`|Základní název projektu|
+|`$(ProjectFileName)`|Název souboru projektu (definovaný s názvem základní a příponou souboru)|
+|`$(ProjectExt)`|Přípona souboru projektu. Obsahuje znak "." před příponou souboru.|
+|`$(SolutionDir)`|Adresář řešení (definovaný s jednotkou a cestou); obsahuje koncové zpětné lomítko ' \\ '.|
+|`$(SolutionPath)`|Absolutní cesta k názvu řešení (definovaného pomocí jednotky, cesty, základního názvu a přípony souboru).|
+|`$(SolutionName)`|Základní název řešení|
+|`$(SolutionFileName)`|Název souboru řešení (definovaného základním názvem a příponou souboru).|
+|`$(SolutionExt)`|Přípona souboru řešení. Obsahuje znak "." před příponou souboru.|
+|`$(TargetDir)`|Adresář primárního výstupního souboru pro sestavení (definovaný s jednotkou a cestou). Obsahuje koncové zpětné lomítko ' \\ '.|
+|`$(TargetPath)`|Absolutní cesta k primárnímu výstupnímu souboru pro sestavení (definovaného s jednotkou, cestou, základním názvem a příponou souboru).|
+|`$(TargetName)`|Základní název primárního výstupního souboru pro sestavení.|
+|`$(TargetFileName)`|Název souboru primárního výstupního souboru pro sestavení (definované jako základní název a Přípona souboru).|
+|`$(TargetExt)`|Přípona souboru primárního výstupního souboru pro sestavení. Obsahuje znak "." před příponou souboru.|
+
+## <a name="see-also"></a>Viz také
+ [Určení vlastních událostí sestavení na](../../ide/specifying-custom-build-events-in-visual-studio.md) [stránce události sestavení sady Visual Studio, Návrháře projektuC#()](../../ide/reference/build-events-page-project-designer-csharp.md) [Postupy: určení událostí sestavení (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md) [Postupy: určení událostí sestavení (C#)](../../ide/how-to-specify-build-events-csharp.md)

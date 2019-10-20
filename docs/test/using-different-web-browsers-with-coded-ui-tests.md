@@ -2,17 +2,17 @@
 title: Používání jiných webových prohlížečů v programových testech uživatelského rozhraní
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 1b7cad6d52dc3fabc182881b99163cf15e1a260c
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+author: jillre
+ms.openlocfilehash: 24e4ee35f21b7477e9b3d601305bd6534a16d9e0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926574"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659789"
 ---
 # <a name="use-different-web-browsers-with-coded-ui-tests"></a>Použití různých webových prohlížečů s programovým testem uživatelského rozhraní
 
@@ -38,7 +38,7 @@ Při testování webové aplikace pomocí různých typů webových prohlížeč
 
 ## <a name="how-do-i-record-and-play-back-coded-ui-tests-on-web-applications-using-the-supported-web-browsers"></a>Jak mohu zaznamenat a přehrát programové testy UI webových aplikacích pomocí podporovaných webových prohlížečů?
 
-**Zapisovací** Chcete-li zaznamenat test webové aplikace pomocí aplikace Internet Explorer, je nutné použít Tvůrce programového testu uživatelského rozhraní. Volitelně můžete pomocí předdefinované sady vlastností přidat kód pro ověření a přizpůsobení testovaných ovládacích prvků, jak byste to obvykle udělali v případě programových testů UI. Další informace naleznete v tématu [použití automatizace uživatelského rozhraní k otestování kódu](../test/use-ui-automation-to-test-your-code.md).
+**Záznam:** Chcete-li zaznamenat test webové aplikace pomocí aplikace Internet Explorer, je nutné použít Tvůrce programového testu uživatelského rozhraní. Volitelně můžete pomocí předdefinované sady vlastností přidat kód pro ověření a přizpůsobení testovaných ovládacích prvků, jak byste to obvykle udělali v případě programových testů UI. Další informace naleznete v tématu [použití automatizace uživatelského rozhraní k otestování kódu](../test/use-ui-automation-to-test-your-code.md).
 
 > [!NOTE]
 > Programové testy UI nelze zaznamenat pomocí prohlížečů Google Chrome nebo Mozilla Firefox.
@@ -70,7 +70,7 @@ Chcete-li přehrát testy v webových prohlížečích bez prohlížeče IE, je 
 3. Zvýrazněte rozšíření a klikněte na tlačítko **Stáhnout**.
 
     > [!TIP]
-    > Komponenty selenu můžete také stáhnout pro testování programového uživatelského rozhraní v různých [](https://marketplace.visualstudio.com/items?itemName=AtinBansal.SeleniumcomponentsforCodedUICrossBrowserTesting)prohlížečích.
+    > Komponenty selenu můžete také stáhnout pro testování programového uživatelského rozhraní v různých [prohlížečích.](https://marketplace.visualstudio.com/items?itemName=AtinBansal.SeleniumcomponentsforCodedUICrossBrowserTesting)
 
 Další informace o vytváření a používání programových testů UI naleznete v tématu [Create Code test UI](../test/use-ui-automation-to-test-your-code.md).
 
@@ -88,9 +88,9 @@ Chcete-li povolit ladění webové aplikace, je nutné dokončit následující 
 
     1. V nabídce **ladění** vyberte možnost **výjimky**.
 
-    2. V případě **výjimek modulu CLR (Common Language Runtime)** zrušte kontrolu neošetřeného **uživatelem**.
+    2. V případě **výjimek modulu CLR (Common Language Runtime)** zrušte kontrolu **neošetřeného uživatelem**.
 
-Pokud nevidíte možnost změny `BrowserWindow.CurrentBrowser` v programovém testu UI, možná budete používat verzi sady Visual Studio, která nepodporuje programové testy UI pomocí různých webových prohlížečů. Chcete-li použít tyto programové testy uživatelského rozhraní, je nutné použít edici Visual Studio Enterprise.
+Pokud nevidíte možnost změny `BrowserWindow.CurrentBrowser` v programovém testu UI, možná používáte verzi sady Visual Studio, která nepodporuje programové testy UI pomocí různých webových prohlížečů. Chcete-li použít tyto programové testy uživatelského rozhraní, je nutné použít edici Visual Studio Enterprise.
 
 Tady je několik dalších věcí, které byste měli znát:
 
@@ -106,11 +106,11 @@ Tady je několik dalších věcí, které byste měli znát:
 
 Můžete nakonfigurovat výstup tak, aby obsahoval snímky obrazovky v kódovaných protokolech UI. K tomu je potřeba nastavit některá nastavení konfigurace v souboru *QTAgent32. exe. config* . Ve výchozím nastavení je tento soubor nainstalován v následujícím umístění:
 
-*%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE*
+*% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE*
 
 Nastavte následující hodnoty:
 
-- `EqtTraceLevel``system.diagnostics` v části.
+- `EqtTraceLevel` v části `system.diagnostics`.
 
 - `<add name="EqtTraceLevel" value="4" />`
 
@@ -133,5 +133,5 @@ Další informace naleznete v tématu [Analýza programových testů uživatelsk
 ## <a name="see-also"></a>Viz také:
 
 - [Použití automatizace uživatelského rozhraní k testování kódu](../test/use-ui-automation-to-test-your-code.md)
-- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a zaznamenávání akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a záznamy akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
 - [Analýza programových testů uživatelského rozhraní pomocí protokolů kódovaného testu uživatelského rozhraní](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)

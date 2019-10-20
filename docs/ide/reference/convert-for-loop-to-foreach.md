@@ -1,57 +1,57 @@
 ---
-title: Refaktorovat kód, který převede smyčky for k příkazu foreach
+title: Refaktoring kódu pro převod smyčky for na příkaz foreach
 ms.date: 05/10/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: d61e79055b2158115b459e643a36170304b7f655
-ms.sourcegitcommit: b468d71052a1b8a697f477ab23a3644de139f1e9
+ms.openlocfilehash: 3d35897bd928166410ffd950534277cfac2c06b7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67261710"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654544"
 ---
-# <a name="refactoring-to-convert-between-a-for-loop-and-a-foreach-statement"></a>Refaktoring pro převod mezi smyčky a příkazu foreach
+# <a name="refactoring-to-convert-between-a-for-loop-and-a-foreach-statement"></a>Refaktoring pro převod mezi smyčkou for a příkazem foreach
 
-Tento článek popisuje rychlé akce refaktoringů, převádět mezi dvěma struktur opakování. Zahrnuje některé důvody, proč můžete chtít přepínání [pro](/dotnet/csharp/language-reference/keywords/for) smyčky a [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) příkaz v kódu.
+Tento článek popisuje refaktoring rychlých akcí, které převádějí mezi dvě struktury smyček. Obsahuje některé důvody, proč můžete chtít přepínat mezi smyčkou [for](/dotnet/csharp/language-reference/keywords/for) a příkazem [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) v kódu.
 
-## <a name="convert-a-for-loop-to-a-foreach-statement"></a>Převést smyčky for k příkazu foreach
+## <a name="convert-a-for-loop-to-a-foreach-statement"></a>Převod smyčky for na příkaz foreach
 
-Pokud máte [pro](/dotnet/csharp/language-reference/keywords/for) smyčka v kódu, můžete tento refaktoring převeďte ho na [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) příkaz.
+Pokud máte ve svém kódu smyčku [for](/dotnet/csharp/language-reference/keywords/for) , můžete tento refaktoring použít k převedení na příkaz [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) .
 
 Tento refaktoring platí pro:
 
 - C#
 
 > [!NOTE]
-> **Převést na foreach** refaktoring rychlá akce je dostupná jenom pro [pro](/dotnet/csharp/language-reference/keywords/for) smyček, které obsahují všechny tři části: inicializátor, podmínky a iterátor.
+> Refaktoring rychlé akce **převést na foreach** je k dispozici pouze [pro smyčky,](/dotnet/csharp/language-reference/keywords/for) které obsahují všechny tři části: inicializátor, podmínka a iterátor.
 
 ### <a name="why-convert"></a>Proč převést
 
-Důvodů, proč můžete chtít převést [pro](/dotnet/csharp/language-reference/keywords/for) smyčku do [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) příkazu zahrnout:
+Důvody, proč je vhodné převést smyčku [for](/dotnet/csharp/language-reference/keywords/for) na příkaz [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) , zahrnují:
 
-- Proměnná místního smyčky uvnitř smyčka s výjimkou jako index nepoužívejte pro přístup k položkám.
+- V rámci smyčky nepoužíváte proměnnou lokální smyčky s výjimkou indexu pro přístup k položkám.
 
-- Chcete zjednodušit kód a snížit pravděpodobnost, že logických chyb v inicializátoru, podmínky a části iterátoru.
+- Chcete zjednodušit svůj kód a snížit pravděpodobnost chyb logického prostředí v částech inicializátoru, podmínky a iterátoru.
 
 ### <a name="how-to-use-it"></a>Jak ji použít
 
-1. Umístit váš kurzor v `for` – klíčové slovo.
+1. Umístěte blikající kurzor do klíčového slova `for`.
 
-1. Stisknutím klávesy **Ctrl**+ **.** nebo klikněte na tlačítko šroubovák ![šroubovák ikonu](../media/screwdriver-icon.png) ikonu na okraji na soubor kódu.
+1. Stiskněte klávesu **Ctrl** + **.** nebo klikněte na ikonu ![Screwdriver Screwdriver ](../media/screwdriver-icon.png) ikonu na okraji souboru s kódem.
 
-   ![Převést na foreach nabídky](media/convert-to-foreach.png)
+   ![Nabídka převést na foreach](media/convert-to-foreach.png)
 
-1. Vyberte **převést na "foreach"** . Nebo vyberte **náhled změn** otevřít [náhled změn](../../ide/preview-changes.md) dialogového okna a pak vyberte **použít**.
+1. Vyberte **převést na foreach**. Případně můžete výběrem **Zobrazit náhled změn** otevřít dialogové okno [Náhled změn](../../ide/preview-changes.md) a pak vybrat **použít**.
 
-## <a name="convert-a-foreach-statement-to-a-for-loop"></a>Převod příkazu foreach k smyčku for
+## <a name="convert-a-foreach-statement-to-a-for-loop"></a>Převod příkazu foreach na smyčku for
 
-Pokud máte [foreach (C#)](/dotnet/csharp/language-reference/keywords/foreach-in) nebo [For Each... Další (Visual Basic)](/dotnet/visual-basic/language-reference/statements/for-each-next-statement) příkaz v kódu, můžete použít tento refaktoring pro převod na [pro](/dotnet/csharp/language-reference/keywords/for) smyčky.
+Pokud máte příkaz [foreach (C#)](/dotnet/csharp/language-reference/keywords/foreach-in) nebo [for each... Následující (Visual Basic)](/dotnet/visual-basic/language-reference/statements/for-each-next-statement) příkaz v kódu, můžete použít tento refaktoring k převedení na smyčku [for](/dotnet/csharp/language-reference/keywords/for) .
 
 Tento refaktoring platí pro:
 
@@ -61,26 +61,26 @@ Tento refaktoring platí pro:
 
 ### <a name="why-convert"></a>Proč převést
 
-Důvodů, proč můžete chtít převést [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) příkazu [pro](/dotnet/csharp/language-reference/keywords/for) smyčky patří:
+Důvody, které byste mohli chtít převést příkaz [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) do smyčky [for](/dotnet/csharp/language-reference/keywords/for) , zahrnují:
 
-- Chcete použít proměnnou místní smyčky uvnitř smyčka pro víc než jenom přístup k položce.
+- Chcete použít proměnnou lokální smyčky uvnitř smyčky pro více než jenom přístup k položce.
 
-- Jste [iterace iteraci vícerozměrné pole](/dotnet/csharp/programming-guide/arrays/using-foreach-with-arrays) a chcete mít větší kontrolu nad prvky pole.
+- Provádíte [iteraci](/dotnet/csharp/programming-guide/arrays/using-foreach-with-arrays) v multidimenzionálním poli a chcete mít větší kontrolu nad prvky pole.
 
 ### <a name="how-to-use-it"></a>Jak ji použít
 
-1. Umístit váš kurzor v `foreach` nebo `For Each` – klíčové slovo.
+1. Umístěte blikající kurzor do klíčového slova `foreach` nebo `For Each`.
 
-1. Stisknutím klávesy **Ctrl**+ **.** nebo klikněte na tlačítko šroubovák ![šroubovák ikonu](../media/screwdriver-icon.png) ikonu na okraji na soubor kódu.
+1. Stiskněte klávesu **Ctrl** + **.** nebo klikněte na ikonu ![Screwdriver Screwdriver ](../media/screwdriver-icon.png) ikonu na okraji souboru s kódem.
 
-   ![Převést na nabídku](media/convert-to-for.png)
+   ![Nabídka převést na pro](media/convert-to-for.png)
 
-1. Vyberte **převést na hodnotu 'pro'** . Nebo vyberte **náhled změn** otevřít [náhled změn](../../ide/preview-changes.md) dialogového okna a pak vyberte **použít**.
+1. Vyberte **převést na pro**. Případně můžete výběrem **Zobrazit náhled změn** otevřít dialogové okno [Náhled změn](../../ide/preview-changes.md) a pak vybrat **použít**.
 
-1. Protože operací refaktoringu zavádí nové proměnné iterace počet **přejmenovat** pole se zobrazí v pravém horním rohu editoru. Pokud chcete zvolit jiný název pro proměnnou, zadejte jej a stiskněte klávesu **Enter** nebo vyberte **použít** v **přejmenovat** pole. Pokud nechcete zvolte název nové, stiskněte **Esc** nebo vyberte **použít** zrušíte **přejmenovat** pole.
+1. Vzhledem k tomu, že refaktoring zavádí novou proměnnou počtu iterací, zobrazí se pole **Přejmenovat** v pravém horním rohu editoru. Chcete-li pro proměnnou zvolit jiný název, zadejte ji do pole a potom stiskněte klávesu **ENTER** nebo zvolte možnost **použít** v poli **Přejmenovat** . Pokud nechcete zvolit nový název, stiskněte klávesu **ESC** nebo vyberte **použít** k zavření pole **Přejmenovat** .
 
 > [!NOTE]
-> Pro C#, kód vygenerovaný tyto refaktoringy používá explicitního typu nebo [var](/dotnet/csharp/language-reference/keywords/var) pro typ položky v kolekci. Typ v generovaném kódu explicitní nebo implicitní, závisí na nastavení stylu kódu, které jsou v oboru. Tato nastavení konkrétního stylu kódu jsou konfigurována na úrovni počítače v rámci **nástroje** > **možnosti** > **textový Editor**  >  **C#**  >  **Styl kódu** > **Obecné** >  **\'var' Předvolby**, nebo na úrovni řešení [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) souboru. Pokud změníte nastavení stylu kódu v **možnosti**, znovu otevřete soubor kódu pro změny projevily.
+> Pro C#kód, který vygenerovaly tyto refaktoringy, používá explicitní typ nebo [var](/dotnet/csharp/language-reference/keywords/var) pro typ položek v kolekci. Typ v generovaném kódu, explicitní nebo implicitní, závisí na nastavení stylu kódu, které jsou v rozsahu. Tato konkrétní nastavení stylu kódu se konfigurují na úrovni počítače v nabídce **nástroje**  > **Možnosti**  > **textový Editor** **C#**  >   > **styl kódu** 0**Obecné** 2 **@no__t_ 14var ' předvolby**nebo na úrovni řešení v souboru [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) . Pokud změníte nastavení stylu kódu v **možnostech**, znovu otevřete soubor kódu, aby se změny projevily.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -11,65 +11,65 @@ helpviewer_keywords:
 - Domain-Specific Language Tools, Show Map Lines
 - Domain-Specific Language Tools, Show As Class
 - Domain-Specific Language Tools, Bring Tree Here
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3133c3f37a7ce899575e4e6b0798ce8037b33929
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 571a92adf4ebbdce12ec8ea45866835e3f6a6772
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62951242"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666925"
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>Práce s diagramem definice DSL
-Diagram [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] definice je důležitý nástroj pro definice jazyka specifického pro doménu. Můžete přidat prvky k vaší doméně model a definování vztahů v diagramu a můžete upravit rozložení diagramu, aby byl lépe čitelný.
+Diagram definice [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] je důležitým nástrojem pro definování jazyka specifického pro doménu. Můžete přidat prvky do doménového modelu a definovat relace v diagramu a upravit rozložení diagramu, aby bylo čitelnější.
 
 ## <a name="the-layout-of-the-diagram"></a>Rozložení diagramu
- [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Diagramem definice má dva oddíly **třídám a vztahům** oddílu a **elementů diagramu** oddílu. **Třídám a vztahům** oddíl zobrazí doménovými třídami, vztahy domén a dědičnosti. **Elementů diagramu** oddílu zobrazí obrazec třídy, konektor, plavecké dráhy třídy a třídy generované diagramu návrháře.
+ Diagram definice [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] obsahuje dva oddíly, oddíly **třídy a vztahy** a **prvky diagramu** . Oddíl **třídy a vztahy** zobrazuje doménové třídy, doménové vztahy a dědičnost. Oddíl **prvky diagramu** znázorňuje třídy tvarů, třídy konektoru, třídy plaveckých drah a generovaný diagram návrháře.
 
- Doménové třídy mohou objevit v několika umístěních v **třídám a vztahům** oddíly. Pokud je základní třídou pro jiné třídy domény a vztahy stromu, pokud je zdrojem vztahů obsažení nebo odkazu, zobrazí definici třídy domény stromové struktury dědičnosti. Třída zástupné domény se zobrazí jako cíle vztahů obsažení nebo odkazu. Ve výchozím nastavení, zástupný symbol prvky jsou zobrazeny s **vlastnosti domény** Sbalit oddíl. Dědičnost nebo vztahů obsažení nebo odkazu se nezobrazí.
+ Třídy domény se mohou objevit ve více umístěních v oddílech **třídy a vztahů** . Definice doménové třídy zobrazí strom dědičnosti, pokud se jedná o základní třídu pro jiné třídy domény a strom vztahů, pokud se jedná o zdroj vztahů vložení nebo odkazů. Zástupné symboly doménové třídy se zobrazí jako cíle vztahů vložení nebo odkazů. Ve výchozím nastavení se prvky zástupného textu zobrazují se sbaleným oddílem **vlastnosti domény** . Neukazují dědičnost ani vztahy mezi vložením nebo odkazem.
 
- Když přidáte doménovou třídou, se zobrazí v dolní části **třídám a vztahům** oddílu. Když přidáváte obsažení nebo odkazovat na relaci, jeho vykreslení v části a napravo od zdrojové doménové třídy.
+ Když přidáte doménovou třídu, zobrazí se v dolní části oddílu **třídy a relace** . Když přidáte relaci vložení nebo odkazu, je vykreslena pod a napravo od zdrojové třídy domény.
 
- Při přidávání doménových tříd a vztahů, může být obtížné vyhledat konkrétní doménovou třídu. Doménová třída můžete najít kliknutím pravým tlačítkem myši v **Průzkumník DSL** a pak levým na **najít v diagramu**.
+ Při přidávání doménových tříd a relací může být obtížné najít konkrétní doménovou třídu. Doménovou třídu můžete najít tak, že na ni kliknete pravým tlačítkem v **Průzkumníku DSL** a pak kliknete na **najít v diagramu**.
 
- Následující části popisují, jak změnit vzhled diagramu snadněji čitelné.
+ Následující části popisují, jak můžete změnit vzhled diagramu, aby se usnadnilo jeho čtení.
 
-## <a name="copying-elements"></a>Kopírování prvků
- Můžete používat kopii, vyjmout a vložit na prvky v diagramem definice DSL.
+## <a name="copying-elements"></a>Kopírování elementů
+ Můžete použít kopírování, vyjmutí a vložení prvků v diagramu definice DSL.
 
 ## <a name="zooming-in-or-out-on-the-diagram"></a>Přiblížení nebo oddálení v diagramu
- Pomocí provést přiblížení nebo oddálení v diagramu **návrháře DSL** nástrojů k nastavení úrovně přiblížení.
+ K nastavení úrovně přiblížení můžete v diagramu použít panel nástrojů **Návrháře DSL** k přiblížení nebo oddálení.
 
-## <a name="hiding-map-lines"></a>Skrytí čáry mapy
- Čáry mapy se řádky, které jsou vykreslovány vedle mezi doménovou třídu nebo vztah domény a tvar nebo konektor, ke které je namapován. Čáry mapy můžete skrýt kliknutím **zobrazit čáry mapy** tlačítko **návrháře DSL** nástrojů. Chcete-li zobrazit řádky, klikněte na tlačítko znovu.
+## <a name="hiding-map-lines"></a>Skrytí čar mapy
+ Čáry mapy jsou řádky, které jsou vykresleny mezi doménovou třídou nebo doménovým vztahem a obrazcem nebo konektorem, ke kterému je namapován. Kliknutím na tlačítko **Zobrazit čáry mapy** na panelu nástrojů **Návrháře DSL** můžete skrýt čáry mapy. Chcete-li zobrazit řádky, klikněte znovu na tlačítko.
 
 ## <a name="changing-the-diagram-layout"></a>Změna rozložení diagramu
- Můžete změnit rozložení **třídám a vztahům** oddílu následujícím způsobem.
+ Rozložení **tříd a vztahů** oddílu můžete změnit následujícím způsobem.
 
 ### <a name="expandcollapse"></a>Rozbalit/sbalit
- Můžete zmenšit velikost elementu obrazce oddílu, který představuje doménovou třídu nebo obrazec s pravým tlačítkem myši a pak levým na **sbalit**. Tím **vlastnosti domény** obrazce oddílu. Chcete-li zobrazit **vlastnosti domény** oddílů znovu, klikněte pravým tlačítkem myši na obrazec a potom klikněte na **Rozbalit**.
+ Velikost prvku obrazce oddílu reprezentujícího doménovou třídu nebo tvar můžete zmenšit tak, že na něj kliknete pravým tlačítkem myši a pak kliknete na **sbalit**. Tím se skryje oddíl **vlastnosti domény** daného tvaru. Pokud chcete znovu zobrazit oddíl **vlastnosti domény** , klikněte na něj pravým tlačítkem myši a pak klikněte na **Rozbalit**.
 
-### <a name="move-updown"></a>Přesunout nahoru nebo dolů
- Můžete přesunout domény tříd nebo diagramu prvek směrem nahoru nebo dolů v oddílu pravým tlačítkem myši prvek a potom klikněte na **nahoru** nebo **přesunout dolů**. Pokud přesunete prvek zástupného symbolu, který se zobrazí jako cíl vztahu obsažení nebo odkazu, relace se přesune s ním.
+### <a name="move-updown"></a>Přesunout nahoru/dolů
+ Můžete přesunout prvek doménové třídy nebo diagramu nahoru nebo dolů v oddílu tak, že kliknete pravým tlačítkem na prvek a potom kliknete na **Přesunout nahoru** nebo **Přesunout dolů**. Pokud přesunete zástupný prvek, který je zobrazen jako cíl relace vložení nebo odkazu, bude se tento vztah přesouvat s ním.
 
 ### <a name="expandcollapse-relationships-tree"></a>Rozbalit nebo sbalit strom vztahů
- Pokud doménová třída hraje roli zdroje v vztahů obsažení nebo odkazu pomocí jiné doménové třídy, lze skrýt vztahy pravým tlačítkem myši na definici třídy domény a poté klepnutím na **sbalit strom vztahů**. Zobrazit relace, klikněte pravým tlačítkem na element definice a potom klikněte na **rozbalte strom vztahů**.
+ Pokud doménová třída přehraje zdrojovou roli v relaci vložení nebo odkazu s jinými doménovými třídami, můžete relace skrýt kliknutím pravým tlačítkem myši na definici doménové třídy a následným kliknutím na **sbalit strom vztahů**. Chcete-li zobrazit relace, klikněte pravým tlačítkem myši na prvek definice a potom klikněte na **položku Rozbalit strom vztahů**.
 
 ### <a name="expandcollapse-inheritance-tree"></a>Rozbalit nebo sbalit strom dědičnosti
- Pokud doménová třída je základní třídou jiné třídy domény, můžete skrýt strom dědičnosti definice třídy domény pravým tlačítkem myši a potom klikněte na **sbalit strom dědičnosti**. Chcete-li zobrazit strom dědičnosti, klikněte pravým tlačítkem na element definice a potom klikněte na **rozbalte strom dědičnosti**.
+ Pokud je doménová třída základní třídou dalších tříd domény, můžete skrýt strom dědičnosti kliknutím pravým tlačítkem myši na definici doménové třídy a následným kliknutím na **sbalit strom dědičnosti**. Chcete-li zobrazit strom dědičnosti, klikněte pravým tlačítkem myši na prvek definice a potom klikněte na **položku Rozbalit strom dědičnosti**.
 
 ### <a name="bring-tree-here"></a>vložení stromu zde
- Můžete konsolidovat v diagramu pravým tlačítkem myši na doménovou třídu zástupný text a potom klikněte na **přenést stromu zde**. Doménová třída zástupný symbol stane element definice a zobrazí dědičnost a vztahy stromů. Element původní definice stane prvek zástupného symbolu, pokud je cílem relace nebo podřízené v relaci dědičnosti; v opačném případě zmizí.
+ Diagram můžete sloučit tak, že kliknete pravým tlačítkem myši na zástupnou doménovou třídu a potom kliknete na **přenést strom**. Zástupná Třída domény se stal prvkem definice a zobrazuje stromy dědičnosti a vztahů. Předchozí prvek definice se zobrazí jako zástupný prvek, pokud je cílem vztahu nebo podřízenosti ve vztahu dědičnosti. v opačném případě zmizí.
 
 ### <a name="split-tree"></a>rozdělit strom
- Můžete rozdělit stromové struktury dědičnosti nebo vztahy pravým tlačítkem myši na definici třídy domény, který zobrazí je a potom klikněte na **rozdělit strom**. Element definice stane zástupný prvek a definice doménová třída, společně s jeho dědičnost a vztahy stromů, se nyní zobrazí v dolní části oddílu.
+ Stromové struktury dědičnosti nebo vztahů můžete přerušit kliknutím pravým tlačítkem myši na definici doménové třídy, která je zobrazí, a následným kliknutím na možnost **rozdělit strom**. Prvek definice se stal zástupným elementem a doménovou třídou definice, která je spolu s jeho stromy dědičnosti a relace, se teď zobrazuje v dolní části oddílu.
 
 ### <a name="show-as-class"></a>zobrazit jako třídu
- Pokud doménovým vztahem obsahuje odvozené vztahů, nebo pokud má vztahů obsažení nebo odkazu pomocí jiné vztahy domén, můžete zobrazit vztah jako třídu kliknutím pravým tlačítkem vztah a pak levým na **zobrazit jako třídy** . Relace se zobrazí **vlastnosti domény** oddílů a zobrazí stromů dědičnost a vztahy.
+ Pokud relace domény má odvozené relace nebo pokud má relace vložení nebo odkazu s ostatními doménami, můžete relaci zobrazit jako třídu tak, že kliknete pravým tlačítkem na vztah a potom kliknete na tlačítko **Zobrazit jako třídu**. Relace se zobrazí s oddílem **vlastnosti domény** a zobrazí se stromy dědičnosti a vztahů.
 
 ## <a name="see-also"></a>Viz také
 
-- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

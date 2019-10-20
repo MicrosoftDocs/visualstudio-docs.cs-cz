@@ -2,62 +2,62 @@
 title: Nastavení obrázku pozadí v diagramu
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e79a7fd37bd5f2d5298bda6dca7568c6ba4db6ce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 37d590fb13f7b8b04005d2877d378c556c772af5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62823954"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670816"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>Nastavení obrázku pozadí v diagramu
-V aplikaci Visual Studio Visualization and Modeling SDK můžete nastavit obrázek pozadí pro vygenerovaného návrháře pomocí vlastního kódu.
+V sadě Visual Studio vizualizace a modelování sady SDK můžete nastavit obrázek pozadí pro vygenerovaný Návrhář pomocí vlastního kódu.
 
 ## <a name="setting-the-background-image"></a>Nastavení obrázku pozadí
 
-#### <a name="to-set-a-background-image-for-a-generated-designer"></a>Nastavit obrázek pozadí pro vygenerovaného návrháře
+#### <a name="to-set-a-background-image-for-a-generated-designer"></a>Nastavení obrázku pozadí pro vygenerovaný Návrhář
 
-1. Zkopírujte soubor obrázku, který chcete použít jako pozadí diagramu do adresáře Dsl\Resources pro aktuální projekt.
+1. Zkopírujte soubor obrázku, který chcete použít jako pozadí diagramu, do adresáře Dsl\Resources pro aktuální projekt.
 
-2. V **Průzkumníka řešení**, klikněte pravým tlačítkem na složku Dsl\Resources, přejděte na **přidat**a potom klikněte na tlačítko **existující položku**.
+2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na složku Dsl\Resources, přejděte na **Přidat**a pak klikněte na **existující položka**.
 
-3. V **přidat existující položku** dialogové okno, přejděte do složky Dsl\Resources.
+3. V dialogovém okně **Přidat existující položku** přejděte do složky Dsl\Resources.
 
-4. V **soubory typu** klikněte na možnost **soubory bitových kopií**.
+4. V seznamu **soubory typu** klikněte na **soubory obrázků**.
 
-5. Klikněte na soubor obrázku, který jste zkopírovali do adresáře a potom klikněte na tlačítko **přidat**.
+5. Klikněte na soubor obrázku, který jste zkopírovali do adresáře, a pak klikněte na **Přidat**.
 
-6. Klikněte pravým tlačítkem na Dsl a klikněte na tlačítko **vlastnosti** otevřete vlastnosti projektu Dsl.
+6. Klikněte pravým tlačítkem na DSL a kliknutím na **vlastnosti** otevřete vlastnosti projektu DSL.
 
-7. Na **prostředky** klikněte na tlačítko **tento projekt neobsahuje soubor výchozích prostředků. Vytvořte si ho kliknutím sem.**
+7. Na kartě **prostředky** klikněte na **Tento projekt neobsahuje soubor výchozích prostředků. Pokud ho chcete vytvořit, klikněte sem.**
 
-8. Přidat soubor bitové kopie do souboru prostředků přetažením obrázek ze **Průzkumníka řešení** do okna zdroje.
+8. Přidejte soubor obrázku do souboru prostředků přetažením obrázku z **Průzkumník řešení** do okna Resources (prostředky).
 
-9. Otevřete nabídku Soubor a klikněte na možnost Uložit vlastnosti projektu.
+9. Otevřete nabídku soubor a kliknutím na možnost uložte vlastnosti projektu.
 
-10. Ověřte, že soubor Dsl\Properties\Resources.resx existuje a má soubor Resources.Designer.cs pod ním.
+10. Ověřte, že soubor Dsl\Properties\Resources.resx existuje a má pod ním soubor Resources.Designer.cs.
 
-11. Pokud chybí Resources.Designer.cs, klikněte na soubor Resources.resx v **Průzkumníka řešení**.
+11. Pokud chybí Resources.Designer.cs, klikněte na soubor Resources. resx v **Průzkumník řešení**.
 
-12. V **vlastnosti** okno, nastaveno `Custom Tool` vlastnost `ResXFileCodeGenerator`.
+12. V okně **vlastnosti** nastavte vlastnost `Custom Tool` na hodnotu `ResXFileCodeGenerator`.
 
-13. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt Dsl, přejděte na **přidat**a klikněte na tlačítko **novou složku**.
+13. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt DSL, přejděte na **Přidat**a klikněte na **Nová složka**.
 
-14. Název složky **vlastní**.
+14. Pojmenujte složku **Custom**.
 
-15. Klikněte pravým tlačítkem na vlastní složku, přejděte na **přidat**a klikněte na tlačítko **nová položka**.
+15. Klikněte pravým tlačítkem myši na vlastní složku, přejděte na **Přidat**a klikněte na **Nová položka**.
 
-16. V **přidat novou položku** v dialogu **šablony** klikněte na možnost **souboru s kódem**.
+16. V dialogovém okně **Přidat novou položku** v seznamu **šablony** klikněte na **soubor kódu**.
 
-17. V **název** zadejte `BackgroundImage.cs`a klikněte na tlačítko **přidat**.
+17. Do pole **název** zadejte `BackgroundImage.cs` a klikněte na **Přidat**.
 
-18. Zkopírujte následující kód do souboru BackgroundImage.cs nastavení oboru názvů, název diagramu třídy a název souboru prostředku bitové kopie.
+18. Zkopírujte následující kód do souboru BackgroundImage.cs, upravte obor názvů, název třídy diagramu a název prostředku obrázkového souboru.
 
-     Nahraďte názvem částečné třídy diagram, který je definován v Dsl\GeneratedCode\Diagrams.cs "MyDiagramClass". Můžete také načíst správný obor názvů ze souboru Dsl\GeneratedCode\Diagrams.cs.
+     Nahraďte "MyDiagramClass" názvem částečné třídy diagramu, která je definována v Dsl\GeneratedCode\Diagrams.cs. Správný obor názvů můžete také načíst ze souboru Dsl\GeneratedCode\Diagrams.cs.
 
     ```csharp
     using System;
@@ -98,7 +98,7 @@ V aplikaci Visual Studio Visualization and Modeling SDK můžete nastavit obráz
     }
     ```
 
-     Další informace o přizpůsobení modelu pomocí kódu programu najdete v tématu [navigace a aktualizace modelu v programovém kódu](../modeling/navigating-and-updating-a-model-in-program-code.md).
+     Další informace o přizpůsobení modelu pomocí programového kódu naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
 ## <a name="see-also"></a>Viz také
 

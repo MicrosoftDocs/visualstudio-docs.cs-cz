@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Tvorba šablon položek s více soubory | Dokumentace Microsoftu'
+title: 'Postupy: vytváření šablon položek s více soubory | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,81 +10,78 @@ helpviewer_keywords:
 - item templates, creating multi-file item templates
 ms.assetid: fe3c4257-e383-4c80-b8af-c5c521959c33
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c6c6dde1880881bfb236909fde6ce6deb6bf596f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e70039f361ac3410a8ddcccb0f139d8bdcb32ed9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201841"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668095"
 ---
-# <a name="how-to-create-multi-file-item-templates"></a>Postupy: Vytváření šablon položek s více soubory
+# <a name="how-to-create-multi-file-item-templates"></a>Postupy: Tvorba šablon položek s více soubory
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Šablony položek může zadat jenom jednu položku, ale někdy položky skládá z více souborů. Například šablonu položky formulářů Windows v jazyce Visual Basic vyžaduje následující tři soubory:  
-  
-- Soubor .vb, který obsahuje kód pro formulář.  
-  
-- A. Designer.vb, který obsahuje informace o návrháři formuláře.  
-  
-- Soubor .resx, který obsahuje vložené prostředky pro formulář.  
-  
-  Šablony položek s více soubory vyžadují parametry zajistit správné přípony názvů se používají při vytvoření položky v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Pokud vytvoříte pomocí šablony položky **exportovat šablonu** průvodce, tyto parametry jsou automaticky generovány a žádné další úpravy je povinný. Následující postup vysvětluje, jak používat parametry a ověřte, že jsou správné přípony názvů vytvořen.  
-  
-### <a name="to-manually-create-a-multi-file-item-template"></a>Ruční vytvoření šablony položek s více soubory  
-  
-1. Vytvoření šablony položky by při vytváření šablony položky jedním souborem. Další informace najdete v tématu [jak: Vytváření šablon položek](../ide/how-to-create-item-templates.md).  
-  
-2. Přidat `TargetFileName` atributy ke každému `ProjectItem` elementu. Nastavte hodnoty `TargetFileName` atributy $fileinputname$. *FileExtension*, kde *FileExtension* je příponu názvu souboru, který bude zahrnut v šabloně. Příklad:  
-  
-    ```  
-    <ProjectItem TargetFileName="$fileinputname$.vb">  
-        Form1.vb  
-    </ProjectItem>  
-    <ProjectItem TargetFileName="$fileinputname$.Designer.vb">  
-        Form1.Designer.vb  
-    </ProjectItem>  
-    <ProjectItem TargetFileName="$fileinputname$.resx">  
-        Form1.resx  
-    </ProjectItem>  
-    ```  
-  
-     Když je položka odvozená z této šablony se přidá do projektu, názvy souborů se podle název zadaný uživatelem **přidat novou položku** dialogové okno.  
-  
-3. Vyberte soubory, které chcete zahrnout do vaší šablony, klikněte pravým tlačítkem na výběr, klikněte na tlačítko **odeslat**a potom klikněte na tlačítko **komprimovaná složka (metoda ZIP)** . Do souboru .zip jsou komprimované soubory, které jste vybrali.  
-  
-4. Uložte soubor .zip v umístění šablon položek uživatele. Ve výchozím adresáři je Documents\Visual Studio *verze*\Templates\ItemTemplates\\. Další informace najdete v tématu [jak: Hledání a organizace šablon](../ide/how-to-locate-and-organize-project-and-item-templates.md).  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] šablony formulářů Windows. Když je vytvořena položka na základě této šablony, názvy tři soubory vytvořené bude shodovat s názvem zadaného v **přidat novou položku** dialogové okno.  
-  
-```  
-<VSTemplate Version="2.0.0" Type="Item"  
-    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">  
-    <TemplateData>  
-        <Name>Multi-file Item Template</Name>  
-        <Icon>Icon.ico</Icon>  
-        <Description>An example of a multi-file item template</Description>  
-        <ProjectType>VisualBasic</ProjectType>  
-    </TemplateData>  
-    <TemplateContent>  
-        <ProjectItem TargetFileName="$fileinputname$.vb" SubType="Form">  
-            Form1.vb  
-        </ProjectItem>  
-        <ProjectItem TargetFileName="$fileinputname$.Designer.vb">  
-            Form1.Designer.vb  
-        </ProjectItem>  
-        <ProjectItem TargetFileName="$fileinputname$.resx">  
-            Form1.resx  
-        </ProjectItem>  
-    </TemplateContent>  
-</VSTemplate>  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)   
- [Postupy: Vytváření šablon položek](../ide/how-to-create-item-templates.md)   
- [Parametry šablony](../ide/template-parameters.md)   
- [Postupy: Nahrazení parametrů v šabloně](../ide/how-to-substitute-parameters-in-a-template.md)
+Šablony položek mohou určovat pouze jednu položku, někdy se však položka skládá z více souborů. Například šablona položky model Windows Forms pro Visual Basic vyžaduje následující tři soubory:
+
+- Soubor. vb, který obsahuje kód pro formulář.
+
+- Soubor. Designer. vb, který obsahuje informace o návrháři formuláře.
+
+- Soubor. resx, který obsahuje vložené prostředky pro formulář.
+
+  Šablony položek s více soubory vyžadují parametry, aby se zajistilo, že se při vytvoření položky v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] použijí správné přípony názvů souborů. Pokud vytvoříte šablonu položky pomocí průvodce **exportem šablony** , tyto parametry se automaticky vygenerují a žádné další úpravy se nevyžadují. Následující kroky vysvětlují, jak použít parametry k zajištění toho, aby se vytvořily správné přípony názvů souborů.
+
+### <a name="to-manually-create-a-multi-file-item-template"></a>Ruční vytvoření šablony položek s více soubory
+
+1. Vytvořte šablonu položky, protože byste vytvořili šablonu položky s jedním souborem. Další informace naleznete v tématu [How to: Create Item Templates](../ide/how-to-create-item-templates.md).
+
+2. Přidejte `TargetFileName` atributy do každého `ProjectItem` elementu. Nastavte hodnoty atributů `TargetFileName` na $fileinputname $. *Přípona*souboru, kde *přípona* souboru je přípona názvu souboru, který je součástí šablony. Příklad:
+
+    ```
+    <ProjectItem TargetFileName="$fileinputname$.vb">
+        Form1.vb
+    </ProjectItem>
+    <ProjectItem TargetFileName="$fileinputname$.Designer.vb">
+        Form1.Designer.vb
+    </ProjectItem>
+    <ProjectItem TargetFileName="$fileinputname$.resx">
+        Form1.resx
+    </ProjectItem>
+    ```
+
+     Když je položka odvozená z této šablony přidána do projektu, názvy souborů budou založené na názvu, který uživatel zadal v dialogovém okně **Přidat novou položku** .
+
+3. Vyberte soubory, které chcete zahrnout do šablony, klikněte pravým tlačítkem myši na výběr, klikněte na **Odeslat do**a pak klikněte na **zkomprimovanou (ZIP) složku**. Soubory, které jste vybrali, se komprimují do souboru ZIP.
+
+4. Vložte soubor. zip do umístění šablony položky uživatele. Ve výchozím nastavení je adresář \My Documents\Visual Studio *verze*\Templates\ItemTemplates \\. Další informace najdete v tématu [Postupy: hledání a organizace šablon](../ide/how-to-locate-and-organize-project-and-item-templates.md).
+
+## <a name="example"></a>Příklad
+ Následující příklad ukazuje šablonu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] model Windows Forms. Když je na základě této šablony vytvořena položka, názvy tří vytvořených souborů budou odpovídat názvu zadanému v dialogovém okně **Přidat novou položku** .
+
+```
+<VSTemplate Version="2.0.0" Type="Item"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>Multi-file Item Template</Name>
+        <Icon>Icon.ico</Icon>
+        <Description>An example of a multi-file item template</Description>
+        <ProjectType>VisualBasic</ProjectType>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectItem TargetFileName="$fileinputname$.vb" SubType="Form">
+            Form1.vb
+        </ProjectItem>
+        <ProjectItem TargetFileName="$fileinputname$.Designer.vb">
+            Form1.Designer.vb
+        </ProjectItem>
+        <ProjectItem TargetFileName="$fileinputname$.resx">
+            Form1.resx
+        </ProjectItem>
+    </TemplateContent>
+</VSTemplate>
+```
+
+## <a name="see-also"></a>Viz také
+ [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md) [Postupy: vytvoření šablon položek](../ide/how-to-create-item-templates.md) [parametry šablony](../ide/template-parameters.md) [Postupy: nahrazení parametrů v šabloně](../ide/how-to-substitute-parameters-in-a-template.md)

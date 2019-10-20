@@ -1,34 +1,34 @@
 ---
-title: Doba doběhu kroku pro vzor zatížení kroku pro zátěžové testování
+title: Doba náběhu kroku pro vzor zatížení kroku pro zátěžové testování
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - load tests, load patterns
 ms.assetid: 4a69e857-f93b-4907-9a01-fd1b66291205
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f3353b6c46520dde1134c7ccff835b215b2d0ef8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a45bcbdc149a6d3665efb0bc203d4a21138c979a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62821088"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653354"
 ---
-# <a name="how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern"></a>Postupy: Zadejte vlastnost doba doběhu kroku pro vzor zatížení kroku
+# <a name="how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern"></a>Postupy: určení vlastnosti doby rampy kroku pro vzor zatížení
 
-Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem**, můžete použít **editoru zátěžového testu** Chcete-li změnit vlastnosti scénářů pro splnění potřebám a cílům testování. Další informace najdete v tématu [názorný postup: Vytvoření a spuštění zátěžového testu](../test/walkthrough-create-and-run-a-load-test.md).
+Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem**můžete pomocí **Editor zátěžového testu** změnit vlastnosti scénářů tak, aby vyhovovaly vašim požadavkům na testování a cílům. Další informace naleznete v tématu [Návod: vytvoření a spuštění zátěžového testu](../test/walkthrough-create-and-run-a-load-test.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
-> Úplný seznam vlastnosti scénáře zátěžového testu a jejich popis najdete v tématu [vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
+> Úplný seznam vlastností scénáře zátěžového testu a jejich popis naleznete v tématu [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
 
-**Doba náběhu kroku** je nastavena **vlastnosti** okna. Upravit vlastnosti scénáře zátěžového testu v **editoru zátěžového testu**.
+Vlastnost **Doba rampy kroku** je nastavena v okně **vlastnosti** . Vlastnosti scénáře zátěžového testu upravíte v **Editor zátěžového testu**.
 
-**Doba náběhu kroku** vlastnost se používá pouze pro vzor zatížení kroku. Další informace najdete v tématu [vzory zatížení úpravy aktivity virtuálního uživatele modelu](../test/edit-load-patterns-to-model-virtual-user-activities.md).
+Vlastnost **Doba rampy kroku** se používá pouze se vzorem zatížení kroku. Další informace najdete v tématu [Úpravy vzorů zatížení pro modelování aktivit virtuálních uživatelů](../test/edit-load-patterns-to-model-virtual-user-activities.md).
 
-Vzor zatížení kroku slouží ke zvýšení zatížení serveru nebo serverech při spuštění testu zatížení tak, abyste viděli, jak se mění výkon zvýšením zvýšení zatížení uživatele. Například pokud chcete zobrazit, jak váš server nebo servery fungují jako uživatelským zatížením zvyšuje na 2 000 uživatelů, můžete spustit 10 hodinový zátěžový test pomocí vzor zatížení kroku s následujícími vlastnostmi:
+Vzor zatížení kroku se používá ke zvýšení zatížení serveru nebo serverů při spuštění zátěžového testu, abyste viděli, jak se výkon mění, protože se zvyšuje zatížení uživatele. Například chcete-li zjistit, jak server nebo servery fungují jako zvýšení zatížení uživatele 2 000 uživatelů, můžete spustit zátěžový test pomocí kroku vzor zatížení s následujícími vlastnostmi:
 
 - Počáteční počet uživatelů: 100
 
@@ -36,41 +36,41 @@ Vzor zatížení kroku slouží ke zvýšení zatížení serveru nebo serverech
 
 - Doba trvání kroku (sekundy): 1800
 
-- Doba doběhu kroku (sekundy): 20
+- Doba rozběhu kroku (sekundy): 20
 
-- Krok počtu uživatelů: 100
+- Počet kroků uživatele: 100
 
-Tato nastavení mají spuštěný po dobu 30 minut (1800 sekund) zátěžový test při zatížení uživatele na 100, 200, 300 až 2 000 uživatelů.
+Tato nastavení mají zátěžový test spuštěný po dobu 30 minut (1800 sekund) v případě, že uživatel načítá 100, 200, 300, až 2 000 uživatelů.
 
 > [!NOTE]
-> **Doba náběhu kroku** vlastnost je pouze jeden z těchto vlastností, které nejsou k dispozici pro výběr v **Průvodce novým zátěžovým testem**.
+> Vlastnost **Doba rampy kroku** je jedinou vlastností, kterou není možné vybrat v **novém Průvodce zátěžovým testem**.
 
-**Doba náběhu kroku** vlastnost umožňuje postupné spíše než okamžité zvýšení z jednoho kroku do druhého (například z 100 až 200 uživatelů). V tomto příkladu uživatelské zatížení by se zvýšilo ze 100 na 200 uživatelů po dobu 20 sekund (zvýšení o 5 uživatelů každou sekundu).
+Vlastnost **Doba** rozjezdu kroku umožňuje zvýšit od jednoho kroku k dalšímu (například od 100 do 200 uživatelů), aby bylo možné postupovat spíše než okamžitě. V tomto příkladu se uživatelské zatížení zvýšilo z 100 na 200 uživatelů za 20 sekund období (zvýšení počtu 5 uživatelů každou sekundu).
 
-## <a name="to-edit-the-step-ramp-time-property-for-a-step-load-pattern"></a>Chcete-li upravit vlastnosti doby doběhu kroku pro vzor zatížení kroku
+## <a name="to-edit-the-step-ramp-time-property-for-a-step-load-pattern"></a>Úprava vlastnosti doby rampy kroku pro vzor zatížení
 
 1. Otevřete zátěžový test.
 
-     **Editoru zátěžových testů** se zobrazí. Zobrazí se strom zátěžového testu.
+     Zobrazí se **Editor zátěžového testu** . Zobrazí se strom zátěžového testu.
 
-2. V zátěžového testu stromů **scénáře** složku, otevřete uzel scénář, který chcete zadat doběhu kroku čas pro.
+2. Ve složce **scénáře** stromů zátěžového testu otevřete uzel scénář, pro který chcete určit dobu trvání kroku.
 
-3. Vyberte **vzor zatížení kroku** uzlu.
+3. Vyberte uzel **vzor zatížení kroku** .
 
     > [!NOTE]
-    > Vzor zatížení pro scénář musí být vzor zatížení kroku. Pokud není, zobrazí vzorek zatížení typ vzor zatížení, který je teď přidružená scénář. Další informace najdete v tématu [vzory zatížení úpravy aktivity virtuálního uživatele modelu](../test/edit-load-patterns-to-model-virtual-user-activities.md).
+    > Vzor zatížení pro scénář musí být vzor zatížení kroku. Pokud není, vzor zatížení zobrazí typ vzoru zatížení, který je aktuálně přidružen k tomuto scénáři. Další informace najdete v tématu [Úpravy vzorů zatížení pro modelování aktivit virtuálních uživatelů](../test/edit-load-patterns-to-model-virtual-user-activities.md).
 
-4. Na **zobrazení** nabídce vyberte možnost **okno vlastností**.
+4. V nabídce **zobrazení** vyberte **okno Vlastnosti**.
 
-     Tento scénář kategorie a vlastnosti jsou zobrazeny v **vlastnosti** okna.
+     Kategorie a vlastnosti scénáře se zobrazí v okně **vlastnosti** .
 
-5. Nastavit hodnotu pro **doba náběhu kroku** zadáním čísla pro sekund provést postupně v každém kroku k přidání uživatelů zadaných ve vlastnosti **krok počtu uživatelů** vlastnost.
+5. Nastavte hodnotu vlastnosti doba přechodu **kroku** zadáním počtu sekund pořízených v jednotlivých krocích, abyste mohli postupně přidávat uživatele zadané pomocí vlastnosti **počet kroků uživatele** .
 
-6. Po dokončení změn vlastnosti, zvolte **Uložit** na **souboru** nabídky. Potom můžete spustit zátěžový test pomocí nového **doba náběhu kroku** hodnotu.
+6. Po dokončení změny vlastnosti vyberte v nabídce **soubor** možnost **Uložit** . Pak můžete spustit zátěžový test s použitím nové hodnoty **času přístupnosti** .
 
 ## <a name="see-also"></a>Viz také:
 
-- [Úpravy scénářů zátěžových testů](../test/edit-load-test-scenarios.md)
+- [Upravit scénáře zátěžového testu](../test/edit-load-test-scenarios.md)
 - [Kontrolery testů a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md)
 - [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md)
-- [Úpravy vzorů zatížení pro model aktivity virtuálního uživatele](../test/edit-load-patterns-to-model-virtual-user-activities.md)
+- [Úprava vzorů zatížení pro modelování aktivit virtuálních uživatelů](../test/edit-load-patterns-to-model-virtual-user-activities.md)

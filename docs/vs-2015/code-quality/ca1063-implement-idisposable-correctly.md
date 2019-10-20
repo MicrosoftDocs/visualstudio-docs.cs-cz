@@ -1,5 +1,5 @@
 ---
-title: 'CA1063: Implementuje správně IDisposable | Dokumentace Microsoftu'
+title: 'CA1063: Implementujte správně IDisposable | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ImplementIDisposableCorrectly
 ms.assetid: 12afb1ea-3a17-4a3f-a1f0-fcdb853e2359
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 90f218165c0543c1881857191efd202717c6e372
-ms.sourcegitcommit: 51dad3e11d7580567673e0d426ab3b0a17584319
+ms.openlocfilehash: 1fe2982ab9e1b3951583b268eadb44c97c8e4805
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66820881"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663637"
 ---
 # <a name="ca1063-implement-idisposable-correctly"></a>CA1063: Implementuje správně IDisposable
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,59 +29,59 @@ ms.locfileid: "66820881"
 |-|-|
 |TypeName|ImplementIDisposableCorrectly|
 |CheckId|CA1063|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
- `IDisposable` není správně implementovaná. Tady jsou uvedené důvody tohoto problému:
+## <a name="cause"></a>příčina
+ `IDisposable` není správně implementován. Tady jsou uvedené nějaké důvody tohoto problému:
 
-- Rozhraní IDisposable se znovu implementované ve třídě.
+- Rozhraní IDisposable je znovu implementováno ve třídě.
 
-- Dokončení je znovu přepsána.
+- Finalizace je přepsána znovu.
 
-- Metody Dispose je přepsána.
+- Dispose je přepsána.
 
-- Dispose() není veřejný, zapečetěné, nebo s názvem metody Dispose.
+- Dispose () není veřejná, zapečetěná nebo pojmenovaná Dispose.
 
-- Dispose(bool) není chráněný, virtuální nebo nezapečetěné.
+- Dispose (bool) není chráněná, virtuální ani nezapečetěná.
 
-- V nezapečetěné typy musí volat Dispose() Dispose(true).
+- V nezapečetěných typech musí Dispose () volat Dispose (true).
 
-- Pro nezapečetěné typy nevolá Finalize implementaci Dispose(bool) jednoho nebo obou nebo finalizační metodu třídy velikosti písmen.
+- Pro nezapečetěné typy implementace Finalize nevolá buď metodu Dispose (bool), nebo finalizační metodu třídy Case.
 
-  Porušení některou z těchto vzorců se aktivuje toto upozornění.
+  Toto upozornění se aktivuje při porušení některého z těchto vzorů.
 
-  Každý nezapečetěné kořenový typ IDisposable musíte zadat své vlastní chráněné virtuální void Dispose(bool) metody. Dispose() by měly volat Dispose(true) a Finalize by měly volat Dispose(false). Při vytváření typu IDisposable nezapečetěné root, musíte definovat Dispose(bool) a jeho volání. Další informace najdete v tématu [Cleaning Up Unmanaged Resources](https://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213) v [pokyny k návrhu architektury](https://msdn.microsoft.com/library/5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b) část dokumentace rozhraní .NET Framework.
+  Každý nezapečetěný typ kořenového rozhraní IDisposable musí poskytovat svou vlastní chráněnou metodu virtual void Dispose (bool). Dispose () by měla volat Dispose (true) a Finalize by měla volat Dispose (false). Pokud vytváříte nezapečetěný typ IDisposable, je nutné definovat Dispose (bool) a zavolat ho. Další informace naleznete v tématu [Vymazání nespravovaných prostředků](https://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213) v části [pokyny k návrhu rozhraní](https://msdn.microsoft.com/library/5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b) v dokumentaci .NET Framework.
 
 ## <a name="rule-description"></a>Popis pravidla
  Všechny typy IDisposable by měly správně implementovat vzor Dispose.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Prozkoumat kód a určete, které z následujících řešení opraví toto porušení.
+ Zkontrolujte svůj kód a určete, která z následujících řešení vyřeší toto porušení.
 
-- Odeberte IDisposable ze seznamu rozhraní, které jsou implementované pomocí {0} a místo toho přepište implementaci Dispose základní třídy.
+- Odeberte IDisposable ze seznamu rozhraní implementovaných {0} a místo toho přepište implementaci Dispose základní třídy.
 
-- Odeberte finalizační metodu z typu {0}, přepište Dispose (bool disposing) a vložte finalizační logiku do cesty kódu, kde je 'disposing ' hodnoty false.
+- Odeberte finalizační metodu z typu {0}, přepište Dispose (bool disposing) a vložte logiku finalizace do cesty kódu, kde ' disposing ' má hodnotu false.
 
-- Odebrat {0}, přepište Dispose (bool disposing) a vložte finalizační logiku do cesty kódu, kde je 'disposing ' hodnoty true.
+- Odeberte {0}, přepište Dispose (bool disposing) a vložte logiku Dispose do cesty kódu, kde má vlastnost disposing hodnotu true.
 
-- Ujistěte se, že {0} je deklarován jako veřejná a zapečetěná.
+- Ujistěte se, že {0} je deklarována jako veřejná a zapečetěná.
 
-- Přejmenovat {0} na 'Dispose' a ujistěte se, že je deklarována jako veřejná a zapečetěná.
+- Přejmenujte {0} na Dispose a ujistěte se, že je deklarována jako veřejná a zapečetěná.
 
-- Ujistěte se, že {0} je deklarována jako chráněná, virtuální a nezapečetěné.
+- Ujistěte se, že {0} je deklarována jako chráněná, virtuální a nezapečetěná.
 
-- Upravit {0} tak, že volá Dispose(true), poté volá uvolňování paměti. SuppressFinalize na aktuální instanci objektu ('this' nebo 'Me' v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) a potom se vrací.
+- Upravte {0} tak, že volá Dispose (true) a pak zavolá GC. SuppressFinalize na aktuální instanci objektu (' this ' nebo ' já ' v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) a pak se vrátí.
 
-- Upravit {0} tak, že volá Dispose(false) a potom se vrací.
+- Upravte {0} tak, že volá Dispose (false) a potom se vrátí.
 
-- Pokud vytváříte třídu nezapečetěné kořenové IDisposable, ujistěte se, že implementace IDisposable má následující formát, který je popsaný výše v této části.
+- Pokud píšete nezapečetěnou kořenovou třídu IDisposable, ujistěte se, že implementace IDisposable následuje za vzorem popsaným výše v této části.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
 
-## <a name="pseudo-code-example"></a>Příklad pseudo kódu
- Následující kód pseudo poskytuje obecné příklad, jak Dispose(bool) by měla být implementována ve třídě, která používá spravované a nativní prostředky.
+## <a name="pseudo-code-example"></a>Příklad kódu pseudo-code
+ Následující pseudo kód poskytuje obecný příklad, jak Dispose (bool) by měla být implementována ve třídě, která používá spravované a nativní prostředky.
 
 ```
 public class Resource : IDisposable

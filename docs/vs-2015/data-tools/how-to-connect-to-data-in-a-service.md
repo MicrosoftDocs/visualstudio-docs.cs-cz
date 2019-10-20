@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Připojte se k datům ve službě | Dokumentace Microsoftu'
+title: 'Postupy: připojení k datům ve službě | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -19,53 +19,52 @@ helpviewer_keywords:
 - Web services, connecting
 ms.assetid: a6b54353-05fe-4e5c-8631-90231fc95504
 caps.latest.revision: 35
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 22a1a991a950ba8e1a7c4c39299616641797630c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: d9bfa6c776e3a2137f751d4253feb0239811d95a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65684745"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654693"
 ---
-# <a name="how-to-connect-to-data-in-a-service"></a>Postupy: Připojte se k datům ve službě
+# <a name="how-to-connect-to-data-in-a-service"></a>Postupy: Připojování k datům ve službě
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Připojení vaší aplikace s daty vrácenými ze služby spuštěním [Průvodce konfigurací zdroje dat](https://msdn.microsoft.com/library/c4df7de5-5da0-4064-940c-761dd6d9e28f) a vyberete **služby** na **zvolte typ zdroje dat**stránky.  
-  
- Po dokončení průvodce se odkaz na službu se přidá do vašeho projektu a je okamžitě k dispozici v [okna zdroje dat](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992).  
-  
+Aplikaci připojíte k datům vráceným ze služby spuštěním [Průvodce konfigurací zdroje dat](https://msdn.microsoft.com/library/c4df7de5-5da0-4064-940c-761dd6d9e28f) a výběrem **služby** na stránce **Zvolte typ zdroje dat** .
+
+ Po dokončení průvodce je do projektu přidán odkaz na službu, který je okamžitě k dispozici v [okně zdroje dat](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992).
+
 > [!NOTE]
-> Položky, které se zobrazují v **zdroje dat** okna jsou závislé na informace, které služba vrací. Některé služby nemusí poskytnout dostatek informací, **Průvodce konfigurací zdroje dat** vytvořil objekty. Například pokud služba vrátí netypovou datovou sadu, pak se neobjeví žádné položky v **okna zdroje dat** po dokončení průvodce. Je to proto netypové datové sady neposkytují schéma, proto Průvodce nemá dostatek informací pro vytvoření zdroje dat.  
-  
- [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
-  
-### <a name="to-connect-your-application-to-a-service"></a>Pro připojení aplikace ke službě  
-  
-1. Na **Data** nabídky, klikněte na tlačítko **přidat nový zdroj dat**.  
-  
-2. Vyberte **služby** na **zvolte typ zdroje dat** stránce a potom klikněte na tlačítko **Další**.  
-  
-3. Zadejte adresu služby, kterou chcete použít, nebo klikněte na tlačítko **Discover** vyhledejte služby v aktuálním řešení a potom klikněte na **Přejít**.  
-  
-4. Volitelně můžete nové **Namespace** lze zadat místo výchozí hodnotu.  
-  
+> Položky, které se zobrazí v okně **zdroje dat** , jsou závislé na informacích, které služba vrací. Některé služby nemusí poskytnout dostatek informací pro **Průvodce konfigurací zdroje dat** pro vytváření objektů s možností vazby. Například pokud služba vrátí netypové datové sady, po dokončení průvodce se nezobrazí žádné položky v **okně zdroje dat** . Důvodem je, že netypové datové sady neposkytují schéma, takže průvodce nemá k dispozici dostatek informací pro vytvoření zdroje dat.
+
+ [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
+
+### <a name="to-connect-your-application-to-a-service"></a>Připojení aplikace ke službě
+
+1. V nabídce **data** klikněte na tlačítko **Přidat nový zdroj dat**.
+
+2. Na stránce **Zvolte typ zdroje dat** vyberte **Služba** a pak klikněte na **Další**.
+
+3. Zadejte adresu služby, kterou chcete použít, nebo klikněte na **Vyhledat** a vyhledejte služby v aktuálním řešení a potom klikněte na **Přejít**.
+
+4. Volitelně lze nový **obor názvů** zadat místo výchozí hodnoty.
+
     > [!NOTE]
-    > Klikněte na tlačítko **Upřesnit** otevřít [konfigurace Service Reference Dialog Box](../data-tools/configure-service-reference-dialog-box.md).  
-  
-5. Klikněte na tlačítko **OK** přidáte odkaz na službu do projektu.  
-  
-6. Klikněte na tlačítko **Dokončit**.  
-  
-     Zdroj dat je přidaný do **zdroje dat** okna.  
-  
-## <a name="next-steps"></a>Další kroky  
-  
-#### <a name="to-add-functionality-to-your-application"></a>Přidání funkčnosti do aplikace  
-  
-- Vyberte položku **zdroje dat** okno a přetáhněte jej na formulář pro vytvoření vazby ovládacích prvků. Další informace najdete v tématu [vytvoření vazby ovládacích prvků k datům v sadě Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Vytvoření vazby ovládacích prvků WPF k datové služby WCF](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)   
- [Služby Windows Communication Foundation a služby WCF Data Services v sadě Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
+    > Kliknutím na tlačítko **Upřesnit** otevřete [dialogové okno Konfigurovat odkaz na službu](../data-tools/configure-service-reference-dialog-box.md).
+
+5. Kliknutím na **OK** přidejte do svého projektu odkaz na službu.
+
+6. Klikněte na tlačítko **Dokončit**.
+
+     Zdroj dat se přidá do okna **zdroje dat** .
+
+## <a name="next-steps"></a>Další kroky
+
+#### <a name="to-add-functionality-to-your-application"></a>Přidání funkcí do aplikace
+
+- Vyberte položku v okně **zdroje dat** a přetáhněte ji do formuláře pro vytvoření vázaných ovládacích prvků. Další informace najdete v tématu [vázání ovládacích prvků k datům v aplikaci Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md).
+
+## <a name="see-also"></a>Viz také
+ [Vázání ovládacích prvků WPF ke službě WCF data service](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md) [Windows Communication Foundation Services a WCF Data Services v aplikaci Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

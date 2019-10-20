@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Ukládání uživatelských nastavení na úvodní stránce | Dokumentace Microsoftu'
+title: 'Návod: ukládání uživatelských nastavení na úvodní stránce | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 754b9bf3-8681-4c77-b0a4-09146a4e1d2d
@@ -9,61 +9,61 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 79a54867044961d972e2ded452958d2463038e7d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fe3d1040089a4b78368a4da94933a4a1440afafd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318525"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647912"
 ---
-# <a name="walkthrough-save-user-settings-on-a-start-page"></a>Návod: Ukládat nastavení uživatele na úvodní stránce
+# <a name="walkthrough-save-user-settings-on-a-start-page"></a>Návod: uložení uživatelských nastavení na úvodní stránce
 
-Je možné zachovat uživatelská nastavení pro úvodní stránku. Podle tohoto postupu můžete vytvořit ovládací prvek, který se nastavení uloží do registru, když uživatel klikne na tlačítko a pak načte nastavení pokaždé, když se načte úvodní stránky. Vzhledem k tomu, že šablona projektu úvodní stránka obsahuje přizpůsobitelný uživatelského ovládacího prvku a výchozí spuštění stránky XAML volá tento ovládací prvek, není nutné upravit vlastní úvodní stránky.
+Můžete zachovat nastavení uživatele pro úvodní stránku. Pomocí tohoto návodu můžete vytvořit ovládací prvek, který uloží nastavení do registru, když uživatel klikne na tlačítko, a pak toto nastavení načte při každém načtení úvodní stránky. Vzhledem k tomu, že šablona projektu úvodní stránka obsahuje přizpůsobitelný uživatelský ovládací prvek a výchozí úvodní stránka XAML volá tento ovládací prvek, nemusíte upravovat úvodní stránku.
 
-Nastavení úložiště, která je vytvořena instance v tomto návodu je instance <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore> rozhraní, která čte a zapisuje do následujícího umístění registru, když je volána: **HKCU\Software\Microsoft\VisualStudio\14.0\\\<CollectionName>**
+Úložiště nastavení, které je vytvořena v tomto návodu, je instance rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore>, která čte a zapisuje do následujícího umístění registru, když je volána: **HKCU\Software\Microsoft\VisualStudio\14.0 \\ \<CollectionName >**
 
-Když je spuštěn v experimentální instanci sady Visual Studio, úložiště nastavení čte a zapisuje do **HKCU\Software\Microsoft\VisualStudio\14.0Exp\\\<Název_kolekce >.**
+Když je spuštěn v experimentální instanci aplikace Visual Studio, uloží nastavení čtení a zápisy do **HKCU\Software\Microsoft\VisualStudio\14.0Exp \\ \<CollectionName >.**
 
-Další informace o tom, jak zachovat nastavení najdete v tématu [rozšíření uživatelská nastavení a možnosti](../extensibility/extending-user-settings-and-options.md).
+Další informace o tom, jak zachovat nastavení, najdete v tématu [rozšíření uživatelských nastavení a možností](../extensibility/extending-user-settings-and-options.md).
 
 ## <a name="prerequisites"></a>Požadavky
 
 > [!NOTE]
 > Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 >
-> Šablona projektu úvodní stránku můžete stáhnout pomocí **Správce rozšíření**.
+> Šablonu projektu úvodní stránky si můžete stáhnout pomocí **Správce rozšíření**.
 
 ## <a name="set-up-the-project"></a>Nastavení projektu
 
-1. Vytvoření projektu úvodní stránku, jak je popsáno v [vytvořit vlastní úvodní stránky](creating-a-custom-start-page.md). Pojmenujte projekt **SaveMySettings**.
+1. Vytvořte projekt úvodní stránky, jak je popsáno v tématu [Vytvoření vlastní úvodní stránky](creating-a-custom-start-page.md). Pojmenujte projekt **SaveMySettings**.
 
-2. V **Průzkumníka řešení**, přidejte následující odkazy na sestavení do projektu StartPageControl:
+2. V **Průzkumník řešení**přidejte do projektu StartPageControl následující odkazy na sestavení:
 
     - EnvDTE
 
     - EnvDTE80
 
-    - Microsoft.VisualStudio.OLE.Interop
+    - Microsoft. VisualStudio. OLE. Interop
 
-    - Microsoft.VisualStudio.Shell.Interop.11.0
+    - Microsoft. VisualStudio. Shell. Interop. 11.0
 
-3. Otevřít *MyControl.xaml*.
+3. Otevřete *MyControl. XAML*.
 
-4. Z podokna XAML na nejvyšší úrovni <xref:System.Windows.Controls.UserControl> definice prvku, přidejte následující deklarace události po deklarace oboru názvů.
+4. V podokně XAML v definici elementu nejvyšší úrovně <xref:System.Windows.Controls.UserControl> přidejte následující deklaraci události po deklaraci oboru názvů.
 
     ```xml
     Loaded="OnLoaded"
     ```
 
-5. V podokně návrhu, klikněte na hlavní oblasti ovládacího prvku a stiskněte klávesu **odstranit**.
+5. V podokně návrh klikněte na hlavní oblast ovládacího prvku a potom stiskněte klávesu **Delete**.
 
-     Tento krok odstraní <xref:System.Windows.Controls.Border> elementu a všechno, co v ní a ponechá pouze nejvyšší úrovni <xref:System.Windows.Controls.Grid> elementu.
+     Tento krok odstraní prvek <xref:System.Windows.Controls.Border> a vše v něm a ponechá pouze element nejvyšší úrovně <xref:System.Windows.Controls.Grid>.
 
-6. Z **nástrojů**, přetáhněte <xref:System.Windows.Controls.StackPanel> ovládací prvek mřížky.
+6. Z **panelu nástrojů**přetáhněte ovládací prvek <xref:System.Windows.Controls.StackPanel> do mřížky.
 
-7. Nyní přetáhněte <xref:System.Windows.Controls.TextBlock>, <xref:System.Windows.Controls.TextBox>a potom tlačítko <xref:System.Windows.Controls.StackPanel>.
+7. Nyní přetáhněte <xref:System.Windows.Controls.TextBlock>, <xref:System.Windows.Controls.TextBox> a tlačítko na <xref:System.Windows.Controls.StackPanel>.
 
-8. Přidat **x: Name** atribut pro <xref:System.Windows.Controls.TextBox>a `Click` události <xref:System.Windows.Controls.Button>, jak je znázorněno v následujícím příkladu.
+8. Přidejte atribut **x:Name** pro <xref:System.Windows.Controls.TextBox> a událost `Click` pro <xref:System.Windows.Controls.Button>, jak je znázorněno v následujícím příkladu.
 
     ```xml
     <StackPanel Width="300" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -75,15 +75,15 @@ Další informace o tom, jak zachovat nastavení najdete v tématu [rozšířen�
 
 ## <a name="implement-the-user-control"></a>Implementace uživatelského ovládacího prvku
 
-1. V podokně XAML, klikněte pravým tlačítkem myši `Click` atribut <xref:System.Windows.Controls.Button> element a pak klikněte na tlačítko **Navigovat do obslužné rutiny události**.
+1. V podokně XAML klikněte pravým tlačítkem myši na atribut `Click` prvku <xref:System.Windows.Controls.Button> a pak klikněte na možnost **Přejít k obslužné rutině události**.
 
-     Tento krok otevře *MyControl.xaml.cs*a vytvoří obslužnou rutinu zástupné procedury pro `Button_Click` událostí.
+     Tento krok otevře *MyControl.XAML.cs*a vytvoří obslužnou rutinu zástupných procedur pro událost `Button_Click`.
 
-2. Přidejte následující `using` příkazy do horní části souboru.
+2. Do horní části souboru přidejte následující direktivy `using`.
 
      [!code-csharp[StartPageDTE#11](../extensibility/codesnippet/CSharp/walkthrough-saving-user-settings-on-a-start-page_1.cs)]
 
-3. Přidat soukromé `SettingsStore` vlastnost, jak je znázorněno v následujícím příkladu.
+3. Přidejte vlastnost Private `SettingsStore`, jak je znázorněno v následujícím příkladu.
 
     ```csharp
     private IVsWritableSettingsStore _settingsStore = null;
@@ -115,9 +115,9 @@ Další informace o tom, jak zachovat nastavení najdete v tématu [rozšířen�
     }
     ```
 
-     Nejprve získá odkaz na tuto vlastnost <xref:EnvDTE80.DTE2> rozhraní, které obsahuje model objektu automatizace z <xref:System.Windows.FrameworkElement.DataContext%2A> uživatelský ovládací prvek a pak používá DTE k získání instance typu <xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsManager> rozhraní. Potom použije tuto instanci vrátit nastavení aktuálního uživatele.
+     Tato vlastnost nejprve získá odkaz na rozhraní <xref:EnvDTE80.DTE2>, které obsahuje model automatizačních objektů, z <xref:System.Windows.FrameworkElement.DataContext%2A> uživatelského ovládacího prvku a poté používá DTE k získání instance rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsManager>. Pak použije tuto instanci k vrácení aktuálního nastavení uživatele.
 
-4. Vyplňte `Button_Click` událostí následujícím způsobem.
+4. Následujícím způsobem zadejte událost `Button_Click`.
 
     ```csharp
     private void Button_Click(object sender, RoutedEventArgs e)
@@ -132,9 +132,9 @@ Další informace o tom, jak zachovat nastavení najdete v tématu [rozšířen�
     }
     ```
 
-     To zapíše obsah textového pole na pole "MySetting" v kolekci "MySettings" v registru. Pokud kolekce buď neexistuje, vytvoří se.
+     Tím se zapíše obsah textového pole do pole "MySetting" v kolekci "MySettings" v registru. Pokud kolekce neexistuje, je vytvořena.
 
-5. Přidejte následující obslužnou rutinu pro `OnLoaded` události uživatelského ovládacího prvku.
+5. Přidejte následující obslužnou rutinu pro událost `OnLoaded` uživatelského ovládacího prvku.
 
     ```csharp
     private void OnLoaded(Object sender, RoutedEventArgs e)
@@ -146,57 +146,57 @@ Další informace o tom, jak zachovat nastavení najdete v tématu [rozšířen�
     }
     ```
 
-     Tento kód nastaví text do textového pole na aktuální hodnotu "MySetting".
+     Tento kód nastaví text textového pole na aktuální hodnotu "MySetting".
 
-6. Vytvoření uživatelského ovládacího prvku.
+6. Sestavte uživatelský ovládací prvek.
 
-7. V **Průzkumníka řešení**, otevřete *source.extension.vsixmanifest*.
+7. V **Průzkumník řešení**otevřete *source. extension. vsixmanifest*.
 
-8. V editoru manifestu nastavte **název produktu** k **uložit Moje nastavení úvodní stránka**.
+8. V editoru manifestu nastavte **název produktu** na **Uložit úvodní stránku nastavení**.
 
-     Tato funkce nastaví název úvodní stránky, jak se má zobrazit v **přizpůsobit úvodní stránku** v seznamu **možnosti** dialogové okno.
+     Tato funkce nastaví název úvodní stránky tak, jak se má zobrazit v seznamu **přizpůsobení úvodní stránky** v dialogovém okně **Možnosti** .
 
-9. Sestavení *StartPage.xaml*.
+9. Sestavte *StartPage. XAML*.
 
 ## <a name="test-the-control"></a>Testování ovládacího prvku
 
-1. Stisknutím klávesy **F5**.
+1. Stiskněte klávesu **F5**.
 
-     Otevře se experimentální instanci sady Visual Studio.
+     Otevře se experimentální instance aplikace Visual Studio.
 
-2. V experimentální instanci na **nástroje** nabídky, klikněte na tlačítko **možnosti**.
+2. V experimentální instanci v nabídce **nástroje** klikněte na **Možnosti**.
 
-3. V **prostředí** uzel, klikněte na tlačítko **spuštění**a pak na **přizpůsobit úvodní stránku** seznamu vyberte **[nainstalované rozšíření] uložit Moje nastavení úvodní stránka** .
+3. V uzlu **prostředí** klikněte na **spouštění**a potom v seznamu **Přizpůsobit úvodní stránku** vyberte **[nainstalované rozšíření] Úvodní stránka pro uložení nastavení**.
 
-     Klikněte na **OK**.
+     Klikněte na tlačítko **OK**.
 
-4. Zavřít úvodní stránku, pokud je otevřený a potom na **zobrazení** nabídky, klikněte na tlačítko **úvodní stránka**.
+4. Zavřete úvodní stránku, pokud je otevřená, a potom v nabídce **zobrazení** klikněte na možnost **Úvodní stránka**.
 
-5. Na úvodní stránce klikněte na tlačítko **MůjOvládacíPrvek** kartu.
+5. Na úvodní stránce klikněte na kartu **MyControl** .
 
-6. V textovém poli zadejte **Cat**a potom klikněte na tlačítko **uložit Moje nastavení**.
+6. Do textového pole zadejte **Cat**a pak klikněte na **Uložit moje nastavení**.
 
-7. Zavřít úvodní stránku a znovu ji spusťte.
+7. Zavřete úvodní stránku a znovu ji otevřete.
 
-     Slovo "Cat" má být zobrazena v textovém poli.
+     V textovém poli by se mělo zobrazit slovo "Cat".
 
-8. Nahraďte slovo "Cat" slova "Pes". Neklikejte na tlačítko.
+8. Nahradí slovo "Cat" slovem "pes". Neklepejte na tlačítko.
 
-9. Zavřít úvodní stránku a znovu ji spusťte.
+9. Zavřete úvodní stránku a znovu ji otevřete.
 
-     Slovo "Pes" má být zobrazena v textovém poli, i když jste neuloženo nastavení protože udržuje okna nástrojů Visual Studio v paměti, i když se zavřou, dokud nezavře samotnou sadu Visual Studio.
+     V textovém poli by se mělo zobrazit slovo "pes", a to i v případě, že jste nastavení neuložili, protože Visual Studio uchovává okna nástrojů v paměti, i když jsou zavřené, dokud se Visual Studio sám nezavře.
 
-10. Ukončete experimentální instanci sady Visual Studio.
+10. Zavřete experimentální instanci sady Visual Studio.
 
-11. Stisknutím klávesy **F5** znovu experimentální instanci aplikace.
+11. Stisknutím klávesy **F5** znovu otevřete experimentální instanci.
 
-12. Slovo "Cat" má být zobrazena v textovém poli.
+12. V textovém poli by se mělo zobrazit slovo "Cat".
 
 ## <a name="next-steps"></a>Další kroky
 
-Můžete upravit tento uživatelský ovládací prvek pro uložení a načtení libovolný počet vlastních nastavení s použitím různých hodnot z obslužné rutiny událostí různých k získání a nastavení `SettingsStore` vlastnost. Za předpokladu, můžete použít jinou `propertyName` parametr pro každé volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore.SetString%2A>, nepřepisujte navzájem hodnoty v registru.
+Tento uživatelský ovládací prvek lze upravit tak, aby ušetřil a načetl libovolný počet vlastních nastavení pomocí různých hodnot z různých obslužných rutin událostí pro získání a nastavení vlastnosti `SettingsStore`. Pokud pro každé volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore.SetString%2A> použijete jiný parametr `propertyName`, hodnoty nejsou v registru navzájem přepsány.
 
 ## <a name="see-also"></a>Viz také:
 
 - <xref:EnvDTE80.DTE2?displayProperty=fullName>
-- [Přidání příkazů sady Visual Studio na úvodní stránku](../extensibility/adding-visual-studio-commands-to-a-start-page.md)
+- [Přidávání příkazů sady Visual Studio na úvodní stránku](../extensibility/adding-visual-studio-commands-to-a-start-page.md)

@@ -1,37 +1,37 @@
 ---
-title: Návrhář postupu provádění – ForEach&lt;T&gt; návrháře aktivit
+title: Návrhář aktivity Návrhář postupu provádění-ForEach &lt;T &gt;
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.ForEach`1.UI
 ms.assetid: 67097b3a-fcf5-4a72-beb1-2c7784151a86
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e441898973614b6e3e33fc91d5d9688b51aab7fe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: faf2f62c482deac963f597c9861fbf2acedc945c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949614"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650387"
 ---
-# <a name="foreachlttgt-activity-designer"></a>ForEach&lt;T&gt; návrháře aktivit
+# <a name="foreachlttgt-activity-designer"></a>Návrhář aktivity &gt; &lt;T ForEach
 
-<xref:System.Activities.Statements.ForEach%601> Aktivita provádí aktivity obsažené v jeho <xref:System.Activities.Statements.ForEach%601.Body%2A> pro každou položku v zadané <xref:System.Activities.Statements.ForEach%601.Values%2A> kolekce.
+Aktivita <xref:System.Activities.Statements.ForEach%601> spustí aktivitu obsaženou v <xref:System.Activities.Statements.ForEach%601.Body%2A> pro každou položku v zadané kolekci <xref:System.Activities.Statements.ForEach%601.Values%2A>.
 
-## <a name="foreacht-properties-in-the-workflow-designer"></a>ForEach < T\> vlastnosti v Návrháři postupu provádění
+## <a name="foreacht-properties-in-the-workflow-designer"></a>@No__t_0 vlastnosti ForEach < T v Návrhář postupu provádění
 
-V následující tabulce jsou uvedeny nejužitečnější <xref:System.Activities.Statements.ForEach%601> vlastnosti aktivit a popisuje, jak je používat v návrháři.
+Následující tabulka uvádí nejužitečnější vlastnosti <xref:System.Activities.Statements.ForEach%601> aktivity a popisuje jejich použití v návrháři.
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Popisný název <xref:System.Activities.Statements.ForEach%601> aktivity. Výchozí hodnota je ForEach < Int32\>. I když <xref:System.Activities.Activity.DisplayName%2A> hodnota není bezpodmínečně nutné, je osvědčeným postupem je použití jednoho.|
-|<xref:System.Activities.Statements.ForEach%601.Values%2A>|Pravda|Kolekce položek, které chcete iterovat. Chcete-li nastavit <xref:System.Activities.Statements.ForEach%601.Values%2A>, zadejte výraz jazyka Visual Basic v **hodnoty** pole na **ForEach < T\>**  aktivity návrháře nebo v mřížce vlastností.|
-|*TypeArgument*|Pravda|Typ položky v <xref:System.Activities.Statements.ForEach%601.Values%2A> kolekci specifikované souborem obecný parametr *T*. Ve výchozím nastavení *TypeArgument* je nastavena na **Int32**. Chcete-li změnit typ, změňte hodnotu *TypeArgument* – pole se seznamem v mřížce vlastností.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Popisný název aktivity <xref:System.Activities.Statements.ForEach%601>. Výchozí hodnota je ForEach < Int32 \>. I když hodnota <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutná, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.ForEach%601.Values%2A>|Podmínka|Kolekce položek, které se mají iterovat Chcete-li nastavit <xref:System.Activities.Statements.ForEach%601.Values%2A>, zadejte výraz Visual Basic do pole **hodnoty** v Návrháři **< v foreach \>** nebo v mřížce vlastností.|
+|*Pro TypeArgument*|Podmínka|Typ položek v kolekci <xref:System.Activities.Statements.ForEach%601.Values%2A> určených obecným parametrem *t*. Ve výchozím nastavení je *pro TypeArgument* nastaveno na hodnotu **Int32**. Chcete-li změnit typ, změňte hodnotu pole se seznamem *pro TypeArgument* v mřížce vlastností.|
 
-Ve výchozím nastavení, iterace smyčky název **položky**. Můžete změnit název proměnné iterátoru v <xref:System.Activities.Statements.ForEach%601> návrháře aktivit. Iterace smyčky můžete použít ve výrazech v podřízených položek <xref:System.Activities.Statements.ForEach%601> aktivity.
+Ve výchozím nastavení je iterátor smyčky pojmenovaný **Item**. V Návrháři aktivity <xref:System.Activities.Statements.ForEach%601> můžete změnit název proměnné iterátoru. Iterátor smyčky lze použít ve výrazech podřízených objektů aktivity <xref:System.Activities.Statements.ForEach%601>.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -4,17 +4,17 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit test plans
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30c67bb85a7cf72090ea37680daa12933c44b0cb
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 5ecddad721547fdb5689a26a192cf0580ddb44cb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870157"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664907"
 ---
 # <a name="get-started-with-unit-testing"></a>Začínáme s testováním částí
 
@@ -38,7 +38,7 @@ Tato část popisuje na vysoké úrovni, jak vytvořit projekt testování čás
    }
    ```
 
-1. V **Průzkumník řešení**vyberte uzel řešení. Pak na horním panelu nabídek vyberte **soubor** > **Přidat** > **Nový projekt**.
+1. V **Průzkumník řešení**vyberte uzel řešení. Pak na horním panelu nabídek vyberte **soubor**  > **Přidat**  > **Nový projekt**.
 
 1. V dialogovém okně Nový projekt vyhledejte šablonu projektu testování částí pro testovací rozhraní, které chcete použít, a vyberte ji.
 
@@ -77,7 +77,7 @@ Tato část popisuje na vysoké úrovni, jak vytvořit projekt testování čás
 
 ## <a name="run-unit-tests"></a>Spuštění testů jednotek
 
-1. Otevřete [Průzkumník testů](../test/run-unit-tests-with-test-explorer.md) výběrempříkazu >  **test** > **Průzkumník testů** z horního řádku nabídek.
+1. Otevřete [Průzkumník testů](../test/run-unit-tests-with-test-explorer.md) výběrem možnosti **test**  > **Windows**  > **Průzkumník testů** v horním řádku nabídek.
 
 1. Spusťte testy jednotek kliknutím na **Spustit vše**.
 
@@ -97,7 +97,7 @@ Pokud používáte testovací rozhraní MSTest, xUnit nebo NUnit v aplikaci Visu
 > [!NOTE]
 > Live Unit Testing je k dispozici pouze v edici Enterprise.
 
-1. V nabídce **test** zapněte živé testování jednotek výběrem možnosti **test** > **Live Unit Testing** > **Spustit**.
+1. V nabídce **test** zapněte živé testování jednotek výběrem možnosti **Test**  > **Live Unit Testing**  > **Start**.
 
    ::: moniker range="vs-2017"
 
@@ -123,7 +123,7 @@ Další informace o živém testování částí naleznete v tématu [Live Unit 
 
 ## <a name="generate-unit-tests-with-intellitest"></a>Generování testů jednotek pomocí funkce IntelliTest
 
-Při spuštění IntelliTest můžete zjistit, které testy selžou, a přidat potřebný kód, který je opraví. Můžete vybrat, které z vygenerované testy k uložení do testovacího projektu poskytnout sadu regrese. Po provedení změny kódu, znovu spusťte IntelliTest pro synchronizaci vygenerované testy se změnami kódu. Informace o tom, jak najdete v tématu [generování testování částí kódu pomocí IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md).
+Při spuštění IntelliTest můžete zjistit, které testy selžou, a přidat potřebný kód, který je opraví. Můžete vybrat, které z vygenerovaných testů mají být uloženy do projektu testů pro zajištění regresní sady. Při změně kódu znovu spusťte IntelliTest, abyste zachovali vygenerované testy v synchronizaci se změnami kódu. Informace o tom, jak najdete v tématu [generování testování částí kódu pomocí IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md).
 
 > [!TIP]
 > IntelliTest je k dispozici pouze pro spravovaný kód, který cílí na .NET Framework.
@@ -132,7 +132,7 @@ Při spuštění IntelliTest můžete zjistit, které testy selžou, a přidat p
 
 ## <a name="analyze-code-coverage"></a>Analyzovat pokrytí kódu
 
-Funkci pokrytí kódu sady Visual Studio lze použít ke zjištění toho, jaký podíl kódu projektu je skutečně testován kódovanými testy, jako jsou například jednotkové testy. Aby bylo možné efektivně chránit proti chybám, testy by měly vyvolávat velký podíl kódu. Další informace o tom, jak zjistit, kolik kódu je testováno, najdete v tématu [Použití pokrytí kódu](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
+Funkci pokrytí kódu sady Visual Studio lze použít ke zjištění toho, jaký podíl kódu projektu je skutečně testován kódovanými testy, jako jsou například jednotkové testy. Aby bylo možné efektivně chránit proti chybám, testy by měly vyvolávat velký podíl kódu. Další informace o tom, jak zjistit, kolik [kódu je testováno](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md), najdete v tématu Použití pokrytí kódu.
 
 ## <a name="use-a-third-party-test-framework"></a>Použití testovacího rozhraní třetí strany
 
@@ -142,7 +142,7 @@ Postup vytvoření jednotkových testů, které používají [nunit](https://nun
 
 1. Otevřete řešení, které obsahuje kód, který chcete otestovat.
 
-2. V **Průzkumník řešení** klikněte pravým tlačítkem na řešení a vyberte **Přidat** > **Nový projekt**.
+2. V **Průzkumník řešení** klikněte pravým tlačítkem na řešení a vyberte **Přidat**  > **Nový projekt**.
 
 3. Vyberte šablonu projektu **projektu testu nunit** .
 
@@ -166,7 +166,7 @@ Postup vytvoření jednotkových testů, které používají [nunit](https://nun
 
 4. Přidejte odkaz z testovacího projektu do projektu, který obsahuje kód, který chcete otestovat.
 
-   V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak vyberte **Přidat** > **odkaz**. (Můžete také přidat odkaz z místní nabídky na uzlu **odkazy** nebo **závislosti** .)
+   Klikněte pravým tlačítkem na projekt v **Průzkumník řešení**a pak vyberte **přidat** **odkaz**na  > . (Můžete také přidat odkaz z místní nabídky na uzlu **odkazy** nebo **závislosti** .)
 
 5. Přidejte kód do testovací metody.
 
@@ -176,7 +176,7 @@ Postup vytvoření jednotkových testů, které používají [nunit](https://nun
 
 ## <a name="see-also"></a>Viz také:
 
-* [Návod: Vytvoření a spuštění testů jednotek pro spravovaný kód](walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+* [Návod: vytvoření a spuštění testů jednotek pro spravovaný kód](walkthrough-creating-and-running-unit-tests-for-managed-code.md)
 * [Vytvoření příkazu pro testování částí](create-unit-tests-menu.md)
 * [Generování testů pomocí IntelliTest](generate-unit-tests-for-your-code-with-intellitest.md)
 * [Spuštění testů pomocí Průzkumníka testů](run-unit-tests-with-test-explorer.md)

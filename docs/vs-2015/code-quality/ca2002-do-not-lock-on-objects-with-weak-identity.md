@@ -1,5 +1,5 @@
 ---
-title: 'CA2002: Nepoužívejte zámky na objekty se slabou identitou | Dokumentace Microsoftu'
+title: 'CA2002: Nepoužívejte zámky na objekty se slabou identitou | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - DoNotLockOnObjectsWithWeakIdentity
 ms.assetid: 16100b39-c6fc-452b-8fca-8b459a26c286
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 39d233c126d35f303a30a955310859dd9a678c56
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 557f91d8b00274642accbbfc05b4a60789615bfc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65681368"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667752"
 ---
-# <a name="ca2002-do-not-lock-on-objects-with-weak-identity"></a>CA2002: Nepoužívejte zámky u objektů se slabou identitou
+# <a name="ca2002-do-not-lock-on-objects-with-weak-identity"></a>CA2002: Nepoužívejte zámky na objekty se slabou identitou
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -32,11 +32,11 @@ ms.locfileid: "65681368"
 |Kategorie|Microsoft.Reliability|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
- Vlákno se pokouší získat zámek na objekt se slabou identitou.
+## <a name="cause"></a>příčina
+ Vlákno se pokusí získat zámek u objektu, který má slabou identitu.
 
 ## <a name="rule-description"></a>Popis pravidla
- Objekt má slabou identitu, pokud k němu lze přímo přistupovat přes hranice aplikační domény. Vlákno, které se pokouší získat zámek na objekt se slabou identitou, může být blokováno jiným vláknem v jiné aplikační doméně, které má zámek na stejný objekt. Následující typy mají slabou identitou a jsou označeny pomocí pravidla:
+ Objekt má slabou identitu, pokud k němu lze přímo přistupovat přes hranice aplikační domény. Vlákno, které se pokouší získat zámek na objekt se slabou identitou, může být blokováno jiným vláknem v jiné aplikační doméně, které má zámek na stejný objekt. Následující typy mají slabou identitu a jsou označeny podle pravidla:
 
 - <xref:System.MarshalByRefObject>
 
@@ -64,11 +64,11 @@ ms.locfileid: "65681368"
  [CA2213: Uvolnitelné pole by mělo být uvolněno](../code-quality/ca2213-disposable-fields-should-be-disposed.md)
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje některé objekt zámky, které se pravidlo porušují.
+ Následující příklad ukazuje některé zámky objektů, které porušují pravidlo.
 
  [!code-csharp[FxCop.Reliability.LockWeakObjects#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Reliability.LockWeakObjects/cs/FxCop.Reliability.LockWeakObjects.cs#1)]
  [!code-vb[FxCop.Reliability.LockWeakObjects#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Reliability.LockWeakObjects/vb/FxCop.Reliability.LockWeakObjects.vb#1)]
 
 ## <a name="see-also"></a>Viz také
  <xref:System.Threading.Monitor><xref:System.AppDomain>
- [Lock – příkaz](https://msdn.microsoft.com/library/656da1a4-707e-4ef6-9c6e-6d13b646af42) [SyncLock – příkaz](https://msdn.microsoft.com/library/14501703-298f-4d43-b139-c4b6366af176)
+ Příkaz [lock příkazu](https://msdn.microsoft.com/library/656da1a4-707e-4ef6-9c6e-6d13b646af42) [SyncLock](https://msdn.microsoft.com/library/14501703-298f-4d43-b139-c4b6366af176)

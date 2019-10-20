@@ -2,31 +2,31 @@
 title: Řízení barvy, stylu čáry a ostatních vlastností obrazce
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1783ecf3b30207838d93fdb9cda93e3ed7e232c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6bcc7e3a80650edff411506b9e651885b3852383
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62422924"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654163"
 ---
 # <a name="controlling-color-line-style-and-other-shape-properties"></a>Řízení barvy, stylu čáry a ostatních vlastností obrazce
 
-Některé vlastnosti obrazce, jako je barva můžou "zveřejnit". To znamená vlastnosti lze propojit na doménovou vlastnost obrazce. Ostatní uživatelé mají přímo se dá řídit.
+Některé vlastnosti obrazce, jako je například Color, můžou být vystavené. To znamená, že vlastnosti mohou být propojeny s doménovou vlastností obrazce. Ostatní musí být řízeny přímo.
 
-## <a name="exposing-a-property"></a>Vystavení vlastností
- Některé vlastnosti obrazce, jako je barva může být propojený hodnoty vlastnosti domény.
+## <a name="exposing-a-property"></a>Vystavení vlastnosti
+ Některé vlastnosti obrazce, jako je například barva, mohou být propojeny s hodnotou doménové vlastnosti.
 
- V definici DSL vyberte obrazec, konektoru nebo diagramu třídy. V místní nabídce, zvolte **přidat vystavený**a klikněte na tlačítko Vlastnosti, třeba Barva výplně.
+ V definici DSL vyberte třídu Shape, spojnice nebo diagram. V nabídce klepněte pravým tlačítkem myši na možnost **Přidat vystavené**a zvolte požadovanou vlastnost, například barva výplně.
 
- Doménová vlastnost, kterou můžete nastavit v kódu programu nebo jako uživatel nyní má obrazec.
+ Tvar má nyní doménovou vlastnost, kterou můžete nastavit v programovém kódu nebo jako uživatel.
 
-## <a name="dynamically-updating-an-exposed-property"></a>Dynamické aktualizace vystavené vlastnosti
- Obvykle nechcete se ujistit vlastnost vystavené závisí na jiné vlastnosti. Můžete například obrazec, který chcete červenou pokaždé, když se konkrétní doménová vlastnost, která je menší než nula. Pokud chcete nastavit tuto závislost, vytvořit [pravidlo](../modeling/rules-propagate-changes-within-the-model.md). Příklad:
+## <a name="dynamically-updating-an-exposed-property"></a>Dynamická aktualizace vystavené vlastnosti
+ Obvykle chcete, aby vystavená vlastnost byla závislá na jiné vlastnosti. Například můžete chtít, aby se v případě, že je určitá doménová vlastnost menší než nula, tvar popnul. Chcete-li tuto závislost provést, vytvořte [pravidlo](../modeling/rules-propagate-changes-within-the-model.md). Příklad:
 
 ```csharp
 using System;

@@ -1,5 +1,5 @@
 ---
-title: -Runexit (devenv.exe) | Dokumentace Microsoftu
+title: -Runexit (devenv. exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,51 +10,45 @@ helpviewer_keywords:
 - /runexit Devenv switch
 ms.assetid: bfc94875-5fc0-4110-b961-d59c0b403790
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0206f01df517c2dbd0c1c4052201dc8ded1bcbf9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6d1158a12de8b8adfe20fa6d045b756abf8d7b3c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68163412"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665496"
 ---
 # <a name="runexit-devenvexe"></a>/Runexit (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Zkompiluje a spustí zadaný projekt nebo řešení a potom jej zavře integrovaného vývojového prostředí (IDE).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-devenv /runexit {SolutionName|ProjectName}  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `SolutionName`  
- Povinný parametr. Úplná cesta a název souboru řešení.  
-  
- `ProjectName`  
- Povinný parametr. Úplná cesta a název souboru projektu.  
-  
-## <a name="remarks"></a>Poznámky  
- Zkompiluje a spustí zadaný projekt nebo řešení podle nastavení nakonfigurovaného pro konfiguraci aktivního řešení. Tento přepínač minimalizuje rozhraní IDE při projekt nebo řešení je spustit a ho ukončí rozhraní IDE po projekt nebo řešení po dokončení jeho běhu.  
-  
-- Uzavření řetězců, které obsahují mezery v dvojitých uvozovkách.  
-  
-- Souhrnné informace, včetně chyb, lze zobrazit v **příkaz** okna, nebo do jakéhokoli souboru protokolu zadaný `/out` přepnout.  
-  
-## <a name="example"></a>Příklad  
- Tento příklad spustí řešení `MySolution` v minimalizovaném okně integrovaného vývojového prostředí pomocí konfigurace aktivního nasazení a poté ukončí rozhraní IDE.  
-  
-```  
-devenv /runexit "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln"  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)   
- [Nebo spuštění (devenv.exe)](../../ide/reference/run-devenv-exe.md)   
- [/ Sestavení (devenv.exe)](../../ide/reference/build-devenv-exe.md)   
- [/ Sestavení (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)   
- [/ Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)
+Zkompiluje a spustí zadaný projekt nebo řešení a potom zavře integrované vývojové prostředí (IDE).
+
+## <a name="syntax"></a>Syntaxe
+
+```
+devenv /runexit {SolutionName|ProjectName}
+```
+
+## <a name="arguments"></a>Arguments
+ `SolutionName` nutné. Úplná cesta a název souboru řešení.
+
+ `ProjectName` nutné. Úplná cesta a název souboru projektu.
+
+## <a name="remarks"></a>Poznámky
+ Zkompiluje a spustí zadaný projekt nebo řešení podle nastavení určeného pro aktivní konfiguraci řešení. Tento přepínač minimalizuje rozhraní IDE během spuštění projektu nebo řešení a ukončí prostředí IDE po dokončení běhu projektu nebo řešení.
+
+- Uzavřete řetězce, které obsahují mezery, do dvojitých uvozovek.
+
+- Souhrnné informace, včetně chyb, se dají zobrazit v **příkazovém** okně nebo v jakémkoli souboru protokolu, který je zadaný pomocí přepínače `/out`.
+
+## <a name="example"></a>Příklad
+ Tento příklad spustí řešení `MySolution` v minimalizovaném integrovaném vývojovém prostředí pomocí aktivní konfigurace nasazení a pak ukončí rozhraní IDE.
+
+```
+devenv /runexit "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln"
+```
+
+## <a name="see-also"></a>Viz také
+ [Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md) [/Run (devenv. exe)](../../ide/reference/run-devenv-exe.md) [/Build (devenv. exe)](../../ide/reference/build-devenv-exe.md) [/Rebuild (devenv. exe)](../../ide/reference/rebuild-devenv-exe.md) [/out (devenv. exe)](../../ide/reference/out-devenv-exe.md)

@@ -1,5 +1,5 @@
 ---
-title: Používání sady nástrojů | Dokumentace Microsoftu
+title: Pomocí sady nástrojů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -24,47 +24,47 @@ helpviewer_keywords:
 - toolbox
 ms.assetid: 82e7cb43-4d0b-4e17-b7b0-43f96c22c3c2
 caps.latest.revision: 24
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 207beb085046748a4eaabdff025cd461c5ddba26
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 49f5d1d0cef7ec4d5a6f8ab61c785ea01f77d24b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68179308"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652659"
 ---
 # <a name="using-the-toolbox"></a>Používání sady nástrojů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Panelu nástrojů můžete použít k přidání ovládacích prvků a dalších položek do projektu. Můžete přetáhnout a vyřadit různé ovládací prvky na povrch návrháře používáte a změnit velikost a umístění ovládacích prvků.  
-  
- Ve spojení s návrháře zobrazení, například jako zobrazení návrháře XAML souboru se zobrazí panelu nástrojů. Panelu nástrojů zobrazí pouze tyto ovládací prvky, které lze použít v Návrháři aktuální.  
-  
- Verze rozhraní .NET Framework, že váš projekt cílí také ovlivní sadu ovládacích prvků, které jsou viditelné na panelu nástrojů. Ve výchozím nastavení [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] projekty jsou určené pro rozhraní .NET Framework 4.5.1. Můžete nastavit projekt tak, aby je jiná cílová verze rozhraní .NET Framework tak, že vyberete uzel projektu v **Průzkumníka řešení**a pak přejdete do **vlastnosti/aplikace/Cílová architektura**.  
-  
-## <a name="managing-the-toolbox-and-its-controls"></a>Správa sady nástrojů a jejích ovládacích prvků  
- Ve výchozím nastavení panelu nástrojů je sbalený sledovat levému okraji rozhraní IDE sady Visual Studio a se zobrazí, když se ukazatel přesune nad ním. Můžete připnout panel nástrojů (kliknutím **Pin** ikonu na panelu nástrojů) tak, aby zůstane otevřená při přesunu kurzoru. Můžete také zrušit ukotvení oken nástrojů a táhnutím kdekoli na obrazovce. Můžete ukotvit, zrušit ukotvení a skrytí panelu nástrojů pravým tlačítkem myši na panelu nástrojů a výběrem jedné z možností.  
-  
- Můžete změnit pořadí položek na kartě panelu nástrojů nebo přidat vlastní karty a položek pomocí následujících příkazů v místní nabídce:  
-  
-- **Přejmenovat položku** – přejmenuje na vybranou položku.  
-  
-- **Zobrazit všechny** -zobrazí všechny možné ovládací prvky (nikoli pouze ty, které se vztahují k aktuální návrháře).  
-  
-- **Zobrazení seznamu** – zobrazuje ovládací prvky v svislé seznamu. Pokud není zaškrtnuto, zobrazí ovládací prvky vodorovně.  
-  
-- **Výběr položek** -otevře **zvolit položky nástrojů** dialogové okno tak, aby můžete určit položky, které se zobrazují v **nástrojů**. Můžete zobrazit nebo skrýt položku zaškrtnutím nebo zrušením zaškrtnutí jejího políčka.  
-  
-- **Řadit položky podle abecedy** -Seřadí položky podle názvu.  
-  
-- **Resetovat nástrojů** – obnoví výchozí nastavení nástrojů a položky.  
-  
-- **Přidat kartu** – přidá novou kartu panelu nástrojů.  
-  
-- **Přesunout nahoru** – Přesune vybrané položky nahoru.  
-  
-- **Přesunout dolů** – Přesune vybrané položky dolů.  
-  
-## <a name="creating-and-distributing-custom-toolbox-controls"></a>Vytváření a distribuce ovládacích prvků vlastní panel nástrojů  
- Můžete vytvořit vlastní panel nástrojů ovládacího prvku v jazyce Visual Basic nebo Visual C# a může začít pomocí šablony projektu, který je založen na [Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) nebo [Windows Forms](../misc/how-to-create-a-toolbox-control-that-uses-windows-forms.md). Potom můžete distribuovat ovládacího prvku do vašeho týmu nebo ji publikovat na webu s použitím [instalačního programu nástrojů ovládacích prvků](http://download.microsoft.com/download/8/3/6/836657BD-9CCB-4ED4-B9D2-FB769473B284/TCI_whitepaper.docx).
+K přidání ovládacích prvků a dalších položek do projektu lze použít sadu nástrojů. Můžete přetáhnout různé ovládací prvky na povrch návrháře, který používáte, a změnit velikost ovládacích prvků a jejich velikost a umístění.
+
+ Sada nástrojů se zobrazí ve spojení se zobrazeními návrháře, jako je například zobrazení návrháře souboru XAML. Panel nástrojů zobrazuje pouze ovládací prvky, které lze použít v aktuálním návrháři.
+
+ Verze .NET Framework, na kterou váš projekt cílí, má také vliv na sadu ovládacích prvků, které jsou viditelné v sadě nástrojů. Ve výchozím nastavení [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] projekty cílí na .NET Framework 4.5.1. Můžete nastavit projekt tak, aby cílí na jinou verzi .NET Framework tím, že vyberete uzel projektu v **Průzkumník řešení**a pak přejdete na **Vlastnosti/aplikace/cílové rozhraní .NET Framework**.
+
+## <a name="managing-the-toolbox-and-its-controls"></a>Správa sady nástrojů a jejích ovládacích prvků
+ Ve výchozím nastavení je panel nástrojů sbalen na levou stranu integrovaného vývojového prostředí (IDE) sady Visual Studio a zobrazí se, když je kurzor přesunut. Panel nástrojů můžete připnout (kliknutím na ikonu **PIN** na panelu nástrojů), takže zůstane otevřený při přesunu kurzoru. Můžete také uvolnit okno panelu nástrojů a přetáhnout ho kamkoli na obrazovku. Panel nástrojů můžete ukotvit, uvolnit a skrýt tak, že kliknete pravým tlačítkem na panel nástrojů a vyberete jednu z možností.
+
+ Můžete změnit uspořádání položek na kartě panelu nástrojů nebo přidat vlastní karty a položky pomocí následujících příkazů v místní nabídce:
+
+- **Přejmenovat položku** – Přejmenuje vybranou položku.
+
+- **Zobrazit vše** – zobrazí všechny možné ovládací prvky (nikoli pouze ty, které se vztahují k aktuálnímu návrháři).
+
+- **Zobrazení seznamu** – zobrazí ovládací prvky ve svislém seznamu. Pokud není zaškrtnuto, ovládací prvky se zobrazí vodorovně.
+
+- **Zvolit položky** – otevře dialogové okno **zvolit položky sady nástrojů** , ve kterém můžete určit položky, které se zobrazí v **sadě nástrojů**. Položku můžete zobrazit nebo skrýt zaškrtnutím políčka nebo zrušením jeho zaškrtnutí.
+
+- **Seřadit položky abecedně** – Seřadí položky podle názvu.
+
+- **Resetovat panel nástrojů** – obnoví výchozí nastavení a položky sady nástrojů.
+
+- **Přidat tabulátor** – přidá novou kartu panelu nástrojů.
+
+- **Nahoru – přesune** vybranou položku nahoru.
+
+- **Přesunout dolů** – Přesune vybranou položku dolů.
+
+## <a name="creating-and-distributing-custom-toolbox-controls"></a>Vytváření a distribuce vlastních ovládacích prvků panelu nástrojů
+ Vlastní ovládací prvek sady nástrojů lze vytvořit buď Visual Basic nebo vizuál C#, a můžete začít se šablonou projektu založenou na [Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) nebo [model Windows Forms](../misc/how-to-create-a-toolbox-control-that-uses-windows-forms.md). Potom můžete svůj ovládací prvek distribuovat do ostatními týmu nebo ho publikovat na webu pomocí [instalačního programu ovládacích prvků sady nástrojů](http://download.microsoft.com/download/8/3/6/836657BD-9CCB-4ED4-B9D2-FB769473B284/TCI_whitepaper.docx).

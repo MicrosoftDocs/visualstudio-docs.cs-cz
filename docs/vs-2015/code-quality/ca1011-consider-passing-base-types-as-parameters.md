@@ -1,5 +1,5 @@
 ---
-title: 'CA1011: Zvažte předání základních typů jako parametrů | Dokumentace Microsoftu'
+title: 'CA1011: Zvažte předání základních typů jako parametrů | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ConsiderPassingBaseTypesAsParameters
 ms.assetid: ce1e1241-dcf4-419b-9363-1d5bc4989279
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d3104f7173721668538e6d73c1c5492c5c388ba5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3968d81e8ee18b4b0a56bed50f7aa1f121e1c074
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68151099"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663243"
 ---
 # <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: Zvažte předání základních typů jako parametrů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,35 +29,35 @@ ms.locfileid: "68151099"
 |-|-|
 |TypeName|ConsiderPassingBaseTypesAsParameters|
 |CheckId|CA1011|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Deklarace metody obsahuje formální parametr, který je odvozený typ a metodu volá pouze členy základního typu parametru.
+ Deklarace metody obsahuje formální parametr, který je odvozeným typem, a metoda volá pouze členy základního typu parametru.
 
 ## <a name="rule-description"></a>Popis pravidla
- Je-li v deklaraci metody zadán jako parametr základní typ, lze jako příslušný argument k metodě předat kterýkoliv typ odvozený z tohoto základního typu. Pokud argument je použit uvnitř těla metody, konkrétní metody, která se spustí záviset na typu argumentu. Pokud je další funkce, která je poskytována odvozený typ není vyžadována, umožňuje použití základního typu širší využití metody.
+ Je-li v deklaraci metody zadán jako parametr základní typ, lze jako příslušný argument k metodě předat kterýkoliv typ odvozený z tohoto základního typu. Pokud je argument použit uvnitř těla metody, konkrétní metoda, která je spuštěna, závisí na typu argumentu. Pokud nejsou vyžadovány další funkce, které jsou poskytovány odvozeným typem, použití základního typu umožňuje širší použití metody.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, změňte na jeho základní typ typu parametru.
+ Chcete-li opravit porušení tohoto pravidla, změňte typ parametru na jeho základní typ.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění tohoto pravidla
+ Z tohoto pravidla je bezpečné potlačit upozornění.
 
-- Pokud metoda vyžaduje konkrétní funkce, která je poskytována odvozený typ
+- Pokud metoda vyžaduje konkrétní funkce, které jsou poskytovány odvozeným typem
 
-   \- nebo –
+   \- nebo-
 
-- k vynucení pouze odvozený typ, nebo více odvozeného typu, je předán metodě.
+- aby bylo možné vyhovět, že pouze odvozený typ nebo více odvozený typ, je předán metodě.
 
-  V takových případech bude kód robustnější kvůli silný typ kontroly, které poskytuje kompilátoru a modulu runtime.
+  V těchto případech bude kód robustnější z důvodu kontroly silného typu, který je poskytován kompilátorem a modulem runtime.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metodu, `ManipulateFileStream`, který jde použít jenom s <xref:System.IO.FileStream> objektu, který porušuje tato pravidla. Druhá metoda `ManipulateAnyStream`, splňuje pravidlo tak, že nahradíte <xref:System.IO.FileStream> parametr pomocí <xref:System.IO.Stream>.
+ Následující příklad ukazuje metodu `ManipulateFileStream`, která se dá použít jenom s objektem <xref:System.IO.FileStream>, který porušuje toto pravidlo. Druhá metoda, `ManipulateAnyStream`, splňuje pravidlo tím, že nahrazuje parametr <xref:System.IO.FileStream> pomocí <xref:System.IO.Stream>.
 
  [!code-cpp[FxCop.Design.ConsiderPassingBaseTypes#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.ConsiderPassingBaseTypes/cpp/FxCop.Design.ConsiderPassingBaseTypes.cpp#1)]
  [!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.ConsiderPassingBaseTypes/cs/FxCop.Design.ConsiderPassingBaseTypes.cs#1)]
  [!code-vb[FxCop.Design.ConsiderPassingBaseTypes#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.ConsiderPassingBaseTypes/vb/FxCop.Design.ConsiderPassingBaseTypes.vb#1)]
 
 ## <a name="related-rules"></a>Související pravidla
- [CA1059: Členy by neměly zveřejňovat určité konkrétní typy](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)
+ [CA1059: Členové by neměli zveřejňovat určité konkrétní typy](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)

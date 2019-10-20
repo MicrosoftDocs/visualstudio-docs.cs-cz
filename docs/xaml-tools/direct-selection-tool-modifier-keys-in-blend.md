@@ -4,21 +4,21 @@ titleSuffix: Blend for Visual Studio
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 21f9b951-dc2b-4d09-bd70-75caed8fb964
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c1475c0005afad43cb58be47c8c0b64e3bbcd30d
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: d1ac2ee5c5e71dd08e7c9aee81e640cf6f856b6f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451078"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650953"
 ---
 # <a name="direct-selection-tool-modifier-keys-in-blend-for-visual-studio"></a>Přímý výběr modifikační klávesy nástrojů v Blend pro Visual Studio
 
-V následující tabulce jsou uvedeny zkratky, které lze použít k úpravě tvaru existující cesty pomocí nástroje **Přímý výběr** @no__t 1Direct výběr @ no__t-2. Chcete-li přidat nebo odebrat body v existující cestě nebo připojit dvě existující cesty, použijte nástroj **pero** .
+V následující tabulce jsou uvedeny zkratky, které můžete použít k úpravě tvaru existující cesty pomocí nástroje **Přímý výběr** ![Direct nástrojů pro výběr ](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png). Chcete-li přidat nebo odebrat body v existující cestě nebo připojit dvě existující cesty, použijte nástroj **pero** .
 
 |K provedení této akce|Postup|Ukazatele|
 | - |-------------|-------------|

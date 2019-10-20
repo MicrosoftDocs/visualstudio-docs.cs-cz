@@ -1,5 +1,5 @@
 ---
-title: Kódování a řádku znaky konce
+title: Znaky kódování a zalomení řádku
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,46 +12,46 @@ helpviewer_keywords:
 - line break characters
 - Visual Studio, line break characters
 ms.assetid: 8f9b3ffc-7b8d-44f4-87cb-dc29105be12d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 59ed38c28c6818fb618156450d47c05b4f35d63d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8fd37547d8107cf35991aab684313dbff37adda0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978160"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650897"
 ---
-# <a name="encodings-and-line-endings"></a>Kódování a řádku konce
+# <a name="encodings-and-line-endings"></a>Kódování a konce řádků
 
-Následující znaky jsou interpretovány jako zalomení řádků v sadě Visual Studio:
+Následující znaky jsou interpretovány jako zalomení řádků v aplikaci Visual Studio:
 
-- CR LF: Návrat na začátek + LF, znaky Unicode 000 D + 000A
+- CR LF: návrat vozík + řádek, znaky Unicode 000D + 000A
 
-- LF: LF, znak Unicode 000A
+- LF: line feed, 000A znaků Unicode
 
-- NASTAVIT: Další řádek znak Unicode 0085
+- NEL: další řádek, znak Unicode 0085
 
-- LS: Oddělovač řádků, znak Unicode 2028
+- LS: oddělovač řádků, znak Unicode 2028
 
-- PS: Oddělovač odstavců, znak Unicode 2029
+- PS: oddělovač odstavců, znak Unicode 2029
 
-Text, který se zkopíruje z jiné aplikace udržuje původní kódování a znaky konce řádku. Například při kopírování textu z programu Poznámkový blok a vložte ho do textového souboru v sadě Visual Studio, text má stejné nastavení, jako v poznámkovém bloku.
+Text, který je zkopírován z jiných aplikací, uchovává původní kódování a znaky zalomení řádku. Například pokud kopírujete text z programu Poznámkový blok a vložíte ho do textového souboru v aplikaci Visual Studio, text má stejné nastavení jako v poznámkovém bloku.
 
-Při otevření souboru obsahujícího znaky konce řádku různých, může se zobrazit dialogové okno s dotazem, zda by měly být normalizovány znaky konců řádků nekonzistentní a jaký typ řádku dělí na tlačítko.
+Když otevřete soubor, který obsahuje jiné znaky zalomení řádku, může se zobrazit dialogové okno s dotazem, zda by měly být nekonzistentní znaky konců řádků normalizovány a jaký typ konců řádků zvolit.
 
-## <a name="advanced-save-options"></a>Pokročilé nastavení uložení
+## <a name="advanced-save-options"></a>Rozšířené možnosti uložení
 
-Můžete použít **souboru** > **pokročilé nastavení uložení** dialogové okno určit typ má znaky konce řádku. Můžete také změnit kódování souboru se stejným nastavením.
+Pomocí dialogového okna**Upřesnit možnosti uložení** ** >  můžete** určit typ znaků konce řádku, které chcete. Můžete také změnit kódování souboru se stejným nastavením.
 
-![Dialogové okno pokročilé nastavení uložení](media/line_endings.png)
+![Dialogové okno Upřesnit možnosti uložení](media/line_endings.png)
 
 > [!NOTE]
-> Pokud nevidíte **pokročilé nastavení uložení** na **souboru** nabídku, můžete ho přidat. Zvolte **nástroje**, **vlastní**a klikněte na tlačítko **příkazy** kartu. V **nabídek** rozevíracím seznamu klikněte na položku **souboru**, klikněte na tlačítko **přidat příkaz** tlačítko. V **přidat příkaz** dialogovém okně **kategorie**, zvolte **souboru**a pak v **příkazy** klikněte na položku  **Pokročilé nastavení uložení**. Zvolte **OK** a klikněte na tlačítko **přesunout dolů** tlačítko příkaz přesunout na libovolné místo v nabídce. Zvolte **zavřete** zavřete **vlastní** dialogové okno. Další informace najdete v tématu [přizpůsobení nabídek a panelů nástrojů](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#customizing_menu).
+> Pokud nevidíte **možnost Upřesnit možnosti uložení** v nabídce **soubor** , můžete ji přidat. Zvolte **nástroje**, **přizpůsobit**a pak zvolte kartu **příkazy** . V rozevíracím seznamu **panel nabídek** zvolte možnost **soubor**a poté klikněte na tlačítko **Přidat příkaz** . V dialogovém okně **Přidat příkaz** v části **kategorie**zvolte možnost **soubor**a potom v seznamu **příkazy** zvolte **možnost Upřesnit možnosti uložení**. Zvolte **OK** a pak zvolte tlačítko **Přesunout dolů** a přesuňte příkaz na libovolné místo v nabídce. Kliknutím na tlačítko **Zavřít** zavřete dialogové okno **přizpůsobit** . Další informace najdete v tématu [přizpůsobení nabídek a panelů nástrojů](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#customizing_menu).
 >
-> Alternativně můžete přistupovat **pokročilé nastavení uložení** dialogové okno výběrem **souboru** > **Uložit \<souboru\> jako**. V **uložit soubor jako** dialogové okno Vyberte trojúhelník rozevíracího seznamu vedle položky **Uložit** tlačítko a zvolte **uložit s kódováním**.
+> Případně můžete k dialogovému oknu **Upřesnit možnosti uložení** získat přístup tak, že kliknete na **soubor**  > **Uložit \<file \> jako**. V dialogovém okně **Uložit soubor jako** vyberte trojúhelník rozevíracího seznamu vedle tlačítka **Uložit** a vyberte **Uložit s kódováním**.
 
 ## <a name="see-also"></a>Viz také:
 

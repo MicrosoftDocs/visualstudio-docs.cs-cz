@@ -1,5 +1,5 @@
 ---
-title: 'CA1024: Použijte vlastnosti, kde je to vhodné | Dokumentace Microsoftu'
+title: 'CA1024: použijte vlastnosti, kde je to vhodné | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - UsePropertiesWhereAppropriate
 ms.assetid: 3a04f765-af7c-4872-87ad-9cc29e8e657f
 caps.latest.revision: 23
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 43487aa97afcd41a5375bacc26efba705cbaa76c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b190e007cfdb016e54148cf0295c68baf68c5033
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68144811"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661953"
 ---
 # <a name="ca1024-use-properties-where-appropriate"></a>CA1024: Použijte vlastnosti, kde je to vhodné
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,45 +29,45 @@ ms.locfileid: "68144811"
 |-|-|
 |TypeName|UsePropertiesWhereAppropriate|
 |CheckId|CA1024|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Veřejná nebo chráněná metoda má název, který začíná `Get`, nepřijímá žádné parametry a vrátí hodnotu, která není pole.
+ Veřejná nebo chráněná metoda má název, který začíná `Get`, nepřebírá žádné parametry a vrací hodnotu, která není polem.
 
 ## <a name="rule-description"></a>Popis pravidla
- Ve většině případů vlastnosti představují data a provedení metody akce. Vlastnosti jsou dostupné jako pole, které usnadňují jejich použití. Metoda je vhodným kandidátem pro stala vlastností, pokud se nachází jedna z těchto podmínek:
+ Ve většině případů vlastnosti reprezentují data a metody, které provádějí akce. Vlastnosti jsou dostupné jako pole, což usnadňuje jejich použití. Metoda je dobrým kandidátem, který se stane vlastností, pokud je přítomna jedna z těchto podmínek:
 
-- Nepřijímá žádné argumenty a vrátí informace o stavu objektu.
+- Nepřijímá žádné argumenty a vrací informace o stavu objektu.
 
-- Přijímá jeden argument nastavit některá část stav objektu.
+- Přijímá jeden argument pro nastavení některých částí stavu objektu.
 
-  Vlastnosti by měla chovat, jako by šlo polí. Pokud nelze metodu by neměla změnit na vlastnost. Metody jsou lepší než vlastnosti v následujících situacích:
+  Vlastnosti by se měly chovat, jako by se jedná o pole. Pokud metoda nemůže, neměla by být změněna na vlastnost. Metody jsou lepší než vlastnosti v následujících situacích:
 
-- Metoda provádí časově náročná operace. Metoda je perceivably pomalejší než čas, který je potřeba nastavit nebo získat hodnotu pole.
+- Metoda provádí časově náročnou operaci. Metoda je vnímana pomalejší než čas, který je požadován k nastavení nebo získání hodnoty pole.
 
-- Metoda provádí převod. Přístup k poli nevrací převedená verze tohoto data, která ukládá.
+- Metoda provádí převod. Přístup k poli nevrátí převedenou verzi dat, která ukládá.
 
-- Metoda Get má pozorovatelný vedlejší efekt. Načítání hodnoty pole nevytváří žádné vedlejší účinky.
+- Metoda get má pozorovatelný vedlejší efekt. Načtení hodnoty pole neprodukuje žádné vedlejší účinky.
 
-- Je důležité pořadí provádění. Nastaví hodnotu pole není závislý na výskyt jiné operace.
+- Pořadí spuštění je důležité. Nastavení hodnoty pole nezávisí na výskytu jiných operací.
 
-- Volání metody dvakrát za sebou vytvoří jiné výsledky.
+- Volání metody dvakrát v případě úspěchu vytváří různé výsledky.
 
-- Metoda je statická, ale vrátí objekt, který můžete změnit tak, volající. Načítání hodnoty pole neumožňuje volajícího, aby změna dat uložených v poli.
+- Metoda je statická, ale vrací objekt, který může změnit volající. Načítání hodnoty pole neumožňuje volajícímu měnit data, která jsou uložena v poli.
 
-- Metoda vrátí pole.
+- Metoda vrací pole.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, změňte metodu na vlastnost.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Potlačit upozornění tohoto pravidla, pokud metoda splňuje splnit aspoň jednu z výše uvedených kritérií.
+ Potlačí upozornění z tohoto pravidla, pokud metoda splňuje alespoň jedno z výše uvedených kritérií.
 
-## <a name="controlling-property-expansion-in-the-debugger"></a>Řízení vlastnosti rozšíření v ladicím programu
- Jedním z důvodů, programátoři Vyhněte se použití vlastnosti je vzhledem k tomu, že nechtějí ladicí program automaticky-rozbalte ho. Například vlastnost může zahrnovat přidělování velkého objektu nebo volání P/Invoke, ale nemusí mít ve skutečnosti všechny pozorovatelný vedlejší účinky.
+## <a name="controlling-property-expansion-in-the-debugger"></a>Řízení rozšíření vlastností v ladicím programu
+ Jedním z důvodů, proč programátoři nepoužívají vlastnost, je, že nechtějí, aby ladicí program automaticky rozbalí. Například vlastnost může zahrnovat přidělení velkého objektu nebo volání volání nespravovaného objektu, ale nemusí mít ve skutečnosti žádné pozorovatelné vedlejší účinky.
 
- Ladicí program může zabránit automatické rozšiřování vlastnosti použitím <xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName>. Následující příklad ukazuje tento atribut použity pro vlastnost instance.
+ Ladicímu programu můžete zabránit v automatickém rozbalování vlastností, a to použitím <xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName>. Následující příklad ukazuje tento atribut aplikovaný na vlastnost instance.
 
 ```vb
 Imports System
@@ -117,6 +117,6 @@ namespace Microsoft.Samples
 ```
 
 ## <a name="example"></a>Příklad
- Následující příklad obsahuje několik metod, které mají být převedeny do vlastností a několik, který by nebyl, protože není chovají jako pole.
+ Následující příklad obsahuje několik metod, které by měly být převedeny na vlastnosti a několik, které by neměly být stejné, protože se chovají jako pole.
 
  [!code-csharp[FxCop.Design.MethodsProperties#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.MethodsProperties/cs/FxCop.Design.MethodsProperties.cs#1)]

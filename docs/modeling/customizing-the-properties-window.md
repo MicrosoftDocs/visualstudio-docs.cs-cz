@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, Properties window
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c11c9da607e983dcde0b84ac236943751bca71c
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 72e0a8393a65d4c0e1549a6617971b0adb8c1df7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251859"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653968"
 ---
 # <a name="customize-the-properties-window"></a>Přizpůsobení okno Vlastnosti
 
@@ -24,7 +24,7 @@ V aplikaci Visual Studio můžete přizpůsobit vzhled a chování okna vlastnos
 
 **Název a zobrazované jméno**. V definici doménové vlastnosti je zobrazovaný název vlastnosti název, který se zobrazí v době běhu v okně Vlastnosti. Naopak název se používá při psaní kódu programu pro aktualizaci vlastnosti. Název musí být správný alfanumerický název CLR, ale zobrazovaný název může obsahovat mezery.
 
-Když nastavíte název vlastnosti v definici DSL, její zobrazovaný název se automaticky nastaví na kopii názvu. Pokud napíšete název Pascal použita, jako je například "FuelGauge", zobrazované jméno bude automaticky obsahovat mezeru: "Měřič pohonu". Zobrazované jméno ale můžete nastavit explicitně na jinou hodnotu.
+Když nastavíte název vlastnosti v definici DSL, její zobrazovaný název se automaticky nastaví na kopii názvu. Pokud napíšete název Pascal použita, jako je například "FuelGauge", zobrazované jméno bude automaticky obsahovat mezeru: "měřič pohonu". Zobrazované jméno ale můžete nastavit explicitně na jinou hodnotu.
 
 **Popis**. Popis doménové vlastnosti se zobrazí na dvou místech:
 
@@ -40,9 +40,9 @@ Některé dynamické funkce grafických prvků mohou být reprezentovány nebo *
 
 V definici DSL klikněte pravým tlačítkem myši na třídu Shape, přejděte na **Přidat vystavené**a pak zvolte funkci.
 
-V obrazcích můžete vystavit vlastnosti **FillColor**, **OutlineColor**, **TextColor**, **OutlineDashStyle**, **OutlineThickness** a **FillGradientMode** . V konektorech můžete vystavit vlastnosti **barev**`,`**TextColor**, **DashStyle**a **tloušťku** . V diagramech můžete zveřejnit vlastnosti **FillColor** a **TextColor** .
+V obrazcích můžete vystavit vlastnosti **FillColor**, **OutlineColor**, **TextColor**, **OutlineDashStyle**, **OutlineThickness** a **FillGradientMode** . V konektorech můžete zpřístupnit **barvy** `,`**TextColor**, **DashStyle**a vlastnosti **tloušťky** . V diagramech můžete zveřejnit vlastnosti **FillColor** a **TextColor** .
 
-## <a name="forwarding-display-properties-of-related-elements"></a>Šíření Zobrazit vlastnosti souvisejících elementů
+## <a name="forwarding-display-properties-of-related-elements"></a>Předávání: zobrazení vlastností souvisejících elementů
 
 Když uživatel vaší DSL vybere prvek v modelu, zobrazí se vlastnosti tohoto prvku v okně Vlastnosti. Můžete ale také zobrazit vlastnosti zadaných souvisejících prvků. To je užitečné, pokud jste definovali skupinu prvků, které pracují dohromady. Například můžete definovat hlavní prvek a volitelný element modulu plug-in. Je-li hlavní prvek mapován na tvar a druhý není, je užitečné zobrazit všechny vlastnosti, jako kdyby byly na jednom prvku.
 
@@ -52,7 +52,7 @@ Tento efekt se nazývá *předávání vlastností*a v několika případech k n
 
 Když uživatel vybere obrazec nebo spojnici nebo prvek v Průzkumníkovi, zobrazí se v okno Vlastnosti následující vlastnosti:
 
-- Vlastnosti domény, které jsou definovány v doméně třídy elementu modelu, včetně těch, které jsou definovány v základních třídách. Výjimkou jsou doménové **vlastnosti, pro** které jste nastavili procházení na `False`.
+- Vlastnosti domény, které jsou definovány v doméně třídy elementu modelu, včetně těch, které jsou definovány v základních třídách. Výjimkou jsou doménové vlastnosti, pro které jste nastavili, aby **bylo možné je procházet** `False`.
 
 - Názvy prvků, které jsou propojeny pomocí relací, které mají násobnost 0.. 1. To poskytuje pohodlný způsob, jak zobrazit volitelně propojené prvky, i když jste pro relaci nedefinovali mapování spojnice.
 
@@ -71,7 +71,7 @@ Následující postup předpokládá, že jste vytvořili DSL. První pár krok�
 
 #### <a name="forward-a-property-from-another-element"></a>Předejte vlastnost z jiného elementu.
 
-1. Vytvořte řešení, které obsahuje alespoň dvě třídy, v tomto příkladu se říká **Kniha** a autor. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Mezi **knihou** a **autorem**by měl existovat vztah obou druhů.
+1. Vytvořte [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] řešení, které obsahuje alespoň dvě třídy, v tomto příkladu se říká **Kniha** a **Autor**. Mezi **knihou** a **autorem**by měl existovat vztah obou druhů.
 
     Násobnost zdrojové role (role na straně **knihy** ) by měla být 0.. 1 nebo 1.. 1, aby každá **Kniha** měla jednoho **autora**.
 
@@ -132,7 +132,7 @@ Můžete však zadat následující editory a typy:
 
     V okno Vlastnosti v poli **typ** vyberte externí typ z rozevíracího seznamu.
 
-   V této fázi si uživatelé můžou zobrazit hodnoty vlastnosti, ale nemůžou je upravovat. Zobrazené hodnoty jsou získány z `ToString()` funkce. Můžete napsat programový kód, který nastaví hodnotu vlastnosti, například v příkazu nebo pravidle.
+   V této fázi si uživatelé můžou zobrazit hodnoty vlastnosti, ale nemůžou je upravovat. Zobrazené hodnoty jsou získány z funkce `ToString()`. Můžete napsat programový kód, který nastaví hodnotu vlastnosti, například v příkazu nebo pravidle.
 
 ### <a name="set-a-property-editor"></a>Nastavení editoru vlastností
 
@@ -146,9 +146,9 @@ Přidejte atribut CLR do vlastnosti doména v následujícím tvaru:
 
 Atribut můžete nastavit u vlastnosti pomocí položky **vlastního atributu** v okno Vlastnosti.
 
-Typ `AnEditor` musí být odvozen od typu určeného ve druhém parametru. Druhý parametr by měl být buď <xref:System.Drawing.Design.UITypeEditor> nebo <xref:System.ComponentModel.ComponentEditor>. Další informace naleznete v tématu <xref:System.ComponentModel.EditorAttribute>.
+Typ `AnEditor` musí být odvozen od typu zadaného ve druhém parametru. Druhý parametr by měl být buď <xref:System.Drawing.Design.UITypeEditor>, nebo <xref:System.ComponentModel.ComponentEditor>. Další informace najdete v tématu <xref:System.ComponentModel.EditorAttribute>.
 
-Můžete zadat vlastní editor nebo editor .NET, například <xref:System.Windows.Forms.Design.FileNameEditor> nebo. <xref:System.Drawing.Design.ImageEditor> Například použijte následující postup, chcete-li mít vlastnost, ve které může uživatel zadat název souboru.
+Můžete zadat vlastní editor nebo editor .NET, například <xref:System.Windows.Forms.Design.FileNameEditor> nebo <xref:System.Drawing.Design.ImageEditor>. Například použijte následující postup, chcete-li mít vlastnost, ve které může uživatel zadat název souboru.
 
 #### <a name="define-a-file-name-domain-property"></a>Definice vlastnosti doména názvu souboru
 
@@ -177,13 +177,13 @@ Můžete zadat vlastní editor nebo editor .NET, například <xref:System.Window
 
 Můžete definovat vlastní editor. To umožňuje uživateli povolit buď úpravu typu, který jste definovali, nebo upravit standardní typ zvláštním způsobem. Můžete například uživateli dovolit zadat řetězec, který představuje vzorec.
 
-Editor definujete tak, že zapíšete třídu, která <xref:System.Drawing.Design.UITypeEditor>je odvozena z. Vaše třída musí přepsat:
+Editor definujete tak, že zapíšete třídu, která je odvozena od <xref:System.Drawing.Design.UITypeEditor>. Vaše třída musí přepsat:
 
-- <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>, pro interakci s uživatelem a aktualizaci hodnoty vlastnosti.
+- <xref:System.Drawing.Design.UITypeEditor.EditValue%2A> pro interakci s uživatelem a aktualizaci hodnoty vlastnosti.
 
 - <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>, chcete-li určit, zda má Editor otevřít dialogové okno nebo zadat rozevírací nabídku.
 
-Můžete také zadat grafické znázornění hodnoty vlastnosti, která se zobrazí v mřížce vlastností. Uděláte to tak, že `GetPaintValueSupported`přepíšete a `PaintValue`.  Další informace naleznete v tématu <xref:System.Drawing.Design.UITypeEditor>.
+Můžete také zadat grafické znázornění hodnoty vlastnosti, která se zobrazí v mřížce vlastností. Provedete to tak, že přepíšete `GetPaintValueSupported` a `PaintValue`.  Další informace najdete v tématu <xref:System.Drawing.Design.UITypeEditor>.
 
 > [!NOTE]
 > Přidejte kód do samostatného souboru kódu v projektu **DSL** .
@@ -210,7 +210,7 @@ Chcete-li použít tento editor, nastavte **vlastní atribut** doménové vlastn
    , typeof(System.Drawing.Design.UITypeEditor))]
 ```
 
-Další informace naleznete v tématu <xref:System.Drawing.Design.UITypeEditor>.
+Další informace najdete v tématu <xref:System.Drawing.Design.UITypeEditor>.
 
 ## <a name="provide-a-drop-down-list-of-values"></a>Zadejte rozevírací seznam hodnot.
 
@@ -226,7 +226,7 @@ Chcete-li definovat seznam standardních hodnot, přidejte do vlastnosti domény
 (typeof(MyTypeConverter))]
 ```
 
-Definujte třídu, která je odvozena <xref:System.ComponentModel.TypeConverter>z. Přidejte kód do samostatného souboru v projektu **DSL** . Příklad:
+Definujte třídu, která je odvozena z <xref:System.ComponentModel.TypeConverter>. Přidejte kód do samostatného souboru v projektu **DSL** . Příklad:
 
 ```csharp
 /// <summary>

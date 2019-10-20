@@ -1,5 +1,5 @@
 ---
-title: Šablony projektů a souborů
+title: Šablony pro projekty a soubory
 ms.date: 01/02/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,71 +7,71 @@ helpviewer_keywords:
 - templates [Visual Studio], item
 - item templates [Visual Studio]
 - project templates [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 83ac401b67444d4fdd467d5aefeb46bccb5e7e84
-ms.sourcegitcommit: cd21b38eefdea2cdefb53e68e7a30b868e78dd6b
+ms.openlocfilehash: 1590317bf2749cc1aeef8a4c3bfbf2937c8404c7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66037013"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652600"
 ---
 # <a name="project-and-item-templates"></a>Šablony projektů a položek
 
-Šablony projektů a položek poskytují opakovaně použitelný, která uživatelům umožňují základní kód a strukturu, který můžete přizpůsobit pro vlastní účely.
+Šablony projektů a položek poskytují opakovaně použitelné zástupné procedury, které uživatelům poskytují základní kód a strukturu, které mohou přizpůsobit svým účelům.
 
 ## <a name="visual-studio-templates"></a>šablony sady Visual Studio
 
-Několik předdefinovaných projektů a šablon položek je nainstalováno pomocí sady Visual Studio. Tyto šablony, jako **webová aplikace ASP.NET** a **knihovny tříd** šablony, je možné vybírat při vytváření nového projektu. Šablony položek, jako jsou soubory kódu, souborů XML, HTML stránky a šablony stylů, se zobrazí v **přidat novou položku** okna.
+V aplikaci Visual Studio je nainstalováno několik předdefinovaných šablon projektů a položek. Tyto šablony, jako je **Webová aplikace ASP.NET** a šablony **knihovny tříd** , jsou k dispozici pro výběr při vytváření nového projektu. Šablony položek, jako jsou soubory kódu, soubory XML, stránky HTML a šablony stylů, se zobrazí v okně **Přidat novou položku** .
 
-Tyto šablony představují výchozí bod pro uživatele a začněte vytvářet projekty nebo rozšířit projekty stávající. Šablony projektů poskytují soubory, které jsou požadovány pro konkrétní typ projektu, zahrnují standardní odkazy na sestavení a nastavují výchozí vlastnosti projektu a možnosti kompilátoru. Šablony položek mohou být v rozsahu od jednoho prázdný soubor, který má určitá příponu souboru, do více souborů se zdrojovým kódem se zakázaným inzerováním kódem, informační soubory pro návrháře a vložené prostředky.
+Tyto šablony poskytují výchozí bod pro uživatele pro zahájení vytváření projektů nebo pro rozbalení stávajících projektů. Šablony projektů poskytují soubory, které jsou požadovány pro konkrétní typ projektu, zahrnují standardní odkazy na sestavení a nastavují výchozí vlastnosti projektu a možnosti kompilátoru. Šablony položek mohou mít složitost od jednoho prázdného souboru, který má určitou příponu, do více souborů zdrojového kódu se zástupným kódem, soubory informací návrháře a integrované prostředky.
 
-Můžete použít nainstalovaných šablon, vytvořit vlastní šablony, nebo stáhnout a použít šablonu vytvořenou komunitou. Další informace najdete v tématu [jak: Vytváření šablon projektu](../ide/how-to-create-project-templates.md) a [jak: Tvorba šablon položek s](../ide/how-to-create-item-templates.md).
+Můžete použít nainstalované šablony, vytvářet vlastní šablony nebo stahovat a používat šablony vytvořené komunitou. Další informace naleznete v tématu [Postupy: vytváření šablon projektů](../ide/how-to-create-project-templates.md) a [Postupy: vytváření šablon položek](../ide/how-to-create-item-templates.md).
 
 ## <a name="contents-of-a-template"></a>Obsah šablony
 
-Všechny šablony projektů a položek, zda je nainstalován se sadou Visual Studio nebo vytvořené vámi, pracovat na stejných principech a mají podobný obsah. Všechny šablony obsahují následující položky:
+Všechny šablony projektů a položek, ať už nainstalované se sadou Visual Studio nebo vytvořené vámi, fungují podle stejných principů a mají podobný obsah. Všechny šablony obsahují následující položky:
 
 - Soubory, které mají být vytvořeny při použití této šablony. Tyto soubory zahrnují soubory zdrojového kódu, vložené prostředky, soubory projektu a tak dále.
 
 ::: moniker range="vs-2017"
 
-- A *.vstemplate* soubor, který obsahuje metadata potřebná k vytvoření projektu nebo položky ze šablony a k zobrazení šablony v **nový projekt** a **přidat novou položku** systém Windows.
+- Soubor *. vstemplate* obsahující metadata potřebná k vytvoření projektu nebo položky ze šablony a k zobrazení šablony v **novém projektu** a **Přidání nových položek** okna.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- A *.vstemplate* soubor, který obsahuje metadata potřebná k vytvoření projektu nebo položky z této šablony a zobrazení šablony na **vytvořte nový projekt** stránku nebo **přidat novou položku** dialogové okno.
+- Soubor *. vstemplate* obsahující metadata potřebná k vytvoření projektu nebo položky ze šablony a k zobrazení šablony na stránce **vytvořit nový projekt** nebo v dialogovém okně **Přidat novou položku** .
 
 ::: moniker-end
 
-   Další informace o *.vstemplate* soubory, naleznete v tématu [šablony značky](template-tags.md) a [parametry šablony](../ide/template-parameters.md).
+   Další informace o souborech *. vstemplate* naleznete v tématu [Tagy šablony](template-tags.md) a [parametry šablony](../ide/template-parameters.md).
 
-Když jsou tyto soubory zkomprimovány do *ZIP* soubor a uložte do správné složky, Visual Studio automaticky zobrazí na následujících místech:
+Když jsou tyto soubory komprimovány do souboru *zip* a vloženy do správné složky, Visual Studio je automaticky zobrazí v následujících umístěních:
 
 ::: moniker range="vs-2017"
 
-- Šablony projektu se zobrazí v **nový projekt** okna.
+- Šablony projektu se zobrazí v okně **Nový projekt** .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- Šablony projektu se zobrazí na **vytvořte nový projekt** stránky.
+- Šablony projektu se zobrazí na stránce **vytvořit nový projekt** .
 
 ::: moniker-end
 
-- Položka šablony se zobrazí v **přidat novou položku** okna.
+- Šablony položek se zobrazí v okně **Přidat novou položku** .
 
-Další informace o adresářích pro šablony najdete v tématu [jak: Hledání a organizace šablon](../ide/how-to-locate-and-organize-project-and-item-templates.md).
+Další informace o složkách šablon naleznete v tématu [How to: vyhledání a uspořádání šablon](../ide/how-to-locate-and-organize-project-and-item-templates.md).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Postupy: Vytváření šablon projektu](../ide/how-to-create-project-templates.md)
-- [Postupy: Tvorba šablon položek](../ide/how-to-create-item-templates.md)
-- [Šablona značky](template-tags.md)
+- [Postupy: vytváření šablon projektů](../ide/how-to-create-project-templates.md)
+- [Postupy: vytváření šablon položek](../ide/how-to-create-item-templates.md)
+- [Tagy šablony](template-tags.md)
 - [Parametry šablony](../ide/template-parameters.md)
-- [Přizpůsobení šablony](../ide/customizing-project-and-item-templates.md)
-- [Balíčky NuGet ve šablony sady Visual Studio](/nuget/visual-studio-extensibility/visual-studio-templates)
+- [Přizpůsobení šablon](../ide/customizing-project-and-item-templates.md)
+- [Balíčky NuGet v šablonách sady Visual Studio](/nuget/visual-studio-extensibility/visual-studio-templates)

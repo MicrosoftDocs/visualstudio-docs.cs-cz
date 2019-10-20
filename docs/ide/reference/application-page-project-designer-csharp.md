@@ -8,23 +8,23 @@ f1_keywords:
 helpviewer_keywords:
 - Project Designer, Application page
 - Application page in Project Designer
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04a130528edbe8ab3aae0a24d69315b934b19d54
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: cc28c4b6585c52bca084234b8d21f211b4209b87
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551426"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651976"
 ---
 # <a name="application-page-project-designer-c"></a>Stránka Aplikace, návrhář projektu (C#)
 
 Použijte stránku **aplikace** **Návrháře projektu** k určení nastavení aplikace a vlastností projektu.
 
-Pro přístup ke stránce **aplikace** vyberte uzel projektu (nikoli uzel **řešení** ) v **Průzkumník řešení**. Pak zvolte**vlastnosti** **projektu** > na řádku nabídek. Když se zobrazí **Návrhář projektu** , klikněte na kartu **aplikace** .
+Pro přístup ke stránce **aplikace** vyberte uzel projektu (nikoli uzel **řešení** ) v **Průzkumník řešení**. Pak zvolte **projekt**  > **vlastnosti** na řádku nabídek. Když se zobrazí **Návrhář projektu** , klikněte na kartu **aplikace** .
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -38,7 +38,7 @@ Určuje název výstupního souboru, který bude obsahovat manifest sestavení. 
 
 Tuto změnu můžete provést také z příkazového řádku pomocí [/out (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/out-compiler-option).
 
-Chcete-li získat přístup k této <xref:VSLangProj.ProjectProperties.AssemblyName%2A>vlastnosti programově, přečtěte si téma.
+Chcete-li získat přístup k této vlastnosti programově, přečtěte si téma <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.
 
 **Výchozí obor názvů**
 
@@ -46,7 +46,7 @@ Určuje základní obor názvů pro soubory přidané do projektu.
 
 Další informace o vytváření oborů názvů v kódu naleznete v tématu [obor názvů](/dotnet/csharp/language-reference/keywords/namespace) .
 
-Chcete-li získat přístup k této <xref:VSLangProj.ProjectProperties.RootNamespace%2A>vlastnosti programově, přečtěte si téma.
+Chcete-li získat přístup k této vlastnosti programově, přečtěte si téma <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.
 
 **Cílová architektura**
 
@@ -65,13 +65,13 @@ Další informace najdete v tématu [Přehled cílení na rozhraní](../../ide/v
 
 **Typ výstupu**
 
-Určuje typ aplikace, která se má sestavit. Hodnoty se liší v závislosti na typu projektu. Například pro projekt konzolové aplikace můžete jako výstupní typ zadat **aplikaci systému Windows**, **konzolovou aplikaci**nebo **knihovnu tříd** .
+Určuje typ aplikace, která se má sestavit. Hodnoty se liší v závislosti na typu projektu. Například pro projekt **konzolové** aplikace můžete jako výstupní typ zadat **aplikaci systému Windows**, **konzolovou aplikaci**nebo **knihovnu tříd** .
 
 Pro projekt webové aplikace je nutné zadat **knihovnu tříd**.
 
 Další informace o vlastnosti **výstupního typu** naleznete v tématu [/target (C# Compiler Options)](/dotnet/csharp/language-reference/compiler-options/target-compiler-option).
 
-Informace o tom, jak získat přístup k této vlastnosti prostřednictvím <xref:VSLangProj.ProjectProperties.OutputType%2A>kódu programu, najdete v tématu.
+Informace o tom, jak získat přístup k této vlastnosti prostřednictvím kódu programu, najdete v tématu <xref:VSLangProj.ProjectProperties.OutputType%2A>.
 
 **Automaticky generovat přesměrování vazby**
 
@@ -81,11 +81,11 @@ Další informace o přesměrování naleznete v tématu [přesměrovávání ve
 
 **Spouštěcí objekt**
 
-Definuje vstupní bod, který se má volat při načtení aplikace. Obecně je tato možnost nastavena buď na hlavní formulář v aplikaci, nebo na `Main` proceduru, která by měla být spuštěna při spuštění aplikace. Vzhledem k tomu, že knihovny tříd nemají vstupní bod, je jejich jediná možnost pro tuto vlastnost **(nenastavená)** .
+Definuje vstupní bod, který se má volat při načtení aplikace. Obecně je tato možnost nastavena buď na hlavní formulář v aplikaci, nebo na `Main` postup, který by se měl spustit při spuštění aplikace. Vzhledem k tomu, že knihovny tříd nemají vstupní bod, je jejich jediná možnost pro tuto vlastnost **(nenastavená)** .
 
-Ve výchozím nastavení je v projektu aplikace WPF Tato možnost nastavená na **(Nenastaveno)** . Druhá možnost je \[ProjectName]. app. V projektu WPF musíte nastavit spouštěcí identifikátor URI pro načtení prostředku uživatelského rozhraní při spuštění aplikace. Provedete to tak, že otevřete soubor *Application. XAML* v projektu a nastavíte `StartupUri` vlastnost na soubor *. XAML* v projektu, například *Window1. XAML*. Seznam přijatelných kořenových elementů naleznete v <xref:System.Windows.Application.StartupUri%2A>tématu. Musíte také definovat `public static void Main()` metodu ve třídě v projektu. Tato třída se zobrazí v seznamu **spouštěcích objektů** jako *ProjectName. ClassName*. Pak můžete vybrat třídu jako spouštěcí objekt.
+Ve výchozím nastavení je v projektu aplikace WPF Tato možnost nastavená na **(Nenastaveno)** . Další možností je \[projectname]. app. V projektu WPF musíte nastavit spouštěcí identifikátor URI pro načtení prostředku uživatelského rozhraní při spuštění aplikace. Provedete to tak, že v projektu otevřete soubor *Application. XAML* a vlastnost `StartupUri` nastavíte na soubor *. XAML* v projektu, jako je například *Window1. XAML*. Seznam přijatelných kořenových elementů naleznete v tématu <xref:System.Windows.Application.StartupUri%2A>. Musíte také definovat metodu `public static void Main()` třídy v projektu. Tato třída se zobrazí v seznamu **spouštěcích objektů** jako *ProjectName. ClassName*. Pak můžete vybrat třídu jako spouštěcí objekt.
 
-Další informace naleznete v tématu [/Main (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/main-compiler-option) . Chcete-li získat přístup k této <xref:VSLangProj.ProjectProperties.StartupObject%2A>vlastnosti programově, přečtěte si téma.
+Další informace naleznete v tématu [/Main (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/main-compiler-option) . Chcete-li získat přístup k této vlastnosti programově, přečtěte si téma <xref:VSLangProj.ProjectProperties.StartupObject%2A>.
 
 **Informace o sestavení**
 
@@ -103,15 +103,15 @@ Ve výchozím nastavení je tento přepínač vybraný a jsou povolené **ikony*
 
 Nastaví soubor *. ico* , který chcete použít jako ikonu programu. Klikněte na tlačítko **Procházet** a vyhledejte existující grafiku nebo zadejte požadovaný název souboru. Další informace naleznete v tématu [/win32icon (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option) .
 
-Chcete-li získat přístup k této <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>vlastnosti programově, přečtěte si téma.
+Chcete-li získat přístup k této vlastnosti programově, přečtěte si téma <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.
 
 Informace o vytvoření ikony najdete v tématu [Editor obrázků pro ikony](/cpp/windows/image-editor-for-icons).
 
-**Manifest**
+**Zřetel**
 
 Vybere možnost generování manifestu, pokud je aplikace spuštěna v systému Windows Vista pod nástrojem Řízení uživatelských účtů (UAC). Tato možnost může mít následující hodnoty:
 
-- **Vloží manifest s výchozími nastaveními**. Podporuje typický způsob, jakým aplikace Visual Studio funguje v systému Windows Vista, což znamená vložení informací o zabezpečení do spustitelného souboru aplikace `requestedExecutionLevel` `AsInvoker`. tím se určí. Toto je výchozí možnost.
+- **Vloží manifest s výchozími nastaveními**. Podporuje typický způsob, jakým aplikace Visual Studio funguje v systému Windows Vista, což znamená vložení informací o zabezpečení do spustitelného souboru aplikace. tím se určí, že `requestedExecutionLevel` být `AsInvoker`. Toto je výchozí možnost.
 
 - **Vytvořit aplikaci bez manifestu** Tato metoda se označuje jako *virtualizace*. Tato možnost slouží k zajištění kompatibility se staršími aplikacemi.
 

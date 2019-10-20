@@ -1,5 +1,5 @@
 ---
-title: 'CA1019: Definujte přístupové objekty pro argumenty atributu | Dokumentace Microsoftu'
+title: 'CA1019: Definujte přístupové objekty pro argumenty atributu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,46 +12,46 @@ helpviewer_keywords:
 - DefineAccessorsForAttributeArguments
 ms.assetid: 197f2378-3c43-427e-80de-9ec25006c05c
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 01d4b421f196eec7401f12ca8eeb7a52b2396065
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 4e77f3a4eec7495e6b4abe13bec93d341f961463
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65704202"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662017"
 ---
-# <a name="ca1019-define-accessors-for-attribute-arguments"></a>CA1019: Definujte přístupové objekty pro argumenty atributů
+# <a name="ca1019-define-accessors-for-attribute-arguments"></a>CA1019: Definujte přístupové vlastnosti pro argumenty atributu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|DefineAccessorsForAttributeArguments|
 |CheckId|CA1019|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
  V konstruktoru definuje atribut argumenty, které nemají odpovídající vlastnosti.
 
 ## <a name="rule-description"></a>Popis pravidla
- Atributy mohou definovat povinné argumenty, které musí být specifikovány při použití atributu na cíl. Říká se jim také poziční argumenty, jelikož jsou konstruktorům atributů předány jako poziční parametry. Pro každý povinný argument by měl atribut navíc poskytovat odpovídající vlastnost jen pro čtení, aby mohla být hodnota argumentu během spuštění získána. Toto pravidlo zkontroluje, pro každý parametr konstruktoru definovanou odpovídající vlastnost.
+ Atributy mohou definovat povinné argumenty, které musí být specifikovány při použití atributu na cíl. Říká se jim také poziční argumenty, jelikož jsou konstruktorům atributů předány jako poziční parametry. Pro každý povinný argument by měl atribut navíc poskytovat odpovídající vlastnost jen pro čtení, aby mohla být hodnota argumentu během spuštění získána. Toto pravidlo kontroluje, zda pro každý parametr konstruktoru jste definovali odpovídající vlastnost.
 
  Atributy mohou také definovat volitelné argumenty, které jsou rovněž známy jako pojmenované argumenty. Tyto argumenty jsou podle názvu poskytovány konstruktorům atributů a měly by mít odpovídající vlastnost pro čtení i zápis.
 
- Povinné a nepovinné argumenty, odpovídající vlastnosti a parametry konstruktoru musí použít stejný název, ale jinou velikostí písmen. Vlastnosti využívají Pascal velká a malá písmena a parametry ve formátu camelCase použití malých a velkých písmen.
+ U povinných a volitelných argumentů by odpovídající vlastnosti a parametry konstruktoru měly používat stejný název, ale různé velikosti písmen. Vlastnosti používají velká a malá písmena Pascal a parametry používají ve stylu CamelCase velká a malá písmena.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, přidejte vlastnost jen pro čtení pro každý parametr konstruktoru, který nemá.
+ Chcete-li opravit porušení tohoto pravidla, přidejte vlastnost jen pro čtení pro každý parametr konstruktoru, který ho nemá.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Potlačit upozornění tohoto pravidla, pokud nechcete, aby hodnota retrievable povinný argument.
+ Pokud nechcete, aby se hodnota povinného argumentu dala získat, potlačíte upozornění od tohoto pravidla.
 
-## <a name="custom-attributes-example"></a>Příklad vlastní atributy
+## <a name="custom-attributes-example"></a>Příklad vlastních atributů
 
 ### <a name="description"></a>Popis
- Následující příklad ukazuje dva atributy, které definují povinný parametr (poziční). První implementaci atributu je nesprávně definovaný. Druhý implementace je správná.
+ Následující příklad ukazuje dva atributy, které definují povinný (poziční) parametr. První implementace atributu je nesprávně definovaná. Druhá implementace je správná.
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Design.AttributeAccessors#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AttributeAccessors/cs/FxCop.Design.AttributeAccessors.cs#1)]
@@ -60,9 +60,9 @@ ms.locfileid: "65704202"
 ## <a name="positional-and-named-arguments"></a>Poziční a pojmenované argumenty
 
 ### <a name="description"></a>Popis
- Pojmenované a poziční argumenty Ujistěte se, mazání a spotřebitelé knihovny které argumenty jsou povinné pro atribut a které argumenty jsou volitelné.
+ Poziční a pojmenované argumenty umožňují jasným uživatelům vaší knihovny, které argumenty jsou povinné pro atribut a které argumenty jsou volitelné.
 
- Následující příklad ukazuje implementaci atributu, který má pojmenované i poziční argumenty.
+ Následující příklad ukazuje implementaci atributu, který má oba poziční i pojmenované argumenty.
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Design.AttributeAccessorsNamed#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AttributeAccessorsNamed/cs/FxCop.Design.AttributeAccessorsNamed.cs#1)]

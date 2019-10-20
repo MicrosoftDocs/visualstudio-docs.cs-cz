@@ -1,5 +1,5 @@
 ---
-title: Hierarchie volání | Dokumentace Microsoftu
+title: Hierarchie volání | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,61 +10,59 @@ helpviewer_keywords:
 - Call Hierarchy
 ms.assetid: c55bda01-d7de-4823-8f9a-1bcc37dbb74a
 caps.latest.revision: 45
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 41c7aa12e4adf2a757689670cdfed394f2a534c6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 823c61e7625850c680b52cd4ad9386ef0838d340
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433701"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660937"
 ---
 # <a name="call-hierarchy"></a>Hierarchie volání
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Hierarchie volání umožňuje procházet váš kód zobrazením všechna volání do a z vybrané metody, vlastnosti nebo konstruktoru. To vám umožní lépe porozumět toku kódu a vyhodnotit vliv změn kódu. Můžete zkontrolovat několik úrovní kód zobrazení komplexní řetězů, volání metod a další vstupní body k kód, který umožňuje prozkoumat všemi možnými cestami spuštění.  
-  
- Hierarchie volání je k dispozici v době návrhu, na rozdíl od zásobníku volání, který je zobrazené ladicím programem.  
-  
-## <a name="using-call-hierarchy"></a>Pomocí hierarchie volání  
- Chcete-li zobrazit **hierarchie volání** okna, klikněte pravým tlačítkem na název metody, vlastnosti nebo volání konstruktoru a potom klikněte na tlačítko **zobrazit hierarchii volání**.  
-  
- Název člena se zobrazí v podokně se stromovým zobrazením v **hierarchie volání** okna. Pokud rozbalíte uzel člen **volání do**_název člena_ a **volání z**_název člena_ zobrazí podřízených uzlů. Následující obrázek znázorňuje tyto uzly v **hierarchie volání** okna.  
-  
- ![Hierarchie volání s jedním uzlem otevřené](../../ide/reference/media/onenode.png "OneNode")  
-Hierarchie volání – okno  
-  
-- Pokud rozbalíte **volání do** uzlu, všechny členy, že se zobrazují volání vybraného členu.  
-  
-- Pokud rozbalíte **volání z** se zobrazí uzel, všechny členy, které jsou volány vybraného členu.  
-  
-  Každý z těchto členů poduzlu do potom rozbalte **volání do** a **volání z** uzly. Díky tomu můžete přejít do zásobníku volání, jak je znázorněno na následujícím obrázku.  
-  
-  ![Otevřít více uzlů hierarchie volání](../../ide/media/multiplenodes.png "MultipleNodes")  
-  Hierarchie volání – okno  
-  
-  Pro členy, které jsou definovány jako virtuální nebo abstraktní **název metody přepsání** uzel se objeví. Pro členy rozhraní **název metody implementuje** uzel se objeví. Tyto uzly rozšíření se zobrazí na stejné úrovni jako **volání do** a **volání z** uzly.  
-  
-  **Obor vyhledávání** na panelu nástrojů obsahuje možnosti pro **Moje řešení**, **aktuální projekt**, a **aktuální dokument**.  
-  
-  Když vyberete podřízeného člena v **hierarchie volání** podokně se stromovým zobrazením:  
-  
-- **Hierarchie volání** podokně podrobností se zobrazí všechny řádky kódu, ve kterém tento podřízený člen je volána z nadřazeného člena.  
-  
-- **Okno Definice kódu**, pokud otevřete, zobrazí kód pro vybraného členu. Toto okno je k dispozici v jazyce C# a C++. Další informace o tomto okně najdete v tématu [zobrazení struktury kódu](../../ide/viewing-the-structure-of-code.md).  
-  
+Hierarchie volání umožňuje procházet kód zobrazením všech volání a z vybrané metody, vlastnosti nebo konstruktoru. To vám umožní lépe pochopit, jak tok kódu a vyhodnotit účinky změn kódu. Můžete prozkoumat několik úrovní kódu pro zobrazení složitých řetězců volání metod a dalších vstupních bodů do kódu, který umožňuje prozkoumat všechny možné cesty provádění.
+
+ Hierarchie volání je k dispozici v době návrhu, na rozdíl od zásobníku volání, který je zobrazen pomocí ladicího programu.
+
+## <a name="using-call-hierarchy"></a>Použití hierarchie volání
+ Chcete-li zobrazit okno **hierarchie volání** , klikněte pravým tlačítkem myši na název metody, vlastnosti nebo volání konstruktoru a pak klikněte na možnost **Zobrazit hierarchii volání**.
+
+ Název člena se zobrazí v podokně stromového zobrazení v okně **hierarchie volání** . Pokud rozbalíte členský uzel, zobrazí se **volání na**_název člena_ a **volání z**poduzlů_názvů členů_ . Následující ilustrace znázorňuje tyto uzly v okně **hierarchie volání** .
+
+ ![Hierarchie volání s otevřeným jedním uzlem](../../ide/reference/media/onenode.png "OneNode") Okno hierarchie volání
+
+- Pokud rozbalíte **volání do** uzlu, zobrazí se všichni členové, kteří volají vybraného člena.
+
+- Pokud rozbalíte **volání z** uzlu, zobrazí se všichni členové, kteří jsou voláni vybraným členem.
+
+  Potom můžete rozbalit každý z těchto členů dílčího uzlu do **volání** a **volání z** uzlů. To vám umožní přejít do zásobníku volajících, jak je znázorněno na následujícím obrázku.
+
+  ![Otevřít hierarchii volání více uzlů](../../ide/media/multiplenodes.png "MultipleNodes") Okno hierarchie volání
+
+  Pro členy, které jsou definovány buď jako virtuální, nebo jako abstraktní, se zobrazí uzel **název metody přepsání** . Pro členy rozhraní se zobrazí uzel **implementující název metody** . Tyto rozbalitelné uzly se zobrazí na stejné úrovni jako **volání** a **volání z** uzlů.
+
+  Pole **Rozsah hledání** na panelu nástrojů obsahuje možnosti pro **moje řešení**, **aktuální projekt**a **aktuální dokument**.
+
+  Když vyberete podřízeného člena v podokně zobrazení stromu **hierarchie volání** :
+
+- V podokně Podrobnosti o **hierarchii volání** se zobrazí všechny řádky kódu, ve kterých je podřízený člen volán z nadřazeného člena.
+
+- **Okno Definice kódu**, pokud je otevřeno, zobrazuje kód pro vybraného člena. Toto okno je k C# dispozici C++v a. Další informace o tomto okně naleznete v tématu [zobrazení struktury kódu](../../ide/viewing-the-structure-of-code.md).
+
 > [!NOTE]
-> Hierarchie volání nenajde metoda odkazy na skupinu obsahující místa, kde se přidá jako obslužná rutina události metodu, nebo je přiřazená delegáta. Pokud chcete najít všechny odkazy na metodu, můžete použít **najít všechny odkazy** příkazu.  
-  
-## <a name="shortcut-menu-items"></a>Položky místní nabídky  
- Následující tabulka popisuje několik možnosti místní nabídky, které jsou k dispozici, když kliknete pravým tlačítkem myši na uzel v podokně se stromovým zobrazením.  
-  
-|Položka kontextové nabídky|Popis|  
-|-----------------------|-----------------|  
-|**Přidat jako nový kořen**|Přidá zvolený uzel podokně se stromovým zobrazením jako nový kořenový uzel. To umožňuje zaměřit se na konkrétní podstrom vaši pozornost.|  
-|**Odebrat kořen**|Odebere vybrané kořenový uzel v podokně se stromovým zobrazením. Tato možnost je dostupná pouze z kořenového uzlu.<br /><br /> Můžete také použít **odebrat kořenové** tlačítka panelu nástrojů, které chcete odebrat vybrané kořenového uzlu.|  
-|**Přejít k definici**|Spustí příkaz Přejít k definici ve zvoleném uzlu. Toto odkazuje na původní definice pro člen volání nebo definicí proměnné.<br /><br /> Ke spuštění příkazu Přejít k definici, můžete také dvakrát klikněte na vybraný uzel nebo stisknutím klávesy F12 ve zvoleném uzlu.|  
-|**Najít všechny odkazy**|Spustí příkaz Najít všechny odkazy na vybraný uzel. To tuto referenční třídu nebo člen vyhledá všechny řádky kódu ve vašem projektu.<br /><br /> SHIFT + F12 můžete také použít ke spuštění příkazu Najít všechny odkazy na vybraný uzel.|  
-|**kopírování**|Zkopíruje obsah vybraného uzlu (ale ne jeho podřízené uzly).|  
-|**Aktualizace**|Sbalí vybraný uzel tak, aby znovu ho rozbalíte, zobrazí aktuální informace.|
+> Hierarchie volání nenalezne odkazy na skupiny metod, které obsahují místo, kde je metoda přidána jako obslužná rutina události nebo je přiřazena delegátovi. Chcete-li najít všechny odkazy na metodu, můžete použít příkaz **Najít všechny odkazy** .
+
+## <a name="shortcut-menu-items"></a>Položky místní nabídky
+ Následující tabulka popisuje několik možností místní nabídky, které jsou k dispozici po kliknutí pravým tlačítkem myši na uzel v podokně stromového zobrazení.
+
+|Položka kontextové nabídky|Popis|
+|-----------------------|-----------------|
+|**Přidat jako nový kořen**|Přidá vybraný uzel do podokna zobrazení stromu jako nový kořenový uzel. To vám umožní zaměřit se na pozornost konkrétního podstromu.|
+|**Odebrat kořen**|Odebere vybraný kořenový uzel z podokna zobrazení stromu. Tato možnost je k dispozici pouze z kořenového uzlu.<br /><br /> K odebrání vybraného kořenového uzlu můžete použít také tlačítko **Odebrat kořenový** panel nástrojů.|
+|**Přejít k definici**|Spustí příkaz Přejít k definici na vybraném uzlu. Tím přejdete k původní definici pro členské volání nebo definici proměnné.<br /><br /> Chcete-li spustit příkaz Přejít na definici, můžete také dvakrát kliknout na vybraný uzel nebo stisknout F12 na vybraném uzlu.|
+|**Najít všechny odkazy**|Spustí příkaz Najít všechny odkazy na vybraném uzlu. Tím vyhledáte všechny řádky kódu v projektu, které odkazují na třídu nebo člen.<br /><br /> K spuštění příkazu Najít všechny odkazy na vybraném uzlu můžete také použít SHIFT + F12.|
+|**Kopií**|Zkopíruje obsah vybraného uzlu (ale ne jeho poduzly).|
+|**Téhle**|Sbalí vybraný uzel, aby se znovu rozbalí aktuální informace.|

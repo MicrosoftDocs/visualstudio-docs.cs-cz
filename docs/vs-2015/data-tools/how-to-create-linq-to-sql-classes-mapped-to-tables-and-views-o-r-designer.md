@@ -1,69 +1,69 @@
 ---
-title: 'Postupy: Vytvoření LINQ na třídy SQL namapovaných na tabulky a zobrazení (O R Designer) | Dokumentace Microsoftu'
+title: 'Postupy: vytváření tříd LINQ to SQL mapovaných na tabulky a zobrazení (O-R Designer) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
 ms.topic: conceptual
 ms.assetid: 0fb78bbc-7a78-4ab4-b32f-85ece912e660
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b9bff102fbf87149e3adc80029eea17132e9b1b7
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 7a63e81abcae508487afa40d0778c0f9e9b9caf4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65697731"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665929"
 ---
-# <a name="how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-or-designer"></a>Postupy: Vytvoření LINQ na třídy SQL namapovaných na tabulky a zobrazení (O/R Designer)
+# <a name="how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-or-designer"></a>Postupy: vytváření tříd LINQ to SQL mapovaných na tabulky a zobrazení (O/R Designer)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-LINQ na třídy SQL, které jsou mapovány na databázové tabulky a zobrazení se nazývají *tříd entit*. Třída entity se mapuje na záznam, zatímco jednotlivé vlastnosti třídy entity se mapují na jednotlivé sloupce, které tvoří záznam. Vytvoření tříd entit, které jsou založené na databázových tabulek nebo zobrazení přetažením tabulky a zobrazení z **Průzkumníka serveru**/**Průzkumník databáze** na [nástrojů LINQ to SQL v Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md). [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] Vygeneruje třídy a platí konkrétní [! Technologie LINQ to SQL atributy umožňují [! Technologie LINQ to SQL funkce (datovou komunikaci a možnosti Úpravy <xref:System.Data.Linq.DataContext>). Podrobné informace o [! Třídy LINQ to SQL, najdete v článku [The LINQ to SQL objektový Model](https://msdn.microsoft.com/library/81dd0c37-e2a4-4694-83b0-f2e49e693810).
+LINQ to SQL třídy, které jsou mapovány k tabulkám a zobrazením databáze, se nazývají *třídy entit*. Třída entity se mapuje na záznam, zatímco jednotlivé vlastnosti třídy entity jsou mapovány na jednotlivé sloupce, které tvoří záznam. Vytvořte třídy entit založené na databázových tabulkách nebo zobrazeních přetažením tabulek nebo zobrazení z **Průzkumník serveru** /**Průzkumníku databáze** do [nástrojů LINQ to SQL Tools v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md). @No__t_0 generuje třídy a použije konkrétní [! LINQ to SQL atributů, které se mají povolit [! Funkce LINQ to SQL (funkce pro datovou komunikaci a úpravy <xref:System.Data.Linq.DataContext>). Podrobné informace o produktu [! LINQ to SQL třídy naleznete v [modelu LINQ to SQL objektů](https://msdn.microsoft.com/library/81dd0c37-e2a4-4694-83b0-f2e49e693810).
 
 > [!NOTE]
-> [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] Je jednoduchý objekt relační Mapovač, protože podporuje pouze relace mapování 1:1. Jinými slovy třídu entity může mít pouze mapování 1:1 relaci s databázové tabulky nebo zobrazení. Komplexní mapování, jako je například mapování třídu entity k několika tabulkám, se nepodporuje. Ale můžete namapovat třídu entity k zobrazení, které spojí více souvisejícími tabulkami.
+> @No__t_0 je jednoduché relační mapování objektů, protože podporuje pouze 1:1 vztahů s mapováním. Jinými slovy, Třída entity může mít pouze vztah 1:1 mapování s databázovou tabulkou nebo zobrazením. Komplexní mapování, jako je například mapování třídy entity na více tabulek, není podporováno. Třídu entity však lze namapovat na zobrazení, které spojuje více souvisejících tabulek.
 
-## <a name="create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>Vytvoření třídy LINQ to SQL, které jsou mapovány do databáze tabulky a zobrazení
- Přetažení tabulky nebo zobrazení z **Průzkumníka serveru**/**Průzkumník databáze** na [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] vytvoří tříd entit kromě <xref:System.Data.Linq.DataContext> metody, které se používají pro Probíhá aktualizace.
+## <a name="create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>Vytvořit LINQ to SQL třídy, které jsou mapovány na tabulky nebo zobrazení databáze
+ Přetahování tabulek nebo zobrazení z **Průzkumník serveru** /**průzkumníku databáze** na [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] vytvoří třídy entit společně s <xref:System.Data.Linq.DataContext> metodami, které se používají k provádění aktualizací.
 
- Ve výchozím nastavení [! Technologie LINQ to SQL runtime vytvoří logiku pro uložení změn z třídy aktualizovat entitu zpět do databáze. Tato logika je založená na schéma tabulky (definice sloupců a informacemi o primárním klíči). Pokud nechcete, aby toto chování, můžete nakonfigurovat třídu entity k provedení operace vložení, aktualizace, pomocí uložených procedur a odstraní místo použití výchozí [! Technologie LINQ to SQL chování za běhu. Další informace najdete v tématu [jak: Přiřazení uložených procedur za účelem aktualizace, vložení a odstranění (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).
+ Ve výchozím nastavení [! LINQ to SQL runtime vytvoří logiku pro uložení změn z aktualizovatelné třídy entity zpátky do databáze. Tato logika je založena na schématu tabulky (definice sloupce a informace o primárním klíči). Pokud toto chování nechcete, můžete pro třídu entity nakonfigurovat použití uložených procedur k provádění vložení, aktualizací a odstranění namísto použití výchozího nastavení [! LINQ to SQL chování modulu runtime. Další informace naleznete v tématu [Postupy: přiřazení uložených procedur pro provádění aktualizací, vkládání a odstraňování (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).
 
  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
-#### <a name="to-create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>K vytvoření LINQ na třídy SQL, které jsou mapovány do databáze tabulky a zobrazení
+#### <a name="to-create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>Vytvoření LINQ to SQL třídy, které jsou mapovány na tabulky nebo zobrazení databáze
 
-1. V **Server**/**Průzkumník databáze**, rozbalte **tabulky** nebo **zobrazení** a vyhledejte databázové tabulky nebo zobrazení, který má pro použití ve vaší aplikaci.
+1. V Průzkumníku **serveru** /**Database**rozbalte **tabulky** nebo **zobrazení** a vyhledejte databázovou tabulku nebo zobrazení, které chcete použít ve své aplikaci.
 
-2. Přetáhněte tabulku nebo zobrazení do [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)].
+2. Přetáhněte tabulku nebo zobrazení na [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)].
 
-     Třídu entity se vytvoří a zobrazí na návrhové ploše. Třída entity má vlastnosti, které se mapují na sloupce ve vybrané tabulky nebo zobrazení.
+     Vytvoří se Třída entity, která se zobrazí na návrhové ploše. Třída entity obsahuje vlastnosti, které jsou mapovány na sloupce ve vybrané tabulce nebo zobrazení.
 
-## <a name="create-an-object-data-source-and-display-the-data-on-a-form"></a>Vytvořit objektový zdroj dat a zobrazení dat ve formuláři
- Po vytvoření tříd entit pomocí [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)], můžete vytvořit objektový zdroj dat a naplnění [okna zdroje dat](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992) pomocí tříd entit.
+## <a name="create-an-object-data-source-and-display-the-data-on-a-form"></a>Vytvoření zdroje dat objektu a zobrazení dat ve formuláři
+ Po vytvoření tříd entit pomocí [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] můžete vytvořit objekt zdroje dat a naplnit [okno zdroje dat](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992) pomocí tříd entit.
 
-#### <a name="to-create-an-object-data-source-based-on-linq-to-sql-entity-classes"></a>Chcete-li vytvořit zdroj dat objektu, který je založen na LINQ třídy SQL entity
+#### <a name="to-create-an-object-data-source-based-on-linq-to-sql-entity-classes"></a>Vytvoření zdroje dat objektu na základě LINQ to SQL třídy entit
 
-1. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení** k sestavení projektu.
+1. V nabídce **sestavení** klikněte na **Sestavit řešení** a sestavte projekt.
 
-2. Na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
+2. V nabídce **data** klikněte na možnost **Zobrazit zdroje dat**.
 
-3. V **zdroje dat** okna, klikněte na tlačítko **přidat nový zdroj dat**.
+3. V okně **zdroje dat** klikněte na tlačítko **Přidat nový zdroj dat**.
 
-4. Klikněte na tlačítko **objekt** na **zvolte typ zdroje dat** stránce a potom klikněte na tlačítko **Další**.
+4. Klikněte na **objekt** na stránce **Zvolte typ zdroje dat** a potom klikněte na tlačítko **Další**.
 
-5. Rozbalte uzly a vyhledejte a vyberte třídu.
+5. Rozbalte uzly a vyhledejte a vyberte svou třídu.
 
     > [!NOTE]
-    > Pokud **zákazníka** třída není k dispozici, zavřete průvodce, sestavte projekt a spusťte průvodce znovu.
+    > Pokud třída **zákazníka** není k dispozici, ukončete průvodce, sestavte projekt a spusťte průvodce znovu.
 
-6. Klikněte na tlačítko **Dokončit** vytvořit zdroj dat a přidat **zákazníka** třídu entity **zdroje dat** okna.
+6. Kliknutím na tlačítko **Dokončit** vytvořte zdroj dat a přidejte třídu entity **zákazníka** do okna **zdroje dat** .
 
-7. Přetáhněte položky z **zdroje dat** okna do formuláře.
+7. Přetáhněte položky z okna **zdroje dat** do formuláře.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Nástroje LINQ to SQL v sadě Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
-- [Návod: Vytvoření třídy LINQ to SQL (Návrhář O-R)](https://msdn.microsoft.com/library/35aad4a4-2e8a-46e2-ae09-5fbfd333c233)
+- [Návod: vytváření tříd LINQ to SQL (Návrhář O-R)](https://msdn.microsoft.com/library/35aad4a4-2e8a-46e2-ae09-5fbfd333c233)
 - [Metody DataContext (Návrhář relací objektů)](../data-tools/datacontext-methods-o-r-designer.md)
 - [Postupy: Vytvoření metod DataContext namapovaných na uložené procedury a funkce (Návrhář relací objektů)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)
 - [Objektový model LINQ to SQL](https://msdn.microsoft.com/library/81dd0c37-e2a4-4694-83b0-f2e49e693810)

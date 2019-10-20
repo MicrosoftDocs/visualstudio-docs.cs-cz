@@ -1,48 +1,46 @@
 ---
-title: Modifikační klávesy návrhové plochy v Blendu | Dokumentace Microsoftu
+title: Modifikační klávesy návrhové plochy v Blendu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 50732733-ff49-41ba-8c44-4f6a3875ec1c
 caps.latest.revision: 8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 10a605de597159130aa14bf7dd623b387e27bc97
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2cdd069e8b17bcc26e067e0927ceef8cd9b1125a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68162692"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658011"
 ---
 # <a name="artboard-modifier-keys-in-blend"></a>Modifikační klávesy návrhové plochy v Blendu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Některé klávesové zkratky nejsou přidruženy položek nabídky, což znamená, že nemůžete použít [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] uživatelské rozhraní pro jejich zjišťování. V následující tabulce jsou uvedeny klávesové zkratky, které mění akce, jako je například změna velikosti objektu.  
-  
-|Pro tuto akci|Postup|  
-|-----------------------|-------------|  
-|Dočasně vybrat **výběr** nástroj, zatímco jiný nástroj pro ně zaškrtnuto (tím se snižuje počet, kolikrát budete muset kliknout na něco v **nástroje** panel přejdete vpřed a zpět mezi  **Výběr** nástroji a ostatním uživatelům)|Podržte stisknutou klávesu CTRL|  
-|Posunout vybrané objekty při **výběr** vybraný nástroj|Stisknutím klávesy se šipkami|  
-|Posouvání návrhové plochy|Podržte klávesu MEZERNÍK a přetáhněte na návrhovou plochu|  
-|Přiblížení a oddálení na návrhové ploše|Otočení kolečka myši|  
-|Přiblížit na návrhové ploše|Podržte klávesu CTRL + MEZERNÍK a kliknutím kamkoli na návrhové ploše|  
-|Horizonální oddálení na návrhové ploše|Podržte klávesu CTRL + ALT + MEZERNÍK a kliknutím kamkoli na návrhové ploše|  
-|Přesunout na návrhovou plochu vlevo a vpravo|Podržte stisknutou klávesu SHIFT a otočení kolečka myši|  
-|Přesunout nahoru nebo dolů návrhové ploše|Podržte stisknutou klávesu CTRL a otáčením kolečka myši|  
-|Zachovat poměr stran objekty jsou vykreslovány vedle nebo transformovat|Podržte stisknutou klávesu SHIFT|  
-|Otočení objektu v přírůstcích po 15 stupňů|Podržte stisknutou klávesu SHIFT|  
-|Duplicitní objektu|Podržte stisknutou klávesu ALT a přetáhněte objekt|  
-|Změnu nadřazení objektu|Přetáhněte objekt na panel rozložení a stisknutím klávesy ALT před uvolněním tlačítka myši|  
-|Vybrat více objektů|Podržte stisknutou klávesu CTRL při výběru jednotlivých objektů|  
-|Vybrat více objektů sousední|Podržte stisknutou klávesu SHIFT při výběru objektů jméno a příjmení|  
-|Vyberte kreslením rámeček výběru|Podržte stisknutou klávesu SHIFT a přetáhněte|  
-|Vyberte objekt pod jiným objektem|Podržte stisknutou klávesu ALT a klikněte jednou pro každou vrstvu objektů|  
-|Přepínat mezi otevřenými dokumenty|Stiskněte kombinaci kláves CTRL + TAB|  
-|Otevřít **prostředky** panel|Stiskněte kombinaci kláves CTRL + tečka|  
-  
-## <a name="see-also"></a>Viz také  
- [Klávesové zkratky](../designers/keyboard-shortcuts-in-blend.md)   
- [Modifikační klávesy nástroje pero](../designers/pen-tool-modifier-keys-in-blend.md)   
- [Modifikační klávesy nástroje Přímý výběr](../designers/direct-selection-tool-modifier-keys-in-blend.md)
+Některé klávesové zkratky nemají přidružené položky nabídky, což znamená, že nemůžete použít uživatelské rozhraní [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] k jejich zjištění. Následující tabulka uvádí zástupce, které upravují akci, jako je například změna velikosti objektu.
+
+|K provedení této akce|Postup|
+|-----------------------|-------------|
+|Dočasně vyberte nástroj pro **Výběr** , když zůstane vybraný jiný nástroj (tím se sníží počet pokusů, kolikrát na panelu **nástroje** kliknete, a pak mezi nástrojem pro **Výběr** a dalšími dalšími uživateli).|Podržte klávesu CTRL|
+|Posunout vybrané objekty, když je vybraný nástroj **Výběr**|Stiskněte klávesy se šipkami|
+|Posouvání návrhové plochy|Podržte mezerník a přetáhněte návrhovou plochu.|
+|Přiblížení a oddálení na návrhové ploše|Otočení kolečka myši|
+|Přiblížení na návrhovou plochu|Podržte CTRL + MEZERNÍK při kliknutí kamkoli na návrhovou plochu.|
+|Oddálení na návrhové ploše|Podržte CTRL + ALT + MEZERNÍK při kliknutí kamkoli na návrhovou plochu.|
+|Přesunout návrhovou plochu doleva a doprava|Podržte SHIFT a otáčejte kolečkem myši.|
+|Přesunout návrhovou plochu nahoru a dolů|Podržte stisknutou klávesu CTRL a otáčejte kolečkem myši.|
+|Omezení proporcí objektů, které se vykreslují nebo transformují|Podržte SHIFT.|
+|Otočení objektu o 15 stupňů přírůstku|Podržte SHIFT.|
+|Duplikování objektu|Podržte klávesu ALT a přetáhněte objekt.|
+|Nadřadit objekt|Přetáhněte objekt na panel rozložení a stiskněte klávesu ALT před uvolněním tlačítka myši.|
+|Vybrat více objektů|Při výběru každého objektu podržte stisknutou klávesu CTRL.|
+|Výběr více sousedících objektů|Při výběru prvního a posledního objektu podržte stisknutou klávesu SHIFT.|
+|Výběr pomocí kreslení rámečku|Podržte klávesu SHIFT a přetáhněte|
+|Vyberte objekt pod jiným objektem.|Podržte klávesu ALT a klikněte jednou pro každou vrstvu objektů.|
+|Přepínání mezi otevřenými dokumenty|Stiskněte kombinaci kláves CTRL + TAB.|
+|Otevření panelu **aktiva**|Stisknout CTRL + tečka|
+
+## <a name="see-also"></a>Viz také
+ [Klávesové zkratky](../designers/keyboard-shortcuts-in-blend.md) [nástroje pero – modifikační klávesy](../designers/pen-tool-modifier-keys-in-blend.md) [přímý výběr modifikační klávesy nástrojů](../designers/direct-selection-tool-modifier-keys-in-blend.md)

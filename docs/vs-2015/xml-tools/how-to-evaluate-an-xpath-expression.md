@@ -1,56 +1,56 @@
 ---
-title: 'Postupy: Vyhodnocení výrazu XPath | Dokumentace Microsoftu'
+title: 'Postupy: vyhodnocení výrazu XPath | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 159ba4ef-75e4-4ac8-80dc-e064e0bec345
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 03c43d272d3c740c55314db5d1b7b6c225b7e5c8
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: ecec9004506a9bd05d3d773e44bb264af363f96f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63421765"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670870"
 ---
-# <a name="how-to-evaluate-an-xpath-expression"></a>Postupy: Vyhodnocení výrazu XPath
+# <a name="how-to-evaluate-an-xpath-expression"></a>Postupy: vyhodnocení výrazu XPath
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete si vyzkoušet výrazy XPath s **QuickWatch** dialogové okno. Výraz XPath musí být platný podle doporučení W3C XPath 1.0. Aktuální kontext XSLT – to znamená, `self::node()` uzlu v **lokální** okno – poskytuje kontext vyhodnocení výrazu XPath.  
-  
- Následující seznam popisuje, jaké funkce jsou podporovány při vyhodnocování výrazu XPath:  
-  
-- Podporují se předdefinované funkce XPath.  
-  
-- Integrované funkce XSLT nejsou podporovány.  
-  
-- Uživatelem definované funkce nejsou podporovány.  
-  
+Můžete vyhodnotit výrazy XPath pomocí dialogového okna **QuickWatch** . Výraz XPath musí být platný podle doporučení jazyka W3C XPath 1,0. Aktuální kontext XSLT – to znamená, `self::node()` uzel v okně **místní** hodnoty – poskytuje kontext vyhodnocení pro výraz XPath.
+
+ Následující seznam popisuje, které funkce jsou podporovány při vyhodnocování výrazu XPath:
+
+- Jsou podporovány předdefinované funkce XPath.
+
+- Integrované funkce XSLT nejsou podporovány.
+
+- Uživatelsky definované funkce nejsou podporovány.
+
 > [!NOTE]
-> Následující postup používá belowAvg.xsl a books.xml soubory z [názorný postup: Ladění stylů XSLT](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md) tématu.  
-  
-### <a name="to-evaluate-an-xpath-expression"></a>Vyhodnocení výrazu XPath  
-  
-1. Vložit zarážku na `xsl:if` počáteční značka.  
-  
-2. Klikněte na tlačítko **ladění XSL** tlačítko na panelu nástrojů editoru XML.  
-  
-     Ladicí program se spustí a dojde k porušení `xsl:if` značky.  
-  
-3. Klikněte pravým tlačítkem a vyberte **QuickWatch**.  
-  
-     **QuickWatch** se zobrazí dialogové okno.  
-  
-4. Zadejte `./price/text()` v **výraz** pole **QuickWatch** dialogové okno a klikněte na tlačítko **přehodnotit**.  
-  
-     Ceny pro aktuální uzel knihy se zobrazí v **hodnotu** pole.  
-  
-5. Změnit výraz XPath, který má `./price/text() < $bookAverage` a klikněte na tlačítko **přehodnotit**.  
-  
-     **Hodnotu** poli se zobrazí, že vyhodnocení výrazu XPath má `true`.  
-  
-## <a name="see-also"></a>Viz také  
+> Následující postup používá soubory belowAvg. XSL a Books. XML z [návodu: ladění tématu šablony stylů XSLT](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md) .
+
+### <a name="to-evaluate-an-xpath-expression"></a>Vyhodnocení výrazu XPath
+
+1. Vložte zarážku na `xsl:if` počáteční značku.
+
+2. Klikněte na tlačítko **LADIT XSL** na panelu nástrojů editoru XML.
+
+     Ladicí program se spustí a přeruší na značku `xsl:if`.
+
+3. Klikněte pravým tlačítkem a vyberte **QuickWatch**.
+
+     Zobrazí se dialogové okno **QuickWatch** .
+
+4. Do pole **výraz** v dialogovém okně **QuickWatch** zadejte `./price/text()` a klikněte na znovu **vyhodnotit**.
+
+     V poli **hodnota** se zobrazí cena aktuálního uzlu knihy.
+
+5. Změňte výraz XPath na `./price/text() < $bookAverage` a klikněte na znovu **vyhodnotit**.
+
+     Pole **hodnota** ukazuje, že výraz XPath je vyhodnocen jako `true`.
+
+## <a name="see-also"></a>Viz také
  [Ladění XSLT](../xml-tools/debugging-xslt.md)

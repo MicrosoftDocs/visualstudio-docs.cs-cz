@@ -1,33 +1,33 @@
 ---
-title: Vytvoření projektu testů jednotek
+title: Vytvoření projektu testování částí
 ms.date: 01/29/2019
 ms.topic: conceptual
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: f04e999681899bb101dc0aeb70cc6f47094dc1d7
-ms.sourcegitcommit: 0f5f7955076238742f2071d286ad8e896f3a6cad
+author: jillre
+ms.openlocfilehash: 30edc1a894a64fb7b9d8b988cafaed14aeaebfdd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68483819"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665113"
 ---
-# <a name="create-a-unit-test-project"></a>Vytvoření projektu testů jednotek
+# <a name="create-a-unit-test-project"></a>Vytvoření projektu testování částí
 
-Testy jednotek často zrcadlí struktury kódu v rámci testu. Pro každého kódu projektu v produktu by například vytvořit projekt testování částí. Projekt testů může být ve stejném řešení jako produkční kód nebo může být v samostatném řešení. Můžete mít více jednotek testování projektů v řešení.
+Testy jednotek často zrcadlí strukturu testovaného kódu. Například projekt testu jednotek by byl vytvořen pro každý projekt kódu v produktu. Testovací projekt může být ve stejném řešení jako produkční kód, nebo může být v samostatném řešení. V řešení můžete mít více projektů testování částí.
 
 > [!NOTE]
-> Umístění testů jednotek pro nativní kód a strukturu testovacího projektu se může lišit od struktury popsané v tomto článku. Další informace najdete v tématu [zápis testů jednotek pro C/C++](writing-unit-tests-for-c-cpp.md).
+> Umístění testů jednotek pro nativní kód a strukturu testovacího projektu se může lišit od struktury popsané v tomto článku. Další informace naleznete v tématu [zápis testů jednotek pro C/C++](writing-unit-tests-for-c-cpp.md).
 
 ## <a name="to-create-a-unit-test-project"></a>Vytvoření projektu testu jednotek
 
-1. V nabídce **soubor** klikněte na příkaz **Nový** > **projekt**nebo stiskněte klávesy **CTRL**+**SHIFT**+**N**.
+1. V nabídce **soubor** zvolte položku **Nový**  > **projekt**nebo stiskněte klávesu **CTRL** +**SHIFT** +**N**.
 
 ::: moniker range="vs-2017"
 
-2. V **nový projekt** dialogového okna rozbalte **nainstalováno** uzlu, vyberte jazyk, který chcete použít pro testovací projekt a pak zvolte **testování**.
+2. V dialogovém okně **Nový projekt** rozbalte uzel **nainstalováno** , zvolte jazyk, který chcete použít pro testovací projekt, a pak zvolte možnost **test**.
 
 3. Vyberte šablonu projektu pro testovací rozhraní, které chcete použít, například **projekt testů MSTest** nebo **projekt testů nunit**. Pojmenujte projekt a klikněte na **tlačítko OK**.
 
@@ -45,11 +45,11 @@ Testy jednotek často zrcadlí struktury kódu v rámci testu. Pro každého kó
 
 ::: moniker-end
 
-4. V projektu testování částí přidejte odkaz na testovaný kód. Chcete-li přidat odkaz na projekt kódu ve stejném řešení:
+4. V projektu testu jednotek přidejte odkaz na testovaný kód. Chcete-li přidat odkaz na projekt kódu ve stejném řešení:
 
    1. Vyberte projekt testů v **Průzkumník řešení**.
 
-   2. Na **projektu** nabídce zvolte **přidat odkaz**.
+   2. V nabídce **projekt** klikněte na příkaz **Přidat odkaz**.
 
    3. V okně **Správce odkazů**vyberte uzel **řešení** v části **projekty**. Vyberte projekt kódu, který chcete otestovat, a pak vyberte **OK**.
 
@@ -57,16 +57,16 @@ Testy jednotek často zrcadlí struktury kódu v rámci testu. Pro každého kó
 
 ## <a name="next-steps"></a>Další kroky
 
-Přečtěte si následující části:
+Podívejte se na jednu z následujících částí:
 
 **Zápis testů jednotek**
 
 - [Testování částí kódu](../test/unit-test-your-code.md)
 
-- [Zápis testů jednotek pro C/C++](writing-unit-tests-for-c-cpp.md)
+- [Zápis testů částí pro C/C++](writing-unit-tests-for-c-cpp.md)
 
-- [Použití rozhraní MSTest při testech jednotek](using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)
+- [Použití rozhraní MSTest v testování částí](using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)
 
-**Provádění testů jednotek**
+**Spouštění testů jednotek**
 
 - [Spouštění testování částí pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md)

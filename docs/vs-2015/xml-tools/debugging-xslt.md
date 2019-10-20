@@ -1,58 +1,47 @@
 ---
-title: Ladění XSLT | Dokumentace Microsoftu
+title: Ladění XSLT | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 344940bd-c41e-4ed9-8458-3e3aa8e6bb37
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4ba095b9af87a36a1957ec94496f4445f0ed2bb7
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 25f90577cecbd3bd681d0c7f3e18355fede9faa5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65697040"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671001"
 ---
 # <a name="debug-xslt"></a>Ladění XSLT
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ladicí program sady Visual Studio můžete použít k ladění XSLT. Ladicí program podporuje můžete nastavovat zarážky, zobrazení stavů provedení transformace XSLT, a tak dále. Ladění XSLT je k dispozici v edici Visual Studio Professional.  
-  
+K ladění XSLT můžete použít ladicí program sady Visual Studio. Ladicí program podporuje nastavení zarážek, zobrazení stavů spuštění XSLT atd. Ladění XSLT je k dispozici v edici Visual Studio Professional.
+
 ## <a name="in-this-section"></a>V tomto oddílu
-  
- [Postupy: Spuštění ladění XSLT](../xml-tools/how-to-start-debugging-xslt.md)  
- Popisuje způsob spuštění ladicí program XSLT.  
-  
- [Postupy: Používání zarážek v XSLT](../xml-tools/how-to-use-breakpoints-with-xslt.md)  
- Popisuje postup používání zarážek v rámci šablony stylů.  
-  
- [Postupy: Vyhodnocení výrazu XPath](../xml-tools/how-to-evaluate-an-xpath-expression.md)  
- Popisuje, jak vyhodnotit výraz jazyka XPath pomocí **QuickWatch** dialogové okno.  
-  
- [Návod: Ladění šablony stylů XSLT](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)  
- Ukazuje, jak ladit šablony stylů XSLT.  
-  
- [Výchozí šablony XSLT](../xml-tools/xslt-default-templates.md)  
- Popisuje, jak zpracovává ladicí program XSLT výchozí šablony.  
-  
- [Uživatelské rozhraní ladicího programu (XSLT)](../xml-tools/debugger-user-interface-xslt.md)  
- Popisuje oknech ladicího programu XSLT a dialogových oknech.  
-  
- [Profiler XSLT](../xml-tools/xslt-profiler.md)  
- Popisuje, jak získat přístup k Profiler XSLT.  
-  
-## <a name="related-sections"></a>Související oddíly  
- [Úpravy šablon stylů XSLT](../xml-tools/editing-xslt-style-sheets.md)  
- Tento článek popisuje pomocí editoru XML k úpravě šablony stylů.  
-  
- [Aspekty zabezpečení při práci s daty XML](../xml-tools/security-considerations-when-working-with-xml-data.md)  
- Tento článek popisuje problémy se zabezpečením, které je potřeba vědět o při práci v editoru XML a v ladicím programu XSLT.  
-  
- [Ladění v sadě Visual Studio](../debugger/debugging-in-visual-studio.md)  
- Zavádí ladicího programu sady Visual Studio.  
-  
- [Odkaz na XSLT](https://msdn.microsoft.com/678bcd68-cbbb-4be5-9dd2-40f94488a1cf)  
- Poskytuje referenční materiál pro elementy XSLT a funkce.
+
+ [Postupy: spuštění ladění XSLT](../xml-tools/how-to-start-debugging-xslt.md) Popisuje, jak spustit ladicí program XSLT.
+
+ [Postupy: použití zarážek s XSLT](../xml-tools/how-to-use-breakpoints-with-xslt.md) Popisuje, jak používat zarážky v rámci předlohy se styly.
+
+ [Postupy: vyhodnocení výrazu XPath](../xml-tools/how-to-evaluate-an-xpath-expression.md) Popisuje, jak vyhodnotit výraz XPath pomocí dialogového okna **QuickWatch** .
+
+ [Návod: ladění šablony stylů XSLT](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md) Ukazuje, jak ladit šablonu stylů XSLT.
+
+ [Výchozí šablony XSLT](../xml-tools/xslt-default-templates.md) Popisuje, jak ladicí program XSLT zpracovává výchozí šablony.
+
+ [Uživatelské rozhraní ladicího programu (XSLT)](../xml-tools/debugger-user-interface-xslt.md) Popisuje okna ladicího programu XSLT a dialogová okna.
+
+ [Profiler XSLT](../xml-tools/xslt-profiler.md) Popisuje, jak získat přístup k profileru XSLT.
+
+## <a name="related-sections"></a>Související oddíly
+ [Úpravy šablon stylů XSLT](../xml-tools/editing-xslt-style-sheets.md) Popisuje použití editoru XML pro úpravu šablon stylů.
+
+ [Otázky zabezpečení při práci s daty XML](../xml-tools/security-considerations-when-working-with-xml-data.md) Popisuje problémy se zabezpečením, o kterých potřebujete znát při práci s editorem XML nebo s ladicím programem XSLT.
+
+ [Ladění v aplikaci Visual Studio](../debugger/debugging-in-visual-studio.md) Zavádí ladicí program sady Visual Studio.
+
+ [Odkaz XSLT](https://msdn.microsoft.com/678bcd68-cbbb-4be5-9dd2-40f94488a1cf) Poskytuje referenční materiál pro prvky a funkce XSLT.

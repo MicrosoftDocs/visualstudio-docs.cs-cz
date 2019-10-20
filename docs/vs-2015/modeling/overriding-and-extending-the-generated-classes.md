@@ -1,5 +1,5 @@
 ---
-title: Přepisování a rozšiřování vygenerovaných tříd | Dokumentace Microsoftu
+title: Přepisování a rozšiřování vygenerovaných tříd | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -8,86 +8,86 @@ helpviewer_keywords:
 - Domain-Specific Language, providing overridable classes
 ms.assetid: 30baa60d-a8ea-4611-96c1-8fcc3317cf21
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a7b9733a47b4763a0f28ee4b24b54fdfd44bf066
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 16a09a5b0f5e534d310092036b8e7eb1d4c344d9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435007"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668479"
 ---
 # <a name="overriding-and-extending-the-generated-classes"></a>Přepisování a rozšiřování vygenerovaných tříd
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Vaše definice DSL je platforma, na kterém můžete vytvářet výkonná sada nástrojů, které jsou založeny na jazyka specifického pro doménu. Mnoho rozšíření a přizpůsobení je možné provádět pomocí přepisování a rozšiřování třídy, které jsou generovány z definice DSL. Tyto třídy zahrnují nejen doménové třídy, které jste definovali explicitní v diagramem definice DSL, ale také další třídy, které definují sady nástrojů, Průzkumníka, serializace a tak dále.  
-  
-## <a name="extensibility-mechanisms"></a>Mechanismus rozšíření  
- Aby bylo možné rozšířit generovaného kódu jsou k dispozici několik mechanismů.  
-  
-### <a name="overriding-methods-in-a-partial-class"></a>Přepsání metody v dílčí třídě  
- Definicí částečné třídy umožnit třídě definovat více než jednom místě. To umožňuje kód, který si sami napíšete nezávislá na infrastruktuře generovaného kódu. Ve vašem kódu ručně psanou můžete přepsat třídy dědí generovaného kódu.  
-  
- Například, pokud v definici DSL definujete doménovou třídu s názvem `Book`, můžete napsat vlastní kód, který přidá přepsání metody:  
-  
- `public partial class Book`  
-  
- `{`  
-  
- `protected override void OnDeleting()`  
-  
- `{`  
-  
- `MessageBox.Show("Deleting book " + this.Title);`  
-  
- `base.OnDeleting();`  
-  
- `} }`  
-  
+Vaše definice DSL je platforma, na které můžete vytvořit výkonnou sadu nástrojů založenou na jazyce specifickém pro doménu. Mnoho rozšíření a přizpůsobení lze provést přepsáním a rozšířením tříd, které jsou generovány z definice DSL. Tyto třídy zahrnují nejen třídy domény, které jste explicitně definovali v diagramu definice DSL, ale také jiné třídy, které definují panel nástrojů, Průzkumníka, serializaci a tak dále.
+
+## <a name="extensibility-mechanisms"></a>Mechanismy rozšiřitelnosti
+ K dispozici je několik mechanismů umožňujících rozšiřování vygenerovaného kódu.
+
+### <a name="overriding-methods-in-a-partial-class"></a>Přepsání metod v částečné třídě
+ Definice částečné třídy umožňují definovat třídu na více než jednom místě. To umožňuje oddělit generovaný kód od kódu, který píšete sami. V ručně psaném kódu můžete přepsat třídy zděděné generovaným kódem.
+
+ Například pokud v definici DSL definujete doménovou třídu s názvem `Book`, můžete napsat vlastní kód, který přidá metody přepsání:
+
+ `public partial class Book`
+
+ `{`
+
+ `protected override void OnDeleting()`
+
+ `{`
+
+ `MessageBox.Show("Deleting book " + this.Title);`
+
+ `base.OnDeleting();`
+
+ `} }`
+
 > [!NOTE]
-> Přepsání metody ve vygenerované třídě, vždy napište svůj kód v souboru, který je oddělen od generované soubory. Soubor je obvykle obsažen ve složce s názvem CustomCode. Pokud provedete změny generovaný kód, budou ztraceny při opětovném vygenerování kódu v definici DSL.  
-  
- Chcete-li zjistit, jaké metody můžete přepsat, zadejte **přepsat** ve třídě, za nímž následuje mezera. Popisu tlačítka technologie IntelliSense vám sdělí, jaké metody se dá přepsat.  
-  
-### <a name="double-derived-classes"></a>Double odvozené třídy  
- Většina metod v generované třídy dědí z dlouhodobého sadu tříd v oborech názvů modelování. Nicméně některé metody jsou definovány v generovaném kódu. Obvykle to znamená, že je nelze přepsat nelze přepsat jedné třídy na částečné metody, které jsou definovány v jiné částečné deklaraci stejné třídy.  
-  
- Tyto metody však můžete přepsat tak, že nastavíte **Generates Double Derived** příznak pro doménovou třídu. Tato dvě třídy způsobí, že chcete vygenerovat, jeden je abstraktní základní třída druhé. Všechny definice metody a vlastnosti jsou v základní třídě a pouze konstruktor je v odvozené třídě.  
-  
- Například v ukázce Library.dsl `CirculationBook` má doménová třída `Generates``Double Derived` nastavenou na `true`. Generovaný kód pro danou třídu domény obsahuje dvě třídy:  
-  
-- `CirculationBookBase`, což je abstraktní a který obsahuje všechny metody a vlastnosti.  
-  
-- `CirculationBook`, který je odvozen z `CirculationBookBase`. Je prázdný, s výjimkou jejích konstruktorů.  
-  
-  Pokud chcete přepsat libovolné metody, vytvoříte částečnou definici odvozené třídy jako `CirculationBook`. Můžete přepsat generované metody a metody, které dědí z rozhraní pro modelování.  
-  
-  Tuto metodu můžete použít se všemi typy elementu, včetně prvků modelu, relace, tvary, diagramy a konektory. Můžete také přepsat metody jiné generované třídy. Některé vygenerované třídy, jako ToolboxHelper jsou vždy odvozené double.  
-  
-### <a name="custom-constructors"></a>Vlastní konstruktory  
- Konstruktor nemůže přepsat. I v double odvozené třídy musí být konstruktor v odvozené třídě.  
-  
- Pokud chcete poskytnout vlastní konstruktor, můžete to provést tak, že nastavíte `Has Custom Constructor` pro doménovou třídu v definici DSL. Po kliknutí na **Transformovat všechny šablony**, vygenerovaný kód nebude obsahovat konstruktor pro danou třídu. Bude zahrnovat volání konstruktoru chybí. To způsobí, že zpráva o chybě při sestavování řešení. Dvakrát klikněte na Zobrazit komentář ve vygenerovaném kódu, který vysvětluje, co byste měli poskytnout zprávy o chybách.  
-  
- Zapsat definice částečné třídy v souboru, který je oddělený od generované soubory a Poskytněte konstruktor.  
-  
-### <a name="flagged-extension-points"></a>Označené příznakem Rozšiřovací body  
- Označené příznakem rozšiřovací bod je místo, kde v definici DSL, kde můžete nastavit políčko označující, že poskytnete vlastní metodu nebo vlastnost. Vlastní konstruktory jsou jedním z příkladů. Další příklady nastavení `Kind` počítané nebo vlastní úložiště nebo nastavení vlastnosti domény **je vlastní** příznak v Tvůrce připojení.  
-  
- V každém případě pokud nastavte příznak a znovu vygenerovat kód, sestavení způsobí chybu. Klikněte dvakrát na chybu, která vysvětluje, co je nutné zadat poznámku.  
-  
-### <a name="rules"></a>pravidla  
- Správce transakcí umožňuje definovat pravidla, která spustí před ukončením transakce, ve kterém má určené události došlo, jako je například změna vlastnosti. Pravidla se obvykle používají k údržbě synchronism mezi různé prvky v úložišti. Například se používají pravidla, abyste měli jistotu, že diagram zobrazuje aktuální stav modelu.  
-  
- Pravidla jsou definovaná na základě každé třídy, takže není nutné mít kód, který registruje pravidlo pro každý objekt. Další informace najdete v tématu [pravidla šíření změn v rámci the Model](../modeling/rules-propagate-changes-within-the-model.md).  
-  
-### <a name="store-events"></a>Store události  
- Modelování úložiště poskytuje mechanismus události, kterou můžete použít k naslouchání pro konkrétní typy změn v úložišti, včetně přidání a odstranění prvků, změny hodnot vlastností a tak dále. Po uzavření transakce, ve kterém byly provedeny změny jsou volány obslužné rutiny události. Tyto události se obvykle používají k aktualizaci prostředky mimo úložiště.  
-  
-### <a name="net-events"></a>Události .NET  
- Můžete odebírat některé události ve tvarech. Například může naslouchat kliknutí myší na obrazec. Je nutné napsat kód, který se přihlásí k této události pro každý objekt. Tento kód je možné psát v přepsání InitializeInstanceResources().  
-  
- Některé události se generují u ShapeFields, které se používají na obrazec nakreslit dekorátory. Příklad najdete v tématu [jak: Zachycení kliknutí na obrazec či Dekorátor](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md).  
-  
- Tyto události obvykle nedojde v transakci. Pokud chcete provést změny v úložišti, měli byste vytvořit transakci.
+> Chcete-li přepsat metody ve vygenerované třídě, vždy zapište kód v souboru, který je oddělen od generovaných souborů. Soubor je obvykle obsažen ve složce s názvem CustomCode. Pokud provedete změny generovaného kódu, ztratí se, když kód znovu vygenerujete z definice DSL.
+
+ Chcete-li zjistit, jaké metody lze přepsat, zadejte do třídy **přepsání** a za ní mezeru. Popisek technologie IntelliSense vám sdělí, jaké metody lze přepsat.
+
+### <a name="double-derived-classes"></a>Dvojité odvozené třídy
+ Většina metod v generovaných třídách je děděna z pevné sady tříd v oborech názvů modelování. Nicméně některé metody jsou definovány ve vygenerovaném kódu. Obvykle to znamená, že je nemůžete přepsat. nelze přepsat jednu částečnou třídu metodami, které jsou definovány v jiné částečné definici stejné třídy.
+
+ Tyto metody však můžete přepsat nastavením příznaku pro **vygenerování dvojitého odvození** pro doménovou třídu. To způsobí, že budou vygenerovány dvě třídy, jedna je abstraktní základní třída druhé. Všechny definice metody a vlastností jsou v základní třídě a pouze konstruktor je v odvozené třídě.
+
+ Například v ukázkové knihovně. DSL má `CirculationBook` doménová třída `Generates``Double Derived` vlastnost nastavenou na `true`. Generovaný kód pro tuto doménovou třídu obsahuje dvě třídy:
+
+- `CirculationBookBase`, což je abstraktní a který obsahuje všechny metody a vlastnosti.
+
+- `CirculationBook`, která je odvozena z `CirculationBookBase`. Je prázdný, s výjimkou jeho konstruktorů.
+
+  Chcete-li přepsat libovolnou metodu, vytvoříte částečnou definici odvozené třídy, jako je například `CirculationBook`. Můžete přepsat jak vygenerované metody, tak metody zděděné z rozhraní modelování.
+
+  Tuto metodu lze použít u všech typů element, včetně prvků modelu, vztahů, tvarů, diagramů a konektorů. Můžete také přepsat metody jiných generovaných tříd. Některé generované třídy, jako je například ToolboxHelper, jsou vždy dvakrát odvozené.
+
+### <a name="custom-constructors"></a>Vlastní konstruktory
+ Konstruktor nelze přepsat. I v případě dvojitě odvozených tříd musí být konstruktor v odvozené třídě.
+
+ Pokud chcete poskytnout vlastní konstruktor, můžete to provést nastavením `Has Custom Constructor` pro doménovou třídu v definici DSL. Když kliknete na možnost **transformovat všechny šablony**, vygenerovaný kód nebude obsahovat konstruktor pro tuto třídu. Bude obsahovat volání chybějícího konstruktoru. Způsobí to, že při sestavování řešení dojde k chybě. Dvojitým kliknutím na zprávu o chybách se zobrazí komentář ve vygenerovaném kódu, který vysvětluje, co byste měli poskytnout.
+
+ Zapište částečnou definici třídy v souboru, který je oddělený od generovaných souborů a poskytněte konstruktor.
+
+### <a name="flagged-extension-points"></a>Rozšiřovací body s příznakem
+ Rozšiřovací bod označený příznakem je místo v definici DSL, kde můžete nastavit vlastnost nebo zaškrtávací políčko, abyste označili, že budete poskytovat vlastní metodu. Vlastní konstruktory jsou jeden příklad. Mezi další příklady patří nastavení `Kind` doménové vlastnosti na počítané nebo vlastní úložiště nebo nastavení příznaku **vlastní** v Tvůrci připojení.
+
+ V každém případě když nastavíte příznak a znovu vygenerujete kód, bude výsledkem chyba sestavení. Dvojitým kliknutím na chybu zobrazíte komentář s vysvětlením, co je třeba zadat.
+
+### <a name="rules"></a>Pravidly
+ Správce transakcí umožňuje definovat pravidla, která se spouštějí před koncem transakce, ve které došlo k určené události, jako je například změna vlastnosti. Pravidla se obvykle používají k údržbě synchronism mezi různými prvky v úložišti. Například pravidla se používají k ujištění, že diagram zobrazuje aktuální stav modelu.
+
+ Pravidla jsou definována na základě jednotlivých tříd, takže nemusíte mít kód, který zaregistruje pravidlo pro každý objekt. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
+
+### <a name="store-events"></a>Ukládat události
+ Úložiště modelování poskytuje mechanismus událostí, který můžete použít k naslouchání konkrétním typům změn v úložišti, včetně přidávání a mazání prvků, změn hodnot vlastností a tak dále. Obslužné rutiny události jsou volány po zavření transakce, ve které byly provedeny změny. Tyto události se obvykle používají k aktualizaci prostředků mimo obchod.
+
+### <a name="net-events"></a>Události .NET
+ Můžete se přihlásit k odběru některých událostí v obrazcích. Například můžete naslouchat kliknutí myší na obrazec. Musíte napsat kód, který se přihlásí k odběru události pro každý objekt. Tento kód lze zapsat v přepsání InitializeInstanceResources ().
+
+ Některé události jsou generovány v ShapeFields, které se používají k vykreslení dekoratéry na tvar. Příklad naleznete v tématu [How to: zachycení kliknutí na tvar nebo dekoratér](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md).
+
+ K těmto událostem obvykle nedochází v rámci transakce. Pokud chcete provádět změny v úložišti, měli byste vytvořit transakci.

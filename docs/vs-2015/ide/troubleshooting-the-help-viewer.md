@@ -1,5 +1,5 @@
 ---
-title: Řešení potíží s programu Help Viewer | Dokumentace Microsoftu
+title: Řešení potíží s programem Help Viewer | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-help-viewer
@@ -9,45 +9,45 @@ helpviewer_keywords:
 - Help Viewer 2.0, troubleshooting
 ms.assetid: 461a4553-064a-4142-a2d2-058658b9ba12
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 77529ad9957694b1ea1853b3e8b1b1cc29c45e2b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 490525cded11a4cddbbfb3f650d87c55b2fa196b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62429727"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654772"
 ---
 # <a name="troubleshooting-the-help-viewer"></a>Řešení potíží s programem Help Viewer
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Toto téma popisuje problémy, které se můžete setkat s aplikací Help Viewer.  
-  
-## <a name="audio-doesnt-work"></a>Zvuk nefunguje.  
- Aplikace Help Viewer neobsahuje zvukový přehrávač. Pokud si stáhnete obsah, který obsahuje audio a nic se nestane při výběru **Přehrát**, nainstalujte si zvukový přehrávač.  
-  
-## <a name="search-doesnt-work-in-windows-server-2008-windows-server-2008-with-sp1-or-windows-server-2008-r2"></a>Hledání nefunguje ve Windows serveru 2008, Windows Server 2008 s aktualizací SP1 nebo Windows Server 2008 R2.  
- Funkce vyhledávání a filtrování v aplikaci Help Viewer vyžadují instalaci služby Windows Search a na. Ve výchozím nastavení tato služba je vypnuto ve Windows serveru 2008, Windows Server 2008 s aktualizací Service Pack 1 (SP1) a Windows Server 2008 R2.  
-  
-#### <a name="to-activate-windows-search-service"></a>Aktivace služby Windows Search  
-  
-1. Spusťte správce serveru.  
-  
-2. V levém navigačním podokně zvolte **role**.  
-  
-3. V podokně Souhrn rolí zvolte **přidat roli**.  
-  
-4. Vyberte roli Souborová služba a klikněte na tlačítko **Další** tlačítko.  
-  
-5. Zvolte službu role Windows Search.  
-  
-## <a name="additional-resources"></a>Další prostředky  
- Můžete získat další informace a poskytování zpětné vazby v aplikaci Help Viewer pomocí následující prostředky:  
-  
-- Chcete-li poskytnout zpětnou vazbu, přečtěte si téma [Microsoft Connect](http://go.microsoft.com/fwlink/?linkid=243983) na Microsoft webu nebo odešlete e-mail na [ hlpfdbk@microsoft.com ](mailto:hlpfdbk@microsoft.com).  
-  
-- Další informace najdete v tématu [dokumentaci pro vývojáře a systém nápovědy](http://go.microsoft.com/fwlink/?LinkId=232741) fóra a [The Help Guy](http://go.microsoft.com/fwlink/?LinkId=232743) blogu.  
-  
-## <a name="see-also"></a>Viz také  
- [Příručka Help Viewer 2.1 Správce](http://go.microsoft.com/fwlink/?LinkId=243985)
+Toto téma popisuje problémy, se kterými se můžete setkat v aplikaci Help Viewer.
+
+## <a name="audio-doesnt-work"></a>Zvuk nefunguje.
+ Aplikace Help Viewer neobsahuje zvukový přehrávač. Pokud stahujete obsah obsahující zvuk a nedojde k tomu, když vyberete možnost **Přehrát**, nainstalujte zvukový přehrávač.
+
+## <a name="search-doesnt-work-in-windows-server-2008-windows-server-2008-with-sp1-or-windows-server-2008-r2"></a>Hledání nefunguje v systému Windows Server 2008, Windows Server 2008 s aktualizací SP1 nebo Windows Server 2008 R2.
+ Funkce hledání a filtrování v prohlížeči nápovědy vyžadují, aby byla nainstalovaná a zapnutá služba Windows Search. Ve výchozím nastavení je tato služba vypnuta v systému Windows Server 2008, Windows Server 2008 s aktualizací Service Pack 1 (SP1) a Windows Server 2008 R2.
+
+#### <a name="to-activate-windows-search-service"></a>Aktivace služby Windows Search
+
+1. Spusťte Správce serveru.
+
+2. V levém navigačním podokně vyberte **role**.
+
+3. V podokně Souhrn rolí klikněte na možnost **Přidat roli**.
+
+4. Zvolte roli Souborové služby a pak klikněte na tlačítko **Další** .
+
+5. Vyberte službu role Windows Search.
+
+## <a name="additional-resources"></a>Další prostředky
+ Další informace a poskytnutí zpětné vazby v aplikaci Help Viewer můžete získat pomocí následujících zdrojů:
+
+- Pokud chcete poskytnout zpětnou vazbu, přečtěte si článek [Microsoft Connect](http://go.microsoft.com/fwlink/?linkid=243983) na webu Microsoftu nebo pošlete e-mail na [hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com).
+
+- Další informace najdete v tématu [dokumentace pro vývojáře a](http://go.microsoft.com/fwlink/?LinkId=232741) fórum k systému pro nápovědu a [na blogu Guy](http://go.microsoft.com/fwlink/?LinkId=232743) .
+
+## <a name="see-also"></a>Viz také
+ [Příručka pro správce Help Viewer 2,1](http://go.microsoft.com/fwlink/?LinkId=243985)

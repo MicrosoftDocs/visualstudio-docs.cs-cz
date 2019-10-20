@@ -1,75 +1,72 @@
 ---
-title: 'Krok 1: Vytvořte projekt Formulářové aplikace Windows | Dokumentace Microsoftu'
+title: 'Krok 1: vytvoření projektu model Windows Forms aplikace | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: 16ac2422-e720-4e3a-b511-bc2a54201a86
 caps.latest.revision: 24
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b1e806b5600c0199c1f131ebc3008cc9f8ee1c68
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: d9cf0177efe373933f8c34e1600658160f489a64
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441994"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667344"
 ---
-# <a name="step-1-create-a-windows-forms-application-project"></a>Krok 1: Vytvoření projektu formulářové aplikace Windows
+# <a name="step-1-create-a-windows-forms-application-project"></a>Krok 1: Vytvořte projekt formulářové aplikace Windows
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při vytváření prohlížeče obrázků, prvním krokem je vytvoření projektu aplikace Windows Forms.  
-  
- ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo")video verzi tohoto tématu naleznete v tématu [kurz 1: Vytvoření prohlížeče obrázků v jazyce Visual Basic - Video 1](http://go.microsoft.com/fwlink/?LinkId=205209) nebo [kurz 1: Vytvoření prohlížeče obrázků v C# -Video 1](http://go.microsoft.com/fwlink/?LinkId=205199). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídek a jiných prvcích uživatelského rozhraní. Nicméně koncepty a postupy fungují podobně jako v aktuální verzi sady Visual Studio.  
-  
-### <a name="to-create-a-windows-forms-application-project"></a>Vytvoření projektu aplikace Windows Forms  
-  
-1. V panelu nabídky zvolte **souboru**, **nový**, **projektu**. Dialogové okno by měl vypadat takto.  
-  
-     ![Dialogové okno nového projektu](../ide/media/newprojectdialogcallouts.png "NewProjectDialogCallouts")  
-Dialogové okno Nový projekt  
-  
-2. Zvolte buď **Visual C#** nebo **jazyka Visual Basic** v **nainstalované šablony** seznamu.  
-  
-3. V seznamu šablon vyberte **formulářová aplikace Windows** ikonu. Zadejte název nového formuláře **PictureViewer**a klikněte na tlačítko **OK** tlačítko.  
-  
-     Visual Studio vytvoří řešení pro vaši aplikaci. Řešení se chová jako kontejner pro všechny projekty a soubory požadované programem. Tyto pojmy budou podrobněji vysvětleny dále v tomto kurzu.  
-  
-4. Následující obrázek znázorňuje, co teď byste měli vidět v rozhraní sady Visual Studio.  
-  
+Při vytváření prohlížeče obrázků je prvním krokem vytvoření projektu aplikace model Windows Forms.
+
+ ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-video 1](http://go.microsoft.com/fwlink/?LinkId=205209) nebo [kurz 1: vytvoření prohlížeče obrázků ve C# videu 1](http://go.microsoft.com/fwlink/?LinkId=205199). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
+
+### <a name="to-create-a-windows-forms-application-project"></a>Vytvoření projektu aplikace model Windows Forms
+
+1. Na panelu nabídek vyberte položku **soubor**, **Nový**, **projekt**. Dialogové okno by mělo vypadat takto.
+
+     ![Dialog Nový projekt](../ide/media/newprojectdialogcallouts.png "NewProjectDialogCallouts") Nový projekt – dialogové okno
+
+2. V seznamu **Nainstalované šablony** vyberte buď možnost **vizuál C#**  , nebo **Visual Basic** .
+
+3. V seznamu šablony vyberte ikonu **aplikace model Windows Forms** . Pojmenujte novou formu **PictureViewer**a pak klikněte na tlačítko **OK** .
+
+     Visual Studio vytvoří řešení pro váš program. Řešení funguje jako kontejner pro všechny projekty a soubory, které váš program potřebuje. Tyto výrazy budou podrobněji vysvětleny dále v tomto kurzu.
+
+4. Následující ilustrace ukazuje, co byste teď měli vidět v rozhraní sady Visual Studio.
+
     > [!NOTE]
-    > Rozložení okna nemusí vypadat přesně jako na tomto obrázku. Přesné rozložení okna závisí na verzi sady Visual Studio, programovací jazyk, který používáte a dalších faktorů. Nicméně byste měli ověřit, že zobrazí všechna tři okna.  
-  
-     ![Okno integrovaného vývojového prostředí](../ide/media/express-ideoverview-visio.png "Express_IDEOverview_Visio")  
-Okno integrovaného vývojového prostředí  
-  
-     Rozhraní obsahuje tři okna: hlavní okno **Průzkumníka řešení**a **vlastnosti** okna.  
-  
-     Pokud chybí některé z těchto oken, obnovte výchozí rozložení okna, v řádku nabídek, výběrem **okno**, **resetovat rozložení okna**. Windows můžete zobrazit také pomocí příkazů nabídky. V panelu nabídky zvolte **zobrazení**, **okno vlastností** nebo **Průzkumníka řešení**. Pokud jsou všechny ostatní okna otevřená, zavřete je výběrem **zavřete** (tlačítko v jejich pravém horním rohu x).  
-  
-5. Na obrázku jsou znázorněna následující okna (přechod ve směru hodinových ručiček od levého horního rohu):  
-  
-    - **Hlavní okno** v tomto okně budete provádět většinu práce, např. práce s formuláři a úpravy kódu. Na obrázku v okně zobrazí formulář v editoru formulářů. V horní části okna **úvodní stránka** kartu a **Form1.cs [Design]** karta se. (V jazyce Visual Basic má název karty koncovku vb namísto. cs.)  
-  
-    - **Okno Průzkumníka řešení** v tomto okně můžete zobrazit a procházet všechny položky ve vašem řešení. Pokud zvolíte soubor, obsah **vlastnosti** okna změny. Pokud otevřete soubor kódu (který končí .cs v jazyce Visual C# a .vb v jazyce Visual Basic), zobrazí se soubor s kódem nebo Návrhář kódu souboru. Návrhář je vizuální povrch, na kterém můžete přidat ovládací prvky jako tlačítka a seznamy. Návrhář formulářů aplikace Visual Studio používá termín Návrhář formulářů Windows.  
-  
-    - **Okno vlastností** v tomto okně můžete změnit vlastnosti položek, které vyberete v jiných oknech. Například pokud zvolíte Form1, můžete změnit jeho název nastavením **Text** vlastnost a můžete změnit barvu pozadí nastavením **Backcolor** vlastnost.  
-  
+    > Rozložení okna nemusí vypadat stejně jako na ilustraci. Přesné rozložení okna závisí na verzi aplikace Visual Studio, programovacím jazyku, který používáte, a na dalších faktorech. Měli byste ale ověřit, že se zobrazují všechna tři okna.
+
+     ![Okno IDE](../ide/media/express-ideoverview-visio.png "Express_IDEOverview_Visio") Okno IDE
+
+     Rozhraní obsahuje tři okna: hlavní okno, **Průzkumník řešení**a okno **vlastnosti** .
+
+     Pokud některý z těchto oken chybí, obnovte výchozí rozložení okna podle, v řádku nabídek zvolte **okno**, **obnovit rozložení okna**. Okna můžete zobrazit také pomocí příkazů nabídky. Na panelu nabídek vyberte možnost **zobrazení**, **okno Vlastnosti** nebo **Průzkumník řešení**. Pokud jsou ostatní okna otevřená, zavřete je kliknutím na tlačítko **Zavřít** (x) v pravém horním rohu.
+
+5. Ilustrace zobrazuje následující okna (ve směru hodinových ručiček od levého horního rohu):
+
+    - **Hlavní okno** V tomto okně provedete většinu práce, například práci s formuláři a úpravou kódu. Na ilustraci okno zobrazuje formulář v editoru formulářů. V horní části okna se zobrazí karta **Úvodní stránka** a **Form1.cs [Design]** . (V Visual Basic název karty končí příponou. vb namísto. cs.)
+
+    - **Průzkumník řešení okno** V tomto okně můžete zobrazit a přejít na všechny položky ve vašem řešení. Pokud zvolíte soubor, obsah okna **vlastnosti** se změní. Pokud otevřete soubor kódu (který končí příponou. cs v souboru Visual C# a. vb v Visual Basic), zobrazí se soubor kódu nebo Návrhář souboru s kódem. Návrhář je vizuální plocha, do které můžete přidat ovládací prvky, jako jsou tlačítka a seznamy. Pro formuláře sady Visual Studio se Návrhář nazývá Návrhář formulářů.
+
+    - **Okno Vlastnosti** V tomto okně můžete změnit vlastnosti položek, které zvolíte v ostatních oknech. Například pokud zvolíte Form1, můžete změnit jeho nadpis nastavením vlastnosti **text** a můžete změnit barvu pozadí nastavením vlastnosti **BackColor** .
+
     > [!NOTE]
-    > Horní řádek v **Průzkumníka řešení** ukazuje **řešení "PictureViewer" (1 projekt)** , což znamená, že Visual Studio vytvořila řešení za vás. Řešení může obsahovat více než jeden projekt, ale prozatím budete pracovat s řešeními, která obsahují pouze jeden projekt.  
-  
-6. V panelu nabídky zvolte **souboru**, **Uložit vše**.  
-  
-     Jako alternativu zvolte **Uložit vše** tlačítko na panelu nástrojů, které ukazuje následující obrázek.  
-  
-     ![Uložit všechny tlačítka panelu nástrojů](../ide/media/express-iconsaveall.png "Express_IconSaveAll")  
-Uložit všechny tlačítka panelu nástrojů  
-  
-     Visual Studio automaticky vyplní název složky a název projektu a poté uloží projekt ve vaší složce projekty.  
-  
-### <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat  
-  
-- Přechod k dalšímu kroku výukového programu naleznete v tématu [krok 2: Spusťte svůj Program](../ide/step-2-run-your-program.md).  
-  
-- K návratu na téma přehledu přejděte [kurz 1: Vytvoření prohlížeče obrázků](../ide/tutorial-1-create-a-picture-viewer.md).
+    > Horní řádek v **Průzkumník řešení** zobrazuje **řešení ' PictureViewer ' (1 projekt)** , což znamená, že Visual Studio vytvořilo řešení za vás. Řešení může obsahovat více než jeden projekt, ale v současnosti budete pracovat s řešeními, která obsahují pouze jeden projekt.
+
+6. Na panelu nabídek vyberte položku **soubor**, **Uložit vše**.
+
+     Jako alternativu klikněte na tlačítko **Uložit vše** na panelu nástrojů, které ukazuje následující obrázek.
+
+     ![Tlačítko Uložit vše na panelu nástrojů](../ide/media/express-iconsaveall.png "Express_IconSaveAll") Tlačítko Uložit vše na panelu nástrojů
+
+     Visual Studio automaticky vyplní název složky a název projektu a pak projekt uloží ve složce Projects.
+
+### <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
+
+- Pokud chcete přejít na další krok kurzu, přečtěte si [článek krok 2: spuštění programu](../ide/step-2-run-your-program.md).
+
+- Pokud se chcete vrátit k tématu Přehled, přečtěte si téma [kurz 1: vytvoření prohlížeče obrázků](../ide/tutorial-1-create-a-picture-viewer.md).

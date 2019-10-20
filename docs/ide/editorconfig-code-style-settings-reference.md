@@ -7,18 +7,18 @@ helpviewer_keywords:
 - EditorConfig coding conventions
 - language code style rules [EditorConfig]
 - formatting conventions [EditorConfig]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d8be11a8705686ade370a8107aad826b7cab9851
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 99d83157e2b6d108eb87a701aa8bc05ca2c7b1e6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186550"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653722"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>Nastavení konvence kódování .NET pro EditorConfig
 
@@ -34,7 +34,7 @@ Existují tři podporované kategorie konvence kódování .NET:
 
 - [Jazykové konvence](../ide/editorconfig-language-conventions.md)
 
-   Pravidla týkající se jazyka C# nebo Visual Basic. Můžete například určit pravidla pro použití `var` nebo explicitní typy při definování proměnných nebo předvodit členy Expression-těle.
+   Pravidla týkající se jazyka C# nebo Visual Basic. Můžete například určit pravidla pro použití `var` nebo explicitních typů při definování proměnných nebo předvodit členy Expression-těle.
 
 - [Konvence formátování](../ide/editorconfig-formatting-conventions.md)
 
@@ -42,7 +42,7 @@ Existují tři podporované kategorie konvence kódování .NET:
 
 - [Zásady vytváření názvů](../ide/editorconfig-naming-conventions.md)
 
-   Pravidla týkající se názvů prvků kódu. Například můžete určit, že `async` metody musí končit "Async".
+   Pravidla týkající se názvů prvků kódu. Můžete například určit, že `async` metody musí končit "Async".
 
 ## <a name="example-editorconfig-file"></a>Příklad souboru EditorConfig
 

@@ -1,26 +1,26 @@
 ---
-title: Pomocí graf aktivity virtuálního uživatele pro zátěžové testy
+title: Použití grafu aktivity virtuálního uživatele pro zátěžové testy
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - load tests, virtual user activity chart
 - virtual user activity chart, isolating performance issues
 ms.assetid: d1c10fb9-cfeb-4e7f-9991-2d1e1103699e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6811365023f7030d46bf6c611ecb09a5990a7492
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: ebd779ed2c78f48c75d29297fba862ffda142e23
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825776"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659626"
 ---
-# <a name="walkthrough-using-the-virtual-user-activity-chart-to-isolate-issues"></a>Návod: Izolace problémů pomocí graf aktivity virtuálního uživatele
+# <a name="walkthrough-using-the-virtual-user-activity-chart-to-isolate-issues"></a>Návod: použití grafu aktivity virtuálního uživatele k izolaci problémů
 
-V tomto podrobném návodu se dozvíte, jak izolovat chyby, ke kterým došlo u jednotlivých virtuálních uživatelů, které byly spuštěny zátěžového testu pomocí graf aktivity virtuálního uživatele.
+V tomto návodu se dozvíte, jak pomocí grafu aktivity virtuálního uživatele izolovat chyby, ke kterým došlo u jednotlivých virtuálních uživatelů, kteří spustili zátěžový test.
 
-Graf aktivity virtuálního uživatele vám umožňuje vizualizovat aktivitu virtuálního uživatele, který je spojen se zátěžovým testem. Každý řádek v tabulce představuje jednotlivého virtuálního uživatele. Přesně co jednotlivé virtuální uživatele se provádí během testu zobrazí graf aktivity virtuálního uživatele. To umožňuje izolovat problémy s výkonem tím, že zobrazíte vzory aktivity uživatelů, vzory zátěže, korelovat Nezdařená nebo pomalá testy a žádostí pomocí další aktivity virtuálního uživatele. Graf aktivity virtuálního uživatele je k dispozici pouze po načtení po dokončení.
+Graf aktivity virtuálního uživatele umožňuje vizualizovat aktivitu virtuálního uživatele, která je přidružena k vašemu testu zatížení. Každý řádek v grafu představuje jednotlivého virtuálního uživatele. Graf aktivity virtuálního uživatele zobrazuje přesně to, co každý virtuální uživatel vykonává během testu. To vám umožní izolovat problémy s výkonem zobrazením vzorců aktivity uživatelů, vzorů zatížení, korelacemi neúspěšných nebo pomalých testů a zobrazit žádosti s jinou aktivitou virtuálního uživatele. Graf aktivity virtuálního uživatele je k dispozici až po dokončení zatížení po jeho spuštění.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -28,56 +28,56 @@ Graf aktivity virtuálního uživatele vám umožňuje vizualizovat aktivitu vir
 
 - Visual Studio Enterprise
 
-- Provedení těchto postupů:
+- Dokončete tyto postupy:
 
-  - [Zaznamenání a spuštění testu výkonnosti webu](/azure/devops/test/load-test/run-performance-tests-app-before-release#recordtests).
+  - [Zaznamenejte a spusťte test výkonnosti webu](/azure/devops/test/load-test/run-performance-tests-app-before-release#recordtests).
 
   - [Vytvoření a spuštění zátěžového testu](/azure/devops/test/load-test/run-performance-tests-app-before-release#create-a-load-test)
 
-## <a name="open-the-colorwebapp-solution-created-in-the-previous-walkthroughs"></a>Otevřete řešení ColorWebApp vytvořili v předchozí návody
+## <a name="open-the-colorwebapp-solution-created-in-the-previous-walkthroughs"></a>Otevřete řešení ColorWebApp vytvořené v předchozích návodech.
 
-1. Otevřít Visual Studio.
+1. Otevřete Visual Studio.
 
-2. Otevřít **ColorWebApp** řešení, které obsahuje *LoadTest1.loadtest*. Tento zátěžový test výsledky z provádění kroků ve třech návodech, které jsou uvedené na začátku tohoto tématu v části předpoklady.
+2. Otevřete řešení **ColorWebApp** , které obsahuje *LoadTest1. LoadTest*. Výsledkem tohoto zátěžového testu je provedení kroků ve třech návodech uvedených na začátku tohoto tématu v části požadavky.
 
-     Zbývající kroky v tomto názorném postupu předpokládají webovou aplikaci s názvem ColorWebApp test výkonnosti webu s názvem *soubor colorwebapptest.webtest zkompilujete* a zátěžového testu s názvem *LoadTest1.loadtest*.
+     Zbývající kroky v tomto návodu předpokládají webovou aplikaci s názvem ColorWebApp, test výkonnosti webu s názvem *ColorWebAppTest. webtest* a zátěžový test s názvem *LoadTest1. LoadTest*.
 
-## <a name="run-the-load-test"></a>Spusťte zátěžový test
+## <a name="run-the-load-test"></a>Spustit zátěžový test
 
-Spusťte zátěžový test a shromáždit data aktivity virtuálního uživatele.
+Spusťte zátěžový test pro shromažďování dat o aktivitě virtuálního uživatele.
 
-- V **editoru zátěžových testů**, zvolte **spustit** tlačítko na panelu nástrojů. LoadTest1 se spustí.
+- V **Editor zátěžového testu**klikněte na panelu nástrojů na tlačítko **Spustit** . LoadTest1 začne běžet.
 
-## <a name="isolate-issues-in-the-virtual-user-activity-chart"></a>Izolovat problémy v graf aktivity virtuálního uživatele
+## <a name="isolate-issues-in-the-virtual-user-activity-chart"></a>Izolace problémů v grafu aktivity virtuálního uživatele
 
-Po spuštění zátěžového testu a shromažďují data aktivity virtuálního uživatele, můžete zobrazit data ve výsledcích zátěžového testu pomocí **Analyzéru zátěžového testu** v zobrazení podrobností **graf aktivity virtuálního uživatele** . Kromě toho můžete použít **graf aktivity virtuálního uživatele** a určit tak problémy s výkonem v zátěžovém testu.
+Po spuštění zátěžového testu a shromáždění dat aktivity virtuálního uživatele můžete zobrazit data ve výsledcích zátěžového testu pomocí zobrazení podrobností **analyzátoru zátěžového testu** v **grafu aktivity virtuálního uživatele**. Kromě toho můžete pomocí **grafu aktivity virtuálního uživatele** zajistit izolaci problémů s výkonem v zátěžovém testu.
 
-### <a name="to-use-the-virtual-user-activity-chart-in-your-load-test-results"></a>Chcete-li použít graf aktivity virtuálního uživatele ve vašich výsledcích zátěžového testu
+### <a name="to-use-the-virtual-user-activity-chart-in-your-load-test-results"></a>Použití grafu aktivity virtuálních uživatelů ve výsledcích zátěžového testu
 
-1. Po načtení dokončení testu spuštěn, **Souhrn** stránky pro výsledky zátěžového testu se zobrazí v **Analyzéru zátěžového testu**. Zvolte **grafy** tlačítko na panelu nástrojů.
+1. Po skončení běhu zátěžového testu se v **analyzátoru zátěžového testu**zobrazí stránka **Souhrn** pro výsledky zátěžového testu. Na panelu nástrojů klikněte na tlačítko **grafy** .
 
      Zobrazí se zobrazení grafů.
 
-2. Na **doba odezvy stránky** graf, klikněte pravým tlačítkem na téměř jeden z ikony narušení prahové hodnoty a vyberte **přejít na podrobnosti uživatele**.
+2. V grafu **Doba odezvy stránky** klikněte pravým tlačítkem myši poblíž jedné z ikon porušení mezní hodnoty a vyberte možnost **Přejít k podrobnostem uživatele**.
 
     > [!NOTE]
-    > Můžete použít **podrobnosti** tlačítko **editoru zátěžových testů** panelu nástrojů otevřete příliš grafu aktivity uživatele. Ale pokud použijete **přejít na podrobnosti uživatele** možnost, **graf aktivity virtuálního uživatele** bude automaticky zvětšit nároku test, který jste klikli pravým tlačítkem myši na v grafu.
+    > K otevření grafu aktivity uživatele můžete použít tlačítko **Podrobnosti** na panelu nástrojů **Editor zátěžového testu** . Pokud však použijete možnost **Přejít k podrobnostem uživatele** , **graf aktivity virtuálního uživatele** se automaticky přiblíží k části testu, kterou jste klepli v grafu přímo.
 
-     Zobrazení podrobností se zobrazí u **graf aktivity virtuálního uživatele** zaměřené na toto časové období, kdy došlo k překročení mezních hodnot.
+     Zobrazení podrobností se zobrazí s **grafem aktivity virtuálního uživatele** zaměřeného na časové období, kdy došlo k překročení mezních hodnot.
 
-     Vodorovné vykreslení na ose y, představují jednotlivé virtuální uživatele. Osu x zobrazuje časovou osu pro spuštění zátěžového testu.
+     Na ose y vodorovné zobrazení znázorňují jednotlivé virtuální uživatele. Na ose x se zobrazuje časová osa pro běh zátěžového testu.
 
-3. V **přiblížení na dobu** nástroje níže **graf aktivity virtuálního uživatele**, upravte vlevo a vpravo posuvníky, dokud nebudou zavřít ikonu porušení prahové hodnoty. Tím se změní časového měřítka v **graf aktivity virtuálního uživatele**
+3. V nástroji **přiblížení do časového období** pod **grafem aktivity virtuálního uživatele**upravte posuvníky vlevo a vpravo, dokud obě nebudou blízko ikony porušení mezní hodnoty. Tím se změní časová škála v **grafu aktivity virtuálního uživatele**
 
-4. V **podrobné legendy**, zaškrtněte políčko pro **(zvýraznit chyby)** . Všimněte si, že virtuální uživatel, který způsobil porušení mezní hodnoty je zvýrazněn.
+4. V **legendě podrobností**zaškrtněte políčko u **(zvýraznit chyby)** . Všimněte si, že virtuální uživatel, který způsobil porušení mezní hodnoty, je zvýrazněný.
 
-5. V **filtrování výsledků** panelu, zrušte zaškrtnutí políček u **zobrazit úspěšné výsledky** a **HttpError** ale ponechte **ValidationRuleError**zaškrtnuté políčko.
+5. Na panelu **výsledky filtru** zrušte zaškrtnutí políček **Zobrazit úspěšné výsledky** a **HttpError** , ale nechte políčko **ValidationRuleError** zaškrtnuté.
 
-     **Graf aktivity virtuálního uživatele** zobrazí pouze virtuálních uživatelů, které stráví více než tři sekundy *Red.aspx* stránce uvedená porušení mezní hodnoty, které jsou nakonfigurované v předchozím postupu.
+     V **grafu aktivity virtuálního uživatele** se zobrazí pouze virtuální uživatelé, kteří na stránce *Red. aspx* strávili více než 3 sekundy podle porušení mezní hodnoty nakonfigurovaného v předchozím návodu.
 
-6. Umístěte ukazatel myši nad vodorovnou horizontální čáru představující virtuálních uživatelů se chyba ověřovacího pravidla pro porušení prahové hodnoty.
+6. Umístěte ukazatel myši na vodorovnou čáru, která představuje virtuálního uživatele s chybou ověřovacího pravidla pro porušení prahové hodnoty.
 
-7. Popis se zobrazí následující informace:
+7. Zobrazí se popis nástroje s následujícími informacemi:
 
     - **ID uživatele**
 
@@ -85,28 +85,28 @@ Po spuštění zátěžového testu a shromažďují data aktivity virtuálního
 
     - **Test**
 
-    - **Výsledek**
+    - **Zaznamenaný**
 
     - **Sítě**
 
     - **Čas spuštění**
 
-    - **Doba trvání**
+    - **Úkolu**
 
-    - **Agent**
+    - **Agenta**
 
     - **Protokol testu**
 
-8. Všimněte si, že **protokol testu** odkaz. Zvolte **protokol testu** odkaz.
+8. Všimněte si, že **protokol testu** je odkaz. Klikněte na odkaz **protokol testu** .
 
-9. Test výkonnosti webu ColorWebTest přidružený k protokolu se otevře v **prohlížeče výsledků testu výkonnosti webu**. Díky tomu můžete izolovat, kde došlo k překročení mezních hodnot.
+9. Test výkonnosti webu ColorWebTest, který je přidružen k protokolu, se otevře v **prohlížeči webového výkonu výsledky testů Viewer**. To umožňuje izolovat, kde došlo k překročení mezních hodnot.
 
-     Různá nastavení můžete použít v obou **podrobné legendy** a **filtrování výsledků** panelů na pomoc při izolaci problémů s výkonem a chyby v zátěžových testech. Experiment s těmito nastaveními a **přiblížení na dobu** nástroj zobrazíte prezentaci dat virtuálních uživatelů v **graf aktivity virtuálního uživatele**.
+     Můžete použít různá nastavení na panelech podrobností v **legendě podrobnosti** a **filtrovat** , které vám pomohou izolovat problémy s výkonem a chyby v zátěžových testech. Experimentujte s těmito nastaveními a nástrojem pro **přiblížení do časového období** , abyste viděli, jak se data virtuálního uživatele zobrazují v **grafu aktivity virtuálního uživatele**.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Analýza aktivity virtuálních uživatelů v podrobném zobrazení](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)
+- [Analýza aktivity virtuálních uživatelů v zobrazení podrobností](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)
 - [Kontrolery testů a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md)
-- [Postupy: Vytvořit nastavení testu pro distribuovaný zátěžový test](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)
+- [Postupy: Vytvoření nastavení testu pro distribuovaný zátěžový test](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)
 - [Instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md)
-- [Shromažďování diagnostických údajů pomocí nastavení testů](../test/collect-diagnostic-information-using-test-settings.md)
+- [Shromažďování diagnostických informací pomocí nastavení testu](../test/collect-diagnostic-information-using-test-settings.md)

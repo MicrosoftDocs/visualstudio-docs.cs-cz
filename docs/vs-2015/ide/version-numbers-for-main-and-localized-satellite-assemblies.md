@@ -1,5 +1,5 @@
 ---
-title: Čísla verzí pro hlavní a lokalizované satelitní sestavení | Dokumentace Microsoftu
+title: Čísla verzí pro hlavní a lokalizovaná satelitní sestavení | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -12,40 +12,36 @@ helpviewer_keywords:
 - versioning, assemblies
 ms.assetid: 5489aea1-57b4-4561-9bb4-24d490269602
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4e478f7da004aaffb892fd01532a35d813574d9a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: aa064d875d5354ac4ae1fc5fdd8493c5efbbee01
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65696485"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663047"
 ---
 # <a name="version-numbers-for-main-and-localized-satellite-assemblies"></a>Čísla verzí pro hlavní a lokalizované satelitní sestavení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-<xref:System.Resources.SatelliteContractVersionAttribute> Třída poskytuje podporu správy verzí pro hlavní sestavení, které používá lokalizované prostředky prostřednictvím resource Manageru. Použití <xref:System.Resources.SatelliteContractVersionAttribute> k aplikaci hlavní sestavení vám umožní aktualizovat a znovu nasadit sestavení bez aktualizace jeho satelitních sestavení. Například můžete použít <xref:System.Resources.SatelliteContractVersionAttribute> třídy s aktualizací service pack, který nemá zavést nové prostředky bez znovu sestavovat a nasazovat satelitních sestavení. Pro lokalizované prostředky k dispozici, musí odpovídat verze satelitního kontraktu sestavení hlavní <xref:System.Reflection.AssemblyVersionAttribute> třídy satelitních sestavení. Musíte zadat číslo přesnou verzi v <xref:System.Resources.SatelliteContractVersionAttribute>; zástupné znaky, jako "*" nejsou povoleny. Další informace najdete v tématu [načítání prostředků](https://msdn.microsoft.com/library/eca16922-1c46-4f68-aefe-e7a12283641f).  
-  
-## <a name="updating-assemblies"></a>Aktualizuje se sestavení  
- <xref:System.Resources.SatelliteContractVersionAttribute> Třída umožňuje aktualizovat bez nutnosti aktualizovat satelitní sestavení do hlavního sestavení nebo naopak. Když se aktualizuje hlavní sestavení, číslo verze sestavení se změní. Pokud chcete pokračovat v používání existujícího satelitní sestavení, změňte číslo verze hlavní sestavení, ale ponechat stejné číslo verze satelitního kontraktu. Například v první verzi může být vaše hlavní sestavení verze 1.0.0.0. Verze satelitního kontraktu sestavení verzi satelitního sestavení také to 1.0.0.0. Pokud je potřeba aktualizovat vaše hlavní sestavení pro aktualizace service pack, můžete změnit verzi sestavení 1.0.0.1, při zachování verze satelitního kontraktu a verze pro satelitní sestavení jako 1.0.0.0.  
-  
- Pokud je potřeba aktualizovat satelitní sestavení, ale není hlavním sestavení, můžete změnit <xref:System.Reflection.AssemblyVersionAttribute> satelitní sestavení. Spolu se satelitním sestavením bude mít k odeslání zásady sestavení, která uvádí, že vaše nové satelitní sestavení je kompatibilní s původní satelitní sestavení. Další informace o zásadách najdete v tématu [jak modul Runtime vyhledává sestavení](https://msdn.microsoft.com/library/772ac6f4-64d2-4cfb-92fd-58096dcd6c34).  
-  
- Následující kód ukazuje, jak nastavit verze satelitního kontraktu. Kód je možné použít ve skriptu sestavení nebo v souboru AssemblyInfo.vb nebo AssemblyInfo.cs.  
-  
-```vb  
-<Assembly: SatelliteContractVersionAttribute("4.3.2.1")>  
-  
-```  
-  
-```csharp  
-[assembly: SatelliteContractVersionAttribute("4.3.2.1")]  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Jak běhové prostředí vyhledává sestavení](https://msdn.microsoft.com/library/772ac6f4-64d2-4cfb-92fd-58096dcd6c34)   
- [Nastavování atributů sestavení](https://msdn.microsoft.com/library/36a98a81-b5b5-4c19-912a-11f91eff7f4e)   
- [Zabezpečení a lokalizovaná satelitní sestavení](../ide/security-and-localized-satellite-assemblies.md)   
- [Lokalizace aplikací](../ide/localizing-applications.md)   
- [Globalizace a lokalizace aplikací](../ide/globalizing-and-localizing-applications.md)
+Třída <xref:System.Resources.SatelliteContractVersionAttribute> poskytuje podporu správy verzí pro hlavní sestavení, které používá lokalizované prostředky prostřednictvím Správce prostředků. Použití <xref:System.Resources.SatelliteContractVersionAttribute> k hlavnímu sestavení aplikace umožňuje aktualizovat a znovu nasadit sestavení bez aktualizace jeho satelitních sestavení. Můžete například použít třídu <xref:System.Resources.SatelliteContractVersionAttribute> s aktualizací Service Pack, která nezavádí nové prostředky bez nutnosti opětovného sestavení a opětovného nasazení satelitních sestavení. Aby byly lokalizované prostředky k dispozici, verze satelitního kontraktu vašeho hlavního sestavení musí odpovídat třídě <xref:System.Reflection.AssemblyVersionAttribute> vašich satelitních sestavení. V <xref:System.Resources.SatelliteContractVersionAttribute> musíte zadat přesné číslo verze. zástupné znaky, například "*", nejsou povoleny. Další informace najdete v tématu [načtení prostředků](https://msdn.microsoft.com/library/eca16922-1c46-4f68-aefe-e7a12283641f).
+
+## <a name="updating-assemblies"></a>Aktualizace sestavení
+ Třída <xref:System.Resources.SatelliteContractVersionAttribute> umožňuje aktualizovat hlavní sestavení bez nutnosti aktualizovat satelitní sestavení nebo naopak. Po aktualizaci hlavního sestavení je číslo jeho verze sestavení změněno. Chcete-li pokračovat v používání stávajících satelitních sestavení, změňte číslo verze hlavního sestavení, ale číslo verze satelitního kontraktu ponechte stejné. Například v první verzi může být hlavní verze sestavení 1.0.0.0. Verze satelitního kontraktu a verze sestavení satelitního sestavení budou také 1.0.0.0. Pokud potřebujete aktualizovat hlavní sestavení pro aktualizaci Service Pack, můžete změnit verzi sestavení na 1.0.0.1 a zároveň zachovat verzi satelitního kontraktu a verzi sestavení satelitu jako 1.0.0.0.
+
+ Pokud potřebujete aktualizovat satelitní sestavení, ale ne vaše hlavní sestavení, změňte <xref:System.Reflection.AssemblyVersionAttribute> satelitního sestavení. Spolu se satelitním sestavením bude nutné dodávat sestavení zásad, které uvádí, že vaše nové satelitní sestavení je kompatibilní s vaším starým satelitním sestavením. Další informace o zásadách najdete v tématu [jak modul runtime vyhledává sestavení](https://msdn.microsoft.com/library/772ac6f4-64d2-4cfb-92fd-58096dcd6c34).
+
+ Následující kód ukazuje, jak nastavit verzi satelitního kontraktu. Kód lze umístit buď do skriptu sestavení, nebo do souboru AssemblyInfo. vb nebo AssemblyInfo.cs.
+
+```vb
+<Assembly: SatelliteContractVersionAttribute("4.3.2.1")>
+
+```
+
+```csharp
+[assembly: SatelliteContractVersionAttribute("4.3.2.1")]
+```
+
+## <a name="see-also"></a>Viz také
+ [Způsob, jakým modul runtime vyhledává sestavení](https://msdn.microsoft.com/library/772ac6f4-64d2-4cfb-92fd-58096dcd6c34) [nastavení atributů sestavení](https://msdn.microsoft.com/library/36a98a81-b5b5-4c19-912a-11f91eff7f4e) [zabezpečení a lokalizovaná satelitní sestavení](../ide/security-and-localized-satellite-assemblies.md) [lokalizace](../ide/localizing-applications.md) [a lokalizace aplikací](../ide/globalizing-and-localizing-applications.md)

@@ -1,68 +1,68 @@
 ---
-title: IntelliTest referenčním manuálu | Nástroje pro testování Microsoft pro vývojáře
+title: Ruční odkaz na IntelliTest | Microsoft Developer Test Tools
 ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest Reference Manual, IntelliTest
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: d7258549b242091737e14e00980447eb48d5e78b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+author: jillre
+ms.openlocfilehash: 97b28c2810b59465c6d5ac682e95e25b324a95a0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62551590"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653193"
 ---
-# <a name="intellitest-reference-manual"></a>IntelliTest referenčním manuálu
+# <a name="intellitest-reference-manual"></a>Ruční odkaz na IntelliTest
 
 ## <a name="contents"></a>Obsah
 
-* **[Přehled funkce IntelliTest](introduction.md)**
-  - [The Hello World of IntelliTest](introduction.md#the-hello-world-of-intellitest)
+* **[Přehled IntelliTest](introduction.md)**
+  - [Hello World IntelliTest](introduction.md#the-hello-world-of-intellitest)
   - [Omezení](introduction.md#limitations)
     * [Nondeterminism](introduction.md#nondeterminism)
     * [Souběžnost](introduction.md#concurrency)
     * [Nativní kód](introduction.md#native-code)
-    * [Platforma](introduction.md#platform)
+    * [Platformy](introduction.md#platform)
     * [Jazyk](introduction.md#language)
-    * [Symbolického uvažování](introduction.md#symbolic-reasoning)
-    * [Trasování zásobníku nesprávný](introduction.md#incorrect-stack-traces)
+    * [Symbolický důvod](introduction.md#symbolic-reasoning)
+    * [Nesprávná trasování zásobníku](introduction.md#incorrect-stack-traces)
   - [Další čtení](introduction.md#further-reading)
 
 * **[Začínáme s IntelliTest](getting-started.md)**
   - [Důležité atributy](getting-started.md#important-attributes)
-  - [Třídy statických pomocných rutin důležité](getting-started.md#helper-classes)
+  - [Důležité statické pomocné třídy](getting-started.md#helper-classes)
 
-* **[Generování testu](test-generation.md)**
-  - [Generátory testu](test-generation.md#test-generators)
+* **[Generování testů](test-generation.md)**
+  - [Generátory testů](test-generation.md#test-generators)
   - [Parametrizované testování částí](test-generation.md#parameterized-unit-testing)
-  - [Obecné parametry testování částí](test-generation.md#generic-parameterized)
+  - [Obecné parametrizované testování částí](test-generation.md#generic-parameterized)
   - [Povolení výjimek](test-generation.md#allowing-exceptions)
-  - [Testování vnitřní typy](test-generation.md#internal-types)
+  - [Testování interních typů](test-generation.md#internal-types)
   - [Předpoklady a kontrolní výrazy](test-generation.md#assumptions-and-assertions)
-  - [Předběžné podmínky](test-generation.md#precondition)
-  - [Neplatná následná](test-generation.md#postcondition)
-  - [Neúspěšné testy](test-generation.md#test-failures)
-  - [Nastavení a dovolí](test-generation.md#setup-teardown)
+  - [Předběžná podmínka](test-generation.md#precondition)
+  - [Následná podmínka](test-generation.md#postcondition)
+  - [Selhání testu](test-generation.md#test-failures)
+  - [Nastavit a roztrhnout](test-generation.md#setup-teardown)
   - [Další čtení](test-generation.md#further-reading)
 
-* **[Vstupní generování](input-generation.md)**
+* **[Generování vstupu](input-generation.md)**
   - [Řešitel omezení](input-generation.md#constraint-solver)
-  - [Dynamický kód pokrytí](input-generation.md#dynamic-code-coverage)
-  - [Celá čísla a float](input-generation.md#integers-and-floats)
+  - [Dynamické pokrytí kódu](input-generation.md#dynamic-code-coverage)
+  - [Celá čísla a Floaty](input-generation.md#integers-and-floats)
   - [Objekty](input-generation.md#objects)
-  - [Vytvoření instance existujících tříd](input-generation.md#existing-classes)
+  - [Vytváření instancí existujících tříd](input-generation.md#existing-classes)
   - [Viditelnost](input-generation.md#visibility)
-  - [Parametrizované mocks](input-generation.md#parameterized-mocks)
+  - [Parametrizované modely](input-generation.md#parameterized-mocks)
   - [Struktury](input-generation.md#structs)
   - [Pole a řetězce](input-generation.md#arrays-and-strings)
-  - [Získání další vstupy](input-generation.md#additional-inputs)
+  - [Získání dalších vstupů](input-generation.md#additional-inputs)
   - [Další čtení](input-generation.md#further-reading)
 
-* **[Hranice průzkumu](exploration-bounds.md)**
+* **[Meze průzkumu](exploration-bounds.md)**
   - [MaxConstraintSolverTime](exploration-bounds.md#maxconstraintsolvertime)
   - [MaxConstraintSolverMemory](exploration-bounds.md#maxconstraintsolvermemory)
   - [MaxBranches](exploration-bounds.md#maxbranches)
@@ -92,9 +92,9 @@ ms.locfileid: "62551590"
   - [PexAllowedExceptionFromType](attribute-glossary.md#pexallowedexceptionfromtype)
   - [PexAllowedExceptionFromTypeUnderTest](attribute-glossary.md#pexallowedexceptionfromtypeundertest)
 
-* **[Vodopádové nastavení](settings-waterfall.md)**
+* **[Vodopádová nastavení](settings-waterfall.md)**
 
-* **[Třídy statických pomocných rutin](static-helper-classes.md)**
+* **[Třídy statických pomocných tříd](static-helper-classes.md)**
   - [PexAssume](static-helper-classes.md#pexassume)
   - [PexAssert](static-helper-classes.md#pexassert)
   - [PexChoose](static-helper-classes.md#pexchoose)
@@ -102,27 +102,27 @@ ms.locfileid: "62551590"
   - [PexSymbolicValue](static-helper-classes.md#pexsymbolicvalue)
 
 * **[Upozornění a chyby](warnings-and-errors.md)**
-  - [MaxBranches překročena](warnings-and-errors.md#maxbranches-exceeded)
-  - [MaxConstraintSolverTime exceeded](warnings-and-errors.md#maxconstraintsolvertime-exceeded)
-  - [MaxConditions překročena](warnings-and-errors.md#maxconditions-exceeded)
-  - [MaxCalls překročena](warnings-and-errors.md#maxcalls-exceeded)
-  - [MaxStack překročena](warnings-and-errors.md#maxstack-exceeded)
-  - [MaxRuns překročena](warnings-and-errors.md#maxruns-exceeded)
-  - [MaxRunsWithoutNewTests překročena](warnings-and-errors.md#maxrunswithoutnewtests-exceeded)
-  - [Nejde konkretizovat řešení](warnings-and-errors.md#cannot-concretize-solution)
-  - [Potřebuji nápovědu k vytvoření objektu](warnings-and-errors.md#help-construct)
-  - [Potřebujete najít typy](warnings-and-errors.md#help-types)
-  - [Použitelný typ uhodnout](warnings-and-errors.md#usable-type-guessed)
+  - [MaxBranches překročil](warnings-and-errors.md#maxbranches-exceeded)
+  - [MaxConstraintSolverTime překročil](warnings-and-errors.md#maxconstraintsolvertime-exceeded)
+  - [MaxConditions překročil](warnings-and-errors.md#maxconditions-exceeded)
+  - [MaxCalls překročil](warnings-and-errors.md#maxcalls-exceeded)
+  - [MaxStack překročil](warnings-and-errors.md#maxstack-exceeded)
+  - [MaxRuns překročil](warnings-and-errors.md#maxruns-exceeded)
+  - [MaxRunsWithoutNewTests překročil](warnings-and-errors.md#maxrunswithoutnewtests-exceeded)
+  - [Nejde konkretizovatovat řešení](warnings-and-errors.md#cannot-concretize-solution)
+  - [Potřebujete pomáhat s konstrukcí objektu.](warnings-and-errors.md#help-construct)
+  - [Potřebujete pomáhat najít typy](warnings-and-errors.md#help-types)
+  - [Byl vyodhadnut použitelný typ](warnings-and-errors.md#usable-type-guessed)
   - [Neočekávaná chyba při průzkumu](warnings-and-errors.md#unexpected-exploration)
-  - [TargetInvocationException](warnings-and-errors.md#targetinvocationexception)
-  - [Neinstrumentované metody, které volá](warnings-and-errors.md#uninstrumented-method-called)
-  - [Externí metodu s názvem](warnings-and-errors.md#external-method-called)
-  - [Neinstrumentovatelné metody, které volá](warnings-and-errors.md#uninstrumentable-method-called)
-  - [Problém s testovatelností](warnings-and-errors.md#testability-issue)
-  - [Omezení](warnings-and-errors.md#limitation)
+  - [TargetInvocationException –](warnings-and-errors.md#targetinvocationexception)
+  - [Neinstrumentovaná metoda s názvem](warnings-and-errors.md#uninstrumented-method-called)
+  - [Externí metoda je volána](warnings-and-errors.md#external-method-called)
+  - [Neinstrumentovaná metoda s názvem](warnings-and-errors.md#uninstrumentable-method-called)
+  - [Problém s testováním](warnings-and-errors.md#testability-issue)
+  - [Omezené](warnings-and-errors.md#limitation)
   - [Pozorovaná neshoda volání](warnings-and-errors.md#observed-call-mismatch)
-  - [Hodnota uložená ve statické pole](warnings-and-errors.md#value-static-field)
+  - [Hodnota uložená ve statickém poli](warnings-and-errors.md#value-static-field)
 
-## <a name="got-feedback"></a>Máte nějakou zpětnou vazbu?
+## <a name="got-feedback"></a>Máte zpětnou vazbu?
 
-Publikovat své nápady a funkce na požadavky [komunity vývojářů](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
+Publikujte své nápady a žádosti o funkce na [komunitě vývojářů](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).

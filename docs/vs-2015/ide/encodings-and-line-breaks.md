@@ -1,5 +1,5 @@
 ---
-title: Šifrování a zalomení řádků | Dokumentace Microsoftu
+title: Kódování a zalomení řádků | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -15,36 +15,36 @@ helpviewer_keywords:
 - Visual Studio, line break characters
 ms.assetid: 8f9b3ffc-7b8d-44f4-87cb-dc29105be12d
 caps.latest.revision: 12
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0ae85397e0d9b5859ab39a8a580dd50d1ea7324c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 2e1b13cc101ea4d7609633fd9c11bf87946d7b7d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65701062"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665728"
 ---
 # <a name="encodings-and-line-breaks"></a>Šifrování a zalomení řádků
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V sadě Visual Studio můžete použít **souboru/pokročilé nastavení uložení** má nastavení k určení typu zalomení řádku znaků. Můžete také změnit kódování souboru se stejným nastavením.  
-  
+V aplikaci Visual Studio můžete pomocí nastavení **soubor/rozšířené možnosti uložení** určit typ znaků konce řádku, které chcete. Můžete také změnit kódování souboru se stejným nastavením.
+
 > [!NOTE]
-> Pokud máte určité typy nastavení vývoje (Visual Basic, F#, vývoj pro Web) nemusí zobrazit **pokročilé nastavení uložení** v nabídce. Chcete-li změnit nastavení (například se běžných), otevřete **nástroje / Import a Export nastavení**. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
- V sadě Visual Studio tyto znaky jsou interpretovány jako konce řádků:  
-  
-- CRLF: Návrat na začátek + LF, znaky Unicode 000 D + 000A  
-  
-- LF: LF, znak Unicode 000A  
-  
-- NASTAVIT: Další řádek znak Unicode 0085  
-  
-- LS: Oddělovač řádků, znak Unicode 2028  
-  
-- PS: Oddělovač odstavců, znak Unicode 2029  
-  
-  Text, který se zkopíruje z jiné aplikace udržuje původní kódování a znaky konce řádku. Například při kopírování textu z programu Poznámkový blok a vložte ho do textového souboru v sadě Visual Studio, text má stejné nastavení, jako v poznámkovém bloku.  
-  
-  Při otevření souboru obsahujícího znaky konce řádku různých, může se zobrazit dialogové okno s dotazem, zda by měly být normalizovány znaky konců řádků nekonzistentní a jaký typ konců řádku vyberte.
+> Pokud máte určité typy nastavení pro vývoj (Visual Basic, F#, vývoj na webu), neuvidíte v nabídce **možnost Upřesnit možnosti ukládání** . Chcete-li změnit nastavení (například obecné), otevřete **nástroje/Import a export nastavení**. Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+ V aplikaci Visual Studio jsou následující znaky interpretovány jako zalomení řádků:
+
+- CRLF: návrat vozík + čára, znaky Unicode 000D + 000A
+
+- LF: line feed, 000A znaků Unicode
+
+- NEL: další řádek, znak Unicode 0085
+
+- LS: oddělovač řádků, znak Unicode 2028
+
+- PS: oddělovač odstavců, znak Unicode 2029
+
+  Text, který je zkopírován z jiných aplikací, uchovává původní kódování a znaky zalomení řádku. Například pokud kopírujete text z programu Poznámkový blok a vložíte ho do textového souboru v aplikaci Visual Studio, text má stejné nastavení jako v poznámkovém bloku.
+
+  Když otevřete soubor, který obsahuje jiné znaky zalomení řádku, může se zobrazit dialogové okno s dotazem, zda by měly být nekonzistentní znaky konců řádků normalizovany a jaký typ konců řádků zvolit.

@@ -1,5 +1,5 @@
 ---
-title: 'CA1412: Označte rozhraní ComSource jako IDispatch | Dokumentace Microsoftu'
+title: 'CA1412: označte ComSource rozhraní jako IDispatch | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - MarkComSourceInterfacesAsIDispatch
 ms.assetid: 131a7563-0410-443c-a8f5-52104250cfb4
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d72dd7e143720ce4ef2fce364a7e5ed3529ff9f3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 86dc7042a48faa200ef9c360829b1756bc261ab0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65691996"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652730"
 ---
 # <a name="ca1412-mark-comsource-interfaces-as-idispatch"></a>CA1412: Označte rozhraní ComSource jako IDispatch
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,23 +29,23 @@ ms.locfileid: "65691996"
 |-|-|
 |TypeName|MarkComSourceInterfacesAsIDispatch|
 |CheckId|CA1412|
-|Kategorie|Microsoft.Interoperability|
+|Kategorie|Microsoft. interoperabilita|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>Příčina
- Typ je označen pomocí <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> atribut a alespoň jednu zadanou rozhraní není označen atributem <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> atribut nastaven `InterfaceIsDispatch` hodnotu.
+## <a name="cause"></a>příčina
+ Typ je označen atributem <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> a alespoň jedno zadané rozhraní není označeno atributem <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> nastaveným na hodnotu `InterfaceIsDispatch`.
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> slouží k identifikaci událostí rozhraní, které třída poskytuje klientům modelu COM (Component Object). Tato rozhraní musí být vystavené jako `InterfaceIsIDispatch` povolení klientům modelu COM jazyka Visual Basic 6 příjem oznámení o události. Ve výchozím nastavení, pokud rozhraní není označen atributem <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> atribut, je vystavena jako duální rozhraní.
+ <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> slouží k identifikaci rozhraní události, které třída zveřejňuje klientům modelu COM (Component Object Model). Tato rozhraní musí být vystavena jako `InterfaceIsIDispatch` a povolit tak Visual Basic 6 klientů modelu COM pro příjem oznámení události. Ve výchozím nastavení, pokud rozhraní není označeno atributem <xref:System.Runtime.InteropServices.InterfaceTypeAttribute>, je vystaveno jako duální rozhraní.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, přidat nebo upravit <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> tak, aby jeho hodnota nastavená na InterfaceIsIDispatch pro všechna rozhraní, která jsou určena pomocí atributu <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> atribut.
+ Chcete-li opravit porušení tohoto pravidla, přidejte nebo upravte atribut <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> tak, aby byla jeho hodnota nastavena na InterfaceIsIDispatch pro všechna rozhraní, která jsou zadána s atributem <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje třídu, kde jednoho z rozhraní porušuje pravidlo.
+ Následující příklad ukazuje třídu, kde jedno z rozhraní je v rozporu s pravidlem.
 
  [!code-csharp[FxCop.Interoperability.MarkIDispatch#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Interoperability.MarkIDispatch/cs/FxCop.Interoperability.MarkIDispatch.cs#1)]
  [!code-vb[FxCop.Interoperability.MarkIDispatch#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Interoperability.MarkIDispatch/vb/FxCop.Interoperability.MarkIDispatch.vb#1)]
@@ -54,4 +54,4 @@ ms.locfileid: "65691996"
  [CA1408: Nepoužívejte AutoDual ClassInterfaceType](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)
 
 ## <a name="see-also"></a>Viz také
- [Postupy: Generování událostí zpracovávaných jímkou COM](https://msdn.microsoft.com/7c9944b2-e951-4c3e-a0a1-59b2ae37d7fd) [spolupráce pomocí nespravovaného kódu](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)
+ [Postupy: vyvolávání událostí zpracovávaných v rámci jímky modelu COM, které](https://msdn.microsoft.com/7c9944b2-e951-4c3e-a0a1-59b2ae37d7fd) [spolupracuje s nespravovaným kódem](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)

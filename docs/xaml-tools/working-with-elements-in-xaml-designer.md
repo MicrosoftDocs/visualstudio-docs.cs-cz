@@ -3,15 +3,15 @@ title: Práce s elementy v Návrháři XAML
 ms.date: 05/14/2018
 ms.topic: conceptual
 ms.assetid: a29690bf-f212-4ac6-a77a-adc53d14102e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c1ab50fd08b3dd455e6fb9adc9f5aa3a22b77352
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: bae8f676a009ef9e5b3560feff15b74410cc52ac
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451029"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668621"
 ---
 # <a name="work-with-elements-in-xaml-designer"></a>Práce s elementy v Návrháři XAML
 
@@ -19,7 +19,7 @@ Můžete přidat prvky – ovládací prvky, rozložení a tvary – do aplikace
 
 ## <a name="add-an-element-to-a-layout"></a>Přidání elementu do rozložení
 
-*Rozložení* je proces změny velikosti a umístění prvků v uživatelském rozhraní. Chcete-li umístit vizuální prvky, je nutné je umístit do [panelu](xref:Windows.UI.Xaml.Controls.Panel)rozložení. @No__t-0 má podřízenou vlastnost, která je kolekcí typů [FrameworkElement](xref:Windows.UI.Xaml.FrameworkElement) . Můžete použít různé podřízené prvky `Panel`, jako je [plátno](xref:Windows.UI.Xaml.Controls.Canvas), [StackPanel](xref:Windows.UI.Xaml.Controls.StackPanel)a [Grid](xref:Windows.UI.Xaml.Controls.Grid), a sloužit tak jako kontejnery rozložení a k umístění a uspořádání prvků na stránce.
+*Rozložení* je proces změny velikosti a umístění prvků v uživatelském rozhraní. Chcete-li umístit vizuální prvky, je nutné je umístit do [panelu](xref:Windows.UI.Xaml.Controls.Panel)rozložení. @No__t_0 má podřízenou vlastnost, která je kolekcí typů [FrameworkElement](xref:Windows.UI.Xaml.FrameworkElement) . Můžete použít různé podřízené prvky `Panel`, jako je [plátno](xref:Windows.UI.Xaml.Controls.Canvas), [StackPanel](xref:Windows.UI.Xaml.Controls.StackPanel)a [Grid](xref:Windows.UI.Xaml.Controls.Grid), a sloužit tak jako kontejnery rozložení a k umístění a uspořádání prvků na stránce.
 
 Ve výchozím nastavení se jako kontejner rozložení nejvyšší úrovně v rámci stránky nebo formuláře používá panel `Grid`. Můžete přidat panely rozložení, ovládací prvky nebo jiné prvky v rozložení stránky nejvyšší úrovně.
 

@@ -1,5 +1,5 @@
 ---
-title: Přihlaste se k sadě Visual Studio 2015 | Dokumentace Microsoftu
+title: Přihlásit se k Visual Studiu 2015 | Microsoft Docs
 titleSuffix: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
@@ -7,58 +7,58 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: b9531c25-e4cf-43ae-b331-a9f31a8cd171
 caps.latest.revision: 34
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 96676ee8021e09a5e7d0a9808cea1e615f58717a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 9c732f4011c4194ce95621cf49022c2b6a9fabf3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65679837"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661224"
 ---
 # <a name="signing-in-to-visual-studio"></a>Přihlášení k sadě Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete přizpůsobit a optimalizovat vaše zkušenosti s vývojem v sadě Visual Studio, pokud jste nastavili svůj účet přizpůsobení přihlášením do integrovaného vývojového prostředí.
+Můžete přizpůsobit a optimalizovat vývojové prostředí v sadě Visual Studio, pokud nastavíte účet přizpůsobení přihlašováním k rozhraní IDE.
 
 ## <a name="why-should-i-sign-in-to-visual-studio"></a>Proč se bych se měl(a) přihlásit do aplikace Visual Studio?
- Po přihlášení k sadě Visual Studio získáte následující výhody:
+ Při přihlášení k aplikaci Visual Studio získáte následující výhody:
 
-- **Uděluje přístup k široké škále výhod** z programu Visual Studio Dev Essentials, včetně bezplatného softwaru, školení, podpory a další. Zobrazit [Visual Studio Dev Essentials](https://aka.ms/vsdevhelp) Další informace.
+- **Uděluje přístup k široké škále výhod** z Visual Studio Dev Essentials programu, včetně bezplatného softwaru, školení, podpory a dalších. Další informace najdete v tématu [Visual Studio Dev Essentials](https://aka.ms/vsdevhelp) .
 
-- **Synchronizuje vaše nastavení sady Visual Studio** – nastavení, jako jsou klávesové zkratky, přizpůsobení rozložení oken a barevný motiv, se použije ihned při přihlášení k sadě Visual Studio na libovolném zařízení. Zobrazit [synchronizovaná nastavení v sadě Visual Studio](https://msdn.microsoft.com/library/dn135229%28v=vs.120%29.aspx).
+- **Synchronizuje nastavení sady Visual Studio** – nastavení, které přizpůsobíte, například vazby kláves, rozložení oken a barevný motiv, se použijí okamžitě při přihlášení k aplikaci Visual Studio na libovolném zařízení. Viz [synchronizovaná nastavení v aplikaci Visual Studio](https://msdn.microsoft.com/library/dn135229%28v=vs.120%29.aspx).
 
-- **Trvale odemkne Visual Studio Express Edition** – můžete použít libovolná edice sady Visual Studio Express pro, jak dlouho budete chtít, namísto na zkušební dobu 30 dnů.
+- **Trvale odemkne Visual Studio Express edici** – můžete použít libovolnou edici Visual Studio Express, pokud chcete, a nebudete tak omezeni na zkušební dobu 30 dní.
 
-- **Odemkne Visual Studio Community Edition** namísto na zkušební dobu 30 dnů.
+- **Odemkne edici Visual studia Community Edition** , aniž by byla omezena na zkušební období po dobu 30 dnů.
 
-- **Rozšiřuje zkušební dobu sady Visual Studio** – můžete použít Visual Studio Professional nebo Visual Studio Enterprise pro dalších 90 dní, namísto na zkušební dobu 30 dnů.
+- **Rozšiřuje zkušební dobu sady Visual Studio** – můžete použít Visual Studio Professional nebo Visual Studio Enterprise po dobu dalších 90 dní, a nikoli omezit na zkušební dobu 30 dní.
 
-- **Odemkne Visual Studio, pokud používáte účet, který je spojen s předplatným MSDN nebo VSO**. Zobrazit [jak odemknout Visual Studio](../ide/how-to-unlock-visual-studio.md).
+- **Odemkne Visual Studio, pokud používáte účet, který je přidružený k předplatnému MSDN nebo VSO**. Podívejte [se, jak odemknout Visual Studio](../ide/how-to-unlock-visual-studio.md).
 
-- **Automaticky se připojí ke službám, jako je Azure a Visual Studio Team Services** v integrovaném vývojovém prostředí bez zobrazení výzvy znovu pro přihlašovací údaje pro stejný účet.
+- Se **automaticky připojuje ke službám, jako je Azure, a Visual Studio Team Services** v prostředí IDE bez nutnosti opětovného dotazování pro přihlašovací údaje pro stejný účet.
 
-## <a name="how-to-sign-in-to-visual-studio"></a>Jak se přihlásit k sadě Visual Studio
- Při prvním spuštění sady Visual studio budete vyzváni k přihlášení a poskytují základních informací pro registraci. Měli byste vybrat účet Microsoft nebo pracovní nebo školní účet, je nejlepší představuje. Pokud některý z těchto účtů nemáte, můžete zdarma vytvořit účet Microsoft. Zobrazit [jak se přihlásím k účtu Microsoft?](http://windows.microsoft.com/windows-live/sign-up-create-account-how)
+## <a name="how-to-sign-in-to-visual-studio"></a>Jak se přihlásit k Visual Studiu
+ Při prvním spuštění aplikace Visual Studio budete vyzváni k přihlášení a zadání některých základních registračních informací. Měli byste zvolit účet Microsoft nebo pracovní nebo školní účet, který vás nejlépe zaznamená. Pokud nemáte žádné z těchto účtů, můžete vytvořit účet Microsoft zdarma. Přečtěte si téma [návody registrace účet Microsoft?](http://windows.microsoft.com/windows-live/sign-up-create-account-how)
 
- Dále zvolte nastavení uživatelského rozhraní a barevný motiv, který chcete použít v aplikaci Visual Studio. Visual Studio si pamatuje tato nastavení a provede jejich synchronizaci ve všech prostředích Visual Studio, které jste se přihlásili ke. Seznam nastavení, které jsou synchronizované, naleznete v tématu [synchronizovaná nastavení](../ide/synchronized-settings-in-visual-studio.md). Můžete změnit nastavení později spustíte **nástroje &#124; možnosti** nabídky v sadě Visual Studio.
+ Dále zvolte nastavení uživatelského rozhraní a barevný motiv, který chcete použít v aplikaci Visual Studio. Visual Studio pamatuje tato nastavení a synchronizuje je ve všech prostředích sady Visual Studio, ke kterým jste se přihlásili. Seznam nastavení, která jsou synchronizovaná, najdete v tématu [synchronizovaná nastavení](../ide/synchronized-settings-in-visual-studio.md). Nastavení můžete později změnit, pokud otevřete nabídku **Možnosti nástrojů &#124;**  v aplikaci Visual Studio.
 
- Po zadání nastavení se spustí aplikace Visual Studio, přihlásíte se a budete připraveni začít. Pokud chcete ověřit, zda jste přihlášeni, vyhledejte název v pravém horním rohu prostředí sady Visual Studio.
+ Po zadání nastavení se spustí aplikace Visual Studio, přihlásíte se a budete připraveni začít. Chcete-li ověřit, zda jste přihlášeni, hledejte své jméno v pravém horním rohu prostředí sady Visual Studio.
 
- ![Currentlly přihlášeného uživatele](../ide/media/vs2015-username.png "VS2015_UserName")
+ ![Přihlášený uživatel Currentlly](../ide/media/vs2015-username.png "VS2015_UserName")
 
- Pokud se neodhlásíte, budete automaticky přihlášeni k sadě Visual Studio při každém jejím spuštění a všechny změny synchronizovaného nastavení jsou automaticky použity. Pro odhlášení vyberte šipku dolů vedle názvu vašeho profilu v prostředí sady Visual Studio, zvolte **nastavení účtu** příkaz a klikněte na tlačítko **Odhlásit** odkaz. Chcete-li znovu přihlásit, zvolte **přihlášení** v pravém horním rohu prostředí sady Visual Studio.
+ Pokud se neodhlásíte, budete automaticky přihlášeni k sadě Visual Studio při každém jejím spuštění a všechny změny synchronizovaného nastavení jsou automaticky použity. Chcete-li se odhlásit, zvolte šipku dolů vedle názvu vašeho profilu v prostředí sady Visual Studio, zvolte příkaz **Nastavení účtu** a pak zvolte odkaz **Odhlásit** . Pokud se chcete znovu přihlásit, klikněte v pravém horním rohu prostředí sady Visual Studio na příkaz **Přihlásit** se.
 
 ## <a name="to-change-your-profile-information"></a>Změna informací v profilu
- V **souboru &#124; nastavení účtu** můžete zobrazit a aktualizovat informace o profilu aplikace Visual Studio a licence. Úprava informací profilu, třeba název účtu, obrázek miniatury, nebo e-mailová adresa:
+ V **části &#124; nastavení účtu souboru** můžete zobrazit a aktualizovat informace o profilu a licenci sady Visual Studio. Pokud chcete upravit informace o profilu, jako je název vašeho účtu, obrázek miniatury nebo e-mailová adresa:
 
-1. Přejděte na **souboru &#124; nastavení účtu**.
+1. Přejít na **nastavení &#124; účtu souboru**.
 
-2. V **nastavení účtu** dialogovém okně **profil sady Visual Studio spravovat** odkaz.
+2. V dialogovém okně **Nastavení účtu** spravovat odkaz **profil sady Visual Studio** .
 
-3. Na **Moje informace o Microsoft** stránce v prohlížeči **upravit informace o** tlačítko.
+3. Na stránce **informace o Microsoftu** v prohlížeči klikněte na tlačítko **Upravit informace** .
 
 4. Změňte požadovaná nastavení.
 
-5. Jakmile budete hotovi, zvolte **uložit změny** tlačítko.
+5. Až skončíte, klikněte na tlačítko **Uložit změny** .

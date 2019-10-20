@@ -4,50 +4,50 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, domain properties
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23bac93b6e5892e8a4d4680e6829240fed9a03d8
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: debf263fa18d2a6af8e95ee959002686540e2c06
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443123"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658207"
 ---
 # <a name="properties-of-domain-properties"></a>Vlastnosti vlastností domény
-A *doménovou vlastnost* je funkce, které může obsahovat hodnotu prvku modelu. Například `Person` doménová třída může mít vlastnosti `Name` a `BirthDate`. V definici DSL vlastnosti domény patří do domény pole třídy v diagramu a v rámci doménové třídy v Průzkumníku DSL. Další informace najdete v tématu [jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md).
+*Doménová vlastnost* je funkcí prvku modelu, který může obsahovat hodnotu. Například `Person` doménová třída může mít vlastnosti `Name` a `BirthDate`. V definici DSL jsou vlastnosti domény uvedené v poli doménová třída v diagramu a v části doménová třída v Průzkumníku DSL. Další informace najdete v tématu [Definování jazyka specifického pro doménu](../modeling/how-to-define-a-domain-specific-language.md).
 
 > [!NOTE]
-> Slovo "vlastnosti" má dvě použití. A *doménovou vlastnost* je funkce, které definujete na doménovou třídu. Naopak mají mnoho prvků DSL *vlastnosti*, které jsou uvedeny v **vlastnosti** okno v definici DSL. Například každá vlastnost domény má sadu vlastností, které jsou popsány v tomto tématu.
+> Slovo "Property" obsahuje dva způsoby použití. *Doménová vlastnost* je funkce, kterou definujete pro doménovou třídu. Naproti tomu mnoho prvků DSL má *vlastnosti*, které jsou uvedeny v okně **vlastnosti** definice DSL. Například každá doménová vlastnost má sadu vlastností, které jsou popsány v tomto tématu.
 
- V době běhu, když uživatel vytvoří instance třídy domény, hodnoty vlastnosti domény můžete zobrazit v okně Vlastnosti a lze zobrazit na tvary.
+ V době spuštění může uživatel při vytváření instancí doménové třídy zobrazit v okno Vlastnosti hodnoty vlastností domény a lze je zobrazit v obrazcích.
 
- Většina vlastností domény jsou implementovány jako běžné vlastnosti CLR. Z programovací pohledu, mají vlastnosti domény bohatší funkcí než normální program vlastnosti:
+ Většina doménových vlastností je implementována jako běžné vlastnosti CLR. Nicméně z programovacího hlediska mají doménové vlastnosti širší funkčnost než běžné vlastnosti programu:
 
-- Můžete definovat pravidla a události, které monitorují stav vlastnosti. Další informace najdete v tématu [šířící změny a reakce na](../modeling/responding-to-and-propagating-changes.md).
+- Můžete definovat pravidla a události, které sledují stav vlastnosti. Další informace najdete v tématu [reagování na změny a šíření změn](../modeling/responding-to-and-propagating-changes.md).
 
-- Transakce zabránit nekonzistentní stavy. Další informace najdete v tématu [navigace a aktualizace modelu v programovém kódu](../modeling/navigating-and-updating-a-model-in-program-code.md).
+- Transakce zabraňují nekonzistentním stavům. Další informace naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-  Když vyberete doménová vlastnost, která v diagramu nebo v Průzkumníku DSL, zobrazí se následující položky v okně Vlastnosti. Další informace o tom, jak používat tyto položky, naleznete v tématu [přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md).
+  Když vyberete doménovou vlastnost v diagramu nebo v Průzkumníku DSL, uvidíte v okno Vlastnosti následující položky. Další informace o tom, jak tyto položky použít, najdete v tématu [přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
 |Vlastnost|Popis|Výchozí hodnota|
 |-|-|-|
-|**Popis**|Popis, který se používá k dokumentu uživatelského rozhraní (UI) vygenerovaného návrháře.|\<žádné >|
-|**Zobrazovaný název**|Název, který se zobrazí ve vygenerovaném návrháři u této vlastnosti domény. Může obsahovat mezery a interpunkční znaménka, například "skladby Title".|\<žádné >|
-|**Poskytovatel názvů elementů**|To platí jenom v případě, že jste nastavili `Is Element Name` k `true`. Můžete napsat kód, který poskytuje název pro nový prvek doménové třídy přepisuje výchozí chování.<br /><br /> V souboru kódu v projektu DSL, vytvořte třídu, která je odvozena od <xref:Microsoft.VisualStudio.Modeling.ElementNameProvider>.<br /><br /> Potom v Průzkumník DSL, klikněte pravým tlačítkem na kořenový DSL a klikněte na tlačítko Přidat externí. Zadejte název vaší třídy.<br /><br /> Znovu vyberte tento doménová vlastnost a v rozevíracím seznamu vyberte název třídy.|\<žádné >|
-|**Modifikátor přístupu metody getter**|Úroveň přístupu doménové třídy (`public` nebo `internal`). Tato volba určuje obor, ve které program kód může přistupovat k vlastnosti.|`public`|
-|**Klíčové slovo nápovědy**|Nepovinné klíčové slovo, je použít k indexování nápovědy klávesy F1 pro tuto doménovou vlastnost.|\<žádné >|
-|**Je nelze procházet**|Pokud `True`, doménovou vlastnost se zobrazí uživatelům v okně Vlastnosti, pokud modely tento DSL otevřít.<br /><br /> Pokud `False`, vlastnost domain skryt v uživatelském rozhraní.<br /><br /> Pokud chcete, aby vlastnost domain zobrazena, ale jen pro čtení, nastavte **je jen pro čtení uživatelského rozhraní**.|`True`|
-|**Je název elementu**|Pokud `True`, tato vlastnost domény se zobrazí jako název jeho element modelu v Průzkumníku DSL.<br /><br /> Nové prvky modelu, získají jedinečné výchozí hodnotu pro tuto vlastnost. Pokud chcete řídit, jak vygenerovat tyto hodnoty, nastavte **poskytovatel názvů elementů**.|`False`|
-|**Je uživatelské rozhraní jen pro čtení**|Pokud `True`, nelze změnit hodnoty vlastnosti domény pomocí uživatelského rozhraní. Je stále možné nastavit programy a se nebude zobrazovat v okně Vlastnosti.<br /><br /> Pokud chcete skrýt doménová vlastnost od uživatele, nastavte **je Prohlížitelná**. Pokud chcete k řízení přístupu podle aplikací, nastavte **modifikátor přístupu metody Setter**.|`False`|
-|**Typ**|Druh vlastnosti domény (`Normal`, `Calculated`, nebo `CustomStorage`). Další informace najdete v tématu [vypočtené a vlastní vlastnosti úložiště](../modeling/calculated-and-custom-storage-properties.md).|`Normal`|
-|**Název**|Název této vlastnosti domény. Musí být platný identifikátor, příklad **SongTitle**.|\<žádné >|
-|**Poznámky**|Neformální poznámky, které jsou spojené s touto vlastností domény.|\<žádné >|
-|**Modifikátor přístupu metody setter**|Modifikátor přístupu pro metodu setter. Tato volba určuje obor, v programu, který kód můžete nastavit vlastnost.|`public`|
-|**Typ**|Typ vlastnosti. Pokud chcete přidat do seznamu dostupných typů, klikněte pravým tlačítkem na kořenový DSL v Průzkumník DSL a klikněte na tlačítko **přidat externí**.|`String`|
+|**Popis**|Popis, který se používá k dokumentaci uživatelského rozhraní (UI) vygenerovaného návrháře.|\<none >|
+|**Zobrazované jméno**|Název, který se zobrazí ve vygenerovaném návrháři pro tuto doménovou vlastnost. Může obsahovat mezery a interpunkční znaménka, například "název skladby".|\<none >|
+|**Poskytovatel názvu elementu**|To platí jenom v případě, že jste nastavili `Is Element Name` na `true`. Můžete napsat kód, který poskytuje název nového prvku doménové třídy a přepisuje výchozí chování.<br /><br /> V souboru kódu v projektu DSL vytvořte třídu, která je odvozena z <xref:Microsoft.VisualStudio.Modeling.ElementNameProvider>.<br /><br /> Pak v Průzkumníku DSL klikněte pravým tlačítkem na kořen DSL a pak klikněte na Přidat externí typ. Zadejte název vaší třídy.<br /><br /> Znovu vyberte tuto vlastnost domény a v rozevíracím seznamu vyberte název třídy.|\<none >|
+|**Modifikátor přístupu getter**|Úroveň přístupu doménové třídy (`public` nebo `internal`). Tento ovládací prvek určuje obor, ve kterém má kód programu přístup k vlastnosti.|`public`|
+|**Klíčové slovo Help**|Volitelné klíčové slovo, které se používá k indexování Nápověda F1 pro tuto doménovou vlastnost.|\<none >|
+|**Je Procházet**|Pokud je `True`, zobrazí se uživateli v okně Vlastnosti doménová vlastnost, když jsou modely této DSL otevřené.<br /><br /> Pokud je `False`, doménová vlastnost je v uživatelském rozhraní skrytá.<br /><br /> Pokud chcete vlastnost domain nastavit jako viditelnou, ale jen pro čtení, nastaví **se jako uživatelské rozhraní jen pro čtení**.|`True`|
+|**Je název elementu**|Pokud `True`, tato doménová vlastnost se zobrazí jako název svého prvku modelu v Průzkumníku DSL.<br /><br /> Nové prvky modelu získají jedinečnou výchozí hodnotu pro tuto vlastnost. Pokud chcete určit, jak se tyto hodnoty generují, nastavte **poskytovatele názvu elementu**.|`False`|
+|**Je pouze pro čtení uživatelského rozhraní**|Pokud `True`, hodnota vlastnosti doména se nedá změnit pomocí uživatelského rozhraní. Pořád ho můžou nastavit programy a zobrazí se v okno Vlastnosti.<br /><br /> Chcete-li skrýt vlastnost domény od uživatele, lze nastavit nastavení **Procházet**. Pokud chcete řídit přístup pomocí programů, nastavte **modifikátor přístupu setter**.|`False`|
+|**Plnění**|Druh doménové vlastnosti (`Normal`, `Calculated` nebo `CustomStorage`). Další informace najdete v tématu věnovaném [vypočítaným a vlastním vlastnostem úložiště](../modeling/calculated-and-custom-storage-properties.md).|`Normal`|
+|**Jméno**|Název této doménové vlastnosti. Musí to být platný identifikátor, například **SongTitle**.|\<none >|
+|**Poznámky**|Neformální poznámky, které jsou spojeny s touto doménovou vlastností.|\<none >|
+|**Modifikátor přístupu metody setter**|Modifikátor přístupu pro metodu setter. Tento ovládací prvek určuje rozsah, ve kterém může kód programu nastavit vlastnost.|`public`|
+|**Textový**|Typ vlastnosti. Pokud chcete přidat seznam dostupných typů, klikněte pravým tlačítkem na kořen DSL v Průzkumníku DSL a pak klikněte na **Přidat externí typ**.|`String`|
 
 ## <a name="see-also"></a>Viz také
 
-- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -1,5 +1,5 @@
 ---
-title: Zvolte dialogové okno operaci (starší verze) | Dokumentace Microsoftu
+title: Dialogové okno zvolit operaci (starší verze) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -8,37 +8,35 @@ f1_keywords:
 - System.Workflow.Activities.Design.OperationPickerDialog.UI
 ms.assetid: bc3ec902-7797-494e-af48-e70c97eb6779
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b42ecd7ad38144786ff12d5cad20c9e8a1437646
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f2736db7e18733a9477238cafad21088eb135e89
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63417561"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659165"
 ---
 # <a name="choose-operation-dialog-box-legacy"></a>Dialogové okno Zvolit operaci (starší verze)
-Toto téma popisuje, jak používat **zvolte operaci** dialogové okno v starší [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] potřeba cílit na platformu [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].  
-  
- **Zvolte operaci** dialogové okno se používá pro výběr operace přidružení <xref:System.Workflow.Activities.ReceiveActivity> aktivity nebo <xref:System.Workflow.Activities.SendActivity> aktivity. Další informace o používání toto dialogové okno s těmito aktivitami v tématu [jak: Implementace operace kontraktu WCF (starší verze)](../workflow-designer/how-to-implement-a-windows-communication-foundation-contract-operation-legacy.md) a [jak: Vyvolání operace kontraktu WCF (starší verze)](../workflow-designer/how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md).  
-  
- Následující tabulka popisuje prvky uživatelského rozhraní (UI) **zvolte operace** dialogové okno.  
-  
-|Prvek uživatelského rozhraní (UI)|Popis|  
-|----------------|-----------------|  
-|**Přidat smlouvy**|Vytvoří nové smlouvy. Můžete definovat nové operace v této smlouvě. (Používá se s <xref:System.Workflow.Activities.ReceiveActivity> pouze.)|  
-|**Operace přidání**|Přidá nové operace do nové smlouvy, které jste vytvořili **zvolte operace** dialogové okno. **Poznámka:**  Můžete přidat nové operace pouze na vytvoříte prostřednictvím smlouvy **zvolte operace** dialogové okno. <br /><br /> (Používá se s <xref:System.Workflow.Activities.ReceiveActivity> pouze.)|  
-|**Import...**|Importuje dříve definovanou smlouvu a umožňuje vybrat operace z této smlouvy.|  
-|**Název operace**|Název aktuálně vybranou operaci. Je k dispozici pro úpravy pouze v případě, že jste vytvořili operaci prostřednictvím tohoto textového pole **zvolte operace** dialogové okno.|  
-|**Parametry**|Karta obsahující definice parametru pro aktuálně vybranou operaci. **Poznámka:**  Parametr definice lze změnit pouze v případě, že jste vytvořili operaci prostřednictvím **zvolte operace** dialogové okno.|  
-|**Vlastnosti**|Karta obsahující <xref:System.Net.Security.ProtectionLevel> nastavení pro zprávy odeslané mezi klientem a službou. **Poznámka:**  Na této kartě je povolená jenom v případě, že jste vytvořili operaci prostřednictvím **zvolte operace** dialogové okno.|  
-|**Oprávnění**|Karta obsahující <xref:System.Workflow.Activities.OperationInfoBase.PrincipalPermissionName%2A> a <xref:System.Workflow.Activities.OperationInfoBase.PrincipalPermissionRole%2A> vlastnosti uživatele, kteří jsou povoleny pro volání této operace. Například pokud pouze uživatelé ze skupiny Administrators se může volat tuto operaci, pak by napíšete "Administrators" **Role** textového pole.<br /><br /> Na této kartě je povolen pro obě operace vytvořených prostřednictvím **ChooseOperation** dialogové okno a operace, jež byla importována pomocí **Import** tlačítko.|  
-  
+Toto téma popisuje, jak použít dialogové okno **Vybrat operaci** ve starší verzi [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+
+ Dialogové okno **Zvolit operaci** slouží k výběru operace, která se má přidružit k aktivitě <xref:System.Workflow.Activities.ReceiveActivity> nebo aktivitě <xref:System.Workflow.Activities.SendActivity>. Další informace o použití tohoto dialogového okna spolu s těmito aktivitami naleznete v tématu [How to: Implement a Operations kontrakt WCF (starší verze)](../workflow-designer/how-to-implement-a-windows-communication-foundation-contract-operation-legacy.md) a [How to: Invoke Operations kontraktu WCF (starší verze)](../workflow-designer/how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md).
+
+ Následující tabulka popisuje prvky uživatelského rozhraní (UI) dialogového okna **Zvolit operaci** .
+
+|Prvek uživatelského rozhraní (UI)|Popis|
+|----------------|-----------------|
+|**Přidat kontrakt**|Vytvoří novou smlouvu za vás. U této smlouvy můžete definovat nové operace. (Používá se jenom pro <xref:System.Workflow.Activities.ReceiveActivity>.)|
+|**Přidat operaci**|Přidá nové operace do nového kontraktu, který jste vytvořili v dialogovém okně **Vybrat operaci** . **Poznámka:**  Nové operace můžete přidat pouze ke smlouvám, které jste vytvořili v dialogovém okně **Vybrat operaci** . <br /><br /> (Používá se jenom pro <xref:System.Workflow.Activities.ReceiveActivity>.)|
+|**Importovat...**|Importuje dříve definovaný kontrakt a umožňuje vybrat operaci z této smlouvy.|
+|**Název operace**|Název aktuálně vybrané operace. Toto textové pole je k dispozici pro úpravy pouze v případě, že jste vytvořili operaci pomocí dialogového okna **Zvolit operaci** .|
+|**Parametry**|Karta obsahující definice parametrů pro aktuálně vybranou operaci **Poznámka:**  Definice parametrů lze změnit pouze v případě, že jste vytvořili operaci pomocí dialogového okna **Zvolit operaci** .|
+|**Vlastnosti**|Karta obsahující nastavení <xref:System.Net.Security.ProtectionLevel> pro zprávy odesílané mezi klientem a službou. **Poznámka:**  Tato karta je povolena pouze v případě, že jste vytvořili operaci pomocí dialogového okna **Zvolit operaci** .|
+|**Oprávnění**|Karta obsahující <xref:System.Workflow.Activities.OperationInfoBase.PrincipalPermissionName%2A> a <xref:System.Workflow.Activities.OperationInfoBase.PrincipalPermissionRole%2A> vlastnosti uživatelů, kterým je povolena volání této operace. Například pokud bylo povoleno volání této operace pouze uživatelům ze skupiny Administrators, pak do textového pole **role** zapíšete "Administrators".<br /><br /> Tato karta je povolena pro obě operace vytvořené prostřednictvím dialogového okna **ChooseOperation** a operace, které byly importovány prostřednictvím tlačítka **Import** .|
+
 > [!NOTE]
-> **Zvolte operaci** dialogové okno zobrazí pouze smluv nebo operací, které používají jiné <xref:System.Workflow.Activities.SendActivity> aktivitám v pracovním postupu. Podobně **zvolte operaci** dialogové okno pro <xref:System.Workflow.Activities.ReceiveActivity> aktivity se zobrazí pouze smluv nebo operací, které používají jiné **ReceiveActivity** aktivitám v pracovním postupu.  
-  
-## <a name="see-also"></a>Viz také  
- [Postupy: Implementace operace kontraktu WCF (starší verze)](../workflow-designer/how-to-implement-a-windows-communication-foundation-contract-operation-legacy.md)   
- [Postupy: Vyvolání operace kontraktu WCF (starší verze)](../workflow-designer/how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md)   
- [Nápověda k uživatelskému rozhraní návrháře pro programovací model Windows Workflow Foundation](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)
+> Dialogové okno **Zvolit operaci** zobrazuje jenom kontrakty nebo operace, které používají jiné aktivity <xref:System.Workflow.Activities.SendActivity> v pracovním postupu. Podobně dialog **Vybrat operaci** pro aktivity <xref:System.Workflow.Activities.ReceiveActivity> zobrazuje pouze kontrakty nebo operace, které používají jiné aktivity **ReceiveActivity** v pracovním postupu.
+
+## <a name="see-also"></a>Viz také
+ [Postupy: implementace operace kontraktu WCF (starší verze)](../workflow-designer/how-to-implement-a-windows-communication-foundation-contract-operation-legacy.md) [Postupy: vyvolání operace kontraktu WCF (starší verze)](../workflow-designer/how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md) [Návrhář starší verze pro programovací model Windows Workflow Foundation nápovědu k uživatelskému rozhraní](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)

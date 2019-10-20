@@ -1,5 +1,5 @@
 ---
-title: 'CA1407: Vyhněte se statickým členům ve viditelných typech modelu COM | Dokumentace Microsoftu'
+title: 'CA1407: Vyhněte se statickým členům ve viditelných typech modelu COM | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - AvoidStaticMembersInComVisibleTypes
 ms.assetid: bebd0776-ad04-453c-bca8-8c124c2d7840
 caps.latest.revision: 25
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 93c56c17998bbe672ed5816fc950eec5cc56b1c3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 6996d210417a56dd83532c481aaa0dc80b9f23ea
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65705737"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655239"
 ---
 # <a name="ca1407-avoid-static-members-in-com-visible-types"></a>CA1407: Vyhněte se statickým členům ve viditelných typech modelu COM
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,20 +29,20 @@ ms.locfileid: "65705737"
 |-|-|
 |TypeName|AvoidStaticMembersInComVisibleTypes|
 |CheckId|CA1407|
-|Kategorie|Microsoft.Interoperability|
+|Kategorie|Microsoft. interoperabilita|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
- Obsahuje typ, který je označen jako viditelný pro Model COM (Component Object) `public``static` metoda.
+## <a name="cause"></a>příčina
+ Typ, který je konkrétně označen jako viditelný pro model COM (Component Object Model) obsahuje metodu `public``static`.
 
 ## <a name="rule-description"></a>Popis pravidla
- Model COM nepodporuje `static` metody.
+ Model COM nepodporuje metody `static`.
 
- Toto pravidlo se ignoruje vlastnost a přístupových objektů událostí, přetížení metody nebo metody, které jsou označeny pomocí operátoru <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> atribut nebo <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> atribut.
+ Toto pravidlo ignoruje přístupové objekty vlastností a událostí, metody přetížení operátoru nebo metody, které jsou označeny pomocí atributu <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> nebo atributu <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName>.
 
- Ve výchozím nastavení, jsou následující viditelné modelu COM: sestavení, veřejné typy, členy veřejné instance ve veřejných typů a členů veřejných hodnotových typech.
+ Ve výchozím nastavení jsou následující prvky viditelné v modelu COM: sestavení, veřejné typy, členy veřejné instance ve veřejných typech a všechny členy typů veřejné hodnoty.
 
- Pro toto pravidlo na výskyt, úrovni sestavení <xref:System.Runtime.InteropServices.ComVisibleAttribute> musí být nastaveno na `false` a třída - <xref:System.Runtime.InteropServices.ComVisibleAttribute> musí být nastaveno na `true`, jak ukazuje následující kód.
+ Pro toto pravidlo musí být <xref:System.Runtime.InteropServices.ComVisibleAttribute> na úrovni sestavení nastavená na `false` a třída-<xref:System.Runtime.InteropServices.ComVisibleAttribute> musí být nastavená na `true`, jak ukazuje následující kód.
 
 ```csharp
 using System;
@@ -62,28 +62,28 @@ namespace Samples
 ```
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, změňte návrhu a použít metodu instance, která poskytuje stejné funkce jako `static` metody.
+ Chcete-li opravit porušení tohoto pravidla, změňte návrh tak, aby používal metodu instance, která poskytuje stejné funkce jako metoda `static`.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění tohoto pravidla, pokud klient modelu COM nevyžaduje přístup k funkci, která je poskytována `static` metody.
+ V případě, že klient modelu COM nevyžaduje přístup k funkcím, které jsou poskytovány metodou `static`, je bezpečné potlačit upozornění od tohoto pravidla.
 
 ## <a name="example-violation"></a>Příklad porušení
 
 ### <a name="description"></a>Popis
- Následující příklad ukazuje `static` metodu, která poruší toto pravidlo.
+ Následující příklad ukazuje metodu `static`, která toto pravidlo porušuje.
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Interoperability.ComVisibleStaticMembersViolation#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Interoperability.ComVisibleStaticMembersViolation/cs/FxCop.Interoperability.ComVisibleStaticMembersViolation.cs#1)]
 
 ### <a name="comments"></a>Komentáře
- V tomto příkladu **Book.FromPages** metodu nejde volat z modelu COM.
+ V tomto příkladu nelze volat metodu **Book. FromPages** z modelu COM.
 
-## <a name="example-fix"></a>Oprava příkladu
+## <a name="example-fix"></a>Příklad opravy
 
 ### <a name="description"></a>Popis
- Chcete-li vyřešit porušení zásad v předchozím příkladu, můžete změnit metodu na metodu instance, ale, který nemá smysl v této instanci. Lepším řešením je výslovně `ComVisible(false)` metodě k němu vymazat s ostatními vývojáři, že metoda je nemohou vidět z modelu COM.
+ Chcete-li opravit porušení v předchozím příkladu, můžete změnit metodu na metodu instance, která ale v této instanci nedává smysl. Lepším řešením je explicitně použít `ComVisible(false)` na metodu, aby bylo jasné, že by nebylo možné z modelu COM vyjasnit jiným vývojářům, že tuto metodu nelze zobrazit.
 
- Následující příklad použije <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> metody.
+ Následující příklad se vztahuje <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> na metodu.
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Interoperability.ComVisibleStaticMembersFixed#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Interoperability.ComVisibleStaticMembersFixed/cs/FxCop.Interoperability.ComVisibleStaticMembersFixed.cs#1)]
@@ -93,7 +93,7 @@ namespace Samples
 
  [CA1406: Vyhněte se argumentům Int64 pro klienty jazyka Visual Basic 6](../code-quality/ca1406-avoid-int64-arguments-for-visual-basic-6-clients.md)
 
- [CA1413: Vyhněte se neveřejným polím v hodnotách viditelných modelu COM](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
+ [CA1413: Vyhněte se neveřejným polím v hodnotách viditelných modulem COM](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
 
 ## <a name="see-also"></a>Viz také
  [Spolupráce s nespravovaným kódem](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)

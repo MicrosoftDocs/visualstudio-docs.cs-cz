@@ -28,19 +28,19 @@ helpviewer_keywords:
 - Text Editor [Visual Studio]
 - editors, global settings
 ms.assetid: 4ac21e48-3243-4141-9058-7eaf12b3cde7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b23edb73ee08762ae8e3efaea4f883693aaacbd
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: ee7d7ebab51a3edfeb84a95609c6bdad581b6753
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606015"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666214"
 ---
-# <a name="options-dialog-box-text-editor--general"></a>Dialogové okno Možnosti: Textový editor \> – obecné
+# <a name="options-dialog-box-text-editor--general"></a>Dialogové okno Možnosti: textový editor \> obecné
 
 Toto dialogové okno umožňuje změnit globální nastavení pro Editor kódu a text v aplikaci Visual Studio. Chcete-li zobrazit toto dialogové okno, vyberte možnost **Možnosti** v nabídce **nástroje** , rozbalte složku **textový editor** a pak vyberte možnost **Obecné**.
 
@@ -68,7 +68,7 @@ Je-li vybrána tato možnost, zadané konvence kódování pro projekt přepíš
 
 ### <a name="enable-mouse-click-to-perform-go-to-definition"></a>Povolit možnost přejít k definici kliknutím myši
 
-Když vyberete tuto možnost, můžete stisknout **CTRL** a při kliknutí myší umístit ukazatel myši na prvek. Provedete to tak, že přejdete do definice vybraného elementu. Můžete také zvolit **ALT** nebo **CTRL** + **ALT** z rozevíracího seznamu **použít klávesu modifikátoru** .
+Když vyberete tuto možnost, můžete stisknout **CTRL** a při kliknutí myší umístit ukazatel myši na prvek. Provedete to tak, že přejdete do definice vybraného elementu. Můžete také zvolit **ALT** nebo **CTRL**  + **ALT** v rozevíracím seznamu **použít klávesu modifikátoru** .
 
 Zaškrtněte políčko **Otevřít definici v náhledu zobrazení** , chcete-li v okně zobrazit definici elementu, aniž byste museli přejít pryč z aktuálního umístění v editoru kódu.
 

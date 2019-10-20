@@ -9,17 +9,17 @@ helpviewer_keywords:
 - reliability warnings
 - managed code analysis warnings, reliability warnings
 ms.assetid: 77886846-10a2-4585-968a-7eb60ebe07e8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb39bb5f59373f52d77c7cc5d13d12544d4c0314
-ms.sourcegitcommit: 3e94d9fb6dc56fa8b23fbacd5d11cf8d6e7e18f1
+ms.openlocfilehash: 602f372e11c4a9a8506186535958fc4f22da7806
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252587"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649119"
 ---
 # <a name="reliability-warnings"></a>Upozornění spolehlivosti
 
@@ -27,10 +27,10 @@ Upozornění na spolehlivost podporují spolehlivost knihovny a aplikace, jako j
 
 |Pravidlo|Popis|
 |----------|-----------------|
-|@NO__T – 0CA2000: Uvolnění objektů před ztrátou rozsahu @ no__t-0|Protože může dojít k mimořádné události, která zabrání spuštění destruktoru objektu, měl by být objekt explicitně uvolněn předtím, než se všechny odkazy na něj dostanou mimo rozsah.|
-|@NO__T – 0CA2001: Vyhněte se volání problematických metod @ no__t-0|Člen volá potencionálně nebezpečnou nebo problematickou metodu.|
-|@NO__T – 0CA2002: Nepoužívejte zámky na objekty se slabou identitou @ no__t-0|Objekt má slabou identitu, pokud k němu lze přímo přistupovat přes hranice aplikační domény. Vlákno, které se pokouší získat zámek na objekt se slabou identitou, může být blokováno jiným vláknem v jiné aplikační doméně, které má zámek na stejný objekt.|
-|@NO__T – 0CA2003: Nevažovat vlákna za vlákna @ no__t-0|Spravované vlákno je považováno za vlákno Win32.|
-|@NO__T – 0CA2004: Odeberte volání GC. Udržení naživu @ no__t-0|Pokud převádíte na použití SafeHandle, odeberte všechna volání GC. Naživu (objekt). V takovém případě třídy by neměly muset volat GC. Udržení naživu za předpokladu, že nemají finalizační metodu, ale spoléhají na SafeHandle k finalizaci popisovače operačního systému pro ně.|
-|@NO__T – 0CA2006: Použít SafeHandle k zapouzdření nativních prostředků @ no__t-0|Použití IntPtr ve spravovaném kódu může znamenat možný problém zabezpečení a spolehlivosti. Všechna použití IntPtr musí být přezkoumána za účelem určení, zda je použití SafeHandle (nebo podobné technologie) na tomto místě vyžadováno.|
-|@NO__T – 0CA2007: Nečekat přímo na úlohu @ no__t-0|Asynchronní metoda [čeká](/dotnet/csharp/language-reference/keywords/await) přímo <xref:System.Threading.Tasks.Task>.|
+|[CA2000: Uvolňujte objekty před ztrátou oboru](../code-quality/ca2000.md)|Protože může dojít k mimořádné události, která zabrání spuštění destruktoru objektu, měl by být objekt explicitně uvolněn předtím, než se všechny odkazy na něj dostanou mimo rozsah.|
+|[CA2001: Vyhněte se volání problematických metod](../code-quality/ca2001.md)|Člen volá potencionálně nebezpečnou nebo problematickou metodu.|
+|[CA2002: Nepoužívejte zámky na objekty se slabou identitou](../code-quality/ca2002.md)|Objekt má slabou identitu, pokud k němu lze přímo přistupovat přes hranice aplikační domény. Vlákno, které se pokouší získat zámek na objekt se slabou identitou, může být blokováno jiným vláknem v jiné aplikační doméně, které má zámek na stejný objekt.|
+|[CA2003: Rozlišujte vlákénka od vláken](../code-quality/ca2003.md)|Spravované vlákno je považováno za vlákno Win32.|
+|[CA2004: Odeberte volání GC.KeepAlive](../code-quality/ca2004.md)|Pokud převádíte na použití SafeHandle, odeberte všechna volání GC. Naživu (objekt). V takovém případě třídy by neměly muset volat GC. Udržení naživu za předpokladu, že nemají finalizační metodu, ale spoléhají na SafeHandle k finalizaci popisovače operačního systému pro ně.|
+|[CA2006: Použijte SafeHandle pro zapouzdření nativních prostředků](../code-quality/ca2006.md)|Použití IntPtr ve spravovaném kódu může znamenat možný problém zabezpečení a spolehlivosti. Všechna použití IntPtr musí být přezkoumána za účelem určení, zda je použití SafeHandle (nebo podobné technologie) na tomto místě vyžadováno.|
+|[CA2007: nečekat přímo na úlohu](../code-quality/ca2007.md)|Asynchronní metoda [čeká](/dotnet/csharp/language-reference/keywords/await) přímo <xref:System.Threading.Tasks.Task>.|

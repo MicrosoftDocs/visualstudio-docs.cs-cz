@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno definice vlastnosti CorrelatesOn | Dokumentace Microsoftu
+title: Dialogové okno definice vlastnosti CorrelatesOn | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -8,32 +8,30 @@ f1_keywords:
 - CorrelatesOnDefinition.UI
 ms.assetid: 8b2b627a-f236-4479-aa09-525df65e3413
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fd03e1a8615e75d3f00f79eb10b7a7ff97f0eb33
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e2a9a6f7ec6b8bf246ebfc03c166780b229e1aee
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977377"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656942"
 ---
 # <a name="correlateson-definition-dialog-box"></a>Dialogové okno Definice vlastnosti CorrelatesOn
-**Vlastnosti CorrelatesOn** dialogové okno se používá v [!INCLUDE[wfd1](../includes/wfd1-md.md)] upravit <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> vlastnost <xref:System.ServiceModel.Activities.Receive> aktivity. [!INCLUDE[crdefault](../includes/crdefault-md.md)] [Receive](../workflow-designer/receive-activity-designer.md) tématu.  
-  
- Korelace mezi <xref:System.ServiceModel.Activities.Receive> aktivit Určuje, jak různé služby operace připojení mezi sebou v pracovním postupu.  
-  
- Následující tabulka popisuje prvky uživatelského rozhraní (UI) **vlastnosti CorrelatesOn** dialogové okno.  
-  
-|Prvek uživatelského rozhraní (UI)|Popis|  
-|----------------|-----------------|  
-|**CorrelatesWith**|<xref:System.ServiceModel.Activities.CorrelationHandle> , Který slouží k zprávy směruje do instance odpovídající pracovního postupu.|  
-|**Dotazy XPath**|Dvojice klíč/hodnota, která obsahuje dotazy používané k extrakci korelace dat z příchozí zprávy. To odpovídá <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> vlastnost. Jsou součástí dotazy XPath <xref:System.ServiceModel.MessageQuerySet> objektu.|  
-  
-## <a name="to-launch-the-correlateson-dialog-box"></a>Chcete-li spustit dialogové okno Vlastnosti CorrelatesOn  
- **Receive** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřazené k [!INCLUDE[wfd2](../includes/wfd2-md.md)] surface všude, kde aktivity jsou obvykle umístěny. Tím se vytvoří <xref:System.ServiceModel.Activities.Receive> aktivity s výchozím <xref:System.Activities.Activity.DisplayName%2A> Receive. Vyberte **Receive** návrháře aktivit a klikněte na tlačítko se třemi tečkami vedle textu (kolekce) pro **vlastnosti CorrelatesOn** v mřížce vlastností pro vlastnost **definice vlastnosti CorrelatesOn**  dialogového okna.  
-  
-## <a name="see-also"></a>Viz také  
- <xref:System.ServiceModel.Activities.Receive>   
- [Přidat inicializátory korelace dialogové okno](../workflow-designer/add-correlationinitializers-dialog-box.md)   
- [Dialogové okno Inicializace korelace](../workflow-designer/initialize-correlation-dialog-box.md)
+Dialogové okno **vlastnosti CorrelatesOn** se používá v [!INCLUDE[wfd1](../includes/wfd1-md.md)] k úpravě vlastnosti <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> aktivity <xref:System.ServiceModel.Activities.Receive>. [!INCLUDE[crdefault](../includes/crdefault-md.md)] téma [Receive](../workflow-designer/receive-activity-designer.md) .
+
+ Korelace mezi <xref:System.ServiceModel.Activities.Receive> aktivitami určuje, jak se různé operace služby vzájemně spojují v pracovním postupu.
+
+ Následující tabulka popisuje prvky uživatelského rozhraní (UI) v dialogovém okně **vlastnosti CorrelatesOn** .
+
+|Prvek uživatelského rozhraní (UI)|Popis|
+|----------------|-----------------|
+|**Popisovač CorrelatesWith**|@No__t_0, která se používá ke směrování zprávy do příslušné instance pracovního postupu.|
+|**Dotazy XPath**|Pár klíč/hodnota, který obsahuje dotazy použité k extrakci korelačních dat z příchozích zpráv. To odpovídá vlastnosti <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A>. Dotazy XPath jsou obsaženy v objektu <xref:System.ServiceModel.MessageQuerySet>.|
+
+## <a name="to-launch-the-correlateson-dialog-box"></a>Spuštění dialogového okna vlastnosti CorrelatesOn
+ Návrhář aktivity **Receive** lze přetáhnout ze **sady nástrojů** a vyřadit na [!INCLUDE[wfd2](../includes/wfd2-md.md)] plochu všude, kde jsou obvykle umístěny aktivity. Tím se vytvoří aktivita <xref:System.ServiceModel.Activities.Receive> s výchozím <xref:System.Activities.Activity.DisplayName%2A> příjmu. Vyberte návrháře aktivity **Receive** a klikněte na tlačítko se třemi tečkami vedle textu (kolekce) pro vlastnost **vlastnosti CorrelatesOn** v tabulce vlastností pro zobrazení dialogového okna **definice vlastnosti CorrelatesOn** .
+
+## <a name="see-also"></a>Viz také
+ [dialogová okna pro inicializaci korelace](../workflow-designer/initialize-correlation-dialog-box.md) dialogového okna <xref:System.ServiceModel.Activities.Receive> [Přidat inicializátoři CorrelationInitializers](../workflow-designer/add-correlationinitializers-dialog-box.md)

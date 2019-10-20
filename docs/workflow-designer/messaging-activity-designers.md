@@ -3,23 +3,23 @@ title: Návrhář postupu provádění – návrháři aktivit zasílání zprá
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 897e63cf-a42f-4edd-876f-c4ccfffaf6d6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a9868b5eb52edde8e12d6a3b4f5edab1a4a9e499
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 0ba6aaaf0f6e77714af14e690d4944eac031e1d7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747102"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650148"
 ---
 # <a name="messaging-activity-designers"></a>Návrháři aktivit zasílání zpráv
 
-Zasílání zpráv návrháři aktivit umožňují vytvářet a konfigurovat zasílání zpráv aktivity, které odesílání a příjem zpráv Windows Communication Foundation (WCF) z aplikace pro Windows Workflow Foundation (WF). Pět zasílání zpráv aktivity byly zavedeny v rozhraní .NET Framework 4. Návrhář pracovního postupu poskytuje dva návrháři šablon, které vám umožní spravovat zasílání zpráv v rámci pracovního postupu.
+Návrháři aktivity zasílání zpráv slouží k vytváření a konfiguraci aktivit zasílání zpráv, které odesílají a přijímají zprávy Windows Communication Foundation (WCF) z aplikace programovací model Windows Workflow Foundation (WF). V .NET Framework 4 bylo zavedeno pět aktivit zasílání zpráv. Návrhář postupu provádění poskytuje dva návrháře šablon, které vám umožní spravovat zprávy v rámci pracovního postupu.
 
-V tématech obsažené v této části a uvedené v následující tabulce najdete pokyny, jak používat návrháře postupu provádění aktivity a návrháři šablon.
+Témata obsažená v této části a uvedená v následující tabulce obsahují pokyny k použití Návrhář postupu provádění a návrháře šablon.
 
 - <xref:System.Activities.Activity>
 
@@ -37,7 +37,7 @@ V tématech obsažené v této části a uvedené v následující tabulce najde
 
 ## <a name="related-sections"></a>Související oddíly
 
-U jiných typů návrháři aktivit najdete v následujících tématech:
+Další typy návrháře aktivit najdete v následujících tématech:
 
 - [Tok řízení](../workflow-designer/control-flow-activity-designers.md)
 

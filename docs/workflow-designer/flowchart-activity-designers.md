@@ -1,23 +1,23 @@
 ---
-title: Návrhář postupu provádění – návrháři aktivit vývojového diagramu
+title: Návrhář postupu provádění – návrháři aktivit v vývojovém diagramu
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 8b7b4aa6-d27d-45c8-87c2-641440d38afc
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f3b816c0e486eeaad49bac0b0054d7d3c2bff9b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c7426ea21e1928eb46a2b733df7eb24c9de6e147
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949640"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650443"
 ---
 # <a name="flowchart-activity-designers"></a>Návrháři aktivit vývojového diagramu
 
-Návrhář postupu provádění obsahuje několik poskytované systémem aktivit, které můžete použít při vytváření pracovního postupu. Tato část obsahuje poskytované systémem aktivity používat ke správě vývojových v rámci pracovního postupu. Následující témata obsahují jejich popis a pokyny, jak je používat.
+Návrhář postupu provádění zahrnuje řadu aktivit poskytovaných systémem, které můžete použít při vytváření pracovních postupů. Tato část obsahuje aktivity poskytované systémem, které se používají ke správě vývojových diagramů v rámci pracovního postupu. Následující témata popisují tyto aktivity a poskytují pokyny k jejich použití.
 
 ## <a name="reference"></a>Odkaz
  <xref:System.Activities.Activity>
@@ -29,7 +29,7 @@ Návrhář postupu provádění obsahuje několik poskytované systémem aktivit
  <xref:System.Activities.Statements.FlowSwitch%601>
 
 ## <a name="related-sections"></a>Související oddíly
- U jiných typů návrháři aktivit naleznete v následujících tématech.
+ Další typy návrháře aktivit najdete v následujících tématech.
 
  [Tok řízení](../workflow-designer/control-flow-activity-designers.md)
 

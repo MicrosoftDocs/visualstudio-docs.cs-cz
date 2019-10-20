@@ -1,5 +1,5 @@
 ---
-title: Sada Modeling SDK – jazyky domény | Dokumentace Microsoftu
+title: Modelování sady SDK – jazyky specifické pro doménu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Domain-Specific Language
 ms.assetid: 17a531e2-1964-4a9d-84fd-6fb1b4aee662
 caps.latest.revision: 79
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7bcfe986877305c55f6b459b8c519e4f12f5a503
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b67f74397b8f3c3e410c4282d8a74b7309bc1bc9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68159020"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668641"
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Sada Modeling SDK pro sadu Visual Studio – jazyky domény
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pomocí sady SDK modelování pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (MSDK) můžete vytvořit výkonné založené na modelu vývojářské nástroje, které můžete integrovat do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Jako příklad jsou pomocí MSDK vytvořeny nástroje UML. Stejným způsobem můžete vytvořit jednu nebo několik definic modelu a integrovat je do sady nástrojů.
+Pomocí sady Modeling SDK pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (MSDK) můžete vytvářet výkonné vývojové nástroje založené na modelu, které můžete integrovat do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Jako příklad jsou pomocí MSDK vytvořeny nástroje UML. Stejným způsobem můžete vytvořit jednu nebo několik definic modelu a integrovat je do sady nástrojů.
 
- V centru MSDK je definice modelu, který je vytvořen, aby představoval pojmy v oblasti vašeho podnikání. Je možné ohraničit model s širokou škálu nástrojů, jako je diagramatické zobrazení, možnost generování kódů a jiných artefaktů a příkazů pro transformaci modelu a možnost interakce s kódem a dalšími objekty v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Při vývoji lze model kombinovat s dalšími modely a nástroji, jež tvoří výkonnou sadu nástrojů, které jsou zaměřeny na vývoj.
+ V centru MSDK je definice modelu, který je vytvořen, aby představoval pojmy v oblasti vašeho podnikání. Model můžete uzavřít pomocí nejrůznějších nástrojů, jako je například zobrazení diagramatické, schopnost generovat kód a jiné artefakty, příkazy pro transformaci modelu a schopnost pracovat s kódem a dalšími objekty v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Při vývoji lze model kombinovat s dalšími modely a nástroji, jež tvoří výkonnou sadu nástrojů, které jsou zaměřeny na vývoj.
 
  MSDK umožňuje rychlý vývoj modelu ve formě jazyka specifického pro doménu (DSL). Začínáte se speciálním editorem, kterým definujete schéma nebo abstraktní syntaxi a grafickou notaci. Z této definice vygeneruje VMSDK následující položky:
 
@@ -41,11 +41,11 @@ Pomocí sady SDK modelování pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (
   Můžete přizpůsobit a rozšířit všechny tyto funkce. Vaše rozšíření jsou integrována tak, že můžete i nadále aktualizovat definici DSL a znovu generovat funkce bez ztráty rozšíření.
 
 ## <a name="samples-and-the-latest-information"></a>Ukázky a nejnovější informace
- [Stáhněte si modelování SDK pro Visual Studio 2015](http://www.microsoft.com/download/details.aspx?id=48148)
+ [Stažení sady Modeling SDK pro Visual Studio 2015](http://www.microsoft.com/download/details.aspx?id=48148)
 
- [Ukázky](http://go.microsoft.com/fwlink/?LinkId=186128) pro modelování SDK pro Visual Studio.
+ [Ukázky](http://go.microsoft.com/fwlink/?LinkId=186128) pro sadu SDK pro modelování pro Visual Studio
 
- Návod s pokročilými technikami a řešení potíží najdete na webu [fórum Visual Studio DSL & modelování rozšiřitelnosti nástrojů](http://go.microsoft.com/fwlink/?LinkID=186074).
+ Pokyny k pokročilým technikám a řešení potíží najdete na [fóru věnovaném rozšíření Visual Studio DSL & Modeling Tools](http://go.microsoft.com/fwlink/?LinkID=186074).
 
 ## <a name="in-this-section"></a>V tomto oddílu
  [Začínáme s jazyky specifickými pro doménu](../modeling/getting-started-with-domain-specific-languages.md)

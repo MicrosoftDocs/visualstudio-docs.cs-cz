@@ -4,17 +4,17 @@ ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Test generation
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: eb567327950604fac1895ead24b776aefe434548
-ms.sourcegitcommit: dae5dfd626277b58ebd7b21a75757f683f1eacc5
+author: jillre
+ms.openlocfilehash: 3dbcbed0c336ff931971e0a4a6a939e681c6948b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739295"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653113"
 ---
 # <a name="test-generation"></a>Generování testů
 
@@ -55,7 +55,7 @@ Když IntelliTest potřebuje sestavit objekty, volání konstruktorů a metod to
 <a name="parameterized-unit-testing"></a>
 ## <a name="parameterized-unit-testing"></a>Parametrizované testování částí
 
-*Parametrizované testy částí* (Umístí) jsou testy, které přijímají parametry. Na rozdíl od tradičních testů jednotek, které jsou obvykle uzavřeny, převezmou všechny sady parametrů. Je to jednoduché? Ano – IntelliTest se pokusí [vygenerovat (minimální) sadu vstupů](input-generation.md) , které [plně pokrývají](input-generation.md#dynamic-code-coverage) kód dosažitelný z testu.
+*Parametrizované testy jednotek* (vloží) jsou testy, které přijímají parametry. Na rozdíl od tradičních testů jednotek, které jsou obvykle uzavřeny, převezmou všechny sady parametrů. Je to jednoduché? Ano – IntelliTest se pokusí [vygenerovat (minimální) sadu vstupů](input-generation.md) , které [plně pokrývají](input-generation.md#dynamic-code-coverage) kód dosažitelný z testu.
 
 Vložení jsou definována pomocí vlastního atributu [PexMethod](attribute-glossary.md#pexmethod) podobným způsobem jako MSTest (nebo nunit, xUnit). Vloží jsou metody instance logicky seskupené do tříd s příznakem [PexClass](attribute-glossary.md#pexclass). Následující příklad ukazuje jednoduchý objekt PUT uložený ve třídě **MyPexTest** :
 

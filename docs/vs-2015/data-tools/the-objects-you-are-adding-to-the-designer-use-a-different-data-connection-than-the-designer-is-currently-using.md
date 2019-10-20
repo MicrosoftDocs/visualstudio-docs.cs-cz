@@ -1,43 +1,42 @@
 ---
-title: Objekty, které přidáváte do návrháře použít odlišné datové připojení, než momentálně používané návrhářem | Dokumentace Microsoftu
+title: Objekty, které přidáváte do návrháře, používají jiné datové připojení než Návrhář aktuálně používá | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
 ms.topic: conceptual
 ms.assetid: 332ed2f3-3377-4d51-8e3b-fdb98231978e
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 12f8a9c874e371011578d702fbcc9c9bee986362
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: d9ec76446aff930475ea5e3ca0133e11b3798b0c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65686641"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672293"
 ---
 # <a name="the-objects-you-are-adding-to-the-designer-use-a-different-data-connection-than-the-designer-is-currently-using"></a>Objekty, které přidáváte do návrháře, obsahují jiné datové připojení než připojení momentálně používané návrhářem.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Objekty, které přidáváte do návrháře použijte odlišné datové připojení, než momentálně používané návrhářem. Opravdu chcete připojení používané návrhářem nahradit?  
-  
- Při přidávání položek do [!INCLUDE[vs_ordesigner_long](../includes/vs-ordesigner-long-md.md)] ([!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)]), všech položek se používají sdílené datové připojení. (Na návrhovou plochu představuje <xref:System.Data.Linq.DataContext>, který používá jedno připojení pro všechny objekty na povrchu.) Pokud chcete přidat objekt do návrháře, který používá datové připojení, které se liší od aktuálně používá v Návrháři datové připojení, tato zpráva se zobrazí. Chcete-li vyřešit tuto chybu, můžete zachovat existující připojení. Pokud tuto volbu, nebude přidán vybraný objekt. Alternativně můžete přidat objekt a obnovit <xref:System.Data.Linq.DataContext> připojení k nové připojení.  
-  
+Objekty, které přidáváte do návrháře, používají jiné datové připojení než Návrhář aktuálně používá. Chcete nahradit připojení používané návrhářem?
+
+ Když přidáte položky do [!INCLUDE[vs_ordesigner_long](../includes/vs-ordesigner-long-md.md)] ([!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)]), budou všechny položky používat jedno sdílené datové připojení. (Návrhová plocha představuje <xref:System.Data.Linq.DataContext>, která používá jedno připojení pro všechny objekty na povrchu.) Pokud přidáte objekt do návrháře, který používá datové připojení, které se liší od datového připojení, které je aktuálně používáno návrhářem, zobrazí se tato zpráva. Tuto chybu můžete vyřešit tak, že se rozhodnete zachovat stávající připojení. Pokud uděláte tuto volbu, vybraný objekt se nepřidá. Alternativně můžete zvolit přidání objektu a resetování <xref:System.Data.Linq.DataContext> připojení k novému připojení.
+
 > [!NOTE]
-> Vyberete-li **Ano**, tříd na všech entit [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] jsou mapovány na nového připojení.  
-  
-### <a name="to-replace-the-existing-connection-with-the-connection-used-by-the-selected-object"></a>Chcete-li nahradit stávající připojení pomocí připojení používané objektem vybraný objekt  
-  
-- Klikněte na **Ano**.  
-  
-     Vybraný objekt se přidá do [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)], a DataContext.Connection je nastavená na nové připojení.  
-  
-### <a name="to-continue-to-use-the-existing-connection-and-cancel-adding-the-selected-object"></a>Chcete-li nadále používat stávající připojení a zrušit přidávání vybraný objekt  
-  
-- Klikněte na tlačítko **ne**.  
-  
-     Akce zrušena. DataContext.Connection zůstane nastavená na existující připojení.  
-  
-## <a name="see-also"></a>Viz také  
- [Nástroje LINQ to SQL v sadě Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [LINQ to SQL](https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655)   
+> Kliknete-li na tlačítko **Ano**, všechny třídy entit v [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] budou namapovány na nové připojení.
+
+### <a name="to-replace-the-existing-connection-with-the-connection-used-by-the-selected-object"></a>Nahrazení stávajícího připojení pomocí připojení používaného vybraným objektem
+
+- Klikněte na tlačítko **Ano**.
+
+     Vybraný objekt je přidán do [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] a DataContext. připojení je nastaveno na nové připojení.
+
+### <a name="to-continue-to-use-the-existing-connection-and-cancel-adding-the-selected-object"></a>Chcete-li nadále používat existující připojení a zrušit přidávání vybraného objektu
+
+- Klikněte na tlačítko **ne**.
+
+     Akce se zrušila. Kontext DataContext. připojení zůstává nastaveno na existující připojení.
+
+## <a name="see-also"></a>Viz také
+ [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) [LINQ to SQL](https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655)

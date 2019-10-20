@@ -1,5 +1,5 @@
 ---
-title: Publikovat stranu, Návrhář projektu | Dokumentace Microsoftu
+title: Stránka publikování, Návrhář projektu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -15,80 +15,54 @@ helpviewer_keywords:
 - Publish page in Project Designer
 ms.assetid: 153527c6-8b95-4003-8e8e-03a489d0a629
 caps.latest.revision: 37
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f135221564583d2d9726bb9fa153840b1328e96f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 391e6c457dd09afa154c46cbc8644f028052cb32
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65701818"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665709"
 ---
 # <a name="publish-page-project-designer"></a>Publikovat stránku, návrhář projektu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-**Publikovat** stránku **Návrháře projektu** slouží ke konfiguraci vlastností pro nasazení ClickOnce.  
-  
- Pro přístup **publikovat** stránky, vyberte uzel projektu v **Průzkumníku řešení**a pak klikněte na **projektu** nabídky, klikněte na tlačítko **vlastnosti**. Když **Návrháře projektu** se zobrazí, klikněte na tlačítko **publikovat** kartu.  
-  
+Stránka **publikovat** v **Návrháři projektu** se používá ke konfiguraci vlastností pro nasazení ClickOnce.
+
+ Pro přístup ke stránce **publikovat** vyberte uzel projektu v **Průzkumník řešení**a potom v nabídce **projekt** klikněte na **vlastnosti**. Když se zobrazí **Návrhář projektu** , klikněte na kartu **publikovat** .
+
 > [!NOTE]
-> Některé vlastnosti ClickOnce je zde popsáno, můžete také nastavit v **PublishWizard**, která je dostupná z **sestavení** nabídek nebo kliknutím **PublishWizard** na toto tlačítko stránka.  
-  
-## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
- **Umístění složky pro publikování**  
- Určuje umístění, kde je aplikace publikována. Může být cesta jednotky (`C:\deploy\myapplication`), sdílené složky (`\\server\myapplication`), FTP server (`ftp://ftp.microsoft.com/myapplication`), nebo na web (`http://www.microsoft.com/myapplication`). Všimněte si, že text musí být součástí **umístění pro publikování** pole mohl procházet (**...** ) tlačítko pro práci.  
-  
- Ve výchozím nastavení, je umístění pro publikování `http://localhost/<projectname>/` Pokud máte službu IIS nainstalovánu, nebo `publish\` adresáře, pokud nemáte nainstalovanou službu IIS. Pokud váš počítač se systémem Windows Vista, výchozí hodnota je vždy `publish\` adresáře, bez ohledu na to, zda máte nainstalovanou službu IIS.  
-  
- **Adresa URL složky instalace**  
- Volitelné. Určuje webové stránky, ke kterému uživatelé přejít k instalaci aplikace. To je nezbytné, jenom když se liší od **umístění pro publikování**, například při publikování aplikace na testovacím serveru.  
-  
- **Režim instalace a nastavení**  
- Určuje, zda je aplikace spuštěna přímo z **umístění pro publikování** (když **aplikace je dostupná pouze online** je vybraná) nebo je nainstalován a přidán do **Start**  nabídky a **přidat nebo odebrat programy** položky v **ovládací panely** (když **aplikace je k dispozici také v režimu offline** je vybrána).  
-  
- Pro aplikace WPF webového prohlížeče **aplikace je k dispozici také v režimu offline** možnost je zakázána, protože tyto aplikace jsou k dispozici pouze online.  
-  
- **Soubory aplikace**  
- Otevře [aplikace souborech – dialogové](https://msdn.microsoft.com/b06dff3a-b87a-4caf-996b-7a4acf8137a8), který se používá k určení, jak a kde jsou nainstalovány jednotlivé soubory.  
-  
- **Požadavky**  
- Otevře [dialogové okno požadavky](../../ide/reference/prerequisites-dialog-box.md), který se používá k určení požadovaných součástí, jako je například rozhraní .NET Framework nainstalovat spolu s aplikací.  
-  
- **Aktualizace**  
- Otevře [dialogového okna aktualizace aplikace](https://msdn.microsoft.com/8eca8743-8e68-4d04-bfd5-4dc0a9b2934f), který se používá k určení chování aktualizací pro aplikaci. Nejsou k dispozici při **aplikace je dostupná pouze online** zaškrtnuto.  
-  
- **Možnosti**  
- Otevře [dialogové okno publikování možnosti](https://msdn.microsoft.com/fd9baa1b-7311-4f9e-8ffb-ae50cf110592), který se používá k určení další pokročilé možnosti publikování.  
-  
- **Verze publikování**  
- Nastaví číslo verze publikování pro aplikaci. Při změně číslo verze aplikace publikována jako aktualizace. Každá část verzi publikování (**hlavní**, **menší**, **sestavení**, **revize**) může mít maximální hodnotu 65355 (<xref:System.UInt16.MaxValue>), maximální povolenou <xref:System.Version>.  
-  
- Při instalaci více než jednu verzi aplikace s použitím technologie ClickOnce, instalace přesune starší verze této aplikace do složky s názvem Archiv v umístění pro publikování, který zadáte. Archivace dřívějších verzí tímto způsobem udržuje instalační adresář čistý od složek starší verze.  
-  
- **Automaticky zvyšovat číslo při každém publikování**  
- Volitelné. Když je vybraná tato možnost (výchozí), **revize** část čísla verze publikování se zvýší o jedna pokaždé, když je aplikace publikována. To způsobí, že aplikace má být publikován jako aktualizace.  
-  
- **Průvodce publikováním**  
- Otevře [Průvodce publikováním](https://msdn.microsoft.com/fc6abebd-13d6-48e4-a567-fbc52dad0872). Dokončuje se Průvodce publikováním má stejný účinek jako spuštění **publikovat** příkaz **sestavení** nabídky.  
-  
- **Publikovat**  
- Publikuje aplikace s použitím aktuální nastavení. Ekvivalentní **Dokončit** tlačítko **PublishWizard**.  
-  
-## <a name="see-also"></a>Viz také  
- [Publikování aplikací ClickOnce](../../deployment/publishing-clickonce-applications.md)   
- [Postupy: Publikování aplikace ClickOnce pomocí Průvodce publikováním](../../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
- [Postupy: Zadejte, kde sada Visual Studio zkopíruje soubory](../../deployment/how-to-specify-where-visual-studio-copies-the-files.md)   
- [Postupy: Zadejte umístění, kde budou koncoví uživatelé instalovat z](../../deployment/how-to-specify-the-location-where-end-users-will-install-from.md)   
- [Postupy: Určení obsahu pro technickou podporu](../../deployment/how-to-specify-a-link-for-technical-support.md)   
- [Postupy: Určení ClickOnce v režimu Offline nebo Online režimu instalace](../../deployment/how-to-specify-the-clickonce-offline-or-online-install-mode.md)   
- [Postupy: Povolení funkce AutoStart pro instalace z disku CD](../../deployment/how-to-enable-autostart-for-cd-installations.md)   
- [Postupy: Nastavení publikování ClickOnce verze](../../deployment/how-to-set-the-clickonce-publish-version.md)   
- [Postupy: Automaticky ClickOnce Inkrementace verze publikování](../../deployment/how-to-automatically-increment-the-clickonce-publish-version.md)   
- [Postupy: Určení souborů k publikování aplikací ClickOnce](../../deployment/how-to-specify-which-files-are-published-by-clickonce.md)   
- [Postupy: Instalace předpokladů s aplikací ClickOnce](../../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
- [Postupy: Správa aktualizací pro aplikaci ClickOnce](../../deployment/how-to-manage-updates-for-a-clickonce-application.md)   
- [Postupy: Změnit jazyka publikování pro aplikaci ClickOnce](../../deployment/how-to-change-the-publish-language-for-a-clickonce-application.md)   
- [Postupy: Určení názvu úvodní nabídky pro aplikaci ClickOnce](../../deployment/how-to-specify-a-start-menu-name-for-a-clickonce-application.md)   
- [Postupy: Určení stránky publikování pro aplikaci ClickOnce](../../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md)   
- [ClickOnce – zabezpečení a nasazení](../../deployment/clickonce-security-and-deployment.md)
+> Některé vlastnosti ClickOnce popsané tady lze také nastavit v **PublishWizard**, k dispozici v nabídce **sestavení** nebo kliknutím na tlačítko **PublishWizard** na této stránce.
+
+## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
+ **Umístění složky pro publikování** Určuje umístění, kde je aplikace publikována. Může se jednat o cestu k jednotce (`C:\deploy\myapplication`), sdílenou složku (`\\server\myapplication`), server FTP (`ftp://ftp.microsoft.com/myapplication`) nebo web (`http://www.microsoft.com/myapplication`). Všimněte si, že text musí být přítomen v poli **umístění pro publikování** , aby tlačítko Procházet ( **...** ) fungovalo.
+
+ Ve výchozím nastavení je umístění publikování `http://localhost/<projectname>/`, pokud máte nainstalovanou službu IIS, nebo `publish\` Directory, pokud nemáte nainstalovanou službu IIS. Pokud je v počítači spuštěný systém Windows Vista, výchozí hodnota je vždy adresář `publish\`, bez ohledu na to, zda je nainstalována služba IIS.
+
+ **Adresa URL instalační složky** Volitelné. Určuje web, na který uživatelé přejdou instalovat aplikaci. To je nezbytné jenom v případě, že se liší od **umístění pro publikování**, například při publikování aplikace na přípravném serveru.
+
+ **Režim instalace a nastavení** Určuje, zda je aplikace spuštěna přímo z **umístění publikování** (Pokud je **aplikace dostupná pouze online** ), nebo je nainstalována a přidána do nabídky **Start** a do položky **Přidat nebo odebrat programy** v části **Ovládací panely** (Pokud je **aplikace dostupná také v režimu offline** ).
+
+ Pro aplikace webového prohlížeče WPF **je aplikace k dispozici offline** a možnost je zakázána, protože tyto aplikace jsou k dispozici pouze online.
+
+ **Soubory aplikace** Otevře [dialogové okno soubory aplikace](https://msdn.microsoft.com/b06dff3a-b87a-4caf-996b-7a4acf8137a8), které slouží k určení toho, jak a kde jsou jednotlivé soubory nainstalovány.
+
+ **Požadavky** Otevře [dialogové okno požadavky](../../ide/reference/prerequisites-dialog-box.md), které se používá k určení požadovaných součástí, jako je například .NET Framework, aby se nainstalovaly společně s aplikací.
+
+ **Aktualizace** Otevře [dialogové okno aktualizace aplikace](https://msdn.microsoft.com/8eca8743-8e68-4d04-bfd5-4dc0a9b2934f), které slouží k určení chování aktualizace pro aplikaci. Tato možnost není dostupná, pokud **je aplikace dostupná jenom online** .
+
+ **Možnosti** Otevře [dialogové okno Možnosti publikování](https://msdn.microsoft.com/fd9baa1b-7311-4f9e-8ffb-ae50cf110592), které slouží k určení dalších pokročilých možností publikování.
+
+ **Verze publikování** Nastaví číslo verze publikování pro aplikaci. Když se změní číslo verze, aplikace se publikuje jako aktualizace. Každá část verze publikování (**Hlavní**, **podverze**, **sestavení**, **Revize**) může mít maximální hodnotu 65355 (<xref:System.UInt16.MaxValue>), což je maximální povolený <xref:System.Version>.
+
+ Při instalaci více než jedné verze aplikace pomocí technologie ClickOnce instalační program přesune předchozí verze aplikace do složky s názvem Archive v umístění pro publikování, které zadáte. Archivace předchozích verzí tímto způsobem udržuje instalační adresář v nejasnosti od předchozí verze.
+
+ **Automaticky zvyšovat revize při každém publikování** Volitelné. Pokud je vybrána tato možnost (výchozí nastavení), část **Revize** čísla verze publikování se zvýší o jednu pokaždé, když je aplikace publikována. To způsobí, že se aplikace publikuje jako aktualizace.
+
+ **Průvodce publikováním** Otevře [Průvodce publikováním](https://msdn.microsoft.com/fc6abebd-13d6-48e4-a567-fbc52dad0872). Dokončení Průvodce publikováním má stejný účinek jako spuštění příkazu **publikovat** v nabídce **sestavení** .
+
+ **Publikovat hned** Publikuje aplikaci pomocí aktuálního nastavení. Odpovídá tlačítku **Dokončit** v **PublishWizard**.
+
+## <a name="see-also"></a>Viz také
+ [Publikování aplikací ClickOnce](../../deployment/publishing-clickonce-applications.md) [Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](../../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md) [Postupy: určení místa, kde aplikace Visual Studio kopíruje soubory](../../deployment/how-to-specify-where-visual-studio-copies-the-files.md) [Postupy: určení umístění, do kterého budou koncoví uživatelé instalovat.](../../deployment/how-to-specify-the-location-where-end-users-will-install-from.md) [ do: zadejte odkaz na technickou podporu](../../deployment/how-to-specify-a-link-for-technical-support.md) [Postupy: určení režimu offline nebo online instalace](../../deployment/how-to-specify-the-clickonce-offline-or-online-install-mode.md) [Postupy: povolení automatického spuštění pro instalaci CD](../../deployment/how-to-enable-autostart-for-cd-installations.md) postup: [Nastavení publikační verze ClickOnce](../../deployment/how-to-set-the-clickonce-publish-version.md) [Postupy: automatické zvýšení Verze publikování ClickOnce](../../deployment/how-to-automatically-increment-the-clickonce-publish-version.md) [Postupy: určení souborů, které jsou publikovány pomocí technologie ClickOnce](../../deployment/how-to-specify-which-files-are-published-by-clickonce.md) [Postup: instalace požadavků s aplikací ClickOnce](../../deployment/how-to-install-prerequisites-with-a-clickonce-application.md) postupy: [Správa aktualizací pro aplikaci ClickOnce](../../deployment/how-to-manage-updates-for-a-clickonce-application.md) [Postupy: Změna Jazyk publikování pro aplikaci ClickOnce](../../deployment/how-to-change-the-publish-language-for-a-clickonce-application.md) [Postupy: určení názvu nabídky Start pro aplikaci ClickOnce](../../deployment/how-to-specify-a-start-menu-name-for-a-clickonce-application.md) [Postupy: určení stránky publikování pro aplikaci](../../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md) ClickOnce [zabezpečení a nasazení](../../deployment/clickonce-security-and-deployment.md) aplikace ClickOnce

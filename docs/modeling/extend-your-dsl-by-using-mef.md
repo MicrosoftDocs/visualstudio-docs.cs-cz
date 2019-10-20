@@ -2,34 +2,34 @@
 title: Rozšíření vašeho DSL pomocí MEF
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b4748cd71416ce4d3e9cce64826f1ec97ceef85
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: f42186915ade2a518506f5f6ccc55b3599a3ba99
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67692985"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657515"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>Rozšíření vašeho DSL pomocí MEF
 
-Můžete rozšíření jazyka specifického pro doménu (DSL) pomocí Managed Extensibility Framework (MEF). Vy nebo jiní vývojáři budou moct psát rozšíření pro DSL beze změny v definici DSL a kódu programu. Taková rozšíření zahrnují příkazy nabídek, přetahování myší obslužné rutiny a ověření. Uživatelé budou moct nainstalovat vašeho DSL a volitelně nainstalovat rozšíření pro něj.
+Jazyk specifického pro doménu (DSL) můžete roztáhnout pomocí Managed Extensibility Framework (MEF). Vy nebo jiní vývojáři budete moct zapisovat rozšíření pro DSL beze změny definice DSL a kódu programu. Mezi taková rozšíření patří příkazy nabídky, obslužné rutiny přetažení a ověřování. Uživatelé budou moct nainstalovat DSL a pak pro něj nainstalovat rozšíření.
 
-Kromě toho když povolíte MEF v vašeho DSL, může být jednodušší psaní, některé funkce tohoto kódu DSL, i v případě, že všechna sestavení společně s DSL.
+Kromě toho, když povolíte rozhraní MEF v DSL, může být snazší napsat některé funkce DSL, i když jsou vytvořeny společně s DSL.
 
-Další informace o rozhraní MEF, naleznete v tématu [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).
+Další informace o MEF naleznete v tématu [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).
 
-### <a name="to-enable-your-dsl-to-be-extended-by-mef"></a>Povolit vašeho DSL prodloužit pomocí MEF
+### <a name="to-enable-your-dsl-to-be-extended-by-mef"></a>Povolení rozšíření DSL na rozhraní MEF
 
-1. Vytvořte novou složku s názvem **MefExtension** uvnitř **DslPackage** projektu. Přidejte do ní následující soubory:
+1. V projektu **DslPackage** vytvořte novou složku s názvem **MefExtension** . Přidejte do něj následující soubory:
 
      Název souboru: `CommandExtensionVSCT.tt`
 
     > [!IMPORTANT]
-    > Nastavte identifikátor GUID v tomto souboru bude stejná jako CommandSetId identifikátor GUID, který je definován v DslPackage\GeneratedCode\Constants.tt
+    > Nastavte identifikátor GUID v tomto souboru tak, aby byl stejný jako CommandSetId identifikátor GUID, který je definovaný v DslPackage\GeneratedCode\Constants.tt.
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
@@ -58,7 +58,7 @@ Další informace o rozhraní MEF, naleznete v tématu [Managed Extensibility Fr
 
     Název souboru: `ValidationExtensionRegistrar.tt`
 
-    Pokud chcete přidat tento soubor, musíte povolit ověřování v vašeho DSL pomocí alespoň jeden z parametrů v **EditorValidation** v Průzkumník DSL.
+    Pokud tento soubor přidáte, musíte v rámci DSL povolit ověřování pomocí aspoň jednoho přepínače v **EditorValidation** v Průzkumníku DSL.
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
@@ -72,7 +72,7 @@ Další informace o rozhraní MEF, naleznete v tématu [Managed Extensibility Fr
     <#@ include file="DslPackage\PackageExtensionEnablement.tt" #>
     ```
 
-2. Vytvořte novou složku s názvem **MefExtension** uvnitř **Dsl** projektu. Přidejte do ní následující soubory:
+2. V projektu **DSL** vytvořte novou složku s názvem **MefExtension** . Přidejte do něj následující soubory:
 
      Název souboru: `DesignerExtensionMetaDataAttribute.tt`
 
@@ -95,89 +95,89 @@ Další informace o rozhraní MEF, naleznete v tématu [Managed Extensibility Fr
     <#@ include file="Dsl\GestureExtensionController.tt" #>
     ```
 
-3. Přidejte následující řádek do existujícího souboru s názvem **DslPackage\Commands.vsct**:
+3. Do existujícího souboru s názvem **DslPackage\Commands.vsct**přidejte následující řádek:
 
     ```xml
     <Include href="MefExtension\CommandExtensionVSCT.vsct"/>
     ```
 
-    Vložit řádek za stávající `<Include>` směrnice.
+    Vložte řádek po existující direktivě `<Include>`.
 
-4. Otevřít *DslDefinition.dsl*.
+4. Otevřete *DslDefinition. DSL*.
 
 5. V Průzkumníku DSL vyberte **Editor\Validation**.
 
-6. V okně Vlastnosti, ujistěte se, že nejméně jedna z vlastností s názvem **používá** je `true`.
+6. V okno Vlastnosti zajistěte, aby alespoň jedna z vlastností s názvem **použití** byla `true`.
 
-7. V **Průzkumníka řešení** nástrojů, klikněte na tlačítko **Transformovat všechny šablony**.
+7. Na panelu nástrojů **Průzkumník řešení** klikněte na možnost **transformovat všechny šablony**.
 
-     Podpůrné soubory se zobrazí pod všechny soubory, které jste přidali.
+     Soubory dceřiné společnosti se zobrazí pod každým přidaným soubory.
 
-8. Sestavení a spuštění řešení Chcete-li ověřit, že stále funguje.
+8. Sestavte a spusťte řešení a ověřte, zda stále pracuje.
 
-Vaše DSL je nyní povoleno rozhraní MEF. Příkazy nabídky, obslužné rutiny gesta a omezení ověření můžete psát jako rozšíření MEF. Tato rozšíření můžete psát ve vašem řešení DSL společně s další vlastní kód. Kromě toho vy nebo jiní vývojáři psát samostatné rozšíření sady Visual Studio, které rozšíření vašeho DSL.
+Vaše DSL je teď povolená s podporou MEF. Můžete psát příkazy nabídky, obslužné rutiny gest a omezení ověřování jako rozšíření MEF. Tato rozšíření můžete v řešení DSL napsat společně s jiným vlastním kódem. Kromě toho můžete vy nebo jiní vývojáři napsat samostatná rozšíření sady Visual Studio, která šíří vaše DSL.
 
-## <a name="create-an-extension-for-a-mef-enabled-dsl"></a>Vytvoření rozšíření pro DSL povolené rozhraní MEF
+## <a name="create-an-extension-for-a-mef-enabled-dsl"></a>Vytvoření rozšíření pro DSL podporující rozhraní MEF
 
-Pokud máte přístup k DSL povolené MEF vytvořené sobě nebo někomu jinému, můžete psát rozšíření pro něj. Rozšíření lze použít k přidání příkazy, obslužné rutiny gesta nebo omezení ověření. K vytváření těchto rozšíření, použijte řešení sady Visual Studio extension (VSIX). Řešení se skládá ze dvou částí: projekt knihovny tříd, který vytváří sestavení kódu a projekt VSIX, která zabalí sestavení.
+Máte-li přístup k DSL podporujícímu MEF, kterou vytvořila nebo někomu jinému, můžete pro ni napsat rozšíření. Rozšíření lze použít k přidání příkazů nabídky, obslužných rutin gest nebo omezení ověřování. Chcete-li vytvořit tato rozšíření, použijte řešení rozšíření sady Visual Studio (VSIX). Řešení má dvě části: projekt knihovny tříd, který sestaví sestavení kódu a projekt VSIX, který zabalí sestavení.
 
-### <a name="to-create-a-dsl-extension-vsix"></a>Vytvoření DSL rozšíření VSIX
+### <a name="to-create-a-dsl-extension-vsix"></a>Vytvoření VSIX rozšíření DSL
 
-1. Vytvořte nový **knihovny tříd** projektu.
+1. Vytvořte nový projekt **knihovny tříd** .
 
 2. V novém projektu přidejte odkaz na sestavení DSL.
 
-   - Toto sestavení obsahuje obvykle název, který končí na ". DSL.dll".
+   - Toto sestavení obvykle má název, který končí na. DSL. dll ".
 
-   - Pokud máte přístup k projektu DSL, můžete najít soubor sestavení v adresáři **Dsl\\bin\\\***
+   - Máte-li přístup k projektu DSL, můžete najít soubor sestavení v adresáři **dsl \\bin \\ \***
 
-   - Pokud máte přístup k souboru DSL VSIX, můžete najít sestavení tak, že změníte příponu názvu souboru VSIX na ".zip". Soubor .zip dekomprimujte.
+   - Máte-li přístup k souboru VSIX DSL, můžete najít sestavení změnou přípony názvu souboru VSIX na ". zip". Dekomprimuje soubor. zip.
 
 3. Přidejte odkazy na následující sestavení .NET:
 
-   - Microsoft.VisualStudio.Modeling.Sdk.11.0.dll
+   - Microsoft. VisualStudio. Modeling. SDK. 11.0. dll
 
-   - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0.dll
+   - Microsoft. VisualStudio. Modeling. SDK. Diagrams. 11.0. dll
 
-   - Microsoft.VisualStudio.Modeling.Sdk.Shell.11.0.dll
+   - Microsoft. VisualStudio. Modeling. SDK. Shell. 11.0. dll
 
    - System.ComponentModel.Composition.dll
 
-   - System.Windows.Forms.dll
+   - System. Windows. Forms. dll
 
-4. Vytvořte nový **projekt VSIX** projektu.
+4. Vytvořte nový projekt **VSIX** projektu.
 
-5. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt VSIX a zvolte **nastavit jako spouštěný projekt**.
+5. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt VSIX a vyberte **nastavit jako spouštěný projekt**.
 
-6. V novém projektu, otevřete **source.extension.vsixmanifest**.
+6. V novém projektu otevřete **source. extension. vsixmanifest**.
 
-7. Klikněte na tlačítko **přidat obsah**. V dialogovém okně nastavte **typ obsahu** k **Komponenta MEF**, a **zdrojový projekt** do projektu knihovny tříd.
+7. Klikněte na **Přidat obsah**. V dialogovém okně nastavte **typ obsahu** na **součást MEF**a **zdrojový projekt** na projekt knihovny tříd.
 
-8. Přidáte odkaz VSIX na DSL.
+8. Přidejte odkaz VSIX na DSL.
 
-   1. V **source.extension.vsixmanifest**, klikněte na tlačítko **přidat odkaz**
+   1. Ve **zdroji. extension. vsixmanifest**klikněte na **Přidat odkaz** .
 
-   2. V dialogovém okně klikněte na tlačítko **přidat datové části** a vyhledejte soubor VSIX DSL. Soubor VSIX je součástí řešení DSL v **DslPackage\\bin\\\*** .
+   2. V dialogovém okně klikněte na **Přidat datovou část** a pak vyhledejte soubor VSIX pro DSL. Soubor VSIX je sestaven v řešení DSL v **DslPackage \\bin \\ \*** .
 
-       To umožňuje uživatelům s instalací DSL a rozšíření ve stejnou dobu. Pokud uživatel již nainstaloval DSL, nainstaluje se pouze rozšíření.
+       To umožní uživatelům instalovat DSL a rozšíření ve stejnou dobu. Pokud uživatel už má nainstalovanou DSL, nainstaluje se jenom vaše rozšíření.
 
-9. Zkontrolujte a aktualizujte pole z **source.extension.vsixmanifest**. Klikněte na tlačítko **vybrat vydání** a ověřte, že jsou nastaveny správné edice sady Visual Studio.
+9. Zkontrolujte a aktualizujte ostatní pole **source. extension. vsixmanifest**. Klikněte na **Vybrat edice** a ověřte, jestli jsou nastavené správné edice sady Visual Studio.
 
-10. Přidání kódu do projektu knihovny tříd. V příkladech v následující části použijte jako vodítko.
+10. Přidejte kód do projektu knihovny tříd. Jako vodítko použijte příklady v následující části.
 
-     Můžete přidat libovolný počet příkazu, gesta a ověření třídy.
+     Můžete přidat libovolný počet tříd příkazu, gesto a ověřování.
 
-11. Chcete-li otestovat rozšíření, stiskněte **F5**. V experimentální instanci sady Visual Studio vytvořte nebo otevřete příklad souboru DSL.
+11. Rozšíření otestujete stisknutím klávesy **F5**. V experimentální instanci sady Visual Studio vytvořte nebo otevřete ukázkový soubor DSL.
 
-## <a name="writing-mef-extensions-for-dsls"></a>Zápis rozšíření rozhraní MEF pro DSL
+## <a name="writing-mef-extensions-for-dsls"></a>Zápis rozšíření MEF pro DSL
 
-Tvorba rozšíření v projektu kódu sestavení samostatné řešení rozšíření DSL. MEF lze také použít ve vašem projektu DslPackage jako pohodlný způsob, jak psát příkazy, gesta a ověřovací kód jako součást DSL.
+Můžete zapisovat rozšíření v projektu kódu sestavení samostatného řešení s příponou DSL. Můžete také použít MEF v projektu DslPackage jako pohodlný způsob, jak psát příkazy, gesta a ověřovací kód jako součást DSL.
 
 ### <a name="menu-commands"></a>Příkazy nabídky
 
-Chcete-li zapsat příkazu nabídky, definovat třídu, která implementuje <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> a předpony třídě s atributem, který je definován v vašeho DSL, s názvem *YourDsl*`CommandExtension`. Můžete vytvořit více než jedné třídy příkazu nabídky.
+Pro zápis příkazu nabídky Definujte třídu, která implementuje <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> a prefixujte třídu s atributem definovaným v DSL s názvem *YourDsl* `CommandExtension`. Můžete napsat více než jednu třídu příkazu nabídky.
 
-`QueryStatus()` je volána pokaždé, když uživatel klepne pravým tlačítkem myši v diagramu. By měl zkontrolovat aktuální výběr a nastavte `command.Enabled` k označení, kdy příkaz se vztahuje.
+`QueryStatus()` se volá vždycky, když uživatel klikne pravým tlačítkem myši na diagram. Měl by zkontrolovat aktuální výběr a nastavit `command.Enabled`, které určují, kdy se má příkaz použít.
 
 ```csharp
 using System.ComponentModel.Composition;
@@ -245,9 +245,9 @@ namespace MyMefExtension
 
 ### <a name="gesture-handlers"></a>Obslužné rutiny gesta
 
-Objekty přetáhnout do diagramu z kdekoli uvnitř nebo mimo sadu Visual Studio můžete vyřešit obslužné rutiny gesta. Následující příklad umožňuje uživateli přetáhnout soubory do diagramu z Průzkumníka Windows. Vytvoří prvky, které obsahují názvy souborů.
+Obslužná rutina gesta může pracovat s objekty přetaženými do diagramu odkudkoli, uvnitř nebo vně sady Visual Studio. Následující příklad umožní uživateli přetáhnout soubory z Průzkumníka Windows do diagramu. Vytvoří prvky, které obsahují názvy souborů.
 
-Můžete napsat obslužné rutiny řešit drags z jiných DSL modely a modelech UML. Další informace najdete v tématu [jak: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md).
+Můžete napsat obslužné rutiny pro práci s přetažením z jiných modelů DSL a modelů UML. Další informace najdete v tématu [Postup: Přidání obslužné rutiny](../modeling/how-to-add-a-drag-and-drop-handler.md)přetažení myší.
 
 ```csharp
 using System.ComponentModel.Composition;
@@ -319,11 +319,11 @@ namespace MefExtension
 }
 ```
 
-### <a name="validation-constraints"></a>Omezení ověření
+### <a name="validation-constraints"></a>Omezení ověřování
 
-Metody ověřování jsou označené nástrojem `ValidationExtension` atribut, který je generována pomocí DSL a také podle <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute>. Metoda může objevit v jakékoli třídy, které není označeno pomocí atributu.
+Metody ověřování jsou označeny atributem `ValidationExtension`, který je generován pomocí DSL, a také pomocí <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute>. Metoda se může objevit v jakékoli třídě, která není označená atributem.
 
-Další informace najdete v tématu [ověřování v jazyka specifického pro doménu](../modeling/validation-in-a-domain-specific-language.md).
+Další informace najdete v tématu [ověření v jazyce specifickém pro doménu](../modeling/validation-in-a-domain-specific-language.md).
 
 ```csharp
 using Company.MyDsl;
@@ -375,6 +375,6 @@ namespace MefExtension
 ## <a name="see-also"></a>Viz také:
 
 - [Odesílání rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md)
-- [MEF (Managed Extensibility Framework)](/dotnet/framework/mef/index)
-- [Postupy: Přidání obslužné rutiny operace podporující přetahování](../modeling/how-to-add-a-drag-and-drop-handler.md)
+- [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)
+- [Postupy: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md)
 - [Ověřování v jazyce specifickém pro doménu](../modeling/validation-in-a-domain-specific-language.md)

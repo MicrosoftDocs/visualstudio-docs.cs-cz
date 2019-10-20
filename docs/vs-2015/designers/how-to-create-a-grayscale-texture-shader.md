@@ -1,58 +1,54 @@
 ---
-title: 'Postupy: Vytvoření shaderu textury stupňů šedé | Dokumentace Microsoftu'
+title: 'Postupy: vytvoření shaderu textury ve stupních šedi | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 79181d81-44af-445e-9a18-03483dd70260
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b43e7806ebf6d67300fdee7be165c7cd745c4acb
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 554717d59a42bed15b37379d3bf7a5c4da727e95
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431709"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664501"
 ---
 # <a name="how-to-create-a-grayscale-texture-shader"></a>Postupy: Vytvoření shaderu textury stupňů šedé
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento dokument popisuje způsob použití návrháře shaderu a orientovaného grafu shaderu jazyka (DGSL) k vytvoření shaderu textury stupňů šedé. Tento shader změní hodnotu barvy RGB vzorek textury a použije ho spolu s verzí bez úprav alfa hodnotu nastavení konečnou barvu.  
-  
-## <a name="creating-a-grayscale-texture-shader"></a>Vytvoření shaderu textury stupňů šedé  
- Můžete implementovat shaderu textury stupňů šedé změnou barvy hodnotu vzorku textury před napsáním barvu závěrečný výstup.  
-  
- Než začnete, ujistěte se, že **vlastnosti** okno a **nástrojů** jsou zobrazeny.  
-  
-#### <a name="to-create-a-grayscale-texture-shader"></a>K vytvoření shaderu textury stupňů šedé  
-  
-1. Vytvoření shaderu základní textury, jak je popsáno v [jak: Vytvoření základní textury shaderu](../designers/how-to-create-a-basic-texture-shader.md).  
-  
-2. Odpojit **RGB** z terminálu **vzorek textury** uzlu z **RGB** z terminálu **konečnou barvu** uzlu. V **vyberte** režimu, zvolte **RGB** z terminálu **vzorek textury** uzel a klikněte na tlačítko **přerušit odkazy**. Díky tomu místo pro uzel, který je přidán v dalším kroku.  
-  
-3. Přidat **Odbarvit** uzel do grafu. V **nástrojů**v části **filtry**vyberte **Odbarvit** a přesuňte jej na návrhovou plochu.  
-  
-4. Vypočítat hodnotu ve stupních šedi pomocí **Odbarvit** uzlu. V **vyberte** režimu, přesunout **RGB** z terminálu **vzorek textury** uzlu **RGB** z terminálu **Odbarvit**  uzlu.  
-  
+Tento dokument ukazuje, jak pomocí Návrháře shaderu a jazyka DGSL (Direct Graph shader) vytvořit shader textury ve stupních šedi. Tento shader upraví hodnotu barvy RGB ukázky textury a pak ji použije společně s neupravenou hodnotou Alpha k nastavení konečné barvy.
+
+## <a name="creating-a-grayscale-texture-shader"></a>Vytvoření shaderu textury ve stupních šedi
+ Můžete implementovat shader textury ve stupních šedi úpravou hodnoty barvy vzorku textury před jeho zápisem do konečné výstupní barvy.
+
+ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nástrojů** .
+
+#### <a name="to-create-a-grayscale-texture-shader"></a>Vytvoření shaderu textury ve stupních šedi
+
+1. Vytvořte základní shader textury, jak je popsáno v tématu [How to: Create a Basic textur shader](../designers/how-to-create-a-basic-texture-shader.md).
+
+2. Odpojte terminál **RGB** uzlu **ukázkové textury** z terminálu **RGB** konečného uzlu **barvy** . V režimu **výběru** zvolte terminál **RGB** pro uzel **Ukázka textury** a pak zvolte možnost **přerušení propojení**. Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
+
+3. Přidejte do grafu **rozsytost** uzlu. V **sadě nástrojů**v části **filtry**vyberte možnost **desytost** a přesuňte ji na návrhovou plochu.
+
+4. Vypočítá hodnotu ve stupních šedi pomocí uzlu **desytost** . V režimu **výběru** přesuňte terminál **RGB** uzlu **vzorku textury** do terminálu **RGB** uzlu **desytost** .
+
    > [!NOTE]
-   > Ve výchozím nastavení **Odbarvit** uzel plně desaturates vstupní barva a používá standardní světelnost vah pro převod odstínů šedi. Můžete změnit způsob, jakým **Odbarvit** uzlu se chová tak, že změníte hodnotu **světelnost** vlastnost, nebo jen částečně desaturating vstupní barva. Pokud chcete snížit vstupní barva částečně sytost, zadejte skalární hodnotu v rozsahu [0,1) k **procent** z terminálu **Odbarvit** uzlu.  
-  
-5. Hodnota ve stupních šedi barvy se připojte k konečnou barvu. Přesunout **výstup** z terminálu **Odbarvit** uzlu **RGB** z terminálu **konečnou barvu** uzlu.  
-  
-   Následující obrázek znázorňuje dokončené shader graf a náhled shaderu použitý pro datovou krychli.  
-  
+   > Ve výchozím nastavení rozodstínů šedi **uzel plně rozsytost vstupní** barvy a používá ke konverzi standardní tloušťky světelnosti. Můžete změnit způsob, jakým se rozumělý **uzel chová** , změnou hodnoty vlastnosti **světelnosti** nebo pouze částečně rozuměle vstupní barvou. Chcete-li částečně desytost vstupní barvy, zadejte skalární hodnotu v rozsahu [0, 1) až k **procentu** terminálu **rozsyceného** uzlu.
+
+5. Propojte hodnotu barvy ve stupních šedi s konečnou barvou. Přesuňte **výstupní** terminál uzlu **desytost** do terminálu **RGB** **konečného uzlu barvy** .
+
+   Následující ilustrace znázorňuje dokončený graf shaderu a náhled shaderu, který se použije pro datovou krychli.
+
 > [!NOTE]
-> Na tomto obrázku rovině slouží jako tvar náhled a byl zadán lépe demonstruje účinek shader textury.  
-  
- ![Graf shaderu a náhled vlivu](../designers/media/digit-grayscale-effect.png "číslice ve stupních šedi efekt")  
-  
- Určité tvary můžou poskytovat lepší verze Preview pro některé shadery. Další informace o zobrazení náhledu shadery v Návrháři shaderu naleznete v tématu [návrháře shaderu](../designers/shader-designer.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Postupy: Použití shaderu na 3D Model](../designers/how-to-apply-a-shader-to-a-3-d-model.md)   
- [Postupy: Exportování shaderu](../designers/how-to-export-a-shader.md)   
- [Editor obrázků](../designers/image-editor.md)   
- [Návrhář shaderů](../designers/shader-designer.md)   
- [Uzly návrháře shaderů](../designers/shader-designer-nodes.md)
+> Na tomto obrázku je jako obrazec náhledu použita rovina a je určena textura, aby lépe ukázala účinek shaderu.
+
+ ![Graf shaderu a náhled jeho efektu](../designers/media/digit-grayscale-effect.png "Číslice – stupně šedé – efekt")
+
+ Některé tvary mohou pro některé shadery poskytnout lepší náhled. Další informace o náhledu shaderů v Návrháři shaderu naleznete v tématu [Shader Designer](../designers/shader-designer.md) .
+
+## <a name="see-also"></a>Viz také
+ [Postupy: použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md) [Postupy: exportování](../designers/how-to-export-a-shader.md) [uzlů Návrháře](../designers/shader-designer-nodes.md) [obrazu](../designers/image-editor.md) shader [Designer shader designeru](../designers/shader-designer.md)

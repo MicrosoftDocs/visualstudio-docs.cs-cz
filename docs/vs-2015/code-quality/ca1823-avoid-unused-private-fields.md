@@ -1,5 +1,5 @@
 ---
-title: 'CA1823: Vyhněte se nepoužitým privátním polím | Dokumentace Microsoftu'
+title: 'CA1823: Vyhněte se nepoužitým soukromým polím | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CA1823
 ms.assetid: 614f94f6-0dc7-430f-8124-cb889a4a720f
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 32bf1596e4994f3cfdb2df179bb5d7f1a743f289
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d7ccfbe863e010b4dcf8a9d1b442c9bcdba6822e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201658"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661131"
 ---
 # <a name="ca1823-avoid-unused-private-fields"></a>CA1823: Vyhněte se nepoužitým privátním polím
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,20 +29,20 @@ ms.locfileid: "68201658"
 |-|-|
 |TypeName|AvoidUnusedPrivateFields|
 |CheckId|CA1823|
-|Kategorie|Microsoft.Performance|
+|Kategorie|Microsoft. Performance|
 |Narušující změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
- Toto pravidlo je oznamují soukromé pole ve vašem kódu existuje, ale nepoužívá všechny cesty kódu.
+ Toto pravidlo je hlášeno, když existuje soukromé pole v kódu, ale není používáno žádnou cestou kódu.
 
 ## <a name="rule-description"></a>Popis pravidla
  Byla zjištěna soukromá pole, která v rámci sestavení zjevně nejsou přístupná.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, odeberte pole nebo přidejte kód, který ji používá.
+ Chcete-li opravit porušení tohoto pravidla, odeberte pole nebo přidejte kód, který ho používá.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění tohoto pravidla.
+ Z tohoto pravidla je bezpečné potlačit upozornění.
 
 ## <a name="related-rules"></a>Související pravidla
  [CA1812: Vyhněte se nevytvořeným instancím vnitřních tříd](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)

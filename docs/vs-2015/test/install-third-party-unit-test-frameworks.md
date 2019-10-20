@@ -1,62 +1,62 @@
 ---
-title: Nainstalujte rozhraní pro testování jednotky třetí strany | Dokumentace Microsoftu
+title: Nainstalovat rozhraní pro testování částí třetích stran | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.assetid: 47893b70-46f8-49dc-84bd-ec820178f683
 caps.latest.revision: 12
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 23d347d43918661ca65019862f476f1d636d5d06
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c2bd087dc0b06cbf8ffe4c08f84d819e8ef1c2f8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68147164"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660516"
 ---
 # <a name="install-third-party-unit-test-frameworks"></a>Instalace systémů testování částí od třetích stran
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio Test Explorer můžete spustit libovolné jednotky rozhraní testování, který byl vyvinut rozhraní adaptér pro Průzkumníka. Instalační program rozhraní Framework nainstalují binární soubory a přidá šablony projektů Visual Studio pro jazyky, které podporuje. Při vytváření projektu se šablonou rozhraní zaregistrován pomocí Průzkumníka testů. Řešení sady Visual Studio může obsahovat projektů testů jednotek, které používají různá rozhraní a, který cílí na různé jazyky. Průzkumník testů provádí s nimi všechny.  
-  
- **Požadavky**  
-  
-- Visual Studio Enterprise, Visual Studio Professional  
-  
-## <a name="acquiring-third-party-frameworks"></a>Získání rozhraní třetích stran  
- Můžete stáhnout a nainstalovat mnoha rozhraní pro testování jednotky třetí strany, pomocí Správce rozšíření sady Visual Studio nebo z Galerie sady Visual Studio na webu MSDN. Rozhraní můžete také stáhnout z jiných webů, jako je web rozhraní framework.  
-  
-### <a name="installing-from-visual-studio"></a>Instalace ze sady Visual Studio  
-  
-1. Zvolte **nástroje** ve standardní nabídce a klikněte na tlačítko **rozšíření a aktualizace**.  
-  
-2. Rozbalte **Online**, **Galerie sady Visual Studio**, **nástroje**. Zvolte **testování**.  
-  
-3. Procházejte seznamem a najít rozhraní framework.  
-  
-4. Vyberte rozhraní a zvolte **Stáhnout**.  
-  
-   Další informace najdete v části [hledání a používání rozšíření sady Visual Studio](../ide/finding-and-using-visual-studio-extensions.md).  
-  
-### <a name="installing-from-the-web"></a>Instalace z webu  
- Pokud znáte rozhraní, které vás zajímají:  
-  
-1. Otevřít [Visual Studio Marketplace](https://marketplace.visualstudio.com).  
-  
-2. Zadejte název rozhraní v **najít** pole.  
-  
-3. Zvolte rozhraní v seznamu výsledků na stránku Galerie Visual Studio pro nástroj.  
-  
-   Můžete procházet seznam architektur společně s další testovací nástroje:  
-  
-4. Otevřít [Visual Studio Marketplace](https://marketplace.visualstudio.com).  
-  
-5. Zvolte **Procházet**.  
-  
-6. V **kategorie** seznamu, rozbalte **nástroje** uzlu a pak zvolte **testování**.  
-  
-7. Výběr architektury v seznamu výsledků na stránku Galerie Visual Studio pro nástroj.  
-  
-## <a name="see-also"></a>Viz také  
+Průzkumník testů sady Visual Studio může spustit libovolné prostředí pro testování částí, které vyvinulo rozhraní adaptéru pro Průzkumníka. Instalační program rozhraní nainstaluje binární soubory a přidá šablony projektů sady Visual Studio pro jazyky, které podporuje. Při vytváření projektu se šablonou je rozhraní registrováno v Průzkumníku testů. Řešení sady Visual Studio může obsahovat projekty testování částí, které používají různá rozhraní a cílí na různé jazyky. Průzkumník testů je spouští všechny.
+
+ **Požadavky**
+
+- Visual Studio Enterprise Visual Studio Professional
+
+## <a name="acquiring-third-party-frameworks"></a>Získání rozhraní třetích stran
+ Můžete stáhnout a nainstalovat mnoho rozhraní pro testování částí třetích stran pomocí Správce rozšíření sady Visual Studio nebo z galerie sady Visual Studio na webu MSDN. Rozhraní lze také stáhnout z jiných webů, jako je například web rozhraní.
+
+### <a name="installing-from-visual-studio"></a>Instalace ze sady Visual Studio
+
+1. Zvolte **nástroje** v nabídce Standard a pak zvolte **rozšíření a aktualizace**.
+
+2. Rozbalte položku **online**, **Galerie sady Visual Studio**, **nástroje**. Vyberte možnost **testování**.
+
+3. V seznamu vyhledejte rozhraní.
+
+4. Vyberte architekturu a zvolte **Stáhnout**.
+
+   Další informace najdete v tématu [vyhledání a používání rozšíření sady Visual Studio](../ide/finding-and-using-visual-studio-extensions.md).
+
+### <a name="installing-from-the-web"></a>Instalace z webu
+ Pokud znáte rozhraní, na které vás zajímáte, postupujte takto:
+
+1. Otevřete [Visual Studio Marketplace](https://marketplace.visualstudio.com).
+
+2. Do pole **Najít** zadejte název rozhraní.
+
+3. Vyberte architekturu v seznamu výsledků a přejděte na stránku galerie sady Visual Studio pro daný nástroj.
+
+   Chcete-li procházet seznam platforem spolu s dalšími testovacími nástroji:
+
+4. Otevřete [Visual Studio Marketplace](https://marketplace.visualstudio.com).
+
+5. Klikněte na tlačítko **Procházet**.
+
+6. V seznamu **kategorie** rozbalte uzel **nástroje** a pak zvolte možnost **testování**.
+
+7. Vyberte architekturu v seznamu výsledků a přejděte na stránku galerie sady Visual Studio pro daný nástroj.
+
+## <a name="see-also"></a>Viz také
  [Testování částí kódu](../test/unit-test-your-code.md)

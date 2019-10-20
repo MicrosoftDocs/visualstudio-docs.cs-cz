@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1364ce26b4a6f54f99267ce3e1288160f75ca148
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
-ms.translationtype: HT
+ms.openlocfilehash: 4aeb28fe7fbfbaa6e2d120fe58fdc39f188367b5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72562529"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647506"
 ---
 # <a name="step-6-add-a-timer"></a>Krok 6: Přidání časovače
 Dále přidáte ovládací prvek <xref:System.Windows.Forms.Timer> do rozrovnávací hry. Časovač počká zadaný počet milisekund a potom vyvolá událost, která je označována jako *Tick*. To je užitečné při spuštění akce nebo opakování akce v pravidelných intervalech. V takovém případě můžete pomocí časovače povolit hráči zvolit dvě ikony a pokud se ikony neshodují, po krátké době tyto ikony opět skrýt.
@@ -28,7 +28,7 @@ Dále přidáte ovládací prvek <xref:System.Windows.Forms.Timer> do rozrovnáv
 1. Ze sady nástrojů v **Návrhář formulářů**zvolte možnost **časovač** (v kategorii **součásti** ) a poté stiskněte klávesu **ENTER** , nebo dvakrát klikněte na časovač a přidejte ovládací prvek časovače do formuláře. Ikona časovače s názvem **Timer1**by se měla objevit v prostoru pod formulářem, jak je znázorněno na následujícím obrázku.
 
      ![Timer](../ide/media/express_timer.png)<br/>
-**Timer**
+***Timer***
 
     > [!NOTE]
     > Pokud je panel nástrojů prázdný, je nutné před otevřením sady nástrojů vybrat nástroj Návrhář a nikoli kód formuláře.
@@ -63,6 +63,6 @@ Dále přidáte ovládací prvek <xref:System.Windows.Forms.Timer> do rozrovnáv
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu, přečtěte si [článek 7: zůstat páry viditelné](../ide/step-7-keep-pairs-visible.md).
+- Pokud chcete přejít na další krok kurzu, přečtěte si **[článek 7: zůstat páry viditelné](../ide/step-7-keep-pairs-visible.md)** .
 
 - Pokud se chcete vrátit k předchozímu kroku kurzu, přečtěte si [článek 5: Přidání odkazů na štítky](../ide/step-5-add-label-references.md).

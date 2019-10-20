@@ -4,141 +4,141 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - UML, using models
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aced2be4d584fb2ede58527a1d541f24089f220d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1c38cb246a1ec3e8a20793b37f0a231d2e118bd4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62907296"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663767"
 ---
 # <a name="use-models-in-your-development-process"></a>Použití modelů ve vývojových procesech
 
-V sadě Visual Studio vám pomůže modelu vám pomůžou pochopit a změnit systému, aplikace nebo komponenty. Model můžete vizualizovat na světě, ve kterém je váš systém funguje, vysvětlení požadavky uživatelů, definovat architektuře systému, analýza kódu a ujistěte se, že váš kód splňuje požadavky. Zobrazit [Video pro kanál 9: Zlepšení architektury prostřednictvím modelování](http://go.microsoft.com/fwlink/?LinkID=252078).
+V aplikaci Visual Studio můžete použít model, který vám pomůže pochopit a změnit systém, aplikaci nebo komponentu. Model vám může přispět k vizualizaci světa, ve kterém váš systém funguje, objasnit potřeby uživatelů, definovat architekturu vašeho systému, analyzovat kód a ujistit se, že váš kód splňuje požadavky. Viz [video o kanálu 9: vylepšení architektury prostřednictvím modelování](http://go.microsoft.com/fwlink/?LinkID=252078).
 
-Které verze sady Visual Studio podporovat každý typ modelu najdete v tématu [podporované verze pro nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Chcete-li zjistit, které verze aplikace Visual Studio podporují jednotlivé typy modelů, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-Modely můžou pomoct několika způsoby:
+Modely vám můžou pomáhat několika způsoby:
 
-- Kreslení diagramů modelování vám objasnění konceptů, které jsou součástí požadavků, architektury a návrhu vysoké úrovně. Další informace najdete v tématu [modelování uživatelských požadavků](../modeling/model-user-requirements.md).
+- Vytváření diagramů modelování vám pomůže objasnit koncepty, které se týkají požadavků, architektury a návrhu vysoké úrovně. Další informace najdete v tématu [Model požadavky uživatelů na uživatele](../modeling/model-user-requirements.md).
 
-- Práce s modely můžete zveřejnit nekonzistence v požadavcích.
+- Práce s modely vám může pomáhat odhalit nekonzistence v požadavcích.
 
-- Komunikace s modely vám umožňuje komunikovat, důležité koncepty menší ambiguously přirozeným jazykem. Další informace najdete v tématu [modelování architektury aplikace](../modeling/model-your-app-s-architecture.md).
+- Komunikace s modely vám pomůže sdělit důležité koncepty méně dvojznačnější než u přirozeného jazyka. Další informace najdete v tématu [modelování architektury aplikace](../modeling/model-your-app-s-architecture.md).
 
-- Modely někdy slouží ke generování kódu nebo jiných artefaktů, jako je například databázová schémata nebo dokumenty. Například modelování součásti sady Visual Studio se generují z modelu. Další informace najdete v tématu [vygenerovat a nakonfigurovat aplikace z modelů](../modeling/generate-and-configure-your-app-from-models.md).
+- V některých případech můžete použít modely pro generování kódu nebo jiných artefaktů, například schémat databáze nebo dokumentů. Například komponenty modelování sady Visual Studio jsou generovány z modelu. Další informace najdete v tématu [generování a konfigurace aplikace z modelů](../modeling/generate-and-configure-your-app-from-models.md).
 
-Modely v nejrůznějších procesy, extreme agility na vysokou procedury můžete použít.
+Modely můžete používat v nejrůznějších procesech, od extrémní agilní až po vysokou procedury.
 
 ## <a name="use-models-to-reduce-ambiguity"></a>Použití modelů ke snížení nejednoznačnosti
 
-Modelovací jazyk je nejednoznačný méně než přirozený jazyk a je určený k vyjádření nápady obvykle vyžadují při vývoji softwaru.
+Jazyk modelování je méně dvojznačný než přirozený jazyk a je navržený tak, aby při vývoji softwaru vyjádřil nápady, které obvykle vyžadují.
 
-Pokud váš projekt obsahuje malý tým agilních postupů, můžete použít modely umožňují objasnění uživatelských scénářů. V diskusích u zákazníka o jejich potřebám vytváření modelu můžete generovat užitečné dotazy mnohem rychleji a napříč širším oblasti produktu, než psaní kódu ve špičce nebo spravovat.
+Pokud má váš projekt malý tým na základě agilních postupů, můžete použít modely, které vám pomohou objasnit uživatelské scénáře. Při diskusích se zákazníkem na jejich potřeby může vytváření modelu generovat užitečné otázky mnohem rychleji a v širší oblasti produktu, než psát kód špičky nebo prototypy.
 
-Pokud váš projekt je velká a zahrnuje týmy v různých částech světa, můžete použít modely usnadňují komunikaci požadavcích a architektuře mnohem efektivněji než v prostém textu.
+Pokud je váš projekt velký a obsahuje týmy v různých částech světa, můžete použít modely, které vám pomohou s tím, že požadavky a architektura budou mnohem efektivnější, než můžete použít prostý text.
 
-V obou případech vytváření modelu téměř vždy vede k výraznému snížení nekonzistence a nejednoznačnosti. Různé zúčastněné strany mají často různých porozumění obchodním světě, ve kterém systém funguje, a různí vývojáři často mají různé porozumění fungování systému. Použití modelu jako zaměření diskuse obvykle poskytuje tyto rozdíly. Další informace o tom, jak využít model k snížení nekonzistence, naleznete v tématu [modelování uživatelských požadavků](../modeling/model-user-requirements.md).
+V obou případech vytvoření modelu téměř vždy vede k výraznému snížení nekonzistencí a nejednoznačnosti. Různí účastníci mají často různé porozumění obchodnímu světě, ve kterém systém funguje, a různí vývojáři mají často různé informace o tom, jak systém funguje. Použití modelu jako fokusu diskuze obvykle zveřejňuje tyto rozdíly. Další informace o použití modelu ke snížení nekonzistencí najdete v tématu [model uživatelských požadavků](../modeling/model-user-requirements.md).
 
-## <a name="use-models-with-other-artifacts"></a>Použití modelů pomocí jiné artefakty
+## <a name="use-models-with-other-artifacts"></a>Použití modelů s jinými artefakty
 
-Model se sám o sobě specifikace požadavky nebo architekturu. Je nástroj pro větší přehlednost vyjádření některé aspekty těchto věcí, ale ne všechny konceptech vyžadovaných při návrhu softwaru lze vyjádřit. Modely je proto třeba použít spolu s jiným způsobem komunikace, jako jsou aplikace OneNote stránky nebo odstavce, dokumentů Microsoft Office, pracovní položky v Team Foundation nebo rychlé poznámky na zeď místnosti projektu. Kromě poslední položky všechny tyto typy objektů lze propojit k různým částem prvky modelu.
+Model není sám o sobě specifikací požadavků nebo architekturou. Jedná se o nástroj, který vám umožní vyjádřit některé aspekty těchto věcí podrobněji, ale ne všechny koncepty požadované během návrhu softwaru. Modely by se proto měly používat společně s jinými komunikačními prostředky, jako jsou stránky nebo odstavce OneNotu, systém Microsoft Office dokumenty, pracovní položky v Team Foundation nebo rychlé poznámky na stěně projektové místnosti. Kromě poslední položky mohou být všechny tyto typy objektů propojeny s částmi prvků modelu.
 
-Další aspekty specifikace, které se běžně používají společně s modely patří. V závislosti na rozsahu a styl projektu můžete použít některé z těchto aspektů nebo není žádný vůbec používat:
+Další aspekty specifikace, které se obvykle používají společně s modely, zahrnují následující. V závislosti na měřítku a stylu vašeho projektu můžete použít několik těchto aspektů nebo nepoužívat vůbec:
 
-- Uživatelské scénáře. Uživatelský scénář je krátký popis, popsané s uživateli a další zainteresované uživatele určitý aspekt systému chování, které budou doručeny v jednom projektu iterací. Typické uživatelský scénář začíná "zákazník bude moct..." Uživatelský scénář může způsobit skupinu případy použití, nebo můžete definovat rozšíření případy použití, které byly dříve vytvořeny. Definování nebo rozšíření případy použití pomáhá vytvářet jasnější uživatelský scénář.
+- Uživatelské scénáře. Uživatelský scénář je krátký popis, který je popsán u uživatelů a dalších zúčastněných stran, z hlediska chování systému, který bude dodán v jednom z iterací projektu. Typický uživatelský scénář začíná "zákazník bude moci..." Uživatelský scénář může představovat skupinu případů použití nebo může definovat rozšíření případů použití, které byly dříve vyvinuty. Definování nebo rozšíření případů použití pomáhá zajistit, aby byl uživatelský scénář jasný.
 
-- Žádosti o změnu. Žádost o změnu v formálnější projektu je velmi podobný uživatelského scénáře v projektu aplikace agile. Agilní přístup považuje za všechny požadavky na změny pro co byl vyvinut v předchozími iteracemi.
+- Žádosti o změnu. Žádost o změnu v formálním projektu je velmi podobná uživatelskému scénáři v agilním projektu. Agilní přístup zpracovává všechny požadavky jako změny, co bylo vyvinuto v předchozích iteracích.
 
-- Popis případu použití. Případ použití představuje jeden ze způsobů, ve kterém uživatel pracuje se systémem k dosažení určitého cíle. Úplný popis obsahuje cíl, hlavní a alternativní pořadí událostí a mimořádných výsledků. Diagram případu použití pomáhá shrnout a poskytnout přehled o případy použití.
+- Popis případu použití Případ použití představuje jeden způsob, jakým uživatel komunikuje se systémem, aby dosáhl konkrétního cíle. Úplný popis zahrnuje cíl, hlavní a alternativní sekvence událostí a výjimečné výsledky. Diagram případu použití pomáhá shrnout a poskytnout přehled o případech použití.
 
-- Scénáře. Scénář je poměrně podrobný popis posloupnost událostí znázorňující, jak v systému, uživatelů a jiných systémů společně poskytují hodnotu pro zúčastněné strany. Může trvat formu slide show uživatelského rozhraní nebo prototypu uživatelského rozhraní. To lze popsat jeden případ použití nebo posloupnost případy použití.
+- Řešení. Scénář je poměrně podrobný popis posloupnosti událostí, která ukazuje, jak systém, uživatelé a další systémy vzájemně spolupracují za účelem poskytování hodnoty zúčastněným stranám. Může mít podobu prezentace uživatelského rozhraní nebo prototypu uživatelského rozhraní. Může popsat jeden případ použití nebo posloupnost případů použití.
 
-- Glosář. Glosář požadavky projektu popisuje slova, se kterými zákazníci diskutovat o jejich světa. Uživatelské rozhraní a požadavků na modely také používali tyto podmínky. Diagram tříd může pomoci objasnit vztahy mezi většinu těchto podmínek. Vytváření diagramů a glosář pouze snižuje nedorozuměním mezi uživatele a vývojáře, ale také téměř vždy zpřístupňuje nedorozuměním mezi různými obchodními zúčastněnými stranami.
+- Slovník. Glosář požadavků projektu popisuje slova, se kterými zákazníci projednávají svůj svět. Tyto podmínky by měly používat i modely uživatelských rozhraní a požadavků. Diagram tříd může přispět k objasnění vztahů mezi většinou těchto podmínek. Vytváření diagramů a glosáře nejenom omezuje počet nedorozumění uživatelů a vývojářů, ale i téměř vždy zveřejňuje nepochopení mezi různými obchodními stranami.
 
-- Obchodní pravidla. Řada obchodních pravidel může být vyjádřena jako výchozí omezení na přidružení a atributy v třídě modelu požadavky a jako omezení u sekvenčních diagramů.
+- Obchodní pravidla. Mnoho obchodních pravidel lze vyjádřit jako invariantní omezení pro přidružení a atributy v modelu třídy požadavků a jako omezení pro sekvenční diagramy.
 
-- Návrh vysoké úrovně. Popisuje hlavní části a jak je umístit společně. Komponenty, pořadí a interface diagramy jsou hlavní součástí návrhu vysoké úrovně.
+- Návrh vysoké úrovně. Popisuje hlavní části a jejich vzájemné přizpůsobení. Diagramy komponent, sekvencí a rozhraní jsou hlavní součástí návrhu vysoké úrovně.
 
-- Vzory návrhu. Popis pravidla návrhu, které jsou sdíleny napříč různými částmi systému.
+- Vzory návrhu. Popište pravidla návrhu, která jsou sdílena napříč různými částmi systému.
 
-- Otestujte specifikace. Testovací skripty a návrhy pro testovací kód můžete velice diagramy činnosti a sekvence pro popis sekvencí testovací kroky. Testy systému by měl být vyjádřen jako model požadavků tak, aby se lze snadno změnit při změně požadavků.
+- Specifikace testu. Testovací skripty a návrhy pro testovací kód mohou sloužit k popsání sekvencí testovacích kroků, které popisují sekvence a sekvenční diagramy. Systémové testy by se měly vyjádřit v souvislosti s modelem požadavků, aby je bylo možné snadno změnit při změně požadavků.
 
-- Plán projektu. Plánu projektu nebo nevyřízené položky definuje, kdy budou doručeny jednotlivé funkce. Jednotlivé funkce můžete definovat uvedením, co použijete, případy a obchodní pravidla implementuje nebo rozšiřuje. Můžete buď odkazujete i na případy použití a obchodní pravidla přímo v plánu nebo můžete definovat sadu funkcí v samostatných dokumentu a použít názvy funkcí v plánu.
+- Plán projektu. Plán projektu nebo nevyřízené položky definují, kdy bude každá funkce doručena. Jednotlivé funkce můžete definovat tak, že uvedete, jaké případy použití a obchodní pravidla implementuje nebo rozšiřuje. Můžete buď odkazovat na případy použití a obchodní pravidla přímo v plánu, nebo můžete definovat sadu funkcí v samostatném dokumentu a použít tituly funkcí v plánu.
 
-## <a name="use-models-in-iteration-planning"></a>Používání modelů v plánování iterace
+## <a name="use-models-in-iteration-planning"></a>Použití modelů při plánování iterací
 
-I když se všechny projekty se liší v jejich škálování a organizaci, obvyklou pro projekty, plánujeme přidat jako řadu iterací mezi dvěma až šest týdnů. Je důležité mít plán dostatek iterace povolit zpětnou vazbu od počáteční iterace, který se má použít k nastavení oboru a plány pro vyšší počet iterací.
+I když se všechny projekty liší ve své škále a organizaci, typický projekt je plánován jako série iterací mezi dvěma a šesti týdny. Je důležité naplánovat dostatek iterací, aby bylo možné použít zpětnou vazbu z počátečních iterací pro úpravu rozsahu a plánů pro pozdější iterace.
 
-Následující doporučení můžou být užitečné umožňující začít využívat výhod v iterativní projektu modelování.
+Můžete se setkat s následujícími návrhy, které vám pomůžou využít výhody modelování v iterativním projektu.
 
-### <a name="sharpen-focus-as-each-iteration-approaches"></a>Zdokonalení fokus při každé iteraci přístupů
+### <a name="sharpen-focus-as-each-iteration-approaches"></a>Zostření se soustředit na jednotlivé přístupy iterace
 
-Při každém blížícím se opakování pomocí modely definovat, co je doručit na konci iterace.
+V rámci každé iterace se používají modely, které vám pomůžou definovat, co se má doručit na konci iterace.
 
-- Model není vše podrobně v počátečních iteracích. V první iteraci vytvoření diagramu tříd pro hlavní položky v glosáři uživatele, nakreslit diagram případy použití hlavní a nakreslete obrázek hlavní součásti. Nepopisují všechny z nich najdete v úplných podrobností, protože později v projektu se změní podrobnosti. Pomocí podmínky definované v tomto modelu vytvořit seznam funkcí nebo hlavní uživatelské scénáře. Funkce přiřadíte k iteracím tak, aby přibližně vyvážit zatížení odhadované během celého projektu. Tato přiřazení se změní později v projektu.
+- Nevytvářejte model všeho podrobněji v počátečních iteracích. V první iteraci vytvořte diagram tříd pro hlavní položky v uživatelském glosáři, nakreslete diagram hlavních případů použití a nakreslete diagram hlavních součástí. Nepište žádné z těchto podrobných podrobností, protože podrobnosti se později v projektu změní. Pomocí podmínek definovaných v tomto modelu vytvořte seznam funkcí nebo hlavních uživatelských scénářů. Přiřaďte funkce k iteracím, abyste přibližně vyrovnali odhadované zatížení v celém projektu. Tato přiřazení se později v projektu změní.
 
-- Zkuste implementovat zjednodušená verze všech vašich nejdůležitějších případy použití v rané fázi iterace. Rozšíření jsou případy použití ve vyšším počtu iterací. Tento přístup pomáhá snížit riziko zjistit chyby v požadavcích nebo na architekturu příliš pozdě v projektu se nic dělat.
+- Zkuste implementovat zjednodušené verze všech nejdůležitějších případů použití v předčasném opakování. Rozšíří tyto případy použití v pozdějších iteracích. Tento přístup pomáhá snižovat riziko, že v rámci požadavků zjišťuje chybu nebo v rámci architektury příliš pozdě v projektu.
 
-- Na konci každé iterace stiskněte a podržte požadavky na seminář k definování podrobně požadavky nebo uživatelskými scénáři, které budou vytvořeny v další iteraci. Pozvěte uživatele a zúčastněné obchodní strany, kteří se můžete rozhodnout, priority, jakož i vývojářům a testerům systému. Umožňují definovat požadavky pro iterace 2 týden tři hodiny.
+- Na konci každé iterace si podržíte požadavky Workshop, abyste definovali podrobně požadavky nebo uživatelské scénáře, které budou vyvinuty v další iteraci. Pozvání uživatelů a obchodních účastníků, kteří mohou rozhodnout o prioritách, a také vývojáře a testery systému. Umožňuje třem hodinám definovat požadavky na iteraci na 2 týdny.
 
-- Cílem tohoto pracoviště je pro každého souhlas, co všechno zvládneme na konci další iteraci. Abychom to osvětlili požadavky použijte modely jako jeden z nástrojů. Iterace backlogu je výstup seminář: to znamená, seznam úkolů vývoje v Team Foundation a testovací sady v [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)].
+- Cílem dílny je, aby všichni souhlasili s tím, co bude provedeno na konci další iterace. Použijte modely jako jeden z nástrojů, které vám pomůžou tyto požadavky vyjasnit. Výstupem dílny je nevyřízené položky iterace: to je seznam vývojářských úloh v Team Foundation a testovacích sadách v [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)].
 
-- Workshop požadavky diskutovat o návrhu, pouze pokud podle musíte určit odhady pro úlohy vývoje. Jinak použijte diskusi chování systému, který uživatelé budou moci využívat přímo. Zachovat model požadavků nezávisle na architektuře modelu.
+- V části požadavky Workshop proberte návrh pouze v případě, že potřebujete určit odhady pro úlohy vývoje. V opačném případě ponechte diskuzi na chování systému, které uživatelé můžou pracovat přímo. Model požadavků si ponechte oddělené od modelu architektury.
 
-- Běžné uživatele zúčastněné strany mají obvykle bez problémů Principy diagramy UML, s pokyny od vás.
+- Netechničtí účastníci většinou nemají žádné problémy s porozuměním diagramům UML s některými pokyny.
 
-### <a name="link-model-to-work-items"></a>Odkaz modelu s pracovními položkami
+### <a name="link-model-to-work-items"></a>Propojit model s pracovními položkami
 
-Po seminář požadavky vypracování podrobností model požadavků a propojit úkoly vývoje modelu. Můžete to provést pomocí propojení pracovních položek v produktu Team Foundation na prvky v modelu.
+Až se požadavky Workshop vyvíjejí, vypracovali Podrobnosti modelu požadavků a propojí model s vývojovými úkoly. To lze provést propojením pracovních položek v rámci serveru Team Foundation s prvky v modelu.
 
-Můžete propojit libovolný prvek s pracovními položkami, ale jsou nejužitečnější prvky následujícím způsobem:
+Libovolný prvek můžete propojit s pracovními položkami, ale nejužitečnější prvky jsou následující:
 
-- Komentář popisující obchodních pravidel nebo kvality požadavků na služby. Další informace najdete v tématu [modelování uživatelských požadavků](../modeling/model-user-requirements.md).
+- Komentáře popisující obchodní pravidla nebo požadavky na službu Quality of Service. Další informace najdete v tématu [Model požadavky uživatelů na uživatele](../modeling/model-user-requirements.md).
 
-### <a name="link-model-to-tests"></a>Odkaz modelu testů
+### <a name="link-model-to-tests"></a>Propojit model s testy
 
-Pomocí modelu požadavky na návrh předávací testy. Vytvořte tyto testy současně vývojové práce.
+Pomocí modelu požadavků můžete obsloužit návrh testů přijetí. Vytvářejte tyto testy souběžně s vývojovou prací.
 
-Další informace o této techniky najdete v tématu [vývoj testů z modelu](../modeling/develop-tests-from-a-model.md).
+Další informace o tomto postupu naleznete v tématu [vývoj testů z modelu](../modeling/develop-tests-from-a-model.md).
 
 ### <a name="estimate-remaining-work"></a>Odhad zbývající práce
 
-Model požadavků může pomoct s odhadem celkovou velikost ve vztahu k velikost každé iterace projektu. Hodnocení počtem a složitostí na případy použití a třídy, pomůže vám při odhadování vývojové práce, která se bude vyžadovat. Když jste dokončili prvních několika iteracích, porovnání požadavky popsané a požadavky stále k pokrytí můžete udělit přibližné zlomek nákladů a rozsah zbytku projektu.
+Model požadavků může přispět k odhadu celkové velikosti projektu ve vztahu k velikosti každé iterace. Vyhodnocení počtu a složitosti případů použití a tříd vám může pomáhat odhadnout vývojovou práci, která se bude vyžadovat. Pokud jste dokončili několik prvních iterací, povýšení požadavků a i nadále pokrytí požadavků může poskytovat přibližnou míru nákladů a rozsahu zbytku projektu.
 
-Na konci každé iterace zkontrolujte přiřazení požadavků k budoucím iteracím. Může být užitečné k vyjádření stavu vašeho softwaru na konci každé iterace jako subsystém v diagramu případu použití. V diskusích můžete přesunout případy použití a pomocí rozšíření případu z jednoho z těchto subsystémů na jiný.
+Na konci každé iterace zkontrolujte přiřazení požadavků k budoucím iteracím. Může být užitečné znázornit stav softwaru na konci každé iterace jako podsystém v diagramu případu použití. V diskusích můžete přesunout případy použití a rozšíření případů použití z jednoho z těchto subsystémů do jiného.
 
-## <a name="levels-of-abstraction"></a>Úrovní abstrakce
+## <a name="levels-of-abstraction"></a>Úrovně abstrakce
 
-Modely mají celou řadu abstrakce ve vztahu k softwaru. Většina konkrétní modely přímo představují programového kódu a nejvíce abstraktní modely představují obchodních konceptů, jež mohou nebo nemusí být zastoupeny v kódu.
+Modely mají ve vztahu k softwaru rozsah abstrakce. Nejvíc konkrétní modely představují přímo kód programu a většina abstraktních modelů představuje obchodní koncepty, které mohou nebo nemusí být v kódu zastoupeny.
 
-Model lze zobrazit pomocí několika druhů diagramů. Informace o modelů a diagramů naleznete v tématu [vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md).
+Model lze zobrazit pomocí několika druhů diagramů. Informace o modelech a diagramech najdete v tématu [vytvoření modelů pro vaši aplikaci](../modeling/create-models-for-your-app.md).
 
-Různé druhy diagramu jsou užitečné pro popis návrhu na různých úrovních, abstrakce. Mnoho typů diagramu jsou užitečné na více než jedné úrovni. Tato tabulka ukazuje, jak je možné každý typ diagramu.
+Různé druhy diagramů jsou užitečné pro popis návrhu na různých úrovních abstrakce. Mnoho typů diagramů je užitečné na více než jedné úrovni. Tato tabulka ukazuje, jak lze použít každý typ diagramu.
 
-|Úroveň návrh|Typy diagramů|
+|Úroveň návrhu|Typy diagramů|
 |-|-|
-|Obchodního procesu<br /><br /> Díky porozumění kontextu, ve kterém se použije váš systém pomáhá zjistit, co uživatelé musíte z něj.|– Diagramy tříd koncepční popisují obchodní koncepty používané v rámci obchodního procesu.|
-|Požadavky na uživatele<br /><br /> Definice uživatelé musí z vašeho systému.|-Obchodní pravidla a kvalitu služeb požadavků lze popsat v samostatných dokumentech.|
-|Návrh vysoké úrovně<br /><br /> Celkovou strukturu systému: hlavní součásti a jak se spojit dohromady.|-Závislost diagramy popisují struktury systému do vzájemně závislé součásti. Můžete ověřit kód programu proti diagramy závislostí za účelem zajištění, že bude odpovídat architektuře.|
-|Analýza kódu<br /><br /> Diagramy se dá vygenerovat na kód.|– Diagramy závislostí zobrazit závislosti mezi třídami. Aktualizovaný kód může být ověřena diagram závislostí.<br />– Diagramy tříd zobrazit třídy v kódu.|
+|Obchodní proces<br /><br /> Pochopení kontextu, ve kterém se váš systém bude používat, vám pomůže pochopit, co uživatelé z něho potřebují.|– Diagramy koncepčních tříd popisují obchodní koncepty používané v rámci obchodního procesu.|
+|Požadavky uživatelů<br /><br /> Definice toho, co uživatelé potřebují z vašeho systému.|– Obchodní pravidla a požadavky na kvalitu služeb můžete popsat v samostatných dokumentech.|
+|Návrh vysoké úrovně<br /><br /> Celková struktura systému: hlavní komponenty a jejich vzájemná spolupráce.|– Diagramy závislosti popisují, jak je systém strukturovaný, do vzájemně závislých součástí. Pomocí diagramů závislostí můžete ověřit kód programu, aby se zajistilo, že bude vyhovovat architektuře.|
+|Analýza kódu<br /><br /> Diagramy lze generovat z kódu.|-Diagramy závislosti znázorňují závislosti mezi třídami. Aktualizovaný kód lze ověřit proti diagramu závislostí.<br />Diagramy tříd zobrazují třídy v kódu.|
 
 ## <a name="external-resources"></a>Externí zdroje
 
-|**Kategorie**|**Odkazy**|
+|**Kategorií**|**Odkazy**|
 |-|-|
-|**Videa**|![odkaz na video](../data-tools/media/playvideo.gif) [MSDN How do I videa: Vytvoření a použití modelů a diagramů UML (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif) [Channel 9: UML sadou Visual Studio 2010](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif) [řady MSDN jak: Nástroje UML a rozšíření (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkID=214467)|
-|**Fóra**|- [Visual Studio Visualization & Modeling nástroje](http://go.microsoft.com/fwlink/?LinkId=184720)<br />- [Visual Studio Visualization & Modeling SDK (DSL Tools)](http://go.microsoft.com/fwlink/?LinkId=184721)|
+|**Videa**|Jak se ![link video ](../data-tools/media/playvideo.gif) [MSDN jak mám videa: jak vytvářet a používat modely a diagramy UML (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![link video ](../data-tools/media/playvideo.gif) [Channel 9: UML se sadou Visual Studio 2010](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> Jak se ![link do videa ](../data-tools/media/playvideo.gif) [MSDN jak se řady: nástroje a rozšiřitelnost UML (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkID=214467)|
+|**Fóra**|- [nástrojů pro modelování sady Visual Studio pro vizualizaci &](http://go.microsoft.com/fwlink/?LinkId=184720)<br />- [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](http://go.microsoft.com/fwlink/?LinkId=184721)|
 |**Blogy**|[Microsoft DevOps](https://devblogs.microsoft.com/devops/)|
-|**Technické články a deníky**|[MSDN Architecture Center](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Pokyny k nástrojům architektury sady Visual Studio](../modeling/visual-studio-architecture-tooling-guidance.md)|
+|**Technické články a deníky**|[Centrum architektury MSDN](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Pokyny k nástrojům architektury sady Visual Studio](../modeling/visual-studio-architecture-tooling-guidance.md)|
 
 ## <a name="see-also"></a>Viz také:
 
-- [Použití modelů v Agilním vývoji](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)
+- [Používání modelů v agilním vývoji](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)
 - [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)
 - [Modelování uživatelských požadavků](../modeling/model-user-requirements.md)
 - [Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)

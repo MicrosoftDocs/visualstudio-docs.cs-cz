@@ -1,5 +1,5 @@
 ---
-title: -RunExit (devenv.exe)
+title: -RunExit (devenv. exe)
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - Devenv, /RunExit switch
 - /RunExit Devenv switch
 ms.assetid: bfc94875-5fc0-4110-b961-d59c0b403790
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fa010e72267dadfb1974f7ce8be3b6b9a3e1cff
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 295d4999437248cc9221631378c2beffd80094d8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935043"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655524"
 ---
-# <a name="runexit-devenvexe"></a>/ RunExit (devenv.exe)
+# <a name="runexit-devenvexe"></a>/RunExit (devenv. exe)
 
-Zkompiluje a spustí zadaný projekt nebo řešení a potom jej zavře integrovaného vývojového prostředí (IDE).
+Zkompiluje a spustí zadaný projekt nebo řešení a potom zavře integrované vývojové prostředí (IDE).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,25 +35,25 @@ devenv /RunExit {SolutionName|ProjectName} [/Out OutputFilename]
 
   Úplná cesta a název souboru řešení.
 
-- *ProjectName*
+- *Názevprojektu*
 
   Úplná cesta a název souboru projektu.
 
 - `/Out` *OutputFilename*
 
-  Volitelné. Název souboru, který chcete odeslat nástroj výstupního. Pokud soubor již existuje, nástroj připojil výstupu na konci souboru.
+  Volitelné. Název souboru, do kterého chcete odeslat výstup nástroje. Pokud soubor již existuje, nástroj připojí výstup na konec souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-Zkompiluje a spustí zadaný projekt nebo řešení podle nastavení nakonfigurovaného pro konfiguraci aktivního řešení. Tento přepínač minimalizuje rozhraní IDE při projekt nebo řešení je spustit. Ho ukončí rozhraní IDE po projekt nebo řešení po dokončení jeho běhu.
+Zkompiluje a spustí zadaný projekt nebo řešení podle nastavení určeného pro aktivní konfiguraci řešení. Tento přepínač minimalizuje integrované vývojové prostředí (IDE) při spuštění projektu nebo řešení. Ukončí prostředí IDE po dokončení běhu projektu nebo řešení.
 
-- Uzavření řetězců, které obsahují mezery v dvojitých uvozovkách.
+- Uzavřete řetězce, které obsahují mezery, do dvojitých uvozovek.
 
-- Souhrnné informace, včetně chyb, lze zobrazit v **příkaz** okna, nebo do jakéhokoli souboru protokolu zadaný `/Out` přepnout.
+- Souhrnné informace, včetně chyb, se dají zobrazit v **příkazovém** okně nebo v jakémkoli souboru protokolu, který je zadaný pomocí přepínače `/Out`.
 
 ## <a name="example"></a>Příklad
 
-Tento příklad spustí řešení `MySolution` v minimalizovaném okně integrovaného vývojového prostředí pomocí konfigurace aktivního nasazení a poté ukončí rozhraní IDE.
+Tento příklad spustí řešení `MySolution` v minimalizovaném integrovaném vývojovém prostředí pomocí aktivní konfigurace nasazení a pak ukončí rozhraní IDE.
 
 ```
 devenv /runexit "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
@@ -62,7 +62,7 @@ devenv /runexit "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
 ## <a name="see-also"></a>Viz také:
 
 - [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)
-- [Nebo spuštění (devenv.exe)](../../ide/reference/run-devenv-exe.md)
-- [/ Sestavení (devenv.exe)](../../ide/reference/build-devenv-exe.md)
-- [/ Sestavení (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
-- [/ Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)
+- [/Run (devenv. exe)](../../ide/reference/run-devenv-exe.md)
+- [/Build (devenv. exe)](../../ide/reference/build-devenv-exe.md)
+- [/Rebuild (devenv. exe)](../../ide/reference/rebuild-devenv-exe.md)
+- [/Out (devenv. exe)](../../ide/reference/out-devenv-exe.md)

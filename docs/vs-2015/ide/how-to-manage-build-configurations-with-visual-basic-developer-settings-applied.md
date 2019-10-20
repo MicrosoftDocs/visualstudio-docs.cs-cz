@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Správa konfigurací sestavení s použitými nastaveními vývojáře jazyka Visual Basic | Dokumentace Microsoftu'
+title: 'Postupy: Správa konfigurací sestavení pomocí Visual Basic použitých nastavení pro vývojáře | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,39 +14,38 @@ helpviewer_keywords:
 - release builds
 ms.assetid: eaea6e0b-6c61-4869-8d63-d372c745a23c
 caps.latest.revision: 11
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c2cf949803bcc864937e67c1f94addaaf6abacbd
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a5f8568edc636955558ec93b55c0aedebf0065d3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65685630"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651826"
 ---
 # <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>Postupy: Správa konfigurací sestavení s použitými nastaveními vývojáře jazyka Visual Basic
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ve výchozím nastavení jsou všechny možnosti rozšířené sestavení konfigurace skryté s [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] použitými nastaveními vývojáře. Toto téma vysvětluje, jak povolit tato nastavení ručně.  
-  
-## <a name="enabling-advanced-build-configurations"></a>Povolení upřesněné konfigurace sestavení  
- Ve výchozím nastavení [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] nastavení pro vývojáře Skrýt možnost otevření **nástroje Configuration Manager** dialogové okno a **konfigurace** a **platformy** seznamů v [Návrhář projektu](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
-  
-#### <a name="to-enable-advanced-build-configurations"></a>Chcete-li povolit pokročilé konfigurace sestavení  
-  
-1. Na **nástroje** nabídky, klikněte na tlačítko **možnosti**.  
-  
-2. Rozbalte **projekty a řešení**a klikněte na tlačítko **Obecné**.  
-  
+Ve výchozím nastavení jsou všechny rozšířené možnosti konfigurace buildu skryté s použitím [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] nastavení pro vývojáře. Toto téma vysvětluje, jak tato nastavení ručně povolit.
+
+## <a name="enabling-advanced-build-configurations"></a>Povolení pokročilých konfigurací sestavení
+ Ve výchozím nastavení skryje [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] vývojář možnost otevřít dialogové okno **Configuration Manager** a seznam **konfigurací** a **platforem** v [Návrháři projektu](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7).
+
+#### <a name="to-enable-advanced-build-configurations"></a>Postup povolení pokročilých konfigurací sestavení
+
+1. V nabídce **nástroje** klikněte na příkaz **Možnosti**.
+
+2. Rozbalte **projekty a řešení**a klikněte na **Obecné**.
+
     > [!NOTE]
-    > **Obecné** uzlu je viditelný i v případě **zobrazit všechna nastavení** možnost není zaškrtnutá. Pokud chcete zobrazit všechny dostupné možnosti, klikněte na tlačítko **zobrazit všechna nastavení**.  
-  
-3. Klikněte na tlačítko **zobrazit pokročilé konfigurace sestavení**.  
-  
-4. Klikněte na **OK**.  
-  
-     Na **sestavení** nabídce **nástroje Configuration Manager** je nyní k dispozici a **konfigurace** a **platformy** seznamy jsou viditelné v Návrhář projektu.  
-  
-## <a name="see-also"></a>Viz také  
- [Principy konfigurací sestavení](../ide/understanding-build-configurations.md)   
- [Kompilace a sestavení](../ide/compiling-and-building-in-visual-studio.md)
+    > **Obecný** uzel je viditelný i v případě, že není zaškrtnuta možnost **Zobrazit všechna nastavení** . Pokud chcete zobrazit všechny dostupné možnosti, klikněte na **Zobrazit všechna nastavení**.
+
+3. Klikněte na **Zobrazit pokročilé konfigurace sestavení**.
+
+4. Klikněte na tlačítko **OK**.
+
+     V nabídce **sestavení** je nyní k dispozici **Configuration Manager** a seznamy **konfigurací** a **platforem** jsou viditelné v Návrháři projektu.
+
+## <a name="see-also"></a>Viz také
+ [Principy](../ide/understanding-build-configurations.md) [kompilování a sestavování](../ide/compiling-and-building-in-visual-studio.md) konfigurací sestavení

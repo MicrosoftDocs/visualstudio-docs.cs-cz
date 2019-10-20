@@ -2,23 +2,23 @@
 title: Nastavení prostředí
 ms.date: 11/21/2018
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c799d903c29d745d97a407c4c25f1285a5f35151
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bb535a301ec7e6045a44b910cecc21f2306b94bc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978203"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650874"
 ---
 # <a name="environment-settings-for-visual-studio"></a>Nastavení prostředí pro Visual Studio
 
-Když poprvé otevřete Visual Studio, můžete optimalizovat vývojové prostředí pro typ, který používáte nejvíce výběrem kolekce nastavení vývoje. Každá kolekce optimalizuje prvky, jako jsou klávesové zkratky, rozložení oken, projektu a šablon položek a příkaz viditelnost.
+Při prvním otevření sady Visual Studio můžete optimalizovat vývojové prostředí pro typ vývoje, který provedete tak, že vyberete kolekci nastavení. Každá kolekce optimalizuje prvky, jako jsou klávesové zkratky, rozložení oken, šablony projektů a položek a viditelnost příkazů.
 
-K dispozici jsou následující nastavení kolekce:
+K dispozici jsou následující kolekce nastavení:
 
 - Obecné
 - JavaScript
@@ -30,23 +30,23 @@ K dispozici jsou následující nastavení kolekce:
 
 ## <a name="reset-settings"></a>Resetovat nastavení
 
-Chcete-li změnit nastavení pro vývoj, po otevření sady Visual Studio poprvé, postupujte podle těchto kroků:
+Chcete-li změnit nastavení pro vývoj po prvním spuštění aplikace Visual Studio, postupujte takto:
 
-1. Vyberte **nástroje** > **nastavení importu a exportu** z řádku nabídek otevřete **Průvodce importem a exportem nastavení**.
+1. Vyberte **nástroje**  > **Nastavení importu a exportu** z řádku nabídek a otevřete **Průvodce importem a exportem nastavení**.
 
-1. V **Průvodce importem a exportem nastavení**vyberte **obnovit všechna nastavení**a pak vyberte **Další**.
+1. V **Průvodci importem a exportem nastavení**vyberte **Obnovit všechna nastavení**a pak vyberte **Další**.
 
-   ![Průvodce importem a exportem nastavení v sadě Visual Studio](media/reset-all-settings.png)
+   ![Průvodce importem a exportem nastavení v aplikaci Visual Studio](media/reset-all-settings.png)
 
-1. Na **uložit aktuální nastavení** stránky, vyberte buď možnost **Ano** nebo **ne**a pak vyberte **Další**.
+1. Na stránce **Uložit aktuální nastavení** vyberte možnost **Ano** nebo **ne**a potom vyberte možnost **Další**.
 
-1. Na **zvolte výchozí kolekce nastavení** stránce Zvolte kolekci a pak vyberte **Dokončit**.
+1. Na stránce **Zvolte výchozí soubor nastavení** vyberte kolekci a pak vyberte **Dokončit**.
 
-   ![Kolekce nastavení v sadě Visual Studio](media/settings-collections.png)
+   ![Kolekce nastavení v aplikaci Visual Studio](media/settings-collections.png)
 
-1. Na **kompletní obnovení** stránce **Zavřít**.
+1. Na stránce **obnovení dokončeno** vyberte **Zavřít**.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Synchronizace nastavení mezi více počítačů](synchronized-settings-in-visual-studio.md)
-- [Přizpůsobení prostředí IDE sady Visual Studio](personalizing-the-visual-studio-ide.md)
+- [Synchronizace nastavení mezi několika počítači](synchronized-settings-in-visual-studio.md)
+- [Přizpůsobení integrovaného vývojového prostředí sady Visual Studio](personalizing-the-visual-studio-ide.md)

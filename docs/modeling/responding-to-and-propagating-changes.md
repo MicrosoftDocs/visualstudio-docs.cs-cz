@@ -4,55 +4,55 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, events
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a1d58ede1370976147b33cf1246f8b582adb3c5b
-ms.sourcegitcommit: 6a19c5ece38a70731496a38f2ef20676ff18f8a4
+ms.openlocfilehash: 537f41418b6e66055acd9bedd5f0ccf4e01db524
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476604"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660329"
 ---
-# <a name="respond-to-and-propagate-changes"></a>Reakce na změny a jejich šíření
+# <a name="respond-to-and-propagate-changes"></a>Reagování na změny a šíření změn
 
-Po elementu se vytvoří, odstraní nebo aktualizuje, můžete napsat kód, který šíří změny dalších součástí modelu, nebo k externím prostředkům, jako jsou soubory, databáze nebo další komponenty.
+Při vytvoření, odstranění nebo aktualizaci prvku můžete napsat kód, který šíří změnu do jiných částí modelu, nebo do externích prostředků, jako jsou soubory, databáze nebo jiné komponenty.
 
 ## <a name="reference"></a>Odkaz
 
-Jako vodítko vezměte v úvahu tyto postupy v tomto pořadí:
+Jako vodítko zvažte tyto techniky v uvedeném pořadí:
 
-|Postup|Scénáře|Další informace|
+|Hlediska|Scénáře|Další informace|
 |-|-|-|
-|Definujte počítané doménové vlastnosti.|Doménová vlastnost, jejíž hodnota se počítá od jiné vlastnosti v modelu. Například cena, která je součtem ceny souvisejících prvků.|[Vypočtené a vlastní vlastnosti úložiště](../modeling/calculated-and-custom-storage-properties.md)|
-|Definujte doménová vlastnost, která vlastní úložiště.|Doménová vlastnost, která uložena v ostatních částech modelu nebo externě. Například může analyzovat řetězec výraz do stromu v modelu.|[Vypočtené a vlastní vlastnosti úložiště](../modeling/calculated-and-custom-storage-properties.md)|
-|Přepsání změnit obslužné rutiny, například OnValueChanging a OnDeleting|Udržovat synchronizované různé prvky a udržovat synchronizované s modelem externí hodnoty.<br /><br /> Omezení hodnoty, které mají definovanou oblastí.<br /><br /> Volá se bezprostředně před a po hodnotě vlastnosti a jiné změny. Tato změna může ukončit vyvoláním výjimky.|[Obslužné rutiny změny hodnoty vlastnosti domény](../modeling/domain-property-value-change-handlers.md)|
-|pravidla|Můžete definovat pravidla, které jsou zařazeny do fronty pro provedení pouze do konce transakce, ve které došlo ke změně. Nejsou provedeny na vrácení zpět nebo znovu. Jejich použití jedné části úložiště synchronizace s jinou.|[Pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md)|
-|Store události|Modelování úložiště poskytuje oznámení o události, například přidávání nebo odstraňování elementu nebo propojení nebo změna hodnoty vlastnosti. Událost je také provést na zpět a znovu. Události v úložišti slouží k aktualizaci hodnoty, které nejsou v úložišti.|[Obslužné rutiny události šířící změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md)|
-|Události .NET|Obrazce mají obslužné rutiny událostí, které reagují na kliknutí myší a dalších gesta. Je nutné provést registraci pro tyto události pro každý objekt. Registrace se obvykle provádí v přepsání InitializeInstanceResources a je nutné provést pro každý prvek.<br /><br /> Tyto události obvykle dochází mimo transakci.|[Postupy: Zachycení kliknutí na obrazec nebo dekorátor](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)|
-|Rozsah pravidla|Hranice pravidlo se používá konkrétně, chcete-li omezit rozsah tvaru.|[Umístění a velikost obrazce omezení BoundsRules](/visualstudio/modeling/boundsrules-constrain-shape-location-and-size?view=vs-2015)|
-|Výběr pravidla|Výběr pravidla konkrétně omezit, co může uživatel vybrat.|[Postupy: Přístup k aktuálnímu výběru a jeho omezení](../modeling/how-to-access-and-constrain-the-current-selection.md)|
-|OnAssocatedPropertyChanged|Označuje nové elementy modelu pomocí funkce obrazců a konektorů, jako jsou stínové, šipky, barvy a šířku čáry a stylu.|[Aktualizace obrazců a konektorů k vyjádření modelu](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md)|
+|Definujte vlastnost počítané domény.|Doménová vlastnost, jejíž hodnota je počítána z jiných vlastností v modelu. Například cena, která je součtem cen souvisejících prvků.|[Vypočtené a vlastní vlastnosti úložiště](../modeling/calculated-and-custom-storage-properties.md)|
+|Definujte vlastní vlastnost domény úložiště.|Doménová vlastnost uložená v jiných částech modelu nebo externě. Například můžete analyzovat řetězec výrazu do stromové struktury v modelu.|[Vypočtené a vlastní vlastnosti úložiště](../modeling/calculated-and-custom-storage-properties.md)|
+|Přepište obslužné rutiny změn, jako je OnValueChanging a při odstraňování|Udržujte různé prvky synchronizované a udržujte externí hodnoty synchronizované s modelem.<br /><br /> Omezte hodnoty na definované rozsahy.<br /><br /> Volá se bezprostředně před a po hodnotě vlastnosti a dalšími změnami. Změnu můžete ukončit vyvoláním výjimky.|[Obslužné rutiny změny hodnoty vlastnosti domény](../modeling/domain-property-value-change-handlers.md)|
+|Pravidly|Můžete definovat pravidla, která jsou zařazená do fronty pro spuštění těsně před koncem transakce, ve které došlo ke změně. Neprovádějí se při vrácení akce zpět nebo opakování. Použijte je k udržení jednoho dílu úložiště v synchronizaci s jiným.|[Pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md)|
+|Ukládat události|Úložiště modelování poskytuje oznámení o událostech, jako je například přidání nebo odstranění prvku nebo propojení nebo změna hodnoty vlastnosti. Událost se také spustí při vrácení akce zpět a znovu. Pomocí událostí úložiště aktualizujete hodnoty, které nejsou ve Storu.|[Obslužné rutiny události šířící změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md)|
+|Události .NET|Obrazce mají obslužné rutiny událostí, které reagují na kliknutí myší a další gesta. Musíte se zaregistrovat pro tyto události pro každý objekt. Registrace se obvykle provádí v přepsání InitializeInstanceResources a musí se provést pro každý prvek.<br /><br /> K těmto událostem obvykle dochází mimo transakci.|[Postupy: Zachycení kliknutí na obrazec nebo dekorátor](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)|
+|Pravidla vazeb|Pravidlo vázané na hranice se používá konkrétně k omezení hranic tvaru.|[Umístění a velikost obrazce omezení BoundsRules](/visualstudio/modeling/boundsrules-constrain-shape-location-and-size?view=vs-2015)|
+|Pravidla výběru|Pravidla výběru výslovně omezí, co může uživatel vybrat.|[Postupy: Přístup k aktuálnímu výběru a jeho omezení](../modeling/how-to-access-and-constrain-the-current-selection.md)|
+|OnAssocatedPropertyChanged|Určete stavy prvků modelu pomocí funkcí tvarů a konektorů, jako jsou stíny, šipky, barva a tloušťka čáry a styl.|[Aktualizace obrazců a konektorů k vyjádření modelu](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md)|
 
-## <a name="compare-rules-and-store-events"></a>Porovnat pravidla a uložení událostí
+## <a name="compare-rules-and-store-events"></a>Porovnání pravidel a událostí úložiště
 
-Změna žadateli, pravidla a události se spouštějí při změnách v modelu.
+Změny událostí, pravidla a události se spustí, když dojde ke změnám v modelu.
 
-Pravidla se obvykle používají v celé transakci, ve kterém došlo k změny a události se použijí po potvrzení změn v rámci transakce.
+Pravidla jsou obvykle použita na konci transakce, ve které došlo ke změně, a po provedení změn v transakci jsou aplikovány události.
 
-Při události v úložišti se budou synchronizovat model s objekty mimo Store a pravidla můžete zachovat konzistenci v rámci Store.
+Pomocí událostí úložiště můžete synchronizovat model s objekty mimo úložiště a pravidla zachovat konzistenci v rámci úložiště.
 
-- **Vytváření vlastních pravidel** jako odvozené třídy abstraktní pravidlo vytvoříte vlastní pravidlo. Musíte také upozornit framework o vlastní pravidlo. Další informace najdete v tématu [pravidla šíření změn v rámci the Model](../modeling/rules-propagate-changes-within-the-model.md).
+- **Vytváření vlastních pravidel** Vlastní pravidlo vytvoříte jako odvozenou třídu z abstraktního pravidla. Také je nutné upozornit rozhraní na vlastní pravidlo. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
 
-- **Přihlášení k odběru událostí** předtím, než se můžete přihlásit odběr události, vytvořit obslužnou rutinu události a delegáta. Potom použijte <xref:Microsoft.VisualStudio.Modeling.Store.EventManagerDirectory%2A>vlastnost k odběru události. Další informace najdete v tématu [obslužné rutiny rozšíření změny mimo the Model událostí](../modeling/event-handlers-propagate-changes-outside-the-model.md).
+- **Přihlášení k odběru událostí** Předtím, než se můžete přihlásit k odběru události, vytvořte obslužnou rutinu události a delegáta. Pak použijte <xref:Microsoft.VisualStudio.Modeling.Store.EventManagerDirectory%2A>property k přihlášení k odběru události. Další informace najdete v tématu [obslužné rutiny událostí rozšiřovat změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
-- **Ruší se provedené změny** při vrácení transakce, jsou vyvolány události, ale pravidla se nepoužijí. Pokud pravidlo změní hodnotu a můžete tuto změnu vrátit zpět, je hodnota obnovit během akce vrátit zpět na původní hodnotu. Když je vyvolána událost, musíte ručně změnit hodnotu zpět na původní hodnotu. Další informace o transakcích a vrácení zpět, najdete v článku [jak: Používání transakcí k aktualizaci modelu](../modeling/how-to-use-transactions-to-update-the-model.md).
+- **Rušení změn** Při vrácení transakce zpět dojde k události, ale pravidla se nepoužívají. Pokud pravidlo změní hodnotu a tuto změnu zrušíte, v rámci akce vrátit se hodnota obnoví na původní hodnotu. Při vyvolání události je nutné ručně změnit hodnotu zpět na původní hodnotu. Další informace o transakcích a vrácení zpět naleznete v tématu [How to: use Transactions to Update a model](../modeling/how-to-use-transactions-to-update-the-model.md).
 
-- **Předávání argumentů událostí k pravidla a akce** obou událostí a pravidla jsou předány `EventArgs` parametr, který obsahuje informace o tom, model změnit.
+- **Předávání argumentů události pravidlům a událostem** Událostem i pravidlům jsou předány `EventArgs` parametr, který obsahuje informace o tom, jak se model změnil.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Postupy: Zachycení kliknutí na obrazec nebo dekorátor](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)
-- [Zápis kódu pro úpravu jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md)
+- [Psaní kódu pro přizpůsobení jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md)

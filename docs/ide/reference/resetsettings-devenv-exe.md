@@ -8,26 +8,26 @@ helpviewer_keywords:
 - /ResetSettings Devenv switch
 - settings [Visual Studio], resetting
 ms.assetid: 1d41021c-6f58-4bd5-b122-d1c995812192
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ebc0e3faf26351a31c2f6b75669d50f1e3c2f14
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3549801001ba8df60634884dc58137a8fa77d905
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945526"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655566"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
 
-Obnoví výchozí nastavení sady Visual Studio a automaticky spustí rozhraní IDE sady Visual Studio. Tento přepínač volitelně obnoví nastavení do souboru zadaného nastavení.
+Obnoví výchozí nastavení sady Visual Studio a automaticky spustí integrované vývojové prostředí (IDE) sady Visual Studio. Tento přepínač volitelně obnoví nastavení na zadaný soubor nastavení.
 
-Výchozí nastavení pocházejí z profilu, který byl vybrán při prvním spuštění sady Visual Studio.
+Výchozí nastavení pochází z profilu, který byl vybrán při prvním spuštění aplikace Visual Studio.
 
 > [!TIP]
-> Zjistěte, jak resetovat nastavení pomocí integrovaného vývojového prostředí (IDE), najdete v článku [Resetovat nastavení](../environment-settings.md#reset-settings).
+> Informace o resetování nastavení pomocí integrovaného vývojového prostředí (IDE) najdete v tématu [resetování nastavení](../environment-settings.md#reset-settings).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
 
 - *SettingsFile*
 
-  Volitelné. Úplná cesta a název souboru s nastavením pro použití se sadou Visual Studio.
+  Volitelné. Úplná cesta a název souboru s nastavením, které se mají použít pro sadu Visual Studio.
 
 - *DefaultCollectionSpecifier*
 
-  Volitelné. Specifikátor, představující výchozí kolekce nastavení chcete obnovit. Zvolte jednu z specifikátory kolekce výchozí uvedené v tabulce.
+  Volitelné. Specifikátor představující výchozí kolekci nastavení k obnovení. Vyberte jeden z výchozích specifikátorů kolekce uvedených v tabulce.
 
-  | Výchozí název kolekce | Specifikátor kolekce |
+  | Název výchozí kolekce | Specifikátor kolekce |
   | --- | --- |
   | **Obecné** | `General` |
   | **JavaScript** | `JavaScript` |
@@ -57,13 +57,13 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud ne *Soubor_nastavení* není zadána, rozhraní IDE otevře pomocí stávajícího nastavení.
+Pokud není zadán žádný *SettingsFile* , IDE se otevře s existujícím nastavením.
 
 ## <a name="example"></a>Příklad
 
-První příklad použije nastavení uložená v souboru `MySettings.vssettings`.
+V prvním příkladu se aplikuje nastavení uložená v souboru `MySettings.vssettings`.
 
-Druhý příklad obnoví vizuál C# výchozí profil.
+Druhý příklad obnoví vizuální C# výchozí profil.
 
 ```shell
 devenv /resetsettings "%USERPROFILE%\MySettings.vssettings"
@@ -74,5 +74,5 @@ devenv /resetsettings CSharp
 ## <a name="see-also"></a>Viz také:
 
 - [Nastavení prostředí](../environment-settings.md)
-- [Přizpůsobení prostředí IDE sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md)
+- [Přizpůsobení integrovaného vývojového prostředí sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md)
 - [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)

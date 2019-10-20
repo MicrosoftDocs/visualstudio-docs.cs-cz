@@ -1,5 +1,5 @@
 ---
-title: 'Sekvenční diagramy UML: Pokyny | Dokumentace Microsoftu'
+title: 'Sekvenční diagramy UML: pokyny | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -20,433 +20,427 @@ helpviewer_keywords:
 - behaviors, UML
 ms.assetid: 5990ef7c-ba60-4e20-a36d-e29c1fa6c8bb
 caps.latest.revision: 55
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a38d9b354de528797d0044f7b631bd2287c34fb4
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 88c72ecaf44855badfd42456d9818f2ba9168a49
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823567"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661730"
 ---
 # <a name="uml-sequence-diagrams-guidelines"></a>Sekvenční diagramy UML: Pokyny
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V sadě Visual Studio, můžete nakreslit *sekvenční diagram* k zobrazení interakce. Interakce je posloupnost zpráv mezi typické instance tříd, komponenty, subsystémy nebo objekty actor.  
-  
- Sekvenční diagramy UML jsou součástí modelu UML a existují jenom v rámci projektů pomocí modelování UML. K vytvoření sekvenčního diagramu UML na **architektura** nabídky, klikněte na tlačítko **nové UML nebo diagramu vrstev**. Další informace o [elementů diagramu UML pořadí](../modeling/uml-sequence-diagrams-reference.md) nebo [diagramů pomocí modelování UML](../modeling/edit-uml-models-and-diagrams.md) obecně. Video ukázku naleznete v tématu [náčrtu interakce s použitím sekvenčních diagramů (2010)](http://channel9.msdn.com/Blogs/clinted/UML-with-VS-2010-Part-7-Sketching-Interactions-with-Sequence-Diagrams).  
-  
- Tuto funkci podporovat kterou verzí sady Visual Studio najdete v tématu [podporované verze pro nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
-  
-## <a name="in-this-topic"></a>V tomto tématu  
- [Pomocí sekvenčních diagramech UML](#Using)  
-  
- [Základní postup pro vytvoření sekvenčních diagramů](#BasicSteps)  
-  
- [Vytváření a používání jednoduchý sekvenční diagramy](#Simple)  
-  
- [Třídy a životnosti](#ClassesAndLifelines)  
-  
- [Vytváření opakovaně použitelných interakce pořadí](#Multiple)  
-  
- [Sbalení skupin životnosti](#Collapse)  
-  
- [Popis struktury řízení pomocí fragmentů](#Fragments)  
-  
-## <a name="Using"></a> Pomocí sekvenčních diagramech UML  
- Sekvenční diagramy můžete použít pro různé účely na různých úrovních podrobností programu. Typické situace pro nakreslení sekvenčního diagramu jsou následující:  
-  
-- Pokud máte diagram případu použití, který shrnuje uživatelé vašeho systému a své cíle, můžete nakreslit sekvenční diagramy k popisu interakci hlavní součásti systému pro splnění cíle každému případu použití. Další informace najdete v tématu [diagramy případů použití UML: Pokyny pro](../modeling/uml-use-case-diagrams-guidelines.md).  
-  
-- Pokud jste našli zprávy odeslané na rozhraní komponenty, můžete nakreslit sekvenční diagramy k popisu interakci vnitřních částí komponenty k dosažení výsledku, vyžaduje se pro příchozí zprávy. Další informace najdete v tématu [diagramy komponent UML: Pokyny pro](../modeling/uml-component-diagrams-guidelines.md).  
-  
-  Vytvoření diagramů pořadí má několik výhod:  
-  
-- Můžete snadno zobrazit, jak jsou úlohy distribuované mezi komponentami.  
-  
-- Můžete identifikovat vzory interakcí, které ztěžují aktualizaci softwaru.  
-  
-## <a name="relationship-to-other-diagrams"></a>Vztah k jiným diagramům  
- Sekvenční diagramy UML spolu s jinými diagramy můžete použít několika způsoby.  
-  
-#### <a name="lifelines-and-types"></a>Životnosti a typy  
- Životnosti, které nakreslíte v sekvenčním diagramu lze představují typické instance komponentami nebo třídami v systému. Můžete vytvořit životnosti z typy a typy ze životností a zobrazení typů v diagramech tříd UML a diagramy komponent UML. Další informace najdete v tématu [třídy a životnosti](#ClassesAndLifelines).  
-  
-#### <a name="parameter-types"></a>Typy parametrů  
- Můžete také popisují v diagramu tříd UML typy parametrů a vrátí hodnoty, které byly použity ve zprávách odesílaných mezi životnosti.  
-  
-#### <a name="use-case-details"></a>Podrobnosti o případu použití  
- Případ použití představuje cíl uživatele, společně s posloupnost kroků k dosažení cíle. Postupně jednotlivé kroky můžete popsané v několika způsoby. Jednou z možností je nakreslit sekvenční diagram, který ukazuje interakce mezi uživateli a hlavní součásti systému. Další informace najdete v tématu [diagramy případů použití UML: Pokyny pro](../modeling/uml-use-case-diagrams-guidelines.md).  
-  
-## <a name="BasicSteps"></a> Základní postup pro vytvoření sekvenčních diagramů  
- Úplný seznam elementů v sekvenčních diagramech, naleznete v tématu [UML Sequence Diagrams: Referenční dokumentace](../modeling/uml-sequence-diagrams-reference.md).  
-  
+V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení interakce. Interakce je posloupnost zpráv mezi typickými instancemi tříd, komponent, subsystémů nebo Actors.
+
+ Sekvenční diagramy UML jsou součástí modelu UML a existují pouze v rámci projektů modelování UML. Chcete-li vytvořit sekvenční diagram UML, v nabídce **Architektura** klikněte na **Nový UML nebo Diagram vrstev**. Další informace o [elementech sekvenčního diagramu UML](../modeling/uml-sequence-diagrams-reference.md) nebo [diagramech modelování UML](../modeling/edit-uml-models-and-diagrams.md) najdete v části Obecné. Ukázku videa najdete v tématu [náčrtace interakcí pomocí sekvenčních diagramů (2010)](http://channel9.msdn.com/Blogs/clinted/UML-with-VS-2010-Part-7-Sketching-Interactions-with-Sequence-Diagrams).
+
+ Chcete-li zjistit, které verze aplikace Visual Studio tuto funkci podporují, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+
+## <a name="in-this-topic"></a>V tomto tématu
+ [Použití sekvenčních diagramů UML](#Using)
+
+ [Základní kroky pro vykreslování sekvenčních diagramů](#BasicSteps)
+
+ [Vytváření a používání jednoduchých sekvenčních diagramů](#Simple)
+
+ [Třídy a životnosti](#ClassesAndLifelines)
+
+ [Vytváření opakovaně použitelných sekvencí interakce](#Multiple)
+
+ [Sbalení skupin životností](#Collapse)
+
+ [Popis řídicích struktur s fragmenty](#Fragments)
+
+## <a name="Using"></a>Použití sekvenčních diagramů UML
+ Sekvenční diagramy můžete použít k nejrůznějším účelům na různých úrovních v podrobnostech o programu. Typickými případy při vykreslování sekvenčního diagramu jsou tyto:
+
+- Pokud máte diagram případu použití, který shrnuje uživatele vašeho systému a jejich cíle, můžete nakreslit sekvenční diagramy, které popisují, jak hlavní součásti systému spolupracují na splnění cíle každého případu použití. Další informace najdete v tématu [Diagramy případů použití UML: pokyny](../modeling/uml-use-case-diagrams-guidelines.md).
+
+- Pokud jste identifikovali zprávy přicházející v rozhraní komponenty, můžete nakreslit sekvenční diagramy, abyste popsali, jak vnitřní části komponenty pracují, aby dosáhly výsledku vyžadovaného pro každou příchozí zprávu. Další informace najdete v tématu [diagramy komponent UML: pokyny](../modeling/uml-component-diagrams-guidelines.md).
+
+  Sestavování sekvenčních diagramů má několik výhod:
+
+- Můžete snadno zjistit, jak jsou úlohy distribuované mezi komponentami.
+
+- Můžete identifikovat vzorce interakce, které usnadňují aktualizaci softwaru.
+
+## <a name="relationship-to-other-diagrams"></a>Vztah k jiným diagramům
+ Sekvenční diagramy UML můžete použít spolu s dalšími diagramy několika způsoby.
+
+#### <a name="lifelines-and-types"></a>Životnosti a typy
+ Životnosti, která kreslíte do sekvenčního diagramu, může představovat typické instance komponent nebo tříd v systému. Můžete vytvořit životnosti z typů a typů z životností a zobrazit typy v diagramech tříd UML a diagramech komponent UML. Další informace naleznete v tématu [třídy a životnosti](#ClassesAndLifelines).
+
+#### <a name="parameter-types"></a>Typy parametrů
+ Můžete také popsat v diagramu tříd UML typy parametrů a vrácené hodnoty, které byly použity ve zprávách odesílaných mezi životnosti.
+
+#### <a name="use-case-details"></a>Podrobnosti případu použití
+ Případ použití představuje cíl uživatele spolu s posloupností kroků pro dosažení cíle. Pořadí kroků lze popsat několika způsoby. Jednou z možností je nakreslit sekvenční diagram, který znázorňuje interakce mezi uživateli a hlavními součástmi systému. Další informace najdete v tématu [Diagramy případů použití UML: pokyny](../modeling/uml-use-case-diagrams-guidelines.md).
+
+## <a name="BasicSteps"></a>Základní kroky pro vykreslování sekvenčních diagramů
+ Úplný seznam prvků v sekvenčních diagramech najdete v tématu [sekvenční diagramy UML: referenční informace](../modeling/uml-sequence-diagrams-reference.md).
+
 > [!NOTE]
-> Podrobné pokyny k vytvoření všech diagramů modelování jsou popsány v [modelů a diagramů UML upravit](../modeling/edit-uml-models-and-diagrams.md).  
-  
-#### <a name="to-create-a-sequence-diagram"></a>Chcete-li vytvořit sekvenční diagram  
-  
-1. Na **architektura** nabídky, klikněte na tlačítko **nové UML nebo diagramu vrstev**.  
-  
-2. V části **šablony**, klikněte na tlačítko **sekvenční Diagram UML**.  
-  
-3. Pojmenujte diagram.  
-  
-4. V **přidat k projektu modelování**, vyberte existující projekt modelování z řešení, nebo **vytvořte nový projekt modelování**a potom klikněte na tlačítko **OK**.  
-  
-    Zobrazí se nový diagram sekvence **sekvenční Diagram** sady nástrojů. Sada nástrojů obsahuje požadované prvky a konektory.  
-  
-   ![Části sekvenčního diagramu](../modeling/media/uml-sequence.png "UML_Sequence")  
-  
-#### <a name="to-draw-a-sequence-diagram"></a>Chcete-li nakreslit sekvenční diagram  
-  
-1. Přetáhněte **životnosti** (1) z **nástrojů** do diagramu k reprezentaci instance tříd, komponenty, objekty actor nebo zařízení.  
-  
+> Podrobné pokyny k vytvoření některého z diagramů modelování jsou popsány v tématu [Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md).
+
+#### <a name="to-create-a-sequence-diagram"></a>Vytvoření sekvenčního diagramu
+
+1. V nabídce **Architektura** klikněte na **Nový UML nebo Diagram vrstev**.
+
+2. V části **šablony**klikněte na **sekvenční diagram UML**.
+
+3. Pojmenujte diagram.
+
+4. V nabídce **Přidat k projektu modelování**vyberte existující projekt modelování v řešení nebo **vytvořte nový projekt modelování**a pak klikněte na tlačítko **OK**.
+
+    Zobrazí se nový sekvenční diagram se sadou nástrojů **sekvenčního diagramu** . Sada nástrojů obsahuje požadované prvky a konektory.
+
+   ![Části sekvenčního diagramu](../modeling/media/uml-sequence.png "UML_Sequence")
+
+#### <a name="to-draw-a-sequence-diagram"></a>Nakreslení sekvenčního diagramu
+
+1. Přetáhněte **životnosti** (1) z **panelu nástrojů** do diagramu, aby představovala instance tříd, komponent, aktérů nebo zařízení.
+
     > [!NOTE]
-    > Můžete také vytvořit životnosti přetažením existující třídy, rozhraní, objektu actor nebo komponenty z **Průzkumníku modelů UML** do diagramu. Tím se vytvoří životnost představující instanci zvoleného typu.  
-  
-2. Nakreslete zprávy zobrazující, jak spolupracovat životnosti k dosažení určitého cíle.  
-  
-     K vytvoření zprávy (3, 4, 6, 7), klikněte na nástroj message. Pak klikněte na tlačítko odeslání životnosti v místě, kde má být zpráva, kterou chcete spustit a klikněte na přijímající životnost.  
-  
-     Provádění události (5) se zobrazí v přijímající životnost. Spuštění výskyt představuje určitou dobu, během kterého je instance provádění metody. Můžete vytvořit další zprávy, které začínají výskytu spuštění.  
-  
-3. Chcete-li zobrazit zprávu, která pochází z neznámého zdroje událostí (9) nebo vysílá Neznámý příjemcům (10), nakreslete asynchronních zpráv z nebo na prázdné místo v diagramu. Tyto zprávy se nazývají *nalezenými zprávami* (9) a *ztracené zprávy* (10).  
-  
+    > Můžete také vytvořit životnost přetažením existující třídy, rozhraní, objektu actor nebo komponenty z **Průzkumníka modelů UML** do diagramu. Tím se vytvoří životnost představující instanci zvoleného typu.
+
+2. Nakreslete zprávy, abyste viděli, jak životnost spolupracuje, aby dosáhla konkrétního cíle.
+
+     Chcete-li vytvořit zprávu (3, 4, 6, 7), klikněte na nástroj zprávy. Pak klikněte na čas odeslání v místě, kde chcete, aby se zpráva spustila, a pak klikněte na příjem životnosti.
+
+     V přijímací životnosti se zobrazí výskyt spuštění (5). Výskyt spuštění představuje časový úsek, během kterého instance provádí metodu. Můžete vytvořit další zprávy, které začínají z výskytu spuštění.
+
+3. Chcete-li zobrazit zprávu, která pochází z neznámého zdroje události (9) nebo všesměrová vysílání pro neznámé příjemce (10), vykreslete asynchronní zprávu z nebo do prázdného místa v diagramu. Tyto zprávy se nazývají *nalezené zprávy* (9) a *ztracené zprávy* (10).
+
     > [!NOTE]
-    > Chcete-li přesunout skupinu životností se ztracenými či nalezenými zprávami, podle následujícího postupu vyberte životnosti předtím, než je přesunete: Nakreslit obdélník kolem těchto životnosti, nebo když stisknete a podržíte **CTRL** klíče při výběru každé životnosti. Pokud používáte **Vybrat vše** nebo **CTRL**+**A** vyberete všechny životnosti a následně je přesunete, ztracené nebo nalezené zprávy připojené k těmto životnostem nepřesune. Pokud k této situaci dojde, můžete tyto zprávy přesunout samostatně.  
-  
-4. Nakreslete sekvenční diagramy pro každou hlavní zprávu do stejné součásti nebo systému.  
-  
-#### <a name="to-change-the-order-of-messages"></a>Chcete-li změnit pořadí zpráv  
-  
-- Přetáhněte zprávu směrem nahoru nebo dolů v jeho životnost. Můžete ji můžete přetáhnout nad další zprávy, nebo do nebo z něj blok spuštění.  
-  
-     \- nebo –  
-  
-- Kliknutím na tuto zprávu a použít **šipka nahoru** a **šipka dolů** klíče upravit zprávu pozic. Použití **SHIFT + šipka nahoru** a **SHIFT + šipka dolů** Chcete-li změnit pořadí zpráv.  
-  
-#### <a name="to-move-or-copy-message-sequences-on-the-sequence-diagram"></a>Chcete přesunout nebo kopírovat sekvencemi zpráv na sekvenční diagram  
-  
-1. Klikněte pravým tlačítkem na zprávu (3, 4) a pak klikněte na tlačítko **kopírování**.  
-  
-2. Klikněte pravým tlačítkem na výskyt spuštění (5) nebo životnost (1), ze kterého chcete novou zprávu odeslat, a potom klikněte na **vložit**. Nový odesílatel může být na jiný diagram, chcete-li.  
-  
-     Kopie zprávy a všechny její podpůrné zprávy se přidá na konec provádění výskyt nebo na konci životnosti.  
-  
+    > Chcete-li přesunout skupinu životností, která ztratila nebo našla zprávy, použijte následující postup, chcete-li vybrat životnosti před jejich přesunutím: nakreslete obdélník kolem těchto životností nebo stiskněte a podržte klávesu **CTRL** a klikněte na jednotlivé životnosti. Pokud použijete **možnost Vybrat vše** nebo **CTRL** **+ a** k výběru všech životností a jejich přesunutí, ztratí se všechny ztracené nebo nalezené zprávy připojené k těmto životnostem. Pokud k této situaci dojde, můžete tyto zprávy přesunout samostatně.
+
+4. Nakreslete sekvenční diagramy pro každou hlavní zprávu do stejné součásti nebo systému.
+
+#### <a name="to-change-the-order-of-messages"></a>Změna pořadí zpráv
+
+- Přetáhněte zprávu v její životnosti nahoru nebo dolů. Můžete ho přetáhnout přes jiné zprávy nebo do bloku spuštění nebo z něj.
+
+     \- nebo-
+
+- Klikněte na zprávu a pomocí kláves ŠIPKA **nahoru** a šipka **dolů** upravte polohu zprávy. Pro změnu pořadí zpráv použijte **SHIFT + šipka nahoru** a **SHIFT + šipka dolů** .
+
+#### <a name="to-move-or-copy-message-sequences-on-the-sequence-diagram"></a>Přesunutí nebo zkopírování sekvencí zpráv v sekvenčním diagramu
+
+1. Klikněte pravým tlačítkem na zprávu (3, 4) a pak klikněte na **Kopírovat**.
+
+2. Klikněte pravým tlačítkem myši na výskyt spuštění (5) nebo životnost (1), ze které chcete odeslat novou zprávu, a potom klikněte na tlačítko **Vložit**. Pokud chcete, může být nový odesilatel v jiném diagramu.
+
+     Kopie zprávy a všechny její dceřiné zprávy jsou přidány na konec spuštění nebo na konec životnosti.
+
     > [!NOTE]
-    > Vložená zpráva se zobrazí vždy na konci výskyt provádění nebo životnost. Po vložení ho ji můžete přetáhnout až starší pozice.  
-  
-#### <a name="to-display-and-edit-the-signature-text-for-a-message"></a>Můžete zobrazit a upravit text podpis zprávy  
-  
-- Cílovou životnost musí být svázán nebo mapovány na typy pro text podpis viditelný. K provedení této úlohy, proveďte jednu z následujících kroků:  
-  
-  - Klikněte pravým tlačítkem na životnost a klikněte na tlačítko **vytvořit třídu**.  
-  
-     -nebo-  
-  
-  - Vyberte životnosti, stiskněte klávesu **F4**a potom v **vlastnosti** okno, nastavte **typ** vlastnost do existujícího typu nebo zadejte název nového typu. Klikněte pravým tlačítkem na popisek zprávy a klikněte na tlačítko **operace vytvoření**.  
-  
-    Podpis text se zobrazí pod popiskem zprávy. Teď můžete upravit text podpis. Další informace najdete v tématu [třídy a životnosti](#ClassesAndLifelines).  
-  
-#### <a name="to-improve-the-layout-of-a-sequence-diagram"></a>Ke zlepšení rozložení sekvenční diagram  
-  
-- Klikněte pravým tlačítkem na prázdnou část diagramu a potom klikněte na tlačítko **změnit uspořádání rozložení**.  
-  
-- Chcete-li zrušit operaci, klikněte na tlačítko **upravit**a potom klikněte na tlačítko **zpět**.  
-  
-#### <a name="to-change-the-package-that-owns-the-interaction"></a>Chcete-li změnit balíček, který vlastní interakce  
-  
-1. V **Průzkumníku modelů UML**, najít interakce zobrazující sekvenční diagram.  
-  
+    > Vložená zpráva se vždycky zobrazuje na konci výskytu nebo životnosti spuštění. Po vložení ji můžete přetáhnout do předchozí pozice.
+
+#### <a name="to-display-and-edit-the-signature-text-for-a-message"></a>Zobrazení a úprava textu podpisu zprávy
+
+- Aby byl text podpisu viditelný, musí být cílový životnost svázána nebo mapována na typy. K provedení této úlohy proveďte jeden z následujících kroků:
+
+  - Klikněte pravým tlačítkem na životnost a pak zvolte **vytvořit třídu**.
+
+     -nebo-
+
+  - Vyberte životnost, stiskněte **F4**a potom v okně **vlastnosti** nastavte vlastnost **typ** na existující typ nebo zadejte název nového typu. Klikněte pravým tlačítkem myši na popisek zprávy a zvolte možnost **vytvořit operaci**.
+
+    Text podpisu se zobrazí pod popiskem zprávy. Text podpisu teď můžete upravit. Další informace naleznete v tématu [třídy a životnosti](#ClassesAndLifelines).
+
+#### <a name="to-improve-the-layout-of-a-sequence-diagram"></a>Vylepšení rozložení sekvenčního diagramu
+
+- Klikněte pravým tlačítkem myši na prázdnou část diagramu a potom klikněte na tlačítko **změnit uspořádání rozložení**.
+
+- Chcete-li operaci vrátit zpět, klikněte na tlačítko **Upravit**a pak klikněte na tlačítko **zpět**.
+
+#### <a name="to-change-the-package-that-owns-the-interaction"></a>Změna balíčku, který vlastní interakci
+
+1. V **Průzkumníku modelů UML**Najděte interakce, které sekvenční diagram zobrazuje.
+
     > [!NOTE]
-    > Interakce se nezobrazí v **Průzkumníku modelů UML** dokud nepřidáte první životnosti v sekvenčním diagramu.  
-  
-2. Přetáhněte interakci do balíčku.  
-  
-     \- nebo –  
-  
-     Klikněte pravým tlačítkem na interakce a potom klikněte na **Vyjmout**. Klikněte pravým tlačítkem na balíček a pak klikněte na tlačítko **vložit**.  
-  
-## <a name="Simple"></a> Vytváření a používání jednoduchý sekvenční diagramy  
- Nejjednodušší a největší nejběžněji používanými formou sekvenční diagram obsahuje pouze životností a zpráv. Diagram tohoto druhu umožňuje zřetelně typická posloupnost interakcí mezi objekty v návrhu, nebo mezi vašeho systému a na jejich uživatele. To je často dostatek můžete diskutovat a sdělovat svůj návrh.  
-  
- Tady je pár věcí k uvážení při kreslení jednoduchý sekvenční diagram.  
-  
-### <a name="types-of-message"></a>Typy zpráv  
- Existují tři nástroje, které můžete použít k vytvoření zprávy.  
-  
-- Použití **synchronní** nástroj k popisu interakci ve kterém odesílatel čeká příjemce vracet odpovědi (3).  
-  
-     A  **< \<vrátit >>** šipky se zobrazí na konci výskyt spuštění. Znamená to návrat ovládacího prvku do odesílatele.  
-  
-- Použití **asynchronní** nástroj k popisu interakci ve kterém odesílatel může pokračovat okamžitě bez čekání na příjemce [4].  
-  
-- Použití **vytvořit** nástroj k popisu interakci ve kterém Odesílatel vytvoří příjemce (8).  
-  
-     Vytvořit zprávu by měl být první zpráva, která přijímá příjemce.  
-  
-### <a name="annotating-the-interactions"></a>Zadávání poznámek k interakce  
- K popisu více podrobností o pořadí, můžete umístit **komentář** kdekoli v diagramu.  
-  
- Pomocí **odkazy komentářů**, můžete propojit s komentáři životnosti, spuštění, interakcí a fragmenty.  
-  
+    > Interakce se nezobrazí v **Průzkumníkovi modelů UML** , dokud nepřidáte první životnost do sekvenčního diagramu.
+
+2. Přetáhněte interakci do balíčku.
+
+     \- nebo-
+
+     Klikněte pravým tlačítkem myši na interakci a pak klikněte na **Vyjmout**. Klikněte pravým tlačítkem na balíček a pak klikněte na **Vložit**.
+
+## <a name="Simple"></a>Vytváření a používání jednoduchých sekvenčních diagramů
+ Nejjednodušší a nejčastěji používaná forma sekvenčního diagramu obsahuje jenom životnosti a zprávy. Diagram tohoto druhu vám umožňuje zobrazit jasně typickou posloupnost interakcí mezi objekty v návrhu nebo mezi vaším systémem a jeho uživateli. To je často dostatečné, abychom vám pomohli diskutovat a sdělit návrh.
+
+ Tady je několik věcí, které je potřeba vzít v úvahu při vykreslování jednoduchého sekvenčního diagramu.
+
+### <a name="types-of-message"></a>Typy zpráv
+ Existují tři nástroje, které můžete použít k vytvoření zpráv.
+
+- Použijte **synchronní** nástroj k popisu interakce, ve které odesilatel čeká na vrácení odpovědi příjemce (3).
+
+     Na konci spuštění se zobrazí **< \<return > >** šipky. Indikuje vrácení ovládacího prvku odesílateli.
+
+- Pomocí **asynchronního** nástroje můžete popsat interakce, ve kterých může odesílatel pokračovat bez čekání na příjemce (4).
+
+- Pomocí nástroje pro **Vytvoření** popište interakci, ve které odesilatele vytvoří příjemce (8).
+
+     Zpráva vytvořit by měla být první zprávou, kterou příjemce obdrží.
+
+### <a name="annotating-the-interactions"></a>Přidávání poznámek k interakcím
+ Pokud chcete podrobnější informace o sekvenci, můžete **Komentář** umístit kamkoli do diagramu.
+
+ Pomocí **odkazů na komentáře**můžete propojit komentář k životnosti, spuštění, použití interakce a fragmentům.
+
 > [!CAUTION]
-> Pokud chcete připojit komentář na konkrétní místo v pořadí, propojte ho ke spuštění výskyt, použití interakcí, nebo fragment. Nepropojovat ho s životnost, protože v takovém případě ji není zůstanou připojené správné okamžiku v sekvenci.  
-  
- Použijte komentář:  
-  
-- Všimněte si, co bylo dosaženo klíčové body posloupnosti. To pomáhá čtenáři zobrazíte cílů interakce.  
-  
-- Popište obecným cílem celé pořadí. Připojit komentář k výskytu počáteční provádění nebo ponechte nepřipojené. Například "zákazník zvolil položky v nabídce a udělil cenu."  
-  
-- Popisuje povinnosti každé životnosti. Připojte komentář k životnosti. Například "řazení Manager shromažďuje volba z nabídky zákazníka."  
-  
-- Mějte na paměti výjimky nebo alternativy, které může provádět jako alternativu k typická posloupnost znázorněno. Například "zákazníka můžete přeskočit zbývající část tohoto pořadí."  
-  
-  - Zvažte použití fragmentů formálnější alternativou pro tento typ poznámek. Zobrazit [popisující struktury řízení pomocí fragmentů](#Fragments)  
-  
-## <a name="deciding-the-scope-of-the-diagram"></a>Rozhodování o tom, rozsah diagramu  
- Je důležité, aby bylo jasné, o jaké diagramu je určená k zobrazení.  
-  
-#### <a name="initiating-event"></a>Událost inicializace  
- Každý diagram by měl zobrazit posloupnost interakcí, které vyplývají z jedné zahájení události. To může být, například:  
-  
-- Uživatel zahajuje případ použití, například, otevření webové stránky pro nákup pokrmu.  
-  
-- Zpráva z jednoho systému komponenty do jiného, například dotazování dostupnost položky, které zákazník chce koupit.  
-  
-- Událost aktivovaného změnou stavu, například akcie položky spadající pod prahovou hodnotu.  
-  
-#### <a name="level-of-detail"></a>Úroveň podrobností  
- Sekvenční diagramy můžete zobrazit různé úrovně podrobností. Můžete rozhodnout, úroveň podrobností ve dvou dimenzích samostatné téměř nezávisle na sobě:  
-  
- Životnosti může představovat jednu z těchto úrovní podrobností:  
-  
-- Objekty v kódu programu, kterých existuje, nebo kterou vyvíjíte.  
-  
-- Komponenty nebo jejich. Tyto dílčí součásti, obvykle vynechání fasády, proxy servery a další mechanismy výkonu.  
-  
-- Váš systém a externích objektů aktor  
-  
-  Zprávy mohou představovat jednu z těchto úrovní podrobností:  
-  
-- Software zprávy v programovém kódu v rozhraní API nebo webové rozhraní.  
-  
-- Transakce nebo dílčí transakce, například mezi uživateli a systému, nebo mezi kódem a databáze.  
-  
-- Případy použití – hlavní interakce mezi uživateli a systému.  
-  
-  Zda zkoumáte existující kód nebo popisující nový návrh, je často užitečné pro kreslení a diskutovat o méně podrobné zobrazení.  
-  
-## <a name="describing-variations"></a>Popis změn  
- Diagram znázorňuje jeden typická posloupnost událostí. Pokud chcete zobrazit alternativní možnosti, jako je například scénáře selhání, můžete použít kteroukoli z těchto možností:  
-  
-- Kreslit samostatné sekvenčních diagramů popisují tyto scénáře  
-  
-- Použití [popisující struktury řízení pomocí fragmentů](#Fragments) zobrazíte smyčky, alternativy a tak dále.  
-  
-## <a name="assessing-the-design"></a>Posouzení návrhu  
- Diagram můžete použít k vyhodnocení rozdělení úloh mezi jeho objekty nebo komponenty. Zvážení refaktoringu, pokud se zobrazí tyto modely:  
-  
-- Provádění všeho volání všechno ostatní, zatímco jiné životnosti na ně pouze odpovídají pasivně vypadá, že jedna životnost.  
-  
-- Počet zpráv napříč životností. Každá životnost musí odesílat zprávy do několika okolí a nesmí komunikovat s okolím jeho okolím. By mělo být obvykle možné uspořádat životnosti, takže existují jenom na několika místech, kde zpráv mezi životnosti; a kde jsou přechody, cílovou životnost by neměl také vyměňovat zprávy, které mají překřížené životnosti.  
-  
-- Pro zpracování více než jeden typ úkolu, který vypadá, že některé životností. By měl snadné najít jedné stručné věty, který popisuje povinnosti každé životnosti, shrnutí práce, kterou v reakci na každou zprávu, kterou přijímá.  
-  
-## <a name="ClassesAndLifelines"></a> Třídy a životnosti  
- Životnosti v sekvenčních diagramech zobrazit instance třídy nebo rozhraní komponenty. Můžete pojmenovat životnost dvěma způsoby:  
-  
-|**Pro tento účel**|**Použijte tento formát**|  
-|--------------------------|-------------------------|  
-|Instanci anonymního typu.<br /><br /> Použijte, pokud máte pouze jedna životnost jednotlivých typů.|*typeName*|  
-|Pojmenované instance typu.<br /><br /> Použijte, pokud chcete zobrazit sekvenci, která zahrnuje více než jednu instanci stejného typu.|*objectName*:*typeName*|  
-  
-### <a name="creating-lifelines-from-types"></a>Vytváření životnosti z typů  
- Můžete vytvořit nové životnosti ze třídy, které jsou již definovány, například v diagramu tříd.  
-  
+> Pokud chcete k určitému bodu v sekvenci připojit komentář, propojte jej s výskytem spuštění, používáním interakce nebo fragmentem. Nepřipojujte ho k životnosti, protože v takovém případě není nadále připojená ke správnému bodu v sekvenci.
+
+ Použijte komentář k těmto akcím:
+
+- Všimněte si, co se dosáhlo u klíčových bodů v sekvenci. To pomáhá čtenářům zobrazit cíle interakcí.
+
+- Popište celkový cíl celé sekvence. Připojte komentář k počátečnímu výskytu spuštění nebo nechte nepřipojený. Například "zákazník vybral položky z nabídky a byl mu přidělena cena."
+
+- Popište zodpovědnosti každé životnosti. Připojte komentář k životnosti. Například "třídění manažera shromažďuje nabídky zákazníka."
+
+- Všimněte si výjimek nebo alternativ, které mohou být provedeny jako alternativa k typickému zobrazené sekvenci. Například "zákazník se může rozhodnout pro přeskočení zbytku této sekvence".
+
+  - Zvažte použití fragmentů jako formální alternativy k tomuto druhu poznámky. Viz [Popis řídicích struktur s fragmenty](#Fragments)
+
+## <a name="deciding-the-scope-of-the-diagram"></a>Rozhodnutí o rozsahu diagramu
+ Je důležité mít jasné informace o tom, co diagram má zobrazit.
+
+#### <a name="initiating-event"></a>Událost inicializace
+ Každý diagram by měl zobrazit sekvenci interakcí, které jsou výsledkem jedné události zahájení. Může to být například:
+
+- Uživatel, který zahajuje případ použití, například otevření webové stránky pro nákup krupice.
+
+- Zpráva z jedné součásti systému do druhé, například dotaz na dostupnost položek, které chce zákazník koupit.
+
+- Událost aktivovaná změnou stavu, například akcie položky pod prahovou hodnotou.
+
+#### <a name="level-of-detail"></a>Úroveň podrobností
+ Sekvenční diagramy mohou zobrazovat různé úrovně podrobností. Úroveň podrobností ve dvou oddělených dimenzích je možné určit téměř nezávisle:
+
+ Životnosti mohou představovat jednu z těchto úrovní podrobností:
+
+- Objekty v kódu programu, které buď existují, nebo vyvíjíte.
+
+- Komponenty nebo jejich dílčí komponenty, obvykle vynechává Facade, proxy a další mechanismy připojení.
+
+- Váš systém a externí objekty actor
+
+  Zprávy mohou představovat jednu z těchto úrovní podrobností:
+
+- Softwarové zprávy v kódu programu, v rozhraní API nebo ve webovém rozhraní.
+
+- Transakce nebo dílčí transakce, například mezi uživateli a systémem nebo mezi kódem a databází.
+
+- Používejte případy – hlavní interakce mezi uživateli a systémem.
+
+  Bez ohledu na to, zda zkoumáte existující kód nebo navrhujete nový návrh, je často užitečné vykreslovat a diskutovat o méně podrobných zobrazeních.
+
+## <a name="describing-variations"></a>Popisující variace
+ Diagram znázorňuje jednu typickou posloupnost událostí. Pokud chcete zobrazit alternativní možnosti, jako jsou například scénáře selhání, můžete použít některou z těchto možností:
+
+- Nakreslete samostatné sekvenční diagramy, které popisují tyto scénáře.
+
+- Použijte [Popis řídicích struktur s fragmenty](#Fragments) k zobrazení smyček, alternativ a tak dále.
+
+## <a name="assessing-the-design"></a>Posouzení návrhu
+ Diagram lze použít k vyhodnocení rozdělení úkolů mezi objekty nebo komponenty. Zvažte refaktoring, pokud vidíte tyto vzory:
+
+- Zdá se, že jedna životnost provedla vše a provede volání na všechno ostatní, zatímco ostatní životnosti stačí přesně reagovat.
+
+- Mnoho zpráv překračuje životnost. Každá životnost by měla posílat zprávy jenom k několika sousedním sousedům a neměla by komunikovat s okolními sousedními sousedy. Obvykle je možné uspořádat životnosti tak, aby bylo k dispozici pouze několik míst, kde jsou zprávy překročeny životnosti. a tam, kde existují křížení, by neměla cílová životnost také vyměňovat zprávy, které mají překročené životnosti.
+
+- Některé životnosti se zdají zvládnout více než jeden druh úlohy. Měl by se snadno najít jedna Stručná věta, která popisuje zodpovědnost každé životnosti, a shrnout práci, kterou reaguje, na každou obdrženou zprávu.
+
+## <a name="ClassesAndLifelines"></a>Třídy a životnosti
+ Životnosti v sekvenčních diagramech ukazují instance tříd nebo rozhraní komponent. Životnost můžete pojmenovat dvěma způsoby:
+
+|**Pro tento účel**|**Použít tento formát**|
+|--------------------------|-------------------------|
+|Anonymní instance typu<br /><br /> Tuto část použijte v případě, že máte pouze jednu životnost každého typu.|*Popisuje*|
+|Pojmenovaná instance typu<br /><br /> Tuto hodnotu použijte, pokud chcete zobrazit sekvenci, která zahrnuje víc než jednu instanci stejného typu.|*ObjectName*:*TypeName*|
+
+### <a name="creating-lifelines-from-types"></a>Vytváření životností z typů
+ Můžete vytvořit nové životnosti z tříd, které jste již definovali, například v diagramu tříd.
+
 > [!NOTE]
-> Ujistěte se, že máte existující sekvenční diagram před provedením této úlohy.  
-  
-##### <a name="to-create-a-lifeline-from-an-existing-type"></a>Vytvořte životnost z existujícího typu  
-  
-- Třída, komponenty nebo rozhraní z Průzkumníku modelů UML přetáhněte do sekvenčního diagramu.  
-  
-   \- nebo –  
-  
-  1. Klikněte pravým tlačítkem na třídu, komponenty nebo rozhraní na jeho odpovídající diagramu a potom klikněte na tlačítko **vytvořit životnost**.  
-  
-  2. V **vytvořit životnost** dialogovém okně vyberte sekvenčního diagramu a potom klikněte na tlačítko **OK**.  
-  
-     Zobrazí se nové životnosti s názvem instance, jehož typ je typ, kterou jste přetáhli.  
-  
+> Před provedením této úlohy se ujistěte, že máte existující sekvenční diagram.
+
+##### <a name="to-create-a-lifeline-from-an-existing-type"></a>Vytvoření životnosti z existujícího typu
+
+- Přetáhněte třídu, komponentu nebo rozhraní z Průzkumníka modelů UML do sekvenčního diagramu.
+
+   \- nebo-
+
+  1. V příslušném diagramu klikněte pravým tlačítkem na třídu, komponentu nebo rozhraní a pak klikněte na **vytvořit životnost**.
+
+  2. V dialogovém okně **vytvořit životnost** vyberte sekvenční diagram a pak klikněte na **OK**.
+
+     Zobrazí se nová životnost pojmenované instance, jejíž typ je typ, který jste přetáhli.
+
   > [!NOTE]
-  > Tato akce tolikrát, kolikrát chcete, můžete opakovat. Tím se vytvoří životnosti s názvy jiné instance.  
-  
-##### <a name="to-change-the-type-of-a-lifeline"></a>Chcete-li změnit typ životnosti  
-  
-1. Klikněte pravým tlačítkem na životnost a potom klikněte na tlačítko **vlastnosti**.  
-  
-2. V **vlastnosti** okno, nastaveno **typ** vlastnost. Můžete buď z rozevírací nabídky vyberte typ, nebo zadejte nový název.  
-  
-### <a name="creating-classes-from-lifelines"></a>Vytvoření třídy ze životnosti  
- Po vytvoření jednoho nebo více sekvenčních diagramů lze shrnout životnosti vytvořením třídy nebo rozhraní z nich.  
-  
-##### <a name="to-create-a-class-or-interface-from-a-lifeline"></a>Chcete-li vytvořit třídu nebo rozhraní z objektu životnosti  
-  
-1. Klikněte pravým tlačítkem na životnost a potom klikněte na tlačítko **vytvořit třídu** nebo **vytvořit rozhraní**.  
-  
-     Nová třída nebo rozhraní se zobrazí v Průzkumníku modelů UML.  
-  
-2. Operace vytvoření třídy nebo rozhraní pro každou zprávu, která přijímá životnost:  
-  
-    1. Vyberte všechny zprávy, které chcete zahrnout.  
-  
-    2. Klikněte pravým tlačítkem na zprávy a pak klikněte na tlačítko **metodu vytvoření**.  
-  
-         Nová třída nebo rozhraní obsahuje operace pro každou vybranou zprávu.  
-  
-         Název operace se zobrazí pod každou zprávu šipku a v **operace** vlastnost zprávy.  
-  
-         Pokud zprávy zahrnuje parametry ve formě "(parameter: type)", zobrazí se v seznamu parametrů novou operaci.  
-  
+  > Tuto akci můžete opakovat tolikrát, kolikrát chcete. Tím se vytvoří životnost s různými názvy instancí.
+
+##### <a name="to-change-the-type-of-a-lifeline"></a>Změna typu životnosti
+
+1. Klikněte pravým tlačítkem na životnost a pak klikněte na **vlastnosti**.
+
+2. V okně **vlastnosti** nastavte vlastnost **typ** . Můžete buď vybrat typ z rozevírací nabídky, nebo zadat nový název.
+
+### <a name="creating-classes-from-lifelines"></a>Vytváření tříd z životností
+ Když jste vytvořili jeden nebo více sekvenčních diagramů, můžete sumarizovat životnosti vytvořením tříd nebo rozhraní z nich.
+
+##### <a name="to-create-a-class-or-interface-from-a-lifeline"></a>Vytvoření třídy nebo rozhraní z životnosti
+
+1. Klikněte pravým tlačítkem na životnost a pak klikněte na **vytvořit třídu** nebo **vytvořit rozhraní**.
+
+     V Průzkumníku modelů UML se zobrazí nová třída nebo rozhraní.
+
+2. Vytvořte operace v třídě nebo rozhraní pro každou zprávu, kterou životnost přijímá:
+
+    1. Vyberte všechny zprávy, které chcete zahrnout.
+
+    2. Klikněte pravým tlačítkem na jednu ze zpráv a pak klikněte na **vytvořit metodu**.
+
+         Nová třída nebo rozhraní obsahuje operace pro každou vybranou zprávu.
+
+         Název operace se zobrazí pod každou šipkou zprávy a ve vlastnosti **operace** zprávy.
+
+         Pokud vaše zpráva obsahuje parametry ve formátu "(parametr: Type)", zobrazí se v seznamu parametrů nové operace.
+
         > [!NOTE]
-        > Pokud chcete přidat nové zprávy v sekvenčním diagramu je nutné tento krok opakovat.  
-  
-3. Chcete-li zobrazit novou třídu nebo rozhraní podrobně, přidejte do diagramu tříd nebo komponenty.  
-  
-    1. Otevření nebo vytvoření diagramu tříd nebo komponenty.  
-  
-    2. Přetáhněte novou třídu nebo rozhraní z **Průzkumníku modelů UML** do diagramu tříd.  
-  
-         Třída nebo rozhraní se zobrazí v diagramu tříd.  
-  
-         \- nebo –  
-  
-    3. Přetáhnout rozhraní z **Průzkumníku modelů UML** do komponenty nebo port v diagramu komponent.  
-  
-         Rozhraní se zobrazí na komponentu jako lollipop.  
-  
-### <a name="creating-classes-for-parameters"></a>Vytvoření tříd pro parametry  
- Parametry můžete zahrnout zprávy v sekvenčním diagramu. Diagram tříd UML můžete použít k popisu typy parametrů.  
-  
-## <a name="Multiple"></a> Vytváření opakovaně použitelných interakce pořadí  
- Samostatné diagram lze použít k popisu sekvenci, která obsahuje podrobnosti, které chcete oddělit, nebo to je obvyklé v rámci několika diagramů.  
-  
- Obdélník použitím interakce (12) můžete vytvořit na jednom diagramu, který odkazuje na podrobnosti do jiného diagramu.  
-  
- Dvakrát klikněte na panel použitím interakce otevřete sekvenční diagram, který je propojen.  
-  
-#### <a name="to-create-a-reusable-interaction-sequence-from-existing-lifelines"></a>Vytvoření opakovaně použitelné interakce pořadí z existující životnosti  
-  
-1. V **nástrojů**, klikněte na tlačítko **použitím interakce**.  
-  
-2. V sekvenčním diagramu podržte tlačítko myši přetáhněte napříč životnosti, které chcete zahrnout do opakovaně použitelného pořadí. Začínají znakem svislé umístění, kam chcete vložit použitím interakce.  
-  
-     Použitím interakce se zobrazuje v vybrané životnosti v sekvenčním diagramu.  
-  
-3. Dvakrát klikněte na název týkající se použití interakce a přejmenujte ho na popisují vliv opakovaně použitelné pořadí v tomto diagramu.  
-  
-     \- nebo –  
-  
-     Vypsání názvu jako volání funkce s parametry.  
-  
-4. Propojte s použitím interakce jiného sekvenční diagram. Klikněte pravým tlačítkem na použití interakce a potom buď:  
-  
-     Klikněte na tlačítko **vytvořit novou sekvenci** vytvořte nový sekvenční diagram  
-  
-     \- nebo –  
-  
-     Klikněte na tlačítko **odkaz na pořadí** propojit existující diagramu.  
-  
-     Visual Studio vytvoří propojení mezi použitím interakce a nové pořadí interakce.  
-  
-     Nový sekvenční diagram se zobrazí ve vašem řešení. Obsahuje životnosti, které jste použili k vytvoření použitím interakce.  
-  
-    > [!NOTE]
-    > Pouze životnosti, pro kterou jste použili k vytvoření použitím interakce budou zahrnuty. Nový diagram nebude obsahovat životnosti, které jste vytvořili po interakce použít, i v případě použití interakce je nyní zahrnuje.  
-  
-#### <a name="to-create-a-reusable-sequence-from-existing-messages"></a>Vytvoření opakovaně použitelné pořadí z existujících zpráv  
-  
-- Klikněte pravým tlačítkem na zprávu, kterou chcete přesunout a potom klikněte na tlačítko **přesunout do diagramu**.  
-  
-  Visual Studio:  
+        > Pokud přidáte nové zprávy do sekvenčního diagramu, je nutné tento krok opakovat.
 
-  - Nahradí interakci použít vybrané zprávy a všechny podpůrné zprávy.  
+3. Chcete-li zobrazit novou třídu nebo rozhraní podrobněji, přidejte ji do diagramu tříd nebo komponent.
 
-  - Nahrazené zprávy přesune na nový sekvenční diagram.  
+    1. Otevřete nebo vytvořte diagram třídy nebo komponenty.
 
-  - Vytvoří propojení mezi použitím interakce a nový sekvenční diagram.  
-  
-#### <a name="to-navigate-to-the-sequence-referenced-by-an-interaction-use"></a>Přejít na pořadí odkazuje použitím interakce  
-  
-- Dvakrát klikněte na panel použitím interakce.  
-  
-     \- nebo –  
-  
-     Klikněte pravým tlačítkem na použití interakce a potom klikněte na tlačítko **přejít na pořadí**.  
-  
-### <a name="creating-a-placeholder-with-an-interaction-use"></a>Vytváření zástupný symbol se zárukou smlouvy interakce  
- Bez propojení do jiného diagramu můžete vytvořit použitím interakce. Můžete jako zástupný symbol pro součást sekvence jejíž podrobnosti ještě mají být vyřešeny. Použijte název interakce použijte k určení výsledku, který chcete.  
-  
-## <a name="Collapse"></a> Sbalení skupin životnosti  
- Sada životnosti můžete sbalit společně, tak, aby daná skupina zobrazovat jako jedna životnost. To vám umožňuje vizualizovat skupiny objektů jako jedinou součást. Zprávy a interakcí mezi životnosti sbalené skupiny jsou skryté. Zprávy a interakce sekvence, které obsahují jiné životností se zobrazí.  
-  
-#### <a name="to-collapse-a-group-of-lifelines-together"></a>Sbalit skupinu životností se společně  
-  
-1. Vyberte dvě nebo více životností.  
-  
-2. Klikněte pravým tlačítkem na jeden z nich a potom klikněte na **sbalit**.  
-  
-     Samostatné životností jsou nahrazeny jednoho životnost.  
-  
-     Zprávy a interakcí, které se týkají jenom členové skupiny jsou skryté.  
-  
-3. Chcete-li přejmenovat skupinu, klikněte na název.  
-  
+    2. Přetáhněte novou třídu nebo rozhraní z **Průzkumníka modelů UML** do diagramu tříd.
+
+         Třída nebo rozhraní se zobrazí v diagramu tříd.
+
+         \- nebo-
+
+    3. Přetáhněte nové rozhraní z **Průzkumníka modelů UML** na součást nebo port v diagramu komponent.
+
+         Rozhraní se zobrazí v součásti jako Lupa.
+
+### <a name="creating-classes-for-parameters"></a>Vytváření tříd pro parametry
+ Můžete zahrnout parametry do zpráv v sekvenčním diagramu. K popisu typů parametrů lze použít diagram tříd UML.
+
+## <a name="Multiple"></a>Vytváření opakovaně použitelných sekvencí interakce
+ Pomocí samostatného diagramu můžete popsat sekvenci, která obsahuje podrobnosti, které chcete oddělit nebo které jsou běžné mezi několika diagramy.
+
+ Můžete vytvořit interakci použít obdélník (12) v jednom diagramu, který odkazuje na podrobnosti v jiném diagramu.
+
+ Dvakrát klikněte na použití interakce k otevření sekvenčního diagramu, který je k němu propojený.
+
+#### <a name="to-create-a-reusable-interaction-sequence-from-existing-lifelines"></a>Vytvoření opakovaně použitelné sekvence interakce z existujících životností
+
+1. V sadě **nástrojů**klikněte na možnost **použít interakci**.
+
+2. V sekvenčním diagramu podržte stisknuté tlačítko myši při přetahování mezi životnostmi, které chcete zahrnout do opakovaně použitelné sekvence. Začněte na svislém místě, kam chcete vložit interakci.
+
+     Použití interakce se zobrazí napříč vybranými životnostmi v sekvenčním diagramu.
+
+3. Dvakrát klikněte na název při použití interakce a přejmenujte jej, abyste popsali účinek opakovaně použitelné sekvence v tomto diagramu.
+
+     \- nebo-
+
+     Napište název jako volání funkce s parametry.
+
+4. Propojení použití interakce s jiným sekvenčním diagramem. Klikněte pravým tlačítkem myši na možnost použití interakce a pak na jednu z těchto akcí:
+
+     Kliknutím na **vytvořit novou sekvenci** vytvoříte nový sekvenční diagram.
+
+     \- nebo-
+
+     Kliknutím na **propojit se sekvencí** můžete propojit s existujícím diagramem.
+
+     Visual Studio vytvoří propojení mezi použitím interakce a nové posloupnosti interakcí.
+
+     Ve vašem řešení se zobrazí nový sekvenční diagram. Obsahuje životnosti, které jste použili k vytvoření použití interakce.
+
     > [!NOTE]
-    > Název skupiny budou ztraceny, když rozšiřujete skupině.  
-  
-#### <a name="to-expand-a-collapsed-group"></a>Chcete-li rozbalit sbalené skupiny  
-  
-- Klikněte pravým tlačítkem na sbalený životnost a potom klikněte na tlačítko **Rozbalit**.  
-  
+    > Budou zahrnuty pouze životnosti, které jste použili k vytvoření použití interakce. Nový diagram nezahrnuje životnosti, kterou jste vytvořili po použití interakce, a to i v případě, že je interakce použita nyní.
+
+#### <a name="to-create-a-reusable-sequence-from-existing-messages"></a>Vytvoření opakovaně použitelné sekvence z existujících zpráv
+
+- Klikněte pravým tlačítkem myši na zprávu, kterou chcete přesunout, a potom klikněte na **přesunout do diagramu**.
+
+  Visual Studio:
+
+  - Nahradí pomocí interakce vybranou zprávu a všechny dceřiné zprávy.
+
+  - Přesune nahrazené zprávy do nového sekvenčního diagramu.
+
+  - Vytvoří propojení mezi použitím interakce a nového sekvenčního diagramu.
+
+#### <a name="to-navigate-to-the-sequence-referenced-by-an-interaction-use"></a>Přechod na sekvenci, na kterou se odkazuje pomocí interakce
+
+- Dvakrát klikněte na možnost použít interakci.
+
+     \- nebo-
+
+     Klikněte pravým tlačítkem myši na použití interakce a potom klikněte na tlačítko **Přejít ke sekvenci**.
+
+### <a name="creating-a-placeholder-with-an-interaction-use"></a>Vytvoření zástupného textu s využitím interakce
+ Můžete vytvořit interakci bez propojení s jiným diagramem. Můžete ji použít jako zástupný symbol pro část sekvence, jejichž podrobnosti jsou ještě odpracované. Použijte název použití interakce k označení výsledku, který chcete.
+
+## <a name="Collapse"></a>Sbalení skupin životností
+ Můžete sbalit sadu životností dohromady, aby se skupina zobrazovala jako jedna životnost. To vám pomůže vizualizovat skupinu objektů jako jednu komponentu. Zprávy a použití interakce mezi životnostmi ve sbalených skupinách jsou skryté. Zobrazují se zprávy a sekvence interakce, které zahrnují jiné životnosti.
+
+#### <a name="to-collapse-a-group-of-lifelines-together"></a>Sbalení skupiny životností dohromady
+
+1. Vyberte dvě nebo více životností.
+
+2. Klikněte na jednu z nich pravým tlačítkem myši a potom klikněte na **sbalit**.
+
+     Samostatné životnosti se nahrazují jedinou životností.
+
+     Zprávy a interakce použití, které zahrnují pouze členy skupiny, jsou skryté.
+
+3. Chcete-li přejmenovat skupinu, klikněte na její název.
+
     > [!NOTE]
-    > Název skupiny se ztratí, společně s odkazy ze skupiny na komentáře nebo pracovní položky.  
-  
-## <a name="Fragments"></a> Popis struktury řízení pomocí fragmentů  
- Kombinované fragmenty (13) můžete použít k definování smyčky, větve a souběžné zpracování v sekvenčním diagramu. Případně zvažte místo toho použití diagramu činnosti. Diagram činnosti není tak užitečné zobrazují zpráv mezi objekty actor, ale v některých případech je lepší zobrazují smyčky, větve a souběžnosti.  
-  
- Úplný seznam typů fragment, naleznete v tématu [Describe toku řízení pomocí fragmentů v sekvenčních diagramech UML](../modeling/describe-control-flow-with-fragments-on-uml-sequence-diagrams.md).  
-  
-#### <a name="to-create-a-combined-fragment"></a>K vytvoření kombinovaného fragmentu  
-  
-1. Vyberte zprávu nebo s posloupností zpráv všechno začíná na stejném výskyt provádění nebo životnost.  
-  
+    > Název skupiny se při rozbalení skupiny ztratí.
+
+#### <a name="to-expand-a-collapsed-group"></a>Chcete-li rozbalit sbalenou skupinu
+
+- Klikněte pravým tlačítkem na sbalený životnost a potom klikněte na tlačítko **Rozbalit**.
+
     > [!NOTE]
-    > Pomocí šipek. zprávy, není výskyty spuštění, přejděte na zprávy.  
-  
-2. Klikněte pravým tlačítkem na zprávy, přejděte na **obklopit fragmentem**a potom klikněte na typ fragment, která požadujete.  
-  
-     Zobrazí se nové fragment. Obsahuje zprávy, které jste vybrali.  
-  
-     Pokud typ kombinovaného fragmentu umožňuje více fragmentů, zobrazí se také prázdný fragment.  
-  
-3. Chcete-li nastavit guard fragment, klikněte pravým tlačítkem myši na okraj fragment a klikněte na **vlastnosti**. Nastavte **Guard** vlastnost.  
-  
-     Ochranného zařízení se používá k definování podmínku pro větev nebo smyčku.  
-  
-4. Přidat nové fragment pro typ, který umožňuje více fragmentů, klikněte pravým tlačítkem na hranici fragment a přejděte na **přidat**. Klikněte na možnost **interakce Operand před** nebo **Operand interakce po**.  
-  
-5. Přidat nové zprávy k fragmentům, pomocí nástroje zprávy, nebo zkopírujte a vložte.  
-  
-## <a name="see-also"></a>Viz také  
- [Sekvenční diagramy UML: Referenční dokumentace](../modeling/uml-sequence-diagrams-reference.md)   
- [Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md)   
- [Diagramy případů použití UML: Referenční dokumentace](../modeling/uml-use-case-diagrams-reference.md)   
- [Diagramy tříd UML: Referenční dokumentace](../modeling/uml-class-diagrams-reference.md)   
- [Diagramy komponent UML: Referenční dokumentace](../modeling/uml-component-diagrams-reference.md)   
- [Diagramy komponent UML: Referenční dokumentace](../modeling/uml-component-diagrams-reference.md)   
- [Video: Zobrazení interakce s použitím sekvenčních diagramů](http://go.microsoft.com/fwlink/?LinkId=201113)
+    > Název skupiny bude ztracen spolu s jakýmikoli odkazy ze skupiny na komentáře nebo pracovní položky.
+
+## <a name="Fragments"></a>Popis řídicích struktur s fragmenty
+ Můžete použít kombinované fragmenty (13) k definování smyček, větví a souběžného zpracování v sekvenčním diagramu. Případně zvažte místo toho použití diagramu činnosti. Diagram aktivity není tak užitečný, když zobrazuje zprávy mezi objekty Actors, ale v některých případech je lepší při zobrazování smyček, větví a souběžnosti.
+
+ Úplný seznam typů fragmentů naleznete v tématu [Popis toku řízení pomocí fragmentů v sekvenčních diagramech UML](../modeling/describe-control-flow-with-fragments-on-uml-sequence-diagrams.md).
+
+#### <a name="to-create-a-combined-fragment"></a>Vytvoření kombinovaného fragmentu
+
+1. Vyberte zprávu nebo posloupnost zpráv, které začínají na stejném výskytu nebo životnosti spuštění.
+
+    > [!NOTE]
+    > Vyberte šipky zpráv, nikoli výskyty, na které se zprávy odkazují.
+
+2. Klikněte pravým tlačítkem myši na jednu ze zpráv, ukažte na možnost **prostorový s**a pak klikněte na požadovaný typ fragmentu.
+
+     Zobrazí se nový fragment. Obsahuje zprávy, které jste vybrali.
+
+     Pokud kombinovaný typ fragmentu umožňuje více fragmentů, zobrazí se také prázdný fragment.
+
+3. Chcete-li nastavit ochranu fragmentu, klikněte pravým tlačítkem myši na ohraničení fragmentu a poté klikněte na příkaz **vlastnosti**. Nastavte vlastnost **Guard** .
+
+     Guard slouží k definování podmínky pro větev nebo smyčku.
+
+4. Chcete-li přidat nový fragment do druhu, který povoluje více fragmentů, klikněte pravým tlačítkem myši na hranici fragmentu a přejděte na příkaz **Přidat**. Klikněte buď na **operand interakce před** , nebo na **operand interakce po**.
+
+5. Chcete-li přidat nové zprávy do fragmentu, použijte nástroje pro zprávy nebo je zkopírujte a vložte.
+
+## <a name="see-also"></a>Viz také
+ [Sekvenční diagramy UML: referenční informace](../modeling/uml-sequence-diagrams-reference.md) k [úpravám modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md) [použití UML: referenční](../modeling/uml-use-case-diagrams-reference.md) diagramy [tříd](../modeling/uml-class-diagrams-reference.md) UML: referenční diagramy komponent UML: Referenční dokumentace diagramů komponent UML: [](../modeling/uml-component-diagrams-reference.md) [referenční](../modeling/uml-component-diagrams-reference.md) [dokumentace Video: Náčrtace interakcí pomocí sekvenčních diagramů](http://go.microsoft.com/fwlink/?LinkId=201113)

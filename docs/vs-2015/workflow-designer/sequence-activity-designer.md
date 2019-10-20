@@ -1,5 +1,5 @@
 ---
-title: Návrhář aktivity pořadí | Dokumentace Microsoftu
+title: Návrhář aktivity sekvence | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -8,31 +8,30 @@ f1_keywords:
 - System.Activities.Statements.Sequence.UI
 ms.assetid: 51c8d3cb-4d43-458f-9631-b63755f9ac94
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 47743feae8c256aa0ddb4e3270aca32b108aa5d1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3acf02ab478eee244557e04f19f78ba2d5f0b950
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007476"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663264"
 ---
 # <a name="sequence-activity-designer"></a>Návrhář aktivity Sequence
-<xref:System.Activities.Statements.Sequence> Aktivita obsahuje uspořádanou kolekci podřízené aktivity, které se provede v pořadí.  
-  
- Dalším způsobem, jak provést sadu aktivit v pořadí se má používat <xref:System.Activities.Statements.Flowchart> aktivity. Zvažte použití [vývojový diagram](../workflow-designer/flowchart-activity-designer.md) Pokud máte jednoduchou větvení nebo opakování ve smyčce toku programu, který chcete model diagramem.  
-  
-## <a name="using-the-sequence-activity-designer"></a>Pomocí Návrhář aktivity Sequence  
- Přidat <xref:System.Activities.Statements.Sequence> aktivity, přetáhněte **pořadí** Návrhář aktivity z **nástrojů** a umístěte ho do [!INCLUDE[wfd1](../includes/wfd1-md.md)] povrchu. Chcete-li přidat podřízené aktivity k tomuto <xref:System.Activities.Statements.Sequence> aktivity, přetáhněte další aktivitu z **nástrojů** a umístěte ho na trojúhelník do pole text nápovědy "Sem přetáhněte aktivitu".  
-  
-### <a name="sequence-activity-properties-in-the-workflow-designer"></a>Vlastnosti aktivity pořadí v Návrháři postupu provádění  
- Následující tabulka ukazuje <xref:System.Activities.Statements.Sequence> vlastnosti a popisuje, jak se používají v návrháři. Tyto vlastnosti můžete upravit v mřížce vlastností nebo na návrhové ploše.  
-  
-|Název vlastnosti|Požadováno|Použití|  
-|-------------------|--------------|-----------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje popisný název <xref:System.Activities.Statements.Sequence> návrháře aktivit v záhlaví. Výchozí hodnota je sekvence. Hodnotu lze upravit v mřížce vlastností nebo přímo v hlavičce návrháře aktivit.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutné, je osvědčeným postupem je použití jednoho.|  
-  
-## <a name="see-also"></a>Viz také  
- [Vývojový diagram](../workflow-designer/flowchart-activity-designer.md)   
- [Tok řízení](../workflow-designer/control-flow-activity-designers.md)
+Aktivita <xref:System.Activities.Statements.Sequence> obsahuje uspořádanou kolekci podřízených aktivit, které se spustí v daném pořadí.
+
+ Dalším způsobem, jak spustit sadu aktivit v uvedeném pořadí, je použít aktivitu <xref:System.Activities.Statements.Flowchart>. Zvažte použití [vývojového diagramu](../workflow-designer/flowchart-activity-designer.md) v případě jednoduchého toku větvení nebo smyčky programu, který chcete modelovat diagrammatically.
+
+## <a name="using-the-sequence-activity-designer"></a>Pomocí návrháře aktivity sekvence
+ Chcete-li přidat aktivitu <xref:System.Activities.Statements.Sequence>, přetáhněte návrháře aktivity **sekvence** z **panelu nástrojů** a přetáhněte jej na plochu [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Chcete-li do této aktivity <xref:System.Activities.Statements.Sequence> přidat podřízenou aktivitu, přetáhněte ji ze **sady nástrojů** a umístěte ji na trojúhelník v poli s textem nápovědy "Sem přetáhněte aktivitu".
+
+### <a name="sequence-activity-properties-in-the-workflow-designer"></a>Vlastnosti aktivity sekvence v Návrhář postupu provádění
+ V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.Sequence> a popisuje, jak se používají v návrháři. Tyto vlastnosti lze upravovat v mřížce vlastností nebo na návrhové ploše.
+
+|Název vlastnosti|Požadováno|Použití|
+|-------------------|--------------|-----------|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje popisný název návrháře <xref:System.Activities.Statements.Sequence> aktivity v hlavičce. Výchozí hodnota je Sequence. Hodnotu lze upravit v mřížce vlastností nebo přímo v záhlaví návrháře aktivit.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
+
+## <a name="see-also"></a>Viz také
+ [Tok ovládacího prvku](../workflow-designer/control-flow-activity-designers.md) [vývojového diagramu](../workflow-designer/flowchart-activity-designer.md)

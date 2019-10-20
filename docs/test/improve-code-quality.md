@@ -5,28 +5,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - testing tools [Visual Studio]
 - unit tests [Visual Studio]
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 153624ec6f0bdb13e4d89a92edf977d0badc7e62
-ms.sourcegitcommit: 3e74ec49a54e5c3da7631f4466128cdf4384af6b
+author: jillre
+ms.openlocfilehash: b68793e512cdb367375cc9f27d61ae5a85e4f078
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712221"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653270"
 ---
 # <a name="testing-tools-in-visual-studio"></a>Testovací nástroje v sadě Visual Studio
 
-Testovací nástroje sady Visual Studio vám může pomoct a váš tým vyvíjet a udržovat vysoké standardy pro vzdělávání profesionálů v oblasti kódu.
+Testovací nástroje sady Visual Studio vám můžou a vašemu týmu přispět k vývoji a udržování vysoké úrovně kvality kódu.
 
 > [!NOTE]
-> Testování jednotek je k dispozici ve všech edicích sady Visual Studio. Další testovací nástroje, například Live Unit Testing, IntelliTest a programový test uživatelského rozhraní, jsou k dispozici pouze v edici Visual Studio Enterprise. Další informace o edicích najdete v tématu [porovnání prostředí Visual Studio](https://visualstudio.microsoft.com/vs/compare/)s více procesory.
+> Testování částí je k dispozici ve všech edicích sady Visual Studio. Další testovací nástroje, například Live Unit Testing, IntelliTest a programový test uživatelského rozhraní, jsou k dispozici pouze v edici Visual Studio Enterprise. Další informace o edicích najdete v tématu [porovnání prostředí Visual Studio](https://visualstudio.microsoft.com/vs/compare/)s více procesory.
 
 ## <a name="test-explorer"></a>Průzkumník testů
 
-Okno **Průzkumník testů** pomáhá vývojářům vytvářet, spravovat a spouštět testy jednotek. Můžete použít rozhraní testování částí Microsoft nebo jeden z několika rámců třetích stran a open source.
+Okno **Průzkumník testů** pomáhá vývojářům vytvářet, spravovat a spouštět testy jednotek. Můžete použít rozhraní Microsoft Unit Test Framework nebo jednu z několika platforem pro open source od jiných výrobců.
 
 ::: moniker range="vs-2017"
 ![Průzkumník testů sady Visual Studio](media/devtest-testexplorer.png)
@@ -47,7 +47,7 @@ Visual Studio je také rozšiřitelné a otevírá dvířka adaptérů pro testo
 
 ## <a name="live-unit-testing"></a>Live Unit Testing
 
-[Live Unit Testing](../test/live-unit-testing.md) automaticky spustí testy jednotek na pozadí a graficky zobrazuje výsledky pokrytí a testování kódu v editoru kódu sady Visual Studio.
+[Live Unit Testing](../test/live-unit-testing.md) automaticky spouští testy jednotek na pozadí a graficky zobrazuje pokrytí kódu a výsledky testů v editoru kódu sady Visual Studio.
 
 ## <a name="intellitest"></a>IntelliTest
 
@@ -61,13 +61,13 @@ IntelliTest automaticky generuje jednotkové testy a testovací data pro váš s
 
 ## <a name="code-coverage"></a>Pokrytí kódu
 
-[Pokrytí kódu](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md) Určuje, jaká část projektového kódu je skutečně testován kódovanými testy, jako je například testování částí. Aby bylo možné efektivně chránit proti chybám, testy by měly vyvolávat nebo "krýt" velkou část kódu.
+[Pokrytí kódu](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md) určuje, který podíl kódu projektu je skutečně testován pomocí kódovaných testů, jako je například testování částí. Aby bylo možné efektivně chránit proti chybám, testy by měly vyvolávat nebo "krýt" velkou část kódu.
 
 Analýza pokrytí kódu se dá použít pro spravovaný i nespravovaný (nativní) kód.
 
 Pokrytí kódu je jedna z možností při spouštění testovacích metod pomocí Průzkumníku testů. Tabulka výsledků zobrazuje procentuální podíl kódu, který byl spuštěn v každém sestavení, třídě a metodě. Editor zdrojového kódu navíc ukazuje samotný kód, který byl testován.
 
-* [Použití pokrytí kódu k určení, kolik kódu je právě testováno.](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
+* [Použití pokrytí kódu k určení množství testovaného kódu](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
 * [Testování částí, pokrytí kódu a analýza klonování kódu pomocí sady Visual Studio (testovací prostředí)](http://download.microsoft.com/download/6/2/B/62B60ECE-B9DC-4E8A-A97C-EA261BFB935E/Docs/Unit%20Testing,%20Code%20Coverage%20and%20Code%20Clone%20Analysis%20with%20Visual%20Studio%202015.docx)
 * [Přizpůsobení analýzy pokrytí kódu](customizing-code-coverage-analysis.md)
 
@@ -90,11 +90,11 @@ Bez ohledu na to, zda jste zvolili nejlepší programové testy uživatelského 
 
 ## <a name="load-testing"></a>Zátěžové testování
 
-[Zátěžové testování](../test/quickstart-create-a-load-test-project.md) simuluje zatížení na serveru aplikace spuštěním testů jednotek a testů výkonu webu.
+[Zátěžové testování](../test/quickstart-create-a-load-test-project.md) simuluje zatížení serverové aplikace spuštěním testů jednotek a testů výkonnosti webu.
 
 ## <a name="related-scenarios"></a>Související scénáře
 
-* [Průzkumné a ručního testování (Azure testovací plány)](/azure/devops/test/index?view=vsts)
-* [Zátěžové testování (Azure testovací plány)](/azure/devops/test/load-test/index?view=vsts)
-* [Průběžné testování (Azure testovací plány)](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)
+* [Průzkumné & Manuální testování (Azure Test Plans)](/azure/devops/test/index?view=vsts)
+* [Zátěžové testování (Azure Test Plans)](/azure/devops/test/load-test/index?view=vsts)
+* [Průběžné testování (Azure Test Plans)](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)
 * [Nástroje pro analýzu kódu](../code-quality/code-analysis-for-managed-code-overview.md)

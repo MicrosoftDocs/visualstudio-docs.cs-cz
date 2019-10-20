@@ -13,21 +13,21 @@ helpviewer_keywords:
 - LCID devenv switch
 - /LCID Devenv switch
 ms.assetid: 3a3f4e70-ea66-4351-9d62-acb1dec30e8e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: deb2ce5eba108127dce82bab77fe7ed4fb78fb14
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 991886289ac2c2ee06e37476169dff6d2354a52e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970124"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659982"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 
-Nastaví výchozí jazyk používaný pro text, měny a jiné hodnoty v rámci rozhraní IDE.
+Nastaví výchozí jazyk, který se používá pro text, měnu a jiné hodnoty v rámci integrovaného vývojového prostředí (IDE).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,17 +39,17 @@ devenv {/LCID|/L} LocaleID
 
 - *LocaleID*
 
-  Povinný parametr. Identifikátor národního prostředí (LCID) jazyk, který zadáte.
+  Požadováno. Identifikátor národního prostředí (LCID) jazyka, který zadáte.
 
 ## <a name="remarks"></a>Poznámky
 
-Načte integrovaného vývojového prostředí a nastaví výchozí přirozeného jazyka pro prostředí. Tato změna je trvalá mezi relacemi a integrovaného vývojového prostředí se zobrazí tato změna **nástroje** > **možnosti** > **prostředí**  >  **Mezinárodní nastavení** > **jazyk** pole.
+Načte rozhraní IDE a nastaví výchozí přirozený jazyk pro prostředí. Tato změna je trvalá mezi relacemi a IDE tuto změnu zobrazuje v dialogovém okně **nástroje**  > **možnosti**  > **prostředí**  > **mezinárodní nastavení**  > **jazyk** .
 
-Pokud zadaný jazyk není k dispozici ve vašem systému `/LCID` přepínač je ignorován.
+Pokud zadaný jazyk není ve vašem systému k dispozici, přepínač `/LCID` se ignoruje.
 
-V následující tabulce jsou uvedeny LCID jazyků podporovaných v sadě Visual Studio.
+V následující tabulce jsou uvedeny identifikátory LCID jazyků, které podporuje Visual Studio.
 
-|Jazyk|LCID|
+|Jazyk|IDENTIFIKÁTORY|
 |--------------|----------|
 |Čínština (zjednodušená)|2052|
 |Čínština (tradiční)|1028|
@@ -63,7 +63,7 @@ V následující tabulce jsou uvedeny LCID jazyků podporovaných v sadě Visual
 
 ## <a name="example"></a>Příklad
 
-Tento příklad načte integrované vývojové prostředí s anglickou prostředky řetězců.
+Tento příklad načte integrované vývojové prostředí (IDE) s řetězci České prostředky.
 
 ```shell
 devenv /LCID 1033

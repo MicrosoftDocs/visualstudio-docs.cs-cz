@@ -1,5 +1,5 @@
 ---
-title: Shell příkaz | Dokumentace Microsoftu
+title: Příkaz prostředí | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -16,75 +16,66 @@ helpviewer_keywords:
 - Visual Studio, executables from
 ms.assetid: 737fda23-b852-45c4-a9fe-41cbce6ba70f
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9a85b8ef5dd99da6c82c9f63da31bec783a7c9a7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: ad49aadf6be56fb330b883050e6a6ff893cf054a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438022"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663545"
 ---
 # <a name="shell-command"></a>Prostředí – příkaz
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Spouští spustitelné programy v rámci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-Tools.Shell [/command] [/output] [/dir:folder] path [args]  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `path`  
- Povinný parametr. Cestu a název souboru pro spuštění nebo dokument otevřít. Úplná cesta je vyžadována, pokud zadaný soubor není v jednom z adresářů v proměnné prostředí PATH.  
-  
- `args`  
- Volitelné. Všechny argumenty k předání do vyvolaný program.  
-  
-## <a name="switches"></a>Přepínače  
- [/CommandWindow [nebo] / Command nebo] /c [nebo] / cmd  
- Volitelné. Určuje, že se v zobrazí výstup pro spustitelný soubor **příkaz** okna.  
-  
- /dir:`folder` [nebo] / d: `folder`  
- Volitelné. Určuje pracovní adresář bude nastaven při spuštění programu.  
-  
- / outputwindow [nebo] / Output [nebo] parametr/out [nebo] /o  
- Volitelné. Určuje, že se v zobrazí výstup pro spustitelný soubor **výstup** okna.  
-  
-## <a name="remarks"></a>Poznámky  
- Musí být zadán přepínačích /c /o /dir ihned po `Tools.Shell`. Nic zadaných po název spustitelného souboru, jsou předány jako argumenty příkazového řádku.  
-  
- Předdefinované alias `Shell` lze použít místo `Tools.Shell`.  
-  
+Spustí spustitelné programy v rámci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].
+
+## <a name="syntax"></a>Syntaxe
+
+```
+Tools.Shell [/command] [/output] [/dir:folder] path [args]
+```
+
+## <a name="arguments"></a>Arguments
+ `path` nutné. Cesta a název souboru, který se má provést, nebo dokument, který se má otevřít Úplná cesta je povinná, pokud zadaný soubor není v jednom z adresářů proměnné prostředí PATH.
+
+ `args` volitelné. Všechny argumenty, které se mají předat vyvolanému programu.
+
+## <a name="switches"></a>Přepínače
+ /CommandWindow [nebo]/Command [nebo]/c [or]/cmd volitelné. Určuje, že výstup pro spustitelný soubor je zobrazen v **příkazovém** okně.
+
+ /dir: `folder` [nebo]/d: `folder` volitelné. Určuje pracovní adresář, který má být nastaven při spuštění programu.
+
+ /OutputWindow [nebo]/Output [nebo]/out [nebo]/o volitelné. Určuje, že výstup pro spustitelný soubor je zobrazen v okně **výstup** .
+
+## <a name="remarks"></a>Poznámky
+ Přepínače/dir/o/c je nutné zadat ihned po `Tools.Shell`. Cokoli, co je uvedeno po názvu spustitelného souboru, je předáno do něj jako argumenty příkazového řádku.
+
+ Předdefinovaný `Shell` alias lze použít místo `Tools.Shell`.
+
 > [!CAUTION]
-> Pokud `path` argument určuje cestu k adresáři, jakož i název souboru, celý název cesty by měl uzavřete do literálu uvozovky ("" "), protože v následujících tématech:  
-  
-```  
-Tools.Shell """C:\Program Files\SomeFile.exe"""  
-```  
-  
- Každá sada tří dvojité uvozovky ("" ") je interpretována `Shell` procesoru jako jeden dvojitými uvozovkami. Díky tomu se v předchozím příkladu skutečně předá následující řetězec cesty `Shell` příkaz:  
-  
-```  
-"C:\Program Files\SomeFile.exe"  
-```  
-  
+> Pokud argument `path` poskytuje cestu k adresáři i název souboru, měli byste uzavřít celou cestu do literálních uvozovek ("" "), jak je uvedeno v následujícím seznamu:
+
+```
+Tools.Shell """C:\Program Files\SomeFile.exe"""
+```
+
+ Každá sada tří dvojitých uvozovek ("" ") je interpretována procesorem `Shell` jako jeden znak dvojité uvozovky. Proto předchozí příklad ve skutečnosti předá následující řetězec cesty k příkazu `Shell`:
+
+```
+"C:\Program Files\SomeFile.exe"
+```
+
 > [!CAUTION]
-> Pokud není uzavřít řetězec cesty v uvozovkách literálu ("" "), Windows použije pouze část řetězce až po první místo. Například pokud výše uvedené cestě řetězec nebyly správně v uvozovkách, by vypadalo Windows pro soubor s názvem "Program", které jsou umístěné v kořenovém adresáři C:\. Pokud spustitelný soubor C:\Program.exe byly ve skutečnosti k dispozici, i jeden nainstaloval nedovolené úmyslné poškozování, Windows by pokus o spuštění tohoto programu místo požadované "c:\Program Files\SomeFile.exe" program.  
-  
-## <a name="example"></a>Příklad  
- Následující příkaz využívá xcopy.exe zkopírovat soubor `MyText.txt` do `Text` složky. Zobrazí se výstup z xcopy.exe v obou **příkazové okno** a **výstup** okna.  
-  
-```  
->Tools.Shell /o /c xcopy.exe c:\MyText.txt c:\Text\MyText.txt  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Visual Studio Commands](../../ide/reference/visual-studio-commands.md)   
- [Okno příkazového řádku](../../ide/reference/command-window.md)   
- [Okno výstup](../../ide/reference/output-window.md)   
- [Pole najít/příkaz](../../ide/find-command-box.md)   
- [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)
+> Pokud nezadáte řetězec cesty v literálových uvozovkách ("" "), systém Windows použije pouze část řetězce, která je až do prvního prostoru. Pokud například řetězec cesty výše nebyl v uvozovkách uveden správně, systém Windows vyhledá soubor s názvem program umístěný ve složce C:\ kořenový adresář. Pokud byl spustitelný soubor C:\Program.exe skutečně k dispozici, dokonce i jeden nainstalovaný po nedovolené manipulaci, systém Windows se pokusí spustit tento program místo požadovaného programu "c:\Program Files\SomeFile.exe".
+
+## <a name="example"></a>Příklad
+ Následující příkaz pomocí příkazu Xcopy. exe zkopíruje soubor `MyText.txt` do složky `Text`. Výstup z příkazu Xcopy. exe se zobrazí v okně **příkazového** řádku i v okně **výstup** .
+
+```
+>Tools.Shell /o /c xcopy.exe c:\MyText.txt c:\Text\MyText.txt
+```
+
+## <a name="see-also"></a>Viz také
+ [Příkazové okno](../../ide/reference/command-window.md) [příkazů sady Visual Studio](../../ide/reference/visual-studio-commands.md) [okno výstup](../../ide/reference/output-window.md) [pole Najít/příkaz](../../ide/find-command-box.md) , [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

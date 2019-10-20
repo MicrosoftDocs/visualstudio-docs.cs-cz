@@ -6,20 +6,20 @@ ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: 2b0a8e04-6fee-4c6c-b086-e49fc728a3ed
 caps.latest.revision: 12
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7eeae6a14c846de83aaffa6568c6c30b82d9d81b
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: d4c6176caee5551b860029ac98b19d52fcb7b51f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871731"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658556"
 ---
 # <a name="t4-template-directive"></a>T4 – direktiva Template
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`template` Textová šablona [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] T4 obvykle začíná direktivou, která určuje, jak má být šablona zpracována. V textové šabloně a v žádném souboru, který zahrnuje, by neměla existovat více než jedna direktiva šablony.
+Šablona textu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] T4 obvykle začíná direktivou `template`, která určuje, jak má být šablona zpracována. V textové šabloně a v žádném souboru, který zahrnuje, by neměla existovat více než jedna direktiva šablony.
 
  Obecný přehled o psaní textových šablon najdete v tématu [Vytvoření textové šablony T4](../modeling/writing-a-t4-text-template.md).
 
@@ -29,23 +29,23 @@ ms.locfileid: "68871731"
 <#@ template [language="VB"] [compilerOptions="options"] [culture="code"] [debug="true"] [hostspecific="true"] [inherits="templateBaseClass"] [visibility="internal"] [linePragmas="false"] #>
 ```
 
- `template` Direktiva má několik atributů, které umožňují určit různé aspekty transformace. Všechny tyto atributy jsou volitelné.
+ Direktiva `template` má několik atributů, které umožňují určit různé aspekty transformace. Všechny tyto atributy jsou volitelné.
 
 ## <a name="compileroptions-attribute"></a>Atribut compilerOptions
  Příklad: `compilerOptions="optimize+"`
 
- Platné hodnoty: Všechny platné parametry kompilátoru. Další informace naleznete v tématu [ C# možnosti kompilátoru uvedené podle kategorie](https://msdn.microsoft.com/library/96437ecc-6502-4cd3-b070-e9386a298e83) a [Visual Basic možnosti kompilátoru uvedené podle kategorie](https://msdn.microsoft.com/library/fbe36f7a-7cfa-4f77-a8d4-2be5958568e3).
+ Platné hodnoty: všechny platné možnosti kompilátoru. Další informace naleznete v tématu [ C# možnosti kompilátoru uvedené podle kategorie](https://msdn.microsoft.com/library/96437ecc-6502-4cd3-b070-e9386a298e83) a [Visual Basic možnosti kompilátoru uvedené podle kategorie](https://msdn.microsoft.com/library/fbe36f7a-7cfa-4f77-a8d4-2be5958568e3).
 
  U šablon běhu (předzpracovaných) se ignoruje.
 
- Tyto možnosti jsou aplikovány, pokud byla šablona převedena [!INCLUDE[csprcs](../includes/csprcs-md.md)] do [!INCLUDE[vb_current_short](../includes/vb-current-short-md.md)]nebo a výsledný kód je zkompilován.
+ Tyto možnosti jsou aplikovány, pokud byla šablona převedena do [!INCLUDE[csprcs](../includes/csprcs-md.md)] nebo [!INCLUDE[vb_current_short](../includes/vb-current-short-md.md)] a výsledný kód je zkompilován.
 
 ## <a name="culture-attribute"></a>Atribut culture
  Příklad: `culture="de-CH"`
 
  Platné hodnoty: "", invariantní jazyková verze, což je výchozí hodnota.
 
- Jazyková verze vyjádřená jako řetězec ve formátu xx-XX. Příklad: en US, ja-JP, de-CH, de-DE. Další informace naleznete v tématu <xref:System.Globalization.CultureInfo?displayProperty=fullName>.
+ Jazyková verze vyjádřená jako řetězec ve formátu xx-XX. Příklad: en US, ja-JP, de-CH, de-DE. Další informace najdete v tématu <xref:System.Globalization.CultureInfo?displayProperty=fullName>.
 
  Atribut culture určuje jazykovou verzi použitou při převedení bloku výrazu na text.
 
@@ -58,7 +58,7 @@ debug="true"
 
  Platné hodnoty: `true, false`. Výchozí hodnota je false.
 
- Pokud je `debug` `true`atribut, soubor zprostředkujícího kódu bude obsahovat informace, které umožní ladicímu programu identifikovat přesnější pozici v šabloně, kde došlo k přerušení nebo výjimce.
+ Pokud je atribut `debug` `true`, soubor zprostředkujícího kódu bude obsahovat informace, které umožní ladicímu programu identifikovat přesnější pozici v šabloně, kde došlo k přerušení nebo výjimce.
 
  Pro šablony návrhu se soubor mezilehlého kódu zapíše do adresáře **% TEMP%** .
 
@@ -77,7 +77,7 @@ hostspecific="true"
 
  Protože typ této vlastnosti závisí na typu hostitele, je užitečný pouze při psaní textové šablony, která funguje pouze s konkrétním hostitelem. Vztahuje se na [šablony návrhu](../modeling/design-time-code-generation-by-using-t4-text-templates.md), ale ne na šablony v době [běhu](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
- Když `hostspecific` je `true` a `this.Host` používáte, můžete přetypovat na IServiceProvider a získat přístup [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] k funkcím. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Můžete také použít `Host.ResolvePath(filename)` k získání absolutní cesty souboru v projektu. Příklad:
+ Když `hostspecific` `true` a používáte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], můžete `this.Host` pro přístup k [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] funkcím přetypování na IServiceProvider. Pomocí `Host.ResolvePath(filename)` lze také získat absolutní cestu k souboru v projektu. Příklad:
 
 ```csharp
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -99,7 +99,7 @@ Content of myFile is:
 
 ```
 
- Použijete `inherits` -li atributy `hostspecific` a společně, zadejte Host = "trueFromBase" v odvozené třídě a host = "true" v základní třídě. Tím se zabrání dvojitá definice `Host` vlastnosti ve vygenerovaném kódu.
+ Použijete-li atributy `inherits` a `hostspecific` společně, zadejte Host = "trueFromBase" v odvozené třídě a host = "true" v základní třídě. Tím se zabrání dvojitá definice vlastnosti `Host` ve vygenerovaném kódu.
 
 ## <a name="language-attribute"></a>Atribut language
  Příklad: `language="VB"`
@@ -133,9 +133,9 @@ Squares of numbers:
 ### <a name="inheritance-in-a-run-time-preprocessed-text-template"></a>Dědičnost v textových šablonách běhu (předzpracovaných)
  Dědičnost lze použít mezi textovými šablonami běhu k vytvoření základní šablony, která má několik odvozených variant. Šablony modulu runtime jsou ty, které mají vlastnost **vlastní nástroj** nastavenou na **TextTemplatingFilePreprocessor**. Šablona běhu generuje kód, který lze v aplikaci volat pro vytvoření textu definovaného v šabloně. Další informace najdete v tématu [generování textu v době běhu s textovými šablonami T4](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
- Pokud nezadáte `inherits` atribut, základní třída a odvozená třída budou vygenerovány z textové šablony. Zadáte-li `inherits` atribut, je vygenerována pouze odvozená třída. Základní třídu můžete napsat ručně, ale musí poskytovat metody, které jsou používány odvozenou třídou.
+ Pokud nezadáte atribut `inherits`, základní třída a odvozená třída budou vygenerovány z textové šablony. Zadáte-li atribut `inherits`, je vygenerována pouze odvozená třída. Základní třídu můžete napsat ručně, ale musí poskytovat metody, které jsou používány odvozenou třídou.
 
- Obvykleji se jako základní třída určuje jiná předzpracovaná šablona. Základní šablona poskytuje běžné bloky textu, které mohou být proloženy textem z odvozených šablon. Můžete použít bloky `<#+ ... #>` funkcí třídy k definování metod, které obsahují textové fragmenty. Do základní šablony lze například umístit rámec výstupního textu a poskytnout tak virtuální metody, které lze v odvozených třídách přepsat:
+ Obvykleji se jako základní třída určuje jiná předzpracovaná šablona. Základní šablona poskytuje běžné bloky textu, které mohou být proloženy textem z odvozených šablon. Můžete použít bloky funkcí třídy `<#+ ... #>` k definování metod, které obsahují textové fragmenty. Do základní šablony lze například umístit rámec výstupního textu a poskytnout tak virtuální metody, které lze v odvozených třídách přepsat:
 
  Textová šablona běhu (předzpracovaná) BaseTemplate.tt:
 
@@ -204,12 +204,12 @@ This is the common footer.
  Jako základní třídu lze také použít běžnou ručně psanou třídu. Základní třída musí poskytovat metody používané v odvozené třídě.
 
 > [!WARNING]
-> Použijete `inherits` -li atributy `hostspecific` a společně, zadejte hostspecific = "trueFromBase" v odvozené třídě a host = "true" v základní třídě. Tím se zabrání dvojitá definice `Host` vlastnosti ve vygenerovaném kódu.
+> Použijete-li atributy `inherits` a `hostspecific` společně, zadejte hostspecific = "trueFromBase" v odvozené třídě a host = "true" v základní třídě. Tím se zabrání dvojitá definice vlastnosti `Host` ve vygenerovaném kódu.
 
 ### <a name="inheritance-in-a-design-time-text-template"></a>Dědičnost v textové šabloně návrhu
- Textová šablona v době návrhu je soubor, pro který je **vlastní nástroj** nastaven na **hodnotu TextTemplatingFileGenerator**. Šablona generuje výstupní soubor kódu nebo textu, který tvoří součást [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu. Při vygenerování výstupního souboru je šablona nejdříve přeložena do souboru programového mezikódu, který není obvykle vidět. `inherits` Atribut určuje základní třídu pro tento zprostředkující kód.
+ Textová šablona v době návrhu je soubor, pro který je **vlastní nástroj** nastaven na **hodnotu TextTemplatingFileGenerator**. Šablona generuje výstupní soubor kódu nebo textu, který tvoří součást projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Při vygenerování výstupního souboru je šablona nejdříve přeložena do souboru programového mezikódu, který není obvykle vidět. Atribut `inherits` určuje základní třídu pro tento zprostředkující kód.
 
- Pro textovou šablonu návrhu můžete zadat libovolnou základní třídu, která je odvozena z <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName>. `<#@assembly#>` Použijte direktivu pro načtení sestavení nebo projektu, který obsahuje základní třídu.
+ Pro textovou šablonu návrhu můžete zadat libovolnou základní třídu, která je odvozena od <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName>. Použijte direktivu `<#@assembly#>` pro načtení sestavení nebo projektu, který obsahuje základní třídu.
 
  Další informace najdete v [blogu Gareth Novák v tématu "dědičnost v textových šablonách"](http://go.microsoft.com/fwlink/?LinkId=208373).
 
@@ -231,4 +231,4 @@ This is the common footer.
 
  `internal`
 
- V textové šabloně běhu se tímto nastavuje atribut visibility vygenerované třídy. Ve výchozím nastavení je třída součástí veřejného rozhraní API vašeho kódu, ale `visibility="internal"` nastavením je možné zajistit, že pouze váš kód může použít třídu pro generování textu.
+ V textové šabloně běhu se tímto nastavuje atribut visibility vygenerované třídy. Ve výchozím nastavení je třída součástí veřejného rozhraní API vašeho kódu, ale nastavením `visibility="internal"` můžete zajistit, že pouze váš kód může použít třídu pro generování textu.

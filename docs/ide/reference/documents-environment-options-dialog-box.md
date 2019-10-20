@@ -26,21 +26,21 @@ helpviewer_keywords:
 - warnings, files changed
 - Solution Explorer, displaying files in
 ms.assetid: 4e3ccf1b-cd68-4db6-9470-710c911b47fc
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a09036e0c0f83d262760598dd02e6cf6e8cdd38e
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: ff1b5e83d9aaca0181699e3cc7effcc973ef2349
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606073"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661633"
 ---
-# <a name="options-dialog-box-environment--documents"></a>Dialogové okno Možnosti: Dokumenty \> prostředí
+# <a name="options-dialog-box-environment--documents"></a>Dialogové okno Možnosti: \> dokumentů prostředí
 
-Pomocí této stránky dialogového okna **Možnosti** můžete řídit zobrazení dokumentů v integrovaném vývojovém prostředí (IDE) a spravovat externí změny dokumentů a souborů. K tomuto dialogovému oknu se dostanete tak, že v **nabídce nástroje** kliknete na **Možnosti** a pak vyberete**dokumenty** **prostředí** > .
+Pomocí této stránky dialogového okna **Možnosti** můžete řídit zobrazení dokumentů v integrovaném vývojovém prostředí (IDE) a spravovat externí změny dokumentů a souborů. K tomuto dialogovému oknu se dostanete tak, že v nabídce **nástroje** kliknete na **Možnosti** a pak vyberete **prostředí**  > **dokumenty**.
 
 **Rozpoznat, kdy se soubor změnil mimo prostředí**
 
@@ -48,7 +48,7 @@ Pokud je vybrána tato možnost, zpráva okamžitě upozorní vás na změny ote
 
 **Znovu načíst změněné soubory, pokud neexistují neuložené změny**
 
-Když zjistíte, **že se soubor změnil mimo zvolené prostředí** a když se otevřený soubor v integrovaném vývojovém prostředí změní mimo IDE, ve výchozím nastavení se vygeneruje varovná zpráva. Pokud je tato možnost povolená, nezobrazí se žádné upozornění a dokument se znovu načte v integrovaném vývojovém prostředí, aby se vybraly externí změny.
+Když **zjistíte, že se soubor změnil mimo zvolené prostředí** a když se otevřený soubor v integrovaném vývojovém prostředí změní mimo IDE, ve výchozím nastavení se vygeneruje varovná zpráva. Pokud je tato možnost povolená, nezobrazí se žádné upozornění a dokument se znovu načte v integrovaném vývojovém prostředí, aby se vybraly externí změny.
 
 **Povolí úpravy souborů jen pro čtení; Zobrazit upozornění při pokusu o uložení**
 

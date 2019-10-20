@@ -4,17 +4,17 @@ titleSuffix: Blend for Visual Studio
 ms.date: 07/31/2019
 ms.topic: conceptual
 ms.assetid: d5378c59-e2e5-49f0-91f1-aa82d984a33c
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4503209db5ed405e77c706629e68efb22bee5842
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 6cd722e6b8690ef5ff059b69db1fbc467eec7ca3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450760"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650933"
 ---
 # <a name="draw-shapes-and-paths"></a>Kreslení tvarů a cest
 
@@ -88,7 +88,7 @@ Pomocí nástroje **Výběr** vyberte cestu. Pomocí nástroje **pero** kliknět
 
 Chcete-li upravit tvar stejným způsobem, jakým jste změnili cestu, převeďte tvar na cestu. Vyberte tvar a pak vyberte **formát** > **cesta** > **převést na cestu**.
 
-**Podívejte se na krátké video:** @no__t 1Configure nainstalované funkce @ no__t-2 [práce s cestami: převod tvaru na cestu](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147).
+**Podívejte se na krátké video:** ![Configure nainstalované funkce ](../designers/media/bldadminconsoleinitialconfigicon.png) [práci s cestami: převod tvaru na cestu](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147).
 
 > [!NOTE]
 > **Převést na cestu** není aktuálně k dispozici pro aplikace pro UWP, které mají minimálně `TargetPlatformVersion` 10.0.16299.0 nebo novější.
@@ -105,7 +105,7 @@ Cesty a tvary můžete zkombinovat do jedné cesty.
 |![Toho](../designers/media/b1_2.png)|Toho|![Vyloučit překryv](../designers/media/b1_5.png)|Vyloučit překryv|
 |![Rozdělovací](../designers/media/b1_3.png)|Rozdělovací|![Odečten](../designers/media/b1_6.png)|Odečten|
 
-**Podívejte se na krátké video:** @no__t 1Configure nainstalované funkce @ no__t-2 [práce s cestami: kombinování cest](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195).
+**Podívejte se na krátké video:** ![Configure nainstalované funkce ](../designers/media/bldadminconsoleinitialconfigicon.png) [práci s cestami: kombinování cest](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195).
 
 ## <a name="create-a-compound-path"></a>Vytvořit složenou cestu
 
@@ -115,7 +115,7 @@ Složenou cestu můžete kdykoli po vytvoření rozdělit do všech časových t
 
 ![Rozdělit složenou cestu](../designers/media/2157a8aa-d9a7-4de4-8de5-b10d28f08a84.png)
 
-**Podívejte se na krátké video:** @no__t 1Configure nainstalované funkce @ no__t-2 [práce s cestami: Vytvořte složenou cestu](https://www.youtube.com/watch?v=Io5bC0-nH6Q).
+**Podívejte se na krátké video:** ![Configure nainstalované funkce ](../designers/media/bldadminconsoleinitialconfigicon.png) [práci s cestami: vytvořit složenou cestu](https://www.youtube.com/watch?v=Io5bC0-nH6Q).
 
 ## <a name="create-a-clipping-path"></a>Vytvořit ořezovou cestu
 
@@ -123,4 +123,4 @@ Ořezová cesta je cesta nebo tvar, který je použit na jiný objekt, skrýván
 
 ![Ořezová cesta](../designers/media/22471e98-a841-4f39-a3ef-36090cf5a625.png)
 
-**Podívejte se na krátké video:** @no__t 1Configure nainstalované funkce @ no__t-2 [práce s cestami: vytvořte ořezovou cestu](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232).
+**Podívejte se na krátké video:** ![Configure nainstalované funkce ](../designers/media/bldadminconsoleinitialconfigicon.png) [práci s cestami: vytvořit ořezovou cestu](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232).

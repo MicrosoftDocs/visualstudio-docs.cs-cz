@@ -1,51 +1,44 @@
 ---
-title: Dialogové okno schémata XML | Dokumentace Microsoftu
+title: Dialogové okno schémat XML | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 0271fa26-2205-49bd-96e0-ae1441571808
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 82247c2510d64f712cc4b703154ea16a4bb7e7e1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d637cb3c25772685d5a782eb74bf94878ded36c2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68150654"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669425"
 ---
 # <a name="xml-schemas-dialog-box"></a>Dialogové okno Schémata XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Schémat XML** se používá dialogové okno pro výběr které schématu definice jazyk (XSD) schématu XML pro přidružení k dokumentu XML. Můžete vybrat schéma z mezipaměti schémat nebo zadejte schéma, které se nenachází v mezipaměti. Vybrané schémata jsou považovány za součást této sadě schémat. Sadě schémat se používá technologie IntelliSense a také ověření dokumentu XML.  
-  
- Můžete přistupovat **schémat XML** dialogové okno kliknutím **schémata** tlačítka v okně Vlastnosti dokumentu, nebo výběrem **schémata** z **XML** nabídky.  
-  
-## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
- **Použití**  
- Vyberte, jak má být použita schématu XML.  
-  
-- **Automatické**. Toto schéma není používán aktuální dokument, ale je k dispozici pro automatické přidružení. Pokud dokument XML deklaruje obor názvů, který odpovídá `targetNamespace` tohoto schématu schématu bude automaticky přiřazen a je zahrnuté v sadě schémat.  
-  
-- **Použít tohle schéma**. Toto schéma používá aktuální dokument. Uživatel má explicitně požadována, že kliknete na tomto sloupci používat toto schéma nebo schématu byl automaticky k podle odpovídající `targetNamespace`.  
-  
-- **Nepoužívat vybraná schémata**. Toto schéma není používán aktuální dokument i v případě schématu nemá odpovídající `targetNamespace`. Toto nastavení může být užitečné při řešení konfliktů, pokud existuje více než jedna verze stejného schématu v mezipaměti schémat nebo řešení.  
-  
-  **Target Namespace**  
-  Zobrazí související s XML schématu cílový obor názvů.  
-  
-  **Název souboru**  
-  Zobrazuje název souboru schématu XML.  
-  
-  **Add**  
-  Otevře **otevřít schéma XSD** dialogové okno, které vám umožní vybrat další schémata pro přidání do sady schémat. Při přidávání schématu do schématu nastavit **použití** nastavena na hodnotu sloupce **použít tohle schéma**.  
-  
-  **odebrat**  
-  Odebere aktuálně vybrané schéma v sadě schémat. Tato operace odebere schéma z mezipaměti schémat v paměti, ale ne ze systému souborů.  
-  
-## <a name="see-also"></a>Viz také  
- [Součásti editoru XML](../xml-tools/xml-editor-components.md)   
- [Postupy: Výběr schémat XML pro použití](../xml-tools/how-to-select-the-xml-schemas-to-use.md)   
- [Mezipaměť schémat](../xml-tools/schema-cache.md)
+Dialogové okno **schémata XML** slouží k výběru schémat XML Schema Definition Language (XSD), která mají být přidružena k dokumentu XML. Můžete vybrat schéma z mezipaměti schématu nebo zadat schéma, které se nenachází v mezipaměti. Vybraná schémata se považují za součást sady schémat. Sada schémat se používá pro technologii IntelliSense a také pro ověřování dokumentů XML.
+
+ Můžete otevřít dialogové okno **schémata XML** kliknutím na tlačítko **schémata** v okně Vlastnosti dokumentu, nebo výběrem **schémat** z nabídky **XML** .
+
+## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
+ **Použití** Vyberte způsob použití schématu XML.
+
+- **Automaticky**. Toto schéma není používáno aktuálním dokumentem, ale je k dispozici pro automatické přidružení. Pokud dokument XML deklaruje obor názvů, který odpovídá `targetNamespace` tohoto schématu, schéma bude automaticky přidruženo a je zahrnuto do sady schémat.
+
+- **Použijte toto schéma**. Toto schéma je používáno aktuálním dokumentem. Uživatel explicitně požadoval, aby se toto schéma používalo kliknutím na tento sloupec, nebo jestli se schéma automaticky přidružil na základě odpovídajícího `targetNamespace`.
+
+- **Nepoužívejte Vybraná schémata**. Toto schéma není používáno aktuálním dokumentem, a to ani v případě, že má schéma shodnou `targetNamespace`. Toto nastavení může být užitečné při řešení konfliktů, pokud existuje více než jedna verze stejného schématu v mezipaměti schématu nebo řešení.
+
+  **Cílový obor názvů** Zobrazí cílový obor názvů přidružený ke schématu XML.
+
+  **Název souboru** Zobrazí název souboru schématu XML.
+
+  **Přidat** Otevře dialogové okno **otevřít schéma XSD** , které umožňuje vybrat další schémata, která se mají přidat do sady schémat. Když do sady schémat přidáte schéma, hodnota **použít** sloupec je nastavená na **použít toto schéma**.
+
+  **Odebrat** Odebere aktuálně vybrané schéma ze sady schémat. Tím se odebere schéma z mezipaměti schématu v paměti, ale ne ze systému souborů.
+
+## <a name="see-also"></a>Viz také
+ [Komponenty editoru XML](../xml-tools/xml-editor-components.md) [Postupy: Výběr schémat XML pro použití](../xml-tools/how-to-select-the-xml-schemas-to-use.md) [mezipaměti schémat](../xml-tools/schema-cache.md)

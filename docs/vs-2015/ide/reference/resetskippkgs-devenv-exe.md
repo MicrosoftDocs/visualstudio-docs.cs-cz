@@ -1,5 +1,5 @@
 ---
-title: -ResetSkipPkgs (devenv.exe) | Dokumentace Microsoftu
+title: -ResetSkipPkgs (devenv. exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,36 +10,36 @@ helpviewer_keywords:
 - ResetSkipPkgs switch
 ms.assetid: 7ece64f9-cfa4-4b34-b0d9-1c338b9557b3
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 44e2cb42bf6bf8c1a61512713e9fc87cbe8f0901
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 207ceb92d84c2186aeec49c205d8d32f4d7aa969
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68182382"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665578"
 ---
 # <a name="resetskippkgs-devenvexe"></a>/ResetSkipPkgs (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Vymaže všechny možnosti, chcete-li přeskočit načítání přidané do balíků VSPackages uživatelé chtějí předejít problém rozšíření VSPackages a pak spustí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-Devenv /ResetSkipPkgs  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Přítomnost značky SkipLoading zakáže načítání VSPackage; vymazává se značka znovu povolí načítání sady VSPackage.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad odebere všechny značky SkipLoading.  
-  
-```  
-Devenv.exe /ResetSkipPkgs  
-```  
-  
-## <a name="see-also"></a>Viz také  
+Vymaže všechny možnosti, aby se přeskočilo načítání přidaných do VSPackage uživateli, kteří chtějí zabránit nasazování balíčků VSPackage, a pak se spustí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].
+
+## <a name="syntax"></a>Syntaxe
+
+```
+Devenv /ResetSkipPkgs
+```
+
+## <a name="remarks"></a>Poznámky
+ Přítomnost značky SkipLoading zakáže načítání VSPackage; vymazání značky znovu povolí načítání VSPackage.
+
+## <a name="example"></a>Příklad
+ Následující příklad zruší všechny značky SkipLoading.
+
+```
+Devenv.exe /ResetSkipPkgs
+```
+
+## <a name="see-also"></a>Viz také
  [Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md)

@@ -17,19 +17,19 @@ helpviewer_keywords:
 - tokens, and the Task List
 - Task List, comment tasks
 ms.assetid: 88327e04-fa3e-48db-995b-ad89e0dc4ed2
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 980b4ae40b1b7706b47bd884cc02dad14b743625
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: f2d0ba45ffea940ddb57a6da1e6df55e3da8867b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605685"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72644864"
 ---
-# <a name="options-dialog-box-environment--task-list"></a>Dialogové okno Možnosti: Seznam úkolů \> prostředí
+# <a name="options-dialog-box-environment--task-list"></a>Dialogové okno Možnosti: prostředí \> Seznam úkolů
 
 Tato stránka možností umožňuje přidávat, odstraňovat a měnit tokeny komentářů, které generují **seznam úkolů** připomenutí. Chcete-li zobrazit tato nastavení, vyberte **Možnosti** v nabídce **nástroje** , rozbalte složku **prostředí** a zvolte možnost **seznam úkolů**.
 
@@ -49,7 +49,7 @@ Nastaví prioritu úloh, které používají vybraný token (nízká, normální
 Název
 Sem zadejte řetězec tokenu a potom kliknutím na **Přidat** přidejte řetězec do seznamu tokenů.
 
-Add\
+Přidávání
 Tato možnost je povolená, když zadáte nový **název**. Kliknutím můžete přidat nový řetězec tokenu s použitím hodnot zadaných do polí **název** a **Priorita** .
 
 Dstranit

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Používání návrháře importů | Dokumentace Microsoftu'
+title: 'Postupy: použití návrháře importu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -8,39 +8,39 @@ f1_keywords:
 - System.Activities.Presentation.View.ImportDesigner.UI
 ms.assetid: 61328ab6-9b66-4e12-8630-22e30ee8c9d1
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f1c305129a7f46c8d1841f28d8084535ec7e4d9f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 47b5055cca0b00e7fdec49947df13b473a090aaf
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62931038"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659085"
 ---
-# <a name="how-to-use-the-imports-designer"></a>Postupy: Používání návrháře importů
-Návrhář importů umožňuje zadejte obory názvů pro typy, které budete používat ve výrazech. Podobně jako **importuje** nebo **pomocí** klíčových slov v jazyce Visual Basic .NET a C#, určení obory názvů v Návrhář importů umožňují jednoduše zadejte v výraz a ne plně kvalifikovaný název typu Název typu verze.  
-  
- Návrhář importů jsou reaguje na obě změny v uživatelském rozhraní a změny provedené při uložení pracovního postupu. Při uložení pracovního postupu, obory názvů může být automaticky přidán do návrháře importů. Patří mezi ně například:  
-  
-- Obory názvů pro všechny typy použité v deklaracích proměnných a argumentů.  
-  
-- Obory názvů pro všechny typy použité ve výrazech.  
-  
-- Všechny ostatní obory názvů potřebné pro serializaci pracovního postupu (například oborů názvů používaných ve vlastní aktivity v pracovním postupu).  
-  
-  Při uložení pracovní postup, můžete si všimnout, že některé obory názvů, který jste odstranili ručně jsou automaticky znovu přidat do návrháře importů z důvodu pravidla popsaná v předchozím seznamu.  
-  
-### <a name="to-add-a-namespace-to-the-list-of-imported-namespaces"></a>Přidání nového oboru názvů na seznam importovaných oborů názvů  
-  
-1. Otevření aplikace služeb pracovního postupu WCF, konzolová aplikace pracovního postupu nebo projekt knihovny aktivit v [!INCLUDE[vs2010](../includes/vs2010-md.md)] nebo aplikace pracovního postupu změněným hostováním.  
-  
-2. Klikněte na tlačítko **importy** v dolní části hlavního plátna. Zobrazí se Návrhář importů.  
-  
-3. Zadejte nebo vyberte z rozevíracího seznamu ovládacího prvku v horní části návrháře importů oboru názvů.  
-  
-     Při psaní se zobrazí seznam platný obory názvů, které odpovídají zadané znaky.  
-  
-4. Stisknutím klávesy **Enter** do seznamu přidat obor názvů.  
-  
-5. Pokud chcete odebrat obor názvů v seznamu, vyberte obor názvů a potom stiskněte klávesu **odstranit** kláves na klávesnici. Všimněte si, že obor názvů můžete být odstraněno pouze tehdy, pokud obor názvů je neplatný z nějakého důvodu, například pokud sestavení, který obsahuje obor názvů je již odkazuje na projekt.
+# <a name="how-to-use-the-imports-designer"></a>Postupy: použití návrháře Imports
+Návrhář importů umožňuje zadat obory názvů pro typy, které budete používat ve svých výrazech. Podobně jako v případě **importu** nebo **použití** klíčových slov v Visual Basic C#.NET a zadání obory názvů v Návrháři Imports umožňuje jednoduše zadat název typu ve výrazu místo plně kvalifikovaného názvu typu verze.
+
+ Návrhář importů reaguje na změny v uživatelském rozhraní a změny provedené při uložení pracovního postupu. Po uložení pracovního postupu lze obory názvů automaticky přidat do návrháře Imports. Patří mezi ně například:
+
+- Obory názvů pro všechny typy používané v deklaracích proměnných a argumentů
+
+- Obory názvů pro všechny typy používané ve výrazech
+
+- Všechny ostatní obory názvů potřebné k serializaci pracovního postupu (například obory názvů používané vlastními aktivitami, které jsou v pracovním postupu vyhozeny).
+
+  Když je pracovní postup uložen, můžete si všimnout, že některé obory názvů, které jste ručně odstranili, jsou automaticky znovu přidány do návrháře Imports z důvodu logiky popsané v předchozím seznamu.
+
+### <a name="to-add-a-namespace-to-the-list-of-imported-namespaces"></a>Přidání oboru názvů do seznamu importovaných oborů názvů
+
+1. Otevřete aplikaci služby pracovního postupu WCF, konzolovou aplikaci pracovního postupu nebo projektu knihovny aktivit v [!INCLUDE[vs2010](../includes/vs2010-md.md)] nebo v přehostované aplikaci pracovního postupu.
+
+2. V dolní části hlavního plátna klikněte na **Import** . Zobrazí se Návrhář importů.
+
+3. V horní části návrháře importů zadejte nebo vyberte obor názvů z ovládacího prvku rozevírací seznam.
+
+     Při psaní se zobrazí seznam platných oborů názvů, které odpovídají zadaným znakům.
+
+4. Pokud chcete přidat obor názvů do seznamu, stiskněte klávesu **ENTER** .
+
+5. Pokud chcete obor názvů odebrat ze seznamu, vyberte obor názvů a potom na klávesnici stiskněte klávesu **Delete** . Všimněte si, že obor názvů lze odstranit pouze v případě, že obor názvů je z jakéhokoli důvodu neplatný, například pokud sestavení, které obsahuje obor názvů, již není odkazováno v projektu.

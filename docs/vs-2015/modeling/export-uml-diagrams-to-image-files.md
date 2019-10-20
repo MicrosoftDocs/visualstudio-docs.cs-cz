@@ -6,20 +6,20 @@ ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: b29ce2a5-0ee3-4ab7-9aa3-13ca9c6b37a2
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 782d5da27898de7a332824e6fb07842710ab0656
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: c095291cd02d591d9e493601b598a63c1ccb6f5b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871843"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669658"
 ---
 # <a name="export-uml-diagrams-to-image-files"></a>Export diagramů UML do souborů obrázků
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Dokument UML můžete exportovat z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] aplikace do obrázku, který je pod ovládacím prvkem program. Můžete to třeba udělat jako součást automatického generování dokumentů.
+Dokument UML můžete exportovat z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] do obrázku, který je pod řízením programu. Můžete to třeba udělat jako součást automatického generování dokumentů.
 
  Pokud chcete dokument exportovat do obrázku ručně, můžete kopírovat a vkládat tvary z diagramu do jiných programů, jako je například Word. Dokumenty můžete také tisknout do formátu XPS. Další informace najdete v tématu [Export diagramů jako obrázků](../modeling/export-diagrams-as-images.md).
 
@@ -29,7 +29,7 @@ Dokument UML můžete exportovat z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 
 > [!NOTE]
 > Chcete-li, aby tento kód pracoval jako příkaz nabídky, je nutné jej začlenit do komponenty MEF. Další informace najdete v tématu [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
 
- Kód nejprve používá [IShape. GetObject](/previous-versions/ee789371(v=vs.140)) k získání <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> základní implementace. Tento typ obsahuje metodu <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.CreateBitmap%2A>.
+ Kód nejprve používá [IShape. GetObject](/previous-versions/ee789371(v=vs.140)) k získání <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> základní implementace. Tento typ má metodu <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.CreateBitmap%2A>.
 
 ```
 namespace SaveToImage
@@ -142,4 +142,4 @@ namespace SaveToImage
 ```
 
 ## <a name="see-also"></a>Viz také
- [Exportovat diagramy jako obrázky](../modeling/export-diagrams-as-images.md) [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md)
+ [Export diagramů jako obrázků](../modeling/export-diagrams-as-images.md) [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md)

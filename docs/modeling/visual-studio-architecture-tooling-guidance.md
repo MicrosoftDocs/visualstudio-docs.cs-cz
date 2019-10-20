@@ -2,20 +2,20 @@
 title: Pokyny k nástrojům architektury
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: da3b0d2829732b7b1765b082eb51b2b54832d1ef
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ef7ca51504ab1ac76003fb8452f43b0491100ea1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62906867"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663710"
 ---
 # <a name="visual-studio-architecture-tooling-guidance"></a>Pokyny k nástrojům architektury Visual Studio
 
-Tato nástrojů doprovodné materiály k architektuře je ke stažení balíčku, který obsahuje praktické rady týkající se používání nástrojů pro modelování v sadě Visual Studio 2010. Uvede široký přehled o tom, jak používat všechny nástroje modelování integrovaným způsobem a popisuje nejběžnější scénáře, ve kterých se tyto nástroje používají.
+Tento návod k nástrojům architektury je balíček ke stažení praktických pokynů k používání nástrojů pro modelování v aplikaci Visual Studio 2010. Prezentuje základní pohled na použití všech nástrojů modelování integrovaným způsobem a popisuje nejběžnější scénáře, ve kterých se nástroje používají.
 
-Obsah byl vytvořen Visual Studio ALM Rangers, speciální skupinu, která obsahuje členy z týmu produktu Visual Studio, Microsoft Services, Microsoft nejvíce Vážíme si toho odborníky (MVP) a vede k sadě Visual Studio Community.
+Obsah byl vytvořen v seALMch prostředích Visual Studio, což je speciální skupina, která má členy z produktového týmu sady Visual Studio, služeb Microsoftu, Microsoft nejvíc spolupracovníků (MVP) a vedoucího komunity sady Visual Studio.

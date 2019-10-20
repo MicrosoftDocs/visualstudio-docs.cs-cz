@@ -1,5 +1,5 @@
 ---
-title: Karta System.Activities, zvolit položky panelu nástrojů – dialogové okno | Dokumentace Microsoftu
+title: Karta System. Activities, dialogové okno zvolit položky sady nástrojů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -9,44 +9,40 @@ f1_keywords:
 - VS.CHOOSEITEMS.SYSTEM.ACTIVITIES COMPONENTS
 ms.assetid: cef390cd-eeda-42e6-9d2e-18c8325a4f06
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 29eb905a4852bf521ebee72a498b44edbdcef8df
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 95b2aa636b63523e06e3c931381e4506a0a03bac
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445403"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655173"
 ---
 # <a name="systemactivities-tab-choose-toolbox-items-dialog-box"></a>Karta System.Activities, dialogové okno Zvolit položky panelu nástrojů
-Této karty **zvolit položky nástrojů** dialogové okno zobrazí seznam [!INCLUDE[wf](../includes/wf-md.md)] aktivity, šablony a položky, které jsou k dispozici. Chcete-li zobrazit tento seznam, vyberte **zvolit položky nástrojů** z **nástroje** nabídky nebo kliknutím pravým tlačítkem myši **nástrojů** a vyberete **zvolit položky**zobrazíte **zvolit položky nástrojů** dialogové okno a pak vyberte jeho **System.Activities** kartu. Hned po spuštění obsahuje seznam aktivit pracovního postupu z System.Activities, System.ServiceModel.Activities a System.Activities.Core.Presentation sestavení; ale jenom poskytnuté systémem aktivity zobrazené a přidávají další sestavení zobrazí v **nástrojů** jsou ve výchozím nastavení zaškrtnuto. Naposledy přidané aktivity jsou automaticky zaškrtnuto a zobrazí se v **nástrojů** po kliknutí na **OK** v dialogovém okně. Navíc tyto položky se zobrazí v **nástrojů** pod novou kategorii, která odpovídá na obor názvů, ve které se nachází aktivity či položky nebo šablonu.  
-  
+Tato karta dialogového okna **zvolit položky sady nástrojů** zobrazí seznam [!INCLUDE[wf](../includes/wf-md.md)]ch aktivit, šablon a položek, které jsou vám k dispozici. Chcete-li zobrazit tento seznam, vyberte možnost **zvolit položky sady nástrojů** v nabídce **nástroje** nebo kliknutím pravým tlačítkem myši na **panel nástrojů** a výběrem možnosti **zvolit položky** zobrazíte dialogové okno **zvolit položky sady nástrojů** a potom vyberte jeho  **Karta System. Activities** . mimo pole obsahuje seznam aktivity pracovního postupu od sestavení System. Activities, System. ServiceModel. Activities a System. Activities. Core. Presentation. ve výchozím nastavení se ale kontrolují jenom zobrazené aktivity poskytnuté systémem a aktivity přidané prostřednictvím jiných sestavení, která jsou zobrazená v **sadě nástrojů** . Nedávno přidané aktivity jsou automaticky kontrolovány a zobrazeny v sadě **nástrojů** po kliknutí na tlačítko **OK** v dialogovém okně. Tyto položky se také zobrazí v sadě **nástrojů** v rámci nové kategorie, která odpovídá oboru názvů, kde se nachází aktivita/položka/šablona.
+
 > [!WARNING]
-> Pokud se pokusíte přidat sestavení, který neobsahuje žádné aktivity pracovního postupu, se zobrazí dialogové okno chyby, který vysvětluje, že sestavení neobsahuje žádné aktivity.  
-  
- Toto dialogové okno je nezávislý na projekt a proto **System.Activities** kartu nadále zobrazí v samostatných XAML nebo typu projekt pracovního postupu.  
-  
- Filtrování se provádí na každé kartě. To znamená, že není možné přidat aktivit pracovních postupů prostřednictvím **součásti .NET** kartu. Mají být přidány prostřednictvím **System.Activities** kartě samotný.  
-  
- Můžete zrušit zaškrtnutí všech položek, které nechcete a podívejte se **nástrojů** z tohoto dialogového okna kartu, nebo Alternativně můžete k tomu použít **odstranit** možnost místní nabídky v **nástrojů** a zrušením odkazu na sestavení nedojde k odstranění položky z **nástrojů**.  
-  
- Vytvoření instance aktivity, přetahováním myší v Návrháři přidá sestavení, který obsahuje položku do seznamu odkazovaných sestavení automaticky. Také pokud aktivity odkazuje na sestavení C, nepřidá C do seznamu odkazovaných sestavení. Sestavení C musí být v mezipaměti GAC nebo do stejného adresáře jako aktivita B. V případě samostatné sestavení musí být v GAC nebo cest test paměti VS. Teprve pak lze je přetáhnout myší aktivity na plochu návrháře pracovního postupu.  
-  
- **Panel nástrojů** nastavení se ukládají ve výchozím nastavení jako uživatelské možnosti, proto příště, když otevřete **nástrojů**, zobrazí vaše vlastní seznam aktivit pracovního postupu. Jeden vedlejším účinkem této je, že pokud jste přidali položky konkrétní doménu k **nástrojů** prostřednictvím **zvolit položky nástrojů** dialogovém okně můžete i nadále vidět tyto položky při práci Konzolová aplikace pracovního postupu i. Pokud nechcete zobrazit, odstranit je pomocí místní nabídky nebo zrušte zaškrtnutí políčka je **zvolit položky nástrojů** dialogovému oknu, protože jste si poznamenali dříve.  
-  
- Sloupce v tomto dialogovém obsahují následující informace:  
-  
- Název  
- Obsahuje seznam aktivit pracovního postupu, které jsou aktuálně registrované na místním počítači.  
-  
- Obor názvů  
- Zobrazuje hierarchii knihovna tříd rozhraní .NET Framework obor názvů, který definuje strukturu aktivity.  
-  
- Název sestavení  
- Zobrazí název a verze sestavení rozhraní .NET Framework, který obsahuje aktivitu.  
-  
- Adresář  
- Zobrazí umístění sestavení rozhraní .NET Framework, která obsahuje aktivity pracovního postupu. Je výchozím umístěním pro všechna sestavení do globální mezipaměti sestavení.  
-  
- Součástí uvedené seřadit, vyberte libovolné záhlaví sloupce.
+> Pokud se pokusíte přidat sestavení, které neobsahuje žádné aktivity pracovního postupu, zobrazí se chybové dialogové okno s vysvětlením, že sestavení neobsahuje žádné aktivity.
+
+ Toto dialogové okno je projekt nezávislá, takže se na kartě **System. Activities** i nadále zobrazují samostatné XAML nebo typ projektu bez pracovního postupu.
+
+ Filtrování se provádí na každé kartě. To znamená, že není možné přidat aktivity pracovního postupu prostřednictvím karty **součásti .NET** . Musí být přidány prostřednictvím samotné karty **System. Activities** .
+
+ Z této karty dialogového okna můžete zrušit kontrolu všech položek, které nechcete zobrazit v sadě **nástrojů** , nebo můžete použít možnost **Odstranit** kontextovou nabídku v **sadě nástrojů** a zrušit odkazování sestavení neodebírat položku z  **Sada nástrojů**.
+
+ Vytvoření instance aktivity přetáhnutím a přetažením v Návrháři přidáte sestavení, které obsahuje položku na seznam odkazovaných sestavení automaticky. Také Pokud aktivita odkazuje na sestavení C, nepřidá C do odkazovaného seznamu sestavení. Sestavení C musí být v globální mezipaměti sestavení (GAC) nebo ve stejném adresáři jako aktivita B. V samostatném případě musí být sestavení v globální mezipaměti sestavení (GAC) nebo cesty testu VS. Jenom potom můžete aktivitu přetáhnout na plochu návrháře pracovního postupu.
+
+ Nastavení **sady nástrojů** se ve výchozím nastavení ukládají jako uživatelské možnosti, takže při příštím otevření **sady nástrojů**se zobrazí váš přizpůsobený seznam aktivit pracovních postupů. Jedním z nich je, že pokud jste přidali konkrétní položky domény do **sady nástrojů** prostřednictvím dialogového okna **Vybrat položky sady nástrojů** , pořád se tyto položky zobrazí, i když pracujete v konzolové aplikaci pracovního postupu. Pokud je nechcete zobrazit, odstraňte je pomocí místní nabídky nebo zrušte jejich výběr pomocí dialogového okna **zvolit položky sady nástrojů** , jak bylo uvedeno dříve.
+
+ Sloupce v tomto dialogovém okně obsahují následující informace:
+
+ Název obsahuje seznam názvů aktivit pracovních postupů aktuálně zaregistrovaných na místním počítači.
+
+ Obor názvů zobrazuje hierarchii oboru názvů .NET Framework knihovny tříd, který definuje strukturu aktivity.
+
+ Název sestavení zobrazuje název a verzi .NET Framework sestavení, které obsahuje aktivitu.
+
+ Adresář zobrazuje umístění sestavení .NET Framework, které obsahuje aktivity pracovního postupu. Výchozím umístěním pro všechna sestavení je globální mezipaměť sestavení (GAC).
+
+ Pokud chcete uvedené součásti seřadit, vyberte libovolné záhlaví sloupce.

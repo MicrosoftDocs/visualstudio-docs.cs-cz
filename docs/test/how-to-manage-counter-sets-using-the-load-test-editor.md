@@ -10,58 +10,58 @@ helpviewer_keywords:
 - counter sets
 - load tests, counter sets
 ms.assetid: 64315c2f-a0b2-4378-be16-0774b99beef5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4ca910038e35ee65e6d97999f08013f398eaec9e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f781580f28c3b829483180d559851bc9730fa18e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62950101"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653502"
 ---
-# <a name="how-to-manage-counter-sets-using-the-load-test-editor"></a>Postupy: Správa sad čítačů pomocí editoru zátěžových testů
+# <a name="how-to-manage-counter-sets-using-the-load-test-editor"></a>Postupy: Správa sad čítačů pomocí Editor zátěžového testu
 
-Když vytvoříte zátěžový test pomocí **nového Průvodce zátěžovým testem**, můžete přidat počáteční sadu čítačů. Ty nabízejí sadu předdefinovaných sad čítačů pro zátěžové testy.
+Při vytváření zátěžového testu s **novým Průvodce zátěžovým testem**přidáte počáteční sadu čítačů. Ty nabízejí sadu předdefinovaných sad čítačů pro zátěžové testy.
 
 > [!NOTE]
-> Pokud jsou zátěžové testy distribuovány napříč vzdálenými počítači, jsou čítače kontroléru a agentů namapovány na sady čítačů kontrolérů a agentů. Další informace o tom, aby používaly vzdálené počítače v zátěžovém testu naleznete v tématu [testovací kontrolery a testovací agenty](configure-test-agents-and-controllers-for-load-tests.md).
+> Pokud jsou zátěžové testy distribuovány napříč vzdálenými počítači, jsou čítače kontroléru a agentů namapovány na sady čítačů kontrolérů a agentů. Další informace o použití vzdálených počítačů v rámci zátěžového testu naleznete v tématu [řadiče testů a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md).
 
-Správa sad čítačů zahrnuje sadu počítačů, které chcete shromažďovat data o výkonu z výběru a přiřazování sadu čítačů, které mají být shromažďovány z jednotlivých počítačů. Můžete spravovat čítače v **editoru zátěžových testů**.
+Správa sad čítačů zahrnuje výběr sady počítačů, ze kterých chcete shromažďovat údaje o výkonu, a přiřazení sady čítačů pro shromažďování dat z jednotlivých počítačů. Čítače můžete spravovat v **Editor zátěžového testu**.
 
 ![Správa sad čítačů](../test/media/loadtestmanagecountersets.png)
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="to-manage-counter-sets"></a>Spravovat sady čítačů
+## <a name="to-manage-counter-sets"></a>Správa sad čítačů
 
 1. Otevřete zátěžový test.
 
-2. Zvolte **spravovat sady čítačů** tlačítko.
+2. Klikněte na tlačítko **Spravovat sady čítačů** .
 
-     – nebo –
+     ani
 
-     Klikněte pravým tlačítkem na **sady čítačů** složky v zátěžového testování stromu a zvolte **spravovat sady čítačů**.
+     Klikněte pravým tlačítkem na složku **sady čítačů** ve stromu zátěžového testu a vyberte možnost **Spravovat sady čítačů**.
 
-     **Spravovat sady čítačů** se zobrazí dialogové okno.
+     Zobrazí se dialogové okno **Spravovat sady čítačů** .
 
-3. (Volitelné) V **vybrané počítače a sady čítačů budou přidány pod následující nastavení spuštění** seznamu, vyberte jiný parametr spuštění.
+3. Volitelné V **části vybrané počítače a sady čítačů budou přidány do následujících polí seznam parametrů spuštění** vyberte jiné nastavení spuštění.
 
     > [!NOTE]
-    > To platí, pouze pokud máte více než jeden parametr spuštění zátěžového testu.
+    > To platí pouze v případě, že máte více než jedno nastavení spuštění v rámci zátěžového testu.
 
-4. (Volitelné) Zvolte **přidat počítač** k přidání nového počítače do monitorování. Zobrazí se výzva k zadání názvu. Zadejte název počítače a zobrazí se uzly pod novou položku. Například **ASP.NET**, **IIS**, **SQL**a další. Zaškrtněte políčka u uzlů, které chcete vybrat. Nové čítače joinkind **náhled vybrané možnosti** podokně.
+4. Volitelné Zvolením možnosti **Přidat počítač** přidejte nový počítač, který chcete monitorovat. Zobrazí se výzva k zadání názvu. Zadejte název počítače a zobrazí se uzly pod novou položkou. Například **ASP.NET**, **IIS**, **SQL**a další. Zaškrtněte políčka před uzly, které chcete vybrat. Nové čítače se zobrazí v podokně **výběr ve verzi Preview** .
 
-5. (Volitelné) V **značky počítače** textového pole zadejte značku pro přiřazení k počítači. Například "TestMachine12 v lab3."
+5. Volitelné Do textového pole **značky počítače** zadejte značku, kterou chcete přidružit k počítači. Například "TestMachine12 in lab3".
 
-     Značky počítače umožňují určit počítač s názvem snadno rozpoznat.
+     Značky počítače umožňují identifikovat počítač se snadno rozpoznatelným názvem.
 
-     Značky jsou zobrazeny v **mapování sady čítačů** uzel ve stromu v editoru zátěžového testu. Důležitější, značky se zobrazí v sestavách aplikace Excel, které pomáhají identifikovat účastníky jakou roli má počítač v zátěžovém testu. Například "Web Server1 v lab2" nebo "SQL Server2 Phoenixu". Další informace najdete v tématu [sestavy zátěžové testy s výsledky pro porovnávání testů a analýzu trendů](../test/compare-load-test-results.md).
+     Značky se zobrazí v uzlu **mapování sady čítačů** ve stromové struktuře v Editor zátěžového testu. Důležitější je, že značky se zobrazí v sestavách aplikace Excel, které účastníkům pomohou určit, jakou roli má počítač v rámci zátěžového testu. Například "Web Server1 v lab2" nebo "SQL Server2" v Phoenixu pobočky ". Další informace naleznete v tématu [výsledky testů zatížení sestav pro porovnání testů nebo analýzy trendů](../test/compare-load-test-results.md).
 
-6. Zvolte **OK**.
+6. Klikněte na **tlačítko OK**.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Kontrolery testů a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md)
-- [Určení sad čítačů a mezních pravidel pro počítače v rámci zátěžového testu](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
-- [Konfigurace parametrů spuštění zátěžového testu](../test/configure-load-test-run-settings.md)
+- [Určení sad čítačů a mezních pravidel pro počítače v zátěžovém testu](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
+- [Konfigurovat nastavení běhu zátěžového testu](../test/configure-load-test-run-settings.md)

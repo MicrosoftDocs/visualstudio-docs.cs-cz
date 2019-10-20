@@ -1,68 +1,68 @@
 ---
-title: Generovat C# Equals a GetHashCode – metoda přepsání
+title: Vygenerovat C# přepsání metod Equals a GetHashCode
 ms.date: 01/26/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: bbe04ac7a28666f32aa1da3bebe5ed50f96fb900
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e70593bc04b576237a7f9f0f51ae6c3d37e40a88
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62790549"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660029"
 ---
-# <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>Generování přepisů metod Equals a GetHashCode v sadě Visual Studio
+# <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>Generování přepisů metod Equals a GetHashCode v aplikaci Visual Studio
 
-Tato generace kód platí pro:
+Tato generace kódu platí pro:
 
 - C#
 
-**Co:** Umožňuje generovat **rovná** a **GetHashCode** metody.
+**Co:** Umožňuje generovat metody **Equals** a **GetHashCode** .
 
-**Kdy:** Tato přepsání generovat, když máte typ, který by měly být porovnány pomocí jednoho nebo více polí, ne podle umístění objektu v paměti.
+**Když:** Vygenerujte tato přepsání, pokud máte typ, který by měl být porovnán jedním nebo více poli namísto umístění objektu v paměti.
 
 **Proč:**
 
-- Při implementaci typu hodnoty, měli byste zvážit přepsání **rovná** metoda získat vyšší výkon nad výchozí implementace metody Equals na typ hodnoty.
+- Pokud implementujete typ hodnoty, měli byste zvážit přepsání metody **Equals** , aby se zvýšil výkon při výchozí implementaci metody Equals na ValueType.
 
-- Pokud implementujete typem odkazu, měli byste zvážit přepsání **rovná** metodu, pokud váš typ vypadá jako základní typ, jako je například bod, řetězec, BigNumber a tak dále.
+- Pokud implementujete typ odkazu, měli byste zvážit přepsání metody **Equals** , pokud váš typ vypadá jako základní typ, například Point, String, BigNumber a tak dále.
 
-- Přepsat **GetHashCode** metoda umožňující typu fungovat správně v zatřiďovací tabulce. Přečtěte si informace o [operátory rovnosti](/dotnet/standard/design-guidelines/equality-operators).
+- Přepsat metodu **GetHashCode** a umožnit tak správné fungování typu v zatřiďovací tabulce. Přečtěte si další pokyny pro [operátory rovnosti](/dotnet/standard/design-guidelines/equality-operators).
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor někam na řádek vaše deklaraci typu.
+1. Umístěte kurzor někam na řádek deklarace typu.
 
    ![Zvýrazněný kód](media/overrides-highlight-cs.png)
 
    > [!TIP]
-   > Proveďte není dvojitým kliknutím vyberte název typu, nebo možnost nabídky nebude k dispozici. Právě umístěte kurzor někam na řádek.
+   > Neklepejte na možnost vybrat název typu, jinak nebude k dispozici možnost nabídky. Stačí umístit kurzor někam na řádek.
 
 1. Dále proveďte jednu z následujících akcí:
 
-   - Stisknutím klávesy **Ctrl**+ **.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
+   - Stiskněte klávesu **Ctrl** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
 
-   - Klikněte pravým tlačítkem a vyberte **rychlé akce a Refaktoringy** nabídky.
+   - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
 
-   - Klikněte na ![šroubovák](../media/screwdriver-icon.png) ikona, která se zobrazí na levém okraji.
+   - Klikněte na ![screwdriver](../media/screwdriver-icon.png) ikona, která se zobrazí na levém okraji
 
-   ![Generovat přepsání ve verzi preview](media/overrides-preview-cs.png)
+   ![Vygenerovat náhled přepsání](media/overrides-preview-cs.png)
 
-1. Vyberte **generovat Equals(objekt)** nebo **generovat Equals a GetHashCode** z rozevírací nabídky.
+1. V rozevírací nabídce vyberte **Generovat Equals (objekt)** nebo **Generovat Equals a GetHashCode** .
 
-1. V **vyberte členy, kteří** dialogovém okně vyberte členy, které chcete generovat metody:
+1. V dialogovém okně **Vybrat členy** vyberte členy, pro které chcete generovat metody:
 
-    ![Generovat přepsání dialogového okna](media/overrides-dialog-cs.png)
+    ![Dialogové okno generovat potlačení](media/overrides-dialog-cs.png)
 
     > [!TIP]
-    > Můžete také generovat operátory z tohoto dialogového okna pomocí zaškrtávacího políčka v dolní části dialogového okna.
+    > Pomocí zaškrtávacího políčka v dolní části dialogového okna můžete také zvolit generování operátorů z tohoto dialogového okna.
 
-   `Equals` a `GetHashCode` metody jsou generovány pomocí výchozí implementace.
+   Metody `Equals` a `GetHashCode` jsou generovány s výchozími implementacemi.
 
-   ![Generovat výsledek – metoda](media/overrides-result-cs.png)
+   ![Generovat výsledek metody](media/overrides-result-cs.png)
 
 ## <a name="see-also"></a>Viz také:
 

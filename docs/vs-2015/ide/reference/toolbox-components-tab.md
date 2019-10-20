@@ -1,5 +1,5 @@
 ---
-title: Panel nástrojů, karta součásti | Dokumentace Microsoftu
+title: Sada nástrojů, karta součásti | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -8,70 +8,53 @@ helpviewer_keywords:
 - Toolbox, Components tab
 ms.assetid: 332fafab-a763-4244-b388-15d1b5b5cc04
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 98955b3f9428126775ca6a58f19a12de416833c0
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: ce18767d95b3ac539737d78acbd2259dcda0a036
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65689496"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661571"
 ---
 # <a name="toolbox-components-tab"></a>Sada nástrojů, karta Součásti
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Zobrazí součásti můžete přidat do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] a [!INCLUDE[csprcs](../../includes/csprcs-md.md)] návrháře. Kromě [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] součásti, které jsou součástí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], například <xref:System.Messaging.MessageQueue> a <xref:System.Diagnostics.EventLog> součásti, můžete přidat vaše třetích stran nebo vlastních komponent na této kartě. Další informace najdete v tématu [jak: Manipulace s karty panelu nástrojů](https://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db).  
-  
- Zobrazené na této kartě **zobrazení** nabídce vyberte možnost **nástrojů**. V **nástrojů**, vyberte **součásti** kartu.  
-  
- **BackgroundWorker**  
- Vytvoří `System.ComponentModel.BackgroundWorker` instance komponenty, který může spouštět operace na oddělené, vyhrazené vlákno.  
-  
- **DirectoryEntry**  
- Vytvoří <xref:System.DirectoryServices.DirectoryEntry> instance komponenty, který zapouzdřuje uzel nebo objekt v hierarchii služby Active Directory a umožňuje pracovat s poskytovateli služeb Active Directory.  
-  
- **DirectorySearcher**  
- Vytvoří <xref:System.DirectoryServices.DirectorySearcher> instance komponenty, které můžete použít k provádění dotazů vůči Active Directory.  
-  
- **ErrorProvider**  
- Vytvoří `System.Windows.Forms.ErrorProvider` instance komponenty, který označuje pro koncového uživatele, že ovládací prvek na formuláři obsahuje chybu s ním spojená.  
-  
- **EventLog**  
- Vytvoří <xref:System.Diagnostics.EventLog> instance komponenty, které můžete použít k interakci se systémem a vlastní protokoly událostí, včetně zápisu události do protokolu a čtení dat protokolu. Další informace najdete v tématu [Úvod do protokolu událostí komponenty](https://msdn.microsoft.com/a2ba4f28-4b1a-435e-99ef-51b28e21f805).  
-  
- **FileSystemWatcher**  
- Vytvoří <xref:System.IO.FileSystemWatcher> instance komponenty, které můžete použít ke sledování se změní na jakékoli adresář nebo soubor, ke kterému máte přístup. Další informace najdete v tématu [jak: Konfigurace součásti FileSystemWatcher instancí](https://msdn.microsoft.com/2e628234-4951-4135-8a86-28b924070d50).  
-  
- **HelpProvider**  
- Vytvoří `System.Windows.Forms.HelpProvider` instance komponenty, která poskytuje místní nápovědu nebo nápovědu online pro ovládací prvky.  
-  
- **Ovládací prvek ImageList**  
- Vytvoří `System.Windows.Forms.ImageList` instance komponenty, který poskytuje metody pro správu kolekce `System.Drawing.Image` objekty.  
-  
- **MessageQueue**  
- Vytvoří <xref:System.Messaging.MessageQueue> instance komponenty, které vám umožní pracovat s fronty zpráv, včetně čtení zpráv ze zápisu zprávy do fronty, zpracování transakcí a provádění úloh správy fronty. Další informace najdete v tématu [pomocí součásti zasílání zpráv](https://msdn.microsoft.com/922dbac7-26f0-4e39-b666-ccfc184793d7).  
-  
- **PerformanceCounter**  
- Vytvoří <xref:System.Diagnostics.PerformanceCounter> instance komponenty, které vám umožní pracovat s čítače výkonu Windows, včetně vytváření nové kategorie a instance, čtení hodnot z čítačů a provádění výpočtů na data čítače. Další informace najdete v tématu [monitorování prahové hodnoty výkonu](https://msdn.microsoft.com/b8b44a55-31d0-4b45-9517-8c1b1e4fdc91).  
-  
- **Proces**  
- Vytvoří <xref:System.Diagnostics.Process> instance komponenty, která můžete použít k zastavení, spuštění a manipulaci s data související s procesy ve vašem systému. Další informace najdete v tématu [monitorování a Správa procesů Windows](https://msdn.microsoft.com/a86bd4c1-b92c-49a0-8f32-61d67837b45e).  
-  
- **SerialPort**  
- Vytvoří `System.IO.Ports.SerialPort` instance komponenty, která umožňuje synchronní a založený na událostech vstupně-výstupních operací, přístup kód pin a přerušení stavů a přístup k vlastnosti sériového portu ovladače.  
-  
- **ServiceController**  
- Vytvoří <xref:System.ServiceProcess.ServiceController> instance komponenty, které můžete použít k manipulaci s existujících služeb, včetně spouštění a zastavování služby a posílání příkazů do nich. Další informace najdete v tématu [sledování služby Windows](https://msdn.microsoft.com/4542ee3f-e052-4cb9-8726-58e9420de222).  
-  
- **Timer**  
- Vytvoří <xref:System.Windows.Forms.Timer> instance komponenty, které můžete použít k přidání funkcí založených na čase do vaší aplikace pro systém Windows. Další informace najdete v tématu [komponenty Timer](https://msdn.microsoft.com/library/6700e534-6382-43d5-98ed-14205435fff7).  
-  
+Zobrazí komponenty, které lze přidat do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] a [!INCLUDE[csprcs](../../includes/csprcs-md.md)] návrháři. Kromě součástí [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], které jsou součástí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], jako jsou <xref:System.Messaging.MessageQueue> a <xref:System.Diagnostics.EventLog>, můžete na tuto kartu přidat vlastní nebo jiné komponenty třetích stran. Další informace naleznete v tématu [How to: manipulace s kartami nástrojů](https://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db).
+
+ Chcete-li zobrazit tuto kartu, v nabídce **zobrazení** vyberte položku **Sada nástrojů**. V sadě **nástrojů**vyberte kartu **součásti** .
+
+ **BackgroundWorker** Vytvoří instanci komponenty `System.ComponentModel.BackgroundWorker`, která může spustit operaci na samostatném vyhrazeném vlákně.
+
+ Třída **DirectoryEntry** Vytvoří instanci <xref:System.DirectoryServices.DirectoryEntry> komponenty, která zapouzdřuje uzel nebo objekt v hierarchii služby Active Directory a dá se použít k interakci s poskytovateli služeb Active Directory.
+
+ **Rámci** Vytvoří instanci komponenty <xref:System.DirectoryServices.DirectorySearcher>, kterou můžete použít k provádění dotazů na službu Active Directory.
+
+ **ErrorProvider** Vytvoří instanci `System.Windows.Forms.ErrorProvider` komponenty, která indikuje koncovému uživateli, že k ovládacímu prvku na formuláři je přidružená chyba.
+
+ Protokol **událostí** Vytvoří instanci komponenty <xref:System.Diagnostics.EventLog>, kterou můžete použít k interakci se systémovými a vlastními protokoly událostí, včetně zápisu událostí do protokolu a čtení dat protokolu. Další informace najdete v tématu [Úvod do komponenty EventLog](https://msdn.microsoft.com/a2ba4f28-4b1a-435e-99ef-51b28e21f805).
+
+ **FileSystemWatcher** Vytvoří instanci komponenty <xref:System.IO.FileSystemWatcher>, kterou můžete použít k monitorování změn v jakémkoli adresáři nebo souboru, ke kterému máte přístup. Další informace naleznete v tématu [How to: Configure a instance Component Instances FileSystemWatcher](https://msdn.microsoft.com/2e628234-4951-4135-8a86-28b924070d50).
+
+ **HelpProvider –** Vytvoří instanci `System.Windows.Forms.HelpProvider` komponenty, která poskytuje místní nebo online nápovědu pro ovládací prvky.
+
+ Seznam **ImageList** Vytvoří instanci `System.Windows.Forms.ImageList` komponenty, která poskytuje metody pro správu kolekce objektů `System.Drawing.Image`.
+
+ **MessageQueue** Vytvoří instanci <xref:System.Messaging.MessageQueue> komponenty, kterou můžete použít k interakci s frontami zpráv, včetně čtení zpráv z front a zápisů do front, zpracování transakcí a provádění úloh správy fronty. Další informace najdete v tématu [použití součástí zasílání zpráv](https://msdn.microsoft.com/922dbac7-26f0-4e39-b666-ccfc184793d7).
+
+ **PerformanceCounter** Vytvoří instanci <xref:System.Diagnostics.PerformanceCounter> komponenty, kterou můžete použít k interakci s čítači výkonu systému Windows, včetně vytváření nových kategorií a instancí, čtení hodnot z čítačů a provádění výpočtů s daty čítače. Další informace najdete v tématu [monitorování mezních hodnot výkonu](https://msdn.microsoft.com/b8b44a55-31d0-4b45-9517-8c1b1e4fdc91).
+
+ **Zpracování** Vytvoří instanci <xref:System.Diagnostics.Process> komponenty, kterou můžete použít k zastavení, spuštění a manipulaci s daty přidruženými k procesům ve vašem systému. Další informace najdete v tématu [monitorování a správa procesů systému Windows](https://msdn.microsoft.com/a86bd4c1-b92c-49a0-8f32-61d67837b45e).
+
+ **Portu SerialPort** Vytvoří instanci `System.IO.Ports.SerialPort` komponenty, která poskytuje synchronní a vstupně-výstupní operace řízené událostmi, přístup k stavům PIN a přerušení a přístup k vlastnostem sériového ovladače.
+
+ **ServiceController** Vytvoří instanci <xref:System.ServiceProcess.ServiceController> komponenty, kterou můžete použít k manipulaci s existujícími službami, včetně spouštění a zastavování služeb a posílání příkazů do nich. Další informace najdete v tématu [monitorování služeb systému Windows](https://msdn.microsoft.com/4542ee3f-e052-4cb9-8726-58e9420de222).
+
+ **Časovač** Vytvoří instanci <xref:System.Windows.Forms.Timer> komponenty, kterou můžete použít k přidání časových funkcí do aplikací určených pro systém Windows. Další informace najdete v tématu [Komponenta Timer](https://msdn.microsoft.com/library/6700e534-6382-43d5-98ed-14205435fff7).
+
 > [!NOTE]
-> Existuje také systém založen <xref:System.Timers.Timer> , můžete přidat do **nástrojů** to <xref:System.Timers.Timer> je optimalizovaná pro serverové aplikace a Windows Forms <xref:System.Windows.Forms.Timer> je nejvhodnější pro použití v modelu Windows Forms.  
-  
-## <a name="see-also"></a>Viz také  
- [Programování pomocí komponent](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)   
- [Návody pro programování komponent](https://msdn.microsoft.com/library/373cacf7-479e-4b05-991c-5cb18824e913)   
- [Panel nástrojů](../../ide/reference/toolbox.md)   
- [Zvolte dialogové okno položky panelu nástrojů (Visual Studio)](https://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)
+> K dispozici je také systém <xref:System.Timers.Timer>, který lze přidat do **sady nástrojů** . Tato <xref:System.Timers.Timer> je optimalizována pro serverové aplikace a model Windows Forms <xref:System.Windows.Forms.Timer> je nejvhodnější pro použití na model Windows Forms.
+
+## <a name="see-also"></a>Viz také
+ [Programování pomocí](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3) [nástrojů](../../ide/reference/toolbox.md) průvodce [programováním](https://msdn.microsoft.com/library/373cacf7-479e-4b05-991c-5cb18824e913) pro součásti komponent [dialogové okno zvolit položky panelu nástrojů (Visual Studio)](https://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)

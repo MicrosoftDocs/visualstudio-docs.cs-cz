@@ -1,5 +1,5 @@
 ---
-title: Projekty a řešení – dialogové okno Možnosti | Dokumentace Microsoftu
+title: Projekty a řešení, dialogové okno Možnosti | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,59 +9,48 @@ helpviewer_keywords:
 - Options dialog box, Projects and Solutions
 ms.assetid: 2801f24e-a138-488a-ae3c-e1f99a678ac0
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2bdcfc2f6a4b7655a6f4f2e335310e938e5acfed
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 245b453a3020e79b924cb8058ff392bd59673402
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65701984"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662124"
 ---
 # <a name="projects-and-solutions-options-dialog-box"></a>Projekty a řešení – dialogové okno Možnosti
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Nastaví výchozí cestu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] složky projektu a určí výchozí chování **výstup** okně **seznamu úkolů**, a **Průzkumníka řešení** jako projekty jsou vyvíjeny a sestaven. Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na tlačítko **Nástroje / možnosti** rozbalte **projekty a řešení**a klikněte na tlačítko **Obecné**.  
-  
+Nastaví výchozí cestu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] složek projektu a určí výchozí chování okna **výstup** , **seznam úkolů**a **Průzkumník řešeníy** při vývoji a sestavení projektů. Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na tlačítko **Nástroje/možnosti** rozbalit **projekty a řešení**a klikněte na možnost **Obecné**.
+
 > [!NOTE]
-> Dostupné možnosti v dialogových oknech, názvy a umístění příkazů, které vidíte, mohou lišit od informací uvedených v nápovědě v závislosti na aktivních nastaveních nebo edici. Tato stránka nápovědy byl zapsán s **obecného vývojového nastavení** v úvahu. Chcete-li zobrazit nebo změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="settings"></a>Nastavení  
- **Umístění projektů**  
- Nastaví výchozí umístění, kde jsou vytvářeny nové projekty a řešení složky a adresáře. Dialogová okna několika také použít tak umístění, nastavte tuto možnost pro složku počáteční body. Například dialogové okno Otevřít projekt používá toto umístění pro projekty zástupce.  
-  
- **Umístění šablon projektů uživatele**  
- Nastaví výchozí umístění, která se používá **nový projekt** dialogové okno vytvořit seznam **šablony**. Další informace najdete v tématu [jak: Hledání a organizace šablon](../../ide/how-to-locate-and-organize-project-and-item-templates.md).  
-  
- **Umístění šablon položek uživatele**  
- Nastaví výchozí umístění, která se používá **přidat novou položku** dialogové okno vytvořit seznam **šablony**. Další informace najdete v tématu [jak: Hledání a organizace šablon](../../ide/how-to-locate-and-organize-project-and-item-templates.md).  
-  
- **Vždy zobrazit seznam chyb-li sestavení dokončí s chybami**  
- Otevře **seznam chyb** okně při dokončení sestavení, pouze v případě, že projekt se nepovedlo sestavit. Se zobrazí chyby, ke kterým dochází během procesu sestavení. Když toto políčko zaškrtnuto, stále dochází k chybám, ale okno se neotevře, po dokončení sestavení. Tato možnost je povolená ve výchozím nastavení.  
-  
- **Sledovat aktivní položku v Průzkumníku řešení**  
- Pokud je vybráno, **Průzkumníka řešení** automaticky otevře a aktivní položky je vybrána. Vybraná položka změny při práci s různé soubory v projektu nebo řešení nebo různé součásti v návrháři. Pokud tato možnost vybrána, výběr v **Průzkumníka řešení** nezmění automaticky. Tato možnost je povolená ve výchozím nastavení.  
-  
- **Zobrazit pokročilou konfiguraci sestavení**  
- Při výběru možnosti konfigurace sestavení se zobrazí na **stránky vlastností projektu** dialogové okno a **stránek vlastností řešení** dialogové okno. Není-li zaškrtnuto, možnosti konfigurace sestavení nejsou zobrazeny na **stránky vlastností projektu** dialogové okno a **stránek vlastností řešení** dialogové okno pro [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] a [!INCLUDE[csprcs](../../includes/csprcs-md.md)] projekty obsahující jednu konfiguraci nebo dvě konfigurace debug a release. Pokud projekt obsahuje konfigurace definovaná uživatelem, jsou uvedeny možnosti konfigurace sestavení.  
-  
- Při zrušení výběru, příkazy na **sestavení** nabídky, jako například **sestavit řešení**, **znovu sestavit řešení**, a **Vyčistit řešení**, jsou proveden na konfiguraci vydané verze a příkazy na **ladění** nabídky, například **spustit ladění** a **spustit bez ladění**, jsou prováděny na konfiguraci ladění.  
-  
- **Vždy zobrazit řešení**  
- Při výběru řešení a všechny příkazy, které fungují v řešení jsou vždy zobrazen v integrovaném vývojovém prostředí. Není-li zaškrtnuto, všechny projekty byly vytvořeny jako samostatné projekty a nevidíte řešení v Průzkumníku řešení nebo příkazy, které fungují v řešení v integrovaném vývojovém prostředí Pokud řešení obsahuje pouze jeden projekt.  
-  
- **Uložit nové projekty při vytvoření**  
- Pokud je vybráno, můžete zadat umístění pro váš projekt v **nový projekt** dialogové okno. Není-li zaškrtnuto, všechny nové projekty jsou vytvořeny jako dočasné projekty. Při práci s dočasné projekty, můžete vytvořit a experimentovat s projektem, aniž byste museli zadat umístění na disku.  
-  
- **Upozornit uživatele, pokud umístění projektu není důvěryhodné**  
- Při pokusu o vytvoření nového projektu nebo otevřete existující projekt do umístění, které není plně důvěryhodné (třeba na cestu UNC nebo cesta k protokolu HTTP), zobrazí se zpráva. Tuto možnost použijte k určení, zda zpráva se zobrazí pokaždé, když se při pokusu o vytvoření nebo otevření projektu do umístění, které není plně důvěryhodné.  
-  
- **Zobrazit okno výstup při spuštění sestavení**  
- Automaticky zobrazí v okně výstupu v integrovaném vývojovém prostředí od počátku řešení sestavení. Další informace najdete v tématu [jak: Řízení výstupního okna](https://msdn.microsoft.com/library/91aebd15-8854-4a7a-9f7d-57376fb4e858). Tato možnost je povolená ve výchozím nastavení.  
-  
- **Vyzvat k symbolickému přejmenování při přejmenování souborů**  
- Pokud je vybráno, zobrazí pole zprávy s dotazem, zda je či není [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] by měl také přejmenování všech referencí v projektu na prvek kódu.  
-  
-## <a name="see-also"></a>Viz také  
+> Možnosti dostupné v dialogových oknech a názvy a umístění příkazů nabídky, které vidíte, se mohou lišit od toho, co je popsáno v nápovědě v závislosti na aktivních nastaveních nebo edici. Tato stránka Help se napsala s ohledem na **Obecné nastavení vývoje** . Chcete-li zobrazit nebo změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="settings"></a>Nastavení
+ **Umístění projektů** Nastaví výchozí umístění, kde jsou vytvořeny nové projekty a složky řešení a adresáře. Několik dialogových oken používá pro výchozí body složky také umístění nastavené v této možnosti. Například dialogové okno otevřít projekt používá toto umístění pro zástupce moje projekty.
+
+ **Umístění uživatelských šablon projektu** Nastaví výchozí umístění, které je používáno v dialogovém okně **Nový projekt** k vytvoření seznamu **mých šablon**. Další informace najdete v tématu [Postupy: hledání a organizace šablon](../../ide/how-to-locate-and-organize-project-and-item-templates.md).
+
+ **Umístění šablon uživatelských položek** Nastaví výchozí umístění, které je používáno v dialogovém okně **Přidat novou položku** k vytvoření seznamu **mých šablon**. Další informace najdete v tématu [Postupy: hledání a organizace šablon](../../ide/how-to-locate-and-organize-project-and-item-templates.md).
+
+ **Při dokončení buildu vždycky zobrazit seznam chyb s chybami** Otevře okno **Seznam chyb** při dokončování sestavení, pouze pokud se projekt nepovedlo sestavit. Zobrazí se chyby, ke kterým dojde během procesu sestavení. Pokud je tato možnost smazána, k chybám stále dochází, ale okno není po dokončení sestavení otevřeno. Tato možnost je ve výchozím nastavení povolená.
+
+ **Sledovat aktivní položku v Průzkumník řešení** Když se tato možnost vybere, **Průzkumník řešení** se automaticky otevře a vybere se aktivní položka. Vybraná položka se mění při práci s různými soubory v projektu nebo řešení nebo v různých součástech v návrháři. Pokud je tato možnost vymazána, výběr v **Průzkumník řešení** se nemění automaticky. Tato možnost je ve výchozím nastavení povolená.
+
+ **Zobrazit pokročilé konfigurace sestavení** Je-li vybrána tato možnost, možnosti konfigurace sestavení se zobrazí v dialogovém okně **stránky vlastností projektu** a v dialogovém okně **stránky vlastností řešení** . Pokud je zaškrtnuto, možnosti konfigurace sestavení se nezobrazují v dialogovém okně **stránky vlastností projektu** a v dialogovém okně **stránky vlastností řešení** pro [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] a [!INCLUDE[csprcs](../../includes/csprcs-md.md)] projekty, které obsahují jednu konfiguraci, nebo tyto dvě konfigurace ladění a vydaná verze. Pokud má projekt uživatelsky definované konfigurace, zobrazí se možnosti konfigurace sestavení.
+
+ Pokud není vybráno, příkazy v nabídce **sestavení** , jako je **sestavení řešení**, **opětovné sestavení řešení**a **Vyčištění**, jsou prováděny v konfiguraci vydané verze a příkazy v nabídce **ladění** , jako je například **Start. Ladění** a **spouštění bez ladění**se provádí v konfiguraci ladění.
+
+ **Vždy zobrazit řešení** Je-li toto políčko zaškrtnuto, řešení a všechny příkazy, které fungují na řešení, jsou vždy zobrazeny v integrovaném vývojovém prostředí. Pokud je zaškrtnuto, všechny projekty jsou vytvořeny jako samostatné projekty a toto řešení se nezobrazuje v Průzkumník řešení nebo příkazy, které fungují na řešeních v rozhraní IDE, pokud řešení obsahuje pouze jeden projekt.
+
+ **Uložit nové projekty při vytvoření** Když je tato možnost vybrána, můžete v dialogovém okně **Nový projekt** zadat umístění pro projekt. Po zaškrtnutí budou všechny nové projekty vytvořeny jako dočasné projekty. Při práci s dočasnými projekty můžete vytvořit a experimentovat s projektem bez nutnosti zadávat umístění na disku.
+
+ **Upozornit uživatele, pokud umístění projektu není důvěryhodné** Pokud se pokusíte vytvořit nový projekt nebo otevřít existující projekt v umístění, které není plně důvěryhodné (například na cestě UNC nebo v cestě HTTP), zobrazí se zpráva. Tuto možnost použijte, chcete-li určit, zda se zpráva zobrazí při každém pokusu o vytvoření nebo otevření projektu v umístění, které není plně důvěryhodné.
+
+ **Zobrazit okno výstup při zahájení sestavování** Automaticky zobrazuje okno Výstup v rozhraní IDE na začátku sestavení řešení. Další informace naleznete v tématu [How to: Control a okno výstup](https://msdn.microsoft.com/library/91aebd15-8854-4a7a-9f7d-57376fb4e858). Tato možnost je ve výchozím nastavení povolená.
+
+ **Při přejmenování souborů zobrazit výzvu k zadání symbolického názvu** Je-li vybrána tato možnost, zobrazí okno se zprávou s dotazem, zda [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] má také přejmenovat všechny odkazy v projektu na prvek kódu.
+
+## <a name="see-also"></a>Viz také
  [Dialogové okno Možnosti, Projekty a řešení, Sestavit a spustit](../../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)

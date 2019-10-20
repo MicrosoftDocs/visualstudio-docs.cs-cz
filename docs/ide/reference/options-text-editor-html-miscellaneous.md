@@ -1,35 +1,35 @@
 ---
-title: Možnosti, textový Editor HTML (webové formuláře), různé
+title: Možnosti, textový editor, HTML (webové formuláře), různé
 ms.date: 1/15/2019
 ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.HTML.Miscellaneous
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 43ab664968ca75f8af6da89db84725924caa3584
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3b100defd8f50b4a487e46eef4183457e724a015
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778427"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666184"
 ---
-# <a name="options-text-editor-html-web-forms-miscellaneous"></a>Možnosti, textový Editor HTML (webové formuláře), různé
+# <a name="options-text-editor-html-web-forms-miscellaneous"></a>Možnosti, textový editor, HTML (webové formuláře), různé
 
-Použití **různé** možnosti stránky můžete nastavit předvolby způsob, jakým zpracovává prvky vloženy do stránky v editoru jazyka HTML. Pro přístup k této stránce, na panelu nabídek zvolte **nástroje** > **možnosti**a potom rozbalte **textový Editor** > **HTML (webové formuláře)**   >  **Různé**.
+Pomocí stránky **různé** možnosti můžete nastavit předvolby pro způsob, jakým Editor HTML zpracovává prvky vložené do stránky. Chcete-li získat přístup k této stránce, na panelu nabídek zvolte **nástroje**  > **Možnosti**a potom rozbalte **textový editor**  > **HTML (webové formuláře)**  > **různé**.
 
-## <a name="miscellaneous-html-options"></a>Další možnosti HTML
+## <a name="miscellaneous-html-options"></a>Různé možnosti HTML
 
-- **Formátovat HTML při vkládání**
+- **Formátovat HTML při vložení**
 
-   Když je toto políčko zaškrtnuto, editoru přeformátuje prvky vloženy do stránky, a pomocí aktuálně definovaných pravidel formátování. Pokud toto políčko není zaškrtnuto, editoru vloží prvky, formátování původní elementu.
+   Je-li toto políčko zaškrtnuto, Editor přeformátuje prvky vložené do stránky pomocí aktuálně definovaných pravidel formátování. Není-li toto políčko zaškrtnuto, Editor vloží prvky pomocí přesného formátování původního prvku.
 
-- **Vyžadovat ' <' k zobrazení okna dokončování značek**
+- **Pro aktivaci okna dokončování značek vyžadovat ' < '**
 
-   Když je toto políčko zaškrtnuto, okna dokončování značek se zobrazí, když zadáte znak menší než ("<").
+   Pokud je toto políčko zaškrtnuto, zobrazí se okno dokončování značek při zadání znaku menšího než ("<").
 
 ## <a name="see-also"></a>Viz také:
 

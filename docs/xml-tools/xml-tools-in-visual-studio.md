@@ -1,5 +1,5 @@
 ---
-title: XML editor a Návrhář schémat
+title: Editor XML a Návrhář schémat
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -27,55 +27,55 @@ helpviewer_keywords:
 - XSL, style sheets
 - XMLDataDocument class
 ms.assetid: 1fd5de47-2d61-4180-9539-c2c4bf9ab768
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d7493d6c10c83b16ad7579299a49a7747e34c20b
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: c9412d89ee7d9ad1412f0eaf9fe9341e336a65e5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746508"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668710"
 ---
 # <a name="xml-tools-in-visual-studio"></a>Nástroje XML v sadě Visual Studio
 
-*Kód XML (Extensible Language)* je značkovací jazyk, který poskytuje formátu pro popis data. Rozděluje data XML a jeho prezentaci pomocí přidružené šablony stylů, jako je šablona stylů XSL (Extensible Language) a šablony stylů CSS (CSS). Visual Studio obsahuje nástroje a funkce, které usnadňují práci s XML, XSLT a XML schémat.
+*Jazyk XML (Extensible Markup Language) (XML)* je jazyk značek, který poskytuje formát pro popisovaná data. XML odděluje data a její prezentaci pomocí přidružených šablon stylů, jako je XSL (Extensible Stylesheet Language) a kaskádové šablony stylů (CSS). Visual Studio obsahuje nástroje a funkce, které usnadňují práci s XML, XSLT a schématy XML.
 
 ## <a name="xml-editor"></a>Editor XML
 
-[Editoru XML](xml-editor.md) slouží k úpravám dokumentů XML. Poskytuje úplnou syntaxi XML kontrole, ověření schématu při psaní, barevného kódování a technologie IntelliSense. Pokud je k dispozici definici typu schématu nebo dokumentu, se používá technologie IntelliSense do seznamu povolených elementů a atributů.
+[Editor XML](xml-editor.md) slouží k úpravám dokumentů XML. Poskytuje úplnou kontrolu syntaxe XML, ověřování schématu při psaní, barevném kódování a IntelliSense. Pokud je k dispozici definice typu schématu nebo dokumentu, používá technologie IntelliSense k vypsání přípustných prvků a atributů.
 
-Další funkce zahrnují:
+Mezi další funkce patří:
 
-- Podpora fragmentů kódu XML, včetně generované schématu fragmentů kódu
+- Podpora fragmentů kódu XML, včetně fragmentů generovaných schématem
 
-- Zdokumentujte sbalování tak, aby elementy můžete rozbalení a sbalení
+- Osnova dokumentu, aby bylo možné prvky rozbalit a sbalit
 
-- Možnost provedení transformace XSLT a zobrazit výsledky jako text, XML nebo HTML
+- Možnost spouštět transformace XSLT a zobrazovat výsledky jako text, XML nebo HTML
 
-- Možnost generování schémat schématu XML definice jazyk (XSD) z instance dokumentu XML
+- Možnost generování schémat XML Schema Definition Language (XSD) z dokumentu instance XML
 
-- Podpora pro úpravy šablon stylů XSLT, včetně podporu technologie IntelliSense
+- Podpora úprav šablon stylů XSLT, včetně podpory technologie IntelliSense
 
 - Průzkumník schémat XML
 
 ## <a name="xml-schema-designer"></a>Návrhář schématu XML
 
-[Návrhář schémat XML](xml-schema-designer.md) je integrovaná s Visual Studio a editor souborů XML umožňují pracovat s schémat jazyk (XSD) definice schématu XML.
+[Návrhář schématu XML](xml-schema-designer.md) je integrován se sadou Visual Studio a EDITORem XML, který vám umožní pracovat s schématy XML Schema Definition Language (XSD).
 
 ## <a name="xslt-debugging"></a>Ladění XSLT
 
-Visual Studio podporuje [ladění šablon stylů XSLT](../xml-tools/debugging-xslt.md). Pomocí ladicího programu, můžete nastavit body přerušení v šabloně stylů XSLT, krokování s vnořením do šablony stylů XSLT z kódu a tak dále.
+Visual Studio podporuje [ladění šablon stylů XSLT](../xml-tools/debugging-xslt.md). Pomocí ladicího programu můžete nastavit body přerušení v šabloně stylů XSLT, krokovat na šablonu stylů XSLT z kódu a tak dále.
 
 > [!NOTE]
-> Ladicí program XSLT je dostupná pouze v edici Enterprise systému Visual Studio.
+> Ladicí program XSLT je k dispozici pouze v edici Enterprise sady Visual Studio.
 
 ## <a name="see-also"></a>Viz také:
 
 - <xref:System.Xml?displayProperty=fullName>
 - [Transformace XSLT](/dotnet/standard/data/xml/xslt-transformations)
-- [Zpracování dat XML pomocí modelu dat XPath](/dotnet/standard/data/xml/process-xml-data-using-the-xpath-data-model)
+- [Zpracování dat XML pomocí datového modelu XPath](/dotnet/standard/data/xml/process-xml-data-using-the-xpath-data-model)
 - [Model DOM (Document Object Model) dokumentu XML](/dotnet/standard/data/xml/xml-document-object-model-dom)
 - [Model objektu schématu (SOM) XML](/dotnet/standard/data/xml/xml-schema-object-model-som)

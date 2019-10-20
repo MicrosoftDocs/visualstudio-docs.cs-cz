@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Nastavování atributů CLR v elementu | Dokumentace Microsoftu'
+title: 'Postupy: nastavení atributů CLR u prvku | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -10,40 +10,40 @@ helpviewer_keywords:
 - Domain-Specific Language, custom attrributes
 ms.assetid: b3db3c74-920c-4701-9544-6f75cbe8b7c9
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f9af25934a40c01c6b4cfd48dcd7419bddf322d3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 72ad9175729451c82fca3b61d06e449edaf8cf38
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65698019"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662542"
 ---
 # <a name="how-to-set-clr-attributes-on-an-element"></a>Postupy: Nastavování atributů CLR v elementu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Vlastní atributy jsou speciální atributy, které lze přidat do domény prvky, tvary, konektory a diagramy. Můžete přidat všechny atributy, které dědí z `System.Attribute` třídy.  
-  
-### <a name="to-add-a-custom-attribute"></a>Chcete-li přidat vlastní atribut  
-  
-1. V **Průzkumník DSL**, vyberte požadovaný prvek, ke kterému chcete přidat vlastní atribut.  
-  
-2. V **vlastnosti** okna, další **vlastní atributy** vlastnosti, klikněte na tlačítko Procházet ( **...** ) ikonu.  
-  
-     **Upravit atributy** zobrazí se dialogové okno.  
-  
-3. V **název** sloupce, klikněte na tlačítko  **\<přidat atribut >** a zadejte název atributu. Stiskněte klávesu ENTER.  
-  
-4. Řádek pod názvem atributu zobrazuje závorky. Na tomto řádku zadejte typ parametru atributu (například `string`), a potom stiskněte klávesu ENTER.  
-  
-5. V **vlastnost Name** sloupce, zadejte vhodný název, například `MyString`.  
-  
-6. Klikněte na **OK**.  
-  
-     **Vlastní atributy** vlastnost se nyní zobrazí atribut v následujícím formátu:  
-  
-     `[` *AttributeName* `(` *ParameterName* `=` *typu* `)]`  
-  
-## <a name="see-also"></a>Viz také  
- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+Vlastní atributy jsou speciální atributy, které lze přidat do doménových prvků, tvarů, spojnic a diagramů. Můžete přidat libovolný atribut, který dědí z třídy `System.Attribute`.
+
+### <a name="to-add-a-custom-attribute"></a>Přidání vlastního atributu
+
+1. V **Průzkumníku DSL**vyberte prvek, ke kterému chcete přidat vlastní atribut.
+
+2. V okně **vlastnosti** vedle vlastnosti **vlastní atributy** klikněte na ikonu Procházet ( **...** ).
+
+     Otevře se dialogové okno **Upravit atributy** .
+
+3. Ve sloupci **název** klikněte na **\<add atributu >** a zadejte název atributu. Stiskněte klávesu ENTER.
+
+4. Řádek pod názvem atributu obsahuje závorky. Na tomto řádku zadejte typ parametru pro atribut (například `string`) a potom stiskněte klávesu ENTER.
+
+5. Do sloupce **vlastnost název** zadejte vhodný název, například `MyString`.
+
+6. Klikněte na tlačítko **OK**.
+
+     Vlastnost **Custom Attributes** nyní zobrazuje atribut v následujícím formátu:
+
+     `[` *AttributeName* `(` *ParameterName* `=` *typ* `)]`
+
+## <a name="see-also"></a>Viz také
+ [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

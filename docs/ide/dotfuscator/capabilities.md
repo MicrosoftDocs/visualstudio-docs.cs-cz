@@ -3,7 +3,7 @@ title: Funkce Dotfuscatoru
 ms.date: 03/28/2019
 ms.devlang: dotnet
 ms.topic: conceptual
-keywords: Nástroj Dotfuscator, nástroj Dotfuscator Community, řešení Dotfuscator CE, PreEmptive, společnosti PreEmptive Solutions PreEmptive ochrany, ochranu, community edition, obfuskace, .NET, bezplatný, Visual Studio 2017, Visual Studio 2019, Visual Studio
+keywords: Dotfuscator, Dotfuscator Community, Dotfuscator CE, nepřesné, bezplatná řešení, preventivní ochrana, ochrana, Community Edition, zmatene, .NET, free, Visual Studio 2017, Visual Studio 2019, Visual Studio, Visual Studio
 helpviewer_keywords:
 - PreEmptive Protection Dotfuscator
 - Dotfuscator Community Edition
@@ -12,55 +12,55 @@ helpviewer_keywords:
 - Dotfuscator
 - obfuscation
 - protection
-description: Přečtěte si, že funkce bezplatnou kopii verze nástroje Dotfuscator Community součástí sady Visual Studio.
+description: Seznamte se s možnostmi bezplatné kopie komunity Dotfuscator, která je součástí sady Visual Studio.
 ms.assetid: 0ee89c58-c900-48fc-a6a2-65ace00e8bab
 author: Joe-Sewell-PreEmptive
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 87d093a540e3c6fae6a80761a5b945c572bd890d
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 88578e75906585e8649025522e5b9835b7d2f8c3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744785"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652448"
 ---
 # <a name="capabilities-of-dotfuscator"></a>Funkce Dotfuscatoru
 
-Tato stránka se zaměřuje na funkce řešení Dotfuscator Community se některé odkazy na rozšířené možnosti, které jsou k dispozici prostřednictvím [upgrady][upgrades].
+Tato stránka se zaměřuje na možnosti komunity Dotfuscator s některými odkazy na pokročilé možnosti, které jsou k dispozici prostřednictvím [upgradu][upgrades].
 
-Nástroj Dotfuscator Community je *po sestavení* systému pro aplikace .NET.
-S ním, budou moct uživatelé sady Visual Studio [obfuskaci sestavení] [ obfuscation] a vložit [aktivní defense opatření] [ checks] do aplikace - všechny bez nutnosti přístupu k původní zdrojový kód nástroje Dotfuscator.
-Nástroj Dotfuscator chrání vaši aplikaci několika různými způsoby vytváření strategie vrstvami ochrany.
+Dotfuscator Community je systém *po sestavení* pro aplikace .NET.
+Díky tomu mohou uživatelé sady Visual Studio zakódovat [sestavení][obfuscation] a vložit do aplikace [aktivní opatření ochrany][checks] – bez Dotfuscator nutnosti získat přístup k původnímu zdrojovému kódu.
+Dotfuscator chrání vaši aplikaci několika způsoby a vytváří vrstvu ochrany s vrstvami.
 
-Nástroj Dotfuscator Community podporuje a široký rozsah .NET sestavení a aplikace typy, včetně [univerzální platformu Windows (UPW)] [ uwp] a [Xamarin] [ xamarin].
+Komunita Dotfuscator podporuje široké spektrum typů sestavení a aplikací .NET, včetně [Univerzální platforma Windows (UWP)][uwp] a [Xamarin][xamarin].
 
-## <a name="intellectual-property-protection"></a>Ochranu duševního vlastnictví
+## <a name="intellectual-property-protection"></a>Ochrana duševního vlastnictví
 
-Návrh, chování a implementaci vaší aplikace jsou formy duševní vlastnictví (IP).
-Aplikace vytvořené pro .NET jsou však v podstatě otevře knih; je snadné sestavení .NET zpětné analýzy, [obsahují základní metadata a mezikódu][assemblies].
+Návrh, chování a implementace vaší aplikace jsou formy duševního vlastnictví (IP).
+Aplikace vytvořené pro .NET jsou ale v podstatě otevřené knihy. sestavení .NET je snadno možné zpětně zpracovat, [protože obsahují metadata vysoké úrovně a zprostředkující kód][assemblies].
 
-Nástroj Dotfuscator Community zahrnuje základní [.NET obfuskace] [ obfuscation] ve formě [přejmenování][renaming].
-Ke zdrojovému kódu prostřednictvím zpětné analýzy, že maskuje svůj kód pomocí nástroje Dotfuscator snižuje riziko neoprávněného přístupu, jako důležité informace o názvech už být veřejné.
-Obfuskace také zobrazuje úsilí na druhé straně k ochraně vašeho kódu z zkoumání - cenné krok při vytváření, že je vaše IP adresa ze zákona chráněný jako tajemství.
+Komunita Dotfuscator zahrnuje základní [zmatení rozhraní .NET][obfuscation] ve formě [přejmenování][renaming].
+Zmatení kódu pomocí Dotfuscator snižuje riziko neoprávněného přístupu ke zdrojovému kódu prostřednictvím zpětné analýzy, protože důležité informace o pojmenování nebudou nadále veřejné.
+Dekódování také ukazuje úsilí vaší součásti, aby chránila váš kód před přezkoumáním – hodnotným krokem při zjišťování, že vaše IP adresa je právně chráněna jako obchodní tajemství.
 
-Mnoho [funkcí ochrany aplikací integrity](#application-integrity-protection) nástroje Dotfuscator Community další brání zpětná analýza.
-Chybný actor například může pokusit připojit ladicí program ke spuštěné instanci vaší aplikace, chcete-li pochopit programovou logiku.
-Nástroje Dotfuscator můžete vložit [proti ladění chování][debug] do vaší aplikace to bránit.
+Mnohé z [funkcí ochrany integrity aplikací](#application-integrity-protection) Dotfuscator komunity dále brání zpětné analýze.
+Například špatný objekt actor se může pokusit připojit ladicí program ke spuštěné instanci vaší aplikace, aby porozuměl logice programu.
+Dotfuscator může do vaší aplikace vložit [chování proti ladění][debug] a zabránit tak tomu.
 
-## <a name="application-integrity-protection"></a>Ochrana Integrity aplikace
+## <a name="application-integrity-protection"></a>Ochrana integrity aplikací
 
-Kromě ochrany zdrojového kódu, je také důležité zajistit, že vaše aplikace se používá tak, jak navrženo.
-Útočníci se mohou pokusit o zneužití vaší aplikace, aby bylo možné obejít licenční zásady (to znamená, softwarové pirátství), krádeži nebo citlivá data, jakým aplikace zpracovává manipulaci s, nebo chcete změnit chování aplikace.
+Kromě ochrany zdrojového kódu je také důležité zajistit, aby se vaše aplikace používala tak, jak je navržena.
+Útočníci se můžou pokusit o zneužití vaší aplikace za účelem obejít zásady licencování (to znamená softwarová kriminalita), ukrást nebo manipulovat s citlivými daty, která zpracovává aplikace, nebo změnit chování aplikace.
 
-Nástroj Dotfuscator Community můžete vložit [kód pro ověření aplikace] [ checks] do vašeho sestavení, včetně [boj proti][tamper], [proti ladění][debug], a [proti rootem] [ root] míry.
-Když je zjištěn stav Neplatná aplikace, můžete kód pro ověření [zvát kódu aplikace k vyřešení situace vhodným způsobem][check-app].
-Nebo, pokud nechcete napsat kód, který používá neplatný popisovač aplikace, nástroje Dotfuscator můžete také vložit [odpovědi][check-action] chování, aniž by bylo nutné žádné úpravy zdrojového kódu.
+Komunita Dotfuscator může vložit [kód pro ověření aplikace][checks] do vašich sestavení, včetně [ochrany proti falšování][tamper], [anti-ladění][debug]a [antirootem zařízení][root] .
+Při zjištění neplatného stavu aplikace může ověřovací kód zavolat na [kód aplikace a vyřešit tak situaci vhodným způsobem][check-app].
+Nebo, pokud nechcete psát kód pro zpracování neplatných použití aplikace, může Dotfuscator také vkládat chování [odpovědi][check-action] , aniž by to vyžadovalo úpravu zdrojového kódu.
 
-Mnohé z těchto stejné metody mohou také používá k vynucení [ukončenou životností termíny][shelflife] pro vyhodnocení nebo zkušební verze softwaru.
+Mnohé z těchto stejných metod se taky dají použít k vykonání konečných [termínů][shelflife] pro zkušební nebo zkušební software.
 
 ## <a name="see-also"></a>Viz také
 
-[Toto téma v uživatelské příručce nástroje úplné řešení Dotfuscator Community][full]
+[Toto téma v úplné příručce pro uživatele komunity Dotfuscator][full]
 
 <!-- Copyright © 2019 PreEmptive Solutions, LLC -->
 

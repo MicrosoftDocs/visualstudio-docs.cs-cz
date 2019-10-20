@@ -5,19 +5,19 @@ ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.selecttfsruleset
 ms.assetid: 9b02f934-2db6-41ec-aaff-9c31ceec2f04
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a35ba1b9d54507883882fbe62c0533805882560
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: fe6e9e49998c3e98335cd7e873d53531c8bfa99a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71975061"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649386"
 ---
-# <a name="how-to-synchronize-code-project-rule-sets-with-an-azure-devops-project-check-in-policy"></a>Postupy: Synchronizace sad pravidel projektu kódu se zásadou vrácení se změnami projektu Azure DevOps
+# <a name="how-to-synchronize-code-project-rule-sets-with-an-azure-devops-project-check-in-policy"></a>Postupy: synchronizace sady pravidel projektu kódu se zásadou vrácení se změnami projektu Azure DevOps
 
 Synchronizujete nastavení analýzy kódu pro projekty kódu se zásadou vrácení se změnami pro projekt Azure DevOps zadáním sady pravidel, která obsahuje alespoň pravidla zadaná v sadě pravidel pro zásadu vrácení se změnami. Váš vedoucí vývojář může informovat o názvu a umístění sady pravidel pro zásadu vrácení se změnami. Pomocí jedné z následujících možností lze zajistit, aby analýza kódu pro projekt používala správnou sadu pravidel:
 
@@ -31,7 +31,7 @@ Synchronizujete nastavení analýzy kódu pro projekty kódu se zásadou vrácen
 
 ## <a name="to-specify-a-microsoft-standard-rule-set"></a>Určení standardní sady pravidel společnosti Microsoft
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt kódu a potom klikněte na tlačítko **vlastnosti**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt kódu a pak klikněte na **vlastnosti**.
 
 2. Klikněte na **Analýza kódu**.
 
@@ -51,7 +51,7 @@ Synchronizujete nastavení analýzy kódu pro projekty kódu se zásadou vrácen
 
 1. V případě potřeby proveďte operaci získat v souboru sady pravidel, který určuje zásadu vrácení se změnami.
 
-2. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt kódu a potom klikněte na tlačítko **vlastnosti**.
+2. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt kódu a pak klikněte na **vlastnosti**.
 
 3. Klikněte na **Analýza kódu**.
 

@@ -1,5 +1,5 @@
 ---
-title: 'CA2225: Přetížení operátoru mají pojmenované alternativy | Dokumentace Microsoftu'
+title: 'CA2225: přetížení operátoru mají pojmenované alternativy | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CA2225
 ms.assetid: af8f7ab1-63ad-4861-afb9-b7a7a2be15e1
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: aa90a1e97b563ef549cb3f628fcf9130a364c50a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 212abc1fa5e2debfaf7ca81d82c8d94e9ddb0879
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201618"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658877"
 ---
 # <a name="ca2225-operator-overloads-have-named-alternates"></a>CA2225: Přetížení operátoru mají pojmenované alternativy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,70 +29,70 @@ ms.locfileid: "68201618"
 |-|-|
 |TypeName|OperatorOverloadsHaveNamedAlternates|
 |CheckId|CA2225|
-|Kategorie|Microsoft.Usage|
-|Narušující změna|Pevné|
+|Kategorie|Microsoft. Usage|
+|Narušující změna|Bez přerušení|
 
 ## <a name="cause"></a>příčina
  Bylo zjištěno přetížení operátoru a alternativní metoda s očekávaným názvem nebyla nalezena.
 
 ## <a name="rule-description"></a>Popis pravidla
- Přetížení operátoru umožňuje používat symboly pro vyjádření výpočty typu. Například typ, který přetížení na symbol plus (+) pro přidání by obvykle mít jiný člen s názvem "Přidat". Pojmenovaný alternativní člen poskytuje přístup ke stejným funkcím jako operátor a je k dispozici pro vývojáře, kteří programují v jazycích nepodporujících přetížené operátory.
+ Přetížení operátoru umožňuje použít symboly k vyjádření výpočtů pro typ. Například typ, který přetěžuje symbol plus (+) pro sčítání, by měl obvykle alternativní člen s názvem add. Pojmenovaný alternativní člen poskytuje přístup ke stejným funkcím jako operátor a je k dispozici pro vývojáře, kteří programují v jazycích, které nepodporují přetížené operátory.
 
- Toto pravidlo zkontroluje operátorů uvedených v následující tabulce.
+ Toto pravidlo prověřuje operátory uvedené v následující tabulce.
 
 |C#|Visual Basic|C++|Alternativní název|
 |---------|------------------|-----------|--------------------|
 |+ (binární)|+|+ (binární)|Přidejte|
 |+=|+=|+=|Přidejte|
-|&|A|&|BitwiseAnd|
+|&|Ani|&|BitwiseAnd|
 |&=|A =|&=|BitwiseAnd|
-|&#124;|Nebo|&#124;|BitwiseOr|
-|&#124;=|Nebo =|&#124;=|BitwiseOr|
+|&#124;|Nebo|&#124;|Bitový operátor|
+|&#124;=|Nebo =|&#124;=|Bitový operátor|
 |--|Není k dispozici|--|Snížení|
-|/|/|/|Dělení|
-|/=|/=|/=|Dělení|
-|==|=|==|Je rovno|
+|/|/|/|Rozdělovací|
+|/=|/=|/=|Rozdělovací|
+|==|=|==|Rovná|
 |^|XOR|^|XOR|
 |^=|XOR =|^=|XOR|
-|>|>|>|Porovnat|
-|>=|>=|>=|Porovnat|
-|++|Není k dispozici|++|Přírůstek|
-|<>|!=|Je rovno|
+|>|>|>|Porovnán|
+|>=|>=|>=|Porovnán|
+|++|Není k dispozici|++|Zvětš|
+|<>|!=|Rovná|
 |<<|<<|<<|LeftShift|
 |<<=|<<=|<<=|LeftShift|
-|<|<|<|Porovnat|
-|<=|<=|\<=|Porovnat|
+|<|<|<|Porovnán|
+|<=|<=|\<=|Porovnán|
 |&&|Není k dispozici|&&|LogicalAnd|
-|&#124;&#124;|Není k dispozici|&#124;&#124;|LogicalOr|
+|&#124;&#124;|Není k dispozici|&#124;&#124;|Logický operátor|
 |!|Není k dispozici|!|LogicalNot|
-|%|Mod|%|Mod nebo zbytku|
+|%|Mod|%|Střední nebo zbytek|
 |%=|Není k dispozici|%=|Mod|
-|* (binární)|*|*|Násobení|
-|*=|Není k dispozici|*=|Násobení|
-|~|Not|~|OnesComplement|
+|* (binární)|*|*|Hodnotou|
+|*=|Není k dispozici|*=|Hodnotou|
+|~|Mění|~|OnesComplement|
 |>>|>>|>>|RightShift|
 =|Není k dispozici|>>=|RightShift|
-|-(binární)|-(binární)|-(binární)|Odečíst|
-|-=|Není k dispozici|-=|Odečíst|
-|true|IsTrue|Není k dispozici|IsTrue (vlastnost)|
-|-(unární)|Není k dispozici|-|negate –|
-|+ (unární)|Není k dispozici|+|Plus|
-|false|IsFalse|False|IsTrue (vlastnost)|
+|-(binární)|-(binární)|-(binární)|Odečten|
+|-=|Není k dispozici|-=|Odečten|
+|true|IsTrue|Není k dispozici|True (vlastnost)|
+|– (Unární)|Není k dispozici|-|Negate|
+|+ (Unární)|Není k dispozici|+|i|
+|false|IsFalse|False|True (vlastnost)|
 
- Není k dispozici == nemůže být přetížená ve vybraném jazyce.
+ N/A = = nemůže být přetížený ve vybraném jazyce.
 
- Pravidlo zkontroluje také operátory implicitní a explicitní přetypování typu (`SomeType`) tak, že zkontrolujete pro metody s názvem `ToSomeType` a `FromSomeType`.
+ Pravidlo také kontroluje implicitní a explicitní operátory přetypování v typu (`SomeType`) kontrolou metod pojmenovaných `ToSomeType` a `FromSomeType`.
 
- V jazyce C# Pokud je binární operátor přetížen, odpovídající operátor přiřazení pokud existuje, je také implicitně přetížené.
+ V C#, je-li binární operátor přetížen, je také implicitně přetížen odpovídající operátor přiřazení, je-li nějaký.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, implementujte alternativní metoda pro operátor; pojmenujte ho pomocí doporučená alternativní název.
+ Chcete-li opravit porušení tohoto pravidla, implementujte alternativní metodu pro operátor; pojmenujte ji pomocí doporučeného alternativního názvu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění tohoto pravidla, Pokud implementujete sdílené knihovny. Aplikace můžete ignorovat upozornění tohoto pravidla.
+ Potlačit upozornění z tohoto pravidla, Pokud implementujete sdílenou knihovnu. Aplikace mohou ignorovat upozornění od tohoto pravidla.
 
 ## <a name="example"></a>Příklad
- V následujícím příkladu definuje strukturu, která poruší toto pravidlo. Chcete-li v příkladu, přidejte veřejnou `Add(int x, int y)` metoda do struktury.
+ Následující příklad definuje strukturu, která porušuje toto pravidlo. Chcete-li tento příklad opravit, přidejte do struktury metodu public `Add(int x, int y)`.
 
  [!code-csharp[FxCop.Usage.OperatorOverloadsHaveNamedAlternates#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperatorOverloadsHaveNamedAlternates/cs/FxCop.Usage.OperatorOverloadsHaveNamedAlternates.cs#1)]
 
@@ -101,7 +101,7 @@ ms.locfileid: "68201618"
 
  [CA2226: Operátory by měly mít symetrické přetížení](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
 
- [CA2224: Přepište equals při přetížení operátoru rovnosti](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
+ [CA2224: Přepište Equals při přetížení operátoru rovnosti](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
 
  [CA2218: Přepište GetHashCode při přepsání Equals](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Specifikace vlastních událostí sestavení
+title: Určení vlastních událostí sestavení
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -8,52 +8,52 @@ helpviewer_keywords:
 - build events, customizing
 ms.assetid: 69e935a5-e208-4bcd-865c-3e5f9b047ca8
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d00c520f75869e6cf886074c482575f1170e923a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: fabbd4dc42ac4f66c7f53b639c6e7ed1f432878c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65679527"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667131"
 ---
 # <a name="specifying-custom-build-events-in-visual-studio"></a>Specifikace vlastních událostí sestavení v sadě Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zadání vlastního sestavení události, můžete automaticky spustit příkazy před zahájením sestavení nebo po jejím dokončení. Můžete třeba spustit soubor BAT před během sestavení spustí nebo zkopírujte nové soubory do složky, po dokončení sestavení. Události sestavení spustit pouze v případě, že se sestavení úspěšně dosáhne těchto bodů v procesu sestavení.
+Zadáním vlastní události sestavení můžete automaticky spustit příkazy před spuštěním sestavení nebo po jeho dokončení. Například můžete spustit soubor. bat před spuštěním sestavení nebo zkopírovat nové soubory do složky po dokončení sestavení. Události sestavení se spouštějí pouze v případě, že sestavení úspěšně dosáhne těchto bodů v procesu sestavení.
 
- Konkrétní informace o programovacím jazyce, který používáte naleznete v následujících tématech:
+ Konkrétní informace o programovacím jazyce, který používáte, najdete v následujících tématech:
 
-- Visual Basic –[jak: Určení událostí sestavení (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md).
+- Visual Basic--[Postupy: určení událostí sestavení (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md).
 
-- Vizuální C# a F#--[jak: Určení událostí sestavení (C#)](../ide/how-to-specify-build-events-csharp.md).
+- Vizuál C# a F#--[Postupy: určení událostí sestavení (C#)](../ide/how-to-specify-build-events-csharp.md).
 
-- Visual C++ –[určení událostí sestavení](https://msdn.microsoft.com/library/788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc).
+- Vizuál C++–[Určení událostí sestavení](https://msdn.microsoft.com/library/788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc)
 
 ## <a name="syntax"></a>Syntaxe
- Události sestavení, postupujte podle stejné syntaxe jako DOS příkazy, ale makra můžete jednoduše vytvořit události sestavení. Seznam dostupných maker naleznete v tématu [pre-build Event/po sestavení příkazového řádku dialogové okno události](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md).
+ Události sestavení následují stejnou syntaxi jako příkazy pro systém DOS, ale makra můžete použít k jednoduššímu vytváření událostí sestavení. Seznam dostupných maker naleznete v tématu [dialogové okno Příkazový řádek události před sestavením/po sestavení](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md).
 
- Nejlepších výsledků dosáhnete postupujte podle těchto formátování tipy:
+ Nejlepších výsledků dosáhnete pomocí těchto tipů pro formátování:
 
-- Přidat `call` spustit příkaz před všechny události sestavení, která soubory .bat.
+- Před všemi událostmi sestavení, které spouštějí soubory. bat, přidejte příkaz `call`.
 
      Příklad: `call C:\MyFile.bat`
 
      Příklad: `call C:\MyFile.bat call C:\MyFile2.bat`
 
-- Cesty k souborům uzavřete do uvozovek.
+- Uzavřete cesty k souborům do uvozovek.
 
-     Příklad (pro [!INCLUDE[win8](../includes/win8-md.md)]): "% ProgramFiles (x86) %\Microsoft SDKs\Windows\v8.0A\Bin\NETFX 4.0 Tools\gacutil.exe"-li "$(TargetPath)"
+     Příklad (pro [!INCLUDE[win8](../includes/win8-md.md)]): "% ProgramFiles (x86)% \ Microsoft SDKs\Windows\v8.0A\Bin\NETFX 4,0 Tools\gacutil.exe"-If "$ (TargetPath)"
 
-- Více příkazů oddělte pomocí konců řádků.
+- Oddělte více příkazů pomocí konců řádků.
 
-- Podle potřeby obsahovat zástupné znaky.
+- Podle potřeby zahrňte zástupné znaky.
 
-     Příklad: `for %I in (*.txt *.doc *.html) do copy %I c:\` *mydirectory*`\`
+     Příklad: `for %I in (*.txt *.doc *.html) do copy %I c:\`*mydirectory* `\`
 
     > [!NOTE]
-    > `%I` ve výše uvedeném kódu by měla být `%%I` v dávkových skriptů.
+    > `%I` ve výše uvedeném kódu by se měly `%%I` v dávkových skriptech.
 
 ## <a name="see-also"></a>Viz také
- [Kompilování a sestavování](../ide/compiling-and-building-in-visual-studio.md) [dialogové okno Příkazový řádek události/po sestavení události před sestavením](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md) [MSBuild speciálních znaků](../msbuild/msbuild-special-characters.md) [názorný postup: Sestavení aplikace](../ide/walkthrough-building-an-application.md)
+ Návod k sestavování [a](../ide/compiling-and-building-in-visual-studio.md) sestavování událostí [před sestavením/po sestavení v příkazovém řádku](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md) nástroje [MSBuild speciální znaky](../msbuild/msbuild-special-characters.md) [: sestavování aplikace](../ide/walkthrough-building-an-application.md)

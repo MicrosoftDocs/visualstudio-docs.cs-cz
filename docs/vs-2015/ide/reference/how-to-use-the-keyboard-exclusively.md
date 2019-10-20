@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Výhradní používání klávesnice | Dokumentace Microsoftu'
+title: 'Postupy: použití výhradně klávesnice | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,90 +13,88 @@ helpviewer_keywords:
 - accessibility [Visual Studio]
 ms.assetid: d71a4cc1-d352-4164-8538-3f9fa070a331
 caps.latest.revision: 30
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fb9ed333a5e7719b98a3030ba398ad06208781c6
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 37bbdfd00778575755379fc442dfa9be3f90eeb7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65682146"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651303"
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>Postupy: Výhradní používání klávesnice
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] poskytuje mnoho výchozí kombinace klávesových zkratek, které k tomu, aby k procházení a kódu v rámci integrovaného vývojového prostředí (IDE). Úplný seznam klávesových zkratek v sadě Visual Studio najdete v tématu [výchozí klávesové zkratky](../../ide/default-keyboard-shortcuts-in-visual-studio.md). Informace o klávesových zkratek, které jsou k dispozici pro ostatní produkty Microsoftu, najdete v části [ http://www.microsoft.com/enable/products/keyboard.aspx ](http://go.microsoft.com/fwlink/?LinkID=40400).  
-  
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] poskytuje mnoho výchozích kombinací klávesových zkratek, které usnadňují navigaci a kódování v rámci integrovaného vývojového prostředí (IDE). Úplný seznam klávesových zkratek používaných v aplikaci Visual Studio naleznete v tématu [výchozí klávesové zkratky](../../ide/default-keyboard-shortcuts-in-visual-studio.md). Informace o klávesových zkratkách dostupných pro další produkty Microsoftu najdete v tématu [http://www.microsoft.com/enable/products/keyboard.aspx](http://go.microsoft.com/fwlink/?LinkID=40400).
+
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="toolbox-controls"></a>Ovládací prvky panelu nástrojů  
- Můžete přidat ovládací prvek na panelu nástrojů do formuláře nebo klávesnice pomocí návrháře.  
-  
-#### <a name="to-add-controls-from-the-toolbox-to-a-designer-from-the-keyboard"></a>Přidání ovládacích prvků z panelu nástrojů návrháře z klávesnice  
-  
-1. V panelu nabídky zvolte **zobrazení**, **nástrojů**.  
-  
-2. Zvolte Ctrl + šipka nahoru nebo Ctrl + dolů šipkami k přesunutí mezi oddíly v aktuální sadě nástrojů tabulátor.  
-  
-3. Klikněte na šipku nahoru nebo **šipka dolů** klíče pro přesun mezi ovládacími prvky.  
-  
-4. Po výběru ovládacího prvku, stiskněte klávesu Enter.  
-  
-   Ovládací prvek je přidán do formuláře nebo návrháře.  
-  
-## <a name="dialog-box-options"></a>Možnosti dialogového okna  
- Můžete přesunout z možností v dialogovém okně a změnit nastavení možností pomocí klávesnice.  
-  
-#### <a name="to-set-dialog-box-options-from-the-keyboard"></a>Chcete-li nastavit možnosti dialogového okna z klávesnice  
-  
-1. Použití **kartu** nebo **SHIFT + TAB** přesunout nahoru nebo dolů pomocí ovládacích prvků v dialogovém okně.  
-  
-2. Chcete-li změnit nastavení možnosti:  
-  
-    - Přepínací tlačítka používat **šipka nahoru** a **šipka dolů** a změňte výběr.  
-  
-    - Zaškrtávací políčka, použijte **MEZERNÍK** zaškrtněte nebo zrušte výběr.  
-  
-    - Rozevírací seznamy, použijte **ALT** + **šipka dolů** k zobrazení položek a pak použít **UPARROW** a **šipka dolů** změnit vybrané položky.  
-  
-    - U tlačítek, stiskněte **ENTER** vyvolat.  
-  
-    - Pro tabulky použijte klávesy se šipkami pro navigaci. Rozevírací seznamy v mřížkách, použijte **SHIFT** + **ALT** + **šipka dolů** k zobrazení položek a pak použít **UPARROW**a **šipka dolů** změnit vybrané položky.  
-  
-## <a name="window-and-file-navigation"></a>Navigace okna a souboru  
- Integrované vývojové prostředí poskytuje několik způsobů, jak přechod mezi otevřenými okny nástrojů a dokumentu pomocí klávesnice. Můžete také přesunout a ukotvení oken nástrojů v různých umístěních pomocí klávesnice.  
-  
-#### <a name="to-navigate-among-windows-and-files-in-the-ide-from-the-keyboard"></a>K navigaci mezi windows a soubory v integrovaném vývojovém prostředí z klávesnice  
-  
-- Chcete-li přesunout mezi soubory v nějakém editoru nebo návrháře, zvolte CTRL + TAB klíče zobrazíte IDE Navigátor s **aktivních souborů** vybrané. Stisknutím klávesy Enter přejděte k souboru zvýrazněné.  
-  
-- Chcete-li přesunout mezi oken nástrojů ukotvených, zvolte klávesy Alt + F7 zobrazí Navigátor rozhraní IDE s **aktivní nástroj Windows** vybrané. Vyberte možnost Enter keyto přejděte do okna zvýrazněné.  
-  
-#### <a name="to-move-and-dock-tool-windows-from-the-keyboard"></a>Pro přesun a ukotvení oken nástrojů z klávesnice  
-  
-1. Přejděte na panel nástrojů, kterou chcete přesunout a aktivovat.  
-  
-2. Na **okno** nabídky, klikněte na tlačítko **ukotvit**.  
-  
-3. Stisknutím klávesy **ALT** + **místo** a klikněte na tlačítko **přesunout**.  
-  
-     Ukotvení kosočtverce vodítka se zobrazí.  
-  
-4. Použití **šipku** klíče v okně přesunout do nového umístění.  
-  
-     Ukazatel myši pohybuje s oknem, jaké používáte **šipku** klíče.  
-  
-5. Po dosažení nové umístění použít **šipku** klíče k přesunutí ukazatele myši nad správnou část kosočtverce vodítka.  
-  
-     Přehled panelu nástrojů se zobrazí v novém umístění ukotvení.  
-  
-6. Stisknutím klávesy **ENTER**.  
-  
-     Panel nástrojů přichytí na nové umístění ukotvení.  
-  
-## <a name="see-also"></a>Viz také  
- [Identifikování a přizpůsobení klávesových zkratek](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)   
- [A tipy k přístupnosti](../../ide/reference/accessibility-tips-and-tricks.md)   
- [Výchozí klávesové zkratky](../../ide/default-keyboard-shortcuts-in-visual-studio.md)
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="toolbox-controls"></a>Ovládací prvky panelu nástrojů
+ Ovládací prvek můžete přidat do sady nástrojů do formuláře nebo návrháře pomocí klávesnice.
+
+#### <a name="to-add-controls-from-the-toolbox-to-a-designer-from-the-keyboard"></a>Přidání ovládacích prvků ze sady nástrojů do návrháře z klávesnice
+
+1. Na panelu nabídek vyberte možnost **zobrazení**, **Sada nástrojů**.
+
+2. Kliknutím na tlačítko se šipkou Ctrl + šipka nahoru nebo Ctrl + šipka dolů se můžete pohybovat mezi oddíly na aktuální kartě panelu nástrojů.
+
+3. Pro pohyb mezi ovládacími prvky vyberte šipky nahoru nebo **dolů** .
+
+4. Po výběru ovládacího prvku klikněte na klávesu ENTER.
+
+   Ovládací prvek je přidán do formuláře nebo návrháře.
+
+## <a name="dialog-box-options"></a>Možnosti dialogového okna
+ Můžete přesouvat mezi možnostmi v dialogovém okně a měnit nastavení možností pomocí klávesnice.
+
+#### <a name="to-set-dialog-box-options-from-the-keyboard"></a>Nastavení možností dialogového okna z klávesnice
+
+1. Pomocí **tabulátoru** nebo **SHIFT + TAB** se můžete pohybovat nahoru a dolů přes ovládací prvky v dialogovém okně.
+
+2. Změna nastavení možností:
+
+    - U přepínačů použijte šipky **nahoru** a **šipka dolů** pro změnu výběru.
+
+    - U zaškrtávacích políček použijte klávesu **MEZERNÍK** k výběru nebo zrušení výběru.
+
+    - U rozevíracích seznamů použijte **kombinaci**  + **DOWNARROW** k zobrazení položek a pak použijte **šipku dolů** a **DOWNARROW** ke změně vybrané položky.
+
+    - U tlačítek stiskněte **ENTER** a volejte.
+
+    - Pro mřížky použijte klávesy se šipkami k procházení. U rozevíracích seznamů v Gridech použijte **SHIFT**  + **ALT**  + **DOWNARROW** k zobrazení položek a pak použijte **šipku** dolů a **DOWNARROW** ke změně vybrané položky.
+
+## <a name="window-and-file-navigation"></a>Navigace v okně a souboru
+ Rozhraní IDE nabízí několik způsobů, jak přesouvat mezi otevřenými nástroji a okny dokumentů pomocí klávesnice. Pomocí klávesnice můžete také přesunout a ukotvit okna nástrojů v různých umístěních.
+
+#### <a name="to-navigate-among-windows-and-files-in-the-ide-from-the-keyboard"></a>Navigace mezi okny a soubory v integrovaném vývojovém prostředí z klávesnice
+
+- Chcete-li přecházet mezi soubory v editoru nebo v návrháři, klikněte na klávesovou zkratku CTRL + TAB a zobrazte rozhraní IDE navigátor s vybranými **aktivními soubory** . Kliknutím na klávesu ENTER přejdete na zvýrazněný soubor.
+
+- Pokud chcete přesouvat mezi ukotvenými okny nástrojů, vyberte ALT + F7 a zobrazte tak rozhraní IDE navigátor s vybraným **aktivním nástrojem nástrojů** . Klikněte na tlačítko ENTER keyto přejít do zvýrazněného okna.
+
+#### <a name="to-move-and-dock-tool-windows-from-the-keyboard"></a>Přesunutí a ukotvení oken nástrojů z klávesnice
+
+1. Přejděte do okna nástroje, které chcete přesunout, a přidělte se k němu fokus.
+
+2. V nabídce **okno** klikněte na **ukotvit**.
+
+3. Stiskněte **ALT**  + **MEZERNÍK** a pak zvolte **přesunout**.
+
+     Zobrazí se kosočtverec s pokyny k dokovacímu zařízení.
+
+4. K přesunutí okna do nového umístění použijte klávesy se **šipkami** .
+
+     Když použijete klávesy se **šipkami** , ukazatel myši se přesune s oknem.
+
+5. Když jste dosáhli nového umístění, přesuňte ukazatel myši na správnou část kosočtverce vodítka pomocí kláves se **šipkami** .
+
+     V novém umístění ukotvení se zobrazí obrys okna nástroje.
+
+6. Stiskněte klávesu **ENTER**.
+
+     Okno nástroje se přitahuje na místo v novém umístění ukotvení.
+
+## <a name="see-also"></a>Viz také
+ [Identifikace a přizpůsobení klávesových zkratek](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) [a tipů pro usnadnění a](../../ide/reference/accessibility-tips-and-tricks.md) [výchozích klávesových zkratek](../../ide/default-keyboard-shortcuts-in-visual-studio.md) pro triky
