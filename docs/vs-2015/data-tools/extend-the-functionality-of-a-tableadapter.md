@@ -1,5 +1,5 @@
 ---
-title: Rozšíření funkcí TableAdapter | Dokumentace Microsoftu
+title: Rozšiřování funkcí TableAdapter | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -15,42 +15,42 @@ helpviewer_keywords:
 - TableAdapters, adding functionality
 ms.assetid: 418249c8-c7f3-47ef-a94c-744cb6fe6aaf
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7e14acedeab457df10cc011a94f96d7202972eea
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 19367f812a87d6aa585e123100f1d08144c57ff9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65697898"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672359"
 ---
 # <a name="extend-the-functionality-of-a-tableadapter"></a>Rozšíření funkcí objektů TableAdapter
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Funkce objektu typu TableAdapter můžete rozšířit přidáním kódu do souboru částečné třídy TableAdapter.  
-  
- Při jakékoli změně TableAdapter v se znovu vygeneroval kód, který definuje objektu typu TableAdapter **Návrhář Dataset**, nebo když průvodce změní konfiguraci objektu TableAdapter. Abyste zabránili odstranění při generování objektu TableAdapter kódu, přidejte kód do souboru částečné třídy TableAdapter.  
-  
- Částečné třídy povolit kód pro konkrétní třídu rozdělit mezi několik fyzických souborů. Další informace najdete v tématu [částečné](https://msdn.microsoft.com/library/7adaef80-f435-46e1-970a-269fff63b448) nebo [partial (typ)](https://msdn.microsoft.com/library/27320743-a22e-4c7b-b0b3-53afe3607334).  
-  
-## <a name="locate-tableadapters-in-code"></a>Najít objekty TableAdapter v kódu  
- Zatímco objekty TableAdapter jsou navrženy s **Návrhář Dataset**, generované třídy TableAdapter nejsou vnořené třídy typu <xref:System.Data.DataSet>. Objekty TableAdapter jsou umístěny v oboru názvů na základě názvu objektu TableAdapter přidružený objekt dataset. Například, pokud vaše aplikace obsahuje datovou sadu s názvem `HRDataSet`, objekty TableAdapter by být umístěný ve `HRDataSetTableAdapters` oboru názvů. (Tento vzor dodržuje zásady vytváření názvů: *DatasetName* + `TableAdapters`).  
-  
- V následujícím příkladu se předpokládá TableAdapter s názvem `CustomersTableAdapter`nachází v projektu s `NorthwindDataSet`.  
-  
-#### <a name="to-create-a-partial-class-for-a-tableadapter"></a>Chcete-li vytvořit částečné třídy objektu TableAdapter  
-  
-1. Přidejte novou třídu do projektu tak, že přejdete **projektu** nabídky a vyberete**přidat třídu**.  
-  
-2. Název třídy `CustomersTableAdapterExtended`.  
-  
-3. Vyberte **Přidat**.  
-  
-4. Nahraďte kód správný obor názvů a název dílčí třídy pro váš projekt následujícím způsobem:  
-  
+Můžete roztáhnout funkci TableAdapter přidáním kódu do souboru částečné třídy TableAdapter.
+
+ Kód, který definuje TableAdapter, se znovu vygeneruje, když se provedou jakékoli změny TableAdapter v **Návrhář datových sad**, nebo když Průvodce upraví konfiguraci TableAdapter. Chcete-li zabránit odstranění kódu během obnovování TableAdapter, přidejte kód do souboru částečné třídy TableAdapter.
+
+ Částečné třídy umožňují, aby byl kód pro konkrétní třídu rozdělen mezi více fyzických souborů. Další informace naleznete v tématu [částečný](https://msdn.microsoft.com/library/7adaef80-f435-46e1-970a-269fff63b448) nebo [částečný (typ)](https://msdn.microsoft.com/library/27320743-a22e-4c7b-b0b3-53afe3607334).
+
+## <a name="locate-tableadapters-in-code"></a>Hledání objekty TableAdapter v kódu
+ I když jsou objekty TableAdapter vytvořeny pomocí **Návrhář datových sad**, třídy TableAdapter, které jsou generovány, nejsou vnořené třídy <xref:System.Data.DataSet>. Objekty TableAdapter se nachází v oboru názvů na základě názvu přidružené datové sady TableAdapter. Například pokud vaše aplikace obsahuje datovou sadu s názvem `HRDataSet`, objekty TableAdapter by se nacházela v oboru názvů `HRDataSetTableAdapters`. (Konvence pojmenování se řídí tímto vzorem: *dataset*  +  `TableAdapters`).
+
+ Následující příklad předpokládá, že TableAdapter s názvem `CustomersTableAdapter`is v projektu s `NorthwindDataSet`.
+
+#### <a name="to-create-a-partial-class-for-a-tableadapter"></a>Vytvoření částečné třídy pro TableAdapter
+
+1. Přejděte do nabídky **projekt** a vyberte**Přidat třídu**a přidejte do projektu novou třídu.
+
+2. Pojmenujte `CustomersTableAdapterExtended` třídy.
+
+3. Vyberte **Přidat**.
+
+4. Nahraďte kód správným oborem názvů a názvem částečné třídy pro váš projekt následujícím způsobem:
+
      [!code-csharp[VbRaddataTableAdapters#2](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataTableAdapters/CS/CustomersTableAdapterExtended.cs#2)]
-     [!code-vb[VbRaddataTableAdapters#2](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataTableAdapters/VB/CustomersTableAdapterExtended.vb#2)]  
-  
-## <a name="see-also"></a>Viz také  
+     [!code-vb[VbRaddataTableAdapters#2](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataTableAdapters/VB/CustomersTableAdapterExtended.vb#2)]
+
+## <a name="see-also"></a>Viz také
  [Vyplnění datových sad pomocí objektů TableAdapter](../data-tools/fill-datasets-by-using-tableadapters.md)

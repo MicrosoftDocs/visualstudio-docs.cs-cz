@@ -1,72 +1,69 @@
 ---
-title: 'Postupy: Vytvoření základní textury shaderu | Dokumentace Microsoftu'
+title: 'Postupy: Vytvoření základního shaderu textury | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 5af113fb-6415-4be0-8b23-10fddb10e80a
 caps.latest.revision: 25
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dce20d3e1833659ebfec2e84e6bff7f86dff844e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 59a926ab35e04aa120bc57250c3e5b2712858aa5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438432"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664490"
 ---
 # <a name="how-to-create-a-basic-texture-shader"></a>Postupy: Vytvoření shaderu základní textury
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento dokument popisuje způsob použití návrháře shaderu a orientovaného grafu shaderu jazyka (DGSL) k vytvoření shaderu textury jedním. Tento shader nastaví konečnou barvu přímo na RGB a alfa hodnot, které jsou odebírána data z textury.  
-  
- Tento dokument vysvětluje tyto činnosti:  
-  
-- Odebrání uzlů z grafu shaderu  
-  
-- Přidání uzlů do grafu  
-  
-- Nastavení parametrů shaderu  
-  
-- Nastavení viditelnost parametru  
-  
-- Spojující uzly  
-  
-## <a name="creating-a-basic-texture-shader"></a>Vytvoření shaderu základní textury  
- Basic, jeden textury shaderu můžete implementovat pomocí zápisu hodnoty barev a alfa vzorek textury přímo do konečné výstupní barva.  
-  
- Než začnete, ujistěte se, že **vlastnosti** okno a **nástrojů** jsou zobrazeny.  
-  
-#### <a name="to-create-a-basic-texture-shader"></a>K vytvoření shaderu základní textury  
-  
-1. Vytvořte shader DGSL pracovat. Informace o tom, jak přidat do projektu DGSL shader naleznete v části Začínáme v [návrháře shaderu](../designers/shader-designer.md).  
-  
-2. Odstranit **barva bodu** uzlu. V **vyberte** režimu, vyberte **barva bodu** uzel a pak na panelu nabídek zvolte **upravit**, **odstranit**. Díky tomu místo pro uzel, který je přidán v dalším kroku.  
-  
-3. Přidat **vzorek textury** uzel do grafu. V **nástrojů**v části **textury**vyberte **vzorek textury** a přesuňte jej na návrhovou plochu.  
-  
-4. Přidat **textury koordinovat** uzel do grafu. V **nástrojů**v části **textury**vyberte **textury koordinovat** a přesuňte jej na návrhovou plochu.  
-  
-5. Zvolte textury, který chcete použít. V **vyberte** režimu, vyberte **vzorek textury** uzel a pak v **vlastnosti** okno, určete texturu, kterou chcete použít s použitím **název souboru**  vlastnost.  
-  
-6. Ujistěte se, textury veřejně přístupná. Vyberte **vzorek textury** uzel a pak v **vlastnosti** okno, nastavte **přístup** vlastnost **veřejné**. Nyní textury můžete nastavit od jiného nástroje, jako **editoru modelů**.  
-  
-7. Souřadnice textury se připojte k vzorek textury. V **vyberte** režimu, přesunout **výstup** z terminálu **koordinovat textury** uzlu **UV** z terminálu **textury Ukázka** uzlu. Toto připojení navzorkuje texturu na zadaných souřadnicích.  
-  
-8. Vzorek textury se připojte k konečnou barvu. Přesunout **RGB** z terminálu **vzorek textury** uzlu **RGB** z terminálu **konečnou barvu** uzel a potom ho přesuňte **Alfa** z terminálu **vzorek textury** uzlu **alfa** z terminálu **konečnou barvu** uzlu.  
-  
-   Následující obrázek znázorňuje dokončené shader graf a náhled shaderu použitý pro datovou krychli.  
-  
+Tento dokument ukazuje, jak pomocí Návrháře shaderu a jazyka DGSL (Direct Graph shader) vytvořit shader s jednou texturou. Tento shader nastaví konečnou barvu přímo na hodnoty RGB a alfa, které jsou odebírány z textury.
+
+ Tento dokument znázorňuje tyto aktivity:
+
+- Odebrání uzlů z grafu shaderu
+
+- Přidání uzlů do grafu
+
+- Nastavení parametrů shaderu
+
+- Nastavení viditelnosti parametrů
+
+- Připojování uzlů
+
+## <a name="creating-a-basic-texture-shader"></a>Vytvoření základního shaderu textury
+ Můžete implementovat základní shader s jednou texturou tak, že napíšete barvy a alfa hodnoty vzorku textury přímo do konečné výstupní barvy.
+
+ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nástrojů** .
+
+#### <a name="to-create-a-basic-texture-shader"></a>Vytvoření základního shaderu textury
+
+1. Vytvořte shader DGSL, se kterým chcete pracovat. Informace o tom, jak přidat DGSL shader do projektu, naleznete v části Začínáme v [Návrháři shaderu](../designers/shader-designer.md).
+
+2. Odstraňte uzel **Barva bodu** . V režimu **výběru** vyberte uzel **Barva bodu** a pak na panelu nabídek zvolte možnost **Upravit**, **Odstranit**. Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
+
+3. Přidejte do grafu uzel s **ukázkovým texturou** . V **panelu nástrojů**v části **Textura**vyberte **Ukázka textury** a přesuňte ji na návrhovou plochu.
+
+4. Přidejte uzel **souřadnice textury** do grafu. V **panelu nástrojů**v části **Textura**vyberte možnost **souřadnice textury** a přesuňte ji na plochu návrhu.
+
+5. Vyberte texturu, která se má použít. V režimu **výběru** vyberte uzel **Ukázka textury** a potom v okně **vlastnosti** zadejte texturu, kterou chcete použít, pomocí vlastnosti **filename** .
+
+6. Zpřístupněte texturu jako veřejně přístupný. Vyberte uzel **Ukázka textury** a potom v okně **vlastnosti** nastavte vlastnost **přístup** na **veřejné**. Nyní můžete nastavit texturu z jiného nástroje, jako je například **Editor modelů**.
+
+7. Připojte souřadnice textury k ukázce textury. V režimu **výběru** přesuňte **výstupní** terminál uzlu **souřadnice textury** do **UV** terminálu uzlu **ukázky textury** . Toto připojení vzorkuje texturu na zadaných souřadnicích.
+
+8. Připojte ukázku textury k konečné barvě. Přesuňte terminál **RGB** uzlu **vzorku textury** do terminálu **RGB** **finálního uzlu barvy** a pak přesuňte terminál **alfa** uzlu **vzorku textury** do terminálu **alfa** **konečné barvy.** uzel.
+
+   Následující ilustrace znázorňuje dokončený graf shaderu a náhled shaderu, který se použije pro datovou krychli.
+
 > [!NOTE]
-> Na tomto obrázku rovině slouží jako tvar náhled a byl zadán lépe demonstruje účinek shader textury.  
-  
- ![Graf shaderu a náhled vlivu](../designers/media/digit-texture-effect.png "číslice textury efekt")  
-  
- Určité tvary můžou poskytovat lepší verze Preview pro některé shadery. Další informace o tom, jak shadery v Návrháři shaderu ve verzi preview, najdete v části [návrháře shaderu](../designers/shader-designer.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Postupy: Použití shaderu na 3D Model](../designers/how-to-apply-a-shader-to-a-3-d-model.md)   
- [Editor obrázků](../designers/image-editor.md)   
- [Návrhář shaderů](../designers/shader-designer.md)   
- [Uzly návrháře shaderů](../designers/shader-designer-nodes.md)
+> Na tomto obrázku je jako obrazec náhledu použita rovina a je určena textura, aby lépe ukázala účinek shaderu.
+
+ ![Graf shaderu a náhled jeho efektu](../designers/media/digit-texture-effect.png "Číslice – efekt textury")
+
+ Některé tvary mohou pro některé shadery poskytnout lepší náhled. Další informace o tom, jak zobrazit shadery v Návrháři shaderu, najdete v tématu [Shader Designer](../designers/shader-designer.md) .
+
+## <a name="see-also"></a>Viz také
+ [Postupy: použití shaderu na](../designers/how-to-apply-a-shader-to-a-3-d-model.md) [uzly návrháře](../designers/shader-designer-nodes.md) shaderu návrháře [shaderu](../designers/shader-designer.md) v [editoru obrazu](../designers/image-editor.md) na 3D modelu

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání komentářů do pracovního postupu v Návrháři pracovních postupů | Dokumentace Microsoftu'
+title: 'Postupy: Přidání komentářů k pracovnímu postupu v Návrhář postupu provádění | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -10,83 +10,83 @@ f1_keywords:
 ms.assetid: 9aa0e8d6-8129-4438-8389-d460611581a7
 caps.latest.revision: 7
 author: steved0x
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 507bb70539019646f57f0aa9267573429d3fa202
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: d775c79cc7abdf6a66b1174ae625ca468f0764fc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433564"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663453"
 ---
-# <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>Postupy: Přidání komentářů do pracovního postupu v návrháři postupu provádění
-Pro usnadnění vytváření rozsáhlejších, složitějších pracovních postupů, [!INCLUDE[net_v45](../includes/net-v45-md.md)] umožňuje vývojářům přidat poznámky pro následující typy položek v Návrháři:  
-  
-- <xref:System.Activities.Activity>  
-  
-- <xref:System.Activities.Statements.State>  
-  
-- <xref:System.Activities.Statements.Transition>  
-  
-- Třídy odvozené od <xref:System.Activities.Statements.FlowNode>  
-  
-- <xref:System.Activities.Variable>  
-  
-- <xref:System.Activities.Argument>  
-  
+# <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>Postupy: Přidání komentářů k pracovnímu postupu v Návrhář postupu provádění
+Aby bylo možné vytvořit větší a složitější pracovní postupy, [!INCLUDE[net_v45](../includes/net-v45-md.md)] umožňuje vývojářům přidávat poznámky k následujícím typům položek v Návrháři:
+
+- <xref:System.Activities.Activity>
+
+- <xref:System.Activities.Statements.State>
+
+- <xref:System.Activities.Statements.Transition>
+
+- Třídy odvozené od <xref:System.Activities.Statements.FlowNode>
+
+- <xref:System.Activities.Variable>
+
+- <xref:System.Activities.Argument>
+
 > [!IMPORTANT]
-> Obsah poznámky jsou uložené jako prostý text do souboru XAML přidružené pracovní postup a může potenciálně číst jiní. Buďte opatrní při vstupu do citlivých informací do poznámky.  
-  
-### <a name="adding-an-annotation-to-an-activity-in-the-designer"></a>Přidání komentáře k aktivitě v Návrháři  
-  
-1. V Návrháři postupu provádění, klikněte pravým tlačítkem na položku v pracovním postupu návrháře a vyberte **poznámky**, **přidat poznámku**.  
-  
-2. Přidáte text poznámky v poskytnutém prostoru.  
-  
-3. Položka se zobrazí ikona poznámky. Ukazatel myši na ikonu poznámky se zobrazí text poznámky.  
-  
-     ![Pořadí aktivit znázorňující anotace](../workflow-designer/media/annotation.png "poznámky")  
-  
-### <a name="displaying-an-annotation-in-an-activitys-designer"></a>Zobrazení Poznámka v Návrháři aktivity  
-  
-1. Návrhář aktivity, který má anotaci zobrazení se mimo aktivitu, klikněte **Pin** ikonu pro úpravy poznámky.  
-  
-2. Poznámka se zobrazí v Návrháři aktivity. Na snímku obrazovky níže zobrazí se v Návrháři aktivity poznámky "Spuštění aktivity v pracovním postupu".  
-  
-     ![Poznámky se zobrazí v Návrháři aktivit](../workflow-designer/media/annotationindesigner.png "AnnotationInDesigner")  
-  
-3. Zobrazit poznámky mimo Návrhář aktivity, při najetí myší nad oblastí poznámky v Návrháři aktivity a klikněte na tlačítko **Odepnout** ikonu  
-  
-     ![Poznámka zobrazena mimo aktivity designe](../workflow-designer/media/annotationoutsidedesigner.png "AnnotationOutsideDesigner")  
-  
-### <a name="showing-or-hiding-all-annotations"></a>Zobrazení nebo skrytí všechny poznámky  
-  
-1. Klikněte pravým tlačítkem na aktivitu, která má anotaci. Vyberte **poznámky**, **zobrazit všechny poznámky**.  
-  
-2. Všechny poznámky se zobrazí v Návrháři aktivity.  
-  
-3. Pokud chcete zobrazit všechny poznámky mimo návrháře aktivity, klikněte pravým tlačítkem na aktivitu a vyberte **poznámky**, **skrýt všechny poznámky**.  
-  
-### <a name="editing-or-deleting-an-annotation-for-an-activity"></a>Úpravy nebo odstranění poznámky pro aktivitu  
-  
-1. Klikněte pravým tlačítkem na aktivitu, která má anotaci.  
-  
-2. Vyberte **poznámky**, **upravit poznámku** nebo **odstranit poznámku**.  
-  
-3. Poznámka se po otevření k úpravám nebo odstraněn.  
-  
-4. Pokud chcete odstranit všechny poznámky najednou, klikněte pravým tlačítkem na pracovního postupu návrháře a vyberte **anotace**, **odstranit všechny poznámky**.  
-  
-### <a name="adding-editing-and-deleting-an-annotation-for-a-variable-or-argument"></a>Přidání, úpravy nebo odstranění poznámky pro proměnné nebo argumentu.  
-  
-1. Klikněte pravým tlačítkem na proměnnou nebo argument a vyberte Přidat poznámky.  
-  
-2. Zadejte text poznámky. Ikona poznámky se zobrazí proměnné nebo argumentu.  
-  
-3. Klikněte pravým tlačítkem myši na proměnnou nebo argument, který má anotaci. Vyberte Upravit poznámku.  
-  
-4. Poznámka se otevře pro úpravy.  
-  
-5. Klikněte pravým tlačítkem myši na proměnnou nebo argument, který má anotaci. Vyberte možnost odstranit poznámku.  
-  
+> Obsah poznámky je uložen jako prostý text do souboru XAML přidruženého k pracovnímu postupu a může je potenciálně číst jiné. Buďte opatrní při zadávání citlivých informací do poznámky.
+
+### <a name="adding-an-annotation-to-an-activity-in-the-designer"></a>Přidání poznámky k aktivitě v Návrháři
+
+1. V Návrháři pracovního postupu klikněte pravým tlačítkem myši na položku v Návrháři pracovních postupů a vyberte **poznámky**, **Přidat poznámku**.
+
+2. Přidá text poznámky v zadaném prostoru.
+
+3. Položka zobrazí ikonu poznámky. Po najetí myší na ikonu poznámky se zobrazí text poznámky.
+
+     ![Aktivita sekvence znázorňující anotaci](../workflow-designer/media/annotation.png "Poznámka")
+
+### <a name="displaying-an-annotation-in-an-activitys-designer"></a>Zobrazení poznámky v Návrháři aktivity
+
+1. V Návrháři aktivity, který má poznámku zobrazenou mimo aktivitu, klikněte na ikonu **připnutí** ve formuláři pro poznámky.
+
+2. Poznámka se zobrazí v Návrháři aktivity. Na následujícím snímku obrazovky se v Návrháři aktivity zobrazí poznámka "spuštění aktivity v pracovním postupu".
+
+     ![Poznámka zobrazená v Návrháři aktivit](../workflow-designer/media/annotationindesigner.png "AnnotationInDesigner")
+
+3. Chcete-li zobrazit anotaci mimo návrháře aktivity, najeďte myší na oblast poznámky v Návrháři aktivity a klikněte na ikonu **odepnout**
+
+     ![Anotace zobrazená mimo návrh aktivity](../workflow-designer/media/annotationoutsidedesigner.png "AnnotationOutsideDesigner")
+
+### <a name="showing-or-hiding-all-annotations"></a>Zobrazení nebo skrytí všech poznámek
+
+1. Klikněte pravým tlačítkem na aktivitu, která má anotaci. Vyberte **poznámky**, **Zobrazit všechny poznámky**.
+
+2. Všechny poznámky se zobrazí v Návrháři aktivity.
+
+3. Chcete-li zobrazit všechny poznámky mimo návrháře aktivity, klikněte pravým tlačítkem myši na aktivitu a vyberte možnost **poznámky**, **Skrýt všechny poznámky**.
+
+### <a name="editing-or-deleting-an-annotation-for-an-activity"></a>Úprava nebo odstranění poznámky pro aktivitu
+
+1. Klikněte pravým tlačítkem na aktivitu, která má anotaci.
+
+2. Vyberte **poznámky**, **upravte poznámku** nebo **odstraňte anotaci**.
+
+3. Poznámka se otevře pro úpravy nebo odstranění.
+
+4. Pokud chcete odstranit všechny poznámky najednou, klikněte pravým tlačítkem myši na návrháře pracovních postupů a vyberte **Anotace**( **Odstranit všechny poznámky**).
+
+### <a name="adding-editing-and-deleting-an-annotation-for-a-variable-or-argument"></a>Přidání, úpravy a odstranění poznámky pro proměnnou nebo argument
+
+1. Klikněte pravým tlačítkem na proměnnou nebo argument a vyberte Přidat poznámku.
+
+2. Zadejte text poznámky. Proměnná nebo argument zobrazí ikonu poznámky.
+
+3. Klikněte pravým tlačítkem myši na proměnnou nebo argument s poznámkou. Vyberte Upravit poznámku.
+
+4. Poznámka se otevře pro úpravy.
+
+5. Klikněte pravým tlačítkem myši na proměnnou nebo argument s poznámkou. Vyberte možnost Odstranit poznámku.
+
 6. Poznámka se odstraní.

@@ -1,42 +1,42 @@
 ---
-title: Možnosti, textový Editor, F#, funkce CodeLens
+title: Možnosti, textový editor, F#, CodeLens
 ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.F%2523.CodeLens
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0799b06331fd83614b578c171e5f100d651f4952
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2c1182c40987638cc871a877443db0357f962f53
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778551"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666243"
 ---
-# <a name="options-text-editor-f-codelens"></a>Možnosti, textový Editor, F#, funkce CodeLens
+# <a name="options-text-editor-f-codelens"></a>Možnosti, textový editor, F#, CodeLens
 
-Použití **CodeLens** upravit nastavení funkce CodeLens textového editoru pro stránky možností F#. Chcete-li získat přístup k této stránce Možnosti, zvolte **nástroje** > **možnosti**a klikněte na tlačítko **textový Editor**  >  **F#**  >  **CodeLens**.
+Pomocí stránky možnosti **CodeLens** můžete upravit nastavení textového editoru CodeLens pro F#. Chcete-li získat přístup k této stránce Možnosti, zvolte **nástroje**  > **Možnosti**a pak zvolte**F#** **textový editor**  >   > **CodeLens**.
 
-## <a name="codelens"></a>Funkce CodeLens
+## <a name="codelens"></a>CodeLens
 
-- **Povolit funkci CodeLens (experimentální)**
+- **Povolit CodeLens (experimentální)**
 
-   Pokud je vybraná tato možnost, interaktivní poznámky se zobrazí v kódu, který vám umožní snadno najít odkazy a změny kódu, propojené chyby, pracovní položky, revize kódu a testy jednotek.
+   Je-li vybrána tato možnost, jsou interaktivní poznámky zobrazeny v kódu, který umožňuje snadno vyhledat odkazy a změny kódu, propojené chyby, pracovní položky, revize kódu a testování částí.
 
 - **Použití barev v poznámkách**
 
-   Toto políčko zaškrtnuto, zobrazit poznámky CodeLens barevně snadno rozlišit položky sestavy CodeLens.
+   Zaškrtnutím tohoto políčka zobrazíte CodeLens poznámky v barvách, abyste mohli snadno odlišit položky CodeLens sestavy.
 
-- **Zobrazit poznámky a přímo namísto nad řádku**
+- **Zobrazit poznámky přímo místo nad čárou**
 
-   Ve výchozím nastavení poznámky CodeLens se zobrazí nad řádek kódu. Zaškrtněte toto políčko, aby poznámky se zobrazí napravo od kódu místo nad ním.
+   Ve výchozím nastavení se poznámky CodeLens zobrazují přes řádek kódu. Zaškrtněte toto políčko, pokud chcete, aby se poznámky zobrazovaly napravo od kódu místo nad ním.
 
 - **Předpona poznámky**
 
-   Můžete změnit výchozí předponu, která se používá pro poznámky.
+   Můžete změnit výchozí předponu, která se použije pro poznámky.
 
 ## <a name="see-also"></a>Viz také:
 

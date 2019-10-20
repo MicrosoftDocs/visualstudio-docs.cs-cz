@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Určení ikony aplikace (Visual Basic, C#) | Dokumentace Microsoftu'
+title: 'Postupy: určení ikony aplikace (Visual Basic, C#) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,40 +10,37 @@ helpviewer_keywords:
 - application icons [Visual Studio]
 ms.assetid: ad8e14ed-adc2-45b6-a0be-818b16d5616f
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6f4502bcc439d55e36dad43add4c5b9852be21bd
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 136fd00bea736af0f0c589c28eae597ff8fd558e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65685378"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670693"
 ---
 # <a name="how-to-specify-an-application-icon-visual-basic-c"></a>Postupy: Určení ikony aplikace (Visual Basic, C#)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`Icon` Vlastnosti projektu určuje soubor ikony (.ico), který se zobrazí pro kompilovanou aplikaci v Průzkumníku souborů a na hlavním panelu Windows.  
-  
- `Icon` Vlastnost je přístupná v **aplikace** podokně **Návrháře projektu**; obsahuje seznam ikon, které byly přidány do projektu jako prostředky nebo jako soubory obsahu.  
-  
+Vlastnost `Icon` pro projekt určuje soubor ikony (. ico), který se zobrazí pro kompilovaná aplikace v Průzkumníkovi souborů a na hlavním panelu systému Windows.
+
+ K vlastnosti `Icon` lze přistupovat v podokně **aplikace** v **Návrháři projektu**; obsahuje seznam ikon, které byly přidány do projektu jako prostředky nebo jako soubory obsahu.
+
 > [!NOTE]
-> Jakmile nastavíte vlastnost ikona pro aplikace, může také nastavena `Icon` vlastnosti každého **okno** nebo **formuláře** v aplikaci. Informace o okně ikony pro samostatné aplikace Windows Presentation Foundation (WPF), najdete v tématu <xref:System.Windows.Window.Icon%2A> vlastnost.  
-  
-### <a name="to-specify-an-application-icon"></a>K určení ikony aplikace  
-  
-1. V **Průzkumníka řešení**, zvolte uzel projektu (ne **řešení** uzlu).  
-  
-2. V panelu nabídky zvolte **projektu**, **vlastnosti**.  
-  
-3. Když **Návrháře projektu** se zobrazí, zvolte **aplikace** kartu.  
-  
-4. **(Visual Basic)**  v **ikonu** , zvolte soubor ikony (ICO).  
-  
-     **C#** téměř **ikonu** klikněte na položku  **\<Procházet... >** tlačítko a pak přejděte do umístění souboru s ikonou, která chcete.  
-  
-## <a name="see-also"></a>Viz také  
- [Stránka aplikace, Návrhář projektu (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)   
- [Stránka aplikace, Návrhář projektu (C#)](../ide/reference/application-page-project-designer-csharp.md)   
- [Správa vlastností aplikace](../ide/application-properties.md)  
- [Postupy: Přidání nebo odebrání prostředků](https://msdn.microsoft.com/7b77bc06-3952-4799-b029-def3f8f7f88d)
+> Až nastavíte vlastnost Icon pro aplikaci, můžete také nastavit vlastnost `Icon` každého **okna** nebo **formuláře** v aplikaci. Informace o ikonách okna pro samostatné aplikace Windows Presentation Foundation (WPF) najdete v tématu <xref:System.Windows.Window.Icon%2A> Property.
+
+### <a name="to-specify-an-application-icon"></a>Určení ikony aplikace
+
+1. V **Průzkumník řešení**vyberte uzel projektu (ne uzel **řešení** ).
+
+2. V panelu nabídek vyberte položku **projekt**, **vlastnosti**.
+
+3. Když se zobrazí **Návrhář projektu** , vyberte kartu **aplikace** .
+
+4. **(Visual Basic)** V seznamu **ikona** vyberte soubor ikony (. ico).
+
+     **C#** Poblíž seznamu **ikona** vyberte **\<Browse... >** tlačítko a potom vyhledejte umístění souboru ikony, který chcete.
+
+## <a name="see-also"></a>Viz také
+ [Stránka aplikace, stránka Návrháře projektu (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md) [, Návrhář projektu (C#)](../ide/reference/application-page-project-designer-csharp.md) [Správa vlastností aplikace](../ide/application-properties.md) [Postupy: Přidání nebo odebrání prostředků](https://msdn.microsoft.com/7b77bc06-3952-4799-b029-def3f8f7f88d)

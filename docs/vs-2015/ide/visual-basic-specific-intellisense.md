@@ -1,5 +1,5 @@
 ---
-title: Specifické pro jazyk Visual Basic IntelliSense | Dokumentace Microsoftu
+title: IntelliSense – konkrétní Visual Basic | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,47 +9,47 @@ helpviewer_keywords:
 - IntelliSense [Visual Studio], Visual Basic
 ms.assetid: 4dec8753-05e5-4f74-b304-5f8c4ed8723b
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f471ed62a3bb53c4779c0b2d80315f10bfc85993
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: c6895abd85a4394e4ddcaebcd6f09bc0a39936cb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65696483"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663021"
 ---
 # <a name="visual-basic-specific-intellisense"></a>Specifické pro jazyk Visual Basic IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Editor zdrojového kódu jazyka Visual Basic nabízí následující funkce IntelliSense:  
-  
-- Syntaxe tipy  
-  
-     Syntaxe tipy zobrazení syntaxe příkazu, který píšete. To je užitečné pro příkazy, jako [Declare](https://msdn.microsoft.com/library/d3f21fb0-b804-4c99-97ed-583b23894cf1).  
-  
-## <a name="automatic-completion"></a>Automatické dokončování  
-  
-- Dokončení různých klíčových slov  
-  
-   Pokud zadáte například `goto` a mezerou, technologie IntelliSense zobrazí seznam popisků definované v rozevírací nabídce. Zahrnout další podporované klíčová slova `Exit`, `Implements`, `Option`, a `Declare`.  
-  
-- Dokončení `Enum` a `Boolean`  
-  
-   Pokud příkaz bude odkazovat na člena výčtu, technologie IntelliSense zobrazí seznam členů `Enum`. Pokud příkaz bude odkazovat `Boolean`, technologie IntelliSense se zobrazí rozevírací nabídky true na false.  
-  
-  Dokončení může být ve výchozím nastavení vypnuta odznačením **automatický seznam členů** z **Obecné** stránku vlastností v **jazyka Visual Basic** složky.  
-  
-  Dokončení lze vyvolat ručně vyvoláním seznam členů, úplné slovo nebo ALT + Šipka vpravo. Další informace najdete v tématu [pomocí technologie IntelliSense](../ide/using-intellisense.md).  
-  
-## <a name="intellisense-in-zone"></a>IntelliSense in Zone  
- Technologie IntelliSense v zóně pomáhá vývojáře jazyka Visual Basic, kteří potřebují nasazovat aplikace prostřednictvím [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] a jsou omezeny na nastavení částečným vztahem důvěryhodnosti. Tuto funkci:  
-  
-- Umožní vám vybrat oprávnění, která bude aplikace spuštěna s.  
-  
-- Rozhraní API zobrazení ve vybrané jako dostupné v seznamu členů zóny a zobrazit rozhraní API, která vyžadují další oprávnění jako nedostupné.  
-  
-  Další informace najdete v tématu [Code Access Security for ClickOnce Applications](../deployment/code-access-security-for-clickonce-applications.md).  
-  
-## <a name="see-also"></a>Viz také  
+Visual Basic Editor zdrojového kódu nabízí následující funkce technologie IntelliSense:
+
+- Tipy k syntaxi
+
+     V popisech syntaxe se zobrazuje syntaxe příkazu, který píšete. To je užitečné pro příkazy, jako je například [Declare](https://msdn.microsoft.com/library/d3f21fb0-b804-4c99-97ed-583b23894cf1).
+
+## <a name="automatic-completion"></a>Automatické dokončování
+
+- Dokončení u různých klíčových slov
+
+   Například pokud zadáte `goto` a mezeru, IntelliSense zobrazí v rozevírací nabídce seznam definovaných popisků. Mezi další podporovaná klíčová slova patří `Exit`, `Implements`, `Option` a `Declare`.
+
+- Dokončení při `Enum` a `Boolean`
+
+   Pokud příkaz bude odkazovat na člen výčtu, IntelliSense zobrazí seznam členů `Enum`. Když příkaz bude odkazovat na `Boolean`, IntelliSense zobrazí rozevírací nabídku true-false.
+
+  Dokončení může být vypnuto ve výchozím nastavení tím, že se na stránce **Obecné** vlastnosti ve složce **Visual Basic** odhlásí **Automatické seznam členů** .
+
+  Dokončení můžete vyvolat ručně vyvoláním členů seznamu, kompletního slova nebo ALT + šipka vpravo. Další informace najdete v tématu [použití technologie IntelliSense](../ide/using-intellisense.md).
+
+## <a name="intellisense-in-zone"></a>IntelliSense v zóně
+ Technologie IntelliSense v zóně pomáhá Visual Basic vývojářům, kteří potřebují nasazovat aplikace přes [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] a jsou omezené na nastavení částečné důvěryhodnosti. Tato funkce:
+
+- Umožňuje zvolit oprávnění, se kterými bude aplikace běžet.
+
+- Zobrazit rozhraní API ve zvolené zóně jako dostupné v seznamech členů a zobrazit rozhraní API, která vyžadují další oprávnění jako nedostupná.
+
+  Další informace najdete v tématu [zabezpečení přístupu kódu pro aplikace ClickOnce](../deployment/code-access-security-for-clickonce-applications.md).
+
+## <a name="see-also"></a>Viz také
  [Používání atributu IntelliSense](../ide/using-intellisense.md)

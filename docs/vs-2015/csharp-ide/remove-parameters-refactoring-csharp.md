@@ -1,5 +1,5 @@
 ---
-title: Refaktoring (C#) pro odebrání parametrů | Dokumentace Microsoftu
+title: Refaktoring pro odebrání parametrůC#() | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,80 +14,80 @@ helpviewer_keywords:
 - Remove Parameters refactoring [C#]
 ms.assetid: f4fc3265-0ef8-4398-a691-c338178697a6
 caps.latest.revision: 24
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 40a884fe2ae6aaf73256d8edbcbd083a193b0342
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 40c373c3575f007952143e29c8dfc2cfac3d080f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444618"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667495"
 ---
 # <a name="remove-parameters-refactoring-c"></a>Refaktoring pro odebrání parametrů (C#)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`Remove Parameters` je operace refaktoringu kódu, která poskytuje snadný způsob, jak odebrat parametry z metod, indexerů nebo delegátů. Odebrat parametry změny deklarace; kteroukoli lokalitou, kdy je člen volán odebere se tak, aby odrážely novou deklaraci parametru.  
-  
- Proveďte operaci odebrání parametrů tak, že první umístíte kurzor na metodu, indexer nebo delegáta. Zatímco ukazatel je v umístění, která se má vyvolat odebrat `Parameters` operace, klikněte na tlačítko **Refaktorovat** nabídky, stiskněte klávesovou zkratku, nebo v místní nabídce vyberte příkaz.  
-  
+`Remove Parameters` je operace refaktoringu, která poskytuje snadný způsob, jak odebrat parametry z metod, indexerů nebo delegátů. Odebrat parametry změna deklarace; v jakémkoli umístění, kde je člen volán, je parametr odebrán, aby odrážel novou deklaraci.
+
+ Operaci odebrat parametry provedete tak, že nejprve umístíte kurzor na metodu, indexer nebo delegáta. Když je kurzor na pozici, chcete-li vyvolat operaci odebrání `Parameters`, klikněte na nabídku **refaktoring** , stiskněte klávesovou zkratku nebo vyberte příkaz z místní nabídky.
+
 > [!NOTE]
-> Nemůžete odebrat první parametr metody rozšíření.  
-  
-### <a name="to-remove-parameters"></a>Chcete-li odebrat parametry  
-  
-1. Vytvořte konzolovou aplikaci s názvem `RemoveParameters`a potom nahraďte `Program` následujícím kódem.  
-  
-    ```csharp  
-    class A  
-    {  
-        // Invoke on 'A'.  
-        public A(string s, int i) { }  
-    }  
-  
-    class B  
-    {  
-        void C()  
-        {  
-            // Invoke on 'A'.  
-            A a = new A("a", 2);  
-        }  
-    }  
-    ```  
-  
-2. Umístěte kurzor na metodu `A`, buď v deklaraci metody nebo volání metody.  
-  
-3. Z **Refaktorovat** nabídce vyberte možnost **odebrání parametrů** zobrazíte **odebrání parametrů** dialogové okno.  
-  
-     Můžete také zadat klávesovou zkratku CTRL + R, V zobrazení **odebrání parametrů** dialogové okno.  
-  
-     Můžete také kliknout pravým tlačítkem kurzor, přejděte na **Refaktorovat**a potom klikněte na tlačítko **odebrání parametrů** zobrazíte **odebrání parametrů** dialogové okno.  
-  
-4. Použití **parametry** pole, umístěte kurzor na `int i`a potom klikněte na tlačítko **odebrat**.  
-  
-5. Klikněte na **OK**.  
-  
-6. V **náhled změn – odebrání parametrů** dialogové okno, klikněte na tlačítko **použít**.  
-  
-## <a name="remarks"></a>Poznámky  
- Odebrat parametry z deklarace metody nebo volání metody. Umístěte kurzor do pole Název metody prohlášení nebo delegáta a odebrání Parametry vyvolání.  
-  
+> První parametr v metodě rozšíření nelze odebrat.
+
+### <a name="to-remove-parameters"></a>Odebrání parametrů
+
+1. Vytvořte konzolovou aplikaci s názvem `RemoveParameters` a pak `Program` nahraďte následujícím kódem.
+
+    ```csharp
+    class A
+    {
+        // Invoke on 'A'.
+        public A(string s, int i) { }
+    }
+
+    class B
+    {
+        void C()
+        {
+            // Invoke on 'A'.
+            A a = new A("a", 2);
+        }
+    }
+    ```
+
+2. Umístěte kurzor na metodu `A`, a to buď v deklaraci metody, nebo v volání metody.
+
+3. V nabídce **refaktoring** vyberte možnost **Odebrat parametry** a zobrazí se dialogové okno **Odebrat parametry** .
+
+     Můžete také zadat klávesovou zkratku CTRL + R, V pro zobrazení dialogového okna **Odebrat parametry** .
+
+     Můžete také kliknout pravým tlačítkem myši na kurzor, Ukázat na **Refaktorovat**a kliknout na příkaz **Odebrat** parametry. zobrazí se dialogové okno **Odebrat parametry** .
+
+4. Pomocí pole **Parameters** umístěte kurzor na `int i` a pak klikněte na **Odebrat**.
+
+5. Klikněte na tlačítko **OK**.
+
+6. V **náhledu změn – dialogové okno odebrat parametry** klikněte na **použít**.
+
+## <a name="remarks"></a>Poznámky
+ Můžete odebrat parametry z deklarace metody nebo volání metody. Umístěte kurzor do deklarace metody nebo název delegáta a zavolejte odebrat parametry.
+
 > [!CAUTION]
-> Odeberte parametry umožňuje odebrat parametr, který se odkazuje v těle člena, ale neodebere odkazy na tento parametr v těle metody. Do kódu, což může představovat chyby sestavení. Můžete však použít **náhled změn** dialogové okno zrevidujete váš kód před provedením operace refaktoringu názvů.  
-  
- Pokud parametr odebírá se změní při volání metody, pokud chcete odebrání parametru také odebrat úpravy. Například pokud volání metody se změnil z  
-  
-```csharp  
-MyMethod(param1++, param2);  
-```  
-  
- až  
-  
-```csharp  
-MyMethod(param2);  
-```  
-  
- operace refaktoringu `param1` nesmí být zvýšena.  
-  
-## <a name="see-also"></a>Viz také  
+> Příkaz Remove Parameters umožňuje odebrat parametr, na který je odkazováno v těle člena, ale neodebere odkazy na tento parametr v těle metody. To může vést k chybám sestavení v kódu. Můžete však použít dialogové okno **Náhled změn** ke kontrole kódu před provedením operace refaktoringu.
+
+ Pokud je odebraný parametr změněn během volání metody, odebrání parametru odstraní také změnu. Například pokud je volání metody změněno z
+
+```csharp
+MyMethod(param1++, param2);
+```
+
+ až
+
+```csharp
+MyMethod(param2);
+```
+
+ operace refaktoringu `param1` nebude zvýšena.
+
+## <a name="see-also"></a>Viz také
  [Refaktoring (C#)](../csharp-ide/refactoring-csharp.md)

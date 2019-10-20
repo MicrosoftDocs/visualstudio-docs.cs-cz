@@ -6,15 +6,15 @@ ms.technology: vs-ide-test
 ms.topic: troubleshooting
 ms.assetid: 61c7e44d-2780-4df5-9bcb-49e40c1152fc
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b2efecdefb693653ff9916e798d1a11afe44e4a5
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 4eee70b3184496e8dbb7d784501a5cac2aac00ee
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416910"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672119"
 ---
 # <a name="troubleshooting-code-analysis-issues"></a>Řešení potíží s Analýzou kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,7 +25,7 @@ Toto téma obsahuje informace o řešení potíží pro následující problémy
 
 ## <a name="ChildRuleSetChangesInPreviousVersions"></a>Změny v sadě pravidel sady Visual Studio 2010 se neprojeví v předchozích verzích sady Visual Studio.
 
-Když vytvoříte sadu pravidel v [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] , která obsahuje podřízenou sadu pravidel, změna podřízené sady pravidel se nemusí použít při spuštění analýzy kódu na počítačích, které používají starší verzi sady Visual Studio. Chcete-li tento problém vyřešit, je nutné vynutit přepsání sady nadřazených pravidel, což je sada pravidel, která obsahuje sadu podřízených pravidel.
+Když vytvoříte sadu pravidel v [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)], která obsahuje sadu podřízených pravidel, změna podřízené sady pravidel se nemusí použít při spuštění analýzy kódu na počítačích, které používají starší verzi sady Visual Studio. Chcete-li tento problém vyřešit, je nutné vynutit přepsání sady nadřazených pravidel, což je sada pravidel, která obsahuje sadu podřízených pravidel.
 
 1. Otevřete nadřazenou sadu pravidel v [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].
 

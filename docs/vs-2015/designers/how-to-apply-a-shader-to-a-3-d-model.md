@@ -1,49 +1,46 @@
 ---
-title: 'Postupy: Použití shaderu na 3D Model | Dokumentace Microsoftu'
+title: 'Postupy: použití shaderu na 3D model | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: a3877bd6-abd8-4a9d-842c-6848b6c2f335
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a55c1e71242e59c04066c09efa2375c4bafc485b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 15d88f52b3af3a3e4502c618280107a882761259
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68156327"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664605"
 ---
 # <a name="how-to-apply-a-shader-to-a-3-d-model"></a>Postupy: Použití shaderu na 3D model
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento dokument popisuje způsob použití Editoru modelů pro použití orientovaného grafu Shader Language (DGSL) shaderu na 3D model.  
-  
- Tento dokument ukazuje, tato aktivita:  
-  
-- Použití shaderu na 3D model  
-  
-## <a name="applying-a-shader-to-a-3-d-model"></a>Použití shaderu na 3D model  
- Použít efekt shaderu na 3D model nabízí zajímavé vzhled.  
-  
- Než začnete, ujistěte se, že **vlastnosti** se zobrazí okno.  
-  
-#### <a name="to-apply-a-shader-to-a-3-d-model"></a>K použití shaderu na 3D model  
-  
-1. Začněte s 3D scény, který obsahuje jeden nebo více modelů. Pokud nemáte k dispozici vhodný 3D scény, vytvořit jak je popsáno v [jak: Vytvoření základního 3D modelu](../designers/how-to-create-a-basic-3-d-model.md). Také musíte mít DGSL shader, který můžete použít pro model. Pokud nemáte k dispozici vhodný shaderu, vytvořit jak je popsáno v [jak: Vytvoření shaderu základní barvy](../designers/how-to-create-a-basic-color-shader.md) a ujistěte se, že jste jste ho uložili do souboru předtím, než budete pokračovat.  
-  
-2. V **vyberte** režimu, vybrat model, který chcete použít shaderu na a pak v **vlastnosti** okno v **Filename** vlastnost **efekt**  skupiny vlastností zadejte DGSL shader, který má být použita k modelu.  
-  
-   Tady je model, který je použit efekt základní barvy:  
-  
-   ![3&#45;scény D, která demonstruje účinek základní barvy](../designers/media/digit-3d-model-effect.png "číslice 3D modelu efekt")  
-  
-   Po použití shaderu na model, lze jej otevřít v Návrháři shaderu tak, že vyberete model a pak v **vlastnosti** okno v **(rozšířené)** vlastnost **efekt**skupiny vlastností, vyberete symbol tří teček ( **...** ) tlačítko.  
-  
-## <a name="see-also"></a>Viz také  
- [Postupy: Vytvoření základního 3D modelu](../designers/how-to-create-a-basic-3-d-model.md)   
- [Postupy: Vytvoření shaderu základní barvy](../designers/how-to-create-a-basic-color-shader.md)   
- [Editor modelů](../designers/model-editor.md)   
- [Návrhář shaderů](../designers/shader-designer.md)
+Tento dokument ukazuje, jak použít Editor modelů k použití shaderu DGSL (Direct Graph shader Language) na 3D model.
+
+ Tento dokument ukazuje tuto aktivitu:
+
+- Použití shaderu na 3D model
+
+## <a name="applying-a-shader-to-a-3-d-model"></a>Použití shaderu na 3D model
+ Můžete použít efekt shaderu na 3D model a dát mu tak zajímavý vzhled.
+
+ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** .
+
+#### <a name="to-apply-a-shader-to-a-3-d-model"></a>Použití shaderu na 3D model
+
+1. Začněte 3D scénou, která obsahuje jeden nebo více modelů. Pokud nemáte vhodnou 3D scénu, vytvořte ji tak, jak je popsáno v tématu [How to: Create a Basic 3D model](../designers/how-to-create-a-basic-3-d-model.md). Také musíte mít DGSL shader, který můžete použít na model. Pokud nemáte vhodný shader, vytvořte ho tak, jak je popsáno v tématu [How to: Create a Basic Color shader](../designers/how-to-create-a-basic-color-shader.md) , a ujistěte se, že jste ho uložili do souboru, než budete pokračovat.
+
+2. V režimu **výběru** vyberte model, na který chcete shader použít, a poté v okně **vlastnosti** v poli vlastnost **filename** skupiny vlastností **efekt** zadejte DGSL shader, který chcete použít pro model.
+
+   Zde je model, který má použit základní barevný efekt:
+
+   ![3D&#45;scéna, která zobrazuje základní barevný efekt](../designers/media/digit-3d-model-effect.png "Číslice – prostorový model – efekt")
+
+   Po použití shaderu na model jej můžete otevřít v Návrháři shaderu, a to tak, že vyberete model a potom v okně **vlastnosti** ve vlastnosti **(rozšířené)** skupiny vlastností **efekt** zvolíte tlačítko se třemi tečkami ( **...** ).
+
+## <a name="see-also"></a>Viz také
+ [Postupy: Vytvoření základního 3D modelu](../designers/how-to-create-a-basic-3-d-model.md) [Postupy: Vytvoření základního](../designers/how-to-create-a-basic-color-shader.md) [modelu shader Editor](../designers/model-editor.md) [shader designeru](../designers/shader-designer.md)

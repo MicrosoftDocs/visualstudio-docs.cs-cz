@@ -1,5 +1,5 @@
 ---
-title: Protokol příkazové okno výstup příkazu | Dokumentace Microsoftu
+title: Protokolovat výstupní příkaz okna příkazu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,68 +11,61 @@ helpviewer_keywords:
 - View.LogCommandWindowOutput command
 ms.assetid: d4ecec35-5af4-4954-8d60-2cd24583fbb4
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a05fe75aabaf2ce04010fe0c985a3cc1645ee696
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: d9a5a29cd63f9d51f86d41d2f0f5986a77666318
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446029"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666869"
 ---
 # <a name="log-command-window-output-command"></a>Protokolovat výstup příkazového okna – příkaz
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Zkopíruje všechny vstup a výstup z **příkaz** okna do souboru.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `filename`  
- Volitelné. Název souboru protokolu. Ve výchozím nastavení je soubor vytvořen ve složce profilu uživatele. Pokud název souboru již existuje, protokol je připojen na konec existující soubor. Pokud není určen žádný soubor, poslední zadaný soubor se používá. Pokud neexistuje žádný předchozí soubor je vytvořen výchozí soubor protokolu, volá cmdline.log.  
-  
+Zkopíruje všechny vstupy a výstupy z **příkazového** okna do souboru.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]
+```
+
+## <a name="arguments"></a>Arguments
+ `filename` volitelné. Název souboru protokolu. Ve výchozím nastavení se soubor vytvoří ve složce profilu uživatele. Pokud název souboru již existuje, protokol je připojen na konec stávajícího souboru. Pokud není zadán žádný soubor, je použit poslední zadaný soubor. Pokud žádný z předchozích souborů neexistuje, vytvoří se výchozí soubor protokolu s názvem cmdline. log.
+
 > [!TIP]
-> Chcete-li změnit umístění pro uložení souboru protokolu, zadejte úplnou cestu souboru, ohraničená uvozovkami, pokud cesta obsahuje mezery.  
-  
-## <a name="switches"></a>Přepínače  
- /on  
- Volitelné. Spuštění protokolu **příkaz** okno v zadaném souboru a přidá soubor s novými informacemi.  
-  
- / vypnuto  
- Volitelné. V protokolu se zastaví **příkaz** okna.  
-  
- / overwrite  
- Volitelné. Pokud soubor zadaný v `filename` argument odpovídá existující soubor, soubor se přepíše.  
-  
-## <a name="remarks"></a>Poznámky  
- Pokud není určen žádný soubor, vytvoří se soubor cmdline.log ve výchozím nastavení. Ve výchozím nastavení je alias pro tento příkaz protokolu.  
-  
-## <a name="examples"></a>Příklady  
- Tento příklad vytvoří nový soubor protokolu, cmdlog a spustí příkaz protokolu.  
-  
-```  
->Tools.LogCommandWindowOutput cmdlog  
-```  
-  
- Tento příklad zastaví protokolování příkazy.  
-  
-```  
->Tools.LogCommandWindowOutput /off  
-```  
-  
- Tento příklad pokračuje v protokolování příkazy v předchozích souboru protokolu.  
-  
-```  
->Tools.LogCommandWindowOutput /on  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Visual Studio Commands](../../ide/reference/visual-studio-commands.md)   
- [Okno příkazového řádku](../../ide/reference/command-window.md)   
- [Pole najít/příkaz](../../ide/find-command-box.md)   
- [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)
+> Pokud chcete změnit umístění, kam se soubor protokolu uloží, zadejte úplnou cestu k souboru, která je ohraničená uvozovkami, pokud cesta obsahuje mezery.
+
+## <a name="switches"></a>Přepínače
+ /On je nepovinný. Spustí protokol pro **příkazové** okno v zadaném souboru a připojí soubor s novými informacemi.
+
+ /off. je nepovinný. Zastaví protokol okna **příkazového** řádku.
+
+ /overwrite – nepovinné. Pokud soubor zadaný v argumentu `filename` odpovídá existujícímu souboru, je soubor přepsán.
+
+## <a name="remarks"></a>Poznámky
+ Pokud není zadaný žádný soubor, ve výchozím nastavení se vytvoří soubor cmdline. log. Ve výchozím nastavení je alias tohoto příkazu protokolem.
+
+## <a name="examples"></a>Příklady
+ Tento příklad vytvoří nový soubor protokolu cmdlog a spustí protokol příkazů.
+
+```
+>Tools.LogCommandWindowOutput cmdlog
+```
+
+ Tento příklad zastaví příkazy protokolování.
+
+```
+>Tools.LogCommandWindowOutput /off
+```
+
+ Tento příklad obnoví protokolování příkazů v dříve použitém souboru protokolu.
+
+```
+>Tools.LogCommandWindowOutput /on
+```
+
+## <a name="see-also"></a>Viz také
+ [Příkazy](../../ide/reference/visual-studio-commands.md) [příkazového](../../ide/reference/command-window.md) řádku [find/Command](../../ide/find-command-box.md) v příkazu Visual Studio Command a Command [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

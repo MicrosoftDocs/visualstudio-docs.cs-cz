@@ -8,20 +8,20 @@ helpviewer_keywords:
 - Add Existing Project command
 - File.AddExistingProject
 ms.assetid: 71cf3e31-c76b-405b-ad6a-1b1bc654bd40
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5a511e19394b397096a5a5ba2e339166454138e
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: bd6aca05758185f4df47688044f479b7bbe2829e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926286"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658817"
 ---
 # <a name="add-existing-project-command"></a>Přidat existující projekt – příkaz
-Přidá existující projekt do aktuálního řešení.
+Přidá existující projekt k aktuálnímu řešení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,7 +33,7 @@ File.AddExistingProject filename
 `filename`\
 Volitelné. Úplná cesta a název projektu s příponou projektu, který se má přidat do řešení.
 
-`filename` Pokud argument obsahuje mezery, musí být uzavřen v uvozovkách.
+Pokud argument `filename` obsahuje mezery, musí být uzavřen v uvozovkách.
 
 Pokud není zadán žádný název souboru, příkaz otevře dialogové okno souboru, aby mohl uživatel vybrat projekt.
 
@@ -41,7 +41,7 @@ Pokud není zadán žádný název souboru, příkaz otevře dialogové okno sou
 Automatické dokončování se snaží vyhledat správnou cestu a název souboru při psaní.
 
 ## <a name="example"></a>Příklad
-Tento příklad přidá [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] projekt TestProject1 do aktuálního řešení.
+Tento příklad přidá projekt [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] TestProject1 k aktuálnímu řešení.
 
 ```cmd
 >File.AddExistingProject "c:\visual studio projects\TestProject1.vbproj"

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Ladění založených na technologii ASP.NET pracovních postupů (starší verze) | Dokumentace Microsoftu'
+title: 'Postupy: ladění pracovních postupů založených na ASP.NET (starší verze) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -11,48 +11,46 @@ helpviewer_keywords:
 - debugging, ASP.NET workflows
 ms.assetid: 79b21edc-9e7d-410d-af68-09c1598b9c30
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a8fc6c951f1da3fc37fe8e1189a3ec8de9609a48
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f3bed38f5229cb489f663878759517480b48302c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68144656"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668656"
 ---
-# <a name="how-to-debug-aspnet-based-workflows-legacy"></a>Postupy: Ladění pracovních postupů založených na technologii ASP.NET (starší verze)
-Toto téma popisuje, jak ladit [!INCLUDE[vstecasp](../includes/vstecasp-md.md)]– na základě [!INCLUDE[wf](../includes/wf-md.md)] aplikací určených pro buď [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] ve starší [!INCLUDE[wfd1](../includes/wfd1-md.md)].  
-  
- Můžete ladit starších verzí pracovních postupů, které jsou spuštěny v technologii ASP.NET nebo starších verzí pracovních postupů, které jsou zveřejněné jako webovou službu pomocí připojení k procesu, ve kterém je hostovaný pracovní postup.  
-  
-### <a name="to-debug-an-aspnet-based-workflow"></a>Chcete-li ladit pracovních postupů založených na technologii ASP.NET  
-  
-1. Povolit ladění pro aplikace ASP.NET tak, že nastavíte **ladění = true** v souboru web.config.  
-  
-2. Nastavit jako spouštěný projekt knihovny pracovních postupů a nastavení zarážek v pracovním postupu.  
-  
-3. Zadejte adresu URL výchozí webová stránka ve vlastnostech projektu pracovního postupu **ladění** možnost **spuštění prohlížeče s externí adresa URL** textového pole.  
-  
-4. Vyberte **připojit k procesu** na **ladění** nabídky.  
-  
-5. Vyberte proces pro připojení z **procesy k dispozici** seznamu.  
-  
-     Připojte k procesu w3wp.exe, webdev.webserver nebo aspnet_wp, ve kterém je hostovaný pracovní postup.  
-  
-6. Klikněte na tlačítko **vyberte** vedle **připojit k** textového pole.  
-  
-     **Vybrat typ kódu** zobrazí se dialogové okno.  
-  
-7. Vyberte **ladit tyto typy kódu** a vyberte **pracovního postupu**.  
-  
-8. Klikněte na **OK**.  
-  
-9. Klikněte na tlačítko **připojit**.  
-  
-10. Otevřít výchozí webovou stránku v prohlížeči a spusťte pracovní postup.  
-  
-## <a name="see-also"></a>Viz také  
- [Vyvolání ladicího programu sady Visual Studio pro Windows Workflow Foundation (starší verze)](../workflow-designer/invoking-the-visual-studio-debugger-for-windows-workflow-foundation-legacy.md)   
- [Postupy: Nastavení zarážek v pracovních postupech (starší verze)](../workflow-designer/how-to-set-breakpoints-in-workflows-legacy.md)   
- [Ladění starších verzí pracovních postupů](../workflow-designer/debugging-legacy-workflows.md)
+# <a name="how-to-debug-aspnet-based-workflows-legacy"></a>Postupy: ladění pracovních postupů založených na ASP.NET (starší verze)
+Toto téma popisuje, jak ladit [!INCLUDE[wf](../includes/wf-md.md)] aplikace založené na [!INCLUDE[vstecasp](../includes/vstecasp-md.md)], které cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)].
+
+ Můžete ladit starší pracovní postupy, které jsou spuštěny v ASP.NET nebo starších pracovních postupech, které jsou publikovány jako webová služba, a to připojením k procesu, ve kterém je pracovní postup hostován.
+
+### <a name="to-debug-an-aspnet-based-workflow"></a>Ladění pracovního postupu založeného na ASP.NET
+
+1. Povolte ladění pro aplikaci ASP.NET nastavením **debug = true** v souboru Web. config.
+
+2. Nastavte knihovnu pracovního postupu jako spouštěný projekt a nastavte zarážky v pracovním postupu.
+
+3. V poli projekt pracovního postupu zadejte adresu URL výchozí webové stránky – možnost **ladění** **spustit prohlížeč s externí adresou URL** .
+
+4. V nabídce **ladění** vyberte **připojit k procesu** .
+
+5. V seznamu **procesy k dispozici** vyberte proces, který chcete připojit.
+
+     Připojte se k procesu W3wp. exe, webdev. webServer nebo programu aspnet_wp, ve kterém je pracovní postup hostovaný.
+
+6. Klikněte na tlačítko **Vybrat** vedle do textového pole **připojit k** .
+
+     Zobrazí se dialogové okno **Vybrat typ kódu** .
+
+7. Vyberte možnost **ladit tyto typy kódu** a vyberte **pracovní postup**.
+
+8. Klikněte na tlačítko **OK**.
+
+9. Klikněte na **připojit**.
+
+10. Otevřete výchozí webovou stránku v prohlížeči a spusťte pracovní postup.
+
+## <a name="see-also"></a>Viz také
+ [Vyvolání ladicího programu sady Visual Studio pro programovací model Windows Workflow Foundation (starší verze)](../workflow-designer/invoking-the-visual-studio-debugger-for-windows-workflow-foundation-legacy.md) [Postupy: nastavení zarážek v pracovních postupech (starší verze)](../workflow-designer/how-to-set-breakpoints-in-workflows-legacy.md) [ladění starších verzí pracovních postupů](../workflow-designer/debugging-legacy-workflows.md)

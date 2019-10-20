@@ -4,43 +4,43 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, DSL Explorer
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 744407f129c85f4e083007186dd167e39401d850
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 352315b518102c5b9576c19611522e87d0e67ffe
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62961934"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666905"
 ---
 # <a name="working-with-the-domain-specific-language-explorer"></a>Práce s průzkumníkem jazyka specifického pro doménu
-**Průzkumník DSL** několik druhů informací se zobrazí ve stromovém zobrazení. Další informace o většině položek v Průzkumníku DSL najdete v tématu [jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md).
+V **Průzkumníkovi DSL** se ve stromovém zobrazení zobrazí několik druhů informací. Další informace o většině položek v Průzkumníkovi DSL najdete v tématu [Definování jazyka specifického pro doménu](../modeling/how-to-define-a-domain-specific-language.md).
 
- Obsahuje následující uzly:
+ Má následující uzly:
 
-- **Tvůrci připojení**. Seznam tvůrci připojení v modelu.
+- **Tvůrci připojení**. Seznam tvůrců připojení v modelu.
 
-- **Konektory**. Seznam elementů diagramu konektor v modelu.
+- **Konektory**. Seznam elementů diagramu konektoru v modelu
 
-- **Diagram**. Sada vlastností, které definují v diagramu a seznamy mapy konektorů a mapy obrazců.
+- **Diagram**: Sada vlastností, které definují diagram, a seznamy map konektorů a map obrazců.
 
-- **Doménové třídy**. Seznam doménovými třídami v modelu.
+- **Doménové třídy**. Seznam doménových tříd v modelu.
 
-- **Doménové vztahy**. Seznam vztahy domén v modelu.
+- **Doménové vztahy**. Seznam doménových relací v modelu.
 
-- **Typy domén**. Seznam předdefinovaných a externí typy, které se používají v modelu.
+- **Typy domén**. Seznam předdefinovaných a externích typů, které se používají v modelu.
 
-- **Editor**. Seznam **nástrojů** karty a obsahují položky a nastavení ověřování pro model. Další informace o ověřování najdete v tématu [ověřování v jazyka specifického pro doménu](../modeling/validation-in-a-domain-specific-language.md).
+- **Editor**. Seznam karet **nástrojů** a položek, které obsahují, a nastavení ověřování pro model. Další informace o ověřování najdete v tématu [ověření v jazyce specifickém pro doménu](../modeling/validation-in-a-domain-specific-language.md).
 
-- **Chování Průzkumníka**. Nastavení, která určují chování Průzkumníka ve vygenerovaném návrháři. Další informace o tom, jak přizpůsobit v Průzkumníku najdete v tématu [přizpůsobení Průzkumníka modelů](../modeling/customizing-the-model-explorer.md).
+- **Chování Průzkumníka** Nastavení, která určují chování Průzkumníka ve vygenerovaném návrháři. Další informace o tom, jak přizpůsobit Průzkumníka, najdete v tématu [Přizpůsobení Průzkumníka modelů](../modeling/customizing-the-model-explorer.md).
 
-- **Tvary**. Seznam elementů diagramu tvar v modelu.
+- **Obrazce**. Seznam elementů diagramu obrazce v modelu
 
-- **Chování serializace XML**. Nastavení serializace pro model. Další informace o serializaci naleznete v tématu [přizpůsobení souborového úložiště a serializace XML](../modeling/customizing-file-storage-and-xml-serialization.md).
+- **Chování serializace XML**. Nastavení serializace pro model. Další informace o serializaci naleznete v tématu [přizpůsobení File Storage a serializace XML](../modeling/customizing-file-storage-and-xml-serialization.md).
 
 ## <a name="see-also"></a>Viz také
 
-- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

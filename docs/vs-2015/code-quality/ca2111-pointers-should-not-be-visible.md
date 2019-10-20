@@ -1,5 +1,5 @@
 ---
-title: 'CA2111: Ukazatelé by neměli být viditelné | Dokumentace Microsoftu'
+title: 'CA2111: Ukazatelé by neměli být viditelné | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - PointersShouldNotBeVisible
 ms.assetid: b3a8d466-895b-43bc-a2df-5d7058fe915f
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8497433088e4c49868a76dd3281d02a5e79babe5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a0d5546c6f6a2f5dbd0c6063f4a1dfd40ce1d7bb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68154365"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658740"
 ---
-# <a name="ca2111-pointers-should-not-be-visible"></a>CA2111: Ukazatele by neměly být viditelné
+# <a name="ca2111-pointers-should-not-be-visible"></a>CA2111: Ukazatelé by neměli být viditelné
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -33,21 +33,21 @@ ms.locfileid: "68154365"
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Veřejný nebo chráněný <xref:System.IntPtr?displayProperty=fullName> nebo <xref:System.UIntPtr?displayProperty=fullName> pole není jen pro čtení.
+ Veřejné nebo chráněné <xref:System.IntPtr?displayProperty=fullName> nebo <xref:System.UIntPtr?displayProperty=fullName> pole není jen pro čtení.
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.IntPtr> a <xref:System.UIntPtr> jsou typy ukazatelů, které se používají pro přístup k nespravované paměti. Pokud ukazatel není soukromý, interní nebo jen pro čtení, škodlivý kód může změnit hodnotu ukazatele, potenciálně umožňuje přístup k libovolného umístění v paměti nebo může způsobit selhání aplikace nebo systému.
+ <xref:System.IntPtr> a <xref:System.UIntPtr> jsou typy ukazatelů, které se používají pro přístup k nespravované paměti. Pokud ukazatel není privátní, interní nebo jen pro čtení, škodlivý kód může změnit hodnotu ukazatele, potenciálně umožnit přístup k libovolnému umístění v paměti nebo způsobit selhání aplikace nebo systému.
 
- Pokud máte v úmyslu zabezpečený přístup k typu, který obsahuje pole, ukazatel, přečtěte si téma [CA2112: Zabezpečené typy by neměly vystavovat pole](../code-quality/ca2112-secured-types-should-not-expose-fields.md).
+ Pokud máte v úmyslu zabezpečit přístup k typu, který obsahuje pole s ukazatelem, přečtěte si téma [CA2112: zabezpečené typy by neměly vystavovat pole](../code-quality/ca2112-secured-types-should-not-expose-fields.md).
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Ukazatel Zabezpečte tím, že je jen pro čtení, interní nebo privátní.
+ Zabezpečte ukazatel tak, že ho nastavíte jako jen pro čtení, interní nebo soukromý.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Potlačit upozornění tohoto pravidla, pokud nelze spoléhat na hodnotu ukazatele.
+ Potlačit upozornění z tohoto pravidla, pokud nespoléháte na hodnotu ukazatele.
 
 ## <a name="example"></a>Příklad
- Následující kód ukazuje ukazatele, které porušují a splňovat pravidla. Všimněte si, že nesoukromých ukazatelů také porušovat pravidla [CA1051: Nedeklarujte viditelná pole instance](../code-quality/ca1051-do-not-declare-visible-instance-fields.md).
+ Následující kód ukazuje ukazatele, které porušují a splňují pravidlo. Všimněte si, že neprivátní ukazatele také porušují pravidlo [CA1051: Nedeklarujte viditelná pole instance](../code-quality/ca1051-do-not-declare-visible-instance-fields.md).
 
  [!code-csharp[FxCop.Security.PointersArePrivate#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.PointersArePrivate/cs/FxCop.Security.PointersArePrivate.cs#1)]
 

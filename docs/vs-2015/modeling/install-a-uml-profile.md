@@ -1,5 +1,5 @@
 ---
-title: Instalace profilu UML | Dokumentace Microsoftu
+title: Instalace profilu UML | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -8,43 +8,42 @@ helpviewer_keywords:
 - UML - extending, profiles
 ms.assetid: 586f9ba5-4d01-4a1d-b001-32e2efaa4f24
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0187f7dede25900cdf3a78fdbfe2899e5f318472
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e38e89ee5572f5ba552f3b6807a3edab5012a727
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68181491"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669594"
 ---
 # <a name="install-a-uml-profile"></a>Instalace profilu UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio můžete rozšířit tak, že profil UML. Profil, který umožňuje přidat stereotypů a další vlastnosti prvků, které můžete vytvořit v modelech UML. Tuto funkci podporovat kterou verzí sady Visual Studio najdete v tématu [podporované verze pro nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
-  
- Pokud se zobrazí modelu UML, který byl vytvořen pomocí profilů, některé vlastnosti nezobrazí, pokud nenainstalujete stejné profily.  
-  
- Profil, který je distribuován v rozšíření sady Visual Studio. Rozšíření může obsahovat také další funkce, jako je například příkazy nabídek. Další informace najdete v tématu [správu rozšíření sady Visual Studio](http://go.microsoft.com/fwlink/?LinkId=160728).  
-  
-### <a name="to-install-a-uml-profile-on-your-computer"></a>Instalace profilu UML v počítači  
-  
-1. Profil by měl mít ve formě rozšíření sady Visual Studio (`.vsix`) soubor. Ve stejném souboru může být jiné funkce.  
-  
-     Přesunout `.vsix` souboru do vhodného umístění v počítači.  
-  
-2. Dvakrát klikněte `.vsix` souboru v Průzkumníku Windows (nebo Průzkumníka souborů), nebo otevřete ho v rámci [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)].  
-  
-3. Klikněte na tlačítko **nainstalovat** v dialogovém okně, které se zobrazí.  
-  
-4. Chcete-li odinstalovat nebo dočasně zakázat rozšíření, otevřete **Správce rozšíření** z **nástroje** nabídky.  
-  
-### <a name="to-uninstall-or-disable-a-profile-extension"></a>Odinstalace nebo zakázání rozšíření profilu  
-  
-1. V sadě Visual Studio **nástroje** nabídky, klikněte na tlačítko **Správce rozšíření**.  
-  
-2. Klikněte na rozšíření, které chcete odebrat a potom klikněte na tlačítko **zakázat** nebo **odinstalovat**.  
-  
-## <a name="see-also"></a>Viz také  
- [Přizpůsobení modelu pomocí profilů a stereotypů](../modeling/customize-your-model-with-profiles-and-stereotypes.md)   
- [Definování profilu pro rozšíření UML](../modeling/define-a-profile-to-extend-uml.md)
+Visual Studio můžete roztáhnout pomocí profilu UML. Profil umožňuje přidat stereotypy a další vlastnosti prvků, které lze vytvořit v modelech UML. Chcete-li zjistit, které verze aplikace Visual Studio tuto funkci podporují, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+
+ Pokud obdržíte model UML, který byl vytvořen pomocí profilů, některé vlastnosti nebudou zobrazeny, pokud nenainstalujete stejné profily.
+
+ Profil je distribuován v rozšíření aplikace Visual Studio. Přípona může také obsahovat další funkce, jako například příkazy nabídky. Další informace najdete v tématu [Správa rozšíření sady Visual Studio](http://go.microsoft.com/fwlink/?LinkId=160728).
+
+### <a name="to-install-a-uml-profile-on-your-computer"></a>Instalace profilu UML do počítače
+
+1. Profil by vám měl být dán ve formě souboru rozšíření sady Visual Studio (`.vsix`). Ve stejném souboru můžou být jiné funkce.
+
+     Přesuňte soubor `.vsix` do vhodného umístění v počítači.
+
+2. Dvakrát klikněte na soubor `.vsix` v Průzkumníkovi Windows (nebo v Průzkumníku souborů) nebo ho otevřete v [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)].
+
+3. V dialogovém okně, které se zobrazí, klikněte na **nainstalovat** .
+
+4. Chcete-li odinstalovat nebo dočasně zakázat rozšíření, otevřete **Správce rozšíření** z nabídky **nástroje** .
+
+### <a name="to-uninstall-or-disable-a-profile-extension"></a>Odinstalace nebo zakázání rozšíření profilu
+
+1. V nabídce **nástroje** sady Visual Studio klikněte na **Správce rozšíření**.
+
+2. Klikněte na rozšíření, které chcete odebrat, a potom klikněte na **Zakázat** nebo **odinstalovat**.
+
+## <a name="see-also"></a>Viz také
+ [Přizpůsobení modelu pomocí profilů a stereotypů](../modeling/customize-your-model-with-profiles-and-stereotypes.md) [Definování profilu pro rozšiřování UML](../modeling/define-a-profile-to-extend-uml.md)

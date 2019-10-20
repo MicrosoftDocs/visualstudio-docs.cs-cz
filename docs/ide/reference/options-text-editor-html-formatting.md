@@ -1,103 +1,103 @@
 ---
-title: Možnosti, textový Editor HTML (webové formuláře), formátování
+title: Možnosti, textový editor, HTML (webové formuláře), formátování
 ms.date: 1/15/2019
 ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.HTML.Format
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 69a8d3f1b84bd59cec9e13bf50eb8eaa46795cdf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3d1e5f07a2b68d86051452a16ac0f42fc9b9acf0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62779016"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666197"
 ---
-# <a name="options-text-editor-html-web-forms-formatting"></a>Možnosti, textový Editor HTML (webové formuláře), formátování
+# <a name="options-text-editor-html-web-forms-formatting"></a>Možnosti, textový editor, HTML (webové formuláře), formátování
 
-Použití **formátování** možnosti stránky lze nastavit možnosti projektu HTML pro formátování kódu v editoru kódu. Pro přístup k této stránce, na panelu nabídek zvolte **nástroje** > **možnosti**a potom rozbalte **textový Editor** > **HTML (webové formuláře)**   >  **Formátování**.
+Stránka možnosti **formátování** slouží k nastavení možností projektu HTML pro formátování kódu v editoru kódu. Chcete-li získat přístup k této stránce, v řádku nabídek zvolte možnost **nástroje**  > **Možnosti**a poté rozbalte položku **textový editor**  > **HTML (webové formuláře)**  > **formátování**.
 
-## <a name="capitalization"></a>Malá a velká písmena
+## <a name="capitalization"></a>Malá
 
-Když tyto možnosti jsou vybrané, zobrazení zdroje a editory XML platí pro názvy elementů a atributů nejdřív vytvořené elementy a během automatického formátování výchozí formátování. **Použít automatické formátování** nastavení určit čas v které automatického přeformátování vyvolá.
+Pokud jsou tyto možnosti vybrány, zobrazení zdroje a editory XML použijí výchozí formát případu pro názvy prvků a atributů při prvním vytvoření prvků a při automatickém formátování. Nastavení **použít automatické formátování** určuje čas, kdy dochází k automatickému přeformátování.
 
 > [!WARNING]
-> XML rozlišuje velká a malá písmena. Nastavení výchozí případ může mít vliv na analyzátory jazyka XML.
+> V jazyce XML se rozlišují malá a velká písmena. Nastavení výchozího případu může mít vliv na analyzátory XML.
 
-### <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
+### <a name="uielement-list"></a>UIElement – seznam
 
-**Serverové značky, Server atributy**
+**Značka serveru, atributy serveru**
 
-Tyto možnosti určují, jak velké značky pro ovládací prvky webového serveru.
-
-|Možnost|Výsledek|
-|---------------------------------|------------------------------|
-|**Jako vložené**|Element případem je stejným způsobem, jako je zadat.|
-|**velká písmena**|Názvy elementů jsou přeformátována na velká písmena.|
-|**Malá**|Názvy elementů jsou přeformátována na malá písmena.|
-|**Definice sestavení**|Element případ je určeno v odpovídajícím typu třídy bude definován takhle elementu.|
-
-**Značka klienta, atributy klienta**
-
-Tyto možnosti určit, zda automatické formátování změní názvy atributů HTML a vlastnosti na velká nebo malá nebo zůstanou jako vložené.
+Tyto možnosti určují, jak se má kód pro ovládací prvky webového serveru navýšit na velká.
 
 |Možnost|Výsledek|
 |---------------------------------|------------------------------|
-|**Jako vložené**|Atribut případem je stejným způsobem, jako je zadat.|
-|**velká písmena**|Názvy atributů jsou přeformátována na velká písmena.|
-|**Malá**|Názvy atributů jsou přeformátována na malá písmena.|
+|**Jak je zadáno**|Případ prvku je přesně tak, jak ho zadáte.|
+|**Všechna**|Názvy elementů jsou přeformátovány na velká písmena.|
+|**Malá**|Názvy elementů jsou přeformátovány na malá písmena.|
+|**Definice sestavení**|Element Case je určen podle toho, jak je element definován v odpovídající třídě typu.|
+
+**Klientské značky, atributy klienta**
+
+Tyto možnosti určují, zda automatické formátování mění názvy atributů HTML a vlastností na velká a malá písmena, nebo je zachovává jako zadané.
+
+|Možnost|Výsledek|
+|---------------------------------|------------------------------|
+|**Jak je zadáno**|Atribut Case je přesně tak, jak ho zadáte.|
+|**Všechna**|Názvy atributů se přeformátují na velká písmena.|
+|**Malá**|Názvy atributů se přeformátují na malá písmena.|
 
 ## <a name="automatic-formatting-options"></a>Možnosti automatického formátování
 
-Tyto možnosti způsobit zobrazení editoru zdrojového kódu s přidáváním a odebíráním zalomení během automatického formátování. Můžete také určit, zda editor přidá uvozovky kolem atributy.
+Tyto možnosti způsobí, že editor zobrazení zdroje při automatickém formátování přidá nebo odebere přerušení fyzické čáry. Můžete také určit, zda editor přidá uvozovky kolem atributů.
 
 > [!NOTE]
-> Tato nastavení se nezmění mezer v rámci kód XML.
+> Tato nastavení nemění prázdné znaky v kódu XML.
 
-### <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
+### <a name="uielement-list"></a>UIElement – seznam
 
-- **Při psaní vkládat uvozovky u hodnot atributů**
+- **Při psaní vkládat hodnoty atributů do uvozovek**
 
-   Pokud je vybraná tato možnost, editor automaticky vloží atributů do uvozovek při psaní (například: ID = "Select1"). Pokud chcete vkládání uvozovek do vašeho kódu ručně, zrušte zaškrtnutí tohoto políčka.
-
-   > [!NOTE]
-   > Jestli je vybraná tato možnost, všechny existující uvozovky ve vašem kódu jsou zachovány; uvozovky jsou nikdy neodeberou.
-
-- **Při formátování vkládat uvozovky u hodnot atributů**
-
-   Pokud je vybraná tato možnost, automatického formátování přidá uvozovky kolem hodnot atributů (například: ID = "Select1").
+   Pokud je vybrána tato možnost, Editor automaticky vloží uvozovky kolem atributů, jak píšete (například: ID = "select1"). Tuto možnost zrušte, pokud dáváte přednost ručnímu vložení značek do kódu.
 
    > [!NOTE]
-   > Jestli je vybraná tato možnost, všechny existující uvozovky ve vašem kódu jsou zachovány.
+   > Bez ohledu na to, zda je tato možnost vybrána, jsou zachovány všechny existující uvozovky ve vašem kódu; uvozovky se nikdy neodebraly.
 
-- **Automatické vkládání uzavírací značky**
+- **Při formátování vkládat hodnoty atributů do uvozovek**
 
-   Pokud je vybraná tato možnost, editoru automaticky vytvoří ukončovací značky (například  **\</b >**) při uzavření počáteční značka.
-
-## <a name="tag-wrapping"></a>Obtékání značky
-
-Tyto možnosti určují, zda editor rozdělí značky do řádků v případě, že jsou nad rámec určité délky.
-
-### <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
-
-- **Při překročení zadané délky Zalomit značky**
-
-   Při výběru, editoru rozdělí značky na řádcích, pokud značka přesahuje délku zadáte **délka** textového pole. Tato akce dojde pouze v případě, že formátování značky, ne v případě, že píšete novou značku.
+   Pokud je vybrána tato možnost, automatické formátování přidá uvozovky kolem hodnot atributů (například: ID = "select1").
 
    > [!NOTE]
-   > Hodnota, kterou zadáte, se používá jako minimální hodnota. Rozdělit editor jednotlivé atributy.
+   > Bez ohledu na to, zda je tato možnost vybrána, jsou zachovány všechny existující uvozovky ve vašem kódu.
 
-- **Délka**
+- **Automaticky vkládat uzavírací značku**
 
-   Určuje počet znaků, které mají zobrazit v řádku před zabalení. Toto vstupní pole je zakázáno, pokud **Sbalit značku, jestliže přesáhne určenou délku** je políčko zaškrtnuté.
+   Pokud je vybrána tato možnost, editor při zavření počáteční značky automaticky vytvoří uzavírací značku (například **\</b >** ).
 
-- **Specifické nastavení značky**
+## <a name="tag-wrapping"></a>Zalamování značky
 
-   Zobrazí **specifické nastavení značky** dialogové okno, které umožňuje nastavit možnosti formátování pro jednotlivé značky nebo skupiny značek.
+Tyto možnosti určují, zda editor rozdělí štítky na řádky, pokud přesahují určitou délku.
+
+### <a name="uielement-list"></a>UIElement – seznam
+
+- **Zalamovat značky při překročení zadané délky**
+
+   Je-li vybrána tato možnost, Editor rozdělí značky mezi řádky, pokud značka přesahuje délku, kterou zadáte v textovém poli **Délka** . K této akci dochází pouze při formátování značky, nikoli při psaní nové značky.
+
+   > [!NOTE]
+   > Hodnota, kterou zadáte, se používá jako minimální hodnota. Editor nerozdělí jednotlivé atributy.
+
+- **Časový**
+
+   Určuje počet znaků, které mají být zobrazeny v řádku před zabalením. Toto vstupní pole je zakázáno, pokud je zaškrtnuto políčko **po překročení zadané délky** .
+
+- **Možnosti specifické pro značku**
+
+   Zobrazí dialogové okno **možnosti specifické pro značku** , které umožňuje nastavit možnosti formátování pro jednotlivé značky nebo skupiny značek.
 
 ## <a name="see-also"></a>Viz také:
 

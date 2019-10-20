@@ -1,78 +1,74 @@
 ---
-title: 'Postupy: Vytvoření základního Phongova shaderu | Dokumentace Microsoftu'
+title: 'Postupy: Vytvoření základního Phongova shaderu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: c7c69da8-142b-4d3b-9be9-4be0d5970b25
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7153c02f5cd3d494edb56b218512ba5de87f318a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 17ba5d143a5f4534b09b2aaff718af7ce99f2773
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438423"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664547"
 ---
 # <a name="how-to-create-a-basic-phong-shader"></a>Postupy: Vytvoření základního Phongova shaderu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento dokument popisuje způsob použití návrháře shaderu a orientovaného grafu shaderu jazyka (DGSL) vytvořit osvětlení shader, který implementuje Klasický model osvětlení Phong.  
-  
- Tento dokument vysvětluje tyto činnosti:  
-  
-- Přidání uzlů do grafu shaderu  
-  
-- Odpojuje se uzly  
-  
-- Spojující uzly  
-  
-## <a name="the-phong-lighting-model"></a>Model osvětlení Phong  
- Model osvětlení Phong rozšiřuje Lambertova modelu osvětlení zahrnout odlesků zvýraznění, který simuluje vlastnosti reflektivní povrchu. Reflexní součást poskytuje další osvětlení ze stejné směrové zdrojů světla, které se používají v Lambertova modelu osvětlení, ale jinak zpracování jeho příspěvku na konečnou barvu. Reflexní zvýraznění ovlivňuje všechny oblasti ve scéně odlišně, na základě vztahu mezi směr zobrazení, směr světla zdrojů a orientace povrchu. Je produkt reflexní barvy, síla odlesku a orientaci ovládacího prvku na plochu a barvu, intenzity a směr světla zdrojů. Zařízení Surface, které odráží světelný zdroj přímo v prohlížeči zobrazí maximální příspěvek lesku a površích, které odráží světelný zdroj mimo prohlížeč získat žádné příspěvek. V části model osvětlení Phong jednu nebo více komponent odlesky jsou zkombinované určíte barvu a intenzitu zrcadlových odlesků zvýraznění pro každý bod na objekt a se pak přidá do výsledku Lambertova modelu osvětlení vytvoří konečnou barvu pixelu .  
-  
- Další informace o modelu osvětlení Lambert najdete v tématu [jak: Vytvoření základního Lambertova shaderu](../designers/how-to-create-a-basic-lambert-shader.md).  
-  
- Než začnete, ujistěte se, že **vlastnosti** okno a **nástrojů** jsou zobrazeny.  
-  
-#### <a name="to-create-a-phong-shader"></a>Chcete-li vytvořit Phongova shaderu  
-  
-1. Vytvoření Lambertova shaderu, jak je popsáno v [jak: Vytvoření základního Lambertova shaderu](../designers/how-to-create-a-basic-lambert-shader.md).  
-  
-2. Odpojte **Lambertova** uzlu z **konečnou barvu** uzlu. Zvolte **RGB** z terminálu **Lambertova** uzel a klikněte na tlačítko **přerušit odkazy**. Díky tomu místo pro uzel, který je přidán v dalším kroku.  
-  
-3. Přidat **přidat** uzel do grafu. V **nástrojů**v části **matematické**vyberte **přidat** a přesuňte jej na návrhovou plochu.  
-  
-4. Přidat **Specular** uzel do grafu. V **nástrojů**v části **nástroj**vyberte **Specular** a přesuňte jej na návrhovou plochu.  
-  
-5. Přidáte příspěvek lesku. Přesunout **výstup** z terminálu **Specular** uzlu **X** z terminálu **přidat** uzel a potom ho přesuňte **výstup**  z terminálu **Lambertova** uzlu **Y** z terminálu **přidat** uzlu. Tato připojení kombinovat příspěvky celkový barvy rozptýlení a množství odrazů pro obrazový bod.  
-  
-6. Hodnota počítaného barvy se připojte k konečnou barvu. Přesunout **výstup** z terminálu **přidat** uzlu **RGB** z terminálu **konečnou barvu** uzlu.  
-  
-   Následující obrázek znázorňuje dokončené shader graf a náhled shaderu použité pro model čajové konvice.  
-  
+Tento dokument ukazuje, jak pomocí Návrháře shaderu a jazyka DGSL (Direct Graph shader) vytvořit shader osvětlení, který implementuje model osvětlení Classic Phongova.
+
+ Tento dokument znázorňuje tyto aktivity:
+
+- Přidání uzlů do grafu shaderu
+
+- Odpojování uzlů
+
+- Připojování uzlů
+
+## <a name="the-phong-lighting-model"></a>Model osvětlení Phongova
+ Model osvětlení Phongova rozšiřuje model osvětlení Lambert, aby zahrnoval odlesky, což simuluje reflektující vlastnosti povrchu. Odlesková komponenta poskytuje další osvětlení ze stejných směrových zdrojů, které se používají v modelu osvětlení Lambert, ale jeho příspěvek na konečnou barvu se zpracovává jinak. Zrcadlové zvýrazňování má vliv na všechny povrchy scény odlišně na základě vztahu mezi směrem zobrazení, směrem zdrojů světla a orientací povrchu. Je to součin zrcadlové barvy, odlesku a orientace povrchu a barva, intenzita a směr zdrojů světla. Plochy, které odrážejí zdroj světla přímo v prohlížeči, obdrží maximální podíl na odlesku a povrchy, které odrážejí zdroj světla od tohoto prohlížeče, neobdrží žádný příspěvek. V rámci modelu osvětlení Phongova jsou kombinovány jedné nebo více odlesků komponent pro určení barvy a intenzity zrcadlového zvýraznění pro každý bod objektu a poté jsou přidány do výsledku modelu osvětlení Lambert, aby vznikla konečná barva pixelu. .
+
+ Další informace o modelu osvětlení Lambert naleznete v tématu [How to: Create a Basic Lambert Shader](../designers/how-to-create-a-basic-lambert-shader.md).
+
+ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nástrojů** .
+
+#### <a name="to-create-a-phong-shader"></a>Vytvoření shaderu Phongova
+
+1. Vytvořte Lambert Shader, jak je popsáno v tématu [How to: Create a Basic Lambert Shader](../designers/how-to-create-a-basic-lambert-shader.md).
+
+2. Odpojte uzel **Lambert** z **posledního uzlu Color** . Zvolte terminál **RGB** uzlu **Lambert** a pak zvolte možnost **přerušení propojení**. Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
+
+3. Přidejte do grafu uzel **Přidat** . V **sadě nástrojů**v oblasti **matematika**vyberte možnost **Přidat** a přesunout ji na návrhovou plochu.
+
+4. Přidejte do grafu **Odleskový** uzel. V **panelu nástrojů**v části **Nástroj**vyberte možnost **odlesky** a přesunout ji na návrhovou plochu.
+
+5. Přidejte odleskový příspěvek. Přesuňte **výstupní** terminál **odlesku** uzlu do terminálu **X** uzlu **Přidat** a pak přesuňte **výstupní** terminál uzlu **Lambert** do terminálu **Y** uzlu **Přidat** . Tato připojení spojují celkové rozptýlené a odlesky barev v pixelech.
+
+6. Připojí vypočítanou hodnotu barvy k konečné barvě. Přesuňte **výstupní** terminál uzlu **Přidat** do terminálu **RGB** **konečného uzlu barvy** .
+
+   Následující ilustrace znázorňuje dokončený graf shaderu a náhled shaderu, který se použije pro model konvice.
+
 > [!NOTE]
-> K předvedení lépe efekt shaderu na tomto obrázku, byl zadán oranžové barvy s použitím **MaterialDiffuse** byl zadán parametr shaderu a dokončení se kovové hledání s použitím **MaterialSpecular** a **MaterialSpecularPower** parametry. Informace o parametrech materiálu, naleznete v části Náhled shadery v [návrháře shaderu](../designers/shader-designer.md).  
-  
- ![Graf shaderu a náhled vlivu](../designers/media/digit-lighting-graph.png "číslice. osvětlení grafu")  
-  
- Určité tvary můžou poskytovat lepší verze Preview pro některé shadery. Další informace o tom, jak shadery v Návrháři shaderu ve verzi preview, najdete v části Náhled shadery v [návrháře shaderu](../designers/shader-designer.md)  
-  
- Následující obrázek znázorňuje shaderu, který je popsaný v tomto dokumentu se použijí na 3D model. **MaterialSpecular** je nastavena na (1,00 0,50, 0.20 a novější, 0,00) a jeho **MaterialSpecularPower** je nastavena na 16.  
-  
+> Pro lepší demonstraci účinku shaderu na tomto obrázku je oranžová barva určena pomocí parametru **MaterialDiffuse** shaderu a v případě, že byl dokončen kovový vzhled, byl zadán pomocí **MaterialSpecular** a Parametry **MaterialSpecularPower** Informace o parametrech materiálu naleznete v části shadery Preview v [Návrháři shaderu](../designers/shader-designer.md).
+
+ ![Graf shaderu a náhled jeho efektu](../designers/media/digit-lighting-graph.png "Osvětlení číslic – graf")
+
+ Některé tvary mohou pro některé shadery poskytnout lepší náhled. Další informace o tom, jak náhled shaderů v Návrháři shaderu zobrazit, naleznete v části shadery Preview v [Návrháři shaderu](../designers/shader-designer.md) .
+
+ Následující ilustrace znázorňuje shader, který je popsaný v tomto dokumentu, aplikovaný na 3D model. Vlastnost **MaterialSpecular** je nastavená na (1,00, 0,50, 0,20, 0,00) a jeho vlastnost **MaterialSpecularPower** je nastavená na 16.
+
 > [!NOTE]
-> **MaterialSpecular** vlastnost určuje zřejmý dokončit materiál povrchu. Vysoce lesklý povrch například lupy nebo plasty obvykle mají odlesky barva, která je jasně odstín prázdné. Kovové surface obvykle mají odlesky barva, která se blíží k jeho rozptýlení barvy. Povrch Satén dokončit obvykle mají odlesky barva, která je tmavé stínování šedé.  
->   
-> **MaterialSpecularPower** vlastnost určuje, jak velký odlesky jsou. Simulace vysoké množství odrazů využívá méně výrazné, lokalizované informace zvýrazní. Velmi nízké odlesků umožňuje simulovat velký, úklidem světla, které mohou oversaturate a skrýt barvu celého povrchu.  
-  
- ![Použít pro model osvětlení Phong](../designers/media/digit-lighting-model.png "Model osvětlení číslice")  
-  
- Další informace o tom, jak použití shaderu na 3D model, najdete v části [jak: Použití shaderu na 3D Model](../designers/how-to-apply-a-shader-to-a-3-d-model.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Postupy: Použití shaderu na 3D Model](../designers/how-to-apply-a-shader-to-a-3-d-model.md)   
- [Postupy: Exportování shaderu](../designers/how-to-export-a-shader.md)   
- [Postupy: Vytvoření základního Lambertova shaderu](../designers/how-to-create-a-basic-lambert-shader.md)   
- [Návrhář shaderů](../designers/shader-designer.md)   
- [Uzly návrháře shaderů](../designers/shader-designer-nodes.md)
+> Vlastnost **MaterialSpecular** určuje zjevné dokončení materiálu povrchu. Vysoce lesklý povrch, jako je sklo nebo plast, má na sebe odlesky, které jsou jasným barevným nádechem bílé. Metalická plocha má za následek odlesky barev, která je blízko své barvy difúze. Povrch saténového dokončení má za následek zrcadlovou barvu, která je tmavě šedá.
+>
+> Vlastnost **MaterialSpecularPower** určuje, jak velký má odlesky. Vysokými odlesky jsou simulovat matné a lépe lokalizované světla. Velmi nízké zrcadlové a rozlesky simulují náročné a nepatrné zvýraznění, které může přesytost a skrytí barvy celého povrchu.
+
+ ![Phongova osvětlení použité pro model](../designers/media/digit-lighting-model.png "Osvětlení – model")
+
+ Další informace o tom, jak použít shader na 3D model, naleznete v tématu [How to: Apply shader to a 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
+
+## <a name="see-also"></a>Viz také
+ [Postupy: použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md) [Postupy: Export shaderu](../designers/how-to-export-a-shader.md) [Postupy: vytvoření základních](../designers/how-to-create-a-basic-lambert-shader.md) [uzlů Návrháře](../designers/shader-designer-nodes.md) shaderu shaderu Lambert Shader [designeru](../designers/shader-designer.md)

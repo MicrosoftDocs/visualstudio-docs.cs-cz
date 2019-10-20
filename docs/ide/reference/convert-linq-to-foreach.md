@@ -3,19 +3,19 @@ title: Refaktoring kódu pro převod dotazu LINQ na příkaz foreach
 description: Převeďte jakýkoli dotaz LINQ napsaný v syntaxi dotazu na příkaz foreach.
 ms.date: 05/15/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 446d0f3a4988552e8e1fbbac32ca150491975d94
-ms.sourcegitcommit: 0f5f7955076238742f2071d286ad8e896f3a6cad
+ms.openlocfilehash: a618285e1981171eb8f5f2f435fb23d412296b5b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68483679"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654537"
 ---
 # <a name="refactoring-to-convert-linq-to-a-foreach-statement"></a>Refaktoring pro převod LINQ na příkaz foreach
 
@@ -32,14 +32,14 @@ Tento refaktoring platí pro:
    > [!NOTE]
    > Tento refaktoring lze použít pouze pro převod LINQ dotazů vyjádřených syntaxí dotazu a nikoli syntaxí metody.
 
-1. Stisknutím klávesy **Ctrl**+ **.** nebo klikněte na ikonu ![ikony](../media/screwdriver-icon.png) Screwdriver Screwdriver na okraji souboru s kódem.
+1. Stiskněte klávesu **Ctrl** + **.** nebo klikněte na ikonu ![screwdriver Screwdriver ](../media/screwdriver-icon.png) ikonu na okraji souboru s kódem.
 
    ![Nabídka rychlé akce převedení LINQ na foreach](media/convert-linq-to-foreach.png)
 
 1. Vyberte **převést na foreach**. Případně můžete výběrem **Zobrazit náhled změn** otevřít dialogové okno [Náhled změn](../../ide/preview-changes.md) a pak vybrat **použít**.
 
 > [!NOTE]
-> Pro C#kód, který vygenerovaly tyto refaktoringy, používá explicitní typ nebo [var](/dotnet/csharp/language-reference/keywords/var) pro `foreach` proměnnou iterace smyčky. Typ v generovaném kódu, explicitní nebo implicitní, závisí na nastavení stylu kódu, které jsou v rozsahu. Tato konkrétní nastavení stylu kódu jsou konfigurována na úrovni počítače v nabídce **nástroje** > **Možnosti** > **textový editor** > **C#**  > **styl kódu**  >  **Obecné** var nebo na úrovni řešení v souboru [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) .  **\'**  >  Pokud změníte nastavení stylu kódu v **možnostech**, znovu otevřete soubor kódu, aby se změny projevily.
+> C#Kód generovaný těmito refaktoringy používá explicitní typ nebo [var](/dotnet/csharp/language-reference/keywords/var) pro proměnnou iterace `foreach` smyčky. Typ v generovaném kódu, explicitní nebo implicitní, závisí na nastavení stylu kódu, které jsou v rozsahu. Tato konkrétní nastavení stylu kódu se konfigurují na úrovni počítače v nabídce **nástroje**  > **Možnosti**  > **textový Editor** **C#**  >   > **styl kódu** 0**Obecné** 2 **@no__t_ 14var ' předvolby**nebo na úrovni řešení v souboru [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) . Pokud změníte nastavení stylu kódu v **možnostech**, znovu otevřete soubor kódu, aby se změny projevily.
 
 ## <a name="see-also"></a>Viz také:
 

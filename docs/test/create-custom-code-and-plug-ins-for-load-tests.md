@@ -8,30 +8,30 @@ helpviewer_keywords:
 - Web performance tests, plug-ins
 - load tests, plug-ins
 ms.assetid: 0c0fcc99-673b-4ea0-a268-0475f66e5cb6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8382d5014b88d9f1711a082e46530e1e3dfb96e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7cd3dbd5e7aeb00c2de1a656c26db3a377b8ffe8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62965450"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665099"
 ---
 # <a name="create-custom-code-and-plug-ins-for-load-tests"></a>Vytvoření vlastního kódu a modulů plugin pro zátěžové testování
 
-Vlastní modul plug-in používá kód, který lze vytvořit a připojit k zátěžovému testu nebo testu výkonnosti webu. Rozhraní API zátěžového testu a API výkonnostních testů webu můžete použít k vytvoření vlastních modulů plug-in pro rozšíření integrovaných funkcí. Můžete přidat více modulů plug-in do zátěžového testu.
+Vlastní modul plug-in používá kód, který píšete a připojujete k testu zatížení nebo testu výkonnosti webu. Pomocí rozhraní API zátěžového testu a rozhraní API testu výkonnosti webu můžete vytvořit vlastní moduly plug-in pro rozšíření na integrované funkce. Do zátěžového testu můžete přidat několik modulů plug-in.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="tasks"></a>Úlohy
+## <a name="tasks"></a>Úkoly
 
-|Úlohy|Související témata|
+|Úkoly|Přidružená témata|
 |-|-----------------------|
-|**Vytvořit vlastní modul plug-in pro zátěžový test**: Můžete vytvořit vlastní modul plug-in pro přidání další funkce testování k zátěžovému testu můžete použít rozhraní API zátěžového testu.|-   [Jak: Použití rozhraní API zátěžového testu](../test/how-to-use-the-load-test-api.md)<br />-   [Jak: Vytvoření modulu Plugin pro zátěžový test](../test/how-to-create-a-load-test-plug-in.md)|
-|**Vytvořte vlastní modul plug-in pro test výkonnosti webu:** Můžete vytvořit vlastní modul plug-in pro přidání další funkce testování do testu výkonnosti webu, včetně webu můžete použít API výkonnostních testů webu. Můžete také vytvořit testu webové služby.<br /><br /> Kromě toho můžete vytvořit webového modulu plug-in rekordéru, který můžete upravit test výkonnosti webu poté, co je zaznamenán, ale předtím, než se zobrazí v prohlížeči výsledků testů webového výkonu.|-   [Jak: Použít API výkonnostních testů webu](../test/how-to-use-the-web-performance-test-api.md)<br />-   [Jak: Vytvoření modulu Plugin pro test výkonnosti webu](../test/how-to-create-a-web-performance-test-plug-in.md)<br />-   [Jak: Vytvoření modulu Plugin úrovni požadavků](../test/how-to-create-a-request-level-plug-in.md)<br />-   [Jak: Vytvoření testu webové služby](../test/how-to-create-a-web-service-test.md)<br />-   [Jak: Vytvoření modulu Plugin rekordéru](../test/how-to-create-a-recorder-plug-in.md)|
-|**Přidání funkcí uživatelského rozhraní do prohlížeče výsledků testu výkonu webu:** Další funkce uživatelského rozhraní můžete přiřadit pomocí doplňku sady Visual Studio prohlížeče výsledků testu webového výkonu.|-   [Jak: Vytvořit doplněk sady Visual Studio pro prohlížeč výsledků testu výkonnosti webu](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)|
-|**Vytvoření vlastního protokolu HTTP editoru těla:** Můžete vytvořit vlastní editor pro úpravu binárních nebo řetězcových odpovědí ve formátu XML z webové služby.|-   [Jak: Vytvořit vlastní těla protokolu HTTP editor pro editor testu výkonnosti webu](../test/how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor.md)|
+|**Vytvoření vlastního modulu plug-in pro zátěžový test**: pomocí rozhraní API zátěžového testu můžete vytvořit vlastní modul plug-in pro přidání více funkcí testování do zátěžového testu.|-   [Postupy: použití rozhraní API zátěžového testu](../test/how-to-use-the-load-test-api.md)<br />-   [Postupy: Vytvoření modulu plug-in zátěžového testu](../test/how-to-create-a-load-test-plug-in.md)|
+|**Vytvořte vlastní modul plug-in pro test výkonnosti webu:** Pomocí rozhraní API testu výkonnosti webu můžete vytvořit vlastní modul plug-in pro přidání více funkcí testování do testu výkonnosti webu, včetně na úrovni žádosti. Můžete také vytvořit test webové služby.<br /><br /> Kromě toho můžete vytvořit modul plug-in zapisovače webu, který může upravit test výkonnosti webu po jeho nahrání, ale ještě před tím, než se zobrazí v Prohlížeč výsledků testů výkonu webu.|-   [Postupy: použití rozhraní API testu výkonnosti webu](../test/how-to-use-the-web-performance-test-api.md)<br />-   [Postupy: Vytvoření modulu plug-in testu výkonnosti webu](../test/how-to-create-a-web-performance-test-plug-in.md)<br />-   [Postupy: Vytvoření modulu plug-in na úrovni požadavků](../test/how-to-create-a-request-level-plug-in.md)<br />-   [Postupy: vytvoření testu webové služby](../test/how-to-create-a-web-service-test.md)<br />-   [Postupy: Vytvoření modulu plug-in pro záznam](../test/how-to-create-a-recorder-plug-in.md)|
+|**Přidání funkcí uživatelského rozhraní do prohlížeče webového výkonu výsledky testů Viewer:** Pomocí doplňku sady Visual Studio můžete přidat další funkce uživatelského rozhraní do prohlížeče webového výkonu Výsledky testů Viewer.|-   [Postupy: vytvoření doplňku sady Visual Studio pro prohlížeč výsledků testu výkonnosti webu](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)|
+|**Vytvoření vlastního editoru těla protokolu http:** Můžete vytvořit vlastní editor pro úpravu binárních nebo řetězcových odpovědí HTTP XML z webové služby.|-   [Postupy: Vytvoření vlastního editoru těla protokolu HTTP pro Editor testu výkonnosti webu](../test/how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor.md)|
 
 ## <a name="reference"></a>Odkaz
 
@@ -47,5 +47,5 @@ Vlastní modul plug-in používá kód, který lze vytvořit a připojit k zát�
 
 ## <a name="see-also"></a>Viz také:
 
-- [Analýza výsledků zátěžových testů](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
-- [Generování a spuštění programový test výkonnosti webu](../test/generate-and-run-a-coded-web-performance-test.md)
+- [Analyzovat výsledky zátěžového testu](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Generování a spuštění kódovaného testu výkonnosti webu](../test/generate-and-run-a-coded-web-performance-test.md)

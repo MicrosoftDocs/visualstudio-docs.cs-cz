@@ -5,22 +5,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], custom host
 - text templates, custom host walkthrough
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: b9d2447d07d9faabb5fc7eabddafc328756056ca
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 999e8f27a9c60d776d65dc87eb2b42adeec2226c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870663"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666977"
 ---
-# <a name="walkthrough-create-a-custom-text-template-host"></a>Návod: Vytvoření vlastního hostitele šablon textu
+# <a name="walkthrough-create-a-custom-text-template-host"></a>Návod: Vytvoření vlastního hostitele textových šablon
 
 *Hostitel šablony textu* poskytuje prostředí, které umožňuje spustit *Modul transformace textové šablony* . Tento hostitel se stará o interakce stroje se systémem souborů. Modul nebo *procesor direktiv* , který potřebuje soubor nebo sestavení, může vyžádat prostředek z hostitele. Hostitel pak může požadovaný prostředek najít prohledáním adresáře a globální mezipaměti sestavení (GAC). Další informace naleznete v tématu [proces transformace textové šablony](../modeling/the-text-template-transformation-process.md).
 
@@ -51,7 +51,7 @@ V tomto návodu vytvoříte vlastního hostitele ve spustitelné aplikaci, kter
 
 2. Přidejte odkazy na následující sestavení:
 
-   - **Microsoft.VisualStudio.TextTemplating.\*.0**
+   - **Microsoft. VisualStudio. TextTemplating. \*.0**
 
    - **Microsoft. VisualStudio. TextTemplating. Interfaces. 10.0 a novějších verzí**
 
@@ -714,11 +714,11 @@ V tomto návodu vytvoříte vlastního hostitele ve spustitelné aplikaci, kter
    End Namespace
    ```
 
-4. Pouze [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] pro otevřete nabídku **projekt** a klikněte na příkaz **vlastnosti CustomHost**. V seznamu **spouštěcí objekt** klikněte na **CustomHost. program**.
+4. Pouze pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] otevřete nabídku **projekt** a klikněte na příkaz **vlastnosti CustomHost**. V seznamu **spouštěcí objekt** klikněte na **CustomHost. program**.
 
-5. Na **souboru** nabídky, klikněte na tlačítko **Uložit vše**.
+5. V nabídce **soubor** klikněte na **Uložit vše**.
 
-6. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+6. V nabídce **sestavení** klikněte na **Sestavit řešení**.
 
 ## <a name="test-the-custom-host"></a>Test vlastního hostitele
 
@@ -819,7 +819,7 @@ Při testování vlastního hostitele napíšete textovou šablonu, spustíte vl
 
 ## <a name="next-steps"></a>Další kroky
 
-V tomto návodu jste vytvořili hostitele transformace textových šablon, který podporuje základní funkce transformace. Tohoto hostitele můžete rozšířit tak, aby podporoval textové šablony, které volají vlastní nebo vygenerované procesory direktiv. Další informace najdete v tématu [Návod: Připojení hostitele k procesoru](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)vygenerovaných direktiv
+V tomto návodu jste vytvořili hostitele transformace textových šablon, který podporuje základní funkce transformace. Tohoto hostitele můžete rozšířit tak, aby podporoval textové šablony, které volají vlastní nebo vygenerované procesory direktiv. Další informace najdete v tématu [Návod: připojení hostitele k procesoru vygenerovaných direktiv](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,56 +1,56 @@
 ---
-title: Fragmenty XML | Dokumentace Microsoftu
+title: Fragmenty XML | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 348dbf64-3f09-4fff-b47a-a7ecdf3221cc
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5e2fbba9006c1621b8f98084d4ffd4c637be1127
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5bc8946d62f47291a6e0e3f26032589bfdf0de16
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68147156"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669353"
 ---
 # <a name="xml-snippets"></a>Fragmenty XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-XML Editor nabízí funkci *fragmentů XML*, který umožňuje rychlejší vytváření souborů XML. Můžete znovu použít fragmentů XML tak, že vloží do vašich souborů. Můžete také vygenerovat data XML na základě schématu schématu XML definice jazyk (XSD).  
-  
-## <a name="reusable-xml-snippets"></a>Opakovaně použitelné XML fragmentů  
- XML Editor obsahuje mnoho fragmentů kódu, které se týkají několik běžných úloh. To umožňuje snadno vytvářet soubory XML. Pokud bylo vytváření schématu XML, například pomocí "Komplexních prvků typu sekvenci" a "Jednoduchý typ elementu" fragmenty kódu vloží následující text do souboru XML. Pak změníte `name` hodnotu tak, aby odpovídala vašim potřebám.  
-  
-```  
-<xs:element name="name">  
-  <xs:complexType>  
-    <xs:sequence>  
-      <xs:element name="name">  
-        <xs:simpleType>  
-          <xs:restriction base="xs:string"></xs:restriction>  
-        </xs:simpleType>  
-      </xs:element>  
-    </xs:sequence>  
-  </xs:complexType>  
-</xs:element>  
-```  
-  
- Fragmenty kódu můžete vložit dvěma způsoby. **Vložit fragment** příkaz vloží fragment kódu XML na pozici kurzoru. **Obklopit fragmentem** příkaz zabalí fragment kódu XML okolo vybraného textu. Buď nejsou k dispozici i příkazy z **IntelliSense** podnabídky **upravit** nabídky, nebo v místní nabídce editoru.  
-  
- Další informace najdete v tématu [jak: Použití fragmentů XML](../xml-tools/how-to-use-xml-snippets.md).  
-  
-## <a name="schema-generated-xml-snippets"></a>Generované schématu XML fragmentů  
- XML editor má také možnost generování fragmentu XML ze schématu XML. Tato funkce umožňuje naplnit k elementu pomocí elementů XML generované informace o schématu pro daný element.  
-  
- Další informace najdete v tématu [jak: Generování fragmentu XML ze schématu XML](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md).  
-  
-## <a name="create-new-xml-snippets"></a>Vytvoření nových fragmentů kódu XML  
- Kromě fragmenty kódu, které jsou součástí [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio ve výchozím nastavení můžete také vytvořit a použít vlastní fragmenty kódu XML.  
-  
- Další informace najdete v tématu [jak: Vytváření fragmentů XML](../xml-tools/how-to-create-xml-snippets.md).  
-  
-## <a name="see-also"></a>Viz také  
+Editor XML nabízí funkci s názvem *fragmenty XML*, které umožňují rychlejší vytváření souborů XML. Můžete znovu použít fragmenty XML jejich vložením do souborů. Můžete také vygenerovat data XML na základě schématu XSD (XML Schema Definition Language).
+
+## <a name="reusable-xml-snippets"></a>Opakovaně použitelné fragmenty XML
+ Editor XML obsahuje mnoho fragmentů kódu, které pokrývají některé běžné úkoly. To vám umožní snadněji vytvářet soubory XML. Například pokud jste provedli vytváření schématu XML pomocí fragmentů "element sekvence komplexního typu" a "jednoduchý typ prvku" vloží do souboru následující text XML. Pak změňte hodnotu `name` tak, aby vyhovovala vašim potřebám.
+
+```
+<xs:element name="name">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"></xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+```
+
+ Fragmenty kódu můžete vložit dvěma způsoby. Příkaz **Vložit fragment** kódu vloží fragment kódu XML na pozici kurzoru. Příkaz **Surround with** zabalí fragment XML kolem vybraného textu. Oba příkazy jsou k dispozici buď v podnabídce **IntelliSense** v nabídce **Úpravy** , nebo v místní nabídce editoru.
+
+ Další informace naleznete v tématu [How to: use XML Fragments](../xml-tools/how-to-use-xml-snippets.md).
+
+## <a name="schema-generated-xml-snippets"></a>Fragmenty XML generované schématy
+ Editor XML má také možnost generovat fragment kódu XML ze schématu XML. Tato funkce umožňuje naplnit element prvky XML generovanými z informací o schématu pro daný element.
+
+ Další informace naleznete v tématu [How to: Generate XML fragment from XML Schema](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md).
+
+## <a name="create-new-xml-snippets"></a>Vytvoření nových fragmentů kódu XML
+ Kromě fragmentů, které jsou součástí [!INCLUDE[msCoName](../includes/msconame-md.md)] sady Visual Studio ve výchozím nastavení, můžete také vytvářet a používat vlastní fragmenty kódu XML.
+
+ Další informace najdete v tématu [Postupy: vytváření fragmentů kódu XML](../xml-tools/how-to-create-xml-snippets.md).
+
+## <a name="see-also"></a>Viz také
  [Editor XML](../xml-tools/xml-editor.md)

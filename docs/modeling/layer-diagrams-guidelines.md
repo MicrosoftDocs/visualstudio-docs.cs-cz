@@ -7,21 +7,21 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6241a92d8f40a75ba98f09b7e1e0f113e45d4be8
-ms.sourcegitcommit: 0f44ec8ba0263056ad04d2d0dc904ad4206ce8fc
+ms.openlocfilehash: 39da24dd0d8b7372c63609124ee0b9427fccb03d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766503"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661509"
 ---
 # <a name="dependency-diagrams-guidelines"></a>Diagramy závislostí: pokyny
 
-Popište architekturu vaší aplikace na vysoké úrovni tím, že vytvoříte *diagramy závislosti* v aplikaci Visual Studio. Ujistěte se, že váš kód zůstává v souladu s tímto návrhem ověřováním kódu pomocí diagramu závislostí. Do procesu sestavení můžete také zahrnout ověřování vrstvy. Podívejte [se na video pro kanál 9: Navrhněte a ověřte svoji architekturu pomocí diagramů](http://go.microsoft.com/fwlink/?LinkID=252073)závislostí.
+Popište architekturu vaší aplikace na vysoké úrovni tím, že vytvoříte *diagramy závislosti* v aplikaci Visual Studio. Ujistěte se, že váš kód zůstává v souladu s tímto návrhem ověřováním kódu pomocí diagramu závislostí. Do procesu sestavení můžete také zahrnout ověřování vrstvy. Podívejte [se na video pro kanál 9: návrh a ověření architektury pomocí diagramů závislostí](http://go.microsoft.com/fwlink/?LinkID=252073).
 
 Pokud chcete zjistit, které edice sady Visual Studio podporují tuto funkci, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -30,7 +30,7 @@ Pokud chcete zjistit, které edice sady Visual Studio podporují tuto funkci, p�
 
 ## <a name="what-is-a-dependency-diagram"></a>Co je Diagram závislostí?
 
-Podobně jako v případě klasického diagramu architektury identifikuje diagram závislosti hlavní součásti nebo funkční jednotky návrhu a jejich vzájemných závislostí. Každý uzel v diagramu, označovaný jako *vrstva*, představuje logickou skupinu oborů názvů, projektů nebo jiných artefaktů. Můžete nakreslit závislosti, které by měly existovat v návrhu. Na rozdíl od tradičního diagramu architektury můžete ověřit, zda skutečné závislosti ve zdrojovém kódu odpovídají plánovaným závislostem, které jste určili. Při ověřování části pravidelného sestavení na [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]portálu můžete zajistit, aby kód programu pokračoval v dodržení architektury systému v důsledku budoucích změn. Viz [diagramy závislostí: Odkaz](../modeling/layer-diagrams-reference.md).
+Podobně jako v případě klasického diagramu architektury identifikuje diagram závislosti hlavní součásti nebo funkční jednotky návrhu a jejich vzájemných závislostí. Každý uzel v diagramu, označovaný jako *vrstva*, představuje logickou skupinu oborů názvů, projektů nebo jiných artefaktů. Můžete nakreslit závislosti, které by měly existovat v návrhu. Na rozdíl od tradičního diagramu architektury můžete ověřit, zda skutečné závislosti ve zdrojovém kódu odpovídají plánovaným závislostem, které jste určili. Provedením ověřování části pravidelného sestavování na [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] můžete zajistit, aby kód programu pokračoval v dodržení architektury systému v rámci budoucích změn. Viz téma [diagramy závislostí: Reference](../modeling/layer-diagrams-reference.md).
 
 ## <a name="how-to-design-or-update-your-app-with-dependency-diagrams"></a>Návrh nebo aktualizace aplikace pomocí diagramů závislostí
 
@@ -70,7 +70,7 @@ Viz [vytváření diagramů závislostí z kódu](../modeling/create-layer-diagr
 
 Vrstvy reprezentují logické skupiny *artefaktů*, jako jsou projekty, soubory kódu, obory názvů, třídy a metody. Můžete vytvářet vrstvy z artefaktů z vizuálů C# a Visual Basic projekty, nebo můžete k vrstvě připojit specifikace nebo plány propojením dokumentů, jako jsou například soubory aplikace Word nebo prezentace aplikace PowerPoint. Každá vrstva se zobrazí jako obdélník v diagramu a zobrazuje počet artefaktů, které jsou s ním spojeny. Vrstva může obsahovat vnořené vrstvy, které popisují konkrétnější úlohy.
 
-V rámci obecných pokynů, názvy vrstev podle jejich funkce, například "prezentace" nebo "služby". Pokud jsou artefakty úzce závislé, umístěte je do stejné vrstvy. Pokud se artefakty dají aktualizovat samostatně nebo použít v samostatných aplikacích, umístěte je do různých vrstev. Další informace o vzorech vrstvení najdete na webu vzory & postupy na adrese [http://go.microsoft.com/fwlink/?LinkId=145794](http://go.microsoft.com/fwlink/?LinkId=145794).
+V rámci obecných pokynů, názvy vrstev podle jejich funkce, například "prezentace" nebo "služby". Pokud jsou artefakty úzce závislé, umístěte je do stejné vrstvy. Pokud se artefakty dají aktualizovat samostatně nebo použít v samostatných aplikacích, umístěte je do různých vrstev. Další informace o vzorech vrstvení najdete v části vzory & postupy na webu [http://go.microsoft.com/fwlink/?LinkId=145794](http://go.microsoft.com/fwlink/?LinkId=145794).
 
 > [!TIP]
 > Existují určité typy artefaktů, které můžete propojit s vrstvami, ale které nepodporují ověřování proti diagramu závislostí. Chcete-li zjistit, zda artefakt podporuje ověřování, otevřete **Průzkumníka vrstev** a prověřte vlastnost **podporuje ověření** odkazu artefaktu. Viz [zjišťování existujících závislostí mezi vrstvami](#Generate).
@@ -102,7 +102,7 @@ Obvykle se zobrazí nějaké závislosti, které by neměly existovat. Tyto záv
 
 Chcete-li popsat změny, které plánujete udělat v systému nebo zamýšlené architektuře, použijte následující postup pro úpravu diagramu závislostí. Můžete také zvážit provedení některých změn refaktoringu pro zlepšení struktury kódu před jeho rozšířením. Viz [vylepšení struktury kódu](#Improving).
 
-|**To**|**Proveďte tyto kroky**|
+|**Schopn**|**Proveďte tyto kroky**|
 |-|-|
 |Odstranit závislost, která neexistuje|Klikněte na závislost a potom stiskněte **Delete**.|
 |Změna nebo omezení směru závislosti|Nastavte vlastnost **Direction** .|
@@ -123,7 +123,7 @@ V takovém případě se kód v průběhu své životnosti obtížně změní a 
 
 Při zahájení vývoje nového projektu nebo nové oblasti v novém projektu lze nakreslit vrstvy a závislosti, které vám pomohou identifikovat hlavní komponenty před začátkem vývoje kódu.
 
-- Pokud je to možné, zobrazit v diagramech závislosti **identifikovatelné struktury architektury** . Diagram závislosti, který popisuje desktopovou aplikaci, může například zahrnovat vrstvy, jako je prezentace, doménová logika a úložiště dat. Diagram závislosti, který pokrývá jednu funkci v rámci aplikace, může mít vrstvy, jako je model, zobrazení a kontroler. Další informace o těchto vzorech najdete v [tématu vzory & postupy: Architektura](http://go.microsoft.com/fwlink/?LinkId=145794)aplikace.
+- Pokud je to možné, zobrazit v diagramech závislosti **identifikovatelné struktury architektury** . Diagram závislosti, který popisuje desktopovou aplikaci, může například zahrnovat vrstvy, jako je prezentace, doménová logika a úložiště dat. Diagram závislosti, který pokrývá jednu funkci v rámci aplikace, může mít vrstvy, jako je model, zobrazení a kontroler. Další informace o těchto vzorech najdete v tématu [vzory & postupy: Architektura aplikace](http://go.microsoft.com/fwlink/?LinkId=145794).
 
 - **Vytvořte artefakt kódu pro každou vrstvu** , například obor názvů, třídu nebo komponentu. Díky tomu je snazší sledovat kód a propojit artefakty kódu s vrstvami. Jakmile vytvoříte každý artefakt, propojte jej s příslušnou vrstvou.
 

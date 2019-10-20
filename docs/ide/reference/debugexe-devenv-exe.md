@@ -8,21 +8,21 @@ helpviewer_keywords:
 - /DebugExe [devenv.exe]
 - debugging executables
 ms.assetid: cd700006-1648-418f-924b-4b1e5c1412ab
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 05266a6f1b5ee0be22e2edc8df1c03b720844f4f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bb4eb1eb49cd6b29740fb6d365a98a51cc28387e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968077"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661667"
 ---
 # <a name="debugexe-devenvexe"></a>/DebugExe (devenv.exe)
 
-Otevře zadaný spustitelný soubor k ladění.
+Otevře zadaný spustitelný soubor, který se má ladit.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,11 +34,11 @@ devenv /DebugExe ExecutableFile
 
 - *ExecutableFile*
 
-  Povinný parametr. Název a cesta k souboru `.exe` souboru. Pokud `.exe` soubor nebyl nalezen nebo pokud neexistuje, nezobrazí žádné upozornění ani chyby, a sady Visual Studio spustí běžným způsobem.
+  Požadováno. Cesta a název souboru `.exe`. Pokud soubor `.exe` nenalezne nebo neexistuje, nezobrazí se žádné upozornění nebo chyba a aplikace Visual Studio se spustí normálně.
 
 ## <a name="remarks"></a>Poznámky
 
-Všechny řetězce po *ExecutableFile* parametru jsou předány do tohoto souboru jako argumenty.
+Všechny řetězce za parametrem *ExecutableFile* jsou do tohoto souboru předány jako argumenty.
 
 ## <a name="example"></a>Příklad
 

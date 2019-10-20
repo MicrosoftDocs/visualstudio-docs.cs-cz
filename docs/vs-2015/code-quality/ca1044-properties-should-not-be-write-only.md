@@ -1,5 +1,5 @@
 ---
-title: 'CA1044: Vlastnosti by neměly být pouze pro zápis | Dokumentace Microsoftu'
+title: 'CA1044: vlastnosti by neměly být pouze pro zápis | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - PropertiesShouldNotBeWriteOnly
 ms.assetid: 8386bf3a-b161-4841-bf8b-92591595aea9
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 444081d1e55bd76b67162add508d4f78415e4b3b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aa2d07337ec48e41a9d8ad82602a387159192f92
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68143199"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668274"
 ---
 # <a name="ca1044-properties-should-not-be-write-only"></a>CA1044: Vlastnosti by neměly být pouze pro zápis
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,23 +29,23 @@ ms.locfileid: "68143199"
 |-|-|
 |TypeName|PropertiesShouldNotBeWriteOnly|
 |CheckId|CA1044|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Veřejné nebo chráněné vlastnosti má přistupující objekt set, ale nemá přistupující objekt get.
+ Vlastnost Public nebo Protected má přístupový objekt set, ale nemá přistupující objekt get.
 
 ## <a name="rule-description"></a>Popis pravidla
- Získat přístupové objekty poskytnout oprávnění ke čtení pro vlastnost a přístupové objekty set poskytují přístup pro zápis. Ačkoli je přijatelné a často nezbytné použít vlastnost jen pro čtení, směrnice návrhu zakazují použití vlastností jen pro zápis. Je to proto, že umožnit uživateli nastavit hodnotu a poté uživateli zabránit v zobrazování hodnotě neposkytuje žádné zabezpečení. Taktéž bez přístupu pro čtení není možné zobrazit stav sdílených objektů, což omezuje jejich užitečnost.
+ Přístupové objekty get poskytují přístup pro čtení k vlastnostem a přístup k sadě poskytují přístup pro zápis. Ačkoli je přijatelné a často nezbytné použít vlastnost jen pro čtení, směrnice návrhu zakazují použití vlastností jen pro zápis. Důvodem je skutečnost, že uživatel může nastavit hodnotu a potom zabránit uživateli v zobrazení hodnoty neposkytuje žádné zabezpečení. Taktéž bez přístupu pro čtení není možné zobrazit stav sdílených objektů, což omezuje jejich užitečnost.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, přidejte přístupový objekt get vlastnosti. Případně pokud chování vlastnost jen pro zápis, je nezbytné, zvažte, převod této vlastnosti na metodu.
+ Chcete-li opravit porušení tohoto pravidla, přidejte do vlastnosti přistupující objekt get. Případně, pokud je nezbytné chování vlastnosti jen pro zápis, zvažte převedení této vlastnosti na metodu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Důrazně doporučujeme nepotlačujte upozornění tohoto pravidla.
+ Důrazně doporučujeme, abyste z tohoto pravidla potlačili upozornění.
 
 ## <a name="example"></a>Příklad
- V následujícím příkladu `BadClassWithWriteOnlyProperty` je typ s vlastností jen pro zápis. `GoodClassWithReadWriteProperty` obsahuje opraveným kódem.
+ V následujícím příkladu je `BadClassWithWriteOnlyProperty` typem s vlastností pouze pro zápis. `GoodClassWithReadWriteProperty` obsahuje opravený kód.
 
  [!code-csharp[FxCop.Design.PropertiesNotWriteOnly#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.PropertiesNotWriteOnly/cs/FxCop.Design.PropertiesNotWriteOnly.cs#1)]
  [!code-vb[FxCop.Design.PropertiesNotWriteOnly#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.PropertiesNotWriteOnly/vb/PropertiesNotWriteOnly.vb#1)]

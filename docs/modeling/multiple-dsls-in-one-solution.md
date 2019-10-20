@@ -2,60 +2,60 @@
 title: Vícesouborové DSL v jediném řešení
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87d9e4ae8239994a7524cdd1da0b3cfe05ea42d5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: HT
+ms.openlocfilehash: b5d21d3954a402e7ce8eb26c34d6a6a5c237309a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808181"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658349"
 ---
 # <a name="multiple-dsls-in-one-solution"></a>Vícesouborové DSL v jediném řešení
 
-Jako součást jediného řešení můžete zabalit několik DSL, tak, že jsou nainstalovány společně.
+Můžete zabalit několik DSL jako součást jednoho řešení, aby byly nainstalovány dohromady.
 
-Můžete použít několik technik k integraci vícesouborové DSL. Další informace najdete v tématu [integrace modelů pomocí Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md) a [jak: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md) a [přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md).
+K integraci více DSL můžete použít několik postupů. Další informace naleznete v tématu [integrování modelů pomocí sady Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md) a [Postupy: Přidání obslužné rutiny přetahování myší](../modeling/how-to-add-a-drag-and-drop-handler.md) a [přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md).
 
-## <a name="build-more-than-one-dsl-in-the-same-solution"></a>Sestavení více než jednom DSL ve stejném řešení
+## <a name="build-more-than-one-dsl-in-the-same-solution"></a>Sestavení více než jedné DSL ve stejném řešení
 
-1. Vytvořte nový **projekt VSIX** projektu.
+1. Vytvořte nový projekt **VSIX** projektu.
 
-2. Vytvoření dvou nebo více projektů DSL v adresáři řešení VSIX.
+2. Vytvořte dva nebo více projektů DSL v adresáři řešení VSIX.
 
-   - Pro každý DSL otevřete novou instanci sady Visual Studio. Vytvořte nový DSL a zadejte stejnou složku řešení jako řešení VSIX.
+   - Pro každou DSL otevřete novou instanci sady Visual Studio. Vytvořte novou DSL a jako řešení VSIX zadejte stejnou složku řešení.
 
-   - Ujistěte se, že vytvoření každé DSL s příponou jiný název souboru.
+   - Nezapomeňte vytvořit každou DSL s jinou příponou názvu souboru.
 
-   - Změna názvů **Dsl** a **DslPackage** projekty tak, aby byly všechny různé. Příklad: `Dsl1`, `DslPackage1`, `Dsl2`, `DslPackage2`.
+   - Změňte názvy projektů **DSL** a **DslPackage** tak, aby se všechny lišily. Například: `Dsl1`, `DslPackage1`, `Dsl2` `DslPackage2`.
 
-   - V každém **DslPackage\*\source.extension.tt**, aktualizujte tohoto řádku na správný název projektu Dsl:
+   - V každém **DslPackage \* \ source.extension.TT**aktualizujte tento řádek na správný název projektu DSL:
 
       `string dslProjectName = "Dsl2";`
 
-   - Do řešení VSIX, přidejte Dsl * a DslPackage\* projekty. Můžete chtít umístit každý pár ve vlastní složce řešení.
+   - V rámci řešení VSIX přidejte \* projekty DSL * a DslPackage. Každou dvojici můžete umístit do vlastní složky řešení.
 
-2. Kombinovat manifestu VSIX DSL:
+2. Kombinovat manifesty VSIX DSL:
 
-   1. Open _YourVsixProject_**\source.extension.manifest**.
+   1. Otevřete _YourVsixProject_ **\Source.extension.manifest**.
 
-   2. Pro každý DSL, zvolte **přidat obsah** a přidejte:
+   2. U každé DSL vyberte **Přidat obsah** a přidejte:
 
-       - `Dsl*` projekt jako **Komponenta MEF**
+       - `Dsl*` projekt jako **součást MEF**
 
-       - `DslPackage*` projekt jako **Komponenta MEF**
+       - `DslPackage*` projekt jako **součást MEF**
 
-       - `DslPackage*` projekt jako **balíček VS**
+       - `DslPackage*` projekt jako **balíček vs**
 
 3. Sestavte řešení.
 
-   Výsledný VSIX nainstaluje i DSL. Můžete otestovat pomocí klávesy F5 nebo nasadit _YourVsixProject_**\bin\Debug\\\*VSIX**.
+   Výsledný VSIX bude instalovat obě DSL. Můžete je otestovat pomocí F5 nebo nasadit _YourVsixProject_ **\bin\debug \\ \*. vsix**.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Integrace modelů pomocí Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md)
-- [Postupy: Přidání obslužné rutiny operace podporující přetahování](../modeling/how-to-add-a-drag-and-drop-handler.md)
+- [Postupy: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md)
 - [Přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md)

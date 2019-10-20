@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Implementace rozhraní (návrhář tříd) | Dokumentace Microsoftu'
+title: 'Postupy: implementace rozhraní (Návrhář tříd) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,49 +9,46 @@ helpviewer_keywords:
 - interfaces [Visual Studio]
 ms.assetid: 81d2cf46-7f60-448c-83e3-1d16bb88ca36
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1b437fb34902783002baedee992a21ee61a86c2e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 6b750830e8263d0016f52a71ad4eac8c6950eda8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65685628"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651854"
 ---
 # <a name="how-to-implement-an-interface-class-designer"></a>Postupy: Implementace rozhraní (návrhář tříd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V Návrháři tříd můžete implementovat rozhraní v diagramu tříd díky připojení k třídu, která poskytuje kód pro metody rozhraní. Návrhář tříd implementaci rozhraní vygeneruje a zobrazí vztah mezi rozhraní a třídy jako vztah dědičnosti. Kreslením čáru dědičnosti mezi rozhraní a třídy nebo přetažením rozhraní ze zobrazení tříd můžete implementovat rozhraní.  
-  
+V Návrhář tříd můžete implementovat rozhraní v diagramu tříd tím, že ho propojíte s třídou, která poskytuje kód pro metody rozhraní. Návrhář tříd generuje implementaci rozhraní a zobrazuje vztah mezi rozhraním a třídou jako vztah dědičnosti. Rozhraní lze implementovat kreslením čáry dědičnosti mezi rozhraním a třídou nebo přetažením rozhraní z Zobrazení tříd.
+
 > [!TIP]
-> Můžete vytvořit rozhraní stejným způsobem vytvoření jiných typů. Pokud rozhraní existuje, ale nezobrazí v diagramu tříd, pak nejprve zobrazí ji. Další informace najdete v tématu [jak: Vytváření typů pomocí návrháře tříd](../ide/how-to-create-types-by-using-class-designer.md) a [jak: Zobrazení existujících typů (návrhář tříd)](../ide/how-to-view-existing-types-class-designer.md).  
-  
-### <a name="to-implement-an-interface-by-drawing-an-inheritance-line"></a>Pro implementaci rozhraní kreslením čáru dědičnosti  
-  
-1. V diagramu tříd zobrazte rozhraní a třídy, která implementuje rozhraní.  
-  
-2. Kreslení čáru dědičnosti z třídy a rozhraní.  
-  
-    Lupy se zobrazí jako připojené ke třídě a popisek s názvem rozhraní identifikuje vztah dědičnosti. Visual Studio generuje provizorní kód pro všechny členy rozhraní.  
-  
-   Další informace najdete v tématu [jak: Vytvoření dědičnosti mezi typy (návrhář tříd)](../ide/how-to-create-inheritance-between-types-class-designer.md).  
-  
-### <a name="to-implement-an-interface-from-the-class-view-window"></a>Pro implementaci rozhraní z oken zobrazení tříd  
-  
-1. V diagramu tříd zobrazte třídu, která chcete implementovat rozhraní.  
-  
-2. Otevřete zobrazení tříd a vyhledejte rozhraní.  
-  
+> Rozhraní můžete vytvořit stejným způsobem jako jiné typy. Pokud rozhraní existuje, ale není zobrazeno v diagramu tříd, pak jej nejprve zobrazte. Další informace naleznete v tématu [Postupy: vytváření typů pomocí Návrhář tříd](../ide/how-to-create-types-by-using-class-designer.md) a [Postupy: zobrazení existujících typů (návrhář tříd)](../ide/how-to-view-existing-types-class-designer.md).
+
+### <a name="to-implement-an-interface-by-drawing-an-inheritance-line"></a>Implementace rozhraní kreslením čáry dědičnosti
+
+1. V diagramu tříd Zobrazte rozhraní a třídu, která bude implementovat rozhraní.
+
+2. Nakreslete čáru dědičnosti z třídy a rozhraní.
+
+    Zobrazí se Lupa připojená ke třídě a popisek s názvem rozhraní identifikuje vztah dědičnosti. Visual Studio generuje zástupné procedury pro všechny členy rozhraní.
+
+   Další informace naleznete v tématu [How to: Create dědičnost mezi typy (návrhář tříd)](../ide/how-to-create-inheritance-between-types-class-designer.md).
+
+### <a name="to-implement-an-interface-from-the-class-view-window"></a>Implementace rozhraní z okna Zobrazení tříd
+
+1. V diagramu tříd Zobrazte třídu, kterou chcete implementovat rozhraní.
+
+2. Otevřete Zobrazení tříd a vyhledejte rozhraní.
+
     > [!TIP]
-    > Pokud zobrazení tříd není otevřeno, otevřete je z **zobrazení** nabídky. Další informace o zobrazení tříd naleznete v tématu [Viewing Classes and Their Members](https://msdn.microsoft.com/71e9e8f3-261a-4e0c-87bf-5ec48b8bf333).  
-  
-3. Přetáhněte uzel rozhraní do třídy obrazec v diagramu.  
-  
-     Lupy se zobrazí jako připojené ke třídě a popisek s názvem rozhraní identifikuje vztah dědičnosti. Visual Studio generuje provizorní kód pro všechny členy rozhraní. v tomto okamžiku je implementovaná rozhraní.  
-  
-## <a name="see-also"></a>Viz také  
- [Postupy: Vytváření typů pomocí návrháře tříd](../ide/how-to-create-types-by-using-class-designer.md)   
- [Postupy: Zobrazení existujících typů (návrhář tříd)](../ide/how-to-view-existing-types-class-designer.md)   
- [Postupy: Vytvoření dědičnosti mezi typy (návrhář tříd)](../ide/how-to-create-inheritance-between-types-class-designer.md)   
- [Refaktoring tříd a typů (Návrhář tříd)](../ide/refactoring-classes-and-types-class-designer.md)
+    > Pokud Zobrazení tříd není otevřený, otevřete Zobrazení tříd v nabídce **zobrazení** . Další informace o Zobrazení tříd naleznete v tématu [zobrazení tříd a jejich členů](https://msdn.microsoft.com/71e9e8f3-261a-4e0c-87bf-5ec48b8bf333).
+
+3. Přetáhněte uzel rozhraní do obrazce Třída v diagramu.
+
+     Zobrazí se Lupa připojená ke třídě a popisek s názvem rozhraní identifikuje vztah dědičnosti. Visual Studio generuje zástupné procedury pro všechny členy rozhraní; v tomto okamžiku je rozhraní implementováno.
+
+## <a name="see-also"></a>Viz také
+ [Postupy: vytváření typů pomocí Návrhář tříd](../ide/how-to-create-types-by-using-class-designer.md) [Postupy: zobrazení existujících typů (návrhář tříd)](../ide/how-to-view-existing-types-class-designer.md) [Postupy: vytvoření dědičnosti mezi typy (návrhář tříd)](../ide/how-to-create-inheritance-between-types-class-designer.md) [refaktoring tříd a typů (návrhář tříd)](../ide/refactoring-classes-and-types-class-designer.md)

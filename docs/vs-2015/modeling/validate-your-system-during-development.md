@@ -1,5 +1,5 @@
 ---
-title: Ověřování systému během vývoje | Dokumentace Microsoftu
+title: Ověření systému během vývoje | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -8,43 +8,40 @@ helpviewer_keywords:
 - layer diagrams
 ms.assetid: c9dafb47-7b1d-4c72-9432-d43be3db1799
 caps.latest.revision: 39
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4570b8ed1afdfff2efd36dbc2f80e97cfbceecac
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 489642936c6b309cd7a30eb6e0a5ad9b0edc8bd0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65698065"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659415"
 ---
 # <a name="validate-your-system-during-development"></a>Ověřování systému během vývoje
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio vám může pomoci udržovat konzistentní s požadavky uživatelů a architektuře systému vašeho softwaru.  
-  
- Které verze sady Visual Studio podporovat každé z těchto funkcí najdete v tématu [podporované verze pro nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
-  
-## <a name="key-tasks"></a>Klíčové úkoly  
- Tyto úlohy slouží k ověření vašeho softwaru.  
-  
-|**Úlohy**|**Související témata**|  
-|---------------|---------------------------|  
-|**Ujistěte se, že váš model je konzistentní vzhledem k aplikacím:**<br /><br /> V závislosti na způsobu, jakým váš projekt používá a modely může být užitečné zakáže některé kombinace prvků. Například může omezit třídy UML, tak, aby vždy [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)]-kompatibilní s názvy. Můžete definovat omezení, jako jsou tyto v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření.|-   [Ověření modelu UML](../modeling/validate-your-uml-model.md)<br />-   [Definování omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md)|  
-|**Ujistěte se, že software splňuje požadavky uživatelů**:<br /><br /> Požadavky a architektury modely můžete pomoci vám organizovat testy systému a jeho součástí. Tento postup pomáhá zajistit, že testování požadavků, které jsou důležité pro uživatele a další zainteresované uživatele, a pomůže vám rychle aktualizovat testů při změně požadavků.|-   [Vývoj testů z modelu](../modeling/develop-tests-from-a-model.md)|  
-|**Ujistěte se, že software zůstává konzistentní s zamýšleného návrhu systému:**<br /><br /> Diagramy vrstev popsat zamýšlené závislosti mezi komponentami vaší aplikace. Během vývoje můžete ověřit, že skutečné závislosti v kódu odpovídají zamýšleného návrhu.|-   [Vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [Ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)|  
-  
-## <a name="external-resources"></a>Externí zdroje  
-  
-|**Kategorie**|**Odkazy**|  
-|------------------|---------------|  
-|**Videa**|![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [Channel 9: Doug sedm: Porozumění kódu a návrhu systému sadou Visual Studio 2010](http://go.microsoft.com/fwlink/?LinkId=216100)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [Channel 9: Aplikační architektura založená na aplikaci pomocí diagramu vrstev](http://go.microsoft.com/fwlink/?LinkID=201117)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [řady MSDN jak: Postup ověření kódu pomocí diagramů vrstev](http://go.microsoft.com/fwlink/?LinkID=214405)|  
-|**Fóra**|-   [Visual Studio Visualization & Modeling nástroje](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio Visualization & Modeling SDK (DSL Tools)](http://go.microsoft.com/fwlink/?LinkId=184721)|  
-|**Blogy**|-   [Visual Studio ALM + Team Foundation Server Blog](http://go.microsoft.com/fwlink/?LinkID=201340)|  
-|**Technické články a deníky**|[MSDN Architecture Center](http://go.microsoft.com/fwlink/?LinkId=201343)|  
-  
-## <a name="see-also"></a>Viz také  
- [Testování aplikace](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)   
- [Rozšíření modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md)   
- [Modelování uživatelských požadavků](../modeling/model-user-requirements.md)   
- [Analýza a modelování architektury](../modeling/analyze-and-model-your-architecture.md)
+Visual Studio může zajistit konzistenci softwaru v souladu s požadavky uživatelů a architekturou systému.
+
+ Chcete-li zjistit, které verze sady Visual Studio podporují jednotlivé funkce, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+
+## <a name="key-tasks"></a>Klíčové úlohy
+ K ověření softwaru použijte následující úlohy.
+
+|**Úlohy**|**Přidružená témata**|
+|---------------|---------------------------|
+|**Ujistěte se, že váš model je konzistentní:**<br /><br /> V závislosti na způsobu, jakým projekt používá a interpretuje modely, může být užitečné zakázat některé kombinace prvků. Můžete například omezit třídy UML tak, aby vždy měly názvy kompatibilní s [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)]. Můžete definovat omezení, například v rozšířeních [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|-   [ověření modelu UML](../modeling/validate-your-uml-model.md)<br />-   [Definování omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md)|
+|Ujistěte **se, že váš software splňuje požadavky uživatelů**:<br /><br /> Můžete použít požadavky a modely architektury, které vám pomůžou organizovat testy vašeho systému a jeho součástí. Tento postup pomáhá zajistit, že budete testovat požadavky, které jsou důležité pro uživatele a další zúčastněné strany, a pomůže vám rychle aktualizovat testy v případě změny požadavků.|-   [vývoj testů z modelu](../modeling/develop-tests-from-a-model.md)|
+|**Ujistěte se, že váš software zůstává v souladu s zamýšleným návrhem vašeho systému:**<br /><br /> Diagramy vrstev popisují zamýšlené závislosti mezi komponentami vaší aplikace. Během vývoje můžete ověřit, zda skutečné závislosti v kódu odpovídají zamýšlenému návrhu.|-   [vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)|
+
+## <a name="external-resources"></a>Externí zdroje
+
+|**Kategorií**|**Odkazy**|
+|------------------|---------------|
+|**Videa**|![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kanál 9: Doug 7: porozumění kódu a návrh systému pomocí sady Visual Studio 2010](http://go.microsoft.com/fwlink/?LinkId=216100)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kanál 9: architekt aplikace pomocí diagramu vrstev](http://go.microsoft.com/fwlink/?LinkID=201117)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN postup I série: jak ověřit kód pomocí diagramů vrstev](http://go.microsoft.com/fwlink/?LinkID=214405)|
+|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](http://go.microsoft.com/fwlink/?LinkId=184721)|
+|**Blogy**|-   [blog sady Visual Studio ALM + Team Foundation Server](http://go.microsoft.com/fwlink/?LinkID=201340)|
+|**Technické články a deníky**|[Centrum architektury MSDN](http://go.microsoft.com/fwlink/?LinkId=201343)|
+
+## <a name="see-also"></a>Viz také
+ [Testování aplikace](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac) [rozšiřování modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md) [požadavky uživatelů](../modeling/model-user-requirements.md) na [analýzu a modelování architektury](../modeling/analyze-and-model-your-architecture.md)

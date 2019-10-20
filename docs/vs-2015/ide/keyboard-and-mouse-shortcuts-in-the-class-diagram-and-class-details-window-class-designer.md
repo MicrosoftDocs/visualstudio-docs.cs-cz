@@ -1,5 +1,5 @@
 ---
-title: Klávesové zkratky a zkratky myši v diagramu tříd a okně podrobností třídy (návrhář tříd) | Dokumentace Microsoftu
+title: Klávesové zkratky a zkratky myši v diagramu tříd a Okno podrobností třídy (Návrhář tříd) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,103 +11,103 @@ helpviewer_keywords:
 - class diagrams, mouse shortcuts
 ms.assetid: c12d8dac-9902-4fde-b721-2a8116da53b7
 caps.latest.revision: 12
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 861ce1cf40dd5c56c043399387ef51fa3b4efee2
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 33596c353f5b8f303fe061a75b6f4fb406912df3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63412247"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651492"
 ---
 # <a name="keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer"></a>Klávesové zkratky a zkratky myši v diagramu tříd a okně podrobností třídy (návrhář tříd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Klávesnice kromě myši můžete použít k provádění akcí navigace v Návrháři tříd a **podrobností třídy** okna.  
-  
- **V tomto tématu**  
-  
-- [Pomocí myši v Návrháři tříd](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#MouseClassDesigner)  
-  
-- [Pomocí myši v okně podrobností třídy](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#MouseClassDetails)  
-  
-- [Pomocí klávesnice v Návrháři tříd](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#KeyboardClassDesigner)  
-  
-- [Pomocí klávesnice v okně podrobností třídy](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#KeyboardClassDetails)  
-  
-## <a name="MouseClassDesigner"></a> Pomocí myši v Návrháři tříd  
- Tyto akce myši, jsou podporovány v diagramech tříd:  
-  
-|Kombinace myši|Kontext|Popis|  
-|-----------------------|-------------|-----------------|  
-|Dvakrát klikněte na panel|elementy obrazců|Otevře se editor kódu.|  
-||Konektor typu Lupa|Rozbalit/sbalit lollipop.|  
-||Popisek konektor typu Lupa|Vyvolá **zobrazit rozhraní** příkazu.|  
-|Kolečko myši|Diagram tříd|Posuňte svisle.|  
-|SHIFT + kolečko myši|Diagram tříd|Posuňte se vodorovně.|  
-|CTRL + kolečko myši|Diagram tříd|Přiblížení.|  
-|CTRL + Shift + kliknutí|Diagram tříd|Přiblížení.|  
-  
-## <a name="MouseClassDetails"></a> Pomocí myši v okně podrobností třídy  
- Pomocí myši, můžete změnit vzhled v okně podrobností třídy a data, která se zobrazí takto:  
-  
-- Kliknutím na libovolnou buňku upravitelné umožňuje upravovat obsah buňky. Vaše změny se projeví na všech místech, že data uložená nebo zobrazena, včetně v okně Vlastnosti ve zdrojovém kódu.  
-  
-- Kliknutím na libovolnou buňku řádku způsobí, že v okně Vlastnosti k zobrazení vlastností pro element reprezentovaný daném řádku.  
-  
-- Chcete-li změnit šířku sloupce přetáhněte okraj na pravé straně záhlaví sloupce sloupec je požadovanou šířku.  
-  
-- Můžete rozbalit nebo sbalit oddíl nebo vlastnost uzly kliknutím na šipky vlevo od řádku.  
-  
-- V okně podrobností třídy nabízí několik tlačítka pro vytvoření nové členy v aktuální třídě a pro procházení mezi oddíly členů v mřížce okno podrobností třídy. Další informace najdete v tématu tlačítka okna podrobností třídy.  
-  
-## <a name="KeyboardClassDesigner"></a> Pomocí klávesnice v Návrháři tříd  
- Podporovány jsou následující akce klávesnice v diagramech tříd:  
-  
-|Key|Kontext|Popis|  
-|---------|-------------|-----------------|  
-|Klávesy se šipkami|Typ uvnitř obrazce|Navigační strom style na obrazec obsah (zabalení kolem obrazce se podporuje). Levé a pravé klíče Rozbalit/sbalit aktuální položky. Pokud je rozšiřitelná a přejděte do nadřazené, pokud nebude (Zobrazit zobrazení stromu navigace pro podrobné chování).|  
-||Nejvyšší úrovně tvary|Přesunutí tvary v diagramu.|  
-|SHIFT + ŠIPKA klíče|Typ uvnitř obrazce|Výběr průběžné vytváření skládající se z elementy obrazců například členů, vnořené typy nebo oddíly. Tyto klávesové zkratky zabalení kolem nepodporují.|  
-|DOMOVSKÁ STRÁNKA|Typ uvnitř obrazce|Přejděte na nadpis obrazec nejvyšší úrovně.|  
-||Nejvyšší úrovně tvary|Přejděte do první obrazec v diagramu.|  
-|END|Typ uvnitř obrazce|Přechod na poslední prvek viditelný uvnitř obrazce.|  
-||Nejvyšší úrovně tvary|Přejděte na poslední obrazec v diagramu.|  
-|SHIFT + HOME|Typ uvnitř obrazce|Vybere elementy v rámci tvaru spuštění s aktuální položkou a konče nejvyšším položku na stejný tvar.|  
-|SHIFT + END|Typ uvnitř obrazce|Stejné jako SHIFT + HOME, ale ve směru shora dolů.|  
-|ZADEJTE|Všechny kontexty|Volá výchozí akce na obrazec, který je také k dispozici prostřednictvím dvojím kliknutím. Ve většině případů jde zobrazit kód, ale některé prvky definujte ho jinak (cukroví, oddíl hlavičky, popisky typu Lupa).|  
-|+/-|Všechny kontexty|Pokud je aktuálně nastavený fokus element rozšíření, tyto klíče Rozbalit/sbalit elementu.|  
-|>|Všechny kontexty|U elementů s podřízenými rozšíří element, pokud je sbalené a přejde na prvním podřízeným objektem.|  
-|<|Všechny kontexty|Přejde na nadřazený prvek.|  
-|ALT+SHIFT+L|Uvnitř obrazce typu + obrazců typu.|Přejde k lupě aktuálně vybraný tvar, pokud je k dispozici.|  
-|ALT+SHIFT+B|Uvnitř obrazce typu + obrazců typu.|Pokud seznam základních typů se zobrazí na tvar typu a má více než jednu položku, to přepíná stavu rozbalení seznamu (rozbalení/sbalení).|  
-|DELETE|Na typu a přidejte komentář u obrazce|Vyvolá **odebrat z diagramu** příkazu.|  
-||Na všechno ostatní.|Vyvolá **odstranit z kódu** příkazu (členy, parametry, přidružení, dědičnosti a lollipop štítků).|  
-|CTRL+DELETE|Všechny kontexty|Vyvolá **odstranit z kódu** příkaz na výběr.|  
-|TAB|Všechny kontexty|Přejde na další podřízenou položku v rámci stejnou nadřazenou položku (zabalení podporuje).|  
-|SHIFT+TAB|Všechny kontexty|Přejde na předchozí podřízenou položku v rámci stejnou nadřazenou položku (zabalení podporuje).|  
-|MÍSTO|Všechny kontexty|Přepne výběr u aktuálního elementu.|  
-  
-## <a name="KeyboardClassDetails"></a> Pomocí klávesnice v okně podrobností třídy  
-  
+Pomocí klávesnice můžete kromě myši provádět navigační akce v Návrhář tříd a v okně **podrobností třídy** .
+
+ **V tomto tématu**
+
+- [Používání myši v Návrhář tříd](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#MouseClassDesigner)
+
+- [Používání myši v Okno podrobností třídy](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#MouseClassDetails)
+
+- [Používání klávesnice v Návrhář tříd](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#KeyboardClassDesigner)
+
+- [Použití klávesnice v Okno podrobností třídy](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#KeyboardClassDetails)
+
+## <a name="MouseClassDesigner"></a>Používání myši v Návrhář tříd
+ Následující akce myši jsou podporovány v diagramech tříd:
+
+|Kombinace myši|Souvislost|Popis|
+|-----------------------|-------------|-----------------|
+|Dvakrát klikněte na|elementy obrazců|Otevře Editor kódu.|
+||Konektor lupy|Rozbalit nebo sbalit Lupa|
+||Popisek konektoru lupy|Vyvolá příkaz **Zobrazit rozhraní** .|
+|Kolečko myši|Diagram tříd|Posuňte se vertikálně.|
+|SHIFT + kolečko myši|Diagram tříd|Posuňte se vodorovně.|
+|CTRL + kolečko myši|Diagram tříd|Přibliž.|
+|CTRL + SHIFT + kliknutí|Diagram tříd|Přibliž.|
+
+## <a name="MouseClassDetails"></a>Používání myši v Okno podrobností třídy
+ Pomocí myši můžete změnit vzhled okna podrobností třídy a zobrazená data, a to následujícími způsoby:
+
+- Kliknutím na libovolnou upravitelnou buňku můžete upravit obsah této buňky. Vaše změny se projeví na všech místech, kde jsou data uložená nebo zobrazená, včetně v okno Vlastnosti a ve zdrojovém kódu.
+
+- Kliknutí na libovolnou buňku řádku způsobí, že okno Vlastnosti zobrazí vlastnosti prvku reprezentovaného tímto řádkem.
+
+- Chcete-li změnit šířku sloupce, přetáhněte hranici na pravé straně záhlaví sloupce, dokud sloupec nedosáhne požadované šířky.
+
+- Můžete rozbalit nebo Sbalit oddíl nebo uzly vlastností kliknutím na symbol šipky nalevo od řádku.
+
+- Okno podrobností třídy nabízí několik tlačítek pro vytváření nových členů v aktuální třídě a pro navigaci mezi přihrádkami členů v mřížce Okno podrobností třídy. Další informace najdete v tématu Okno podrobností třídych tlačítek.
+
+## <a name="KeyboardClassDesigner"></a>Používání klávesnice v Návrhář tříd
+ V diagramech tříd jsou podporovány následující akce klávesnice:
+
+|Key|Souvislost|Popis|
+|---------|-------------|-----------------|
+|Klávesy se šipkami|Uvnitř typů tvarů|Navigace ve stylu stromu v obsahu obrazce (je podporováno obtékání kolem obrazce). Levé a pravé klávesy rozbalí nebo sbalí aktuální položku, pokud je rozšiřitelná, a pokud ne, přejděte na nadřazený objekt (podrobné chování najdete v tématu navigace stromu zobrazení).|
+||Tvary nejvyšší úrovně|Přesunutí tvarů v diagramu.|
+|SHIFT + klávesy se šipkami|Uvnitř typů tvarů|Sestavování průběžného výběru sestávající z prvků tvaru, jako jsou členy, vnořené typy nebo oddíly. Tyto klávesové zkratky nepodporují obtékání kolem.|
+|DOMOVSKÉ|Uvnitř typů tvarů|Přejděte k názvu obrazce nejvyšší úrovně.|
+||Tvary nejvyšší úrovně|Přejděte k prvnímu tvaru v diagramu.|
+|END|Uvnitř typů tvarů|Přejděte k poslednímu viditelnému prvku uvnitř obrazce.|
+||Tvary nejvyšší úrovně|Přejděte k poslednímu obrazci v diagramu.|
+|SHIFT + HOME|Uvnitř tvaru typu|Vybere prvky v rámci tvaru počínaje aktuální položkou a končící nejvyšší položkou na stejném obrazci.|
+|SHIFT + END|Uvnitř tvaru typu|Stejné jako SHIFT + HOME, ale v směru shora dolů.|
+|NAPIŠTE|Všechny kontexty|Vyvolá výchozí akci pro obrazec, který je také k dispozici prostřednictvím dvojího kliknutí. Ve většině případů se jedná o kód zobrazení kódu, ale některé prvky jej definují odlišně (Lupa, záhlaví oddílů, popisky lupy).|
+|+/-|Všechny kontexty|Pokud je aktuálně zaměřený element rozšiřitelný, tyto klíče rozbalí nebo sbalí element.|
+|>|Všechny kontexty|U elementů s podřízenými prvky rozbalí prvek, pokud je sbalený, a přejde na první podřízenou položku.|
+|<|Všechny kontexty|Přejde na nadřazený element.|
+|ALT + SHIFT + L|Uvnitř typů Shapes + u tvarů typů.|Přejde na Lupa aktuálně vybraného obrazce, pokud je přítomen.|
+|ALT + SHIFT + B|Uvnitř typů Shapes + u tvarů typů.|Pokud je v obrazovém prvku zobrazen seznam základních typů a má více než jednu položku, Přepíná stav rozbalení seznamu (sbalení a rozbalení).|
+|DELETE|Pro tvary typu a komentáře|Vyvolá příkaz **Remove z diagramu** .|
+||Na všechno ostatní.|Vyvolá příkaz **Odstranit z kódu** (členové, parametry, přidružení, dědičnost, popisky typu Lupa).|
+|CTRL + DELETE|Všechny kontexty|Vyvolá **odstranění z příkazu kódu** při výběru.|
+|RÁŽKY|Všechny kontexty|Přejde na další podřízenou položku v rámci stejné nadřazené položky (podporuje zalamování).|
+|SHIFT + TAB|Všechny kontexty|Přejde na předchozí podřízenou položku v rámci stejné nadřazené položky (podporuje zalamování).|
+|SPACE|Všechny kontexty|Přepíná výběr na aktuálním prvku.|
+
+## <a name="KeyboardClassDetails"></a>Použití klávesnice v Okno podrobností třídy
+
 > [!NOTE]
-> Následující klávesové zkratky byly rozhodli konkrétně tak, aby napodoboval prostředí psaní kódu.  
-  
- Použijte následující klíče pro navigaci v okně podrobností třídy:  
-  
-|||  
-|-|-|  
-|Key|Výsledek|  
-|, (čárka)|Pokud je kurzor na řádku parametru, zadáním čárku přesune kurzor do pole Název parametru Další. Pokud je kurzor na poslední řádek parametru metody, přesune kurzor \<přidat parametr > pole, které můžete použít k vytvoření nového parametru.<br /><br /> Pokud je kurzor jinde v okně podrobností třídy, zadáním čárku doslova přidá čárku v aktuálním poli.|  
-|; (středník)<br /><br /> or<br /><br /> ) (pravá závorka)|Přesuňte kurzor do pole název dalšího člena řádku v mřížce okno podrobností třídy.|  
-|Karta|Přesune kurzor na další pole, první přesun klikněte shora dolů a zleva doprava. Pokud je kurzor přesouvá z pole, ve které jste zadali text, okno podrobností třídy zpracovává text a uloží jej případě nevytváří chybu.<br /><br /> Jestli je ukazatel na prázdné pole, jako \<přidat parametr >, přejde se na první pole na další řádek.|  
-|\<space>|Přesune kurzor na další pole, první přesun klikněte shora dolů a zleva doprava. Jestli je ukazatel na prázdné pole, jako \<přidat parametr >, přejde do prvního pole na další řádek. Všimněte si, že \<místo > zadali ihned poté, co je ignorován čárkou.<br /><br /> Pokud je kurzor v poli Summary, zadáním mezery přidá znak mezery.<br /><br /> Pokud je kurzor v skrýt sloupce daného řádku, zadáte mezeru přepne hodnotu zaškrtávací políčko Skrýt.|  
-|CTRL+Tab|Přepnout na další okno dokumentu. Například přepněte v okně podrobností třídy do souboru otevřete kód.|  
-|ESC (Escape)|Pokud jste začali můžete napsat text v poli, stiskněte klávesu ESC funguje jako klíč vrácení zpět, vrácení zpět pole obsah na původní hodnotu. Pokud okno podrobností třídy obecné fokus, ale žádné konkrétní buňky má fokus, stiskněte klávesu ESC přesune fokus z okna podrobností třídy.|  
-|Šipka nahoru a Šipka dolů|Tyto klíče přesuňte kurzor na řádek řádku svisle v mřížce okno podrobností třídy.|  
-|Šipka doleva|Pokud je kurzor ve sloupci Název, stisknete šipku vlevo sbalí aktuální uzel v hierarchii (je-li otevřít).|  
-|Šipka doprava|Pokud je kurzor ve sloupci Název, stisknutím klávesy se šipkou vpravo rozšíří aktuální uzel v hierarchii (Pokud je sbalený).|  
-  
-## <a name="see-also"></a>Viz také  
+> Následující vazby klíčů byly zvoleny pro specificky napodobení možnosti psaní kódu.
+
+ K procházení okna podrobností třídy použijte následující klávesy:
+
+|||
+|-|-|
+|Key|Výsledek|
+|, (čárka)|Pokud je kurzor v řádku parametrů, zadáním čárky se přesune kurzor do pole název dalšího parametru. Pokud je kurzor v řádku posledního parametru metody, přesune kurzor do > pole \<add parametr, který můžete použít k vytvoření nového parametru.<br /><br /> Pokud se kurzor nachází jinde v Okno podrobností třídy, zadejte čárkou, která bude v aktuálním poli přidána čárkou.|
+|; střední<br /><br /> or<br /><br /> ) (pravá závorka)|Přesuňte kurzor do pole název dalšího řádku člena v mřížce Okno podrobností třídy.|
+|Karta|Přesune kurzor do dalšího pole, nejprve se přesunou zleva doprava a pak shora dolů. Pokud se kurzor pohybuje z pole, ve kterém jste zadali text, Okno podrobností třídy zpracuje tento text a uloží jej, pokud nevytvoří chybu.<br /><br /> Pokud se kurzor nachází v prázdném poli, například \<add parametr >, karta se přesune na první pole dalšího řádku.|
+|\<space >|Přesune kurzor do dalšího pole, nejprve se přesunou zleva doprava a pak shora dolů. Pokud je kurzor na prázdném poli, například \<add parametr >, přesune se do prvního pole dalšího řádku. Všimněte si, že \<space > typu hned po čárkě, která je ignorována.<br /><br /> Pokud je kurzor v poli Souhrn, zadáním mezery se přidá znak mezery.<br /><br /> Pokud se kurzor nachází ve sloupci skrýt daného řádku, zadáním mezery se přepíná hodnota zaškrtávacího políčka Skrýt.|
+|CTRL + TAB|Přepne na další okno dokumentu. Například přepněte z Okno podrobností třídy na otevřený soubor kódu.|
+|ESC (řídicí znak)|Pokud jste začali psát text do pole, stiskněte klávesu ESC jako klíč k vrácení zpět a vrátíte obsah pole na předchozí hodnotu. Pokud má Okno podrobností třídy obecný fokus, ale žádná konkrétní buňka nemá fokus, se stisknutí klávesy ESC přesune mimo Okno podrobností třídy fokus.|
+|Šipka nahoru a šipka dolů|Tyto klávesy posunou kurzor z řádku do řádku svisle v Okno podrobností třídy mřížce.|
+|Šipka vlevo|Pokud je kurzor ve sloupci název, stisknutím šipky vlevo sbalíte aktuální uzel v hierarchii (Pokud je otevřený).|
+|Šipka doprava|Pokud je kurzor ve sloupci název, stisknutí šipky vpravo rozbalí aktuální uzel v hierarchii (Pokud je sbalený).|
+
+## <a name="see-also"></a>Viz také
  [Vytváření a konfigurace členů typů (Návrhář tříd)](../ide/creating-and-configuring-type-members-class-designer.md)

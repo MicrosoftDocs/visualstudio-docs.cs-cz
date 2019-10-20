@@ -1,5 +1,5 @@
 ---
-title: 'CA1040: Vyhněte se prázdným rozhraním | Dokumentace Microsoftu'
+title: 'CA1040: Vyhněte se prázdným rozhraním | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CA1040
 ms.assetid: 120a741b-5fd1-4836-8453-7857e0cd0380
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: bc785967b4e27599b4a04aeb7740b53b5076938d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 50a36281edb144ddb949899fa24e0b5088080220
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62559739"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668314"
 ---
 # <a name="ca1040-avoid-empty-interfaces"></a>CA1040: Vyhněte se prázdným rozhraním
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,22 +29,22 @@ ms.locfileid: "62559739"
 |-|-|
 |TypeName|AvoidEmptyInterfaces|
 |CheckId|CA1040|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>Příčina
- Rozhraní není deklarovat všechny členy nebo implementovat dvě nebo více rozhraní.
+## <a name="cause"></a>příčina
+ Rozhraní nedeklaruje žádné členy ani neimplementuje dvě nebo více jiných rozhraní.
 
 ## <a name="rule-description"></a>Popis pravidla
- Rozhraní definují členy ujednávající jejich chování nebo užití. Funkčnost popsaná rozhraním může být osvojena libovolným typem bez ohledu na to, kde se typ vyskytuje v hierarchii dědičnosti. Typ implementuje rozhraní tím, že poskytuje implementace jeho členů. Prázdné rozhraní nedefinuje žádné členy. Nedefinuje proto kontrakt, který je možné implementovat.
+ Rozhraní definují členy ujednávající jejich chování nebo užití. Funkčnost popsaná rozhraním může být osvojena libovolným typem bez ohledu na to, kde se typ vyskytuje v hierarchii dědičnosti. Typ implementuje rozhraní tím, že poskytuje implementace jeho členů. Prázdné rozhraní nedefinuje žádné členy. Proto nedefinuje kontrakt, který lze implementovat.
 
- Pokud váš návrh obsahuje prázdný implementovat rozhraní, které typy se očekává, pravděpodobně používáte rozhraní jako značku nebo způsob, jak identifikovat skupinu typů. Pokud tato identifikace dojde za běhu, je správný způsob, jak toho dosáhnout pomocí vlastního atributu. Přítomnost nebo absence atributu nebo vlastnosti atributu, použijte k identifikaci cílové typy. Je-li označením se musí vyskytovat v době kompilace, je nepřijatelné využívat prázdné rozhraní.
+ Pokud váš návrh obsahuje prázdná rozhraní, u kterých se očekává implementace typů, pravděpodobně použijete rozhraní jako značku nebo způsob, jak identifikovat skupinu typů. Pokud k této identifikaci dojde v době běhu, správný způsob, jak to provést, je použít vlastní atribut. Pro identifikaci cílových typů použijte přítomnost nebo nepřítomnost atributu nebo vlastnosti atributu. Pokud k identifikaci musí dojít v době kompilace, je přijatelné použít prázdné rozhraní.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Odebrat rozhraní nebo přidat členy do něj. Pokud prázdné rozhraní používá k označení sadu typů, nahraďte rozhraní vlastního atributu.
+ Odeberte rozhraní nebo přidejte do něj členy. Pokud je prázdné rozhraní použito k označení sady typů, nahraďte rozhraní vlastním atributem.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění tohoto pravidla, pokud rozhraní se používá k identifikaci sadu typů v době kompilace.
+ Je bezpečné potlačit upozornění z tohoto pravidla, pokud se rozhraní používá k identifikaci sady typů v době kompilace.
 
 ## <a name="example"></a>Příklad
  Následující příklad ukazuje prázdné rozhraní.

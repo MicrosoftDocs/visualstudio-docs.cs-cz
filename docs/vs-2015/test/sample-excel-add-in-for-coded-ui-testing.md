@@ -1,5 +1,5 @@
 ---
-title: Ukázka doplňku Excel pro programové testování uživatelského rozhraní | Dokumentace Microsoftu
+title: Ukázka doplňku Excel pro programové testování uživatelského rozhraní | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
@@ -8,44 +8,42 @@ helpviewer_keywords:
 - coded UI tests, Excel Add-in sample
 ms.assetid: 2cd52d1a-4c35-43ca-8a84-9c79dabd907f
 caps.latest.revision: 18
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8588efe9ce460a34fc71f44bc0116b5977afe7aa
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 6dc6b4385130c6341b5b3545c6c9f71dc67457f5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65705942"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672199"
 ---
 # <a name="sample-excel-add-in-for-coded-ui-testing"></a>Ukázka doplňku Excel pro programové testování uživatelského rozhraní
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato ukázka doplňku pro [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] je navržená speciálně pro podporu listů programové testy uživatelského rozhraní aplikace Excel, které se zaznamenávají a spustit v sadě Visual Studio Enterprise. Doplněk se vytvoří pomocí Visual Studio Tools for Office.  
-  
- Další informace o tom, jak vytvořit Excel Add-In, naleznete v tématu [názorný postup: Vytvoření doplňku svůj první VSTO pro Excel](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f) nebo hledání MSDN pro "Excel Add-In".  
-  
- I když Excelovém doplňku není primární předmět této dokumentace rozšíření programového testu UI pro Excel, množstvím komentářů může být užitečné.  
-  
- Důležité části tohoto doplňku:  
-  
-- `ThisAddIn`  Třída – spravuje Vzdálená komunikace .NET kanál mezi `ExcelUICommunicator` a [ukázka programového uživatelského rozhraní testu rozšíření pro aplikaci Excel](../test/sample-coded-ui-test-extension-for-excel.md).  
-  
-- `ExcelCodedUIAddinHelper_TemporaryKey.pfx`  -Certifikát zabezpečení pro testování doplňku.  
-  
-- `ExcelUICommunicator`  Tato třída implementuje třída – `IExcelUICommunication` rozhraní.  
-  
-## <a name="thisaddin-class"></a>Thisaddin – třída  
- Většinu této třídy je ve skutečnosti generované Visual Studio Tools for Office ve službě `ThisAddIn.Designer.cs` soubor při vytváření projektu doplňku aplikace Excel.  
-  
- Obslužné rutiny událostí jsou členy, které je nutné implementovat: `ThisAddIn_Startup()` a `ThisAddIn_Shutdown()`. Jejich účelem je inicializovat nebo zavřete vzdálené komunikace .NET kanál, který je používán `ExcelUICommunicator`.  
-  
-## <a name="excelcodeduiaddinhelpertemporarykeypfx"></a>ExcelCodedUIAddinHelper_TemporaryKey.pfx  
- Tento soubor obsahuje dočasný zabezpečení certifikát, který je generován Visual Studio Tools for Office a poskytuje oprávnění sestavení doplňku pracovat v procesu Excelu pro testování doplňky a rozšíření. Tento certifikát by měl odstranit a buď vytvořte nový **podepisování** kartu projektu **vlastnosti** okno, nebo připojit vlastní testování certifikátu.  
-  
-## <a name="exceluicommunicator-class"></a>Třída ExcelUICommunicator  
- Tato třída implementuje `IExcelUITestCommunication` rozhraní a získá požadované informace uživatelského rozhraní v objektovém modelu Excelu. Další informace najdete v tématu [ukázka rozhraní Komunikátoru Excel](../test/sample-excel-communicator-interface.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Rozšiřování programových testů UI a záznamů akcí k podpoře Microsoft Excel](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)   
- [Návod: Vytvoření vašeho prvního doplňku VSTO pro Excel](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)   
- [Office a vývoj pro SharePoint](https://msdn.microsoft.com/library/2ddec047-263a-4901-a54c-a15fc8472329)
+Tento ukázkový doplněk pro [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] je navržený speciálně pro podporu programových testů uživatelského rozhraní excelových listů, které se zaznamenávají a spouštějí v Visual Studio Enterprise. Doplněk je vytvořen pomocí Visual Studio Tools for Office.
+
+ Další informace o tom, jak vytvořit doplněk pro Excel, najdete v tématu [Návod: vytvoření prvního doplňku VSTO pro Excel](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f) nebo vyhledání doplňku na webu MSDN pro excelový doplněk.
+
+ I když doplněk aplikace Excel není primárním předmětem této dokumentace rozšíření programového testu UI pro Excel, může být užitečné několik komentářů.
+
+ Důležité části tohoto doplňku:
+
+- `ThisAddIn` Třída – spravuje kanál vzdálené komunikace .NET mezi `ExcelUICommunicator` a [ukázkovým rozšířením programového testu UI pro Excel](../test/sample-coded-ui-test-extension-for-excel.md).
+
+- `ExcelCodedUIAddinHelper_TemporaryKey.pfx` – certifikát zabezpečení pro testování doplňku.
+
+- `ExcelUICommunicator` třída – Tato třída implementuje rozhraní `IExcelUICommunication`.
+
+## <a name="thisaddin-class"></a>ThisAddIn – třída
+ Většina této třídy je ve skutečnosti generována pomocí Visual Studio Tools for Office v souboru `ThisAddIn.Designer.cs` při vytváření projektu doplňku aplikace Excel.
+
+ Členy, které je nutné implementovat, jsou obslužné rutiny událostí: `ThisAddIn_Startup()` a `ThisAddIn_Shutdown()`. Jejich účelem je inicializovat nebo zavřít kanál vzdálené komunikace .NET, který je používán `ExcelUICommunicator`.
+
+## <a name="excelcodeduiaddinhelper_temporarykeypfx"></a>ExcelCodedUIAddinHelper_TemporaryKey. pfx
+ Tento soubor obsahuje dočasný certifikát zabezpečení, který je generován Visual Studio Tools for Office a poskytuje oprávnění sestavení doplňku pro práci v procesu aplikace Excel pro testování doplňku a rozšíření. Tento certifikát byste měli odstranit a buď vytvořit nový na kartě **podepisování** v okně **vlastnosti** projektu, nebo připojit vlastní testovací certifikát.
+
+## <a name="exceluicommunicator-class"></a>ExcelUICommunicator – třída
+ Tato třída implementuje rozhraní `IExcelUITestCommunication` a získá požadované informace o uživatelském rozhraní z modelu objektu aplikace Excel. Další informace najdete v tématu [ukázka rozhraní Excel Communicator](../test/sample-excel-communicator-interface.md).
+
+## <a name="see-also"></a>Viz také
+ [Rozšiřování programových testů uživatelského rozhraní a záznamů akcí pro podporu Microsoft Excelu](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md) [: vytvoření prvního doplňku VSTO pro Excel](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f) [Office a vývoj pro SharePoint](https://msdn.microsoft.com/library/2ddec047-263a-4901-a54c-a15fc8472329)

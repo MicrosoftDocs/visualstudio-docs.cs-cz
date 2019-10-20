@@ -8,15 +8,15 @@ helpviewer_keywords:
 - UML activity diagrams, programming
 ms.assetid: 8cdd0203-85ef-4c62-9abc-da4cb26fa504
 caps.latest.revision: 27
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d0bebbb4e6dfe25ce9834595be11aad0fd1f1ba0
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: cbc7a6ce7edede6759c0562df1e524d932f62b91
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871874"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669715"
 ---
 # <a name="edit-uml-sequence-diagrams-by-using-the-uml-api"></a>Úpravy sekvenčních diagramů UML pomocí rozhraní API UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ Interakce je posloupnost zpráv mezi sadou životností. Interakce se zobrazí v
 ## <a name="basic-code"></a>Základní kód
 
 ### <a name="namespace-imports"></a>Importy oboru názvů
- Je nutné zahrnout následující `using` příkazy:
+ Musíte zahrnout následující příkazy `using`:
 
 ```
 using Microsoft.VisualStudio.Uml.Classes;
@@ -72,12 +72,12 @@ public class MySequenceDiagramCommand : ICommandExtension
 ```
 
 ### <a name="generated-and-uml-sequence-diagrams"></a>Vygenerované a sekvenční diagramy UML
- Existují dva druhy sekvenčních diagramů: ty, které jsou ručně vytvořeny v projektu modelování UML, a ty, které byly generovány z programového kódu. `UmlMode` Pomocí vlastnosti můžete zjistit, který sekvenční diagram máte.
+ Existují dva druhy sekvenčních diagramů: ty, které jsou ručně vytvořeny v projektu modelování UML, a ty, které byly generovány z programového kódu. Pomocí vlastnosti `UmlMode` můžete zjistit, který sekvenční diagram máte.
 
 > [!NOTE]
 > Tato vlastnost vrátí hodnotu false pouze pro sekvenční diagramy vygenerované z kódu pomocí Visual Studio 2013 a předchozích. To zahrnuje sekvenční diagramy generované kódem z 2013 a starších verzí. Tato verze sady Visual Studio nepodporuje generování nových sekvenčních diagramů.
 
- Například pokud chcete vytvořit příkaz nabídky, který je viditelný pouze v sekvenčních diagramech UML, `QueryStatus()` může metoda zahrnovat následující příkaz:
+ Například pokud chcete vytvořit příkaz nabídky, který je viditelný pouze v sekvenčních diagramech UML, může metoda `QueryStatus()` obsahovat následující příkaz:
 
 ```
 command.Enabled = command.Visible =
@@ -118,13 +118,13 @@ public void Execute (IMenuCommand command)
 ## <a name="updating-an-interaction-and-its-layout"></a>Aktualizace interakce a jejího rozložení
  Když aktualizujete interakci, vždy ukončete operaci tím, že aktualizujete její rozložení, a to pomocí jedné z následujících metod:
 
-- `ISequenceDiagram.UpdateShapePositions()`upraví pozice tvarů, které byly nedávno vloženy nebo přesunuty, a jejich sousední obrazce.
+- `ISequenceDiagram.UpdateShapePositions()` upravuje pozice obrazců, které byly v poslední době vloženy nebo přesunuty, a jejich sousední obrazce.
 
-- `ISequenceDiagram.Layout([SequenceDiagramLayoutKinds])`překreslí celý diagram. Parametr můžete použít k určení přemístění životností, zpráv nebo obojího.
+- `ISequenceDiagram.Layout([SequenceDiagramLayoutKinds])` překreslí celý diagram. Parametr můžete použít k určení přemístění životností, zpráv nebo obojího.
 
   To je obzvláště důležité, pokud vložíte nové prvky nebo přesunete existující prvky. Dokud neprovedete jednu z těchto operací, nebudou ve správném umístění v diagramu. Jednu z těchto operací je třeba volat pouze jednou na konci řady změn.
 
-  Chcete-li se vyhnout bemusing uživateli, který po příkazu provede vrácení akce zpět `ILinkedUndoTransaction` , použijte k uzavření svých změn a `UpdateShapePositions()` finálních `Layout()` operací. Příklad:
+  Abyste se vyhnuli bemusing uživateli, který po příkazu provede vrácení zpět, použijte `ILinkedUndoTransaction` k uzavření změn a konečných `Layout()` nebo `UpdateShapePositions()` operací. Příklad:
 
 ```
 using (ILinkedUndoTransaction transaction = LinkedUndoContext.BeginTransaction("create loop"))
@@ -135,7 +135,7 @@ using (ILinkedUndoTransaction transaction = LinkedUndoContext.BeginTransaction("
 }
 ```
 
- Chcete-li `ILinkedUndoTransaction`použít, je nutné provést tuto deklaraci ve třídě:
+ Chcete-li použít `ILinkedUndoTransaction`, je nutné provést tuto deklaraci ve třídě:
 
 ```
 [Import] ILinkedUndoContext LinkedUndoContext { get; set; }
@@ -163,7 +163,7 @@ foreach (IConnectableElement part in
 }
 ```
 
- Případně, pokud interakce zobrazuje libovolnou sadu objektů, můžete vytvořit vlastnost nebo jinou `IConnectableElement` v samotné interakci:
+ Případně, pokud interakce zobrazuje libovolnou sadu objektů, můžete vytvořit vlastnost nebo jiné `IConnectableElement` v samotné interakci:
 
 ```
 ILifeline lifeline = interaction.CreateLifeline();
@@ -242,9 +242,9 @@ cf.CreateInteractionOperand(cf.Operands.Last(), true);
 ```
 
 ## <a name="troubleshooting"></a>Poradce při potížích
- Pokud nejsou změny dokončeny pomocí `UpdateShapePositions()` operace nebo `Layout()` , zobrazí se obrazce v nesprávných pozicích.
+ Pokud se operace `UpdateShapePositions()` nebo `Layout()` nedokončily, zobrazí se obrazce v nesprávných pozicích.
 
- Většina ostatních problémů je způsobena chybně zarovnanými body vložení, takže nové zprávy nebo fragmenty by musely překračovat jiné. Je možné, že se neprovádí žádná změna nebo je vyvolána výjimka. Výjimka nemusí být vyvolána, `UpdateShapePositions()` dokud nebude provedena operace nebo. `Layout()`
+ Většina ostatních problémů je způsobena chybně zarovnanými body vložení, takže nové zprávy nebo fragmenty by musely překračovat jiné. Je možné, že se neprovádí žádná změna nebo je vyvolána výjimka. Výjimka nemusí být vyvolána, dokud nebude provedena operace `UpdateShapePositions()` nebo `Layout()`.
 
 ## <a name="see-also"></a>Viz také:
 

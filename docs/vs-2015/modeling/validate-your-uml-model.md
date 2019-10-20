@@ -1,5 +1,5 @@
 ---
-title: Ověření modelu UML | Dokumentace Microsoftu
+title: Ověření modelu UML | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -9,66 +9,64 @@ helpviewer_keywords:
 - UML, validation
 ms.assetid: deed5092-c11d-4431-a801-1e866a103075
 caps.latest.revision: 12
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f795928677f4a232c3ae3cec0d3bab9d9266cb35
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 8dfaf19e358d96b7737b06880d6fa4581b5c54f8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437464"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659370"
 ---
 # <a name="validate-your-uml-model"></a>Ověření modelu UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Některé z modelů UML, které nakreslíte v sadě Visual Studio může být považovány za neplatné ve vašem projektu. Například může vyžadovat, že případ použití musí být vždy spojeny do sekvenčního diagramu, který má životnosti představující actors případu použití. Můžete nainstalovat nebo můžete definovat *omezení* , které pomohou vašemu týmu v souladu s požadavky na takovou situaci. Omezení můžete použít, když uživatel uloží nebo otevře model a můžete vyvolat příkaz nabídky.  
-  
- Bez omezení jsou součástí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], protože závisejí na tom, jak váš tým interpretuje a používá modelů UML. Ale můžete definovat vlastní omezení a nainstalovat omezení, které jsou definovány jinými uživateli. Zjistěte, jak definovat omezení a balíček pro distribuci, naleznete v tématu [definovat omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md).  
-  
-## <a name="invoking-validation"></a>Vyvolání ověřování  
- Pokud jste nainstalovali rozšíření ověřování, omezení, které poskytuje může použít v následujících případech. Některá omezení jsou nastavené na použití pouze některé z těchto případů.  
-  
-- **Příkaz ověření.** Volání ověřovací kdykoli, klikněte na tlačítko **ověřit Model UML** na **architektura** nabídky.  
-  
+Některé modely UML, které lze vykreslit v aplikaci Visual Studio, mohou být v projektu považovány za neplatné. Například můžete vyžadovat, aby případ použití byl vždy propojený s sekvenčním diagramem, který má životnosti reprezentující objekty actor případu použití. Můžete nainstalovat nebo definovat *omezení* , které vašemu týmu pomohou splnit požadavky, jako je to. Omezení lze použít, pokud uživatel ukládá nebo otevírá model a lze jej vyvolat pomocí příkazu nabídky.
+
+ U [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nejsou k dispozici žádná omezení, protože závisí na tom, jak váš tým interpretuje a používá modely UML. Můžete ale definovat vlastní omezení a nainstalovat omezení, která jsou definována jinými uživateli. Informace o definování omezení a jejich balení pro distribuci najdete v tématu [Definování omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md).
+
+## <a name="invoking-validation"></a>Vyvolává se ověřování.
+ Když jste nainstalovali rozšíření ověřování, můžou se omezení, která poskytuje, použít v následujících případech. Některá omezení jsou nastavena pro použití pouze v některých těchto případech.
+
+- **Ověření – příkaz** Pokud chcete ověřování vyvolat kdykoli, klikněte na **ověřit model UML** v nabídce **Architektura** .
+
   > [!NOTE]
-  > Příkaz se zobrazí jenom v případě, že omezení ověření jsou nainstalovány.  
-  
-- **Při uložení modelu.** Omezení ověřování lze použít při uložení modelu. Účelem těchto omezení je pomohou Ujistěte se, že neukládejte modelu, který je neplatný podle interpretace váš projekt.  
-  
-   Jestliže nejsou chyby, můžete být vyzváni, zda chcete uložit model. Můžete opravit chyby, a přesto uložit model.  
-  
-- **Při otevření modelu.** Při otevření modelu metody ověřování lze použít k obnovení chybové zprávy, které existovaly při uložení modelu. Chyby mohou být způsobeny také nekonzistence mezi změny, které jsou provedeny podle uživatelů, kteří pracují na různých součástí modelu. Další informace najdete v tématu [sdílení modelů a export diagramů](../modeling/share-models-and-exporting-diagrams.md).  
-  
-  Chyby ověření jsou hlášeny v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] okna chyby.  
-  
-  V diagramu vyberte prvky, které nejsou správné, klikněte dvakrát na chybu. Tento postup funguje pouze v případě nesprávné elementy jsou viditelné v diagramu otevřete.  
-  
-## <a name="installing-validation-constraints"></a>Instalace omezení ověřování  
- Omezení jsou zabaleny v rámci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] soubory Extension (VSIX). Sadou omezujících podmínek, bude obvykle součástí rozšíření, která také obsahuje další definice, jako je například příkazy nabídek, profily a položky panelu nástrojů.  
-  
-#### <a name="to-install-a-visual-studio-extension"></a>Chcete-li nainstalovat rozšíření sady Visual Studio  
-  
-1. Dvakrát klikněte **VSIX** souboru v Průzkumníku Windows (nebo Průzkumníka souborů).  
-  
-2. Restartujte všechny instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , který je již spuštěna.  
-  
-## <a name="disabling-and-uninstalling-validation-constraints"></a>Zakázání a odinstalaci omezení ověření  
- Pokud chcete, aby fungoval s modelem, ke kterému se nedá použít omezení, můžete dočasně zakázat rozšíření, který je obsahuje. Tímto způsobem můžete pracovat s různými druhy modelu v různou dobu, povolování a zakazování různých rozšíření.  
-  
-#### <a name="to-disable-or-uninstall-a-visual-studio-extension"></a>Pro zakázání nebo odinstalaci rozšíření sady Visual Studio  
-  
-1. Na [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **nástroje** nabídky, klikněte na tlačítko **rozšíření a aktualizace**.  
-  
-2. Společně s rozšířením, klikněte na tlačítko **zakázat** dočasně zakázat rozšíření. Můžete znovu povolit ho později tak, že vrací **rozšíření a aktualizace** okna.  
-  
-     \- nebo –  
-  
-     Klikněte na tlačítko **odinstalovat** se odebrat rozšíření.  
-  
-3. Restartujte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
-  
-## <a name="see-also"></a>Viz také  
- [Definování omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md)   
- [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)   
- [Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)
+  > Příkaz se zobrazí pouze v případě, že jsou nainstalována omezení ověření.
+
+- **Při ukládání modelu.** Omezení ověřování lze použít při ukládání modelu. Účelem těchto omezení je přispět k tomu, abyste se ujistili, že neuložíte model, který je neplatný podle výkladu vašeho projektu.
+
+   Pokud dojde k chybám, zobrazí se dotaz, zda stále chcete model Uložit. Můžete si vybrat, že se mají chyby opravit, nebo přesto model Uložit.
+
+- **Při otevření modelu.** Když otevřete model, můžete použít metody ověřování pro obnovení chybových zpráv, které existovaly při uložení modelu. Chyby mohou být také zavedeny nekonzistencemi mezi změnami provedenými uživateli, kteří pracují na různých částech modelu. Další informace najdete v tématech [Sdílení modelů a export diagramů](../modeling/share-models-and-exporting-diagrams.md).
+
+  Chyby ověřování jsou hlášeny v okně chyby [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+
+  Chcete-li v diagramu vybrat nesprávné prvky, dvakrát klikněte na chybu. To funguje pouze v případě, že v otevřeném diagramu jsou viditelné nesprávné prvky.
+
+## <a name="installing-validation-constraints"></a>Instalace omezení ověřování
+ Omezení jsou zabalená v rámci souborů rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (VSIX). Sada omezení obvykle bude součástí rozšíření, které také obsahuje další definice, například příkazy nabídky, profily a položky panelu nástrojů.
+
+#### <a name="to-install-a-visual-studio-extension"></a>Instalace rozšíření sady Visual Studio
+
+1. Dvakrát klikněte na soubor **. vsix** v Průzkumníkovi Windows (nebo v Průzkumníku souborů).
+
+2. Restartujte všechny instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], které jsou již spuštěny.
+
+## <a name="disabling-and-uninstalling-validation-constraints"></a>Zákaz a odinstalace omezení ověřování
+ Pokud chcete pracovat s modelem, na který tato omezení neplatí, můžete dočasně zakázat rozšíření, které je obsahuje. Tímto způsobem můžete pracovat s různými druhy modelů v různých časech tím, že povolíte a zakážete různá rozšíření.
+
+#### <a name="to-disable-or-uninstall-a-visual-studio-extension"></a>Zakázání nebo odinstalace rozšíření sady Visual Studio
+
+1. V nabídce **nástroje** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] klikněte na možnost **rozšíření a aktualizace**.
+
+2. Vedle rozšíření klikněte na **Zakázat** pro dočasné vypnutí rozšíření. Později ji můžete znovu povolit tím, že se vrátíte do okna **rozšíření a aktualizace** .
+
+     \- nebo-
+
+     Pro odebrání rozšíření klikněte na **odinstalovat** .
+
+3. Restartujte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+
+## <a name="see-also"></a>Viz také
+ [Definování omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md) [vytvoření modelů pro vaši aplikaci](../modeling/create-models-for-your-app.md) [použití modelů v procesu vývoje](../modeling/use-models-in-your-development-process.md)

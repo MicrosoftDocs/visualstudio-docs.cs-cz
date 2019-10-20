@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Konfigurace projektů pro více cílových platforem | Dokumentace Microsoftu'
+title: 'Postupy: konfigurace projektů k cílení na více platforem | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,61 +9,59 @@ helpviewer_keywords:
 - platforms, changing target platforms
 ms.assetid: affa2392-7aed-45ac-9ffa-1d8e0496d590
 caps.latest.revision: 11
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7457b5be3a6c1cbf2c2b6a1c6f66f9fb89e8d225
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bb759faff99b641f24df87f73bc1d3d52b6635cc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62584309"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663563"
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>Postupy: Konfigurace projektů pro více cílových platforem
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] poskytuje způsob, jak řešení, které cílí několika různými architekturami procesoru nebo platformy, najednou. Vlastnosti, které chcete nastavit tyto jsou přístupné prostřednictvím **nástroje Configuration Manager** dialogové okno.  
-  
-## <a name="targeting-a-platform"></a>Cílení na platformy  
- **Nástroje Configuration Manager** dialogové okno umožňuje vytvořit a nastavit na úrovni řešení a projektu konfigurace a platformy. Každou kombinaci konfigurace na úrovni řešení a cíle může mít jedinečnou sadu vlastností, které jsou spojené s, což umožňuje snadno přepínat mezi, například konfiguraci vydané verze, který cílí [!INCLUDE[vcprx64](../includes/vcprx64-md.md)] platformy, konfiguraci vydané verze který cílí na x x86 platformu a konfiguraci ladění, který se zaměřuje x86 platformy.  
-  
-#### <a name="to-set-your-configuration-to-target-a-different-platform"></a>Chcete-li nastavit konfiguraci tak, aby cílit na různé platformy  
-  
-1. Na **sestavení** nabídky, klikněte na tlačítko **nástroje Configuration Manager**.  
-  
-2. V **pole platforma aktivního řešení**, vyberte platformu vašeho řešení do cíle, nebo vyberte  **\<nový >** vytvořit nové platformy. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] zkompiluje pro zaměření na platformu, která je nastavena jako aktivní platformu v aplikaci **nástroje Configuration Manager** dialogové okno.  
-  
-## <a name="removing-a-platform"></a>Odebrání platformu  
- Pokud je dobré si uvědomit, že nemáte žádné požadavky platformu, můžete ho pomocí dialogového okna nástroje Configuration Manager odebrat. Tato akce odebere všechna nastavení řešení a projektů, které jste nakonfigurovali pro kombinaci konfigurace a cíl.  
-  
-#### <a name="to-remove-a-platform"></a>Chcete-li odebrat platformu  
-  
-1. Na **sestavení** nabídky, klikněte na tlačítko **nástroje Configuration Manager**.  
-  
-2. V **pole platforma aktivního řešení**vyberte  **\<Upravit >**. **Upravit platformy řešení** zobrazí se dialogové okno.  
-  
-3. Klikněte na platformu, kterou chcete odebrat a klikněte na tlačítko **odebrat**.  
-  
-## <a name="targeting-multiple-platforms-with-one-solution"></a>Cílení na více platforem s jedním z řešení  
- Vzhledem k tomu, že můžete změnit nastavení založené na kombinaci konfigurace a nastavení platformy, můžete nastavit řešení, které můžete cílit na více než jednu platformu.  
-  
-#### <a name="to-target-multiple-platforms"></a>Pro více cílových platforem  
-  
-1. Použití **nástroje Configuration Manager** přidat alespoň dvě cílové platformy pro řešení.  
-  
-2. Vyberte platformu, kterou chcete cílit na z **platformou aktivního řešení** seznamu.  
-  
-3. Sestavte řešení.  
-  
-#### <a name="to-build-multiple-solution-configurations-at-once"></a>Chcete-li sestavení více konfigurací řešení najednou  
-  
-1. Použití **nástroje Configuration Manager** přidat alespoň dvě cílové platformy pro řešení.  
-  
-2. Použití **dávkové sestavení** okna k sestavení několika konfigurací řešení najednou.  
-  
-   Je možné mít nastaveno na hodnotu, například platformu úrovni řešení [!INCLUDE[vcprx64](../includes/vcprx64-md.md)], a mít žádné projekty v rámci tohoto řešení, které cílí na stejnou platformu. Také je možné mít více projektů v řešení, každý cílí na různé platformy. Doporučuje se, že pokud některou z těchto situací, můžete vytvořit novou konfiguraci pomocí popisný název, aby nedocházelo k záměně.  
-  
-## <a name="see-also"></a>Viz také  
- [Postupy: Vytvoření a úprava konfigurací](../ide/how-to-create-and-edit-configurations.md)   
- [Principy konfigurací sestavení](../ide/understanding-build-configurations.md)   
- [Sestavování a čištění projektů a řešení v sadě Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] poskytuje způsob, jak řešení cílit na několik různých architektur PROCESORů nebo platforem najednou. K nastavením těchto vlastností se dostanete prostřednictvím dialogového okna **Configuration Manager** .
+
+## <a name="targeting-a-platform"></a>Cílení na platformu
+ Dialogové okno **Configuration Manager** umožňuje vytvářet a nastavovat konfigurace a platformy na úrovni řešení a projektu. Každá kombinace konfigurací a cílů na úrovni řešení může mít přidruženou jedinečnou sadu vlastností, což vám umožní snadno přepínat mezi například konfigurací vydané verze, která cílí na [!INCLUDE[vcprx64](../includes/vcprx64-md.md)] platformu, konfigurace vydané verze, která cílí na platformu x86 a na konfiguraci ladění, která cílí na platformu x86.
+
+#### <a name="to-set-your-configuration-to-target-a-different-platform"></a>Nastavení konfigurace na jinou platformu
+
+1. V nabídce **sestavení** klikněte na příkaz **Configuration Manager**.
+
+2. V **poli Aktivní platforma řešení**vyberte platformu, pro kterou chcete své řešení cílit, nebo vyberte **\<New >** k vytvoření nové platformy. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] zkompiluje vaši aplikaci pro cílení na platformu, která je nastavena jako aktivní platforma v dialogovém okně **Configuration Manager** .
+
+## <a name="removing-a-platform"></a>Odebrání platformy
+ Pokud si myslíte, že nemáte potřebnou platformu, můžete ji odebrat pomocí dialogového okna Configuration Manager. Tím se odeberou všechna nastavení řešení a projektů, která jste nakonfigurovali pro danou kombinaci konfigurace a cíle.
+
+#### <a name="to-remove-a-platform"></a>Odebrání platformy
+
+1. V nabídce **sestavení** klikněte na příkaz **Configuration Manager**.
+
+2. V **poli Aktivní platforma řešení**vyberte **\<Edit >** . Otevře se dialogové okno **Upravit platformy řešení** .
+
+3. Klikněte na platformu, kterou chcete odebrat, a klikněte na **Odebrat**.
+
+## <a name="targeting-multiple-platforms-with-one-solution"></a>Zaměření na více platforem jedním řešením
+ Vzhledem k tomu, že můžete změnit nastavení na základě kombinace nastavení konfigurace a platformy, můžete nastavit řešení, které může cílit na více než jednu platformu.
+
+#### <a name="to-target-multiple-platforms"></a>Cílení na více platforem
+
+1. Použijte **Configuration Manager** k přidání alespoň dvou cílových platforem pro řešení.
+
+2. Vyberte platformu, kterou chcete cílit ze seznamu **aktivních platforem řešení** .
+
+3. Sestavte řešení.
+
+#### <a name="to-build-multiple-solution-configurations-at-once"></a>Sestavení více konfigurací řešení najednou
+
+1. Použijte **Configuration Manager** k přidání alespoň dvou cílových platforem pro řešení.
+
+2. Okno **sestavení dávky** použijte k sestavení několika konfigurací řešení najednou.
+
+   Je možné nastavit platformu na úrovni řešení, například [!INCLUDE[vcprx64](../includes/vcprx64-md.md)], a v rámci tohoto řešení nemusíte mít žádné projekty, které cílí na stejnou platformu. Ve vašem řešení je také možné mít více projektů, které cílí na různé platformy. Pokud máte jednu z těchto situací, doporučuje se vytvořit novou konfiguraci s popisným názvem, aby nedocházelo k nejasnostem.
+
+## <a name="see-also"></a>Viz také
+ [Postupy: vytváření a úpravy konfigurací](../ide/how-to-create-and-edit-configurations.md) pro [porozumění konfiguracím sestavení](../ide/understanding-build-configurations.md) [vytváření a čištění projektů a řešení v aplikaci Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)

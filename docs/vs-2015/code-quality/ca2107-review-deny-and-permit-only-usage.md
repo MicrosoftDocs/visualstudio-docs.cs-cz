@@ -1,5 +1,5 @@
 ---
-title: 'CA2107: Revize Odepřít a povolit pouze | Dokumentace Microsoftu'
+title: 'CA2107: revize pouze použití metody Deny a Permit | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - CA2107
 ms.assetid: 366f4a56-ae93-4882-81d0-bd0a55ebbc26
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d6ba41720ff97ffe9a085774477b2a9ee6426dbe
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 32339852d67d4f3f28fedd204a056440ad49e075
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65687385"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665966"
 ---
-# <a name="ca2107-review-deny-and-permit-only-usage"></a>CA2107: Zkontrolujte použití čistého odepření a povolení
+# <a name="ca2107-review-deny-and-permit-only-usage"></a>CA2107: Zkontrolujte použití odepřít a pouze povolit
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -32,52 +32,52 @@ ms.locfileid: "65687385"
 |Kategorie|Microsoft.Security|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>Příčina
- Metoda obsahuje kontrolu zabezpečení, která určuje akce zabezpečení PermitOnly nebo odepřít.
+## <a name="cause"></a>příčina
+ Metoda obsahuje kontrolu zabezpečení, která určuje akci zabezpečení PermitOnly nebo Deny.
 
 ## <a name="rule-description"></a>Popis pravidla
- [Použití metody PermitOnly](https://msdn.microsoft.com/8c7bdb7f-882f-45b7-908c-6cbaa1767649) a <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName> akce zabezpečení by měly být používány pouze těmi, kdo mají pokročilé znalosti o [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] zabezpečení. Kód používající tyto bezpečnostní akce by měl být podroben revizi zabezpečení.
+ [Použití metody PermitOnly](https://msdn.microsoft.com/8c7bdb7f-882f-45b7-908c-6cbaa1767649) a akcí zabezpečení <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName> by se měly používat jenom u těch, kteří mají pokročilé znalosti o zabezpečení [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Kód používající tyto bezpečnostní akce by měl být podroben revizi zabezpečení.
 
- Odepřít mění výchozí chování procházení zásobníku, ke které dochází v reakci na požadavek zabezpečení. To vám umožní určit oprávnění, která nesmí být po dobu trvání metodu zamítnutí bez ohledu na skutečnou oprávnění volajících v zásobníku volání. Pokud procházení zásobníku zjistí metodu, která je zabezpečena pomocí Odepřít a pokud požadované oprávnění je součástí odepření oprávnění, procházení zásobníku selže. PermitOnly také mění výchozí chování procházení zásobníku. Je možné zadat pouze oprávnění, která lze udělit, bez ohledu na oprávnění volající kód. Pokud procházení zásobníku zjistí metodu, která je zabezpečena pomocí PermitOnly, a pokud oprávnění, která jsou určena podle PermitOnly není součástí požadované oprávnění, procházení zásobníku selže.
+ Deny změní výchozí chování procházení zásobníku, ke kterému dochází v reakci na požadavek zabezpečení. Umožňuje zadat oprávnění, která nesmí být udělena po dobu trvání metody odepření, bez ohledu na skutečná oprávnění volajícího v zásobníku volání. Pokud procházení zásobníku detekuje metodu, která je zabezpečená metodou Deny, a pokud je požadované oprávnění zahrnuté do odepřených oprávnění, procházení zásobníku se nepovede. PermitOnly také mění výchozí chování procházení zásobníku. Umožňuje kódu určit pouze ta oprávnění, která lze udělit, bez ohledu na oprávnění volajících. Pokud procházení zásobníku detekuje metodu, která je zabezpečena pomocí metody PermitOnly, a pokud požadované oprávnění není zahrnuto v oprávněních, která jsou určena parametrem PermitOnly, procházení zásobníku se nezdařilo.
 
- Kód, který závisí na tyto akce by pečlivě vyhodnotit pro ohrožení zabezpečení z důvodu jejich užitečnost omezené a drobným chování. Zvažte použití těchto zdrojů:
+ Kód, který závisí na těchto akcích, by měl být pečlivě vyhodnocován z důvodu slabých chyb zabezpečení z důvodu jejich omezené využitelnosti a jemného chování. Vezměte v úvahu následující skutečnosti:
 
-- [Požadavky na propojení](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) nejsou ovlivněny Deny nebo PermitOnly.
+- [Požadavky na propojení](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) nejsou ovlivněny pomocí metody Deny nebo PermitOnly.
 
-- Dojde-li Deny nebo PermitOnly v rámci zásobníku jako požadavek, který způsobí, že procházení zásobníku, akce zabezpečení nemají žádný vliv.
+- Pokud se Deny nebo PermitOnly vyskytne ve stejném bloku zásobníku jako poptávka, která způsobuje procházení zásobníku, akce zabezpečení nemají žádný vliv.
 
-- Hodnoty, které se používají k vytvoření oprávnění na základě cest lze obvykle zadat několika způsoby. Odepření přístupu pro jednu formu cesty není odepření přístupu pro všechny formuláře. Například, pokud sdílenou složku \\\Server\Share je namapována na síťovou jednotku X: k odepření přístupu k souboru ve sdílené složce, musíte zakázat \\\Server\Share\File, X:\File a každá cesta, která přistupuje k souboru.
+- Hodnoty, které se používají k vytvoření oprávnění založeného na cestách, je obvykle možné zadat několika způsoby. Odepření přístupu k jedné z těchto cest neodepře přístup všem formulářům. Pokud je například sdílená složka \\ \Server\Share namapována na síťovou jednotku X:, chcete-li odepřít přístup k souboru ve sdílené složce, je nutné zamítnout \\ \Server\Share\File, X:\File a všechny další cesty, které přistupují k souboru.
 
-- <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> Můžete ukončit procházení zásobníku, předtím, než je dosaženo Deny nebo PermitOnly.
+- @No__t_0 může ukončit procházení zásobníku před dosažením zamítnutí nebo PermitOnly.
 
-- Pokud odepřít nemá žádný vliv, konkrétně, pokud volající nemá oprávnění, které zablokovaly odepřít, volající přístup chráněných prostředků přímo, bez použití odepřít. Podobně pokud volající nemá oprávnění k odepření, procházení zásobníku selže bez odepřít.
+- Pokud má zamítnutí nějaký účinek, konkrétně v případě, že volající má oprávnění, které je blokováno odepřením, volající má přímý přístup k chráněnému prostředku a obcházení zamítnutí. Podobně pokud volající nemá oprávnění Odepřít, procházení zásobníku selže bez odmítnutí.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Jakékoli použití tyto bezpečnostní akce způsobí, že je porušení pravidel. Chcete-li opravit porušení, nepoužívejte tyto bezpečnostní akce.
+ Jakékoli použití těchto akcí zabezpečení způsobí porušení. Chcete-li opravit porušení, nepoužívejte tyto akce zabezpečení.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Potlačit upozornění tohoto pravidla, až poté, co dokončíte kontrolu zabezpečení.
+ Potlačí upozornění od tohoto pravidla až po dokončení kontroly zabezpečení.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje některá omezení Odepřít.
+ Následující příklad demonstruje některá omezení typu Deny.
 
- Následující knihovny obsahuje třídu, která má dvě metody, které jsou stejné až požadavky na zabezpečení, které je chránit.
+ Následující knihovna obsahuje třídu, která má dvě metody, které jsou identické s výjimkou požadavků zabezpečení, které je chrání.
 
  [!code-csharp[FxCop.Security.PermitAndDeny#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.PermitAndDeny/cs/FxCop.Security.PermitAndDeny.cs#1)]
 
 ## <a name="example"></a>Příklad
- Následující aplikace ukazuje účinky odepřít na zabezpečené metody v knihovně.
+ Následující aplikace ukazuje účinky odmítnutí na zabezpečené metody z knihovny.
 
  [!code-csharp[FxCop.Security.TestPermitAndDeny#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.TestPermitAndDeny/cs/FxCop.Security.TestPermitAndDeny.cs#1)]
 
  Tento příklad vytvoří následující výstup.
 
- **Vyžádání: Odepřít volajícího, jež nemá žádný vliv na vyžádání s potvrzením oprávnění.** 
-**LinkDemand: Odepřít volajícího, jež nemá žádný vliv na LinkDemand s potvrzením oprávnění.** 
-**LinkDemand: Odepřít volajícího, jež nemá žádný vliv kódem chráněné LinkDemand.** 
-**LinkDemand: Tato odepřít nemá žádný vliv kódem chráněné LinkDemand.**
+ **Poptávka: zamítnutí volajícího nemá žádný vliv na poptávku s vydaným oprávněním.** 
+**LinkDemand: odepření volajícího nemá žádný vliv na LinkDemand s vydaným kontrolním oprávněním.** 
+**LinkDemand: odepření volajícího nemá žádný vliv na kód chráněný pomocí LinkDemand.** 
+**LinkDemand: toto odepření nemá žádný vliv na Kód chráněný LinkDemand.**
 ## <a name="see-also"></a>Viz také
  <xref:System.Security.CodeAccessPermission.PermitOnly%2A?displayProperty=fullName><xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>
  <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName>
  <xref:System.Security.IStackWalk.PermitOnly%2A?displayProperty=fullName>
- [Pokyny pro zabezpečené kódování](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177) [přepsání kontrol zabezpečení](https://msdn.microsoft.com/4acdeff5-fc05-41bf-8505-7387cdbfca28) [použití metody PermitOnly](https://msdn.microsoft.com/8c7bdb7f-882f-45b7-908c-6cbaa1767649)
+ [Pokyny pro zabezpečené kódování](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177) [přepisují kontroly zabezpečení](https://msdn.microsoft.com/4acdeff5-fc05-41bf-8505-7387cdbfca28) [pomocí metody PermitOnly](https://msdn.microsoft.com/8c7bdb7f-882f-45b7-908c-6cbaa1767649)

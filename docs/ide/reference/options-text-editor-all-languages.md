@@ -37,19 +37,19 @@ helpviewer_keywords:
 - line numbers
 - virtual space
 ms.assetid: 49ee7306-9d46-4170-850f-a1716171752d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e15357220c9a9d74d4b08fdd97d4f808ff770b9a
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: 2c33ccbaa21008ab3fa3d1122847c5e18708f9fc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606062"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666354"
 ---
-# <a name="options-dialog-box-text-editor--all-languages"></a>Dialogové okno Možnosti: Textový editor \> – všechny jazyky
+# <a name="options-dialog-box-text-editor--all-languages"></a>Dialogové okno Možnosti: textový editor \> všechny jazyky
 
 Toto dialogové okno umožňuje změnit výchozí chování editoru kódu. Tato nastavení platí také pro ostatní editory na základě editoru kódu, jako je například zobrazení zdroje v Návrháři HTML. Chcete-li otevřít toto dialogové okno, vyberte možnost **Možnosti** v nabídce **nástroje** . V rámci složky **textový editor** rozbalte podsložku **všechny jazyky** a zvolte možnost **Obecné**.
 

@@ -1,5 +1,5 @@
 ---
-title: 'CA2201: Nevyvolávejte vyhrazené typy výjimek | Dokumentace Microsoftu'
+title: 'CA2201: nevyvolávat rezervované typy výjimek | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - DoNotRaiseReservedExceptionTypes
 ms.assetid: dd14ef5c-80e6-41a5-834e-eba8e2eae75e
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 580a021a85d1211932c248ddc925a49e95e1cf13
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a550226a5ea1edb3b30e317be6b5682f4c204d52
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142561"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667380"
 ---
 # <a name="ca2201-do-not-raise-reserved-exception-types"></a>CA2201: Nevyvolávejte vyhrazené typy výjimek
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "68142561"
 |-|-|
 |TypeName|DoNotRaiseReservedExceptionTypes|
 |CheckId|CA2201|
-|Kategorie|Microsoft.Usage|
+|Kategorie|Microsoft. Usage|
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Metoda vyvolá typ výjimky, která je příliš obecné, nebo, který je vyhrazen v modulu runtime.
+ Metoda vyvolá typ výjimky, který je příliš obecný nebo který je rezervován modulem runtime.
 
 ## <a name="rule-description"></a>Popis pravidla
- Následující typy výjimek jsou příliš obecné poskytnout dostatek informací pro uživatele:
+ Následující typy výjimek jsou příliš obecné, aby poskytovaly dostatečné informace uživateli:
 
 - <xref:System.Exception?displayProperty=fullName>
 
@@ -44,7 +44,7 @@ ms.locfileid: "68142561"
 
 - <xref:System.SystemException?displayProperty=fullName>
 
-  Následující typy výjimek jsou vyhrazené a měla by být vyvolána pouze podle modulu common language runtime:
+  Následující typy výjimek jsou vyhrazené a měly by být vyvolány jenom modulem CLR (Common Language Runtime):
 
 - <xref:System.ExecutionEngineException?displayProperty=fullName>
 
@@ -54,36 +54,36 @@ ms.locfileid: "68142561"
 
 - <xref:System.OutOfMemoryException?displayProperty=fullName>
 
-  **Nevyvolávat obecné výjimky**
+  **Negenerovat obecné výjimky**
 
-  Pokud abyste vyvolali typ výjimky, jako například <xref:System.Exception> nebo <xref:System.SystemException> v knihovnu nebo architekturu nutí uživatelům zachytit všechny výjimky, včetně Neznámý výjimky, které nejsou věděli, jak zpracovat.
+  Pokud vyvoláte obecný typ výjimky, například <xref:System.Exception> nebo <xref:System.SystemException> v knihovně nebo v rámci architektury, vynutí si příjemce zachytit všechny výjimky, včetně neznámých výjimek, které neznají způsob zpracování.
 
-  Místo toho vyvolat více odvozený typ, který již existuje v rámci nebo vytvořit vlastní typ, který je odvozen z <xref:System.Exception>.
+  Místo toho buď vyvolejte více odvozeného typu, který již v rozhraní existuje, nebo vytvořte vlastní typ, který je odvozen z <xref:System.Exception>.
 
-  **Vyvolat konkrétní výjimky**
+  **Vyvolat specifické výjimky**
 
-  V následující tabulce jsou uvedeny parametry a výjimek, které má být vyvolána při ověření parametru, včetně hodnoty parametru přístupového objektu set vlastnosti:
+  V následující tabulce jsou uvedeny parametry a výjimky, které mají být vyhozeny při ověřování parametru, včetně parametru value v přístupovém objektu set vlastnosti:
 
 |Popis parametru|Výjimka|
 |---------------------------|---------------|
-|`null` Referenční dokumentace|<xref:System.ArgumentNullException?displayProperty=fullName>|
-|Mimo povolený rozsah hodnot (například index pro kolekci nebo seznamu)|<xref:System.ArgumentOutOfRangeException?displayProperty=fullName>|
-|Neplatný `enum` hodnota|<xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=fullName>|
-|Obsahuje formátu, který splňuje specifikace parametru metody (například řetězec formátu pro `ToString(String)`)|<xref:System.FormatException?displayProperty=fullName>|
-|Jinak neplatných|<xref:System.ArgumentException?displayProperty=fullName>|
+|odkaz na `null`|<xref:System.ArgumentNullException?displayProperty=fullName>|
+|Mimo povolený rozsah hodnot (například index pro kolekci nebo seznam)|<xref:System.ArgumentOutOfRangeException?displayProperty=fullName>|
+|Neplatná hodnota `enum`|<xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=fullName>|
+|Obsahuje formát, který nesplňuje specifikace parametrů metody (například formátovací řetězec pro `ToString(String)`).|<xref:System.FormatException?displayProperty=fullName>|
+|Jinak neplatné|<xref:System.ArgumentException?displayProperty=fullName>|
 
- Když operace je neplatná pro aktuální stav vyvolání výjimky objektu <xref:System.InvalidOperationException?displayProperty=fullName>
+ Když je operace neplatná pro aktuální stav objektu throw <xref:System.InvalidOperationException?displayProperty=fullName>
 
- Při provádění operace na objektu, který byl uvolněn throw <xref:System.ObjectDisposedException?displayProperty=fullName>
+ Je-li operace provedena u objektu, který byl uvolněn jako throw <xref:System.ObjectDisposedException?displayProperty=fullName>
 
- Když se nepodporuje operace (například v překryté **Stream.Write** v Stream otevřen pro čtení) throw <xref:System.NotSupportedException?displayProperty=fullName>
+ V případě, že operace není podporována (například v přepsaném **datovém proudu. zápis** do datového proudu otevřeného pro čtení) vyvolat <xref:System.NotSupportedException?displayProperty=fullName>
 
- Při převodu způsobí přetečení (například v přetížení operátoru přetypování) throw <xref:System.OverflowException?displayProperty=fullName>
+ Pokud by převod způsobil přetečení (například v explicitním přetížení operátoru přetypování), throw <xref:System.OverflowException?displayProperty=fullName>
 
- U všech ostatních situacích zvažte možnost vytvořit vlastní typ, který je odvozen z <xref:System.Exception> a, který výjimku.
+ Pro všechny ostatní situace zvažte vytvoření vlastního typu, který je odvozen z <xref:System.Exception> a throw.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, změňte typ vyvolaná výjimka na konkrétní typ, který není součástí vyhrazené typy.
+ Chcete-li opravit porušení tohoto pravidla, změňte typ vyvolané výjimky na konkrétní typ, který není jedním z rezervovaných typů.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.

@@ -1,5 +1,5 @@
 ---
-title: Integrace modelů UML s jinými modely a nástroji | Dokumentace Microsoftu
+title: Integrace modelů UML s jinými modely a nástroji | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -8,99 +8,93 @@ helpviewer_keywords:
 - UML - extending, references to models
 ms.assetid: 9e75e7d1-93cf-4196-baa3-bd10b9af16d3
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1a8b67e5c784e24b1af71089d33e7db60cb1f92c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2f511a96f94ab98a93144938529a05d07bb6ed26
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68190390"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669581"
 ---
 # <a name="integrate-uml-models-with-other-models-and-tools"></a>Integrace modelů UML s jinými modely a nástroji
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Modely UML je možné integrovat s jinými modely a jazyky specifickými pro doménu.  
-  
- Napsáním kódu rozšíření provádět celou řadu funkcí můžete integrovat modely následujícími způsoby:  
-  
- Připojte odkazy z libovolného elementu k ostatním položkám, jako jsou například soubory nebo na prvky v dalších modelů.  
- V elementu UML můžete ukládat odkazy na další prvky UML, souborů a dalších objektů podle jejich identity jako řetězce kódování.  
-  
- Můžete například napsat rozšíření, které lze propojit žádnou akci UML (to znamená, elementu v diagramu činnosti) do jiného diagramu činnosti. Když uživatel pokliká akce, otevře se jiného diagramu. To umožňuje uživateli zadat s dalšími podrobnostmi akce.  
-  
- Existují dva způsoby, ve kterých můžete ukládat řetězce a další data v libovolný element:  
-  
-- **Vlastnosti stereotypu.** Můžete definovat profil UML, ve kterém definujete stereotypu, která přidává vlastnosti k zadané typy prvku modelu UML. Například můžete definovat profil, který přidává vlastnost s názvem **MoreDetail** akci UML. Můžete napsat kód, rozšíření, že úložiště propojení dat v akci použitím stereotyp na akci, a potom ukládání dat ve vlastnosti.  
-  
-   Stereotyp a její vlastnosti jsou viditelné pro uživatele v okně Vlastnosti.  
-  
-   Nasazení tohoto rozšíření, bude balíček definice profilu a kódu rozšíření v jediném [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření.  
-  
-   Další informace najdete v tématu [definování profilu pro rozšíření UML](../modeling/define-a-profile-to-extend-uml.md).  
-  
-   Ukázkový projekt, ve kterém je nasazený profil společně s příkazy a obslužnými rutinami gest, naleznete v tématu [vzorku: Profily UML](http://go.microsoft.com/fwlink/?LinkID=213811).  
-  
-- **Odkazy.** Sada řetězců můžete připojit k libovolnému prvku UML. Můžete napsat kód, který ukládá informace, jako je název souboru nebo identifikátor GUID jiného elementu. To můžete udělat bez zadání dalších definic. Odkazy nejsou přímo viditelná pro uživatele.  
-  
-   Další informace najdete v tématu [připojení referenčních řetězců k UML model prvky](../modeling/attach-reference-strings-to-uml-model-elements.md). Ukázku najdete v tématu [propojení elementů UML diagramů nebo jiných souborů](http://go.microsoft.com/fwlink/?LinkId=213813).  
-  
-  Existují dva způsoby, jak kódovat odkazy na prvky modelu:  
-  
-- **Identifikátor GUID a název souboru** cílového elementu modelu a model, který ji obsahuje nebo konkrétní diagram, který se zobrazí.  
-  
-   Příklad najdete v tématu [propojení elementů UML diagramů nebo jiných souborů](http://go.microsoft.com/fwlink/?LinkId=213813).  
-  
-- **Odkazy na ModelBus.** ModelBus je architektura určená k vytváření a překladu odkazů mezi modely. Její součástí jsou nástroje pro výběr ModelBus, který umožňuje uživateli vybrat prvek v modelu. Pomáhá také uživatele k vyřešení odkazů, které byly ztraceny z důvodu změn v cílovém modelu.  
-  
-   Další informace najdete v tématu [integrace modelů pomocí Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md).  
-  
-  Šíření změny z jednoho modelu.  
-  Název elementu může třeba synchronizovat s názvem propojené diagramu tak, že pokud uživatel změní jednu, druhý také změní. Jak to udělat dvěma způsoby:  
-  
-1. **Pravidla vmsdk následující položky** je možné změny uvnitř stejného modelu.  
-  
-    Příklad najdete v tématu [propojení elementů UML diagramů nebo jiných souborů](http://go.microsoft.com/fwlink/?LinkId=213813).  
-  
-2. **Události vmsdk následující položky** je možné šířící změny mimo model – třeba, změňte název souboru dokumentu, propojené nebo změně prvku v jiném modelu.  
-  
-   Informace o obou těchto mechanismů najdete v tématu [jak: Reakce na změny v modelu UML](../misc/how-to-respond-to-changes-in-a-uml-model.md).  
-  
-   Přetáhněte prvků, které se zkopírují z jednoho modelu na jiný  
-   Můžete nechat uživatele vytvořit prvky přetažením položky do diagramu UML. Vytvořený element nemá být kopii původní. Například můžete umožnit uživateli přetáhnout diagram aktivity z Průzkumníka řešení do jiného diagramu činnosti, vytvořte novou akci.  
-  
-   Další informace najdete v části [definování obslužné rutiny gest v diagramu modelování](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) a [jak: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md).  
-  
-## <a name="samples"></a>Ukázky  
- Podrobnosti najdete v ukázce kódu [propojení elementů UML diagramů nebo jiných souborů](http://go.microsoft.com/fwlink/?LinkId=213813). Ukázka umožňuje uživatelům přetažením souboru na libovolný prvek UML a později otevřít dvojitým kliknutím element. Diagram aktivity může například odkaz na prvek případu použití. Zobrazuje ikona, u které prvky mají odkazy.  
-  
- Tento vzorový kód ukazuje následujících postupů:  
-  
-- [Připojení referenčních řetězců k elementům modelu UML](../modeling/attach-reference-strings-to-uml-model-elements.md)  
-  
-   Vzorový kód ukládá cesty k souborům a element identifikátory GUID referenčních řetězců, které jsou spojeny s prvkem.  
-  
-- Jak přidat dekoratéry elementů UML. Obecné informace o dekoratéry najdete v tématu [přizpůsobení textových a obrazových polí](../modeling/customizing-text-and-image-fields.md).  
-  
-   Ukázka přidá dekoratér bitové kopie, aby vytvořené tvary UML.  
-  
-- [Postupy: Reakce na změny v modelu UML](../misc/how-to-respond-to-changes-in-a-uml-model.md)  
-  
-   Vzorek ukazuje, jak definovat pravidlo, které jsou reaguje na nové obrazce v diagramu.  
-  
-- [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md)  
-  
-- [Definování obslužné rutiny gest v diagramu modelování](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)  
-  
-   Vzorek ukazuje, jak zpracovávat položky přetažen z Průzkumníka Windows (nebo Průzkumníka souborů), Průzkumník řešení a další prvky UML.  
-  
-  Příklad, ve kterém je UML model číst DSL, najdete v části [jak: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md)   
- [Definování obslužné rutiny gest v diagramu modelování](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)   
- [Postupy: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md)   
- [Postupy: Reakce na změny v modelu UML](../misc/how-to-respond-to-changes-in-a-uml-model.md)   
- [Ukázka: Profily UML](http://go.microsoft.com/fwlink/?LinkID=213811)   
- [Propojení elementů UML diagramů nebo jiných souborů](http://go.microsoft.com/fwlink/?LinkId=213813)
+Modely UML je možné integrovat s jinými modely a s jazyky specifickými pro doménu.
+
+ Modely můžete integrovat následujícími způsoby, a to tak, že napíšete kód rozšíření pro provádění nejrůznějších funkcí:
+
+ Připojte odkazy z libovolného prvku k ostatním položkám, jako jsou například soubory nebo prvky v jiných modelech.
+V prvku UML můžete ukládat odkazy na jiné prvky, soubory nebo objekty UML pomocí kódování svých identit jako řetězců.
+
+ Můžete například napsat rozšíření, které může propojit libovolnou akci UML (tj. element v diagramu činnosti) do jiného diagramu činnosti. Když uživatel dvakrát klikne na akci, otevře se druhý diagram. To umožní uživateli podrobnější zobrazení akce.
+
+ Existují dva způsoby, jak můžete ukládat řetězce a další data v jakémkoli elementu:
+
+- **Vlastnosti stereotypu** Můžete definovat profil UML, ve kterém definujete stereotyp, který přidá vlastnosti ke specifikovaným typům prvku UML. Můžete například definovat profil, který do akce UML přidá vlastnost s názvem **MoreDetail** . Můžete napsat kód rozšíření, který ukládá odkazovaná data v akci, a to použitím stereotypu pro akci a následným uložením dat do vlastnosti.
+
+   Stereotyp a jeho vlastnosti jsou viditelné uživateli v okno Vlastnosti.
+
+   K nasazení tohoto rozšíření byste měli zabalit definici profilu a kód rozšíření v jednom rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+
+   Další informace najdete v tématu [Definování profilu pro rozšiřování UML](../modeling/define-a-profile-to-extend-uml.md).
+
+   Vzorový projekt, ve kterém je profil nasazený společně s příkazy nabídky a obslužnými rutinami gest, najdete v tématu [Ukázka: profily UML](http://go.microsoft.com/fwlink/?LinkID=213811).
+
+- **Odkazy.** K jakémukoli prvku UML lze připojit sadu řetězců. Můžete napsat kód, který ukládá informace, jako je název souboru nebo identifikátor GUID jiného elementu. To se dá udělat bez zadání dalších definic. Odkazy nejsou přímo viditelné pro uživatele.
+
+   Další informace naleznete v tématu [připojení referenčních řetězců k prvkům modelu UML](../modeling/attach-reference-strings-to-uml-model-elements.md). Ukázku najdete v tématu [propojení prvků UML s diagramy nebo jinými soubory](http://go.microsoft.com/fwlink/?LinkId=213813).
+
+  Existují dva způsoby, jak zakódovat odkazy na prvky modelu:
+
+- **Identifikátor GUID a název** cílového prvku modelu a modelu, který ho obsahuje, nebo konkrétní diagram, který ho zobrazuje
+
+   Příklad naleznete v tématu [propojení prvků UML s diagramy nebo jinými soubory](http://go.microsoft.com/fwlink/?LinkId=213813).
+
+- **Odkazy na ModelBus** ModelBus je architektura pro vytváření a rozpoznávání odkazů mezi modely. Zahrnuje výběr ModelBus, který umožňuje uživateli vybrat prvek v modelu. Také pomáhá uživateli přeložit odkazy, které jsou ztraceny z důvodu změn v cílovém modelu.
+
+   Další informace naleznete v tématu [integrování modelů pomocí sady Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
+
+  Rozšiřte změny z jednoho modelu do jiného.
+  Můžete například synchronizovat název prvku s názvem propojeného diagramu, aby uživatel, který si ho změnil, změnil. Existují dva mechanismy:
+
+1. **Pravidla VMSDK** se dají použít k rozšíření změn v rámci stejného modelu.
+
+    Příklad naleznete v tématu [propojení prvků UML s diagramy nebo jinými soubory](http://go.microsoft.com/fwlink/?LinkId=213813).
+
+2. **Události VMSDK** lze použít k šíření změn mimo model – například pro změnu názvu souboru propojeného dokumentu nebo pro změnu elementu v jiném modelu.
+
+   Informace o obou těchto mechanismech naleznete v tématu [How to: reagovat na změny v modelu UML](../misc/how-to-respond-to-changes-in-a-uml-model.md).
+
+   Přetažením prvků pro jejich zkopírování z jednoho modelu do jiného můžete uživateli umožnit vytvořit prvky přetažením položek do diagramu UML. Vytvořený element nemusí být kopií originálu. Můžete například nechat uživatele přetáhnout diagram aktivity z Průzkumníka řešení do jiného diagramu činnosti a vytvořit novou akci.
+
+   Další informace najdete v tématu [Definování obslužné rutiny gesta v diagramu modelování](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) a [Postup: Přidání obslužné rutiny](../modeling/how-to-add-a-drag-and-drop-handler.md)přetažení myší.
+
+## <a name="samples"></a>Ukázky
+ Podívejte se prosím na vzorový kód [propojit prvky UML s diagramy nebo dalšími soubory](http://go.microsoft.com/fwlink/?LinkId=213813). Ukázka umožňuje uživatelům přetáhnout soubor na libovolný prvek UML a později otevřít soubor dvojitým kliknutím na prvek. Například můžete propojit diagram aktivity s prvkem případu použití. Ikona zobrazuje, které prvky mají odkazy.
+
+ Tato ukázka kódu předvádí následující techniky:
+
+- [Připojení referenčních řetězců k elementům modelu UML](../modeling/attach-reference-strings-to-uml-model-elements.md)
+
+   Vzorový kód ukládá cesty k souboru a identifikátory GUID prvků v řetězcích odkazů, které jsou přidruženy k elementu.
+
+- Postup přidání dekoratéry do prvků UML Obecné informace o dekoratéry najdete v tématu [přizpůsobení textových a obrazových polí](../modeling/customizing-text-and-image-fields.md).
+
+   Ukázka přidá obrázek dekoratér k obrazcům UML.
+
+- [Postupy: reakce na změny v modelu UML](../misc/how-to-respond-to-changes-in-a-uml-model.md)
+
+   Ukázka ukazuje, jak definovat pravidlo, které reaguje na nové tvary, které se zobrazují v diagramu.
+
+- [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md)
+
+- [Definování obslužné rutiny gest v diagramu modelování](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)
+
+   Ukázka ukazuje, jak zpracovat položky přetažené z Průzkumníka Windows (nebo Průzkumníka souborů), Průzkumník řešení a dalších prvků UML.
+
+  Příklad, ve kterém je model UML čten pomocí DSL, naleznete v tématu [How to: Add a Redrop-Handler](../modeling/how-to-add-a-drag-and-drop-handler.md).
+
+## <a name="see-also"></a>Viz také
+ [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md) [Definování obslužné rutiny gesta v diagramu modelování](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) [Postup: Přidání obslužné rutiny přetahování myší](../modeling/how-to-add-a-drag-and-drop-handler.md) [Postupy: reakce na změny v modelu UML](../misc/how-to-respond-to-changes-in-a-uml-model.md) [Ukázka: profily UML](http://go.microsoft.com/fwlink/?LinkID=213811) [propojení prvků UML s Diagramy nebo jiné soubory](http://go.microsoft.com/fwlink/?LinkId=213813)

@@ -1,5 +1,5 @@
 ---
-title: Okno nástrojů
+title: Okno panelu nástrojů
 ms.date: 01/18/2018
 ms.topic: reference
 f1_keywords:
@@ -8,64 +8,64 @@ f1_keywords:
 helpviewer_keywords:
 - Toolbox [Visual Studio]
 - custom controls [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fb101dc1f272ae56ceb0058afb2806aec4154936
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 5311c9a910c3140d5a5053a42befe7ed7f5b1278
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747688"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651127"
 ---
 # <a name="toolbox"></a>Sada nástrojů
 
-**Nástrojů** v okně se zobrazí ovládací prvky, které můžete přidat do projektů sady Visual Studio. Chcete-li otevřít panel nástrojů, zvolte **nástrojů** na **zobrazení** nabídky.
+Okno **panelu nástrojů** zobrazuje ovládací prvky, které lze přidat do projektů aplikace Visual Studio. Chcete-li otevřít sadu nástrojů, klikněte v nabídce **zobrazení** na příkaz **Sada nástrojů** .
 
-![Okno nástrojů](media/toolbox.png)
+![Okno panelu nástrojů](media/toolbox.png)
 
-Můžete přetáhnout a vyřadit různé ovládací prvky na povrch návrháře používáte a změnit velikost a umístění ovládacích prvků.
+Můžete přetáhnout různé ovládací prvky na povrch návrháře, který používáte, a změnit velikost ovládacích prvků a jejich velikost a umístění.
 
-Ve spojení s návrháře zobrazení, například jako zobrazení návrháře XAML souboru, zobrazí se panel nástrojů. **Panel nástrojů** zobrazí pouze tyto ovládací prvky, které lze použít v Návrháři aktuální. V rámci **nástrojů** dále filtrovat položky, které se zobrazí.
+Sada nástrojů se zobrazí ve spojení se zobrazeními návrháře, jako je například zobrazení návrháře souboru XAML. **Sada nástrojů** zobrazuje pouze ovládací prvky, které lze použít v aktuálním návrháři. Můžete hledat v **sadě nástrojů** a dále filtrovat položky, které se zobrazí.
 
 > [!NOTE]
-> U některých typů projektu **nástrojů** nemusí zobrazit všechny položky.
+> U některých typů projektů nemusí **Sada nástrojů** zobrazit žádné položky.
 
-Verze rozhraní .NET, že váš projekt cílí také ovlivní sadu ovládacích prvků, které jsou viditelné v panelu nástrojů. Můžete změnit cílovou architekturu na verzi ze stránky vlastností projektu, v případě potřeby. Vyberte uzel projektu v **Průzkumníka řešení**a pak na panelu nabídek zvolte **projektu** > **projectname vlastnosti**. Na **aplikace** kartu, použijte **Cílová architektura** rozevíracího seznamu.
+Verze rozhraní .NET, na kterou projekt cílí, také ovlivňuje sadu ovládacích prvků viditelných v sadě nástrojů. V případě potřeby můžete změnit cílovou verzi rozhraní .NET Framework ze stránek vlastností projektu. Vyberte uzel projektu v **Průzkumník řešení**a pak na panelu nabídek zvolte vlastnosti **projekt**  > **ProjectName**. Na kartě **aplikace** použijte rozevírací seznam **cílové rozhraní** .
 
-## <a name="manage-the-toolbox-window-and-its-controls"></a>Správa oken nástrojů a jejích ovládacích prvků
+## <a name="manage-the-toolbox-window-and-its-controls"></a>Spravovat okno panelu nástrojů a jeho ovládací prvky
 
-Ve výchozím nastavení **nástrojů** sbalení na levé straně rozhraní IDE sady Visual Studio a se zobrazí, když se ukazatel přesune nad ním. Můžete připnout **nástrojů** (kliknutím **Pin** ikonu na panelu nástrojů) tak, aby zůstane otevřená při přesunu kurzoru. Můžete také uvolnit **nástrojů** okno a táhnutím kdekoli na obrazovce. Můžete ukotvit, zrušit ukotvení a skrýt **nástrojů** pravým tlačítkem myši na svůj panel nástrojů a výběrem jedné z možností.
+Ve výchozím nastavení je **panel nástrojů** sbalen na levou stranu integrovaného vývojového prostředí (IDE) sady Visual Studio a zobrazí se, když je kurzor přesunut. **Panel nástrojů** můžete připnout (kliknutím na ikonu **připnutí** na panelu nástrojů), takže zůstane otevřený při přesunu kurzoru. Můžete také uvolnit okno **panelu nástrojů** a přetáhnout ho kamkoli na obrazovku. **Panel nástrojů** můžete ukotvit, uvolnit a skrýt tak, že kliknete pravým tlačítkem myši na jeho panel nástrojů a vyberete jednu z možností.
 
-Můžete změnit pořadí položek v **nástrojů** kartu nebo přidat vlastní karty a položek pomocí následujících příkazů v nabídce klikněte pravým tlačítkem na:
+Můžete změnit uspořádání položek na kartě **panelu nástrojů** nebo přidat vlastní karty a položky pomocí následujících příkazů v místní nabídce, která se zobrazí po kliknutí pravým tlačítkem myši:
 
-- **Přejmenovat položku** – přejmenuje na vybranou položku.
+- **Přejmenovat položku** – Přejmenuje vybranou položku.
 
-- **Zobrazit všechny** -zobrazí všechny možné ovládací prvky (nikoli pouze ty, které se vztahují k aktuální návrháře).
+- **Zobrazit vše** – zobrazí všechny možné ovládací prvky (nikoli pouze ty, které se vztahují k aktuálnímu návrháři).
 
-- **Zobrazení seznamu** – zobrazuje ovládací prvky v svislé seznamu. Pokud není zaškrtnuto, zobrazí ovládací prvky vodorovně.
+- **Zobrazení seznamu** – zobrazí ovládací prvky ve svislém seznamu. Pokud není zaškrtnuto, ovládací prvky se zobrazí vodorovně.
 
-- **Výběr položek** -otevře **zvolit položky nástrojů** dialogové okno tak, aby můžete určit položky, které se zobrazují v **nástrojů**. Můžete zobrazit nebo skrýt položku zaškrtnutím nebo zrušením zaškrtnutí jejího políčka.
+- **Zvolit položky** – otevře dialogové okno **zvolit položky sady nástrojů** , ve kterém můžete určit položky, které se zobrazí v **sadě nástrojů**. Položku můžete zobrazit nebo skrýt zaškrtnutím políčka nebo zrušením jeho zaškrtnutí.
 
-- **Řadit položky podle abecedy** -Seřadí položky podle názvu.
+- **Seřadit položky abecedně** – Seřadí položky podle názvu.
 
-- **Resetovat nástrojů** – obnoví výchozí **nástrojů** nastavení a položky.
+- **Resetovat panel nástrojů** – obnoví výchozí nastavení a položky **sady nástrojů** .
 
-- **Přidat kartu** – přidá nový **nástrojů** kartu.
+- **Přidat tabulátor** – přidá novou kartu **panelu nástrojů** .
 
-- **Přesunout nahoru** – Přesune vybrané položky nahoru.
+- **Nahoru – přesune** vybranou položku nahoru.
 
-- **Přesunout dolů** – Přesune vybrané položky dolů.
+- **Přesunout dolů** – Přesune vybranou položku dolů.
 
-## <a name="create-and-distribute-custom-toolbox-controls"></a>Vytvoření a distribuce vlastních ovládacích prvků nástrojů
+## <a name="create-and-distribute-custom-toolbox-controls"></a>Vytváření a distribuce vlastních ovládacích prvků panelu nástrojů
 
-Můžete vytvořit vlastní **nástrojů** ovládací prvky, buď pomocí šablony projektu, který je založen na spuštění [Windows Presentation Foundation](../../extensibility/creating-a-wpf-toolbox-control.md) nebo na [Windows Forms](../../extensibility/creating-a-windows-forms-toolbox-control.md). Potom můžete distribuovat vlastní ovládací prvek do vašeho týmu, nebo ji publikovat na webu s použitím [instalačního programu nástrojů ovládacích prvků](http://download.microsoft.com/download/8/3/6/836657BD-9CCB-4ED4-B9D2-FB769473B284/TCI_whitepaper.docx).
+Můžete vytvořit vlastní ovládací prvky **sady nástrojů** , počínaje buď se šablonou projektu založenou na [Windows Presentation Foundation](../../extensibility/creating-a-wpf-toolbox-control.md) nebo na [model Windows Forms](../../extensibility/creating-a-windows-forms-toolbox-control.md). Vlastní ovládací prvek pak můžete distribuovat do svého ostatními týmuu nebo ho publikovat na webu pomocí [instalačního programu ovládacích prvků sady nástrojů](http://download.microsoft.com/download/8/3/6/836657BD-9CCB-4ED4-B9D2-FB769473B284/TCI_whitepaper.docx).
 
-## <a name="help-on-toolbox-tabs"></a>Nápověda k karty panelu nástrojů
+## <a name="help-on-toolbox-tabs"></a>Pomáhat s kartami sady nástrojů
 
-Následující témata obsahují další informace o některých z dostupných **nástrojů** karty:
+Následující témata obsahují další informace o některých dostupných kartách **sady nástrojů** :
 
 - [Panel nástrojů, karta Data](../../ide/reference/toolbox-data-tab.md)
 - [Panel nástrojů, karta Součásti](../../ide/reference/toolbox-components-tab.md)
@@ -73,4 +73,4 @@ Následující témata obsahují další informace o některých z dostupných *
 
 ## <a name="see-also"></a>Viz také:
 
-- [Zvolit položky panelu nástrojů, součásti WPF](choose-toolbox-items-wpf-components.md)
+- [Zvolit položky panelu nástrojů, komponenty WPF](choose-toolbox-items-wpf-components.md)

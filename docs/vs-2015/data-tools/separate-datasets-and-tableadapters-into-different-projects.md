@@ -1,5 +1,5 @@
 ---
-title: Oddělení datových sad a TableAdapters do různých projektů | Dokumentace Microsoftu
+title: Oddělení datových sad a objekty TableAdapter do různých projektů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -14,60 +14,56 @@ helpviewer_keywords:
 - n-tier applications, separating Datasets and TableAdapters
 ms.assetid: f66a3940-6227-46af-a930-9177f425f4fd
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bfd6cc62fc93ca3a535fb60c4ea5e1323c720558
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 6f6ec76e79cc1c4759cbe05d8bdcacc1297b655b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65690234"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655435"
 ---
 # <a name="separate-datasets-and-tableadapters-into-different-projects"></a>Rozdělování datových sad a objektů TableAdapter do různých projektů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Vylepšili jsme typové datové sady, aby [objekty TableAdapter](https://msdn.microsoft.com/library/09416de9-134c-4dc7-8262-6c8d81e3f364) a do samostatné projekty se můžou generovat třídy datové sady. To umožňuje rychle samostatné aplikace a generovat vícevrstvých datových aplikací.  
-  
- Následující postup popisuje proces pomocí návrháře datových sad pro generování kódu datovou sadu do projektu, který je oddělen od projektu, který obsahuje vygenerovanou `TableAdapter` kódu.  
-  
-## <a name="separatedatasets-and-tableadapters"></a>Separatedatasets a objektů TableAdapters  
- Když oddělíte datové sady kód z `TableAdapter` kód projektu, který obsahuje kód datové sady se musí nacházet v aktuálním řešení. Pokud není tento projekt v aktuálním řešení, nebude k dispozici v **projektu DataSet** v seznamu **vlastnosti** okna.  
-  
- [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
-  
-#### <a name="to-separate-the-dataset-into-a-different-project"></a>Chcete rozdělit datovou sadu do jiného projektu  
-  
-1. Otevřete řešení, které obsahuje sadu dat (soubor XSD).  
-  
+Typové datové sady byly vylepšeny, takže třídy [objekty TableAdapter](https://msdn.microsoft.com/library/09416de9-134c-4dc7-8262-6c8d81e3f364) a DataSet lze generovat do samostatných projektů. Díky tomu můžete rychle oddělit aplikační vrstvy a generovat n-vrstvou datovou aplikaci.
+
+ Následující postup popisuje proces použití Návrhář datových sad k vygenerování kódu datové sady do projektu, který je oddělený od projektu, který obsahuje generovaný kód `TableAdapter`.
+
+## <a name="separatedatasets-and-tableadapters"></a>Separatedatasets a objekty TableAdapter
+ Když oddělíte kód datové sady z `TableAdapter` kódu, projekt, který obsahuje kód datové sady, musí být umístěn v aktuálním řešení. Pokud tento projekt není v aktuálním řešení, nebude k dispozici v seznamu **projektů DataSet** v okně **vlastnosti** .
+
+ [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
+
+#### <a name="to-separate-the-dataset-into-a-different-project"></a>Oddělení datové sady do jiného projektu
+
+1. Otevřete řešení, které obsahuje datovou sadu (soubor. XSD).
+
    > [!NOTE]
-   > Pokud řešení obsahuje projekt, do kterého chcete rozdělení kódu datovou sadu, vytvořte projekt nebo přidat existující projekt do řešení.  
-  
-2. Poklikejte na soubor (soubor XSD) typové datové sady v **Průzkumníka řešení** otevření datové sady v **Návrhář Dataset**.  
-  
-3. Vyberte prázdnou oblast **Návrhář Dataset**.  
-  
-4. V **vlastnosti** okna, vyhledejte **projektu DataSet** uzlu.  
-  
-5. V **projektu DataSet** vyberte název projektu, do které chcete generovat kód datové sady.  
-  
-    Jakmile vyberete projekt, do které chcete generovat kód datovou sadu **soubor datové sady** vlastnost se vyplní výchozí název souboru. Tento název lze změnit v případě potřeby. Kromě toho pokud chcete generovat kód datovou sadu do konkrétního adresáře, můžete nastavit **složky projektu** nastavte na název složky.  
-  
+   > Pokud řešení neobsahuje projekt, ve kterém chcete oddělit svůj kód datové sady, vytvořte projekt nebo přidejte existující projekt do řešení.
+
+2. Dvojím kliknutím na typový soubor DataSet (soubor. XSD) v **Průzkumník řešení** otevřete datovou sadu v **Návrhář datových sad**.
+
+3. Vyberte prázdnou oblast **Návrhář datových sad**.
+
+4. V okně **vlastnosti** vyhledejte uzel **projekt datové sady** .
+
+5. V seznamu **projekt datové sady** vyberte název projektu, do kterého chcete generovat kód datové sady.
+
+    Po výběru projektu, do kterého chcete generovat kód datové sady, se vlastnost **souboru DataSet** naplní výchozím názvem souboru. V případě potřeby můžete tento název změnit. Kromě toho, pokud chcete vygenerovat kód datové sady do konkrétního adresáře, můžete nastavit vlastnost **Složka projektu** na název složky.
+
    > [!NOTE]
-   > Když oddělíte datové sady a objekty TableAdapter (nastavením **projektu DataSet** vlastnost), existující částečné třídy v projektu nebudou automaticky přesunuty. Existující částečné třídy datové sady je nutné ručně přesunout do projektu datové sady.  
-  
-6. Uložte datovou sadu.  
-  
-    Generování kódu datovou sadu do vybraného projektu v **projektu DataSet** vlastnost a **TableAdapter** do aktuálního projektu bude vygenerován kód.  
-  
-   Ve výchozím nastavení po oddělíte datové sady a `TableAdapter` kód, výsledek je soubor samostatné třídy v každém projektu. Původní projekt obsahuje soubor s názvem DatasetName.Designer.vb (nebo DatasetName.Designer.cs), který obsahuje `TableAdapter` kódu. Projekt, který je zadaný ve **projektu Dataset** vlastnost obsahuje soubor s názvem DatasetName.DataSet.Designer.vb (nebo DatasetName.DataSet.Designer.cs), která obsahuje kód datové sady.  
-  
+   > Při oddělení datových sad a objekty TableAdapter (nastavením vlastnosti **projektu DataSet** ) existující částečné třídy datové sady v projektu nebudou automaticky přesunuty. Existující částečné třídy datové sady je nutné přesunout ručně do projektu datové sady.
+
+6. Uložte datovou sadu.
+
+    Kód datové sady je vygenerován do vybraného projektu ve vlastnosti **projektu DataSet** a kód **TableAdapter** je vygenerován do aktuálního projektu.
+
+   Ve výchozím nastavení platí, že po oddělení datové sady a kódu `TableAdapter` je výsledkem diskrétní soubor třídy v každém projektu. Původní projekt obsahuje soubor s názvem DataSet. Designer. vb (nebo DatasetName.Designer.cs), který obsahuje kód `TableAdapter`. Projekt, který je určen vlastností **projektu DataSet** , má soubor pojmenovaný DataSet. DataSet. Designer. vb (nebo DatasetName.DataSet.Designer.cs), který obsahuje kód datové sady.
+
 > [!NOTE]
-> Chcete-li zobrazit soubor generované třídy, vyberte datovou sadu nebo `TableAdapter` projektu. Potom v **Průzkumníka řešení**vyberte **zobrazit všechny soubory** .  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled vícevrstvých datových aplikací](../data-tools/n-tier-data-applications-overview.md)   
- [Návod: Vytvoření vícevrstvé datové aplikace](../data-tools/walkthrough-creating-an-n-tier-data-application.md)   
- [Hierarchická aktualizace](../data-tools/hierarchical-update.md)   
- [Přístup k datům v sadě Visual Studio](../data-tools/accessing-data-in-visual-studio.md)   
- [ADO.NET](https://msdn.microsoft.com/library/5b96ed06-9759-4966-a797-a1d5f6ee50ca)
+> Chcete-li zobrazit vygenerovaný soubor třídy, vyberte projekt DataSet nebo `TableAdapter`. Pak v **Průzkumník řešení**vyberte možnost **Zobrazit všechny soubory** .
+
+## <a name="see-also"></a>Viz také
+ [Přehled vícevrstvých datových aplikací](../data-tools/n-tier-data-applications-overview.md) [: vytváření n-vrstvých datových aplikací](../data-tools/walkthrough-creating-an-n-tier-data-application.md) [Hierarchická aktualizace](../data-tools/hierarchical-update.md) [pro přístup k datům v aplikaci Visual Studio](../data-tools/accessing-data-in-visual-studio.md) [ADO.NET](https://msdn.microsoft.com/library/5b96ed06-9759-4966-a797-a1d5f6ee50ca)

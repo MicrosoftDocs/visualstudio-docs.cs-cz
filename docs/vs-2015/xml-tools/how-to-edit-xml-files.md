@@ -1,74 +1,72 @@
 ---
-title: 'Postupy: Úprava souborů XML | Dokumentace Microsoftu'
+title: 'Postupy: úprava souborů XML | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 07fa3ecf-6345-4d30-9d85-d5ef5b083319
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 60b94274404c82695628dc72bd88bdf48145b7c2
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: c099839cda87819ec0ec7932c2b2e6aa7698fa52
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443440"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670874"
 ---
-# <a name="how-to-edit-xml-files"></a>Postupy: Úpravy souborů XML
+# <a name="how-to-edit-xml-files"></a>Postupy: úprava souborů XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-XML Editor je nový editor souborů XML. Můžete použít samostatný soubor XML nebo soubor přidružený k projektu sady Visual Studio. XML Editor souvisí s následujícími příponami: .config, DTD, .xml, XSD, .xdr, XSL, XSLT a .vssettings. XML Editor je také přidružen jiný soubor typ, který nemá žádné konkrétní editor zaregistrovaný, a který obsahuje obsah XML nebo DTD.  
-  
+Editor XML je nový editor pro soubory XML. Dá se použít v samostatném souboru XML nebo v souboru přidruženém k projektu sady Visual Studio. Editor XML je přidružen k následujícím příponám souborů:. config,. DTD,. XML,. xsd,. XDR,. XSL,. XSLT a. vssettings. Editor XML je také přidružen k jinému typu souboru, který nemá registrován žádný konkrétní editor a který obsahuje obsah XML nebo DTD.
+
 > [!NOTE]
-> XHTML dokumenty jsou zpracovány pomocí editoru jazyka HTML.  
-  
-### <a name="to-edit-an-xml-file"></a>Chcete-li upravit soubor XML  
-  
-1. Poklikejte na soubor, který chcete upravit.  
-  
-### <a name="to-add-a-new-xml-file-to-a-project"></a>Chcete-li přidat nový soubor XML do projektu  
-  
-1. Z **projektu** nabídce vyberte možnost **přidat novou položku**.  
-  
-2. Vyberte **soubor XML** z **šablony** podokně.  
-  
-3. Zadejte název souboru **název** pole a stiskněte klávesu **přidat**.  
-  
-     Soubor XML je přidán do projektu a otevřít v editoru XML. Tento soubor obsahuje deklaraci XML výchozí `<?xml version="1.0" encoding="utf-8" ?>`.  
-  
-### <a name="to-add-an-existing-xml-file-to-a-project"></a>Chcete-li přidat k existujícímu souboru XML do projektu  
-  
-1. Z **projektu** nabídce vyberte možnost **přidat existující položku**.  
-  
-     **Přidat existující položku** zobrazí se dialogové okno.  
-  
-2. Vyberte soubor XML a stisknutím klávesy **přidat**.  
-  
-### <a name="to-create-a-new-xml-or-xslt-file"></a>Chcete-li vytvořit nový soubor XML nebo XSLT  
-  
-1. Z **souboru** nabídce vyberte možnost **nový**.  
-  
-     **Nový soubor** zobrazí se dialogové okno.  
-  
-2. Vyberte **soubor XML** a vytvořte nový soubor XML, nebo vyberte **soubor XSLT** k vytvoření nové šablony stylů XSLT.  
-  
-3. Klikněte na tlačítko **otevřít**.  
-  
-### <a name="to-create-a-project-for-xml-files"></a>Vytvoření projektu pro soubory XML  
-  
-1. Z **souboru** nabídce vyberte možnost **nový**a pak vyberte **projektu**.  
-  
-     Zobrazí se dialogové okno **Nový projekt**.  
-  
-2. Vyberte jazyk kódu podle vašeho výběru, vyberte **prázdný projekt**a klikněte na tlačítko **OK**.  
-  
-3. Přidáte soubory XML do projektu.  
-  
-     XML Editor najde schémata, které přidáte do tohoto projektu a používá pro ověření a funkce IntelliSense v XML, schématu nebo soubory XSLT, které upravíte tento projekt je otevřený.  
-  
-## <a name="see-also"></a>Viz také  
- [XML Editor](../xml-tools/xml-editor.md)   
- [Vlastnosti dokumentu XML, okno Vlastnosti](../xml-tools/xml-document-properties-properties-window.md)   
- [Postupy: Vytvoření schématu XML z dokumentu XML](../xml-tools/how-to-create-an-xml-schema-from-an-xml-document.md)
+> Dokumenty XHTML jsou zpracovávány editorem HTML.
+
+### <a name="to-edit-an-xml-file"></a>Úprava souboru XML
+
+1. Dvakrát klikněte na soubor, který chcete upravit.
+
+### <a name="to-add-a-new-xml-file-to-a-project"></a>Přidání nového souboru XML do projektu
+
+1. V nabídce **projekt** vyberte možnost **Přidat novou položku**.
+
+2. V podokně **šablony** vyberte **soubor XML** .
+
+3. Do pole **název** zadejte název souboru a stiskněte **Přidat**.
+
+     Soubor XML se přidá do projektu a otevře se v editoru XML. Soubor obsahuje výchozí deklaraci XML `<?xml version="1.0" encoding="utf-8" ?>`.
+
+### <a name="to-add-an-existing-xml-file-to-a-project"></a>Přidání existujícího souboru XML do projektu
+
+1. V nabídce **projekt** vyberte možnost **Přidat existující položku**.
+
+     Zobrazí se dialogové okno **Přidat existující položku** .
+
+2. Vyberte soubor XML a stiskněte **Přidat**.
+
+### <a name="to-create-a-new-xml-or-xslt-file"></a>Vytvoření nového souboru XML nebo XSLT
+
+1. V nabídce **soubor** vyberte možnost **Nový**.
+
+     Zobrazí se dialogové okno **nový soubor** .
+
+2. Vyberte **soubor XML** , chcete-li vytvořit nový soubor XML; nebo vyberte **soubor XSLT** pro vytvoření nové šablony stylů XSLT.
+
+3. Klikněte na **otevřít**.
+
+### <a name="to-create-a-project-for-xml-files"></a>Vytvoření projektu pro soubory XML
+
+1. V nabídce **soubor** vyberte **Nový**a pak vyberte **projekt**.
+
+     Zobrazí se dialogové okno **Nový projekt** .
+
+2. Vyberte jazyk kódu, který chcete zvolit, vyberte **prázdný projekt**a klikněte na **OK**.
+
+3. Přidejte soubory XML do projektu.
+
+     Editor XML vyhledá schémata, která přidáte do tohoto projektu, a použije je pro ověřování a IntelliSense v jakémkoli souboru XML, schématu nebo souboru XSLT, které upravíte v otevřeném projektu.
+
+## <a name="see-also"></a>Viz také
+ XML [editoru XML](../xml-tools/xml-editor.md) – [Vlastnosti dokumentu v okně Vlastnosti](../xml-tools/xml-document-properties-properties-window.md) [: vytvoření schématu XML z dokumentu XML](../xml-tools/how-to-create-an-xml-schema-from-an-xml-document.md)

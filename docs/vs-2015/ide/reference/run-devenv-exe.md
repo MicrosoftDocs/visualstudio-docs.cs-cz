@@ -1,5 +1,5 @@
 ---
-title: – Spouštění (devenv.exe) | Dokumentace Microsoftu
+title: -Run (devenv. exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,51 +13,45 @@ helpviewer_keywords:
 - r Devenv switch (/r)
 ms.assetid: b1f22f9d-39a5-4918-8a2a-4b5c1e872665
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 68e5dcc5ff2e78fe87bbaad639c93f5532ea74fe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b2716995e8ff3a318262284b5733a471086c68c1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68163377"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665527"
 ---
 # <a name="run-devenvexe"></a>/Run (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Zkompiluje a spustí zadaný projekt nebo řešení.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-devenv {/run|/r} {SolutionName|ProjectName}  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `SolutionName`  
- Povinný parametr. Úplná cesta a název souboru řešení.  
-  
- `ProjectName`  
- Povinný parametr. Úplná cesta a název souboru projektu.  
-  
-## <a name="remarks"></a>Poznámky  
- Zkompiluje a spustí zadaný projekt nebo řešení podle nastavení nakonfigurovaného pro konfiguraci aktivního řešení. Tento přepínač spuštění integrovaného vývojového prostředí (IDE) a zůstane aktivní po projekt nebo řešení po dokončení jeho běhu.  
-  
-- Uzavření řetězců, které obsahují mezery v dvojitých uvozovkách.  
-  
-- Souhrnné informace, včetně chyb, lze zobrazit v **příkaz** okna, nebo do jakéhokoli souboru protokolu zadaný `/out` přepnout.  
-  
-## <a name="example"></a>Příklad  
- Tento příklad spustí řešení `MySolution` pomocí konfigurace aktivního nasazení.  
-  
-```  
-devenv /run "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln"  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)   
- [/ Runexit (devenv.exe)](../../ide/reference/runexit-devenv-exe.md)   
- [/ Sestavení (devenv.exe)](../../ide/reference/build-devenv-exe.md)   
- [/ Sestavení (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)   
- [/ Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)
+Zkompiluje a spustí zadaný projekt nebo řešení.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+devenv {/run|/r} {SolutionName|ProjectName}
+```
+
+## <a name="arguments"></a>Arguments
+ `SolutionName` nutné. Úplná cesta a název souboru řešení.
+
+ `ProjectName` nutné. Úplná cesta a název souboru projektu.
+
+## <a name="remarks"></a>Poznámky
+ Zkompiluje a spustí zadaný projekt nebo řešení podle nastavení určeného pro aktivní konfiguraci řešení. Tento přepínač spustí integrované vývojové prostředí (IDE) a po dokončení projektu nebo řešení ho opustí aktivní.
+
+- Uzavřete řetězce, které obsahují mezery, do dvojitých uvozovek.
+
+- Souhrnné informace, včetně chyb, se dají zobrazit v **příkazovém** okně nebo v jakémkoli souboru protokolu, který je zadaný pomocí přepínače `/out`.
+
+## <a name="example"></a>Příklad
+ Tento příklad spustí řešení `MySolution` pomocí aktivní konfigurace nasazení.
+
+```
+devenv /run "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln"
+```
+
+## <a name="see-also"></a>Viz také
+ [Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md) [/Runexit (devenv. exe)](../../ide/reference/runexit-devenv-exe.md) [/Build (devenv. exe)](../../ide/reference/build-devenv-exe.md) [/Rebuild (devenv. exe)](../../ide/reference/rebuild-devenv-exe.md) [/out (devenv. exe)](../../ide/reference/out-devenv-exe.md)
