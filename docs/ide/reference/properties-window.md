@@ -15,73 +15,73 @@ helpviewer_keywords:
 - virtual functions, Properties window
 - Properties window
 ms.assetid: e6e0fa4f-75c4-4a52-af15-281cd61876ca
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e26bd9d874ba5526a858e32907bff6676b68c81e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4701f5ea882ab2fbb75f11bc3cc6d85fc92b4b8e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62969030"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655699"
 ---
 # <a name="properties-window"></a>Vlastnosti – okno
 
-Toto okno k zobrazení a změna vlastností návrhu a událostí vybraných objektů, které se nacházejí v editorech a návrhářích. Můžete také použít **vlastnosti** okna k úpravám a zobrazování souborů, projektů a vlastností řešení. Můžete najít **vlastnosti** na okno **zobrazení** nabídky. Můžete ji také otevřít stisknutím kombinace kláves **F4** nebo pomocí klávesové zkratky **vlastnosti** do vyhledávacího pole.
+Pomocí tohoto okna můžete zobrazit a změnit vlastnosti doby návrhu a události vybraných objektů, které jsou umístěny v editorech a návrhářích. Můžete také použít okno **vlastnosti** pro úpravu a zobrazení souboru, projektu a vlastností řešení. Okno **vlastnosti** můžete najít v nabídce **zobrazení** . Můžete ho také otevřít stisknutím klávesy **F4** nebo zadáním **vlastností** do vyhledávacího pole.
 
-**Vlastnosti** okno zobrazuje různé typy editačních polí v závislosti na potřebách určité vlastnosti. Tato editační pole zahrnout editační políčka, rozevírací seznamy a odkazy na vlastní editor dialogových oknech. Vlastnosti zobrazené šedě jsou jen pro čtení.
+V okně **vlastnosti** se zobrazují různé typy editačních polí v závislosti na potřebách konkrétní vlastnosti. Tato pole pro úpravy obsahují pole pro úpravy, rozevírací seznamy a odkazy na dialogová okna vlastního editoru. Vlastnosti zobrazené šedě jsou jen pro čtení.
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
-Objekt name\
-Zobrazí seznam aktuálně vybraný objekt nebo objekty. Jsou zobrazeny pouze objekty z aktivního editoru nebo návrháře. Když vyberete více objektů, zobrazí se pouze vlastnosti, které jsou společné pro všechny vybrané objekty.
+Název objektu \
+Vypíše aktuálně vybraný objekt nebo objekty. Viditelné jsou pouze objekty z aktivního editoru nebo návrháře. Když vyberete více objektů, zobrazí se pouze vlastnosti společné pro všechny vybrané objekty.
 
-Categorized\
-Uvádí všechny vlastnosti a hodnoty vlastností pro vybraný objekt podle kategorie. Můžete sbalit kategorii a snížit počet viditelných vlastností. Když rozbalíte nebo sbalíte kategorii, zobrazí se znak plus (+) nebo minus (-) nalevo od názvu kategorie. Kategorie jsou uvedeny podle abecedy.
+Dané
+Zobrazí seznam všech vlastností a hodnot vlastností pro vybraný objekt podle kategorie. Můžete sbalit kategorii a snížit tak počet viditelných vlastností. Když rozbalíte nebo sbalíte kategorii, zobrazí se znaménko plus (+) nebo minus (-) nalevo od názvu kategorie. Kategorie jsou uvedeny v abecedním pořadí.
 
-Alphabetical\
-Seřadí podle abecedy všechny vlastnosti doby návrhu a události vybraných objektů. Chcete-li upravit nezašedlou vlastnost, klikněte na buňku napravo a zadejte změny.
+Abecední
+Abecedně řadí všechny vlastnosti a události pro vybrané objekty v době návrhu. Chcete-li upravit neztlumenou vlastnost, klikněte na buňku vpravo a zadejte změny.
 
-Property Pages\
-Zobrazí **stránky vlastností** dialogové okno nebo **Návrháře projektu** pro vybranou položku. Stránky vlastností zobrazí podmnožinu, stejnou nebo nadmnožinu vlastností dostupných v **vlastnosti** okna. Toto tlačítko slouží k zobrazení a úpravám vlastností vztahujících se k aktivní konfiguraci projektu.
+Stránky vlastností \
+Zobrazí dialogové okno **stránky vlastností** nebo **Návrháře projektu** pro vybranou položku. Stránky vlastností zobrazují podmnožinu, stejnou nebo nadmnožinu vlastností, které jsou k dispozici v okně **vlastnosti** . Pomocí tohoto tlačítka můžete zobrazit a upravit vlastnosti týkající se aktivní konfigurace projektu.
 
-Properties\
-Zobrazí vlastnosti objektu. Mnoho objektů má také události, které lze zobrazit pomocí **vlastnosti** okna.
+Vlastnosti
+Zobrazí vlastnosti objektu. Mnoho objektů má také události, které lze zobrazit v okně **vlastnosti** .
 
-Seřadit podle vlastnosti Source\
-Vlastnosti skupiny podle zdroje, jako je dědičnost, využívají styly a vazby. K dispozici pouze při úpravách souborů XAML v návrháři.
+Seřadit podle zdroje vlastnosti \
+Seskupuje vlastnosti podle zdroje, jako je dědičnost, použité styly a vazby. K dispozici pouze při úpravách souborů XAML v návrháři.
 
-Events\
-Zobrazí události objektu.
-
-> [!NOTE]
-> To **vlastnosti** ovládací prvek panelu nástrojů okna je pouze k dispozici, když je formulář nebo návrhář ovládacího prvku je aktivní v kontextu [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] projektu. Při úpravách souborů XAML, události se zobrazí na samostatné kartě v okně Vlastnosti.
-
-Messages\
-Obsahuje seznam všech zpráv Windows. Umožňuje přidat nebo odstranit zadané funkce obslužné rutiny pro zprávy zadané pro vybranou třídu.
+Událost
+Zobrazí události pro objekt.
 
 > [!NOTE]
-> To **vlastnosti** ovládací prvek panelu nástrojů okna je k dispozici pouze při **zobrazení tříd** aktivní okno v kontextu [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] projektu.
+> Tento ovládací prvek panelu nástrojů okna **vlastnosti** je k dispozici pouze v případě, že je formulář nebo návrhář ovládacího prvku aktivní v kontextu projektu [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]. Při úpravách souborů XAML se události zobrazí na samostatné kartě v okně Vlastnosti.
 
-Overrides\
-Obsahuje seznam všech virtuálních funkcí pro vybranou třídu a umožňuje přidat nebo odstranit přepisující funkce.
-
-> [!NOTE]
-> To **vlastnosti** ovládací prvek panelu nástrojů okna je k dispozici pouze při **zobrazení tříd** aktivní okno v kontextu [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] projektu.
-
-Popis pane\
-Zobrazuje typ vlastnosti a krátký popis vlastnosti. Popis vlastnosti vypínat a zapínat pomocí příkazu popis v místní nabídce můžete vypnout.
+Zprávy
+Zobrazí všechny zprávy systému Windows. Umožňuje přidat nebo odstranit zadané funkce obslužných rutin pro zprávy poskytované pro vybranou třídu.
 
 > [!NOTE]
-> To **vlastnosti** ovládací prvek panelu nástrojů okna není k dispozici při úpravách souborů XAML v návrháři.
+> Tento ovládací prvek panelu nástrojů okna **vlastnosti** je k dispozici, pouze pokud je **zobrazení tříd** aktivním oknem v kontextu projektu [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)].
 
-Miniatura view\
-Zobrazí vizuální znázornění aktuálně vybraného prvku při úpravách souborů XAML v návrháři.
+Těžuje
+Zobrazí seznam všech virtuálních funkcí pro vybranou třídu a umožňuje přidat nebo odstranit přepisování funkcí.
 
-Search\
-Poskytuje funkce vyhledávání pro vlastnosti a události při úpravách souborů XAML v návrháři. Vyhledávací pole reaguje na částečné slovní vyhledávání a aktualizuje výsledky hledání během psaní.
+> [!NOTE]
+> Tento ovládací prvek panelu nástrojů okna **vlastnosti** je k dispozici, pouze pokud je **zobrazení tříd** aktivním oknem v kontextu projektu [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)].
+
+Podokno popisu \
+Zobrazuje typ vlastnosti a krátký popis vlastnosti. Popis vlastnosti můžete změnit na vypnuto a pomocí příkazu popis v místní nabídce.
+
+> [!NOTE]
+> Tento ovládací prvek panelu nástrojů okna **vlastnosti** není při úpravách souborů XAML v Návrháři k dispozici.
+
+Zobrazení miniatur \
+Zobrazuje vizuální znázornění aktuálně vybraného prvku při úpravách souborů XAML v návrháři.
+
+Nápovědě
+Poskytuje vyhledávací funkci pro vlastnosti a události při úpravách souborů XAML v návrháři. Vyhledávací pole reaguje na částečné slovní hledání a aktualizuje výsledky hledání při psaní.
 
 ## <a name="see-also"></a>Viz také:
 

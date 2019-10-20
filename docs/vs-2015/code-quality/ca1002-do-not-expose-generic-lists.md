@@ -1,5 +1,5 @@
 ---
-title: 'CA1002: Nezveřejňujte obecné seznamy | Dokumentace Microsoftu'
+title: 'CA1002: nezveřejňujte obecné seznamy | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - DoNotExposeGenericLists
 ms.assetid: 5caac810-1a79-47df-a27b-c46c5040bf34
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 2d1b4f67f25db7c0006decc5fc26696c6c5dad01
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 2a1d8ea70ca86cbb2f38afff48fe37b414b70e88
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65685350"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646306"
 ---
 # <a name="ca1002-do-not-expose-generic-lists"></a>CA1002: Nezveřejňujte obecné seznamy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "65685350"
 |-|-|
 |TypeName|DoNotExposeGenericLists|
 |CheckId|CA1002|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>Příčina
- Typ obsahuje externě viditelného členu, který je <xref:System.Collections.Generic.List%601?displayProperty=fullName> typ, vrátí <xref:System.Collections.Generic.List%601?displayProperty=fullName> typu nebo jehož signatura obsahuje <xref:System.Collections.Generic.List%601?displayProperty=fullName> parametru.
+## <a name="cause"></a>příčina
+ Typ obsahuje člen, který je externě viditelným typem <xref:System.Collections.Generic.List%601?displayProperty=fullName>, vrací typ <xref:System.Collections.Generic.List%601?displayProperty=fullName>, nebo jehož signatura obsahuje parametr <xref:System.Collections.Generic.List%601?displayProperty=fullName>.
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.Collections.Generic.List%601?displayProperty=fullName> je obecná kolekce navržená pro výkon a nikoli dědičnost. <xref:System.Collections.Generic.List%601?displayProperty=fullName> neobsahuje virtuální členy, které chcete změnit chování zděděné třídy. Následující obecné kolekce navržené pro dědičnost a měla by být vystavena místo <xref:System.Collections.Generic.List%601?displayProperty=fullName>.
+ <xref:System.Collections.Generic.List%601?displayProperty=fullName> je obecná kolekce, která je navržena pro výkon a nikoli pro dědění. <xref:System.Collections.Generic.List%601?displayProperty=fullName> neobsahuje virtuální členy, které usnadňují změnu chování zděděné třídy. Následující obecné kolekce jsou navržené pro dědění a měly by být vystaveny namísto <xref:System.Collections.Generic.List%601?displayProperty=fullName>.
 
 - <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName>
 
@@ -45,10 +45,10 @@ ms.locfileid: "65685350"
 - <xref:System.Collections.ObjectModel.KeyedCollection%602?displayProperty=fullName>
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, změňte <xref:System.Collections.Generic.List%601?displayProperty=fullName> typ na jednu z obecné kolekce, které je navržené pro dědičnost.
+ Chcete-li opravit porušení tohoto pravidla, změňte <xref:System.Collections.Generic.List%601?displayProperty=fullName> typ na jednu z obecných kolekcí, která je navržena pro dědění.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění tohoto pravidla, pokud sestavení, které toto upozornění vyvolá neměl být opakovaně použitelné knihovny. Například je bezpečný pro potlačení tohoto upozornění v aplikaci výkonu, která je vyladěná ve kterém bylo zvýšení výkonu získané z použití obecné seznamy.
+ Potlačí upozornění z tohoto pravidla, pokud sestavení, které vyvolává toto upozornění, není určeno jako opakovaně použitelná knihovna. Může být například bezpečné toto upozornění potlačit v aplikaci výkon s vyladěným výkonem, kde výhoda byla získána z použití obecných seznamů.
 
 ## <a name="related-rules"></a>Související pravidla
  [CA1005: Vyhněte se nadbytečným parametrům na obecných typech](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
@@ -61,7 +61,7 @@ ms.locfileid: "65685350"
 
  [CA1004: Obecné metody by měly poskytnout parametr typu](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
 
- [CA1003: Použijte instance obecných události obslužné rutiny](../code-quality/ca1003-use-generic-event-handler-instances.md)
+ [CA1003: Použijte instance obecných obslužných rutin události](../code-quality/ca1003-use-generic-event-handler-instances.md)
 
  [CA1007: Použijte obecné typy, kde je to vhodné](../code-quality/ca1007-use-generics-where-appropriate.md)
 

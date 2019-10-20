@@ -8,21 +8,21 @@ helpviewer_keywords:
 - ShowWebBrowser command
 - View.ShowWebBrowser command
 ms.assetid: c6a4fbd6-8e9d-45cc-8b2f-93990d065e78
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 14e2d6f2c753c56d1628d20e921b7dff2aa83471
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 292910cb75ba9f69a7d8fc231ca6574ccf8bbfbe
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926013"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645253"
 ---
 # <a name="showwebbrowser-command"></a>ShowWebBrowser – příkaz
 
-Zobrazí adresu URL zadanou v okně webového prohlížeče buď v rámci integrovaného vývojového prostředí (IDE) nebo mimo prostředí IDE.
+Zobrazuje adresu URL, kterou zadáte v okně webového prohlížeče, a to buď v rámci integrovaného vývojového prostředí (IDE), nebo mimo rozhraní IDE.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,7 +33,7 @@ View.ShowWebBrowser URL [/new][/ext]
 ## <a name="arguments"></a>Arguments
 `URL`
 
-Povinný parametr. Adresa URL (Uniform Resource Locator) pro web
+Požadováno. Adresa URL (Uniform Resource Locator) pro web
 
 ## <a name="switches"></a>Přepínače
 /new

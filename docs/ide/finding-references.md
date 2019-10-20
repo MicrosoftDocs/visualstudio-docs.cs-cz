@@ -1,56 +1,56 @@
 ---
-title: Hledají se odkazy ve vašem kódu
+title: Hledání odkazů v kódu
 ms.date: 09/26/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - code editor, find all references
 - find all references
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b0d49223d61e3c72f2726b89de99ba9c092ddefe
-ms.sourcegitcommit: fd5a5b057df3d733f5224c305096907989811f85
+ms.openlocfilehash: 523ec566e19614951169c184b4796834c4ab0838
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67195255"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72603577"
 ---
 # <a name="find-references-in-your-code"></a>Hledání odkazů v kódu
 
-Můžete použít **najít všechny odkazy** příkaz Najít, kde jsou prvky konkrétního kódu odkazovat v rámci vašeho základu kódu. **Najít všechny odkazy** příkaz je k dispozici v nabídce kontextu (klikněte pravým tlačítkem) elementu, který chcete vyhledat odkazy na. Nebo, pokud jste uživatelem klávesnice, stiskněte **Shift + F12**.
+Pomocí příkazu **Najít všechny odkazy** můžete najít, kde se v rámci základu kódu odkazuje na konkrétní prvky kódu. Příkaz **Najít všechny odkazy** je k dispozici v nabídce kontextu (klikněte pravým tlačítkem myši) prvku, na který chcete najít odkazy. Pokud jste uživatel klávesnice, stiskněte klávesy **SHIFT + F12**.
 
-Výsledky se zobrazí v okně nástroje s názvem  **\<element > odkazy**, kde *element* je název položky, který hledáte. V panelu nástrojů **odkazy** okno umožňuje:
-- Změňte rozsah vyhledávání v rozevíracím seznamu. Můžete hledat jenom v změněné dokumenty úplně až po celé řešení.
-- Kopírovat vybrané položky odkazované výběrem **kopírování** tlačítko.
-- Zvolte tlačítko Přejít na další nebo předchozí umístění v seznamu, nebo stisknutím klávesy **F8** a **Shift + F8** klíče Uděláte to tak.
-- Odebere všechny filtry s vrácenými výsledky výběrem **vymazat všechny filtry** tlačítko.
-- Změnit způsob vrácené položky jsou seskupeny výběrem nastavení v **Seskupit podle:** rozevíracího seznamu.
-- Zachovat aktuální okno výsledků hledání výběrem **zachovat výsledky** tlačítko. Když vyberete toto tlačítko, aktuální výsledky hledání budete mít všechno pod toto okno a nové výsledky hledání zobrazeny v novém okně nástroje.
-- Hledat řetězce ve výsledcích hledání tak, že zadáte text **vyhledávání, vyhledání všech odkazů** textového pole.
+Výsledky se zobrazí v okně nástroje s názvem **\<element > odkazy**, kde *element* je název položky, kterou hledáte. Panel nástrojů v okně **odkazy** vám umožní:
+- Změna rozsahu hledání v rozevíracím seznamu. Můžete se rozhodnout, že budete hledat jenom v změněných dokumentech až do celého řešení.
+- Kliknutím na tlačítko **Kopírovat** zkopírujte vybranou odkazovanou položku.
+- Zvolte tlačítka pro přechod na další nebo předchozí umístění v seznamu nebo stiskněte klávesy **F8** a **Shift + F8** .
+- Kliknutím na tlačítko **Vymazat všechny filtry** odeberte všechny filtry vrácených výsledků.
+- Změňte způsob seskupení vrácených položek výběrem nastavení v rozevíracím seznamu **Seskupit podle:** .
+- Aktuální okno výsledků hledání nechte kliknutím na tlačítko **zachovat výsledky** . Když vyberete toto tlačítko, aktuální výsledky hledání zůstanou v tomto okně a nové výsledky hledání se zobrazí v novém okně nástroje.
+- Vyhledá řetězce v rámci výsledků hledání zadáním textu do textového pole **Hledat všechny odkazy** .
 
-Můžete také ukazatele myši nad libovolný výsledek hledání pro zobrazení náhledu odkazu.
+Můžete také umístit ukazatel myši na libovolný výsledek hledání a zobrazit náhled odkazu.
 
-![Najít všechny odkazy na panelu nástrojů](../ide/media/vside_findallreferences.png)
+![Podokno nástrojů najít všechny odkazy](../ide/media/vside_findallreferences.png)
 
-## <a name="navigate-to-references"></a>Přejděte na odkazy
-Přejděte na odkazy v můžete použít následující metody **odkazy** okno:
+## <a name="navigate-to-references"></a>Přejít na odkazy
+K přechodu na odkazy v okně **odkazy** můžete použít následující metody:
 
-- Stisknutím klávesy **F8** přejít na další odkaz nebo **Shift + F8** přejít na předchozí odkaz.
-- Stisknutím klávesy **Enter** klíče na odkaz nebo dvojím kliknutím ho, chcete-li přejít k němu v kódu.
-- V nabídce klikněte pravým tlačítkem (kontextová nabídka) odkaz, zvolte **přejít na předchozí umístění** nebo **přejděte do následujícího umístění** příkazy.
-- Zvolte **šipka nahoru** a **šipka dolů** klíčů (pokud jsou povoleny v **možnosti** dialogové okno). Chcete-li povolit tuto funkci na řádku nabídek zvolte **nástroje** > **možnosti** > **prostředí**  >   **Karty a Windows** > **kartu náhledu**a pak vyberte **povolit otevřen v kartě preview odeslání nových souborů** a **náhled vybraných souborů v Výsledky hledání** polí.
+- Stisknutím klávesy **F8** přejděte na další odkaz nebo stiskněte **Shift + F8** a přejděte na předchozí odkaz.
+- Stiskněte klávesu **ENTER** na odkaz, nebo na ni poklikejte, abyste na ni mohli přejít v kódu.
+- V nabídce kliknutím pravým tlačítkem (kontextová nabídka) pro odkaz vyberte příkaz **Přejít na předchozí umístění** nebo **Přejít na další umístění** .
+- Vyberte **šipky nahoru** a **dolů** (pokud jsou povolené v dialogovém okně **Možnosti** ). Chcete-li tuto funkci povolit, na panelu nabídek zvolte **nástroje**  > **Možnosti**  >  kartu**prostředí**  > **karty a Windows**  > **Preview**a pak zaškrtněte políčko **povolit otevírání nových souborů ve verzi Preview. a** **Zobrazit náhled vybraných souborů v polích výsledky hledání** .
 
-## <a name="change-reference-groupings"></a>Seskupení změn odkazu
-Ve výchozím nastavení odkazy jsou seskupené podle projektu, pak podle definice. Toto seskupení pořadí však můžete změnit změnou nastavení v **Seskupit podle:** rozevíracího seznamu na panelu nástrojů. Například můžete změnit z výchozí nastavení **projekt a pak definice** k **definice a pak projekt**, i na další nastavení.
+## <a name="change-reference-groupings"></a>Změnit seskupení odkazů
+Ve výchozím nastavení se odkazy seskupují podle projektu a pak podle definice. Toto pořadí seskupení ale můžete změnit změnou nastavení v rozevíracím seznamu **Seskupit podle:** na panelu nástrojů. Můžete ho například změnit z výchozího nastavení **projektu, pak definice** na **definice, projekt**i další nastavení.
 
-**Definice** a **projektu** se používají dvě výchozí skupiny, ale ostatní lze přidat kliknutím **seskupení** příkaz v nabídce klepněte pravým tlačítkem nebo kontextu vybranou položku. Přidání další seskupení může být užitečné, pokud má vaše řešení velké množství souborů a cesty.
+Pro **definici** a **projekt** se používají dvě výchozí skupiny, ale můžete přidat další kliknutím na příkaz **seskupení** v místní nabídce a kliknutí pravým tlačítkem vybrané položky. Přidání více seskupení může být užitečné, pokud vaše řešení obsahuje velké množství souborů a cest.
 
 ## <a name="filter-by-reference-type-in-net"></a>Filtrovat podle typu odkazu v .NET
-V C# nebo Visual Basic má okno Najít odkazy typu sloupce, kde uvádí typ odkazu nalezena. Filtrovat podle typu odkazu, kliknutím na ikonu filtru, který se zobrazí, když najede myší na záhlaví sloupce lze tento sloupec. Čtení, zápisu, odkazem, název, Namespace a typ se dá filtrovat odkazy.
+V C# nebo Visual Basic okno najít odkazy má sloupec typu, ve kterém je uveden typ odkazu, který byl nalezen. Tento sloupec lze použít k filtrování podle typu odkazu kliknutím na ikonu filtru, která se zobrazí při najetí myší na záhlaví sloupce. Odkazy lze filtrovat podle typu čtení, zápis, odkaz, název, obor názvů a typ.
 
-![Najít odkazy na okno typ sloupce ](../ide/media/vside_findallreferencesKind.png)
+![Sloupec typu okna hledání odkazů ](../ide/media/vside_findallreferencesKind.png)
 
 ## <a name="see-also"></a>Viz také:
 

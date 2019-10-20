@@ -1,5 +1,5 @@
 ---
-title: Přidání podpory editoru pro jiné jazyky | Dokumentace Microsoftu
+title: Přidání podpory editoru pro jiné jazyky | Microsoft Docs
 ms.date: 11/15/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,40 +12,40 @@ helpviewer_keywords:
 - language support
 ms.assetid: d78c43ee-4ef2-42e5-984e-d137de4e7e92
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 366ec5de66c3070e30d7d4f98662732a7892437b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7138784201a1ac036047e1c8df362727fa393b51
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68148257"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72620778"
 ---
-# <a name="adding-visual-studio-editor-support-for-other-languages"></a>Přidání podpory editoru sady Visual Studio pro ostatní jazyky
+# <a name="adding-visual-studio-editor-support-for-other-languages"></a>Přidání podpory editoru sady Visual Studio pro jiné jazyky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Další informace o způsob, jakým editor sady Visual Studio podporuje čtení a navigaci jazyky jiný počítač a jak můžete přidat editoru Visual Studio – podpora pro další jazyky.
+Přečtěte si, jak editor sady Visual Studio podporuje čtení a navigaci v různých jazycích počítačů a jak můžete přidat podporu editoru sady Visual Studio pro jiné jazyky.
 
-## <a name="syntax-colorization-statement-completion-and-navigate-to-support"></a>Barevné zvýrazňování syntaxe, dokončování příkazů a přejít na podporu
- Funkce v editoru sady Visual Studio, jako je například barevné zvýrazňování syntaxe, dokončování příkazů a přejít na můžete vám umožní snadno číst, vytvářet a upravovat kód. Následující snímek obrazovky ukazuje příklad úpravy skriptu jazyka Perl v sadě Visual Studio. Syntaxe je automaticky obarveny. Například poznámky v kódu se zobrazí zelená, kód je černá, cesty jsou červená a příkazy jsou modrá. Editor sady Visual Studio automaticky aplikuje na libovolného jazyka, který podporuje barevné zvýrazňování syntaxe. Kromě toho když začnete zadávat známý jazyk – klíčové slovo a objekt, dokončování příkazů zobrazí seznam možných příkazy a objekty. Doplňování výrazů vám umožňují snadno a rychle vytvořit kód.
+## <a name="syntax-colorization-statement-completion-and-navigate-to-support"></a>Barevné zvýrazňování syntaxe, dokončování příkazů a přechod na podporu
+ Funkce v editoru sady Visual Studio, jako je například barevné zvýrazňování syntaxe, dokončování příkazů a navigace, vám můžou usnadnit snazší čtení, vytváření a úpravy kódu. Následující snímek obrazovky ukazuje příklad úprav skriptu Perl v aplikaci Visual Studio. Syntaxe je automaticky zabarvovaná. Například poznámky v kódu jsou barevné zeleně, kód je černý, cesty jsou červené a příkazy jsou modré. Editor sady Visual Studio automaticky aplikuje barevné zvýrazňování syntaxe pro libovolný jazyk, který podporuje. Kromě toho, když začnete zadávat klíčové slovo nebo objekt známého jazyka, zobrazí se dokončování příkazů seznam možných příkazů a objektů. Doplňování příkazů vám může usnadnit vytváření kódu rychleji a snadno.
 
- ![Barevné zvýrazňování syntaxe ve skriptu jazyka Perl](../ide/media/vside-perledit.png "VSIDE_PerlEdit")
+ ![Zabarvení syntaxe ve skriptu Perl](../ide/media/vside-perledit.png "VSIDE_PerlEdit")
 
- Visual Studio v současné době poskytuje barevné zvýrazňování syntaxe a doplňování výrazů základní podporu pro následující jazyky pomocí [Gramatik TextMate](https://manual.macromates.com/en/language_grammars). Pokud svůj oblíbený jazyk není v tabulce, ale Nedělejte si starosti – můžete ho přidat.
+ Visual Studio aktuálně poskytuje barevné zvýrazňování syntaxe a podporu dokončování příkazů pro následující jazyky pomocí [TextMate gramatik](https://manual.macromates.com/en/language_grammars). Pokud váš oblíbený jazyk není v tabulce, ale nedělejte si starosti – můžete ho přidat.
 
 |||||||
 |-|-|-|-|-|-|
-|Z baterie|F#|Java|Markdown|Rust|Visual Basic|
-|Clojure|Go|JavaDoc|Objective-C|ShaderLab|Visual C#|
+|Bat|F#|Java|Markdownu|Rust|Visual Basic|
+|Clojure|Jděte|JavaDoc|Objective-C|ShaderLab|Visual C#|
 |CMake|Groovy|FORMÁT JSON|Perl|ShellScript|Visual C++|
-|CoffeeScript|HTML|MÉNĚ|Python|SQL|VBNet|
-|CSS|INI|LUA|R|Kód SWIFT|XML|
-|Docker|Jade|Ujistěte se|Ruby|TypeScript|YAML|
+|CoffeeScript|HTML|TOLIK|Python|SQL|VBNet|
+|CSS|UŽÍVANÝ|LUA|R|SWIFT|XML|
+|Docker|Jade|Značka|Ruby|TypeScript|YAML|
 
- Kromě barevného zvýrazňování syntaxe a doplňování výrazů basic, Visual Studio také má funkci zvanou [přejít na](https://blogs.msdn.microsoft.com/benwilli/2015/04/09/visual-studio-tip-3-use-navigate-to/). Tato funkce umožňuje rychle vyhledat soubory kódu, cesty k souborům a kód symboly. Visual Studio poskytuje přejít na podporu pro následující jazyky.
+ Kromě barevného zabarvení syntaxe a základního dokončování příkazů má Visual Studio také funkci s názvem [Přejít na](https://blogs.msdn.microsoft.com/benwilli/2015/04/09/visual-studio-tip-3-use-navigate-to/). Tato funkce umožňuje rychle vyhledat soubory kódu, cesty k souborům a symboly kódu. Visual Studio poskytuje podporu pro následující jazyky.
 
-- Go
+- Jděte
 
 - Java
 
@@ -61,26 +61,26 @@ Další informace o způsob, jakým editor sady Visual Studio podporuje čtení 
 
 - Visual C#
 
-  Všechny tyto typy souborů mají funkce popsané dříve i v případě podpory pro daný jazyk ještě se nenainstalovala. Instalace specializované podpory pro některé jazyky mohou poskytnout podpory dalších jazyků, jako je například technologie IntelliSense nebo jiné pokročilé jazykové vlastnosti zahrnující například návrhy.
+  Všechny tyto typy souborů mají funkce popsané výše i v případě, že ještě není nainstalovaná podpora pro daný jazyk. Instalace specializované podpory pro některé jazyky může poskytovat další jazykovou podporu, jako je například IntelliSense nebo jiné rozšířené jazykové funkce, jako jsou například žárovky.
 
-## <a name="adding-support-for-non-supported-languages"></a>Přidání podpory pro jiné podporované jazyky
- Visual Studio 2015 Update 1 a novější verze poskytují podporu jazyka v editoru pomocí [Gramatik TextMate](https://manual.macromates.com/en/language_grammars). Pokud vašem oblíbeném programovacím jazyce se aktuálně nepodporuje v editoru sady Visual Studio, nejprve vyhledávání na webu – sady TextMate pro jazyk již existuje. Pokud nemůžete najít jednu, ale můžete přidat podporu sami v Visual Studio 2015 Update 1 nebo později po vytvoření modelu sady TextMate pro jazyk gramatiky a fragmenty kódu.
+## <a name="adding-support-for-non-supported-languages"></a>Přidání podpory pro nepodporované jazyky
+ Visual Studio 2015 Update 1 a novější verze poskytují jazykovou podporu v editoru pomocí [gramatik TextMate](https://manual.macromates.com/en/language_grammars). Pokud váš oblíbený programovací jazyk aktuálně není v editoru sady Visual Studio podporován, nejprve vyhledejte web – sada TextMate pro jazyk již možná existuje. Pokud ho nemůžete najít, můžete ho ale přidat sami do sady Visual Studio 2015 Update 1 nebo novější vytvořením modelu TextMate sady pro jazykové gramatiky a fragmenty kódu.
 
- Přidejte všechny nové Gramatik TextMate pro Visual Studio v následující složce:
+ Přidejte všechny nové gramatiky TextMate pro Visual Studio do následující složky:
 
- %userprofile%\\.vs\Extensions
+ % USERPROFILE% \\. vs\Extensions
 
- Pod touto cestou základní přidáte následující složky, pokud se vztahují na konkrétní situaci:
+ V rámci této základní cesty přidejte následující složky, pokud se na vaši situaci vztahují:
 
 |Název složky|Popis|
 |-----------------|-----------------|
-|\\ *\<název jazyka >*|Jazykovou složku. Nahraďte  *\<název jazyka >* s název jazyka. Například **\Matlab**.|
-|\Syntaxes|Složka gramatiky. Obsahuje soubory .json gramatiku jazyka, například **Matlab.json**.|
-|\Snippets|Složka fragmentů kódu. Obsahuje fragmenty kódu pro jazyk.|
+|*název \<language \\ >*|Složka jazyka Nahraďte *\<language název >* názvem jazyka. Například **\Matlab**.|
+|\Syntaxes|Složka gramatiky. Obsahuje soubory gramatiky. JSON pro jazyk, například **MATLAB. JSON**.|
+|\Snippets|Složka fragmenty. Obsahuje fragmenty kódu pro daný jazyk.|
 
- Ve Windows, % userprofile % překládá na cestu: c:\Users\\ *\<uživatelské jméno >* . Pokud složka rozšíření neexistuje ve vašem systému, musíte ji vytvořit. Pokud složka již existuje, bude skrytá.
+ V systému Windows se% USERPROFILE% překládá na cestu: c:\Users \\ *\<user název >* . Pokud složka rozšíření v systému neexistuje, budete ji muset vytvořit. Pokud složka již existuje, bude skrytá.
 
- Podrobnosti o tom, jak vytvořit Gramatik TextMate najdete v tématu [TextMate – Úvod do jazyka gramatiky: Přidání zvýrazňování syntaxe kódu zdroje vložený ve formátu HTML](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/) a [poznámky o tom, jak vytvořit jazyk gramatiky a vlastní motiv pro sady Textmate](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle).
+ Podrobnosti o tom, jak vytvořit TextMate gramatiky, najdete v tématu [TextMate – Úvod do jazykových gramatik: jak přidat zvýrazňování syntaxe zdrojového kódu vloženého do HTML](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/) a [poznámky k vytvoření jazykové gramatiky a vlastní motiv pro sadu TextMate](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle).
 
 ## <a name="see-also"></a>Viz také
- [Visual Studio 2013 přejděte k vylepšení](https://blogs.msdn.microsoft.com/mvpawardprogram/2013/10/22/visual-studio-2013-navigate-to-improvements/) [názorný postup: Vytvoření fragmentu kódu](../ide/walkthrough-creating-a-code-snippet.md) [názorný postup: Zobrazení dokončování příkazů](../extensibility/walkthrough-displaying-statement-completion.md)
+ [Visual Studio 2013 přejděte na](https://blogs.msdn.microsoft.com/mvpawardprogram/2013/10/22/visual-studio-2013-navigate-to-improvements/) [postupy vylepšení: vytvoření návodu fragmentu kódu](../ide/walkthrough-creating-a-code-snippet.md) [: zobrazení dokončování příkazů](../extensibility/walkthrough-displaying-statement-completion.md)

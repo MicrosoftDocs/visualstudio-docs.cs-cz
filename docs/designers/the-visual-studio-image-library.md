@@ -11,25 +11,25 @@ helpviewer_keywords:
 - icons [Visual Studio], Image Library
 - bitmaps [Visual Studio], Image Library
 ms.assetid: f7a2e7c8-3b9f-4f8e-a6a8-000d72e3811d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aee70ea2c0463b56f7f82093087ec5a629aba53e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fd6cb64c3dad56c291b229dfee6cc2816e574b69
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62892889"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72634830"
 ---
 # <a name="the-visual-studio-image-library"></a>Knihovna obrázků sady Visual Studio
 
-Knihovna obrázků Visual Studio obsahuje obrázky aplikace, které se zobrazí v aplikaci Microsoft Visual Studio, Microsoft Windows, systému Office a další software od Microsoftu. Tato sada více než 1 000 obrázků je možné vytvářet aplikace, které vypadají vizuálně konzistentně se softwarem společnosti Microsoft.
+Knihovna obrázků sady Visual Studio obsahuje bitové kopie aplikace, které se zobrazují v Microsoft Visual Studio, Microsoft Windows, systému Office a dalším softwaru společnosti Microsoft. Tato sada více než 1 000 imagí se dá použít k vytváření aplikací, které vypadají vizuálně konzistentně se softwarem Microsoftu.
 
-[Stáhnout knihovna obrázků sady Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=275090)
+[Stáhnout knihovnu imagí sady Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=275090)
 
-Knihovna obrázků je rozdělena do pěti kategorií: Společné prvky, akce, poznámky, ikony a objekty. Soubory Readme jsou u společných elementů a typů ikon zahrnuté ve formátu PDF. Obsahují informace o tom, jak pomocí těchto bitových kopií odpovídajícím způsobem ve svých aplikacích.
+Knihovna obrázků je rozdělena na pět kategorií: běžné prvky, akce, poznámky, ikony a objekty. Soubory Readme jsou součástí formátu PDF pro běžné prvky a typy ikon. Obsahují informace o tom, jak tyto obrázky ve svých aplikacích vhodně použít.
 
 ## <a name="see-also"></a>Viz také:
 

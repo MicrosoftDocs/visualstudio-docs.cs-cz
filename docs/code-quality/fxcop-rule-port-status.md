@@ -5,17 +5,17 @@ ms.topic: reference
 helpviewer_keywords:
 - fxcop rules
 - fxcop analyzers, ported rules
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7dec16291758b330614d8a522aaf3825ae461047
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 2ad427c058265694205444c3ade04e317e407072
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72449056"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649568"
 ---
 # <a name="fxcop-rule-port-status"></a>Stav portu pravidla FxCop
 
@@ -67,8 +67,8 @@ ID pravidla | Název
 [CA1063](ca1063-implement-idisposable-correctly.md) | Implementovat správně IDisposable
 [CA1064](ca1064-exceptions-should-be-public.md) | Výjimky by měly být veřejné
 [CA1065](ca1065-do-not-raise-exceptions-in-unexpected-locations.md) | Nevyvolávejte výjimky v neočekávaných umístěních
-CA1066 | Typ {0} by měl implementovat IEquatable @ no__t-1T >, protože přepisuje rovnost
-CA1067 | Přepsat Object. Equals (objekt) při implementaci IEquatable @ no__t-0T >
+CA1066 | Typ {0} by měl implementovat IEquatable \<T >, protože přepisuje rovnost.
+CA1067 | Při implementaci IEquatable \<T přepsat Object. Equals (Object) >
 [CA1068](ca1068.md) | Parametry CancellationToken musí být poslední.
 CA1200 | Nepoužívejte značky cref s předponou
 [CA1303](ca1303-do-not-pass-literals-as-localized-parameters.md) | Nepředávejte literály jako lokalizované parametry

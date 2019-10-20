@@ -14,17 +14,17 @@ helpviewer_keywords:
 - Project Designer, Compile page
 - Compile page in Project Designer
 ms.assetid: b2a80230-906e-4e85-b3e0-fcd9c40426e1
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 62035fad41d279fd35bbc4a2d31fefbb23463816
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: dfe552db89da4cb4d2a9782a1b5d2c8468833baa
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461422"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654575"
 ---
 # <a name="compile-page-project-designer-visual-basic"></a>Stránka Kompilovat, návrhář projektu (Visual Basic)
 
@@ -43,7 +43,7 @@ Následující nastavení umožňují vybrat konfiguraci a platformu pro zobraze
 
 **Konfigurace**
 
-Určuje, která nastavení konfigurace se mají zobrazit nebo upravit. Nastavení jsou **ladění** (výchozí), **vydání**nebo **všechny konfigurace**. Další informace najdete v tématu [Principy konfigurací sestavení](../../ide/understanding-build-configurations.md) a [postup: Vytvářejte a upravujte konfigurace](../../ide/how-to-create-and-edit-configurations.md).
+Určuje, která nastavení konfigurace se mají zobrazit nebo upravit. Nastavení jsou **ladění** (výchozí), **vydání**nebo **všechny konfigurace**. Další informace naleznete v tématu [Principy konfigurací sestavení](../../ide/understanding-build-configurations.md) a [Postupy: vytváření a úpravy konfigurací](../../ide/how-to-create-and-edit-configurations.md).
 
 **Platformy**
 
@@ -55,47 +55,47 @@ Následující nastavení umožňují nastavit možnosti konfigurace kompilátor
 
 **Výstupní cesta sestavení**
 
-Určuje umístění výstupních souborů pro tuto konfiguraci projektu. Do tohoto pole zadejte cestu k výstupu sestavení nebo klikněte na tlačítko **Procházet** a vyberte cestu. Všimněte si, že cesta je relativní; Pokud zadáte absolutní cestu, bude uložena jako relativní. Výchozí cesta je bin\Debug\ nebo bin\Release\\.
+Určuje umístění výstupních souborů pro tuto konfiguraci projektu. Do tohoto pole zadejte cestu k výstupu sestavení nebo klikněte na tlačítko **Procházet** a vyberte cestu. Všimněte si, že cesta je relativní; Pokud zadáte absolutní cestu, bude uložena jako relativní. Výchozí cesta je bin\Debug\ nebo bin\Release \\.
 
 V případě zjednodušených konfigurací sestavení Určuje projektový systém, zda má být vytvořena verze ladění nebo vydání. Příkaz **Build** z nabídky **ladění** (F5) vloží sestavení do umístění ladění bez ohledu na **výstupní cestu** , kterou zadáte. Příkaz **Build** v nabídce **sestavení** však vloží do umístění, které zadáte.
 
 **Možnost Explicit**
 
-Určuje, zda má být povolena implicitní deklarace proměnných. Pokud  chcete vyžadovat explicitní deklaraci proměnných, vyberte zapnuto. To způsobí, že kompilátor ohlásí chyby, pokud proměnné nejsou deklarovány dříve, než budou použity. Vyberte **vypnuto** pro povolení implicitní deklarace proměnných.
+Určuje, zda má být povolena implicitní deklarace proměnných. Pokud chcete vyžadovat explicitní deklaraci proměnných, vyberte **zapnuto** . To způsobí, že kompilátor ohlásí chyby, pokud proměnné nejsou deklarovány dříve, než budou použity. Vyberte **vypnuto** pro povolení implicitní deklarace proměnných.
 
 Toto nastavení odpovídá možnosti kompilátoru [/OptionExplicit](/dotnet/visual-basic/reference/command-line-compiler/optionexplicit) .
 
-Pokud soubor zdrojového kódu obsahuje [příkaz Option Explicit](/dotnet/visual-basic/language-reference/statements/option-explicit-statement), `On` hodnota nebo `Off` v příkazu přepíše **možnost explicitní** nastavení na **stránce kompilovat**.
+Pokud soubor zdrojového kódu obsahuje [příkaz Option Explicit](/dotnet/visual-basic/language-reference/statements/option-explicit-statement), hodnota `On` nebo `Off` v příkazu přepíše **možnost explicitní** nastavení na **stránce kompilovat**.
 
 Při vytváření nového projektu je **možnost explicitní** nastavení na **stránce kompilovat** nastavena na hodnotu **explicitní nastavení možnosti** v dialogovém okně **Možnosti** . Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně, klikněte v nabídce **nástroje** na příkaz **Možnosti**. V dialogovém okně **Možnosti** rozbalte **projekty a řešení**a potom klikněte na **výchozí hodnoty VB**. Počáteční výchozí nastavení **Možnosti Explicit** ve výchozím nastavení **VB** je **zapnuté**.
 
-**Možnost nastavení explicitní** na `Off` není obvykle dobrým zvykem. V jednom nebo více umístěních byste mohli nastavovat navýšení názvu proměnné, což způsobí, že při spuštění programu dojde k neočekávaným výsledkům.
+**Možnost nastavení explicitní** na `Off` není většinou dobrým zvykem. V jednom nebo více umístěních byste mohli nastavovat navýšení názvu proměnné, což způsobí, že při spuštění programu dojde k neočekávaným výsledkům.
 
 **Možnost Strict**
 
-Určuje, zda se má vynutila striktní Sémantika typu. Pokud je nastavená  **možnost Strict** , v následujících podmínkách dojde k chybě při kompilaci:
+Určuje, zda se má vynutila striktní Sémantika typu. Pokud je nastavená **možnost Strict** **, v následujících**podmínkách dojde k chybě při kompilaci:
 
 - Implicitní zužující převody
 
 - Pozdní vazba
 
-- Implicitní zadání, které má `Object` za následek typ
+- Implicitní zadání, které má za následek `Object` typ
 
 K implicitnímu zužujícímu chybám konverze dojde, pokud je k dispozici implicitní převod datového typu, který představuje zužující převod. Další informace naleznete v tématu [Option Strict](/dotnet/visual-basic/language-reference/statements/option-strict-statement), [implicitní a explicitní převody](/dotnet/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions)a [rozšiřování a zúžení převodů](/dotnet/visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions).
 
-Objekt je pozdní vazbou, je-li přiřazen k vlastnosti nebo metodě proměnné, která je deklarována jako typ `Object`. Další informace najdete v tématu [příkaz Option Strict](/dotnet/visual-basic/language-reference/statements/option-strict-statement) a v [počáteční a pozdní vazbě](/dotnet/visual-basic/programming-guide/language-features/early-late-binding).
+Objekt je pozdní vazbou, je-li přiřazen k vlastnosti nebo metodě proměnné, která je deklarována jako typu `Object`. Další informace najdete v tématu [příkaz Option Strict](/dotnet/visual-basic/language-reference/statements/option-strict-statement) a v [počáteční a pozdní vazbě](/dotnet/visual-basic/programming-guide/language-features/early-late-binding).
 
-K chybám implicitního typu objektu dojde v případě, že příslušný typ nelze odvodit pro deklarovanou proměnnou, takže `Object` typ je odvozený. K tomu primárně dochází, když použijete `Dim` příkaz k deklaraci proměnné bez `As` použití klauzule a `Option Infer` je vypnuta. Další informace naleznete v tématu [Option Strict Statement](/dotnet/visual-basic/language-reference/statements/option-strict-statement), [Option include Statement](/dotnet/visual-basic/language-reference/statements/option-infer-statement)a [Visual Basic Language Specification](/dotnet/visual-basic/reference/language-specification).
+K chybám implicitního typu objektu dojde v případě, že příslušný typ nelze odvodit pro deklarovanou proměnnou, takže typ `Object` je odvozený. K tomu primárně dochází, když použijete příkaz `Dim` k deklaraci proměnné bez použití klauzule `As` a `Option Infer` je vypnutá. Další informace naleznete v tématu [Option Strict Statement](/dotnet/visual-basic/language-reference/statements/option-strict-statement), [Option include Statement](/dotnet/visual-basic/language-reference/statements/option-infer-statement)a [Visual Basic Language Specification](/dotnet/visual-basic/reference/language-specification).
 
 **Možnost Strict** nastavení odpovídá možnosti kompilátoru [/OptionStrict](/dotnet/visual-basic/reference/command-line-compiler/optionstrict) .
 
-Pokud soubor zdrojového kódu obsahuje [příkaz Option Strict](/dotnet/visual-basic/language-reference/statements/option-strict-statement), `On` hodnota nebo `Off` v příkazu přepisuje nastavení **Option Strict** na **stránce kompilovat**.
+Pokud soubor zdrojového kódu obsahuje [příkaz Option Strict](/dotnet/visual-basic/language-reference/statements/option-strict-statement), hodnota `On` nebo `Off` v příkazu přepisuje nastavení **Option Strict** na **stránce kompilovat**.
 
 Při vytváření projektu je **možnost striktní** nastavení na **stránce kompilovat** nastavena na hodnotu **Option Strict** v dialogovém okně **Možnosti** . Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně, klikněte v nabídce **nástroje** na příkaz **Možnosti**. V dialogovém okně **Možnosti** rozbalte **projekty a řešení**a potom klikněte na **výchozí hodnoty VB**. Počáteční výchozí nastavení **Možnosti Strict** ve **výchozích hodnotách VB** je **vypnuto**.
 
 **Možnost striktní jednotlivá upozornění**
 
-Oddíl **Konfigurace upozornění** **stránky kompilace** obsahuje nastavení, která odpovídají třem podmínkám, které způsobují chybu při kompilaci, pokud `Option Strict` je zapnutá. Tato nastavení jsou následující:
+Oddíl **Konfigurace upozornění** **stránky kompilace** obsahuje nastavení, která odpovídají třem podmínkám, které způsobují chybu při kompilaci, pokud je `Option Strict` zapnutá. Tato nastavení jsou následující:
 
 - **Implicitní převod**
 
@@ -105,7 +105,7 @@ Oddíl **Konfigurace upozornění** **stránky kompilace** obsahuje nastavení, 
 
 Pokud nastavíte **možnost Strict** na **zapnuto**, všechna tři tato nastavení konfigurace upozornění jsou nastavená na hodnotu **Chyba**. Pokud nastavíte **možnost Strict** na **vypnuto**, všechna tři nastavení budou nastavena na **hodnotu žádná**.
 
-Každé nastavení konfigurace upozornění můžete jednotlivě změnit na **žádné**, **varování**nebo **Chyba**. Pokud jsou všechna tři nastavení konfigurace upozornění nastavena na hodnotu Chyba `On` , zobrazí se `Option strict` v poli. Pokud jsou všechny tři nastaveny na **možnost žádné**, `Off` zobrazí se v tomto poli. Pro jakoukoli jinou kombinaci těchto nastavení se zobrazí **(vlastní)** .
+Každé nastavení konfigurace upozornění můžete jednotlivě změnit na **žádné**, **varování**nebo **Chyba**. Pokud jsou všechna tři nastavení konfigurace upozornění nastavená na hodnotu **Chyba**, `On` se zobrazí v poli `Option strict`. Pokud jsou všechny tři nastaveny na **hodnotu None**, `Off` se zobrazí v tomto poli. Pro jakoukoli jinou kombinaci těchto nastavení se zobrazí **(vlastní)** .
 
 **Možnost Compare**
 
@@ -113,7 +113,7 @@ Určuje typ porovnání řetězce, který se má použít. Vyberte **binární s
 
 Toto nastavení odpovídá možnosti kompilátoru [/OptionCompare](/dotnet/visual-basic/reference/command-line-compiler/optioncompare) .
 
-Pokud soubor zdrojového kódu obsahuje [příkaz Option Compare](/dotnet/visual-basic/language-reference/statements/option-compare-statement), `Binary` hodnota nebo `Text` v příkazu přepíše nastavení **Možnosti Compare** na **stránce kompilovat**.
+Pokud soubor zdrojového kódu obsahuje [příkaz Option Compare](/dotnet/visual-basic/language-reference/statements/option-compare-statement), hodnota `Binary` nebo `Text` v příkazu přepíše nastavení **Možnosti Compare** na **stránce kompilovat**.
 
 Při vytváření projektu je **možnost porovnat** nastavení na **stránce kompilovat** nastavena na hodnotu nastavení **Možnosti Compare** v dialogovém okně **Možnosti** . Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně, klikněte v nabídce **nástroje** na příkaz **Možnosti**. V dialogovém okně **Možnosti** rozbalte **projekty a řešení**a potom klikněte na **výchozí hodnoty VB**. Počáteční výchozí nastavení **Možnosti porovnat** ve výchozím nastavení **VB** je **binární**.
 
@@ -123,9 +123,9 @@ Určuje, zda má být v deklaracích proměnných povolen odvození místního t
 
 Toto nastavení odpovídá možnosti kompilátoru [/optioninfer](/dotnet/visual-basic/reference/command-line-compiler/optioninfer) .
 
-Pokud soubor zdrojového kódu obsahuje [příkaz Option](/dotnet/visual-basic/language-reference/statements/option-infer-statement), `On` přepíše hodnota nebo `Off` v příkazu možnost odvoditelné nastavení na  **stránce kompilovat**.
+Pokud soubor zdrojového kódu obsahuje [příkaz Option-include](/dotnet/visual-basic/language-reference/statements/option-infer-statement), hodnota `On` nebo `Off` v příkazu přepíše nastavení **odvoditelné z možnosti** na **stránce kompilovat**.
 
-Při vytváření projektu je **možnost odvodit** nastavení na **stránce kompilovat** nastavena na hodnotu nastavení odvoditelné **Možnosti** v dialogovém okně **Možnosti** . Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně, klikněte v nabídce **nástroje** na příkaz **Možnosti**. V dialogovém okně **Možnosti** rozbalte **projekty a řešení**a potom klikněte na **výchozí hodnoty VB**. Počáteční výchozí nastavení **Možnosti odvozeno** ve **výchozím nastavení VB** je **zapnuto**.
+Při vytváření projektu je **možnost odvodit** nastavení na **stránce kompilovat** nastavena na hodnotu nastavení **odvoditelné možnosti** v dialogovém okně **Možnosti** . Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně, klikněte v nabídce **nástroje** na příkaz **Možnosti**. V dialogovém okně **Možnosti** rozbalte **projekty a řešení**a potom klikněte na **výchozí hodnoty VB**. Počáteční výchozí nastavení **Možnosti odvozeno** ve **výchozím nastavení VB** je **zapnuto**.
 
 **Cílový procesor**
 
@@ -155,7 +155,7 @@ Ve výchozím nastavení jsou všechna upozornění kompilátoru přidána do Se
 
 **Zakázat všechna upozornění**
 
-Určuje, jestli má kompilátor vystavovat oznámení uvedená v tabulce **podmínky a oznámení** popsané dříve v tomto dokumentu. Ve výchozím nastavení je toto políčko zaškrtnuté. Zaškrtněte toto políčko, pokud chcete kompilátoru dát pokyn, aby nemohly vystavovat upozornění nebo chyby.
+Určuje, jestli má kompilátor vystavovat oznámení uvedená v tabulce **podmínky a oznámení** popsané dříve v tomto dokumentu. Ve výchozím nastavení je toto zaškrtávací políčko zrušeno. Zaškrtněte toto políčko, pokud chcete kompilátoru dát pokyn, aby nemohly vystavovat upozornění nebo chyby.
 
 Toto nastavení odpovídá možnosti kompilátoru [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) .
 
@@ -183,7 +183,7 @@ Tato možnost není k dispozici pro projekty aplikace nebo konzolové aplikace s
 
 Klikněte na toto tlačítko pro přístup k dialogovému oknu **události sestavení** . Pomocí tohoto dialogového okna můžete zadat pokyny pro konfiguraci před sestavením a po sestavení pro projekt. Toto dialogové okno se vztahuje pouze na Visual Basic projekty. Další informace najdete v [dialogovém okně události sestavení (Visual Basic)](../../ide/reference/build-events-dialog-box-visual-basic.md).
 
-**Možnosti rozšířené kompilace**
+**Pokročilé možnosti kompilace**
 
 Kliknutím na toto tlačítko otevřete dialogové okno **Nastavení AdvancedCompiler** . Dialogové okno **Nastavení AdvancedCompiler** slouží k určení rozšířených vlastností konfigurace sestavení projektu. Toto dialogové okno se vztahuje pouze na Visual Basic projekty. Další informace najdete v tématu [dialogové okno Upřesnit nastavení kompilátoru (Visual Basic)](../../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md).
 

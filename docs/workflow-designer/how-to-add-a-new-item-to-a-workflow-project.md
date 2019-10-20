@@ -1,48 +1,48 @@
 ---
-title: 'Návrhář pracovního postupu: Přidat novou položku do projektu pracovního postupu'
+title: 'Návrhář postupu provádění: Přidání nové položky do projektu pracovního postupu'
 ms.date: 06/25/2018
 ms.topic: conceptual
 ms.assetid: 5c6180ca-af10-4513-b0cb-7d478fd84eab
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 29e4c03eef2a276995890bbd6b723fa457aefde2
-ms.sourcegitcommit: ba5e072c9fedeff625a1332f22dcf3644d019f51
+ms.openlocfilehash: a87efc24ef148600c31dbb07d7517f9235306102
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432033"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650418"
 ---
-# <a name="how-to-add-a-new-item-to-a-workflow-project"></a>Postupy: Přidat novou položku do projektu pracovního postupu
+# <a name="how-to-add-a-new-item-to-a-workflow-project"></a>Postupy: Přidání nové položky do projektu pracovního postupu
 
-Po vytvoření projektu pracovního postupu, můžete přidat do projektu aktivity pracovního postupu, návrháře a další známé položky sady Visual Studio.
+Po vytvoření projektu pracovního postupu můžete do projektu přidat aktivity pracovního postupu, návrháře a další známé položky aplikace Visual Studio.
 
-V následující tabulce je přehled položek Windows Workflow Foundation (WF), které můžete přidat do projektu pracovního postupu:
+V následující tabulce jsou uvedeny položky programovací model Windows Workflow Foundation (WF), které můžete přidat do projektu pracovního postupu:
 
 | Name | Popis |
 |-| - |
-| Aktivita | Aktivitu se skládá z jiné aktivity. Výběrem této položky přidá stejný soubor XAML do projektu, jak lze získat při výběru **knihovny aktivit** šablonu pro nový projekt. Další informace v tomto postupu najdete v tématu [vytvořit projekt workflow](creating-a-workflow-project.md). |
-| Návrhář aktivity | Návrhář pro přizpůsobení prostředí doby návrhu aktivity. Stejné soubory, které vyberete tuto položku přidá do projektu, jak lze získat při výběru **knihovny návrháře aktivit** šablonu pro nový projekt. |
-| Aktivita s kódem | Aktivita s logikou provádění zapsanou v kódu. Soubor zdrojového kódu pomocí přepsání <xref:System.Activities.CodeActivity.Execute%2A> metoda byl již vygenerován za vás. |
-| Služba pracovního postupu WCF | A [!INCLUDE[indigo2](../workflow-designer/includes/indigo2_md.md)] služby vytvořené pomocí aktivit pracovního postupu. Stejné soubory, které vyberete tuto položku přidá do projektu, jak lze získat při výběru **aplikace služeb pracovního postupu WCF** šablonu pro nový projekt. Další informace o tomto postupu najdete v tématu [jak: Vytvoření aplikace služeb pracovního postupu WCF](/visualstudio/workflow-designer/creating-a-workflow-project). |
+| Aktivita | Aktivita, která se skládá z jiných činností. Výběrem této položky se do projektu přidá stejný soubor XAML, který byste získali při výběru šablony **knihovny aktivit** pro nový projekt. Další informace o tomto postupu najdete v tématu [Vytvoření projektu pracovního postupu](creating-a-workflow-project.md). |
+| Návrhář aktivit | Návrhář pro přizpůsobení prostředí aktivity v době návrhu. Výběr této položky přidá do projektu stejné soubory, jako byste získali při výběru šablony **knihovny návrháře aktivit** pro nový projekt. |
+| Aktivita kódu | Aktivita s logikou provádění zapsanou v kódu. Soubor zdrojového kódu s přepsáním metody <xref:System.Activities.CodeActivity.Execute%2A> je již pro vás vygenerován. |
+| Služba pracovního postupu WCF | Služba [!INCLUDE[indigo2](../workflow-designer/includes/indigo2_md.md)] sestavená pomocí aktivit pracovního postupu. Výběr této položky přidá stejné soubory do projektu, jak byste získali při výběru šablony **aplikace služby pracovního postupu WCF** pro nový projekt. Další informace o tomto postupu najdete v tématu [Postup: Vytvoření aplikace služby pracovního postupu WCF](/visualstudio/workflow-designer/creating-a-workflow-project). |
 
-## <a name="to-add-a-new-item-to-a-workflow-project"></a>Chcete-li přidat novou položku do projektu pracovního postupu
+## <a name="to-add-a-new-item-to-a-workflow-project"></a>Přidání nové položky do projektu pracovního postupu
 
-1. Na **projektu** nabídce vyberte možnost **přidat novou položku**.
+1. V nabídce **projekt** vyberte možnost **Přidat novou položku**.
 
-   **Přidat novou položku** zobrazí se dialogové okno.
+   Otevře se dialogové okno **Přidat novou položku** .
 
-1. V levém podokně, vyberte **pracovního postupu** kategorie a pak vyberte šablonu položky pracovního postupu.
+1. V levém podokně vyberte kategorii **pracovního postupu** a potom vyberte šablonu položky pracovního postupu.
 
    > [!NOTE]
-   > Pokud se nezobrazí **pracovního postupu** kategorie, nejdřív nainstalovali **Windows Workflow Foundation** komponentu sady Visual Studio. Podrobné pokyny najdete v tématu [nainstalovat Windows Workflow Foundation](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation).
+   > Pokud nevidíte kategorii **pracovního postupu** , nainstalujte nejprve součást **programovací model Windows Workflow Foundation** sady Visual Studio. Podrobné pokyny najdete v tématu [instalace programovací model Windows Workflow Foundation](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation).
 
-1. Zadejte název pro položku v **název** políčko v dolní části dialogového okna.
+1. Do pole **název** v dolní části dialogového okna zadejte název položky.
 
-1. Vyberte **přidat** k přidání položky do projektu.
+1. Vyberte **Přidat** a přidejte položku do projektu.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Vytvoření projektu pracovního postupu](../workflow-designer/creating-a-workflow-project.md)
+- [Vytvořit projekt pracovního postupu](../workflow-designer/creating-a-workflow-project.md)

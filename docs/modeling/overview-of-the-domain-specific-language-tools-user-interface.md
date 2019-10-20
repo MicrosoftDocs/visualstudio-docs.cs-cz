@@ -6,48 +6,48 @@ f1_keywords:
 - vs.dsltools.dsldesigner.editor
 helpviewer_keywords:
 - Domain-Specific Language Tools, user interface
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bcc16b5287e4980d94a7cbcc4dff4d1f5f63d00
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e9a99eef692eb776908c6b8c4a32eb361092855a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808320"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658310"
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>Přehled uživatelského rozhraní Jazykových nástrojů specifických pro doménu
-Při prvním otevření nástroje jazyka specifického pro doménu (DSL Tools) řešení v sadě Visual Studio, uživatelské rozhraní bude vypadat podobně jako na následujícím obrázku.
+Při prvním otevření řešení Nástroje DSL (DSL Tools) v aplikaci Visual Studio bude uživatelské rozhraní vypadat podobně jako na následujícím obrázku.
 
  ![Návrhář DSL](../modeling/media/dsl_designer.png)
 
- Následující tabulka vysvětluje, jak se používají částí uživatelského rozhraní.
+ Následující tabulka vysvětluje, jak se používají části uživatelského rozhraní.
 
-|**Element**|**Definice**|
+|**Element**|**Definition**|
 |-|-|
-|diagram|Diagram zobrazuje doménový model.<br /><br /> Diagram má dvě strany. Jedna strana definuje typy prvků ve vašich modelech. Druhé straně definuje, jak vaše modely se zobrazí na obrazovce.|
-|Sada nástrojů|Přetáhněte nástroje z panelu nástrojů přidejte doménovými třídami a obrazce typy do diagramu. Chcete-li přidat vztahy, konektory a mapy obrazců, klikněte na nástroje a pak klikněte na zdrojový uzel v diagramu a cílový uzel.|
-|Průzkumník modelu DSL|**Průzkumník modelu DSL** se zobrazí, když je aktivní okno Definice DSL. Jako strom zobrazuje DSL. Průzkumník modelu DSL umožňuje upravit funkce modelu, které nejsou zobrazeny v diagramu. Například můžete přidat položky panelu nástrojů a přepnout na proces ověření pomocí **Průzkumník DSL**.|
-|Okno podrobností DSL|**Podrobnosti DSL** okno zobrazuje vlastnosti domény prvky modelu, které umožňují řídit způsob zobrazení prvků, a jak jsou prvky zkopírovat a odstranit.<br /><br /> – Ve výchozím nastavení **podrobnosti DSL** okna se zobrazí vedle **seznam chyb** a **výstup** systému windows.|
+|diagram|Diagram zobrazuje doménový model.<br /><br /> Diagram má dvě strany. Jedna strana definuje typy prvků ve vašich modelech. Druhá strana definuje, jak se budou vaše modely zobrazovat na obrazovce.|
+|Sada nástrojů|Přetáhněte nástroje ze sady nástrojů a přidejte do diagramu třídy domény a typy tvarů. Chcete-li přidat relace, konektory a mapy obrazců, klikněte na nástroj, potom klikněte na zdrojový uzel v diagramu a pak na cílový uzel.|
+|Průzkumník modelu DSL|**Průzkumník DSL** se zobrazí, když je definice DSL aktivním oknem. Zobrazuje jako stromovou hodnotu DSL. Průzkumník DSL umožňuje upravovat funkce modelu, které se nezobrazuje v diagramu. Můžete například přidat položky sady nástrojů a přepnout na proces ověřování pomocí programu **DSL Explorer**.|
+|Okno Podrobnosti DSL|V okně **Podrobnosti DSL** se zobrazí vlastnosti prvků doménového modelu, které vám umožní řídit, jak se prvky zobrazují a jak se zkopírují a odstraňují prvky.<br /><br /> – Ve výchozím nastavení se vedle **Seznam chyb** a **výstupních** oken zobrazí okno **Podrobnosti DSL** .|
 
-## <a name="the-domain-model-diagram"></a>Diagram modelu domény
- Diagram modelu domény je rozdělena na dva oddíly. Straně diagram zobrazuje prvky a vztahy v modelu. Druhé straně ukazuje, jak je model, který se má zobrazit a zahrnuje tvary, které se používají k zobrazení prvky a vlastnosti diagramu modelu. Následující obrázek ukazuje prvky diagramu.
+## <a name="the-domain-model-diagram"></a>Diagram doménového modelu
+ Diagram doménového modelu je rozdělen do dvou částí. Jedna strana diagramu zobrazuje prvky a vztahy v modelu. Druhá strana ukazuje, jak se má model zobrazit, a obsahuje tvary, které jsou použity k zobrazení prvků a vlastností diagramu modelu. Následující obrázek znázorňuje prvky diagramu.
 
- ![Návrhář DSL s plavecké dráhy](../modeling/media/dsl_desinger.png)
+ ![Návrhář DSL s plaveckou dráhou](../modeling/media/dsl_desinger.png)
 
- Následující tabulka popisuje některé prvky diagramu modelu domény.
+ Následující tabulka popisuje některé prvky diagramu doménového modelu.
 
-|**Termín**|**Definice**|
+|**Doby**|**Definition**|
 |-|-|
-|Domain Class|Doménové třídy jsou typy prvků ve vašich modelech.<br /><br /> Doménová třída může objevit více než jednou v diagramu, pokud je cílem více než jedna relace.<br /><br /> Chcete-li přidat doménovou třídou, přetáhněte nástroj třídy domény z **nástrojů** k **třídám a vztahům** diagramu vedle sebe.|
-|Doménový vztah|Doménové vztahy jsou typy odkazů mezi prvky ve vašich modelů.<br /><br /> *Vztah obsažení* označuje, že cílový element je ve vlastnictví nebo obsažená v tomto elementu zdroje a zobrazí se jako plná čára. Každý prvek v modelu by měla být cílem jeden vztah obsažení, tak, aby model tvoří strom. A *odkazovat na relaci* označuje obecné propojení prvků modelu a zobrazí se bude zobrazovat jako přerušovaná čára. Libovolný prvek může mít libovolný počet referenční odkazy.<br /><br /> Vytvoření relace po kliknutí na nástroj **nástrojů**, kliknutím na zdrojové doménové třídy a pak levým na cílové třídy.|
-|Obrazců a konektorů|Tvary určit, jak mají být zobrazeny prvky modelu na diagram DSL., konektory určit řádky v diagramu DSL, který slouží k zobrazení relací.<br /><br /> Chcete-li vytvořit obrazec nebo spojnici, přetáhněte nástroj, který **elementů diagramu** diagramu vedle sebe.|
-|Mapy obrazců|Mapa obrazce se zobrazí jako řádek na diagram modelu domény propojení doménová třída, která se zobrazí obrazec nebo spojnici na doménový vztah, který se zobrazí.|
+|Domain – třída|Třídy domény jsou typy prvků ve vašich modelech.<br /><br /> Doménová třída se může v diagramu objevit více než jednou, pokud je cílem více než jednoho vztahu.<br /><br /> Chcete-li přidat doménovou třídu, přetáhněte nástroj doménová třída z **panelu nástrojů** na stranu **třídy a vztahy** na straně diagramu.|
+|Doménový vztah|Doménové vztahy jsou typy propojení mezi prvky ve vašich modelech.<br /><br /> *Vztah vložení* indikuje, že cílový element je vlastněn nebo obsažený ve zdrojovém elementu a zobrazuje se jako plná čára. Každý prvek v modelu by měl být cílem jednoho vztahu vložení, takže model vytvoří stromovou strukturu. *Vztah odkazu* označuje obecné propojení mezi prvky modelu a zobrazí se jako přerušovaná čára. Libovolný prvek může mít libovolný počet odkazů na odkazy.<br /><br /> Vytvořte relaci kliknutím na nástroj na **panelu nástrojů**, kliknutím na zdrojová doménová třída a potom kliknutím na cílovou třídu.|
+|Tvary a konektory|Tvary určují, jak se mají prvky modelu zobrazovat na diagramu DSL. konektory určují čáry na diagramu DSL, které se dají použít k zobrazení vztahů.<br /><br /> Chcete-li vytvořit tvar nebo spojnici, přetáhněte nástroj na **prvky diagramu** na straně diagramu.|
+|Mapy obrazců|Mapa obrazce se zobrazí jako čára v diagramu doménového modelu, propojuje obrazec s doménovou třídou, kterou zobrazuje, nebo konektor k doménovým vztahům, které zobrazuje.|
 
 ## <a name="see-also"></a>Viz také
 
 - [Přehled Nástrojů DSL](../modeling/overview-of-domain-specific-language-tools.md)
-- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
 - [Přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md)

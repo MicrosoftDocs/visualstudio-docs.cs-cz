@@ -2,16 +2,16 @@
 title: Zakázat povědomí o DPI v aplikaci Visual Studio
 description: Popisuje omezení Návrhář formulářů na monitorování HDPI a postup spuštění sady Visual Studio jako procesu nepodporujícího DPI.
 ms.date: 04/05/2019
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.topic: conceptual
-ms.openlocfilehash: fdcf255b8ad7c613a83284759a1f4859041acfc4
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: a368108f1b8f9682151ed8c7b0a6d8b83b1b8a1f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69619726"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72637411"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Zakázat povědomí o DPI v aplikaci Visual Studio
 
@@ -48,11 +48,11 @@ Existují tři možnosti, jak vyřešit problém se zobrazením:
 
 Aplikaci Visual Studio můžete restartovat jako proces nepodporující DPI tím, že vyberete možnost na žlutém informačním panelu. Toto je preferovaný způsob řešení problému.
 
-Pokud je aplikace Visual Studio spuštěna jako proces nezohledňující rozlišení DPI, jsou vyřešeny problémy rozložení návrháře, ale písma mohou být rozmazaný. Visual Studio zobrazí jinou žlutou informační zprávu, když běží jako proces nepodporující dpi, který říká **, že Visual Studio běží jako proces nepodporující dpi. Návrháři WPF a XAML se nemusí zobrazit správně.** Informační panel také nabízí možnost **restartovat aplikaci Visual Studio jako proces podporující dpi**.
+Pokud je aplikace Visual Studio spuštěna jako proces nezohledňující rozlišení DPI, jsou vyřešeny problémy rozložení návrháře, ale písma mohou být rozmazaný. Visual Studio zobrazí jinou žlutou informační zprávu, když běží jako proces nepodporující DPI, který říká, že **Visual Studio běží jako proces nepodporující dpi. Návrháři WPF a XAML se nemusí zobrazit správně.** Informační panel také nabízí možnost **restartovat aplikaci Visual Studio jako proces podporující dpi**.
 
 > [!NOTE]
 > - Pokud jste v aplikaci Visual Studio v systému Windows neukotveni okna nástrojů, když jste vybrali možnost restartování jako proces, který nepracuje s rozlišením DPI, může se poloha těchto oken nástroje změnit.
-> - Použijete-li výchozí profil Visual Basic, nebo pokud máte v **nabídce nástroje** > **Možnosti** > **projektů a řešení**možnost **Uložit nové projekty** , Visual Studio nemůže znovu otevřít vaše projekt při restartu jako proces nezohledňující rozlišení DPI. Projekt ale můžete otevřít tak, že ho vyberete v části **soubor** > **Poslední projekty a řešení**.
+> - Použijete-li výchozí profil Visual Basic, nebo pokud **máte v** **nabídce nástroje**  > **Možnosti**  > **projekty a řešení**, aplikace Visual Studio nemůže projekt znovu otevřít, když restartuje se jako proces nezohledňující rozlišení DPI. Projekt ale můžete otevřít tak, že ho vyberete v části **soubor**  > **Poslední projekty a řešení**.
 
 Po dokončení práce na **Návrhář formulářů**je důležité restartovat aplikaci Visual Studio jako proces podporující dpi. Když je spuštěný jako proces nezohledňující rozlišení DPI, můžou písma vypadat rozmazaně a můžou se zobrazit problémy v jiných návrhářích, jako je **Návrhář XAML**. Pokud aplikaci Visual Studio zavřete a znovu otevřete, když je spuštěná v režimu nezohledňující rozlišení DPI, bude se znovu používat DPI. Můžete také kliknout na **restartovat Visual Studio jako možnost procesu podporujícího dpi** na informačním panelu.
 
@@ -60,15 +60,15 @@ Po dokončení práce na **Návrhář formulářů**je důležité restartovat a
 
 Aplikaci Visual Studio můžete označit jako nezohledňované DPI úpravou registru. Otevřete **Editor registru** a přidejte položku do podklíče **NT\CurrentVersion\AppCompatFlags\Layers HKEY_CURRENT_USER\Software\Microsoft\Windows** :
 
-**Položka**: V závislosti na tom, zda používáte sadu Visual Studio 2017 nebo 2019, použijte jednu z těchto hodnot:
+**Položka**: v závislosti na tom, zda používáte sadu Visual Studio 2017 nebo 2019, použijte jednu z těchto hodnot:
 
-- C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
-- C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
+- C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+- C:\Program Files (x86) \Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
 
 > [!NOTE]
-> Pokud používáte edici Professional nebo Enterprise sady Visual Studio, nahraďte v záznamu komunitou **Professional** nebo **Enterprise** . Písmeno jednotky také nahraďte podle potřeby.
+> Pokud používáte edici Professional nebo Enterprise sady Visual Studio, nahraďte v záznamu **komunitou** **Professional** nebo **Enterprise** . Písmeno jednotky také nahraďte podle potřeby.
 
-**Zadejte**: REG_SZ
+**Typ**: REG_SZ
 
 **Hodnota**: DPIUNAWARE
 
@@ -85,7 +85,7 @@ Nastavení škálování zobrazení na 100% může být nežádoucí, protože m
 
 V aplikaci Visual Studio se můžete rozhodnout, že nebudete upozorňováni na problémy s škálováním DPI. Pokud v Návrháři nepracujete, možná budete chtít zakázat oznámení, například.
 
-Chcete-li zakázat oznámení, klikněte na tlačítko**Možnosti** **nástrojů** > a otevřete dialogové okno **Možnosti** . Pak zvolte **Návrhář formulářů** > **Obecné**a nastavte **oznámení škálování dpi** na **false**.
+Chcete-li zakázat oznámení, klikněte na tlačítko **nástroje**  > **Možnosti** . tím otevřete dialogové okno **Možnosti** . Pak zvolte **Návrhář formulářů**  > **Obecné**a nastavte **oznámení škály dpi** na **false**.
 
 ![Možnost oznámení škálování DPI v aplikaci Visual Studio](./media/notifications-option.png)
 
@@ -93,7 +93,7 @@ Pokud chcete později znovu povolit oznámení o škálování, nastavte vlastno
 
 ## <a name="troubleshoot"></a>Řešení potíží
 
-Pokud převod na základě rozlišení DPI v aplikaci Visual Studio nefunguje podle očekávání, zkontrolujte, zda máte `dpiAwareness` hodnotu v podklíči **Options\devenv.exe "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution File Execution** ". v editoru registru. Pokud je tato hodnota přítomná, odstraňte ji.
+Pokud převod na základě rozlišení DPI v aplikaci Visual Studio nefunguje podle očekávání, zkontrolujte, zda máte `dpiAwareness` hodnotu v podklíči **Options\devenv.exe "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Nt\currentversion\image File Execution File Execution** " v tématu Editor registru. Pokud je tato hodnota přítomná, odstraňte ji.
 
 ## <a name="see-also"></a>Viz také:
 

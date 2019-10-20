@@ -3,19 +3,19 @@ title: 'Postupy: Vytvoření základního 3D modelu'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a0d97966-2df8-449b-a8cf-5a19684dc773
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5f4bb3c6d429fb40d97e748798610e4e46262eb
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 604847e5f9bf6111d548b9d3bbdc0a0e10301784
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924500"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72636737"
 ---
-# <a name="how-to-create-a-basic-3d-model"></a>Postupy: Vytvoření základního 3D modelu
+# <a name="how-to-create-a-basic-3d-model"></a>Postupy: Vytvoření základní 3D model
 
 Tento článek ukazuje, jak pomocí editoru modelů vytvořit základní 3D model. Jsou pokryty následující aktivity:
 
@@ -54,23 +54,23 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
 
     ![Strany krychle byly vytlačeny.](../designers/media/gfx_model_demo_house_extrude.png)
 
-6. Rozšíří jeden z vytlačení. Zvolte jednu z ploch, kterou jste právě vytlačeni, a potom na panelu nástrojů editoru modelů zvolte nástroj pro překlad a přesuňte manipulátor překladu ve stejném směru jako vytlačení.
+6. Rozšíří jeden z vytlačení. Zvolte jednu z ploch, kterou jste právě vytlačeni, a potom na panelu nástrojů editoru modelů **Zvolte nástroj pro překlad a** přesuňte manipulátor překladu ve stejném směru jako vytlačení.
 
     ![Jedna strana datové krychle byla dále vytlačena.](../designers/media/gfx_model_demo_house_extend.png)
 
-7. Triangulovat model. Na panelu nástrojů editoru modelů vyberte možnost **Rozšířené** > **nástroje** > **triangulovat**.
+7. Triangulovat model. Na panelu nástrojů editoru modelů vyberte možnost **rozšířené**  > **nástroje**  > **triangulovat**.
 
 8. Vytvořte střechu domu. Přepněte do režimu výběru okrajů tak, že na panelu nástrojů editoru modelů kliknete na **Vybrat Edge** a potom ho aktivujete kliknutím na datovou krychli. Stisknutím a podržením klávesy **CTRL** můžete vybrat hrany, které jsou zde zobrazeny:
 
     ![Okraje, které budou tvořit špičku střechy](../designers/media/gfx_model_demo_house_edges.png)
 
-    Když jsou vybrané okraje, na panelu nástrojů editoru modelů zvolte nástroj pro překládání a pak posunutím manipulátor směrem nahoru vytvořte střechu domu.
+    Když jsou vybrané okraje, na panelu nástrojů editoru modelů **Zvolte nástroj pro** překládání a pak posunutím manipulátor směrem nahoru vytvořte střechu domu.
 
    Model zjednodušené domovní konstrukce je dokončen. Zde je konečný model znovu s použitým plochým stínováním:
 
    ![Dokončený model zjednodušené domu](../designers/media/gfx_model_demo_house_final.png)
 
-   V dalším kroku můžete použít shader na tento 3D model. Informace naleznete v tématu [How to: Použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
+   V dalším kroku můžete použít shader na tento 3D model. Informace naleznete v tématu [How to: Apply a shader to a 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
 
 ## <a name="see-also"></a>Viz také:
 

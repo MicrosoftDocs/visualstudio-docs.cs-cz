@@ -2,21 +2,21 @@
 title: Použití Microsoft. VisualStudio. TestTools. UnitTesting v testování částí
 ms.date: 03/02/2018
 ms.topic: reference
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: a9fcf54abf6227fe020d98d2fdc9aed6de021983
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+author: jillre
+ms.openlocfilehash: c69950e478fc8a35d46257876a84a28129bf1baa
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869841"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659763"
 ---
 # <a name="use-the-mstest-framework-in-unit-tests"></a>Použití rozhraní MSTest v testování částí
 
-Rozhraní [MSTest](<xref:Microsoft.VisualStudio.TestTools.UnitTesting>) podporuje testování částí v aplikaci Visual Studio. Při kódování testů jednotek použijte třídy a <xref:Microsoft.VisualStudio.TestTools.UnitTesting> členy v oboru názvů. Můžete je také použít při rerafinaci testu jednotek, který byl vygenerován z kódu.
+Rozhraní [MSTest](<xref:Microsoft.VisualStudio.TestTools.UnitTesting>) podporuje testování částí v aplikaci Visual Studio. Při kódování testů jednotek použijte třídy a členy v oboru názvů <xref:Microsoft.VisualStudio.TestTools.UnitTesting>. Můžete je také použít při rerafinaci testu jednotek, který byl vygenerován z kódu.
 
 ## <a name="framework-members"></a>Členové architektury
 
@@ -69,7 +69,7 @@ ClassInitialize a ClassCleanup jsou volány hned po načtení třídy a správn�
 
 ## <a name="attributes-used-to-identify-test-classes-and-methods"></a>Atributy používané k identifikaci testovacích tříd a metod
 
-Každá testovací třída musí mít `TestClass` atribut a každá testovací metoda musí `TestMethod` mít atribut. Další informace naleznete v tématu [anatomie testu jednotek](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144).
+Každá testovací třída musí mít atribut `TestClass` a každá testovací metoda musí mít atribut `TestMethod`. Další informace naleznete v tématu [anatomie testu jednotek](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144).
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>
 
@@ -95,7 +95,7 @@ Testy jednotek mohou ověřit konkrétní chování aplikace podle jejich použi
 
 ## <a name="the-testcontext-class"></a>Třída TestContext
 
-Následující atributy a hodnoty, které jsou přiřazeny, se zobrazí v okno Vlastnosti sady Visual Studio pro konkrétní testovací metodu. Tyto atributy nejsou určeny pro použití v kódu testu jednotek. Místo toho ovlivňují způsoby použití nebo spuštění testu jednotky, a to buď prostřednictvím integrovaného vývojového prostředí (IDE) sady Visual Studio, nebo pomocí testovacího modulu sady Visual Studio. Například některé z těchto atributů se zobrazí jako sloupce v okně **Test Manager** a v **výsledky testů** okně, což znamená, že je můžete použít k seskupení a seřazení testů a výsledků testů. Jeden z těchto atributů <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute>je, který použijete k přidání libovolných metadat k jednotkovým testům. Můžete ji například použít k uložení názvu testu průchodu, který tento test pokrývá, označením testu jednotky pomocí `[TestProperty("TestPass", "Accessibility")]`. Nebo můžete použít k uložení indikátoru typu testu, u `[TestProperty("TestKind", "Localization")]`kterého se jedná. Vlastnost, kterou vytvoříte pomocí tohoto atributu a hodnotu vlastnosti, kterou přiřadíte, se zobrazí v okně **vlastnosti** sady Visual Studio pod položkou **test**pro daný nadpis.
+Následující atributy a hodnoty, které jsou přiřazeny, se zobrazí v okno Vlastnosti sady Visual Studio pro konkrétní testovací metodu. Tyto atributy nejsou určeny pro použití v kódu testu jednotek. Místo toho ovlivňují způsoby použití nebo spuštění testu jednotky, a to buď prostřednictvím integrovaného vývojového prostředí (IDE) sady Visual Studio, nebo pomocí testovacího modulu sady Visual Studio. Například některé z těchto atributů se zobrazí jako sloupce v okně **Test Manager** a v **výsledky testů** okně, což znamená, že je můžete použít k seskupení a seřazení testů a výsledků testů. Jeden z těchto atributů je <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute>, který použijete k přidání libovolných metadat k jednotkovým testům. Můžete ji například použít k uložení názvu testu průchodu, který tento test pokrývá, označením testu jednotky pomocí `[TestProperty("TestPass", "Accessibility")]`. Nebo můžete použít k uložení indikátoru typu testu, který je v `[TestProperty("TestKind", "Localization")]`. Vlastnost, kterou vytvoříte pomocí tohoto atributu a hodnotu vlastnosti, kterou přiřadíte, se zobrazí v okně **vlastnosti** sady Visual Studio pod položkou **test**pro daný nadpis.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>
 
@@ -127,7 +127,7 @@ Atributy v této části se vztahují na testovací metodu, kterou upraví na en
 
 ## <a name="classes-used-with-private-accessors"></a>Třídy používané s privátními přistupujícími objekty
 
-Můžete vygenerovat test jednotky pro soukromou metodu. Tato generace vytvoří třídu soukromého přístupového objektu, která vytvoří instanci objektu <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject> třídy. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject> Třída je Obálková třída, která používá reflexi v rámci procesu privátního přístupového objektu. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType> Třída je podobná, ale používá se pro volání privátních statických metod namísto volání metod soukromé instance.
+Můžete vygenerovat test jednotky pro soukromou metodu. Tato generace vytvoří třídu soukromého přístupového objektu, která vytvoří instanci objektu třídy <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject>. Třída <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject> je Obálková třída, která používá reflexi v rámci procesu privátního přístupového objektu. Třída <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType> je podobná, ale používá se pro volání privátních statických metod namísto volání metod soukromé instance.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject>
 
@@ -135,4 +135,4 @@ Můžete vygenerovat test jednotky pro soukromou metodu. Tato generace vytvoří
 
 ## <a name="see-also"></a>Viz také:
 
-- <xref:Microsoft.VisualStudio.TestTools.UnitTesting>Referenční dokumentace
+- Referenční dokumentace <xref:Microsoft.VisualStudio.TestTools.UnitTesting>

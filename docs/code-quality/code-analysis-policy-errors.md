@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - policy errors, code analysis
 ms.assetid: d1f221cd-68c0-4277-9397-b76ad0dbae77
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 661f029b617c430f7205552080a94affc5bd543b
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: d3c1f6761c6cef968c965a7f0d766d3b7da6183e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445885"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72622602"
 ---
 # <a name="code-analysis-policy-errors"></a>Chyby zásad Analýzy kódu
 
@@ -47,27 +47,27 @@ Zásady analýzy kódu vyžadují, aby všechny soubory vracené se změnami mě
 
 **Verze {0} není správná. Silný název zadaný v zásadě je {1}.**
 
-Tato chyba se vztahuje na projekty .NET. Pravidlo. DLL vyžadované zásadami analýzy kódu existuje v místním počítači, ale verze/veřejný klíč se neshoduje. Aby bylo možné tuto chybu opravit, musí tvůrce zásad aktualizovat knihovny DLL ve *složce C:\Program Files\Microsoft Visual Studio 8 \ Team Tools\Static Analysis Tools\FxCop\Rules @ no__t-1* Directory na svém počítači.
+Tato chyba se vztahuje na projekty .NET. Pravidlo. DLL vyžadované zásadami analýzy kódu existuje v místním počítači, ale verze/veřejný klíč se neshoduje. Aby bylo možné tuto chybu opravit, musí tvůrce zásad aktualizovat knihovny DLL ve *složce C:\Program Files\Microsoft Visual Studio 8 \ Team Tools\Static Analysis Tools\FxCop\Rules \\* Directory na svém počítači.
 
 **sestavení {0} zadané v zásadách neexistuje.**
 
-Tato chyba se vztahuje na projekty .NET. Pravidlo vyžadované zásadami analýzy kódu nemá v klientském počítači nainstalovanou odpovídající knihovnu DLL. Aby bylo možné tuto chybu opravit, musí tvůrce zásad aktualizovat knihovnu DLL ve *složce C:\Program Files\Microsoft Visual Studio 8 \ Team Tools\Static Analysis Tools\FxCop\Rules @ no__t-1* Directory na svém počítači.
+Tato chyba se vztahuje na projekty .NET. Pravidlo vyžadované zásadami analýzy kódu nemá v klientském počítači nainstalovanou odpovídající knihovnu DLL. Aby bylo možné tuto chybu opravit, musí tvůrce zásad aktualizovat knihovnu DLL ve *složce C:\Program Files\Microsoft Visual Studio 8 \ Team Tools\Static Analysis Tools\FxCop\Rules \\* Directory na svém počítači.
 
-**Nastavení pravidla @no__t projektu-1 nejsou v souladu se zásadami analýzy kódu.**
+**Nastavení pravidla {0} projektu nejsou v souladu se zásadami analýzy kódu.**
 
 Tato chyba se vztahuje na projekty .NET. Nastavení pravidel spravovaného kódu nejsou tak striktní, protože zásady vyžadují. Chcete-li tuto chybu opravit, musí být nastavení klienta stejné nebo přísnější než požadavek zásad na serveru.
 
 **Analýza kódu není povolena v aktivní konfiguraci. Před vrácením se změnami přepněte na konfigurační {0} a sestavte projekt {1}.**
 
-V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] má aktivní konfigurace povolenu analýzu kódu, ale je povolena alespoň jedna analýza kódu.
+V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] aktivní konfigurace nemá povolenu analýzu kódu, ale je povolená aspoň jedna analýza kódu.
 
-**Je nutné povolit analýzu kódu pro spravované binární soubory v projektu @no__t vlastnosti-1 a sestavení před vrácením se změnami.**
+**Je nutné povolit analýzu kódu pro spravované binární soubory v projektu {0} vlastností a sestavení před vrácením se změnami.**
 
-Tato chyba se vztahuje na aplikace .NET [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]. Tato zásada vyžaduje, aby byla provedena analýza spravovaného kódu, ale není povolena v aktuálním projektu na klientovi.
+Tato chyba se týká [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] aplikací .NET. Tato zásada vyžaduje, aby byla provedena analýza spravovaného kódu, ale není povolena v aktuálním projektu na klientovi.
 
-**Je nutné povolit analýzu kódu v projektu @no__t vlastnosti-1 a sestavení před vrácením se změnami.**
+**Před vrácením se změnami je nutné povolit analýzu kódu v projektu {0} vlastnosti a sestavení.**
 
-Tato chyba se aplikuje na projekty [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a webové projekty. Tato zásada vyžaduje, aby byla provedena analýza spravovaného kódu, ale není povolena v aktuálním projektu na klientovi.
+Tato chyba se aplikuje na [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projekty a webové projekty. Tato zásada vyžaduje, aby byla provedena analýza spravovaného kódu, ale není povolena v aktuálním projektu na klientovi.
 
 **Před vrácením se změnamiC++ je nutné povolit analýzu kódu v projektu {0} a sestavení.**
 

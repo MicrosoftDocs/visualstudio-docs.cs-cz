@@ -1,5 +1,5 @@
 ---
-title: 'CA2103: Zkontrolujte naléhavé zabezpečení | Dokumentace Microsoftu'
+title: 'CA2103: Kontrola imperativního zabezpečení | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - ReviewImperativeSecurity
 ms.assetid: d24fde71-bdf6-46c0-8965-9a73dc33c1aa
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5b8b3067d5c8ab8204d6ad723315c400e7b27552
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: b4abf0b15a4fbba1abc61572da8a2f6126c754f2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65694931"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652162"
 ---
-# <a name="ca2103-review-imperative-security"></a>CA2103: Zkontrolujte imperativní zabezpečení
+# <a name="ca2103-review-imperative-security"></a>CA2103: Zkontrolujte naléhavé zabezpečení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -32,19 +32,19 @@ ms.locfileid: "65694931"
 |Kategorie|Microsoft.Security|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
  Metoda používá imperativní zabezpečení a může vytvářet oprávnění pomocí stavové informace nebo návratové hodnoty, která se může změnit, pokud je žádost aktivní.
 
 ## <a name="rule-description"></a>Popis pravidla
- Imperativní zabezpečení používá k určení oprávnění a akce zabezpečení při provádění kódu, ve srovnání s deklarativní zabezpečení, která využívá atributy pro uložení oprávnění a akcí v metadatech spravovaných objektů. Imperativní zabezpečení je velmi flexibilní, protože můžete nastavit stav objektu oprávnění a výběr akce zabezpečení pomocí informace, které nejsou k dispozici až do spuštění. Spolu s, která se dodává flexibilitu riziko, že informace o modulu runtime, který používáte k určení, že stav oprávnění nezůstávat beze změny, dokud akce je v platnosti.
+ Imperativní zabezpečení používá spravované objekty k určení oprávnění a akcí zabezpečení během provádění kódu ve srovnání s deklarativním zabezpečením, které používá atributy k ukládání oprávnění a akcí v metadatech. Imperativní zabezpečení je velmi flexibilní, protože můžete nastavit stav objektu oprávnění a vybrat akce zabezpečení pomocí informací, které nejsou k dispozici, dokud nebudete mít čas spuštění. Společně s touto flexibilitou je riziko, že běhové informace, které použijete k určení stavu oprávnění, nezůstanou beze změny, dokud je tato akce platná.
 
- Používejte deklarativní zabezpečení vždy, když je to možné. Jsou Jednoduší na porozumění deklarativní požadavky.
+ Používejte deklarativní zabezpečení vždy, když je to možné. Deklarativní požadavky je snazší pochopit.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Zkontrolujte požadavky imperativní zabezpečení, abyste měli jistotu, že stav oprávnění nevyžaduje informace, které můžete změnit tak dlouho, dokud se používá oprávnění.
+ Zkontrolujte imperativní požadavky zabezpečení a ujistěte se, že stav oprávnění nezávisí na informacích, které se mohou měnit, pokud je použito oprávnění.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění tohoto pravidla, je-li oprávnění nevyžaduje se měnícími daty. Je však lepší změnit imperativní požadavek na ekvivalentní deklarativní.
+ Pokud se oprávnění nespoléhá na změnu dat, je bezpečné potlačit upozornění od tohoto pravidla. Je však lepší změnit imperativní požadavek na jeho deklarativní ekvivalent.
 
 ## <a name="see-also"></a>Viz také
- [Pokyny pro zabezpečené kódování](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177) [Data a modelování](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)
+ [Pokyny k zabezpečení kódování](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177) [a modelování dat](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)

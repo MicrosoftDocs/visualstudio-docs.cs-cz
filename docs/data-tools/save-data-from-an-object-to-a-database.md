@@ -10,71 +10,71 @@ helpviewer_keywords:
 - data access [Visual Studio], objects
 - saving data
 ms.assetid: efd6135a-40cf-4b0d-8f8b-41a5aaea7057
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b15776b67ded2fc813f1b8bcf82d8aa91f212346
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: 5208b7764949f6ba6d3e862c7a2102608afb7e24
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66715038"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648216"
 ---
 # <a name="save-data-from-an-object-to-a-database"></a>Uložení dat z objektu do databáze
 
-Předáním hodnoty z objektu do jednoho objektu TableAdapter dbdirect – metody můžete uložit data v objektech k databázi (například `TableAdapter.Insert`). Další informace najdete v tématu [TableAdapter](../data-tools/create-and-configure-tableadapters.md).
+Data v objektech můžete uložit do databáze předáním hodnot z objektu do jedné z TableAdapter metod DBDirect (například `TableAdapter.Insert`). Další informace najdete v tématu [TableAdapter](../data-tools/create-and-configure-tableadapters.md).
 
-K uložení dat z kolekce objektů, procházet kolekci objektů (například smyčku pro další) a odeslání hodnoty pro každý objekt do databáze pomocí jedné z objektu TableAdapter `DBDirect` metody.
+Chcete-li uložit data z kolekce objektů, smyčka kolekcí objektů (například smyčka for-Next) a odeslat hodnoty pro každý objekt do databáze pomocí jedné z `DBDirect` metod TableAdapter.
 
-Ve výchozím nastavení `DBDirect` metody jsou vytvořeny v objektu typu TableAdapter, který můžete spustit přímo proti databázi. Tyto metody lze volat přímo a nevyžadují <xref:System.Data.DataSet> nebo <xref:System.Data.DataTable> objekty sloučit změny k odeslání aktualizací do databáze.
+Ve výchozím nastavení jsou `DBDirect` metody vytvořeny na TableAdapter, které lze spustit přímo proti databázi. Tyto metody lze volat přímo a nevyžadují <xref:System.Data.DataSet> nebo <xref:System.Data.DataTable> objekty pro sjednocení změn, aby bylo možné odesílat aktualizace do databáze.
 
 > [!NOTE]
-> Při konfiguraci objektu typu TableAdapter, hlavního dotazu musí poskytnout dostatek informací, `DBDirect` metody, který se má vytvořit. Například pokud objektu TableAdapter je konfigurován pro dotazování na data z tabulky, která nemá sloupec primárního klíče definované, se nevygeneruje žádný `DBDirect` metody.
+> Při konfiguraci TableAdapter musí hlavní dotaz poskytnout dostatek informací, aby bylo možné vytvořit metody `DBDirect`. Pokud je například TableAdapter nakonfigurovaný na dotazování dat z tabulky, která nemá definovaný sloupec primárního klíče, negeneruje metody `DBDirect`.
 
-|TableAdapter dbdirect – metody|Popis|
+|TableAdapter DBDirect – metoda|Popis|
 | - |-----------------|
-|`TableAdapter.Insert`|Přidá nové záznamy do databáze a umožňuje vám a zajistěte tak předání hodnot jednotlivých sloupců jako parametry metod.|
-|`TableAdapter.Update`|Aktualizace existujících záznamů v databázi. `Update` Metoda má sloupec původní a nové hodnoty jako parametry metod. Původní hodnoty se používají pro vyhledání záznamu původní a nové hodnoty se používají k aktualizaci záznamu.<br /><br /> `TableAdapter.Update` Metoda slouží také k synchronizaci změn v datové sadě zpět do databáze pomocí <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, <xref:System.Data.DataRow>, nebo pole <xref:System.Data.DataRow>označují jako parametry metody.|
-|`TableAdapter.Delete`|Odstraní existující záznamy z databáze založené na původní hodnoty ve sloupcích předané jako parametry metod.|
+|`TableAdapter.Insert`|Přidá nové záznamy do databáze a umožňuje předat hodnoty jednotlivých sloupců jako parametry metody.|
+|`TableAdapter.Update`|Aktualizuje existující záznamy v databázi. Metoda `Update` přebírá původní a nové hodnoty sloupce jako parametry metody. Původní hodnoty se používají k vyhledání původního záznamu a k aktualizaci tohoto záznamu se použijí nové hodnoty.<br /><br /> Metoda `TableAdapter.Update` slouží také k sjednocení změn v datové sadě zpět do databáze tím, že převezmete <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, <xref:System.Data.DataRow> nebo pole <xref:System.Data.DataRow>s jako parametry metody.|
+|`TableAdapter.Delete`|Odstraní existující záznamy z databáze na základě původních hodnot sloupců předaných jako parametry metody.|
 
-## <a name="to-save-new-records-from-an-object-to-a-database"></a>Chcete-li uložit nové záznamy z objektu do databáze
+## <a name="to-save-new-records-from-an-object-to-a-database"></a>Uložení nových záznamů z objektu do databáze
 
-- Vytvořte záznamy předáním hodnoty tak, aby `TableAdapter.Insert` metody.
+- Vytvořte záznamy předáním hodnot do metody `TableAdapter.Insert`.
 
-     Následující příklad vytvoří nový záznam zákazníka v `Customers` předáním hodnoty v tabulce `currentCustomer` objektu `TableAdapter.Insert` metoda.
+     Následující příklad vytvoří nový záznam zákazníka v tabulce `Customers` tím, že předáte hodnoty v objektu `currentCustomer` do metody `TableAdapter.Insert`.
 
      [!code-csharp[VbRaddataSaving#23](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_1.cs)]
      [!code-vb[VbRaddataSaving#23](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_1.vb)]
 
-## <a name="to-update-existing-records-from-an-object-to-a-database"></a>Chcete-li aktualizovat existující záznamy z objektu do databáze
+## <a name="to-update-existing-records-from-an-object-to-a-database"></a>Aktualizace existujících záznamů z objektu na databázi
 
-- Upravit záznamy voláním `TableAdapter.Update` metody předáním v nových hodnotách aktualizovat záznam a předáním v původní hodnoty, které mají vyhledejte záznam.
+- Upravte záznamy tak, že zavoláte metodu `TableAdapter.Update`, předáte nové hodnoty k aktualizaci záznamu a předáte do nich původní hodnoty pro vyhledání záznamu.
 
     > [!NOTE]
-    > Objekt je potřeba udržovat původní hodnoty. Chcete-li předat jim `Update` metody. Tento příklad používá vlastnosti `orig` předpona, která uložit původní hodnoty.
+    > Váš objekt musí zachovat původní hodnoty, aby je bylo možné předat metodě `Update`. Tento příklad používá vlastnosti s předponou `orig` k uložení původních hodnot.
 
-     Následující příklad aktualizuje existující záznam v `Customers` předáním nových a původních hodnot v tabulce `Customer` objektu `TableAdapter.Update` metoda.
+     Následující příklad aktualizuje existující záznam v tabulce `Customers` tím, že předáte nové a původní hodnoty v objektu `Customer` do metody `TableAdapter.Update`.
 
      [!code-csharp[VbRaddataSaving#24](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_2.cs)]
      [!code-vb[VbRaddataSaving#24](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_2.vb)]
 
-## <a name="to-delete-existing-records-from-a-database"></a>Můžete z databáze odstranit existující záznamy
+## <a name="to-delete-existing-records-from-a-database"></a>Odstranění existujících záznamů z databáze
 
-- Odstranit záznamy voláním `TableAdapter.Delete` metoda a předáním původní hodnoty, které mají vyhledejte záznam.
+- Odstraňte záznamy voláním metody `TableAdapter.Delete` a předáním původních hodnot k vyhledání záznamu.
 
     > [!NOTE]
-    > Objekt je potřeba udržovat původní hodnoty. Chcete-li předat jim `Delete` metody. Tento příklad používá vlastnosti `orig` předpona, která uložit původní hodnoty.
+    > Váš objekt musí zachovat původní hodnoty, aby je bylo možné předat metodě `Delete`. Tento příklad používá vlastnosti s předponou `orig` k uložení původních hodnot.
 
-     Následující příklad odstraní záznam z `Customers` předáním původní hodnoty v tabulce `Customer` objektu `TableAdapter.Delete` metoda.
+     Následující příklad odstraní záznam z `Customers` tabulky předáním původních hodnot v objektu `Customer` do metody `TableAdapter.Delete`.
 
      [!code-csharp[VbRaddataSaving#25](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_3.cs)]
      [!code-vb[VbRaddataSaving#25](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_3.vb)]
 
-## <a name="net-security"></a>Zabezpečení rozhraní .net
+## <a name="net-security"></a>Zabezpečení .NET
 
-Musíte mít oprávnění k provádění vybraného `INSERT`, `UPDATE`, nebo `DELETE` na tabulku v databázi.
+Musíte mít oprávnění k provedení vybraných `INSERT`, `UPDATE` nebo `DELETE` v tabulce v databázi.
 
 ## <a name="see-also"></a>Viz také:
 

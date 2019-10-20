@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Vytvoření pracovní položky pro vadu spravovaného kódu | Dokumentace Microsoftu'
+title: 'Postupy: vytvoření pracovní položky pro vadu spravovaného kódu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - code analysis, creating work items
 ms.assetid: 46ddfd57-af4a-4c1d-bd00-8e6328f321f0
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ab8744e84e035501ba9bb8d531d982f4c17e206e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8a3e9277ca29a20d817b04bf06cde120c0f073d8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201384"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655138"
 ---
-# <a name="how-to-create-a-work-item-for-a-managed-code-defect"></a>Postupy: Vytvoření pracovní položky pro defekt spravovaného kódu
+# <a name="how-to-create-a-work-item-for-a-managed-code-defect"></a>Postupy: Vytvoření pracovní položky pro vadu spravovaného kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete použít pracovní položky funkce na pracovní položky protokolu v rámci sledování [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]. Pokud chcete používat tuto funkci, váš projekt musí být součástí týmového projektu v [!INCLUDE[esprfound](../includes/esprfound-md.md)].  
-  
-### <a name="to-create-a-work-item-for-managed-code-defect"></a>Chcete-li vytvořit pracovní položku pro vadu spravovaného kódu  
-  
-1. V **analýzy kódu** okna, vyberte upozornění.  
-  
-2. Zvolte **akce**, klikněte na tlačítko **vytvořit pracovní položku** a vyberte typ vytvářené pracovní položky.  
-  
-     Můžete zadat informace o závadách je vytvořena nová pracovní položka.  
-  
-### <a name="to-create-a-work-item-for-multiple-managed-code-defects"></a>Chcete-li vytvořit pracovní položku pro více defektů spravovaného kódu  
-  
-1. V **seznam chyb**vyberte několik upozornění a potom klikněte pravým tlačítkem na upozornění.  
-  
-2. Přejděte na **vytvořit pracovní položku** a klikněte na typ pracovní položky k vytvoření.  
-  
-     Pracovní položka je vytvořena pro všechny vybrané upozornění můžete zadat informace o chybách.
+Funkci sledování pracovní položky můžete použít k zaznamenání pracovní položky z aplikace [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]. Chcete-li použít tuto funkci, projekt musí být součástí týmového projektu v [!INCLUDE[esprfound](../includes/esprfound-md.md)].
+
+### <a name="to-create-a-work-item-for-managed-code-defect"></a>Vytvoření pracovní položky pro vadu spravovaného kódu
+
+1. V okně **Analýza kódu** vyberte upozornění.
+
+2. Zvolte **Akce**, pak zvolte **vytvořit pracovní položku** a zvolte typ pracovní položky, který chcete vytvořit.
+
+     Vytvoří se nová pracovní položka, která vám umožní určit informace o defektu.
+
+### <a name="to-create-a-work-item-for-multiple-managed-code-defects"></a>Vytvoření pracovní položky pro více vad spravovaného kódu
+
+1. V **Seznam chyb**vyberte více upozornění a pak klikněte pravým tlačítkem na upozornění.
+
+2. Přejděte na **vytvořit pracovní položku** a klikněte na typ pracovní položky, kterou chcete vytvořit.
+
+     Pro všechna vybraná upozornění pro zadání informací o chybě je vytvořena jedna pracovní položka.

@@ -1,32 +1,32 @@
 ---
-title: Vodopádové nastavení | Nástroj pro testování Microsoft IntelliTest Developer
+title: Nastavení vodopádu | Nástroj Microsoft IntelliTest Developer test Tool
 ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Settings waterfall
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 966182ca79ffd06e17642e1b24d6e48b8e637efe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+author: jillre
+ms.openlocfilehash: ad5f03d7722fa2fb8452b6a1217c18996d6c978f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939128"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653158"
 ---
 # <a name="settings-waterfall"></a>Vodopádové nastavení
 
-Koncept vodopádové nastavení znamená, že uživatel může zadat nastavení na **sestavení**, **testovacího přípravku**, a **zkoumání** úroveň:
+Koncept nastavení vodopádu znamená, že uživatel může zadat nastavení na úrovni **sestavení**, **přípravné**a **průzkumu** :
 
-* Sestavení - [PexAssemblySettings](attribute-glossary.md#pexassemblysettings)
-* Testovací přípravek - [PexClass](attribute-glossary.md#pexclass)
-* Zkoumání - [PexExplorationAttributeBase](attribute-glossary.md#pexexplorationattributebase)
+* Sestavení – [PexAssemblySettings](attribute-glossary.md#pexassemblysettings)
+* Přípravné – [PexClass](attribute-glossary.md#pexclass)
+* Průzkum – [PexExplorationAttributeBase](attribute-glossary.md#pexexplorationattributebase)
 
-Zadaný v nastavení **sestavení** úroveň ovlivňují všechny komunikací a zkoumání v rámci tohoto sestavení. Zadaný v nastavení **testovacího přípravku** úroveň ovlivňují všechny průzkumů v rámci této testovací přípravek. Nastavení win podřízené&mdash;Pokud nastavení je definován na **sestavení** a **testovacího přípravku** úrovně, **testovacího přípravku** nastavení jsou použita.
+Nastavení zadaná na úrovni **sestavení** ovlivňují všechny přípravné a průzkumy pod tímto sestavením. Nastavení zadaná na úrovni **Přípravosti** má vliv na všechny průzkumy v rámci tohoto přípravku. @No__t_0if, které se nastavují podřízená nastavení, se definuje v **sestavení** a na úrovních **přípravku** se použijí nastavení **přípravku** .
 
-Všimněte si, že některá nastavení jsou specifická pro **sestavení** úroveň nebo **testovacího přípravku** úroveň.
+Všimněte si, že některá nastavení jsou specifická pro úroveň **sestavení** nebo na úrovni **přípravku** .
 
 **Příklad**
 
@@ -46,6 +46,6 @@ namespace MyTests
 }
 ```
 
-## <a name="got-feedback"></a>Máte nějakou zpětnou vazbu?
+## <a name="got-feedback"></a>Máte zpětnou vazbu?
 
-Publikovat své nápady a funkce na požadavky [komunity vývojářů](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
+Publikujte své nápady a žádosti o funkce na [komunitě vývojářů](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).

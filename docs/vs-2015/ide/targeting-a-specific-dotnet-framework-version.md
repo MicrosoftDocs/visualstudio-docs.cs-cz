@@ -1,5 +1,5 @@
 ---
-title: Cílení na konkrétní rozhraní .NET Framework verze | Dokumentace Microsoftu
+title: Cílí na konkrétní verzi .NET Framework | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,39 +11,33 @@ helpviewer_keywords:
 - projects [Visual Studio], multi-targeting
 ms.assetid: 91e77ad4-4da3-419d-85fb-9036f0e5c330
 caps.latest.revision: 29
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a11658e8cfe96da9c56b7cc1a63839510ed3c829
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 5d3094e55cf791b60e4a2c163cdd7586ada467c2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65679143"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646781"
 ---
 # <a name="targeting-a-specific-net-framework-version"></a>Cílení na konkrétní verzi rozhraní .NET Framework
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V sadě Visual Studio můžete zadat verzi nebo profil, který chcete svůj projekt cílit na rozhraní .NET Framework. Pro spuštění v jiném počítači, který musí být aplikace cílena kompatibilní s verzí rozhraní Framework, který je nainstalován v počítači verzi rozhraní Framework aplikace.  
-  
- Tento oddíl obsahuje témata, která popisují, jak cílit na konkrétní verzi [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] ve vašich projektech.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Přehled cílení na více verzí sady Visual Studio](../ide/visual-studio-multi-targeting-overview.md)  
- Poskytuje přehled možností cílení na více funkcí v sadě Visual Studio.  
-  
- [Postupy: Cílení na verzi rozhraní .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md)  
- Podrobně popisuje, jak určit konkrétní [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] v jazyce Visual Basic, Visual C# nebo vizuální F# projektu.  
-  
-## <a name="related-sections"></a>Související oddíly  
- [Rozhraní .NET framework Multi-Targeting pro webové projekty ASP.NET](https://msdn.microsoft.com/library/8b8145a9-62f6-4fc4-8a83-47b0487cbe76)  
- Vysvětluje způsob používání této verze sady Visual Studio pro vývoj webových aplikací, které běží ve starších verzích rozhraní .NET Framework.  
-  
- [Stránka Aplikace, Návrhář projektu (C#)](../ide/reference/application-page-project-designer-csharp.md)  
- Popisuje **Cílová architektura** ovládací prvek v Návrháři projektu pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] projekty.  
-  
- [Stránka Aplikace, Návrhář projektu (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)  
- Popisuje **Cílová architektura** ovládací prvek v Návrháři projektu pro [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] projekty.  
-  
- [Postupy: Změna cílové architektury a sady nástrojů](https://msdn.microsoft.com/library/031b1d54-e6e1-4da7-9868-3e75a87d9ffe)  
- Popisuje, jak změnit nastavení pro projekty Visual C++ pro cílení na různé verze rozhraní .NET Framework a jiné sady nástrojů platformy.
+V aplikaci Visual Studio můžete určit verzi nebo profil .NET Framework, na které chcete projekt cílit. Aby aplikace mohla běžet na jiném počítači, verze rozhraní, na kterou aplikace cílí, musí být kompatibilní s verzí rozhraní, která je v počítači nainstalovaná.
+
+ Tato část obsahuje témata, které popisují, jak cílit na konkrétní verze [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] v projektech.
+
+## <a name="in-this-section"></a>V tomto oddílu
+ [Visual Studio – Přehled cílení na více](../ide/visual-studio-multi-targeting-overview.md) platforem Poskytuje přehled funkcí cílení na více verzí v aplikaci Visual Studio.
+
+ [Postupy: cílení na verzi .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md) Popisuje, jak zadat konkrétní [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] pro váš Visual Basic, vizuál C# nebo Visual F# projekt.
+
+## <a name="related-sections"></a>Související oddíly
+ [.NET Framework cílení na více platforem pro webové projekty ASP.NET](https://msdn.microsoft.com/library/8b8145a9-62f6-4fc4-8a83-47b0487cbe76) Vysvětluje, jak používat tuto verzi sady Visual Studio pro vývoj webových aplikací, které běží v dřívějších verzích .NET Framework.
+
+ [Stránka aplikace, Návrhář projektu (C#)](../ide/reference/application-page-project-designer-csharp.md) popisuje cílový ovládací prvek **rozhraní .NET** Designer v Návrháři projektu pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] projekty.
+
+ [Stránka aplikace, Návrhář projektu (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md) Popisuje cílový ovládací prvek **rozhraní .NET Framework** v Návrháři projektu pro [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] projekty.
+
+ [Postupy: Změna cílové architektury a sady nástrojů platformy](https://msdn.microsoft.com/library/031b1d54-e6e1-4da7-9868-3e75a87d9ffe) Popisuje, jak změnit nastavení pro vizuální C++ projekty pro cílení na různé verze .NET Framework a používání různých sad nástrojů platformy.

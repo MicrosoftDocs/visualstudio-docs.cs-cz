@@ -1,45 +1,45 @@
 ---
-title: Návrhář postupu provádění - ClearCollection<T> návrháře aktivit
+title: Návrhář postupu provádění-Clear – Návrhář <T> aktivity
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.ClearCollection`1.UI
 ms.assetid: db0e5da2-7b5a-4f1a-864c-f3aeeeeb51a7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cab7ea023524da7e28e2baa2d4e5018cd091c60d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a4808c046c4da23bc5c95d3978965afd938962f5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949991"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650692"
 ---
-# <a name="clearcollectiont-activity-designer"></a>ClearCollection\<T > návrháře aktivit
+# <a name="clearcollectiont-activity-designer"></a>Vymazatcollection \<T > návrháře aktivit
 
-**ClearCollection\<T >** Návrhář aktivity se používá k vytvoření a konfigurace <xref:System.Activities.Statements.ClearCollection%601> aktivity.
+Návrhář aktivity **clearcollection \<T >** slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.ClearCollection%601>.
 
-## <a name="the-clearcollectiont-activity"></a>ClearCollection\<T > aktivity
+## <a name="the-clearcollectiont-activity"></a>Aktivita ClearCollection \<T >
 
-<xref:System.Activities.Statements.ClearCollection%601> Aktivity vymaže kolekce všech položek.
+Aktivita <xref:System.Activities.Statements.ClearCollection%601> vymaže zadanou kolekci všech položek.
 
-### <a name="using-the-clearcollectiont-activity-designer"></a>Použití ClearCollection\<T > návrháře aktivit
+### <a name="using-the-clearcollectiont-activity-designer"></a>Použití návrháře \<T > aktivity ClearCollection
 
-**ClearCollection\<T >** návrháře aktivit najdete v **kolekce** kategorii **nástrojů**, který přistupuje po kliknutí  **Panel nástrojů** kartu návrháře postupu provádění. Můžete také vybrat **nástrojů** z **zobrazení** nabídky nebo stisknutím klávesy **Ctrl**+**Alt** + **X**.
+Návrhář aktivity **clearcollection \<T >** lze najít v kategorii **kolekce** sady **nástrojů**, ke které se dostanete kliknutím na kartu **panelu nástrojů** Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** +**ALT** +**X**.
 
-**ClearCollection\<T >** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřadit na povrch návrháře postupu provádění bez ohledu na to aktivity jsou umístěny, například jako v <xref:System.Activities.Statements.Sequence>. Vyřazení Návrhář aktivity vytvoří <xref:System.Activities.Statements.ClearCollection%601> aktivity s výchozím <xref:System.Activities.Activity.DisplayName%2A> z ClearCollection < Int32\>. (Ve výchozím nastavení, *TypeArgument* je **Int32**. TypeArgument lze změnit v mřížce vlastností.) <xref:System.Activities.Activity.DisplayName%2A> Hodnota se dá upravit v záhlaví **ClearCollection < T\>**  Návrhář aktivity nebo **DisplayName** pole mřížku vlastností. V mřížce vlastností musí upravit další vlastnosti.
+Návrhář aktivity **clearcollection \<T >** lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu všude, kde jsou umístěny aktivity, například uvnitř <xref:System.Activities.Statements.Sequence>. Vyřazení návrháře aktivit vytvoří aktivitu <xref:System.Activities.Statements.ClearCollection%601> s výchozí <xref:System.Activities.Activity.DisplayName%2A>ou ClearCollection < Int32 \>. (Ve výchozím nastavení je *pro TypeArgument* typu **Int32**. Pro TypeArgument lze změnit v mřížce vlastností.) Hodnotu <xref:System.Activities.Activity.DisplayName%2A> lze upravit v hlavičce návrháře aktivity **clearcollection < t \>** nebo v poli **DisplayName** v mřížce vlastností. Ostatní vlastnosti je nutné upravit v mřížce vlastností.
 
-### <a name="the-clearcollectiont-properties"></a>ClearCollection\<T > Vlastnosti
+### <a name="the-clearcollectiont-properties"></a>Vlastnosti ClearCollection \<T >
 
-Následující tabulka ukazuje <xref:System.Activities.Statements.ClearCollection%601> vlastnosti a popisuje, jak se používají v návrháři.
+V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.ClearCollection%601> a popisuje, jak se používají v návrháři.
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje volitelný popisný název <xref:System.Activities.Statements.ClearCollection%601> aktivity. Výchozí hodnota je ClearCollection < Int32\>. I když <xref:System.Activities.Activity.DisplayName%2A> hodnota není bezpodmínečně nutné, je osvědčeným postupem je použití jednoho.|
-|<xref:System.Activities.Statements.ClearCollection%601.Collection%2A>|Pravda|Určuje kolekci, která vymažou položek. Tato kolekce je typu **rozhraní ICollection\<TypeArgument >.** Chcete-li určit kolekci, zadejte výraz jazyka Visual Basic v mřížce vlastností.|
-|*TypeArgument*|Pravda|Určuje typ položky obsažené v T <xref:System.Collections.Generic.ICollection%601>. Ve výchozím nastavení to *TypeArgument* je typ nastaven na **Int32**. Chcete-li změnit typ, změňte hodnotu *TypeArgument* v poli se seznamem v mřížce vlastností.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje nepovinný popisný název aktivity <xref:System.Activities.Statements.ClearCollection%601>. Výchozí hodnota je ClearCollection < Int32 \>. I když hodnota <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutná, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.ClearCollection%601.Collection%2A>|Podmínka|Určuje kolekci, do které mají být položky vymazány. Tato kolekce je typu **ICollection \<TypeArgument >.** Chcete-li zadat kolekci, zadejte výraz Visual Basic v mřížce vlastností.|
+|*Pro TypeArgument*|Podmínka|Určuje typ T položek obsažených v <xref:System.Collections.Generic.ICollection%601>. Ve výchozím nastavení je tento typ *pro TypeArgument* nastaven na hodnotu **Int32**. Chcete-li změnit typ, změňte hodnotu *pro TypeArgument* v poli se seznamem v mřížce vlastností.|
 
 ## <a name="see-also"></a>Viz také:
 

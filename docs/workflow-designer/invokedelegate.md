@@ -1,44 +1,44 @@
 ---
-title: Návrhář postupu provádění - InvokeDelegate
+title: Návrhář postupu provádění – InvokeDelegate
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - InvokeDelegate Designer
 - System.Activities.Statements.InvokeDelegate.UI
 ms.assetid: 289a7498-5127-453f-beb5-05f05b80d26f
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 511d73ea2992887f31bc8750cc9ba32934bddd91
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+author: jillre
+ms.openlocfilehash: 5227d96e3fad03dd3e3309523a6d2c68a1abdc11
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62537085"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650184"
 ---
 # <a name="invokedelegate"></a>InvokeDelegate
 
-**InvokeDelegate** Návrhář slouží k vytvoření a konfigurace <xref:System.Activities.Statements.InvokeDelegate> aktivity.
+Návrhář **InvokeDelegate** slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.InvokeDelegate>.
 
 ## <a name="the-invokedelegate-activity"></a>Aktivita InvokeDelegate
 
-<xref:System.Activities.Statements.InvokeDelegate> Volá veřejný delegát.
+@No__t_0 volá veřejný delegát.
 
-### <a name="use-the-invokedelegate-activity-designer"></a>Použití návrháře aktivit InvokeDelegate
+### <a name="use-the-invokedelegate-activity-designer"></a>Použití návrháře aktivity InvokeDelegate
 
-Přístup **InvokeDelegate** návrháře aktivit v **primitiv** kategorii **nástrojů**. **InvokeDelegate** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřadit na povrch návrháře postupu provádění, pokud už aktivity jsou obvykle umístěny, například jako uvnitř <xref:System.Activities.Statements.Sequence>. Vyřazení Návrhář aktivity vytvoří <xref:System.Activities.Statements.InvokeDelegate> aktivity s výchozím <xref:System.Activities.Activity.DisplayName%2A> z InvokeDelegate. <xref:System.Activities.Activity.DisplayName%2A> Můžete upravovat v záhlaví **InvokeDelegate** Návrhář aktivity nebo v **DisplayName** pole mřížku vlastností.
+Přístup k Návrháři aktivity **InvokeDelegate** v kategorii **primitivních** prvků sady **nástrojů** Návrhář aktivity **InvokeDelegate** lze přetáhnout ze **sady nástrojů** a přetáhnout na Návrhář postupu provádění plochu, kde jsou obvykle umístěny aktivity, například uvnitř <xref:System.Activities.Statements.Sequence>. Vyřazení návrháře aktivit vytvoří aktivitu <xref:System.Activities.Statements.InvokeDelegate> s výchozím <xref:System.Activities.Activity.DisplayName%2A> InvokeDelegate. @No__t_0 lze upravit v hlavičce návrháře aktivity **InvokeDelegate** nebo v poli **DisplayName** v mřížce vlastností.
 
 ### <a name="the-invokedelegate-properties"></a>Vlastnosti InvokeDelegate
 
-Následující tabulka ukazuje <xref:System.Activities.Statements.InvokeDelegate> vlastnosti a popisuje, jak se používají v návrháři. Tyto vlastnosti můžete upravit v mřížce vlastností a můžete upravit některé na plochu návrháře postupu provádění.
+V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.InvokeDelegate> a popisuje, jak se používají v návrháři. Tyto vlastnosti lze upravovat v mřížce vlastností a některé lze upravovat na Návrhář postupu provádění ploše.
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Popisný název <xref:System.Activities.Statements.InvokeDelegate> aktivity. Výchozí hodnota je InvokeDelegate.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutné, doporučujeme použít jednu.|
-|<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|Pravda|Název <xref:System.Activities.ActivityDelegate> se volá, když tato aktivity spustí. Tuto vlastnost lze na návrhové ploše upravovat a je povinný.|
-|<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|Argument kolekce volaný delegát. Klíče jsou názvy objektů parametr na <xref:System.Activities.ActivityDelegate>, a hodnoty jsou argumenty, jejíž výrazy jsou vyhodnoceny a přiřadili odpovídající parametr objekty. Chcete-li zobrazit **DelegateArguments** dialogové okno, kde můžete nastavit tuto vlastnost, klikněte na tlačítko se třemi tečkami v **DelegateArguments** pole mřížku vlastností. Klikněte na tlačítko **vytvořit Argument** pole, které chcete přidat argumenty.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Popisný název aktivity <xref:System.Activities.Statements.InvokeDelegate>. Výchozí hodnota je InvokeDelegate.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je vhodné použít jeden.|
+|<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|Podmínka|Název <xref:System.Activities.ActivityDelegate>, který se má volat, když se aktivita spustí Tato vlastnost se dá upravovat na návrhové ploše a je povinná.|
+|<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|Kolekce argumentů volaného delegáta. Klíče jsou názvy objektů parametrů na <xref:System.Activities.ActivityDelegate> a hodnoty jsou argumenty, jejichž výrazy jsou vyhodnocovány a přiřazeny odpovídajícím objektům parametrů. Chcete-li zobrazit dialogové okno **DelegateArguments** , kde můžete nastavit tuto vlastnost, klikněte na tlačítko se třemi tečkami v poli **DelegateArguments** v mřížce vlastností. Klikněte na pole **vytvořit argument** a přidejte argumenty.|
 
 ## <a name="see-also"></a>Viz také:
 

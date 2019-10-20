@@ -4,21 +4,21 @@ titleSuffix: ''
 ms.date: 08/05/2019
 ms.topic: conceptual
 ms.assetid: 288e2415-9fcf-408e-bc35-9848315e14fd
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 88e03307f9f72d50fb77818ffaf632debbd830f6
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 50e378591330807bdddcc10277032aa82c914863
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451141"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650945"
 ---
 # <a name="design-xaml-in-visual-studio-and-blend-for-visual-studio"></a>Návrh XAML v aplikaci Visual Studio a Blend pro Visual Studio
 
 Visual Studio a Blend pro Visual Studio poskytují i vizuální nástroje pro vytváření poutavých uživatelských rozhraní a bohatých mediálních prostředí pomocí XAML pro nejrůznější typy aplikací. Jak integrované vývojové prostředí (IDE) sdílí společnou sadu funkcí, včetně editoru Visual XAML (Designer). Blend pro Visual Studio, který podporuje platformy WPF a UWP, poskytuje další nástroje pro návrh vizuálních stavů a vytváření animací.
 
-Můžete přepínat mezi Visual Studio a Blend pro Visual Studio a můžete dokonce i mít stejný projekt otevřený v obou prostředích ve stejnou dobu. Změny uložené do souborů XAML v jednom rozhraní IDE lze použít prostřednictvím automatického opětovného načtení při přepnutí na jiné integrované vývojové prostředí (IDE). Způsob opětovného načtení můžete řídit tak, že přejdete na **nástroje**@no__t**možnosti**-1  > **prostředí** > **dokumentů** v obou IDE.
+Můžete přepínat mezi Visual Studio a Blend pro Visual Studio a můžete dokonce i mít stejný projekt otevřený v obou prostředích ve stejnou dobu. Změny uložené do souborů XAML v jednom rozhraní IDE lze použít prostřednictvím automatického opětovného načtení při přepnutí na jiné integrované vývojové prostředí (IDE). Způsob opětovného načtení můžete řídit tak, že přejdete na **nástroje**  > **možnosti**  > **prostředí**  > **dokumenty** v obou IDE.
 
 ## <a name="installation"></a>Instalace
 
@@ -34,7 +34,7 @@ Pro většinu základních úloh vývoje aplikace Visual Studio a Blend pro Visu
 
 - **Ladění:** Můžete ladit v [aplikaci Visual Studio](../debugger/inspect-xaml-properties-while-debugging.md) a [Blend pro Visual Studio](../xaml-tools/debug-xaml-in-blend.md), včetně nastavení zarážek v kódu pro ladění spuštěné aplikace a pomocí [horkého opětovného načtení](../xaml-tools/xaml-hot-reload.md) ke změně kódu XAML v době, kdy aplikace běží. Aby bylo možné zachovat konzistentní prostředí ladění pomocí sady Visual Studio, Blend pro Visual Studio zahrnuje většinu ladění oken a panelů nástrojů sady Visual Studio.
 
-- **Opětovné načtení souboru:** Soubory XAML můžete upravovat buď v aplikaci Visual Studio, nebo v Blend pro Visual Studio. Upravené soubory, které byly uloženy, se automaticky znovu načítají při přepínání mezi prostředím IDEs. Způsob opětovného načtení můžete řídit tak, že přejdete na **nástroje**@no__t**možnosti**-1  > **prostředí** > **dokumentů** v obou IDE.
+- **Opětovné načtení souboru:** Soubory XAML můžete upravovat buď v aplikaci Visual Studio, nebo v Blend pro Visual Studio. Upravené soubory, které byly uloženy, se automaticky znovu načítají při přepínání mezi prostředím IDEs. Způsob opětovného načtení můžete řídit tak, že přejdete na **nástroje**  > **možnosti**  > **prostředí**  > **dokumenty** v obou IDE.
 
 - **Synchronizovaná rozložení a nastavení:** Přizpůsobené rozložení a nastavení oken nástrojů pro Visual Studio nebo Blend pro Visual Studio se synchronizují napříč vašimi zařízeními a verzemi, když se přihlásíte pomocí stejného účtu přizpůsobení. Viz [synchronizace nastavení napříč více počítači](../ide/synchronized-settings-in-visual-studio.md).
 

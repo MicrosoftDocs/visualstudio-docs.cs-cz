@@ -4,68 +4,68 @@ ms.date: 04/17/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - configure test agents, test lab
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c6597c47fd272beec2c82f7d4c2644291b168b5f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: edb10246437bff9bef0a6f76ffde95bc12855944
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62965412"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653082"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>Instalace testovacích agentů a kontrolerů testů
 
-Pro testovací scénáře, které používají Visual Studio a Azure testovací plány nebo Team Foundation Server (TFS) nemusíte testovacího kontroléru. Agents pro Visual Studio zpracování Orchestrace tím, že komunikuje s Azure testovací plány nebo sady TFS. Scénář může být spuštění průběžné testů pro sestavení a vydání pracovních postupů v Azure testovací plány nebo sady TFS.
+Pro testovací scénáře, které používají sadu Visual Studio a Azure Test Plans nebo Team Foundation Server (TFS), nepotřebujete kontroler testů. Agenti pro orchestraci obslužných rutin sady Visual Studio komunikují s Azure Test Plans nebo TFS. Scénář může být spuštěn průběžné testy pro pracovní postupy sestavení a vydání v Azure Test Plans nebo TFS.
 
-Můžete taky zvážit, pokud je vhodnější použít [sestavení nebo Správa vydaných verzí](use-build-or-rm-instead-of-lab-management.md) namísto správy testovacího prostředí.
+Můžete také zvážit, jestli je vhodnější místo správy testovacího prostředí používat [správu sestavení nebo vydání](use-build-or-rm-instead-of-lab-management.md) .
 
 ## <a name="system-requirements"></a>Požadavky na systém
 
-V následující tabulce jsou uvedeny požadavky na systém pro instalaci testovací agent nebo testovací kontrolér pro sadu Visual Studio:
+V následující tabulce jsou uvedeny požadavky na systém pro instalaci testovacího agenta nebo kontroleru testů pro Visual Studio:
 
-| Položka | Požadavky |
+| Položkami | Požadavky |
 | ---- | ------------ |
-| **Agent** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard a Datacenter<br />Windows Server 2012 R2 |
-| **Controller** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard a Datacenter<br />Windows Server 2012 R2 |
+| **Agenta** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard a Datacenter<br />Windows Server 2012 R2 |
+| **Kontrolér** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard a Datacenter<br />Windows Server 2012 R2 |
 | **.NET Framework** | .NET Framework 4.5 |
 
-## <a name="install-the-test-controller-and-test-agents"></a>Nainstalujte testovací kontrolér a testovací agenty
+## <a name="install-the-test-controller-and-test-agents"></a>Instalace testovacího kontroléru a testovacích agentů
 
-Můžete si stáhnout agenty pro Visual Studio z [visualstudio.microsoft.com](https://visualstudio.microsoft.com/downloads/?q=agents). Vyhledejte *Agents for Visual Studio 2019*, vyberte buď *agenta* nebo *řadič*a klikněte na tlačítko *Stáhnout*. Spouštění staženého spustitelného souboru k instalaci testovacího agenta nebo kontroler.
+Agenty pro Visual Studio si můžete stáhnout z [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/downloads/?q=agents). Vyhledejte *agenty sady Visual Studio 2019*, vyberte buď možnost *Agent* , nebo *kontrolér*a pak zvolte možnost *Stáhnout*. Spusťte stažený spustitelný soubor pro instalaci testovacího agenta nebo kontroleru.
 
-Agenty si můžete stáhnout pro Visual Studio 2017, Visual Studio 2015 a Visual Studio 2013 z [starší soubory ke stažení](https://visualstudio.microsoft.com/vs/older-downloads/) stránky.
+Agenty pro Visual Studio 2017, Visual Studio 2015 a Visual Studio 2013 můžete stáhnout ze stránky [starší verze ke stažení](https://visualstudio.microsoft.com/vs/older-downloads/) .
 
-Tyto instalační programy jsou dostupné jako soubory ISO pro snadnou instalaci na virtuálních počítačích.
+Tyto instalační programy jsou k dispozici jako soubory ISO pro jednoduchou instalaci na virtuálních počítačích.
 
-## <a name="compatible-versions-of-tfs-microsoft-test-manager-the-test-controller-and-test-agent"></a>Kompatibilní verze serveru TFS, Microsoft Test Manager, testovacího kontroléru a testovacího agenta
+## <a name="compatible-versions-of-tfs-microsoft-test-manager-the-test-controller-and-test-agent"></a>Kompatibilní verze serveru TFS, Microsoft Test Manager, testovací kontrolér a testovací agent
 
-Podle následující tabulky můžete kombinovat různé verze TFS, Microsoft Test Manager, testovacího kontroléru a testovacího agenta:
+Můžete kombinovat různé verze serveru TFS, Microsoft Test Manager, testovací kontrolér a testovacího agenta, a to v závislosti na následující tabulce:
 
-| TFS | Nástroje Microsoft Test Manager pomocí centra testovacích prostředí | Kontroler | Agent |
+| TFS | Microsoft Test Manager s centrem testovacího prostředí | Kontrolér | Agenta |
 | --- | -------------------------------------- | ---------- | ----- |
-| 2017: upgrade z 2015 nebo s novou instalací | 2017 | 2017 | 2017 |
-| 2017: upgrade z 2015 nebo s novou instalací | 2017 | 2013 update 5 | 2013 update 5 |
-| 2017: upgrade z 2015 nebo s novou instalací | 2015 | 2013 update 5 | 2013 update 5 |
+| 2017: Upgradujte z 2015 nebo nové instalace | 2017 | 2017 | 2017 |
+| 2017: Upgradujte z 2015 nebo nové instalace | 2017 | 2013 aktualizace 5 | 2013 aktualizace 5 |
+| 2017: Upgradujte z 2015 nebo nové instalace | 2015 | 2013 aktualizace 5 | 2013 aktualizace 5 |
 | 2015: upgrade z 2013 | 2013 | 2013 |2013 |
-| 2015: nové instalace | 2013 | 2013 | 2013 |
-| 2015: upgrade z 2013 nebo s novou instalací | 2015 | 2013 | 2013 |
+| 2015: nová instalace | 2013 | 2013 | 2013 |
+| 2015: Upgradujte z 2013 nebo nové instalace | 2015 | 2013 | 2013 |
 | 2013 | 2015 | 2013 | 2013 |
 
 > [!NOTE]
-> Scénáře správy testovacího prostředí v TFS 2018 a DevOps služby Azure jsou zastaralé. Další informace najdete v části [poznámky k verzi TFS 2018](/visualstudio/releasenotes/tfs2018-relnotes#--removing-support-for-lab-center-and-automated-testing-flows-in-microsoft-test-manager).
+> Scénáře správy testovacího prostředí v TFS 2018 a Azure DevOps Services jsou zastaralé. Další informace najdete v [poznámkách k verzi TFS 2018](/visualstudio/releasenotes/tfs2018-relnotes#--removing-support-for-lab-center-and-automated-testing-flows-in-microsoft-test-manager).
 
 ## <a name="upgrade-from-visual-studio-2013-test-agents"></a>Upgrade z Visual Studio 2013 testovacích agentů
 
-Doporučujeme použít produkt agents for Visual Studio ve všech nových scénářích automatizované testování. Můžete použít *nasadit testovací agenti* úlohy v kanálu ke stažení a instalaci testovacích agentů v počítači sestavení.
+Doporučujeme použít agenty pro Visual Studio ve všech nových scénářích automatizovaného testování. Můžete použít úlohu *nasadit testovací agenty* v kanálu sestavení ke stažení a instalaci testovacích agentů na vašem počítači.
 
-Následující tabulka uvádí scénáře podporované agenty pro Visual Studio 2013 a alternativ pro Team Foundation Server (TFS) 2015 a Azure testovacích plánů:
+V následující tabulce jsou uvedeny scénáře podporované agenty pro Visual Studio 2013 a alternativy pro Team Foundation Server (TFS) 2015 a Azure Test Plans:
 
-| Agents for Visual Studio 2013 podporuje scénáře | Alternativní v TFS a plány testování v Azure |
+| Scénáře podporované agenty pro Visual Studio 2013 | Alternativa v TFS a Azure Test Plans |
 | - | - |
-| Pracovní postup sestavení-nasazení-testování v sadě Visual Studio | Uživatelé můžou použít [kanálu pro sestavování](/azure/devops/pipelines/index?view=vsts) (ne sestavení XAML) pro sestavení, nasazení a testování scénářů v sadě TFS. |
-| Zátěžové testování (testování výkonu) pomocí místní vzdálené počítače | Použít testovací Kontrolér a testovací agenty 2013 Update 5 spustit zátěžové testy místně. |
-| Vzdálené spuštění automatizovaných testů z nástroje Microsoft Test Manager pomocí testovacího prostředí | Aktuálně neexistuje žádná alternativa pro tento scénář. Doporučujeme, abyste pomocí úlohy pro spuštění funkčních testů v buildu a definice verzí (ne v sestavení XAML) Chcete-li vzdáleně spustit testy. |
-| Vývojáři provádění vzdáleného testů v sadě Visual Studio | Již nejsou podporovány. |
+| Pracovní postup sestavení-nasazení-testování v aplikaci Visual Studio | Uživatelé můžou použít [kanál sestavení](/azure/devops/pipelines/index?view=vsts) (ne sestavení XAML) pro scénáře sestavení, nasazení a testování v TFS. |
+| Zátěžové testování (testování výkonu) pomocí místních vzdálených počítačů | Pomocí Test Controller a test Agents 2013 Update 5 spusťte testy zatížení místně. |
+| Vzdálené spuštění automatizovaných testů z Microsoft Test Manager pomocí testovacího prostředí | V současné době není k dispozici žádná alternativa pro tento scénář. K provedení testů vzdáleně doporučujeme použít úlohu spustit funkční testy v definicích sestavení a vydání (nikoli v sestavení XAML). |
+| Vývojáři spouštějící vzdálené testy v aplikaci Visual Studio | Již není podporováno. |

@@ -1,43 +1,43 @@
 ---
-title: 'Postupy: Určení ikony aplikace (Visual Basic, C#)'
+title: 'Postupy: určení ikony aplikace (Visual Basic, C#)'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - icons [Visual Studio], application
 - application properties [Visual Studio], icons
 - application icons [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f2903821c0e0843de43f68d67cc64c344ab95e02
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1e137eda77f1807b80409872d9fe0c2966df2a41
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62547777"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656607"
 ---
-# <a name="how-to-specify-an-application-icon-visual-basic-c"></a>Postupy: Určení ikony aplikace (Visual Basic, C#)
+# <a name="how-to-specify-an-application-icon-visual-basic-c"></a>Postupy: určení ikony aplikace (Visual Basic, C#)
 
-`Icon` Vlastnosti projektu určuje soubor ikony (*.ico*), který se zobrazí pro kompilovanou aplikaci v **Průzkumníka souborů** a na hlavním panelu Windows.
+Vlastnost `Icon` pro projekt určuje soubor ikony ( *. ico*), který se zobrazí pro kompilovaná aplikace v **Průzkumníkovi souborů** a na hlavním panelu systému Windows.
 
-`Icon` Vlastnost je přístupná v **aplikace** podokně **Návrháře projektu**; obsahuje seznam ikon, které byly přidány do projektu jako prostředky nebo jako soubory obsahu.
+K vlastnosti `Icon` lze přistupovat v podokně **aplikace** v **Návrháři projektu**; obsahuje seznam ikon, které byly přidány do projektu jako prostředky nebo jako soubory obsahu.
 
 > [!NOTE]
-> Jakmile nastavíte vlastnost ikona pro aplikace, může také nastavena `Icon` vlastnosti každého **okno** nebo **formuláře** v aplikaci. Informace o okně ikony pro samostatné aplikace Windows Presentation Foundation (WPF), najdete v tématu <xref:System.Windows.Window.Icon%2A> vlastnost.
+> Až nastavíte vlastnost Icon pro aplikaci, můžete také nastavit vlastnost `Icon` každého **okna** nebo **formuláře** v aplikaci. Informace o ikonách okna pro samostatné aplikace Windows Presentation Foundation (WPF) najdete v tématu <xref:System.Windows.Window.Icon%2A> Property.
 
-## <a name="to-specify-an-application-icon"></a>K určení ikony aplikace
+## <a name="to-specify-an-application-icon"></a>Určení ikony aplikace
 
-1. V **Průzkumníka řešení**, zvolte uzel projektu (ne **řešení** uzlu).
+1. V **Průzkumník řešení**vyberte uzel projektu (ne uzel **řešení** ).
 
-1. V panelu nabídky zvolte **projektu** > **vlastnosti**.
+1. Na panelu nabídek vyberte**vlastnosti** **Project** > .
 
-1. Když **Návrháře projektu** se zobrazí, zvolte **aplikace** kartu.
+1. Když se zobrazí **Návrhář projektu** , vyberte kartu **aplikace** .
 
-1. **(Visual Basic)**  &mdash;v **ikonu** , zvolte ikonu (*.ico*) soubor.
+1. **(Visual Basic)** &mdash;In seznamu **ikona** vyberte soubor ikony ( *. ico*).
 
-    **C#**&mdash;Téměř **ikonu** klikněte na položku  **\<Procházet... >** tlačítko a pak přejděte do umístění souboru s ikonou, která chcete.
+    **C#** &mdash;Near seznamu **ikona** vyberte **\<Browse... >** tlačítko a potom vyhledejte umístění souboru ikony, který chcete.
 
 ## <a name="see-also"></a>Viz také:
 

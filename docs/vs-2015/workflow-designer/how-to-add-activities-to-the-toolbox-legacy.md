@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání aktivit do panelu nástrojů (starší verze) | Dokumentace Microsoftu'
+title: 'Postupy: přidání aktivit do sady nástrojů (starší verze) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -9,29 +9,28 @@ helpviewer_keywords:
 - activities, adding to Toolbox
 ms.assetid: b66ea29c-120b-40ba-8a61-c1c8240850fa
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c3a8c6f397bbafdbdb29ecbb193c4200a26335c3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f3f982372f0189871c4f3d294c07a9e3cfc44391
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62943357"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656611"
 ---
-# <a name="how-to-add-activities-to-the-toolbox-legacy"></a>Postupy: Přidání aktivit do panelu nástrojů (starší verze)
-Při vytváření řešení pracovního postupu s starší [!INCLUDE[wfd1](../includes/wfd1-md.md)] , který cílí [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)], vlastní aktivity mohou být přidány do projektu pracovního postupu a jejich návrháři umístěny do **nástrojů** pro snadné přístup. Můžete také přidat aktivity přímo **nástrojů** z dynamické knihovny (DLL).  
-  
-### <a name="to-add-an-activity-to-the-toolbox-from-a-dll"></a>Chcete-li přidat aktivitu do panelu nástrojů z knihovny DLL  
-  
-1. Klikněte pravým tlačítkem na plochu okna nástrojů v rámci **pracovního postupu Windows**a potom klikněte na tlačítko **zvolit položky**.  
-  
-2. V **zvolit položky nástrojů** dialogové okno, klikněte na tlačítko **komponenty System.Activities** kartu a potom klikněte na tlačítko **Procházet** z dolní pravé části okna.  
-  
-3. Vyberte knihovnu DLL z adresáře souboru, který obsahuje implementaci vlastní aktivitu pro přidání do **nástrojů**a potom klikněte na tlačítko **otevřít**.  
-  
-4. Klikněte na tlačítko **OK** mohli dokončit přidávání aktivity do panelu nástrojů.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání starší verze návrháře aktivit](../workflow-designer/using-the-legacy-activity-designer.md)   
- [Aktivity starších verzí pracovních postupů](../workflow-designer/legacy-workflow-activities.md)
+# <a name="how-to-add-activities-to-the-toolbox-legacy"></a>Postupy: přidání aktivit do sady nástrojů (starší verze)
+Při sestavování řešení pracovního postupu se staršími [!INCLUDE[wfd1](../includes/wfd1-md.md)], která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)], je možné do projektu pracovního postupu přidat vlastní aktivity a jejich návrháři, kteří jsou umístěni v **sadě nástrojů** , a získat tak snadný přístup. Do **sady nástrojů** můžete také přidat aktivity přímo z knihovny DLL (Dynamic-Link Library).
+
+### <a name="to-add-an-activity-to-the-toolbox-from-a-dll"></a>Přidání aktivity do sady nástrojů z knihovny DLL
+
+1. V části **pracovní postup systému Windows**klikněte pravým tlačítkem myši na plochu okna panelu nástrojů a pak klikněte na **zvolit položky**.
+
+2. V dialogovém okně **zvolit položky sady nástrojů** klikněte na kartu **komponenty System. Activities** a pak klikněte na tlačítko **Procházet** v pravé dolní části okna.
+
+3. Vyberte knihovnu DLL z adresáře souborů, který obsahuje implementaci vlastní aktivity, kterou chcete přidat do **sady nástrojů**, a poté klikněte na tlačítko **otevřít**.
+
+4. Kliknutím na tlačítko **OK** dokončete přidávání aktivity do sady nástrojů.
+
+## <a name="see-also"></a>Viz také
+ Používání starších [aktivit pracovních postupů](../workflow-designer/legacy-workflow-activities.md) [návrháře aktivit v Návrháři](../workflow-designer/using-the-legacy-activity-designer.md)

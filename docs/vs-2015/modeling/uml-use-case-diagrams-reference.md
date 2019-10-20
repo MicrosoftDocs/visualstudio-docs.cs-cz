@@ -1,5 +1,5 @@
 ---
-title: 'Diagramy případů použití UML: Referenční dokumentace | Dokumentace Microsoftu'
+title: 'Diagramy případů použití UML: referenční informace | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -16,58 +16,53 @@ helpviewer_keywords:
 - UML diagrams, use case
 ms.assetid: aa15772b-eb67-4366-b145-b559112817df
 caps.latest.revision: 35
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 45f8d742af1cd6a0ed73f3beda24e829b417e81f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: cbea61c2a26b1dc81487365ef8fc3f320ac95943
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63424317"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657309"
 ---
-# <a name="uml-use-case-diagrams-reference"></a>Diagramy případů použití UML: Odkaz
+# <a name="uml-use-case-diagrams-reference"></a>Diagramy případů použití UML: Referenční dokumentace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V sadě Visual Studio *diagramu případu použití* shrnuje, kdo používá vaše aplikace nebo systému, a co mohou provádět s ním. Chcete-li vytvořit diagram případu použití UML, na **architektury** nabídky, klikněte na tlačítko **nové UML nebo diagramu vrstev**.  
-  
- Diagram případu použití funguje jako předměty pro popis požadavků uživatele. Popisuje relace mezi požadavky uživatelů a hlavní součásti. Nepopisuje zasílání požadavků na podrobně; To lze popsat v samostatných diagramech nebo dokumenty, které lze propojit na každý případ použití. Informace o tom, jak diagramy případů použití vám umožňují pochopit, diskutovat a sdělovat požadavky uživatelů najdete v tématu [modelování uživatelských požadavků](../modeling/model-user-requirements.md).  
-  
- Tuto funkci podporovat kterou verzí sady Visual Studio najdete v tématu [podporované verze pro nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
-  
+*Diagram případu použití* v aplikaci Visual Studio shrnuje, kdo používá vaši aplikaci nebo systém a co s ním může dělat. Chcete-li vytvořit diagram případu použití UML, v nabídce **Architektura** klikněte na **Nový UML nebo Diagram vrstev**.
+
+ Diagram případu použití funguje jako fokus pro popis uživatelských požadavků. Popisuje vztahy mezi požadavky, uživateli a hlavními součástmi. Nepopisuje požadavky podrobněji; Ty mohou být popsány v samostatných diagramech nebo v dokumentech, které lze propojit s každým případem použití. Informace o tom, jak diagramy případu použití vám pomohou pochopit, diskutovat a sdělit potřeby vašich uživatelů, najdete v tématu [model uživatelských požadavků](../modeling/model-user-requirements.md).
+
+ Chcete-li zjistit, které verze aplikace Visual Studio tuto funkci podporují, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+
 > [!NOTE]
-> Toto téma popisuje elementy, které jsou k dispozici v diagramech případů použití. Další informace o tom, jak nakreslit diagramy případů použití, naleznete v tématu [diagramy případu použití UML: Pokyny pro](../modeling/uml-use-case-diagrams-guidelines.md). Další informace o tom, jak vytvořit a kreslit diagramy modelování najdete v tématu [modelů a diagramů UML upravit](../modeling/edit-uml-models-and-diagrams.md).  
-  
-## <a name="reading-use-case-diagrams"></a>Diagramy případů použití čtení  
- Tabulky v následujících částech popisují prvky, které jsou k dispozici na diagram případu použití, spolu s jejich hlavní vlastnosti. Úplný seznam vlastností, naleznete v tématu [diagramy případů použití vlastnosti elementů v UML](../modeling/properties-of-elements-on-uml-use-case-diagrams.md).  
-  
-### <a name="actors-use-cases-and-subsystems"></a>Objektů actor, případy použití a subsystémů  
- ![Prvky v diagramu případu použití](../modeling/media/uml-ucovactor.png "UML_UCOvActor")  
-  
-|**Obrazec**|**Element**|**Popis a hlavní vlastnosti**|  
-|---------------|-----------------|-----------------------------------------|  
-|1|**objekt actor**|Představuje uživatele, organizace nebo externí systém, který spolupracuje s vaší aplikace nebo systému. Prvek "actor" je druh typu.<br /><br /> -   **Cesta k obrázku** – cesta k souboru obrázku, který se má použít místo výchozí ikona objektu actor. Ikona by měl být soubor prostředků v rámci projektu sady Visual Studio.|  
-|2|**Případ použití**|Představuje akce prováděné jeden nebo více objektů actor plnění určitého cíle. Případ použití je druh typu.<br /><br /> -   **Témata** -subsystému, ve kterém se zobrazí případu použití.|  
-|3|**Přidružení**|Označuje, že prvek "actor" účastní případu použití.|  
-|4|**Subsystém nebo komponenty**|V systému nebo aplikace, která pracujete nebo jeho část. Můžou být čímkoli od ve velké síti do jedné třídy v aplikaci.<br /><br /> Případy použití, které systém nebo komponenta podporuje uvnitř jeho obdélník. Může být užitečné zobrazit že některé případy mimo obdélníku, použití vyjasnit vašeho systému.<br /><br /> Subsystém v diagramu případu použití má v podstatě stejný typ jako komponentu v diagramu komponent.<br /><br /> -   **Je vytvořena nepřímo** – Pokud je hodnota false, systém provádí obsahuje jednu nebo více objektů, která přímo odpovídají této subsystému. Při hodnotě true je subsystém konstrukce v návrhu, který se zobrazí v systému provádí pouze prostřednictvím instance jejích částí.|  
-  
-### <a name="structuring-use-cases"></a>Strukturování případy použití  
- ![Případy použití zahrnout, rozšíření a generalizace](../modeling/media/uml-ucovstructure.png "UML_UCOvStructure")  
-  
-|Obrazec|**Element**|Popis|  
-|-----------|-----------------|-----------------|  
-|5|**Zahrnout**|Včetně případu použití volání nebo vyvolá zahrnutý jeden. Zahrnutí se používá k zobrazení, jak do menších kroků případu použití přestane fungovat. Případ použití součástí je na konci šipku.<br /><br /> Všimněte si, že diagram nezobrazuje pořadí kroků. Diagram činnosti, sekvenční diagram nebo jiného dokumentu můžete použít k popisu tyto podrobnosti.|  
-|6|**Rozšíření**|Rozšíření případu použití přidá cíle a kroky k rozšířenému případu použití. Rozšíření fungovat pouze za určitých podmínek. Na konci šipky je rozšířenému případu použití.<br /><br /> Všimněte si, že diagram nezobrazuje přesné podmínky, za kterých rozšíření použije: můžete zaznamenat tyto komentáře nebo jiného dokumentu.|  
-|7|**Dědičnost**|Má vztah specializované a obecné prvku. Zobecněný prvek je na konci šipku.<br /><br /> Případ použití specializované dědí cíle a objektům aktor jeho Generalizace a přidat další specifické cíle a kroky k jejich dosažení.<br /><br /> Specializovaný objekt actor dědí případy použití, atributy a asociace jeho Generalizace a může přidat další.|  
-|8|**Závislost**|Označuje, že návrh zdroje, závisí na návrhu cíle.|  
-|9|**Komentář**|Použít obecné poznámky přidáte do diagramu.|  
-|10|**Artefakt**|Artefakt s odkazem do jiného diagramu nebo dokumentu. Můžete jej vytvořit přetažením souboru z Průzkumníku řešení. Nesmí být propojení se závislostí k libovolnému prvku v diagramu. Artefakt se obvykle používá k propojení případu použití do sekvenčního diagramu, stránka Onenotu, dokument aplikace Word nebo prezentace aplikace PowerPoint, který podrobně popisuje. Dokument může být položka v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení nebo dokumentu do sdíleného umístění, jako je web služby SharePoint.<br /><br /> -   **Hypertextový odkaz**. Adresa URL nebo cesta diagramu nebo dokumentu.<br /><br /> Klikněte dvakrát na artefakt k otevření souboru nebo webovou stránku, na který odkazuje.|  
-|11 (není vidět)|**Balíčky**|Případy použití, objekty actor a subsystémy mohou být obsaženy v rámci balíčky. Balíček tvary v diagramu nezobrazí, ale můžete nastavit **LinkedPackage** vlastnosti diagramu. Prvky, které následně vytvořit v diagramu jsou umístěny v rámci balíčku. Další informace najdete v tématu [definování balíčků a oborů názvů](../modeling/define-packages-and-namespaces.md).|  
-  
-## <a name="see-also"></a>Viz také  
- [Diagramy případů použití UML: Pokyny](../modeling/uml-use-case-diagrams-guidelines.md)   
- [Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md)   
- [Sekvenční diagramy UML: Referenční dokumentace](../modeling/uml-sequence-diagrams-reference.md)   
- [Diagramy tříd UML: Referenční dokumentace](../modeling/uml-class-diagrams-reference.md)   
- [Diagramy komponent UML: Referenční dokumentace](../modeling/uml-component-diagrams-reference.md)   
- [Diagramy komponent UML: Referenční dokumentace](../modeling/uml-component-diagrams-reference.md)
+> Toto téma popisuje prvky, které jsou k dispozici v diagramech případů použití. Další informace o tom, jak kreslit diagramy případů použití, najdete v tématu [Diagramy případů použití UML: pokyny](../modeling/uml-use-case-diagrams-guidelines.md). Další informace o vytváření a kreslení diagramů modelování najdete v tématu [Úprava modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md).
+
+## <a name="reading-use-case-diagrams"></a>Čtení diagramů případů použití
+ Tabulky v následujících částech popisují prvky, které jsou k dispozici v diagramu případu použití, spolu s jejich hlavními vlastnostmi. Úplný seznam vlastností naleznete v tématu [Vlastnosti elementů v diagramech případů použití UML](../modeling/properties-of-elements-on-uml-use-case-diagrams.md).
+
+### <a name="actors-use-cases-and-subsystems"></a>Actors, případy použití a subsystémy
+ ![Prvky v diagramu případu použití](../modeling/media/uml-ucovactor.png "UML_UCOvActor")
+
+|**Automatického**|**Element**|**Popis a hlavní vlastnosti**|
+|---------------|-----------------|-----------------------------------------|
+|první|**Tříd**|Představuje uživatele, organizaci nebo externí systém, který komunikuje s vaší aplikací nebo systémem. Objekt actor je druh typu.<br /><br /> **cesta k obrázku** -    – cesta k souboru obrázku, který má být použit místo výchozí ikony objektu actor. Ikona by měla být soubor prostředků v projektu sady Visual Studio.|
+|odst|**Případ použití**|Představuje akce provedené jedním nebo více aktéry při dosahování určitého cíle. Případ použití je druh typu.<br /><br /> -   **předměty** – podsystém, ve kterém se zobrazuje případ použití.|
+|3|**Řídí**|Indikuje, že objekt actor se účastní případu použití.|
+|4|**Podsystém nebo komponenta**|Systém nebo aplikace, na kterých pracujete, nebo její součást. Může to být cokoli od velké sítě až po jednu třídu v aplikaci.<br /><br /> Případy použití, které systém nebo komponenta podporuje, se zobrazí uvnitř jeho rámečku. Může být užitečné zobrazit některé případy použití mimo obdélník a objasnit rozsah systému.<br /><br /> Podsystém v diagramu případu použití má v podstatě stejný typ jako součást v diagramu komponent.<br /><br /> -   **je nepřímo vytvořena instance** – Pokud je hodnota false, má spuštěný systém jeden nebo více objektů, které přímo odpovídají tomuto subsystému. Je-li nastavena hodnota true, podsystém je konstrukcí ve vašem návrhu, který se zobrazí ve vykonávajícím systému pouze prostřednictvím vytváření instancí svých částí prvků.|
+
+### <a name="structuring-use-cases"></a>Strukturování případů použití
+ ![Případy použití s zahrnutím, rozšiřováním a generalizací](../modeling/media/uml-ucovstructure.png "UML_UCOvStructure")
+
+|Obrazec|**Element**|Popis|
+|-----------|-----------------|-----------------|
+|5|**Připojit**|Včetně volání případu použití nebo vyvolání zahrnutého. Zařazení se používá k zobrazení způsobu, jakým se případ použití rozdělí na menší kroky. Zahrnutý případ použití je na konci šipky.<br /><br /> Všimněte si, že diagram nezobrazuje pořadí kroků. K popisu těchto podrobností můžete použít diagram aktivity, sekvenční diagram nebo jiný dokument.|
+|6|**Zvětšení**|Případ rozšíření případu použití přidá cíle a kroky do rozšířeného případu použití. Rozšíření provozují pouze za určitých podmínek. Rozšířený případ použití je na konci šipky.<br /><br /> Všimněte si, že diagram nezobrazuje přesné podmínky, za kterých se rozšíření používá: můžete je zaznamenat v komentáři nebo jiném dokumentu.|
+|čl|**Dědičnost**|Má vztah k specializovanému a zobecněnému prvku. Zobecněný element je na konci šipky.<br /><br /> Specializovaný případ použití dědí cíle a aktéry jeho Generalizace a může přidat konkrétnější cíle a kroky pro jejich dosažení.<br /><br /> Specializovaný objekt actor dědí případy použití, atributy a přidružení jeho Generalizace a může přidat další.|
+|8|**Závislosti**|Označuje, že návrh zdroje závisí na návrhu cíle.|
+|9|**Vytvořena**|Slouží k přidání obecných poznámek do diagramu.|
+|10pruhový|**Artefaktu**|Artefakt poskytuje odkaz na jiný diagram nebo dokument. Můžete ho vytvořit přetažením souboru z Průzkumník řešení. Může být propojen se závislostí s jakýmkoli jiným prvkem v diagramu. Artefakt se obvykle používá k propojení případu použití s sekvenčním diagramem, stránkou OneNotu, dokumentem aplikace Word nebo prezentací PowerPoint, která to podrobně popisuje. Dokument může být buď položka v řešení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], nebo dokument ve sdíleném umístění, jako je například web služby SharePoint.<br /><br /> **hypertextový odkaz**-   . Adresa URL nebo cesta k souboru diagramu nebo dokumentu.<br /><br /> Dvojím kliknutím na artefakt otevřete soubor nebo webovou stránku, na které se odkazuje.|
+|11 (nezobrazuje se)|**Zásilk**|Případy použití, objekty actor a subsystémy mohou být obsaženy v balíčcích. Obrazce balíčku se v diagramu nezobrazují, ale můžete nastavit vlastnost **LinkedPackage** diagramu. Prvky, které následně vytvoříte v diagramu, jsou umístěny v rámci balíčku. Další informace najdete v tématu [Definování balíčků a oborů názvů](../modeling/define-packages-and-namespaces.md).|
+
+## <a name="see-also"></a>Viz také
+ [Diagramy případů použití UML: pokyny](../modeling/uml-use-case-diagrams-guidelines.md) pro [Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md) [sekvence UML: referenční](../modeling/uml-sequence-diagrams-reference.md) diagramy [tříd](../modeling/uml-class-diagrams-reference.md) UML: referenční diagramy komponent UML: Referenční dokumentace diagramů komponent UML: [](../modeling/uml-component-diagrams-reference.md) [referenční](../modeling/uml-component-diagrams-reference.md) dokumentace

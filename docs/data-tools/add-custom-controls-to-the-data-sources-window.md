@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ComplexBindingPropertiesAttribute class, using
 - Data Sources Window, selecting controls
 ms.assetid: 8c43e7d2-ba94-4d9b-96de-3aa971955afd
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b81bd3237f3eb2aa9a4c096ddfeae2c7bcd08c09
-ms.sourcegitcommit: 6b0503ed8d25454d6e39a8e606910b3fa58cf1d2
+ms.openlocfilehash: b6334d233ccb2c4453d117b6bdfe942b6ea092e2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980558"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648920"
 ---
 # <a name="add-custom-controls-to-the-data-sources-window"></a>Přidání vlastních ovládacích prvků do okna zdrojů dat
 
@@ -39,7 +39,7 @@ Chcete-li přidat nebo odebrat ovládací prvky ze seznamu dostupných ovládac�
 2. V okně **zdroje dat** klikněte na položku, která je součástí zdroje dat, který jste přidali do okna, a poté klikněte na rozevírací nabídku položky.
 
    > [!TIP]
-   > Pokud není okno zdroje dat otevřené, otevřete ho výběrem možnosti **Zobrazit** > **ostatní** > **zdroje dat**Windows.
+   > Pokud není okno zdroje dat otevřené, otevřete ho výběrem možnosti **zobrazit**  >  jiné**zdroje dat** > **Windows** .
 
 3. V rozevírací nabídce klikněte na **přizpůsobit**. Otevře se jedna z následujících dialogových oken:
 
@@ -60,7 +60,7 @@ Chcete-li přidat nebo odebrat ovládací prvky ze seznamu dostupných ovládac�
     > [!NOTE]
     > Pokud ovládací prvek, který chcete vybrat, není zobrazen v poli **přidružené ovládací prvky** , je nutné přidat ovládací prvek do seznamu. Další informace najdete v tématu [Přidání přidružených ovládacích prvků](#add-associated-controls).
 
-6. Klikněte na **OK**.
+6. Klikněte na tlačítko **OK**.
 
 7. V okně **zdroje dat** klikněte na položku datového typu, ke kterému jste právě přidružit jeden nebo více ovládacích prvků, a poté klikněte na rozevírací nabídku položky.
 
@@ -78,9 +78,9 @@ Chcete-li přidat ovládací prvky do seznamu přidružených ovládacích prvk�
 
     |Atribut|Popis|
     |---------------|-----------------|
-    |<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|Implementujte tento atribut pro jednoduché ovládací prvky, které zobrazují jeden sloupec (nebo vlastnost) dat, jako je <xref:System.Windows.Forms.TextBox>například.|
-    |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|Implementujte tento atribut pro ovládací prvky, které zobrazují seznamy (nebo tabulky) dat, jako <xref:System.Windows.Forms.DataGridView>je například.|
-    |<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|Implementujte tento atribut pro ovládací prvky, které zobrazují seznamy (nebo tabulky) dat, ale také musí obsahovat jeden sloupec nebo vlastnost, jako je <xref:System.Windows.Forms.ComboBox>například.|
+    |<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|Implementujte tento atribut pro jednoduché ovládací prvky, které zobrazují jeden sloupec (nebo vlastnost) dat, například <xref:System.Windows.Forms.TextBox>.|
+    |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|Implementujte tento atribut pro ovládací prvky, které zobrazují seznamy (nebo tabulky) dat, například <xref:System.Windows.Forms.DataGridView>.|
+    |<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|Implementujte tento atribut pro ovládací prvky, které zobrazují seznamy (nebo tabulky) dat, ale také musí obsahovat jeden sloupec nebo vlastnost, například <xref:System.Windows.Forms.ComboBox>.|
 
 2. Pro model Windows Forms otevřete v dialogovém okně **Možnosti** stránku **přizpůsobení uživatelského rozhraní dat** . Nebo pro WPF otevřete dialogové okno **přizpůsobit vazbu ovládacího prvku** . Další informace najdete v tématu [přizpůsobení seznamu ovládacích prvků s možností vazby pro datový typ](#customize-the-bindable-controls-list).
 

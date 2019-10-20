@@ -7,17 +7,17 @@ helpviewer_keywords:
 - analyzers
 - Roslyn analyzers
 - code analyzers
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 844b9475ea59ba15ac96d3cbe19523f5cba63c72
-ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
+ms.openlocfilehash: 388667485f27b59e46a1c39d95b37ddc413240ee
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71999995"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649141"
 ---
 # <a name="overview-of-source-code-analyzers"></a>Přehled analyzátorů zdrojového kódu
 
@@ -40,7 +40,7 @@ Mnoho pravidel analyzátoru nebo *diagnostiky*má jednu nebo více související
 
 Zdrojová analýza pomocí analyzátorů Roslyn nahrazuje [starší verzi analýzy](../code-quality/code-analysis-for-managed-code-overview.md) spravovaného kódu. Spousta starších pravidel analýzy již byla přepsána jako analyzátory kódu Roslyn. Pro novější šablony projektů, jako jsou například .NET Core a .NET Standard projekty, není starší verze analýzy ani dostupná.
 
-Podobně jako porušení pravidel pro analýzu starších verzí se v okně Seznam chyb v aplikaci Visual Studio zobrazí porušení analýzy zdrojového kódu. Kromě toho se porušení analýzy zdrojového kódu zobrazí také v editoru kódu jako *vlnovky* pod problematickým kódem. Barva vlnovky závisí na [nastavení závažnosti](../code-quality/use-roslyn-analyzers.md#rule-severity) pravidla. Následující obrázek ukazuje tři porušení @ no__t-0one Red, One zelená a jedna šedá:
+Podobně jako porušení pravidel pro analýzu starších verzí se v okně Seznam chyb v aplikaci Visual Studio zobrazí porušení analýzy zdrojového kódu. Kromě toho se porušení analýzy zdrojového kódu zobrazí také v editoru kódu jako *vlnovky* pod problematickým kódem. Barva vlnovky závisí na [nastavení závažnosti](../code-quality/use-roslyn-analyzers.md#rule-severity) pravidla. Následující obrázek ukazuje tři porušení &mdash;one červená, jedna zelená a jedna šedá:
 
 ![Vlnovky v editoru kódu v aplikaci Visual Studio](media/diagnostics-severity-colors.png)
 
@@ -52,7 +52,7 @@ Analyzátory kódu kontrolují kód v době sestavování, jako je například a
 Nejen Roslyn analyzátory kódu sestavují stejné typy problémů, které provádí starší analýza, ale usnadňují vám opravu jednoho nebo všech výskytů porušení v souboru nebo projektu. Tyto akce se nazývají *opravy kódu*. Opravy kódu jsou specifické pro IDE; v aplikaci Visual Studio jsou implementovány jako [rychlé akce](../ide/quick-actions.md). Ne všechny diagnostické nástroje analyzátoru mají přidruženou opravu kódu.
 
 > [!NOTE]
-> Možnost **analyzovat** > **Spustit v nabídce analýza kódu** se vztahuje pouze na starší verzi analýzy.
+> Možnost **analyzovat**  > **Spustit příkaz Analýza kódu** se vztahuje pouze na starší verzi analýzy.
 
 Chcete-li rozlišovat mezi porušením analyzátorů kódu a analýzou starší verze v Seznam chyb, podívejte se do sloupce **nástroje** . Pokud hodnota nástroje odpovídá jednomu ze sestavení analyzátoru v **Průzkumník řešení**, například **Microsoft. CodeQuality. analyzers**, narušení pochází z analyzátoru kódu. V opačném případě porušení vychází z analýzy starší verze.
 
@@ -69,7 +69,7 @@ Chcete-li rozlišovat mezi porušením analyzátorů kódu a analýzou starší 
 
 Analyzátory kódu Roslyn se dají nainstalovat na projekt prostřednictvím balíčku NuGet. Některé jsou také k dispozici jako rozšíření sady Visual Studio. v takovém případě se vztahují na jakékoli řešení, které jste otevřeli v aplikaci Visual Studio. Existují některé rozdíly v chování při [instalaci analyzátorů](../code-quality/install-roslyn-analyzers.md)mezi těmito dvěma způsoby.
 
-### <a name="scope"></a>Scope
+### <a name="scope"></a>Rozsah
 
 Pokud nainstalujete analyzátory jako rozšíření sady Visual Studio, budou použity na úrovni řešení a na všechny instance aplikace Visual Studio. Pokud nainstalujete analyzátory jako balíček NuGet, což je upřednostňovaná metoda, vztahují se pouze na projekt, ve kterém byl balíček NuGet nainstalován. V týmových prostředích jsou analyzátory nainstalované jako balíčky NuGet v oboru pro *všechny vývojáře* , kteří na daném projektu pracují.
 
@@ -97,4 +97,4 @@ Nemůžete nakonfigurovat závažnost pravidel z analyzátorů, které se nainst
 
 - [Nejčastější dotazy k analyzátorům](analyzers-faq.md)
 - [Zápis vlastního analyzátoru kódu](../extensibility/getting-started-with-roslyn-analyzers.md)
-- [.NET Compiler Platform SDK](/dotnet/csharp/roslyn-sdk/)
+- [Sada .NET Compiler Platform SDK](/dotnet/csharp/roslyn-sdk/)

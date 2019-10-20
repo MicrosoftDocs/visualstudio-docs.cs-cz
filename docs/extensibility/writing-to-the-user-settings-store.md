@@ -1,5 +1,5 @@
 ---
-title: Zápis do Store nastavení uživatele | Dokumentace Microsoftu
+title: Zápis do úložiště uživatelských nastavení | Microsoft Docs
 ms.date: 05/23/2019
 ms.topic: conceptual
 ms.assetid: efd27f00-7fe5-45f8-9b97-371af732be97
@@ -8,21 +8,21 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 44380a03b87318be0fdf746c75eff8988ac68267
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 80b525fe896c59503cac55c9f7cab79a11b481f1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318484"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647883"
 ---
 # <a name="writing-to-the-user-settings-store"></a>Zápis do úložiště uživatelských nastavení
-Uživatelská nastavení jsou zapisovatelné nastavení, jako je v **Nástroje / možnosti** dialogového okna, okna vlastností a některých dalších dialogových oknech. Rozšíření sady Visual Studio může použít k ukládání malé množství dat. Tento návod ukazuje, jak přidat program Poznámkový blok se sadou Visual Studio jako externího nástroje ve čtení a zápisu do úložiště uživatelských nastavení.
+Uživatelská nastavení jsou zapisovatelná nastavení, podobně jako v dialogovém okně **Nástroje/možnosti** , vlastnosti okna a určitá další dialogová okna. Rozšíření sady Visual Studio je můžou použít k ukládání malých objemů dat. Tento návod ukazuje, jak přidat program Poznámkový blok do sady Visual Studio jako externí nástroj pomocí čtení a zápisu do úložiště uživatelských nastavení.
 
 ## <a name="writing-to-the-user-settings-store"></a>Zápis do úložiště uživatelských nastavení
 
-1. Vytvořte projekt VSIX s názvem UserSettingsStoreExtension a pak přidejte vlastní příkaz s názvem UserSettingsStoreCommand. Další informace o tom, jak vytvořit vlastní příkaz najdete v tématu [vytváření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md)
+1. Vytvořte projekt VSIX s názvem UserSettingsStoreExtension a pak přidejte vlastní příkaz s názvem UserSettingsStoreCommand. Další informace o tom, jak vytvořit vlastní příkaz, najdete v tématu [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md) .
 
-2. V souboru UserSettingsStoreCommand.cs, přidejte následující příkazy using:
+2. Do UserSettingsStoreCommand.cs přidejte následující direktivy using:
 
     ```csharp
     using System.Collections.Generic;
@@ -30,7 +30,7 @@ Uživatelská nastavení jsou zapisovatelné nastavení, jako je v **Nástroje /
     using Microsoft.VisualStudio.Shell.Settings;
     ```
 
-3. V MenuItemCallback odstraňte tělo metody a získat uživatelské nastavení uložená, následujícím způsobem:
+3. V MenuItemCallback odstraňte tělo metody a získejte úložiště uživatelských nastavení následujícím způsobem:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -40,7 +40,7 @@ Uživatelská nastavení jsou zapisovatelné nastavení, jako je v **Nástroje /
     }
     ```
 
-4. Teď zjistěte, zda poznámkového bloku již nastaven jako externího nástroje. Je nutné iterovat všechny externí nástroje pro zjištění nastavení ToolCmd "Poznámkový blok", následujícím způsobem:
+4. Nyní zjistíte, zda je Poznámkový blok již nastaven jako externí nástroj. Abyste zjistili, jestli je nastavení ToolCmd Poznámkový blok, musíte iterovat pomocí všech externích nástrojů, a to následujícím způsobem:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -64,7 +64,7 @@ Uživatelská nastavení jsou zapisovatelné nastavení, jako je v **Nástroje /
 
     ```
 
-5. Pokud program Poznámkový blok není nastavený jako externího nástroje, nastavte ho následujícím způsobem:
+5. Pokud nebyl program Poznámkový blok nastaven jako externí nástroj, nastavte ho následujícím způsobem:
 
     ```vb
     private void MenuItemCallback(object sender, EventArgs e)
@@ -100,10 +100,10 @@ Uživatelská nastavení jsou zapisovatelné nastavení, jako je v **Nástroje /
     }
     ```
 
-6. Testování kódu. Mějte na paměti, že ho Poznámkový blok přidá jako externího nástroje, takže se musí vrátit registru před jejím spuštěním podruhé.
+6. Otestujte kód. Mějte na paměti, že přidá do programu Poznámkový blok jako externí nástroj, takže před tím, než ho spustíte podruhé, je nutné registr vrátit zpátky.
 
 7. Sestavte kód a spusťte ladění.
 
-8. Na **nástroje** nabídky, klikněte na tlačítko **vyvolat UserSettingsStoreCommand**. Tato možnost přidá Poznámkový blok a **nástroje** nabídky.
+8. V nabídce **nástroje** klikněte na **vyvolat UserSettingsStoreCommand**. Tím se přidá Poznámkový blok do nabídky **nástroje** .
 
-9. Teď byste měli vidět Poznámkový blok v nabídce Nástroje / možnosti nabídky a kliknutím na **Poznámkový blok** by měl vyvolat instance poznámkového bloku.
+9. Nyní byste měli v nabídce Nástroje/možnosti Zobrazit Poznámkový blok a kliknout na Poznámkový **blok** , který by měl vyvolat instanci poznámkového bloku.

@@ -11,38 +11,38 @@ helpviewer_keywords:
 - Visual Studio Workflow Designer [WFD]
 - Workflow Designer [WFD], overview
 ms.assetid: 4cd062b1-b496-4668-bbc1-ee85545e066d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 45c687be4efc5a83827836cd1ac89bbc38ad4cb1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b689628983c50fc891c5a3ebe6a0df5c952468d8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949774"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650533"
 ---
 # <a name="develop-apps-with-the-workflow-designer"></a>Vývoj aplikací pomocí Návrháře postupu provádění
 
-Návrháři pracovních postupů je vizuálního návrháře a ladicí program pro grafický procesu vytváření a ladění [Windows Workflow Foundation](/dotnet/framework/windows-workflow-foundation/index) aplikace (WF) v sadě Visual Studio. Umožňuje vytvořit aplikace složený pracovního postupu, knihovna aktivit nebo služby Windows Communication Foundation (WCF) pomocí šablony a návrháři aktivit.
+Návrhář postupu provádění je vizuální Návrhář a ladicí program pro grafické vytváření a ladění aplikací [programovací model Windows Workflow Foundation](/dotnet/framework/windows-workflow-foundation/index) (WF) v aplikaci Visual Studio. Umožňuje vytvořit neseparovaný aplikační pracovní postup, knihovnu aktivit nebo službu Windows Communication Foundation (WCF) prostřednictvím použití šablon a návrháře aktivit.
 
-## <a name="install-windows-workflow-foundation"></a>Nainstalujte Windows Workflow Foundation
+## <a name="install-windows-workflow-foundation"></a>Nainstalovat programovací model Windows Workflow Foundation
 
-Chcete-li použít šablony projektu pracovního postupu v sadě Visual Studio, nejprve nainstalovat **Windows Workflow Foundation** komponenty.
+Chcete-li použít šablony projektu pracovního postupu v aplikaci Visual Studio, nejprve nainstalujte **programovací model Windows Workflow Foundation** komponentu.
 
-1. Otevřete instalační program sady Visual Studio. Rychlý způsob, jak ho otevřete je tak, že vyberete **nástroje** > **stažení nástrojů a funkcí** v sadě Visual Studio.
+1. Otevřete Instalační program pro Visual Studio. Rychlý způsob, jak ho otevřít, je vybrat **nástroje**  > **získat nástroje a funkce** v aplikaci Visual Studio.
 
-1. V instalačním programu Visual Studio, vyberte **jednotlivé komponenty** kartu.
+1. V Instalační program pro Visual Studio vyberte kartu **jednotlivé součásti** .
 
-1. Přejděte dolů k položce **vývojových aktivit** kategorie a pak vyberte **Windows Workflow Foundation** komponenty.
+1. Přejděte dolů ke kategorii **vývojové aktivity** a pak vyberte součást **programovací model Windows Workflow Foundation** .
 
-   ![Komponenta Windows Workflow Foundation pro sadu Visual Studio](media/windows-workflow-foundation-component.png)
+   ![Součást programovací model Windows Workflow Foundation pro Visual Studio](media/windows-workflow-foundation-component.png)
 
-1. Vyberte **upravit**.
+1. Vyberte **Upravit**.
 
-   Visual Studio nainstaluje **Windows Workflow Foundation** komponenty.
+   Visual Studio nainstaluje komponentu **programovací model Windows Workflow Foundation** .
 
 ## <a name="see-also"></a>Viz také:
 
-- [Windows Workflow Foundation (.NET Framework)](/dotnet/framework/windows-workflow-foundation/index)
+- [Programovací model Windows Workflow Foundation (.NET Framework)](/dotnet/framework/windows-workflow-foundation/index)

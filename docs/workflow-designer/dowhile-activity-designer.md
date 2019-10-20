@@ -1,34 +1,34 @@
 ---
-title: Návrhář postupu provádění – DoWhile návrháře aktivit
+title: Návrhář aktivity Návrhář postupu provádění – DoWhile
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.DoWhile.UI
 ms.assetid: 948deb35-d72f-462b-bea6-4b119c10a148
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a0069d352897d2d98288988d549d9733a39b2c35
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 85f8d6c442982fff47a679e8fc2ccc04ee515a9b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949731"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650520"
 ---
 # <a name="dowhile-activity-designer"></a>Návrhář aktivity DoWhile
 
-<xref:System.Activities.Statements.DoWhile> Aktivita provádí aktivity obsažené v jeho <xref:System.Activities.Statements.DoWhile.Body%2A> alespoň jednou, dokud je zadaná podmínka vyhodnocena jako **false**. Pokud potřebujete aktivity obsažené v těle smyčky mají být provedeny nulakrát nebo vícekrát, použijte <xref:System.Activities.Statements.While> aktivity místo.
+Aktivita <xref:System.Activities.Statements.DoWhile> spustí aktivitu obsaženou v jeho <xref:System.Activities.Statements.DoWhile.Body%2A> alespoň jednou, dokud není zadaná podmínka vyhodnocena jako **NEPRAVDA**. Pokud potřebujete, aby aktivita obsažená v těle smyčky byla provedena nula nebo vícekrát, použijte místo toho <xref:System.Activities.Statements.While>ovou aktivitu.
 
-## <a name="dowhile-properties-in-the-workflow-designer"></a>Vlastnosti DoWhile v Návrháři postupu provádění
+## <a name="dowhile-properties-in-the-workflow-designer"></a>DoWhile vlastnosti v Návrhář postupu provádění
 
-V následující tabulce jsou uvedeny nejužitečnější <xref:System.Activities.Statements.DoWhile> vlastnosti aktivity a popisuje, jak je používat v Návrháři:
+Následující tabulka obsahuje nejužitečnější vlastnosti <xref:System.Activities.Statements.DoWhile> aktivity a popisuje jejich použití v Návrháři:
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Statements.DoWhile.Body%2A>|False|Aktivity ke spuštění, dokud podmínka **true**. Chcete-li přidat <xref:System.Activities.Statements.DoWhile.Body%2A> aktivity, rozevírací aktivitu z panelu nástrojů do **tělo** pole na **DoWhile** Návrhář aktivity s text nápovědy "Aktivity Sem přetáhněte".|
-|<xref:System.Activities.Statements.DoWhile.Condition%2A>|Pravda|Podmínka k vyhodnocení po každé iteraci smyčky. Chcete-li nastavit <xref:System.Activities.Statements.DoWhile.Condition%2A>, zadejte výraz jazyka Visual Basic v **podmínku** pole na **DoWhile** aktivity návrháře nebo v mřížce vlastností.|
+|<xref:System.Activities.Statements.DoWhile.Body%2A>|False|Aktivita, která se má provést, když je podmínka **pravdivá** Chcete-li přidat aktivitu <xref:System.Activities.Statements.DoWhile.Body%2A>, přetáhněte aktivitu ze sady nástrojů **do pole text v Návrháři** aktivity **DoWhile** s textem nápovědy "Sem přetáhněte aktivitu".|
+|<xref:System.Activities.Statements.DoWhile.Condition%2A>|Podmínka|Podmínka, která má být vyhodnocena po každé iteraci smyčky. Chcete-li nastavit <xref:System.Activities.Statements.DoWhile.Condition%2A>, zadejte výraz Visual Basic do pole **Podmínka** v Návrháři aktivity **DoWhile** nebo v mřížce vlastností.|
 
 ## <a name="see-also"></a>Viz také:
 

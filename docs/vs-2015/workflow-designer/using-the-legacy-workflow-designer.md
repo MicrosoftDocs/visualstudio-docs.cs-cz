@@ -1,5 +1,5 @@
 ---
-title: Používání starší verze návrháře pracovních postupů | Dokumentace Microsoftu
+title: Použití starších Návrhář postupu provádění | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -8,50 +8,50 @@ helpviewer_keywords:
 - Visual Studio 2005 Extensions for Windows Workflow Foundation, about
 ms.assetid: 7af53077-afd7-465f-9c1d-b387e9d4f216
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 899f0b81055f67c323c2efb60a07280368dad321
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c09c4588bb1fcd0aa7487a6896d2fc286253e198
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855835"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72606774"
 ---
 # <a name="using-the-legacy-workflow-designer"></a>Používání starší verze návrháře postupu provádění
-Starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] poskytované [!INCLUDE[vs2010](../includes/vs2010-md.md)] lze použít k cíli [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].  
-  
- Je k nim přistupovat pomocí výběru **rozhraní .NET Framework 3.0** možnost nebo **rozhraní .NET Framework 3.5** možnost v rozevíracím seznamu v horní části **nový projekt** okna. Výchozí možnost v [!INCLUDE[vs2010](../includes/vs2010-md.md)] je **rozhraní .NET Framework 4** sloužící k vytvoření [!INCLUDE[wf](../includes/wf-md.md)] aplikací, které se zaměřují [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)].  
-  
- [!INCLUDE[wfd2](../includes/wfd2-md.md)] Poskytuje způsob, jak vytvořit graficky [!INCLUDE[wf](../includes/wf-md.md)] aplikací pomocí známé [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uživatelské rozhraní. [!INCLUDE[wf](../includes/wf-md.md)] aplikace se skládají z kroků procesu pracovního postupu nazývají aktivity. Vytvoření pracovního postupu, tvoří aktivity na návrhové ploše přetažením návrháři jejich odpovídajících aktivit z **nástrojů** na návrhovou plochu.  
-  
- Následující tabulka uvádí některé klíčové funkce [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pro Windows Workflow Foundation.  
-  
-|Funkce|Popis|  
-|-------------|-----------------|  
-|Aktivita přetažení|Přetáhnout aktivity **nástrojů** na návrhovou plochu vytvoření pracovního postupu.|  
-|prohlížeč vlastností|Standardní **vlastnosti** okna v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] slouží ke konfiguraci vlastností aktivity.|  
-|Lupa|Dalekohled **úroveň přiblížení** ikona se nachází pod svislý posuvník na pravé straně návrhové plochy. Klikněte Dalekohled a zvolte procenuální zvětšení způsobit pracovního postupu obrázku pro přiblížení či oddálení. Můžete také použít **Pan** ikonu lupy kurzor možnosti pro přiblížení a oddálení.|  
-|Posouvání|**Pan** ikona, kruh, který obsahuje čtyři překřížené šipky směřující do čtyř směrů se nachází pod svislý posuvník na pravé straně návrhové plochy pod Dalekohled ikona přiblížení. Pokud kliknete na ikonu posouvání, místní nabídka nabízí následující možnosti kurzoru:<br /><br /> – **Přiblížit** kurzoru s ikonou lupy umožňuje přiblížit kliknutím na návrhové ploše.<br />– **Oddálit** kurzoru s ikonou lupy umožňuje oddálit kliknutím na návrhové ploše.<br />– **Nástroj navigace** ručně kurzor umožňuje "zkopírovat" a posunout zobrazení pracovního postupu v návrhové ploše.<br />– **Výchozí** šipku kurzor umožňuje přepínat mezi ostatní kurzory zpět na výchozí kurzor šipku.|  
-|Automatické posouvání|Pokud máte velké pracovní postup, můžete chtít umístit aktivitu za přijatelné zobrazované návrhové plochy. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Umožňuje přetáhnout aktivity směrem k okraji nejblíže kam chcete umístit aktivity návrhovou plochu. Zobrazení plochy návrhu, automaticky posouvá v tomto směru.|  
-|Inteligentní značky|Aktivity, které se není úplně nakonfigurován nebo není nastavený správně nakonfigurované onačené s ikonou vykřičníku. Můžete kliknout na ikonu a najdete v rozevíracím seznamu, které potřebujete konfigurace, které existují v aktivitě. Pak můžete použít **vlastnosti** okno Konfigurace aktivity odpovídajícím způsobem. Když všechny vlastnosti jsou platné pro aktivity, vykřičník ikona zmizí.|  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Okna pracovních postupů v sadě Visual Studio (starší verze)](../workflow-designer/visual-studio-workflow-windows-legacy.md)  
-  
- [Vytváření projektů pracovních postupů starších verzí](../workflow-designer/creating-legacy-workflow-projects.md)  
-  
- [Zobrazení sekvenčního pracovního postupu (starší verze)](../workflow-designer/sequential-workflow-views-legacy.md)  
-  
- [Aktivity starších verzí pracovních postupů](../workflow-designer/legacy-workflow-activities.md)  
-  
- [Používání motivů v pracovních postupech (starší verze)](../workflow-designer/using-themes-in-workflows-legacy.md)  
-  
- [Používání starší verze návrháře pracovních postupů stavového stroje](../workflow-designer/using-the-legacy-state-machine-workflow-designer.md)  
-  
- [Používání starší verze návrháře aktivit](../workflow-designer/using-the-legacy-activity-designer.md)  
-  
- [Nápověda k uživatelskému rozhraní návrháře pro programovací model Windows Workflow Foundation](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)  
-  
-## <a name="see-also"></a>Viz také  
+Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] poskytované pomocí [!INCLUDE[vs2010](../includes/vs2010-md.md)] lze použít k cílení na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+
+ K němu se dostanete tak, že v rozevíracím seznamu v horní části okna **Nový projekt** vyberete buď možnost **.NET Framework 3,0** , nebo možnost **.NET Framework 3,5** . Výchozí možnost v [!INCLUDE[vs2010](../includes/vs2010-md.md)] je **.NET Framework 4** , která se používá k vytváření [!INCLUDE[wf](../includes/wf-md.md)] aplikací, které cílí na [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)].
+
+ @No__t_0 poskytuje způsob, jak vytvořit [!INCLUDE[wf](../includes/wf-md.md)] aplikace pomocí známých [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uživatelského rozhraní. [!INCLUDE[wf](../includes/wf-md.md)] aplikace se skládají z kroků procesu pracovního postupu nazývaných aktivity. Chcete-li vytvořit pracovní postup, sestavte aktivity na návrhové ploše přetažením jejich příslušných návrhářů aktivit ze **sady nástrojů** na návrhovou plochu.
+
+ V následující tabulce jsou uvedeny klíčové funkce [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pro programovací model Windows Workflow Foundation.
+
+|Funkce|Popis|
+|-------------|-----------------|
+|Přetažení aktivity|Chcete-li vytvořit pracovní postup, přetáhněte aktivity z **panelu nástrojů** na návrhovou plochu.|
+|prohlížeč vlastností|Pro konfiguraci vlastností aktivity se používá okno standard **Properties** v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|
+|Lupa|Ikona na **úrovni přiblížení** binokulárnís se nachází pod svislým posuvníkem na pravé straně návrhové plochy. Klikněte na binokulární a vyberte procento zvětšení, které způsobí zvětšení nebo zmenšení obrázku pracovního postupu. Pro přiblížení a oddálení můžete použít také ikonu **posunu** , která zvětší ukazatel myši.|
+|Posouvání|Ikona **posouvání** , kruh, který obsahuje čtyři obrácené šipky ukazující na čtyři směry, je umístěný pod svislým posuvníkem na pravé straně návrhové plochy, která se nachází pod ikonou přiblížení binokulárního zobrazení. Pokud kliknete na ikonu posouvání, místní nabídka nabízí následující možnosti kurzoru:<br /><br /> – **Přiblížení** lupy vám umožní přiblížit kliknutím na návrhovou plochu.<br />– Lupa **lupy** umožňuje oddálení kliknutím na návrhovou plochu.<br />– Kurzor pro **navigační nástroj** umožňuje "přicházet" a posunout zobrazení pracovního postupu na návrhové ploše.<br />– **Výchozí** kurzor šipky umožňuje přepnout z ostatních kurzorů zpátky na výchozí kurzor šipky.|
+|Automatické posouvání|Pokud máte rozsáhlý pracovní postup, můžete chtít umístit aktivitu nad viditelné zobrazení oblasti pro návrhovou plochu. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] umožňuje přetáhnout aktivitu směrem k okraji návrhové plochy, která je nejblíže místu, kam chcete aktivitu vložit. Zobrazení návrhová plocha se v tomto směru automaticky posouvá.|
+|Inteligentní značky|Aktivity, které nejsou zcela nakonfigurovány nebo nejsou správně nakonfigurovány, jsou označeny ikonou s vykřičníkem. Můžete kliknout na ikonu a zobrazit rozevírací seznam požadavků na konfiguraci, které existují u aktivity. Pak můžete pomocí okna **vlastnosti** nakonfigurovat aktivitu odpovídajícím způsobem. Pokud jsou všechny vlastnosti pro aktivitu platné, ikona vykřičníku zmizí.|
+
+## <a name="in-this-section"></a>V tomto oddílu
+ [Okna pracovních postupů v sadě Visual Studio (starší verze)](../workflow-designer/visual-studio-workflow-windows-legacy.md)
+
+ [Vytváření projektů pracovních postupů starších verzí](../workflow-designer/creating-legacy-workflow-projects.md)
+
+ [Zobrazení sekvenčního pracovního postupu (starší verze)](../workflow-designer/sequential-workflow-views-legacy.md)
+
+ [Aktivity starších verzí pracovních postupů](../workflow-designer/legacy-workflow-activities.md)
+
+ [Používání motivů v pracovních postupech (starší verze)](../workflow-designer/using-themes-in-workflows-legacy.md)
+
+ [Používání starší verze návrháře pracovních postupů stavového stroje](../workflow-designer/using-the-legacy-state-machine-workflow-designer.md)
+
+ [Používání starší verze návrháře aktivit](../workflow-designer/using-the-legacy-activity-designer.md)
+
+ [Nápověda k uživatelskému rozhraní návrháře pro programovací model Windows Workflow Foundation](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)
+
+## <a name="see-also"></a>Viz také
  [Vývoj pracovních postupů](http://go.microsoft.com/fwlink?LinkID=65010)

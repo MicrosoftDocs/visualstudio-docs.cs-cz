@@ -1,60 +1,60 @@
 ---
-title: Způsoby, jak ladit kód XSLT
+title: Způsoby ladění kódu XSLT
 ms.date: 03/05/2019
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 67ea95e3c52daed03acfe451f353edc039e1fecb
-ms.sourcegitcommit: 9753c7544cec852ca5efd0834e0956d9e53a5734
+ms.openlocfilehash: bb358efb711211d58525afb8d30d5cb4cad6b2e3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043532"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646075"
 ---
 # <a name="debugging-xslt"></a>Ladění XSLT
 
-Můžete ladit kód XSLT v sadě Visual Studio. Soubor XSLT ladicí program podporuje nastavení zarážek, zobrazení stavů provedení transformace XSLT a tak dále. Ladicí program XSLT slouží k ladění šablon stylů XSLT nebo XSLT aplikací.
+V aplikaci Visual Studio můžete ladit kód XSLT. Ladicí program XSLT podporuje nastavení zarážek, zobrazení stavů spuštění XSLT atd. Ladicí program XSLT lze použít k ladění šablon stylů XSLT nebo aplikací XSLT.
 
-Krokování s vnořením do krokování přes nebo krokování mimo kód můžete spustit jeden řádek kódu v čase. Příkazy pro použití funkce krokování kódu v ladicím programu XSLT jsou že stejné jako u sady Visual Studio ladicí programy.
+Můžete spustit kód po jednotlivých řádcích, a to pomocí krokování do, krokování nad nebo rozkrokování z kódu. Příkazy pro použití funkce pro krokování kódu v ladicím programu XSLT jsou stejné jako u ostatních ladicích programů sady Visual Studio.
 
-Po spuštění ladění otevře ladicí program XSLT windows lze zobrazit, že vstupní dokument a XSLT výstupu.
+Jakmile začnete s laděním, otevře se v ladicím programu XSLT okna, ve kterém se zobrazí vstupní dokument a výstup XSLT.
 
 > [!NOTE]
-> Ladicí program XSLT je pouze k dispozici v edicích sady Visual Studio Professional a Enterprise.
+> Ladicí program XSLT je k dispozici pouze v edicích Professional a Enterprise sady Visual Studio.
 
 ## <a name="debug-from-the-xml-editor"></a>Ladění z editoru XML
 
-Ladicí program můžete spustit, když máte šablony stylů nebo vstupní soubor XML, otevřete v editoru. To umožňuje ladění během navrhování šablony stylů.
+Můžete spustit ladicí program, pokud máte šablonu stylů nebo vstupní soubor XML otevřený v editoru. To vám umožní ladit při navrhování šablon stylů.
 
-1. Otevření šablony stylů nebo soubor XML v sadě Visual Studio.
+1. Otevřete šablonu stylů nebo soubor XML v aplikaci Visual Studio.
 
-1. Vyberte **spustit ladění XSLT** z **XML** nabídky nebo stisknutím klávesy **Alt**+**F5**.
+1. V nabídce **XML** vyberte **Spustit ladění XSLT** nebo stiskněte klávesu **ALT** +**F5**.
 
-## <a name="debug-from-an-app-that-uses-xslt"></a>Ladění z aplikace, který používá XSLT
+## <a name="debug-from-an-app-that-uses-xslt"></a>Ladění z aplikace, která používá XSLT
 
-Můžete krokovat s vnořením XSLT při ladění aplikace. Když stisknete klávesu **F11** na <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName> volání ladicího programu můžete krokovat s vnořením kód XSLT.
+Při ladění aplikace můžete krokovat s XSLT. Při stisknutí klávesy **F11** ve <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName> volání může ladicí program KROKOVAT kód XSLT.
 
 > [!NOTE]
-> Krokování s vnořením do XSLT z <xref:System.Xml.Xsl.XslTransform> třída není podporována. <xref:System.Xml.Xsl.XslCompiledTransform> Třídy je pouze procesoru XSLT, který podporuje krokování XSLT, při ladění.
+> Krokování na transformaci XSLT z <xref:System.Xml.Xsl.XslTransform> třídy není podporováno. Třída <xref:System.Xml.Xsl.XslCompiledTransform> je jediným procesorem XSLT, který podporuje krokování do XSLT při ladění.
 
-### <a name="to-start-debugging-an-xslt-application"></a>Pro spuštění ladění XSLT aplikace
+### <a name="to-start-debugging-an-xslt-application"></a>Spuštění ladění aplikace XSLT
 
-1. Při vytváření instance <xref:System.Xml.Xsl.XslCompiledTransform> objektu, nastaven `enableDebug` parametr `true` ve vašem kódu. Říká, že procesoru XSLT se vytvářet i informace o ladění při kompilaci kódu.
+1. Při vytváření instance objektu <xref:System.Xml.Xsl.XslCompiledTransform> nastavte parametr `enableDebug` na `true` ve vašem kódu. To oznamuje procesoru XSLT k vytváření ladicích informací při kompilování kódu.
 
-1. Stisknutím klávesy **F11** k krokování s vnořením do kódu XSLT.
+1. Stisknutím klávesy **F11** se můžete do kódu XSLT krokovat.
 
-   Šablony stylů XSLT je načten v novém okně dokumentu a spustí ladicí program XSLT.
+   Šablona stylů XSLT je načtena v novém okně dokumentu a spustí se ladicí program XSLT.
 
-   Alternativně můžete přidat přerušení k šabloně stylů a spusťte aplikaci.
+   Alternativně můžete přidat bod přerušení do seznamu stylů a spustit aplikaci.
 
 ### <a name="example"></a>Příklad
 
-Následuje příklad programu v jazyce C# XSLT. Ukazuje, jak povolit ladění XSLT.
+Následuje příklad programu C# XSLT. Ukazuje, jak povolit ladění XSLT.
 
 ```csharp
 using System;
@@ -88,10 +88,10 @@ namespace ConsoleApplication
 
 ## <a name="xslt-profiler"></a>Profiler XSLT
 
-[XSLT profiler](../xml-tools/xslt-profiler.md) je nástroj, který umožňuje vývojářům měřit, vyhodnotit a řešit problémy související s výkonem v XSLT kódu tak, že vytvoříte podrobné sestavy o výkonu XSLT. Další informace najdete v tématu [XSLT profiler](../xml-tools/xslt-profiler.md).
+[Profiler XSLT](../xml-tools/xslt-profiler.md) je nástroj, který umožňuje vývojářům měřit, vyhodnocovat a cílit na problémy související s výkonem v kódu XSLT vytvořením podrobných sestav o výkonu XSLT. Další informace najdete v tématu [Profiler XSLT](../xml-tools/xslt-profiler.md).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Návod: Ladění stylů XSLT](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)
-- [První pohled na ladicího programu sady Visual Studio](../debugger/debugger-feature-tour.md)
-- [Základní informace o ladění: Zarážky](../debugger/using-breakpoints.md)
+- [Návod: ladění šablony stylů XSLT](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)
+- [První pohled na ladicí program sady Visual Studio](../debugger/debugger-feature-tour.md)
+- [Základy ladění: zarážky](../debugger/using-breakpoints.md)

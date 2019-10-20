@@ -1,5 +1,5 @@
 ---
-title: Návrhář aktivity Cancellationscope | Dokumentace Microsoftu
+title: Návrhář aktivity CancellationScope | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -8,39 +8,35 @@ f1_keywords:
 - System.Activities.Statements.CancellationScope.UI
 ms.assetid: 2c85d663-b219-4142-9866-7693ffd46379
 caps.latest.revision: 8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6207d1fcd2e920de979a13624e5cf1b442c2703c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fa41d63fa4f67037a8e98e72abc3e338ad894f70
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977205"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659181"
 ---
 # <a name="cancellationscope-activity-designer"></a>Návrhář aktivity CancellationScope
-**CancellationScope** Návrhář aktivity se používá k vytvoření a konfigurace <xref:System.Activities.Statements.CancellationScope> aktivity.  
-  
-## <a name="the-cancellationscope-activity"></a>Aktivity CancellationScope  
- <xref:System.Activities.Statements.CancellationScope> Aktivit vám umožní určit aktivitu pro spouštění a rušení logiku pro danou aktivitu.  
-  
-### <a name="using-the-cancellationscope-activity-designer"></a>Pomocí aktivity Cancellationscope  
- **CancellationScope** návrháře aktivit najdete v **transakce** kategorii **nástrojů**, který přistupuje po kliknutí **sady nástrojů**  karty [!INCLUDE[wfd2](../includes/wfd2-md.md)] (případně vyberte možnost **nástrojů** z **zobrazení** nabídky nebo CTRL + ALT + X.)  
-  
- **CancellationScope** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřazené k [!INCLUDE[wfd2](../includes/wfd2-md.md)] surface všude, kde aktivity jsou obvykle umístěny, například jako uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří <xref:System.Activities.Statements.CancellationScope> aktivity s výchozím <xref:System.Activities.Activity.DisplayName%2A> z CancellationScope. <xref:System.Activities.Activity.DisplayName%2A> Hodnota se dá upravit v záhlaví **CancellationScope** Návrhář aktivity nebo **DisplayName** pole mřížku vlastností.  
-  
-### <a name="the-cancellationscope-properties"></a>Vlastnosti CancellationScope  
- Následující tabulka ukazuje <xref:System.Activities.Statements.CancellationScope> vlastnosti a popisuje, jak se používají v návrháři. <xref:System.Activities.Activity.DisplayName%2A> Vlastnost lze upravit v mřížce vlastností, ale další vlastnosti nutné upravit na [!INCLUDE[wfd2](../includes/wfd2-md.md)] povrchu.  
-  
-|Název vlastnosti|Požadováno|Použití|  
-|-------------------|--------------|-----------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Volitelné jméno <xref:System.Activities.Statements.CancellationScope> aktivity. Výchozí hodnota je CancellationScope. I když <xref:System.Activities.Activity.DisplayName%2A> hodnota není bezpodmínečně nutné, je osvědčeným postupem je použití jednoho.|  
-|<xref:System.Activities.Statements.CancellationScope.Body%2A>|Pravda|Určuje aktivity, pro které zrušení logiky poskytnuty. Chcete-li přidat <xref:System.Activities.Statements.CancellationScope.Body%2A> aktivity, rozevírací aktivitu z **nástrojů** do **text** pole na **CancellationScope** Návrhář aktivity s text nápovědy "rozevírací Aktivity sem".|  
-|<xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>|Pravda|Určuje, která se spustí v případě zrušení aktivity. Chcete-li přidat <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> aktivity, rozevírací aktivitu z **nástrojů** do **CancellationHandler** pole na **CancellationScope** Návrhář aktivity s nápovědou text "Aktivity Sem přetáhněte".|  
-  
-## <a name="see-also"></a>Viz také  
- [Transakce](../workflow-designer/transaction-activity-designers.md)   
- [Aktivita CompensableActivity](../workflow-designer/compensableactivity-activity-designer.md)   
- [Kompenzace](../workflow-designer/compensate-activity-designer.md)   
- [potvrzení](../workflow-designer/confirm-activity-designer.md)   
- [TransactionScope](../workflow-designer/transactionscope-activity-designer.md)
+Návrhář aktivity **CancellationScope** slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.CancellationScope>.
+
+## <a name="the-cancellationscope-activity"></a>Aktivita CancellationScope
+ Aktivita <xref:System.Activities.Statements.CancellationScope> umožňuje určit aktivitu pro provádění a logiku zrušení pro danou aktivitu.
+
+### <a name="using-the-cancellationscope-activity-designer"></a>Pomocí návrháře aktivity CancellationScope
+ Návrhář aktivity **CancellationScope** se dá najít v kategorii **transakce** sady **nástrojů**, ke které se dostanete kliknutím na kartu **panelu nástrojů** [!INCLUDE[wfd2](../includes/wfd2-md.md)] (případně můžete vybrat **panel nástrojů** v **zobrazení).** nebo CTRL + ALT + X.)
+
+ Návrhář aktivity **CancellationScope** lze přetáhnout ze **sady nástrojů** a vyřadit na [!INCLUDE[wfd2](../includes/wfd2-md.md)] plochu všude, kde jsou obvykle umístěny aktivity, například uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří aktivita <xref:System.Activities.Statements.CancellationScope> s výchozím <xref:System.Activities.Activity.DisplayName%2A> CancellationScope. Hodnotu <xref:System.Activities.Activity.DisplayName%2A> lze upravit v záhlaví návrháře aktivity **CancellationScope** nebo v poli **DisplayName** v mřížce vlastností.
+
+### <a name="the-cancellationscope-properties"></a>Vlastnosti CancellationScope
+ V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.CancellationScope> a popisuje, jak se používají v návrháři. Vlastnost <xref:System.Activities.Activity.DisplayName%2A> lze upravit v mřížce vlastností, ale ostatní vlastnosti je nutné upravovat na [!INCLUDE[wfd2](../includes/wfd2-md.md)] ploše.
+
+|Název vlastnosti|Požadováno|Použití|
+|-------------------|--------------|-----------|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Volitelný popisný název aktivity <xref:System.Activities.Statements.CancellationScope>. Výchozí hodnota je CancellationScope. I když hodnota <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutná, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.CancellationScope.Body%2A>|Podmínka|Určuje aktivitu, pro kterou je k dispozici logika zrušení. Chcete-li přidat aktivitu <xref:System.Activities.Statements.CancellationScope.Body%2A>, přetáhněte aktivitu ze **sady nástrojů** **do pole text v Návrháři** aktivity **CancellationScope** s textem nápovědy "Sem přetáhněte aktivitu".|
+|<xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>|Podmínka|Určuje aktivitu, která se spustí v případě zrušení. Chcete-li přidat aktivitu <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>, přetáhněte aktivitu ze **sady nástrojů** do pole **CancellationHandler** v Návrháři aktivity **CancellationScope** s textem nápovědy "Sem přetáhněte aktivitu".|
+
+## <a name="see-also"></a>Viz také
+ [](../workflow-designer/transaction-activity-designers.md) [Aktivita CompensableActivity](../workflow-designer/compensableactivity-activity-designer.md) [](../workflow-designer/compensate-activity-designer.md) transakce s [potvrzením](../workflow-designer/confirm-activity-designer.md) [TransactionScope](../workflow-designer/transactionscope-activity-designer.md)

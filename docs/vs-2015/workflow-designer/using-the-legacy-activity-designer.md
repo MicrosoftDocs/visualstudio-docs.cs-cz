@@ -1,5 +1,5 @@
 ---
-title: Používání starší verze návrháře aktivit | Dokumentace Microsoftu
+title: Používání starší verze návrháře aktivit | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -13,53 +13,48 @@ helpviewer_keywords:
 - activities, creating custom
 ms.assetid: 2fea8a05-6e58-423d-94bf-a822b15ffb80
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5755c6a3b4ece5b40c7799d83bdf33966d5c2b3e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 534af8da414cb3b9cc0dd786f7b79abe00e2ed66
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855771"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72606890"
 ---
 # <a name="using-the-legacy-activity-designer"></a>Používání starší verze návrháře aktivit
-Toto téma popisuje způsob použití návrháře aktivit v starší [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použít starší verzi návrháře při cílení [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].  
-  
- Návrhář aktivity umožňuje vytvářet vlastní vlastní aktivity.  
-  
-## <a name="creating-a-custom-activity"></a>Vytvoření vlastní aktivity  
- Postupujte podle těchto kroků můžete vytvořit vlastní aktivitu pomocí návrháře aktivit:  
-  
-1. Na **projektu** nabídky, klikněte na tlačítko **přidat aktivitu**.  
-  
-2. Vyberte **aktivity** nebo **aktivita (s rozdělením kódu)** šablony.  
-  
-   1. Použití **aktivity** šablony k vytvoření aktivity se definici aktivity a kódem uživatele ve stejném souboru kódu.  
-  
-   2. Použití **aktivita (s rozdělením kódu)** šablony k vytvoření aktivity s aktivity definicí vyjádřenou jako značka pracovního postupu a kód uživatele v samostatném souboru kódu.  
-  
-3. Zadejte název aktivity nebo Ponecháme výchozí název a potom klikněte na tlačítko **přidat**.  
-  
-   Sadu vlastních aktivit můžete vytvořit také tak, že vytvoříte nový projekt typu **knihovny aktivit pracovních postupů**. Další informace o tomto typu projektu naleznete v tématu [jak: Vytvoření knihovny aktivit pracovních postupů (starší verze)](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md).  
-  
-## <a name="configuring-an-activity"></a>Konfigurace aktivity  
- Návrhář aktivity je aktivní, můžete použít prohlížeč vlastností ke konfiguraci vlastností uvedených v následující tabulce.  
-  
-|Vlastnost|Komentáře|  
-|--------------|--------------|  
-|**Název**|Název aktivity.|  
-|**Základní třída**|Základní třída, která je odvozena z aktivity. Výchozí základní třída je [aktivitu typu SequenceActivity](http://go.microsoft.com/fwlink?LinkID=65020). V **vlastnosti** okna, klikněte na tlačítko **základní třída** symbol tří teček **[...]**  k výběru jiné základní třídy v [Procházet a vybrat typ dialogovému oknu rozhraní .NET (starší verze)](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box-legacy.md).|  
-|**Popis**|Uživatelsky definovaný popis aktivity.|  
-|**Povoleno**|Nastavte na **True** ve výchozím nastavení k povolení spuštění aktivit a ověřování. Nastavte na **False** zakázat provádění aktivity a ověřování. Informace o spuštění aktivit a ověřování najdete v tématu [vývoj aktivit pracovního postupu](http://go.microsoft.com/fwlink?LinkID=65024).|  
-  
-## <a name="adding-child-activities"></a>Přidání podřízených aktivit  
- Podřízené aktivity můžete přetáhnout z panelu nástrojů na aktivitu, která při návrhu. Potom můžete nakonfigurovat každou podřízenou aktivitu pomocí prohlížeče vlastností.  
-  
-## <a name="see-also"></a>Viz také  
- [Vývoj aktivit pracovního postupu](http://go.microsoft.com/fwlink?LinkID=65024)   
- [Vytváření vlastních aktivit](http://go.microsoft.com/fwlink?LinkID=65021)   
- [Aktivity starších verzí pracovních postupů](../workflow-designer/legacy-workflow-activities.md)   
- [Ukázky vlastních aktivit](http://go.microsoft.com/fwlink?LinkID=65022)   
- [Postupy: Vytvoření knihovny aktivit pracovních postupů (starší verze)](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md)   
- [Používání starší verze návrháře postupu provádění](../workflow-designer/using-the-legacy-workflow-designer.md)
+Toto téma popisuje, jak používat návrháře aktivit ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší verzi návrháře, pokud cílíte na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+
+ Návrhář aktivity umožňuje vytvářet vlastní aktivity.
+
+## <a name="creating-a-custom-activity"></a>Vytvoření vlastní aktivity
+ Pomocí následujících kroků můžete vytvořit vlastní aktivitu pomocí návrháře aktivit:
+
+1. V nabídce **projekt** klikněte na příkaz **Přidat aktivitu**.
+
+2. Vyberte šablonu **aktivita** nebo aktivita **(s rozdělením kódu)** .
+
+   1. Pomocí šablony **aktivity** můžete vytvořit aktivitu s definicí aktivity a kódem uživatele ve stejném souboru kódu.
+
+   2. Použijte šablonu **aktivita (s rozdělením kódu)** k vytvoření aktivity s definicí aktivity vyjádřenou jako značky pracovního postupu a kódem uživatele v samostatném souboru kódu.
+
+3. Zadejte název aktivity nebo ponechte výchozí název a potom klikněte na **Přidat**.
+
+   Můžete také vytvořit sadu vlastních aktivit vytvořením nového projektu typu **Knihovna aktivit pracovního postupu**. Další informace o tomto typu projektu naleznete v tématu [How to: Create a Workflow Activity Library (starší verze)](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md).
+
+## <a name="configuring-an-activity"></a>Konfigurace aktivity
+ I když je Návrhář aktivity aktivní, můžete použít prohlížeč vlastností ke konfiguraci vlastností uvedených v následující tabulce.
+
+|Vlastnost|Komentáře|
+|--------------|--------------|
+|**Jméno**|Název aktivity|
+|**Základní třída**|Základní třída, ze které je odvozena aktivita. Výchozí základní třída je [SequenceActivity](http://go.microsoft.com/fwlink?LinkID=65020). V okně **vlastnosti** klikněte na tři tečky **základní třídy** **[...]** pro výběr jiné základní třídy v [dialogovém okně Procházet a vyberte možnost typ .NET (starší verze)](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box-legacy.md).|
+|**Popis**|Uživatelsky definovaný Popis aktivity.|
+|**Umožněn**|Ve výchozím nastavení nastavte na **hodnotu true** , aby se povolilo provádění a ověřování aktivity. Nastavte na **hodnotu false** , chcete-li zakázat provádění a ověřování aktivity. Informace o provádění a ověřování aktivit najdete v tématu [vývoj aktivit pracovních postupů](http://go.microsoft.com/fwlink?LinkID=65024).|
+
+## <a name="adding-child-activities"></a>Přidávání podřízených aktivit
+ Podřízené aktivity lze přetáhnout ze sady nástrojů na aktivitu, kterou navrhujete. Potom můžete nakonfigurovat každou podřízenou aktivitu pomocí prohlížeče vlastností.
+
+## <a name="see-also"></a>Viz také
+ [Vývoj aktivit pracovních postupů](http://go.microsoft.com/fwlink?LinkID=65024) , které [vytvářejí vlastní aktivity](http://go.microsoft.com/fwlink?LinkID=65021) [starší aktivity pracovních postupů](../workflow-designer/legacy-workflow-activities.md) [](http://go.microsoft.com/fwlink?LinkID=65022) [, popisují postupy: Vytvoření knihovny aktivity pracovního postupu (starší verze)](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md) [pomocí starší verze Návrhář postupu provádění ](../workflow-designer/using-the-legacy-workflow-designer.md)

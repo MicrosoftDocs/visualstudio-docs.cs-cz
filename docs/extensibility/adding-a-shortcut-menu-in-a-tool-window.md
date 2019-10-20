@@ -1,5 +1,5 @@
 ---
-title: Přidání místní nabídky v okně nástroje | Dokumentace Microsoftu
+title: Přidání místní nabídky v okně nástroje | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,33 +13,33 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 36df685197acbac4372daa8f8c813acf22357678
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ef3ba3e9a59ac1289803260b5894b05927205a20
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309940"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72633423"
 ---
-# <a name="add-a-shortcut-menu-in-a-tool-window"></a>Přidat místní nabídku v panelu nástrojů
-Tento názorný postup vloží nabídku v panelu nástrojů. Místní nabídka je nabídka, která se zobrazí, když uživatel klepne pravým tlačítkem na tlačítko, textového pole nebo pozadí okna. Příkazy v místní nabídce se chová stejně jako příkazy na jiné nabídky nebo panely nástrojů. Pro podporu místní nabídky, zadejte ho *.vsct* souborů a zobrazit je v reakci na klikněte pravým tlačítkem myši.
+# <a name="add-a-shortcut-menu-in-a-tool-window"></a>Přidání místní nabídky v okně nástroje
+Tento návod vloží místní nabídku do okna nástroje. Místní nabídka je nabídka, která se zobrazí, když uživatel klikne pravým tlačítkem myši na tlačítko, textové pole nebo okno na pozadí. Příkazy v místní nabídce se chovají stejně jako příkazy v jiných nabídkách nebo panelech nástrojů. Chcete-li podporovat místní nabídku, zadejte ji v souboru *. vsct* a zobrazte ji v reakci na tlačítko myši pravým tlačítkem myši.
 
-Panel nástrojů se skládá z uživatelský ovládací prvek WPF v, která dědí z třídy okna vlastního nástroje <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>.
+Okno nástroje se skládá z uživatelského ovládacího prvku WPF ve vlastní třídě panelu nástrojů, která dědí z <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>.
 
-Tento návod ukazuje, jak vytvořit místní nabídce jako nabídky sady Visual Studio, deklarováním položek nabídky v *.vsct* souboru a pak pomocí Managed Package Framework pro implementaci ve třídě, která definuje panel nástrojů. Tento přístup umožňuje přístup k příkazy sady Visual Studio, prvky uživatelského rozhraní a model objektu automatizace.
+Tento návod ukazuje, jak vytvořit místní nabídku jako nabídku aplikace Visual Studio deklarací položek nabídky v souboru *. vsct* a poté pomocí spravovaného rozhraní balíčku pro implementaci ve třídě, která definuje okno nástroje. Tento přístup usnadňuje přístup k příkazům sady Visual Studio, k prvkům uživatelského rozhraní a objektovému modelu automatizace.
 
-Případně, pokud vaši nabídku nebudou přístup k funkcím sady Visual Studio, můžete použít <xref:System.Windows.FrameworkElement.ContextMenu%2A> vlastnost elementu XAML do uživatelského ovládacího prvku. Další informace najdete v tématu [ContextMenu](/dotnet/framework/wpf/controls/contextmenu).
+Případně, pokud vaše místní nabídka nebude přistupovat k funkcím sady Visual Studio, můžete použít vlastnost <xref:System.Windows.FrameworkElement.ContextMenu%2A> prvku XAML v uživatelském ovládacím prvku. Další informace najdete [v tématu](/dotnet/framework/wpf/controls/contextmenu)věnovaném dopři.
 
 ## <a name="prerequisites"></a>Požadavky
-Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="create-the-tool-window-shortcut-menu-package"></a>Vytvořit balíček nástroje okno místní nabídky
+## <a name="create-the-tool-window-shortcut-menu-package"></a>Vytvoření balíčku místní nabídky okna nástrojů
 
-1. Vytvořte projekt VSIX s názvem `TWShortcutMenu` a přidejte šablonu okno nástroje s názvem **místní nabídka** k němu. Další informace o vytvoření panelu nástrojů najdete v tématu [vytváření rozšíření pomocí panelu nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md).
+1. Vytvořte projekt VSIX s názvem `TWShortcutMenu` a přidejte do něj šablonu okna nástrojů s názvem " **místní nabídka** ". Další informace o vytváření panelu nástrojů naleznete v tématu [Vytvoření rozšíření s oknem nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md).
 
-## <a name="specifying-the-shortcut-menu"></a>Určení nabídku
-Místní nabídky, jako je uvedena v tomto návodu umožňuje uživateli vybrat ze seznamu barev, které jsou použity k vyplnění pozadí panelu nástrojů.
+## <a name="specifying-the-shortcut-menu"></a>Zadání místní nabídky
+Místní nabídka, například ta, která je znázorněna v tomto návodu, umožňuje uživateli vybrat ze seznamu barev, který se používá k vyplnění pozadí okna nástroje.
 
-1. V *ShortcutMenuPackage.vsct*, vyhledejte v guidsymbol – element s názvem guidShortcutMenuPackageCmdSet a deklarujte místní nabídku, skupina místní nabídky a možnosti nabídky. Guidsymbol – element by teď měl vypadat takto:
+1. V *ShortcutMenuPackage. vsct*vyhledejte v elementu GuidSymbol s názvem guidShortcutMenuPackageCmdSet a deklarujte místní nabídku, skupinu místních nabídek a možnosti nabídky. Element GuidSymbol by teď měl vypadat takto:
 
     ```xml
     <GuidSymbol name="guidShortcutMenuPackageCmdSet" value="{00000000-0000-0000-0000-0000}"> // your GUID here
@@ -52,7 +52,7 @@ Místní nabídky, jako je uvedena v tomto návodu umožňuje uživateli vybrat 
     </GuidSymbol>
     ```
 
-2. Bezprostředně před prvek tlačítka vytvořit prvek nabídky a potom v něm definovat nabídku.
+2. Těsně před elementem tlačítka vytvořte element Menus a pak definujte místní nabídku.
 
     ```vb
     <Menus>
@@ -65,9 +65,9 @@ Místní nabídky, jako je uvedena v tomto návodu umožňuje uživateli vybrat 
     </Menus>
     ```
 
-    Místní nabídka nemá nadřazenou položku, protože není součástí nabídky nebo panelu nástrojů.
+    Místní nabídka nemá nadřazený prvek, protože není součástí nabídky nebo panelu nástrojů.
 
-3. Vytvořte prvek skupiny s do skupinového elementu, který obsahuje položky místní nabídky a přidružte skupinu nabídku.
+3. Vytvořte prvek skupiny pomocí prvku skupiny, který obsahuje položky místní nabídky a přidružte skupinu k místní nabídce.
 
     ```xml
     <Groups>
@@ -77,7 +77,7 @@ Místní nabídky, jako je uvedena v tomto návodu umožňuje uživateli vybrat 
     </Groups>
     ```
 
-4. V elementu tlačítka definujte příkazy, které se zobrazí v místní nabídce. Tlačítka element by měl vypadat nějak takto:
+4. V prvku tlačítka definujte jednotlivé příkazy, které se zobrazí v místní nabídce. Element Buttons by měl vypadat takto:
 
     ```xml
     <Buttons>
@@ -112,7 +112,7 @@ Místní nabídky, jako je uvedena v tomto návodu umožňuje uživateli vybrat 
     </Buttons>
     ```
 
-5. V *ShortcutMenuCommand.cs*, přidejte definice příkazu nastavený identifikátor GUID, nabídku a položky nabídky.
+5. Do *ShortcutMenuCommand.cs*přidejte definice pro identifikátor GUID sady příkazů, místní nabídku a položky nabídky.
 
     ```csharp
     public const string guidShortcutMenuPackageCmdSet = "00000000-0000-0000-0000-00000000"; // your GUID will differ
@@ -122,21 +122,21 @@ Místní nabídky, jako je uvedena v tomto návodu umožňuje uživateli vybrat 
     public const int cmdidBlue = 0x104;
     ```
 
-    Jedná se stejným ID příkazů, které jsou definovány v sekci symboly *ShortcutMenuPackage.vsct* souboru. Skupinu kontextu zde není obsažena vzhledem k tomu, že se vyžaduje jenom v *.vsct* souboru.
+    Jedná se o stejné identifikátory příkazů, které jsou definovány v části symboly souboru *ShortcutMenuPackage. vsct* . Kontextová skupina zde není obsažena, protože je požadována pouze v souboru *. vsct* .
 
-## <a name="implementing-the-shortcut-menu"></a>Implementace nabídku
+## <a name="implementing-the-shortcut-menu"></a>Implementace místní nabídky
  Tato část implementuje místní nabídku a její příkazy.
 
-1. V *ShortcutMenu.cs*, panel nástrojů můžete získat službu příkazu nabídky, ale nikoli ovládací prvek obsahuje. Následující kroky ukazují, jak chcete zpřístupnit službu příkazu nabídky do uživatelského ovládacího prvku.
+1. V *ShortcutMenu.cs*může okno nástroje získat službu příkazu nabídky, ale ovládací prvek, který obsahuje, nemůže. Následující kroky ukazují, jak nastavit, aby byla služba příkazu nabídky k dispozici pro uživatelský ovládací prvek.
 
-2. V *ShortcutMenu.cs*, přidejte následující příkazy using:
+2. Do *ShortcutMenu.cs*přidejte následující direktivy using:
 
     ```csharp
     using Microsoft.VisualStudio.Shell;
     using System.ComponentModel.Design;
     ```
 
-3. Přepište metodu Initialize() panel nástrojů a získat službu příkazu nabídky a přidejte ovládací prvek, předá službu příkazu nabídky do konstruktoru:
+3. Přepište metodu Initialize () panelu nástrojů k získání služby příkazu nabídky a přidání ovládacího prvku, předání služby příkazu nabídky do konstruktoru:
 
     ```csharp
     protected override void Initialize()
@@ -146,7 +146,7 @@ Místní nabídky, jako je uvedena v tomto návodu umožňuje uživateli vybrat 
     }
     ```
 
-4. V konstruktoru místní nabídka okna nástroje odeberte řádek, který přidá ovládací prvek. Konstruktor by teď měl vypadat takto:
+4. V konstruktoru okna nástroje místní nabídka odeberte řádek, který přidá ovládací prvek. Konstruktor by teď měl vypadat takto:
 
     ```csharp
     public ShortcutMenu() : base(null)
@@ -157,7 +157,7 @@ Místní nabídky, jako je uvedena v tomto návodu umožňuje uživateli vybrat 
     }
     ```
 
-5. V *ShortcutMenuControl.xaml.cs*, přidat soukromé pole pro službu příkazu nabídky a změnit konstruktoru ovládacího prvku abyste mohli službu příkazu nabídky. Pak použijte službu příkazu nabídky přidat příkazy místní nabídky. Konstruktor ShortcutMenuControl by teď měl vypadat jako v následujícím kódu. Obslužná rutina příkazu bude definici později.
+5. V *ShortcutMenuControl.XAML.cs*přidejte soukromé pole pro příkazovou službu nabídky a změňte konstruktor ovládacího prvku tak, aby probral službu příkazu nabídky. Pak použijte příkazová služba nabídky k přidání příkazů kontextové nabídky. Konstruktor ShortcutMenuControl by teď měl vypadat jako v následujícím kódu. Obslužná rutina příkazu bude definována později.
 
     ```csharp
     public ShortcutMenuControl(OleMenuCommandService service)
@@ -183,7 +183,7 @@ Místní nabídky, jako je uvedena v tomto návodu umožňuje uživateli vybrat 
     }
     ```
 
-6. V *ShortcutMenuControl.xaml*, přidejte <xref:System.Windows.UIElement.MouseRightButtonDown> událostí na nejvyšší úrovni <xref:System.Windows.Controls.UserControl> elementu. Soubor XAML by měl nyní vypadat nějak takto:
+6. V souboru *ShortcutMenuControl. XAML*přidejte událost <xref:System.Windows.UIElement.MouseRightButtonDown> k elementu nejvyšší úrovně <xref:System.Windows.Controls.UserControl>. Soubor XAML by teď měl vypadat takto:
 
     ```vb
     <UserControl x:Class="TWShortcutMenu.ShortcutMenuControl"
@@ -205,7 +205,7 @@ Místní nabídky, jako je uvedena v tomto návodu umožňuje uživateli vybrat 
     </UserControl>
     ```
 
-7. V *ShortcutMenuControl.xaml.cs*, přidejte zástupnou proceduru pro obslužnou rutinu události.
+7. V *ShortcutMenuControl.XAML.cs*přidejte zástupnou proceduru pro obslužnou rutinu události.
 
     ```csharp
     private void MyToolWindow_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -214,7 +214,7 @@ Místní nabídky, jako je uvedena v tomto návodu umožňuje uživateli vybrat 
     }
     ```
 
-8. Přidejte následující příkazy using do stejného souboru:
+8. Do stejného souboru přidejte následující direktivy using:
 
     ```csharp
     using Microsoft.VisualStudio.Shell;
@@ -224,7 +224,7 @@ Místní nabídky, jako je uvedena v tomto návodu umožňuje uživateli vybrat 
     using System.Windows.Media;
     ```
 
-9. Implementace `MyToolWindowMouseRightButtonDown` událostí následujícím způsobem.
+9. Následujícím způsobem implementujte událost `MyToolWindowMouseRightButtonDown`.
 
     ```csharp
     private void MyToolWindow_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -240,9 +240,9 @@ Místní nabídky, jako je uvedena v tomto návodu umožňuje uživateli vybrat 
     }
     ```
 
-    Tím se vytvoří <xref:System.ComponentModel.Design.CommandID> objekt pro nabídku, polohu kliknutí myší a otevře místní nabídku v dané oblasti s použitím <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService.ShowContextMenu%2A> metody.
+    Tím se vytvoří objekt <xref:System.ComponentModel.Design.CommandID> pro místní nabídku, určíte umístění kliknutí myší a otevře se místní nabídka v tomto umístění pomocí metody <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService.ShowContextMenu%2A>.
 
-10. Implementace obslužné rutiny příkazu.
+10. Implementujte obslužnou rutinu příkazu.
 
     ```csharp
     private void ChangeColor(object sender, EventArgs e)
@@ -264,17 +264,17 @@ Místní nabídky, jako je uvedena v tomto návodu umožňuje uživateli vybrat 
     }
     ```
 
-    V takovém případě právě jedna metoda zpracovává události pro všechny položky nabídky určením <xref:System.ComponentModel.Design.CommandID> a odpovídajícím způsobem nastavení barvy pozadí. Pokud položek nabídky původně obsahovala nesouvisejících příkazy, by jste vytvořili obslužnou rutinu události samostatné pro každý příkaz.
+    V tomto případě pouze jedna metoda zpracovává události pro všechny položky nabídky určením <xref:System.ComponentModel.Design.CommandID> a podle toho nastaví barvu pozadí. Pokud položky nabídky obsahovaly nesouvisející příkazy, měli byste pro každý příkaz vytvořit samostatnou obslužnou rutinu události.
 
-## <a name="test-the-tool-window-features"></a>Testování funkcí okno nástroje
+## <a name="test-the-tool-window-features"></a>Testování funkcí okna nástrojů
 
-1. Sestavte projekt a spusťte ladění. Zobrazí se experimentální instance.
+1. Sestavte projekt a spusťte ladění. Objeví se experimentální instance.
 
-2. V experimentální instanci aplikace, klikněte na tlačítko **zobrazení / ostatní Windows**a potom klikněte na tlačítko **místní nabídka**. Tím by se zobrazit okno nástroje.
+2. V experimentální instanci klikněte na **Zobrazit/další okna**a potom klikněte na **místní nabídka**. V takovém případě by se měl zobrazit okno nástroje.
 
-3. Klikněte pravým tlačítkem myši v těle panel nástrojů. Místní nabídky, který má seznam barev má být zobrazena.
+3. Klikněte pravým tlačítkem myši na tělo okna nástroje. Měla by se zobrazit místní nabídka, která má seznam barev.
 
-4. Klepněte na požadovanou barvu v místní nabídce. Na vybraném barevném změňte barvu pozadí okna nástrojů.
+4. V místní nabídce klikněte na barvu. Barva pozadí okna nástroje by měla být změněna na vybranou barvu.
 
 ## <a name="see-also"></a>Viz také:
 - [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

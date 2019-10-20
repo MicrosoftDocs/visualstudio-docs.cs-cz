@@ -5,19 +5,19 @@ ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Startup
 ms.assetid: 9d517203-3c62-4660-b7b4-ea7d032dcb1e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e0f14d830c9b0c3d091ffc380f64c128b8b79b83
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: 8a6f227e6ab55696250d2769f5eef2e25597e081
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605911"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645223"
 ---
-# <a name="options-dialog-box-environment--startup"></a>Dialogové okno Možnosti: Spuštění \> prostředí
+# <a name="options-dialog-box-environment--startup"></a>Dialogové okno Možnosti: prostředí \> po spuštění
 
 ::: moniker range="vs-2017"
 

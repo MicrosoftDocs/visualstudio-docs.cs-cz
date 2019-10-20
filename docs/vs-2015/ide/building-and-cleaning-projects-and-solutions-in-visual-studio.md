@@ -1,5 +1,5 @@
 ---
-title: Sestavujte řešení vyčištění projektů
+title: Vytváření řešení čištění projektů
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -20,94 +20,94 @@ helpviewer_keywords:
 - builds [Visual Studio], preparing
 ms.assetid: 710891fd-379e-42c2-a84b-44a7af694ca0
 caps.latest.revision: 37
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d447d82815046aba6383c2467c2b44c5b7d0d0f0
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 15f2817b6fd0aee312ff41af218d01ad80bc785e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65685708"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72620553"
 ---
 # <a name="building-and-cleaning-projects-and-solutions-in-visual-studio"></a>Sestavování a čištění projektů a řešení v sadě Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pomocí postupů v tomto tématu můžete vytvářet, znovu sestavit nebo vyčistit všechny nebo některé projekty nebo položky projektu v řešení. Podrobný návod najdete v části [názorný postup: Sestavení aplikace](../ide/walkthrough-building-an-application.md).
+Pomocí postupů v tomto tématu můžete sestavit, znovu sestavit nebo vyčistit všechny nebo některé projekty nebo položky projektu v řešení. Podrobný kurz najdete v tématu [Návod: sestavování aplikace](../ide/walkthrough-building-an-application.md).
 
 > [!NOTE]
-> Uživatelské rozhraní v vaší edicí sady Visual Studio se mohou lišit od co toto téma popisuje, v závislosti na aktivních nastaveních. Chcete-li změnit nastavení, otevřete **nástroje** nabídky a klikněte na tlačítko **nastavení importu a exportu**. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Uživatelské rozhraní ve vaší edici sady Visual Studio se může lišit od toho, co toto téma popisuje, v závislosti na aktivním nastavení. Chcete-li změnit nastavení, otevřete nabídku **nástroje** a pak zvolte **Nastavení importu a exportu**. Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
-## <a name="to-build-rebuild-or-clean-an-entire-solution"></a>Pokud chcete vytvořit, znovu sestavit nebo vyčištění celé řešení
+## <a name="to-build-rebuild-or-clean-an-entire-solution"></a>Sestavení, opětovné sestavení nebo vyčištění celého řešení
 
-1. V **Průzkumníka řešení**, zvolte nebo otevřete řešení.
+1. V **Průzkumník řešení**vyberte nebo otevřete řešení.
 
-2. V panelu nabídky zvolte **sestavení**a pak vyberte jednu z následujících příkazů:
+2. Na panelu nabídek zvolte možnost **sestavit**a pak zvolte jeden z následujících příkazů:
 
-    - Zvolte **sestavení** nebo **sestavit řešení** zkompilovat pouze ty soubory a komponenty, které se změnily od posledního sestavení projektu.
+    - Vyberte **sestavení** nebo **Sestavit řešení** pro zkompilování pouze těch souborů projektu a komponent, které se od posledního sestavení změnily.
 
         > [!NOTE]
-        > **Sestavení** příkaz bude **sestavit řešení** Pokud řešení obsahuje více než jeden projekt.
+        > Příkaz **Build** se vytvoří **řešení sestavení** , když řešení obsahuje více než jeden projekt.
 
-    - Zvolte **znovu sestavit řešení** "clean" řešení a následně vytvořit všechny soubory projektu a komponent.
+    - Zvolte **znovu sestavit řešení** pro vyčištění a pak Sestavte všechny soubory projektu a součásti.
 
-    - Zvolte **Vyčistit řešení** odstranit všechny pomocných a výstupních souborů. Pouze projekt a součást soubory vlevo nových instancí přechodný a výstupních souborů může pak být sestavena.
+    - Vyberte možnost **Vyčistit řešení** a odstraňte všechny mezilehlé a výstupní soubory. Pouze v případě, že zbývá pouze soubory projektu a součásti, lze sestavit nové instance zprostředkujících a výstupních souborů.
 
-## <a name="to-build-or-rebuild-a-single-project"></a>Chcete-li sestavit nebo opětovně sestavit jeden projekt
+## <a name="to-build-or-rebuild-a-single-project"></a>Sestavení nebo opětovné sestavení jednoho projektu
 
-1. V **Průzkumníka řešení**, zvolte nebo otevřete projekt.
+1. V **Průzkumník řešení**vyberte nebo otevřete projekt.
 
-2. V panelu nabídky zvolte **sestavení**a klikněte na tlačítko buď **sestavení** _ProjectName_ nebo **znovu sestavit** _ProjectName_.
+2. Na panelu nabídek zvolte možnost **sestavit**a pak zvolte možnost **sestavit** _ProjectName_ nebo **znovu sestavit** _ProjectName_.
 
-    - Zvolte **sestavení** _ProjectName_ sestavit pouze ty součásti, které se změnily od posledního sestavení projektu.
+    - Zvolením možnosti **sestavit** _ProjectName_ sestavíte pouze součásti projektu, které se od posledního sestavení změnily.
 
-    - Zvolte **znovu sestavit** _ProjectName_ "clean" projekt a pak vytvářet soubory projektu a všechny součásti projektu.
+    - Zvolte možnost **znovu sestavit** _ProjectName_ do "vyčistit" projekt a pak Sestavte soubory projektu a všechny součásti projektu.
 
-## <a name="to-build-only-the-startup-project-and-its-dependencies"></a>Sestavit pouze projekt po spuštění a jeho závislosti
+## <a name="to-build-only-the-startup-project-and-its-dependencies"></a>Sestavení pouze spouštěného projektu a jeho závislostí
 
-1. V panelu nabídky zvolte **nástroje**, **možnosti**.
+1. Na řádku nabídek klikněte na **nástroje**, **Možnosti**.
 
-2. V **možnosti** dialogového okna rozbalte **projekty a řešení** uzel a klikněte na tlačítko **sestavíte a spustíte** stránky.
+2. V dialogovém okně **Možnosti** rozbalte uzel **projekty a řešení** a potom zvolte stránku **sestavení a spuštění** .
 
-    **Sestavení a spuštění projektů a řešení, možnosti** zobrazí se dialogové okno.
+    Otevře se dialogové okno **sestavení a spuštění, projekty a řešení, možnosti** .
 
-3. Vyberte **pouze při spuštění sestavit projekty a závislosti** zaškrtávací políčko.
+3. Zaškrtněte políčko **sestavit projekty po spuštění a závislosti při spuštění** .
 
-    Když je toto políčko zaškrtnuto, pouze aktuální spouštěcí projekt a jeho závislosti jsou vytvořeny při proveďte některý z následujících kroků:
+    Pokud je toto políčko zaškrtnuto, budou vytvořeny pouze aktuální spouštěné projekty a jejich závislosti, pokud provedete některý z následujících kroků:
 
-   - V panelu nabídky zvolte **ladění** > **spustit ladění** (F5).
+   - Na panelu nabídek vyberte možnost **ladit**  > **Spustit ladění** (F5).
 
-   - V panelu nabídky zvolte **sestavení** > **sestavit řešení** (CTRL + SHIFT + B).
+   - Na panelu nabídek vyberte **sestavení**  > **Sestavit řešení** (CTRL + SHIFT + B).
 
-     Když toto políčko zaškrtnuté, všechny projekty, jejich závislosti a soubory řešení jsou vytvořeny při spuštění některou z předchozích příkazů. Ve výchozím nastavení je toto políčko zaškrtnuté.
+     Pokud je toto políčko zaškrtnuté, všechny projekty, jejich závislosti a soubory řešení jsou sestaveny při spuštění některého z předchozích příkazů. Ve výchozím nastavení je toto zaškrtávací políčko zrušeno.
 
-## <a name="to-build-only-the-selected-visual-c-project"></a>Sestavit jenom vybrané projektu Visual C++
+## <a name="to-build-only-the-selected-visual-c-project"></a>Chcete-li vytvořit pouze vybraný C++ projekt Visual
 
-1. Zvolte [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] projektu a pak na panelu nabídek zvolte **sestavení**, **projektu pouze**a jeden z následujících příkazů:
+1. Zvolte projekt [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] a pak na panelu nabídek zvolte možnost **sestavení**, **pouze projekt**a jeden z následujících příkazů:
 
-   - **Jenom Build** *ProjectName*
+   - **Sestavit pouze** *ProjectName*
 
-   - **Znovu sestavit pouze** *ProjectName*
+   - **Opětovné sestavení pouze** *ProjectName*
 
    - **Vyčistit pouze** *ProjectName*
 
    - **Pouze propojit** *ProjectName*
 
-     Platí pouze pro tyto příkazy [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] projekt, který jste zvolili, bez vytváření, nové sestavení, čištění nebo propojení všechny závislosti projektu nebo soubory řešení. V závislosti na vaší verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], **projektu pouze** podnabídky může obsahovat další příkazy.
+     Tyto příkazy se vztahují pouze na [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] projekt, který jste zvolili, aniž byste museli sestavovat, znovu sestavovat, vyčistit nebo propojit všechny závislosti projektu nebo soubory řešení. V závislosti na vaší verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] může podnabídka **pouze projekt** obsahovat více příkazů.
 
-## <a name="to-compile-multiple-c-project-items"></a>Chcete-li zkompilovat několik položek projektu C++
+## <a name="to-compile-multiple-c-project-items"></a>Kompilace více C++ položek projektu
 
-1. V **Průzkumníka řešení**, zvolte více souborů, které mají mohou být zkompilovaný akce, otevřete místní nabídku pro jednu z těchto souborů a klikněte na tlačítko **kompilaci**.
+1. V **Průzkumník řešení**zvolte více souborů, které mají být kompilovány akce, otevřete místní nabídku pro jeden z těchto souborů a pak zvolte možnost **kompilovat**.
 
-     Pokud mají soubory závislosti, budou soubory zkompilovány v pořadí závislosti. Operace kompilace se nezdaří, pokud soubory vyžadují předkompilované hlavičky, která není k dispozici při kompilaci. Kompilace operace použije aktuální konfiguraci aktivního řešení.
+     Pokud jsou soubory závislé, budou soubory zkompilovány v pořadí závislostí. Operace kompilace se nezdaří, pokud soubory vyžadují předkompilovanou hlavičku, která není při kompilaci k dispozici. Operace kompilace používá aktuální aktivní konfiguraci řešení.
 
-## <a name="to-stop-a-build"></a>Zastavit sestavení
+## <a name="to-stop-a-build"></a>Zastavení sestavení
 
-1. Proveďte některý z následujících kroků:
+1. Proveďte jeden z následujících kroků:
 
-    - V panelu nabídky zvolte **sestavení**, **zrušit**.
+    - Na řádku nabídek klikněte na položku **sestavení**, **Zrušit**.
 
-    - Zvolte Ctrl + Break klíče.
+    - Vyberte klávesy CTRL + BREAK.
 
 ## <a name="see-also"></a>Viz také:
- [Postupy: Zobrazování, ukládání a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md) [získat protokoly o sestavení](../msbuild/obtaining-build-logs-with-msbuild.md) [kompilování a sestavování](../ide/compiling-and-building-in-visual-studio.md) [Principy konfigurace sestavení](../ide/understanding-build-configurations.md) [Pro ladění a vydání konfigurace projektu](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e) [Reference sestavení C/C++](https://msdn.microsoft.com/library/100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d) [přepínače příkazového řádku nástroje Devenv](../ide/reference/devenv-command-line-switches.md) [řešení a projekty](../ide/solutions-and-projects-in-visual-studio.md)
+ [Postupy: zobrazování, ukládání a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md) [získávání](../msbuild/obtaining-build-logs-with-msbuild.md) [a sestavování](../ide/compiling-and-building-in-visual-studio.md) [porozumění konfiguracím sestavení](../ide/understanding-build-configurations.md) [ladění a vydávání konfigurací projektů](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e) v jazyce [C/C++ sestavení ](https://msdn.microsoft.com/library/100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d) [Řešení a projekty](../ide/solutions-and-projects-in-visual-studio.md) [přepínače příkazového řádku devenv](../ide/reference/devenv-command-line-switches.md)

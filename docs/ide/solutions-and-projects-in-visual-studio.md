@@ -15,24 +15,24 @@ f1_keywords:
 helpviewer_keywords:
 - solutions [Visual Studio]
 - projects [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c63bc4b52e47c52096d0aa2d339b3c6dc96d7fe9
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 7ca611d7ae1faa86ae7878b2f824ce27b9872713
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251888"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72621592"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projekty v aplikaci Visual Studio
 
 Tato stránka popisuje koncept *projektu* a *řešení* v aplikaci Visual Studio. Také stručně pokrývá okno Průzkumník řešení nástrojů a postup vytvoření nového projektu.
 
 > [!NOTE]
-> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [projekty a řešení v Visual Studio pro Mac](/visualstudio/mac/projects-and-solutions).
+> Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [projekty a řešení v Visual Studio pro Mac](/visualstudio/mac/projects-and-solutions).
 
 ## <a name="projects"></a>Projekty
 
@@ -42,10 +42,10 @@ Při vytváření aplikace nebo webu v aplikaci Visual Studio začnete s *projek
 
 Visual Studio používá [MSBuild](../msbuild/msbuild.md) k sestavení jednotlivých projektů v řešení a každý projekt obsahuje soubor projektu MSBuild. Přípona souboru odráží typ projektu, například C# projekt (. csproj), Visual Basic projekt (. vbproj) nebo databázový projekt (. dbproj). Soubor projektu je dokument XML, který obsahuje všechny informace a pokyny, které nástroj MSBuild potřebuje k sestavení projektu, včetně obsahu, požadavků na platformu, informací o verzi, webového serveru nebo nastavení databázového serveru a úloh pro postupujte.
 
-Soubory projektu jsou založeny na [schématu XML jazyka MSBuild](../msbuild/msbuild-project-file-schema-reference.md). Chcete-li se podívat na obsah novějších [souborů projektů ve stylu sady SDK v sadě](../msbuild/how-to-use-project-sdk.md) Visual Studio, klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte  **\<upravit ProjectName.\>** Chcete-li se podívat na obsah .NET Framework a dalších projektů tohoto stylu, nejprve uvolněte projekt (klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **Uvolnit projekt**). Potom klikněte pravým tlačítkem na projekt a zvolte **Upravit \<ProjectName\>** .
+Soubory projektu jsou založeny na [schématu XML jazyka MSBuild](../msbuild/msbuild-project-file-schema-reference.md). Chcete-li se podívat na obsah novějších [souborů projektů ve stylu sady SDK v sadě](../msbuild/how-to-use-project-sdk.md) Visual Studio, klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **Upravit \<projectname \>** . Chcete-li se podívat na obsah .NET Framework a dalších projektů tohoto stylu, nejprve uvolněte projekt (klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **Uvolnit projekt**). Potom klikněte pravým tlačítkem na projekt a zvolte možnost **upravit \<projectname \>** .
 
 > [!NOTE]
-> K úpravám, sestavování a ladění kódu nemusíte používat řešení nebo projekty v aplikaci Visual Studio. Jednoduše otevřete složku, která obsahuje zdrojové soubory v aplikaci Visual Studio, a začněte upravovat. Další informace najdete v tématu [vývoj kódu v sadě Visual Studio bez projektů nebo řešení](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
+> K úpravám, sestavování a ladění kódu nemusíte používat řešení nebo projekty v aplikaci Visual Studio. Jednoduše otevřete složku, která obsahuje zdrojové soubory v aplikaci Visual Studio, a začněte upravovat. Další informace naleznete v tématu [vývoj kódu v aplikaci Visual Studio bez projektů nebo řešení](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
 
 ## <a name="solutions"></a>Řešení
 
@@ -53,18 +53,18 @@ Projekt je obsažen v rámci *řešení*. Bez ohledu na jeho název není řeše
 
 Visual Studio používá dva typy souborů ( *. sln* a *. suo*) k ukládání nastavení řešení:
 
-|Linka|Name|Popis|
+|klapk|Name|Popis|
 |---------------|----------|-----------------|
-|.sln|Řešení sady Visual Studio|Uspořádá projekty, položky projektu a položky řešení v řešení.|
-|.suo|Možnosti uživatele řešení|Ukládá nastavení a přizpůsobení na úrovni uživatele, například zarážky.|
+|. sln|Řešení sady Visual Studio|Uspořádá projekty, položky projektu a položky řešení v řešení.|
+|. suo|Možnosti uživatele řešení|Ukládá nastavení a přizpůsobení na úrovni uživatele, například zarážky.|
 
 ## <a name="create-new-projects"></a>Vytvořit nové projekty
 
-Nejjednodušší způsob, jak vytvořit nový projekt, je začít od šablony projektu pro konkrétní typ aplikace nebo webu. Šablona projektu se skládá ze základní sady předem generovaných souborů kódu, konfiguračních souborů, prostředků a nastavení. Tyto šablony jsou k dispozici v dialogovém okně, kde vytvoříte nový projekt (**soubor** > **Nový** > **projekt**). Další informace naleznete v tématu [Vytvoření nového projektu v aplikaci Visual Studio](create-new-project.md) a [vytváření řešení a projektů](../ide/creating-solutions-and-projects.md).
+Nejjednodušší způsob, jak vytvořit nový projekt, je začít od šablony projektu pro konkrétní typ aplikace nebo webu. Šablona projektu se skládá ze základní sady předem generovaných souborů kódu, konfiguračních souborů, prostředků a nastavení. Tyto šablony jsou k dispozici v dialogovém okně, ve kterém vytvoříte nový projekt (**soubor**  > **Nový**  > **projekt**). Další informace naleznete v tématu [Vytvoření nového projektu v aplikaci Visual Studio](create-new-project.md) a [vytváření řešení a projektů](../ide/creating-solutions-and-projects.md).
 
 Pokud často přizpůsobíte projekty určitým způsobem, můžete vytvořit vlastní šablonu projektu, kterou pak můžete použít k vytvoření nových projektů z. Další informace naleznete v tématu [Create Project and Item Templates](../ide/creating-project-and-item-templates.md).
 
-Když vytvoříte nový projekt, uloží se ve výchozím nastavení na *%USERPROFILE%\source\repos*. Toto umístění můžete změnit v nastavení **umístění projektů** v nabídce **nástroje** > **Možnosti** > **projekty a** > **umístění**řešení. Další informace naleznete na [stránce projekty a řešení, dialogové okno Možnosti](../ide/reference/projects-and-solutions-options-dialog-box.md).
+Když vytvoříte nový projekt, uloží se ve výchozím nastavení na *%USERPROFILE%\source\repos*. Toto umístění můžete změnit v nastavení **umístění projektů** v nabídce **nástroje**  > **možnosti**  > **projekty a řešení**  > **umístění**. Další informace naleznete na [stránce projekty a řešení, dialogové okno Možnosti](../ide/reference/projects-and-solutions-options-dialog-box.md).
 
 ## <a name="solution-explorer"></a>Průzkumník řešení
 

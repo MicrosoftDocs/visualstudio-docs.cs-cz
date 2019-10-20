@@ -1,5 +1,5 @@
 ---
-title: Návrhář šablony SendAndReceiveReply | Dokumentace Microsoftu
+title: Návrhář šablon SendAndReceiveReply | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -9,52 +9,47 @@ f1_keywords:
 - System.ServiceModel.Activities.ReceiveReply.UI
 ms.assetid: 818a8c84-6593-416d-b016-1d91b85ffb68
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 689f3a57dc3de9bbe63b0ef69a969cac57a639c6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4ecb0e201c4351a8a117d1e35aca97866b2beb89
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62948023"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663273"
 ---
 # <a name="sendandreceivereply-template-designer"></a>Návrhář šablony SendAndReceiveReply
-**SendAndReceiveReply** šablona se používá k vytvoření páru předem nakonfigurované <xref:System.ServiceModel.Activities.Send> a <xref:System.ServiceModel.Activities.ReceiveReply> aktivity v rámci <xref:System.Activities.Statements.Sequence> aktivitu, která se korelují jako součást výměně zpráv žádost odpověď vzor na straně klienta.  
+Šablona **SendAndReceiveReply** se používá k vytvoření páru předem konfigurovaných aktivit <xref:System.ServiceModel.Activities.Send> a <xref:System.ServiceModel.Activities.ReceiveReply> v rámci <xref:System.Activities.Statements.Sequence> aktivity, které se korelují jako součást vzoru výměny zprávy žádosti nebo odpovědi na klientovi.
 
-## <a name="the-sendandreceivereply-template"></a>Šablony SendAndReceiveReply  
- Přidání **SendAndReceiveReply** šablona dělá tři věci kromě vytvoření <xref:System.ServiceModel.Activities.Send> a <xref:System.ServiceModel.Activities.ReceiveReply> aktivity v rámci <xref:System.Activities.Statements.Sequence> aktivity:  
+## <a name="the-sendandreceivereply-template"></a>Šablona SendAndReceiveReply
+ Přidání šablony **SendAndReceiveReply** zahrnuje tři věci kromě vytváření <xref:System.ServiceModel.Activities.Send> a <xref:System.ServiceModel.Activities.ReceiveReply> aktivit v rámci <xref:System.Activities.Statements.Sequence> aktivity:
 
-1. Konfiguruje <xref:System.ServiceModel.Activities.Send.OperationName%2A>, <xref:System.ServiceModel.Activities.Send.ServiceContractName%2A> vlastnosti <xref:System.ServiceModel.Activities.Send> aktivity.  
+1. Nakonfiguruje <xref:System.ServiceModel.Activities.Send.OperationName%2A> <xref:System.ServiceModel.Activities.Send.ServiceContractName%2A> vlastnosti aktivity <xref:System.ServiceModel.Activities.Send>.
 
-2. Vytvoří vazbu <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> vlastnost <xref:System.ServiceModel.Activities.ReceiveReply> aktivitu <xref:System.ServiceModel.Activities.Send> aktivity.  
+2. Váže vlastnost <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> aktivity <xref:System.ServiceModel.Activities.ReceiveReply> na aktivitu <xref:System.ServiceModel.Activities.Send>.
 
-3. Vytvoří <xref:System.ServiceModel.Activities.CorrelationHandle> jako proměnná v Nadřazená aktivita.  
+3. Vytvoří <xref:System.ServiceModel.Activities.CorrelationHandle> jako proměnnou v nadřazené aktivitě.
 
-### <a name="using-the-sendandreceivereply-template-designer"></a>Pomocí návrháře šablony SendAndReceiveReply  
- **SendAndReceiveReply** návrháře aktivit najdete v **zasílání zpráv** kategorii **nástrojů**, který přistupuje po kliknutí **sady nástrojů**  kartě [!INCLUDE[wfd2](../includes/wfd2-md.md)] (případně vyberte možnost **nástrojů** z **zobrazení** nabídky nebo CTRL + ALT + X.)  
+### <a name="using-the-sendandreceivereply-template-designer"></a>Použití návrháře šablon SendAndReceiveReply
+ Návrhář aktivity **SendAndReceiveReply** se dá najít v kategorii **zasílání zpráv** na **panelu nástrojů**, ke které se dostanete kliknutím na kartu **panelu nástrojů** na [!INCLUDE[wfd2](../includes/wfd2-md.md)] (případně můžete vybrat **panel nástrojů** ze **zobrazení).** nebo CTRL + ALT + X.)
 
- **SendAndReceiveReply** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřazené k [!INCLUDE[wfd2](../includes/wfd2-md.md)] surface všude, kde aktivity jsou obvykle umístěny. Tím se vytvoří <xref:System.ServiceModel.Activities.Send> aktivitu, která se dá nakonfigurovat s **odeslat** návrháře aktivit a korelační <xref:System.ServiceModel.Activities.ReceiveReply> , který se dá nakonfigurovat s **ReceiveReplyForSend** návrháře.  
+ Návrhář aktivity **SendAndReceiveReply** lze přetáhnout ze **sady nástrojů** a přetáhnout na [!INCLUDE[wfd2](../includes/wfd2-md.md)] plochu všude, kde jsou obvykle umístěny aktivity. Tím se vytvoří <xref:System.ServiceModel.Activities.Send> aktivita, která se dá nakonfigurovat pomocí návrháře aktivity **odeslání** a korelační <xref:System.ServiceModel.Activities.ReceiveReply>, která se dá nakonfigurovat pomocí návrháře **ReceiveReplyForSend** .
 
- [!INCLUDE[crabout](../includes/crabout-md.md)] pomocí **odeslat** návrháře konfigurace <xref:System.ServiceModel.Activities.Send> aktivity, najdete v článku [odeslat](../workflow-designer/send-activity-designer.md) tématu.  
+ [!INCLUDE[crabout](../includes/crabout-md.md)] použití možnosti **Odeslat** návrháře ke konfiguraci aktivity <xref:System.ServiceModel.Activities.Send>, přečtěte si téma [odeslání](../workflow-designer/send-activity-designer.md) .
 
- [!INCLUDE[crabout](../includes/crabout-md.md)] použití **ReceiveReplyForSend** návrháře konfigurace <xref:System.ServiceModel.Activities.ReceiveReply> aktivity, naleznete v následující části.  
+ [!INCLUDE[crabout](../includes/crabout-md.md)] použití návrháře **ReceiveReplyForSend** ke konfiguraci aktivity <xref:System.ServiceModel.Activities.ReceiveReply>, přečtěte si následující část.
 
-### <a name="properties-of-receivereply"></a>Vlastnosti ReceiveReply  
- Následující tabulka ukazuje <xref:System.ServiceModel.Activities.ReceiveReply> vlastnosti a popisuje, jak se používají v návrháři. Tyto vlastnosti můžete upravit v mřížce vlastností a některé možné upravovat ve [!INCLUDE[wfd2](../includes/wfd2-md.md)]návrhové ploše.  
+### <a name="properties-of-receivereply"></a>Vlastnosti ReceiveReply
+ V následující tabulce jsou uvedeny vlastnosti <xref:System.ServiceModel.Activities.ReceiveReply> a popisuje, jak se používají v návrháři. Tyto vlastnosti lze upravit v mřížce vlastností a některé lze upravovat na [!INCLUDE[wfd2](../includes/wfd2-md.md)]designer ploše.
 
 |                                 Název vlastnosti                                 | Požadováno |                                                                                                                                                                                                                                                                                                                                                        Použití                                                                                                                                                                                                                                                                                                                                                        |
 |-------------------------------------------------------------------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|               <xref:System.Activities.Activity.DisplayName%2A>                |  False   |                                                                                                                                                                                            Volitelné jméno <xref:System.ServiceModel.Activities.ReceiveReply> aktivity. Výchozí hodnota je ReceiveReplyForSend.<br /><br /> Ačkoli použití jinou než výchozí hodnotu pro popisný <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutné, je vhodné použít taková hodnota.                                                                                                                                                                                            |
-|         <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A>         |   Pravda   | Odkaz <xref:System.ServiceModel.Activities.Send> aktivity spárovat s tímto <xref:System.ServiceModel.Activities.ReceiveReply> aktivity. Tato vlastnost nesmí být **null**. <xref:System.ServiceModel.Activities.Send> a <xref:System.ServiceModel.Activities.ReceiveReply> aktivity se používají společně na straně klienta pro model vzorcem zasílání zpráv žádost odpověď. Tato vlastnost určuje, které <xref:System.ServiceModel.Activities.Send> spárované aktivity. V návrháři, nelze upravit tuto vlastnost, protože je automaticky vázán na <xref:System.ServiceModel.Activities.Send> aktivity, ze kterého jste vytvořili <xref:System.ServiceModel.Activities.ReceiveReply> aktivity. |
-|         <xref:System.ServiceModel.Activities.ReceiveReply.Content%2A>         |  False   |                        Určuje zprávu nebo parametr obsah, který se zobrazí. Může se jednat buď <xref:System.ServiceModel.Activities.ReceiveMessageContent> aktivity nebo <xref:System.ServiceModel.Activities.ReceiveParametersContent> aktivity. Tato vlastnost upravit kliknutím na tlačítko se třemi tečkami vedle **obsahu** v mřížce vlastností nebo kliknutím **definovat...** tlačítko vedle **obsahu** popisek **Receive** povrch návrháře aktivit. Obě zobrazení **definici obsahu** dialogového okna. [!INCLUDE[crabout](../includes/crabout-md.md)] jak použít toto políčko, najdete v článku [obsahu dialogové okno Definice](../workflow-designer/content-definition-dialog-box.md) tématu.                         |
-| <xref:System.ServiceModel.Activities.ReceiveReply.CorrelationInitializers%2A> |  False   |              Určuje kolekci <xref:System.ServiceModel.Activities.CorrelationInitializer> objekty, které inicializovat více <xref:System.ServiceModel.Activities.CorrelationHandle> objekty, které to nakonfigurovat <xref:System.ServiceModel.Activities.Receive> aktivity v pracovním postupu. Klikněte na tlačítko se třemi tečkami vedle <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> vlastnost v mřížce vlastnosti otevřít **přidat inicializátory korelace** dialogové okno. [!INCLUDE[crabout](../includes/crabout-md.md)] Pomocí tohoto políčka, najdete v článku [dialogové okno Přidat inicializátory korelace](../workflow-designer/add-correlationinitializers-dialog-box.md) tématu.               |
-|         <xref:System.ServiceModel.Activities.ReceiveReply.Action%2A>          |  False   |                                                                                                                                                                                                                                               Určuje akci záhlaví zprávy. Pokud není explicitně nastavena, její výchozí hodnotu:<br /><br /> <strong>https://tempuri.org/{service obor názvů kontraktu} / {název kontraktu služby} / {název operace}.</strong>                                                                                                                                                                                                                                               |
+|               <xref:System.Activities.Activity.DisplayName%2A>                |  False   |                                                                                                                                                                                            Volitelný popisný název aktivity <xref:System.ServiceModel.Activities.ReceiveReply>. Výchozí hodnota je ReceiveReplyForSend.<br /><br /> I když použití jiné než výchozí hodnoty pro popisný <xref:System.Activities.Activity.DisplayName%2A> není naprosto povinné, je vhodné použít takovou hodnotu.                                                                                                                                                                                            |
+|         <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A>         |   Podmínka   | Odkaz na aktivitu <xref:System.ServiceModel.Activities.Send> spárované s touto aktivitou <xref:System.ServiceModel.Activities.ReceiveReply>. Tato vlastnost nesmí mít **hodnotu null**. Aktivity <xref:System.ServiceModel.Activities.Send> a <xref:System.ServiceModel.Activities.ReceiveReply> se společně na klientovi používají k modelování vzoru zasílání zpráv požadavku a odpovědí. Tato vlastnost určuje, která aktivita <xref:System.ServiceModel.Activities.Send> se spáruje. V Návrháři tuto vlastnost nelze upravit, protože je automaticky svázána s aktivitou <xref:System.ServiceModel.Activities.Send>, ze které jste vytvořili aktivitu <xref:System.ServiceModel.Activities.ReceiveReply>. |
+|         <xref:System.ServiceModel.Activities.ReceiveReply.Content%2A>         |  False   |                        Určuje zprávu nebo parametr obsahu, který se má přijmout. Může to být buď aktivita <xref:System.ServiceModel.Activities.ReceiveMessageContent>, nebo aktivita <xref:System.ServiceModel.Activities.ReceiveParametersContent>. Tuto vlastnost upravíte kliknutím na tlačítko se třemi tečkami vedle pole **obsah** v mřížce vlastností nebo kliknutím na **definovat...** tlačítko vedle popisku **obsahu** na ploše návrháře aktivity **Receive** . V obou zobrazeních se zobrazí dialogové okno **definice obsahu** . [!INCLUDE[crabout](../includes/crabout-md.md)], jak používat toto pole, najdete v tématu věnovaném [definici obsahu v dialogovém okně](../workflow-designer/content-definition-dialog-box.md) .                         |
+| <xref:System.ServiceModel.Activities.ReceiveReply.CorrelationInitializers%2A> |  False   |              Určuje kolekci <xref:System.ServiceModel.Activities.CorrelationInitializer> objektů, které inicializují více objektů <xref:System.ServiceModel.Activities.CorrelationHandle>, které konfigurují tuto <xref:System.ServiceModel.Activities.Receive> aktivitu v rámci pracovního postupu. Kliknutím na tlačítko se třemi tečkami vedle vlastnosti <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> v mřížce vlastnosti otevřete dialogové okno **Přidat Inicializátory korelace** . [!INCLUDE[crabout](../includes/crabout-md.md)] v tomto poli najdete v tématu věnovaném [dialogovému oknu Přidat inicializátoři CorrelationInitializers](../workflow-designer/add-correlationinitializers-dialog-box.md) .               |
+|         <xref:System.ServiceModel.Activities.ReceiveReply.Action%2A>          |  False   |                                                                                                                                                                                                                                               Určuje hlavičku akce zprávy. Pokud není nastavena explicitně, jeho hodnota se nastaví jako výchozí:<br /><br /> <strong>https://tempuri.org/{service obor názvů kontraktu}/{Service název kontraktu}/{Operation název}.</strong>                                                                                                                                                                                                                                               |
 
-## <a name="see-also"></a>Viz také  
- [CorrelationScope](../workflow-designer/correlationscope-activity-designer.md)   
- [InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)   
- [Zobrazit](../workflow-designer/receive-activity-designer.md)   
- [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)   
- [Odeslat](../workflow-designer/send-activity-designer.md)   
- [TransactedReceiveScope](../workflow-designer/transactedreceivescope-activity-designer.md)
+## <a name="see-also"></a>Viz také
+ [CorrelationScope](../workflow-designer/correlationscope-activity-designer.md) [InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md) [Receive](../workflow-designer/receive-activity-designer.md) [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md) [Send](../workflow-designer/send-activity-designer.md) [TransactedReceiveScope](../workflow-designer/transactedreceivescope-activity-designer.md)

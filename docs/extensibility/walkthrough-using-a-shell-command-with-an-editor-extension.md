@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Použití příkazů prostředí s rozšířením editoru | Dokumentace Microsoftu'
+title: 'Návod: použití příkazu shell s rozšířením editoru | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,88 +10,88 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b89d4d4356245929bbd8ada7790729e78da3d15d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 08c3acb26fe6eed1918dd1f9bb9e84b260defa5e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66328140"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72632490"
 ---
-# <a name="walkthrough-use-a-shell-command-with-an-editor-extension"></a>Návod: Pomocí příkazů prostředí s rozšířením editoru
-Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. Tento návod ukazuje, jak přidat dalších úprav k zobrazení textu v editoru tak, že vyvolá příkaz nabídky.
+# <a name="walkthrough-use-a-shell-command-with-an-editor-extension"></a>Návod: použití příkazu shell s rozšířením editoru
+Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabídky. Tento návod ukazuje, jak přidat Doplňky do zobrazení textu v editoru vyvoláním příkazu nabídky.
 
- Tento návod demonstruje použití VSPackage spolu s součást Managed Extensibility Framework (MEF). Je nutné použít VSPackage zaregistrovat příkaz nabídky prostředí sady Visual Studio. A příkaz slouží pro přístup k součást MEF.
+ Tento návod ukazuje použití VSPackage společně s částí komponenty Managed Extensibility Framework (MEF). K registraci příkazu nabídky v prostředí sady Visual Studio je nutné použít VSPackage. A můžete použít příkaz pro přístup k části komponenty MEF.
 
 ## <a name="prerequisites"></a>Požadavky
- Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnutý jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-an-extension-with-a-menu-command"></a>Vytvoření rozšíření pomocí příkazu nabídky
- Vytvoření balíčku VSPackage, která umístí příkaz nabídky s názvem **přidání dalších úprav** na **nástroje** nabídky.
+ Vytvořte VSPackage, který vloží příkaz nabídky s názvem **Přidat** doplňky v nabídce **nástroje** .
 
-1. Vytvořte projekt VSIX C# s názvem `MenuCommandTest`a přidejte název šablony položky příkazu vlastní **AddAdornment**. Další informace najdete v tématu [vytváření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
+1. Vytvořte projekt C# VSIX s názvem `MenuCommandTest` a přidejte vlastní název šablony položky příkazu **AddAdornment**. Další informace najdete v tématu [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
 
-2. Řešení s názvem MenuCommandTest se otevře. MenuCommandTestPackage soubor obsahuje kód, který vytvoří příkaz nabídky a umístí ji na **nástroje** nabídky. V tomto okamžiku příkaz právě způsobí, že se zobrazí okno se zprávou. Dalších krocích se ukazují, jak změnit k zobrazení dalších úprav komentář.
+2. Otevře se řešení s názvem MenuCommandTest. Soubor MenuCommandTestPackage obsahuje kód, který vytvoří příkaz nabídky a umístí jej do nabídky **nástroje** . V tomto okamžiku příkaz vyvolá pouze okno se zprávou. V dalších krocích se dozvíte, jak tuto změnu zobrazit, aby se zobrazila přízpůsobování komentářů.
 
-3. Otevřít *source.extension.vsixmanifest* souboru v editoru manifestu VSIX. `Assets` Karta by měla obsahovat řádek pro Microsoft.VisualStudio.VsPackage s názvem MenuCommandTest.
+3. V editoru manifestu VSIX otevřete soubor *source. extension. vsixmanifest* . Na kartě `Assets` by měl být řádek Microsoft. VisualStudio. VsPackage s názvem MenuCommandTest.
 
-4. Uložte a zavřete *source.extension.vsixmanifest* souboru.
+4. Uložte a zavřete soubor *source. extension. vsixmanifest* .
 
-## <a name="add-a-mef-extension-to-the-command-extension"></a>Přidat rozšíření rozhraní MEF pro rozšíření příkazu
+## <a name="add-a-mef-extension-to-the-command-extension"></a>Přidat rozšíření MEF do rozšíření příkazu
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel řešení, klikněte na tlačítko **přidat**a potom klikněte na tlačítko **nový projekt**. V **přidat nový projekt** dialogové okno, klikněte na tlačítko **rozšiřitelnost** pod **Visual C#** , pak **projekt VSIX**. Pojmenujte projekt `CommentAdornmentTest`.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel řešení, klikněte na položku **Přidat**a poté klikněte na možnost **Nový projekt**. V dialogovém okně **Přidat nový projekt** klikněte na **rozšiřitelnost** v **části C#Visual** a pak na **projekt VSIX**. Pojmenujte projekt `CommentAdornmentTest`.
 
-2. Protože tento projekt bude komunikovat s sestavení se silným názvem balíčku VSPackage, musíte podepsat sestavení. Můžete znovu použít soubor klíče, které jsou vytvořeny již pro sestavení VSPackage.
+2. Vzhledem k tomu, že tento projekt bude pracovat se sestavením VSPackage se silným názvem, je nutné sestavení podepsat. Můžete znovu použít soubor klíče, který již byl vytvořen pro sestavení VSPackage.
 
-    1. Otevřete vlastnosti projektu a vyberte **podepisování** kartu.
+    1. Otevřete vlastnosti projektu a vyberte kartu **podepisování** .
 
     2. Vyberte **podepsat sestavení**.
 
-    3. V části **vyberte soubor klíče se silným názvem**, vyberte *klíč.snk* soubor, který byl vygenerován pro MenuCommandTest sestavení.
+    3. V části **zvolit soubor klíče se silným názvem**vyberte soubor *Key. snk* , který byl vygenerován pro sestavení MenuCommandTest.
 
-## <a name="refer-to-the-mef-extension-in-the-vspackage-project"></a>Odkazovat na rozšíření MEF v projektu VSPackage
- Protože přidáváte komponentu MEF do sady VSPackage, je nutné zadat oba typy prostředků v manifestu.
+## <a name="refer-to-the-mef-extension-in-the-vspackage-project"></a>Odkaz na rozšíření MEF v projektu VSPackage
+ Vzhledem k tomu, že přidáváte komponentu MEF do balíčku VSPackage, je nutné v manifestu zadat oba druhy prostředků.
 
 > [!NOTE]
-> Další informace o rozhraní MEF, naleznete v tématu [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).
+> Další informace o MEF naleznete v tématu [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).
 
-### <a name="to-refer-to-the-mef-component-in-the-vspackage-project"></a>K odkazování na Komponenta MEF v projektu VSPackage
+### <a name="to-refer-to-the-mef-component-in-the-vspackage-project"></a>Chcete-li odkazovat na komponentu MEF v projektu VSPackage
 
-1. V projektu MenuCommandTest otevřete *source.extension.vsixmanifest* souboru v editoru manifestu VSIX.
+1. V projektu MenuCommandTest otevřete soubor *source. extension. vsixmanifest* v editoru manifestu VSIX.
 
-2. Na **prostředky** klikněte na tlačítko **nový**.
+2. Na kartě **assety** klikněte na **Nový**.
 
-3. V **typ** klikněte na položku **Microsoft.VisualStudio.MefComponent**.
+3. V seznamu **typ** vyberte možnost **Microsoft. VisualStudio. MefComponent**.
 
-4. V **zdroj** klikněte na položku **projekt v aktuálním řešení**.
+4. V seznamu **zdroj** vyberte **projekt v aktuálním řešení**.
 
-5. V **projektu** klikněte na položku **CommentAdornmentTest**.
+5. V seznamu **projekt** vyberte možnost **CommentAdornmentTest**.
 
-6. Uložte a zavřete *source.extension.vsixmanifest* souboru.
+6. Uložte a zavřete soubor *source. extension. vsixmanifest* .
 
-7. Ujistěte se, že MenuCommandTest projekt má odkaz na projekt CommentAdornmentTest.
+7. Ujistěte se, že projekt MenuCommandTest má odkaz na projekt CommentAdornmentTest.
 
-8. V projektu CommentAdornmentTest nastavte projekt k vytvoření sestavení. V **Průzkumníka řešení**, vyberte projekt a podívejte se **vlastnosti** okně **Kopírovat výstup sestavení na OutputDirectory** vlastnost a nastavte ho na **true**.
+8. V projektu CommentAdornmentTest nastavte projekt tak, aby vytvořil sestavení. V **Průzkumník řešení**vyberte projekt a v okně **vlastnosti** vyhledejte vlastnost **Kopírovat výstup sestavení do vlastnosti OutputDirectory** a nastavte ji na **hodnotu true**.
 
-## <a name="define-a-comment-adornment"></a>Definování dalších úprav komentář
- Se skládá z dalších úprav komentář, samotné <xref:Microsoft.VisualStudio.Text.ITrackingSpan> vybraný text a některé řetězce, které představují Autor a popis textu, který sleduje.
+## <a name="define-a-comment-adornment"></a>Definování přívylepšení komentářů
+ Vlastní označení komentáře se skládá z <xref:Microsoft.VisualStudio.Text.ITrackingSpan>, která sleduje vybraný text, a některých řetězců, které reprezentují autor a popis textu.
 
-#### <a name="to-define-a-comment-adornment"></a>K definování dalších úprav komentář
+#### <a name="to-define-a-comment-adornment"></a>Definování přívylepšení komentáře
 
-1. V projektu CommentAdornmentTest přidejte nový soubor třídy a pojmenujte ho `CommentAdornment`.
+1. V projektu CommentAdornmentTest přidejte nový soubor třídy a pojmenujte jej `CommentAdornment`.
 
 2. Přidejte následující odkazy:
 
-    1. Microsoft.VisualStudio.CoreUtility
+    1. Microsoft. VisualStudio. CoreUtility
 
-    2. Microsoft.VisualStudio.Text.Data
+    2. Microsoft. VisualStudio. text. data
 
-    3. Microsoft.VisualStudio.Text.Logic
+    3. Microsoft. VisualStudio. text. Logic
 
-    4. Microsoft.VisualStudio.Text.UI
+    4. Microsoft. VisualStudio. text. UI
 
-    5. Microsoft.VisualStudio.Text.UI.Wpf
+    5. Microsoft. VisualStudio. text. UI. WPF
 
-    6. System.ComponentModel.Composition
+    6. System. ComponentModel. složení
 
     7. PresentationCore
 
@@ -99,7 +99,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
 
     9. WindowsBase
 
-3. Přidejte následující `using` příkazu.
+3. Přidejte následující direktivu `using`.
 
     ```csharp
     using Microsoft.VisualStudio.Text;
@@ -111,7 +111,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     internal class CommentAdornment
     ```
 
-5. Přidejte tři pole `CommentAdornment` třídy pro <xref:Microsoft.VisualStudio.Text.ITrackingSpan>, autor a popis.
+5. Přidejte tři pole do třídy `CommentAdornment` pro <xref:Microsoft.VisualStudio.Text.ITrackingSpan>, autora a popis.
 
     ```csharp
     public readonly ITrackingSpan Span;
@@ -119,7 +119,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     public readonly string Text;
     ```
 
-6. Přidáte konstruktor, který inicializuje pole.
+6. Přidejte konstruktor, který inicializuje pole.
 
     ```csharp
     public CommentAdornment(SnapshotSpan span, string author, string text)
@@ -130,12 +130,12 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-## <a name="create-a-visual-element-for-the-adornment"></a>Vytvořit vizuální prvek pro dalších úprav
- Definování vizuální prvek pro vaše dalších úprav. V tomto návodu, definovat ovládací prvek, který dědí z třídy Windows Presentation Foundation (WPF) <xref:System.Windows.Controls.Canvas>.
+## <a name="create-a-visual-element-for-the-adornment"></a>Vytvoření vizuálního prvku pro Doplňky
+ Definujte vizuální prvek pro vaše vylepšení. Pro tento návod definujte ovládací prvek, který dědí z třídy Windows Presentation Foundation (WPF) <xref:System.Windows.Controls.Canvas>.
 
-1. Vytvořte třídu v projektu CommentAdornmentTest a pojmenujte ho `CommentBlock`.
+1. Vytvořte třídu v projektu CommentAdornmentTest a pojmenujte ji `CommentBlock`.
 
-2. Přidejte následující `using` příkazy.
+2. Přidejte následující direktivy `using`.
 
     ```csharp
     using Microsoft.VisualStudio.Text;
@@ -149,14 +149,14 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     using Microsoft.VisualStudio.Utilities;
     ```
 
-3. Ujistěte se, `CommentBlock` třída dědí <xref:System.Windows.Controls.Canvas>.
+3. Nastavit třídu `CommentBlock` dědí od <xref:System.Windows.Controls.Canvas>.
 
     ```csharp
     internal class CommentBlock : Canvas
     { }
     ```
 
-4. Přidáte některé soukromé pole k definování visual aspektů dalších úprav.
+4. Přidejte některá soukromá pole, abyste mohli definovat vizuální aspekty přívylepšení.
 
     ```csharp
     private Geometry textGeometry;
@@ -166,7 +166,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     private static Pen dashPen;
     ```
 
-5. Přidáte konstruktor, který definuje dalších úprav komentář a přidá odpovídající text.
+5. Přidejte konstruktor definující dodatečnou hodnotu komentáře a přidejte příslušný text.
 
     ```csharp
     public CommentBlock(double textRightEdge, double viewRightEdge,
@@ -235,7 +235,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-6. Implementovat taky <xref:System.Windows.Controls.Panel.OnRender%2A> obslužná rutina události, který vykreslí dalších úprav.
+6. Také Implementujte obslužnou rutinu události <xref:System.Windows.Controls.Panel.OnRender%2A>, která kreslí doplňky.
 
     ```csharp
     protected override void OnRender(DrawingContext dc)
@@ -255,11 +255,11 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     ```
 
 ## <a name="add-an-iwpftextviewcreationlistener"></a>Přidat IWpfTextViewCreationListener
- <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener> Je, můžete použít k naslouchání zobrazíte události vytváření součást MEF.
+ @No__t_0 je část komponenty MEF, kterou můžete použít k naslouchání událostem vytváření.
 
 1. Přidejte soubor třídy do projektu CommentAdornmentTest a pojmenujte ho `Connector`.
 
-2. Přidejte následující `using` příkazy.
+2. Přidejte následující direktivy `using`.
 
     ```csharp
     using System.ComponentModel.Composition;
@@ -267,12 +267,12 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     using Microsoft.VisualStudio.Utilities;
     ```
 
-3. Deklarace třídy, která implementuje <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>a exportujte ho pomocí <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "text" a <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> z <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document>. Atribut typu obsahu určuje typ obsahu, ke kterému se vztahuje komponentu. Text typ je základním typem pro všechny typy souborů není binární. Téměř každá zobrazení textu, který je vytvořen proto bude tohoto typu. Atribut text zobrazení role určuje druh textové zobrazení, ke kterému se vztahuje komponentu. Role zobrazení textu dokumentu obecně zobrazit text, který se skládá z řádků a je uložen v souboru.
+3. Deklarujte třídu, která implementuje <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener> a exportujte ji pomocí <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "text" a <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document>. Atribut typ obsahu určuje druh obsahu, na který se komponenta vztahuje. Typ textu je základní typ pro všechny typy bez binárních souborů. Proto budou téměř všechna vytvořená textová zobrazení tohoto typu. Atribut role zobrazení textu určuje druh textového zobrazení, na které se komponenta vztahuje. Role zobrazení textu dokumentu obecně zobrazují text složený z řádků a jsou uloženy v souboru.
 
      [!code-vb[VSSDKMenuCommandTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-using-a-shell-command-with-an-editor-extension_1.vb)]
      [!code-csharp[VSSDKMenuCommandTest#11](../extensibility/codesnippet/CSharp/walkthrough-using-a-shell-command-with-an-editor-extension_1.cs)]
 
-4. Implementace <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> tak, že volání statické metody `Create()` událost `CommentAdornmentManager`.
+4. Implementujte metodu <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> tak, aby zavolala statickou `Create()` událost `CommentAdornmentManager`.
 
     ```csharp
     public void TextViewCreated(IWpfTextView textView)
@@ -281,7 +281,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-5. Přidejte metodu, která můžete použít ke spuštění příkazu.
+5. Přidejte metodu, kterou můžete použít ke spuštění příkazu.
 
     ```csharp
     static public void Execute(IWpfTextViewHost host)
@@ -303,12 +303,12 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-## <a name="define-an-adornment-layer"></a>Definování vrstvu dalších úprav
- Chcete-li přidat nový dalších úprav, je nutné definovat vrstvu dalších úprav.
+## <a name="define-an-adornment-layer"></a>Definovat vrstvu doplňků
+ Chcete-li přidat nové doplňky, je nutné definovat vrstvu přípráv.
 
-### <a name="to-define-an-adornment-layer"></a>Chcete-li definovat vrstvu dalších úprav
+### <a name="to-define-an-adornment-layer"></a>Definování vrstvy doplňků
 
-1. V `Connector` třídy, deklarujte veřejné pole s typem <xref:Microsoft.VisualStudio.Text.Editor.AdornmentLayerDefinition>a exportujte ho pomocí <xref:Microsoft.VisualStudio.Utilities.NameAttribute> , který určuje jedinečný název pro vrstvu dalších úprav a <xref:Microsoft.VisualStudio.Utilities.OrderAttribute> , který definuje vztah pořadí vykreslování této vrstvy dalších úprav na text Zobrazit vrstvy (text, blikajícího kurzoru a výběru).
+1. Ve třídě `Connector` deklarujte veřejné pole typu <xref:Microsoft.VisualStudio.Text.Editor.AdornmentLayerDefinition> a exportujte jej pomocí <xref:Microsoft.VisualStudio.Utilities.NameAttribute>, který určuje jedinečný název pro vrstvu navýšení a <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>, který definuje vztah pořadí vykreslování této vrstvy, k ostatním vrstvám zobrazení textu (text , blikající kurzor a výběr).
 
     ```csharp
     [Export(typeof(AdornmentLayerDefinition))]
@@ -318,12 +318,12 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
 
     ```
 
-## <a name="provide-comment-adornments"></a>Zadejte komentář grafických doplňků
- Při definování dalších úprav také implementujte zprostředkovatele dalších úprav komentář a dalších úprav manažera komentář. Zprostředkovatel dalších úprav komentář udržuje seznam vylepšení komentářů, naslouchá <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> události na základní textovou vyrovnávací paměť a vylepšení komentář odstraní při odstranění základní text.
+## <a name="provide-comment-adornments"></a>Zadat vylepšení komentářů
+ Při definování doplňku se také implementují poskytovatelé přidaných komentářů a Správce doplňků komentářů. Poskytovatel vylepšení komentářů uchovává seznam vylepšení komentářů, naslouchá <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed>m událostem v podkladové vyrovnávací paměti textu a při odstranění podkladového textu odstraní dodatečná vylepšení komentářů.
 
-1. Přidejte nový soubor třídy do projektu CommentAdornmentTest a pojmenujte ho `CommentAdornmentProvider`.
+1. Přidejte do projektu CommentAdornmentTest nový soubor třídy a pojmenujte ho `CommentAdornmentProvider`.
 
-2. Přidejte následující `using` příkazy.
+2. Přidejte následující direktivy `using`.
 
     ```csharp
     using System;
@@ -333,7 +333,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     using Microsoft.VisualStudio.Text.Editor;
     ```
 
-3. Přidejte třídu pojmenovanou `CommentAdornmentProvider`.
+3. Přidejte třídu s názvem `CommentAdornmentProvider`.
 
     ```csharp
     internal class CommentAdornmentProvider
@@ -341,7 +341,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-4. Přidáte soukromé pole pro textovou vyrovnávací paměť a seznam vylepšení komentáře týkající se do vyrovnávací paměti.
+4. Přidejte soukromá pole pro textovou vyrovnávací paměť a seznam doplňků komentářů souvisejících s vyrovnávací pamětí.
 
     ```csharp
     private ITextBuffer buffer;
@@ -349,7 +349,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
 
     ```
 
-5. Přidejte konstruktor pro `CommentAdornmentProvider`. Tento konstruktor by měl mít privátní přístup, protože zprostředkovatel je vytvořena instance, tak `Create()` metody. Přidá konstruktoru `OnBufferChanged` obslužnou rutinu události <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> událostí.
+5. Přidejte konstruktor pro `CommentAdornmentProvider`. Tento konstruktor by měl mít privátní přístup, protože poskytovatel má vytvořenou metodu `Create()`. Konstruktor přidá obslužnou rutinu `OnBufferChanged` události do události <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed>.
 
     ```csharp
     private CommentAdornmentProvider(ITextBuffer buffer)
@@ -361,7 +361,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
 
     ```
 
-6. Přidat `Create()` metody.
+6. Přidejte metodu `Create()`.
 
     ```csharp
     public static CommentAdornmentProvider Create(IWpfTextView view)
@@ -371,7 +371,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
 
     ```
 
-7. Přidat `Detach()` metody.
+7. Přidejte metodu `Detach()`.
 
     ```csharp
     public void Detach()
@@ -385,18 +385,18 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-8. Přidat `OnBufferChanged` obslužné rutiny události.
+8. Přidejte obslužnou rutinu události `OnBufferChanged`.
 
      [!code-csharp[VSSDKMenuCommandTest#21](../extensibility/codesnippet/CSharp/walkthrough-using-a-shell-command-with-an-editor-extension_2.cs)]
      [!code-vb[VSSDKMenuCommandTest#21](../extensibility/codesnippet/VisualBasic/walkthrough-using-a-shell-command-with-an-editor-extension_2.vb)]
 
-9. Přidat deklaraci `CommentsChanged` událostí.
+9. Přidejte deklaraci pro událost `CommentsChanged`.
 
     ```csharp
     public event EventHandler<CommentsChangedEventArgs> CommentsChanged;
     ```
 
-10. Vytvoření `Add()` způsob, jak přidat dalších úprav.
+10. Vytvořením metody `Add()` přidáte doplňky.
 
     ```csharp
     public void Add(SnapshotSpan span, string author, string text)
@@ -422,7 +422,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
 
     ```
 
-11. Přidat `RemoveComments()` metody.
+11. Přidejte metodu `RemoveComments()`.
 
     ```csharp
     public void RemoveComments(SnapshotSpan span)
@@ -449,7 +449,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-12. Přidat `GetComments()` metodu, která vrátí všechny komentáře v rozpětí daného snímku.
+12. Přidejte `GetComments()` metodu, která vrátí všechny komentáře v daném rozsahu snímku.
 
     ```csharp
     public Collection<CommentAdornment> GetComments(SnapshotSpan span)
@@ -465,7 +465,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-13. Přidejte třídu pojmenovanou `CommentsChangedEventArgs`, následujícím způsobem.
+13. Následujícím způsobem přidejte třídu s názvem `CommentsChangedEventArgs`.
 
     ```csharp
     internal class CommentsChangedEventArgs : EventArgs
@@ -482,12 +482,12 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-## <a name="manage-comment-adornments"></a>Správa vylepšení komentářů
- Správce dalších úprav komentář vytvoří dalších úprav a přidá ji do vrstvy dalších úprav. Naslouchá na <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> a <xref:Microsoft.VisualStudio.Text.Editor.ITextView.Closed> události tak, že můžete přesunout nebo odstranit dalších úprav. Je také naslouchá `CommentsChanged` událost, která je vyvolána dalších úprav poskytovatelem komentář při přidávání nebo odebírání komentářů.
+## <a name="manage-comment-adornments"></a>Spravovat vylepšení komentářů
+ Správce přidaných komentářů vytvoří doplňky a přidá ji do vrstvy pro doplňky. Naslouchá na událostech <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> a <xref:Microsoft.VisualStudio.Text.Editor.ITextView.Closed>, aby bylo možné toto doplňky přesunout nebo odstranit. Také naslouchá `CommentsChanged` události, která je aktivována poskytovatelem přízvuku komentáře při přidání nebo odebrání komentářů.
 
 1. Přidejte soubor třídy do projektu CommentAdornmentTest a pojmenujte ho `CommentAdornmentManager`.
 
-2. Přidejte následující `using` příkazy.
+2. Přidejte následující direktivy `using`.
 
     ```csharp
     using System;
@@ -498,7 +498,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     using Microsoft.VisualStudio.Text.Formatting;
     ```
 
-3. Přidejte třídu pojmenovanou `CommentAdornmentManager`.
+3. Přidejte třídu s názvem `CommentAdornmentManager`.
 
     ```csharp
     internal class CommentAdornmentManager
@@ -506,7 +506,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
         }
     ```
 
-4. Přidáte některé soukromé pole.
+4. Přidejte některá soukromá pole.
 
     ```csharp
     private readonly IWpfTextView view;
@@ -514,7 +514,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     private readonly CommentAdornmentProvider provider;
     ```
 
-5. Přidat konstruktor, který správce přihlásí <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> a <xref:Microsoft.VisualStudio.Text.Editor.ITextView.Closed> události a také do `CommentsChanged` události. Konstruktor je privátní, protože správce je vytvořena instance ve statické `Create()` metody.
+5. Přidejte konstruktor, který přihlašuje správce k odběru událostí <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> a <xref:Microsoft.VisualStudio.Text.Editor.ITextView.Closed> a také k události `CommentsChanged`. Konstruktor je privátní, protože je vytvořena instance metody static `Create()`.
 
     ```csharp
     private CommentAdornmentManager(IWpfTextView view)
@@ -530,7 +530,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-6. Přidat `Create()` metodu, která získá zprostředkovatele, nebo v případě potřeby ho vytvoří.
+6. Přidejte metodu `Create()`, která získá zprostředkovatele, nebo v případě potřeby ho vytvořte.
 
     ```csharp
     public static CommentAdornmentManager Create(IWpfTextView view)
@@ -539,7 +539,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-7. Přidat `CommentsChanged` obslužné rutiny.
+7. Přidejte obslužnou rutinu `CommentsChanged`.
 
     ```csharp
     private void OnCommentsChanged(object sender, CommentsChangedEventArgs e)
@@ -554,7 +554,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-8. Přidat <xref:Microsoft.VisualStudio.Text.Editor.ITextView.Closed> obslužné rutiny.
+8. Přidejte obslužnou rutinu <xref:Microsoft.VisualStudio.Text.Editor.ITextView.Closed>.
 
     ```csharp
     private void OnClosed(object sender, EventArgs e)
@@ -565,7 +565,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-9. Přidat <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> obslužné rutiny.
+9. Přidejte obslužnou rutinu <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged>.
 
     ```csharp
     private void OnLayoutChanged(object sender, TextViewLayoutChangedEventArgs e)
@@ -596,23 +596,23 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-10. Přidejte privátní metodu, který vykreslí komentář.
+10. Přidejte soukromou metodu, která nakreslí komentář.
 
      [!code-csharp[VSSDKMenuCommandTest#35](../extensibility/codesnippet/CSharp/walkthrough-using-a-shell-command-with-an-editor-extension_3.cs)]
      [!code-vb[VSSDKMenuCommandTest#35](../extensibility/codesnippet/VisualBasic/walkthrough-using-a-shell-command-with-an-editor-extension_3.vb)]
 
-## <a name="use-the-menu-command-to-add-the-comment-adornment"></a>Použijte příkaz pro přidání dalších úprav komentář
- Příkaz slouží k vytvoření grafického doplňku komentář implementací `MenuItemCallback` metoda sady VSPackage.
+## <a name="use-the-menu-command-to-add-the-comment-adornment"></a>Pomocí příkazu nabídky přidejte doplňky komentáře.
+ Pomocí příkazu nabídky můžete vytvořit dodatečnou poznámku implementací metody `MenuItemCallback` VSPackage.
 
-1. Přidejte následující odkazy projektu MenuCommandTest:
+1. Do projektu MenuCommandTest přidejte následující odkazy:
 
-    - Microsoft.VisualStudio.TextManager.Interop
+    - Microsoft. VisualStudio. TextManager. Interop
 
-    - Microsoft.VisualStudio.Editor
+    - Microsoft. VisualStudio. Editor
 
-    - Microsoft.VisualStudio.Text.UI.Wpf
+    - Microsoft. VisualStudio. text. UI. WPF
 
-2. Otevřít *AddAdornment.cs* soubor a přidejte následující `using` příkazy.
+2. Otevřete soubor *AddAdornment.cs* a přidejte následující direktivy `using`.
 
     ```csharp
     using Microsoft.VisualStudio.TextManager.Interop;
@@ -621,7 +621,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     using CommentAdornmentTest;
     ```
 
-3. Odstranit `Execute()` metoda a přidejte následující obslužná rutina příkazu.
+3. Odstraňte metodu `Execute()` a přidejte následující obslužnou rutinu příkazu.
 
     ```csharp
     private async void AddAdornmentHandler(object sender, EventArgs e)
@@ -629,7 +629,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-4. Přidejte kód pro získání aktivního zobrazení. Musíte získat `SVsTextManager` z prostředí sady Visual Studio, chcete-li získat aktivní `IVsTextView`.
+4. Přidejte kód pro získání aktivního zobrazení. Chcete-li získat aktivní `IVsTextView`, je nutné získat `SVsTextManager` prostředí sady Visual Studio.
 
     ```csharp
     private async void AddAdornmentHandler(object sender, EventArgs e)
@@ -641,7 +641,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-5. Pokud zobrazení tohoto textu je instance zobrazení textu v editoru, můžete přetypovat na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData> rozhraní a potom <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewHost> spolu s přidruženými <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView>. Použití <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewHost> volat `Connector.Execute()` metodu, která získá zprostředkovatele dalších úprav komentář a přidá dalších úprav. Obslužná rutina příkazu by teď měl vypadat přibližně takto:
+5. Pokud je toto textové zobrazení instancí zobrazení textu editoru, můžete ho přetypovat na rozhraní <xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData> a potom získat <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewHost> a jeho přidružené <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView>. Použijte <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewHost> pro volání metody `Connector.Execute()`, která získá poskytovatele přípravení komentáře a přidá doplňky. Obslužná rutina příkazu by teď měla vypadat jako tento kód:
 
     ```csharp
     private async void AddAdornmentHandler(object sender, EventArgs e)
@@ -665,7 +665,7 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-6. Nastavení AddAdornmentHandler metody jako obslužnou rutinu pro příkaz AddAdornment v konstruktoru AddAdornment.
+6. Nastavte metodu AddAdornmentHandler jako obslužnou rutinu pro příkaz AddAdornment v konstruktoru AddAdornment.
 
     ```csharp
     private AddAdornment(AsyncPackage package, OleMenuCommandService commandService)
@@ -679,17 +679,17 @@ Z balíčku VSPackage můžete přidat funkce, jako jsou příkazy do editoru. T
     }
     ```
 
-## <a name="build-and-test-the-code"></a>Vytváření a testování kódu
+## <a name="build-and-test-the-code"></a>Sestavení a testování kódu
 
-1. Sestavte řešení a spusťte ladění. Experimentální instanci aplikace by se zobrazit.
+1. Sestavte řešení a spusťte ladění. Měla by se zobrazit experimentální instance.
 
-2. Vytvořte textový soubor. Zadejte nějaký text a vyberte ji.
+2. Vytvořte textový soubor. Zadejte nějaký text a pak ho vyberte.
 
-3. Na **nástroje** nabídky, klikněte na tlačítko **vyvolat přidání dalších úprav**. Bublina zobrazeno na pravé straně textového okna a měl by obsahovat text, který vypadá podobně jako následující text.
+3. V nabídce **nástroje** klikněte na **vyvolat přidat vylepšení**. Bublina by se měla zobrazit na pravé straně textového okna a měla by obsahovat text, který se podobá následujícímu textu.
 
-     YourUserName
+     Uživatelské_jméno
 
      Fourscore...
 
 ## <a name="see-also"></a>Viz také:
-- [Návod: Typ obsahu propojit příponu názvu souboru](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
+- [Návod: propojení typu obsahu s příponou názvu souboru](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

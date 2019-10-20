@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zobrazování defektů spravovaného kódu | Dokumentace Microsoftu'
+title: 'Postupy: zobrazení vad spravovaného kódu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - code, viewing defects
 ms.assetid: 58aa6c23-d0b3-414d-930d-82e676cb7e5f
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5ef9b5f8da2cf38566c6cedbf10eae3fa5921362
-ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.openlocfilehash: 3fe1c6440f76e358ccde22129cbd413bb229b77e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54755760"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646258"
 ---
 # <a name="how-to-view-managed-code-defects"></a>Postupy: Zobrazování defektů spravovaného kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při analýze kódu jsou hlášeny chyby, varování a zprávy v okně analýzy kódu. V okně analýzy kódu se zobrazí automaticky při spuštění analýzy kódu v projektu nebo řešení.  
-  
- V okně analýzy kódu můžete:  
-  
--   **Zvolte název upozornění.**  
-  
-     Další informace o upozornění se zobrazí v okně analýzy kódu. Řádku ve zdrojovém souboru, která vyvolala upozornění se zobrazí a zvýrazní v editoru zdrojového kódu.  
-  
--   **Vyberte id upozornění.** ID upozornění předchází **certifikační Autority** a zahrnují čtyřmístné číslo. Například CA1234.  
-  
-     Knihovna MSDN téma nápovědy pro toto upozornění se zobrazí. Téma nápovědy obsahuje podrobné informace o příčině upozornění a obsahuje příklady, které ukazují jak upozornění problém vyvolá a vyřeší.
+V nástroji analýza kódu, chyby, upozornění a zprávy jsou hlášeny v okně Analýza kódu. Okno Analýza kódu se zobrazí automaticky při spuštění analýzy kódu pro projekt nebo řešení.
+
+ V okně Analýza kódu můžete:
+
+- **Vyberte název upozornění.**
+
+     Další informace o upozornění se zobrazí v okně Analýza kódu. Řádek ve zdrojovém souboru, který vyvolal upozornění, se zobrazí a zvýrazní v editoru zdrojového kódu.
+
+- **Vyberte ID upozornění.** ID upozornění jsou předponou **certifikační autority** a obsahují číslo se čtyřmi číslicemi. Například CA1234.
+
+     Zobrazí se téma nápovědy MSDN Library pro upozornění. Téma nápovědy obsahuje podrobné informace o příčině upozornění a obsahuje příklady, které ukazují, jak dochází k potížím s upozorněním a je vyřešeno.

@@ -1,88 +1,88 @@
 ---
-title: 'Návrhář pracovního postupu: Definice a používání delegátů aktivit'
+title: 'Návrhář postupu provádění: definování a používání delegátů aktivit'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c68e42ad-3ec0-4c2d-b104-fe36c6d83b5e
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 34cb06bbc5c9575f5a10507a8015c9819e7b533b
-ms.sourcegitcommit: ba5e072c9fedeff625a1332f22dcf3644d019f51
+author: jillre
+ms.openlocfilehash: 67e862e3772b157c4a0999ccd44c3698119ae8a8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66431798"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650340"
 ---
-# <a name="how-to-define-and-consume-activity-delegates-in-the-workflow-designer"></a>Postupy: Definování a použití delegátů aktivit v návrháři postupu provádění
+# <a name="how-to-define-and-consume-activity-delegates-in-the-workflow-designer"></a>Postupy: definice a využívání delegátů aktivit v Návrhář postupu provádění
 
-Rozhraní .NET framework 4.5 zahrnuje návrháře out-of-box <xref:System.Activities.Statements.InvokeDelegate> aktivity. Tento návrhář je možné přiřadit delegáty aktivity, které jsou odvozeny z <xref:System.Activities.ActivityDelegate>, jako například <xref:System.Activities.ActivityAction> nebo <xref:System.Activities.ActivityFunc%601>.
+.NET Framework 4,5 obsahuje předem připravený Návrhář pro aktivitu <xref:System.Activities.Statements.InvokeDelegate>. Tento návrhář lze použít k přiřazení delegátů aktivitě, která je odvozena od <xref:System.Activities.ActivityDelegate>, například <xref:System.Activities.ActivityAction> nebo <xref:System.Activities.ActivityFunc%601>.
 
-## <a name="define-an-activity-delegate"></a>Definovat na delegáta aktivity
+## <a name="define-an-activity-delegate"></a>Definovat delegáta aktivity
 
-1. Vytvořte nový **Konzolová aplikace pracovního postupu** projektu.
+1. Vytvořte nový projekt **konzolové aplikace pracovního postupu** .
 
    > [!NOTE]
-   > Pokud se nezobrazí **pracovního postupu** šablony projektu, nejprve nainstalujte **Windows Workflow Foundation** komponentu sady Visual Studio. Podrobné pokyny najdete v tématu [nainstalovat Windows Workflow Foundation](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation).
+   > Pokud nevidíte šablony projektu **pracovního postupu** , nainstalujte nejprve součást **programovací model Windows Workflow Foundation** sady Visual Studio. Podrobné pokyny najdete v tématu [instalace programovací model Windows Workflow Foundation](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation).
 
-3. Klikněte pravým tlačítkem na projekt v **Průzkumníka řešení** a vyberte **přidat** > **nová položka**. Vyberte **pracovního postupu** kategorie a pak vyberte **aktivity** šablony položky. Pojmenujte novou aktivitu **MyForEach.xaml** a pak vyberte **OK**.
+3. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **Přidat**  > **Nová položka**. Vyberte kategorii **pracovního postupu** a potom vyberte šablonu položka **aktivity** . Pojmenujte novou aktivitu **MyForEach. XAML** a pak vyberte **OK**.
 
-   Aktivity se otevře v Návrháři pracovních postupů.
+   Aktivita se otevře v Návrháři pracovních postupů.
 
-4. V Návrháři postupu provádění, klikněte **argumenty** kartu.
+4. V Návrhář postupu provádění klikněte na kartu **argumenty** .
 
-5. Klikněte na tlačítko **vytvořit Argument**. Pojmenujte novou argument **položky**.
+5. Klikněte na **vytvořit argument**. Pojmenujte nové **položky**argumentu.
 
-6. V **typ argumentu** sloupci vyberte **pole [T]** .
+6. Ve sloupci **typ argumentu** vyberte **pole z [T]** .
 
-7. V typu prohlížeče, vyberte **objekt** a pak vyberte **OK**.
+7. V prohlížeči typů vyberte **objekt** a pak vyberte **OK**.
 
-8. Klikněte na tlačítko **vytvořit Argument** znovu. Pojmenujte novou argument **tělo**. V **směr** sloupci pro argument nový, vyberte **vlastnost**.
+8. Znovu klikněte na tlačítko **vytvořit argument** . Pojmenujte nový **hlavní část**argumentu. Ve sloupci **směr** pro nový argument vyberte **vlastnost**.
 
-9. Ve sloupci Typ argumentu vyberte **vyhledat typy**
+9. Ve sloupci Typ argumentu vyberte **Vyhledat typy** .
 
-10. V prohlížeči typu zadejte **ActivityAction** v **název typu** pole. Vyberte **ActivityAction\<T >** ve stromovém zobrazení. Vyberte **objekt** v rozevírací nabídce, která se zobrazí přiřadit typ **ActivityAction\<objektu >** na argument.
+10. V prohlížeči typu zadejte **ActivityAction** do pole **název typu** . Ve stromovém zobrazení vyberte **ActivityAction \<T >** . V rozevíracím seznamu vyberte **objekt** , který se zobrazí, **\<Object >** k argumentu přiřadit typ ActivityAction.
 
-11. Přetáhněte <xref:System.Activities.Statements.While> aktivita z **tok řízení** části panelu nástrojů na plochu návrháře.
+11. Přetáhněte aktivitu <xref:System.Activities.Statements.While> z části **Flow řízení** v sadě nástrojů na plochu návrháře.
 
-12. Vyberte <xref:System.Activities.Statements.While> aktivitu a vyberte **proměnné** kartu.
+12. Vyberte aktivitu <xref:System.Activities.Statements.While> a vyberte kartu **proměnné** .
 
-13. Vyberte **vytvořit proměnnou**. Pojmenujte novou proměnnou **Index**.
+13. Vyberte **vytvořit proměnnou**. Pojmenujte nový **index**proměnné.
 
-14. V **typ proměnné** sloupci vyberte **Int32**. Nechte **oboru** jako **při**a **výchozí** sloupce prázdné.
+14. Ve sloupci **typ proměnné** vyberte **Int32**. Tento **obor** ponechte jako **while**a **výchozí** sloupec je prázdný.
 
-15. Nastavte **podmínku** vlastnost <xref:System.Activities.Statements.While> aktivitu **index < Items.Length;** .
+15. Nastavte vlastnost **Condition** aktivity <xref:System.Activities.Statements.While> tak, aby **< položky indexována. délka;** .
 
-16. Přetáhněte <xref:System.Activities.Statements.InvokeDelegate> aktivita z **primitiv** části panelu nástrojů **tělo** z <xref:System.Activities.Statements.While> aktivity.
+16. Přetáhněte aktivitu <xref:System.Activities.Statements.InvokeDelegate> z oddílu **primitivs** v sadě nástrojů na **tělo** aktivity <xref:System.Activities.Statements.While>.
 
-17. Vyberte **tělo** v rozevíracím seznamu delegáta.
+17. V rozevíracím seznamu delegáta vyberte **text** .
 
-18. V **vlastnosti** mřížky <xref:System.Activities.Statements.InvokeDelegate> aktivity, klikněte na tlačítko **...**  tlačítko **argumenty delegátů** vlastnost.
+18. V mřížce **vlastnosti** aktivity <xref:System.Activities.Statements.InvokeDelegate> klikněte na tlačítko **...** ve vlastnosti **argumenty delegáta** .
 
-19. V **hodnotu** sloupec argument s názvem **Argument**, zadejte **položky [Index]** . Klikněte na tlačítko **Ok** zavřete **DelegateArguments** dialogového okna.
+19. Do sloupce **hodnota** argumentu pojmenovaného **argumentu**zadejte **Items [index]** . Kliknutím na tlačítko **OK** zavřete dialogové okno **DelegateArguments** .
 
-20. Přetáhněte <xref:System.Activities.Statements.Assign> aktivity na vodorovnou čáru pod <xref:System.Activities.Statements.InvokeDelegate> aktivity. <xref:System.Activities.Statements.Assign> Vytvoření aktivity a <xref:System.Activities.Statements.Sequence> aktivity se vytvoří automaticky obsahovat dvě aktivity v **tělo** část **MyForEach** aktivity. Sekvence je vyžadováno, protože **tělo** oddíl může obsahovat pouze jednu aktivitu. Automaticky vytváří nové <xref:System.Activities.Statements.Sequence> aktivity je nová funkce rozhraní .NET Framework 4.5.
+20. Přetáhněte aktivitu <xref:System.Activities.Statements.Assign> na vodorovnou čáru pod aktivitou <xref:System.Activities.Statements.InvokeDelegate>. Vytvoří se aktivita <xref:System.Activities.Statements.Assign> a automaticky se vytvoří aktivita <xref:System.Activities.Statements.Sequence>, která bude obsahovat dvě aktivity v části **tělo** aktivity **MyForEach** . Sekvence je nutná, protože oddíl **body** může obsahovat pouze jednu aktivitu. Automatické vytvoření nové aktivity <xref:System.Activities.Statements.Sequence> je nová funkce .NET Framework 4,5.
 
-21. Nastavte **k** vlastnost <xref:System.Activities.Statements.Assign> aktivitu **index**. Nastavte **hodnotu** vlastnost **přiřadit** aktivitu **index + 1**.
+21. Nastavte vlastnost **Property aktivity <xref:System.Activities.Statements.Assign> na** **index**. Nastavte vlastnost **Value** aktivity **přiřadit** na **index + 1**.
 
-    Vlastní **MyForEach** aktivita vyvolá aktivitu libovolného jednou pro každou hodnotu předanou do něj prostřednictvím **položky** kolekce s hodnotami v kolekci jako vstupy pro aktivitu.
+    Vlastní aktivita **MyForEach** vyvolá libovolnou aktivitu jednou pro každou předanou hodnotu prostřednictvím kolekce **Items** s hodnotami v kolekci jako vstupy pro aktivitu.
 
 ## <a name="use-the-custom-activity-in-a-workflow"></a>Použití vlastní aktivity v pracovním postupu
 
-1. Sestavte projekt stisknutím kombinace kláves **Ctrl**+**Shift**+**B**.
+1. Sestavte projekt stisknutím **kombinace kláves Ctrl** +**SHIFT** +**B**.
 
-2. V **Průzkumníka řešení**, otevřete **Workflow1.xaml** v návrháři.
+2. V **Průzkumník řešení**otevřete **Workflow1. XAML** v návrháři.
 
-3. Přetáhněte **MyForEach** aktivitu z panelu nástrojů na plochu návrháře. Aktivita je v části nástrojů se stejným názvem jako projekt.
+3. Přetáhněte aktivitu **MyForEach** ze sady nástrojů na plochu návrháře. Aktivita je v části sady nástrojů se stejným názvem jako projekt.
 
-4. Nastavte **položky** vlastnost **MyForEach** aktivitu **nové Object [] {1, "abc"}** .
+4. Nastavte vlastnost **Items** aktivity **MyForEach** na **New Object [] {1, "ABC"}** .
 
-5. Přetáhněte <xref:System.Activities.Statements.WriteLine> aktivita z **primitiv** části panelu nástrojů **delegáta: Body** část **MyForEach** aktivity.
+5. Přetáhněte aktivitu <xref:System.Activities.Statements.WriteLine> z oddílu **primitivs** v sadě nástrojů do oddílu **Delegate: body** aktivity **MyForEach** .
 
-6. Nastavte **Text** vlastnost <xref:System.Activities.Statements.WriteLine> aktivitu **Argument.ToString()** .
+6. Nastavte vlastnost **text** aktivity <xref:System.Activities.Statements.WriteLine> na **argument. ToString ()** .
 
-Při spuštění pracovního postupu se konzola zobrazí následující výstup:
+Při spuštění pracovního postupu zobrazí Konzola následující výstup:
 
-**1**
-**abc**
+**1** 
+**ABC**

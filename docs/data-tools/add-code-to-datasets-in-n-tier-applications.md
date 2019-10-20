@@ -1,5 +1,5 @@
 ---
-title: Přidávání kódu do datových sad v n vrstvé aplikace
+title: Přidávání kódu do datových sad ve vícevrstvých aplikacích
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -8,45 +8,45 @@ dev_langs:
 helpviewer_keywords:
 - n-tier applications, extending DataSets
 ms.assetid: d43c2ccd-4902-43d8-b1a8-d10ca5d3210c
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b776e75df2830b89fd1ffe9aed197e9cd1019851
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: 3e5b3e44e1de085b5389ad0f50aed758f09a2759
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65458480"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648940"
 ---
-# <a name="add-code-to-datasets-in-n-tier-applications"></a>Přidávání kódu do datových sad v n vrstvé aplikace
+# <a name="add-code-to-datasets-in-n-tier-applications"></a>Přidávání kódu do datových sad ve vícevrstvých aplikacích
 
-Funkce pro datovou sadu můžete rozšířit vytvořením souboru částečné třídy datové sady a přidáním kódu k němu (místo přidání kódu *DatasetName*. Soubor Dataset.Designer). Částečné třídy povolit kód pro konkrétní třídu rozdělit mezi několik fyzických souborů. Další informace najdete v tématu [částečné](/dotnet/visual-basic/language-reference/modifiers/partial) nebo [částečné třídy a metody](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods).
+Můžete roztáhnout funkce datové sady tím, že vytvoříte soubor částečné třídy pro datovou sadu a přidáte do něj kód (místo přidávání kódu do vlastnosti *DataSet*. Soubor DataSet. Designer). Částečné třídy umožňují, aby kód pro konkrétní třídu byl rozdělen mezi několik fyzických souborů. Další informace naleznete v tématu [částečné](/dotnet/visual-basic/language-reference/modifiers/partial) nebo [částečné třídy a metody](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods).
 
-Kód, který definuje datovou sadu je generována pokaždé, když dojde ke změně definice datové sady (v typové datové sady). Tento kód se také vygeneruje, když provedete změny za běhu všechny průvodce, který upraví konfiguraci datové sady. Aby váš kód odstranit během obnovování datové sady, přidejte kód do souboru částečné třídy datové sady.
+Kód, který definuje datovou sadu, je vygenerován pokaždé, když se změní definice datové sady (v typované datové sadě). Tento kód je také generován, pokud provedete změny během spuštění libovolného průvodce, který upravuje konfiguraci datové sady. Chcete-li zabránit odstranění kódu během obnovování datové sady, přidejte kód do souboru částečné třídy datové sady.
 
-Ve výchozím nastavení po oddělíte datové sady a kód třídy TableAdapter, výsledkem je soubor samostatné třídy v každém projektu. Původní projekt obsahuje soubor s názvem *DatasetName.Designer.vb* (nebo *DatasetName.Designer.cs*), která obsahuje kód objektu TableAdapter. Projekt, který je zadaný ve **projektu DataSet** vlastnost má soubor s názvem *DatasetName.DataSet.Designer.vb* (nebo *DatasetName.DataSet.Designer.cs*) . Tento soubor obsahuje kód, datové sady.
-
-> [!NOTE]
-> Když oddělíte datové sady a objekty TableAdapter (nastavením **projektu DataSet** vlastnost), existující částečné třídy v projektu nebudou automaticky přesunuty. Existující částečné třídy datové sady je nutné ručně přesunout do projektu datové sady.
+Ve výchozím nastavení platí, že po oddělení datové sady a kódu TableAdapter je výsledkem diskrétní soubor třídy v každém projektu. Původní projekt obsahuje soubor s názvem *DataSet. Designer. vb* (nebo *DatasetName.Designer.cs*), který obsahuje kód TableAdapter. Projekt, který je určen vlastností **projektu DataSet** , má soubor s názvem *DataSet. DataSet. Designer. vb* (nebo *DatasetName.DataSet.Designer.cs*). Tento soubor obsahuje kód datové sady.
 
 > [!NOTE]
-> Když kód pro ověření musí být přidán, typový dataset poskytuje funkce pro generování <xref:System.Data.DataTable.ColumnChanging> a <xref:System.Data.DataTable.RowChanging> obslužných rutin událostí. Další informace najdete v tématu [přidání ověřování do vícevrstvé datové sady](../data-tools/add-validation-to-an-n-tier-dataset.md).
+> Při oddělení datových sad a objekty TableAdapter (nastavením vlastnosti **projektu DataSet** ) existující částečné třídy datové sady v projektu nebudou automaticky přesunuty. Existující částečné třídy datové sady je nutné přesunout ručně do projektu datové sady.
 
-## <a name="to-add-code-to-datasets-in-n-tier-applications"></a>Přidání kódu do datových sad v n vrstvé aplikace
+> [!NOTE]
+> Pokud je nutné přidat ověřovací kód, typová datová sada poskytuje funkce pro generování <xref:System.Data.DataTable.ColumnChanging> a <xref:System.Data.DataTable.RowChanging> obslužných rutin událostí. Další informace najdete v tématu [Přidání ověřování do n-vrstvé datové sady](../data-tools/add-validation-to-an-n-tier-dataset.md).
 
-1. Najít projekt, který obsahuje *XSD* souboru.
+## <a name="to-add-code-to-datasets-in-n-tier-applications"></a>Přidání kódu do datových sad v n-vrstvých aplikacích
 
-2. Vyberte **XSD** soubor otevřete datovou sadu.
+1. Vyhledejte projekt, který obsahuje soubor *. xsd* .
 
-3. Klikněte pravým tlačítkem na tabulky dat, ke kterému chcete přidat kód (název tabulky v záhlaví okna) a pak vyberte **zobrazit kód**.
+2. Vyberte soubor **. xsd** a otevřete datovou sadu.
 
-     Částečné třídy se vytvoří a otevře v editoru kódu.
+3. Klikněte pravým tlačítkem na tabulku dat, do které chcete přidat kód (název tabulky v záhlaví), a pak vyberte **Zobrazit kód**.
 
-4. Přidejte kód do částečné deklarace třídy.
+     Je vytvořena částečná třída, která se otevře v editoru kódu.
 
-     Následující příklad ukazuje, kde přidat kód CustomersDataTable v NorthwindDataSet:
+4. Přidejte kód do deklarace částečné třídy.
+
+     Následující příklad ukazuje, kde přidat kód do CustomersDataTable v NorthwindDataSet:
 
     ```vb
     Partial Public Class CustomersDataTable
@@ -65,7 +65,7 @@ Ve výchozím nastavení po oddělíte datové sady a kód třídy TableAdapter,
 
 ## <a name="see-also"></a>Viz také:
 
-- [Přehled vícevrstvých datových aplikací](../data-tools/n-tier-data-applications-overview.md)
+- [Přehled N-vrstvých datových aplikací](../data-tools/n-tier-data-applications-overview.md)
 - [Přidávání kódu do objektů TableAdapter ve vícevrstvých aplikacích](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)
 - [Vytvoření a konfigurace objektů TableAdapter](create-and-configure-tableadapters.md)
 - [Přehled hierarchické aktualizace](hierarchical-update.md)

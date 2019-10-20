@@ -1,5 +1,5 @@
 ---
-title: 'CA1057: Volání řetězcové přetížení identifikátoru URI volá přetížení System.Uri | Dokumentace Microsoftu'
+title: 'CA1057: řetězcové přetížení identifikátoru URI volá přetížení System. URI | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,40 +12,40 @@ helpviewer_keywords:
 - CA1057
 ms.assetid: ef1e983e-9ca7-404b-82d7-65740ba0ce20
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 4cf50ca225544b06409415320c73e7824a10843a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ba7e7de4f3ef6336ed3d82dc1e1da03ec0bf2575
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62552726"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72603081"
 ---
-# <a name="ca1057-string-uri-overloads-call-systemuri-overloads"></a>CA1057: Přetížení řetězce identifikátoru URI volají přetížení System.Uri
+# <a name="ca1057-string-uri-overloads-call-systemuri-overloads"></a>CA1057: Řetězcové přetížení identifikátoru URI volá přetížení System.Uri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|StringUriOverloadsCallSystemUriOverloads|
 |CheckId|CA1057|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
- Typ deklaruje přetížení metod, které se liší pouze nahrazením řetězcového parametru s <xref:System.Uri?displayProperty=fullName> parametr a přetížení přijímající řetězcový parametr nevolá přetížení přebírající <xref:System.Uri> parametru.
+## <a name="cause"></a>příčina
+ Typ deklaruje přetížení metod, které se liší pouze nahrazením řetězcového parametru parametrem <xref:System.Uri?displayProperty=fullName> a přetížení, které přijímá řetězcový parametr, nevolá přetížení, které přijímá parametr <xref:System.Uri>.
 
 ## <a name="rule-description"></a>Popis pravidla
- Protože přetížení se liší pouze v řetězci /<xref:System.Uri> parametr, řetězec je předpokládá, že představují identifikátor URI (URI). Řetězcová reprezentace identifikátoru URI je náchylná k chybám analýzy a kódování a může vést k ohrožení bezpečnosti. <xref:System.Uri> Třída poskytuje tyto služby bezpečným a zabezpečeným způsobem. K těžit z výhod <xref:System.Uri> třídy, řetězcová přetížení měla volat <xref:System.Uri> přetížit pomocí řetězcový argument.
+ Vzhledem k tomu, že přetížení se liší pouze parametrem String/<xref:System.Uri>, předpokládá se, že řetězec představuje identifikátor URI (Uniform Resource Identifier). Řetězcová reprezentace identifikátoru URI je náchylná k chybám analýzy a kódování a může vést k ohrožení bezpečnosti. Třída <xref:System.Uri> poskytuje tyto služby bezpečným a bezpečným způsobem. Chcete-li těžit výhody třídy <xref:System.Uri>, přetížení řetězce by mělo volat přetížení <xref:System.Uri> pomocí řetězcového argumentu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Znovu implementovat metodu, která využívá řetězcovou reprezentaci identifikátoru URI vytvoří instanci <xref:System.Uri> pomocí řetězcový argument a pak předá <xref:System.Uri> objekt, který má přetížení <xref:System.Uri> parametru.
+ Znovu Implementujte metodu, která používá řetězcovou reprezentaci identifikátoru URI, aby vytvořila instanci <xref:System.Uri> třídy pomocí řetězcového argumentu a poté předá objekt <xref:System.Uri> přetížení, které má parametr <xref:System.Uri>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění tohoto pravidla, je-li parametr řetězec nepředstavuje identifikátor URI.
+ Pokud parametr řetězce nepředstavuje identifikátor URI, je bezpečné potlačit upozornění od tohoto pravidla.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje správně implementované řetězcová přetížení.
+ Následující příklad ukazuje správně implementované přetížení řetězce.
 
  [!code-cpp[FxCop.Design.CallUriOverload#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.CallUriOverload/cpp/FxCop.Design.CallUriOverload.cpp#1)]
  [!code-csharp[FxCop.Design.CallUriOverload#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.CallUriOverload/cs/FxCop.Design.CallUriOverload.cs#1)]
@@ -58,4 +58,4 @@ ms.locfileid: "62552726"
 
  [CA1054: Parametry identifikátoru URI by neměly být řetězce](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)
 
- [CA1055: Identifikátor URI návratové hodnoty by neměly být řetězce](../code-quality/ca1055-uri-return-values-should-not-be-strings.md)
+ [CA1055: Návratové hodnoty identifikátoru URI by neměly být řetězce](../code-quality/ca1055-uri-return-values-should-not-be-strings.md)

@@ -1,5 +1,5 @@
 ---
-title: Přepínač&lt;T&gt; Návrhář aktivity | Dokumentace Microsoftu
+title: Přepnout &lt;T &gt; návrháře aktivit | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -9,49 +9,49 @@ f1_keywords:
 - System.Activities.Statements.Switch`1.UI
 ms.assetid: 18a6c96e-49a9-4356-ab61-fbd7e3ab44bb
 caps.latest.revision: 3
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7e2baacdfb35e2360a0e9dcc56891cadbe7d3ff3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cb6d4eb189b75d6e401bca0cfe50a71081760478
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62953254"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660104"
 ---
-# <a name="switchlttgt-activity-designer"></a>Přepínač&lt;T&gt; návrháře aktivit
-<xref:System.Activities.Statements.Switch%601> Aktivita vyhodnotí zadaný výraz a spustí aktivita z kolekce aktivit, jejichž přidružené klíč odpovídá hodnotě získané z vyhodnocení.  
-  
- **Přepínač\<T >** Návrhář aktivity se používá k vytvoření a konfigurace <xref:System.Activities.Statements.Switch%601> aktivity v [!INCLUDE[wfd1](../includes/wfd1-md.md)].  
-  
-## <a name="the-switchtactivity"></a>Přepínač\<T > aktivity  
- A <xref:System.Activities.Statements.Switch%601> obsahuje aktivity <xref:System.Activities.Statements.Switch%601.Expression%2A> a slovník <xref:System.Activities.Statements.Switch%601.Cases%2A>. Každý případ ve slovníku se skládá z dvojice, který obsahuje *klíč* a aktivitu, která slouží jako odpovídající *hodnota*. <xref:System.Activities.Statements.Switch%601> Aktivita vyhodnotí <xref:System.Activities.Statements.Switch%601.Expression%2A> a porovná je s jednotlivým klíčům. Pokud se najde shoda, bude odpovídající aktivita je provedena. Pouze jediná shoda je možné, protože slovník klíčů musí být jedinečný podle typu rovnosti určené rovnosti slovníku. Pokud není nalezena žádná shoda, <xref:System.Activities.Statements.Switch%601.Default%2A> provádění aktivity.  
-  
-## <a name="how-to-use-the-switcht-activity-designer"></a>Jak použít přepínač\<T > návrháře aktivit  
- **Přepínač\<T >** návrháře aktivit najdete v **tok řízení** kategorii **nástrojů**, který přistupuje po kliknutí **Nástrojů** kartě [!INCLUDE[wfd2](../includes/wfd2-md.md)] (případně vyberte možnost **nástrojů** z **zobrazení** nabídky nebo CTRL + ALT + X.) Po vyřazení do [!INCLUDE[wfd2](../includes/wfd2-md.md)], se zobrazí **vyberte typy** dialogového okna, umožníte uživateli zadat obecného typu *T* používané <xref:System.Activities.Statements.Switch%601> aktivity. Výchozí hodnota je **Int32**. Jednou obecného typu *T* byla vybrána, **přepínač\<T >** návrháře se přidá do návrháře postupu provádění.  
-  
- Toto jsou vlastnosti **přepínač\<T >** návrháře. Všechny tyto vlastnosti můžete upravit v mřížce vlastností. Některé z nich můžete také upravit na plochu návrháře.  
-  
- V následující tabulce jsou uvedeny nejužitečnější <xref:System.Activities.Statements.Switch%601> vlastnosti a popisuje, jak se používají v návrháři.  
-  
-|Název vlastnosti|Požadováno|Použití|  
-|-------------------|--------------|-----------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje popisný název <xref:System.Activities.Statements.Switch%601> návrháře aktivit. Výchozí hodnota je přepínač\<Int32 >. Hodnotu lze upravit v **vlastnosti** okno nebo přímo v hlavičce návrháře.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutné, je osvědčeným postupem je použití jednoho.|  
-|<xref:System.Activities.Statements.Switch%601.Expression%2A>|Pravda|Určuje výraz určený k porovnání s klíči v kolekci případy k určení takovém ke spuštění.|  
-|<xref:System.Activities.Statements.Switch%601.Default%2A>||Určuje aktivita spustí, pokud není nalezena žádná shoda. Klikněte na tlačítko **přidat aktivitu** tlačítko v Návrháři můžete otevřít **výchozí** pole, ve kterém můžete vyřadit aktivity.|  
-|<xref:System.Activities.Statements.Switch%601.Cases%2A>||Určuje případy, který se má vyhodnotit. Chcete-li přidat případ, klikněte na tlačítko **přidat nový případ** tlačítko v dolní části **přepínač\<T >** návrháře. Tlačítko se změní na textové pole (– pole se seznamem při výběru obecného typu při přidávání přepínač\<T > je řetězec nebo výčet). Po přidání klíče **malá a velká hodnota** pole oblasti případu rozšiřuje a aktivitu můžete vyřadit, kde text nápovědy "Sem přetáhněte aktivitu" k definování logiky provádění pro případ.|  
-  
- Lze přidat více případů tak dlouho, dokud se neduplikují případu klíče. V opačném případě dialogovým oknem chyby zobrazí oznámení, že již existuje zadaný klíč případu a, je nutné vybrat jiný klíč. V **přepínač\<T >** návrháře, může být pouze jeden případ oblasti v rozšířené zobrazení najednou. Pokud případu oblasti je v sbaleným zobrazením, kliknutím na oblasti případu umožňuje jeho rozšíření. Všimněte si, že pro případ sbalený návrháře zobrazuje zobrazovaný název aktivity v případě na pravé straně Pokud neexistuje žádný. V opačném případě se zobrazí **přidat aktivitu** tlačítko, které rozšiřuje tento případ, pokud klepnete na tlačítko a umožňuje přidat aktivitu.  
-  
- Kliknutím na klávesu existující případu se změní klíč z popisek do textové pole tak, aby bylo možné upravit klíč případu.  
-  
- Chcete-li odstranit případ 2 způsoby:  
-  
-1. Vyberte tento případ a odstraňte ho.  
-  
-2. Vyberte velikosti písmen, klikněte pravým tlačítkem a zobrazit kontextovou nabídku a vyberte **odstranit**.  
-  
-   Všimněte si, že je nutné vybrat případ samotný ho odstranit. Výběr a odstraněním aktivity v případě odstraní pouze aktivity tomu tak není.  
-  
-## <a name="see-also"></a>Viz také  
+# <a name="switchlttgt-activity-designer"></a>Přepnout &lt;T návrháře aktivit &gt;
+Aktivita <xref:System.Activities.Statements.Switch%601> vyhodnotí zadaný výraz a spustí aktivitu z kolekce aktivit, jejichž přidružený klíč odpovídá hodnotě získané z vyhodnocení.
+
+ K vytvoření a konfiguraci <xref:System.Activities.Statements.Switch%601> aktivity v [!INCLUDE[wfd1](../includes/wfd1-md.md)] se používá **\<T >** designeru aktivity Switch.
+
+## <a name="the-switchtactivity"></a>Aktivita Switch \<T >
+ Aktivita <xref:System.Activities.Statements.Switch%601> obsahuje <xref:System.Activities.Statements.Switch%601.Expression%2A> a slovník <xref:System.Activities.Statements.Switch%601.Cases%2A>. Každý případ ve slovníku se skládá z páru, který obsahuje *klíč* a aktivitu, která slouží jako odpovídající *hodnota*. Aktivita <xref:System.Activities.Statements.Switch%601> vyhodnocuje <xref:System.Activities.Statements.Switch%601.Expression%2A> a porovná je s každým klíčem. Pokud se najde shoda, spustí se odpovídající aktivita. Může být pouze jedna shoda, protože klíče slovníku musí být jedinečné v závislosti na typu rovnosti definovaném porovnávacím slovníku. Pokud se nenajde shoda, <xref:System.Activities.Statements.Switch%601.Default%2A> aktivita se spustí.
+
+## <a name="how-to-use-the-switcht-activity-designer"></a>Jak používat \<T přepínání > návrháře aktivit
+ Nástroj **Switch \<T >** Designer se dá najít v kategorii **toku řízení** na **panelu nástrojů**, ke které se dostanete kliknutím na kartu **panelu nástrojů** na [!INCLUDE[wfd2](../includes/wfd2-md.md)] (případně můžete vybrat **panel nástrojů** v zobrazení) **.** nebo CTRL + ALT + X.) Po přetažení do [!INCLUDE[wfd2](../includes/wfd2-md.md)] se zobrazí dialog **vybrat typy** , který uživateli umožní zadat typ *t* , který se použije v aktivitě 1. Výchozí hodnota je **Int32**. Po výběru obecného typu *T* se do návrháře pracovních postupů přidá **přepínač \<T >** Designer.
+
+ Níže jsou uvedené vlastnosti **přepínače \<T >** Designer. Všechny tyto vlastnosti lze upravit v mřížce vlastností. Některé z nich je také možné upravovat na návrhové ploše.
+
+ Následující tabulka uvádí nejužitečnější vlastnosti <xref:System.Activities.Statements.Switch%601> a popisuje, jak se používají v návrháři.
+
+|Název vlastnosti|Požadováno|Použití|
+|-------------------|--------------|-----------|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje popisný název návrháře <xref:System.Activities.Statements.Switch%601> aktivity. Výchozí hodnota je Switch \<Int32 >. Hodnotu lze upravit v okně **vlastnosti** nebo přímo v záhlaví návrháře.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.Switch%601.Expression%2A>|Podmínka|Určuje výraz, který se použije k porovnání s klíči v kolekci Cases, aby se určilo, který případ se má provést.|
+|<xref:System.Activities.Statements.Switch%601.Default%2A>||Určuje prováděnou aktivitu, pokud nebyla nalezena žádná shoda. Kliknutím na tlačítko **Přidat aktivitu** v Návrháři otevřete **výchozí** pole, ve kterém lze aktivitu vyřadit.|
+|<xref:System.Activities.Statements.Switch%601.Cases%2A>||Určuje případy, které mají být vyhodnoceny. Chcete-li přidat případ, klikněte na tlačítko **Přidat nový případ** v dolní části **přepínače \<T >** Designer. Tlačítko se změní na textové pole (pole se seznamem, pokud je obecný typ vybraný při přidání přepínače \<T > je řetězec nebo výčet). Po přidání klíče do pole **hodnota případu** se oblast Case rozbalí a aktivita může být vynechána tam, kde text nápovědy "Sem přetáhněte aktivitu" pro definování logiky spuštění pro daný případ.|
+
+ Více případů lze přidat, dokud klíče Case nejsou duplikovány. V opačném případě se v dialogovém okně chyby zobrazí zpráva, že zadaný klíč Case již existuje a že je nutné zvolit jiný klíč. V **\<T přepínači** v Návrháři > může být v jednom okamžiku v rozšířeném zobrazení jen jedna oblast Case. Pokud je oblast případu ve sbaleném zobrazení, po kliknutí na oblast případu ji zvětšíte. Všimněte si, že pro sbalený případ Návrhář zobrazuje zobrazovaný název aktivity v případu na pravé straně, pokud existuje. V opačném případě se zobrazí tlačítko **Přidat aktivitu** , které rozbalí případ, pokud na něj kliknete, a umožní vám přidat aktivitu.
+
+ Kliknutím na klíč existujícího případu změníte klíč z popisku na textové pole, abyste mohli upravit klíč případu.
+
+ Existují dva způsoby, jak odstranit případ:
+
+1. Vyberte případ a odstraňte ho.
+
+2. Vyberte případ, kliknutím pravým tlačítkem zobrazte kontextovou nabídku a vyberte **Odstranit**.
+
+   Všimněte si, že je nutné vybrat případ, který jste si ho odstranili. Výběrem a odstraněním aktivity v případě, že pouze dojde k odstranění aktivity, nikoli případu.
+
+## <a name="see-also"></a>Viz také
  [Tok řízení](../workflow-designer/control-flow-activity-designers.md)

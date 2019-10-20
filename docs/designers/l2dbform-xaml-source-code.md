@@ -1,67 +1,67 @@
 ---
-title: Zdrojový kód L2DBForm.XAML
+title: Zdrojový kód L2DBForm.xaml
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: 624e96d4-6d27-4195-8ac2-2f3835f6c57e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b650c65eb81fb087b7783b41065445e1bbea20a0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 41796664d5456876edff81662cbab44edf7a82f2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844252"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72635285"
 ---
 # <a name="l2dbformxaml-source-code"></a>Zdrojový kód L2DBForm.xaml
 
-Toto téma obsahuje a popisuje zdrojového souboru XAML [datové vazby WPF pomocí LINQ na příklad XML](../designers/wpf-data-binding-using-linq-to-xml-example.md), *L2DBForm.xaml*.
+Toto téma obsahuje a popisuje zdrojový soubor XAML pro [datovou vazbu WPF pomocí LINQ to XML příklad](../designers/wpf-data-binding-using-linq-to-xml-example.md) *zdrojový kód L2DBForm. XAML*.
 
 ## <a name="overall-ui-structure"></a>Celková struktura uživatelského rozhraní
 
-Je typické pro projekt WPF, tento soubor obsahuje jeden nadřazený prvek, <xref:System.Windows.Window> – element XML přidružené k odvozené třídě `L2XDBFrom` v `LinqToXmlDataBinding` oboru názvů.
+Jak je typický pro projekt WPF, tento soubor obsahuje jeden nadřazený prvek, <xref:System.Windows.Window> element XML přidružený k odvozené třídě `L2XDBFrom` v oboru názvů `LinqToXmlDataBinding`.
 
-Je součástí klientské oblasti <xref:System.Windows.Controls.StackPanel> světle modrý na pozadí, který je uveden. Tento panel obsahuje čtyři <xref:System.Windows.Controls.DockPanel> oddělené části uživatelského rozhraní <xref:System.Windows.Controls.Separator> pruhy. Účelem těchto částí je popsána v **poznámky** v [předchozí téma](../designers/walkthrough-linqtoxmldatabinding-example.md).
+Klientská oblast je obsažena v <xref:System.Windows.Controls.StackPanel>, kterému je přiděleno světlé modré pozadí. Tento panel obsahuje čtyři oddíly <xref:System.Windows.Controls.DockPanel> uživatelského rozhraní oddělené <xref:System.Windows.Controls.Separator> panely. Účel těchto oddílů je popsaný v části **poznámky** v [předchozím tématu](../designers/walkthrough-linqtoxmldatabinding-example.md).
 
-Každý oddíl obsahuje popisek, který ji identifikuje. V prvních dvou částech se tento popisek se otočenou o 90 stupňů prostřednictvím <xref:System.Windows.FrameworkElement.LayoutTransform%2A>. Zbývající část obsahuje prvky uživatelského rozhraní, které jsou vhodné pro účely tohoto oddílu: bloky textu, textová pole, tlačítka a tak dále. Někdy podřízený <xref:System.Windows.Controls.StackPanel> použité pro zarovnání tyto podřízené ovládací prvky.
+Každá část obsahuje popisek, který ho identifikuje. V prvních dvou oddílech je tento popisek otočen 90 stupňů pomocí <xref:System.Windows.FrameworkElement.LayoutTransform%2A>. Zbytek oddílu obsahuje prvky uživatelského rozhraní, které jsou vhodné pro účely tohoto oddílu: textové bloky, textová pole, tlačítka a tak dále. V některých případech je použita podřízená <xref:System.Windows.Controls.StackPanel> k zarovnání těchto podřízených ovládacích prvků.
 
-## <a name="window-resource-section"></a>Části okna prostředku
+## <a name="window-resource-section"></a>Oddíl prostředků okna
 
-Otevírání `<Window.Resources>` značky řádku 9 označuje začátek části okna prostředku. Končí na řádku 35 uzavírací značku.
+Úvodní značka `<Window.Resources>` na řádku 9 označuje začátek oddílu prostředků okna. Končí uzavírací značkou na řádku 35.
 
-`<ObjectDataProvider>` Značky, který zahrnuje řádky 11 až 25, deklaruje <xref:System.Windows.Data.ObjectDataProvider>s názvem `LoadedBooks`, který používá <xref:System.Xml.Linq.XElement> jako zdroj. <xref:System.Xml.Linq.XElement> Je inicializován pomocí analýzy vložený dokument XML ( `CDATA` element). Všimněte si, že mezery, se zachová, i když deklarace vložený dokument XML, a také při analyzovat. Prázdné místo je zachovat, protože <xref:System.Windows.Controls.TextBlock> ovládací prvek, který se používá k zobrazení nezpracovaném kódu XML, nemá žádný speciální XML možnosti formátování.
+Značka `<ObjectDataProvider>`, která zahrnuje řádky 11 až 25, deklaruje <xref:System.Windows.Data.ObjectDataProvider> s názvem `LoadedBooks`, která jako zdroj používá <xref:System.Xml.Linq.XElement>. @No__t_0 se inicializuje analýzou vloženého dokumentu XML (`CDATA` elementu). Všimněte si, že prázdné znaky jsou zachovány při deklaraci vloženého dokumentu XML a také při jeho analýze. Prázdné znaky jsou zachovány, protože ovládací prvek <xref:System.Windows.Controls.TextBlock>, který slouží k zobrazení nezpracovaného kódu XML, nemá žádné speciální funkce formátování XML.
 
-A konečně <xref:System.Windows.DataTemplate> s názvem `BookTemplate` je definován na řádcích 28 až 34. Tato šablona se používá k zobrazení položek v **Book List** části uživatelského rozhraní. Využívá datová vazba a LINQ na dynamické vlastnosti XML k načtení knihy ID a název knihy prostřednictvím následujících přiřazení:
+Nakonec <xref:System.Windows.DataTemplate> s názvem `BookTemplate` je definována na řádcích 28 až 34. Tato šablona slouží k zobrazení položek v části uživatelské rozhraní **seznamu knih** . Pomocí datových vazeb a LINQ to XML dynamické vlastnosti k získání ID knihy a názvu knihy prostřednictvím následujících přiřazení:
 
 ```xaml
 Text="{Binding Path=Attribute[id].Value}"Text="{Binding Path=Value}"
 ```
 
-## <a name="data-binding-code"></a>Data vazební kód
+## <a name="data-binding-code"></a>Kód datové vazby
 
-Kromě <xref:System.Windows.DataTemplate> použit element, datové vazby v řadě dalších míst v tomto souboru.
+Kromě prvku <xref:System.Windows.DataTemplate> se datová vazba používá v několika dalších místech tohoto souboru.
 
-Při otevírání `<StackPanel>` označení řádku 38 <xref:System.Windows.FrameworkElement.DataContext%2A> tohoto panelu je nastavena na `LoadedBooks` poskytovatele dat služeb.
+V úvodní značce `<StackPanel>` na řádku 38 je vlastnost <xref:System.Windows.FrameworkElement.DataContext%2A> tohoto panelu nastavena na `LoadedBooks` poskytovatel dat.
 
 ```xaml
 DataContext="{Binding Source={StaticResource LoadedBooks}}
 ```
 
-Nastavit kontext dat díky tomu je možné (na řádku 46) pro <xref:System.Windows.Controls.TextBlock> s názvem `tbRawXml` zobrazíte nezpracovaná XML vazbou na tento zprostředkovatel dat `Xml` vlastnost:
+Nastavení kontextu dat umožňuje, aby bylo možné (na řádku 46) pro <xref:System.Windows.Controls.TextBlock> s názvem `tbRawXml` zobrazit nezpracovaný kód XML vazbou na vlastnost `Xml` tohoto poskytovatele dat:
 
 ```xaml
 Text="{Binding Path=Xml}"
 ```
 
-<xref:System.Windows.Controls.ListBox> v **Book List** části uživatelského rozhraní na řádcích 58 prostřednictvím 62, nastaví šablonu pro zobrazení položek `BookTemplate` definovaná v části okna prostředku:
+@No__t_0 v části uživatelské rozhraní **seznamu knih** na řádcích 58 až 62 nastaví šablonu pro své položky zobrazení na `BookTemplate` definované v části prostředků systému Windows:
 
 ```xaml
 ItemTemplate ="{StaticResource BookTemplate}"
 ```
 
-Potom na řádcích 59 prostřednictvím 62, skutečné hodnoty knih, které jsou vázány na toto pole se seznamem:
+Pak na řádcích 59 až 62 jsou skutečné hodnoty knih vázány na tento seznam:
 
 ```xaml
 <ListBox.ItemsSource>
@@ -69,26 +69,26 @@ Potom na řádcích 59 prostřednictvím 62, skutečné hodnoty knih, které jso
 </ListBox.ItemsSource>
 ```
 
-Třetí část uživatelského rozhraní **upravit vybrané knihy**, nejdřív vytvoří vazbu <xref:System.Windows.FrameworkElement.DataContext%2A> nadřazené <xref:System.Windows.Controls.StackPanel> aktuálně vybranou položku v z **Book List** části uživatelského rozhraní (řádek 82):
+Třetí oddíl uživatelského rozhraní, **Upravit vybranou knihu**, nejprve váže <xref:System.Windows.FrameworkElement.DataContext%2A> nadřazených <xref:System.Windows.Controls.StackPanel> k aktuálně vybrané položce v části uživatelského rozhraní **seznamu knih** (řádek 82):
 
 ```xaml
 DataContext="{Binding ElementName=lbBooks, Path=SelectedItem}"
 ```
 
-Poté použije obousměrný datové vazby, tak, aby aktuální hodnoty knihy elementy se zobrazí a aktualizovat z tato dvě textová pole v tomto panelu. Vazba dat na dynamické vlastnosti je podobný datové vazby používané `BookTemplate` data šablony:
+Potom používá obousměrnou datovou vazbu, aby se aktuální hodnoty prvků knihy zobrazovaly do a aktualizovaly ze dvou textových polí na tomto panelu. Datová vazba na dynamické vlastnosti je podobná datové vazbě, která se používá v šabloně `BookTemplate` dat:
 
 ```xaml
 Text="{Binding Path=Attribute[id].Value}"...Text="{Binding Path=Value}"
 ```
 
-V poslední části uživatelského rozhraní, **přidat nová kniha**, nepoužívá datové vazby v kódu XAML. Místo toho je vytváření datových vazeb v jeho zpracování kódu v souboru událostí *L2DBForm.xaml.cs*.
+Poslední oddíl uživatelského rozhraní, **Přidat novou knihu**, ve svém kódu XAML nepoužívá datovou vazbu. Místo toho je datová vazba v kódu zpracování události v souboru *L2DBForm.XAML.cs*.
 
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
 
 > [!NOTE]
-> Doporučujeme, zkopírujte následující kód níže do editoru kódu, jako je C# editoru zdrojového kódu v sadě Visual Studio, aby čísla řádků bude jednodušší sledovat.
+> Doporučujeme zkopírovat následující kód níže do editoru kódu, jako je C# například editor zdrojového kódu v aplikaci Visual Studio, aby bylo číslování řádků snazší sledovat.
 
 ### <a name="code"></a>Kód
 
@@ -240,9 +240,9 @@ V poslední části uživatelského rozhraní, **přidat nová kniha**, nepouž�
 
 ### <a name="comments"></a>Komentáře
 
-Zdrojový kód jazyka C# pro obslužné rutiny událostí, které jsou spojené s prvky uživatelského rozhraní WPF, naleznete v tématu [zdrojový kód L2DBForm.xaml.cs](../designers/l2dbform-xaml-cs-source-code.md).
+C# Zdrojový kód obslužných rutin událostí přidružených k PRVKŮM uživatelského rozhraní WPF naleznete v tématu [L2DBForm.XAML.cs Source Code](../designers/l2dbform-xaml-cs-source-code.md).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Návod: Příklad LinqToXmlDataBinding](../designers/walkthrough-linqtoxmldatabinding-example.md)
+- [Návod: příklad příkladu LinqToXmlDataBinding](../designers/walkthrough-linqtoxmldatabinding-example.md)
 - [Zdrojový kód L2DBForm.xaml.cs](../designers/l2dbform-xaml-cs-source-code.md)

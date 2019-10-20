@@ -3,26 +3,26 @@ title: V souboru nastavení aplikace chybí vlastnost připojení nebo je nespr�
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 77724510-ff59-4d43-b933-a0434e1ac597
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: becbc5032c05af1edf5361a54fd0a80b4a0ff412
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: 2619b5826002944bd728a7744e0b2507cb493dc4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65458309"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648166"
 ---
 # <a name="the-connection-property-in-the-application-settings-file-is-missing-or-incorrect"></a>V souboru nastavení aplikace chybí vlastnost připojení nebo je nesprávná.
 
-Vlastnost připojení v souboru nastavení aplikace je chybí nebo není správný. Připojovací řetězec z *dbml* jejím místě se použil souboru.
+Vlastnost Connection v souboru nastavení aplikace chybí nebo je nesprávná. Na svém místě se použil připojovací řetězec ze souboru *. dbml* .
 
-*Dbml* soubor obsahuje odkaz na připojovací řetězec v souboru nastavení aplikace, který nebyl nalezen. Tato zpráva je informační; nastavení připojovacího řetězce se vytvoří při **OK** dojde ke kliknutí na.
+Soubor *. dbml* obsahuje odkaz na připojovací řetězec v souboru nastavení aplikace, který nebyl nalezen. Tato zpráva je informační. nastavení připojovacího řetězce bude vytvořeno při kliknutí na **tlačítko OK** .
 
-Chcete-li odpovědět na tuto zprávu, vyberte **OK**. Informace o připojení, která je součástí *dbml* souboru se přidá do nastavení aplikace.
+Pokud chcete na tuto zprávu reagovat, vyberte **OK**. Informace o připojení, které jsou obsaženy v souboru *. dbml* , jsou přidány do nastavení aplikace.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Nástroje LINQ to SQL v sadě Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

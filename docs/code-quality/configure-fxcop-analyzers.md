@@ -4,24 +4,24 @@ ms.date: 09/23/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - FxCop analyzers, configuring
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 62dd64dfe4e801f91731b1ed569e3a809156d0d1
-ms.sourcegitcommit: b23d73c86ec7720c4cd9a58050860bc559623a3d
+ms.openlocfilehash: 1d2c4f6b44daf83b3fd013167ec24e82c45ce2e8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172795"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649703"
 ---
 # <a name="configure-fxcop-analyzers"></a>Konfigurace analyzátorů FxCop
 
 [Balíček analyzátorů FxCop](install-fxcop-analyzers.md) se skládá z nejdůležitějších pravidel "FxCop" z analyzátoru starších verzí převedených na analyzátory kódu založené na .NET Compiler Platform. U určitých pravidel FxCop můžete upřesnit, které části základu kódu by měly být aplikovány na [Konfigurovatelné možnosti](fxcop-analyzer-options.md). Každá možnost je určena přidáním páru klíč-hodnota k souboru [EditorConfig](https://editorconfig.org) . Konfigurační soubor může být [specifický pro projekt](#per-project-configuration) nebo může být [sdílen](#shared-configuration) mezi dvěma nebo více projekty.
 
 > [!TIP]
-> Kliknutím pravým tlačítkem myši na projekt v **Průzkumník řešení** a vybráním **přidat** **novou položku** >  přidejte do projektu soubor. editorconfig. V okně **Přidat novou položku** do vyhledávacího pole zadejte **editorconfig** . Vyberte šablonu **soubor editorconfig (výchozí)** a zvolte **Přidat**.
+> Kliknutím pravým tlačítkem myši na projekt v **Průzkumník řešení** a vybráním **Přidat**  > **novou položku**přidejte do projektu soubor. editorconfig. V okně **Přidat novou položku** do vyhledávacího pole zadejte **editorconfig** . Vyberte šablonu **soubor editorconfig (výchozí)** a zvolte **Přidat**.
 >
 > ![Přidat soubor editorconfig do projektu v aplikaci Visual Studio](media/add-editorconfig-file.png)
 
@@ -46,7 +46,7 @@ Syntaxe pro konfiguraci možnosti pro *všechna* pravidla je následující:
 
 |Syntaxe|Příklad|
 |-|-|
-| dotnet_code_quality.OptionName = OptionValue | `dotnet_code_quality.api_surface = public` |
+| dotnet_code_quality. Parametr Option = OptionValue | `dotnet_code_quality.api_surface = public` |
 
 ### <a name="category-of-rules"></a>Kategorie pravidel
 
@@ -54,7 +54,7 @@ Syntaxe pro konfiguraci možnosti pro *kategorii* pravidel (například pojmenov
 
 |Syntaxe|Příklad|
 |-|-|
-| dotnet_code_quality.RuleCategory.OptionName = OptionValue | `dotnet_code_quality.Naming.api_surface = public` |
+| dotnet_code_quality. RuleCategory. Option = OptionValue | `dotnet_code_quality.Naming.api_surface = public` |
 
 ### <a name="specific-rule"></a>Konkrétní pravidlo
 
@@ -62,7 +62,7 @@ Syntaxe pro konfiguraci možnosti pro *konkrétní* pravidlo je následující:
 
 |Syntaxe|Příklad|
 |-|-|
-| dotnet_code_quality.RuleId.OptionName = OptionValue | `dotnet_code_quality.CA1040.api_surface = public` |
+| dotnet_code_quality. RuleId. Option = OptionValue | `dotnet_code_quality.CA1040.api_surface = public` |
 
 ## <a name="per-project-configuration"></a>Konfigurace pro jednotlivé projekty
 

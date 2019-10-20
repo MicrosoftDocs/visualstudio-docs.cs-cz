@@ -2,35 +2,35 @@
 title: Přidávání rozšíření do definicí DSL
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa5c02fc28e7ffec4765d94758c838ab149e7ac3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 767973705d004a46644a51ba20ad9292ab80cb39
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62960483"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654373"
 ---
 # <a name="add-extensions-to-dsl-definitions"></a>Přidání rozšíření do definic DSL
 
-Rozšíření definice DSL umožňuje vytvořit balíček rozšíření jazyka specifického pro doménu (DSL). Rozšíření DSL, která je obsažena ve Visual Studio integrace rozšíření (VSIX), můžete nainstalovat na počítači uživatele stejným způsobem jako DSL. Další funkce můžete dynamicky povolené a zakázané v době běhu. DSL nemusí být vytvořené speciálně pro rozšíření a rozšíření nelze navrhovat později, nebo třetími stranami, beze změny rozšířené DSL.
+Rozšíření definice DSL umožňuje vytvořit balíček rozšíření pro jazyk specifický pro doménu (DSL). Přípona DSL, která je obsažena v rozšíření integrace sady Visual Studio (VSIX), může být nainstalována v počítači uživatele stejným způsobem jako DSL. Další funkce lze v době běhu dynamicky povolit a zakázat. DSL nemusí být explicitně navržené pro rozšíření a rozšíření je možné navrhnout později nebo třetí strany, aniž by změnili rozšířenou DSL.
 
-Rozšíření DSL může obsahovat následující funkce:
+Rozšíření DSL můžou zahrnovat následující funkce:
 
-- Vlastnosti elementů modelu a prezentace
+- Vlastnosti pro model a prezentační prvky
 
-- Dekoratéry pro obrazců a konektorů
+- Dekoratéry pro obrazce a konektory
 
-- Třídy, relace, obrazců a konektorů
+- Třídy, vztahy, obrazce a konektory
 
-- Omezení ověření
+- Omezení ověřování
 
-- Položky panelu nástrojů a karty
+- Položky a karty nástrojů
 
-Uživatel rozšířené DSL můžete vytvořit a uložit model, který obsahuje instance další funkce. Model lze číst jinými uživateli, kteří nainstalovali odpovídající rozšíření. Uživatelé, kteří nejsou nainstalované rozšíření nemůže používat další funkce, ale můžete aktualizovat a uložit model bez ztráty další funkce.
+Uživatel rozšířené DSL může vytvořit a uložit model, který obsahuje instance dalších funkcí. Model můžou číst jiní uživatelé, kteří si nainstalovali odpovídající rozšíření. Uživatelé, kteří rozšíření nenainstalovali, nemohou používat další funkce, ale mohou aktualizovat a uložit model bez ztráty dalších funkcí.
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 

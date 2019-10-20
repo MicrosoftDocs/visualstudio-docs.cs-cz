@@ -12,36 +12,36 @@ helpviewer_keywords:
 - displaying data, Windows Forms
 - data [Windows Forms], displaying
 ms.assetid: 243338ef-41af-4cc5-aff7-1e830236f0ec
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6b961af0bf35bb4476f9f336fcf5298bb0bd3651
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 24c3549cf98e49f3419ef0e7387a6c236c15e9e6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62818737"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648844"
 ---
-# <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>Vytvoření vazby ovládacích prvků Windows Forms k datům v sadě Visual Studio
+# <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>Vytvoření vazby ovládacích prvků modelu Windows Forms k datům v sadě Visual Studio
 
-Uživatelům vaší aplikace můžete zobrazit data pomocí vazby dat do formulářů Windows. Chcete-li vytvořit tyto ovládací prvky vázané na data, přetáhněte položky z **zdroje dat** okna do Návrháře formulářů Windows v sadě Visual Studio.
+Data můžete uživatelům vaší aplikace zobrazit tak, že data svážete s model Windows Forms. Chcete-li vytvořit tyto ovládací prvky vázané na data, přetáhněte položky z okna **zdroje dat** do Návrhář formulářů v aplikaci Visual Studio.
 
 ![Operace přetažení zdroje dat](../data-tools/media/raddata-data-source-drag-operation.png)
 
 > [!TIP]
-> Pokud **zdroje dat** okno není viditelná, lze jej otevřít výběrem **zobrazení** > **ostatní Windows** > **zdroje dat** , nebo stisknutím klávesy **Shift**+**Alt**+**D**. Musí mít projekt otevřít v sadě Visual Studio zobrazíte **zdroje dat** okna.
+> Pokud není okno **zdroje dat** viditelné, můžete ho otevřít výběrem možnosti **Zobrazit**  >  jiné**zdroje dat** > **Windows** nebo stisknutím klávesy **SHIFT** +**ALT** +**D**. Chcete-li zobrazit okno **zdroje dat** , musíte mít otevřený projekt v aplikaci Visual Studio.
 
-Před přetažením položky, můžete nastavit typ ovládacího prvku, který chcete svázat. V závislosti na tom, zda zvolíte tabulce samotné nebo na individuální sloupec se zobrazí různé hodnoty.  Můžete také nastavit vlastní hodnoty. Tabulka **podrobnosti** znamená, že každý sloupec je vázán na samostatném ovládacím prvku.
+Před přetažením položek můžete nastavit typ ovládacího prvku, na který chcete vytvořit vazby. Různé hodnoty se zobrazí v závislosti na tom, zda jste zvolili tabulku nebo jednotlivý sloupec.  Můžete také nastavit vlastní hodnoty. V případě tabulky **Podrobnosti** znamená, že každý sloupec je svázán s samostatným ovládacím prvkem.
 
-![Vytvoření vazby zdroje dat do ovládacího prvku DataGridView](../data-tools/media/raddata-bind-data-source-to-datagridview.png)
+![Vázání zdroje dat k ovládacímu prvku DataGridView](../data-tools/media/raddata-bind-data-source-to-datagridview.png)
 
-## <a name="bindingsource-and-bindingnavigator-controls"></a>Objekt BindingSource a BindingNavigator – ovládací prvky
+## <a name="bindingsource-and-bindingnavigator-controls"></a>Ovládací prvky BindingSource a BindingNavigator
 
-<xref:System.Windows.Forms.BindingSource> Komponenta má dva účely. Nejprve poskytuje abstrakční vrstvu při vytvoření vazby ovládacích prvků na data. Ovládací prvky ve formuláři je vázána na <xref:System.Windows.Forms.BindingSource> komponentu místo přímo ke zdroji dat. Za druhé je možné spravovat kolekci objektů. Přidání typu <xref:System.Windows.Forms.BindingSource> vytvoří seznam daného typu.
+Komponenta <xref:System.Windows.Forms.BindingSource> slouží dvěma účelům. Nejprve poskytuje vrstvu abstrakce při vázání ovládacích prvků k datům. Ovládací prvky ve formuláři jsou vázány na <xref:System.Windows.Forms.BindingSource> komponentu namísto přímo ke zdroji dat. Za druhé může spravovat kolekci objektů. Přidání typu do <xref:System.Windows.Forms.BindingSource> vytvoří seznam tohoto typu.
 
-Další informace o <xref:System.Windows.Forms.BindingSource> komponenty, naleznete v tématu:
+Další informace o komponentě <xref:System.Windows.Forms.BindingSource> najdete v tématech:
 
 - [BindingSource – komponenta](/dotnet/framework/winforms/controls/bindingsource-component)
 
@@ -49,38 +49,38 @@ Další informace o <xref:System.Windows.Forms.BindingSource> komponenty, nalezn
 
 - [Architektura komponenty BindingSource](/dotnet/framework/winforms/controls/bindingsource-component-architecture)
 
-[BindingNavigator – ovládací prvek](/dotnet/framework/winforms/controls/bindingnavigator-control-windows-forms) poskytuje uživatelské rozhraní pro procházení dat zobrazených v aplikaci Windows.
+[Ovládací prvek BindingNavigator](/dotnet/framework/winforms/controls/bindingnavigator-control-windows-forms) poskytuje uživatelské rozhraní pro procházení dat zobrazených aplikací systému Windows.
 
 ## <a name="bind-to-data-in-a-datagridview-control"></a>Vytvoření vazby k datům v ovládacím prvku DataGridView
 
-Pro [ovládacího prvku DataGridView](/dotnet/framework/winforms/controls/datagridview-control-overview-windows-forms), celá tabulka je vázána na daný jeden ovládací prvek. Při přetažení **DataGridView** do formuláře, odeberte nástroj pro procházení záznamů (<xref:System.Windows.Forms.BindingNavigator>) se také zobrazí. A [datovou sadu](../data-tools/dataset-tools-in-visual-studio.md), [TableAdapter](../data-tools/create-and-configure-tableadapters.md), <xref:System.Windows.Forms.BindingSource>, a <xref:System.Windows.Forms.BindingNavigator> zobrazují v panelu komponent. Na následujícím obrázku [TableAdapterManager](https://msdn.microsoft.com/library/bb384426.aspx) je také přidat, protože v tabulce Zákazníci má vztah k tabulce objednávky. Tyto proměnné jsou všechny deklarované v automaticky vygenerovaném kódu jako soukromé členy třídy formuláře. Automaticky generovaný kód pro naplnění **DataGridView** se nachází v `Form_Load` obslužné rutiny události. Kód pro uložení dat. Chcete-li aktualizovat databázi se nachází v `Save` obslužné rutiny události pro **BindingNavigator**. Můžete přesunout nebo podle potřeby upravte tento kód.
+Pro [ovládací prvek DataGridView](/dotnet/framework/winforms/controls/datagridview-control-overview-windows-forms)je celá tabulka svázána s tímto jediným ovládacím prvkem. Při přetahování **ovládacího prvku DataGridView** do formuláře se zobrazí také pruh nástrojů pro navigaci záznamů (<xref:System.Windows.Forms.BindingNavigator>). V zásobníku komponent se zobrazí [datová sada](../data-tools/dataset-tools-in-visual-studio.md), [TableAdapter](../data-tools/create-and-configure-tableadapters.md), <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>. Na následujícím obrázku je přidána také [TableAdapterManager](https://msdn.microsoft.com/library/bb384426.aspx) , protože tabulka Customers má relaci k tabulce Orders. Tyto proměnné jsou všechny deklarovány v automaticky generovaném kódu jako soukromé členy ve třídě Form. Automaticky generovaný kód pro vyplňování **ovládacího prvku DataGridView** je umístěn v obslužné rutině události `Form_Load`. Kód pro uložení dat pro aktualizaci databáze se nachází v obslužné rutině události `Save` pro **BindingNavigator**. V případě potřeby můžete tento kód přesunout nebo upravit.
 
-![Prvek GridView s BindingNavigator](../data-tools/media/raddata-gridview-with-bindingnavigator.png)
+![GridView s BindingNavigator](../data-tools/media/raddata-gridview-with-bindingnavigator.png)
 
-Můžete přizpůsobit chování **DataGridView** a **BindingNavigator** kliknutím na inteligentní značky v pravém horním rohu každé:
+Chování **ovládacího prvku DataGridView** a **objektu BindingNavigator** můžete přizpůsobit kliknutím na inteligentní značku v pravém horním rohu každé z těchto funkcí:
 
-![Inteligentní značky ovládacího prvku DataGridView a Navigátor vazby](../data-tools/media/raddata-datagridview-and-binding-navigator-smart-tags.png)
+![Ovládací prvek DataGridView a vazby inteligentních značek navigátoru](../data-tools/media/raddata-datagridview-and-binding-navigator-smart-tags.png)
 
-Pokud ovládací prvky vaší aplikace musí nejsou dostupné v rámci **zdroje dat** okna, můžete přidat ovládací prvky. Další informace najdete v tématu [přidání vlastních ovládacích prvků do okna zdroje dat](../data-tools/add-custom-controls-to-the-data-sources-window.md).
+Pokud ovládací prvky, které vaše aplikace potřebuje, nejsou k dispozici v rámci okna **zdrojů dat** , můžete přidat ovládací prvky. Další informace najdete v tématu [Přidání vlastních ovládacích prvků do okna zdroje dat](../data-tools/add-custom-controls-to-the-data-sources-window.md).
 
-Můžete také přetáhnout položky z **zdroje dat** oken na ovládací prvky na formuláři pro vytvoření vazby ovládacího prvku k datům. Ovládací prvek, který je již vázán na data má jeho data, která položka naposledy přetáhli ho obnovit vazby. Platné cíle přetažení, ovládací prvky musí být schopná zobrazit základní datový typ položky Přetahované problém napravit z **zdroje dat** okna. Například není platný, přetáhněte položky, který má datový typ <xref:System.DateTime> na <xref:System.Windows.Forms.CheckBox>, protože <xref:System.Windows.Forms.CheckBox> není schopná zobrazit datum.
+Můžete také přetáhnout položky z okna **zdroje dat** do ovládacích prvků již na formuláři pro svázání ovládacího prvku s daty. Ovládací prvek, který je již vázán na data, má své datové vazby obnoveny na položku, která se do něho naposledy přetáhla. Aby bylo možné být platnými cíli přetažení, musí být ovládací prvky schopny zobrazit podkladový datový typ položky, na kterou se položka přetáhla, v okně **zdroje dat** . Například není platná položka, která má datový typ <xref:System.DateTime> do <xref:System.Windows.Forms.CheckBox>, protože <xref:System.Windows.Forms.CheckBox> není schopna zobrazit datum.
 
-## <a name="bind-to-data-in-individual-controls"></a>Vytvoření vazby k datům v jednotlivých ovládacích prvků
+## <a name="bind-to-data-in-individual-controls"></a>Vazba na data v jednotlivých ovládacích prvcích
 
-Po vytvoření vazby zdroje dat na **podrobnosti**, každý sloupec v datové sadě je vázán na samostatném ovládacím prvku.
+Když svážete zdroj dat s **podrobnostmi**, je každý sloupec v datové sadě svázán s samostatným ovládacím prvkem.
 
-![Vytvoření vazby zdroje dat na podrobnosti](../data-tools/media/raddata-bind-data-source-to-details.png)
+![Vazba zdroje dat k podrobnostem](../data-tools/media/raddata-bind-data-source-to-details.png)
 
 > [!IMPORTANT]
-> Všimněte si, že na předchozím obrázku, přetáhněte z vlastnosti objednávky v tabulce Zákazníci, ne z tabulky objednávky. Navázáním `Customer.Orders` vlastností, navigačních příkazů provedených **DataGridView** se okamžitě projeví v ovládacích prvcích podrobnosti. Pokud jste přetáhli z tabulky objednávky, ovládací prvky by být stále vázaná k datové sadě, ale nemusí není synchronizován s **DataGridView**.
+> Všimněte si, že na předchozím obrázku přetáhnete z tabulky Customers (objednávky), nikoli z tabulky Orders. Pomocí vazby na vlastnost `Customer.Orders` se navigační příkazy provedené v **ovládacím prvku DataGridView** projeví ihned v ovládacích prvcích podrobností. Pokud jste přetáhli z tabulky Orders, ovládací prvky budou i nadále svázány s datovou sadou, ale nejsou synchronizovány s **ovládacím prvek DataGridView**.
 
-Následující obrázek ukazuje výchozí ovládací prvky vázané na data, které jsou přidány do formuláře po vlastnost objednávky v tabulce Zákazníci je vázán na **podrobnosti** v **zdroje dat** okna.
+Následující ilustrace znázorňuje výchozí ovládací prvky vázané na data, které jsou přidány do formuláře poté, co je vlastnost Orders v tabulce Customers svázána s **podrobnostmi** v okně **zdroje dat** .
 
-![Vázaný na podrobnosti o objednávkách](../data-tools/media/raddata-orders-table-bound-to-details.png)
+![Tabulka objednávky svázaná s podrobnostmi](../data-tools/media/raddata-orders-table-bound-to-details.png)
 
-Všimněte si také, že každý ovládací prvek má inteligentních značek. Tato značka umožňuje vlastní nastavení, která se vztahují pouze tento ovládací prvek.
+Všimněte si také, že každý ovládací prvek má inteligentní značku. Tato značka povoluje vlastní nastavení, která se vztahují pouze na tento ovládací prvek.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Vytvoření vazby ovládacích prvků k datům v sadě Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)
-- [Datové vazby v modelu Windows Forms (.NET Framework)](/dotnet/framework/winforms/windows-forms-data-binding)
+- [Vázání ovládacích prvků k datům v aplikaci Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)
+- [Datová vazba v model Windows Forms (.NET Framework)](/dotnet/framework/winforms/windows-forms-data-binding)

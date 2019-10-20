@@ -5,82 +5,82 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, constraints
 - Domain-Specific Language, validation
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fcc35f74625b17762656451e598d131dfe85417e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 9737c9f02f9231aae5d20bd22321024fcfd7fd69
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63385854"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663733"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>Ověřování v jazyce specifickém pro doménu
-Jako autoři jazyka specifického pro doménu (DSL) můžete definovat omezení ověření můžete ověřit, že model vytvořený uživatelem smysluplné. Například pokud vaše DSL umožňuje uživatelům nakreslit řady strom osoby a jejich předchůdci, můžete napsat omezení, které zajišťuje, že mají podřízené položky data narození po jejich nadřazených objektů.
+Jako autor jazyka DSL (Domain-Specific Language) můžete definovat ověřovací omezení a ověřit tak, že model vytvořený uživatelem má smysl. Pokud například vaše DSL umožňuje uživatelům nakreslit rodinný strom lidí a jejich předchůdce, mohli byste napsat omezení, které zajistí, že budou mít děti data po jejich rodičůch.
 
- Může mít omezení ověření, spustí při uložení modelu, když se otevře, a když uživatel spustí explicitně **ověřit** příkazu nabídky. Můžete také provést ověření v řízení programu. Například můžete třeba spustit ověření v reakci na změnu hodnoty vlastnosti nebo relace.
+ Omezení ověřování můžete provést, pokud je model uložený, když je otevřený a uživatel explicitně spustí příkaz **ověřit** nabídku. Ověřování můžete provést také v části řízení programu. Můžete například spustit ověřování v reakci na změnu hodnoty vlastnosti nebo vztahu.
 
- Ověření je zvlášť důležité při psaní textové šablony nebo jiné nástroje, které zpracovávají modely vašich uživatelů. Ověření zajišťuje, že modely splňují předpoklady předpokládá, že pomocí těchto nástrojů.
+ Ověřování je obzvláště důležité, pokud píšete šablony textu nebo jiné nástroje, které zpracovávají modely vašich uživatelů. Ověřování zajišťuje, aby modely splňovaly podmínky, které tyto nástroje předpokládají.
 
 > [!WARNING]
-> Můžete také povolit omezení ověření je definovat v samostatném rozšíření vašeho DSL, společně s příkazy rozšíření nabídky a obslužné rutiny gesta. Uživatelé mohou nainstalovat tato rozšíření kromě vašeho DSL. Další informace najdete v tématu [rozšíření vašeho DSL pomocí MEF](../modeling/extend-your-dsl-by-using-mef.md).
+> Můžete taky dovolit, aby se ověřovací omezení definovala v samostatných rozšířeních DSL spolu s příkazy nabídky rozšíření a obslužnými rutinami gest. Uživatelé se můžou rozhodnout nainstalovat tato rozšíření kromě DSL. Další informace najdete v tématu věnovaném [rozšiřování DSL pomocí MEF](../modeling/extend-your-dsl-by-using-mef.md).
 
-## <a name="running-validation"></a>Spouštění ověření
- Když uživatel upravuje model, to znamená, že instance jazyka specifického pro doménu tyto akce můžete spustit ověření:
+## <a name="running-validation"></a>Spouští se ověřování
+ Když uživatel upravuje model, to znamená instanci vašeho jazyka specifického pro doménu, můžou ověření spustit následujícími akcemi:
 
-- V diagramu pravým tlačítkem a vyberte **ověřit všechny**.
+- Klikněte pravým tlačítkem na diagram a vyberte **ověřit vše**.
 
-- Klikněte pravým tlačítkem na nejvyšší uzel v Průzkumník DSL a vyberte **ověřit všechny**
+- Klikněte pravým tlačítkem myši na horní uzel v Průzkumníkovi vaší DSL a vyberte možnost **ověřit vše** .
 
 - Uložte model.
 
 - Otevřete model.
 
-- Kromě toho můžete napsat kód programu, který spustí ověřování, například jako součást příkazu nabídky nebo v reakci na změnu.
+- Kromě toho můžete napsat programový kód, který spouští ověřování, například jako součást příkazu nabídky nebo v reakci na změnu.
 
-  Všechny chyby ověření se zobrazí v **seznam chyb** okna. Uživatel můžete dvakrát kliknout na chybovou zprávu vybrat prvky modelu, které jsou příčinou chyby.
+  V okně **Seznam chyb** se zobrazí všechny chyby ověřování. Uživatel může dvakrát kliknout na chybovou zprávu a vybrat prvky modelu, které jsou příčinou chyby.
 
-## <a name="defining-validation-constraints"></a>Definování omezení ověření
- Můžete definovat omezení ověření tak, že přidáte metody ověřování pro doménovými třídami nebo vztahy tohoto kódu DSL. Po spuštění ověření uživatelem nebo v rámci řízení programu, jsou provedeny některé nebo všechny metody ověřování. Každá metoda platí pro každou instanci své třídy a v každé třídě může být několik metod ověření.
+## <a name="defining-validation-constraints"></a>Definování omezení ověřování
+ Můžete definovat omezení ověřování přidáním metod ověřování do doménových tříd nebo vztahů vaší DSL. Při spuštění ověřování buď uživatelem, nebo v části řízení programu se spustí některé nebo všechny metody ověřování. Každá metoda je použita na každou instanci své třídy a v každé třídě může být několik metod ověřování.
 
- Každá metoda ověřování hlásí chyby, které nalezne.
+ Každá metoda ověřování hlásí všechny nalezené chyby.
 
 > [!NOTE]
-> Metody ověřování zprávy o chybách, ale neměňte modelu. Pokud chcete upravit nebo zakázat některé změny, přečtěte si [alternativy k ověření](#alternatives).
+> Metody ověřování hlásí chyby, ale nemění model. Pokud chcete upravit nebo zabránit určitým změnám, přečtěte si téma [alternativy ověřování](#alternatives).
 
-#### <a name="to-define-a-validation-constraint"></a>Chcete-li definovat omezení ověření
+#### <a name="to-define-a-validation-constraint"></a>Definování omezení ověřování
 
-1. Povolení ověřování v **Editor\Validation** uzlu:
+1. Povolit ověřování v uzlu **Editor\Validation** :
 
-   1. Otevřít **Dsl\DslDefinition.dsl**.
+   1. Otevřete **Dsl\DslDefinition.DSL**.
 
-   2. V okně Průzkumník DSL, rozbalte **Editor** uzel a vyberte možnost **ověření**.
+   2. V Průzkumníku DSL rozbalte uzel **Editor** a vyberte **ověřování**.
 
-   3. V okně Vlastnosti nastavte **používá** vlastností `true`. Je nejvhodnější pro nastavení těchto vlastností.
+   3. V okno Vlastnosti nastavte **pomocí** vlastnosti `true`. Nastavení všech těchto vlastností je nejpohodlnější.
 
-   4. Klikněte na tlačítko **Transformovat všechny šablony** v **Průzkumníka řešení** nástrojů.
+   4. Na panelu nástrojů **Průzkumník řešení** klikněte na **transformovat všechny šablony** .
 
-2. Zápis definicí částečné třídy pro jeden nebo více doménovými třídami nebo vztahy domén. Zapsat tyto definice do nového souboru v kódu **Dsl** projektu.
+2. Pište částečné definice tříd pro jednu nebo více doménových tříd nebo doménových vztahů. Zapište tyto definice do nového souboru kódu v projektu **DSL** .
 
-3. Předpona každou třídu se tento atribut:
+3. Každou třídu nasměrujte pomocí tohoto atributu:
 
    ```csharp
    [ValidationState(ValidationState.Enabled)]
    ```
 
-   - Ve výchozím nastavení tento atribut taky povolí ověřování pro odvozené třídy. Pokud chcete zakázat ověřování pro konkrétní odvozenou třídu, můžete použít `ValidationState.Disabled`.
+   - Ve výchozím nastavení bude tento atribut také umožňovat ověřování pro odvozené třídy. Pokud chcete zakázat ověřování pro specifickou odvozenou třídu, můžete použít `ValidationState.Disabled`.
 
-4. Přidání metody ověřování na třídy. Každá metoda ověřování můžete mít libovolný název, ale mít jeden parametr typu <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationContext>.
+4. Přidejte do tříd metody ověřování. Každá metoda ověřování může mít libovolný název, ale má jeden parametr typu <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationContext>.
 
-    Musí mít předponu s jedním nebo více `ValidationMethod` atributy:
+    Musí být předpona s jedním nebo více `ValidationMethod` atributy:
 
    ```csharp
    [ValidationMethod (ValidationCategories.Open | ValidationCategories.Save | ValidationCategories.Menu ) ]
    ```
 
-    ValidationCategories zadat při provádění metody.
+    ValidationCategories určuje, kdy se má metoda provést.
 
    Příklad:
 
@@ -123,37 +123,37 @@ public partial class ParentsHaveChildren
   }
 ```
 
- Všimněte si, že o tomto kódu následující body:
+ Všimněte si následujících bodů tohoto kódu:
 
-- Metody ověřování můžete přidat doménovými třídami nebo vztahy domén. Kód pro tyto typy je v **Dsl\Generated Code\Domain\*.cs**.
+- Do doménových tříd nebo doménových vztahů můžete přidat metody ověřování. Kód pro tyto typy je v **Dsl\Generated Code\Domain \*. cs**.
 
-- Každá metoda ověřování platí pro každou instanci své třídy a jejích podtřídách. V případě doménového vztahu každá instance je propojení mezi dvěma prvky modelu.
+- Každá metoda ověřování je použita na všechny instance své třídy a jejích podtříd. V případě doménového vztahu je každá instance propojení mezi dvěma prvky modelu.
 
-- Metody ověřování nejsou použity v libovolném zadané pořadí a každá metoda neplatí pro instance své třídy v libovolném pořadí předvídatelné.
+- Metody ověřování nejsou aplikovány v žádném specifikovaném pořadí a jednotlivé metody nejsou aplikovány na instance své třídy v jakémkoli předvídatelném pořadí.
 
-- Je obvykle chybná pro metodu ověřování pro aktualizaci obsahu úložiště, protože by to vést k nekonzistentním výsledkům. Místo toho nahlásit všechny chyby pomocí volání metody `context.LogError`, `LogWarning` nebo `LogInfo`.
+- Obvykle se jedná o špatný postup pro metodu ověřování, která aktualizuje obsah úložiště, protože by to vedlo k nekonzistentním výsledkům. Místo toho by měla metoda nahlásit jakoukoli chybu voláním `context.LogError`, `LogWarning` nebo `LogInfo`.
 
-- Při volání LogError můžete zadat seznam prvků modelu nebo vztah odkazy, které bude vybrána, když uživatel poklepe chybová zpráva.
+- V volání LogError můžete zadat seznam elementů modelu nebo propojení vztahů, které budou vybrány, když uživatel dvakrát klikne na chybovou zprávu.
 
-- Informace o tom, jak čtení modelu v programovém kódu najdete v tématu [navigace a aktualizace modelu v programovém kódu](../modeling/navigating-and-updating-a-model-in-program-code.md).
+- Informace o tom, jak číst model v programovém kódu, naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-  V příkladu platí pro následující doménový model. U tohoto vztahu ParentsHaveChildren je role, které jsou pojmenovány podřízenými a nadřazenými.
+  Příklad platí pro následující doménový model. Vztah ParentsHaveChildren má role pojmenované jako podřízené a nadřazené.
 
-  ![Diagramem definice DSL &#45; řady stromu modelu](../modeling/media/familyt_person.png)
+  ![Model stromu řady &#45; diagram definice DSL](../modeling/media/familyt_person.png)
 
-## <a name="validation-categories"></a>Ověření kategorie
- V <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> atribut určíte, když metoda ověření by měl být spuštěn.
+## <a name="validation-categories"></a>Kategorie ověřování
+ V atributu <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> určíte, kdy se má spustit metoda ověřování.
 
 |Kategorie|Spuštění|
 |-|-|
-|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|Pokud uživatel vyvolá příkaz nabídky ověření.|
+|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|Když uživatel vyvolá příkaz pro ověření nabídky.|
 |<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|Při otevření souboru modelu.|
-|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|Když je soubor uložen. Pokud jsou chyby ověření, uživateli se přihlašovací možnost uložení zrušení operace.|
-|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|Když je soubor uložen. Pokud nejsou chyby z metody v této kategorii, uživatel bude upozorněn, že nemusí být možné znovuotevření daného souboru.<br /><br /> Tato kategorie se používá pro metody ověřování, které testují duplicitních názvů nebo ID nebo jinými podmínkami, které by mohly způsobit chyby načtení.|
-|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|Když je volána metoda ValidateCustom. Ověření v této kategorii lze volat pouze z programového kódu.<br /><br /> Další informace najdete v tématu [vlastní ověření kategorie](#custom).|
+|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|Při uložení souboru. Pokud dojde k chybám ověření, uživateli bude dána možnost zrušit operaci uložení.|
+|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|Při uložení souboru. Pokud v této kategorii dojde k chybám, uživateli se zobrazí upozornění, že nemusí být možné soubor znovu otevřít.<br /><br /> Tuto kategorii použijte k ověřování metod, které testuje duplicitní názvy nebo ID, nebo jiné podmínky, které mohou způsobit chyby při načítání.|
+|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|Když je volána metoda ValidateCustom. Ověření v této kategorii lze vyvolat pouze z kódu programu.<br /><br /> Další informace najdete v tématu [vlastní kategorie ověření](#custom).|
 
 ## <a name="where-to-place-validation-methods"></a>Kam umístit metody ověřování
- Umístěním ověřovací metodu na jiný typ lze často dosáhnout stejného efektu. Může například přidejte metodu do třídy osoba místo ParentsHaveChildren vztah a jeho iteraci v rámci odkazy:
+ Stejný účinek lze často dosáhnout umístěním metody ověřování na jiný typ. Například můžete přidat metodu do třídy Person namísto vztahu ParentsHaveChildren a nechat ji iterovat prostřednictvím odkazů:
 
 ```
 [ValidationState(ValidationState.Enabled)]
@@ -173,11 +173,11 @@ public partial class Person
         { ...
 ```
 
- **Agregování omezení ověření.** Použití ověřovacích předvídatelné popořadě, definujte jeden ověřovací metodu na třídu vlastníka takových kořenový prvek modelu. Tato technika také umožňuje agregovat více zpráv o chybách do jedné zprávy.
+ **Agregace omezení ověřování.** Chcete-li použít ověřování v předvídatelném pořadí, definujte jedinou metodu ověření pro třídu Owner, například kořenový prvek modelu. Tato technika také umožňuje agregovat více zpráv o chybách do jedné zprávy.
 
- Nevýhody jsou, kombinované metoda je méně usnadňuje správu a že omezení musí všechny mají stejnou `ValidationCategories`. Proto doporučujeme, pokud je to možné ponechat každé omezení v samostatné metodě.
+ Nevýhodami je, že kombinovaná metoda je méně jednoduchá ke správě a že omezení musí mít všechny stejné `ValidationCategories`. Proto doporučujeme, abyste každé omezení zachovali v samostatné metodě, pokud je to možné.
 
- **Předávání hodnot v místní mezipaměti.** Kontextový parametr je slovník, do kterého můžete umístit libovolné hodnoty. Adresář se uchovávají po dobu trvání spuštění ověření. Konkrétní ověřovací metoda může například zachovat počet chyb v rámci a použití mají předejít zahlcení okna chyby s opakované zprávy. Příklad:
+ **Předávání hodnot v mezipaměti kontextu.** Kontextový parametr obsahuje slovník, do kterého lze umístit libovolné hodnoty. Slovník přetrvává po dobu životnosti běhu ověřování. Konkrétní metoda ověřování může například v kontextu zachovat počet chyb a použít ho k tomu, abyste zabránili zahlcení okna chyb opakovanými zprávami. Příklad:
 
 ```csharp
 List<ParentsHaveChildren> erroneousLinks;
@@ -188,15 +188,15 @@ context.SetCacheValue("erroneousLinks", erroneousLinks);
 if (erroneousLinks.Count < 5) { context.LogError( ... ); }
 ```
 
-## <a name="validation-of-multiplicities"></a>Ověření násobnosti
- Metody ověřování pro kontrolu minimální násobností jsou automaticky generovány pro vašeho DSL. Kód je zapsán do **Dsl\Generated Code\MultiplicityValidation.cs**. Tyto metody se projeví, když povolíte ověření v **Editor\Validation** uzel v Průzkumník DSL.
+## <a name="validation-of-multiplicities"></a>Ověřování násobnosti
+ Metody ověřování pro kontrolu minimální násobnosti jsou automaticky generovány pro vaši DSL. Kód je zapsán do **Dsl\Generated Code\MultiplicityValidation.cs**. Tyto metody se projeví, když povolíte ověřování v uzlu **Editor\Validation** v Průzkumníku DSL.
 
- Pokud nastavíte násobnost role doménového vztahu musí být 1.. * nebo 1..1, ale uživatel nevytváří odkaz tento vztah se zobrazí chybovou zprávu ověření.
+ Pokud nastavíte násobnost role relace domény na hodnotu 1.. * nebo 1.. 1, ale uživatel nevytvoří odkaz na tento vztah, zobrazí se chybová zpráva ověření.
 
- Například pokud má vaše DSL třídy osoby a města a relace PersonLivesInTown se vztahem **1..\\** * na roli města, pak pro každou osobu, která nemá žádné města, chybová zpráva se zobrazí.
+ Pokud například vaše DSL má třídy Person a město a relace PersonLivesInTown se vztahem **1.. \\** * v roli města, pak se zobrazí chybová zpráva pro každou osobu, která nemá město.
 
-## <a name="running-validation-from-program-code"></a>Spuštění ověření v kódu programu
- Přístup k nebo vytvořením ValidationController můžete spustit ověření. Pokud chcete chyby, který se má zobrazit uživatelům v okně chyb, použijte ValidationController, který je připojen k DocData do diagramu. Například, pokud při psaní příkazu nabídky `CurrentDocData.ValidationController` je k dispozici ve třídě set příkazu:
+## <a name="running-validation-from-program-code"></a>Spuštění ověřování z kódu programu
+ Ověřování můžete spustit přístupem k ValidationController nebo jeho vytvořením. Chcete-li, aby se chyby zobrazily uživateli v okně chyby, použijte ValidationController, který je připojen k DocData vašeho diagramu. Například při psaní příkazu nabídky je `CurrentDocData.ValidationController` k dispozici ve třídě sady příkazů:
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
@@ -211,9 +211,9 @@ partial class MyLanguageCommandSet
 ...
 ```
 
- Další informace najdete v tématu [jak: Přidání příkazu do místní nabídky](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
+ Další informace najdete v tématu [Postup: Přidání příkazu do místní nabídky](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
 
- Můžete také vytvořit samostatné ověření řadič a chyby spravovat sami. Příklad:
+ Můžete také vytvořit samostatný kontroler ověřování a chyby spravovat sami. Příklad:
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
@@ -230,10 +230,10 @@ if (!validator.Validate(store, ValidationCategories.Save))
 }
 ```
 
-## <a name="running-validation-when-a-change-occurs"></a>Spuštění ověření v případě, že dojde ke změně
- Pokud chcete, aby se zajistilo, že uživatel je-li modelu stává neplatným okamžitě upozornění, můžete definovat událost úložiště, která spustí ověřování. Další informace o události v úložišti, najdete v části [obslužné rutiny rozšíření změny mimo the Model událostí](../modeling/event-handlers-propagate-changes-outside-the-model.md).
+## <a name="running-validation-when-a-change-occurs"></a>Spuštění ověřování, když dojde ke změně
+ Pokud se chcete ujistit, že uživatel bude upozorněn okamžitě, pokud je model neplatný, můžete definovat událost úložiště, která spouští ověřování. Další informace o událostech úložiště najdete v tématu [obslužné rutiny událostí rozšiřují změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
- Kromě kód pro ověření, přidejte soubor vlastní kód na vaši **DslPackage** projektu s obsahem, podobně jako v následujícím příkladu. Tento kód používá `ValidationController` , který je připojený k tomuto dokumentu. Tento řadič se zobrazí chyby ověření v seznamu chyb sady Visual Studio.
+ Kromě ověřovacího kódu přidejte do projektu **DslPackage** vlastní soubor kódu s podobným obsahem jako v následujícím příkladu. Tento kód používá `ValidationController`, který je připojen k dokumentu. Tento kontroler zobrazuje chyby ověřování v seznamu chyb sady Visual Studio.
 
 ```csharp
 using System;
@@ -293,14 +293,14 @@ namespace Company.FamilyTree
 }
 ```
 
- Obslužné rutiny se také označují jako po vrácení zpět nebo opakování operace, které ovlivňují odkazy nebo elementy.
+ Obslužné rutiny jsou také volány po operaci zpět nebo znovu, které ovlivňují odkazy nebo prvky.
 
-## <a name="custom"></a> Vlastní ověřovací kategorie
- Kromě standardní ověřovací kategorie, jako je například nabídka a otevřít můžete definovat vlastní kategorie. Můžete vyvolat tyto kategorie z programového kódu. Uživatel nemůže je vyvolat přímo.
+## <a name="custom"></a>Vlastní kategorie ověřování
+ Kromě standardních kategorií ověřování, jako je například nabídka a otevřít, můžete definovat vlastní kategorie. Tyto kategorie můžete vyvolat z programového kódu. Uživatel je nemůže vyvolat přímo.
 
- Typické použití pro vlastní kategorie je definovat kategorie, která ověřuje, zda model splňuje předpoklady konkrétní nástroj.
+ Typickým použitím vlastních kategorií je definování kategorie, která testuje, zda model splňuje podmínky pro konkrétní nástroj.
 
- Přidání metody ověření pro určité kategorie, předpona s atributem takto:
+ Chcete-li přidat metodu ověřování do konkrétní kategorie, použijte ji jako předponu atributu:
 
 ```csharp
 [ValidationMethod(CustomCategory = "PreconditionsForGeneratePartsList")]
@@ -310,9 +310,9 @@ private void TestForCircularLinks(ValidationContext context)
 ```
 
 > [!NOTE]
-> Můžete před metodu s tolika `[ValidationMethod()]` atributy, jak chcete. Přidejte metodu pro standardní i vlastní kategorie.
+> Můžete vytvořit předponu metody s libovolným počtem atributů `[ValidationMethod()]`, kolik chcete. Můžete přidat metodu do vlastních i standardních kategorií.
 
- Chcete-li vyvolat vlastní ověřování:
+ Postup při volání vlastního ověření:
 
 ```csharp
 
@@ -322,17 +322,17 @@ validationController.ValidateCustom
    "PreconditionsForGeneratePartsList");
 ```
 
-## <a name="alternatives"></a> Alternativy k ověření
- Omezení ověření zprávy o chybách, ale neměňte modelu. Pokud místo toho chcete zabránit modelu stává neplatný, můžete použít jiné techniky.
+## <a name="alternatives"></a>Alternativy k ověřování
+ Omezení ověřování hlásí chyby, ale nemění model. Pokud místo toho chcete zabránit tomu, aby se model stal neplatným, můžete použít jiné techniky.
 
- Tyto postupy se však nedoporučuje. Je obvykle vhodnější nechat uživatele rozhodnout, jak chybu opravit modelu je neplatný.
+ Tyto techniky se ale nedoporučují. Je obvykle lepší umožnit uživateli rozhodnout, jak opravit neplatný model.
 
- **Upravte Změna modelu obnovení platnosti.** Například pokud uživatel nastaví vlastnost vyšší než povolené maximum, může resetovat vlastnost na maximální hodnotu. K tomuto účelu definice pravidla. Další informace najdete v tématu [pravidla šíření změn v rámci the Model](../modeling/rules-propagate-changes-within-the-model.md).
+ **Úpravou změny obnovte platnost modelu.** Pokud uživatel například nastaví vlastnost nad povolené maximum, mohli byste obnovit vlastnost na maximální hodnotu. Uděláte to tak, že definujete pravidlo. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
 
- **Při pokusu o neplatný změnu vrátit zpět transakci.** Můžete také definovat pravidla pro tento účel, ale v některých případech je možné přepsat obslužné rutiny vlastnosti **OnValueChanging()**, nebo o přepsání metody, jako `OnDeleted().` vrácení zpět transakcí, použití `this.Store.TransactionManager.CurrentTransaction.Rollback().` Další informace informace najdete v tématu [obslužné rutiny změny hodnoty vlastnosti domény](../modeling/domain-property-value-change-handlers.md).
+ **Pokud se pokusíte o neplatnou změnu, vraťte transakci zpět.** Můžete také definovat pravidlo pro tento účel, ale v některých případech je možné přepsat obslužnou rutinu vlastnosti **OnValueChanging ()** nebo přepsat metodu, například `OnDeleted().` pro vrácení transakce zpět, použití `this.Store.TransactionManager.CurrentTransaction.Rollback().` pro další informace najdete v tématu [doménová vlastnost. Obslužné rutiny změn hodnot](../modeling/domain-property-value-change-handlers.md)
 
 > [!WARNING]
-> Ujistěte se, že uživatel zná, že změna byla upravena nebo vrácena zpět. Například použít `System.Windows.Forms.MessageBox.Show("message").`
+> Ujistěte se, že uživatel ví, že změna byla upravena nebo vrácena zpět. Použijte například `System.Windows.Forms.MessageBox.Show("message").`
 
 ## <a name="see-also"></a>Viz také
 

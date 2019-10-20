@@ -6,43 +6,43 @@ helpviewer_keywords:
 - Class Designer, partial classes
 - partial classes, Class Designer
 ms.assetid: 6f6b0b30-3996-4569-9200-20482b3adf90
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e1426b1ad9799984f7b14604a1d8b685e9ce8813
-ms.sourcegitcommit: 77b4ca625674658d5c5766e684fa0e2a07cad4da
+ms.openlocfilehash: 42d2cf5c0fa5c08c51ebfbc94d9a03221df46788
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65615411"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647696"
 ---
-# <a name="how-to-split-a-class-into-partial-classes-in-class-designer"></a>Postupy: Rozdělení třídy na částečné třídy v Návrháři tříd
+# <a name="how-to-split-a-class-into-partial-classes-in-class-designer"></a>Postupy: rozdělení třídy na částečné třídy v Návrhář tříd
 
-Můžete použít `partial` – klíčové slovo (`Partial` v jazyce Visual Basic) a rozdělit deklaraci třídy nebo struktury mezi několik deklarací. Můžete použít libovolný počet částečné deklarace.
+Můžete použít klíčové slovo `partial` (`Partial` v Visual Basic) k rozdělení deklarace třídy nebo struktury mezi několik deklarací. Můžete použít tolik částečných deklarací, kolik chcete.
 
-Deklarace může být v jednom nebo více zdrojových souborů. Všechny deklarace musí být ve stejném sestavení a stejný obor názvů.
+Deklarace můžou být v jednom nebo ve více zdrojových souborech. Všechny deklarace musí být ve stejném sestavení a stejném oboru názvů.
 
-Částečné třídy jsou užitečné v několika situacích. Na velkých projektech třeba oddělení třídu do více souborů umožňuje více než jeden programátora pro práci na projektu ve stejnou dobu. Při práci s kódem, který generuje sada Visual Studio, můžete změnit třídu bez nutnosti znovu vytvářet zdrojový soubor. (Příklady kódu, který generuje sada Visual Studio zahrnují Windows Forms a webového kódu obálky služby). Můžete tedy vytvořit kód, který používá automaticky generovaný třídy, aniž byste museli upravovat soubor, který sada Visual Studio vytvoří.
+Částečné třídy jsou užitečné v několika situacích. Ve velkém projektu, například oddělení třídy do více souborů, umožňuje více než jeden programátor pracovat na projektu současně. Když pracujete s kódem, který aplikace Visual Studio generuje, můžete změnit třídu, aniž by bylo nutné znovu vytvořit zdrojový soubor. (Příklady kódu, které Visual Studio generuje, zahrnuje model Windows Forms a kód obálky webové služby.) Můžete tedy vytvořit kód, který používá automaticky generované třídy bez nutnosti upravovat soubor, který aplikace Visual Studio vytvoří.
 
-Existují dva druhy částečné metody. V jazyce C# jsou volány deklarace a implementaci; v jazyce Visual Basic se nazývají deklaraci a implementaci.
+Existují dva druhy částečných metod. V C#nástroji se nazývají deklarace a implementace; v Visual Basic se nazývají deklarace a implementace.
 
-**Návrhář tříd** podporuje částečné třídy a metody. Tvar typu v diagramu tříd, odkazuje na umístění jediné deklaraci částečné třídy. Pokud je částečná třída definovaná ve více souborech, můžete zadat umístění které deklarace **návrhář tříd** používat tak, že nastavíte **umístění nového člena** vlastnost v **vlastnosti**  okna. To znamená, když dvakrát kliknete na obrazec třídy **návrhář tříd** přejde do zdrojového souboru, který obsahuje deklaraci třídy, který je identifikován **umístění nového člena** vlastnost. Když dvakrát kliknete na částečné metody v obrazci třídy **návrhář tříd** přejde na deklaraci částečné metody. Také v **vlastnosti** okně **název_souboru** vlastnost odkazuje na umístění prohlášení. Pro částečné třídy **název_souboru** uvádí všechny soubory, které obsahují deklarace a implementaci kód pro danou třídu. Ale pro částečné metody **název_souboru** obsahuje pouze soubor, který obsahuje deklaraci částečné metody.
+**Návrhář tříd** podporuje částečné třídy a metody. Tvar typu v diagramu tříd odkazuje na jedno umístění deklarace pro částečnou třídu. Je-li částečná třída definována ve více souborech, můžete určit, která umístění deklarace **Návrhář tříd** bude použita, nastavením vlastnosti **umístění nového člena** v okně **vlastnosti** . To znamená, že když dvakrát kliknete na obrazec třídy, **Návrhář tříd** přejde ke zdrojovému souboru, který obsahuje deklaraci třídy identifikovanou vlastností **umístění nového člena** . Když dvakrát kliknete na částečnou metodu v obrazci třídy, **Návrhář tříd** přejít k deklaraci částečné metody. V okně **vlastnosti** také odkazuje vlastnost **název souboru** na umístění deklarace. Pro částečné třídy, **název souboru** obsahuje seznam všech souborů, které obsahují deklaraci a implementační kód pro danou třídu. U částečných metod však **název souboru** obsahuje pouze soubor, který obsahuje deklaraci částečné metody.
 
-Následující příklady rozdělení definice třídy `Employee` do dvě deklarace, z nichž každý definuje jiný postup. Dvě Částečná definice v příkladech může být v jednom zdrojovém souboru nebo ve dvou různých zdrojových souborů.
+V následujících příkladech je rozdělena definice třídy `Employee` do dvou deklarací, z nichž každá definuje jiný postup. Dvě částečné definice v příkladech mohou být v jednom zdrojovém souboru nebo ve dvou různých zdrojových souborech.
 
 > [!NOTE]
-> Visual Basic používá definicí částečné třídy pro oddělení kód generovaný sady Visual Studio z uživatelem definovaných kódu. Kód je rozdělené na samostatné zdrojové soubory. Například **Návrhář formulářů Windows** definuje částečné třídy pro ovládací prvky, jako `Form`. Generovaný kód v těchto ovládacích prvků byste neměli měnit.
+> Visual Basic používá definice částečné třídy pro oddělení kódu generovaného pomocí sady Visual Studio od uživatelsky vytvořeného kódu. Kód je rozdělen do diskrétních zdrojových souborů. Například **Návrhář formuláře Windows** definuje částečné třídy pro ovládací prvky, jako je například `Form`. V těchto ovládacích prvcích byste neměli upravovat generovaný kód.
 
-Další informace o částečné typy v jazyce Visual Basic najdete v tématu [částečné](/dotnet/visual-basic/language-reference/modifiers/partial).
+Další informace o částečných typech v Visual Basic naleznete v tématu [Partial](/dotnet/visual-basic/language-reference/modifiers/partial).
 
 ## <a name="example"></a>Příklad
 
-Pro rozdělení definice třídy, použijte `partial` – klíčové slovo (`Partial` v jazyce Visual Basic), jak je znázorněno v následujícím příkladu:
+Chcete-li rozdělit definici třídy, použijte klíčové slovo `partial` (`Partial` v Visual Basic), jak je znázorněno v následujícím příkladu:
 
 ```csharp
 // First part of class definition.
@@ -79,6 +79,6 @@ End Class
 ## <a name="see-also"></a>Viz také:
 
 - [Částečné třídy a metody](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)
-- [partial (typ) (referenční dokumentace jazyka C#)](/dotnet/csharp/language-reference/keywords/partial-type)
-- [partial (metoda) (referenční dokumentace jazyka C#)](/dotnet/csharp/language-reference/keywords/partial-method)
-- [Partial (Visual Basic)](/dotnet/visual-basic/language-reference/modifiers/partial)
+- [Partial (typ) (C# Referenční dokumentace)](/dotnet/csharp/language-reference/keywords/partial-type)
+- [Partial (metoda) (C# Referenční dokumentace)](/dotnet/csharp/language-reference/keywords/partial-method)
+- [Částečný (Visual Basic)](/dotnet/visual-basic/language-reference/modifiers/partial)

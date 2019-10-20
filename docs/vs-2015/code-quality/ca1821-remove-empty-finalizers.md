@@ -1,5 +1,5 @@
 ---
-title: 'CA1821: Odstraňte prázdné finalizační metody | Dokumentace Microsoftu'
+title: 'CA1821: odebrat prázdné finalizační metody | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -11,39 +11,39 @@ helpviewer_keywords:
 - CA1821
 ms.assetid: 3f4855a0-e4a0-46e6-923c-4c3b7074048d
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5a6175871e74bf3cb99610dce0926f0982f331d4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3d340d69ee32de20142abf740f7fedc871c9733a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201672"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657478"
 ---
-# <a name="ca1821-remove-empty-finalizers"></a>CA1821: Odeberte prázdné finalizační metody
+# <a name="ca1821-remove-empty-finalizers"></a>CA1821: Odstraňte prázdné finalizační metody
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|RemoveEmptyFinalizers|
 |CheckId|CA1821|
-|Kategorie|Microsoft.Performance|
+|Kategorie|Microsoft. Performance|
 |Narušující změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
- Typ implementuje finalizační metodu, která je prázdný, vyžaduje pouze základní typ finalizační metodu nebo volá pouze podmíněně vyslané metody.
+ Typ implementuje finalizační metodu, která je prázdná, volá pouze finalizační metodu základního typu nebo volá pouze podmíněně emitované metody.
 
 ## <a name="rule-description"></a>Popis pravidla
- Kdykoli je to možné, vyhněte se použití finalizačních metod kvůli dodatečným nárokům na výkon spojeným se sledováním životního cyklu objektu. Uvolňování paměti spustí finalizační metodu, předtím, než se shromáždí objektů. To znamená, že dvě kolekce se bude vyžadovat ke shromažďování objektu. Prázdná finalizační metoda zvyšuje touto přidanou režie bez žádnou výhodu.
+ Kdykoli je to možné, vyhněte se použití finalizačních metod kvůli dodatečným nárokům na výkon spojeným se sledováním životního cyklu objektu. Systém uvolňování paměti spustí finalizační metodu před tím, než bude objekt shromažďovat. To znamená, že ke shromáždění objektu budou požadovány dvě kolekce. Prázdná finalizační metoda má tuto přidanou režii bez jakýchkoli výhod.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Odstraňte prázdné finalizační metody. Pokud se vyžaduje pro ladění finalizační metodu, uzavřete celý finalizační metodu v `#if DEBUG / #endif` direktivy.
+ Odeberte prázdný finalizační metodu. Pokud je pro ladění vyžadován finalizační metoda, uveďte celý finalizační metodu v direktivách `#if DEBUG / #endif`.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte zprávy z tohoto pravidla. Selhání pro potlačení dokončení snižuje výkon a poskytuje žádné výhody.
+ Potlačit zprávu od tohoto pravidla. Nepovedlo se potlačit konečné snížení výkonu a neposkytuje žádné výhody.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje prázdná finalizační metoda, která by měla být odebrána, finalizační metodu, která by měl být uzavřen v `#if DEBUG / #endif` směrnicemi a finalizační metodu, která používá `#if DEBUG / #endif` direktivy správně.
+ Následující příklad ukazuje prázdný finalizační metodu, která by měla být odebrána, finalizační metoda, která by měla být uzavřena v direktivách `#if DEBUG / #endif` a finalizační metoda, která používá direktivy `#if DEBUG / #endif` správně.
 
  [!code-csharp[FxCop.Performance.RemoveEmptyFinalizers#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Performance.RemoveEmptyFinalizers/cs/FxCop.Performance.RemoveEmptyFinalizers.cs#1)]

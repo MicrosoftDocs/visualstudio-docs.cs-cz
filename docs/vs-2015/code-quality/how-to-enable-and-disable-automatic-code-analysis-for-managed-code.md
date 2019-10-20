@@ -1,32 +1,32 @@
 ---
-title: 'Postupy: Povolení a zákaz automatické analýzy kódu pro spravovaný kód | Dokumentace Microsoftu'
+title: 'Postupy: povolení a zákaz automatické analýzy kódu pro spravovaný kód | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 ms.assetid: 7c22d194-5fea-4f23-b02d-19344fa64a64
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: c4f5de2926cb38f570defa95463489523c694132
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d87cc57b31e63ae7aafa53c335df2b56f86a0409
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142291"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658100"
 ---
 # <a name="how-to-enable-and-disable-automatic-code-analysis-for-managed-code"></a>Postupy: Povolení a zákaz automatické analýzy kódu pro spravovaný kód
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete konfigurovat analýzu kódu pro spuštění před každým sestavením spravovaný projekt kódu. Můžete nastavit různé vlastnosti analýzy kódu pro jednotlivé [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] konfigurace.  
-  
-### <a name="to-enable-or-disable-automatic-code-analysis"></a>K povolení nebo zakázání automatické analýzy kódu  
-  
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a potom klikněte na tlačítko **vlastnosti**.  
-  
-2. V dialogovém okně Vlastnosti projektu klikněte na tlačítko **analýzy kódu**.  
-  
-3. Zadejte typ sestavení v **konfigurace** a cílovou platformu v **platformy**.  
-  
-4. K povolení nebo zakázání automatické analýzy kódu, zaškrtněte nebo zrušte zaškrtnutí **povolit analýzu kódu na sestavení (definuje konstantu CODE_ANALYSIS)** zaškrtávací políčko.
+Je možné konfigurovat analýzu kódu pro spuštění před každým sestavením spravovaného kódu projektu. Pro každou konfiguraci [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] můžete nastavit různé vlastnosti analýzy kódu.
+
+### <a name="to-enable-or-disable-automatic-code-analysis"></a>Povolení nebo zakázání automatické analýzy kódu
+
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a pak klikněte na **vlastnosti**.
+
+2. V dialogovém okně Vlastnosti projektu klikněte na možnost **Analýza kódu**.
+
+3. Zadejte typ sestavení v **konfiguraci** a cílovou platformu na **platformě**.
+
+4. Chcete-li povolit nebo zakázat automatickou analýzu kódu, zaškrtněte nebo zrušte zaškrtnutí políčka **Povolit analýzu kódu při sestavení (definuje konstantu CODE_ANALYSIS)** .

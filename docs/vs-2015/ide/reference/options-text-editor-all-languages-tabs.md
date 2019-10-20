@@ -1,5 +1,5 @@
 ---
-title: Možnosti, textový Editor, všechny jazyky, karty | Dokumentace Microsoftu
+title: Možnosti, textový editor, všechny jazyky, karty | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -18,54 +18,46 @@ helpviewer_keywords:
 - Code Editor, tabs
 ms.assetid: 7e208e1d-5e3a-4bf7-a27b-4417e3e049c7
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6d3a031c8e7837d76b5d2c7ab91c5702f59598a0
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 4cb670ab52e321f15c5b009c66ca40623409f10a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65693739"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662387"
 ---
 # <a name="options-text-editor-all-languages-tabs"></a>Možnosti, textový editor, všechny jazyky, karty
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Toto dialogové okno umožňuje změnit výchozí chování editoru kódu. Tato nastavení platí také pro jiné editory založen na editoru kódu, jako je HTML návrháře zobrazení zdroje. Chcete-li zobrazit tyto možnosti, vyberte **možnosti** z **nástroje** nabídky. V rámci **textový Editor** rozbalte složku **všechny jazyky** podsložku a klikněte na tlačítko **karty**.  
-  
+Toto dialogové okno umožňuje změnit výchozí chování editoru kódu. Tato nastavení platí také pro ostatní editory na základě editoru kódu, jako je například zobrazení zdroje v Návrháři HTML. Chcete-li zobrazit tyto možnosti, vyberte **Možnosti** v nabídce **nástroje** . V rámci složky **textový editor** rozbalte podsložku **všechny jazyky** a pak zvolte **karty**.
+
 > [!CAUTION]
-> Tato stránka nastaví výchozí možnosti pro všechny vývojářské jazyky. Mějte na paměti, že obnovení možnost v tomto dialogovém okně obnovíte možnosti karty ve všech jazycích k jakékoli volby jsou tady vyberete. Chcete-li změnit možnosti textového editoru pro právě jeden jazyk, rozbalte podsložku pro daný jazyk a vyberte jeho možnosti.  
-  
- Pokud vyberete různá nastavení na stránkách možností karty pro konkrétní programovací jazyky a pak zprávy "Nastavení odsazení pro jednotlivé textové formáty jsou v konfliktu mezi sebou", zobrazí se pro lišící se **Indenting**možnosti; a zobrazí se zpráva "Nastavení tabulátoru pro jednotlivé textové formáty jsou v konfliktu mezi sebou," pro lišící se **kartu** možnosti. Například toto připomenutí se zobrazí v případě **inteligentní odsazení** vybrána možnost Visual Basic, ale **blokovat odsazení** je vybrán pro Visual C++.  
-  
+> Tato stránka nastaví výchozí možnosti pro všechny vývojové jazyky. Mějte na paměti, že při resetování možnosti v tomto dialogu dojde k výběru možností karet ve všech jazycích, ať už jsou vybrané volby. Chcete-li změnit možnosti textového editoru pouze pro jeden jazyk, rozbalte podsložku pro daný jazyk a vyberte její stránky možností.
+
+ Pokud jsou na stránkách možností karet pro konkrétní programovací jazyky vybraná jiná nastavení, zobrazí se u různých možností **odsazení** zpráva nastavení odsazení pro jednotlivé textové formáty. a zpráva "nastavení tabulátoru pro jednotlivé textové formáty jsou v konfliktu." se zobrazí pro různé možnosti **tabulátoru** . Toto připomenutí se zobrazí například v případě, že je vybraná možnost **inteligentního odsazení** pro Visual Basic, ale pro vizuál C++se vybere **odsazení bloku** .
+
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="indenting"></a>Odsazení  
- Žádný  
- Při výběru, nejsou nové řádky odsazeny. Kurzor je umístěn v prvním sloupci nový řádek.  
-  
- Blok  
- Při výběru nového řádku mají být automaticky odsazeny. Kurzor je umístěn na stejné počáteční bod na každém řádku.  
-  
- Smart  
- Pokud je vybráno, jsou umístěny nové řádky podle kontextu kód za další formátování nastavení a zásady technologie IntelliSense pro vývojový jazyk kódu. Tato možnost není k dispozici pro všechny vývojářské jazyky.  
-  
- Například řádků uzavřeny mezi levá složená závorka ({}) a pravou závorkou (}) může být automaticky další zarážku od pozice zarovnané složené závorky odsazeny.  
-  
-## <a name="tabs"></a>Karty  
- Velikost tabulátoru  
- Nastaví zastaví vzdálenost v mezery mezi kartu. Výchozí hodnota je mezery čtyři.  
-  
- Velikost odsazení  
- Nastaví velikost v prostorách Automatické odsazení. Výchozí hodnota je mezery čtyři. Karta znaky a znaky se vloží tak, aby vyplnil zadané velikosti.  
-  
- Vložit mezery  
- Pokud je vybráno, operace odsazení vložit pouze znaky mezery, tabulátory není. Pokud **velikost odsazení** je nastavena na 5, například pak pět znaky mezery jsou vloženy pokaždé, když stisknete klávesu TAB nebo **zvětšit odsazení** tlačítko **formátování** panel nástrojů.  
-  
- Zachovat tabulátory  
- Pokud je vybráno, operace odsazení vložit tolik znaků TABULÁTORU nejvíce. Každý znak TABULÁTORU vyplní počet mezer podle **Velikost tabulátoru**. Pokud **velikost odsazení** není i násobek **Velikost tabulátoru**, znaky mezery jsou přidány k vyplnění rozdíl.  
-  
-## <a name="see-also"></a>Viz také  
- [Možnosti, textový Editor, všechny jazyky](../../ide/reference/options-text-editor-all-languages.md)   
- [Obecné, Prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="indenting"></a>Odsazení
+ Žádné, pokud je tato možnost vybrána, nové řádky nebudou odsazeny. Místo vložení se umístí do prvního sloupce nového řádku.
+
+ Zablokovat, je-li vybrána tato možnost, jsou nové řádky automaticky odsazeny. Bod vložení se umístí na stejný výchozí bod jako předchozí řádek.
+
+ Inteligentní – když je vybraná, nové řádky se umístí tak, aby odpovídaly kontextu kódu, pro další nastavení formátování kódu a konvence IntelliSense pro vývojový jazyk. Tato možnost není k dispozici pro všechny vývojové jazyky.
+
+ Například řádky uzavřené mezi levou složenou závorkou ({) a pravou složenou závorkou (}) mohou být automaticky odsazeny o další zarážku tabulátoru z pozice zarovnaných složených závorek.
+
+## <a name="tabs"></a>Karty
+ Tab Size nastaví vzdálenost mezi zarážkami tabulátoru v mezerách. Výchozí hodnota je čtyři mezery.
+
+ Odsazení velikosti nastaví velikost v mezerách automatického odsazení. Výchozí hodnota je čtyři mezery. Pro vyplnění zadané velikosti budou vloženy znaky tabulátoru, znaky mezery nebo obojí.
+
+ Vložit mezery po výběru a odsadit operace vloží pouze mezery, nikoli znaky TABULÁTORu. Pokud je **Velikost odsazení** nastavená na 5, například, pak se při každém stisknutí klávesy TAB nebo **zvětšení odsazení** na panelu nástrojů **formátování** vloží pět znaků mezer.
+
+ Ponechte záložky v případě, že jsou vybrané, operace odsazení vloží tolik znaků TABULÁTORu, kolik jich je možné. Každý znak TABULÁTORu vyplní počet mezer zadaný v poli **velikost tabulátoru**. Pokud **Velikost odsazení** není sudým násobkem **velikosti tabulátoru**, přidají se k vyplnění rozdílu znaky mezer.
+
+## <a name="see-also"></a>Viz také
+ [Možnosti, textový editor, všechny jazyky](../../ide/reference/options-text-editor-all-languages.md) [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)

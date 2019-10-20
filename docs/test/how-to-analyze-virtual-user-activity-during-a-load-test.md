@@ -5,105 +5,105 @@ ms.topic: conceptual
 helpviewer_keywords:
 - virtual user activity chart, viewing
 ms.assetid: 8bda19b3-91c1-4daf-b6c7-09108bddadff
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dadc35d09ad70986f728104396502f13a06c0995
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 97abfe3740ea9209768e82eca1b269cd0a381233
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979416"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72644174"
 ---
-# <a name="how-to-analyze-what-virtual-users-are-doing-during-a-load-test-using-the-virtual-user-activity-chart"></a>Postupy: Analýza, co dělají virtuálních uživatelů během zátěžového testu pomocí graf aktivity virtuálního uživatele
+# <a name="how-to-analyze-what-virtual-users-are-doing-during-a-load-test-using-the-virtual-user-activity-chart"></a>Postupy: Analýza činnosti virtuálních uživatelů během zátěžového testu pomocí grafu aktivity virtuálního uživatele
 
-Zobrazit aktivity virtuálního uživatele, který je spojen se zátěžovým testem pomocí **graf aktivity virtuálního uživatele**. Každý řádek v tabulce představuje jednotlivého virtuálního uživatele. **Graf aktivity virtuálního uživatele** zobrazuje přesně co jednotlivé virtuální uživatele se provádí během testu. Můžete vidět vzory aktivity uživatelů, vzory zátěže, korelovat Nezdařená nebo pomalá testy a zobrazují požadavky pomocí další aktivity virtuálního uživatele. **Graf aktivity virtuálního uživatele** je k dispozici pouze po dokončení zátěžového testu.
+Zobrazení aktivity virtuálního uživatele, která je přidružená k vašemu zátěžového testu, pomocí **grafu aktivity virtuálního uživatele**. Každý řádek v grafu představuje jednotlivého virtuálního uživatele. **Graf aktivity virtuálního uživatele** zobrazuje přesně to, co každý virtuální uživatel vykonává během testu. Můžete vidět vzory aktivity uživatelů, vzory zatížení, korelace neúspěšných nebo pomalých testů a zobrazit žádosti s jinou aktivitou virtuálního uživatele. **Graf aktivity virtuálního uživatele** je k dispozici až po skončení běhu zátěžového testu.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Následující postupy ukazují, jak zobrazit **graf aktivity virtuálního uživatele**, jak zkoumat aktivita konkrétního uživatele a jak pomocí filtrování.
+Níže uvedené postupy ukazují, jak zobrazit **graf aktivity virtuálního uživatele**, jak prozkoumat aktivitu konkrétního uživatele a jak používat filtrování.
 
-## <a name="to-view-the-virtual-user-activity-chart-in-your-load-test-results"></a>Chcete-li zobrazit graf aktivity virtuálního uživatele ve vašich výsledcích zátěžového testu
+## <a name="to-view-the-virtual-user-activity-chart-in-your-load-test-results"></a>Zobrazení grafu aktivity virtuálních uživatelů ve výsledcích zátěžového testu
 
-1. Chcete-li zobrazit data virtuálního uživatele, je nutné nejprve nakonfigurovat **detaily o všech jednotlivých položkách** nastavení **úložiště podrobností časování** vlastnost, která je spojen se zátěžovým testem. Spusťte zátěžový test.
+1. Chcete-li zobrazit data virtuálního uživatele, je třeba nejprve nakonfigurovat nastavení **všechny jednotlivé podrobnosti** pro vlastnost **úložiště podrobností časování** , která je spojena s vaším zátěžovým testem. Pak spusťte zátěžový test.
 
-2. Po zatížení testovacích běhů, zobrazuje souhrnnou stránku výsledků testu. Zvolte **podrobnosti uživatele** tlačítko na panelu nástrojů.
+2. Po spuštění zátěžového testu se zobrazí stránka Souhrn výsledků testů. Na panelu nástrojů klikněte na tlačítko **Podrobnosti o uživateli** .
 
      -nebo-
 
-     Otevřít zobrazení grafů výběrem **grafy** tlačítko na panelu nástrojů. Klikněte pravým tlačítkem na graf a potom vyberte **přejít na podrobnosti uživatele**.
+     Otevřete zobrazení grafů tak, že na panelu nástrojů vyberete tlačítko **grafy** . Klikněte pravým tlačítkem na graf a vyberte **Přejít k podrobnostem o uživateli**.
 
-     Pokud použijete tuto možnost, **graf aktivity virtuálního uživatele** bude automatické přiblížení část testu, který jste klikli pravým tlačítkem myši. Například, pokud ukazatel myši nachází na přibližně 30 druhý označit, zobrazení podrobností se zobrazí přibližně na značce 30 druhý v **přiblížení na dobu** nástroj v dolní části **graf aktivity virtuálního uživatele** .
+     Pokud použijete tuto možnost, **graf aktivity virtuálního uživatele** se automaticky přiblíží k části testu, na kterou jste klepli pravým tlačítkem. Pokud je například ukazatel na pozici přibližně 30 sekund, zobrazí se v dolní části **grafu aktivity virtuálního uživatele**v zobrazení podrobností přibližně 30 sekundová značka.
 
-     Dále můžete prozkoumat podrobnosti o aktivitě konkrétního uživatele v **graf aktivity virtuálního uživatele**.
+     Dále můžete v **grafu aktivity virtuálního uživatele**použít možnost prozkoumat podrobnosti o aktivitě konkrétního uživatele.
 
-## <a name="to-investigate-a-specific-users-activity-in-the-virtual-user-activity-chart"></a>K prozkoumání aktivita konkrétního uživatele v graf aktivity virtuálního uživatele
+## <a name="to-investigate-a-specific-users-activity-in-the-virtual-user-activity-chart"></a>Prozkoumání aktivity konkrétního uživatele v grafu aktivity virtuálního uživatele
 
-1. Použít funkce zvětšení na čas období nástroj v dolní části **graf aktivity virtuálního uživatele** vyberte oblast v grafu, ve které chcete prozkoumat podrobnosti o konkrétního uživatele.
+1. Pomocí nástroje pro přiblížení do časového období v dolní části **grafu aktivity virtuálního uživatele** vyberte oblast v grafu, ve které chcete prozkoumat podrobnosti konkrétního uživatele.
 
-2. Podržte ukazatel myši nad podrobností v grafu. Všimněte si, že tyto informace se zobrazí v popisu tlačítka:
+2. Najeďte ukazatelem myši na podrobnosti v grafu. Všimněte si, že v popisu nástroje se zobrazí následující informace:
 
-   - **Id uživatele**
+   - **ID uživatele**
 
    - **Scénář**
 
    - **Test**
 
-   - **Adresa URL** (nejsou zobrazeny v testu nebo transakce)
+   - **Adresa URL** (nezobrazuje se v testu nebo v transakci)
 
-   - **Výsledek**
+   - **Zaznamenaný**
 
-   - **Prohlížeč** (nejsou zobrazeny v testu nebo transakce)
+   - **Prohlížeč** (nezobrazuje se v testu nebo v transakci)
 
    - **Sítě**
 
    - **Čas spuštění**
 
-   - **Doba trvání**
+   - **Úkolu**
 
-   - **Agent**
+   - **Agenta**
 
    - **Protokol testu** (odkaz na protokol testu)
 
      > [!NOTE]
-     > Jako pomoc při ladění aplikace, pokud se rozhodnete **protokol testu** odkaz, výsledek webového testu nebo přidružené k protokolu otevřít výsledek testu jednotek.
+     > Pro pomoc při ladění vaší aplikace, pokud zvolíte odkaz **protokol testu** , výsledek webového testu nebo výsledek testu jednotek přidružený k otevřenému protokolu.
 
-     Dále můžete pomocí filtrování a zvýraznění operace jsou dostupné v **graf aktivity virtuálního uživatele**.
+     V dalším kroku můžete použít operace filtrování a zvýrazňování dostupné v **grafu aktivity virtuálního uživatele**.
 
-## <a name="to-use-filtering-options-in-the-virtual-user-activity-chart"></a>Použití možnosti filtrování v graf aktivity virtuálního uživatele
+## <a name="to-use-filtering-options-in-the-virtual-user-activity-chart"></a>Použití možností filtrování v grafu aktivity virtuálního uživatele
 
-1. V **podrobné legendy**, pomocí rozevíracího seznamu vyberte buď **testovací**, **stránky**, nebo **transakce**.
+1. V **legendě podrobností**použijte rozevírací seznam a vyberte možnost **test**, **Stránka**nebo **transakce**.
 
-    **Panel podrobné legendy**
+    **Panel legendy podrobností**
 
-    ![Panel podrobné legendy](../test/media/ltest_detailslegend.png)
+    ![Panel legendy podrobností](../test/media/ltest_detailslegend.png)
 
-2. Zaškrtněte nebo zrušte zaškrtnutí políček u chyby, protokoly, testy, vyhledávání a stránky aspx, které jsou spojeny se zátěžovým testem.
+2. Zaškrtněte nebo zrušte zaškrtnutí políček pro chyby, protokoly, testy, hledání a stránky ASPX, které jsou přidruženy k zátěžovým testům.
 
-    **Graf aktivity virtuálního uživatele** odpovídajícím způsobem aktualizuje.
+    **Graf aktivity virtuálního uživatele** se aktualizuje odpovídajícím způsobem.
 
-    **Graf aktivity virtuálního uživatele** umožňuje filtrovat testy, stránky a transakce na základě několika různých kritérií. Můžete odebrat určité testy ze zobrazení, nebo odebrání všech úspěšných testů nebo odebrání testy, které se nezdařilo s některým chybám. Můžete také odebrat všechny testy, které nemají protokoly.
+    **Graf aktivity virtuálního uživatele** poskytuje možnost filtrovat testy, stránky a transakce na základě několika různých kritérií. Můžete odebrat některé testy ze zobrazení nebo odebrat všechny úspěšné testy nebo odebrat testy, které selhaly při určitých selháních. Můžete také odebrat všechny testy, které nemají protokoly.
 
-    Například můžete vybrat **(zvýraznit chyby)** možnost, která se zobrazí všechny chyby v grafu zobrazí červeně. Můžete také vybrat **(zvýraznit výsledky s protokoly)** možnost, která se zobrazí všechny výsledky testů, které mají protokoly vybarvenými zeleně v grafu.
+    Můžete například vybrat možnost **(chyby zvýrazňování)** , která zobrazí všechny chyby v grafu barevně červenou. Můžete také vybrat možnost **(zvýraznit výsledky s protokoly)** , která zobrazí všechny výsledky testů, které mají v grafu červenou barvu.
 
-    **Filtrovat panel výsledků**
+    **Panel výsledků filtru**
 
-    ![Filtrovat panel výsledků](../test/media/ltest_filterresults.png)
+    ![Panel výsledků filtru](../test/media/ltest_filterresults.png)
 
-3. V **filtrování výsledků**zaškrtněte nebo zrušte zaškrtnutí políček pro následující možnosti filtru:
+3. Ve **výsledcích filtru**zaškrtněte nebo zrušte zaškrtnutí políček pro následující možnosti filtru:
 
-   - **Zobrazit pouze výsledky s protokoly** zobrazí pouze výsledky, které mají protokolů testu k nim má přiřazené testů.
+   - **Zobrazit pouze výsledky s protokoly** Zobrazí pouze výsledky testů, ke kterým jsou přidruženy protokoly testů.
 
-   - **Zobrazit úspěšné výsledky** úspěšné výsledky se zobrazí.
+   - **Zobrazit úspěšné výsledky** Zobrazí úspěšné výsledky.
 
-   - **Zobrazit výsledky s chybami** zobrazuje výsledky s chybami, které vám můžou pomoct při ladění.
+   - **Zobrazit výsledky s chybami** Zobrazí výsledky s chybami, které mohou pomoci při ladění.
 
      > [!NOTE]
-     > Seznam typů chyb, které jsou uvedeny v části **zobrazit výsledky s chybami** uzel můžete zkoumat výběrem **tabulky** tlačítko **prohlížeče výsledků testu výkonnosti webu** nástrojů. Další informace najdete v tématu [Analýza výsledků zátěžových testů a chyb v tabulkovém zobrazení](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+     > Seznam typů chyb, které jsou uvedeny pod uzlem **Zobrazit výsledky s chybami** , lze dále prozkoumat kliknutím na tlačítko **tabulky** na panelu nástrojů **nástroje Web Performance výsledky testů Viewer** . Další informace naleznete v tématu [Analýza výsledků zátěžových testů a chyb v zobrazení tabulky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
 
-     **Graf aktivity virtuálního uživatele** odpovídajícím způsobem aktualizuje.
+     **Graf aktivity virtuálního uživatele** se aktualizuje odpovídajícím způsobem.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Analýza aktivity virtuálních uživatelů v podrobném zobrazení](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)
-- [Návod: Izolace problémů pomocí graf aktivity virtuálního uživatele](../test/walkthrough-use-the-virtual-user-activity-chart-to-isolate-issues.md)
+- [Analýza aktivity virtuálních uživatelů v zobrazení podrobností](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)
+- [Návod: použití grafu aktivity virtuálního uživatele k izolaci problémů](../test/walkthrough-use-the-virtual-user-activity-chart-to-isolate-issues.md)

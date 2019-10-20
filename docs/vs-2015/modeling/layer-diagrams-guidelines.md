@@ -1,5 +1,5 @@
 ---
-title: 'Diagramy vrstev: Pokyny | Dokumentace Microsoftu'
+title: 'Diagramy vrstev: pokyny | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -11,157 +11,156 @@ helpviewer_keywords:
 - constraints, architectural
 ms.assetid: 2903bec7-a93b-46a6-aac6-994ac4f3f1a7
 caps.latest.revision: 57
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4a4b607adcd4aab4c5b70f02cb28f06219c7d655
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: aee4ddc6062e465384921fa2632636c480736a77
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823710"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646128"
 ---
 # <a name="layer-diagrams-guidelines"></a>Diagramy vrstev: Pokyny
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Popisu architektury aplikace na vysoké úrovni tak, že vytvoříte *diagramy vrstev* v sadě Visual Studio. Ujistěte se, že váš kód zůstane konzistentní s tímto návrhem tím, že ověří kód proti diagramu vrstev. Můžete také zahrnout ověřování vrstvy v procesu sestavení. Zobrazit [Video pro kanál 9: Návrh a ověření architektury pomocí diagramů vrstev](http://go.microsoft.com/fwlink/?LinkID=252073).  
-  
- Tuto funkci podporovat kterou verzí sady Visual Studio najdete v tématu [podporované verze pro nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
-  
-## <a name="what-is-a-layer-diagram"></a>Co je diagram vrstev?  
- Stejně jako diagramu tradiční architektura diagramu vrstev identifikuje hlavní součásti nebo funkční jednotky a jejich vzájemných závislostí. Volá se, každý uzel v diagramu *vrstvy*, představuje logické skupiny obory názvů, projekty nebo jiné artefakty. Nakreslení závislosti, které by měly existovat v návrhu. Na rozdíl od tradiční architektura diagramu můžete ověřit, že skutečné závislosti ve zdrojovém kódu odpovídají zamýšlených závislostí, které jste zadali. Tím, že část ověření regulárního sestavení na [!INCLUDE[esprtfs](../includes/esprtfs-md.md)], můžete zajistit, že kód programu pořád dodržovat architektury systému prostřednictvím budoucí změny. Zobrazit [diagramy vrstev: Referenční dokumentace](../modeling/layer-diagrams-reference.md).  
-  
-## <a name="Update"></a> Jak návrh nebo aktualizaci vaší aplikace pomocí diagramů vrstev  
- Následující kroky poskytují přehled o tom, jak pomocí diagramů vrstev v procesu vývoje. Pozdější části tohoto tématu popisují další podrobnosti o každém kroku. Pokud vyvíjíte novou návrhu, vynechejte kroky, které odkazují na existující kód.  
-  
+Popište architekturu vaší aplikace na vysoké úrovni tím, že vytvoříte *diagramy vrstev* v aplikaci Visual Studio. Ujistěte se, že váš kód zůstává v souladu s tímto návrhem ověřováním kódu pomocí diagramu vrstev. Do procesu sestavení můžete také zahrnout ověřování vrstvy. Viz [video o kanálu 9: návrh a ověření architektury pomocí diagramů vrstev](http://go.microsoft.com/fwlink/?LinkID=252073).
+
+ Chcete-li zjistit, které verze aplikace Visual Studio tuto funkci podporují, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+
+## <a name="what-is-a-layer-diagram"></a>Co je diagram vrstev?
+ Podobně jako v případě klasického diagramu architektury identifikuje Diagram vrstev hlavní součásti nebo funkční jednotky návrhu a jejich vzájemných závislostí. Každý uzel v diagramu, označovaný jako *vrstva*, představuje logickou skupinu oborů názvů, projektů nebo jiných artefaktů. Můžete nakreslit závislosti, které by měly existovat v návrhu. Na rozdíl od tradičního diagramu architektury můžete ověřit, zda skutečné závislosti ve zdrojovém kódu odpovídají plánovaným závislostem, které jste určili. Provedením ověřování části pravidelného sestavování na [!INCLUDE[esprtfs](../includes/esprtfs-md.md)] můžete zajistit, aby kód programu pokračoval v dodržení architektury systému v rámci budoucích změn. Viz téma [diagramy vrstev: Reference](../modeling/layer-diagrams-reference.md).
+
+## <a name="Update"></a>Návrh nebo aktualizace aplikace pomocí diagramů vrstev
+ Následující kroky poskytují přehled o tom, jak používat diagramy vrstev v rámci procesu vývoje. Pozdější části tohoto tématu popisují další podrobnosti o jednotlivých krocích. Pokud vyvíjíte nový návrh, vynechejte postup, který odkazuje na existující kód.
+
 > [!NOTE]
-> Tyto kroky jsou v přibližné pořadí. Bude pravděpodobně chcete překrývat s úkoly, přeuspořádat je tak, aby vyhovovala vaší vlastní situaci a opakování na začátku každé iterace ve vašem projektu.  
-  
-1. [Vytvoření diagramu vrstev](#Create) pro celou aplikaci nebo pro vrstvu v něm.  
-  
-2. [Definovat vrstvy představující primární funkční oblasti nebo součásti](#CreateLayers) vaší aplikace. Pojmenujte tyto vrstvy podle jejich funkce, například "Prezentaci" či "Službami". Pokud máte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení, můžete přidružit každou vrstvu kolekce *artefakty*, jako jsou projekty, obory názvů, soubory a tak dále.  
-  
-3. [Zjistit existujícího závislosti](#Generate) mezi vrstvami.  
-  
-4. [Úprava vrstev a závislostí](#EditArchitecture) zobrazíte aktualizovaný návrh, který má kód tak, aby odrážela.  
-  
-5. [Návrh nové oblasti vaší aplikace](#NewAreas) vytvořením vrstvy představují hlavní architektonických bloků nebo komponenty a definování závislostí za účelem zobrazení, jak ostatní každou vrstvu používá.  
-  
-6. [Upravit rozložení a vzhled diagramu](#EditLayout) můžete diskutovat s kolegy.  
-  
-7. [Ověření kódu proti diagramu vrstev](#Validate) zvýrazněte konfliktů mezi kódem a architekturu, budete potřebovat.  
-  
-8. [Aktualizace kódu tak, aby odpovídal vaší nové architektury](#UpdateCode). Iterativní vývoj a Refaktorovat kód, dokud nebude ověření ukazovat žádné konflikty.  
-  
-9. [Zahrnout ověřování vrstvy v procesu sestavení](#BuildValidation) zajistit, že kód pořád dodržovat do svého návrhu.  
-  
-## <a name="Create"></a> Vytvoření diagramu vrstev  
- Diagram vrstev musí být vytvořeny v projektu modelování. Můžete přidat do existujícího projektu modelování nový diagram vrstev, vytvořte nový projekt modelování pro diagram vrstev nebo zkopírovat existující diagram vrstev ve stejném projektu modelování.  
-  
+> Tyto kroky se zobrazí v přibližném pořadí. Pravděpodobně budete chtít překrývat úkoly, změnit jejich pořadí tak, aby vyhovovaly vaší vlastní situaci, a pak je znovu navštívit na začátku každé iterace v projektu.
+
+1. [Vytvoření diagramu vrstev](#Create) pro celou aplikaci nebo pro vrstvu v ní.
+
+2. [Definujte vrstvy, které reprezentují hlavní funkční oblasti nebo komponenty](#CreateLayers) vaší aplikace. Pojmenujte tyto vrstvy podle jejich funkce, například "prezentace" nebo "služby". Pokud máte řešení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], můžete přidružit jednotlivé vrstvy ke kolekci *artefaktů*, jako jsou projekty, obory názvů, soubory a tak dále.
+
+3. [Zjistí existující závislosti](#Generate) mezi vrstvami.
+
+4. [Upravte vrstvy a závislosti](#EditArchitecture) tak, aby se zobrazil aktualizovaný návrh, který chcete, aby kód odrážel.
+
+5. [Navrhněte nové oblasti aplikace](#NewAreas) vytvořením vrstev, které představují hlavní stavební bloky nebo komponenty, a definování závislostí, které ukazují, jak jednotlivé vrstvy používají ostatní.
+
+6. [Upravte rozložení a vzhled diagramu](#EditLayout) , abyste ho mohli diskutovat s kolegy.
+
+7. [Ověřte kód proti diagramu vrstev](#Validate) a zvýrazněte konflikty mezi kódem a architekturou, kterou požadujete.
+
+8. [Aktualizujte kód tak, aby odpovídal vaší nové architektuře](#UpdateCode). Iterativní vývoj a refaktoring kódu, dokud ověření neukáže žádné konflikty.
+
+9. [Zahrňte ověřování vrstvy do procesu sestavení](#BuildValidation) , aby se zajistilo, že kód bude nadále vyhovovat vašemu návrhu.
+
+## <a name="Create"></a>Vytvoření diagramu vrstev
+ V rámci projektu modelování musí být vytvořen Diagram vrstev. Nový diagram vrstev můžete přidat do existujícího projektu modelování, vytvořit nový projekt modelování pro diagram vrstev nebo zkopírovat existující diagram vrstev v rámci stejného projektu modelování.
+
 > [!IMPORTANT]
-> Přidat, přetáhněte nebo zkopírujte existující diagram vrstev z jednoho projektu modelování do jiného projektu modelování nebo do jiného umístění v řešení. Diagram vrstev, který je tímto způsobem zkopírují budou mít stejné odkazy jako původní diagram i v případě, že změníte diagram. To zabrání ověřování vrstev podle vašich představ a může způsobit další problémy, jako jsou například chybějící prvky nebo jiné chyby při pokusu o otevření diagramu.  
-  
- Zobrazit [vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md).  
-  
-## <a name="CreateLayers"></a> Definovat vrstvy představují funkčních oblastí nebo komponenty  
- Vrstvy představují logické skupiny *artefakty*, jako jsou projekty, soubory kódu, obory názvů, třídy a metody. Můžete vytvořit vrstvu z artefaktů z projektů Visual C# .NET a Visual Basic .NET nebo připojíte specifikace nebo plány do vrstvy propojením dokumentů, jako je Word nebo prezentace aplikace PowerPoint. Každá vrstva se zobrazí jako obdélníku v diagramu a zobrazuje počet artefaktů, které jsou propojeny k němu. Vrstva může obsahovat vnořené vrstvy, které popisují podrobnější úlohy.  
-  
- V rámci obecných pokynů název vrstvy podle jejich funkce, například "Prezentaci" či "Službami". Pokud artefakty, které jsou úzce vzájemně závislé, je umístíte do stejné vrstvě. Pokud artefakty, které lze aktualizovat samostatně nebo použít v samostatné aplikace, je umístíte do různých vrstev. Informace o vzorech vrstev, navštivte web vzory a postupy v [ http://go.microsoft.com/fwlink/?LinkId=145794 ](http://go.microsoft.com/fwlink/?LinkId=145794).  
-  
+> Nepřidávat, přetahovat ani kopírovat existující diagram vrstev z projektu modelování do jiného projektu modelování nebo do jiného umístění v řešení. Diagram vrstev, který je tímto způsobem zkopírován, bude mít stejné odkazy jako původní diagram, i když diagram upravíte. To zabrání správnému fungování ověřování vrstvy a může způsobit další problémy, například chybějící prvky nebo jiné chyby při pokusu o otevření diagramu.
+
+ Viz [vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md).
+
+## <a name="CreateLayers"></a>Definování vrstev pro reprezentaci funkčních oblastí nebo komponent
+ Vrstvy reprezentují logické skupiny *artefaktů*, jako jsou projekty, soubory kódu, obory názvů, třídy a metody. Můžete vytvářet vrstvy z artefaktů z projektů Visual C# .net a Visual Basic .NET, nebo můžete k vrstvě připojit specifikace nebo plány propojením dokumentů, jako jsou například soubory aplikace Word nebo prezentace aplikace PowerPoint. Každá vrstva se zobrazí jako obdélník v diagramu a zobrazuje počet artefaktů, které jsou s ním spojeny. Vrstva může obsahovat vnořené vrstvy, které popisují konkrétnější úlohy.
+
+ V rámci obecných pokynů, názvy vrstev podle jejich funkce, například "prezentace" nebo "služby". Pokud jsou artefakty úzce závislé, umístěte je do stejné vrstvy. Pokud se artefakty dají aktualizovat samostatně nebo použít v samostatných aplikacích, umístěte je do různých vrstev. Další informace o vzorech vrstvení najdete v části vzory & postupy na webu [http://go.microsoft.com/fwlink/?LinkId=145794](http://go.microsoft.com/fwlink/?LinkId=145794).
+
 > [!TIP]
-> Existují určité typy artefaktů, které lze propojit s vrstvami, ale nepodporují ověření proti diagramu vrstev. Chcete-li zobrazit, zda artefakt podporuje ověřování, otevřete **Průzkumník vrstev** prozkoumat **podporuje ověřování** vlastnosti propojení artefaktu. Zobrazit [zjistit existujících závislostech mezi vrstvami](#Generate).  
-  
- Při aktualizaci aplikace seznámeni, může také vytváření map kódu. Tyto diagramy vám můžou pomoct odhalit vzory a závislostí při zkoumání kódu. Průzkumník řešení používá k prozkoumání oborů názvů a třídy, které často odpovídají existujících vrstev. Přiřazení těchto kód artefaktů do vrstev jejich přetažením z Průzkumníka řešení do diagramů vrstev. Potom můžete diagramy vrstev můžete aktualizovat kód a zachování jejich konzistence s návrhu.  
-  
- Další informace:  
-  
-- [Vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)  
-  
-- [Použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)  
-  
-- [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)  
-  
-## <a name="Generate"></a> Zjistit existujících závislostech mezi vrstvami  
- Závislost existuje všude, kde artefakt, který je spojen s jednou vrstvou, odkazuje na artefakt, který je přidružen k jiné vrstvě. Třída v jedné vrstvě například deklaruje proměnnou, která má třídu v jiné vrstvě. Existujícího závislosti můžete zjistit pomocí zpětnou je.  
-  
+> Existují určité typy artefaktů, které lze propojit s vrstvami, ale které nepodporují ověřování proti diagramu vrstev. Chcete-li zjistit, zda artefakt podporuje ověřování, otevřete **Průzkumníka vrstev** a prověřte vlastnost **podporuje ověření** odkazu artefaktu. Viz [zjišťování existujících závislostí mezi vrstvami](#Generate).
+
+ Při aktualizaci neznámé aplikace můžete také vytvořit mapy kódu. Tyto diagramy vám mohou při zkoumání kódu pomáhat při vyhledávání vzorů a závislostí. Pomocí Průzkumník řešení můžete prozkoumat obory názvů a třídy, které často odpovídají existujícím vrstvám. Přiřaďte tyto artefakty kódu do vrstev jejich přetažením z Průzkumník řešení do diagramů vrstev. Diagramy vrstev pak můžete použít k aktualizaci kódu a zachování konzistence v souladu s Vaším návrhem.
+
+ Další informace:
+
+- [Vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)
+
+- [Použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)
+
+- [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)
+
+## <a name="Generate"></a>Zjišťovat existující závislosti mezi vrstvami
+ Závislost existuje všude, kde artefakt, který je spojen s jednou vrstvou, odkazuje na artefakt, který je přidružen k jiné vrstvě. Třída v jedné vrstvě například deklaruje proměnnou, která má třídu v jiné vrstvě. Stávající závislosti můžete zjistit zpětnou metodologií.
+
 > [!NOTE]
-> Pro určité druhy artefaktů nelze provádět zpětnou analýzu žádných závislostí. Zpětnou analýzou například nebudou získány žádné závislosti z vrstvy nebo do ní, když je propojena s textovým souborem. Pokud chcete zobrazit, které artefakty mají závislosti, které je možné provádět zpětnou analýzu, klikněte pravým tlačítkem na jednu nebo více vrstev a klikněte na **zobrazit odkazy**. V **Průzkumník vrstev**, zkontrolujte **podporuje ověřování** sloupce. Závislosti se nebudou provést zpětnou analýzu pro artefakty, u kterých tento sloupec zobrazuje **False**.  
-  
-#### <a name="to-reverse-engineer-existing-dependencies-between-layers"></a>Provádět zpětnou analýzu existujících závislostí mezi vrstvami  
-  
-- Vyberte vrstvu jeden nebo více vrstev, klikněte pravým tlačítkem na vybrané vrstvy a klikněte na **generovat závislosti**.  
-  
-  Obvykle se zobrazí nějaké závislosti, které by neměly existovat. Tyto závislosti lze upravit, aby odpovídaly zamýšlenému návrhu.  
-  
-## <a name="EditArchitecture"></a> Úprava vrstev a závislostí za účelem zobrazení zamýšleného návrhu  
- K popisu změn, které máte v plánu provést vašeho systému nebo v požadované architektuře, postupujte následovně Chcete-li upravit diagram vrstev. Můžete také zvážit provádíme některé změny refaktoringu pro zlepšení strukturu kódu před jeho rozšíření. Zobrazit [zlepšení strukturu kódu](#Improving).  
-  
-|**To**|**Proveďte tyto kroky**|  
-|------------|-----------------------------|  
-|Odstranit závislost, která by neměla existovat|Klepněte na závislost a stiskněte klávesu **odstranit**.|  
-|Změna nebo omezení směru závislosti|Nastavte jeho **směr** vlastnost.|  
-|Vytvoření nových závislostí|Použití **závislost** a **obousměrná závislost** nástroje.<br /><br /> Chcete-li nakreslit více závislostí, klikněte na nástroj dvakrát. Až budete hotovi, klikněte na tlačítko **ukazatel** nástrojů nebo stisknete klávesu **ESC** klíč.|  
-|Zadání toho, aby artefakty spojené s vrstvou nemohly záviset na zadaných oborech názvů|Zadejte obory názvů do vrstvy **je zakázané závislosti Namespace** vlastnost. Použijte středník ( **;** ) k oddělení oborů názvů.|  
-|Zadání toho, aby artefakty spojené s vrstvou nesměly patřit zadanému oboru názvů|Zadejte obory názvů do vrstvy **zakázané obory názvů** vlastnost. Použijte středník ( **;** ) k oddělení oborů názvů.|  
-|Zadání toho, aby artefakty spojené s vrstvou musely patřit jednomu ze zadaných oborů názvů|Zadejte obor názvů vrstvy **požadované obory názvů** vlastnost. Použijte středník ( **;** ) k oddělení oborů názvů.|  
-  
-### <a name="Improving"></a> Zlepšení struktury kódu  
- Refaktorování změnami jsou vylepšení, které nemají vliv na chování aplikace, ale pomohou lépe kód změnit a v budoucnu rozšířit. Strukturované kódu je návrh, který se snadno abstraktní do diagramu vrstev.  
-  
- Například pokud vytvoříte vrstvy pro každý obor názvů v editoru kódu a pak provést zpětnou analýzu závislostí, by měla existovat minimální sadu jednosměrné závislosti mezi vrstvami. Pokud vytvoříte více podrobný diagram použití tříd a metod jako vrstvy, pak výsledek musí být také stejné vlastnosti.  
-  
- Pokud to není tento případ, kód bude obtížnější, chcete-li změnit v celé jeho životnosti a bude méně vhodná pro ověření pomocí diagramů vrstev.  
-  
-## <a name="NewAreas"></a> Nové oblasti návrhu vaší aplikace  
- Při spuštění vývoje nový projekt nebo nové oblasti v novém projektu můžete nakreslit vrstvy a závislostech, abyste mohli identifikovat hlavní komponenty, než začnete vyvíjet kód.  
-  
-- **Zobrazit údaje vzorech architektury** v diagramy vrstev, pokud je to možné. Diagram vrstev, který popisuje aplikace klasické pracovní plochy může obsahovat třeba vrstvy, jako je například Data Store, prezentaci a logiku domény. Diagram vrstev, která zahrnuje jednu funkci v rámci aplikace může mít vrstvy, jako je Model, zobrazení a kontroler. Další informace o těchto vzorech najdete v tématu [vzory a postupy: Architektura aplikace](http://go.microsoft.com/fwlink/?LinkId=145794).  
-  
-     Pokud jste často podobné vzory, vytvořte vlastní nástroj. Zobrazit [definování vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md).  
-  
-- **Vytvořit kód artefakt pro každou vrstvu** například obor názvů, třídy nebo komponenty. Díky tomu snadněji následují kód a propojit kód artefakty do vrstvy. Jakmile vytvoříte každý artefakt, připojit ho k příslušné vrstvě.  
-  
-- **Nemáte propojení Většina tříd a jiných artefaktů do vrstev** protože spadají větší součásti, jako jsou obory názvů, které jste již propojeny s vrstvami.  
-  
-- **Vytvoření nového diagramu na novou funkci**. Obvykle bude existovat jeden nebo více diagramů vrstev popisující celou aplikaci. Pokud navrhujete novou funkci v rámci aplikace, přidat nebo změnit stávající diagramů. Místo toho vytvořte vlastní diagram, který odráží nové části kódu. Vrstvy v novém diagramu může zahrnovat prezentace, logiku domény a vrstvy databáze pro nové funkce.  
-  
-     Při sestavování aplikace, kód ověří, jak proti celý diagram a diagramu podrobnější funkce.  
-  
-## <a name="EditLayout"></a> Upravit rozložení pro prezentaci a diskusi  
- Které vám pomůžou identifikovat vrstev a závislostí nebo projednávat s členy týmu, upravte vzhled a rozložení diagramu následujícími způsoby:  
-  
-- Změna velikosti, tvary a pozice vrstvy.  
-  
-- Změna barvy vrstvy a závislosti.  
-  
-  - Vyberte jeden nebo více vrstev nebo závislosti, klikněte pravým tlačítkem a pak klikněte na tlačítko **vlastnosti**. V **vlastnosti** okně Upravit **barva** vlastnost.  
-  
-## <a name="Validate"></a> Ověření kódu proti diagramu  
- Pokud jste upravili diagramu, můžete ověřit ho s kódem kdykoli ručně nebo automaticky při každém spuštění místního sestavení nebo [!INCLUDE[esprbuild](../includes/esprbuild-md.md)].  
-  
- Další informace:  
-  
-- [Ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)  
-  
-- [Zahrnout ověřování vrstvy v procesu sestavení](#BuildValidation)  
-  
-## <a name="UpdateCode"></a> Aktualizace kódu tak, aby odpovídal na nové architektuře  
- Obvykle chyby se objeví při prvním ověřování kódu proti diagramu vrstvy aktualizované. K těmto chybám může mít několik příčin:  
-  
-- Artefakt je přiřazen nesprávné vrstvě. V tomto případě přesuňte artefakt.  
-  
-- Artefakt, jako je například třída, používá jiné třídy způsobem, který je v konfliktu s architekturou. V tomto případě refaktorujte kód a odeberte závislost.  
-  
-  Chcete-li tyto chyby odstranit, aktualizujte kód, dokud se během ověřování neobjeví žádné chyby. To je obvykle iterativní proces. Další informace o těchto chybách naleznete v tématu [ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md).  
-  
+> Pro určité druhy artefaktů nelze provádět zpětnou analýzu žádných závislostí. Zpětnou analýzou například nebudou získány žádné závislosti z vrstvy nebo do ní, když je propojena s textovým souborem. Chcete-li zjistit, které artefakty mají závislosti, které je možné zpětně analyzovat, klikněte pravým tlačítkem myši na jednu nebo více vrstev a potom klikněte na možnost **Zobrazit odkazy**. V **Průzkumníku vrstev**Projděte sloupec **Podpora ověřování** . Pro artefakty, pro které tento sloupec zobrazuje **hodnotu false**, nebude možné provádět zpětnou analýzu závislostí.
+
+#### <a name="to-reverse-engineer-existing-dependencies-between-layers"></a>Zpětná analýza existujících závislostí mezi vrstvami
+
+- Vyberte jednu vrstvu nebo více vrstev, klikněte pravým tlačítkem na vybranou vrstvu a pak klikněte na **vygenerovat závislosti**.
+
+  Obvykle se zobrazí nějaké závislosti, které by neměly existovat. Tyto závislosti lze upravit, aby odpovídaly zamýšlenému návrhu.
+
+## <a name="EditArchitecture"></a>Úprava vrstev a závislostí pro zobrazení zamýšleného návrhu
+ Chcete-li popsat změny, které plánujete udělat v systému nebo zamýšlené architektuře, použijte následující postup k úpravě diagramu vrstev. Můžete také zvážit provedení některých změn refaktoringu pro zlepšení struktury kódu před jeho rozšířením. Viz [vylepšení struktury kódu](#Improving).
+
+|**Schopn**|**Proveďte tyto kroky**|
+|------------|-----------------------------|
+|Odstranit závislost, která neexistuje|Klikněte na závislost a potom stiskněte **Delete**.|
+|Změna nebo omezení směru závislosti|Nastavte vlastnost **Direction** .|
+|Vytvoření nových závislostí|Použijte nástroje **závislosti** a **obousměrné závislosti** .<br /><br /> Chcete-li nakreslit více závislostí, klikněte na nástroj dvakrát. Po dokončení klikněte na nástroj **ukazatel** nebo stiskněte klávesu **ESC** .|
+|Zadání toho, aby artefakty spojené s vrstvou nemohly záviset na zadaných oborech názvů|Zadejte obory názvů ve vlastnosti **zakázané závislosti oboru názvů** vrstvy. K oddělení oborů názvů použijte středník ( **;** ).|
+|Zadání toho, aby artefakty spojené s vrstvou nesměly patřit zadanému oboru názvů|Zadejte obory názvů do vlastnosti **zakázané obory názvů** vrstvy. K oddělení oborů názvů použijte středník ( **;** ).|
+|Zadání toho, aby artefakty spojené s vrstvou musely patřit jednomu ze zadaných oborů názvů|Zadejte obor názvů do vlastnosti **požadované obory názvů** vrstvy. K oddělení oborů názvů použijte středník ( **;** ).|
+
+### <a name="Improving"></a>Zlepšení struktury kódu
+ Změny refaktoringu jsou vylepšení, která neovlivňují chování aplikace, ale usnadňují změnu a rozšiřování kódu v budoucnu. Dobře strukturovaný kód má návrh, který se snadno zaabstrakcí do diagramu vrstev.
+
+ Například pokud vytvoříte vrstvu pro každý obor názvů v kódu a pak zpětnou analýzu závislostí, měla by být minimální sada jednosměrných závislostí mezi vrstvami. Pokud vytvoříte podrobnější diagram pomocí tříd nebo metod jako vašich vrstev, pak výsledek by měl mít také stejné charakteristiky.
+
+ V takovém případě se kód v průběhu své životnosti obtížně změní a bude méně vhodný pro ověřování pomocí diagramů vrstev.
+
+## <a name="NewAreas"></a>Návrh nových oblastí aplikace
+ Při zahájení vývoje nového projektu nebo nové oblasti v novém projektu lze nakreslit vrstvy a závislosti, které vám pomohou identifikovat hlavní komponenty před začátkem vývoje kódu.
+
+- Pokud je to možné, zobrazí se v diagramech vrstev **identifikovatelné modely architektury** . Například Diagram vrstev, který popisuje desktopovou aplikaci, může obsahovat vrstvy, jako je například prezentace, doménová logika a úložiště dat. Diagram vrstev, který pokrývá jednu funkci v rámci aplikace, může mít vrstvy, jako je model, zobrazení a kontroler. Další informace o těchto vzorech najdete v tématu [vzory & postupy: Architektura aplikace](http://go.microsoft.com/fwlink/?LinkId=145794).
+
+     Pokud často vytváříte podobné vzory, vytvořte si vlastní nástroj. Viz [definice vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md).
+
+- **Vytvořte artefakt kódu pro každou vrstvu** , například obor názvů, třídu nebo komponentu. Díky tomu je snazší sledovat kód a propojit artefakty kódu s vrstvami. Jakmile vytvoříte každý artefakt, propojte jej s příslušnou vrstvou.
+
+- **Nemusíte propojit většinu tříd a jiných artefaktů s vrstvami** , protože spadají do větších artefaktů, jako jsou například obory názvů, které již byly propojeny s vrstvami.
+
+- **Vytvoří nový diagram pro novou funkci**. Obvykle bude k dispozici jeden nebo více diagramů vrstev popisujících celou aplikaci. Pokud navrhujete novou funkci v rámci aplikace, nepřidávejte nebo neměňte existující diagramy. Místo toho vytvořte vlastní diagram, který odráží nové části kódu. Mezi vrstvy v novém diagramu může patřit prezentace, logika domény a vrstva databáze pro novou funkci.
+
+     Když sestavíte aplikaci, váš kód se ověří jak z celkového diagramu, tak z diagramu podrobnějších funkcí.
+
+## <a name="EditLayout"></a>Upravit rozložení prezentace a diskuze
+ Pro usnadnění identifikace vrstev a závislostí nebo jejich diskuzi se členy týmu upravte vzhled a rozložení diagramu následujícími způsoby:
+
+- Změna velikosti, tvarů a pozic vrstev.
+
+- Změna barev vrstev a závislostí.
+
+  - Vyberte jednu nebo více vrstev nebo závislostí, klikněte pravým tlačítkem myši a pak klikněte na **vlastnosti**. V okně **vlastnosti** upravte vlastnost **Color** .
+
+## <a name="Validate"></a>Ověření kódu proti diagramu
+ Pokud jste diagram upravili, můžete jej kdykoli ověřit pomocí kódu ručně nebo automaticky pokaždé, když spustíte místní sestavení nebo [!INCLUDE[esprbuild](../includes/esprbuild-md.md)].
+
+ Další informace:
+
+- [Ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)
+
+- [Zahrnout ověřování vrstvy do procesu sestavení](#BuildValidation)
+
+## <a name="UpdateCode"></a>Aktualizujte kód tak, aby odpovídal nové architektuře.
+ Obvykle se chyby zobrazí při prvním ověření kódu proti aktualizovanému diagramu vrstev. Tyto chyby mohou mít několik příčin:
+
+- Artefakt je přiřazen nesprávné vrstvě. V tomto případě přesuňte artefakt.
+
+- Artefakt, jako je například třída, používá jiné třídy způsobem, který je v konfliktu s architekturou. V tomto případě refaktorujte kód a odeberte závislost.
+
+  Chcete-li tyto chyby odstranit, aktualizujte kód, dokud se během ověřování neobjeví žádné chyby. To je obvykle iterativní proces. Další informace o těchto chybách naleznete v tématu [ověření kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md).
+
 > [!NOTE]
-> Při vývoji a Refaktorovat kód, můžete mít nový artefakty k propojení do diagramu vrstev. Nicméně to nemusí být nezbytné, například když máte vrstvy, které představují stávající obory názvů a nový kód pouze přidá další materiály obory názvů.  
-  
- Během procesu vývoje můžete chtít potlačit některé vykázané konflikty během ověřování. Například můžete chtít potlačit chyby, které již řešíte nebo které nejsou relevantní k danému scénáři. Při potlačení chyby je praktikou zaznamenat pracovní položku [!INCLUDE[esprfound](../includes/esprfound-md.md)]. K provedení této úlohy, naleznete v tématu [ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md).  
-  
-## <a name="BuildValidation"></a> Zahrnout ověřování vrstvy v procesu sestavení  
- Pokud chcete mít jistotu, že budoucí změny v kódu je v souladu s diagramy vrstev, zahrňte ověřování vrstvy do vašeho řešení standardní proces sestavení. Pokaždé, když se ostatní členové týmu mohli sestavit řešení, případné rozdíly mezi závislostmi v kódu a diagram vrstev se ohlásí jako chyby sestavení. Další informace týkající se ověřování vrstvy v procesu sestavení naleznete v tématu [ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Diagramy vrstev: Referenční dokumentace](../modeling/layer-diagrams-reference.md)   
- [Vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)
+> Při vývoji nebo refaktorování kódu mohou být k dispozici nové artefakty pro propojení s diagramem vrstev. To však nemusí být nutné, například když máte vrstvy, které reprezentují existující obory názvů, a nový kód přidá více materiálů do těchto oborů názvů.
+
+ Během procesu vývoje můžete chtít potlačit některé vykázané konflikty během ověřování. Například můžete chtít potlačit chyby, které již řešíte nebo které nejsou relevantní k danému scénáři. Pokud potlačíte chybu, je vhodné Protokolovat pracovní položku v [!INCLUDE[esprfound](../includes/esprfound-md.md)]. Chcete-li provést tuto úlohu, přečtěte si téma [ověření kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md).
+
+## <a name="BuildValidation"></a>Zahrnout ověřování vrstvy do procesu sestavení
+ Chcete-li zajistit, aby budoucí změny v kódu odpovídaly diagramům vrstev, zahrňte ověřování vrstvy do procesu standardního sestavení vašeho řešení. Kdykoli ostatní členové týmu sestaví řešení, všechny rozdíly mezi závislostmi v kódu a diagramu vrstev budou hlášeny jako chyby sestavení. Další informace o tom, jak zahrnout ověřování vrstev v procesu sestavení, naleznete v tématu [ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md).
+
+## <a name="see-also"></a>Viz také
+ [Diagramy vrstev: Reference](../modeling/layer-diagrams-reference.md) [k vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)

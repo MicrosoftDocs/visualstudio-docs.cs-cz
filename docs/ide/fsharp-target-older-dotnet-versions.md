@@ -1,62 +1,62 @@
 ---
-title: Cílí na předchozí verze rozhraní .NET Framework proF#
-description: Další informace o cílení na starší verzi rozhraní .NET Framework při použití F# v sadě Visual Studio.
+title: Cílit na předchozí verze .NET Framework proF#
+description: Přečtěte si o cílení na starší verzi .NET Framework F# při použití v aplikaci Visual Studio.
 ms.date: 07/11/2018
 ms.topic: troubleshooting
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
 monikerRange: vs-2017
-ms.openlocfilehash: 2e0d580ac18142010a306d3fb4de19eb69b0b91b
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: df263ee4b2bd6ec7b6239826725a85c26f0acf80
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746705"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72603530"
 ---
-# <a name="target-older-versions-of-net-f"></a>Cíleny na starší verze rozhraní .NET (F#)
+# <a name="target-older-versions-of-net-f"></a>Cílové starší verze rozhraní .NET (F#)
 
-Pokud se pokusíte cílit na rozhraní .NET Framework 2.0, 3.0 nebo 3.5 v se může objevit následující chyba F# projektu při instalaci sady Visual Studio na Windows 8.1:
+Následující chyba se může zobrazit, pokud se pokusíte cílit na .NET Framework 2,0, 3,0 nebo 3,5 v F# projektu při instalaci sady Visual Studio v Windows 8.1:
 
-**Tento projekt vyžaduje rozhraní příkazového řádku 2.0 F# modulu runtime, ale tento modul runtime není nainstalována.**
+**Tento projekt vyžaduje modul runtime F# 2,0, ale tento modul runtime není nainstalován.**
 
-Tato chyba se ví, že dojde k pod následující kombinace podmínek:
+Tato chyba se objevuje při následující kombinaci podmínek:
 
-- Instalaci sady Visual Studio na Windows 8.1.
+- Nainstalovali jste aplikaci Visual Studio na Windows 8.1.
 
-- Před instalací sady Visual Studio jste nepovolili rozhraní .NET Framework 3.5.
+- Před instalací sady Visual Studio jste nepovolili .NET Framework 3,5.
 
-- Váš projekt cílí na .NET Framework 2.0, 3.0 nebo 3.5.
+- Projekt cílí na .NET Framework 2,0, 3,0 nebo 3,5.
 
-Při instalaci sady Visual Studio zjistí nainstalovaných verzí rozhraní .NET Framework. Visual Studio nainstaluje F# 2.0 runtime pouze v případě, že je nainstalované a povolené rozhraní .NET Framework 3.5.
+Při instalaci sady Visual Studio se zjistí nainstalované verze .NET Framework. Visual Studio nainstaluje modul F# runtime 2,0 pouze v případě, že je nainstalovaná a povolená .NET Framework 3,5.
 
-## <a name="resolve-the-error"></a>Pokud chcete chybu vyřešit
+## <a name="resolve-the-error"></a>Vyřešit chybu
 
-Chcete-li vyřešit tuto chybu, můžete buď:
+Chcete-li tuto chybu vyřešit, můžete:
 
-- Cílení na novější verzi rozhraní .NET Framework.
+- Zacílení na novější verzi .NET Framework.
 
-- Povolte rozhraní .NET Framework 3.5 ve Windows 8.1 a potom nainstalujte F# 2.0 runtime tak, že opravíte instalaci sady Visual Studio. Postupujte podle kroků provedete to tak.
+- Povolte .NET Framework 3,5 na Windows 8.1 a pak nainstalujte modul runtime F# 2,0 pomocí opravy instalace sady Visual Studio. Postup je následující:
 
-### <a name="to-enable-the-net-framework-35-on-windows-81"></a>Chcete-li povolit rozhraní .NET Framework 3.5 ve Windows 8.1
+### <a name="to-enable-the-net-framework-35-on-windows-81"></a>Povolení .NET Framework 3,5 na Windows 8.1
 
-1. Na **Start** zadejte **ovládací panely**.
+1. Na **úvodní** obrazovce zadejte **Ovládací panely**.
 
-   Při psaní **ovládací panely** ikona se zobrazuje v části **aplikace** záhlaví.
+   Při psaní se v záhlaví **aplikace** zobrazí ikona **Ovládací panely** .
 
-2. Zvolte **ovládací panely** ikonu, zvolte **programy** ikony a klikněte na tlačítko **Windows zapnout nebo vypnout funkce** odkaz.
+2. Zvolte ikonu **Ovládací panely** , zvolte ikonu **programy** a pak zvolte odkaz **zapnout nebo vypnout funkce systému Windows** .
 
-3. Ujistěte se, že **rozhraní .NET Framework 3.5 (zahrnuje .NET 2.0 a 3.0)** zaškrtávací políčko zaškrtnuto a klikněte na tlačítko **OK** tlačítko. Není nutné zaškrtněte políčka pro všechny podřízené uzly pro volitelné součásti rozhraní .NET Framework.
+3. Ujistěte se, že je zaškrtnuté políčko **.NET Framework 3,5 (zahrnuje rozhraní .net 2,0 a 3,0)** , a pak klikněte na tlačítko **OK** . Pro volitelné součásti .NET Framework nemusíte zaškrtnout políčka u všech podřízených uzlů.
 
-   Rozhraní .NET Framework 3.5 je povolená, pokud ho ještě nebyl.
+   .NET Framework 3,5 je povoleno, pokud ještě neexistovala.
 
-### <a name="to-install-the-f-20-runtime"></a>Chcete-li nainstalovat F# 2.0 modulu runtime
+### <a name="to-install-the-f-20-runtime"></a>Instalace modulu runtime F# 2,0
 
-Postupujte podle [kroky pro opravu sady Visual Studio](../install/repair-visual-studio.md).
+Proveďte [opravu sady Visual Studio podle pokynů](../install/repair-visual-studio.md).
 
 ## <a name="see-also"></a>Viz také:
 
 - [F#Průvodce (.NET Framework)](/dotnet/fsharp/)
-- [F#v sadě Visual Studio](fsharp-visual-studio.md)
+- [F#v aplikaci Visual Studio](fsharp-visual-studio.md)

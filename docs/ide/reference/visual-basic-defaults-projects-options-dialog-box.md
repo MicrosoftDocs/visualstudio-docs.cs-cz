@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Option Compare statement, setting in the IDE
 - Option Strict statement, setting in the IDE
 ms.assetid: 2465cd9d-18b6-4c4a-b1ea-86dbab23fc79
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7322ee72509a199e3b4168a0b24083fe463e2457
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 64641ebf47e5a5c91b7e20f1ddafe9490649ec9a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925963"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72622389"
 ---
 # <a name="visual-basic-defaults-projects-options-dialog-box"></a>Výchozí možnosti jazyka Visual Basic, projekty, dialogové okno Možnosti
 Určuje výchozí nastavení pro Visual Basic možnosti projektu. Při vytvoření nového projektu budou zadané příkazy Option přidány do záhlaví projektu v editoru kódu. Možnosti platí pro všechny projekty Visual Basic.
@@ -28,7 +28,7 @@ Chcete-li získat přístup k tomuto dialogovému oknu, v nabídce **nástroje**
 
  **Možnost Explicit**
 
-Nastaví výchozí kompilátor tak, aby se vyžadovaly explicitní deklarace proměnných. Ve výchozím nastavení je **možnost explicitně** nastavenána hodnotu Zapnuto. Další informace najdete v tématu [/OptionExplicit](/dotnet/visual-basic/reference/command-line-compiler/optionexplicit).
+Nastaví výchozí kompilátor tak, aby se vyžadovaly explicitní deklarace proměnných. Ve výchozím nastavení je **možnost explicitně** nastavená na hodnotu **zapnuto**. Další informace najdete v tématu [/OptionExplicit](/dotnet/visual-basic/reference/command-line-compiler/optionexplicit).
 
  **Možnost Strict**
 
@@ -40,7 +40,7 @@ Nastaví výchozí kompilátor pro porovnávání řetězců: binární (rozliš
 
  **Odvoditelné možnosti**
 
-Nastaví výchozí kompilátor pro odvození lokálního typu. Ve výchozím nastavení je **možnost odvozování** u nově vytvořených projektů a u migrovaných projektů vytvořených v dřívějších verzích Visual Basic nastavena na hodnotu **zapnuto** . Další informace najdete v tématu [/optioninfer](/dotnet/visual-basic/reference/command-line-compiler/optioninfer).
+Nastaví výchozí kompilátor pro odvození lokálního typu. Ve výchozím nastavení je **možnost odvozování** u nově vytvořených projektů **a u migrovaných** projektů vytvořených v dřívějších verzích Visual Basic nastavena na hodnotu **zapnuto** . Další informace najdete v tématu [/optioninfer](/dotnet/visual-basic/reference/command-line-compiler/optioninfer).
 
 ## <a name="see-also"></a>Viz také
 

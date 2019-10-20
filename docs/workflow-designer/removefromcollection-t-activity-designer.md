@@ -1,46 +1,46 @@
 ---
-title: Návrhář postupu provádění - RemoveFromCollection&lt;T&gt; návrháře aktivit
+title: Návrhář postupu provádění – RemoveFromCollection &lt;T – Návrhář aktivity &gt;
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.RemoveFromCollection`1.UI
 ms.assetid: 6617ba26-c8bc-4aed-b746-112bf490d288
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b3a43c05f8be4806cf10098a4df673903494756
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1a8885505607d654327ad9dc36ab88708ab708c3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62933738"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650017"
 ---
-# <a name="removefromcollectiont-activity-designer"></a>RemoveFromCollection\<T > návrháře aktivit
+# <a name="removefromcollectiont-activity-designer"></a>Návrhář aktivity > RemoveFromCollection \<T
 
-**RemoveFromCollection\<T >** Návrhář aktivity se používá k vytvoření a konfigurace <xref:System.Activities.Statements.RemoveFromCollection%601> aktivity.
+Návrhář aktivity **\<T > RemoveFromCollection** slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.RemoveFromCollection%601>.
 
-## <a name="the-removefromcollectiontactivity"></a>RemoveFromCollection\<T > aktivity
+## <a name="the-removefromcollectiontactivity"></a>Aktivita > RemoveFromCollection \<T
 
-<xref:System.Activities.Statements.RemoveFromCollection%601> Aktivity Odebere zadanou položku z konkrétní kolekce.
+Aktivita <xref:System.Activities.Statements.RemoveFromCollection%601> odstraní zadanou položku z konkrétní kolekce.
 
-### <a name="using-the-removefromcollectiont-activity-designer"></a>Použití RemoveFromCollection\<T > návrháře aktivit
+### <a name="using-the-removefromcollectiont-activity-designer"></a>Použití návrháře aktivit > RemoveFromCollection \<T
 
-Přístup **RemoveFromCollection\<T >** návrháře aktivit v **kolekce** kategorii **nástrojů**.
-**RemoveFromCollection\<T >** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřadit na povrch návrháře postupu provádění bez ohledu na to aktivity jsou obvykle umístěny, jako například uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří <xref:System.Activities.Statements.RemoveFromCollection%601> aktivity s výchozím <xref:System.Activities.Activity.DisplayName%2A> z RemoveFromCollection < Int32\>. <xref:System.Activities.Activity.DisplayName%2A> Hodnota se dá upravit v záhlaví **RemoveFromCollection < T\>**  Návrhář aktivity nebo **DisplayName** pole mřížku vlastností. V mřížce vlastností musí upravit další vlastnosti.
+Přístup k Návrháři aktivity **RemoveFromCollection \<T >** v kategorii **kolekce** sady **nástrojů**.
+Návrhář aktivity **RemoveFromCollection \<T >** lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu všude, kde jsou obvykle umístěny aktivity, například uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří aktivita <xref:System.Activities.Statements.RemoveFromCollection%601> s výchozím <xref:System.Activities.Activity.DisplayName%2A> RemoveFromCollection < Int32 \>. Hodnotu <xref:System.Activities.Activity.DisplayName%2A> lze upravit v hlavičce návrháře aktivity aplikace **RemoveFromCollection < t \>** nebo v poli **DisplayName** v mřížce vlastností. Ostatní vlastnosti je nutné upravit v mřížce vlastností.
 
-### <a name="the-removefromcollectiont-properties"></a>RemoveFromCollection < T\> vlastnosti
+### <a name="the-removefromcollectiont-properties"></a>Vlastnosti RemoveFromCollection < T \>
 
-Následující tabulka ukazuje <xref:System.Activities.Statements.RemoveFromCollection%601> vlastnosti a popisuje, jak se používají v Návrháři:
+V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.RemoveFromCollection%601> a popisuje, jak se používají v Návrháři:
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Volitelné jméno <xref:System.Activities.Statements.RemoveFromCollection%601> aktivity. Výchozí hodnota je RemoveFromCollection < Int32\>.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutné, je osvědčeným postupem je použití jednoho.|
-|<xref:System.Activities.Statements.RemoveFromCollection%601.Item%2A>|Pravda|Položky k odebrání z **kolekce\<T >**. Tato položka je typu *T*, která je typu *TypeArgument*. Chcete-li určit položku, zadejte výraz jazyka Visual Basic v mřížce vlastností.|
-|<xref:System.Activities.Statements.RemoveFromCollection%601.Collection%2A>|Pravda|Kolekce, ze kterého by měla být položka odebrána. Tato kolekce je typu **rozhraní ICollection < TypeArgument\>.** Chcete-li určit kolekci, zadejte výraz jazyka Visual Basic v mřížce vlastností.|
-|*TypeArgument*|Pravda|Typ položky obsažené v T <xref:System.Collections.Generic.ICollection%601>. Ve výchozím nastavení to *TypeArgument* je typ nastaven na **Int32**. Chcete-li změnit typ, změňte hodnotu *TypeArgument* v poli se seznamem v mřížce vlastností.|
-|<xref:System.Activities.Activity%601.Result%2A>|False|Hodnota, která určuje, zda zadaná položka byla odebrána z kolekce. K určení proměnné vytvoření vazby mezi výsledkem, zadejte do proměnné v mřížce vlastností|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Volitelný popisný název aktivity <xref:System.Activities.Statements.RemoveFromCollection%601>. Výchozí hodnota je RemoveFromCollection < Int32 \>.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.RemoveFromCollection%601.Item%2A>|Podmínka|Položka, která se má odebrat z **kolekce \<T >** Tato položka je typu *T*, který je typu *pro TypeArgument*. Chcete-li zadat položku, zadejte výraz Visual Basic v mřížce vlastností.|
+|<xref:System.Activities.Statements.RemoveFromCollection%601.Collection%2A>|Podmínka|Kolekce, ze které má být položka odebrána Tato kolekce je typu **ICollection < pro typeargument \>.** Chcete-li zadat kolekci, zadejte výraz Visual Basic v mřížce vlastností.|
+|*Pro TypeArgument*|Podmínka|Typ T položek obsažených v <xref:System.Collections.Generic.ICollection%601>. Ve výchozím nastavení je tento typ *pro TypeArgument* nastaven na hodnotu **Int32**. Chcete-li změnit typ, změňte hodnotu *pro TypeArgument* v poli se seznamem v mřížce vlastností.|
+|<xref:System.Activities.Activity%601.Result%2A>|False|Hodnota, která označuje, zda byla zadaná položka odebrána z kolekce. Chcete-li zadat proměnnou pro svázání s výsledkem, zadejte proměnnou v mřížce vlastností.|
 
 ## <a name="see-also"></a>Viz také:
 

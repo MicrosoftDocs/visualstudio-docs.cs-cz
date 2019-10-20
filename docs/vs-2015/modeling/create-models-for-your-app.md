@@ -1,5 +1,5 @@
 ---
-title: Vytváření modelů pro aplikaci | Dokumentace Microsoftu
+title: Vytváření modelů pro aplikaci | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -34,68 +34,68 @@ helpviewer_keywords:
 - UML diagrams
 ms.assetid: b69d9d91-c7e7-4dee-8eb6-706076eecb85
 caps.latest.revision: 60
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 03f525d3b996875097ddee433d0e9ad887ee728f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: da86a6cf2e561fdc7e642a76b84b4e604bec12d6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65679463"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651247"
 ---
 # <a name="create-models-for-your-app"></a>Vytváření modelů pro aplikaci
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Diagramy modelování vám pochopit, objasnit a sdělovat nápady týkající se kódu a požadavky uživatelů, které váš softwarový systém musí podporovat. K popisu a sdělovat požadavky uživatelů, můžete například použít případ použití jazyka UML (Unified Modeling), aktivita, třídy a sekvenční diagramy. K popsání a prezentování funkčnosti vašeho systému, můžete použít komponentu, třídy, aktivity a sekvenční diagramy UML.  
-  
- Zobrazit [Video pro kanál 9: Zlepšení architektury prostřednictvím modelování](http://go.microsoft.com/fwlink/?LinkID=252078).  
-  
- Následující diagramy UML lze vytvořit v této verzi:  
-  
-|**Diagram**|**Shows**|  
-|-----------------|---------------|  
-|[Diagramy činnosti UML: Referenční dokumentace](../modeling/uml-activity-diagrams-reference.md)|Tok mezi akcemi a účastníků v procesu podnikání práce|  
-|[Diagramy komponent UML: Referenční dokumentace](../modeling/uml-component-diagrams-reference.md)|Součásti systému, jejich rozhraní, porty a relace|  
-|[Diagramy tříd UML: Referenční dokumentace](../modeling/uml-class-diagrams-reference.md)|Typy, které se používají k ukládání a vyměňovat data v systému a jejich vztahů|  
-|[Sekvenční diagramy UML: Referenční dokumentace](../modeling/uml-sequence-diagrams-reference.md)|Sekvence interakcí mezi objekty, komponenty, systémy nebo objektů actor|  
-|[Diagramy případů použití UML: Referenční dokumentace](../modeling/uml-use-case-diagrams-reference.md)|Uživatelské cíle a úlohy, které systém podporuje|  
-  
- Které verze sady Visual Studio podporovat každý typ diagramu najdete v tématu [podporované verze pro nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
-  
- K vizualizaci architektury systému nebo existující kód, vytvořte následující diagramy:  
-  
-|**Diagram**|**Shows**|  
-|-----------------|---------------|  
-|[Diagramy vrstev: Pokyny](../modeling/layer-diagrams-guidelines.md)<br /><br /> [Diagramy vrstev: Referenční dokumentace](../modeling/layer-diagrams-reference.md)|Základní architektura systému|  
-|Mapy kódu<br /><br /> [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)<br /><br /> [Nalezení potenciálních problémů pomocí analyzátorů mapy kódu](../modeling/find-potential-problems-using-code-map-analyzers.md)|Závislosti a jiné vztahy v existujícím kódu|  
-|Diagramy tříd generovaný kód<br /><br /> [Práce s diagramy tříd (Návrhář tříd)](../ide/working-with-class-diagrams-class-designer.md)|Typy a jejich vztahy v kódu rozhraní .NET|  
-  
-## <a name="common-tasks"></a>Obecné úlohy  
-  
-|**Téma**|**Úloha**|  
-|---------------|--------------|  
-|[Vytváření projektů a diagramů pomocí modelování UML](../modeling/create-uml-modeling-projects-and-diagrams.md)|**Vytvářejte modely** a přidání diagramů.|  
-|[Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md)|**Kreslení diagramů** k úpravě modelu.|  
-|[Definování balíčků a oborů názvů](../modeling/define-packages-and-namespaces.md)|**Vytváření balíčků** rozdělit do jednotky, které se různí členové týmu můžete pracovat v modelu.|  
-|[Generování kódu z diagramů tříd UML](../modeling/generate-code-from-uml-class-diagrams.md)|**Generování kódu jazyka C# z diagramů tříd** ke spuštění vaší implementace.|  
-|[Přizpůsobení modelu pomocí profilů a stereotypů](../modeling/customize-your-model-with-profiles-and-stereotypes.md)|**Přizpůsobení prvků modelu** pomocí Stereotypy, rozšířit standardní elementů modelu UML pro konkrétní účely.|  
-|[Propojení prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md)|**Vytvoření propojení mezi elementy modelu a pracovních položek** můžete sledovat úkoly, testovací případy, chyby, požadavky, problémy nebo jiné druhy práce, které jsou spojeny s konkrétní části vašeho modelu.|  
-|[Exportování diagramů jako obrázků](../modeling/export-diagrams-as-images.md)|**Uložit modelu a diagramů** tak, aby můžete je sdílet s ostatními uživateli, včetně těch, kteří nepoužívají [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)].|  
-  
-## <a name="related-tasks"></a>Související úlohy  
-  
-|**Téma**|**Úloha**|  
-|---------------|--------------|  
-|[Vizualizace kódu](../modeling/visualize-code.md)|Vytváření map kódu a diagramy vrstev pro lepší pochopení neznámého kódu.|  
-|[Modelování uživatelských požadavků](../modeling/model-user-requirements.md)|Použití modelů a komunikaci potřebám uživatelů.|  
-|[Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)|Použijte modely k popisu celkovou strukturu a chování vašeho systému a ujistěte se, že bude vyhovovat potřebám uživatelů.|  
-|[Ověřování systému během vývoje](../modeling/validate-your-system-during-development.md)|Ujistěte se, že software zůstane konzistentní s požadavky uživatelů a architektury systému.|  
-|[Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)<br /><br /> [Použití modelů v Agilním vývoji](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)|Použití modelů pro vám pomůže pochopit a změnit systému během vývoje.|  
-|[Strukturování řešení modelování](../modeling/structure-your-modeling-solution.md)|Uspořádejte modely ve velkém nebo středním projektu.|  
-  
-## <a name="external-resources"></a>Externí zdroje  
-  
-|**Kategorie**|**Odkazy**|  
-|------------------|---------------|  
-|**Fóra**|-   [Visual Studio Visualization & Modeling nástroje](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio Visualization & Modeling SDK (DSL Tools)](http://go.microsoft.com/fwlink/?LinkId=184721)|
+Diagramy modelování vám pomůžou pochopit, objasnit a sdělovat nápady týkající se vašeho kódu a požadavky uživatelů, které musí váš softwarový systém podporovat. Pokud například chcete popsat a sdělit požadavky uživatelů, můžete použít jazyk UML (Unified Modeling Language) (UML) použití, činnosti, třídy a sekvenční diagramy. Chcete-li popsat a sdělit funkce systému, můžete použít diagramy komponent, tříd, aktivit a sekvenčních UML.
+
+ Viz [video o kanálu 9: vylepšení architektury prostřednictvím modelování](http://go.microsoft.com/fwlink/?LinkID=252078).
+
+ V této verzi můžete vytvořit následující diagramy UML:
+
+|**Znázorňuje**|**Objeví**|
+|-----------------|---------------|
+|[Diagramy činnosti UML: Referenční dokumentace](../modeling/uml-activity-diagrams-reference.md)|Tok práce mezi akcemi a účastníky v obchodním procesu|
+|[Diagramy komponent UML: Referenční dokumentace](../modeling/uml-component-diagrams-reference.md)|Součásti systému, jejich rozhraní, porty a vztahy|
+|[Diagramy tříd UML: Referenční dokumentace](../modeling/uml-class-diagrams-reference.md)|Typy, které se používají k ukládání a výměně dat v systému a jejich vztazích|
+|[Sekvenční diagramy UML: Referenční dokumentace](../modeling/uml-sequence-diagrams-reference.md)|Sekvence interakcí mezi objekty, komponentami, systémy nebo aktéry|
+|[Diagramy případů použití UML: Referenční dokumentace](../modeling/uml-use-case-diagrams-reference.md)|Uživatelské cíle a úkoly, které systém podporuje|
+
+ Chcete-li zjistit, které verze aplikace Visual Studio podporují jednotlivé typy diagramů, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+
+ K vizualizaci architektury systému nebo existujícího kódu vytvořte následující diagramy:
+
+|**Znázorňuje**|**Objeví**|
+|-----------------|---------------|
+|[Diagramy vrstev: Pokyny](../modeling/layer-diagrams-guidelines.md)<br /><br /> [Diagramy vrstev: Referenční dokumentace](../modeling/layer-diagrams-reference.md)|Architektura vysoké úrovně systému|
+|Mapy kódu<br /><br /> [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)<br /><br /> [Nalezení potenciálních problémů pomocí analyzátorů mapy kódu](../modeling/find-potential-problems-using-code-map-analyzers.md)|Závislosti a další vztahy v existujícím kódu|
+|Diagramy tříd generovaných kódem<br /><br /> [Práce s diagramy tříd (Návrhář tříd)](../ide/working-with-class-diagrams-class-designer.md)|Typy a jejich vztahy v kódu .NET|
+
+## <a name="common-tasks"></a>Obecné úlohy
+
+|**Výklad**|**Hybn**|
+|---------------|--------------|
+|[Vytváření projektů a diagramů pomocí modelování UML](../modeling/create-uml-modeling-projects-and-diagrams.md)|**Vytvářejte modely** a přidejte diagramy.|
+|[Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md)|**Nakreslete diagramy** pro úpravu modelu.|
+|[Definování balíčků a oborů názvů](../modeling/define-packages-and-namespaces.md)|**Vytvořte balíčky** pro rozdělení modelu na jednotky, na kterých mohou pracovat různí členové týmu.|
+|[Generování kódu z diagramů tříd UML](../modeling/generate-code-from-uml-class-diagrams.md)|**Vygenerujte C# kód z diagramů tříd** pro zahájení implementace.|
+|[Přizpůsobení modelu pomocí profilů a stereotypů](../modeling/customize-your-model-with-profiles-and-stereotypes.md)|**Přizpůsobení prvků modelu** pomocí stereotypů pro účely rozšiřování standardních prvků modelu UML pro konkrétní účely.|
+|[Propojení prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md)|**Vytvořte propojení mezi prvky modelu a pracovními položkami** , které vám pomohou sledovat úkoly, testovací případy, chyby, požadavky, problémy nebo jiné druhy práce, které jsou spojeny s konkrétními částmi modelu.|
+|[Exportování diagramů jako obrázků](../modeling/export-diagrams-as-images.md)|**Uložte model a diagramy** , abyste je mohli sdílet s ostatními uživateli, včetně těch, kteří nepoužívají [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)].|
+
+## <a name="related-tasks"></a>Související úlohy
+
+|**Výklad**|**Hybn**|
+|---------------|--------------|
+|[Vizualizace kódu](../modeling/visualize-code.md)|Vytvářejte mapy kódu a diagramy vrstev pro lepší pochopení neznámého kódu.|
+|[Modelování uživatelských požadavků](../modeling/model-user-requirements.md)|Použijte modely k objasnění potřeb uživatelů a jejich sdělování.|
+|[Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)|Použijte modely k popisu celkové struktury a chování systému a ujistěte se, že vyhovují potřebám uživatelů.|
+|[Ověřování systému během vývoje](../modeling/validate-your-system-during-development.md)|Ujistěte se, že váš software zůstává v souladu s požadavky vašich uživatelů a celkovou architekturou systému.|
+|[Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)<br /><br /> [Používání modelů v agilním vývoji](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)|Použijte modely, které vám pomůžou pochopit a změnit svůj systém během vývoje.|
+|[Strukturování řešení modelování](../modeling/structure-your-modeling-solution.md)|Uspořádejte modely ve velkém nebo středním projektu.|
+
+## <a name="external-resources"></a>Externí zdroje
+
+|**Kategorií**|**Odkazy**|
+|------------------|---------------|
+|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](http://go.microsoft.com/fwlink/?LinkId=184721)|

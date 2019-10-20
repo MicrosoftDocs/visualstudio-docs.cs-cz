@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Potlačení upozornění použitím položky nabídky | Dokumentace Microsoftu'
+title: 'Postupy: potlačení upozornění pomocí položky nabídky | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -9,37 +9,37 @@ helpviewer_keywords:
 - code analysis, suppressing warnings
 ms.assetid: 36bd1850-dcde-4ed0-9bc3-0b83df434362
 caps.latest.revision: 26
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5097ecb0f7458e739def275d616eb344a2a6db0d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 96b7433ff4f696989142aa2c2ce47982006b93b2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63426572"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72610016"
 ---
 # <a name="how-to-suppress-warnings-by-using-the-menu-item"></a>Postupy: Potlačení upozornění použitím položky nabídky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-POZNÁMKA:]
-> Ve zdroji potlačení nepodporuje webové projekty.  
-  
- V okně analýzy kódu můžete použít k potlačení upozornění analýzy kódu. Potlačení upozornění není stejný jako jeho zakázání. Při potlačení varování je zapotřebí, platí pouze pro určité instance třídy porušení zásady. Jiné porušení stejné upozornění se ohlásí stále v okně Seznam chyb.  
-  
- Po spuštění analýzy kódu, vy se můžete rozhodnout, že jeden nebo více upozornění analýzy kódu, které jsou zobrazeny v okně analýzy kódu se nevztahují na vaše aplikace. Například můžou určit, že kód je správný, jelikož je. Nebo může být případ, že některé porušení s nízkou prioritou a nebude vyřešen v aktuálním vývojovém cyklu. Bez ohledu na důvod je často užitečné označuje, že varování není použitelné chcete, aby členové týmu vědět, že byl recenzován kód a že bylo zjištěno, že může potlačit upozornění. Ve zdroji potlačení je užitečné, protože to umožňuje umístit potlačení blízko kde vygeneruje upozornění.  
-  
- Můžete zvolit, jestli potlačení se zobrazí ve zdrojovém kódu nebo soubor globálního potlačení. Některé potlačení musí být umístěn v souboru globálního potlačení. Pokud tomu tak, **zdroje v** možnost vypnuta.  
-  
-### <a name="to-suppress-a-warning-by-using-menu-item"></a>K potlačení upozornění použitím položky nabídky  
-  
-1. Na **analyzovat** nabídce zvolte **Windows** a klikněte na tlačítko **analýzy kódu**.  
-  
-2. V **analýzy kódu** okna, vyberte potlačit upozornění.  
-  
-3. Zvolte Akce a potom zvolte **potlačení zpráv**a klikněte na tlačítko buď **zdroje v** nebo **v souboru potlačení projektu**.  
-  
-     Potlačit konkrétní upozornění a upozornění se zobrazí v okně analýzy kódu jako přeškrtnutá.  
-  
+ZNAČTE
+> V potlačení zdrojového kódu není podporováno pro webové projekty.
+
+ Pro potlačení upozornění analýzy kódu lze použít okno Analýza kódu. Potlačení upozornění není stejné jako jeho zakázání. Když potlačíte upozornění, vztahuje se pouze na určitou instanci porušení. Další porušení stejného upozornění budou uvedena i v okně Seznam chyb.
+
+ Po spuštění analýzy kódu můžete určit, že jedno nebo více upozornění analýzy kódu, která jsou zobrazena v okně Analýza kódu, se nevztahují na vaši aplikaci. Například je možné určit, že kód je správný, jak je. Nebo může to být případ, že některá porušení jsou nízká priorita a nebudou opravena v aktuálním vývojovém cyklu. Bez ohledu na důvod je často užitečné upozornit, že upozornění je nevhodné, aby členové týmu věděli, že kód byl zkontrolován a že bylo zjištěno, že upozornění může být potlačeno. Při potlačení zdroje je užitečné, protože umožňuje vložit potlačení blízko místa, kde se vygeneruje upozornění.
+
+ Můžete zvolit, zda se má potlačení zobrazovat ve zdrojovém kódu nebo v souboru globálního potlačení. Některá potlačení musí být umístěna do globálního souboru potlačení. Pokud se jedná o tento případ, bude možnost **v možnosti zdroj** zakázána.
+
+### <a name="to-suppress-a-warning-by-using-menu-item"></a>Chcete-li potlačit upozornění pomocí položky nabídky
+
+1. V nabídce **analyzovat** zvolte **okna** a pak zvolte **Analýza kódu**.
+
+2. V okně **Analýza kódu** zaškrtněte políčko potlačit upozornění.
+
+3. Zvolte akce, pak zvolte **Potlačit zprávy**a potom zvolte buď **ve zdroji** , nebo **v souboru potlačení projektu**.
+
+     Konkrétní upozornění je potlačeno a upozornění se zobrazí v okně Analýza kódu přeškrtnuté.
+
 > [!NOTE]
-> Potlačení, které nemají cíl joinkind soubor globálního potlačení.
+> Potlačení, která nemají cíl, se zobrazí v souboru globálního potlačení.

@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 29cb8d4b94b812040e83c4b80a8c7c7a08831219
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: 115220a33fda1a8c65beec9b712481604c88e483
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516370"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72621543"
 ---
 # <a name="step-3-assign-a-random-icon-to-each-label"></a>Krok 3: přiřazení náhodné ikony každému popisku
 
@@ -88,6 +88,6 @@ Pokud se ikony každou hru zobrazí ve stejných buňkách, není to zrovna nár
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu, přečtěte si [Krok 4: Přidání obslužné rutiny události Click do každého popisku](../ide/step-4-add-a-click-event-handler-to-each-label.md).
+- Pokud chcete přejít na další krok kurzu, přečtěte si **[Krok 4: Přidání obslužné rutiny události Click do každého popisku](../ide/step-4-add-a-click-event-handler-to-each-label.md)** .
 
 - Pokud se chcete vrátit k předchozímu kroku kurzu, přečtěte si [článek krok 2: Přidání náhodného objektu a seznamu ikon](../ide/step-2-add-a-random-object-and-a-list-of-icons.md).

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Vytvoření dědičnosti mezi typy (návrhář tříd)'
+title: 'Postupy: vytvoření dědičnosti mezi typy (Návrhář tříd)'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -8,48 +8,48 @@ helpviewer_keywords:
 - inheritance, relationship defining
 - relationships, defining inheritance
 ms.assetid: 3786a21c-8022-4bf5-9d13-740fd354e93c
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c1a4f8db08ec80714fe2cd74e4d1300d68a56e5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e8a7d7f3facf1408f87ef23dfa8ed8462195c172
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975369"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647720"
 ---
-# <a name="how-to-create-inheritance-between-types-in-class-designer"></a>Postupy: Vytvoření dědičnosti mezi typy v Návrháři tříd
+# <a name="how-to-create-inheritance-between-types-in-class-designer"></a>Postupy: vytvoření dědičnosti mezi typy v Návrhář tříd
 
-Chcete-li vytvořit vztah dědičnosti mezi dvěma typy v diagramu třídy pomocí **návrhář tříd**, spojte se s jeho odvozený typ nebo typy základního typu. Můžete mít vztah dědičnosti mezi dvěma třídami, mezi třídou a rozhraní nebo mezi dvě rozhraní.
+Chcete-li vytvořit vztah dědičnosti mezi dvěma typy v diagramu tříd pomocí **Návrhář tříd**, připojte základní typ s jeho odvozeným typem nebo typy. Můžete mít vztah dědičnosti mezi dvěma třídami, mezi třídou a rozhraním nebo mezi dvěma rozhraními.
 
 ## <a name="to-create-an-inheritance-between-types"></a>Vytvoření dědičnosti mezi typy
 
-1. Z projektu v **Průzkumníka řešení**, otevřete soubor diagramu tříd (.cd).
+1. Z projektu v **Průzkumník řešení**otevřete soubor diagramu tříd (. CD).
 
-     Pokud nemáte k dispozici diagramu tříd, vytvořte ho. Zobrazit [jak: Přidání diagramů tříd do projektů](how-to-add-class-diagrams-to-projects.md).
+     Pokud nemáte diagram tříd, vytvořte jej. Viz [Postupy: Přidání diagramů tříd do projektů](how-to-add-class-diagrams-to-projects.md).
 
-2. V **nástrojů**v části **návrhář tříd**, klikněte na tlačítko **dědičnosti**.
+2. V **soupravě nástrojů**v části **Návrhář tříd**klikněte na **Dědičnost**.
 
-3. V diagramu tříd kreslení čáru dědičnosti mezi typy, které potřebujete, od:
+3. V diagramu tříd nakreslete čáru dědičnosti mezi typy, které chcete, od:
 
-    - Odvozené třídy základní třídy
+    - Odvozená třída pro základní třídu
 
-    - Implementující třída s implementovaným rozhraním
+    - Implementující třída do implementovaného rozhraní
 
-    - Rozšíření rozhraní pro rozšířené rozhraní
+    - Rozšíření rozhraní na rozšířené rozhraní
 
-4. Nebo pokud máte odvozeným typem od obecného typu, klikněte na čáru dědičnosti. V **vlastnosti** okno, nastavte **argumenty typu** vlastnost tak, aby odpovídaly typ, který chcete použít pro obecného typu.
+4. Případně, pokud máte odvozený typ z obecného typu, klikněte na čáru dědičnosti. V okně **vlastnosti** nastavte vlastnost **argumenty typu** tak, aby odpovídala typu, který chcete pro obecný typ.
 
     > [!NOTE]
-    > Nadřazené abstraktní třídy obsahuje alespoň jeden abstraktní člen, jsou všechny abstraktní členy implementovány jako neabstraktní dědičné třídy.
+    > Pokud nadřazená abstraktní třída obsahuje alespoň jeden abstraktní člen, jsou všechny abstraktní členy implementovány jako neabstraktní třídy dědění.
     >
-    >  I když můžete vizualizovat existující obecné typy, nelze vytvořit nové obecné typy. Také nelze změnit parametry typu pro existující obecné typy.
+    >  I když můžete vizualizovat existující obecné typy, nemůžete vytvořit nové obecné typy. Nemůžete také změnit parametry typu pro existující obecné typy.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Dědičnost](/dotnet/csharp/programming-guide/classes-and-structs/inheritance)
 - [Základní informace o dědičnosti](/dotnet/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics)
-- [Postupy: Zobrazení dědičnosti mezi typy](how-to-view-inheritance-between-types.md)
+- [Postupy: zobrazení dědičnosti mezi typy](how-to-view-inheritance-between-types.md)
 - [Třídy jazyka Visual C++ v Návrháři tříd](visual-cpp-classes.md)

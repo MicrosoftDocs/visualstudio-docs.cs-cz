@@ -1,44 +1,44 @@
 ---
-title: Nastavit kód záložky
+title: Nastavit záložky kódu
 ms.date: 02/23/2018
 ms.topic: conceptual
 f1_keywords:
 - VS.BookmarkWindow
 ms.assetid: a752ed5f-5cf9-4bf2-865a-2131ca600ed5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6369aab354e3362c3ac3f1d9320203f930497c7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e1ac1e911b00c79c64b77dca30b89a1bec74723f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62961093"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72621626"
 ---
 # <a name="set-bookmarks-in-code"></a>Nastavení záložek v kódu
 
-Záložky můžete označit řádky v kódu, takže můžete rychle vrátit na konkrétní umístění, nebo přecházet mezi umístěními. Ikony a příkazy záložky jsou k dispozici na dvou místech: **okno záložky** (**zobrazení** > **okno záložky**) a panelu nástrojů textového editoru.
+Můžete použít záložky k označení řádků v kódu, abyste se mohli rychle vrátit do konkrétního umístění nebo přejít zpátky a zpátky mezi umístěními. Příkazy a ikony záložky jsou k dispozici na dvou místech: v **okně záložky** (**zobrazení**  > **záložce okno**) a na panelu nástrojů textový editor.
 
 ![Panel nástrojů záložky](media/bookmark-toolbar.png)
 
 ![Okno záložek](media/bookmark-window.png)
 
-## <a name="manage-bookmarks"></a>Správa záložek
+## <a name="manage-bookmarks"></a>Spravovat záložky
 
-Chcete-li přidat záložku, umístěte kurzor na řádek, který chcete přidat k oblíbeným. Zvolte **přepne záložku** tlačítko nebo stisknutím klávesy **Ctrl**+**K**, **Ctrl**+**tis.** . Přidá záložku. Pokud se rozhodnete **přepne záložku** tlačítko (nebo stiskněte klávesu **Ctrl**+**K**, **Ctrl** +  **K**), Záložka bude odebrána.
+Chcete-li přidat záložku, umístěte kurzor na řádek, který chcete vložit do záložky. Zvolte tlačítko **Přepnout záložku** nebo stiskněte klávesy **CTRL** +**k**, **CTRL** +**k**. Tím se přidá záložka. Pokud zvolíte tlačítko **Přepnout záložku** (nebo stisknete **CTRL** +**k**, **CTRL** +**k**) znovu, záložka se odebere.
 
-Vědět na první pohled, jaký konkrétní Záložka je pro, můžete ho přejmenovat **okno záložky** z nabídky klikněte pravým tlačítkem nebo kontext. Záložky můžete odstranit kliknutím **odstranit** tlačítka v okně záložek.
+Chcete-li zjistit, co je konkrétní Záložka pro, můžete ji přejmenovat v **okně záložek** kliknutím pravým tlačítkem nebo v místní nabídce. Záložky můžete odstranit kliknutím na tlačítko **Odstranit** v okně záložky.
 
 > [!IMPORTANT]
-> Záložka je nastavena na číslo řádku, nikoli na kód. Pokud upravíte kód, bude tato záložka zachována na čísle řádku a nepřesune se s kódem.
+> Záložka je nastavena na číslo řádku, nikoli na kód. Pokud kód upravíte, záložka se zachová na číslo řádku a nepřesouvá se s kódem.
 
-Můžete procházet mezi záložkami pomocí **Další záložka** a **předchozí Záložka** tlačítka v okně záložek.
+Mezi záložkami můžete přecházet pomocí tlačítek **Další záložka** a **Předchozí záložka** v okně záložek.
 
-Záložky lze uspořádat do virtuálních složek kliknutím **novou složku** v okně záložek a následným přetažením vybraných záložek do nové složky.
+Záložky můžete uspořádat do virtuálních složek výběrem možnosti **Nová složka** v okně záložky a následným přetažením vybraných záložek do nové složky.
 
-Můžete záložky můžete vypnout (aniž byste je odebrali) kliknutím **zakázat všechny záložky** tlačítka v okně záložek. Můžete znovu povolit výběrem stejného tlačítka (která se nyní nazývá **povolit všechny záložky**).
+Záložky můžete vypnout (bez jejich odebrání) tak, že v okně záložky vyberete tlačítko **Zakázat všechny záložky** . Můžete je znovu povolit výběrem stejného tlačítka (které se nyní označuje jako **Povolit všechny záložky**).
 
 ## <a name="see-also"></a>Viz také:
 

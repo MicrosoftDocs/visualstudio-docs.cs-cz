@@ -18,54 +18,54 @@ helpviewer_keywords:
 - saving data
 - TableAdapters
 ms.assetid: 012c5924-91f7-4790-b2a6-f51402b7014b
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 26bcab8d589c1fedcbbc4eb1f8b06bb1c04cac53
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e8d5d8e3091b464084df065bb7b889db9fc2194f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62567019"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648512"
 ---
 # <a name="directly-access-the-database-with-a-tableadapter"></a>Přímý přístup k databázi pomocí objektu TableAdapter
 
-Kromě `InsertCommand`, `UpdateCommand`, a `DeleteCommand`, jsou objekty TableAdapter vytvořeny metodami, které lze spustit přímo proti databázi. Můžete volat tyto metody (`TableAdapter.Insert`, `TableAdapter.Update`, a `TableAdapter.Delete`) pro manipulaci s daty přímo v databázi.
+Kromě `InsertCommand`, `UpdateCommand` a `DeleteCommand` jsou vytvořeny objekty TableAdapter s metodami, které lze spustit přímo proti databázi. Můžete zavolat tyto metody (`TableAdapter.Insert`, `TableAdapter.Update` a `TableAdapter.Delete`) k manipulaci s daty přímo v databázi.
 
-Pokud tyto přímé metody vytvořit nechcete, nastavte TableAdapter `GenerateDbDirectMethods` vlastnost `false` v **vlastnosti** okna. Pokud přidáte všechny dotazy objektu TableAdapter kromě hlavním dotazem objektu TableAdapter jsou samostatné dotazy, které tyto negenerovat `DbDirect` metody.
+Pokud nechcete vytvořit tyto přímé metody, nastavte vlastnost `GenerateDbDirectMethods` TableAdapter na `false` v okně **vlastnosti** . Pokud jsou do TableAdapter přidané nějaké dotazy kromě hlavního dotazu TableAdapter, jedná se o samostatné dotazy, které tyto metody negenerují `DbDirect`.
 
-## <a name="send-commands-directly-to-a-database"></a>Odesílat příkazy přímo k databázi
+## <a name="send-commands-directly-to-a-database"></a>Posílání příkazů přímo do databáze
 
-Volání objektu TableAdapter `DbDirect` metodu, která provádí úlohy se pokoušíte provést.
+Zavolejte TableAdapter `DbDirect` metodu, která provede úkol, který se pokoušíte provést.
 
-### <a name="to-insert-new-records-directly-into-a-database"></a>Chcete-li vkládání nových záznamů přímo do databáze
+### <a name="to-insert-new-records-directly-into-a-database"></a>Vložení nových záznamů přímo do databáze
 
-- Volání objektu TableAdapter `Insert` metodu předáním hodnoty pro každý sloupec jako parametry. Následující postup používá `Region` tabulky v databázi Northwind jako příklad.
+- Zavolejte metodu `Insert` TableAdapter a předejte hodnoty pro každý sloupec jako parametry. Následující postup používá jako příklad tabulku `Region` v databázi Northwind.
 
     > [!NOTE]
-    > Pokud nemáte k dispozici instance, vytvořte instanci objektu TableAdapter, který chcete použít.
+    > Pokud nemáte k dispozici instanci, vytvořte instanci TableAdapter, kterou chcete použít.
 
      [!code-vb[VbRaddataSaving#15](../data-tools/codesnippet/VisualBasic/directly-access-the-database-with-a-tableadapter_1.vb)]
      [!code-csharp[VbRaddataSaving#15](../data-tools/codesnippet/CSharp/directly-access-the-database-with-a-tableadapter_1.cs)]
 
-### <a name="to-update-records-directly-in-a-database"></a>K aktualizaci záznamů přímo do databáze
+### <a name="to-update-records-directly-in-a-database"></a>Postup aktualizace záznamů přímo v databázi
 
-- Volání objektu TableAdapter `Update` předejte jako původní a nové hodnoty pro každý sloupec jako parametry.
+- Zavolejte metodu `Update` TableAdapter a předejte nové a původní hodnoty pro každý sloupec jako parametry.
 
     > [!NOTE]
-    > Pokud nemáte k dispozici instance, vytvořte instanci objektu TableAdapter, který chcete použít.
+    > Pokud nemáte k dispozici instanci, vytvořte instanci TableAdapter, kterou chcete použít.
 
      [!code-vb[VbRaddataSaving#18](../data-tools/codesnippet/VisualBasic/directly-access-the-database-with-a-tableadapter_2.vb)]
      [!code-csharp[VbRaddataSaving#18](../data-tools/codesnippet/CSharp/directly-access-the-database-with-a-tableadapter_2.cs)]
 
-### <a name="to-delete-records-directly-from-a-database"></a>Můžete přímo z databáze odstranit záznamy
+### <a name="to-delete-records-directly-from-a-database"></a>Postup odstranění záznamů přímo z databáze
 
-- Volání objektu TableAdapter `Delete` metodu předáním hodnoty pro každý sloupec jako parametry `Delete` metody. Následující postup používá `Region` tabulky v databázi Northwind jako příklad.
+- Zavolejte metodu `Delete` TableAdapter a předejte hodnoty pro každý sloupec jako parametry metody `Delete`. Následující postup používá jako příklad tabulku `Region` v databázi Northwind.
 
     > [!NOTE]
-    > Pokud nemáte k dispozici instance, vytvořte instanci objektu TableAdapter, který chcete použít.
+    > Pokud nemáte k dispozici instanci, vytvořte instanci TableAdapter, kterou chcete použít.
 
      [!code-vb[VbRaddataSaving#21](../data-tools/codesnippet/VisualBasic/directly-access-the-database-with-a-tableadapter_3.vb)]
      [!code-csharp[VbRaddataSaving#21](../data-tools/codesnippet/CSharp/directly-access-the-database-with-a-tableadapter_3.cs)]

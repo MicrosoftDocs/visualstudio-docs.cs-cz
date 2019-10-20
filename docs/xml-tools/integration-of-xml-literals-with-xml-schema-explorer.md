@@ -3,32 +3,32 @@ title: Integrace literálů XML s Průzkumníkem schémat XML
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 57a29998-c6e8-48ac-bdb0-5788e73f9164
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06f2942c2976179a44dc1b613d6d7c96d509a89a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c81f5db0477713ff99e9b7894bcbe86b3cf33018
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63001989"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72601769"
 ---
-# <a name="integration-of-xml-literals-with-xml-schema-explorer"></a>Integrace literálů XML s Průzkumníkem schémat XML
+# <a name="integration-of-xml-literals-with-xml-schema-explorer"></a>Integrace literálů XML pomocí Průzkumníka schémat XML
 
-Visual Basic podporuje literály XML, což znamená, že můžete začlenit fragmentů XML přímo do kódu jazyka Visual Basic. Další informace najdete v tématu [přehled literálů XML](http://go.microsoft.com/fwlink/?LinkId=140325).
+Visual Basic podporuje literály XML, což znamená, že můžete začlenit fragmenty XML přímo do kódu Visual Basic. Další informace najdete v tématu [Přehled literálů XML](http://go.microsoft.com/fwlink/?LinkId=140325).
 
 ## <a name="how-to"></a>Postupy
 
-Pokud soubor XSD v projektu jazyka Visual Basic obsahuje literál XML, můžete zobrazit schéma XML v **Průzkumníka schémat XML**. Chcete-li zobrazit schéma sadu přidružené literálu XML, klikněte pravým tlačítkem na uzel XML literál XML nebo import oboru názvů XML a vyberte **zobrazit v Průzkumníkovi schémat**.
+Pokud soubor XSD v projektu Visual Basic obsahuje literál XML, můžete zobrazit sadu schémat XML v **Průzkumníku schémat XML**. Chcete-li zobrazit sadu schémat přidruženou k literálu XML, klikněte pravým tlačítkem myši na uzel XML v literálu XML nebo v importu oboru názvů XML a vyberte možnost **Zobrazit v Průzkumníku schémat**.
 
-![Literály XML v jazyce Visual Basic; Průzkumník schémat XML](../xml-tools/media/vbxmlliteralswithxmlschemaexplorer1.gif)
+![Visual Basic literály XML; Průzkumník schémat XML](../xml-tools/media/vbxmlliteralswithxmlschemaexplorer1.gif)
 
-Tím se otevře **Průzkumníka schémat XML** souběžně s váš soubor jazyka Visual Basic.
+Tím se otevře **Průzkumník schémat XML** vedle sebe se souborem Visual Basic.
 
-![Literály XML v jazyce Visual Basic; Průzkumník schémat XML](../xml-tools/media/vbxmlliteralswithxmlschemaexplorer2.gif)
+![Visual Basic literály XML; Průzkumník schémat XML](../xml-tools/media/vbxmlliteralswithxmlschemaexplorer2.gif)
 
 ## <a name="see-also"></a>Viz také:
 
-- [Postupy: Používání návrháře schémat XML s literály XML](../xml-tools/how-to-use-the-xml-schema-designer-with-xml-literals.md)
+- [Postupy: použití návrháře schémat XML s literály XML](../xml-tools/how-to-use-the-xml-schema-designer-with-xml-literals.md)

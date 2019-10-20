@@ -7,62 +7,62 @@ helpviewer_keywords:
 - counter sets
 - load tests, counter sets
 ms.assetid: e17d0e71-f982-4fc1-a2df-a1065d37473d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 004eff423874a07e2b49713eaed16eb1bf8be609
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e7e547e3dfc863e3459cc0e5c575d394f83582f6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979445"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72644348"
 ---
-# <a name="how-to-add-counters-to-counter-sets-using-the-load-test-editor"></a>Postupy: Přidání čítačů do sad čítačů pomocí editoru zátěžových testů
+# <a name="how-to-add-counters-to-counter-sets-using-the-load-test-editor"></a>Postupy: Přidání čítačů do sad čítačů pomocí Editor zátěžového testu
 
-Když vytvoříte zátěžový test pomocí **Průvodce zátěžovým testem**, můžete přidat počáteční sadu čítačů. Ty nabízejí sadu předdefinovaných sad čítačů pro zátěžové testy. Další informace najdete v tématu [určení sad čítačů a mezních pravidel pro počítače v rámci zátěžového testu](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md).
+Při vytváření zátěžového testu pomocí **Průvodce zátěžovým testem**přidáte počáteční sadu čítačů. Ty nabízejí sadu předdefinovaných sad čítačů pro zátěžové testy. Další informace naleznete v tématu [Určení sad čítačů a mezních pravidel pro počítače v rámci zátěžového testu](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
-> Pokud jsou zátěžové testy distribuovány napříč vzdálenými počítači, jsou čítače kontroléru a agentů namapovány na sady čítačů kontrolérů a agentů. Další informace o tom, aby používaly vzdálené počítače v zátěžovém testu naleznete v tématu [testovací kontrolery a testovací agenty](configure-test-agents-and-controllers-for-load-tests.md).
+> Pokud jsou zátěžové testy distribuovány napříč vzdálenými počítači, jsou čítače kontroléru a agentů namapovány na sady čítačů kontrolérů a agentů. Další informace o použití vzdálených počítačů v rámci zátěžového testu naleznete v tématu [řadiče testů a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md).
 
-Můžete spravovat čítače v **editoru zátěžových testů**. Sady čítačů, které již byly přidány do testu jsou viditelné v **sad čítačů** uzel zátěžového testu. Po vytvoření zátěžového testu můžete přidat nové čítače do existující sady čítačů.
+Čítače můžete spravovat v **Editor zátěžového testu**. Sady čítačů, které jsou již přidány do testu, jsou zobrazeny v uzlu **sady čítačů** zátěžového testu. Po vytvoření zátěžového testu můžete přidat nové čítače do existujících sad čítačů.
 
 ## <a name="to-add-counters-to-a-counter-set"></a>Přidání čítačů do sady čítačů
 
 1. Otevřete zátěžový test.
 
-2. Rozbalte **sady čítačů** uzlu. Jsou zobrazeny všechny sady čítačů, které byly přidány do zátěžového testu.
+2. Rozbalte uzel **sady čítačů** . Jsou zobrazeny všechny sady čítačů, které byly přidány do zátěžového testu.
 
     > [!NOTE]
-    > Také obsahuje hierarchii strom zátěžového testu **parametrů běhu** uzlu. Tento uzel obsahuje **mapování sady čítačů** uzlu, který se zobrazí všechny počítače a sady čítačů, které jsou mapovány na těchto počítačích.
+    > Strom hierarchie zátěžového testu také obsahuje uzel **nastavení spuštění** . Tento uzel obsahuje uzel **mapování sady čítačů** , ve kterém se zobrazují všechny počítače a sady čítačů, které jsou namapované na tyto počítače.
 
-3. Klikněte pravým tlačítkem myši na existující sadu čítačů a klikněte na tlačítko **přidat čítače**.
+3. Klikněte pravým tlačítkem na existující sadu čítačů a pak zvolte **Přidat čítače**.
 
-     **Vyberte čítačů výkonu** zobrazí dialogové okno.
+     Zobrazí se dialogové okno **Vybrat čítače výkonu** .
 
-4. V **počítače** rozevírací pole, zadejte název počítače chcete namapovat. Další možností v rozevíracím seznamu vyberte jednu z počítače.
-
-    > [!NOTE]
-    > Protože sady čítačů musí být namapována na počítači předtím, než se shromažďují data o výkonu, je nutné zadat počítač, na které se mají shromažďovat data o výkonu.
-
-5. Vyberte **kategorie výkonu** k filtrování kategorií dat čítače výkonu. Zobrazí se dva sloupce dat, ze kterého chcete vyberte čítačů výkonu.
+4. V rozevíracím seznamu **počítač** zadejte název počítače, na který chcete namapovat. Případně vyberte jeden z počítačů v rozevíracím seznamu.
 
     > [!NOTE]
-    > Některé kategorie čítačů bude vyžadovat také vyberte výchozí instanci. Například pokud vyberete čítače SQL, musíte vybrat instanci SQL vzhledem k tomu může být více než jednu instanci SQL, které jsou nainstalované v cílovém počítači.
+    > Vzhledem k tomu, že sady čítačů musí být namapovány na počítač před tím, než se shromažďují údaje o výkonu, je nutné zadat počítač, ke kterému chcete shromažďovat údaje o výkonu.
 
-6. Vyberte čítač a instance pro přidání do vaší vlastní sadu čítačů.
-
-     \- nebo –
-
-     Vyberte **všechny čítače** přepínačů k výběru všechny dostupné čítače.
-
-7. Zvolte **OK**.
+5. Vyberte **kategorii výkonu** pro filtrování kategorií čítačů dat výkonu. Zobrazí se dva sloupce dat, ze kterých se mají vybírat čítače výkonu.
 
     > [!NOTE]
-    > Je také možné přidat čítače do sady výběrem existující čítače nebo kategorie čítačů, výběrem příkazu kopírování čítače a následným vložením do různých čítačů nastavte uzel. Další čítače, které jsou zkopírovány, ale nejsou vyžadovány, je možné odstranit.
+    > Některé kategorie čítače budou vyžadovat, abyste vybrali také instanci. Pokud například vyberete čítač SQL, je nutné vybrat instanci SQL, protože v cílovém počítači může být nainstalována více než jedna instance serveru SQL.
+
+6. Vyberte čítač a instanci, které chcete přidat do vlastní sady čítačů.
+
+     \- nebo-
+
+     Vyberte přepínač **všechny čítače** a vyberte všechny dostupné čítače.
+
+7. Klikněte na **tlačítko OK**.
+
+    > [!NOTE]
+    > Čítače můžete do sady čítačů přidat také tak, že vyberete existující kategorii čítače nebo čítače, zvolíte kopírovat a pak ji vložíte do jiného uzlu sady čítačů. Nadbytečné čítače, které jsou zkopírovány, ale nejsou potřeba, je možné odstranit.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Určení sad čítačů a mezních pravidel pro počítače v rámci zátěžového testu](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
-- [Konfigurace parametrů spuštění zátěžového testu](../test/configure-load-test-run-settings.md)
+- [Určení sad čítačů a mezních pravidel pro počítače v zátěžovém testu](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
+- [Konfigurovat nastavení běhu zátěžového testu](../test/configure-load-test-run-settings.md)

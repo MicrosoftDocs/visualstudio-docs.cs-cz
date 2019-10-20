@@ -1,5 +1,5 @@
 ---
-title: Přístup k sadě Visual Studio 2015 nebo k jiným hostitelům z textové šablony | Dokumentace Microsoftu
+title: Přístup k aplikaci Visual Studio 2015 nebo k jiným hostitelům z textové šablony | Microsoft Docs
 titleSuffix: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
@@ -7,29 +7,29 @@ ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: a68886da-7416-4785-8145-3796bb382cba
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 053e8b09fd2b52683238f1ffe008e5e7d38b3962
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 0e8cedc66d6b52f80239364a3e51b73e93a69aa4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68872008"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655327"
 ---
 # <a name="accessing-visual-studio-or-other-hosts-from-a-text-template"></a>Přístup k prostředí Visual Studio nebo k jiným hostitelům z textové šablony
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V textové šabloně, můžete použít metody a vlastnosti hostitele, který se spustí šablony, jako například [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+V textové šabloně můžete použít metody a vlastnosti vystavené hostitelem, který šablonu spouští, například [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
- To platí pro pravidelné textových šablon, ne Předzpracované textové šablony.
+ To platí pro běžné textové šablony, nikoli předzpracované textové šablony.
 
 ## <a name="obtaining-access-to-the-host"></a>Získání přístupu k hostiteli
 
-Nastavte `hostspecific="true"` v `template` směrnice. To vám umožní používat `this.Host`, který je typu [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)). Tento typ obsahuje členy, které používáte, třeba k překladu názvů souborů a k protokolování chyb.
+Nastavte `hostspecific="true"` v direktivě `template`. To vám umožní používat `this.Host`, které mají typ [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)). Tento typ má členy, které můžete použít například k překladu názvů souborů a k protokolování chyb.
 
-### <a name="resolving-file-names"></a>Řešení názvů souborů
- Pokud chcete najít úplnou cestu k souboru relativně vzhledem k textu šablony, použijte. Host.ResolvePath().
+### <a name="resolving-file-names"></a>Překládání názvů souborů
+ Chcete-li najít úplnou cestu k souboru relativně vzhledem k textové šabloně, použijte tento příkaz. Host. ResolvePath ().
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -45,7 +45,7 @@ Content of myFile is:
 ```
 
 ### <a name="displaying-error-messages"></a>Zobrazení chybových zpráv
- V tomto příkladu se zaprotokoluje při transformaci šablony. Pokud je hostitel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], přidají se do okna chyby.
+ Tento příklad protokoluje zprávy při transformaci šablony. Pokud je hostitel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], přidá se do okna chyby.
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -63,11 +63,11 @@ Content of myFile is:
 ```
 
 ## <a name="using-the-visual-studio-api"></a>Použití rozhraní API sady Visual Studio
- Pokud jsou spuštěny v textové šabloně [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], můžete použít `this.Host` pro přístup ke službám poskytuje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a balíčky nebo rozšíření, která jsou načtena.
+ Pokud spouštíte textovou šablonu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], můžete použít `this.Host` pro přístup ke službám poskytovaným [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a jakýmkoli načteným balíčkům nebo rozšířením.
 
- Nastavit hostspecific = "true" a přetypovat `this.Host` k <xref:System.IServiceProvider>.
+ Nastavte hostspecific = "true" a přetypování `this.Host` na <xref:System.IServiceProvider>.
 
- Tento příklad načte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozhraní API, <xref:EnvDTE.DTE>, jako služba:
+ Tento příklad získá [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozhraní API <xref:EnvDTE.DTE> jako služba:
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -82,5 +82,5 @@ Number of projects in this solution: <#=  dte.Solution.Projects.Count #>
 
 ```
 
-## <a name="using-hostspecific-with-template-inheritance"></a>Pomocí šablony dědičnosti hostSpecific
- Zadejte `hostspecific="trueFromBase"` Pokud používáte také `inherits` atribut, a pokud je zděděn ze šablony, která určuje `hostspecific="true"`. Tím se vyhnete upozornění kompilátoru o tom, která vlastnost `Host` byla deklarována dvakrát.
+## <a name="using-hostspecific-with-template-inheritance"></a>Použití hostSpecific s děděním šablon
+ Určete `hostspecific="trueFromBase"`, pokud použijete také atribut `inherits` a Pokud převezmete ze šablony, která určuje `hostspecific="true"`. Tím se zabrání upozornění kompilátoru na účinek, že vlastnost `Host` byla deklarována dvakrát.

@@ -1,5 +1,5 @@
 ---
-title: 'CA2141: transparentní metody nesmějí vyhovovat LinkDemands | Dokumentace Microsoftu'
+title: 'CA2141: transparentní metody nesmějí vyhovovat LinkDemands | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -8,15 +8,15 @@ f1_keywords:
 - CA2141
 ms.assetid: 2957f5f7-c511-4180-ba80-752034f10a77
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a7c54b472e91aa2be1d8e5bb1a9c32c26c0cb299
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5e8e88401a6fbe3ab7dc635dadee9215b049b2d5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142710"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72602846"
 ---
 # <a name="ca2141transparent-methods-must-not-satisfy-linkdemands"></a>CA2141:Transparentní metody nesmějí vyhovovat LinkDemands
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,20 +29,20 @@ ms.locfileid: "68142710"
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Transparentní metoda zabezpečení volá metodu v sestavení, který není označen atributem <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atribut (APTCA), nebo transparentní metoda zabezpečení splňuje požadavky <xref:System.Security.Permissions.SecurityAction> `.LinkDemand` pro typ nebo metodu.
+ Transparentní metoda zabezpečení volá metodu v sestavení, které není označeno atributem <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA), nebo transparentní metoda zabezpečení splňuje <xref:System.Security.Permissions.SecurityAction> `.LinkDemand` pro typ nebo metodu.
 
 ## <a name="rule-description"></a>Popis pravidla
- Nesplňujete LinkDemand je citlivé operace zabezpečení, což může způsobit nechtěné zvýšení oprávnění. Kód transparentní pro zabezpečení nesmějí vyhovovat LinkDemands, protože není v souladu s stejné požadavky auditu zabezpečení jako kritický kód pro zabezpečení. Transparentní metody v sestaveních úrovně 1 sadu pravidel zabezpečení způsobí, že všechny LinkDemands splňují převést na úplné požadavky v době běhu, což může způsobit problémy s výkonem. V sestavení pro úrovně 2 sady pravidel zabezpečení se nezdaří transparentní metody sestavení v kompilátor just-in-time (JIT) v případě podobného pokusu splňují LinkDemand.
+ Vyhovujícím LinkDemand je operace citlivá na zabezpečení, která může způsobit neúmyslné zvýšení oprávnění. Transparentní kód zabezpečení nesmí splňovat LinkDemand, protože nepodléhá stejným požadavkům na audit zabezpečení jako kód kritický pro zabezpečení. Transparentní metody v pravidle zabezpečení nastavené na úrovni 1 sestavení způsobí, že všechny LinkDemands, které vyhovují, budou převedeny na plné požadavky v době běhu, což může způsobit problémy s výkonem. V sestaveních s pravidlem zabezpečení nastaveným na úrovni 2 nebudou transparentní metody zkompilovány v kompilátoru JIT (just-in-time), pokud se pokoušejí vyhovět LinkDemand.
 
- V sestavení vyvolá tuto usee zabezpečení úrovně 2, pokusy o transparentní metoda zabezpečení k splňuje pravidlo LinkDemand nebo volat metodu v sestavení sestavení APTCA <xref:System.MethodAccessException>; v sestaveních úrovně 1 LinkDemand stane úplný požadavek.
+ V sestaveních, která Usee zabezpečení úrovně 2, pokusy transparentní metodou zabezpečení pro uspokojení LinkDemand nebo volání metody v sestavení bez APTCA vyvolává <xref:System.MethodAccessException>; v sestaveních úrovně 1 se LinkDemand nastaví na plnou poptávku.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, označte přistupující metodu s <xref:System.Security.SecurityCriticalAttribute> nebo <xref:System.Security.SecuritySafeCriticalAttribute> atribut, nebo odeberte LinkDemand metodou používaná.
+ Chcete-li opravit porušení tohoto pravidla, označte metodu přístupu pomocí atributu <xref:System.Security.SecurityCriticalAttribute> nebo <xref:System.Security.SecuritySafeCriticalAttribute> nebo odeberte LinkDemand z metody přístupu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
- V tomto příkladu transparentní metoda pokusí volat metodu, která má LinkDemand. Toto pravidlo bude platit pro tento kód.
+ V tomto příkladu se transparentní metoda pokusí zavolat metodu, která má LinkDemand. Toto pravidlo se bude na tomto kódu aktivovat.
 
  [!code-csharp[FxCop.Security.CA2141.TransparentMethodsMustNotSatisfyLinkDemands#1](../snippets/csharp/VS_Snippets_CodeAnalysis/fxcop.security.ca2141.transparentmethodsmustnotsatisfylinkdemands/cs/ca2141 - transparentmethodsmustnotsatisfylinkdemands.cs#1)]

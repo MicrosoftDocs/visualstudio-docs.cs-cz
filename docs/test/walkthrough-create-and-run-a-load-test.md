@@ -7,146 +7,146 @@ helpviewer_keywords:
 - unit tests, load test walkthrough
 - load tests, walkthrough
 ms.assetid: bbf075a5-96d5-48ed-a03c-330f0fc04748
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a319181348f86ab8f16b2cc2b7e9a6e6f3a16c13
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 78bce7f8a05032fa8654021d89598ede67fa08c0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62976270"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659680"
 ---
-# <a name="walkthrough-create-and-run-a-load-test-that-contains-unit-tests"></a>Návod: Vytvoření a spuštění zátěžového testu, který obsahuje testy jednotek
+# <a name="walkthrough-create-and-run-a-load-test-that-contains-unit-tests"></a>Návod: vytvoření a spuštění zátěžového testu, který obsahuje testy jednotek
 
 V tomto návodu vytvoříte zátěžový test, který obsahuje testy jednotek.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Tento návod obsahuje kroky vás provedou vytvořením a spuštěním zátěžového testu pomocí sady Visual Studio Enterprise. Zátěžový test je kontejner testů výkonnosti webu a testy jednotek. Vytváření zátěžových testů s **Průvodce novým zátěžovým testem**.
+Tento názorný postup vás provede vytvořením a spuštěním zátěžového testu pomocí Visual Studio Enterprise. Zátěžový test je kontejnerem testů výkonnosti webu a testování částí. Zátěžové testy lze vytvořit pomocí **nového Průvodce zátěžovým testem**.
 
-Zátěžové testy také vystaví mnoho vlastností spuštění, které lze upravit a generovat požadovanou simulaci zatížení. V tomto názorném postupu použijete **nového Průvodce zátěžovým testem** přidání jednotkových testů do zátěžového testu.
+Zátěžový test také zpřístupňuje mnoho vlastností modulu runtime, které lze upravit, aby vygenerovalo požadovanou simulaci zatížení. V tomto návodu použijete **novou Průvodce zátěžovým testem** k přidání testů jednotek do zátěžového testu.
 
-V tomto návodu dokončíte následující úkoly:
+V tomto návodu provedete následující úlohy:
 
-- Vytvořte zátěžový test, který používá testování částí.
+- Vytvořte zátěžový test, který používá testy jednotek.
 
 - Změňte některá nastavení zátěžového testu.
 
-- Spuštění zátěžového testu.
+- Spusťte zátěžový test.
 
-- Postupujte podle pokynů v [názorný postup: Vytváření a spouštění testů jednotek pro spravovaný kód](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md) k vytvoření jednoduché C# knihovny tříd obsahující projekt webového výkonu a zatížení testovací jednotku na některé testy v ní.
+- Proveďte kroky v [návodu: vytváření a spouštění testů jednotek pro spravovaný kód](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md) k vytvoření jednoduché C# knihovny tříd, která obsahuje projekt webového výkonu a zátěžového testu s některými testy jednotek v ní.
 
-## <a name="create-a-load-test-containing-unit-tests-using-the-new-load-test-wizard"></a>Vytvořte zátěžový test obsahující testování částí pomocí nového Průvodce zátěžovým testem
+## <a name="create-a-load-test-containing-unit-tests-using-the-new-load-test-wizard"></a>Vytvoření zátěžového testu obsahujícího testy jednotek pomocí nového Průvodce zátěžovým testem
 
-### <a name="to-start-the-new-load-test-wizard"></a>Chcete-li spustit Průvodce novým zátěžovým testem
+### <a name="to-start-the-new-load-test-wizard"></a>Spuštění nového Průvodce zátěžovým testem
 
-1. Otevřete bankovní řešení, které jste vytvořili [názorný postup: Vytváření a spouštění testů jednotek pro spravovaný kód](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md).
+1. Otevřete bankovní řešení, které jste vytvořili v [návodu: vytváření a spouštění testů jednotek pro spravovaný kód](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md).
 
-2. V **Průzkumníka řešení**, otevřete místní nabídku uzlu bankovní řešení, zvolte **přidat**a klikněte na tlačítko **nový projekt**.
+2. V **Průzkumník řešení**otevřete místní nabídku pro uzel banka řešení, zvolte možnost **Přidat**a pak zvolte možnost **Nový projekt**.
 
-     **Přidat nový projekt** zobrazí dialogové okno.
+     Zobrazí se dialogové okno **Přidat nový projekt** .
 
-3. V **přidat nový projekt** dialogového okna rozbalte **Visual C#** a zvolte **Test**. V seznamu šablon zvolte **webový výkon a projekt zátěžového testu** a **název** zadejte `BankLoadTest`. Zvolte **OK**.
+3. V dialogovém okně **Přidat nový projekt** rozbalte položku  **C# Visual** a klikněte na tlačítko **test**. V seznamu šablon vyberte možnost **projekt webového výkonu a zátěžového testu** a do pole **název** zadejte `BankLoadTest`. Klikněte na **tlačítko OK**.
 
-     BankLoadTest webového výkonu a zatížení testovací projekt je přidán do řešení.
+     Do řešení se přidá projekt webového výkonu a zátěžového testu BankLoadTest.
 
-4. Otevřete místní nabídku pro nové webového výkonu BankLoadTest a zátěžové testování projektu, klikněte na položku **přidat**a klikněte na tlačítko **zátěžový Test**.
+4. Otevřete místní nabídku pro nový projekt webového výkonu a zátěžového testu BankLoadTest, zvolte možnost **Přidat**a pak zvolte možnost **zátěžový test**.
 
-5. **Průvodce novým zátěžovým testem** spustí.
+5. Spustí se **nový Průvodce zátěžovým testem** .
 
-6. **Úvodní** stránku **Průvodce novým zátěžovým testem** je první stránka.
+6. **Úvodní** stránka **nového Průvodce zátěžovým testem** je první stránka.
 
-7. Zvolte **Další**.
+7. Klikněte na tlačítko **Další**.
 
-### <a name="to-edit-settings-for-load-test-scenario"></a>Chcete-li upravit nastavení scénáře zátěžového testu
+### <a name="to-edit-settings-for-load-test-scenario"></a>Úprava nastavení pro scénář zátěžového testu
 
-1. V **zadejte název pro scénář testování zatížení** textového pole, typ **ScenarioSample**.
+1. Do textového pole **Zadejte název pro scénář zátěžového testu** zadejte **ScenarioSample**.
 
-     A *scénář* virtuálních sítí je mechanismus seskupení. Skládá se ze sady testů a vlastnosti pro spuštění těchto testů při zatížení.
+     *Scénář* je mechanismus seskupení. Skládá se ze sady testů a vlastností pro spuštění těchto testů v rámci zátěže.
 
-2. Nastavte **čas profil zvažte** k `Use normal distribution centered on recorded think times`. Časy přemýšlení představují čas, který by uživatel uvažoval na webové stránce před přechodem na další stránku.
+2. Nastavte **si časový profil** `Use normal distribution centered on recorded think times`. Časy přemýšlení reprezentují čas, kdy by uživatel uvažoval webovou stránku, než začne pokračovat na další stránku.
 
-1. Zvolte **Další** až budete hotoví.
+1. Po dokončení klikněte na tlačítko **Další** .
 
-### <a name="to-edit-load-pattern-setting-for-test-scenario"></a>Chcete-li upravit nastavení vzoru zatížení pro scénář testování
+### <a name="to-edit-load-pattern-setting-for-test-scenario"></a>Úprava nastavení vzoru zatížení pro testovací scénář
 
-1. Zvolte **krokové zatížení**.
+1. Vyberte **Krok zatížení**.
 
     > [!NOTE]
-    > Můžete vybrat ze dvou typů vzorů zatížení: konstantní a krokové. Každý typ má své funkce při testování zatížení, ale pro účely tohoto návodu zvolte **krokové zatížení**.
+    > Můžete vybrat ze dvou typů vzorů zatížení: konstanta a krok. Každý typ má svou funkci v testování zatížení, ale pro účely tohoto návodu vyberte **Krok zatížení**.
 
-2. Nastavte **počáteční počet uživatelů** na 10 uživatelů.
+2. Nastavte **počet počátečních uživatelů** na 10 uživatelů.
 
-3. Nastavte **doba trvání kroku** na 10 sekund.
+3. Nastavte **dobu trvání kroku** na 10 sekund.
 
-4. Nastavte **krok počtu uživatelů** na 10 uživatelů/krok.
+4. Nastavte **Krok počet uživatelů** na 10 uživatelů/krok.
 
-5. Nastavte **maximální počet uživatelů** až 100 uživatelů.
+5. Nastavte **maximální počet uživatelů** na 100 uživatelů.
 
-6. Zvolte **Další**.
+6. Klikněte na tlačítko **Další**.
 
-### <a name="to-select-test-mix-model-for-the-scenario"></a>Vyberte model kombinace testů pro scénář
+### <a name="to-select-test-mix-model-for-the-scenario"></a>Výběr modelu kombinace testů pro scénář
 
-1. V části **jak by být poměr testů modelován**vyberte **podle celkového počtu testů**.
+1. V části **jak má být kombinace testů modelována**, vyberte na **základě celkového počtu testů**.
 
-2. Zvolte **Další**.
+2. Klikněte na tlačítko **Další**.
 
-### <a name="to-add-unit-tests-to-the-scenario"></a>Chcete-li přidat jednotkové testy do scénáře
+### <a name="to-add-unit-tests-to-the-scenario"></a>Přidání jednotkových testů do scénáře
 
-1. Dalším krokem je **přidat testy do zátěžového testu scénář a upravit poměr testů**.
+1. Dalším krokem je **Přidat testy do scénáře zátěžového testu a upravit kombinaci testů**.
 
-2. Zvolte **přidat** vyberte testy.
+2. Zvolte možnost **Přidat** a vyberte testy.
 
-3. Zvolte **CreditTest** jednotek testů uvedených v **dostupné testy** podokno, které jsou uvedeny všechny testy webového výkonu a testy jednotek ve výkonnosti testu a projekt zátěžového testu.
+3. Vyberte testy jednotek **CreditTest** uvedené v podokně **Dostupné testy** , které uvádí všechny testy výkonnosti webu a testy jednotek v projektu webového výkonu a zátěžového testu.
 
-4. Výběrem šipky přidejte **CreditTest** testu jednotky **vybrané testy** podokně.
+4. Vyberte šipku pro přidání testu jednotek **CreditTest** do podokna **vybrané testy** .
 
-5. Zopakujte kroky 3 a 4 pro **DebitTest** a **FreezeAccountTest** testování částí.
+5. Zopakujte kroky 3 a 4 pro testy jednotek **DebitTest** a **FreezeAccountTest** .
 
-6. Po přidání všech tří testování jednotek zvolte **OK**.
+6. Až dokončíte přidávání tří testů jednotek, klikněte na **tlačítko OK**.
 
-     Budou vám nabídnuty kombinace testů.
+     Zobrazí se kombinace testů.
 
-7. Přesuňte posuvník v části **distribuce** pro **CreditTest** mírně vpravo k nastavení rozložení testu. Všimněte si, že i ostatní jezdce doleva automaticky přesunout tak, aby rozdělení zůstalo na 100 %.
+7. Přesunutím posuvníku v oblasti **distribuce** pro **CreditTest** mírně napravo upravte distribuci testu. Všimněte si, že ostatní posuvníky se přesunou doleva automaticky, takže distribuce zůstane v 100%.
 
-8. Zvolte **Další**.
+8. Klikněte na tlačítko **Další**.
 
 ### <a name="to-select-network-mix-for-test-scenario"></a>Výběr kombinace sítě pro testovací scénář
 
-1. Vyberte typ připojení LAN pro přidání do skupiny šířek pásma sítě.
+1. Vyberte typ připojení LAN, který chcete přidat k kombinaci šířky pásma sítě.
 
-     Můžete přidat další typy sítí. Pomocí jezdců nastavte testovací rozdělení a váhu.
+     Můžete přidat další typy sítě. Pro úpravu distribuce a vážení testů použijte posuvníky.
 
-2. Zvolte **Další**.
+2. Klikněte na tlačítko **Další**.
 
-### <a name="to-specify-computers-to-monitor-with-counter-sets-during-load-test-run"></a>Chcete-li určete počítače sledované sadou čítačů při spuštění zátěžového testu
+### <a name="to-specify-computers-to-monitor-with-counter-sets-during-load-test-run"></a>Určení počítačů, které se mají monitorovat pomocí sad čítačů během běhu zátěžového testu
 
-1. Zvolte **Další**.
+1. Klikněte na tlačítko **Další**.
 
-     Další informace o sady čítačů viz [určení sad čítačů a mezních pravidel pro počítače v rámci zátěžového testu](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md).
+     Další informace o sadách čítačů naleznete v tématu [Určení sad čítačů a mezních pravidel pro počítače v rámci zátěžového testu](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md).
 
 ### <a name="to-edit-run-setting-for-load-test"></a>Úprava nastavení spuštění pro zátěžový test
 
-1. Vyberte **trvání zátěžového testu** a potom nastavte **doba běhu** 2 minuty za účelem *orientačního testování* zátěžového testu.
+1. Vyberte **Doba trvání zátěžového testu** a pak nastavte dobu běhu na 2 minuty, *aby se zátěžový test* zátěžového testu **vypustil** .
 
-     Při vytváření zátěžových testů, je vhodné ověřit, že je vše nastaveno správně a běží podle očekávání, spuštěním krátkého lehkého zatížení testu. Tento proces se označuje jako *orientační testování*.
+     Při sestavování zátěžových testů je vhodné ověřit, zda je vše správně nakonfigurováno a spuštěno podle očekávání, spuštěním krátkého, světlého zátěžového testu. Tento proces se označuje jako *testování kouře*.
 
-2. Zvolte **Dokončit**. Váš zátěžový test je otevře v **editoru zátěžových testů**.
+2. Klikněte na tlačítko **Dokončit**. Zátěžový test je otevřen v **Editor zátěžového testu**.
 
-## <a name="run-the-load-test"></a>Spusťte zátěžový test
- Po vytvoření zátěžového testu ji spusťte a zjistit, jak vaše bankovní aplikace reaguje na simulaci zatížení. Když je spuštěn zátěžový test, se zobrazí **Analyzéru zátěžového testu** okna.
+## <a name="run-the-load-test"></a>Spustit zátěžový test
+ Po vytvoření zátěžového testu jej spusťte, chcete-li zobrazit, jak vaše bankovní aplikace reaguje na simulaci zatížení. I když je spuštěn zátěžový test, vidíte okno **analyzátor zátěžového testu** .
 
-### <a name="to-run-the-load-test"></a>Ke spuštění zátěžového testu
+### <a name="to-run-the-load-test"></a>Spuštění zátěžového testu
 
-1. U tohoto zátěžového testu otevřít v **editoru zátěžových testů**, zvolte zelené **spustit Test** tlačítko na panelu nástrojů. Zátěžový test se spustí.
+1. S otevřeným zátěžovým testem v **Editor zátěžového testu**vyberte zelené tlačítko **Spustit test** na panelu nástrojů. Zátěžový test začne běžet.
 
-2. Pokud simulace testu překročí libovolný práh, zobrazí se ikony v uzlech stromových ovládacích prvků do označily narušení prahové hodnoty. Chyby mají překryv červeného kruhu a upozornění mají překryv žlutého trojúhelníku. Můžete nalézt čítač překročení této mezní hodnoty a vytvořit pro něj graf přetažením ikony na grafu. Můžete to provést, když je spuštěn test.
+2. Pokud vaše simulace testů překročí prahové hodnoty, zobrazí se v uzlech ovládacího prvku stromové struktury ikony, které označují porušení prahové hodnoty. Chyby mají překryv červeného kruhu, upozornění mají překryv žlutého trojúhelníku. Můžete najít čítač, který překročil prahovou hodnotu a graf přetáhnete přetažením ikony do grafu. To můžete provést, když je test spuštěn.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Upravit poměr testů k určení, které testy mají být zahrnuty do scénáře zátěžového testu](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)
+- [Úprava poměru testů pro určení testů, které mají být zahrnuty do scénáře zátěžového testu](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)
 - [Určení typů virtuálních sítí](../test/specify-virtual-network-types-in-a-load-test-scenario.md)
-- [Úpravy scénářů zátěžových testů](../test/edit-load-test-scenarios.md)
-- [Úpravy vzorů zatížení pro model aktivity virtuálního uživatele](../test/edit-load-patterns-to-model-virtual-user-activities.md)
-- [Úpravy modelů kombinací testů a určení pravděpodobnosti, že virtuální uživatel spustí test](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)
+- [Upravit scénáře zátěžového testu](../test/edit-load-test-scenarios.md)
+- [Úprava vzorů zatížení pro modelování aktivit virtuálních uživatelů](../test/edit-load-patterns-to-model-virtual-user-activities.md)
+- [Upravit modely kombinace textu za účelem určení pravděpodobnosti, že virtuální uživatel spustí test](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)

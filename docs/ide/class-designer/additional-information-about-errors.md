@@ -23,28 +23,28 @@ helpviewer_keywords:
 - Class Designer [Visual Studio], errors
 - class diagrams, errors
 ms.assetid: 79d70e70-704c-4255-ab68-c10d6949470e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aadc0cfb66226f463ff8a2049d4dbf81e7bcf62b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d2fe684f4b10e3570e96a88c34d1e1c08c7388da
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975565"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72631914"
 ---
 # <a name="class-designer-errors"></a>Chyby Návrháře tříd
 
-**Návrhář tříd** nesleduje umístění zdrojových souborů, takže změna strukturu projektu nebo při přenosech zdrojové soubory v projektu může způsobit **návrhář tříd** ke ztrátě informací o typu, například je běžné změnit typ zdroje z definice typu základní třídy a přidružení typů. K chybě může dojít například **je návrhář tříd nemůže zobrazit tento typ**. Chcete chybu vyřešit, přetáhněte do diagramu tříd znovu, můžete ho zobrazit přemístění nebo upravila zdrojový kód.
+**Návrhář tříd** nesleduje umístění zdrojových souborů, takže úprava struktury projektu nebo přesunutí zdrojových souborů v projektu může způsobit, že **Návrhář tříd** ztratí sledování typu, například je běžné měnit typ zdroje. typedef, základní třídy a typy přidružení. Může se zobrazit chyba, například **Návrhář tříd není možné zobrazit tento typ**. Chcete-li chybu vyřešit, přetáhněte změněný nebo znovu umístěný zdrojový kód do diagramu tříd a zobrazte jej.
 
 ## <a name="resources"></a>Prostředky
 
-Pomoc s další chyby a upozornění najdete v následujících zdrojích:
+Pomoc s dalšími chybami a upozorněními najdete v následujících zdrojích informací:
 
-- [Práce s kódem jazyka Visual C++](working-with-visual-cpp-code.md) obsahuje pokyny k odstraňování informace o zobrazení C++ v diagramu tříd.
-- [Fórum Visual Studio návrhář tříd](http://go.microsoft.com/fwlink/?LinkId=160754) poskytuje diskusní fórum pro otázky o **návrhář tříd**.
+- [Práce s vizuálním C++ kódem](working-with-visual-cpp-code.md) obsahuje informace o řešení C++ problémů, které se zobrazují v diagramu tříd.
+- [Fórum sady Visual Studio Návrhář tříd](http://go.microsoft.com/fwlink/?LinkId=160754) nabízí fórum pro otázky týkající se **Návrhář tříd**.
 
 ## <a name="see-also"></a>Viz také:
 

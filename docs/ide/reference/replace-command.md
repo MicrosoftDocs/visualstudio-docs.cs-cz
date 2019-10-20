@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Edit.Replace command
 - Replace command
 ms.assetid: a15767f1-5a3d-44f5-8c77-7b0f1157f340
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: edcff51428451b50dc149b7b55cee11cb9ede853
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: efd6398e475f08d07b8c2fd2eadb3d580aa4255d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919050"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655590"
 ---
 # <a name="replace-command"></a>Nahradit – příkaz
 Nahradí text v souborech pomocí podmnožiny možností, které jsou k dispozici na kartě **nahradit v souborech** okna **Najít a nahradit** .
@@ -34,11 +34,11 @@ Edit.Replace findwhat replacewith [/all] [/case]
 ## <a name="arguments"></a>Arguments
 `findwhat`
 
-Povinný parametr. Text, který se má shodovat.
+Požadováno. Text, který se má shodovat.
 
 `replacewith`
 
-Povinný parametr. Text, který má být nahrazen odpovídajícím textem
+Požadováno. Text, který má být nahrazen odpovídajícím textem
 
 ## <a name="switches"></a>Přepínače
 /All nebo/a
@@ -47,11 +47,11 @@ Volitelné. Nahradí všechny výskyty hledaného textu náhradním textem.
 
 /Case nebo/c
 
-Volitelné. Shody se objeví pouze v případě, že se velká a malá písmena přesně shodují s `findwhat` hodnotami zadanými v argumentu.
+Volitelné. Shody se objeví pouze v případě, že se velká a malá písmena přesně shodují s hodnotami zadanými v argumentu `findwhat`.
 
 /doc nebo/d
 
-Volitelné. Vyhledá pouze aktuální dokument. Zadejte pouze jeden z `/doc`dostupných oborů hledání, `/proc` `/open`,, nebo `/sel`.
+Volitelné. Vyhledá pouze aktuální dokument. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open` nebo `/sel`.
 
 /Hidden nebo/h
 
@@ -59,7 +59,7 @@ Volitelné. Vyhledává skrytý a sbalený text, například metadata ovládací
 
 /Open nebo/o
 
-Volitelné. Vyhledá všechny otevřené dokumenty, jako by se jednalo o jeden dokument. Zadejte pouze jeden z `/doc`dostupných oborů hledání, `/proc` `/open`,, nebo `/sel`.
+Volitelné. Vyhledá všechny otevřené dokumenty, jako by se jednalo o jeden dokument. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open` nebo `/sel`.
 
 /Options nebo/t
 
@@ -67,11 +67,11 @@ Volitelné. Zobrazí seznam aktuálních nastavení možností hledání a nepro
 
 /Proc nebo/p
 
-Volitelné. Vyhledá pouze aktuální proceduru. Zadejte pouze jeden z `/doc`dostupných oborů hledání, `/proc` `/open`,, nebo `/sel`.
+Volitelné. Vyhledá pouze aktuální proceduru. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open` nebo `/sel`.
 
 /Regex nebo/r
 
-Volitelné. Používá předem definované speciální znaky v `findwhat` argumentu jako notace, které reprezentují vzory textu, nikoli literální znaky. Úplný seznam znaků regulárních výrazů naleznete v tématu [regulární výrazy](../../ide/using-regular-expressions-in-visual-studio.md).
+Volitelné. Používá předem definované speciální znaky v argumentu `findwhat` jako notace, které reprezentují vzory textu, nikoli literální znaky. Úplný seznam znaků regulárních výrazů naleznete v tématu [regulární výrazy](../../ide/using-regular-expressions-in-visual-studio.md).
 
 /Reset po vyčištění nebo/e
 
@@ -79,7 +79,7 @@ Volitelné. Vrátí možnosti hledání do jejich výchozího nastavení a nepro
 
 /SEL nebo/s
 
-Volitelné. Vyhledá pouze aktuální výběr. Zadejte pouze jeden z `/doc`dostupných oborů hledání, `/proc` `/open`,, nebo `/sel`.
+Volitelné. Vyhledá pouze aktuální výběr. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open` nebo `/sel`.
 
 /up nebo/u
 
@@ -87,7 +87,7 @@ Volitelné. Vyhledá z aktuálního umístění v souboru směrem k hornímu okr
 
 /Wild nebo/l
 
-Volitelné. Používá předdefinované speciální znaky v `findwhat` argumentu jako notace, které reprezentují znak nebo sekvenci znaků.
+Volitelné. Používá předem definované speciální znaky v argumentu `findwhat` jako notace, které reprezentují znak nebo sekvenci znaků.
 
 /Word nebo/w
 

@@ -1,5 +1,5 @@
 ---
-title: Třídy jazyka Visual C++ v Návrháři tříd | Dokumentace Microsoftu
+title: Třídy C++ vizuálu v Návrhář tříd | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,169 +10,164 @@ helpviewer_keywords:
 - Class Designer [Visual Studio], classes
 ms.assetid: 75e56f8c-11ef-42a3-b7ec-3d2cf25c581b
 caps.latest.revision: 23
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5e772d5dddcdde2306212e8a8fc48b9e39ae47a8
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 4fc312736508a11d43cadf789b08aae77c528d35
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65696404"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72608682"
 ---
 # <a name="visual-c-classes-in-class-designer"></a>Třídy jazyka Visual C++ v návrháři tříd
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Návrhář tříd podporuje C++ třídy a vizualizuje nativních tříd jazyka C++ stejně jako obrazců třídy jazyka Visual Basic a Visual C#, s tím rozdílem, že třídy C++ mohou mít více vztahů dědičnosti. Můžete rozbalit obrazec třídy na Zobrazit další pole a metody ve třídě nebo sbalit uchovejte prostor na disku.  
-  
+Návrhář tříd podporuje C++ třídy a vizualizuje nativní C++ třídy stejným způsobem jako obrazce Visual Basic a vizuální C# třídy, s výjimkou toho C++ , že třídy mohou mít více vztahů dědičnosti. Můžete rozbalit obrazec třídy a zobrazit tak více polí a metod ve třídě nebo ho sbalit tak, aby ušetřilo místo.
+
 > [!NOTE]
-> Návrhář tříd nepodporuje sjednocení (speciální typ třídy, ve kterém paměť přidělena je pouze množství potřebné pro unie největší datový člen).  
-  
-## <a name="simple-inheritance"></a>Jednoduchá dědičnost  
- Když přetáhnout více než jednu třídu do diagramu třídy a třídy mají vztah dědičnosti třídy, je šipka připojuje. Šipka body ve směru základní třídy. Například následující třídy jsou zobrazeny v diagramu tříd, šipka připojí, přejdete na b A:  
-  
-```  
-class A {};  
-class B : A {};  
-```  
-  
- Můžete také přetáhnout do diagramu tříd pouze třídy B, B pravým tlačítkem myši na obrazec třídy a pak klikněte na tlačítko **zobrazit základní třídy**. Zobrazí se její základní třídě: A.  
-  
-## <a name="multiple-inheritance"></a>Vícenásobná dědičnost  
- Návrhář tříd podporuje vizualizaci vztahů dědičnosti více tříd. *Vícenásobná dědičnost* se používá při odvozená třída má atributy více než jedné základní třídy. Tady je příklad vícenásobné dědičnosti:  
-  
-```  
-class Bird {};  
-class Swimmer {};  
-class Penguin : public Bird, public Swimmer {};  
-```  
-  
- Přetáhněte více než jednu třídu do diagramu třídy a třídy mají vztah dědičnosti třídy více, šipka propojí je. Šipka body ve směru ze základních tříd.  
-  
- Pravým tlačítkem myši na tvar třídy a pak levým na **zobrazit základní třídy** zobrazuje základní třídy, které pro vybranou třídu.  
-  
+> Návrhář tříd nepodporuje sjednocení (speciální typ třídy, ve které je přidělená paměť pouze ta, která je potřebná pro největší datový člen sjednocení).
+
+## <a name="simple-inheritance"></a>Jednoduchá dědičnost
+ Když přetáhnete více než jednu třídu do diagramu tříd a třídy mají vztah dědičnosti třídy, připojí se k ní šipka. Šipka směřuje do směru základní třídy. Například pokud jsou následující třídy zobrazeny v diagramu tříd, je připojena šipka, ukazující od B do:
+
+```
+class A {};
+class B : A {};
+```
+
+ Můžete také přetáhnout pouze třídu B do diagramu tříd, kliknout pravým tlačítkem myši na obrazec třídy pro B a potom kliknout na tlačítko **Zobrazit základní třídy**. Tím se zobrazí základní třída: A.
+
+## <a name="multiple-inheritance"></a>Vícenásobná dědičnost
+ Návrhář tříd podporuje vizualizaci vztahů dědičnosti s více třídami. *Vícenásobná dědičnost* se používá v případě, že odvozená třída má atributy více než jedné základní třídy. Následuje příklad vícenásobné dědičnosti:
+
+```
+class Bird {};
+class Swimmer {};
+class Penguin : public Bird, public Swimmer {};
+```
+
+ Když přetáhnete více než jednu třídu do diagramu tříd a třídy mají vztah dědičnosti s více třídami, připojí se šipka. Šipka směřuje do směru základních tříd.
+
+ Klikněte pravým tlačítkem myši na obrazec třídy a potom kliknutím na možnost **Zobrazit základní třídy** zobrazíte základní třídy pro vybranou třídu.
+
 > [!NOTE]
-> **Zobrazit odvozené třídy** příkaz není podporován pro kód C++. Lze zobrazit odvozené třídy tak, že přejdete na zobrazení tříd, rozbalení uzlu typu, rozšíření **odvozené typy** podsložky a následným přetažením tyto typy do diagramu tříd.  
-  
- Další informace o dědičnosti více tříd, naleznete v tématu [vícenásobná dědičnost (NOTINBUILD)](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca) a [více základních tříd](https://msdn.microsoft.com/library/a30c69fe-401c-4a87-96a0-e0da70c7c740).  
-  
-## <a name="abstract-classes"></a>Abstraktní třídy  
- Návrhář tříd podporuje abstraktních tříd (také s názvem "základních tříd abstraktu"). Toto jsou třídy, která nikdy vytvořit instanci, ale ze které odvozujete jiné třídy. Použijeme příklad z "Vícenásobné dědičnosti" dříve v tomto dokumentu, které může vytvořit instanci `Bird` třídy jako jednotlivé objekty následujícím způsobem:  
-  
-```  
-int main()  
-{  
-   Bird sparrow;  
-   Bird crow;  
-   Bird eagle;  
-}  
-```  
-  
- Ale možná chcete vytvořit instanci `Swimmer` třídu jako jednotlivé objekty. Možná chcete pouze odvozovat další typy jsou třídy, například `Penguin`, `Whale`, a `Fish`. V takovém případě by deklarace `Swimmer` třídu jako abstraktní základní třídu.  
-  
- Chcete-li deklarovat třídu jako abstraktní, můžete použít `abstract` – klíčové slovo. Členy označené jako abstraktní, nebo součástí abstraktní třídu, jsou virtuální a musí být implementované třídami, které jsou odvozeny od abstraktní třídy.  
-  
-```  
-class Swimmer abstract  
-{  
-   virtual void swim();  
-   void dive();  
-};  
-```  
-  
- Můžete také deklarovat třídu jako abstraktní vložením alespoň jednu prázdnou virtuální funkci:  
-  
-```  
-class Swimmer  
-{  
-   virtual void swim() = 0;  
-   void dive();  
-};  
-```  
-  
- Při zobrazení tyto deklarace v diagramu tříd, název třídy `Swimmer` a čistě virtuální funkce `swim` v zobrazí kurzívou v obrazce abstraktní třídu, společně s zápis **abstraktní třída**. Všimněte si, že tvar typu abstraktní třídy je stejné jako u běžné třídy, s tím rozdílem, že jeho ohraničení se tečkovaná čára.  
-  
- Třídy odvozené od abstraktní základní třída musí přepsat všechny čistě virtuální funkce v základní třídě, nebo odvozené třídy se nedá vytvořit instance. Ano, třeba při odvozování `Fish` třídy z `Swimmer` třídy, `Fish` musí přepsat `swim` metody:  
-  
-```  
-class Fish : public Swimmer  
-{  
-   void swim(int speed);  
-};  
-  
-int main()  
-{  
-   Fish guppy;  
-}  
-```  
-  
- Tento kód se zobrazí v diagramu tříd, návrhář tříd kreslení čáru dědičnosti z `Fish` k `Swimmer`.  
-  
-## <a name="anonymous-classes"></a>Anonymní třídy  
- Návrhář tříd podporuje anonymní třídy. *Anonymní typy třídy* tříd jsou deklarovány bez identifikátoru. Jejich nemůže mít konstruktor nebo destruktor, nelze předat jako argumenty funkce a nemůže být vrácen jako návratové hodnoty ve funkcích. Anonymní třídy lze použít k nahrazení názvu třídy s názvem definice typedef, jako v následujícím příkladu:  
-  
-```  
-typedef struct  
-{  
-    unsigned x;  
-    unsigned y;  
-} POINT;  
-```  
-  
- Struktury také mohou být anonymní. Návrhář tříd zobrazí anonymní třídy a struktury stejné jako zobrazení příslušného typu. I když můžete deklarovat a zobrazení anonymní třídy a struktury, nebude návrhář tříd použít název značky, který zadáte. Použije název, který generuje zobrazení tříd. Třídy nebo struktury se zobrazí v zobrazení tříd a návrhář tříd jako element volá **__unnamed**.  
-  
- Další informace o anonymních tříd naleznete v tématu [anonymní typy třídy](https://msdn.microsoft.com/library/9ba667b2-8c2a-4c29-82a6-fa120b9233c8).  
-  
-## <a name="template-classes"></a>Třídy šablon  
- Návrhář tříd podporuje vizualizaci tříd šablon. Vnořené deklarace jsou podporovány. Následující tabulka uvádí některé typické deklarace.  
-  
-|Element kódu|Zobrazení návrháře tříd|  
-|------------------|-------------------------|  
-|`template <class T>`<br /><br /> `class A {};`|`A<T>`<br /><br /> Třída šablony|  
-|`template <class T, class U>`<br /><br /> `class A {};`|`A<T, U>`<br /><br /> Třída šablony|  
-|`template <class T, int i>`<br /><br /> `class A {};`|`A<T, i>`<br /><br /> Třída šablony|  
-|`template <class T, template <class K> class U>`<br /><br /> `class A {};`|`A<T, U>`<br /><br /> Třída šablony|  
-  
- V následující tabulce jsou uvedeny některé příklady částečná specializace.  
-  
-|Element kódu|Zobrazení návrháře tříd|  
-|------------------|-------------------------|  
-|`template<class T, class U>`<br /><br /> `class A {};`|`A<T, U>`<br /><br /> Třída šablony|  
-|`template<class T>`<br /><br /> `class A<T, T> {};`|`A<T, T>`<br /><br /> Třída šablony|  
-|`template <class T>`<br /><br /> `class A<T, int> {};`|`A<T, int>`<br /><br /> Třída šablony|  
-|`template <class T1, class T2>`<br /><br /> `class A<T1*, T2*> {};`|`A<T1*, T2*>`<br /><br /> Třída šablony|  
-  
- V následující tabulce jsou uvedeny příklady dědičnosti v částečné specializaci.  
-  
-|Element kódu|Zobrazení návrháře tříd|  
-|------------------|-------------------------|  
-|`template <class T, class U>`<br /><br /> `class A {};`<br /><br /> `template <class TC>`<br /><br /> `class A<T, int> {};`<br /><br /> `class B : A<int, float>`<br /><br /> `{};`<br /><br /> `class C : A<int, int>`<br /><br /> `{};`|`A<T, U>`<br /><br /> Třída šablony<br /><br /> `B`<br /><br /> Třída<br /><br /> (bodů na třídy A)<br /><br /> `C`<br /><br /> Třída<br /><br /> (bodů na třídy A)|  
-  
- V následující tabulce jsou uvedeny příklady částečná specializace šablony funkce.  
-  
-|Element kódu|Zobrazení návrháře tříd|  
-|------------------|-------------------------|  
-|`class A`<br /><br /> `{`<br /><br /> `template <class T, class U>`<br /><br /> `void func(T a, U b);`<br /><br /> `template <class T>`<br /><br /> `void func(T a, int b);`<br /><br /> `};`|`A`<br /><br /> Func\<T, U > (+ 1 přetížení)|  
-|`template <class T1>`<br /><br /> `class A {`<br /><br /> `template <class T2>`<br /><br /> `class B {};`<br /><br /> `};`<br /><br /> `template<> template<>`<br /><br /> `class A<type>::B<type> {};`|`A<T1>`<br /><br /> Třída šablony<br /><br /> `B<T2>`<br /><br /> Třída šablony<br /><br /> (B je obsažen v rámci třídy A v části **vnořené typy**)|  
-|`template <class T>`<br /><br /> `class C {};`<br /><br /> `class A : C<int> {};`|`A`<br /><br /> Třída<br /><br /> -> C\<int><br /><br /> `C<T>`<br /><br /> Třída šablony|  
-  
- V následující tabulce jsou uvedeny příklady šablony dědičnosti.  
-  
-|Element kódu|Zobrazení návrháře tříd|  
-|------------------|-------------------------|  
-|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {`<br /><br /> `class B {};`<br /><br /> `}`<br /><br /> `class A : C<int>::B {};`|`A`<br /><br /> Třída<br /><br /> ->B<br /><br /> `C<int>`<br /><br /> Třída<br /><br /> (B je obsažen v rámci třídy C v rámci **vnořené typy**)<br /><br /> `C<T>`<br /><br /> Třída šablony|  
-  
- V následující tabulce jsou uvedeny příklady canonical specializované třídy připojení.  
-  
-|Element kódu|Zobrazení návrháře tříd|  
-|------------------|-------------------------|  
-|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {};`<br /><br /> `class A : C<int> {};`<br /><br /> `class D : C<float> {};`|`A`<br /><br /> Třída<br /><br /> ->C\<int><br /><br /> `C<int>`<br /><br /> Třída<br /><br /> `C<T>`<br /><br /> Třída šablony<br /><br /> `D`<br /><br /> Třída<br /><br /> -> C\<float >|  
-|`class B {`<br /><br /> `template <class T>`<br /><br /> `T min (const T &a, const T &b);`<br /><br /> `};`|`B`<br /><br /> min \<T>|  
-  
-## <a name="see-also"></a>Viz také  
- [Práce s kódem jazyka Visual C++ (návrhář tříd)](../ide/working-with-visual-cpp-code-class-designer.md)   
- [Třídy a struktury](https://msdn.microsoft.com/library/516dd496-13fb-4f17-845a-e9ca45437873)   
- [Anonymní typy třídy](https://msdn.microsoft.com/library/9ba667b2-8c2a-4c29-82a6-fa120b9233c8)   
- [(NOTINBUILD) Vícenásobná dědičnost](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca)   
- [Vícenásobné třídy Base](https://msdn.microsoft.com/library/a30c69fe-401c-4a87-96a0-e0da70c7c740)   
- [Šablony](https://msdn.microsoft.com/library/90fcc14a-2092-47af-9d2e-dba26d25b872)
+> Příkaz **Zobrazit odvozené třídy** není pro C++ kód podporován. Odvozené třídy můžete zobrazit tak, že kliknete na Zobrazení tříd, rozbalíte uzel typu, rozbalíte podsložku **odvozené typy** a přetáhnete tyto typy do diagramu tříd.
+
+ Další informace o dědičnosti více tříd naleznete v tématu [(NOTINBUILD) vícenásobná dědičnost](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca) a [více základních tříd](https://msdn.microsoft.com/library/a30c69fe-401c-4a87-96a0-e0da70c7c740).
+
+## <a name="abstract-classes"></a>Abstraktní třídy
+ Návrhář tříd podporuje abstraktní třídy (také s názvem "abstraktní základní třídy"). Jedná se o třídy, které nikdy nevytváříte, ale ze kterých můžete odvodit jiné třídy. Pomocí příkladu z "vícenásobná dědičnost" dříve v tomto dokumentu můžete vytvořit instanci `Bird` třídy jako jednotlivé objekty následujícím způsobem:
+
+```
+int main()
+{
+   Bird sparrow;
+   Bird crow;
+   Bird eagle;
+}
+```
+
+ Nicméně nebudete mít v úmyslu vytvořit instanci `Swimmer` třídy jako jednotlivé objekty. Je možné, že máte v úmyslu odvodit jenom jiné typy tříd zvířat, například `Penguin`, `Whale` a `Fish`. V takovém případě byste třídu `Swimmer` deklarovali jako abstraktní základní třídu.
+
+ Chcete-li deklarovat třídu jako abstraktní, můžete použít klíčové slovo `abstract`. Členy označené jako abstraktní nebo zahrnuté do abstraktní třídy jsou virtuální a musí být implementované třídami odvozenými z abstraktní třídy.
+
+```
+class Swimmer abstract
+{
+   virtual void swim();
+   void dive();
+};
+```
+
+ Můžete také deklarovat třídu jako abstraktní zahrnutím alespoň jedné čistě virtuální funkce:
+
+```
+class Swimmer
+{
+   virtual void swim() = 0;
+   void dive();
+};
+```
+
+ Když zobrazíte tyto deklarace v diagramu tříd, název třídy `Swimmer` a její čistě virtuální funkce `swim` jsou zobrazeny v kurzívě v nadřazeném tvaru třídy spolu s **abstraktní třídou**Notation. Všimněte si, že obrazec typu abstraktní třídy je stejný jako u regulární třídy s tím rozdílem, že jeho ohraničení je tečkovaná čára.
+
+ Třída odvozená z abstraktní základní třídy musí přepsat každou čistě virtuální funkci v základní třídě, jinak nelze vytvořit instanci odvozené třídy. Takže pokud například odvodit třídu `Fish` z `Swimmer` třídy, `Fish` musí přepsat `swim` metoda:
+
+```
+class Fish : public Swimmer
+{
+   void swim(int speed);
+};
+
+int main()
+{
+   Fish guppy;
+}
+```
+
+ Při zobrazení tohoto kódu v diagramu tříd Návrhář tříd nakreslí čáru dědičnosti z `Fish` na `Swimmer`.
+
+## <a name="anonymous-classes"></a>Anonymní třídy
+ Návrhář tříd podporuje anonymní třídy. *Anonymní typy tříd* jsou třídy deklarované bez identifikátoru. Nemohou mít konstruktor nebo destruktor, nemohou být předány jako argumenty funkcím a nemohou být vráceny jako návratové hodnoty z funkcí. Můžete použít anonymní třídu k nahrazení názvu třídy názvem typedef, jak je uvedeno v následujícím příkladu:
+
+```
+typedef struct
+{
+    unsigned x;
+    unsigned y;
+} POINT;
+```
+
+ Struktury můžou být taky anonymní. Návrhář tříd zobrazuje anonymní třídy a struktury stejné, jako zobrazuje příslušný typ. I když můžete deklarovat a zobrazit anonymní třídy a struktury, Návrhář tříd nebude používat název značky, který zadáte. Bude použit název, který Zobrazení tříd generuje. Třída nebo struktura se zobrazí v Zobrazení tříd a Návrhář tříd jako element s názvem **__unnamed**.
+
+ Další informace o anonymních třídách naleznete v tématu [anonymní typy tříd](https://msdn.microsoft.com/library/9ba667b2-8c2a-4c29-82a6-fa120b9233c8).
+
+## <a name="template-classes"></a>Třídy šablon
+ Návrhář tříd podporuje vizualizaci tříd šablon. Jsou podporovány vnořené deklarace. V následující tabulce jsou uvedeny některé typické deklarace.
+
+|Element kódu|Zobrazení Návrhář tříd|
+|------------------|-------------------------|
+|`template <class T>`<br /><br /> `class A {};`|`A<T>`<br /><br /> Template – třída|
+|`template <class T, class U>`<br /><br /> `class A {};`|`A<T, U>`<br /><br /> Template – třída|
+|`template <class T, int i>`<br /><br /> `class A {};`|`A<T, i>`<br /><br /> Template – třída|
+|`template <class T, template <class K> class U>`<br /><br /> `class A {};`|`A<T, U>`<br /><br /> Template – třída|
+
+ V následující tabulce jsou uvedeny některé příklady částečné specializace.
+
+|Element kódu|Zobrazení Návrhář tříd|
+|------------------|-------------------------|
+|`template<class T, class U>`<br /><br /> `class A {};`|`A<T, U>`<br /><br /> Template – třída|
+|`template<class T>`<br /><br /> `class A<T, T> {};`|`A<T, T>`<br /><br /> Template – třída|
+|`template <class T>`<br /><br /> `class A<T, int> {};`|`A<T, int>`<br /><br /> Template – třída|
+|`template <class T1, class T2>`<br /><br /> `class A<T1*, T2*> {};`|`A<T1*, T2*>`<br /><br /> Template – třída|
+
+ V následující tabulce jsou uvedeny některé příklady dědičnosti v částečné specializaci.
+
+|Element kódu|Zobrazení Návrhář tříd|
+|------------------|-------------------------|
+|`template <class T, class U>`<br /><br /> `class A {};`<br /><br /> `template <class TC>`<br /><br /> `class A<T, int> {};`<br /><br /> `class B : A<int, float>`<br /><br /> `{};`<br /><br /> `class C : A<int, int>`<br /><br /> `{};`|`A<T, U>`<br /><br /> Template – třída<br /><br /> `B`<br /><br /> Třída<br /><br /> (odkazuje na třídu A)<br /><br /> `C`<br /><br /> Třída<br /><br /> (odkazuje na třídu A)|
+
+ V následující tabulce jsou uvedeny některé příklady funkcí šablon částečné specializace.
+
+|Element kódu|Zobrazení Návrhář tříd|
+|------------------|-------------------------|
+|`class A`<br /><br /> `{`<br /><br /> `template <class T, class U>`<br /><br /> `void func(T a, U b);`<br /><br /> `template <class T>`<br /><br /> `void func(T a, int b);`<br /><br /> `};`|`A`<br /><br /> Func \<T, U > (+ 1 přetížení)|
+|`template <class T1>`<br /><br /> `class A {`<br /><br /> `template <class T2>`<br /><br /> `class B {};`<br /><br /> `};`<br /><br /> `template<> template<>`<br /><br /> `class A<type>::B<type> {};`|`A<T1>`<br /><br /> Template – třída<br /><br /> `B<T2>`<br /><br /> Template – třída<br /><br /> (B je obsaženo v třídě A v rámci **vnořených typů**)|
+|`template <class T>`<br /><br /> `class C {};`<br /><br /> `class A : C<int> {};`|`A`<br /><br /> Třída<br /><br /> -> C \<int ><br /><br /> `C<T>`<br /><br /> Template – třída|
+
+ V následující tabulce jsou uvedeny některé příklady dědičnosti šablon.
+
+|Element kódu|Zobrazení Návrhář tříd|
+|------------------|-------------------------|
+|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {`<br /><br /> `class B {};`<br /><br /> `}`<br /><br /> `class A : C<int>::B {};`|`A`<br /><br /> Třída<br /><br /> – > B<br /><br /> `C<int>`<br /><br /> Třída<br /><br /> (B je obsaženo v třídě C v rámci **vnořených typů**)<br /><br /> `C<T>`<br /><br /> Template – třída|
+
+ V následující tabulce jsou uvedeny některé příklady kanonického specializovaného připojení třídy.
+
+|Element kódu|Zobrazení Návrhář tříd|
+|------------------|-------------------------|
+|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {};`<br /><br /> `class A : C<int> {};`<br /><br /> `class D : C<float> {};`|`A`<br /><br /> Třída<br /><br /> -> C \<int ><br /><br /> `C<int>`<br /><br /> Třída<br /><br /> `C<T>`<br /><br /> Template – třída<br /><br /> `D`<br /><br /> Třída<br /><br /> -> C \<float >|
+|`class B {`<br /><br /> `template <class T>`<br /><br /> `T min (const T &a, const T &b);`<br /><br /> `};`|`B`<br /><br /> minimální \<T >|
+
+## <a name="see-also"></a>Viz také
+ [Práce s třídami Visual C++ Code (návrhář tříd)](../ide/working-with-visual-cpp-code-class-designer.md) [a strukturami](https://msdn.microsoft.com/library/516dd496-13fb-4f17-845a-e9ca45437873) [typu anonymní třídy](https://msdn.microsoft.com/library/9ba667b2-8c2a-4c29-82a6-fa120b9233c8) [(NOTINBUILD) vícenásobná dědičnost](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca) – [vícenásobné šablony základních tříd](https://msdn.microsoft.com/library/a30c69fe-401c-4a87-96a0-e0da70c7c740) [](https://msdn.microsoft.com/library/90fcc14a-2092-47af-9d2e-dba26d25b872)

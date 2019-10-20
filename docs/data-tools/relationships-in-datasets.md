@@ -1,5 +1,5 @@
 ---
-title: DataRelation – použijte k vytvoření vztahů mezi tabulkami
+title: K vytvoření vztahů mezi datovými sadami použijte DataRelation
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,99 +10,99 @@ helpviewer_keywords:
 - datasets [Visual Basic], relationships
 - relationships, datasets
 ms.assetid: cfe274f0-71fe-40f6-994e-7c7f6273c9ba
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 653a9b589e68c326fc40a94ed0fa3ab7e49acb8b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c9fab55c020894fe87ec4dc1c31137fb7e38c204
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62567647"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648246"
 ---
 # <a name="create-relationships-between-datasets"></a>Vytváření vztahů mezi tabulkami
-Datové sady, které obsahují data související tabulky použijte <xref:System.Data.DataRelation> objekty představují nadřazené a podřízené relace mezi tabulkami a vrácení souvisejících záznamů od sebe. Přidání souvisejících tabulek do datové sady s použitím **Průvodce konfigurací zdroje dat**, nebo **Návrhář Dataset**, vytvoří a nakonfiguruje <xref:System.Data.DataRelation> objekt za vás.
+Datové sady, které obsahují tabulky s relačními tabulkami, používají <xref:System.Data.DataRelation> objekty k reprezentaci vztahu nadřazený-podřízený mezi tabulkami a k vrácení souvisejících záznamů od sebe. Přidání souvisejících tabulek do datových sad pomocí **Průvodce konfigurací zdroje dat**nebo **Návrhář datových sad**vytvoří a nakonfiguruje pro vás objekt <xref:System.Data.DataRelation>.
 
-<xref:System.Data.DataRelation> Objekt provádí dvě funkce:
+Objekt <xref:System.Data.DataRelation> provádí dvě funkce:
 
-- Může být k dispozici záznamy související s záznamu, na které pracujete. Pokud jste v nadřazený záznam poskytuje podřízené záznamy (<xref:System.Data.DataRow.GetChildRows%2A>) a nadřazený záznam, pokud pracujete s podřízeného záznamu (<xref:System.Data.DataRow.GetParentRow%2A>).
+- Může zpřístupnit záznamy související se záznamem, se kterým pracujete. Pokud pracujete s podřízeným záznamem (<xref:System.Data.DataRow.GetParentRow%2A>), poskytuje podřízené záznamy, pokud jste v nadřazeném záznamu (<xref:System.Data.DataRow.GetChildRows%2A>) a nadřazeného záznamu.
 
-- To můžete vynutit omezení referenční integrity, jako je například odstranění související podřízené záznamy, když odstraníte záznam nadřazené.
+- Může vynutit omezení pro referenční integritu, například odstranění souvisejících podřízených záznamů při odstraňování nadřazeného záznamu.
 
-Je důležité pochopit rozdíl mezi true spojení a funkce <xref:System.Data.DataRelation> objektu. True spojení jsou záznamy na základě nadřazené a podřízené tabulky a vloží do jednoho ploché sady záznamů. Při použití <xref:System.Data.DataRelation> objektu, je vytvořen bez nové sady záznamů. Místo toho DataRelation sleduje relace mezi tabulkami a udržuje nadřazené a podřízené záznamy synchronizované.
+Je důležité pochopit rozdíl mezi skutečným spojením a funkcí objektu <xref:System.Data.DataRelation>. V pravdivém spojení jsou záznamy pořízeny z nadřazených a podřízených tabulek a vloženy do jediné ploché sady záznamů. Použijete-li objekt <xref:System.Data.DataRelation>, není vytvořena žádná nová sada záznamů. Místo toho objekt DataRelation sleduje relaci mezi tabulkami a udržuje nadřazené a podřízené záznamy synchronizované.
 
-## <a name="datarelation-objects-and-constraints"></a>DataRelation – objekty a omezení
-A <xref:System.Data.DataRelation> objektu se používá také vytvářet a vynucovat následující omezení:
+## <a name="datarelation-objects-and-constraints"></a>Objekty a omezení DataRelation
+Objekt <xref:System.Data.DataRelation> se také používá k vytvoření a prosazování následujících omezení:
 
-- Jedinečné omezení, což zaručuje, že sloupce v tabulce neobsahuje duplicitní položky.
+- Jedinečné omezení, které zaručuje, že sloupec v tabulce neobsahuje žádné duplicity.
 
-- Omezení cizího klíče, který může sloužit k udržení referenční integrity mezi nadřazenou a podřízenou tabulku v datové sadě.
+- Omezení cizího klíče, které lze použít k udržení referenční integrity mezi nadřazenou a podřízenou tabulkou v datové sadě.
 
-Omezení, která zadáte <xref:System.Data.DataRelation> objektu jsou implementovány automaticky vytváří odpovídající objekty nebo nastavením vlastnosti. Pokud vytvoříte omezení foreign key s použitím <xref:System.Data.DataRelation> objektu, instance <xref:System.Data.ForeignKeyConstraint> třídy jsou přidány do <xref:System.Data.DataRelation> objektu <xref:System.Data.DataRelation.ChildKeyConstraint%2A> vlastnost.
+Omezení, která zadáte v objektu <xref:System.Data.DataRelation> jsou implementována automatickým vytvořením vhodných objektů nebo vlastností nastavení. Pokud vytvoříte omezení cizího klíče pomocí objektu <xref:System.Data.DataRelation>, instance <xref:System.Data.ForeignKeyConstraint> třídy jsou přidány do vlastnosti <xref:System.Data.DataRelation.ChildKeyConstraint%2A> objektu <xref:System.Data.DataRelation>.
 
-Jedinečné omezení je implementováno buď jednoduše nastavením <xref:System.Data.DataColumn.Unique%2A> vlastnost sloupec dat na `true` nebo přidáním instance <xref:System.Data.UniqueConstraint> třídu <xref:System.Data.DataRelation> objektu <xref:System.Data.DataRelation.ParentKeyConstraint%2A> vlastnost. Informace o pozastavení omezení v datové sadě, naleznete v tématu [vypnutí omezení při naplňování datové sady](../data-tools/turn-off-constraints-while-filling-a-dataset.md).
+Jedinečné omezení je implementováno buď pouhým nastavením vlastnosti <xref:System.Data.DataColumn.Unique%2A> datového sloupce `true` nebo přidáním instance třídy <xref:System.Data.UniqueConstraint> do vlastnosti <xref:System.Data.DataRelation.ParentKeyConstraint%2A> objektu <xref:System.Data.DataRelation>. Informace o pozastavení omezení v datové sadě naleznete v tématu vypnutí [omezení při naplňování datové sady](../data-tools/turn-off-constraints-while-filling-a-dataset.md).
 
-### <a name="referential-integrity-rules"></a>Pravidla referenční integritu
-Jako součást omezení cizího klíče můžete zadat referenční integritu pravidla, která se použijí na třech místech:
+### <a name="referential-integrity-rules"></a>Pravidla referenční integrity
+V rámci omezení cizího klíče můžete zadat pravidla referenční integrity, která se aplikují na tři body:
 
-- Při aktualizaci nadřazený záznam
+- Když se aktualizuje nadřazený záznam
 
-- Při odstranění nadřazený záznam
+- Při odstranění nadřazeného záznamu
 
-- Kdy je změna přijímat nebo odmítat.
+- Když je změna přijata nebo zamítnuta
 
-Pravidla, které můžete použít jsou určené v <xref:System.Data.Rule> výčtu a jsou uvedeny v následující tabulce.
+Pravidla, která lze provést, jsou určena ve výčtu <xref:System.Data.Rule> a jsou uvedena v následující tabulce.
 
 |Pravidlo omezení pro cizí klíč|Akce|
 | - |------------|
-|<xref:System.Data.Rule.Cascade>|Také je provedena změna (update nebo delete) provedených na nadřazený záznam související záznamy v podřízené tabulce.|
-|<xref:System.Data.Rule.SetNull>|Podřízené záznamy se neodstraní, ale nastavení cizí klíče v podřízené záznamy <xref:System.DBNull>. S tímto nastavením může být ponecháno podřízené záznamy "osamocené položky" – to znamená, že nemají žádný vztah k nadřazené záznamy. **Poznámka:** Pomocí tohoto pravidla může způsobit neplatná data v podřízené tabulce.|
-|<xref:System.Data.Rule.SetDefault>|Cizí klíče v související podřízené záznamy je nastavena na výchozí hodnotu (podle sloupce <xref:System.Data.DataColumn.DefaultValue%2A> vlastnost).|
-|<xref:System.Data.Rule.None>|Související podřízené záznamy se neprovedly žádné změny. S tímto nastavením může obsahovat podřízené záznamy odkazy na neplatný nadřazené záznamy.|
+|<xref:System.Data.Rule.Cascade>|Změna (aktualizace nebo odstranění) vytvořená u nadřazeného záznamu je také vytvořena v souvisejících záznamech v podřízené tabulce.|
+|<xref:System.Data.Rule.SetNull>|Podřízené záznamy nejsou odstraněny, ale cizí klíč v podřízených záznamech je nastaven na <xref:System.DBNull>. S tímto nastavením můžou být podřízené záznamy ponechány jako "osamocené" – to znamená, že nemají žádný vztah k nadřazeným záznamům. **Poznámka:** Použití tohoto pravidla může mít za následek neplatnou data v podřízené tabulce.|
+|<xref:System.Data.Rule.SetDefault>|Cizí klíč v souvisejících podřízených záznamech je nastaven na výchozí hodnotu (jak je stanoveno vlastností <xref:System.Data.DataColumn.DefaultValue%2A> sloupce).|
+|<xref:System.Data.Rule.None>|V souvisejících podřízených záznamech není provedena žádná změna. S tímto nastavením můžou podřízené záznamy obsahovat odkazy na neplatné nadřazené záznamy.|
 
-Další informace o aktualizacích v tabulkách datové sady, naleznete v tématu [uložit data zpět do databáze](../data-tools/save-data-back-to-the-database.md).
+Další informace o aktualizacích v tabulkách datové sady najdete v tématu [uložení dat zpět do databáze](../data-tools/save-data-back-to-the-database.md).
 
-### <a name="constraint-only-relations"></a>Pouze pro omezení relací
-Když vytvoříte <xref:System.Data.DataRelation> objektu, máte možnost určit, že relace lze použít pouze k vynucení omezení – to znamená, ho také se nepoužije pro přístup k souvisejících záznamů. Tuto možnost můžete použít ke generování datovou sadu, která je efektivnější a který obsahuje metody méně než jedna možnost související záznamy. Nebudete ale moci přistupovat k souvisejících záznamů. Například pouze omezení relace zabraňuje odstranění nadřazený záznam, který má stále podřízené záznamy a podřízené záznamy nelze přistupovat prostřednictvím nadřazené.
+### <a name="constraint-only-relations"></a>Vztahy pouze s omezením
+Když vytváříte objekt <xref:System.Data.DataRelation>, máte možnost určit, že vztah bude použit pouze k vynutit omezení – to znamená, že nebude použit také pro přístup k souvisejícím záznamům. Pomocí této možnosti můžete vygenerovat datovou sadu, která je poněkud efektivnější a která obsahuje méně metod, než je jedna se schopností souvisejících záznamů. Nebudete ale mít přístup k souvisejícím záznamům. Relace jenom s omezením například brání v odstranění nadřazeného záznamu, který má podřízené záznamy a nelze k podřízeným záznamům přistupovat prostřednictvím nadřazeného objektu.
 
-## <a name="manually-creating-a-data-relation-in-the-dataset-designer"></a>Ruční vytvoření vztahu data v návrháři datových sad
-Při vytváření datových tabulek pomocí nástrojů pro návrh dat v sadě Visual Studio vztahy se vytvoří automaticky, pokud ze zdroje dat se dají shromáždit informace. Pokud chcete ručně přidat tabulky dat z **datovou sadu** karty **nástrojů**, možná budete muset ručně vytvořit relaci. Další informace o vytváření <xref:System.Data.DataRelation> prostřednictvím kódu programu, najdete v článku objekty [přidání datových relací](/dotnet/framework/data/adonet/dataset-datatable-dataview/adding-datarelations).
+## <a name="manually-creating-a-data-relation-in-the-dataset-designer"></a>Ruční vytvoření relace dat v Návrhář datových sad
+Při vytváření datových tabulek pomocí nástrojů pro návrh dat v aplikaci Visual Studio se vztahy vytvoří automaticky, pokud se informace mohou shromažďovat ze zdroje dat. Pokud ručně přidáte tabulky dat z karty **datová sada** na **panelu nástrojů**, bude pravděpodobně nutné vytvořit relaci ručně. Informace o tom, jak programově vytvářet <xref:System.Data.DataRelation> objekty, najdete v tématu [Přidání datových vztahů](/dotnet/framework/data/adonet/dataset-datatable-dataview/adding-datarelations).
 
-Relace mezi tabulkami dat zobrazovat jako řádky v **Návrhář Dataset**, s klíči a nekonečno piktogram znázorňující aspekt vztah jeden mnoho. Ve výchozím nastavení se nezobrazí název relace na návrhové ploše.
+Relace mezi tabulkami dat se zobrazí jako řádky v **Návrhář datových sad**s klíčovým a nekonečným glyfem znázorňujícím aspekt vztahu 1: n. Ve výchozím nastavení se název vztahu nezobrazí na návrhové ploše.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-#### <a name="to-create-a-relationship-between-two-data-tables"></a>K vytvoření vztahu mezi dvěma datovými tabulkami
+#### <a name="to-create-a-relationship-between-two-data-tables"></a>Vytvoření relace mezi dvěma datovými tabulkami
 
-1. Otevřete svou datovou sadu v **Návrhář Dataset**. Další informace najdete v tématu [názorný postup: Vytvoření datové sady v návrháři datových sad](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
+1. Otevřete datovou sadu v **Návrhář datových sad**. Další informace najdete v tématu [Návod: vytvoření datové sady v Návrhář datových sad](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
 
-2. Přetáhněte **vztah** objektu z **datovou sadu** nástrojů do podřízené tabulky dat v relaci.
+2. Přetáhněte objekt **vztahu** z panelu nástrojů **datové sady** do tabulky podřízených dat v relaci.
 
-     **Vztah** otevře se dialogové okno, naplnění **podřízenou tabulku** pole s tabulkou, kterou jste přetáhli **vztah** objekt.
+     Otevře se dialogové okno **vztah** , naplnění **podřízeného pole tabulky** tabulkou, do které jste přetáhli objekt **relace** .
 
-3. Vyberte nadřazené tabulky z **nadřazená tabulka** pole. Nadřazená tabulka obsahuje záznamy na straně "1" vztah jeden mnoho.
+3. Vyberte nadřazenou tabulku z pole **nadřazená tabulka** . Nadřazená tabulka obsahuje záznamy na straně jedna relace 1: n.
 
-4. Zkontrolujte, jestli je v zobrazuje správné podřízené tabulky **podřízenou tabulku** pole. Podřízené tabulky obsahuje záznamy na straně "n" vztah jeden mnoho.
+4. Ověřte, že je v poli **podřízená tabulka** zobrazená správná podřízená tabulka. Podřízená tabulka obsahuje záznamy na straně "mnoho" relace 1: n.
 
-5. Zadejte název pro relaci v **název** pole, nebo ponechte výchozí název založený na vybrané tabulky. Toto je název aplikace skutečný <xref:System.Data.DataRelation> objekt v kódu.
+5. Do pole **název** zadejte název vztahu nebo ponechte výchozí název založený na vybraných tabulkách. Toto je název skutečného objektu <xref:System.Data.DataRelation> v kódu.
 
-6. Vyberte sloupce, které spojení tabulek v **sloupce klíčů** a **sloupce cizího klíče** seznamy.
+6. Vyberte sloupce, které se připojují k tabulkám ve **sloupcích klíče** a v seznamech **cizích klíčů** .
 
-7. Vyberte, jestli chcete vytvořit relaci nebo omezení.
+7. Vyberte, zda chcete vytvořit relaci, omezení nebo obojí.
 
-8. Zaškrtněte nebo zrušte zaškrtnutí **vnořené relace** pole. Výběr, tato možnost nastaví <xref:System.Data.DataRelation.Nested%2A> vlastnost `true`, a to způsobí, že podřízené řádky vztahu, chcete-li být vnořen v rámci nadřazeného sloupce, když jsou tyto řádky zapisují jako XML data nebo synchronizovat se službou <xref:System.Xml.XmlDataDocument>. Další informace najdete v tématu [vnoření datových relací](/dotnet/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations).
+8. Zaškrtněte nebo zrušte zaškrtnutí políčka **vnořené relace** . Výběrem této možnosti nastavíte vlastnost <xref:System.Data.DataRelation.Nested%2A> na `true` a dojde k tomu, že podřízené řádky relace budou vnořené do nadřazeného sloupce, když budou tyto řádky zapsány jako data XML nebo synchronizovány s <xref:System.Xml.XmlDataDocument>. Další informace najdete v tématu [vnořování datových vztahů](/dotnet/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations).
 
-9. Nastavení pravidel vynucení když děláte změny na záznamy v těchto tabulkách. Další informace naleznete v tématu <xref:System.Data.Rule>.
+9. Nastavte pravidla, která se mají vyhovět při provádění změn záznamů v těchto tabulkách. Další informace najdete v tématu <xref:System.Data.Rule>.
 
-10. Klikněte na tlačítko **OK** a vytvořit tak relaci. Vztahu čáry se zobrazí v Návrháři mezi dvěma tabulkami.
+10. Kliknutím na tlačítko **OK** vytvořte relaci. Čára relace se zobrazí v návrháři mezi dvěma tabulkami.
 
-#### <a name="to-display-a-relation-name-in-the-dataset-designer"></a>Chcete-li zobrazit název relace v návrháři datových sad
+#### <a name="to-display-a-relation-name-in-the-dataset-designer"></a>Chcete-li zobrazit název vztahu v Návrhář datových sad
 
-1. Otevřete svou datovou sadu v **Návrhář Dataset**. Další informace najdete v tématu [názorný postup: Vytvoření datové sady v návrháři datových sad](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
+1. Otevřete datovou sadu v **Návrhář datových sad**. Další informace najdete v tématu [Návod: vytvoření datové sady v Návrhář datových sad](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
 
-2. Z **Data** nabídku, vyberte **zobrazení popisků relací** příkazu můžete zobrazit název vztahu. Tento příkaz Skrýt název vztahu vymažte.
+2. V nabídce **data** vyberte příkaz **Zobrazit popisky relací** , aby se zobrazil název vztahu. Zrušením zaškrtnutí tohoto příkazu skryjte název vztahu.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,137 +1,137 @@
 ---
-title: Dynamické symbolické spuštění | Nástroj pro testování Microsoft IntelliTest Developer
+title: Dynamické symbolické spuštění | Nástroj Microsoft IntelliTest Developer test Tool
 ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Dynamic symbolic execution
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: fe0215b3474e72316d848c89f2284ab4e39f213b
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+author: jillre
+ms.openlocfilehash: 26befe6612c874c2565e44459cc90fe980296137
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746310"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653190"
 ---
-# <a name="input-generation-using-dynamic-symbolic-execution"></a>Vstupní generování pomocí dynamické symbolické spuštění
+# <a name="input-generation-using-dynamic-symbolic-execution"></a>Generování vstupu s použitím dynamického symbolického spuštění
 
-IntelliTest generuje vstupy pro [parametrizované testy částí](test-generation.md#parameterized-unit-testing) díky analýze podmíněného vytváření větve v programu. Testovací vstupy jsou zvolili podle toho, jestli můžete aktivovat nové chování větvení programu. Analýza je přírůstkové proces. Zpřesnění predikát `q: I -> {true, false}` přes formální vstupní parametry testu `I`. `q` představuje sadu chování, které již IntelliTest sledoval. Na začátku `q := false`, protože nic ještě pozorováno.
+IntelliTest generuje vstupy pro [parametrizované testy jednotek](test-generation.md#parameterized-unit-testing) analýzou podmínek větve v programu. Testovací vstupy se volí na základě toho, jestli můžou aktivovat nové chování větvení programu. Analýza je přírůstkový proces. Přejemnoá `q: I -> {true, false}` predikáty přes zkušební parametry formálního testu `I`. `q` představuje sadu chování, které IntelliTest již pozorován. Zpočátku `q := false`, protože ještě není nic pozorováno.
 
 Kroky smyčky jsou:
 
-1. IntelliTest určuje vstupy `i` tak, aby `q(i)=false` pomocí [Řešitel omezení](#constraint-solver). Pomocí konstrukce, vstup `i` bude trvat cestu k provádění není online. Zpočátku to znamená, že `i` může být jakýkoli vstup, protože žádná cesta provedení ještě nebyla zjištěná.
+1. IntelliTest určuje vstupy `i` tak, aby `q(i)=false` pomocí [řešitele omezení](#constraint-solver). V rámci konstrukce vstupní `i` převezme cestu spuštění, která se nezobrazuje předtím. Zpočátku to znamená, že `i` může být jakýkoli vstup, protože ještě nebyla zjištěna žádná cesta spuštění.
 
-1. IntelliTest spustí test s vybraným vstupní `i`a sleduje spuštění testu a testovaném programu.
+1. IntelliTest spustí test s vybraným vstupním `i` a monitoruje provádění testu a testovaného programu.
 
-1. Během provádění program přebere konkrétní cestu, která je určená podmínkových větví program. Sada všechny podmínky, které určují, provádění se nazývá *podmínka cesty*napsaných jako predikát `p: I -> {true, false}` přes formální vstupní parametry. IntelliTest vypočítá reprezentace Tento predikát.
+1. Během provádění program převezme určitou cestu, která je určena všemi podmíněnými větvemi programu. Sada všech podmínek, které určují provedení, se nazývá podmínka pro *cestu*, která se zapsala jako predikát `p: I -> {true, false}` přes formální vstupní parametry. IntelliTest vypočítává reprezentace tohoto predikátu.
 
-1. IntelliTest sady `q := (q or p)`. Jinými slovy, zaznamenává skutečnost, že zaznamenal cesty představované `p`.
+1. IntelliTest sady `q := (q or p)`. Jinými slovy se zaznamená fakt, že se zobrazila cesta reprezentovaná `p`.
 
-1. Přejděte ke kroku 1.
+1. Přejít ke kroku 1.
 
-IntelliTest společnosti [Řešitel omezení](#constraint-solver) můžete vyřešit hodnoty všech typů, které se mohou objevit v aplikacích .NET:
+[Řešitel omezení](#constraint-solver) IntelliTest může řešit hodnoty všech typů, které se mohou objevit v programech .NET:
 
-* [Celá čísla](#integers-and-floats) a [čísel s plovoucí čárkou](#integers-and-floats)
+* [Celá čísla](#integers-and-floats) a [Floaty](#integers-and-floats)
 * [Objekty](#objects)
 * [Struktury](#structs)
 * [Pole](#arrays-and-strings) a [řetězce](#arrays-and-strings)
 
 IntelliTest filtruje vstupy, které porušují uvedené předpoklady.
 
-Kromě okamžité vstupy (argumenty [parametrizované testy částí](test-generation.md#parameterized-unit-testing)), testu můžete nakreslit další vstupní hodnoty z [PexChoose](static-helper-classes.md#pexchoose) statické třídě. Volby taky určit chování [parametrizované mocks](#parameterized-mocks).
+Kromě okamžitých vstupů (argumenty pro [parametrizované testy jednotek](test-generation.md#parameterized-unit-testing)) může test nakreslit další vstupní hodnoty ze statické třídy [PexChoose](static-helper-classes.md#pexchoose) . Volby také určují chování [parametrizovaných modelů](#parameterized-mocks).
 
 ## <a name="constraint-solver"></a>Řešitel omezení
 
-IntelliTest Řešitel omezení používá k určení vstupní hodnoty testu a testovaném programu.
+IntelliTest používá Řešitel omezení k určení relevantních vstupních hodnot testu a testovaného programu.
 
-IntelliTest používá [Z3](https://github.com/Z3Prover/z3/wiki) Řešitel omezení.
+IntelliTest používá Řešitel omezení [Z3](https://github.com/Z3Prover/z3/wiki) .
 
-## <a name="dynamic-code-coverage"></a>Dynamický kód pokrytí
+## <a name="dynamic-code-coverage"></a>Dynamické pokrytí kódu
 
-IntelliTest jako vedlejší efekt modulu runtime, monitorování, shromažďuje data o pokrytí kódu dynamické.
-Tento postup se nazývá *dynamické* protože IntelliTest ví pouze o kód, který byl proveden, proto ji nelze udělit absolutní hodnoty pro pokrytí stejným způsobem jako jiný nástroj pokrytí obvykle.
+V důsledku vedlejšího účinku monitorování za běhu shromažďuje IntelliTest data o rozsahu dynamických kódů.
+Tato možnost se nazývá *Dynamická* , protože IntelliTest ví pouze o kódu, který byl proveden, proto nemůže poskytnout absolutní hodnoty pro pokrytí stejným způsobem jako jiný nástroj pokrytí obvykle.
 
-Například když IntelliTest hlásí dynamické pokrytí jako základní bloky 5/10, to znamená, že pět bloků mimo deset byly pokryty, kde celkový počet bloků v všechny metody, které jste zatím přejít pomocí analýzy (na rozdíl od všech metod, které existují v sestavení v rámci testu) je deset.
-Dále v analýzu, jako jsou dostupné další metody zjištění obou čítači (5 v tomto příkladu) a může zvýšit jmenovatel (10).
+Například když IntelliTest nahlásí dynamické pokrytí jako 5/10 základních bloků, znamená to, že se pokrylo pět bloků z deseti, kde celkový počet bloků ve všech metodách, které byly doposud dosaženy analýzou (na rozdíl od všech metod, které existují v a sestavení v rámci testu) je deset.
+V důsledku toho, že se při analýze objeví více dosažitelných metod, může se zvýšit čitatel (5 v tomto příkladu) a jmenovatel (10).
 
-## <a name="integers-and-floats"></a>Celá čísla a float
+## <a name="integers-and-floats"></a>Celá čísla a Floaty
 
-IntelliTest společnosti [Řešitel omezení](#constraint-solver) určuje testovací vstupní hodnoty primitivních elementů typů, jako **bajtů**, **int**, **float**a dalšími lidmi v pořadí pro aktivaci různých pracovních cesty pro tento test a testovaném programu.
+[Řešitel omezení](#constraint-solver) IntelliTest určuje vstupní hodnoty testů primitivních typů, jako je **Byte**, **int**, **float**a další, aby se aktivovaly různé cesty spuštění pro test a testovaný program.
 
 ## <a name="objects"></a>Objekty
 
-IntelliTest můžete buď [vytvořit instance existujících tříd .NET](#existing-classes), nebo můžete pomocí funkce IntelliTest k automaticky [vytvořit mock objektů](#parameterized-mocks) , který konkrétní rozhraní a chovají různě v závislosti na využití.
+IntelliTest může buď [vytvořit instance existující třídy .NET](#existing-classes), nebo můžete použít IntelliTest k automatickému [vytváření objektů](#parameterized-mocks) , které implementují konkrétní rozhraní a chovají se různými způsoby v závislosti na využití.
 
 <a name="existing-classes"></a>
 ## <a name="instantiate-existing-classes"></a>Vytvoření instance existujících tříd
 
-**V čem je problém?**
+**Jaký je problém?**
 
-IntelliTest monitoruje prováděnou pokyny při spuštění testu a testovaném programu. Konkrétně se monitoruje veškerý přístup k polím. Poté použije [Řešitel omezení](#constraint-solver) k určení nové vstupů test, včetně objektů a jejich hodnoty pole tak, aby test a testovaném programu se bude chovat jinak zajímavé.
+IntelliTest sleduje spuštěné instrukce, když spustí test a testovaný program. Konkrétně sleduje veškerý přístup k polím. Pak pomocí [řešitele omezení](#constraint-solver) určí nové vstupy testu, včetně objektů a jejich hodnot polí, což znamená, že se test a testovaný program chová jiným zajímavým způsobem.
 
-To znamená, že IntelliTest musí k vytvoření určité typy objektů a nastavení jejich hodnot pole. Pokud je třída [viditelné](#visibility) a má [viditelné](#visibility) výchozí konstruktor, inteligentní testování můžete vytvořit instanci třídy.
-Pokud jsou všechna pole třídy [viditelné](#visibility), Intellitestu automaticky nastavit pole.
+To znamená, že IntelliTest musí vytvořit objekty určitých typů a nastavit jejich hodnoty polí. Pokud je třída [viditelná](#visibility) a má [viditelný](#visibility) výchozí konstruktor, IntelliTest může vytvořit instanci třídy.
+Pokud jsou všechna pole třídy [viditelná](#visibility), může IntelliTest nastavit pole automaticky.
 
-Pokud typ není viditelný, nebo pole nejsou [viditelné](#visibility), Intellitestu potřebuje nápovědu k vytvoření objektů a přiřaďte je do zajímavého stavů, abyste dosáhli pokrytí kódu maximální. IntelliTest použít k vytváření a inicializace instancí libovolně reflexe, ale to není obvykle žádoucí, protože to může být přenese objekt do stavu, ve kterém může nikdy dojít během provádění programu normální. IntelliTest se místo toho spoléhá na pomocné parametry od uživatele.
+Pokud typ není viditelný nebo pokud nejsou pole [viditelná](#visibility), IntelliTest potřebuje pomáhat při vytváření objektů a jejich přenesení do zajímavých stavů, aby bylo dosaženo maximálního pokrytí kódu. IntelliTest může pomocí reflexe vytvořit a inicializovat instance v libovolných způsobech, ale to není obvykle žádoucí, protože může objekt převést do stavu, který nemůže nikdy nastat během normálního provádění programu. Místo toho IntelliTest spoléhá na Rady od uživatele.
 
 ## <a name="visibility"></a>Viditelnost
 
-.NET má model propracované viditelnost: typy, metody, pole a ostatní členové mohou být **privátní**, **veřejné**, **interní**a provádění dalších akcí.
+.NET má model podrobné viditelnosti: typy, metody, pole a další členy můžou být **soukromé**, **veřejné**, **interní**a další.
 
-Když IntelliTest vygeneruje testy, pokusí se provádět jenom akce (například voláním konstruktorů, metod a nastavení polí), které jsou přípustné s ohledem na pravidla viditelnosti .NET z v rámci kontextu vygenerované testy.
+Když IntelliTest generuje testy, pokusí se provést pouze akce (například volající konstruktory, metody a nastavení polí), které jsou platné s ohledem na pravidla viditelnosti .NET v rámci kontextu vygenerovaných testů.
 
 Pravidla jsou následující:
 
-* **Viditelnost vnitřní členy**
-  * IntelliTest se předpokládá, že vygenerované testy budou mít přístup k interní členy, které byly viditelné pro nadřazený [PexClass](attribute-glossary.md#pexclass).
-  .NET má **InternalsVisibleToAttribute** rozšířit viditelnost členů interní pro jiná sestavení.
+* **Viditelnost vnitřních členů**
+  * IntelliTest předpokládá, že vygenerované testy budou mít přístup k interním členům viditelným pro nadřazené [PexClass](attribute-glossary.md#pexclass).
+  Rozhraní .NET má **InternalsVisibleToAttribute** , aby rozšířila viditelnost vnitřních členů na jiná sestavení.
 
-* **Viditelnost privátních a členové řady (chráněné v jazyce C#) [PexClass](attribute-glossary.md#pexclass)**
-  * IntelliTest vždy umístí vygenerované testy přímo v [PexClass](attribute-glossary.md#pexclass) nebo do podtřídy. Proto se IntelliTest předpokládá, že ho může použít všechny viditelné členy rodiny (**chráněné** v jazyce C#).
-  * Pokud vygenerované testy se umístí do přímo [PexClass](attribute-glossary.md#pexclass) (obvykle s využitím částečné třídy), se IntelliTest předpokládá, že ji také používat všechny soukromým členům [PexClass](attribute-glossary.md#pexclass).
+* **Viditelnost soukromých a rodinných (chráněných C#v) členů [PexClass](attribute-glossary.md#pexclass)**
+  * IntelliTest vždy umístí vygenerované testy přímo do [PexClass](attribute-glossary.md#pexclass) nebo do podtřídy. Proto IntelliTest předpokládá, že může používat všechny viditelné členy rodiny (**chráněno** v C#).
+  * Pokud jsou vygenerované testy umístěny přímo do [PexClass](attribute-glossary.md#pexclass) (obvykle pomocí částečných tříd), IntelliTest předpokládá, že může také použít všechny soukromé členy [PexClass](attribute-glossary.md#pexclass).
 
-* **Viditelnost veřejné členy**
-  * IntelliTest se předpokládá, že ho může využívat všechny exportované členy viditelné v rámci [PexClass](attribute-glossary.md#pexclass).
+* **Viditelnost veřejných členů**
+  * IntelliTest předpokládá, že může používat všechny exportované členy viditelné v kontextu [PexClass](attribute-glossary.md#pexclass).
 
-## <a name="parameterized-mocks"></a>Parametrizované mocks
+## <a name="parameterized-mocks"></a>Parametrizované modely
 
-Jak se testovací metoda, která má parametr typu rozhraní? Nebo nezapečetěné třídy? IntelliTest neví, implementace, které se později použije, když tato metoda je volána. A možná není k dispozici i skutečné implementaci k dispozici v době testu.
+Jak testovat metodu, která má parametr typu rozhraní? Nebo nezapečetěné třídy? IntelliTest neví, které implementace budou později použity při volání této metody. A možná není ani skutečná implementace dostupná v době testování.
 
-Konvenční odpovědí je použití *napodobení objekty* s explicitní chování.
+Konvenční odpověď je použít *objekty* s explicitním chováním.
 
-Mock objektu implementuje rozhraní (nebo rozšiřuje nezapečetěná třída). To však nepředstavuje skutečné implementaci, ale jenom zástupce, který umožňuje spuštění testů pomocí mock objektu. Její chování je ručně definovali jako součást každý testovací případ, ve kterém se používá. Existuje mnoho nástrojů, které usnadňují definování mock objektů a jejich očekávané chování, ale toto chování musí stále definovat manuálně.
+Objekt typu Object implementuje rozhraní (nebo rozšiřuje třídu, která není zapečetěná). Nepředstavuje skutečnou implementaci, ale pouze zástupce, který umožňuje spuštění testů pomocí objektu Object. Jeho chování je definováno ručně v rámci každého testovacího případu, kde je použito. Existuje mnoho nástrojů, které usnadňují definování objektů a jejich očekávané chování, ale toto chování je ještě nutné definovat ručně.
 
-Namísto pevně definovaných hodnot v mock objektů můžete vygenerovat IntelliTest hodnoty. Stejně jako umožňuje [parametrizované testování částí](test-generation.md#parameterized-unit-testing), IntelliTest umožňuje také parametrizované mocks.
+Namísto pevně zakódovaných hodnot v objektech kresby může IntelliTest vygenerovat hodnoty. Stejně jako umožňuje [parametrizované testování částí](test-generation.md#parameterized-unit-testing), IntelliTest také povoluje parametrizované modely.
 
-Parametrizované mocks mít dva režimy různých spuštění:
+Parametrizované modely mají dva různé režimy spuštění:
 
-* **Výběr**: při zkoumání kódu, jsou parametrizované mocks zdroj další testovací vstupy a IntelliTest se pokusí zvolte zajímavé hodnoty
-* **Přehrát**: při provádění testu dříve vytvořenou parametrizované mocks chovají se jako zástupné procedury s chování (jinými slovy, předdefinované chování).
+* **Volba**: při prozkoumávání kódu jsou parametrizované modely zdrojem dalších testovacích vstupů a IntelliTest se pokusí zvolit zajímavé hodnoty.
+* **přehrání**: při provádění dřív generovaného testu se parametrizované modely chovají jako zástupné procedury s chováním (jinými slovy, předdefinované chování).
 
-Použití [PexChoose](static-helper-classes.md#pexchoose) a získat hodnoty pro parametry mocks.
+Použijte [PexChoose](static-helper-classes.md#pexchoose) k získání hodnot pro parametrizované modely.
 
 ## <a name="structs"></a>Struktury
 
-IntelliTest v důvody o **struktura** hodnoty je podobným způsobem, jakým se zabývá [objekty](#objects).
+IntelliTest z hlediska hodnot **struktury** je podobný způsobu, jakým pracuje s [objekty](#objects).
 
 ## <a name="arrays-and-strings"></a>Pole a řetězce
 
-IntelliTest monitoruje prováděnou pokyny při spuštění testu a testovaném programu. Zejména dodržuje, když program závisí na délce řetězce nebo pole (a dolní meze a délek vícerozměrné pole).
-Také sleduje, jak program používá různé prvky řetězce nebo pole. Poté použije [Řešitel omezení](#constraint-solver) k určení, které délky a hodnoty prvků může způsobit testu a chovat v mnoha zajímavými způsoby v testovaném programu.
+IntelliTest sleduje spuštěné instrukce při spuštění testu a testovaného programu. Konkrétně sleduje, kdy program závisí na délce řetězce nebo pole (a dolní meze a délky multidimenzionálního pole).
+Také sleduje, jak program používá různé prvky řetězce nebo pole. Pak pomocí [řešitele omezení](#constraint-solver) určí, které délky a hodnoty prvků mohou způsobit, že se test a testovaný program chová zajímavým způsobem.
 
-IntelliTest se pokusí pro minimalizaci velikosti pole a řetězců, které jsou potřebné k aktivaci zajímavé chování programu.
+IntelliTest se pokusí minimalizovat velikost polí a řetězců potřebných ke spuštění zajímavého chování programu.
 
 <a name="additional-inputs"></a>
 ## <a name="obtain-additional-inputs"></a>Získat další vstupy
 
-[PexChoose](static-helper-classes.md#pexchoose) statické třídy lze získat další vstupy pro testovací a slouží k implementaci [parametrizované mocks](#parameterized-mocks).
+Statickou třídu [PexChoose](static-helper-classes.md#pexchoose) lze použít k získání dalších vstupů k testu a lze ji použít k implementaci [parametrizovaných modelů](#parameterized-mocks).
 
-## <a name="got-feedback"></a>Máte nějakou zpětnou vazbu?
+## <a name="got-feedback"></a>Máte zpětnou vazbu?
 
-Publikovat své nápady a funkce na požadavky [komunity vývojářů](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
+Publikujte své nápady a žádosti o funkce na [komunitě vývojářů](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
 
 ## <a name="further-reading"></a>Další čtení
 

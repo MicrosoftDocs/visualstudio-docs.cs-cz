@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Set Radix command
 - Debug.SetRadix command
 ms.assetid: 6ffd1554-7530-4da4-b5f5-e276a5034f3b
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13341d8cb6a708f4e10f211bd47b79a75e1b6e2a
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 3fe39eb0367b65141afed33ea86bc42f548a4341
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926039"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645305"
 ---
 # <a name="set-radix-command"></a>Nastavit základ – příkaz
 Nastaví nebo vrátí číselnou základnu použitou k zobrazení celočíselných hodnot.
@@ -30,7 +30,7 @@ Debug.SetRadix [10 | 16 | hex | dec]
 ```
 
 ## <a name="arguments"></a>Arguments
-`10`nebo `16`neboor `hex``dec`
+`10` nebo `16` nebo `hex` nebo `dec`
 
 Volitelné. Označuje desetinné číslo (10 nebo DEC) nebo hexadecimální (16 nebo hex). Pokud je argument vynechán, je vrácena aktuální hodnota základu.
 

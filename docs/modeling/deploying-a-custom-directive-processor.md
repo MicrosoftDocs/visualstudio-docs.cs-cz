@@ -4,21 +4,21 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, custom directive processors
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ba106bd28db63b6215abd02ea00aff0b3c0c00e0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 83edb231819a47c3c8a6f7a1943ae9086e06467d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432234"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653889"
 ---
 # <a name="deploying-a-custom-directive-processor"></a>Nastavení vlastního procesoru direktiv
 
-Použití vlastního procesoru direktiv v sadě Visual Studio na libovolném počítači, musíte ho zaregistrovat pomocí jedné z metod popsaných v tomto tématu.
+Chcete-li použít vlastní procesor direktiv v aplikaci Visual Studio na libovolném počítači, je nutné jej zaregistrovat pomocí jedné z metod popsaných v tomto tématu.
 
 Alternativní metody jsou následující:
 
@@ -28,11 +28,11 @@ Alternativní metody jsou následující:
 
 - Nastavení klíče registru: Pomocí této metody přidáte položku registru pro procesor direktiv.
 
-Budete muset použít jednu z těchto metod pouze v případě, že chcete transformovat textovou šablony v sadě Visual Studio nebo nástroje MSBuild. Pokud ve své aplikaci používáte vlastního hostitele, je tento vlastní hostitel odpovědný za vyhledání procesoru direktiv pro jednotlivé direktivy.
+Jednu z těchto metod je nutné použít pouze v případě, že chcete transformovat textovou šablonu v aplikaci Visual Studio nebo MSBuild. Pokud ve své aplikaci používáte vlastního hostitele, je tento vlastní hostitel odpovědný za vyhledání procesoru direktiv pro jednotlivé direktivy.
 
 ## <a name="deploying-a-directive-processor-in-a-vsix"></a>Nasazení procesoru direktiv v rozšíření VSIX
 
-Můžete přidat vlastní procesor směrnice do [rozšíření aplikace Visual Studio (VSIX)](../extensibility/starting-to-develop-visual-studio-extensions.md).
+Můžete přidat vlastní procesor direktiv do [rozšíření aplikace Visual Studio (VSIX)](../extensibility/starting-to-develop-visual-studio-extensions.md).
 
  Přitom musíte zajistit, aby v souboru .vsix byly obsaženy následující dvě položky:
 
@@ -46,31 +46,31 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
 #### <a name="to-develop-a-custom-directive-processor-in-a-vsix-project"></a>Vývoj vlastního procesoru direktiv v projektu VSIX
 
-1. Vytvořte nový **projekt VSIX** projektu.
+1. Vytvořte nový projekt **VSIX** projektu.
 
-2. V **source.extension.vsixmanifest**, nastavte typ obsahu a podporované edice.
+2. V souboru **source. extension. vsixmanifest**nastavte typ obsahu a podporované edice.
 
-    1. V rozšíření VSIX editoru manifestu na **prostředky** kartě **nový** a nastavte vlastnosti nové položky:
+    1. V editoru manifestu VSIX na kartě **assets (prostředky** ) vyberte možnost **nové** a nastavte vlastnosti nové položky:
 
-         **Typ obsahu** = **VSPackage**
+         **Typ obsahu**  = **VSPackage**
 
-         **Zdrojový projekt** = \<*aktuálního projektu*>
+         **Zdrojový projekt**  =  \<*aktuálního projektu* >
 
-    2. Klikněte na tlačítko **vybrané edice** a zaškrtněte typy instalace, na kterém má být použitelná procesor direktiv.
+    2. Klikněte na možnost **vybrané edice** a ověřte typy instalace, u kterých chcete, aby byl procesor direktiv použitelný.
 
 3. Přidejte soubor .pkgdef a nastavte jeho vlastnosti, které mají být zahrnuty do rozšíření VSIX.
 
-    1. Vytvořte textový soubor a pojmenujte ho \< *assemblyName*> .pkgdef.
+    1. Vytvořte textový soubor a pojmenujte ho \<*assemblyName*>. pkgdef.
 
-         \<*assemblyName*> je obvykle stejný jako název projektu.
+         > \<*AssemblyName*je obvykle stejný jako název projektu.
 
     2. V Průzkumníku řešení ho vyberte a následujícím způsobem nastavte jeho vlastnosti:
 
-         **Akce sestavení** = **obsahu**
+         @No__t_1**obsahu** **Akce sestavení**
 
-         **Kopírovat do výstupního adresáře** = **vždy kopírovat**
+         **Kopírovat do výstupního adresáře**  = **Kopírovat vždycky**
 
-         **Zahrnout do VSIX** = **True**
+         **Zahrnout do VSIX**  = **true**
 
     3. Nastavte název rozšíření VSIX a ujistěte se, že je ID jedinečné.
 
@@ -85,19 +85,19 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
     "CodeBase"="$PackageFolder$\AssemblyName.dll"
     ```
 
-     Následující názvy nahraďte vlastními názvy: `CustomDirectiveProcessorName`, `NamespaceName`, `ClassName`, `AssemblyName`.
+     Následující názvy nahraďte vlastními názvy: `CustomDirectiveProcessorName`, `NamespaceName`, `ClassName` `AssemblyName`.
 
 5. Přidejte do projektu následující odkazy:
 
-    - **Microsoft.VisualStudio.TextTemplating.\*.0**
+    - **Microsoft. VisualStudio. TextTemplating. \*.0**
 
-    - **Microsoft.VisualStudio.TextTemplating.Interfaces.\*.0**
+    - **Microsoft. VisualStudio. TextTemplating. Interfaces. \*.0**
 
-    - **Microsoft.VisualStudio.TextTemplating.VSHost.\*.0**
+    - **Microsoft. VisualStudio. TextTemplating. VSHost. \*.0**
 
 6. Přidejte do projektu třídu vlastního procesoru direktiv.
 
-     To se o veřejnou třídu, která by měla implementovat <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> nebo <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>.
+     Jedná se o veřejnou třídu, která by měla implementovat <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> nebo <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>.
 
 #### <a name="to-install-the-custom-directive-processor"></a>Instalace vlastního procesoru direktiv
 
@@ -105,7 +105,7 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
 2. Pokud chcete procesor direktiv nainstalovat do jiného počítače, zkopírujte soubor .vsix do tohoto počítače.
 
-3. Dvakrát klikněte na soubor .vsix. Zobrazí se instalační služba rozšíření Visual Studio.
+3. Dvakrát klikněte na soubor .vsix. Zobrazí se instalační program rozšíření sady Visual Studio.
 
 4. Restartujte sadu Visual Studio. Nyní budete moci spouštět textové šablony obsahující direktivy, které odkazují na vlastní procesor direktiv. Jednotlivé direktivy mají tento formát:
 
@@ -113,18 +113,18 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
 #### <a name="to-uninstall-or-temporarily-disable-the-custom-directive-processor"></a>Odinstalace nebo dočasné vypnutí vlastního procesoru direktiv
 
-1. V sadě Visual Studio **nástroje** nabídky, klikněte na tlačítko **Správce rozšíření**.
+1. V nabídce **nástroje** sady Visual Studio klikněte na **Správce rozšíření**.
 
-2. Vyberte VSIX, který obsahuje procesor směrnic a potom klikněte na tlačítko **odinstalovat** nebo **zakázat**.
+2. Vyberte VSIX, který obsahuje procesor direktiv, a pak klikněte na **odinstalovat** nebo **Zakázat**.
 
 ### <a name="troubleshooting-a-directive-processor-in-a-vsix"></a>Řešení potíží s procesorem direktiv v rozšíření VSIX
  Pokud procesor direktiv nefunguje, mohou vám pomoci následující návrhy:
 
-- Název procesoru, který zadáte do vlastní směrnice, by měl odpovídat `CustomDirectiveProcessorName` , který jste zadali v souboru .pkgdef.
+- Název procesoru, který zadáte ve vlastní direktivě, by měl odpovídat `CustomDirectiveProcessorName`, který jste zadali v souboru. pkgdef.
 
-- Vaše `IsDirectiveSupported` metoda musí vracet `true` když je jí předán název vaší `CustomDirective`.
+- Metoda `IsDirectiveSupported` musí vracet `true`, když se předává název vašeho `CustomDirective`.
 
-- Pokud nevidíte rozšíření ve Správci rozšíření, ale systém nebude možné ji nainstalovat, odstraňte toto rozšíření ze **%localappdata%\Microsoft\VisualStudio\\\*. 0\Extensions\\** .
+- Pokud toto rozšíření nemůžete zobrazit ve Správci rozšíření, ale neumožní vám ho nainstalovat, odstraňte rozšíření z **%localappdata%\Microsoft\VisualStudio \\ \* 0 \ rozšíření \\** .
 
 - Otevřete soubor .vsix a zkontrolujte jeho obsah. Chcete-li jej otevřít, změňte jeho příponu na .zip. Ověřte, zda obsahuje soubory .dll, .pkgdef a extension.vsixmanifest. Soubor extension.vsixmanifest by měl obsahovat příslušný seznam v uzlu SupportedProducts a měl by také obsahovat uzel VsPackage pod uzlem Content:
 
@@ -148,9 +148,9 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
  Soubor .pkgdef se vygeneruje při sestavení projektu. Při instalaci sady VSPackage zaregistruje soubor .pkgdef procesor direktiv.
 
- Ověřte, zda je soubor .pkgdef ve složce sestavení, obvykle bin\Debug nebo bin\Release. Pokud se nezobrazí, otevřete soubor .csproj v textovém editoru a odeberte následující uzel: `<GeneratePkgDefFile>false</GeneratePkgDefFile>`.
+ Ověřte, zda je soubor .pkgdef ve složce sestavení, obvykle bin\Debug nebo bin\Release. Pokud se nezobrazí, otevřete soubor. csproj v textovém editoru a odeberte následující uzel: `<GeneratePkgDefFile>false</GeneratePkgDefFile>`.
 
- Další informace najdete v tématu [rozšíření VSPackages](../extensibility/internals/vspackages.md).
+ Další informace najdete v tématu [VSPackage](../extensibility/internals/vspackages.md).
 
 ## <a name="setting-a-registry-key"></a>Nastavení klíče registru
  Tato metoda instalace vlastního procesoru direktiv se příliš nedoporučuje. Neposkytuje totiž pohodlný způsob zapnutí a vypnutí procesoru direktiv ani způsob distribuce procesoru direktiv jiným uživatelům.
@@ -164,17 +164,17 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
 2. V editoru registru přejděte na
 
-    **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\\*.0\TextTemplating\DirectiveProcessors**
+    **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio \\ \*.0 \ TextTemplating\DirectiveProcessors**
 
-    Pokud chcete nainstalovat procesor direktiv v experimentální verzi sady Visual Studio, "za"11.0"vložte"Exp".
+    Pokud chcete nainstalovat procesor direktiv v experimentální verzi sady Visual Studio, vložte "EXP" po "11,0".
 
 3. Přidejte klíč registru, který má stejný název jako třída procesoru direktiv.
 
-   - Ve stromové struktuře registru klikněte pravým tlačítkem **DirectiveProcessors** uzlu, přejděte na **nový**a potom klikněte na tlačítko **klíč**.
+   - Ve stromové struktuře registru klikněte pravým tlačítkem myši na uzel **DirectiveProcessors** , přejděte na příkaz **Nový**a potom klikněte na možnost **klíč**.
 
 4. V novém uzlu přidejte podle následujících tabulek řetězcové hodnoty Class a CodeBase nebo Assembly.
 
-   1. Klikněte pravým tlačítkem na uzel, který jste vytvořili, přejděte na **nový**a potom klikněte na tlačítko **řetězcovou hodnotu**.
+   1. Pravým tlačítkem myši klikněte na uzel, který jste vytvořili, přejděte na **Nový**a pak klikněte na **hodnota řetězce**.
 
    2. Upravte název hodnoty.
 
@@ -182,19 +182,19 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
    Pokud vlastní procesor direktiv není v mezipaměti GAC, měly by podklíče registru vypadat podle následující tabulky:
 
-|Název|Typ|Data|
+|Name|Typ|Data|
 |-|-|-|
 |(Výchozí)|REG_SZ|(hodnota nenastavena)|
-|Třída|REG_SZ|**\<Název Namespace >. \<Název třídy >**|
-|CodeBase|REG_SZ|**\<Vaše cesta >\\< název vašeho sestavení\>**|
+|Třída|REG_SZ|**> název \<Namespace. Název \<Class >**|
+|CodeBase|REG_SZ|**\<Your cesta > \\ < název sestavení \>**|
 
  Pokud je sestavení v mezipaměti GAC, měly by podklíče registru vypadat podle následující tabulky:
 
-|Název|Typ|Data|
+|Name|Typ|Data|
 |-|-|-|
 |(Výchozí)|REG_SZ|(hodnota nenastavena)|
-|Třída|REG_SZ|\<**Váš plně kvalifikovaný název třídy**>|
-|Assembly|REG_SZ|\<**Název vašeho sestavení v GAC**>|
+|Třída|REG_SZ|\<**plně kvalifikovaného názvu třídy** >|
+|Assembly|REG_SZ|\<**název sestavení v globální mezipaměti sestavení (GAC)** >|
 
 ## <a name="see-also"></a>Viz také:
 

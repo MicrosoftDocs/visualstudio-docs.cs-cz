@@ -1,5 +1,5 @@
 ---
-title: Pomocí seznamu úkolů | Dokumentace Microsoftu
+title: Použití Seznam úkolů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,118 +13,118 @@ helpviewer_keywords:
 - Visual Studio, task list
 ms.assetid: f46a75a8-47b3-4cb6-bb59-b72e3356a664
 caps.latest.revision: 33
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9c9526b2deaafb36e991afce6d29ace47f8564ba
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f7537c3007f54480874047f52f186996cf663508
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68179355"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656406"
 ---
 # <a name="using-the-task-list"></a>Používání seznamu úkolů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Použít **seznamu úkolů** ke sledování komentářů kódu, které používají tokeny jako `TODO` a `HACK`, nebo vlastní tokeny a ke správě klávesových zkratek, které se dostanete přímo do předdefinovaného místa v kódu. Klikněte na položku v seznamu a přejděte do umístění ve zdrojovém kódu.  
-  
- V tomto tématu:  
-  
-- [Okno seznam úkolů](../ide/using-the-task-list.md#taskListWindow)  
-  
-- [Uživatelské úkoly](../ide/using-the-task-list.md#userTasks)  
-  
-- [Tokeny a komentáře](../ide/using-the-task-list.md#tokensComments)  
-  
-- [Vlastní tokeny](../ide/using-the-task-list.md#customTokens)  
-  
-- [Komentáře C++ TODO](../ide/using-the-task-list.md#cppComments)  
-  
-- [Klávesové zkratky](../ide/using-the-task-list.md#shortcuts)  
-  
-## <a name="taskListWindow"></a> Okno seznam úkolů  
- Když **seznamu úkolů** je otevřené, zobrazí se v dolní části okna aplikace.  
-  
-#### <a name="to-open-the-task-list"></a>Otevření seznamu úkolů  
-  
-- Na **zobrazení** nabídce zvolte **seznamu úkolů** (klávesnice: CTRL+\\, T).  
-  
-     ![Okno seznam úkolů](../ide/media/vs2015-task-list.png "vs2015_task_list")  
-  
-#### <a name="to-change-the-sort-order-of-the-list"></a>Změna pořadí řazení seznamu  
-  
-- Klikněte na záhlaví libovolného sloupce. Chcete-li dále zpřesnit výsledky hledání, stiskněte klávesu Shift a klikněte na druhé záhlaví sloupce.  
-  
-     Jako alternativu v místní nabídce zvolte **řadit**a kliknout na záhlaví. Chcete-li dále zpřesnit výsledky hledání, stiskněte klávesu Shift a klikněte na druhé záhlaví.  
-  
-#### <a name="to-show-or-hide-columns"></a>Zobrazení nebo skrytí sloupců  
-  
-- V místní nabídce zvolte **zobrazit sloupce**. Vyberte sloupce, které chcete zobrazit nebo skrýt.  
-  
-#### <a name="to-change-the-order-of-the-columns"></a>Změna pořadí sloupců  
-  
-- Přetáhněte libovolné záhlaví sloupce do požadovaného umístění.  
-  
-## <a name="userTasks"></a> Uživatelské úkoly  
- Odebrali jsme funkci úkolů uživatele v sadě Visual Studio 2015. Když otevřete řešení, které má úloha uživatelská data z aplikace Visual Studio 2013 a dříve v sadě Visual Studio 2015, nebude mít vliv údaje úkolu v souboru .suo, ale uživatelské úkoly se nezobrazí v seznamu úkolů.  
-  
- Pokud chcete dál používat a aktualizovat uživatelská data úlohy, by měl projekt otevřít v sadě Visual Studio 2013 a zkopírujte obsah všech úkolů uživatele do vašeho nástroje pro správu upřednostňované projektu (například Team Foundation Server).  
-  
-## <a name="tokensComments"></a> Tokeny a komentáře  
- Komentáře v kódu předchází značka komentáře a předdefinovaný token se zobrazí také v **seznamu úkolů** okna. Například následující komentář jazyka C# má tři samostatné části:  
-  
-- Značka komentáře (`//`)  
-  
-- Token, například (`TODO`)  
-  
-- Komentář (zbytek textu)  
-  
-```  
-// TODO: Load state from previously suspended application  
-```  
-  
- Protože `TODO` je i předdefinovanou token, tento komentář se zobrazí jako `TODO` úkol v seznamu.  
-  
-### <a name="customTokens"></a> Vlastní tokeny  
- Ve výchozím nastavení sada Visual Studio obsahuje následující tokeny: HACK TODO, VRÁTIT ZPĚT, POZNÁMKA. Ty nejsou velká a malá písmena.  
-  
- Nebo lze také vytvořit vlastní tokeny.  
-  
-##### <a name="to-create-a-custom-token"></a>Vytvoření vlastního tokenu  
-  
-1. Na **nástroje** nabídce zvolte **možnosti**.  
-  
-2. Otevřít **prostředí** složky a klikněte na tlačítko **seznamu úkolů**.  
-  
-     [Seznamu úloh, prostředí, dialogové okno Možnosti](../ide/reference/task-list-environment-options-dialog-box.md) se zobrazí.  
-  
-     ![Seznam úkolů sady Visual Studio](../ide/media/vs2015-task-list-options.png "vs2015_task_list_options")  
-  
-3. V **tokeny** kategorie v **název** textového pole zadejte název tokenu, například "Chyba".  
-  
-4. V **Priority** rozevírací seznam, vyberte výchozí prioritu pro nový token. Zvolte **přidat** tlačítko.  
-  
-### <a name="cppComments"></a> Komentáře C++ TODO  
- Ve výchozím nastavení, komentáře C++ TODO se zobrazí v **seznamu úkolů** okna. Toto chování můžete změnit.  
-  
-##### <a name="to-turn-off-c-todo-comments"></a>Chcete-li vypnout komentáře C++ TODO  
-  
-1. Na **nástroje** nabídky, přejděte na **možnosti &#124; textový Editor &#124; C/C++ &#124; zobrazení &#124; vytvořit výčet úkolů komentáře** a hodnotu nastavte na hodnotu false.  
-  
-2. V **možnosti** dialogovém okně Otevřít **textový Editor**.  
-  
-3. V části **C/C++** , zvolte **zobrazení**a potom nastavte **vytvořit výčet úkolů komentáře** k **False**.  
-  
-## <a name="shortcuts"></a> Klávesové zkratky  
- A *místní* je záložka v kódu, který je sledována v **seznamu úkolů**; má jinou ikonu než regulární záložku. Dvakrát klikněte na zástupce v **seznamu úkolů** přejít na příslušné místo v kódu.  
-  
- ![Ikonu zástupce seznamu úkolů sady Visual Studio](../ide/media/vs2015-task-list-bookmark.png "vs2015_task_list_bookmark")  
-  
-#### <a name="to-create-a-shortcut"></a>Vytvoření zástupce  
-  
-- Umístěte ukazatel myši do kódu tam, kde chcete zástupce vložit. Zvolte **upravit &#124; záložky &#124; přidat zástupce seznamu úkolů** nebo stiskněte klávesu (klávesnice: CTRL + K, Ctrl + H).  
-  
-     Procházet zástupce v kódu, zvolit zástupce v seznamu a klikněte na tlačítko **dalším úkolem** nebo **předchozího úkolu** z místní nabídky.  
-  
-## <a name="see-also"></a>Viz také  
+Použijte **seznam úkolů** ke sledování komentářů kódu, které používají tokeny, jako jsou `TODO` a `HACK` nebo vlastní tokeny, a ke správě zástupců, které vás přesměrují přímo na předdefinované umístění v kódu. Kliknutím na položku v seznamu přejdete do jejího umístění ve zdrojovém kódu.
+
+ V tomto tématu:
+
+- [Okno Seznam úkolů](../ide/using-the-task-list.md#taskListWindow)
+
+- [Uživatelské úkoly](../ide/using-the-task-list.md#userTasks)
+
+- [Tokeny a komentáře](../ide/using-the-task-list.md#tokensComments)
+
+- [Vlastní tokeny](../ide/using-the-task-list.md#customTokens)
+
+- [C++Komentáře TODO](../ide/using-the-task-list.md#cppComments)
+
+- [Odkazy](../ide/using-the-task-list.md#shortcuts)
+
+## <a name="taskListWindow"></a>Okno Seznam úkolů
+ Když je **seznam úkolů** otevřené, zobrazí se v dolní části okna aplikace.
+
+#### <a name="to-open-the-task-list"></a>Otevření seznamu úkolů
+
+- V nabídce **zobrazení** vyberte položku **seznam úkolů** (klávesnice: CTRL + \\, t).
+
+     ![Seznam úkolů okno](../ide/media/vs2015-task-list.png "vs2015_task_list")
+
+#### <a name="to-change-the-sort-order-of-the-list"></a>Změna pořadí řazení seznamu
+
+- Klikněte na záhlaví libovolného sloupce. Chcete-li dále zpřesnit výsledky hledání, stiskněte klávesu Shift a klikněte na druhé záhlaví sloupce.
+
+     Jako alternativu v místní nabídce vyberte položku **Seřadit podle**a vyberte záhlaví. Chcete-li dále zpřesnit výsledky hledání, stiskněte klávesu Shift a klikněte na druhé záhlaví.
+
+#### <a name="to-show-or-hide-columns"></a>Zobrazení nebo skrytí sloupců
+
+- V místní nabídce vyberte možnost **Zobrazit sloupce**. Vyberte sloupce, které chcete zobrazit nebo skrýt.
+
+#### <a name="to-change-the-order-of-the-columns"></a>Změna pořadí sloupců
+
+- Přetáhněte libovolné záhlaví sloupce do požadovaného umístění.
+
+## <a name="userTasks"></a>Uživatelské úkoly
+ Funkce úlohy uživatele byla v aplikaci Visual Studio 2015 odebrána. Když otevřete řešení, které má data úkolu uživatele od Visual Studio 2013 a starších verzí v aplikaci Visual Studio 2015, nebudou ovlivněna data uživatelských úloh v souboru. suo, ale v seznamu úkolů nebudou zobrazeny úkoly uživatele.
+
+ Pokud chcete pokračovat v přístupu k datům uživatelských úloh a aktualizovat je, měli byste projekt otevřít v Visual Studio 2013 a kopírovat obsah všech uživatelských úloh do vašeho preferovaného nástroje pro správu projektu (například Team Foundation Server).
+
+## <a name="tokensComments"></a>Tokeny a komentáře
+ Komentář v kódu předchází značku komentáře a předdefinovaný token se zobrazí také v okně **seznam úkolů** . Například následující komentář jazyka C# má tři samostatné části:
+
+- Značka komentáře (`//`)
+
+- Token, například (`TODO`)
+
+- Komentář (zbytek textu)
+
+```
+// TODO: Load state from previously suspended application
+```
+
+ Vzhledem k tomu, že `TODO` je předdefinovaný token, tento komentář se zobrazí jako úloha `TODO` v seznamu.
+
+### <a name="customTokens"></a>Vlastní tokeny
+ Ve výchozím nastavení Visual Studio zahrnuje následující tokeny: NAPADENí, TODO, VRÁCENo, Poznámka. Nerozlišují se malá a velká písmena.
+
+ Nebo lze také vytvořit vlastní tokeny.
+
+##### <a name="to-create-a-custom-token"></a>Vytvoření vlastního tokenu
+
+1. V nabídce **nástroje** klikněte na příkaz **Možnosti**.
+
+2. Otevřete složku **prostředí** a zvolte možnost **seznam úkolů**.
+
+     Zobrazí se [dialogové okno seznam úkolů, prostředí, možnosti](../ide/reference/task-list-environment-options-dialog-box.md) .
+
+     ![Seznam úkolů sady Visual Studio](../ide/media/vs2015-task-list-options.png "vs2015_task_list_options")
+
+3. V kategorii **tokeny** zadejte do textového pole **název** svůj název tokenu, například "Chyba".
+
+4. V rozevíracím seznamu **Priorita** vyberte výchozí prioritu pro nový token. Klikněte na tlačítko **Přidat** .
+
+### <a name="cppComments"></a>C++ Komentáře todo
+ Ve výchozím nastavení C++ se komentáře TODO zobrazují v okně **seznam úkolů** . Toto chování můžete změnit.
+
+##### <a name="to-turn-off-c-todo-comments"></a>Vypnutí komentářů C++ todo
+
+1. V nabídce **nástroje** přejděte do části **možnosti &#124; textový &#124; Editor CC++ &#124; /zobrazit &#124; výčet úkolů komentářů** a nastavte hodnotu na false.
+
+2. V dialogovém okně **Možnosti** otevřete **textový editor**.
+
+3. V části **CC++/** zvolte možnost **zobrazení**a pak nastavte možnost zobrazit **výčet úkolů komentáře** na **hodnotu NEPRAVDA**.
+
+## <a name="shortcuts"></a>Odkazy
+ *Zástupce* je záložka v kódu, který je sledován v **seznam úkolů**; má jinou ikonu než běžná záložka. Dvojím kliknutím na zástupce v **seznam úkolů** přejděte na příslušné umístění v kódu.
+
+ ![Ikona zástupce Seznam úkolů sady Visual Studio](../ide/media/vs2015-task-list-bookmark.png "vs2015_task_list_bookmark")
+
+#### <a name="to-create-a-shortcut"></a>Vytvoření zástupce
+
+- Umístěte ukazatel myši do kódu tam, kde chcete zástupce vložit. Zvolte **Upravit &#124; záložky &#124; přidat seznam úkolů zástupce** nebo stiskněte klávesu (klávesnice: CTRL + K, CTRL + H).
+
+     Chcete-li procházet zástupce v kódu, zvolte zástupce v seznamu a potom v místní nabídce zvolte možnost **Další úkol** nebo **předchozí úkol** .
+
+## <a name="see-also"></a>Viz také
  [Seznam úkolů, Prostředí, dialogové okno Možnosti](../ide/reference/task-list-environment-options-dialog-box.md)

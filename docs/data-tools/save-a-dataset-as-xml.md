@@ -11,36 +11,36 @@ helpviewer_keywords:
 - datasets [Visual Basic], saving as XML
 - saving data
 ms.assetid: 68b8327c-ae05-49ff-b9ba-99183e70b52c
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3c993ac8703468a24a99e114563fec1bdc817581
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5b3aa23cb0fde98b4da4225b8e255b7cd6e7aef5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62566225"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72641345"
 ---
 # <a name="save-a-dataset-as-xml"></a>Uložení datové sady ve formátu XML
 
-Přístup k datům XML v datové sadě voláním dostupné metody XML v datové sadě. K ukládání dat ve formátu XML, lze volat buď <xref:System.Data.DataSet.GetXml%2A> metoda nebo <xref:System.Data.DataSet.WriteXml%2A> metodu <xref:System.Data.DataSet>.
+Přístup k datům XML v datové sadě voláním dostupných metod XML pro datovou sadu. Chcete-li uložit data ve formátu XML, můžete zavolat buď metodu <xref:System.Data.DataSet.GetXml%2A>, nebo metodu <xref:System.Data.DataSet.WriteXml%2A> <xref:System.Data.DataSet>.
 
-Volání <xref:System.Data.DataSet.GetXml%2A> metoda vrátí řetězec, který obsahuje data ze všech tabulek dat v datové sadě, který je formátován jako XML.
+Volání metody <xref:System.Data.DataSet.GetXml%2A> vrátí řetězec, který obsahuje data ze všech tabulek dat v datové sadě, která je formátována jako XML.
 
-Volání <xref:System.Data.DataSet.WriteXml%2A> metoda odesílá data ve formátu XML do souboru, který zadáte.
+Volání metody <xref:System.Data.DataSet.WriteXml%2A> odesílá data ve formátu XML do souboru, který zadáte.
 
-## <a name="to-save-the-data-in-a-dataset-as-xml-to-a-variable"></a>Chcete-li uložit data v datové sadě ve formátu XML do proměnné
+## <a name="to-save-the-data-in-a-dataset-as-xml-to-a-variable"></a>Uložení dat v datové sadě jako XML do proměnné
 
-- <xref:System.Data.DataSet.GetXml%2A> Metoda vrátí hodnotu <xref:System.String>. Deklarovat proměnnou typu <xref:System.String> a přiřaďte ho výsledky <xref:System.Data.DataSet.GetXml%2A> metody.
+- Metoda <xref:System.Data.DataSet.GetXml%2A> vrátí <xref:System.String>. Deklarujte proměnnou typu <xref:System.String> a přiřaďte jí výsledky metody <xref:System.Data.DataSet.GetXml%2A>.
 
      [!code-vb[VbRaddataSaving#12](../data-tools/codesnippet/VisualBasic/save-a-dataset-as-xml_1.vb)]
      [!code-csharp[VbRaddataSaving#12](../data-tools/codesnippet/CSharp/save-a-dataset-as-xml_1.cs)]
 
-## <a name="to-save-the-data-in-a-dataset-as-xml-to-a-file"></a>Chcete-li uložit data v datové sadě ve formátu XML do souboru
+## <a name="to-save-the-data-in-a-dataset-as-xml-to-a-file"></a>Uložení dat v datové sadě jako XML do souboru
 
-- <xref:System.Data.DataSet.WriteXml%2A> Metoda má několik přetížení. Deklarujte proměnnou a přiřaďte ho platnou cestu k uložení souboru. Následující kód ukazuje, jak uložit data do souboru:
+- Metoda <xref:System.Data.DataSet.WriteXml%2A> má několik přetížení. Deklarujte proměnnou a přiřaďte jí platnou cestu k uložení souboru do. Následující kód ukazuje, jak uložit data do souboru:
 
      [!code-vb[VbRaddataSaving#13](../data-tools/codesnippet/VisualBasic/save-a-dataset-as-xml_2.vb)]
      [!code-csharp[VbRaddataSaving#13](../data-tools/codesnippet/CSharp/save-a-dataset-as-xml_2.cs)]

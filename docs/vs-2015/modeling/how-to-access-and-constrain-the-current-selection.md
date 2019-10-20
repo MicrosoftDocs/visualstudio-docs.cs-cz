@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přístup k výběru a jeho omezení aktuální | Dokumentace Microsoftu'
+title: 'Postupy: přístup k aktuálnímu výběru a jeho omezení | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -8,211 +8,210 @@ helpviewer_keywords:
 - Domain-Specific Language, accessing the current selection
 ms.assetid: 2990981e-dfae-416f-b0d0-7197f1242dfa
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c3f6d0d481b91f7c475a37d33d43d47aff69ac8d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 00fa99ce9be158b2fe7b0bc4076817892a1b1ba9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68181730"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646236"
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>Postupy: Přístup k aktuálnímu výběru a jeho omezení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při napsat obslužnou rutinu příkazu nebo gesta jazyka specifického pro doménu, můžete určit, jaký element klikli pravým tlačítkem myši uživatele. Můžete také zabránit nějaké obrazce nebo pole výběru. Například můžete uspořádat, že když uživatel klikne ikonu dekoratér, na tvar, který ji obsahuje je místo toho se vybere. Omezení výběru tímto způsobem snižuje počet obslužných rutin, které musíte napsat. Také usnadňuje pro uživatele, který můžete kliknout na kdekoli ve tvaru bez nutnosti vyhnout dekoratér.  
-  
-## <a name="accessing-the-current-selection-from-a-command-handler"></a>Přístup k aktuálním výběru z obslužná rutina příkazu  
- Třída set příkazu jazyka specifického pro doménu obsahuje obslužné rutiny příkazů pro vaše vlastní příkazy. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> Třída, ze kterého je odvozena třída set příkazu jazyka specifického pro doménu, poskytuje několik členů pro přístup k aktuálnímu výběru.  
-  
- V závislosti na příkazu, který může být nutné obslužná rutina příkazu výběru v Návrháři modelů, Průzkumníka modelů nebo aktivní okno.  
-  
-#### <a name="to-access-selection-information"></a>Přístup k informacím výběr  
-  
-1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> Třída definuje následující členy, které lze použít pro přístup k aktuálnímu výběru.  
-  
-    |Člen|Popis|  
-    |------------|-----------------|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A> – Metoda|Vrátí `true` Pokud některý z prvků vybraných v Návrháři modelů obrazce oddílu; v opačném případě `false`.|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A> – Metoda|Vrátí `true` Pokud diagramu je vybrané v Návrháři modelů; v opačném případě `false`.|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleDocumentSelection%2A> – Metoda|Vrátí `true` Pokud právě jeden element je vybrané v Návrháři modelů; v opačném případě `false`.|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleSelection%2A> – Metoda|Vrátí `true` Pokud právě jeden element je vybrané v aktivní okno; v opačném případě `false`.|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A> Vlastnost|Získá kolekci prvků vybraných v Návrháři modelů jen pro čtení.|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A> Vlastnost|Získá kolekci prvků vybraných v aktivní okno jen pro čtení.|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A> Vlastnost|Získá prvek primární výběru v Návrháři modelů.|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A> Vlastnost|Získá prvek primární výběru aktivního okna.|  
-  
-2. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A> Vlastnost <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> třídě poskytuje přístup k <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView> objekt, který představuje okno návrháře modelů a poskytuje další přístup vybraných elementů v Návrháři modelů.  
-  
-3. Kromě toho generovaný kód definuje vlastnost okno Průzkumníka nástroj a na vlastnost výběr explorer v příkazu set – třída jazyka specifického pro doménu.  
-  
-    - Vlastnost okno nástroje Průzkumník vrací instanci třídy okna nástroje Průzkumník jazyka specifického pro doménu. Je odvozena z třídy okna Průzkumníka nástroj <xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow> třídy a představuje Průzkumníka modelů pro jazyka specifického pro doménu.  
-  
-    - `ExplorerSelection` Vlastnost vrací vybraného prvku v okně Průzkumníka modelu pro jazyka specifického pro doménu.  
-  
-## <a name="determining-which-window-is-active"></a>Určení, které okno je aktivní  
- <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> Obsahuje rozhraní definuje členy, které poskytují přístup k aktuálnímu stavu výběru v prostředí. Můžete získat <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> objekt z balíčku třídu nebo třídu příkazu set pro jazyka specifického pro doménu prostřednictvím `MonitorSelection` definovanou v základní třídě pro každou z vlastností. Je odvozena z třídy balíčku <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage> třídy a třídy příkazu set je odvozen od <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> třídy.  
-  
-#### <a name="to-determine-from-a-command-handler-what-type-of-window-is-active"></a>K určení z obslužná rutina příkazu, jaký typ okna je aktivní  
-  
-1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.MonitorSelection%2A> Vlastnost <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> třídy vrátí <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> objekt, který poskytuje přístup k aktuální stav výběru v prostředí.  
-  
-2. <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService.CurrentSelectionContainer%2A> Vlastnost <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> rozhraní získá kontejner aktivního výběru, který se může lišit od aktivního okna.  
-  
-3. Přidejte že následující vlastnosti pro příkaz set – třída za vás jazyka specifického pro doménu k určení, jaký typ okna je aktivní.  
-  
-    ```csharp  
-    // using Microsoft.VisualStudio.Modeling.Shell;  
-  
-    // Returns true if the model designer is the active selection container;  
-    // otherwise, false.  
-    protected bool IsDesignerActive  
-    {  
-        get  
-        {  
-            return (this.MonitorSelection.CurrentSelectionContainer  
-                is DiagramDocView);  
-        }  
-    }  
-  
-    // Returns true if the model explorer is the active selection container;  
-    // otherwise, false.  
-    protected bool IsExplorerActive  
-    {  
-        get  
-        {  
-            return (this.MonitorSelection.CurrentSelectionContainer  
-                is ModelExplorerToolWindow);  
-        }  
-    }  
-    ```  
-  
-## <a name="constraining-the-selection"></a>Omezení výběru  
- Přidáním výběr pravidel můžete řídit prvky, které jsou vybrané, když uživatel vybere elementu v modelu. Povolit uživateli považovat za jednu jednotku počet prvků, například můžete použít pravidlo výběru.  
-  
-#### <a name="to-create-a-selection-rule"></a>Chcete-li vytvořit pravidlo výběru  
-  
-1. Vytvořte soubor vlastní kód v projektu DSL  
-  
-2. Definice, která je odvozena z třídy pravidlo výběru <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules> třídy.  
-  
-3. Přepsat <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules.GetCompliantSelection%2A> metoda třídy pravidlo výběru použít kritéria pro výběr.  
-  
-4. Přidáte definici částečné třídy pro třídu ClassDiagram do souboru vlastního kódu.  
-  
-     `ClassDiagram` Třída odvozena z <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> třídy a je definován v generovaném kódu souboru Diagram.cs, v projektu DSL.  
-  
-5. Přepsat <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> vlastnost `ClassDiagram` třídy k vrácení pravidla vlastního výběru.  
-  
-     Výchozí implementace <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> vlastnost získá objekt výběru pravidel, který neprovede žádné změny výběru.  
-  
-### <a name="example"></a>Příklad  
- Následující soubor kódu vytvoří pravidlo výběru, který rozbalí výběru zahrnout všechny instance každé domény obrazce, které jste zpočátku vybrali.  
-  
-```csharp  
-using System;  
-using System.Collections.Generic;  
-using Microsoft.VisualStudio.Modeling;  
-using Microsoft.VisualStudio.Modeling.Diagrams;  
-  
-namespace CompanyName.ProductName.GroupingDsl  
-{  
-    public class CustomSelectionRules : DiagramSelectionRules  
-    {  
-        protected Diagram diagram;  
-        protected IElementDirectory elementDirectory;  
-  
-        public CustomSelectionRules(Diagram diagram)  
-        {  
-            if (diagram == null) throw new ArgumentNullException();  
-  
-            this.diagram = diagram;  
-            this.elementDirectory = diagram.Store.ElementDirectory;  
-        }  
-  
-        /// <summary>Called by the design surface to allow selection filtering.  
-        /// </summary>  
-        /// <param name="currentSelection">[in] The current selection before any  
-        /// ShapeElements are added or removed.</param>  
-        /// <param name="proposedItemsToAdd">[in/out] The proposed DiagramItems to  
-        /// be added to the selection.</param>  
-        /// <param name="proposedItemsToRemove">[in/out] The proposed DiagramItems  
-        /// to be removed from the selection.</param>  
-        /// <param name="primaryItem">[in/out] The proposed DiagramItem to become  
-        /// the primary DiagramItem of the selection. A null value signifies that  
-        /// the last DiagramItem in the resultant selection should be assumed as  
-        /// the primary DiagramItem.</param>  
-        /// <returns>true if some or all of the selection was accepted; false if  
-        /// the entire selection proposal was rejected. If false, appropriate  
-        /// feedback will be given to the user to indicate that the selection was  
-        /// rejected.</returns>  
-        public override bool GetCompliantSelection(  
-            SelectedShapesCollection currentSelection,  
-            DiagramItemCollection proposedItemsToAdd,  
-            DiagramItemCollection proposedItemsToRemove,  
-            DiagramItem primaryItem)  
-        {  
-            if (currentSelection.Count == 0 && proposedItemsToAdd.Count == 0) return true;  
-  
-            HashSet<DomainClassInfo> itemsToAdd = new HashSet<DomainClassInfo>();  
-  
-            foreach (DiagramItem item in proposedItemsToAdd)  
-            {  
-                if (item.Shape != null)  
-                    itemsToAdd.Add(item.Shape.GetDomainClass());  
-            }  
-            proposedItemsToAdd.Clear();  
-            foreach (DomainClassInfo classInfo in itemsToAdd)  
-            {  
-                foreach (ModelElement element  
-                    in this.elementDirectory.FindElements(classInfo, false))  
-                {  
-                    if (element is ShapeElement)  
-                    {  
-                        proposedItemsToAdd.Add(  
-                            new DiagramItem((ShapeElement)element));  
-                    }  
-                }  
-            }  
-  
-            return true;  
-        }  
-    }  
-  
-    public partial class ClassDiagram  
-    {  
-        protected CustomSelectionRules customSelectionRules = null;  
-  
-        protected bool multipleSelectionMode = true;  
-  
-        public override DiagramSelectionRules SelectionRules  
-        {  
-            get  
-            {  
-                if (multipleSelectionMode)  
-                {  
-                    if (customSelectionRules == null)  
-                    {  
-                        customSelectionRules = new CustomSelectionRules(this);  
-                    }  
-                    return customSelectionRules;  
-                }  
-                else  
-                {  
-                    return base.SelectionRules;  
-                }  
-            }  
-        }  
-    }  
-}  
-```  
-  
-## <a name="see-also"></a>Viz také  
- <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>   
- <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage>   
- <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView>   
- <xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow>   
- <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>   
- <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules>   
+Při psaní obslužné rutiny příkazu nebo gesta pro jazyk specifický pro doménu můžete určit, na který prvek uživatel klikne pravým tlačítkem myši. Můžete také zabránit výběru některých tvarů nebo polí. Můžete například určit, že když uživatel klikne na ikonu dekoratér, místo toho se vybere obrazec, který ho obsahuje. Omezení výběru tímto způsobem snižuje počet obslužných rutin, které je nutné zapsat. Také usnadňuje uživateli, který může kliknout kamkoli v obrazci bez nutnosti vyhnout se dekoratér.
+
+## <a name="accessing-the-current-selection-from-a-command-handler"></a>Přístup k aktuálnímu výběru z obslužné rutiny příkazu
+ Třída sady příkazů pro jazyk specifický pro doménu obsahuje obslužné rutiny příkazu pro vlastní příkazy. Třída <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>, ze které je odvozena třída sady příkazů pro jazyk specifický pro doménu, poskytuje několik členů pro přístup k aktuálnímu výběru.
+
+ V závislosti na příkazu může obslužná rutina příkazu potřebovat výběr v Návrháři modelů, Průzkumníku modelů nebo aktivním okně.
+
+#### <a name="to-access-selection-information"></a>Přístup k informacím o výběru
+
+1. Třída <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> definuje následující členy, které lze použít pro přístup k aktuálnímu výběru.
+
+    |Člen|Popis|
+    |------------|-----------------|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A> – metoda|Vrátí `true`, pokud kterýkoli prvek vybraný v Návrháři modelů je tvar oddílu; v opačném případě `false`.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A> – metoda|Vrátí `true`, pokud je diagram vybrán v Návrháři modelů; v opačném případě `false`.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleDocumentSelection%2A> – metoda|Vrátí `true`, pokud je v Návrháři modelů vybrán přesně jeden element; v opačném případě `false`.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleSelection%2A> – metoda|Vrátí `true`, pokud je v aktivním okně vybrán přesně jeden element; v opačném případě `false`.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A> – vlastnost|Získá kolekci prvků, které jsou vybrány v Návrháři modelů, jen pro čtení.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A> – vlastnost|Získá kolekci prvků, které jsou vybrány v aktivním okně, jen pro čtení.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A> – vlastnost|Získá primární prvek výběru v Návrháři modelů.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A> – vlastnost|Získá primární prvek výběru v aktivním okně.|
+
+2. Vlastnost <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A> třídy <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> poskytuje přístup k objektu <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView>, který představuje okno návrháře modelů a poskytuje další přístup k vybraným prvkům v Návrháři modelů.
+
+3. Kromě toho generovaný kód definuje vlastnost okna Průzkumníka a vlastnost výběr Průzkumníka ve třídě sady příkazů pro jazyk specifický pro doménu.
+
+    - Vlastnost okna nástroje Průzkumník vrací instanci třídy okna nástroje Průzkumník pro jazyk specifický pro doménu. Třída okna nástroje Průzkumník je odvozena od třídy <xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow> a představuje Průzkumníka modelů pro jazyk specifický pro doménu.
+
+    - Vlastnost `ExplorerSelection` vrací vybraný prvek v okně Průzkumníka modelů pro jazyk specifický pro doménu.
+
+## <a name="determining-which-window-is-active"></a>Určení aktivního okna
+ Rozhraní <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> obsahuje definice členů, kteří poskytují přístup k aktuálnímu stavu výběru v prostředí. Objekt <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> můžete získat buď z třídy balíčku, nebo z třídy sady příkazů pro jazyk specifický pro doménu prostřednictvím vlastnosti `MonitorSelection` definované v základní třídě každého. Třída balíčku je odvozena z třídy <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage> a třída sady příkazů je odvozena od <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> třídy.
+
+#### <a name="to-determine-from-a-command-handler-what-type-of-window-is-active"></a>Určení z obslužné rutiny příkazu, který typ okna je aktivní
+
+1. Vlastnost <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.MonitorSelection%2A> třídy <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> vrací objekt <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>, který poskytuje přístup k aktuálnímu stavu výběru v prostředí.
+
+2. Vlastnost <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService.CurrentSelectionContainer%2A> rozhraní <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> získá aktivní kontejner výběru, který se může lišit od aktivního okna.
+
+3. Přidejte následující vlastnosti do třídy sady příkazů pro jazyk specifický pro doménu, abyste určili, jaký typ okna je aktivní.
+
+    ```csharp
+    // using Microsoft.VisualStudio.Modeling.Shell;
+
+    // Returns true if the model designer is the active selection container;
+    // otherwise, false.
+    protected bool IsDesignerActive
+    {
+        get
+        {
+            return (this.MonitorSelection.CurrentSelectionContainer
+                is DiagramDocView);
+        }
+    }
+
+    // Returns true if the model explorer is the active selection container;
+    // otherwise, false.
+    protected bool IsExplorerActive
+    {
+        get
+        {
+            return (this.MonitorSelection.CurrentSelectionContainer
+                is ModelExplorerToolWindow);
+        }
+    }
+    ```
+
+## <a name="constraining-the-selection"></a>Omezení výběru
+ Přidáním pravidel výběru můžete řídit, které prvky jsou vybrány, když uživatel vybere prvek v modelu. Pokud například chcete, aby uživatel mohl zacházet s několika prvky jako s jednou jednotkou, můžete použít pravidlo výběru.
+
+#### <a name="to-create-a-selection-rule"></a>Vytvoření pravidla výběru
+
+1. Vytvoření vlastního souboru kódu v projektu DSL
+
+2. Definujte třídu pravidla výběru, která je odvozena od třídy <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules>.
+
+3. Přepsat metodu <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules.GetCompliantSelection%2A> třídy pravidla výběru, aby bylo možné použít kritéria výběru.
+
+4. Přidejte do vlastního souboru kódu definici částečné třídy pro třídu ClassDiagram.
+
+     Třída `ClassDiagram` je odvozena od <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> třídy a je definována v souboru generovaného kódu Diagram.cs v projektu DSL.
+
+5. Přepište vlastnost <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> třídy `ClassDiagram` a vraťte tak vlastní pravidlo výběru.
+
+     Výchozí implementace vlastnosti <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> Získá objekt pravidla výběru, který neupravuje výběr.
+
+### <a name="example"></a>Příklad
+ Následující soubor kódu vytvoří pravidlo výběru, které rozšíří výběr tak, aby zahrnoval všechny instance všech původně vybraných obrazců domény.
+
+```csharp
+using System;
+using System.Collections.Generic;
+using Microsoft.VisualStudio.Modeling;
+using Microsoft.VisualStudio.Modeling.Diagrams;
+
+namespace CompanyName.ProductName.GroupingDsl
+{
+    public class CustomSelectionRules : DiagramSelectionRules
+    {
+        protected Diagram diagram;
+        protected IElementDirectory elementDirectory;
+
+        public CustomSelectionRules(Diagram diagram)
+        {
+            if (diagram == null) throw new ArgumentNullException();
+
+            this.diagram = diagram;
+            this.elementDirectory = diagram.Store.ElementDirectory;
+        }
+
+        /// <summary>Called by the design surface to allow selection filtering.
+        /// </summary>
+        /// <param name="currentSelection">[in] The current selection before any
+        /// ShapeElements are added or removed.</param>
+        /// <param name="proposedItemsToAdd">[in/out] The proposed DiagramItems to
+        /// be added to the selection.</param>
+        /// <param name="proposedItemsToRemove">[in/out] The proposed DiagramItems
+        /// to be removed from the selection.</param>
+        /// <param name="primaryItem">[in/out] The proposed DiagramItem to become
+        /// the primary DiagramItem of the selection. A null value signifies that
+        /// the last DiagramItem in the resultant selection should be assumed as
+        /// the primary DiagramItem.</param>
+        /// <returns>true if some or all of the selection was accepted; false if
+        /// the entire selection proposal was rejected. If false, appropriate
+        /// feedback will be given to the user to indicate that the selection was
+        /// rejected.</returns>
+        public override bool GetCompliantSelection(
+            SelectedShapesCollection currentSelection,
+            DiagramItemCollection proposedItemsToAdd,
+            DiagramItemCollection proposedItemsToRemove,
+            DiagramItem primaryItem)
+        {
+            if (currentSelection.Count == 0 && proposedItemsToAdd.Count == 0) return true;
+
+            HashSet<DomainClassInfo> itemsToAdd = new HashSet<DomainClassInfo>();
+
+            foreach (DiagramItem item in proposedItemsToAdd)
+            {
+                if (item.Shape != null)
+                    itemsToAdd.Add(item.Shape.GetDomainClass());
+            }
+            proposedItemsToAdd.Clear();
+            foreach (DomainClassInfo classInfo in itemsToAdd)
+            {
+                foreach (ModelElement element
+                    in this.elementDirectory.FindElements(classInfo, false))
+                {
+                    if (element is ShapeElement)
+                    {
+                        proposedItemsToAdd.Add(
+                            new DiagramItem((ShapeElement)element));
+                    }
+                }
+            }
+
+            return true;
+        }
+    }
+
+    public partial class ClassDiagram
+    {
+        protected CustomSelectionRules customSelectionRules = null;
+
+        protected bool multipleSelectionMode = true;
+
+        public override DiagramSelectionRules SelectionRules
+        {
+            get
+            {
+                if (multipleSelectionMode)
+                {
+                    if (customSelectionRules == null)
+                    {
+                        customSelectionRules = new CustomSelectionRules(this);
+                    }
+                    return customSelectionRules;
+                }
+                else
+                {
+                    return base.SelectionRules;
+                }
+            }
+        }
+    }
+}
+```
+
+## <a name="see-also"></a>Viz také
+ <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet><xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage>
+ <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView>
+ <xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow>
+ <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>
+ <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules>
  <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>

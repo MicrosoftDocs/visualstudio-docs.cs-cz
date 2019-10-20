@@ -1,67 +1,67 @@
 ---
-title: Návrhář postupu provádění – Návrhář aktivity InvokeMethod
+title: Návrhář aktivity Návrhář postupu provádění-InvokeMethod
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.InvokeMethod.UI
 ms.assetid: 15e6efdc-52ca-46d8-9c5e-063f7c8265a6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eed5d81cce05b316ef7593639e868936e7f2fa69
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 593ec198cdfdd8acd1967abb046384711e1fa9ac
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62537638"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650172"
 ---
 # <a name="invokemethod-activity-designer"></a>Návrhář aktivity InvokeMethod
 
-**InvokeMethod** Návrhář slouží k vytvoření a konfigurace <xref:System.Activities.Statements.InvokeMethod> aktivity.
+Výraz **InvokeMethod** Designer slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.InvokeMethod>.
 
-## <a name="the-invokemethod-activity"></a>Aktivity InvokeMethod
+## <a name="the-invokemethod-activity"></a>Aktivita InvokeMethod
 
-<xref:System.Activities.Statements.InvokeMethod> Volá veřejná metoda zadaného objektu nebo typu.
+@No__t_0 volá veřejnou metodu zadaného objektu nebo typu.
 
-### <a name="use-the-invokemethod-activity-designer"></a>Použijte Návrhář aktivity InvokeMethod
+### <a name="use-the-invokemethod-activity-designer"></a>Použití návrháře aktivity InvokeMethod
 
-Přístup **InvokeMethod** návrháře aktivit v **primitiv** kategorii **nástrojů**. **InvokeMethod** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřadit na povrch návrháře postupu provádění, pokud už aktivity jsou obvykle umístěny, například jako uvnitř <xref:System.Activities.Statements.Sequence>. Vyřazení Návrhář aktivity vytvoří <xref:System.Activities.Statements.InvokeMethod> aktivity s výchozím <xref:System.Activities.Activity.DisplayName%2A> z InvokeMethod. <xref:System.Activities.Activity.DisplayName%2A> Můžete upravovat v záhlaví **InvokeMethod** Návrhář aktivity nebo v **DisplayName** pole mřížku vlastností.
+Přístup k Návrháři aktivit **InvokeMethod** v kategorii **primitivních** prvků sady **nástrojů** Návrhář aktivity **InvokeMethod** lze přetáhnout ze **sady nástrojů** a přetáhnout na Návrhář postupu provádění plochu, kde jsou obvykle umístěny aktivity, například uvnitř <xref:System.Activities.Statements.Sequence>. Vyřazení návrháře aktivit vytvoří aktivitu <xref:System.Activities.Statements.InvokeMethod> s výchozí <xref:System.Activities.Activity.DisplayName%2A>ou InvokeMethod. @No__t_0 lze upravit v záhlaví návrháře aktivit **InvokeMethod** nebo v poli **DisplayName** v mřížce vlastností.
 
 ### <a name="the-invokemethod-properties"></a>Vlastnosti InvokeMethod
 
-Následující tabulka ukazuje <xref:System.Activities.Statements.InvokeMethod> vlastnosti a popisuje, jak se používají v návrháři. Tyto vlastnosti můžete upravit v mřížce vlastností a můžete upravit některé na plochu návrháře postupu provádění.
+V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.InvokeMethod> a popisuje, jak se používají v návrháři. Tyto vlastnosti lze upravovat v mřížce vlastností a některé lze upravovat na Návrhář postupu provádění ploše.
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Popisný název <xref:System.Activities.Statements.InvokeMethod> aktivity. Výchozí hodnota je InvokeMethod.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutné, doporučujeme použít jednu.|
-|<xref:System.Activities.Statements.InvokeMethod.MethodName%2A>|Pravda|Název metody, která volá se, když tato aktivity spustí. Volané metody musí být deklarována jako **veřejné**. Tuto vlastnost lze na návrhové ploše upravovat a je povinný.|
-|<xref:System.Activities.Statements.InvokeMethod.Parameters%2A>|False|Kolekce parametrů volané metody. Parametry musí být přidán do kolekce ve stejném pořadí, ve kterém jsou uvedeny v podpisu metody. Chcete-li zobrazit **parametry** dialogové okno, kde můžete nastavit tuto vlastnost, klikněte na tlačítko se třemi tečkami v **parametry** pole mřížku vlastností. Klikněte na tlačítko **vytvořit Argument** tlačítko Přidat parametry.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Popisný název aktivity <xref:System.Activities.Statements.InvokeMethod>. Výchozí hodnota je InvokeMethod.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je vhodné použít jeden.|
+|<xref:System.Activities.Statements.InvokeMethod.MethodName%2A>|Podmínka|Název metody, která má být volána, když se aktivita spustí. Volaná metoda musí být deklarována jako **Public**. Tato vlastnost se dá upravovat na návrhové ploše a je povinná.|
+|<xref:System.Activities.Statements.InvokeMethod.Parameters%2A>|False|Kolekce parametrů volané metody Parametry musí být přidány do kolekce ve stejném pořadí, v jakém jsou uvedeny v signatuře metody. Chcete-li zobrazit dialogové okno **parametrů** , kde můžete nastavit tuto vlastnost, klikněte na tlačítko se třemi tečkami v poli **parametry** v mřížce vlastností. Chcete-li přidat parametry, klikněte na tlačítko **vytvořit argument** .|
 |<xref:System.Activities.Statements.InvokeMethod.Result%2A>|False|Návratová hodnota volání metody.|
-|<xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>|Pravda|Určuje, zda je metoda volána asynchronně. Výchozí hodnota je **False**.|
-|<xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>|False|Objekt, který obsahuje metodu volání. Tato vlastnost se dá upravit na plochu návrháře.<br /><br /> Buď <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> nebo <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> je potřeba nastavit.|
-|<xref:System.Activities.Statements.InvokeMethod.TargetType%2A>|False|Typ <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>. Tato vlastnost se dá upravit na návrhové ploše. Tato vlastnost musí nastavit jen v případě, že metoda je statická.|
+|<xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>|Podmínka|Určuje, zda je metoda volána asynchronně. Výchozí hodnota je **false (NEPRAVDA**).|
+|<xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>|False|Objekt, který obsahuje metodu, která má být volána. Tato vlastnost se dá upravit na návrhové ploše.<br /><br /> Musí být nastaven buď <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>, nebo <xref:System.Activities.Statements.InvokeMethod.TargetType%2A>.|
+|<xref:System.Activities.Statements.InvokeMethod.TargetType%2A>|False|Typ <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>. Tuto vlastnost lze upravit na návrhové ploše. Tato vlastnost musí být nastavena pouze v případě, že je metoda volána jako statická.|
 
-Pro předání parametrů jako C# **si** parametr (například `Method1(out myParam))`, použijte **výstupní argument OutArgument** místo **InOutArgument**
+Chcete-li parametry předat C# jako **výstupní** parametr (například `Method1(out myParam))`, použijte místo **argumentu** **InOutArgument**
 
-Metody s argumenty volat **TargetObject** nebo **výsledek** nelze volat pomocí <xref:System.Activities.Statements.InvokeMethod> aktivity. Důvodem je, že <xref:System.Activities.Statements.InvokeMethod> aktivity registrů <xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A>, <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> a <xref:System.Activities.Statements.InvokeMethod.Result%2A> v <xref:System.Activities.Activity.CacheMetadata%2A>.
+Metody s argumenty s názvem **TargetObject** nebo **Result** nelze vyvolat pomocí aktivity <xref:System.Activities.Statements.InvokeMethod>. Důvodem je, že <xref:System.Activities.Statements.InvokeMethod> aktivita registruje <xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A>, <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> a <xref:System.Activities.Statements.InvokeMethod.Result%2A> v <xref:System.Activities.Activity.CacheMetadata%2A>.
 
-Algoritmus pro registraci parametry v <xref:System.Activities.Activity.CacheMetadata%2A> je znázorněno v následujícím seznamu:
+Algoritmus pro registraci parametrů v <xref:System.Activities.Activity.CacheMetadata%2A> je zobrazen v následujícím seznamu:
 
 1. Zaregistrujte <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> argument.
 
 2. Zaregistrujte <xref:System.Activities.Statements.InvokeMethod.Result%2A> argument.
 
-3. Iterovat přes <xref:System.Activities.Statements.InvokeMethod.Parameters%2A> kolekce a zaregistrovat každý argument.
+3. Iterujte pomocí kolekce <xref:System.Activities.Statements.InvokeMethod.Parameters%2A> a zaregistrujte každý argument.
 
-Výsledný výjimka je typu <xref:System.Activities.InvalidWorkflowException> s následující zprávou: 'InvokeMethod': Proměnná argumentu RuntimeArgument nebo DelegateArgument již existuje s názvem "TargetObject". Názvy musí být v rámci oboru prostředí jedinečné.
+Výsledná výjimka je typu <xref:System.Activities.InvalidWorkflowException> s následující zprávou: ' InvokeMethod ': proměnná, RuntimeArgument nebo argument DelegateArgument již existuje s názvem ' TargetObject '. Názvy musí být v rámci oboru prostředí jedinečné.
 
-Toto omezení neplatí pro <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> a <xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>. Nejste argumentů pracovního postupu a proto nejsou registrovány v <xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A> kolekce <xref:System.Activities.Statements.InvokeMethod> aktivity v <xref:System.Activities.Activity.CacheMetadata%2A> metody.
+Toto omezení se nevztahuje na <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> a <xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>. Nejedná se o argumenty pracovního postupu, a proto nejsou registrovány v kolekci <xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A> <xref:System.Activities.Statements.InvokeMethod> aktivity v metodě <xref:System.Activities.Activity.CacheMetadata%2A>.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Primitiva](../workflow-designer/primitives-activity-designers.md)
+- [Primitivní elementy](../workflow-designer/primitives-activity-designers.md)
 - [Assign](../workflow-designer/assign-activity-designer.md)
 - [Delay](../workflow-designer/delay-activity-designer.md)
 - [WriteLine](../workflow-designer/writeline-activity-designer.md)

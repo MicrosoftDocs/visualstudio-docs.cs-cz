@@ -1,55 +1,55 @@
 ---
-title: Hledání v sadě schémat | Dokumentace Microsoftu
+title: Hledání sady schémat | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: ec1395e0-d03c-4130-810d-f2db656937bd
 caps.latest.revision: 12
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1d388db50ae935ef85b720177bd31c832a353d31
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0e3a8563d5e2cd29c9c521761498d7ef87b7cbab
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68145181"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656161"
 ---
 # <a name="searching-the-schema-set"></a>Hledání v sadě schémat
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Průzkumníka schémat XML umožňuje hledat schéma nastavit následujícími způsoby:  
-  
-- Hledání klíčových slov.  
-  
-- Hledání podle schématu.  
-  
-## <a name="keyword-search"></a>Hledání klíčových slov  
- Provádět vyhledávání – klíčové slovo tak, že zadáte podřetězce v **hledání SchemaSet** textového pole panelu nástrojů Průzkumník schémat XML.  
-  
- ![Hledání klíčových slov Průzkumníka schémat XML](../xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")  
-  
- Průzkumníka schémat XML vyhledá schéma, nastavte následující:  
-  
-- Žádné `name` nebo `ref` atributy, které odpovídají zadané klíčové slovo. To umožňuje najít prvky, atributy, typy, a tak dále podle názvu.  
-  
-- `schemaLocation` Atributy #include.  
-  
-- `namespace` Atributy příkazy pro import.  
-  
-## <a name="schema-specific-search"></a>Konkrétní schéma vyhledávání  
- Průzkumníka schémat XML také zahrnuje integrované hledání, kterým můžete přistupovat pomocí místní nabídky Průzkumníka schémat XML. Další informace o dostupných kontextové nabídky, naleznete v tématu [kontextové nabídky](../xml-tools/context-menus-xml-schema-explorer.md). Můžete také provádět konkrétní schéma vyhledávání ze zobrazení spuštění; Další informace najdete v části "Nastavit informace o schématu" v [zobrazení Start](../xml-tools/start-view.md) tématu.  
-  
-## <a name="displaying-and-navigating-search-results"></a>Zobrazení a navigaci výsledky hledání  
- Po dokončení hledání v podokně souhrnných výsledků se přidá na panel nástrojů s výsledky hledání. Výsledky hledání jsou také zvýrazněna v Průzkumník schémat XML a označeny dílků na svislý posuvník. Výsledky hledání můžete Navigovat pomocí **přejít k další výsledek hledání** a **přejít na předchozí výsledky hledání** tlačítka na panelu souhrnných výsledků z panelu nástrojů Průzkumník schémat XML; pomocí klávesových zkratek F3 a Shift + F3 nebo kliknutím značek na posuvníku.  
-  
- Výsledky hledání do pracovního prostoru můžete přidat kliknutím **přidá zvýrazněné uzly do pracovního prostoru** tlačítko na panelu souhrnu výsledků.  
-  
- ![Výsledek hledání Průzkumníka schémat XML](../xml-tools/media/schemaexplorersearchresult.gif "SchemaExplorerSearchResult")  
-  
-## <a name="clearing-search-results"></a>Výsledky hledání vymazání  
- Vymazat výsledky hledání, klikněte na tlačítko **x** stisknutí tlačítka na panelu souhrnných výsledků z panelu hledání v Průzkumníkovi schémat XML.  
-  
-## <a name="see-also"></a>Viz také  
+Průzkumník schémat XML umožňuje vyhledat sadu schémat následujícími způsoby:
+
+- Hledání klíčových slov
+
+- Hledání specifické pro schéma.
+
+## <a name="keyword-search"></a>Hledání klíčových slov
+ Hledání klíčových slov provedete tak, že do textového pole **Hledat schemaSet** v panelu nástrojů Průzkumníka schémat XML zadáte podřetězec.
+
+ ![Hledání klíčového slova Průzkumníka schémat XML](../xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")
+
+ Průzkumník schémat XML prohledává sadu schémat pro následující:
+
+- Všechny atributy `name` nebo `ref`, které odpovídají zadanému klíčovému slovu. To umožňuje najít prvky, atributy, typy a tak dále podle názvu.
+
+- Atributy `schemaLocation` příkazů include.
+
+- Atributy `namespace` příkazů importu.
+
+## <a name="schema-specific-search"></a>Hledání specifické pro schéma
+ Průzkumník schémat XML také obsahuje Vestavěná hledání, ke kterým můžete přistupovat pomocí místní nabídky Průzkumníka schémat XML. Další informace o dostupných kontextových nabídkách naleznete v tématu [kontextové nabídky](../xml-tools/context-menus-xml-schema-explorer.md). Můžete také provést hledání specifické pro schéma v zobrazení Start; Další informace najdete v části Podrobnosti o sadě schémat v tématu [spuštění zobrazení](../xml-tools/start-view.md) .
+
+## <a name="displaying-and-navigating-search-results"></a>Zobrazení a navigace ve výsledcích hledání
+ Po dokončení hledání se podokno souhrnné výsledky přidá na panel nástrojů s výsledky hledání. Výsledky hledání jsou také zvýrazněny v Průzkumníku schémat XML a označeny značkami na svislém posuvníku. Výsledky hledání můžete procházet pomocí možnosti **Přejít na další výsledek hledání** a **Přejít na předchozí** tlačítka výsledků hledání v podokně souhrnné výsledky hledání na panelu nástrojů Průzkumníka schémat XML. pomocí kláves klávesnice F3 a SHIFT + F3; nebo kliknutím na značky zaškrtnutí na posuvníku.
+
+ Výsledky hledání můžete přidat do pracovního prostoru kliknutím na tlačítko **Přidat zvýrazněné uzly do pracovního prostoru** v podokně souhrnné výsledky.
+
+ ![Výsledek hledání v Průzkumníkovi schémat XML](../xml-tools/media/schemaexplorersearchresult.gif "SchemaExplorerSearchResult")
+
+## <a name="clearing-search-results"></a>Vymazání výsledků hledání
+ Chcete-li vymazat výsledky hledání, klikněte na tlačítko **x** v podokně souhrnné výsledky na panelu nástrojů hledání v PRŮZKUMNÍKOVI schémat XML.
+
+## <a name="see-also"></a>Viz také
  [Průzkumník schémat XML](../xml-tools/xml-schema-explorer.md)

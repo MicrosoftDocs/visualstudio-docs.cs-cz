@@ -1,21 +1,21 @@
 ---
-title: 'Postupy: Generování fragmentu XML ze schématu XML'
+title: 'Postupy: generování fragmentu XML ze schématu XML'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2c128d2a-aaa6-4814-aa95-e07056afe338
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb5b10e142c1dd62625a48c39c3860d49e8942cb
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: ae55428b61053fbd255446833cb20aec3da79b6e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926816"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645385"
 ---
-# <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>Postupy: Generování fragmentu XML ze schématu XML
+# <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>Postupy: generování fragmentu XML ze schématu XML
 
 Editor XML má možnost generovat fragmenty XML ze schématu XML schématu definice jazyka (XSD). Například při vytváření souboru XML, který je umístěn vedle názvu elementu, lze stisknutím klávesy **TAB** naplnit element daty XML generovanými z informací o schématu pro daný element.
 
@@ -33,13 +33,13 @@ Tato funkce je k dispozici pouze u elementů. Platí taky následující pravidl
 
 - Kurzor musí být umístěn hned napravo od názvu elementu.
 
-Vygenerovaný fragment obsahuje všechny požadované atributy a prvky. Pokud `minOccurs` je větší než jeden, požadovaný minimální počet instancí tohoto prvku je zahrnut ve fragmentu až do maximálního počtu instancí 100. Všechny pevné hodnoty nalezené ve schématu mají za následek pevné hodnoty fragmentu. `xsd:any`prvky `xsd:anyAttribute` a jsou ignorovány a nemají za následek žádné další konstrukce fragmentů.
+Vygenerovaný fragment obsahuje všechny požadované atributy a prvky. Pokud je `minOccurs` větší než jedna, požadovaný minimální počet instancí tohoto prvku je zahrnut ve fragmentu až do maximálního počtu instancí 100. Všechny pevné hodnoty nalezené ve schématu mají za následek pevné hodnoty fragmentu. prvky `xsd:any` a `xsd:anyAttribute` jsou ignorovány a mají za následek žádné další konstrukce fragmentu kódu.
 
 Výchozí hodnoty jsou vygenerovány a označeny jako upravitelné hodnoty. Pokud schéma určuje výchozí hodnotu, použije se tato výchozí hodnota. Pokud je však výchozí hodnota schématu prázdný řetězec, Editor vygeneruje výchozí hodnoty následujícím způsobem:
 
 - Pokud typ schématu obsahuje všechny omezující vlastnosti výčtu, a to buď přímo, nebo nepřímo prostřednictvím kteréhokoli člena typu sjednocení, jako výchozí se použije první Výčtová hodnota nalezená v objektovém modelu schématu.
 
-- Pokud je typ schématu typ Atomic, Editor získá typ atomie a vloží název atomické typu. Pro odvozený jednoduchý typ používá základní jednoduchý typ. Jako typ seznamu je `itemType`atomická typ. Pro sjednocení je typ atomické atomická typ prvního `memberType`.
+- Pokud je typ schématu typ Atomic, Editor získá typ atomie a vloží název atomické typu. Pro odvozený jednoduchý typ používá základní jednoduchý typ. Jako typ seznamu je `itemType` typ atomická. Pro sjednocení je typ atomický typ prvního `memberType`.
 
 ## <a name="example"></a>Příklad
 
@@ -54,19 +54,19 @@ Kroky v této části ukazují, jak používat funkci fragmentu XML vygenerovano
 
 2. V podokně **šablony** vyberte **soubor XML** a klikněte na **otevřít**.
 
-     V editoru se otevře nový soubor. Soubor obsahuje výchozí deklaraci XML, `<?xml version="1.0" encoding="utf-8">`.
+     V editoru se otevře nový soubor. Soubor obsahuje výchozí deklaraci XML `<?xml version="1.0" encoding="utf-8">`.
 
 3. V okně Vlastnosti dokumentu klikněte na tlačítko pro procházení ( **...** ) v poli **schémata** .
 
      Zobrazí se dialogové okno **schémata XSD** .
 
-4. Klikněte na **Přidat**.
+4. Klikněte na tlačítko **Přidat**.
 
      Zobrazí se dialogové okno **otevřít schéma XSD** .
 
 5. Vyberte soubor schématu a klikněte na **otevřít**.
 
-6. Klikněte na **OK**.
+6. Klikněte na tlačítko **OK**.
 
      Schéma XML je nyní přidruženo k dokumentu XML.
 
@@ -88,7 +88,7 @@ Kroky v této části ukazují, jak používat funkci fragmentu XML vygenerovano
 
      Editor přidá počáteční značku `<Contact` a umístí kurzor za název elementu.
 
-4. Stisknutím klávesy **TAB** vygenerujte XML data pro `Contact` element na základě jeho informací o schématu.
+4. Stisknutím klávesy **TAB** vygenerujte data XML prvku `Contact` na základě jeho informací o schématu.
 
 ## <a name="input"></a>Vstup
 
@@ -141,7 +141,7 @@ Následující soubor schématu se používá v tomto návodu.
 
 ### <a name="output"></a>Výstup
 
-Následuje data XML, která jsou generována na základě informací o schématu přidružených `Contact` k elementu. Položky označené jako `bold` upravitelná pole ve fragmentu kódu XML.
+Následuje data XML, která jsou generována v závislosti na informacích schématu přidružených k prvku `Contact`. Položky označené jako `bold` určují upravitelná pole ve fragmentu kódu XML.
 
 ```xml
 <Contact>
@@ -157,4 +157,4 @@ Následuje data XML, která jsou generována na základě informací o schématu
 ## <a name="see-also"></a>Viz také:
 
 - [Fragmenty kódu XML](../xml-tools/xml-snippets.md)
-- [Postupy: Použití fragmentů kódu XML](../xml-tools/how-to-use-xml-snippets.md)
+- [Postupy: používání fragmentů kódu XML](../xml-tools/how-to-use-xml-snippets.md)

@@ -7,36 +7,36 @@ helpviewer_keywords:
 - templates [Visual Studio], Web
 - Web templates [Visual Studio]
 - project templates [Visual Studio], Web
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9af528cf92d4909bbe5c7d4ac114aa830e96162c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7d121d9b970d8012aaf177c0a232cd21f6fe85d9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946892"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645819"
 ---
 # <a name="how-to-manually-create-web-templates"></a>Postupy: Ruční vytvoření webových šablon
 
-Vytvoření šablony webu se liší od vytvoření jiných typů šablon. Vzhledem k tomu, že šablony webových projektů se zobrazí v **přidat nový web** dialogové okno a webového projektu položky jsou zařazené do kategorií pomocí programovacího jazyka, *vstemplate* souboru musíte určit, která šablona jako šablonu a identifikovat programovací jazyk.
+Vytvoření webové šablony se liší od vytváření jiných druhů šablon. Vzhledem k tomu, že se šablony webových projektů zobrazí v dialogovém okně **Přidat nový web** a položky webového projektu jsou rozděleny podle programovacího jazyka, musí soubor *vstemplate* určit šablonu jako webovou šablonu a identifikovat programovací jazyk.
 
 > [!NOTE]
-> Webové šablony musí obsahovat prázdnou *.webproj* souboru a musí se odkazovat v *vstemplate* soubor `File` atribut `Project` element. I když se nevyžadují žádné webové projekty *souborů .proj* souboru projektu, je potřeba vytvořit tento soubor zástupné procedury pro šablony webové zajištění správného fungování.
+> Webové šablony musí obsahovat prázdný soubor *. webproj* a musí být odkazován v souboru *vstemplate* v atributu `File` `Project` elementu. I když webové projekty nevyžadují soubor projektu *. proj* , je nutné vytvořit tento zástupný soubor pro správné fungování webové šablony.
 
-## <a name="to-manually-create-a-web-template"></a>Ruční vytvoření webových šablon
+## <a name="to-manually-create-a-web-template"></a>Ruční vytvoření webové šablony
 
-1. Vytvoření webového projektu.
+1. Vytvořte webový projekt.
 
-2. Upravit nebo odstranit soubory v projektu nebo přidejte nové soubory do projektu.
+2. Upravte nebo odstraňte soubory v projektu nebo přidejte nové soubory do projektu.
 
-3. Vytvořte soubor XML a uložit ji *vstemplate* příponu názvu souboru ve stejném adresáři jako váš projekt. Nepřidávejte jej do projektu v sadě Visual Studio.
+3. Vytvořte soubor XML a uložte ho s příponou názvu souboru *vstemplate* ve stejném adresáři jako váš projekt. Nepřidejte ho do projektu v aplikaci Visual Studio.
 
-4. Upravit *vstemplate* soubor XML k poskytování metadat šablony projektu. Další informace najdete v tématu [příkladu, který následuje](#example).
+4. Úpravou souboru *vstemplate* XML poskytněte metadata šablony projektu. Další informace najdete v následujícím [příkladu](#example).
 
-5. Vyhledejte `ProjectType` prvek *vstemplate* souboru a nastavit textové hodnoty `Web`.
+5. Vyhledejte prvek `ProjectType` v souboru *vstemplate* a nastavte textovou hodnotu na `Web`.
 
-6. Následující `ProjectType` elementu, přidejte `ProjectSubType` elementu a nastaví hodnotu text pro programovací jazyk šablony. Programovací jazyk může být jeden z následujících hodnot:
+6. Po elementu `ProjectType` přidejte prvek `ProjectSubType` a nastavte textovou hodnotu na programovací jazyk šablony. Programovací jazyk může být jedna z následujících hodnot:
 
    - CSharp
    - VisualBasic
@@ -52,13 +52,13 @@ Vytvoření šablony webu se liší od vytvoření jiných typů šablon. Vzhled
      </TemplateData>
      ```
 
-7. Vyberte soubory v šabloně (jedná se o *vstemplate* souboru), klikněte pravým tlačítkem na výběr a zvolte **odeslat** > **komprimovanou složku (ZIP)**. Soubory jsou komprimované do *ZIP* souboru.
+7. Vyberte soubory v šabloně (to zahrnuje *vstemplate* soubor), klikněte pravým tlačítkem na výběr a zvolte **Odeslat do**  > **Komprimovaná složka (ZIP)** . Soubory jsou komprimovány do souboru *zip* .
 
-8. Vložit *ZIP* soubor šablony v adresáři projektu šablony sady Visual Studio. Ve výchozím nastavení, je tento adresář *%USERPROFILE%\Documents\Visual Studio \<verze\>\ProjectTemplates*.
+8. Soubor šablony *. zip* vložte do adresáře šablon projektu sady Visual Studio. Ve výchozím nastavení je tento adresář *%UserProfile%\Documents\Visual Studio \<Version \> \projecttemplates*.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje základní *vstemplate* Šablona webového projektu v souboru:
+Následující příklad ukazuje základní soubor *vstemplate* pro šablonu webového projektu:
 
 ```xml
 <VSTemplate Version="2.0.0" Type="Project"
@@ -84,4 +84,4 @@ Následující příklad ukazuje základní *vstemplate* Šablona webového proj
 ## <a name="see-also"></a>Viz také:
 
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Visual Studio odkaz na schéma šablon (rozšiřitelnost)](../extensibility/visual-studio-template-schema-reference.md)
+- [Referenční dokumentace schématu šablon sady Visual Studio (rozšiřitelnost)](../extensibility/visual-studio-template-schema-reference.md)

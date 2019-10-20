@@ -9,20 +9,20 @@ helpviewer_keywords:
 - Debug.SymbolPath command
 - SymbolPath command
 ms.assetid: b697ef2d-3f5d-40df-b113-7068a5bec0d4
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3792f3d6f86faf0b58e8cf8f1b76984ba3bd5d80
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 6309396877a32233bfe05fff1d2173d1f8765ebb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925998"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645202"
 ---
 # <a name="symbol-path-command"></a>Cesta k symbolu – příkaz
-Nastaví seznam adresářů pro ladicí program pro hledání symbolů.
+Nastaví seznam adresářů ladicího programu pro hledání symbolů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,7 +36,7 @@ Debug.SymbolPath pathname1;pathname2;... pathnameN
 Volitelné. Středníkem oddělený seznam cest pro ladicí program pro hledání symbolů.
 
 ## <a name="remarks"></a>Poznámky
-`pathname` Pokud není zadán, zobrazí příkaz seznam aktuálních cest k symbolům.
+Pokud není zadán žádný `pathname`, příkaz vypíše aktuální cesty k symbolům.
 
 ## <a name="example"></a>Příklad
 Tento příklad přidá dvě cesty do seznamu adresářů symbolů.

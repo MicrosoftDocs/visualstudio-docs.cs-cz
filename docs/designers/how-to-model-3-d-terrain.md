@@ -1,59 +1,59 @@
 ---
-title: 'Postupy: Model 3D terénu'
+title: 'Postupy: modelování 3D terénu'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f779b1fd-82a9-4a11-8ab7-c1c9caabc883
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41974aee19cf1e4919028d5ef0f0e9b53c6b369e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 82ee7791c8356f13ebfdce5ad5bd3ba8be0674d4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844448"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72635414"
 ---
-# <a name="how-to-model-3d-terrain"></a>Postupy: Modelování 3D terénu
+# <a name="how-to-model-3d-terrain"></a>Postupy: modelování 3D terénu
 
-Tento článek ukazuje, jak vytvořit model 3D terénu pomocí Editoru modelů.
+Tento článek ukazuje, jak pomocí editoru modelů vytvořit model 3D terénu.
 
 ## <a name="create-a-3d-terrain-model"></a>Vytvoření modelu 3D terénu
 
-Můžete vytvořit 3D terénu rozdělení roviny provést další tváře a potom manipulace s jejich vrcholy pro vytvoření zajímavých funkcí terénu.
+Prostorovou terén můžete vytvořit rozrozdělením roviny tak, aby se vytvořily další plošky, a potom manipulovat s jejich vrcholy a vytvářet zajímavé funkce terénu.
 
-Jakmile budete hotovi, model by měl vypadat nějak takto:
+Až budete hotovi, model by měl vypadat takto:
 
-![3&#45;D scény, který znázorňuje model terénu](../designers/media/digit-terrain-model.png)
+![3&#45;D scény zobrazující model terénu](../designers/media/digit-terrain-model.png)
 
-Než začnete, ujistěte se, že **vlastnosti** okno a **nástrojů** jsou zobrazeny.
+Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nástrojů** .
 
-1. Vytvoření 3D modelu, se kterým chcete pracovat. Informace o tom, jak přidat modelu do projektu naleznete v části Začínáme v [editoru modelů](../designers/model-editor.md).
+1. Vytvořte 3D model, se kterou chcete pracovat. Informace o tom, jak přidat model do projektu, naleznete v části Začínáme v [editoru modelů](../designers/model-editor.md).
 
-2. Přidáte do roviny do scény. V **nástrojů**v části **tvary**vyberte **roviny** a přesuňte jej na návrhovou plochu.
-
-    > [!TIP]
-    > Pro usnadnění práce s objekt roviny, můžete ho rámce v návrhové ploše. V **vyberte** režimu, vyberte objekt roviny a pak na panelu nástrojů editoru modelů, zvolte **orámovat objekt** tlačítko.
-
-3. Zadejte režimu výběru ploch. Na panelu nástrojů editoru modelů **tváří vybrat**.
-
-4. Rozdělit plochy. V režimu výběru ploch zvolte jednou rovinou aktivace pro výběr a klikněte na tlačítko ho znovu a vyberte jeho pouze pro rozpoznávání tváře. Na panelu nástrojů editoru modelů **rozdělit plochu**. Tento postup přidá nové vrcholy k rovině ho rozdělit do čtyř oddílů stejně velké.
-
-5. Vytvořte další dělení. Pomocí nových ploch stále vybranou, zvolte **rozdělit plochu** ještě dvakrát. Tím se vytvoří celkem 64 tváří. Vytvořením další dělení můžete udělit terénu více podrobností.
-
-6. Zadejte režim výběru bodu. Na panelu nástrojů editoru modelů **vybrat bod**.
-
-7. Změna bodu, aby vytvořil terénu funkci. V režimu výběru bodu, vyberte jednu z bodů a pak na panelu nástrojů editoru modelů, zvolte **přeložit** nástroj. Pole, který představuje bod se zobrazí na návrhové ploše. Použijte na zelenou šipku a přesunout do pole a změna výšky bodu. Opakujte tento krok pro různých fázích pro vytvoření zajímavých funkcí terénu.
+2. Přidejte rovinu do scény. V **sadě nástrojů**v části **tvary**vyberte **rovina** a přesuňte ji na návrhovou plochu.
 
     > [!TIP]
-    > Můžete vybrat několik bodů najednou k jejich úpravě jednotným způsobem.
+    > Chcete-li nastavit objekt roviny tak, aby lépe fungoval, můžete ho orámovat na návrhové ploše. V režimu **výběru** vyberte objekt rovina a pak na panelu nástrojů editoru modelů zvolte tlačítko **objekt rámce** .
 
-Model terénu je dokončena. Tady je znovu finálního modelu s Phongova stínování použít:
+3. Zadejte režim výběru obličeje. Na panelu nástrojů editoru modelů zvolte **možnost vybrat obličej**.
 
-![3&#45;D scény, který znázorňuje model terénu](../designers/media/digit-terrain-model.png)
+4. Rozdělit rovinu V režimu výběru plochy vyberte rovinu, která se má aktivovat pro výběr, a pak ji znovu vyberte, abyste vybrali jenom svoji plošku. Na panelu nástrojů editoru modelů vyberte **rozdělit plochu**. Tím přidáte nové vrcholy do roviny, které ji rozdělí do čtyř oddílů s rovnoměrné velikosti.
 
-Tento model terénu slouží k předvedení efekt přechodu shaderu, který je popsaný v [jak: Vytvoření shaderu přechodu na základě geometrie](../designers/how-to-create-a-geometry-based-gradient-shader.md).
+5. Vytvořte další dílčí dělení. Když je vybraná možnost nové plošky, klikněte na **rozdělit obličej** ještě dvakrát. Tím se vytvoří celkem 64 ploch. Vytvořením dalších dílčích dělení můžete přidělit terénu ještě více podrobností.
+
+6. Zadejte režim výběru bodu. Na panelu nástrojů editoru modelů zvolte **možnost vybrat bod**.
+
+7. Úpravou bodu vytvořte funkci terénu. V režimu výběru bodu vyberte jeden z bodů a pak na panelu nástrojů editoru modelů zvolte nástroj pro **Překlad** . Pole, které představuje bod, se zobrazí na návrhové ploše. Pomocí zelené šipky můžete přesunout pole a tím upravit výšku bodu. Opakujte tento krok pro různé body pro vytváření zajímavých funkcí terénu.
+
+    > [!TIP]
+    > Můžete vybrat několik bodů najednou a upravit je jednotným způsobem.
+
+Model terénu je dokončený. Zde je konečný model znovu s aplikovaným Phongova stínováním:
+
+![3&#45;D scény zobrazující model terénu](../designers/media/digit-terrain-model.png)
+
+Tento model terénu lze použít k předvedení efektu přechodu, který je popsán v tématu [Postupy: vytvoření shaderu přechodu na základě geometrie](../designers/how-to-create-a-geometry-based-gradient-shader.md).
 
 ## <a name="see-also"></a>Viz také:
 

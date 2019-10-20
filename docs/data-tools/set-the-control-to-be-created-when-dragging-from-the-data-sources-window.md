@@ -1,5 +1,5 @@
 ---
-title: Nastavení ovládacího prvku k vytvoření při přetažení z okna zdroje dat
+title: Nastavení ovládacího prvku, který se má vytvořit při přetahování z okna zdrojů dat
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,66 +8,66 @@ helpviewer_keywords:
 - data [Visual Studio], displaying on Windows Forms
 - data [Visual Studio], Data Sources window
 ms.assetid: 20597ff8-0c98-43ec-8fb1-05376804ba48
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 442a98b76efb8013d5d40607e14586299718afc3
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: b5c57b73656f75ae9d99211ba28e38935d3164cb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66715091"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72641031"
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>Nastavení ovládacího prvku, který má být vytvořen při přetažení z okna zdrojů dat
 
-Můžete vytvořit ovládací prvky vázané na data přetažením položek z **zdroje dat** okna do Návrháře WPF nebo Návrhář formulářů Windows. Každá položka v **zdroje dat** okno má výchozí ovládací prvek, který je vytvořen při přetažení do návrháře. Můžete však vytvořit jiného ovládacího prvku.
+Můžete vytvořit ovládací prvky vázané na data přetažením položek z okna **zdroje dat** do návrháře WPF nebo návrháře model Windows Forms. Každá položka v okně **zdroje dat** má výchozí ovládací prvek, který se vytvoří, když ho přetáhnete do návrháře. Můžete ale zvolit, že se má vytvořit jiný ovládací prvek.
 
-## <a name="set-the-controls-to-be-created-for-data-tables-or-objects"></a>Nastavte ovládací prvky mají být vytvořeny pro tabulky dat nebo objekty
+## <a name="set-the-controls-to-be-created-for-data-tables-or-objects"></a>Nastavení ovládacích prvků, které mají být vytvořeny pro tabulky dat nebo pro objekty
 
-Před přetažením položky, které představují tabulky dat nebo objekty z **zdroje dat** okna, můžete použít k zobrazení všech dat v jednom ovládacím prvku nebo v samostatném ovládacím prvku zobrazit každý sloupec nebo vlastnost.
+Před přetažením položek, které reprezentují tabulky dat nebo objekty z okna **zdroje dat** , můžete zvolit zobrazení všech dat v jednom ovládacím prvku nebo zobrazit jednotlivé sloupce nebo vlastnosti v samostatném ovládacím prvku.
 
-V tomto kontextu termín *objekt* odkazuje na vlastní obchodní objekt, entity (v Entity Data Model) nebo objekt vrácený službou.
+V tomto kontextu pojem *objekt* odkazuje na vlastní obchodní objekt, entitu (v model EDM (Entity Data Model)) nebo objekt vrácený službou.
 
-### <a name="to-set-the-controls-to-be-created-for-data-tables-or-objects"></a>Chcete-li nastavit ovládací prvky mají být vytvořeny pro tabulky dat nebo objekty
+### <a name="to-set-the-controls-to-be-created-for-data-tables-or-objects"></a>Nastavení ovládacích prvků, které mají být vytvořeny pro tabulky dat nebo pro objekty
 
-1. Ujistěte se, **WPF** Návrhář nebo **Windows Forms** je otevřený Návrhář.
+1. Ujistěte se, že je Návrhář **WPF** nebo Návrhář **model Windows Forms** otevřený.
 
-2. V **zdroje dat** okna, vyberte položku, která představuje data tabulky nebo objektu, který chcete nastavit.
+2. V okně **zdroje dat** vyberte položku, která představuje datovou tabulku nebo objekt, který chcete nastavit.
 
    > [!TIP]
-   > Pokud **zdroje dat** není otevřené okno, otevřete ho tak, že vyberete **zobrazení** > **ostatní Windows** > **zdroje dat**.
+   > Pokud okno **zdroje dat** není otevřeno, můžete ho otevřít výběrem možnosti **Zobrazit**  >  jiné**zdroje dat** > **Windows** .
 
-3. Klikněte na rozevírací nabídku pro položku a pak klikněte na jednu z následujících možností v nabídce:
+3. Klikněte na rozevírací nabídku pro položku a potom v nabídce klikněte na jednu z následujících položek:
 
-    - Chcete-li zobrazit každé datové pole v samostatném ovládacím prvku, klikněte na tlačítko **podrobnosti**. Při přetažení položky dat do návrháře, tato akce vytvoří jiný ovládací prvek vázaný na data pro každý sloupec nebo vlastnost nadřazené tabulky dat nebo objekt, spolu s popisky pro každý ovládací prvek.
+    - Chcete-li zobrazit jednotlivá datová pole v samostatném ovládacím prvku, klikněte na tlačítko **Podrobnosti**. Když přetáhnete datovou položku do návrháře, tato akce vytvoří jiný ovládací prvek vázaný na data pro každý sloupec nebo vlastnost nadřazené datové tabulky nebo objektu, spolu s popisky pro každý ovládací prvek.
 
-    - K zobrazení všech dat v ovládacím prvku jednoho, vyberte jiný ovládací prvek v seznamu, jako je například **DataGrid** nebo **seznamu** v aplikaci WPF nebo **DataGridView** ve Windows Forms aplikace.
+    - Chcete-li zobrazit všechna data v jednom ovládacím prvku, vyberte jiný ovládací prvek v seznamu, jako je například **DataGrid** nebo **list** v aplikaci WPF nebo **DataGridView** v aplikaci model Windows Forms.
 
-    Seznam dostupných ovládacích prvků, závisí na návrháře, který máte otevřený, kterou verzi rozhraní .NET váš projekt cílí, a určuje, zda jste přidali vlastní ovládací prvky tuto podporu datové vazby k **nástrojů**. Pokud ovládací prvek, který chcete vytvořit není v seznamu dostupných ovládacích prvků, můžete přidat ovládací prvek do seznamu. Další informace najdete v tématu [přidání vlastních ovládacích prvků do okna zdroje dat](../data-tools/add-custom-controls-to-the-data-sources-window.md).
+    Seznam ovládacích prvků, které jsou k dispozici, závisí na tom, který Návrhář máte otevřený, na kterou verzi rozhraní .NET cílí projekt a zda jste přidali vlastní ovládací prvky, které podporují datovou vazbu na **sadu nástrojů**. Pokud ovládací prvek, který chcete vytvořit, není v seznamu dostupných ovládacích prvků, můžete přidat ovládací prvek do seznamu. Další informace najdete v tématu [Přidání vlastních ovládacích prvků do okna zdroje dat](../data-tools/add-custom-controls-to-the-data-sources-window.md).
 
-    Další informace o vytvoření vlastního ovládacího prvku Windows Forms, který lze přidat do seznamu ovládacích prvků pro data tabulky nebo objekty v **zdroje dat** okna, naleznete v tématu [vytvoření uživatelského ovládacího prvku Windows Forms, který podporuje komplexní data Vytvoření vazby](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md).
+    Chcete-li se dozvědět, jak vytvořit vlastní ovládací prvek model Windows Forms, který lze přidat do seznamu ovládacích prvků pro tabulky dat nebo objekty v okně **zdroje dat** , přečtěte si téma [Vytvoření model Windows Forms uživatelského ovládacího prvku, který podporuje složitou datovou vazbu](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md).
 
-## <a name="set-the-controls-to-be-created-for-data-columns-or-properties"></a>Nastavte ovládací prvky mají být vytvořeny pro datové sloupce nebo vlastnosti
+## <a name="set-the-controls-to-be-created-for-data-columns-or-properties"></a>Nastavení ovládacích prvků, které se mají vytvořit pro datové sloupce nebo vlastnosti
 
-Před přetažením položky, která představuje sloupci nebo vlastnosti z objektu **zdroje dat** do okna návrháře, můžete nastavit ovládací prvek, který se má vytvořit.
+Před přetažením položky, která představuje sloupec nebo vlastnost objektu z okna **zdroje dat** do návrháře, lze nastavit ovládací prvek, který má být vytvořen.
 
-### <a name="to-set-the-controls-to-be-created-for-columns-or-properties"></a>Chcete-li nastavit ovládací prvky mají být vytvořeny pro sloupce nebo vlastnosti
+### <a name="to-set-the-controls-to-be-created-for-columns-or-properties"></a>Nastavení ovládacích prvků, které mají být vytvořeny pro sloupce nebo vlastnosti
 
-1. Ujistěte se, **WPF** Návrhář nebo **Windows Forms** je otevřený Návrhář.
+1. Ujistěte se, že je Návrhář **WPF** nebo Návrhář **model Windows Forms** otevřený.
 
-2. V **zdroje dat** okna, rozbalte položku požadovanou tabulku nebo objektu zobrazíte její sloupce nebo vlastnosti.
+2. V okně **zdroje dat** rozbalte požadovanou tabulku nebo objekt, abyste zobrazili její sloupce nebo vlastnosti.
 
-3. Vyberte každý sloupec nebo vlastnost, pro kterou chcete nastavit ovládací prvek, který se má vytvořit.
+3. Vyberte jednotlivé sloupce nebo vlastnosti, u kterých chcete nastavit, aby byl ovládací prvek vytvořen.
 
-4. Klikněte na rozevírací nabídku pro sloupec nebo vlastnost a potom vyberte ovládací prvek, který chcete vytvořit, když je položku přetáhli do návrháře.
+4. Klikněte na rozevírací nabídku pro sloupec nebo vlastnost a potom vyberte ovládací prvek, který chcete vytvořit, když je položka přetažena do návrháře.
 
-     Seznam dostupných ovládacích prvků, závisí na návrháře, který máte otevřený, kterou verzi rozhraní .NET váš projekt cílí, a který vlastní ovládací prvky, které podporují vytváření datových vazeb, které jste přidali do **nástrojů**. Pokud je ovládací prvek, který chcete vytvořit seznam dostupných ovládacích prvků, můžete přidat ovládací prvek do seznamu. Další informace najdete v tématu [přidání vlastních ovládacích prvků do okna zdroje dat](../data-tools/add-custom-controls-to-the-data-sources-window.md).
+     Seznam ovládacích prvků, které jsou k dispozici, závisí na tom, který Návrhář máte otevřený, na kterou verzi rozhraní .NET cílí vaše projekty a na které vlastní ovládací prvky, které podporují datové vazby, které jste přidali do **sady nástrojů**. Pokud je ovládací prvek, který chcete vytvořit, v seznamu dostupných ovládacích prvků, můžete přidat ovládací prvek do seznamu. Další informace najdete v tématu [Přidání vlastních ovládacích prvků do okna zdroje dat](../data-tools/add-custom-controls-to-the-data-sources-window.md).
 
-     Další informace o vytvoření vlastního ovládacího prvku, který lze přidat do seznamu ovládacích prvků pro datové sloupce nebo vlastnosti v **zdroje dat** okna, naleznete v tématu [vytvoření uživatelského ovládacího prvku Windows Forms, který podporuje jednoduchou datovou vazbu](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md).
+     Chcete-li se dozvědět, jak vytvořit vlastní ovládací prvek, který lze přidat do seznamu ovládacích prvků pro datové sloupce nebo vlastnosti v okně **zdroje dat** , přečtěte si téma [Vytvoření model Windows Forms uživatelského ovládacího prvku, který podporuje jednoduchou datovou vazbu](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md).
 
-     Pokud nechcete vytvořit ovládací prvek pro sloupce nebo vlastnosti, vyberte **žádný** v rozevírací nabídce. To je užitečné, pokud chcete přetáhnout do návrháře nadřazené tabulky nebo objektu, ale nechcete zahrnout konkrétní sloupec nebo vlastnost.
+     Pokud nechcete vytvořit ovládací prvek pro sloupec nebo vlastnost, v rozevírací nabídce vyberte **None (žádné** ). To je užitečné, pokud chcete přetáhnout nadřazenou tabulku nebo objekt do návrháře, ale nechcete zahrnout konkrétní sloupec nebo vlastnost.
 
 ## <a name="see-also"></a>Viz také:
 

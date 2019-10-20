@@ -1,5 +1,5 @@
 ---
-title: Načtení vlastností projektu | Dokumentace Microsoftu
+title: Načítají se vlastnosti projektu | Microsoft Docs
 ms.date: 3/16/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,32 +11,32 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f766be25015081338b887a5b08413e77f5f17f9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cac5c55dd8fdeb1ba231d144d94c8be9b680cc6e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342530"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72633172"
 ---
-# <a name="get-project-properties"></a>Získání vlastností projektu
+# <a name="get-project-properties"></a>Získat vlastnosti projektu
 
-Tento návod ukazuje, jak vlastnosti projektu zobrazí v panelu nástrojů.
+Tento návod ukazuje, jak zobrazit vlastnosti projektu v okně nástroje.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
-### <a name="to-create-a-vsix-project-and-add-a-tool-window"></a>Vytvořte projekt VSIX a přidání panelu nástrojů
+### <a name="to-create-a-vsix-project-and-add-a-tool-window"></a>Chcete-li vytvořit projekt VSIX a přidat okno nástrojů
 
-1. Každé rozšíření sady Visual Studio spustí nasazení projektu VSIX, který bude obsahovat rozšíření prostředků. Vytvoření [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX projekt s názvem `ProjectPropertiesExtension`. Šablona projektu VSIX v můžete najít **nový projekt** dialogové okno tak, že "vsix".
+1. Každé rozšíření sady Visual Studio začíná projektem nasazení VSIX, který bude obsahovat prostředky rozšíření. Vytvořte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projekt VSIX s názvem `ProjectPropertiesExtension`. Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** hledáním "VSIX".
 
-2. Přidání panelu nástrojů přidejte šablonu vlastního panelu nástrojů položku s názvem `ProjectPropertiesToolWindow`. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel projektu a vyberte **přidat** > **nová položka**. V **dialogového okna Přidat novou položku**, přejděte na stránku **položky Visual C#**  > **rozšiřitelnost** a vyberte **vlastního panelu nástrojů**. V **název** pole v dolní části dialogového okna, změňte název souboru, aby `ProjectPropertiesToolWindow.cs`. Další informace o tom, jak vytvořit vlastního okna nástroje najdete v tématu [vytváření rozšíření pomocí panelu nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md).
+2. Přidejte okno nástroje přidáním vlastní šablony položky okna nástroje s názvem `ProjectPropertiesToolWindow`. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte **Přidat**  > **Nová položka**. V **dialogovém okně Přidat novou položku**přejít na **prvky vizuálu C#**   > **rozšiřitelnost** a vyberte **vlastní panel nástrojů**. V poli **název** v dolní části dialogového okna změňte název souboru na `ProjectPropertiesToolWindow.cs`. Další informace o tom, jak vytvořit vlastní panel nástrojů, najdete v tématu [Vytvoření rozšíření s oknem nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md).
 
-3. Sestavte řešení a ověřte, že se zkompiluje bez chyb.
+3. Sestavte řešení a ověřte, zda se zkompiluje bez chyb.
 
-### <a name="to-display-project-properties-in-a-tool-window"></a>Chcete-li zobrazit vlastnosti projektu v panelu nástrojů
+### <a name="to-display-project-properties-in-a-tool-window"></a>Zobrazení vlastností projektu v okně nástroje
 
-1. V souboru ProjectPropertiesToolWindowCommand.cs, přidejte následující příkazy using.
+1. V souboru ProjectPropertiesToolWindowCommand.cs přidejte následující direktivy using.
 
     ```csharp
     using EnvDTE;
@@ -44,9 +44,9 @@ Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK 
 
     ```
 
-2. V *ProjectPropertiesToolWindowControl.xaml*, odeberte existující tlačítko a přidejte ovládací prvek TreeView z panelu nástrojů. Můžete také odebrat z obslužnou rutinu události kliknutí *ProjectPropertiesToolWindowControl.xaml.cs* souboru.
+2. V souboru *ProjectPropertiesToolWindowControl. XAML*odeberte existující tlačítko a přidejte prvek TreeView z panelu nástrojů. Můžete také odebrat obslužnou rutinu události Click ze souboru *ProjectPropertiesToolWindowControl.XAML.cs* .
 
-3. V *ProjectPropertiesToolWindowCommand.cs*, použijte `ShowToolWindow()` metodu pro projekt otevřít a číst jejich vlastnosti, pak přidejte vlastnosti na ovládacím prvku TreeView. Kód pro ShowToolWindow by měl vypadat nějak takto:
+3. V *ProjectPropertiesToolWindowCommand.cs*pomocí metody `ShowToolWindow()` otevřete projekt a načtěte jeho vlastnosti a pak přidejte vlastnosti do prvku TreeView. Kód pro ShowToolWindow by měl vypadat takto:
 
     ```csharp
     private void ShowToolWindow(object sender, EventArgs e)
@@ -93,10 +93,10 @@ Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK 
     }
     ```
 
-4. Sestavte projekt a spusťte ladění. Experimentální instanci aplikace by se zobrazit.
+4. Sestavte projekt a spusťte ladění. Měla by se zobrazit experimentální instance.
 
-5. V experimentální instanci aplikace otevřete projekt.
+5. V experimentální instanci otevřete projekt.
 
-6. V **zobrazení** > **ostatní Windows** klikněte na tlačítko **ProjectPropertiesToolWindow**.
+6. V **zobrazení**  > **jiných oknech** klikněte na **ProjectPropertiesToolWindow**.
 
-  Měli byste vidět ovládací prvek stromové struktury v panelu nástrojů spolu s názvem první projekt a všechny jeho vlastnosti projektu.
+  V okně nástroje byste měli vidět ovládací prvek strom spolu s názvem prvního projektu a všech jeho vlastností projektu.

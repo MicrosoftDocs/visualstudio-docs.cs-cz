@@ -9,176 +9,176 @@ helpviewer_keywords:
 - custom controls [Visual Studio], Data Sources Window
 - Data Sources Window, controls
 ms.assetid: b1488366-6dfb-454e-9751-f42fd3f3ddfb
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d1584f0d6a772a6f24578f9693832fb6b0812444
-ms.sourcegitcommit: 3cc73e74921a9ceb622542e0e263abeebc455c00
+ms.openlocfilehash: 296f1a9ca076e9728c65d240bab5a81f80669783
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67624497"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648621"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-simple-data-binding"></a>Vytvoření uživatelského ovládacího prvku modelu Windows Forms, který podporuje jednoduchou datovou vazbu
 
-Při zobrazení dat ve formulářích v aplikacích Windows, můžete vybrat z existujících ovládacích prvků **nástrojů**, nebo můžete vytvořit vlastní ovládací prvky, pokud vaše aplikace vyžaduje funkce, které nejsou k dispozici ve standardní ovládací prvky. Tento návod ukazuje, jak vytvořit ovládací prvek, který implementuje <xref:System.ComponentModel.DefaultBindingPropertyAttribute>. Ovládací prvky, které implementují <xref:System.ComponentModel.DefaultBindingPropertyAttribute> může obsahovat jednu vlastnost, která může být vázaný na data. Tyto ovládací prvky jsou podobné <xref:System.Windows.Forms.TextBox> nebo <xref:System.Windows.Forms.CheckBox>.
+Při zobrazování dat ve formulářích v aplikacích systému Windows můžete zvolit existující ovládací prvky z **panelu nástrojů**, nebo můžete vytvořit vlastní ovládací prvky, pokud vaše aplikace vyžaduje funkce, které nejsou k dispozici ve standardních ovládacích prvcích. Tento návod ukazuje, jak vytvořit ovládací prvek, který implementuje <xref:System.ComponentModel.DefaultBindingPropertyAttribute>. Ovládací prvky, které implementují <xref:System.ComponentModel.DefaultBindingPropertyAttribute> mohou obsahovat jednu vlastnost, která může být svázána s daty. Tyto ovládací prvky jsou podobné <xref:System.Windows.Forms.TextBox> nebo <xref:System.Windows.Forms.CheckBox>.
 
-Další informace o vytváření ovládacího prvku, naleznete v tématu [vývoj prvky Windows Forms v době návrhu](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time).
+Další informace o vytváření ovládacích prvků naleznete v tématu [vývoj model Windows Formsch ovládacích prvků v době návrhu](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time).
 
-Při vytváření ovládacích prvků pro použití ve scénářích datové vazby, měli byste implementovat jednu z následujících atributů datové vazby:
+Při vytváření ovládacích prvků pro použití ve scénářích vázání dat byste měli implementovat jeden z následujících atributů datové vazby:
 
-|Použití atributu vázání dat|
+|Použití atributu datové vazby|
 | - |
-|Implementace <xref:System.ComponentModel.DefaultBindingPropertyAttribute> na jednoduché ovládací prvky, jako je <xref:System.Windows.Forms.TextBox>, který zobrazí jeden sloupec (nebo vlastnost) dat. (Tento proces je popsán v této stránce průvodce.)|
-|Implementace <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> na ovládací prvky, jako je <xref:System.Windows.Forms.DataGridView>, který zobrazí seznamy (nebo tabulky) data. Další informace najdete v tématu [vytvoření uživatelského ovládacího prvku Windows Forms, který podporuje rozšířené datové vazby](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md).|
-|Implementace <xref:System.ComponentModel.LookupBindingPropertiesAttribute> na ovládací prvky, jako je <xref:System.Windows.Forms.ComboBox>, který zobrazí seznamy (nebo tabulky) data, ale také budete muset k dispozici do jednoho sloupce nebo vlastnosti. Další informace najdete v tématu [vytvoření uživatelského ovládacího prvku Windows Forms, který podporuje vazbu vyhledávacích dat](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).|
+|Implementujte <xref:System.ComponentModel.DefaultBindingPropertyAttribute> pro jednoduché ovládací prvky, jako je <xref:System.Windows.Forms.TextBox>, které zobrazují jeden sloupec (nebo vlastnost) dat. (Tento postup je popsaný v této stránce s návodem.)|
+|Implementujte <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> na ovládací prvky, jako je <xref:System.Windows.Forms.DataGridView>, které zobrazují seznamy (nebo tabulky) dat. Další informace najdete v tématu [vytvoření model Windows Forms uživatelského ovládacího prvku, který podporuje složitou datovou vazbu](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md).|
+|Implementujte <xref:System.ComponentModel.LookupBindingPropertiesAttribute> na ovládací prvky, jako je <xref:System.Windows.Forms.ComboBox>, které zobrazují seznamy (nebo tabulky) dat, ale také musí obsahovat jeden sloupec nebo vlastnost. Další informace najdete v tématu [vytvoření model Windows Forms uživatelského ovládacího prvku, který podporuje vazbu vyhledávacích dat](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).|
 
-Tento návod vytvoří jednoduchý ovládací prvek zobrazující data z jednoho sloupce v tabulce. V tomto příkladu `Phone` sloupec `Customers` tabulky z ukázkové databáze Northwind. Jednoduché uživatelský ovládací prvek zobrazí zákazníků telefonní čísla ve standardním formátu telefonní číslo, pomocí <xref:System.Windows.Forms.MaskedTextBox> a nastavení masky na telefonní číslo.
+Tento návod vytvoří jednoduchý ovládací prvek, který zobrazí data z jednoho sloupce v tabulce. V tomto příkladu se používá sloupec `Phone` tabulky `Customers` z ukázkové databáze Northwind. Jednoduchý uživatelský ovládací prvek zobrazuje telefonní čísla zákazníků ve standardním formátu pro telefonní číslo pomocí <xref:System.Windows.Forms.MaskedTextBox> a nastavuje masku na telefonní číslo.
 
-V tomto návodu se dozvíte, jak:
+V tomto návodu se naučíte:
 
-- Vytvořte nový **formulářová aplikace Windows**.
+- Vytvořte novou **model Windows Forms aplikaci**.
 
-- Přidat nový **uživatelský ovládací prvek** do projektu.
+- Přidejte do projektu nový **uživatelský ovládací prvek** .
 
-- Vizuální návrh uživatelského ovládacího prvku.
+- Vizuálně Navrhněte uživatelský ovládací prvek.
 
-- Implementace `DefaultBindingProperty` atribut.
+- Implementujte atribut `DefaultBindingProperty`.
 
-- Vytvoření datové sady **konfigurace zdroje dat** průvodce.
+- Vytvořte datovou sadu pomocí průvodce **konfigurací zdroje dat** .
 
-- Nastavit **Phone** sloupec **zdroje dat** okna nový ovládací prvek.
+- Nastavte sloupec **telefon** v okně **zdroje dat** na použití nového ovládacího prvku.
 
-- Vytvořte formulář pro zobrazení dat v ovládacím prvku nové.
+- Vytvořte formulář pro zobrazení dat v novém ovládacím prvku.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Tento návod používá SQL Server Express LocalDB a ukázkové databáze Northwind.
+Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
-1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji z [SQL Server Express stránku pro stažení](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program sady Visual Studio**. V **instalační program sady Visual Studio**, jako součást můžete nainstalovat SQL Server Express LocalDB **ukládání a zpracování dat** úlohy, nebo jako jednotlivých komponent.
+1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio**můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
 
-2. Instalace ukázkové databáze Northwind pomocí následujících kroků:
+2. Nainstalujte ukázkovou databázi Northwind pomocí následujících kroků:
 
-    1. V sadě Visual Studio, otevřete **Průzkumník objektů systému SQL Server** okna. (Průzkumník objektů systému SQL Server je nainstalován jako součást **ukládání a zpracování dat** zatížení **instalační program sady Visual Studio**.) Rozbalte **systému SQL Server** uzlu. Klikněte pravým tlačítkem na instanci LocalDB a vyberte **nový dotaz**.
+    1. V aplikaci Visual Studio otevřete okno **Průzkumník objektů systému SQL Server** . (Průzkumník objektů systému SQL Server je nainstalován v rámci úlohy **úložiště dat a zpracování** v **instalační program pro Visual Studio**.) Rozbalte uzel **SQL Server** . Klikněte pravým tlačítkem na instanci LocalDB a vyberte **Nový dotaz**.
 
-       Otevře se okno editor dotazů.
+       Otevře se okno editoru dotazů.
 
-    2. Kopírovat [Northwind příkazů jazyka Transact-SQL skriptů](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind úplně od začátku a naplní daty.
+    2. Zkopírujte [skript Transact-SQL Northwind](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní ji daty.
 
-    3. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
+    3. Vložte skript T-SQL do editoru dotazů a pak klikněte na tlačítko **Spustit** .
 
-       Po chvilce dotaz doběhnutí a vytvořit databázi Northwind.
+       Po krátké době se dotaz dokončí a vytvoří se databáze Northwind.
 
-## <a name="create-a-windows-forms-application"></a>Vytvoření aplikace Windows Forms
+## <a name="create-a-windows-forms-application"></a>Vytvoření aplikace model Windows Forms
 
-Prvním krokem je vytvoření **formulářová aplikace Windows**:
+Prvním krokem je vytvoření **model Windows Forms aplikace**:
 
-1. V sadě Visual Studio na **souboru** nabídce vyberte možnost **nový** > **projektu**.
+1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový**  > **projekt**.
 
-2. Rozbalte buď **Visual C#** nebo **jazyka Visual Basic** v levém podokně vyberte **Windows Desktop**.
+2. V levém podokně rozbalte buď **vizuál C#**  , nebo **Visual Basic** a pak vyberte **Desktop Windows**.
 
-3. V prostředním podokně, vyberte **aplikace Windows Forms** typ projektu.
+3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
-4. Pojmenujte projekt **SimpleControlWalkthrough**a klikněte na tlačítko **OK**.
+4. Pojmenujte projekt **SimpleControlWalkthrough**a klikněte na **tlačítko OK**.
 
-     **SimpleControlWalkthrough** projekt je vytvořen a přidán do **Průzkumníka řešení**.
+     Vytvoří se projekt **SimpleControlWalkthrough** a přidá se do **Průzkumník řešení**.
 
 ## <a name="add-a-user-control-to-the-project"></a>Přidat uživatelský ovládací prvek do projektu
 
-Tento návod vytvoří jednoduchý data neumožňující vazbu ovládacího prvku z **uživatelský ovládací prvek**. Přidat **uživatelský ovládací prvek** položkou **SimpleControlWalkthrough** projektu:
+Tento návod vytvoří jednoduchý ovládací prvek s datovou vazbou z **uživatelského ovládacího prvku**. Přidejte položku **uživatelského ovládacího prvku** do projektu **SimpleControlWalkthrough** :
 
-1. Z **projektu** nabídce zvolte **přidat uživatelský ovládací prvek**.
+1. V nabídce **projekt** vyberte možnost **Přidat uživatelský ovládací prvek**.
 
-2. Typ **PhoneNumberBox** název oblasti, a klikněte na **přidat**.
+2. Do oblasti název zadejte **PhoneNumberBox** a klikněte na **Přidat**.
 
-     **PhoneNumberBox** ovládací prvek je přidán do **Průzkumníka řešení**a otevře v návrháři.
+     Ovládací prvek **PhoneNumberBox** je přidán do **Průzkumník řešení**a otevře se v návrháři.
 
-## <a name="design-the-phonenumberbox-control"></a>Návrh PhoneNumberBox ovládacího prvku
+## <a name="design-the-phonenumberbox-control"></a>Návrh ovládacího prvku PhoneNumberBox
 
-Tento názorný postup rozšiřují existující <xref:System.Windows.Forms.MaskedTextBox> vytvořit **PhoneNumberBox** ovládacího prvku:
+Tento návod rozbalí existující <xref:System.Windows.Forms.MaskedTextBox> pro vytvoření ovládacího prvku **PhoneNumberBox** :
 
-1. Přetáhněte <xref:System.Windows.Forms.MaskedTextBox> z **nástrojů** na návrhové ploše uživatelský ovládací prvek.
+1. Přetáhněte <xref:System.Windows.Forms.MaskedTextBox> ze **sady nástrojů** na návrhovou plochu uživatelského ovládacího prvku.
 
-2. Vyberte na inteligentní značku <xref:System.Windows.Forms.MaskedTextBox> jste právě přetáhli a zvolte **nastavena maska**.
+2. Vyberte inteligentní značku na <xref:System.Windows.Forms.MaskedTextBox>, kterou jste právě přetáhli, a zvolte **nastavit masku**.
 
-3. Vyberte **telefonní číslo** v **vstupní maska** dialogové okno a klikněte na tlačítko **OK** k nastavení masky.
+3. V dialogovém okně **vstupní maska** vyberte **telefonní číslo** a kliknutím na tlačítko **OK** nastavte masku.
 
-## <a name="add-the-required-data-binding-attribute"></a>Přidat požadovaný atribut vázání dat
+## <a name="add-the-required-data-binding-attribute"></a>Přidání požadovaného atributu datové vazby
 
-Pro jednoduché ovládací prvky tuto podporu vázání dat, implementujte <xref:System.ComponentModel.DefaultBindingPropertyAttribute>:
+Pro jednoduché ovládací prvky, které podporují datovou vazbu, implementujte <xref:System.ComponentModel.DefaultBindingPropertyAttribute>:
 
-1. Přepnout **PhoneNumberBox** ovládacího prvku na zobrazení kódu. (Na **zobrazení** nabídce zvolte **kód**.)
+1. Přepněte ovládací prvek **PhoneNumberBox** do zobrazení kódu. (V nabídce **zobrazení** vyberte položku **kód**.)
 
-2. Nahraďte kód v **PhoneNumberBox** následujícím kódem:
+2. Nahraďte kód v **PhoneNumberBox** následujícím způsobem:
 
      [!code-csharp[VbRaddataDisplaying#3](../data-tools/codesnippet/CSharp/create-a-windows-forms-user-control-that-supports-simple-data-binding_1.cs)]
      [!code-vb[VbRaddataDisplaying#3](../data-tools/codesnippet/VisualBasic/create-a-windows-forms-user-control-that-supports-simple-data-binding_1.vb)]
 
-3. Z **sestavení** nabídce zvolte **sestavit řešení**.
+3. V nabídce **sestavení** klikněte na příkaz **Sestavit řešení**.
 
 ## <a name="create-a-data-source-from-your-database"></a>Vytvoření zdroje dat z databáze
 
-Tento krok používá **konfigurace zdroje dat** průvodce k vytvoření zdroje dat na základě `Customers` tabulky v ukázkové databázi Northwind. Musíte mít přístup k ukázkové databázi Northwind k vytvoření připojení. Informace o instalaci ukázkové databáze Northwind naleznete v tématu [jak: Instalace ukázkových databází](../data-tools/installing-database-systems-tools-and-samples.md).
+Tento krok používá Průvodce **konfigurací zdroje dat** k vytvoření zdroje dat založeného na `Customers` tabulce v ukázkové databázi Northwind. Abyste mohli vytvořit připojení, musíte mít přístup k ukázkové databázi Northwind. Informace o nastavení ukázkové databáze Northwind najdete v tématu [Postup: Instalace ukázkových databází](../data-tools/installing-database-systems-tools-and-samples.md).
 
-1. Chcete-li otevřít **zdroje dat** okno na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
+1. Chcete-li otevřít okno **zdroje dat** , klikněte v nabídce **data** na možnost **Zobrazit zdroje dat**.
 
-2. V **zdroje dat** okně **přidat nový zdroj dat** spustit **konfigurace zdroje dat** průvodce.
+2. V okně **zdroje dat** vyberte možnost **Přidat nový zdroj dat** a spusťte průvodce **konfigurací zdroje dat** .
 
-3. Na **zvolte typ zdroje dat** stránce **databáze**a potom klikněte na tlačítko **Další**.
+3. Na stránce **Zvolte typ zdroje dat** vyberte možnost **databáze**a poté klikněte na tlačítko **Další**.
 
-4. Na **vyberte datové připojení** stránce, proveďte jednu z následujících akcí:
+4. Na stránce **Vyberte datové připojení** proveďte jednu z následujících akcí:
 
     - Pokud je připojení dat k ukázkové databázi Northwind k dispozici v rozevíracím seznamu, vyberte je.
 
-    - Vyberte **nové připojení** ke spuštění **přidat/změnit připojení** dialogové okno.
+    - Vyberte **nové připojení** , aby se spustilo dialogové okno **Přidat nebo upravit připojení** .
 
-5. Pokud vaše databáze vyžaduje heslo, vyberte možnost zahrnutí důvěrných osobních údajů a pak klikněte na tlačítko **Další**.
+5. Pokud vaše databáze vyžaduje heslo, vyberte možnost zahrnutí citlivých dat a potom klikněte na tlačítko **Další**.
 
-6. Na **uložit připojovací řetězec do konfiguračního souboru aplikace** klikněte na **Další**.
+6. Na stránce **Uložit připojovací řetězec do konfiguračního souboru aplikace** klikněte na tlačítko **Další**.
 
-7. Na **zvolte vaše databázové objekty** stránce, rozbalte **tabulky** uzlu.
+7. Na stránce **zvolit databázové objekty** rozbalte uzel **tabulky** .
 
-8. Vyberte `Customers` tabulku a pak klikněte na tlačítko **Dokončit**.
+8. Vyberte tabulku `Customers` a pak klikněte na **Dokončit**.
 
-     **NorthwindDataSet** se přidá do vašeho projektu a `Customers` se zobrazí v tabulce **zdroje dat** okna.
+     **NorthwindDataSet** je přidán do projektu a tabulka `Customers` se zobrazí v okně **zdroje dat** .
 
-## <a name="set-the-phone-column-to-use-the-phonenumberbox-control"></a>Nastavte sloupec telefonu, aby pomocí ovládacího prvku PhoneNumberBox
+## <a name="set-the-phone-column-to-use-the-phonenumberbox-control"></a>Nastavit sloupec pro telefon na použití ovládacího prvku PhoneNumberBox
 
-V rámci **zdroje dat** okně můžete nastavit ovládacího prvku má být vytvořen před přetažení položek do formuláře:
+V okně **zdroje dat** můžete nastavit, aby byl ovládací prvek vytvořen před přetažením položek do formuláře:
 
-1. Otevřít **Form1** v návrháři.
+1. Otevřete **Form1** v návrháři.
 
-2. Rozbalte **zákazníkům** uzlu **zdroje dat** okno.
+2. Rozbalte uzel **zákazníci** v okně **zdroje dat** .
 
-3. Klikněte na šipku rozevíracího seznamu **zákazníkům** uzel a zvolte **podrobnosti** ze seznamu ovládacích prvků.
+3. V uzlu **Customers** klikněte na šipku rozevíracího seznamu a v seznamu ovládacích prvků vyberte možnost **Podrobnosti** .
 
-4. Klikněte na šipku rozevíracího seznamu **Phone** sloupce a zvolte **vlastní**.
+4. Klikněte na šipku rozevíracího seznamu ve sloupci **telefon** a vyberte možnost **přizpůsobit**.
 
-5. Vyberte **PhoneNumberBox** ze seznamu **přidružené ovládací prvky** v **možnosti přizpůsobení uživatelského rozhraní dat** dialogové okno.
+5. Vyberte **PhoneNumberBox** ze seznamu **přidružených ovládacích prvků** v dialogovém okně **Možnosti přizpůsobení uživatelského rozhraní dat** .
 
-6. Klikněte na šipku rozevíracího seznamu **Phone** sloupce a zvolte **PhoneNumberBox**.
+6. Klikněte na šipku rozevíracího seznamu ve sloupci **telefon** a vyberte možnost **PhoneNumberBox**.
 
-## <a name="add-controls-to-the-form"></a>Přidání ovládacích prvků do formuláře
+## <a name="add-controls-to-the-form"></a>Přidat ovládací prvky do formuláře
 
-Můžete vytvořit ovládací prvky vázané na data přetažením položek z **zdroje dat** okna do formuláře.
+Můžete vytvořit ovládací prvky vázané na data přetažením položek z okna **zdroje dat** do formuláře.
 
-Chcete-li vytvořit ovládací prvky vázané na data ve formuláři, přetáhněte hlavní **zákazníkům** uzlu z **zdroje dat** okna do formuláře a ověřte, že **PhoneNumberBox** je ovládací prvek slouží k zobrazení dat v **Phone** sloupce.
+Chcete-li vytvořit ovládací prvky vázané na data na formuláři, přetáhněte hlavní uzel **Customers** z okna **zdroje dat** do formuláře a ověřte, zda se ovládací prvek **PhoneNumberBox** používá k zobrazení dat ve sloupci **telefon** .
 
-Ovládací prvky vázaných dat pomocí popisků se zobrazí ve formuláři, spolu s pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů. A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource>, a <xref:System.Windows.Forms.BindingNavigator> zobrazují v panelu komponent.
+Ovládací prvky vázané na data s popisnými popisky se zobrazí ve formuláři spolu s pruhem nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů. V zásobníku komponent se zobrazí [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>.
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 
-Stisknutím klávesy **F5** ke spuštění aplikace.
+Stisknutím klávesy **F5** spusťte aplikaci.
 
 ## <a name="next-steps"></a>Další kroky
 
-V závislosti na požadavcích aplikace existuje několik kroků, které můžete provést po vytvoření ovládacího prvku, který podporuje datovou vazbu. Některé typické další postup je následující:
+V závislosti na požadavcích vaší aplikace existuje několik kroků, které můžete chtít provést po vytvoření ovládacího prvku, který podporuje datovou vazbu. Mezi typické další kroky patří:
 
-- Umístění vlastních ovládacích prvků do knihovny ovládacích prvků, lze je použít v jiných aplikacích.
+- Vlastní ovládací prvky můžete umístit do knihovny ovládacích prvků, abyste je mohli znovu použít v jiných aplikacích.
 
-- Vytváření ovládacích prvků, které podporují složitější scénáře datových vazeb. Další informace najdete v tématu [vytvoření uživatelského ovládacího prvku Windows Forms, který podporuje rozšířené datové vazby](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md) a [vytvoření uživatelského ovládacího prvku Windows Forms, který podporuje vazbu vyhledávacích dat](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).
+- Vytváření ovládacích prvků, které podporují složitější scénáře vázání dat. Další informace najdete v tématu [vytvoření model Windows Forms uživatelského ovládacího prvku, který podporuje složitou datovou vazbu](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md) a [Vytvoření model Windows Forms uživatelského ovládacího prvku, který podporuje vazbu vyhledávacích dat](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).
 
 ## <a name="see-also"></a>Viz také:
 

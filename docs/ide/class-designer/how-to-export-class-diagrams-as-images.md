@@ -7,35 +7,35 @@ f1_keywords:
 helpviewer_keywords:
 - class diagrams, exporting as images
 ms.assetid: c57055c5-1340-449f-b9d3-ca6f87e2f69a
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fb8f735478da16989830a1a68c239b9a2a98496
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0bceb724784f70e3b1c527507eb7d837558c7d0f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975200"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72631745"
 ---
 # <a name="how-to-export-class-diagrams-as-images"></a>Postupy: Export diagramů tříd jako obrázků
 
-Export diagramu tříd, který jste vytvořili z kódu v projektu, uložte jako obrázek diagramu. Pokud chcete místo toho export diagramů tříd UML, přečtěte si téma [exportování diagramů jako obrázků](../../modeling/export-diagrams-as-images.md).
+Chcete-li exportovat diagram tříd, který jste vytvořili z kódu v projektu, uložte diagram jako obrázek. Pokud chcete místo toho exportovat diagramy tříd UML, přečtěte si téma [Export diagramů jako obrázků](../../modeling/export-diagrams-as-images.md).
 
-## <a name="export-a-diagram"></a>Exportovat diagram
+## <a name="export-a-diagram"></a>Export diagramu
 
-1. Otevřete diagram tříd (*.cd*) soubor.
+1. Otevřete soubor diagramu tříd ( *. CD*).
 
-2. Z **Diagram tříd** nabídky nebo surface místní nabídky diagramu zvolte **exportovat Diagram jako obrázek**.
+2. V nabídce **diagramu tříd** nebo v místní nabídce Surface diagramu vyberte možnost **Exportovat diagram jako obrázek**.
 
 3. Vyberte diagram.
 
 4. Vyberte formát, který chcete.
 
-5. Zvolte **exportovat** pro dokončení exportu.
+5. Pro dokončení exportu vyberte **exportovat** .
 
-Automaticky aktualizovat exportované obrázky, které jsou odkazované z jiných dokumentů, exportujte diagram znovu v sadě Visual Studio.
+Chcete-li automaticky aktualizovat exportované obrázky, které jsou propojeny z jiných dokumentů, exportujte diagram znovu v aplikaci Visual Studio.
 
 ## <a name="see-also"></a>Viz také:
 

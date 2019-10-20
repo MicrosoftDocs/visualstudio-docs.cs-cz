@@ -1,5 +1,5 @@
 ---
-title: Najít – příkaz | Dokumentace Microsoftu
+title: Najít příkaz | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,78 +11,62 @@ helpviewer_keywords:
 - Edit.Find command
 ms.assetid: f0c705dc-2b97-423d-abbf-5584d4827208
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ee744a8ab3a22d640f3d48e7291b546f36415d24
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6ce0e4a3aaca752cbdeda0a83e469977306c3404
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68199307"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657686"
 ---
 # <a name="find-command"></a>Najít – příkaz
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Hledá v souborech pomocí některé podsady z možností, které jsou k dispozici na **najít v souborech** karty **najít a nahradit** okna.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-Edit.Find findwhat [/case] [/doc | /proc | /open | /sel]   
-[/markall] [/options] [/reset] [/up] [/wild | /regex] [/word]  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `findwhat`  
- Povinný parametr. Text tak, aby odpovídaly.  
-  
-## <a name="switches"></a>Přepínače  
- /Case nebo /c  
- Volitelné. Odpovídá dojde pouze v případě, že velká a malá písmena přesně odpovídá platformám zadaným v `findwhat` argument.  
-  
- / DOC nebo /d  
- Volitelné. Vyhledá aktuálním dokumentu. Zadat pouze jeden z oborů dostupných hledání `/doc`, `/proc`, `/open`, nebo `/sel`.  
-  
- /markall nebo /m  
- Volitelné. Umístí obrázek na každém řádku, který obsahuje shodu hledání v rámci aktuálního dokumentu.  
-  
- /Open nebo /o  
- Volitelné. Vyhledá všechny otevřené dokumenty, jako by byly jeden dokument. Zadat pouze jeden z oborů dostupných hledání `/doc`, `/proc`, `/open`, nebo `/sel`.  
-  
- / Options nebo /t  
- Volitelné. Zobrazí seznam aktuální nastavení možnosti hledání a nebude provádět vyhledávání.  
-  
- /proc nebo /p  
- Volitelné. Hledá aktuální proceduře. Zadat pouze jeden z oborů dostupných hledání `/doc`, `/proc`, `/open`, nebo `/sel`.  
-  
- / Reset nebo /e  
- Volitelné. Vrátí možnosti hledání na jejich výchozí nastavení a nebude provádět vyhledávání.  
-  
- /sel nebo /s  
- Volitelné. Vyhledá pouze aktuální výběr. Zadat pouze jeden z oborů dostupných hledání `/doc`, `/proc`, `/open`, nebo `/sel`.  
-  
- /Up nebo /u  
- Volitelné. Vyhledávání z aktuálního umístění v souboru směrem k začátku souboru. Ve výchozím nastavení začne hledání na aktuální pozici v souboru a hledání na konci souboru.  
-  
- /Regex nebo/r  
- Volitelné. Používá předdefinované speciální znaky v `findwhat` argument jako zápisy, které představují vzorů textu spíše než literálními znaky. Úplný seznam znaky regulárního výrazu, naleznete v tématu [regulární výrazy](../../ide/using-regular-expressions-in-visual-studio.md).  
-  
- /Wild nebo/l  
- Volitelné. Používá předdefinované speciální znaky v `findwhat` argument jako zápisy představující znak nebo posloupnost znaků.  
-  
- lze nebo /w  
- Volitelné. Vyhledá pouze celá slova.  
-  
-## <a name="example"></a>Příklad  
- Tento příklad vyhledá velká a malá písmena pro slovo "somestring" v aktuálně vybrané části kódu.  
-  
-```  
->Edit.Find somestring /sel /case  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Okno příkazového řádku](../../ide/reference/command-window.md)   
- [Pole najít/příkaz](../../ide/find-command-box.md)   
- [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)   
- [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)
+Vyhledá soubory pomocí podmnožiny možností dostupných na kartě **najít v souborech** okna **Najít a nahradit** .
+
+## <a name="syntax"></a>Syntaxe
+
+```
+Edit.Find findwhat [/case] [/doc | /proc | /open | /sel]
+[/markall] [/options] [/reset] [/up] [/wild | /regex] [/word]
+```
+
+## <a name="arguments"></a>Arguments
+ `findwhat` nutné. Text, který se má shodovat.
+
+## <a name="switches"></a>Přepínače
+ /Case nebo/c volitelné. Shody se objeví pouze v případě, že velká a malá písmena přesně odpovídají znakům zadaným v argumentu `findwhat`.
+
+ /doc nebo/d volitelné. Vyhledá pouze aktuální dokument. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open` nebo `/sel`.
+
+ /markall nebo/m volitelné. Umístí grafiku na každý řádek, který obsahuje shodu hledání v rámci aktuálního dokumentu.
+
+ /Open nebo/o volitelné. Vyhledá všechny otevřené dokumenty, jako by se jednalo o jeden dokument. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open` nebo `/sel`.
+
+ /Options nebo/t volitelné. Zobrazí seznam aktuálních nastavení možností hledání a neprovádí hledání.
+
+ /Proc nebo/p volitelné. Vyhledá pouze aktuální proceduru. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open` nebo `/sel`.
+
+ /Reset po vyčištění nebo/e volitelné. Vrátí možnosti hledání do jejich výchozího nastavení a neprovádí hledání.
+
+ /SEL nebo/s volitelné. Vyhledá pouze aktuální výběr. Zadejte pouze jeden z dostupných oborů hledání, `/doc`, `/proc`, `/open` nebo `/sel`.
+
+ /up nebo/u je nepovinný. Vyhledá z aktuálního umístění v souboru směrem k začátku souboru. Ve výchozím nastavení vyhledávání začíná na aktuálním umístění v souboru a hledá na konci souboru.
+
+ /Regex nebo/r volitelné. Používá předem definované speciální znaky v argumentu `findwhat` jako notace, které reprezentují vzory textu, nikoli literální znaky. Úplný seznam znaků regulárních výrazů naleznete v tématu [regulární výrazy](../../ide/using-regular-expressions-in-visual-studio.md).
+
+ /Wild nebo/l volitelné. Používá předem definované speciální znaky v argumentu `findwhat` jako notace, které reprezentují znak nebo sekvenci znaků.
+
+ /Word nebo/w volitelné. Vyhledává pouze celá slova.
+
+## <a name="example"></a>Příklad
+ V tomto příkladu se v aktuálně vybrané části kódu provede hledání s rozlišováním velkých a malých písmen pro slovo "someString".
+
+```
+>Edit.Find somestring /sel /case
+```
+
+## <a name="see-also"></a>Viz také
+ [Příkazové okno](../../ide/reference/command-window.md) [Najít/příkaz](../../ide/find-command-box.md) [aplikace Visual Studio příkazy](../../ide/reference/visual-studio-commands.md) sady Visual Studio [aliasy](../../ide/reference/visual-studio-command-aliases.md) příkazů sady Visual Studio

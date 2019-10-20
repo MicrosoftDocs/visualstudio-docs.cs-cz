@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Set Current Thread command
 - Debug.SetCurrentThread command
 ms.assetid: 9917ed1d-6c30-4d94-b2f0-69acce74f1b2
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ea652f04295871f9437d80555254caecab87a48
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 83e7e2f2751d76571e980e0d0e83aa62f174d91c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926065"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645309"
 ---
 # <a name="set-current-thread-command"></a>Nastavit aktuální vlákno – příkaz
 Nastaví zadané vlákno jako aktuální vlákno.
@@ -32,7 +32,7 @@ Debug.SetCurrentThread index
 ## <a name="arguments"></a>Arguments
 `index`
 
-Povinný parametr. Vybere vlákno podle jeho indexu.
+Požadováno. Vybere vlákno podle jeho indexu.
 
 ## <a name="example"></a>Příklad
 

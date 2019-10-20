@@ -14,25 +14,25 @@ helpviewer_keywords:
 - typed datasets, n-tier applications
 - multiple tier applications
 ms.assetid: f6ae2ee0-ea5f-4a79-8f4b-e21c115afb20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c6da3f51a249aaf52cf3f20b90f3add6ceeb7aa1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b96f2e51048216388eea50935a1ced536d8d230b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564753"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648035"
 ---
 # <a name="work-with-datasets-in-n-tier-applications"></a>Práce s datovými sadami ve vícevrstvých aplikacích
 
-*Vícevrstvé datové aplikace* datově orientovaných aplikací, které jsou rozdělené do několika logické vrstvy jsou (nebo *úrovně*). Jinými slovy vícevrstvé datové aplikace je aplikace, která je rozdělena do několika projektů s vrstvě přístupu k datům, vrstvu obchodní logiky a prezentační vrstvou každý ve svém vlastním projektu. Další informace najdete v tématu [přehled vícevrstvých datových aplikací](../data-tools/n-tier-data-applications-overview.md).
+*N-vrstvé datové aplikace* jsou aplikace zaměřené na data, které jsou rozdělené do několika logických vrstev (nebo *vrstev*). Jinými slovy: n-vrstvá datová aplikace je aplikace, která je rozdělená na více projektů, s úrovní přístupu k datům, vrstvou obchodní logiky a prezentační vrstvou každého ve vlastním projektu. Další informace najdete v tématu [N-vrstvých datových aplikací – přehled](../data-tools/n-tier-data-applications-overview.md).
 
-Typové datové sady vylepšené tak, aby do samostatných projektů se můžou generovat třídy TableAdapter a datové sady. To poskytuje schopnost rychle samostatné aplikace a generovat vícevrstvých datových aplikací.
+Typové datové sady byly vylepšeny, takže třídy objekty TableAdapter a DataSet lze generovat do diskrétních projektů. Díky tomu je možné rychle oddělit vrstvy aplikace a generovat n-vrstvou datovou aplikaci.
 
-N-vrstvá podpora v typových datových sadách umožňuje iterativního vývoje návrhu, n vrstvá architektura aplikací. Odebere také nutnost ručně rozdělení kódu do více než jeden projekt. Začíná návrh datové vrstvě pomocí **Návrhář Dataset**. Jakmile budete připraveni, abyste při návrhu n vrstvé architektury aplikace, nastavte **projektu DataSet** vlastnosti datové sady, chcete-li vytvořit třídu dataset do samostatného projektu.
+N-vrstvá podpora v typových datových sadách umožňuje iterativní vývoj architektury aplikace až na n-vrstvý návrh. Také odebere požadavek na ruční oddělení kódu do více než jednoho projektu. Začněte navrhovat datovou vrstvu pomocí **Návrhář datových sad**. Až budete připraveni přenést architekturu aplikace do n-vrstveného návrhu, nastavte vlastnost **projektu DataSet** objektu DataSet tak, aby generovala třídu DataSet do samostatného projektu.
 
 ## <a name="reference"></a>Odkaz
 
@@ -41,8 +41,8 @@ N-vrstvá podpora v typových datových sadách umožňuje iterativního vývoje
 
 ## <a name="see-also"></a>Viz také:
 
-- [Přehled vícevrstvých datových aplikací](../data-tools/n-tier-data-applications-overview.md)
-- [Návod: Vytvoření vícevrstvé datové aplikace](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
+- [Přehled N-vrstvých datových aplikací](../data-tools/n-tier-data-applications-overview.md)
+- [Návod: Vytvoření n-vrstvých datových aplikací](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
 - [Přidávání kódu do objektů TableAdapter ve vícevrstvých aplikacích](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)
 - [Přidávání kódu do datových sad ve vícevrstvých aplikacích](../data-tools/add-code-to-datasets-in-n-tier-applications.md)
 - [Přidávání ověřování do vícevrstvé datové sady](../data-tools/add-validation-to-an-n-tier-dataset.md)

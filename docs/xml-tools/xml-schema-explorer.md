@@ -3,21 +3,21 @@ title: Průzkumník schémat XML
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2fc39e98-b194-456b-a452-cfafb0a52d66
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 717a5d85a9d3a3251739b62728be572bee1487f6
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 9350e4ca41661e6bc9613d036ad4dd2a978a706d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926785"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72608099"
 ---
 # <a name="xml-schema-explorer"></a>Průzkumník schémat XML
 
-**Průzkumník schémat XML** je integrovaný do Microsoft Visual Studio a editoru XML, který vám umožní pracovat s schématy XML Schema Definition Language (XSD). Když otevřete soubor schématu XML, uzel **sada schémat** se zobrazí v **Průzkumníku schémat XML**. Všechna zahrnutá, importovaná nebo Předefinovaná schémata pro cílový soubor a všechny soubory, které jsou odkazovány pomocí `include` příkazu nebo `import` , se zobrazí také v **Průzkumníku schémat XML**.
+**Průzkumník schémat XML** je integrovaný do Microsoft Visual Studio a editoru XML, který vám umožní pracovat s schématy XML Schema Definition Language (XSD). Když otevřete soubor schématu XML, uzel **sada schémat** se zobrazí v **Průzkumníku schémat XML**. Všechna zahrnutá, importovaná nebo Předefinovaná schémata pro cílový soubor a všechny soubory, které jsou odkazovány pomocí příkazu `include` nebo `import`, se zobrazí také v **Průzkumníku schémat XML**.
 
 **Průzkumník schémat XML** umožňuje provést následující akce:
 
@@ -54,7 +54,7 @@ ms.locfileid: "68926785"
 
 - Třetí úroveň obsahuje soubory.
 
-- Čtvrtá úroveň obsahuje globální uzly. To může zahrnovat prvky, skupiny, komplexní typy, jednoduché typy, atributy, skupiny atributů a `include` `redefine` příkazy, `import`a.
+- Čtvrtá úroveň obsahuje globální uzly. To může zahrnovat prvky, skupiny, komplexní typy, jednoduché typy, atributy, skupiny atributů a `include`, `import` a `redefine` příkazy.
 
 Následuje příklad stromové struktury:
 
@@ -67,7 +67,7 @@ Chcete-li aktivovat uzel, poklikejte na něj nebo stiskněte klávesu **ENTER** 
 
 - Aktivace uzlu otevře soubor, ve kterém je tento uzel definován (Pokud soubor již není otevřen) a vybere uzel v souboru.
 
-- Aktivace uzlu souboru Otevře vybraný soubor (Pokud ještě není otevřený) a zvýrazní `<schema>` uzel.
+- Při aktivaci uzlu souboru se otevře vybraný soubor (Pokud ještě není otevřený) a zvýrazní se uzel `<schema>`.
 
 - Aktivace SchemaSet nebo uzlu oboru názvů neprovede žádnou akci.
 

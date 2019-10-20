@@ -8,115 +8,115 @@ helpviewer_keywords:
 - Domain-Specific Language Tools, walkthroughs
 - walkthroughs [Domain-Specific Language Tools], creating domain-specific language
 - Domain-Specific Language Tools, creating solutions
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ac8a47aeca8875dabe3fdf388e9a73d68ec514e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 93e51a1daee6e9635305f4d8a5d275106af7947e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445202"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72609399"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>Postupy: Vytváření řešení jazyka specifického pro doménu
-Jazyka specifického pro doménu (DSL) se vytvoří s použitím specializovaná řešení sady Visual Studio.
+Jazyk specifický pro doménu (DSL) se vytvoří pomocí specializovaného řešení sady Visual Studio.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Před zahájením tohoto postupu, tyto součásti nainstalujte:
+Než budete moct tento postup spustit, nainstalujte tyto komponenty:
 
 - Visual Studio
-- Visual Studio SDK (instalují jako součást **vývoj rozšíření sady Visual Studio** úlohy)
-- Sada Modeling SDK (nainstalován jako součást sady Visual Studio)
+- Sada Visual Studio SDK (nainstalovaná jako součást úlohy **vývoje rozšíření pro Visual Studio** )
+- Sada SDK pro modelování (instalována jako součást sady Visual Studio)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
 ## <a name="creating-a-domain-specific-language-solution"></a>Vytváření řešení jazyka specifického pro doménu
 
-1. Spusťte DSL Průvodce vytvořením nového **návrháře jazyka specifického pro doménu** projektu.
+1. Spusťte Průvodce DSL vytvořením nového projektu **Návrháře jazyka specifického pro doménu** .
 
    > [!NOTE]
-   > Pokud možno název, který jste vybrali pro projekt by měl být platný Vizuálu C# identifikátor protože může být použit pro generování kódu.
+   > Název, který si zvolíte pro projekt, by měl být platný vizuální C# identifikátor, protože může být použit ke generování kódu.
 
    ::: moniker range="vs-2017"
 
-   ![Vytvoření dialogového okna DSL](../modeling/media/create_dsldialog.png)
+   ![Dialog vytvořit DSL](../modeling/media/create_dsldialog.png)
 
    ::: moniker-end
 
-2. Zvolte šablonu DSL.
+2. Vyberte šablonu DSL.
 
-    Na **vybrat možnosti jazyka specifického pro doménu** stránky, vyberte jednu z šablon řešení, jako **minimální jazykový**. Zvolte šablonu, která se podobá DSL, který chcete vytvořit.
+    Na stránce **Výběr možností jazyka specifického pro doménu** vyberte jednu z šablon řešení, jako je například **Minimální jazyk**. Vyberte šablonu, která je podobná DSL, kterou chcete vytvořit.
 
-    Další informace o šablonách řešení, najdete v části [výběr šablony řešení jazyka specifického pro doménu](../modeling/choosing-a-domain-specific-language-solution-template.md).
+    Další informace o šablonách řešení najdete v tématu [Výběr šablony řešení jazyka specifického pro doménu](../modeling/choosing-a-domain-specific-language-solution-template.md).
 
-3. Zadejte příponu názvu souboru na **přípona souboru** stránky. By měl být jedinečný ve vašem počítači a ve všech počítačích, na kterém chcete nainstalovat DSL. Zobrazí se zpráva **žádné aplikace ani editory sady Visual Studio toto rozšíření využít**.
+3. Na stránce **Přípona souboru** zadejte příponu filename. Měl by být jedinečný v počítači a na všech počítačích, na které chcete nainstalovat DSL. Měla by se zobrazit zpráva **žádné aplikace ani editory sady Visual Studio nepoužívají toto rozšíření**.
 
-   - Pokud přípona názvu souboru jste použili v předchozí experimentální DSL, která plně nenainstalovali, můžete vymazat jejich odhlašování pomocí **resetovat experimentální instanci** nástroj, který se nachází v nabídce sady Visual Studio SDK.
+   - Pokud jste v předchozích experimentálních DSL použili příponu názvu souboru, která nebyla plně nainstalovaná, můžete je vymazat pomocí nástroje pro **obnovení experimentální instance** , který lze najít v nabídce sady Visual Studio SDK.
 
-   - Pokud jiné rozšíření sady Visual Studio, který používá tuto příponu souboru byl plně nainstalován v počítači, vezměte v úvahu odinstalujete ji. Na **nástroje** nabídky, klikněte na tlačítko **Správce rozšíření**.
+   - Pokud je v počítači plně nainstalovaná jiná přípona sady Visual Studio, která tuto příponu souboru používá, zvažte její odinstalaci. V nabídce **nástroje** klikněte na **Správce rozšíření**.
 
-4. Zkontrolujte a v případě potřeby upravit, pole na zbývajících stránkách průvodce. Pokud jste s nastavením spokojeni, klikněte na tlačítko **Dokončit**. Další informace o nastaveních, která najdete v tématu [stránky průvodce Návrhář DSL](#settings).
+4. Zkontrolujte a v případě potřeby upravte pole na zbývajících stránkách průvodce. Až budete s nastavením spokojeni, klikněte na **Dokončit**. Další informace o nastaveních najdete na [stránce průvodce návrháře DSL](#settings).
 
-    Průvodce vytvoří řešení, která má dva projekty, které jsou pojmenovány **Dsl** a **DslPackage**.
+    Průvodce vytvoří řešení, které má dva projekty s názvem **DSL** a **DslPackage**.
 
    > [!NOTE]
-   > Pokud se zobrazí zpráva, která vás upozorní, není ke spuštění textové šablony z nedůvěryhodných zdrojů, klikněte na tlačítko **OK**. Můžete nastavit tato zpráva se zobrazí znovu.
+   > Pokud se zobrazí zpráva upozorňující, že nespouštíte textové šablony z nedůvěryhodných zdrojů, klikněte na tlačítko **OK**. Tuto zprávu můžete nastavit tak, aby se nezobrazovala znovu.
 
-## <a name="settings"></a> Na stránkách průvodce návrhářem DSL
- Můžete nechat několik polí nezmění z výchozí hodnoty. Nicméně Ujistěte se, že pole přípona souboru je nastavit.
+## <a name="settings"></a>Stránky průvodce návrháře DSL
+ Z jejich výchozích hodnot můžete nechat některá z těchto polí beze změny. Ujistěte se však, že jste nastavili pole Přípona souboru.
 
 ### <a name="solution-settings-page"></a>Stránka nastavení řešení
- **Kterou šablonu chcete vaše jazyka specifického pro doménu vycházet?**
-Zvolte šablonu, která se podobá DSL, který chcete vytvořit. Různé šablony poskytují pohodlný počátečních bodů. Když vyberete šablonu řešení, Průvodce zobrazí popis. Další informace o šablonách řešení, najdete v části [výběr šablony řešení jazyka specifického pro doménu](../modeling/choosing-a-domain-specific-language-solution-template.md).
+ **Jakou šablonu chcete pro konkrétní jazyk domény založit?**
+Vyberte šablonu, která je podobná DSL, kterou chcete vytvořit. Různé šablony poskytují pohodlný počáteční bod. Když vyberete šablonu řešení, Průvodce zobrazí popis. Další informace o šablonách řešení najdete v tématu [Výběr šablony řešení jazyka specifického pro doménu](../modeling/choosing-a-domain-specific-language-solution-template.md).
 
- **Co chcete jazyka specifického pro doménu pojmenovat?**
-Výchozí hodnota je název řešení. Kód je generován z této hodnoty. Musí být platný jako název třídy C#.
+ **Jak chcete pojmenovat jazyk specifický pro doménu?**
+Ve výchozím nastavení se jedná o název řešení. Z této hodnoty je vygenerován kód. Musí být platný jako název C# třídy.
 
-### <a name="file-extension-page"></a>Stránka přípona souboru
- **Jaká rozšíření by měly soubory modelu použití?**
+### <a name="file-extension-page"></a>Stránka s příponou souboru
+ **Jakou příponu mají soubory modelu používat?**
 Zadejte novou příponu souboru.
 
- Ověřte, že tato přípona souboru nebyla již byl registrován pro použití v tomto počítači následujícím způsobem:
+ Ověřte, že tato přípona souboru ještě není zaregistrovaná pro použití v tomto počítači, a to následujícím způsobem:
 
- Podívejte se do části **další nástroje a aplikace zaregistrované ke zpracování této přípony**. Pokud se zobrazí zpráva **žádné aplikace ani editory sady Visual Studio toto rozšíření využít**, můžete použít tuto příponu souboru.
+ Podívejte **se na jiné nástroje a aplikace zaregistrované pro zpracování tohoto rozšíření**. Pokud se zobrazí zpráva **žádné aplikace nebo editory sady Visual Studio nepoužívají toto rozšíření**, můžete použít tuto příponu souboru.
 
- Pokud se zobrazí seznam nástrojů nebo balíčky, proveďte jednu z následujících akcí:
+ Pokud se zobrazí seznam nástrojů nebo balíčků, měli byste provést jednu z následujících akcí:
 
 - Zadejte jinou příponu souboru.
 
-     \- nebo –
+     \- nebo-
 
-- Resetujte experimentální instanci sady Visual Studio. Zruší registraci všech DSL, které jste dříve vytvořili. Na **Start** nabídky, klikněte na tlačítko **všechny programy**, **Microsoft Visual Studio 2010 SDK**, **nástroje**a potom **resetovat Microsoft Visual Studio 2010 experimentální instanci**. Můžete znovu sestavit jiných DSL, který chcete znovu použít.
+- Resetovat experimentální instanci sady Visual Studio. Tím zrušíte registraci všech dříve vytvořených DSL. V nabídce **Start** klikněte na **všechny programy**, **Microsoft Visual Studio 2010 SDK**, **nástroje**a pak **na experimentální instanci Microsoft Visual Studio 2010 obnovte**. Můžete znovu sestavit jakýkoli jiný DSL, který chcete znovu použít.
 
-     \- nebo –
+     \- nebo-
 
-- Pokud rozšíření aplikace Visual Studio, který používá tuto příponu souboru byl plně nainstalován v počítači, odinstalujte ji. Na **nástroje** nabídky, klikněte na tlačítko **Správce rozšíření**.
+- Pokud je rozšíření sady Visual Studio, které používá tuto příponu souboru, v počítači plně nainstalováno, odinstalujte ho. V nabídce **nástroje** klikněte na **Správce rozšíření**.
 
 ### <a name="product-settings-page"></a>Stránka nastavení produktu
- **Jaký je název produktu, který nový jazyk specifický pro doménu patří?**
-Výchozí hodnota je název DSL.
+ **Jaký je název produktu, ke kterému patří nový jazyk specifický pro doménu?**
+Použije se výchozí název DSL.
 
- Tato hodnota se používá v Průzkumníku Windows (nebo Průzkumníka souborů) k popisu souborů, které mají tuto příponu souboru.
+ Tato hodnota se používá v Průzkumníkovi Windows (nebo v Průzkumníku souborů) k popisu souborů, které mají tuto příponu souboru.
 
- **Jaký je název společnosti, která tento produkt patří?**
+ **Jaký je název společnosti, do které produkt patří?**
 Název vaší společnosti.
 
- Tato hodnota je součástí souboru AssemblyInfo vlastnosti balíčku DSL.
+ Tato hodnota se začlení do vlastností AssemblyInfo vašeho balíčku DSL.
 
- **Co je kořenový obor názvů pro projekty v tomto řešení?**
-Výchozí hodnota pro název skládající se z vaší společnosti a názvy produktů.
+ **Jaký je kořenový obor názvů pro projekty v tomto řešení?**
+Tento název se použije jako název složený z názvu vaší společnosti a produktu.
 
 ### <a name="signing-page"></a>stránka Podepisování
- **Vytvořit soubor klíče se silným názvem** výchozí možností je vytvořit nový klíč k podepsání sestavení DSL.
+ **Vytvořit soubor klíče se silným názvem** Výchozí možnost je vytvořit nový klíč pro podepsání vašeho sestavení DSL.
 
- **Použít existující klíč se silným názvem** tuto možnost použijte, pokud chcete integrovat vašeho DSL pomocí jiného sestavení.
+ **Použít existující klíč se silným názvem** Tuto možnost použijte, pokud chcete své DSL integrovat s jiným sestavením.
 
- Další informace o silné názvy najdete v tématu [vytvoření a použití sestavení](http://go.microsoft.com/fwlink/?LinkId=186073).
+ Další informace o silných názvech naleznete v tématu [vytváření a používání sestavení se silným názvem](http://go.microsoft.com/fwlink/?LinkId=186073).
 
 ## <a name="see-also"></a>Viz také:
 
 - [Jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md)
-- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - Services page in Project Designer
 - Project Designer, Services page
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 406e8fbb16d3cac4b755b0532f3916fed486e466
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: dd374482d0432a54ed66442610aac1f60ca1828f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919006"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655491"
 ---
 # <a name="services-page-project-designer"></a>Stránka Služby, návrhář projektu
 
-Klientské aplikační služby poskytují zjednodušený přístup [!INCLUDE[ajax_current_short](../../ide/reference/includes/ajax_current_short_md.md)] k přihlašování, rolím a profilovým službám z aplikací model Windows Forms a Windows Presentation Foundation (WPF). Stránku **služby** **Návrháře projektu** můžete použít k povolení a konfiguraci klientských aplikačních služeb pro svůj projekt.
+Klientské aplikační služby poskytují zjednodušený přístup k [!INCLUDE[ajax_current_short](../../ide/reference/includes/ajax_current_short_md.md)] přihlášení, rolí a profilové služby z aplikací model Windows Forms a Windows Presentation Foundation (WPF). Stránku **služby** **Návrháře projektu** můžete použít k povolení a konfiguraci klientských aplikačních služeb pro svůj projekt.
 
 Pomocí klientských aplikačních služeb můžete pomocí centralizovaného serveru ověřovat uživatele, určit role nebo role přiřazené jednotlivým uživatelům a ukládat nastavení aplikací pro jednotlivé uživatele, která můžete sdílet přes síť. Další informace najdete v tématu [aplikační služby klienta](/dotnet/framework/common-client-technologies/client-application-services).
 
@@ -29,7 +29,7 @@ Chcete-li získat přístup ke stránce **služby** , vyberte uzel projektu v **
 
 ## <a name="task-list"></a>Seznam úkolů
 
-[Postupy: Nakonfigurovat Aplikační služby klienta](/dotnet/framework/common-client-technologies/how-to-configure-client-application-services)
+[Postupy: Konfigurace klientských aplikačních služeb](/dotnet/framework/common-client-technologies/how-to-configure-client-application-services)
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
@@ -51,15 +51,15 @@ Označuje, že zprostředkovatel ověřování bude používat ověřování zal
 
  **Použití ověřování pomocí formulářů**
 
-Označuje, že zprostředkovatel ověřování bude používat ověřování pomocí formulářů. To znamená, že aplikace musí poskytnout uživatelské rozhraní pro přihlášení. Další informace najdete v tématu [jak: Implementace přihlášení uživatele pomocí Aplikační služby](/dotnet/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services)klienta.
+Označuje, že zprostředkovatel ověřování bude používat ověřování pomocí formulářů. To znamená, že aplikace musí poskytnout uživatelské rozhraní pro přihlášení. Další informace najdete v tématu [Postup: implementace přihlášení uživatele pomocí aplikační služby klienta](/dotnet/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services).
 
  **Umístění ověřovací služby**
 
 Používá se pouze s ověřováním pomocí formulářů. Určuje umístění ověřovací služby.
 
- **Volitelné Poskytovatel pověření**
+ **Volitelné: Poskytovatel pověření**
 
-Používá se pouze s ověřováním pomocí formulářů. Označuje implementaci, kterou bude služba ověřování používat k zobrazení přihlašovacího dialogového okna, když vaše aplikace `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> volá metodu a předá prázdné řetězce nebo `null` parametry. <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> Pokud toto pole necháte prázdné, musíte do <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> metody předat platné uživatelské jméno a heslo. Je nutné zadat poskytovatele pověření jako název typu kvalifikovaného pro sestavení. Další informace naleznete v tématu <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> a [názvy sestavení](/dotnet/framework/app-domains/assembly-names). V nejjednodušším tvaru název kvalifikovaného typu sestavení vypadá podobně jako v následujícím příkladu:`MyNamespace.MyLoginClass, MyAssembly`
+Používá se pouze s ověřováním pomocí formulářů. Určuje <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> implementaci, kterou bude ověřovací služba používat k zobrazení přihlašovacího dialogového okna, když vaše aplikace volá metodu `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> a předá prázdné řetězce nebo `null` pro parametry. Pokud toto pole necháte prázdné, musíte do metody <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> předat platné uživatelské jméno a heslo. Je nutné zadat poskytovatele pověření jako název typu kvalifikovaného pro sestavení. Další informace naleznete v tématu <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> a [názvy sestavení](/dotnet/framework/app-domains/assembly-names). V nejjednodušším tvaru název kvalifikovaného typu sestavení vypadá podobně jako v následujícím příkladu: `MyNamespace.MyLoginClass, MyAssembly`
 
  **Umístění služby rolí**
 
@@ -77,6 +77,6 @@ Otevře [dialogové okno Upřesnit nastavení pro služby](../../ide/reference/a
 
 - [Klientské aplikační služby](/dotnet/framework/common-client-technologies/client-application-services)
 - [Dialogové okno Pokročilé nastavení služeb](../../ide/reference/advanced-settings-for-services-dialog-box.md)
-- [Postupy: Nakonfigurovat Aplikační služby klienta](/dotnet/framework/common-client-technologies/how-to-configure-client-application-services)
+- [Postupy: Konfigurace klientských aplikačních služeb](/dotnet/framework/common-client-technologies/how-to-configure-client-application-services)
 - [Stránka Kompilovat, Návrhář projektu (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md)
 - [Stránka Sestavení, Návrhář projektu (C#)](../../ide/reference/build-page-project-designer-csharp.md)

@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fbe9b0005ce190eda6a88dea2f6b5f80890743c
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
-ms.translationtype: HT
+ms.openlocfilehash: 9a1fe8f4e8003da2db0e8a599c3eca504945f3e4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72562945"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647511"
 ---
 # <a name="step-5-add-label-references"></a>Krok 5: Přidání odkazů na štítky
 Program potřebuje sledovat, která jmenovka řídí, aby hráč zvolil. Nyní program zobrazí všechny popisky, které hráč zvolí. Ale to změníme. Po výběru prvního popisku by program měl zobrazit ikonu popisku. Po výběru druhého popisku by program měl krátce zobrazit obě ikony a pak je opět skrýt. Váš program teď bude sledovat, který ovládací prvek popisek je vybraný jako první a který se volí za druhým pomocí *referenčních proměnných*.
@@ -44,15 +44,15 @@ Program potřebuje sledovat, která jmenovka řídí, aby hráč zvolil. Nyní p
 
 3. Uložte program a spusťte jej. Vyberte jeden z ovládacích prvků popisku a zobrazí se jeho ikona.
 
-4. Vyberte další ovládací prvek popisku a všimněte si, že se nic nestane. Program už sleduje první štítek, který hráč zvolí, takže `firstClicked` se ne`null` v C# Visual Basic nebo `Nothing`. Když váš příkaz `if` kontroluje `firstClicked` Chcete-li určit, zda se rovná `null` nebo `Nothing`, zjistí, že není a neprovede příkazy v příkazu `if`. Takže pouze první ikona, která je vybrána, zčerná a další ikony jsou skryté, jak je znázorněno na následujícím obrázku.
+4. Vyberte další ovládací prvek popisku a všimněte si, že se nic nestane. Program už sleduje první štítek, který hráč zvolí, takže `firstClicked` se ne`null` v C# Visual Basic nebo `Nothing`. Když váš příkaz `if` kontroluje `firstClicked` Chcete-li určit, zda se rovná `null` nebo `Nothing`, zjistí, že není a neprovede příkazy v příkazu `if`. Proto pouze první ikona, která je vybrána, se změní na černou a ostatní ikony jsou neviditelné, jak je znázorněno na následujícím obrázku.
 
      ![Matching hra ukazující jednu ikonu ](../ide/media/express_tut4step5.png)<br/>
-**Porovnávací hra** ukazující jednu ikonu
+***Porovnávací hra*** *ukazující jednu ikonu*
 
      Tuto situaci opravíte v dalším kroku kurzu přidáním ovládacího prvku **Timer** .
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu, přečtěte si [článek 6: Přidání časovače](../ide/step-6-add-a-timer.md).
+- Pokud chcete přejít na další krok kurzu, přečtěte si **[článek 6: Přidání časovače](../ide/step-6-add-a-timer.md)** .
 
 - Chcete-li se vrátit k předchozímu kroku kurzu, přečtěte si část [Krok 4: Přidání obslužné rutiny události Click do každého popisku](../ide/step-4-add-a-click-event-handler-to-each-label.md).

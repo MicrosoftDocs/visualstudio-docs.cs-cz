@@ -1,46 +1,46 @@
 ---
-title: Návrhář aktivity Compensate návrháře postupu provádění-
+title: Návrhář aktivity Návrhář postupu provádění – náhrada
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.Compensate.UI
 ms.assetid: 7347c947-bfff-4bad-becd-5cd23e7b24cd
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c55ecd8e3402d927b11cc00d18d6d134a5b25681
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 65203663214e6bc82a4a7b20af9caa25bfd98ee4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949835"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650658"
 ---
 # <a name="compensate-activity-designer"></a>Návrhář aktivity Compensate
 
-**Kompenzace** Návrhář aktivity se používá k vytvoření a konfigurace <xref:System.Activities.Statements.Compensate> aktivity.
+Návrhář aktivity **kompenzace** se používá k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.Compensate>.
 
-## <a name="the-compensate-activity"></a>Aktivitu kompenzace
+## <a name="the-compensate-activity"></a>Aktivita kompenzace
 
-<xref:System.Activities.Statements.Compensate> Explicitně vyvolá aktivitu <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> pro aktivitu součástí <xref:System.Activities.Statements.CompensableActivity>. Pokud <xref:System.Activities.Statements.Compensate> aktivity se nepoužívá v rámci <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>, <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>, nebo <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A> z <xref:System.Activities.Statements.CompensableActivity>, pak je nutné zadat <xref:System.Activities.Statements.Compensate.Target%2A> vlastnost.
+Aktivita <xref:System.Activities.Statements.Compensate> explicitně vyvolá <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> pro aktivitu obsaženou v <xref:System.Activities.Statements.CompensableActivity>. Pokud se aktivita <xref:System.Activities.Statements.Compensate> nepoužívá v <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>, <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> nebo <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A> <xref:System.Activities.Statements.CompensableActivity>, musíte zadat vlastnost <xref:System.Activities.Statements.Compensate.Target%2A>.
 
-<xref:System.Activities.Statements.CompensationToken> Určená <xref:System.Activities.Statements.Compensate.Target%2A> zajišťuje explicitně potvrdit nebo kompenzaci <xref:System.Activities.Statements.CompensableActivity> po <xref:System.Activities.Statements.CompensableActivity.Body%2A> z <xref:System.Activities.Statements.CompensableActivity> byla úspěšně dokončena.
+@No__t_0 určené <xref:System.Activities.Statements.Compensate.Target%2A> poskytuje způsob, jak explicitně potvrdit nebo kompenzovat <xref:System.Activities.Statements.CompensableActivity> po úspěšném dokončení <xref:System.Activities.Statements.CompensableActivity.Body%2A> <xref:System.Activities.Statements.CompensableActivity>.
 
-### <a name="using-the-compensate-activity-designer"></a>Použití Návrhář aktivity Compensate
+### <a name="using-the-compensate-activity-designer"></a>Pomocí návrháře aktivity kompenzace
 
-**Kompenzace** návrháře aktivit najdete v **transakce** kategorii **nástrojů**. Chcete-li otevřít **nástrojů**, vyberte **nástrojů** karty na levé straně návrháře postupu provádění. Můžete také vybrat **nástrojů** z **zobrazení** nabídky nebo stisknutím klávesy **Ctrl**+**Alt** + **X**.
+Návrhář aktivity **kompenzace** lze najít v kategorii **transakce** sady **nástrojů**. Chcete-li otevřít **sadu nástrojů**, vyberte kartu **panelu nástrojů** na levé straně Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** +**ALT** +**X**.
 
-**Kompenzace** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřadit na povrch návrháře postupu provádění bez ohledu na to aktivity jsou umístěny, například jako uvnitř <xref:System.Activities.Statements.Sequence>. Vyřazení Návrhář aktivity vytvoří <xref:System.Activities.Statements.Compensate> aktivity s výchozím <xref:System.Activities.Activity.DisplayName%2A> z kompenzace. <xref:System.Activities.Activity.DisplayName%2A> Hodnota se dá upravit v záhlaví **kompenzace** Návrhář aktivity nebo **DisplayName** pole mřížky vlastností.
+Návrhář aktivity **kompenzace** je možné přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu všude, kde jsou umístěny aktivity, například uvnitř <xref:System.Activities.Statements.Sequence>. Vyřazení návrháře aktivit vytvoří aktivitu <xref:System.Activities.Statements.Compensate> s výchozí <xref:System.Activities.Activity.DisplayName%2A>ou kompenzací. Hodnotu <xref:System.Activities.Activity.DisplayName%2A> lze upravit v záhlaví návrháře aktivity **kompenzace** nebo v poli **DisplayName** v mřížce vlastností.
 
-### <a name="the-compensate-properties"></a>Kompenzaci vlastnosti
+### <a name="the-compensate-properties"></a>Vlastnosti kompenzace
 
-Následující tabulka ukazuje <xref:System.Activities.Statements.CancellationScope> vlastnosti a popisuje, jak se používají v návrháři. <xref:System.Activities.Activity.DisplayName%2A> Vlastnost lze upravit v mřížce vlastností nebo na plochu návrháře postupu provádění. Upravit <xref:System.Activities.Statements.Compensate.Target%2A> vlastnost v mřížce vlastností.
+V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.CancellationScope> a popisuje, jak se používají v návrháři. Vlastnost <xref:System.Activities.Activity.DisplayName%2A> lze upravit v mřížce vlastností nebo na Návrhář postupu provádění povrchu. Upravte vlastnost <xref:System.Activities.Statements.Compensate.Target%2A> v mřížce vlastností.
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje volitelný popisný název <xref:System.Activities.Statements.Compensate> aktivity. Výchozí hodnota je kompenzace.|
-|<xref:System.Activities.Statements.Compensate.Target%2A>|Pravda|Určuje <xref:System.Activities.InArgument%601> , který obsahuje <xref:System.Activities.Statements.CompensationToken> to <xref:System.Activities.Statements.Compensate> aktivity.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje nepovinný popisný název aktivity <xref:System.Activities.Statements.Compensate>. Výchozí hodnota je kompenzovat.|
+|<xref:System.Activities.Statements.Compensate.Target%2A>|Podmínka|Určuje <xref:System.Activities.InArgument%601>, který obsahuje <xref:System.Activities.Statements.CompensationToken> pro tuto <xref:System.Activities.Statements.Compensate> aktivitu.|
 
 ## <a name="see-also"></a>Viz také:
 

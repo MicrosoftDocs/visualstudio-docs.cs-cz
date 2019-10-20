@@ -1,21 +1,21 @@
 ---
-title: Hodnota (dynamická vlastnost XElement)
+title: Value (dynamická vlastnost XElement)
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: b30e770d-9646-4632-9738-cc9f51bb2343
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e8f29bcfc8c3f9ecbff436415faf5a787e0ad262
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8d54cb57b0235c6fcb11cdc21431e3a8060c4774
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844114"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72634370"
 ---
-# <a name="value-xelement-dynamic-property"></a>Hodnota (dynamická vlastnost XElement)
+# <a name="value-xelement-dynamic-property"></a>Value (dynamická vlastnost XElement)
 
 Získá nebo nastaví obsah elementu.
 
@@ -25,16 +25,16 @@ Získá nebo nastaví obsah elementu.
 elem.Value
 ```
 
-## <a name="property-valuereturn-value"></a>Vlastnost hodnota nebo návratová hodnota
+## <a name="property-valuereturn-value"></a>Hodnota nebo návratová hodnota vlastnosti
 
-A <xref:System.String> , která představuje zřetězených obsah elementu.
+@No__t_0, který představuje zřetězený obsah elementu.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato vlastnost je ekvivalentní <xref:System.Xml.Linq.XElement.Value%2A> vlastnost <xref:System.Xml.Linq.XElement?displayProperty=fullName> třídy, ale tato dynamická vlastnost také podporuje oznámení o změnách.
+Tato vlastnost je ekvivalentní vlastnosti <xref:System.Xml.Linq.XElement.Value%2A> třídy <xref:System.Xml.Linq.XElement?displayProperty=fullName>, ale tato dynamická vlastnost také podporuje oznamování změn.
 
 ## <a name="see-also"></a>Viz také:
 
 - <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>
-- [Dynamické vlastnosti třídy XElement](../designers/xelement-class-dynamic-properties.md)
+- [Dynamické vlastnosti třídy XElement](../designers/attribute-xelement-dynamic-property.md)
 - [Xml](../designers/xml-xelement-dynamic-property.md)

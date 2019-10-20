@@ -3,19 +3,19 @@ title: Přidat uzly výsledků hledání sady schémat XML do pracovního prosto
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ff33b3cc-4db9-4b4e-9378-b45ed5999b18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2718c08b36ff9ef3ca8ae06f7d511cacb8fa73c
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: be024ac139d2b420f56b14158afd33ae5b7e917d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68923660"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646019"
 ---
-# <a name="how-to-add-schema-set-search-result-nodes-to-the-workspace"></a>Postupy: Přidání uzlů výsledků hledání v sadě schémat do pracovního prostoru
+# <a name="how-to-add-schema-set-search-result-nodes-to-the-workspace"></a>Postupy: Přidání uzlů výsledků hledání sad schémat do pracovního prostoru
 
 Toto téma vysvětluje, jak přidat uzly, které jsou zvýrazněny v **Průzkumníku schémat XML** jako výsledek hledání klíčového slova v pracovním prostoru.
 
@@ -26,7 +26,7 @@ V tomto příkladu se používá ukázka [schématu nákupní objednávky](../xm
 
 ## <a name="to-add-schema-set-result-nodes"></a>Postup přidání uzlů výsledků sady schémat
 
-1. Postupujte podle kroků v [tématu Postupy: Vytvořte a upravte soubor](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)schématu XSD.
+1. Postupujte podle kroků v tématu [Postupy: vytvoření a úprava souboru schématu XSD](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md).
 
 2. Do textového pole Hledat na panelu nástrojů v [Průzkumníkovi XML](../xml-tools/xml-schema-explorer.md) zadejte "PurchaseOrder" a klikněte na tlačítko Hledat.
 
@@ -38,4 +38,4 @@ V tomto příkladu se používá ukázka [schématu nákupní objednávky](../xm
 
      ![Výsledek hledání v Průzkumníkovi schémat XML](../xml-tools/media/schemaexplorersearchresult.gif)
 
-     Uzel a uzel se zobrazí vedle sebe na návrhové ploše [zobrazení grafu.](../xml-tools/graph-view.md) `purchaseOrder` `PurchaseOrderType` Vzhledem k tomu, že oba uzly jsou `purchaseOrder` související (element je `PurchaseOrderType` typu), je mezi nimi vykreslena šipka.
+     Uzel `purchaseOrder` a uzel `PurchaseOrderType` se zobrazí vedle sebe na návrhové ploše [zobrazení grafu](../xml-tools/graph-view.md). Vzhledem k tomu, že se tyto dva uzly vztahují (`purchaseOrder` prvek je typu `PurchaseOrderType`), je mezi nimi vykreslena šipka.

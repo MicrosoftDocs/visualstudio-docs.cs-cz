@@ -1,5 +1,5 @@
 ---
-title: 'CA2134: Metody musejí při přepisování základních metod zachovávat konzistentní transparentnost | Dokumentace Microsoftu'
+title: 'CA2134: metody musí při přepisování základních metod zachovávat konzistentní transparentnost | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -8,17 +8,17 @@ f1_keywords:
 - CA2134
 ms.assetid: 3b17e487-0326-442e-90e1-dc0ba9cdd3f2
 caps.latest.revision: 11
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 2ccfe43fc110622c70802d2108b6ba5ff7ecb1b3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 96910ffc53e6c48f930232c83d87570f1bc71e00
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65700382"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72608925"
 ---
-# <a name="ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods"></a>CA2134: Metody musí při přepisování základních metod zachovávat konzistentní transparentnost
+# <a name="ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods"></a>CA2134: Metody musejí při přepisování základních metod zachovávat konzistentní transparentnost
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -28,21 +28,21 @@ ms.locfileid: "65700382"
 |Kategorie|Microsoft.Security|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>Příčina
- Toto pravidlo je vyvoláno, když metoda označená pomocí <xref:System.Security.SecurityCriticalAttribute> přepíše metodu, která je transparentní nebo označená <xref:System.Security.SecuritySafeCriticalAttribute>. Toto pravidlo vyvoláno, když metoda, která je transparentní nebo označená <xref:System.Security.SecuritySafeCriticalAttribute> přepíše metodu označenou atributem <xref:System.Security.SecurityCriticalAttribute>.
+## <a name="cause"></a>příčina
+ Toto pravidlo je vyvoláno, pokud metoda označená pomocí <xref:System.Security.SecurityCriticalAttribute> přepisuje metodu, která je průhledná nebo označená <xref:System.Security.SecuritySafeCriticalAttribute>. Pravidlo se aktivuje také v případě, že metoda, která je průhledná nebo označená pomocí <xref:System.Security.SecuritySafeCriticalAttribute> přepisuje metodu, která je označená <xref:System.Security.SecurityCriticalAttribute>.
 
  Pravidlo je použito při přepisování virtuální metody nebo implementaci rozhraní.
 
 ## <a name="rule-description"></a>Popis pravidla
- Toto pravidlo je vyvoláno při pokusech změňte přístupnost zabezpečení metody dále celým řetězcem dědičnosti. Například pokud virtuální metodu v základní třídě je transparentní nebo bezpečně kritické, pak odvozené třídy musí ji přepište bezpečný a kritický nebo transparentní metoda. Naopak pokud virtuální je kritický pro zabezpečení, odvozené třídy musí přepsat ho na kritickou metodu zabezpečení. Stejné pravidlo platí i pro implementaci metody rozhraní.
+ Toto pravidlo je vyvoláno při pokusech o změnu přístupnosti zabezpečení metody v rámci řetězce dědičnosti. Například pokud je virtuální metoda v základní třídě transparentní nebo bezpečná, pak musí být odvozená třída popsána transparentní nebo bezpečnou metodou. Naopak, pokud je virtuální z hlediska zabezpečení kritická, musí odvozená třída tuto třídu přepsat metodou kritické pro zabezpečení. Stejné pravidlo platí pro implementaci metod rozhraní.
 
- Když kód je JIT kompilaci místo za běhu, takže výpočtu transparentnosti nemá žádné informace o dynamické typu se vynucují pravidla transparentnosti. Výsledek výpočtu transparentnosti proto musí být schopen určit pouze statické typy se zkompilovaný pomocí kompilátoru JIT, bez ohledu na to dynamického typu.
+ Pravidla transparentnosti jsou vynutila, pokud je kód zkompilován kompilátorem JIT namísto za běhu, takže výpočet transparentnosti neobsahuje dynamické informace o typu. Proto je možné výsledek výpočtu transparentnosti určit výhradně ze statických typů, které jsou kompilovány JIT, bez ohledu na dynamický typ.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, změňte průhlednost metody, která je přepisování virtuální metody nebo implementaci rozhraní tak, aby odpovídaly průhlednost virtuální nebo metodu rozhraní.
+ Chcete-li opravit porušení tohoto pravidla, změňte transparentnost metody, která přepisuje virtuální metodu nebo implementuje rozhraní, aby odpovídala průhlednosti metody Virtual nebo rozhraní.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění tohoto pravidla. Porušení tohoto pravidla způsobí modul runtime <xref:System.TypeLoadException> pro sestavení, které používají transparentnosti úrovně 2.
+ Potlačit upozornění z tohoto pravidla Porušení tohoto pravidla budou mít za následek <xref:System.TypeLoadException> modulu runtime pro sestavení, která používají transparentnost úrovně 2.
 
 ## <a name="examples"></a>Příklady
 

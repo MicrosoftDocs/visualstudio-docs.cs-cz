@@ -9,43 +9,43 @@ helpviewer_keywords:
 - types [Visual Studio], base
 - types [Visual Studio], derived
 ms.assetid: ea3f0ada-f53b-4fb1-9fb5-908286f5ec3e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d1a15765bff6d391afc7395be03172bf5d5fc32
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9fd6d2ce365399550b5455ff8bf909e9cc56187b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975096"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647691"
 ---
-# <a name="how-to-view-inheritance-between-types-in-class-designer"></a>Postupy: Zobrazení dědičnosti mezi typy v Návrháři tříd
+# <a name="how-to-view-inheritance-between-types-in-class-designer"></a>Postupy: zobrazení dědičnosti mezi typy v Návrhář tříd
 
-Pokud existuje mezi základního typu a jeho odvozeným typům v diagramu tříd v relaci dědičnosti najdete **návrhář tříd**. Chcete-li vytvořit vztah dědičnosti, pokud žádný neexistuje, mezi dvěma typy, přečtěte si téma [jak: Vytvoření dědičnosti mezi typy](how-to-create-inheritance-between-types.md).
+Můžete najít vztah dědičnosti, pokud existuje, mezi základním typem a jeho odvozenými typy v diagramu tříd v **Návrhář tříd**. Chcete-li vytvořit vztah dědičnosti, pokud žádný neexistuje, mezi dvěma typy, viz [How to: Create dědičnost mezi typy](how-to-create-inheritance-between-types.md).
 
-## <a name="to-find-the-base-type"></a>Najít základní typ
+## <a name="to-find-the-base-type"></a>Vyhledání základního typu
 
-1. V diagramu tříd klikněte na typ, pro kterou chcete zobrazit základní třídu nebo rozhraní.
+1. V diagramu tříd klikněte na typ, pro který chcete zobrazit základní třídu nebo rozhraní.
 
-2. Na **Diagram tříd** nabídce zvolte **zobrazit základní třídu** nebo **zobrazit základní rozhraní**.
+2. V nabídce **Diagram tříd** vyberte možnost **Zobrazit základní třídu** nebo **Zobrazit základní rozhraní**.
 
-     Základní třídu nebo rozhraní tohoto typu zobrazovat jako vybraný v diagramu. Všechny skryté Asociační čáry teď budou zobrazovat mezi dvěma tvary.
+     Základní třída nebo rozhraní typu se v diagramu zobrazí jako vybrané. Všechny skryté řádky dědičnosti se nyní zobrazují mezi dvěma tvary.
 
-Můžete také kliknout pravým tlačítkem typ, jehož základní typ, který chcete zobrazit a zvolte **zobrazit základní třídu** nebo **zobrazit základní rozhraní**.
+Můžete také kliknout pravým tlačítkem na typ, jehož základní typ chcete zobrazit, a zvolit **Zobrazit základní třídu** nebo **Zobrazit základní rozhraní**.
 
-## <a name="to-find-the-derived-types"></a>Najít odvozené typy
+## <a name="to-find-the-derived-types"></a>Vyhledání odvozených typů
 
-1. V diagramu tříd klikněte na typ, pro kterou chcete zobrazit odvozené třídy nebo rozhraní.
+1. V diagramu tříd klikněte na typ, pro který chcete zobrazit odvozené třídy nebo rozhraní.
 
-2. Na **Diagram tříd** nabídce zvolte **Zobrazit odvozené třídy** nebo **Zobrazit odvozené rozhraní**.
+2. V nabídce **Diagram tříd** vyberte možnost **Zobrazit odvozené třídy** nebo **Zobrazit odvozená rozhraní**.
 
-     Typu odvozené třídy nebo rozhraní se zobrazí v diagramu. Všechny skryté Asociační čáry teď budou zobrazovat mezi tvary.
+     V diagramu se zobrazí odvozené třídy nebo rozhraní typu. Mezi tvary se nyní zobrazí všechny skryté řádky dědičnosti.
 
-Můžete také kliknout pravým tlačítkem na typ, pro kterou chcete zobrazit jeho odvozených typů a zvolte **Zobrazit odvozené třídy** nebo **Zobrazit odvozené rozhraní**.
+Můžete také kliknout pravým tlačítkem na typ, pro který chcete zobrazit jeho odvozené typy, a zvolit možnost **Zobrazit odvozené třídy** nebo **Zobrazit odvozená rozhraní**.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Postupy: Vytvoření asociací mezi typy](how-to-create-associations-between-types.md)
+- [Postupy: vytváření přidružení mezi typy](how-to-create-associations-between-types.md)
 - [Zobrazování typů a vztahů](designing-and-viewing-classes-and-types.md)

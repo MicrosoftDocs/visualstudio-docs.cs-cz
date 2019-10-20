@@ -8,51 +8,51 @@ helpviewer_keywords:
 - editors, windows management
 - Code Editor, windows management
 ms.assetid: 340143d4-8a71-490d-823e-162b276f4c6d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a8b6d1d4c39f09382dd0e4a12660bed31ad9b2d
-ms.sourcegitcommit: 614d5b99576ea27a41957cd94062dc95cbd29c1c
+ms.openlocfilehash: 3493a70bd1257194f8c95a58eb6c2890d83ed418
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65531942"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645815"
 ---
 # <a name="how-to-manage-editor-windows"></a>Postupy: Správa oken editoru
 
-Můžete pracovat na kód na několika místech současně. To provést rozdělením okno editoru nebo otevřením několik instancí okna editoru.
+Můžete pracovat s kódem v několika umístěních najednou. Provedete to rozdělením okna editoru nebo otevřením několika instancí oken editoru.
 
 > [!NOTE]
-> Ne všechna okna editoru podporují více instancí.
+> Ne všechny editory Windows podporují více instancí.
 
-## <a name="split-an-editor-window"></a>Rozdělit okno editoru
+## <a name="split-an-editor-window"></a>Rozdělení okna editoru
 
-Instance okno editoru je možné rozdělit na dvě samostatné zobrazení pro úpravy jednodušší.
+Instanci okna editoru lze rozdělit do dvou samostatných zobrazení pro snazší úpravy.
 
-### <a name="to-split-a-pane"></a>Pro rozdělení na stavového řádku
+### <a name="to-split-a-pane"></a>Rozdělení podokna
 
-1. Klikněte v okně editoru aktivovat.
+1. Klikněte v okně editoru, abyste mu pomohli fokus.
 
-2. Z **okno** nabídce vyberte možnost **rozdělení**.
+2. V nabídce **okna** vyberte **rozdělit**.
 
-     Oblast úprav rozdělí dvě podokna oddělené rozdělovač. Posuňte se na těchto podoken můžete vizualizaci nezávisle k zobrazení a úpravám různých součástí aktivního dokumentu ve stejnou dobu. V druhém se projeví všechny změny provedené v jedno podokno.
+     Oblast úprav se rozdělí do dvou podoken oddělených dělicí příčkou. Tato podokna můžete posouvat nezávisle tak, že budete zobrazovat a upravovat různé části aktivního dokumentu současně. Všechny změny provedené v jednom podokně se projeví v druhém.
 
     > [!TIP]
-    > Chcete-li jedno podokno větší než ten druhý, přetáhněte oddělovač stoupající nebo klesající.
+    > Chcete-li změnit jedno podokno větší než druhé, přetáhněte rozdělovač nahoru nebo dolů.
 
-### <a name="to-return-to-single-pane-view"></a>Se vrátíte do zobrazení jednoduché
+### <a name="to-return-to-single-pane-view"></a>Návrat do zobrazení s jedním podoknem
 
-- Z **okno** nabídce vyberte možnost **odebrat rozdělení**.
+- V nabídce **okno** vyberte **Odebrat rozdělení**.
 
-## <a name="create-new-windows"></a>Vytvoření nového systému windows
+## <a name="create-new-windows"></a>Vytvořit nová okna
 
-Můžete také vytvořit více instancí okno editoru. Tato funkce umožňuje zdlouhavé dokument otevřít v více než jednu instanci editoru, takže můžete zobrazit a upravit různých oddílů současně v oknech editoru samostatné, Plnohodnotná.
+Můžete také vytvořit více instancí okna editoru. Tato funkce umožňuje otevřít dlouhý dokument ve více než jedné instanci editoru, takže můžete zobrazit a upravit různé oddíly současně v samostatných oknech Editor s plnou velikostí.
 
-- Na **okno** nabídky, klikněte na tlačítko **nové okno**.
+- V nabídce **okno** klikněte na **nové okno**.
 
-   Přidání nové s kartami instance editoru.
+   Přidá se nová instance editoru s kartami.
 
 ## <a name="see-also"></a>Viz také:
 

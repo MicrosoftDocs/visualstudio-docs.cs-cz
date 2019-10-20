@@ -1,49 +1,49 @@
 ---
-title: Návrhář postupu provádění – Návrhář aktivity Assign
+title: Návrhář aktivity Návrhář postupu provádění – přiřazení
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.Assign.UI
 ms.assetid: ba3feb3c-f144-47ea-926d-cf752b804153
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4179c23cefbf995242288c1e778f9e0413bfe28e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 44d4136aabd5bd383cc3718dc5c6c1676f94e45d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993251"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650733"
 ---
 # <a name="assign-activity-designer"></a>Návrhář aktivity Assign
 
-**Přiřadit** Návrhář aktivity se používá k vytvoření a konfigurace <xref:System.Activities.Statements.Assign> aktivity.
+Návrhář **přiřazení** aktivity se používá k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.Assign>.
 
-## <a name="the-assign-activity"></a>Aktivitě Assign
+## <a name="the-assign-activity"></a>Aktivita přiřazení
 
-<xref:System.Activities.Statements.Assign> Aktivity přiřazuje hodnotu proměnné nebo argumentu.
+Aktivita <xref:System.Activities.Statements.Assign> přiřadí hodnotu proměnné nebo argumentu.
 
-### <a name="using-the-assign-activity-designer"></a>Návrhář aktivity Assign pomocí
+### <a name="using-the-assign-activity-designer"></a>Použití návrháře přiřazení aktivity
 
-**Přiřadit** návrháře aktivit najdete v **primitiv** kategorii **nástrojů**, který přistupuje po kliknutí **nástrojů**kartu (případně vyberte možnost **nástrojů** z **zobrazení** nabídky nebo CTRL + ALT + X.)
+Návrháře **přiřazení** aktivity lze najít v kategorii **primitivních** prvků sady **nástrojů**, ke které se dostanete kliknutím na kartu **panel** nástrojů (případně můžete vybrat možnost **Sada nástrojů** v nabídce **zobrazení** nebo CTRL + ALT + X).)
 
-**Přiřadit** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřadit na povrch návrháře postupu provádění, pokud už aktivity jsou umístěny, například jako uvnitř <xref:System.Activities.Statements.Sequence>. Vyřazení **přiřadit** vytvoří Návrhář aktivity <xref:System.Activities.Statements.Assign> aktivity s výchozím **DisplayName** z přiřazení. <xref:System.Activities.Activity.DisplayName%2A> Můžete upravovat v záhlaví **přiřadit** Návrhář aktivity nebo v **DisplayName** pole mřížku vlastností.
+Návrháře **přiřazení** aktivity lze přetáhnout ze **sady nástrojů** a přetáhnout na Návrhář postupu provádění plochu, kde jsou umístěny aktivity, například uvnitř <xref:System.Activities.Statements.Sequence>. Vyřazením návrháře aktivity pro **přiřazení** dojde k vytvoření aktivity <xref:System.Activities.Statements.Assign> s výchozím názvem **DisplayName** (přiřadit). @No__t_0 lze upravit v hlavičce návrháře aktivity **přiřazení** nebo v poli **DisplayName** v mřížce vlastností.
 
-### <a name="the-assign-properties"></a>Přiřazení vlastnosti
+### <a name="the-assign-properties"></a>Vlastnosti přiřazení
 
-Následující tabulka ukazuje <xref:System.Activities.Statements.Assign> vlastnosti a popisuje, jak se používají v návrháři. Tyto vlastnosti můžete upravit v mřížce vlastností a některé z nich můžete upravit na plochu návrháře postupu provádění.
+V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.Assign> a popisuje, jak se používají v návrháři. Tyto vlastnosti se dají upravovat v mřížce vlastností a některé z nich je možné upravovat na Návrhář postupu provádění povrchu.
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Popisný název <xref:System.Activities.Statements.Assign> aktivity. Výchozí hodnota je přiřadit. I když <xref:System.Activities.Activity.DisplayName%2A> hodnota není bezpodmínečně nutné, je osvědčeným postupem je použití jednoho.|
-|<xref:System.Activities.Statements.Assign.To%2A>|Pravda|Proměnné nebo argumentu, ke kterému <xref:System.Activities.Statements.Assign.Value%2A> je přiřazen. Hodnota musí být platným identifikátorem jazyka Visual Basic. Chcete-li nastavena vlastnost, zadejte výraz jazyka Visual Basic v **k** pole na **přiřadit** aktivity návrháře nebo v mřížce vlastností.|
-|<xref:System.Activities.Statements.Assign.Value%2A>|Pravda|Hodnota, která je přiřazená k proměnné. Chcete-li nastavit <xref:System.Activities.Statements.Assign.Value%2A>, zadejte výraz jazyka Visual Basic v **hodnotu** pole na **přiřadit** aktivity návrháře nebo v mřížce vlastností.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Popisný název aktivity <xref:System.Activities.Statements.Assign>. Výchozí hodnota je přiřazení. I když hodnota <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutná, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.Assign.To%2A>|Podmínka|Proměnná nebo argument, ke kterému je přiřazena <xref:System.Activities.Statements.Assign.Value%2A>. Hodnota musí být platným identifikátorem Visual Basic. Chcete-li nastavit vlastnost, zadejte výraz Visual Basic do pole **do** v Návrháři **přiřazení** aktivity nebo v mřížce vlastností.|
+|<xref:System.Activities.Statements.Assign.Value%2A>|Podmínka|Hodnota, která je přiřazena proměnné. Chcete-li nastavit <xref:System.Activities.Statements.Assign.Value%2A>, zadejte výraz Visual Basic do pole **hodnota** v Návrháři **přiřazení** aktivity nebo v mřížce vlastností.|
 
 ## <a name="see-also"></a>Viz také:
 
-- [Primitiva](../workflow-designer/primitives-activity-designers.md)
+- [Primitivní elementy](../workflow-designer/primitives-activity-designers.md)
 - [Delay](../workflow-designer/delay-activity-designer.md)
 - [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md)
 - [WriteLine](../workflow-designer/writeline-activity-designer.md)

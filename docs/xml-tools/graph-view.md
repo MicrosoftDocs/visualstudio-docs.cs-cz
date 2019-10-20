@@ -3,17 +3,17 @@ title: Zobrazení grafu návrháře schématu XML
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5881afde-3f24-4eb9-bff8-6cb3fc8aade7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a9ef512108ae31617257becf702c2b820c0ab85
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: b19f8f64bc4fe63d111f4d5c61e96d6fff88a14b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918640"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646054"
 ---
 # <a name="graph-view"></a>Zobrazení grafu
 
@@ -35,7 +35,7 @@ Pokud je návrhová plocha prázdná, zobrazí se editor XML, **Průzkumník sch
 
 ![Návrhář XSD; Zobrazení grafu](../xml-tools/media/xsdgraphviewwatermark.gif)
 
-Pokud má sada schémat chyby, na konci seznamu se zobrazí následující text: "K zobrazení a opravě chyb v sadě použijte Seznam chyb."
+Pokud má sada schémat chyby, na konci seznamu se zobrazí následující text: "pomocí Seznam chyb můžete zobrazit a opravit chyby v sadě."
 
 ## <a name="breadcrumb-bar"></a>Panel s popisem cesty
 
@@ -101,22 +101,22 @@ Následující tlačítka panelu nástrojů XSD jsou povolena, když je aktivní
 
 |Možnost|Popis|
 |-|-----------------|
-|**Zobrazit úvodní zobrazení**|Přepne do [zobrazení začátek](../xml-tools/start-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek:CTRL+**1**.|
-|**Zobrazit zobrazení modelu obsahu**|Přepne do [zobrazení modelu obsahu](../xml-tools/content-model-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek:CTRL+**2**.|
-|**Zobrazit zobrazení grafu**|Přepne do [zobrazení grafu](../xml-tools/graph-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek:CTRL+**3**.|
+|**Zobrazit úvodní zobrazení**|Přepne do [zobrazení začátek](../xml-tools/start-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **Ctrl** +**1**.|
+|**Zobrazit zobrazení modelu obsahu**|Přepne do [zobrazení modelu obsahu](../xml-tools/content-model-view.md). K tomuto zobrazení lze přistupovat pomocí klávesových zkratek: **Ctrl** +**2**.|
+|**Zobrazit zobrazení grafu**|Přepne do [zobrazení grafu](../xml-tools/graph-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **Ctrl** +**3**.|
 |**Vymazat pracovní prostor**|Vymaže pracovní prostor a návrhovou plochu.|
 |**Odebrat z pracovního prostoru**|Odebere vybrané uzly z pracovního prostoru a na návrhovou plochu.|
 |**Odebrat všechny kromě výběry z pracovního prostoru**|Odebere uzly, které nejsou vybrané z pracovního prostoru a na návrhové ploše. Tato možnost je povolená v zobrazení modelu obsahu a v zobrazení grafu.|
-|**Zleva doprava**|Změní rozložení v zobrazení grafu na hierarchické znázornění uzlů na základě zleva doprava. K této možnosti lze přistupovat pomocí klávesových zkratek:+**Šipka vpravo**ALT.|
-|**Zprava doleva**|Změní rozložení v zobrazení grafu na hierarchické reprezentace uzlů v rámci pravého na levé. K této možnosti lze přistupovat pomocí klávesových zkratek:+**Šipka doleva**ALT.|
-|**Shora dolů**|Změní rozložení v zobrazení grafu na hierarchické znázornění uzlů v horní části. K této možnosti lze přistupovat pomocí klávesových zkratek:+**Šipka dolů**ALT.|
-|**Zdola nahoru**|Změní rozložení v zobrazení grafu na hierarchické znázornění uzlů na úrovni zdola. K této možnosti lze přistupovat pomocí klávesových zkratek:+**Šipka nahoru**ALT.|
+|**Zleva doprava**|Změní rozložení v zobrazení grafu na hierarchické znázornění uzlů na základě zleva doprava. K této možnosti lze přistupovat pomocí klávesových zkratek: **Alt** +**šipka vpravo**.|
+|**Zprava doleva**|Změní rozložení v zobrazení grafu na hierarchické reprezentace uzlů v rámci pravého na levé. K této možnosti lze přistupovat pomocí klávesové zkratky: **Alt** +**šipka vlevo**.|
+|**Shora dolů**|Změní rozložení v zobrazení grafu na hierarchické znázornění uzlů v horní části. K této možnosti lze přistupovat pomocí klávesové zkratky: **Alt** +**šipka dolů**.|
+|**Zdola nahoru**|Změní rozložení v zobrazení grafu na hierarchické znázornění uzlů na úrovni zdola. K této možnosti lze přistupovat pomocí klávesové zkratky: **Alt** +**šipka nahoru**.|
 
 ## <a name="panscroll"></a>Posun/posun
 
 Návrhovou plochu můžete posunout pomocí posuvníků nebo podržením klávesy **CTRL** při kliknutí myší a přetažením. Když posuňte návrhovou plochu pomocí kliknutí a přetažením, ukazatel se změní na čtyři šipky ukazující na čtyři směry.
 
-## <a name="undoredo"></a>Zpět/znovu
+## <a name="undoredo"></a>Vrátit zpět/znovu
 
 V zobrazení grafu jsou povoleny funkce zpět a znovu pro následující akce:
 

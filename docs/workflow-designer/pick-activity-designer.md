@@ -1,43 +1,43 @@
 ---
-title: Návrhář postupu provádění – Návrhář aktivity Pick
+title: Návrhář aktivit pro výběr Návrhář postupu provádění
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.Pick.UI
 ms.assetid: 642c0a47-1b47-45de-a19a-ca0606cedd7a
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed558c40e932f2148f2240247d19a4fc6df0d06a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 983a3ee3539617bf7ee5864c2138b2f0369e228f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63003590"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650081"
 ---
 # <a name="pick-activity-designer"></a>Návrhář aktivity Pick
 
-<xref:System.Activities.Statements.Pick> Poskytuje aktivity toku řízení založené na událostech. Tato aktivity spustí jednu z několika větví v reakci na aktivační událost.
+Aktivita <xref:System.Activities.Statements.Pick> poskytuje tok řízení založený na událostech. Aktivita spustí jednu z několika větví v reakci na událost triggeru.
 
-## <a name="the-pick-activity"></a>Aktivity Pick
+## <a name="the-pick-activity"></a>Aktivita výběru
 
-A <xref:System.Activities.Statements.Pick> aktivita obsahuje kolekci <xref:System.Activities.Statements.PickBranch> objektů, z nichž jeden <xref:System.Activities.Statements.Pick> aktivity můžete spustit z důvodu některých příchozí události, která slouží jako trigger. Tímto způsobem Návrhář postupu provádění umožňuje modelování toku řízení na základě událostí. Každý <xref:System.Activities.Statements.PickBranch> obsahuje <xref:System.Activities.Statements.PickBranch.Trigger%2A> a <xref:System.Activities.Statements.PickBranch.Action%2A>. Na začátku <xref:System.Activities.Statements.Pick> provádění aktivity, všechny aktivační události aktivity <xref:System.Activities.Statements.PickBranch> prvky jsou naplánovány. Po dokončení první aktivitu naplánované odpovídající akci aktivity a všech ostatních aktivit. aktivační událost se zruší.
+Aktivita <xref:System.Activities.Statements.Pick> obsahuje kolekci objektů <xref:System.Activities.Statements.PickBranch>, z nichž jedna <xref:System.Activities.Statements.Pick> aktivita může být spuštěna z důvodu některé příchozí události, která slouží jako Trigger. Tímto způsobem Návrhář postupu provádění poskytuje modelování toku řízení založené na událostech. Každý <xref:System.Activities.Statements.PickBranch> obsahuje <xref:System.Activities.Statements.PickBranch.Trigger%2A> a <xref:System.Activities.Statements.PickBranch.Action%2A>. Na začátku provádění <xref:System.Activities.Statements.Pick> aktivity se naplánují všechny aktivační aktivity prvků <xref:System.Activities.Statements.PickBranch>. Po dokončení první aktivity se naplánuje odpovídající aktivita akce a všechny ostatní aktivity triggeru se zruší.
 
-### <a name="how-to-use-the-pick-activity-designer"></a>Jak používat návrháře aktivit výběr
+### <a name="how-to-use-the-pick-activity-designer"></a>Jak používat návrháře aktivity výběru
 
-Přístup **vyberte** návrháře aktivit v **tok řízení** kategorii **nástrojů**. **Vyberte** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřadit na povrch návrháře postupu provádění bez ohledu na to návrháři aktivit jsou obvykle umístěny, například uvnitř  **Pořadí** návrháře aktivit. Po jeho umístěním do návrháře postupu provádění, vytvoří <xref:System.Activities.Statements.Pick> aktivitu, která ve výchozím nastavení obsahuje dva prázdné <xref:System.Activities.Statements.PickBranch> aktivitám v podobě elementů pomocí zobrazení názvů pobočka1 a Branch2. Tyto příslušných <xref:System.Activities.Statements.PickBranch.DisplayName%2A> hodnoty vlastností lze upravovat ve službě **PickBranch** návrháře záhlaví činnosti nebo v rámci **vlastnosti** okna pro každou větev.
+Přístup k Návrháři aktivity **výběru** v kategorii **tok řízení** v **sadě nástrojů**. Návrhář aktivity **výběru** lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu všude, kde jsou obvykle umístěna návrháři aktivit, například uvnitř návrháře aktivity **sekvence** . Po přetažení do Návrhář postupu provádění vytvoří aktivitu <xref:System.Activities.Statements.Pick>, která ve výchozím nastavení obsahuje dvě prázdné <xref:System.Activities.Statements.PickBranch> aktivity jako prvky s zobrazovanými názvy Pobočka1 a Branch2. Tyto odpovídající hodnoty vlastností <xref:System.Activities.Statements.PickBranch.DisplayName%2A> lze upravit v záhlaví návrháře aktivit **operace PickBranch** nebo v okně **vlastnosti** pro každou větev.
 
-Existují dva způsoby, jak přidat <xref:System.Activities.Statements.PickBranch> aktivity do kolekce <xref:System.Activities.Statements.Pick> objektu: přetahování a vkládání **PickBranch** z návrháře **nástrojů** nebo pomocí místní nabídky v rámci **vyberte** návrhovou plochu. Podrobnosti najdete v tématu [PickBranch](../workflow-designer/pickbranch-activity-designer.md) tématu. Všimněte si, že pouze položky, které je možné použít uvnitř **vyberte** je Návrhář aktivity **PickBranch** návrháře aktivit.
+Existují dva způsoby, jak přidat <xref:System.Activities.Statements.PickBranch> aktivity do kolekce <xref:System.Activities.Statements.Pick> objektu: přetahování návrháře **operace PickBranch** z **panelu nástrojů** nebo pomocí místní nabídky v rámci návrhové plochy pro **Výběr** . Podrobnosti najdete v tématu [operace PickBranch](../workflow-designer/pickbranch-activity-designer.md) . Všimněte si, že jediná položka, kterou lze umístit v Návrháři aktivity **výběru** , je Návrhář aktivity **operace PickBranch** .
 
-### <a name="pick-activity-properties-in-the-workflow-designer"></a>Vybrat vlastnosti aktivit v Návrháři postupu provádění
+### <a name="pick-activity-properties-in-the-workflow-designer"></a>Vybrat vlastnosti aktivity v Návrhář postupu provádění
 
-Následující tabulka ukazuje <xref:System.Activities.Statements.Pick> vlastnosti a popisuje, jak se používají v návrháři. Tyto vlastnosti můžete upravit v mřížce vlastností nebo na návrhové ploše.
+V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.Pick> a popisuje, jak se používají v návrháři. Tyto vlastnosti lze upravovat v mřížce vlastností nebo na návrhové ploše.
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje popisný název <xref:System.Activities.Statements.Pick> návrháře aktivit v záhlaví. Výchozí hodnota je výběr. Hodnotu lze upravit v mřížce vlastností nebo přímo v hlavičce návrháře aktivit.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutné, je osvědčeným postupem je použití jednoho.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje popisný název návrháře <xref:System.Activities.Statements.Pick> aktivity v hlavičce. Výchozí hodnota je vybrat. Hodnotu lze upravit v mřížce vlastností nebo přímo v záhlaví návrháře aktivit.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
 
 ## <a name="see-also"></a>Viz také:
 

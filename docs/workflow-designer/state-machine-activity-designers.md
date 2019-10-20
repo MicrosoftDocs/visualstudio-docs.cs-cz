@@ -1,23 +1,23 @@
 ---
-title: Návrhář postupu provádění – návrháři aktivit stavového stroje
+title: Návrhář postupu provádění – návrháři aktivit stavového počítače
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 97f0bff5-7e48-4914-8f04-8015a1c6bfae
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: de928ff095c5700506060b9fceb609003f1b9ab1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+author: jillre
+ms.openlocfilehash: b5ea5034f5967b5ba94b57746fd30bf7f1d750e6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62809518"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649921"
 ---
 # <a name="state-machine-activity-designers"></a>Návrháři aktivit stavového stroje
 
-Návrhář postupu provádění obsahuje několik návrháře aktivit, které můžete použít při vytváření pracovního postupu. Tato část obsahuje návrhářů aktivit poskytované systémem umožňuje vytvářet a spravovat pracovní postupy stavu počítače. Následující témata popisují tyto návrhářů a pokyny, jak je používat.
+Návrhář postupu provádění obsahuje řadu návrhářů aktivity, které můžete použít při vytváření pracovních postupů. Tato část obsahuje návrháře aktivit poskytovaných systémem, který slouží k vytváření a správě pracovních postupů stavových počítačů. Následující témata popisují tyto návrháře a poskytují pokyny k jejich použití.
 
 ## <a name="reference"></a>Odkaz
  <xref:System.Activities.Statements.StateMachine>
@@ -29,7 +29,7 @@ Návrhář postupu provádění obsahuje několik návrháře aktivit, které m�
  <xref:System.Activities.Statements.Transition>
 
 ## <a name="related-sections"></a>Související oddíly
- U jiných typů návrháři aktivit naleznete v následujících tématech.
+ Další typy návrháře aktivit najdete v následujících tématech.
 
  [Tok řízení](../workflow-designer/control-flow-activity-designers.md)
 

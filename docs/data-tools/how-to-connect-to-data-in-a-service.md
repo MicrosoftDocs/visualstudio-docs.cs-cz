@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Připojte se k datům ve službě'
+title: 'Postupy: Připojování k datům ve službě'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,53 +11,53 @@ helpviewer_keywords:
 - web services, as data sources
 - web services, connecting
 ms.assetid: a6b54353-05fe-4e5c-8631-90231fc95504
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7633d60ed672b64137b68bd9e6c3b860224753e5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 75efb8656d54c02f3126493504506c913a7e0f4a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62566931"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72642026"
 ---
-# <a name="how-to-connect-to-data-in-a-service"></a>Postupy: Připojení k datům ve službě
+# <a name="how-to-connect-to-data-in-a-service"></a>Postupy: připojení k datům ve službě
 
-Připojení vaší aplikace s daty vrácenými ze služby spuštěním [Průvodce konfigurací zdroje dat](../data-tools/media/data-source-configuration-wizard.png) a vyberete **služby** na **zvolte typ zdroje dat**stránky.
+Aplikaci připojíte k datům vráceným ze služby spuštěním [Průvodce konfigurací zdroje dat](../data-tools/media/data-source-configuration-wizard.png) a výběrem **služby** na stránce **Zvolte typ zdroje dat** .
 
-Po dokončení průvodce se odkaz na službu se přidá do vašeho projektu a je okamžitě k dispozici v [okna zdroje dat](add-new-data-sources.md#data-sources-window).
+Po dokončení průvodce je do projektu přidán odkaz na službu, který je okamžitě k dispozici v [okně zdroje dat](add-new-data-sources.md#data-sources-window).
 
 > [!NOTE]
-> Položky, které se zobrazují v **zdroje dat** okna jsou závislé na informace, které služba vrací. Některé služby nemusí poskytnout dostatek informací, **Průvodce konfigurací zdroje dat** vytvořil objekty. Například pokud služba vrátí netypovou datovou sadu, žádné položky, které se zobrazí v **zdroje dat** po dokončení průvodce. Je to proto netypové datové sady neposkytují schéma, proto Průvodce nemá dostatek informací pro vytvoření zdroje dat.
+> Položky, které se zobrazí v okně **zdroje dat** , jsou závislé na informacích, které služba vrací. Některé služby nemusí poskytnout dostatek informací pro **Průvodce konfigurací zdroje dat** pro vytváření objektů s možností vazby. Například pokud služba vrátí netypové datové sady, nezobrazí se žádné položky v okně **zdroje dat** po dokončení průvodce. Důvodem je, že netypové datové sady neposkytují schéma, takže průvodce nemá k dispozici dostatek informací pro vytvoření zdroje dat.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="to-connect-your-application-to-a-service"></a>Pro připojení aplikace ke službě
+## <a name="to-connect-your-application-to-a-service"></a>Připojení aplikace ke službě
 
-1. Na **Data** nabídky, klikněte na tlačítko **přidat nový zdroj dat**.
+1. V nabídce **data** klikněte na tlačítko **Přidat nový zdroj dat**.
 
-2. Vyberte **služby** na **zvolte typ zdroje dat** stránce a potom klikněte na tlačítko **Další**.
+2. Na stránce **Zvolte typ zdroje dat** vyberte **Služba** a pak klikněte na **Další**.
 
-3. Zadejte adresu služby, kterou chcete použít, nebo klikněte na tlačítko **Discover** vyhledejte služby v aktuálním řešení a potom klikněte na **Přejít**.
+3. Zadejte adresu služby, kterou chcete použít, nebo klikněte na **Vyhledat** a vyhledejte služby v aktuálním řešení a potom klikněte na **Přejít**.
 
-4. Volitelně můžete zadat nový **Namespace** místo výchozí hodnotu.
+4. Volitelně můžete zadat nový **obor názvů** místo výchozí hodnoty.
 
     > [!NOTE]
-    > Klikněte na tlačítko **Upřesnit** otevřít [dialogové okno nastavit odkaz na službu](../data-tools/configure-service-reference-dialog-box.md).
+    > Kliknutím na tlačítko **Upřesnit** otevřete [dialogové okno Konfigurovat odkaz na službu](../data-tools/configure-service-reference-dialog-box.md).
 
-5. Klikněte na tlačítko **OK** přidáte odkaz na službu do projektu.
+5. Kliknutím na **OK** přidejte do svého projektu odkaz na službu.
 
 6. Klikněte na tlačítko **Dokončit**.
 
-     Zdroj dat je přidaný do **zdroje dat** okna.
+     Zdroj dat se přidá do okna **zdroje dat** .
 
 ## <a name="next-steps"></a>Další kroky
 
-Chcete-li přidat funkce do vaší aplikace, vyberte položku v **zdroje dat** okno a přetáhněte jej na formulář pro vytvoření vazby ovládacích prvků. Další informace najdete v tématu [vytvoření vazby ovládacích prvků k datům v sadě Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md).
+Chcete-li do aplikace přidat funkce, vyberte položku v okně **zdroje dat** a přetáhněte ji do formuláře pro vytvoření vázaných ovládacích prvků. Další informace najdete v tématu [vázání ovládacích prvků k datům v aplikaci Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md).
 
 ## <a name="see-also"></a>Viz také:
 
 - [Vytvoření vazby ovládacích prvků WPF k datové službě WCF](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)
-- [Služby Windows Communication Foundation a WCF data services v sadě Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
+- [Služby Windows Communication Foundation Services a WCF Data Services v aplikaci Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

@@ -1,5 +1,5 @@
 ---
-title: Analýza a modelování vaší architektury | Dokumentace Microsoftu
+title: Analýza a modelování vaší architektury | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -29,54 +29,54 @@ helpviewer_keywords:
 - applications, designing
 ms.assetid: c9f04cfa-72bd-419d-a952-616eed01472e
 caps.latest.revision: 129
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 59cb744b64137a3ccf34e87d89abcba22e2afc9b
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 38a65a98c1dca5542d3e0e667cb623283bb164c7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65680999"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72602427"
 ---
 # <a name="analyze-and-model-your-architecture"></a>Analýza a modelování vaší architektury
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zajistěte, aby že vaše aplikace splňuje požadavky uživatelů pomocí sady Visual Studio architektura a modelování nástroje pro návrh a modelování vaší aplikace. Snadněji pochopit stávající kód programu pomocí sady Visual Studio můžete vizualizovat strukturu kódu, chování a vztahy.  
-  
- Vytvářejte modely s různými úrovněmi detailů v průběhu životního cyklu aplikací v rámci vašeho vývojového procesu. Sledujte požadavky, úkoly, testovací případy, chyby a další práci související s vašimi modely propojením prvků modelu s pracovními položkami serveru Team Foundation Server a váš plán vývoje. Zobrazit [scénář: Změna návrhu pomocí vizualizace a modelování](../modeling/scenario-change-your-design-using-visualization-and-modeling.md).  
-  
- Které verze sady Visual Studio podporují jednotlivé funkce najdete v tématu [podporované verze pro nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)  
-  
-## <a name="to"></a>Chcete-li  
-  
-|||  
-|-|-|  
-|**Vizualizace kódu**:<br /><br /> – Podívejte organizaci a vztahy kódu vytvořením map kódu. Vizualizace závislostí mezi sestavení, oborů názvů, třídy, metody a tak dále.<br />– Podívejte na strukturu třídy a členy pro konkrétní projekt tak, že vytvoříte diagramů tříd z kódu.<br />-Vyhledání konfliktů mezi kódu a jeho návrhu tak, že vytvoříte diagramy vrstev pro ověření kódu.<br /><br /> **Poznámka:** V této verzi sady Visual Studio termín *mapy kódu* je použito místo *graf závislosti*. Termín *grafu* při použití samostatného obvykle odkazuje na diagram orientovaného grafu nebo jazyka DGML (nebo dokumentu). Mapy kódu se speciálním typem DGML diagram.|-   [Vizualizace kódu](../modeling/visualize-code.md)<br />-   [Práce s třídami a ostatními typy (návrhář tříd)](../ide/working-with-classes-and-other-types-class-designer.md)<br />-   [Video: Pochopení závislostí kódu až po vizualizaci (kanál 9)](http://go.microsoft.com/fwlink/?LinkID=252065)<br />-   [Video: Vizualizujte dopad změn (kanál 9)](http://go.microsoft.com/fwlink/?LinkID=252068)|  
-|**Popsat a sdělovat požadavky uživatelů**:<br /><br /> -Objasnění uživatelských scénářů, obchodní pravidla a další požadavky a pomáhají zajistit jejich konzistence kreslením diagramy UML, jako je například případ použití, aktivity a diagramy tříd.|-   [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)<br />-   [Modelování uživatelských požadavků](../modeling/model-user-requirements.md)<br />-   [Video: Zlepšení architektury prostřednictvím modelování (kanál 9)](http://go.microsoft.com/fwlink/?LinkID=252078)|  
-|**Definice architektury**:<br /><br /> – Modelování ve velkém měřítku strukturu softwarového systému a vzory návrhu kreslením Komponenta UML, třídy a sekvenční diagramy.<br />-Definovat a vynucovat omezení závislosti mezi komponentami váš kód tak, že vytvoříte diagramy vrstev.|-   [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)<br />-   [Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)<br />-   [Video: Zlepšení architektury prostřednictvím modelování (kanál 9)](http://go.microsoft.com/fwlink/?LinkID=252078)<br />-   [Video: Použijte diagramy vrstev k navrhování a ověřování architektury (kanál 9)](http://go.microsoft.com/fwlink/?LinkID=252073)|  
-|**Ověřování systému s požadavky a určené návrhu:**<br /><br /> -Definujte akceptační testy nebo testy systému podle požadavků na modely. Tím se vytvoří silný vztah mezi testy a požadavky vašich uživatelů a umožňuje snadno aktualizovat systém další při změně požadavků.<br />-Validate závislostí kódu pomocí diagramů vrstev, které popisují zamýšlenou architekturu a Neumožnit změny, které může být v konfliktu s návrhem.|-   [Ověřování systému během vývoje.](../modeling/validate-your-system-during-development.md)<br />-   [Video: Použijte diagramy vrstev k navrhování a ověřování architektury (kanál 9)](http://go.microsoft.com/fwlink/?LinkID=252073)|  
-|**Sdílení modelů, diagramy a map kódu pomocí správy verzí Team Foundation**:<br /><br /> -Umístěte map kódu, modelování projekty, diagramy UML a diagramy vrstev v systému správy verzí Team Foundation, můžete je sdílet.|Pokud máte více uživatelů, kteří pracují s následujícími položkami v rámci správy verzí Team Foundation, abyste se vyhnuli problémy s verzí ovládacího prvku použijte tyto pokyny:<br /><br /> -   [Správa modelů a diagramů pomocí správy verzí](../modeling/manage-models-and-diagrams-under-version-control.md)|  
-|**Vytvořit nebo nakonfigurovat částí aplikace z UML nebo jazyky specifickými pro doménu**:<br /><br /> – Ujistěte se, návrhu rychlejší reakce na požadavky na změny a snadno proměnné v řadě produktů.|-   [Generování a konfigurace aplikace z modelů](../modeling/generate-and-configure-your-app-from-models.md)|  
-|**Přizpůsobení modelů a diagramů**:<br /><br /> -Adaptace modelů a jak váš projekt je využívá tak, že definujete další vlastnosti pro prvky UML, omezení ověření, abyste měli jistotu, že vaše modely souladu s firemní pravidla a další příkazy a položky panelu nástrojů.<br />-Vytvořte vlastní jazyky specifickými pro doménu.|-   [Rozšíření modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md)<br />-   [Sada Modeling SDK pro Visual Studio – jazyky specifické pro doménu](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|  
-|**Generování textu s použitím šablony T4**:<br /><br /> – Použijte textové bloky a logiky ovládacího prvku uvnitř šablony pro vygenerování souborů založený na textu.|-   [Generování kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md)|  
-  
-## <a name="types-of-models-and-their-uses"></a>Typy modelů a jejich použití  
-  
-|**Typ modelu a typické používá**|  
-|-------------------------------------|  
-|**Mapy kódu**<br /><br /> Mapy kódu vám umožní zjistit, organizaci a vztahy v kódu.<br /><br /> Obvyklá využití:<br /><br /> – Zkontrolujte kód programu to vám umožní lépe pochopit jeho strukturu a její závislosti, jak ji aktualizovat a odhad nákladů na navrhované změny.<br /><br /> Další informace:<br /><br /> -   [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)<br />-   [Použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)<br />-   [Nalezení potenciálních problémů pomocí analyzátorů mapy kódu](../modeling/find-potential-problems-using-code-map-analyzers.md)|  
-|**Diagram vrstvy**<br /><br /> Diagramy vrstev vám umožní definovat struktury aplikace jako sada vrstvy nebo bloky s explicitní závislosti. Můžete spustit ověření ke zjišťování konfliktů mezi závislostmi v kódu a závislostmi popsané na diagramu vrstvy.<br /><br /> Obvyklá využití:<br /><br /> – Stabilizace struktury aplikace pomocí množství změn průběhu své životnosti.<br />-Zjišťování konfliktů nechtěné závislosti před vrácením se změnami kódu.<br /><br /> Další informace:<br /><br /> -   [Vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [Diagramy vrstev: Referenční dokumentace](../modeling/layer-diagrams-reference.md)<br />-   [Ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)|  
-|**UML model**<br /><br /> UML model obsahuje několik zobrazení, včetně třídy, komponenty, případ použití, aktivity a sekvenční diagramy. Můžete přizpůsobit UML tak, aby vyhovovala vaší domény aplikace. Například můžete připojit značky, další informace a omezení s prvky modelu. Můžete také definovat nástroje, které pracují na modely. Zobrazit [vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md).<br /><br /> Obvyklá využití:<br /><br /> – Popis požadavků a návrhu. UML lze rychle použít k vývoji jakékoli aplikace. Zobrazit [použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md).<br />-Vytvořit nebo nakonfigurovat testy nebo částí aplikace. Úkony je nutné přizpůsobit zápis a vývoj generování šablon nebo konfigurovat aplikace. Zobrazit [vygenerovat a nakonfigurovat aplikace z modelů](../modeling/generate-and-configure-your-app-from-models.md).<br />-Pro obecný popis a pro generování kódu nebo konfigurace v menších projektů.|  
-|**Jazyka specifického pro doménu (DSL)**<br /><br /> DSL je zápis, který návrh pro konkrétní účel. V sadě Visual Studio má obvykle grafickou podobu.<br /><br /> Obvyklá využití:<br /><br /> -Vygeneruje nebo nakonfigurovat částí aplikace. Práce je vyžadována k vývoji zápisem a nástroje. Výsledkem může být lepší vhodný k vaší doméně než přizpůsobení UML.<br />-Pro velké projekty nebo řádky produktů, kde se investice do vývoje DSL a jeho nástrojů vrácený jeho použití ve více než jeden projekt.<br /><br /> Další informace:<br /><br /> -   [Sada Modeling SDK pro Visual Studio – jazyky specifické pro doménu](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|  
-  
-## <a name="where-can-i-get-more-information"></a>Kde lze získat další informace?  
-  
-|||  
-|-|-|  
-|**Fóra**|-   [Visual Studio Visualization & Modeling nástroje](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio Visualization & Modeling SDK (DSL Tools)](http://go.microsoft.com/fwlink/?LinkId=184721)|  
-  
-## <a name="see-also"></a>Viz také  
+Ujistěte se, že vaše aplikace splňuje požadavky uživatelů pomocí architektury sady Visual Studio a nástrojů pro modelování pro návrh a modelování vaší aplikace. Snadnější pochopení stávajícího programového kódu pomocí sady Visual Studio k vizualizaci struktury kódu, chování a vztahů.
 
-- [Co je nového pro modelování v sadě Visual Studio 2015](../modeling/what-s-new-for-design-in-visual-studio.md)   
+ Vytvářejte modely v rámci životního cyklu aplikace na různých úrovních v rámci svého procesu vývoje. Sledujte požadavky, úkoly, testovací případy, chyby a další práci, která je přidružena k vašim modelům, propojením prvků modelu s Team Foundation Server pracovními položkami a vaším plánem vývoje. Viz [scénář: Změna návrhu pomocí vizualizace a modelování](../modeling/scenario-change-your-design-using-visualization-and-modeling.md).
+
+ Chcete-li zjistit, které verze aplikace Visual Studio podporují jednotlivé funkce, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)
+
+## <a name="to"></a>Chcete-li
+
+|||
+|-|-|
+|**Vizualizovat kód**:<br /><br /> – Podívejte se na organizaci a vztahy kódu vytvořením map kódu. Vizualizujte závislosti mezi sestaveními, obory názvů, třídami, metodami a tak dále.<br />– Podívejte se na strukturu třídy a členy pro konkrétní projekt vytvořením diagramů tříd z kódu.<br />– Vyhledejte konflikty mezi vaším kódem a jeho návrh vytvořením diagramů vrstev pro ověření kódu.<br /><br /> **Poznámka**: v této verzi sady Visual Studio se jako místo *grafu závislostí*používá pojem *Mapa kódu* . Výraz *grafu* , pokud se používá samostatně, se vztahuje na orientovaný graf nebo diagram DGML (nebo dokument). Mapy kódu jsou specializovaného typu diagramu DGML.|-   [vizualizace kódu](../modeling/visualize-code.md)<br />-   [práce s třídami a jinými typy (návrhář tříd)](../ide/working-with-classes-and-other-types-class-designer.md)<br />-   [video: pochopení závislostí kódu pomocí vizualizace (Channel 9)](http://go.microsoft.com/fwlink/?LinkID=252065)<br />-   [video: vizualizace dopadu změny (Channel 9)](http://go.microsoft.com/fwlink/?LinkID=252068)|
+|**Popište a sdělte požadavkům uživatelů**:<br /><br /> – Objasnění uživatelských scénářů, obchodních pravidel a dalších požadavků a zajištění jejich konzistence díky vykreslování diagramů UML, jako jsou případy použití, aktivity a diagramy tříd.|-   [vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)<br />[požadavky uživatelů -    modelu](../modeling/model-user-requirements.md)<br />-   [video: vylepšení architektury prostřednictvím modelování (Channel 9)](http://go.microsoft.com/fwlink/?LinkID=252078)|
+|**Definovat architekturu**:<br /><br /> – Modelujte velkou škálu softwarového systému a vzorů návrhu vykreslením diagramů komponent, tříd a sekvencí UML.<br />– Definovat a vynutit omezení pro závislosti mezi komponentami vašeho kódu vytvořením diagramů vrstev.|-   [vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)<br />-   [modelování architektury vaší aplikace](../modeling/model-your-app-s-architecture.md)<br />-   [video: vylepšení architektury prostřednictvím modelování (Channel 9)](http://go.microsoft.com/fwlink/?LinkID=252078)<br />-   [video: použití diagramů vrstev k návrhu a ověření vaší architektury (kanál 9)](http://go.microsoft.com/fwlink/?LinkID=252073)|
+|**Ověřte svůj systém s požadavky a zamýšleným návrhem:**<br /><br /> -Definujte testy přijetí nebo testy systému na základě modelů požadavků. Tím se vytvoří silný vztah mezi testy a požadavky vašich uživatelů a pomůže vám to při změně požadavků snadněji aktualizovat systém.<br />– Ověřte závislosti kódu pomocí diagramů vrstev, které popisují zamýšlenou architekturu a zabraňují změnám, které by mohly být v konfliktu s návrhem.|-   [ověřit systém během vývoje](../modeling/validate-your-system-during-development.md)<br />-   [video: použití diagramů vrstev k návrhu a ověření vaší architektury (kanál 9)](http://go.microsoft.com/fwlink/?LinkID=252073)|
+|**Sdílení modelů, diagramů a map kódu pomocí správy verzí Team Foundation**:<br /><br /> – Vložte mapy kódu, projekty modelování, diagramy UML a diagramy vrstev v rámci správy verzí Team Foundation, abyste je mohli sdílet.|Pokud máte více uživatelů, kteří pracují s těmito položkami v rámci správy verzí Team Foundation, použijte tyto pokyny, které vám pomohou vyhnout se problémům s řízením verzí:<br /><br /> -   [Správa modelů a diagramů v rámci správy verzí](../modeling/manage-models-and-diagrams-under-version-control.md)|
+|**Generování nebo konfigurace částí aplikace z jazyků UML nebo specifických pro doménu**:<br /><br /> – Udělejte svůj návrh větší reakce na změny požadavků a snadnou proměnnou v rámci řady produktů.|-   [generování a konfigurace vaší aplikace z modelů](../modeling/generate-and-configure-your-app-from-models.md)|
+|**Přizpůsobení modelů a diagramů**:<br /><br /> – Přizpůsobte modely na to, jak je váš projekt používá, definováním dalších vlastností prvků UML, omezení ověření, aby se zajistilo, že vaše modely odpovídají vašim obchodním pravidlům a dalším příkazům nabídky a položkám nástrojů.<br />– Vytvořte vlastní jazyky specifické pro doménu.|-   [rozšiřování modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md)<br />[sada SDK pro -    Modeling pro Visual Studio – jazyky specifické pro doménu](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|
+|**Generovat text pomocí šablon T4**:<br /><br /> – Použijte textové bloky a ovládací logiku v šablonách k vygenerování textových souborů.|-   [generování kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md)|
+
+## <a name="types-of-models-and-their-uses"></a>Typy modelů a jejich použití
+
+|**Typ modelu a typické použití**|
+|-------------------------------------|
+|**Mapy kódu**<br /><br /> Mapy kódu vám pomůžou vidět organizaci a vztahy v kódu.<br /><br /> Typická použití:<br /><br /> -Prověřte programový kód, abyste mohli lépe pochopit jeho strukturu a jejich závislosti, jak je aktualizovat a odhadnout náklady na navrhované změny.<br /><br /> Další informace:<br /><br /> -   [závislosti map napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md)<br />-   [použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)<br />-   [nalezení potenciálních problémů pomocí analyzátorů mapy kódu](../modeling/find-potential-problems-using-code-map-analyzers.md)|
+|**Diagram vrstev**<br /><br /> Diagramy vrstev umožňují definovat strukturu aplikace jako sadu vrstev nebo bloků s explicitními závislostmi. Můžete spustit ověřování pro zjištění konfliktů mezi závislostmi v kódu a závislostmi popsanými v diagramu vrstev.<br /><br /> Typická použití:<br /><br /> – Stabilizovat strukturu aplikace prostřednictvím mnoha změn během jejího života.<br />-Zjištění neúmyslného konfliktu závislostí před vrácením změn do kódu.<br /><br /> Další informace:<br /><br /> -   [vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [diagramy vrstev: referenční](../modeling/layer-diagrams-reference.md) dokumentace<br />-   [ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)|
+|**Model UML**<br /><br /> Model UML obsahuje několik zobrazení, včetně tříd, komponent, případů použití, aktivit a sekvenčních diagramů. UML můžete přizpůsobit tak, aby vyhovovalo vaší doméně aplikace. Například můžete k prvkům modelu připojit značky, další informace a omezení. Můžete také definovat nástroje, které pracují s modely. Viz [vytvoření modelů pro vaši aplikaci](../modeling/create-models-for-your-app.md).<br /><br /> Typická použití:<br /><br /> -Popsat požadavky a navrhnout. Můžete rychle použít UML pro vývoj libovolné aplikace. Viz [použití modelů v procesu vývoje](../modeling/use-models-in-your-development-process.md).<br />– Generování nebo konfigurace testů nebo částí aplikace. K přizpůsobení zápisu a vývoji šablon generování nebo konfigurovatelné aplikace je potřeba některá práce. Viz téma [generování a konfigurace aplikace z modelů](../modeling/generate-and-configure-your-app-from-models.md).<br />– Pro obecné popisy a pro generování kódu nebo konfiguraci v menších projektech.|
+|**Jazyk specifický pro doménu (DSL)**<br /><br /> DSL je zápis, který navrhujete pro určitý účel. V aplikaci Visual Studio je obvykle grafický.<br /><br /> Typická použití:<br /><br /> – Generování nebo konfigurace částí aplikace Práce je nutná pro vývoj zápisu a nástrojů. Výsledkem může být lepší přizpůsobení vaší doméně než přizpůsobení UML.<br />– Pro velké projekty nebo v řádcích produktů, kde investice do vývoje DSL a jejích nástrojů se vrátí pomocí jejího použití ve více než jednom projektu.<br /><br /> Další informace:<br /><br /> [sada SDK pro -    Modeling pro Visual Studio – jazyky specifické pro doménu](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|
+
+## <a name="where-can-i-get-more-information"></a>Kde lze získat další informace?
+
+|||
+|-|-|
+|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](http://go.microsoft.com/fwlink/?LinkId=184721)|
+
+## <a name="see-also"></a>Viz také
+
+- [Co je nového pro modelování v aplikaci Visual Studio 2015](../modeling/what-s-new-for-design-in-visual-studio.md)
 - [DevOps a správa životního cyklu aplikací](https://msdn.microsoft.com/library/74a1f71d-7f23-4c71-8fd7-89ede614fab6)

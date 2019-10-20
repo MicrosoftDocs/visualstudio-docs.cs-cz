@@ -7,17 +7,17 @@ helpviewer_keywords:
 - connecting to data, Access databases
 - Access databases, connecting
 ms.assetid: 4159e815-d430-4ad0-a234-e4125fcbef18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 2a068414fb157ab71733d6c726b6ec71532629d4
-ms.sourcegitcommit: 8562a337cc9f674c756a4a0b2c7e288ebd61b51e
+ms.openlocfilehash: d24fc2fa1ee34567e0c32859eeccf6af62813a20
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345416"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648711"
 ---
 # <a name="connect-to-data-in-an-access-database"></a>Připojení k datům v accessové databázi
 
@@ -33,7 +33,7 @@ Pomocí následujícího postupu se můžete připojit k databázím vytvořený
 
 1. Otevřete projekt aplikace model Windows Forms nebo WPF v aplikaci Visual Studio.
 
-2. Chcete-li otevřít okno **zdroje dat** , vyberte v nabídce **zobrazení** položku jiné**zdroje dat** **systému Windows** > .
+2. Chcete-li otevřít okno **zdroje dat** , vyberte v nabídce **zobrazení** položku **jiné** **zdroje dat** >  Windows.
 
    ![Zobrazení dalších zdrojů dat Windows](../data-tools/media/viewdatasources.png)
 
@@ -75,7 +75,7 @@ Pomocí následujícího postupu se připojte k databázím vytvořeným pomocí
 
 1. Otevřete projekt aplikace model Windows Forms nebo WPF v aplikaci Visual Studio.
 
-2. V nabídce **zobrazení** vyberte **jiné** > **zdroje dat**Windows.
+2. V nabídce **zobrazení** vyberte jiné**zdroje dat** >  **Windows** .
 
    ![Zobrazení dalších zdrojů dat Windows](../data-tools/media/viewdatasources.png)
 
@@ -113,7 +113,7 @@ Datová sada, kterou jste právě vytvořili, je k dispozici v okně **zdroje da
 
 - Otevřete zdroj dat v **Návrhář datových sad** , chcete-li přidat nebo upravit objekty, které tvoří datovou sadu.
 
-- Přidejte logiku ověřování k <xref:System.Data.DataTable.ColumnChanging> události nebo <xref:System.Data.DataTable.RowChanging> tabulek dat v datové sadě (viz [ověření dat v datových sadách](../data-tools/validate-data-in-datasets.md)).
+- Přidejte logiku ověřování k události <xref:System.Data.DataTable.ColumnChanging> nebo <xref:System.Data.DataTable.RowChanging> tabulek dat v datové sadě (viz [ověření dat v datových sadách](../data-tools/validate-data-in-datasets.md)).
 
 ## <a name="see-also"></a>Viz také:
 

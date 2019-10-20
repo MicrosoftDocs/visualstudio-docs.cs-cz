@@ -6,201 +6,201 @@ f1_keywords:
 - vs.graphics.designer.effectdesigner
 - vs.graphics.shaderdesigner
 ms.assetid: 5db09a16-b82c-4ba3-8ec9-630cdc109397
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1377034853907ce0c3585e4672296c1c8747259f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: fd82a5c8bee50c778b87927f1074d71a38a21e9f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823859"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72635059"
 ---
 # <a name="shader-designer"></a>Návrhář shaderů
 
-Tento dokument popisuje způsob práce se sadou Visual Studio **návrháře shaderu** Pokud chcete vytvořit, upravit a exportovat vlastní vizuální efekty, které jsou označovány jako *shadery*.
+Tento dokument popisuje, jak pracovat s **návrhářem shaderu** sady Visual Studio k vytváření, úpravám a exportu vlastních vizuálních efektů, které jsou známé jako *shadery*.
 
-Můžete použít **návrháře shaderu** k vytvoření vlastní vizuálních efektů pro vaše hry nebo aplikace, i pokud si nejste jisti vysoké úrovně shader language (HLSL) programování. K vytvoření shaderu ve **návrháře shaderu**, si to rozložení jako graf. To znamená, přidat na návrhovou plochu *uzly* , která představují data a operace a pak proveďte připojení mezi nimi k definování, jak operace zpracovat data. V každém uzlu operace je k dispozici ve verzi preview efekt až k danému bodu tak, aby můžete vizualizovat jeho výsledek. Data prochází uzly směrem k poslední uzel, který představuje výstup shaderu.
+Pomocí **Návrháře shaderu** můžete vytvořit vlastní vizuální efekty pro vaši hru nebo aplikaci, i když nevíte, jak HLSL (High Level shader) seznáme. Chcete-li vytvořit shader v **Návrháři shaderu**, je třeba ho rozvrhnout jako graf. To znamená, že přidáte do *uzlů* návrhové plochy, které reprezentují data a operace, a pak mezi nimi provedete připojení a určíte, jak operace zpracovávají data. V každém uzlu operace je k dispozici náhled efektu až do tohoto bodu, aby bylo možné vizualizovat jeho výsledek. Data procházejí uzly směrem k konečnému uzlu, který představuje výstup shaderu.
 
 ## <a name="supported-formats"></a>Podporované formáty
 
-**Návrháře shaderu** podporuje tyto formáty shaderu:
+**Návrhář shaderu** podporuje tyto formáty shaderu:
 
-|Název formátu|Přípona souboru|Podporované operace (zobrazení, úpravy, Export)|
+|Název formátu|Přípona souboru|Podporované operace (zobrazení, úpravy, export)|
 |-----------------| - | - |
-|Orientovaný graf shaderu jazyka|*.dgsl*|Zobrazení pro úpravy|
-|Shader HLSL (zdrojového kódu)|*.hlsl*|Export|
-|Shader HLSL (bajtového kódu)|*.cso*|Export|
-|Hlaviček jazyka C++ (pole bajtového kódu HLSL)|*.h*|Export|
+|Jazyk shaderu řízeného grafu|*. DGSL*|Zobrazit, upravit|
+|HLSL shader (zdrojový kód)|*. HLSL*|Export|
+|HLSL shader (bytového kódu)|*. CSO*|Export|
+|C++záhlaví (pole HLSL bytového kódu)|*. h*|Export|
 
 ## <a name="get-started"></a>Začínáme
 
-Tato část popisuje, jak přidat do projektu Visual Studio C++ DGSL shader a obsahuje základní informace, které vám pomůžou začít.
+Tato část popisuje, jak přidat DGSL shader do projektu sady Visual Studio C++ a poskytuje základní informace, které vám pomohou začít.
 
 > [!NOTE]
-> Automatické sestavení integrace grafiky různé věci, třeba grafy shaderu (.dgsl souborů) je podporována pouze pro projekty C++.
+> Automatická integrace sestavení grafických položek, jako jsou grafy shaderu (soubory. DGSL), je C++ podporována pouze pro projekty.
 
-### <a name="to-add-a-dgsl-shader-to-your-project"></a>Chcete-li přidat do projektu DGSL shader
+### <a name="to-add-a-dgsl-shader-to-your-project"></a>Přidání DGSL shaderu do projektu
 
-1. Ujistěte se, že máte požadované sady Visual Studio nainstalována součást potřebné pro práci s grafikou. Komponenta nazývá **obrázků a 3D modelů editory**.
+1. Ujistěte se, že máte nainstalovanou požadovanou součást sady Visual Studio, kterou potřebujete pracovat s grafikou. Tato součást se nazývá **editory obrázků a 3D model**.
 
-   Ho Pokud chcete nainstalovat, spusťte instalační program sady Visual Studio tak, že vyberete **nástroje** > **stažení nástrojů a funkcí** z nabídky panelu a pak vyberte **jednotlivé komponenty**kartu. Vyberte **obrázků a 3D modelů editory** komponentu pod **hry a grafika** kategorie a pak vyberte **změnit**.
+   Pokud ho chcete nainstalovat, otevřete Instalační program pro Visual Studio výběrem **nástrojů**  > **získat nástroje a funkce** z řádku nabídek a pak vyberte kartu **jednotlivé součásti** . vyberte součást **image a editory 3D model** pod  **Vyberte možnost hry a grafika** a pak vyberte **Upravit**.
 
-   ![Obrázků a 3D modelů editory komponenty](media/image-3d-model-editors-component.png)
+   ![Součást Editor obrázků a 3D model](media/image-3d-model-editors-component.png)
 
-2. V **Průzkumníka řešení**, otevřete místní nabídku pro projekt jazyka C++, ke kterému chcete přidat shaderu a klikněte na tlačítko **přidat** > **nová položka**.
+2. V **Průzkumník řešení**otevřete místní nabídku pro C++ projekt, ke kterému chcete shader přidat, a poté zvolte možnost **Přidat**  > **novou položku**.
 
-3. V **přidat novou položku** dialogovém okně **nainstalováno**vyberte **grafiky**a pak vyberte **vizuální graf shaderu (.dgsl)** .
+3. V dialogovém okně **Přidat novou položku** vyberte v části **nainstalovaná**možnost **Grafika**a pak vyberte **Visual shader Graph (. DGSL)** .
 
    > [!NOTE]
-   > Pokud se nezobrazí **grafiky** v kategorii **přidat novou položku** dialogových oken a budete mít **obrázků a 3D modelů editory** nainstalována součást grafické položky nejsou podporovány pro typ vašeho projektu.
+   > Pokud v dialogovém okně **Přidat novou položku** nevidíte kategorii **grafiky** a máte nainstalovanou komponentu **image a 3D model editory** , pro váš typ projektu se nepodporují grafické položky.
 
-4. Zadejte **název** souboru shaderu a **umístění** místo se má vytvořit.
+4. Zadejte **název** souboru shaderu a **umístění** , kde se má vytvořit.
 
-5. Zvolte **přidat** tlačítko.
+5. Klikněte na tlačítko **Přidat** .
 
 ### <a name="the-default-shader"></a>Výchozí shader
 
-Pokaždé, když vytvořte DGSL shader, začne jako minimální shader, který má právě **barva bodu** uzel, který je připojený k **konečnou barvu** uzlu. I když tento shader je úplné a funkční, mnoho neprovádí. Proto je prvním krokem při vytváření shaderu pracovní často odstranit **barva bodu** uzlu nebo odpojte ho od **konečnou barvu** uzel, aby uvolnil prostor pro další uzly.
+Pokaždé, když vytvoříte DGSL shader, začíná jako minimální shader, který má pouze uzel **barevného bodu** , který je připojen k **konečnému uzlu Color** . I když je tento shader dokončený a funkční, nemá mnoho. Proto první krok při vytváření funkčního shaderu často odstraní uzel **Color Point** nebo ho odpojí od **posledního barevného** uzlu, aby uvolnil místo pro ostatní uzly.
 
-## <a name="work-with-the-shader-designer"></a>Práce s návrháře shaderu
+## <a name="work-with-the-shader-designer"></a>Práce s návrhářem shaderů
 
-Následující části popisují způsob použití návrháře shaderu pro práci se shadery vlastní.
+Následující části popisují, jak používat návrháře shaderu pro práci s vlastními shadery.
 
-### <a name="shader-designer-toolbars"></a>Panely nástrojů návrháře shaderu
+### <a name="shader-designer-toolbars"></a>Panely nástrojů Návrháře shaderu
 
-Návrháře shaderu, které obsahují panely nástrojů příkazy, které pomohou při práci s grafy DGSL shader.
+Panely nástrojů Návrháře shaderu obsahují příkazy, které vám pomůžou pracovat s grafy DGSL shaderu.
 
-Příkazy, které mají vliv na stav návrháře shaderu jsou umístěny na **režim návrháře shaderu** nástrojů v hlavním okně aplikace Visual Studio. Návrhářské nástroje a příkazy jsou umístěny na **návrháře shaderu** nástrojů na návrhové ploše návrháře shaderu.
+Příkazy, které ovlivňují stav návrháře shaderu, jsou umístěny na panelu nástrojů **režimu návrháře shaderu** v hlavním okně aplikace Visual Studio. Nástroje a příkazy pro návrh jsou umístěné na panelu nástrojů **Návrháře shaderu** na návrhové ploše návrháře shaderu.
 
-Tady je **režim návrháře shaderu** nástrojů:
+Tady je panel nástrojů **režim návrháře shaderu** :
 
-![Modální okno nástrojů návrháře shaderu.](../designers/media/digit-dsd-modal-toolbar.png)
+![Modální panel nástrojů návrháře shaderů](../designers/media/digit-dsd-modal-toolbar.png)
 
-Tato tabulka popisuje položky panelu **režim návrháře shaderu** nástrojů, které jsou uvedeny v pořadí, ve kterém jsou uvedeny zleva doprava:
+V této tabulce jsou popsány položky na panelu nástrojů **režimu návrháře shaderu** , které jsou uvedeny v pořadí, ve kterém se zobrazí zleva doprava:
 
 |Položka na panelu nástrojů|Popis|
 |------------------|-----------------|
-|**Výběr**|Umožňuje interakci s uzly a hran do grafu. V tomto režimu můžete vybrat uzly a přesunout nebo odstranit, a můžete vytvořit okraje nebo rozdělit je.|
-|**Posouvání**|Umožňuje pohyb graf shaderu relativně k rámu okna. K posouvání vyberte bod na návrhové ploše a pohybujte jím.<br /><br /> V **vyberte** režimu, můžete stisknutím a podržením **Ctrl** aktivovat **Pan** dočasně režimu.|
-|**Přiblížení**|Umožňuje zobrazení více či méně detailů graf shaderu relativně k rámu okna. V **přiblížení** režimu, vyberte bod na návrhové ploše a poté jej přesunutím vpravo dolů zvětšete nebo přesunutím vlevo či nahoru out.<br /><br /> V **vyberte** režimu, můžete stisknutím a podržením **Ctrl** pro přiblížení nebo oddálení použít kolečko myši.|
-|**Přizpůsobit zobrazení**|Zobrazí graf úplné shaderu v rámci okna.|
-|**Režim vykreslování v reálném čase**|Pokud je povoleno vykreslení v reálném čase, Visual Studio překreslí plochu návrhu, i když je provedena žádná akce uživatele. Tento režim je užitečný při práci se shadery, které se mění v průběhu času.|
-|**Náhled pomocí koule**|Při povolení modelu koule slouží náhled shaderu. Je možné povolit tvar náhled pouze jeden po druhém.|
-|**Náhled pomocí krychle**|Pokud povolená, model datové krychle se používá k náhled shaderu. Je možné povolit tvar náhled pouze jeden po druhém.|
-|**Náhled pomocí válce**|Při povolení modelu válec slouží náhled shaderu. Je možné povolit tvar náhled pouze jeden po druhém.|
-|**Náhled pomocí kužele**|Při povolení modelu kužel slouží náhled shaderu. Je možné povolit tvar náhled pouze jeden po druhém.|
-|**Náhled pomocí čajové konvice**|Pokud povolená, modelu čajovou konvici slouží náhled shaderu. Je možné povolit tvar náhled pouze jeden po druhém.|
-|**Náhled pomocí roviny**|Při povolení modelu rovinou slouží náhled shaderu. Je možné povolit tvar náhled pouze jeden po druhém.|
-|**Panel nástrojů**|Střídavě zobrazí a skryje **nástrojů**.|
-|**Vlastnosti**|Můžete také zobrazí nebo skryje **vlastnosti** okna.|
-|**Pokročilé**|Obsahuje pokročilé příkazy a možnosti.<br /><br /> **Export**: Umožňuje exportovat shader v různých formátech.<br /><br /> **Exportovat jako**: Shader exportuje jako zdrojový kód buď HLSL nebo jako hodnota bytecode funkce shader kompilované. Další informace o tom, jak exportovat shader, naleznete v tématu [jak: Exportovat shader](../designers/how-to-export-a-shader.md).<br /><br /> **Grafické moduly**: Umožňuje výběr renderer, který se používá k zobrazení návrhové ploše.<br /><br /> **Vykreslení s D3D11**: Používá rozhraní Direct3D 11 k vykreslení plochy návrhu Návrháře shaderu.<br /><br /> **Vykreslení s D3D11WARP**: Používá rozhraní Direct3D 11 Windows Advanced Rasterizační platformě WARP () k vykreslení plochy návrhu Návrháře shaderu.<br /><br /> **Zobrazení**: Umožňuje výběr další informace o návrháři shaderu.<br /><br /> **Frekvence snímků**: Pokud povolená, zobrazí aktuální frekvenci snímků v pravém horním rohu návrhové plochy. Frekvence snímků je počet snímků, které jsou zpracovány za sekundu. Tato možnost je užitečná, když povolíte **režim vykreslování v reálném čase** možnost.|
+|**Výběr**|Umožňuje interakci s uzly a hranami v grafu. V tomto režimu můžete vybrat uzly a přesunout je nebo odstranit, a můžete také vytvořit okraje nebo je rozdělit.|
+|**Posouvání**|Umožňuje přesun grafu shaderu relativně k rámečku okna. Pro posouvání vyberte bod na návrhové ploše a přesuňte ho kolem.<br /><br /> V režimu **výběru** můžete stisknout a podržet klávesu **CTRL** a dočasně aktivovat režim **posouvání** .|
+|**Přibliž**|Povoluje zobrazení více nebo méně podrobností shaderového grafu vzhledem k rámečku okna. V režimu **zvětšení** vyberte bod na návrhové ploše a pak ho přesuňte doprava nebo dolů, abyste se přiblížili nebo ponechali oddálit nebo zmenšení.<br /><br /> V režimu **výběru** můžete stisknout a podržet klávesu **CTRL** pro přiblížení nebo oddálení pomocí kolečka myši.|
+|**Přizpůsobit zobrazení**|Zobrazí úplný graf shaderu v rámci okna.|
+|**Režim vykreslování v reálném čase**|Když je povoleno vykreslování v reálném čase, Visual Studio překreslí návrhovou plochu i v případě, že není provedena žádná akce uživatele. Tento režim je užitečný při práci se shadery, které se mění v průběhu času.|
+|**Náhled pomocí koule**|Pokud je tato možnost povolena, použije se k náhledu shaderu model koule. V jednom okamžiku může být povolen pouze jeden obrazec náhledu.|
+|**Náhled pomocí datové krychle**|Když je tato možnost povolená, použije se k zobrazení náhledu shaderu model datové krychle. V jednom okamžiku může být povolen pouze jeden obrazec náhledu.|
+|**Náhled pomocí válce**|Pokud je tato možnost povolena, použije se k zobrazení náhledu shaderu model lahve. V jednom okamžiku může být povolen pouze jeden obrazec náhledu.|
+|**Náhled pomocí kužele**|Pokud je tato možnost povolena, použije se k zobrazení náhledu shaderu model kužele. V jednom okamžiku může být povolen pouze jeden obrazec náhledu.|
+|**Náhled pomocí konvice**|Pokud je tato možnost povolena, použije se k zobrazení náhledu shaderu model konvice. V jednom okamžiku může být povolen pouze jeden obrazec náhledu.|
+|**Náhled s rovinou**|Pokud je tato možnost povolena, použije se k zobrazení náhledu shaderu model roviny. V jednom okamžiku může být povolen pouze jeden obrazec náhledu.|
+|**Panel nástrojů**|Alternativně zobrazí nebo skryje **panel nástrojů**.|
+|**Vlastnosti**|Případně se zobrazí nebo skryje okno **vlastnosti** .|
+|**Pokročilé**|Obsahuje pokročilé příkazy a možnosti.<br /><br /> **Export**: povoluje export shaderu v několika formátech.<br /><br /> **Exportovat jako**: exportuje shader jako buď zdrojový kód HLSL, nebo jako zkompilovaný kód kompilovaného shaderu. Další informace o tom, jak exportovat shadery, naleznete v tématu [How to: Export shader](../designers/how-to-export-a-shader.md).<br /><br /> **Grafické moduly**: umožňuje výběr vykreslovacího modulu, který se používá k zobrazení návrhové plochy.<br /><br /> **Render with D3D11**: pomocí Direct3D 11 vykreslí plochu návrhu Návrháře shaderu.<br /><br /> **Rendering with D3D11WARP**: používá rozhraní Direct3D 11 Windows Advanced rastring Platform (osnova) k vykreslení plochy návrhu Návrháře shaderu.<br /><br /> **Zobrazení**: umožňuje výběr dalších informací o Návrháři shaderů.<br /><br /> **Snímková frekvence**: když je povolená, zobrazí aktuální kmitočet snímků v pravém horním rohu návrhové plochy. Frekvence snímků je počet snímků, které jsou zpracovány za sekundu. Tato možnost je užitečná, když povolíte možnost **režim vykreslování v reálném čase** .|
 
 > [!TIP]
-> Můžete použít **Upřesnit** tlačítko poslední příkaz spustit znovu.
+> Můžete zvolit tlačítko **Upřesnit** a znovu spustit poslední příkaz.
 
-### <a name="work-with-nodes-and-connections"></a>Práce s uzly a připojení
+### <a name="work-with-nodes-and-connections"></a>Práce s uzly a připojeními
 
-Použití **vyberte** režimu k přidání, odebrání, změna umístění, připojení a konfigurace uzlů. Tady je postup pro provádění těchto základních operací:
+Pomocí režimu **Select** můžete přidat, odebrat, přemístit, připojit a nakonfigurovat uzly. Tady je postup, jak provádět tyto základní operace:
 
-#### <a name="to-perform-basic-operations-in-select-mode"></a>K provádění základních operací v režim výběru
+#### <a name="to-perform-basic-operations-in-select-mode"></a>Postup při provádění základních operací v režimu výběru
 
-- Tady je způsob:
+- Tady je postup:
 
-  - Pokud chcete přidat uzel do grafu, vyberte ji v **nástrojů** a přesuňte jej na návrhovou plochu.
+  - Chcete-li přidat uzel do grafu, vyberte ho v **panelu nástrojů** a pak ho přesuňte na návrhovou plochu.
 
-  - Odebrání uzlu z grafu, vyberte ho a potom stiskněte klávesu **odstranit**.
+  - Chcete-li odebrat uzel z grafu, vyberte jej a stiskněte klávesu **Delete**.
 
-  - Chcete-li změnit umístění uzlu, vyberte ho a přesuňte ho do nového umístění.
+  - Chcete-li změnit umístění uzlu, vyberte jej a přesuňte jej do nového umístění.
 
-  - Pro připojení dvou uzlů, přesuňte výstupní terminál jednoho z uzlů do vstupní terminálu z jiného uzlu. Můžete připojit pouze terminály, které mají nekompatibilní typy. Čáry mezi terminály zobrazuje připojení.
+  - Chcete-li připojit dva uzly, přesuňte výstupní terminál jednoho uzlu do vstupního terminálu druhého uzlu. Připojit lze pouze terminály, které mají kompatibilní typy. Čára mezi terminály zobrazuje připojení.
 
-  - Chcete-li odebrat připojení, na místní nabídku pro jednu z připojených terminály, zvolte **přerušit odkazy**.
+  - Chcete-li odebrat připojení, vyberte v místní nabídce některého z připojených terminálů možnost **přerušení propojení**.
 
-  - Chcete-li konfigurovat vlastnosti uzlu, vyberte uzel a pak na **vlastnosti** okno, zadejte nové hodnoty pro vlastnosti.
+  - Chcete-li konfigurovat vlastnosti uzlu, vyberte uzel a poté v okně **vlastnosti** zadejte nové hodnoty vlastností.
 
-### <a name="preview-shaders"></a>Shader ve verzi Preview.
+### <a name="preview-shaders"></a>Shadery ve verzi Preview
 
-Na vám pomohou pochopit, jak bude vypadat shaderu ve vaší aplikaci, můžete nakonfigurovat, jak je zobrazen váš vliv. K odhadu vaší aplikace, zvolte jeden z několika obrazců vykreslení textury a další parametry materiálu, povolit animace založené na čase efekty a konfigurovat zkontrolujte ve verzi preview z různých úhlů.
+Abychom vám pomohli pochopit, jak se shader zobrazí v aplikaci, můžete nakonfigurovat, jak se má váš efekt zobrazovat. K aproximaci aplikace můžete zvolit jeden z několika tvarů, které se mají vykreslovat, konfigurovat textury a další parametry materiálu, Povolit animaci efektů založených na čase a kontrolovat náhledy z různých úhlů.
 
 #### <a name="shapes"></a>Obrazce
 
-Návrháře shaderu obsahuje šest obrazce – kouli, datové krychle, válec, kužel, čajovou konvici a rovinou –, můžete použít k náhledu vašeho shaderu. V závislosti na shader určité tvary může získáte lepší náhled.
+Návrhář shaderu obsahuje šest tvarů – koule, datovou krychli, válec, kuželový, konvice a rovinu, kterou můžete použít k zobrazení náhledu shaderu. V závislosti na shaderu vám některé tvary můžou poskytnout lepší náhled.
 
-Zvolit tvar náhled na **režimy návrháře shaderu** nástrojů, vyberte obrazec, který chcete.
+Chcete-li zvolit obrazec náhledu, vyberte na panelu nástrojů **režimy návrháře shaderů** požadovaný tvar.
 
-#### <a name="textures-and-material-parameters"></a>Textury a materiálu parametry
+#### <a name="textures-and-material-parameters"></a>Textury a parametry materiálu
 
-Mnoho shadery využívají textury a vlastností materiálu vytvořit jedinečný vzhled pro každý druh objektu ve vaší aplikaci. Zobrazíte vašeho shaderu bude vypadat ve vaší aplikaci můžete nastavit textury a vlastností materiálu, které slouží k vykreslení náhledu tak, aby odpovídaly textury a parametry, které můžete použít ve vaší aplikaci.
+Mnohé shadery spoléhají na textury a vlastnosti materiálu k vytvoření jedinečného vzhledu pro každý druh objektu v aplikaci. Chcete-li zjistit, jak váš shader bude ve vaší aplikaci vypadat, můžete nastavit textury a vlastnosti materiálu, které se použijí k vykreslení náhledu tak, aby odpovídaly texturám a parametrům, které můžete ve své aplikaci použít.
 
-Registr textur svázat různé textury, nebo upravte ostatní materiálu parametry:
+Svázání jiné textury s registrem textury nebo úpravou jiných parametrů pro materiál:
 
-1. V **vyberte** režimu, vyberte prázdnou oblast návrhové plochy. To způsobí, že **vlastnosti** okno k zobrazení vlastností globální shaderu.
+1. V režimu **výběru** vyberte prázdnou oblast návrhové plochy. To způsobí, že okno **vlastnosti** zobrazí vlastnosti globálního shaderu.
 
-2. V **vlastnosti** okno, zadejte nové hodnoty pro textury a parametru vlastnosti, které chcete změnit.
+2. V okně **vlastnosti** zadejte nové hodnoty vlastností textury a parametru, které chcete změnit.
 
-V následující tabulce jsou uvedeny shaderu parametry, které můžete upravit:
+V následující tabulce jsou uvedeny parametry shaderu, které lze upravit:
 
 |Parametr|Vlastnosti|
 |---------------|----------------|
-|**Texture 1** - **Texture 8**|**Přístup**:                             **Veřejné** umožňující vlastnost, která má být z editoru modelů jinak **privátní**.<br /><br /> **Název souboru**: Úplná cesta soubor textury, který je spojen s registrem textur.|
-|**Materiál okolí**|**Přístup**:                             **Veřejné** umožňující vlastnost, která má být z editoru modelů jinak **privátní**.<br /><br /> **Hodnota**: Rozptýlení barvy aktuálního pixelu kvůli nepřímé - nebo okolí - osvětlení.|
-|**Materiál rozptýlení**|**Přístup**: **Veřejné** umožňující vlastnost, která má být z editoru modelů jinak **privátní**.<br /><br /> **Hodnota**:  Barva, která popisuje, jak aktuální pixel rozptýlí přímé osvětlení.|
-|**Vyzařující materiál**|**Přístup**:                              **Veřejné** umožňující vlastnost, která má být z editoru modelů jinak **privátní**.<br /><br /> **Hodnota**: Podíl barvy aktuálního pixelu kvůli svým zadaná osvětlení.|
-|**Reflexní materiál**|**Přístup**:                              **Veřejné** umožňující vlastnost, která má být z editoru modelů jinak **privátní**.<br /><br /> **Hodnota**: Barva, která popisuje, jak aktuální pixel odráží přímé osvětlení.|
-|**Materiál síla odlesku**|**Přístup**:                             **Veřejné** umožňující vlastnost, která má být z editoru modelů jinak **privátní**.<br /><br /> **Hodnota**: Exponent, který udává intenzitu zrcadlových odlesků na aktuální pixel.|
+|**Textura 1**  - **Textura 8**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Filename**: úplná cesta k souboru textury, která je přidružena k tomuto registru textury.|
+|**Okolí materiálu**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Value**: barva difúze aktuálního pixelu z důvodu nepřímého nebo okolního osvětlení.|
+|**Materiálové difúze**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Hodnota**: barva, která popisuje, jak aktuální pixel rozptýlí přímé osvětlení.|
+|**Vyzařující materiálu**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Value (hodnota**): podíl barvy aktuálního pixelu z důvodu samostatně poskytnutého osvětlení.|
+|**Odlesky materiálu**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Hodnota**: barva, která popisuje, jak aktuální pixel odráží přímé osvětlení.|
+|**Materiálově odlesky energie**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Value (hodnota**): exponent definující intenzitu zrcadlových světel na aktuálním pixelu.|
 
-#### <a name="time-based-effects"></a>Účinky podle času
+#### <a name="time-based-effects"></a>Efekty založené na čase
 
-Některé shadery mít komponentu podle času, která animuje efekt. Chcete-li zobrazit, jak účinek vypadá v praxi, verze preview musí být aktualizovány několikrát za sekundu. Ve výchozím nastavení ve verzi preview se aktualizují při změně shaderu; ke změně tohoto chování tak, aby se zobrazí podle času efekty, budete muset povolit vykreslování v reálném čase.
+Některé shadery mají komponentu založenou na čase, která animaci projeví. Chcete-li zobrazit, jak efekt vypadá v akci, je nutné náhled verze Preview aktualizovat několikrát za sekundu. Ve výchozím nastavení je verze Preview aktualizována pouze v případě, že je shader změněn; Chcete-li toto chování změnit, aby bylo možné zobrazit efekty založené na čase, je nutné povolit vykreslování v reálném čase.
 
-Chcete-li povolit vykreslování v reálném čase, na panelu nástrojů návrháře shaderu zvolte **vykreslování v reálném čase**.
+Pokud chcete povolit vykreslování v reálném čase, na panelu nástrojů Návrháře shaderu vyberte **vykreslování v reálném**čase.
 
-#### <a name="examine-the-effect"></a>Zkontrolujte účinek
+#### <a name="examine-the-effect"></a>Kontrola efektu
 
-Mnoho shadery jsou ovlivněny proměnných, například zobrazení úhel nebo směrové světlo. Prozkoumat, jak reagovat účinek se tyto proměnné, můžete volně Otočení tvaru ve verzi preview a sledujte chování shaderu.
+Mnohé shadery jsou ovlivněny proměnnými, jako je zobrazení úhlu nebo směrového osvětlení. Chcete-li se podívat, jak efekt reaguje, když se tyto proměnné mění, můžete otočit tvar náhledu a sledovat, jak se shader chová.
 
-Který tvar otočí, stiskněte a podržte **Alt**a potom vyberte libovolného bodu na povrchu návrhu a přesuňte ho.
+Chcete-li otočit tvar, stiskněte a podržte klávesu **ALT**a pak vyberte libovolný bod na návrhové ploše a přesuňte ho.
 
-### <a name="export-shaders"></a>Exportovat shader.
+### <a name="export-shaders"></a>Exportovat shadery
 
-Před použitím shaderu ve vaší aplikaci, musíte ho exportovat ve formátu, který se rozumí rozhraní DirectX.
+Než budete moct v aplikaci použít shader, musíte ho exportovat ve formátu, který rozhraní DirectX zná.
 
-Jako zdrojový kód HLSL nebo jako hodnota bytecode funkce shader kompilované můžete exportovat shadery. HLSL zdrojový kód je exportovat do textového souboru, který má *.hlsl* příponu názvu souboru. Hodnota bytecode funkce shader může být buď Nezpracovaná binární soubor, který je exportován *.cso* příponu názvu souboru nebo hlaviček jazyka C++ ( *.h*) soubor, který kóduje hodnota bytecode funkce shader do pole.
+Shadery můžete exportovat jako zdrojový kód HLSL nebo jako kód zkompilovaného kódu shaderu. Zdrojový kód HLSL je exportován do textového souboru, který má příponu názvu souboru *. HLSL* . Bajtový kód shaderu lze exportovat buď do nezpracovaného binárního souboru, který má příponu názvu souboru *. CSO* , nebo do souboru C++ hlaviček ( *. h*), který kóduje bajtový kód shaderu do pole.
 
-Další informace o tom, jak exportovat shader, naleznete v tématu [jak: Exportovat shader](../designers/how-to-export-a-shader.md).
+Další informace o tom, jak exportovat shadery, naleznete v tématu [How to: Export shader](../designers/how-to-export-a-shader.md).
 
 ## <a name="keyboard-shortcuts"></a>Klávesové zkratky
 
 |Příkaz|Klávesové zkratky|
 |-------------| - |
-|Přepnout na **vyberte** režimu|**Ctrl**+**G**, **Ctrl**+**Q**<br /><br /> **S**|
-|Přepnout na **přiblížení** režimu|**Ctrl**+**G**, **Ctrl**+**Z**<br /><br /> **Z**|
-|Přepnout na **Pan** režimu|**Ctrl**+**G**, **Ctrl**+**P**<br /><br /> **K**|
-|Vybrat vše|**Ctrl**+**A**|
+|Přepnout na režim **výběru**|**Ctrl** +**G**, **CTRL** +**Q**<br /><br /> **Pracují**|
+|Přepnout do režimu **lupy**|**Ctrl** +**G**, **CTRL** +**Z**<br /><br /> **Od**|
+|Přepnout do režimu **posouvání**|**Ctrl** +**G**, **CTRL** +**P**<br /><br /> **K**|
+|Vybrat vše|**Ctrl**+**a**|
 |Odstranit aktuální výběr|**Delete**|
-|Zrušit aktuální výběr|**Řídicí** (**Esc**)|
-|Přiblížit|**CTRL**+**kolečko myši dopředu**<br /><br /> Znaménko plus ( **+** )|
-|Oddálit|**CTRL**+**kolečko myši dozadu**<br /><br /> Znaménko minus ( **-** )|
-|Posunout nahoru na návrhovou plochu|**Kolečko myši dozadu**<br /><br /> **PageDown**|
-|Posunout návrhové ploše dolů|**Kolečko myši dopředu**<br /><br /> **PageUp**|
-|Posunout doleva návrhové ploše|**SHIFT**+**kolečko myši dozadu**<br /><br /> **Kolečko myši doleva**<br /><br /> **Shift**+**PageDown**|
-|Posunout doprava návrhové ploše|**SHIFT**+**kolečko myši dopředu**<br /><br /> **Kolečko myši doprava**<br /><br /> **Shift**+**PageUp**|
-|Přesunout fokus klávesnice pro jiný uzel|**Šipku** klíče|
-|Vyberte uzel, který má fokus klávesnice (přidá uzel do výběru skupiny)|**Shift**+**Spacebar**|
-|Přepnout výběr uzlu, který má fokus klávesnice|**Ctrl**+**Spacebar**|
-|Přepne aktuální výběr (Pokud je vybráno žádné uzly, vyberte uzel, který má klávesnice fokus)|**Spacebar**|
-|Aktuální výběr nahoru|**SHIFT**+**šipka nahoru**|
-|Aktuální výběr dolů|**SHIFT**+**šipka dolů**|
-|Aktuální výběr doleva|**SHIFT**+**šipka vlevo**|
-|Přesunout aktuální výběr doprava|**SHIFT**+**šipka doprava**.|
+|Zrušit aktuální výběr|**Řídicí** znak (**ESC**)|
+|Přiblížit|**Ctrl** +**kolečkem myši v popředí**<br /><br /> Znaménko plus ( **+** )|
+|Oddálit|**Ctrl** +**dozadu – kolečko myši**<br /><br /> Symbol mínus ( **-** )|
+|Posouvání návrhové plochy nahoru|**Kolečko myši dozadu**<br /><br /> **PageDown**|
+|Posunout plochu návrhu dolů|**Kolečko myši – posunutí**<br /><br /> **PageUp**|
+|Posunout návrhovou plochu doleva|**Posunout** +**kolečkem myši dozadu**<br /><br /> **Kolečko myši vlevo**<br /><br /> **Posunutí** +**PageDown**|
+|Posunout návrhovou plochu doprava|**Posunout** +**kolečkem myši na popředí**<br /><br /> **Kolečko myši vpravo**<br /><br /> **Posunutí** +**PageUp**|
+|Přesunutí fokusu klávesnice na jiný uzel|Klávesy se **šipkami**|
+|Vyberte uzel, který má fokus klávesnice (přidá uzel do skupiny výběru).|**Shift** +**MEZERNÍK**|
+|Přepnout výběr uzlu, který má fokus klávesnice|**Ctrl** +**MEZERNÍK**|
+|Přepnout aktuální výběr (pokud nejsou vybrané žádné uzly, vyberte uzel, který má fokus klávesnice).|**Mezerník**|
+|Přesunout aktuální výběr nahoru|**Shift** +**šipka nahoru**|
+|Přesunout aktuální výběr dolů|**Shift** +**šipka dolů**|
+|Posunout aktuální výběr doleva|**Shift** +**šipka doleva**|
+|Přesunout aktuální výběr doprava|**Shift** +**šipka doprava**.|
 
 ## <a name="related-topics"></a>Související témata
 
 |Název|Popis|
 |-----------|-----------------|
-|[Práce s 3D prostředky pro hry a aplikace](../designers/working-with-3-d-assets-for-games-and-apps.md)|Poskytuje přehled nástroje sady Visual Studio, které můžete použít pro práci s texturami a obrazy, 3D modely a efekty shaderu.|
-|[Editor obrázků](../designers/image-editor.md)|Popisuje způsob použití editoru obrázků Visual Studia pro práci s texturami a obrázky.|
-|[Editor modelů](../designers/model-editor.md)|Popisuje způsob použití editoru Visual Studio Model pro práci s 3D modely.|
+|[Práce s 3D prostředky pro hry a aplikace](../designers/working-with-3-d-assets-for-games-and-apps.md)|Poskytuje přehled nástrojů sady Visual Studio, které můžete použít pro práci s texturami a obrázky, 3D modely a efekty shaderu.|
+|[Editor obrázků](../designers/image-editor.md)|Popisuje, jak používat editor obrázků sady Visual Studio pro práci s texturami a obrázky.|
+|[Editor modelů](../designers/model-editor.md)|Popisuje, jak používat Editor modelů sady Visual Studio pro práci s 3D modely.|

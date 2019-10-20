@@ -1,85 +1,85 @@
 ---
-title: Úpravy modelů kombinací testů
+title: Úpravy modelů kombinace textu
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - load tests, scenarios
 - load tests, virtual users
 ms.assetid: e3b7d952-9012-400a-8131-3444390a6066
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 51bfc7a9061cbc17d766f1174593907bfbf762ec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d9c678f1ec5cc984bff8e7f77d3ed95c9d579bfb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62785838"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72644462"
 ---
-# <a name="edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test"></a>Úprava modelů poměru testů a určení pravděpodobnosti, že virtuální uživatel spustí test
+# <a name="edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test"></a>Úprava modelů kombinace testů pro určení pravděpodobnosti, že virtuální uživatel spustí test
 
-*Model kombinace testů* určuje pravděpodobnost, že virtuální uživatel spustí daný test ve scénáři testu zatížení. To umožňuje simulovat zatížení více realisticky. Namísto toho, aby pouze jeden pracovní postup prostřednictvím aplikace, může mít několik pracovních postupů, což je užší jak koncoví uživatelé pracují s vašimi aplikacemi.
+*Model kombinace testů* určuje pravděpodobnost, že virtuální uživatel spustí daný test ve scénáři zátěžového testu. To vám umožní simulovat zatížení realističtějším způsobem. Místo toho, abyste měli v rámci svých aplikací pouze jeden pracovní postup, můžete mít několik pracovních postupů, což je bližší odhad toho, jak koncoví uživatelé pracují s vašimi aplikacemi.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="test-mix-model-options"></a>Možnosti modelu kombinace testů
 
-Můžete určit jednu z následujících možností model kombinace testů pro vašeho scénáře zkušebního zatížení:
+Pro scénář zátěžového testu můžete zadat jednu z následujících možností modelu kombinace testů:
 
-- **Na základě celkového počtu testů:** Určuje, který webového výkonu nebo Jednotkový test se spustí, když virtuální uživatel spustí iteraci testu. Na konci zátěžového testu odpovídá počet případů, kdy byla spuštěna určitého testu rozdělení přiřazeného testu. Použijte tento model kombinace testů, pokud vytváříte poměru testů podílu transakcí v protokolu služby IIS nebo v údajích o produkci.
+- **Na základě celkového počtu testů:** Určuje, který webový výkon nebo test jednotek se spustí, když virtuální uživatel spustí iteraci testu. Na konci zátěžového testu odpovídá počet, kolikrát byl konkrétní test spuštěn, shodný s přiřazenou distribucí testu. Tento model kombinace testů použijte, když vytváříte kombinaci testů v procentech transakcí v protokolu služby IIS nebo v provozních datech.
 
-- **Podle počtu virtuálních uživatelů:** Určuje procentuální podíl virtuálních uživatelů, kteří budou používat konkrétního webového výkonu nebo Jednotkový test. Kdykoli během zátěžového testu odpovídá počet uživatelů, kteří jsou spuštěn určitý test přiřazené distribuce. Použijte tento model kombinace testů, pokud vytváříte poměr testů na procento uživatelů, kteří spuštěn určitý test.
+- **Na základě počtu virtuálních uživatelů:** Určuje procentuální podíl virtuálních uživatelů, kteří spustí určitý webový výkon nebo test jednotky. V jakémkoli bodě zátěžového testu odpovídá počet uživatelů, kteří spouštějí určitý test, přiřazenému rozdělení. Tento model kombinace testů použijte, když vytváříte kombinaci testů na procentu uživatelů, kteří spouštějí určitý test.
 
-- **Založený na kroku uživatele:** V průběhu zátěžového testu je každý test webového výkonu nebo Jednotkový test spustit zadaný počet opakování za uživatele za hodinu. Použijte tento model kombinace testů, když potřebujete virtuálních uživatelů pro spuštění testu v určitém tempu zátěžového testu.
+- **Podle tempa uživatele:** V průběhu zátěžového testu každý test výkonnosti webu nebo test jednotky spustí určitý počet opakování na uživatele za hodinu. Tento model kombinace testů použijte, pokud chcete, aby virtuální uživatelé spouštěli test s použitím určitého tempa v průběhu zátěžového testu.
 
-- **Podle pořadí:** Každý virtuální uživatel spouští testy webového výkonu nebo Jednotkový v pořadí, že testy jsou definovány ve scénáři. Virtuální uživatel pokračuje procházením testy v tomto pořadí, dokud není dokončen zátěžový test.
+- **Na základě sekvenčního pořadí:** Každý virtuální uživatel spouští testy webového výkonu nebo jednotek v pořadí, ve kterém jsou testy definovány ve scénáři. Virtuální uživatel pokračuje v provádění testů v tomto pořadí, dokud není dokončen zátěžový test.
 
-## <a name="tasks"></a>Úlohy
+## <a name="tasks"></a>Úkoly
 
-|Úlohy|Související témata|
+|Úkoly|Související témata|
 |-|-----------------------|
-|**Určení poměru testů pro zátěžový test:** Když vytvoříte zátěžový test, můžete zadat nastavení pro zátěžový test v **nového Průvodce zátěžovým testem**. V **Průvodce novým zátěžovým testem**, zvolte existující web a testy jednotek pro přidání do počáteční scénář. Po přidání testy do scénáře, určete kombinace testů pro scénář.<br /><br /> Pomocí možnosti modelování zatížení více přesně předpovědět očekávaného reálného využití webu nebo aplikace, které jsou zátěžové testování. Je důležité provést, protože zátěžový test, který není založen na modelu přesné zatížení lze generovat zavádějící výsledky.|-   [Emulovat očekávaného reálného využití webu nebo aplikace](../test/emulate-real-world-usage-of-a-web-site-in-a-load-test-using-test-mix-models.md)|
-|**Upravte model kombinace testů:** Do scénáře zátěžového testu pomocí jedné z modelů poměru testů můžete změnit **editoru zátěžového testu**.||
-|**Nakonfigurujte nemusely zpoždění pro model poměru testů tempem uživatele:** Pokud váš scénář zátěžového testu je nakonfigurován pro použití **založený na kroku model kombinace testů uživatele**, můžete určit, jak chcete rozdělení zpoždění Pacing nakonfigurované.|-   [Jak: Použít rozdělení na zpoždění stimulace, když model kombinace testů se stimulací podle uživatele](../test/how-to-apply-distribution-to-pacing-delay-when-using-a-user-pace-test-mix-model.md)|
+|**Zadání kombinace testů pro zátěžový test:** Když vytvoříte zátěžový test, zadáte nastavení pro zátěžový test v **novém Průvodce zátěžovým testem**. V **novém Průvodce zátěžovým testem**zvolíte existující testy webu a jednotky, které chcete přidat do prvotního scénáře. Po přidání testů do scénáře zadáte kombinaci testů pro daný scénář.<br /><br /> K přesnější předpovědi očekávaného reálného využití webu nebo aplikace, které provádíte testování, použijete možnosti modelu zatížení. Je důležité to udělat, protože zátěžový test, který není založen na přesný model zatížení, může generovat zavádějící výsledky.|-   [emulace očekávaného reálného využití webu nebo aplikace](../test/emulate-real-world-usage-of-a-web-site-in-a-load-test-using-test-mix-models.md)|
+|**Upravit model kombinace testů:** Scénář zátěžového testu můžete změnit tak, aby používal jeden z modelů kombinace testů pomocí **Editor zátěžového testu**.||
+|**Konfigurace zpoždění stimulace pro model kombinace testů pro uživatele tempa:** Pokud je váš scénář zátěžového testu nakonfigurován tak, aby používal **model kombinace testů tempa uživatele**, můžete určit, jak chcete nakonfigurovat zpoždění distribuce stimulace.|-   [Postup: použití distribuce na zpoždění stimulace při použití modelu kombinace testů tempa uživatele](../test/how-to-apply-distribution-to-pacing-delay-when-using-a-user-pace-test-mix-model.md)|
 
-## <a name="change-the-test-mix-model-in-a-scenario"></a>Změňte model kombinace testů ve scénáři
+## <a name="change-the-test-mix-model-in-a-scenario"></a>Změna modelu kombinace testů ve scénáři
 
-Po vytvoření zátěžového testu s použitím **nového Průvodce zátěžovým testem**, můžete použít **editoru zátěžového testu** Chcete-li změnit vlastnosti scénářů pro splnění potřebám a cílům testování.
+Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem**můžete pomocí **Editor zátěžového testu** změnit vlastnosti scénářů tak, aby vyhovovaly vašim požadavkům na testování a cílům.
 
 > [!NOTE]
-> Úplný seznam vlastností parametrů zatížení a jejich popis najdete v části [vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
+> Úplný seznam vlastností nastavení zatížení a jejich popis naleznete v tématu [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
 
-Pomocí **editoru zátěžového testu**, model kombinace testů ve scénáři testu zatížení můžete změnit úpravou **typ kombinace testu** vlastnost **vlastnosti** okna.
+Pomocí **Editor zátěžového testu**můžete změnit model kombinace testů ve scénáři zátěžového testu úpravou vlastnosti **typ kombinace testů** v okně **vlastnosti** .
 
-### <a name="to-change-the-test-mix-model"></a>Chcete-li změnit model kombinace testů
+### <a name="to-change-the-test-mix-model"></a>Změna modelu kombinace testů
 
 1. Otevřete zátěžový test.
 
-     **Editoru zátěžových testů** se zobrazí. Zobrazí se strom zátěžového testu.
+     Zobrazí se **Editor zátěžového testu** . Zobrazí se strom zátěžového testu.
 
-2. V *scénáře* složky strom zátěžového testu, vyberte uzel scénář, pro kterou chcete určit maximální počet iterací testu.
+2. Ve složce *scénáře* ve stromu zátěžového testu zvolte uzel scénáře, pro který chcete zadat maximální počet iterací testu.
 
-3. Na **zobrazení** nabídce vyberte možnost **okno vlastností**.
+3. V nabídce **zobrazení** vyberte **okno Vlastnosti**.
 
-     Jsou zobrazeny kategorie a vlastnosti scénáře.
+     Zobrazí se kategorie a vlastnosti scénáře.
 
-4. V **typ kombinace testu** vlastnost, zvolte tlačítko se třemi tečkami ( **...** ).
+4. V vlastnosti **typ kombinace testů** klikněte na tlačítko se třemi tečkami ( **...** ).
 
-     **Upravit kombinaci testů** se zobrazí dialogové okno.
+     Zobrazí se dialogové okno **Upravit kombinaci testů** .
 
-5. Zvolte rozevírací seznam v části **model kombinace testů** a vyberte model kombinace testů, který chcete použít pro tento scénář.
+5. Zvolte rozevírací seznam v části **model kombinace testů** a vyberte model kombinace testů, který chcete použít pro scénář.
 
-6. (Volitelné) Úpravy poměru testů pomocí **přidat**, **odebrat** a **rozmístit** tlačítka a distribuce posuvníky. Další informace najdete v tématu [upravit poměr testů k určení, které testy mají být zahrnuty do scénáře zátěžového testu](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md).
+6. Volitelné Upravte kombinaci testů pomocí tlačítek **Přidat**, **Odebrat** a **distribuovat** a posuvníky distribuce. Další informace naleznete v tématu [Úprava kombinace testů a určení, které testy mají být zahrnuty do scénáře zátěžového testu](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md).
 
-7. (Volitelné) Zadejte webový test výkonu a jednotky k inicializaci nebo ukončit pomocí zaškrtávacích políček a výběrem požadované testy. Další informace najdete v tématu [Emulate očekávané využití z reálného světa webu nebo aplikaci](../test/emulate-real-world-usage-of-a-web-site-in-a-load-test-using-test-mix-models.md).
+7. Volitelné Určete webový výkon a test jednotky pro inicializaci nebo ukončení pomocí zaškrtávacích políček a výběr požadovaných testů. Další informace najdete v tématu [emulace očekávaného reálného využití webu nebo aplikace](../test/emulate-real-world-usage-of-a-web-site-in-a-load-test-using-test-mix-models.md).
 
-8. Zvolte **OK**.
+8. Klikněte na **tlačítko OK**.
 
-     **Vlastnosti** okno zobrazuje nový model kombinace testů pro **typ kombinace testu** vlastnost.
+     V okně **vlastnosti** se zobrazí nový model kombinace testů pro vlastnost **typ** poměru testů.
 
-9. Po změně vlastnosti zvolte **Uložit** na **souboru** nabídky. Potom můžete spustit zátěžový test pomocí nového **typ kombinace testu** hodnotu.
+9. Po změně vlastnosti klikněte na možnost **Uložit** v nabídce **soubor** . Pak můžete spustit zátěžový test pomocí nové hodnoty **typu kombinace testů** .
 
 ## <a name="see-also"></a>Viz také:
 
-- [Úpravy scénářů zátěžových testů](../test/edit-load-test-scenarios.md)
+- [Upravit scénáře zátěžového testu](../test/edit-load-test-scenarios.md)
 - [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md)

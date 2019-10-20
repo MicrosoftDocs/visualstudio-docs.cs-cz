@@ -3,17 +3,17 @@ title: Uzly návrháře shaderů
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f5192fbd-c78f-40a8-a4d4-443209610268
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 775d447b3e513e15eeafb1bfd90c54e3ffa70770
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 23877f9b94b498d87a89ae8e657aa2fe52984953
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925758"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72634930"
 ---
 # <a name="shader-designer-nodes"></a>Uzly návrháře shaderu
 Články v této části dokumentace obsahují informace o různých uzlech návrháře shaderů, které lze použít k vytvoření grafických efektů.
@@ -25,7 +25,7 @@ Návrhář shaderu představuje vizuální efekty jako graf. Tyto grafy jsou ses
 Všechny uzly se skládají z kombinace běžných prvků. Každý uzel má alespoň jeden výstupní terminál na pravé straně (s výjimkou konečného uzlu Color, který představuje výstup shaderu). Uzly, které reprezentují výpočty nebo vzorkovače s texturou, mají vstupní terminály na levé straně, ale uzly reprezentující informace nemají žádné vstupní terminály. Výstupní terminály jsou připojeny ke vstupním terminálům, aby bylo možné přesouvat informace z jednoho uzlu do druhého.
 
 ### <a name="promotion-of-inputs"></a>Propagace vstupů
-Vzhledem k tomu, že návrhář shaderu musí nakonec vytvořit zdrojový kód HLSL, aby se efekt mohl použít v hře nebo aplikaci, podléhají uzly návrháře shaderů pravidla propagace typu, která používá HLSL. Vzhledem k tomu, že grafický hardware pracuje hlavně na hodnotách s plovoucí desetinnou čárkou, typ propagace `int` mezi různými typy – `float` například `double`od do `float`nebo od do – je neobvyklá. Jelikož hardware grafiky používá stejnou operaci na více částech informací najednou, může dojít k jinému druhu propagace, ve kterém se kratší počet vstupů prodlouží, aby odpovídaly velikosti nejdelšího vstupu. Způsob prodloužení závisí na typu vstupu a také na samotné operaci:
+Vzhledem k tomu, že návrhář shaderu musí nakonec vytvořit zdrojový kód HLSL, aby se efekt mohl použít v hře nebo aplikaci, podléhají uzly návrháře shaderů pravidla propagace typu, která používá HLSL. Vzhledem k tomu, že grafický hardware pracuje hlavně na hodnotách s plovoucí desetinnou čárkou, typ propagace mezi různými typy – například z `int` do `float` nebo z `float` na `double` – je neobvyklá. Jelikož hardware grafiky používá stejnou operaci na více částech informací najednou, může dojít k jinému druhu propagace, ve kterém se kratší počet vstupů prodlouží, aby odpovídaly velikosti nejdelšího vstupu. Způsob prodloužení závisí na typu vstupu a také na samotné operaci:
 
 - **Pokud je menší typ skalární hodnota, pak:**
 

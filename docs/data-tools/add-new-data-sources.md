@@ -1,5 +1,5 @@
 ---
-title: Přidat nové zdroje dat
+title: Přidání nových zdrojů dat
 ms.date: 11/21/2018
 ms.topic: conceptual
 f1_keywords:
@@ -8,83 +8,83 @@ helpviewer_keywords:
 - data [Visual Studio], data sources
 - data sources
 ms.assetid: ed28c625-bb89-4037-bfde-cfa435d182a2
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 05a07fc3cb72f923d28ff907c9aec69620cbd40d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 99e9d9d466ae32d86b64b17738c96c245bda8f96
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62824875"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648890"
 ---
-# <a name="add-new-data-sources"></a>Přidat nové zdroje dat
+# <a name="add-new-data-sources"></a>Přidání nových zdrojů dat
 
-V kontextu dat nástroje .NET v sadě Visual Studio termín *zdroj dat* odkazují na objekty .NET, které se připojit k úložišti dat a zpřístupnit data pro aplikace .NET. Návrháři aplikace Visual Studio může spotřebovat výstup zdroje dat vygenerujte často používaný kód, který váže data formuláře, když přetahujete databázových objektů z **zdroje dat** okna. Tento druh zdroje dat může být:
+V kontextu nástrojů .NET Data Tools v sadě Visual Studio pojem *zdroj dat* odkazuje na objekty .NET, které se připojují k úložišti dat a zpřístupňuje data aplikaci .NET. Návrháři sady Visual Studio mohou využívat výstup zdroje dat, aby vygenerovaly často používaný kód, který váže data na formuláře při přetahování objektů databáze z okna **zdroje dat** . Tento druh zdroje dat může být:
 
-- Třída v modelu Entity Framework, která souvisí s nějaký druh databáze.
+- Třída v modelu Entity Framework, která je přidružena k určitému druhu databáze.
 
-- Datová sada, která souvisí s nějaký druh databáze.
+- Datová sada, která je přidružena k určitému typu databáze.
 
-- Třída, která představuje síťovou službu jako je například data služby Windows Communication Foundation (WCF) nebo službu REST.
+- Třída, která představuje síťovou službu, například datovou službu Windows Communication Foundation (WCF) nebo službu REST.
 
-- Třída zastupující služby SharePoint.
+- Třída, která představuje službu SharePoint.
 
 - Třída nebo kolekce ve vašem řešení.
 
 > [!NOTE]
-> Pokud nepoužíváte funkce vázání dat, datové sady, Entity Framework, LINQ to SQL, WCF nebo SharePoint, pojmu "zdroj dat" neplatí. Stačí se připojit přímo k databázi pomocí objektů třídy SQLCommand a komunikují přímo s databází.
+> Pokud nepoužíváte funkce datových vazeb, datové sady, Entity Framework, LINQ to SQL, WCF nebo SharePoint, koncept zdroje dat se nevztahuje. Stačí se připojit přímo k databázi pomocí objektů SQLCommand a přímo komunikovat s databází.
 
-Vytvoření a úprava zdroje dat pomocí **Průvodce konfigurací zdroje dat** v aplikaci Windows Forms nebo Windows Presentation Foundation. Rozhraní Entity Framework, nejprve vytvořit třídy entity a pak spusťte průvodce kliknutím na položku **projektu** > **přidat nový zdroj dat** (popsáno podrobněji dále v tomto článku).
+Zdroje dat můžete vytvářet a upravovat pomocí **Průvodce konfigurací zdroje dat** v aplikaci model Windows Forms nebo Windows Presentation Foundation. Pro Entity Framework nejprve vytvořte třídy entit a potom spusťte Průvodce výběrem možnosti **projekt**  > **Přidat nový zdroj dat** (podrobněji popsaný dále v tomto článku).
 
 ![Průvodce konfigurací zdroje dat](../data-tools/media/data-source-configuration-wizard.png)
 
 ## <a name="data-sources-window"></a>okno Zdroje dat
 
-Po vytvoření zdroje dat se zobrazí v **zdroje dat** panelu nástrojů.
+Po vytvoření zdroje dat se zobrazí v okně nástroje **zdroje dat** .
 
 > [!TIP]
-> Chcete-li otevřít **zdroje dat** okno, ujistěte se, že váš projekt je otevřít a stiskněte klávesu **Shift**+**Alt**+**D**nebo zvolte **zobrazení** > **ostatní Windows** > **zdroje dat**.
+> Chcete-li otevřít okno **zdroje dat** , ujistěte se, že je projekt otevřen, a poté stiskněte klávesu **Shift** +**ALT** +**D** nebo zvolte možnost **Zobrazit**  >  jiné**zdroje dat** > **Windows** .
 
-Můžete přetáhnout zdroje dat z **zdroje dat** okno na návrhovou plochu formuláře nebo ovládacího prvku. To způsobí, že často používaný kód chcete vygenerovat, která zobrazí data z úložiště dat.
+Zdroj dat můžete přetáhnout z okna **zdroje dat** na návrhovou plochu formuláře nebo ovládací prvek. To způsobí vygenerování často používaného kódu, který zobrazí data z úložiště dat.
 
-Následující obrázek ukazuje datovou sadu, která byla vyřazena, do formuláře Windows. Pokud vyberete **F5** na aplikaci, v ovládacích prvcích ve formuláři se zobrazí data z databáze.
+Následující ilustrace znázorňuje datovou sadu, která byla vyřazena do formuláře Windows Form. Vyberete-li v aplikaci klávesu **F5** , data z podkladové databáze se zobrazí v ovládacích prvcích formuláře.
 
 ![Operace přetažení zdroje dat](../data-tools/media/raddata-data-source-drag-operation.png)
 
-## <a name="data-source-for-a-database-or-a-database-file"></a>Zdroj dat pro databáze nebo databázového souboru
+## <a name="data-source-for-a-database-or-a-database-file"></a>Zdroj dat pro databázi nebo databázový soubor
 
-Můžete vytvořit datové sady nebo model Entity Framework použít jako zdroj dat pro databáze nebo databázového souboru.
+Můžete vytvořit datovou sadu nebo model Entity Framework, který se použije jako zdroj dat pro databázi nebo databázový soubor.
 
 ### <a name="dataset"></a>Datová sada
 
-Pokud chcete vytvořit datovou sadu jako zdroj dat, spusťte **Průvodce konfigurací zdroje dat** tak, že vyberete **projektu** > **přidat nový zdroj dat**. Zvolte **databáze** zdroj dat typu a postupujte podle výzev a zadejte připojení nové nebo existující databáze nebo databázového souboru.
+Chcete-li vytvořit datovou sadu jako zdroj dat, spusťte **Průvodce konfigurací zdroje dat** tak, že vyberete **projekt**  > **Přidat nový zdroj dat**. Zvolte typ zdroje dat **databáze** a podle zobrazených výzev zadejte nové nebo existující připojení k databázi nebo databázový soubor.
 
-### <a name="entity-classes"></a>Tříd entit
+### <a name="entity-classes"></a>Třídy entit
 
-Vytvoření modelu Entity Framework jako zdroj dat:
+Vytvoření modelu Entity Framework jako zdroje dat:
 
-1. Spustit **Průvodce datovým modelem Entity** k vytvoření tříd entit. Vyberte **projektu** > **přidat novou položku** > **ADO.NET Entity Data Model**.
+1. Spusťte **průvodce model EDM (Entity Data Model)** a vytvořte třídy entit. Vyberte **projekt**  > **přidat novou položku**  > **ADO.NET model EDM (Entity Data Model)** .
 
-   ![Nové položky projektu model Entity Framework](../data-tools/media/raddata-new-entity-framework-model-project-item.png)
+   ![Nová položka projektu Entity Framework modelu](../data-tools/media/raddata-new-entity-framework-model-project-item.png)
 
-1. Zvolte metodu, která mají generovat model podle.
+1. Vyberte metodu, pomocí které chcete model vytvořit.
 
-   ![Průvodce datovým modelem entity](../data-tools/media/raddata-entity-data-model-wizard.png)
+   ![Průvodce model EDM (Entity Data Model)](../data-tools/media/raddata-entity-data-model-wizard.png)
 
-1. Přidáte jako zdroj dat modelu. Generované třídy joinkind **Průvodce konfigurací zdroje dat** při výběru **objekty** kategorie.
+1. Přidejte model jako zdroj dat. Generované třídy se zobrazí v **Průvodci konfigurací zdroje dat** při výběru kategorie **objekty** .
 
-   ![Průvodce konfigurací zdroje dat pomocí tříd entit](../data-tools/media/raddata-data-source-configuration-wizard-with-entity-classes.png)
+   ![Průvodce konfigurací zdroje dat s třídami entit](../data-tools/media/raddata-data-source-configuration-wizard-with-entity-classes.png)
 
 ## <a name="data-source-for-a-service"></a>Zdroj dat pro službu
 
-Chcete-li vytvořit zdroj dat ze služby, spusťte **Průvodce konfigurací zdroje dat** a zvolte **služby** zdroj dat typu. Toto je jenom zástupce **přidat odkaz na službu** dialogové okno, které se můžete dostat taky kliknutím pravým tlačítkem myši na projekt v **Průzkumníka řešení** a vyberete **přidat odkaz na službu**.
+Chcete-li vytvořit zdroj dat ze služby, spusťte **Průvodce konfigurací zdroje dat** a vyberte typ zdroje dat **služby** . Toto je pouze zástupce dialogového okna **Přidat odkaz na službu** , ke kterému lze také získat přístup kliknutím pravým tlačítkem myši na projekt v **Průzkumník řešení** a výběrem možnosti **Přidat odkaz na službu**.
 
-Při vytváření zdroje dat ze služby Visual Studio přidá odkaz na službu do projektu. Visual Studio také vytvoří proxy objekty, které odpovídají objektům, které služba vrací. Například služba, která vrací třídu dataset v projektu reprezentována jako datová sada; Služba, která vrátí konkrétní typ je vyjádřen v projektu jako typ vrácena.
+Když vytvoříte zdroj dat ze služby, Visual Studio přidá do projektu odkaz na službu. Visual Studio také vytvoří proxy objekty, které odpovídají objektům, které vrací služba. Například služba, která vrací datovou sadu, je v projektu reprezentována jako datová sada; služba, která vrací konkrétní typ, je v projektu reprezentována jako vrácený typ.
 
-Vytvořit zdroj dat z následujících typů služeb:
+Zdroj dat můžete vytvořit z následujících typů služeb:
 
 - [WCF Data Services](/dotnet/framework/data/wcf/wcf-data-services-overview)
 
@@ -93,25 +93,25 @@ Vytvořit zdroj dat z následujících typů služeb:
 - webové služby
 
     > [!NOTE]
-    > Položky, které se zobrazují v **zdroje dat** okna jsou závislé na datech, která služba vrací. Některé služby nemusí poskytnout dostatek informací, **Průvodce konfigurací zdroje dat** vytvořil objekty. Například pokud služba vrátí netypovou datovou sadu, žádné položky, které se zobrazí v **zdroje dat** okno po dokončení průvodce. Toto je vzhledem k tomu, že netypové datové sady neposkytují schéma, a proto Průvodce nemá dostatek informací pro vytvoření zdroje dat.
+    > Položky, které se zobrazí v okně **zdroje dat** , jsou závislé na datech, která služba vrací. Některé služby nemusí poskytnout dostatek informací pro **Průvodce konfigurací zdroje dat** pro vytváření objektů s možností vazby. Například pokud služba vrátí netypové datové sady, po dokončení průvodce se nezobrazí žádné položky v okně **zdroje dat** . Důvodem je, že netypové datové sady neposkytují schéma, a proto průvodce nemá k dispozici dostatek informací pro vytvoření zdroje dat.
 
 ## <a name="data-source-for-an-object"></a>Zdroj dat pro objekt
 
-Můžete vytvořit zdroj dat z libovolného objektu, který zpřístupňuje jeden nebo více veřejných vlastností spuštěním **Průvodce konfigurací zdroje dat** a následným výběrem **objekt** zdroj dat typu. Všechny veřejné vlastnosti objektu jsou zobrazeny v **zdroje dat** okna. Pokud používáte Entity Framework a vygenerování modelu, je to, kde najít tříd entit, které jsou zdroje dat pro vaši aplikaci.
+Můžete vytvořit zdroj dat z libovolného objektu, který zveřejňuje jednu nebo více veřejných vlastností spuštěním **Průvodce konfigurací zdroje dat** a výběrem typu zdroje dat **objektu** . Všechny veřejné vlastnosti objektu se zobrazí v okně **zdroje dat** . Pokud používáte Entity Framework a vygenerujete model, toto je místo, kde najdete třídy entit, které jsou zdrojem dat pro vaši aplikaci.
 
-Na **vyberte datové objekty** stránce, rozbalte uzly ve stromovém zobrazení objekty, které chcete svázat. Stromové zobrazení obsahuje uzly pro váš projekt a sestavení a jiné projekty, na které odkazuje váš projekt.
+Na stránce **Vybrat datové objekty** rozbalte uzly ve stromovém zobrazení a vyhledejte objekty, se kterými chcete vytvořit vazby. Stromové zobrazení obsahuje uzly pro váš projekt a pro sestavení a další projekty, na které je odkazováno v projektu.
 
-Pokud chcete vytvořit vazbu na objekt v sestavení nebo projektu, které nejsou uvedené ve stromovém zobrazení, klikněte na tlačítko **přidat odkaz** a použít **dialogové okno Přidání referenční** přidat odkaz na sestavení nebo projekt. Po přidání odkazu na sestavení nebo projekt se přidá do zobrazení stromu.
-
-> [!NOTE]
-> Budete muset sestavit projekt, který obsahuje objekty před objekty se zobrazí ve stromovém zobrazení.
+Chcete-li vytvořit propojení s objektem v sestavení nebo projektu, které se nezobrazují ve stromovém zobrazení, klikněte na tlačítko **Přidat odkaz** a pomocí **dialogového okna Přidat odkaz** přidejte odkaz na sestavení nebo projekt. Po přidání odkazu je sestavení nebo projekt přidáno do stromového zobrazení.
 
 > [!NOTE]
-> Pro podporu a přetahování datové vazby, které implementují objekty <xref:System.ComponentModel.ITypedList> nebo <xref:System.ComponentModel.IListSource> rozhraní musí mít výchozí konstruktor. V opačném případě sady Visual Studio nelze vytvořit instanci objektu zdroje dat a zobrazí chyba, když přetáhnete položku na návrhovou plochu.
+> Možná budete muset sestavit projekt, který obsahuje vaše objekty před tím, než se objekty zobrazí ve stromovém zobrazení.
 
-## <a name="data-source-for-a-sharepoint-list"></a>Zdroj dat pro seznam Sharepointu
+> [!NOTE]
+> Aby bylo možné podporovat přetahování datových vazeb, objekty, které implementují rozhraní <xref:System.ComponentModel.ITypedList> nebo <xref:System.ComponentModel.IListSource>, musí mít výchozí konstruktor. V opačném případě Visual Studio nemůže vytvořit instanci objektu zdroje dat a při přetahování položky na návrhovou plochu zobrazí chybu.
 
-Zdroj dat ze Sharepointového seznamu můžete vytvořit spuštěním **Průvodce konfigurací zdroje dat** a vyberete **SharePoint** typ zdroje dat. SharePoint poskytuje data prostřednictvím služeb WCF Data Services, takže vytvoření zdroje dat SharePoint je stejné jako vytvoření zdroje dat ze služby. Výběr **SharePoint** položky v **Průvodce konfigurací zdroje dat** otevře **přidat odkaz na službu** dialogové okno, kde se připojíte k datové službě SharePoint najetím myší na SharePoint server. To vyžaduje sadu SDK služby SharePoint.
+## <a name="data-source-for-a-sharepoint-list"></a>Zdroj dat pro SharePointový seznam
+
+Zdroj dat můžete vytvořit ze SharePointového seznamu spuštěním **Průvodce konfigurací zdroje dat** a výběrem typu zdroje dat **služby SharePoint** . SharePoint zpřístupňuje data prostřednictvím WCF Data Services, takže vytvoření zdroje dat SharePointu je stejné jako vytvoření zdroje dat ze služby. Výběr položky **služby SharePoint** v **Průvodci konfigurací zdroje dat** otevře dialogové okno **Přidat odkaz na službu** , kde se připojíte ke službě SharePoint data Service tak, že přejdete na server SharePoint. To vyžaduje sadu SharePoint SDK.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - service references [Visual Studio], configuring behavior
 - Configure Service Reference dialog box
 ms.assetid: 25e4c36b-2db6-4e71-9010-b7068255d09d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1cf4a809c1353f2fe30383a312f65b6c623083db
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 033663c347a39c63a76bddd10625bdc86cec1f00
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925675"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72642863"
 ---
 # <a name="configure-service-reference-dialog-box"></a>Nastavit odkaz na službu – dialogové okno
 
@@ -37,13 +37,13 @@ Chcete-li získat přístup k dialogovému oknu **Konfigurovat odkaz** na služb
 
 - Chcete-li generovat typy kontraktů zpráv v klientovi WCF, zaškrtněte políčko **vždy generovat kontrakty zprávy** .
 
-- Chcete-li určit typy kolekce seznamu nebo slovníku pro klienta WCF, vyberte typy ze seznamu typ kolekce a **typ kolekce slovníku** .
+- Chcete-li určit typy kolekce seznamu nebo slovníku pro klienta WCF, vyberte typy ze seznamu **typ kolekce** a **typ kolekce slovníku** .
 
-- Chcete-li zakázat sdílení typů, zrušte zaškrtnutí políčka **znovu použít typy v odkazovaných sestaveních** . Pokud chcete povolit sdílení typů pro podmnožinu odkazovaných sestavení, zaškrtněte políčko **znovu použít typy v odkazovaných sestaveních** , vyberte možnost **znovu použít typy v zadaných odkazovaných sestaveních**a vyberte požadované odkazy v odkazovaném sestavení.  **seznam sestavení**.
+- Chcete-li zakázat sdílení typů, zrušte zaškrtnutí políčka **znovu použít typy v odkazovaných sestaveních** . Pokud chcete povolit sdílení typů pro podmnožinu odkazovaných sestavení, zaškrtněte políčko **znovu použít typy v odkazovaných sestaveních** , vyberte možnost **znovu použít typy v zadaných odkazovaných sestaveních**a vyberte požadované odkazy v **odkazovaném sestavení. seznam sestavení**.
 
 ## <a name="uielement-list"></a>UIElement – seznam
 
-**Adresa**
+**Adresáře**
 
 Aktualizuje webovou adresu, kde odkaz na službu vyhledává službu. Například během vývoje může být služba hostována na vývojovém serveru a později přesunuta na provozní server, což vyžaduje změnu adresy.
 
@@ -55,7 +55,7 @@ Aktualizuje webovou adresu, kde odkaz na službu vyhledává službu. Napříkla
 Určuje úroveň přístupu kódu pro klientské třídy WCF.
 
 > [!NOTE]
-> Pro projekty webu je tato možnost vždy nastavena na `Public` a nelze ji změnit. Další informace najdete v tématu [řešení potíží s odkazy na služby](../data-tools/troubleshooting-service-references.md).
+> Pro projekty webu je tato možnost vždy nastavená na `Public` a nelze ji změnit. Další informace najdete v tématu [řešení potíží s odkazy na služby](../data-tools/troubleshooting-service-references.md).
 
 **Generovat asynchronní operace**
 
@@ -105,5 +105,5 @@ Zobrazí dialogové okno **Přidat webový odkaz** .
 
 ## <a name="see-also"></a>Viz také:
 
-- [Postupy: Přidat odkaz na webovou službu](how-to-add-update-or-remove-a-wcf-data-service-reference.md)
+- [Postupy: Přidání odkazu na webovou službu](how-to-add-update-or-remove-a-wcf-data-service-reference.md)
 - [Služby Windows Communication Foundation a služby WCF Data Services v sadě Visual Studio](../data-tools/configure-service-reference-dialog-box.md)

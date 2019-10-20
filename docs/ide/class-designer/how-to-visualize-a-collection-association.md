@@ -10,33 +10,33 @@ helpviewer_keywords:
 - collections, collection associations
 - Class Designer [Visual Studio], collection associations
 ms.assetid: 54e39838-2fc9-4dc2-85b6-7e88a743108e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 09c23b59711a95f0729555acfd0203160bd9995d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e074eee5972bcf952108a36f52c0915057c470a3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975070"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72631326"
 ---
-# <a name="how-to-visualize-a-collection-association-in-class-designer"></a>Postupy: Vizualizace asociace kolekce v Návrháři tříd
+# <a name="how-to-visualize-a-collection-association-in-class-designer"></a>Postupy: vizualizace přidružení kolekce v Návrhář tříd
 
-Vlastnosti a pole, které jsou kolekce jiných typů lze zobrazit v diagramu tříd jako přidružení kolekce. Na rozdíl od pravidelných přidružení, které zobrazí pole nebo vlastnost jako řádku propojení vlastnící třídy typu pole, zobrazí se jako řádku propojení vlastnící třídy na shromážděný typ asociace kolekce.
+Vlastnosti a pole, které jsou kolekcemi jiných typů, lze v diagramu tříd zobrazit jako přidružení kolekce. Na rozdíl od pravidelného přidružení, které zobrazuje pole nebo vlastnost jako čáru spojující vlastnící třídu s typem pole, je přidružení kolekce zobrazeno jako čára spojující vlastnící třídu s typem, který je k disřádku.
 
 ## <a name="to-create-a-collection-association"></a>Vytvoření přidružení kolekce
 
-1. V kódu vytvořte vlastnost nebo pole, jehož typ je sám vytvořit kolekce silného typu.
+1. V kódu vytvořte vlastnost nebo pole, jejichž typ je sám kolekcí silného typu.
 
-2. Rozbalte položku třídy tak, aby vlastnosti a pole se zobrazí v diagramu tříd.
+2. V diagramu tříd rozbalte třídu tak, aby se zobrazily vlastnosti a pole.
 
-3. Ve třídě, klikněte pravým tlačítkem na pole nebo vlastnost a zvolte **zobrazit jako přidružení kolekce**.
+3. Ve třídě klikněte pravým tlačítkem myši na pole nebo vlastnost a vyberte možnost **Zobrazit jako přidružení kolekce**.
 
-Vlastnost nebo pole se zobrazí jako Asociační čára na shromážděný typ propojení.
+Vlastnost nebo pole se zobrazí jako asociační čára, která se připojuje ke shromážděnému typu.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Postupy: Vytvoření asociací mezi typy](how-to-create-associations-between-types.md)
+- [Postupy: vytváření přidružení mezi typy](how-to-create-associations-between-types.md)
 - [Navrhování tříd a typů](designing-and-viewing-classes-and-types.md)

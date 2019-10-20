@@ -1,39 +1,39 @@
 ---
-title: Objekty přidané do návrháře použít odlišné datové připojení
+title: Objekty přidané do návrháře používají jiné datové připojení.
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 332ed2f3-3377-4d51-8e3b-fdb98231978e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c85e0c17eeb4cfbd786faac338c8b908c5a7f363
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 915860c2559335f37869f5c6009f7a38dde6abcd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66260928"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72640846"
 ---
-# <a name="the-objects-you-are-adding-to-the-designer-use-a-different-data-connection-than-the-designer"></a>Objekty, které přidáváte do návrháře použít odlišné datové připojení než návrháře
+# <a name="the-objects-you-are-adding-to-the-designer-use-a-different-data-connection-than-the-designer"></a>Objekty, které přidáváte do návrháře, používají jiné datové připojení než Návrhář.
 
-Objekty, které přidáváte do návrháře použijte odlišné datové připojení, než momentálně používané návrhářem. Opravdu chcete připojení používané návrhářem nahradit?
+Objekty, které přidáváte do návrháře, používají jiné datové připojení než Návrhář aktuálně používá. Chcete nahradit připojení používané návrhářem?
 
-Při přidávání položek do **Návrhář relací objektů** (**O/R Designer**), všech položek se používají sdílené datové připojení. (Na návrhovou plochu představuje <xref:System.Data.Linq.DataContext>, který používá jedno připojení pro všechny objekty na povrchu.) Pokud chcete přidat objekt do návrháře, který používá datové připojení, které se liší od aktuálně používá v Návrháři datové připojení, tato zpráva se zobrazí. Chcete-li vyřešit tuto chybu, můžete zachovat existující připojení. Pokud tuto volbu, nebude přidán vybraný objekt. Alternativně můžete přidat objekt a obnovit <xref:System.Data.Linq.DataContext> připojení k nové připojení.
+Když přidáte položky do **Návrhář relací objektů** (**Návrhář O/R**), budou všechny položky používat jedno sdílené datové připojení. (Návrhová plocha představuje <xref:System.Data.Linq.DataContext>, která používá jedno připojení pro všechny objekty na povrchu.) Pokud přidáte objekt do návrháře, který používá datové připojení, které se liší od datového připojení, které je aktuálně používáno návrhářem, zobrazí se tato zpráva. Tuto chybu můžete vyřešit tak, že se rozhodnete zachovat stávající připojení. Pokud uděláte tuto volbu, vybraný objekt se nepřidá. Alternativně můžete zvolit přidání objektu a resetování <xref:System.Data.Linq.DataContext> připojení k novému připojení.
 
 ## <a name="connection-options"></a>Možnosti připojení
 
-- Pokud chcete nahradit stávající připojení pomocí připojení používané objektem vybraný objekt, klikněte na tlačítko **Ano**.
+- Pokud chcete stávající připojení nahradit připojením použitým pro vybraný objekt, klikněte na **Ano**.
 
-   Vybraný objekt se přidá do **O/R Designer**a *DataContext.Connection* je nastavena na nové připojení.
+   Vybraný objekt je přidán k Návrháři pro **/R**a *DataContext. připojení* je nastaveno na nové připojení.
 
    > [!NOTE]
-   > Vyberete-li **Ano**, tříd na všech entit **O/R Designer** jsou mapovány na nového připojení.
+   > Kliknete-li na tlačítko **Ano**, všechny třídy entit v **Návrháři o/R** jsou namapovány na nové připojení.
 
-- Chcete-li pokračovat v používání existujícího připojení a zrušit přidávání vybraný objekt, klikněte na tlačítko **ne**.
+- Chcete-li nadále používat existující připojení a zrušit přidávání vybraného objektu, klikněte na tlačítko **ne**.
 
-   Akce zrušena. *DataContext.Connection* zůstane nastavena na existující připojení.
+   Akce se zrušila. *Kontext DataContext. připojení* zůstává nastaveno na existující připojení.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Nástroje LINQ to SQL v sadě Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

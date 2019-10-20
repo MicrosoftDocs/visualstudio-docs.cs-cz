@@ -1,25 +1,25 @@
 ---
-title: 'Návod: Příklad LinqToXmlDataBinding'
+title: 'Návod: příklad příkladu LinqToXmlDataBinding'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: aedf42e8-896c-48fa-88df-7f7c9536aa69
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c99d8571480dd98726a5f1ae5772162e97e0baed
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 80503b0f14b31f787688fc78a75a4ceb974db4da
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925739"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72634202"
 ---
-# <a name="walkthrough-linqtoxmldatabinding-example"></a>Návod: Příklad příkladu LinqToXmlDataBinding
+# <a name="walkthrough-linqtoxmldatabinding-example"></a>Návod: příklad příkladu LinqToXmlDataBinding
 Tento návod popisuje příklad příkladu LinqToXmlDataBinding a vysvětluje některé zajímavé obsahy svých dvou primárních zdrojových souborů, *zdrojový kód L2DBForm. XAML* a *L2DBForm.XAML.cs*.
 
 ## <a name="prerequisites"></a>Požadavky
-Než si přečtete tento návod, důrazně doporučujeme sestavit a spustit program příkladu LinqToXmlDataBinding, jak je popsáno v [tématu How to: Sestavte a spusťte příklad](../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md)příkladu LinqToXmlDataBinding.
+Než si přečtete tento návod, důrazně doporučujeme sestavit a spustit program příkladu LinqToXmlDataBinding, jak je popsáno v tématu [Postupy: sestavení a spuštění příkladu LinqToXmlDataBinding příkladu](../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md).
 
 ## <a name="remarks"></a>Poznámky
  Program příkladu LinqToXmlDataBinding je aplikace Windows Presentation Foundation (WPF), která se skládá ze C# zdrojových souborů a XAML. Obsahuje vložený dokument XML, který definuje seznam knih a umožňuje uživateli zobrazovat, přidávat, odstraňovat a upravovat tyto položky. Skládá se z následujících dvou primárních zdrojových souborů:
@@ -48,4 +48,4 @@ Než si přečtete tento návod, důrazně doporučujeme sestavit a spustit prog
 ## <a name="see-also"></a>Viz také:
 
 - [Datová vazba WPF pomocí LINQ to XMLho příkladu](../designers/wpf-data-binding-using-linq-to-xml-example.md)
-- [Postupy: Vytvoření a spuštění příkladu příkladu LinqToXmlDataBinding](../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md)
+- [Postupy: Sestavení a spuštění příkladu LinqToXmlDataBinding](../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md)

@@ -1,34 +1,31 @@
 ---
-title: Návrháři aktivit zpracování chyb | Dokumentace Microsoftu
+title: Zpracování chyb – návrháři aktivit | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
 ms.topic: reference
 ms.assetid: 9679ca32-ad7f-4089-824e-fdb931e47a30
 caps.latest.revision: 4
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3ea73fa57a4a5da0b2fab1199e8770dfbf9e7b29
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b829f98597afb6ab1430d61022306ec840decb12
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62952837"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656747"
 ---
 # <a name="error-handling-activity-designers"></a>Návrháři aktivit zpracování chyb
-Návrháři aktivit zpracování chyb, které se používají ke správě zpracování chyb v [!INCLUDE[wfd1](../includes/wfd1-md.md)]. V tématech obsažené v této části najdete pokyny, jak používat [!INCLUDE[wfd2](../includes/wfd2-md.md)] návrhářů aktivit a šablony.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Rethrow](../workflow-designer/rethrow-activity-designer.md)  
- Umožňuje vytvořit a nakonfigurovat <xref:System.Activities.Statements.Rethrow> aktivity.  
-  
- [Throw](../workflow-designer/throw-activity-designer.md)  
- Umožňuje vytvořit a nakonfigurovat <xref:System.Activities.Statements.Throw> aktivity.  
-  
- [TryCatch](../workflow-designer/trycatch-activity-designer.md)  
- Umožňuje vytvořit a nakonfigurovat <xref:System.Activities.Statements.TryCatch> aktivity.  
-  
-## <a name="reference"></a>Odkaz  
-  
+Návrháři aktivity zpracovávající chyby se používají ke správě zpracování chyb v [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Témata v této části poskytují pokyny pro použití [!INCLUDE[wfd2](../includes/wfd2-md.md)] aktivity a návrháře šablon.
+
+## <a name="in-this-section"></a>V tomto oddílu
+ Znovu [vyvolat](../workflow-designer/rethrow-activity-designer.md) Slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.Rethrow>.
+
+ [Throw](../workflow-designer/throw-activity-designer.md) Slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.Throw>.
+
+ [TryCatch](../workflow-designer/trycatch-activity-designer.md) Slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.TryCatch>.
+
+## <a name="reference"></a>Odkaz
+
 ## <a name="related-sections"></a>Související oddíly

@@ -1,5 +1,5 @@
 ---
-title: Options, Text Editor, C#, IntelliSense | Microsoft Docs
+title: Možnosti, textový editor, C#IntelliSense | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -16,61 +16,52 @@ helpviewer_keywords:
 - Text Editor Options dialog box, IntelliSense
 ms.assetid: 3466dedb-e5f4-424c-8dd8-e4941b2f4fc2
 caps.latest.revision: 30
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dc4d918f3eae9088e2b36b7bebbb69ce130e26d9
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 1e3f4df9a7a885245e40f7e9fec1b0da207ada39
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65674141"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662301"
 ---
 # <a name="options-text-editor-c-intellisense"></a>Možnosti, textový editor, C#, IntelliSense
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Použití **IntelliSense** stránky vlastností k úpravě nastavení, která ovlivňují chování technologie IntelliSense pro jazyk Visual C#. Můžete přistupovat **IntelliSense** stránku vlastností kliknutím **možnosti** na **nástroje** nabídky, pak levým na **jazyka C#** v **Textový Editor** složku a pak levým na **technologie IntelliSense.**  
-  
+Stránka vlastností **technologie IntelliSense** slouží k úpravě nastavení, která mají vliv na chování technologie IntelliSense C#pro vizuál. Na stránku vlastností **technologie IntelliSense** se dostanete tak, že v nabídce **nástroje** kliknete **C#** na **Možnosti** a potom kliknete do složky **textový editor** a kliknete na **IntelliSense.**
+
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
- **IntelliSense** stránka vlastností obsahuje následující vlastnosti:  
-  
-## <a name="completion-lists"></a>Seznamy dokončení  
- **Zobrazit seznam dokončení po zadání znaku**  
- Pokud je vybraná tato možnost, IntelliSense zobrazí seznam pro doplňování automaticky při zadávání. Pokud není vybraná tato možnost, je stále k dispozici z dokončování IntelliSense **IntelliSense** nabídky nebo stisknutím kombinace kláves CTRL + MEZERNÍK.  
-  
- **Umístit klíčová slova do seznamů dokončení**  
- Pokud je vybraná tato možnost, technologie IntelliSense přidá klíčová slova jazyka C#, například [třída](https://msdn.microsoft.com/library/b95d8815-de18-4c3f-a8cc-a0a53bdf8690), do seznamu dokončení.  
-  
- **Umístit fragmenty kódu do seznamů dokončení**  
- Pokud je vybraná tato možnost, technologie IntelliSense přidá do seznamu dokončení aliasy pro fragmenty kódu v C#. V případě, kdy alias fragment kódu je stejný jako klíčové slovo, například [třída](https://msdn.microsoft.com/library/b95d8815-de18-4c3f-a8cc-a0a53bdf8690), klíčové slovo je nahrazena klávesovou zkratku. Další informace najdete v tématu [fragmenty kódu Visual C#](../../ide/visual-csharp-code-snippets.md).  
-  
-## <a name="selection-in-completion-lists"></a>Výběr do seznamů dokončení  
- **Potvrzen zadáním následujících znaků:**  
- Určuje všechny znaky, které jsou spuštěny automatické doplňování technologie IntelliSense pro vybranou položku v seznamu dokončení po jsou typu.  
-  
- **Potvrzené stisknutím mezerníku**  
- Určuje akci stisknutím klávesy MEZERNÍK ke spuštění automatického dokončování IntelliSense pro vybranou položku v seznamu pro doplňování zahrnout.  
-  
- **Přidat nový řádek na konec plně napsaného slova**  
- Určuje, že pokud zadání všech znaků pro položku v seznamu dokončení a potom stiskněte klávesu ENTER nový řádek je automaticky vytvořen a kurzor se přesune na nový řádek.  
-  
- Pokud zadáte například `else` a stiskněte klávesu ENTER, v editoru se zobrazí následující:  
-  
- `else`  
-  
- `|` (umístění kurzoru)  
-  
- Nicméně pokud zadáte pouze `el` a stiskněte klávesu ENTER, v editoru se zobrazí následující:  
-  
- `else|` (umístění kurzoru)  
-  
-## <a name="intellisense-member-selection"></a>Členská funkce technologie IntelliSense  
- **Předběžné vybere naposledy použité člena**  
- Pokud je vybraná tato možnost, technologie IntelliSense provede předvýběr členy, které jste nedávno vybrali v poli rozbalovací seznam členů pro automatický objekt název dokončení během aktuální relace v integrovaném vývojovém prostředí (IDE). Historie naposledy použité členy se vymaže mezi každou relaci v integrovaném vývojovém prostředí. Další informace najdete v tématu [technologie IntelliSense pro naposledy použité členy](../../misc/intellisense-for-most-recently-used-members.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)   
- [Dokumentační komentáře XML](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199)   
- [Používání atributu IntelliSense](../../ide/using-intellisense.md)
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+ Stránka vlastností **technologie IntelliSense** obsahuje následující vlastnosti:
+
+## <a name="completion-lists"></a>Seznamy dokončení
+ **Po zadání znaku zobrazit seznam dokončení** Když je vybraná tato možnost, IntelliSense po zahájení psaní automaticky zobrazí seznam dokončení. Pokud tato možnost není vybrána, je dokončení technologie IntelliSense stále k dispozici v nabídce **technologie IntelliSense** nebo stisknutí kombinace kláves CTRL + MEZERNÍK.
+
+ **Umístit klíčová slova do seznamů dokončení** Je-li vybrána tato možnost, technologie C# IntelliSense přidá klíčová slova, například [Třída](https://msdn.microsoft.com/library/b95d8815-de18-4c3f-a8cc-a0a53bdf8690), do seznamu dokončení.
+
+ **Umístit fragmenty kódu do seznamů dokončení** Pokud je vybrána tato možnost, technologie IntelliSense přidá aliasy pro C# fragmenty kódu do seznamu dokončení. V případě, že je alias fragmentu kódu stejný jako klíčové slovo, například [Třída](https://msdn.microsoft.com/library/b95d8815-de18-4c3f-a8cc-a0a53bdf8690), klíčové slovo je nahrazeno zástupcem. Další informace naleznete v tématu [vizuální C# fragmenty kódu](../../ide/visual-csharp-code-snippets.md).
+
+## <a name="selection-in-completion-lists"></a>Výběr v seznamech dokončení
+ **Potvrzeno zadáním následujících znaků:** Určuje všechny znaky, které spouštějí automatické dokončování technologie IntelliSense pro vybranou položku v seznamu dokončení po jejich zadání.
+
+ **Potvrzené stisknutím mezerníku** Určuje, že se má při automatickém dokončování vybrané položky v seznamu pro doplňování použít akce stisknutí mezerníku.
+
+ **Přidat nový řádek při zadání na konci plně zadaného slova** Určuje, že pokud zadáte všechny znaky pro položku v seznamu pro doplňování a stisknete ENTER, vytvoří se nový řádek automaticky a kurzor se přesune na nový řádek.
+
+ Pokud například zadáte `else` a potom stisknete klávesu ENTER, zobrazí se v editoru následující:
+
+ `else`
+
+ `|` (umístění kurzoru)
+
+ Pokud však zadáte pouze `el` a stisknete klávesu ENTER, zobrazí se v editoru následující:
+
+ `else|` (umístění kurzoru)
+
+## <a name="intellisense-member-selection"></a>Výběr členů IntelliSense
+ **Předem vybere naposledy použité členy** . Je-li vybrána tato možnost, technologie IntelliSense předem vybere členy, které jste v poslední době vybrali v rozevíracím seznamu Členové okna pro automatické dokončování názvů objektů, během aktuální relace v integrovaném vývojovém prostředí (IDE). Historie naposledy použitých členů je mezi jednotlivými relacemi v integrovaném vývojovém prostředí vymazána. Další informace najdete v tématu [IntelliSense pro naposledy použité členy](../../misc/intellisense-for-most-recently-used-members.md).
+
+## <a name="see-also"></a>Viz také
+ [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md) [dokumentace k dokumentaci XML](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199) [pomocí technologie IntelliSense](../../ide/using-intellisense.md)

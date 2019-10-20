@@ -1,5 +1,5 @@
 ---
-title: 'CA2100: Zkontrolujte dotazy SQL pro chyby zabezpečení | Dokumentace Microsoftu'
+title: 'CA2100: Projděte si dotazy SQL na chyby zabezpečení | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - ReviewSqlQueriesForSecurityVulnerabilities
 ms.assetid: 79670604-c02a-448d-9c0e-7ea0120bc5fe
 caps.latest.revision: 26
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 75a95e5972b26632a1cfbfce1242e49c38c9e27b
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: e7258ec98937e7ea84773e788234e5a34772e9d4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65683038"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652200"
 ---
-# <a name="ca2100-review-sql-queries-for-security-vulnerabilities"></a>CA2100: Zkontrolujte chyby zabezpečení u dotazů SQL
+# <a name="ca2100-review-sql-queries-for-security-vulnerabilities"></a>CA2100: Zkontrolujte dotazy SQL pro chyby zabezpečení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -33,19 +33,19 @@ ms.locfileid: "65683038"
 |Kategorie|Microsoft.Security|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
- Nastaví metodu <xref:System.Data.IDbCommand.CommandText%2A?displayProperty=fullName> vlastnost s použitím řetězec, který je sestaven z řetězcového argumentu k metodě.
+## <a name="cause"></a>příčina
+ Metoda nastavuje vlastnost <xref:System.Data.IDbCommand.CommandText%2A?displayProperty=fullName> pomocí řetězce, který je sestaven z řetězcového argumentu metody.
 
 ## <a name="rule-description"></a>Popis pravidla
- Toto pravidlo předpokládá, že řetězcový argument obsahuje vstup uživatele. Řetězec příkazu SQL sestavený ze vstupu uživatele je ohrožen útoky prostřednictvím injektáže SQL. Při útoku prostřednictvím injektáže SQL uživatel se zlými úmysly zadává vstup, který mění návrh dotazu ve snaze poškodit nebo získání neoprávněného přístupu k podkladové databázi. Mezi typické dostupné techniky patří vkládání jednoduchá uvozovka nebo apostrof, což je oddělovač řetězcového literálu SQL; dva spojovníky, které označuje, že komentář SQL; a středník, což znamená, že nový příkaz následuje. Pokud uživatelský vstup musí být část dotazu, použijte některou z těchto možností uvedeny v pořadí podle účinnosti, aby se snížilo riziko útoku.
+ Toto pravidlo předpokládá, že řetězcový argument obsahuje vstup uživatele. Řetězec příkazu SQL sestavený ze vstupu uživatele je ohrožen útoky prostřednictvím injektáže SQL. V případě útoku prostřednictvím injektáže SQL uživatel se zlými úmysly dodává vstup, který mění návrh dotazu při pokusu o poškození nebo získání neoprávněného přístupu k podkladové databázi. Mezi obvyklé techniky patří vložení jednoduché uvozovky nebo apostrofu, což je oddělovač řetězcového literálu SQL. dvě pomlčky, což znamená komentář SQL; a středníkem, který indikuje, že následuje nový příkaz. Pokud musí být vstup uživatele součástí dotazu, použijte jednu z následujících možností, která je uvedena v řádu účinnosti, aby se snížilo riziko útoku.
 
-- Použití uložené procedury.
+- Použijte uloženou proceduru.
 
-- Použití parametrizovaného příkazu řetězce.
+- Použijte parametrizovaný řetězec příkazu.
 
-- Ověření vstupu uživatele pro typ a obsah, před sestavením řetězec příkazu.
+- Před sestavením řetězce příkazu ověřte vstup uživatele pro typ i obsah.
 
-  Následující [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] typy implementovat <xref:System.Data.IDbCommand.CommandText%2A> vlastnost nebo zadejte konstruktory, které se nastavit vlastnost použitím argumentu řetězce.
+  Následující typy [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] implementují vlastnost <xref:System.Data.IDbCommand.CommandText%2A> nebo poskytují konstruktory, které nastavily vlastnost pomocí řetězcového argumentu.
 
 - <xref:System.Data.Odbc.OdbcCommand?displayProperty=fullName> a <xref:System.Data.Odbc.OdbcDataAdapter?displayProperty=fullName>
 
@@ -53,20 +53,20 @@ ms.locfileid: "65683038"
 
 - <xref:System.Data.OracleClient.OracleCommand?displayProperty=fullName> a <xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=fullName>
 
-- [System.Data.SqlServerCe.SqlCeCommand](<!-- TODO: review code entity reference <xref:assetId:///System.Data.SqlServerCe.SqlCeCommand?qualifyHint=False&amp;autoUpgrade=True>  -->) a [System.Data.SqlServerCe.SqlCeDataAdapter] ()<!-- TODO: review code entity reference <xref:assetId:///System.Data.SqlServerCe.SqlCeDataAdapter?qualifyHint=False&amp;autoUpgrade=True>  -->)
+- [System. data. SqlServerCe. SqlCeCommand] (<!-- TODO: review code entity reference <xref:assetId:///System.Data.SqlServerCe.SqlCeCommand?qualifyHint=False&amp;autoUpgrade=True>  -->) a [System. data. SqlServerCe. SqlCeDataAdapter] (<!-- TODO: review code entity reference <xref:assetId:///System.Data.SqlServerCe.SqlCeDataAdapter?qualifyHint=False&amp;autoUpgrade=True>  -->)
 
 - <xref:System.Data.SqlClient.SqlCommand?displayProperty=fullName> a <xref:System.Data.SqlClient.SqlDataAdapter?displayProperty=fullName>
 
-  Všimněte si, že při použití metody ToString typu explicitně nebo implicitně porušení tohoto pravidla k vytvoření řetězce dotazu. Následuje příklad.
+  Všimněte si, že toto pravidlo je porušené, když se metoda ToString typu používá explicitně nebo implicitně k sestavení řetězce dotazu. Následuje příklad.
 
 ```
 int x = 10;
 string query = "SELECT TOP " + x.ToString() + " FROM Table";
 ```
 
- Porušení pravidla vzhledem k tomu, že uživatel se zlými úmysly může přepsat metodu ToString().
+ Toto pravidlo je porušeno, protože uživatel se zlými úmysly může přepsat metodu ToString ().
 
- Toto pravidlo je také poruší, když se implicitně používá ToString.
+ Toto pravidlo je porušeno také v případě implicitního použití ToString.
 
 ```
 int x = 10;
@@ -74,13 +74,13 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 ```
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, použijte parametrický dotaz.
+ Chcete-li opravit porušení tohoto pravidla, použijte parametrizovaný dotaz.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění tohoto pravidla, je-li text příkazu neobsahuje vstupu uživatele.
+ Pokud text příkazu neobsahuje žádný vstup uživatele, je bezpečné potlačit upozornění od tohoto pravidla.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metodu, `UnsafeQuery`, který porušuje pravidla a metodu, `SaferQuery`, který splňuje pravidlo s použitím řetězec parametrizovaného příkazu.
+ Následující příklad ukazuje metodu `UnsafeQuery`, která porušuje pravidlo a metodu, `SaferQuery`, který splňuje pravidlo pomocí parametrizovaného řetězce příkazu.
 
  [!code-cpp[FxCop.Security.ReviewSqlQueries#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Security.ReviewSqlQueries/cpp/FxCop.Security.ReviewSqlQueries.cpp#1)]
  [!code-csharp[FxCop.Security.ReviewSqlQueries#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.ReviewSqlQueries/cs/FxCop.Security.ReviewSqlQueries.cs#1)]

@@ -6,31 +6,31 @@ helpviewer_keywords:
 - code metrics data
 - code metrics results
 - code metrics [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fbe82fc213937b7e494afd27bfd964347c17e2b8
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 3c4cc5b43880df06752cbce79d58ec71921817a4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70179980"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649412"
 ---
-# <a name="how-to-generate-code-metrics-data"></a>Postupy: Generování dat metrik kódu
+# <a name="how-to-generate-code-metrics-data"></a>Postupy: generování dat metrik kódu
 
 Data metriky kódu můžete generovat třemi způsoby:
 
 - Instalací [analyzátorů FxCop](#fxcop-analyzers-code-metrics-rules) a povolením čtyř pravidel metriky kódu (udržovatelnosti), která obsahuje.
 
-- Výběrem příkazu [ **analyzovat** > **Výpočet metriky kódu** ](#calculate-code-metrics-menu-command) v sadě Visual Studio.
+- Kliknutím na příkaz v nabídce [ **analyzovat**  > **Vypočítat metriky kódu** ](#calculate-code-metrics-menu-command) v sadě Visual Studio.
 
 - Z [příkazového řádku](#command-line-code-metrics) pro C# a Visual Basic projekty.
 
 ## <a name="fxcop-analyzers-code-metrics-rules"></a>Pravidla metrik kódu analyzátorů FxCop
 
-[Balíček NuGet FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) zahrnuje několik pravidel analyzátoru metrik [](roslyn-analyzers-overview.md) kódu:
+[Balíček NuGet FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) zahrnuje několik pravidel [analyzátoru](roslyn-analyzers-overview.md) metrik kódu:
 
 - [CA1501](ca1501-avoid-excessive-inheritance.md)
 - [CA1502](ca1502-avoid-excessive-complexity.md)
@@ -48,7 +48,7 @@ Tato pravidla jsou ve výchozím nastavení zakázaná, ale můžete je povolit 
 </RuleSet>
 ```
 
-### <a name="configuration"></a>Konfiguraci
+### <a name="configuration"></a>Konfigurace
 
 Můžete nakonfigurovat prahové hodnoty, při kterých se pravidla metrik kódu v balíčku FxCop analyzers aktivují.
 
@@ -72,13 +72,13 @@ Můžete nakonfigurovat prahové hodnoty, při kterých se pravidla metrik kódu
 
 ## <a name="calculate-code-metrics-menu-command"></a>Příkaz nabídky pro výpočet metriky kódu
 
-Vygenerujte metriky kódu pro jeden nebo všechny otevřené projekty v integrovaném vývojovém prostředí pomocí nabídky **analyzovat** > **metriky kódu** .
+Vygenerujte metriky kódu pro jeden nebo všechny otevřené projekty v integrovaném vývojovém prostředí pomocí nabídky **analyzovat**  > **Vypočítat metriky kódu** .
 
 ### <a name="generate-code-metrics-results-for-an-entire-solution"></a>Generování výsledků metrik kódu pro celé řešení
 
 Můžete generovat Výsledky metrik kódu pro celé řešení některým z následujících způsobů:
 
-- Z panelu nabídek vyberte možnost **analyzovat** > **Vypočítat metriky** > kódu**pro řešení**.
+- Z panelu nabídek vyberte možnost **analyzovat**  > **Vypočítat metriky kódu**  > **pro řešení**.
 
 - V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a pak zvolte **Vypočítat metriky kódu**.
 
@@ -90,7 +90,7 @@ Výsledky jsou generovány a zobrazí se okno **Výsledky metrik kódu** . Chcet
 
 1. V **Průzkumník řešení**vyberte jeden nebo více projektů.
 
-1. Z panelu nabídek vyberte možnost **analyzovat** > **Vypočítat metriky** > kódu**pro vybrané projekty**.
+1. Z panelu nabídek vyberte možnost **analyzovat**  > **Vypočítat metriky kódu**  > **pro vybrané projekty**.
 
 Výsledky jsou generovány a zobrazí se okno **Výsledky metrik kódu** . Chcete-li zobrazit podrobnosti výsledků, rozbalte stromovou strukturu v **hierarchii**.
 
@@ -215,11 +215,11 @@ Generovaný výstup XML má následující formát:
 
 ### <a name="metricsexe"></a>Metriky. exe
 
-Pokud balíček NuGet nechcete instalovat, můžete ho vygenerovat a použít přímo pomocí souboru *Metrics. exe* . Vygenerujte spustitelný soubor *. exe* s metrikami:
+Pokud balíček NuGet nechcete instalovat, můžete ho vygenerovat a použít přímo pomocí souboru *Metrics. exe* . Vygenerujte spustitelný soubor *. exe s metrikami* :
 
 1. Naklonujte úložiště [dotnet/Roslyn-analyzers](https://github.com/dotnet/roslyn-analyzers) .
 2. Otevřete Developer Command Prompt pro Visual Studio jako správce.
-3. Z kořenového adresáře úložiště **Roslyn-Analyzer** spusťte následující příkaz:`Restore.cmd`
+3. Z kořenového adresáře úložiště **Roslyn-Analyzer** spusťte následující příkaz: `Restore.cmd`
 4. Změňte adresář na *src\Tools*.
 5. Spuštěním následujícího příkazu Sestavte projekt **metriky. csproj** :
 
@@ -243,7 +243,7 @@ Completed Successfully.
 
 #### <a name="legacy-mode"></a>Starší režim
 
-*Metriky. exe* si můžete sestavit v *režimu starší verze*. Verze v režimu starší verze nástroje generuje hodnoty metrik, které jsou bližší pro to, jaké [starší verze nástroje](#previous-versions)vygenerovala. Kromě toho v režimu starší verze *metrika. exe* generuje metriky kódu pro stejnou sadu typů metod, pro kterou předchozí verze nástroje vygenerovala metriky kódu. Například negeneruje data metriky kódu pro Inicializátory polí a vlastností. Režim starší verze je vhodný pro zpětnou kompatibilitu nebo v případě, že máte v závislosti na číslech metriky kódu brány pro vrácení se změnami. Příkaz pro sestavení *metrik. exe* v režimu starší verze je:
+*Metriky. exe* si můžete sestavit v *režimu starší verze*. Verze v režimu starší verze nástroje generuje hodnoty metrik, které jsou bližší pro to, jaké [starší verze nástroje vygenerovala](#previous-versions). Kromě toho v režimu starší verze *metrika. exe* generuje metriky kódu pro stejnou sadu typů metod, pro kterou předchozí verze nástroje vygenerovala metriky kódu. Například negeneruje data metriky kódu pro Inicializátory polí a vlastností. Režim starší verze je vhodný pro zpětnou kompatibilitu nebo v případě, že máte v závislosti na číslech metriky kódu brány pro vrácení se změnami. Příkaz pro sestavení *metrik. exe* v režimu starší verze je:
 
 ```shell
 msbuild /m /v:m /t:rebuild /p:LEGACY_CODE_METRICS_MODE=true Metrics.csproj
@@ -259,11 +259,11 @@ Nástroj metriky kódu nového příkazového řádku počítá metriky i v př�
 
 #### <a name="metric-value-differences"></a>Rozdíly v hodnotách metriky
 
-`LinesOfCode` Metrika je přesnější a spolehlivá v novém nástroji příkazového řádku pro metriky kódu. Nezávisí na žádných rozdílech CODEGEN a nemění se, když se změní sada nástrojů nebo modul runtime. Nový nástroj počítá skutečné řádky kódu, včetně prázdných řádků a komentářů.
+Metrika `LinesOfCode` je přesnější a spolehlivá v novém nástroji příkazového řádku pro metriky kódu. Nezávisí na žádných rozdílech CODEGEN a nemění se, když se změní sada nástrojů nebo modul runtime. Nový nástroj počítá skutečné řádky kódu, včetně prázdných řádků a komentářů.
 
-Jiné metriky, jako `CyclomaticComplexity` jsou `MaintainabilityIndex` a používají stejné vzorce jako předchozí verze *metriky. exe*, ale nový nástroj počítá počet `IOperations` (instrukcí logických zdrojů) místo instrukcí zprostředkujícího jazyka (IL). Čísla budou mírně odlišná na ta, která jsou vygenerována v integrovaném vývojovém prostředí sady Visual Studio a v předchozích verzích *metrik. exe*.
+Jiné metriky, jako je například `CyclomaticComplexity` a `MaintainabilityIndex`, používají stejné vzorce jako předchozí verze *metrik. exe*, ale nový nástroj počítá počet `IOperations` (instrukcí logických zdrojů) místo instrukcí zprostředkujícího jazyka (IL). Čísla budou mírně odlišná na ta, která jsou vygenerována v integrovaném vývojovém prostředí sady Visual Studio a v předchozích verzích *metrik. exe*.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Použijte okno výsledků metrik kódu](../code-quality/working-with-code-metrics-data.md)
+- [Použití okna výsledků metrik kódu](../code-quality/working-with-code-metrics-data.md)
 - [Hodnoty metrik kódu](../code-quality/code-metrics-values.md)

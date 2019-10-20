@@ -1,45 +1,45 @@
 ---
-title: Návrhář postupu provádění – Návrhář aktivity CompensableActivity
+title: Návrhář aktivity Návrhář postupu provádění – aktivita CompensableActivity
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.CompensableActivity.UI
 ms.assetid: e0340d89-d39e-4a52-8557-13e27040d7b5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cfe5a207136b44e61beff77bec8c8c7b869568b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f498c6d025e7527b9767284a77c953e538cef377
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949892"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650666"
 ---
 # <a name="compensableactivity-activity-designer"></a>Návrhář aktivity CompensableActivity
 
-**Aktivita CompensableActivity** Návrhář aktivity se používá k vytvoření a konfigurace <xref:System.Activities.Statements.CompensableActivity> aktivity.
+Návrhář aktivity **aktivita CompensableActivity** slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.CompensableActivity>.
 
-## <a name="the-compensableactivity-activity"></a>Aktivita CompensableActivity
- <xref:System.Activities.Statements.CompensableActivity> Definuje jednotku práce, které mohou být potvrzena nebo kompenzována po úspěšném dokončení.
+## <a name="the-compensableactivity-activity"></a>Aktivita aktivita CompensableActivity
+ @No__t_0 definuje jednotku práce, kterou lze potvrdit nebo kompenzovat po úspěšném dokončení.
 
-### <a name="using-the-compensableactivity-activity-designer"></a>Návrhář aktivity CompensableActivity pomocí
- **Aktivita CompensableActivity** návrháře aktivit najdete v **transakce** kategorie **nástrojů**. Chcete-li otevřít **nástrojů**, vyberte **nástrojů** karty na levé straně návrháře postupu provádění. Můžete také vybrat **nástrojů** z **zobrazení** nabídky nebo stisknutím klávesy **Ctrl**+**Alt** + **X**.
+### <a name="using-the-compensableactivity-activity-designer"></a>Pomocí návrháře aktivity aktivita CompensableActivity
+ Návrhář aktivity **aktivita CompensableActivity** lze nalézt v kategorii **transakce** sady **nástrojů**. Chcete-li otevřít **sadu nástrojů**, vyberte kartu **panelu nástrojů** na levé straně Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** +**ALT** +**X**.
 
- **Aktivita CompensableActivity** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřadit na povrch návrháře postupu provádění. Může vyřadit návrháře aktivit uvnitř <xref:System.Activities.Statements.Sequence>. Vyřazení Návrhář aktivity vytvoří <xref:System.Activities.Statements.CompensableActivity> aktivity s výchozím <xref:System.Activities.Activity.DisplayName%2A> z aktivita CompensableActivity. Upravit <xref:System.Activities.Activity.DisplayName%2A> hodnota v hlavičce **aktivita CompensableActivity** návrháře aktivit. Můžete upravit také v **DisplayName** pole mřížku vlastností.
+ Návrhář aktivity **aktivita CompensableActivity** lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu. Můžete vyřadit návrháře aktivit v rámci <xref:System.Activities.Statements.Sequence>. Vyřazení návrháře aktivit vytvoří aktivitu <xref:System.Activities.Statements.CompensableActivity> s výchozím <xref:System.Activities.Activity.DisplayName%2A> aktivita CompensableActivity. Upravte hodnotu <xref:System.Activities.Activity.DisplayName%2A> v hlavičce návrháře aktivit **aktivita CompensableActivity** . Můžete ho také upravit v poli **DisplayName** v mřížce vlastností.
 
-### <a name="the-compensableactivity-properties"></a>Aktivita CompensableActivity vlastnosti
- Následující tabulka ukazuje <xref:System.Activities.Statements.CompensableActivity> vlastnosti a popisuje, jak se používají v návrháři. <xref:System.Activities.Activity.DisplayName%2A> a <xref:System.Activities.Activity%601.Result%2A> vlastnost lze upravit v mřížce vlastností, ale další vlastnosti nutné upravit na povrchu návrháře postupu provádění.
+### <a name="the-compensableactivity-properties"></a>Vlastnosti aktivita CompensableActivity
+ V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.CompensableActivity> a popisuje, jak se používají v návrháři. Vlastnost <xref:System.Activities.Activity.DisplayName%2A> a <xref:System.Activities.Activity%601.Result%2A> lze upravovat v mřížce vlastností, ale ostatní vlastnosti je nutné upravovat na Návrhář postupu provádění ploše.
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Volitelné jméno <xref:System.Activities.Statements.CompensableActivity> aktivity. Výchozí hodnota je aktivita CompensableActivity.|
-|<xref:System.Activities.Activity%601.Result%2A>|False|Určuje návratovou hodnotu <xref:System.Activities.Statements.CompensableActivity>. Tato vlastnost je nutné upravit v mřížce vlastností.|
-|<xref:System.Activities.Statements.CompensableActivity.Body%2A>|Pravda|Určuje aktivity, pro který je k dispozici logiky compensation, zrušení a potvrzení. Přidat <xref:System.Activities.Statements.CompensableActivity.Body%2A> aktivity, rozevírací aktivitu z **nástrojů** do **tělo** pole na **aktivita CompensableActivity** návrháře aktivit. Přidáte text nápovědy "Sem přetáhněte aktivitu".|
-|<xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>|False|Určuje, který se spouští při zrušení aktivity. Přidat aktivitu, vyřaďte Návrhář z **nástrojů** do **CancellationHandler** pole na **aktivita CompensableActivity** návrháře aktivit. Přidáte text nápovědy "Aktivity Sem přetáhněte".|
-|<xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>|False|Určuje aktivity, který se spustí při kompenzaci pro <xref:System.Activities.Statements.CompensableActivity.Body%2A> aktivity. Tato obslužná rutina může být vyvolána explicitně, pomocí <xref:System.Activities.Statements.Compensate> aktivity.<br /><br /> Přidat aktivitu, přetáhněte jeho Návrhář aktivity z **nástrojů** do **CompensationHandler** pole na **aktivita CompensableActivity** návrháře aktivit. Přidáte text nápovědy "Aktivity Sem přetáhněte".|
-|<xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>|False|Určuje aktivity, který se spustí při potvrzení <xref:System.Activities.Statements.CompensableActivity.Body%2A> aktivity. Tato obslužná rutina může být vyvolána explicitně, pomocí <xref:System.Activities.Statements.Confirm> aktivity.<br /><br /> Přidat aktivitu, přetáhněte jeho Návrhář aktivity z **nástrojů** do **ConfirmationHandler** pole na **aktivita CompensableActivity** návrháře aktivit. Přidáte text nápovědy "Aktivity Sem přetáhněte".|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Volitelný popisný název aktivity <xref:System.Activities.Statements.CompensableActivity>. Výchozí hodnota je aktivita CompensableActivity.|
+|<xref:System.Activities.Activity%601.Result%2A>|False|Určuje návratovou hodnotu <xref:System.Activities.Statements.CompensableActivity>. Tato vlastnost musí být upravena v mřížce vlastností.|
+|<xref:System.Activities.Statements.CompensableActivity.Body%2A>|Podmínka|Určuje aktivitu, pro kterou je poskytnuta logika kompenzace, zrušení a potvrzení. Chcete-li přidat aktivitu <xref:System.Activities.Statements.CompensableActivity.Body%2A>, přetáhněte aktivitu ze **sady nástrojů** do pole **text** v Návrháři aktivity **aktivita CompensableActivity** . Sem přidejte text nápovědy "Sem přetáhněte aktivitu".|
+|<xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>|False|Určuje aktivitu, která se spustí, když dojde ke zrušení. Chcete-li přidat aktivitu, přetáhněte jejího návrháře ze **sady nástrojů** do pole **CancellationHandler** v Návrháři aktivity **aktivita CompensableActivity** . Přidat text nápovědy "Sem přetáhněte aktivitu".|
+|<xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>|False|Určuje aktivitu, která má být provedena při odškodnění aktivity <xref:System.Activities.Statements.CompensableActivity.Body%2A>. Tuto obslužnou rutinu lze explicitně vyvolat pomocí aktivity <xref:System.Activities.Statements.Compensate>.<br /><br /> Chcete-li přidat aktivitu, přetáhněte jejího návrháře aktivit ze **sady nástrojů** do pole **CompensationHandler** v Návrháři aktivity **aktivita CompensableActivity** . Přidat text nápovědy "Sem přetáhněte aktivitu".|
+|<xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>|False|Určuje aktivitu, která má být provedena při potvrzení aktivity <xref:System.Activities.Statements.CompensableActivity.Body%2A>. Tuto obslužnou rutinu lze explicitně vyvolat pomocí aktivity <xref:System.Activities.Statements.Confirm>.<br /><br /> Chcete-li přidat aktivitu, přetáhněte jejího návrháře aktivit ze **sady nástrojů** do pole **ConfirmationHandler** v Návrháři aktivity **aktivita CompensableActivity** . Přidat text nápovědy "Sem přetáhněte aktivitu".|
 
 ## <a name="see-also"></a>Viz také:
 

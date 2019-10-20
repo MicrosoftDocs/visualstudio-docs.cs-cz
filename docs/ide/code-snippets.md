@@ -8,8 +8,8 @@ f1_keywords:
 helpviewer_keywords:
 - surround with
 - code snippets
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
@@ -17,31 +17,31 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 89de993337ecd214c7771faf17b24f90fa5e0110
-ms.sourcegitcommit: 0f44ec8ba0263056ad04d2d0dc904ad4206ce8fc
+ms.openlocfilehash: fa42d9c404aaf75fda03731183abf3d585869b07
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766258"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647555"
 ---
 # <a name="code-snippets"></a>Fragmenty kódu
 
 Fragmenty kódu jsou malé bloky opakovaně použitelného kódu, který lze vložit do souboru kódu pomocí příkazu nabídky po kliknutí pravým tlačítkem myši (kontextová nabídka) nebo kombinace klávesových zkratek. Obvykle obsahují často používané bloky kódu, například `try-finally` nebo `if-else` bloky, ale lze je použít k vložení celé třídy nebo metod.
 
 > [!NOTE]
-> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac naleznete v tématu [fragmenty kódu (Visual Studio pro Mac)](/visualstudio/mac/snippets).
+> Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac naleznete v tématu [fragmenty kódu (Visual Studio pro Mac)](/visualstudio/mac/snippets).
 
-Fragmenty kódu jsou k dispozici pro mnoho jazyků, včetně C#, C++, Visual Basic, XML a T-SQL, pro pojmenování. Chcete-li zobrazit všechny dostupné fragmenty nainstalované pro jazyk, otevřete **Správce fragmentů kódů** z nabídky **nástroje** (nebo stiskněte klávesy **CTRL**+**K**, **CTRL**+**B**) a zvolte jazyk z rozevírací nabídka v horní části.
+Fragmenty kódu jsou k dispozici pro mnoho jazyků, včetně C#, C++, Visual Basic, XML a T-SQL, pro pojmenování. Chcete-li zobrazit všechny dostupné fragmenty nainstalované pro jazyk, otevřete **Správce fragmentů kódů** z nabídky **nástroje** (nebo stiskněte klávesovou zkratku **ctrl** +**K**, **CTRL** +**B**) a zvolte jazyk z rozevírací nabídky. v horní části.
 
 ![Dialogové okno Správce fragmentů kódů](media/code-snippets-manager.png)
 
 K fragmentům kódu je možné přistupovat následujícími obecnými způsoby:
 
-- Na panelu nabídek vyberte možnost **Upravit** > **IntelliSense** > **Vložit fragment** .
+- Na panelu nabídek vyberte možnost **upravit**  > **IntelliSense**  > **Vložit fragment**
 
-- V editoru kódu kliknutím pravým tlačítkem myši nebo v místní nabídce vyberte **fragment** > kódu**Vložit fragment**
+- V editoru kódu kliknutím pravým tlačítkem myši nebo v kontextové nabídce vyberte **fragment**  > **Vložit fragment**
 
-- Na klávesnici stiskněte klávesu **CTRL**+**K**,**CTRL**+**X**
+- Na klávesnici stiskněte **ctrl** +**K**,**CTRL** +**X** .
 
 ## <a name="expansion-snippets-and-surround-with-snippets"></a>Fragmenty rozšíření a obklopení s fragmenty
 
@@ -60,9 +60,9 @@ finally
 }
 ```
 
-Tento fragment kódu můžete vložit kliknutím na **Vložit fragment** v místní nabídce (kontextové nabídce) v okně Code (kontextová nabídka), potom na **vizuál C#** , `tryf`zadáním a stisknutím klávesy **TAB**. Nebo můžete zadat `tryf` a stisknout klávesu **TAB** dvakrát.
+Tento fragment kódu můžete vložit kliknutím na **Vložit fragment** v místní nabídce (kontextové nabídce) v okně kódu, potom **vizuálu C#** , zadáním `tryf` a stisknutím klávesy **TAB**. Můžete také zadat `tryf` a stisknout klávesu **TAB** dvakrát.
 
-Příklad obklopit s fragmentem kódu: v C++ zástupce `if` lze použít buď jako fragment vložení, nebo jako obklopit s fragmentem kódu. Pokud vyberete řádek kódu `return FALSE;`(například) a pak zvolíte možnost **uzavřít pomocí** > **if**, fragment kódu se rozbalí kolem řádku:
+Příklad obklopit s fragmentem kódu: v C++ zástupce `if` lze použít buď jako fragment vložení, nebo jako obklopit s fragmentem kódu. Pokud vyberete řádek kódu (například `return FALSE;`) a pak zvolíte možnost **uzavřít s**  > ,**Pokud**je, fragment kódu se rozbalí kolem řádku:
 
 ```cpp
 if (true)
@@ -73,9 +73,9 @@ if (true)
 
 ## <a name="snippet-replacement-parameters"></a>Parametry nahrazení fragmentů
 
-Fragmenty kódu mohou obsahovat náhradní parametry, což jsou zástupné symboly, které je nutné nahradit, aby odpovídaly přesnému kódu, který píšete. V předchozím příkladu `true` je náhradní parametr, který byste nahradili příslušnou podmínkou. Náhrada, kterou provedete, se opakuje pro každou instanci stejného parametru nahrazení ve fragmentu.
+Fragmenty kódu mohou obsahovat náhradní parametry, což jsou zástupné symboly, které je nutné nahradit, aby odpovídaly přesnému kódu, který píšete. V předchozím příkladu `true` je náhradní parametr, který byste nahradili odpovídající podmínkou. Náhrada, kterou provedete, se opakuje pro každou instanci stejného parametru nahrazení ve fragmentu.
 
-Například v Visual Basic existuje fragment kódu, který vloží vlastnost. Chcete-li **Vložit fragment kódu, vyberte možnost** > **Vložit fragment kódu** z místní nabídky nebo z kontextové nabídky v souboru kódu Visual Basic. Pak zvolte vlastnosti **vzorů** > kódu **, procedury, události** > **definují vlastnost**.
+Například v Visual Basic existuje fragment kódu, který vloží vlastnost. Chcete-li vložit fragment kódu, vyberte možnost **fragment kódu**  > **Vložit fragment** z místní nabídky nebo z kontextové nabídky v souboru kódu Visual Basic. Pak zvolte **vzory kódu**  > **vlastnosti, procedury, události**  > **definovat vlastnost**.
 
 ![Nabídka fragmentu kódu pro definování vlastnosti](media/code-snippets-vb-property.png)
 
@@ -93,12 +93,12 @@ Public Property NewProperty() As String
 End Property
 ```
 
-Změníte `newPropertyValue` -li na `m_property` `newPropertyValue` , pak dojde ke změně každé instance. Pokud se v `String` deklaraci vlastnosti změní na `Int` , pak je hodnota v metodě set také změněna na `Int`.
+Změníte-li `newPropertyValue` na `m_property`, dojde ke změně každé instance `newPropertyValue`. Změníte-li `String` na `Int` v deklaraci vlastnosti, pak je hodnota v metodě set také změněna na `Int`.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Návod: Vytvoření fragmentu kódu](../ide/walkthrough-creating-a-code-snippet.md)
-- [Postupy: Distribuce fragmentů kódu](../ide/how-to-distribute-code-snippets.md)
+- [Postupy: distribuce fragmentů kódu](../ide/how-to-distribute-code-snippets.md)
 - [Osvědčené postupy pro používání fragmentů kódu](../ide/best-practices-for-using-code-snippets.md)
 - [Řešení potíží s fragmenty](../ide/troubleshooting-snippets.md)
 - [C#fragmenty kódu](../ide/visual-csharp-code-snippets.md)

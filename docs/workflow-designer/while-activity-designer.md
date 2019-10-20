@@ -1,35 +1,35 @@
 ---
-title: Návrhář postupu provádění - při návrháře aktivit
+title: Návrhář postupu provádění – Návrhář aktivity
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.While.UI
 ms.assetid: ea008091-2e4c-4f64-bfa5-afb919552446
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d9ea1f6bd42526eb0ea38c23cbf0f28c4346515
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6570a80de5be17b2893fc4105f057e655e841881
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62433888"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649768"
 ---
 # <a name="while-activity-designer"></a>Návrhář aktivity While
 
-<xref:System.Activities.Statements.While> Aktivita provádí aktivity obsažené v jeho <xref:System.Activities.Statements.While.Body%2A> while zadaný <xref:System.Activities.Statements.While.Condition%2A> vyhodnotí jako **true**. Nikdy může spustit obsaženou aktivitu. Pokud chcete obsažené aktivity na minimálně jednou provedeno, použijte <xref:System.Activities.Statements.DoWhile> aktivity místo.
+Aktivita <xref:System.Activities.Statements.While> spustí aktivitu obsaženou v <xref:System.Activities.Statements.While.Body%2A>, zatímco zadané <xref:System.Activities.Statements.While.Condition%2A> vyhodnotí jako **true**. Obsažená aktivita nemusí být nikdy spuštěna. Pokud chcete, aby byla obsažená aktivita provedena aspoň jednou, použijte místo toho <xref:System.Activities.Statements.DoWhile> aktivitu.
 
-## <a name="while-properties-in-workflow-designer"></a>Zatímco vlastnosti v Návrháři postupu provádění
+## <a name="while-properties-in-workflow-designer"></a>Vlastnosti v Návrhář postupu provádění
 
-V následující tabulce jsou uvedeny nejužitečnější <xref:System.Activities.Statements.While> vlastnosti aktivit a popisuje, jak se používají v návrháři.
+Následující tabulka uvádí nejužitečnější vlastnosti <xref:System.Activities.Statements.While> aktivity a popisuje, jak se používají v návrháři.
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje popisný název <xref:System.Activities.Statements.While> návrháře aktivit v záhlaví. Výchozí hodnota je při. Hodnotu lze upravit v **vlastnosti** okno nebo přímo v hlavičce návrháře aktivit.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutné, je osvědčeným postupem je použití jednoho.|
-|<xref:System.Activities.Statements.While.Body%2A>|False|Obsahuje aktivity ke spuštění během <xref:System.Activities.Statements.While.Condition%2A> vyhodnotí jako **true**.|
-|<xref:System.Activities.Statements.While.Condition%2A>|Pravda|Obsahuje výraz jazyka Visual Basic, který je vyhodnocován pro určení, zda aktivitu v <xref:System.Activities.Statements.While.Body%2A> má být provedena.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje popisný název návrháře <xref:System.Activities.Statements.While> aktivity v hlavičce. Výchozí hodnota je while. Hodnotu lze upravit v okně **vlastnosti** nebo přímo v hlavičce návrháře aktivit.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.While.Body%2A>|False|Obsahuje aktivitu, která se má provést, když se <xref:System.Activities.Statements.While.Condition%2A> vyhodnotí jako **true**.|
+|<xref:System.Activities.Statements.While.Condition%2A>|Podmínka|Obsahuje výraz Visual Basic, který je vyhodnocován pro určení, zda má být provedena aktivita v <xref:System.Activities.Statements.While.Body%2A>.|
 
 ## <a name="see-also"></a>Viz také:
 

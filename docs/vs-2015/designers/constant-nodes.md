@@ -1,48 +1,48 @@
 ---
-title: Uzly konstanty | Dokumentace Microsoftu
+title: Konstantní uzly | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 2c798a50-a2d7-459b-9879-ad4ad8290c9b
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d38a4f8a182562c11dbb742cb26392218edfd981
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d15d14c59049a2a514a6c779c23875c2dfccb539
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68162656"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657971"
 ---
 # <a name="constant-nodes"></a>Uzly konstanty
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Uzly konstanty v Návrháři shaderu představují hodnoty literálu a interpolovaných atributy vrcholů ve výpočtech pixel shaderu. Protože vrchol atributy jsou interpolovány – a tedy se liší pro každý pixel – každá instance pixel shader obdrží jinou verzi konstanty. To poskytuje každý pixel jedinečný vzhled.  
-  
-## <a name="vertex-attribute-interpolation"></a>Interpolace atributů vrcholu  
- Obrázek 3D scény ve hře nebo aplikaci se provádí pomocí matematicky transformace počet objektů, které – které jsou definovány vrcholy, vrcholu atributy a primitivní definice – do na obrazovce pixelů. Všechny informace, které je nutné poskytnout pixel jedinečný vzhled poskytnutý prostřednictvím vrcholu atributy, které jsou prolnuty společně podle blízkosti je pixel různých vrcholy, které tvoří jeho *primitivní*. Jednoduchého typu je základní vykreslování element. To znamená jednoduché obrazce jako je například bod, řádku nebo trojúhelník. Pixel, který je velmi blízko pouze jedna z vrcholy obdrží konstanty, které jsou téměř stejné jako tento vrchol, ale obdrží konstanty, které je průměrem těchto vrcholy pixel, který má rovnoměrně rozloženy mezi všechny vrcholy jednoduchého typu. V programování grafiky, se označují jako konstanty, které přijímají pixely *interpolované*. Poskytuje konstantních dat na pixelů tímto způsobem vytváří velmi dobré vizuální kvality a současně snižuje požadavky na paměť nároky na místo a šířky pásma.  
-  
- I když každá instance pixel shader přijímá pouze jednu sadu hodnot konstant a tyto hodnoty nedají změnit, jiné shaderem instance přijímat různých sad dat konstantní. Tento návrh umožňuje program shaderu na jinou barvu výstup pro každý pixel v primitivní vlastnost.  
-  
-## <a name="constant-node-reference"></a>Odkaz na konstantního uzlu  
-  
-|Uzel|Podrobnosti|Vlastnosti|  
-|----------|-------------|----------------|  
-|**Vektor kamery**|Vektor, který se táhne od aktuálního pixelu až po kameru v prostoru světa.<br /><br /> Vám může být využit k výpočtu odrazů v prostoru světa.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Vektor od aktuálního pixelu až po kameru.|Žádné|  
-|**Barevná konstanta**|Hodnota konstanty barvy.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Hodnota barvy.|**Output**<br /> Hodnota barvy.|  
-|**Konstanty**|Konstantní skalární hodnota.<br /><br /> **Output**<br /><br /> `Output`: `float`<br /> Skalární hodnota.|**Output**<br /> Skalární hodnota.|  
-|**2D konstanta**|Konstantu dvousložkového vektoru.<br /><br /> **Output**<br /><br /> `Output`: `float2`<br /> Hodnota vektoru.|**Output**<br /> Hodnota vektoru.|  
-|**3D konstanta**|Konstantu třísložkového vektoru.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Hodnota vektoru.|**Output**<br /> Hodnota vektoru.|  
-|**4D konstanta**|Konstantu čtyřsložkového vektoru.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Hodnota barvy.|**Output**<br /> Hodnota vektoru.|  
-|**Normalizované umístění**|Pozice aktuálního pixelu vyjádřena v souřadnicích normalizované zařízení.<br /><br /> Souřadnice x a osy y mají hodnoty v rozsahu [-1, 1], souřadnice z má hodnotu v rozsahu [0, 1], a w komponenta obsahuje hodnotu hloubka bodu v prostoru zobrazení; w není normalizovaná.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Pozice aktuálního pixelu.|Žádné|  
-|**Barva bodu**|Rozptýlení barvy aktuálního pixelu, což je kombinací materiálu rozptýlení barvy a vrcholu barevnými atributy.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Rozptýlení barvy aktuálního pixelu.|Žádný|  
-|**Hloubka bodu**|Hloubka aktuálního pixelu v prostoru zobrazení.<br /><br /> **Output**<br /><br /> `Output`: `float`<br /> Hloubka aktuálního pixelu.|Žádný|  
-|**Normalizovaná hloubka bodu**|Hloubka aktuálního pixelu vyjádřena v souřadnicích normalizované zařízení.<br /><br /> Výsledek obsahuje hodnotu v rozsahu [0, 1].<br /><br /> **Output**<br /><br /> `Output`: `float`<br /> Hloubka aktuálního pixelu.|Žádné|  
-|**Umístění obrazovky**|Pozice aktuálního pixelu vyjádřena v souřadnicovém systému obrazovky.<br /><br /> Souřadnice obrazovky jsou založeny na aktuální zobrazení. X a y součásti obsahují souřadnice obrazovky, z komponenty obsahuje hloubky normalizovány na rozsah [0, 1], a w komponenta obsahuje hodnotu hloubky v prostoru zobrazení.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Pozice aktuálního pixelu.|Žádný|  
-|**Normála povrchu**|Normála povrchu aktuálního pixelu v prostoru objektu.<br /><br /> To můžete použít pro výpočet přínosů světla a odrazů v prostoru objektu.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Normála povrchu aktuálního pixelu.|Žádné|  
-|**Vektor kamery prostoru tečny**|Vektor, který se táhne od aktuálního pixelu až po kameru v tečném prostoru.<br /><br /> Vám může být využit k výpočtu odrazů v tečném prostoru.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Vektor od aktuálního pixelu až po kameru.|Žádný|  
-|**Směr světla prostoru tečny**|Vektor definující směr, ve kterém dopadá světlo ze světelného zdroje v tečném prostoru aktuálního pixelu.<br /><br /> To slouží k výpočtu osvětlení a množství odrazů v tečném prostoru.<br /><br /> **Výstup:**<br /><br /> `Output`: `float3`<br /> Vektor od aktuálního pixelu ke zdroji světla.|Žádné|  
-|**Normála ve světových souřadnicích**|Normála povrchu aktuálního pixelu v prostoru světa.<br /><br /> To můžete použít pro výpočet přínosů světla a odrazů v prostoru světa.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Normála povrchu aktuálního pixelu.|Žádné|  
-|**Pozice světa**|Pozice aktuálního pixelu v prostoru světa.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Pozice aktuálního pixelu.|Žádný|
+V Návrháři shaderu konstantní uzly reprezentují hodnoty literálu a interpolované atributy vrcholu ve výpočtech obrazového shaderu. Vzhledem k tomu, že atributy vrcholu jsou interpolované – a proto jsou pro každý pixel rozdílné, každá instance pixel-shader obdrží jinou verzi konstanty. To dává každému obrazovému obrazci jedinečný vzhled.
+
+## <a name="vertex-attribute-interpolation"></a>Interpolace atributu vrcholu
+ Obrázek 3D scény ve hře nebo aplikaci vytváří matematicky transformující počet objektů, které jsou definovány vrcholy, atributy vrcholu a primitivní definice – do pixelů na obrazovce. Všechny informace, které jsou vyžadovány k přidělení pixelu jeho jedinečného vzhledu, jsou dodány prostřednictvím atributů vrcholu, které jsou kombinovány podle blízkosti obrazového bodu s různými vrcholy, které tvoří *primitivní*. Primitivum je základní element vykreslování; To znamená jednoduchý tvar, jako je například bod, čára nebo trojúhelník. Pixel, který je blízko pouze jednoho z vrcholů, přijímá konstanty, které jsou téměř totožné s tímto vrcholem, ale pixel, který je rovnoměrně rozložen mezi všechny vrcholy primitivních hodnot, přijímá konstanty, které jsou průměrem těchto vrcholů. V programování grafiky jsou konstanty, které pixely obdrží, označeny jako *interpolované*. Poskytnutí konstantních dat na pixely tímto způsobem vytváří velmi dobrou vizuální kvalitu a zároveň omezuje nároky na paměť a požadavky na šířku pásma.
+
+ I když každá instance pixel-shaderu přijímá jenom jednu sadu konstantních hodnot a nemůže tyto hodnoty změnit, jiné instance pixel shaderu obdrží různé sady konstantních dat. Tento návrh umožňuje programu shaderu vytvořit jiný barevný výstup pro každý pixel v primitivu.
+
+## <a name="constant-node-reference"></a>Odkaz na konstantní uzel
+
+|Uzel|Podrobnosti|Vlastnosti|
+|----------|-------------|----------------|
+|**Vektor kamery**|Vektor, který se od aktuálního pixelu rozšíří do kamery v prostoru světa.<br /><br /> Tuto možnost můžete použít k výpočtu odrazů v prostoru světa.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Vektor z aktuálního pixelu do kamery.|Žádné|
+|**Barevná konstanta**|Hodnota konstantní barvy.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Hodnota barvy.|**Output**<br /> Hodnota barvy.|
+|**Změnil**|Konstantní skalární hodnota.<br /><br /> **Output**<br /><br /> `Output`: `float`<br /> Skalární hodnota.|**Output**<br /> Skalární hodnota.|
+|**2D konstanta**|Vektorová konstanta dvou komponent.<br /><br /> **Output**<br /><br /> `Output`: `float2`<br /> Hodnota Vector.|**Output**<br /> Hodnota Vector.|
+|**3D konstanta**|Vektorová konstanta se třemi komponentami.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Hodnota Vector.|**Output**<br /> Hodnota Vector.|
+|**4D – konstanta**|Vektorová konstanta se čtyřmi komponentami.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Hodnota barvy.|**Output**<br /> Hodnota Vector.|
+|**Normalizovaná poloha**|Pozice aktuálního pixelu vyjádřená v normalizovaných souřadnicích zařízení.<br /><br /> Souřadnice x a y mají hodnoty v rozsahu [-1, 1], souřadnice z-souřadnic má hodnotu v rozsahu [0, 1] a komponenta w obsahuje hodnotu hloubky bodu v prostoru zobrazení; w není normalizován.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Pozice aktuálního pixelu|Žádné|
+|**Barva bodu**|Barva difúze aktuálního pixelu, která je kombinací atributů barva difúze a barvy vrcholu.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Barva difúze aktuálního pixelu|Žádné|
+|**Hloubka bodu**|Hloubka aktuálního pixelu v prostoru zobrazení<br /><br /> **Output**<br /><br /> `Output`: `float`<br /> Hloubka aktuálního pixelu.|Žádné|
+|**Normalizovaná hloubka bodu**|Hloubka aktuálního pixelu vyjádřená v normalizovaných souřadnicích zařízení.<br /><br /> Výsledek má hodnotu v rozsahu [0, 1].<br /><br /> **Output**<br /><br /> `Output`: `float`<br /> Hloubka aktuálního pixelu.|Žádné|
+|**Pozice obrazovky**|Pozice aktuálního pixelu vyjádřená v souřadnicích obrazovky<br /><br /> Souřadnice obrazovky jsou založené na aktuálním zobrazení. Komponenty x a y obsahují souřadnice obrazovky, komponenta z obsahuje normalizovanou hloubku do rozsahu [0, 1] a komponenta w obsahuje hodnotu hloubky v prostoru zobrazení.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Pozice aktuálního pixelu|Žádné|
+|**Normální povrch**|Normální plocha aktuálního pixelu v prostoru objektu.<br /><br /> Tuto možnost můžete použít k výpočtu příspěvků světla a odrazů v prostoru objektu.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Normální plocha aktuálního pixelu.|Žádné|
+|**Vektor kamery prostoru tečny**|Vektor, který se od aktuálního pixelu rozšíří na kameru v tečném prostoru.<br /><br /> Tuto možnost můžete použít k výpočtu odrazů v tečném prostoru.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Vektor z aktuálního pixelu do kamery.|Žádné|
+|**Směr světla prostoru tečny**|Vektor definující směr, ve kterém je světlo ze zdroje světla v tečném prostoru aktuálního pixelu.<br /><br /> Tuto možnost můžete použít k výpočtu osvětlení a odlesků příspěvků v tečném prostoru.<br /><br /> **Výkonem**<br /><br /> `Output`: `float3`<br /> Vektor z aktuálního pixelu ke zdroji světla.|Žádné|
+|**Světový normální**|Normální plocha aktuálního pixelu v prostoru světa.<br /><br /> Tuto možnost můžete použít k výpočtu příspěvků světla a odrazů v prostoru světa.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Normální plocha aktuálního pixelu.|Žádné|
+|**Světová pozice**|Pozice aktuálního pixelu v prostoru světa.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Pozice aktuálního pixelu|Žádné|

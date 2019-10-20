@@ -1,36 +1,36 @@
 ---
-title: Úvod k Intellitestu
+title: Úvod do IntelliTest
 ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Get started
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 92a5b5f6ffac7285dd1a22d7193ada74e3a90967
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+author: jillre
+ms.openlocfilehash: 0d0d681c59935bbbb4591438f538d0c800cba489
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62906844"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653210"
 ---
 # <a name="get-started-with-microsoft-intellitest"></a>Začínáme s Microsoft IntelliTest
 
-* Pokud to je poprvé s Intellitestem:
-  * Podívejte [videa Channel 9](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Intellitest)
-  * Přečtěte si tento [přehled na webu MSDN Magazine](https://msdn.microsoft.com/magazine/dn904672.aspx)
-  * Přečtěte si naše [dokumentace](../../test/generate-unit-tests-for-your-code-with-intellitest.md)
-* Pokládání otázek na [Stack Overflow](http://stackoverflow.com/questions/tagged/intellitest)
-* Čtení zbývajících částí této referenční příručce
-* Vytiskněte si tuto stránku Stručná referenční příručka
+* Pokud používáte IntelliTest poprvé:
+  * Podívejte se na [video o kanálu 9](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Intellitest) .
+  * Přečtěte si tento [Přehled na webu MSDN Magazine](https://msdn.microsoft.com/magazine/dn904672.aspx) .
+  * Přečtěte si naši [dokumentaci](../../test/generate-unit-tests-for-your-code-with-intellitest.md)
+* Položte své dotazy na [Stack Overflow](http://stackoverflow.com/questions/tagged/intellitest)
+* Přečtěte si zbytek tohoto referenčního návodu.
+* Tisk této stránky pro rychlé odkazy
 
 ## <a name="important-attributes"></a>Důležité atributy
 
-* [PexClass](attribute-glossary.md#pexclass) označuje typ obsahující **PUT**
-* [PexMethod](attribute-glossary.md#pexmethod) značky **PUT**
-* [PexAssumeNotNull](attribute-glossary.md#pexassumenotnull) označí nenulový parametr
+* [PexClass](attribute-glossary.md#pexclass) označuje typ obsahující **Put** .
+* [PexMethod](attribute-glossary.md#pexmethod) označuje **Put**
+* [PexAssumeNotNull](attribute-glossary.md#pexassumenotnull) označuje parametr, který není null.
 
 ```csharp
 using Microsoft.Pex.Framework;
@@ -44,20 +44,20 @@ public partial class FooTest {
 }
 ```
 
-* [PexAssemblyUnderTest](attribute-glossary.md#pexassemblyundertest) váže testovací projekt na projekt
-* [PexInstrumentAssembly](attribute-glossary.md#pexinstrumentassemblyattribute) určuje sestavení, k Sestrojení
+* [PexAssemblyUnderTest](attribute-glossary.md#pexassemblyundertest) váže projekt testů k projektu.
+* [PexInstrumentAssembly](attribute-glossary.md#pexinstrumentassemblyattribute) určuje sestavení pro instrumentaci
 
 ```csharp
 [assembly: PexAssemblyUnderTest("MyAssembly")] // also instruments "MyAssembly"
 [assembly: PexInstrumentAssembly("Lib")]
 ```
 
-## <a name="helper-classes"></a> Třídy statických pomocných rutin důležité
+## <a name="helper-classes"></a>Důležité statické pomocné třídy
 
-* [PexAssume](static-helper-classes.md#pexassume) vyhodnotí předpoklady (vstupní filtrování)
-* [PexAssert](static-helper-classes.md#pexassert) vyhodnotí výrazy
-* [PexChoose](static-helper-classes.md#pexchoose) generuje nové možnosti (další vstupy)
-* [PexObserve](static-helper-classes.md#pexobserve) zaznamená živé hodnoty do vygenerované testy
+* [PexAssume](static-helper-classes.md#pexassume) vyhodnocuje předpoklady (filtrování vstupu).
+* [PexAssert](static-helper-classes.md#pexassert) vyhodnocuje kontrolní výrazy
+* [PexChoose](static-helper-classes.md#pexchoose) vygeneruje nové volby (další vstupy).
+* [PexObserve](static-helper-classes.md#pexobserve) zaznamená živé hodnoty do vygenerovaných testů
 
 ```csharp
 [PexMethod]
@@ -72,6 +72,6 @@ void StaticHelpers(Foo target) {
 }
 ```
 
-## <a name="got-feedback"></a>Máte nějakou zpětnou vazbu?
+## <a name="got-feedback"></a>Máte zpětnou vazbu?
 
-Publikovat své nápady a funkce na požadavky [komunity vývojářů](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
+Publikujte své nápady a žádosti o funkce na [komunitě vývojářů](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).

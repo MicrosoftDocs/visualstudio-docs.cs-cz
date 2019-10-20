@@ -1,33 +1,33 @@
 ---
-title: Technologie LINQ to XML dynamické vlastnosti
+title: Dynamické vlastnosti LINQ to XML
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0455f47c-4a68-4f2e-a3f8-dd1d85b99012
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 181e9e4fb86a0348c0b5adb1d26a0a4e4e1721bb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5993639a1bd6db1b814615bc75c1a57b64212185
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62893208"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72635267"
 ---
 # <a name="linq-to-xml-dynamic-properties"></a>Dynamické vlastnosti LINQ to XML
 
-Tato část obsahuje referenční informace o dynamické vlastnosti LINQ to XML. Konkrétně tyto vlastnosti jsou vystaveny <xref:System.Xml.Linq.XAttribute> a <xref:System.Xml.Linq.XElement> třídy, které jsou v <xref:System.Xml.Linq> oboru názvů.
+V této části najdete referenční informace o dynamických vlastnostech v LINQ to XML. Konkrétně tyto vlastnosti jsou zpřístupněny <xref:System.Xml.Linq.XAttribute> a <xref:System.Xml.Linq.XElement> třídy, které jsou v oboru názvů <xref:System.Xml.Linq>.
 
-Jak je popsáno v tématu [datová vazba přehled WPF s LINQ to XML](../designers/wpf-data-binding-with-linq-to-xml-overview.md), dynamické vlastnosti je ekvivalentní standardní veřejné vlastnosti nebo metody ve stejné třídě. Tyto standardní členy by měl sloužit pro většinu účelů; dynamické vlastnosti jsou k dispozici speciálně pro funkci LINQ to XML scénáře datových vazeb. Další informace o standardní členové těchto tříd naleznete v tématu <xref:System.Xml.Linq.XAttribute> a <xref:System.Xml.Linq.XElement> referenčních témat.
+Jak je vysvětleno v tématu [Přehled datové vazby WPF s LINQ to XML](../designers/wpf-data-binding-with-linq-to-xml-overview.md), každá z dynamických vlastností je ekvivalentní standardní veřejné vlastnosti nebo metody ve stejné třídě. Tyto standardní členy by se měly používat pro většinu účelů; dynamické vlastnosti jsou určené speciálně pro LINQ to XML scénáře datových vazeb. Další informace o standardních členech těchto tříd naleznete v tématu <xref:System.Xml.Linq.XAttribute> a <xref:System.Xml.Linq.XElement> referenční témata.
 
-S ohledem na jejich vyřešení hodnoty dynamických vlastností v této části spadají do dvou kategorií:
+V souvislosti s jejich vyřešenými hodnotami jsou dynamické vlastnosti v této části rozdělené do dvou kategorií:
 
-- Jednoduché ty, které jsou, jako `Value` vlastnosti v <xref:System.Xml.Linq.XAttribute> a <xref:System.Xml.Linq.XElement> třídy, které přeložit na jedinou hodnotu.
+- Jednoduché, například vlastnosti `Value` v třídách <xref:System.Xml.Linq.XAttribute> a <xref:System.Xml.Linq.XElement>, které se překládají na jedinou hodnotu.
 
-- Indexované hodnoty, například [prvky](../designers/elements-xelement-dynamic-property.md) a [následníky](../designers/descendants-xelement-dynamic-property.md) vlastnosti <xref:System.Xml.Linq.XElement>, který řešení do typu indexeru. Indexer typům přeložit na požadovanou hodnotu nebo kolekci musí být předán parametr rozbalený název k nim.
+- Indexované hodnoty, jako jsou vlastnosti [prvků](../designers/elements-xelement-dynamic-property.md) a [následníků](../designers/descendants-xelement-dynamic-property.md) <xref:System.Xml.Linq.XElement>, které se překládají na typ indexeru. Aby byly typy indexerů přeloženy na požadovanou hodnotu nebo kolekci, je nutné předat rozšířený parametr názvu.
 
-Dynamické vlastnosti, které vracejí indexovanou hodnotu typu <xref:System.Collections.Generic.IEnumerable%601> pomocí odloženého provedení. Další informace o odložené provedení, najdete v části [Úvod do dotazů LINQ (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries).
+Všechny dynamické vlastnosti, které vracejí indexovanou hodnotu typu <xref:System.Collections.Generic.IEnumerable%601> použít odložené provádění. Další informace o odloženém spuštění najdete v tématu [Úvod do dotazů LINQC#()](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries).
 
 ## <a name="reference"></a>Odkaz
 
@@ -38,5 +38,5 @@ Dynamické vlastnosti, které vracejí indexovanou hodnotu typu <xref:System.Col
 ## <a name="see-also"></a>Viz také:
 
 - [Datová vazba WPF s LINQ to XML](../designers/wpf-data-binding-with-linq-to-xml-overview.md)
-- [Datová vazba WPF s LINQ XML – přehled](../designers/wpf-data-binding-with-linq-to-xml-overview.md)
+- [Datová vazba WPF s LINQ to XML – přehled](../designers/wpf-data-binding-with-linq-to-xml-overview.md)
 - [Úvod do dotazů LINQ (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)

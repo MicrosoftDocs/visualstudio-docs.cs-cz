@@ -1,53 +1,53 @@
 ---
-title: Verze Visual Studia podporované pro Visualization and Modeling SDK
+title: Podporovaná edice sady Visual Studio pro vizualizaci a modelování sady SDK
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, supported Visual Studio editions
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e5898a95f10875f0880e4b4799f17b78aa8e79b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1fdfe698096da53abf28aa583c816d9238810333
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63003416"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72609335"
 ---
 # <a name="supported-visual-studio-editions-for-visualization--modeling-sdk"></a>Verze Visual Studia podporované pro Visualization & Modeling SDK
 
-Toto jsou seznamy edice sady Visual Studio, které jsou podporovány [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] v prostředí pro vytváření a nasazení. Další informace o těchto vydáních najdete v tématu Microsoft Visual Studio [středisko pro vývojáře](http://go.microsoft.com/fwlink/?LinkId=75628).
+Níže jsou uvedeny edice sady Visual Studio, které jsou podporovány [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] v prostředí pro tvorbu a nasazení. Další informace o těchto edicích najdete v centru pro [vývojáře](http://go.microsoft.com/fwlink/?LinkId=75628)Microsoft Visual Studio.
 
-## <a name="authoring-edition"></a>Vytváření Edition
+## <a name="authoring-edition"></a>Vytváření edice
 
-Pokud chcete definovat DSL, musíte mít nainstalovaný následující komponenty:
+K definování DSL musíte mít nainstalované následující součásti:
 
 |||
 |-|-|
 |Visual Studio|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|
 |Visual Studio SDK|[http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580)|
-|Visual Studio Visualization and Modeling SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](http://go.microsoft.com/fwlink/?LinkID=186128)|
+|Sada SDK pro vizualizaci a modelování sady Visual Studio|[http://go.microsoft.com/fwlink/?LinkID=186128](http://go.microsoft.com/fwlink/?LinkID=186128)|
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
 ## <a name="deployment-editions"></a>Edice nasazení
 
-[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] podporuje následující konfigurace pro jazyky specifické pro doménu, která bude sestavena nasazení:
+[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] podporuje následující konfigurace pro nasazení jazyků specifických pro doménu, které sestavíte:
 
 - Visual Studio Enterprise
 
 - Visual Studio Professional
 
-- Visual Studio Shell (integrovaný režim) redistributable package Distribuovatelný balíček
+- Distribuovatelný balíček balíčku Visual Studio Shell (integrovaný režim)
 
-- Visual Studio Shell (izolovaný režim) redistributable package Distribuovatelný balíček
+- Distribuovatelný balíček balíčku Visual Studio Shell (izolovaný režim)
 
 > [!NOTE]
-> Chcete-li DSL ke spuštění v prostředí produktu, je nutné nastavit **podporované edice VS** pole v manifestu rozšíření. Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](../modeling/deploying-domain-specific-language-solutions.md).
+> Aby bylo možné aktivovat DSL na produktovém prostředí, musíte v manifestu rozšíření nastavit pole **podporované edice vs Edition** . Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](msi-and-vsix-deployment-of-a-dsl.md).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

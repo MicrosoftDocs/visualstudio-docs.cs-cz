@@ -1,5 +1,5 @@
 ---
-title: 'CA1012: Abstraktní typy by neměly mít konstruktory | Dokumentace Microsoftu'
+title: 'CA1012: abstraktní typy by neměly mít konstruktory | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - CA1012
 ms.assetid: 09f458ac-dd88-4cd7-a47f-4106c1e80ece
 caps.latest.revision: 27
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 02b92ac92e545ab30405d195d85a97a4ef2e3806
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f3f53e8b5eab78e79387c24643500888db27b764
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68151095"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663233"
 ---
 # <a name="ca1012-abstract-types-should-not-have-constructors"></a>CA1012: Abstraktní typy by neměly mít konstruktory
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,29 +28,29 @@ ms.locfileid: "68151095"
 |-|-|
 |TypeName|AbstractTypesShouldNotHaveConstructors|
 |CheckId|CA1012|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Narušující změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
- Veřejný typ je abstraktní a nemá veřejný konstruktor.
+ Veřejný typ je abstraktní a má veřejný konstruktor.
 
 ## <a name="rule-description"></a>Popis pravidla
  Konstruktory abstraktních typů mohou být volány pouze odvozenými typy. Jelikož veřejné konstruktory vytvářejí instance typu, přičemž nelze vytvořit instance abstraktního typu, je abstraktní typ obsahující veřejný konstruktor nesprávně navržen.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, zajistit konstruktoru chráněný, nebo nedeklarujte typ jako abstraktní.
+ Chcete-li opravit porušení tohoto pravidla, buď zajistěte, aby byl konstruktor chráněn, nebo Nedeklarujte typ jako abstraktní.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění na toto pravidlo. Abstraktní typ nemá veřejný konstruktor.
+ Nepotlačujte upozornění na toto pravidlo. Abstraktní typ má veřejný konstruktor.
 
 ## <a name="example"></a>Příklad
- Následující příklad obsahuje abstraktní typ, který porušuje tato pravidla.
+ Následující příklad obsahuje abstraktní typ, který porušuje toto pravidlo.
 
  [!code-csharp[FxCop.Design.AbstractTypeBad#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AbstractTypeBad/cs/FxCop.Design.AbstractTypeBad.cs#1)]
  [!code-vb[FxCop.Design.AbstractTypeBad#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.AbstractTypeBad/vb/FxCop.Design.AbstractTypeBad.vb#1)]
 
 ## <a name="example"></a>Příklad
- Následující příklad opravuje předchozí porušení změnou usnadnění konstruktoru z `public` k `protected`.
+ Následující příklad opravuje předchozí porušení změnou přístupnosti konstruktoru z `public` na `protected`.
 
  [!code-csharp[FxCop.Design.AbstractTypeGood#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AbstractTypeGood/cs/FxCop.Design.AbstractTypeGood.cs#1)]
  [!code-vb[FxCop.Design.AbstractTypeGood#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.AbstractTypeGood/vb/FxCop.Design.AbstractTypeGood.vb#1)]

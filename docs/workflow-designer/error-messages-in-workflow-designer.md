@@ -7,17 +7,17 @@ f1_keywords:
 - System.Activities.Presentation.ErrorActivity.UI
 - System.Activities.Presentation.View.ErrorView.UI
 ms.assetid: 4d8bbc2e-34fc-477f-9140-4adfd70c34a0
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a3f2d4d86f80bc7c2966d5156267352154b1279f
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 1406802f85c755d4dab25e000843a995be252d0a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254802"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650501"
 ---
 # <a name="error-messages-in-workflow-designer"></a>Chybové zprávy v návrháři postupu provádění
 
@@ -35,7 +35,7 @@ K chybám v Návrhář postupu provádění dochází v následujících situac�
 
 4. V souboru XAML jsou chyby, které způsobují, že se pracovní postup nepodařilo načíst.
 
-Neplatné výrazy a nesplněná omezení ověřování nezpůsobí, že se pracovní postup nedaří sestavit. Sestavení pracovního postupu <xref:System.Activities.InvalidWorkflowException> je úspěšné, ale v době běhu je vyvolána výjimka. Pokud v souboru XAML dojde k chybám, sestavení selhalo.
+Neplatné výrazy a nesplněná omezení ověřování nezpůsobí, že se pracovní postup nedaří sestavit. Sestavení pracovního postupu je úspěšné, ale v době běhu je vyvolána <xref:System.Activities.InvalidWorkflowException>. Pokud v souboru XAML dojde k chybám, sestavení selhalo.
 
 V rámci sady Visual Studio se při načtení pracovního postupu zobrazí jeho chyby v **Seznam chyb**. Chcete-li přejít k aktivitě, která je zdrojem chyby, dvakrát klikněte na chybu v **Seznam chyb**.
 

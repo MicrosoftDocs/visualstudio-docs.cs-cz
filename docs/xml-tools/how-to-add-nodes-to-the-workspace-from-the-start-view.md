@@ -1,34 +1,34 @@
 ---
-title: Přidání uzlů do pracovního prostoru z Start zobrazení v Návrháři schémat XML
+title: Přidání uzlů do pracovního prostoru z zobrazení Start v Návrháři schématu XML
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3fc7af94-dcb8-4226-a577-43f03664388b
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a62b2225eec77b2b7e2a9f00af0ff5492640c19
-ms.sourcegitcommit: ba5e072c9fedeff625a1332f22dcf3644d019f51
+ms.openlocfilehash: e6f1471f03dac54b484e37b2319e15380055661e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432179"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646010"
 ---
-# <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>Postupy: Přidání uzlů do pracovního prostoru z počátečního zobrazení
+# <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>Postupy: Přidání uzlů do pracovního prostoru z zobrazení Start
 
-Toto téma popisuje, jak přidat globální uzlů [pracovní prostor návrháře schémat XML](../xml-tools/xml-schema-designer-workspace.md) z [zobrazení Start](../xml-tools/start-view.md).
+Toto téma popisuje, jak přidat globální uzly do [pracovního prostoru Návrhář schémat XML](../xml-tools/xml-schema-designer-workspace.md) ze [zobrazení Start](../xml-tools/start-view.md).
 
-## <a name="to-add-nodes-to-the-workspace-from-the-start-view"></a>K přidání uzlů do pracovního prostoru z počáteční zobrazení
+## <a name="to-add-nodes-to-the-workspace-from-the-start-view"></a>Přidání uzlů do pracovního prostoru z zobrazení Start
 
-1. Postupujte podle kroků v [jak: Vytvoření a úprava souboru schématu XSD](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md).
+1. Postupujte podle kroků v tématu [Postupy: vytvoření a úprava souboru schématu XSD](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md).
 
-2. Klikněte pravým tlačítkem v editoru XML a vyberte **Návrhář zobrazení**.
+2. V editoru XML klikněte pravým tlačítkem myši a vyberte **zobrazení Návrhář**.
 
-     Počáteční zobrazení se zobrazí.
+     Zobrazí se zobrazení Start.
 
-     V **podrobnosti o nastavení schématu** části, Všimněte si, že jsou dva (**2**) **globální komplexní typy**.
+     V části **Podrobnosti o sadě schémat** si všimněte, že existují dva (**2**) **globální komplexní typy**.
 
-3. Klikněte na **přidat** odkaz na pravé straně **globální komplexní typy** záhlaví.
+3. Klikněte na odkaz **Přidat** napravo od nadpisu **globální komplexní typy** .
 
-     `USAddress` a `PurchaseOrderType` komplexní typ uzly se zobrazí na návrhové ploše zobrazení grafu.
+     Na návrhové ploše zobrazení grafu se objeví uzly `USAddress` a `PurchaseOrderType` komplexního typu.

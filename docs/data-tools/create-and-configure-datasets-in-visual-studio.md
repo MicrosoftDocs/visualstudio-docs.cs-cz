@@ -1,92 +1,92 @@
 ---
-title: Vytvoření a konfigurace datové sady
+title: Vytvoření a konfigurace datových sad
 ms.date: 11/21/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - typed datasets, creating
 - datasets, creating
 - datasets, configuring
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 41a7a699506853d6891c7d7b66fef4082814c06a
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: 44023543f1f7b57352448755de942af1c0c712ac
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65460623"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72642408"
 ---
-# <a name="how-to-create-and-configure-datasets-in-visual-studio"></a>Postupy: Vytvoření a konfigurace datových sad v sadě Visual Studio
+# <a name="how-to-create-and-configure-datasets-in-visual-studio"></a>Postupy: vytváření a konfigurace datových sad v sadě Visual Studio
 
-Datová sada je sada objektů, které ukládají data z databáze v paměti a podporují řešení change tracking umožňuje vytváření, čtení, aktualizace a odstranění (CRUD) operací na těchto datech, aniž byste museli být neustále připojeni k databázi. Datové sady byly navržené pro jednoduchou *formy nad daty* obchodních aplikací. Pro nové aplikace zvažte použití rozhraní Entity Framework ukládat a modelovat data v paměti. Pro práci s datovými sadami, byste měli mít základní znalost konceptů databáze.
+Datová sada je sada objektů, které ukládají data z databáze v paměti a podporují sledování změn, aby bylo možné u těchto dat Povolit operace vytvoření, čtení, aktualizace a odstranění (CRUD), aniž by bylo nutné je vždy připojit k databázi. Datové sady byly navrženy pro jednoduché *formy datových* podnikových aplikací. U nových aplikací zvažte použití Entity Framework k ukládání a modelování dat v paměti. Pokud chcete pracovat s datovými sadami, měli byste mít základní znalosti konceptů databáze.
 
-Můžete vytvořit zadaný <xref:System.Data.DataSet> třídy v sadě Visual Studio v době návrhu pomocí **Průvodce konfigurací zdroje dat**. Informace o vytváření datových sad prostřednictvím kódu programu najdete v tématu [vytvoření datové sady (ADO.NET)](/dotnet/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset).
+Můžete vytvořit typovou třídu <xref:System.Data.DataSet> v aplikaci Visual Studio v době návrhu pomocí **Průvodce konfigurací zdroje dat**. Informace o tom, jak vytvořit datové sady prostřednictvím kódu programu, najdete v tématu [Vytvoření datové sady (ADO.NET)](/dotnet/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset).
 
 ## <a name="create-a-new-dataset-by-using-the-data-source-configuration-wizard"></a>Vytvoření nové datové sady pomocí Průvodce konfigurací zdroje dat
 
-1. Otevřete projekt v sadě Visual Studio a klikněte na tlačítko **projektu** > **přidat nový zdroj dat** spustit **Průvodce konfigurací zdroje dat**.
+1. Otevřete projekt v aplikaci Visual Studio a pak zvolte možnost **projekt**  > **Přidat nový zdroj dat** a spusťte **Průvodce konfigurací zdroje dat**.
 
-2. Zvolte typ zdroje dat, ke kterému budete připojení.
+2. Vyberte typ zdroje dat, ke kterému se budete připojovat.
 
      ![Průvodce konfigurací zdroje dat](../data-tools/media/data-source-configuration-wizard.png)
 
-3. Zvolte databázi nebo databáze, které mají být zdroje dat pro datové sady.
+3. Vyberte databázi nebo databáze, které budou zdrojem dat pro datovou sadu.
 
-     ![Zvolte připojení zdroje dat](../data-tools/media/data-source-choose-a-connection.png)
+     ![Zdroj dat – zvolit připojení](../data-tools/media/data-source-choose-a-connection.png)
 
-4. Zvolte tabulky (nebo jednotlivé sloupce), uložených procedur, funkcí a zobrazení z databáze, kterou chcete být zastoupeny v datové sadě.
+4. Vyberte tabulky (nebo jednotlivé sloupce), uložené procedury, funkce a zobrazení z databáze, které chcete znázornit v datové sadě.
 
-     ![Zvolit databázové objekty](../data-tools/media/raddata-chose-objects.png)
+     ![Výběr databázových objektů](../data-tools/media/raddata-chose-objects.png)
 
 5. Klikněte na tlačítko **Dokončit**.
 
-   Datová sada se zobrazí jako uzel v **Průzkumníka řešení**.
+   Datová sada se zobrazí jako uzel v **Průzkumník řešení**.
 
-   ![Datová sada v Průzkumníku řešení](../data-tools/media/dataset-in-solution-explorer.png)
+   ![Datová sada v Průzkumník řešení](../data-tools/media/dataset-in-solution-explorer.png)
 
-6. Klikněte na uzel datové sady v **Průzkumníka řešení** otevření datové sady v **Návrhář DataSet**. Každá tabulka v datové sadě má přiřazený `TableAdapter` objektu, který je reprezentován v dolní části. Adaptér tabulka slouží k naplnění datové sady a volitelně odesílat příkazy do databáze.
+6. Kliknutím na uzel datová sada v **Průzkumník řešení** otevřete datovou sadu v **Návrháři DataSet**. Každá tabulka v datové sadě má přidružený objekt `TableAdapter`, který je reprezentován v dolní části. K naplnění datových sad a volitelně posílání příkazů do databáze slouží adaptér s tabulkou.
 
    ![Návrhář DataSet](../data-tools/media/dataset-designer.png)
 
-7. Vztahu čáry, které spojují tabulky představují relací mezi tabulkami, jak jsou definovány v databázi. Ve výchozím omezení cizího klíče v databázi jsou reprezentovány jako vztah, aktualizace a odstranění pravidla nastavená na hodnotu none. Obvykle se jedná o co chcete. Ale můžete kliknout na řádky, zobrazí se **vztah** dialogové okno, kde můžete změnit chování hierarchických aktualizací. Další informace najdete v tématu [vztahy v datových sadách](../data-tools/relationships-in-datasets.md) a [hierarchické aktualizace](../data-tools/hierarchical-update.md).
+7. Řádky relace, které spojují tabulky, znázorňují relace tabulek, jak jsou definovány v databázi. Ve výchozím nastavení jsou omezení cizího klíče v databázi reprezentována pouze jako relace, přičemž pravidla aktualizace a odstranění jsou nastavena na hodnotu None. Obvykle to je to, co chcete. Kliknutím na řádky můžete ale vyvolat dialog **relace** , kde můžete změnit chování hierarchických aktualizací. Další informace najdete v tématu [relace v datových sadách](../data-tools/relationships-in-datasets.md) a [hierarchické aktualizaci](../data-tools/hierarchical-update.md).
 
      ![Dialogové okno relace datové sady](../data-tools/media/raddata-relation-dialog.png)
 
-8. Klepněte na tabulku, adaptér tabulky nebo název sloupce v tabulce zobrazíte její vlastnosti v **vlastnosti** okna. Některé hodnoty Tady můžete upravit. Jenom nezapomeňte, že budete upravovat datovou sadu, ne zdrojové databáze.
+8. Kliknutím na tabulku, adaptér tabulky nebo název sloupce v tabulce zobrazíte její vlastnosti v okně **vlastnosti** . Tady můžete upravit některé z těchto hodnot. Stačí si pamatovat, že upravujete datovou sadu, nikoli zdrojovou databázi.
 
      ![Vlastnosti sloupce datové sady](../data-tools/media/dataset-column-properties.png)
 
-9. Můžete přidat nové tabulky nebo adaptéry tabulek do datové sady, nebo přidejte nové dotazy pro existující adaptéry tabulek nebo zadejte nové vztahy mezi tabulkami přetažením položky z **nástrojů** kartu. Na této kartě se zobrazí, když **Návrhář DataSet** je aktivní.
+9. Do datové sady můžete přidat nové tabulky nebo adaptéry tabulek nebo přidat nové dotazy pro existující adaptéry tabulky nebo můžete zadat nové relace mezi tabulkami přetažením těchto položek z karty **panelu nástrojů** . Tato karta se zobrazí, když je **Návrhář DataSet** aktivní.
 
-     ![Datové sady nástrojů](../data-tools/media/raddata-dataset-toolbox.png)
+     ![Sada nástrojů DataSet](../data-tools/media/raddata-dataset-toolbox.png)
 
-Dále můžete určit způsob naplnění datové sady s daty. K tomu použijete **Průvodce nastavením TableAdapter**. Další informace najdete v tématu [vyplnění datové sady s použitím objektů TableAdapter](../data-tools/fill-datasets-by-using-tableadapters.md).
+Dále je vhodné určit, jak naplnit datovou sadu daty. V takovém případě použijete **Průvodce konfigurací TableAdapter**. Další informace najdete v tématu [vyplňování datových sad pomocí objekty TableAdapter](../data-tools/fill-datasets-by-using-tableadapters.md).
 
-## <a name="add-a-database-table-or-other-object-to-an-existing-dataset"></a>Přidat tabulku databáze nebo jiný objekt na existující sadu dat
+## <a name="add-a-database-table-or-other-object-to-an-existing-dataset"></a>Přidat databázovou tabulku nebo jiný objekt do existující datové sady
 
-Tento postup ukazuje, jak přidat tabulku ze stejné databáze, který jste použili k vytvoření datové sady.
+Tento postup ukazuje, jak přidat tabulku ze stejné databáze, kterou jste použili k prvnímu vytvoření datové sady.
 
-1. Klikněte na uzel datové sady v **Průzkumníka řešení** zpřístupnit **Návrhář DataSet** fokus.
+1. Kliknutím na uzel datová sada v **Průzkumník řešení** přepněte **Návrháře datových sad** na fokus.
 
-2. Klikněte na tlačítko **zdroje dat** kartu na levém okraji sady Visual Studio, nebo zadejte parametr **zdroje dat** do vyhledávacího pole.
+2. Klikněte na kartu **zdroje dat** na levém okraji sady Visual Studio nebo do vyhledávacího pole zadejte **zdroje dat** .
 
-3. Klikněte pravým tlačítkem na uzel datové sady a vyberte **konfigurace zdroje dat pomocí průvodce**.
+3. Klikněte pravým tlačítkem myši na uzel DataSet a vyberte možnost **Konfigurovat zdroj dat pomocí Průvodce**.
 
      ![Kontextová nabídka zdroje dat](../data-tools/media/data-source-context-menu.png)
 
-4. Chcete-li určit, jaké další tabulky, uložené procedury nebo jiné databázové objekty chcete přidat do datové sady pomocí průvodce.
+4. Průvodce použijte k určení dalších tabulek, uložených procedur nebo jiných databázových objektů, které chcete přidat do datové sady.
 
-## <a name="add-a-stand-alone-data-table-to-a-dataset"></a>Přidání samostatné datové tabulky do datové sady
+## <a name="add-a-stand-alone-data-table-to-a-dataset"></a>Přidat do datové sady samostatnou datovou tabulku
 
-1. Otevřete svou datovou sadu v **Návrhář Dataset**.
+1. Otevřete datovou sadu v **Návrhář datových sad**.
 
-2. Přetáhněte <xref:System.Data.DataTable> třídy z **datovou sadu** kartě **nástrojů** na **Návrhář Dataset**.
+2. Přetáhněte třídu <xref:System.Data.DataTable> z karty **DataSet** sady **nástrojů** na **Návrhář datových sad**.
 
-3. Přidáte sloupce pro definování dat tabulky. Klikněte pravým tlačítkem na tabulku a zvolte **přidat** > **sloupec**. Použití **vlastnosti** okno, aby v případě potřeby nastavte datový typ sloupce a klíč.
+3. Přidejte sloupce pro definování tabulky dat. Klikněte pravým tlačítkem na tabulku a vyberte **přidat**  > **sloupec**. V případě potřeby nastavte datový typ sloupce a klíč pomocí okna **vlastnosti** .
 
-Nutné implementovat samostatné tabulky `Fill` logiku v samostatných tabulkách tak, aby vám je naplnit daty. Informace o vyplnění tabulky samostatné dat, naleznete v tématu [naplnění datové sady z adaptéru dat](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter).
+Samostatné tabulky musí implementovat logiku `Fill` v samostatných tabulkách, abyste je mohli vyplnit daty. Informace o tom, jak vyplnit samostatné tabulky dat, naleznete v tématu [naplnění datové sady z DataAdapter](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter).
 
 ## <a name="see-also"></a>Viz také:
 

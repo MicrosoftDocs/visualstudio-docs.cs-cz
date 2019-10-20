@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ListMemory command
 - list memory command
 ms.assetid: a84de361-a6a6-4f6d-96aa-a0d4a424371e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d6d0b694f9703c6260d95ad03e085fcdf774dc52
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: fb5e6181c2dbe9a79b2ab1d0859722de324d768e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919134"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72610699"
 ---
 # <a name="list-memory-command"></a>Listovat paměť – příkaz
-Zobrazí obsah určeného rozsahu paměti.
+Zobrazí obsah zadaného rozsahu paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,11 +41,11 @@ Volitelné. Adresa paměti, ze které se má začít zobrazovat paměť
 
 Volitelné. Zobrazí paměť jako znaky odpovídající bajtům paměti, a to buď ANSI nebo Unicode.
 
-Výpočtu`number`
+/Count: `number`
 
-Volitelné. Určuje, kolik bajtů paměti se má zobrazit, od `expression`.
+Volitelné. Určuje, kolik bajtů paměti se má zobrazit, počínaje `expression`.
 
-Formátovat`formattype`
+/Format: `formattype`
 
 Volitelné. Typ formátu pro zobrazení informací o paměti v okně **paměti** ; může být OneByte, TwoBytes, FourBytes, EightBytes, float (32-bit) nebo Double (64-bit). Pokud se používá OneByte, `/Unicode` není k dispozici.
 
@@ -70,14 +70,14 @@ Tady je seznam dostupných aliasů pro příkaz **Debug. ListMemory –** :
 
 |Alias|Příkazy a přepínače|
 |-----------| - |
-|**d**|Debug.listmemory –|
-|**da**|Debug.listmemory – /Ansi|
-|**db**|Debug.listmemory – /Format:OneByte|
-|**dc**|Debug.listmemory – /Format:FourBytes /Ansi|
-|**dd**|Debug.listmemory – /Format:FourBytes|
-|**df**|Debug. ListMemory –/Format: float|
-|**dq**|Debug.listmemory – /Format:EightBytes|
-|**du**|Debug.listmemory – Unicode|
+|**trojrozměrné**|Debug. ListMemory –|
+|**&**|Ladit. ListMemory –/ANSI|
+|**inženýr**|Debug. ListMemory –/Format: OneByte|
+|**DC**|Debug. ListMemory –/Format: FourBytes/ANSI|
+|**DD**|Debug. ListMemory –/Format: FourBytes|
+|**příznak**|Debug. ListMemory –/Format: float|
+|**DQ**|Debug. ListMemory –/Format: EightBytes|
+|**du**|Ladit. ListMemory –/Unicode|
 
 ## <a name="example"></a>Příklad
 

@@ -1,46 +1,46 @@
 ---
-title: 'Postupy: Změna bodu otáčení 3D modelu'
+title: 'Postupy: změna bodu otáčení 3D modelu'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c20b4ec8-29f5-4ca5-bc39-d4548ca6f573
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b1baa6a42d0874cdefaa8cfb781f66e864d82b2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a2c49e42009c81f6932f76128f12fb37399a789b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62897450"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72635468"
 ---
-# <a name="how-to-modify-the-pivot-point-of-a-3d-model"></a>Postupy: Změna bodu otáčení 3D modelu
+# <a name="how-to-modify-the-pivot-point-of-a-3d-model"></a>Postupy: změna bodu otáčení 3D model
 
-Tento článek ukazuje, jak upravit pomocí Editoru modelů *bodu otáčení* 3D modelu. Bod otáčení je bod v prostoru, který definuje střed matematické objektu pro rotace a změnu měřítka.
+Tento článek ukazuje, jak použít Editor modelů pro úpravu *bodu otáčení* 3D model. Bod otáčení je bod v prostoru, který definuje matematické centrum objektu pro rotaci a škálování.
 
 ## <a name="modify-the-pivot-point-of-a-3d-model"></a>Změna bodu otáčení 3D modelu
 
-Původ na 3D model můžete upravit tak, že upravíte jejich bodem otáčení.
+Počátek 3D model můžete předefinovat změnou jeho bodu otáčení.
 
-Ujistěte se, že **vlastnosti** okno a **nástrojů** jsou zobrazeny.
+Ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nástrojů** .
 
-1. Začátek s existující 3D model, jako je ten, který je popsaný v [jak: Vytvoření základního 3D modelu](../designers/how-to-create-a-basic-3-d-model.md).
+1. Začněte s existujícím 3D model, jako je ta, která je popsána v tématu [How to: Create a basic 3D model](../designers/how-to-create-a-basic-3-d-model.md).
 
-2. Zadejte režim pivotu. Na **režim editoru modelů** nástrojů, zvolte **režim Pivotu** tlačítko aktivovat režim pivotu. Pole se zobrazí kolem **režim Pivotu** tlačítko k označení, že Editor modelů je nyní v režim pivotu. V režim pivotu ovlivňují operace, jako jsou překladu bodu otáčení objektu namísto strukturu objektů v prostoru světa.
+2. Zadejte režim Pivot. Na panelu nástrojů **režim editoru modelů** aktivujte režim pivotu kliknutím na tlačítko **režim pivotu** . Zobrazí se okno kolem tlačítka **režim pivotu** , které indikuje, že Editor modelů je nyní v režimu Pivot. V režimu pivotu jsou operace, jako je například převod, ovlivněné bodem otáčení objektu místo struktury objektu v celém prostoru.
 
-3. Změna bodu otáčení objektu. V **vyberte** režimu, vyberte objekt a pak na **prohlížeč modelu** nástrojů, zvolte **přeložit** nástroj. Na návrhové ploše se objeví pole, které představuje bodu otáčení. Přesuňte pole a změna bodu otáčení objektu.
+3. Upravte bod otáčení objektu. V režimu **výběru** vyberte objekt a pak na panelu nástrojů **prohlížeče modelů** zvolte nástroj pro **Překlad** . Rámeček, který představuje bod otáčení, se zobrazí na návrhové ploše. Přesuňte pole pro úpravu bodu otáčení objektu.
 
-     Díky přesunu do pole, můžete přesunout bodu otáčení v všechny tři dimenze. K překladu bodu otáčení jednu osu přemístěte tuto šipku, která odpovídá na této osy. Pole a šipky změní na žlutou barvou pro označení toho osy, která jsou ovlivněná překlad.
+     Přesunutím pole můžete přesunout bod otáčení ve všech třech rozměrech. Chcete-li přeložit bod otáčení podél jedné osy, přesuňte šipku, která odpovídá dané ose. Pole a šipky se změní na žlutou barvu, aby označovala osu, která je ovlivněna překladem.
 
-     Bod otáčení můžete také zadat pomocí **posunutí pozice Pivotu** vlastnost **vlastnosti** okna.
+     Můžete také zadat bod otáčení pomocí vlastnosti pro **posunutí pivotu** v okně **vlastnosti** .
 
     > [!TIP]
-    > Otočení objektu, můžete zobrazit vliv nového bodu otáčení. Otočení, použijte **otočit** nástroje nebo změnit **otočení** vlastnost.
+    > Můžete zobrazit efekt nového bodu otáčení otočením objektu. Chcete-li jej otočit, použijte nástroj pro **otočení** nebo upravte vlastnost **otočení** .
 
-Tady je model, který má bod upravené pivot:
+Zde je model, který má upravený bod otáčení:
 
-![Model, který má bod upravené otáčení domu](../designers/media/digit-modified-model.png)
+![Model domu, který má upravený bod otáčení](../designers/media/digit-modified-model.png)
 
 ## <a name="see-also"></a>Viz také:
 

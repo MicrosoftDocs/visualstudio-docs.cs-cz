@@ -11,162 +11,162 @@ helpviewer_keywords:
 - saving data, walkthroughs
 - data [Visual Studio], TableAdapter
 ms.assetid: 74a6773b-37e1-4d96-a39c-63ee0abf49b1
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ed5b0f84ea19e465a9d820d9f25c4fc19546c639
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b73e193f1bb3082a353e004200d437a74f508941
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62567569"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72641151"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>Ukládání dat pomocí metod TableAdapter DBDirect
 
-Tento názorný postup obsahuje podrobné pokyny ke spouštění příkazů SQL přímo proti databázi s použitím dbdirect – metody třídy TableAdapter. Dbdirect – metody třídy TableAdapter poskytovat jemné úroveň kontroly nad aktualizace databáze. Můžete je použít ke spuštění konkrétních příkazů jazyka SQL a uložených procedur voláním jednotlivých `Insert`, `Update`, a `Delete` metody podle potřeb vaší aplikace (na rozdíl od přetížené `Update` metodu, která provádí aktualizace Příkazů INSERT a DELETE vše v jednom volání).
+Tento návod poskytuje podrobné pokyny pro spuštění příkazů SQL přímo proti databázi pomocí metod DBDirect TableAdapter. Metody DBDirect pro TableAdapter poskytují jemnou úroveň kontroly nad aktualizacemi databáze. Můžete je použít ke spuštění specifických příkazů SQL a uložených procedur voláním individuálních metod `Insert`, `Update` a `Delete` podle potřeby vaší aplikace (na rozdíl od přetížené `Update` metody, která provádí aktualizaci, vložení a příkazy odstranit vše v jednom volání).
 
-V tomto návodu se dozvíte, jak:
+V tomto návodu se naučíte:
 
-- Vytvořte nový **formulářová aplikace Windows**.
+- Vytvořte novou **model Windows Forms aplikaci**.
 
-- Vytvoření a konfigurace datové sady [Průvodce konfigurací zdroje dat](../data-tools/media/data-source-configuration-wizard.png).
+- Vytvořte a nakonfigurujte datovou sadu pomocí [Průvodce konfigurací zdroje dat](../data-tools/media/data-source-configuration-wizard.png).
 
-- Vyberte ovládací prvek, který má být vytvořen ve formuláři při přetažení položek z **zdroje dat** okna. Další informace najdete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetažení z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
+- Vyberte ovládací prvek, který má být vytvořen ve formuláři při přetahování položek z okna **zdroje dat** . Další informace naleznete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetahování z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
-- Vytvoření formuláře vázané na data přetažením položek z **zdroje dat** okna do formuláře.
+- Vytvořte formulář vázaný na data přetažením položek z okna **zdroje dat** do formuláře.
 
-- Přidejte metody k přímému přístupu k databázi a provést vložení, aktualizace a odstranění.
+- Přidejte metody pro přímý přístup k databázi a provádění vložení, aktualizace a odstranění.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Tento návod používá SQL Server Express LocalDB a ukázkové databáze Northwind.
+Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
-1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji z [SQL Server Express stránku pro stažení](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program sady Visual Studio**. V **instalační program sady Visual Studio**, jako součást můžete nainstalovat SQL Server Express LocalDB **ukládání a zpracování dat** úlohy, nebo jako jednotlivých komponent.
+1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio**můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
 
-2. Instalace ukázkové databáze Northwind pomocí následujících kroků:
+2. Nainstalujte ukázkovou databázi Northwind pomocí následujících kroků:
 
-    1. V sadě Visual Studio, otevřete **Průzkumník objektů systému SQL Server** okna. (Průzkumník objektů systému SQL Server je nainstalován jako součást **ukládání a zpracování dat** úlohy v instalačním programu sady Visual Studio.) Rozbalte **systému SQL Server** uzlu. Klikněte pravým tlačítkem na instanci LocalDB a vyberte **nový dotaz**.
+    1. V aplikaci Visual Studio otevřete okno **Průzkumník objektů systému SQL Server** . (Průzkumník objektů systému SQL Server je nainstalován v rámci úlohy **úložiště dat a zpracování** v instalační program pro Visual Studio.) Rozbalte uzel **SQL Server** . Klikněte pravým tlačítkem na instanci LocalDB a vyberte **Nový dotaz**.
 
-       Otevře se okno editor dotazů.
+       Otevře se okno editoru dotazů.
 
-    2. Kopírovat [Northwind příkazů jazyka Transact-SQL skriptů](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind úplně od začátku a naplní daty.
+    2. Zkopírujte [skript Transact-SQL Northwind](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní ji daty.
 
-    3. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
+    3. Vložte skript T-SQL do editoru dotazů a pak klikněte na tlačítko **Spustit** .
 
-       Po chvilce dotaz doběhnutí a vytvořit databázi Northwind.
+       Po krátké době se dotaz dokončí a vytvoří se databáze Northwind.
 
-## <a name="create-a-windows-forms-application"></a>Vytvoření aplikace Windows Forms
+## <a name="create-a-windows-forms-application"></a>Vytvoření aplikace model Windows Forms
 
-Prvním krokem je vytvoření **formulářová aplikace Windows**.
+Prvním krokem je vytvoření **aplikace model Windows Forms**.
 
-1. V sadě Visual Studio na **souboru** nabídce vyberte možnost **nový** > **projektu**.
+1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový**  > **projekt**.
 
-2. Rozbalte buď **Visual C#** nebo **jazyka Visual Basic** v levém podokně vyberte **Windows Desktop**.
+2. V levém podokně rozbalte buď **vizuál C#**  , nebo **Visual Basic** a pak vyberte **Desktop Windows**.
 
-3. V prostředním podokně, vyberte **aplikace Windows Forms** typ projektu.
+3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
-4. Pojmenujte projekt **TableAdapterDbDirectMethodsWalkthrough**a klikněte na tlačítko **OK**.
+4. Pojmenujte projekt **TableAdapterDbDirectMethodsWalkthrough**a klikněte na **tlačítko OK**.
 
-     **TableAdapterDbDirectMethodsWalkthrough** projekt je vytvořen a přidán do **Průzkumníka řešení**.
+     Projekt **TableAdapterDbDirectMethodsWalkthrough** je vytvořen a přidán do **Průzkumník řešení**.
 
 ## <a name="create-a-data-source-from-your-database"></a>Vytvoření zdroje dat z databáze
 
-Tento krok používá **Průvodce konfigurací zdroje dat** vytvořit zdroj dat na základě `Region` tabulky v ukázkové databázi Northwind. Musíte mít přístup k ukázkové databázi Northwind k vytvoření připojení. Informace o nastavení ukázkové databáze Northwind naleznete v tématu [jak: Instalace ukázkových databází](../data-tools/installing-database-systems-tools-and-samples.md).
+Tento krok používá **Průvodce konfigurací zdroje dat** k vytvoření zdroje dat založeného na `Region` tabulce v ukázkové databázi Northwind. Abyste mohli vytvořit připojení, musíte mít přístup k ukázkové databázi Northwind. Informace o tom, jak nastavit ukázkovou databázi Northwind, najdete v tématu [Postup: Instalace ukázkových databází](../data-tools/installing-database-systems-tools-and-samples.md).
 
 ### <a name="to-create-the-data-source"></a>Vytvoření zdroje dat
 
-1. Na **Data** nabídce vyberte možnost **zobrazit zdroje dat**.
+1. V nabídce **data** vyberte možnost **Zobrazit zdroje dat**.
 
-   **Zdroje dat** otevře se okno.
+   Otevře se okno **zdroje dat** .
 
-2. V **zdroje dat** okně **přidat nový zdroj dat** spustit **Průvodce konfigurací zdroje dat**.
+2. V okně **zdroje dat** vyberte možnost **Přidat nový zdroj dat** a spusťte **Průvodce konfigurací zdroje dat**.
 
-3. Na **zvolte typ zdroje dat** obrazovky, vyberte **databáze**a pak vyberte **Další**.
+3. Na obrazovce **Vybrat typ zdroje dat** vyberte **databáze**a pak vyberte **Další**.
 
-4. Na **vyberte datové připojení** obrazovky, proveďte jednu z následujících akcí:
+4. Na obrazovce **Vybrat datové připojení** proveďte jednu z následujících akcí:
 
     - Pokud je připojení dat k ukázkové databázi Northwind k dispozici v rozevíracím seznamu, vyberte je.
 
          -nebo-
 
-    - Vyberte **nové připojení** ke spuštění **přidat/změnit připojení** dialogové okno.
+    - Vyberte **nové připojení** , aby se spustilo dialogové okno **Přidat nebo upravit připojení** .
 
-5. Pokud vaše databáze vyžaduje heslo, vyberte možnost zahrnutí důvěrných osobních údajů a pak vyberte **Další**.
+5. Pokud vaše databáze vyžaduje heslo, vyberte možnost zahrnutí citlivých dat a pak vyberte **Další**.
 
-6. Na **uložit připojovací řetězec do konfiguračního souboru aplikace** obrazovky, vyberte **Další**.
+6. Na obrazovce **Uložit připojovací řetězec do konfiguračního souboru aplikace** vyberte **Další**.
 
-7. Na **zvolte vaše databázové objekty** obrazovky, rozbalte **tabulky** uzlu.
+7. Na obrazovce **zvolit vaše databázové objekty** rozbalte uzel **tabulky** .
 
-8. Vyberte `Region` tabulku a pak vyberte **Dokončit**.
+8. Vyberte tabulku `Region` a pak vyberte **Dokončit**.
 
-     **NorthwindDataSet** se přidá do vašeho projektu a `Region` se zobrazí v tabulce **zdroje dat** okna.
+     **NorthwindDataSet** je přidán do projektu a tabulka `Region` se zobrazí v okně **zdroje dat** .
 
-## <a name="add-controls-to-the-form-to-display-the-data"></a>Přidání ovládacích prvků do formuláře a zobrazení dat
+## <a name="add-controls-to-the-form-to-display-the-data"></a>Přidejte ovládací prvky do formuláře, aby se zobrazila data.
 
-Vytvoření ovládacích prvků vázaných na data přetažením položek z **zdroje dat** okna do formuláře.
+Vytvořte ovládací prvky vázané na data přetažením položek z okna **zdroje dat** do formuláře.
 
-Chcete-li vytvořit ovládací prvky data vázaná na formuláři Windows, přetáhněte hlavní **oblasti** uzlu z **zdroje dat** okna do formuláře.
+Chcete-li vytvořit ovládací prvky vázané na data ve formuláři Windows, přetáhněte hlavní uzel **oblasti** z okna **zdroje dat** do formuláře.
 
-A <xref:System.Windows.Forms.DataGridView> ovládacího prvku a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů se zobrazí ve formuláři. A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `RegionTableAdapter`, <xref:System.Windows.Forms.BindingSource>, a <xref:System.Windows.Forms.BindingNavigator> zobrazují v panelu komponent.
+Na formuláři se zobrazí ovládací prvek <xref:System.Windows.Forms.DataGridView> a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů. V zásobníku komponent se zobrazí [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)`RegionTableAdapter`, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>.
 
-### <a name="to-add-buttons-that-will-call-the-individual-tableadapter-dbdirect-methods"></a>Přidat tlačítka, který bude volat jednotlivé třídy TableAdapter dbdirect – metody
+### <a name="to-add-buttons-that-will-call-the-individual-tableadapter-dbdirect-methods"></a>Chcete-li přidat tlačítka, která budou volat jednotlivé metody DbDirect TableAdapter
 
-1. Přetáhněte tři <xref:System.Windows.Forms.Button> ovládacích prvků z **nástrojů** do **Form1** (dole **RegionDataGridView**).
+1. Přetáhněte tři ovládací prvky <xref:System.Windows.Forms.Button> z **panelu nástrojů** na **Form1** (pod **RegionDataGridView**).
 
-2. Nastavte následující **název** a **Text** vlastnosti na každé tlačítko.
+2. Pro každé tlačítko nastavte následující vlastnosti **názvu** a **textu** .
 
-    |Název|Text|
+    |Name|Text|
     |----------|----------|
-    |`InsertButton`|**Vložit**|
+    |`InsertButton`|**Zadat**|
     |`UpdateButton`|**Aktualizace**|
     |`DeleteButton`|**Delete**|
 
-### <a name="to-add-code-to-insert-new-records-into-the-database"></a>Přidat kód pro vkládání nových záznamů do databáze
+### <a name="to-add-code-to-insert-new-records-into-the-database"></a>Přidání kódu pro vložení nových záznamů do databáze
 
-1. Vyberte **InsertButton** vytvořit obslužnou rutinu události pro událost click a otevřete formulář v editoru kódu.
+1. Vyberte **InsertButton** a vytvořte obslužnou rutinu události pro událost Click a otevřete formulář v editoru kódu.
 
-2. Nahradit `InsertButton_Click` obslužné rutiny události s následujícím kódem:
+2. @No__t_0 obslužnou rutinu události nahraďte následujícím kódem:
 
      [!code-vb[VbRaddataSaving#1](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_1.vb)]
      [!code-csharp[VbRaddataSaving#1](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_1.cs)]
 
-### <a name="to-add-code-to-update-records-in-the-database"></a>Chcete-li přidat kód k aktualizaci záznamů v databázi
+### <a name="to-add-code-to-update-records-in-the-database"></a>Přidání kódu pro aktualizaci záznamů v databázi
 
-1. Dvakrát klikněte **UpdateButton** vytvořit obslužnou rutinu události pro událost click a otevřete formulář v editoru kódu.
+1. Poklikejte na **UpdateButton** a vytvořte obslužnou rutinu události pro událost Click a otevřete formulář v editoru kódu.
 
-2. Nahradit `UpdateButton_Click` obslužné rutiny události s následujícím kódem:
+2. @No__t_0 obslužnou rutinu události nahraďte následujícím kódem:
 
      [!code-vb[VbRaddataSaving#2](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_2.vb)]
      [!code-csharp[VbRaddataSaving#2](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_2.cs)]
 
-### <a name="to-add-code-to-delete-records-from-the-database"></a>Chcete-li přidat kód k odstranění záznamů z databáze
+### <a name="to-add-code-to-delete-records-from-the-database"></a>Přidání kódu pro odstranění záznamů z databáze
 
-1. Vyberte **DeleteButton** vytvořit obslužnou rutinu události pro událost click a otevřete formulář v editoru kódu.
+1. Vyberte **DeleteButton** a vytvořte obslužnou rutinu události pro událost Click a otevřete formulář v editoru kódu.
 
-2. Nahradit `DeleteButton_Click` obslužné rutiny události s následujícím kódem:
+2. @No__t_0 obslužnou rutinu události nahraďte následujícím kódem:
 
      [!code-vb[VbRaddataSaving#3](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_3.vb)]
      [!code-csharp[VbRaddataSaving#3](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_3.cs)]
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 
-- Vyberte **F5** ke spuštění aplikace.
+- Pro spuštění aplikace vyberte **F5** .
 
-- Vyberte **vložit** tlačítko a ověřte, že nový záznam se zobrazí v mřížce.
+- Vyberte tlačítko **Vložit** a ověřte, že se nový záznam zobrazí v mřížce.
 
-- Vyberte **aktualizace** tlačítko a ověřte, že záznam se aktualizuje v mřížce.
+- Klikněte na tlačítko **aktualizovat** a ověřte, zda je záznam v mřížce aktualizován.
 
-- Vyberte **odstranit** tlačítko a ověřte, že záznam se odebere z mřížky.
+- Vyberte tlačítko **Odstranit** a ověřte, zda je záznam odebrán z mřížky.
 
 ## <a name="next-steps"></a>Další kroky
 
-V závislosti na požadavcích aplikace existuje několik kroků, které můžete chtít provést po vytvoření formuláře vázané na data. Mezi vylepšení, která je možné pro tento návod provést, patří:
+V závislosti na požadavcích vaší aplikace existuje několik kroků, které můžete chtít provést po vytvoření formuláře vázaného na data. Mezi vylepšení, která je možné pro tento návod provést, patří:
 
 - Přidání vyhledávací funkce do formuláře.
 
-- Přidání další tabulky do datové sady výběrem **konfigurace datové sady pomocí průvodce** v rámci **zdroje dat** okna. Můžete přidat ovládací prvky zobrazující související data přetažením související uzly na formuláři. Další informace najdete v tématu [vztahy v datových sadách](relationships-in-datasets.md).
+- Přidáním dalších tabulek do datové sady výběrem možnosti **Konfigurovat datovou sadu pomocí Průvodce** v okně **zdroje dat** . Můžete přidat ovládací prvky, které zobrazují související data přetažením souvisejících uzlů do formuláře. Další informace najdete v tématu [relace v datových sadách](relationships-in-datasets.md).
 
 ## <a name="see-also"></a>Viz také:
 

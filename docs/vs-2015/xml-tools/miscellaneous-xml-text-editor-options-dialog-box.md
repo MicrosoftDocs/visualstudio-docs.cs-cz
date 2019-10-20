@@ -1,66 +1,58 @@
 ---
-title: Různé, XML, textový Editor, dialogové okno Možnosti | Dokumentace Microsoftu
+title: Různé, XML, textový editor, dialogové okno Možnosti | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: fd3fff31-cddc-422d-a2f0-a5a1ef492afd
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: edf638420ac41d6ad6f7ebf5e20ab5d78d1c7b3d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: d30564c11951d6ffec420c6a2ea95c41695de3dd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435370"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656239"
 ---
 # <a name="miscellaneous-xml-text-editor-options-dialog-box"></a>Různé, XML, Textový editor, dialogové okno Možnosti
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Toto dialogové okno umožňuje změnit nastavení automatického dokončování a schéma pro Editor XML. Můžete přistupovat **možnosti** dialogové **nástroje** nabídky.  
-  
+Toto dialogové okno umožňuje změnit nastavení automatického dokončování a schématu pro editor XML. K dialogovému oknu **Možnosti** získáte přístup z nabídky **nástroje** .
+
 > [!NOTE]
-> Tato nastavení jsou k dispozici, když vyberete **textový Editor** složku, **XML** složky a pak **různé** možnost **možnosti** dialogové okno.  
-  
-## <a name="auto-insert"></a>Automatické vkládání  
- **Zavřít značky**  
- Pokud je nastavení automatického doplňování je zaškrtnuto, editoru automaticky přidá koncovou značku po zadání pravé ostré závorky (>) zavřete počáteční značku, pokud už značka není uzavřená. Toto je výchozí chování.  
-  
- Dokončení prázdný element není závislý na nastavení automatického doplňování. Můžete vždy automatické dokončování prázdný element tak, že zadáte zpětné lomítko (/).  
-  
- **Uvozovky atributu**  
- Při vytváření atributy ve formátu XML, editor vloží `=" "` znaků a pozice kurzoru (^) do dvojitých uvozovek.  
-  
- Ve výchozím nastavení je zaškrtnuto.  
-  
- **Deklarace Namespace**  
- Editor automaticky vloží deklarace oboru názvů, bez ohledu na to se v případě potřeby zapíná.  
-  
- Ve výchozím nastavení je zaškrtnuto.  
-  
- **Jiné značky (komentáře, CDATA)**  
- Komentáře, CDATA, DOCTYPE, pokyny pro zpracování a další značky jsou automaticky dokončují.  
-  
- Ve výchozím nastavení je zaškrtnuto.  
-  
-## <a name="network"></a>Síť  
- **Automaticky stahovat specifikace DTD a schémata**  
- Schémata a definice typu dokumentu (DTD) se automaticky stáhnou z umístění protokolu HTTP. Tato funkce používá System.Net s detekcí automaticky proxy server povolený.  
-  
- Ve výchozím nastavení je zaškrtnuto.  
-  
-## <a name="outlining"></a>Sbalování  
- **Po otevření souborů vstoupit do režimu sbalování**  
- Při otevření souboru se změní na funkci sbalování.  
-  
- Ve výchozím nastavení je zaškrtnuto.  
-  
-## <a name="caching"></a>Ukládání do mezipaměti  
- **Schémata**  
- Určuje umístění mezipaměti schémat. Tlačítko Procházet (**...** ) otevře **Procházet adresář** dialogové okno na aktuální umístění mezipaměti schémat. Můžete vybrat jiný adresář, nebo můžete vybrat složku v dialogovém okně klikněte pravým tlačítkem a zvolte **otevřít** zjistíte Novinky v adresáři.  
-  
-## <a name="see-also"></a>Viz také  
- [Vlastnosti dokumentu XML, okno Vlastnosti](../xml-tools/xml-document-properties-properties-window.md)   
- [Součásti editoru XML](../xml-tools/xml-editor-components.md)
+> Tato nastavení jsou k dispozici, když vyberete složku **textový editor** , složku **XML** a potom možnost **různé** v dialogovém okně **Možnosti** .
+
+## <a name="auto-insert"></a>Automaticky vložit
+ **Zavřít značky** Pokud je zaškrtnuto nastavení automatického dokončování, Editor automaticky přidá koncovou značku, když zadáte pravou ostrou závorku (>) k uzavření počáteční značky, pokud již značka není uzavřená. Toto je výchozí chování.
+
+ Dokončení prázdného prvku nezávisí na nastavení automatického dokončování. Prázdný prvek můžete vždy automaticky dokončovat zadáním zpětného lomítka (/).
+
+ **Uvozovky atributů** Při vytváření atributů XML Editor vloží `=" "`é znaky a umístí kurzor (^) do dvojitých uvozovek.
+
+ Ve výchozím nastavení je zaškrtnuto.
+
+ **Deklarace oboru názvů** Editor automaticky vloží deklarace oboru názvů všude, kde jsou potřeba.
+
+ Ve výchozím nastavení je zaškrtnuto.
+
+ **Jiné značky (komentáře, CDATA)** Komentáře, CDATA, DOCTYPE, instrukce pro zpracování a další značky jsou automaticky dokončeny.
+
+ Ve výchozím nastavení je zaškrtnuto.
+
+## <a name="network"></a>Sítě
+ **Automaticky stahovat specifikace DTD a schémata** Schémata a definice typu dokumentu (DTD) se automaticky stáhnou z umístění HTTP. Tato funkce používá System.Net s povolenou detekcí automatického proxy server.
+
+ Ve výchozím nastavení je zaškrtnuto.
+
+## <a name="outlining"></a>Sbalování
+ **Po otevření souborů přejít do režimu sbalení** Zapne funkci sbalení při otevření souboru.
+
+ Ve výchozím nastavení je zaškrtnuto.
+
+## <a name="caching"></a>Ukládání do mezipaměti
+ **Schémata** Určuje umístění mezipaměti schématu. Tlačítko Procházet ( **...** ) otevře dialogové okno **Procházet adresářem** v aktuálním umístění mezipaměti schémat. Můžete vybrat jiný adresář, nebo můžete vybrat složku v dialogovém okně, kliknout pravým tlačítkem myši a kliknutím na **otevřít** zobrazit informace o tom, co se nachází v adresáři.
+
+## <a name="see-also"></a>Viz také
+ [Vlastnosti dokumentu XML, vlastnosti](../xml-tools/xml-document-properties-properties-window.md) [editoru XML](../xml-tools/xml-editor-components.md) okna

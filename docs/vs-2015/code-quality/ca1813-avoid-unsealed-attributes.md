@@ -1,5 +1,5 @@
 ---
-title: 'CA1813: Vyhněte se nezapečetěným atributům | Dokumentace Microsoftu'
+title: 'CA1813: Vyhněte se nezapečetěným atributům | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - AvoidUnsealedAttributes
 ms.assetid: f5e31b4c-9f8b-49e1-a2a8-bb5f1140729a
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0624ff6ed890b6f0c14f3a03fe774c422334737d
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: fe5967ef099794b6c71029e9d03d959dd83b01dc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65690294"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647060"
 ---
 # <a name="ca1813-avoid-unsealed-attributes"></a>CA1813: Vyhněte se nezapečetěným atributům
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,20 +29,20 @@ ms.locfileid: "65690294"
 |-|-|
 |TypeName|AvoidUnsealedAttributes|
 |CheckId|CA1813|
-|Kategorie|Microsoft.Performance|
+|Kategorie|Microsoft. Performance|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>Příčina
- Veřejný typ dědí z <xref:System.Attribute?displayProperty=fullName>není abstraktní a není zapečetěná (`NotInheritable` v jazyce Visual Basic).
+## <a name="cause"></a>příčina
+ Veřejný typ dědí z <xref:System.Attribute?displayProperty=fullName> není abstraktní a není zapečetěn (`NotInheritable` v Visual Basic).
 
 ## <a name="rule-description"></a>Popis pravidla
- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Knihovny tříd poskytuje metody pro načítání vlastních atributů. Ve výchozím nastavení tyto metody prohledávají hierarchii dědičnosti atributů; například <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=fullName> vyhledá zadaného typu atributu nebo libovolný typ atributu, který rozšiřuje zadaného typu atributu. Zapečetění atributu eliminuje prohledávání hierarchie dědičnosti a může zlepšit výkon.
+ Knihovna tříd [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] poskytuje metody pro načítání vlastních atributů. Ve výchozím nastavení tyto metody prohledají hierarchii dědičnosti atributů; například <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=fullName> vyhledá zadaný typ atributu nebo jakýkoli typ atributu, který rozšiřuje zadaný typ atributu. Zapečetění atributu eliminuje hledání prostřednictvím Hierarchie dědičnosti a může zvýšit výkon.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, zapečeťte typ atributu nebo vytvořit abstraktní.
+ Chcete-li opravit porušení tohoto pravidla, zapečeťte typ atributu nebo jej zajistěte jako abstraktní.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění tohoto pravidla. Byste měli dělat jenom v případě, že definujete hierarchii atributů a nelze zapečetit atribut nebo vytvořit abstraktní.
+ Z tohoto pravidla je bezpečné potlačit upozornění. Měli byste to udělat jenom v případě, že definujete hierarchii atributů a nemůžete zapečetit atribut nebo ho vytvořit jako abstraktní.
 
 ## <a name="example"></a>Příklad
  Následující příklad ukazuje vlastní atribut, který splňuje toto pravidlo.

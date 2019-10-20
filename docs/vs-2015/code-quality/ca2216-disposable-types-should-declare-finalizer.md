@@ -1,5 +1,5 @@
 ---
-title: 'CA2216: Uvolnitelné typy by měly deklarovat finalizační metodu | Dokumentace Microsoftu'
+title: 'CA2216: typy na jedno použití by měly deklarovat finalizační metodu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - DisposableTypesShouldDeclareFinalizer
 ms.assetid: 0cabcc5e-b526-452b-8c2a-0cbe3b93c0ef
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8a033dbb152542e528b32e26f35a7d63dba30891
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 082afacba1ccf4c982e5ddceec37d2a1567efd7a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65681169"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651654"
 ---
 # <a name="ca2216-disposable-types-should-declare-finalizer"></a>CA2216: Uvolnitelné typy by měly deklarovat finalizační metodu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "65681169"
 |-|-|
 |TypeName|DisposableTypesShouldDeclareFinalizer|
 |CheckId|CA2216|
-|Kategorie|Microsoft.Usage|
-|Narušující změna|Pevné|
+|Kategorie|Microsoft. Usage|
+|Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>Příčina
- Typ, který implementuje <xref:System.IDisposable?displayProperty=fullName>a obsahuje pole, která navrhují použití nespravovaných prostředků, neimplementuje finalizační metodu, jak je popsáno v <xref:System.Object.Finalize%2A?displayProperty=fullName>.
+## <a name="cause"></a>příčina
+ Typ, který implementuje <xref:System.IDisposable?displayProperty=fullName> a obsahuje pole, která navrhují použití nespravovaných prostředků, neimplementuje finalizační metodu, jak je popsáno v <xref:System.Object.Finalize%2A?displayProperty=fullName>.
 
 ## <a name="rule-description"></a>Popis pravidla
- Porušení tohoto pravidla bude nahlášena, pokud uvolnitelného typu obsahuje pole z následujících typů:
+ Porušení tohoto pravidla je hlášeno, pokud typ mimo použití obsahuje pole následujících typů:
 
 - <xref:System.IntPtr?displayProperty=fullName>
 
@@ -45,20 +45,20 @@ ms.locfileid: "65681169"
 - <xref:System.Runtime.InteropServices.HandleRef?displayProperty=fullName>
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, implementujte finalizační metodu, která volá vaši <xref:System.IDisposable.Dispose%2A> metody.
+ Chcete-li opravit porušení tohoto pravidla, implementujte finalizační metodu, která volá vaši metodu <xref:System.IDisposable.Dispose%2A>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění tohoto pravidla, pokud typ neimplementuje <xref:System.IDisposable> za účelem uvolnění nespravovaných prostředků.
+ Je bezpečné potlačit upozornění od tohoto pravidla, pokud typ neimplementuje <xref:System.IDisposable> pro účely uvolňování nespravovaných prostředků.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ, který porušuje tato pravidla.
+ Následující příklad ukazuje typ, který je v rozporu s tímto pravidlem.
 
  [!code-csharp[FxCop.Usage.DisposeNoFinalize#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.DisposeNoFinalize/cs/FxCop.Usage.DisposeNoFinalize.cs#1)]
 
 ## <a name="related-rules"></a>Související pravidla
- [CA2115: Volání uvolňování paměti. KeepAlive při použití nativních zdrojů](../code-quality/ca2115-call-gc-keepalive-when-using-native-resources.md)
+ [CA2115: Volejte GC.KeepAlive při použití nativních zdrojů](../code-quality/ca2115-call-gc-keepalive-when-using-native-resources.md)
 
- [CA1816: Volání uvolňování paměti. SuppressFinalize správně](../code-quality/ca1816-call-gc-suppressfinalize-correctly.md)
+ [CA1816: Volejte správně GC.SuppressFinalize](../code-quality/ca1816-call-gc-suppressfinalize-correctly.md)
 
  [CA1049: Typy, které vlastní nativní prostředky by měly být uvolnitelné](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)
 

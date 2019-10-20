@@ -3,23 +3,23 @@ title: Výchozí šablony XSLT
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 773dd34e-67d3-4997-8df9-b71e7f880d88
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d2910a9f81a8bf4bf1e5f25245ad9a3b02adffe1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 81a764aa45eb74ba110d8b3b5965ede1e62bdadd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62807696"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72607783"
 ---
 # <a name="xslt-default-templates"></a>Výchozí šablony XSLT
 
-Výchozí šablona se používá při zpracování, pokud neexistuje žádné odpovídající pravidlo explicitní šablony v šabloně stylů XSLT. Výchozí šablony, které se označují také jako integrované šablony pravidla, je definován v oddíle 5.8 doporučení W3C XSLT 1.0. Výchozí šablona umožňuje procesoru XSLT pro zpracování na uzel, i když neexistuje žádné explicitní šablonu pravidlo, který mu odpovídá. Ale protože předdefinovaných šablony pravidla nejsou výslovně definované v šabloně stylů, to může vést k neočekávaným nebo matoucí výsledky transformace XSLT.
+Výchozí šablona se používá během zpracování XSLT, pokud v šabloně stylů neexistuje žádné vyhovující pravidlo explicitní šablony. Výchozí šablona, označovaná také jako předdefinované pravidlo šablony, je definována v oddílu 5,8 doporučení W3C XSLT 1,0. Výchozí šablona umožňuje procesoru XSLT zpracovat uzel, a to i v případě, že neexistuje žádné explicitní pravidlo šablony, které by mu odpovídalo. Vzhledem k tomu, že předdefinované pravidlo šablony není explicitně definováno v šabloně stylů, může to vést k neočekávaným nebo matoucím výsledkům transformace XSLT.
 
-Ladicí program XSLT teď zobrazuje kód výchozí šablony XSLT. Při krokování přes transformace XSLT, pokud je použita výchozí šablona, ladicí program zobrazí v okně výchozí šablony. To umožňuje krokovat kód výchozí šablonu a nastavit zarážky podle jeho pokynů.
+Ladicí program XSLT nyní zobrazuje kód výchozích šablon XSLT. Při procházení transformace XSLT, pokud je použita výchozí šablona, ladicí program zobrazí výchozí šablonu v okně. To umožňuje procházet kód výchozí šablony a nastavit zarážky podle pokynů.
 
 ## <a name="see-also"></a>Viz také:
 

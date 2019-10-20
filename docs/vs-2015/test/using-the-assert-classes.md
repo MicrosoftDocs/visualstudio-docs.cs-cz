@@ -1,5 +1,5 @@
 ---
-title: Používání tříd Assert | Dokumentace Microsoftu
+title: Používání tříd Assert | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
@@ -11,54 +11,53 @@ helpviewer_keywords:
 - unit tests, Assert classes
 ms.assetid: da1b7a0d-4f1d-4d50-a07e-7b3ff60053f9
 caps.latest.revision: 29
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fc27b7b0c0e277a0e39b406a07d677fe25bf8e73
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: d6a4f7f1631ac4bfc651f5df347db010cf47a656
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65695077"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657139"
 ---
 # <a name="using-the-assert-classes"></a>Používání tříd Assert
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Používání tříd Assert oboru názvů UnitTestingFramework ověření konkrétní funkce. Metodu testovací jednotky uplatňuje kód metody v kódu vývoje, ale sestavy správnosti kódu chování pouze v případě, že zahrnete Assert – příkazy.  
-  
-## <a name="kinds-of-asserts"></a>Typy z nepodmíněné výrazy  
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting> Obor názvů obsahuje několik typů tříd Assert:  
-  
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>  
-  
- V testovací metodě může volat libovolný počet metody Assert třídy, jako je například Assert.AreEqual(). Třída Assert má vybírat z mnoha způsobů a řada z těchto metod má několik přetížení.  
-  
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert>  
-  
- Použití třídy CollectionAssert porovnávání kolekcí objektů a ověřte stav jednoho nebo více kolekcí.  
-  
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert>  
-  
- Třída StringAssert slouží k porovnání řetězců. Tato třída obsahuje celou řadu užitečných metod, jako je například StringAssert.Contains StringAssert.Matches a StringAssert.StartsWith.  
-  
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException>  
-  
- Pokaždé, když se test nezdaří, je vyvolána výjimka AssertFailedException. Test selže, pokud vyprší časový limit, dojde k neočekávané výjimce nebo obsahuje kontrolní příkaz, který vytváří jako výsledek selhání.  
-  
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException>  
-  
- Pokaždé, když se test vytváří výsledek neprůkazné, je vyvolána AssertInconclusiveException. Obvykle přidáte příkazem Assert.Inconclusive test, který se stále pracujete označující, že ještě není připraven ke spuštění.  
-  
+Pro ověření konkrétních funkcí použijte třídy Assert oboru názvů UnitTestingFramework. Metoda testování částí vykonává kód metody v kódu vývoje, ale oznamuje správnost chování kódu pouze v případě, že zahrnete příkazy Assert.
+
+## <a name="kinds-of-asserts"></a>Druhy kontrolních výrazů
+ Obor názvů <xref:Microsoft.VisualStudio.TestTools.UnitTesting> poskytuje několik druhů kontrolních tříd:
+
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>
+
+ V testovací metodě můžete volat libovolný počet metod třídy Assert, jako je například Assert. AreEqual (). Třída Assert má mnoho metod, ze kterých si můžete vybrat, a mnohé z těchto metod mají několik přetížení.
+
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert>
+
+ Pomocí třídy CollectionAssert můžete porovnat kolekce objektů a ověřit stav jedné nebo více kolekcí.
+
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert>
+
+ Pro porovnání řetězců použijte třídu StringAssert. Tato třída obsahuje řadu užitečných metod, jako je například StringAssert. Contains, StringAssert. matchs a StringAssert. StartsWith.
+
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException>
+
+ Výjimka AssertFailedException je vyvolána pokaždé, když se test nezdařil. Test se nezdařil, pokud vyprší časový limit, vyvolá neočekávanou výjimku nebo obsahuje příkaz kontrolního výrazu, který vytváří výsledek neúspěchu.
+
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException>
+
+ AssertInconclusiveException je vyvolána pokaždé, když test vygeneruje výsledek neprůkazné. Obvykle přidáte Assert. neprůkazný příkaz do testu, na kterém stále pracujete, abyste označili, že ještě není připravený ke spuštění.
+
 > [!NOTE]
-> Alternativní strategií je označit test, který není připraven ke spuštění s atributem ignorovat. Má to ale nevýhodou, že nelze snadno vygenerujete sestavu pro počet testů, že ještě zbývá k implementaci.  
-  
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestAssertException>  
-  
- Pokud píšete novou třídu výjimek Assert, s této třídy dědit ze základní třídy UnitTestAssertException usnadňuje identifikaci výjimky jako selhání kontrolního výrazu místo Neočekávaná výjimka vyvolána v testovacím nebo produkčním kódu.  
-  
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute>  
-  
- Testovací metodu s atributem ExpectedExceptionAttribute uspořádání, pokud chcete testovací metodu za účelem ověření, že dojde k výjimce, které byste měli být vyvolány metodou ve vašem kódu vývoje skutečně se v této metodě.  
-  
-## <a name="see-also"></a>Viz také  
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting>   
- [Vytváření a spouštění testů jednotek pro existující kód](https://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173)
+> Alternativní strategie by měla označit test, který není připravený ke spuštění s atributem Ignore. To však má nevýhodu, že nemůžete jednoduše generovat sestavu pro počet testů, které jste nastavili k implementaci.
+
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestAssertException>
+
+ Pokud zapíšete novou třídu výjimky kontrolního výrazu, která má tuto třídu dědit ze základní třídy UnitTestAssertException, zjednoduší identifikaci výjimky jako selhání kontrolního výrazu namísto neočekávané výjimky vyvolané z vašeho testu nebo produkčního kódu.
+
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute>
+
+ Upraví testovací metodu s atributem ExpectedExceptionAttribute, pokud chcete, aby metoda testu ověřila, že výjimka, kterou očekáváte vyvolat metodou v kódu vývoje, je ve skutečnosti vyvolána v této metodě.
+
+## <a name="see-also"></a>Viz také
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting> [vytváření a spouštění testů jednotek pro existující kód](https://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173)

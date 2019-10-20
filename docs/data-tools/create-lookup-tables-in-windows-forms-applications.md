@@ -1,61 +1,61 @@
 ---
-title: Vytváření vyhledávacích tabulek v aplikacích Windows Forms
+title: Vytváření vyhledávacích tabulek v aplikacích modelu Windows Forms
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - lookup tables
 - lookup tables, creating
 ms.assetid: 0edd5385-c381-4b17-9096-74e2778db9d5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 782f5b422058d1564bde04251a92d95145f6edf3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f7660eba181c0a08ea3736c36e84bc7c9a574e10
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62567273"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72642246"
 ---
-# <a name="create-lookup-tables-in-windows-forms-applications"></a>Vytváření vyhledávacích tabulek v aplikacích Windows Forms
+# <a name="create-lookup-tables-in-windows-forms-applications"></a>Vytváření vyhledávacích tabulek v aplikacích modelu Windows Forms
 
-Termín *vyhledávací tabulka* popisuje ovládací prvky, které jsou vázány na dvě související tabulky dat. Tyto vyhledávací ovládací prvky zobrazují data v první tabulce na základě hodnoty vybrané v druhé tabulce.
+Termín *vyhledávací tabulka* popisuje ovládací prvky, které jsou svázány se dvěma tabulkami s relačními daty. Tyto vyhledávací ovládací prvky zobrazují data v první tabulce na základě hodnoty vybrané v druhé tabulce.
 
-Vyhledávací tabulky lze vytvořit přetažením hlavního uzlu nadřazené tabulky (z [okna zdroje dat](add-new-data-sources.md#data-sources-window)) na ovládací prvek na formuláři, který je již vázán na sloupec v související podřízené tabulky.
+Vyhledávací tabulky lze vytvořit přetažením hlavního uzlu nadřazené tabulky (z [okna zdroje dat](add-new-data-sources.md#data-sources-window)) do ovládacího prvku ve formuláři, který je již svázán se sloupcem v související podřízené tabulce.
 
-Předpokládejme například tabulku `Orders` v prodejní databázi. Každý záznam v `Orders` obsahuje tabulku `CustomerID`, určující, který zákazník objednávku vystavil. `CustomerID` je cizí klíč odkazující na záznam zákazníka v tabulce `Customers`. V tomto scénáři, rozbalte `Orders` v tabulku **zdroje dat** okno a nastavit hlavní uzel **podrobnosti**. Potom nastavte `CustomerID` sloupce <xref:System.Windows.Forms.ComboBox> (nebo jakýkoli jiný ovládací prvek, který podporuje vazbu vyhledávání) a přetáhněte ji `Orders` uzlu do formuláře. A konečně, přetáhněte `Customers` uzlu na ovládací prvek, který je vázán na odpovídající sloupec – v tomto případě <xref:System.Windows.Forms.ComboBox> vázán na `CustomerID` sloupce.
+Předpokládejme například tabulku `Orders` v prodejní databázi. Každý záznam v `Orders` tabulce obsahuje `CustomerID` a indikuje, který zákazník objednávku zadal. `CustomerID` je cizí klíč odkazující na záznam zákazníka v tabulce `Customers`. V tomto scénáři rozbalíte tabulku `Orders` v okně **zdroje dat** a nastavíte hlavní uzel na **Podrobnosti**. Potom nastavte sloupec `CustomerID`, aby používal <xref:System.Windows.Forms.ComboBox> (nebo jakýkoli jiný ovládací prvek, který podporuje vyhledávací vazbu) a přetáhněte uzel `Orders` do formuláře. Nakonec Přetáhněte uzel `Customers` na ovládací prvek, který je svázán se souvisejícím sloupcem – v tomto případě <xref:System.Windows.Forms.ComboBox> svázán se sloupcem `CustomerID`.
 
 ## <a name="to-databind-a-lookup-control"></a>Vytvoření datové vazby ovládacího prvku vyhledávání
 
-1. S projektem open, Otevřít **zdroje dat** okno výběrem **zobrazení** > **ostatní Windows** > **zdroje dat**.
+1. Otevřete projekt a otevřete okno **zdroje dat** výběrem možnosti **Zobrazit**  > **jiné** **zdroje dat** >  Windows.
 
     > [!NOTE]
-    > Vyhledávací tabulky vyžadují dvě souvisejících tabulky nebo objekty jsou k dispozici v **zdroje dat** okna. Další informace najdete v tématu [vztahy v datových sadách](relationships-in-datasets.md).
+    > Vyhledávací tabulky vyžadují, aby v okně **zdroje dat** byly k dispozici dvě související tabulky nebo objekty. Další informace najdete v tématu [relace v datových sadách](relationships-in-datasets.md).
 
-2. Rozbalte uzly v **zdroje dat** okna, dokud se nezobrazí nadřazená tabulka a všechny její sloupce a také související podřízené tabulky a všechny jejich sloupce.
+2. Rozbalením uzlů v okně **zdroje dat** můžete zobrazit nadřazenou tabulku a všechny její sloupce a související podřízenou tabulku a všechny její sloupce.
 
     > [!NOTE]
     > Uzel podřízené tabulky je uzel, který je zobrazen v podřízeném uzlu, který lze rozbalit v nadřazené tabulce.
 
-3. Změňte typ přetažení podřízené tabulky na **podrobnosti** tak, že vyberete **podrobnosti** ze seznamu ovládacího prvku na uzlu podřízené tabulky. Další informace najdete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetažení z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
+3. Změňte typ přetažení podřízené tabulky na **Podrobnosti** tím, že vyberete **Podrobnosti** ze seznamu ovládacích prvků v uzlu podřízené tabulky. Další informace naleznete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetahování z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
-4. Vyhledejte uzel, který odpovídá oběma tabulkám ( `CustomerID` uzlu v předchozím příkladu). Změnit jeho typ přetažení <xref:System.Windows.Forms.ComboBox> tak, že vyberete **– pole se seznamem** ze seznamu ovládacích prvků.
+4. Vyhledejte uzel, který souvisí se dvěma tabulkami (`CustomerID` uzel v předchozím příkladu). Změňte jeho typ přetažení na <xref:System.Windows.Forms.ComboBox> tím, že vyberete položku **ComboBox** ze seznamu ovládacích prvků.
 
-5. Přetáhněte hlavní uzel podřízené tabulky z **zdroje dat** okna do formuláře.
+5. Přetáhněte hlavní podřízený uzel tabulky z okna **zdroje dat** do formuláře.
 
-     Na formuláři se zobrazí ovládací prvky s datovou vazbou (včetně popisků) a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>). A [datovou sadu](../data-tools/dataset-tools-in-visual-studio.md), [TableAdapter](../data-tools/create-and-configure-tableadapters.md), <xref:System.Windows.Forms.BindingSource>, a <xref:System.Windows.Forms.BindingNavigator> zobrazují v panelu komponent.
+     Na formuláři se zobrazí ovládací prvky s datovou vazbou (včetně popisků) a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>). V zásobníku komponent se zobrazí [datová sada](../data-tools/dataset-tools-in-visual-studio.md), [TableAdapter](../data-tools/create-and-configure-tableadapters.md), <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>.
 
-6. Nyní přetáhněte hlavní uzel nadřazené tabulky z **zdroje dat** okno přímo na ovládací prvek vyhledávání ( <xref:System.Windows.Forms.ComboBox>).
+6. Nyní přetáhněte hlavní nadřazený uzel tabulky z okna **zdroje dat** přímo do ovládacího prvku vyhledávání (<xref:System.Windows.Forms.ComboBox>).
 
-     Nyní jsou vytvořeny vazby vyhledávání. Naleznete v následující tabulce pro konkrétní vlastnosti, které byly nastaveny na ovládacím prvku.
+     Nyní jsou vytvořeny vazby vyhledávání. Konkrétní vlastnosti, které byly nastaveny v ovládacím prvku, naleznete v následující tabulce.
 
     |Vlastnost|Vysvětlivky k nastavení|
     |--------------| - |
-    |**DataSource**|Visual Studio nastaví tuto vlastnost <xref:System.Windows.Forms.BindingSource>, které byly vytvořeny pro tabulky přetažena na ovládací prvek (nikoli <xref:System.Windows.Forms.BindingSource>, vytvořené při vytvoření ovládacího prvku).<br /><br /> Pokud potřebujete provést úpravu, nastavte <xref:System.Windows.Forms.BindingSource> tabulky se sloupcem, kterou chcete zobrazit.|
-    |**DisplayMember**|Aplikace Visual Studio nastaví tuto vlastnost na první sloupec po primárním klíči, který má datový typ řetězec, u tabulky, která je přetažena na ovládací prvek.<br /><br /> Pokud potřebujete provést úpravu, nastavte na název sloupce, které chcete zobrazit.|
-    |**ValueMember**|Aplikace Visual Studio nastaví tuto vlastnost na první sloupec, který je součástí primárního klíče, nebo na první sloupec v tabulce, pokud není definován žádný klíč.<br /><br /> Pokud potřebujete provést úpravu, nastavte na primární klíč tabulky se sloupcem, který chcete zobrazit.|
-    |**SelectedValue**|Visual Studio nastaví tuto vlastnost na původní sloupec vyřadit z **zdroje dat** okna.<br /><br /> Pokud potřebujete provést úpravu, nastavte na sloupce cizího klíče v související tabulce.|
+    |**Datového**|Sada Visual Studio nastaví tuto vlastnost na <xref:System.Windows.Forms.BindingSource> vytvořenou pro tabulku, kterou přetáhnete do ovládacího prvku (na rozdíl od <xref:System.Windows.Forms.BindingSource> vytvořena při vytvoření ovládacího prvku).<br /><br /> Pokud potřebujete provést úpravu, nastavte tuto hodnotu na <xref:System.Windows.Forms.BindingSource> tabulky se sloupcem, který chcete zobrazit.|
+    |**DisplayMember**|Aplikace Visual Studio nastaví tuto vlastnost na první sloupec po primárním klíči, který má datový typ řetězec, u tabulky, která je přetažena na ovládací prvek.<br /><br /> Pokud potřebujete provést úpravu, nastavte tuto hodnotu na název sloupce, který chcete zobrazit.|
+    |**ValueMember**|Aplikace Visual Studio nastaví tuto vlastnost na první sloupec, který je součástí primárního klíče, nebo na první sloupec v tabulce, pokud není definován žádný klíč.<br /><br /> Pokud potřebujete provést úpravu, nastavte tuto hodnotu na primární klíč v tabulce se sloupcem, který chcete zobrazit.|
+    |**SelectedValue**|Sada Visual Studio nastaví tuto vlastnost na původní sloupec vyřazený z okna **zdroje dat** .<br /><br /> Pokud potřebujete provést úpravu, nastavte tuto hodnotu na sloupec cizího klíče v související tabulce.|
 
 ## <a name="see-also"></a>Viz také:
 

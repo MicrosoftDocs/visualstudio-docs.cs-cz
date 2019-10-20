@@ -1,5 +1,5 @@
 ---
-title: Příkaz alias | Dokumentace Microsoftu
+title: Alias – příkaz | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,72 +14,65 @@ helpviewer_keywords:
 - alias command
 ms.assetid: bdf857df-b5d5-450f-8c10-a6fd4dccc130
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 00c77675b1a2300468c7848facf498ac3816e136
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 6da744b0db9e41cd1e5039a1bd0d5c93bc4c734a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437214"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651694"
 ---
 # <a name="alias-command"></a>Alias – příkaz
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Vytvoří nový alias pro úplný příkaz, úplný příkaz a argumenty, nebo jiný alias.  
-  
+Vytvoří nový alias pro úplný příkaz, úplný příkaz a argumenty nebo jiný alias.
+
 > [!TIP]
-> Zadáním `>alias` bez argumentů zobrazí aktuální seznam aliasů a jejich definice.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `aliasname`  
- Volitelné. Název pro nový alias. Pokud není zadána žádná hodnota pro `aliasname`, zobrazí se seznam aktuálních aliasů a jejich definice.  
-  
- `aliasstring`  
- Volitelné. Úplný název příkazu nebo existující alias a všechny parametry, které chcete vytvořit jako alias. Pokud není zadána žádná hodnota pro `aliasstring`, název aliasu a řetězec aliasu pro zadaný alias se zobrazí.  
-  
-## <a name="switches"></a>Přepínače  
- / DELETE nebo/del nebo /d  
- Volitelné. Odstraní určený alias a odebere ji z automatického dokončování.  
-  
- / Reset  
- Volitelné. Obnoví původní nastavení seznamu předdefinovaných aliasů. To znamená, že obnoví všechny předdefinované aliasy a odebere všechny aliasy definované uživatelem.  
-  
-## <a name="remarks"></a>Poznámky  
- Vzhledem k tomu, že aliasy představují příkazy, musí být umístěné na začátku příkazového řádku.  
-  
- Při vydávání tohoto příkazu byste měli zahrnout přepínače bezprostředně za příkaz, nikoli za aliasy, jinak bude přepínač samotný součástí řetězce aliasu.  
-  
- `/reset` Přepínač žádá o potvrzení před aliasů. Neexistuje krátký tvar `/reset`.  
-  
-## <a name="examples"></a>Příklady  
- Tento příklad vytvoří nový alias `upper`, pro kompletní příkaz Edit.MakeUpperCase.  
-  
-```  
->Tools.Alias upper Edit.MakeUpperCase  
-```  
-  
- Tento příklad odstraní alias, `upper`.  
-  
-```  
->Tools.alias /delete upper  
-```  
-  
- Tento příklad zobrazuje seznam všech aktuálních aliasů a definic.  
-  
-```  
->Tools.Alias  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Visual Studio Commands](../../ide/reference/visual-studio-commands.md)   
- [Okno příkazového řádku](../../ide/reference/command-window.md)   
- [Pole najít/příkaz](../../ide/find-command-box.md)   
- [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)
+> Zadáním `>alias` bez argumentů se zobrazí aktuální seznam aliasů a jejich definice.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]
+```
+
+## <a name="arguments"></a>Arguments
+ `aliasname` volitelné. Název nového aliasu Pokud není zadána žádná hodnota pro `aliasname`, zobrazí se seznam aktuálních aliasů a jejich definice.
+
+ `aliasstring` volitelné. Úplný název příkazu nebo existující alias a všechny parametry, které chcete vytvořit jako alias. Pokud není zadána žádná hodnota pro `aliasstring`, zobrazí se název aliasu a řetězec aliasu pro zadaný alias.
+
+## <a name="switches"></a>Přepínače
+ /Delete nebo/del nebo/d volitelné. Odstraní zadaný alias a odebere ho z automatického dokončování.
+
+ /Reset po vyčištění je nepovinný. Obnoví původní nastavení seznamu předem definovaných aliasů. To znamená, že obnoví všechny předdefinované aliasy a odstraní všechny aliasy definované uživatelem.
+
+## <a name="remarks"></a>Poznámky
+ Vzhledem k tomu, že aliasy představují příkazy, musí být umístěny na začátku příkazového řádku.
+
+ Při vydávání tohoto příkazu byste měli zahrnout přepínače hned za příkaz, nikoli za aliasy, jinak bude samotný přepínač zahrnut jako součást řetězce aliasu.
+
+ Přepínač `/reset` před obnovením aliasů vyžádá o potvrzení. Neexistuje žádná krátká forma `/reset`.
+
+## <a name="examples"></a>Příklady
+ Tento příklad vytvoří nový alias, `upper` pro příkaz Complete. MakeUpperCase.
+
+```
+>Tools.Alias upper Edit.MakeUpperCase
+```
+
+ Tento příklad odstraní alias `upper`.
+
+```
+>Tools.alias /delete upper
+```
+
+ Tento příklad zobrazuje seznam všech aktuálních aliasů a definic.
+
+```
+>Tools.Alias
+```
+
+## <a name="see-also"></a>Viz také
+ [Příkazy](../../ide/reference/visual-studio-commands.md) [příkazového](../../ide/reference/command-window.md) řádku [find/Command](../../ide/find-command-box.md) v příkazu Visual Studio Command a Command [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

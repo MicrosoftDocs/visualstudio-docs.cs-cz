@@ -1,5 +1,5 @@
 ---
-title: Aktivity starších verzí pracovních postupů | Dokumentace Microsoftu
+title: Starší verze aktivit pracovního postupu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -10,83 +10,75 @@ helpviewer_keywords:
 - workflow activities
 ms.assetid: 4af7a06b-1e82-43c8-aec8-0dc5fb63d08a
 caps.latest.revision: 8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fa5a6da8d45435fc7c755905a19e95e90a98ad57
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f4f1110424aefc1771c0dc7600fb9996bff0e892
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000151"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658944"
 ---
 # <a name="legacy-workflow-activities"></a>Aktivity starších verzí pracovních postupů
-[!INCLUDE[wf](../includes/wf-md.md)] obsahuje výchozí sadu aktivit, které poskytují funkce pro tok řízení, podmínky, zpracování událostí, správu stavu a komunikaci s aplikacemi a službami. Při návrhu pracovních postupů, můžete použít aktivity poskytnuté systémem, které jsou poskytovány [!INCLUDE[wfd1](../includes/wfd1-md.md)], nebo můžete vytvořit vlastní vlastní aktivity.  
-  
- Následující tabulce jsou uvedeny [!INCLUDE[wf2](../includes/wf2-md.md)] sadu aktivit out-of-box framework. Mnoho, ale ne všechny tyto aktivity jsou reprezentované prostřednictvím návrháře aktivit, které lze přistupovat z **nástrojů** z [!INCLUDE[wfd2](../includes/wfd2-md.md)]. Chcete-li vytvořit aktivitu, přetáhněte jeho návrháře z **nástrojů** a umístěte jej na návrhové ploše.  
-  
-|Aktivita|Popis|  
-|--------------|-----------------|  
-|[CallExternalMethodActivity](http://go.microsoft.com/fwlink?LinkID=65025)|Používá se **aktivita typu HandleExternalEventActivity** aktivity pro vstupní a výstupní komunikaci s místní službou. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity CallExternalMethodActivity](http://go.microsoft.com/fwlink?LinkID=65060).|  
-|[CancellationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65050)|Původně obsahovaly vyčištění logiku pro složené aktivity zrušena dříve, než všechny složené aktivity dětí po dokončení provádění. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Pomocí aktivitu typu CancellationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65061).|  
-|[CodeActivity](http://go.microsoft.com/fwlink?LinkID=65026)|Umožňuje přidat kódu jazyka Visual Basic nebo C# do svého pracovního postupu. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity CodeActivity](http://go.microsoft.com/fwlink?LinkID=65062).|  
-|[CompensatableSequenceActivity](http://go.microsoft.com/fwlink?LinkID=65027)|Aktivita verze [aktivitu typu SequenceActivity](http://go.microsoft.com/fwlink?LinkID=65020). [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity CompensatableSequenceActivity](http://go.microsoft.com/fwlink?LinkID=65002).|  
-|[CompensatableTransactionScopeActivity](http://go.microsoft.com/fwlink?LinkID=65051)|Aktivita verze **aktivity typu TransactionScopeActivity**. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity CompensatableTransactionScopeActivity](http://go.microsoft.com/fwlink?LinkID=65063).|  
-|[Aktivita typu CompensateActivity](http://go.microsoft.com/fwlink?LinkID=65052)|Umožňuje volat kód vrátit zpět nebo jako kompenzaci za operace již provádí pracovní postup, když dojde k chybě. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity aktivita typu CompensateActivity](http://go.microsoft.com/fwlink?LinkID=65064).|  
-|[CompensationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65053)|Obálka pro jeden nebo více aktivit, které provádějí kompenzaci za dokončené aktivity typu TransactionScopeActivity [!INCLUDE[crdefault](../includes/crdefault-md.md)] [pomocí aktivitu typu CompensationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65065).|  
-|[ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017)|Provede podřízené aktivity na základě podmínky, které platí pro [aktivitou skupiny ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017) aktivity samotného a na základě podmínek, které platí samostatně pro každý podřízený prvek. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity aktivitou skupiny ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65066).|  
-|[DelayActivity](http://go.microsoft.com/fwlink?LinkID=65028)|Umožňuje vytvářet zpoždění v pracovním postupu, které jsou založeny na interval časového limitu. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity typu DelayActivity](http://go.microsoft.com/fwlink?LinkID=65067).|  
-|[EventDrivenActivity](http://go.microsoft.com/fwlink?LinkID=65029)|Zabalí jednu nebo víc aktivit, které jsou spouštěny, když dojde k určité události. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity EventDrivenActivity](http://go.microsoft.com/fwlink?LinkID=65068).|  
-|[EventHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65018)|Poskytuje rozhraní pro přidružení událostí s aktivitou. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity aktivitu typu EventHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65069).|  
-|[Aktivitu EventHandlingScopeActivity](http://go.microsoft.com/fwlink?LinkID=65030)|Spustí jeho hlavní podřízená aktivita současně se [aktivitu typu EventHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65018). [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity typu EventHandlingScopeActivity](http://go.microsoft.com/fwlink?LinkID=65070).|  
-|[Typu FaultHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65054)|Použít ke zpracování výjimky typu, který zadáte. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity typu FaultHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65071).|  
-|[Typu FaultHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65055)|Představuje složenou aktivitu, která má uspořádaný seznam podřízených aktivit typu [typu FaultHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65054). [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity typu FaultHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65072).|  
-|[Aktivita typu HandleExternalEventActivity](http://go.microsoft.com/fwlink?LinkID=65031)|Použít ve spojení s [CallExternalMethodActivity](http://go.microsoft.com/fwlink?LinkID=65025) aktivity pro vstupní a výstupní komunikaci s místní službou. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity aktivita typu HandleExternalEventActivity](http://go.microsoft.com/fwlink?LinkID=65073).|  
-|[Aktivita typu IfElseActivity](http://go.microsoft.com/fwlink?LinkID=65033)|Testuje podmínku v každé větvi a provádí aktivity na první větev, pro který se rovná podmínka **true**. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity aktivita typu IfElseActivity](http://go.microsoft.com/fwlink?LinkID=65074).|  
-|[IfElseBranchActivity](http://go.microsoft.com/fwlink?LinkID=65034)|Představuje větvení [aktivita typu IfElseActivity](http://go.microsoft.com/fwlink?LinkID=65033). [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity IfElseBranchActivity](http://go.microsoft.com/fwlink?LinkID=65075).|  
-|[InvokeWebServiceActivity](http://go.microsoft.com/fwlink?LinkID=65035)|Umožňuje pracovního postupu k vyvolání webové služby. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity typu InvokeWebServiceActivity](http://go.microsoft.com/fwlink?LinkID=65076).|  
-|[InvokeWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65036)|Umožňuje pracovního postupu, který má být vyvolán jiný pracovní postup. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity aktivitu typu InvokeWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65077).|  
-|[ListenActivity](http://go.microsoft.com/fwlink?LinkID=65037)|Složená aktivita, která obsahuje pouze [EventDrivenActivity](http://go.microsoft.com/fwlink?LinkID=65029) podřízené aktivity. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity aktivita typu ListenActivity](http://go.microsoft.com/fwlink?LinkID=65078).|  
-|[ParallelActivity](http://go.microsoft.com/fwlink?LinkID=65038)|Poskytuje způsob, jak naplánovat nejmíň dva podřízené **aktivitu typu SequenceActivity** větví aktivity pro zpracování ve stejnou dobu. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity aktivitě typu ParallelActivity](http://go.microsoft.com/fwlink?LinkID=65079).|  
-|[Aktivitě PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)|Použijte k vyjádření kolekce pravidel. Pravidlo obsahuje podmínky a výsledné akce. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity aktivitě PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65004).|  
-|[Aktivitou typu ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65039)|Vytvoří více instancí o jednu podřízenou aktivitu. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity aktivitou typu ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65080).|  
-|[Aktivitu typu SequenceActivity](http://go.microsoft.com/fwlink?LinkID=65020)|Poskytuje jednoduchý způsob, jak propojit více aktivit pro sekvenční provádění. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity aktivitu typu SequenceActivity](http://go.microsoft.com/fwlink?LinkID=65081).|  
-|[SetStateActivity](http://go.microsoft.com/fwlink?LinkID=65041)|Určuje přechod na nový stav. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity SetStateActivity](http://go.microsoft.com/fwlink?LinkID=65082).|  
-|[StateActivity](http://go.microsoft.com/fwlink?LinkID=65042)|Představuje stav pracovní postup stavového stroje. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity umístit aktivitu StateActivity](http://go.microsoft.com/fwlink?LinkID=65083).|  
-|[StateFinalizationActivity](http://go.microsoft.com/fwlink?LinkID=65043)|Používané [umístit aktivitu StateActivity](http://go.microsoft.com/fwlink?LinkID=65042) aktivity jako kontejner pro podřízené aktivity, které jsou spouštěny při opuštění **umístit aktivitu StateActivity** aktivity. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity StateFinalizationActivity](http://go.microsoft.com/fwlink?LinkID=65008).|  
-|[StateInitializationActivity](http://go.microsoft.com/fwlink?LinkID=65044)|Používané [umístit aktivitu StateActivity](http://go.microsoft.com/fwlink?LinkID=65042) aktivity jako kontejner pro podřízené aktivity, které jsou spouštěny, když zadáte **umístit aktivitu StateActivity** aktivity. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity StateInitializationActivity](http://go.microsoft.com/fwlink?LinkID=65006).|  
-|[Aktivita typu SuspendActivity](http://go.microsoft.com/fwlink?LinkID=65056)|Pozastaví operaci svůj pracovní postup pro povolení zásah v případě určitý chybový stav, který vyžaduje pozornost. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity aktivita typu SuspendActivity](http://go.microsoft.com/fwlink?LinkID=65084).|  
-|[SynchronizationScopeActivity](http://go.microsoft.com/fwlink?LinkID=65057)|Provádí obsažené aktivity postupně v synchronizované doméně. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity SynchronizationScopeActivity](http://go.microsoft.com/fwlink?LinkID=65085).|  
-|[TerminateActivity](http://go.microsoft.com/fwlink?LinkID=65058)|Umožňuje okamžitě ukončení operace pracovního postupu v případě chybového stavu. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity TerminateActivity](http://go.microsoft.com/fwlink?LinkID=65086).|  
-|[ThrowActivity](http://go.microsoft.com/fwlink?LinkID=65059)|Umožňuje zachytit výjimky firmy jako součást procesu metadata pro pracovní postup. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity ThrowActivity](http://go.microsoft.com/fwlink?LinkID=65087).|  
-|[Aktivita typu TransactionScopeActivity](http://go.microsoft.com/fwlink?LinkID=65093)|Poskytuje rozhraní pro transakce a zpracování výjimek. Další informace najdete v tématu [pomocí aktivity typu TransactionScopeActivity](http://go.microsoft.com/fwlink?LinkID=65088).|  
-|[WebServiceFaultActivity](http://go.microsoft.com/fwlink?LinkID=65046)|Umožňuje modelovat výskyt chyby webové služby. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity Aktivita WebServiceFaultActivity](http://go.microsoft.com/fwlink?LinkID=65089).|  
-|[WebServiceInputActivity](http://go.microsoft.com/fwlink?LinkID=65047)|Přijímá data z webové služby. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity aktivitu WebServiceInputActivity](http://go.microsoft.com/fwlink?LinkID=65090).|  
-|[WebServiceOutputActivity](http://go.microsoft.com/fwlink?LinkID=65048)|Odpoví na požadavek webové služby provedena do pracovního postupu. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity aktivita WebServiceOutputActivity](http://go.microsoft.com/fwlink?LinkID=65092).|  
-|[Aktivita typu WhileActivity](http://go.microsoft.com/fwlink?LinkID=65049)|Povolí pracovní postup opakovat až do splnění podmínky. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Použití aktivity aktivita typu WhileActivity](http://go.microsoft.com/fwlink?LinkID=65091).|  
-  
- [!INCLUDE[crabout](../includes/crabout-md.md)] o vytváření vlastních aktivit najdete v tématu [vývoj vlastních aktivit](http://go.microsoft.com/fwlink?LinkID=65023) a [pomocí starší verze návrháře aktivit](../workflow-designer/using-the-legacy-activity-designer.md).  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Zobrazení aktivit (starší verze)](../workflow-designer/activity-views-legacy.md)  
- Popisuje různé návrhové zobrazení aktivit.  
-  
- [Postupy: Přidání aktivit do panelu nástrojů (starší verze)](../workflow-designer/how-to-add-activities-to-the-toolbox-legacy.md)  
- Ukazuje, jak přidat aktivity do panelu nástrojů.  
-  
- [Postupy: Vytvoření podmínky deklarativního pravidla (starší verze)](../workflow-designer/how-to-create-a-declarative-rule-condition-legacy.md)  
- Ukazuje postup vytvoření podmínky deklarativního pravidla.  
-  
- [Postupy: Vytvoření sady pravidel aktivit zásad (starší verze)](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md)  
- Ukazuje postup vytvoření sady pravidel aktivit zásad.  
-  
- [Postupy: Implementace operace kontraktu technologie WCF (starší verze)](../workflow-designer/how-to-implement-a-windows-communication-foundation-contract-operation-legacy.md)  
- Zobrazuje kroky k implementaci [!INCLUDE[indigo2](../includes/indigo2-md.md)] smlouvy operace.  
-  
- [Postupy: Vyvolání operace kontraktu technologie WCF (starší verze)](../workflow-designer/how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md)  
- Ukazuje postup vyvolání [!INCLUDE[indigo2](../includes/indigo2-md.md)] smlouvy operace.  
-  
-## <a name="see-also"></a>Viz také  
- [Aktivity Windows Workflow Foundation](http://go.microsoft.com/fwlink?LinkID=65005)   
- [Vývoj pracovních postupů](http://go.microsoft.com/fwlink?LinkID=65010)   
- [Vývoj aktivit pracovního postupu](http://go.microsoft.com/fwlink?LinkID=65023)
+[!INCLUDE[wf](../includes/wf-md.md)] obsahuje výchozí sadu aktivit, které poskytují funkce pro řízení toku, podmínky, zpracování událostí, správu stavu a komunikaci s aplikacemi a službami. Při navrhování pracovních postupů můžete použít aktivity poskytované systémem, které jsou poskytovány [!INCLUDE[wfd1](../includes/wfd1-md.md)], nebo můžete vytvořit vlastní aktivity.
+
+ V následující tabulce je uvedena sada aktivit připraveného pro [!INCLUDE[wf2](../includes/wf2-md.md)] Framework. Mnohé, ale ne všechny, z těchto aktivit jsou zastoupeny návrháři aktivity, ke kterým je možné přistoupit ze sady **nástrojů** [!INCLUDE[wfd2](../includes/wfd2-md.md)]. Chcete-li vytvořit aktivitu, přetáhněte jejího návrháře z **panelu nástrojů** a přetáhněte jej na návrhovou plochu.
+
+|Aktivita|Popis|
+|--------------|-----------------|
+|[CallExternalMethodActivity](http://go.microsoft.com/fwlink?LinkID=65025)|Používá se s aktivitou **Aktivita typu HandleExternalEventActivity** pro vstupní a výstupní komunikaci s místní službou. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity CallExternalMethodActivity](http://go.microsoft.com/fwlink?LinkID=65060).|
+|[CancellationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65050)|Slouží k zahrnutí logiky čištění pro složenou aktivitu, která byla zrušena před dokončením provádění všech podřízených objektů složené aktivity. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity CancellationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65061).|
+|[CodeActivity](http://go.microsoft.com/fwlink?LinkID=65026)|Umožňuje přidat Visual Basic nebo C# kód do pracovního postupu. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity CodeActivity](http://go.microsoft.com/fwlink?LinkID=65062).|
+|[CompensatableSequenceActivity](http://go.microsoft.com/fwlink?LinkID=65027)|Aktivita nadřazená verze [SequenceActivity](http://go.microsoft.com/fwlink?LinkID=65020). [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity CompensatableSequenceActivity](http://go.microsoft.com/fwlink?LinkID=65002).|
+|[CompensatableTransactionScopeActivity](http://go.microsoft.com/fwlink?LinkID=65051)|Aktivita nadřazená verze **aktivitě typu TransactionScopeActivity**. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity CompensatableTransactionScopeActivity](http://go.microsoft.com/fwlink?LinkID=65063).|
+|[Aktivita typu CompensateActivity](http://go.microsoft.com/fwlink?LinkID=65052)|Umožňuje volat kód k vrácení zpět nebo kompenzaci operací, které jsou již provedeny pracovním postupem, když dojde k chybě. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity aktivita typu CompensateActivity](http://go.microsoft.com/fwlink?LinkID=65064).|
+|[CompensationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65053)|Obálka pro jednu nebo více aktivit, které provádějí kompenzaci pro dokončenou aktivitu aktivitě typu TransactionScopeActivity [!INCLUDE[crdefault](../includes/crdefault-md.md)][pomocí aktivity CompensationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65065).|
+|[Aktivitou skupiny ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017)|Provede podřízené aktivity na základě podmínky, která se vztahuje na vlastní aktivitu [aktivitou skupiny ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017) a na základě podmínek, které platí samostatně pro každou podřízenou položku. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity aktivitou skupiny ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65066).|
+|[Aktivitu typu DelayActivity](http://go.microsoft.com/fwlink?LinkID=65028)|Umožňuje sestavovat zpoždění v pracovním postupu, které jsou založeny na intervalu časového limitu. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity aktivitu typu DelayActivity](http://go.microsoft.com/fwlink?LinkID=65067).|
+|[EventDrivenActivity](http://go.microsoft.com/fwlink?LinkID=65029)|Zalomí jednu nebo více aktivit, které se spustí, když dojde k zadané události. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity EventDrivenActivity](http://go.microsoft.com/fwlink?LinkID=65068).|
+|[EventHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65018)|Poskytuje rozhraní pro přidružení událostí k aktivitě. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity EventHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65069).|
+|[EventHandlingScopeActivity](http://go.microsoft.com/fwlink?LinkID=65030)|Provede svoji hlavní podřízenou aktivitu souběžně s [EventHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65018). [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity EventHandlingScopeActivity](http://go.microsoft.com/fwlink?LinkID=65070).|
+|[Aktivitu typu FaultHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65054)|Slouží k zpracování výjimky typu, který zadáte. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity aktivitu typu FaultHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65071).|
+|[FaultHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65055)|Představuje složenou aktivitu, která má seřazený seznam podřízených aktivit typu [aktivitu typu FaultHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65054). [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity FaultHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65072).|
+|[Aktivita typu HandleExternalEventActivity](http://go.microsoft.com/fwlink?LinkID=65031)|Používá se ve spojení s aktivitou [CallExternalMethodActivity](http://go.microsoft.com/fwlink?LinkID=65025) pro vstupní a výstupní komunikaci s místní službou. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity aktivita typu HandleExternalEventActivity](http://go.microsoft.com/fwlink?LinkID=65073).|
+|[IfElseActivity](http://go.microsoft.com/fwlink?LinkID=65033)|Testuje podmínku v každé větvi a provádí aktivity na první větvi, pro kterou je podmínka rovna hodnotě **true**. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity IfElseActivity](http://go.microsoft.com/fwlink?LinkID=65074).|
+|[IfElseBranchActivity](http://go.microsoft.com/fwlink?LinkID=65034)|Představuje větev [IfElseActivity](http://go.microsoft.com/fwlink?LinkID=65033). [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity IfElseBranchActivity](http://go.microsoft.com/fwlink?LinkID=65075).|
+|[InvokeWebServiceActivity](http://go.microsoft.com/fwlink?LinkID=65035)|Umožňuje vašemu pracovnímu postupu vyvolat webovou službu. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity InvokeWebServiceActivity](http://go.microsoft.com/fwlink?LinkID=65076).|
+|[Aktivitu typu InvokeWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65036)|Umožňuje vašemu pracovnímu postupu vyvolat jiný pracovní postup. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity aktivitu typu InvokeWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65077).|
+|[Aktivita typu ListenActivity](http://go.microsoft.com/fwlink?LinkID=65037)|Složená aktivita, která obsahuje pouze podřízené aktivity [EventDrivenActivity](http://go.microsoft.com/fwlink?LinkID=65029) . [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity aktivita typu ListenActivity](http://go.microsoft.com/fwlink?LinkID=65078).|
+|[Aktivita typu ParallelActivity](http://go.microsoft.com/fwlink?LinkID=65038)|Poskytuje způsob, jak naplánovat zpracování dvou nebo více podřízených větví aktivit **SequenceActivity** ve stejnou dobu. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity aktivita typu ParallelActivity](http://go.microsoft.com/fwlink?LinkID=65079).|
+|[Sady](http://go.microsoft.com/fwlink?LinkID=65019)|Slouží k reprezentaci kolekce pravidel. Pravidlo se skládá z podmínek a výsledných akcí. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity sady](http://go.microsoft.com/fwlink?LinkID=65004).|
+|[Aktivita ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65039)|Vytvoří více instancí jedné podřízené aktivity. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity Aktivita ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65080).|
+|[SequenceActivity](http://go.microsoft.com/fwlink?LinkID=65020)|Poskytuje jednoduchý způsob, jak propojit více aktivit dohromady pro následné spuštění. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity SequenceActivity](http://go.microsoft.com/fwlink?LinkID=65081).|
+|[SetStateActivity](http://go.microsoft.com/fwlink?LinkID=65041)|Určuje přechod do nového stavu. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity SetStateActivity](http://go.microsoft.com/fwlink?LinkID=65082).|
+|[StateActivity](http://go.microsoft.com/fwlink?LinkID=65042)|Představuje stav pracovního postupu stavového stroje. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity StateActivity](http://go.microsoft.com/fwlink?LinkID=65083).|
+|[StateFinalizationActivity](http://go.microsoft.com/fwlink?LinkID=65043)|Používá se v aktivitě [StateActivity](http://go.microsoft.com/fwlink?LinkID=65042) jako kontejner pro podřízené aktivity, které se provádějí při ukončování aktivity **StateActivity** . [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity StateFinalizationActivity](http://go.microsoft.com/fwlink?LinkID=65008).|
+|[StateInitializationActivity](http://go.microsoft.com/fwlink?LinkID=65044)|Používá se v aktivitě [StateActivity](http://go.microsoft.com/fwlink?LinkID=65042) jako kontejner pro podřízené aktivity, které jsou spouštěny při vstupu do aktivity **StateActivity** . [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity StateInitializationActivity](http://go.microsoft.com/fwlink?LinkID=65006).|
+|[Aktivita typu SuspendActivity](http://go.microsoft.com/fwlink?LinkID=65056)|Pozastaví operaci pracovního postupu, aby umožnil zásah v případě některých chybových stavů, které vyžadují zvláštní pozornost. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity aktivita typu SuspendActivity](http://go.microsoft.com/fwlink?LinkID=65084).|
+|[SynchronizationScopeActivity](http://go.microsoft.com/fwlink?LinkID=65057)|Provede obsažené aktivity postupně v synchronizované doméně. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity SynchronizationScopeActivity](http://go.microsoft.com/fwlink?LinkID=65085).|
+|[TerminateActivity](http://go.microsoft.com/fwlink?LinkID=65058)|Umožňuje okamžitě ukončit operaci pracovního postupu v případě chybového stavu. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity TerminateActivity](http://go.microsoft.com/fwlink?LinkID=65086).|
+|[ThrowActivity](http://go.microsoft.com/fwlink?LinkID=65059)|Umožňuje zachytit podnikové výjimky vyvolané jako součást metadat procesu pro pracovní postup. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity ThrowActivity](http://go.microsoft.com/fwlink?LinkID=65087).|
+|[Aktivitě typu TransactionScopeActivity](http://go.microsoft.com/fwlink?LinkID=65093)|Poskytuje rozhraní pro transakce a zpracování výjimek. Další informace najdete v tématu [použití aktivity aktivitě typu TransactionScopeActivity](http://go.microsoft.com/fwlink?LinkID=65088).|
+|[Aktivita WebServiceFaultActivity](http://go.microsoft.com/fwlink?LinkID=65046)|Umožňuje modelovat výskyt chyby webové služby. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity aktivita WebServiceFaultActivity](http://go.microsoft.com/fwlink?LinkID=65089).|
+|[Provedení](http://go.microsoft.com/fwlink?LinkID=65047)|Přijímá data z webové služby. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity WebServiceInputActivity](http://go.microsoft.com/fwlink?LinkID=65090).|
+|[Typu](http://go.microsoft.com/fwlink?LinkID=65048)|Odpoví na požadavek webové služby, který byl proveden na pracovní postup. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity WebServiceOutputActivity](http://go.microsoft.com/fwlink?LinkID=65092).|
+|[Aktivita typu WhileActivity](http://go.microsoft.com/fwlink?LinkID=65049)|Umožňuje vašemu pracovnímu postupu cyklovat, dokud není splněna podmínka. [!INCLUDE[crdefault](../includes/crdefault-md.md)][použití aktivity aktivita typu WhileActivity](http://go.microsoft.com/fwlink?LinkID=65091).|
+
+ [!INCLUDE[crabout](../includes/crabout-md.md)] vytváření vlastních aktivit najdete v tématu [vývoj vlastních aktivit](http://go.microsoft.com/fwlink?LinkID=65023) a [používání starší verze návrháře aktivit](../workflow-designer/using-the-legacy-activity-designer.md).
+
+## <a name="in-this-section"></a>V tomto oddílu
+ [Zobrazení aktivit (starší verze)](../workflow-designer/activity-views-legacy.md) Popisuje různá návrhová zobrazení aktivit.
+
+ [Postupy: přidání aktivit do sady nástrojů (starší verze)](../workflow-designer/how-to-add-activities-to-the-toolbox-legacy.md) Ukazuje, jak přidat aktivity do sady nástrojů.
+
+ [Postupy: vytvoření podmínky deklarativního pravidla (starší verze)](../workflow-designer/how-to-create-a-declarative-rule-condition-legacy.md) Zobrazuje kroky pro vytvoření podmínky deklarativního pravidla.
+
+ [Postupy: vytvoření sady pravidel sady (starší verze)](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md) Zobrazuje kroky pro vytvoření sady pravidel sady.
+
+ [Postupy: implementace operace kontraktu WCF (starší verze)](../workflow-designer/how-to-implement-a-windows-communication-foundation-contract-operation-legacy.md) Zobrazuje kroky pro implementaci operace [!INCLUDE[indigo2](../includes/indigo2-md.md)] kontraktu.
+
+ [Postupy: volání operace kontraktu WCF (starší verze)](../workflow-designer/how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md) Zobrazuje kroky pro vyvolání operace kontraktu [!INCLUDE[indigo2](../includes/indigo2-md.md)].
+
+## <a name="see-also"></a>Viz také
+ [Programovací model Windows Workflow Foundation aktivity](http://go.microsoft.com/fwlink?LinkID=65005) [vyvíjející pracovní postupy](http://go.microsoft.com/fwlink?LinkID=65010) při [vývoji aktivit pracovního postupu](http://go.microsoft.com/fwlink?LinkID=65023)

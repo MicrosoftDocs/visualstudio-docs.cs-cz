@@ -1,5 +1,5 @@
 ---
-title: 'CA2207: Inicializujte vloženou hodnotu statických polí | Dokumentace Microsoftu'
+title: 'CA2207: inicializovat typ hodnoty – vložená statická pole | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,36 +12,36 @@ helpviewer_keywords:
 - InitializeValueTypeStaticFieldsInline
 ms.assetid: d1ea9d8b-ecc2-46ca-86e2-c41dd0e76658
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 4f8bc843dc20df03ddf38a7506342addb6477297
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a2b3c1faf4ecf3ecf79a3c78d0ded106b88345ee
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142519"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72609368"
 ---
-# <a name="ca2207-initialize-value-type-static-fields-inline"></a>CA2207: Inicializujte statická pole s typem hodnoty vloženě
+# <a name="ca2207-initialize-value-type-static-fields-inline"></a>CA2207: Inicializujte vloženou hodnotu statických polí
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|InitializeValueTypeStaticFieldsInline|
 |CheckId|CA2207|
-|Kategorie|Microsoft.Usage|
-|Narušující změna|Pevné|
+|Kategorie|Microsoft. Usage|
+|Narušující změna|Bez přerušení|
 
 ## <a name="cause"></a>příčina
- Hodnotový typ deklaruje explicitní statický konstruktor.
+ Typ hodnoty deklaruje explicitní statický konstruktor.
 
 ## <a name="rule-description"></a>Popis pravidla
- Při deklaraci value-type. při inicializaci výchozí, pokud všechna pole typu hodnoty jsou nastavené na hodnotu nula a všechna pole typu odkazu jsou nastaveny na `null` (`Nothing` v jazyce Visual Basic). Explicitní statický konstruktor je zaručeno, se spustí před konstruktor instance nebo volá statický člen typu. Proto pokud typ je vytvořen bez nutnosti volat konstruktor instance, statický konstruktor není zaručeno, že ke spuštění.
+ Je-li deklarován typ hodnoty, je napřed výchozí inicializací, kde všechna pole typu hodnoty jsou nastavena na hodnotu nula a všechna pole typu odkazu jsou nastavena na hodnotu `null` (`Nothing` v Visual Basic). Explicitní statický konstruktor je zaručen pouze před tím, než je volán konstruktor instance nebo statický člen typu. Proto pokud je typ vytvořen bez volání konstruktoru instance, není zaručeno spuštění statického konstruktoru.
 
- Pokud všechna statická data je vložená inicializována a je deklarována bez explicitní statický konstruktor, kompilátory jazyků C# a Visual Basic přidejte `beforefieldinit` příznak do definice třídy jazyka MSIL. Kompilátory taky přidat privátní statický konstruktor, který obsahuje kód Statická inicializace. Tato privátní statický konstruktor se zaručeně spustí předtím, než jsou přístupné všechny statické pole typu.
+ Pokud jsou všechna statická data inicializována vložená a není deklarován žádný explicitní statický konstruktor C# , kompilátory a Visual Basic přidá příznak `beforefieldinit` do definice třídy jazyka MSIL. Kompilátory také přidávají privátní statický konstruktor, který obsahuje kód statické inicializace. Pro tento soukromý statický konstruktor je zaručeno, že bude spuštěn před tím, než budou k dispozici jakákoliv statická pole typu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li vyřešit porušení tohoto pravidla inicializujte všechna statická data, když je deklarovaný a statický konstruktor odeberte.
+ Chcete-li opravit porušení tohoto pravidla, proveďte inicializaci všech statických dat, je-li deklarována a odeberte statický konstruktor.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.

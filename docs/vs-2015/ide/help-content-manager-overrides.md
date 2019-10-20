@@ -1,36 +1,36 @@
 ---
-title: Nápověda správce obsahu přepsání | Dokumentace Microsoftu
+title: Přepsání obsahu Help Manageru | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-help-viewer
 ms.topic: conceptual
 ms.assetid: 95fe6396-276b-4ee5-b03d-faacec42765f
 caps.latest.revision: 11
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9dfd7f7d75a44cb28e2829e38c27b63a329eacaa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 70c0044a0436dcf27a3b087b3f11a5f759824735
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62584550"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645567"
 ---
 # <a name="help-content-manager-overrides"></a>Přepsání voleb aplikace Help Content Manager
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Úpravou registru můžete změnit výchozí chování aplikace Help Viewer a souvisejících s nápovědou funkcí v integrovaném vývojovém prostředí sady Visual Studio.  
-  
-|Úloha|Klíč registru|Hodnota a definice|  
-|----------|------------------|--------------------------|  
-|Definovat koncový bod služby jedinečný|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSWinExpress\14.0\Help|NewContentAndUpdateService--*HTTPValueForTheServiceEndpoint*.|  
-|Definovat výchozí online i offline|HKEY_LOCAL_MACHINE\Software\Microsoft\VSWinExpress\14.0\help|UseOnlineHelp--zadejte `0` místní nápovědy, a zadejte `1` k určení online nápovědy.|  
-|Definovat koncový bod jedinečný F1|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSWinExpress\14.0\Help|OnlineBaseUrl--*HTTPValueForTheServiceEndpoint*|  
-|Přepsat Priorita úlohy BITS|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (na 64-bit machine)\Microsoft\Help\v2.2|BITSPriority – použijte jednu z následujících hodnot: **popředí**, **vysokou**, **normální**, nebo **nízké**.|  
-|Zakázat Online (a možnost IDE Online)|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (na 64-bit machine)\Microsoft\VisualStudio\14.0\Help|OnlineHelpPreferenceDisabled – nastavte na 1 zakázat přístup k obsahu online nápovědy.|  
-|Zakázat správu obsahu|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (na 64-bit machine)\Microsoft\VisualStudio\14.0\Help|ContentManagementDisabled--nastavena na hodnotu 1, chcete-li zakázat **spravovat obsah** kartě v aplikaci Help Viewer.|  
-|Přejděte na místní úložiště obsahu v síťové sdílené složce|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.2\Catalogs\VisualStudio11|LocationPath=”*ContentStoreNetworkShare*”|  
-|Zakážete instalaci obsahu při prvním spuštění funkce sady Visual Studio.|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (na 64-bit machine)\Microsoft\VisualStudio\14.0\Help|DisableFirstRunHelpSelection – nastavte na 1 zakázat funkce nápovědy, které jsou konfigurovány při prvním spuštění sady Visual Studio.|  
-  
-## <a name="see-also"></a>Viz také  
+Úpravou registru můžete změnit výchozí chování aplikace Help Viewer a funkcí souvisejících s nápovědy v integrovaném vývojovém prostředí sady Visual Studio.
+
+|Úloha|Klíč registru|Hodnota a definice|
+|----------|------------------|--------------------------|
+|Definování jedinečného koncového bodu služby|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSWinExpress\14.0\Help|NewContentAndUpdateService--*HTTPValueForTheServiceEndpoint*.|
+|Definovat výchozí nastavení online/offline|HKEY_LOCAL_MACHINE\Software\Microsoft\VSWinExpress\14.0\help|UseOnlineHelp – zadejte `0` pro zadání místní aplikace Help a zadejte `1` pro zadání online nápovědě.|
+|Definování jedinečného koncového bodu F1|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSWinExpress\14.0\Help|OnlineBaseUrl –*HTTPValueForTheServiceEndpoint*|
+|Přepsat prioritu úlohy služby BITS|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (na 64ovém počítači) \Microsoft\Help\v2.2|BITSPriority – použijte jednu z následujících hodnot: **popředí**, **Vysoká**, **normální**nebo **Nízká**.|
+|Zakázat online (a možnost IDE online)|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (na 64ovém počítači) \Microsoft\VisualStudio\14.0\Help|OnlineHelpPreferenceDisabled – Pokud chcete zakázat přístup k obsahu online, nastavte na hodnotu 1.|
+|Zakázat správu obsahu|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (na 64ovém počítači) \Microsoft\VisualStudio\14.0\Help|ContentManagementDisabled – nastavením na hodnotu 1 zakážete kartu **Spravovat obsah** v programu Help Viewer.|
+|Nasměrování na místní úložiště obsahu v síťové sdílené složce|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.2\Catalogs\VisualStudio11|LocationPath = "*ContentStoreNetworkShare*"|
+|Zakáže instalaci obsahu při prvním spuštění funkce sady Visual Studio.|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (na 64ovém počítači) \Microsoft\VisualStudio\14.0\Help|DisableFirstRunHelpSelection – nastavte na hodnotu 1, pokud chcete zakázat funkce, které jsou nakonfigurovány při prvním spuštění sady Visual Studio.|
+
+## <a name="see-also"></a>Viz také
  [Příručka správce Help Vieweru](../ide/help-viewer-administrator-guide.md)

@@ -1,5 +1,5 @@
 ---
-title: 'CA1028: Úložiště výčtu by měl být Int32 | Dokumentace Microsoftu'
+title: 'CA1028: enum Storage by měl být Int32 | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,51 +12,51 @@ helpviewer_keywords:
 - CA1028
 ms.assetid: 87160825-9f39-4142-8d7f-a31fe7ac7b84
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e79eb7e0ed33184103cc772c13515959cf973ecc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fc1039cb547a48c4f2dd3ea869b46d4706e9c3a2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68192813"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661908"
 ---
-# <a name="ca1028-enum-storage-should-be-int32"></a>CA1028: Úložiště výčtu by mělo být Int32
+# <a name="ca1028-enum-storage-should-be-int32"></a>CA1028: Úložiště výčtu by měl být Int32
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|EnumStorageShouldBeInt32|
 |CheckId|CA1028|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Základní typ veřejný výčet není <xref:System.Int32?displayProperty=fullName>.
+ Nadřízený typ veřejného výčtu není <xref:System.Int32?displayProperty=fullName>.
 
 ## <a name="rule-description"></a>Popis pravidla
- Výčet je typ hodnoty, který definuje množinu souvisejících pojmenovaných konstant. Ve výchozím nastavení <xref:System.Int32?displayProperty=fullName> datový typ se používá pro uložení konstantní hodnoty. I když toto můžete změnit základní typ, není nutné nebo doporučené pro většinu scénářů. Všimněte si, že žádné zvýšení výkonu můžete dosáhnout použitím datový typ, který je menší než <xref:System.Int32>. Pokud nemůžete použít výchozí typ dat, měli byste použít jeden z systému CLS (Common Language)-kompatibilní celočíselných typů <xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32>, nebo <xref:System.Int64> abyste měli jistotu, že všechny hodnoty výčtu lze znázornit v Kompatibilní se Specifikací CLS programovacích jazyků.
+ Výčet je typ hodnoty, který definuje množinu souvisejících pojmenovaných konstant. Ve výchozím nastavení se k uložení konstantní hodnoty používá datový typ <xref:System.Int32?displayProperty=fullName>. I když tento základní typ můžete změnit, není nutné ani se pro většinu scénářů doporučuje. Počítejte s tím, že nedosáhnete významného nárůstu výkonu pomocí datového typu, který je menší než <xref:System.Int32>. Pokud nemůžete použít výchozí datový typ, měli byste použít jeden z celočíselných typů kompatibilních se specifikací CLS, <xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32> nebo <xref:System.Int64>, abyste se ujistili, že všechny hodnoty výčtu mohou být reprezentovány v programování kompatibilním se specifikací CLS. jazyky.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, pokud existují problémy velikost nebo kompatibility, použijte <xref:System.Int32>. Pro situace, kdy <xref:System.Int32> není dostatečně velký pro uložení hodnot, použijte <xref:System.Int64>. Pokud zpětné kompatibility vyžaduje menší datový typ, použijte <xref:System.Byte> nebo <xref:System.Int16>.
+ Pokud chcete opravit porušení tohoto pravidla, pokud neexistují problémy s velikostí nebo kompatibilitou, použijte <xref:System.Int32>. V situacích, kdy <xref:System.Int32> není dostatečně velká pro uložení hodnot, použijte <xref:System.Int64>. Pokud zpětné kompatibility vyžaduje menší datový typ, použijte <xref:System.Byte> nebo <xref:System.Int16>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Potlačit upozornění tohoto pravidla, pouze pokud to vyžaduje problémům se zpětnou kompatibilitou. V aplikacích selhání pro dosažení souladu s tímto pravidlem obvykle nezpůsobí potíže. V knihovnách, ve kterém jsou vyžadována vzájemná funkční spolupráce jazyka, nedodržení tohoto pravidla může nepříznivě ovlivnit vaši uživatelé.
+ Potlačí upozornění z tohoto pravidla pouze v případě, že to vyžaduje problémy s zpětnou kompatibilitou. V aplikacích není selhání při dodržení tohoto pravidla obvykle způsobeno problémy. V knihovnách, kde je třeba vzájemná funkční spolupráce jazyků, neúspěšná nedodržení tohoto pravidla může negativně ovlivnit vaše uživatele.
 
-## <a name="example-of-a-violation"></a>Příkladem porušení
+## <a name="example-of-a-violation"></a>Příklad porušení
 
 ### <a name="description"></a>Popis
- Následující příklad ukazuje dva výčty, které nepoužívají doporučené příslušný datový typ.
+ Následující příklad ukazuje dva výčty, které nepoužívají doporučený podkladový datový typ.
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Design.EnumIntegralType#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.EnumIntegralType/cs/FxCop.Design.EnumIntegralType.cs#1)]
  [!code-vb[FxCop.Design.EnumIntegralType#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.EnumIntegralType/vb/FxCop.Design.EnumIntegralType.vb#1)]
 
-## <a name="example-of-how-to-fix"></a>Příklad, jak k opravě
+## <a name="example-of-how-to-fix"></a>Příklad opravy
 
 ### <a name="description"></a>Popis
- Následující příklad opravuje předchozí porušení změnou základní datový typ na <xref:System.Int32>.
+ Následující příklad opravuje předchozí porušení změnou podkladového datového typu na <xref:System.Int32>.
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Design.EnumIntegralTypeFixed#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.EnumIntegralTypeFixed/cs/FxCop.Design.EnumIntegralTypeFixed.cs#1)]
@@ -69,7 +69,7 @@ ms.locfileid: "68192813"
 
  [CA2217: Neoznačujte výčty pomocí FlagsAttribute](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
 
- [CA1700: Nepojmenovávejte výčtu hodnoty 'Reserved'](../code-quality/ca1700-do-not-name-enum-values-reserved.md)
+ [CA1700: Nepojmenovávejte výčty hodnot Reserved](../code-quality/ca1700-do-not-name-enum-values-reserved.md)
 
  [CA1712: Nezačínejte hodnoty výčtu s názvem typu](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
 

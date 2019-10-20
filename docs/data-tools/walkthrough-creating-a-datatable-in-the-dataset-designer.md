@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytváření DataTable v návrháři datových sad'
+title: 'Návod: Vytváření DataTable v Návrháři DataSet'
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,61 +7,61 @@ helpviewer_keywords:
 - Dataset Designer, creating data tables
 - tables [Visual Studio], creating
 - data [Visual Studio], Dataset Designer
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1126117cb1fc26c4f61bfb0f6ed0e19e86ce9323
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9dbf7116c614a8eec599f197f975ab4c389bc950
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564919"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648074"
 ---
-# <a name="walkthrough-create-a-datatable-in-the-dataset-designer"></a>Návod: Vytvoření datové tabulky v návrháři datových sad
+# <a name="walkthrough-create-a-datatable-in-the-dataset-designer"></a>Návod: vytvoření DataTable v Návrhář datových sad
 
-Tento návod popisuje, jak vytvořit <xref:System.Data.DataTable> (bez objektu TableAdapter) pomocí **Návrhář Dataset**. Informace o vytváření tabulek dat, které obsahují objekty TableAdapter najdete v tématu [vytvoření a konfigurace objektů TableAdapter](../data-tools/create-and-configure-tableadapters.md).
+Tento návod vysvětluje, jak vytvořit <xref:System.Data.DataTable> (bez TableAdapter) pomocí **Návrhář datových sad**. Informace o vytváření tabulek dat, které obsahují objekty TableAdapter, najdete v tématu [Create and Configure objekty TableAdapter](../data-tools/create-and-configure-tableadapters.md).
 
-## <a name="create-a-new-windows-forms-application"></a>Vytvoření nové aplikace Windows Forms
+## <a name="create-a-new-windows-forms-application"></a>Vytvoření nové aplikace model Windows Forms
 
-1. V sadě Visual Studio na **souboru** nabídce vyberte možnost **nový** > **projektu**.
+1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový**  > **projekt**.
 
-2. Rozbalte buď **Visual C#** nebo **jazyka Visual Basic** v levém podokně vyberte **Windows Desktop**.
+2. V levém podokně rozbalte buď **vizuál C#**  , nebo **Visual Basic** a pak vyberte **Desktop Windows**.
 
-3. V prostředním podokně, vyberte **aplikace Windows Forms** typ projektu.
+3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
-4. Pojmenujte projekt **DataTableWalkthrough**a klikněte na tlačítko **OK**.
+4. Pojmenujte projekt **DataTableWalkthrough**a klikněte na **tlačítko OK**.
 
-     **DataTableWalkthrough** projekt je vytvořen a přidán do **Průzkumníka řešení**.
+     Projekt **DataTableWalkthrough** je vytvořen a přidán do **Průzkumník řešení**.
 
-## <a name="add-a-new-dataset-to-the-application"></a>Přidat novou datovou sadu do aplikace
+## <a name="add-a-new-dataset-to-the-application"></a>Přidání nové datové sady do aplikace
 
-1. Na **projektu** nabídce vyberte možnost **přidat novou položku**.
+1. V nabídce **projekt** vyberte možnost **Přidat novou položku**.
 
-     Zobrazí se dialogové okno **Přidat novou položku**.
+     Zobrazí se dialogové okno **Přidat novou položku** .
 
-2. V levém podokně vyberte **Data**a pak vyberte **datovou sadu** v prostředním podokně.
+2. V levém podokně vyberte **data**a potom v prostředním podokně vyberte **datová sada** .
 
-3. Zvolte **přidat**.
+3. Klikněte na tlačítko **Přidat**.
 
-     Visual Studio přidá soubor s názvem **DataSet1.xsd** do projektu a otevře jej v **Návrhář Dataset**.
+     Visual Studio přidá do projektu soubor s názvem **DataSet1. xsd** a otevře ho v **Návrhář datových sad**.
 
-## <a name="add-a-new-datatable-to-the-dataset"></a>Přidat nové datové tabulky do datové sady
+## <a name="add-a-new-datatable-to-the-dataset"></a>Přidání nového objektu DataTable do datové sady
 
-1. Přetáhněte **DataTable** z **datovou sadu** kartě **nástrojů** na **Návrhář Dataset**.
+1. Přetáhněte **DataTable** z karty **DataSet** sady **nástrojů** na **Návrhář datových sad**.
 
-     Tabulku s názvem **DataTable1** se přidá do datové sady.
+     Do datové sady se přidá tabulka s názvem **datatabulka1** .
 
-2. Klikněte na záhlaví **DataTable1** a přejmenujte jej `Music`.
+2. Klikněte na záhlaví **datatabulka1** a přejmenujte ho `Music`.
 
-## <a name="add-columns-to-the-datatable"></a>Přidání sloupců do DataTable
+## <a name="add-columns-to-the-datatable"></a>Přidat sloupce do objektu DataTable
 
-1. Klikněte pravým tlačítkem myši **Hudba** tabulky. Přejděte na **přidat**a potom klikněte na tlačítko **sloupec**.
+1. Klikněte pravým tlačítkem myši na tabulku **hudba** . Přejděte na **Přidat**a potom klikněte na **sloupec**.
 
-2. Název sloupce `SongID`.
+2. Pojmenujte sloupec `SongID`.
 
-3. V **vlastnosti** okno, nastaveno <xref:System.Data.DataColumn.DataType%2A> vlastnost <xref:System.Int16?displayProperty=fullName>.
+3. V okně **vlastnosti** nastavte vlastnost <xref:System.Data.DataColumn.DataType%2A> na hodnotu <xref:System.Int16?displayProperty=fullName>.
 
 4. Tento postup opakujte a přidejte následující sloupce:
 
@@ -71,15 +71,15 @@ Tento návod popisuje, jak vytvořit <xref:System.Data.DataTable> (bez objektu T
 
      `Genre`: <xref:System.String?displayProperty=fullName>
 
-## <a name="set-the-primary-key-for-the-table"></a>Nastavit primární klíč pro tabulku
+## <a name="set-the-primary-key-for-the-table"></a>Nastavte primární klíč pro tabulku.
 
-Všechny tabulky dat by měl mít primární klíč. Primární klíč jednoznačně identifikuje konkrétní záznam v tabulce dat.
+Všechny tabulky dat musí mít primární klíč. Primární klíč jednoznačně identifikuje konkrétní záznam v tabulce dat.
 
-Chcete-li nastavit primární klíč, klikněte pravým tlačítkem **SongID** sloupec a pak klikněte na tlačítko **nastavit primární klíč**. Ikona klíče se zobrazí vedle **SongID** sloupce.
+Primární klíč nastavíte tak, že kliknete pravým tlačítkem na sloupec **SongID** a pak kliknete na **nastavit primární klíč**. Vedle sloupce **SongID** se zobrazí ikona klíče.
 
-## <a name="save-your-project"></a>Uložit projekt
+## <a name="save-your-project"></a>Uložení projektu
 
-Chcete-li uložit **DataTableWalkthrough** projektu, na **soubor** nabídce vyberte možnost **Uložit vše**.
+Chcete-li uložit projekt **DataTableWalkthrough** , vyberte v nabídce **soubor** možnost **Uložit vše**.
 
 ## <a name="see-also"></a>Viz také:
 

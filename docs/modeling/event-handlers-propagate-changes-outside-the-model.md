@@ -5,43 +5,43 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 - Domain-Specific Language, events
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd02491b42e9e6a5d677eca35ccde2aa559352c4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fe60767fe61de5c49718f25281d9b547305bbe84
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62994735"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653801"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>Obslužné rutiny události šíří změny mimo model
 
-V produktu Visualization and Modeling SDK můžete definovat obslužné rutiny událostí úložiště změny na prostředky mimo úložiště, jako jsou proměnné bez úložiště, soubory, modely v jiných úložištích nebo jiné rozšíření sady Visual Studio. Obslužné rutiny událostí Store jsou spouštěny na konci transakce, ve kterém se aktivační událost došlo. Také se provádějí v operaci vrácení zpět nebo znovu. Proto se na rozdíl od úložiště pravidla jsou zvláště užitečná pro aktualizaci hodnoty, které jsou mimo store události v úložišti. Na rozdíl od .NET události jsou registrovány obslužné rutiny událostí úložiště tak, aby naslouchala na třídu: nemáte samostatnou obslužnou rutinu pro každou instanci zaregistrovat. Další informace o tom, jak si vybrat mezi různými způsoby pro případ změn najdete v tématu [šířící změny a reakce na](../modeling/responding-to-and-propagating-changes.md).
+V sadě pro vizualizaci a modelování můžete definovat obslužné rutiny událostí úložiště pro rozšíření změn prostředků mimo úložiště, jako jsou proměnné, soubory, modely v jiných úložištích nebo jiná rozšíření sady Visual Studio. Obslužné rutiny události úložiště se spouštějí po konci transakce, ve které došlo k aktivované události. Jsou také spouštěny v operaci zpět nebo znovu. Proto na rozdíl od pravidel úložiště jsou události úložiště nejužitečnější pro aktualizaci hodnot, které jsou mimo úložiště. Na rozdíl od událostí .NET jsou obslužné rutiny událostí úložiště registrovány pro naslouchání třídě: nemusíte registrovat samostatnou obslužnou rutinu pro každou instanci. Další informace o tom, jak volit mezi různými způsoby zpracování změn, najdete v tématu [reakce na a šíření změn](../modeling/responding-to-and-propagating-changes.md).
 
-Grafické plochu a jiných prvcích uživatelského rozhraní jsou příkladem externí prostředky, které mohou být zpracovány události v úložišti.
+Grafické a jiné ovládací prvky uživatelského rozhraní jsou příklady externích prostředků, které mohou být zpracovány pomocí událostí úložiště.
 
-### <a name="to-define-a-store-event"></a>Chcete-li definovat událost úložiště
+### <a name="to-define-a-store-event"></a>Definování události úložiště
 
-1. Vyberte typ události, ke které chcete monitorovat. Chcete-li zobrazit úplný seznam, podívejte se na vlastnosti <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory>. Každou vlastnost odpovídá typu události. Nejčastěji používané události, které typy jsou:
+1. Vyberte typ události, kterou chcete monitorovat. Úplný seznam naleznete v části vlastnosti <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory>. Každá vlastnost odpovídá typu události. Nejčastěji používané typy událostí jsou:
 
-    - `ElementAdded` -aktivuje, pokud prvek modelu, vztah odkazu, obrazec nebo spojnici se vytvoří.
+    - `ElementAdded` – aktivuje se při vytvoření prvku modelu, propojení vztahu, tvaru nebo konektoru.
 
-    - ElementPropertyChanged – aktivuje, když hodnota `Normal` doménovou vlastnost se změní. Událost se aktivuje jenom v případě, že novém i starém hodnoty nejsou shodné. Události nejde použít u vypočtené a vlastní vlastnosti úložiště.
+    - ElementPropertyChanged – aktivuje se, když se změní hodnota vlastnosti domény `Normal`. Událost se aktivuje jenom v případě, že se nové a staré hodnoty neshodují. Událost nelze použít pro počítané a vlastní vlastnosti úložiště.
 
-         Ho nejde použít u vlastnosti rolí, které odpovídají vztah odkazy. Místo toho použijte `ElementAdded` monitorování doménového vztahu.
+         Nedá se použít na vlastnosti role, které odpovídají odkazům na vztahy. Místo toho použijte `ElementAdded` k monitorování doménového vztahu.
 
-    - `ElementDeleted` -aktivovat po prvku modelu, relace, obrazec nebo spojnici byl odstraněn. Budete k němu přístup hodnoty vlastností elementu, ale nebude mít žádné vztahy s ostatními prvky.
+    - `ElementDeleted` – aktivuje se po odstranění prvku modelu, vztahu, tvaru nebo konektoru. Můžete mít stále přístup k hodnotám vlastností elementu, ale nebude mít žádný vztah k ostatním elementům.
 
-2. Přidat definici částečné třídy pro _YourDsl_**DocData** v samostatném souboru kódu v **DslPackage** projektu.
+2. Přidejte definici částečné třídy pro _YourDsl_**DocData** do samostatného souboru kódu v projektu **DslPackage** .
 
-3. Psaní kódu události jako metody, jako v následujícím příkladu. Může to být `static`, pokud chcete získat přístup k `DocData`.
+3. Napište kód události jako metodu, jak je uvedeno v následujícím příkladu. Může být `static`, pokud nechcete získat přístup k `DocData`.
 
-4. Přepsat `OnDocumentLoaded()` zaregistrovat obslužnou rutinu. Pokud máte více než jednu obslužnou rutinu, můžete je zaregistrovat vše na jednom místě.
+4. Přepište `OnDocumentLoaded()` pro registraci obslužné rutiny. Pokud máte více než jednu obslužnou rutinu, můžete je zaregistrovat na stejném místě.
 
-Umístění registrační kód není důležité. `DocView.LoadView()` je alternativního umístění.
+Umístění registračního kódu není kritické. `DocView.LoadView()` je alternativní umístění.
 
 ```csharp
 using System;
@@ -88,13 +88,13 @@ namespace Company.MusicLib
 }
 ```
 
-## <a name="use-events-to-make-undoable-adjustments-in-the-store"></a>Použití událostí s úpravami vrátit v Store
+## <a name="use-events-to-make-undoable-adjustments-in-the-store"></a>Použití událostí k provedení nevratných úprav v úložišti
 
-Store události nevyužívá obvykle pro šíření změn v úložišti, protože obslužná rutina události spustí poté, co je transakce potvrzena. Místo toho použijete pravidlo úložiště. Další informace najdete v tématu [pravidla šíření změn v rámci the Model](../modeling/rules-propagate-changes-within-the-model.md).
+Události úložiště se obvykle nepoužívají pro rozšiřování změn v úložišti, protože se obslužná rutina události spustí po potvrzení transakce. Místo toho byste použili pravidlo obchodu. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
 
-Ale můžete použít obslužnou rutinu události provést další aktualizace do úložiště, pokud má uživatel moci vrátit další aktualizace odděleně od původní událostí. Předpokládejme například, že malé znaky jsou běžné konvence pro alb. Můžete napsat obslužnou rutinu události úložiště, který opraví nadpis na malá písmena, poté, co uživatel má zadali velkými písmeny. Ale uživatel může pomocí příkazu Zpět Zrušit opravu, obnovení velká písmena. Druhý vrácení zpět by odeberte uživatele změnit.
+Můžete však použít obslužnou rutinu události k provedení dalších aktualizací úložiště, pokud chcete, aby uživatel mohl vrátit další aktualizace odděleně od původní události. Předpokládejme například, že malá písmena představují obvyklou konvenci pro názvy alb. Můžete napsat obslužnou rutinu události úložiště, která opravuje nadpis na malý případ poté, co ho uživatel zadal velkými písmeny. Ale uživatel může použít příkaz zpět k zrušení opravy a obnovení velkých písmen. Druhý příkaz zpět by odebral změnu uživatele.
 
-Naopak pokud jste napsali úložiště pravidlo, které to samé udělá, změna uživatele a opravu by v rámci jedné transakce, tak, aby uživatel nelze vrátit zpět úpravy bez ztráty původní změny.
+Naproti tomu, pokud jste napsali pravidlo obchodu ke stejnému účelu, změna uživatele a vaše Oprava by byly ve stejné transakci, aby uživatel nemohli zrušit úpravu bez ztráty původní změny.
 
 ```csharp
 partial class MusicLibDocView
@@ -158,28 +158,28 @@ private static void AlbumTitleAdjuster(object sender,
 }
 ```
 
-Pokud píšete událost, která aktualizuje ve storu:
+Pokud napíšete událost, která aktualizuje úložiště:
 
-- Použití `store.InUndoRedoOrRollback` vyhnout se provádění změn k prvkům modelu v vrácení zpět. Správce transakcí všechno, co nastavíte v úložišti zpět do původního stavu.
+- Použijte `store.InUndoRedoOrRollback`, chcete-li se vyhnout provádění změn prvků modelu v operaci vrátit zpět. Správce transakcí nastaví vše ve Storu zpátky do původního stavu.
 
-- Použití `store.InSerializationTransaction` pro vyvarování změny při načítání modelu ze souboru.
+- Použijte `store.InSerializationTransaction`, aby se zabránilo provádění změn v průběhu načítání modelu ze souboru.
 
-- Změny způsobí další události, které mají být aktivované. Ujistěte se, že byste se vyhnout nekonečnou smyčku.
+- Změny způsobí aktivaci dalších událostí. Ujistěte se, že se vyhnete nekonečné smyčce.
 
-## <a name="store-event-types"></a>Typy událostí Store
+## <a name="store-event-types"></a>Typy událostí úložiště
 
-Každý typ události odpovídá kolekci v Store.EventManagerDirectory. Můžete přidat nebo odebrat obslužných rutin událostí v okamžiku, ale je obvykle při načtení dokumentu je přidat.
+Každý typ události odpovídá kolekci v úložišti. EventManagerDirectory. Obslužné rutiny událostí můžete kdykoli přidat nebo odebrat, ale při načtení dokumentu je obvykle můžete přidat.
 
-|`EventManagerDirectory` Název vlastnosti|Při spuštění|
+|název vlastnosti `EventManagerDirectory`|Spustí se, když|
 |-|-|
-|ElementAdded|Je vytvořena instance třídy domény, doménového vztahu, tvaru, konektoru nebo diagramu.|
-|ElementDeleted|Prvek modelu se odebral z adresáře element obchodu a není už zdroj nebo cíl žádné relace. Prvku není odstraněn z paměti, ale se uchovávají v případě budoucího vrácení zpět.|
-|ElementEventsBegun|Vyvolána na konci vnější transakci.|
-|ElementEventsEnded|Vyvoláno, když všechny další události byly zpracovány.|
-|ElementMoved|Prvek modelu bylo přesunuto z jednoho úložiště pro oddíl do jiného.<br /><br /> To se nevztahuje k umístění obrazec v diagramu.|
-|ElementPropertyChanged|Hodnota doménová vlastnost, která se změnila. Provádí pouze v případě, že staré a nové hodnoty rovny.|
-|RolePlayerChanged|Jednu ze dvou rolí (končí) vztah odkazuje na nový prvek.|
-|RolePlayerOrderChanged|V roli s násobností větší než 1 došlo ke změně pořadí odkazů.|
+|ElementAdded|Vytvoří se instance doménové třídy, doménového vztahu, obrazce, spojnice nebo diagramu.|
+|ElementDeleted|Prvek modelu byl odebrán z adresáře prvků úložiště a již není zdrojem ani cílem žádného vztahu. Prvek není ve skutečnosti odstraněný z paměti, ale je uložený v případě budoucího vrácení akce zpět.|
+|ElementEventsBegun|Vyvoláno na konci vnější transakce.|
+|ElementEventsEnded|Vyvoláno při zpracování všech ostatních událostí.|
+|ElementMoved|Prvek modelu byl přesunut z jednoho oddílu úložiště do druhého.<br /><br /> Nesouvisí s umístěním tvaru v diagramu.|
+|ElementPropertyChanged|Hodnota doménové vlastnosti se změnila. Tato hodnota je provedena pouze v případě, že staré a nové hodnoty nejsou stejné.|
+|RolePlayerChanged|Jedna ze dvou rolí (končí) vztahu odkazuje na nový prvek.|
+|RolePlayerOrderChanged|V roli s násobností větší než 1 se změnila posloupnost odkazů.|
 |TransactionBeginning||
 |TransactionCommitted||
 |TransactionRolledBack||
@@ -187,6 +187,6 @@ Každý typ události odpovídá kolekci v Store.EventManagerDirectory. Můžete
 ## <a name="see-also"></a>Viz také
 
 - [Reagování na změny a šíření změn](../modeling/responding-to-and-propagating-changes.md)
-- [Ukázkový kód: Diagramy okruh](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+- [Vzorový kód: diagramy okruhů](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

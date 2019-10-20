@@ -1,114 +1,114 @@
 ---
-title: Vytvořte projekt testu výkonu a zatížení webu
+title: Vytvořit projekt testů výkonnosti webu a zátěžového testu
 ms.date: 03/14/2018
 ms.topic: quickstart
 helpviewer_keywords:
 - load testing, quickstart
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c6703221f9db06ca8edba68a2f2bcc9b79a5d531
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8d74072c506c4ce48ee93b759ba24aff23aa9419
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62784703"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646686"
 ---
-# <a name="quickstart-create-a-load-test-project"></a>Rychlý start: Vytvoření projektu pro zátěžový test
+# <a name="quickstart-create-a-load-test-project"></a>Rychlý start: Vytvoření projektu zátěžového testu
 
-V tomto rychlém startu během 10 minut dozvíte, jak vytvořit a spustit webový výkon a projekt zátěžového testu v sadě Visual Studio. Zátěžové testy spustit webového výkonu nebo jednotkových testů ke simulace mnoha uživatelů přistupujících na server ve stejnou dobu.
+V tomto rychlém startu se dozvíte, jak vytvořit a spustit projekt testů výkonnosti webu a zátěžového testu v aplikaci Visual Studio. Zátěžové testy spouštějí webový výkon nebo testy jednotek pro simulaci velkého počtu uživatelů, kteří přistupují k serveru současně.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="software-requirements"></a>Požadavky na software
 
-Projekty testů webového výkonu a zatížení jsou dostupné jen **Enterprise edition** sady Visual Studio.
+Projekty webového výkonu a zátěžového testu jsou k dispozici pouze v **edici Enterprise** sady Visual Studio.
 
-## <a name="install-the-load-testing-component"></a>Nainstalujte zátěžového testování součástí
+## <a name="install-the-load-testing-component"></a>Instalace komponenty zátěžového testování
 
-Pokud nemáte již výkonu webu a načíst testování nainstalována součást nástroje, bude nutné ji nainstalovat pomocí instalačního programu sady Visual Studio.
+Pokud ještě nemáte nainstalovanou součást Performance Test Tools a nástroj pro testování zatížení, budete ji muset nainstalovat pomocí Instalační program pro Visual Studio.
 
-1. Otevřít **instalační program sady Visual Studio** z **Start** nabídku Windows. Dostanete se v sadě Visual Studio z dialogového okna Nový projekt nebo výběrem **nástroje** > **stažení nástrojů a funkcí** z řádku nabídek.
+1. V nabídce **Start** systému Windows otevřete **instalační program pro Visual Studio** . Můžete k němu také přistupovat v aplikaci Visual Studio z dialogového okna Nový projekt nebo výběrem **nástrojů**  > **získat nástroje a funkce** z řádku nabídek.
 
-1. V **instalační program sady Visual Studio**, zvolte **jednotlivé komponenty** kartu a přejděte dolů k položce **ladění a testování** oddílu. Vyberte **výkonnosti webů a zátěžové testování nástroje**.
+1. V **instalační program pro Visual Studio**klikněte na kartu **jednotlivé součásti** a přejděte dolů k části **ladění a testování** . Vyberte **Nástroje pro testování výkonu a zatížení webu**.
 
-   ![Výkonnosti webů a zátěžové testování součást nástroje](media/web-perf-load-testing-tools-component.png)
+   ![Komponenta Performance and Load Test Tools](media/web-perf-load-testing-tools-component.png)
 
-1. Zvolte **změnit** tlačítko.
+1. Klikněte na tlačítko **Upravit** .
 
-   Je nainstalován webový výkon a zátěžové testování součástí nástroje.
+   Komponenta Performance and Load Test Tools je nainstalována.
 
-## <a name="create-a-load-test-project"></a>Vytvoření projektu zátěžového testu
+## <a name="create-a-load-test-project"></a>Vytvoření projektu pro zátěžový test
 
-V této části vytvoříme C# projekt zátěžového testu. Můžete také vytvořit projektu jazyka Visual Basic zátěžového testu, pokud dáváte přednost.
+V této části vytvoříme projekt C# zátěžového testu. V případě potřeby můžete také vytvořit projekt Visual Basic zátěžového testu.
 
 ::: moniker range="vs-2017"
 
-1. Otevřít Visual Studio.
+1. Otevřete Visual Studio.
 
-2. Zvolte **souboru** > **nový** > **projektu** z řádku nabídek.
+2. Z řádku nabídek vyberte **soubor** > **Nový** > **projekt** .
 
-   **Nový projekt** zobrazí se dialogové okno.
+   Otevře se dialogové okno **Nový projekt** .
 
-3. V **nový projekt** dialogového okna rozbalte **nainstalováno** a **Visual C#** a pak vyberte **Test** kategorie. Zvolte **webový výkon a projekt zátěžového testu** šablony.
+3. V dialogovém okně **Nový projekt** rozbalte položku **nainstalované** a **vizuál C#** a pak vyberte kategorii **test** . Vyberte šablonu **projekt webového výkonu a zátěžového testu** .
 
-   ![Šablona projektu test webového výkonu a zatížení](media/web-perf-load-test-project-template.png)
+   ![Šablona projektu testování výkonu webu a zátěžového testu](media/web-perf-load-test-project-template.png)
 
-4. Zadejte název projektu, pokud nechcete použít výchozí název a klikněte na tlačítko **OK**.
+4. Zadejte název projektu, pokud nechcete použít výchozí název, a pak zvolte **OK**.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Otevřít Visual Studio.
+1. Otevřete Visual Studio.
 
-2. V okně start zvolte **vytvořte nový projekt**.
+2. V okně Start vyberte možnost **vytvořit nový projekt**.
 
-3. Na **vytvořte nový projekt** zadejte **webového testu** do vyhledávacího pole a pak vyberte **webový výkon a projekt zátěžového testu \[zastaralé]** Šablona pro C#. Zvolte **Další**.
+3. Na stránce **vytvořit nový projekt** zadejte do vyhledávacího pole **webový test** a potom vyberte šablonu **výkon webu a zátěžový test \[Deprecated]** pro C#. Klikněte na tlačítko **Další**.
 
-4. Zadejte název projektu, pokud nechcete použít výchozí název a klikněte na tlačítko **vytvořit**.
+4. Zadejte název projektu, pokud nechcete použít výchozí název, a pak zvolte **vytvořit**.
 
 ::: moniker-end
 
-   Visual Studio vytvoří projekt a zobrazí soubory v **Průzkumníka řešení**. Projekt zpočátku obsahuje jeden soubor webového testu s názvem *WebTest1.webtest*.
+   Visual Studio vytvoří projekt a zobrazí soubory v **Průzkumník řešení**. Projekt zpočátku obsahuje jeden soubor webového testu s názvem *WebTest1. webtest*.
 
-## <a name="add-a-load-test-to-the-project"></a>Přidejte zátěžový test do projektu
+## <a name="add-a-load-test-to-the-project"></a>Přidat zátěžový test do projektu
 
-1. Z místní nabídky nebo místní nabídku uzlu projektu v **Průzkumníka řešení**, zvolte **přidat** > **zátěžový Test**.
+1. V nabídce klepněte pravým tlačítkem myši nebo v kontextové nabídce uzlu projektu v **Průzkumník řešení**vyberte možnost **Přidat**  > **zátěžový test**.
 
-   **Průvodce novým zátěžovým testem** otevře.
+   Otevře se **nový Průvodce zátěžovým testem** .
 
-1. Vyberte **On-premises zátěžový Test** možnost a klikněte na tlačítko **Další**. Další informace o cloudové zátěžové testování [tady](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts).
+1. Vyberte možnost místní **zátěžový test** a klikněte na tlačítko **Další**. Další informace o cloudovém zátěžovém testování najdete [tady](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts).
 
    ![Průvodce novým zátěžovým testem – první stránka](media/load-test-wizard-page-1.png)
 
-1. Zvolte **Další** krokovat průvodce, dokud se nedostanete **přidáte testy do scénáře zátěžového testu a upravit poměr testů** stránky. Zvolte **přidat** tlačítko.
+1. Klikněte na tlačítko **Další** a postupujte podle pokynů průvodce, dokud se nedostanete do **scénáře zátěžového testu a upravíte stránku s kombinací testů** . Klikněte na tlačítko **Přidat** .
 
-   **Přidat testy** zobrazí se dialogové okno.
+   Otevře se dialogové okno **Přidat testy** .
 
-1. V části **dostupné testy**vyberte **WebTest1**a klikněte na tlačítko se šipkou doprava přesunout do **vybrané testy** pole. Zvolte **OK** tlačítko.
+1. V části **Dostupné testy**vyberte **WebTest1**a pak zvolte šipku doprava pro přesunutí do pole **vybrané testy** . Klikněte na tlačítko **OK** .
 
    ![Přidat testy – dialogové okno](media/add-tests-dialog-box.png)
 
-1. Zpátky **Průvodce novým zátěžovým testem**, zvolte **Dokončit** tlačítko.
+1. Zpět v **novém Průvodce zátěžovým testem**klikněte na tlačítko **Dokončit** .
 
    Zátěžový test je přidán do projektu a soubor zátěžového testu se otevře v okně editoru.
 
-## <a name="run-the-load-test"></a>Spusťte zátěžový test
+## <a name="run-the-load-test"></a>Spustit zátěžový test
 
-Vytvořili jsme zátěžový test, který nebude provádět velmi dobře, ale přesto ji můžeme spustit.
+Vytvořili jsme zátěžový test, který nefunguje hodně, ale pojďme ho přesto spustit.
 
-V místní nabídce nebo kontextové nabídky, která je otevřená v editoru zátěžového testu zvolte **spustit zátěžový Test**.
+V nabídce kliknutím pravým tlačítkem nebo v kontextové nabídce pro zátěžový test, který je otevřen v editoru, vyberte možnost **spustit zátěžový test**.
 
-![Nabídka běhu zátěžového testu](media/run-load-test.png)
+![Nabídka spustit zátěžový test](media/run-load-test.png)
 
-Zátěžový test začíná běžet. **Výsledky testu** okno zobrazuje, že probíhá test a analyzéru zátěžového testu se zobrazí v okně editoru. Po dokončení testu, které by měly být pět minut, pokud je přijmout výchozí hodnoty, souhrn se zobrazí v editoru. Můžete zvolit **grafy**, **tabulky**, nebo **podrobností** různé informace o výsledcích zátěžového testu.
+Zátěžový test začíná běžet. Okno **výsledky testů** ukazuje, že probíhá test, a v okně editoru je zobrazen analyzátor zátěžového testu. Po dokončení testu, který by měl být pět minut, pokud jste přijali výchozí hodnoty, zobrazí se v editoru souhrn. Můžete zvolit **grafy**, **tabulky**nebo **Podrobnosti** a získat tak různé informace o výsledcích zátěžového testu.
 
 ![Okno analyzátoru zátěžového testu](media/load-test-analyzer.png)
 
 ## <a name="next-steps"></a>Další kroky
 
-Teď, když jste vytvořili projekt jednoduché zátěžového testu, dalším krokem je konfigurace pro scénáře, sad čítačů a parametrů spuštění.
+Teď, když jste vytvořili jednoduchý projekt zátěžového testu, je dalším krokem konfigurace scénářů, sad čítačů a nastavení spuštění.
 
 > [!div class="nextstepaction"]
 > [Upravit nastavení testu](edit-load-tests.md)

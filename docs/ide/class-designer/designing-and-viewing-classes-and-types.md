@@ -1,5 +1,5 @@
 ---
-title: Použít Návrháře tříd
+title: Použít Návrhář tříd
 ms.date: 05/08/2018
 ms.topic: conceptual
 f1_keywords:
@@ -11,49 +11,49 @@ helpviewer_keywords:
 - classes [Visual Studio], viewing
 - class designer
 ms.assetid: 40ed2c9d-0ce0-4b95-ad78-5dec2065ccea
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee4910471693a2941ec9548773a2f50e443a639b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 31b28da2206d23c6112d7e7e154d7e907f63b163
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975571"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72631891"
 ---
-# <a name="design-and-view-classes-and-types-with-class-designer"></a>Návrh a zobrazení tříd a typů pomocí návrháře tříd
+# <a name="design-and-view-classes-and-types-with-class-designer"></a>Návrh a zobrazení tříd a typů pomocí Návrhář tříd
 
-Návrh, vizualizace a Refaktorovat třídy a další typy v kódu pomocí **návrhář tříd** v sadě Visual Studio. Použít diagramy tříd k vytvoření a úprava tříd ve vaší C#, Visual Basic nebo C++ projektu. Můžete také použít diagramy tříd pochopit strukturu projektu lepší nebo reorganizovat váš kód.
+Navrhněte, Vizualizujte a refaktorujte třídy a další typy v kódu pomocí **Návrhář tříd** v aplikaci Visual Studio. Diagramy tříd použijte k vytváření a úpravám tříd v C#, Visual Basic nebo C++ projektu. Můžete také použít diagramy tříd pro lepší pochopení struktury projektu nebo reorganizace kódu.
 
 ## <a name="what-you-can-do-with-class-diagrams"></a>Co můžete dělat s diagramy tříd
 
-- **Návrh**: Úpravy kódu úpravou diagramu tříd. Přidat nové prvky a odstraňte nežádoucí. Vaše změny se projeví v kódu.
+- **Návrh**: Upravte kód projektu úpravou diagramu tříd. Přidejte nové prvky a odstraňte nechtěné. Vaše změny se projeví v kódu.
 
-- **Vizualizujte**: Struktura projektu pochopit zobrazením třídy v projektu v diagramu. Přizpůsobte diagramu tak, aby se mohli soustředit na podrobnosti o projektu, které vám nejvíce záleží. Uložení diagramu pro pozdější použití pro demonstraci nebo dokumentaci.
+- **Vizualizace**: pochopení struktury projektu zobrazením tříd v projektu v diagramu. Přizpůsobte si svůj diagram, abyste se mohli soustředit na podrobnosti o projektu, které se vám týkají nejvíc. Uložte diagram pro použití později k vyukázce nebo dokumentaci.
 
-- **Refaktorovat**: Přepište metody, přejmenujte identifikátory, refaktorace parametry a implementovat rozhraní a abstraktní třídy.
+- **Refaktoring**: přepište metody, přejmenovat identifikátory, parametry refaktoru a implementujte rozhraní a abstraktní třídy.
 
 ## <a name="view-types-and-relationships"></a>Zobrazení typů a vztahů
 
-Diagramy tříd zobrazí podrobnosti o typech, například jejich základní členy a vztahy mezi nimi. Vizualizace z těchto entit je dynamický náhled do kódu. To znamená, že můžete upravit typy v návrháři a přejděte na téma úpravy projeví ve zdrojovém kódu entity. Podobně diagram tříd je udržovat synchronizované s změny provedené na soubory kódu.
+Diagramy tříd zobrazují podrobnosti typů, například jejich členy prvků, a vztahy mezi nimi. Vizualizace těchto entit je dynamické zobrazení kódu. To znamená, že můžete upravit typy v návrháři a pak zobrazit vaše úpravy, které se projeví ve zdrojovém kódu entity. Podobně, diagram tříd je udržován v synchronizaci se změnami, které provedete v souborech kódu.
 
 > [!NOTE]
-> Pokud váš projekt obsahuje diagram třídy a váš projekt odkazuje na typ, který se nachází v jiném projektu, diagram tříd dokud při sestavení projektu pro daný typ odkazovaný typ nezobrazuje. Podobně diagram nezobrazuje změny kódu externí entitu dokud je znovu sestavit projekt pro danou entitu.
+> Pokud projekt obsahuje diagram tříd a váš projekt odkazuje na typ, který je umístěn v jiném projektu, diagram třídy nezobrazuje odkazovaný typ, dokud nevytvoříte projekt pro daný typ. Podobně Diagram nezobrazuje změny kódu externí entity, dokud projekt znovu sestavíte pro tuto entitu.
 
-## <a name="class-diagram-workflow"></a>Diagram třídy pracovního postupu
+## <a name="class-diagram-workflow"></a>Pracovní postup diagramu tříd
 
-Diagramy tříd můžete vám pomůže pochopit struktura třídy projektů. Tyto projekty může být vytvořen jinými vývojáři nebo jenom potřebujete občerstvit na projektu, které jste sami vytvořili. Diagramy tříd můžete upravit, sdílet a prezentovat informace o projektu s ostatními.
+Diagramy tříd vám mohou porozumět struktuře tříd projektů. Tyto projekty mohou být vytvořeny jinými vývojáři nebo potřebujete pouze aktualizační program pro projekt, který jste sami vytvořili. Diagramy tříd můžete použít k přizpůsobení, sdílení a prezentaci informací o projektu s ostatními.
 
-Prvním krokem při zobrazení informací o projektu je vytvoření diagramu tříd, který se zobrazí, co chcete zobrazit. Další informace najdete v tématu [přidání diagramu tříd](how-to-add-class-diagrams-to-projects.md). Můžete vytvořit více diagramů tříd v projektu, který slouží k zobrazení různých zobrazení projektu, zvolená podmnožinu typů v projektu nebo podmnožinu vybrané členy typů.
+Prvním krokem při prezentaci informací o projektu je vytvoření diagramu tříd, který zobrazuje, co chcete zobrazit. Další informace najdete v tématu [přidání diagramu tříd](how-to-add-class-diagrams-to-projects.md). Můžete vytvořit více diagramů tříd pro projekt, které lze použít k zobrazení odlišného zobrazení projektu, zvolené podmnožiny typů projektu nebo zvolené podmnožiny členů typů.
 
-Kromě definujete, co se zobrazí každý diagram tříd, můžete také změnit způsob, který se zobrazí informace; Další informace najdete v tématu [jak: Přizpůsobení diagramů tříd](how-to-customize-class-diagrams.md).
+Kromě určení toho, jaký diagram tříd se zobrazuje, můžete také změnit způsob, jakým se informace zobrazují; Další informace naleznete v tématu [How to: Customizing Diagrams Class](how-to-customize-class-diagrams.md).
 
-Po mají doladíte jeden nebo více diagramů tříd, zkopírují se do dokumentů Microsoft Office a vytisknout nebo exportovat jako soubory obrázků. Další informace najdete v tématu [jak: Kopírování elementů diagramu tříd do dokumentu Microsoft Office](how-to-copy-class-diagram-elements-to-a-microsoft-office-document.md), [jak: Tisk diagramů tříd](how-to-print-class-diagrams.md) a [jak: Export diagramů tříd jako obrázky](how-to-export-class-diagrams-as-images.md).
+Po vyladění jednoho nebo více diagramů tříd je můžete zkopírovat do systém Microsoft Office dokumentů a vytisknout je, nebo je exportovat jako soubory obrázků. Další informace naleznete v tématu [Postupy: kopírování prvků diagramu tříd do dokumentu systém Microsoft Office](how-to-copy-class-diagram-elements-to-a-microsoft-office-document.md), [Postupy: Tisk diagramů tříd](how-to-print-class-diagrams.md) a [Postupy: Export diagramů tříd jako obrázků](how-to-export-class-diagrams-as-images.md).
 
 > [!NOTE]
-> Návrhář tříd nesleduje umístění zdrojových souborů, takže změna strukturu projektu nebo přesunutí zdrojové soubory v projektu může způsobit návrhář tříd ke ztrátě informací o typu, zejména zdrojový typ definice typu základní třídy a přidružení typů. Může se objevit chyba, jako je **je návrhář tříd nemůže zobrazit tento typ**. Pokud tak učiníte, přetáhněte do diagramu tříd znovu a znovu zobrazit přemístění nebo upravila zdrojový kód.
+> Návrhář tříd nesleduje umístění zdrojových souborů, takže změna struktury projektu nebo přesunutí zdrojových souborů v projektu může způsobit, že Návrhář tříd ztratí záznam o typu, zejména zdrojový typ typu typedef, základní třídy nebo typy přidružení. Může se zobrazit chyba, například **Návrhář tříd není možné zobrazit tento typ**. Pokud tak učiníte, znovu přetáhněte změněný nebo znovu umístěný zdrojový kód do diagramu tříd a znovu ho zobrazte.
 
 ## <a name="see-also"></a>Viz také:
 

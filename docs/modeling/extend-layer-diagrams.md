@@ -5,25 +5,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, creating extensions
 - layer models
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c164174b88ca9fdd815668084c1447e20de072c
-ms.sourcegitcommit: 6a19c5ece38a70731496a38f2ef20676ff18f8a4
+ms.openlocfilehash: 8a8297ede4ce703c738133952bb13669ef6a6637
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476571"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645674"
 ---
 # <a name="extend-dependency-diagrams"></a>Rozšíření diagramů závislostí
 
-Můžete napsat kód k vytvoření a aktualizaci diagramů závislostí a k ověření struktury kód programu proti diagramů závislostí v sadě Visual Studio. Můžete přidat příkazy, které se zobrazují v nabídce místní (objektu context) diagramů, přizpůsobení gesta přetažení myší a přístup k modelu vrstvy z textových šablon. Můžete zabalit tato rozšíření do Visual Studio integrace rozšíření (VSIX) a distribuovat ostatním uživatelům aplikace Visual Studio.
+Můžete napsat kód pro vytváření a aktualizaci diagramů závislostí a k ověření struktury kódu programu pro diagramy závislostí v aplikaci Visual Studio. Můžete přidat příkazy, které se zobrazí v místní nabídce (kontextové) diagramu, upravit gesta přetažení a přistupovat k modelu vrstvy z textových šablon. Tato rozšíření můžete zabalit do rozšíření integrace sady Visual Studio (VSIX) a distribuovat je ostatním uživatelům aplikace Visual Studio.
 
 ## <a name="requirements"></a>Požadavky
 
-Musí být nainstalovaný na počítači, kde chcete vyvíjet rozšíření vrstvy:
+V počítači, na kterém chcete vyvíjet rozšíření vrstev, je nutné mít nainstalované následující:
 
 - Visual Studio
 
@@ -33,7 +33,7 @@ Musí být nainstalovaný na počítači, kde chcete vyvíjet rozšíření vrst
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-Musíte mít vhodný edici sady Visual Studio nainstalované na počítači, ve kterém chcete spustit rozšíření vrstvy. Chcete-li zjistit, jaké edice sady Visual Studio podporují diagramů závislostí, přečtěte si téma [podpora edice nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+V počítači, na kterém chcete spustit rozšíření vrstvy, musíte mít nainstalovanou vhodnou verzi sady Visual Studio. Chcete-li zjistit, které edice sady Visual Studio podporují diagramy závislostí, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 ## <a name="see-also"></a>Viz také:
 

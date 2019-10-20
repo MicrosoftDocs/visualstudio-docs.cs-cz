@@ -1,40 +1,40 @@
 ---
-title: 'Návrhář schémat XML: Získejte přehled sadě schémat pomocí zobrazení grafu'
+title: 'Návrhář schématu XML: získání přehledu o sadě schémat pomocí zobrazení grafu'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c0df4b0d-52ef-4a6c-9676-1d8311aad7c7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e0a0fc62a0d6dfe772a550f33cafa02bc5bc1bf3
-ms.sourcegitcommit: ba5e072c9fedeff625a1332f22dcf3644d019f51
+ms.openlocfilehash: b8acc2ff6a41f7057818c4a7659f2aa9d07c8bac
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432170"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651182"
 ---
-# <a name="how-to-get-an-overview-of-a-schema-set-using-the-graph-view"></a>Postupy: Získejte přehled o schéma, nastavte pomocí zobrazení grafu
+# <a name="how-to-get-an-overview-of-a-schema-set-using-the-graph-view"></a>Postupy: získání přehledu o sadě schémat pomocí zobrazení grafu
 
-Toto téma popisuje způsob použití [zobrazení grafu](../xml-tools/graph-view.md) zobrazíte souhrnný přehled uzly v sadě schémat a vztahy mezi uzly.
+Toto téma popisuje, jak použít [zobrazení grafu](../xml-tools/graph-view.md) k zobrazení vysokého zobrazení uzlů v sadě schémat a vztahů mezi uzly.
 
-## <a name="to-create-a-new-xsd-file-and-display-the-root-element-in-the-content-model-view"></a>Vytvořte nový soubor XSD a zobrazte kořenový element v zobrazení modelu obsahu
+## <a name="to-create-a-new-xsd-file-and-display-the-root-element-in-the-content-model-view"></a>Vytvoření nového souboru XSD a zobrazení kořenového prvku v zobrazení modelu obsahu
 
-1. Vytvořte nový soubor XML schéma a soubor uložte jako *Relationships.xsd*.
+1. Vytvořte nový soubor schématu XML a uložte soubor jako *Relationships. xsd*.
 
-2. Klikněte na tlačítko **editoru XML použijte k zobrazení a úpravě základního souboru schématu XML** odkaz na zobrazení spuštění.
+2. Kliknutím na **použít editor XML zobrazíte a upravíte odkaz základní soubor XML schématu** v zobrazení Start.
 
-3. Zkopírujte ukázkový kód XML schéma z [ukázky XML schématu: relace](../xml-tools/sample-xsd-file-relationships.md) a vložte ji nahradit kód, který byl přidán do nového souboru XSD ve výchozím nastavení.
+3. Zkopírujte ukázkový kód schématu XML z [ukázkového schématu XML: relace](../xml-tools/sample-xsd-file-relationships.md) a vložte jej pro nahrazení kódu, který byl přidán do nového souboru XSD ve výchozím nastavení.
 
-4. Klikněte pravým tlačítkem na libovolné místo v editoru XML a vyberte **Návrhář zobrazení**.
+4. Klikněte pravým tlačítkem na libovolné místo v editoru XML a vyberte **zobrazení Návrhář**.
 
-5. Vyberte zobrazení grafu z **XSD nástrojů**.
+5. Vyberte zobrazení grafu z **panelu nástrojů XSD**.
 
-6. Vyberte **schématu nastavení** uzlu **Průzkumníka schémat XML** a přetáhněte uzel na návrhové ploše zobrazení grafu. Měli byste vidět všechny globální uzly a šipky spojující uzly, které mají relace.
+6. V **Průzkumníku schémat XML** vyberte uzel **sada schémat** a přetáhněte uzel na návrhovou plochu zobrazení grafu. Měli byste vidět všechny globální uzly a šipky připojující uzly, které mají relace.
 
      ![Zobrazení grafu](../xml-tools/media/relationshipingraphview.gif)
 
-7. Klikněte na libovolný uzel na návrhové ploše a podívejte se na panelu s popisem cesty chcete zobrazit, kde se nachází na vybraný uzel v sadě schémat.
+7. Klikněte na libovolný uzel na návrhové ploše a podívejte se na panel s popisem cesty a zjistěte, kde se vybraný uzel nachází v sadě schémat.
 
-8. Rick klepněte na žádný uzel prvku na návrhové ploše a vyberte **generovat ukázkové XML** zobrazíte instance dokumentu XML.
+8. Rick – klikněte na libovolný uzel prvku na návrhové ploše a vyberte **vytvořit ukázkový kód XML** pro zobrazení dokumentu instance XML.

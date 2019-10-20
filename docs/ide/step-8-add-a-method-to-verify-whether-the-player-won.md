@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d53740d0970aba2c5b0442ded722c648f759f724
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
-ms.translationtype: HT
+ms.openlocfilehash: 0c451b2da08fdb0b38487438a47c6285b0380627
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72575138"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647457"
 ---
 # <a name="step-8-add-a-method-to-verify-whether-the-player-won"></a>Krok 8: Přidejte metodu k ověření, zda hráč zvítězil
 Vytvořili jste zábavnou hru, která však potřebuje ještě něco. Hra by měla skončit, když je přehrávač WINS, takže pokud chcete ověřit, zda hráč zvítězil, je třeba přidat metodu `CheckForWinner()`.
@@ -40,13 +40,13 @@ Vytvořili jste zábavnou hru, která však potřebuje ještě něco. Hra by mě
      [!code-csharp[VbExpressTutorial4Step8#11](../ide/codesnippet/CSharp/step-8-add-a-method-to-verify-whether-the-player-won_2.cs)]
      [!code-vb[VbExpressTutorial4Step8#11](../ide/codesnippet/VisualBasic/step-8-add-a-method-to-verify-whether-the-player-won_2.vb)]
 
-3. Program uložte a spusťte jej. Zahrajte si hru a spárujte všechny ikony. Když nahrajete, program zobrazí congratulatory **MessageBox** (jak je znázorněno na následujícím obrázku) a pak pole zavře.
+3. Program uložte a spusťte jej. Zahrajte si hru a spárujte všechny ikony. Když nahrajete, program zobrazí congratulatory **MessageBox** (jak je znázorněno na následujícím snímku obrazovky) a pak okno zavře.
 
      ![Matching hry pomocí MessageBox ](../ide/media/express_tut4step8.png)<br/>
-**Porovnávací hra** s **MessageBox**
+***Porovnávací hra*** *s* ***MessageBox***
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu, přečtěte si [článek krok 9: Vyzkoušejte si další funkce](../ide/step-9-try-other-features.md).
+- Pokud chcete přejít na další krok kurzu, přečtěte si **[článek krok 9: Vyzkoušejte si další funkce](../ide/step-9-try-other-features.md)** .
 
 - Pokud se chcete vrátit k předchozímu kroku kurzu, přečtěte si část [Krok 7: zůstat páry viditelné](../ide/step-7-keep-pairs-visible.md).

@@ -1,5 +1,5 @@
 ---
-title: Globalizace a lokalizace aplikací | Dokumentace Microsoftu
+title: Globalizace a lokalizace aplikací | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,48 +13,39 @@ helpviewer_keywords:
 - international applications [Visual Studio]
 ms.assetid: 4d9815ae-3e80-4b4d-933d-f8309aee18d5
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fe8671142aeda4972f9ac218fe536b4a991649a7
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 3d057296e38cbba38651bb9228b8cd837f21deaf
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65704370"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645551"
 ---
 # <a name="globalizing-and-localizing-applications"></a>Globalizace a lokalizace aplikací
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pokud plánujete distribuce vaší aplikace pro mezinárodní cílovou skupinu, bude nutné zachovat pár věcí v úvahu během fáze návrhu a vývoje. I v případě, že nemáte k dispozici tyto plány, ještě před zahájením malé úsilí můžete usnadnili značně by měla vaše plány změnit v budoucích verzí aplikace. Součástí služby [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] usnadňují vývoj jednu aplikaci, která se přizpůsobí různá národní prostředí spravovaný vývoj pomocí sady Visual Studio.  
-  
- Visual Studio byla navržena od samého začátku k usnadnění vývoje s využitím služeb do vytvořených pro mezinárodní snadno cílovou skupinu [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Na následujících stránkách pomůže vám představíme funkce internacionalizace integrované do sady Visual Studio.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Představení mezinárodních aplikací založených na prostředí .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md)  
- Seznámíte se základními pojmy týkající se vývoje softwaru pro mezinárodní trh pomocí sady Visual Studio a [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
-  
- [Lokalizace aplikací](../ide/localizing-applications.md)  
- Obsahuje odkazy na stránky o přizpůsobení aplikace pro danou jazykovou verzi.  
-  
- [Globalizace aplikací](../ide/globalizing-applications.md)  
- Obsahuje odkazy na stránky o vytváření aplikací, které podporují více jazykových verzích.  
-  
-## <a name="related-sections"></a>Související oddíly  
- [Globalizace aplikace (aplikace Windows Store pomocí jazyka JavaScript a HTML)](http://go.microsoft.com/fwlink/?LinkId=258266)  
- Obsahuje témata s postupy a pokyny, které vám pomůžou globalizace a lokalizace vašich [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] aplikace vytvořené pomocí jazyků JavaScript a HTML.  
-  
- [Globalizace aplikace (aplikace Windows Store pomocí jazyka C# / VB/C++ a XAML)](http://go.microsoft.com/fwlink/?LinkId=258267)  
- Obsahuje témata s postupy a pokyny, které vám pomůžou globalizace a lokalizace vašich [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] aplikace vyvíjené v XAML a Visual C#, Visual Basic nebo Visual C++.  
-  
- [Doporučené postupy pro vývoj aplikací připravených k použití](https://msdn.microsoft.com/library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c)  
- Poskytuje základní informace o programování pro mezinárodní cílovou skupinu.  
-  
- [Přehled knihovny tříd](https://msdn.microsoft.com/library/7e4c5921-955d-4b06-8709-101873acf157)  
- Zavádí tříd, rozhraní a typů hodnot, které urychlují a optimalizovat proces vývoje a poskytují přístup k funkčnosti systému.  
-  
- <xref:System.Globalization>  
- Body třídy v tomto oboru názvů, které definují informace týkající se jazykové verze, včetně jazyka, země nebo oblast, kalendáře v použití, pořadí vzory formátu data, měny a čísla a řazení řetězců.  
-  
- <xref:System.Resources>  
- Body třídy a rozhraní v tomto oboru názvů, který umožňuje vývojářům vytvářet, ukládat a spravovat různé prostředky specifické pro jazykovou verzi používané v aplikaci.
+Pokud plánujete distribuci vaší aplikace na mezinárodní cílovou skupinu, budete si muset během fází návrhu a vývoje vzít v úvahu několik věcí. I v případě, že tyto plány ještě nemáte, můžou malé úsilí výrazně usnadnit změny vašich plánů v budoucích verzích vaší aplikace. Služby integrované do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] usnadňují vývoj jedné aplikace, která se může přizpůsobit různým místním prostředím pomocí spravovaného vývoje v aplikaci Visual Studio.
+
+ Visual Studio bylo navrženo od začátku až po vývoj pro mezinárodní cílovou skupinu díky využití služeb integrovaných do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Následující stránky vám pomůžou seznámit se s funkcemi pro mezinárodní prostředí, které jsou součástí sady Visual Studio.
+
+## <a name="in-this-section"></a>V tomto oddílu
+ [Seznámení s mezinárodními aplikacemi na základě .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md) Zavádí koncepty týkající se vývojového softwaru pro mezinárodní trh pomocí sady Visual Studio a [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].
+
+ [Lokalizace aplikací](../ide/localizing-applications.md) Obsahuje odkazy na stránky o přizpůsobení aplikací pro danou jazykovou verzi.
+
+ [Globalizace aplikací](../ide/globalizing-applications.md) Obsahuje odkazy na stránky o vytváření aplikací podporujících více jazykových verzí.
+
+## <a name="related-sections"></a>Související oddíly
+ [Globalizace vaší aplikace (aplikace pro Windows Store pomocí JavaScriptu a HTML)](http://go.microsoft.com/fwlink/?LinkId=258266) Obsahuje postupy a pokyny, které vám pomohou při globalizaci a lokalizaci aplikace [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] sestavené pomocí JavaScriptu a HTML.
+
+ [Globalizace vaší aplikace (aplikace pro Windows Store C#využívajícíC++ /VB/a XAML)](http://go.microsoft.com/fwlink/?LinkId=258267) obsahuje postupy a pokyny, které vám pomohou globalizaci a lokalizaci [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] aplikace sestavené pomocí jazyka XAML a C#vizuálu, Visual Basic nebo vizuálu C++.
+
+ [Osvědčené postupy pro vývoj aplikací připravených pro použití ve světě](https://msdn.microsoft.com/library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c) Poskytuje základní informace o programování pro mezinárodní cílovou skupinu.
+
+ [Přehled knihovny tříd](https://msdn.microsoft.com/library/7e4c5921-955d-4b06-8709-101873acf157) Zavádí třídy, rozhraní a typy hodnot, které urychlují a optimalizují proces vývoje a poskytují přístup k funkčnosti systému.
+
+ <xref:System.Globalization> odkazuje na třídy v tomto oboru názvů, které definují informace týkající se jazykové verze, jako je jazyk, země nebo oblast, používané kalendáře, vzory formátu data, měny a čísel a pořadí řazení pro řetězce.
+
+ <xref:System.Resources> odkazuje na třídy a rozhraní v tomto oboru názvů, což umožňuje vývojářům vytvářet, ukládat a spravovat různé prostředky specifické pro jazykovou verzi používané v aplikaci.

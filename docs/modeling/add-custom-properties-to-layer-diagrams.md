@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, adding custom properties
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3ef03b3833f30c1376bd3b2787f4ca773c992ef
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 58a52983b1a3def85d5785d0aa3f7abf99e0317c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870672"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652300"
 ---
 # <a name="add-custom-properties-to-dependency-diagrams"></a>Přidání vlastních vlastností do diagramů závislostí
 
@@ -22,7 +22,7 @@ Při psaní kódu rozšíření pro diagramy závislosti můžete uložit hodnot
 
 ## <a name="non-visible-properties"></a>Neviditelné vlastnosti
 
-Pokud chcete, aby kód připojil hodnoty k jakémukoli prvku v diagramu závislostí, nemusíte definovat komponentu MEF. V ILayerElement je slovník s `Properties` názvem [](/previous-versions/ff644511(v=vs.140)). Stačí přidat zařazovací hodnoty do slovníku libovolného elementu vrstvy. Budou uloženy jako součást diagramu závislostí.
+Pokud chcete, aby kód připojil hodnoty k jakémukoli prvku v diagramu závislostí, nemusíte definovat komponentu MEF. V [ILayerElement](/previous-versions/ff644511(v=vs.140))je slovník s názvem `Properties`. Stačí přidat zařazovací hodnoty do slovníku libovolného elementu vrstvy. Budou uloženy jako součást diagramu závislostí.
 
 ## <a name="editable-properties"></a>Upravitelné vlastnosti
 
@@ -63,11 +63,11 @@ public class MyProperty : PropertyExtension<ILayerElement>
 
 Můžete definovat vlastnosti v [ILayerElement](/previous-versions/ff644511(v=vs.140)) nebo kterékoli z jeho odvozených tříd, které zahrnují:
 
-- `ILayerModel`– model
+- `ILayerModel` – model
 
-- `ILayer`– jednotlivé vrstvy
+- `ILayer` – jednotlivé vrstvy
 
-- `ILayerDependencyLink`– propojení mezi vrstvami
+- `ILayerDependencyLink` – propojení mezi vrstvami
 
 - `ILayerComment`
 

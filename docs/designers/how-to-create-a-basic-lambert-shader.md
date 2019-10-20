@@ -3,19 +3,19 @@ title: 'Postupy: Vytvoření základního Lambertova shaderu'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ec5c10fb-9600-4240-8280-d59451ea1d68
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 662409f3655e23589a2416bb15572eb3df41bcb6
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: c2034c09098aeded57671186731729a5928be8e6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924443"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72636192"
 ---
-# <a name="how-to-create-a-basic-lambert-shader"></a>Postupy: Vytvoření základního Lambertova shaderu
+# <a name="how-to-create-a-basic-lambert-shader"></a>Postupy: Vytvoření základního Lambert shaderu
 
 Tento článek ukazuje, jak pomocí Návrháře shaderu a jazyka DGSL (Direct Graph shader) vytvořit světelný shader, který implementuje model osvětlení Classic Lambert.
 
@@ -27,11 +27,11 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
 
 1. Vytvořte DGSL shader, který bude fungovat. Informace o tom, jak přidat DGSL shader do projektu, naleznete v části Začínáme v [Návrháři shaderu](../designers/shader-designer.md).
 
-2. Odpojí uzel **Barva bodu** od finálního uzlu **barvy** . Zvolte terminál **RGB** pro uzel **Barva bodu** a pak zvolte možnost **přerušení propojení**. Nechejte terminál **Alpha** připojený.
+2. Odpojí uzel **Barva bodu** od **finálního uzlu barvy** . Zvolte terminál **RGB** pro uzel **Barva bodu** a pak zvolte možnost **přerušení propojení**. Nechejte terminál **Alpha** připojený.
 
 3. Přidejte uzel **Lambert** do grafu. V **panelu nástrojů**vyberte v části **Nástroj**možnost **Lambert** a přesuňte ji na návrhovou plochu. Uzel Lambert vypočítá celkový podíl barvy difúze v pixelech na základě parametrů okolí a rozptýlené osvětlení.
 
-4. Připojte uzel **Barva bodu** k **Lambert** uzlu. V režimu **výběru** přesuňte terminál **RGB** uzlu **barvy bodu** do terminálu rozdifúze **barvy** uzlu **Lambert** . Toto připojení poskytuje uzel Lambert s interpolací barvou difúze na pixelu.
+4. Připojte uzel **Barva bodu** k **Lambert** uzlu. V režimu **výběru** přesuňte terminál **RGB** uzlu **barvy bodu** do terminálu **rozdifúze barvy** uzlu **Lambert** . Toto připojení poskytuje uzel Lambert s interpolací barvou difúze na pixelu.
 
 5. Připojí vypočítanou hodnotu barvy k konečné barvě. Přesuňte **výstupní** terminál uzlu **Lambert** do terminálu **RGB** **konečného uzlu barvy** .
 
@@ -48,12 +48,12 @@ Následující ilustrace znázorňuje shader, který je popsaný v tomto dokumen
 
 ![Lambert osvětlení použité pro model.](../designers/media/digit-lambert-effect-result.png)
 
-Další informace o tom, jak použít shader na 3D model, naleznete v tématu [How to: Použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+Další informace o tom, jak použít shader na 3D model, naleznete v tématu [How to: Apply shader to a 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Postupy: Použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
-- [Postupy: Export shaderu](../designers/how-to-export-a-shader.md)
+- [Postupy: použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [Postupy: Exportování shaderu](../designers/how-to-export-a-shader.md)
 - [Postupy: Vytvoření základního Phongova shaderu](../designers/how-to-create-a-basic-phong-shader.md)
 - [Návrhář shaderů](../designers/shader-designer.md)
 - [Uzly návrháře shaderů](../designers/shader-designer-nodes.md)

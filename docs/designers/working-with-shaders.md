@@ -3,40 +3,40 @@ title: Práce se shadery
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 6b2ea1ed-b995-4e75-af19-c68fd37a3bc5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1f07b293447a10a7d39e24ef42b1faedc27c7d6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4b3d2c6c745f17bbada918128fed852249e3024d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62892400"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72633786"
 ---
 # <a name="work-with-shaders"></a>Práce se shadery
 
-Grafické návrháře shaderu v sadě Visual Studio slouží k návrhu vlastní shaderu účinky. Můžete použít tyto shaderů založené na rozhraní DirectX hře nebo aplikaci.
+Pomocí Návrháře shaderu založeného na grafech v aplikaci Visual Studio můžete navrhovat efekty vlastních shaderů. Tyto shadery můžete použít ve hře nebo aplikaci založené na rozhraní DirectX.
 
 ## <a name="shaders"></a>Shadery
 
-A *shaderu* je počítačový program, který provádí výpočty grafiky – například transformace vrchol nebo pixel barevné – obvykle běží na grafický procesor (GPU) namísto procesoru. Protože většina fáze zřetězení grafiky tradiční, funkce teď provádí shaderu programy, je můžete použít k vytvoření kanálu, která jsou specifická podle potřeb vaší aplikace.
+*Shader* je počítačový program, který provádí výpočty grafiky, například transformace vrcholů nebo barevné vybarvení pixelů a obvykle běží na grafickém procesoru (GPU) místo procesoru. Vzhledem k tomu, že většina fází tradičního kanálu grafiky s pevnou funkcí je teď prováděná programy shaderu, můžete je použít k vytvoření kanálu, který je specifický pro potřeby vaší aplikace.
 
-Nejběžnější typy shaderů se *vertex shader*, který provádění výpočtů na vrcholu a nahraďte transformace – funkce a obvody osvětlení v Neprogramovatelná grafický hardware, a *pixelů shadery*, které provádějí výpočty jednotlivých pixelů, které určit barva pixel a nahraďte barva function kombinační obvod v Neprogramovatelná grafický hardware. Moderní grafický hardware provedl i další typy shaderů je to možné –*shadery trupu*, *domény shadery*, a *geometry shader* pro grafické výpočty a *výpočetní shadery* pro výpočty bez grafiky. Žádná z těchto fází jsou dostupné v Neprogramovatelná grafický hardware. Shadery byly původně vytvořeny pomocí sestavení jazyk, který poskytuje paralelizovaného pro data (SIMD) a pokyny zaměřené na grafiky (součin). Nyní shadery se obvykle vytvářejí pomocí vysoké úrovně, jako v jazyce C jazyky, jako je HLSL (vysokou úroveň Shader Language).
+Nejběžnější druhy shaderů jsou funkce *vertex shadery*, které provádějí výpočty podle vrcholu a nahrazují transformaci s pevnou funkcí a obvody osvětlení v neprogramovatelném grafickém hardwaru a funkce *pixel shadery*, které provádějí výpočty v pixelech, které určují barvu v pixelech a nahrazují dopravné barvy v kombinaci s pevnou funkcí v neprogramovatelném grafickém hardwaru. Moderní grafický hardware vytvořil ještě více druhů shaderů –*shadery trupu*, *shadery domény*a *geometrické shadery* pro výpočty grafiky a *výpočetní shadery* pro výpočty, které nepoužívají grafiku. Žádná z těchto fází není ani k dispozici v neprogramovatelném grafickém hardwaru. Shadery se původně vytvořily pomocí jazyka podobného sestavením, který poskytuje pokyny pro paralelní zpracování dat (SIMD) a grafiky zaměřené na grafiku (produkt). Nyní se shadery většinou vytvářejí pomocí vysoce kvalitních jazyků, jako je HLSL (jazyk shaderu na vysoké úrovni).
 
-Návrháře shaderu slouží k vytvoření pixel shaderů interaktivně namísto z zadáním a kompilaci kódu. V Návrháři shaderu shaderu určen počet uzlů, které představují data a operace a připojení mezi uzly, které představují toku datových hodnot a mezilehlých výsledků prostřednictvím shaderu. Pomocí tohoto přístupu a v reálném čase ve verzi preview v Návrháři shaderu, můžete snadněji vizualizovat spouštění shaderu a "objevit" zajímavé variace shaderu prostřednictvím služby experimentování ve službě.
+Návrhář shaderu můžete použít k interaktivnímu vytvoření pixel shaderů namísto zadání a kompilování kódu. V Návrháři shaderu je shader definován pomocí řady uzlů, které reprezentují data a operace, a propojení mezi uzly, které reprezentují tok hodnot dat a mezilehlé výsledky prostřednictvím shaderu. Pomocí tohoto přístupu a verze Preview v reálném čase v Návrháři shaderu můžete vizualizovat provádění shaderu snadněji a "zjistit" zajímavou odchylku shaderu prostřednictvím experimentování.
 
 ## <a name="dgsl-documents"></a>Dokumenty DGSL
 
-Návrháře shaderu uloží shadery ve formátu orientovaného grafu Shader Language (DGSL), který je ve formátu XML, který je založen na orientovaného grafu jazyka přímého značení (DGML). Shader DGSL můžete použít přímo s 3D modely v editoru modelů. Ale ve vaší aplikaci mohli používat DGSL shader, je nutné ho exportovat do formátu srozumitelného DirectX – například HLSL.
+Návrhář shaderu ukládá shadery ve formátu DGSL (Direct Graph shader Language), což je formát XML založený na jazyku DGML (Direct Graph Markup Language). Shadery DGSL můžete aplikovat přímo na 3D modely v editoru modelů. Před použitím shaderu DGSL v aplikaci je však nutné exportovat do formátu, který rozhraní DirectX zná – například HLSL.
 
-Protože DGSL je kompatibilní s DGML, můžete použít nástroje, které jsou určeny k analýze dokumentech DGML k analýze vaší DGSL shader. Informace o DGML, naleznete v tématu [Principy orientovaného grafu jazyka přímého značení (DGML)](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+Vzhledem k tomu, že DGSL je kompatibilní s DGML, můžete použít nástroje navržené k analýze dokumentů DGML pro analýzu vašich DGSL shaderů. Další informace o DGML najdete v tématu [principy jazyka DGML (Directed Graph Markup Language)](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
 ## <a name="related-topics"></a>Související témata
 
 |Název|Popis|
 |-----------|-----------------|
-|[Návrhář shaderů](../designers/shader-designer.md)|Popisuje způsob použití návrháře shaderu Visual Studio pro práci se shadery.|
-|[Uzly návrháře shaderů](../designers/shader-designer-nodes.md)|Tento článek popisuje typy uzlech návrháře shaderu, které vám umožní dosáhnout grafické efekty.|
-|[Příklady návrháře shaderů](../designers/shader-designer-examples.md)|Obsahuje odkazy na témata, které ukazují, jak používat návrháře shaderu k dosažení běžné grafické efekty.|
+|[Návrhář shaderů](../designers/shader-designer.md)|Popisuje, jak používat návrháře shaderu sady Visual Studio pro práci s shadery.|
+|[Uzly návrháře shaderu](../designers/shader-designer-nodes.md)|Popisuje druhy uzlů Návrháře shaderů, které lze použít k dosažení grafických efektů.|
+|[Příklady návrháře shaderu](../designers/how-to-create-a-basic-color-shader.md)|Obsahuje odkazy na témata, která ukazují, jak používat návrháře shaderu k dosažení běžných grafických efektů.|

@@ -1,21 +1,21 @@
 ---
-title: 'Postupy: Export textury s přednásobenou hodnotou alfa'
+title: 'Postupy: Export textury s přednásobeným alfa'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 05348afa-f079-4f53-a05b-ecd91d13adab
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 16448a53064844f1c75db8b7eaa58c2cf909a968
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 84017bef80f42bd1848833b957abd88297d1e12d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924260"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72635487"
 ---
-# <a name="how-to-export-a-texture-that-has-premultiplied-alpha"></a>Postupy: Export textury s přednásobenou hodnotou alfa
+# <a name="how-to-export-a-texture-that-has-premultiplied-alpha"></a>Postupy: Export textury s předem vynásobeným alfa
 
 Kanál obsahu obrázku může ve zdrojové imagi generovat předem vynásobené alfa textury. Ty mohou být jednodušší použít a robustnější než textury, které neobsahují předem vynásobené alfa.
 
@@ -38,12 +38,12 @@ Předem vynásobený alfa nabízí několik výhod oproti konvenčnímu nenásob
 
 #### <a name="to-create-a-texture-that-uses-premultiplied-alpha"></a>Vytvoření textury, která používá předem vynásobené alfa
 
-1. Začněte základní texturou. Načtěte existující soubor bitové kopie nebo ho vytvořte podle pokynů v [tématu How to: Vytvoří základní texturu](../designers/how-to-create-a-basic-texture.md).
+1. Začněte základní texturou. Načtěte existující soubor obrázku nebo ho vytvořte tak, jak je popsáno v tématu [Postupy: Vytvoření základní textury](../designers/how-to-create-a-basic-texture.md).
 
-2. Nakonfigurujte soubor textury tak, aby byl zpracován kanálem obsahu obrázku. V **Průzkumník řešení**otevřete místní nabídku pro soubor textury a zvolte možnost **vlastnosti**. Na stránce **vlastnosti** > konfigurace**Obecné** nastavte vlastnost **typ položky** na **kanál obsahu obrázku**. Ujistěte se, že vlastnost **Content** je nastavena na **hodnotu Ano** a možnost **vyloučit ze sestavení** je nastavena na hodnotu **ne**, a poté klikněte na tlačítko **použít** . Zobrazí se stránka vlastností konfigurace **kanálu obsahu obrázku** .
+2. Nakonfigurujte soubor textury tak, aby byl zpracován kanálem obsahu obrázku. V **Průzkumník řešení**otevřete místní nabídku pro soubor textury a zvolte možnost **vlastnosti**. Na stránce **Vlastnosti konfigurace**  > **Obecné** nastavte vlastnost **typ položky** na **kanál obsahu obrázku**. Ujistěte se, že vlastnost **Content** je nastavena na **hodnotu Ano** a možnost **vyloučit ze sestavení** je nastavena na hodnotu **ne**, a poté klikněte na tlačítko **použít** . Zobrazí se stránka vlastností konfigurace **kanálu obsahu obrázku** .
 
-3. Nakonfigurujte kanál obsahu obrázku tak, aby generoval předem vynásobený alfa. Na stránce **vlastnosti** > konfigurace obrázek nastavení **kanálu** > obsahu obrázek nastavte vlastnost **převést na předem vynásobené alfa formát** na **Ano (/generatepremultipliedalpha)** .
+3. Nakonfigurujte kanál obsahu obrázku tak, aby generoval předem vynásobený alfa. V části **Vlastnosti konfigurace**  > **kanál obsahu obrázku**  >  stránce**Obecné** nastavte vlastnost **převést na předem vynásobenou hodnotu alfa formátu** na **Ano (/generatepremultipliedalpha)** .
 
-4. Zvolte **OK** tlačítko.
+4. Klikněte na tlačítko **OK** .
 
    Při sestavování projektu kanál obsahu obrazu převede zdrojový obraz z pracovního formátu na výstupní formát, který jste zadali – to zahrnuje převod obrázku na předem vynásobený formát alfa – a výsledek je zkopírován do výstupu projektu. službě.

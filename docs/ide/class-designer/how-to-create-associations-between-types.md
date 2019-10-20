@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Vytvoření asociací mezi typy (návrhář tříd)'
+title: 'Postupy: vytváření přidružení mezi typy (Návrhář tříd)'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - associations, types
 - association lines
 ms.assetid: adccb9c8-2f8a-4086-9fa9-f70f99fb6e00
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 723d1565dae55852829daf0038201d0c8685b3ce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 74fdc2ce798380aace3a2bce714fd5627799b564
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975382"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72631796"
 ---
-# <a name="how-to-create-associations-between-types-in-class-designer"></a>Postupy: Vytvoření asociací mezi typy v Návrháři tříd
+# <a name="how-to-create-associations-between-types-in-class-designer"></a>Postupy: vytváření přidružení mezi typy v Návrhář tříd
 
-Přidružení řádků **návrhář tříd** ukazují, jak jsou související třídy v diagramu. Asociační čára představuje třídu, která je typem vlastnosti nebo pole jiné třídy ve vašem projektu. Asociační čáry obecně slouží ke znázornění nejdůležitějších vztahů mezi třídami v projektu.
+Asociační čáry v **Návrhář tříd** ukazují, jak se třídy v diagramu vztahují. Asociační čára představuje třídu, která je typem vlastnosti nebo pole jiné třídy ve vašem projektu. Asociační čáry obecně slouží ke znázornění nejdůležitějších vztahů mezi třídami v projektu.
 
 Ačkoli můžete zobrazit všechna pole a vlastnosti jako přidružení, je vhodnější jako přidružení zobrazit pouze důležité členy nebo přidružení v závislosti na tom, co chcete v diagramu zdůraznit. (Můžete zobrazit méně důležité členy jako běžné členy nebo je zcela skrýt.)
 
@@ -34,7 +34,7 @@ Ačkoli můžete zobrazit všechna pole a vlastnosti jako přidružení, je vhod
 
 ## <a name="to-define-an-association-line-in-the-class-diagram"></a>Definování asociační čáry v diagramu tříd
 
-1. Na panelu nástrojů v rámci **návrhář tříd**vyberte **přidružení**.
+1. V sadě nástrojů vyberte v části **Návrhář tříd**možnost **asociace**.
 
 2. Nakreslete čáru mezi dvěma tvary, které chcete propojit pomocí přidružení.
 
@@ -44,16 +44,16 @@ Ačkoli můžete zobrazit všechna pole a vlastnosti jako přidružení, je vhod
 
 Na ploše diagramu klikněte na popisek asociační linky a upravte jej.
 
-Případně postupujte podle těchto kroků:
+Případně použijte následující postup:
 
-1. Vyberte obrazec, který obsahuje vlastnost zobrazenou jako přidružení.
+1. Vyberte tvar, který obsahuje vlastnost, která se zobrazuje jako přidružení.
 
-   Tvar získá fokus a jeho členy se zobrazí v **podrobností třídy** a **vlastnosti** systému windows.
+   Obrazec získá fokus a jeho členové se zobrazí v oknech **Podrobnosti třídy** a **vlastnosti** .
 
-2. Buď **podrobností třídy** nebo **vlastnosti** okna, upravte pole názvu pro tuto vlastnost a stisknutím klávesy **Enter**.
+2. V okně **Podrobnosti třídy** nebo **vlastnosti** upravte pole název pro danou vlastnost a stiskněte klávesu **ENTER**.
 
-   Název se aktualizuje v **podrobností třídy** řádek, na okno přidružení, **vlastnosti** okna a v kódu.
+   Název se aktualizuje v okně **podrobností třídy** , na čáře přidružení, v okně **vlastnosti** a v kódu.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Postupy: Změna mezi zápisem člena a zápisem asociace](how-to-change-between-member-notation-and-association-notation.md)
+- [Postupy: Změna mezi zápisem člena a zápisem přidružení](how-to-change-between-member-notation-and-association-notation.md)

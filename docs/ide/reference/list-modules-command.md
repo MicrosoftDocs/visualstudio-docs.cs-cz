@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ListModules command
 - list modules command
 ms.assetid: 3cb73774-6ac0-43b2-b781-75ed47175bfd
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 89be89bb3befa6f6ab9e67f6e98ae4d7b1b94e64
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 1fef8f314f5b416edcf40c8b2f7da4eaa471a28c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926207"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72610654"
 ---
 # <a name="list-modules-command"></a>Listovat moduly – příkaz
-Seznam modulů pro aktuální proces.
+Vypíše moduly pro aktuální proces.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,39 +33,39 @@ Debug.ListModules [/Address:yes|no] [/Name:yes|no] [/Order:yes|no]
 ```
 
 #### <a name="parameters"></a>Parametry
-Adresáře`yes|no`
+/Address: `yes|no`
 
 Volitelné. Určuje, zda se mají zobrazovat adresy paměti modulů. Výchozí hodnota je `yes`.
 
-Název`yes|no`
+/Name: `yes|no`
 
 Volitelné. Určuje, zda se mají zobrazovat názvy modulů. Výchozí hodnota je `yes`.
 
-Za`yes|no`
+/Order: `yes|no`
 
 Volitelné. Určuje, zda se má zobrazovat pořadí modulů. Výchozí hodnota je `no`.
 
-Dílčí`yes|no`
+/Path: `yes|no`
 
 Volitelné. Určuje, zda se mají zobrazovat cesty modulů. Výchozí hodnota je `yes`.
 
-Přihlášení`yes|no`
+/Process: `yes|no`
 
 Volitelné. Určuje, zda se mají zobrazit procesy modulů. Výchozí hodnota je `no`.
 
-SymbolFile`yes|no`
+/SymbolFile: `yes|no`
 
 Volitelné. Určuje, zda se mají zobrazovat soubory symbolů modulů. Výchozí hodnota je `no`.
 
-SymbolStatus`yes|no`
+/SymbolStatus: `yes|no`
 
 Volitelné. Určuje, zda se mají zobrazovat stavy symbolů modulů. Výchozí hodnota je `yes`.
 
-Časové razítko`yes|no`
+/Timestamp: `yes|no`
 
 Volitelné. Určuje, zda se mají zobrazovat časová razítka modulů. Výchozí hodnota je `no`.
 
-Znění`yes|no`
+/Version: `yes|no`
 
 Volitelné. Určuje, zda se mají zobrazovat verze modulů. Výchozí hodnota je `no`.
 

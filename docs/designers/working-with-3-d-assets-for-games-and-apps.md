@@ -5,58 +5,58 @@ ms.topic: conceptual
 f1_keywords:
 - vs.graphics
 ms.assetid: 910d673b-c884-4eeb-9928-0e89f3d38cb6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94dc97766d4f04451910a43146587b27726b87e3
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: 55986a703bd53318f8c0f74b8cf661412a82b716
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65459086"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72634002"
 ---
 # <a name="work-with-3d-assets-for-games-and-apps"></a>Práce s 3D prostředky pro hry a aplikace
 
-Tento článek popisuje nástroje sady Visual Studio, které můžete použít k vytvoření nebo úpravě 3D modelů, textury a shadery založené na rozhraní DirectX her a aplikací.
+Tento článek popisuje nástroje sady Visual Studio, které můžete použít k vytvoření nebo úpravě 3D modelů, textur a shaderů pro hry a aplikace založené na rozhraní DirectX.
 
-## <a name="directx-app-development-in-visual-studio"></a>Vývoj aplikací rozhraní DirectX v sadě Visual Studio
+## <a name="directx-app-development-in-visual-studio"></a>Vývoj aplikací DirectX v aplikaci Visual Studio
 
-Aplikace DirectX obvykle kombinuje programovou logiku, API rozhraní DirectX a programy stínování jazyka HLSL (High Level), společně s prezentovat bohatých, interaktivních multimediální zvuk a 3D vizuální prostředky. Visual Studio obsahuje nástroje, které můžete použít pro práci s imagí a textury, 3D modely a shadery, aniž byste museli opustit integrované vývojové prostředí použít jiný nástroj. Nástroje sady Visual Studio jsou obzvláště vhodný pro vytváření *zástupný symbol* prostředky, které můžete použít k testování kódu nebo vytvářet prototypy, před Komise assety připravené pro produkční prostředí a pro prohlížení a úpravy připravené pro produkční prostředí prostředky při ladění aplikace.
+Aplikace DirectX obvykle kombinuje programovací logiku, rozhraní DirectX API a programy HLSL (High Level prostíning Language) spolu se zvukovým a 3D vizuálními prostředky a prezentuje bohatá interaktivní multimediální prostředí. Visual Studio obsahuje nástroje, které můžete použít pro práci s imagemi a texturami, 3D modely a shadery bez nutnosti opustit rozhraní IDE, aby bylo možné použít jiný nástroj. Nástroje sady Visual Studio jsou obzvláště vhodné pro vytváření *zástupných* prostředků, které můžete použít k testování kódu nebo prototypů sestavení před tím, než provedete prostředky připravené pro produkční prostředí, a pro kontrolu a úpravy prostředků připravených k produkci. ladění aplikace.
 
-Tady je další informace o druzích prostředků, můžete pracovat v sadě Visual Studio.
+Zde jsou další informace o druzích prostředků, se kterými můžete pracovat v aplikaci Visual Studio.
 
-### <a name="images-and-textures"></a>Obrazů a textur
+### <a name="images-and-textures"></a>Obrázky a textury
 
-Obrazů a textur poskytují barvu a vizuální podrobně hry a aplikace. V 3D grafiky pocházejí textury v různých formátech, typy a geometrie podporují různá použití. Například map normál poskytují jednotlivých pixelů normály pro podrobnější osvětlení 3D modelů a poskytují krychlové mapy textury pro použití jako sky zabalení, odrazů a mapování textur na kulovité všechny směry. Textury může poskytnout mipmapy pro podporu efektivního vykreslování na různých úrovních podrobností a může podporovat kanály různých barev a pořadí, které se barva. Textury mohou být uloženy v různých komprimovaných formátů, které zabírají méně vyhrazená paměť grafiky a pomáhají textury přístup GPU efektivněji.
+Obrázky a textury poskytují barvy a vizuální podrobnosti ve hrách a aplikacích. V 3D grafice přicházejí textury v nejrůznějších formátech, typech a geometrií pro podporu různých použití. Například normální mapy poskytují normální plochu pro podrobnější osvětlení 3D modelů a mapy datových krychlí poskytují texturu ve všech směrech pro použití, jako jsou například nebe – zabalení, odrazy a mapování kulové textury. Textury můžou poskytovat mipmapy pro podporu efektivního vykreslování na různých úrovních podrobností a můžou podporovat různé barevné kanály a barevné pořadí barev. Textury lze uložit v nejrůznějších komprimovaných formátech, které zabírají méně vyhrazenou paměť grafiky a umožňují efektivnější přístup k texturám GPU.
 
-Můžete použít Editor obrázků Visual Studia pro práci s obrazů a textur v mnoha běžné typy a formáty.
+Editor obrázků sady Visual Studio můžete použít pro práci s obrázky a texturami v mnoha běžných typech a formátech.
 
 ### <a name="3d-models"></a>3D modely
 
-3D modely vytvoření místa a tvar v hry a aplikace. Minimálně modely kódování pozice body v 3D prostoru – což se označuje jako *vrcholy*– spolu s indexování dat k definování čáry nebo trojúhelníky, které představují tvar objektu modelu. Další data můžou být spojené s těmito vrcholy – například barev informace, běžné vektory nebo atributy specifické pro aplikaci. Každý model lze také definovat celý objekt atributy – například, shader, který slouží k výpočtu vzhled surface, nebo objektu textury, které se použije na ni.
+3D modely vytvářejí prostor a tvar v hrách a aplikacích. Modely kódují místo bodů v prostorovém prostoru, které jsou známé jako *vrcholy*, společně s indexovanými daty k definování řádků nebo trojúhelníků, které představují tvar modelu. K těmto vrcholům lze přidružit další data, například informace o barvách, normální vektory nebo atributy specifické pro aplikaci. Každý model může také definovat atributy v rámci objektu, například, který shader slouží k výpočtu vzhledu povrchu objektu nebo na který texturu, na kterou se aplikuje.
 
-Model editoru sady Visual Studio můžete použít pro práci s 3D modely v několika běžných formátů.
+Editor modelů sady Visual Studio můžete použít pro práci s 3D modely v několika běžných formátech.
 
 ### <a name="shaders"></a>Shadery
 
-Shadery jsou malé, specifického pro doménu programy, které běží na grafický procesor (GPU). Shadery určit, jak 3D modelů se transformují na obrazovce tvarů a jak jsou zobrazeny každý pixel v těchto tvarů. Vytvořením shaderu a jeho použití na objekt ve hře nebo aplikaci, můžete zadat objekt jedinečný vzhled.
+Shadery jsou malé, programy specifické pro doménu, které běží na grafické jednotce procesoru (GPU). Shadery určují, jak se 3D modely transformují do tvarů na obrazovce a jak jsou jednotlivé pixely v těchto obrazcích barvy. Vytvořením shaderu a jeho aplikováním na objekt ve hře nebo aplikaci můžete objektu dát jedinečný vzhled.
 
-Shader Návrhář Visual Studio, které je založené na grafu shaderu návrhářský nástroj, můžete použít k vytvoření vlastních efektů bez znalosti programování HLSL.
+K vytváření vlastních vizuálních efektů bez znalosti programování v HLSL můžete použít Visual Studio Shader Designer, což je nástroj pro návrh shaderu založený na grafu.
 
 > [!NOTE]
-> Další informace o tom, jak začít s programování pro rozhraní DirectX, naleznete v tématu [DirectX](http://go.microsoft.com/fwlink/p/?LinkId=224633). Další informace o tom, jak ladit aplikaci založené na rozhraní DirectX naleznete v tématu [diagnostiky grafiky (ladění grafiky DirectX)](../debugger/graphics/visual-studio-graphics-diagnostics.md).
+> Další informace o tom, jak začít s programováním v rozhraní DirectX, najdete v tématu [DirectX](http://go.microsoft.com/fwlink/p/?LinkId=224633). Další informace o ladění aplikace založené na rozhraní DirectX najdete v tématu [Diagnostika grafiky (ladění grafiky DirectX)](../debugger/graphics/visual-studio-graphics-diagnostics.md).
 
 ## <a name="directx-version-compatibility"></a>Kompatibilita verzí DirectX
 
-Visual Studio používá k vykreslení 2D a 3D prostředky rozhraní DirectX. Můžete vybrat zobrazovací jednotky rozhraní DirectX 11 nebo zobrazovací jednotky softwaru Windows Advanced Rasterizační platformě WARP (). Renderer rozhraní DirectX 11 poskytuje vysoce výkonné, hardwarově urychlené vykreslování na rozhraní DirectX 11 a DirectX 10 GPU. WARP renderer pomáhá, ujistěte se, že vaše prostředky fungovat s širokou škálu počítače – to zahrnuje počítače, které nemají moderní grafický hardware a počítače, které jste integrovali hardwarovou akceleraci. Další informace o WARP najdete v tématu [Windows Advanced Rasterizační platformě WARP () průvodce](http://go.microsoft.com/fwlink/p/?LinkId=224634).
+Visual Studio používá rozhraní DirectX k vykreslování 2D a 3D prostředků. Můžete vybrat buď vykreslovací modul rozhraní DirectX 11, nebo systém Windows Advanced Rastring Platform (pokřivení) softwaru. Vykreslovací modul rozhraní DirectX 11 poskytuje vysoce výkonné vykreslování s hardwarovou akcelerací na procesorech DirectX 11 a DirectX 10. Zobrazovací jednotka pro pokřivení pomáhá zajistit, aby vaše prostředky pracovaly s širokou škálou počítačů – to zahrnuje počítače, které nemají moderní grafický hardware a počítače s integrovaným grafickým hardwarem. Další informace o prostudování najdete v tématu [Příručka k platformě Windows Advanced rastring Platform (POkřivení)](http://go.microsoft.com/fwlink/p/?LinkId=224634).
 
 ## <a name="related-topics"></a>Související témata
 
 |Název|Popis|
 |-----------|-----------------|
-|[Práce s texturami a obrázky](../designers/working-with-textures-and-images.md)|Popisuje, jak pomocí sady Visual Studio pro práci s obrazů a textur.|
-|[Práce se 3D modely](../designers/working-with-3-d-models.md)|Popisuje, jak pomocí sady Visual Studio pro práci s 3D modely.|
-|[Práce se shadery](../designers/working-with-shaders.md)|Popisuje způsob použití návrháře shaderu Visual Studio k vytvoření a úprava efekty shaderu vlastní.|
-|[Používání 3D prostředků ve hře nebo aplikaci](../designers/using-3-d-assets-in-your-game-or-app.md)|Popisuje postup používání prostředků, které jste vytvořili pomocí editoru obrázků, editoru modelů nebo návrháře shaderu ve hře nebo aplikaci.|
+|[Práce s texturami a obrázky](../designers/working-with-textures-and-images.md)|Popisuje, jak používat Visual Studio k práci s imagemi a texturami.|
+|[Práce s 3D modely](../designers/working-with-3-d-models.md)|Popisuje, jak používat Visual Studio pro práci s 3D modely.|
+|[Práce s shadery](../designers/working-with-shaders.md)|Popisuje způsob použití návrháře shaderu sady Visual Studio k vytvoření a úpravě efektů vlastního shaderu.|
+|[Použití 3D prostředků ve hře nebo aplikaci](../designers/using-3-d-assets-in-your-game-or-app.md)|Popisuje, jak používat assety, které jste vytvořili pomocí editoru obrázků, editoru modelů nebo návrháře shaderu ve vaší hře nebo aplikaci.|

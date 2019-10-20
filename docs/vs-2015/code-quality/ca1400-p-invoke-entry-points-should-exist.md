@@ -1,5 +1,5 @@
 ---
-title: 'CA1400: Vstupní body nespravovaného kódu by měla existovat | Dokumentace Microsoftu'
+title: 'CA1400: vstupní body volání nespravovaného volání by měly existovat | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CA1400
 ms.assetid: 1d64e470-7b2f-4cca-8fb0-ac92829e6332
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0e5696689d0aa40f4af2e11970c81b47737a3d80
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d1083f7bbdf3b3af78b83aed293b31d898ae7522
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68200376"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661379"
 ---
 # <a name="ca1400-pinvoke-entry-points-should-exist"></a>CA1400: Vstupní body volání nespravovaného kódu by měly existovat
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,23 +29,23 @@ ms.locfileid: "68200376"
 |-|-|
 |TypeName|PInvokeEntryPointsShouldExist|
 |CheckId|CA1400|
-|Kategorie|Microsoft.Interoperability|
+|Kategorie|Microsoft. interoperabilita|
 |Narušující změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
- Veřejná nebo chráněná metoda je označena <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>. Nespravovanou knihovnu nelze nalézt nebo nelze metodu porovnat s funkcí v knihovně. Pokud pravidlo nemůže najít název metody, přesně tak, jak je zadaný, hledá ANSI nebo širokoznaké verze metody přidáním přípony názvu metody název "A" nebo "W". Pokud není nalezena žádná shoda, pravidlo se pokusí najít funkci s použitím __stdcall formát názvu (_MyMethod@12, kde 12 představuje délku argumenty). Pokud není nalezena žádná shoda, a název metody, který začíná na "#", toto pravidlo vyhledá funkce jako odkaz na pořadovém místě místo odkazu na název.
+ Veřejná nebo chráněná metoda je označená <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>. Nespravovanou knihovnu nelze nalézt nebo nelze metodu porovnat s funkcí v knihovně. Pokud pravidlo nemůže najít název metody přesně tak, jak je zadán, vyhledá verze ANSI nebo roztažitelné znaků metodou pomocí přípony názvu metody s "A" nebo "W". Pokud není nalezena žádná shoda, pravidlo se pokusí najít funkci pomocí formátu názvu __stdcall (_MyMethod@12, kde 12 představuje délku argumentů). Pokud se nenajde žádná shoda a název metody začíná znakem "#", pravidlo vyhledá funkci jako odkaz na ordinální místo odkaz na název.
 
 ## <a name="rule-description"></a>Popis pravidla
- Žádná kontrola v době kompilace je k dispozici, ujistěte se, že metody, které jsou označené <xref:System.Runtime.InteropServices.DllImportAttribute> jsou umístěny v odkazované nespravované knihovně DLL. Pokud žádná funkce, který má zadaný název je v knihovně nebo argumenty metody se neshodují s argumenty funkce, modul common language runtime vyvolá výjimku.
+ Není k dispozici žádná kontrolní doba kompilace, aby bylo zajištěno, že metody, které jsou označeny <xref:System.Runtime.InteropServices.DllImportAttribute>, jsou umístěny v odkazované nespravované knihovně DLL. Není-li v knihovně žádná funkce, která má zadaný název, nebo argumenty metody neodpovídají argumentům funkce, modul CLR vyvolá výjimku.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, opravte metodu, která má <xref:System.Runtime.InteropServices.DllImportAttribute> atribut. Ujistěte se, že nespravované knihovny existuje a je ve stejném adresáři jako sestavení, který obsahuje metodu. Pokud knihovna je k dispozici a správně odkazované, ověřte, jestli název metody, návratový typ a podpisu argumentu odpovídají funkce knihovny.
+ Chcete-li opravit porušení tohoto pravidla, opravte metodu, která má atribut <xref:System.Runtime.InteropServices.DllImportAttribute>. Ujistěte se, že nespravované knihovny existují a jsou ve stejném adresáři jako sestavení, které obsahuje metodu. Pokud je knihovna přítomna a správně odkazována, ověřte, zda název metody, návratový typ a signatura argumentu odpovídají funkci knihovny.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění tohoto pravidla, pokud nespravovaná knihovna je ve stejném adresáři jako spravovaná sestavení, která na něj odkazuje. Může být bezpečné pro potlačení upozornění tohoto pravidla v případě, kdy nespravovanou knihovnu nelze nalézt.
+ Potlačit upozornění z tohoto pravidla, pokud je nespravovaná knihovna ve stejném adresáři jako spravované sestavení, které na něj odkazuje. Může být bezpečné potlačit upozornění z tohoto pravidla v případě, že nespravovanou knihovnu nelze najít.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ, který porušuje pravidla. Žádná funkce s názvem `DoSomethingUnmanaged` vyvolá se v souboru kernel32.dll.
+ Následující příklad ukazuje typ, který je v rozporu s pravidlem. V souboru Kernel32. dll dojde k žádné funkci s názvem `DoSomethingUnmanaged`.
 
  [!code-csharp[FxCop.Interoperability.DLLExists#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Interoperability.DLLExists/cs/FxCop.Interoperability.DLLExists.cs#1)]
 

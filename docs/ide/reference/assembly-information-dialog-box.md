@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - Assembly Information dialog box
 ms.assetid: 8f1f6449-e03d-4a5b-9076-d3b1f84ada48
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 411a9b1150961307a2a8ed3cdfae9842fb56701c
-ms.sourcegitcommit: 13decf878b33fc0c5d665a88067170c2861b261b
+ms.openlocfilehash: 88d86c077cf129632c78d6266e7c8146325b78fb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71681620"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651910"
 ---
 # <a name="assembly-information-dialog-box"></a>dialogové okno Informace o sestavení
 
@@ -27,40 +27,40 @@ Chcete-li získat přístup k tomuto dialogovému oknu, vyberte uzel projektu v 
 
 ## <a name="uielement-list"></a>UIElement – seznam
 
-@No__t **názvu**– 1
-Určuje název manifestu sestavení. <xref:System.Reflection.AssemblyTitleAttribute>Odpovídá.
+@No__t_1 **názvu**
+Určuje název manifestu sestavení. Odpovídá <xref:System.Reflection.AssemblyTitleAttribute>.
 
-**Popis**\
-Určuje volitelný popis manifestu sestavení. <xref:System.Reflection.AssemblyDescriptionAttribute>Odpovídá.
+**Popis** \
+Určuje volitelný popis manifestu sestavení. Odpovídá <xref:System.Reflection.AssemblyDescriptionAttribute>.
 
-@No__t **společnosti**-1
-Určuje název společnosti pro manifest sestavení. <xref:System.Reflection.AssemblyCompanyAttribute>Odpovídá.
+@No__t_1 **společnosti**
+Určuje název společnosti pro manifest sestavení. Odpovídá <xref:System.Reflection.AssemblyCompanyAttribute>.
 
 V registru můžete nastavit nebo změnit výchozí hodnotu pro společnost. Vyhledejte hodnotu **RegisteredOrganization** pod **Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion** nebo **Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion** klíč v závislosti na vaší verzi systému Windows.
 
-@No__t **produktu**-1
-Určuje název produktu pro manifest sestavení. <xref:System.Reflection.AssemblyProductAttribute>Odpovídá.
+@No__t_1 **produktu**
+Určuje název produktu pro manifest sestavení. Odpovídá <xref:System.Reflection.AssemblyProductAttribute>.
 
-**Copyright**\
-Určuje oznámení o autorských právech pro manifest sestavení. <xref:System.Reflection.AssemblyCopyrightAttribute>Odpovídá.
+@No__t_1 **copyrightu**
+Určuje oznámení o autorských právech pro manifest sestavení. Odpovídá <xref:System.Reflection.AssemblyCopyrightAttribute>.
 
-**Ochranná známka**@no__t – 1
-Určuje ochrannou známku pro manifest sestavení. <xref:System.Reflection.AssemblyTrademarkAttribute>Odpovídá.
+@No__t_1 **ochranné známky**
+Určuje ochrannou známku pro manifest sestavení. Odpovídá <xref:System.Reflection.AssemblyTrademarkAttribute>.
 
-**Verze sestavení**\
-Určuje verzi sestavení. <xref:System.Reflection.AssemblyVersionAttribute>Odpovídá.
+@No__t_1 **verze sestavení**
+Určuje verzi sestavení. Odpovídá <xref:System.Reflection.AssemblyVersionAttribute>.
 
-**Verze souboru**\
-Určuje číslo verze, které instruuje kompilátor, aby používal specifickou verzi pro prostředek verze souboru Win32. <xref:System.Reflection.AssemblyFileVersionAttribute>Odpovídá.
+**Verze souboru** \
+Určuje číslo verze, které instruuje kompilátor, aby používal specifickou verzi pro prostředek verze souboru Win32. Odpovídá <xref:System.Reflection.AssemblyFileVersionAttribute>.
 
-**IDENTIFIKÁTOR GUID**\
-Jedinečný identifikátor GUID, který identifikuje sestavení. Při vytváření projektu aplikace Visual Studio generuje identifikátor GUID pro sestavení. <xref:System.Guid>Odpovídá.
+@No__t_1 **GUID**
+Jedinečný identifikátor GUID, který identifikuje sestavení. Při vytváření projektu aplikace Visual Studio generuje identifikátor GUID pro sestavení. Odpovídá <xref:System.Guid>.
 
-**Neutrální jazyk**\
-Určuje jazykovou verzi, kterou sestavení podporuje. <xref:System.Resources.NeutralResourcesLanguageAttribute>Odpovídá. Výchozí hodnota je **(žádné)** .
+**Neutrální \ jazyka**
+Určuje jazykovou verzi, kterou sestavení podporuje. Odpovídá <xref:System.Resources.NeutralResourcesLanguageAttribute>. Výchozí hodnota je **(žádné)** .
 
-**Nastavit sestavení modelu COM jako viditelné**\
-Určuje, zda typy v sestavení budou k dispozici pro model COM. <xref:System.Runtime.InteropServices.ComVisibleAttribute>Odpovídá.
+**Nastavit \ viditelné pro sestavení modelu COM**
+Určuje, zda typy v sestavení budou k dispozici pro model COM. Odpovídá <xref:System.Runtime.InteropServices.ComVisibleAttribute>.
 
 > [!NOTE]
 > Další informace o nastavení těchto vlastností při generování balíčku NuGet v knihovně tříd .NET Framework najdete v tématu [Konfigurace vlastností projektu pro balíček](/nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework#configure-project-properties-for-the-package).

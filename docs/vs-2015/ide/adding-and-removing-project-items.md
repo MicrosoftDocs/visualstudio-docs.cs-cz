@@ -1,5 +1,5 @@
 ---
-title: Přidávání a odebírání položek projektu | Dokumentace Microsoftu
+title: Přidávání a odebírání položek projektu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,21 +9,20 @@ f1_keywords:
 - vs.addexistingproject
 ms.assetid: 4b6db52f-4352-4313-8f4f-50a451fd12f7
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 503f099de3dda673c4df352d8bfa871d20d51f2a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 073e8186040f920426b3e9aa96879afac923c19c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68148273"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72620949"
 ---
 # <a name="adding-and-removing-project-items"></a>Přidávání a odebírání projektových položek
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete přidat nebo odebrat projekty a položky projektu kliknutím pravým tlačítkem na uzel projektu nebo řešení v **Průzkumníka řešení**a zvolíte **přidat** nebo **odebrat**. Odstranění objektu project z řešení nebo položku z projektu, nedojde k odstranění ho z disku nebo zdroj ovládacího prvku Pokud nevyberete možnost trvale odstranit.  
-  
-## <a name="see-also"></a>Viz také  
- [Řešení a projekty](../ide/solutions-and-projects-in-visual-studio.md)   
- [Správa vlastností projektů a řešení](../ide/managing-project-and-solution-properties.md)
+Můžete přidat nebo odebrat projekty a položky projektu tak, že kliknete pravým tlačítkem myši na uzel projekt nebo řešení v **Průzkumník řešení**a zvolíte **Přidat** nebo **Odebrat**. Odebrání projektu z řešení nebo položky z projektu neodstraní ho z disku nebo ze správy zdrojového kódu, pokud nevyberete možnost trvale odstranit.
+
+## <a name="see-also"></a>Viz také
+ [Řešení a projekty](../ide/solutions-and-projects-in-visual-studio.md) , které [spravují vlastnosti projektu a řešení](../ide/managing-project-and-solution-properties.md)

@@ -9,49 +9,49 @@ helpviewer_keywords:
 - Find and Replace, Options dialog box
 - Find and Replace, customizing
 ms.assetid: f804d6d5-6309-46e4-8294-b83e880b5ec9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bc2d1a97676416c040c11c3b55f5adef7a0a3cc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 24c9d1f75eef2b785c8fa96bd721144480e134fc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62790632"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654375"
 ---
 # <a name="find-and-replace-environment-options-dialog-box"></a>Najít a nahradit, prostředí, dialogové okno Možnosti
 
-Pomocí této stránky **možnosti** dialogové okno pro řízení okna se zprávou a další aspekty najít a nahradit operace. Můžete přistupovat k dialogovému oknu z **nástroje** nabídky kliknutím **možnosti**, rozšiřující **prostředí**a pak levým na **najít a nahradit**. Pokud se tato stránka se nezobrazí v seznamu, vyberte **zobrazit všechna nastavení** v **možnosti** dialogové okno.
+Tato stránka dialogového okna **Možnosti** slouží k řízení oken zpráv a dalších aspektů operace Find a Replace. K tomuto dialogovému oknu se dostanete z nabídky **nástroje** kliknutím na **Možnosti**, rozbalením **prostředí**a kliknutím na **Najít a nahradit**. Pokud se tato stránka v seznamu nezobrazuje, vyberte v dialogovém okně **Možnosti** možnost **Zobrazit všechna nastavení** .
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
 **Zobrazit informační zprávy**
 
-Vyberte tuto možnost, chcete-li zobrazit všechny najít a nahradit informační zprávy, které mají **vždy zobrazovat tento dialog** možnost. Například pokud jste zvolili není pro zobrazení zprávy "Hledání dosáhlo výchozího bodu hledání.", pak výběrem této možnosti by způsobilo této informativní zprávy zobrazí znovu, použijete-li najít a nahradit.
+Tuto možnost vyberte, pokud chcete zobrazit všechny informační zprávy najít a nahradit, které mají možnost **vždy zobrazit tuto zprávu** . Pokud se například rozhodnete, že se nezobrazuje zpráva "vyhledat dosažený počáteční bod hledání". při použití funkce Najít a nahradit by se tato informační zpráva pravděpodobně po výběru znovu zobrazila.
 
-Pokud nechcete zobrazíte všechny informační zprávy pro najít a nahradit, zrušte tuto možnost.
+Pokud nechcete zobrazit žádné informativní zprávy pro funkce Najít a nahradit, zrušte zaškrtnutí tohoto políčka.
 
-Když jste zrušili **vždy zobrazovat tento dialog** možnost na některé, ale ne všechny **najít a nahradit** informační zprávy **zobrazení informačních zpráv** zkontrolujte pole se zdá být vyplněny, ale nejsou vybrány. Chcete-li obnovit všechny volitelné **najít a nahradit** zprávy, zrušte tuto možnost a potom vyberte.
+Pokud jste zrušili zaškrtnutí políčka **vždy zobrazit tuto zprávu** u některých, ale ne všechny, **vyhledejte a nahraďte** informační zprávy, zdá se, že se zobrazuje **informativní** zprávy, která se zobrazí, ale není vybraná. Pokud chcete obnovit všechny volitelné zprávy **Najít a nahradit** , zrušte tuto možnost a pak ji znovu vyberte.
 
 > [!NOTE]
-> Tato možnost nemá vliv žádný **najít a nahradit** informační zprávy, které se nezobrazují **vždy zobrazovat tento dialog** možnost.
+> Tato možnost nemá vliv na žádné informační zprávy **find a nahrazování** , které nezobrazují možnost **vždy zobrazit tuto zprávu** .
 
 **Zobrazit varovné zprávy**
 
-Tuto možnost použijte k zobrazení všech vytvořených najít a nahradit zprávy, které mají **vždy zobrazovat tento dialog** možnost. Například, pokud jste se rozhodli zobrazení **Nahradit vše** upozornění, zprávu, která se zobrazí, když se pokusíte provést nahrazení v souborech není aktuálně otevřen pro úpravy, výběr této možnosti způsobí toto upozornění se zobrazí znovu při pokusu Nahradit vše.
+Tuto možnost vyberte, pokud chcete zobrazit všechny zprávy postupovat opatrněji najít a nahradit, které mají možnost **vždy zobrazit tuto zprávu** . Pokud jste například zvolili, že se má zobrazit zpráva o **nahrazení všech** upozornění, která se zobrazí při pokusu o provedení náhrad v souborech, které nejsou aktuálně otevřeny pro úpravy, výběrem této možnosti by se tato zpráva upozornění po pokusu o Nahradit vše.
 
-Pokud nechcete, chcete-li zobrazit všechny zprávy vytvořených pro najít a nahradit, zrušte tuto možnost.
+Pokud nechcete zobrazit žádné zprávy postupovat opatrněji pro funkce Najít a nahradit, zrušte zaškrtnutí tohoto políčka.
 
-Když jste zrušili **vždy zobrazovat tento dialog** možnost na některé, ale ne všechny **najít a nahradit** zprávy upozornění **zobrazit varovné zprávy** se zobrazí zaškrtávací políčko pro vyplněné, ale nejsou vybrány. Chcete-li obnovit všechny volitelné **najít a nahradit** zprávy, zrušte tuto možnost a potom vyberte.
+Pokud jste vymazali možnost **vždy zobrazit tuto zprávu** u některých, ale ne všechny, **Najít a nahradit** upozornění, zobrazí se zaškrtávací políčko **Zobrazit zprávy s upozorněním** , ale není vybráno. Pokud chcete obnovit všechny volitelné zprávy **Najít a nahradit** , zrušte tuto možnost a pak ji znovu vyberte.
 
 > [!NOTE]
-> Tato možnost nemá vliv žádný **najít a nahradit** varovné zprávy, které nejsou zobrazeny **vždy zobrazovat tento dialog** možnost.
+> Tato možnost nemá vliv na žádné zprávy upozorňující na **hledání a nahrazování** , které nezobrazují možnost **vždy zobrazit tuto zprávu** .
 
-**Automaticky vyplnit pole Najít prováděl text z editoru**
+**Automaticky vyplnit pole najít textem z editoru**
 
-Vyberte tuto možnost, chcete-li vložit text na obou stranách editoru aktuální kurzor do **najít** pole při výběru žádné zobrazení **najít a nahradit** okna **upravit**  nabídky. Zrušte zaškrtnutí tohoto políčka použít poslední vzor hledání předešlých hledání, jako **najít** řetězec.
+Tuto možnost vyberte, pokud chcete po výběru libovolného zobrazení okna **Najít a nahradit** v nabídce **Upravit** vložit text na kteroukoli stranu vloženého bodu aktuálního editoru do pole **najít, které** se má zobrazit. Tuto možnost zrušte, pokud chcete použít poslední vzor hledání z předchozího hledání jako řetězec **find** .
 
 ## <a name="see-also"></a>Viz také:
 

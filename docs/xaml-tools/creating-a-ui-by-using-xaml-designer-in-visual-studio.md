@@ -9,15 +9,15 @@ f1_keywords:
 - VS.DocumentOutline
 - Blend.Start.Dev12
 ms.assetid: c54969a7-d75a-4a35-9b37-af7a596a7c24
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 28536a05b0fa35fc65f356c3501a7beeb2033e5c
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 0f43222e593b836f44a84e5f64642403f0263ca5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450837"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649711"
 ---
 # <a name="create-a-ui-by-using-xaml-designer"></a>Vytvoření uživatelského rozhraní pomocí Návrháře XAML
 
@@ -29,7 +29,7 @@ V případě pokročilých uživatelů můžete [Návrhář XAML přizpůsobit](
 
 Pracovní prostor v Návrhář XAML se skládá z několika prvků vizuálního rozhraní. Mezi ně patří *Kreslicí* plocha (což je vizuální návrhová plocha), Editor XAML, okno Osnova dokumentu (objekty a časová osa okno v Blend pro Visual Studio) a okno Vlastnosti. Chcete-li otevřít Návrhář XAML, klikněte pravým tlačítkem myši na soubor XAML v **Průzkumník řešení** a vyberte možnost **Návrhář zobrazení**.
 
-Návrhář XAML poskytuje zobrazení XAML a synchronizovaný zobrazení Návrh vykresleného kódu XAML vaší aplikace. Se souborem XAML otevřeným v aplikaci Visual Studio nebo Blend pro Visual Studio můžete přepínat mezi zobrazení Návrh a zobrazením XAML pomocí karet **design** a **XAML** . V Návrhář XAML @ no__t-2 můžete použít tlačítko **odkládacích podoken** @no__t 1Swap, abyste si přepnuli, které okno se zobrazí nahoře: buď na návrhové ploše, nebo v editoru XAML.
+Návrhář XAML poskytuje zobrazení XAML a synchronizovaný zobrazení Návrh vykresleného kódu XAML vaší aplikace. Se souborem XAML otevřeným v aplikaci Visual Studio nebo Blend pro Visual Studio můžete přepínat mezi zobrazení Návrh a zobrazením XAML pomocí karet **design** a **XAML** . K přepnutí zobrazeného okna v horní části můžete použít tlačítko **odkládacích podoken** ![Swap podokna v Návrhář XAML ](media/swap-panes.PNG): buď na návrhovou plochu, nebo na Editor XAML.
 
 ### <a name="design-view"></a>zobrazení Návrh
 

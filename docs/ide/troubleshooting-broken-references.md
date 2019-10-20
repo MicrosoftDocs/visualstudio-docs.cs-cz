@@ -8,85 +8,85 @@ helpviewer_keywords:
 - troubleshooting references
 - referencing files from projects
 - referencing components, troubleshooting
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f9095e3b8c1f80b35b2d135c122c2d7230c1f8c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3c5efe0d5ba8d00f7bfc362dd702f45dfa627c20
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62575940"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647376"
 ---
 # <a name="troubleshoot-broken-references"></a>Řešení problémů s poškozenými odkazy
 
-Pokud vaše aplikace se pokusí použít poškozený odkaz, je vygenerována chyba výjimky. Nebylo možné najít odkazovaná součást je primární aktivační událost pro chybu, ale existuje několik situací ve kterých lze považovat za odkazem nefunkční. Tyto instance jsou uvedeny v následujícím seznamu:
+Pokud se vaše aplikace pokusí použít poškozený odkaz, je vygenerována chyba výjimky. Neschopnost najít odkazovanou komponentu je primární Trigger pro chybu, ale existuje několik situací, ve kterých může být odkaz považován za poškozený. Tyto instance jsou uvedené v následujícím seznamu:
 
-- Cesta odkazu projekt je nesprávné nebo neúplné.
+- Odkazovaná cesta k projektu je nesprávná nebo neúplná.
 
-- Odkazovaný soubor se odstranil.
+- Odkazovaný soubor byl odstraněn.
 
 - Odkazovaný soubor byl přejmenován.
 
 - Připojení k síti nebo ověřování se nezdařilo.
 
-- Odkazuje na komponentu modelu COM, který není nainstalován v počítači.
+- Odkaz je na komponentu modelu COM, která není v počítači nainstalována.
 
-Toto jsou řešení těchto problémů.
+Níže jsou uvedená opatření pro tyto problémy.
 
 > [!NOTE]
-> Soubory v sestavení je odkazováno pomocí absolutní cesty v souboru projektu. Proto je možné pro uživatele, kteří pracují v prostředí vývoj chybí odkazovaná sestavení svého místního prostředí. Aby nedocházelo k těmto chybám, je lepší v těchto případech pro přidání odkazů typu projekt projekt. Další informace najdete v tématu [programování se sestaveními](/dotnet/framework/app-domains/programming-with-assemblies).
+> Soubory v sestaveních jsou odkazovány pomocí absolutních cest v souboru projektu. Proto je možné, že uživatelé, kteří pracují ve více vývojářích prostředí, mají v místním prostředí chybějící odkazované sestavení. Aby nedocházelo k těmto chybám, je lepší v těchto případech přidat odkazy z projektu na projekt. Další informace naleznete v tématu [programování se sestaveními](/dotnet/framework/app-domains/programming-with-assemblies).
 
-## <a name="reference-path-is-incorrect"></a>Cesta odkazu je nesprávný
+## <a name="reference-path-is-incorrect"></a>Cesta odkazu není správná.
 
-Pokud projekty jsou sdíleny v různých počítačích, nemusí při komponenty se nachází v jiném adresáři na každém počítači nalezeny některé odkazy. Odkazy jsou uloženy pod názvem souboru součásti (například *MyComponent*). Při přidání odkazu do projektu, umístění složky souboru součásti (například *C:\MyComponents*) se připojí **ReferencePath** vlastnosti projektu.
+Pokud jsou projekty sdíleny v různých počítačích, některé odkazy nemusí být nalezeny, pokud je komponenta umístěna v jiném adresáři v každém počítači. Odkazy jsou uloženy pod názvem souboru komponenty (například *MyComponent*). Při přidání odkazu do projektu je umístění složky souboru komponenty (například *C:\MyComponents*) připojeno k vlastnosti projektu **ReferencePath** .
 
-Při otevření projektu, pokusy o vyhledání těchto souborů odkazovaná součást vyhledáváním v adresářích na zadané cestě odkazu. Pokud je projekt otevřen v počítači, který ukládá komponenty v jiném adresáři, jako například *D:\MyComponents*, se nenašel odkaz a objeví se chyba v **seznamu úkolů**.
+Po otevření projektu se pokusí vyhledat tyto soubory odkazované součásti hledáním v adresářích v cestě reference. Pokud je projekt otevřen v počítači, který ukládá komponentu do jiného adresáře, například *D:\MyComponents*, odkaz nebyl nalezen a v **seznam úkolů**se zobrazí chyba.
 
-Chcete-li vyřešit tento problém, můžete odstranit poškozený odkaz a nahradili ho pomocí **přidat odkaz** dialogové okno. Druhým řešením je použít **cestu odkazu** položek na stránkách vlastností projektu a upravit složky v seznamu tak, aby odkazovala na správné umístění. **Cestu odkazu** trvale uloženou vlastnost pro každého uživatele na každém počítači. Změna cesty k odkazu proto neovlivňuje ostatní uživatelé z projektu.
+Chcete-li tento problém vyřešit, můžete poškozený odkaz odstranit a pak ho nahradit pomocí dialogového okna **Přidat odkaz** . Dalším řešením je použít položku **referenční cesty** na stránkách vlastností projektu a upravit složky v seznamu tak, aby odkazovaly na správná umístění. Vlastnost **cesty odkazů** je u každého uživatele na každém počítači trvalá. Proto změna referenční cesty nemá vliv na ostatní uživatele projektu.
 
 > [!TIP]
-> Odkazy typu projekt projekt není nutné tyto problémy. Z tohoto důvodu je použijte místo odkazy na soubory, pokud je to možné.
+> Odkazy z projektu na projekt nemají tyto problémy. Z tohoto důvodu použijte místo odkazů na soubory, pokud je to možné.
 
-### <a name="to-fix-a-broken-project-reference-by-correcting-the-reference-path"></a>Chcete-li vyřešit poškozený odkaz projektu tím, že opraví cesta odkazu
+### <a name="to-fix-a-broken-project-reference-by-correcting-the-reference-path"></a>Oprava poškozeného odkazu na projekt opravou cesty reference
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel projektu a klikněte na tlačítko **vlastnosti**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a klikněte na příkaz **vlastnosti**.
 
-   **Návrháře projektu** se zobrazí.
+   Zobrazí se **Návrhář projektu** .
 
-1. Pokud používáte Visual Basic, vyberte **odkazy** stránky a klikněte na tlačítko **cesty odkazů** tlačítko. V **cesty odkazů** dialogového okna zadejte cestu ke složce, která obsahuje položku, kterou chcete odkazovat **složky** pole a potom klikněte na **přidat složku** tlačítko.
+1. Pokud používáte Visual Basic, vyberte stránku **odkazy** a klikněte na tlačítko odkazy na **cesty** . V dialogovém okně **cesty k odkazům** zadejte cestu ke složce, která obsahuje položku, na kterou chcete odkazovat, v poli **Složka** a pak klikněte na tlačítko **Přidat složku** .
 
-    Pokud používáte C#, vyberte **cesty odkazů** stránky. V **složky** pole, zadejte cestu ke složce, která obsahuje položku, kterou chcete odkazovat a klikněte **přidat složku** tlačítko.
+    Pokud používáte C#, vyberte stránku **cesty odkazů** . Do pole **Složka** zadejte cestu ke složce obsahující položku, na kterou chcete odkazovat, a poté klikněte na tlačítko **Přidat složku** .
 
 ## <a name="referenced-file-has-been-deleted"></a>Odkazovaný soubor byl odstraněn.
 
-Je možné, že odkazovaný soubor je odstraněný a už neexistuje na disku.
+Je možné, že se soubor, na který se odkazuje, odstranil a na jednotce už neexistuje.
 
-### <a name="to-fix-a-broken-project-reference-for-a-file-that-no-longer-exists-on-your-drive"></a>Chcete-li vyřešit porušení projektu odkaz pro soubor, který již existuje na disku
+### <a name="to-fix-a-broken-project-reference-for-a-file-that-no-longer-exists-on-your-drive"></a>Oprava poškozeného odkazu na projekt pro soubor, který již na jednotce neexistuje
 
 - Odstraňte odkaz.
 
-- Pokud existuje odkaz na jiné místo v počítači, přečtěte si je z tohoto umístění.
+- Pokud odkaz existuje v jiném umístění v počítači, přečtěte si ho z tohoto umístění.
 
 ## <a name="referenced-file-has-been-renamed"></a>Odkazovaný soubor byl přejmenován.
 
-Je možné, že byl přejmenován soubor, který se odkazuje.
+Je možné, že odkazovaný soubor byl přejmenován.
 
-### <a name="to-fix-a-broken-reference-for-a-file-that-has-been-renamed"></a>Chcete-li vyřešit poškozený odkaz pro soubor, který se přejmenoval
+### <a name="to-fix-a-broken-reference-for-a-file-that-has-been-renamed"></a>Oprava poškozeného odkazu na soubor, který byl přejmenován
 
-- Odstranit odkazy a pak přidejte odkaz na soubor přejmenován.
+- Odstraňte odkaz a pak přidejte odkaz na přejmenovaný soubor.
 
-- Pokud existuje odkaz na jiné místo v počítači, je nutné jej načíst z tohoto umístění.
+- Pokud odkaz existuje v jiném umístění v počítači, budete ho muset číst z tohoto umístění.
 
-## <a name="network-connection-or-authentication-has-failed"></a>Připojení k síti nebo ověřování se nezdařilo
+## <a name="network-connection-or-authentication-has-failed"></a>Připojení k síti nebo ověřování se nezdařilo.
 
-Může být mnoho možných příčin nepřístupných souborů: došlo k chybě síťového připojení nebo se nezdařilo ověřování, například. Každou příčinou může být jedinečný prostředek obnovení; například budete muset obrátit na místního správce pro přístup k potřebným prostředkům. Odstranění odkazu a oprava kódu, který používá ho ale vždy možnost.
+Může existovat celá řada možných příčin nepřístupných souborů: chybné síťové připojení nebo neúspěšné ověření, například. Každá příčina může mít jedinečný způsob obnovení; Například může být nutné požádat o přístup k požadovaným prostředkům místního správce. Odstranění odkazu a oprava kódu, který ho použil, je vždycky možnost.
 
-## <a name="com-component-is-not-installed-on-computer"></a>Na počítači není nainstalovaná komponenta modelu COM
+## <a name="com-component-is-not-installed-on-computer"></a>Součást COM není v počítači nainstalována.
 
-Pokud uživatel byl přidán odkaz na komponentu COM a druhý uživatel pokusí o spuštění kódu na počítači, který nemá tuto součást nainstalovaná, druhý uživatel dojde k chybě, že je odkaz poškozený. Instalace součásti na druhý počítač bude opravte chybu. Další informace o tom, jak pomocí odkazů na komponenty modelu COM ve vašich projektech najdete v tématu [interoperabilita modelů COM v aplikacích .NET Framework](/dotnet/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications).
+Pokud uživatel přidal odkaz na komponentu COM a druhý uživatel se pokusí spustit kód v počítači, na kterém není tato součást nainstalována, obdrží druhý uživatel chybu, že odkaz je přerušen. Při instalaci komponenty na druhý počítač se chyba opraví. Další informace o tom, jak používat odkazy na komponenty modelu COM v projektech, naleznete v tématu [interoperabilita modelu COM v .NET Frameworkch aplikacích](/dotnet/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -4,15 +4,15 @@ ms.date: 08/09/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows Forms Designer
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0df8b7ec5955f472d716af2850d2ab0b776c6552
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: b26ad18da19d5a2e53199b49e7acc024c728be9c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585329"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72634031"
 ---
 # <a name="windows-forms-designer-overview"></a>Přehled nástroje Návrhář formulářů
 
@@ -24,7 +24,7 @@ Pomocí návrháře můžete:
 
 - Do formuláře přidejte součásti, ovládací prvky pro data nebo ovládací prvky založené na systému Windows.
 
-- Dvakrát klikněte na formulář v návrháři a napište kód v `Load` události pro tento formulář, nebo dvakrát klikněte na ovládací prvek ve formuláři a napište kód pro výchozí událost ovládacího prvku.
+- Dvakrát klikněte na formulář v návrháři a napište kód v události `Load` pro daný formulář, nebo dvakrát klikněte na ovládací prvek ve formuláři a napište kód pro výchozí událost ovládacího prvku.
 
 - Upravte vlastnost text ovládacího prvku tak, že vyberete ovládací prvek a zadáte název.
 
@@ -42,4 +42,4 @@ Pomocí návrháře můžete:
 - [Vstup uživatele v model Windows Forms](/dotnet/framework/winforms/user-input-in-windows-forms)
 - [Datová vazba v model Windows Forms](/dotnet/framework/winforms/windows-forms-data-binding)
 - [Vylepšení model Windows Formsch aplikací](/dotnet/framework/winforms/advanced/)
-- <xref:System.Windows.Forms?displayProperty=fullName>Reference k rozhraní API
+- Reference k rozhraní API <xref:System.Windows.Forms?displayProperty=fullName>

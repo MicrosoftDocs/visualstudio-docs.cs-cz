@@ -8,19 +8,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Generate From Usage
 - Test-First Development
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 039c022cc5a8883e5687630f5243d8652ff036e7
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 81ab4b1597ea9f91a1b5081e89fd4cb77e0d8c63
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925837"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647161"
 ---
-# <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>Návod: Vývoj pro první test pomocí funkce generovat z využití
+# <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>Návod: vývoj pro první test pomocí funkce generovat z použití
 
 Toto téma ukazuje, jak použít funkci [Generovat z použití](../ide/visual-csharp-intellisense.md#generate-from-usage) , která podporuje vývoj na prvním testu.
 
@@ -34,9 +34,9 @@ Funkci **Generovat z použití** lze použít s testovacími architekturami, kte
 
 ### <a name="create-a-windows-class-library-project-and-a-test-project"></a>Vytvoření projektu knihovny tříd Windows a testovacího projektu
 
-1. V C# nebo Visual Basic vytvořte nový projekt **knihovny tříd systému Windows** . `GFUDemo_VB` Pojmenujte `GFUDemo_CS`ji nebo, podle toho, který jazyk používáte.
+1. V C# nebo Visual Basic vytvořte nový projekt **knihovny tříd systému Windows** . Pojmenujte ho `GFUDemo_VB` nebo `GFUDemo_CS`, podle toho, který jazyk používáte.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na ikonu řešení v horní části, vyberte možnost **Přidat** > **Nový projekt**.
+2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na ikonu řešení v horní části a vyberte **Přidat**  > **Nový projekt**.
 
 3. Vytvořte nový projekt **testu jednotek (.NET Framework)** .
 
@@ -62,12 +62,12 @@ Funkci **Generovat z použití** lze použít s testovacími architekturami, kte
 
 1. Testovací projekt obsahuje soubor s názvem *UnitTest1*. Dvojím kliknutím na tento soubor v **Průzkumník řešení** otevřete v editoru kódu. Byla vygenerována testovací třída a testovací metoda.
 
-2. Vyhledejte deklaraci třídy `UnitTest1` a přejmenujte ji `AutomobileTest`na.
+2. Vyhledejte deklaraci pro třídu `UnitTest1` a přejmenujte ji na `AutomobileTest`.
 
    > [!NOTE]
-   > Technologie IntelliSense nyní nabízí dvě alternativy dokončování příkazů technologie IntelliSense: *režim dokončování* a *režim návrhu*. Režim návrhu použijte pro situace, ve kterých se třídy a členy používají předtím, než budou definovány. Když je okno **IntelliSense** otevřené, můžete stisknout **CTRL**+ **+** +**MEZERNÍK** pro přepínání mezi režimem dokončení a režimem návrhu. Další informace najdete v tématu [použití technologie IntelliSense](../ide/using-intellisense.md) . Režim návrhu vám pomůže při psaní `Automobile` v dalším kroku.
+   > Technologie IntelliSense nyní nabízí dvě alternativy dokončování příkazů technologie IntelliSense: *režim dokončování* a *režim návrhu*. Režim návrhu použijte pro situace, ve kterých se třídy a členy používají předtím, než budou definovány. Když je okno **IntelliSense** otevřené, můžete stisknout **Ctrl** +**ALT** +**MEZERNÍK** pro přepínání mezi režimem dokončení a režimem návrhu. Další informace najdete v tématu [použití technologie IntelliSense](../ide/using-intellisense.md) . Režim návrhu vám pomůže při psaní `Automobile` v dalším kroku.
 
-3. Vyhledejte metodu a přejmenujte ji `DefaultAutomobileIsInitializedCorrectly()`na. `TestMethod1()` V rámci této metody vytvořte novou instanci třídy s názvem `Automobile`, jak je znázorněno na následujících snímcích obrazovky. Zobrazí se vlnové podtržení, které indikuje chybu při kompilaci, a v levém horním rohu se objeví chybová žárovka Chyba [rychlé akce](../ide/quick-actions.md) , která se zobrazí na levém okraji, nebo přímo pod vlnovkou, pokud na ni najedete myší.
+3. Vyhledejte metodu `TestMethod1()` a přejmenujte ji na `DefaultAutomobileIsInitializedCorrectly()`. V rámci této metody vytvořte novou instanci třídy s názvem `Automobile`, jak je znázorněno na následujících snímcích obrazovky. Zobrazí se vlnové podtržení, které indikuje chybu při kompilaci, a v levém horním rohu se objeví chybová žárovka Chyba [rychlé akce](../ide/quick-actions.md) , která se zobrazí na levém okraji, nebo přímo pod vlnovkou, pokud na ni najedete myší.
 
     ![Rychlé akce v Visual Basic](../ide/media/genclass_underlinevb.png)
 
@@ -77,61 +77,61 @@ Funkci **Generovat z použití** lze použít s testovacími architekturami, kte
 
 5. Kliknutím na **generovat nový typ** otevřete dialogové okno **generovat typ** . Toto dialogové okno obsahuje možnosti, které zahrnují generování typu v jiném projektu.
 
-6. V seznamu **projekt** klikněte na **GFUDemo\_VB** nebo **GFUDemo_CS** a řekněte aplikaci Visual Studio, aby přidala soubor do projektu knihovny tříd namísto testovacího projektu. Pokud ještě není vybraná, vyberte **vytvořit nový soubor** a pojmenujte ho *Automobile.cs* nebo *automobil. vb*.
+6. V seznamu **projekt** klikněte na **GFUDemo \_VB** nebo **GFUDemo_CS** , abyste aplikaci Visual Studio vydali pokyn k přidání souboru do projektu knihovny tříd namísto testovacího projektu. Pokud ještě není vybraná, vyberte **vytvořit nový soubor** a pojmenujte ho *Automobile.cs* nebo *automobil. vb*.
 
      ![Dialogové okno generovat nový typ](../ide/media/genotherdialog.png)
 
 7. Kliknutím na tlačítko **OK** zavřete dialogové okno a vytvořte nový soubor.
 
-8. V **Průzkumník řešení**vyhledejte v uzlu projektu **GFUDemo_VB** nebo **GFUDemo_CS** , zda je k dispozici nový soubor *automobil. vb* nebo *Automobile.cs* . V editoru kódu je fokus stále v, což vám `AutomobileTest.DefaultAutomobileIsInitializedCorrectly`umožní pokračovat v psaní testu s minimálním přerušením.
+8. V **Průzkumník řešení**vyhledejte v uzlu projektu **GFUDemo_VB** nebo **GFUDemo_CS** , zda je k dispozici nový soubor *automobil. vb* nebo *Automobile.cs* . V editoru kódu je fokus stále v `AutomobileTest.DefaultAutomobileIsInitializedCorrectly`, což vám umožní pokračovat v psaní testu s minimálním přerušením.
 
 ### <a name="generate-a-property-stub"></a>Vygenerování provizorního kódu vlastnosti
-Předpokládat, že specifikace produktu uvádí, že `Automobile` třída má dvě veřejné vlastnosti s `Model` názvem `TopSpeed`a. Tyto vlastnosti musí být inicializovány s výchozími `"Not specified"` hodnotami `-1` a výchozím konstruktorem. Následující test jednotek ověří, zda výchozí konstruktor nastaví vlastnosti na jejich správné výchozí hodnoty.
+Předpokládat, že specifikace produktu uvádí, že třída `Automobile` má dvě veřejné vlastnosti s názvem `Model` a `TopSpeed`. Tyto vlastnosti musí být inicializovány s výchozími hodnotami `"Not specified"` a `-1` výchozím konstruktorem. Následující test jednotek ověří, zda výchozí konstruktor nastaví vlastnosti na jejich správné výchozí hodnoty.
 
-1. Do `DefaultAutomobileIsInitializedCorrectly` testovací metody přidejte následující řádek kódu.
+1. Do metody `DefaultAutomobileIsInitializedCorrectly` test přidejte následující řádek kódu.
 
      [!code-csharp[VbTDDWalkthrough#1](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.cs)]
      [!code-vb[VbTDDWalkthrough#1](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.vb)]
 
-2. Vzhledem k tomu, že kód odkazuje na `Automobile`dvě nedefinované vlastnosti, zobrazí se vlnové podtržení v oblasti `Model` a `TopSpeed`. Najeďte myší azvoltežárovkuchybarychléakceapakzvolteGenerovatvlastnost'automobil.model`Model` **'** .
+2. Vzhledem k tomu, že kód odkazuje na dvě nedefinované vlastnosti `Automobile`, v části `Model` a `TopSpeed` se zobrazí vlnové podtržení. Najeďte myší na `Model` a zvolte žárovku chyby **rychlých akcí** a pak zvolte **Generovat vlastnost ' automobil. model '** .
 
-3. Vygenerujte zástupnou proceduru vlastnosti pro `TopSpeed` vlastnost stejným způsobem.
+3. Vygenerujte zástupnou proceduru vlastnosti pro vlastnost `TopSpeed` stejným způsobem.
 
-     `Automobile` Ve třídě jsou typy nových vlastností správně odvozeny z kontextu.
+     Ve třídě `Automobile` jsou typy nových vlastností správně odvozeny z kontextu.
 
 ### <a name="generate-a-stub-for-a-new-constructor"></a>Vygenerovat zástupnou proceduru pro nový konstruktor
-Nyní vytvoříme testovací metodu, která bude generovat zástupnou proceduru konstruktoru pro `Model` inicializaci `TopSpeed` vlastností a. Později přidáte další kód pro dokončení testu.
+Nyní vytvoříme testovací metodu, která vygeneruje zástupnou proceduru konstruktoru pro inicializaci `Model` a `TopSpeed` vlastností. Později přidáte další kód pro dokončení testu.
 
-1. Přidejte do `AutomobileTest` třídy následující další metodu testu.
+1. Přidejte následující další testovací metodu do třídy `AutomobileTest`.
 
      [!code-csharp[VbTDDWalkthrough#2](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.cs)]
      [!code-vb[VbTDDWalkthrough#2](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.vb)]
 
 2. V červené vlnovce klikněte na žárovku Chyba **rychlých akcí** a pak klikněte na **vytvořit konstruktor v automobilu**.
 
-     V souboru `Automobile` třídy si všimněte, že nový konstruktor zkontroloval názvy místních proměnných, které se používají ve volání konstruktoru, nalezené vlastnosti, které mají stejné názvy ve třídě, a dodaný kód v těle konstruktoru do `Automobile` uložte hodnoty argumentů do `Model` vlastností a. `TopSpeed`
+     V souboru `Automobile` třídy si všimněte, že nový konstruktor zkontroloval názvy místních proměnných, které se používají ve volání konstruktoru, nalezené vlastnosti, které mají stejné názvy ve třídě `Automobile` a dodávají kód v těle konstruktoru pro uložení hodnoty argumentů ve vlastnostech `Model` a `TopSpeed`.
 
-3. Po vygenerování nového konstruktoru se zobrazí podtržení vlnovkou pod voláním výchozího konstruktoru v `DefaultAutomobileIsInitializedCorrectly`. Chybová zpráva uvádí, že `Automobile` třída nemá žádný konstruktor, který přebírá nula argumentů. Pokud chcete vygenerovat explicitní výchozí konstruktor, který nemá parametry, klikněte na žárovku chyby **rychlých akcí** a pak klikněte na **vytvořit konstruktor v automobilu**.
+3. Po vygenerování nového konstruktoru se pod voláním výchozího konstruktoru v `DefaultAutomobileIsInitializedCorrectly` zobrazí vlnové podtržení. Chybová zpráva uvádí, že třída `Automobile` nemá žádný konstruktor, který přebírá nula argumentů. Pokud chcete vygenerovat explicitní výchozí konstruktor, který nemá parametry, klikněte na žárovku chyby **rychlých akcí** a pak klikněte na **vytvořit konstruktor v automobilu**.
 
 ### <a name="generate-a-stub-for-a-method"></a>Generování zástupné procedury pro metodu
-Předpokládá, že specifikace, která je nová `Automobile` , může být vložena `IsRunning` do stavu, `Model` Pokud `TopSpeed` jsou vlastnosti a vlastností nastaveny na jinou hodnotu než výchozí hodnoty.
+Předpokládá se, že specifikace uvádí, že nový `Automobile` může být vložen do `IsRunning` stavu, pokud je jeho `Model` a `TopSpeed` vlastností nastaveno na jinou hodnotu než výchozí hodnoty.
 
-1. Do `AutomobileWithModelNameCanStart` metody přidejte následující řádky.
+1. Do metody `AutomobileWithModelNameCanStart` přidejte následující řádky.
 
      [!code-csharp[VbTDDWalkthrough#3](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.cs)]
      [!code-vb[VbTDDWalkthrough#3](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.vb)]
 
-2. Klikněte na žárovku chyby **rychlých akcí** pro `myAuto.Start` volání metody a pak klikněte na **vygenerovat metodu ' automobil. Start '** .
+2. Klikněte na žárovku chyby **rychlých akcí** pro volání metody `myAuto.Start` a pak klikněte na **vygenerovat metodu ' automobil. Start '** .
 
-3. Klikněte na žárovku **rychlých akcí** pro `IsRunning` vlastnost a pak klikněte na **vygenerovat vlastnost ' automobil. derunning '** .
+3. Klikněte na žárovku **rychlých akcí** pro vlastnost `IsRunning` a pak klikněte na **vygenerovat vlastnost ' automobil. derunning '** .
 
-     Třída nyní obsahuje metodu s názvem `Start()` a vlastnost s názvem `IsRunning`. `Automobile`
+     Třída `Automobile` nyní obsahuje metodu s názvem `Start()` a vlastnost s názvem `IsRunning`.
 
 ### <a name="run-the-tests"></a>Spustit testy
 
-1. V nabídce **test** vyberte možnost **Spustit** > **všechny testy**.
+1. V nabídce **test** vyberte možnost **Spustit**  > **všechny testy**.
 
-     Příkaz **Spustit** > **všechny testy** spustí všechny testy v jakémkoli testovacím rozhraní, které jsou zapsány pro aktuální řešení. V tomto případě existují dvě testy a obě selžou, podle očekávání. Test `DefaultAutomobileIsInitializedCorrectly` se nezdařil, `Assert.IsTrue` protože podmínka `False`se vrátí. Test `AutomobileWithModelNameCanStart` se nezdařil, `Start` protože metoda ve `Automobile` třídě vyvolá výjimku.
+     Příkaz **spustit**  > **všechny testy** spustí všechny testy v jakémkoli testovacím rozhraní, které jsou zapsány pro aktuální řešení. V tomto případě existují dvě testy a obě selžou, podle očekávání. Test `DefaultAutomobileIsInitializedCorrectly` se nezdařil, protože podmínka `Assert.IsTrue` vrací `False`. Test `AutomobileWithModelNameCanStart` se nezdařil, protože metoda `Start` ve třídě `Automobile` vyvolá výjimku.
 
      Následující obrázek ukazuje **výsledky testů** okno.
 
@@ -141,12 +141,12 @@ Předpokládá, že specifikace, která je nová `Automobile` , může být vlo�
 
 ### <a name="implement-the-source-code"></a>Implementace zdrojového kódu
 
-1. Do výchozího konstruktoru přidejte `Model`následující kód tak, `TopSpeed` aby byly vlastnosti a `-1` `"Not specified"` `IsRunning` všechny inicializovány na jejich správné výchozí hodnoty, a `False` (nebo `false` pro C#).
+1. Přidejte následující kód do výchozího konstruktoru tak, aby byly všechny vlastnosti `Model`, `TopSpeed` a `IsRunning` všechny inicializovány na jejich správné výchozí hodnoty `"Not specified"`, `-1` a `False` (nebo `false` pro C#).
 
      [!code-csharp[VbTDDWalkthrough#5](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.cs)]
      [!code-vb[VbTDDWalkthrough#5](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.vb)]
 
-2. Při volání `IsRunning` `Model` metody by měl příznak nastavit na hodnotu true, pouze pokud jsou vlastnosti nebo `TopSpeed` nastaveny na jinou hodnotu než výchozí hodnota. `Start` `NotImplementedException` Odeberte z těla metody a přidejte následující kód.
+2. Když je volána metoda `Start`, měla by nastavit příznak `IsRunning` na hodnotu true, pouze pokud jsou vlastnosti `Model` nebo `TopSpeed` nastaveny na jinou hodnotu než jejich výchozí hodnota. Odeberte `NotImplementedException` z těla metody a přidejte následující kód.
 
      [!code-csharp[VbTDDWalkthrough#6](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.cs)]
      [!code-vb[VbTDDWalkthrough#6](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.vb)]

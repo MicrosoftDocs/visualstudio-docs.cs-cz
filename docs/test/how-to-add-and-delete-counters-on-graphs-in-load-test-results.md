@@ -1,5 +1,5 @@
 ---
-title: Přidání a odstranění čítačů pro grafy ve výsledcích zátěžového testu
+title: Přidávání a odstraňování čítačů v grafech v načtení Výsledky testů
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,81 +8,81 @@ helpviewer_keywords:
 - load test, results graph
 - load test results, graphs
 ms.assetid: 81536233-1962-40d9-9511-0b4633814d90
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 692ea254719f5ae14491ae81e2e6ab0f5740fc05
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b589e45fe32aff1ce0eea338675d42c3e3ea944a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63002266"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72644366"
 ---
 # <a name="how-to-add-and-delete-counters-on-graphs-in-load-test-results"></a>Postupy: Přidání a odstranění čítačů pro grafy ve výsledcích zátěžového testu
 
-Můžete použít **čítače** panel k přidání čítačů výkonu do grafu.
+K přidání čítačů výkonu do grafu můžete použít panel **čítače** .
 
-![Přidání čítačů do grafu](../test/media/ltest_selectcounter.png)
+![Přidaný čítač do grafu](../test/media/ltest_selectcounter.png)
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-**Aspekty Interval vzorkování čítače výkonu**
+**Posouzení intervalu vzorkování čítače výkonu**
 
-Zvolte hodnotu **vzorkovací frekvence** vlastnost v zátěžovém testu běhu na základě délky zátěžového testu. Menší vzorkovací frekvence, jako je například výchozí hodnota pěti sekund, vyžaduje více místa v databázi výsledků zátěžového testu. Pro delší zátěžové testy vzorkovací frekvence snižuje množství dat, která shromažďujete. Další informace najdete v tématu [jak: Určení vzorkovací frekvence](../test/how-to-specify-the-sample-rate-for-a-load-test.md).
+V nastavení spuštění zátěžového testu v závislosti na délce zátěžového testu vyberte hodnotu vlastnosti **vzorkovací frekvence** . Menší vzorkovací frekvence, jako je například výchozí hodnota pět sekund, vyžaduje více místa v databázi výsledků zátěžového testu. U delších zátěžových testů zkracuje vzorkovací frekvence omezení množství shromažďovaných dat. Další informace najdete v tématu [Postupy: určení vzorkovací frekvence](../test/how-to-specify-the-sample-rate-for-a-load-test.md).
 
-Zde jsou uvedeny pokyny pro vzorkovací frekvence:
+Tady jsou některé pokyny pro vzorkovací frekvence:
 
-|Doba trvání zátěžového testu|Doporučená frekvence vzorkování|
+|Doba trvání zátěžového testu|Doporučená vzorkovací frekvence|
 |-|-----------------------------|
 |\< 1 hodina|5 sekund|
-|1 - 8 hodin|15 sekund|
-|8 - 24 hodin|30 sekund|
+|1-8 hodin|15 sekund|
+|8-24 hodin|30 sekund|
 |> 24 hodin|60 sekund|
 
-**Důležité informace týkající se včetně podrobnosti časování pro shromažďování dat**
+**Informace o tom, jak zahrnout podrobnosti časování ke shromáždění dat percentilu**
 
-V nastavení testu v editoru zátěžových testů s názvem existuje vlastnost **úložiště podrobností časování**. Pokud **úložiště podrobností časování** vlastnost je povolená, pak čas ke spuštění každé jednotlivé testy, transakce a stránky během zátěžového testu uložen v úložišti výsledků zátěžového testu. To umožňuje 90. percentil. a 95. percentil dat zobrazený v **Analyzéru zátěžového testu** v tabulkách testy, transakce a stránky.
+V nastavení běhu v Editor zátěžového testu s názvem **Podrobnosti o časování úložiště**existuje vlastnost. Pokud je povolena vlastnost **úložiště podrobností časování** , pak bude čas pro spuštění každého jednotlivého testu, transakce a stránky během zátěžového testu uložen v úložišti výsledků zátěžového testu. To umožňuje zobrazení dat 90 a 95. percentilu v **analyzátoru zátěžového testu** v tabulkách testy, transakce a stránky.
 
-Existují dvě volby pro povolení **úložiště podrobností časování** vlastnosti v vlastností parametrů spuštění s názvem **StatisticsOnly** a **AllIndividualDetails**. Obě možnosti všechny individuální testy, stránky a transakce jsou časovány a data percentilu se vypočtou z jednotlivých dat časování. Rozdíl je, že u **StatisticsOnly** ihned poté, co byla vypočtena data pro percentil, možnost jednotlivá časová data odstraněna z úložiště. To snižuje množství místa potřebné v úložišti použijete podrobnosti časování. Pokročilí uživatelé mohou však chtít zpracovat podrobná data časování jiným způsobem, pomocí nástroje SQL. Pokud tomu tak, **AllIndividualDetails** by měl být použit, tak, aby podrobná data časování byla k dispozici pro zpracování. Navíc pokud nastavíte vlastnost na **AllIndividualDetails**, pak lze analyzovat aktivity virtuálního uživatele pomocí **aktivity virtuálního uživatele** graf **Analyzéru zátěžového testu** po dokončení zátěžového testu. Další informace najdete v tématu [analýza aktivity virtuálních uživatelů v podrobném zobrazení](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md).
+Existují dvě možnosti, jak povolit vlastnost **úložiště podrobností časování** ve vlastnostech parametrů spuštění s názvem **StatisticsOnly** a **AllIndividualDetails**. S kteroukoli z možností všechny jednotlivé testy, stránky a transakce jsou časované a data percentilu se vypočítávají z dat jednotlivých časování. Rozdíl je v tom, že s možností **StatisticsOnly** , jakmile se dokončí data percentilu, se z úložiště odstraní jednotlivá data časování. Tím se sníží množství místa, které je nutné v úložišti, když použijete podrobnosti časování. Pokročilí uživatelé ale můžou chtít zpracovat podrobná data časování jiným způsobem pomocí nástrojů SQL. V takovém případě by měla být použita možnost **AllIndividualDetails** , aby byly k dispozici podrobná data časování pro toto zpracování. Kromě toho, pokud nastavíte vlastnost na **AllIndividualDetails**, pak můžete analyzovat aktivitu virtuálního uživatele pomocí grafu **aktivity virtuálního uživatele** v **analyzátoru zátěžového testu** po dokončení zátěžového testu. Další informace najdete v tématu [Analýza aktivity virtuálních uživatelů v zobrazení podrobností](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md).
 
-Množství místa potřebné v úložišti výsledků zátěžového testu k ukládání dat s podrobnosti časování může být značné, zejména pro delší zkoušky zatížení. Také čas pro ukládání těchto dat v úložišti výsledků zátěžového testu na konci zátěžového testu je delší, protože tato data jsou uložena v agentech zátěžového testu, dokud zátěžový test neskončí. Po dokončení zátěžového testu jsou data uložena do úložiště. Ve výchozím nastavení **úložiště podrobností časování** je povolena vlastnost. Pokud je to problém pro testovací prostředí, můžete chtít nastavit **úložiště podrobností časování** k **žádný**.
+Množství místa, které je nutné v úložišti výsledků zátěžového testu pro uložení dat o časování, může být velmi velké, zejména pro delší spuštěné zátěžové testy. Také čas pro ukládání těchto dat do úložiště výsledků zátěžového testu na konci zátěžového testu je delší, protože tato data jsou uložena v agentech zátěžového testu, dokud zátěžový test neskončí. Po dokončení zátěžového testu jsou data uložena do úložiště. Ve výchozím nastavení je povolena vlastnost **úložiště podrobností časování** . Pokud se jedná o problém vašeho testovacího prostředí, můžete chtít nastavit **úložiště podrobností časování** na **žádné**.
 
-Další informace najdete v tématu [jak: Určení vlastnosti úložiště podrobností časování](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md).
+Další informace najdete v tématu [Postupy: určení vlastnosti úložiště podrobností časování](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md).
 
-## <a name="to-display-a-particular-performance-counter-on-a-load-test-graph"></a>Chcete-li zobrazit konkrétního čítače výkonu v grafu zátěžového testu
+## <a name="to-display-a-particular-performance-counter-on-a-load-test-graph"></a>Zobrazení konkrétního čítače výkonu v grafu zátěžového testu
 
-1. Po dokončení zátěžového testu nebo po načtení výsledků testu v Analyzéru zátěžového testu na panelu nástrojů, zvolte **grafy**.
+1. Po dokončení zátěžového testu nebo po načtení výsledku testu klikněte na panelu nástrojů analyzátoru zátěžového testu na tlačítko **grafy**.
 
-     **Čítače** panelu se zobrazí v zobrazení grafů.
+     Panel **čítače** se zobrazí v zobrazení grafů.
 
     > [!NOTE]
-    > Pokud **čítače** panelu není zobrazen, zvolte **zobrazit Panel čítačů** na panelu nástrojů.
+    > Pokud panel **čítače** není zobrazený, vyberte na panelu nástrojů položku **Zobrazit panel čítačů** .
 
-2. V **čítače** panelu, rozbalte uzly v hierarchii, dokud nenajdete, kterou chcete zobrazit graficky čítače výkonu.
+2. Na panelu **čítače** rozbalte uzly v hierarchii, dokud nenajdete čítač výkonu, který chcete zobrazit graficky.
 
-     Například pokud chcete zobrazit dostupné paměti v počítači, ve kterém jsou testy spuštěny, rozbalte **počítače**, rozbalte uzel pro počítač a potom rozbalte **paměti**. Zobrazí se **počet MB k dispozici** čítače.
+     Chcete-li například zobrazit dostupnou paměť v počítači, na kterém jsou testy spuštěny, rozbalte položku **počítače**, rozbalte uzel počítače a poté rozbalte položku **paměť**. Zobrazí se čítač počet **dostupných MB** .
 
-3. Vyberte graf, na kterém chcete zobrazit čítače výkonu.
+3. Vyberte graf, na kterém chcete zobrazit čítač výkonu.
 
-4. Pravým tlačítkem myši na čítač výkonu v **čítače** panelu a vyberte **zobrazit čítač v grafu**.
+4. Pravým tlačítkem myši klikněte na čítač výkonu na panelu **čítače** a vyberte možnost **Zobrazit čítač v grafu**.
 
     > [!TIP]
-    > Dočasné zastavení, zobrazení dat čítače výkonu v grafu, zrušte zaškrtnutí políčka pro čítač výkonu v legendě. To umožňuje statistiky minimum, Maximum a průměr stále analyzovat bez zobrazení trendovou linii do grafu. To může být užitečné, pokud graf obsahuje několik překrývající se vykreslení čítače výkonu při analýze problémy. Další informace najdete v tématu [použití legendy zobrazení grafů k analýze zátěžových testů](../test/use-the-graphs-view-legend-to-analyze-load-tests.md).
+    > Chcete-li dočasně ukončit zobrazování dat čítače výkonu v grafu, zrušte zaškrtnutí políčka čítače výkonu v legendě. Tím umožníte, aby statistiky min, Max a Average byly stále analyzovány, aniž by se zobrazila čára trendu v grafu. To může být užitečné v případě, že graf obsahuje několik překrývajících se čítačů výkonu při analýze problémů. Další informace naleznete v tématu [použití legendy zobrazení grafů k analýze zátěžových testů](../test/use-the-graphs-view-legend-to-analyze-load-tests.md).
 
-5. Z grafu odebrat data čítače výkonu, pravým tlačítkem myši na čítač výkonu v **čítač** sloupce legendy a vyberte **odstranit**.
+5. Chcete-li z grafu odebrat data čítače výkonu, klikněte pravým tlačítkem myši na čítač výkonu ve sloupci **čítač** legendy a vyberte možnost **Odstranit**.
 
-     \- nebo –
+     \- nebo-
 
-     Klikněte pravým tlačítkem na řádek dat v grafu a výběr **odstranit**.
+     V grafu klikněte pravým tlačítkem myši na datový řádek a vyberte **Odstranit**.
 
-     \- nebo –
+     \- nebo-
 
-     Zvolte čítače výkonu ve **čítač** sloupce legendy nebo data řádku v grafu a potom stiskněte klávesu **odstranit** klíč.
+     Ve sloupci **čítač** v legendě nebo v datovém řádku v grafu zvolte čítač výkonu a pak stiskněte klávesu **Delete** .
 
     > [!NOTE]
-    > Můžete také umístit v legendě, ale ne na graf čítače výkonu pomocí **přidat čítač v legendě** příkazu.
+    > Můžete také zvolit, aby se v legendě umístil čítač výkonu, ale ne v grafu pomocí příkazu **Přidat čítač v legendě** .
 
 ## <a name="see-also"></a>Viz také:
 
 - [Analýza výsledků zátěžových testů v zobrazení grafů](../test/analyze-load-test-results-in-the-graphs-view.md)
-- [Postupy: Vytváření vlastních grafů](../test/how-to-create-custom-graphs-in-load-test-results.md)
+- [Postupy: vytváření vlastních grafů](../test/how-to-create-custom-graphs-in-load-test-results.md)

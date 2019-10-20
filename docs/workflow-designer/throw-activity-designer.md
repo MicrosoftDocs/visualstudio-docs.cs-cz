@@ -1,44 +1,44 @@
 ---
-title: Návrhář postupu provádění – Návrhář aktivity Throw
+title: Návrhář postupu provádění – Návrhář aktivity throw
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.Throw.UI
 ms.assetid: 5e97c947-be39-4a1f-af04-000e2e09528a
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7074ee2a11759983f103024033cb2b96322330cc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fe6a530888c7c28c5c1556114db03a6cd7369fe6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62434017"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649852"
 ---
 # <a name="throw-activity-designer"></a>Návrhář aktivity Throw
 
-**Throw** Návrhář aktivity se používá k vytvoření a konfigurace <xref:System.Activities.Statements.Throw> aktivity.
+Návrhář aktivity **throw** slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.Throw>.
 
-## <a name="the-throw-activity"></a>Aktivity Throw
+## <a name="the-throw-activity"></a>Aktivita throw
 
-<xref:System.Activities.Statements.Throw> Aktivita vyvolá výjimku.
+Aktivita <xref:System.Activities.Statements.Throw> vyvolá výjimku.
 
-### <a name="using-the-throw-activity-designer"></a>Pomocí Návrhář aktivity Throw
+### <a name="using-the-throw-activity-designer"></a>Použití návrháře aktivity throw
 
-Přístup **Throw** návrháře aktivit v **zpracování chyb** kategorii **nástrojů**.
+Přístup k Návrháři aktivity **throw** v kategorii **zpracování chyb** sady **nástrojů**.
 
-**Throw** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřadit na povrch návrháře postupu provádění bez ohledu na to aktivity jsou obvykle umístěny, například jako uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří <xref:System.Activities.Statements.Throw> aktivity s výchozím **DisplayName** o vyvolání výjimky. <xref:System.Activities.Activity.DisplayName%2A> Hodnota se dá upravit v záhlaví **Throw** Návrhář aktivity nebo v **DisplayName** pole mřížku vlastností. <xref:System.Activities.Statements.Throw.Exception%2A> Vlastnost musí upravit v mřížce vlastností.
+Návrhář aktivity **throw** lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu všude, kde jsou obvykle umístěny aktivity, například uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří aktivita <xref:System.Activities.Statements.Throw> s výchozím **zobrazovaným názvem** pro vyvolání. Hodnotu <xref:System.Activities.Activity.DisplayName%2A> lze upravit v záhlaví návrháře aktivit **throw** nebo v poli **DisplayName** v mřížce vlastností. Vlastnost <xref:System.Activities.Statements.Throw.Exception%2A> musí být upravena v mřížce vlastností.
 
-### <a name="the-throw-properties"></a>Vyvolání vlastnosti
+### <a name="the-throw-properties"></a>Vlastnosti throw
 
-Následující tabulka ukazuje <xref:System.Activities.Statements.Throw> vlastnosti a popisuje, jak se používají v návrháři.
+V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.Throw> a popisuje, jak se používají v návrháři.
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje volitelný popisný název <xref:System.Activities.Statements.Throw> aktivity. Výchozí hodnota je vyvolání výjimky.|
-|<xref:System.Activities.Statements.Throw.Exception%2A>|Pravda|Výjimka, která má být vyvolána. Tato výjimka musí být odvozen od <xref:System.Exception>. Pokud chcete nastavit výjimky, zadejte výraz jazyka Visual Basic v mřížce vlastností.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje nepovinný popisný název aktivity <xref:System.Activities.Statements.Throw>. Výchozí hodnota je throw.|
+|<xref:System.Activities.Statements.Throw.Exception%2A>|Podmínka|Výjimka, která se má vyvolat Tato výjimka musí být odvozena od <xref:System.Exception>. Chcete-li zadat výjimku, zadejte výraz Visual Basic v mřížce vlastností.|
 
 ## <a name="see-also"></a>Viz také:
 

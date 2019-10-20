@@ -3,27 +3,27 @@ title: Návrhář postupu provádění – návrháři aktivit migrace
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 7598e869-1da1-4721-b4bf-6cbe402be1a2
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a7b284b370f248ed2497ece835036679af2e5a8
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: da8459db53a1ecb9a297e2a4a218791281806313
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747022"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650128"
 ---
 # <a name="migration-activity-designers"></a>Návrháři aktivit migrace
 
-Návrháři aktivit migrace se používá k volání 3.0/3.5 aktivity pracovního postupu z pracovního postupu, který cílí na rozhraní .NET Framework 4 nebo novější.
+Návrháři aktivit migrace slouží k volání aktivit pracovního postupu 3.0/3.5 z pracovního postupu, který cílí na .NET Framework 4 nebo novější.
 
-V tématech obsažené v této části najdete pokyny, jak používat návrháře aktivit návrháře postupu provádění.
+Témata v této části poskytují pokyny k použití Návrhář postupu provádění návrháři aktivit.
 
 ## <a name="related-sections"></a>Související oddíly
 
-U jiných typů návrháři aktivit najdete v následujících tématech:
+Další typy návrháře aktivit najdete v následujících tématech:
 
 - [Tok řízení](../workflow-designer/control-flow-activity-designers.md)
 

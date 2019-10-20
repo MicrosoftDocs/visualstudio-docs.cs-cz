@@ -12,136 +12,136 @@ helpviewer_keywords:
 - forms, passing data between
 - Windows Forms, walkthroughs
 ms.assetid: 78bf038b-9296-4fbf-b0e8-d881d1aff0df
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: dc08b0667d4bcde4a2b0eaf95f966806b4a8931e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: eb4b1c0af617bfd8e1771e500b4f12699e3f0ec4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62566277"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72641441"
 ---
 # <a name="pass-data-between-forms"></a>Předávání dat mezi formuláři
 
-Tento názorný postup obsahuje podrobné pokyny pro předávání dat z jednoho formuláře. Pomocí zákazníci a objednávky tabulky z databáze Northwind, jeden formulář umožňuje uživatelům vybrat zákazníka a druhý formulář pro zobrazení objednávek pro vybraného zákazníka. Tento návod ukazuje, jak vytvořit metodu na druhý formulář, který přijímá data z první formuláře.
+Tento návod poskytuje podrobné pokyny pro předávání dat z jednoho formuláře do druhého. Pomocí tabulek zákazníci a objednávky z databáze Northwind jeden formulář umožňuje uživatelům vybrat zákazníka a druhý formulář zobrazuje objednávky vybraného zákazníka. Tento návod ukazuje, jak vytvořit metodu pro druhý formulář, který přijímá data z prvního formuláře.
 
 > [!NOTE]
-> Tento návod ukazuje pouze jeden ze způsobů předání dat mezi formuláři. Existují další možnosti pro předávání dat do formuláře, včetně vytváření druhý konstruktor pro příjem dat, nebo vytvoření veřejné vlastnosti, které lze nastavit s daty z první formuláře.
+> Tento návod ukazuje pouze jeden způsob, jak předat data mezi formuláři. K dispozici jsou další možnosti pro předávání dat do formuláře, včetně vytvoření druhého konstruktoru pro příjem dat nebo vytvoření veřejné vlastnosti, kterou lze nastavit s daty z prvního formuláře.
 
-Úlohy v tomto návodu zahrnují:
+Úlohy, které jsou znázorněné v tomto návodu, zahrnují:
 
-- Vytvoření nového **formulářová aplikace Windows** projektu.
+- Vytváří se nový projekt **aplikace model Windows Forms** .
 
-- Vytvoření a konfigurace datové sady [Průvodce konfigurací zdroje dat](../data-tools/media/data-source-configuration-wizard.png).
+- Vytvoření a konfigurace datové sady pomocí [Průvodce konfigurací zdroje dat](../data-tools/media/data-source-configuration-wizard.png).
 
-- Výběr ovládacího prvku, aby se ve formuláři vytvořen při přetažení položky z **zdroje dat** okna. Další informace najdete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetažení z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
+- Výběr ovládacího prvku, který má být vytvořen ve formuláři při přetahování položek z okna **zdroje dat** . Další informace naleznete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetahování z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
-- Vytvoření ovládacího prvku vázané na data přetažením položek z **zdroje dat** okna do formuláře.
+- Vytvoření ovládacího prvku vázaného na data přetažením položek z okna **zdroje dat** do formuláře.
 
-- Vytváří se druhý formulář s mřížce se zobrazí data.
+- Vytvoření druhého formuláře s mřížkou pro zobrazení dat
 
-- Vytváření dotazu TableAdapter načíst objednávek pro konkrétního zákazníka.
+- Vytvoření dotazu TableAdapter pro načtení objednávek pro konkrétního zákazníka.
 
 - Předávání dat mezi formuláři.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Tento návod používá SQL Server Express LocalDB a ukázkové databáze Northwind.
+Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
-1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji z [SQL Server Express stránku pro stažení](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program sady Visual Studio**. V aplikaci Visual Studio Instalační služby systému SQL Server Express LocalDB lze nainstalovat jako součást **ukládání a zpracování dat** úlohy, nebo jako jednotlivých komponent.
+1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V Instalační program pro Visual Studio lze SQL Server Express LocalDB nainstalovat jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
 
-2. Instalace ukázkové databáze Northwind pomocí následujících kroků:
+2. Nainstalujte ukázkovou databázi Northwind pomocí následujících kroků:
 
-    1. V sadě Visual Studio, otevřete **Průzkumník objektů systému SQL Server** okna. (Průzkumník objektů systému SQL Server je nainstalován jako součást **ukládání a zpracování dat** úlohy v instalačním programu sady Visual Studio.) Rozbalte **systému SQL Server** uzlu. Klikněte pravým tlačítkem na instanci LocalDB a vyberte **nový dotaz**.
+    1. V aplikaci Visual Studio otevřete okno **Průzkumník objektů systému SQL Server** . (Průzkumník objektů systému SQL Server je nainstalován v rámci úlohy **úložiště dat a zpracování** v instalační program pro Visual Studio.) Rozbalte uzel **SQL Server** . Klikněte pravým tlačítkem na instanci LocalDB a vyberte **Nový dotaz**.
 
-       Otevře se okno editor dotazů.
+       Otevře se okno editoru dotazů.
 
-    2. Kopírovat [Northwind příkazů jazyka Transact-SQL skriptů](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind úplně od začátku a naplní daty.
+    2. Zkopírujte [skript Transact-SQL Northwind](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní ji daty.
 
-    3. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
+    3. Vložte skript T-SQL do editoru dotazů a pak klikněte na tlačítko **Spustit** .
 
-       Po chvilce dotaz doběhnutí a vytvořit databázi Northwind.
+       Po krátké době se dotaz dokončí a vytvoří se databáze Northwind.
 
-## <a name="create-the-windows-forms-app-project"></a>Vytvoření projektu aplikace Windows Forms
+## <a name="create-the-windows-forms-app-project"></a>Vytvoření projektu aplikace model Windows Forms
 
-1. V sadě Visual Studio na **souboru** nabídce vyberte možnost **nový** > **projektu**.
+1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový**  > **projekt**.
 
-2. Rozbalte buď **Visual C#** nebo **jazyka Visual Basic** v levém podokně vyberte **Windows Desktop**.
+2. V levém podokně rozbalte buď **vizuál C#**  , nebo **Visual Basic** a pak vyberte **Desktop Windows**.
 
-3. V prostředním podokně, vyberte **aplikace Windows Forms** typ projektu.
+3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
-4. Pojmenujte projekt **PassingDataBetweenForms**a klikněte na tlačítko **OK**.
+4. Pojmenujte projekt **PassingDataBetweenForms**a klikněte na **tlačítko OK**.
 
-     **PassingDataBetweenForms** projekt je vytvořen a přidán do **Průzkumníka řešení**.
+     Vytvoří se projekt **PassingDataBetweenForms** a přidá se do **Průzkumník řešení**.
 
 ## <a name="create-the-data-source"></a>Vytvoření zdroje dat
 
-1. Chcete-li otevřít **zdroje dat** okno na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
+1. Chcete-li otevřít okno **zdroje dat** , klikněte v nabídce **data** na možnost **Zobrazit zdroje dat**.
 
-2. V **zdroje dat** okně **přidat nový zdroj dat** spustit **konfigurace zdroje dat** průvodce.
+2. V okně **zdroje dat** vyberte možnost **Přidat nový zdroj dat** a spusťte průvodce **konfigurací zdroje dat** .
 
-3. Vyberte **databáze** na **zvolte typ zdroje dat** stránce a potom klikněte na tlačítko **Další**.
+3. Vyberte možnost **databáze** na stránce **Vybrat typ zdroje dat** a poté klikněte na tlačítko **Další**.
 
-4. Na **vyberte databázový model** stránce ověřte, jestli **datovou sadu** je zadán a potom klikněte na **Další**.
+4. Na stránce **Vyberte databázový model** ověřte, zda je zadaná **datová sada** , a poté klikněte na tlačítko **Další**.
 
-5. Na **vyberte datové připojení** stránce, proveďte jednu z následujících akcí:
+5. Na stránce **Vyberte datové připojení** proveďte jednu z následujících akcí:
 
     - Pokud je připojení dat k ukázkové databázi Northwind k dispozici v rozevíracím seznamu, vyberte je.
 
-    - Vyberte **nové připojení** ke spuštění **přidat/změnit připojení** dialogové okno.
+    - Vyberte **nové připojení** , aby se spustilo dialogové okno **Přidat nebo upravit připojení** .
 
-6. Pokud vaše databáze vyžaduje heslo, a pokud je povolena možnost zahrnutí důvěrných osobních údajů, vyberte možnost a potom klikněte na tlačítko **Další**.
+6. Pokud vaše databáze vyžaduje heslo, a pokud je povolená možnost zahrnout citlivá data, vyberte možnost a klikněte na **Další**.
 
-7. Na **uložit připojovací řetězec do konfiguračního souboru aplikace** klikněte na **Další**.
+7. Na stránce **Uložit připojovací řetězec do konfiguračního souboru aplikace** klikněte na tlačítko **Další**.
 
-8. Na **zvolte vaše databázové objekty** stránce, rozbalte **tabulky** uzlu.
+8. Na stránce **zvolit databázové objekty** rozbalte uzel **tabulky** .
 
-9. Vyberte **zákazníkům** a **objednávky** tabulky a pak klikněte na tlačítko **Dokončit**.
+9. Vyberte tabulky **zákazníci** a **objednávky** a poté klikněte na tlačítko **Dokončit**.
 
-     **NorthwindDataSet** se přidá do vašeho projektu a **zákazníkům** a **objednávky** tabulky se zobrazí v **zdroje dat** okna.
+     **NorthwindDataSet** je přidán do projektu a tabulky **zákazníci** a **objednávky** se zobrazí v okně **zdroje dat** .
 
-## <a name="create-the-first-form-form1"></a>Vytvoření první formulář (Form1)
+## <a name="create-the-first-form-form1"></a>Vytvoření prvního formuláře (Form1)
 
-Můžete vytvořit mřížky vázané na data ( <xref:System.Windows.Forms.DataGridView> ovládací prvek), přetažením **zákazníkům** uzlu z **zdroje dat** okna do formuláře.
+Můžete vytvořit datovou mřížku (<xref:System.Windows.Forms.DataGridView> ovládací prvek) tak, že přetáhnete uzel **zákazníci** z okna **zdroje dat** do formuláře.
 
-### <a name="to-create-a-data-bound-grid-on-the-form"></a>K vytvoření mřížky vázané na data ve formuláři
+### <a name="to-create-a-data-bound-grid-on-the-form"></a>Vytvoření mřížky vázané na data na formuláři
 
-- Přetáhněte hlavní **zákazníkům** uzlu z **zdroje dat** okna do **Form1**.
+- Přetáhněte hlavní uzel **Customers** z okna **zdroje dat** do formuláře **Form1**.
 
-     A <xref:System.Windows.Forms.DataGridView> a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů se zobrazí na **Form1**. A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource>, a <xref:System.Windows.Forms.BindingNavigator> zobrazují v panelu komponent.
+     @No__t_0 a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů se zobrazí na **Form1**. V zásobníku komponent se zobrazí [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>.
 
-## <a name="create-the-second-form"></a>Druhý formulář pro vytvoření
+## <a name="create-the-second-form"></a>Vytvoření druhého formuláře
 
-Druhý formulář k předávání dat k vytvoření.
+Vytvořte druhý formulář, do kterého se budou předávat data.
 
-1. Z **projektu** nabídce zvolte **přidat formulář Windows**.
+1. V nabídce **projekt** vyberte možnost **Přidat formulář Windows**.
 
-2. Ponechte výchozí název **Form2**a klikněte na tlačítko **přidat**.
+2. Ponechte výchozí název **Form2**a klikněte na **Přidat**.
 
-3. Přetáhněte hlavní **objednávky** uzlu z **zdroje dat** okna do **Form2**.
+3. Přetáhněte uzel hlavní **objednávky** z okna **zdroje dat** do **Form2**.
 
-     A <xref:System.Windows.Forms.DataGridView> a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů se zobrazí na **Form2**. A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource>, a <xref:System.Windows.Forms.BindingNavigator> zobrazují v panelu komponent.
+     V **Form2**se zobrazí <xref:System.Windows.Forms.DataGridView> a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů. V zásobníku komponent se zobrazí [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>.
 
-4. Odstranit **OrdersBindingNavigator** z panelu komponent.
+4. Odstraňte **OrdersBindingNavigator** z panelu komponent.
 
-     **OrdersBindingNavigator** dané zařízení zmizí z **Form2**.
+     **OrdersBindingNavigator** zmizí z **Form2**.
 
-## <a name="add-a-tableadapter-query"></a>Přidání dotazu TableAdapter
+## <a name="add-a-tableadapter-query"></a>Přidat dotaz TableAdapter
 
-Přidání dotazu TableAdapter Form2 načíst objednávek pro vybraného zákazníka na Form1.
+Přidejte dotaz TableAdapter k Form2 pro načtení objednávek pro vybraného zákazníka na Form1.
 
-1. Dvakrát klikněte **NorthwindDataSet.xsd** ve **Průzkumníka řešení**.
+1. Dvakrát klikněte na soubor **NorthwindDataSet. xsd** v **Průzkumník řešení**.
 
-2. Klikněte pravým tlačítkem myši **OrdersTableAdapter**a vyberte **přidat dotaz**.
+2. Klikněte pravým tlačítkem na **OrdersTableAdapter**a vyberte **Přidat dotaz**.
 
-3. Ponechte výchozí možnost **použít SQL příkazy**a potom klikněte na tlačítko **Další**.
+3. Ponechte výchozí možnost **použít příkazy SQL**a pak klikněte na **Další**.
 
-4. Ponechte výchozí možnost **SELECT, který vrátí řádky**a potom klikněte na tlačítko **Další**.
+4. Ponechte výchozí možnost **vybrat, která vrátí řádky**, a pak klikněte na **Další**.
 
-5. Přidat klauzuli WHERE do dotazu vrátit `Orders` na základě `CustomerID`. Dotaz by měl vypadat přibližně takto:
+5. Přidejte do dotazu klauzuli WHERE, která vrátí `Orders` na základě `CustomerID`. Dotaz by měl vypadat přibližně takto:
 
     ```sql
     SELECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, ShipVia, Freight, ShipName, ShipAddress, ShipCity, ShipRegion, ShipPostalCode, ShipCountry
@@ -150,34 +150,34 @@ Přidání dotazu TableAdapter Form2 načíst objednávek pro vybraného zákazn
     ```
 
     > [!NOTE]
-    > Ověření parametru správná syntaxe pro vaši databázi. Například v aplikaci Microsoft Access, klauzuli WHERE vypadat nějak takto: `WHERE CustomerID = ?`.
+    > Ověřte správnou syntaxi parametru pro vaši databázi. Například v aplikaci Microsoft Access by klauzule WHERE vypadala takto: `WHERE CustomerID = ?`.
 
-6. Klikněte na **Další**.
+6. Klikněte na tlačítko **Další**.
 
-7. Pro **zadejte název DataTableMethod**, typ `FillByCustomerID`.
+7. Pro **naplnění názvu DataTableMethod**zadejte `FillByCustomerID`.
 
-8. Zrušte **vrátit tabulku DataTable** možnost a potom klikněte na tlačítko **Další**.
+8. Zrušte zaškrtnutí možnosti **vrátit DataTable** a potom klikněte na tlačítko **Další**.
 
 9. Klikněte na tlačítko **Dokončit**.
 
-## <a name="create-a-method-on-form2-to-pass-data-to"></a>Vytvořit metodu na Form2 k předávání dat do
+## <a name="create-a-method-on-form2-to-pass-data-to"></a>Vytvoření metody v Form2 k předání dat
 
-1. Klikněte pravým tlačítkem na **Form2**a vyberte **zobrazit kód** otevřete **Form2** v **Editor kódu**.
+1. Klikněte pravým tlačítkem na **Form2**a výběrem **Zobrazit kód** otevřete **Form2** v **editoru kódu**.
 
-2. Přidejte následující kód, který **Form2** po `Form2_Load` metody:
+2. Do **Form2** přidejte následující kód za metodu `Form2_Load`:
 
      [!code-vb[VbRaddataDisplaying#1](../data-tools/codesnippet/VisualBasic/pass-data-between-forms_1.vb)]
      [!code-csharp[VbRaddataDisplaying#1](../data-tools/codesnippet/CSharp/pass-data-between-forms_1.cs)]
 
-## <a name="create-a-method-on-form1-to-pass-data-and-display-form2"></a>Vytvořit metodu na Form1 k předání dat a zobrazení Form2
+## <a name="create-a-method-on-form1-to-pass-data-and-display-form2"></a>Vytvoření metody na Form1 pro předání dat a zobrazení Form2
 
-1. V **Form1**, klikněte pravým tlačítkem na mřížce dat zákazníků a pak klikněte na **vlastnosti**.
+1. V poli **Form1**klikněte pravým tlačítkem myši na datovou mřížku zákaznických dat a pak klikněte na **vlastnosti**.
 
-2. V **vlastnosti** okna, klikněte na tlačítko **události**.
+2. V okně **vlastnosti** klikněte na položku **události**.
 
-3. Dvakrát klikněte **CellDoubleClick** událostí.
+3. Dvakrát klikněte na událost **CellDoubleClick** .
 
-     Zobrazí se editor kódu.
+     Zobrazí se Editor kódu.
 
 4. Aktualizujte definici metody tak, aby odpovídala následující ukázce:
 
@@ -186,17 +186,17 @@ Přidání dotazu TableAdapter Form2 načíst objednávek pro vybraného zákazn
 
 ## <a name="run-the-app"></a>Spuštění aplikace
 
-- Stisknutím klávesy **F5** ke spuštění aplikace.
+- Stisknutím klávesy **F5** spusťte aplikaci.
 
-- Klikněte dvakrát na záznam zákazníka v **Form1** otevřete **Form2** s objednávek tohoto zákazníka.
+- Dvojitým kliknutím na záznam zákazníka v **Form1** otevřete **Form2** s objednávkami zákazníka.
 
 ## <a name="next-steps"></a>Další kroky
 
-V závislosti na požadavcích aplikace existuje několik kroků, které můžete provést po předávání dat mezi formuláři. Mezi vylepšení, která je možné pro tento návod provést, patří:
+V závislosti na požadavcích vaší aplikace existuje několik kroků, které můžete chtít provést po předání dat mezi formuláři. Mezi vylepšení, která je možné pro tento návod provést, patří:
 
-- Úpravy datové sady pro přidání nebo odebrání databázové objekty. Další informace najdete v tématu [vytvoření a konfigurace datové sady](../data-tools/create-and-configure-datasets-in-visual-studio.md).
+- Úprava datové sady pro přidání nebo odebrání databázových objektů. Další informace najdete v tématu [Vytvoření a konfigurace datových sad](../data-tools/create-and-configure-datasets-in-visual-studio.md).
 
-- Přidáváme funkci pro uložení dat zpět do databáze. Další informace najdete v tématu [uložit data zpět do databáze](../data-tools/save-data-back-to-the-database.md).
+- Přidání funkce pro uložení dat zpět do databáze. Další informace najdete v tématu [uložení dat zpět do databáze](../data-tools/save-data-back-to-the-database.md).
 
 ## <a name="see-also"></a>Viz také:
 

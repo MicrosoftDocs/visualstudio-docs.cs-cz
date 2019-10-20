@@ -8,15 +8,15 @@ dev_langs:
 - CSharp
 - VB
 - CPP
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1962a977cb282613405342f225d63140f1854453
-ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
+ms.openlocfilehash: dc3c11610d95756b265d5ba01a6f8365f115548a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71342431"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659806"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>Určení rozsahu testovaného kódu pomocí pokrytí kódu
 
@@ -28,7 +28,7 @@ Pokrytí kódu je jedna z možností při spouštění testovacích metod pomoc�
 
 ::: moniker range="vs-2017"
 
-![Výsledky pokrytí kódu s barevné zvýrazňování](../test/media/codecoverage1.png)
+![Výsledky pokrytí kódu s barvou](../test/media/codecoverage1.png)
 
 ::: moniker-end
 
@@ -54,10 +54,10 @@ Funkce pokrytí kódu je k dispozici pouze v edici Visual Studio Enterprise.
 
 ::: moniker-end
 
-2. Po spuštění testů, chcete-li zjistit, které řádky byly spuštěny, ![vyberte možnost Zobrazit ikonu](../test/media/codecoverage-showcoloringicon.png) barevného pokrytí kódu **Zobrazit barvy pokrytí kódu** v okně **výsledky pokrytí kódu** . Ve výchozím nastavení je kód, který je pokrytý testy, zvýrazněný světle modře.
+2. Po spuštění testů, chcete-li zjistit, které řádky byly spuštěny, vyberte možnost ![Show ikona barevného pokrytí pokrytí kódu ](../test/media/codecoverage-showcoloringicon.png) **Zobrazit barvy pokrytí kódu** v okně **výsledky pokrytí kódu** . Ve výchozím nastavení je kód, který je pokrytý testy, zvýrazněný světle modře.
 
    > [!TIP]
-   > Chcete-li změnit barvy nebo použít tučnou plochu, vyberte možnost **nástroje** > **Možnosti** > **prostředí** > **písma a barvy** > **zobrazit nastavení pro: Textový editor**. V části **Zobrazit položky**upravte nastavení položek pokrytí, například **Rozsah nedotčená oblast**.
+   > Chcete-li změnit barvy nebo použít tučnou plochu, vyberte možnost **nástroje**  > **možnosti**  > **prostředí**  > **písma a barvy**  > **Zobrazit nastavení pro: textový editor**. V části **Zobrazit položky**upravte nastavení položek pokrytí, například **Rozsah nedotčená oblast**.
    >
    > ![Písma a barvy pokrytí kódu](media/vs-2019/coverage-fonts-and-colors.png)
 
@@ -105,7 +105,7 @@ V některých situacích se na základě testovacích dat použijí různé blo
 
 Například při spuštění testu se vstupem „2“ je zjištěno 50% pokrytí určité funkce. Při druhém spuštění testu se vstupem "-2" se zobrazí v zobrazení vybarvení pokrytí, na které se vztahuje další 50% funkce. Po sloučení výsledků těchto dvou testovacích běhů ukáže sestava i vybarvení 100% pokrytí funkce.
 
-K ![tomu slouží ikona tlačítka pro sloučení v okně](../test/media/codecoverage-mergeicon.png) pokrytí kódu pro **sloučení výsledků pokrytí kódu** . Ke sloučení je možné použít libovolnou kombinaci předešlých běhů nebo importovaných výsledků. Pokud je potřeba sloučit exportované výsledky, je nejprve nutné je importovat.
+K tomu použijte ![Icon pro tlačítko Sloučit v okně pokrytí kódu ](../test/media/codecoverage-mergeicon.png) **sloučení výsledků pokrytí kódu** . Ke sloučení je možné použít libovolnou kombinaci předešlých běhů nebo importovaných výsledků. Pokud je potřeba sloučit exportované výsledky, je nejprve nutné je importovat.
 
 Pomocí **exportu výsledků pokrytí kódu** uložte výsledky operace sloučení.
 
@@ -119,7 +119,7 @@ Pomocí **exportu výsledků pokrytí kódu** uložte výsledky operace sloučen
 
 ## <a name="exclude-elements-from-the-code-coverage-results"></a>Vyloučit elementy z výsledků pokrytí kódu
 
-Je možné vyloučit určité prvky v kódu z výpočtů pokrytí, například proto, že je kód generován z textové šablony. <xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute?displayProperty=fullName> Přidejte atribut do některého z následujících prvků kódu: třída, struktura, metoda, vlastnost, vlastnost setter nebo getter, Event.
+Je možné vyloučit určité prvky v kódu z výpočtů pokrytí, například proto, že je kód generován z textové šablony. Přidejte atribut <xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute?displayProperty=fullName> do některého z následujících prvků kódu: třída, struktura, metoda, vlastnost, setter vlastnosti nebo getter, Event.
 
 > [!TIP]
 > Vyloučení třídy nevylučuje své odvozené třídy.
@@ -243,15 +243,15 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
 Použijte následující makra:
 
-`ExcludeFromCodeCoverage(`*Vyloučení* `, L"` *Funkce Function*`");`
+`ExcludeFromCodeCoverage(` *vyloučení* `, L"` *Function* `");`
 
-`ExcludeSourceFromCodeCoverage(`*Vyloučení* `, L"` *SourceFilePath*`");`
+`ExcludeSourceFromCodeCoverage(` *vyloučení* `, L"` *SourceFilePath* `");`
 
 - Název *vyloučení* je libovolný jedinečný název.
 
-- Název *funkce* je plně kvalifikovaný název funkce. Může obsahovat zástupné znaky. Chcete-li například vyloučit všechny funkce třídy, zapište`MyNamespace::MyClass::*`
+- Název *funkce* je plně kvalifikovaný název funkce. Může obsahovat zástupné znaky. Chcete-li například vyloučit všechny funkce třídy, zapište `MyNamespace::MyClass::*`
 
-- *SourceFilePath* je místní cesta nebo cesta UNC k souboru. cpp. Může obsahovat zástupné znaky. Následující příklad vyloučí všechny soubory v konkrétním adresáři:`\\MyComputer\Source\UnitTests\*.cpp`
+- *SourceFilePath* je místní cesta nebo cesta UNC k souboru. cpp. Může obsahovat zástupné znaky. Následující příklad vyloučí všechny soubory v konkrétním adresáři: `\\MyComputer\Source\UnitTests\*.cpp`
 
 - `#include <CodeCoverage\CodeCoverage.h>`
 
@@ -262,7 +262,7 @@ Použijte následující makra:
 - Vyloučení musí být zkompilována jako nespravovaný (nativní) kód, a to buď nastavením možnosti kompilátoru, nebo pomocí `#pragma managed(off)`.
 
 > [!NOTE]
-> Chcete-li vyloučit C++funkce v kódu/CLI, použijte `[System::Diagnostics::CodeAnalysis::ExcludeFromCodeCoverage]` atribut pro funkci. Toto je stejné použití jako v jazyce C#.
+> Chcete-li vyloučit C++funkce v kódu/CLI, použijte atribut `[System::Diagnostics::CodeAnalysis::ExcludeFromCodeCoverage]` na funkci. Toto je stejné použití jako v jazyce C#.
 
 ### <a name="include-or-exclude-additional-elements"></a>Zahrnout nebo vyloučit další prvky
 

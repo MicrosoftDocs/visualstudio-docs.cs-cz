@@ -1,23 +1,23 @@
 ---
-title: 'Ukázkový soubor XSD: Jednoduché schéma'
+title: 'Ukázkový soubor XSD: jednoduché schéma'
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: f7e1dde1-b4f6-4371-add4-935b68ec77d7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0228ab75da15099aad3a6f60feca3d71f644b4ff
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: 0b6681e47ba33d16cd48f5f34389a5d113fc36ef
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65455094"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651157"
 ---
-# <a name="sample-xsd-file-simple-schema"></a>Ukázkový soubor XSD: Jednoduché schéma
+# <a name="sample-xsd-file-simple-schema"></a>Ukázkový soubor XSD: jednoduché schéma
 
-Následující soubor XSD se používá v různých příkladů v dokumentaci k Návrhář schématu XSD. Tento soubor je jednoduchý nákupní pořadí schématu.
+Následující soubor XSD se používá v různých příkladech v dokumentaci k Návrháři schématu XSD. Tento soubor je jednoduché schéma nákupních objednávek.
 
 ```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
@@ -47,4 +47,4 @@ Následující soubor XSD se používá v různých příkladů v dokumentaci k 
 ```
 
 > [!NOTE]
-> Vzorové společnosti, organizace, produkty, názvy domén, e-mailové adresy, loga, osoby, místa a události použité v ukázkách jsou smyšlené. Žádné jejich spojení se skutečnou společností, organizaci, produktu, název domény, e-mailovou adresu, loga, osoby, místa nebo události je určena ji vyvozovat.
+> Ukázkové společnosti, organizace, produkty, názvy domén, e-mailové adresy, loga, osoby, místa a události použité v ukázkách jsou smyšlené. Žádná spojitost se skutečnou společností, organizací, produktem, názvem domény, e-mailovou adresou, logem, osobou, místem a událostmi není zamýšlená nebo by se měla odvodit.

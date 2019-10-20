@@ -4,37 +4,58 @@ ms.date: 08/03/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - fxcop analyzers
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: fec188ba61a7e4d3f27caad03f0a5d32b6758a32
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: 9791e2dbb6d4a82a49539216eda53d217140bd52
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974995"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649342"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>Instalace analyzátorů FxCop v aplikaci Visual Studio
 
 Společnost Microsoft vytvořila sadu analyzátorů označovaných jako [Microsoft. CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers), které obsahují nejdůležitější pravidla "FxCop" ze starší verze analýzy. Tyto analyzátory kontrolují váš kód pro problémy se zabezpečením, výkonem a návrhem mimo jiné.
 
-Tyto analyzátory FxCop můžete nainstalovat buď jako balíček NuGet, nebo jako rozšíření VSIX pro Visual Studio. Další informace o jednotlivých specialistech a jejich nevýhody najdete v tématu [NuGet Package vs. Rozšíření VSIX @ no__t-0.
+Tyto analyzátory FxCop můžete nainstalovat buď jako balíček NuGet, nebo jako rozšíření VSIX pro Visual Studio. Další informace o jednotlivých specialistech a jejich nevýhody najdete v tématu [balíček NuGet a rozšíření VSIX](roslyn-analyzers-overview.md#nuget-package-versus-vsix-extension).
 
 ## <a name="nuget-package"></a>Balíček NuGet
 
-Balíček NuGet [Microsoft. CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) můžete nainstalovat přímo ze stránky vlastností analýzy kódu projektu:
+::: moniker range=">=vs-2019"
+
+V aplikaci Visual Studio 2019 verze 16,3 a novější můžete balíček NuGet [Microsoft. CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) nainstalovat přímo ze stránky vlastností analýzy kódu projektu:
 
 1. Klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení**, vyberte **vlastnosti**a pak vyberte kartu **Analýza kódu** .
 
    ![Instalace balíčku FxCop Analyzer z vlastností stránky v aplikaci Visual Studio](media/install-fxcop-properties-page.png)
 
-2. Vyberte **Install** (Nainstalovat).
+2. Vyberte **nainstalovat**.
 
-   Sada Visual Studio nainstaluje nejnovější verzi balíčku Microsoft. CodeAnalyzers. FxCopAnalyzers. Sestavení se zobrazí v **Průzkumník řešení** v části **odkazy** > **analyzátory**.
+   Sada Visual Studio nainstaluje nejnovější verzi balíčku Microsoft. CodeAnalyzers. FxCopAnalyzers. Sestavení se zobrazí v **Průzkumník řešení** v části **odkazy**  > **analyzátory**.
 
    ![Uzel analyzátorů v Průzkumník řešení](media/solution-explorer-analyzers-node.png)
+
+Pokud používáte starší verzi sady Visual Studio 2019, nainstalujte balíček pomocí [konzoly Správce balíčků](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console) nebo [uživatelského rozhraní Správce balíčků](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console).
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+1. [Určete verzi balíčku analyzátoru, která](#fxcopanalyzers-package-versions) se má nainstalovat, na základě vaší verze sady Visual Studio.
+
+2. Nainstalujte balíček v aplikaci Visual Studio pomocí [konzoly Správce balíčků](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console) nebo [uživatelského rozhraní Správce balíčků](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console).
+
+   > [!NOTE]
+   > Stránka nuget.org pro každý balíček analyzátoru zobrazuje příkaz pro vložení do **konzoly Správce balíčků**. Je k dispozici i praktické tlačítko ke zkopírování textu do schránky.
+   >
+   > ![Stránka NuGet.org zobrazující příkaz konzoly Správce balíčků](media/nuget-package-manager-command.png)
+
+   Jsou nainstalována sestavení analyzátoru a zobrazí se v **Průzkumník řešení** v části **odkazy** > **analyzátory**.
+
+::: moniker-end
 
 ### <a name="custom-installation"></a>Vlastní instalace
 
@@ -49,13 +70,13 @@ Pro vlastní instalaci, například chcete-li zadat jinou verzi balíčku, vyber
 
 Pomocí následujících pokynů určete, která verze balíčku FxCop Analyzer má být nainstalována pro vaši verzi sady Visual Studio:
 
-| Verze Visual Studio | Verze balíčku analyzátoru FxCop |
+| Verze sady Visual Studio | Verze balíčku analyzátoru FxCop |
 | - | - |
 | Visual Studio 2019 (všechny verze)<br />Visual Studio 2017 verze 15,8 a novější | [nejnovější](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) |
 | Visual Studio 2017 verze 15,5 až 15,7 | [2.6.3](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.3) |
-| Visual Studio 2017 verze 15,3 až 15,4 | [2.3.0-beta1](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.3.0-beta1) |
-| Visual Studio 2017 verze 15,0 až 15,2 | [2.0.0-beta2](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.0.0-beta2) |
-| Visual Studio 2015 Update 2 a 3 | [1.2.0-beta2](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/1.2.0-beta2) |
+| Visual Studio 2017 verze 15,3 až 15,4 | [2.3.0 – Beta1](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.3.0-beta1) |
+| Visual Studio 2017 verze 15,0 až 15,2 | [2.0.0 – beta2](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.0.0-beta2) |
+| Visual Studio 2015 Update 2 a 3 | [1.2.0 – beta2](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/1.2.0-beta2) |
 | Visual Studio 2015 Update 1 | [1.1.0](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/1.1.0) |
 | Visual Studio 2015 RTW | [1.0.1](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/1.0.1) |
 

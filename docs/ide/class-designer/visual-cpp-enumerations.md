@@ -5,21 +5,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Class Designer [Visual Studio], enumerations
 ms.assetid: 11e90ba1-18cd-44f8-9e26-e3746a7a19d1
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f31f153183d0cdd809bd9dde9187ade32b20ddd2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b5df17176839dccf0fbe0c42f164bde6b3e39f56
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975018"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72631125"
 ---
-# <a name="visual-c-enumerations-in-class-designer"></a>Výčty Visual C++ v Návrháři tříd
+# <a name="visual-c-enumerations-in-class-designer"></a>Vizuální C++ výčty v Návrhář tříd
 
-**Návrhář tříd** podporuje C++ `enum` a s vymezeným oborem `enum class` typy. Tady je příklad:
+**Návrhář tříd** podporuje C++ `enum` a vymezené `enum class` typy. Následuje příklad:
 
 ```cpp
 enum CardSuit {
@@ -38,9 +38,9 @@ enum class CardSuit {
 };
 ```
 
-Tvar výčtu C++ v diagramu třídy vypadá a funguje jako tvar struktury, s tím rozdílem, že načte popisek **výčtu** nebo **Enum class**, je růžový místo modrý a má barevné ohraničení na levém a horním okraje. Obrazce výčtu i obrazce struktury mají hranaté rohy.
+Tvar C++ výčtu v diagramu třídy vypadá a funguje jako obrazec struktury, s tím rozdílem, že popisek čte **výčet** nebo **třídu enum**, je růžový namísto modré a má barevné ohraničení na levém a horním okraji. Obrazce výčtu i obrazce struktury mají čtvercové rohy.
 
-Další informace o používání `enum` zadejte naleznete v tématu [výčty](/cpp/cpp/enumerations-cpp).
+Další informace o použití typu `enum` naleznete v tématu [výčty](/cpp/cpp/enumerations-cpp).
 
 ## <a name="see-also"></a>Viz také:
 

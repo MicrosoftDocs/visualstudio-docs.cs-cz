@@ -2,17 +2,17 @@
 title: Možnosti konfigurace analyzátoru FxCop
 ms.date: 09/23/2019
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: de4fdbbdf54976ba3ee12c3621f7038cd4704a76
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 78967c93a990aaef0d5863446433c286bdcf46b7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72449063"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649599"
 ---
 # <a name="rule-scope-options-for-fxcop-analyzers"></a>Možnosti oboru pravidla pro analyzátory FxCop
 
@@ -21,9 +21,9 @@ Některá pravidla analyzátoru FxCop umožňují Upřesnit, na které části z
 Tyto možnosti konfigurace jsou k dispozici od verze 2.6.3 balíčku NuGet [Microsoft. CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) .
 
 > [!TIP]
-> Úplný seznam možností, které jsou k dispozici pro danou verzi balíčku FxCopAnalyzers, najdete v souboru *analyzátoru Configuration.MD* ve složce *dokumentace* pro daný balíček. Soubor je umístěn v umístění *% USERPROFILE% \\. nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers @ no__t-2 @ no__t-3version @ no__t-4\documentation\Analyzer Configuration.MD*. Tento soubor dokumentace konfigurace je součástí každé verze balíčku počínaje verzí 2.6.5. Tady je příklad, jak je možnost popsána v souboru *analyzátoru Configuration.MD* :
+> Úplný seznam možností, které jsou k dispozici pro danou verzi balíčku FxCopAnalyzers, najdete v souboru *analyzátoru Configuration.MD* ve složce *dokumentace* pro daný balíček. Soubor se nachází v umístění *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers \\ \<version \> \documentation\analyzer Configuration.MD*. Tento soubor dokumentace konfigurace je součástí každé verze balíčku počínaje verzí 2.6.5. Tady je příklad, jak je možnost popsána v souboru *analyzátoru Configuration.MD* :
 >
-> Název možnosti: `sufficient_IterationCount_for_weak_KDF_algorithm` @ no__t-1
+> Název možnosti: `sufficient_IterationCount_for_weak_KDF_algorithm` \
 > Hodnoty možností: integrální hodnoty \
 > Výchozí hodnota: specifická pro každé konfigurovatelné pravidlo (ve výchozím nastavení je to pro většinu pravidel "100000") \
 > Příklad: `dotnet_code_quality.CA5387.sufficient_IterationCount_for_weak_KDF_algorithm = 100000`

@@ -1,5 +1,5 @@
 ---
-title: 'CA2221: Finalizační metody by měly být chráněné | Dokumentace Microsoftu'
+title: 'CA2221: finalizační metody by měly být chráněné | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CA2221
 ms.assetid: bda03aee-4cce-45d3-907d-17f4ee030acc
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9e8deec8687e3ddb2b3d961aa9fc1e97a45c961d
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 3e98c2ea598bcf73b919ba10ef1ea0b53c2a40f3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65685123"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651963"
 ---
 # <a name="ca2221-finalizers-should-be-protected"></a>CA2221: Finalizační metody by měly být chráněné
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,23 +29,23 @@ ms.locfileid: "65685123"
 |-|-|
 |TypeName|FinalizersShouldBeProtected|
 |CheckId|CA2221|
-|Kategorie|Microsoft.Usage|
-|Narušující změna|Pevné|
+|Kategorie|Microsoft. Usage|
+|Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>Příčina
- Veřejný typ implementuje finalizační metodu, která neurčuje přístupu family (chráněné).
+## <a name="cause"></a>příčina
+ Veřejný typ implementuje finalizační metodu, která neurčuje přístup Family (Protected).
 
 ## <a name="rule-description"></a>Popis pravidla
- Finalizační metody musí použít modifikátor přístupu family. Toto pravidlo je vynuceno kompilátory C#, Visual Basic a Visual C++.
+ Finalizační metody musí použít modifikátor přístupu family. Toto pravidlo je vynutilo kompilátory C#, Visual Basic a Visual C++ .
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, změňte finalizační metodu dostupná řada.
+ Chcete-li opravit porušení tohoto pravidla, změňte finalizační metodu tak, aby byla přístupná pro rodinu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
- Toto pravidlo nemůže být došlo k porušení v kterémkoli jazyce platformy .NET vysoké úrovně; Pokud píšete jazyk Microsoft Intermediate Language protože porušoval.
+ Toto pravidlo se nedá porušovat v žádném jazyce .NET úrovně vyšší úrovně; může být porušena, pokud píšete Microsoft Intermediate Language.
 
 ```
 // =============== CLASS MEMBERS DECLARATION ===================

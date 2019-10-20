@@ -1,5 +1,5 @@
 ---
-title: 'CA1033: Metody rozhraní by měla být volatelné podřízenými typy | Dokumentace Microsoftu'
+title: 'CA1033: metody rozhraní by měly být volatelné podřízenými typy | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,42 +12,42 @@ helpviewer_keywords:
 - InterfaceMethodsShouldBeCallableByChildTypes
 ms.assetid: 9f171497-a5e3-4769-a77b-7aed755b2662
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: bd801e7afc1fa0a4edf043aba560bc4afcdae9de
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 2ee44537ba4f7f7efd65de2c8a27d139d9750b77
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65682848"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661868"
 ---
-# <a name="ca1033-interface-methods-should-be-callable-by-child-types"></a>CA1033: Metody rozhraní by měly být volatelné podřízenými typy
+# <a name="ca1033-interface-methods-should-be-callable-by-child-types"></a>CA1033: Metody rozhraní by měla být volatelné podřízenými typy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|InterfaceMethodsShouldBeCallableByChildTypes|
 |CheckId|CA1033|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
  Nezapečetěný externě viditelný typ poskytuje explicitní implementaci metod veřejného rozhraní a neposkytuje alternativní externě viditelnou metodu stejného názvu.
 
 ## <a name="rule-description"></a>Popis pravidla
- Vezměte v úvahu základní typ, který explicitně implementuje metodu veřejných rozhraní. Typ, který se odvozuje od základního typu má přístup k zděděné metody pouze prostřednictvím odkaz na aktuální instanci (`this` v jazyce C#), který je přetypován na rozhraní. Pokud odvozený typ (explicitně) znovu implementuje metodu rozhraní zděděná, lze přistupovat už základní implementaci. Vyvolá odvozené provádění; volání prostřednictvím odkazu na aktuální instanci To způsobí, že rekurze a přetečení zásobníku konečný výsledek.
+ Vezměte v úvahu základní typ, který explicitně implementuje metodu veřejného rozhraní. Typ, který je odvozen od základního typu, může přistupovat k zděděné metodě rozhraní pouze prostřednictvím odkazu na aktuální instanci (`this` v C#), která je převedena na rozhraní. Pokud odvozený typ znovu implementuje (explicitně) zděděnou metodu rozhraní, k základní implementaci již nelze přivodit. Volání prostřednictvím aktuální reference instance vyvolá odvozenou implementaci; To způsobí rekurzi a případné přetečení zásobníku.
 
- Toto pravidlo nevytváří sestavu porušení pro explicitní implementaci <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> při externě viditelného `Close()` nebo `System.IDisposable.Dispose(Boolean)` metoda je k dispozici.
+ Toto pravidlo neoznamuje porušení explicitní implementace <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>, když je poskytnuta externě viditelná `Close()` nebo `System.IDisposable.Dispose(Boolean)` metoda.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, implementovat novou metodu, která poskytuje stejné funkce a je viditelná pro odvozené typy nebo změňte implicitními implementace. Pokud k zásadní změně je přijatelné, alternativou je učiňte typ zapečetěná.
+ Chcete-li opravit porušení tohoto pravidla, implementujte novou metodu, která zveřejňuje stejnou funkci a je viditelná pro odvozené typy nebo se změní na neexplicitní implementaci. V případě, že je zásadní změna přijatelné, alternativou je vytvořit zapečetěný typ.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění tohoto pravidla, pokud je externě viditelná metoda, která má stejné funkce, ale jiný název než explicitně implementované metody.
+ Je bezpečné potlačit upozornění z tohoto pravidla, pokud je k dispozici externě viditelná metoda, která má stejnou funkci, ale jiný název než explicitně implementovaná metoda.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ, `ViolatingBase`, který porušuje pravidla a typ, `FixedBase`, která zobrazuje oprava porušení zásady.
+ Následující příklad ukazuje typ, `ViolatingBase`, který porušuje pravidlo a typ `FixedBase`, který ukazuje opravu pro porušení.
 
  [!code-csharp[FxCop.Design.ExplicitMethodImplementations#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.ExplicitMethodImplementations/cs/FxCop.Design.ExplicitMethodImplementations.cs#1)]
 

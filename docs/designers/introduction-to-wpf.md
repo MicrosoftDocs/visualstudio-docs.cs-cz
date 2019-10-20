@@ -3,20 +3,20 @@ title: Úvod do WPF
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - csharp
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: bb88c5b718c0f949825a2542b5a084d4e8ca15b9
-ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
+ms.openlocfilehash: 5fe70c531a109294b49a1f6104f535cf8aca5a45
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71962966"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72635449"
 ---
 # <a name="wpf-overview"></a>Přehled grafického subsystému WPF (Windows Presentation Foundation)
 
@@ -62,7 +62,7 @@ Následující příklad používá XAML k implementaci vzhledu okna, které obs
 </Window>
 ```
 
-Konkrétně tento kód XAML definuje okno a tlačítko pomocí prvků `Window` a `Button` v uvedeném pořadí. Každý prvek je nakonfigurován s atributy, jako je například atribut `Title` elementu `Window` pro určení textu záhlaví okna. V době běhu převede WPF prvky a atributy, které jsou definovány v označení, na instance tříd WPF. Například prvek `Window` je převeden na instanci třídy <xref:System.Windows.Window>, jejíž vlastnost <xref:System.Windows.Window.Title%2A> je hodnotou atributu `Title`.
+Konkrétně tento kód XAML definuje okno a tlačítko pomocí prvků `Window` a `Button` v uvedeném pořadí. Každý element je nakonfigurován s atributy, jako je `Title` atribut `Window` elementu pro určení textu záhlaví okna. V době běhu převede WPF prvky a atributy, které jsou definovány v označení, na instance tříd WPF. Například `Window` element je převeden na instanci <xref:System.Windows.Window> třídy, jejíž vlastnost <xref:System.Windows.Window.Title%2A> je hodnota atributu `Title`.
 
 Následující obrázek ukazuje uživatelské rozhraní (UI), které je definováno XAML v předchozím příkladu.
 
@@ -139,7 +139,7 @@ Namespace SDKSample
 End Namespace
 ```
 
-V tomto příkladu kód na pozadí implementuje třídu, která je odvozena od třídy <xref:System.Windows.Window>. Atribut `x:Class` slouží k přidružení značky ke třídě s kódem na pozadí. `InitializeComponent` je volána z konstruktoru třídy kódu na pozadí pro sloučení uživatelského rozhraní, které je definováno v kódu pomocí třídy kódu na pozadí. (`InitializeComponent` se vygeneruje při sestavení vaší aplikace, což znamená, že je nemusíte implementovat ručně.) Kombinace `x:Class` a `InitializeComponent` zajistí, že se vaše implementace správně inicializuje při každém vytvoření. Třída kódu na pozadí implementuje také obslužnou rutinu události pro událost <xref:System.Windows.Controls.Primitives.ButtonBase.Click> tlačítka. Po kliknutí na tlačítko, obslužná rutina události zobrazí okno se zprávou voláním metody <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName>.
+V tomto příkladu kód na pozadí implementuje třídu, která je odvozena od třídy <xref:System.Windows.Window>. Atribut `x:Class` slouží k přidružení značky ke třídě s kódem na pozadí. `InitializeComponent` je volána z konstruktoru třídy kódu na pozadí pro sloučení uživatelského rozhraní, které je definováno v označení pomocí třídy kódu na pozadí. (`InitializeComponent` se vygeneruje při sestavení vaší aplikace, což znamená, že je nemusíte implementovat ručně.) Kombinace `x:Class` a `InitializeComponent` zajistí, že se vaše implementace správně inicializuje při každém vytvoření. Třída kódu na pozadí implementuje také obslužnou rutinu události pro událost <xref:System.Windows.Controls.Primitives.ButtonBase.Click> tlačítka. Po kliknutí na tlačítko, obslužná rutina události zobrazí okno se zprávou voláním metody <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName>.
 
 Následující obrázek ukazuje výsledek při kliknutí na tlačítko.
 
@@ -165,11 +165,11 @@ Tady jsou uvedené předdefinované ovládací prvky WPF.
 
 - **Digitální inkoust**: <xref:System.Windows.Controls.InkCanvas> a <xref:System.Windows.Controls.InkPresenter>.
 
-- **Dokumenty**: <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentScrollViewer> a <xref:System.Windows.Controls.StickyNoteControl>.
+- **Documents**: <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentScrollViewer> a <xref:System.Windows.Controls.StickyNoteControl>.
 
-- **Vstup**: <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox> a <xref:System.Windows.Controls.PasswordBox>.
+- **Input**: <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox> a <xref:System.Windows.Controls.PasswordBox>.
 
-- **Rozložení**: <xref:System.Windows.Controls.Border>, <xref:System.Windows.Controls.Primitives.BulletDecorator>, <xref:System.Windows.Controls.Canvas>, <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Expander>, <xref:System.Windows.Controls.Grid>, <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridSplitter>, <xref:System.Windows.Controls.GroupBox>, 0, 1, 2, 3, 5, 6, 7, 8, 9 a 0.
+- **Rozložení**: <xref:System.Windows.Controls.Border>, <xref:System.Windows.Controls.Primitives.BulletDecorator>, <xref:System.Windows.Controls.Canvas>, <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Expander>, <xref:System.Windows.Controls.Grid>, <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridSplitter>, <xref:System.Windows.Controls.GroupBox>, 0, 1, 2, 3, 4, 5 , 6, 7, 8, 9 a 0.
 
 - **Media**: <xref:System.Windows.Controls.Image>, <xref:System.Windows.Controls.MediaElement> a <xref:System.Windows.Controls.SoundPlayerAction>.
 
@@ -195,23 +195,23 @@ Základem systému rozložení je relativní umístění, které zvyšuje schopn
 
 Systém rozložení je vystaven podřízeným ovládacím prvkům prostřednictvím základních tříd WPF. Pro společná rozložení, jako jsou mřížky, skládání a ukotvení, WPF obsahuje několik ovládacích prvků rozložení:
 
-- <xref:System.Windows.Controls.Canvas>: Podřízené ovládací prvky poskytují své vlastní rozložení.
+- <xref:System.Windows.Controls.Canvas>: podřízené ovládací prvky poskytují své vlastní rozložení.
 
-- <xref:System.Windows.Controls.DockPanel>: Podřízené ovládací prvky jsou zarovnány k okrajům panelu.
+- <xref:System.Windows.Controls.DockPanel>: podřízené ovládací prvky jsou zarovnány k okrajům panelu.
 
-- <xref:System.Windows.Controls.Grid>: Podřízené ovládací prvky jsou umístěny podle řádků a sloupců.
+- <xref:System.Windows.Controls.Grid>: podřízené ovládací prvky jsou umístěny podle řádků a sloupců.
 
-- <xref:System.Windows.Controls.StackPanel>: Podřízené ovládací prvky jsou skládané buď svisle, nebo vodorovně.
+- <xref:System.Windows.Controls.StackPanel>: podřízené ovládací prvky jsou skládané buď svisle nebo vodorovně.
 
-- <xref:System.Windows.Controls.VirtualizingStackPanel>: Podřízené ovládací prvky jsou virtualizované a uspořádány na jednom řádku, který je buď vodorovně nebo svisle orientovaný na sebe.
+- <xref:System.Windows.Controls.VirtualizingStackPanel>: podřízené ovládací prvky jsou virtualizované a uspořádány na jednom řádku, který je buď vodorovně, nebo svisle orientovaný.
 
-- <xref:System.Windows.Controls.WrapPanel>: Podřízené ovládací prvky jsou umístěny v pořadí zleva doprava a zabaleny na další řádek, pokud existuje více ovládacích prvků na aktuálním řádku, než povoluje prostor.
+- <xref:System.Windows.Controls.WrapPanel>: podřízené ovládací prvky jsou umístěny v pořadí zleva doprava a zabaleny na další řádek, pokud existuje více ovládacích prvků na aktuálním řádku, než umožňuje prostor.
 
 Následující příklad používá <xref:System.Windows.Controls.DockPanel> k rozložení několika ovládacích prvků <xref:System.Windows.Controls.TextBox>.
 
 [!code-xaml[IntroToWPFSnippets#LayoutMARKUP](../designers/codesnippet/Xaml/introduction-to-wpf_1.xaml)]
 
-@No__t-0 umožňuje podřízeným ovládacím prvkům <xref:System.Windows.Controls.TextBox> sdělit, jak se mají uspořádat. K tomu <xref:System.Windows.Controls.DockPanel> implementuje připojenou vlastnost `Dock`, která je vystavena podřízeným ovládacím prvkům, aby každému z nich bylo možné zadat styl ukotvení.
+@No__t_0 umožňuje podřízeným ovládacím prvkům <xref:System.Windows.Controls.TextBox> sdělit, jak se mají uspořádat. K tomu <xref:System.Windows.Controls.DockPanel> implementuje `Dock` připojenou vlastnost, která je vystavena podřízeným ovládacím prvkům, aby každému z nich bylo možné zadat styl ukotvení.
 
 > [!NOTE]
 > Vlastnost, která je implementována nadřazeným ovládacím prvkem pro použití podřízenými ovládacími prvky, je konstrukce WPF nazývaná [připojená vlastnost](/dotnet/framework/wpf/advanced/attached-properties-overview).
@@ -220,7 +220,7 @@ Následující obrázek ukazuje výsledek kódu XAML v předchozím příkladu.
 
 ![Stránka DockPanel](../designers/media/wpfintrofigure11.png)
 
-## <a name="data-binding"></a>Vytváření datových vazeb
+## <a name="data-binding"></a>Datová vazba
 
 Většina aplikací je vytvořená tak, aby uživatelům poskytovala prostředky k zobrazení a úpravám dat. V případě aplikací WPF je pro technologie, jako je SQL Server a ADO .NET, k dispozici práce s daty, která jsou již k dispozici. Po otevření dat a jejich načtení do spravovaných objektů aplikace je zahájena pevná práce pro aplikace WPF. V podstatě to zahrnuje dvě věci:
 
@@ -228,16 +228,16 @@ Většina aplikací je vytvořená tak, aby uživatelům poskytovala prostředky
 
 2. Zajištění, že se změny provedené u dat pomocí ovládacích prvků zkopírují zpátky do spravovaných objektů.
 
-Pro zjednodušení vývoje aplikací poskytuje WPF modul datových vazeb k automatickému provedení těchto kroků. Základní jednotkou modulu datových vazeb je třída @no__t 0, jejíž úkolem je vytvořit vazbu ovládacího prvku (cíl vazby) k datovému objektu (zdroj vazby). Tento vztah je znázorněný na následujícím obrázku:
+Pro zjednodušení vývoje aplikací poskytuje WPF modul datových vazeb k automatickému provedení těchto kroků. Základní jednotkou modulu datové vazby je třída <xref:System.Windows.Data.Binding>, jejíž úkolem je vytvořit vazbu ovládacího prvku (cíl vazby) k datovému objektu (zdroj vazby). Tento vztah je znázorněný na následujícím obrázku:
 
 ![Základní diagram datových vazeb](../designers/media/databindingmostbasic.png)
 
-Další příklad ukazuje, jak vytvořit navázání <xref:System.Windows.Controls.TextBox> na instanci vlastního objektu `Person`. Implementace `Person` je uvedena v následujícím kódu:
+Další příklad ukazuje, jak vytvořit vazby <xref:System.Windows.Controls.TextBox> k instanci vlastního objektu `Person`. @No__t_0 implementace je zobrazená v následujícím kódu:
 
 [!code-vb[SimpleDataBindingSnippets#PersonClassCODE](../designers/codesnippet/VisualBasic/introduction-to-wpf_2.vb)]
 [!code-csharp[SimpleDataBindingSnippets#PersonClassCODE](../designers/codesnippet/CSharp/introduction-to-wpf_2.cs)]
 
-Následující kód váže <xref:System.Windows.Controls.TextBox> do instance vlastního objektu `Person`.
+Následující kód váže <xref:System.Windows.Controls.TextBox> k instanci vlastního objektu `Person`.
 
 ```xaml
  <Window
@@ -254,7 +254,7 @@ Následující kód váže <xref:System.Windows.Controls.TextBox> do instance vl
 [!code-vb[SimpleDataBindingSnippets#DataBindingCODEBEHIND](../designers/codesnippet/VisualBasic/introduction-to-wpf_6.vb)]
 [!code-csharp[SimpleDataBindingSnippets#DataBindingCODEBEHIND](../designers/codesnippet/CSharp/introduction-to-wpf_6.cs)]
 
-V tomto příkladu je vytvořena instance třídy `Person` v kódu na pozadí a je nastavena jako datový kontext pro `DataBindingWindow`. V kódu je vlastnost <xref:System.Windows.Controls.TextBox.Text%2A> <xref:System.Windows.Controls.TextBox> svázána s vlastností `Person.Name` (pomocí syntaxe jazyka XAML "`{Binding ... }`"). Tento kód XAML oznamuje, že má WPF navazovat řízení <xref:System.Windows.Controls.TextBox> na objekt `Person`, který je uložený ve vlastnosti <xref:System.Windows.FrameworkElement.DataContext%2A> okna.
+V tomto příkladu je vytvořena instance `Person` třídy v kódu na pozadí a je nastavena jako datový kontext pro `DataBindingWindow`. V kódu je vlastnost <xref:System.Windows.Controls.TextBox.Text%2A> <xref:System.Windows.Controls.TextBox> svázána s vlastností `Person.Name` (pomocí syntaxe XAML "`{Binding ... }`"). Tento kód XAML oznamuje, že má WPF navazovat ovládací prvek <xref:System.Windows.Controls.TextBox> na objekt `Person`, který je uložený v vlastnosti <xref:System.Windows.FrameworkElement.DataContext%2A> okna.
 
 Modul datových vazeb WPF poskytuje další podporu, která zahrnuje ověřování, řazení, filtrování a seskupování. Kromě toho datová vazba podporuje použití datových šablon k vytvoření vlastního uživatelského rozhraní pro vázaná data v případě, že uživatelské rozhraní zobrazené standardními ovládacími prvky WPF není vhodné.
 
@@ -278,7 +278,7 @@ WPF poskytuje knihovnu běžných 2D nakreslených 2D tvarů, jako jsou obdéln�
 
 ![Elipsy a obdélníky](../designers/media/wpfintrofigure4.PNG)
 
-Zajímavou schopností tvarů je, že nejsou jenom pro zobrazení; obrazce implementují mnoho funkcí, které očekáváte od ovládacích prvků, včetně vstupu klávesnice a myši. Následující příklad ukazuje <xref:System.Windows.UIElement.MouseUp> událost zpracování <xref:System.Windows.Shapes.Ellipse>.
+Zajímavou schopností tvarů je, že nejsou jenom pro zobrazení; obrazce implementují mnoho funkcí, které očekáváte od ovládacích prvků, včetně vstupu klávesnice a myši. Následující příklad ukazuje <xref:System.Windows.UIElement.MouseUp> událost <xref:System.Windows.Shapes.Ellipse> zpracovávána.
 
 [!code-xaml[IntroToWPFSnippets#HandleEllipseMouseUpEventMARKUP](../designers/codesnippet/Xaml/introduction-to-wpf_7.xaml)]
 
@@ -297,7 +297,7 @@ Další informace naleznete v tématu [Shapes and Basic Drawing in WPF Overview]
 
 objekty <xref:System.Windows.Shapes.Path> lze použít k vykreslení uzavřených nebo otevřených tvarů, více tvarů a dokonce i zakřivených tvarů.
 
-objekty <xref:System.Windows.Media.Geometry> lze použít pro oříznutí, testování přístupů a vykreslování 2D grafických dat.
+<xref:System.Windows.Media.Geometry> objekty lze použít pro oříznutí, testování přístupů a vykreslování 2D grafických dat.
 
 ![Různá použití cesty](../designers/media/wpfintrofigure5.png)
 
@@ -341,11 +341,11 @@ Další informace najdete v tématu [Přehled imagí](/dotnet/framework/wpf/grap
 
 ### <a name="video-and-audio"></a>Video a zvuk
 
-Ovládací prvek <xref:System.Windows.Controls.MediaElement> je schopný přehrávat video i zvuk a je dostatečně flexibilní, aby byl základem pro vlastní přehrávač médií. Následující kód XAML implementuje přehrávač médií.
+Ovládací prvek <xref:System.Windows.Controls.MediaElement> může přehrávat video i zvuk a je dostatečně flexibilní, aby byl základem pro vlastní přehrávač médií. Následující kód XAML implementuje přehrávač médií.
 
 [!code-xaml[IntroToWPFSnippets#MediaElementMARKUP](../designers/codesnippet/Xaml/introduction-to-wpf_9.xaml)]
 
-Okno na následujícím obrázku ukazuje ovládací prvek <xref:System.Windows.Controls.MediaElement> v akci.
+Okno na následujícím obrázku ukazuje <xref:System.Windows.Controls.MediaElement> ovládacího prvku v akci.
 
 ![Ovládací prvek MediaElement se zvukem a videem](../designers/media/wpfintrofigure1.png)
 
@@ -432,9 +432,9 @@ I když hlavní účel kódu XAML je implementovat vzhled aplikace, můžete tak
 
 ### <a name="control-templates"></a>Šablony ovládacích prvků
 
-Výchozí uživatelská rozhraní pro ovládací prvky WPF jsou obvykle vytvořena z jiných ovládacích prvků a tvarů. Například <xref:System.Windows.Controls.Button> se skládá z ovládacích prvků <xref:Microsoft.Windows.Themes.ButtonChrome> a <xref:System.Windows.Controls.ContentPresenter>. @No__t-0 poskytuje standardní vzhled tlačítka, zatímco <xref:System.Windows.Controls.ContentPresenter> zobrazuje obsah tlačítka, jak určuje vlastnost <xref:System.Windows.Controls.ContentControl.Content%2A>.
+Výchozí uživatelská rozhraní pro ovládací prvky WPF jsou obvykle vytvořena z jiných ovládacích prvků a tvarů. Například <xref:System.Windows.Controls.Button> se skládá z ovládacích prvků <xref:Microsoft.Windows.Themes.ButtonChrome> a <xref:System.Windows.Controls.ContentPresenter>. @No__t_0 poskytuje standardní vzhled tlačítka, zatímco <xref:System.Windows.Controls.ContentPresenter> zobrazuje obsah tlačítka, jak je určeno vlastností <xref:System.Windows.Controls.ContentControl.Content%2A>.
 
-Někdy se může stát, že výchozí vzhled ovládacího prvku bude incongruent s celkovým vzhledem aplikace. V tomto případě můžete použít <xref:System.Windows.Controls.ControlTemplate> ke změně vzhledu uživatelského rozhraní ovládacího prvku, aniž byste museli měnit jeho obsah a chování.
+Někdy se může stát, že výchozí vzhled ovládacího prvku bude incongruent s celkovým vzhledem aplikace. V takovém případě můžete použít <xref:System.Windows.Controls.ControlTemplate> ke změně vzhledu uživatelského rozhraní ovládacího prvku, aniž byste museli měnit jeho obsah a chování.
 
 Například následující příklad ukazuje, jak změnit vzhled <xref:System.Windows.Controls.Button> pomocí <xref:System.Windows.Controls.ControlTemplate>.
 
@@ -443,17 +443,17 @@ Například následující příklad ukazuje, jak změnit vzhled <xref:System.Wi
 [!code-csharp[IntroToWPFSnippets#ButtonControlTemplateWindowCODEBEHIND](../designers/codesnippet/CSharp/introduction-to-wpf_17.cs)]
 [!code-vb[IntroToWPFSnippets#ButtonControlTemplateWindowCODEBEHIND](../designers/codesnippet/VisualBasic/introduction-to-wpf_17.vb)]
 
-V tomto příkladu bylo tlačítko výchozí uživatelské rozhraní nahrazeno hodnotou <xref:System.Windows.Shapes.Ellipse> s tmavě modrým ohraničením a je vyplněno pomocí <xref:System.Windows.Media.RadialGradientBrush>. Ovládací prvek <xref:System.Windows.Controls.ContentPresenter> zobrazí obsah <xref:System.Windows.Controls.Button> a "Click to!". Když se klikne na <xref:System.Windows.Controls.Button>, událost <xref:System.Windows.Controls.Primitives.ButtonBase.Click> se stále vyvolá jako součást výchozího chování ovládacího prvku <xref:System.Windows.Controls.Button>. Výsledek je znázorněn na následujícím obrázku:
+V tomto příkladu bylo tlačítko výchozí uživatelské rozhraní nahrazeno <xref:System.Windows.Shapes.Ellipse>, které má tmavě modré ohraničení a je vyplněno pomocí <xref:System.Windows.Media.RadialGradientBrush>. Ovládací prvek <xref:System.Windows.Controls.ContentPresenter> zobrazí obsah <xref:System.Windows.Controls.Button> "klikněte na mě!". Při kliknutí na <xref:System.Windows.Controls.Button> je událost <xref:System.Windows.Controls.Primitives.ButtonBase.Click> stále vyvolána jako součást výchozího chování ovládacího prvku <xref:System.Windows.Controls.Button>. Výsledek je znázorněn na následujícím obrázku:
 
 ![Eliptické tlačítko a druhé okno](../designers/media/wpfintrofigure2.png)
 
 ### <a name="data-templates"></a>Datové šablony
 
-Zatímco šablona ovládacího prvku umožňuje určit vzhled ovládacího prvku, šablona data umožňuje určit vzhled obsahu ovládacího prvku. Šablony dat se často používají k vylepšení způsobu zobrazení vázaných dat. Následující obrázek ukazuje výchozí vzhled pro <xref:System.Windows.Controls.ListBox>, který je svázán s kolekcí objektů `Task`, kde každá úloha má název, popis a prioritu.
+Zatímco šablona ovládacího prvku umožňuje určit vzhled ovládacího prvku, šablona data umožňuje určit vzhled obsahu ovládacího prvku. Šablony dat se často používají k vylepšení způsobu zobrazení vázaných dat. Následující obrázek ukazuje výchozí vzhled pro <xref:System.Windows.Controls.ListBox>, která je svázána s kolekcí objektů `Task`, kde každá úloha má název, popis a prioritu.
 
 ![Rozevírací seznam s výchozím vzhledem](../designers/media/wpfintrofigure18.png)
 
-Výchozí vzhled je to, co byste očekávali od <xref:System.Windows.Controls.ListBox>. Výchozí vzhled jednotlivých úloh však obsahuje pouze název úlohy. Chcete-li zobrazit název, popis a prioritu úlohy, je třeba změnit výchozí vzhled položek vázaného seznamu ovládacího prvku <xref:System.Windows.Controls.ListBox> pomocí <xref:System.Windows.DataTemplate>. Následující kód XAML definuje takový <xref:System.Windows.DataTemplate>, který je použit pro každý úkol pomocí atributu <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>.
+Výchozí vzhled je to, co byste očekávali od <xref:System.Windows.Controls.ListBox>. Výchozí vzhled jednotlivých úloh však obsahuje pouze název úlohy. Chcete-li zobrazit název, popis a prioritu úkolu, musí být výchozí vzhled položek vázaného seznamu ovládacího prvku <xref:System.Windows.Controls.ListBox> změněn pomocí <xref:System.Windows.DataTemplate>. Následující kód XAML definuje takový <xref:System.Windows.DataTemplate>, který je použit pro každý úkol pomocí atributu <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>.
 
 ```xaml
 <Window
@@ -508,13 +508,13 @@ Následující obrázek ukazuje účinek tohoto kódu.
 
 ![Seznam, který používá šablonu dat](../designers/media/wpfintrofigure19.png)
 
-Všimněte si, že <xref:System.Windows.Controls.ListBox> zachovává chování a celkový vzhled; změnil se pouze vzhled obsahu zobrazeného v poli se seznamem.
+Všimněte si, že <xref:System.Windows.Controls.ListBox> zachovala chování a celkový vzhled; změnil se pouze vzhled obsahu zobrazeného v poli se seznamem.
 
 Další informace najdete v tématu [Přehled šablonování dat](/dotnet/framework/wpf/data/data-templating-overview).
 
 ### <a name="styles"></a>Styly
 
-Styly umožňují vývojářům a návrhářům standardizovat konkrétní vzhled pro svůj produkt. WPF poskytuje model silného stylu, který je základem elementu <xref:System.Windows.Style>. Následující příklad vytvoří styl, který nastaví barvu pozadí pro každé <xref:System.Windows.Controls.Button> v okně na `Orange`.
+Styly umožňují vývojářům a návrhářům standardizovat konkrétní vzhled pro svůj produkt. WPF poskytuje model silného stylu, který je základem prvku <xref:System.Windows.Style>. Následující příklad vytvoří styl, který nastaví barvu pozadí pro každé <xref:System.Windows.Controls.Button> okna na `Orange`.
 
 ```xaml
 <Window
@@ -541,17 +541,17 @@ Styly umožňují vývojářům a návrhářům standardizovat konkrétní vzhle
 </Window>
 ```
 
-Vzhledem k tomu, že tento styl cílí na všechny ovládací prvky <xref:System.Windows.Controls.Button>, je styl automaticky použit pro všechna tlačítka v okně, jak je znázorněno na následujícím obrázku:
+Vzhledem k tomu, že tento styl cílí na všechny <xref:System.Windows.Controls.Button> ovládací prvky, styl je automaticky použit pro všechna tlačítka v okně, jak je znázorněno na následujícím obrázku:
 
 ![Dvě oranžová tlačítka](../designers/media/wpfintrofigure20.png)
 
 Další informace najdete v tématu [styly a šablony](/dotnet/desktop-wpf/fundamentals/styles-templates-overview).
 
-### <a name="resources"></a>Zdroje a prostředky
+### <a name="resources"></a>Prostředky
 
 Ovládací prvky v aplikaci by měly sdílet stejný vzhled, který může obsahovat cokoli z písma a barev pozadí pro řízení šablon, šablon dat a stylů. Můžete použít podporu WPF pro prostředky uživatelského rozhraní k zapouzdření těchto prostředků v jednom umístění pro opakované použití.
 
-Následující příklad definuje společnou barvu pozadí, která je sdílena pomocí <xref:System.Windows.Controls.Button> a <xref:System.Windows.Controls.Label>.
+Následující příklad definuje společnou barvu pozadí, která je sdílena <xref:System.Windows.Controls.Button> a <xref:System.Windows.Controls.Label>.
 
 ```xaml
 <Window
@@ -577,13 +577,13 @@ Tento příklad implementuje zdroj barvy pozadí pomocí elementu vlastnosti `Wi
 
 1. Individuální ovládací prvek (pomocí zděděné vlastnosti <xref:System.Windows.FrameworkElement.Resources%2A?displayProperty=fullName>).
 
-2. @No__t-0 nebo <xref:System.Windows.Controls.Page> (používá se také zděděná vlastnost <xref:System.Windows.FrameworkElement.Resources%2A?displayProperty=fullName>).
+2. @No__t_0 nebo <xref:System.Windows.Controls.Page> (používá se také zděděná vlastnost <xref:System.Windows.FrameworkElement.Resources%2A?displayProperty=fullName>).
 
-3. @No__t-0 (pomocí vlastnosti <xref:System.Windows.Application.Resources%2A?displayProperty=fullName>).
+3. @No__t_0 (pomocí vlastnosti <xref:System.Windows.Application.Resources%2A?displayProperty=fullName>).
 
 Různé obory vám umožňují flexibilitu v závislosti na způsobu, jakým definujete a sdílíte své prostředky.
 
-Jako alternativu k přímému přiřazení prostředků k určitému oboru můžete jeden nebo víc prostředků zabalit pomocí samostatného <xref:System.Windows.ResourceDictionary>, na které se dá odkazovat v jiných částech aplikace. Například následující příklad definuje výchozí barvu pozadí ve slovníku prostředků.
+Jako alternativu k přímému přidružení prostředků k určitému oboru můžete jeden nebo víc prostředků zabalit pomocí samostatné <xref:System.Windows.ResourceDictionary>, na kterou se dá odkazovat v jiných částech aplikace. Například následující příklad definuje výchozí barvu pozadí ve slovníku prostředků.
 
 ```xaml
 <ResourceDictionary
@@ -631,11 +631,11 @@ V tuto chvíli ale můžete využít jeden ze tří modelů WPF pro vytvoření 
 
 - **Model uživatelského ovládacího prvku**. Vlastní ovládací prvek je odvozen z <xref:System.Windows.Controls.UserControl> a skládá se z jednoho nebo více dalších ovládacích prvků.
 
-- **Model ovládacího prvku**. Vlastní ovládací prvek je odvozen z <xref:System.Windows.Controls.Control> a používá se k sestavování implementací, které oddělují své chování od jejich vzhledu pomocí šablon, podobně jako většina ovládacích prvků WPF. Odvození z <xref:System.Windows.Controls.Control> umožňuje vytvořit vlastní uživatelské rozhraní než uživatelské ovládací prvky, ale může to vyžadovat více úsilí.
+- **Model ovládacího prvku**. Vlastní ovládací prvek je odvozen z <xref:System.Windows.Controls.Control> a slouží k sestavování implementací, které oddělují své chování od jejich vzhledu pomocí šablon, podobně jako většina ovládacích prvků WPF. Odvození z <xref:System.Windows.Controls.Control> vám umožňuje větší volnost při vytváření vlastního uživatelského rozhraní než uživatelských ovládacích prvků, ale může to vyžadovat více úsilí.
 
-- **Model elementu rozhraní**. Vlastní ovládací prvek je odvozen z <xref:System.Windows.FrameworkElement>, pokud je jeho vzhled definován pomocí vlastní logiky vykreslování (ne šablon).
+- **Model elementu rozhraní**. Vlastní ovládací prvek je odvozen z <xref:System.Windows.FrameworkElement>, pokud je jeho vzhled definován pomocí vlastní logiky vykreslování (nikoli šablon).
 
-Následující příklad ukazuje vlastní číselnou kontrolu nahoru/dolů, která je odvozena z <xref:System.Windows.Controls.UserControl>.
+Následující příklad ukazuje vlastní číselnou kontrolu nahoru/dolů, která je odvozena od <xref:System.Windows.Controls.UserControl>.
 
 [!code-xaml[IntroToWPFSnippets#UserControlMARKUP](../designers/codesnippet/Xaml/introduction-to-wpf_33.xaml)]
 
@@ -646,7 +646,7 @@ Následující příklad ilustruje kód XAML, který je požadován pro zahrnut�
 
 [!code-xaml[IntroToWPFSnippets#UserControlWindowMARKUP1](../designers/codesnippet/Xaml/introduction-to-wpf_37.xaml)]
 
-Následující obrázek znázorňuje ovládací prvek `NumericUpDown` hostovaný v <xref:System.Windows.Window>.
+Následující obrázek znázorňuje ovládací prvek `NumericUpDown` hostovaný ve <xref:System.Windows.Window>.
 
 ![Vlastní UserControl](../designers/media/wpfintrofigure3.png)
 
@@ -654,7 +654,7 @@ Další informace o vlastních ovládacích prvcích najdete v tématu [Přehled
 
 ## <a name="wpf-best-practices"></a>Osvědčené postupy pro WPF
 
-Stejně jako u jakékoli vývojové platformy je možné WPF použít různými způsoby, abyste dosáhli požadovaného výsledku. Jako způsob, jak zajistit, aby vaše aplikace WPF poskytovaly požadované uživatelské prostředí a splňovaly požadavky cílové skupiny obecně, existují Doporučené osvědčené postupy pro přístupnost, globalizaci a lokalizaci a výkon. Další informace naleznete v tématu:
+Stejně jako u jakékoli vývojové platformy je možné WPF použít různými způsoby, abyste dosáhli požadovaného výsledku. Jako způsob, jak zajistit, aby vaše aplikace WPF poskytovaly požadované uživatelské prostředí a splňovaly požadavky cílové skupiny obecně, existují Doporučené osvědčené postupy pro přístupnost, globalizaci a lokalizaci a výkon. Další informace naleznete v tématu:
 
 - [Usnadnění](/dotnet/framework/ui-automation/accessibility-best-practices)
 - [Globalizace a lokalizace WPF](/dotnet/framework/wpf/advanced/wpf-globalization-and-localization-overview)
@@ -666,7 +666,7 @@ Stejně jako u jakékoli vývojové platformy je možné WPF použít různými 
 Prohlédli jsme si klíčové funkce WPF. Nyní je čas vytvořit svou první aplikaci WPF.
 
 > [!div class="nextstepaction"]
-> [Návod: Moje první desktopová aplikace WPF @ no__t-0
+> [Návod: Moje první desktopová aplikace WPF](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)
 
 ## <a name="see-also"></a>Viz také:
 

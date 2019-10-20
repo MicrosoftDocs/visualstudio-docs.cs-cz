@@ -1,21 +1,21 @@
 ---
-title: 'Postupy: Vytvoření dokumentu XML na základě schématu XSD'
+title: 'Postupy: vytvoření dokumentu XML na základě schématu XSD'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 193b195f-e918-4c79-a1a1-8096a1433bde
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7739f33bad62667fdc7be8704237ebdd3932739c
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 1f423af7dc4fae7a116acbaf8497c5ee4268653e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918566"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645979"
 ---
-# <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>Postupy: Vytvoření dokumentu XML na základě schématu XSD
+# <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>Postupy: vytvoření dokumentu XML na základě schématu XSD
 
 Funkce **Generovat ukázková data XML** generuje ukázkový soubor XML na základě vašeho souboru schématu XML (XSD).
 
@@ -29,19 +29,19 @@ Funkce **Generovat vzor XML** je k dispozici pouze pro globální prvky a vyžad
 
 Tato funkce obvykle generuje platné dokumenty XML. Pokud však schéma obsahuje jednu nebo více z následujících možností, příklad nemusí být platný:
 
-- Omezení identity `xs:keyref`,a `xs:unique` . `xs:key`
+- Omezení identity `xs:key`, `xs:keyref` a `xs:unique`.
 
-- `xs:pattern`omezující vlastnosti.
+- `xs:pattern` omezující vlastnosti.
 
-- Výčty `xs:QName` typu.
+- Výčty typu `xs:QName`.
 
-- `xs:ENTITY`typy `xs:ENTITIES`, a `xs:NOTATION` .
+- typy `xs:ENTITY`, `xs:ENTITIES` a `xs:NOTATION`.
 
-Také si všimněte, `xs:base64Binary` že obsah bude vygenerován pouze v případě, že ve schématu pro daný typ dojde k výčtům.
+Všimněte si také, že `xs:base64Binary` obsah bude vygenerován pouze v případě, že ve schématu pro daný typ dojde k výčtům.
 
 ## <a name="to-generate-an-xml-instance-document-based-on-the-xsd-file"></a>Vygenerování dokumentu instance XML na základě souboru XSD
 
-1. Postupujte podle kroků v [tématu Postupy: Vytvořte a upravte soubor](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)schématu XSD.
+1. Postupujte podle kroků v tématu [Postupy: vytvoření a úprava souboru schématu XSD](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md).
 
 2. V [Průzkumníku schémat XML](../xml-tools/xml-schema-explorer.md)klikněte pravým tlačítkem na `PurchaseOrder` globální prvek. Vyberte **vytvořit ukázkový kód XML**.
 

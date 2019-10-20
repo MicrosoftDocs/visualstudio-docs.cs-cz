@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Ruční spuštění analýzy kódu pro spravovaný kód | Dokumentace Microsoftu'
+title: 'Postupy: ruční spuštění analýzy kódu pro spravovaný kód | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - code analysis, running
 ms.assetid: 5086d228-f92e-4515-9708-c5b89b9e9a03
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b9b38288b081d4fb856b433255bf355c13f819ac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 13964876934e80ef0aad5725e324d74821965890
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201347"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655229"
 ---
 # <a name="how-to-run-code-analysis-manually-for-managed-code"></a>Postupy: Ruční spuštění analýzy kódu pro spravovaný kód
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nástroj pro analýzu kódu vám poskytuje informace o možných chyb ve zdrojovém kódu. Můžete spustit analýzu kódu automaticky s každým sestavením projektu kódu a můžete také spustit analýzu kódu ručně. Pravidla, která jsou kontrolována při spuštění analýzy kódu jsou určeny na stránce analýzy kódu stránky vlastností projektu. Další informace najdete v tématu [jak: Konfigurace analýzy kódu pro spravovaný projekt kódu](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)  
-  
-### <a name="to-run-code-analysis-manually"></a>Pro ruční spuštění analýzy kódu  
-  
-1. V **Průzkumníka řešení**, klikněte na projekt.  
-  
-2. Na **analyzovat** nabídky, klikněte na tlačítko **spustit analýzu kódu na** *název projektu*.
+Nástroj Analýza kódu poskytuje informace o možných vadch ve vašem zdrojovém kódu. Můžete spustit analýzu kódu automaticky s každým sestavením kódu projektu a také můžete spustit analýzu kódu ručně. Pravidla, která jsou kontrolována při spuštění analýzy kódu, jsou uvedena na stránce vlastností projektu na stránce Analýza kódu. Další informace naleznete v tématu [Postupy: konfigurace analýzy kódu pro projekt spravovaného kódu.](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)
+
+### <a name="to-run-code-analysis-manually"></a>Ruční spuštění analýzy kódu
+
+1. V **Průzkumník řešení**klikněte na projekt.
+
+2. V nabídce **analyzovat** klikněte na možnost **Spustit analýzu kódu na** *název projektu*.

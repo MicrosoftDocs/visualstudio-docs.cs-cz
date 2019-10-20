@@ -1,5 +1,5 @@
 ---
-title: 'CA1401: Vyvolá P by neměly být viditelné | Dokumentace Microsoftu'
+title: 'CA1401: P-Invoke by neměl být viditelný | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - PInvokesShouldNotBeVisible
 ms.assetid: 0f4d96c1-f9de-414e-b223-4dc7f691bee3
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ee4afd777f46087a7497dbdf4734e4ced52f47d4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f3f867f14f7a2eca4482f1f8d5fb48149f02f43f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68200324"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661362"
 ---
 # <a name="ca1401-pinvokes-should-not-be-visible"></a>CA1401: Volání nespravovaných kódů by neměla být viditelná
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "68200324"
 |-|-|
 |TypeName|PInvokesShouldNotBeVisible|
 |CheckId|CA1401|
-|Kategorie|Microsoft.Interoperability|
+|Kategorie|Microsoft. interoperabilita|
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Veřejná nebo chráněná metoda veřejného typu má <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> atribut (také implementováno pomocí `Declare` – klíčové slovo v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]).
+ Veřejná nebo chráněná metoda ve veřejném typu má atribut <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> (také implementováno pomocí klíčového slova `Declare` v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]).
 
 ## <a name="rule-description"></a>Popis pravidla
- Metody, které jsou označené <xref:System.Runtime.InteropServices.DllImportAttribute> atribut (nebo metody, které jsou definovány pomocí `Declare` – klíčové slovo v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) používat platformu vyvolání služby pro přístup k nespravovanému kódu. Tyto metody by neměly být vystaveny. Udržováním tyto metody soukromý nebo interní, ujistěte se, že knihovny nelze použít k narušení zabezpečení tím, že volající přístup k nespravované rozhraní API, která nelze volat v opačném případě.
+ Metody označené atributem <xref:System.Runtime.InteropServices.DllImportAttribute> (nebo metody, které jsou definovány pomocí klíčového slova `Declare` v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) používají pro přístup k nespravovanému kódu služby vyvolání platformy. Tyto metody by neměly být vystaveny. Udržováním těchto metod jako soukromých nebo interních se ujistěte, že vaše knihovna nemůže být použita k porušení zabezpečení tím, že umožňuje volajícím přístup k nespravovaným rozhraním API, která by nemohly volat jinak.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, změňte úroveň přístupu metody.
@@ -45,7 +45,7 @@ ms.locfileid: "68200324"
  Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
- Následující příklad deklaruje metodu, která poruší toto pravidlo.
+ Následující příklad deklaruje metodu, která porušuje toto pravidlo.
 
  [!code-csharp[FxCop.Interoperability.DllImports#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Interoperability.DllImports/cs/FxCop.Interoperability.DllImports.cs#1)]
  [!code-vb[FxCop.Interoperability.DllImports#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Interoperability.DllImports/vb/FxCop.Interoperability.DllImports.vb#1)]

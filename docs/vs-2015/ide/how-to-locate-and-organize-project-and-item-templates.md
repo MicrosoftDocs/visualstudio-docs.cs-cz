@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Hledání a organizace projektů a šablon položek | Dokumentace Microsoftu'
+title: 'Postupy: vyhledání a uspořádání šablon projektů a položek | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,168 +13,164 @@ helpviewer_keywords:
 - templates [Visual Studio], locations
 ms.assetid: 71f9ed52-c9c9-4818-9bce-c279ffaa0438
 caps.latest.revision: 28
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4b14a374214a605ec718ad60c6942752f3134edd
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b5f55de910eb77ec7ccbd205b78d5c95039e6b39
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63416726"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651875"
 ---
 # <a name="how-to-locate-and-organize-project-and-item-templates"></a>Postupy: Hledání a organizace projektů a šablon položek
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Soubory šablony musí být umístěn do umístění, které Visual Studio rozpozná tak, aby se šablony se zobrazí v **nový projekt** a **přidat novou položku** dialogových oknech. Můžete vytvořit vlastní podkategorie šablony tak, aby podkategorií se také zobrazí v uživatelském rozhraní.  
-  
-## <a name="locating-templates"></a>Umístění šablon  
- Ve výchozím nastavení Visual Studio vyhledá dvě umístění pro šablony projektů a položek. Pokud existuje komprimovaný soubor, který obsahuje soubor .vstemplate v těchto umístěních, šablony se zobrazí v **nový projekt** nebo **přidat novou položku** dialogových oknech.  
-  
-### <a name="installed-templates"></a>Nainstalované šablony  
- Ve výchozím nastavení jsou součástí šablony nainstalované společně se sadou produktu:  
-  
-- \\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\\*jazyk*\\*národního prostředí*\  
-  
-- \\*VisualStudioInstallationDirectory*\Common7\IDE\ProjectTemplates\\*Language*\\*Locale\\*  
-  
-  Například následující adresář obsahuje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] šablony projektů pro angličtinu:  
-  
-  C:\\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\VisualBasic\1033\  
-  
-### <a name="custom-templates"></a>Vlastní šablony  
- Ve výchozím nastavení vlastní šablony se nacházejí v:  
-  
-- \My Documents\Visual Studio *Version*\Templates\ProjectTemplates\\*Language*\  
-  
-- Documents\Visual studio *verze*\Templates\ItemTemplates\\*jazyka*\  
-  
-  Například následující adresář obsahuje vlastní [!INCLUDE[csprcs](../includes/csprcs-md.md)] šablony projektu:  
-  
-  C:\Documents and Settings\UserName\My dokumenty\\< verze sady Visual Studio\>\Templates\ProjectTemplates\Visual C# \  
-  
-  Vlastní šablony nezahrnují podadresář pro lokalizované šablony. Můžete změnit výchozí adresář pro vlastní šablony v **možnosti** dialogovém okně **prostředí\projekty a řešení**.  
-  
-## <a name="organizing-templates"></a>Uspořádání šablon  
- Kategorie v **nový projekt** a **přidat novou položku** dialogová okna, aby odrážely struktury adresářů, které existují v umístění nainstalované a vlastní šablony. Tyto struktury adresářů pro uspořádání vašich šablon způsobem, který vám vyhovuje, můžete upravit.  
-  
+Soubory šablon musí být umístěny v umístění, které aplikace Visual Studio rozpozná, aby se šablony zobrazily v dialogových oknech **Nový projekt** a **Přidat novou položku** . Můžete vytvořit vlastní podkategorie pro šablony, aby se podkategoriely také v uživatelském rozhraní.
+
+## <a name="locating-templates"></a>Hledání šablon
+ Ve výchozím nastavení Visual Studio hledá v šablonách projektů a položek dvě umístění. Pokud v těchto umístěních existuje komprimovaný soubor, který obsahuje soubor. vstemplate, šablona se zobrazí v dialogových oknech **Nový projekt** nebo **Přidat novou položku** .
+
+### <a name="installed-templates"></a>Nainstalované šablony
+ Ve výchozím nastavení se šablony nainstalované společně s produktem nacházejí v:
+
+- \\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates \\*Language* \\*locale* \
+
+- \\*VisualStudioInstallationDirectory*\Common7\IDE\ProjectTemplates \\*Language* \\*locale \\*
+
+  Například následující adresář obsahuje šablony projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pro angličtinu:
+
+  C: \\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\VisualBasic\1033\
+
+### <a name="custom-templates"></a>Vlastní šablony
+ Ve výchozím nastavení se vlastní šablony nacházejí v těchto umístěních:
+
+- \My Documents\Visual Studio *verze*\Templates\ProjectTemplates \\*Language* \
+
+- \My Documents\Visual Studio *verze*\Templates\ItemTemplates \\*Language* \
+
+  Například následující adresář obsahuje vlastní šablony [!INCLUDE[csprcs](../includes/csprcs-md.md)] projektu:
+
+  C:\Documents and Settings\UserName\My Documents \\ < verze sady Visual Studio C#\> \templates\projecttemplates\visual \
+
+  Vlastní šablony neobsahují podadresář pro lokalizované šablony. Výchozí adresář pro vlastní šablony můžete změnit v dialogovém okně **Možnosti** v části **Environment\Projects a řešení**.
+
+## <a name="organizing-templates"></a>Uspořádání šablon
+ Kategorie v dialogových oknech **Nový projekt** a **Přidat novou položku** odrážejí struktury adresářů, které existují v umístění nainstalované a vlastní šablony. Tyto adresářové struktury můžete upravit tak, aby byly vaší šablonou uspořádány způsobem, který vám dává smysl.
+
 > [!NOTE]
-> Nelze vytvořit novou kategorii na úrovni programovací jazyk. Nové kategorie lze vytvořit pouze v rámci jednotlivé jazyky.  
-  
- Pokud struktury adresářů pro nainstalované a vlastní šablony pro konkrétní jazyk nemají stejnou strukturu (to znamená, že existují adresáře v rámci jedné složky, které neexistují v jiné) sady kategorií, které se zobrazují v **nový Projekt** dialogové okno bude spojení všech kategorií.  
-  
-### <a name="organizing-installed-templates"></a>Uspořádání instalované šablony  
- Nainstalovaných šablon můžete uspořádat tak, že vytvoříte podsložky ve složce programovací jazyk. Tyto podsložky se zobrazí v **nový projekt** a **přidat novou položku** dialogová okna jako virtuální složky v rámci jednotlivé jazyky.  
-  
-##### <a name="to-create-new-installed-project-template-categories"></a>Vytvořit nový projekt nainstalovaných kategorie šablony  
-  
-1. Vytvořte složku ve složce jazyka adresář nainstalovaných šablon. Chcete-li například vytvořit kategorie Office pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu šablony, které vytvoříte v následujícím adresáři:  
-  
-    \\*VisualStudioInstallationDirectory*\Common7\IDE\ProjectTemplates\VisualBasic\1033\Office\  
-  
-2. Umístěte všechny šablony pro tuto kategorii do nové složky.  
-  
-3. Zavřete všechny instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
-  
-4. Na **Start** nabídky, klikněte na tlačítko **spustit**, typ **cmd**a klikněte na tlačítko **OK**.  
-  
-5. Na příkazovém řádku vyhledejte adresář, který obsahuje devenv.exe a typ **devenv/installvstemplates**.  
-  
-6. Spusťte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
-  
-7. Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.  
-  
-8. Ověřte, že kategorie Office se zobrazí v **nový projekt** v dialogu **typy projektů** podokně v části [!INCLUDE[vbprvb](../includes/vbprvb-md.md)].  
-  
-   Je také možné seskupovat podmnožinu šablony položek projektu do vlastní složky.  
-  
-##### <a name="to-create-new-installed-item-template-categories"></a>Vytvořit novou položku nainstalovaných kategorie šablony  
-  
-1. Vytvořte složku ve složce jazyka adresář nainstalovaných šablon. Chcete-li například vytvořit kategorii Web pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] položku šablony vytvoříte v následujícím adresáři:  
-  
-     \\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\CSharp\1033\Web\  
-  
-2. Umístěte všechny šablony pro tuto kategorii do nové složky.  
-  
-3. Zavřete všechny instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
-  
-4. Na **Start** nabídky, klikněte na tlačítko **spustit**, typ **cmd**a klikněte na tlačítko **OK**.  
-  
-5. Na příkazovém řádku vyhledejte adresář, který obsahuje devenv.exe a typ **devenv/Setup**.  
-  
-6. Spusťte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
-  
-7. Vytvoření projektu nebo otevřete existující projekt.  
-  
-8. Na **projektu** nabídky, klikněte na tlačítko **přidat novou položku**.  
-  
-9. Ověřte, že Web se zobrazí kategorie **přidat novou položku** v dialogu **typy projektů** podokně.  
-  
-### <a name="organizing-custom-templates"></a>Uspořádání vlastní šablony  
- Vlastní šablony lze uspořádat do své vlastní kategorie tak, že přidáte nové složky v umístění vlastních šablon. **Nový projekt** dialogové okno odráží všechny změny provedené v kategorie šablony.  
-  
-##### <a name="to-create-new-custom-project-template-categories"></a>Chcete-li vytvořit nový vlastní projekt kategorií šablon  
-  
-1. Vytvoření složky v jazykovou složku v adresáři projektu vlastní šablony. Například pro vytvoření kategorie HelloWorld [!INCLUDE[csprcs](../includes/csprcs-md.md)] šablony, vytvořili byste následující adresář:  
-  
-    Dokumenty \My\\< verze sady Visual Studio\>\Templates\ProjectTemplates\CSharp\HelloWorld\  
-  
-2. Umístěte všechny šablony pro tuto kategorii do nové složky.  
-  
-3. Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.  
-  
-4. Ověřte, že se zobrazí kategorie HelloWorld v **nový projekt** v dialogu **typy projektů** podokně v části [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
-  
-   Je také možné seskupovat podmnožinu vlastních šablon položek do vlastní složky.  
-  
-##### <a name="to-create-new-custom-item-template-categories"></a>Chcete-li vytvořit nové vlastní položky kategorií šablon  
-  
-1. Vytvořte složku ve složce jazyka v adresáři vlastní položky šablon. Například pro vytvoření kategorie HelloWorld [!INCLUDE[csprcs](../includes/csprcs-md.md)] šablony vytvoříte v následujícím adresáři:  
-  
-     Dokumenty \My\\< verze sady Visual Studio\>\Templates\ItemTemplates\CSharp\HelloWorld\  
-  
-2. Umístěte všechny šablony pro tuto kategorii do nové složky.  
-  
-3. Vytvoření projektu nebo otevřete existující projekt.  
-  
-4. Na **projektu** nabídky, klikněte na tlačítko **přidat novou položku**.  
-  
-5. Ověřte, že se zobrazí kategorie HelloWorld v **přidat novou položku** v dialogu **typy projektů** podokně.  
-  
-### <a name="displaying-templates-in-parent-categories"></a>Zobrazení šablony v nadřazené kategorie  
- Můžete povolit v podkategoriích, který se má zobrazit v jejich nadřazené kategorie pomocí šablony `NumberOfParentCategoriesToRollUp` element v souboru .vstemplate. Tyto postupy jsou stejné pro šablony projektů a šablon položek.  
-  
-##### <a name="to-display-templates-in-parent-categories"></a>Chcete-li zobrazit šablony v nadřazené kategorie  
-  
-1. Vyhledejte soubor .zip, který obsahuje šablonu.  
-  
-2. Extrahujte soubor ZIP.  
-  
-3. Otevřete soubor .vstemplate v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
-  
-4. V `TemplateData` elementu, přidejte `NumberOfParentCategoriesToRollUp` elementu. Například následující kód vytvoří šablonu viditelné v nadřazené kategorie, ale ne vyšší.  
-  
-    ```  
-    <TemplateData>  
-        ...  
-        <NumberOfParentCategoriesToRollUp>  
-            1  
-        </NumberOfParentCategoriesToRollUp>  
-        ...  
-    </TemplateData>  
-    ```  
-  
-5. Uložte a zavřete soubor .vstemplate.  
-  
-6. Vyberte soubory do šablony, klikněte pravým tlačítkem na výběr, klikněte na tlačítko **odeslat**a potom klikněte na tlačítko **komprimovaná složka (metoda ZIP)**. Soubory jsou komprimována do souboru .zip.  
-  
-7. Odstraňte extrahované soubory šablony a starý soubor ZIP šablony.  
-  
-8. Vložte nový soubor ZIP do adresáře, který měl odstraněný .zip soubor.  
-  
-## <a name="see-also"></a>Viz také  
- [Přizpůsobení šablon](../ide/customizing-project-and-item-templates.md)   
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [NumberOfParentCategoriesToRollUp (šablony sady Visual Studio)](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md)   
- [Postupy: Vytváření šablon projektu](../ide/how-to-create-project-templates.md)   
- [Postupy: Vytváření šablon položek](../ide/how-to-create-item-templates.md)
+> Nemůžete vytvořit novou kategorii na úrovni programovacího jazyka. Nové kategorie se dají vytvářet jenom v rámci jednotlivých jazyků.
+
+ Pokud adresářové struktury pro nainstalované a vlastní šablony pro určitý jazyk nemají stejnou strukturu (to znamená, že některé adresáře v jedné složce, které neexistují pod druhou), jsou sady kategorií, které se zobrazí v **novém projektu** . dialog bude fúze všech kategorií.
+
+### <a name="organizing-installed-templates"></a>Uspořádání nainstalovaných šablon
+ Nainstalované šablony můžete uspořádat vytvořením podadresářů ve složce programovacího jazyka. Tyto podadresáře se zobrazí v dialogovém okně **Nový projekt** a **Přidat novou položku** jako virtuální složky v rámci jednotlivých jazyků.
+
+##### <a name="to-create-new-installed-project-template-categories"></a>Chcete-li vytvořit nové kategorie nainstalovaných šablon projektu
+
+1. Vytvořte složku ve složce jazyka nainstalovaného adresáře šablon. Chcete-li například vytvořit kategorii Office pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] šablony projektů, vytvořte následující adresář:
+
+    \\*VisualStudioInstallationDirectory*\Common7\IDE\ProjectTemplates\VisualBasic\1033\Office\
+
+2. Všechny šablony pro tuto kategorii umístěte do nové složky.
+
+3. Zavřete všechny instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+
+4. V nabídce **Start** klikněte na příkaz **Spustit**, zadejte **příkaz cmd**a klikněte na tlačítko **OK**.
+
+5. Na příkazovém řádku vyhledejte adresář, který obsahuje devenv. exe, a zadejte **devenv/installvstemplates**.
+
+6. Spusťte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+
+7. V nabídce **soubor** klikněte na příkaz **Nový**a potom klikněte na **projekt**.
+
+8. Ověřte, že se kategorie Office zobrazuje v dialogovém okně **Nový projekt** v podokně **typy projektů** v části [!INCLUDE[vbprvb](../includes/vbprvb-md.md)].
+
+   Můžete také seskupit podmnožinu šablon položek projektu do vlastní složky.
+
+##### <a name="to-create-new-installed-item-template-categories"></a>Vytvoření nových kategorií šablon nainstalované položky
+
+1. Vytvořte složku ve složce jazyka nainstalovaného adresáře šablon. Chcete-li například vytvořit kategorii webu pro šablony [!INCLUDE[csprcs](../includes/csprcs-md.md)] položky, vytvořte následující adresář:
+
+     \\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\CSharp\1033\Web\
+
+2. Všechny šablony pro tuto kategorii umístěte do nové složky.
+
+3. Zavřete všechny instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+
+4. V nabídce **Start** klikněte na příkaz **Spustit**, zadejte **příkaz cmd**a klikněte na tlačítko **OK**.
+
+5. Na příkazovém řádku vyhledejte adresář, který obsahuje devenv. exe, a zadejte **devenv/Setup**.
+
+6. Spusťte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+
+7. Vytvořte projekt nebo otevřete existující projekt.
+
+8. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
+
+9. Ověřte, zda se kategorie web zobrazuje v dialogovém okně **Přidat novou položku** v podokně **typy projektů** .
+
+### <a name="organizing-custom-templates"></a>Uspořádání vlastních šablon
+ Vlastní šablony lze uspořádat do vlastních kategorií přidáním nových složek do umístění vlastní šablony. Dialogové okno **Nový projekt** odráží všechny změny, které provedete v kategoriích šablon.
+
+##### <a name="to-create-new-custom-project-template-categories"></a>Vytvoření nových vlastních kategorií šablon projektů
+
+1. Vytvořte složku ve složce jazyka v adresáři vlastních šablon projektu. Chcete-li například vytvořit kategorii HelloWorld pro šablony [!INCLUDE[csprcs](../includes/csprcs-md.md)], měli byste vytvořit následující adresář:
+
+    \My Documents \\ < Visual Studio verze \> \Templates\ProjectTemplates\CSharp\HelloWorld\
+
+2. Všechny šablony pro tuto kategorii umístěte do nové složky.
+
+3. V nabídce **soubor** klikněte na příkaz **Nový**a potom klikněte na **projekt**.
+
+4. Ověřte, že se kategorie HelloWorld zobrazí v dialogovém okně **Nový projekt** v podokně **typy projektů** v části [!INCLUDE[csprcs](../includes/csprcs-md.md)].
+
+   Můžete také seskupit podmnožinu šablon vlastních položek do vlastní složky.
+
+##### <a name="to-create-new-custom-item-template-categories"></a>Vytvoření nových kategorií šablon vlastních položek
+
+1. Vytvořte složku ve složce jazyka v adresáři šablony vlastní položky. Chcete-li například vytvořit kategorii HelloWorld pro šablony [!INCLUDE[csprcs](../includes/csprcs-md.md)], vytvořte následující adresář:
+
+     \My Documents \\ < Visual Studio verze \> \Templates\ItemTemplates\CSharp\HelloWorld\
+
+2. Všechny šablony pro tuto kategorii umístěte do nové složky.
+
+3. Vytvořte projekt nebo otevřete existující projekt.
+
+4. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
+
+5. Ověřte, že se kategorie HelloWorld zobrazí v dialogovém okně **Přidat novou položku** v podokně **typy projektů** .
+
+### <a name="displaying-templates-in-parent-categories"></a>Zobrazení šablon v nadřazených kategoriích
+ Můžete povolit šablony v podkategoriích, aby se zobrazily v jejich nadřazených kategoriích pomocí elementu `NumberOfParentCategoriesToRollUp` v souboru. vstemplate. Tyto kroky jsou u šablon projektů a položek identické.
+
+##### <a name="to-display-templates-in-parent-categories"></a>Zobrazení šablon v nadřazených kategoriích
+
+1. Vyhledejte soubor. zip, který obsahuje šablonu.
+
+2. Extrahujte soubor. zip.
+
+3. Otevřete soubor. vstemplate v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+
+4. Do prvku `TemplateData` přidejte prvek `NumberOfParentCategoriesToRollUp`. Například následující kód nastaví šablonu jako viditelnou v nadřazené kategorii, ale ne vyšší.
+
+    ```
+    <TemplateData>
+        ...
+        <NumberOfParentCategoriesToRollUp>
+            1
+        </NumberOfParentCategoriesToRollUp>
+        ...
+    </TemplateData>
+    ```
+
+5. Uložte a zavřete soubor. vstemplate.
+
+6. Vyberte soubory v šabloně, klikněte pravým tlačítkem na výběr, klikněte na **Odeslat do**a pak klikněte na **Komprimovaná složka (ZIP)** . Soubory jsou komprimovány do souboru ZIP.
+
+7. Odstraňte extrahované soubory šablon a starý soubor Template. zip.
+
+8. Vložte nový soubor. zip do adresáře, kde byl odstraněný soubor. zip.
+
+## <a name="see-also"></a>Viz také
+ [Přizpůsobení šablon šablony](../ide/customizing-project-and-item-templates.md) [Visual Studio šablona schématu reference](../extensibility/visual-studio-template-schema-reference.md) [NumberOfParentCategoriesToRollUp (šablony sady Visual Studio)](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md) [Postupy: vytváření šablon projektů](../ide/how-to-create-project-templates.md) [Postupy: vytváření šablon položek](../ide/how-to-create-item-templates.md)

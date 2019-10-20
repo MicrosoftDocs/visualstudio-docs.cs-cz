@@ -4,17 +4,17 @@ ms.date: 09/06/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis FAQ
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 277155bdab713ec12daa380fc2721a31b5d932a2
-ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
+ms.openlocfilehash: dffc3773714336162b3b863fa03a6964b68a3673
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72000115"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649587"
 ---
 # <a name="frequently-asked-questions-about-fxcop-and-fxcop-analyzers"></a>Nejčastější dotazy k analyzátorům FxCop a FxCop
 
@@ -31,11 +31,11 @@ Analyzátory FxCop jsou založené na .NET Compiler Platform ("Roslyn"). [Nainst
 
 ## <a name="does-the-run-code-analysis-command-run-fxcop-analyzers"></a>Spouští se v příkazu Run Code Analysis analyzátory FxCop?
 
-Ne. Když vyberete možnost **analyzovat** > **Spustit analýzu kódu**, spustí se starší verze analýzy. **Spuštění analýzy kódu** nemá žádný vliv na analyzátory založené na Roslyn, včetně analyzátorů FxCop založených na Roslyn.
+Ne. Když vyberete možnost **analyzovat**  > **Spustit analýzu kódu**, spustí se starší verze analýzy. **Spuštění analýzy kódu** nemá žádný vliv na analyzátory založené na Roslyn, včetně analyzátorů FxCop založených na Roslyn.
 
 ## <a name="does-the-runcodeanalysis-msbuild-project-property-run-analyzers"></a>Spouští se v nástroji RunCodeAnalysis MSBuild rutiny analyzátorů?
 
-Ne. Vlastnost **RunCodeAnalysis** v souboru projektu (například *. csproj*) se používá pouze ke spuštění starší verze FxCop. Spustí úlohu MSBuild po sestavení, která vyvolá **FxCopCmd. exe**. Jedná se o ekvivalent výběru možnosti **analyzovat** > **Spustit analýzu kódu** v aplikaci Visual Studio.
+Ne. Vlastnost **RunCodeAnalysis** v souboru projektu (například *. csproj*) se používá pouze ke spuštění starší verze FxCop. Spustí úlohu MSBuild po sestavení, která vyvolá **FxCopCmd. exe**. Jedná se o ekvivalent výběru možnosti **analyzovat**  > **Spustit analýzu kódu** v aplikaci Visual Studio.
 
 ## <a name="so-how-do-i-run-fxcop-analyzers-then"></a>Jak tedy spustím analyzátory FxCop?
 

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Používání návrháře argumentů | Dokumentace Microsoftu'
+title: 'Postupy: použití návrháře argumentů | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -9,30 +9,29 @@ f1_keywords:
 - System.Activities.Presentation.View.DesignTimeArgument.UI
 ms.assetid: 64813fd5-1ea1-499a-98b4-ab2a44b7ee5e
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a244379bfebcf58d76ba726d4f6a84bcdfa7d1df
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a436d33bbb7c791f3f192357fded779fa77d148d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65696265"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659118"
 ---
-# <a name="how-to-use-the-argument-designer"></a>Postupy: Používání návrháře argumentů
-Ve srovnání s předchozími verzemi [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], Návrhář argumentů usnadňuje povolit datový tok do a z aktivity. Návrhář přistupuje po kliknutí **argumenty** tlačítko v levém dolním rohu návrhové plátno. Návrhář obsahuje seznam argumentů, které se zobrazí ve formě tabulky a může být řada seřazena podle všech záhlaví sloupců, s výjimkou **výchozí hodnota** sloupce. Každý argument obsahuje název, v/out/v – out/vlastnost směr, typ a výchozí hodnota výrazu (pokud existuje). Název a hodnota výrazu výchozí nejsou upravitelné textové pole a typu a směru jsou rozevírací seznamy. [!INCLUDE[crabout](../includes/crabout-md.md)] argumenty, naleznete v tématu [proměnné a argumenty](https://msdn.microsoft.com/library/d03dbe34-5b2e-4f21-8b57-693ee49611b8).  
-  
-### <a name="to-create-a-new-argument"></a>Chcete-li vytvořit nový argument  
-  
-1. Otevřete řešení pracovního postupu nebo aktivity v [!INCLUDE[vs2010](../includes/vs2010-md.md)].  
-  
-2. Otevřít návrhář argumentů kliknutím **argumenty** tlačítko v levém dolním rohu návrhové plátno. Zobrazí se Návrhář argumentů.  
-  
-3. Klikněte na prázdný řádek označený **vytvořit Argument**. Tím se přidá nový řádek s argumentem nové pomocí následující výchozí hodnoty: argumentx pro **název** tam, kde x je celé číslo s počáteční hodnotou 1, které je automatický navýšeno vytvořit argument jedinečné názvy **v**  pro **směr**, a **řetězec** pro **typ argumentu**. Přidá se žádná hodnota pro **výchozí hodnota**. Tyto hodnoty můžete změnit kdykoli během procesu návrhu pracovního postupu.  
-  
+# <a name="how-to-use-the-argument-designer"></a>Postupy: použití návrháře argumentů
+V porovnání s předchozími verzemi [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Návrhář argumentů usnadňuje umožnění toku dat do aktivity a z ní. K návrháři se dostanete kliknutím na tlačítko **argumenty** v levém dolním rohu plátna návrh. Návrhář obsahuje seznam argumentů, které se zobrazí v tabulkovém formátu a lze je seřadit podle jednotlivých záhlaví sloupců, s výjimkou sloupce **Výchozí hodnota** . Každý argument obsahuje název, typ/výstup/výstup/vlastnost, typ a výchozí hodnotu výrazu (pokud existuje). Název a výchozí hodnota výrazu jsou upravitelná textová pole a typ a směr jsou rozevírací. argumenty [!INCLUDE[crabout](../includes/crabout-md.md)] naleznete v tématu [proměnné a argumenty](https://msdn.microsoft.com/library/d03dbe34-5b2e-4f21-8b57-693ee49611b8).
+
+### <a name="to-create-a-new-argument"></a>Vytvoření nového argumentu
+
+1. Otevřete pracovní postup nebo řešení aktivity v [!INCLUDE[vs2010](../includes/vs2010-md.md)].
+
+2. Kliknutím na tlačítko **argumenty** v levém dolním rohu plátna návrhu otevřete návrhář argumentů. Zobrazí se Návrhář argumentů.
+
+3. Klikněte na prázdný řádek označený jako **argument Create**. Tím se přidá nový řádek s novým argumentem s použitím následujících výchozích hodnot: Argumentx pro **název** , kde x je celé číslo s počáteční hodnotou 1, která se automaticky zvýší a vytvoří jedinečné názvy argumentů **v** pro **směr**. a **řetězec** pro **typ argumentu**. Pro **výchozí hodnotu**se nepřidá žádná hodnota. Tyto hodnoty můžete kdykoli změnit během procesu návrhu pracovního postupu.
+
     > [!NOTE]
-    > Pokud chcete odstranit argument, argument kliknutím vyberte a stiskněte klávesu **odstranit** klíč.  
-  
-## <a name="see-also"></a>Viz také  
- [Návrhář postupu provádění](../workflow-designer/using-the-workflow-designer.md)   
- [Proměnné a argumenty](https://msdn.microsoft.com/library/d03dbe34-5b2e-4f21-8b57-693ee49611b8)
+    > Pokud chcete odstranit argument, vyberte ho kliknutím na něj a potom stiskněte klávesu **Delete** .
+
+## <a name="see-also"></a>Viz také
+ [Použití proměnných Návrhář postupu provádění](../workflow-designer/using-the-workflow-designer.md) [a argumentů](https://msdn.microsoft.com/library/d03dbe34-5b2e-4f21-8b57-693ee49611b8)

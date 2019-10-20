@@ -1,5 +1,5 @@
 ---
-title: Výchozí stránku nápovědy klávesy F1
+title: Výchozí stránka pro nápovědu F1
 ms.date: 02/28/2018
 ms.topic: troubleshooting
 robots: noindex,nofollow
@@ -7,30 +7,30 @@ f1_keywords:
 - vs.texteditor
 - vs.ambient
 manager: jillfra
-author: gewarren
-ms.author: gewarren
-ms.openlocfilehash: 4779c9aa27f65a3295f3a234e4f46314d7fe3b69
-ms.sourcegitcommit: 77b4ca625674658d5c5766e684fa0e2a07cad4da
+author: jillre
+ms.author: jillfra
+ms.openlocfilehash: a1d398d18e9be9bdb5f9bf3b30dc3ff1316b5ddb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65613574"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662041"
 ---
 # <a name="f1-help"></a>Nápověda F1
 
-Zdá se nám nepovedlo najít, co jste hledali a Omlouváme se. Pomůžete nám vylepšit zanechání zpětné vazby pomocí tlačítek v dolní části této stránky.
+Vypadá to, že se nám nepovedlo najít, co jste hledali a Omlouváme se. Můžete nám pomoci vylepšit tím, že v dolní části této stránky zachováte zpětnou vazbu prostřednictvím tlačítek.
 
 ## <a name="cursor-position"></a>Pozice kurzoru
 
-Pokud hledáte nápovědu F1 – klíčové slovo nebo název rozhraní API, měli byste se kurzor dovnitř nebo jenom k pravému okraji slovo před stisknutím klávesy **F1**. Pokud tento stále nefunguje, vyberte [užitečných odkazů](#useful-links) seznamu nebo provádět vyhledávání na https://docs.microsoft.com.
+Pokud hledáte nápovědu F1 pro klíčové slovo nebo název rozhraní API, před stisknutím **klávesy F1**se ujistěte, že je kurzor umístěný uvnitř nebo těsně napravo od slova vpravo. Pokud to pořád nefunguje, vyberte ze seznamu [užitečných odkazů](#useful-links) nebo proveďte hledání na https://docs.microsoft.com.
 
 ## <a name="useful-links"></a>Užitečné odkazy
 
-- Vyhledejte v dokumentaci se můžete na [.NET API browseru](/dotnet/api/).
-- C# nápovědu najdete v tématu [průvodce v C#](/dotnet/csharp/index).
-- Nápověda pro Visual Basic, najdete v článku [průvodce Visual Basicem](/dotnet/visual-basic/).
-- Pro F# pomoct, najdete v článku [ F# průvodce](/dotnet/fsharp/).
-- Nápovědu Pythonu najdete v tématu [Python v sadě Visual Studio](../../python/overview-of-python-tools-for-visual-studio.md).
-- C++ – Nápověda, naleznete v tématu [C++ v sadě Visual Studio](/cpp/visual-cpp-in-visual-studio).
-- Informace o sadě Visual Studio najdete v tématu [Visual Studio – přehled](../../get-started/visual-studio-ide.md).
-- Nápovědu v textovém editoru sady Visual Studio najdete v tématu [použít editor kódu](../../ide/writing-code-in-the-code-and-text-editor.md).
+- Vyhledejte referenční dokumentaci pro [.NET API Browser](/dotnet/api/).
+- C# Nápovědu najdete v [ C# příručce](/dotnet/csharp/index).
+- Nápovědu k Visual Basic najdete v [příručce Visual Basic](/dotnet/visual-basic/).
+- F# Nápovědu najdete v [ F# příručce](/dotnet/fsharp/).
+- Nápovědu k Pythonu najdete [v tématu Python v aplikaci Visual Studio](../../python/overview-of-python-tools-for-visual-studio.md).
+- C++ Nápovědu naleznete v tématu [ C++ v aplikaci Visual Studio](/cpp/visual-cpp-in-visual-studio).
+- Informace o aplikaci Visual Studio naleznete v tématu [Visual Studio Overview](../../get-started/visual-studio-ide.md).
+- Nápovědu k textovému editoru sady Visual Studio naleznete v tématu [použití editoru kódu](../../ide/writing-code-in-the-code-and-text-editor.md).

@@ -14,100 +14,100 @@ helpviewer_keywords:
 - documents, searching
 - files, searching
 - Find in Files tab, Find and Replace window
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1247bae6193294667953376f7e86c42cf5b8f8a8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4bc3b0d72f29e3a9c67ef9905667a0dd66f5f889
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977601"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652236"
 ---
 # <a name="find-in-files"></a>Najít v souborech
 
-**Najít v souborech** umožňuje vyhledávat zadané sady souborů. Nalezených shod a akcí provedených jsou uvedeny v **výsledky hledání** vybraný v interval **způsobit možnosti**.
+**V části soubory** můžete vyhledat zadanou sadu souborů. Nalezené shody a podniknuté akce jsou uvedeny v okně **výsledky hledání** vybrané v **Možnosti výsledek**.
 
-Můžete použít některý z následujících metod k zobrazení **najít v souborech** v **najít a nahradit** okna.
+Pomocí kterékoli z následujících metod můžete v okně **Najít a nahradit** zobrazit **najít v souborech** .
 
-## <a name="to-display-find-in-files"></a>Chcete-li zobrazit najít v souborech
+## <a name="to-display-find-in-files"></a>Zobrazení souborů hledání v souborech
 
-1. V panelu nabídky zvolte **upravit** > **najít a nahradit**.
+1. Na panelu nabídek vyberte možnost **upravit**  > **Najít a nahradit**.
 
-1. Zvolte **najít v souborech**.
+1. Vyberte **najít v souborech**.
 
-Chcete-li zrušit operaci hledání, stiskněte **Ctrl** + **přerušit**.
+Operaci hledání zrušíte stisknutím klávesy **Ctrl**  + **Break**.
 
 > [!NOTE]
-> Nástroj Najít a nahradit neprohledává adresáře s `Hidden` nebo `System` atribut.
+> Nástroj najít a nahradit nehledá adresáře s atributem `Hidden` nebo `System`.
 
 ## <a name="find-what"></a>Najít
 
-K vyhledání nový textový řetězec nebo výraz, zadejte do pole. Chcete-li vyhledávat libovolné 20 řetězců, které jste hledali naposledy, otevřete rozevírací seznam a zvolte řetězec. Zvolte sousedních **Tvůrce výrazů** tlačítko, pokud chcete použít jeden nebo více regulární výrazy ve vyhledávaném řetězci. Další informace najdete v tématu [pomocí regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
+Pokud chcete vyhledat nový textový řetězec nebo výraz, zadejte ho do pole. Pokud chcete vyhledat kterýkoli z 20 řetězců, které jste prohledali naposledy, otevřete rozevírací seznam a vyberte řetězec. Pokud chcete v hledaném řetězci použít jeden nebo více regulárních výrazů, vyberte tlačítko Tvůrce sousedících **výrazů** . Další informace naleznete v tématu [použití regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
 
 > [!NOTE]
-> **Tvůrce výrazů** tlačítko bude povoleno pouze pokud jste vybrali **pomocí regulárních výrazů** pod **možnosti hledání**.
+> Tlačítko **Tvůrce výrazů** bude povoleno pouze v případě, že jste vybrali možnost **použít regulární výrazy** v části **Možnosti hledání**.
 
 ## <a name="look-in"></a>Oblast hledání
 
-Možnost výběru z **Hledat v** rozevíracího seznamu určuje, zda **najít v souborech** prohledávání pouze v aktuálně aktivních souborů nebo ve všech souborech se ukládají v určitých složkách. Obor vyhledávání vyberte ze seznamu nebo klikněte na tlačítko **Procházet (...)**  tlačítka pro zobrazení **zvolit složky pro hledání** dialogové okno a zadat vlastní sadu adresáře. Můžete také zadat přímo do cesty **Hledat v** pole.
+Možnost zvolená v rozevíracím seznamu **Hledat v** souboru určuje, zda funkce **najít v souborech** vyhledává pouze v aktuálně aktivních souborech nebo ve všech souborech uložených v určitých složkách. Vyberte obor vyhledávání ze seznamu nebo klikněte na tlačítko **Procházet (...)** a zobrazte dialogové okno **Zvolit složky výsledků hledání** a zadejte vlastní sadu adresářů. Můžete také zadat cestu přímo do pole **Hledat v** .
 
 > [!WARNING]
-> S **celé řešení** nebo **aktuální projekt** možnosti, projektu a řešení soubory nebudou vyhledány. Pokud chcete vyhledat v souborech projektu, zvolte složku výsledků hledání.
+> V rámci **celého řešení** nebo **aktuálních možností projektu** nejsou prohledávány soubory projektu a řešení. Pokud chcete hledat v souborech projektu, vyberte složku výsledků hledání.
 
 > [!NOTE]
-> Pokud **Hledat v** zaškrtnutou možnost způsobí, že vám umožní vyhledávat soubor, který jste rezervovali ve správě zdrojového kódu, je prohledána pouze verze tohoto souboru, který byl stažen do místního počítače.
+> Pokud vybraná možnost **Hledat v** způsobí hledání souboru, který jste si rezervovali ze správy zdrojového kódu, prohledává se jenom verze tohoto souboru, který se stáhl do místního počítače.
 
 ## <a name="include-subfolders"></a>Zahrnout podsložky
 
-Určuje této podsložky **Hledat v** prohledá složku.
+Určuje, že se budou Prohledávat podsložky složky **Hledat ve** složce.
 
 ## <a name="find-options"></a>Možnosti hledání
 
-Můžete rozbalit nebo sbalit **možnosti hledání** oddílu. Následující možnosti můžete vybrané nebo zrušeno:
+Můžete rozbalit nebo sbalit část **Možnosti hledání** . Můžete vybrat nebo vymazat následující možnosti:
 
 **Rozlišovat velikost písmen**
 
-Pokud je vybráno, **výsledky hledání** hledání bude malá a velká písmena
+Pokud je tato možnost vybrána, bude hledání **výsledků** hledání rozlišovat velká a malá písmena.
 
-**Pouze celá slova**
+**Vyhledat celé slovo**
 
-Pokud je vybráno, **výsledky hledání** windows vrátí pouze celá slova shody.
+Pokud je tato možnost vybrána, okna **výsledků hledání** budou vracet pouze celá slova.
 
 **Používání regulárních výrazů**
 
-Pokud je toto políčko zaškrtnuto, můžete použít speciální zápisy k definování vzorků text tak, aby odpovídaly v **najít** nebo **nahraďte** textová pole. Seznam těchto zápisy najdete v tématu [pomocí regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
+Pokud je toto políčko zaškrtnuté, můžete použít speciální zápisy k definování vzorů textu, které se budou shodovat s textovými poli **Najít** nebo **nahradit** . Seznam těchto zápisů naleznete v tématu [použití regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
 
-**Podívejte se na tyto typy souborů**
+**Podívejte se na tyto typy souborů.**
 
-Tento seznam uvádí typy souborů pro hledání prostřednictvím v **Hledat v** adresáře. Pokud je toto pole prázdné, všechny soubory v **Hledat v** budou prohledány adresáře.
+Tento seznam uvádí typy souborů, které se mají hledat v adresářích **Hledat v** . Pokud je toto pole prázdné, prohledávají se všechny soubory v adresářích **Hledat v** .
 
-Vyberte libovolnou položku v seznamu a zadejte předkonfigurované vyhledávací řetězec, který najdete tyto konkrétní typy souborů.
+Vyberte libovolnou položku v seznamu a zadejte předkonfigurovaný hledaný řetězec, ve kterém budou nalezeny soubory těchto konkrétních typů.
 
-## <a name="result-options"></a>Možnosti výsledků
+## <a name="result-options"></a>Možnosti výsledku
 
-Můžete rozbalit nebo sbalit **způsobit možnosti** oddílu. Následující možnosti můžete vybrané nebo zrušeno:
+Oddíl **možností výsledků** můžete rozbalit nebo sbalit. Můžete vybrat nebo vymazat následující možnosti:
 
-**Najít výsledky 1 okno**
+**Okno výsledky hledání 1**
 
-Pokud je vybráno, výsledky aktuální hledání nahradí obsah **Najít výsledky 1** okna. Toto okno se automaticky otevře a zobrazí výsledky hledání. Ručně otevřete toto okno, vyberte **ostatní Windows** z **zobrazení** nabídku a zvolte **Najít výsledky 1**.
+Pokud je tato možnost vybrána, nahradí výsledky aktuálního hledání obsah okna **výsledky hledání 1** . Toto okno se automaticky otevře, aby se zobrazily výsledky hledání. Chcete-li toto okno otevřít ručně, v nabídce **zobrazení** vyberte možnost **Další okna** a zvolte možnost **Najít výsledky 1**.
 
-**Najít výsledky 2 okno**
+**Okno výsledky hledání 2**
 
-Pokud je vybráno, výsledky aktuální hledání nahradí obsah **Najít výsledky 2** okna. Toto okno se automaticky otevře a zobrazí výsledky hledání. Ručně otevřete toto okno, vyberte **ostatní Windows** z **zobrazení** nabídku a zvolte **Najít výsledky 2**.
+Pokud je tato možnost vybrána, nahradí výsledky aktuálního hledání obsah okna **výsledky hledání 2** . Toto okno se automaticky otevře, aby se zobrazily výsledky hledání. Chcete-li toto okno otevřít ručně, v nabídce **zobrazení** vyberte možnost **Další okna** a zvolte možnost **Najít výsledky 2**.
 
 **Zobrazit pouze názvy souborů**
 
-Zobrazí seznam souborů obsahující vyhledávání odpovídá místo zobrazení hledání odpovídá sami.
+Zobrazí seznam souborů, které obsahují shody hledání, místo zobrazení shod se stejnými výsledky hledání.
 
 **Připojit výsledky**
 
-Připojí výsledky hledání na předchozí výsledky hledání.
+Připojí výsledky hledání k předchozím výsledkům hledání.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Hledání a nahrazení textu](../ide/finding-and-replacing-text.md)
+- [Hledání a nahrazování textu](../ide/finding-and-replacing-text.md)
 - [Nahradit v souborech](../ide/replace-in-files.md)
 - [Příkazy sady Visual Studio](../ide/reference/visual-studio-commands.md)

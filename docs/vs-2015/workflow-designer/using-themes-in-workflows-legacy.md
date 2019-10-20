@@ -1,5 +1,5 @@
 ---
-title: Používání motivů v pracovních postupech (starší verze) | Dokumentace Microsoftu
+title: Používání motivů v pracovních postupech (starší verze) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -10,26 +10,24 @@ helpviewer_keywords:
 - Theme Configuration dialog box
 ms.assetid: 10225f34-aced-432a-846c-82cf6137d7c0
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 79dc06eb352c3196418d5ebe274b10c6740f5e75
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3ad3c6b1c66ffa5ec512cfda857738d1219628e8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855699"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72606684"
 ---
 # <a name="using-themes-in-workflows-legacy"></a>Používání motivů v pracovních postupech (starší verze)
-Toto téma popisuje způsob použití motivů v [!INCLUDE[wf](../includes/wf-md.md)] při použití starší [!INCLUDE[wfd1](../includes/wfd1-md.md)] , který cílí [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].  
-  
- Můžete přizpůsobit vzhled vašich pracovních postupů pomocí starší verze návrháře pomocí [!INCLUDE[wf2](../includes/wf2-md.md)] motivů. Motiv určuje barvu pozadí a popředí, styly, ikony a další vizuální prvky pracovního postupu. Motivy pro opakované použití můžete šetřit tak další pracovní postupy.  
-  
- Vytvořte a upravte motivy s využitím [dialogové okno Konfigurace motivu (starší verze)](../workflow-designer/theme-configuration-dialog-box-legacy.md). Chcete-li otevřít toto dialogové okno, vyberte **vytvořit nový motiv** na **pracovního postupu** nabídku nebo klikněte pravým tlačítkem pracovní postup návrhové ploše a vyberte **vytvořit nový motiv**.  
-  
- Můžete vybrat výchozí a uloženy ve vlastní motivy [motivy, Návrhář postupu provádění, Options Dialog Box (starší verze)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md). Toto dialogové okno, klikněte na tlačítko **vyberte vlastní motiv** na **pracovního postupu** nabídce (nebo klikněte pravým tlačítkem na povrchu návrhu pracovního postupu a klikněte na tlačítko **vyberte vlastní motiv**) a pak vyberte **návrháře postupu provádění** možnost. Vyberte motiv a klikněte na tlačítko **OK**.  
-  
-## <a name="see-also"></a>Viz také  
- [Dialogové okno Konfigurace motivu (starší verze)](../workflow-designer/theme-configuration-dialog-box-legacy.md)   
- [Dialogové okno Možnosti motivy, Návrhář pracovního postupu (starší verze)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md)   
- [Používání starší verze návrháře postupu provádění](../workflow-designer/using-the-legacy-workflow-designer.md)
+Toto téma popisuje, jak používat při použití starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)], která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)], použití motivů v [!INCLUDE[wf](../includes/wf-md.md)].
+
+ Můžete přizpůsobit vzhled pracovních postupů pomocí starší verze návrháře pomocí [!INCLUDE[wf2](../includes/wf2-md.md)] motivů. Motiv definuje barvy pozadí a popředí, styly, ikony a další vizuální prvky pracovního postupu. Motivy můžete uložit k opakovanému použití jinými pracovními postupy.
+
+ Motivy můžete vytvářet a upravovat pomocí [dialogového okna Konfigurace motivu (starší verze)](../workflow-designer/theme-configuration-dialog-box-legacy.md). Chcete-li otevřít toto dialogové okno, vyberte možnost **vytvořit nový motiv** v nabídce **pracovní postup** nebo klikněte pravým tlačítkem myši na návrhovou plochu pracovního postupu a vyberte možnost **vytvořit nový motiv**.
+
+ Můžete vybrat výchozí a uložené vlastní motivy pomocí [dialogového okna Themes, Návrhář postupu provádění, Options (starší verze)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md). Pokud chcete otevřít toto dialogové okno, klikněte na **Vybrat vlastní motiv** v nabídce **pracovní postup** (nebo klikněte pravým tlačítkem myši na návrhovou plochu pracovního postupu, klikněte na **Vybrat vlastní motiv**) a pak vyberte možnost **Návrhář postupu provádění** . Vyberte požadovaný motiv a klikněte na tlačítko **OK**.
+
+## <a name="see-also"></a>Viz také
+ [Dialogové okno Konfigurace motivu (starší verze)](../workflow-designer/theme-configuration-dialog-box-legacy.md) – [motivy, Návrhář postupu provádění, dialogové okno Možnosti (starší verze)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md) [používající starší Návrhář postupu provádění](../workflow-designer/using-the-legacy-workflow-designer.md)

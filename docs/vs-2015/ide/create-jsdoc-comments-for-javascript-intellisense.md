@@ -1,88 +1,88 @@
 ---
-title: Vytvoření komentářů JSDoc pro JavaScript IntelliSense | Dokumentace Microsoftu
+title: Vytváření komentářů JSDoc pro JavaScript IntelliSense | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: a0dadc81-3755-4a47-bcee-c1010819ff2a
 caps.latest.revision: 8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f4d300651731b38b9b86421d36d9de169dc6464d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b974f3450b88ab22e58e284881f270c1b3d72298
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68188797"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72619278"
 ---
 # <a name="create-jsdoc-comments-for-javascript-intellisense"></a>Vytvoření komentářů JSDoc pro JavaScript IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Technologie IntelliSense v sadě Visual Studio zobrazí informace, které přidáte do skriptu s využitím standardních komentářů JSDoc. Komentáře JSDoc můžete použít k poskytnutí informací o kódu prvky, jako jsou functions, polí a proměnné.  
+Technologie IntelliSense v aplikaci Visual Studio zobrazuje informace, které přidáte do skriptu pomocí standardních komentářů JSDoc. Komentáře JSDoc lze použít k poskytnutí informací o prvcích kódu, jako jsou například funkce, pole a proměnné.
 
-## <a name="jsdoc-comment-tags"></a>Značky pro komentáře JSDoc  
- Následující standardních značek komentářů JSDoc se používají technologii IntelliSense pro zobrazení informací o kódu.  
+## <a name="jsdoc-comment-tags"></a>Značky komentářů JSDoc
+ Následující značky standardních komentářů JSDoc jsou používány technologií IntelliSense k zobrazení informací o kódu.
 
 |  Značka JSDoc   |                       Syntaxe                        |                                                     Poznámky                                                      |
 |--------------|-----------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| @deprecated  |              @deprecated *Popis*              |                                   Určuje zastaralé funkce nebo metody.                                   |
-| @description |             @description *Popis*              |                              Určuje popis pro funkci nebo metodu.                               |
-|    @param    | @param {*typ*} *parameterName*<em>popis</em> | Určuje informace o parametru ve funkci nebo metodu.<br /><br /> TypeScript podporuje také @paramTag. |
-|  @property   |          @property {*type*} *propertyName*          |   Určuje informace, včetně popisu, pole nebo člena, který je definován na objekt.    |
-|   @returns   |                  @returns {*typ*}                  |           Určuje návratovou hodnotu.<br /><br /> TypeScript, použijte @returnType místo @returns.           |
-|   @summary   |               @summary *Popis*                |                   Určuje popis pro funkci nebo metodu (stejné jako @description).                   |
-|    @type     |                   @type {*typ*}                    |                                Určuje typ konstanty nebo proměnné.                                |
-|   @typedef   |         @typedef {*type*} *customTypeName*          |                                            Určuje vlastního typu.                                            |
+| @deprecated  |              *popis* @deprecated              |                                   Určuje vystaralou funkci nebo metodu.                                   |
+| @description |             *popis* @description              |                              Určuje popis funkce nebo metody.                               |
+|    @param    | <em>popis</em> @param {*Type*} *ParameterName* | Určuje informace pro parametr v rámci funkce nebo metody.<br /><br /> TypeScript podporuje taky @paramTag. |
+|  @property   |          @property {*Type*} *PropertyName*          |   Určuje informace, včetně popisu, pro pole nebo člena, který je definován v objektu.    |
+|   @returns   |                  @returns {*Type*}                  |           Určuje návratovou hodnotu.<br /><br /> Pro TypeScript použijte @returnType místo @returns.           |
+|   @summary   |               *popis* @summary                |                   Určuje popis funkce nebo metody (stejné jako @description).                   |
+|    @type     |                   @type {*Type*}                    |                                Určuje typ konstanty nebo proměnné.                                |
+|   @typedef   |         @typedef {*Type*} *customTypeName*          |                                            Určuje vlastní typ.                                            |
 
-### <a name="examples"></a>Příklady  
- Následující příklad ukazuje použití @description, @param, a @return JSDoc značky pro funkci s názvem `getArea`.  
+### <a name="examples"></a>Příklady
+ Následující příklad ukazuje použití značek @description, @param a @return JSDoc pro funkci s názvem `getArea`.
 
-```javascript  
-/** @description Determines the area of a circle that has the specified radius parameter.  
- * @param {number} radius The radius of the circle.  
- * @return {number}  
- */  
-function getArea(radius) {  
-    var areaVal;  
-    areaVal = Math.PI * radius * radius;  
-    return areaVal;  
-}  
-```  
+```javascript
+/** @description Determines the area of a circle that has the specified radius parameter.
+ * @param {number} radius The radius of the circle.
+ * @return {number}
+ */
+function getArea(radius) {
+    var areaVal;
+    areaVal = Math.PI * radius * radius;
+    return areaVal;
+}
+```
 
- V předchozím příkladu, technologie IntelliSense zobrazuje popis, parametru a vrácené informace při psaní levou závorku pro `getArea`.  
+ V předchozím příkladu IntelliSense zobrazí popis, parametr a návratové informace, když zadáte levou závorku pro `getArea`.
 
- ![Informace IntelliSense pro funkci](../ide/media/js-intellisense-jsdoc-comments.png "JS_IntelliSense_JSDoc_Comments")  
+ ![Informace o IntelliSense pro funkci](../ide/media/js-intellisense-jsdoc-comments.png "JS_IntelliSense_JSDoc_Comments")
 
- Následující příklad ukazuje způsob použití @typedef označit @property značky.  
+ Následující příklad ukazuje, jak použít značku @typedef se značkou @property.
 
-```javascript  
-/**  
-  * @typedef {object} Weather  
-  * @property {string} current The current weather.  
-  */  
-function getForecast(Weather) {  
-}  
+```javascript
+/**
+  * @typedef {object} Weather
+  * @property {string} current The current weather.
+  */
+function getForecast(Weather) {
+}
 
-var w = new Weather();  
-```  
+var w = new Weather();
+```
 
- Následující příklad ukazuje použití @type JSDoc značky. Jak je znázorněno v tomto příkladu, jeden hvězdičky (*), které následují pár počáteční hvězdičkou (\*\*) se nevyžadují.  
+ Následující příklad ukazuje použití značek @type JSDoc. Jak je znázorněno v tomto příkladu, nejsou vyžadovány jednoduché hvězdičky (*), které následují po počáteční dvojici hvězdičky (\* \*).
 
-```javascript  
-/**  
-    @type {string}  
-*/  
-const RED = 'FF0000';  
+```javascript
+/**
+    @type {string}
+*/
+const RED = 'FF0000';
 
-```  
+```
 
- Následující příklad ukazuje způsob použití @deprecated značka JSDoc.  
+ Následující příklad ukazuje, jak použít značku JSDoc @deprecated.
 
-```javascript  
-/**  
- * @deprecated since version 2.0  
- */  
-function old() {  
-}  
+```javascript
+/**
+ * @deprecated since version 2.0
+ */
+function old() {
+}
 ```

@@ -3,20 +3,20 @@ title: Běžné rychlé akce
 description: Nejoblíbenější rychlé akce pro C# a Visual Basic, včetně oprav chybně napsaných klíčových slov nebo symbolů, řešení konfliktů při slučování, odebírání nezbytných importů, generování typů, představení místních proměnných atd.
 ms.date: 03/28/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 600fb1b4abea2103c28e3a5067d640228d68b755
-ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
+ms.openlocfilehash: bad97ac5574afd65103263b2ce51a4dfba02741c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72000142"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652252"
 ---
 # <a name="common-quick-actions"></a>Běžné rychlé akce
 
@@ -30,7 +30,7 @@ Rychlé akce v této části opravují chyby v kódu, které by způsobily selh�
 
 ### <a name="correct-misspelled-symbol-or-keyword"></a>Opravit nesprávně napsaný symbol nebo klíčové slovo
 
-Pokud nechtěně napíšete typ nebo klíčové slovo v aplikaci Visual Studio omylem, tato rychlá akce je automaticky opraví za vás. Tyto položky se zobrazí v nabídce žárovky jako **"Change ' \<misspelled word > ' to ' \<correct word > ' '** . Příklad:
+Pokud nechtěně napíšete typ nebo klíčové slovo v aplikaci Visual Studio omylem, tato rychlá akce je automaticky opraví za vás. Tyto položky se zobrazí v nabídce žárovky jako **"změnit" \<misspelled word > "na" \<correct wordový > ""** . Příklad:
 
 ```csharp
 // Before
@@ -96,7 +96,7 @@ private void MyMethod()
 
 ### <a name="remove-unnecessary-usingsimports"></a>Odebrat nepotřebné použití/importy
 
-Rychlá akce **Odebrání nepotřebných použití/importu** odebere nepoužívané příkazy `using` a `Import` pro aktuální soubor. Když vyberete tuto položku, odeberou se nepoužité importy oboru názvů.
+Rychlá akce **Odebrání nepotřebných použití nebo importu** odebere nepoužívané `using` a `Import` direktiv pro aktuální soubor. Když vyberete tuto položku, odeberou se nepoužité importy oboru názvů.
 
 | Příslušné jazyky | Podporovaná verze |
 | - | - |
@@ -184,7 +184,7 @@ Když použijete typy umístěné v jiných projektech ve vašem řešení, zobr
 - Navrhnout použití/importy pro typy v referenčních sestaveních
 - Navrhnout použití/importy pro typy v balíčcích NuGet
 
-Pokud je povoleno, pokud použijete typ v oboru názvů, který aktuálně není importován, ale existuje v referenčním sestavení nebo balíčku NuGet, vytvoří se příkaz using/import.
+Pokud je povoleno, pokud použijete typ v oboru názvů, který aktuálně není importován, ale existuje v referenčním sestavení nebo balíčku NuGet, je vytvořena Direktiva using nebo import.
 
 ```csharp
 // Before
@@ -204,7 +204,7 @@ Debug.WriteLine("Hello")
 
 ' Imports System.Diagnostics
 
-// After
+' After
 Imports System.Diagnostics
 
 Debug.WriteLine("Hello")
@@ -218,7 +218,7 @@ Debug.WriteLine("Hello")
 
 Při vytváření příkazu `switch` v C#nebo v příkazu `Select Case` v Visual Basic můžete použít akci kódu k automatickému přidání chybějících položek Case, výchozího příkazu case nebo obou.
 
-Vezměte v úvahu následující výčet a prázdné `switch` nebo `Select Case` příkaz:
+Vezměte v úvahu následující výčet a prázdnou `switch` nebo příkaz `Select Case`:
 
 ```csharp
 enum MyEnum
@@ -335,7 +335,7 @@ var date = new DateTime(year: 1997, month: 7, day: 8);
 
 ### <a name="add-braces"></a>Přidat složené závorky
 
-Rychlá akce Přidat složené závorky zalomí závorky kolem jednoduchých příkazů `if`.
+Rychlá akce Přidat složené závorky zalomí závorky kolem jednoduchých `if` příkazů.
 
 ```csharp
 // Before
@@ -664,7 +664,7 @@ int fibonacci(int n)
 | ------- | -------------------- | ---------------- |
 | IDE0041 | C#7.0 + | Visual Studio 2017 verze 15,5 a novější |
 
-Tato rychlá akce navrhuje použití [porovnávání vzorů](/dotnet/csharp/pattern-matching) místo schématu kódování ```ReferenceEquals```, pokud je to možné.
+Tato rychlá akce navrhuje použití [porovnávání vzorů](/dotnet/csharp/pattern-matching) místo ```ReferenceEquals```ho vzorového vzoru, pokud je to možné.
 
 ```csharp
 // Before
@@ -876,7 +876,7 @@ Console.WriteLine($"{x} {y}");
 
 ### <a name="make-method-synchronous"></a>Nastavit metodu jako synchronní
 
-Při použití klíčového slova `async` nebo `Async` u metody je očekáváno, že uvnitř této metody je použito také klíčové slovo `await` nebo `Await`. Pokud se však nejedná o tento případ, zobrazí se rychlá akce, která provede synchronní metodu odebráním klíčového slova `async` nebo `Async` a změnou návratového typu. Použijte možnost **vytvořit metodu synchronně** z nabídky rychlé akce.
+Při použití klíčového slova `async` nebo `Async` v metodě je očekáváno, že uvnitř této metody je použito také klíčové slovo `await` nebo `Await`. Pokud se však nejedná o tento případ, zobrazí se rychlá akce, která provede synchronní metodu odebráním klíčového slova `async` nebo `Async` a změnou návratového typu. Použijte možnost **vytvořit metodu synchronně** z nabídky rychlé akce.
 
 ```csharp
 // Before

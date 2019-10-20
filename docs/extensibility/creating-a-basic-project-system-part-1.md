@@ -1,5 +1,5 @@
 ---
-title: Vytvoření systému základního projektu, část 1 | Dokumentace Microsoftu
+title: Vytvoření základního projektového systému, část 1 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,75 +12,75 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 19c73e47e8c07ebcf7c1124e6e59d80f76101458
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 73bacf2c5d1650da91093c92c67e6b67bbbc73a5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341659"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72633507"
 ---
-# <a name="create-a-basic-project-system-part-1"></a>Vytvoření systému základního projektu, část 1
-Projekty v sadě Visual Studio, jsou kontejnery, které vývojáři použít k uspořádání souborů se zdrojovým kódem a dalších zdrojů. Projekty se zobrazují jako podřízené objekty daného řešení **Průzkumníka řešení**. Projekty umožňují organizovat, sestavovat, ladit a nasadit zdrojový kód a vytvořit odkazy na webové služby, databáze a další prostředky.
+# <a name="create-a-basic-project-system-part-1"></a>Vytvoření základního projektového systému, část 1
+V aplikaci Visual Studio jsou projekty kontejnery, které vývojáři používají k uspořádání souborů zdrojového kódu a dalších prostředků. Projekty se zobrazí jako podřízené položky řešení v **Průzkumník řešení**. Projekty umožňují organizovat, sestavovat, ladit a nasazovat zdrojový kód a vytvářet odkazy na webové služby, databáze a další prostředky.
 
- Projekty jsou definovány v souborech projektu, například *.csproj* souboru pro projekt jazyka Visual C#. Můžete vytvořit vlastní typ projektu, který má vlastní příponou názvu souboru projektu. Další informace o typech projektů naleznete v tématu [typy projektů](../extensibility/internals/project-types.md).
-
-> [!NOTE]
-> Pokud potřebujete rozšířit do vlastního typu projektu sady Visual Studio, důrazně doporučujeme využívat [systém projektu sady Visual Studio](https://github.com/Microsoft/VSProjectSystem) (VSPS) která má několik výhod oproti sestavení systém projektu od začátku:
->
-> - Jednodušší registraci.  Dokonce i systému základního projektu vyžaduje desítky tisíc řádků kódu.  Využití VSPS snižuje náklady na připojování na pár kliknutí, předtím, než budete chtít přizpůsobit podle vašich potřeb.
-> - Snazší Údržba.  S využitím VSPS, stačí udržovat vlastní scénáře.  My se postaráme udržování infrastruktura systému projektu.
->
->   Pokud potřebujete cílová verze sady Visual Studio starší než Visual Studio 2013, nebudete moci využít VSPS v rozšíření sady Visual Studio.  Pokud je to tento případ, Tento názorný postup je vhodné místo abyste mohli začít.
-
- Tento návod ukazuje, jak vytvořit typ projektu, který má příponu názvu souboru projektu *.myproj*. Tento názorný postup vypůjčí z existující systém projektu Visual C#.
+ Projekty jsou definovány v souborech projektu, například soubor *. csproj* pro vizuální C# projekt. Můžete vytvořit vlastní typ projektu, který má vlastní příponu názvu souboru projektu. Další informace o typech projektů naleznete v tématu [typy projektů](../extensibility/internals/project-types.md).
 
 > [!NOTE]
-> Další příklady rozšíření projektů, naleznete v tématu [VSSDK ukázky](https://aka.ms/vs2015sdksamples).
+> Pokud potřebujete sadu Visual Studio rozšíříte pomocí vlastního typu projektu, důrazně doporučujeme využívat systém VSPS ( [Visual Studio Project System](https://github.com/Microsoft/VSProjectSystem) ), který má několik výhod oproti vytvoření systému projektu od začátku:
+>
+> - Snadnější připojování.  I systém základních projektů vyžaduje desítky tisíc řádků kódu.  Využití VSPS snižuje náklady na registraci až na několik kliknutí, než budete připraveni na přizpůsobení podle vašich potřeb.
+> - Jednodušší údržba.  Využitím VSPS stačí zachovat vlastní scénáře.  Zpracováváme si udržování všech infrastrukturních systémů projektů.
+>
+>   Pokud potřebujete cílit na verze sady Visual Studio starší než Visual Studio 2013, nebudete moci využít VSPS v rozšíření sady Visual Studio.  V takovém případě je tento návod dobrým místem, kde začít.
 
- Tento návod se naučíte k provedení následujících úkolů:
+ Tento návod ukazuje, jak vytvořit typ projektu, který má příponu názvu souboru projektu *. myproj*. Tento názorný postup je vypůjčen z existujícího C# systému Visual Project.
 
-- Vytvoření základního projektu typu.
+> [!NOTE]
+> Další příklady rozšiřujících projektů naleznete v tématu [VSSDK Samples](https://aka.ms/vs2015sdksamples).
 
-- Vytvořte šablonu základního projektu.
+ Tento návod učí, jak provádět tyto úlohy:
 
-- Šablona projektu zaregistrujte pomocí sady Visual Studio.
+- Vytvoří základní typ projektu.
 
-- Vytvořit instanci projektu tak, že otevřete **nový projekt** dialogové okno a potom pomocí vlastní šablony.
+- Vytvoří základní šablonu projektu.
 
-- Vytvořte objekt pro vytváření projektu pro projekt systému.
+- Zaregistrujte šablonu projektu v aplikaci Visual Studio.
 
-- Vytvořte uzel projektu pro projekt systému.
+- Vytvořte instanci projektu otevřením dialogového okna **Nový projekt** a pak použijte šablonu.
 
-- Přidáte vlastní ikony pro systém projektu.
+- Vytvořte objekt pro vytváření projektu pro systém projektu.
 
-- Implementace nahrazení parametru základní šablony.
+- Vytvořte uzel projektu pro systém projektu.
+
+- Přidejte vlastní ikony pro systém projektu.
+
+- Implementujte základní substituci parametrů šablony.
 
 ## <a name="prerequisites"></a>Požadavky
- Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
- Musíte si také stáhnout zdrojový kód [Managed Package Framework pro projekty](https://github.com/tunnelvisionlabs/MPFProj10). Extrahujte soubor do umístění, které je přístupné k řešení, které se chystáte vytvořit.
+ Také je nutné stáhnout zdrojový kód pro [spravované balíčky architektury pro projekty](https://github.com/tunnelvisionlabs/MPFProj10). Extrahujte soubor do umístění, které je přístupné pro řešení, které budete vytvářet.
 
-## <a name="create-a-basic-project-type"></a>Vytvoření základního projektu typu
- Vytvořte projekt VSIX C# s názvem **SimpleProject**. (**Souboru** > **nové** > **projektu** a potom **Visual C#**  >   **Rozšiřitelnost** > **projekt VSIX**). Přidat šablonu položky projektu balíček Visual Studio (na **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel projektu a vyberte **přidat** > **nová položka**, pak přejděte na **Rozšiřitelnost** > **balíčku sady Visual Studio**). Název souboru *SimpleProjectPackage*.
+## <a name="create-a-basic-project-type"></a>Vytvoření základního typu projektu
+ Vytvořte projekt C# VSIX s názvem **SimpleProject**. (**Soubor**  > **Nový**  > **projekt** a pak **Visual C#**   > **rozšiřitelnost**  > **projektu VSIX**). Přidejte šablonu položky projektu balíčku sady Visual Studio (na **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte **Přidat**  > **Nová položka**a pak přejděte na **rozšíření**  > **balíček sady Visual Studio**). Název souboru *SimpleProjectPackage*.
 
-## <a name="creating-a-basic-project-template"></a>Vytvoření základního projektu šablony
- Nyní můžete upravit tento základní VSPackage implementovat nové *.myproj* typ projektu. Chcete-li vytvořit projekt, který je založen na *.myproj* typu projektu sady Visual Studio je vědět, jaké soubory, prostředky a odkazy pro přidání do nového projektu. Tyto informace poskytnout, umístěte soubory projektu ve složce šablony projektu. Když uživatel používá *.myproj* projektu vytvořit projekt, budou soubory zkopírovány do nového projektu.
+## <a name="creating-a-basic-project-template"></a>Vytvoření základní šablony projektu
+ Nyní můžete upravit tento základní VSPackage pro implementaci nového typu projektu *. myproj* . Chcete-li vytvořit projekt, který je založen na typu projektu *. myproj* , aplikace Visual Studio musí zjistit, které soubory, prostředky a odkazy mají být přidány do nového projektu. Chcete-li poskytnout tyto informace, umístěte soubory projektu do složky šablony projektu. Když uživatel použije projekt *. myproj* k vytvoření projektu, soubory se zkopírují do nového projektu.
 
-### <a name="to-create-a-basic-project-template"></a>Chcete-li vytvořit šablonu základního projektu
+### <a name="to-create-a-basic-project-template"></a>Vytvoření základní šablony projektu
 
-1. Přidejte tři složky do projektu, jeden v jiné: *Templates\Projects\SimpleProject*. (V **Průzkumníku řešení**, klikněte pravým tlačítkem myši **SimpleProject** uzel projektu, přejděte na **přidat**a potom klikněte na **novou složku**. Název složky *šablony*. V *šablony* složky, přidejte složku s názvem *projekty*. V *projekty* složky, přidejte složku s názvem *SimpleProject*.)
+1. Přidejte do projektu tři složky, jednu pod druhou: *Templates\Projects\SimpleProject*. (V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu **SimpleProject** , přejděte na **Přidat**a klikněte na **Nová složka**. Pojmenujte *šablony*složek. Ve složce *šablony* přidejte složku s názvem *projekty*. Do složky *projekty* přidejte složku s názvem *SimpleProject*.)
 
-2. V *Templates\Projects\SimpleProject* složky, přidejte soubor rastrový obrázek, který chcete použít jako ikonu s názvem *SimpleProject.ico*. Po kliknutí na **přidat**, otevře se editor ikon.
+2. Ve složce *Templates\Projects\SimpleProject* přidejte rastrový soubor obrázku, který se použije jako ikona s názvem *SimpleProject. ico*. Když kliknete na tlačítko **Přidat**, otevře se editor ikon.
 
-3. Ujistěte se, na ikonu rozlišovací. Tato ikona se zobrazí v **nový projekt** dialogové okno později v tomto návodu.
+3. Označit ikonu jako odlišnou. Tato ikona se zobrazí v dialogovém okně **Nový projekt** dále v tomto návodu.
 
-    ![Ikona Jednoduchý projekt](../extensibility/media/simpleprojicon.png "SimpleProjIcon")
+    ![Ikona jednoduchého projektu](../extensibility/media/simpleprojicon.png "SimpleProjIcon")
 
-4. Ikona uložte a zavřete editor ikon.
+4. Uložte ikonu a zavřete editor ikon.
 
-5. V *Templates\Projects\SimpleProject* složky, přidejte **třídy** položka s názvem *Program.cs*.
+5. Ve složce *Templates\Projects\SimpleProject* přidejte položku **třídy** s názvem *program.cs*.
 
-6. Nahraďte stávající kód s následujícími řádky.
+6. Nahraďte existující kód následujícími řádky.
 
    ```csharp
    using System;
@@ -101,18 +101,18 @@ Projekty v sadě Visual Studio, jsou kontejnery, které vývojáři použít k u
    ```
 
    > [!IMPORTANT]
-   > Toto není poslední formu *Program.cs* kódu; nahrazení parametrů se budou řešit v pozdějším kroku. Může se zobrazit chyby, ale tak dlouho, dokud soubor **BuildAction** je **obsahu**, byste měli moct sestavit a spustit projekt jako obvykle.
+   > Nejedná se o konečnou formu *program.cs* kódu; parametry nahrazení budou řešeny v pozdějším kroku. Může dojít k chybám při kompilaci, ale pokud je **BuildAction** souboru **obsahu**, měli byste být schopni sestavit a spustit projekt obvyklým způsobem.
 
 7. Uložte soubor.
 
-8. Kopírování *AssemblyInfo.cs* soubor *vlastnosti* složku *Projects\SimpleProject* složky.
+8. Zkopírujte soubor *AssemblyInfo.cs* ze složky *Properties* do složky *Projects\SimpleProject* .
 
-9. V *Projects\SimpleProject* složky přidejte soubor XML s názvem *SimpleProject.myproj*.
+9. Ve složce *Projects\SimpleProject* přidejte soubor XML s názvem *SimpleProject. myproj*.
 
    > [!NOTE]
-   > Přípona názvu souboru pro všechny projekty tohoto typu je *.myproj*. Pokud chcete změnit, musíte jej změnit všude, kde je uvedený v tomto návodu.
+   > Přípona názvu souboru pro všechny projekty tohoto typu je *. myproj*. Pokud ho chcete změnit, musíte ho změnit všude, kde je zmíněný v tomto návodu.
 
-10. Nahraďte existující obsah s následujícími řádky.
+10. Existující obsah nahraďte následujícími řádky.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -154,11 +154,11 @@ Projekty v sadě Visual Studio, jsou kontejnery, které vývojáři použít k u
 
 11. Uložte soubor.
 
-12. V **vlastnosti** okno, nastaveno **akce sestavení** z *AssemblyInfo.cs*, *Program.cs*, *SimpleProject.ico* , a *SimpleProject.myproj* k **obsahu**a nastavte jejich **zahrnout do VSIX** vlastností **True**.
+12. V okně **vlastnosti** nastavte **akci sestavení** pro *AssemblyInfo.cs*, *program.cs*, *SimpleProject. ico*a *SIMPLEPROJECT. myproj* na **obsah**a nastavte jejich **zahrnutí do vlastností VSIX** . na **hodnotu true**.
 
-    Tuto šablonu projektu popisuje základní Visual C# projekt, který má konfiguraci ladění a konfiguraci vydané verze. Projekt obsahuje dva zdrojové soubory, *AssemblyInfo.cs* a *Program.cs*a odkazy na několik sestavení. Když se vytvoří projekt ze šablony, hodnota ProjectGuid automaticky nahrazena nový identifikátor GUID.
+    Tato šablona projektu popisuje základní vizuální C# projekt, který obsahuje konfiguraci ladění a konfiguraci vydání. Projekt obsahuje dva zdrojové soubory, *AssemblyInfo.cs* a *program.cs*a několik odkazů na sestavení. Při vytvoření projektu ze šablony je hodnota ProjectGuid automaticky nahrazena novým identifikátorem GUID.
 
-    V **Průzkumníka řešení**, rozbalených **šablony** složka by měla vypadat následovně:
+    V **Průzkumník řešení**by se měla zobrazit složka rozšířených **šablon** takto:
 
 ```
 Templates
@@ -170,12 +170,12 @@ Templates
          SimpleProject.myproj
 ```
 
-## <a name="create-a-basic-project-factory"></a>Vytvoření základního projektu továrny
- Visual Studio je zapotřebí sdělit umístění složky šablony projektu. K tomuto účelu přidání atributu do třídy balíčku VSPackage, která implementuje objekt pro vytváření projektů tak, aby umístění šablony se zapisují do systémového registru při vytváření sady VSPackage. Začněte tím, že vytvoříte objekt pro vytváření základního projektu, který je identifikován podle objekt pro vytváření projektu GUID. Použití <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> atributů pro objekt pro vytváření projektu pro připojení `SimpleProjectPackage` třídy.
+## <a name="create-a-basic-project-factory"></a>Vytvoření základního objektu pro vytváření projektů
+ Musíte aplikaci Visual Studio sdělit umístění složky šablony projektu. Chcete-li to provést, přidejte atribut do třídy VSPackage, která implementuje objekt pro vytváření projektu, aby bylo umístění šablony zapsáno do systémového registru při sestavení VSPackage. Začněte vytvořením základního objektu pro vytváření projektů, který je identifikován identifikátorem GUID objektu pro vytváření projektu. Pomocí atributu <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> Připojte objekt pro vytváření projektu ke třídě `SimpleProjectPackage`.
 
-### <a name="to-create-a-basic-project-factory"></a>Vytvořte objekt pro vytváření základního projektu
+### <a name="to-create-a-basic-project-factory"></a>Vytvoření základního objektu pro vytváření projektů
 
-1. Vytvořit GUID objektu pro vytváření vašeho projektu (na **nástroje** nabídky, klikněte na tlačítko **Create GUID**), nebo použijte v následujícím příkladu. Přidat identifikátory GUID na `SimpleProjectPackage` kurz ve svém okolí část s již definovanou `PackageGuidString`. Identifikátory GUID musí být ve formátu identifikátoru GUID a formátu řetězce. Výsledný kód by měl vypadat podobně jako v následujícím příkladu.
+1. Vytvořte identifikátory GUID pro objekt pro vytváření projektu (v nabídce **nástroje** klikněte na příkaz **vytvořit GUID**) nebo použijte ten v následujícím příkladu. Přidejte identifikátory GUID do třídy `SimpleProjectPackage` poblíž oddílu s již definovaným `PackageGuidString`em. Identifikátory GUID musí být ve formátu GUID i ve formě řetězce. Výsledný kód by měl vypadat podobně jako v následujícím příkladu.
 
    ```csharp
        public sealed class SimpleProjectPackage : Package
@@ -188,16 +188,16 @@ Templates
        }
    ```
 
-2. Přidání třídy do horní části *SimpleProject* složku s názvem *SimpleProjectFactory.cs*.
+2. Přidejte třídu do horní složky *SimpleProject* s názvem *SimpleProjectFactory.cs*.
 
-3. Přidejte následující příkazy using:
+3. Přidejte následující direktivy using:
 
    ```csharp
    using System.Runtime.InteropServices;
    using Microsoft.VisualStudio.Shell;
    ```
 
-4. Přidat atribut GUID k `SimpleProjectFactory` třídy. Hodnota atributu je nový objekt factory projektu GUID.
+4. Přidejte atribut GUID do třídy `SimpleProjectFactory`. Hodnota atributu je nový identifikátor GUID objektu pro vytváření projektu.
 
    ```csharp
    [Guid(SimpleProjectPackage.SimpleProjectFactoryString)]
@@ -206,11 +206,11 @@ Templates
    }
    ```
 
-   Nyní můžete zaregistrovat šablony projektu.
+   Nyní můžete zaregistrovat šablonu projektu.
 
-### <a name="to-register-the-project-template"></a>Chcete-li šablonu projektu zaregistrovat
+### <a name="to-register-the-project-template"></a>Registrace šablony projektu
 
-1. V *SimpleProjectPackage.cs*, přidejte <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> atribut `SimpleProjectPackage` třídy následujícím způsobem.
+1. V *SimpleProjectPackage.cs*přidejte atribut <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> do třídy `SimpleProjectPackage` následujícím způsobem.
 
    ```csharp
    [ProvideProjectFactory(    typeof(SimpleProjectFactory),     "Simple Project",
@@ -220,31 +220,31 @@ Templates
    public sealed class SimpleProjectPackage : Package
    ```
 
-2. Znovu sestavte řešení a ověřte, že sestaví bez chyb.
+2. Znovu sestavte řešení a ověřte, zda se jedná o sestavení bez chyb.
 
-    Šablona projektu znovu sestavit zaregistruje.
+    Nové sestavení registruje šablonu projektu.
 
-   Parametry `defaultProjectExtension` a `possibleProjectExtensions` jsou nastaveny na příponu názvu souboru projektu ( *.myproj*). `projectTemplatesDirectory` Parametr je nastaven na relativní cestu *šablony* složky. Během sestavování tuto cestu převést na úplné sestavení a přidá do registru k registraci systém projektu.
+   Parametry `defaultProjectExtension` a `possibleProjectExtensions` jsou nastaveny na příponu názvu souboru projektu ( *. myproj*). Parametr `projectTemplatesDirectory` je nastaven na relativní cestu složky *Templates* . Během sestavení bude tato cesta převedena na úplné sestavení a přidána do registru pro registraci systému projektu.
 
-## <a name="test-the-template-registration"></a>Test registrace šablony
- Šablona registrace instruuje Visual Studio umístění složky projektu šablony tak, aby Visual Studio můžete zobrazit název šablony a ikona v **nový projekt** dialogové okno.
+## <a name="test-the-template-registration"></a>Testování registrace šablony
+ Registrace šablony obsahuje informace o umístění složky šablony projektu v aplikaci Visual Studio, aby v aplikaci Visual Studio bylo možné zobrazit název šablony a ikonu v dialogovém okně **Nový projekt** .
 
-### <a name="to-test-the-template-registration"></a>K otestování šablona registrace
+### <a name="to-test-the-template-registration"></a>Otestování registrace šablony
 
-1. Stisknutím klávesy **F5** spustíte ladění v experimentální instanci sady Visual Studio.
+1. Stisknutím klávesy **F5** spusťte ladění experimentální instance sady Visual Studio.
 
-2. V experimentální instanci aplikace vytvořte nový projekt typu nově vytvořeného projektu. V **nový projekt** dialogové okno, měli byste vidět **SimpleProject** pod **instalované šablony**.
+2. V experimentální instanci vytvořte nový projekt nově vytvořeného typu projektu. V dialogovém okně **Nový projekt** byste měli vidět **SimpleProject** v části **Nainstalované šablony**.
 
-   Teď máte objekt pro vytváření projektu, který je registrovaný. To však ještě nejde vytvořit projekt. Balíček projektu a objektu pro vytváření projektu společně k vytváření a inicializace projektu.
+   Nyní máte objekt pro vytváření projektu, který je zaregistrován. Zatím ale nemůže vytvořit projekt. Balíček projektu a továrna projektu pracují společně pro vytvoření a inicializaci projektu.
 
-## <a name="add-the-managed-package-framework-code"></a>Přidejte kód Managed Package Framework
- Implementace připojení mezi balíček projekt a objektu pro vytváření projektu.
+## <a name="add-the-managed-package-framework-code"></a>Přidat kód spravovaného balíčku rozhraní
+ Implementujte připojení mezi balíčkem projektu a objektem pro vytváření projektů.
 
-- Naimportujte soubory zdrojového kódu pro Managed Package Framework.
+- Importujte soubory zdrojového kódu pro Managed Package Framework.
 
-    1. Uvolněte projekt SimpleProject (v **Průzkumníka řešení**, vyberte uzel projektu a v místní nabídce klikněte na tlačítko **uvolnit projekt**.) a otevřete soubor projektu v editoru XML.
+    1. Uvolněte projekt SimpleProject (v **Průzkumník řešení**vyberte uzel projektu a v místní nabídce klikněte na položku **Uvolnit projekt**.) a otevřete soubor projektu v editoru XML.
 
-    2. Přidejte následující bloky do souboru projektu (přímo nad \<Import > bloků). Nastavte `ProjectBasePath` umístění *ProjectBase.files* souboru v kódu Managed Package Framework jste si právě stáhli. Budete muset přidat do cesty zpětné lomítko. Pokud ho nevidíte, projekt nemusí podařit Managed Package Framework zdrojový kód.
+    2. Přidejte následující bloky do souboru projektu (hned nad > bloky \<Import). Nastavte `ProjectBasePath` do umístění souboru *ProjectBase. Files* v kódu spravovaného balíčku, který jste právě stáhli. Je možné, že budete muset do cesty přidat zpětné lomítko. Pokud to neuděláte, projekt nemusí podařit najít zdrojový kód spravovaného balíčku.
 
         ```
         <PropertyGroup>
@@ -255,33 +255,33 @@ Templates
         ```
 
         > [!IMPORTANT]
-        > Nezapomeňte zpětné lomítko na konci cesty.
+        > Na konci cesty nezapomeňte zpětné lomítko.
 
-    3. Znovu načte projekt.
+    3. Znovu načtěte projekt.
 
     4. Přidejte odkazy na následující sestavení:
 
-        - `Microsoft.VisualStudio.Designer.Interfaces` (v  *\<VSSDK instalace > \VisualStudioIntegration\Common\Assemblies\v2.0*)
+        - `Microsoft.VisualStudio.Designer.Interfaces` (v *\<VSSDK install > \VisualStudioIntegration\Common\Assemblies\v2.0*)
 
         - `WindowsBase`
 
         - `Microsoft.Build.Tasks.v4.0`
 
-### <a name="to-initialize-the-project-factory"></a>Chcete-li inicializovat objekt pro vytváření projektů
+### <a name="to-initialize-the-project-factory"></a>Inicializace objektu pro vytváření projektu
 
-1. V *SimpleProjectPackage.cs* soubor, přidejte následující `using` příkazu.
+1. Do souboru *SimpleProjectPackage.cs* přidejte následující direktivu `using`.
 
     ```csharp
     using Microsoft.VisualStudio.Project;
     ```
 
-2. Odvodit `SimpleProjectPackage` třídy z `Microsoft.VisualStudio.Package.ProjectPackage`.
+2. Odvodit třídu `SimpleProjectPackage` z `Microsoft.VisualStudio.Package.ProjectPackage`.
 
     ```csharp
     public sealed class SimpleProjectPackage : ProjectPackage
     ```
 
-3. Zaregistrujte objekt pro vytváření projektu. Přidejte následující řádek, který `SimpleProjectPackage.Initialize` metoda, hned za `base.Initialize`.
+3. Zaregistrujte objekt pro vytváření projektu. Přidejte následující řádek do metody `SimpleProjectPackage.Initialize`, a to hned po `base.Initialize`.
 
     ```csharp
     base.Initialize();
@@ -297,19 +297,19 @@ Templates
     }
     ```
 
-5. V *SimpleProjectFactory.cs*, přidejte následující `using` příkazem za stávající `using` příkazy.
+5. V *SimpleProjectFactory.cs*přidejte následující direktivu `using` za stávající direktivy `using`.
 
     ```csharp
     using Microsoft.VisualStudio.Project;
     ```
 
-6. Odvodit `SimpleProjectFactory` třídy z `ProjectFactory`.
+6. Odvodit třídu `SimpleProjectFactory` z `ProjectFactory`.
 
     ```csharp
     class SimpleProjectFactory : ProjectFactory
     ```
 
-7. Přidejte následující metodu založenou na `SimpleProjectFactory` třídy. Tato metoda se implementovat v další části.
+7. Přidejte následující fiktivní metodu do třídy `SimpleProjectFactory`. Tuto metodu budete implementovat v pozdější části.
 
     ```csharp
     protected override ProjectNode CreateProject()
@@ -318,7 +318,7 @@ Templates
     }
     ```
 
-8. Přidejte následující pole a konstruktor, aby `SimpleProjectFactory` třídy. To `SimpleProjectPackage` odkaz se uloží do mezipaměti v soukromé pole tak, aby ho můžete použít při nastavení Web poskytovatele služeb.
+8. Přidejte následující pole a konstruktor do třídy `SimpleProjectFactory`. Tento `SimpleProjectPackage` odkaz je uložen v mezipaměti v soukromém poli, aby jej bylo možné použít v nastavení webu poskytovatele služeb.
 
     ```csharp
     private SimpleProjectPackage package;
@@ -330,43 +330,43 @@ Templates
     }
     ```
 
-9. Znovu sestavte řešení a ověřte, že sestaví bez chyb.
+9. Znovu sestavte řešení a ověřte, zda se jedná o sestavení bez chyb.
 
-## <a name="test-the-project-factory-implementation"></a>Testování projektu implementace objektu factory
- Otestujte, zda je zavolán konstruktor pro objekt pro vytváření implementaci projektu.
+## <a name="test-the-project-factory-implementation"></a>Testování implementace továrny projektu
+ Otestujte, zda je volán konstruktor pro implementaci vaší továrny projektu.
 
-### <a name="to-test-the-project-factory-implementation"></a>K otestování implementace objektu factory projektu
+### <a name="to-test-the-project-factory-implementation"></a>Testování implementace továrny projektu
 
-1. V *SimpleProjectFactory.cs* souborů, nastavit zarážku na řádek v `SimpleProjectFactory` konstruktoru.
+1. V souboru *SimpleProjectFactory.cs* nastavte zarážku na následujícím řádku v konstruktoru `SimpleProjectFactory`.
 
     ```csharp
     this.package = package;
     ```
 
-2. Stisknutím klávesy **F5** spustit experimentální instanci sady Visual Studio.
+2. Stisknutím klávesy **F5** spusťte experimentální instanci sady Visual Studio.
 
-3. V experimentální instanci start k vytvoření nového projektu. V **nový projekt** dialogové okno, vyberte **SimpleProject** typ projektu a pak klikněte na tlačítko **OK**. Provádění zastaví na zarážce.
+3. V experimentální instanci začněte vytvářet nový projekt. V dialogovém okně **Nový projekt** vyberte typ projektu **SimpleProject** a klikněte na tlačítko **OK**. Spuštění se zastaví na zarážce.
 
-4. Zarážka zrušte a zastavte ladění. Protože jsme uzel projektu ještě nevytvořili, kód pro vytvoření projektu stále vyvolá výjimky.
+4. Zrušte zarážku a zastavte ladění. Vzhledem k tomu, že jsme ještě nevytvořili uzel projektu, kód pro vytváření projektu stále vyvolává výjimky.
 
-## <a name="extend-the-projectnode-class"></a>Rozšíření třídy ProjectNode
- Teď můžete implementovat `SimpleProjectNode` třída, která je odvozena z `ProjectNode` třídy. `ProjectNode` Základní třída zpracovává následující úlohy vytvoření projektu:
+## <a name="extend-the-projectnode-class"></a>Rozšiřování třídy ProjectNode
+ Nyní můžete implementovat třídu `SimpleProjectNode`, která je odvozena z třídy `ProjectNode`. @No__t_0 základní třída zpracovává následující úlohy při vytváření projektu:
 
-- Zkopíruje soubor šablony projektu *SimpleProject.myproj*, do nové složky projektu. Kopírování je přejmenovat podle názvu, který je zadán v **nový projekt** dialogové okno. `ProjectGuid` Hodnota vlastnosti je nahrazena nový identifikátor GUID.
+- Zkopíruje soubor šablony projektu *SimpleProject. myproj*do složky nového projektu. Kopie je přejmenována podle názvu, který je zadán v dialogovém okně **Nový projekt** . Hodnota vlastnosti `ProjectGuid` je nahrazena novým identifikátorem GUID.
 
-- Prochází přes prvky soubor šablony projektu, MSBuild *SimpleProject.myproj*a hledá `Compile` elementy. Pro každou `Compile` cílový soubor, zkopíruje soubor do nové složky projektu.
+- Projde prvky MSBuild souboru šablony projektu *SimpleProject. myproj*a vyhledá prvky `Compile`. Pro každý cílový soubor `Compile` zkopíruje soubor do složky nového projektu.
 
-  Odvozená `SimpleProjectNode` třída zpracovává tyto úlohy:
+  Odvozená třída `SimpleProjectNode` zpracovává tyto úlohy:
 
-- Umožňuje ikony pro projekt a soubor uzly v **Průzkumníka řešení** vytvořili, nebo vybraná.
+- Umožňuje vytvořit nebo vybrat ikony pro uzly projektu a souboru v **Průzkumník řešení** .
 
-- Umožňuje náhrad parametrů šablony další projekt zadat.
+- Povoluje zadání dalších náhrad parametrů šablony projektu.
 
-### <a name="to-extend-the-projectnode-class"></a>Rozšíření třídy ProjectNode
+### <a name="to-extend-the-projectnode-class"></a>Postup rozšiřování třídy ProjectNode
 
-1. Přidejte třídu pojmenovanou `SimpleProjectNode.cs`.
+1. Přidejte třídu s názvem `SimpleProjectNode.cs`.
 
-2. Nahraďte stávající kód následujícím kódem.
+2. Nahraďte existující kód následujícím kódem.
 
    ```csharp
    using System;
@@ -402,27 +402,27 @@ Templates
    }
    ```
 
-   To `SimpleProjectNode` třída implementace má tyto přepsané metody:
+   Tato implementace `SimpleProjectNode` třídy obsahuje tyto přepsané metody:
 
-- `ProjectGuid`, která vrací objekt pro vytváření projektu GUID.
+- `ProjectGuid`, která vrací GUID objektu pro vytváření projektu.
 
 - `ProjectType`, která vrací lokalizovaný název typu projektu.
 
-- `AddFileFromTemplate`, který zkopíruje vybrané soubory ze složky šablony na cílový projekt. Tato metoda je implementována dále v další části.
+- `AddFileFromTemplate`, která kopíruje vybrané soubory ze složky šablony do cílového projektu. Tato metoda je dále implementována v pozdější části.
 
-  `SimpleProjectNode` Konstruktoru, třeba `SimpleProjectFactory` konstruktor ukládá do mezipaměti `SimpleProjectPackage` odkaz v soukromé pole pro pozdější použití.
+  Konstruktor `SimpleProjectNode`, jako je například konstruktor `SimpleProjectFactory`, ukládá do mezipaměti odkaz `SimpleProjectPackage` v soukromém poli pro pozdější použití.
 
-  Pro připojení `SimpleProjectFactory` třídu `SimpleProjectNode` třídy, je nutné vytvořit novou instanci `SimpleProjectNode` v `SimpleProjectFactory.CreateProject` metoda a ukládání do mezipaměti v soukromé pole pro pozdější použití.
+  Chcete-li připojit třídu `SimpleProjectFactory` ke třídě `SimpleProjectNode`, je nutné vytvořit instanci nového `SimpleProjectNode` v metodě `SimpleProjectFactory.CreateProject` a uložit ji do mezipaměti v soukromém poli pro pozdější použití.
 
-### <a name="to-connect-the-project-factory-class-and-the-node-class"></a>Pro připojení třídy objekt pro vytváření projektů a uzlu
+### <a name="to-connect-the-project-factory-class-and-the-node-class"></a>Připojení třídy factory projektu a třídy Node
 
-1. V *SimpleProjectFactory.cs* soubor, přidejte následující `using` – příkaz:
+1. Do souboru *SimpleProjectFactory.cs* přidejte následující direktivu `using`:
 
     ```csharp
     using IOleServiceProvider =    Microsoft.VisualStudio.OLE.Interop.IServiceProvider;
     ```
 
-2. Nahradit `SimpleProjectFactory.CreateProject` metoda pomocí následujícího kódu.
+2. Metodu `SimpleProjectFactory.CreateProject` nahraďte pomocí následujícího kódu.
 
     ```csharp
     protected override ProjectNode CreateProject()
@@ -434,40 +434,40 @@ Templates
     }
     ```
 
-3. Znovu sestavte řešení a ověřte, že sestaví bez chyb.
+3. Znovu sestavte řešení a ověřte, zda se jedná o sestavení bez chyb.
 
-## <a name="test-the-projectnode-class"></a>ProjectNode třídu testu
- Otestujte svůj projekt objekt pro vytváření zobrazíte, jestli se vytvoří hierarchii projektu.
+## <a name="test-the-projectnode-class"></a>Test třídy ProjectNode
+ Otestujte objekt pro vytváření projektu, abyste viděli, zda vytváří hierarchii projektu.
 
-### <a name="to-test-the-projectnode-class"></a>Chcete-li třídu ProjectNode testu
+### <a name="to-test-the-projectnode-class"></a>Otestování třídy ProjectNode
 
-1. Stisknutím klávesy **F5** spusťte ladění. V experimentální instanci aplikace vytvořte nový SimpleProject.
+1. Stisknutím klávesy **F5** spusťte ladění. V experimentální instanci vytvořte nový SimpleProject.
 
-2. Visual Studio by měly volat výrobce projekt pro vytvoření projektu.
+2. Visual Studio by mělo volat objekt pro vytváření projektu a vytvořit tak projekt.
 
-3. Ukončete experimentální instanci sady Visual Studio.
+3. Zavřete experimentální instanci sady Visual Studio.
 
-## <a name="add-a-custom-project-node-icon"></a>Přidat vlastní ikonu uzlu
- Ikona uzel projektu v dřívější části je výchozí ikona. Můžete ho změnit na vlastní ikonu.
+## <a name="add-a-custom-project-node-icon"></a>Přidat vlastní ikonu uzlu projektu
+ Ikona uzlu projektu v předchozí části je výchozí ikona. Můžete ho změnit na vlastní ikonu.
 
-### <a name="to-add-a-custom-project-node-icon"></a>Chcete-li přidat ikonu uzel vlastní projekt
+### <a name="to-add-a-custom-project-node-icon"></a>Přidání ikony vlastního uzlu projektu
 
-1. V **prostředky** složky, přidejte do ní soubor rastrového obrázku *SimpleProjectNode.bmp*.
+1. Ve složce **Resources (prostředky** ) přidejte rastrový soubor s názvem *SimpleProjectNode. bmp*.
 
-2. V **vlastnosti** windows, snižte rastrového obrázku nastaven na 16 × 16 pixelů. Zkontrolujte rozlišovací rastrového obrázku.
+2. V oknech **vlastnosti** zmenšete rastrový obrázek na 16 × 16 pixelů. Nastavit rastrový obrázek jako výrazný
 
-    ![Simple Project Comm](../extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")
+    ![Jednoduchý projekt – komunikace](../extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")
 
-3. V **vlastnosti** okno Změnit **akce sestavení** rastrového obrázku na **integrovaný prostředek**.
+3. V okně **vlastnosti** změňte **akci sestavení** rastrového obrázku na **Integrovaný prostředek**.
 
-4. V *SimpleProjectNode.cs*, přidejte následující `using` příkazy:
+4. Do *SimpleProjectNode.cs*přidejte následující direktivy `using`:
 
    ```csharp
    using System.Drawing;
    using System.Windows.Forms;
    ```
 
-5. Přidejte následující statická pole a konstruktoru `SimpleProjectNode` třídy.
+5. Přidejte následující statické pole a konstruktor do třídy `SimpleProjectNode`.
 
    ```csharp
    private static ImageList imageList;
@@ -478,7 +478,7 @@ Templates
    }
    ```
 
-6. Přidejte následující vlastnost na začátek `SimpleProjectNode` třídy.
+6. Do začátku `SimpleProjectNode` třídy přidejte následující vlastnost.
 
    ```csharp
    internal static int imageIndex;
@@ -488,7 +488,7 @@ Templates
       }
    ```
 
-7. Konstruktor instance nahraďte následujícím kódem.
+7. Nahraďte konstruktor instance následujícím kódem.
 
    ```csharp
    public SimpleProjectNode(SimpleProjectPackage package)
@@ -504,36 +504,36 @@ Templates
    }
    ```
 
-   Během statické konstrukce `SimpleProjectNode` načte rastrového obrázku uzlu projektu z prostředky manifestu sestavení a ukládá do mezipaměti v soukromé pole pro pozdější použití. Všimněte si, že syntaxe <xref:System.Reflection.Assembly.GetManifestResourceStream%2A> cestu k bitové kopii. Chcete-li zobrazit názvy prostředky manifestu vložen do sestavení, použijte <xref:System.Reflection.Assembly.GetManifestResourceNames%2A> metody. Když tato metoda platí pro `SimpleProject` sestavení, výsledky by měl vypadat takto:
+   Během statické konstrukce `SimpleProjectNode` načítá rastrový obrázek uzlu projektu z prostředků manifestu sestavení a ukládá je do mezipaměti v soukromém poli pro pozdější použití. Všimněte si syntaxe cesty k obrázku <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>. Chcete-li zobrazit názvy prostředků manifestu vložených do sestavení, použijte metodu <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>. Pokud je tato metoda použita pro sestavení `SimpleProject`, výsledky by měly být následující:
 
-- *SimpleProject.Resources.resources*
+- *SimpleProject. Resources. Resources*
 
-- *VisualStudio.Project.resources*
+- *VisualStudio. Project. Resources*
 
-- *SimpleProject.VSPackage.resources*
+- *SimpleProject. VSPackage. Resources*
 
-- *Resources.imagelis.bmp*
+- *Resources. imagelis. bmp*
 
-- *Microsoft.VisualStudio.Project.DontShowAgainDialog.resources*
+- *Microsoft. VisualStudio. Project. DontShowAgainDialog. Resources*
 
-- *Microsoft.VisualStudio.Project.SecurityWarningDialog.resources*
+- *Microsoft. VisualStudio. Project. SecurityWarningDialog. Resources*
 
-- *SimpleProject.Resources.SimpleProjectNode.bmp*
+- *SimpleProject. Resources. SimpleProjectNode. bmp*
 
-  Při vytváření instance `ProjectNode` základní třídy zatížení *Resources.imagelis.bmp*v jsou vložené běžně používané 16 x 16 rastrové obrázky z *Resources\imagelis.bmp*. Tento seznam rastrového obrázku je k dispozici `SimpleProjectNode` jako `ImageHandler.ImageList`. `SimpleProjectNode` připojí rastrového obrázku uzlu projektu do seznamu. Posun rastrového obrázku uzlu projektu v seznamu obrázků se uloží do mezipaměti pro pozdější použití jako hodnota veřejnosti `ImageIndex` vlastnost. Visual Studio používá tuto vlastnost k určení, které rastrový obrázek pro zobrazit jako ikonu uzlu projektu.
+  Při konstrukci instance načítá `ProjectNode` základní třída *Resources. imagelis. bmp*, kde jsou vloženy běžně používané obrázky 16 x 16 rastrů z *Resources\imagelis.bmp*. Tento bitmapový seznam je zpřístupněn pro `SimpleProjectNode` jako `ImageHandler.ImageList`. `SimpleProjectNode` připojí rastrový obrázek uzlu projektu k seznamu. Posun rastrového obrázku uzlu projektu v seznamu obrázků je uložen do mezipaměti pro pozdější použití jako hodnota vlastnosti Public `ImageIndex`. Visual Studio používá tuto vlastnost k určení, který rastrový obrázek se má zobrazit jako ikona uzlu projektu.
 
-## <a name="test-the-custom-project-node-icon"></a>Uzel ikona vlastní projekt testu
- Otestujte svůj projekt objekt pro vytváření zobrazíte, jestli se vytvoří hierarchii projektu, který má ikonu uzel vaše vlastní projekt.
+## <a name="test-the-custom-project-node-icon"></a>Test ikony vlastního uzlu projektu
+ Otestujte objekt pro vytváření projektu, abyste viděli, zda vytváří hierarchii projektu, která má vlastní ikonu uzlu projektu.
 
-### <a name="to-test-the-custom-project-node-icon"></a>Uzel ikona vlastních projektů testování
+### <a name="to-test-the-custom-project-node-icon"></a>Otestování ikony vlastního uzlu projektu
 
-1. Spustit ladění a vytvořte nový SimpleProject v experimentální instanci aplikace.
+1. Spusťte ladění a v experimentální instanci vytvořte nový SimpleProject.
 
-2. V nově vytvořeného projektu, Všimněte si, že *SimpleProjectNode.bmp* slouží jako ikona uzlu projektu.
+2. V nově vytvořeném projektu si všimněte, že se jako ikona uzlu projektu používá *SimpleProjectNode. bmp* .
 
-     ![Jednoduchý projekt nový uzel projektu](../extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")
+     ![Jednoduchý projekt – uzel nového projektu](../extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")
 
-3. Otevřít *Program.cs* v editoru kódu. Měli byste vidět zdrojový kód, který vypadá podobně jako následující kód.
+3. Otevřete *program.cs* v editoru kódu. Měl by se zobrazit zdrojový kód, který se podobá následujícímu kódu.
 
     ```csharp
     using System;
@@ -553,22 +553,22 @@ Templates
     }
     ```
 
-     Všimněte si, že parametry šablony $nameSpace$ a $className$ nemají nové hodnoty. Se dozvíte, jak implementovat nahrazení parametru šablony v další části.
+     Všimněte si, že parametry šablony $nameSpace $ a $className $ nemají nové hodnoty. Naučíte se, jak implementovat substituci parametrů šablony v další části.
 
-## <a name="substitute-template-parameters"></a>Nahraďte parametry šablony
- V předchozí části jste zaregistrovali šablona projektu pomocí sady Visual Studio pomocí `ProvideProjectFactory` atribut. Registrace cestu ke složce šablon tímto způsobem umožňuje povolit nahrazení parametru základní šablony pomocí přepisování a rozšiřování `ProjectNode.AddFileFromTemplate` třídy. Další informace najdete v tématu [nová generace projektů: Pod pokličkou, část 2](../extensibility/internals/new-project-generation-under-the-hood-part-two.md).
+## <a name="substitute-template-parameters"></a>Nahradit parametry šablony
+ V předchozí části jste zaregistrovali šablonu projektu v aplikaci Visual Studio pomocí atributu `ProvideProjectFactory`. Registrace cesty ke složce šablony tímto způsobem umožňuje povolit substituci základní šablony přepsáním a rozšířením `ProjectNode.AddFileFromTemplate` třídy. Další informace naleznete v tématu [Nová generace projektů: pod digestoří, druhá část](../extensibility/internals/new-project-generation-under-the-hood-part-two.md).
 
- Teď přidejte kód nahrazení, který `AddFileFromTemplate` třídy.
+ Nyní přidejte náhradní kód do třídy `AddFileFromTemplate`.
 
-### <a name="to-substitute-template-parameters"></a>Nahradit parametry šablony
+### <a name="to-substitute-template-parameters"></a>Náhrada parametrů šablony
 
-1. V *SimpleProjectNode.cs* soubor, přidejte následující `using` příkazu.
+1. Do souboru *SimpleProjectNode.cs* přidejte následující direktivu `using`.
 
    ```csharp
    using System.IO;
    ```
 
-2. Nahradit `AddFileFromTemplate` metoda pomocí následujícího kódu.
+2. Metodu `AddFileFromTemplate` nahraďte pomocí následujícího kódu.
 
    ```csharp
    public override void AddFileFromTemplate(
@@ -586,30 +586,30 @@ Templates
    }
    ```
 
-3. Nastavte zarážku v metodě bezprostředně po `className` příkazu přiřazení.
+3. Nastavte zarážku v metodě hned za `className` příkaz přiřazení.
 
-   Přiřazovací příkazy určit rozumné hodnoty pro obor názvů a nový název třídy. Dva `ProjectNode.FileTemplateProcessor.AddReplace` volání metody nahradí odpovídající hodnoty parametrů šablony s použitím těchto nových hodnot.
+   Příkazy přiřazení určují přiměřené hodnoty pro obor názvů a nový název třídy. Druhá metoda `ProjectNode.FileTemplateProcessor.AddReplace` volá náhradu odpovídajících hodnot parametrů šablony pomocí těchto nových hodnot.
 
-## <a name="test-the-template-parameter-substitution"></a>Testování nahrazení parametru šablony
- Nyní můžete otestovat nahrazení parametru šablony.
+## <a name="test-the-template-parameter-substitution"></a>Test nahrazení parametru šablony
+ Nyní můžete otestovat nahrazování parametrů šablony.
 
-### <a name="to-test-the-template-parameter-substitution"></a>K otestování nahrazení parametru šablony
+### <a name="to-test-the-template-parameter-substitution"></a>Otestování nahrazení parametru šablony
 
-1. Spustit ladění a vytvořte nový SimpleProject v experimentální instanci aplikace.
+1. Spusťte ladění a v experimentální instanci vytvořte nový SimpleProject.
 
-2. Provádění zastaví na zarážce v `AddFileFromTemplate` metody.
+2. Spuštění se zastaví na zarážce v metodě `AddFileFromTemplate`.
 
-3. Zkontrolujte hodnoty `nameSpace` a `className` parametry.
+3. Projděte si hodnoty parametrů `nameSpace` a `className`.
 
-   - `nameSpace` je přiřazena hodnota \<RootNamespace > prvek *\Templates\Projects\SimpleProject\SimpleProject.myproj* soubor šablony projektu. V takovém případě je hodnota `MyRootNamespace`.
+   - `nameSpace` je předána hodnota prvku \<RootNamespace > v souboru šablony projektu *\Templates\Projects\SimpleProject\SimpleProject.myproj* . V tomto případě je hodnota `MyRootNamespace`.
 
-   - `className` Hodnota třídy název zdrojového souboru, bez přípony názvu souboru je uveden. V takovém případě se první soubor, které se mají zkopírovat do cílové složky *AssemblyInfo.cs*, proto se hodnota className `AssemblyInfo`.
+   - `className` je předána hodnota názvu zdrojového souboru třídy bez přípony názvu souboru. V takovém případě je první soubor, který se má zkopírovat do cílové složky, *AssemblyInfo.cs*; Proto hodnota className je `AssemblyInfo`.
 
-4. Odebrat zarážku a stisknutím klávesy **F5** pro pokračování v provádění.
+4. Odeberte zarážku a stisknutím klávesy **F5** pokračujte v provádění.
 
-    Visual Studio by měl dokončit vytváření projektu.
+    Visual Studio by mělo dokončit vytváření projektu.
 
-5. Otevřít *Program.cs* v editoru kódu. Měli byste vidět zdrojový kód, který vypadá podobně jako následující kód.
+5. Otevřete *program.cs* v editoru kódu. Měl by se zobrazit zdrojový kód, který se podobá následujícímu kódu.
 
    ```csharp
    using System;
@@ -630,10 +630,10 @@ Templates
    }
    ```
 
-    Všimněte si, že je obor názvů `MyRootNamespace` a název třídy je nyní `Program`.
+    Všimněte si, že obor názvů je nyní `MyRootNamespace` a název třídy je nyní `Program`.
 
-6. Spusťte ladění projektu. Nový projekt by měl kompilaci, spuštění a zobrazí "Hello VSX!!!" v okně konzoly.
+6. Spusťte ladění projektu. Nový projekt by měl kompilovat, spouštět a zobrazovat "Hello VSX!!!" v okně konzoly.
 
-    ![Příkaz Jednoduchý projekt](../extensibility/media/simpleprojcommand.png "SimpleProjCommand")
+    ![Jednoduchý projekt – příkaz](../extensibility/media/simpleprojcommand.png "SimpleProjCommand")
 
-   Blahopřejeme! Jste implementovali systému základního spravovaného projektu.
+   Blahopřejeme! Implementovali jste základní spravovaný projektový systém.

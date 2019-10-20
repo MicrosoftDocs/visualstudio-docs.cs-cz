@@ -1,20 +1,20 @@
 ---
-title: Návrhář postupu provádění – návrháři aktivit kolekcí
+title: Návrhář postupu provádění – návrháři aktivit shromažďování
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 6a07ed95-8319-44a2-8a1d-b4a89f16d0d9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c1bc98e8f40dda13e6b2b90adade479ed4aeba97
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 397ede1d6b77c687f308204593f60b8e947e0cbf
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949924"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650674"
 ---
 # <a name="collection-activity-designers"></a>Návrháři aktivit kolekcí
 
-Kolekce, do které návrháři aktivit umožňují vytvářet a konfigurovat aktivity používat ke správě kolekce v tématech obsažené v této části a uvedené v následující tabulce najdete pokyny, jak používat návrháře pracovního postupu Designeractivity a šablony.
+Návrháři aktivit kolekce se používají k vytváření a konfiguraci aktivit používaných ke správě kolekcí. témata uvedená v této části jsou uvedena v následující tabulce s pokyny, jak používat Designeractivity pracovních postupů a návrháře šablon.

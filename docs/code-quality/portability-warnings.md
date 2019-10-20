@@ -9,17 +9,17 @@ helpviewer_keywords:
 - managed code analysis warnings, portability warnings
 - warnings, portability
 ms.assetid: 902e859a-2153-4970-baaa-8a5b4a11806f
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 072858a9faafe312fd7c8314e7f25cf581c40844
-ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.openlocfilehash: e3e1959066f81663d66e8af2af8039080d8cace6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163075"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649134"
 ---
 # <a name="portability-warnings"></a>Upozornění přenositelnosti
 Upozornění na přenositelnost podporují přenositelnost napříč různými operačními systémy.
@@ -28,6 +28,6 @@ Upozornění na přenositelnost podporují přenositelnost napříč různými o
 
 |Pravidlo|Popis|
 |----------|-----------------|
-|[CA1900: Pole hodnot typu by měla být Portable @ no__t-0|Toto pravidlo kontroluje, zda struktury, které jsou deklarovány pomocí explicitního atributu layout, budou správně zarovnány v případě, že jsou zařazeny do nespravovaného kódu v 64 operačních systémech.|
-|[CA1901: Deklarace P/Invoke by měly být přenosné @ no__t-0|Toto pravidlo vyhodnocuje velikost každého parametru a návratovou hodnotu volání nespravovaného kódu a ověřuje, zda je jejich velikost správná, pokud je zařazena do nespravovaného kódu na 32 a 64 bitových operačních systémů.|
-|[CA1903: Použít pouze rozhraní API z cílového rozhraní .NET no__t-0|Člen nebo typ používá člen nebo typ, který byl uveden v aktualizaci Service Pack, která nebyla zahrnuta stejně jako cílové rozhraní projektu.|
+|[CA1900: Pole hodnot by měla být přenosná](../code-quality/ca1900.md)|Toto pravidlo kontroluje, zda struktury, které jsou deklarovány pomocí explicitního atributu layout, budou správně zarovnány v případě, že jsou zařazeny do nespravovaného kódu v 64 operačních systémech.|
+|[CA1901: Deklarace volání nespravovaného kódu by měly být přenosné](../code-quality/ca1901.md)|Toto pravidlo vyhodnocuje velikost každého parametru a návratovou hodnotu volání nespravovaného kódu a ověřuje, zda je jejich velikost správná, pokud je zařazena do nespravovaného kódu na 32 a 64 bitových operačních systémů.|
+|[CA1903: Použijte pouze API z cílového rozhraní .NET Framework](../code-quality/ca1903.md)|Člen nebo typ používá člen nebo typ, který byl uveden v aktualizaci Service Pack, která nebyla zahrnuta stejně jako cílové rozhraní projektu.|

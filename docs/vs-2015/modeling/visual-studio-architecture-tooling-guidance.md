@@ -1,26 +1,26 @@
 ---
-title: Pokyny k nástrojům architektury sady Visual Studio | Dokumentace Microsoftu
+title: Pokyny k nástrojům architektury sady Visual Studio | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: fce6b398-935e-4241-bdf4-875d09ff57c7
 caps.latest.revision: 12
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d23afb98b1818f4f7320041f202857e61873975a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b7c34e9cae335af12f59e6c25d5fb3c24e5c1749
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68200562"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659347"
 ---
 # <a name="visual-studio-architecture-tooling-guidance"></a>Pokyny k nástrojům architektury Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato nástrojů doprovodné materiály k architektuře je ke stažení balíčku, který obsahuje praktické rady týkající se používání nástrojů pro modelování v sadě Visual Studio 2010. Uvede široký přehled o tom, jak používat všechny nástroje modelování integrovaným způsobem a popisuje nejběžnější scénáře, ve kterých se tyto nástroje používají.  
-  
- Obsah byl vytvořen [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ALM Rangers, speciální skupinu, která obsahuje členy z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] produktový tým, Microsoft Services, Microsoft nejvíce Vážíme si toho odborníky (MVP) a [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vede komunity.  
-  
- [Kliknutím sem stáhnete nástrojů ohledně architektury. ](http://go.microsoft.com/fwlink/?LinkID=191984).
+Tento návod k nástrojům architektury je balíček ke stažení praktických pokynů k používání nástrojů pro modelování v aplikaci Visual Studio 2010. Prezentuje základní pohled na použití všech nástrojů modelování integrovaným způsobem a popisuje nejběžnější scénáře, ve kterých se nástroje používají.
+
+ Obsah byl vytvořen [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ALM, kde je speciální skupina, která má členy od [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] produktového týmu, služeb Microsoftu, Microsoft nejvíc spolupracovníků (MVP) a [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] komunitních zájemců.
+
+ Pokud [si chcete stáhnout pokyny k nástrojům architektury, klikněte sem.](http://go.microsoft.com/fwlink/?LinkID=191984)

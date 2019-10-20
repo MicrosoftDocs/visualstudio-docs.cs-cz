@@ -1,23 +1,23 @@
 ---
 title: Vývoj řešení pro data
-description: Další informace o různých nástrojů pro vývoj řešení pro data v sadě Visual Studio, včetně nástrojů pro .NET, SQL Server Data Tools, Azure Data Lake, Azure HDInsight a Azure Stream Analytics.
+description: Přečtěte si o různých nástrojích pro vývoj řešení pro data v aplikaci Visual Studio, včetně nástrojů .NET, SQL Serverch nástrojů pro data, Azure Data Lake, Azure HDInsight a Azure streaming Analytics.
 layout: LandingPage
 ms.date: 01/01/2018
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 ms.topic: landing-page
 ms.workload:
 - data-storage
-ms.openlocfilehash: 768d3d1f130c3ef7b81da9706559e9d6b5f159ee
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: 38b0d25539b4fe02d81463e9bc4e481c3b45010e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66715039"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648328"
 ---
-# <a name="use-data-tools-in-visual-studio-to-develop-data-solutions"></a>Pomocí nástrojů data v sadě Visual Studio a vyvíjet řešení pro data
+# <a name="use-data-tools-in-visual-studio-to-develop-data-solutions"></a>Použití datových nástrojů v aplikaci Visual Studio k vývoji datových řešení
 
-Zjistěte, jak pomocí nástrojů data v sadě Visual Studio můžete vyvíjet a testovat datová řešení pomocí systému SQL Server, Azure Data Lake nebo Hadoop.
+Naučte se používat datové nástroje v aplikaci Visual Studio k vývoji a testování datových řešení pomocí SQL Server, Azure Data Lake nebo Hadoop.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -33,7 +33,7 @@ Zjistěte, jak pomocí nástrojů data v sadě Visual Studio můžete vyvíjet a
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Další informace o sadě Visual Studio a .NET&#39;s nástroje a rozhraní API pro podporu vývoji datových aplikací</h3>
+                        <h3>Další informace o nástrojích Visual&#39;Studio a .NET s a podpoře rozhraní API pro vývoj datových aplikací</h3>
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@ Zjistěte, jak pomocí nástrojů data v sadě Visual Studio můžete vyvíjet a
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Další informace o navrhování, nasazování a správu databází pomocí SQL Server Data Tools</h3>
+                        <h3>Přečtěte si o návrhu, nasazení a údržbě databází pomocí nástrojů SQL Server Data Tools</h3>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@ Zjistěte, jak pomocí nástrojů data v sadě Visual Studio můžete vyvíjet a
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Další informace o vývoji aplikací velkých objemů dat pomocí U-SQL a .NET pomocí Azure Data Lake</h3>
+                        <h3>Seznamte se s vývojem aplikací pro velké objemy dat pomocí U-SQL a .NET pomocí Azure Data Lake</h3>
                     </div>
                 </div>
             </div>
@@ -87,7 +87,7 @@ Zjistěte, jak pomocí nástrojů data v sadě Visual Studio můžete vyvíjet a
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Další informace o spouštění dotazů Hive se systémem Hadoop v Azure HDInsight</h3>
+                        <h3>Informace o spouštění dotazů na podregistr pomocí Hadoop ve službě Azure HDInsight</h3>
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@ Zjistěte, jak pomocí nástrojů data v sadě Visual Studio můžete vyvíjet a
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Další informace o vývoji řešení pro velké objemy dat téměř v reálném čase pomocí Azure Stream Analytics</h3>
+                        <h3>Seznamte se s vývojem řešení pro velké objemy dat prakticky v reálném čase pomocí Azure Stream Analytics.</h3>
                     </div>
                 </div>
             </div>

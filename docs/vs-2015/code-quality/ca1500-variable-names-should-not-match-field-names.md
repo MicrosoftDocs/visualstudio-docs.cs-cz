@@ -1,5 +1,5 @@
 ---
-title: 'CA1500: Názvy proměnných by neměly odpovídat názvům polí | Dokumentace Microsoftu'
+title: 'CA1500: názvy proměnných by neměly odpovídat názvům polí | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,42 +12,42 @@ helpviewer_keywords:
 - CA1500
 ms.assetid: fa0e5029-79e9-4a33-8576-787ac3c26c39
 caps.latest.revision: 25
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8dc15c95398ed45954c3830d1c558a6653a4346f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b46594a53e6562c2c6a069a9a25d58b3e32865eb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68191493"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72607943"
 ---
 # <a name="ca1500-variable-names-should-not-match-field-names"></a>CA1500: Názvy proměnných by neměly odpovídat názvům polí
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejnovější dokumentaci k sadě Visual Studio, naleznete v tématu [CA1500: Názvy proměnných by neměly odpovídat názvům polí](https://docs.microsoft.com/visualstudio/code-quality/ca1500-variable-names-should-not-match-field-names).  
-  
-|||  
-|-|-|  
-|TypeName|VariableNamesShouldNotMatchFieldNames|  
-|CheckId|CA1500|  
-|Kategorie|Microsoft.Maintainability|  
-|Narušující změna|Při vyvolání na parametr, který má stejný název jako pole:<br /><br /> – Pevná – Pokud pole a metody, která deklaruje parametr je nemohou vidět mimo sestavení, bez ohledu na to, které provedete změnu.<br />-Zásadní - li změnit název pole a jsou viditelné mimo sestavení.<br />-Zásadní – Pokud změníte název parametru a metodu, která deklaruje ji lze zobrazit mimo sestavení.<br /><br /> Při vyvolání na lokální proměnné, která má stejný název jako pole:<br /><br /> – Pevná – Pokud pole nejsou viditelné mimo sestavení, bez ohledu na to, které provedete změnu.<br />– Pevná – Pokud změníte název místní proměnné a neměňte název pole.<br />-Dopadem na dřívější kód - li změnit název pole a jsou viditelné mimo sestavení.|  
-  
-## <a name="cause"></a>příčina  
- Metoda instance deklaruje parametr nebo místní proměnná, jejíž název odpovídá poli instance deklarovaného typu. K zachycení místní proměnné, které porušují pravidlo, musí být sestaveny testované sestavení s použitím informací o ladění a přidružené programového souboru databáze (PDB) musí být k dispozici.  
-  
-## <a name="rule-description"></a>Popis pravidla  
- Když se název pole instance shoduje, parametr nebo název místní proměnné, je přístup pole instance `this` (`Me` v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) – klíčové slovo Pokud uvnitř těla metody. Při údržbě kódu, je snadné zapomenout tento rozdíl a předpokládá, že parametr/místní proměnná odkazuje na pole instance, což vede k chybám. To platí zejména pro delší těl metod.  
-  
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení  
- Chcete-li opravit porušení tohoto pravidla, přejmenujte parametr nebo proměnná nebo pole.  
-  
-## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění  
- Nepotlačujte upozornění na toto pravidlo.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje dva porušení tohoto pravidla.  
-  
+Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA1500: názvy proměnných by neměly odpovídat názvům polí](https://docs.microsoft.com/visualstudio/code-quality/ca1500-variable-names-should-not-match-field-names).
+
+|||
+|-|-|
+|TypeName|VariableNamesShouldNotMatchFieldNames|
+|CheckId|CA1500|
+|Kategorie|Microsoft. udržovatelnost|
+|Narušující změna|Při vyvolání pro parametr, který má stejný název jako pole:<br /><br /> -Bez přerušení – Pokud se pole i metoda, která deklaruje parametr, nemůže zobrazit mimo sestavení, bez ohledu na změnu, kterou provedete.<br />-Rozdělení – Pokud změníte název pole a lze jej zobrazit mimo sestavení.<br />– Při změně názvu parametru a metody, která ji deklaruje, lze zobrazit mimo sestavení.<br /><br /> Při vyvolání pro místní proměnnou, která má stejný název jako pole:<br /><br /> -Bez přerušení – Pokud se pole nemůže zobrazit mimo sestavení, bez ohledu na změnu, kterou provedete.<br />-Nerušit – Pokud změníte název místní proměnné a nezměníte název tohoto pole.<br />-Rozdělení – Pokud změníte název pole a může se zobrazit mimo sestavení.|
+
+## <a name="cause"></a>příčina
+ Metoda instance deklaruje parametr nebo místní proměnnou, jejíž název odpovídá poli instance deklarující typu. Pro zachycení místních proměnných, které porušují pravidlo, musí být testované sestavení sestaveno pomocí ladicích informací a přidružený soubor databáze programu (PDB) musí být k dispozici.
+
+## <a name="rule-description"></a>Popis pravidla
+ Když název pole instance odpovídá parametru nebo názvu místní proměnné, pole instance je dostupné pomocí klíčového slova `this` (`Me` in [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) v těle metody. Při údržbě kódu je snadné tento rozdíl zapomenout a předpokládat, že parametr nebo místní proměnná odkazují na pole instance, které vede k chybám. To je užitečné hlavně v případě dlouhých těla metod.
+
+## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+ Chcete-li opravit porušení tohoto pravidla, přejmenujte buď parametr nebo proměnnou, nebo pole.
+
+## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
+ Nepotlačujte upozornění na toto pravidlo.
+
+## <a name="example"></a>Příklad
+ Následující příklad ukazuje dvě porušení pravidla.
+
  [!code-csharp[FxCop.Maintainability.VarMatchesField#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.VarMatchesField/cs/FxCop.Maintainability.VarMatchesField.cs#1)]
  [!code-vb[FxCop.Maintainability.VarMatchesField#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Maintainability.VarMatchesField/vb/FxCop.Maintainability.VarMatchesField.vb#1)]

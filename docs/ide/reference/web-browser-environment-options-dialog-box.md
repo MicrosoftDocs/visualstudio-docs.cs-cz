@@ -16,24 +16,24 @@ helpviewer_keywords:
 - Options dialog box, Web settings
 - Internet Explorer, setting options
 ms.assetid: 586db4eb-032d-4cb5-93a6-a7c14de1ae49
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad36a2c9c741cffdb1ad3da04f81a21ce68f7ebd
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: ae83add4db8e45fca1b97b9c4148cea5bcba0947
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605627"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72621916"
 ---
-# <a name="options-dialog-box-environment--web-browser"></a>Dialogové okno Možnosti: Webový \> prohlížeč prostředí
+# <a name="options-dialog-box-environment--web-browser"></a>Dialogové okno Možnosti: prostředí \> webový prohlížeč
 
 Nastaví možnosti pro interní webový prohlížeč i Internet Explorer. Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na tlačítko **Možnosti** v nabídce **nástroje** , rozbalte složku **prostředí** a vyberte možnost **webový prohlížeč**.
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [Resetovat nastavení](../environment-settings.md#reset-settings).
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace najdete v tématu [resetování nastavení](../environment-settings.md#reset-settings).
 
 > [!IMPORTANT]
 > Otevřením určitých souborů nebo komponent z webu můžete v počítači spustit kód.
@@ -52,7 +52,7 @@ Nastaví Editor použitý k otevření webové stránky při výběru možnosti 
 
 - **Editor zdrojového kódu** Tuto možnost vyberte, pokud chcete zobrazit zdroj v [editoru](../../ide/writing-code-in-the-code-and-text-editor.md).
 
-- **Editor HTML** Tuto možnost vyberte, pokud chcete zobrazit zdroj v [Návrháři HTML](https://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477). Tento výběr slouží k úpravě webové stránky v jednom ze dvou zobrazení: Zobrazení Návrh nebo standardní textové zobrazení zdroje.
+- **Editor HTML** Tuto možnost vyberte, pokud chcete zobrazit zdroj v [Návrháři HTML](https://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477). Pomocí tohoto výběru můžete upravit webovou stránku v jednom ze dvou zobrazení: zobrazení Návrh nebo standardní textové zobrazení zdroje.
 
 - **Externí editor** Tuto možnost vyberte, pokud chcete zobrazit zdroj v jiném editoru. Zadejte cestu libovolného editoru, který zvolíte, například Notepad. exe.
 
@@ -66,4 +66,4 @@ Kliknutím můžete změnit možnosti pro Internet Explorer v dialogovém okně 
 ## <a name="see-also"></a>Viz také:
 
 - [Obecné, Prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
-- [HTML Designer](https://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)
+- [Návrhář HTML](https://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)

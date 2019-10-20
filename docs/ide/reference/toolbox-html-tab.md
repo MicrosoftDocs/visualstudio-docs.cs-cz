@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Toolbox, HTML tab
 - HTML Designer, setting options
 - HTML tab in Toolbox
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 72492b984e7f47b87ea326fe8ebcce414ee978ec
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: ed46bdb9b5562b38f37129d69e7f075e425588b0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926048"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72644775"
 ---
 # <a name="toolbox-html-tab"></a>Panel nástrojů, karta HTML
 
@@ -30,17 +30,17 @@ Chcete-li vytvořit instanci nástroje na kartě **HTML** , buď poklikejte na n
 
 Ve výchozím nastavení jsou na kartě HTML k dispozici následující nástroje.
 
-**Pointer**
+**Ukazatele**
 
 ![ASP.NET Mobile Designer HTMLpage ukazatel](../../ide/reference/media/vxpointer.gif)
 
-Tento nástroj je vybraný ve výchozím nastavení, když se otevře kterákoli karta panelu nástrojů. Nedá se odstranit. Ukazatel umožňuje přetahovat objekty na zobrazení Návrh plochu, měnit jejich velikost a přemístit je na stránce nebo formuláři. Další informace najdete v tématu [nástrojů](../../ide/reference/toolbox.md).
+Tento nástroj je vybraný ve výchozím nastavení, když se otevře kterákoli karta panelu nástrojů. Nedá se odstranit. Ukazatel umožňuje přetahovat objekty na zobrazení Návrh plochu, měnit jejich velikost a přemístit je na stránce nebo formuláři. Další informace najdete v tématu [Sada nástrojů](../../ide/reference/toolbox.md).
 
 **Vstup (tlačítko)**
 
 ![Tlačítko webové stránky HTML](../../ide/reference/media/vxbutton.gif)
 
-`input` Vloží`type="button"`prvek. Chcete-li změnit zobrazený text, upravte `name` vlastnost. Ve výchozím nastavení `id="Button1"` je vloženo pro první tlačítko, `id="Button2"` za sekundu a tak dále.
+Vloží `input` prvek `type="button"`. Chcete-li změnit zobrazený text, upravte vlastnost `name`. Ve výchozím nastavení je `id="Button1"` vložen pro první tlačítko, `id="Button2"` pro druhý a tak dále.
 
 Při přetažení **vstupu (Button)** na zobrazení Návrh plochu se do dokumentu vloží kód HTML jako následující:
 
@@ -52,7 +52,7 @@ Při přetažení **vstupu (Button)** na zobrazení Návrh plochu se do dokument
 
 ![Snímek obrazovky HTMLpageResetButton](../../ide/reference/media/vxreset.gif)
 
-`input` Vloží`type="reset"`prvek. Chcete-li změnit zobrazený text, upravte `name` vlastnost. Ve výchozím nastavení `id="Reset1"` je vložena pro tlačítko první Reset, `id="Reset2"` za sekundu a tak dále.
+Vloží `input` prvek `type="reset"`. Chcete-li změnit zobrazený text, upravte vlastnost `name`. Ve výchozím nastavení je `id="Reset1"` vložen pro tlačítko první Reset, `id="Reset2"` pro druhý atd.
 
 Při přetažení **vstupu (reset)** na zobrazení Návrh plochu se do dokumentu vloží kód HTML podobný následujícímu:
 
@@ -64,7 +64,7 @@ Při přetažení **vstupu (reset)** na zobrazení Návrh plochu se do dokumentu
 
 ![Snímek obrazovky HTMLpageToolbarSubmitButton](../../ide/reference/media/vxsubmit.gif)
 
-`input` Vloží`type="submit"`prvek. Chcete-li změnit zobrazený text, upravte `name` vlastnost. Ve výchozím nastavení `id="Submit1"` je vloženo pro první tlačítko Odeslat, `id="Submit2"` za sekundu a tak dále.
+Vloží `input` prvek `type="submit"`. Chcete-li změnit zobrazený text, upravte vlastnost `name`. Ve výchozím nastavení je `id="Submit1"` vložen pro první tlačítko Odeslat, `id="Submit2"` pro druhý atd.
 
 Při přetažení **vstupu (Odeslat)** na zobrazení Návrh plochu se do dokumentu vloží kód HTML podobný následujícímu:
 
@@ -76,7 +76,7 @@ Při přetažení **vstupu (Odeslat)** na zobrazení Návrh plochu se do dokumen
 
 ![Snímek obrazovky HTMLpageToolbarTextField](../../ide/reference/media/vxtextfield.gif)
 
-`input` Vloží`type="text"` prvek do dokumentu. Chcete-li změnit výchozí zobrazený text, upravte `value` atribut. Ve výchozím nastavení `id="Text1"` je do prvního textového `id="Text2"` pole vloženo pro druhý a tak dále.
+Vloží `input` prvek `type="text"` v dokumentu. Chcete-li změnit výchozí zobrazený text, upravte atribut `value`. Ve výchozím nastavení se `id="Text1"` vloží do prvního textového pole, `id="Text2"` pro druhý a tak dále.
 
 Když přetáhnete **vstup (text)** na zobrazení Návrh plochu, do dokumentu se vloží kód HTML podobný následujícímu:
 
@@ -91,7 +91,7 @@ Když přetáhnete **vstup (text)** na zobrazení Návrh plochu, do dokumentu se
 
 ![Pole souboru stránky HTML](../../ide/reference/media/vxfilefield.gif)
 
-`input` Vloží`type="file"` prvek do dokumentu. Ve výchozím nastavení `id="File1"` je vloženo pro první pole souboru, `id="File2"` pro druhý atd.
+Vloží `input` prvek `type="file"` v dokumentu. Ve výchozím nastavení se `id="File1"` vloží do pole první soubor, `id="File2"` pro druhý atd.
 
 Když přetáhnete **vstup (soubor)** na zobrazení Návrh plochu, do dokumentu se vloží kód HTML podobný následujícímu:
 
@@ -106,7 +106,7 @@ Když přetáhnete **vstup (soubor)** na zobrazení Návrh plochu, do dokumentu 
 
 ![Pole hesla sady Visual Studio](../../ide/reference/media/vxpassword.gif)
 
-`input` Vloží`type="password"`prvek. Ve výchozím nastavení `id="Password1"` je vloženo pro pole první heslo, `id="Password2"` pro druhý atd.
+Vloží `input` prvek `type="password"`. Ve výchozím nastavení se `id="Password1"` vloží do pole první heslo, `id="Password2"` pro druhý atd.
 
 Při přetažení **vstupu (hesla)** na zobrazení Návrh plochu se do dokumentu vloží kód HTML jako následující:
 
@@ -121,7 +121,7 @@ Při přetažení **vstupu (hesla)** na zobrazení Návrh plochu se do dokumentu
 
 ![Zaškrtávací možnost panelu nástrojů HTML webové stránky](../../ide/reference/media/vxcheckbox.gif)
 
-`input` Vloží`type="checkbox"`prvek. Chcete-li změnit zobrazený text, upravte `name` vlastnost. Ve výchozím nastavení `id="Checkbox1"` je vložena pro první zaškrtávací `id="Checkbox2"` políčko pro druhý a tak dále.
+Vloží `input` prvek `type="checkbox"`. Chcete-li změnit zobrazený text, upravte vlastnost `name`. Ve výchozím nastavení je `id="Checkbox1"` vložen pro první zaškrtávací políčko, `id="Checkbox2"` pro druhý atd.
 
 Při přetažení **vstupu (zaškrtávací políčko)** na zobrazení Návrh plochu se do dokumentu vloží kód HTML jako následující:
 
@@ -133,7 +133,7 @@ Při přetažení **vstupu (zaškrtávací políčko)** na zobrazení Návrh plo
 
 ![Snímek obrazovky VisualStudioHTMLpageRadioButton](../../ide/reference/media/vxradio.gif)
 
-`input` Vloží`type="radio"`prvek. Chcete-li změnit zobrazený text, upravte `name` vlastnost. Ve výchozím nastavení `id="Radio1"` je vložen pro první přepínač, `id="Radio2"` za sekundu a tak dále.
+Vloží `input` prvek `type="radio"`. Chcete-li změnit zobrazený text, upravte vlastnost `name`. Ve výchozím nastavení je `id="Radio1"` vložen pro první přepínač, `id="Radio2"` za sekundu a tak dále.
 
 Při přetažení **vstupu (Radio)** na zobrazení Návrh plochu se do dokumentu vloží kód HTML podobný následujícímu:
 
@@ -145,7 +145,7 @@ Při přetažení **vstupu (Radio)** na zobrazení Návrh plochu se do dokumentu
 
 ![Skrytá položka stránky HTML](../../ide/reference/media/vxhidden.gif)
 
-`input` Vloží`type="hidden"`prvek. Ve výchozím nastavení `id="Hidden1"` je vloženo pro první skryté `id="Hidden2"` pole za sekundu a tak dále.
+Vloží `input` prvek `type="hidden"`. Ve výchozím nastavení se `id="Hidden1"` vloží do prvního skrytého pole, `id="Hidden2"` pro druhý atd.
 
 Když přetáhnete **vstup (skrytý)** na zobrazení Návrh plochu, do dokumentu se vloží kód HTML podobný následujícímu:
 
@@ -157,7 +157,7 @@ Když přetáhnete **vstup (skrytý)** na zobrazení Návrh plochu, do dokumentu
 
 ![Oblast textu na panelu nástrojů HTMLpage](../../ide/reference/media/vxtextarea.gif)
 
-`textarea` Vloží element. Můžete změnit velikost textové oblasti nebo použít posuvníky k zobrazení textu, který je delší než oblast zobrazení. Chcete-li změnit výchozí zobrazený text, upravte `value` atribut. Ve výchozím nastavení `id="textarea1"` je vložena první textová `id=" textarea 2"` oblast pro druhý atd.
+Vloží prvek `textarea`. Můžete změnit velikost textové oblasti nebo použít posuvníky k zobrazení textu, který je delší než oblast zobrazení. Chcete-li změnit výchozí zobrazený text, upravte atribut `value`. Ve výchozím nastavení je `id="textarea1"` vložena první textová oblast, `id=" textarea 2"` pro druhý atd.
 
 Při přetažení **komponenty TextArea** na zobrazení Návrh plochu se do dokumentu vloží kód HTML jako následující:
 
@@ -172,7 +172,7 @@ Při přetažení **komponenty TextArea** na zobrazení Návrh plochu se do doku
 
 ![Snímek obrazovky HTMLpageToolbarTable](../../ide/reference/media/vxtable.gif)
 
-`table` Vloží element.
+Vloží prvek `table`.
 
 Když přetáhnete **tabulku** na zobrazení Návrh plochu, do dokumentu se vloží kód HTML podobný následujícímu:
 
@@ -184,7 +184,7 @@ Když přetáhnete **tabulku** na zobrazení Návrh plochu, do dokumentu se vlo�
 
 ![Položka obrázku stránky HTML](../../ide/reference/media/vximage.gif)
 
-`img` Vloží element. Upravte tento prvek `alt` a zadejte jeho `src` text.
+Vloží prvek `img`. Upravte tento prvek a určete jeho `src` a jeho `alt` text.
 
 Při přetažení **obrázku** na zobrazení Návrh plochu se do dokumentu vloží kód HTML podobný následujícímu:
 
@@ -196,7 +196,7 @@ Při přetažení **obrázku** na zobrazení Návrh plochu se do dokumentu vlož
 
 ![Panel nástrojů stránky HTML – rozevírací seznam](../../ide/reference/media/vxdropdown.gif)
 
-Vloží element DropDown `select` ( `size` bez atributu). Ve výchozím nastavení `id="select1"` je vložen pro první seznam, `id="select2"` pro druhý atd.
+Vloží `select` prvek rozevíracího seznamu (bez atributu `size`). Ve výchozím nastavení je `id="select1"` vložen pro první seznam, `id="select2"` pro druhý a tak dále.
 
 Když přetáhnete **možnost vybrat** na zobrazení Návrh plochu, do dokumentu se vloží kód HTML podobný následujícímu:
 
@@ -204,13 +204,13 @@ Když přetáhnete **možnost vybrat** na zobrazení Návrh plochu, do dokumentu
 <select id="select1" name="select1"><option selected></option></select>
 ```
 
-Víceřádkový `select` element lze vytvořit tak, že zvýšíte hodnotu vlastnosti Size.
+Můžete vytvořit víceřádkový `select` element zvětšením hodnoty vlastnosti Size.
 
 **Horizontální pravidlo**
 
 ![Položka vodorovného pravidla stránky HTML](../../ide/reference/media/vxhorizontal.gif)
 
-`hr` Vloží element. Chcete-li zvětšit tloušťku čáry, upravte `size` atribut.
+Vloží prvek `hr`. Chcete-li zvětšit tloušťku čáry, upravte atribut `size`.
 
 Když na zobrazení Návrh plochu přetáhnete **horizontální pravidlo** , do dokumentu se vloží kód HTML podobný následujícímu:
 
@@ -222,7 +222,7 @@ Když na zobrazení Návrh plochu přetáhnete **horizontální pravidlo** , do 
 
 ![Popisek stránky HTML](../../ide/reference/media/vxlabel.gif)
 
-Vloží prvek, který `ms_positioning="FlowLayout"` obsahuje atribut. `div` S výjimkou šířky a výšky je tato položka shodná s panelem rozložení toku. Chcete-li formátovat text obsažený v `div` elementu, `class="stylename"` přidejte atribut do počáteční značky.
+Vloží `div` element, který obsahuje atribut `ms_positioning="FlowLayout"`. S výjimkou šířky a výšky je tato položka shodná s panelem rozložení toku. Chcete-li formátovat text obsažený v prvku `div`, přidejte do počáteční značky atribut `class="stylename"`.
 
 Když přetáhnete **div** na zobrazení Návrh plochu, do dokumentu se vloží kód HTML jako následující:
 

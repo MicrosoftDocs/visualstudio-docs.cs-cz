@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Window.NextDocumentWindowNav
 - IDE navigator
 ms.assetid: 6c36b6eb-c93f-496b-af08-4199f7afd8bd
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8764ccc5a662a40559b6b7ab4f19cdff0e2d555e
-ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+ms.openlocfilehash: b3aa39c1c9748eb3a9270a66a3a6bbcb43fdcea2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381332"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645834"
 ---
 # <a name="how-to-move-around-in-the-visual-studio-ide"></a>Postupy: pohyb v integrovaném vývojovém prostředí sady Visual Studio
 
@@ -56,7 +56,7 @@ Můžete také přepnout do konkrétního souboru otevřeného v editoru, bez oh
 
 ![Visual Studio – navigátor IDE](../ide/media/vs2015_ide_navigator.png)
 
-@no__t – 0 umožňuje přesunout se k souboru, ke kterému jste se přistupovali a `Window.NextDocumentWindowNav` umožňuje přesun v obráceném pořadí. **Nastavení obecného vývoje** přiřadí **klávesu SHIFT**+**ALT**+**f7** až `Window.PreviousDocumentWindowNav` a **ALT**+**F7** až 0.
+`Window.PreviousDocumentWindowNav` vám umožňuje přesunout se k souboru, který se naposledy otevřel, a `Window.NextDocumentWindowNav` vám umožní přesunout se v obráceném pořadí. **Nastavení obecného vývoje** přiřadí **klávesu SHIFT**+**ALT**+**f7** až `Window.PreviousDocumentWindowNav` a **ALT**+**F7** až 0.
 
 > [!NOTE]
 > Pokud kombinace nastavení, kterou používáte, ještě nemá přiřazenou kombinaci klávesových zkratek, můžete přiřadit vlastní příkaz pomocí stránky **klávesnice** dialogového okna **Možnosti** . Další informace najdete v tématu [identifikace a přizpůsobení klávesových zkratek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
@@ -74,13 +74,13 @@ Můžete také přepnout do konkrétního souboru otevřeného v editoru, bez oh
 
     \- nebo-
 
-- Na panelu nabídek vyberte možnost **okno**@no__t **-1 okna**.
+- Na panelu nabídek vyberte **okno**  > **Windows**.
 
 - V seznamu vyberte soubor, který chcete zobrazit, a pak zvolte **aktivovat**.
 
 ## <a name="navigate-among-tool-windows-in-the-ide"></a>Navigace mezi okny nástrojů v integrovaném vývojovém prostředí
 
-**Rozhraní IDE Navigator** také umožňuje cyklicky procházet okna nástrojů, která jste otevřeli v integrovaném vývojovém prostředí (IDE). Můžete použít kterýkoli ze dvou příkazů pro přístup k **navigátoru IDE** pro přepínání mezi okny nástrojů v závislosti na pořadí, ve kterém chcete cyklicky přepínat. @no__t – 0 umožňuje přesunout se k souboru, ke kterému jste se přistupovali a `Window.NextToolWindowNav` umožňuje přesun v obráceném pořadí. **Nastavení obecného vývoje** přiřadí **klávesu SHIFT**+**ALT**+**f7** až `Window.PreviousDocumentWindowNav` a **ALT**+**F7** až 0.
+**Rozhraní IDE Navigator** také umožňuje cyklicky procházet okna nástrojů, která jste otevřeli v integrovaném vývojovém prostředí (IDE). Můžete použít kterýkoli ze dvou příkazů pro přístup k **navigátoru IDE** pro přepínání mezi okny nástrojů v závislosti na pořadí, ve kterém chcete cyklicky přepínat. `Window.PreviousToolWindowNav` vám umožňuje přesunout se k souboru, který se naposledy otevřel, a `Window.NextToolWindowNav` vám umožní přesunout se v obráceném pořadí. **Nastavení obecného vývoje** přiřadí **klávesu SHIFT**+**ALT**+**f7** až `Window.PreviousDocumentWindowNav` a **ALT**+**F7** až 0.
 
 > [!NOTE]
 > Pokud kombinace nastavení, kterou používáte, ještě nemá přiřazenou kombinaci klávesových zkratek, můžete přiřadit vlastní příkaz pomocí stránky **klávesnice** dialogového okna **Možnosti** . Další informace najdete v tématu [identifikace a přizpůsobení klávesových zkratek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).

@@ -1,49 +1,49 @@
 ---
-title: Návrhář postupu provádění – Návrhář aktivity Parallel
+title: Návrhář aktivity Návrhář postupu provádění – paralelní
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.Parallel.UI
 ms.assetid: 0306dc3b-075a-4091-ac3a-96486fbabed5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 79e1e7e48f7ed7e8cd4084805dfae2018a886a82
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d0c1ea74c1cf64252bdae201e8cc3dd529adb7cb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63002774"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650106"
 ---
 # <a name="parallel-activity-designer"></a>Návrhář aktivity Parallel
 
-<xref:System.Activities.Statements.Parallel> Aktivity souběžně spustí sadu podřízených aktivit.
+Aktivita <xref:System.Activities.Statements.Parallel> spouští souběžnou kolekci podřízených aktivit.
 
 ## <a name="the-parallel-activity"></a>Paralelní aktivita
 
-<xref:System.Activities.Statements.Parallel> Aktivity ukládá v jeho podřízených aktivit <xref:System.Activities.Statements.Parallel.Branches%2A> kolekce. Použití <xref:System.Activities.Statements.Parallel> aktivity místo <xref:System.Activities.Statements.Sequence> aktivitu, pokud některé z podřízených aktivit může přejít nečinnosti.
+Aktivita <xref:System.Activities.Statements.Parallel> ukládá své podřízené aktivity do kolekce <xref:System.Activities.Statements.Parallel.Branches%2A>. Pokud některé z podřízených aktivit můžou přijít na nečinné, použijte aktivitu <xref:System.Activities.Statements.Parallel> místo <xref:System.Activities.Statements.Sequence> aktivity.
 
-<xref:System.Activities.Statements.Parallel> Má aktivita <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> vlastnost, která obsahuje uživatelem zadaný výraz jazyka Visual Basic. <xref:System.Activities.Statements.Parallel> Aktivita vyhodnotí tuto vlastnost po dokončení každé větve. Pokud je vyhodnocen jako **True**, pak bude <xref:System.Activities.Statements.Parallel> dokončení aktivity bez provedení další větve. Pokud <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> nevyhodnocuje na **True**, pak bude <xref:System.Activities.Statements.Parallel> aktivity se dokončí po dokončení všech jeho podřízených aktivit.
+Aktivita <xref:System.Activities.Statements.Parallel> má vlastnost <xref:System.Activities.Statements.Parallel.CompletionCondition%2A>, která obsahuje Visual Basicho výrazu zadaného uživatelem. Aktivita <xref:System.Activities.Statements.Parallel> vyhodnotí tuto vlastnost po dokončení každé větve. Pokud se vyhodnotí jako **true**, <xref:System.Activities.Statements.Parallel> aktivita se dokončí bez provedení ostatních větví. Pokud se <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> nevyhodnotí jako **true**, pak se <xref:System.Activities.Statements.Parallel> aktivita dokončí po dokončení všech jejích podřízených aktivit.
 
-### <a name="using-the-parallel-activity-designer"></a>Pomocí návrháře paralelní aktivity
+### <a name="using-the-parallel-activity-designer"></a>Použití návrháře paralelní aktivity
 
-Přístup **paralelní** návrháře aktivit v **tok řízení** kategorii **nástrojů**.
+Přístup k Návrháři **paralelní** aktivity v kategorii **tok řízení** v **sadě nástrojů**.
 
-**Paralelní** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřadit na povrch návrháře postupu provádění bez ohledu na to návrháři aktivit jsou obvykle umístěny, například v rámci služby **Pořadí** návrháře aktivit. Po jeho umístěním do návrháře postupu provádění, vytvoří <xref:System.Activities.Statements.Parallel> aktivitu, která ve výchozím nastavení obsahuje <xref:System.Activities.Activity.DisplayName%2A> z **paralelní**
+Návrhář **paralelní** aktivity lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu všude, kde jsou obvykle umístěna návrháři aktivit, například uvnitř návrháře aktivity **sekvence** . Po přetažení do Návrhář postupu provádění vytvoří aktivitu <xref:System.Activities.Statements.Parallel>, která ve výchozím nastavení obsahuje <xref:System.Activities.Activity.DisplayName%2A> **Parallel** .
 
-Přidat aktivitu <xref:System.Activities.Statements.Parallel.Branches%2A> kolekce paralelní aktivity, přetáhněte některé další Návrhář aktivity z **nástrojů** a umístěte ho na trojúhelník uvnitř **paralelní** návrháře aktivit. Trojúhelníků paždíku aktivity obsažené v větve. Opakováním tohoto postupu lze přidat další aktivity. Aktivity mohou přeuspořádány přetahováním je v rámci **paralelní** návrháře aktivit.
+Chcete-li přidat aktivitu do kolekce <xref:System.Activities.Statements.Parallel.Branches%2A> paralelní aktivity, přetáhněte z **panelu nástrojů** jiný Návrhář aktivity a umístěte jej na trojúhelník uvnitř návrháře **paralelních** aktivit. Trojúhelníky procházely činnostmi obsaženými v větvích. Další aktivity lze přidat opakováním tohoto postupu. Pořadí aktivit lze změnit přetažením v Návrháři **paralelní** aktivity.
 
-### <a name="parallel-activity-properties-in-the-workflow-designer"></a>Vlastnosti paralelních aktivit v Návrháři postupu provádění
+### <a name="parallel-activity-properties-in-the-workflow-designer"></a>Vlastnosti paralelní aktivity v Návrhář postupu provádění
 
-V následující tabulce jsou uvedeny vlastnosti paralelních aktivit a popisuje, jak se používají v návrháři.
+V následující tabulce jsou uvedeny vlastnosti paralelní aktivity a popisuje, jak se používají v návrháři.
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje popisný Zobrazovaný název návrháře aktivit v záhlaví. Výchozí hodnota je **paralelní**. Hodnota může volitelně můžete upravit v **vlastnosti** mřížky nebo přímo v hlavičce návrháře aktivit.|
-|<xref:System.Activities.Statements.Parallel.Branches%2A>|Pravda|Obsahuje kolekci podřízené aktivity, který se spustí.|
-|<xref:System.Activities.Statements.Parallel.CompletionCondition%2A>|False|Vyhodnocení po dokončení větev. Pokud je vyhodnocen jako **True**, pak naplánované čekající větví, se zruší. Pokud tato vlastnost není nastavená nebo se vyhodnotí jako **False**, dokončení aktivity po dokončení všech jeho podřízených aktivit. Výchozí hodnota je **null**.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje popisný zobrazovaný název návrháře aktivit v hlavičce. Výchozí hodnota je **Parallel**. Hodnota může být volitelně upravena v mřížce **vlastnosti** nebo přímo v hlavičce návrháře aktivit.|
+|<xref:System.Activities.Statements.Parallel.Branches%2A>|Podmínka|Obsahuje kolekci podřízených aktivit, které mají být provedeny.|
+|<xref:System.Activities.Statements.Parallel.CompletionCondition%2A>|False|Vyhodnoceno po dokončení větve. Pokud se vyhodnotí jako **true**, naplánovaných nevyřízených větví se zruší. Pokud tato vlastnost není nastavená nebo se vyhodnotí jako **false**, aktivita se dokončí po dokončení všech jejích podřízených aktivit. Výchozí hodnota je **null**.|
 
 ## <a name="see-also"></a>Viz také:
 

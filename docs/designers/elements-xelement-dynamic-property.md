@@ -6,21 +6,21 @@ apiname:
 - XElement.Elements
 apitype: Assembly
 ms.assetid: 3d5737f2-d2ed-410a-821c-349dbb2b574f
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ff2071ba71d60db87332b0e23948d63ac1b2289
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d92e9ebd1e5be9f3535dcac136bb46ba33975f0c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62845558"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72637311"
 ---
 # <a name="elements-xelement-dynamic-property"></a>Elementy (dynamická vlastnost XElement)
 
-Získá se používá k načtení podřízené prvky aktuálního elementu, které odpovídají zadaným rozbalený název indexeru.
+Získá indexer použitý k načtení podřízených prvků aktuálního prvku, které odpovídají zadanému rozbalenému názvu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,18 +30,18 @@ elem.Elements[{namespaceName}localName]
 
 ## <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
 
-Indexer typu `IEnumerable<XElement> Item(String expandedName)`. Indexer převezme rozbalený název požadované podřízené prvky a vrátí odpovídající podřízené elementy v <xref:System.Collections.IEnumerable> `<` <xref:System.Xml.Linq.XElement> `>` kolekce.
+Indexer typu `IEnumerable<XElement> Item(String expandedName)`. Tento indexer Získá rozšířený název požadovaných podřízených prvků a vrátí odpovídající podřízené prvky ve <xref:System.Collections.IEnumerable> `<` <xref:System.Xml.Linq.XElement> `>` Collection.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato vlastnost je ekvivalentní <xref:System.Xml.Linq.XContainer.Elements(System.Xml.Linq.XName)?displayProperty=fullName> metodu <xref:System.Xml.Linq.XContainer> třídy.
+Tato vlastnost je ekvivalentní metodě <xref:System.Xml.Linq.XContainer.Elements(System.Xml.Linq.XName)?displayProperty=fullName> třídy <xref:System.Xml.Linq.XContainer>.
 
-Prvky v kolekci vrácené jsou v pořadí dokumentů XML zdroje.
+Prvky ve vrácené kolekci jsou v pořadí zdrojového dokumentu XML.
 
-Tuto vlastnost používá odloženého provedení.
+Tato vlastnost používá odložené provádění.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Dynamické vlastnosti třídy XElement](../designers/xelement-class-dynamic-properties.md)
+- [Dynamické vlastnosti třídy XElement](../designers/attribute-xelement-dynamic-property.md)
 - [Element](../designers/element-xelement-dynamic-property.md)
 - [Potomci](../designers/descendants-xelement-dynamic-property.md)

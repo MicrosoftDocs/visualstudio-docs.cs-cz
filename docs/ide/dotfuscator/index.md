@@ -15,14 +15,14 @@ helpviewer_keywords:
 description: Seznamte se s tím, jak můžete chránit aplikace .NET pomocí bezplatné kopie komunity Dotfuscator, která je součástí sady Visual Studio.
 ms.assetid: d9550502-0a82-49a6-b005-2caa791fbe02
 author: Joe-Sewell-PreEmptive
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 53bd95875cf990afee6d356744961d3637f16842
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 18e2ee678e5cf71693d12d4ddeb6af51f55a870b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253772"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652428"
 ---
 # <a name="dotfuscator-community"></a>Dotfuscator Community
 
@@ -30,7 +30,7 @@ Bezstavová ***ochrana – Dotfuscator*** poskytuje komplexní ochranu aplikací
 Použijte ho k posílení, ochraně a vyřazení aplikací pro stolní počítače, mobilní zařízení, servery a aplikace, které vám pomůžou zabezpečit obchodní tajemství a jiné duševní vlastnictví (IP), omezit pirátství a padělání a chránit před manipulací a neoprávněným laděním.
 Dotfuscator pracuje na kompilovaných sestaveních, aniž by bylo nutné další programování nebo dokonce přístup ke zdrojovému kódu.
 
-![PreEmptive ochranu – řešení Dotfuscator](media/header.svg)
+![Preventivní ochrana – Dotfuscator](media/header.svg)
 
 ## <a name="why-protection-matters"></a>Proč v oblasti ochrany
 
@@ -70,7 +70,7 @@ Informace o vylepšení Dotfuscator naleznete na [stránce upgrady][upgrades].
 
 ::: moniker range="vs-2019"
 
-Pokud chcete začít používat komunitu Dotfuscator ze sady Visual `dotfuscator` Studio, zadejte do **vyhledávacího pole** (CTRL + Q).
+Pokud chcete začít používat komunitu Dotfuscator ze sady Visual Studio, zadejte do **vyhledávacího pole** (CTRL + Q) `dotfuscator`.
 
 * Pokud je komunita Dotfuscator už nainstalovaná, **vyhledávací pole** zobrazí možnost spustit komunitu Dotfuscator v záhlaví *nabídek* . Podrobnosti najdete [na stránce Začínáme v úplné příručce pro uživatele komunity Dotfuscator][get-started].
 * Pokud komunita Dotfuscator ještě není nainstalovaná, **vyhledávací pole** se místo toho zobrazí v záhlaví *jednotlivé komponenty* v části instalace s možností **přerušení ochrany – Dotfuscator** . Podrobnosti najdete na [stránce instalace][install] .
@@ -79,7 +79,7 @@ Pokud chcete začít používat komunitu Dotfuscator ze sady Visual `dotfuscator
 
 ::: moniker range="vs-2017"
 
-Pokud chcete začít používat komunitu Dotfuscator ze sady Visual `dotfuscator` Studio, zadejte do panelu hledání **Rychlé spuštění** (CTRL + Q).
+Pokud chcete začít používat komunitu Dotfuscator ze sady Visual Studio, zadejte `dotfuscator` do panelu hledání **snadného spuštění** (CTRL + Q).
 
 * Pokud je komunita Dotfuscator už nainstalovaná, zobrazí se v nabídce **Snadné spuštění** možnost *nabídky* , která spustí uživatelské rozhraní komunity Dotfuscator. Podrobnosti najdete [na stránce Začínáme v úplné příručce pro uživatele komunity Dotfuscator][get-started].
 * Pokud komunita Dotfuscator ještě není nainstalovaná, zobrazí se v okně **Snadné spuštění** odpovídající možnost *instalace* . Podrobnosti najdete na [stránce instalace][install] .

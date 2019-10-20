@@ -1,5 +1,5 @@
 ---
-title: 'CA2227: Vlastnosti kolekce by měly být jen pro čtení | Dokumentace Microsoftu'
+title: 'CA2227: vlastnosti kolekce by měly být jen pro čtení | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CollectionPropertiesShouldBeReadOnly
 ms.assetid: 26967aaf-6fbe-438a-b4d3-ac579b5dc0f9
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3182a254ed5e22c560523911f87dc852708a9eb1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8aee6f7172414de809d964652411c1f077fe0cdd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201586"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658860"
 ---
 # <a name="ca2227-collection-properties-should-be-read-only"></a>CA2227: Vlastnosti kolekce by měly být pouze pro čtení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,25 +29,25 @@ ms.locfileid: "68201586"
 |-|-|
 |TypeName|CollectionPropertiesShouldBeReadOnly|
 |CheckId|CA2227|
-|Kategorie|Microsoft.Usage|
+|Kategorie|Microsoft. Usage|
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Externě viditelný zapisovatelnou vlastnost je typ, který implementuje <xref:System.Collections.ICollection?displayProperty=fullName>. Pole, indexery (vlastnosti s názvem "Položka") a sady oprávnění se ignorují pravidlem.
+ Externě viditelná vlastnost s možností zápisu je typ, který implementuje <xref:System.Collections.ICollection?displayProperty=fullName>. Pole, indexery (vlastnosti s názvem Item) a sady oprávnění jsou pravidlem ignorovány.
 
 ## <a name="rule-description"></a>Popis pravidla
- Zapisovatelná vlastnost kolekce umožňuje uživateli nahradit kolekci zcela jinou kolekci. Vlastnost jen pro čtení neumožňuje kolekci nahradit, ale stále umožňuje nastavit jednotlivé členy. Pokud nahrazující kolekce je cíl, vzor upřednostňovaný návrh je metoda odebrání všechny elementy z kolekce a způsob, jak znovu naplňte kolekce. Najdete v článku <xref:System.Collections.ArrayList.Clear%2A> a <xref:System.Collections.ArrayList.AddRange%2A> metody <xref:System.Collections.ArrayList?displayProperty=fullName> třídy příklad tohoto modelu.
+ Vlastnost zapisovatelné kolekce umožňuje uživateli nahradit kolekci zcela jinou kolekcí. Vlastnost jen pro čtení neumožňuje kolekci nahradit, ale stále umožňuje nastavit jednotlivé členy. Pokud nahradíte kolekci cílem, preferovaný vzor návrhu je zahrnout metodu pro odebrání všech prvků z kolekce a metodu pro opětovné naplnění kolekce. Příklad tohoto vzoru naleznete v tématu metody <xref:System.Collections.ArrayList?displayProperty=fullName> třídy <xref:System.Collections.ArrayList.Clear%2A> a <xref:System.Collections.ArrayList.AddRange%2A>.
 
- Binární soubor a serializace XML podporují jen pro čtení vlastnosti, které jsou kolekce. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> Třída má specifické požadavky na typy, které implementují <xref:System.Collections.ICollection> a <xref:System.Collections.IEnumerable?displayProperty=fullName> -li být serializovatelný.
+ Binární i XML serializace podporují vlastnosti jen pro čtení, které jsou kolekcemi. Třída <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> má specifické požadavky pro typy, které implementují <xref:System.Collections.ICollection> a <xref:System.Collections.IEnumerable?displayProperty=fullName>, aby bylo možné serializovat.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, nastavte vlastnost jen pro čtení a pokud to vyžaduje návrh, přidejte metody, zrušte a znovu naplňte kolekce.
+ Chcete-li opravit porušení tohoto pravidla, nastavte vlastnost jen pro čtení a v případě, že je návrh vyžaduje, přidejte metody, které vymaže a znovu naplní kolekci.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ s zapisovatelná vlastnost kolekce a jak kolekce se dá nahradit přímo. Kromě toho upřednostňovaný způsob nahrazení vlastnost kolekce jenom pro čtení pomocí `Clear` a `AddRange` metody se zobrazí.
+ Následující příklad ukazuje typ s zapisovatelnou vlastností Collection a ukazuje, jak lze kolekci nahradit přímo. Kromě toho je zobrazen upřednostňovaný způsob nahrazení vlastnosti kolekce jen pro čtení pomocí `Clear` a `AddRange`ch metod.
 
  [!code-cpp[FxCop.Usage.PropertiesReturningCollections#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Usage.PropertiesReturningCollections/cpp/FxCop.Usage.PropertiesReturningCollections.cpp#1)]
  [!code-csharp[FxCop.Usage.PropertiesReturningCollections#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.PropertiesReturningCollections/cs/FxCop.Usage.PropertiesReturningCollections.cs#1)]

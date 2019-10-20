@@ -1,5 +1,5 @@
 ---
-title: Zobrazení struktury kódu | Dokumentace Microsoftu
+title: Zobrazení struktury kódu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -25,202 +25,201 @@ helpviewer_keywords:
 - object browser
 ms.assetid: e6064f58-5ad9-4f05-8c3f-12e994b6583f
 caps.latest.revision: 32
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1277370ca14044755988affc5ccf2bf1fb851a09
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 44036f519ae4d2b718c6eee40317e15fd4574077
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443212"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663091"
 ---
 # <a name="viewing-the-structure-of-code"></a>Zobrazení struktury kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete zkontrolovat objekty a členy v projektech Visual Studio a objekty a členy v součásti .NET Framework, komponenty modelu COM, dynamické knihovny (DLL) a zadejte knihovny (vyrovnávací paměti TLB).  
-  
- Následující části tohoto dokumentu popisují strukturu windows odlišný kód.  
-  
- [Zobrazení tříd (Visual Basic, C# a C++)](#BKMK_ClassView)  
-  
- [Volání hierarchie (Visual Basic, C# a C++)](#BKMK_CallHierarchy)  
-  
- [Object Browser](#BKMK_ObjectBrowser)  
-  
- [Okno Definice kódu (C#, C++)](#BKMK_CodeDefinition)  
-  
- Můžete také použít **Průzkumníka řešení** přechod na typy a členy v projektech, hledání symbolů, zobrazit hierarchii volání metod, najít odkazy na symboly a další bez nutnosti přepínat mezi více oken nástrojů uvedených výše.  
-  
- Pokud máte Visual Studio Enterprise můžete vizualizovat strukturu kódu a jeho závislosti napříč celé řešení a potom přejít na části kódu, které vás zajímají map kódu. Další informace najdete v tématu [mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md).  
-  
+Můžete prozkoumávat objekty a členy v projektech sady Visual Studio a objekty a členy v komponentách .NET Framework, komponenty COM, dynamické knihovny (DLL) a knihovny typů (TLB).
+
+ Následující části tohoto dokumentu popisují různá okna struktury kódu.
+
+ [Zobrazení tříd (Visual Basic, C#, C++)](#BKMK_ClassView)
+
+ [Hierarchie volání (Visual Basic, C#, C++)](#BKMK_CallHierarchy)
+
+ [Prohlížeč objektů](#BKMK_ObjectBrowser)
+
+ [Okno Definice kódu (C#, C++)](#BKMK_CodeDefinition)
+
+ Můžete také použít **Průzkumník řešení** pro procházení typů a členů v projektech, hledání symbolů, zobrazení hierarchie volání metody, hledání odkazů na symboly a další, aniž byste museli přepínat mezi několika dříve uvedenými okny nástrojů.
+
+ Pokud máte Visual Studio Enterprise můžete použít mapy kódu k vizualizaci struktury kódu a jeho závislostí v celém řešení a přejít k podrobnostem o částech kódu, které vás zajímají. Další informace najdete v tématu [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md).
+
 > [!NOTE]
-> Edice sady Visual Studio a nastavení, které používáte, může ovlivnit funkce v integrovaném vývojovém prostředí. Mohou se lišit od těch popsaných v tomto tématu.  
-  
-## <a name="BKMK_ClassView"></a> Zobrazení tříd (Visual Basic, C# a C++)  
- **Zobrazení tříd** se zobrazí jako součást **Průzkumníka řešení** i v samostatném okně. **Zobrazení tříd** okno zobrazuje prvky aplikace. V horním podokně se zobrazí obory názvů, typy, rozhraní, výčty a třídy a dolním podokně zobrazí členy, které patří typ vybraný v horním podokně. Pomocí tohoto okna můžete přesunout do definice členů ve zdrojovém kódu (nebo **prohlížeče objektů** Pokud element je definován vně vašeho řešení).  
-  
- Není nutné k sestavení projektu, chcete-li zobrazit jeho prvky v **zobrazení tříd**. V okně se aktualizují při úpravě kódu ve vašem projektu.  
-  
- Můžete přidat kód do vašeho projektu výběrem uzel projektu a zvolením **přidat** tlačítko Otevřít **přidat novou položku** dialogové okno. Kód se přidá do samostatného souboru.  
-  
- Pokud váš projekt se změnami do správy zdrojového kódu, každý **zobrazení tříd** prvek zobrazuje ikonu, která určuje stav zdrojového kódu souboru. Příkazy společné zdrojového kódu, jako **rezervovat**, **vrátit se změnami**, a **získat nejnovější verzi** jsou také k dispozici v místní nabídce pro element.  
-  
-### <a name="class-view-toolbar"></a>Panel nástrojů pro třídy zobrazení  
- Panel nástrojů Zobrazení tříd obsahuje následující příkazy.  
-  
-|||  
-|-|-|  
-|**Nová složka**|Vytvoří virtuální složku nebo podsložku, ve kterém můžete uspořádat prvky často používané. Se ukládají v souboru aktivního řešení (.suo). Po přejmenování nebo odstranění elementu v kódu, může zobrazit ve virtuální složce jako uzel k chybě. Chcete-li tento problém, odstraňte uzel chyby. Pokud jste přejmenovali element, můžete jej přesunout z hierarchie projektu do složky znovu.|  
-|**Zpět**|Přejde na dříve vybrané položky.|  
-|**Vpřed**|Přejde na další vybranou položku.|  
-|**Zobrazit Diagram tříd** (kódové projekty pouze spravované)|K dispozici při vyberte obor názvů nebo typ v **zobrazení tříd**. Pokud je vybraná oboru názvů, třídy diagram znázorňuje všechny typy v ní. Když vyberete typ, diagram tříd se zobrazí pouze typu.|  
-  
-### <a name="class-view-settings"></a>Zobrazení tříd – nastavení  
- **Zobrazení tříd – nastavení** tlačítko na panelu nástrojů má následující nastavení.  
-  
-|||  
-|-|-|  
-|**Zobrazit základní typy**|Zobrazí se základní typy.|  
-|**Zobrazit odvozené typy**|Zobrazí se odvozené typy.|  
-|**Zobrazit skryté typy a členy**|Skryté typy a členy (není určená pro klienty) se zobrazí ve světle šedý text.|  
-|**Zobrazit veřejné členy**|Veřejné členy se zobrazí.|  
-|**Zobrazit chráněné členy**|Chráněné členy jsou zobrazeny.|  
-|**Zobrazit soukromé členy**|Soukromé členy jsou zobrazeny.|  
-|**Zobrazit ostatní členy**|Jiné druhy členů jsou zobrazeny, včetně interní (nebo typu Friend v jazyce Visual Basic) členy.|  
-|**Zobrazit zděděné členy**|Zděděné členy jsou zobrazeny.|  
-|**Zobrazit metody rozšíření**|Metody rozšíření jsou zobrazeny.|  
-  
-### <a name="class-view-shortcut-menu"></a>Třídy zobrazení místní nabídky  
- V místní nabídce **zobrazení tříd** může obsahovat následující příkazy, v závislosti na druhu vybraný projekt.  
-  
-|||  
-|-|-|  
-|**Přejít k definici**|Najde definici elementu ve zdrojovém kódu nebo v **prohlížeče objektů**, pokud element není definována v otevřeném projektu.|  
-|**Procházet definici**|Zobrazí vybrané položky **prohlížeče objektů**.|  
-|**Najít všechny odkazy**|Vyhledá položku aktuálně vybraný objekt a zobrazí výsledky v **výsledky hledání** okna.|  
-|**Typ filtru** (spravovaných jenom kód)|Zobrazí vybraný typ nebo obor názvů. Filtr můžete odebrat výběrem **vymazat najít** (tlačítko vedle X) **najít** pole.|  
-|**kopírování**|Zkopíruje plně kvalifikovaný název položky.|  
-|**Seřadit podle abecedy**|Obsahuje typy a členy abecedně podle názvu.|  
-|**Seřadit podle typu člena**|Obsahuje typy a členy v pořadí podle typu (tak, aby předcházet rozhraní třídy, rozhraní předcházet delegáty a metody předcházet vlastnosti).|  
-|**Seřadit podle přístupu ke členu**|Seznamy, typy a členy v pořadí podle přístupu zadejte, jako jsou veřejné a privátní.|  
-|**Seskupit podle typu člena**|Seřadí typy a členy do skupin podle typu objektu.|  
-|**Přejděte do deklarace** (pouze v kódu jazyka C++)|Zobrazí deklarace typu nebo člena ve zdrojovém kódu, pokud je k dispozici.|  
-|**Přejít k definici**|Zobrazuje definici typu nebo člena ve zdrojovém kódu, pokud je k dispozici.|  
-|**Přejít na odkaz**|Pokud je k dispozici, zobrazí odkaz na typ nebo člen ve zdrojovém kódu.|  
-|**Zobrazit hierarchii volání**|Zobrazí vybrané metody v **hierarchie volání** okna.|  
-  
-## <a name="BKMK_CallHierarchy"></a> Volání hierarchie (Visual Basic, C# a C++)  
- **Hierarchie volání** okno zobrazuje konkrétního – metoda (nebo vlastnost nebo konstruktor) je volána kde jsou uvedeny metody, které jsou volány z této metody. Můžete zobrazit více úrovní grafu volání, která zobrazuje volající/volaný – vztahy mezi metodami v zadaném oboru.  
-  
- Můžete zobrazit **hierarchie volání** okno výběrem – metoda (nebo vlastnosti nebo konstruktoru.) a pak zvolením **zobrazení hierarchie tříd** v místní nabídce. Zobrazení by měl vypadat podobně jako na následujícím obrázku.  
-  
- ![Otevřít více uzlů hierarchie volání](../ide/media/multiplenodes.png "MultipleNodes")  
-Hierarchie volání – okno  
-  
- Pomocí rozevíracího seznamu na panelu nástrojů můžete určit rozsah hierarchii: řešení, aktuálním projektu nebo aktuální dokument.  
-  
- V hlavním podokně se zobrazí volání do a z metody a **lokalit volání** podokně se zobrazí umístění vybraného volání. Pro členy, kteří jsou virtuální nebo abstraktní **název metody přepsání** uzel se objeví. Pro členy rozhraní **název metody implementuje** uzel se objeví.  
-  
- **Hierarchie volání** okno nenajde metoda odkazy na skupinu, mezi které patří místa, kde se přidá jako obslužná rutina události metodu, nebo je přiřazená delegáta. Pokud chcete zjistit tyto odkazy, použijte **najít všechny odkazy** příkazu.  
-  
- V místní nabídce **hierarchie volání** okno obsahuje následující příkazy.  
-  
-|||  
-|-|-|  
-|**Přidat jako nový kořen**|Přidá zvolený uzel jako nový kořenový uzel.|  
-|**Odebrat kořen**|Odebere vybrané kořenový uzel v podokně se stromovým zobrazením.|  
-|**Přejít k definici**|Přejde na původní definice metody.|  
-|**Najít všechny odkazy**|Vyhledá v projektu všechny odkazy na vybrané metody.|  
-|**kopírování**|Zkopíruje vybraný uzel (ale ne jeho dílčí uzly).|  
-|**Aktualizace**|Aktualizuje informace.|  
-  
-## <a name="BKMK_ObjectBrowser"></a> Prohlížeč objektů  
- **Prohlížeče objektů** zobrazuje popisy kód ve vašich projektech.  
-  
- Můžete filtrovat, co byste chtěli zobrazit **prohlížeče objektů**. Pomocí rozevíracího seznamu v horní části okna, můžete zvolit z následujících možností:  
-  
-- Jakékoli rozhraní .NET Framework  
-  
-- Silverlight  
-  
-- Aktivní řešení  
-  
-- Vlastní sada komponent  
-  
-  Vlastní komponenty mohou zahrnovat spustitelné soubory spravovaného kódu, sestavení knihovny, knihovny typů a souborů .ocx. Není možné přidat vlastní komponenty C++. Vlastní nastavení se ukládají do adresáře aplikace Visual Studio uživatele, % APPDATA%\Roaming\Microsoft\VisualStudio\11.0\ObjBrowEX.dat.  
-  
-  Levém podokně **prohlížeče objektů** zobrazuje fyzické kontejnery, jako jsou komponenty rozhraní .NET Framework a modelu COM. Můžete rozbalit uzly kontejneru pro zobrazení, které obsahují obory názvů a potom rozbalte obory názvů do zobrazení typů, které obsahují. Když vyberete typ, jeho členy (jako je například vlastnosti a metody) jsou uvedeny v pravém podokně. Pravém dolním podokně zobrazí podrobné informace o vybrané položce.  
-  
-  Konkrétní položku můžete vyhledat pomocí **hledání** pole v horní části okna. Hledání jsou malá a velká písmena. V levém podokně se zobrazí výsledky hledání. Vymazat hledání, zvolte **hledání vymazání** (tlačítko vedle X) **hledání** pole.  
-  
-  **Prohlížeče objektů** sleduje provedené výběry kde se můžete dostat mimo váš výběr pomocí **vpřed** a **zpět** tlačítka na panelu nástrojů.  
-  
-  Můžete použít **prohlížeče objektů** výběrem položky (sestavení, oboru názvů, typ nebo člen) a zvolením přidat odkaz na sestavení k otevřenému řešení **přidat odkaz** tlačítko na panelu nástrojů.  
-  
-### <a name="object-browser-settings"></a>Nastavení prohlížeče objektů  
- S použitím **nastavení prohlížeče objektů** tlačítko na panelu nástrojů můžete určit jednu z následujících zobrazení.  
-  
-|||  
-|-|-|  
-|**Zobrazení oborů názvů**|V levém podokně zobrazí obory názvů spíše než fyzické kontejnery. Obory názvů uložená ve více fyzické kontejnery jsou sloučeny.|  
-|**Zobrazení kontejnerů**|Zobrazuje fyzické kontejnery spíše než obory názvů, v levém podokně. **Zobrazit obory názvů** a **kontejnery zobrazení** jsou vzájemně se vylučující nastavení.|  
-|**Zobrazit základní typy**|Zobrazí základních typů.|  
-|**Zobrazit odvozené typy**|Zobrazí odvozené typy.|  
-|**Zobrazit skryté typy a členy**|Zobrazí skryté typy a členy (není určená pro klienty), ve světle šedý text.|  
-|**Zobrazit veřejné členy**|Zobrazí veřejné členy.|  
-|**Zobrazit chráněné členy**|Zobrazí chráněné členy.|  
-|**Zobrazit soukromé členy**|Zobrazí privátní členy.|  
-|**Zobrazit ostatní členy**|Zobrazí jiné druhy členů, včetně interní (nebo typu Friend v jazyce Visual Basic) členy.|  
-|**Zobrazit zděděné členy**|Zobrazí zděděné členy.|  
-|**Zobrazit metody rozšíření**|Metody rozšíření se zobrazí.|  
-  
-### <a name="object-browser-shortcut-menu-commands"></a>Příkazy místní nabídky objektu prohlížeče  
- V místní nabídce **prohlížeče objektů** může obsahovat následující příkazy, v závislosti na druhu položek vybraných.  
-  
-|||  
-|-|-|  
-|**Procházet definici**|Ukazuje primárního uzlu pro vybranou položku.|  
-|**Najít všechny odkazy**|Vyhledá položku aktuálně vybraný objekt a zobrazí výsledky v **výsledky hledání** okna.|  
-|**Filtrovat vůči typu**|Zobrazí vybraný typ nebo obor názvů. Filtr můžete odebrat výběrem **– Vymazat hledání** tlačítko.|  
-|**kopírování**|Zkopíruje plně kvalifikovaný název položky.|  
-|**odebrat**|Pokud je obor sadu vlastních komponent, odebere vybrané součásti z oboru.|  
-|**Seřadit podle abecedy**|Obsahuje typy a členy abecedně podle názvu.|  
-|**Seřadit podle typu objektu**|Obsahuje typy a členy v pořadí podle typu (tak, aby předcházet rozhraní třídy, rozhraní předcházet delegáty a metody předcházet vlastnosti).|  
-|**Seřadit podle přístupu k objektům**|Seznamy, typy a členy v pořadí podle přístupu zadejte, jako jsou veřejné a privátní.|  
-|**Seskupit podle typu objektu**|Seřadí typy a členy do skupin podle typu objektu.|  
-|**Přejděte do deklarace** (pouze projekty C++)|Zobrazí deklarace typu nebo člena ve zdrojovém kódu, pokud je k dispozici.|  
-|**Přejít k definici**|Zobrazuje definici typu nebo člena ve zdrojovém kódu, pokud je k dispozici.|  
-|**Přejít na odkaz**|Pokud je k dispozici, zobrazí odkaz na typ nebo člen ve zdrojovém kódu.|  
-|**Zobrazit hierarchii volání**|Zobrazí vybrané metody v **hierarchie volání** okna.|  
-  
-## <a name="BKMK_CodeDefinition"></a> Okno Definice kódu (C#, C++)  
- **Definice kódu** okně zobrazí definici vybraný typ nebo člen aktivního projektu. Tento typ nebo člen je vybrat v editoru kódu nebo v okně zobrazení kódu.  
-  
- I když v tomto okně je jen pro čtení, můžete nastavit zarážky a záložky v ní. Chcete-li upravit definici zobrazený, zvolte **upravit definici** v místní nabídce. Tím se otevře zdrojový soubor v editoru kódu a přesune kurzor na řádek, kde začíná v definici.  
-  
-### <a name="code-definition-shortcut-menu"></a>Kód definice místní nabídky  
- V místní nabídce **definice kódu** okna může obsahovat následující příkazy, v závislosti na programovacím jazyce.  
-  
-|||  
-|-|-|  
-|**Vytvořit testy jednotek**|Vytvoří testy částí pro vybraný element.|  
-|**Generovat sekvenční Diagram**|Pokud je vybraná metoda, vygeneruje sekvenční diagram.|  
-|**Vytvoření privátního přístupového objektu**|Pokud testování částí je k dispozici v řešení, generuje metodu, která používá test získat přístup ke kódu.|  
-|**Přejít k definici**|Najde definici (nebo definice pro částečné třídy) a zobrazí je v **výsledky hledání** okna.|  
-|**Najít všechny odkazy**|Vyhledá odkazy na tento typ nebo člen v řešení.|  
-|**Zobrazit hierarchii volání**|Metoda se zobrazí **hierarchie volání** okna.|  
-|**Zobrazit testy volání**|Pokud v projektu testů jednotek, ukazuje testy, které volají vybraný kód.|  
-|**Spustit testy pro volání**|Pokud v projektu testů jednotek, spouští testy pro vybraný kód.|  
-|**Zarážky**|Vloží zarážky (nebo zarážku s trasováním).|  
-|**Spustit ke kurzoru**|Spustí program v režimu ladění do umístění kurzoru.|  
-|**kopírování**|Zkopíruje vybraný řádek.|  
-|**Sbalení**|Standardní příkazy sbalování.|  
-|**Upravit definici**|Přesune kurzor do definice v okně kódu.|  
-|**Zvolit kódování**|Otevře **kódování** okna tak, že můžete nastavit kódování souboru.|  
-  
-### <a name="document-outline-window"></a>Osnova dokumentu – okno  
- Můžete použít **Osnova dokumentu** okna ve spojení s návrháře zobrazení, jako je například Návrhář XAML stránky nebo Návrhář formulářů Windows nebo stránky HTML. Toto okno elementy zobrazí ve stromovém zobrazení, takže můžete zobrazit logické struktury formuláře nebo stránky a najít ovládací prvky, které jsou hluboce vložené nebo skrytý.  
-  
-## <a name="see-also"></a>Viz také  
+> Edice sady Visual Studio a nastavení, které používáte, mohou ovlivnit funkce v integrovaném vývojovém prostředí. Můžou se lišit od těch popsaných v tomto tématu.
+
+## <a name="BKMK_ClassView"></a>Zobrazení tříd (Visual Basic, C#, C++)
+ **Zobrazení tříd** se zobrazuje jako součást **Průzkumník řešení** a v samostatném okně. Okno **zobrazení tříd** zobrazí prvky aplikace. V horním podokně se zobrazí obory názvů, typy, rozhraní, výčty a třídy a v dolním podokně se zobrazí členové, kteří patří k typu vybranému v horním podokně. Pomocí tohoto okna můžete přejít na definice členů ve zdrojovém kódu (nebo v **Prohlížeč objektů** , pokud je prvek definován mimo vaše řešení).
+
+ Není nutné kompilovat projekt, aby bylo možné zobrazit jeho prvky v **zobrazení tříd**. Okno je aktualizováno při úpravách kódu v projektu.
+
+ Do projektu můžete přidat kód tak, že vyberete uzel projektu a kliknete na tlačítko **Přidat** a otevřete dialogové okno **Přidat novou položku** . Kód se přidá do samostatného souboru.
+
+ Pokud je váš projekt vrácen se změnami do správy zdrojového kódu, každý **zobrazení tříd** element zobrazí ikonu, která označuje stav zdrojového kódu souboru. Běžné příkazy pro řízení zdrojového kódu, jako je **rezervace**, **vrácení se změnami**a **získání nejnovější verze** , jsou také k dispozici v místní nabídce prvku.
+
+### <a name="class-view-toolbar"></a>Panel nástrojů Zobrazení tříd
+ Panel nástrojů Zobrazení tříd obsahuje následující příkazy.
+
+|||
+|-|-|
+|**Nová složka**|Vytvoří virtuální složku nebo podsložku, ve které můžete uspořádat často používané prvky. Jsou uloženy v souboru aktivního řešení (. suo). Po přejmenování nebo odstranění elementu v kódu se může zobrazit ve virtuální složce jako chybový uzel. Chcete-li tento problém vyřešit, odstraňte chybový uzel. Pokud jste přejmenovali element, můžete jej přesunout z hierarchie projektu do složky znovu.|
+|**Návrat**|Přejde k dříve vybrané položce.|
+|**Komisi**|Přejde na další vybranou položku.|
+|**Zobrazení diagramu tříd** (pouze projekty spravovaného kódu)|Bude k dispozici, když v **zobrazení tříd**vyberete obor názvů nebo typ. Když je vybrán obor názvů, diagram třídy zobrazí všechny typy v něm. Když je vybrán typ, diagram třídy zobrazí pouze tento typ.|
+
+### <a name="class-view-settings"></a>Nastavení Zobrazení tříd
+ Tlačítko **zobrazení tříd nastavení** na panelu nástrojů má následující nastavení.
+
+|||
+|-|-|
+|**Zobrazit základní typy**|Zobrazí se základní typy.|
+|**Zobrazit odvozené typy**|Zobrazí se odvozené typy.|
+|**Zobrazit skryté typy a členy**|Skryté typy a členy (nejsou určené pro použití klienty) se zobrazují v světle šedého textu.|
+|**Zobrazit veřejné členy**|Zobrazí se veřejné členy.|
+|**Zobrazit chráněné členy**|Zobrazí se chránění členové.|
+|**Zobrazit soukromé členy**|Zobrazí se privátní členové.|
+|**Zobrazit ostatní členy**|Zobrazí se další druhy členů, včetně interních členů (nebo přítele v Visual Basic).|
+|**Zobrazit zděděné členy**|Jsou zobrazeny zděděné členy.|
+|**Zobrazit metody rozšíření**|Jsou zobrazeny rozšiřující metody.|
+
+### <a name="class-view-shortcut-menu"></a>Místní nabídka Zobrazení tříd
+ Místní nabídka v **zobrazení tříd** může obsahovat následující příkazy v závislosti na typu vybraného projektu.
+
+|||
+|-|-|
+|**Přejít k definici**|Vyhledá definici prvku ve zdrojovém kódu nebo v **Prohlížeč objektů**, pokud element není definován v otevřeném projektu.|
+|**Procházet definici**|Zobrazí vybranou položku v **Prohlížeč objektů**.|
+|**Najít všechny odkazy**|Vyhledá aktuálně vybranou položku objektu a zobrazí výsledky v okně **hledání výsledků** .|
+|**Filtrovat podle typu** (jenom spravovaný kód)|Zobrazí pouze vybraný typ nebo obor názvů. Filtr můžete odebrat tak, že kliknete na tlačítko **Vymazat hledání** (X) vedle pole **Najít** .|
+|**Kopií**|Zkopíruje plně kvalifikovaný název položky.|
+|**Seřadit abecedně**|Zobrazí seznam typů a členů abecedně podle názvu.|
+|**Seřadit podle typu člena**|Seznam typů a členů v pořadí podle typu (takové třídy předcházejí rozhraní, rozhraní před delegáty a metody předcházejí vlastností).|
+|**Seřadit podle přístupu ke členům**|Zobrazí seznam typů a členů v pořadí podle typu přístupu, jako je například Public nebo Private.|
+|**Seskupit podle typu člena**|Seřadí typy a členy do skupin podle typu objektu.|
+|**Přejít k deklaraci** (C++ jenom kód)|Zobrazí deklaraci typu nebo člena ve zdrojovém kódu, pokud je k dispozici.|
+|**Přejít k definici**|Zobrazí definici typu nebo členu ve zdrojovém kódu, pokud je k dispozici.|
+|**Přejít na odkaz**|Zobrazí odkaz na typ nebo člen ve zdrojovém kódu, pokud je k dispozici.|
+|**Zobrazit hierarchii volání**|Zobrazí vybranou metodu v okně **hierarchie volání** .|
+
+## <a name="BKMK_CallHierarchy"></a>Hierarchie volání (Visual Basic, C#, C++)
+ Okno **hierarchie volání** ukazuje, kde je volána daná metoda (nebo vlastnost nebo konstruktor), a uvádí metody, které jsou volány z této metody. Můžete zobrazit více úrovní grafu volání, který ukazuje vztahy volající/volaný mezi metodami v zadaném oboru.
+
+ Můžete zobrazit okno **hierarchie volání** výběrem metody (nebo vlastnosti nebo konstruktoru) a následným výběrem možnosti **Zobrazit hierarchii tříd** v místní nabídce. Zobrazení by mělo vypadat podobně jako na následujícím obrázku.
+
+ ![Otevřít hierarchii volání více uzlů](../ide/media/multiplenodes.png "MultipleNodes") Okno hierarchie volání
+
+ Pomocí rozevíracího seznamu na panelu nástrojů můžete zadat rozsah hierarchie: řešení, aktuální projekt nebo aktuální dokument.
+
+ V hlavním podokně se zobrazí volání a z metody a v podokně **volat weby** se zobrazí umístění vybraného volání. Pro členy, kteří jsou virtuální nebo abstraktní, se zobrazí uzel **název metody přepsání** . Pro členy rozhraní se zobrazí uzel **implementující název metody** .
+
+ Okno **hierarchie volání** nenalezne odkazy na skupiny metod, které obsahují místo, kde je metoda přidána jako obslužná rutina události nebo je přiřazena delegátovi. K vyhledání těchto odkazů použijte příkaz **Najít všechny odkazy** .
+
+ Místní nabídka v okně **hierarchie volání** obsahuje následující příkazy.
+
+|||
+|-|-|
+|**Přidat jako nový kořen**|Přidá vybraný uzel jako nový kořenový uzel.|
+|**Odebrat kořen**|Odebere vybraný kořenový uzel z podokna zobrazení stromu.|
+|**Přejít k definici**|Přejde k původní definici metody.|
+|**Najít všechny odkazy**|Najde v projektu všechny odkazy na vybranou metodu.|
+|**Kopií**|Zkopíruje vybraný uzel (ale ne jeho dílčí uzly).|
+|**Téhle**|Aktualizuje informace.|
+
+## <a name="BKMK_ObjectBrowser"></a>Prohlížeč objektů
+ **Prohlížeč objektů** zobrazí popisy kódu v projektech.
+
+ Můžete filtrovat, co chcete zobrazit v **Prohlížeč objektů**. Pomocí rozevíracího seznamu v horní části okna si můžete vybrat z následujících možností:
+
+- Jakékoli .NET Framework
+
+- Silverlight
+
+- Aktivní řešení
+
+- Vlastní sada komponent
+
+  Vlastní komponenty mohou zahrnovat spustitelné soubory spravovaného kódu, sestavení knihoven, knihovny typů a soubory. ocx. Není možné přidat C++ vlastní součásti. Vlastní nastavení se ukládají v adresáři aplikace Visual Studio User,%APPDATA%\Roaming\Microsoft\VisualStudio\11.0\ObjBrowEX.dat.
+
+  V levém podokně **Prohlížeč objektů** se zobrazují fyzické kontejnery, jako jsou .NET Framework a komponenty com. Můžete rozbalit uzly kontejneru a zobrazit tak obory názvů, které obsahují, a poté rozšířit obory názvů tak, aby zobrazovaly typy, které obsahují. Když vyberete typ, jeho členové (například vlastnosti a metody) jsou uvedeny v pravém podokně. V pravém dolním podokně se zobrazí podrobné informace o vybrané položce.
+
+  Konkrétní položku můžete vyhledat pomocí **vyhledávacího** pole v horní části okna. Při hledání se nerozlišují malá a velká písmena. Výsledky hledání se zobrazí v levém podokně. Hledání vymažete tak, že kliknete na tlačítko **Vymazat vyhledávání** (X) vedle pole **hledání** .
+
+  **Prohlížeč objektů** sleduje výběry, které jste provedli, a můžete přecházet mezi jednotlivými výběry pomocí tlačítek **vpřed** a **zpět** na panelu nástrojů.
+
+  Můžete použít **Prohlížeč objektů** pro přidání odkazu na sestavení do otevřeného řešení tak, že vyberete položku (sestavení, obor názvů, typ nebo člen) a kliknete na tlačítko **Přidat odkaz** na panelu nástrojů.
+
+### <a name="object-browser-settings"></a>Nastavení Prohlížeč objektů
+ Pomocí tlačítka **Prohlížeč objektů nastavení** na panelu nástrojů můžete zadat jedno z následujících zobrazení.
+
+|||
+|-|-|
+|**Zobrazit obory názvů**|Zobrazuje obory názvů místo fyzických kontejnerů v levém podokně. Obory názvů uložené ve více fyzických kontejnerech jsou sloučeny.|
+|**Zobrazit kontejnery**|Zobrazí v levém podokně fyzické kontejnery, nikoli obory názvů. **Zobrazit obory názvů** a **kontejnery zobrazení** se vzájemně exkluzivním nastavením.|
+|**Zobrazit základní typy**|Zobrazí základní typy.|
+|**Zobrazit odvozené typy**|Zobrazí odvozené typy.|
+|**Zobrazit skryté typy a členy**|Zobrazí skryté typy a členy (nejsou určeny pro klienty), v světle šedého textu.|
+|**Zobrazit veřejné členy**|Zobrazí veřejné členy.|
+|**Zobrazit chráněné členy**|Zobrazí chráněné členy.|
+|**Zobrazit soukromé členy**|Zobrazí soukromé členy.|
+|**Zobrazit ostatní členy**|Zobrazí další typy členů, včetně interních členů (nebo přítele v Visual Basic).|
+|**Zobrazit zděděné členy**|Zobrazí zděděné členy.|
+|**Zobrazit metody rozšíření**|Zobrazí metody rozšíření.|
+
+### <a name="object-browser-shortcut-menu-commands"></a>Příkazy místní nabídky Prohlížeč objektů
+ Místní nabídka v **Prohlížeč objektů** může obsahovat následující příkazy v závislosti na typu vybrané položky.
+
+|||
+|-|-|
+|**Procházet definici**|Zobrazuje primární uzel pro vybranou položku.|
+|**Najít všechny odkazy**|Vyhledá aktuálně vybranou položku objektu a zobrazí výsledky v okně **hledání výsledků** .|
+|**Filtrovat podle typu**|Zobrazí pouze vybraný typ nebo obor názvů. Filtr můžete odebrat tak, že kliknete na tlačítko **Vymazat hledání** .|
+|**Kopií**|Zkopíruje plně kvalifikovaný název položky.|
+|**Odebrány**|Pokud je oborem vlastní sada komponent, aplikace Odebere vybranou komponentu z oboru.|
+|**Seřadit abecedně**|Zobrazí seznam typů a členů abecedně podle názvu.|
+|**Seřadit podle typu objektu**|Seznam typů a členů v pořadí podle typu (takové třídy předcházejí rozhraní, rozhraní před delegáty a metody předcházejí vlastností).|
+|**Seřadit podle přístupu k objektům**|Zobrazí seznam typů a členů v pořadí podle typu přístupu, jako je například Public nebo Private.|
+|**Seskupit podle typu objektu**|Seřadí typy a členy do skupin podle typu objektu.|
+|**Přejít na deklaraci** (C++ jenom projekty)|Zobrazí deklaraci typu nebo člena ve zdrojovém kódu, pokud je k dispozici.|
+|**Přejít k definici**|Zobrazí definici typu nebo členu ve zdrojovém kódu, pokud je k dispozici.|
+|**Přejít na odkaz**|Zobrazí odkaz na typ nebo člen ve zdrojovém kódu, pokud je k dispozici.|
+|**Zobrazit hierarchii volání**|Zobrazí vybranou metodu v okně **hierarchie volání** .|
+
+## <a name="BKMK_CodeDefinition"></a>Okno Definice kódu (C#, C++)
+ V okně **definice kódu** se zobrazí definice vybraného typu nebo členu v aktivním projektu. Typ nebo člen může být vybrán v editoru kódu nebo v okně zobrazení kódu.
+
+ I když je toto okno jen pro čtení, můžete v něm nastavit zarážky nebo záložky. Chcete-li změnit zobrazenou definici, v místní nabídce vyberte možnost **Upravit definici** . Tím se otevře zdrojový soubor v editoru kódu a přesune se kurzor na řádek, kde začíná definice.
+
+### <a name="code-definition-shortcut-menu"></a>Místní nabídka definice kódu
+ Místní nabídka v okně **definice kódu** může obsahovat následující příkazy v závislosti na programovacím jazyce.
+
+|||
+|-|-|
+|**Vytvořit testy jednotek**|Vytvoří testy jednotek pro vybraný prvek.|
+|**Generovat sekvenční diagram**|Když je vybrána metoda, vygeneruje sekvenční diagram.|
+|**Vytvoření privátního přístupového objektu**|Pokud je v řešení přítomen test jednotek, vygeneruje metodu, kterou test používá pro přístup k kódu.|
+|**Přejít k definici**|Najde definici (nebo definice) pro částečné třídy a zobrazí je v okně **výsledků hledání** .|
+|**Najít všechny odkazy**|Najde odkazy na typ nebo člena v řešení.|
+|**Zobrazit hierarchii volání**|Zobrazí metodu v okně **hierarchie volání** .|
+|**Zobrazit volající testy**|Pokud v projektu existují testy jednotek, zobrazí testy, které volají vybraný kód.|
+|**Spustit testy volání**|Pokud v projektu existují testy jednotek, spustí testy pro vybraný kód.|
+|**Bodu**|Vloží zarážku (nebo zarážka s trasováním).|
+|**Spustit ke kurzoru**|Spustí program v režimu ladění do umístění kurzoru.|
+|**Kopií**|Zkopíruje vybraný řádek.|
+|**Sbalení**|Standardní příkazy pro sbalení.|
+|**Upravit definici**|Přesune kurzor do definice v okně Code (kód).|
+|**Zvolit kódování**|Otevře okno **kódování** , aby bylo možné nastavit kódování souboru.|
+
+### <a name="document-outline-window"></a>Okno Osnova dokumentu
+ Můžete použít okno **Osnova dokumentu** ve spojení s zobrazeními návrháře, jako je například Návrhář pro stránku XAML nebo Návrhář formuláře Windows nebo se stránkami HTML. V tomto okně se zobrazí prvky ve stromovém zobrazení, takže můžete zobrazit logickou strukturu formuláře nebo stránky a vyhledat ovládací prvky, které jsou hluboko vložené nebo skryté.
+
+## <a name="see-also"></a>Viz také
  [Ikony zobrazení třídy a prohlížeče objektů](../ide/class-view-and-object-browser-icons.md)

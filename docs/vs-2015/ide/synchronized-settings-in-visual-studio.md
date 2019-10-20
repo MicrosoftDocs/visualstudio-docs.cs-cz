@@ -8,54 +8,54 @@ f1_keywords:
 - VS.ToolsOptionsPages.Environment.RoamingSettings
 ms.assetid: a3d2ea29-be5d-4012-9820-44b06adbb7dd
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ed6e544378089222cb69c491b0cd473544e05220
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 6459b6f65fd1e29fbadb01f6aa2fc51520b726b8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825654"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646817"
 ---
 # <a name="synchronized-settings-in-visual-studio"></a>Synchronizovaná nastavení v sadě Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při použití stejného účtu individuálního nastavení pro přihlášení k sadě Visual Studio na víc počítačích nastavení ve výchozím nastavení synchronizované na všech počítačích.
+Použijete-li stejný účet přizpůsobení pro přihlášení k aplikaci Visual Studio na více počítačích, ve výchozím nastavení jsou nastavení synchronizována na všech počítačích.
 
 ## <a name="synchronized-settings"></a>Synchronizovaná nastavení
- Ve výchozím nastavení jsou synchronizována následující nastavení.
+ Ve výchozím nastavení se synchronizují následující nastavení.
 
-- Nastavení vývoje (je nutné vybrat sadu nastavení při prvním spuštění sady Visual Studio, ale můžete výběr můžete kdykoli změnit. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).)
+- Nastavení vývoje (při prvním spuštění sady Visual Studio musíte vybrat sadu nastavení), ale výběr můžete kdykoli změnit. Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).)
 
-- Následující možnosti **nástroje &#124; možnosti** stránky:
+- Na stránkách **Možnosti nástrojů &#124;**  se nacházejí tyto možnosti:
 
-  - **Motiv** a nabídek na malá a velká písmena nastavení, **prostředí**, **Obecné** stránky Možnosti
+  - Nastavení **malých a velkých** písmen na panelu nabídek, na stránce **prostředí**, **Obecné** možnosti
 
-  - Všechna nastavení na **prostředí**, **písma a barvy** stránky Možnosti
+  - Všechna nastavení na stránce možností **prostředí**, **písma a barvy**
 
-  - Všechny klávesové zkratky, na **prostředí**, **klávesnice** stránky Možnosti
+  - Všechny klávesové zkratky, na stránce možnosti **prostředí**, **klávesnice**
 
-  - Všechna nastavení na **prostředí, karty a Windows** stránky Možnosti
+  - Všechna nastavení na stránce **prostředí, karty a možnosti systému Windows**
 
-  - Všechna nastavení na **prostředí**, **spuštění** stránky Možnosti
+  - Všechna nastavení na stránce možnosti **prostředí**, **spuštění**
 
-  - Všechna nastavení na **textový Editor** možnosti stránky
+  - Všechna nastavení na stránkách možností **textového editoru**
 
-- Všechna nastavení v Návrháři XAML možnosti stránky
+- Všechna nastavení na stránkách možností Návrhář XAML
 
-- Aliasy příkazu definované uživatelem. Další informace o definici aliasů příkazu naleznete v tématu [aliasy příkazů aplikace Visual Studio](../ide/reference/visual-studio-command-aliases.md).
+- Aliasy příkazů definované uživatelem Další informace o tom, jak definovat aliasy příkazů, naleznete v tématu [Aliasy příkazů sady Visual Studio](../ide/reference/visual-studio-command-aliases.md).
 
-- Rozložení oken uživatelem definované v **okno &#124; spravovat rozložení oken** stránky
+- Uživatelsky definované rozložení oken v **okně &#124; spravovat stránku rozložení oken**
 
-## <a name="turning-synchronized-settings-off-for-a-particular-computer"></a>Zapnutí synchronizované nastavení vypnout pro určitý počítač
- Synchronizovaná nastavení pro sadu Visual Studio jsou ve výchozím nastavení zapnutá. Synchronizovaná nastavení v počítači můžete vypnout tak, že přejdete **nástroje &#124; možnosti &#124; prostředí &#124; synchronizovaná nastavení** stránky a zrušení zaškrtnutí políčka.  Například pokud se rozhodnete nesynchronizovat nastavení sady Visual Studio v počítači A, změny nastavení v počítači provedeny DNT nezobrazí v počítači B nebo počítač C. počítačích B a C bude pokračovat pro synchronizaci mezi sebou, ale ne s počítači A.
+## <a name="turning-synchronized-settings-off-for-a-particular-computer"></a>Vypnutí synchronizovaných nastavení pro určitý počítač
+ Synchronizovaná nastavení pro Visual Studio jsou ve výchozím nastavení zapnutá. Synchronizovaná nastavení v počítači můžete vypnout tak, že na stránce **Nástroje možnosti &#124; &#124; nástrojů v &#124; prostředí zvolíte nastavení synchronizované** a zrušíte zaškrtnutí políčka.  Pokud se například rozhodnete, že nechcete synchronizovat nastavení sady Visual Studio na počítači A, žádné změny nastavení provedené v počítači A se nezobrazí v počítači B nebo v počítači C. počítač B a C budou nadále synchronizovány navzájem, ale nikoli pomocí počítače A.
 
-## <a name="synchronizing-settings-across-visual-studio-family-products-and-editions"></a>Synchronizace nastavení mezi produkty řady Visual Studio a edice
- Nastavení dají synchronizovat do všech libovolná edice sady Visual Studio 2015, včetně edice Express a komunity. Nastavení jsou také synchronizovat napříč produkty řady Visual Studio, jako je například prolnutí. Všechny tyto produkty řady však může mít svůj vlastní nastavení, která se nesdílejí s Visual Studio. Například se nastavení specifické pro Blend v počítači A sdílet pomocí programu Blend v počítači B, ale ne s Visual Studio na počítači A a B.
+## <a name="synchronizing-settings-across-visual-studio-family-products-and-editions"></a>Synchronizace nastavení napříč produkty a edicemi řady Visual Studio
+ Nastavení lze synchronizovat v jakékoli edici sady Visual Studio 2015, včetně edice Express a Community. Nastavení jsou také synchronizována v produktech řady Visual Studio, jako je například Blend. Každý z těchto rodinných produktů však může mít vlastní nastavení, která nejsou sdílena se sadou Visual Studio. Například nastavení specifická pro Blend v počítači A budou sdílena s nástrojem Blend v počítači B, ale ne se sadou Visual Studio v počítači A nebo B.
 
 > [!WARNING]
-> Nastavení nejsou synchronizovány mezi Visual Studio 2013 a Visual Studio 2015. Při prvním otevření sady Visual Studio 2015, nastavení ze sady Visual Studio 2013 se migrují, ale proto se nedají migrovat zpět na Visual Studio 2013, po který.
+> Nastavení nejsou synchronizovaná mezi Visual Studio 2013 a Visual Studio 2015. Při prvním otevření sady Visual Studio 2015 se migrují nastavení z Visual Studio 2013, ale nelze je migrovat zpět na Visual Studio 2013.
 
 ## <a name="see-also"></a>Viz také
  [Přizpůsobení integrovaného vývojového prostředí](../ide/personalizing-the-visual-studio-ide.md)

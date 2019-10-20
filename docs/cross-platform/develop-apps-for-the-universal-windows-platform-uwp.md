@@ -4,17 +4,17 @@ ms.date: 10/24/2017
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: eac59cb6-f12e-4a77-9953-6d62b164a643
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 3bfe4b1a172158740705e392c573de7911016583
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: d526d5df8ba03374fd26ceb870d4b240b6fc2fa4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70179864"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648962"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>Vývoj aplikací pro Univerzální platformu Windows (UWP)
 
@@ -22,7 +22,7 @@ Pomocí Univerzální platforma Windows a naší sady Windows Core můžete stej
 
 ![Univerzální platforma pro Windows](../cross-platform/media/uwp_coreextensions.png)
 
-Spuštění aplikace na telefonu s Windows 10, Windows 10 desktop a Xbox. Je to stejný balíček aplikace! Zavedení projektového systému Windows 10 jediném, sjednoceném jádře jeden balíček aplikace poběží na všech platformách. Několik platforem má rozšiřující sady SDK, které můžete přidat do své aplikace, abyste mohli využít výhod specifického chování platformy. Například zpracovává sadu SDK rozšíření pro mobilní zařízení se ve Windows phonu stisknutí tlačítka Zpět. Pokud odkazujete na sadu SDK rozšíření v projektu, stačí přidat kontroly za běhu k otestování, jestli je tato sada SDK na této platformě k dispozici. To je to, jak můžete mít stejný balíček aplikace pro každou platformu.
+Spusťte aplikaci na telefonu s Windows 10, na desktopu s Windows 10 nebo na Xbox. Je to stejný balíček aplikace! Po zavedení jednotného sjednoceného jádra Windows 10 můžete na všech platformách běžet jeden balíček aplikace s jedním sjednocením. Několik platforem má rozšiřující sady SDK, které můžete přidat do své aplikace, abyste mohli využít výhod specifického chování platformy. Například rozšiřující sada SDK pro Mobile zpracovává tlačítko zpět na Windows Phone. Pokud odkazujete na sadu SDK rozšíření v projektu, stačí přidat kontroly za běhu k otestování, jestli je tato sada SDK na této platformě k dispozici. To je to, jak můžete mít stejný balíček aplikace pro každou platformu.
 
 **Co je Windows Core?**
 
@@ -40,7 +40,7 @@ Tady je seznam softwaru, který potřebujete:
 
 ::: moniker range="vs-2017"
 
-- [Windows 10](http://windows.microsoft.com/windows/downloads). Visual Studio 2017 podporuje vývoj UWP jenom ve Windows 10. Další podrobnosti najdete v tématu cílení na [platformu](/visualstudio/productinfo/vs2017-compatibility-vs) a [požadavky na systém](/visualstudio/productinfo/vs2017-system-requirements-vs)pro Visual Studio.
+- [Windows 10](http://windows.microsoft.com/windows/downloads). Visual Studio 2017 podporuje vývoj UWP jenom ve Windows 10. Další podrobnosti najdete v tématu [cílení na platformu](/visualstudio/productinfo/vs2017-compatibility-vs) a [požadavky na systém](/visualstudio/productinfo/vs2017-system-requirements-vs)pro Visual Studio.
 
 - [Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download). Budete také potřebovat volitelnou úlohu vývoje Univerzální platforma Windows.
 
@@ -50,7 +50,7 @@ Tady je seznam softwaru, který potřebujete:
 
 ::: moniker range="vs-2019"
 
-- [Windows 10](http://windows.microsoft.com/windows/downloads). Visual Studio 2019 podporuje vývoj UWP jenom ve Windows 10. Další podrobnosti najdete v tématu cílení na [platformu](/visualstudio/releases/2019/compatibility/) a [požadavky na systém](/visualstudio/releases/2019/system-requirements/)pro Visual Studio.
+- [Windows 10](http://windows.microsoft.com/windows/downloads). Visual Studio 2019 podporuje vývoj UWP jenom ve Windows 10. Další podrobnosti najdete v tématu [cílení na platformu](/visualstudio/releases/2019/compatibility/) a [požadavky na systém](/visualstudio/releases/2019/system-requirements/)pro Visual Studio.
 
 - [Visual Studio](https://visualstudio.microsoft.com/downloads). Budete také potřebovat volitelnou úlohu vývoje Univerzální platforma Windows.
 

@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d0cab30734aa5411f759e85ef555ecb36f3f0cf
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
-ms.translationtype: HT
+ms.openlocfilehash: 60b058883e30587ed656690796732b15750b6277
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72575150"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647436"
 ---
 # <a name="step-7-keep-pairs-visible"></a>Krok 7: zůstat páry viditelné
 Hra funguje dobře tak dlouho, dokud hráč vybírá pouze dvojice ikon, které neodpovídají. Ale zvažte, co by mělo nastat, pokud hráč vybere shodnou dvojici. Místo toho, aby se ikony ztratily zapnutím časovače (pomocí <xref:System.Windows.Forms.Timer.Start> metody), by se hra měla resetovat, aby už nesledovala popisky pomocí `firstClicked` a `secondClicked` referenčních proměnných, aniž byste museli resetovat barvy pro tyto dvě. zvolené popisky.
@@ -62,10 +62,10 @@ Hra funguje dobře tak dlouho, dokud hráč vybírá pouze dvojice ikon, které 
 2. Uložte a spusťte program a začněte vybírat ikony ve formuláři. Pokud zvolíte dvojici, která neodpovídá, událost časovače Tick se aktivuje a obě ikony zmizí. Pokud zvolíte odpovídající dvojici, příkaz New `if` se spustí a příkaz return způsobí, že metoda přeskočí kód, který spouští časovač, takže ikony zůstanou viditelné, jak je znázorněno na následujícím obrázku.
 
      ![Game, které v tomto kurzu vytvoříte ](../ide/media/express_finishedgame.png)<br/>
-**Porovnávací hra** s viditelnými páry ikon
+***Porovnávací hra*** *s viditelnými páry ikon*
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu, přečtěte si [Krok 8: Přidání metody pro ověření, zda hráč zvítězil](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md).
+- Pokud chcete přejít na další krok kurzu, přečtěte si **[Krok 8: Přidání metody pro ověření, zda hráč zvítězil](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md)** .
 
 - Pokud se chcete vrátit k předchozímu kroku kurzu, přečtěte si [Krok 6: Přidání časovače](../ide/step-6-add-a-timer.md).
