@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 866ad705f16e9eabb097e9c0c9064d2c379ebf9f
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
-ms.translationtype: HT
+ms.openlocfilehash: f16040408def290536ac5dadfec77ade9577c821
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349627"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72568920"
 ---
 # <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Sdělte ladicímu programu, co se má zobrazit pomocí atributuC#DebuggerDisplay (, F#Visual Basic C++,,/CLI).
 
@@ -182,6 +182,6 @@ class MyHashtable
 ## <a name="see-also"></a>Viz také
 
 - [Používání atributu DebuggerTypeProxy](../debugger/using-debuggertypeproxy-attribute.md)
-- [Vytváření vlastních zobrazení spravovaných objektů](../debugger/create-custom-views-of-dot-managed-objects.md)
+- [Vytváření vlastních zobrazení spravovaných objektů](../debugger/create-custom-views-of-managed-objects.md)
 - [Specifikátory formátu v jazyce C#](../debugger/format-specifiers-in-csharp.md)
 - [Rozšíření ladění pomocí atributů zobrazení ladicího programu](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)
