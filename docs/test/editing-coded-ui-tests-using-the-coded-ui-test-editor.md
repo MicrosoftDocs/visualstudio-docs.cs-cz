@@ -6,193 +6,193 @@ f1_keywords:
 - vs.codedUItest.testeditor
 helpviewer_keywords:
 - coded UI test, Coded UI Test Editor
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 88002f4187883d55f22ec9f3dc80f3ceb65e7e48
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+author: jillre
+ms.openlocfilehash: 971b5d178a777b7a0021eda4bfccab06727981ee
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62784421"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665004"
 ---
-# <a name="edit-coded-ui-tests-using-the-coded-ui-test-editor"></a>Úprava programových testů uživatelského rozhraní pomocí editoru programového testu uživatelského rozhraní
+# <a name="edit-coded-ui-tests-using-the-coded-ui-test-editor"></a>Úpravy programových testů uživatelského rozhraní pomocí editoru programových testů uživatelského rozhraní
 
-Editor programového testu uživatelského rozhraní umožňuje snadno upravovat programové testy uživatelského rozhraní. Použití editoru programového testu UI, můžete vyhledat, zobrazit a upravit vlastnosti testovací metody a akce uživatelského rozhraní. Kromě toho můžete použít v mapování ovládacího prvku uživatelského rozhraní k zobrazení a jejich odpovídající ovládacích prvcích pro úpravy.
+Editor programového testu UI umožňuje snadno upravit kódované testy uživatelského rozhraní. Pomocí editoru programového testu UI můžete vyhledat, zobrazit a upravit vlastnosti testovacích metod a akcí uživatelského rozhraní. Kromě toho můžete použít mapu ovládacího prvku uživatelského rozhraní k zobrazení a úpravě odpovídajících ovládacích prvků.
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
 **Požadavky**
 
 - Visual Studio Enterprise
-- Programový test komponenta uživatelského prostředí
+- Komponenta programového testu uživatelského rozhraní
 
-## <a name="features-of-the-coded-ui-test-editor"></a>Funkce nástroje editoru programového testu UI
+## <a name="features-of-the-coded-ui-test-editor"></a>Funkce editoru programového testu UI
 
-Použití editoru programového testu UI je rychlejší a efektivnější než úpravy kódu v programových testovací metody uživatelského rozhraní pomocí editoru kódu. Se editoru programového testu UI, můžete použít nástrojů a v místní nabídky rychle vyhledat a upravte hodnoty vlastností související s ovládacími prvky a akce uživatelského rozhraní. Například můžete použít editoru programového testu UI pro panel nástrojů k provedení následujících příkazů:
+Použití editoru programového testu UI je rychlejší a efektivnější než úprava kódu v metodách programového testu UI pomocí editoru kódu. Pomocí editoru programového testu UI můžete pomocí panelů nástrojů a místních nabídek rychle vyhledat a upravit hodnoty vlastností přidružené k akcím a ovládacím prvkům uživatelského rozhraní. Například můžete použít panel nástrojů editoru programového testu UI k provedení následujících příkazů:
 
-![Editor testu UI](../test/media/uitesteditor.png)
+![Editor testu uživatelského rozhraní](../test/media/uitesteditor.png)
 
-1. [Najít](../ide/finding-and-replacing-text.md) pomáhá při hledání akce uživatelského rozhraní a ovládací prvky.
+1. [Hledání](../ide/finding-and-replacing-text.md) vám pomůže najít akce a ovládací prvky uživatelského rozhraní.
 
-2. **Odstranit** odebere nežádoucích akcí uživatelského rozhraní.
+2. **Odstranit** odebere nechtěné akce uživatelského rozhraní.
 
-3. **Přejmenovat** změní názvy pro testovací metody a ovládací prvky.
+3. **Přejmenování** změní názvy testovacích metod a ovládacích prvků.
 
-4. **Vlastnosti** otevře **vlastnosti** okna pro vybranou položku.
+4. **Vlastnosti** otevře okno **vlastnosti** pro vybranou položku.
 
-5. **Rozdělit na novou metodu** umožňuje modularizaci akce uživatelského rozhraní.
+5. **Rozdělení na novou metodu** vám umožní naplánovat modularizaci akce uživatelského rozhraní.
 
-6. **Přesunout kód** přidá vlastní kód testovací metody.
+6. **Přesunutí kódu** přidá vlastní kód do testovacích metod.
 
-7. **Vložit zpoždění před** přidá pozastavení před akci uživatelského rozhraní, zadává v milisekundách.
+7. **Vložení prodlevy před** přidáním pauzy před akcí uživatelského rozhraní, které je zadáno v milisekundách.
 
-8. **Vyhledejte ovládací prvek uživatelského rozhraní** Určuje umístění ovládacího prvku v uživatelském rozhraní aplikace v rámci testu.
+8. **Vyhledání ovládacího prvku uživatelského rozhraní** identifikuje umístění ovládacího prvku v uživatelském rozhraní testované aplikace.
 
-9. **Najít všechny** ověříte pomáhá řídit vlastnost a významné změny na ovládací prvky vaší aplikace.
+9. **Vyhledat vše** vám pomůže ověřit vlastnost ovládacího prvku a významné změny ovládacích prvků aplikace.
 
-Když otevřete *UIMap.uitest* přidružený žádný programového testu UI, programový test otevře uživatelské rozhraní v souboru **editoru programového testu UI**. Následující postupy popisují, jak můžete poté vyhledejte a upravovat testovací metody a vlastnosti pro akce uživatelského rozhraní a ovládacích prvků pomocí editoru panelu nástrojů a nabídek.
+Když otevřete soubor *UIMap. UITest* přidružený k zakódovanému testu UI, Programový test uživatelského rozhraní se otevře v editoru programového **testu UI**. Následující postupy popisují, jak můžete vyhledat a upravit testovací metody a vlastnosti pro akce uživatelského rozhraní a ovládací prvky pomocí panelu nástrojů a místních nabídek editoru.
 
-## <a name="open-a-coded-ui-test"></a>Spustit programový test uživatelského rozhraní
+## <a name="open-a-coded-ui-test"></a>Otevření programového testu uživatelského rozhraní
 
-Můžete zobrazit a upravit vaše Visual C# a Visual Basic založena programových testů UI pomocí **editoru programového testu UI**.
+Pomocí editoru programového C# **testu uživatelského rozhraní**můžete zobrazit a upravit vizuální a Visual Basic KÓDOVANÝ programový test uživatelského rozhraní.
 
-![Kontextové nabídky upravit pomocí Tvůrce programového testu UI](../test/media/editcodeduitest.png)
+![Místní nabídka upravit pomocí Tvůrce programového testu uživatelského rozhraní](../test/media/editcodeduitest.png)
 
-V **Průzkumníka řešení**, otevřete místní nabídku pro *UIMap.uitest* a zvolte **otevřete**. Programový test uživatelského rozhraní se zobrazí v **editoru programového testu UI**. Nyní můžete zobrazit a upravit nahrané metody, akce a odpovídající ovládací prvky v programovém testu uživatelského rozhraní.
+V **Průzkumník řešení**otevřete místní nabídku pro *UIMap. UITest* a klikněte na **otevřít**. Programový test uživatelského rozhraní se zobrazí v **editoru programového testu UI**. Nyní můžete zobrazit a upravit zaznamenané metody, akce a odpovídající ovládací prvky v programovém testu uživatelského rozhraní.
 
 > [!TIP]
-> Když vyberete akci uživatelského rozhraní, který je umístěný v metodě v **akce uživatelského rozhraní** podokně odpovídající ovládací prvek je zvýrazněn. Můžete také upravit akce uživatelského rozhraní nebo vlastností ovládacích prvků.
+> Když vyberete akci uživatelského rozhraní, která je umístěna v metodě v podokně **akce uživatelského rozhraní** , je zvýrazněn odpovídající ovládací prvek. Můžete také upravit akci uživatelského rozhraní nebo vlastnosti ovládacích prvků.
 
-## <a name="modify-ui-action-and-control-properties"></a>Úprava vlastností akce a ovládací prvek uživatelského rozhraní
+## <a name="modify-ui-action-and-control-properties"></a>Upravit akce uživatelského rozhraní a vlastnosti ovládacího prvku
 
-Pomocí editoru programového testu UI, můžete rychle najít a zobrazit všechny akce uživatelského rozhraní ve vašich testovacích metodách. Při výběru akce uživatelského rozhraní v editoru je zvýrazněn automaticky odpovídající ovládací prvek. Podobně pokud vyberete ovládací prvek, jsou zvýrazněny přidružené akce uživatelského rozhraní. Když vyberete akci uživatelského rozhraní nebo ovládacího prvku, je pak snadno použitelné **vlastnosti** okna k úpravě vlastností, které odpovídají s ním.
+Pomocí editoru programového testu UI můžete rychle najít a zobrazit všechny akce uživatelského rozhraní v testovacích metodách. Když vyberete akci uživatelského rozhraní v editoru, odpovídající ovládací prvek se automaticky zvýrazní. Podobně pokud vyberete ovládací prvek, jsou zvýrazněny související akce uživatelského rozhraní. Když vyberete akci uživatelského rozhraní nebo ovládací prvek, je pak snadné použít okno **vlastnosti** pro úpravu vlastností, které s ním odpovídají.
 
-![Vlastností akce uživatelského rozhraní](../test/media/codeduiedituiaction.png)
+![Vlastnosti akce uživatelského rozhraní](../test/media/codeduiedituiaction.png)
 
-Úpravy vlastností akce uživatelského rozhraní v **akce uživatelského rozhraní** podokně rozbalte položku testovací metoda, která obsahuje akce uživatelského rozhraní, který chcete upravit vlastnosti pro vybrané akce uživatelského rozhraní a potom upravte vlastnosti pomocí okna Vlastnosti.
+Chcete-li upravit vlastnosti akce uživatelského rozhraní, v podokně **akce uživatelského rozhraní** rozbalte testovací metodu obsahující akci uživatelského rozhraní, pro kterou chcete upravit vlastnosti, vyberte akci uživatelského rozhraní a pak upravte vlastnosti pomocí okno Vlastnosti.
 
-Například pokud server není k dispozici a máte akce uživatelského rozhraní související s webovým prohlížečem, který uvádí **přejít na webovou stránku "<http://Contoso1/default.aspx>"**, můžete změnit adresu URL `'http://Contoso2/default.aspx'`.
+Pokud například server není k dispozici a máte přidruženou akci uživatelského rozhraní k vašemu webovému prohlížeči, který uvádí stav **Přejít na webovou stránku <http://Contoso1/default.aspx>** , můžete změnit adresu URL na `'http://Contoso2/default.aspx'`.
 
-![Vlastnosti ovládacích prvků](../test/media/codeduitestcontrolprop.png)
+![Vlastnosti ovládacího prvku](../test/media/codeduitestcontrolprop.png)
 
-Úprava vlastností pro ovládací prvek se provádí stejným způsobem jako akce uživatelského rozhraní. V **mapování ovládacího prvku UI** podokně, vyberte ovládací prvek, který chcete upravit a změnit jeho vlastnosti pomocí **vlastnosti** okna.
+Změna vlastností ovládacího prvku se provádí stejným způsobem jako akce uživatelského rozhraní. V podokně **Mapa ovládacího prvku uživatelského rozhraní** vyberte ovládací prvek, který chcete upravit, a upravte jeho vlastnosti pomocí okna **vlastnosti** .
 
-Například vývojář změnil **(ID)** vlastnosti u ovládacího prvku tlačítko ve zdrojovém kódu aplikace testovány z "idSubmit" k "idLogin." S **(ID)** vlastnost změněn v aplikaci, programový test uživatelského rozhraní nebude možné najít ovládací prvek tlačítko a se nezdaří. V takovém případě můžete otevřít tester **vlastnosti hledání** kolekce a změnit **Id** vlastnost tak, aby odpovídala nové hodnoty, které vývojář používaných v aplikaci. Tester může změnit také **popisný název** hodnoty vlastnosti z "Odeslat" "Login". Touto změnou přidružené akce uživatelského rozhraní v uživatelském rozhraní editoru programového testu je aktualizováno z hodnoty "Vyberte"Odeslat"button" na "Vyberte"Přihlášení"tlačítko."
+Vývojář například mohl změnit vlastnost **(ID)** na ovládacím prvku tlačítko ve zdrojovém kódu pro aplikaci, která je testována z "idSubmit" na "idLogin". V aplikaci se změnila vlastnost **(ID)** , Programový test uživatelského rozhraní nebude moci najít ovládací prvek tlačítko a nebude úspěšný. V tomto případě může tester otevřít kolekci **Vlastnosti hledání** a změnit vlastnost **ID** tak, aby odpovídala nové hodnotě, kterou vývojář v aplikaci použil. Tester může také změnit hodnotu vlastnosti **popisného názvu** z "Odeslat" na "login". Díky této změně se přidružená akce uživatelského rozhraní v editoru programového testu uživatelského rozhraní aktualizuje z příkazu "Odeslat tlačítko" na "zvolit" tlačítko Login.
 
-Po dokončení změn se uložit změny *UIMap.Designer* soubor výběrem **Uložit** na panelu nástrojů sady Visual Studio.
+Po dokončení úprav uložte změny do souboru *UIMap. Designer* kliknutím na tlačítko **Uložit** na panelu nástrojů sady Visual Studio.
 
 ### <a name="tips"></a>Tipy
 
-- Pokud **vlastnosti** okno nezobrazí, stiskněte a podržte **Alt** při stisknutí klávesy **Enter**, nebo stiskněte klávesu **F4**.
+- Pokud se okno **vlastnosti** nezobrazí, stiskněte a podržte klávesu **ALT** , stiskněte klávesu **ENTER**nebo stiskněte klávesu **F4**.
 
-- Chcete-li vrátit zpět provedené změny vlastností, vyberte **zpět** z **upravit** nabídky nebo stisknutím klávesy **Ctrl**+**Z**.
+- Provedené změny vlastností vrátíte zpět výběrem možnosti **zpět** v nabídce **Úpravy** nebo stisknutím **kombinace kláves CTRL** +**z**.
 
-- Můžete použít **najít** tlačítko v panelu nástrojů editoru programového testu uživatelského rozhraní **najít a nahradit** nástroje v sadě Visual Studio. Pak můžete použít **najít** ovládacího prvku najít akce uživatelského rozhraní v editoru programového testu UI. Například můžete zkusit najít "klikněte na tlačítko"Přihlášení"." To může být užitečné v testech velké. Nemůžete použít funkci nahradit v **najít a nahradit** nástroj v editoru programového testu UI. Další informace najdete v tématu najít v ovládacím prvku [najít a nahradit text](../ide/finding-and-replacing-text.md).
+- K otevření nástroje **Najít a nahradit** v sadě Visual Studio můžete použít tlačítko **Najít** na panelu nástrojů editoru programového testu UI. Pak můžete pomocí ovládacího prvku **hledání** vyhledat akci uživatelského rozhraní v editoru programového testu UI. Například se můžete pokusit najít kliknutím na tlačítko Login. To může být užitečné při velkých testech. V editoru programového testu UI nelze použít funkci Replace v nástroji **Najít a nahradit** . Další informace najdete v tématu Vyhledání [a nahrazení textu](../ide/finding-and-replacing-text.md)v části najít ovládací prvek.
 
-- V některých případech může být obtížné vizualizovat, kde jsou umístěny ovládací prvky v uživatelském rozhraní aplikace v rámci testu. Jednou z možností editoru programového testu uživatelského rozhraní je, že můžete vybrat ovládací prvek, který je uvedený v mapování ovládacího prvku uživatelského rozhraní a zobrazit jeho umístění v testované aplikaci. Další informace najdete v tématu [vyhledání ovládacího prvku uživatelského rozhraní v testované aplikaci](#locate-a-ui-control-in-the-application-under-test) najít další níže v tomto článku.
+- V některých případech může být obtížné vizualizovat, kde jsou ovládací prvky umístěny v uživatelském rozhraní testované aplikace. Jednou z možností Editoru programového testu UI je, že můžete vybrat ovládací prvek uvedený v mapě ovládacího prvku uživatelského rozhraní a zobrazit jeho umístění v testované aplikaci. Další informace naleznete v tématu [vyhledání ovládacího prvku uživatelského rozhraní v testované aplikaci](#locate-a-ui-control-in-the-application-under-test) , které najdete dále v tomto článku.
 
-- Může být potřeba rozšířit ovládací prvek kontejneru, který obsahuje ovládací prvek, který chcete upravit. Další informace najdete v tématu [vyhledejte ovládací prvek a jeho následníky](#locate-a-control-and-its-descendants) najít další níže v tomto článku.
+- Může být nutné rozšířit ovládací prvek kontejneru, který obsahuje ovládací prvek, který chcete upravit. Další informace naleznete v tématu [vyhledání ovládacího prvku a jeho následníků](#locate-a-control-and-its-descendants) uvedených níže v tomto článku.
 
-## <a name="delete-unwanted-ui-actions"></a>Odstranění nežádoucích akcí uživatelského rozhraní
+## <a name="delete-unwanted-ui-actions"></a>Odstranit nechtěné akce uživatelského rozhraní
 
-Můžete snadno odebrat nežádoucích akcí uživatelského rozhraní programového testu UI.
+Můžete snadno odebrat nechtěné akce uživatelského rozhraní v programovém testu uživatelského rozhraní.
 
-![Odstranění akce uživatelského rozhraní](../test/media/codeduideleteuiaction.png)
+![Akce odstranění uživatelského rozhraní](../test/media/codeduideleteuiaction.png)
 
-V **akce uživatelského rozhraní** podokně rozbalte položku testovací metoda, která obsahuje akce uživatelského rozhraní, který chcete odstranit. Otevřete místní nabídku pro akce uživatelského rozhraní a zvolte **odstranit**.
+V podokně **akce uživatelského rozhraní** rozbalte testovací metodu obsahující akci uživatelského rozhraní, kterou chcete odstranit. Otevřete místní nabídku pro akci uživatelského rozhraní a vyberte možnost **Odstranit**.
 
-## <a name="split-a-test-method-into-two-separate-methods"></a>Testovací metoda rozdělit do dvou samostatných metod
+## <a name="split-a-test-method-into-two-separate-methods"></a>Rozdělení testovací metody do dvou samostatných metod
 
-Testovací metoda, pro upřesnění nebo modularizaci akce uživatelského rozhraní můžete rozdělit. Například test může mít jeden testovací metodou akce uživatelského rozhraní ve dvou ovládacích prvků kontejneru. Akce uživatelského rozhraní může být lepší modulární v dvě metody, které odpovídají jeden kontejner.
+Můžete rozdělit testovací metodu pro upřesnění nebo pro naplánovat modularizacií akcí uživatelského rozhraní. Například váš test může mít jedinou testovací metodu s akcemi uživatelského rozhraní ve dvou ovládacích prvcích kontejneru. Akce uživatelského rozhraní mohou být lépe modulární ve dvou metodách, které odpovídají jednomu kontejneru.
 
-![Split – metoda test](../test/media/codeduitestsplitmethod1.png)
+![Rozdělení testovací metody](../test/media/codeduitestsplitmethod1.png)
 
-![Dva testovací metody](../test/media/codeduitestsplitmethod2.png)
+![Dvě testovací metody](../test/media/codeduitestsplitmethod2.png)
 
-V **akce uživatelského rozhraní** podokně rozbalte položku testovací metoda, kterou chcete rozdělit do dvou samostatných metod a výběr akce uživatelského rozhraní, kde chcete začít novou testovací metodu. Buď otevřete místní nabídku pro akce uživatelského rozhraní a klikněte na tlačítko **rozdělit na novou metodu**, nebo zvolte **rozdělit na novou metodu** tlačítko na panelu nástrojů editoru programového testu UI. Nové metody testu se zobrazí v **akce uživatelského rozhraní** podokně. Obsahuje akce uživatelského rozhraní od akce, ve kterém jste zadali rozdělení.
+V podokně **akce uživatelského rozhraní** rozbalte testovací metodu, kterou chcete rozdělit do dvou samostatných metod, a vyberte akci uživatelského rozhraní, kde chcete spustit novou metodu testu. Buď otevřete místní nabídku pro akci uživatelského rozhraní a zvolte možnost **rozdělit do nové metody**, nebo zvolte tlačítko rozdělit na **novou metodu** na panelu nástrojů editoru programového testu UI. Nová testovací metoda se zobrazí v podokně **akce uživatelského rozhraní** . Obsahuje akce uživatelského rozhraní od akce, kde jste určili rozdělení.
 
-Po dokončení rozdělení metodu, uložte změny *UIMap.Designer* soubor výběrem **Uložit** na panelu nástrojů sady Visual Studio.
+Po dokončení rozdělení metody uložte změny do souboru *UIMap. Designer* kliknutím na tlačítko **Uložit** na panelu nástrojů sady Visual Studio.
 
 > [!WARNING]
-> Pokud rozdělíte metodu, je třeba upravit jakýkoli kód, který volá metodu existující také zavolat novou metodu, kterou se chystáte vytvořit, pokud chcete i tyto akce uživatelského rozhraní, které jsou zahrnuty. Pokud rozdělíte metodu, zobrazí se dialogové okno sady Microsoft Visual Studio. Upozorňuje vás, že je třeba upravit jakýkoli kód, který volá metodu existující také zavolat novou metodu, kterou se chystáte vytvořit. Zvolte **Ano**.
+> Pokud rozdělíte metodu, je nutné upravit jakýkoli kód, který volá existující metodu pro volání nové metody, kterou vytváříte, pokud stále chcete tyto akce uživatelského rozhraní zahrnout. Při rozdělení metody se zobrazí dialogové okno Microsoft Visual Studio. Upozorňuje vás, že je nutné upravit jakýkoli kód, který volá existující metodu pro volání nové metody, kterou vytváříte. Vyberte **Ano**.
 
 ### <a name="tips"></a>Tipy
 
-- Chcete-li zrušit rozdělení, zvolte **zpět** z **upravit** nabídky nebo stisknutím klávesy **Ctrl**+**Z**.
+- Chcete-li rozdělení vrátit zpět, zvolte možnost **zpět** v nabídce **Úpravy** nebo stiskněte klávesovou **zkratku CTRL** +**Z**.
 
-- Nové metody, můžete přejmenovat. Vyberte ho v **akce uživatelského rozhraní** podokně a zvolte **přejmenovat** tlačítko na panelu nástrojů editoru programového testu UI.
+- Novou metodu můžete přejmenovat. Vyberte ji v podokně **akce uživatelského rozhraní** a klikněte na tlačítko **Přejmenovat** na panelu nástrojů editoru programového testu UI.
 
    -nebo-
 
-   Otevřete místní nabídku pro nové testovací metoda a zvolte možnost **přejmenovat**.
+   Otevřete místní nabídku pro novou testovací metodu a vyberte možnost **Přejmenovat**.
 
-   Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že je třeba upravit jakýkoli kód, který odkazuje na metodu. Zvolte **Ano**.
+   Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že je nutné upravit jakýkoli kód, který odkazuje na metodu. Vyberte **Ano**.
 
-## <a name="move-a-test-method-to-the-uimap-file-to-facilitate-customization"></a>Přesunout testovací metodu do souboru UIMap za účelem usnadnění přizpůsobení
+## <a name="move-a-test-method-to-the-uimap-file-to-facilitate-customization"></a>Přesunutí testovací metody do souboru UIMap, aby se usnadnilo přizpůsobení
 
-Pokud zjistíte, že jedna z testovacích metod v kódované UI test vyžaduje vlastní kód, je nutné přesunout do buď *UIMap.cs* nebo *UIMap.vb* souboru. V opačném případě kódu budou přepsány pokaždé, když se znovu zkompiluje programový test uživatelského rozhraní. Pokud přesunete není metodu, váš vlastní kód, budou přepsány pokaždé, když test přepsán.
+Pokud určíte, že jedna z vašich zkušebních metod v programovém testu UI vyžaduje vlastní kód, je nutné ji přesunout do souboru *UIMap.cs* nebo *UIMap. vb* . V opačném případě bude váš kód při každém překompilování kódovaného testu uživatelského rozhraní přepsán. Pokud tuto metodu nepřesunete, váš vlastní kód se přepíše pokaždé, když je test znovu zkompilován.
 
-V **akce uživatelského rozhraní** podokně, vyberte testovací metody, kterou chcete přesunout *UIMap.cs* nebo *UIMap.vb* soubor pro usnadnění funkce vlastního kódu, který nedojde k přepsání Pokud testovací kód přepsán. V dalším kroku vyberte **přesunout kód** tlačítko na panelu nástrojů editoru programového testu UI nebo otevřete místní nabídku pro metodu testování a zvolte **přesunout kód**. Testovací metoda je odebrána z *UIMap.uitest* souboru a už nebude zobrazovat v **akce uživatelského rozhraní** podokně. Chcete-li upravit přesunutý soubor testu, otevřete *UIMap.cs* nebo *UIMap.vb* souboru z **Průzkumníka řešení**.
+V podokně **akce uživatelského rozhraní** vyberte testovací metodu, kterou chcete přesunout do souboru *UIMap.cs* nebo *UIMap. vb* , abyste usnadnili funkci vlastního kódu, která nebude přepsána při překompilování testovacího kódu. Dále klikněte na tlačítko **přesunout kód** na panelu nástrojů editoru programového testu UI nebo otevřete místní nabídku pro testovací metodu a vyberte možnost **přesunout kód**. Testovací metoda je odebrána ze souboru *UIMap. UITest* a již se nezobrazuje v podokně **akce uživatelského rozhraní** . Chcete-li upravit testovací soubor, který jste přesunuli, otevřete soubor *UIMap.cs* nebo *UIMap. vb* z **Průzkumník řešení**.
 
-Po dokončení přesunutí metody, uložit změny *UIMap.Designer* soubor výběrem **Uložit** na panelu nástrojů sady Visual Studio.
+Po dokončení přesunutí metody uložte změny do souboru *UIMap. Designer* kliknutím na tlačítko **Uložit** na panelu nástrojů sady Visual Studio.
 
 > [!WARNING]
-> Po přesunutí metody můžete nadále upravovat pomocí editoru programového testu UI. Musíte přidat vlastní kód a spravovat jej pomocí Editoru kódu. Při přesunutí metody se zobrazí dialogové okno sady Microsoft Visual Studio. Upozorňuje vás, že metoda bude přesunuta ze *UIMap.uitest* do souboru *UIMap.cs* nebo *UIMap.vb* Souborová služba a že se už budete moci upravit pomocí metody Editor programového testu UI. Zvolte **Ano**.
+> Po přesunutí metody již nelze upravovat pomocí editoru programového testu UI. Musíte přidat vlastní kód a spravovat jej pomocí Editoru kódu. Při přesunutí metody se zobrazí dialogové okno Microsoft Visual Studio. Upozorňuje vás, že metoda bude přesunuta ze souboru *UIMap. UITest* do souboru *UIMap.cs* nebo *UIMap. vb* a že již nebudete moci upravovat metodu pomocí editoru programového testu uživatelského rozhraní. Vyberte **Ano**.
 
 ### <a name="tips"></a>Tipy
 
-K přechodu zpět, vyberte **zpět** z **upravit** nabídky nebo stisknutím klávesy **Ctrl**+**Z**. Ale musíte pak ručně odebrat kód z *UIMap.cs* nebo *UIMap.vb* souboru.
+Chcete-li zrušit přesun, vyberte možnost **zpět** v nabídce **Úpravy** nebo stiskněte klávesu **CTRL** +**Z**. Je však nutné ručně odebrat kód ze souboru *UIMap.cs* nebo *UIMap. vb* .
 
-## <a name="locate-a-ui-control-in-the-application-under-test"></a>Vyhledejte v testované aplikaci prvku uživatelského rozhraní
+## <a name="locate-a-ui-control-in-the-application-under-test"></a>Vyhledání ovládacího prvku uživatelského rozhraní v testované aplikaci
 
-V některých případech může být obtížné vizualizovat, kde jsou umístěny ovládací prvky v uživatelském rozhraní aplikace v rámci testu. Jednou z možností editoru programového testu uživatelského rozhraní je, že můžete vybrat ovládací prvek, který je uvedený v mapování ovládacího prvku uživatelského rozhraní a zobrazit jeho umístění v testované aplikaci. Použití **vyhledejte ovládací prvek uživatelského rozhraní** funkce na testovanou aplikaci lze také ověřit hledání vlastnost změny provedené na ovládací prvek.
+V některých případech může být obtížné vizualizovat, kde jsou ovládací prvky umístěny v uživatelském rozhraní testované aplikace. Jednou z možností Editoru programového testu UI je, že můžete vybrat ovládací prvek uvedený v mapě ovládacího prvku uživatelského rozhraní a zobrazit jeho umístění v testované aplikaci. Pomocí funkce **najít ovládací prvek uživatelského rozhraní** v testované aplikaci lze také použít k ověření úprav vlastností hledání, které jste provedli v ovládacím prvku.
 
-![Vyhledejte ovládací prvek uživatelského rozhraní](../test/media/codeduilocatecontrol.png)
+![Vyhledat ovládací prvek uživatelského rozhraní](../test/media/codeduilocatecontrol.png)
 
 ![Ovládací prvek umístěný v testované aplikaci](../test/media/codeduilocatecontrol2.png)
 
-V **mapování ovládacího prvku UI** podokně, vyberte ovládací prvek, který chcete vyhledat v aplikace přidružené k testu. Dále otevřete místní nabídku pro ovládací prvek a pak zvolte **vyhledejte ovládací prvek uživatelského rozhraní**. V aplikaci, která je právě testováno je určen ovládací prvek s modrým ohraničením.
+V podokně **Mapa ovládacího prvku uživatelského rozhraní** vyberte ovládací prvek, který chcete najít v aplikaci přidružené k testu. Potom otevřete místní nabídku pro ovládací prvek a pak zvolte **najít ovládací prvek uživatelského rozhraní**. V testované aplikaci je ovládací prvek označený modrým ohraničením.
 
 > [!NOTE]
-> Předtím, než můžete vyhledat ovládací prvek uživatelského rozhraní, ověřte, zda je spuštěna aplikace spojené s testem.
+> Před umístěním ovládacího prvku uživatelského rozhraní ověřte, zda je aplikace přidružená k testu spuštěna.
 
 ### <a name="tips"></a>Tipy
 
-Můžete použít **vyhledejte všechny** možnost ověřit, že všechny ovládací prvky v rámci kontejneru může být správně umístěný. Tato možnost je popsaná v další části.
+Pomocí možnosti **Najít vše** můžete ověřit, zda lze správně umístit všechny ovládací prvky v kontejneru. Tato možnost je popsaná v následující části.
 
-## <a name="locate-a-control-and-its-descendants"></a>Vyhledejte ovládací prvek a jejích potomků
+## <a name="locate-a-control-and-its-descendants"></a>Vyhledat ovládací prvek a jeho následníky
 
-Můžete ověřit, že všechny ovládací prvky v rámci kontejneru může být správně umístěn v uživatelském rozhraní aplikace v rámci testu. To může být užitečné při ověřování hledání vlastnost provedené změny mohou mít ke kontejneru. Kromě toho v uživatelském rozhraní aplikace v rámci testu byly významné změny, můžete ověřit, že jsou stále správné existující vlastnosti hledání ovládacího prvku.
+Můžete ověřit, že všechny ovládací prvky v kontejneru mohou být správně umístěny v uživatelském rozhraní testované aplikace. To může být užitečné při ověřování změn vlastností hledání, které jste mohli u kontejneru provést. Pokud se navíc v uživatelském rozhraní testované aplikace objevily významné změny, můžete ověřit, zda jsou stále správné vlastnosti hledání stávajících ovládacích prvků.
 
-![Vyhledání všech potomků ovládacích prvků](../test/media/codeduilocateall.png)
+![Najít všechny podřízené ovládací prvky](../test/media/codeduilocateall.png)
 
 ![Všechny ovládací prvky umístěné](../test/media/codeduilocateall2.png)
 
-V **mapování ovládacího prvku UI** podokně, vyberte ovládací prvek kontejneru, který chcete vyhledat a zobrazit všechny následníky pro. Dále otevřete místní nabídku pro ovládací prvek a vyberte **vyhledejte všechny**. Ovládací prvek kontejneru a všech jeho podřízených ovládacích prvků, jsou označeny v editoru programového testu UI s zelená značka zaškrtnutí nebo red "X". Tyto značky umožňují vědět, pokud ovládací prvky byly úspěšně umístěny v testované aplikaci.
+V podokně **Mapa ovládacího prvku uživatelského rozhraní** vyberte ovládací prvek kontejneru, který chcete najít a zobrazit všechny následníky pro. Potom otevřete místní nabídku ovládacího prvku a vyberte **Najít vše**. Ovládací prvek kontejner a všechny jeho odvozené ovládací prvky jsou označeny v editoru programového testu UI buď zeleným zaškrtnutím, nebo červeným znakem "X". Tyto značky vám pomůžou zjistit, jestli se ovládací prvky úspěšně nacházely v testované aplikaci.
 
 > [!NOTE]
-> Před vyhledávání ovládacích prvků uživatelského rozhraní, ověřte, zda je spuštěna aplikace spojené s testem.
+> Před umístěním ovládacích prvků uživatelského rozhraní ověřte, zda je spuštěna aplikace přidružená k testu.
 
-## <a name="insert-a-delay-before-a-ui-action"></a>Vložení prodlevy před akci uživatelského rozhraní
+## <a name="insert-a-delay-before-a-ui-action"></a>Vložení zpoždění před akci uživatelského rozhraní
 
-V některých případech můžete chtít provést test čekání na určité události pravděpodobnější, jako je okno se zobrazí indikátor průběhu zmizí a tak dále. Pomocí editoru programového testu uživatelského rozhraní, lze provést pomocí vložení prodlevy před akci uživatelského rozhraní. Můžete určit, kolik sekund má zpoždění, aby.
+V některých případech můžete chtít, aby test čekal na výskyt určitých událostí, jako je okno, které se má zobrazit, indikátor průběhu zmizí a tak dále. Pomocí editoru programového testu UI můžete to provést vložením zpoždění před akci uživatelského rozhraní. Můžete zadat, kolik sekund má být zpoždění.
 
-![Vložit zpoždění před akci uživatelského rozhraní](../test/media/codeduidelay.png)
+![Vložení zpoždění před akcí uživatelského rozhraní](../test/media/codeduidelay.png)
 
-![Zpoždění přidána s 5 sekund](../test/media/codeduidealy2.png)
+![Zpoždění přidané s 5 sekundami](../test/media/codeduidealy2.png)
 
-V **akce uživatelského rozhraní** podokně rozbalte položku testovací metoda, která obsahuje akce uživatelského rozhraní, který chcete vložit zpoždění před. Výběr akce uživatelského rozhraní. Dále otevřete místní nabídku pro akce uživatelského rozhraní a zvolte **vložit zpoždění před**. Zpoždění při vkládání a zvýrazněná, před vybrané akce uživatelského rozhraní s následujícím textem: **Počkejte 1 sekundy pro zpoždění uživatele mezi akcemi**. V **vlastnosti** okna, změňte hodnotu **zpoždění** vlastnost na požadovanou dobu v milisekundách.
+V podokně **akce uživatelského rozhraní** rozbalte testovací metodu, která obsahuje akci uživatelského rozhraní, do které chcete vložit zpoždění. Vyberte akci uživatelského rozhraní. Dále otevřete místní nabídku pro akci uživatelského rozhraní a vyberte možnost **Vložit zpoždění před**. Je vložena a zvýrazněna prodleva před zvolenou akcí uživatelského rozhraní s následujícím textem: pro **prodlevu uživatele mezi akcemi počkejte 1 sekundy**. V okně **vlastnosti** změňte hodnotu vlastnosti **Delay** na požadovaný počet milisekund.
 
-Po dokončení vkládání zpoždění, uložte změny *UIMap.Designer* soubor výběrem **Uložit** na panelu nástrojů sady Visual Studio.
+Po vložení prodlevy uložte změny do souboru *UIMap. Designer* kliknutím na tlačítko **Uložit** na panelu nástrojů sady Visual Studio.
 
-Pokud je potřeba zajistit, že určitý ovládací prvek je k dispozici před akci uživatelského rozhraní, měli byste zvážit přidání vlastního kódu pro testovací metodu pomocí odpovídající metody UITestControl.WaitForControlXXX(). Další informace najdete v tématu [vytváření uživatelského rozhraní čekání programových testů konkrétní události při přehrávání](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md).
+Pokud potřebujete zajistit, aby byl konkrétní ovládací prvek k dispozici před akcí uživatelského rozhraní, měli byste zvážit přidání vlastního kódu do testovací metody pomocí příslušné metody UITestControl. WaitForControlXXX (). Další informace najdete v tématu [vytváření programových testů uživatelského rozhraní, které čekají na konkrétní události během přehrávání](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md).
 
 ## <a name="see-also"></a>Viz také:
 
 - [Použití automatizace uživatelského rozhraní k testování kódu](../test/use-ui-automation-to-test-your-code.md)
-- [Vytvoření programové testy uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md)
-- [Vytvoření datově řízeného programového testu UI](../test/creating-a-data-driven-coded-ui-test.md)
-- [Návod: Vytváření, úpravy a údržba programového testu uživatelského rozhraní](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
+- [Vytvořit kódované testy uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md)
+- [Vytvořit datově řízený programový test uživatelského rozhraní](../test/creating-a-data-driven-coded-ui-test.md)
+- [Návod: vytváření, upravování a údržba programového testu uživatelského rozhraní](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)

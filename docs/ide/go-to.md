@@ -1,5 +1,5 @@
 ---
-title: Přejděte na soubor, přejděte na symbol, přejít na řádek
+title: Přejít na soubor, přejít na symbol, přejít na řádek
 ms.date: 08/14/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,87 +7,87 @@ helpviewer_keywords:
 - code editor, go to line
 - go to line
 - go to
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 588bc57dc2cda1030e9e1b8d1f989b2cc2d31662
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c3a810e96b410c0f1f6f5d6ffdaa07b1e007abd6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62549981"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654644"
 ---
 # <a name="find-code-using-go-to-commands"></a>Vyhledání kódu pomocí příkazu Přejít
 
-Visual Studio **přejít na** příkazy provádějí cílené hledání kódu vám pomůžou rychle najít zadané položky. Můžete přejít na konkrétní řádek, typ, symbolů, souboru a člen od jednoduché jednotné rozhraní.
+Příkaz **Přejít na** příkazy sady Visual Studio provede cílené hledání kódu, které vám pomůže rychle najít zadané položky. Můžete přejít na konkrétní řádek, typ, symbol, soubor a člen z jednoduchého a sjednoceného rozhraní.
 
 ## <a name="how-to-use-it"></a>Jak ji použít
 
 Vstup | Funkce
 ------------ | ---
-**Klávesnice** | Stisknutím klávesy **Ctrl**+**T** nebo **Ctrl**+ **,**
-**Myši** | Vyberte **upravit** > **přejít na** > **ejít na vše**
+**Kombinace** | Stiskněte **ctrl** +**t** nebo **CTRL** + **,**
+**Stisknut** | Vyberte **upravit**  > **Přejít na**  > **Přejít na vše** .
 
-Malé okno se zobrazí v horní části přímo z editoru kódu.
+V pravém horním rohu editoru kódu se zobrazí malé okno.
 
-![Okno Přejít na vše](media/go-to-all.png)
+![Přejít do celého okna](media/go-to-all.png)
 
-Při psaní do textového pole, výsledky se zobrazí v rozevíracím seznamu pod textovým polem. Přejít na element, vyberte v seznamu.
+Při psaní do textového pole se výsledky zobrazí v rozevíracím seznamu pod textovým polem. Chcete-li přejít na prvek, vyberte ho v seznamu.
 
-![Navigovat na okno](../ide/media/vside_navigatetowindow.png)
+![Přejít na okno](../ide/media/vside_navigatetowindow.png)
 
-Můžete také zadat otazník ( **?** ) Chcete-li získat další pomoc.
+Můžete také zadat otazník ( **?** ) a získat tak další nápovědu.
 
-![Přejít na všechny nápovědy](media/go-to-all-help.png)
+![Přejít na všechny informace](media/go-to-all-help.png)
 
-## <a name="filtered-searches"></a>Filtrované hledání
+## <a name="filtered-searches"></a>Filtrovaná hledání
 
-Ve výchozím nastavení se zadanou položku hledá ve všech položkách řešení. Hledání kódu na konkrétní elementu typů lze však omezit zahájením literálu hledané výrazy pomocí určitých znaků. Vyhledávací filtr můžete také rychle změnit výběrem tlačítka na **přejít na** panel nástrojů dialogu pole. Tlačítka, které se mění filtrů typu jsou na levé straně a tlačítka, které se mění obor hledání na pravé straně.
+Ve výchozím nastavení je zadaná položka prohledána ve všech položkách řešení. Hledání kódu však můžete omezit na konkrétní typy prvků, protože hledané výrazy mají určité znaky. Vyhledávací filtr můžete také rychle změnit výběrem tlačítek na panelu nástrojů **Přejít na** dialogové okno. Tlačítka, která mění filtry typů, jsou na levé straně a tlačítka, která mění rozsah hledání, jsou na pravé straně.
 
 ![Přejít na členy](../ide/media/vside_navigation_toolbar.png)
 
-### <a name="filter-to-a-specific-type-of-code-element"></a>Filtrovat na konkrétní typ prvku kódu
+### <a name="filter-to-a-specific-type-of-code-element"></a>Filtrovat na konkrétní typ elementu kódu
 
-Chcete-li zúžit hledání tak, aby konkrétní typ prvku kódu, můžete do vyhledávacího pole zadejte předponu nebo vyberte jeden z pěti ikony filtru:
+Chcete-li zúžit hledání na konkrétní typ prvku kódu, můžete buď zadat předponu do vyhledávacího pole, nebo vybrat jednu z pěti ikon filtru:
 
-Předpona | Ikona | Zástupce | Popis
+směr | Ikona | Zástupce | Popis
 :-: | - | - | -
-:| ![Ikona řádku](media/gotoall-line-icon.png) | **Ctrl**+**G** | Přejít na zadaný počet řádků
-f| ![Soubory ikony](media/gotoall-files-icon.png) | **Ctrl**+**1**, **Ctrl**+**F** | Přejděte do zadaného souboru
-r| ![Ikona poslední soubory](media/gotoall-recent-files-icon.png) | **Ctrl**+**1**, **Ctrl**+**R** | Přejděte k souboru zadané, naposledy navštívené
-t| ![Ikona typy](media/gotoall-types-icon.png) | **Ctrl**+**1**, **Ctrl**+**T** | Přejděte na zadaný typ.
-m| ![Ikona členy](media/gotoall-members-icon.png) | **Ctrl**+**1**, **Ctrl**+**M** | Přejděte k zadanému členu
-\#| ![Ikony symbolů](media/gotoall-symbols-icon.png) | **Ctrl**+**1**, **Ctrl**+**S** | Přejít na zadaný symbol
+:| ![Ikona čáry](media/gotoall-line-icon.png) | **Ctrl**+**G** | Přejít na zadané číslo řádku
+FJ| ![Ikona souborů](media/gotoall-files-icon.png) | **Ctrl** +**1**, **CTRL** +**F** | Přejít na zadaný soubor
+Í| ![Ikona posledních souborů](media/gotoall-recent-files-icon.png) | **Ctrl** +**1**, **CTRL** +**R** | Přejít na zadaný, nedávno navštívený soubor
+t| ![Ikona typů](media/gotoall-types-icon.png) | **Ctrl** +**1**, **CTRL** +**t** | Přejít na zadaný typ
+m| ![Ikona členů](media/gotoall-members-icon.png) | **Ctrl** +**1**, **CTRL** +**M** | Přejít na zadaného člena
+\#| ![Ikona symbolů](media/gotoall-symbols-icon.png) | **Ctrl** +**1**, **CTRL** +**S** | Přejít na zadaný symbol
 
-### <a name="filter-to-a-specific-location"></a>Filtrovat na konkrétní umístění
+### <a name="filter-to-a-specific-location"></a>Filtrovat do konkrétního umístění
 
-Chcete-li zúžit hledání tak, aby konkrétní umístění, vyberte jednu z ikon dvou dokumentu:
+Chcete-li zúžit hledání na konkrétní umístění, vyberte jednu ze dvou ikon dokumentu:
 
 Ikona | Popis
 ---- | ---
-![Aktuální dokument](media/gotoall_currentdocument.png) | Prohledat pouze aktuální dokument
-![Externí dokumenty](media/gotoall_external.png) | Hledat externí dokumenty kromě ti se sídlem na projekt nebo řešení
+![Aktuální dokument](media/gotoall_currentdocument.png) | Hledat pouze aktuální dokument
+![Externí dokumenty](media/gotoall_external.png) | Hledání externích dokumentů kromě těch, které se nacházejí v projektu nebo řešení
 
-## <a name="camel-casing"></a>CamelCase
+## <a name="camel-casing"></a>Ve stylu CamelCase velká a malá písmena
 
-Pokud používáte [camelCase](https://en.wikipedia.org/wiki/Camel_case) ve vašem kódu, můžete najít rychlejší prvky kódu tak, že zadáte pouze písmeny název prvku kódu. Například, pokud váš kód obsahuje typ s názvem `CredentialViewModel`, můžete zúžit hledání výběrem **typ** filtru (**t**) a následně zadají stejně velká písmena názvu (`CVM`) v Přejděte do dialogových oken. Tato funkce může být užitečné, pokud váš kód obsahuje dlouhé názvy.
+Pokud používáte [ve stylu CamelCase velká a malá](https://en.wikipedia.org/wiki/Camel_case) písmena v kódu, můžete najít prvky kódu rychleji zadáním pouze velkých písmen názvu elementu kódu. Například pokud má váš kód typ s názvem `CredentialViewModel`, můžete zúžit hledání tak, že vyberete filtr **typu** (**t**) a pak v dialogovém okně Přejít na zadáte jenom velká písmena názvu (`CVM`). Tato funkce může být užitečná v případě, že váš kód má dlouhé názvy.
 
-![Navigovat na okno - hledání s písmeny](../ide/media/vside_capitalsearch.png)
+![Přejít na okno – vyhledávání pomocí velkých písmen](../ide/media/vside_capitalsearch.png)
 
 ## <a name="settings"></a>Nastavení
 
-Vyberte ikonu ozubeného kolečka ![Ikona ozubeného kolečka](media/gotoall_gear.png) Umožňuje změnit, jak tato funkce funguje:
+Výběr ikony ozubeného kolečka ![Ikona ozubeného kolečka](media/gotoall_gear.png) umožňuje změnit, jak tato funkce funguje:
 
-Nastavení | Popis
+Nastavením | Popis
 ------- | ---
-Použít kartu náhledu | Okamžitě zobrazit na vybranou položku na kartě preview rozhraní IDE
-Zobrazit podrobnosti | V okně zobrazovat project, soubor, řádek a souhrnné informace z komentářů k dokumentaci
-Zarovnat okno na střed | Přesuňte toto okno do středu horní části editoru kódu místo pravé horní části
+Použít kartu náhledu | Zobrazit vybranou položku hned na kartě náhled v integrovaném vývojovém prostředí
+Zobrazit podrobnosti | Zobrazení projektu, souboru, řádku a souhrnu informací z dokumentačních komentářů v okně
+Okno na střed | Přesune toto okno do horního středu editoru kódu místo pravého horního rohu.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Vyhledání kódu](../ide/navigating-code.md)
-- [Dialogové okno Přejít na řádek](../ide/reference/go-to-line.md)
+- [Navigace v kódu](../ide/navigating-code.md)
+- [Přejít na řádek – dialogové okno](../ide/reference/go-to-line.md)
 - [Přejít k definici a Náhled definice](../ide/go-to-and-peek-definition.md)
