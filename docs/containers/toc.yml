@@ -11,6 +11,8 @@
           href: container-tools.md
         - name: Jednostránková aplikace React.js v kontejneru
           href: container-tools-react.md
+        - name: Vývoj na bázi Kubernetes se službou Azure Dev Spaces >>
+          href: /azure/dev-spaces/quickstart-netcore-visualstudio
     - name: Kurzy
       expanded: true
       items:

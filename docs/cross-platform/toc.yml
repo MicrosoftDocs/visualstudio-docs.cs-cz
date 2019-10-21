@@ -31,29 +31,29 @@
       href: change-log-visual-studio-tools-for-unity-mac.md
     - name: DevOps s aplikacemi Unity
       href: application-lifecycle-management-alm-with-unity-apps.md
-- name: Visual C++ for Cross-Platform Mobile Development
+- name: Vývoj multiplatformních mobilních řešení v jazyce C++
   items:
-    - name: Visual C++ for Cross-Platform Mobile Development
+    - name: Vývoj multiplatformních mobilních řešení v jazyce C++
       href: visual-cpp-for-cross-platform-mobile-development.md
-    - name: Instalace komponenty Visual C++ for Cross-Platform Mobile Development
+    - name: Instalace pro vývoj multiplatformních mobilních řešení v jazyce C++
       items:
-        - name: Instalace komponenty Visual C++ for Cross-Platform Mobile Development
+        - name: Instalace pro vývoj multiplatformních mobilních řešení v jazyce C++
           href: install-visual-cpp-for-cross-platform-mobile-development.md
         - name: Instalace a konfigurace nástrojů pro vytváření pomocí iOS
           href: install-and-configure-tools-to-build-using-ios.md
     - name: Vytvoření aplikace s NativeActivity pro Android
       href: create-an-android-native-activity-app.md
-    - name: Vytvoření aplikace OpenGL ES na Androidu a iOS
+    - name: Vytvoření aplikace OpenGL ES na Androidu a iOSu
       href: build-an-opengl-es-application-on-android-and-ios.md
-    - name: Import projektu XCode
+    - name: Import projektu pro Xcode
       href: import-an-xcode-project.md
-    - name: Synchronizace změn mezi XCode a sadou Visual Studio
+    - name: Synchronizace změn mezi platformou Xcode a sadou Visual Studio
       href: sync-changes-between-xcode-and-visual-studio.md
     - name: Příklady vývoje multiplatformních mobilních řešení
       href: cross-platform-mobile-development-examples.md
-    - name: Vlastnosti multiplatformních projektů v C++
+    - name: Reference k multiplatformní stránce vlastností v jazyce C++
       items:
-        - name: Vlastnosti multiplatformních projektů v C++
+        - name: Reference k multiplatformní stránce vlastností v jazyce C++
           href: cross-platform-prop-pages.md
         - name: Obecné vlastnosti projektů (Android C++)
           href: general-android-prop-page.md

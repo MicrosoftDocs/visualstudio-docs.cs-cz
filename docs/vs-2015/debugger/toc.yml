@@ -155,7 +155,7 @@
         - name: Vytváření vlastních zobrazení spravovaných objektů
           items:
             - name: Vytváření vlastních zobrazení spravovaných objektů
-              href: create-custom-views-of-dot-managed-objects.md
+              href: create-custom-views-of-managed-objects.md
             - name: Používání atributu DebuggerTypeProxy
               href: using-debuggertypeproxy-attribute.md
             - name: Používání atributu DebuggerDisplay
