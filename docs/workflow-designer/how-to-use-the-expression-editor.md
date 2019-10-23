@@ -1,57 +1,57 @@
 ---
-title: 'Návrhář postupu provádění – jak: Používání editoru výrazů'
+title: 'Návrhář postupu provádění – postupy: Používání editoru výrazů'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
 - System.Activities.Presentation.View.ExpressionTextBox.UI
 ms.assetid: b5f961dd-6dda-41a9-9cae-0383d479ef3d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ce46f1db900aa5c37b49a1cc228290d7d99d29a2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9fc76139d6989421b49c8c80ef325b51a6934cb4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949536"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650274"
 ---
 # <a name="how-to-use-the-expression-editor"></a>Postupy: Používání editoru výrazů
 
-Editor výrazů je Návrhář postupu provádění ovládací prvek, který se používá v mnoha aktivit pracovního postupu k zadání a vyhodnocujte výrazy. Editor výrazů nabízí plnohodnotný IDE úpravy prostředí, včetně IntelliSense, zabarvení ParamInfo, podtržení vlnovkou u chyb, kromě jiných funkcí. Kompilátor ověří výraz poté, co je zadána. Pokud výraz není platný, zobrazí se ikona chyby. V editoru můžete otevřít také jako **Editor výrazů** dialogové okno.
+Editor výrazů je Návrhář postupu provádění ovládací prvek, který se používá v mnoha aktivitách pracovního postupu pro zadávání a vyhodnocení výrazů. Editor výrazů poskytuje prostředí pro úpravu podrobnějším integrovaného vývojového prostředí (IDE), včetně IntelliSense, barev, ParamInfo, chybových vlnovek, mimo jiné funkce. Kompilátor po jeho zadání ověří výraz. Pokud je výraz neplatný, zobrazí se ikona chyby. Editor lze také otevřít jako dialogové okno **Editor výrazů** .
 
-Výrazy jsou literálními hodnotami nebo kódu jazyka Visual Basic vázán na argumenty nebo vlastnosti. Obsahující hodnoty prvků (například proměnné, konstanty, literály, vlastnosti), které jsou spojené s operacemi na novou hodnotu. Výrazy jsou zapsány pomocí syntaxe VB.NET i v případě, že aplikace je v aplikaci pomocí jazyka C#. To znamená, že malá a velká písmena, nezáleží, porovnání je provedeno pomocí jednoho stejné logické operátory jsou slova, podepsat ("=" místo "==") "a" a "nebo" namísto symboly "& &" a "||", a **nic** slouží místo **null**. Další informace o výrazy a operátory v jazyce Visual Basic a některé ukázky najdete v tématu [operátory a výrazy v jazyce Visual Basic](/previous-versions/visualstudio/visual-studio-2010/a1w3te48(v=vs.100)).
+Výrazy jsou hodnoty literálu nebo Visual Basic kód vázaný na argumenty nebo vlastnosti. Obsahují prvky hodnoty (například proměnné, konstanty, literály, vlastnosti), které jsou kombinovány s operacemi, aby zadávaly novou hodnotu. Výrazy jsou zapisovány pomocí syntaxe VB.NET, i když je aplikace v programu pomocí C#. To znamená, že při použití velkých a malých písmen je porovnávání provedeno pomocí jednoho znaménka rovná se ("=" namísto "= ="), logické operátory jsou slova "a" a "nebo" namísto symbolů "& &" a "| |" a namísto hodnoty null se **nic** nepoužívá. Další informace o výrazech a operátorech v Visual Basic a některých ukázkách naleznete v tématu [operátory a výrazy v Visual Basic](/previous-versions/visualstudio/visual-studio-2010/a1w3te48(v=vs.100)).
 
-**Editor výrazů** chová takto:
+**Editor výrazů** se chová takto:
 
-- Pokud fokus není v editoru výrazů, vypadá jako na běžný ovládací prvek TextBlock.
+- Pokud fokus není v editoru výrazů, vypadá to jako pravidelný ovládací prvek TextBlock.
 
-- V editoru výrazů po výběru vypadat a jak se bude chovat jako ovládací prvek editoru výrazů. Editor výrazů regulární TextBlock vypadá znovu po ztratí fokus.
+- Jakmile je fokus v editoru výrazů, vypadá a chová se jako ovládací prvek editor výrazů. Po ztrátě fokusu bude editor výrazů vypadat jako regulární TextBlock znovu.
 
-- Pokud vám soustředit se na Editor výrazů v Návrháři postupu provádění se změněným hostováním, pak se chová stejně jako textové pole. Jakmile v Návrháři postupu provádění se změněným hostováním se ztratí fokus, editoru výrazů bude vypadat jako regulární TextBlock znovu.
+- Pokud se zaměříte na Editor výrazů v rámci přehostovaného návrháře pracovního postupu, chová se jako textové pole. Když dojde ke ztrátě fokusu v Návrháři pracovního postupu pro opětovné hostování, Editor výrazů vypadá jako regulární TextBlock znovu.
 
 > [!NOTE]
-> Technologie IntelliSense pro Editor výrazů je k dispozici pouze v aplikaci Visual Studio. V sadě Visual Studio a provádění se změněným hostováním scénáře kompilátor ověří výraz poté, co se zadají a editor výrazů zobrazuje ikonu chyby, pokud výraz není platný.
+> IntelliSense pro Editor výrazů je k dispozici pouze uvnitř sady Visual Studio. V rámci sady Visual Studio i v případě znovu hostovaných scénářů kompilátor po jeho zadání ověří výraz a v případě, že je výraz neplatný, zobrazí v editoru výrazů chybovou ikonu.
 
 ## <a name="use-the-expression-editor"></a>Používání editoru výrazů
 
-1. V sadě Visual Studio otevřete projekt nového nebo existujícího pracovního postupu.
+1. V aplikaci Visual Studio otevřete nový nebo existující projekt pracovního postupu.
 
-2. Přidání, například <xref:System.Activities.Statements.Assign> aktivitu do pracovního postupu.
+2. Přidejte například aktivitu <xref:System.Activities.Statements.Assign> do pracovního postupu.
 
     > [!NOTE]
-    > Více aktivit pracovního postupu mít editory výrazu. Výraz objekty TextBlock se také zobrazují v Návrhář proměnných, Návrhář argumentů a Návrhář dynamických argumentů. <xref:System.Activities.Statements.Assign> Aktivita slouží jako příklad.
+    > Několik aktivit pracovního postupu má editory výrazů. Výraz TextBlocks se také zobrazí v Návrháři proměnných, v Návrháři argumentů a v Návrháři dynamického argumentu. Jako příklad se používá aktivita <xref:System.Activities.Statements.Assign>.
 
-3. Klikněte na levý výraz editoru v Návrháři aktivit pro <xref:System.Activities.Statements.Assign> aktivity.
+3. Klikněte na levý Editor výrazů v Návrháři aktivit pro aktivitu <xref:System.Activities.Statements.Assign>.
 
-     Šedé vodoznak řetězce  **\<k >** a  **\<zadejte výraz jazyka VB. >** jsou výchozí text řetězce pro výraz editory v <xref:System.Activities.Statements.Assign> aktivity.
+     Šedé řetězce vodoznaku **\<To >** a **\<Enter > výrazu VB** jsou výchozí textové řetězce pro Editor výrazů v aktivitě <xref:System.Activities.Statements.Assign>.
 
-4. Při zadávání výrazu. Pokud zadáte řetězec, ujistěte se, že chcete vložit řetězec v uvozovkách. Pokud budete chtít vázat argument výrazu na proměnnou, ponechte uvozovky.
+4. Zadejte svůj výraz. Pokud zadáte řetězec, nezapomeňte kolem řetězce vložit uvozovky. Pokud se rozhodnete vytvořit vazbu argumentu výrazu na proměnnou, ponechte uvozovky vypnuté.
 
-     Jakmile budete hotovi, vyberte oblast nebo oblasti mimo Editor výrazů přesune fokus na jiné části návrháře. Přesun fokusu způsobí, že kompilátor ověření výrazu, jak je popsáno výše.
+     Až budete hotovi, vyberte oblast nebo oblast mimo editor výrazů, abyste posunuli fokus na jinou část návrháře. Posunutí fokusu způsobí, že kompilátor ověří výraz, jak je popsáno výše.
 
-     Alternativní způsob a zadat nebo upravit výraz je kliknout na tři tečky vedle názvu vlastnosti v mřížce vlastností. Vyberete symbol tří teček, otevře **Editor výrazů** jako dialogové okno.
+     Alternativním způsobem, jak zadat nebo upravit výraz, je kliknout na tři tečky vedle názvu vlastnosti v mřížce vlastností. Výběr tří teček otevře **Editor výrazů** jako dialogové okno.
 
 ## <a name="see-also"></a>Viz také:
 
