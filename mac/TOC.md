@@ -105,6 +105,10 @@
 ### [Navigace s použitím klávesnice](accessibility-keyboard.md)
 ### [Použití funkce VoiceOver](accessibility-voiceover.md)
 
+# Videokurzy
+## [Začínáme s ASP.NET Core s použitím sady Visual Studio pro Mac](tutorial-aspnet-core-vsmac-getting-started.md)
+## [Rozšíření existující webové aplikace ASP.NET Core](tutorial-aspnet-core-vsmac-extending.md)
+
 # [Visual Studio IDE pro uživatele Windows](vsmac-for-windows-users.md)
 
 # Poradce při potížích
