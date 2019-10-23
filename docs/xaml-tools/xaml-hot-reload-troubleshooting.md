@@ -12,12 +12,12 @@ manager: jillfra
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 020577cfe692d5d306a555e763d08807ab191074
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 33ac236c9f9dd91bc0eef34e7ff9f3aa658cb4be
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450938"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589134"
 ---
 # <a name="troubleshooting-xaml-hot-reload"></a>Řešení potíží s opětovným načítáním XAML za provozu
 
@@ -35,7 +35,7 @@ Tato funkce je ve výchozím nastavení povolená. Když začnete ladit aplikaci
 
 ![Dostupné Hot reloading XAML](../debugger/media/xaml-hot-reload-available.png)
 
-Pokud nevidíte panel nástrojů v aplikaci, otevřete @no__t **ladění**-1**Možnosti** > **Obecné**. Ujistěte se, že jsou vybrány obě možnosti, **Povolit ladicí nástroje uživatelského rozhraní pro XAML** a **Povolit kódování XAML Hot reload** .
+Pokud nevidíte panel nástrojů v aplikaci, otevřete**možnosti**  >  **ladění**  > **Obecné**. Ujistěte se, že jsou vybrány obě možnosti, **Povolit ladicí nástroje uživatelského rozhraní pro XAML** a **Povolit kódování XAML Hot reload** .
 
 ![Povolit Hot reloadování XAML](../debugger/media/xaml-hot-reload-enable.png)
 
@@ -45,7 +45,10 @@ Pokud jsou tyto možnosti vybrány, pak přejít do živého vizuálního stromu
 
 ## <a name="verify-that-you-use-start-debugging-rather-than-attach-to-process"></a>Ověřte, že používáte spustit ladění, nikoli připojit k procesu.
 
-Kódování XAML Hot reload vyžaduje, aby byla proměnná prostředí `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` v době spuštění aplikace nastavená na hodnotu 1. Sada Visual Studio nastaví tuto automaticky jako součást příkazu **Debug** > **Spustit ladění** (nebo **F5**). Pokud chcete použít kódování XAML Hot Load pomocí příkazu **Debug** > **připojit k procesu** , pak nastavte proměnnou prostředí sami.
+Kódování XAML Hot reload vyžaduje, aby byla proměnná prostředí `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` v době spuštění aplikace nastavena na hodnotu 1. Sada Visual Studio nastaví tuto automaticky jako součást příkazu **Debug** > **Spustit ladění** (nebo **F5**). Pokud chcete použít kódování XAML Hot Load pomocí příkazu **Debug** > **připojit k procesu** , pak nastavte proměnnou prostředí sami.
+
+> [!NOTE]
+> Chcete-li nastavit proměnnou prostředí, pomocí tlačítka Start vyhledejte "proměnná prostředí" a vyberte možnost **Upravit proměnné prostředí systému**. V dialogovém okně, které se otevře, zvolte **proměnné prostředí**a pak ho přidejte jako uživatelskou proměnnou a nastavte hodnotu na `1`. Chcete-li vyčistit, po dokončení ladění odeberte proměnnou.
 
 ## <a name="verify-that-your-msbuild-properties-are-correct"></a>Ověřte správnost vlastností MSBuild.
 
