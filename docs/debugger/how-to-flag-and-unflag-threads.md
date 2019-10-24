@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Označení a odstranění označení vlákna | Dokumentace Microsoftu'
+title: 'Postupy: příznak a odoznačení vláken | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,52 +15,52 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e63f081ff54a18bb4b5ca5c1cbdf947670f10a7e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 68a2ce8b6ec429b3f7f5cd782c3dac52602eff16
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62906722"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733240"
 ---
-# <a name="how-to-flag-and-unflag-threads-c-visual-basic-c"></a>Postupy: Označení a odstranění označení vlákna (C#, Visual Basic, C++)
+# <a name="how-to-flag-and-unflag-threads-c-visual-basic-c"></a>Postupy: označení a odoznačení vláken (C#, Visual Basic,) C++
 
-Můžete označit příznakem vlákna, které chcete věnovat zvláštní pozornost označením s ikonou v **vlákna**, **paralelní zásobníky** (zobrazení vláken), **paralelní sledování**a  **Vlákna GPU** systému windows. Tato ikona vám může pomoct a ostatní vlákna s příznakem odlišili od ostatních vláken.
+Můžete označit vlákno, které chcete poskytnout zvláštní pozornost, a to tak, že ho označíte ikonou v podoknech **vlákna**, **paralelní zásobníky** (zobrazení vlákna), **paralelní kukátko**a **vlákna GPU** . Tato ikona vám může pomáhat a jiným odlišit vlákna označená příznakem z jiných vláken.
 
-Vlákna s příznaky také přijímat zvláštní zacházení v **vlákna** seznamu **umístění ladění** nástrojů a v dalších vícevláknové ladění systému windows. Můžete zobrazit všechna vlákna nebo pouze vlákna s příznakem v **vlákna** seznamu nebo v jiných oknech.
+Vlákna označená příznakem také dostanou zvláštní zpracování v seznamu **vláken** na panelu nástrojů **umístění ladění** a v ostatních oknech s více vlákny pro ladění. Můžete zobrazit všechna vlákna nebo pouze vlákna označená příznakem v seznamu **vláken** nebo v jiných oknech.
 
-### <a name="to-flag-or-unflag-a-thread"></a>Chcete-li označit nebo zrušit označení vlákna
+### <a name="to-flag-or-unflag-a-thread"></a>Označení nebo odoznačení vlákna vláknem
 
-- V **vlákna** nebo **paralelní sledování** okně Najít vlákno, které vás zajímají a kliknutím na ikonu příznaku zaškrtněte nebo zrušte příznak.
-- V **paralelní zásobníky** okna, klikněte pravým tlačítkem na vlákno nebo skupina vláken a vyberte **příznak / \<vlákna >** nebo **Unflag / \<vlákna >**.
+- V okně **vlákna** nebo **paralelní sledování** Najděte vlákno, které vás zajímá, a kliknutím na ikonu příznak vyberte nebo zrušte zaškrtnutí tohoto příznaku.
+- V okně **paralelní zásobníky** klikněte pravým tlačítkem na vlákno nebo skupinu vláken a vyberte **příznak/\<thread >** nebo zrušit označení nebo **\<thread >** .
 
-### <a name="to-unflag-all-threads"></a>Chcete-li odznačit všechna vlákna
+### <a name="to-unflag-all-threads"></a>Chcete-li zrušit označení všech vláken
 
-- V **vlákna** okna, klikněte pravým tlačítkem na libovolného vlákna a pak klikněte na **odznačit všechna vlákna**.
-- V **paralelní sledování** okna, vyberte všechny vlákna označená příznakem, klikněte pravým tlačítkem a vyberte **Unflag**.
+- V okně **vlákna** klikněte pravým tlačítkem na libovolné vlákno a pak klikněte na zrušit **označení všech vláken**.
+- V okně **paralelní sledování** vyberte všechna vlákna označená příznakem, potom klikněte pravým tlačítkem a vyberte zrušit **označení**.
 
 ### <a name="to-display-only-flagged-threads"></a>Chcete-li zobrazit pouze vlákna označená příznakem
 
-- Zvolte **zobrazit vlákna pouze s příznakem** tlačítko v jednom z vícevláknové ladění systému windows.
+- Vyberte tlačítko **Zobrazit pouze vlákna označená příznakem** v jednom z oken ladění s více vlákny.
 
-### <a name="to-flag-just-my-code"></a>Chcete-li označit jen můj kód
+### <a name="to-flag-just-my-code"></a>Označení Pouze můj kód
 
-1. Na panelu nástrojů v horní části **vlákna** okna, klikněte na ikonu vlajky.
+1. Na panelu nástrojů v horní části okna **vlákna** klikněte na ikonu příznak.
 
-2. V rozevíracím seznamu, klikněte na tlačítko **příznak funkce pouze můj kód**.
+2. V rozevíracím seznamu klikněte na **příznak pouze můj kód**.
 
-### <a name="to-flag-threads-that-are-associated-with-selected-modules"></a>K nastavení příznaku vláken, které jsou spojeny s vybrané moduly
+### <a name="to-flag-threads-that-are-associated-with-selected-modules"></a>Označení vláken, která jsou přidružena k vybraným modulům
 
-1. Na panelu nástrojů **vlákna** okna, klikněte na ikonu vlajky.
+1. Na panelu nástrojů okna **vlákna** klikněte na ikonu příznak.
 
-2. V rozevíracím seznamu, klikněte na tlačítko **volba vlastního modulu příznaků**.
+2. V rozevíracím seznamu klikněte na možnost **Označit vlastní výběr modulu**.
 
-3. V **vyberte moduly** dialogového okna, vyberte moduly, které chcete.
+3. V dialogovém okně **Vybrat moduly** vyberte moduly, které chcete.
 
-4. (Volitelné) V **hledání** zadejte řetězec k vyhledání konkrétních modulů.
+4. Volitelné Do **vyhledávacího** pole zadejte řetězec, který bude hledat konkrétní moduly.
 
-5. Klikněte na **OK**.
+5. Klikněte na tlačítko **OK**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění vícevláknových aplikací](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Začínáme s laděním vícevláknových aplikací](../debugger/get-started-debugging-multithreaded-apps.md)
 - [Návod: Ladění vícevláknových aplikací pomocí okna vlákna](../debugger/how-to-use-the-threads-window.md)

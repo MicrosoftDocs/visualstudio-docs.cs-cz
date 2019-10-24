@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_hfaFloat | Microsoft Docs
+title: 'IDiaSymbol:: get_hfaFloat | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3305efc101603d66511e1e2c5ef356ead22b59f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: a13d35e494bad6bc844ea585b89f75dbe6665224
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64801320"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740417"
 ---
-# <a name="idiasymbolgethfafloat"></a>IDiaSymbol::get_hfaFloat
-Získá příznak, který určuje, zda uživatelem definovaný typ (UDT) obsahuje homogenní s plovoucí desetinnou čárkou agregace (HFA) data typ float.
+# <a name="idiasymbolget_hfafloat"></a>IDiaSymbol::get_hfaFloat
+Načte příznak, který určuje, zda uživatelem definovaný typ (UDT) obsahuje homogenní data agregace s plovoucí desetinnou čárkou (HFA) typu float.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,23 +33,23 @@ HRESULT get_hfaFloat( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` Pokud UDT obsahuje HFA datový typ float; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud parametr UDT obsahuje data HFA typu float; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: Dia2.h
+ Záhlaví: Dia2. h
 
- Knihovna: diaguids.lib
+ Knihovna: diaguids. lib
 
- DLL: msdia100.dll
+ Knihovna DLL: msdia100. dll
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaSymbol::get_udtKind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md)

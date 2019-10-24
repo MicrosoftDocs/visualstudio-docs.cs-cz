@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_classParentId | Microsoft Docs
+title: 'IDiaSymbol:: get_classParentId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70b6b49ab8a493102d10c03291a326ae0d23a747
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 96ea947bf788c6f8fe7b4111e3888029b9d4bf31
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64800470"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740860"
 ---
-# <a name="idiasymbolgetclassparentid"></a>IDiaSymbol::get_classParentId
-Načte identifikátor nadřazené třídu symbolu.
+# <a name="idiasymbolget_classparentid"></a>IDiaSymbol::get_classParentId
+Načte nadřazený identifikátor třídy pro symbol.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,23 +33,23 @@ HRESULT get_classParentId ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí ID nadřazené třídu symbolu.
+mimo Vrátí nadřazené ID třídy symbolu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Identifikátor je jedinečná hodnota vytvořené DIA SDK označit všechny symboly jako jedinečný.
+ Identifikátor je jedinečná hodnota vytvořená DIA SDK k označení všech symbolů jako jedinečných.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|V7.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

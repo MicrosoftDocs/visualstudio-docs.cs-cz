@@ -1,5 +1,5 @@
 ---
-title: Omezení ladění WCF | Dokumentace Microsoftu
+title: Omezení ladění WCF | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,34 +16,34 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34b69ac69c580fbd40278b5b7a0c9be26d672fa3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c70195cdc0a6a03395744c63f556ce8c2970aa30
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62905955"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731509"
 ---
 # <a name="limitations-on-wcf-debugging"></a>Omezení ladění WCF
-Existují tři způsoby, můžete začít ladění služby WCF:
+Existují tři způsoby, jak můžete začít s laděním služby WCF:
 
-- Ladění procesu klienta, která volá službu. Ladicí program do služby. Služba nemusí být ve stejném řešení jako klientské aplikace.
+- Ladíte klientský proces, který volá službu. Ladicí program kroky do služby. Služba nemusí být ve stejném řešení jako vaše klientská aplikace.
 
-- Ladění procesu klienta, který odešle požadavek do služby. Služba musí být součástí vašeho řešení.
+- Ladíte klientský proces, který vytváří požadavek na službu. Služba musí být součástí vašeho řešení.
 
-- Použijete **připojit k procesu** k připojení ke službě, na kterém aktuálně běží. Ladění začíná v službě.
+- Pomocí **připojit k procesu** se připojíte ke službě, která je aktuálně spuštěná. Ladění začíná v rámci služby.
 
-  Toto téma popisuje omezení na uvedené scénáře.
+  V tomto tématu jsou popsána omezení těchto scénářů.
 
-## <a name="limitations-on-stepping-into-a-service"></a>Omezení krokování s vnořením do služby
- Chcete-li do služby z klientských aplikací, které ladíte, musí být splněny následující podmínky:
+## <a name="limitations-on-stepping-into-a-service"></a>Omezení krokování na službu
+ Pro krokování služby z klientských aplikací, které ladíte, musí být splněny následující podmínky:
 
-- Klient musí volat službu pomocí synchronního klientského objektu.
+- Klient musí volat službu pomocí synchronního objektu klienta.
 
-- Kontrakt operace nemůže být jednosměrná.
+- Operace kontraktu nemůže být jednosměrná.
 
-- Pokud je server asynchronní, nelze zobrazit úplného zásobníku volání, zatímco spouštíte kód uvnitř služby.
+- Pokud je server asynchronní, nemůžete zobrazit plný zásobník volání při provádění kódu uvnitř služby.
 
-- Pomocí následujícího kódu v souboru Web.config nebo app.config musí být povoleno ladění:
+- Ladění musí být povoleno s následujícím kódem v souboru App. config nebo Web. config:
 
     ```xml
     <system.web>
@@ -51,21 +51,21 @@ Existují tři způsoby, můžete začít ladění služby WCF:
     </system.web>
     ```
 
-     Tento kód jenom musí být přidán jednou. Tento kód můžete přidat úpravou souboru .config nebo připojením ke službě s použitím **připojit k procesu**. Při použití **připojit k procesu** službu, ladění kódu se automaticky přidá do souboru .config. Potom můžete ladit a Krokovat s vnořením služby bez nutnosti upravovat soubor .config.
+     Tento kód se musí přidat jenom jednou. Tento kód můžete přidat úpravou souboru. config nebo připojením ke službě pomocí **připojit k procesu**. Použijete **-li ke zpracování ve službě připojit k procesu** , kód ladění je automaticky přidán do souboru. config. Potom můžete do služby ladit a krokovat bez nutnosti upravovat soubor. config.
 
-## <a name="limitations-on-stepping-out-of-a-service"></a>Omezení krokování mimo službu
- Krokování mimo službu a zpět do klienta má stejná omezení pro krokování s vnořením do služby. Kromě toho ladicí program musí být připojené ke klientovi. Pokud ladíte klienta a krokování s vnořením do služby, zůstane připojený ke službě ladicí program. Je hodnota true Určuje, zda jste spustili klienta s použitím **spustit ladění** nebo připojené ke klientovi pomocí **připojit k procesu**. Pokud jste začali ladění pomocí připojení ke službě, není dosud připojen ladicí program ke klientovi. V takovém případě Pokud máte krok ze služby a zpět klientovi, musíte nejprve použít **připojit k procesu** ručně připojit ke klientovi.
+## <a name="limitations-on-stepping-out-of-a-service"></a>Omezení krokování ze služby
+ Krokování ze služby a zpátky na klienta má stejná omezení, která jsou popsaná pro krokování do služby. Kromě toho musí být ladicí program připojen ke klientovi. Při ladění klienta a krokování do služby zůstane ladicí program připojen ke službě. To platí bez ohledu na to, jestli jste klienta spustili pomocí možnosti **Spustit ladění** nebo připojit k klientovi pomocí možnosti **připojit k procesu**. Pokud jste zahájili ladění připojením ke službě, ladicí program ještě není připojen ke klientovi. V takovém případě, pokud musíte krok ze služby a zpátky na klienta, musíte nejprve použít **připojit k procesu** a připojit se k klientovi ručně.
 
-## <a name="limitations-on-automatic-attach-to-a-service"></a>Omezení na automatické připojení ke službě
+## <a name="limitations-on-automatic-attach-to-a-service"></a>Omezení automatického připojení ke službě
  Automatické připojení ke službě má následující omezení:
 
-- Služba musí být součástí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] řešení ladění.
+- Služba musí být součástí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] řešení, které ladíte.
 
-- Musí být služba hostována. Může být součástí projektu webové stránky (systém souborů a HTTP), projekt webové aplikace (systém souborů a HTTP) nebo projekt knihovny služby WCF. Projekty knihovny služby WCF může být služba knihovny nebo knihovny služby pracovního postupu.
+- Služba musí být hostovaná. Může být součástí projektu webu (systém souborů a HTTP), projektu webové aplikace (systému souborů a protokolu HTTP) nebo projektu knihovny služby WCF. Projekty knihovny služby WCF můžou být buď knihovny služeb nebo knihovny služby pracovního postupu.
 
 - Služba musí být vyvolána z klienta WCF.
 
-- Pomocí následujícího kódu v souboru Web.config nebo app.config musí být povoleno ladění:
+- Ladění musí být povoleno s následujícím kódem v souboru App. config nebo Web. config:
 
   ```xml
   <system.web>
@@ -73,12 +73,12 @@ Existují tři způsoby, můžete začít ladění služby WCF:
   <system.web>
   ```
 
-## <a name="self-hosting"></a>S vlastním hostováním
- A *služby v místním prostředí* je služba WCF, která není spuštěna služba IIS, hostitel služby WCF nebo [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] vývojový Server. Informace o tom, jak ladit v místním prostředí služby najdete v tématu [jak: Ladění služby WCF v místním prostředí](../debugger/how-to-debug-a-self-hosted-wcf-service.md).
+## <a name="self-hosting"></a>Samoobslužné hostování
+ *Samoobslužná služba* je služba WCF, která neběží ve službě IIS, hostiteli služby WCF nebo [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] vývojový server. Informace o tom, jak ladit samoobslužné služby, naleznete v tématu [How to: Debug a on-Hosted Service WCF](../debugger/how-to-debug-a-self-hosted-wcf-service.md).
 
-## <a name="self-hosting"></a>S vlastním hostováním
- Chcete povolit ladění [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace 3.0 nebo 3.5, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 nebo 3.5, musí být nainstalována před [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] je nainstalována. Pokud [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] je nainstalována před [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 nebo 3.5, dojde k chybě při pokusu o ladění [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace 3.0 nebo 3.5. Je chybová zpráva "nelze automaticky krokovat do serveru." Chcete-li tento problém vyřešit, použijte Windows **ovládací panely** > **programy a funkce** opravit vaše [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] instalace.
+## <a name="self-hosting"></a>Samoobslužné hostování
+ Chcete-li povolit ladění aplikací [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 nebo 3,5, je nutné před instalací [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] nainstalovat [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 nebo 3,5. Pokud je [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] nainstalován před [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 nebo 3,5, dojde k chybě při pokusu o ladění aplikace [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 nebo 3,5. Chybová zpráva: "nelze automaticky krokovat se serverem." Chcete-li tento problém vyřešit, opravte instalaci [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] pomocí **ovládacího panelu** Windows  > **programy a funkce** .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění služeb WCF](../debugger/debugging-wcf-services.md)
 - [Postupy: Ladění služby WCF s vlastním hostováním](../debugger/how-to-debug-a-self-hosted-wcf-service.md)

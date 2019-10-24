@@ -1,5 +1,5 @@
 ---
-title: Idiareadexeatoffsetcallback::readexecutableat – | Dokumentace Microsoftu
+title: 'IDiaReadExeAtOffsetCallback:: ReadExecutableAt | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f199db93fa2ea0b3ee2633f9af8a02fff5a4fdf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d913a229dafb64570728434576716ba396648af3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828215"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742835"
 ---
 # <a name="idiareadexeatoffsetcallbackreadexecutableat"></a>IDiaReadExeAtOffsetCallback::ReadExecutableAt
-Přečte zadaný počet bajtů počínaje od určeného posunutí ze spustitelného souboru.
+Přečte zadaný počet bajtů od zadaného posunu ze spustitelného souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,25 +34,25 @@ HRESULT ReadExecutableAt ( 
 ```
 
 #### <a name="parameters"></a>Parametry
- fileOffset
+ Posunutí
 
-[in] Posun ve spustitelném souboru má začínat čtení.
+pro Posun ve spustitelném souboru, který má začít číst.
 
  cbData
 
-[in] Počet bajtů ke čtení.
+pro Počet bajtů, které se mají přečíst
 
  pcbData
 
-[out] Vrátí počet přečtených bajtů.
+mimo Vrátí počet přečtených bajtů.
 
- data[]
+ data []
 
-[out v] Pole, které se vyplní přečtených ze souboru bajtů.
+[in, out] Pole, které je vyplněno bajty přečtenými ze souboru.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je volána kód podpory, který DIA načtení bajtů dat ze spustitelného souboru pomocí posun absolutní. Tato metoda je volána z podporu [idiadatasource::loaddataforexe –](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metody.
+ Tato metoda je volána kódem podpory DIA pro načtení datových bajtů ze spustitelného souboru pomocí absolutního posunu souboru. Tato metoda je volána v podpoře metody [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)
 - [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)

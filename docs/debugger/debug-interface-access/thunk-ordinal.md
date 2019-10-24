@@ -1,5 +1,5 @@
 ---
-title: THUNK_ORDINAL – | Dokumentace Microsoftu
+title: THUNK_ORDINAL | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 776ee35e57b62463d47fc6f7fa26133f507f16f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1de2d6c9700dcb7b1106c3693d855bb1d8ae2cfa
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62854433"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738501"
 ---
-# <a name="thunkordinal"></a>THUNK_ORDINAL
-Určuje typy převodní rutina.
+# <a name="thunk_ordinal"></a>THUNK_ORDINAL
+Určuje typy převodů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,26 +39,26 @@ typedef enum THUNK_ORDINAL {
 ```
 
 ## <a name="elements"></a>Elementy
-Standardní THUNK_ORDINAL_NOTYPE převodní rutina.
+THUNK_ORDINAL_NOTYPE standardní převolání.
 
-THUNK_ORDINAL_ADJUSTOR A `this` likvidátor převodní rutina.
+THUNK_ORDINAL_ADJUSTOR `this` přízpůsobování převodu do kódu.
 
-Převodní rutina THUNK_ORDINAL_VCALL virtuální volání.
+THUNK_ORDINAL_VCALL virtuální volání převodu do kódu.
 
-Převodní rutina THUNK_ORDINAL_PCODE P-code.
+THUNK_ORDINAL_PCODE P-Code s převodem
 
-Převodní rutina zatížení THUNK_ORDINAL_LOAD zpoždění.
+THUNK_ORDINAL_LOAD opožděné načtení.
 
-Přírůstkové THUNK_ORDINAL_TRAMP_INCREMENTAL trampoline převodní rutina (trampoline převodní rutina se používá k odraz volání z jednoho paměťového prostoru do jiného).
+THUNK_ORDINAL_TRAMP_INCREMENTAL přírůstkové Trampoline převodu (Trampoline převodu se používá pro odskok volání z jednoho paměťového prostoru na jiný).
 
-Převodní rutina trampoline bodu THUNK_ORDINAL_TRAMP_BRANCHISLAND větve.
+THUNK_ORDINAL_TRAMP_BRANCHISLAND větvi Trampoline přesměruje.
 
 ## <a name="remarks"></a>Poznámky
-Během volání se vrátí hodnoty v tento výčet [idiasymbol::get_thunkordinal –](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md) metody.
+Hodnoty v tomto výčtu jsou vráceny ze volání metody [IDiaSymbol:: get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md) .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: cvconst.h
+Záhlaví: cvconst. h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSymbol::get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)

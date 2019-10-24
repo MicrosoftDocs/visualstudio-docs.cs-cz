@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_isSdl | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_isSdl | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6904fc673462a79578549bcf22c2973a5c10c95c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 01503bca82046ace7f27cf4f80c163944009e89b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62836432"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740075"
 ---
-# <a name="idiasymbolgetissdl"></a>IDiaSymbol::get_isSdl
-Určuje, zda modul je zkompilován s možností/SDL.
+# <a name="idiasymbolget_issdl"></a>IDiaSymbol::get_isSdl
+Určuje, jestli je modul kompilovaný pomocí možnosti/SDL.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,10 +30,10 @@ HRESULT get_isSdl(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Ukazatel `BOOL` , která určuje, zda modul je zkompilován s možností/SDL.
+mimo Ukazatel na `BOOL`, který určuje, zda je modul kompilován pomocí možnosti/SDL.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

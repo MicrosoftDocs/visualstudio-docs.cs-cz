@@ -1,5 +1,5 @@
 ---
-title: Rozhodnutí o návrhu typu projektu | Dokumentace Microsoftu
+title: Rozhodnutí o návrhu typu projektu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,50 +13,50 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 697b09ff5725de954963f7583271ac9ebd6814a8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7d6d1df2a3b2188360b0ee60480b4d6580ed8faf
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66328124"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72725382"
 ---
 # <a name="project-type-design-decisions"></a>Rozhodnutí týkající se návrhu typu projektu
-Než vytvoříte nový typ projektu, je nutné provést několik rozhodnutí o návrhu týkající se vašeho typu projektu. Musíte se rozhodnout, jaké typy položek, které bude obsahovat vaše projekty, jak se soubory projektu trvalý a jaké závazku modelu, které použijete.
+Před vytvořením nového typu projektu je nutné provést několik rozhodnutí o návrhu týkajících se typu projektu. Musíte rozhodnout, jaké typy položek budou vaše projekty obsahovat, jak budou zachovány soubory projektu a jaký model závazku budete používat.
 
 ## <a name="project-items"></a>Položky projektu
- Váš projekt bude používat soubory nebo abstraktní objekty? Pokud používáte soubory, budou se soubory na základě odkazu nebo na adresář? Jsou soubory nebo abstraktní objekty probíhající být místní nebo vzdálený?
+ Bude váš projekt používat soubory nebo abstraktní objekty? Pokud používáte soubory, budou se jednat o soubory založené na odkazech nebo adresářích? Budou soubory nebo abstraktní objekty místní nebo vzdálené?
 
- Položky v projektu mohou být soubory, nebo můžou být více abstraktní objekty, jako jsou objekty v databázi úložiště nebo datového připojení přes Internet. Pokud položky jsou soubory, může být projektu odkaz na základě nebo projektu založeného na adresář.
+ Položky v projektu mohou být soubory, nebo mohou být více abstraktních objektů, jako jsou objekty v úložišti databáze nebo datová připojení přes Internet. Pokud jsou položky soubory, projekt může být buď odkazový, nebo projekt založený na adresáři.
 
- Položky můžete v projektech na základě odkazu, se zobrazí ve více než jeden projekt. Ale skutečný soubor, který představuje položku se nachází v jednom adresáři pouze. V projektech adresář existovat všechny položky projektu do struktury adresářů.
+ V projektech založených na odkazech se položky mohou objevit ve více než jednom projektu. Samotný soubor, který položka představuje, je však umístěn pouze v jednom adresáři. V projektech založených na adresářích existují všechny položky projektu ve struktuře adresáře.
 
- Místní položky, které jsou uložené ve stejném počítači, kde je nainstalována aplikace. Vzdálené položky může být uloženy na jiném serveru v místní síti nebo jinde v síti Internet.
+ Místní položky jsou uloženy ve stejném počítači, ve kterém je aplikace nainstalována. Vzdálené položky mohou být uloženy na samostatném serveru v místní síti nebo jinde na internetu.
 
 ## <a name="project-file-persistence"></a>Trvalost souborů projektu
- Data se uloží v běžné systémy plochého souboru, nebo strukturované úložiště? Soubory se otevřou pomocí standardního editoru nebo editoru specifické pro projekt?
+ Budou data uložená v běžných plochých souborových systémech nebo ve strukturovaném úložišti? Budou soubory otevírány pomocí standardního editoru nebo editoru specifického pro projekt?
 
- Většina aplikací uchovávat svá data, uložit svá data v souboru a poté číst zpět, když uživatel musí zkontrolovat nebo změnit informace.
+ Aby bylo možné zachovat data, většina aplikací ukládá data do souboru a pak je přečtěte zpátky, když uživatel musí informace zkontrolovat nebo změnit.
 
- Strukturované úložiště, také nazývané složené soubory se obvykle používá při několika objekty modelu COM (Component Object) vyžadují pro ukládání trvalých dat v jednom souboru. Pomocí strukturovaného úložiště můžete několik různých softwarových komponent sdílet soubor jeden disk.
+ Strukturované úložiště, nazývané také složené soubory, se obvykle používá v případě, že některé objekty modelu COM (Component Object Model) potřebují ukládat trvalá data do jediného souboru. V případě strukturovaného úložiště může několik různých softwarových komponent sdílet jeden diskový soubor.
 
- Máte několik možností, jak ke zvážení při výběru trvalosti pro položky ve vašem projektu. Můžete provést některou z následujících možností:
+ Máte několik možností, které byste měli zvážit v souvislosti s trvalými položkami v projektu. Můžete provést jednu z následujících možností:
 
-- Každý soubor byl změněn jednotlivě uložte.
+- Jednotlivé soubory uložte po změně.
 
-- Zachycení velký počet transakcí v jediném **Uložit** operace.
+- Zachytit mnoho transakcí v rámci jedné operace **uložení** .
 
-- Uložit soubory místně a potom publikovat na server nebo použít jiný přístup k uložení položek projektu, pokud položka představuje datové připojení ke vzdálenému objektu.
+- Ukládat soubory lokálně a pak je publikovat na server nebo použít jiný přístup k ukládání položek projektu, když položka představuje datové připojení ke vzdálenému objektu.
 
-  Další informace o trvalosti najdete v tématu [trvalost projektu](../../extensibility/internals/project-persistence.md) a [otevření a uložení položek projektu](../../extensibility/internals/opening-and-saving-project-items.md).
+  Další informace o persistenci naleznete v tématu [trvalost projektu](../../extensibility/internals/project-persistence.md) a [otevírání a ukládání položek projektu](../../extensibility/internals/opening-and-saving-project-items.md).
 
-## <a name="project-commitment-model"></a>Model projektu závazku
- Trvalá data objekty se otevřou v s přímým přístupem nebo počet zrušených zpracovaných režimu?
+## <a name="project-commitment-model"></a>Model závazku projektu
+ Budou trvalé datové objekty otevřeny v přímém nebo transakčním režimu?
 
- Když datových objektů jsou otevřené v režimu přímého, změny, které byly provedené v datech jsou začleněny okamžitě, nebo když uživatel ručně uloží soubor.
+ Když jsou datové objekty otevřeny v přímém režimu, změny provedené v datech jsou začleněny okamžitě nebo když uživatel soubor ručně uloží.
 
- Při otevření datové objekty pomocí transakčního režimu, změny se uloží do dočasného umístění v paměti a nejsou potvrzeny, dokud uživatel ručně vybere možnost uložení souboru. V tu chvíli musí dohromady všech změnách nebo nebudou provedeny žádné změny.
+ Když jsou datové objekty otevřeny pomocí transakčního režimu, změny jsou uloženy do dočasného umístění v paměti a nejsou potvrzeny, dokud uživatel ručně nerozhodne soubor uložit. V tomto okamžiku musí probíhat všechny změny dohromady nebo nebudou provedeny žádné změny.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Kontrolní seznam: Vytvoření nových typů projektů](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [Otevření a uložení položek projektu](../../extensibility/internals/opening-and-saving-project-items.md)
 - [Trvalost projektu](../../extensibility/internals/project-persistence.md)

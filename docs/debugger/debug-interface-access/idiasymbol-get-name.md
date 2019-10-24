@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_Name – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_Name | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed872bd0cf90bef4433e3430ea8a7557213cbb4c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 754416049197a92344fd238b28ec99e8fb912791
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64809007"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739767"
 ---
-# <a name="idiasymbolgetname"></a>IDiaSymbol::get_name
+# <a name="idiasymbolget_name"></a>IDiaSymbol::get_name
 Načte název symbolu.
 
 ## <a name="syntax"></a>Syntaxe
@@ -33,13 +33,13 @@ HRESULT get_name ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí název symbolu.
+mimo Vrátí název symbolu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="example"></a>Příklad
 
@@ -49,5 +49,5 @@ BSTR        name;
 pType->get_name( &name );
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

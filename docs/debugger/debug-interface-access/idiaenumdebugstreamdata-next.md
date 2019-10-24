@@ -1,5 +1,5 @@
 ---
-title: Idiaenumdebugstreamdata::Next – | Dokumentace Microsoftu
+title: 'IDiaEnumDebugStreamData:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf641fde4c03053496c732aa7904ddcad671af20
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: acdab0a565613194c67aa85484316a235c91dbf6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838604"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744793"
 ---
 # <a name="idiaenumdebugstreamdatanext"></a>IDiaEnumDebugStreamData::Next
-Načte zadaný počet záznamů v pořadí výčtu.
+Načte zadaný počet záznamů ve výčtové sekvenci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,27 +37,27 @@ HRESULT Next ( 
 #### <a name="parameters"></a>Parametry
  celt
 
-[in] Počet záznamů, který se má načíst.
+pro Počet záznamů, které mají být načteny.
 
  cbData
 
-[in] Velikost vyrovnávací paměti dat v bajtech.
+pro Velikost vyrovnávací paměti dat (v bajtech).
 
  pcbData
 
-[out] Vrátí počet bajtů vrácených. Pokud `data` má hodnotu NULL, pak `pcbData` obsahuje celkový počet bajtů dat, které jsou k dispozici pro všechny požadované záznamy.
+mimo Vrátí počet vrácených bajtů. Pokud má `data` hodnotu NULL, `pcbData` obsahuje celkový počet bajtů dat dostupných pro všechny požadované záznamy.
 
- data[]
+ data []
 
-[out] Vyrovnávací paměť, která má být vyplněny data záznamu datový proud ladění.
+mimo Vyrovnávací paměť, která se má vyplnit daty záznamu streamu ladění.
 
  pceltFetched
 
-[out v] Vrátí počet záznamů v `data`.
+[in, out] Vrátí počet záznamů v `data`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další záznamy. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud nejsou k dispozici žádné další záznamy. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)
 - [IDiaEnumDebugStreams::Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md)

@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_numberOfRegisterIndices | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_numberOfRegisterIndices | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3cd8e26f3ff7b8653a7cd5ef72e34d91fd0d4af8
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 6074f8d4954ced530640bedcd60ab397a2840e98
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62841846"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739663"
 ---
-# <a name="idiasymbolgetnumberofregisterindices"></a>IDiaSymbol::get_numberOfRegisterIndices
-Získá počet indexů registru.
+# <a name="idiasymbolget_numberofregisterindices"></a>IDiaSymbol::get_numberOfRegisterIndices
+Načte počet indexů registru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,10 +30,10 @@ HRESULT get_numberOfRegisterIndices(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Ukazatel `DWORD` , který obsahuje počet indexů registru.
+mimo Ukazatel na `DWORD`, který obsahuje počet indexů registru.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

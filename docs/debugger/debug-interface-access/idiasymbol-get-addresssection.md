@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_addressSection | Microsoft Docs
+title: 'IDiaSymbol:: get_addressSection | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f4ae24a194050868e1e2efbc5d29e7cf20e6cf5d
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 5a468fe6ee8a8d7d00bb2e6c261d50919a1dd764
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64830594"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741080"
 ---
-# <a name="idiasymbolgetaddresssection"></a>IDiaSymbol::get_addressSection
-Načte část oddílu umístění adresu. Použít, když [locationtype – výčet](../../debugger/debug-interface-access/locationtype.md) je nastavena na `LocIsStatic`.
+# <a name="idiasymbolget_addresssection"></a>IDiaSymbol::get_addressSection
+Načte část umístění adresy. Použijte, pokud je [výčet LocationType –](../../debugger/debug-interface-access/locationtype.md) nastavený na `LocIsStatic`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,26 +33,26 @@ HRESULT get_addressSection ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí část oddílu umístění služby adresu.
+mimo Vrátí část umístění adresy.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Pro statické členy v externí knihovny DLL části vrácený touto metodou být 0, protože tato metoda spoléhá na získání člena virtuální adresy. Virtuálních adres jsou platné pouze tehdy, pokud [idiasession::put_loadaddress –](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) metodu [idiasession –](../../debugger/debug-interface-access/idiasession.md) rozhraní setcodepage se zavolala s nenulový parametr zadání adresy načtení knihovny DLL.
+ Pro statické členy nacházející se v externí knihovně DLL může být oddíl vrácený touto metodou 0, protože tato metoda spoléhá na získání virtuální adresy člena. Virtuální adresy jsou platné pouze v případě, že metoda [IDiaSession::P ut_loadaddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) v rozhraní [IDiaSession](../../debugger/debug-interface-access/idiasession.md) byla volána s nenulovým parametrem, který určuje adresu načtení knihovny DLL.
 
- Získání posunu částí adresy, volání [idiasymbol::get_addressoffset –](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md) metody.
+ Chcete-li získat posunovou část adresy, zavolejte metodu [IDiaSymbol:: get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md) .
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|V7.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [LocationType – výčet](../../debugger/debug-interface-access/locationtype.md)

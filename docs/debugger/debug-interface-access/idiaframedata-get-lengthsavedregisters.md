@@ -1,5 +1,5 @@
 ---
-title: IDiaFrameData::get_lengthSavedRegisters | Microsoft Docs
+title: 'IDiaFrameData:: get_lengthSavedRegisters | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e05ebb4d7a58be353bb933a4ce5e5053d8dbf33
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bddd4ac8dda77c2139b4ac0e13ecf7a68e625f22
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839937"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743549"
 ---
-# <a name="idiaframedatagetlengthsavedregisters"></a>IDiaFrameData::get_lengthSavedRegisters
-Získá počet bajtů uložených registrů posunuto v zásobníku.
+# <a name="idiaframedataget_lengthsavedregisters"></a>IDiaFrameData::get_lengthSavedRegisters
+Načte počet bajtů uložených registrů, které byly vloženy do zásobníku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,14 +33,14 @@ HRESULT get_lengthSavedRegisters ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí počet bajtů uložených registrů.
+mimo Vrátí počet bajtů uložených registrů.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Hodnota vrácená touto metodou se obvykle používá při interpretaci řetězec programu (najdete v článku [idiaframedata::get_program –](../../debugger/debug-interface-access/idiaframedata-get-program.md) metodu pro definici řetězce program).
+ Hodnota vrácená touto metodou se obvykle používá ve výkladu řetězce programu (viz metoda [IDiaFrameData:: get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) pro definici řetězce programu).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [IDiaFrameData::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md)

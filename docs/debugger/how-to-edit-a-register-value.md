@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Úprava hodnoty registru | Dokumentace Microsoftu'
+title: 'Postupy: Úprava hodnoty registru | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -19,28 +19,28 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58094d505cf2fd3621b801040f0f71904796d86b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: b3ccaa124b64ad462f633e760695f931afaae531
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63388424"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733422"
 ---
-# <a name="how-to-edit-a-register-value-c-c-visual-basic-f"></a>Postupy: Úprava hodnoty registru (C#, C++, Visual Basic, F#)
+# <a name="how-to-edit-a-register-value-c-c-visual-basic-f"></a>Postupy: Úprava hodnoty registru (C#, C++, Visual Basic,) F#
 
-Okno registrů je k dispozici pouze v případě, že je povoleno ladění úrovni adres v **možnosti** dialogovém okně **ladění** uzlu.
+Okno Registry je k dispozici pouze v případě, že je povoleno ladění na úrovni adresy v dialogovém okně **Možnosti** , uzel **ladění** .
 
-### <a name="to-change-the-value-of-a-register"></a>Chcete-li změnit hodnoty registru
+### <a name="to-change-the-value-of-a-register"></a>Změna hodnoty registru
 
-1. V **zaregistruje** okno, použijte klávesu TAB nebo přesuňte kurzor myši přejděte k hodnotě, kterou chcete změnit. Když začnete psát, musí být kurzor umístěn před hodnota, kterou chcete přepsat.
+1. V okně **Registry** pomocí klávesy TAB nebo myši přesuňte kurzor na hodnotu, kterou chcete změnit. Když začnete psát, ukazatel se musí nacházet před hodnotou, kterou chcete přepsat.
 
 2. Zadejte novou hodnotu.
 
     > [!CAUTION]
-    > Změna hodnot registru (zejména v registrech EIP a EBP) může mít vliv na provádění programu.
+    > Změna hodnot registru (zejména v registrech EIP a EBP) může ovlivnit spuštění programu.
 
     > [!CAUTION]
-    > Úpravy hodnot s plovoucí desetinnou čárkou mohou díky převodu komponenty zlomku z desítkové do binární soustavy způsobit drobné nepřesnosti. I zdánlivě neškodné úpravy mohou způsobit změny některých nejméně významných bitů v registru s plovoucí desetinnou čárkou.
+    > Úpravy hodnot s plovoucí desetinnou čárkou mohou díky převodu komponenty zlomku z desítkové do binární soustavy způsobit drobné nepřesnosti. Dokonce i zdánlivě neškodného úpravy můžou mít za následek změny některých nejméně významných bitů v registru s plovoucí desetinnou čárkou.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Postupy: Použití okna Registry](../debugger/how-to-use-the-registers-window.md)

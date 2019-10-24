@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ebe31267ee666250fbaeda73f1678051f1d4727
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: c2d92477e37b4918e0601bf163e07f5a8492136c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72435855"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737903"
 ---
 # <a name="edit-and-continue-c"></a>Upravit a pokračovat (C++)
 V C++ projektech můžete použít možnost upravit a pokračovat. Informace o omezeních pro úpravu a pokračování naleznete v tématu [podporované změny kóduC++()](../debugger/supported-code-changes-cpp.md) .
@@ -79,5 +79,5 @@ Další informace o vylepšeních sady Visual Studio 2015 Update 3 naleznete v t
 
  V takových případech ladicí program pokračuje ve spouštění původního kódu, dokud se změny nedají použít. Zastaralý kód se zobrazí jako dočasné okno zdrojového souboru v samostatném zdrojovém okně s názvem, jako je například `enc25.tmp`. Upravovaný zdroj se nadále zobrazuje v původním okně zdrojového kódu. Pokud se pokusíte upravit zastaralý kód, zobrazí se varovná zpráva.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Podporované změny kódu (C++)](../debugger/supported-code-changes-cpp.md)

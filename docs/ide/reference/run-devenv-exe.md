@@ -15,12 +15,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1797a9731db63999188f05c603cbd83ed0079ac1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 051462339ea25dde9c2b55394e1854c60a71dc7e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655541"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747764"
 ---
 # <a name="run-devenvexe"></a>/Run (devenv.exe)
 
@@ -62,7 +62,7 @@ Tento příklad spustí řešení `MySolution` pomocí aktivní konfigurace nasa
 devenv /run "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)
 - [/Runexit (devenv. exe)](../../ide/reference/runexit-devenv-exe.md)

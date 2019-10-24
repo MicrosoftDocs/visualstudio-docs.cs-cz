@@ -1,5 +1,5 @@
 ---
-title: Rozhraní (přístup k rozhraní SDK ladění) | Dokumentace Microsoftu
+title: Rozhraní (Debug Interface Access SDK) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -13,25 +13,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f60f4b9018f5b2fff9a5426c28dba40177d9ae9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a0aa48ae0d3c3b6b05ea469baea1a1e1aa106667
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840688"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738701"
 ---
 # <a name="interfaces-debug-interface-access-sdk"></a>Rozhraní (Přístup k rozhraní ladění SDK)
-Metody abecedním pořadí v rámci každé rozhraní v tabulce obsahu a na stránce rozhraní v tabulce Vtable pořadí.
+Metody jsou seřazeny podle abecedy pod každým rozhraním v obsahu a na stránce rozhraní v pořadí podle tabulky vtable.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
 [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)
 
-Umožňuje řídit jak DIA SDK vypočítá virtuální a relativní virtuální adresy pro ladění objektů.
+Poskytuje kontrolu nad tím, jak DIA SDK počítá virtuální a relativní virtuální adresy pro objekty ladění.
 
 [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)
 
-Iniciuje přístup ke zdroji symboly ladění.
+Inicializuje přístup ke zdroji ladicích symbolů.
 
 [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)
 
@@ -39,91 +39,91 @@ Poskytuje přístup k záznamům v datovém proudu ladění.
 
 [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)
 
-Vytvoří výčet různé datové proudy debug obsažené ve zdroji dat.
+Vytvoří výčet různých streamů ladění obsažených ve zdroji dat.
 
 [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)
 
-Vytvoří výčet různé prvky rámce data obsažená ve zdroji dat.
+Vytvoří výčet různých datových prvků rámce obsažených ve zdroji dat.
 
 [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)
 
-Zobrazení výčtu různých vloženého zdroje obsažené ve zdroji dat.
+Vytvořte výčet různých vložených zdrojů obsažených ve zdroji dat.
 
 [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 
-Provede výčet různých čísla řádků, které jsou obsaženy ve zdroji dat.
+Vytvoří výčet různých čísel řádků obsažených ve zdroji dat.
 
 [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)
 
-Vytvoří výčet různé části příspěvků obsažené ve zdroji dat.
+Vytvoří výčet různých příspěvků obsažených v části zdroje dat.
 
 [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)
 
-Provede výčet různých segmentů obsažené ve zdroji dat.
+Vytvoří výčet různých segmentů obsažených ve zdroji dat.
 
 [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)
 
-Provede výčet různých zdrojové soubory obsažené ve zdroji dat.
+Vytvoří výčet různých zdrojových souborů obsažených ve zdroji dat.
 
 [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)
 
-Provede výčet různých rámce zásobníku, která je k dispozici.
+Vytvoří výčet různých dostupných rámců zásobníku.
 
 [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
 
-Provede výčet různých symboly obsažené ve zdroji dat.
+Vytvoří výčet různých symbolů obsažených ve zdroji dat.
 
 [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)
 
-Vytvoří výčet podle adresy různé symboly obsažené ve zdroji dat.
+Provede výčet podle adres různých symbolů obsažených ve zdroji dat.
 
 [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)
 
-Provede výčet různých tabulky obsažené ve zdroji dat.
+Vytvoří výčet různých tabulek obsažených ve zdroji dat.
 
 [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 
-Poskytuje podrobnosti o rámec zásobníku.
+Zpřístupňuje podrobnosti rámce zásobníku.
 
 [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)
 
-Poskytuje podrobnosti o základní posuny umístění a paměti modulu nebo image.
+Zpřístupňuje podrobné informace o základním umístění a posunech paměti modulu nebo obrázku.
 
 [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)
 
-Přístupy zdrojový kód aplikace uložené ve zdroji dat DIA.
+Přistupuje ke zdrojovému kódu programu uloženému ve zdroji dat DIA.
 
 [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
 
-Přístupy informace, které popisují proces mapování z bloku bajty bitové kopie textu na číslo řádku zdrojového souboru.
+Přistupuje k informacím, které popisují proces mapování z bloku bajtů textu obrázku na číslo řádku zdrojového souboru.
 
 [IDiaLoadCallback](../../debugger/debug-interface-access/idialoadcallback.md)
 
-Zpětná volání obdrží od symbolu DIA postup vyhledání, což umožní uživatelského rozhraní pro informování o průběhu pokus o umístění.
+Přijímá zpětná volání z procesu hledání symbolů DIA a umožňuje tak uživatelské rozhraní nahlásit průběh pokusu o umístění.
 
 [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)
 
-Zpětná volání obdrží od DIA symbol hledání proceduru, která umožňují omezení vynucená pro proces vyhledáním.
+Přijímá zpětná volání z procesu hledání symbolů DIA, což umožňuje, aby bylo omezení uloženo na proces vyhledávání.
 
 [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)
 
-Umožňuje číst trvalou vlastnosti sady DIA vlastností.
+Umožňuje číst trvalé vlastnosti sady vlastností DIA.
 
 [IDiaReadExeAtRVACallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md)
 
-Umožňuje klientské aplikaci slouží k poskytování bajtů spustitelného souboru jako zadaným umístěním souboru.
+Umožňuje klientské aplikaci poskytovat bajty spustitelného souboru, jak je uvedeno v umístění souboru.
 
 [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)
 
-Umožňuje klientské aplikaci slouží k poskytování bajtů spustitelný soubor určený relativní virtuální adresu.
+Umožňuje klientské aplikaci poskytovat bajty spustitelného souboru, jak je určeno relativní virtuální adresou.
 
 [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)
 
-Načte data popisující oddíl příspěvek, to znamená, souvislý blok paměti přispěla do bitové kopie kompilace.
+Načte data popisující příspěvek oddílu, to znamená, že souvislý blok paměti přispěl k obrázku pomocí kompilantu.
 
 [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)
 
-Mapuje data z část čísla do segmentů adresního prostoru.
+Mapuje data z čísla oddílu na segmenty adresního prostoru.
 
 [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 
@@ -131,23 +131,23 @@ Poskytuje kontext dotazu pro symboly ladění.
 
 [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)
 
-Reprezentuje zdrojový soubor.
+Představuje zdrojový soubor.
 
 [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)
 
-Zpřístupní vlastnosti rámec zásobníku.
+Zpřístupňuje vlastnosti rámce zásobníku.
 
 [IDiaStackWalker](../../debugger/debug-interface-access/idiastackwalker.md)
 
-Poskytuje metody, jak provést zásobníku vás pomocí souboru PDB.
+Poskytuje metody pro procházení zásobníku pomocí souboru PDB.
 
 [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)
 
-Zásobník kontextu mezi voláními udržuje [idiaframedata::Execute –](../../debugger/debug-interface-access/idiaframedata-execute.md) metody.
+Udržuje kontext zásobníku mezi voláními metody [IDiaFrameData:: Execute](../../debugger/debug-interface-access/idiaframedata-execute.md) .
 
 [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
 
-Usnadňuje procházení zásobníku pomocí programového souboru databáze (PDB) ladění.
+Usnadňuje procházení zásobníku pomocí souboru PDB (program Debug Database).
 
 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 
@@ -160,12 +160,12 @@ Vytvoří výčet tabulky zdroje dat DIA.
 ## <a name="related-sections"></a>Související oddíly
 [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)
 
-Popisuje, výčty a struktury využívané prostředím různá rozhraní DIA SDK.
+Popisuje výčty a struktury používané různými rozhraními DIA SDK.
 
 [Konstanty (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)
 
-Popisuje, k dispozici v sadě DIA SDK konstanty.
+Popisuje konstanty, které jsou k dispozici v DIA SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Referenční informace](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)
+- [Reference](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)

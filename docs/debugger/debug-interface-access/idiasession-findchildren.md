@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findchildren – | Dokumentace Microsoftu
+title: 'IDiaSession:: findChildren – | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5759d810bf9180522508a6be54e5c94ffcfadb3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cca6778e5697c5f8821322c19d706d733d7f2b9f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839378"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742290"
 ---
 # <a name="idiasessionfindchildren"></a>IDiaSession::findChildren
-Načte všechny podřízené objekty zadaný nadřazený identifikátor odpovídající název a značka typu.
+Načte všechny podřízené položky zadaného nadřazeného identifikátoru, který se shoduje s názvem a typem symbolu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,36 +37,36 @@ HRESULT findChildren ( 
 #### <a name="parameters"></a>Parametry
  `parent`
 
-[in] [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) představující nadřazeného objektu. Pokud je tento symbol nadřazené funkce, modul nebo blok a pak jeho lexikální podřízené položky jsou vráceny v `ppResult`. Pokud je symbol nadřazeného typu, budou vráceny podřízené třídy. Pokud je tento parametr `NULL`, pak `symtag` musí být nastaveno na `SymTagExe` nebo `SymTagNull`, která vrací globální obor (soubor .exe).
+pro Objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) představující nadřazený prvek. Pokud je tento nadřazený symbol funkce, modul nebo blok, pak jsou jeho Lexikální podřízené prvky vráceny v `ppResult`. Pokud je nadřazený symbol typu, pak jsou vráceny podřízené třídy. Pokud je tento parametr `NULL`, musí být `symtag` nastaven na `SymTagExe` nebo `SymTagNull`, což vrátí globální obor (soubor. exe).
 
  `symtag`
 
-[in] Určuje symbol značky podřízené položky, který se má načíst. Hodnoty pocházejí ze [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) výčtu. Nastavte na `SymTagNull` načíst všechny podřízené objekty.
+pro Určuje značku symbolu podřízených objektů, které mají být načteny. Hodnoty jsou pořízeny výčtem [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) . Nastavte na `SymTagNull` pro načtení všech podřízených objektů.
 
  `name`
 
-[in] Určuje název podřízenou položku, která se má načíst. Nastavte na `NULL` pro všechny podřízené objekty, které se mají načíst.
+pro Určuje název podřízených objektů, které mají být načteny. Nastavte na `NULL` pro všechny podřízené položky, které se mají načíst.
 
  `compareFlags`
 
-[in] Určení možností porovnání využije na odpovídající název. Hodnoty z [namesearchoptions – výčet](../../debugger/debug-interface-access/namesearchoptions.md) výčtu lze použít samostatně nebo v kombinaci.
+pro Určuje možnosti porovnání použité pro porovnávání názvů. Hodnoty výčtového výčtu [namesearchoptions –](../../debugger/debug-interface-access/namesearchoptions.md) lze použít samostatně nebo v kombinaci.
 
  `ppResult`
 
-[out] Vrátí [idiaenumsymbols –](../../debugger/debug-interface-access/idiaenumsymbols.md) načíst objekt, který obsahuje seznam podřízenými symboly.
+mimo Vrátí objekt [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) , který obsahuje seznam načtených podřízených symbolů.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje, jak najít místní proměnné, funkce `pFunc` nejmenuje shoda `szVarName`.
+ Následující příklad ukazuje, jak najít místní proměnné funkce `pFunc`, které odpovídají názvu `szVarName`.
 
 ```C++
 IDiaEnumSymbols* pEnum;
 pSession->findChildren( pFunc, SymTagData, szVarName, nsCaseSensitive, &pEnum );
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Přehled](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

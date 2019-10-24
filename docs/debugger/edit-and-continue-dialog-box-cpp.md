@@ -1,5 +1,5 @@
 ---
-title: Upravit a pokračovat – dialogové okno (C++) | Dokumentace Microsoftu
+title: Dialogové okno Upravit a pokračovat (C++) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,17 +19,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e7183845e9c0b9b50b8feaedf9e6327b06678ad
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d708b4f74777fb40eccc2fef9b782689f830e092
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851430"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737962"
 ---
-# <a name="edit-and-continue-dialog-box-c"></a>Upravit a pokračovat – dialogové okno (C++)
-Upravit a pokračovat, nelze aplikovat změny, které jste provedli v nativním kódu. Může jít o přechodný stav. Někdy upravit a pokračovat nemůže ihned změny nativního kódu, ale můžete použít později během relace ladění (například po dokončení aktuálním volání procedury nyní provádění). Další informace najdete v tématu [upravit a pokračovat](../debugger/edit-and-continue.md).
+# <a name="edit-and-continue-dialog-box-c"></a>Dialogové okno Upravit a pokračovat (C++)
+V části Upravit a pokračovat nelze použít změny, které jste provedli v nativním kódu. Může se jednat o dočasnou podmínku. Někdy upravit a pokračovat nemůže okamžitě použít změny nativního kódu, ale lze je použít později během ladicí relace (například po dokončení aktuálního volání procedury). Další informace najdete v tématu [Úpravy a pokračování](../debugger/edit-and-continue.md).
 
- Můžete upravit kód pro oprava chyby při stále ladění, zastavení ladění a oprava kódu, nebo chybu ignorovat a pokračovat v ladění. Pokud budete pokračovat bez opravy, se nepoužije okamžitě změny kódu.
+ Kód můžete upravit, chcete-li chybu opravit, je-li stále ladění, zastavit ladění a opravovat kód nebo Ignorovat chybu a pokračovat v ladění. Pokud budete pokračovat bez provedení opravy, změny kódu se nepoužijí okamžitě.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Upravit a pokračovat, ladění, dialogové okno Možnosti](https://msdn.microsoft.com/library/bcew296c.aspx)

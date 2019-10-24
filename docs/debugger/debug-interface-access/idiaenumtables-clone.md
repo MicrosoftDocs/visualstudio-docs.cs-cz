@@ -1,5 +1,5 @@
 ---
-title: Idiaenumtables::clone – | Dokumentace Microsoftu
+title: 'IDiaEnumTables:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f9fc227983818aa1d1c91e147a5dce650844ad8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 522ac4080331c869c32585dfed789378b1271542
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832819"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743795"
 ---
 # <a name="idiaenumtablesclone"></a>IDiaEnumTables::Clone
-Vytvoří čítač, který obsahuje stejného stavu jako aktuální enumerátor výčtu.
+Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT Clone ( 
 #### <a name="parameters"></a>Parametry
  `ppenum`
 
-[out] Vrátí [idiaenumtables –](../../debugger/debug-interface-access/idiaenumtables.md) objekt, který obsahuje duplicitní čítače výčtu. Tabulky se neduplikují, pouze enumerátor.
+mimo Vrátí objekt [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md) , který obsahuje duplikát objektu Enumerator. Tabulky nejsou duplikovány, pouze enumerátor.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)

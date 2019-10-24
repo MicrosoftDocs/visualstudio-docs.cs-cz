@@ -1,5 +1,5 @@
 ---
-title: Sccremove – funkce | Dokumentace Microsoftu
+title: Funkce SccRemove | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 70413c2e446f8ed226a58eb8ddfe62ede4a1d61f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7ff7299868b96aedb7cc096b4e939a0f8015aeb8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66338625"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720778"
 ---
 # <a name="sccremove-function"></a>SccRemove – funkce
-Tato funkce odstraní soubory z systém správy zdrojového kódu.
+Tato funkce odstraní soubory ze systému správy zdrojů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,48 +39,48 @@ SCCRTN SccRemove(
 #### <a name="parameters"></a>Parametry
  pvContext
 
-[in] Struktura kontext modulu plug-in zdroje ovládacího prvku.
+pro Struktura kontextu modulu plug-in správy zdrojových kódů.
 
  hWnd
 
-[in] Popisovač okna integrovaného vývojového prostředí, které modul plug-in správy zdrojového kódu můžete použít jako nadřazený pro všechna dialogová okna, které poskytuje.
+pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.
 
- %{nfiles/
+ nFiles
 
-[in] Počet souborů podle `lpFileNames` pole.
+pro Počet souborů zadaných v poli `lpFileNames`.
 
  lpFileNames
 
-[in] Pole úplná místní cesta názvy souborů, které mají být odebrány.
+pro Pole plně kvalifikovaných názvů místních cest souborů, které mají být odebrány.
 
  lpComment
 
-[in] Komentář, který se má použít u každého souboru odebírá.
+pro Komentář, který se má použít u každého odebraného souboru
 
  fOptions
 
-[in] Příkaz příznaky (nepoužívané).
+pro Příznaky příkazu (nepoužívá se)
 
  pvOptions
 
-[in] Možností správy zdrojového kódu plug-konkrétní.
+pro Možnosti specifické pro modul plug-in správy zdrojového kódu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Odstranění bylo úspěšné.|
+|SCC_OK|Odebrání bylo úspěšné.|
 |SCC_E_FILENOTCONTROLLED|Vybraný soubor není pod správou zdrojových kódů.|
-|SCC_E_OPNOTSUPPORTED|Systém správy zdrojového kódu nepodporuje tuto operaci.|
-|SCC_E_ISCHECKEDOUT|Soubor nelze odebrat, protože uživatel je aktuálně rezervovány.|
-|SCC_E_ACCESSFAILURE|Došlo k problému, přístup k systému správy zdrojového kódu, pravděpodobně kvůli problémům se síti nebo kolize.|
-|SCC_E_NOTAUTHORIZED|Uživatel nemůže k provedení této operace.|
-|SCC_E_NONSPECIFICERROR|Obecná chyba; Soubor nebyl odstraněn.|
+|SCC_E_OPNOTSUPPORTED|Systém správy zdrojového kódu tuto operaci nepodporuje.|
+|SCC_E_ISCHECKEDOUT|Soubor nelze odebrat, protože uživatel je aktuálně rezervován.|
+|SCC_E_ACCESSFAILURE|Při přístupu do systému správy zdrojů došlo k potížím, pravděpodobně kvůli problémům se sítí nebo kolize.|
+|SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k provedení této operace.|
+|SCC_E_NONSPECIFICERROR|Nespecifická chyba; soubor nebyl odebrán.|
 |SCC_I_OPERATIONCANCELED|Operace byla zrušena před dokončením.|
 
 ## <a name="remarks"></a>Poznámky
- Tato funkce odebere soubory ze systému správy zdrojového kódu, ale nedojde k odstranění je z místního pevného disku uživatele.
+ Tato funkce odebere soubory ze systému správy zdrojů, ale neodstraní je z místního pevného disku uživatele.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

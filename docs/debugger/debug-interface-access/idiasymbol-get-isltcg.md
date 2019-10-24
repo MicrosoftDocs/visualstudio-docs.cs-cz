@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_isltcg – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_isLTCG | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f5fe47d8575c47756cce8fd1580ced5f3036766
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 1d3fa97d5612b61151d9c435b91f500c87af0b23
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64785715"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740219"
 ---
-# <a name="idiasymbolgetisltcg"></a>IDiaSymbol::get_isLTCG
-Získá příznak, který určuje, zda [Kompilantu](../../debugger/debug-interface-access/compiland.md) bylo propojeno pomocí přepínače linkeru [parametru/LTCG (generování kódu při propojování odkaz)](/cpp/build/reference/ltcg-link-time-code-generation), což pomáhá při optimalizaci celého programu. Tento přepínač platí pouze pro spravovaný kód.
+# <a name="idiasymbolget_isltcg"></a>IDiaSymbol::get_isLTCG
+Načte příznak, který určuje, zda byl [kompilantu](../../debugger/debug-interface-access/compiland.md) propojen s přepínačem linkeru [/LTCG (generování kódu při propojování)](/cpp/build/reference/ltcg-link-time-code-generation), které pomáhá v optimalizaci celého programu. Tento přepínač platí pouze pro spravovaný kód.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,20 +33,20 @@ HRESULT get_iSLTCG(
 #### <a name="parameters"></a>Parametry
  pFlag
 
-[out] Vrátí `TRUE` Pokud `compiland` bylo propojeno pomocí přepínače linkeru parametru/LTCG; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud byla `compiland` propojena s přepínačem linkeru/LTCG; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|Ve verzi 8.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

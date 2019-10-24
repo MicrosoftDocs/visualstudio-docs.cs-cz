@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f51489b888a0b85b53856e413eb4704d24161b6
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 7ac1a2812cb86108d32d769595affd53fc402ff4
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925726"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777726"
 ---
 # <a name="visual-studio-emulator-for-android"></a>Emulátor sady Visual Studio pro Android
 
@@ -87,7 +87,7 @@ Emulátor sady Visual Studio pro Android je desktopová aplikace, která emuluje
  Podrobné informace o funkcích, které můžete testovat v emulátoru, najdete v tomto [blogovém příspěvku](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/).
 
 ## <a name="FeaturesNonTest"></a>Funkce, které nemůžete testovat v emulátoru
- Následující seznam popisuje funkce platformy Android, které nemůžete testovat v emulátoru. Tyto funkce je nutné testovat na fyzickém zařízení.
+ Následující seznam popisuje funkce platformy Android, které **nemůžete** testovat v emulátoru. Tyto funkce je nutné testovat na fyzickém zařízení.
 
 - Kompas
 
@@ -98,11 +98,11 @@ Emulátor sady Visual Studio pro Android je desktopová aplikace, která emuluje
 - Světlost. Změna úrovně jasu emulátoru nebude vizuálně ovlivňovat způsob, jakým se zařízení zobrazuje na obrazovce.
 
 ## <a name="Support"></a>Prostředky podpory
- Pokud hostitelský počítač splňuje požadavky na systém a narazíte na problém, která nejsou zahrnuta do tohoto průvodce odstraňováním potíží:
+ Pokud hostitelský počítač splňuje požadavky na systém a narazíte na problém, který není popsaný v této příručce pro odstraňování potíží:
 
-- Položte otázku na StackOverflow pomocí [emulátoru Androidu](http://stackoverflow.com/questions/tagged/android-emulator) a sady Visual Studio.
+- Položte otázku na StackOverflow pomocí [emulátoru Androidu](https://stackoverflow.com/questions/tagged/android-emulator) a sady Visual Studio.
 
-- Nahlaste problém pomocí odeslat úsměv nástroje v sadě Visual Studio nebo v správce emulátoru.
+- Nahlaste problém pomocí nástroje odeslat smajlíka v aplikaci Visual Studio nebo ve Správci emulátorů.
 
 ## <a name="see-also"></a>Viz také:
- [Požadavky na systém pro emulátor sady Visual Studio pro Android](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md) [Řešení potíží s emulátorem sady Visual Studio pro Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)
+ [Požadavky na systém pro emulátor sady Visual Studio pro](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md) [řešení potíží s emulátorem sady Visual Studio pro](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md) Android

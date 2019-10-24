@@ -17,12 +17,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: fa42d9c404aaf75fda03731183abf3d585869b07
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 09f6e2e9b4b89c7e6fd1fe9a342d4fd05b12e7a9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647555"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747971"
 ---
 # <a name="code-snippets"></a>Fragmenty kódu
 
@@ -102,6 +102,6 @@ Změníte-li `newPropertyValue` na `m_property`, dojde ke změně každé instan
 - [Osvědčené postupy pro používání fragmentů kódu](../ide/best-practices-for-using-code-snippets.md)
 - [Řešení potíží s fragmenty](../ide/troubleshooting-snippets.md)
 - [C#fragmenty kódu](../ide/visual-csharp-code-snippets.md)
-- [Vizuální C++ fragmenty kódu](../ide/visual-cpp-code-snippets.md)
+- [C++fragmenty kódu](../ide/visual-cpp-code-snippets.md)
 - [Referenční informace ke schématu fragmentů kódu](../ide/code-snippets-schema-reference.md)
 - [Fragmenty kódu (Visual Studio pro Mac)](/visualstudio/mac/snippets)

@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 899fc041df3f7118de6be97309e8ce971235d178
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 82bccbd9558a5dad87e9fe13f9ed7136a5d77d8a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658325"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747527"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>Přehled Jazykových nástrojů specifických pro doménu
 Nástroje DSL (nástroje DSL), které jsou hostovány v aplikaci Visual Studio, vám umožní navrhnout jazyk specifický pro doménu a potom vygenerovat vše, co uživatelé musí mít, aby mohli vytvářet modely založené na jazyce.
@@ -74,7 +74,7 @@ Nástroje DSL (nástroje DSL), které jsou hostovány v aplikaci Visual Studio, 
 
  Při sestavování a spouštění řešení DSL v aplikaci Visual Studio se v druhé instanci sady Visual Studio zobrazí informace o tom, jak váš jazyk specifický pro doménu vypadá uživateli tohoto jazyka. Jakmile ověříte, že vše funguje správně, můžete distribuovat `.vsix` soubor, který najdete ve složce Build projektu DslPackage. Tento soubor se dá použít k instalaci DSL jako rozšíření sady Visual Studio v jiných počítačích.  Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](msi-and-vsix-deployment-of-a-dsl.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Experimentální instance](../extensibility/the-experimental-instance.md)
 - [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_compilername – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_compilerName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 076b2fbcd4a1f65de56e52ffbf8b565ca122ffe1
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 3fd64d2f1a18df2d41a7d39f4ce474d601e194c7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64813952"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740818"
 ---
-# <a name="idiasymbolgetcompilername"></a>IDiaSymbol::get_compilerName
-Vrátí název kompilátoru sloužící ke generování [Kompilantu](../../debugger/debug-interface-access/compiland.md).
+# <a name="idiasymbolget_compilername"></a>IDiaSymbol::get_compilerName
+Vrátí název kompilátoru, který se používá ke generování [kompilantu](../../debugger/debug-interface-access/compiland.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,13 +31,13 @@ HRESULT get_compilerName (
 ```
 
 #### <a name="parameters"></a>Parametry
- `pName` Ukazatel, který bude obsahovat název Unicode kompilátoru BSTR.
+ `pName` ukazatel na BSTR, který bude obsahovat název Unicode kompilátoru.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -45,8 +45,8 @@ HRESULT get_compilerName (
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|Ve verzi 8.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

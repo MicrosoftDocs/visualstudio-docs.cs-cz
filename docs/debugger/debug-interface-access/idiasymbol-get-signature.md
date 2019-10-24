@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_signature – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_signature | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2bec9b7f41051982bf0fee0fb0017af6c4fd3d4a
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: da52e72f218d7ef3207d13c843df7e1bc5f8c40b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64792091"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739345"
 ---
-# <a name="idiasymbolgetsignature"></a>IDiaSymbol::get_signature
-Načte hodnotu tohoto symbolu podpis.
+# <a name="idiasymbolget_signature"></a>IDiaSymbol::get_signature
+Načte hodnotu podpisu symbolu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_signature ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí hodnotu tohoto symbolu podpis.
+mimo Vrátí hodnotu podpisu symbolu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

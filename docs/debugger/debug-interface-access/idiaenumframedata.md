@@ -1,5 +1,5 @@
 ---
-title: Idiaenumframedata – | Dokumentace Microsoftu
+title: IDiaEnumFrameData | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db06efe400106260556d8eab5fd644bbfc27f0c2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e20fa21d739c79dad94a8445f6d0fe811337fd40
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833616"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744554"
 ---
 # <a name="idiaenumframedata"></a>IDiaEnumFrameData
-Vytvoří výčet různé prvky rámce data obsažená ve zdroji dat.
+Vytvoří výčet různých datových prvků rámce obsažených ve zdroji dat.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,28 +28,28 @@ Vytvoří výčet různé prvky rámce data obsažená ve zdroji dat.
 IDiaEnumFrameData : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
-V následující tabulce jsou uvedeny metody objektu `IDiaEnumFrameData`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+Následující tabulka ukazuje metody `IDiaEnumFrameData`.
 
 |Metoda|Popis|
 |------------|-----------------|
-|[IDiaEnumFrameData::get__NewEnum](../../debugger/debug-interface-access/idiaenumframedata-get-newenum.md)|Načte `IEnumVARIANT Interface` verzi výčet.|
-|[IDiaEnumFrameData::get_Count](../../debugger/debug-interface-access/idiaenumframedata-get-count.md)|Získá počet elementů datového rámce.|
-|[IDiaEnumFrameData::Item](../../debugger/debug-interface-access/idiaenumframedata-item.md)|Načte datový prvek rámce pomocí indexu.|
-|[IDiaEnumFrameData::Next](../../debugger/debug-interface-access/idiaenumframedata-next.md)|Načte zadaný počet snímků datové prvky v pořadí výčtu.|
-|[IDiaEnumFrameData::Skip](../../debugger/debug-interface-access/idiaenumframedata-skip.md)|Vynechá zadaný počet snímků datových prvků v sekvenci výčtu.|
-|[IDiaEnumFrameData::Reset](../../debugger/debug-interface-access/idiaenumframedata-reset.md)|Návrat na začátek sekvence výčtu.|
-|[IDiaEnumFrameData::Clone](../../debugger/debug-interface-access/idiaenumframedata-clone.md)|Vytvoří čítač, který obsahuje stejného stavu jako aktuální enumerátor výčtu.|
-|[IDiaEnumFrameData::frameByRVA](../../debugger/debug-interface-access/idiaenumframedata-framebyrva.md)|Vrátí relativní virtuální adresu (RVA) objektu frame.|
-|[IDiaEnumFrameData::frameByVA](../../debugger/debug-interface-access/idiaenumframedata-framebyva.md)|Vrátí objektu frame pomocí virtuální adresy (VA).|
+|[IDiaEnumFrameData::get__NewEnum](../../debugger/debug-interface-access/idiaenumframedata-get-newenum.md)|Načte `IEnumVARIANT Interface` verzi tohoto enumerátoru.|
+|[IDiaEnumFrameData::get_Count](../../debugger/debug-interface-access/idiaenumframedata-get-count.md)|Načte počet datových elementů rámce.|
+|[IDiaEnumFrameData::Item](../../debugger/debug-interface-access/idiaenumframedata-item.md)|Načte prvek dat rámce pomocí indexu.|
+|[IDiaEnumFrameData::Next](../../debugger/debug-interface-access/idiaenumframedata-next.md)|Načte zadaný počet prvků dat rámce v sekvenci výčtu.|
+|[IDiaEnumFrameData::Skip](../../debugger/debug-interface-access/idiaenumframedata-skip.md)|Přeskočí zadaný počet prvků dat rámce v sekvenci výčtu.|
+|[IDiaEnumFrameData::Reset](../../debugger/debug-interface-access/idiaenumframedata-reset.md)|Obnoví posloupnost výčtu na začátek.|
+|[IDiaEnumFrameData::Clone](../../debugger/debug-interface-access/idiaenumframedata-clone.md)|Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.|
+|[IDiaEnumFrameData::frameByRVA](../../debugger/debug-interface-access/idiaenumframedata-framebyrva.md)|Vrátí rámec podle relativní virtuální adresy (RVA).|
+|[IDiaEnumFrameData::frameByVA](../../debugger/debug-interface-access/idiaenumframedata-framebyva.md)|Vrátí rámec podle virtuální adresy (VA).|
 
 ## <a name="remarks"></a>Poznámky
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Získat z tohoto rozhraní [idiasession::getenumtables –](../../debugger/debug-interface-access/idiasession-getenumtables.md) metody. Podívejte se na příklad podrobnosti.
+Získejte toto rozhraní z metody [IDiaSession:: getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md) . Podrobnosti najdete v příkladu.
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje, jak získat ( `GetEnumFrameData` funkce) a použití ( `ShowFrameData` funkce) `IDiaEnumFrameData` rozhraní. Najdete v článku [idiaframedata –](../../debugger/debug-interface-access/idiaframedata.md) rozhraní příklad `PrintFrameData` funkce.
+Tento příklad ukazuje, jak získat (funkce `GetEnumFrameData`) a použít (funkce `ShowFrameData`) rozhraní `IDiaEnumFrameData`. Příklad funkce `PrintFrameData` naleznete v rozhraní [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) .
 
 ```C++
 
@@ -101,13 +101,13 @@ void ShowFrameData(IDiaSession *pSession)
 ```
 
 ## <a name="requirements"></a>Požadavky
-**Záhlaví:** Dia2.h
+**Hlavička:** Dia2. h
 
-**Knihovna:** diaguids.lib
+**Knihovna:** diaguids. lib
 
-**DLL:** msdia80.dll
+**Knihovna DLL:** Msdia80. dll
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

@@ -16,12 +16,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac67e89ebf04979f8aec55f100e2b1138e9feb22
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f56161e1fd89ce29924368b6029ee12c17e75a65
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72622250"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747705"
 ---
 # <a name="visual-studio-command-aliases"></a>Aliasy příkazů sady Visual Studio
 
@@ -125,7 +125,7 @@ Následující tabulka obsahuje seznam předem definovaných aliasů příkazů 
 |Výpis procesů|&#124;|Debug. ListProcesses|
 |[Příkaz Listovat vlákna](../../ide/reference/list-threads-command.md)|~ ~ * k ~ \*kb|Debug. Listthreads – Debug. ListTheads/AllThreads|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)

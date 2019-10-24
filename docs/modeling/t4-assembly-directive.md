@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c08518d3bcff8d91cc8fabebe7b858c5880ce5b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f605748d4bda13567713b646f0232d684ec46fe1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671037"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748191"
 ---
 # <a name="t4-assembly-directive"></a>T4 – direktiva Assembly
 
@@ -88,6 +88,6 @@ V textové šabloně návrhu sady Visual Studio načte direktiva `assembly` sest
 <#@ assembly name="$(myLibFolder)\MyLib.dll" #>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [T4 – direktiva Include](../modeling/t4-include-directive.md)

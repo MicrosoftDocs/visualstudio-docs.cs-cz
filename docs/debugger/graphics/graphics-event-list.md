@@ -1,5 +1,5 @@
 ---
-title: Seznam událostí grafiky | Dokumentace Microsoftu
+title: Seznam událostí grafiky | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,108 +10,108 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 710cc8cae2b1974529be1eded6c5148eedd1211e
-ms.sourcegitcommit: 283f2dbce044a18e9f6ac6398f6fc78e074ec1ed
+ms.openlocfilehash: 9fe890d5a2c88ea9d4d35a6bd01f6012d97e6ce0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65805316"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72735552"
 ---
 # <a name="graphics-event-list"></a>Seznam událostí grafiky
-Použijte seznam událostí grafiky v analyzátoru grafiky sady Visual Studio zkoumat události rozhraní Direct3D, které byly zaznamenány při vykreslování rámce hru nebo aplikaci.
+Pomocí seznamu událostí grafiky v Analyzátor grafiky sady Visual Studio můžete prozkoumat události Direct3D, které byly zaznamenány při vykreslování snímku vaší hry nebo aplikace.
 
  Toto je seznam událostí:
 
- ![Seznam událostí, které mají v názvu "Index". ](media/gfx_diag_demo_event_list_orientation.png "gfx_diag_demo_event_list_orientation")
+ ![Seznam událostí, které mají v názvu "index".](media/gfx_diag_demo_event_list_orientation.png "gfx_diag_demo_event_list_orientation")
 
-## <a name="using-the-event-list"></a>Pomocí seznamu událostí
- Když vyberete událost v případě, že seznam, se projeví v informace, které se zobrazí v jiných nástrojích pro analýzu grafiky; Pomocí seznamu událostí ve vzájemné součinnosti pomocí těchto nástrojů můžete zkoumat podrobně zjistit jeho příčinu problému vykreslování. Další informace o tom, jak můžete vyřešit problémů s vykreslováním použitím seznamu událostí společně s další nástroje pro analýzu grafiky, naleznete v tématu [příklady](graphics-diagnostics-examples.md).
+## <a name="using-the-event-list"></a>Použití seznamu událostí
+ Když v seznamu událostí vyberete událost, projeví se v informacích zobrazených jinými nástroji pro analýzu grafiky. pomocí seznamu událostí ve vzájemné součinnosti s těmito dalšími nástroji můžete zjistit příčinu problému s vykreslováním podrobněji. Další informace o řešení problémů s vykreslováním pomocí seznamu událostí spolu s dalšími nástroji pro analýzu grafiky najdete v tématu [Příklady](graphics-diagnostics-examples.md).
 
- Efektivně díky funkcím, které jsou události v seznamu je důležité pro navigace komplexní rámce, které mohou obsahovat tisíce událostí. Chcete-li efektivně používat seznam událostí, zvolte že zobrazení vám nejvíce vyhovuje, můžete filtrovat seznam událostí, postupujte podle odkazy na další informace o objektech rozhraní Direct3D, která jsou přidružena k události pomocí vyhledávání a použijte šipku tlačítka pro přesun mezi nakreslit volání rychle.
+ Efektivní použití funkcí seznamu událostí je důležité pro získání složitých rámců, které mohou obsahovat tisíce událostí. Chcete-li používat seznam událostí efektivně, vyberte zobrazení, které je pro vás nejvhodnější, pomocí funkce Search vyfiltrujte seznam událostí, Sledujte odkazy na Další informace o objektech Direct3D, které jsou přidruženy k události, a pomocí tlačítek se šipkami můžete rychle přecházet mezi voláními remíz.
 
-### <a name="color-coded-events-in-direct3d-12"></a>Barevně rozlišená události v Direct3D 12
- Direct3D 12 poskytuje více front, které odpovídají funkci jiný hardware. K identifikaci fronty, který je spojen s konkrétním grafiky událostí v Direct3D 12, události jsou barevně v seznamu událostí podle jejich fronty, při práci s zachycení aplikace Direct3D 12.
+### <a name="color-coded-events-in-direct3d-12"></a>Barevně kódované události v Direct3D 12
+ Direct3D 12 zveřejňuje více front, které odpovídají různým hardwarovým funkcím. Aby bylo možné identifikovat frontu, která je přidružená k určité události grafiky v Direct3D 12, jsou události v seznamu událostí podle jejich fronty barevně kódované, když pracujete se zachycením aplikace Direct3D 12.
 
-|Direct3D 12 fronty|Barva|
+|Fronta Direct3D 12|Barevných|
 |-----------------------|-----------|
-|Vykreslení fronty|Zelená|
-|COMPUTE fronty|Žlutá|
-|Fronta kopírování|Oranžová|
+|Fronta vykreslování|šetrn|
+|Výpočetní fronta|opatřen|
+|Kopírovat frontu|oranžová|
 
- Direct3D 11 nebude vystavit více front, tak události nejsou barevně v seznamu událostí při práci s zachycení aplikace Direct3D 11.
+ Direct3D 11 nevystavuje více front, takže při práci se zachytáváním aplikace Direct3D 11 nejsou události v seznamu událostí zakódované barevně.
 
 ### <a name="event-list-views"></a>Zobrazení seznamu událostí
- Seznam událostí podporuje dvě různá zobrazení, které umožňují uspořádat událostí grafiky na podporu vašeho pracovního postupu a předvolby různými způsoby. První zobrazení je *zobrazení pracovní GPU* který slouží k uspořádání událostí a jeho přidruženého stavu hierarchicky. Druhý zobrazení je *zobrazení časové osy* který slouží k uspořádání událostí chronologicky, v plochém seznamu.
+ Seznam událostí podporuje dvě různá zobrazení, která uspořádávají události grafiky různými způsoby, jak podporovat pracovní postup a předvolby. Prvním zobrazením je *pracovní zobrazení GPU* , které uspořádá události a jejich přidružené stavy hierarchicky. Druhým zobrazením je *zobrazení časové osy* , které organizuje události chronologicky v nestrukturovaném seznamu.
 
- **Práce GPU** zobrazení, které ukazuje zachycené události a jejich stav v hierarchii. Nejvyšší úroveň hierarchie se skládá z události, například volání draw, vymaže, k dispozici a ztěžovat se zobrazeními. Události seznamu, můžete rozbalit volání vykreslování můžete zobrazit stav zařízení, který byl aktuální v okamžiku volání draw; a je možné dalším rozbalením jednotlivých stavů můžete zobrazit události, které nastavily jejich hodnoty. Na této úrovni také uvidíte, jestli v předchozí snímek byl nastaven určitého stavu, nebo pokud byla nastavena více než jednou od poslední nakreslit volání.
+ Zobrazení **práce GPU** zobrazuje zachycené události a jejich stav v hierarchii. Nejvyšší úroveň hierarchie je tvořena událostmi, jako jsou volání draw, vymazání, přítomné a ty, které se týkají zobrazení. V seznamu událostí můžete rozbalit volání vykreslování a zobrazit tak stav zařízení, který byl aktuální v okamžiku volání metody Draw; a dalším rozbalením jednotlivých stavů můžete zobrazit události, které nastavily jejich hodnoty. Na této úrovni můžete také zjistit, zda určitý stav byl nastaven v předchozím snímku nebo zda byl nastaven více než jednou od posledního volání metody Draw.
 
- **Časová osa** zobrazení ukazuje všechny zachycené události v chronologickém pořadí. Tento způsob uspořádání seznamu událostí je stejné jako v předchozích verzích sady Visual Studio.
+ Zobrazení **Časová osa** zobrazuje každou zachycenou událost v chronologickém pořadí. Tento způsob uspořádání seznamu událostí je stejný jako v předchozích verzích sady Visual Studio.
 
-##### <a name="to-change-the-event-list-view-mode"></a>Chcete-li změnit režim zobrazení seznamu událostí
+##### <a name="to-change-the-event-list-view-mode"></a>Změna režimu zobrazení seznamu událostí
 
-- V **seznam událostí grafiky** okno nad seznam událostí, vyhledejte **zobrazení** rozevírací seznam a vyberte buď **časová osa** zobrazení nebo **práce GPU** zobrazení.
+- V okně **seznam událostí grafiky** nad seznamem událostí najděte rozevírací seznam **zobrazení** a zvolte buď zobrazení **Časová osa** , nebo zobrazení **práce s grafickým procesorem** .
 
 ### <a name="filtering-events"></a>Filtrování událostí
- Můžete použít vyhledávací pole – nachází v pravém horním rohu **seznam událostí grafiky** okno – k filtrování seznamu událostí zahrnout pouze události, jejichž názvy obsahují určitá klíčová slova. Můžete zadat jeden klíčová slova, jako jsou `Vertex`– jak je znázorněno na předchozím obrázku – nebo více klíčových slov s využitím středníkem oddělený seznam podobný `Draw;Primitive`– což odpovídá události, které mají buď `Draw` nebo `Primitive` v jejich názvy. Hledání jsou citlivé na prázdné znaky, například `VSSet` a `VS Set` jsou různé hledání – proto ujistěte se, že do formuláře hledání pečlivě.
+ Pomocí vyhledávacího pole, které je umístěné v pravém horním rohu okna **seznam událostí grafiky** , můžete filtrovat seznam událostí tak, aby zahrnoval jenom události, jejichž názvy obsahují konkrétní klíčová slova. Můžete zadat jednotlivá klíčová slova, jako je například `Vertex`, jak je znázorněno na předchozím obrázku, nebo více klíčových slov pomocí seznamu středníkem oddělených názvů, jako je například `Draw;Primitive`, který odpovídá událostem, které mají v názvech buď `Draw` nebo `Primitive`. Vyhledávání jsou citlivá na prázdné znaky, například `VSSet` a `VS Set` jsou různá hledání, takže se ujistěte, že se vyhledají pečlivě.
 
-### <a name="moving-between-draw-calls"></a>Přesouvání mezi voláními výkresu
- Protože zkoumání `Draw` volání je obzvláště důležité, můžete použít **nakreslit přejít na další volání** a **nakreslit přejít na předchozí volání** tlačítka – nachází v levém horním rohu **Seznam událostí grafiky** okno – Najít a rychle přesouvat mezi voláními výkresu.
+### <a name="moving-between-draw-calls"></a>Přesun mezi voláními vykreslování
+ Vzhledem k tomu, že zkoumání `Draw` volání je obzvláště důležité, můžete použít příkaz **Přejít na další volání remíz** a **Přejít na předchozí tlačítka pro volání remíz** – nacházející se v levém horním rohu okna **seznam událostí grafiky** – k vyhledání a přesunutí mezi remízami rychle volá.
 
-### <a name="links-to-graphics-objects"></a>Odkazy na grafických objektů
- Informace o tom určitých událostí grafiky, může být nutné další informace o aktuálním stavu Direct3D nebo objekty Direct3D, na které odkazuje událost. Mnoho událostí obsahují odkazy na tyto informace, které můžete použít pro více podrobností.
+### <a name="links-to-graphics-objects"></a>Odkazy na grafické objekty
+ Abyste pochopili určité události grafiky, možná budete potřebovat další informace o aktuálním stavu rozhraní Direct3D nebo o objektech Direct3D, na které se odkazuje v události. Mnoho událostí obsahuje odkazy na tyto informace, které můžete použít pro další podrobnosti.
 
-## <a name="kinds-of-events-and-event-markers"></a>Typy událostí a události značek
- Události, které se zobrazí v případě, že seznam jsou uspořádány do čtyř kategorií: nakreslete obecné události, události, uživatelem definované události skupiny a značky uživatelem definovanou událost. S výjimkou obecné události zobrazí se společně s ikonou, která určuje kategorii, která patří do každé události.
+## <a name="kinds-of-events-and-event-markers"></a>Typy událostí a značek událostí
+ Události, které jsou zobrazeny v seznamu událostí, jsou uspořádány do čtyř kategorií: Obecné události, nakreslit události, uživatelsky definované skupiny událostí a uživatelsky definované značky událostí. S výjimkou obecných událostí se každá událost zobrazuje spolu s ikonou, která označuje kategorii, do které patří.
 
 |Ikona|Popis události|
 |----------|-----------------------|
-|(žádná ikona)|Obecné události<br /> Žádné událost, která není uživatelem definované události, uživatelem definované události skupiny nebo nakreslit události.|
-|![Ikona události draw](media/vsg_eventlist_icon_draw.png "vsg_eventlist_icon_draw")|Události Draw<br /> Označí událostí draw, ke které došlo během zachyceného snímku.|
-|![Uživatel&#45;definované ikona značky události](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|Uživatelem definované události skupiny<br /> Seskupuje související události, jak je definováno aplikací.|
-|![Uživatel&#45;definované ikona značky události](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|Značka události definované uživatelem<br /> Označuje konkrétní umístění, jak je definováno aplikací.|
+|(bez ikony)|Obecná událost<br /> Jakákoli událost, která není uživatelem definovaná událost, uživatelem definovaná skupina událostí nebo událost Draw.|
+|![Ikona události Draw](media/vsg_eventlist_icon_draw.png "vsg_eventlist_icon_draw")|Událost Draw<br /> Označuje událost Draw, ke které došlo během zachyceného snímku.|
+|![Ikona uživatelsky&#45;definované značky události](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|Uživatelem definovaná skupina událostí<br /> Seskupuje události související s aplikací.|
+|![Ikona uživatelsky&#45;definované značky události](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|Uživatelsky definovaná značka události<br /> Označí konkrétní umístění definované aplikací.|
 
-## <a name="marking-user-defined-events-in-your-app"></a>Označování událostí definovaných uživatelem ve vaší aplikaci
- Uživatelem definované události jsou specifické pro vaši aplikaci. Můžete je použít ke korelaci s událostmi v seznamu událostí grafiky významné události, ke kterým dochází ve vaší aplikaci. Můžete například vytvořit uživatelem definované události skupiny pro uspořádání souvisejících událostí, jako jsou ty, které vykreslují uživatelského rozhraní – do skupiny nebo hierarchie tak, aby seznam událostí můžete procházet snadněji, nebo můžete vytvořit značky při určité druhy objektů jsou vykreslit, takže můžete snadno zjistíte, že jejich událostí grafiky v seznamu událostí.
+## <a name="marking-user-defined-events-in-your-app"></a>Označení uživatelem definovaných událostí v aplikaci
+ Uživatelsky definované události jsou specifické pro vaši aplikaci. Můžete je použít ke korelaci významných událostí, ke kterým dochází ve vaší aplikaci, s událostmi v seznamu událostí grafiky. Můžete například vytvořit uživatelsky definované skupiny událostí pro uspořádání souvisejících událostí, jako jsou například ty, které vykreslují vaše uživatelské rozhraní – do skupin nebo hierarchií, aby bylo možné procházet seznam událostí snadněji, nebo můžete vytvořit značky, pokud jsou určité typy objektů vykresleno, abyste mohli snadno najít své grafické události v seznamu událostí.
 
- Chcete-li vytvořit skupiny a značky ve vaší aplikaci, použijte stejná rozhraní API, která rozhraní Direct3D poskytuje pro použití u jiných rozhraní Direct3D, nástroje pro ladění. Tato rozhraní API někdy změnit mezi jednotlivými verzemi rozhraní Direct3D, ale základní funkce jsou stejné.
+ Pokud chcete ve své aplikaci vytvořit skupiny a značky, použijte stejná rozhraní API, která technologie Direct3D poskytuje pro použití v jiných ladicích nástrojích Direct3D. Tato rozhraní API se někdy mění mezi verzemi rozhraní Direct3D, ale základní funkce jsou stejné.
 
 ### <a name="user-defined-events-in-direct3d-12"></a>Uživatelem definované události v Direct3D 12
- Chcete-li vytvořit skupiny a značky v Direct3D 12, pomocí rozhraní API popsané v této části. Následující tabulka shrnuje rozhraní API, které můžete použít v závislosti na tom, jestli jsou označení událostí ve frontě příkazu nebo příkazu seznamu.
+ Chcete-li vytvořit skupiny a značky v Direct3D 12, použijte rozhraní API popsaná v této části. Následující tabulka shrnuje rozhraní API, která můžete použít v závislosti na tom, jestli označíte události ve frontě příkazů nebo seznamu příkazů.
 
 |Popis rozhraní API|[ID3D12CommandQueue](/windows/desktop/api/d3d12/nn-d3d12-id3d12commandqueue)|[ID3D12GraphicsCommandList](/windows/desktop/api/d3d12/nn-d3d12-id3d12graphicscommandlist)|
 |---------------------| - | - |
-|Zkontrolovat dostupnost uživatelem definovanou událost|[PIXGetStatus](/previous-versions//dn788637(v=vs.85))|[PIXGetStatus](/previous-versions//dn788637(v=vs.85))|
-|Začít skupinu událostí|[PIXBeginEvent](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-beginevent)|[PIXBeginEvent](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-beginevent)|
-|Ukončit skupinu událostí|[PIXEndEvent](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-endevent)|[PIXEndEvent](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-endevent)|
+|Ověřit dostupnost události definované uživatelem|[PIXGetStatus](/previous-versions//dn788637(v=vs.85))|[PIXGetStatus](/previous-versions//dn788637(v=vs.85))|
+|Zahájení skupiny událostí|[PIXBeginEvent](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-beginevent)|[PIXBeginEvent](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-beginevent)|
+|Ukončení skupiny událostí|[PIXEndEvent](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-endevent)|[PIXEndEvent](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-endevent)|
 |Vytvoření značky události|[PIXSetMarker](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-setmarker)|[PIXSetMarker](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setmarker)|
 
-### <a name="user-defined-events-in-direct3d-11-and-earlier"></a>Uživatelem definované události v Direct3D 11 a starší
- Pokud chcete vytvořit skupiny a značky v Direct3D 11 nebo starší, pomocí rozhraní API popsané v této části. Následující tabulka shrnuje rozhraní API, která můžete použít pro různé verze rozhraní Direct3D 11 a dřívějších verzích rozhraní Direct3D.
+### <a name="user-defined-events-in-direct3d-11-and-earlier"></a>Uživatelem definované události v Direct3D 11 a starších verzích
+ Chcete-li vytvořit skupiny a značky v Direct3D 11 nebo starších, použijte rozhraní API popsaná v této části. Následující tabulka shrnuje rozhraní API, která můžete použít pro různé verze Direct3D 11 a starších verzí rozhraní Direct3D.
 
-|Popis rozhraní API|[ID3D11DeviceContext2](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) (Direct3D 11.2)|[ID3DUserDefinedAnnotation](http://go.microsoft.com/fwlink/p/?LinkID=250967) (Direct3D 11.1)|Rozhraní API D3DPerf_ řady (Direct3D 11.0 a starší)|
+|Popis rozhraní API|[ID3D11DeviceContext2](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) (Direct3D 11,2)|[ID3DUserDefinedAnnotation](http://go.microsoft.com/fwlink/p/?LinkID=250967) (Direct3D 11,1)|D3DPerf_ API Family (Direct3D 11,0 a starší)|
 |---------------------| - | - | - |
-|Začít skupinu událostí|`BeginEventInt`|`BeginEvent`|`D3DPerf_BeginEvent`|
-|Ukončit skupinu událostí|`EndEventInt`|`EndEvent`|`D3DPerf_EndEvent`|
+|Zahájení skupiny událostí|`BeginEventInt`|`BeginEvent`|`D3DPerf_BeginEvent`|
+|Ukončení skupiny událostí|`EndEventInt`|`EndEvent`|`D3DPerf_EndEvent`|
 |Vytvoření značky události|`SetMarkerInt`|`SetMarker`|`D3DPerf_SetMarker`|
 
- Můžete použít některý z těchto rozhraní API, které podporuje vaše verze rozhraní Direct3D – například pokud se zaměřujete na rozhraní API Direct3D 11.1, můžete použít buď `SetMarker` nebo `D3DPerf_SetMarker` vytvořit značku události, ale ne `SetMarkerInt` protože jeho k dispozici pouze v Direct3D 11.2 – a dokonce i těch, které společně podporují různé verze rozhraní Direct3D ve stejné aplikaci můžete kombinovat.
+ Můžete použít kterékoli z těchto rozhraní API, které podporuje vaše verze technologie Direct3D – například pokud cílíte na rozhraní Direct3D 11,1 API, můžete k vytvoření značky události použít buď `SetMarker`, nebo `D3DPerf_SetMarker`, ale ne `SetMarkerInt`, protože jsou dostupné jenom v Direct3D 11.2 – a můžete dokonce i m. IX ty, které podporují různé verze Direct3D společně ve stejné aplikaci.
 
 <!-- VERSIONLESS -->
 <a name="resource-history"></a>
-## <a name="resource-history"></a>Historie prostředku
-Visual Studio 2017 a novějších obsahují **rie prostředku** okna.  Vyberte ikonu sledovat ![ikona sledování](media/gfx_watch.png) vedle položky v **seznam událostí** se otevře okno **rie prostředku** okna vidíte níže:
+## <a name="resource-history"></a>Historie prostředků
+Visual Studio 2017 a vyšší obsahuje okno **historie prostředků** .  Když vyberete ikonu kukátka ![watch ](media/gfx_watch.png) vedle položky v okně **seznam událostí** , zobrazí se okno **historie prostředků** zobrazené níže:
 
-![Historie prostředku](media/gfx_diag_resource_history.png)
+![Historie prostředků](media/gfx_diag_resource_history.png)
 
-V tomto okně můžete zobrazit historii vybranou položku v seznamu událostí.  Rozevírací seznam v horní části umožňuje vybrat další položky k zobrazení historie.  Obsahuje v horní části okna **události nastavení snímků**.  Toto jsou události, které spadají do *vytvořit* zadejte kategorie a jsou volání, které obvykle inicializují a vytvořte prostředek.  Dolní části okna obsahuje **události snímků** oddílu.  Jsou normální číst a zapisovat události, ke kterým dochází při používání prostředku.
+Toto okno umožňuje zobrazit historii vybrané položky v seznamu událostí.  Rozevírací seznam v horní části lze použít k výběru dalších položek k zobrazení historie.  Horní polovina okna obsahuje **události nastavení snímků**.  Jedná se o události, které spadají do kategorie *Create* Type a jsou volání, která obvykle inicializují a vytvoří prostředek.  Dolní polovina okna obsahuje část **události rámce** .  Jedná se o normální události čtení a zápisu, ke kterým dochází při používání prostředku.
 
-| Sloupec | Popis |
+| Kolo | Popis |
 |-----------| - |
-| **Typ** | Zobrazí typ položky, obvykle *vytvořit*, *čtení* a *zápisu*. |
-| **Zobrazení** | Zobrazí Miniatura prostředku v daném okamžiku v čase.  Dvakrát klikněte na miniaturu a otevřete zobrazení podrobností o prostředku v daném čase. |
-| **Event** | Ukazuje volání metody, k níž došlo, který událost vyvolal.  Žádné další historie na jednotlivé položky lze zobrazit výběrem ikony watch ![ikona sledování](media/gfx_watch.png) na odpovídající řádek.  Navíc libovolnou položku, který je vykreslen v modrý text, například `m_commandList` na snímku obrazovky výše, lze vybrat pro další podrobnosti. |
+| **Textový** | Zobrazuje typ položky, obvykle *vytvořit*, *číst* a *zapisovat*. |
+| **Zobrazení** | Zobrazuje miniaturu prostředku v daném časovém okamžiku.  Dvojitým kliknutím na miniaturu otevřete v daném čase zobrazení podrobností o prostředku. |
+| **Event** | Zobrazuje volání metody, ke kterým došlo, která vygenerovala událost.  Jakoukoli další historii jednotlivých položek lze zobrazit výběrem ikony kukátka ![watch ikony ](media/gfx_watch.png) na příslušném řádku.  Pro další podrobnosti je také možné vybrat jakoukoli položku, která je vykreslena modře text, například `m_commandList` na snímku obrazovky. |
 
 <!-- /VERSIONLESS -->
 
-## <a name="see-also"></a>Viz také
-- [Návod: Chybějící objekty kvůli stavu zařízení](walkthrough-missing-objects-due-to-device-state.md)
+## <a name="see-also"></a>Viz také:
+- [Návod: Chybějící objekty z důvodu stavu zařízení](walkthrough-missing-objects-due-to-device-state.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_notpaged – | Dokumentace Microsoftu
+title: 'IDiaSectionContrib:: get_notPaged | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1fb132b4cf36eb686424e0f756ffe0387a432eb0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cae6940ce69bf9cd39c1002cc522af993fc59b6d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827629"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742576"
 ---
-# <a name="idiasectioncontribgetnotpaged"></a>IDiaSectionContrib::get_notPaged
-Získá příznak označující, zda část nelze stránkování nedostatek paměti.
+# <a name="idiasectioncontribget_notpaged"></a>IDiaSectionContrib::get_notPaged
+Načte příznak, který označuje, jestli se oddíl nedá stránkovat z paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,10 +32,10 @@ HRESULT get_notPaged ( 
 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
-- [out, retval] Vrátí `TRUE` Pokud oddílu nelze stránkování, out; jinak vrátí hodnotu, vrátí `FALSE`.
+- [out, retval] Vrátí `TRUE`, pokud oddíl nelze stránkovat. v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

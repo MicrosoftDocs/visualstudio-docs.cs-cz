@@ -1,5 +1,5 @@
 ---
-title: Idiaenumdebugstreams::Next – | Dokumentace Microsoftu
+title: 'IDiaEnumDebugStreams:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a1b7819c90804933795c220c4d47f288d29abfe1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 63b66729192c9c976ecd226ab21aad73b94bf9f2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838295"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744733"
 ---
 # <a name="idiaenumdebugstreamsnext"></a>IDiaEnumDebugStreams::Next
-Načte zadaný počet datové proudy debug v pořadí výčtu.
+Načte zadaný počet streamů ladění v sekvenci výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,18 +35,18 @@ HRESULT Next ( 
 #### <a name="parameters"></a>Parametry
  celt
 
-[in] Počet datových proudů ladění enumerátor, který se má načíst.
+pro Počet streamů ladění v enumerátoru, který se má načíst.
 
  rgelt
 
-[out] Vrátí pole [idiaenumdebugstreamdata –](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) objekty, které představují ladění streamuje načítají.
+mimo Vrátí pole objektů [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) , které představují načtené streamy ladění.
 
  pceltFetched
 
-[out] Vrátí počet datových proudů ladění vrátila.
+mimo Vrátí počet vrácených streamů ladění.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další datové proudy. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud nejsou k dispozici žádné další datové proudy. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)

@@ -1,5 +1,5 @@
 ---
-title: Testování knihovny DLL Visual C++ pro aplikace pro UPW
+title: Postup testování C++ knihovny DLL pro aplikace pro UWP
 ms.date: 05/01/2019
 ms.topic: conceptual
 ms.author: mblome
@@ -7,26 +7,26 @@ manager: jillfra
 ms.workload:
 - uwp
 author: mikeblome
-ms.openlocfilehash: 6e0599445ff07227f5075a1a10a8dfdfe50e88f0
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 18d8382bcb4f3e348443050e818f0b59c2a18688
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925786"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748079"
 ---
-# <a name="how-to-test-a-visual-c-dll"></a>Testování knihovny DLL Visual C++
+# <a name="how-to-test-a-c-dll"></a>Postup testování C++ knihovny DLL
 
-Toto téma popisuje jeden ze způsobů vytvoření testů jednotek pro knihovny DLL C++ pro aplikace univerzální platformy Windows (UPW) pomocí rozhraní pro testování Microsoft pro jazyk C++. Knihovny DLL RooterLib ukazuje vágní paměti limit teorie z calculus implementací funkce, která vypočítá odhad odmocninu daného čísla. Knihovna DLL může potom bude zahrnutý aplikace pro UPW, která zobrazuje uživatele zábavných věcí, které lze provést s matematickým výrazem.
+Toto téma popisuje jeden ze C++ způsobů, jak vytvořit testy částí pro knihovny DLL pro aplikace Univerzální platforma Windows (UWP) s Microsoft Test Framework C++pro. RooterLib DLL ukazuje Vague paměti z calculus pomocí implementace funkce, která vypočítá odhad druhé odmocniny daného čísla. Knihovna DLL může být pak vložená do aplikace pro UWP, která uživatelům zobrazuje zábavné možnosti, které je možné provádět pomocí matematiky.
 
-Toto téma ukazuje, jak používat jako první krok při vývoji testování částí. V takovém případě napíšete testovací metoda, která ověřuje konkrétní chování v systému, který testujete a potom napíšete kód, který projde testem. Tím, že změny v pořadí podle následujících postupů lze zrušit tuto strategii první zapisovat kód, který chcete otestovat a teprve pak píšete jednotkové testy.
+V tomto tématu se dozvíte, jak používat testování částí jako první krok vývoje. V tomto přístupu nejprve zapíšete testovací metodu, která ověří konkrétní chování v systému, který testujete, a pak napíšete kód, který projde testem. Provedením změn v pořadí následujících postupů můžete tuto strategii obrátit na první zápis kódu, který chcete testovat, a pak zapsat testy jednotek.
 
-V tomto tématu se vytvoří také jedno řešení sady Visual Studio a samostatné projekty pro testy jednotky a knihovny DLL, který chcete testovat. Můžete také zahrnout jednotkové testy přímo do projektu knihovny DLL, nebo můžete vytvořit samostatné řešení pro testování částí a. KNIHOVNY DLL. V tématu [přidání testů jednotek do stávajících aplikací C++](../test/how-to-use-microsoft-test-framework-for-cpp.md) tipy, které struktury používat.
+Toto téma také vytvoří jedno řešení sady Visual Studio a samostatné projekty pro testování částí a knihovnu DLL, kterou chcete testovat. Můžete také zahrnout testy jednotek přímo do projektu knihovny DLL, nebo můžete vytvořit samostatná řešení pro testy jednotek a. DLL. Tipy, které struktury se mají použít, najdete v tématu [Přidání testů jednotek do C++ existujících aplikací](../test/how-to-use-microsoft-test-framework-for-cpp.md) .
 
-## <a name="Create_the_solution_and_the_unit_test_project"></a> Vytvoření řešení a projektu testování částí
+## <a name="Create_the_solution_and_the_unit_test_project"></a>Vytvořit řešení a projekt testování částí
 
 ::: moniker range="vs-2019"
 
-Začněte vytvořením nového testovacího projektu. Na **souboru** nabídce zvolte **nový** > **projektu**. V dialogovém okně **vytvořit nový projekt** zadejte do vyhledávacího pole "test" a pak nastavte **jazyk** na C++. Klikněte na tlačítko **aplikace testů jednotek (Universal Windows)** ze seznamu šablon projektu.
+Začněte vytvořením nového testovacího projektu. V nabídce **soubor** vyberte **Nový** **projekt** > . V dialogovém okně **vytvořit nový projekt** zadejte do vyhledávacího pole "test" a pak nastavte **jazyk** na C++. Pak ze seznamu šablon projektů zvolte možnost **aplikace pro testování jednotek (univerzální pro Windows)** .
 
    ![Vytvořit nový projekt testů UWP](media/vs-2019/cpp-new-uwp-test-project-vs2019.png)
 
@@ -34,33 +34,33 @@ Začněte vytvořením nového testovacího projektu. Na **souboru** nabídce zv
 
 ::: moniker range="vs-2017"
 
-Začněte vytvořením nového testovacího projektu. Na **souboru** nabídce zvolte **nový** > **projektu**. V dialogovém okně **Nový projekt** rozbalte položku **nainstalovaná** > **aplikace C++ Visual** a vyberte možnost univerzální pro **Windows**. Klikněte na tlačítko **aplikace testů jednotek (Universal Windows)** ze seznamu šablon projektu.
+Začněte vytvořením nového testovacího projektu. V nabídce **soubor** vyberte **Nový** **projekt** > . V dialogovém okně **Nový projekt** rozbalte položku **nainstalované**  > **vizuál C++**  a vyberte možnost **univerzální pro Windows**. Pak ze seznamu šablon projektů zvolte možnost **aplikace pro testování jednotek (univerzální pro Windows)** .
 
 ::: moniker-end
 
-1. V dialogovém okně Nový projekt rozbalte **nainstalováno** > **Visual C++** a zvolte **Windows Universal**. Klikněte na tlačítko **aplikace testů jednotek (Universal Windows)** ze seznamu šablon projektu.
+1. V dialogovém okně Nový projekt rozbalte položku **nainstalované**  > **vizuál C++**  a vyberte možnost **univerzální pro Windows**. Pak ze seznamu šablon projektů zvolte možnost **aplikace pro testování jednotek (univerzální pro Windows)** .
 
-2. Pojmenujte projekt `RooterLibTests`, zadejte umístění, název řešení `RooterLib`; a ujistěte se, že **vytvořit adresář pro řešení** je zaškrtnuté políčko.
+2. Pojmenujte projekt `RooterLibTests`; Zadejte umístění; Pojmenujte `RooterLib` řešení; a ujistěte se, že je zaškrtnuté políčko **vytvořit adresář pro řešení** .
 
-     ![Zadejte název řešení a projektu a umístění](../test/media/ute_cpp_windows_unittestlib_createspecs.png)
+     ![Zadejte název řešení a název projektu a umístění](../test/media/ute_cpp_windows_unittestlib_createspecs.png)
 
-3. V novém projektu, otevřete **unittest1.cpp**.
+3. V novém projektu otevřete **UnitTest1. cpp**.
 
-     ![unittest1.cpp](../test/media/ute_cpp_windows_unittest1_cpp.png)
+     ![UnitTest1. cpp](../test/media/ute_cpp_windows_unittest1_cpp.png)
 
      Všimněte si, že:
 
-    - Každý test se definuje pomocí `TEST_METHOD(YourTestName){...}`.
+    - Každý test je definován pomocí `TEST_METHOD(YourTestName){...}`.
 
-         Není nutné zapsat signaturu konvenční funkce. Podpis je makro TEST_METHOD vytvořil. Makro generuje instance funkce vracející typ void. Zároveň vytvoří statickou funkci, která vrací informace o testovací metody. Tyto informace umožňují Průzkumníka testů se najít metodu.
+         Nemusíte psát konvenční signaturu funkce. Podpis se vytvoří pomocí makra TEST_METHOD. Makro vygeneruje funkci instance, která vrací typ void. Také generuje statickou funkci, která vrací informace o testovací metodě. Tyto informace umožňují Průzkumníku testů najít metodu.
 
-    - Testovací metody jsou seskupené do třídy pomocí `TEST_CLASS(YourClassName){...}`.
+    - Testovací metody jsou seskupeny do tříd pomocí `TEST_CLASS(YourClassName){...}`.
 
-         Při spuštění testů, je vytvořena instance každé testovací třídy. Testovací metody jsou zavolány v nespecifikovaném pořadí. Můžete definovat speciální metody, které jsou vyvolány před a za každého modulu, třídy nebo metody. Další informace najdete v tématu [pomocí atributu Microsoft.VisualStudio.TestTools.CppUnitTestFramework](how-to-use-microsoft-test-framework-for-cpp.md).
+         Při spuštění testů je vytvořena instance každé testovací třídy. Testovací metody jsou volány v nespecifikovaném pořadí. Můžete definovat speciální metody, které jsou vyvolány před a za každým modulem, třídou nebo metodou. Další informace naleznete v tématu [using Microsoft. VisualStudio. TestTools. CppUnitTestFramework](how-to-use-microsoft-test-framework-for-cpp.md).
 
-## <a name="Verify_that_the_tests_run_in_Test_Explorer"></a> Ověřte, že testy spustit v Průzkumníku testů
+## <a name="Verify_that_the_tests_run_in_Test_Explorer"></a>Ověřte, zda jsou testy spuštěny v Průzkumníku testů
 
-1. Vložte kód testu:
+1. Vložte nějaký kód testu:
 
     ```cpp
     TEST_METHOD(TestMethod1)
@@ -69,34 +69,34 @@ Začněte vytvořením nového testovacího projektu. Na **souboru** nabídce zv
     }
     ```
 
-     Všimněte si, že `Assert` třída poskytuje několik statických metod, které slouží k ověření výsledků v testovacích metod.
+     Všimněte si, že třída `Assert` poskytuje několik statických metod, které lze použít k ověření výsledků v testovacích metodách.
 
-2. Na **testovací** nabídce zvolte **spustit** a klikněte na tlačítko **spustit všechny**.
+2. V nabídce **test** zvolte možnost **Spustit** a pak zvolte možnost **Spustit vše**.
 
-     Testovací projekt vytvoří a spustí. **Průzkumníka testů** okno a test je uvedený v části **úspěšné testy**. **Souhrn** poskytuje další podrobnosti o vybrané testovací podokno v dolní části okna.
+     Testovací projekt se sestaví a spustí. Zobrazí se okno **Průzkumník testů** a test je uveden v části **prošlé testy**. Podokno **Souhrn** v dolní části okna poskytuje další podrobnosti o vybraném testu.
 
      ![Průzkumník testů](../test/media/ute_cpp_testexplorer_testmethod1.png)
 
-## <a name="Add_the_DLL_project_to_the_solution"></a> Přidat do řešení projekt knihovny DLL
+## <a name="Add_the_DLL_project_to_the_solution"></a>Přidat projekt knihovny DLL do řešení
 
 ::: moniker range="vs-2019"
 
-V **Průzkumníka řešení**, zvolte název řešení. V místní nabídce zvolte možnost **Přidat**a **Nový projekt**. V dialogovém okně **Přidat nový projekt** nastavte **jazyk** na C++ a do vyhledávacího pole zadejte "dll". V seznamu výsledků vyberte možnost **aplikace pro testování částí (Universal Windows- C++/CX)** .
+V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte možnost **Přidat**a **Nový projekt**. V dialogovém okně **Přidat nový projekt** nastavte **jazyk** na C++ a do vyhledávacího pole zadejte "dll". V seznamu výsledků vyberte možnost **aplikace pro testování částí (Universal Windows- C++/CX)** .
 
 ![Vytvoření projektu RooterLib](../test/media/vs-2019/cpp-new-uwp-test-project-vs2019.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-V **Průzkumníka řešení**, zvolte název řešení. V místní nabídce zvolte možnost **Přidat**a **Nový projekt**.
+V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte možnost **Přidat**a **Nový projekt**.
 
 ![Vytvoření projektu RooterLib](../test/media/ute_cpp_windows_rooterlib_create.png)
 
 ::: moniker-end
 
-1. V **přidat nový projekt** dialogového okna zvolte **knihovny DLL (aplikace pro UPW)** .
+1. V dialogovém okně **Přidat nový projekt** vyberte možnost **DLL (aplikace UWP)** .
 
-2. Přidejte následující kód, který *RooterLib.h* souboru:
+2. Do souboru *RooterLib. h* přidejte následující kód:
 
     ```cpp
     // The following ifdef block is the standard way of creating macros which make exporting
@@ -118,21 +118,21 @@ V **Průzkumníka řešení**, zvolte název řešení. V místní nabídce zvol
     };
     ```
 
-     Blok ifdef vysvětlují komentáře nejen vývojář knihovny DLL, ale všem uživatelům, kteří odkazuje na knihovnu DLL ve svém projektu. ROOTERLIB_EXPORTS symbol můžete přidat do příkazového řádku s použitím vlastností projektu knihovny DLL.
+     Komentáře vysvětlují blok ifdef nejen vývojářům knihovny DLL, ale každému, kdo odkazuje na knihovnu DLL ve svém projektu. Symbol ROOTERLIB_EXPORTS můžete přidat do příkazového řádku pomocí vlastností projektu knihovny DLL.
 
-     `CRooterLib` Třída deklaruje konstruktor a `SqareRoot` estimator metody.
+     Třída `CRooterLib` deklaruje konstruktor a metodu `SqareRoot` Estimator.
 
-3. Přidejte ROOTERLIB_EXPORTS symbol do příkazového řádku.
+3. Přidejte do příkazového řádku symbol ROOTERLIB_EXPORTS.
 
-    1. V **Průzkumníka řešení**, zvolte **RooterLib** projektu a klikněte na tlačítko **vlastnosti** z místní nabídky.
+    1. V **Průzkumník řešení**zvolte projekt **RooterLib** a pak v místní nabídce zvolte možnost **vlastnosti** .
 
-         ![Přidat definici symbol preprocesoru](../test/media/ute_cpp_windows_addpreprocessorsymbol.png)
+         ![Přidání definice symbolu preprocesoru](../test/media/ute_cpp_windows_addpreprocessorsymbol.png)
 
-    2. V **stránku vlastností RooterLib** dialogového okna rozbalte **vlastnosti konfigurace**, rozbalte **C++** a zvolte **preprocesor**.
+    2. V dialogovém okně **Stránka vlastností RooterLib** rozbalte položku **Vlastnosti konfigurace**, rozbalte položku **C++** a vyberte **preprocesor**.
 
-    3. Zvolte  **\<Upravit … >** z **Definice preprocesoru** seznamu a pak přidejte `ROOTERLIB_EXPORTS` v **Definice preprocesoru** dialogové okno.
+    3. Zvolit **\<Edit... >** ze seznamu **Definice preprocesoru** a potom v dialogovém okně **definice preprocesoru** přidejte `ROOTERLIB_EXPORTS`.
 
-4. Přidáte minimální implementace deklarovaná funkce. Otevřít *RooterLib.cpp* a přidejte následující kód:
+4. Přidejte minimální implementace deklarovaných funkcí. Otevřete *RooterLib. cpp* a přidejte následující kód:
 
     ```cpp
     // constructor
@@ -148,25 +148,25 @@ V **Průzkumníka řešení**, zvolte název řešení. V místní nabídce zvol
 
     ```
 
-## <a name="make_the_dll_functions_visible_to_the_test_code"></a> Zviditelnit funkcí knihovny dll k testovacímu kódu
+## <a name="make_the_dll_functions_visible_to_the_test_code"></a>Zviditelnit funkce knihovny DLL pro testovací kód
 
-1. Přidáte RooterLib RooterLibTests projektu.
+1. Přidejte RooterLib do projektu RooterLibTests.
 
-   1. V **Průzkumník řešení**zvolte projekt **RooterLibTests** a pak zvolte **Přidat** > **odkaz** v místní nabídce.
+   1. V **Průzkumník řešení**zvolte projekt **RooterLibTests** a pak zvolte **Přidat**  > **odkaz** v místní nabídce.
 
-   1. V dialogovém okně **Přidat odkaz** vyberte možnost **projekty**. Vyberte **RouterLib** položky.
+   1. V dialogovém okně **Přidat odkaz** vyberte možnost **projekty**. Pak vyberte položku **RouterLib** .
 
-2. Zahrnutím souboru hlaviček RooterLib v *unittest1.cpp*.
+2. Zahrňte hlavičkový soubor RooterLib do *UnitTest1. cpp*.
 
-   1. Otevřít *unittest1.cpp*.
+   1. Otevřete *UnitTest1. cpp*.
 
-   2. Tento kód vložte do níže `#include "CppUnitTest.h"` řádku:
+   2. Přidejte tento kód pod `#include "CppUnitTest.h"` řádek:
 
        ```cpp
        #include "..\RooterLib\RooterLib.h"
        ```
 
-3. Přidáte test, který používá importované funkce. Přidejte následující kód, který *unittest1.cpp*:
+3. Přidejte test, který používá importovanou funkci. Do *UnitTest1. cpp*přidejte následující kód:
 
    ```cpp
    TEST_METHOD(BasicTest)
@@ -188,17 +188,17 @@ V **Průzkumníka řešení**, zvolte název řešení. V místní nabídce zvol
 
 4. Sestavte řešení.
 
-    Nový test se zobrazí v **Průzkumníka testů** v **nespuštěné testy** uzlu.
+    Nový test se zobrazí v **Průzkumníku testů** v uzlu **Nespuštěné testy** .
 
-5. V **Průzkumník testů**, zvolte **spustit všechny**.
+5. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
 
-    ![Základní Test proběhl úspěšně](../test/media/ute_cpp_testexplorer_basictest.png)
+    ![Základní test byl úspěšný.](../test/media/ute_cpp_testexplorer_basictest.png)
 
-   Máte nastavení testu a kódové projekty a ověřit, že je možné spustit testy, na kterých běží funkce v projektu kódu. Teď můžete začít psát skutečné testů a kódu.
+   Nastavili jste test a projekty kódu a ověřili jste, že můžete spouštět testy, které spouštějí funkce v projektu kódu. Nyní můžete začít psát skutečné testy a kód.
 
-## <a name="Iteratively_augment_the_tests_and_make_them_pass"></a> Využívejte iterativní posílit testy a daly se předat
+## <a name="Iteratively_augment_the_tests_and_make_them_pass"></a>Iterativní rozšíření testů a jejich předání
 
-1. Přidáte nový test:
+1. Přidat nový test:
 
     ```cpp
     TEST_METHOD(RangeTest)
@@ -215,20 +215,20 @@ V **Průzkumníka řešení**, zvolte název řešení. V místní nabídce zvol
     ```
 
     > [!TIP]
-    > Doporučujeme neměňte testy, které prošly. Místo toho přidat nový test, aktualizovat kód tak, aby byl test úspěšný a pak přidejte jiného testu, a tak dále.
+    > Doporučujeme neměnit testy, které byly úspěšné. Místo toho přidejte nový test, aktualizujte kód tak, aby byl test úspěšný, a poté přidejte další test atd.
     >
-    > Pokud uživatelé změní své požadavky, zakážete testy, které už nejsou správné. Psát nové testy a jejich fungování postupně, přírůstkové stejně.
+    > Když uživatelé změní své požadavky, zakažte testy, které už nejsou správné. Zapište nové testy a zpřístupněte je po jednom, a to stejným přírůstkovým způsobem.
 
-2. V **Průzkumník testů**, zvolte **spustit všechny**.
+2. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
 
-3. Test se nezdaří.
+3. Test se nezdařil.
 
-     ![RangeTest selže](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
+     ![RangeTest se nezdařila](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
 
     > [!TIP]
-    > Ověřte, že každý test selže okamžitě poté, co jste ho napsali. To umožňuje vyhnout se snadno chybu zápisu test, který se nikdy selže.
+    > Ověřte, že se každý test nezdařil okamžitě po jeho zápisu. To pomáhá vyhnout se jednoduchému omylu při psaní testu, který se nikdy nezdařil.
 
-4. Vylepšete testovaného kódu tak, aby nový test byl úspěšný. Přidejte následující text do *RooterLib.cpp*:
+4. Zvyšte testovaný kód, aby nový test prošl. Do *RooterLib. cpp*přidejte následující:
 
     ```cpp
     #include <math.h>
@@ -249,16 +249,16 @@ V **Průzkumníka řešení**, zvolte název řešení. V místní nabídce zvol
 
     ```
 
-5. Sestavte řešení a potom v **Průzkumník testů**, zvolte **spustit všechny**.
+5. Sestavte řešení a potom v **Průzkumníku testů**zvolte možnost **Spustit vše**.
 
-     Oba testy jsou úspěšné.
+     Oba testy proběhnou.
 
 > [!TIP]
-> Vývoj kódu tak, že přidáte testy jeden po druhém. Ujistěte se, že všechny testy jsou úspěšné po každé iteraci.
+> Vývoj kódu přidáním testů po jednom. Ujistěte se, že všechny testy proběhnou po každé iteraci.
 
-## <a name="Debug_a_failing_test"></a> Ladit test chybou
+## <a name="Debug_a_failing_test"></a>Ladění neúspěšného testu
 
-1. Přidat jiného testu k *unittest1.cpp*:
+1. Přidejte další test do *UnitTest1. cpp*:
 
    ```cpp
    // Verify that negative inputs throw an exception.
@@ -289,21 +289,21 @@ V **Průzkumníka řešení**, zvolte název řešení. V místní nabídce zvol
    };
    ```
 
-2. V **Průzkumník testů**, zvolte **spustit všechny**.
+2. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
 
-    Test se nezdaří. Zvolte název testu v **Průzkumníka testů**. Neplatnost kontrolního výrazu je zvýrazněn. Zpráva o selhání je viditelný v podokně podrobností **Průzkumník testů**.
+    Test se nezdařil. V **Průzkumníku testů**vyberte název testu. Kontrolní výraz neúspěšného zpracování je zvýrazněný. Zpráva o selhání je zobrazena v podokně podrobností v **Průzkumníku testů**.
 
     ![NegativeRangeTests se nezdařilo](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
 
-3. Chcete-li zjistit, proč se test nezdaří, kroku pomocí funkce:
+3. Chcete-li zjistit, proč se test nezdařil, postupujte podle této funkce:
 
-   1. Nastavit zarážku na začátku `SquareRoot` funkce.
+   1. Nastavte zarážku na začátku `SquareRoot` funkce.
 
-   2. V místní nabídce neúspěšných testů, zvolte **ladit vybrané testy**.
+   2. V místní nabídce neúspěšného testu vyberte možnost **ladit vybrané testy**.
 
-        Při spuštění se zastaví na zarážce, krokovat kód.
+        Když se běh zastaví na zarážce, krokovat kód.
 
-   3. Přidejte kód, který *RooterLib.cpp* pro zachycení výjimky:
+   3. Přidejte kód do *RooterLib. cpp* pro zachycení výjimky:
 
        ```cpp
        #include <stdexcept>
@@ -319,15 +319,15 @@ V **Průzkumníka řešení**, zvolte název řešení. V místní nabídce zvol
 
        ```
 
-   1. V **Průzkumníka testů**, zvolte **spustit všechny** testovací metoda opravené a ujistěte se, že nebyla zavedena regrese.
+   1. V **Průzkumníku testů**vyberte možnost **Spustit vše** pro otestování opravené metody a ujistěte se, že jste nepředstavili regresi.
 
-   Všechny testy jsou nyní úspěšné.
+   Všechny testy jsou nyní passované.
 
-   ![Všechny testy byly úspěšné](../test/media/ute_ult_alltestspass.png)
+   ![Všechny testy Pass](../test/media/ute_ult_alltestspass.png)
 
-## <a name="Refactor_the_code_without_changing_tests"></a> Refaktorujte kód beze změn testů
+## <a name="Refactor_the_code_without_changing_tests"></a>Refaktoring kódu bez změny testů
 
-1. Zjednodušení centrální výpočet v `SquareRoot` funkce:
+1. Zjednodušení centrálního výpočtu ve funkci `SquareRoot`:
 
     ```csharp
     // old code
@@ -336,9 +336,9 @@ V **Průzkumníka řešení**, zvolte název řešení. V místní nabídce zvol
     result = (result + v/result) / 2.0;
     ```
 
-2. Zvolte **spustit všechny** testovací metoda refaktorovaný a ujistěte se, že nebyla zavedena regrese.
+2. Zvolením možnosti **Spustit vše** otestujte metodu refaktoringu a ujistěte se, že jste nepředstavili regresi.
 
     > [!TIP]
-    > Se spouští stabilní sada testů jednotek dobré poskytuje jistotu, že nebyly zavedeny chyby při změně kódu.
+    > Stabilní sada dobrých testů jednotek dává jistotu, že jste při změně kódu nepředstavili chyby.
     >
-    > Zachovat refaktorování odděleně od jiných změn.
+    > Udržujte refaktoring odděleně od jiných změn.

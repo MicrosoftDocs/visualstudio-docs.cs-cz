@@ -1,5 +1,5 @@
 ---
-title: Idiainjectedsource – | Dokumentace Microsoftu
+title: IDiaInjectedSource | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e8956fb7da61519ed9d0939da087ce8a4181ac1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 994f454372883f2516d1eab03bf1152693969b16
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839872"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743311"
 ---
 # <a name="idiainjectedsource"></a>IDiaInjectedSource
-Přístupy vloženy zdrojového kódu, které jsou uložené ve zdroji dat DIA.
+Přistupuje k vloženému zdrojovému kódu uloženému ve zdroji dat DIA.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,27 +28,27 @@ Přístupy vloženy zdrojového kódu, které jsou uložené ve zdroji dat DIA.
 IDiaInjectedSource : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
-V následující tabulce jsou uvedeny metody objektu `IDiaInjectedSource`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+Následující tabulka ukazuje metody `IDiaInjectedSource`.
 
 |Metoda|Popis|
 |------------|-----------------|
-|[IDiaInjectedSource::get_crc](../../debugger/debug-interface-access/idiainjectedsource-get-crc.md)|Načte kontrolu cyklické redundance (CRC) počítají na základě bajtů zdrojového kódu.|
-|[IDiaInjectedSource::get_length](../../debugger/debug-interface-access/idiainjectedsource-get-length.md)|Získá počet bajtů kódu.|
-|[IDiaInjectedSource::get_filename](../../debugger/debug-interface-access/idiainjectedsource-get-filename.md)|Načte název souboru zdroje.|
-|[IDiaInjectedSource::get_objectFilename](../../debugger/debug-interface-access/idiainjectedsource-get-objectfilename.md)|Načte název souboru objektů, ke kterému byl zkompilován zdroji.|
-|[IDiaInjectedSource::get_virtualFilename](../../debugger/debug-interface-access/idiainjectedsource-get-virtualfilename.md)|Načte název použitý pro kód nesouborového zdroje; To znamená, že kód, který se vloží.|
-|[IDiaInjectedSource::get_sourceCompression](../../debugger/debug-interface-access/idiainjectedsource-get-sourcecompression.md)|Načte ukazatel zdroj komprese používá.|
-|[IDiaInjectedSource::get_source](../../debugger/debug-interface-access/idiainjectedsource-get-source.md)|Získá počet bajtů zdrojového kódu.|
+|[IDiaInjectedSource::get_crc](../../debugger/debug-interface-access/idiainjectedsource-get-crc.md)|Načte cyklickou kontrolu redundance (CRC) vypočítanou z bajtů zdrojového kódu.|
+|[IDiaInjectedSource::get_length](../../debugger/debug-interface-access/idiainjectedsource-get-length.md)|Načte počet bajtů kódu.|
+|[IDiaInjectedSource::get_filename](../../debugger/debug-interface-access/idiainjectedsource-get-filename.md)|Načte název souboru pro zdroj.|
+|[IDiaInjectedSource::get_objectFilename](../../debugger/debug-interface-access/idiainjectedsource-get-objectfilename.md)|Načte název souboru objektu, na který byl zdroj zkompilován.|
+|[IDiaInjectedSource::get_virtualFilename](../../debugger/debug-interface-access/idiainjectedsource-get-virtualfilename.md)|Načte název předaný zdrojovému kódu, který není soubor; To znamená, že kód, který byl vložen.|
+|[IDiaInjectedSource::get_sourceCompression](../../debugger/debug-interface-access/idiainjectedsource-get-sourcecompression.md)|Načte indikátor použité zdrojové komprese.|
+|[IDiaInjectedSource::get_source](../../debugger/debug-interface-access/idiainjectedsource-get-source.md)|Načte bajty zdrojového kódu.|
 
 ## <a name="remarks"></a>Poznámky
-Vložené zdroje je text, který se vloží během kompilace. To neznamená, že preprocesor `#include` použít v jazyce C++.
+Vložený zdroj je text vložený během kompilace. To neznamená, že preprocesor `#include` použit v C++.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Získat voláním toto rozhraní [idiaenuminjectedsources::Item –](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md) nebo [idiaenuminjectedsources::Next –](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md) metody. Zobrazit [idiaenuminjectedsources –](../../debugger/debug-interface-access/idiaenuminjectedsources.md) rozhraní příklad se dá získat `IDiaInjectedSource` rozhraní.
+Získejte toto rozhraní voláním metody [IDiaEnumInjectedSources:: Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md) nebo [IDiaEnumInjectedSources:: Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md) . Příklad získání `IDiaInjectedSource` rozhraní naleznete v rozhraní [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) .
 
 ## <a name="example"></a>Příklad
-Tento příklad zobrazuje data k dispozici `IDiaInjectedSource` rozhraní. Alternativní způsob použití [idiapropertystorage –](../../debugger/debug-interface-access/idiapropertystorage.md) rozhraní, podívejte se na příklad v [idiaenuminjectedsources –](../../debugger/debug-interface-access/idiaenuminjectedsources.md) rozhraní.
+Tento příklad zobrazuje data dostupná z rozhraní `IDiaInjectedSource`. Alternativní přístup pomocí rozhraní [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) naleznete v příkladu v rozhraní [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) .
 
 ```C++
 void PrintInjectedSource(IDiaInjectedSource* pSource)
@@ -113,13 +113,13 @@ void PrintInjectedSource(IDiaInjectedSource* pSource)
 ```
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: Dia2.h
+Záhlaví: Dia2. h
 
-Knihovna: diaguids.lib
+Knihovna: diaguids. lib
 
-DLL: msdia80.dll
+Knihovna DLL: Msdia80. dll
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumInjectedSources::Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md)
 - [IDiaEnumInjectedSources::Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md)

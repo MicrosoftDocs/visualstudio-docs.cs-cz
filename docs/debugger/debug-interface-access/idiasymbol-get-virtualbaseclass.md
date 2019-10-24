@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_virtualbaseclass – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_virtualBaseClass | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c97290f878a8b3b0835c7e3ac33aa2ebecfb019
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: c0dfee1fd4dfda2c70da1061fed89ed8864153e0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64799263"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738894"
 ---
-# <a name="idiasymbolgetvirtualbaseclass"></a>IDiaSymbol::get_virtualBaseClass
-Získá příznak, který určuje, zda je uživatelský datový typ virtuální základní třídy.
+# <a name="idiasymbolget_virtualbaseclass"></a>IDiaSymbol::get_virtualBaseClass
+Načte příznak, který určuje, zda je uživatelsky definovaný datový typ virtuální základní (Base) třída.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_virtualBaseClass ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` Pokud uživatelský datový typ je virtuální základní třídy; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud je uživatelsky definovaný datový typ virtuální základní (Base) třída. v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

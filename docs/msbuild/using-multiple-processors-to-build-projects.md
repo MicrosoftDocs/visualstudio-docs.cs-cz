@@ -1,5 +1,5 @@
 ---
-title: Použití více procesorů k sestavení projektů | Dokumentace Microsoftu
+title: Použití více procesorů k sestavení projektů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,33 +11,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4af67aa3961b92b55abfdcf7a811daef284ca523
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 065b11b689189f5ad833ce642cfcfc94da06f83d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970832"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747192"
 ---
 # <a name="use-multiple-processors-to-build-projects"></a>Použití více procesorů k sestavení projektů
-Nástroj MSBuild může využívat výhod systémů s více procesory nebo procesorů s více jádry. Pro každý dostupný procesor je vytvořen samostatný proces sestavení. Pokud má systém například čtyři procesory, jsou vytvořeny čtyři procesy sestavení. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] může tato sestavení zpracovávat současně, a proto celkové snížit dobu sestavení. Paralelní sestavení však zavádí některé změny v tom, jak dochází k procesům sestavení. V tomto tématu jsou dané změny popsány.
+Nástroj MSBuild může využívat výhod systémů s více procesory nebo procesorů s více jádry. Pro každý dostupný procesor je vytvořen samostatný proces sestavení. Pokud má systém například čtyři procesory, jsou vytvořeny čtyři procesy sestavení. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] mohou současně zpracovat tato sestavení, a proto se zmenší celkový čas sestavení. Paralelní sestavení však zavádí některé změny v tom, jak dochází k procesům sestavení. V tomto tématu jsou dané změny popsány.
 
-## <a name="project-to-project-references"></a>Odkazy typu projekt projekt
- Když [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] zjistí odkaz typu projekt projekt (P2P) při použití paralelních sestavení pro sestavení projektu, sestaví odkaz pouze jednou. Obsahují-li stejný P2P odkaz dva projekty, nedojde k opětovnému sestavení odkazu pro každý projekt. Místo toho se jádro sestavení vrátí na stejný P2P odkaz obou projektů, které na něm závisí. Budoucím požadavkům relace stejného cíle je poskytnut stejný P2P odkaz.
+## <a name="project-to-project-references"></a>Odkazy z projektu na projekt
+ Když [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] narazí na odkaz v rámci projektu na projekt (P2P), zatímco používá paralelní sestavení k sestavení projektu, sestaví odkaz pouze jednou. Obsahují-li stejný P2P odkaz dva projekty, nedojde k opětovnému sestavení odkazu pro každý projekt. Místo toho se jádro sestavení vrátí na stejný P2P odkaz obou projektů, které na něm závisí. Budoucím požadavkům relace stejného cíle je poskytnut stejný P2P odkaz.
 
-## <a name="cycle-detection"></a>Zjišťování cyklů
- Detekce cyklu funguje stejně jako fungovala v [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2.0, kromě toho, že nyní [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] můžete vykazovat zjištění cyklu v odlišnou dobu nebo v sestavení.
+## <a name="cycle-detection"></a>Detekce cyklu
+ Detekce cyklu funguje stejně jako v [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2,0, s tím rozdílem, že nyní [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] může vykazovat detekci cyklu v jinou dobu nebo v sestavení.
 
-## <a name="errors-and-exceptions-during-parallel-builds"></a>Chyby a výjimky během paralelního sestavení
- V paralelních sestaveních se mohou chyby a výjimky vyskytovat v odlišnou dobu, než jak je tomu u neparalelních sestavení. Nebo nedojde-li k sestavení projektu, sestavování jiného projektu pokračuje. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] neukončí žádné sestavení projektu, které je sestavováno souběžně s tím, jež selhalo. Ostatní projekty pokračují až do jejich úspěch nebo neúspěch sestavení. Pokud však bylo povoleno nastavení <xref:Microsoft.Build.Framework.IBuildEngine.ContinueOnError%2A>, nedojde k zastavení žádných sestavení dokonce ani při výskytu chyby.
+## <a name="errors-and-exceptions-during-parallel-builds"></a>Chyby a výjimky během paralelních sestavení
+ V paralelních sestaveních se mohou chyby a výjimky vyskytovat v odlišnou dobu, než jak je tomu u neparalelních sestavení. Nebo nedojde-li k sestavení projektu, sestavování jiného projektu pokračuje. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] nezastaví žádné sestavení projektu, které se sestavuje paralelně s rozhraním, které selhalo. Ostatní projekty budou pokračovat v sestavování, dokud nebudou úspěšné nebo neúspěšné. Pokud však bylo povoleno nastavení <xref:Microsoft.Build.Framework.IBuildEngine.ContinueOnError%2A>, nedojde k zastavení žádných sestavení dokonce ani při výskytu chyby.
 
-## <a name="visual-c-project-vcproj-and-solution-sln-files"></a>Visual C++ projektu (.vcproj) a soubory řešení (.sln)
- Obě [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] projekty (*.vcproj*) a řešení (*.sln*) soubory mohou být předány [úlohy nástroje MSBuild](../msbuild/msbuild-task.md). Pro [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] projektů, se nazývá VCWrapperProject a potom interní [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] vytvoření projektu. Pro [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] řešení, vytvoření SolutionWrapperProject a následně interní [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] vytvoření projektu. V obou případech je s výsledným projektem zacházeno stejně jako se všemi ostatními projekty nástroje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].
+## <a name="c-project-vcxproj-and-solution-sln-files"></a>C++soubory projektu (. vcxproj) a řešení (. sln)
+ Do [úlohy MSBuild](../msbuild/msbuild-task.md)lze předat jak projekty [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] ( *. vcxproj*), tak soubory řešení ( *. sln*). Pro [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] projekty se zavolá VCWrapperProject a pak se vytvoří interní [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projekt. Pro [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] řešení se vytvoří SolutionWrapperProject a pak se vytvoří interní [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projekt. V obou případech je s výsledným projektem zacházeno stejně jako se všemi ostatními projekty nástroje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].
 
-## <a name="multi-process-execution"></a>Provádění ve více procesech
+## <a name="multi-process-execution"></a>Provádění více procesů
  Téměř všechny činnosti týkající se sestavení vyžadují, aby aktuální adresář zůstal neměnný po celou dobu procesu sestavení, protože jen tak se zabrání chybám souvisejícím s umístěním. Z toho důvodu nelze projekty v rámci nástroje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] spouštět v různých vláknech, jelikož by to mohlo vést k vytvoření více adresářů.
 
  Nástroj [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] se tomuto problému vyhýbá a při tom povoluje sestavení s více procesory pomocí „izolace procesů“. Pomocí izolace procesů může nástroj [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] vytvořit maximálně `n` procesů, kde `n` se rovná počtu procesorů, které jsou v systému k dispozici. Pokud například nástroj [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] sestaví řešení v systému, který má dva procesory, budou vytvořeny pouze dva procesy sestavení. Tyto procesy jsou znovu použity k sestavení všech projektů v řešení.
 
 ## <a name="see-also"></a>Viz také:
-- [Sestavování více projektů současně](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)
+- [Paralelní sestavení více projektů](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

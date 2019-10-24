@@ -1,5 +1,5 @@
 ---
-title: Výčty jazyka Visual C++ v návrháři tříd
+title: C++Výčty v Návrhář tříd
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5df17176839dccf0fbe0c42f164bde6b3e39f56
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a514d5eb4b7f79e2fd193c79de670b6dd9c14cb5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72631125"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747996"
 ---
-# <a name="visual-c-enumerations-in-class-designer"></a>Vizuální C++ výčty v Návrhář tříd
+# <a name="c-enumerations-in-class-designer"></a>C++výčty v Návrhář tříd
 
 **Návrhář tříd** podporuje C++ `enum` a vymezené `enum class` typy. Následuje příklad:
 
@@ -44,5 +44,5 @@ Další informace o použití typu `enum` naleznete v tématu [výčty](/cpp/cpp
 
 ## <a name="see-also"></a>Viz také:
 
-- [Práce s kódem jazyka Visual C++](working-with-visual-cpp-code.md)
+- [Práce s C++ kódem](working-with-visual-cpp-code.md)
 - [Výčty](/cpp/cpp/enumerations-cpp)

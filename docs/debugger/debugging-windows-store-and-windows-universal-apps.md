@@ -1,5 +1,5 @@
 ---
-title: Ladění aplikací pro UWP | Dokumentace Microsoftu
+title: Ladění aplikací pro UWP | Microsoft Docs
 ms.custom: seodec18
 ms.date: 03/28/2019
 ms.topic: conceptual
@@ -13,22 +13,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 972f52583704b3116066114986948af643069a0d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fe8348b342627cba861a9ceb67e74d0876752cdf
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851678"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738025"
 ---
-# <a name="debug-universal-windows-apps-uwp-in-visual-studio"></a>Ladit aplikace pro Universal Windows (UPW) v sadě Visual Studio
+# <a name="debug-universal-windows-apps-uwp-in-visual-studio"></a>Ladění univerzálních aplikací pro Windows (UWP) v aplikaci Visual Studio
 
-Ladicí program sady Visual Studio poskytuje úplnou podporu pro ladění aplikací pro UWP. Naleznete v následujících článcích pro UPW ladění úlohy.
+Ladicí program sady Visual Studio poskytuje kompletní podporu pro ladění aplikací pro UWP. Projděte si následující články pro úlohy ladění UWP.
 
-|Ladění úloh|Článek|
+|Ladit úlohu|Předmětu|
 |-|-|
-|Spouštění aplikací pro UWP v místním počítači, vzdálené nebo připojených zařízení nebo simulátor aplikace.|[Spuštění ladicí relace pro aplikaci pro UPW](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)|
+|Spouštění aplikací pro UWP na místním počítači, vzdáleném nebo připojeném zařízení nebo simulátoru aplikací|[Spuštění ladicí relace pro aplikaci pro UPW](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)|
 |Ladění nasazených aplikací, místních i vzdálených.|[Ladění balíčku nainstalované aplikace](../debugger/debug-installed-app-package.md)|
-|Analýza efekt ContentPrefetcher třídy v aplikacích pro UPW.|[Předběžné načtení obsahu pro aplikace pro UPW](../debugger/prefetch-content-for-windows-store-apps.md)|
+|Analýza efektu třídy ContentPrefetcher v aplikacích pro UWP|[Předběžné načtení obsahu pro aplikace pro UWP](../debugger/prefetch-content-for-windows-store-apps.md)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Analýza kvality kódu pomocí analýzy statického kódu](/visualstudio/code-quality/code-analysis-for-managed-code-overview)

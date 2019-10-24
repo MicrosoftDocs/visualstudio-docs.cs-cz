@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_isPointerToDataMember | Microsoft Docs
+title: 'IDiaSymbol:: get_isPointerToDataMember | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d74c2ba8317098212c7263ab049becc52f874e9
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 2e06a8605b38042773cfa60e4847ed3ace9c5954
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62836577"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740131"
 ---
-# <a name="idiasymbolgetispointertodatamember"></a>IDiaSymbol::get_isPointerToDataMember
-Určuje, zda tento symbol je ukazatel na datový člen.
+# <a name="idiasymbolget_ispointertodatamember"></a>IDiaSymbol::get_isPointerToDataMember
+Určuje, zda je tento symbol ukazatelem na datový člen.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,10 +30,10 @@ HRESULT get_isPointerToDataMember(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Ukazatel `BOOL` , která určuje, zda tento symbol je ukazatel na datový člen.
+mimo Ukazatel na `BOOL`, který určuje, zda je tento symbol ukazatelem na datový člen.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

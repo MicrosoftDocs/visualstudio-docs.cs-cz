@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_isAggregated | Microsoft Docs
+title: 'IDiaSymbol:: get_isAggregated | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db6c2e47d9f316f758b854e5ce40dfc19acb592b
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: ee36d1901f7acb5bc7e41ac72b8dc03b15bc45c8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64830551"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740299"
 ---
-# <a name="idiasymbolgetisaggregated"></a>IDiaSymbol::get_isAggregated
-Získá příznak, který určuje, zda datový symbol je součástí agregace nebo kolekce symbolů; Kompilátor bude považovat za agregované symboly samostatné entity, ale ve skutečnosti jsou součástí jedné větší symbol.
+# <a name="idiasymbolget_isaggregated"></a>IDiaSymbol::get_isAggregated
+Načte příznak, který určuje, zda je datový symbol součástí agregace nebo kolekce symbolů; Kompilátor bude považovat agregované symboly za samostatné entity, ale ve skutečnosti jsou součástí jednoho většího symbolu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,24 +33,24 @@ HRESULT get_isAggregated(
 #### <a name="parameters"></a>Parametry
  `pFlag`
 
-[out] Vrátí `TRUE` Pokud data je součástí agregaci symbolů rozdělit z nadřazené symbol; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud jsou data součástí agregace symbolů rozdělené z nadřazeného symbolu; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- [Idiasymbol::get_issplitted –](../../debugger/debug-interface-access/idiasymbol-get-issplitted.md) je metoda `TRUE` pro symbol, který je nadřazeného člena agregované symboly.
+ Metoda [IDiaSymbol:: get_isSplitted](../../debugger/debug-interface-access/idiasymbol-get-issplitted.md) je `TRUE` pro symbol, který je nadřazeným objektům agregovaných symbolů.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|Ve verzi 8.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaSymbol::get_isSplitted](../../debugger/debug-interface-access/idiasymbol-get-issplitted.md)

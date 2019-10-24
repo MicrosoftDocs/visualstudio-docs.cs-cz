@@ -1,5 +1,5 @@
 ---
-title: IDiaFrameData::execute | Microsoft Docs
+title: 'IDiaFrameData:: Execute | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 78440c703ece2aa54e54594d57156dbb17848915
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 88c9af8293dfc6a35e5f0e42d9596494d74b10aa
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832648"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743687"
 ---
 # <a name="idiaframedataexecute"></a>IDiaFrameData::execute
-Provádí odvíjení zásobníku a vrátí výsledky v rozhraní rámce zásobníku funkce walk.
+Provede unwinding zásobníku a vrátí výsledky v rozhraní rámce procházení zásobníku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,21 +33,21 @@ HRESULT execute ( 
 #### <a name="parameters"></a>Parametry
  `frame`
 
-[in] [Idiastackwalkframe –](../../debugger/debug-interface-access/idiastackwalkframe.md) objekt, který obsahuje stav rámce registrů.
+pro Objekt [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md) , který obsahuje stav registrů rámců.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. V následující tabulce jsou uvedeny možné návratové hodnoty pro tuto metodu.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby. V následující tabulce jsou uvedeny možné návratové hodnoty pro tuto metodu.
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
-|E_DIA_INPROLOG|Nelze spustit blok zásobníku v kódu prologu.|
-|E_DIA_SYNTAX|Analyzovat v aplikaci rámce došlo k chybě.|
-|E_DIA_FRAME_ACCESS|Nepovedlo se přístup registrů nebo paměti.|
-|E_DIA_VALUE|Při výpočtu hodnoty (například dělení nulou).|
+|E_DIA_INPROLOG|V kódu prologu nelze spustit rámec zásobníku.|
+|E_DIA_SYNTAX|V programu Frame program došlo k chybě analýzy.|
+|E_DIA_FRAME_ACCESS|Nelze získat přístup k registrům nebo paměti.|
+|E_DIA_VALUE|Chyba při výpočtu hodnoty (například dělení nulou).|
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je volána při ladění k provedení operace unwind zásobníku. [Idiastackwalkframe –](../../debugger/debug-interface-access/idiastackwalkframe.md) objektu je implementováno klientské aplikace pro příjem aktualizací registry a poskytovat metody používané `execute` metody.
+ Tato metoda je volána během ladění pro odvinutí zásobníku. Objekt [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md) je implementován klientskou aplikací pro příjem aktualizací registrů a k poskytnutí metod používaných metodou `execute`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

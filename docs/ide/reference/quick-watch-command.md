@@ -13,12 +13,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d78371b638b9a584ba27a1ed035cf188c3e66e0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1de6841f25bcc6f6c45bde93fdd4cf2cb49481ab
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655659"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747809"
 ---
 # <a name="quick-watch-command"></a>Rychlé kukátko – příkaz
 Zobrazí vybraný nebo zadaný text v poli Expression okna [QuickWatch](../../debugger/watch-and-quickwatch-windows.md) . Toto dialogové okno můžete použít k výpočtu aktuální hodnoty proměnné nebo výrazu rozpoznaného ladicím programem nebo obsahu registru. Kromě toho můžete změnit hodnotu libovolné nekonstantní proměnné nebo obsah jakéhokoli registru.
@@ -44,7 +44,7 @@ Pokud je hodnota `text` vynechána, je aktuálně vybraný text nebo slovo na ku
 >Debug.QuickWatch
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Nastavení sledování proměnných pomocí oken kukátka a QuickWatch v sadě Visual Studio](../../debugger/watch-and-quickwatch-windows.md)
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)

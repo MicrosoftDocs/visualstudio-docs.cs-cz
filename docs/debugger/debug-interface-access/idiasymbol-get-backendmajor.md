@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_backendmajor – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_backEndMajor | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cc62c81a1a57b9e9921b6df658d05e8a0a541da0
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: bae33cf32bc86ad77fa03fab9f940c9fec25194a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64830385"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740990"
 ---
-# <a name="idiasymbolgetbackendmajor"></a>IDiaSymbol::get_backEndMajor
-Načte back-end hlavní číslo verze kompilátoru.
+# <a name="idiasymbolget_backendmajor"></a>IDiaSymbol::get_backEndMajor
+Načte číslo hlavní verze kompilátoru pro back-end.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,25 +33,25 @@ HRESULT get_backEndMajor ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí číslo hlavní verze back-end. Viz poznámky.
+mimo Vrátí číslo hlavní verze back-endu. Viz poznámky.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Kompilátor se obvykle skládá z dvou základní prvky: front-endu (Analyzátor), která zpracovává analýzu zdrojového kódu do zprostředkující formuláře, a back-endu (generátor kódu), který převádí zprostředkující formuláře do sestavení. Není, front-endu mít jinou verzi než back-endu.
+ Kompilátor se obvykle skládá ze dvou primárních elementů: front-end (analyzátor), který zpracovává analýzu zdrojového kódu do přechodného formátu, a back-endu (generátor kódu), který převede zprostředkující formulář na sestavení. Pro front-end je neobvyklá verze, která má jinou verzi než back-end.
 
- Front-end nebo back-endu číslo verze se skládá ze tří částí: \<hlavní >.\< podverze >. \<sestavení >, kde \<hlavní > je číslo hlavní verze \<podverze > je číslo podverze a \<sestavení > je číslo sestavení. Například 13.10.3077.
+ Číslo verze front-endu nebo back-endu se skládá ze tří částí: \<major >. \<minor >. \<build >, kde \<major > je hlavní číslo verze, \<minor > je číslo dílčí verze a \<build > je číslo sestavení. Například 13.10.3077.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|V7.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

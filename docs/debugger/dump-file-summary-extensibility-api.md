@@ -1,5 +1,5 @@
 ---
-title: Rozhraní API rozšíření souhrnu souboru výpisu paměti | Dokumentace Microsoftu
+title: Rozhraní API pro rozšíření souhrnu souboru výpisu paměti | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -13,20 +13,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b934a68aa1ae85e18ec05d587854a7ad4c176c3a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d34e60b0b932470dec8a69874e28b99ebe76316b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851503"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737984"
 ---
 # <a name="dump-file-summary-extensibility-api"></a>Rozhraní API rozšíření souhrnu souboru výpisu paměti
-Pomocí rozhraní API pro rozšíření v této části, můžete rozšířit. Systém projektu exe a **Souhrn výpisu paměti** stránku pro použití s vlastním vlastního ladicího stroje.
+Pomocí rozhraní API pro rozšiřitelnost v této části můžete rozšíření. Systém souborů exe a **souhrnná stránka výpisu paměti** pro použití s vlastním modulem ladění.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- Rozhraní API pro rozšíření **Souhrn výpisu paměti** stránky a. Systém projektu exe jsou k dispozici v následujících názvů:
+ Rozhraní API pro rozšíření **souhrnné stránky výpisu paměti** a. Systém projektu exe je k dispozici v následujícím oboru názvů:
 
  <xref:Microsoft.VisualStudio.Debugger.VsDebugPresentationExtension>
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Použití souborů výpisu paměti](../debugger/using-dump-files.md)

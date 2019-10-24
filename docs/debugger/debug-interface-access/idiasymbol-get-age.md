@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_age – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_age | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e35db1186f2547b8d3c859d20e0e4ce2b1f68e9
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 28a78094d9779a0da35052808dfb8d5f42972894
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64803343"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741039"
 ---
-# <a name="idiasymbolgetage"></a>IDiaSymbol::get_age
-Načte hodnotu stáří souboru pdb.
+# <a name="idiasymbolget_age"></a>IDiaSymbol::get_age
+Načte hodnotu stáří souboru. pdb.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,23 +33,23 @@ HRESULT get_age ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí hodnotu stáří souboru pdb.
+mimo Vrátí hodnotu stáří souboru. pdb.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Stáří neodpovídá nutně na libovolnou hodnotu známý času; To se obvykle používá k určení, zda soubor PDB není synchronizován s odpovídající soubor .exe.
+ Věk nutně neodpovídá žádné známé časové hodnotě. obvykle se používá k určení, zda soubor. pdb není synchronizován s odpovídajícím souborem. exe.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|V7.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,5 +1,5 @@
 ---
-title: UnInit | Dokumentace Microsoftu
+title: Neinicializovat | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 4cd4fc0b-974a-4e61-9ea8-0aaa1a0c52ea
@@ -8,15 +8,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8165b2e1993a6ea52127536a058f662e1a3d92cc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ef809b646a0af58e46b8c68dc5a8cf7633692bcc
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62848730"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72734822"
 ---
 # <a name="uninit"></a>UnInit
-Soubor protokolu grafiky dokončí, zavře a uvolní prostředky, které byly použity při aplikaci se aktivně zaznamenávání informací grafiky.
+Dokončí soubor protokolu grafiky, zavře ho a uvolní prostředky, které se použily v době, kdy aplikace aktivně zapisovala informace o grafice.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,9 +25,9 @@ void UnInit();
 ```
 
 ## <a name="remarks"></a>Poznámky
- `UnInit` je volána automaticky, když instance `VsgDbg` třídy je zničen. Pokud `VsgDbg` instance nebyla aktivně zaznamenávání informací grafiky, tato akce nemá vliv.
+ `UnInit` se nazývá automaticky, když je instance `VsgDbg` třídy zničena. Pokud instance `VsgDbg` aktivně nezaznamená informace o grafice, nemá to žádný vliv.
 
- Po `UnInit` byla volána na instanci `VsgDbg` třídy nové grafické soubor protokolu může být vytvořen voláním `Init` a dokončí voláním `UnInit`. To můžete opakovat tolikrát, kolikrát chcete použít stejný `VsgDbg` instance vytvořit několik nezávislých grafiky soubory protokolu.
+ Po volání `UnInit` pro instanci `VsgDbg` třídy lze vytvořit nový soubor protokolu grafiky voláním `Init` a finalizován voláním `UnInit`. Tento postup můžete opakovat tolikrát, kolikrát chcete použít stejnou instanci `VsgDbg` k vytvoření několika nezávislých souborů protokolu grafiky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Init](init.md)

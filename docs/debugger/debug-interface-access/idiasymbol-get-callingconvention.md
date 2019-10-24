@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_callingconvention – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_callingConvention | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9865d917e24abf58bdcf63e8abb21370f223aad2
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: b1b0581e7a49ac8c8681077a7f40133498a48789
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64806991"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740880"
 ---
-# <a name="idiasymbolgetcallingconvention"></a>IDiaSymbol::get_callingConvention
-Vrátí ukazatel metody konvence volání.
+# <a name="idiasymbolget_callingconvention"></a>IDiaSymbol::get_callingConvention
+Vrátí indikátor konvence volání metod.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,21 +33,21 @@ HRESULT get_callingConvention ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí hodnotu z [cv_call_e – výčet](../../debugger/debug-interface-access/cv-call-e.md) výčet, který určuje metodu je konvence volání.
+mimo Vrací hodnotu z výčtu [výčtu CV_call_e](../../debugger/debug-interface-access/cv-call-e.md) , který určuje konvenci volání metody.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|V7.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [CV_call_e – výčet](../../debugger/debug-interface-access/cv-call-e.md)

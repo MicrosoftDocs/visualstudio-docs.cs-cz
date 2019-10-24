@@ -1,5 +1,5 @@
 ---
-title: Scchistory – funkce | Dokumentace Microsoftu
+title: Funkce SccHistory | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bad55b0fce5f4bec27ec707a4f9578c627a07363
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0ce0b38b8e602688875549edbac671e664809482
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353607"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72721245"
 ---
 # <a name="scchistory-function"></a>SccHistory – funkce
-Tato funkce zobrazí historie zadané soubory.
+Tato funkce zobrazí historii zadaných souborů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,50 +38,50 @@ SCCRTN SccHistory(
 #### <a name="parameters"></a>Parametry
  `pvContext`
 
-[in] Struktura kontext modulu plug-in zdroje ovládacího prvku.
+pro Struktura kontextu modulu plug-in správy zdrojových kódů.
 
  `hWnd`
 
-[in] Popisovač okna integrovaného vývojového prostředí, které modul plug-in správy zdrojového kódu můžete použít jako nadřazený pro všechna dialogová okna, které poskytuje.
+pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.
 
  `nFiles`
 
-[in] Počet souborů podle `lpFileName` pole.
+pro Počet souborů zadaných v poli `lpFileName`.
 
  `lpFileName`
 
-[in] Pole plně kvalifikované názvy souborů.
+pro Pole plně kvalifikovaných názvů souborů.
 
  `fOptions`
 
-[in] Příkaz příznaky (aktuálně nepoužívá).
+pro Příznaky příkazu (aktuálně se nepoužívají).
 
  `pvOptions`
 
-[in] Možností správy zdrojového kódu plug-konkrétní.
+pro Možnosti specifické pro modul plug-in správy zdrojového kódu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Historie verzí byl úspěšně získán.|
-|SCC_I_RELOADFILE|Systém správy zdrojového kódu ve skutečnosti změny souboru na disku při načítání historie (například tím, že získáme starou verzi), takže rozhraní IDE byste znovu načíst tento soubor.|
+|SCC_OK|Historie verzí se úspěšně získala.|
+|SCC_I_RELOADFILE|Systém správy zdrojového kódu skutečně změnil soubor na disku při načítání historie (například načtením staré verze), takže by IDE měl tento soubor znovu načíst.|
 |SCC_E_FILENOTCONTROLLED|Soubor není pod správou zdrojových kódů.|
-|SCC_E_OPNOTSUPPORTED|Systém správy zdrojového kódu nepodporuje tuto operaci.|
-|SCC_E_NOTAUTHORIZED|Uživatel nemůže k provedení této operace.|
-|SCC_E_ACCESSFAILURE|Došlo k problému, přístup k systému správy zdrojového kódu, pravděpodobně kvůli problémům se síti nebo kolize. Doporučuje se zkuste to znovu.|
+|SCC_E_OPNOTSUPPORTED|Systém správy zdrojového kódu tuto operaci nepodporuje.|
+|SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k provedení této operace.|
+|SCC_E_ACCESSFAILURE|Při přístupu do systému správy zdrojů došlo k potížím, pravděpodobně kvůli problémům se sítí nebo kolize. Doporučuje se opakovat pokus.|
 |SCC_E_PROJNOTOPEN|Projekt nebyl otevřen.|
-|SCC_E_NONSPECIFICERROR|K nespecifikované chybě. Historie souborů nebylo možné získat.|
+|SCC_E_NONSPECIFICERROR|Nespecifická chyba. Nepovedlo se získat historii souborů.|
 
 ## <a name="remarks"></a>Poznámky
- Modul plug-in správy zdrojového kódu může zobrazit svůj vlastní dialogové okno k zobrazení historie každého souboru pomocí `hWnd` jako nadřazeného okna. Můžete také volitelné textový výstup zpětného volání funkce předány [sccopenproject –](../extensibility/sccopenproject-function.md) lze použít, pokud je podporována.
+ Modul plug-in správy zdrojových kódů může zobrazit vlastní dialogové okno pro zobrazení historie jednotlivých souborů pomocí `hWnd` jako nadřazeného okna. Alternativně lze použít funkci zpětného volání pro textové výstupy dodané do [SccOpenProject](../extensibility/sccopenproject-function.md) , pokud je tato funkce podporována.
 
- Všimněte si, že za určitých okolností, soubor zkoumají může změnit během provádění tohoto volání. Například [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] historie příkaz umožňuje uživateli příležitost získat původní verzi souboru. V takovém případě se řídí zdroj modulu plug-in vrátí `SCC_I_RELOAD` upozornit rozhraní IDE, že je nutné znovu načíst soubor.
+ Všimněte si, že za určitých okolností se může testovaný soubor změnit během provádění tohoto volání. Například příkaz historie [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] dává uživateli možnost získat starou verzi souboru. V takovém případě modul plug-in správy zdrojových kódů vrátí `SCC_I_RELOAD` pro upozornění rozhraní IDE, které potřebuje k opětovnému načtení souboru.
 
 > [!NOTE]
-> Pokud modul plug-in správy zdrojového kódu nepodporuje tuto funkci pro celou řadu soubory, lze zobrazit pouze historie souborů pro první soubor.
+> Pokud modul plug-in správy zdrojových kódů nepodporuje tuto funkci pro pole souborů, lze zobrazit pouze historii souborů pro první soubor.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)
 - [SccOpenProject](../extensibility/sccopenproject-function.md)

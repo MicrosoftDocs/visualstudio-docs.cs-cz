@@ -1,5 +1,5 @@
 ---
-title: Konfigurace projektu pro správu nasazení | Dokumentace Microsoftu
+title: Konfigurace projektu pro správu nasazení | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,33 +11,33 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f8dfaf2f802a0470270c7630ccee3a8be583b250
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4ffa661d8bf33219a3a2956cef3e456c9b5f1146
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66328458"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72726021"
 ---
 # <a name="project-configuration-for-managing-deployment"></a>Konfigurace projektu pro správu nasazení
-Nasazení se v rámci fyzickým přesunutím položek výstup z procesu sestavení do očekávaného umístění pro ladění a instalaci. Například webové aplikace může být založená na místním počítači a pak umístit na serveru.
+Nasazení je činnost fyzického přesunu výstupních položek z procesu sestavení do očekávaného umístění pro ladění a instalaci. Například webová aplikace může být postavená na místním počítači a pak umístěna na server.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podporuje dva způsoby, které projekty mohou být součástí nasazení:
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podporuje dva způsoby, jak mohou být projekty zapojeny do nasazení:
 
-- Jako subjekt proces nasazení.
+- Jako předmět procesu nasazení.
 
-- Jako správce procesu nasazení.
+- Jako vedoucí procesu nasazení.
 
-  Předtím, než je možné nasadit řešení, musíte nejprve přidat projekt nasazení konfigurovat možnosti nasazení. Pokud projekt nasadit ještě neexistuje, zobrazí se výzva, pokud chcete jeden vytvořit, když vyberete **nasadit řešení** z **sestavení** nabídku nebo klikněte pravým tlačítkem řešení. Kliknutím na **Ano** otevře **přidat nový projekt** dialogové okno s **Průvodce vzdáleným nasazení** vybraný projekt.
+  Před nasazením řešení je nutné nejprve přidat projekt nasazení a nakonfigurovat možnosti nasazení. Pokud projekt nasazení ještě neexistuje, zobrazí se dotaz, jestli ho chcete vytvořit, když v nabídce **sestavení** vyberete **nasadit řešení** nebo kliknete pravým tlačítkem na řešení. Kliknutím na **Ano** se otevře dialogové okno **Přidat nový projekt** s vybraným projektem **Průvodce vzdáleným nasazením** .
 
-  Průvodce vzdáleným nasazení vyzve k typu aplikace (Windows nebo Web), výstupní skupiny projektů zahrnout, všechny další soubory, které chcete zahrnout a vzdáleného počítače, který chcete nasadit do. Na poslední stránce Průvodce zobrazí souhrn vybraných možností.
+  Průvodce vzdáleným nasazením vás vyzve k zadání typu aplikace (Windows nebo webu), skupin výstupu projektu, které mají být zahrnuty, všech dalších souborů, které chcete zahrnout, a vzdáleného počítače, do kterého chcete nasadit. Poslední stránka Průvodce zobrazí souhrn vybraných možností.
 
-  Projekty, které jsou předmětem proces nasazení vytvoří výstupní položky, které musí být přesunuty do alternativní prostředí. Tyto výstupní položky jsou popsány jako parametry <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> rozhraní, jejichž primární účel if povolit projektů do skupiny výstupů. Další informace týkající se provádění `IVsProjectCfg2`, naleznete v tématu [konfigurace projektu pro výstup](../../extensibility/internals/project-configuration-for-output.md).
+  Projekty, které jsou předmětem procesu nasazení, vytváří výstupní položky, které je nutné přesunout do alternativního prostředí. Tyto výstupní položky jsou popsány jako parametry pro rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2>, jehož primární účel, pokud chcete, aby projekty mohly seskupit výstupy. Další informace týkající se implementace `IVsProjectCfg2` najdete v tématu [konfigurace projektu pro výstup](../../extensibility/internals/project-configuration-for-output.md).
 
-  Projekty nasazení, které spravovat proces nasazení, povolit příkaz nasazení a odpovědět při výběru tohoto příkazu. Implementace projektů nasazení <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> k provedení nasazení a provádět volání do rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback> nasazení rozhraní k sestavě stav události.
+  Projekty nasazení, které spravují proces nasazení, povolují příkaz nasadit a reagují při výběru tohoto příkazu. Projekty nasazení implementují rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> k provedení nasazení a volají volání rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback>, aby nahlásilo události stavu nasazení.
 
-  Konfigurace můžete určit závislosti, které by ovlivnily provoz jejich sestavení nebo nasazení. Vytvoření buildu nebo nasazení závislosti jsou projekty, které musí buď být sestavuje nebo nasazuje před nebo po se sestavuje nebo nasazuje konfigurace sami. Závislosti sestavení mezi projekty jsou popsané společně s <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency> rozhraní a nasadit závislosti s <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency> rozhraní. Další informace najdete v tématu [konfigurace projektu pro sestavení](../../extensibility/internals/project-configuration-for-building.md).
+  Konfigurace mohou určovat závislosti, které mají vliv na jejich operace sestavení nebo nasazení. Závislosti sestavení nebo nasazení jsou projekty, které musí být sestaveny nebo nasazeny před nebo po samotných konfiguracích nebo jejich nasazení. Závislosti sestavení mezi projekty jsou popsány pomocí rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency> a nasazují závislosti s rozhraním <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency>. Další informace najdete v tématu [konfigurace projektu pro sestavování](../../extensibility/internals/project-configuration-for-building.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Správa možností konfigurace](../../extensibility/internals/managing-configuration-options.md)
 - [Konfigurace projektu pro sestavení](../../extensibility/internals/project-configuration-for-building.md)
 - [Konfigurace projektu pro výstup](../../extensibility/internals/project-configuration-for-output.md)

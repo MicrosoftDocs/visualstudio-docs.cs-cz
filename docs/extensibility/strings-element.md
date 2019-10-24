@@ -1,5 +1,5 @@
 ---
-title: Řetězce Element | Dokumentace Microsoftu
+title: Element Strings | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +11,17 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 277cd2b8e40dfbfd1e222975f41bd4ac95c70c62
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7c91a8ea07daee77855017d641a569a892612c3e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331726"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72719435"
 ---
 # <a name="strings-element"></a>Strings – element
-Řetězce element musí obsahovat alespoň **ButtonText** podřízený element. Všechny ostatní podřízené prvky jsou volitelné. Neplatný kód XML znaky, jako 'a' a ' <' musí být zakódovaný jako entity ("&amp;"a"&lt;" a tak dále).
+Element Strings musí obsahovat alespoň **ButtonText** podřízený element. Všechny ostatní podřízené prvky jsou volitelné. Neplatné znaky XML, například ' & ' a ' < ', musí být kódovány jako entity (' &amp; ' a ' &lt; ' atd.).
 
- Znak ampersand v textovém řetězci Určuje klávesovou zkratku pro příkaz.
+ Ampersand v textovém řetězci Určuje klávesovou zkratku pro příkaz.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,20 +45,20 @@ ms.locfileid: "66331726"
 
 |Prvek|Popis|
 |-------------|-----------------|
-|ButtonText –|Toto pole a pět následujících textová pole v definici příkazu umožňují zadat text, který se zobrazí v různých nabídkách. Ve výchozím nastavení `ButtonText` pole se zobrazí v nabídce řadiče. `ButtonText` Pole stane výchozí hodnota je-li další textová pole jsou prázdné. `ButtonText` Pole nemůže být prázdný, i když nejsou určeny další textová pole.|
-|ToolTipText|`ToolTipText` Pole určuje text zobrazený v popisku tooltip položky nabídky.<br /><br /> Pokud `ToolTipText` je pole prázdné, `ButtonText` pole se používá.|
-|MenuText|`MenuText` Pole určuje text, který se zobrazí pro příkaz, pokud je v hlavní nabídce nástrojů, v místní nabídce nebo podnabídky. Pokud `MenuText` je pole prázdné, integrované vývojové prostředí (IDE) používá `ButtonText` pole. `MenuText` Pole můžete také použít pro lokalizaci.<br /><br /> Pro místní nabídky `MenuText` pole je název, který se zobrazí na panelu nástrojů místní nabídky, který umožňuje vlastní nastavení z místní nabídky v integrovaném vývojovém prostředí. Proto se konkrétní v pojmenujete vaší nabídky; například použijte "Widget balíček místní nabídka" místo "Místní".<br /><br /> Pokud `MenuText` pole není zadán, `ButtonText` pole se používá.|
-|commandName|`CommandName` Pole určuje text, který se zobrazí v kategorii klávesnice v **příkazy** kartu **vlastní** dialogové okno (k dispozici kliknutím **vlastní**na **nástroje** nabídky).|
-|CanonicalName|Angličtina `CanonicalName` pole určuje název příkazu v anglický text, který je možné zadat v **příkaz** okna k provedení položky nabídky. Integrované vývojové prostředí odstraní všechny znaky, které nejsou písmena, číslice, podtržítka nebo vložený období. Tento text je pak zřetězeny do `ButtonText` pole k definování příkazu. Například **nový projekt** na **souboru** nabídce stane příkaz File.NewProject.<br /><br /> Pokud Angličtina `CanonicalName` pole není zadaný, použije integrovaného vývojového prostředí `ButtonText` pole a všechny s výjimkou písmena, číslice, podtržítka a tečky vložené pásky. Například Text tlačítka "& definovat příkazy..." stane DefineCommands, kde se odeberou ampersand, prostor a na tři tečky.<br /><br /> Pokud `TextChanges` označen příznakem a text příkazu se změní, odpovídající příkaz rozpoznávaných **příkaz** okno nemění; zůstane kanonický tvar původní `ButtonText` nebo Angličtina `CanonicalName` pole.|
-|LocCanonicalName|`LocCanonicalName` Pole chová stejně jako Angličtina `CanonicalName` pole ale umožňuje lokalizované příkaz text, který má být zadán. Můžete zadat i canonical pole. Protože parsovat text zadaný do integrovaného vývojového prostředí **příkaz** okno a přidruží ji příkazem, angličtina a jiné než anglické jazykové text lze přidružit ten samý příkaz.|
+|ButtonText|Toto pole a pět následujících textových polí v definici příkazu vám umožní určit text, který se zobrazí v různých nabídkách. Ve výchozím nastavení se pole `ButtonText` zobrazuje v řadičích nabídek. Pole `ButtonText` se také stávají výchozím nastavením, pokud jsou ostatní textová pole prázdná. Pole `ButtonText` nemůže být prázdné, i když jsou uvedena další textová pole.|
+|ToolTipText|Pole `ToolTipText` Určuje text, který se zobrazí v popisku pro položku nabídky.<br /><br /> Pokud je pole `ToolTipText` prázdné, použije se pole `ButtonText`.|
+|MenuText|Pole `MenuText` Určuje text, který se zobrazí pro příkaz, pokud je v hlavní nabídce, panelu nástrojů, v místní nabídce nebo v podnabídce. Pokud je pole `MenuText` prázdné, integrované vývojové prostředí (IDE) používá pole `ButtonText`. Pole `MenuText` lze také použít k lokalizaci.<br /><br /> U místních nabídek je pole `MenuText` název, který se zobrazí na panelu nástrojů místní nabídky, který umožňuje přizpůsobení místních nabídek v integrovaném vývojovém prostředí (IDE). Proto je nutné, aby byla v místní nabídce pojmenovaná. použijte například zkratku balíčku widget "místo" zástupce ".<br /><br /> Pokud pole `MenuText` není zadáno, použije se pole `ButtonText`.|
+|CommandName|Pole `CommandName` Určuje text, který se zobrazí v kategorii klávesnice na kartě **příkazy** v dialogovém okně **přizpůsobit** (k dispozici kliknutím na **přizpůsobit** v nabídce **nástroje** ).|
+|Kanonický tvar|Pole English `CanonicalName` Určuje název příkazu v anglickém textu, který lze zadat do **příkazového** okna pro provedení položky nabídky. IDE vyříznout všechny znaky, které nejsou písmena, číslice, podtržítka nebo vložená tečky. Tento text se pak zřetězí do pole `ButtonText` k definování příkazu. Například **Nový projekt** v nabídce **soubor** se zobrazí jako příkaz soubor. NewProject.<br /><br /> Pokud pole `CanonicalName` v angličtině není zadáno, rozhraní IDE použije pole `ButtonText` a odstraní všechny kromě písmen, číslic, podtržítka a vložených teček. Například text tlačítka "& definovat příkazy..." dojde k DefineCommands, kde se odeberou ampersand, místo a tři tečky.<br /><br /> Pokud je zadán příznak `TextChanges` a text příkazu je změněn, odpovídající příkaz rozpoznaný **příkazovým** oknem se nezmění. zůstane v kanonickém tvaru původní `ButtonText` nebo anglických `CanonicalName`ch polí.|
+|LocCanonicalName|Pole `LocCanonicalName` se chová stejně jako anglické `CanonicalName` pole, ale umožňuje zadání lokalizovaného textu příkazu. Lze zadat jak kanonická pole. Vzhledem k tomu, že IDE jenom analyzuje text zadaný v **příkazovém** okně a přidruží ho k příkazu, může být ke stejnému příkazu přidružená angličtina i jiný text než angličtina.|
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[Button – element](../extensibility/button-element.md)|Definuje element, který může uživatel zasahovat.|
-|[Menu – element](../extensibility/menu-element.md)|Definuje jednu položku.|
+|[Button – element](../extensibility/button-element.md)|Definuje prvek, se kterým může uživatel pracovat.|
+|[Menu – element](../extensibility/menu-element.md)|Definuje jednu položku nabídky.|
 |[Combo – element](../extensibility/combo-element.md)|Definuje příkazy, které se zobrazí v poli se seznamem.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

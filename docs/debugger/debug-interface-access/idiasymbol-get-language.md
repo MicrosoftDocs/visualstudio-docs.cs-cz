@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_language – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_language | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97af3e1bcee89462b7060aaefa8f1fb452d2ab03
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: eb7a7fa688825ce341417f695766a37ddb00028b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64825429"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739990"
 ---
-# <a name="idiasymbolgetlanguage"></a>IDiaSymbol::get_language
-Získá jazyk zdroje.
+# <a name="idiasymbolget_language"></a>IDiaSymbol::get_language
+Načte jazyk zdroje.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,14 +33,14 @@ HRESULT get_language ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí hodnotu z [cv_cfl_lang – výčet](../../debugger/debug-interface-access/cv-cfl-lang.md) výčet, který určuje jazyk, který zdroje.
+mimo Vrací hodnotu z výčtu [výčtu CV_CFL_LANG](../../debugger/debug-interface-access/cv-cfl-lang.md) , který určuje jazyk zdroje.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [CV_CFL_LANG – výčet](../../debugger/debug-interface-access/cv-cfl-lang.md)

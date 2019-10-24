@@ -1,5 +1,5 @@
 ---
-title: IDiaSectionContrib::get_execute | Microsoft Docs
+title: 'IDiaSectionContrib:: get_execute | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e4fe19ace9d84357b08ab848038283c857d15610
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f163c2a6a37dd1e379557047f70966932ef45c64
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828294"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742659"
 ---
-# <a name="idiasectioncontribgetexecute"></a>IDiaSectionContrib::get_execute
-Získá příznak, který určuje, zda je spustitelný soubor jako kód v části.
+# <a name="idiasectioncontribget_execute"></a>IDiaSectionContrib::get_execute
+Načte příznak, který označuje, zda je oddíl spustitelný jako kód.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_excute ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` Pokud část může provést, protože kód; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, zda lze oddíl provést jako kód; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

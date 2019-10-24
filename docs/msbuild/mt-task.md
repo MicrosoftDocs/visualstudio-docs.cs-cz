@@ -1,5 +1,5 @@
 ---
-title: MT – úloha | Dokumentace Microsoftu
+title: MT úkol | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,57 +16,57 @@ dev_langs:
 - jsharp
 - C++
 helpviewer_keywords:
-- MSBUILD (Visual C++), MT task
-- MT task (MSBuild (Visual C++))
+- MSBUILD (C++), MT task
+- MT task (MSBuild (C++))
 ms.assetid: bb94913c-1042-4968-9f08-b394518e899f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7afdf40c660a7433c51d2fa1130ef5f2cca616bd
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 11395230ac3721bbcef13b85aa1f0d244c19c6eb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437842"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748061"
 ---
 # <a name="mt-task"></a>MT – úloha
-Zabalí nástroj Microsoft manifestu *mt.exe*. Další informace najdete v tématu [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).
+Zabalí Nástroj manifest společnosti Microsoft, *Mt. exe*. Další informace najdete v části [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).
 
 ## <a name="parameters"></a>Parametry
- Následující tabulka popisuje parametry **MT** úloh. Většinu úkolů parametrů a několik sad parametrů, odpovídají možnost příkazového řádku.
+ Následující tabulka popisuje parametry úlohy **Mt** . Většina parametrů úlohy a několik sad parametrů odpovídá možnosti příkazového řádku.
 
 > [!NOTE]
-> *Mt.exe* dokumentace používá pomlčkou (**-**) jako předponu pro možnosti příkazového řádku, ale toto téma používá lomítko (**/**). Buď předpona je přijatelné.
+> Dokumentace *Mt. exe* používá jako předponu pro možnosti příkazového řádku spojovník ( **-** ), ale toto téma používá lomítko ( **/** ). Obě předpony jsou přijatelné.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**AdditionalManifestFiles**|Volitelné **String []** parametru.<br /><br /> Určuje název jednoho nebo více souborů manifestu.<br /><br /> Další informace najdete v tématu **/manifest** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**AdditionalOptions**|Volitelné **řetězec** parametru.<br /><br /> Seznam možností příkazového řádku. Třeba /\<možnost1 > /\<možnost2 > /\<možnost #>. Tento parametr použijte k určení možnosti příkazového řádku, které nejsou reprezentovány jakýkoli jiný **MT** parametr úlohy.<br /><br /> Další informace najdete v tématu [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**Vlastnost assemblyIdentity**|Volitelné **řetězec** parametru.<br /><br /> Určuje atribut hodnoty **assemblyIdentity** elementu v manifestu. Zadejte čárkami oddělený seznam, kde je hodnota první součásti `name` atribut, za nímž následuje jedna nebo více dvojice název/hodnota, které mít formát _služba ._protokol,  *\<atribut name > = < attribute_value >*.<br /><br /> Další informace najdete v tématu **/identity** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**ComponentFileName**|Volitelné **řetězec** parametru.<br /><br /> Určuje název knihovny DLL máte v úmyslu vytvořit ze *.rgs* nebo *.tlb* soubory. Tento parametr je povinný, pokud zadáte **RegistrarScriptFile** nebo **Souborknihovnytypů** MT parametry úlohy.<br /><br /> Další informace najdete v tématu **/dll** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**DependencyInformationFile**|Volitelné **řetězec** parametru.<br /><br /> Určuje soubor informací o závislostech používaný aplikací Visual Studio ke sledování informací o závislostech sestavení pro nástroj manifest.|
-|**EmbedManifest**|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, vloží soubor manifestu sestavení. Pokud `false`, vytvoří jako samostatný soubor manifestu.|
-|**EnableDPIAwareness**|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, přidá do informace o manifestu, který aplikaci označí jako rozlišením DPI. Zápis rozlišením DPI aplikace díky uživatelské rozhraní vypadat konzistentně dobrá napříč celou řadu nastavení zobrazení vysokých hodnot DPI.<br /><br /> Další informace najdete v tématu [vysokého nastavení DPI](https://docs.microsoft.com/windows/desktop/win7devguide/high-dpi).|
-|**GenerateCatalogFiles**|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, vygeneruje definici katalogu (*.CDF pro tvorbu*) soubory.<br /><br /> Další informace najdete v tématu **/makecdfs** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**GenerateCategoryTags**|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, způsobí, že se budou generovat značky kategorií. Pokud je tento parametr `true`, **ManifestFromManagedAssemblyMT** musí být zadán také parametr úkolu.<br /><br /> Další informace najdete v tématu **/category** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**InputResourceManifests**|Volitelné **řetězec** parametru.<br /><br /> Vstup manifestu z prostředku typu RT_MANIFEST, který má zadaný identifikátor. Zadejte prostředek ve formátu, \<soubor > [; [ #]\<ID_prostředku >], kde nepovinný \<ID_prostředku > parametr je nastaven na nezáporné 16bitové číslo.<br /><br /> Pokud ne `resource_id` je zadán, použije se výchozí hodnota CREATEPROCESS_MANIFEST_RESOURCE (1).<br /><br /> Další informace najdete v tématu **/inputresource** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**ManifestFromManagedAssembly**|Volitelné **řetězec** parametru.<br /><br /> Generuje manifest ze zadané spravované sestavení.<br /><br /> Další informace najdete v tématu **/managedassemblyname** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**ManifestToIgnore**|Volitelné **řetězec** parametru.<br /><br /> (Nepoužívá.)|
-|**OutputManifestFile**|Volitelné **řetězec** parametru.<br /><br /> Určuje název výstupním manifestu. Pokud je tento parametr vynechán, pracuje jen jeden manifest na tento manifest se upraví na místě.<br /><br /> Další informace najdete v tématu **/out** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**OutputResourceManifests**|Volitelné **řetězec** parametru.<br /><br /> Výstup manifestu do prostředku typu RT_MANIFEST, který má zadaný identifikátor. Prostředek je ve formuláři, \<soubor > [; [ #]\<ID_prostředku >], kde nepovinný \<ID_prostředku > parametr je nastaven na nezáporné 16bitové číslo.<br /><br /> Pokud ne `resource_id` je zadán, použije se výchozí hodnota CREATEPROCESS_MANIFEST_RESOURCE (1).<br /><br /> Další informace najdete v tématu **/outputresource** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**RegistrarScriptFile**|Volitelné **řetězec** parametru.<br /><br /> Určuje název skriptu registrátoru (*.rgs*) soubor manifestu podpora bez registrace modelu COM pomocí.<br /><br /> Další informace najdete v tématu **/rgs** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**ReplacementsFile**|Volitelné **řetězec** parametru.<br /><br /> Určuje soubor, který obsahuje hodnoty pro nahraditelné řetězce ve skriptu registrátoru (*.rgs*) soubor.<br /><br /> Další informace najdete v tématu **/replacements** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**ResourceOutputFileName**|Volitelné **řetězec** parametru.<br /><br /> Určuje výstupní soubor prostředků pro vložení manifestu do výstupu projektu.|
-|**Zdroje**|Volitelné `ITaskItem[]` parametru.<br /><br /> Určuje seznam souborů manifestu zdroj oddělené mezerami.<br /><br /> Další informace najdete v tématu **/manifest** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**SuppressDependencyElement**|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, generuje manifest bez elementy dependency. Pokud je tento parametr `true`, také určit **ManifestFromManagedAssemblyMT** parametr úlohy.<br /><br /> Další informace najdete v tématu **/nodependency** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**SuppressStartupBanner**|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, zabraňuje zobrazování čísel zprávu o autorských právech a verze při spuštění úlohy.<br /><br /> Další informace najdete v tématu **/nologo** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**TrackerLogDirectory**|Volitelné `String` parametru.<br /><br /> Určuje zprostředkující adresář, kde jsou uloženy protokoly sledování pro tuto úlohu.|
-|**TypeLibraryFile**|Volitelné **řetězec** parametru.<br /><br /> Určuje název knihovny typů (*.tlb*) soubor. Pokud zadáte tento parametr, zadat také **ComponentFileNameMT** parametr úlohy.<br /><br /> Další informace najdete v tématu **/TLB** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**UpdateFileHashes**|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, vypočítá hodnotu hash souboru v cestě určené **UpdateFileHashesSearchPathMT** parametr úlohy a pak aktualizuje hodnotu **hash** atribut **souboru** elementu v manifestu pomocí vypočtená hodnota.<br /><br /> Další informace najdete v tématu **/hashupdate** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe). Viz také **UpdateFileHashesSearchPath** parametr v této tabulce.|
-|**UpdateFileHashesSearchPath**|Volitelné `String` parametru.<br /><br /> Určuje cestu hledání pro použití při aktualizaci hodnoty hash souborů. Použitím tohoto parametru s **UpdateFileHashesMT** parametr úlohy.<br /><br /> Další informace najdete v tématu **UpdateFileHashes** parametr v této tabulce.|
-|**VerboseOutput**|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, zobrazí podrobné informace o ladění.<br /><br /> Další informace najdete v tématu **/ verbose** možnost [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**AdditionalManifestFiles**|Parametr volitelného **řetězce []** .<br /><br /> Určuje název jednoho nebo více souborů manifestu.<br /><br /> Další informace najdete v tématu možnost **/manifest** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**AdditionalOptions**|Volitelný **řetězcový** parametr.<br /><br /> Seznam možností příkazového řádku Například/\<option1 >/\<option2 >/\<option # >. Pomocí tohoto parametru můžete zadat možnosti příkazového řádku, které nejsou reprezentované žádným jiným parametrem úlohy **Mt** .<br /><br /> Další informace najdete v části [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**AssemblyIdentity**|Volitelný **řetězcový** parametr.<br /><br /> Určuje hodnoty atributu prvku **assemblyIdentity** manifestu. Zadejte seznam oddělený čárkami, kde první komponenta je hodnota atributu `name` následovaný jednou nebo více páry název/hodnota, které mají formulář, *\<attribute název > = < attribute_value >* .<br /><br /> Další informace najdete v tématu možnost **/identity** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**ComponentFileName**|Volitelný **řetězcový** parametr.<br /><br /> Určuje název knihovny DLL, kterou chcete sestavit ze souborů *. rgs* nebo *. tlb* . Tento parametr je povinný, pokud zadáte parametry úlohy **RegistrarScriptFile** nebo **souborKnihovnyTypů** Mt.<br /><br /> Další informace najdete v tématu možnost **/DLL** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**DependencyInformationFile**|Volitelný **řetězcový** parametr.<br /><br /> Určuje soubor informací o závislostech používaný aplikací Visual Studio ke sledování informací o závislostech sestavení pro nástroj manifest.|
+|**EmbedManifest**|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, vloží soubor manifestu do sestavení. Pokud `false`, vytvoří soubor samostatného manifestu.|
+|**EnableDPIAwareness**|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, přidá k informacím o manifestu, které aplikaci označí jako s podporou DPI. Psaní aplikace podporující DPI usnadňuje vzhled uživatelského rozhraní napříč širokou škálou nastavení displeje s vysokým rozlišením DPI.<br /><br /> Další informace najdete v tématu [vysoké rozlišení DPI](https://docs.microsoft.com/windows/desktop/win7devguide/high-dpi).|
+|**GenerateCatalogFiles**|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, vygeneruje soubory definice katalogu ( *. CDF*).<br /><br /> Další informace najdete v tématu možnost **/makecdfs** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**GenerateCategoryTags**|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, způsobí vygenerování značek kategorií. Pokud je tento parametr `true`, musí být také zadán parametr úlohy **ManifestFromManagedAssemblyMT** .<br /><br /> Další informace najdete v tématu možnost **/Category** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**InputResourceManifests**|Volitelný **řetězcový** parametr.<br /><br /> Zadejte manifest z prostředku typu RT_MANIFEST, který má zadaný identifikátor. Zadejte prostředek formuláře \<file > [; #] \<resource_id >], kde volitelný \<resource_id > parametr je nezáporné, 16bitové číslo.<br /><br /> Pokud není zadán žádný `resource_id`, je použita výchozí hodnota CREATEPROCESS_MANIFEST_RESOURCE (1).<br /><br /> Další informace najdete v tématu možnost **/inputresource** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**ManifestFromManagedAssembly**|Volitelný **řetězcový** parametr.<br /><br /> Vygeneruje manifest ze zadaného spravovaného sestavení.<br /><br /> Další informace najdete v tématu možnost **/managedassemblyname** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**ManifestToIgnore**|Volitelný **řetězcový** parametr.<br /><br /> (Nepoužívá se.)|
+|**OutputManifestFile**|Volitelný **řetězcový** parametr.<br /><br /> Určuje název výstupního manifestu. Pokud je tento parametr vynechán a je-li provozován pouze jeden manifest, je tento manifest změněn na místě.<br /><br /> Další informace najdete v tématu možnost **/out** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**OutputResourceManifests**|Volitelný **řetězcový** parametr.<br /><br /> Výstup manifestu do prostředku typu RT_MANIFEST, který má zadaný identifikátor. Prostředek má tvar \<file > [; #] \<resource_id >], kde volitelný \<resource_id > parametr je nezáporné, 16bitové číslo.<br /><br /> Pokud není zadán žádný `resource_id`, je použita výchozí hodnota CREATEPROCESS_MANIFEST_RESOURCE (1).<br /><br /> Další informace najdete v tématu možnost **/outputresource** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**RegistrarScriptFile**|Volitelný **řetězcový** parametr.<br /><br /> Určuje název souboru skriptu registrátora ( *. rgs*), který se má použít pro podporu manifestu com bez registrace.<br /><br /> Další informace najdete v tématu možnost **/RGS** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**ReplacementsFile**|Volitelný **řetězcový** parametr.<br /><br /> Určuje soubor, který obsahuje hodnoty pro nahraditelné řetězce v souboru skriptu registrátora ( *. rgs*).<br /><br /> Další informace najdete v tématu možnost **/replacements** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**ResourceOutputFileName**|Volitelný **řetězcový** parametr.<br /><br /> Určuje výstupní soubor prostředků, který se používá k vložení manifestu do výstupu projektu.|
+|**Prostředky**|Volitelný parametr `ITaskItem[]`.<br /><br /> Určuje seznam zdrojových souborů manifestu oddělených mezerami.<br /><br /> Další informace najdete v tématu možnost **/manifest** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**SuppressDependencyElement**|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, vygeneruje manifest bez prvků závislosti. Pokud je tento parametr `true`, zadejte také parametr úlohy **ManifestFromManagedAssemblyMT** .<br /><br /> Další informace najdete v tématu možnost **/nodependency** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**SuppressStartupBanner**|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, zabrání zobrazení zprávy o autorských právech a číslech verze při spuštění úlohy.<br /><br /> Další informace naleznete v možnosti **/nologo** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**TrackerLogDirectory**|Volitelný parametr `String`.<br /><br /> Určuje zprostředkující adresář, ve kterém jsou uložené protokoly sledování pro tento úkol.|
+|**SouborKnihovnyTypů**|Volitelný **řetězcový** parametr.<br /><br /> Určuje název souboru knihovny typů ( *. tlb*). Pokud zadáte tento parametr, zadejte také parametr úlohy **ComponentFileNameMT** .<br /><br /> Další informace najdete v tématu možnost **/TLB** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**UpdateFileHashes**|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, vypočítá hodnotu hash souborů v cestě určené parametrem úlohy **UpdateFileHashesSearchPathMT** a poté aktualizuje hodnotu atributu **hash** elementu **File** v manifestu pomocí vypočítané hodnoty. .<br /><br /> Další informace najdete v tématu možnost **/hashupdate** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe). V této tabulce se také zobrazí parametr **UpdateFileHashesSearchPath** .|
+|**UpdateFileHashesSearchPath**|Volitelný parametr `String`.<br /><br /> Určuje cestu hledání, která se použije při aktualizaci hodnot hash souborů. Tento parametr použijte s parametrem úlohy **UpdateFileHashesMT** .<br /><br /> Další informace najdete v parametru **UpdateFileHashes** v této tabulce.|
+|**VerboseOutput**|Volitelný parametr `Boolean`.<br /><br /> Pokud `true`, zobrazí podrobné informace o ladění.<br /><br /> Další informace najdete v možnosti **/verbose** v [Mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
 
 ## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

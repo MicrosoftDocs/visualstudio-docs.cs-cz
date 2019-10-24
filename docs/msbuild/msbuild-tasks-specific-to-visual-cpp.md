@@ -1,5 +1,5 @@
 ---
-title: Úlohy nástroje MSBuild specifické pro Visual C++ | Dokumentace Microsoftu
+title: Úlohy nástroje MSBuild specifické C++ pro | Microsoft Docs
 ms.date: 03/10/2019
 ms.topic: reference
 dev_langs:
@@ -8,58 +8,58 @@ dev_langs:
 - C++
 - jsharp
 helpviewer_keywords:
-- MSBuild, tasks specific to Visual C++
+- MSBuild, tasks specific to C++
 ms.assetid: 05410f0c-7356-4692-bc00-20664421c9ff
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243ed824ba278300a798a34b05854129e8197504
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d6ea400d7473fae27ac4b17d9e3692748db549f3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63004591"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748062"
 ---
-# <a name="msbuild-tasks-specific-to-visual-c"></a>Úlohy nástroje MSBuild specifické pro Visual C++
-Úlohy poskytují kód, který se spustí během procesu sestavení. Při instalaci Visual C++ jsou k dispozici, kromě těch, které se instalují s následující úlohy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Další informace najdete v tématu [přehled nástroje MSBuild (Visual C++)](/cpp/build/msbuild-visual-cpp-overview).
+# <a name="msbuild-tasks-specific-to-c"></a>Úlohy nástroje MSBuild specifické proC++
+Úlohy poskytují kód, který se spouští během procesu sestavení. Při C++ instalaci nástroje jsou k dispozici následující úkoly kromě těch, které jsou nainstalovány s [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Další informace naleznete v tématu [Přehled nástrojeC++MSBuild ()](/cpp/build/msbuild-visual-cpp-overview).
 
- Kromě parametrů pro každou úlohu Každá úloha má také následující parametry.
+ Kromě parametrů pro každý úkol má každý úkol také následující parametry.
 
 | Parametr | Popis |
 |-------------------| - |
-| `Condition` | Volitelné `String` parametru.<br /><br /> A `Boolean` výraz, který [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] modul se používá k určení, zda se tato úloha spustí. Informace o podmínkách, které jsou podporovány [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], naleznete v tématu [podmínky](../msbuild/msbuild-conditions.md). |
-| `ContinueOnError` | Volitelný parametr. Může obsahovat jednu z následujících hodnot:<br /><br /> -   **WarnAndContinue** nebo **true**. Při selhání úkolu, následné úlohy v [cílové](../msbuild/target-element-msbuild.md) elementu a sestavení budou dál spouštět a všechny chyby z úlohy jsou považovány za upozornění<br />-   **ErrorAndContinue**. Při selhání úkolu, následné úlohy v `Target` elementu a sestavení budou dál spouštět a všechny chyby z úlohy jsou považována za chyby.<br />-   **ErrorAndStop** nebo **false** (výchozí). Při selhání úkolu, ve zbývajících úkolech v`Target` elementu a sestavení nejsou provedeny a celé `Target` elementu a sestavení jsou považovány za neúspěšný.<br /><br /> Verze rozhraní .NET Framework před 4.5 podporována pouze `true` a `false` hodnoty.<br /><br /> Další informace najdete v tématu [jak: Ignorování chyb v úlohách](../msbuild/how-to-ignore-errors-in-tasks.md). |
+| `Condition` | Volitelný parametr `String`.<br /><br /> Výraz `Boolean`, který modul [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] používá k určení, zda bude tato úloha provedena. Informace o podmínkách podporovaných nástrojem [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] najdete v tématu [podmínky](../msbuild/msbuild-conditions.md). |
+| `ContinueOnError` | Volitelný parametr. Může obsahovat jednu z následujících hodnot:<br /><br /> -   **WarnAndContinue** nebo **true**. Pokud se úloha nezdařila, následné úkoly v [cílovém](../msbuild/target-element-msbuild.md) elementu a sestavení se budou spouštět i nadále a všechny chyby z tohoto úkolu jsou považovány za upozornění.<br />-   **ErrorAndContinue**. Pokud se úloha nezdařila, následné úkoly v prvku `Target` a sestavení se budou dále spouštět a všechny chyby z tohoto úkolu jsou považovány za chyby.<br />-   **ErrorAndStop** nebo **false** (výchozí). Pokud se úloha nezdařila, zbývající úkoly v prvku `Target` a sestavení nebudou provedeny a celý `Target` prvek a sestavení jsou považovány za neúspěšné.<br /><br /> Verze .NET Framework před 4,5 podporují pouze hodnoty `true` a `false`.<br /><br /> Další informace najdete v tématu [Postupy: ignorování chyb v úlohách](../msbuild/how-to-ignore-errors-in-tasks.md). |
 
 ### <a name="related-topics"></a>Související témata
 
 |Název|Popis|
 |-----------|-----------------|
-|[BscMake – úloha](../msbuild/bscmake-task.md)|Zabalí nástroj Microsoft procházet informace nástroje pro správu (*bscmake.exe*).|
-|[Cl – úloha](../msbuild/cl-task.md)|Zabalí nástroj kompilátoru Visual C++ (*cl.exe*).|
-|[Cppclean – úloha](../msbuild/cppclean-task.md)|Odstraní dočasné soubory, které MSBuild vytvoří při vytváření projektu Visual C++.|
-|[ClangCompile úkolu](../msbuild/clangcompile-task.md)|Zabalí nástroj kompilátoru Visual C++ (*clang.exe*).|
-|[CustomBuild úkolu](../msbuild/custombuild-task.md)|Zabalí nástroj kompilátoru Visual C++ (*cmd.exe*).|
-|[FXC úkolu](../msbuild/fxc-task.md)|Pomocí kompilátoru shaderu HLSL v procesu sestavení.|
-|[GetOutOfDateItems](../msbuild/getoutofdateitems-task.md)|Přečte staré tlogs, zapíše nové tlogs a vrátí sadu položek, které nejsou aktuální. (úloha pomocné rutiny)|
-|[GetOutputFileName](../msbuild/getoutputfilename-task.md)|Získá název výstupního souboru pro cl a další nástroje, které umožňují určit pouze výstupní adresář nebo úplný název souboru nebo žádnou akci. (úloha pomocné rutiny)|
-|[Lib – úloha](../msbuild/lib-task.md)|Zabalí nástroj Správce 32bitové Microsoft knihovny (*lib.exe*).|
-|[Odkaz – úloha](../msbuild/link-task.md)|Zabalí nástroj linker Visual C++ (*link.exe*).|
-|[MIDL – úloha](../msbuild/midl-task.md)|Zabalí nástroj kompilátoru Microsoft Interface Definition Language (MIDL) (*midl.exe*).|
-|[MT – úloha](../msbuild/mt-task.md)|Zabalí nástroj Microsoft manifestu (*mt.exe*).|
-|[MultiToolTask úkolu](../msbuild/multitooltask-task.md)|Žádný popis.|
-|[ParallelCustomBuild úkolu](../msbuild/parallelcustombuild-task.md)|Spouštění paralelních instancí [CustomBuild úloh](../msbuild/custombuild-task.md).|
-|[RC – úloha](../msbuild/rc-task.md)|Zabalí nástroj Microsoft Windows Resource Compiler (*rc.exe*).|
-|[SETENV – úloha](../msbuild/setenv-task.md)|Nastaví nebo vymaže hodnotu proměnné zadané prostředí.|
+|[BscMake – úloha](../msbuild/bscmake-task.md)|Zabalí Nástroj pro údržbu informací o procházení Microsoftem (*BSCMAKE. exe*).|
+|[CL – úloha](../msbuild/cl-task.md)|Zabalí nástroj C++ kompilátoru (*CL. exe*).|
+|[CPPClean – – úloha](../msbuild/cppclean-task.md)|Odstraní dočasné soubory, které nástroj MSBuild vytvoří při C++ sestavení projektu.|
+|[ClangCompile – úloha](../msbuild/clangcompile-task.md)|Zabalí nástroj C++ kompilátoru (*Clang. exe*).|
+|[CustomBuild – úloha](../msbuild/custombuild-task.md)|Zabalí nástroj C++ kompilátoru (*cmd. exe*).|
+|[FXC – úloha](../msbuild/fxc-task.md)|Použijte kompilátory HLSL shaderu v procesu sestavení.|
+|[GetOutOfDateItems](../msbuild/getoutofdateitems-task.md)|Přečte staré tlogs, zapisuje nové tlogs a vrátí sadu položek, které nejsou aktuální. (pomocný úkol)|
+|[GetOutputFileName](../msbuild/getoutputfilename-task.md)|Získá název výstupního souboru pro CL a další nástroje, které umožňují zadat jenom výstupní adresář nebo úplný název souboru nebo nic. (pomocný úkol)|
+|[LIB – Úloha](../msbuild/lib-task.md)|Zabalí nástroj Správce bitových knihoven Microsoft 32 (*lib. exe*).|
+|[Propojit úkol](../msbuild/link-task.md)|Zabalí nástroj C++ Linker (*Link. exe*).|
+|[MIDL – úloha](../msbuild/midl-task.md)|Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language) (*MIDL. exe*).|
+|[MT – úloha](../msbuild/mt-task.md)|Zabalí Nástroj manifest společnosti Microsoft (*Mt. exe*).|
+|[MultiToolTask – úloha](../msbuild/multitooltask-task.md)|Žádný popis.|
+|[ParallelCustomBuild – úloha](../msbuild/parallelcustombuild-task.md)|Spusťte paralelní instance [CustomBuild úlohy](../msbuild/custombuild-task.md).|
+|[RC – úloha](../msbuild/rc-task.md)|Zabalí nástroj Microsoft Windows Resource Compiler (*RC. exe*).|
+|[Setenv – – úloha](../msbuild/setenv-task.md)|Nastaví nebo odstraní hodnotu zadané proměnné prostředí.|
 |[Základní třída TrackedVCToolTask](../msbuild/trackedvctooltask-base-class.md)|Dědí z [VCToolTask](../msbuild/vctooltask-base-class.md).|
-|[Vcmessage – úloha](../msbuild/vcmessage-task.md)|Protokoly upozornění a chybové zprávy během sestavení. (Není prodloužit. Pouze pro interní použití)|
+|[VCMessage – – úloha](../msbuild/vcmessage-task.md)|Protokoluje zprávy upozornění a chybové zprávy během sestavení. (Nelze je zvětšit. Pouze interní použití.)|
 |[Základní třída VCToolTask](../msbuild/vctooltask-base-class.md)|Dědí z [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask).|
-|[Xdcmake – úloha](../msbuild/xdcmake-task.md)|Zabalí nástroj dokumentace XML (*xdcmake.exe*), která sloučí komentář k dokumentu XML (*.xdc*) soubory do *.xml* souboru.|
-|[XSD – úloha](../msbuild/xsd-task.md)|Zabalí nástroj definici schématu XML (*xsd.exe*), který generuje schématu nebo třída soubory ze zdroje. *Viz poznámka níže.*|
-|[Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)|Popisuje elementy systém MSBuild.|
-|[Úlohy](../msbuild/msbuild-tasks.md)|Popisuje úlohy, jako jsou jednotky kódu, které mohou být kombinovány pro vytvoření sestavení.|
-|[Zápis úloh](../msbuild/task-writing.md)|Popisuje, jak vytvořit úlohu.|
+|[XDCMake – úloha](../msbuild/xdcmake-task.md)|Zabalí Nástroj dokumentace XML (*xdcmake. exe*), který sloučí soubory komentáře dokumentu XML ( *. xdc*) do souboru *. XML* .|
+|[XSD – úloha](../msbuild/xsd-task.md)|Zabalí Nástroj definice schématu XML (*XSD. exe*), který generuje soubory schématu nebo třídy ze zdroje. *Viz poznámka níže.*|
+|[Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)|Popisuje prvky systému MSBuild.|
+|[Úlohy](../msbuild/msbuild-tasks.md)|Popisuje úlohy, které jsou jednotky kódu, které mohou být kombinovány pro vytvoření sestavení.|
+|[Zápis úlohy](../msbuild/task-writing.md)|Popisuje, jak vytvořit úlohu.|
 
 > [!NOTE]
-> Spouští se v sadě Visual Studio 2017, projekt C++ podporu pro *xsd.exe* je zastaralý. Můžete dál používat **Microsoft.VisualC.CppCodeProvider** rozhraní API tak, že ručně přidáte *CppCodeProvider.dll* do mezipaměti GAC.
+> Od sady Visual Studio 2017 je C++ podpora projektů pro soubor *XSD. exe* zastaralá. Rozhraní API **Microsoft. VisualC. CppCodeProvider** můžete dál používat tak, že ručně přidáte *CppCodeProvider. dll* do globální mezipaměti sestavení (GAC).

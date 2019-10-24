@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6545962f374ea850808c11a3c9c79e0a04602027
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1d8c313eebc8623156dd7a575060397ee6e16a9d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655475"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748641"
 ---
 # <a name="set-current-process"></a>Nastavit aktuální proces
 Nastaví zadaný proces jako aktivní proces v ladicím programu.
@@ -41,7 +41,7 @@ Můžete se připojit k více procesům při ladění, ale v Dubber je v daném 
 >Debug.SetCurrentProcess 1
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)

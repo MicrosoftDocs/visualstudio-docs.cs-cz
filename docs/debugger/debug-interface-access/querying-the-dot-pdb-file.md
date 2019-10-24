@@ -1,5 +1,5 @@
 ---
-title: Dotazování. Soubor PDB | Dokumentace Microsoftu
+title: Dotazování na. Soubor PDB | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -13,19 +13,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a67dc121790acff1f5e39a82a1711317616fc2d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 68efbd59abe1b0aff717a55383f3ac330586164a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855045"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738584"
 ---
 # <a name="querying-the-pdb-file"></a>Dotazování na soubor .Pdb
-Soubor databáze programu (příponou PDB) je binární soubor, který obsahuje typ a symbolické ladicí informace shromážděné v průběhu kompilace a propojování projektu. Soubor PDB je vytvořen při kompilaci programu jazyka C/C++ pomocí **/zi** nebo **/zi** nebo [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)], [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)], nebo [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] programovat s **/debug** možnost. Objektové soubory obsahují odkazy do souboru PDB pro informace o ladění. Další informace o souborech pdb, naleznete v tématu [soubory PDB](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100)). DIA aplikace můžete použít následující obecné kroky k získání podrobností o různých symboly, objektů a dat elementů v rámci spustitelnou bitovou kopii.
+Soubor databáze programu (s příponou. pdb) je binární soubor, který obsahuje informace o typech a symbolickém ladění shromážděné v průběhu kompilování a propojení projektu. Soubor PDBC++ se vytvoří při kompilaci C/programu pomocí **/Zi** nebo **/Zi** nebo [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)], [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] nebo [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] programu s možností **/Debug** . Soubory objektů obsahují odkazy na soubor. PDB pro informace o ladění. Další informace o souborech PDB naleznete v tématu [soubory PDB](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100)). Aplikace DIA může pomocí následujících obecných kroků získat podrobnosti o různých symbolech, objektech a datových prvcích v rámci spustitelné bitové kopie.
 
-### <a name="to-query-the-pdb-file"></a>K dotazování na soubor .pdb
+### <a name="to-query-the-pdb-file"></a>Dotazování na soubor. pdb
 
-1. Získání zdroje dat tak, že vytvoříte [idiadatasource –](../../debugger/debug-interface-access/idiadatasource.md) rozhraní.
+1. Získání zdroje dat vytvořením rozhraní [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md) .
 
     ```C++
     CComPtr<IDiaDataSource> pSource;
@@ -41,7 +41,7 @@ Soubor databáze programu (příponou PDB) je binární soubor, který obsahuje 
     }
     ```
 
-2. Volání [idiadatasource::loaddatafrompdb –](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) nebo [idiadatasource::loaddataforexe –](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) načíst informace o ladění.
+2. Pro načtení informací o ladění zavolejte [IDiaDataSource:: loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) nebo [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) .
 
     ```C++
     wchar_t wszFilename[ _MAX_PATH ];
@@ -55,7 +55,7 @@ Soubor databáze programu (příponou PDB) je binární soubor, který obsahuje 
     }
     ```
 
-3. Volání [idiadatasource::opensession –](../../debugger/debug-interface-access/idiadatasource-opensession.md) otevřete [idiasession –](../../debugger/debug-interface-access/idiasession.md) se a získat informace o ladění.
+3. Voláním [IDiaDataSource:: openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md) otevřete [IDiaSession](../../debugger/debug-interface-access/idiasession.md) pro získání přístupu k ladicím informacím.
 
     ```C++
     CComPtr<IDiaSession> psession;
@@ -65,7 +65,7 @@ Soubor databáze programu (příponou PDB) je binární soubor, který obsahuje 
     }
     ```
 
-4. Použijte metody v `IDiaSession` dotazu pro symboly ve zdroji dat.
+4. Použijte metody v `IDiaSession` k dotazování na symboly ve zdroji dat.
 
     ```C++
     CComPtr<IDiaSymbol> pglobal;
@@ -75,7 +75,7 @@ Soubor databáze programu (příponou PDB) je binární soubor, který obsahuje 
     }
     ```
 
-5. Použití `IDiaEnum*` rozhraní možné vytvořit výčet a procházet symboly nebo další prvky ladicí informace.
+5. Rozhraní `IDiaEnum*` můžete použít k vytvoření výčtu a prohledání symbolů nebo jiných prvků informací o ladění.
 
     ```C++
     CComPtr<IDiaEnumTables> pTables;
@@ -90,5 +90,5 @@ Soubor databáze programu (příponou PDB) je binární soubor, který obsahuje 
     }
     ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)

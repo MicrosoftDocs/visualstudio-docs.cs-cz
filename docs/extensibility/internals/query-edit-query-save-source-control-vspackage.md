@@ -1,5 +1,5 @@
 ---
-title: Dotazování Edit Query Save (řízení zdrojového balíčku VSPackage) | Dokumentace Microsoftu
+title: Uložení dotazu na úpravu dotazu (VSPackage správy zdrojového kódu) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,28 +12,28 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d3bffdac79a9f4274fbd6465c33e8659caf9d1f6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: be12297bdaeb112d7421b02da1153ed62d6d14f8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341452"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72724774"
 ---
 # <a name="query-edit-query-save-source-control-vspackage"></a>Události QEQS (Query Edit Query Save) (balíček VSPackage správy zdrojového kódu)
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] editory můžete vysílat události dotazu upravit dotaz uložit (QEQS). [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Zdrojový ovládací prvek se zakázaným inzerováním implementuje QEQS služby tak, aby se příjemce události QEQS. Tyto události jsou pak přeneseny na aktuálně aktivní zdrojového balíčku VSPackage. Ovládací prvek active zdroje balíčku VSPackage implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> a její metody. Metody `IVsQueryEditQuerySave2` rozhraní se běžně označují jako okamžitě předtím, než se dokument upravovat poprvé a bezprostředně před uložení dokumentu.
+editory [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] můžou vysílat události pro úpravu dotazů QEQS (Query Query Save). [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zástupné procedury správy zdrojového kódu implementuje službu QEQS, takže se jedná o příjemce QEQSch událostí. Tyto události jsou následně delegovány na aktuálně aktivní správu zdrojového kódu VSPackage. Prvek VSPackage aktivního správy zdrojového kódu implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> a jeho metody. Metody rozhraní `IVsQueryEditQuerySave2` jsou obvykle volány bezprostředně před první úpravou dokumentu a bezprostředně před uložením dokumentu.
 
-## <a name="queryeditquerysave-events"></a>QueryEditQuerySave Events
- Ovládací prvek zdroje balíčku VSPackage musí zpracovávat události QEQS implementací `IVsQueryEditQuerySave2` rozhraní a metody potřebné. Níže je uveden stručný popis dvě metody, které sady VSPackage musí implementovat minimálně. Skutečná implementace musí být v souladu s logiky model správy zdrojového kódu.
+## <a name="queryeditquerysave-events"></a>Události QueryEditQuerySave
+ Prvek VSPackage správy zdrojového kódu musí zpracovávat události QEQS implementací rozhraní `IVsQueryEditQuerySave2` a nezbytných metod. Níže je uveden stručný popis dvou metod, které musí VSPackage implementovat minimálně. Skutečná implementace musí být v souladu s logikou modelu správy zdrojového kódu.
 
-### <a name="queryeditfiles-method"></a>QueryEditFiles – metoda
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> Se volá, když žádné projekty ani editor chce změnit soubor. V ideálním případě by tato metoda je volána *před* změny souboru a pokud je soubor uložen. Při vyvolání, `IVsQueryEditQuerySave2::QueryEditFiles` metoda zkontroluje, jestli jsou dané soubory pod správou zdrojových kódů, určuje, zda musí být rezervován a určuje, zda že je možné znovu zavést. Pokud okolností zabránit soubory upravovat, `IVsQueryEditQuerySave2::QueryEditFiles` metoda říká volající program zrušit úpravy. Je také možné pro volajícího k určení režimu vyvolání. Tato metoda přebírá v "bezobslužný" režim akce jenom v případě, že nezpůsobí žádné uživatelské rozhraní zobrazit. Pokud nevyhnutelné uživatelské rozhraní, musí být vrácena příznak, který označuje problém.
+### <a name="queryeditfiles-method"></a>Metoda QueryEditFiles
+ @No__t_0 se volá, když nějaký projekt nebo editor chce upravit soubor. V ideálním případě je tato metoda volána *před* úpravou souboru a při uložení souboru. Při vyvolání metoda `IVsQueryEditQuerySave2::QueryEditFiles` kontroluje, zda jsou zadané soubory pod správou zdrojových kódů, zda je třeba je rezervovat a zda je lze znovu načíst. Pokud okolnosti brání úpravám souborů, metoda `IVsQueryEditQuerySave2::QueryEditFiles` instruuje volající program, aby zrušil úpravu. Volající je také možné zadat režim vyvolání. V režimu ticha Tato metoda provádí akci pouze v případě, že nezpůsobí zobrazení uživatelského rozhraní. Pokud je uživatelské rozhraní nenevyhnutelné, musí být vrácen příznak pro indikaci problému.
 
- Metoda chová transakčním způsobem; To znamená pokud na jeden soubor je zrušena upravit, upravit se zrušila, pro všechny soubory. Naopak pokud je povoleno upravit, je povoleno pro všechny soubory. Pokud tato metoda umožňuje úpravy jednou pro danou sadu souborů, musí vždy povolit úpravy při dalších volání pro stejnou sadu souborů. Povolit úpravy smyčky pokračuje, dokud uzavřeno, uložit a znovu načíst; soubory dokud změnit jejich atributy (Vlastnosti); nebo dokud zdrojový balíček ovládací prvek se změní. Případy, které je třeba zvážit při implementaci `IVsQueryEditQuerySave2::QueryEditFiles` metoda zahrnout více souborů, speciální soubory, zrušit od uživatele a úpravy v paměti.
+ Metoda se chová transakčním způsobem; To znamená, že pokud se úprava zruší v jednom souboru, úpravy se zruší pro všechny soubory. Naopak, pokud je povolená úprava, je povolená pro všechny soubory. Pokud tato metoda umožňuje úpravy pro danou sadu souborů, musí vždy povolit úpravy při dalších voláních stejné sady souborů. Cyklus povolených úprav pokračuje, dokud nebudou soubory zavřeny, uloženy a znovu načteny. dokud se nezmění jejich atributy (vlastnosti); nebo dokud se nezmění balíček správy zdrojového kódu. Případy, které je potřeba vzít v úvahu při implementaci metody `IVsQueryEditQuerySave2::QueryEditFiles`, zahrnují několik souborů, speciální soubory, zrušení od uživatele a úpravy v paměti.
 
-### <a name="querysavefiles-method"></a>QuerySaveFiles – metoda
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFiles%2A> Se volá, když žádné projekty ani editoru je potřeba uložit sady souborů. Při vyvolání, `IVsQueryEditQuerySave2::QuerySaveFiles` – metoda zkontroluje, jestli jsou dané soubory jen pro čtení a zda jsou pod správou zdrojových kódů. Pokud soubory musí být rezervován, volání se deleguje na zdrojový balíček ovládacího prvku. Pokud okolností zabránit soubory se ukládá `IVsQueryEditQuerySave2::QuerySaveFiles` metoda zapotřebí sdělit editor k uložení zrušit. Stejně jako u `IVsQueryEditQuerySave2::QueryEditFiles` metoda, je možné pro volajícího k určení režimu vyvolání. Tato metoda přebírá v "bezobslužný" režim akce jenom v případě, že nezpůsobí žádné uživatelské rozhraní zobrazit. Pokud nevyhnutelné uživatelské rozhraní, musí být vrácena příznak, který označuje problém.
+### <a name="querysavefiles-method"></a>Metoda QuerySaveFiles
+ @No__t_0 se volá, když nějaký projekt nebo editor potřebuje uložit sadu souborů. Při vyvolání metoda `IVsQueryEditQuerySave2::QuerySaveFiles` kontroluje, zda jsou zadané soubory jen pro čtení a zda jsou pod správou zdrojových kódů. Pokud je nutné soubory rezervovat, volání je delegováno do balíčku správy zdrojového kódu. Pokud okolnosti brání ukládání souborů, musí `IVsQueryEditQuerySave2::QuerySaveFiles` metoda sdělit editoru, aby se zrušilo uložení. Stejně jako u metody `IVsQueryEditQuerySave2::QueryEditFiles` je možné, že volající určí režim vyvolání. V režimu ticha Tato metoda provádí akci pouze v případě, že nezpůsobí zobrazení uživatelského rozhraní. Pokud je uživatelské rozhraní nenevyhnutelné, musí být vrácen příznak pro indikaci problému.
 
- Tato metoda se musí chovat transakčním způsobem; To znamená pokud na jeden soubor je zrušena uložit, uložit se zrušila, pro všechny soubory. Naopak pokud je povoleno ukládání, musí být povoleno pro všechny soubory. Stejně jako u `IVsQueryEditQuerySave2::QueryEditFiles` metody, případy, které je třeba zvážit při implementaci `IVsQueryEditQuerySave2::QuerySaveFiles` metoda zahrnout více souborů, speciální soubory, zrušit od uživatele a úpravy v paměti.
+ Tato metoda se musí chovat transakčním způsobem; To znamená, že pokud se uložení zruší v jednom souboru, uložení se zruší pro všechny soubory. Naopak, pokud je ukládání povoleno, musí být povoleno pro všechny soubory. Stejně jako u `IVsQueryEditQuerySave2::QueryEditFiles` metody jsou případy, které je třeba vzít v úvahu při implementaci `IVsQueryEditQuerySave2::QuerySaveFiles` metody, zahrnovat více souborů, speciální soubory, zrušit od uživatele a úpravy v paměti.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>

@@ -24,12 +24,12 @@ ms.assetid: c7c60904-27f9-4f1f-b79b-ddf65041b810
 author: Joe-Sewell-PreEmptive
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 78a26da7734e4fa74a9b312b41786caca4b7cc67
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 555b23f33ee1e3541afc6181a9ec6c4ece833b81
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652824"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748893"
 ---
 # <a name="upgrade-dotfuscator-community"></a>Upgrade Dotfuscatoru Community
 
@@ -65,7 +65,7 @@ Dotfuscator Professional navíc nabízí úzkou integraci se sadou Visual Studio
 Další informace o pokročilých funkcích ochrany aplikací v Dotfuscator Professional najdete na [stránce Přehled][product-about] řešení s možnostmi Dotfuscator a [porovnejte je s komunitou Dotfuscator][product-compare].
 [Plně podporované zkušební verze jsou k dispozici na adrese PreEmptive.com][eval].
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Tento článek v úplné příručce pro uživatele komunity Dotfuscator][full]
 

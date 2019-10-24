@@ -13,12 +13,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 813b9ea0c51b4812c1d8bab4f1fb8be624893016
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9ab914d62053b5cbefe92ee0ce8356c10dad82e6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654358"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748762"
 ---
 # <a name="find-command"></a>Najít – příkaz
 Vyhledá soubory pomocí podmnožiny možností dostupných na kartě **najít v souborech** okna **Najít a nahradit** .
@@ -77,7 +77,7 @@ V tomto příkladu se v aktuálně vybrané části kódu provede hledání s ro
 >Edit.Find somestring /sel /case
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Příkazové okno](../../ide/reference/command-window.md)
 - [Pole Najít/příkaz](../../ide/find-command-box.md)

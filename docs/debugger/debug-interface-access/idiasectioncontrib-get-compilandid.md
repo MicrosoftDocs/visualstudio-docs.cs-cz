@@ -1,5 +1,5 @@
 ---
-title: IDiaSectionContrib::get_compilandId | Microsoft Docs
+title: 'IDiaSectionContrib:: get_compilandId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e4a548a5d6e564c2be3148d63ee28913fb1143d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b66740fc4c767dca3539d4a2889d82b485902603
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839521"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742703"
 ---
-# <a name="idiasectioncontribgetcompilandid"></a>IDiaSectionContrib::get_compilandId
-Načte identifikátor kompilace pro oddíl.
+# <a name="idiasectioncontribget_compilandid"></a>IDiaSectionContrib::get_compilandId
+Načte kompilantu identifikátor oddílu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_compilandId ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí identifikátor kompilace pro oddíl.
+mimo Vrátí kompilantu identifikátor oddílu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

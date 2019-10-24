@@ -1,5 +1,5 @@
 ---
-title: Ladicí program nemůže zobrazit zdrojový kód nebo zpětný překlad
+title: Ladicí program nemůže zobrazit zdrojový kód nebo zpětný překlad.
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,27 +16,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ee3181bedc520f24840f1b16221ea21055bf698
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: d87de3034cb6cb8ba3364fa362eff1c27e6bae9d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211176"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738348"
 ---
 # <a name="debugger-cannot-display-source-code-or-disassembly"></a>Ladicí program nemůže zobrazit zdrojový kód nebo zpětný překlad.
-Přečte tuto chybu:
+Tato chyba čte:
 
- Ladicí program nemůže zobrazit zdrojový kód nebo zpětný překlad pro aktuální umístění, kde vykonávání se zastavilo.
+ Ladicí program nemůže zobrazit zdrojový kód nebo zpětný překlad pro aktuální umístění, kde bylo spuštění zastaveno.
 
- K této chybě může dojít z několika důvodů:
+ Tato chybová zpráva se může vyskytnout z několika důvodů:
 
-- Můžete narazit zarážku v umístění, pro který neexistuje žádný zdrojový kód při ladění v jazyce, který nepodporuje zpětný překlad. Otevřít **zarážky** okna, vyhledejte zarážku zase ho smažete.
+- Možná jste narazili na zarážku v umístění, pro které neexistuje zdrojový kód, při ladění jazyka, který nepodporuje zpětný překlad. Otevřete okno **zarážky** , najděte zarážku a odstraňte ji.
 
-- Když provádíte ladění skriptu, můžete narazit zarážky během nebyly žádná vlákna ve svém programu. Zvolte **krok** nebo **pokračovat** z **ladění** nabídky pokračovat v ladění.
+- Pokud ladíte skript, možná jste narazili na zarážku, zatímco v programu neexistovala žádná vlákna. V nabídce **ladění** vyberte **Krok** nebo **pokračovat** a pokračujte v ladění.
 
-- Důležité informace o zabezpečení může znemožnit ladicího programu ze zásobníku a vlákna, zápis a další informace o kontextu čtením program, který ladíte. Toto je nejčastěji dochází, pokud jsou ladění webové aplikace a nemáte správná oprávnění pro přístup k virtuálnímu adresáři. Nastavení zabezpečení pro virtuální adresář pro anonymní a zkuste to znovu.
+- Kvůli bezpečnostním hlediskům může ladicí program zabránit načtení zásobníku, vlákna, registraci a dalších informací o kontextu z programu, který ladíte. K tomu pravděpodobně dojde, pokud ladíte webovou aplikaci a nemáte správné oprávnění pro přístup k virtuálnímu adresáři. Nastavte zabezpečení virtuálního adresáře na anonymní a zkuste to znovu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
 - [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)

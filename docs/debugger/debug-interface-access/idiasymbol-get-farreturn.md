@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_farreturn – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_farReturn | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 209ce1189963a3943a691b71c840474c3da1a07c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 7185498f351b8f69c926b7247ea348d5674ce6a2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64808830"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740688"
 ---
-# <a name="idiasymbolgetfarreturn"></a>IDiaSymbol::get_farReturn
-Získá příznak, který určuje, zda obsahuje funkci Pokud vratky.
+# <a name="idiasymbolget_farreturn"></a>IDiaSymbol::get_farReturn
+Načte příznak, který určuje, zda funkce obsahuje zcela návrat.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,20 +33,20 @@ HRESULT get_farReturn(
 #### <a name="parameters"></a>Parametry
  `pFlag`
 
-[in] Vrátí `TRUE` Pokud Pokud vratky využívá funkce, v opačném případě vrátí `FALSE`.
+pro Vrátí `TRUE`, pokud funkce používá zcela návrat, jinak vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|Ve verzi 8.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

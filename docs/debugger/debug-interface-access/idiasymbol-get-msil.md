@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_msil | Microsoft Docs
+title: 'IDiaSymbol:: get_msil | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b502d1504c5a61ed073ed77eed76dd5f7c139a35
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: bca44ea4b8b290089f0c1332cf5c9ba792265ee2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64784350"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739783"
 ---
-# <a name="idiasymbolgetmsil"></a>IDiaSymbol::get_msil
-Získá příznak, který určuje, zda symbol odkazuje na kód Microsoft Intermediate Language (MSIL).
+# <a name="idiasymbolget_msil"></a>IDiaSymbol::get_msil
+Načte příznak, který určuje, zda symbol odkazuje na kód jazyka MSIL (Microsoft Intermediate Language).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_msil ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` Pokud symbol se odkazuje na kód jazyka MSIL; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud symbol odkazuje na kód jazyka MSIL; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

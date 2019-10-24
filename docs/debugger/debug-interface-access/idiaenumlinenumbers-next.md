@@ -1,5 +1,5 @@
 ---
-title: Idiaenumlinenumbers::Next – | Dokumentace Microsoftu
+title: 'IDiaEnumLineNumbers:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 66abd987e3da4fadaac9d5b2de6664c4ae9e24ac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 07402ef7028ecfb7bb5b2c6e33ae06bc98ffe709
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829755"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744392"
 ---
 # <a name="idiaenumlinenumbersnext"></a>IDiaEnumLineNumbers::Next
-Načte zadaný počet čísel řádků v pořadí výčtu.
+Načte zadaný počet čísel řádků v sekvenci výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,20 +35,20 @@ HRESULT Next ( 
 #### <a name="parameters"></a>Parametry
  celt
 
-[in] Počet čísel řádků v enumerátor, který se má načíst.
+pro Počet čísel řádků ve výčtu, který má být načten.
 
  rgelt
 
-[out] Vrátí pole [idialinenumber –](../../debugger/debug-interface-access/idialinenumber.md) objekty, které představují čísla požadovaných řádků.
+mimo Vrátí pole objektů [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) , které reprezentují požadovaná čísla řádků.
 
  pceltFetched
 
-[out] Vrátí počet čísel řádků v načtených enumerátor.
+mimo Vrátí počet čísel řádků v načteném enumerátoru.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud nejsou žádná další čísla řádku. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud nejsou k dispozici žádná další čísla řádků. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
 - [IDiaSession::findLinesByLinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findfilebyid – | Dokumentace Microsoftu
+title: 'IDiaSession:: findFileById | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e3454ff5ef087b67dda5d48849d4a6c4eceb7e52
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aafdd2270606ba6e56713e9166dbae2b8c635b41
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839352"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742264"
 ---
 # <a name="idiasessionfindfilebyid"></a>IDiaSession::findFileById
-Zkopíruje zdrojový soubor pomocí identifikátoru zdrojového souboru.
+Načte zdrojový soubor podle identifikátoru zdrojového souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,19 +34,19 @@ HRESULT findFileById ( 
 #### <a name="parameters"></a>Parametry
  `uniqueId`
 
-[in] Určuje identifikátor zdrojového souboru.
+pro Určuje identifikátor zdrojového souboru.
 
  `ppResult`
 
-[out] Vrátí [idiasourcefile –](../../debugger/debug-interface-access/idiasourcefile.md) načíst objekt, který reprezentuje zdrojový soubor.
+mimo Vrátí objekt [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) , který představuje načtený zdrojový soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Identifikátor zdrojového souboru je jedinečná hodnota používá interně ke DIA SDK, aby všechny zdrojové soubory jedinečný. Tato metoda se obvykle používá interně ke DIA SDK.
+ Identifikátor zdrojového souboru je jedinečná hodnota, která se interně používá pro DIA SDK, aby všechny zdrojové soubory byly jedinečné. Tato metoda se obvykle používá interně pro DIA SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSession::findFile](../../debugger/debug-interface-access/idiasession-findfile.md)
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

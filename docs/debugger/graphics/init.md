@@ -1,5 +1,5 @@
 ---
-title: Init | Dokumentace Microsoftu
+title: Inicializace | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c55ddec8-9101-4673-979b-4109caca9146
@@ -8,15 +8,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a2bd17b91f7a18adce1153634cb9fc55902720b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0b2ed132e072d9ca8a0b9c98bfc5be6e25931805
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62848484"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72735008"
 ---
 # <a name="init"></a>Init
-Připraví součást diagnostiky grafiky k aktivně zachycení a zaznamenání grafických informací do souboru protokolu grafiky v aplikaci.
+Připraví komponentu v aplikaci diagnostiky grafiky na aktivní zachycování a zaznamenávání grafických informací do souboru protokolu grafiky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,12 +27,12 @@ void Init(
 ```
 
 #### <a name="parameters"></a>Parametry
- `vsgLogGetter` Volatelný entitu – například funkce, ukazatele na funkci, výrazu lambda nebo objektu funkce –, který přijímá jako parametry Délka vyrovnávací paměti skládá z `wchar_t` a ukazatel na této vyrovnávací paměti a vrátí `void`. Při vyvolání, volatelných entity Určuje název souboru, který se použije k zaznamenání grafických informací a zapisuje je do zadané vyrovnávací paměti před vrácením.
+ `vsgLogGetter` vyvolatelné entity, jako je funkce, ukazatel na funkci, lambda nebo objekt funkce, které přebírají jako parametry délku vyrovnávací paměti složené z `wchar_t` a ukazatel na tuto vyrovnávací paměť a vrátí `void`. Při vyvolání určuje volanou entitu název souboru, který se použije k zaznamenání informací o grafice a před vrácením zapíše do zadané vyrovnávací paměti.
 
 ## <a name="remarks"></a>Poznámky
- `Init` Funkce je volána automaticky, když instance `VsgDbg` třídy je vytvořený tak, že zadáte `bDefaultInit` parametr konstruktoru jako `true`; v opačném případě `Init` musí být explicitně volána před můžete aktivně zachytit a zaznamenání grafických informací.
+ Funkce `Init` je volána automaticky, když je vytvořena instance `VsgDbg` třídy zadáním parametru `bDefaultInit` jeho konstruktoru jako `true`; v opačném případě musí být `Init` explicitně volána, aby bylo možné aktivně zachytit a zaznamenat informace grafiky.
 
- Můžete další změny a zavřete aktivní grafiky souboru protokolu voláním `UnInit`a pak zachytíte a zaznamenávat informace grafiky na nový soubor protokolu grafiky voláním `Init` znovu. To můžete opakovat tolikrát, kolikrát chcete vytvořit několik nezávislých grafiky soubory protokolů pomocí stejného `VsgDbg` instance.
+ Můžete dokončit a zavřít soubor protokolu aktivní grafiky voláním `UnInit` a potom zachytit a zaznamenat více grafických informací do nového souboru protokolu grafiky voláním `Init` znovu. Tuto akci můžete opakovat tolikrát, kolikrát chcete vytvořit několik nezávislých grafických souborů protokolu pomocí stejné instance `VsgDbg`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [UnInit](init.md)

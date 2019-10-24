@@ -1,5 +1,5 @@
 ---
-title: 'Upozornění zabezpečení: Připojení k procesu, který patří nedůvěryhodnému uživateli, může být nebezpečné. Pokud následující informace vypadají podezřele nebo si nejste jisti, nepřipojujte k tomuto procesu | Dokumentace Microsoftu'
+title: 'Upozornění zabezpečení: Připojení k procesu, jehož vlastníkem je nedůvěryhodný uživatel, může být nebezpečné. Pokud tyto informace vypadají podezřele nebo si nejste jistí, nepřipojujte se k tomuto procesu | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,29 +15,29 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f44c429dad42a0a46fe2c00f9b6a82dfcdb92b8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 05b78ea0ca06a0ba9670e61cc065cf539ea21ebc
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929785"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72729779"
 ---
 # <a name="security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process"></a>Upozornění zabezpečení: Připojení k procesu, jehož vlastníkem je nedůvěryhodný uživatel, může být nebezpečné. Pokud následující údaje vypadají podezřele nebo si nejste jistí, k tomuto procesu se nepřipojujte.
-Toto dialogové okno upozornění se zobrazí, když se připojíte k procesu, který obsahuje částečně důvěryhodným kódem, nebo je vlastníkem je nedůvěryhodný uživatel, okamžitě předtím, než dojde k připojení. Nedůvěryhodné proces, který obsahuje škodlivý kód má potenciál poškodit počítač ladění. Pokud máte důvod, proč nechtějí procesu, a pak kliknutím **zrušit** zabránit ladění.
+Toto dialogové okno s upozorněním se zobrazí, když se připojíte k procesu, který obsahuje částečně důvěryhodný kód nebo který je vlastněn nedůvěryhodným uživatelem hned předtím, než dojde k připojení. Nedůvěryhodný proces, který obsahuje škodlivý kód, má potenciál poškodit počítač laděním. Máte-li důvod k nedůvěryhodnému procesu, klikněte na tlačítko **Storno** , čímž zabráníte ladění.
 
- Toto upozornění můžete potlačit při ladění legitimní scénáři, zavřete sadu Visual Studio a nastavte hodnotu tohoto klíče registru na 1: `HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\<version>\Debugger\DisableAttachSecurityWarning`a poté restartujte aplikaci Visual Studio. Po dokončení ladění scénář resetovat hodnotu na 0 a restartujte aplikaci Visual Studio.
+ Chcete-li toto upozornění potlačit při ladění legitimního scénáře, zavřete sadu Visual Studio a nastavte hodnotu tohoto klíče registru na 1: `HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\<version>\Debugger\DisableAttachSecurityWarning` a pak restartujte aplikaci Visual Studio. Po dokončení ladění scénáře nastavte hodnotu na 0 a restartujte Visual Studio.
 
- "Důvěryhodných uživatelů" zahrnout sami a sada standardních uživatelů, kteří jsou obvykle definovány na počítačích, které mají rozhraní .NET Framework nainstalované, jako například `aspnet`, `localsystem`, `networkservice`, a `localservice`.
+ "Důvěryhodní uživatelé" zahrnují sebe sama a sadu standardních uživatelů, kteří jsou obvykle definováni v počítačích s nainstalovaným .NET Framework, například `aspnet`, `localsystem`, `networkservice` a `localservice`.
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
- Název sestavení požadovaná pro ladění
+ Název sestavení požadovaného k ladění
 
- Aktuální uživatel
+ Aktuální uživatel uživatele
 
- Připojit stiskněte a pokračujte v ladění připojením
+ Pokud chcete pokračovat v ladění pomocí připojení, stiskněte klávesu ENTER.
 
- Nemusíte připojit nepřipojujte k procesu
+ Nepřipojeno k procesu nepřipojujte
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Připojení ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)

@@ -1,5 +1,5 @@
 ---
-title: Datakind – | Dokumentace Microsoftu
+title: Datakind | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 21630bea3022769d18748190c2a2d24c0e519a3c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 31be0615fd7d1da279ecf414260af21cb8239dc8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554919"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745291"
 ---
 # <a name="datakind"></a>DataKind
-Určuje konkrétní obor datové hodnoty.
+Označuje konkrétní rozsah hodnoty dat.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,30 +42,30 @@ enum DataKind {
 ## <a name="elements"></a>Elementy
 Nelze určit DataIsUnknown datový symbol.
 
-Položka DataIsLocal dat je místní proměnné.
+Datová položka DataIsLocal je místní proměnná.
 
-Položka DataIsStaticLocal dat je statické místní proměnné.
+Datová položka DataIsStaticLocal je statická lokální proměnná.
 
-Položka DataIsParam dat je formální parametr.
+Položka DataIsParam data je formální parametr.
 
-Položka DataIsObjectPtr dat je ukazatelem na objekt (`this`).
+Položka dat DataIsObjectPtr je ukazatel objektu (`this`).
 
-Položka DataIsFileStatic dat je proměnnou s rozsahem souboru.
+Datová položka DataIsFileStatic je proměnná s rozsahem souboru.
 
-Položka DataIsGlobal dat je globální proměnné.
+Datová položka DataIsGlobal je globální proměnná.
 
-Položka DataIsMember dat je proměnná člena objektu.
+Položka dat DataIsMember je proměnná člen objektu.
 
-Položka DataIsStaticMember dat je statická proměnná třídy.
+Datová položka DataIsStaticMember je statická proměnná třídy.
 
-Položka DataIsConstant dat je konstantní hodnota.
+Datová položka DataIsConstant je konstantní hodnota.
 
 ## <a name="remarks"></a>Poznámky
-Jsou vrácené hodnoty v tento výčet [idiasymbol::get_datakind –](../../debugger/debug-interface-access/idiasymbol-get-datakind.md) metody.
+Hodnoty v tomto výčtu jsou vráceny metodou [IDiaSymbol:: get_dataKind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md) .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: cvconst.h
+Záhlaví: cvconst. h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSymbol::get_dataKind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md)

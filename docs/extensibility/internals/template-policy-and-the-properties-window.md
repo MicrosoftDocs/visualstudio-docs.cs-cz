@@ -1,5 +1,5 @@
 ---
-title: Zásady šablon a okno Vlastnosti | Dokumentace Microsoftu
+title: Zásady šablony a okno Vlastnosti | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,24 +10,24 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 751e6d766a4ae107eaabb7364d8aeca627fc59da
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e7135a7c99f1566eaacb4079e9787cf2b5606682
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331218"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72722696"
 ---
 # <a name="template-policy-and-the-properties-window"></a>Zásady šablon a okno Vlastnosti
-Pokud projekt je obsažena v šabloně projektu organizace, je tento projekt šablony organizace vynucovat zásady. Šablony zásad stane omezující systému, který je možné nastavit výchozí hodnoty pro vlastnosti, skrýt vlastnosti, přidat vlastnosti a tak dále.
+Pokud je projekt obsažen v projektu šablony organizace, může tento projekt šablony vynutilit zásady. Zásada šablony se stal omezeným systémem, který lze použít k nastavení výchozích hodnot pro vlastnosti, skrytí vlastností, přidání vlastností a tak dále.
 
- Pomocí zásad šablony pro ovládací prvek zobrazení informací v **vlastnosti** okna se liší od implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing>. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> zpracovává vlastnosti objektu na úrovni součásti šablony zásad slouží k omezení vlastností objektu na úrovni řešení nebo projektu. Jinými slovy
+ Použití zásad šablony pro řízení zobrazení informací v okně **vlastnosti** se liší od implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing>. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> zpracovává vlastnosti objektu na úrovni komponenty, zatímco zásady šablony lze použít k omezení vlastností objektu na úrovni řešení nebo projektu. Jinými slovy
 
-- Implementace metody na <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> k určení, co se zobrazí **vlastnosti** okna pro příslušné objekty
+- Implementací metod <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> určete, co se zobrazí v okně **vlastnosti** pro konkrétní objekty
 
-- Použít šablonu zásad na úrovni řešení a projektu k určení, co se zobrazí **vlastnosti** okně dříve zadané objekty
+- Pomocí zásad šablony na úrovni řešení a projektu určete, co se zobrazí v okně **vlastnosti** pro dříve zadané objekty.
 
-  Pomocí zásad šablony pro specifické vlastnosti v selektivně omezit **vlastnosti** okno při zadaného typu položky projektu je vybrán v **Průzkumníku řešení** může být výhodný pro všechny členy Vývojový tým práci na projektu. Například pomocí šablony zásad, můžete nastavit všechny připojovací řetězec informace v databázi pro vývojáře, kteří a nastavte připojovací řetězec jen pro čtení. Tímto způsobem můžete zadat jednoduchý způsob, jak zajistit, že každý vývojář používá správnou cestu pro přístup k datům.
+  Použití zásad šablony k selektivnímu omezení specifických vlastností v okně **vlastnosti** , když je vybrána položka projektu zadaného typu v **Průzkumník řešení** může být výhodné pro všechny členy vývojového týmu, který pracuje na projektu. Pomocí zásad šablony můžete například nastavit všechny informace o připojovacím řetězci v databázi pro vaše vývojáře a nastavit připojovací řetězec jen pro čtení. Tímto způsobem můžete zajistit jednoduchý způsob, jak zajistit, aby každý vývojář používal správnou cestu pro přístup k datům.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing>
 - [Rozšíření vlastností](../../extensibility/internals/extending-properties.md)

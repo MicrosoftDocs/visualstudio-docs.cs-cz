@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d612c3f0a542fe30e9241b43c1df5d82a09832fd
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: 1f6107d6396c6228be1d511e81003fbe7faf06c9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72535970"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72732642"
 ---
 # <a name="specify-an-older-net-framework-version-for-debugging-c-visual-basic-f"></a>Zadejte starší verzi .NET Framework pro ladění (C#, Visual Basic, F#).
 
@@ -64,5 +64,5 @@ Ve výjimečných případech, kdy se zobrazí tato chyba, můžete nastavit kl�
 
      Pokud se vám při zahájení ladění stále zobrazí chybová zpráva, ověřte, že jste v registru zadali číslo verze správně. Ověřte také, že používáte verzi .NET Framework, kterou podporuje aplikace Visual Studio. Ladicí program je kompatibilní s aktuální verzí .NET Framework a předchozími verzemi, ale nemusí být dopředný kompatibilní s budoucími verzemi.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)

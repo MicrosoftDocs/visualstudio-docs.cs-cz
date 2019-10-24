@@ -1,5 +1,5 @@
 ---
-title: Háky přidělení a přidělení běhové paměti jazyka C | Dokumentace Microsoftu
+title: Háky přidělení a přidělení běhové paměti jazyka C | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -20,24 +20,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1840f6f5650b3491cf7898c1d8d6a6fcae19f906
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 79e55ec521de098a7ae0339c4460502dde3d482d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564971"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745787"
 ---
 # <a name="allocation-hooks-and-c-run-time-memory-allocations"></a>Háky přidělení a přidělení běhové paměti jazyka C
-Je velmi důležité omezení funkce háku přidělení, že se musí explicitně Ignorovat `_CRT_BLOCK` bloky. Tyto bloky jsou přidělení paměti provedené interně funkcemi knihovny run-time jazyka C, je-li využívají volání funkcí knihovny run-time jazyka C, které přidělit vnitřní paměti. Můžete ignorovat `_CRT_BLOCK` bloky zahrnutím následujícího kódu na začátku přidělení funkci připojení:
+Velmi důležité omezení funkcí zavěšení přidělení je, že musí explicitně ignorovat `_CRT_BLOCK` bloky. Tyto bloky jsou přidělení paměti prováděná interně funkcemi běhové knihovny jazyka C, pokud provádějí jakékoli volání funkcí běhové knihovny jazyka C, které přidělují interní paměť. Bloky `_CRT_BLOCK` můžete ignorovat vložením následujícího kódu na začátek funkce Hooku přidělení:
 
 ```cpp
 if ( nBlockUse == _CRT_BLOCK )
     return( TRUE );
 ```
 
-Pokud vaše háku přidělení nebude ignorovat `_CRT_BLOCK` blokuje, pak všechny funkce knihovny run-time jazyka C v váš hook můžete zachytávat program v nekonečné smyčce. Například `printf` díky interní přidělení. Pokud váš kód hook volá `printf`, poté způsobí, že výsledný přidělení hook volat akci, která bude volat **printf** znovu, a tak dále, dokud přetečení zásobníku. Pokud potřebujete sestavy `_CRT_BLOCK` operace přiřazení jednu cestu pro obejití toto omezení je použít funkce rozhraní Windows API, nikoli funkcí jazyka C za běhu, pro formátování a výstup. Vzhledem k tomu, že rozhraní API Windows nepoužívejte haldy knihovny run-time jazyka C, se nebude zachytávat vaše háku přidělení v nekonečné smyčce.
+Pokud váš zavěšení přidělení Neignoruje `_CRT_BLOCK` bloky, pak jakákoli funkce knihovny run-time jazyka C, která je volána ve vašem zavěšení, může zachytit program v nekonečné smyčce. Například `printf` provede interní přidělení. Pokud váš kód zavěšení volá `printf`, pak výsledné přidělení způsobí, že se váš vidlice znovu volá, čímž se znovu zavolá **printf** a tak dále, až do přetečení zásobníku. Pokud potřebujete nahlásit `_CRT_BLOCK` operací přidělení, jedním ze způsobů obcházení tohoto omezení je použití funkcí rozhraní API systému Windows namísto běhových funkcí pro formátování a výstup. Vzhledem k tomu, že rozhraní API systému Windows nepoužívají haldu běhové knihovny jazyka C, nebudou zasílat do nekonečné smyčky vaše zavěšení připojení.
 
-Když si zblízka zdrojové soubory knihovny run-time, uvidíte, že funkci, výchozí přidělení připojení **CrtDefaultAllocHook** (které jednoduše vrátí **TRUE**), se nachází v samostatném souboru své vlastní, DBGHOOK. C. Pokud chcete, aby vaše háku přidělení volat i pro přidělení provedených za běhu spouštěcí kód, který se spouští před vaší aplikace **hlavní** funkce, můžete nahradit výchozí funkci svůj vlastní místo pomocí [_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook).
+Pokud prohlížíte zdrojové soubory běhové knihovny, uvidíte, že výchozí funkce Hooku přidělení **CrtDefaultAllocHook** (která jednoduše vrátí **hodnotu true**) se nachází v samostatném souboru vlastního DBGHOOK. R. Chcete-li, aby byl zavěšení připojení volán i pro přidělení spouštěné spouštěcím kódem za běhu, který je proveden před funkcí **Main** vaší aplikace, můžete tuto výchozí funkci nahradit jednou z vlastních místo pomocí [_ CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zápis funkce volání pro ladění](../debugger/debug-hook-function-writing.md)

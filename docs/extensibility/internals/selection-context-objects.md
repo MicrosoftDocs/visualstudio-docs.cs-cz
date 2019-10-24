@@ -1,5 +1,5 @@
 ---
-title: Kontextové objekty výběru | Dokumentace Microsoftu
+title: Výběr objektů kontextu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,35 +11,35 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ef76f417fe2b4371c73d78bbb90b0bd48470746a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cc4f0aad4dd3f28f28259d0ca439a0cda1a520d9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318637"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72723917"
 ---
 # <a name="selection-context-objects"></a>Kontextové objekty výběru
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Integrované vývojové prostředí (IDE) používá objekt kontextu globálního výběru k určení, co má být zobrazen v integrovaném vývojovém prostředí. Každé okno v integrovaném vývojovém prostředí může mít svůj vlastní objekt kontextu výběr do kontextu globálního výběru. Rozhraní IDE aktualizuje globální výběr kontextu s hodnotami z okna, když má okno fokus. Další informace najdete v tématu [zpětná vazba uživateli](../../extensibility/internals/feedback-to-the-user.md).
+@No__t_0 integrované vývojové prostředí (IDE) používá objekt kontextu globálního výběru k určení toho, co by mělo být zobrazeno v rozhraní IDE. Každé okno v integrovaném vývojovém prostředí může mít svůj vlastní objekt kontextu výběru, který je vložen do kontextu globálního výběru. Rozhraní IDE aktualizuje kontext globálního výběru hodnotami z okna, když má toto okno fokus. Další informace najdete v tématu [zpětné vazby pro uživatele](../../extensibility/internals/feedback-to-the-user.md).
 
- Každý rámeček okna nebo serveru v integrovaném vývojovém prostředí má služby zvané <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection>. Objekt vytvořený pomocí vašeho balíčku VSPackage, která je umístěna v rámci okna musí volat `QueryService` metodu k získání ukazatel <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> rozhraní.
+ Každý rámec okna nebo web v integrovaném vývojovém prostředí má službu s názvem <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection>. Objekt vytvořený pomocí sady VSPackage, která je umístěná v rámci okna, musí volat metodu `QueryService`, aby získal ukazatel na rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection>.
 
- Okna s rámečkem zachovat části informace o jejich výběr kontextu propagace v kontextu globálního výběru při spuštění. Tato možnost je užitečná pro panel nástrojů, které může být nutné začít s prázdnou výběru.
+ Okna s rámečkem mohou uchovávat části jejich kontextu výběru z rozšiřování do globálního kontextu výběru při jejich spuštění. Tato možnost je užitečná pro okna nástrojů, která by mohla být začínat prázdným výběrem.
 
- Úpravy globální výběr kontextu události, které můžete monitorovat balíčky VSPackages. Rozšíření VSPackages můžete provádět následující úlohy implementací `IVsTrackSelectionEx` a <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection> rozhraní:
+ Změnou kontextu globálního výběru se aktivují události, které mohou rozhraní VSPackage monitorovat. Sady VSPackage mohou provádět následující úlohy implementací `IVsTrackSelectionEx` a <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection> rozhraní:
 
-- Aktualizace souboru aktuálně aktivní v hierarchii.
+- Aktualizuje aktuálně aktivní soubor v hierarchii.
 
-- Monitorování se změní na určité typy prvků. Například, pokud vaše VSPackage používá speciální **vlastnosti** okna, můžete sledovat změny v aktivním **vlastnosti** okno a jenom v případě potřeby restartujte.
+- Monitorujte změny určitých typů prvků. Pokud například vaše VSPackage používá speciální okno **vlastností** , můžete sledovat změny v okně aktivních **vlastností** a v případě potřeby restartovat.
 
-  K následujícímu pořadí ukazuje typické kurzu výběr sledování.
+  V následující posloupnosti se zobrazuje typický kurz sledování výběru.
 
-1. Rozhraní IDE načte kontext výběru z nově otevřeném okně a umístí ji v rámci globálního výběru. Pokud výběr kontextu používá HIERARCHY_DONTPROPAGATE nebo SELCONTAINER_DONTPROPAGATE, tyto informace se nerozšíří do globální kontext. Další informace najdete v tématu [zpětná vazba uživateli](../../extensibility/internals/feedback-to-the-user.md).
+1. Rozhraní IDE načte kontext výběru z nově otevřeného okna a vloží ho do kontextu globálního výběru. Pokud kontext výběru používá HIERARCHY_DONTPROPAGATE nebo SELCONTAINER_DONTPROPAGATE, nejsou tyto informace šířeny do globálního kontextu. Další informace najdete v tématu [zpětné vazby pro uživatele](../../extensibility/internals/feedback-to-the-user.md).
 
-2. Oznámení události vysílají jakékoli VSPackage, která je požadovaná.
+2. Události oznámení jsou vysílány do libovolného VSPackage, který je požadoval.
 
-3. Sady VSPackage funguje na události, které přijímá pomocí provádí aktivity, například aktualizace hierarchii opětovná aktivace nástroj nebo dalších podobných úloh.
+3. Rozhraní VSPackage funguje na událostech, které obdrží, a to prováděním aktivit, jako je aktualizace hierarchie, opětovná aktivace nástroje nebo jiné podobné úlohy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackSelectionEx>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>
 - [Hierarchie v sadě Visual Studio](../../extensibility/internals/hierarchies-in-visual-studio.md)

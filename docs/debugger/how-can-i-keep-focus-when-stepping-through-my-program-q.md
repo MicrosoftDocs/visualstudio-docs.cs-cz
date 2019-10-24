@@ -1,5 +1,5 @@
 ---
-title: Zachovat fokus při procházení Moje aplikace | Dokumentace Microsoftu
+title: Zachovat fokus při procházení vaší aplikace | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -21,21 +21,21 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a409ee1e8d1b633689a0c33e39e300071b9b4d83
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 48c4bd882dd1704099b24f07f744a1615cf7d412
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62848076"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72734181"
 ---
-# <a name="how-can-i-keep-focus-when-stepping-through-my-app"></a>Jak můžete zachovat fokus při procházení Moje aplikace?
+# <a name="how-can-i-keep-focus-when-stepping-through-my-app"></a>Jak zachovám fokus při procházení vaší aplikace?
 ## <a name="description"></a>Popis
- Program má problém Aktivace okna. Krokování pomocí programu v ladicím programu dochází ke kolizím s Moje schopnost reprodukujte problém, protože program spouštím ztrácí fokus. Existuje způsob, abyste tomu předešli?
+ Má program problém s aktivací okna. Rozkrokování programu pomocí ladicího programu je v konfliktu s možností reprodukování problému, protože program neustále ztratí fokus. Existuje nějaký způsob, jak se tomu vyhnout?
 
 ## <a name="solution"></a>Řešení
- Pokud máte druhý počítač, použijte vzdálené ladění. Při spuštění ladicího programu na hostiteli můžete provozovat programu na vzdáleném počítači. Další informace najdete v tématu [jak: Výběr vzdáleného počítače](/previous-versions/visualstudio/visual-studio-2010/w8wtw2f3(v=vs.100)).
+ Pokud máte druhý počítač, použijte vzdálené ladění. Program můžete provozovat na vzdáleném počítači a spustit ladicí program na hostiteli. Další informace naleznete v tématu [How to: SELECT a Remote Computer](/previous-versions/visualstudio/visual-studio-2010/w8wtw2f3(v=vs.100)).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Nejčastější dotazy k ladění nativního kódu](../debugger/debugging-native-code-faqs.md)
 - [Připojení ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
 - [Ladění nativního kódu](../debugger/debugging-native-code.md)

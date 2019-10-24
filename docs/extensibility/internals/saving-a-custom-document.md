@@ -1,5 +1,5 @@
 ---
-title: Uložení vlastního dokumentu | Dokumentace Microsoftu
+title: Ukládání vlastního dokumentu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,35 +12,35 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b90938e44b4227f8aad43542fc99136745a8af4e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cf67335b6a12b966eb148b3f8dcaf16339e2a29f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318734"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72724078"
 ---
 # <a name="saving-a-custom-document"></a>Uložení vlastního dokumentu
-Obslužné rutiny prostředí **Uložit**, **uložit jako**, a **Uložit vše** příkazy. Když uživatel klikne **Uložit**, **uložit jako**, **nebo Uložit vše** na **souboru** nabídky nebo zavření řešení, což vede k Uložit vše, následující proces se provádí.
+Prostředí zpracuje příkazy **Uložit**, **Uložit jako**a **Uložit všechny** . Když uživatel klikne na **Uložit**, **Uložit jako** **nebo Uložit vše** v nabídce **soubor** nebo zavře řešení a výsledkem je uložení všech, dojde k následujícímu procesu.
 
- ![Editor zákazníka Uložit](../../extensibility/internals/media/private.gif "privátní") uložit, uložit jako a Uložit vše zpracování příkazů pro vlastní editor
+ ![Editor zákazníka – uložení](../../extensibility/internals/media/private.gif "Soukromé") Ukládat, ukládat jako a ukládat všechny zpracování příkazů pro vlastní editor
 
- Tento proces je podrobně popsán v následujících krocích:
+ Tento postup je podrobně popsán v následujících krocích:
 
-1. Pro **Uložit** a **uložit jako** příkazy, používá prostředí <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> služby k určení aktivního okna dokumentu, a proto položky by měly být uloženy. Jakmile okno aktivního dokumentu je známé, vyhledá prostředí hierarchie ukazatele a identifikátor položky (itemID) dokumentu v tabulce spuštěných dokumentů. Další informace najdete v tématu [spuštěná tabulka dokumentů](../../extensibility/internals/running-document-table.md).
+1. V příkazech **Uložit** a **Uložit jako** prostředí používá služba <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> k určení aktivního okna dokumentu a takže by se měly položky ukládat. Po zjištění aktivního okna dokumentu prostředí nalezne ukazatel hierarchie a identifikátor položky (itemID) pro dokument v tabulce spuštěných dokumentů. Další informace najdete v tématu [Spuštění tabulky dokumentů](../../extensibility/internals/running-document-table.md).
 
-     Pro příkaz Uložit vše prostředí používá informace v tabulce spuštěných dokumentů pro kompilaci seznam všech položek na Uložit.
+     V případě příkazu Uložit vše používá prostředí informace v tabulce spuštěných dokumentů ke kompilaci seznamu všech položek, které chcete uložit.
 
-2. Když řešení obdrží <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> volání, prochází sadu vybraných položek (to znamená více výběrů, které jsou vystavené <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> služby).
+2. Když řešení přijme <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> volání, prochází sadu vybraných položek (to znamená vícenásobný výběr vystavený službou <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>).
 
-3. Pro každou položku do výběru, toto řešení využívá ukazatel hierarchie volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IsItemDirty%2A> metodou ke zjištění, zda má být povolen příkaz nabídky Uložit. Pokud jeden nebo více položek jsou chybná, je povoleno příkazu Uložit. Pokud v hierarchii používá standardní editor, pak dotazování na hierarchii delegáty nesprávné stav do editoru voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.IsDocDataDirty%2A> metody.
+3. U každé položky ve výběru používá řešení ukazatel hierarchie pro volání metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IsItemDirty%2A> k určení, zda by mělo být povoleno použití příkazu nabídky Uložit. Pokud je jedna nebo více položek nečistých, je povolen příkaz Uložit. Pokud hierarchie používá standardní editor, pak hierarchie deleguje dotaz na stav undirty do editoru voláním metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.IsDocDataDirty%2A>.
 
-4. Pro každou vybranou položku není čistá, toto řešení využívá ukazatel hierarchie volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A> metodu na odpovídající hierarchie.
+4. U každé vybrané položky, která je nečistá, používá řešení ukazatel hierarchie pro volání metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A> v příslušných hierarchiích.
 
-     V případě vlastní editor komunikace mezi datový objekt dokumentu a projekt je privátní. Proto jakékoli obavy speciální stálost jsou zpracovány mezi těmito dvěma objekty.
+     V případě vlastního editoru je komunikace mezi objektem dat dokumentu a projektem soukromá. Proto se mezi těmito dvěma objekty budou zpracovávat jakékoli zvláštní obavy o trvalosti.
 
     > [!NOTE]
-    > Pokud se rozhodnete implementovat vlastní trvalost, nezapomeňte volat <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFiles%2A> metoda šetří čas. Tato metoda zkontroluje, aby se zajistilo, že se můžete bezpečně uložit soubor (například soubor není jen pro čtení).
+    > Pokud implementujete vlastní trvalost, ujistěte se, že zavoláte metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFiles%2A>, abyste ušetřili čas. Tato metoda kontroluje, zda je bezpečné soubor uložit (například soubor není jen pro čtení).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>
 - [Otevření a uložení položek projektu](../../extensibility/internals/opening-and-saving-project-items.md)

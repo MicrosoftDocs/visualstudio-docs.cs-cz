@@ -1,5 +1,5 @@
 ---
-title: Idiaenumstackframes::Reset – | Dokumentace Microsoftu
+title: 'IDiaEnumStackFrames:: resetovat | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bdf24fb9926c66b389430208d16f943af41cc11
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d219c7b3310db05e9292e34325c2e904ef899688
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829425"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744005"
 ---
 # <a name="idiaenumstackframesreset"></a>IDiaEnumStackFrames::Reset
-Návrat na začátek pořadí výčtu.
+Obnoví posloupnost výčtu na začátek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,5 +31,5 @@ HRESULT Reset();
 ## <a name="return-value"></a>Návratová hodnota
  Vrátí `S_OK`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)

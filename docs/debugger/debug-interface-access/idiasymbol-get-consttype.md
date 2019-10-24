@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_constType | Microsoft Docs
+title: 'IDiaSymbol:: get_constType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0df1be486da0b4a199c642e2318c0ed08f2b1eb8
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 12e811fe67fc9a990052737882463ac341ef34b2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64825083"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740788"
 ---
-# <a name="idiasymbolgetconsttype"></a>IDiaSymbol::get_constType
-Získá příznak, který určuje, zda je uživatelský datový typ konstanty.
+# <a name="idiasymbolget_consttype"></a>IDiaSymbol::get_constType
+Načte příznak, který určuje, zda je uživatelsky definovaný datový typ konstantní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,20 +33,20 @@ HRESULT get_constType ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` Pokud uživatelský datový typ konstanty; jinak vrátí hodnotu, vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud je uživatelsky definovaný datový typ konstanta; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|V7.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

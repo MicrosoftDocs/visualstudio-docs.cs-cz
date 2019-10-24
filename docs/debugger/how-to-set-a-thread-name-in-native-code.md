@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a89dce28f33bef0ffdb13d6254b2ac6b86ac25db
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: 1f9df52bee88722006c21c28e88a2e32113942e4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589026"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72732748"
 ---
 # <a name="how-to-set-a-thread-name-in-native-code"></a>Postupy: Nastavení názvu vlákna v nativním kódu
 Pojmenování vlákna je možné v libovolné verzi sady Visual Studio. Pojmenovávání vláken je užitečné pro identifikaci podprocesů zájmu v okně **vlákna** při ladění spuštěného procesu. Rozpoznatelně pojmenovaná vlákna můžou být užitečná také při provádění ladění po porážce prostřednictvím kontroly výpisu stavu systému a při analýze zachycení výkonu pomocí různých nástrojů.
@@ -108,7 +108,7 @@ void SetThreadName(DWORD dwThreadID, const char* threadName) {
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění vícevláknových aplikací](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)
 - [Postupy: Nastavení názvu vlákna ve spravovaném kódu](../debugger/how-to-set-a-thread-name-in-managed-code.md)

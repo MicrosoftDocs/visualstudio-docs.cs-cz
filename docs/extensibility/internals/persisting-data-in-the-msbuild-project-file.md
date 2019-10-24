@@ -1,5 +1,5 @@
 ---
-title: Trvalá Data v souboru projektu nástroje MSBuild | Dokumentace Microsoftu
+title: Trvalá data v souboru projektu MSBuild | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,61 +10,61 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2f09d84d61464b22b9bbe01478f35410bdd0904
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7772f633c44c50b24995b7cc8a3f2f8bbbb01863
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66328515"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72726055"
 ---
 # <a name="persisting-data-in-the-msbuild-project-file"></a>Trvalá data v souboru projektu nástroje MSBuild
-Podtyp projektu může být nutné zachovat data specifická pro podtyp do souboru projektu pro pozdější použití. Podtyp projektu používá trvalost souborů projektu pro splnění následujících požadavků:
+Podtyp projektu může být nutné pro pozdější použití uchovat data specifická pro konkrétní typ do souboru projektu. Podtyp projektu používá trvalost souborů projektu k splnění následujících požadavků:
 
-1. Zachovat data použít při vytváření projektu. (Další informace o procesu Microsoft Build Engine, naleznete v tématu [MSBuild](../../msbuild/msbuild.md).) Informace týkající se sestavení můžou buď:
+1. Trvalá data používaná jako součást sestavení projektu. (Další informace o Microsoft Build Engine najdete v tématu [MSBuild](../../msbuild/msbuild.md).) Informace související s sestavením mohou:
 
-    1. Nezávislé na konfigurační data. To znamená, že data uložená v MSBuild prvky s podmínkami, prázdný nebo chybí.
+    1. Data nezávislá na konfiguraci. To znamená, že data uložená v prvcích MSBuild s prázdnými nebo chybějícími podmínkami.
 
-    2. Data závislá na konfiguraci. To znamená, že data uložená v MSBuild prvky, které jsou pro konkrétní projekt konfiguraci záleží. Příklad:
+    2. Data závislá na konfiguraci. To znamená, že data uložená v prvcích MSBuild, která jsou podmíněně pro konkrétní konfiguraci projektu. Příklad:
 
         ```
         <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         ```
 
-2. Zachovat data, která nejsou relevantní pro sestavení. Tato data mohou být vyjádřeny v volného tvaru XML, který není ověřený proti schématu XML.
+2. Zachovat data, která nejsou relevantní pro sestavení. Tato data je možné vyjádřit v XML volném formátu, který není ověřený proti schématu XML.
 
-    1. Nezávislé na konfigurační data.
+    1. Data nezávislá na konfiguraci.
 
     2. Data závislá na konfiguraci.
 
-## <a name="persisting-build-related-information"></a>Trvalé informace související s buildem
- Trvalost dat užitečné při sestavování projektu probíhá prostřednictvím funkce MSBuild. Systém MSBuild udržuje hlavní tabulku informace týkající se sestavení. Podtypy projektů jsou zodpovědné za přístup k těmto datům získat a nastavit hodnoty vlastností. Podtypy projektů můžete také rozšířit tabulky související s buildem dat tak, že přidáte další vlastnosti chcete nastavit jako trvalý a to odebráním vlastnosti, nejsou trvalé.
+## <a name="persisting-build-related-information"></a>Uchování informací souvisejících s sestavením
+ Trvalá data užitečná pro sestavení projektu jsou zpracovávána prostřednictvím nástroje MSBuild. Systém MSBuild udržuje hlavní tabulku informací týkajících se sestavení. Podtypy projektu zodpovídají za přístup k těmto datům za účelem získání a nastavení hodnot vlastností. Podtypy projektů mohou také rozšířit tabulku dat související s sestavením přidáním dalších vlastností, které mají být zachovány, a odebráním vlastností, aby nebyly uchovány.
 
- Upravit MSBuild data, podtyp projektu zodpovídá za načítání objektu vlastnosti MSBuild ze systému základního projektu prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>. <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> je rozhraní implementované v systému projektu jádra a agregačních dotazů podtyp projektu pro něj spuštěním `QueryInterface`.
+ Pro úpravu dat MSBuild je podtype projektu zodpovědný za načtení objektu vlastnosti MSBuild ze základního projektového systému pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>. <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> je rozhraní implementované v základním projektovém systému a pro něj jsou agregovány dotazy podtypu projektu spuštěním `QueryInterface`.
 
  Následující postup popisuje kroky pro odebrání vlastnosti pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>.
 
 #### <a name="to-remove-a-property-from-an-msbuild-project-file"></a>Odebrání vlastnosti ze souboru projektu MSBuild
 
-1. Volání `QueryInterface` na <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> podtypu projektu.
+1. @No__t_0 volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> podtypu projektu.
 
-2. Volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.RemoveProperty%2A> s `pszPropName` na vlastnost, kterou chcete odebrat.
+2. Zavolejte <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.RemoveProperty%2A> s `pszPropName` nastavenou na vlastnost, kterou chcete odebrat.
 
-### <a name="persisting-non-build-related-information"></a>Související informace o zachování bez sestavení
- Trvalost dat v souborech projektu, který není důležitá pro sestavení probíhá prostřednictvím funkce <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>.
+### <a name="persisting-non-build-related-information"></a>Zachování informací o nesouvisejícím sestavení
+ Persistence dat v souborech projektu, které nezáleží na sestavení, je zpracována prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>.
 
- Můžete implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> v hlavním `project subtype aggregator` objektu, `project subtype project configuration` objektu, nebo obojí.
+ @No__t_0 můžete implementovat do hlavního objektu `project subtype aggregator`, `project subtype project configuration` objektu nebo obojího.
 
- Následující body popisují hlavní koncepty týkající se trvalého související informace mimo sestavení.
+ Následující body popisují hlavní koncepty týkající se trvalosti nesouvisejících informací o sestavách.
 
-- Základní projekt volá na objekt hlavního projektu podtyp (to znamená, podtyp projektu vnějšího) agregátoru načítají a ukládají data konfigurace nezávislé a volá na objekty konfigurace projektu podtyp projektu k načtení nebo uložení závislé na konfiguraci data.
+- Základní projekt volá na hlavní typ dílčího typu projektu (tj. objekt vnějšího podtypu projektu), který načte a uloží konfiguraci nezávislá data a volá na objekty konfigurace podtypu projektu pro načtení nebo uložení závislé na konfiguraci. údajů.
 
-- Základní projekt volá metody <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> více na jednotlivých úrovních agregace podtyp projektu a předá identifikátor GUID pro každou úroveň.
+- Základní projekt volá metody <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> několikrát pro každou úroveň agregace podtypu projektu a předá identifikátor GUID pro každou úroveň.
 
-- Základní projekt předá nebo přijímá fragment XML, který je vyhrazen pro konkrétní projekt podtyp a používá tento mechanismus jako způsob uchování stavu mezi úrovních agregace.
+- Základní projekt projde nebo obdrží fragment XML, který je vyhrazen pro konkrétní podtyp projektu a používá tento mechanismus jako způsob zachování stavu mezi úrovněmi agregace.
 
-- Základní projekt volá podtyp projektu nejkrajnější <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>implementace předávajícího identifikátor GUID. Pokud identifikátor GUID vlastníky podtyp nejkrajnější projektu, zpracovává volání sebe sama; v opačném případě deleguje volání do vnitřní projektu podtyp a tak dále, dokud nebude nalezen podtyp projektu, který odpovídá identifikátoru GUID.
+- Základní projekt volá <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>implementation podtypu vnějšího projektu, který je procházející identifikátorem GUID. Pokud identifikátor GUID patří nadřazenému podtypu projektu, zpracovává samotné volání; v opačném případě deleguje volání typu vnitřního projektu a tak dále, dokud není nalezen podtyp projektu, na který odpovídá identifikátor GUID.
 
-- Podtyp projektu můžete také upravit XML fragment před nebo po deleguje volání vnitřní projektu podtyp. Následující příklad ukazuje výňatek ze souboru projektu, kde je název souboru, který obsahuje vlastnosti specifické pro projekt podtypem, předat této podtyp projektu.
+- Podtyp projektu může také změnit fragment XML před nebo poté, co deleguje volání podtypu vnitřního projektu. Následující příklad ukazuje výňatk ze souboru projektu, kde je název souboru, který obsahuje vlastnosti specifické pro podtyp projektu, předán dílčímu typu projektu.
 
     ```
     <ProjectExtensions>
@@ -76,5 +76,5 @@ Podtyp projektu může být nutné zachovat data specifická pro podtyp do soubo
       </ProjectExtensions>
     ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Podtypy projektů](../../extensibility/internals/project-subtypes.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiaaddressmap::put_imagealign – | Dokumentace Microsoftu
+title: IDiaAddressMap::p ut_imageAlign | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e07bdd71300ed485862a4a95f1f9cbc06b32772
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 2b1a6bf037dc87d84fab21622571158fb0682f60
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63402652"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745051"
 ---
-# <a name="idiaaddressmapputimagealign"></a>IDiaAddressMap::put_imageAlign
+# <a name="idiaaddressmapput_imagealign"></a>IDiaAddressMap::put_imageAlign
 Nastaví zarovnání obrázku.
 
 ## <a name="syntax"></a>Syntaxe
@@ -33,19 +33,19 @@ HRESULT put_imageAlign ( 
 #### <a name="parameters"></a>Parametry
  NewVal
 
-[in] Nová hodnota zarovnání obrázku pro spustitelný soubor.
+pro Nová hodnota zarovnání obrázku pro spustitelný soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Bitové kopie (načíst spustitelné soubory) je zarovnán zadaná paměťová hranice. Toto uspořádání může mít vliv na aktuální architektura systému a možností v době kompilace a odkaz. Zarovnání obrázku je vždycky aktivní hranice. Platné jsou následující hodnoty zarovnání obrázku: hranice 1, 2, 4, 8, 16, 32 a 64 bajtů.
+ Image (načtené spustitelné soubory) jsou zarovnané na zadané hranice paměti. Toto zarovnání může být ovlivněno aktuální architekturou systému a možnostmi kompilovat a propojit čas. Zarovnání obrázku je vždy na hranicích bajtů. Následující hodnoty zarovnání obrázku jsou platné: 1, 2, 4, 8, 16, 16, 32 a 64 bajtových hranic.
 
- Aktuální zarovnání obrázku se dá načíst pomocí volání [idiaaddressmap::get_imagealign –](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md) metody.
+ Aktuální zarovnání obrázku lze načíst voláním metody [IDiaAddressMap:: get_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md) .
 
 > [!NOTE]
-> Na obrázku je již načten v době, kdy tuto metodu lze volat. `put_imageAlign` Metoda se typicky používá při image byla přesunuta nebo změnit, a nové zarovnání je povinný.
+> Bitová kopie je již načtena v době, kdy lze tuto metodu volat. Metoda `put_imageAlign` se obvykle používá, když se obrázek přesunul nebo změnil a vyžaduje se nové zarovnání.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)
 - [IDiaAddressMap::get_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md)

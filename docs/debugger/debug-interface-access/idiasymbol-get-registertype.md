@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_registerType | Microsoft Docs
+title: 'IDiaSymbol:: get_registerType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,14 +10,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f714e5637776d6a0606246d339d3f9d2ccd9f19a
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: e849bea3bd5480f480001c091e5988fa5e6b5444
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62835536"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739440"
 ---
-# <a name="idiasymbolgetregistertype"></a>IDiaSymbol::get_registerType
+# <a name="idiasymbolget_registertype"></a>IDiaSymbol::get_registerType
 Načte typ registru.
 
 ## <a name="syntax"></a>Syntaxe
@@ -30,10 +30,10 @@ HRESULT get_registerType(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Ukazatel `DWORD` , který obsahuje typ registru.
+mimo Ukazatel na `DWORD`, který obsahuje typ registru.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

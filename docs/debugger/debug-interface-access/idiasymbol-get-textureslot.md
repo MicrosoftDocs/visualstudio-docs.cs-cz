@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_textureSlot | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_textureSlot | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b480cfee85af750addddbbc195881adab002e07c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 92aa950447d46f2342fdbaa0114e2bec956cd5a5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62841539"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739168"
 ---
-# <a name="idiasymbolgettextureslot"></a>IDiaSymbol::get_textureSlot
-Načte pozici textury.
+# <a name="idiasymbolget_textureslot"></a>IDiaSymbol::get_textureSlot
+Načte slot textury.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,10 +30,10 @@ HRESULT get_textureSlot(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Ukazatel `DWORD` obsahující slotu textury.
+mimo Ukazatel na `DWORD`, který obsahuje slot pro texturu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

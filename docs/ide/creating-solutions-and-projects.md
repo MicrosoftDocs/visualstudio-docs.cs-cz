@@ -14,12 +14,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 206f97dcb264f85a15a9293e55a3f2ccc6173aa5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: abe2cbd18e87c7045d44e597e3a5bb93a64a1c35
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652617"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747967"
 ---
 # <a name="create-solutions-and-projects"></a>Vytváření řešení a projektů
 
@@ -53,7 +53,7 @@ Pokud máte kolekci zdrojových souborů kódu, můžete je snadno přidat do pr
 1. V průvodci přejděte do umístění souborů a potom do pole **název** zadejte název nového projektu. Až skončíte, klikněte na tlačítko **Dokončit** .
 
 > [!NOTE]
-> Tato možnost funguje nejlépe pro relativně jednoduchou kolekci souborů. V současné době jsou C++podporovány pouze typy Visual, Apache Cordova C# , Visual Basic a projekty.
+> Tato možnost funguje nejlépe pro relativně jednoduchou kolekci souborů. V současné době C++jsou podporovány pouze typy Apache Cordova, C# Visual Basic a projektů.
 
 ## <a name="add-files-to-a-solution"></a>Přidat soubory do řešení
 

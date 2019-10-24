@@ -1,5 +1,5 @@
 ---
-title: Definice Typedefs jazyka Visual C++ v návrháři tříd
+title: C++Definice typedef v Návrhář tříd
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bf886aedc27b6e702637b84bbe919971baec9e3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 94dc4a6687a2aaede7fc901884c5d3acc6fbf56f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647586"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747997"
 ---
-# <a name="visual-c-typedefs-in-class-designer"></a>Vizuální C++ definice typedef v Návrhář tříd
+# <a name="c-typedefs-in-class-designer"></a>C++definice typedef v Návrhář tříd
 
 Příkazy [typedef](/cpp/cpp/aliases-and-typedefs-cpp#typedefs) vytvoří jednu nebo více vrstev dereference mezi názvem a jeho nadřízeným typem. **Návrhář tříd** podporuje C++ typy typedef, které jsou deklarovány pomocí klíčového slova `typedef`, například:
 
@@ -84,5 +84,5 @@ typedef class coord
 
 ## <a name="see-also"></a>Viz také:
 
-- [Práce s vizuálním C++ kódem](working-with-visual-cpp-code.md)
+- [Práce s C++ kódem](working-with-visual-cpp-code.md)
 - [Definice typedef](/cpp/cpp/aliases-and-typedefs-cpp#typedefs)

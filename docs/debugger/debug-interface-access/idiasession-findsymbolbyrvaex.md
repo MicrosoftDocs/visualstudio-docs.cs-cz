@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findsymbolbyrvaex – | Dokumentace Microsoftu
+title: 'IDiaSession:: findSymbolByRVAEx | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c6c8e3523a49bd4fc22a86c9ec86b1e8cd2038e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8d9b27cee1c8df3eb26d64f4f860c33e0d4bf45f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839248"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742040"
 ---
 # <a name="idiasessionfindsymbolbyrvaex"></a>IDiaSession::findSymbolByRVAEx
-Načte typ zadaný symbol, který obsahuje, nebo je nejblíže zadanou relativní virtuální adresu (RVA) a posun.
+Načte zadaný typ symbolu, který obsahuje nebo je nejbližší, zadanou relativní virtuální adresu (RVA) a posun.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,22 +36,22 @@ HRESULT findSymbolByRVAEx ( 
 #### <a name="parameters"></a>Parametry
  `rva`
 
-[in] Určuje, adresa RVA.
+pro Určuje adresu RVA.
 
  `symtag`
 
-[in] Typ symbolu, která se má najít. Hodnoty pocházejí ze [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) výčtu.
+pro Typ symbolu, který se má najít Hodnoty jsou pořízeny výčtem [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) .
 
  `ppSymbol`
 
-[out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) načíst objekt představující symbol.
+mimo Vrátí objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) , který představuje načtený symbol.
 
  `displacement`
 
-[out] Vrátí hodnotu určující, posun od relativní virtuální adresu zadanou v `rva`.
+mimo Vrací hodnotu určující posun od relativní virtuální adresy zadané v `rva`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
 
@@ -61,7 +61,7 @@ LONG disp = 0;
 pSession->findSymbolByRVAEx( rva, SymTagFunction, &pFunc, &disp );
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)

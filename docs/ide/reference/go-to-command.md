@@ -13,12 +13,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 93ad14561b1fdd2aade1978831b784e014568a6c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5782f5e7dba8d18f9d6f48f345d5e133138e6eea
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668253"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748738"
 ---
 # <a name="go-to-command"></a>Přejít na – příkaz
 Přesune kurzor na zadaný řádek.
@@ -46,7 +46,7 @@ Alias pro tento příkaz je GoToLn.
 >Edit.GoTo 125
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)

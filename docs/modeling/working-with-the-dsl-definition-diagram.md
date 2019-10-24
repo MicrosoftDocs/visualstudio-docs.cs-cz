@@ -16,12 +16,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 571a92adf4ebbdce12ec8ea45866835e3f6a6772
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c0e65b47baba985012dccad0c838c65d2d8bf2ef
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666925"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748150"
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>Práce s diagramem definice DSL
 Diagram definice [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] je důležitým nástrojem pro definování jazyka specifického pro doménu. Můžete přidat prvky do doménového modelu a definovat relace v diagramu a upravit rozložení diagramu, aby bylo čitelnější.
@@ -70,6 +70,6 @@ Diagram definice [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] je důležitým
 ### <a name="show-as-class"></a>zobrazit jako třídu
  Pokud relace domény má odvozené relace nebo pokud má relace vložení nebo odkazu s ostatními doménami, můžete relaci zobrazit jako třídu tak, že kliknete pravým tlačítkem na vztah a potom kliknete na tlačítko **Zobrazit jako třídu**. Relace se zobrazí s oddílem **vlastnosti domény** a zobrazí se stromy dědičnosti a vztahů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

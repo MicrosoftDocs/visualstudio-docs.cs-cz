@@ -10,12 +10,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7392d6f131cc1658a04769e7e2a5fc58c76f522e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d54936c61606b67c298992cd003723327042eb0a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652353"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747670"
 ---
 # <a name="add-commands-and-gestures-to-dependency-diagrams"></a>Přidávání příkazů a gest do diagramů závislostí
 
@@ -261,6 +261,6 @@ Všimněte si následujících bodů pro obslužné rutiny gesta:
 
 - Obslužné rutiny pro některé typy přetažených položek jsou již definovány. Uživatel může třeba přetáhnout položky z Průzkumník řešení do diagramu závislostí. Pro tyto typy položek nelze definovat obslužnou rutinu přetáhnutí. V těchto případech nebudou metody `DragDrop` vyvolány.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přidání vlastního ověřování architektury do diagramů závislostí](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)

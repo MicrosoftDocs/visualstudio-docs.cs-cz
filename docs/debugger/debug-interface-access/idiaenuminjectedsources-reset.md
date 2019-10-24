@@ -1,5 +1,5 @@
 ---
-title: Idiaenuminjectedsources::Reset – | Dokumentace Microsoftu
+title: 'IDiaEnumInjectedSources:: resetovat | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 450e4811513bcd7c28ea25a26f5e30c03f3b2bc3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 25cfc11bb0a7d44a36071c4eb7b4ca68c6d5603d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829830"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744485"
 ---
 # <a name="idiaenuminjectedsourcesreset"></a>IDiaEnumInjectedSources::Reset
-Návrat na začátek sekvence výčtu.
+Obnoví posloupnost výčtu na začátek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,5 +31,5 @@ HRESULT Reset();
 ## <a name="return-value"></a>Návratová hodnota
  Vrátí `S_OK`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

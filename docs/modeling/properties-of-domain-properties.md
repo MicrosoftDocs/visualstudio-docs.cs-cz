@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: debf263fa18d2a6af8e95ee959002686540e2c06
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 44fcc45191d6c1e42256a503e98f753b54535e5f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658207"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748321"
 ---
 # <a name="properties-of-domain-properties"></a>Vlastnosti vlastností domény
 *Doménová vlastnost* je funkcí prvku modelu, který může obsahovat hodnotu. Například `Person` doménová třída může mít vlastnosti `Name` a `BirthDate`. V definici DSL jsou vlastnosti domény uvedené v poli doménová třída v diagramu a v části doménová třída v Průzkumníku DSL. Další informace najdete v tématu [Definování jazyka specifického pro doménu](../modeling/how-to-define-a-domain-specific-language.md).
@@ -48,6 +48,6 @@ ms.locfileid: "72658207"
 |**Modifikátor přístupu metody setter**|Modifikátor přístupu pro metodu setter. Tento ovládací prvek určuje rozsah, ve kterém může kód programu nastavit vlastnost.|`public`|
 |**Textový**|Typ vlastnosti. Pokud chcete přidat seznam dostupných typů, klikněte pravým tlačítkem na kořen DSL v Průzkumníku DSL a pak klikněte na **Přidat externí typ**.|`String`|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

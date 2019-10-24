@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 14d4ac95aae860e0750af66aec6adb2969434f11
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 92cf53ed499318d60c8da5147685e3f0f340e404
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211044"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736241"
 ---
 # <a name="executable-for-debugging-session-dialog-box"></a>Dialogové okno Spustitelný soubor pro relaci ladění
 
@@ -37,7 +37,7 @@ Toto dialogové okno se zobrazí, když se pokusíte ladit knihovnu DLL, pro kte
 
  Po zadání těchto nastavení jsou uložena na stránkách vlastností projektu, takže je nebudete muset znovu zadávat pro následné relace ladění. Pokud potřebujete změnit nastavení, můžete otevřít stránky vlastností a změnit hodnoty. Další informace o určení spustitelného souboru pro relaci ladění naleznete v tématu [ladění knihoven DLL](../debugger/how-to-debug-from-a-dll-project.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

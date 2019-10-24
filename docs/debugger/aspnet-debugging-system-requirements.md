@@ -1,5 +1,5 @@
 ---
-title: 'Ladění ASP.NET: Systémové požadavky | Dokumentace Microsoftu'
+title: 'Ladění ASP.NET: požadavky na systém | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,42 +16,42 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 63a94f9ae6c35ef304af334737a8f206da911afd
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 78f947c7ab9fcc1031d457526240ecdd7e9119a3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63402717"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745811"
 ---
-# <a name="aspnet-debugging-system-requirements"></a>Ladění ASP.NET: Požadavky na systém
-Toto téma popisuje požadavky na software a zabezpečení pro [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ladění scénářů:
+# <a name="aspnet-debugging-system-requirements"></a>ASP.NET Ladění: Systémové požadavky
+Toto téma popisuje požadavky na software a zabezpečení pro [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] scénáře ladění:
 
-- Místní ladění, ve kterém [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a webovou aplikaci spustit ve stejném počítači. Existují dvě verze tohoto scénáře:
+- Místní ladění, ve kterém [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a webová aplikace běží ve stejném počítači. Existují dvě verze tohoto scénáře:
 
-  - [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Kód se nachází v systému souborů.
+  - Kód [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] se nachází v systému souborů.
 
-  - [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Kód se nachází na webu služby IIS.
+  - Kód [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] se nachází na webu služby IIS.
 
-- Vzdálené ladění, ve kterém [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] běží na klientském počítači a ladí webovou aplikaci, která běží na vzdáleném serveru.
+- Vzdálené ladění, ve kterém [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] běží na klientském počítači a ladí webovou aplikaci, která běží na vzdáleném počítači serveru.
 
 ## <a name="security-requirements"></a>Požadavky na zabezpečení
- Pro vzdálené ladění, místních i vzdálených počítačů musí být v nastavení domény nebo pracovní skupiny nastavení.
+ Pro vzdálené ladění musí být místní a vzdálené počítače v nastavení domény nebo v pracovní skupině.
 
- Chcete-li ladit [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovního procesu (hostitelem fond aplikací), musíte mít oprávnění pro ladění tohoto procesu. Ve výchozím nastavení [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace před IIS 6.0 spustit jako **ASPNET** uživatele. Ve službě IIS 6.0 a IIS 7.0 **síťová služba** účtu je výchozí nastavení. Pokud pracovní proces je spuštěn jako **ASPNET**, nebo jako **síťová služba**, musí mít oprávnění správce pro ladění.
+ Chcete-li ladit [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces (hostovaný fondem aplikací), musíte mít oprávnění pro ladění tohoto procesu. Ve výchozím nastavení [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace před službou IIS 6,0 spustit jako uživatel **ASPNET** . Ve službě IIS 6,0 a IIS 7,0 je výchozím účtem **síťové služby** . Pokud pracovní proces běží jako **ASPNET**nebo jako **Síťová služba**, musíte mít oprávnění správce, abyste ho mohli ladit.
 
  > [!IMPORTANT]
- > Od verze Windows Server 2008 R2, doporučujeme používat [ApplicationPoolIdentity](/iis/manage/configuring-security/application-pool-identities) jako identitu pro každý fond aplikací.
+ > Počínaje systémem Windows Server 2008 R2 doporučujeme použití [ApplicationPoolIdentity](/iis/manage/configuring-security/application-pool-identities) jako identity pro každý fond aplikací.
 
- Název [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces se liší podle scénáře ladění a verze služby IIS. Další informace najdete v tématu [jak: Hledání názvu procesu ASP.NET](../debugger/how-to-find-the-name-of-the-aspnet-process.md).
+ Název pracovního procesu [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] se liší podle scénáře ladění a podle verze služby IIS. Další informace najdete v tématu [Postupy: hledání názvu procesu ASP.NET](../debugger/how-to-find-the-name-of-the-aspnet-process.md).
 
- Můžete změnit uživatelského účtu, který [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces běží pod tak, že upravíte soubor machine.config na serveru, na kterém běží služby IIS. Nejlepší způsob, jak to provést, je použít **Správce Internetové informační služby (IIS)**. Další informace najdete v tématu [jak: Spuštění pracovního procesu v rámci uživatelského účtu](../debugger/how-to-run-the-worker-process-under-a-user-account.md).
+ Uživatelský účet, pod kterým běží pracovní proces [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], můžete změnit úpravou souboru Machine. config na serveru, na kterém je spuštěna služba IIS. Nejlepším způsobem, jak to provést, je použít **Správce služby Internetová informační služba (IIS)** . Další informace najdete v tématu [Postup: spuštění pracovního procesu v rámci uživatelského účtu](../debugger/how-to-run-the-worker-process-under-a-user-account.md).
 
- Pokud změníte [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces pro spuštění v rámci vlastní uživatelský účet není potřeba mít oprávnění správce na serveru, na kterém běží služba IIS.
+ Změníte-li [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces tak, aby běžel pod vlastním uživatelským účtem, nemusíte být správcem serveru, na kterém je spuštěna služba IIS.
 
 > [!CAUTION]
-> Před změnou [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces spuštěn pod jiným účtem, pokud je to možné důsledků zvažte [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces by měl být zneužity během spuštění pod tímto účtem. Uživatelské účty ASPNET a NETWORK SERVICE spustit s minimálními oprávněními, pokud se hacker procesu snížení možné poškození. Pokud potřebujete změnit [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces spuštěn pod účtem, který má větší oprávnění, je možné škody větší.
+> Před změnou [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovního procesu tak, aby běžel pod jiným účtem, vezměte v úvahu možné důsledky v případě, že by měl být při spuštění pod tímto účtem napadený [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces. Uživatelské účty ASPNET a NETWORK SERVICE se spouštějí s minimálními oprávněními a snižují možný škodu v případě, že je proces napadený. Pokud je nutné změnit [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces tak, aby běžel pod účtem, který má větší oprávnění, je potenciální Škoda větší.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Ladění aplikací ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)
-- [Postupy: Spuštění pracovního procesu pod uživatelským účtem](../debugger/how-to-run-the-worker-process-under-a-user-account.md)
+- [Postupy: Spuštění pracovního procesu v rámci uživatelského účtu](../debugger/how-to-run-the-worker-process-under-a-user-account.md)

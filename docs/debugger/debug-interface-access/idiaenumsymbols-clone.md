@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbols::clone – | Dokumentace Microsoftu
+title: 'IDiaEnumSymbols:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 098dd1f5ba12c5b3aeff6add364f63b8baa676bc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 07e3823a62ca6fdb81fa6916eec6a1de5598a748
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830472"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743991"
 ---
 # <a name="idiaenumsymbolsclone"></a>IDiaEnumSymbols::Clone
-Vytvoří čítač, který obsahuje stejného stavu jako aktuální enumerátor výčtu.
+Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT Clone ( 
 #### <a name="parameters"></a>Parametry
  ppenum
 
-[out] Vrátí [idiaenumsymbols –](../../debugger/debug-interface-access/idiaenumsymbols.md) objekt, který obsahuje duplicitní čítače výčtu. Symboly nejsou duplicitní, pouze enumerátor.
+mimo Vrátí objekt [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) , který obsahuje duplikát objektu Enumerator. Symboly nejsou duplikovány, pouze enumerátor.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

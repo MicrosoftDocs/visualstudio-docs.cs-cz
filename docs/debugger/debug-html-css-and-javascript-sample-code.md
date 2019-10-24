@@ -1,5 +1,5 @@
 ---
-title: Ladění kódu HTML a CSS ukázka | Dokumentace Microsoftu
+title: Ladění ukázkového kódu HTML a CSS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -14,19 +14,19 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 10fda5038ab1c69a27e79406167c69adcc560658
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 460419d976211747c44f156a5821b88b75aa2e6b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62563471"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745550"
 ---
 # <a name="debug-html-and-css-sample-code"></a>Ladění ukázkového kódu HTML a CSS
 
-Kód v tomto tématu se ukázkový soubor pro [rychlý start: Ladění kódu HTML a CSS](../debugger/quickstart-debug-html-and-css.md). Chyby podle návrhu k dispozici v tomto rychlém startu jsou opravené v této verzi kódu.
+Kód v tomto tématu je ukázkový soubor pro [rychlý Start: ladění HTML a CSS](../debugger/quickstart-debug-html-and-css.md). Chyby, které jsou obsaženy v návrhu v rychlém startu, jsou opraveny v této verzi kódu.
 
 ## <a name="sample-code"></a>Vzorový kód
-Následující kód HTML je používán \<text > značky v tomto rychlém startu.
+Následující kód HTML se používá v značce \<body > v rychlém startu.
 
 ```html
 <div id="flipTemplate" data-win-control="WinJS.Binding.Template"
@@ -40,7 +40,7 @@ Následující kód HTML je používán \<text > značky v tomto rychlém startu
 </div>
 ```
 
-Následující šablony stylů CSS ukazuje přidání provedené default.css.
+Následující šablony stylů CSS zobrazují přidané položky default. CSS.
 
 ```css
 #fView {
@@ -50,7 +50,7 @@ Následující šablony stylů CSS ukazuje přidání provedené default.css.
 }
 ```
 
-Následující příklad kódu ukazuje kompletní kód jazyka JavaScript v souboru default.js. Odkazy na obory názvů WinJS pro tento kód se v souboru default.html šablony.
+Následující příklad kódu ukazuje úplný kód JavaScriptu v default. js. Odkazy na obory názvů WinJS pro tento kód jsou v souboru Default. HTML šablony.
 
 ```javascript
 (function () {
@@ -101,5 +101,5 @@ Následující příklad kódu ukazuje kompletní kód jazyka JavaScript v soubo
 })();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Rychlý start: Ladění kódu HTML a CSS](../debugger/quickstart-debug-html-and-css.md)

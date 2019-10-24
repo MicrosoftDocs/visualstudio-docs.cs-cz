@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ea58bb790cf7c9aaac554728643f6e164e06418
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 192bde210d7188e54576453dc04654e970df27f4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654058"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747616"
 ---
 # <a name="customizing-element-creation-and-movement"></a>Přizpůsobení vytvoření a přesunutí elementu
 
@@ -316,7 +316,7 @@ V řešení modelu komponenty můžete vytvořit direktivu pro přeposílání. 
 
      Neměl by se zobrazovat nedostupný ukazatel a měli byste být schopni vyřadit nový **vstupní port** na stávajícím. Vyberte nový **vstupní port** a přetáhněte jej na jiný bod **součásti**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Navigace v modelu a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Přizpůsobení nástrojů a panelu nástrojů](../modeling/customizing-tools-and-the-toolbox.md)

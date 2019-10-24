@@ -1,5 +1,5 @@
 ---
-title: Idiaenumstackframes::Next – | Dokumentace Microsoftu
+title: 'IDiaEnumStackFrames:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9cf220c65cf11836e64a7e1f4c0142c89669f4b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ffde40e221823d9656c4b6414b14067ac9d0537a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833298"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744042"
 ---
 # <a name="idiaenumstackframesnext"></a>IDiaEnumStackFrames::Next
-Načte zadaný počet prvků rámce zásobníku v pořadí výčtu.
+Načte zadaný počet prvků rámce zásobníku z sekvence výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,19 +35,19 @@ HRESULT Next( 
 #### <a name="parameters"></a>Parametry
  celt
 
-[in] Počet prvků stackframe v enumerátor, který se má načíst.
+pro Počet elementů StackFrame ve výčtu, který má být načten.
 
  rgelt
 
-[out] Pole, které je pro vyplnění s požadovaným [idiastackframe –](../../debugger/debug-interface-access/idiastackframe.md) objekty.
+mimo Pole, které se má vyplnit požadovanými [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) objekty.
 
  pceltFetched
 
-[out] Vrátí počet zásobníku rámce prvků načtených enumerátor.
+mimo Vrátí počet prvků rámce zásobníku v načteném enumerátoru.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud nejsou žádné další rámce zásobníku. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud nejsou k dispozici žádné další bloky zásobníku. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

@@ -15,22 +15,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c42cdfc5c3f3c0267fdcbdfca8ddc4bb30663384
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 872f7c594344af2c59ebe7f8d1fbd1a640dd2190
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924528"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72728831"
 ---
 # <a name="unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor"></a>Nepodařilo se připojit ke sledování Microsoft Visual Studio Remote Debugging Monitor.
 Tato zpráva může být způsobena tím, že sledování vzdáleného ladění není správně nastaveno na vzdáleném počítači nebo je vzdálený počítač nepřístupný z důvodu problémů se sítí nebo přítomnosti brány firewall.
 
 > [!IMPORTANT]
-> Pokud se domníváte, že jste tuto zprávu obdrželi kvůli chybě produktu, [ohlaste prosím tento problém](../ide/how-to-report-a-problem-with-visual-studio.md) aplikaci Visual Studio. Pokud potřebujete další pomoc, přečtěte si téma [kontaktujte nás](../ide/talk-to-us.md) způsoby, jak kontaktovat Microsoft.
+> Pokud se domníváte, že jste tuto zprávu obdrželi kvůli chybě produktu, [ohlaste prosím tento problém](../ide/how-to-report-a-problem-with-visual-studio.md) aplikaci Visual Studio. Pokud potřebujete další nápovědu, přečtěte si článek o způsobech, jak kontaktovat Microsoft, v článku kontaktujte [nás](../ide/talk-to-us.md) .
 
 ## <a name="specificerrors"></a>Jaká je podrobná chybová zpráva?
 
-`Unable to Connect to the Microsoft Visual Studio Remote Debugging Monitor` Zpráva je obecná. V řetězci chyby je obvykle obsažena konkrétnější zpráva, která vám může pomoct identifikovat příčinu problému nebo vyhledat přesnější opravu. Tady je několik nejběžnějších chybových zpráv, které se připojují k hlavní chybové zprávě:
+Zpráva `Unable to Connect to the Microsoft Visual Studio Remote Debugging Monitor` je obecná. V řetězci chyby je obvykle obsažena konkrétnější zpráva, která vám může pomoct identifikovat příčinu problému nebo vyhledat přesnější opravu. Tady je několik nejběžnějších chybových zpráv, které se připojují k hlavní chybové zprávě:
 
 - [Ladicí program se nemůže připojit ke vzdálenému počítači. Ladicí program nemohl přeložit zadaný název počítače.](#cannot_connect)
 - [Vzdálený ladicí program odmítl žádost o připojení.](#rejected)
@@ -77,7 +77,7 @@ Visual Studio se nemohlo připojit ke vzdálenému ladicímu programu. Tato zpr�
 
 - Vzdálený ladicí program může běžet pod jiným uživatelským účtem. Zobrazit [tyto kroky](#user_accounts)
 
-- Port je zablokován v bráně firewall. Ujistěte se, že brána firewall neblokuje [vaši žádost](#firewall), zejména pokud používáte bránu firewall jiného výrobce.
+- Port je zablokován v bráně firewall. Ujistěte se, že brána firewall [neblokuje vaši žádost](#firewall), zejména pokud používáte bránu firewall jiného výrobce.
 
 - Verze vzdáleného ladicího programu neodpovídá aplikaci Visual Studio. Správnou verzi vzdáleného ladicího programu najdete v tématu [vzdálené ladění](../debugger/remote-debugging.md).
 
@@ -89,7 +89,7 @@ Vzdálený počítač existuje, ale Visual Studio se nemůže připojit ke vzdá
 
 - Vzdálený ladicí program může běžet pod jiným uživatelským účtem. Postupujte podle [těchto kroků](#user_accounts).
 
-- Port je zablokován v bráně firewall. Ujistěte se, že brána firewall neblokuje [vaši žádost](#firewall), zejména pokud používáte bránu firewall jiného výrobce.
+- Port je zablokován v bráně firewall. Ujistěte se, že brána firewall [neblokuje vaši žádost](#firewall), zejména pokud používáte bránu firewall jiného výrobce.
 
 - Verze vzdáleného ladicího programu neodpovídá aplikaci Visual Studio. Správnou verzi vzdáleného ladicího programu najdete v tématu [vzdálené ladění](../debugger/remote-debugging.md).
 
@@ -111,7 +111,7 @@ Může se jednat o starší problém, který je specifický pro systémy Windows
 
 ### <a name="dns"></a>Vzdálený počítač není dosažitelný.
 
-Pokud se nemůžete připojit pomocí názvu vzdáleného počítače, zkuste místo toho použít IP adresu. K získání adresy `ipconfig` IPv4 můžete použít příkaz v příkazovém řádku na vzdáleném počítači. Pokud používáte soubor hostitelů, ověřte, zda je správně nakonfigurován.
+Pokud se nemůžete připojit pomocí názvu vzdáleného počítače, zkuste místo toho použít IP adresu. K získání adresy IPv4 můžete použít `ipconfig` na příkazovém řádku na vzdáleném počítači. Pokud používáte soubor hostitelů, ověřte, zda je správně nakonfigurován.
 
 Pokud se to nepovede, ověřte, jestli je vzdálený počítač přístupný v síti (na vzdáleném počítači[otestujete test](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee624059(v=ws.10)) ). Vzdálené ladění přes Internet se nepodporuje, s výjimkou některých Microsoft Azurech scénářů.
 
@@ -128,7 +128,7 @@ Pokud je název serveru správný, může vzdálený ladicí program blokovat an
 
 Vzdálený ladicí program ve výchozím nastavení akceptuje pouze připojení od uživatele, který spustil vzdálený ladicí program a členy skupiny Administrators. Dalším uživatelům musí být explicitně uděleno oprávnění.
 
-Tento problém můžete vyřešit jedním z následujících způsobů:
+Můžete to vyřešit jedním z následujících způsobů:
 
 - Přidejte uživatele sady Visual Studio do oprávnění vzdáleného ladicího programu (v okně vzdáleného ladicího programu vyberte možnost **nástroje > oprávnění**).
 
@@ -137,32 +137,32 @@ Tento problém můžete vyřešit jedním z následujících způsobů:
     > [!NOTE]
     > Pokud používáte vzdálený ladicí program na vzdáleném serveru, klikněte pravým tlačítkem na aplikaci vzdáleného ladicího programu a vyberte **Spustit jako správce** (nebo můžete spustit vzdálený ladicí program jako službu). Pokud ho nepoužíváte na vzdáleném serveru, stačí ho spustit normálně.
 
-- Vzdálený ladicí program můžete spustit z příkazového řádku s parametrem **/Allow \<username >** :. `msvsmon /allow <username@computer>`
+- Vzdálený ladicí program můžete spustit z příkazového řádku s parametrem **/allow \<username >** : `msvsmon /allow <username@computer>`.
 
-- Případně můžete všem uživatelům povolit vzdálené ladění. V okně vzdáleného ladicího programu, pokračujte **nástroje > Možnosti** dialogového okna. Když vyberete **bez ověřování**, můžete zkontrolovat **dovolit ladění jakémukoliv uživateli**. Tuto možnost byste však měli vyzkoušet pouze v případě, že ostatní možnosti selžou, nebo pokud jste v privátní síti.
+- Případně můžete všem uživatelům povolit vzdálené ladění. V okně vzdáleného ladicího programu přejdete do dialogového okna **Možnosti nástrojů >** . Vyberete-li možnost **bez ověřování**, můžete zaškrtnout políčko **umožňuje všem uživatelům ladit**. Tuto možnost byste však měli vyzkoušet pouze v případě, že ostatní možnosti selžou, nebo pokud jste v privátní síti.
 
 ### <a name="firewall"></a>Brána firewall na vzdáleném počítači nepovoluje příchozí připojení ke vzdálenému ladicímu programu.
- Brány firewall na počítači aplikace Visual Studio a brány firewall na vzdáleném počítači musí být nakonfigurovány umožňujícím komunikaci mezi Visual Studio a vzdálený ladicí program. Informace o portech používá vzdálený ladicí program najdete v tématu [přiřazení portů vzdáleného ladicího programu](../debugger/remote-debugger-port-assignments.md). Informace o konfiguraci brány Windows firewall najdete v tématu [konfigurace brány Windows Firewall pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md).
+ Brána firewall na počítači sady Visual Studio a brána firewall na vzdáleném počítači musí být nakonfigurované tak, aby umožňovaly komunikaci mezi Visual Studio a vzdáleným ladícím programem. Informace o portech, které používá vzdálený ladicí program, najdete v tématu [Přiřazení portů vzdáleného ladicího programu](../debugger/remote-debugger-port-assignments.md). Informace o konfiguraci brány Windows Firewall najdete v tématu [Konfigurace brány Windows Firewall pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md).
 
-### <a name="the-version-of-the-remote-debugger-doesnt-match-the-version-of-visual-studio"></a>Verze vzdáleného ladicího programu neodpovídá verzi sady Visual Studio
- Verze sady Visual Studio, které spouštíte místně musí odpovídat verzi sledování vzdáleného ladění, na kterém běží na vzdáleném počítači. Chcete-li to vyřešit, stáhněte a nainstalujte odpovídající verzi sledování vzdáleného ladění. Správnou verzi vzdáleného ladicího programu najdete v tématu [vzdálené ladění](../debugger/remote-debugging.md).
+### <a name="the-version-of-the-remote-debugger-doesnt-match-the-version-of-visual-studio"></a>Verze vzdáleného ladicího programu se neshoduje s verzí sady Visual Studio.
+ Verze sady Visual Studio, kterou používáte místně, musí odpovídat verzi sledování vzdáleného ladění, která běží na vzdáleném počítači. Chcete-li tento problém vyřešit, Stáhněte a nainstalujte si verzi sledování vzdáleného ladění. Správnou verzi vzdáleného ladicího programu najdete v tématu [vzdálené ladění](../debugger/remote-debugging.md).
 
-### <a name="the-local-and-remote-machines-have-different-authentication-modes"></a>Místní a vzdálené počítače mají různá ověřovací režimy
- Místní a vzdálené počítače musí používat stejný režim ověřování. Problém odstranit, ujistěte se, že oba počítače používají stejný režim ověřování. Režim ověřování můžete změnit. V okně vzdáleného ladicího programu přejdete do dialogového okna **Možnosti nástrojů >** .
+### <a name="the-local-and-remote-machines-have-different-authentication-modes"></a>Místní a vzdálené počítače mají odlišné režimy ověřování.
+ Místní a vzdálené počítače musí používat stejný režim ověřování. Pokud to chcete opravit, ujistěte se, že oba počítače používají stejný režim ověřování. Režim ověřování můžete změnit. V okně vzdáleného ladicího programu přejdete do dialogového okna **Možnosti nástrojů >** .
 
- Další informace o režimech ověřování najdete v tématu [Přehled ověřování Windows](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831472(v=ws.11)).
+ Další informace o režimech ověřování najdete v tématu [Přehled ověřování systému Windows](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831472(v=ws.11)).
 
-### <a name="anti-virus-software-is-blocking-the-connections"></a>Antivirový software blokuje připojení
- Antivirový software Windows povoluje připojení vzdáleného ladicího programu, ale některé třetích stran antivirový software blokuje. V dokumentaci pro váš antivirový software a zjistěte, jak umožnit tato připojení.
+### <a name="anti-virus-software-is-blocking-the-connections"></a>Antivirový software blokuje připojení.
+ Antivirový software systému Windows umožňuje připojení vzdáleného ladicího programu, ale antivirový software jiných výrobců je může blokovat. Podívejte se na dokumentaci k antivirovému softwaru, abyste zjistili, jak tato připojení povolíte.
 
-### <a name="network-security-policy-is-blocking-communication-between-the-remote-machine-and-visual-studio"></a>Zásady zabezpečení sítě blokuje komunikaci mezi vzdáleného počítače a sady Visual Studio
- Kontrola zabezpečení vaší sítě, abyste měli jistotu, že neblokuje komunikaci. Další informace o zásadách zabezpečení sítě Windows najdete v tématu [nastavení zásad zabezpečení](/windows/device-security/security-policy-settings/security-policy-settings).
+### <a name="network-security-policy-is-blocking-communication-between-the-remote-machine-and-visual-studio"></a>Zásady zabezpečení sítě blokují komunikaci mezi vzdáleným počítačem a sady Visual Studio.
+ Zkontrolujte zabezpečení sítě, abyste se ujistili, že neblokuje komunikaci. Další informace o zásadách zabezpečení sítě Windows najdete v tématu [nastavení zásad zabezpečení](/windows/device-security/security-policy-settings/security-policy-settings).
 
-### <a name="the-network-is-too-busy-to-support-remote-debugging"></a>Síť je příliš zaneprázdněn a nemůže podporovat vzdálené ladění
- Budete muset provádět vzdálené ladění v jinou dobu nebo změnit plán práce v síti pro jiný čas.
+### <a name="the-network-is-too-busy-to-support-remote-debugging"></a>Síť je příliš zaneprázdněna, aby podporovala vzdálené ladění.
+ Je možné, že budete muset vzdálené ladění provést v jinou dobu nebo znovu naplánovat práci v síti na jinou dobu.
 
-## <a name="more-help"></a>Další nápovědu
+## <a name="more-help"></a>Další informace
  Pokud chcete získat další nápovědu ke vzdálenému ladicímu programu, otevřete stránku Nápověda ke vzdálenému ladicímu programu (**nápověda > používání** ve vzdáleném ladicím programu).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Vzdálené ladění](../debugger/remote-debugging.md)

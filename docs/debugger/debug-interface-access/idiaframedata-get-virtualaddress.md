@@ -1,5 +1,5 @@
 ---
-title: IDiaFrameData::get_virtualAddress | Microsoft Docs
+title: 'IDiaFrameData:: get_virtualAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 523d7dac2b0501957bcc2cd8ea54695548610a44
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fb404c8a537870bb300f280022c233ad641ed2df
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828998"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743457"
 ---
-# <a name="idiaframedatagetvirtualaddress"></a>IDiaFrameData::get_virtualAddress
-Načte virtuální adresy (VA) kód rámečku.
+# <a name="idiaframedataget_virtualaddress"></a>IDiaFrameData::get_virtualAddress
+Načte virtuální adresu (VA) kódu pro daný rámec.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_virtualAddress ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí virtuální adresu kód pro rámec.
+mimo Vrátí virtuální adresu kódu pro daný rámec.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

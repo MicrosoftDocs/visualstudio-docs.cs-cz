@@ -1,5 +1,5 @@
 ---
-title: Úloha MultiToolTask | Dokumentace Microsoftu
+title: Úloha MultiToolTask | Microsoft Docs
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -11,38 +11,38 @@ dev_langs:
 - jsharp
 - C++
 helpviewer_keywords:
-- MSBuild (Visual C++), MultiToolTask task
-- MultiToolTask task (MSBuild (Visual C++))
+- MSBuild (C++), MultiToolTask task
+- MultiToolTask task (MSBuild (C++))
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - multiple
-ms.openlocfilehash: a16a61c06bf80bef3fbb78f155cd8b41905a8d72
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 137fb53a46c3fa31a69602906ef53d2f65e25c4b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963907"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747237"
 ---
-# <a name="multitooltask-task"></a>MultiToolTask úkolu
+# <a name="multitooltask-task"></a>MultiToolTask – úloha
 
 Žádný popis.
 
 ## <a name="parameters"></a>Parametry
 
-Následující tabulka popisuje parametry **MultiToolTask** úloh.
+Následující tabulka popisuje parametry úlohy **MultiToolTask** .
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**EnvironmentVariablesToSet**|Volitelné **string []** parametru.|
-|**SemaphoreProcCount**|Volitelné **řetězec** parametru.|
-|**SchedulerFunction**|Volitelné **řetězec** parametru.|
-|**SchedulerVerbose**|Volitelné **bool** parametru.|
-|**Zdroje**|Vyžaduje **[] ITaskItem** parametru.|
-|**TaskAssemblyName**|Volitelné **řetězec** parametru.|
-|**TaskName**|Vyžaduje **řetězec** parametru.|
-|**TrackerLogDirectory**|Vyžaduje **řetězec** parametru.|
+|**EnvironmentVariablesToSet**|Parametr volitelného **řetězce []** .|
+|**SemaphoreProcCount**|Volitelný **řetězcový** parametr.|
+|**SchedulerFunction**|Volitelný **řetězcový** parametr.|
+|**SchedulerVerbose**|Volitelný parametr **bool** .|
+|**Prostředky**|Povinný parametr **ITaskItem []** .|
+|**TaskAssemblyName**|Volitelný **řetězcový** parametr.|
+|**/TN**|Povinný parametr **řetězce**|
+|**TrackerLogDirectory**|Povinný parametr **řetězce**|
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+[Odkaz na úkol](../msbuild/msbuild-task-reference.md)

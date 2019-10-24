@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_liveRangeStartRelativeVirtualAddress | Microsoft Docs
+title: 'IDiaSymbol:: get_liveRangeStartRelativeVirtualAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 338775a2c36415d471d0d59176ce38f6df1827bb
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: ea82e9d1dee4b82e78ea3f6409acfdcfc30b2a27
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64806861"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739894"
 ---
-# <a name="idiasymbolgetliverangestartrelativevirtualaddress"></a>IDiaSymbol::get_liveRangeStartRelativeVirtualAddress
-Vrátí začátek rozsahu adres, ve kterém je platná místního symbolu.
+# <a name="idiasymbolget_liverangestartrelativevirtualaddress"></a>IDiaSymbol::get_liveRangeStartRelativeVirtualAddress
+Vrátí začátek rozsahu adres, ve kterém je místní symbol platný.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,22 +33,22 @@ HRESULT get_liveRangeStartRelativeVirtualAddress ( 
 #### <a name="parameters"></a>Parametry
  `address`
 
-[out] Vrátí začátek rozsahu adres.
+mimo Vrátí začátek rozsahu adres.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Relativní virtuální adresa vrátil je začátek rozsahu, ve kterém je platná symbolu.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby. Relativní virtuální adresa vrácená jako začátek rozsahu, ve kterém je symbol platný.
 
 > [!NOTE]
-> Kód chyby znamená, že symbol nemá informace o rozsahu za provozu.
+> Vrácený kód chyby znamená, že symbol neobsahuje informace o živém rozsahu.
 
 ## <a name="remarks"></a>Poznámky
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: Dia2.h
+ Záhlaví: Dia2. h
 
- Knihovna: diaguids.lib
+ Knihovna: diaguids. lib
 
- DLL: msdia100.dll
+ Knihovna DLL: msdia100. dll
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

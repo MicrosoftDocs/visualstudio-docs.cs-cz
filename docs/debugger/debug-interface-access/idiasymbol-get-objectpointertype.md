@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_objectPointerType | Microsoft Docs
+title: 'IDiaSymbol:: get_objectPointerType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 69dac79a040a8eff68c36c82b9a85935d969b5ec
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: e4254a121ce29578438f4ee7264345aa30bafd7e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64808912"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739612"
 ---
-# <a name="idiasymbolgetobjectpointertype"></a>IDiaSymbol::get_objectPointerType
-Načte typ ukazatel objektu pro metodu třídy.
+# <a name="idiasymbolget_objectpointertype"></a>IDiaSymbol::get_objectPointerType
+Načte typ ukazatele objektu pro metodu třídy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,17 +33,17 @@ HRESULT get_objectPointerType ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt, který představuje ukazatel objektu pro metodu třídy.
+mimo Vrátí objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) , který představuje ukazatel objektu pro metodu třídy.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Tato vlastnost se týká jenom pro symboly s [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) typ `SymTagFunctionType`.
+ Tato vlastnost se vztahuje pouze na symboly s typem [výčtu symtagenum –](../../debugger/debug-interface-access/symtagenum.md) `SymTagFunctionType`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)

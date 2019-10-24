@@ -1,5 +1,5 @@
 ---
-title: Idiaaddressmap::get_addressmapenabled – | Dokumentace Microsoftu
+title: 'IDiaAddressMap:: get_addressMapEnabled | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7391010e409cc25a3151bb2abb806289c81288a1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b518cf3728279ea8db267d01867fa66ceae35b21
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554404"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745184"
 ---
-# <a name="idiaaddressmapgetaddressmapenabled"></a>IDiaAddressMap::get_addressMapEnabled
-Označuje, zda mapování adres se vytvořilo pro konkrétní relace.
+# <a name="idiaaddressmapget_addressmapenabled"></a>IDiaAddressMap::get_addressMapEnabled
+Označuje, zda bylo pro určitou relaci vytvořeno mapování adres.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,17 +33,17 @@ HRESULT get_addressMapEnabled ( 
 #### <a name="parameters"></a>Parametry
  pRetVal
 
-[out] Vrátí `TRUE` Pokud mapování adresy je povolené.
+mimo Vrátí `TRUE`, pokud je povoleno mapování adres.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Spustitelný soubor po procesory někdy aktualizovat spustitelný soubor. DIA obsahuje mechanismus pro podporu překladu symboly do nového rozložení.
+ Spustitelné procesory někdy aktualizují spustitelný soubor. DIA obsahuje mechanismus pro podporu překladu symbolů na nové rozložení.
 
- Klientské aplikace můžete nastavit mapa adres pro konkrétní relace tím, že získáme [idiaaddressmap –](../../debugger/debug-interface-access/idiaaddressmap.md) rozhraní z [idiasession –](../../debugger/debug-interface-access/idiasession.md) rozhraní a volání [IDiaAddressMap::set_ addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) metoda za nímž následuje volání [idiaaddressmap::put_addressmapenabled –](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md) metody. `get_addressMapEnabled` Metoda vrátí výsledky volání `put_addressMapEnabled` metody.
+ Klientské aplikace mohou nastavit mapu adres pro konkrétní relaci získáním rozhraní [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md) z rozhraní [IDiaSession](../../debugger/debug-interface-access/idiasession.md) a voláním metody [IDiaAddressMap:: set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) následovaným voláním [ IDiaAddressMap::p ut_addressMapEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md) metoda. Metoda `get_addressMapEnabled` vrátí výsledky volání metody `put_addressMapEnabled`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaAddressMap::set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)

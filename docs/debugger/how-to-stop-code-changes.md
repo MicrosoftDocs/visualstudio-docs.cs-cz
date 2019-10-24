@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zastavení změn kódu | Dokumentace Microsoftu'
+title: 'Postupy: zastavení změn kódu | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,27 +17,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33bc24aaea0f24d592a897bcc70f553cfaab9667
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 545599aa68da79aa7be41f0a2517049146cebc89
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63388349"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72732452"
 ---
 # <a name="how-to-stop-code-changes"></a>Postupy: Zastavení změn kódu
-Upravit a pokračovat je právě aplikování změn kódu, můžete zastavit operaci.
+I když je proces úpravy a pokračování v procesu aplikování změn kódu, můžete operaci zastavit.
 
 > [!CAUTION]
-> Zastavování změn kódu ve spravovaném kódu může vést k neočekávaným výsledkům. Provádění změn pro spravovaný kód je obvykle rychlé procesu, je málokdy potřeba zastavení změn kódu ve spravovaném kódu.
+> Zastavení změn kódu ve spravovaném kódu může vést k neočekávaným výsledkům. Použití změn ve spravovaném kódu je obvykle rychlý proces, takže není potřeba zastavit změny kódu ve spravovaném kódu.
 
-### <a name="to-stop-applying-code-changes"></a>Zastavit provádění změn kódu
+### <a name="to-stop-applying-code-changes"></a>Zastavení použití změn kódu
 
-- Zvolte **zastavit provádění změn kódu** z **ladění** nabídky.
+- V nabídce **ladění** vyberte možnost **zastavit aplikování změn kódu** .
 
-  Tato položka nabídky je viditelná pouze v případě, že se aplikují změny kódu.
+  Tato položka nabídky je viditelná pouze v případě, že jsou aplikovány změny kódu.
 
-  Pokud zvolíte tuto možnost, žádná ze změn kódu není potvrzena.
+  Pokud zvolíte tuto možnost, není potvrzena žádná změna kódu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Operace Upravit a pokračovat](../debugger/edit-and-continue.md)
 - [Upravit a pokračovat, ladění, dialogové okno Možnosti](https://msdn.microsoft.com/library/bcew296c.aspx)

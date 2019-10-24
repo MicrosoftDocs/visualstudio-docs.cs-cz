@@ -1,5 +1,5 @@
 ---
-title: IDiaEnumSymbolsByAddr::symbolByRVA | Microsoft Docs
+title: 'IDiaEnumSymbolsByAddr:: symbolByRVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 38d7b0cb8564743ab35cac20cdcb352cdbca48d3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b4c34ce4105da6d50dc2bc9a0554f9539c1b2177
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830269"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743833"
 ---
 # <a name="idiaenumsymbolsbyaddrsymbolbyrva"></a>IDiaEnumSymbolsByAddr::symbolByRVA
-Pozice výčtu pomocí provádí vyhledávání podle relativní virtuální adresu (RVA).
+Umístí enumerátor pomocí vyhledávání relativní virtuální adresou (RVA).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,16 +34,16 @@ HRESULT symbolByRVA ( 
 #### <a name="parameters"></a>Parametry
  relativeVirtualAddress
 
-[in] Adresa vzhledem ke spuštění bitové kopie.
+pro Adresa relativní k začátku obrázku
 
  ppsymbol
 
-[out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt představující symbol nalezen.
+mimo Vrátí objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) představující nalezený symbol.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud symbol se nenašel. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud symbol nebyl nalezen. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)
 - [IDiaEnumSymbolsByAddr::symbolByVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyva.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

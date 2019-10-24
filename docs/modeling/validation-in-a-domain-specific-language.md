@@ -10,12 +10,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9737c9f02f9231aae5d20bd22321024fcfd7fd69
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fb059a9175c61c238abf0881cd96e4179fcf6f65
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663733"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748172"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>Ověřování v jazyce specifickém pro doménu
 Jako autor jazyka DSL (Domain-Specific Language) můžete definovat ověřovací omezení a ověřit tak, že model vytvořený uživatelem má smysl. Pokud například vaše DSL umožňuje uživatelům nakreslit rodinný strom lidí a jejich předchůdce, mohli byste napsat omezení, které zajistí, že budou mít děti data po jejich rodičůch.
@@ -334,7 +334,7 @@ validationController.ValidateCustom
 > [!WARNING]
 > Ujistěte se, že uživatel ví, že změna byla upravena nebo vrácena zpět. Použijte například `System.Windows.Forms.MessageBox.Show("message").`
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Navigace v modelu a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Obslužné rutiny události šířící změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md)

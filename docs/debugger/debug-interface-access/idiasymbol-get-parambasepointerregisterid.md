@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_paramBasePointerRegisterId | Microsoft Docs
+title: 'IDiaSymbol:: get_paramBasePointerRegisterId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb6901210e05ef3eb1f8e63b8e6c508d36b2770b
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 09bdfb5d276e4dc7414c78529c2a6f1644597cd3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64798795"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739519"
 ---
-# <a name="idiasymbolgetparambasepointerregisterid"></a>IDiaSymbol::get_paramBasePointerRegisterId
-Načte ID do registru, který obsahuje základní ukazatele na parametry. Použít, když [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) je nastavena na `SymTagFunction`.
+# <a name="idiasymbolget_parambasepointerregisterid"></a>IDiaSymbol::get_paramBasePointerRegisterId
+Načte identifikátor registru, který uchovává základní ukazatel na parametry. Použijte, pokud je [výčet SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) nastavený na `SymTagFunction`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,22 +33,22 @@ HRESULT get_paramBasePointerRegisterId ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí ID do registru, který obsahuje základní ukazatele na parametry.
+mimo Vrátí ID registru, který uchovává základní ukazatel na parametry.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: Dia2.h
+ Záhlaví: Dia2. h
 
- Knihovna: diaguids.lib
+ Knihovna: diaguids. lib
 
- DLL: msdia100.dll
+ Knihovna DLL: msdia100. dll
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

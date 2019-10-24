@@ -1,5 +1,5 @@
 ---
-title: IDiaStackFrame::get_rawLVarInstanceValue | Microsoft Docs
+title: 'IDiaStackFrame:: get_rawLVarInstanceValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a8ad236307360a96f64999313764424305980fc9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0b1118517988f6a790cd4f6732eba3bc8a9fc25a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838116"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741638"
 ---
-# <a name="idiastackframegetrawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
-Tato metoda načte hodnotu místní proměnné zadané jako nezpracovaný bajtů.
+# <a name="idiastackframeget_rawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
+Tato metoda načte hodnotu zadané místní proměnné jako nezpracované bajty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,22 +36,22 @@ HRESULT get_rawLVarInstanceValue(
 #### <a name="parameters"></a>Parametry
  `pInstance`
 
-[in] `IDiaLVarInstance` Objekt představující instance má být získána hodnota pro lokální proměnné.
+pro Objekt `IDiaLVarInstance` reprezentující instanci lokální proměnné pro získání hodnoty pro.
 
  `cbDataMax`
 
-[in] Maximální počet bajtů ve vyrovnávací paměti na které odkazuje `pbData`. To může být maximálně 8 bajtů (`sizeof(ULONGLONG)`).
+pro Maximální počet bajtů ve vyrovnávací paměti, na které ukazuje `pbData`. Může to být maximálně 8 bajtů (`sizeof(ULONGLONG)`).
 
  `pcbData`
 
-[out] Vrátí skutečný počet bajtů uložených do vyrovnávací paměti.
+mimo Vrátí skutečný počet bajtů uložených ve vyrovnávací paměti.
 
  `pbData`
 
-[out] Vyrovnávací paměti, která vyplní data. IP adresa nesmí být `NULL`.
+mimo Vyrovnávací paměť, která se má vyplnit daty. Toto nelze `NULL`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

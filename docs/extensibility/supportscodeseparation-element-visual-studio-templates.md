@@ -1,5 +1,5 @@
 ---
-title: Supportscodeseparation – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: SupportsCodeSeparation – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,17 +14,17 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3a4a9e7ba92b9f48cf22999d53ecf6c7b7d832ab
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9e68516a798bcd4d1437ab504c09b4cc529eb889
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316952"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72719431"
 ---
 # <a name="supportscodeseparation-element-visual-studio-templates"></a>SupportsCodeSeparation – element (šablony sady Visual Studio)
-Určuje, zda **umístěte kód v samostatném souboru** zaškrtávací políčko je dostupné v **přidat novou položku** dialogové okno.
+Určuje, zda je v dialogovém okně **Přidat novou položku** povoleno zaškrtávací políčko **umístit kód do samostatného souboru** .
 
- \<Vstemplate – > \<TemplateData > \<supportscodeseparation – >
+ \<VSTemplate > \<TemplateData > \<SupportsCodeSeparation >
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,22 +45,22 @@ Určuje, zda **umístěte kód v samostatném souboru** zaškrtávací políčko
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **nová položka** dialogové okno.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Nová položka** .|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text musí být buď `true` nebo `false`, která udává, zda je či není **umístěte kód v samostatném souboru** zaškrtávací políčko je dostupné v **přidat novou položku** dialogové okno.
+ Text musí být buď `true`, nebo `false`, což značí, zda je v dialogovém okně **Přidat novou položku** povoleno zaškrtávací políčko **umístit kód do samostatného souboru** .
 
 ## <a name="remarks"></a>Poznámky
  `SupportsCodeSeparation` je volitelný prvek. Výchozí hodnota je `false`.
 
- `SupportsCodeSeparation` Element je dostupná jenom pro webové šablony položek.
+ Element `SupportsCodeSeparation` je k dispozici pouze pro šablony webových položek.
 
- Oddělení kódu nebo použití modelu code-behind model stránky, umožňuje uchovávat značky v jednom souboru a programový kód do jiného souboru. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] a jinými jazyky rozhraní .NET použijte tento model.
+ Oddělení kódu nebo model stránky s kódem na pozadí umožňuje uchovávat značky v jednom souboru a programový kód v jiném souboru. Tento model používají [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] a jiné jazyky .NET.
 
 ## <a name="example"></a>Příklad
- Následující příklad určuje zobrazíte **umístěte kód v samostatném souboru** možnost.
+ Následující příklad určuje, že se má **v samostatném souboru zobrazit možnost umístit kód** .
 
 ```
 <VSTemplate Version="3.0.0" Type="Project"
@@ -84,6 +84,6 @@ Určuje, zda **umístěte kód v samostatném souboru** zaškrtávací políčko
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

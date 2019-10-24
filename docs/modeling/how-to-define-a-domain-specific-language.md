@@ -16,12 +16,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1542f51b561e46bc6b75016fc6669bda602ceab
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f117b2c50bfb3a50f794236505fe02ffd8e2395b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605836"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748426"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>Jak se definuje jazyk specifický pro doménu
 Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešení sady Visual Studio ze šablony. Klíčovou součástí řešení je diagram definice DSL, který je uložený v DslDefinition. DSL. Definice DSL definuje třídy a tvary DSL. Po úpravě a přidání na tyto prvky můžete přidat programový kód pro přizpůsobení DSL.
@@ -620,7 +620,7 @@ Chcete-li vytvořit nový jazyk specifický pro doménu, vytvořte nové řešen
 | Sada nástrojů moje DSL se po změně názvů sestavení nezobrazí. | Prohlédněte si a aktualizujte **DslPackage\GeneratedCode\Package.TT** , kde najdete další informace, viz [Postupy: Změna oboru názvů jazyka specifického pro doménu](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md). |
 | Sada nástrojů mého DSL se nezobrazí, ale nezměnili jste název sestavení.<br /><br /> Nebo se zobrazí okno se zprávou, která hlásí selhání načtení rozšíření. | Obnovte experimentální instanci a znovu sestavte řešení.<br /><br /> 1. v nabídce Start ve Windows klikněte na **všechny programy**, rozbalte [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)], pak **nástroje**a potom klikněte na **resetovat Microsoft Visual Studio experimentální instanci**.<br />2. v nabídce **sestavení** klikněte na **znovu sestavit řešení**. |
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Začínáme s jazyky specifickými pro doménu](../modeling/getting-started-with-domain-specific-languages.md)
 - [Vytvoření jazyka specifického pro doménu založeného na modelu Windows Forms](../modeling/creating-a-windows-forms-based-domain-specific-language.md)

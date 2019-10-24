@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_isstripped – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_isStripped | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c46319714e24a64ad71951b78c55c140028c3ab0
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 12fac0c26c53695dcc9b42794337a7feaea6b0fa
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64819095"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740025"
 ---
-# <a name="idiasymbolgetisstripped"></a>IDiaSymbol::get_isStripped
-Získá příznak označující, zda byly soukromé symboly odebrána ze souboru symbolů.
+# <a name="idiasymbolget_isstripped"></a>IDiaSymbol::get_isStripped
+Načte příznak označující, zda privátní symboly byly ze souboru symbolů odstraněny.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,24 +33,24 @@ HRESULT get_isStripped(
 #### <a name="parameters"></a>Parametry
  `pFlag`
 
-[out] Vrátí `TRUE` Pokud soukromé symboly byly odebrány ze souboru symbolů; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud byly ze souboru symbolů odebrány privátní symboly; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Tato vlastnost je k dispozici `SymTagExe` typu symbolu (naleznete v tématu [Exe](../../debugger/debug-interface-access/exe.md)).
+ Tato vlastnost je k dispozici z `SymTagExe` typ symbolu (viz [exe](../../debugger/debug-interface-access/exe.md)).
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|Ve verzi 8.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Exe](../../debugger/debug-interface-access/exe.md)

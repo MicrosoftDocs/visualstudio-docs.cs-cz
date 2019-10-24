@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_isDataAligned | Microsoft Docs
+title: 'IDiaSymbol:: get_isDataAligned | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c8a46b84ff8af4163d6341f1cabbbe339379c0de
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 27a03dbc66cd3ba46fc080d856c559eabc7e289e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64808841"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740249"
 ---
-# <a name="idiasymbolgetisdataaligned"></a>IDiaSymbol::get_isDataAligned
-Získá příznak, který určuje, zda některé hranic konkrétní paměti byl zarovnán uživatelem definovaný typ (UDT).
+# <a name="idiasymbolget_isdataaligned"></a>IDiaSymbol::get_isDataAligned
+Načte příznak, který určuje, zda byl uživatelem definovaný typ (UDT) zarovnán na určitou konkrétní hranici paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,23 +33,23 @@ HRESULT get_isDataAligned(
 #### <a name="parameters"></a>Parametry
  `pFlag`
 
-[out] Vrátí `TRUE` Pokud UDT má byla zarovnána některé hranice paměti; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud byl typ UDT zarovnán na určitou hranici paměti; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Tato vlastnost nastavena obecně při spustitelný soubor je zkompilován s zarovnání dat jiný než výchozí. Kompilátor C++ společnosti Microsoft můžete například změnit zarovnání dat s parametrem příkazového řádku/zp<em>#</em>, kde *#* je hodnota bajtu.
+ Tato vlastnost je obecně nastavena, když je spustitelný soubor kompilován s nevýchozím zarovnáním dat. Kompilátor společnosti Microsoft C++ může například změnit zarovnání dat pomocí možnosti příkazového řádku/zp <em>#</em>, kde *#* je bajtová hodnota.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|Ve verzi 8.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

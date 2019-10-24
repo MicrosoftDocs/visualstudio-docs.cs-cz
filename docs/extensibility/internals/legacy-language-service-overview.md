@@ -1,5 +1,5 @@
 ---
-title: Přehled služby starší verze jazyka | Dokumentace Microsoftu
+title: Přehled služby starší verze jazyka | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,52 +10,52 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dcc7fa218d5ee4ba92af5ad8316f95ceb268bdf6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8dfec9cc8b57dfb12b3977cc04e2e62ecc0dea96
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66344904"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72726867"
 ---
 # <a name="legacy-language-service-overview"></a>Přehled služby starší verze jazyka
-Služba jazyka podporuje editor, který umožňuje implementovat určité [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] funkce. Třídy služeb Managed Package Framework (MPF) jazyka poskytují úplnou podporu pro často používané funkce a částečně se podporuje další funkce.
+Jazyková služba poskytuje podporu pro Editor, která umožňuje implementovat určité [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] funkce. Třídy služby jazyka Managed Package Framework (MPF) poskytují plnou podporu pro často používané funkce a částečnou podporu pro další funkce.
 
-## <a name="fully-supported-features-in-the-mpf"></a>Plně podporované funkce v MPF
- Třídy MPF language service podporují následující funkce:
+## <a name="fully-supported-features-in-the-mpf"></a>Plně podporované funkce v poli MPF
+ Třídy služby jazyka MPF podporují následující funkce:
 
-- Zvýrazňování syntaxe
+- zvýrazňování syntaxe
 
 - Sbalování
 
-- Při psaní komentářů bloky kódu
+- Komentování bloků kódu
 
-- Párování závorek
+- Spárování složených závorek
 
 - Fragmenty kódu
 
 - Vlastní vlastnosti dokumentu
 
-- Informace o parametrech technologie IntelliSense
+- Informace o parametrech IntelliSense
 
-- Informace o parametru technologie IntelliSense
+- Rychlé informace technologie IntelliSense
 
-- Doplňování technologie IntelliSense člena
+- Dokončení členů IntelliSense
 
-- Doplňování technologie IntelliSense aplikace word
+- Dokončování slov IntelliSense
 
-## <a name="partially-supported-features-in-the-mpf"></a>Částečně podporované funkce v MPF
- MPF poskytuje jenom částečnou podporu pro následující funkce. To znamená, že je nutné implementovat metody, které jsou volány MPF.
+## <a name="partially-supported-features-in-the-mpf"></a>Částečně podporované funkce v poli MPF
+ MPF poskytuje pouze částečnou podporu pro následující funkce. To znamená, že je nutné implementovat metody, které jsou volány pomocí MPF.
 
-- Přeformátování kódu. Zadáte kód, který implementuje přeformátování.
+- Přeformátování kódu. Zadejte kód, který implementuje přeformátování.
 
-- Ověřování zarážek určením platný kód zahrnuje. Zadáte kód, který identifikuje kódu rozpětí.
+- Ověřování zarážek určením platných rozsahů kódu. Zadejte kód, který identifikuje rozsah kódu.
 
-- Podpora ladicího programu **automatické hodnoty** okno pro zobrazení proměnné. Zadáte kód, který určuje, co se má zobrazit v okně.
+- Podpora okna **Automatické** hodnoty ladicího programu pro zobrazení proměnných Zadejte kód, který určuje, co se má zobrazit v okně.
 
-- Podpora **navigační panel** pro rychlou navigaci mezi typy a členy. Implementace a vracet pomocnou třídu, která naplní seznamy v **navigační panel** polích se seznamem.
+- Podpora **navigačního panelu** pro rychlou navigaci mezi typy a členy. Implementujete a vrátíte pomocnou třídu, která vyplní seznamy do polí se seznamem **navigačního panelu** .
 
 ## <a name="implementation"></a>Implementace
- Musíte dokončit několik kroků při implementaci samotnou službu jazyka a tato služba nabízí jazyka, které chcete zajistit podporu pro jazyk. Tyto kroky jsou popsány v následujících tématech:
+ Je nutné provést několik kroků k implementaci samotné jazykové služby a funkcí jazykové služby, které chcete pro svůj jazyk podporovat. Tyto kroky jsou popsány v následujících tématech:
 
 - [Implementace služby starší verze jazyka](../../extensibility/internals/implementing-a-legacy-language-service2.md)
 
@@ -89,6 +89,6 @@ Služba jazyka podporuje editor, který umožňuje implementovat určité [!INCL
 
 - [Ověřování zarážek ve službě starší verze jazyka](../../extensibility/internals/validating-breakpoints-in-a-legacy-language-service.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Implementace služby starší verze jazyka](../../extensibility/internals/implementing-a-legacy-language-service1.md)
 - [Rozšíření služeb starší verze jazyka](../../extensibility/internals/legacy-language-service-extensibility.md)

@@ -1,5 +1,5 @@
 ---
-title: Nelze změnit hodnotu – dialogové | Dokumentace Microsoftu
+title: Nelze změnit hodnotu dialogového okna | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,22 +18,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f8f9dafe8ada8914591426dea9abc867de2236f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 97f057edefefd590c37b49d709ecf8a6e029b905
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564148"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745745"
 ---
 # <a name="cannot-change-value-dialog-box"></a>Dialogové okno Nelze změnit hodnotu
 ## <a name="error"></a>Chyba
- `The value of this variable cannot be changed` &#124;`The name` *název* `does not exist in the current context` &#124; *různé další zprávy*
+ `The value of this variable cannot be changed` &#124; *název* `The name` `does not exist in the current context` &#124; *různých dalších zpráv*
 
- Toto okno se zprávou se zobrazí, když se pokusíte změnit obsah proměnné na neplatnou hodnotu v okně ladicího programu (automatické hodnoty, sledování nebo lokální windows) nebo dialogového okna rychlého kukátka. Například pokud se pokusíte nastavit hodnotu proměnnou celého čísla na řetězec znaků, zobrazí se toto okno se zprávou.
+ Toto okno se zprávou se zobrazí při pokusu o změnu obsahu proměnné na neplatnou hodnotu v okně ladicího programu (automatické, kukátko nebo v oknech Místní hodnoty) nebo v dialogovém okně QuickWatch. Například pokud se pokusíte nastavit hodnotu celočíselné proměnné na řetězec znaků, zobrazí se toto okno se zprávou.
 
 ## <a name="solution"></a>Řešení
- Ujistěte se, že vstup zadejte do okna ladicího programu nebo dialogového okna rychlého kukátka představuje platná hodnota pro proměnnou, kterou se pokoušíte nastavit.
+ Ujistěte se, že vstup zadaný do okna ladicího programu nebo do dialogového okna QuickWatch představuje platnou hodnotu pro proměnnou, kterou chcete nastavit.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Výrazy v ladicím programu](../debugger/expressions-in-the-debugger.md)

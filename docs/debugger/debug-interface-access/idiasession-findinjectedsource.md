@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findinjectedsource – | Dokumentace Microsoftu
+title: 'IDiaSession:: findInjectedSource | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bef903304e3892284fc38d9e2b2367ebfe650f4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5e2145c90c25c448880e51b9b394c7085e0d49b7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839339"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742261"
 ---
 # <a name="idiasessionfindinjectedsource"></a>IDiaSession::findInjectedSource
-Načte seznam zdrojů, který je umístěný do úložiště symbolů podle poskytovatele atributu ani jiné součásti procesu kompilace.
+Načte seznam zdrojů, které byly umístěny do úložiště symbolů podle zprostředkovatelů atributů nebo jiných komponent procesu kompilace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,15 +34,15 @@ HRESULT findInjectedSource ( 
 #### <a name="parameters"></a>Parametry
  srcFile
 
-[in] Název zdrojového souboru, který chcete vyhledat.
+pro Název zdrojového souboru, ve kterém se má hledat.
 
  ppResult
 
-[out] Vrátí [idiaenuminjectedsources –](../../debugger/debug-interface-access/idiaenuminjectedsources.md) objekt, který obsahuje seznam všech vloženého zdroje.
+mimo Vrátí objekt [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) , který obsahuje seznam všech vložených zdrojů.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

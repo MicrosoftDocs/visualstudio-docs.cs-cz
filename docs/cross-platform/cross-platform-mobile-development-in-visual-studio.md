@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e82828296234b13e36b7d3eabf071071ebb708d
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: 7d3df97bf8e180eae99e6ba27466fbde7a8466ad
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589021"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777767"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Vývoj mobilních aplikací pro různé platformy v aplikaci Visual Studio
 
@@ -33,7 +33,7 @@ S Visual Studio Tools pro Xamarin můžete cílit na Android, iOS a Windows ve s
 
 |**Víc se uč**|
 |--------------------|
-|[Instalace sady Visual Studio](http://visualstudio.microsoft.com/products/visual-studio-community-vs) (VisualStudio.com)|
+|[Instalace sady Visual Studio](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
 |[Další informace o Xamarin v aplikaci Visual Studio](https://visualstudio.microsoft.com/xamarin/) (VisualStudio.com)|
 |[Dokumentace pro vývoj mobilních aplikací Xamarin](/xamarin/) |
 |[DevOps s aplikacemi pro Xamarin](/xamarin/tools/ci/devops/) |
@@ -108,9 +108,9 @@ S Visual Studio Tools pro Xamarin můžete cílit na Android, iOS a Windows ve s
 
 |**Víc se uč**|
 |--------------------|
-|[Instalace sady Visual Studio](http://visualstudio.microsoft.com/products/visual-studio-community-vs) (VisualStudio.com)|
+|[Instalace sady Visual Studio](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
 |[Začínáme s Visual Studio Tools pro Apache Cordova](/visualstudio/cross-platform/tools-for-cordova/)|
-|[Další informace o emulátoru sady Visual Studio pro Android](http://visualstudio.microsoft.com/explore/msft-android-emulator-vs) (VisualStudio.com)|
+|[Další informace o emulátoru sady Visual Studio pro Android](https://visualstudio.microsoft.com/vs/msft-android-emulator/) (VisualStudio.com)|
 
 ::: moniker-end
 
@@ -140,7 +140,7 @@ S Visual Studio Tools pro Xamarin můžete cílit na Android, iOS a Windows ve s
 
 |**Víc se uč**|
 |--------------------|
-|[Stažení sady Visual Studio](http://visualstudio.microsoft.com/products/visual-studio-community-vs) (VisualStudio.com)|
+|[Stažení sady Visual Studio](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
 |[Instalace vývoje mobilních aplikací pro různé platformy pomocíC++](install-visual-cpp-for-cross-platform-mobile-development.md)|
 |[Další informace o použití C++ pro cílení na více platforem](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) (VisualStudio.com)|
 |[Nainstalujte, co potřebujete, a pak vytvořte nativní aplikaci aktivity pro Android.](create-an-android-native-activity-app.md)|
@@ -163,10 +163,10 @@ S Visual Studio Tools pro Xamarin můžete cílit na Android, iOS a Windows ve s
 |[Přečtěte si další informace o Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) |
 |[Začněte používat Visual Studio Tools for Unity](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) |
 |[Přečtěte si o nejnovějších vylepšeních nástroje Visual Studio Tools for Unity 2,0 Preview](https://devblogs.microsoft.com/visualstudio/visual-studio-tools-for-unity-2-0-preview/) (blog sady Visual Studio).|
-|[Podívejte se na video Úvod do verze Visual Studio Tools for Unity 2,0 Preview](http://www.bing.com/videos/search?q=visual+studio+tools+for+unity&qs=n&form=QBVLPG&pq=visual+studio+tools+for+unity&sc=6-29&sp=-1&sk=#view=detail&mid=0A13177F0BC7463A24080A13177F0BC7463A2408) (video).|
-|[Informace o Unity](http://unity3d.com/) (Web Unity)|
+|[Podívejte se na video Úvod do verze Visual Studio Tools for Unity 2,0 Preview](https://www.bing.com/videos/search?q=visual+studio+tools+for+unity&qs=n&form=QBVLPG&pq=visual+studio+tools+for+unity&sc=6-29&sp=-1&sk=#view=detail&mid=0A13177F0BC7463A24080A13177F0BC7463A2408) (video).|
+|[Informace o Unity](https://unity.com/) (Web Unity)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přidání rozhraní API Office 365 do projektu sady Visual Studio](https://docs.microsoft.com/office/developer-program/office-365-developer-program)
 - [Azure App Services – Mobile Apps](https://azure.microsoft.com/services/app-service/mobile/)

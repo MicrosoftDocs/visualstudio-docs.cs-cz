@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_unmodifiedTypeId | Microsoft Docs
+title: 'IDiaSymbol:: get_unmodifiedTypeId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99d549a0edc56d48d686424c35f22fc7ea74438b
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 49cf159501e3f582010d514a586151e0626fc8f7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62841182"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738974"
 ---
-# <a name="idiasymbolgetunmodifiedtypeid"></a>IDiaSymbol::get_unmodifiedTypeId
-Načte ID typu původní (bez úprav).
+# <a name="idiasymbolget_unmodifiedtypeid"></a>IDiaSymbol::get_unmodifiedTypeId
+Načte ID původního (neupraveného) typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,10 +30,10 @@ HRESULT get_unmodifiedTypeId(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Ukazatel `DWORD` obsahující ID.
+mimo Ukazatel na `DWORD`, který obsahuje ID.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

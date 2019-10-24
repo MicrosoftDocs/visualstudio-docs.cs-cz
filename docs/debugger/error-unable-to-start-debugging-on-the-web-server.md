@@ -26,12 +26,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 706a20a00792e7c67b39535322fbd2530f2a2ad3
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: c976f14a4250741d166c189c53a1b8cae8ea891a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72588997"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736709"
 ---
 # <a name="error-unable-to-start-debugging-on-the-web-server"></a>Chyba: Nepodařilo se zahájit ladění na webovém serveru.
 
@@ -161,5 +161,5 @@ Pokud konfigurace služby IIS problém nezpůsobuje, zkuste provést následují
 
     Pokud nemůžete získat aplikaci pro práci s ladicím programem, zkuste vytvořit základní aplikaci ASP.NET místně na serveru a zkusit ladit základní aplikaci. (Možná budete chtít použít výchozí šablonu ASP.NET MVC.) Pokud můžete ladit základní aplikaci, která vám může pomáhat zjistit, jaké jsou rozdíly mezi těmito dvěma konfiguracemi. Vyhledejte rozdíly v nastaveních v souboru Web. config, jako jsou například pravidla pro přepis adres URL.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasegment::get_addresssection – | Dokumentace Microsoftu
+title: 'IDiaSegment:: get_addressSection | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e098f1e2367395f201abf6f44554f1699400b12
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e9114a1d97dc9c25aa9c2bfe84dc96b63051b92d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827799"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742442"
 ---
-# <a name="idiasegmentgetaddresssection"></a>IDiaSegment::get_addressSection
-Získá číslo oddílu, který se mapuje na tento segment.
+# <a name="idiasegmentget_addresssection"></a>IDiaSegment::get_addressSection
+Načte číslo oddílu, které je mapováno na tento segment.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_addressSection ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí číslo oddílu, který se mapuje na tento segment.
+mimo Vrátí číslo oddílu, který se mapuje na tento segment.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

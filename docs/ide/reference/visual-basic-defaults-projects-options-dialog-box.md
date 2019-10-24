@@ -14,12 +14,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 64641ebf47e5a5c91b7e20f1ddafe9490649ec9a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d9e260bc6d290729ae470ca906e9ab5c3d219112
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72622389"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748567"
 ---
 # <a name="visual-basic-defaults-projects-options-dialog-box"></a>Výchozí možnosti jazyka Visual Basic, projekty, dialogové okno Možnosti
 Určuje výchozí nastavení pro Visual Basic možnosti projektu. Při vytvoření nového projektu budou zadané příkazy Option přidány do záhlaví projektu v editoru kódu. Možnosti platí pro všechny projekty Visual Basic.
@@ -42,6 +42,6 @@ Nastaví výchozí kompilátor pro porovnávání řetězců: binární (rozliš
 
 Nastaví výchozí kompilátor pro odvození lokálního typu. Ve výchozím nastavení je **možnost odvozování** u nově vytvořených projektů **a u migrovaných** projektů vytvořených v dřívějších verzích Visual Basic nastavena na hodnotu **zapnuto** . Další informace najdete v tématu [/optioninfer](/dotnet/visual-basic/reference/command-line-compiler/optioninfer).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Řešení a projekty](../../ide/solutions-and-projects-in-visual-studio.md)

@@ -16,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b61147467ff27ec8b69e1a2fddfcd00138065fa
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: 2a92daf09f033da020fe54369a20483686c72f81
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589060"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72730422"
 ---
 # <a name="debug-javascript-using-the-console-in-visual-studio"></a>Ladění JavaScriptu pomocí konzoly v aplikaci Visual Studio
 
@@ -249,7 +249,7 @@ Následující ilustrace znázorňuje cílový seznam v okně konzoly JavaScript
 
 Kontext spuštění můžete také přepnout pomocí příkazu `cd`, ale je nutné znát název dalšího kontextu spuštění a odkaz, který použijete, musí být v oboru. **Cílový** seznam poskytuje lepší přístup k dalším kontextům spuštění.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění aplikací v sadě Visual Studio](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)
 - [Příkazy konzoly jazyka JavaScript](../debugger/javascript-console-commands.md?view=vs-2017)
 - [Aktualizace aplikace (JavaScript)](../debugger/refresh-an-app-javascript.md)

@@ -1,5 +1,5 @@
 ---
-title: Sccpopulatedirlist – funkce | Dokumentace Microsoftu
+title: Funkce SccPopulateDirList | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9a6508b8cfde2f08eb40201973fec899ee11956b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f13c674e6374e826dc45343e5cd1f7edcc1f8100
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353552"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720899"
 ---
 # <a name="sccpopulatedirlist-function"></a>SccPopulateDirList – funkce
-Tato funkce určuje, které adresářů a (volitelně) souborů jsou uložené ve správě zdrojového kódu v daném seznamu adresáře ke kontrole.
+Tato funkce určuje, které adresáře a (volitelně) soubory jsou uloženy ve správě zdrojového kódu s uvedením seznamu adresářů k prohlédnutí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,40 +38,40 @@ SCCRTN SccPopulateDirList(
 #### <a name="parameters"></a>Parametry
  pContext
 
-[in] Ukazatel kontext modulu plug-in zdroje ovládacího prvku.
+pro Ukazatel kontextu modulu plug-in správy zdrojových kódů.
 
  nDirs
 
-[in] Počet cesty k adresářům v `lpDirPaths` pole.
+pro Počet cest k adresáři v poli `lpDirPaths`.
 
  lpDirPaths
 
-[in] Pole cesty k adresářům prozkoumat.
+pro Pole cest adresářů k prohlédnutí
 
  pfnPopulate
 
-[in] Funkce zpětného volání volat pro každou cestu k adresáři a (volitelně) název souboru v `lpDirPaths` (viz [POPDIRLISTFUNC](../extensibility/popdirlistfunc.md) podrobnosti).
+pro Funkce zpětného volání, která se má zavolat pro každou cestu k adresáři a název souboru (volitelně) v `lpDirPaths` (podrobnosti najdete v [POPDIRLISTFUNC](../extensibility/popdirlistfunc.md) ).
 
  pvCallerData
 
-[in] Hodnota, která má být předán funkci zpětného volání beze změny.
+pro Hodnota, která má být předána beze změny funkci zpětného volání.
 
  fOptions
 
-[in] Kombinace hodnot, které řídí, jak se zpracovávají v adresářích (naleznete v části "PopulateDirList flags" [příznaky Bitflag používané konkrétními příkazy](../extensibility/bitflags-used-by-specific-commands.md) možných hodnot).
+pro Kombinace hodnot, které řídí zpracování adresářů (viz část "příznaky PopulateDirList" v [Bitflags používané konkrétními příkazy](../extensibility/bitflags-used-by-specific-commands.md) pro možné hodnoty).
 
 ## <a name="return-value"></a>Návratová hodnota
- Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
 |SCC_OK|Operace se úspěšně dokončila.|
 |SCC_E_UNKNOWNERROR|Došlo k chybě.|
 
 ## <a name="remarks"></a>Poznámky
- Pouze těch adresářů a (volitelně) názvy souborů, které jsou ve skutečnosti v úložišti správy zdrojů, jsou předány funkci zpětného volání.
+ Funkci zpětného volání předávají pouze ty adresáře a (volitelně) názvy souborů, které jsou ve skutečnosti v úložišti správy zdrojů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)
 - [Příznaky bitflag používané konkrétními příkazy](../extensibility/bitflags-used-by-specific-commands.md)
 - [POPDIRLISTFUNC](../extensibility/popdirlistfunc.md)

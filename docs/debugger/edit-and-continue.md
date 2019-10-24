@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f11a170878e3efefc123ad7d61d0889f5bd95c12
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 2accfed995415a508a47e492837ded7acea150d7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72435726"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737885"
 ---
 # <a name="edit-code-and-continue-debugging-in-visual-studio-c-vb-c"></a>Úprava kódu a pokračování v ladění v aplikaci VisualC#Studio (, C++VB,)
 Funkce upravit a pokračovat je funkcí pro ukládání času, která umožňuje provádět změny zdrojového kódu v době, kdy je program v režimu pozastavení. Když budete pokračovat v provádění programu tak, že vyberete příkaz pro spuštění, například **pokračovat** nebo **Krok**, upravit a pokračovat automaticky aplikuje změny kódu s některými omezeními. To vám umožňuje provádět změny v kódu během relace ladění, namísto nutnosti zastavit, znovu kompilovat celý program a restartovat ladicí relaci.
@@ -45,7 +45,7 @@ Funkce upravit a pokračovat je funkcí pro ukládání času, která umožňuje
 
  [Nepodporovaná operace Upravit a pokračovat v F#](../debugger/edit-and-continue-not-supported-for-f-hash.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Upravit a pokračovat, ladění, dialogové okno Možnosti](https://msdn.microsoft.com/library/bcew296c.aspx)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

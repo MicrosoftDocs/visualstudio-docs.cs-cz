@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e38123be6b780aa9f37dc2b329ec36e3f18e793
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: b93c9cfa6767aea83d941cbc8684b27517c8f911
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72430579"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72729552"
 ---
 # <a name="supported-code-changes-c"></a>Podporované změny kódu (C++)
 Upravit a pokračovat pro C++ projekty zpracovává většinu typů změn kódu. V průběhu provádění programu však nelze některé změny použít. Chcete-li tyto změny použít, je nutné zastavit provádění a vytvořit novou verzi kódu.
@@ -136,5 +136,5 @@ Upravit a pokračovat pro C++ projekty zpracovává většinu typů změn kódu.
 ## <a name="BKMK_IDL_Attribute_Limitations"></a>Omezení atributů IDL
  Upravit a pokračovat negeneruje znovu negenerované soubory definice rozhraní (IDL). Proto se změny atributů IDL nebudou odrazit při ladění. Chcete-li zobrazit výsledek změn atributů IDL, je nutné zastavit ladění a znovu sestavit aplikaci. Upravit a pokračovat negeneruje chybu nebo upozornění, pokud se změnily atributy IDL. Další informace naleznete v tématu [IDL – atributy](/cpp/windows/idl-attributes).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Upravit a pokračovat (C++)](../debugger/edit-and-continue-visual-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_code – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_code | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4616751a6d0e78a1d27afb1e3553109cd82d3ec7
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 6ec15cd164c1d7e3741d79d359bcef66cf6119a3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64793927"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740845"
 ---
-# <a name="idiasymbolgetcode"></a>IDiaSymbol::get_code
-Získá příznak, který určuje, zda symbol odkazuje na adresu kódu.
+# <a name="idiasymbolget_code"></a>IDiaSymbol::get_code
+Načte příznak, který určuje, zda symbol odkazuje na adresu kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,20 +33,20 @@ HRESULT get_code ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` Pokud symbol se odkazuje na adresu kódu, v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud symbol odkazuje na adresu kódu, jinak vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|V7.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

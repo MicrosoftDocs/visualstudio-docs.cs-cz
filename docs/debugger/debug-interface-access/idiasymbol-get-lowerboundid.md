@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_lowerboundid – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_lowerBoundId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d0e84f50ce73fded7809478441e88649ff4f1d82
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 8d3685512521d5fc919f4c9b1752a039ae1085bc
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64802153"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739825"
 ---
-# <a name="idiasymbolgetlowerboundid"></a>IDiaSymbol::get_lowerBoundId
-Načte identifikátor symbol dolní mez pole dimenze až po FORTRAN.
+# <a name="idiasymbolget_lowerboundid"></a>IDiaSymbol::get_lowerBoundId
+Načte identifikátor symbolu dolní meze dimenze pole FORTRAN.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,16 +33,16 @@ HRESULT get_lowerBoundId ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí ID symbol, který představuje dolní mez pole dimenze až po FORTRAN symbolu.
+mimo Vrátí ID symbolu symbolu, který představuje dolní mez dimenze pole FORTRAN.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Identifikátor je jedinečná hodnota vytvořené DIA SDK označit všechny symboly jako jedinečný.
+ Identifikátor je jedinečná hodnota vytvořená DIA SDK k označení všech symbolů jako jedinečných.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

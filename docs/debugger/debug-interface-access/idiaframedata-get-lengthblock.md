@@ -1,5 +1,5 @@
 ---
-title: Idiaframedata::get_lengthblock – | Dokumentace Microsoftu
+title: 'IDiaFrameData:: get_lengthBlock | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 468e3bee84c7312def06c32cb411c00526ba3b1d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: da5b175c7e51e5ee8aaab29788f71219091d26f0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832858"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743580"
 ---
-# <a name="idiaframedatagetlengthblock"></a>IDiaFrameData::get_lengthBlock
-Načte délku v bajtech, bloku kódu popsal rámce.
+# <a name="idiaframedataget_lengthblock"></a>IDiaFrameData::get_lengthBlock
+Načte délku bloku kódu popsaného rámcem v bajtech.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,14 +33,14 @@ HRESULT get_lengthBlock ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí počet bajtů kódu v rámci.
+mimo Vrátí počet bajtů kódu v rámci.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Hodnota vrácená touto metodou se obvykle používá při interpretaci řetězec programu (najdete v článku [idiaframedata::get_program –](../../debugger/debug-interface-access/idiaframedata-get-program.md) metodu pro definici řetězce program).
+ Hodnota vrácená touto metodou se obvykle používá ve výkladu řetězce programu (viz metoda [IDiaFrameData:: get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) pro definici řetězce programu).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [IDiaFrameData::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md)

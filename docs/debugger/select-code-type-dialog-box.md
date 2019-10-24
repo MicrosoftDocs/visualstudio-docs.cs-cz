@@ -1,5 +1,5 @@
 ---
-title: Kód typu dialogové okno Vybrat | Dokumentace Microsoftu
+title: Dialogové okno vybrat typ kódu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,20 +21,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 16091b8743a30404560a1bf841710f65ad1343a3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 761845044bae9b35694bef53cae36dd64f3dd6ba
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929773"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72729582"
 ---
 # <a name="select-code-type-dialog-box"></a>Dialogové okno Vybrat typ kódu
-Chcete-li otevřít toto dialogové okno, otevřete **připojit k procesu** dialogové okno a pak klikněte na tlačítko **vyberte** tlačítko.
+Chcete-li otevřít toto dialogové okno, otevřete dialogové okno **připojit k procesu** a pak klikněte na tlačítko **Vybrat** .
 
- **Automaticky určit typ kódu k ladění** příslušná ladicího programu vybere podle druhu kódu, na kterém běží.
+ **Automaticky určit typ kódu pro ladění** Příslušný ladicí program se vybere na základě druhu kódu, na kterém je spuštěný.
 
- **Ladit tyto typy kódu:** V seznamu vyberte typ kódu, který chcete ladit.
+ **Ladit tyto typy kódu:** Z poskytnutého seznamu vyberte typ kódu, který chcete ladit.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Připojení ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_oemsymbolid – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_oemSymbolId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f0a08b29c3d1dae8b79650f450faaf8b9e1d452a
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 60d1486ba654ddba9fdd1dae6439cafbb1f81f29
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64830778"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739598"
 ---
-# <a name="idiasymbolgetoemsymbolid"></a>IDiaSymbol::get_oemSymbolId
-Načte hodnotu ID symbol výrobce OEM (OEM).
+# <a name="idiasymbolget_oemsymbolid"></a>IDiaSymbol::get_oemSymbolId
+Načte hodnotu ID symbolu OEM (Original Equipment Manufacturer).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,19 +33,19 @@ HRESULT get_oemSymbolId ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí interně přiřazené výrobce OEM symbol ID.
+mimo Vrátí interně přiřazené ID symbolu OEM.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Identifikátor je jedinečná hodnota vytvořené DIA SDK označit všechny symboly jako jedinečný.
+ Identifikátor je jedinečná hodnota vytvořená DIA SDK k označení všech symbolů jako jedinečných.
 
- Tato vlastnost se týká jenom pro symboly s [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) typ `SymTagCustomType`.
+ Tato vlastnost se vztahuje pouze na symboly s typem [výčtu symtagenum –](../../debugger/debug-interface-access/symtagenum.md) `SymTagCustomType`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)

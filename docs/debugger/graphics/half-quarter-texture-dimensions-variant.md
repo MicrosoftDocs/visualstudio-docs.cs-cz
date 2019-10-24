@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 620300d1727adc41d5655bd33dde87ad592bba1c
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: f4c82836f5a80fae421a30721d8c3ee4c3d6893d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252979"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72735398"
 ---
 # <a name="halfquarter-texture-dimensions-variant"></a>Varianta polovičních/čtvrtinových dimenzí textury
 Zmenší Rozměry textury u textur, které nejsou cílem vykreslování.
@@ -28,7 +28,7 @@ Zmenší Rozměry textury u textur, které nejsou cílem vykreslování.
  Pokud vaše textury zabírají více paměti GPU, než je k dispozici, zvažte zmenšení velikosti textur, ale pouze po zvážení komprimace příslušných textur. Podobně jako menší textury, komprimované textury zabírají méně paměti a omezují nutnost stránkování na systémovou paměť, ale jejich věrnost barvy je omezená. Komprese není vhodná pro všechny textury, v závislosti na jejich obsahu – například ty, které mají významnou variaci barev v malé oblasti – ale u mnoha textur může komprese zachovat lepší celkovou kvalitu obrazu než zmenšení jejich velikosti.
 
 ## <a name="remarks"></a>Poznámky
- Při každém volání `ID3D11Device::CreateTexture2D` , které vytváří zdrojovou texturu, se zmenší Rozměry textury. Konkrétně jsou zmenšeny Rozměry textury, pokud předaný objekt D3D11_TEXTURE2D_DESC `pDesc` v popisuje texturu, která je použita v vykreslování; to je:
+ Při každém volání `ID3D11Device::CreateTexture2D`, který vytváří zdrojovou texturu, se zmenší Rozměry textury. Konkrétně jsou zmenšeny Rozměry textury, pokud předaný objekt D3D11_TEXTURE2D_DESC v `pDesc` popisuje texturu, která je použita při vykreslování; To je:
 
 - Člen BindFlags má pouze nastavený příznak D3D11_BIND_SHADER_RESOURCE.
 
@@ -43,6 +43,6 @@ Zmenší Rozměry textury u textur, které nejsou cílem vykreslování.
 ## <a name="example"></a>Příklad
  Tato varianta mění textury v době běhu před voláním `CreateTexture2D`. Doporučujeme před tímto přístupem k produkčnímu kódu, protože textury pro celou velikost spotřebovávají více místa na disku a protože další krok může prodloužit dobu načítání ve vaší aplikaci – zejména u komprimovaných textur, které vyžadují významné výpočetní prostředí. prostředky ke kódování. Místo toho doporučujeme, abyste své textury změnili offline pomocí editoru obrázků nebo procesoru obrázků, který je součástí vašeho kanálu sestavení. Tyto přístupy omezují požadavky na místo na disku a odstraňují režii za běhu ve vaší aplikaci a poskytují větší dobu zpracování, abyste si mohli při zmenšování nebo komprimaci textur zachovat nejlepší kvalitu obrazu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Varianta generování mipmap](mip-map-generation-variant.md)
 - [Varianta komprese textur BC](bc-texture-compression-variant.md)

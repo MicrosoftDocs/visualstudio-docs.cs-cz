@@ -1,5 +1,5 @@
 ---
-title: Funkce háku sestavy | Dokumentace Microsoftu
+title: Funkce zavěšení sestav | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -23,30 +23,30 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f2723304fe22af9ae2920ff828c953de9347449
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a0bb14b47fb17c4d59089aafa123115b85ab9342
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62902681"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72729861"
 ---
 # <a name="report-hook-functions"></a>Sestava funkcí háku
-Funkce háku sestavy, nainstalovat pomocí [_CrtSetReportHook](/cpp/c-runtime-library/reference/crtsetreporthook), je volána pokaždé, když [_CrtDbgReport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) generuje sestavu ladění. Můžete použít, mimo jiné pro filtrování sestav a zaměřte se na konkrétní typy přidělení. Funkce háku sestavy by měl mít prototyp vypadat asi takto:
+Funkce zavěšení sestav, která je nainstalována pomocí [_CrtSetReportHook](/cpp/c-runtime-library/reference/crtsetreporthook), se volá pokaždé, když [_CrtDbgReport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) vygeneruje sestavu ladění. Můžete ho využít mimo jiné k filtrování sestav, abyste se mohli zaměřit na konkrétní typy přidělení. Funkce zavěšení sestav by měla mít prototyp podobný následujícímu:
 
 ```cpp
 int YourReportHook(int nRptType, char *szMsg, int *retVal);
 ```
 
- Ukazatel, který můžete předat **_CrtSetReportHook** je typu **_crt_report_hook –**, jak jsou definovány v CRTDBG. V:
+ Ukazatel, který předáte do **_CrtSetReportHook** , je typu **_CRT_REPORT_HOOK**, jak je definováno v souboru Crtdbg. Y
 
 ```cpp
 typedef int (__cdecl *_CRT_REPORT_HOOK)(int, char *, int *);
 ```
 
- Při volání funkce háku, knihovny run-time *nRptType* argument obsahuje kategorie sestavy (**_CRT_WARN**, **_CRT_ERROR**, nebo **_CRT _ASSERT**), *szMsg* obsahuje ukazatel na řetězec zprávy sestaveném sestavy a *retVal* Určuje, zda `_CrtDbgReport` by měla pokračovat normální spuštění Po vygenerování sestavy nebo spuštění ladicího programu. (A *retVal* nulová hodnota pokračuje v provádění kódu, spustí ladicí program hodnotu 1.)
+ Když knihovna run-time volá vaši funkci vidlice, argument *nRptType* obsahuje kategorii sestavy ( **_CRT_WARN**, **_CRT_ERROR**nebo **_CRT_ASSERT**), *szMsg* obsahuje ukazatel na plně sestavenou sestavu. řetězec zprávy a *retval* určuje, zda má `_CrtDbgReport` pokračovat v normálním provádění po vygenerování sestavy nebo spuštění ladicího programu. (Hodnota *retval* 0 pokračuje v provádění, hodnota 1 spustí ladicí program.)
 
- Pokud volání má na starosti dotyčný zpráva úplně, tak, aby další vykazování se nevyžaduje, měla by vrátit **TRUE**. Vrátí-li **FALSE**, `_CrtDbgReport` bude sestava zprávy normálně.
+ Pokud se tato zpráva zachytí úplně, takže se nevyžaduje žádné další hlášení, měla by vrátit **hodnotu true**. Pokud vrátí **hodnotu false**, bude zpráva normálně hlásit `_CrtDbgReport`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zápis funkce volání pro ladění](../debugger/debug-hook-function-writing.md)
 - [Ukázka crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2)

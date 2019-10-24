@@ -1,5 +1,5 @@
 ---
-title: IDebugPort2::GetPortName | Dokumentace Microsoftu
+title: 'IDebugPort2:: GetPort | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a2b058466608597656641a013a4dea0c1bc5716f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0a382a77693fc8839721c0cdd139af2dd5208c69
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66343753"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72727727"
 ---
 # <a name="idebugport2getportname"></a>IDebugPort2::GetPortName
 Získá název portu.
@@ -41,10 +41,10 @@ int GetPortName( 
 
 ## <a name="parameters"></a>Parametry
 `pbstrName`\
-[out] Vrátí název portu.
+mimo Vrátí název portu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

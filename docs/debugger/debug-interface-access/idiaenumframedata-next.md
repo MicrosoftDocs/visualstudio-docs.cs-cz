@@ -1,5 +1,5 @@
 ---
-title: Idiaenumframedata::Next – | Dokumentace Microsoftu
+title: 'IDiaEnumFrameData:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 55875d4ad964b958bf2fb38d259e7d4d68909cb5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6fe478e503ed6e16ee570f309f91434c658ebd27
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830102"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744603"
 ---
 # <a name="idiaenumframedatanext"></a>IDiaEnumFrameData::Next
-Načte zadaný počet snímků datové prvky v pořadí výčtu.
+Načte zadaný počet prvků dat rámce v sekvenci výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,19 +35,19 @@ HRESULT Next ( 
 #### <a name="parameters"></a>Parametry
  celt
 
-[in] Počet datových elementů rámce v enumerátor, který se má načíst.
+pro Počet datových elementů rámce ve výčtu, který má být načten.
 
  rgelt
 
-[out] Pole [idiaframedata –](../../debugger/debug-interface-access/idiaframedata.md) objekty vyplní rámce požadované datové prvky.
+mimo Pole objektů [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) , které se mají vyplnit požadovanými datovými prvky rámce.
 
  pceltFetched
 
-[out] Vrátí počet prvků rámce dat načtených enumerátor.
+mimo Vrátí počet datových elementů rámce v načteném enumerátoru.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další záznamy. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud nejsou k dispozici žádné další záznamy. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

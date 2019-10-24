@@ -1,5 +1,5 @@
 ---
-title: IDiaEnumSymbolsByAddr::symbolByVA | Microsoft Docs
+title: 'IDiaEnumSymbolsByAddr:: symbolByVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a0b97b30b6f19e367cfbae72be29b6d8961f4e1a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: baf1fc45b69007d3fbe2393ec854ead447fac259
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833411"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743808"
 ---
 # <a name="idiaenumsymbolsbyaddrsymbolbyva"></a>IDiaEnumSymbolsByAddr::symbolByVA
-Pozice výčtu pomocí provádí vyhledávání podle virtuální adresy (VA).
+Pozice čítače provádí vyhledáváním pomocí virtuální adresy (VA).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,15 +34,15 @@ HRESULT symbolByVA ( 
 #### <a name="parameters"></a>Parametry
  virtualAddress
 
-[in] Virtuální adresa.
+pro Virtuální adresa.
 
  ppsymbol
 
-[out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt představující symbol nalezen.
+mimo Vrátí objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) představující nalezený symbol.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud symbol se nenašel. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud symbol nebyl nalezen. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

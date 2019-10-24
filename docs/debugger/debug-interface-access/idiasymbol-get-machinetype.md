@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_machinetype – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_machineType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eef0507ccb7036748f5c9d36c9de521a17860a39
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 5ea9f5762e265b2892a906060a430db03f7b7d67
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67032727"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739840"
 ---
-# <a name="idiasymbolgetmachinetype"></a>IDiaSymbol::get_machineType
-Načte typ cíle procesoru.
+# <a name="idiasymbolget_machinetype"></a>IDiaSymbol::get_machineType
+Načte typ cílového procesoru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,14 +33,14 @@ HRESULT get_machineType ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí hodnotu z [IMAGE_FILE_MACHINE_ konstanty](/windows/desktop/SysInfo/image-file-machine-constants) , který určuje cílový typ procesoru.
+mimo Vrací hodnotu z [konstant IMAGE_FILE_MACHINE_](/windows/desktop/SysInfo/image-file-machine-constants) , které určují typ cílového procesoru.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také
-- [IMAGE_FILE_MACHINE_ konstanty](/windows/desktop/SysInfo/image-file-machine-constants) 
+## <a name="see-also"></a>Viz také:
+- [Konstanty IMAGE_FILE_MACHINE_](/windows/desktop/SysInfo/image-file-machine-constants) 
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

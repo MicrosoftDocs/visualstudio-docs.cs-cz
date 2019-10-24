@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Nelze se připojit k serveru SQL Server na vzdáleném počítači | Dokumentace Microsoftu'
+title: 'Chyba: Nelze se připojit k SQL Server na vzdáleném počítači | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -15,19 +15,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4038f1f65d688ee8d9bbf9ad01eb1698b811bee5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1ecee2a2dbf7c849549ed6f5e844714cbb88bfda
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850115"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736825"
 ---
-# <a name="error-unable-to-connect-to-sql-server-on-remote-machine"></a>Chyba: Na vzdáleném počítači se nepodařilo připojit k SQL Serveru.
-Nelze se připojit k serveru SQL Server na vzdáleném počítači *název*. Přístup se odepřel. Ověřte, že máte nainstalovanou vzdáleného ladícího programu na vzdáleném počítači. Pokud vzdálený počítač není připojen k doméně, nebo pokud Visual Studio běží jako místní účet, vzdálený počítač musí mít účet se stejným uživatelským jménem a heslem jako místní účet.
+# <a name="error-unable-to-connect-to-sql-server-on-remote-machine"></a>Chyba: Nepodařilo se připojit k serveru SQL Server na vzdáleném počítači.
+Nelze se připojit k SQL Server v *názvu*vzdáleného počítače. Přístup byl odepřen. Ověřte, zda je na vzdáleném počítači nainstalován vzdálený ladicí program. Pokud vzdálený počítač není v doméně nebo pokud je Visual Studio spuštěno jako místní účet, musí mít vzdálený počítač účet se stejným uživatelským jménem a heslem jako místní účet.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-- Zobrazit [vzdálené ladění](../debugger/remote-debugging.md).
+- Viz téma [vzdálené ladění](../debugger/remote-debugging.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění SQL](/previous-versions/visualstudio/visual-studio-2010/zefbf0t6(v=vs.100))

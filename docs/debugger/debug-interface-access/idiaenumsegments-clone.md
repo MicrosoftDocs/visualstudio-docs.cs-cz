@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsegments::clone – | Dokumentace Microsoftu
+title: 'IDiaEnumSegments:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9992b17155601284387981a9b424a77d3d9b5580
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cd169ac890fa9f86d4eaa0e121da3f2c1387db2f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829664"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744230"
 ---
 # <a name="idiaenumsegmentsclone"></a>IDiaEnumSegments::Clone
-Vytvoří čítač, který obsahuje stejného stavu jako aktuální enumerátor výčtu.
+Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT Clone ( 
 #### <a name="parameters"></a>Parametry
  ppenum
 
-[out] Vrátí [idiaenumsegments –](../../debugger/debug-interface-access/idiaenumsegments.md) objekt, který obsahuje duplicitní čítače výčtu. Segmenty nejsou duplicitní, pouze enumerátor.
+mimo Vrátí objekt [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md) , který obsahuje duplikát objektu Enumerator. Segmenty nejsou duplikovány, pouze enumerátor.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)

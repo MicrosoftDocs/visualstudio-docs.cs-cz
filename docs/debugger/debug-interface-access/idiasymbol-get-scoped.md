@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_scoped – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_scoped | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c9c4864f09c4e66bada76f9d9b058c7d3660c96
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 862fa147b5f157760a93631d0e2c8addbd3bd1f2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64790282"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739375"
 ---
-# <a name="idiasymbolgetscoped"></a>IDiaSymbol::get_scoped
-Získá příznak, který určuje, zda uživatelský datový typ se zobrazí v neglobální lexikálním oboru.
+# <a name="idiasymbolget_scoped"></a>IDiaSymbol::get_scoped
+Načte příznak, který určuje, zda se uživatelsky definovaný datový typ zobrazuje v neglobálním lexikálním oboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_scoped ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` Pokud uživatelský datový typ se zobrazí v neglobální lexikální rozsah; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud se uživatelsky definovaný datový typ zobrazuje v neglobálním lexikálním oboru; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Pracovní proces webu byl ukončen službou IIS | Dokumentace Microsoftu'
+title: 'Chyba: pracovní proces webu byl ukončen službou IIS | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -14,47 +14,47 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d89eabec0c199b1b8df7eeb78d0e629d4a70b2e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3231c8ba2835fb535d538e29ef7df7ea3d1c4a8a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62849998"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736357"
 ---
 # <a name="error-web-site-worker-process-has-been-terminated-by-iis"></a>Chyba: Pracovní proces webu byl ukončen službou IIS.
-Ladicí program zastavení provádění kódu na webu. Internetové informační služby (IIS) předpokládat, že má pracovní proces přestal reagovat. příčinou. Proto služba IIS byla ukončena pracovního procesu.
+Ladicí program zastavil provádění kódu na webu. To způsobilo Internetová informační služba (IIS), aby se předpokládalo, že pracovní proces přestal reagovat. Proto služba IIS ukončila pracovní proces.
 
- Chcete-li pokračovat v ladění, je nutné nakonfigurovat služby IIS umožňující pracovního procesu, abyste mohli pokračovat. Tato chybová zpráva se nezobrazí ve verzích služby IIS, která jsou starší než IIS 7.
+ Chcete-li pokračovat v ladění, je nutné nakonfigurovat službu IIS tak, aby bylo možné pokračovat v pracovním procesu. Tato chybová zpráva se nezobrazí s verzemi služby IIS, které jsou starší než služba IIS 7.
 
-### <a name="to-configure-iis-7-to-allow-the-worker-process-to-continue"></a>Ke konfiguraci služby IIS 7 umožňuje pracovního procesu pokračovat
+### <a name="to-configure-iis-7-to-allow-the-worker-process-to-continue"></a>Konfigurace IIS 7, aby bylo možné pokračovat v pracovním procesu
 
-1. Otevřít **nástroje pro správu** okna.
+1. Otevřete okno **Nástroje pro správu** .
 
-   1. Klikněte na tlačítko **Start**a klikněte na tlačítko **ovládací panely**.
+   1. Klikněte na tlačítko **Start**a poté na příkaz **Ovládací panely**.
 
-   2. V **ovládací panely**, zvolte **přepnout do klasického zobrazení**, v případě potřeby a potom dvakrát klikněte na panel **nástroje pro správu**.
+   2. V **Ovládacích panelech**zvolte **přepínač přepnout do klasického zobrazení**, v případě potřeby a dvakrát klikněte na položku **Nástroje pro správu**.
 
-2. V **nástroje pro správu** okna, dvakrát klikněte na panel **Správce Internetové informační služby (IIS)**.
+2. V okně **Nástroje pro správu** poklikejte na **Správce služby Internetová informační služba (IIS)** .
 
-    Otevře se Správce služby IIS.
+    Spustí se správce služby IIS.
 
-3. V **připojení** podokně rozbalte \<název počítače > uzel v případě potřeby.
+3. V podokně **připojení** rozbalte \<computer název > uzel v případě potřeby.
 
-4. V části \<název počítače > uzel, klikněte na tlačítko **fondy aplikací**.
+4. Pod uzlem \<computer název > klikněte na **fondy aplikací**.
 
-5. V **fondy aplikací** seznamu, klikněte pravým tlačítkem na název fondu vaše aplikace spuštěná v a pak klikněte na tlačítko **Upřesnit nastavení**.
+5. V seznamu **fondy aplikací** klikněte pravým tlačítkem na název fondu, ve kterém je aplikace spuštěná, a pak klikněte na **Upřesnit nastavení**.
 
-6. V **Upřesnit nastavení** dialogové okno vyhledejte **Model procesu** části a proveďte jednu z následujících akcí:
+6. V dialogovém okně **Upřesnit nastavení** vyhledejte část **model procesu** a proveďte jednu z následujících akcí:
 
-   - Nastavte **povolený příkaz Ping** k **False**.
+   - Nastavte možnost **pøíkazového testu** na **hodnotu NEPRAVDA**.
 
-   - Nastavte **maximální prodleva příkazu Ping** na hodnotu, která je větší než 90 sekund.
+   - Nastavte **maximální dobu odezvy nástroje test** na hodnotu, která je větší než 90 sekund.
 
-     Nastavení **povolený příkaz Ping** k **False** zabraňuje kontroluje, zda pracovní proces je pořád spuštěný a zachová pracovní proces aktivní, dokud jej nezastavíte laděného procesu služby IIS. Nastavení **maximální prodleva příkazu Ping** velké hodnoty umožňuje pokračovat v monitorování pracovní proces služby IIS.
+     Nastavení možnosti **Povolit test** na **hodnotu false** zastaví službu IIS, aby zkontrolovala, jestli je stále spuštěný pracovní proces, a udržuje pracovní proces aktivní, dokud nezastavíte proces ladění. Nastavení **maximální doby odezvy** nástroje pro odeslání na velkou hodnotu umožní službě IIS pokračovat v monitorování pracovního procesu.
 
-7. Klikněte na tlačítko **OK** zavřete **Upřesnit nastavení** dialogové okno.
+7. Kliknutím na tlačítko **OK** zavřete dialogové okno **Upřesnit nastavení** .
 
-8. Zavřete Správce služby IIS a **nástroje pro správu** okna.
+8. Zavřete Správce služby IIS a okno **Nástroje pro správu** .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Chyby při vzdáleném ladění a jejich řešení](../debugger/remote-debugging-errors-and-troubleshooting.md)

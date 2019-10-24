@@ -1,5 +1,5 @@
 ---
-title: Idiainjectedsource::get_filename – | Dokumentace Microsoftu
+title: 'IDiaInjectedSource:: get_filename | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 26c68e4f58706fe9d65738e2e58b6ba011999e6a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3aa2929ac592d475896eff0c1969115f971a8572
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828663"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743379"
 ---
-# <a name="idiainjectedsourcegetfilename"></a>IDiaInjectedSource::get_filename
-Načte název souboru zdroje.
+# <a name="idiainjectedsourceget_filename"></a>IDiaInjectedSource::get_filename
+Načte název souboru pro zdroj.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_filename ( 
 #### <a name="parameters"></a>Parametry
  pRetVal
 
-[out] Vrátí název souboru zdroje.
+mimo Vrátí název souboru pro zdroj.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f11b14dd116ea95bda2cc7fad7ac8df634435c9
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 29723f5e253a2ff6d4f6c35e8ad8d3e09e2393f1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926097"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748658"
 ---
 # <a name="security-page-project-designer"></a>Stránka Zabezpečení, návrhář projektu
 
@@ -34,9 +34,9 @@ Chcete-li získat přístup ke stránce **zabezpečení** , klikněte na uzel pr
 Určuje, zda jsou nastavení zabezpečení povolena v době návrhu. Pokud tato možnost není zaškrtnutá, všechny ostatní možnosti na stránce **zabezpečení** nejsou k dispozici.
 
 > [!NOTE]
-> Když publikujete aplikaci pomocí Průvodce publikováním , tato možnost je automaticky povolena.
+> Když publikujete aplikaci pomocí průvodce **publikováním** , tato možnost je automaticky povolena.
 
-Když vyberete tuto možnost, budete mít možnost výběru jednoho ze dvou přepínačů: **Toto je aplikace s plnou důvěryhodností** nebo **se jedná o částečnou důvěryhodnou aplikaci**.
+Když vyberete tuto možnost, budete mít možnost výběru jednoho ze dvou přepínačů: **jedná se o úplnou důvěryhodnou aplikaci** nebo **se jedná o aplikaci s částečnou důvěryhodností**.
 
 Ve výchozím nastavení je pro projekty aplikace webového prohlížeče WPF Tato možnost vybraná.
 
@@ -72,7 +72,7 @@ Otevře šablonu manifestu aplikace (App. manifest) pro konfiguraci oprávnění
 
 Otevře [dialogové okno Upřesnit nastavení zabezpečení](../../ide/reference/advanced-security-settings-dialog-box.md), které se používá ke konfiguraci nastavení pro ladění aplikace s omezenými oprávněními. Tato nastavení jsou kontrolována během ladění a výjimky oprávnění označují, že vaše aplikace může potřebovat více oprávnění, než je definováno v zóně.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - <xref:System.Security.Permissions.WebBrowserPermission>
 - <xref:System.Security.Permissions.MediaPermission>

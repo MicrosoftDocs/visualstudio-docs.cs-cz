@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findChildrenExByVA | Dokumentace Microsoftu
+title: 'IDiaSymbol:: findChildrenExByVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 85dc2d62134d57faf40162ff61b193b80b045e29
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: d9cc9f540b200ff6fdf4736b6a0bf64175a5ee3e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62837963"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741245"
 ---
 # <a name="idiasymbolfindchildrenexbyva"></a>IDiaSymbol::findChildrenExByVA
-Načte podřízené objekty daného symbolu, které jsou platné v zadané virtuální adresy.
+Načte podřízené objekty symbolu, které jsou platné v zadané virtuální adrese.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,38 +37,38 @@ HRESULT findChildrenExByVA ( 
 #### <a name="parameters"></a>Parametry
  `symtag`
 
-[in] Určuje symbol značky podřízené položky, které se mají načíst, jak jsou definovány v [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md). Nastavte na `SymTagNull` pro všechny podřízené objekty, které se mají načíst.
+pro Určuje značky symbolů podřízených objektů, které mají být načteny, jak je definováno ve [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md). Nastavte na `SymTagNull` pro všechny podřízené položky, které se mají načíst.
 
  `name`
 
-[in] Určuje název podřízenou položku, která se má načíst. Nastavte na `NULL` pro všechny podřízené objekty, které se mají načíst.
+pro Určuje název podřízených objektů, které mají být načteny. Nastavte na `NULL` pro všechny podřízené položky, které se mají načíst.
 
  `compareFlags`
 
-[in] Určení možností porovnání uplatňovat na odpovídající název. Hodnoty z [namesearchoptions – výčet](../../debugger/debug-interface-access/namesearchoptions.md) výčtu lze použít samostatně nebo v kombinaci.
+pro Určuje možnosti porovnání, které se mají použít pro porovnávání názvů. Hodnoty výčtového výčtu [namesearchoptions –](../../debugger/debug-interface-access/namesearchoptions.md) lze použít samostatně nebo v kombinaci.
 
  `address`
 
-[in] Určuje virtuální adresu.
+pro Určuje virtuální adresu.
 
  `ppResult`
 
-[out] Vrátí [idiaenumsymbols –](../../debugger/debug-interface-access/idiaenumsymbols.md) načíst objekt, který obsahuje seznam podřízenými symboly.
+mimo Vrátí objekt [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) , který obsahuje seznam načtených podřízených symbolů.
 
 ## <a name="return-value"></a>Návratová hodnota
- Vrátí `S_OK` Pokud byl nalezen nejméně jeden podřízený prvek symbolu nebo vrátí `S_FALSE` Pokud nebyly nalezeny žádné podřízené položky; v opačném případě vrátí kód chyby.
+ Vrátí `S_OK`, pokud byl nalezen alespoň jeden podřízený symbol, nebo vrátí `S_FALSE`, pokud nebyly nalezeny žádné podřízené položky; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Lokální symboly, které jsou vráceny zahrnovat informace o rozsahu za provozu.
+ Mezi vracené místní symboly patří informace o živém rozsahu.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: Dia2.h
+ Záhlaví: Dia2. h
 
- Knihovna: diaguids.lib
+ Knihovna: diaguids. lib
 
- DLL: msdia100.dll
+ Knihovna DLL: msdia100. dll
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

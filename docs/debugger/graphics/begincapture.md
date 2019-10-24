@@ -1,5 +1,5 @@
 ---
-title: BeginCapture | Dokumentace Microsoftu
+title: BeginCapture | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 9edbb52d-ee0b-4cc4-a382-972bcee067d3
@@ -8,15 +8,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e714245ff2585f9de0b998160ce08f04c88b097
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9521288b27b1f9b11a2fdb8cbbd613f1a77f857d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62896433"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736146"
 ---
 # <a name="begincapture"></a>BeginCapture
-Začne sběr intervalu, který bude končit `EndCapture`.
+Zahájí interval zachytávání, který skončí `EndCapture`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,10 +25,10 @@ void BeginCapture();
 ```
 
 ## <a name="remarks"></a>Poznámky
- Interval sběru obvykle zahrnuje podmnožinu jeden snímek, například když budete chtít zachytit grafické informace pouze o druh volání draw. Pokud interval zachytávání zahrnuje volání k dispozici, jsou zachyceny dvěma snímky informací grafiky. První snímek zahrnuje interval mezi volání `BeginCapture` a volání k dispozici; druhý snímek zahrnuje interval mezi první události rozhraní Direct3D po volání k dispozici a volání `EndCapture`.
+ Interval zachycení obvykle pokrývá podmnožinu jednoho rámce, například pokud chcete zachytit informace grafiky pouze o určitém typu volání draw. Pokud interval zachycení zahrnuje volání k dispozici, jsou zachyceny dva snímky informací o grafice. První rámec zahrnuje interval mezi voláním `BeginCapture` a voláním, které je k dispozici; druhý rámec zahrnuje interval mezi první událostí Direct3D po volání a volání `EndCapture`.
 
- K zachycení intervalu, musíte připravit vaše aplikace k zachycení a zaznamenání grafických informací – to znamená, musí zavoláte [Init](init.md) prostřednictvím instance `VsgDbg` třídy před voláním `BeginCapture` nebo `EndCapture`.
+ Chcete-li zachytit interval, je nutné připravit aplikaci pro zachycení a záznam informací o grafice – to znamená, že je nutné se před voláním `BeginCapture` nebo `EndCapture` volat [inicializaci](init.md) pomocí instance třídy `VsgDbg`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [EndCapture](endcapture.md)
 - [CaptureCurrentFrame](capturecurrentframe.md)

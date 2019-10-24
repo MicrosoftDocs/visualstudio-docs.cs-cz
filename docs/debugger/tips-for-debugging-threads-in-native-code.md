@@ -1,5 +1,5 @@
 ---
-title: Tipy k ladění vláken v nativním kódu | Dokumentace Microsoftu
+title: Tipy pro ladění vláken v nativním kódu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,22 +16,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ee1f1f2f2029325e3d3b87ca44d05d800a62c07
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7dde94e28f378f0630a78f32ae5e58533729ce0f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62901872"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72728996"
 ---
 # <a name="tips-for-debugging-threads-in-native-code"></a>Tipy k ladění vláken v nativním kódu
-Zde je několik tipů, které můžete využít při ladění vláken v nativním kódu:
+Tady je několik tipů, které můžete použít při ladění vláken v nativním kódu:
 
-- Obsah bloku vláken informace můžete zobrazit zadáním `@TIB` v **Watch** okno nebo **QuickWatch** dialogové okno.
+- Obsah bloku informací o vlákně můžete zobrazit zadáním `@TIB` v okně **kukátka** nebo dialogovém okně **QuickWatch** .
 
-- Kód poslední chyby pro aktuální vlákno můžete zobrazit tak, že zadáte `@Err` v **Watch** okno nebo **QuickWatch** dialogové okno.
+- Poslední kód chyby pro aktuální vlákno můžete zobrazit zadáním `@Err` v okně **kukátka** nebo dialogovém okně **QuickWatch** .
 
-- Funkce knihovny Run-Time C (CRT) mohou být užitečné při ladění aplikace s více vlákny. Další informace najdete v tématu [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg).
+- Funkce běhové knihovny jazyka C (CRT) mohou být užitečné pro ladění vícevláknové aplikace. Další informace najdete v tématu [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění vícevláknových aplikací](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Ladění nativního kódu](../debugger/debugging-native-code.md)

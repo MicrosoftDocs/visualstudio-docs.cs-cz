@@ -1,5 +1,5 @@
 ---
-title: Idiaframedata::get_lengthprolog – | Dokumentace Microsoftu
+title: 'IDiaFrameData:: get_lengthProlog | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad162a8a29bd9432424ce64d00e820a0bfde1dd9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 00b85d1db996487d76d396d6e4df9ea557e6aae5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839950"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743551"
 ---
-# <a name="idiaframedatagetlengthprolog"></a>IDiaFrameData::get_lengthProlog
-Získá počet bajtů prologu kód v bloku.
+# <a name="idiaframedataget_lengthprolog"></a>IDiaFrameData::get_lengthProlog
+Načte počet bajtů kódu prologu v bloku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_lengthProlog ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí počet bajtů kódu prologu.
+mimo Vrátí počet bajtů kódu prologu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Kód prologu je řada pokynů, které zachovává registrů, nastaví stav procesoru a vytváří zásobníku pro funkci.
+ Kód prologu je posloupnost instrukcí, které zachovává Registry, nastavuje stav CPU a vytváří zásobník pro funkci.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Visual Studio Debugger (vyvolána výjimka) dialogové okno | Dokumentace Microsoftu
+title: Dialogové okno Microsoft Visual Studioho ladicího programu (vyvolána výjimka) | Microsoft Docs
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
@@ -22,26 +22,26 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fd0035ca0764f3673e07b4e3289b87773c8349b
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 8376d0cd82e309c2c8db94e38b8c6a2083bd429a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66261341"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731200"
 ---
 # <a name="microsoft-visual-studio-debugger-exception-thrown-dialog-box"></a>Dialogové okno programu Microsoft Visual Studio Debugger (vyvolána výjimka)
-Ve vašem programu došlo k výjimce. Toto dialogové okno sestavy druh vyvolané výjimky. Váš kód je potřeba zpracovat tuto výjimku. Můžete si vybrat následující možnosti pro zpracování výjimek:
+V programu došlo k výjimce. Toto dialogové okno oznamuje druh vyvolané výjimky. Váš kód musí zpracovat tuto výjimku. Pro zpracování výjimky si můžete vybrat z následujících možností:
 
- **Konec** umožňuje provádění přerušení ladicího programu. Před koncem není vyvolána obslužná rutina výjimky. Pokud budete pokračovat z přerušení, bude vyvolána obslužná rutina výjimky.
+ **Přerušení** Umožňuje spuštění přerušit do ladicího programu. Obslužná rutina výjimky není vyvolána před přerušením. Pokud budete pokračovat od přerušení, bude vyvolána obslužná rutina výjimky.
 
- **Pokračovat** umožňuje provádění pokračovat, poskytuje obslužné rutiny výjimky umožňující zpracování výjimky. Tato možnost není k dispozici pro některé typy výjimek. **Pokračovat** vám umožní aplikaci pokračovat. V nativní aplikaci způsobí výjimku, která znovu vyvolala. Ve spravované aplikaci způsobí buď program ukončit nebo výjimka, která má být zpracována hostitelské aplikace.
+ **Pokračovat** Umožňuje pokračovat v provádění, což dává obslužné rutině výjimky možnost zpracovat výjimku. Tato možnost není k dispozici pro určité typy výjimek. **Pokračovat** umožní aplikaci pokračovat. V nativní aplikaci způsobí vyvolání výjimky. Ve spravované aplikaci způsobí buď ukončení programu, nebo výjimku, kterou má zpracovat hostitelská aplikace.
 
 > [!NOTE]
-> Nejde pokračovat po neošetřené výjimce ve spravovaném kódu. Výběr **pokračovat** po neošetřené výjimce ve spravovaném kódu způsobí, že chcete-li zastavit ladění.
+> Po neošetřené výjimce ve spravovaném kódu nemůžete pokračovat. Výběr možnosti **pokračovat** po neošetřené výjimce ve spravovaném kódu způsobí zastavení ladění.
 
- **Ignorovat** umožňuje provádění pokračovat bez volání obslužné rutiny výjimky. Protože není vyvolána obslužná rutina výjimky, to může vést k dalším důsledky, včetně dalších výjimek a chyb. Tato možnost není k dispozici pro některé typy výjimek.
+ **Ignorovat** Umožňuje pokračovat v provádění bez vyvolání obslužné rutiny výjimky. Vzhledem k tomu, že obslužná rutina výjimky není vyvolána, může to vést k dalším důsledkům, včetně dalších výjimek a chyb. Tato možnost není k dispozici pro určité typy výjimek.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Správa výjimek pomocí ladicího programu](../debugger/managing-exceptions-with-the-debugger.md)
 - [Doporučené postupy pro výjimky](/dotnet/standard/exceptions/best-practices-for-exceptions)
 - [Zpracování výjimek](/cpp/extensions/exception-handling-cpp-component-extensions)

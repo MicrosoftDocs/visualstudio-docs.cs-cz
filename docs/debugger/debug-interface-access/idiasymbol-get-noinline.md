@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_noinline – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_noInline | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d0523618298cb6575a5bdb8b92bdc6a4b8c103c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: e5cc592f6be2e3fdd4f791c637e588e10a187ae2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64786263"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739750"
 ---
-# <a name="idiasymbolgetnoinline"></a>IDiaSymbol::get_noInline
-Získá příznak, který určuje, zda funkce byl označen jako není vložená (pomocí [noinline](/cpp/cpp/noinline) atributu).
+# <a name="idiasymbolget_noinline"></a>IDiaSymbol::get_noInline
+Načte příznak, který určuje, zda byla funkce označena jako nevložená (pomocí atributu. [inline](/cpp/cpp/noinline) ).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,21 +33,21 @@ HRESULT get_noInline(
 #### <a name="parameters"></a>Parametry
  `pFlag`
 
-[out] Vrátí `TRUE` Pokud má funkce `noinline` atribut; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud má funkce atribut `noinline`; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|Ve verzi 8.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [noinline](/cpp/cpp/noinline)

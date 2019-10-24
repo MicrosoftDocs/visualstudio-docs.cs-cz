@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 801423ee8ad5bb9a63ebb4f970d9c53e5fe8c1e4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 13d943b8d86bd9ca912816e0f19993959ca303c1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605699"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748392"
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>Generování a konfigurace aplikace z modelů
 Můžete vygenerovat nebo nakonfigurovat části aplikace z modelu.
@@ -70,7 +70,7 @@ Můžete vygenerovat nebo nakonfigurovat části aplikace z modelu.
 
      Například diagram tříd UML je kolekce polí a šipek. v tomto Notation můžete v teoreticky definovat cokoli. Nedoporučuje se ale používat diagram tříd s výjimkou případů, kdy jste ve skutečnosti popisují sadu typů. Například můžete přizpůsobovat diagramy tříd pro popis různých typů webových stránek.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)
 - [Postupy: Otevření modelu ze souboru v kódu programu](../modeling/how-to-open-a-model-from-file-in-program-code.md)

@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: d15a176fb378159407589af0b720d8310de8e29c
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: d12c9848409f57b16c733b587edff193311bcfdd
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450400"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72732273"
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>Jak aktivovat události pozastavení, obnovení a na pozadí při ladění aplikací pro UWP v aplikaci Visual Studio
 
@@ -31,7 +31,7 @@ Toto téma také popisuje, jak ladit **úlohy na pozadí**. Úlohy na pozadí um
 Další informace o správě životního cyklu procesu a úlohách na pozadí najdete v tématu [spouštění, obnovování a](/windows/uwp/launch-resume/index)práce s více úlohami.
 
 ## <a name="BKMK_Trigger_Process_Lifecycle_Management_events"></a>Aktivovat události správy životnosti procesů
- Systém Windows může aplikaci pozastavit, když uživatel z ní přepne nebo když systém Windows přejde do úsporného režimu. Můžete reagovat na událost @no__t 0 a uložit relevantní data aplikace a uživatele do trvalého úložiště a uvolnit prostředky. Když se aplikace obnoví z **pozastaveného** stavu, vstoupí do stavu **spuštěno** a pokračuje od místa, kde byla pozastavena. Můžete reagovat na událost `Resuming` pro obnovení nebo obnovení stavu aplikace a uvolnění prostředků.
+ Systém Windows může aplikaci pozastavit, když uživatel z ní přepne nebo když systém Windows přejde do úsporného režimu. Můžete reagovat na událost `Suspending` a uložit relevantní data aplikace a uživatele do trvalého úložiště a uvolnit prostředky. Když se aplikace obnoví z **pozastaveného** stavu, vstoupí do stavu **spuštěno** a pokračuje od místa, kde byla pozastavena. Můžete reagovat na událost `Resuming` pro obnovení nebo obnovení stavu aplikace a uvolnění prostředků.
 
  I když se Windows v paměti pokusí zachovat tolik pozastavených aplikací, může Windows aplikaci ukončit, pokud není k dispozici dostatek prostředků, aby je bylo možné uchovat v paměti. Uživatel může aplikaci taky explicitně zavřít. Neexistuje žádná zvláštní událost, která by označovala, že uživatel zavřel aplikaci.
 
@@ -109,7 +109,7 @@ Další informace o správě životního cyklu procesu a úlohách na pozadí na
 
 4. Vyberte **diagnostický** protokol.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Testování aplikací pro UWP se sadou Visual Studio](../test/testing-store-apps-with-visual-studio.md)
 - [Ladění aplikací v sadě Visual Studio](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)
 - [Životní cyklus aplikace](/windows/uwp/launch-resume/app-lifecycle)

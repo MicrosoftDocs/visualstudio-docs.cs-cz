@@ -1,5 +1,5 @@
 ---
-title: Struktury jazyka Visual C++ v návrháři tříd
+title: C++Struktury v Návrhář tříd
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da786e6f598b4b28aeb7758df41f54ea23c4185d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 65fb4738b3124daf48b501c6db416d3803da32ec
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647597"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748908"
 ---
-# <a name="visual-c-structures-in-class-designer"></a>Vizuální C++ struktury v Návrhář tříd
+# <a name="c-structures-in-class-designer"></a>C++struktury v Návrhář tříd
 
 **Návrhář tříd** podporuje C++ struktury, které jsou deklarovány pomocí klíčového slova `struct`. Následuje příklad:
 
@@ -40,6 +40,6 @@ Obrazec C++ struktury v diagramu tříd vypadá a funguje jako obrazec třídy, 
 
 ## <a name="see-also"></a>Viz také:
 
-- [Práce s kódem jazyka Visual C++](working-with-visual-cpp-code.md)
+- [Práce s C++ kódem](working-with-visual-cpp-code.md)
 - [Třídy a struktury](/cpp/cpp/classes-and-structs-cpp)
 - [struct](/cpp/cpp/struct-cpp)

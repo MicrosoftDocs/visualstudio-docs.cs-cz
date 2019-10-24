@@ -13,12 +13,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7892abc258f323629cbc6b2fb8535b1a40aded13
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 25342f86c545752a263d295550222e14c2aa7866
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667039"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748764"
 ---
 # <a name="find-in-files-command"></a>Najít v souborech – příkaz
 Vyhledejte soubory pomocí podmnožiny možností dostupných na kartě **najít v souborech** okna **Najít a nahradit** .
@@ -84,7 +84,7 @@ Tento příklad vyhledá btnCancel ve všech souborech. CLS umístěných ve slo
 >Edit.FindinFiles btnCancel /lookin:"c:/My Visual Studio Projects" /ext:*.cls /text2
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Najít v souborech](../../ide/find-in-files.md)
 - [Příkazové okno](../../ide/reference/command-window.md)

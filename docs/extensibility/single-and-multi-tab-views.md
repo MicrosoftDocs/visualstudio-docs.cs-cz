@@ -1,5 +1,5 @@
 ---
-title: Zobrazení jedné a více karet | Dokumentace Microsoftu
+title: Zobrazení s jedním a více kartami | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,52 +10,52 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: def68627223ba082f5ec6a3ef571e314feae33f3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c651bda042524b2ed3188fef880f848bb0087433
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66332045"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720061"
 ---
 # <a name="single-and-multi-tab-views"></a>Zobrazení jedné a více karet
-Editor lze vytvořit různé typy zobrazení. Jedním z příkladů je okno editoru kódu, další je Návrhář formulářů.
+Editor může vytvářet různé typy zobrazení. Jedním z příkladů je okno editoru kódu, další je Návrhář formulářů.
 
- Zobrazení s kartami s více je zobrazení, které obsahuje několik karet. Například HTML editor obsahuje dvě karty v dolní části: **Návrh** a **zdroj**, každé logické zobrazení. Návrhové zobrazení se zobrazí vykreslení webové stránky, druhý zobrazuje kód HTML, který se skládá z webové stránky.
+ Zobrazení s více kartami je zobrazení, které obsahuje několik karet. Například editor HTML má dvě karty dole: **design** a **source**, každé logické zobrazení. V zobrazení Návrh se zobrazí vykreslená webová stránka, zatímco druhá zobrazí kód HTML, který se skládá z webové stránky.
 
-## <a name="accessing-physical-views"></a>Přístup k fyzické náhledy
- Fyzické náhledy hostovat objekty zobrazení dokumentu, každý představující zobrazení data ve vyrovnávací paměti, jako je například kód nebo formuláře. Odpovídajícím způsobem každý objekt zobrazení dokumentu má fyzické zobrazení (identifikovaných podle něco jako řetězec fyzické zobrazení) a obecně jedné logické zobrazení.
+## <a name="accessing-physical-views"></a>Přístup k fyzickým zobrazením
+ Fyzická zobrazení hostují objekty zobrazení dokumentu, z nichž každý představuje zobrazení dat ve vyrovnávací paměti, jako je například kód nebo formulář. Proto každý objekt zobrazení dokumentu má fyzické zobrazení (identifikované něčím jako řetězec fyzického zobrazení) a obecně jediné logické zobrazení.
 
- V některých případech však fyzické zobrazení může mít dvě nebo více logických zobrazení. Mezi příklady patří editor, který má rozděleného okna se zobrazeními vedle sebe nebo Návrhář formulářů, který má grafické uživatelské rozhraní/návrhové zobrazení a zobrazení kódu na pozadí the tvaru.
+ V některých případech může ale fyzické zobrazení obsahovat dvě nebo více logických zobrazení. Příkladem může být Editor, který má rozdělené okno s souběžnými zobrazeními, nebo Návrhář formulářů, který má grafické rozhraní nebo návrhové zobrazení a kód na pozadí.
 
- Pokud chcete povolit přístup ke všem dostupné fyzické náhledy editoru, musíte vytvořit jedinečný fyzické zobrazení řetězce pro každý typ zobrazení objektu dokumentu, který můžete vytvořit objekt pro vytváření editoru. Například [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] objekt pro vytváření editoru můžete vytvořit dokument zobrazit objekty pro okno kódu a okno návrháře formulářů.
+ Chcete-li povolit editoru přístup ke všem dostupným fyzickým zobrazením, je nutné vytvořit jedinečný řetězec fyzického zobrazení pro každý typ objektu zobrazení dokumentu, který může objekt pro vytváření editoru vytvořit. Například objekt pro vytváření editoru [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] může vytvořit objekty zobrazení dokumentu pro okno kódu a okno návrháře formulářů.
 
-## <a name="creating-multi-tabbed-views"></a>Vytváření s kartami s více zobrazení
- I když objekt zobrazení dokumentu musí být přidružen fyzické zobrazení pomocí řetězce jedinečné fyzické zobrazení, můžete umístit několik karet v rámci fyzické zobrazení umožňují zobrazení dat různými způsoby. V této konfiguraci s kartami s více všechny karty jsou přidruženy stejném řetězci fyzické zobrazení, ale každá karta je uveden jiné logické zobrazení identifikátor GUID.
+## <a name="creating-multi-tabbed-views"></a>Vytváření zobrazení s více kartami
+ Přestože objekt zobrazení dokumentu musí být přidružen k fyzickému zobrazení prostřednictvím jedinečného řetězce fyzického zobrazení, můžete umístit více karet v rámci fyzického zobrazení, aby bylo možné zobrazit data různými způsoby. V této konfiguraci s více kartami jsou všechny karty přidruženy ke stejnému fyzickému řetězci zobrazení, ale na každé kartě je uveden jiný identifikátor GUID logického zobrazení.
 
- Chcete-li vytvořit zobrazení s kartami s více editoru, implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView> rozhraní a přidružte jiné logické zobrazení GUID (<xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID>) se každé kartě můžete vytvářet.
+ Chcete-li vytvořit zobrazení s více kartami pro Editor, implementujte rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView> a pak přidružte jiný identifikátor GUID (<xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID>) logického zobrazení s každou vámi vytvořenou kartou.
 
- Editor HTML aplikace Visual Studio je příkladem editoru pomocí zobrazení více karet. Má **návrhu** a **zdroj** karty. Pokud chcete povolit, jiné logické zobrazení souvisí s každou kartu `LOGICALVIEWID_TextView` pro **návrhu** kartu a `LOGICALVIEWID_Code` pro **zdroj** kartu.
+ Editor HTML sady Visual Studio je příkladem editoru s zobrazením více karet. Má karty **design** a **source** . Chcete-li tuto možnost povolit, je k každé kartě přidruženo jiné logické zobrazení `LOGICALVIEWID_TextView` kartě **Návrh** a `LOGICALVIEWID_Code` na kartě **zdroj** .
 
- Zadáním příslušné logické zobrazení VSPackage můžete zobrazit, který odpovídá konkrétní účel, jako je například návrhu formuláře úprav kódu a ladění kódu. Však jeden z okna musí být označeny NULL řetězcem, a to musí odpovídat primární logické zobrazení (`LOGVIEWID_Primary`).
+ Zadáním vhodného logického zobrazení může VSPackage získat přístup k zobrazení, které odpovídá konkrétnímu účelu, jako je například navrhování formuláře, úpravy kódu nebo ladění kódu. Některé z oken však musí být identifikovány řetězcem NULL a musí odpovídat primárnímu logickému zobrazení (`LOGVIEWID_Primary`).
 
- V následující tabulce jsou uvedeny dostupné logické zobrazení hodnot a jejich použití.
+ V následující tabulce jsou uvedeny dostupné hodnoty logického zobrazení a jejich použití.
 
-|IDENTIFIKÁTOR GUID LOGVIEWID|Doporučené použití|
+|LOGVIEWID GUID|Doporučené použití|
 |--------------------|---------------------|
-|`LOGVIEWID_Primary`|Primární výchozí zobrazení objektu pro vytváření editoru.<br /><br /> Tato hodnota musí podporovat všechny objekty pro vytváření editoru. Toto zobrazení musíte použít prázdný řetězec jako jeho fyzické zobrazení řetězce. Alespoň jedno logické zobrazení musí být nastavena na tuto hodnotu.|
-|`LOGVIEWID_Debugging`|Ladění v zobrazení. Obvykle `LOGVIEWID_Debugging` mapuje na stejném zobrazení jako `LOGVIEWID_Code`.|
-|`LOGVIEWID_Code`|Zobrazení spustí **zobrazit kód** příkazu.|
-|`LOGVIEWID_Designer`|Zobrazení spustí **zobrazit formulář** příkazu.|
-|`LOGVIEWID_TextView`|Zobrazení textového editoru. Toto je zobrazení, která vrací <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>, ze které můžete přistupovat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>.|
-|`LOGVIEWID_UserChooseView`|Se zobrazí výzva k výběru, kterého zobrazení má použít.|
-|`LOGVIEWID_ProjectSpecificEditor`|Předávány **otevřít v** dialogové okno<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.OpenItem%2A><br /><br /> Když uživatel stiskne položka "(výchozí editor projektu)".|
+|`LOGVIEWID_Primary`|Výchozí/primární zobrazení objektu pro vytváření editoru<br /><br /> Všechny továrny editoru musí tuto hodnotu podporovat. Toto zobrazení musí jako řetězec fyzického zobrazení používat řetězec s hodnotou NULL. Aspoň jedno logické zobrazení musí být nastavené na tuto hodnotu.|
+|`LOGVIEWID_Debugging`|Zobrazení ladění. @No__t_0 se obvykle mapují ke stejnému zobrazení jako `LOGVIEWID_Code`.|
+|`LOGVIEWID_Code`|Zobrazení spouštěné příkazem **Zobrazit kód**|
+|`LOGVIEWID_Designer`|Zobrazení spouštěné příkazem **formuláře zobrazení**|
+|`LOGVIEWID_TextView`|Textový editor – zobrazení Toto zobrazení vrací <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>, ze kterého můžete získat přístup k <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>.|
+|`LOGVIEWID_UserChooseView`|Vyzve uživatele k výběru zobrazení, které se má použít.|
+|`LOGVIEWID_ProjectSpecificEditor`|Předáno dialogovým oknem **otevřít v** pro<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.OpenItem%2A><br /><br /> Když uživatel zvolí položku "(výchozí editor projektu)".|
 
- I když jsou logické zobrazení identifikátory GUID rozšiřitelné, můžete použít jenom identifikátory GUID logické zobrazení definované ve vašich VSPackage.
+ I když jsou identifikátory GUID logického zobrazení rozšiřitelné, můžete použít jenom identifikátory GUID logického zobrazení definované v VSPackage.
 
- Visual Studio při ukončení, zachová identifikátor GUID objektu pro vytváření editoru a fyzické zobrazení řetězce přidružený k oknu dokumentu tak, že je možné znovu otevřít okna dokumentu, když je toto řešení znovu otevřít. Pouze systému windows, které jsou otevřené po zavření řešení jsou zachované v souboru řešení (.suo). Tyto hodnoty odpovídají `VSFPROPID_guidEditorType` a `VSFPROPID_pszPhysicalView` hodnoty předané `propid` parametr v <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> metody.
+ Při vypnutí aplikace Visual Studio zachová GUID objektu pro vytváření editoru a fyzických zobrazení řetězců přidružených k oknu dokumentu, aby jej bylo možné použít k opětovnému otevření oken dokumentů při opětovném otevření řešení. V souboru řešení (. suo) jsou trvalé pouze okna, která jsou otevřena při zavření řešení. Tyto hodnoty odpovídají `VSFPROPID_guidEditorType` a `VSFPROPID_pszPhysicalView` hodnot předaných v parametru `propid` v metodě <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>.
 
 ## <a name="example"></a>Příklad
- Tento fragment kódu ukazuje, jak <xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID.TextView> objektu se používá pro přístup k zobrazení, které implementuje `IVsCodeWindow`. V takovém případě <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShellOpenDocument> služby slouží k volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> a žádost o `LOGVIEWID_TextView`, který získá ukazatel na rámec okna. Ukazatel na objekt zobrazení dokumentu je získán voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> a zadáte třeba hodnotu `VSFPROPID_DocView`. Z objektu zobrazení dokumentu `QueryInterface` se volá pro `IVsCodeWindow`. V tomto případě je očekává, že se vrátí v textovém editoru a tak vrácený objekt zobrazení dokumentu v <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> metoda je okno kódu.
+ Tento fragment kódu ukazuje, jak se <xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID.TextView> objekt používá pro přístup k zobrazení, které implementuje `IVsCodeWindow`. V tomto případě se služba <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShellOpenDocument> používá k volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> a vyžádání `LOGVIEWID_TextView`, která získá ukazatel na rámec okna. Ukazatel na objekt zobrazení dokumentu je získán voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> a zadáním hodnoty `VSFPROPID_DocView`. Z objektu zobrazení dokumentu je `QueryInterface` volána pro `IVsCodeWindow`. Očekává se, že v tomto případě se vrátí textový editor, takže objekt zobrazení dokumentu vrácený v metodě <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> je okno kódu.
 
 ```cpp
 HRESULT CFindTool::GotoFileLocation(const WCHAR * szFile, long iLine, long iStart, long iLen)
@@ -112,7 +112,7 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Podpora více zobrazení dokumentů](../extensibility/supporting-multiple-document-views.md)
 - [Postupy: Připojení zobrazení k datům dokumentů](../extensibility/how-to-attach-views-to-document-data.md)
 - [Vytváření vlastních editorů a návrhářů](../extensibility/creating-custom-editors-and-designers.md)
