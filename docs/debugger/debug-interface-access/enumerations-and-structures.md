@@ -1,5 +1,5 @@
 ---
-title: Výčty a struktury | Dokumentace Microsoftu
+title: Výčty a struktury | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,16 +15,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b8a38138b5688d0c6573b18f3b0d875abcf627c2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6769af8a417c111de6c8dfc68cd7cda548eaa24c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554932"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745215"
 ---
 # <a name="enumerations-and-structures"></a>Výčty a struktury
 
-Toto jsou výčty a struktury využívané prostředím DIA SDK.
+Jedná se o výčty a struktury, které používá DIA SDK.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -36,7 +36,7 @@ Toto jsou výčty a struktury využívané prostředím DIA SDK.
 
 - [CV_access_e – výčet](../../debugger/debug-interface-access/cv-access-e.md)
 
- Určuje obor viditelnost (úroveň přístupu) členské funkce a proměnné.
+ Určuje rozsah viditelnosti (úroveň přístupu) členských funkcí a proměnných.
 
 - [CV_call_e – výčet](../../debugger/debug-interface-access/cv-call-e.md)
 
@@ -44,7 +44,7 @@ Toto jsou výčty a struktury využívané prostředím DIA SDK.
 
 - [CV_CFL_LANG – výčet](../../debugger/debug-interface-access/cv-cfl-lang.md)
 
- Určuje jazyk zdrojového kódu aplikace nebo propojeném modulu.
+ Určuje jazyk zdrojového kódu pro aplikaci nebo propojený modul.
 
 - [CV_CPU_TYPE_e – výčet](../../debugger/debug-interface-access/cv-cpu-type-e.md)
 
@@ -52,23 +52,23 @@ Toto jsou výčty a struktury využívané prostředím DIA SDK.
 
 - [CV_HREG_e – výčet](../../debugger/debug-interface-access/cv-hreg-e.md)
 
- Určuje cílový registru.
+ Určuje cílový registr.
 
 - [DataKind – výčet](../../debugger/debug-interface-access/datakind.md)
 
- Určuje konkrétní obor datové hodnoty.
+ Označuje konkrétní rozsah hodnoty dat.
 
 - [LocationType – výčet](../../debugger/debug-interface-access/locationtype.md)
 
- Označuje druh informace o poloze, které jsou obsaženy v symbolu.
+ Určuje druh informací o poloze obsažených v symbolu.
 
 - [MemoryTypeEnum – výčet](../../debugger/debug-interface-access/memorytypeenum.md)
 
- Určuje typ pro přístup k paměti.
+ Určuje typ paměti, pro který má být přístup.
 
 - [NameSearchOptions – výčet](../../debugger/debug-interface-access/namesearchoptions.md)
 
- Určuje možnosti hledání symbolů a názvy souborů.
+ Určuje možnosti hledání symbolů a názvů souborů.
 
 - [StackFrameTypeEnum – výčet](../../debugger/debug-interface-access/stackframetypeenum.md)
 
@@ -80,28 +80,28 @@ Toto jsou výčty a struktury využívané prostředím DIA SDK.
 
 - [THUNK_ORDINAL – výčet](../../debugger/debug-interface-access/thunk-ordinal.md)
 
- Určuje typy převodní rutina.
+ Určuje typy převodů.
 
 - [UdtKind – výčet](../../debugger/debug-interface-access/udtkind.md)
 
- Popisuje různé uživatelem definovaný typ (UDT).
+ Popisuje nejrůznější uživatelsky definované typy (UDT).
 
 ### <a name="structures"></a>Struktury
 
 [DiaAddressMapEntry – struktura](../../debugger/debug-interface-access/diaaddressmapentry.md)
 
-Popisuje položky v mapování adres.
+Popisuje položku v mapě adres.
 
 ### <a name="related-sections"></a>Související oddíly
 
 [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 
-Určuje rozhraní poskytovaných službou DIA SDK.
+Určuje rozhraní poskytované DIA SDK.
 
 [Konstanty (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)
 
-Určuje konstanty, které jsou k dispozici v sadě DIA SDK.
+Určuje konstanty, které jsou k dispozici v DIA SDK.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Referenční informace](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)
+- [Reference](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)

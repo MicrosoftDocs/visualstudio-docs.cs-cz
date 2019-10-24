@@ -1,15 +1,15 @@
 ---
-title: Práce s kódem jazyka Visual C++ (návrhář tříd)
+title: Práce s C++ kódem (návrhář tříd)
 ms.date: 06/21/2017
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.cpplimitation
 helpviewer_keywords:
-- Visual C++, Class Designer
-- Class Designer, Visual C++ support
+- C++, Class Designer
+- Class Designer, C++ support
 - Class Designer, limitations
-- Class Designer, tasks in Visual C++
-- Visual C++, class diagrams
+- Class Designer, tasks in C++
+- C++, class diagrams
 - C++, class diagrams
 - C++, Class Designer
 ms.assetid: f5b40921-2ef7-4de0-b595-45b44c79ffa6
@@ -18,14 +18,14 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2252b5e6d8da9f81fbcca9b856222a3230cd080
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e59ee1305c0c482686505959aac7187902906086
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647561"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748900"
 ---
-# <a name="work-with-visual-c-code-in-class-designer"></a>Práce s vizuálním C++ kódem v Návrhář tříd
+# <a name="work-with-c-code-in-class-designer"></a>Práce s C++ kódem v Návrhář tříd
 
 **Návrhář tříd** zobrazuje vizuální návrhovou plochu nazvanou *Diagram tříd* , která poskytuje vizuální reprezentaci prvků kódu v projektu. Diagramy tříd můžete použít k návrhu a vizualizaci tříd a dalších typů v projektu.
 
@@ -56,7 +56,7 @@ ms.locfileid: "72647561"
 
 ### <a name="update-and-performance-issues"></a>Problémy s aktualizací a výkonem
 
-U vizuálních C++ projektů může trvat 30 až 60 sekund, než se změna ve zdrojovém souboru objeví v diagramu tříd. Tato prodleva může také způsobit, **Návrhář tříd** vyvolat chybu. **ve výběru nebyly nalezeny žádné typy**. Pokud se zobrazí chyba, například, klikněte na tlačítko **Storno** v chybové zprávě a počkejte, než se element Code zobrazí v **zobrazení tříd**. Až to uděláte, **Návrhář tříd** by měl být schopný zobrazit typ.
+U C++ projektů může trvat 30 až 60 sekund, než se změna ve zdrojovém souboru objeví v diagramu tříd. Tato prodleva může také způsobit, **Návrhář tříd** vyvolat chybu. **ve výběru nebyly nalezeny žádné typy**. Pokud se zobrazí chyba, například, klikněte na tlačítko **Storno** v chybové zprávě a počkejte, než se element Code zobrazí v **zobrazení tříd**. Až to uděláte, **Návrhář tříd** by měl být schopný zobrazit typ.
 
 Pokud diagram třídy neaktualizuje změny, které jste provedli v kódu, může být nutné diagram zavřít a znovu jej otevřít.
 
@@ -88,11 +88,11 @@ Pomoc s chybami a upozorněními při řešení potíží najdete ve veřejných
 
 ## <a name="limitations-for-c-code-elements"></a>Omezení pro C++ prvky kódu
 
-- Při načtení vizuálního C++ projektu **Návrhář tříd** funkce způsobem jen pro čtení. Můžete změnit diagram třídy, ale nemůžete uložit změny z diagramu tříd zpátky do zdrojového kódu.
+- Při načtení C++ projektu **Návrhář tříd** funkce pouze pro čtení. Můžete změnit diagram třídy, ale nemůžete uložit změny z diagramu tříd zpátky do zdrojového kódu.
 
-- **Návrhář tříd** podporuje pouze nativní C++ sémantiku. V případě C++ vizuálních projektů, které jsou zkompilovány do spravovaného kódu, **Návrhář tříd** bude vizualizovat pouze prvky kódu, které jsou nativní typy. Proto můžete přidat diagram tříd do projektu, ale **Návrhář tříd** neumožní vizualizovat prvky, ve kterých je vlastnost `IsManaged` nastavena na `true` (tj. typy hodnot a odkazové typy).
+- **Návrhář tříd** podporuje pouze nativní C++ sémantiku. Pro C++ projekty, které jsou zkompilovány do spravovaného kódu **Návrhář tříd** budou vizualizovat pouze prvky kódu, které jsou nativní typy. Proto můžete přidat diagram tříd do projektu, ale **Návrhář tříd** neumožní vizualizovat prvky, ve kterých je vlastnost `IsManaged` nastavena na `true` (tj. typy hodnot a odkazové typy).
 
-- V případě C++ vizuálních projektů **Návrhář tříd** čte pouze definici typu. Předpokládejme například, že definujete typ v souboru hlaviček (. h) a definujete jeho členy v implementačním souboru (. cpp). Pokud vyvoláte "Zobrazit diagram tříd" v implementačním souboru (. cpp), **Návrhář tříd** nezobrazí nic. Další příklad: Pokud vyvoláte "Zobrazit diagram tříd" na souboru. cpp, který používá příkaz `#include` pro zahrnutí jiných souborů, ale neobsahuje žádné skutečné definice třídy, **Návrhář tříd** znovu nezobrazí nic.
+- Pro C++ projekty **Návrhář tříd** čte pouze definici typu. Předpokládejme například, že definujete typ v souboru hlaviček (. h) a definujete jeho členy v implementačním souboru (. cpp). Pokud vyvoláte "Zobrazit diagram tříd" v implementačním souboru (. cpp), **Návrhář tříd** nezobrazí nic. Další příklad: Pokud vyvoláte "Zobrazit diagram tříd" na souboru. cpp, který používá příkaz `#include` pro zahrnutí jiných souborů, ale neobsahuje žádné skutečné definice třídy, **Návrhář tříd** znovu nezobrazí nic.
 
 - IDL (. idl) soubory, které definují rozhraní COM a knihovny typů, se nezobrazují v diagramech, pokud nejsou zkompilovány do nativního C++ kódu.
 
@@ -112,7 +112,7 @@ Pomoc s chybami a upozorněními při řešení potíží najdete ve veřejných
 
 - [Navrhování a zobrazování tříd a typů](designing-and-viewing-classes-and-types.md)
 - [Další informace o chybách Návrháře tříd](additional-information-about-errors.md)
-- [Třídy jazyka Visual C++ v Návrháři tříd](visual-cpp-classes.md)
-- [Struktury jazyka Visual C++ v Návrháři tříd](visual-cpp-structures.md)
-- [Výčty jazyka Visual C++ v Návrháři tříd](visual-cpp-enumerations.md)
-- [Definice Typedefs jazyka Visual C++ v Návrháři tříd](visual-cpp-typedefs.md)
+- [C++Třídy v Návrhář tříd](visual-cpp-classes.md)
+- [C++Struktury v Návrhář tříd](visual-cpp-structures.md)
+- [C++Výčty v Návrhář tříd](visual-cpp-enumerations.md)
+- [C++Definice typedef v Návrhář tříd](visual-cpp-typedefs.md)

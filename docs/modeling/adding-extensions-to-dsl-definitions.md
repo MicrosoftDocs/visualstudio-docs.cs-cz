@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 767973705d004a46644a51ba20ad9292ab80cb39
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f3e44c79783479c46247e4026788725d6ae16da7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654373"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747657"
 ---
 # <a name="add-extensions-to-dsl-definitions"></a>Přidání rozšíření do definic DSL
 
@@ -34,6 +34,6 @@ Uživatel rozšířené DSL může vytvořit a uložit model, který obsahuje in
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Související blogové příspěvky](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)

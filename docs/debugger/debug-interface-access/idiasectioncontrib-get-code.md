@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_code – | Dokumentace Microsoftu
+title: 'IDiaSectionContrib:: get_code | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8175fc05b05bfd3375fe0dcc0702741266801137
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 23b83d755a6cc17f8ca376c2247ec3aad31e28cc
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828217"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742749"
 ---
-# <a name="idiasectioncontribgetcode"></a>IDiaSectionContrib::get_code
-Získá příznak, který označuje, zda oddíl obsahuje spustitelný kód.
+# <a name="idiasectioncontribget_code"></a>IDiaSectionContrib::get_code
+Načte příznak, který označuje, zda oddíl obsahuje spustitelný kód.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_code ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` pokud obsahuje spustitelný kód; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud oddíl obsahuje spustitelný kód; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

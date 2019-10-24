@@ -9,12 +9,12 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: a81c1869bf7587aa30dbc02f0e9aec4c97776e5f
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: fb296346d54b0774bdd9a738581ee28fe99b1de0
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918046"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777474"
 ---
 # <a name="installation"></a>Instalace
 
@@ -26,7 +26,7 @@ Toto rozšíření spolupracuje s Visual Studiem 2015 a sadou Visual Studio 2017
 
 Nástroje si můžete stáhnout z [Visual Studio Marketplace](https://aka.ms/vstoolsforai)nebo z aplikace Visual Studio:
 
-1. Vyberte rozšíření **nástrojů** > **a aktualizace**.
+1. Vyberte **nástroje**  > **rozšíření a aktualizace**.
 
    ![Nabídka rozšíření a aktualizace v aplikaci Visual Studio](media/installation/extensions.png)
 
@@ -44,7 +44,7 @@ Před školením modelů s hloubkovým učením v místním počítači se ujist
 
 ### <a name="nvidia-gpu-driver"></a>Ovladač NVIDIA GPU
 
-Architektury hloubkového učení využívají grafický procesor NVIDIA, aby se počítače urychlily rychlostí, přesností a škálováním na skutečné umělé poznatky. Pokud má počítač karty NVIDIA GPU, přečtěte si téma [Stažení ovladačů NVIDIA](http://www.nvidia.com/Download/index.aspx) nebo zkuste nainstalovat nejnovější ovladač aktualizací operačního systému.
+Architektury hloubkového učení využívají grafický procesor NVIDIA, aby se počítače urychlily rychlostí, přesností a škálováním na skutečné umělé poznatky. Pokud má počítač karty NVIDIA GPU, přečtěte si téma [Stažení ovladačů NVIDIA](https://www.nvidia.com/Download/index.aspx) nebo zkuste nainstalovat nejnovější ovladač aktualizací operačního systému.
 
 ### <a name="cuda"></a>CUDA
 
@@ -60,7 +60,7 @@ Instalace CUDA
 
 ### <a name="cudnn"></a>cuDNN
 
-[cuDNN](https://developer.nvidia.com/cudnn) (CUDA neuronové Network Library) je knihovna primitivních primitiv pro rozsáhlou neuronové síť s grafickým procesorem NVIDIA. cuDNN V6 vyžaduje nejnovější architektury hloubkového učení.
+[cuDNN](https://developer.nvidia.com/cudnn) (CUDA neuronové Network Library) je knihovna primitivních primitiv pro rozsáhlou neuronové síť s grafickým procesorem (NVIDIA). cuDNN V6 vyžaduje nejnovější architektury hloubkového učení.
 
 Instalace cuDNN:
 
@@ -82,7 +82,7 @@ Python byl primárním programovacím jazykem pro aplikace s hloubkovým učení
 
 Architektury hloubkového učení využívají PIP pro vlastní instalaci.
 
-![Nainstalovat Python ve Windows](media/installation/install_python_win.png)
+![Instalace Pythonu ve Windows](media/installation/install_python_win.png)
 
 Pak musíme ověřit, jestli je Python 3,5 nainstalovaný správně, a upgradovat PIP na nejnovější verzi spuštěním následujících příkazů v terminálu:
 
@@ -119,7 +119,7 @@ Další informace najdete v o instalaci [Pythonu pro Visual Studio Tools](../pyt
 
 - **Numpy** je univerzální balíček pro zpracování polí určený k efektivní manipulaci s velkými multidimenzionálními poli libovolných záznamů, aniž by došlo k omezení příliš velkého počtu malých multidimenzionálních polí.
 
-- **SciPy** ("sigh koláč") je open source software pro matematické, vědecké a inženýry v závislosti na NumPy. Od verze 1.0.0 nyní má SciPy oficiální předem sestavený balíček pro Windows.
+- **SciPy** ("sigh koláč") je open source software pro matematické, vědecké a inženýry v závislosti na numpy. Od verze 1.0.0 nyní má SciPy oficiální předem sestavený balíček pro Windows.
 
 Pokud chcete nainstalovat NumPy a SciPy, spusťte v terminálu následující příkaz:
 
@@ -128,7 +128,7 @@ pip3.5 install -U numpy scipy
 ```
 
 > [!NOTE]
-> Výše uvedený příkaz upgraduje stávající staré nebo neoficiální (např. balíčky třetích stran z http://www.lfd.uci.edu/~gohlke/pythonlibs/ pro Windows) numpy a SciPy na nejnovější oficiální ty.
+> Výše uvedený příkaz upgraduje stávající staré nebo neoficiální (např. balíčky třetích stran z http://www.lfd.uci.edu/~gohlke/pythonlibs/ pro Windows) NumPy a SciPy na nejnovější oficiální.
 
 ### <a name="microsoft-cognitive-toolkit-cntk"></a>Microsoft Cognitive Toolkit (CNTK)
 
@@ -194,7 +194,7 @@ pip3.5 install Theano==0.9.0
 
 ### <a name="pytorch"></a>PyTorch
 
-[PyTorch](http://pytorch.org/) je balíček Pythonu, který poskytuje dvě funkce na nejvyšší úrovni:
+[PyTorch](https://pytorch.org/) je balíček Pythonu, který poskytuje dvě funkce na nejvyšší úrovni:
 
 - Tensor výpočet (jako NumPy) se silným zrychlením GPU
 - Špičkové sítě neuronové postavené na páskovém systému automatického třídění
@@ -237,7 +237,7 @@ Nakonec nainstalujte torchvision na jiný systém než Windows:
 pip3.5 install torchvision
 ```
 
-### <a name="chainer"></a>Chainer
+### <a name="chainer"></a>chainer
 
 [Chainer](https://chainer.org/) je architektura pro hloubkové učení založená na Pythonu, která je zaměřená na flexibilitu. Poskytuje Automatická rozlišení rozhraní API na základě definice přístupu definovaného po spuštění (označované také jako dynamické výpočetní grafy), stejně jako rozhraní API na vysoké úrovni pro vytváření a výukové neuronové sítě.
 

@@ -14,12 +14,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c5399411998f4a03468f2dedccfd660eaf8de11
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: cbdbadd93eec07c43aba99e40072cb6173e0e83d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461825"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747835"
 ---
 # <a name="options-text-editor-cc-advanced"></a>Možnosti, textový editor, C/C++, upřesnit
 
@@ -52,7 +52,7 @@ Databáze procházení kódu neshromažďuje data pro soubory, které nejsou zad
 
 **Zakázat implicitní vyčištění**
 
-Databáze procházení kódu nečistí implicitní soubory, které již nejsou odkazovány. Tato možnost zabrání odebrání implicitních souborů z databáze, pokud už se nepoužívají. Například pokud přidáte `#include` direktivu, která odkazuje na rozhraní MAPI. h na jeden ze zdrojových souborů, bude nalezeno a indexováno rozhraní MAPI. h. Pokud odeberete #include a soubor se neodkazuje jinam, informace o něm se nakonec odeberou, pokud tuto možnost nevyberete. (Viz možnost **znovu prohledat interval řešení** .) Tato možnost se ignoruje, když řešení explicitně prohledáváte.
+Databáze procházení kódu nečistí implicitní soubory, které již nejsou odkazovány. Tato možnost zabrání odebrání implicitních souborů z databáze, pokud už se nepoužívají. Pokud například přidáte direktivu `#include`, která odkazuje na rozhraní MAPI. h na jeden ze zdrojových souborů, bude nalezeno a indexováno rozhraní MAPI. h. Pokud odeberete #include a soubor se neodkazuje jinam, informace o něm se nakonec odeberou, pokud tuto možnost nevyberete. (Viz možnost **znovu prohledat interval řešení** .) Tato možnost se ignoruje, když řešení explicitně prohledáváte.
 
 **Zakázat složky externích závislostí**
 
@@ -148,7 +148,7 @@ Zakáže automatické dokončování `#include` příkazů.
 
 **Použití lomítka v #include automatické dokončování**
 
-Spustí automatické dokončování `#include` příkazů při použití "/". Výchozím oddělovačem je zpětné lomítko\'. Kompilátor může přijmout buď, a tuto možnost použijte k určení toho, co váš základ kódu používá.
+Spustí automatické dokončování `#include` příkazy při použití "/". Výchozím oddělovačem je zpětné lomítko \'. Kompilátor může přijmout buď, a tuto možnost použijte k určení toho, co váš základ kódu používá.
 
 **Zakázat agresivní seznam členů**
 
@@ -156,7 +156,7 @@ Seznam členů se nezobrazí, když zadáte název typu nebo proměnné. Seznam 
 
 **Zakázat klíčová slova v seznamu členů**
 
-Klíčová slova jazyka `void`, `class`například `switch` ,, se nezobrazují v návrzích na seznam členů.
+Klíčová slova jazyka, například `void`, `class`, `switch` se nezobrazí v návrzích na seznam členů.
 
 **Zakázat fragmenty kódu v seznamu členů**
 
@@ -206,6 +206,6 @@ Pokud je povoleno, můžete vybraný text uzavřít do složených závorek zad�
 
 Pokud je povoleno, můžete vybraný text uzavřít závorkami zadáním ' (' do textového editoru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Nastavení možností editoru pro konkrétní jazyk](../../ide/reference/setting-language-specific-editor-options.md)
