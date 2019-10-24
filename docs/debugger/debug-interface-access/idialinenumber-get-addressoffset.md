@@ -1,5 +1,5 @@
 ---
-title: IDiaLineNumber::get_addressOffset | Microsoft Docs
+title: 'IDiaLineNumber:: get_addressOffset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c29f2f8b84c68e9f4f0f7425ed5566b9180b1ac3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b99addc04a7b9dc2f2b77d1943605f8c24af6aa7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828700"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743288"
 ---
-# <a name="idialinenumbergetaddressoffset"></a>IDiaLineNumber::get_addressOffset
-Načte posunu součástí adresa paměti, kde začíná bloku.
+# <a name="idialinenumberget_addressoffset"></a>IDiaLineNumber::get_addressOffset
+Načte posunutou část adresy paměti, kde je začínaný blok.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_addressOffset ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí posunutí část adresa paměti, kde začíná bloku.
+mimo Vrátí část adresy paměti, kde je začínaný blok.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
 
@@ -46,6 +46,6 @@ DWORD offset;
 pLine->get_addressOffset( &offset);
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
 - [IDiaLineNumber::get_addressSection](../../debugger/debug-interface-access/idialinenumber-get-addresssection.md)

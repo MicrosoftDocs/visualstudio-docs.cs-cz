@@ -1,5 +1,5 @@
 ---
-title: Ladění verzí funkcí přidělení haldy | Dokumentace Microsoftu
+title: Ladění verzí funkcí přidělení haldy | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -23,30 +23,30 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d00ea299ae7cebea5d6ad1a09837dc75e10568aa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d0fde776e9f2bd48aca92c7ba6d7f1fe1e23f01a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62852798"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738376"
 ---
 # <a name="debug-versions-of-heap-allocation-functions"></a>Ladění verzí funkcí přidělení haldy
-Knihovny run-time C obsahuje speciální ladění verzí funkcí přidělení haldy. Tyto funkce mají stejné názvy jako vydání verze s _dbg připojí k nim. Toto téma popisuje rozdíly mezi verzi funkce CRT a verze _dbg pomocí `malloc` a `_malloc_dbg` jako příklady.
+Knihovna run-time jazyka C obsahuje speciální ladicí verze funkcí přidělení haldy. Tyto funkce mají stejné názvy jako verze pro vydání, ke kterým se připojí _dbg. Toto téma popisuje rozdíly mezi vydáním verze funkce CRT a _dbg verze pomocí `malloc` a `_malloc_dbg` jako příklady.
 
- Když [_DEBUG](/cpp/c-runtime-library/debug) je definován, CRT mapuje všechny [malloc](/cpp/c-runtime-library/reference/malloc) volání [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg). Proto není potřeba revize kódu pomocí `_malloc_dbg` místo `malloc` získat výhody při ladění.
+ Pokud je definována [_DEBUG](/cpp/c-runtime-library/debug) , CRT [mapuje všechna volání](/cpp/c-runtime-library/reference/malloc) [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg). Proto nemusíte přepisovat kód pomocí `_malloc_dbg` místo `malloc` pro příjem výhod při ladění.
 
- Můžete chtít volat `_malloc_dbg` explicitně, ale. Volání `_malloc_dbg` explicitně má některé další výhody:
+ Je však vhodné volat `_malloc_dbg` explicitně. Volání `_malloc_dbg` explicitně přináší některé přidané výhody:
 
-- Sledování `_CLIENT_BLOCK` zadejte přidělení.
+- Sledování přidělení typu `_CLIENT_BLOCK`.
 
-- Ukládání zdrojový soubor a číslo řádku kde došlo k požadavek na přidělení.
+- Ukládá se zdrojový soubor a číslo řádku, kde došlo k žádosti o přidělení.
 
-  Pokud nechcete převést vaše `malloc` volání `_malloc_dbg`, můžete získat informace o zdrojovém souboru tak, že definujete [_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc), což způsobí, že preprocesor přímá mapování všech volání `malloc` k `_malloc_dbg` aniž byste museli spoléhat na obálku kolem `malloc`.
+  Pokud nechcete převést volání `malloc` na `_malloc_dbg`, můžete získat informace o zdrojovém souboru definováním [_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc), což způsobí, že preprocesoru přímo namapuje všechna volání do `malloc` na `_malloc_dbg` nemusíte spoléhat na obálku kolem  `malloc`.
 
-  Pokud chcete sledovat samostatné typy přidělení v blocích klienta, musí volat `_malloc_dbg` přímo a nastavte `blockType` parametr `_CLIENT_BLOCK`.
+  Chcete-li sledovat samostatné typy přidělení v klientských blocích, je nutné volat `_malloc_dbg` přímo a nastavit parametr `blockType` na `_CLIENT_BLOCK`.
 
-  Když není definovaný _DEBUG, volání `malloc` nejsou narušen, volání `_malloc_dbg` , jsou vyhodnoceny na `malloc`, definice [_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc) bude ignorována a zdroje týkající se informací o souboru požadavek na přidělení není k dispozici. Protože `malloc` nemá parametr typu blok, žádosti o `_CLIENT_BLOCK` typy se považují za standardní přidělení.
+  Není-li _DEBUG definováno, volání `malloc` nejsou narušena, volání `_malloc_dbg` jsou přeložena na `malloc`, definice [_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc) je ignorována a informace o zdrojovém souboru týkající se žádosti o přidělení nejsou k dispozici. Vzhledem k tomu, že `malloc` nemá parametr typu bloku, jsou požadavky na typy `_CLIENT_BLOCK` považovány za standardní přidělení.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Techniky ladění CRT](../debugger/crt-debugging-techniques.md)

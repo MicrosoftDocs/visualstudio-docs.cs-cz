@@ -1,5 +1,5 @@
 ---
-title: Ladění pomocí předem načteného obsahu v aplikacích pro UWP | Dokumentace Microsoftu
+title: Ladění pomocí předběžného načteného obsahu v aplikacích pro UWP | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,32 +12,32 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 03ae7ecaf9998646d1dc13c4a93bbf34b53f5e47
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 28a73974a71df7fa652e4b246043e901df76e94c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63408601"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72730575"
 ---
-# <a name="debug-uwp-apps-using-prefetched-content-in-visual-studio"></a>Ladění aplikací pro UWP pomocí předem načteného obsahu v sadě Visual Studio
+# <a name="debug-uwp-apps-using-prefetched-content-in-visual-studio"></a>Ladění aplikací pro UWP pomocí předběžného načteného obsahu v aplikaci Visual Studio
 
- Aby vaše aplikace pro UPW odezvu, můžete požádat o přednačtení některé webového obsahu, jako je například Image, nebo webové stránky do aplikace Windows [WinINet](/windows/desktop/WinInet/about-wininet) mezipaměti. Tato funkce je volána předběžné načítání. To je zvláště efektivní pro obsah, který se používá při spuštění, ale předběžné další často používané obsah může načtení příliš. Metody [Windows.Networking.BackgroundTransfer.ContentPrefetcher](/uwp/api/Windows.Networking.BackgroundTransfer.ContentPrefetcher) umožňují zadat identifikátory URI, který chcete předběžné načtení obsahu. Sada Windows SDK [předběžné načtení obsahu ukázka](https://code.msdn.microsoft.com/windowsapps/ContentPrefetcher-Sample-432c8309) příklady toho, jak přidat ContentPrefetcher funkce do vaší aplikace.
+ Pokud chcete, aby aplikace pro UWP lépe reagovala, můžete požádat Windows, aby předem načetl nějaký webový obsah, například webové stránky nebo obrázky, do mezipaměti [WinInet](/windows/desktop/WinInet/about-wininet) aplikace. Tato funkce se nazývá předběžné načítání. Je to obzvláště efektivní pro obsah, který se používá při spuštění, ale můžete také předběžně vymezit i jiný často používaný obsah. Metody třídy [Windows. Networking. BackgroundTransfer. ContentPrefetcher](/uwp/api/Windows.Networking.BackgroundTransfer.ContentPrefetcher) umožňují zadat identifikátory URI obsahu, který chcete předem načíst. Příklady přidávání funkcí ContentPrefetcher do aplikace najdete v [ukázce předběžného načtení obsahu](https://code.msdn.microsoft.com/windowsapps/ContentPrefetcher-Sample-432c8309) Windows SDK.
 
- Windows používá heuristiky určit, kdy a pokud se předběžné načítání by mělo dojít k a které prostředky se stáhne. Heuristické metody brát v síti účet systému a podmínky napájení, historie využití aplikace uživatele a výsledky předběžného načtení předchozí pokusy. V sadě Visual Studio, můžete použít **předběžné načítání aplikací pro aktivační událost Windows Store** příkaz přinutit Windows ignorovat ContentPrefetcher heuristik a předběžné načtení veškerý obsah, zadaný web. To může být užitečné, pokud chcete otestovat výkon s obsahem pro předběžné načtení do známého stavu (načtení nebo není načtený) nebo chování aplikace.
+ Systém Windows používá heuristiky k určení, kdy a kde se mají vyskytnout předběžné načtení a které prostředky budou staženy. Heuristika bere v úvahu systémové sítě a podmínky napájení, historii využití uživatelských aplikací a výsledky předchozích pokusů o předběžné načtení. V aplikaci Visual Studio můžete použít příkaz **Spustit předběžné načtení aplikace pro Windows Store** , který vynutí, aby systém Windows ignoroval heuristické ContentPrefetcher a předem načetly veškerý zadaný webový obsah. To může být užitečné, pokud chcete otestovat chování nebo výkon aplikace pomocí obsahu, který se má předběžně načíst do známého stavu (buď načteno nebo není načteno).
 
-## <a name="to-force-preloading-of-contentprefetcher-specified-resources"></a>Chcete-li vynutit předběžné načtení z ContentPrefetcher zadané prostředky
- Tento postup předpokládá, že jste už nastavení funkce ContentPrefetcher a zadat identifikátory URI obsahu přednačtení v projektu aplikace. Chcete-li vynutit předběžné načtení obsahu, pokud zadané prostředky jsou nové nebo upravené, budete muset spuštění a zastavení aplikace, než se rozhodnete **předběžné načítání aplikací pro aktivační událost Windows Store** příkazu. Je-li spustit aplikaci nejprve zaregistrovat identifikátory URI. **Aktivovat předběžné načítání aplikací pro Windows Store** příkaz pak vynutí ContentPrefetcher ke stažení obsahu a přidat ho do mezipaměti. Při dalším spuštění aplikace můžete předpokládat, že obsah se předem načtou.
+## <a name="to-force-preloading-of-contentprefetcher-specified-resources"></a>Vynucení přednačtení ContentPrefetcher určených prostředků
+ Tento postup předpokládá, že jste již nastavili funkci ContentPrefetcher a zadali jste identifikátory URI obsahu pro předběžné načtení do projektu aplikace. Pokud chcete vynutit, aby se předem načetly obsah, když jsou zadané prostředky nové nebo upravené, musíte aplikaci spustit a zastavit předtím, než se rozhodnete aktivovat příkaz pro **předběžné načtení aplikace pro Windows Store** . Nejdřív aplikaci spustíte pro registraci identifikátorů URI. Aktivovat příkaz pro vygenerování **aplikace pro Windows Store** : vynutí ContentPrefetcher stažení obsahu a jeho přidání do mezipaměti. V následných spuštěních aplikace můžete předpokládat, že je obsah předem načten.
 
-1. Spustí aplikaci pro registraci předběžné načtení obsahu identifikátory URI v aplikaci. Na **ladění** nabídce zvolte **spustit ladění** (Klávesová zkratka: F5).
+1. Spusťte aplikaci pro registraci identifikátorů URI obsahu předběžného načtení do aplikace. V nabídce **ladění** klikněte na příkaz **Spustit ladění** (Klávesová zkratka: F5).
 
-2. Na **ladění** nabídce zvolte **Zastavit ladění** (Klávesová zkratka: SHIFT + F5).
+2. V nabídce **ladění** vyberte možnost **Zastavit ladění** (Klávesová zkratka: Shift + F5).
 
-3. Na **ladění** nabídce zvolte **jiné cíle ladění** a klikněte na tlačítko **předběžné načítání aplikací pro aktivační událost Windows Store**.
+3. V nabídce **ladění** zvolte možnost **Další cíle ladění** a pak zvolte možnost **Spustit předběžné načtení aplikace pro Windows Store**.
 
-   Teď můžete ladit, testování nebo analyzovat aplikace s využitím předem načteného webových prostředků.
+   Nyní můžete aplikaci ladit, testovat nebo analyzovat pomocí přednačtených webových prostředků.
 
 > [!NOTE]
-> Tento postup opakujte, pokaždé, když přidáváte nebo odebíráte Zadaný webový obsah.
+> Tyto kroky opakujte, kdykoli přidáte nebo upravíte zadaný webový obsah.
 
-## <a name="see-also"></a>Viz také
-- [Blogový příspěvek: Aktivace předběžné načtení ve Windows Store Apps ve službě Visual Studio 2013 Update 2](https://devblogs.microsoft.com/devops/triggering-prefetch-for-windows-store-apps-in-visual-studio-2013-update-2/)
+## <a name="see-also"></a>Viz také:
+- [Blogový příspěvek: Aktivace předběžného načtení aplikací pro Windows Store ve Visual Studio 2013 Update 2](https://devblogs.microsoft.com/devops/triggering-prefetch-for-windows-store-apps-in-visual-studio-2013-update-2/)

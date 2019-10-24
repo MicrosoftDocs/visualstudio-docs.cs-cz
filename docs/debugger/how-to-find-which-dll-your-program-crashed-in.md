@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Hledání knihovny DLL které Program selhal v | Dokumentace Microsoftu'
+title: 'Postupy: hledání knihovny DLL, ve které došlo k chybě programu | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -22,33 +22,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b7a9421af9e0caf085feb1afb27b53befe837668
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bff4f164e16a65efe4ec3d1f057025168eab8cd2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894044"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733274"
 ---
-# <a name="how-to-find-which-dll-your-program-crashed-in-c-c-visual-basic-f"></a>Postupy: Hledání knihovny DLL které Program selhal v (C#, C++, Visual Basic, F#)
+# <a name="how-to-find-which-dll-your-program-crashed-in-c-c-visual-basic-f"></a>Postupy: hledání knihovny DLL, ve které došlo k chybě programuC#( C++,, Visual Basic F#,)
 
- Pokud vaše aplikace dojde k chybě během volání systémové knihovny DLL nebo kód někoho jiného, budete muset najít který byl aktivní knihovny DLL, kdy došlo k selhání. Pokud dojde k chybovému ukončení v knihovně DLL mimo svůj program, můžete určit pomocí umístění **moduly** okna.
+ Pokud vaše aplikace selže během volání systémové knihovny DLL nebo kódu někoho jiného, je nutné zjistit, která knihovna DLL byla aktivní, když došlo k chybě. Pokud dojde k chybě v knihovně DLL mimo vlastní program, můžete umístění identifikovat pomocí okna **moduly** .
 
-### <a name="to-find-where-a-crash-occurred-using-the-modules-window"></a>Najde, pro které selhání došlo k použití okna moduly
+### <a name="to-find-where-a-crash-occurred-using-the-modules-window"></a>Zjištění, kde došlo k chybě, pomocí okna moduly
 
-1. Poznamenejte si adresu, kde došlo k selhání.
+1. Poznamenejte si adresu, kde došlo k chybě.
 
-    Pokud adresa není zobrazený v chybové zprávě, budete muset použít alternativní metody k identifikaci knihovny DLL. Pokud máte podezření na systémové knihovny DLL, můžete si [načíst symboly](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) ze serverů Microsoft Symbol, při ladění. V opačném případě budete muset [vytvořit soubor s výpisem paměti](../debugger/using-dump-files.md) pomocí haldy informace místo. Různé [nástroje](https://blogs.msdn.microsoft.com/andrehal/2009/12/31/what-is-a-dump-and-how-do-i-create-one/) je možné vytvořit soubory s výpisem paměti.
+    Pokud adresa není zobrazená v chybové zprávě, možná budete muset použít alternativní metody k identifikaci knihovny DLL. Pokud se domníváte, že systémová knihovna DLL, můžete při ladění [načíst symboly](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) ze serverů symbolů společnosti Microsoft. V opačném případě možná budete muset místo toho [vytvořit soubor s výpisem paměti](../debugger/using-dump-files.md) s informacemi o haldě. K dispozici jsou různé [nástroje](https://blogs.msdn.microsoft.com/andrehal/2009/12/31/what-is-a-dump-and-how-do-i-create-one/) pro vytváření souborů s výpisem paměti.
 
-2. Na **ladění** nabídce zvolte **Windows**a klikněte na tlačítko **moduly**.
+2. V nabídce **ladění** vyberte možnost **Windows**a klikněte na **moduly**.
 
-3. V **moduly** okně Najít **adresu** sloupce. Budete muset použít posuvník a prohlédněte si ho.
+3. V okně **moduly** Najděte sloupec **adresa** . Možná budete muset použít posuvník, abyste ho viděli.
 
-4. Klikněte na tlačítko **adresu** tlačítko v horní části Tento sloupec seřadit podle adresy knihovny DLL.
+4. Kliknutím na tlačítko **adresa** v horní části sloupce seřadíte knihovny DLL podle adres.
 
-5. Kontrola seřazeného seznamu k nalezení knihovny DLL, jejichž rozsah adres obsahuje umístění při selhání.
+5. Prohledejte seřazený seznam a vyhledejte knihovnu DLL, jejíž rozsah adres obsahuje umístění selhání.
 
-6. Podívejte se na **název** a **cesta** sloupce, které chcete zobrazit název knihovny DLL a cestu.
+6. Podívejte se na sloupce **název** a **cesta** , kde se zobrazí název a cesta ke knihovně DLL.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění projektů knihovny DLL](../debugger/debugging-dll-projects.md)
 - [Postupy: Použití okna Moduly](../debugger/how-to-use-the-modules-window.md)

@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_stride | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_stride | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c581668668a208a9bcf35a1b39d1b3d384a4f8a3
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: b1ff294e45404d312d445c4b76f05cc3e0d7dd95
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62841611"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739293"
 ---
-# <a name="idiasymbolgetstride"></a>IDiaSymbol::get_stride
-Načte stride matici nebo strided pole.
+# <a name="idiasymbolget_stride"></a>IDiaSymbol::get_stride
+Načte rozteč matice nebo pole s roztečí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,10 +30,10 @@ HRESULT get_stride(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Ukazatel `DWORD` obsahující stride.
+mimo Ukazatel na `DWORD`, který obsahuje rozteč.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

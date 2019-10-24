@@ -1,5 +1,5 @@
 ---
-title: Idiatable::get_Name – | Dokumentace Microsoftu
+title: 'IDiaTable:: get_Name | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fc5ac9b3892ad9447f413df58d43791b1be1720a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e3874ad63026208d096a2b7866377d09ac79cbe9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840472"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738764"
 ---
-# <a name="idiatablegetname"></a>IDiaTable::get_name
+# <a name="idiatableget_name"></a>IDiaTable::get_name
 Načte název tabulky.
 
 ## <a name="syntax"></a>Syntaxe
@@ -33,10 +33,10 @@ HRESULT get_name ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí název tabulky.
+mimo Vrátí název tabulky.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaTable](../../debugger/debug-interface-access/idiatable.md)

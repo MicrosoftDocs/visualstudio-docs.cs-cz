@@ -1,5 +1,5 @@
 ---
-title: Idiaenumdebugstreamdata::Skip – | Dokumentace Microsoftu
+title: 'IDiaEnumDebugStreamData:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61c33ab75ebac94ec69d772ae23476df28bdb31d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f2f331d7a91e9dbc6dbf0dea2e8a5b91f08de584
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838360"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744831"
 ---
 # <a name="idiaenumdebugstreamdataskip"></a>IDiaEnumDebugStreamData::Skip
-Vynechá zadaný počet záznamů v sekvenci výčtu.
+Přeskočí zadaný počet záznamů v sekvenci výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT Skip ( 
 #### <a name="parameters"></a>Parametry
  celt
 
-[in] Počet záznamů přejít v pořadí výčtu.
+pro Počet záznamů, které se mají přeskočit ve výčtové sekvenci.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` Pokud neexistují žádné další záznamy pro přeskočení.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE`, pokud neexistují žádné další záznamy, které by bylo možné přeskočit.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

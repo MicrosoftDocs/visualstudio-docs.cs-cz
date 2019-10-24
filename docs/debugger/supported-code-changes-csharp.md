@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c5f54a2b50447125b0abffd8cc62ba9c2a1d2b37
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
+ms.openlocfilehash: 44881035da14483c3ddf1f4c48cb3957a1ce8b50
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887783"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72729093"
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>Podporované změny kódu (C# a Visual Basic)
 Upravit a pokračovat zpracovává většinu typů změn kódu v rámci těla metody. Většina změn mimo tělo metody a několik změn v rámci těla metod nelze použít během ladění. Chcete-li použít tyto nepodporované změny, je nutné zastavit ladění a restartovat s novou verzí kódu.
@@ -35,7 +35,7 @@ V následující tabulce jsou uvedeny změny, které mohou být provedeny C# a V
 |Typy|Přidat metody, pole, konstruktory, et al|[Ano](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 |Iterátory|Přidat nebo upravit|Ne|
 |výrazy Async/await|Přidat nebo upravit|[Ano](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
-|dynamické objekty|Přidat nebo upravit|Ne|
+|Dynamické objekty|Přidat nebo upravit|Ne|
 |lambda – výrazy|Přidat nebo upravit|[Ano](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 |Výrazy LINQ|Přidat nebo upravit|[Stejné jako výrazy lambda](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 
@@ -55,7 +55,7 @@ V následující tabulce jsou uvedeny změny, které mohou být provedeny C# a V
 
 |Jazykové prvky/funkce|Nepodporovaná operace Edit|
 |-|-|
-|Všechny elementy kódu|Přejmenování|
+|Všechny elementy kódu|Měníte|
 |Jmenné prostory|Přidejte|
 |Obory názvů, typy, členy|Odstranit|
 |Obecné typy|Přidat nebo upravit|
@@ -79,7 +79,7 @@ V následující tabulce jsou uvedeny změny, které mohou být provedeny C# a V
 |Iterátory|Úprava iterátoru v projektu cílící na .NET Framework 4 a nižší (viz [Podrobnosti](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
 
 ## <a name="unsafe-code"></a>Nebezpečný kód
- Změny v nebezpečném kódu mají stejná omezení jako změny v bezpečném kódu s jedním dalším omezením: Operace Upravit a pokračovat nepodporuje změny nezabezpečeného kódu, který ukončuje v rámci metody, která obsahuje `stackalloc` operátor.
+ Změny v nebezpečném kódu mají stejná omezení jako změny v bezpečném kódu s jedním dalším omezením: příkaz Upravit a pokračovat nepodporuje změny nezabezpečeného kódu, který ukončuje v rámci metody, která obsahuje operátor `stackalloc`.
 
 ## <a name="unsupported-app-scenarios"></a>Nepodporované scénáře aplikací
 
@@ -95,7 +95,7 @@ Mezi nepodporované aplikace a platformy patří ASP.NET 5, Silverlight 5 a Wind
 
 - Ladění SQL.
 
-- Ladění Dr. Výpis programu Watson.
+- Ladění výpisu nástroje Dr. Watson.
 
 - Ladění vložené aplikace modulu runtime.
 
@@ -105,6 +105,6 @@ Mezi nepodporované aplikace a platformy patří ASP.NET 5, Silverlight 5 a Wind
 
 - Ladění staré verze kódu po neúspěšném sestavení nové verze z důvodu chyb sestavení.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Upravit a pokračovat (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)
 - [Postupy: Použití operace Upravit a pokračovat (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)

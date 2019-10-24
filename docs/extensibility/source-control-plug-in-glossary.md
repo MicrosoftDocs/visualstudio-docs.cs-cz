@@ -1,5 +1,5 @@
 ---
-title: Glosář modulu Plug-in ovládací prvek zdroje | Dokumentace Microsoftu
+title: Glosář modulu plug-in správy zdrojových kódů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,44 +11,44 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 47488621fe3e5167e00442e1ca971ef923d9b25c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 672a96c31137a52f3bd4a8c826cef1b19406790b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331898"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72719576"
 ---
 # <a name="source-control-plug-in-glossary"></a>Glosář modulu plug-in zdrojového kódu
-Užitečné následující pojmy a definice se vztahují k dokumentaci zdrojového ovládacího prvku modulu Plug-in SDK.
+Následující užitečné výrazy a definice se týkají dokumentace sady SDK modulu plug-in správy zdrojového kódu.
 
 ## <a name="definitions"></a>Definice
- Když uživatel provede změny do funkční kopie vrácení se změnami, uživatel musí odeslat změny z pracovní kopie do úložiště správy centrální zdrojového kódu. Tím se vytvoří nová revize souboru, který je k dispozici jiným uživatelům. Tento proces se nazývá vrácení se změnami.
+ Vrácení se změnami, když uživatel provede změny v pracovní kopii, musí odeslat změny z pracovní kopie do centrálního úložiště správy zdrojového kódu. Tím se vytvoří nová revize souboru, která je k dispozici ostatním uživatelům. Tento proces se nazývá vrácení se změnami.
 
- V rámci žádosti o pracovní kopie v úložišti informuje úložiště váš pokus o úpravu ho rezervovat. Pracovní kopie odráží stav projektu od okamžiku, kdy je rezervován.
+ Zarezervujte Act o žádosti o pracovní kopii z úložiště, který informuje úložiště záměru o jeho úpravě. Pracovní kopie odráží stav projektu v době, kdy je rezervován.
 
- Klient A program, který využívá systém správy zdrojového kódu. Pro účely této dokumentace je integrované vývojové prostředí sady Visual Studio.
+ Klient aplikace, která používá systém správy zdrojového kódu. Pro účely této dokumentace je to integrované vývojové prostředí (IDE) sady Visual Studio.
 
- Komentář A zpráva popisující změny, které uživatel může připojit k revizi při provádění operaci správy zdrojových kódů.
+ Komentář zprávy popisující změny, které se uživatel může připojit k revizi, když je provedena operace správy zdrojových kódů.
 
- Konflikt A situaci, když dva uživatelé pokoušejí k vrácení se změnami změny do stejné oblasti stejného souboru. Obvykle musí být provedeno sloučení.
+ Dojde ke konfliktu situace, když se dva uživatelé pokusí vrátit se změnami stejnou oblast stejného souboru. Sloučení je typicky nutné provést.
 
- A na straně klienta místní složku se označuje jako adresář. Toto je kopírování, ve kterém uživatel ve skutečnosti provádí změny. Může být mnoho pracovních kopií daného projektu. obecně každý vývojář má svůj vlastní kopie.
+ Adresářovou místní složkou na straně klienta se říká adresář. Jedná se o kopii, ve které uživatel skutečně provádí změny. Může existovat mnoho pracovních kopií daného projektu; Obecně platí, že každý vývojář má svoji vlastní kopii.
 
- Operace get A získání přináší uživatele pracovní kopie aktuální kopii úložiště. Na rozdíl od checkout get provést, pokud se uživatel jednoduše potřebuje nejnovější ale si klade za cíl neprovádějte žádné změny.
+ Operace Get přinese aktuální pracovní kopii uživatele do kopie úložiště. Na rozdíl od registrace se provede Get, když uživatel jednoduše potřebuje nejnovější kopii, ale zamýšlí dělat žádné změny.
 
- Historie je obvykle souhrn všech rezervace, vrácení se změnami, aktualizace, značky a verzí v úložišti správy zdrojů.
+ Historie je obvykle souhrn všech rezervací, vrácení se změnami, aktualizací, značek a vydání, které se provádí v úložišti správy zdrojového kódu.
 
- Integrované vývojové prostředí obvykle odkazuje na Visual Studio integrované vývojové prostředí. Ale může také odkazovat na jiné prostředí klienta, které rozhraní API modulu Plug-in zdroje ovládacího prvku.
+ Rozhraní IDE obecně odkazuje na integrované vývojové prostředí sady Visual Studio. Může však také odkazovat na jiná klientská prostředí, která rozpoznávají rozhraní API modulu plug-in správy zdrojového kódu.
 
- Sloučit procesu, během kterého nejmíň dva zdroje jsou soubory kódu se spojí dohromady a tvoří nový soubor, který zahrnuje všechny funkce z předchozí soubory. Tento koncept je důležité ve správě verzí místo, kde dva nebo více vývojáři pracovat na souborech současně.
+ Sloučení procesu, během kterého jsou dva nebo více souborů zdrojového kódu kombinovány, aby tvořily nový soubor, který zahrnuje všechny funkce z předchozích souborů. Tento koncept je nezbytný v řízení verze, kde dva nebo více vývojářů pracuje na souborech současně.
 
- Složka správy zdrojového kódu A projekt se často označuje jako projekt. To nemá žádný vztah s projekty nebo řešení v sadě Visual Studio.
+ Projekt složky správy zdrojového kódu se často označuje jako projekt. Nemá žádný vztah s projekty nebo řešeními v aplikaci Visual Studio.
 
- Modul plug-in knihovnu DLL, která poskytuje funkce správy zdrojového kódu pomocí implementace rozhraní API modulu Plug-in zdroje ovládacího prvku.
+ Modul plug-in knihovny DLL, která poskytuje funkce správy zdrojového kódu implementací rozhraní API modulu plug-in správy zdrojového kódu.
 
- Úložiště hlavní kopie, kde systém správy zdrojového kódu uchovává historii kompletní revizi projektu. Každý projekt má přesně jedno úložiště.
+ Úložiště hlavní kopie, kde systém správy zdrojů ukládá úplnou historii revizí projektu. Každý projekt má přesně jedno úložiště.
 
- Revize A potvrzené změny v historii souboru nebo sady souborů. Revizi patří pořízení snímku v neustále se měnící projektu.
+ Revize potvrzené změny v historii souboru nebo sady souborů. Revize je jeden snímek s nepřetržitou změnou projektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Moduly plug-in správy zdrojového kódu](../extensibility/source-control-plug-ins.md)

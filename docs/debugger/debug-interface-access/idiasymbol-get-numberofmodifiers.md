@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_numberOfModifiers | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_numberOfModifiers | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 74a83a83a805aa86d10b3c051ac1c6fc39f36f14
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: e034f081f8a279a65134c40e5ee485cd1d08d9b3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62835982"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739674"
 ---
-# <a name="idiasymbolgetnumberofmodifiers"></a>IDiaSymbol::get_numberOfModifiers
-Získá počet parametrů, které se použijí k původnímu typu.
+# <a name="idiasymbolget_numberofmodifiers"></a>IDiaSymbol::get_numberOfModifiers
+Načte počet modifikátorů, které jsou aplikovány na původní typ.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,10 +30,10 @@ HRESULT get_numberOfModifiers(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Ukazatel `DWORD` , která určuje počet parametrů, které se použijí k původnímu typu.
+mimo Ukazatel na `DWORD`, který určuje počet modifikátorů, které jsou aplikovány na původní typ.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

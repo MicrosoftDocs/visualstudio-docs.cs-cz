@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_isMultipleInheritance | Microsoft Docs
+title: 'IDiaSymbol:: get_isMultipleInheritance | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a353f9fc3605d1f2d26248b3ce907fb76b947c68
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 4eb6e1509a46c4e584e98403439188581df97c10
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62836613"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740183"
 ---
-# <a name="idiasymbolgetismultipleinheritance"></a>IDiaSymbol::get_isMultipleInheritance
-Určuje, zda `this` ukazatel odkazuje na datový člen s vícenásobnou dědičnost.
+# <a name="idiasymbolget_ismultipleinheritance"></a>IDiaSymbol::get_isMultipleInheritance
+Určuje, zda `this` ukazatel ukazuje na datový člen s vícenásobnou dědičností.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,10 +30,10 @@ HRESULT get_isMultipleInheritance(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Ukazatel `BOOL` , která určuje, zda `this` ukazatel odkazuje na datový člen s vícenásobnou dědičnost.
+mimo Ukazatel na `BOOL`, který určuje, zda `this` ukazatel ukazuje na datový člen s vícenásobnou dědičností.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

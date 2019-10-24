@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Server používá adresu IP | Dokumentace Microsoftu'
+title: 'Chyba: lokalita používá IP adresu | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -16,25 +16,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 468cb2c85be088213bc865122a790408c6c992b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 96786efad0349dec7c9e8e9a02cca40af3668341
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850412"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737503"
 ---
 # <a name="error-site-uses-ip-address"></a>Chyba: Server používá adresu IP
-K této chybě dochází, když se ladicí program se pokusí o automatické připojení k webové aplikaci, která používá IP adresu. K tomu dojde, pokud změníte **identifikaci webu** k **použít konkrétní IP adresu** ve službě IIS.
+K této chybě dojde, když se ladicí program pokusí o automatické připojení k webové aplikaci, která používá IP adresu. K tomu dojde, pokud změníte **identifikaci** webu tak, aby **používala konkrétní IP adresu** ve službě IIS.
 
- Pro automatické připojení k práci, je potřeba vytvořit projekt s konkrétní IP adresu, nikoli jen název počítače. Ladicí program v opačném případě se změní název počítače na místního hostitele, což způsobí selhání odeslat příkaz debug. do služby IIS.
+ Aby se automatické připojení fungovalo, je potřeba vytvořit projekt s konkrétní IP adresou a nikoli jenom názvem počítače. V opačném případě ladicí program změní název počítače na localhost, což způsobí selhání odeslání příkazu ladění službě IIS.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-1. Použití ručně připojit místo toho (v nabídce ladění zvolte **připojit k procesu**).
+1. Místo toho použijte manuální připojení (z nabídky ladění vyberte **připojit k procesu**).
 
      —nebo—
 
-2. Změnit **identifikace serveru služby IIS** nastavení.
+2. Změnit nastavení **Identifikace webu služby IIS** .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

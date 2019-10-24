@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_informational – | Dokumentace Microsoftu
+title: 'IDiaSectionContrib:: get_informational | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b00d07b788fe07fbe2e879f01a98929927743a0b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e425c8bc4e1e3973dac5becc39f3e6c6e9f8dfe8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839586"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742650"
 ---
-# <a name="idiasectioncontribgetinformational"></a>IDiaSectionContrib::get_informational
-Získá příznak označující, zda oddíl obsahuje komentáře nebo podobné informace.
+# <a name="idiasectioncontribget_informational"></a>IDiaSectionContrib::get_informational
+Načte příznak označující, zda oddíl obsahuje komentáře nebo podobné informace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_informational(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` Pokud oddíl obsahuje komentáře nebo jiné informace; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud oddíl obsahuje komentáře nebo jiné informace. v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- V části .directive obvykle obsahuje informace.
+ Oddíl. direktiva obvykle obsahuje informace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

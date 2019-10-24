@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsourcefiles::get_count – | Dokumentace Microsoftu
+title: 'IDiaEnumSourceFiles:: get_Count | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 03d3d52706d549ce6dff4d30b9552ff5d35f379a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7abc842a65140d1ee127dba99568ff4a57b16873
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833373"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744116"
 ---
-# <a name="idiaenumsourcefilesgetcount"></a>IDiaEnumSourceFiles::get_Count
-Získá počet zdrojových souborů.
+# <a name="idiaenumsourcefilesget_count"></a>IDiaEnumSourceFiles::get_Count
+Načte počet zdrojových souborů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,11 +33,11 @@ HRESULT get_Count ( 
 #### <a name="parameters"></a>Parametry
  pRetVal
 
-[out] Vrátí počet zdrojových souborů.
+mimo Vrátí počet zdrojových souborů.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)
 - [IDiaEnumSourceFiles::Item](../../debugger/debug-interface-access/idiaenumsourcefiles-item.md)

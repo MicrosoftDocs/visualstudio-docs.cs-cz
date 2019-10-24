@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bc7d4ef8e281cd56b7a585d516cd5d48028a00f8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: def432c5c2861716b4b3fb6e2f93f20a93a54a28
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653710"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748542"
 ---
 # <a name="calculated-and-custom-storage-properties"></a>Vypočtené a vlastní vlastnosti úložiště
 Všechny vlastnosti domény v jazyce DSL (Domain Specific Language) lze zobrazit uživateli v diagramu a ve vašem jazykovém Průzkumníku a lze k němu přistupovat prostřednictvím kódu programu. Vlastnosti se ale liší ve způsobu, jakým jsou uložené jejich hodnoty.
@@ -107,7 +107,7 @@ void SetAgeValue(int value)
 
  Další informace o transakcích naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Navigace v modelu a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Vlastnosti vlastností domény](../modeling/properties-of-domain-properties.md)

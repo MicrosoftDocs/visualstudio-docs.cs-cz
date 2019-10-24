@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_typeId | Microsoft Docs
+title: 'IDiaSymbol:: get_typeId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 007dd4ad4d7c0c06abf3c235753ec55febf3bcc3
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 3f0249f4e228327666e03e1a402f7f9cf69ee929
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64800042"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739088"
 ---
-# <a name="idiasymbolgettypeid"></a>IDiaSymbol::get_typeId
+# <a name="idiasymbolget_typeid"></a>IDiaSymbol::get_typeId
 Načte identifikátor typu symbolu.
 
 ## <a name="syntax"></a>Syntaxe
@@ -33,16 +33,16 @@ HRESULT get_typeId ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí ID typu symbol.
+mimo Vrátí ID typu symbolu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Identifikátor je jedinečná hodnota vytvořené DIA SDK označit všechny symboly jako jedinečný.
+ Identifikátor je jedinečná hodnota vytvořená DIA SDK k označení všech symbolů jako jedinečných.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

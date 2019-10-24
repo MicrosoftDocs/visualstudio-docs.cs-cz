@@ -1,5 +1,5 @@
 ---
-title: Registrace typu projektu | Dokumentace Microsoftu
+title: Registrace typu projektu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +12,22 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b950ea6dde73ecb7f20ef45e945106e8711aefb0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c71756259574827924babc16d6933e642b8299ef
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353353"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72724727"
 ---
 # <a name="registering-a-project-type"></a>Registrace typu projektu
-Když vytvoříte nový typ projektu, je nutné vytvořit položky registru, které umožňují [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nerozpozná a nenahraje a pracovat s vašeho typu projektu. Tyto položky registru obvykle vytvoříte pomocí souboru registru skript (.rgs).
+Při vytváření nového typu projektu je nutné vytvořit položky registru, které umožní [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rozpoznat a pracovat s typem projektu. Tyto položky registru obvykle vytváříte pomocí souboru skriptu registru (. rgs).
 
- V následujícím příkladu příkazy z registru poskytují výchozí cesty a data kde je to možné, za nímž následuje tabulku, která obsahuje položky z registru skriptu příkazu for each. Tabulky poskytují položkami skriptu a další informace o dotazech.
+ V následujícím příkladu příkazy z registru poskytují výchozí cesty a data, za kterými následuje tabulka, která obsahuje položky ze skriptu registru pro každý příkaz. Tabulky poskytují položky skriptu a další informace o příkazech.
 
 > [!NOTE]
-> Do registru následující informace slouží jako příklad typu a účely položky v registru skripty, které vás bude psaní registrace typu projektu. Skutečné položky a jejich použití se může lišit v závislosti na konkrétní požadavky na typu projektu. Zkontrolujte dostupných najít takový, který připomíná typ projektu, kterou vyvíjíte a pak zkontrolujte skript registru pro tuto ukázku.
+> Následující informace registru mají být příkladem typu a účelu záznamů v skriptech registru, které budete zapisují k registraci typu projektu. Vaše skutečné položky a jejich použití se mohou lišit v závislosti na konkrétních požadavcích vašeho typu projektu. Měli byste si projít ukázky, které jsou k dispozici, a najít je, který se přesně podobá typu projektu, který vyvíjíte, a pak zkontrolovat skript registru pro tuto ukázku.
 
- Následující příklady jsou z HKEY_CLASSES_ROOT.
+ Následující příklady jsou z registru HKEY_CLASSES_ROOT.
 
 ## <a name="example"></a>Příklad
 
@@ -49,14 +49,14 @@ Když vytvoříte nový typ projektu, je nutné vytvořit položky registru, kte
 
 |Name|Typ|Data|Popis|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|`FigPrjFile`|Název a popis projektu zadejte soubory, které mají .figp rozšíření.|
+|`@`|REG_SZ|`FigPrjFile`|Název a popis souborů typu projektu, které mají příponu. figp.|
 |`Content Type`|REG_SZ|`Text/plain`|Typ obsahu pro soubory projektu.|
 |`NullFile`|REG_SZ|`Null`||
-|`@`|REG_SZ|`%MODULE%,-206`|Výchozí ikona použitá pro projekt tohoto typu. Příkaz % modulu % byla dokončena v registru do umístění výchozího typu projektu DLL.|
-|`@`|REG_SZ|`&Open in Visual Studio`|Výchozí aplikace, ve které se otevřou tento typ projektu.|
-|`@`|REG_SZ|`devenv.exe "%1"`|Výchozí příkaz, který se spustí při otevření projektu tohoto typu.|
+|`@`|REG_SZ|`%MODULE%,-206`|Výchozí ikona použitá pro projekt tohoto typu Příkaz% MODULE% byl dokončen v registru do výchozího umístění knihovny DLL typu projektu.|
+|`@`|REG_SZ|`&Open in Visual Studio`|Výchozí aplikace, ve které bude tento typ projektu otevřen.|
+|`@`|REG_SZ|`devenv.exe "%1"`|Výchozí příkaz, který se spustí, když se otevře projekt tohoto typu.|
 
- Následující příklady jsou z HKEY_LOCAL_MACHINE a jsou umístěny v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\99.0Exp\Packages].
+ Následující příklady jsou z HKEY_LOCAL_MACHINE a jsou umístěné v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\99.0Exp\Packages].
 
 ## <a name="example"></a>Příklad
 
@@ -81,19 +81,19 @@ Když vytvoříte nový typ projektu, je nutné vytvořit položky registru, kte
 
 |Name|Typ|Data|Popis|
 |----------|----------|----------|-----------------|
-|`@` (Výchozí)|REG_SZ|`FigPrj Project VSPackage`|Lokalizovatelný název registrované balíčku VSPackage (typ projektu).|
-|`InprocServer32`|REG_SZ|`%MODULE%`|Cesta k typu projektu DLL. Rozhraní IDE načte tuto knihovnu DLL a předává identifikátor CLSID VSPackage `DllGetClassObject` zobrazíte <xref:Microsoft.VisualStudio.OLE.Interop.IClassFactory> k sestavení kompletních <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> objektu.|
-|`CompanyName`|REG_SZ|`Microsoft`|Název společnosti, který vyvinul typ projektu.|
-|`ProductName`|REG_SZ|`Figure Project Sample`|Název typu projektu.|
-|`ProductVersion`|REG_SZ|`9.0`|Číslo verze typu projektu release.|
-|`MinEdition`|REG_SZ|`professional`|Edice sady VSPackage registrována.|
-|`ID`|REG_DWORD|`%IDS_PACKAGE_LOAD_KEY%`|Balíček načíst klíč projektu VSPackage. Klíč je ověřeno při načtení projektu po spuštění prostředí.|
-|`DllName`|REG_SZ|`%RESOURCE_DLL%`|Název souboru satelitní knihovny DLL obsahující lokalizované prostředky pro typ projektu.|
-|`Path`|REG_SZ|`%RESOURCE_PATH%`|Cestu k satelitní knihovně DLL.|
-|`FigProjectsEvents`|REG_SZ|Naleznete v části prohlášení pro hodnotu.|Určuje textový řetězec pro tuto událost služby automation.|
-|`FigProjectItemsEvents`|REG_SZ|Naleznete v části prohlášení pro hodnotu.|Určuje textový řetězec pro tuto událost služby automation.|
+|`@` (výchozí)|REG_SZ|`FigPrj Project VSPackage`|Lokalizovatelný název tohoto registrovaného VSPackage (typ projektu)|
+|`InprocServer32`|REG_SZ|`%MODULE%`|Cesta k souboru DLL typu projektu. Rozhraní IDE načte tuto knihovnu DLL a předá identifikátor CLSID VSPackage, který `DllGetClassObject` k získání <xref:Microsoft.VisualStudio.OLE.Interop.IClassFactory> k vytvoření objektu <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>.|
+|`CompanyName`|REG_SZ|`Microsoft`|Název společnosti, která vyvinula typ projektu.|
+|`ProductName`|REG_SZ|`Figure Project Sample`|Název typu projektu|
+|`ProductVersion`|REG_SZ|`9.0`|Číslo verze typu projektu.|
+|`MinEdition`|REG_SZ|`professional`|Registrovaná edice sady VSPackage.|
+|`ID`|REG_DWORD|`%IDS_PACKAGE_LOAD_KEY%`|Načtený klíč balíčku pro projekt VSPackage projektu. Klíč se ověří při načtení projektu po spuštění prostředí.|
+|`DllName`|REG_SZ|`%RESOURCE_DLL%`|Název souboru satelitní knihovny DLL, která obsahuje lokalizované prostředky pro typ projektu.|
+|`Path`|REG_SZ|`%RESOURCE_PATH%`|Cesta k satelitní knihovně DLL.|
+|`FigProjectsEvents`|REG_SZ|Viz příkaz pro hodnotu.|Určuje textový řetězec vrácený pro tuto událost automatizace.|
+|`FigProjectItemsEvents`|REG_SZ|Viz příkaz pro hodnotu.|Určuje textový řetězec vrácený pro tuto událost automatizace.|
 
- Následující příklady jsou umístěny v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects].
+ Všechny následující příklady jsou umístěny v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects].
 
 ## <a name="example"></a>Příklad
 
@@ -132,32 +132,32 @@ Když vytvoříte nový typ projektu, je nutné vytvořit položky registru, kte
 
 |Name|Typ|Data|Popis|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|`FigPrj Project`|Výchozí název projektech tohoto typu.|
-|`DisplayName`|REG_SZ|`#%IDS_PROJECT_TYPE%`|ID prostředku, který se má načíst z satelitní knihovny DLL název zaregistrován balíčky.|
-|`Package`|REG_SZ|`%CLSID_Package%`|ID třídy sady VSPackage zaregistrován balíčky.|
-|`ProjectTemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|Výchozí cesta souborů šablon projektu. Jsou to soubory nový projekt šablonou zobrazena.|
-|`ItemTemplatesDir`|REG_SZ|`%TEMPLATE_PATH% \FigPrjProjectItems`|Výchozí cesta souboru šablony položky projektu. Jsou to soubory, přidat novou položku šablonou zobrazena.|
-|`DisplayProjectFileExtensions`|REG_SZ|`#%IDS_DISPLAY_PROJ_FILE_EXT%`|Umožňuje rozhraní IDE k implementaci **otevřít** dialogové okno.|
-|`PossibleProjectExtensions`|REG_SZ|`figp`|Integrované vývojové prostředí používané k určení, zda se otevření projektu se zpracovává souborem tento typ projektu (objekt pro vytváření projektu). Více než jedna položka formát je středníkem oddělený seznam. Například "vdproj; vdp".|
-|`DefaultProjectExtension`|REG_SZ|`.figp`|Integrovaným vývojovým prostředím používá jako výchozí přípona názvu souboru pro operace Uložit jako.|
-|`Filter Settings`|REG_DWORD|Různé, naleznete v tématu Příkazy a komentáře, následující tabulka.|Tato nastavení umožňují nastavit různé filtry pro zobrazení souborů v dialogových oknech uživatelského rozhraní.|
-|`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|ID prostředku pro přidat položku šablony.|
-|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|Cesta položky projektu zobrazí v dialogovém okně **přidat novou položku** šablony.|
-|`SortPriority`|REG_DWORD|`100 (vcprx64)`|Určuje pořadí řazení v uzlu stromu soubory zobrazené v **přidat novou položku** dialogové okno.|
+|`@`|REG_SZ|`FigPrj Project`|Výchozí název projektů tohoto typu.|
+|`DisplayName`|REG_SZ|`#%IDS_PROJECT_TYPE%`|ID prostředku pro název, který se má načíst z satelitní knihovny DLL registrované v balíčcích|
+|`Package`|REG_SZ|`%CLSID_Package%`|ID třídy VSPackage registrované v balíčcích|
+|`ProjectTemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|Výchozí cesta souborů šablon projektu. Jedná se o soubory zobrazené novou šablonou projektu.|
+|`ItemTemplatesDir`|REG_SZ|`%TEMPLATE_PATH% \FigPrjProjectItems`|Výchozí cesta souborů šablony položky projektu Jedná se o soubory zobrazované šablonou přidat novou položku.|
+|`DisplayProjectFileExtensions`|REG_SZ|`#%IDS_DISPLAY_PROJ_FILE_EXT%`|Povolí rozhraní IDE implementovat dialogové okno **otevřít** .|
+|`PossibleProjectExtensions`|REG_SZ|`figp`|Rozhraní IDE používá k určení, zda je otevřený projekt zpracováván tímto typem projektu (objekt pro vytváření projektu). Formát pro více než jednu položku je seznam oddělený středníky. Například "vdproj; VDP".|
+|`DefaultProjectExtension`|REG_SZ|`.figp`|Používá se rozhraním IDE jako výchozí přípona názvu souboru pro operaci uložit jako.|
+|`Filter Settings`|REG_DWORD|Různé, další informace najdete v tématu příkazy a komentáře v následující tabulce.|Tato nastavení slouží k nastavení různých filtrů pro zobrazení souborů v dialogových oknech uživatelského rozhraní.|
+|`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|ID prostředku pro šablony pro přidání položek|
+|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|Cesta k položkám projektu zobrazeným v dialogovém okně pro šablonu **Přidat novou položku** .|
+|`SortPriority`|REG_DWORD|`100 (vcprx64)`|Určuje pořadí řazení v uzlu stromu souborů zobrazených v dialogovém okně **Přidat novou položku** .|
 
- V následující tabulce jsou uvedeny filtry možnosti dostupné v předchozího segmentu kódu.
+ V následující tabulce jsou uvedeny možnosti filtrů, které jsou k dispozici v předchozím segmentu kódu.
 
-|Možnost Filter|Popis|
+|Možnost filtru|Popis|
 |-------------------|-----------------|
-|`CommonFindFilesFilter`|Označuje, že filtr je jedním z běžných filtry v **najít v souborech** dialogové okno. Běžné filtry jsou uvedeny v seznamu filtru před filtry nejsou označeny jako běžné.|
-|`CommonOpenFilesFilter`|Označuje, že filtr je jedním z běžných filtry v **otevřít soubor** dialogové okno. Běžné filtry jsou uvedeny v seznamu filtru před filtry nejsou označeny jako běžné.|
-|`FindInFilesFilter`|Označuje, že filtr bude jeden z filtrů v **najít v souborech** dialogové okno pole a zobrazí se po běžné filtry.|
-|`NotOpenFileFilter`|Označuje, že tento filtr se nepoužije v **otevřít soubor** dialogové okno.|
-|`NotAddExistingItemFilter`|Označuje, že tento filtr se nepoužije v přidáním **existující položku** dialogové okno.|
+|`CommonFindFilesFilter`|Označuje, že filtr je jedním z běžných filtrů v dialogovém okně **najít v souborech** . Společné filtry jsou uvedeny v seznamu filtru předtím, než filtry nejsou označeny jako společné.|
+|`CommonOpenFilesFilter`|Označuje, že filtr je jedním z běžných filtrů v dialogovém okně **otevřít soubor** . Společné filtry jsou uvedeny v seznamu filtru předtím, než filtry nejsou označeny jako společné.|
+|`FindInFilesFilter`|Označuje, že filtr bude jedním z filtrů v dialogovém okně **najít v souborech** a bude uveden po běžných filtrech.|
+|`NotOpenFileFilter`|Označuje, že filtr nebude použit v dialogovém okně **otevřít soubor** .|
+|`NotAddExistingItemFilter`|Označuje, že filtr nebude použit v dialogovém okně Přidat **existující položku** .|
 
- Ve výchozím nastavení, pokud filtr nemá jeden nebo více z těchto příznaků set, filtr je používán **přidat existující položku** dialogové okno a **otevřít soubor** dialogové okno po běžné filtry jsou k dispozici. Filtr se nepoužívá **najít v souborech** dialogové okno.
+ Ve výchozím nastavení platí, že pokud filtr nemá jednu nebo více těchto příznaků nastaven, použije se filtr v dialogovém okně **Přidat existující položku** a otevře se dialogové okno **otevřít soubor** po uvedení běžných filtrů na seznam. Filtr se nepoužívá v dialogovém okně **najít v souborech** .
 
- Následující příklady jsou umístěny v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects].
+ Všechny následující příklady jsou umístěny v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects].
 
 ## <a name="example"></a>Příklad
 
@@ -172,12 +172,12 @@ Když vytvoříte nový typ projektu, je nutné vytvořit položky registru, kte
 
 |Name|Typ|Data|Popis|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|`#%IDS_NEWPROJ_ TEMPLATES_ENTRY%`|ID prostředku pro nový projekt šablony.|
-|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|Výchozí cesta pro projekty typu registrované projektu.|
-|`SortPriority`|REG_DWORD|`41 (x29)`|Nastaví řazení projektů se zobrazí v dialogovém okně Průvodce nové projekty.|
-|`NewProjectDialogOnly`|REG_DWORD|`0`|Hodnota 0 znamená, že tento typ projektů se zobrazí jenom v dialogovém okně Nový projekt.|
+|`@`|REG_SZ|`#%IDS_NEWPROJ_ TEMPLATES_ENTRY%`|ID prostředku pro nové šablony projektu|
+|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|Výchozí cesta pro projekty registrovaného typu projektu.|
+|`SortPriority`|REG_DWORD|`41 (x29)`|Nastaví pořadí řazení projektů zobrazených v dialogovém okně Průvodce vytvořením projektu.|
+|`NewProjectDialogOnly`|REG_DWORD|`0`|0 označuje, že se projekty tohoto typu zobrazují pouze v dialogovém okně Nový projekt.|
 
- Následující příklady jsou umístěny v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects].
+ Všechny následující příklady jsou umístěny v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects].
 
 ## <a name="example"></a>Příklad
 
@@ -193,12 +193,12 @@ Když vytvoříte nový typ projektu, je nutné vytvořit položky registru, kte
 
 |Name|Typ|Data|Popis|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|Žádný|Výchozí hodnota, která označuje, že následující položky jsou pro různé soubory projektů položky.|
-|`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|Hodnota ID prostředku pro soubory šablon přidat nové položky.|
-|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|Výchozí cesta položky, které se zobrazí v **přidat novou položku** dialogové okno.|
-|`SortPriority`|REG_DWORD|`100 (vcprx64)`|Stanovuje pořadí řazení pro zobrazení v uzlu stromu **přidat novou položku** dialogové okno.|
+|`@`|REG_SZ|Žádné|Výchozí hodnota, která označuje, že následující položky jsou pro položky projektů různých souborů.|
+|`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|Hodnota ID prostředku pro soubory šablon přidání nových položek.|
+|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|Výchozí cesta k položkám, které se zobrazí v dialogovém okně **Přidat novou položku** .|
+|`SortPriority`|REG_DWORD|`100 (vcprx64)`|Vytvoří pořadí řazení pro zobrazení v uzlu strom dialogového okna **Přidat novou položku** .|
 
- V následujícím příkladu se nachází v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Menus].
+ Následující příklad je umístěný v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Menus].
 
 ## <a name="example"></a>Příklad
 
@@ -206,25 +206,25 @@ Když vytvoříte nový typ projektu, je nutné vytvořit položky registru, kte
 "{ACEF4EB2-57CF-11D2-96F4-000000000000}"=",1000,1"
 ```
 
- Položka nabídky odkazuje na prostředek, který používá k načtení informací o nabídce integrovaného vývojového prostředí. Když tato data byly sloučeny do nabídky databáze, stejný klíč se přidají v části MenusMerged registru. Sady VSPackage neměli měnit nic části MenusMerged přímo. V poli Data v následující tabulce jsou tři čárkami oddělených pole. První pole určuje úplnou cestu souboru prostředků nabídky:
+ Položka nabídky odkazuje rozhraní IDE na prostředek použitý k načtení informací o nabídce. Pokud byla tato data sloučena do databáze nabídky, bude do oddílu MenusMerged v registru přidán stejný klíč. VSPackage by neměl upravovat cokoli v části MenusMerged přímo. V datovém poli v následující tabulce jsou tři pole oddělená čárkami. První pole určuje úplnou cestu k souboru prostředků nabídky:
 
-- Pokud první pole je vynechán, prostředku nabídky je načten z satelitní knihovny DLL, které jsou označeny identifikátorem GUID balíčku VSPackage.
+- Pokud je první pole vynecháno, je prostředek nabídky načten z satelitní knihovny DLL identifikované identifikátorem GUID VSPackage.
 
-  Druhé pole určuje Identifikátor prostředku nabídky typu CTMENU:
+  Druhé pole identifikuje ID prostředku nabídky pro typ CTMENU:
 
-- Pokud je zadané ID prostředku, a cesta k souboru poskytl první parametr, prostředku nabídky je načten z úplnou cestu k souboru.
+- Pokud je zadáno ID prostředku a cesta k souboru je poskytnuta prvním parametrem, je prostředek nabídky načten z úplné cesty k souboru.
 
-- Pokud je zadané ID prostředku, ale je cesta k souboru, prostředku nabídky je načten z satelitní knihovny DLL.
+- Pokud je zadáno ID prostředku, ale cesta k souboru není, je prostředek nabídky načten z satelitní knihovny DLL.
 
-- Pokud je k dispozici úplnou cestu k souboru a vynechá ID prostředku, soubor, který se má načíst má být soubor technický ředitel.
+- Pokud je k dispozici úplná cesta k souboru a bylo vynecháno ID prostředku, je soubor, který má být načten, považován za soubor technický ředitel.
 
-  Poslední pole určuje číslo verze CTMENU prostředku. V nabídce můžete sloučit znovu tak, že změníte číslo verze.
+  Poslední pole určuje číslo verze pro prostředek CTMENU. Nabídku můžete znovu sloučit změnou čísla verze.
 
 |Name|Typ|Data|Popis|
 |----------|----------|----------|-----------------|
-|%CLSID_Package%|REG_SZ|`,1000,1`|Prostředek, který chcete načíst informace o nabídce.|
+|%CLSID_Package%|REG_SZ|`,1000,1`|Prostředek, ze kterého mají být načteny informace nabídky.|
 
- Následující příklady jsou umístěny v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\NewProjectTemplates].
+ Všechny následující příklady jsou umístěny v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\NewProjectTemplates].
 
 ```
 \TemplateDirs\{ACEF4EB2-57CF-11D2-96F4-000000000000}\1                (CLSID for Figures Project projects)
@@ -236,12 +236,12 @@ Když vytvoříte nový typ projektu, je nutné vytvořit položky registru, kte
 
 |Name|Typ|Data|Popis|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|`#%IDS_NEWPROJ_TEMPLATES_ENTRY%`|Hodnota ID prostředku pro šablony obrázky projekt nový projekt.|
-|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|Výchozí cestu k adresáři nové projekty. Zobrazí se položky v tomto adresáři v **Průvodce novým projektem** dialogové okno.|
-|`SortPriority`|REG_DWORD|`41 (x29)`|Stanovuje pořadí, ve kterém projektů se zobrazí v uzlu stromu **nový projekt** dialogové okno.|
-|`NewProjectDialogOnly`|REG_DWORD|`0`|0 znamená, že projekty tohoto typu se zobrazují jenom v **nový projekt** dialogové okno.|
+|`@`|REG_SZ|`#%IDS_NEWPROJ_TEMPLATES_ENTRY%`|Hodnota ID prostředku pro prvky projekt pro nové šablony projektů|
+|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|Výchozí cesta k novému adresáři projektů Položky v tomto adresáři se zobrazí v dialogovém okně **Průvodce vytvořením projektu** .|
+|`SortPriority`|REG_DWORD|`41 (x29)`|Určuje pořadí, ve kterém se budou projekty zobrazovat v uzlu strom v dialogovém okně **Nový projekt** .|
+|`NewProjectDialogOnly`|REG_DWORD|`0`|0 označuje, že se projekty tohoto typu zobrazují pouze v dialogovém okně **Nový projekt** .|
 
- V následujícím příkladu se nachází v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\InstalledProducts].
+ Následující příklad je umístěný v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\InstalledProducts].
 
 ```
 \FiguresProductSample
@@ -251,20 +251,20 @@ Když vytvoříte nový typ projektu, je nutné vytvořit položky registru, kte
 
 |Name|Typ|Data|Popis|
 |----------|----------|----------|-----------------|
-|`Package`|REG_SZ|`%CLSID_Package%`|ID třídy registrované VSPackage.|
-|`UseInterface`|REG_DWORD|`1`|1 znamená, že uživatelské rozhraní se použije k interakci s tímto projektem. 0 znamená, že neexistuje žádná uživatelského rozhraní.|
+|`Package`|REG_SZ|`%CLSID_Package%`|ID třídy registrované sady VSPackage|
+|`UseInterface`|REG_DWORD|`1`|1 označuje, že uživatelské rozhraní bude sloužit k interakci s tímto projektem. 0 znamená, že neexistuje žádné rozhraní uživatelského rozhraní.|
 
- The.vsz souborů, které řídí nových typů projektů často obsahovat RELATIVE_PATH položku. Tato cesta je relativní vzhledem k cesta zadaná v \ProductDir položky typu projektu v následujícím klíči instalační program:
+ Soubory. vsz, které řídí nové typy projektů, často obsahují položku RELATIVE_PATH. Tato cesta je relativní ke cestě zadané v položce \ProductDir typu projektu v následujícím instalačním klíči:
 
  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup
 
- Šablony projektů Enterprise Frameworks přidat například následující položky registru:
+ Například šablony projektů podnikových architektur přidávají následující položky registru:
 
  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup\EF\ProductDir = C:\Program Files\Microsoft Visual Studio\EnterpriseFrameworks\
 
- To znamená, že pokud zahrnete PROJECT_TYPE = EF záznam v souboru .vsz, najde prostředí vaší .vsz soubory v adresáři ProductDir zadali dřív.
+ To znamená, že pokud zahrnete do souboru. vsz položku PROJECT_TYPE = EF, prostředí nalezne vaše soubory. vsz v adresáři ProductDir, který jste zadali dříve.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Kontrolní seznam: Vytvoření nových typů projektů](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [Prvky modelu projektu](../../extensibility/internals/elements-of-a-project-model.md)
 - [Vytváření instancí projektu pomocí objektů pro vytváření projektů](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)

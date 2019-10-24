@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_compiland – | Dokumentace Microsoftu
+title: 'IDiaSectionContrib:: get_compiland | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b920a9f1c3191bfea580df510c7a44c2b7929e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d9a398d7cc0ff8efc9dacc726205cd0d8fa02473
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828254"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742708"
 ---
-# <a name="idiasectioncontribgetcompiland"></a>IDiaSectionContrib::get_compiland
-Získá odkaz na symbol kompilace, které přispěly v této části.
+# <a name="idiasectioncontribget_compiland"></a>IDiaSectionContrib::get_compiland
+Načte odkaz na symbol kompilantu, který přispěl k této části.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,11 +33,11 @@ HRESULT get_compiland ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt představující kompilace, které přispěly v této části.
+mimo Vrátí objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) představující kompilantu, který tento oddíl přispěl.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

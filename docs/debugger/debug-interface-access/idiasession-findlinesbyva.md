@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findlinesbyva – | Dokumentace Microsoftu
+title: 'IDiaSession:: findLinesByVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 29f3f714cdcbe529dac98948f6568934a6f508af
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2513825fd2b6f4e6035f9f23295f0c9f00385d0a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832403"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742078"
 ---
 # <a name="idiasessionfindlinesbyva"></a>IDiaSession::findLinesByVA
-Načte informace o čísle řádku pro řádky, které jsou obsaženy v rozsahu, zadanou virtuální adresu (VA).
+Načte informace o číslech řádků na řádcích obsažených v zadaném rozsahu virtuální adresy (VA).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,18 +35,18 @@ HRESULT findLinesByVA (
 #### <a name="parameters"></a>Parametry
 `va`
 
-[in] Určuje adresu jako VA.
+pro Určuje adresu jako VA.
 
 `length`
 
-[in] Určuje počet bajtů rozsah adres, aby pokryl s Tento dotaz.
+pro Určuje počet bajtů rozsahu adres, které se mají pokrýt s tímto dotazem.
 
 `ppResult`
 
-[out] Vrátí [idiaenumlinenumbers –](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objekt, který obsahuje seznam všech řádku čísla tohoto krytí zadaný rozsah adres.
+mimo Vrátí objekt [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) , který obsahuje seznam všech čísel řádků, které pokrývají zadaný rozsah adres.
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje funkci, která získá všechna čísla řádků, které jsou obsažené ve funkci pomocí funkce virtuální adresu a délku.
+Tento příklad ukazuje funkci, která získá všechna čísla řádků obsažená ve funkci pomocí virtuální adresy a délky funkce.
 
 ```C++
 IDiaEnumLineNumbers *GetLineNumbersByVA(IDiaSymbol *pFunc, IDiaSession *pSession)
@@ -64,6 +64,6 @@ IDiaEnumLineNumbers *GetLineNumbersByVA(IDiaSymbol *pFunc, IDiaSession *pSession
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

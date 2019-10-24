@@ -14,12 +14,12 @@ monikerRange: vs-2017
 ms.workload:
 - uwp
 - cordova
-ms.openlocfilehash: fead28e60116acb7b2ae311d98e5475c5da3ec35
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: b30b59b95b09cac8308474b2b2963f9b96d58146
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72588983"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731700"
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Příkazy konzoly JavaScriptu v aplikaci Visual Studio
 
@@ -126,6 +126,6 @@ console.log("%s is %f years old!", user.first, user.age);
 // Fred is 10.01 years old!
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Rychlý start: Ladění JavaScriptu](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017)
 - [Rychlý start: Ladění kódu HTML a CSS](../debugger/quickstart-debug-html-and-css.md?view=vs-2017)

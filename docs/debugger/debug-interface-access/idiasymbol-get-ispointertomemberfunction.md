@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_isPointerToMemberFunction | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_isPointerToMemberFunction | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b666aa19e574702655178790b8aa0463a0d5c2d5
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: d1cbbc9a38ef8d92233175380455fbe8c8291263
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62836543"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740111"
 ---
-# <a name="idiasymbolgetispointertomemberfunction"></a>IDiaSymbol::get_isPointerToMemberFunction
-Určuje, zda tento symbol je ukazatel na členskou funkci.
+# <a name="idiasymbolget_ispointertomemberfunction"></a>IDiaSymbol::get_isPointerToMemberFunction
+Určuje, zda je tento symbol ukazatelem na členskou funkci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,10 +30,10 @@ HRESULT get_isPointerToMemberFunction(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Ukazatel `BOOL` , která určuje, zda tento symbol je ukazatel na členskou funkci.
+mimo Ukazatel na `BOOL`, který určuje, zda je tento symbol ukazatel na členskou funkci.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

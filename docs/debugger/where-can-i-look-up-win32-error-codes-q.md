@@ -1,5 +1,5 @@
 ---
-title: Kde najdu kódy chyb systému Win32? | Dokumenty Microsoft
+title: Kde najdu kódy chyb systému Win32? | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -18,20 +18,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7299139d05a47c079e1aeb29f3b61433cff33bb6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a8e3dda1b728cd631efe8a84913af3d5c475138d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929193"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72728038"
 ---
 # <a name="where-can-i-look-up-win32-error-codes"></a>Kde najdu kódy chyb systému Win32?
-NEZDAŘILA. H v adresáři INCLUDE výchozí instalace systému obsahuje definice chyba kódu pro funkce rozhraní Win32 API.
+Winerror. H v adresáři INCLUDE výchozí instalace systému obsahuje definice chybových kódů pro funkce Win32 API.
 
- Kód chyby můžete vyhledat zadáním kódu v **Watch** okno nebo **QuickWatch** dialogové okno. Příklad:
+ Kód chyby můžete vyhledat zadáním kódu v okně **kukátka** nebo v dialogovém okně **QuickWatch** . Příklad:
 
 `0x80000004,hr`
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Nejčastější dotazy k ladění nativního kódu](../debugger/debugging-native-code-faqs.md)
 - [Ladění nativního kódu](../debugger/debugging-native-code.md)

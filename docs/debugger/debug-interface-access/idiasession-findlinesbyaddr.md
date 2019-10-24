@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findlinesbyaddr – | Dokumentace Microsoftu
+title: 'IDiaSession:: findLinesByAddr | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 730793d2b9f2e02d7e5665777f8df4d245b0ddf6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 328589df0e662ca27db634017005344d44491275
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827695"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742112"
 ---
 # <a name="idiasessionfindlinesbyaddr"></a>IDiaSession::findLinesByAddr
-Načte řádky v zadané kompilace, které obsahují zadané adrese.
+Načte řádky v zadaném kompilantu, které obsahují zadanou adresu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,25 +36,25 @@ HRESULT findLinesByAddr (
 #### <a name="parameters"></a>Parametry
 `seg`
 
-[in] Určuje komponentu části z konkrétní adresy.
+pro Určuje komponentu oddílu konkrétní adresy.
 
 `offset`
 
-[in] Určuje posunutí komponentu konkrétní adresu.
+pro Určuje komponentu posunu konkrétní adresy.
 
 `length`
 
-[in] Určuje počet bajtů rozsah adres, aby pokryl s Tento dotaz.
+pro Určuje počet bajtů rozsahu adres, které se mají pokrýt s tímto dotazem.
 
 `ppResult`
 
-[out] Vrátí [idiaenumlinenumbers –](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objekt, který obsahuje seznam všech řádku čísla tohoto krytí zadaný rozsah adres.
+mimo Vrátí objekt [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) , který obsahuje seznam všech čísel řádků, které pokrývají zadaný rozsah adres.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje funkci, která získá všechna čísla řádků, které jsou obsažené ve funkci pomocí funkce adresu a délku.
+Tento příklad ukazuje funkci, která získá všechna čísla řádků obsažená ve funkci pomocí adresy a délky funkce.
 
 ```C++
 IDiaEnumLineNumbers* GetLineNumbersByAddr(IDiaSymbol *pFunc,
@@ -75,7 +75,7 @@ IDiaEnumLineNumbers* GetLineNumbersByAddr(IDiaSymbol *pFunc,
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSession::findLinesByVA](../../debugger/debug-interface-access/idiasession-findlinesbyva.md)

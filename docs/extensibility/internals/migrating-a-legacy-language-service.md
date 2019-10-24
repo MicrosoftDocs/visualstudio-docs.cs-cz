@@ -1,5 +1,5 @@
 ---
-title: Migrace služby starší verze jazyka | Dokumentace Microsoftu
+title: Migrace služby starší verze jazyka | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,86 +10,86 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 43e4a119ae84f7b86b9b1a54f1f55dc2ffa78b15
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1027d4b834f1ffdd2289ced2ee5523c20f9d2353
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349257"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72726698"
 ---
 # <a name="migrating-a-legacy-language-service"></a>Migrace služby starší verze jazyka
-Služby starší verze jazyka můžete migrovat na novější verzi sady Visual Studio aktualizuje se projekt a soubor source.extension.vsixmanifest přidáním do projektu. Samotnou službu jazyka se budou nadále fungovat stejně jako předtím, protože editoru sady Visual Studio přizpůsobí ho.
+Službu starší verze jazyka můžete migrovat na novější verzi sady Visual Studio tak, že aktualizujete projekt a přidáte do projektu soubor source. extension. vsixmanifest. Samotná služba jazyka bude nadále fungovat stejně jako dříve, protože editor sady Visual Studio ho přizpůsobí.
 
- Služby starší verze jazyka jsou implementovány jako součást sady VSPackage, ale novější způsob implementace funkce služba jazyka je pro použití rozšíření MEF. Další informace o nový způsob implementace služby jazyka najdete v tématu [Editor a rozšíření služeb jazyka](../../extensibility/editor-and-language-service-extensions.md).
+ Starší jazykové služby jsou implementovány jako součást sady VSPackage, ale novější způsob, jak implementovat funkce jazykové služby, je použít rozšíření MEF. Další informace o novém způsobu implementace jazykové služby najdete v tématu [rozšíření pro Editor a jazykové služby](../../extensibility/editor-and-language-service-extensions.md).
 
 > [!NOTE]
-> Doporučujeme vám, že začnete používat nový editor API co nejdříve. Tím vylepšíme výkonu vaší služby jazyka a umožňují využívat nové funkce editoru.
+> Doporučujeme začít používat nové rozhraní API editoru co nejrychleji. Tím se vylepšit výkon vaší jazykové služby a umožní vám využít nové funkce editoru.
 
-## <a name="migrating-a-visual-studio-2008-language-service-solution-to-a-later-version"></a>Migrace řešení sady Visual Studio 2008 jazykové služby na novější verzi
- Následující kroky ukazují, jak přizpůsobit s názvem RegExLanguageService ukázky sady Visual Studio 2008. Tato ukázka v rámci instalace sady Visual Studio 2008 SDK, můžete najít v *cestu instalace sady Visual Studio SDK*\VisualStudioIntegration\Samples\IDE\CSharp\Example.RegExLanguageService\ složky.
+## <a name="migrating-a-visual-studio-2008-language-service-solution-to-a-later-version"></a>Migrace řešení jazykové služby sady Visual Studio 2008 na novější verzi
+ Následující kroky ukazují, jak upravit ukázku sady Visual Studio 2008 s názvem RegExLanguageService. Tuto ukázku najdete v instalaci sady Visual Studio 2008 SDK ve složce *Instalační cesta sady Visual Studio SDK*\VisualStudioIntegration\Samples\IDE\CSharp\Example.RegExLanguageService\.
 
 > [!IMPORTANT]
-> Pokud vaše služba jazyk nedefinuje barvy, je nutné explicitně nastavit <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute.RequestStockColors%2A> k `true` na sady VSPackage:
+> Pokud vaše jazyková služba nedefinuje barvy, je nutné explicitně nastavit <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute.RequestStockColors%2A> `true` na VSPackage:
 
 ```
 [Microsoft.VisualStudio.Shell.ProvideLanguageService(typeof(YourLanguageService), YourLanguageServiceName, 0, RequestStockColors = true)]
 ```
 
-#### <a name="to-migrate-a-visual-studio-2008-language-service-to-a-later-version"></a>Migrovat na novější verzi jazyka služby Visual Studio 2008
+#### <a name="to-migrate-a-visual-studio-2008-language-service-to-a-later-version"></a>Migrace jazykové služby sady Visual Studio 2008 na novější verzi
 
-1. Nainstalujte novější verze sady Visual Studio a Visual Studio SDK. Další informace o způsobech instalace sady SDK najdete v tématu [instalace sady Visual Studio SDK](../../extensibility/installing-the-visual-studio-sdk.md).
+1. Nainstalujte novější verze sady Visual Studio a sadu Visual Studio SDK. Další informace o způsobech instalace sady SDK najdete v tématu [instalace sady Visual Studio SDK](../../extensibility/installing-the-visual-studio-sdk.md).
 
-2. Upravte soubor RegExLangServ.csproj (bez načtení jeho v sadě Visual Studio.
+2. Upravte soubor RegExLangServ. csproj (bez jeho načtení v aplikaci Visual Studio.
 
-     V `Import` uzel, který odkazuje na soubor Microsoft.VsSDK.targets nahraďte hodnotu s následujícím textem.
+     V uzlu `Import`, který odkazuje na soubor Microsoft. VsSDK. targets, nahraďte hodnotu následujícím textem.
 
     ```
     $(MSBuildExtensionsPath)\Microsoft\VisualStudio\v14.0\VSSDK\Microsoft.VsSDK.targets
     ```
 
-3. Soubor uložte a zavřete jej.
+3. Uložte soubor a pak ho zavřete.
 
-4. Otevřete řešení RegExLangServ.sln.
+4. Otevřete řešení RegExLangServ. sln.
 
-5. **Jednosměrnou aktualizaci** zobrazí se okno. Klikněte na **OK**.
+5. Zobrazí se okno **jednosměrného upgradu** . Klikněte na tlačítko **OK**.
 
-6. Aktualizujte vlastnosti projektu. Otevřít **vlastnosti projektu** tak, že vyberete uzel projektu v okně **Průzkumníku řešení**, pravým tlačítkem myši a vyberete **vlastnosti**.
+6. Aktualizujte vlastnosti projektu. Otevřete okno **Vlastnosti projektu** tak, že v **Průzkumník řešení**vyberete uzel projektu, kliknete pravým tlačítkem a vyberete **vlastnosti**.
 
-    - Na **aplikace** kartu, změňte **Cílová architektura** k **4.6.1**.
+    - Na kartě **aplikace** změňte **cílové rozhraní .NET Framework** na **4.6.1**.
 
-    - Na **ladění** kartě **externí program Start** zadejte  **\<cestu instalace sady Visual Studio > \Common7\IDE\devenv.exe.** .
+    - Na kartě **ladění** v poli **spustit externí program** zadejte **\<Visual cesta instalace studia > \Common7\IDE\devenv.exe.** .
 
-         V **argumenty příkazového řádku** zadejte /**rootsuffix Exp**.
+         Do pole **argumenty příkazového řádku** zadejte/**rootsuffix exp**.
 
 7. Aktualizujte tyto odkazy:
 
-    - Odeberte odkaz na Microsoft.VisualStudio.Shell.9.0.dll a pak přidejte odkazy na Microsoft.VisualStudio.Shell.14.0.dll a Microsoft.VisualStudio.Shell.Immutable.11.0.dll.
+    - Odeberte odkaz na Microsoft. VisualStudio. Shell. 9.0. dll a pak přidejte odkazy na Microsoft. VisualStudio. Shell. 14.0. dll a Microsoft. VisualStudio. Shell. unmutable. 11.0. dll.
 
-    - Odeberte odkaz na Microsoft.VisualStudio.Package.LanguageService.9.0.dll a pak přidejte odkaz na Microsoft.VisualStudio.Package.LanguageService.14.0.dll.
+    - Odeberte odkaz na Microsoft. VisualStudio. Package. LanguageService. 9.0. dll a pak přidejte odkaz na Microsoft. VisualStudio. Package. LanguageService. 14.0. dll.
 
-    - Přidejte odkaz na Microsoft.VisualStudio.Shell.Interop.10.0.dll.
+    - Přidejte odkaz na Microsoft. VisualStudio. Shell. Interop. 10.0. dll.
 
-8. Otevřete soubor VsPkg.cs a změňte hodnotu `DefaultRegistryRoot` atribut
+8. Otevřete soubor VsPkg.cs a změňte hodnotu atributu `DefaultRegistryRoot` na
 
     ```
     "Software\\Microsoft\\VisualStudio\\14.0Exp"
     ```
 
-9. Původní ukázce nezaregistruje jeho služba jazyka, proto do VsPkg.cs musí přidat tento atribut.
+9. Původní ukázka neregistruje svou jazykovou službu, takže musíte do VsPkg.cs přidat následující atribut.
 
     ```
     [ProvideLanguageService(typeof(RegularExpressionLanguageService), "RegularExpressionLanguage", 0, RequestStockColors=true)]
     ```
 
-10. Musíte přidat soubor source.extension.vsixmanifest.
+10. Je nutné přidat soubor source. extension. vsixmanifest.
 
-    - Zkopírujte tento soubor do adresáře vašeho projektu z existujícího rozšíření. (Jedním ze způsobů, jak tento soubor je vytvoření projektu VSIX (v části **souboru**, klikněte na tlačítko **nový**, pak klikněte na tlačítko **projektu**. V jazyce Visual Basic nebo C# kliknutím **rozšiřitelnost**a pak vyberte **projekt VSIX**.)
+    - Zkopírujte tento soubor z existujícího rozšíření do adresáře projektu. (Jedním ze způsobů, jak tento soubor získat, je vytvoření projektu VSIX (v části **soubor**klikněte na **Nový**a potom na **projekt**. V části Visual Basic C# nebo klikněte na **rozšiřitelnost**a pak vyberte **projekt VSIX**.)
 
     - Přidejte soubor do projektu.
 
-    - V souboru **vlastnosti**, nastavte **akce sestavení** k **žádný**.
+    - Ve **vlastnostech**souboru nastavte **akci sestavení** na **žádná**.
 
-    - Otevře soubor **editoru manifestu VSIX**.
+    - Otevřete soubor pomocí **editoru manifestu VSIX**.
 
     - Změňte následující pole:
 
@@ -97,15 +97,15 @@ Služby starší verze jazyka můžete migrovat na novější verzi sady Visual 
 
     - **Název produktu**: RegExLangServ
 
-    - **Popis**: Služba jazyka regulárních výrazů.
+    - **Popis**: služba jazyka regulárních výrazů.
 
-    - V části **prostředky**, klikněte na tlačítko **nový**, vyberte **typ** k **Microsoft.VisualStudio.VsPackage**, nastavte **zdroj** k **projekt v aktuálním řešení**a pak nastavte **projektu** k **RegExLangServ**.
+    - V části **assety**klikněte na **Nový**, **Vyberte typ** pro **Microsoft. VisualStudio. VSPackage**, nastavte **zdroj** na **projekt v aktuálním řešení**a pak nastavte **projekt** na **RegExLangServ**.
 
     - Soubor uložte a zavřete.
 
-11. Sestavte řešení. Vytvořené soubory, které jsou nasazené na **%USERPROFILE%\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\MSIT\ RegExLangServ\\** .
+11. Sestavte řešení. Sestavené soubory se nasadí do **%USERPROFILE%\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\MSIT\ RegExLangServ \\** .
 
-12. Spusťte ladění. Otevřít druhou instanci aplikace Visual Studio.
+12. Spustit ladění. Byla otevřena druhá instance aplikace Visual Studio.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Rozšíření služeb starší verze jazyka](../../extensibility/internals/legacy-language-service-extensibility.md)

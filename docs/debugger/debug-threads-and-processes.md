@@ -1,5 +1,5 @@
 ---
-title: Nástroje pro ladění vláken a procesů | Dokumentace Microsoftu
+title: Nástroje pro ladění vláken a procesů | Microsoft Docs
 ms.date: 04/21/2018
 ms.topic: conceptual
 dev_langs:
@@ -19,50 +19,50 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d4769224cfb26c4b1d55362fea006f55ba8845da
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dcdaf083462b75485449cae05894681e2bb5c900
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62852888"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738383"
 ---
-# <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>Nástroje pro ladění vláken a procesů v sadě Visual Studio
-*Vlákna* a *procesy* jsou v informatice související koncepty. Obě představují sekvence pokynů, které musí být provedeny v určitém pořadí. Pokyny v oddělených vláknech či procesy lze však spustit paralelně.
+# <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>Nástroje pro ladění vláken a procesů v aplikaci Visual Studio
+*Vlákna* a *procesy* jsou související koncepty v oblasti počítačové vědy. Obě reprezentují sekvence instrukcí, které se musí provést v určitém pořadí. Pokyny v samostatných vláknech nebo procesech ale mohou být spouštěny paralelně.
 
- Procesy v operačním systému existují a odpovídají co uživatelé vidí jako programy nebo aplikace. Vlákno, na druhé straně existuje v rámci procesu. Z tohoto důvodu vlákna jsou někdy označovány jako *procesy LWP*. Každý proces se skládá z jednoho nebo více vláken.
+ Procesy existují v operačním systému a odpovídají uživatelům, kteří se zobrazí jako programy nebo aplikace. Na druhé straně existuje vlákno v rámci procesu. Z tohoto důvodu se vlákna někdy označují jako procesy v *lehkém poměru*. Každý proces se skládá z jednoho nebo více vláken.
 
- Existence více procesů umožňuje počítači provádět více úkolů současně. Existence více vláken umožňuje procesu pro oddělení práce, kterou můžou provádět souběžně. Na počítači s více procesory mohou procesy nebo vlákna běžet na různých procesorech. To umožňuje pravé paralelní zpracování.
+ Existence více procesů umožňuje počítači najednou provádět více než jeden úkol. Existence více vláken umožňuje procesu oddělit činnost, která se má provádět paralelně. V počítači s více procesory můžou být procesy nebo vlákna spuštěné v různých procesorech. To umožňuje pravdivé paralelní zpracování.
 
- Perfektní paralelní zpracování není vždy možné. Vlákna v některých případech musí být synchronizovány. Jedno vlákno může muset čekat na výsledky z jiného vlákna, nebo jedno vlákno může potřebovat výhradní přístup k prostředku, který používá jiné vlákno. Potíže se synchronizací jsou běžnou příčinou chyb ve vícevláknových aplikacích. Vlákna mohou někdy skončit čekáním na prostředek, který nikdy nebude k dispozici. Výsledkem je stav nazývaný *zablokování*.
+ Dokonalé paralelní zpracování není vždy možné. Vlákna se někdy musí synchronizovat. Jedno vlákno může vyžadovat, aby čekal na výsledek z jiného vlákna, nebo jedno vlákno může potřebovat výhradní přístup k prostředku, který používá jiné vlákno. Problémy s synchronizací jsou běžnou příčinou chyb v aplikacích s více vlákny. Někdy mohou vlákna skončit čekáním na prostředek, který nikdy nebude k dispozici. Výsledkem je podmínka s názvem *zablokování*.
 
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Ladicí program poskytuje výkonné, ale snadno použitelné nástroje pro ladění vláken a procesů.
+ Ladicí program [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] poskytuje výkonné, ale snadno použitelné nástroje pro ladění vláken a procesů.
 
 ## <a name="tools-and-features"></a>Nástroje a funkce
-Nástroje, které potřebujete pro použití v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] závisí na typu kódu, se snažíte ladit:
+Nástroje, které je třeba použít v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] závisí na typu kódu, který se pokoušíte ladit:
 
-- Pro procesy, jsou primární nástroje **připojit k procesu** dialogovém okně **procesy** okně a **umístění ladění** nástrojů.
+- Pro procesy jsou primární nástroje v dialogovém okně **připojit k procesu** , v okně **procesy** a na panelu nástrojů **umístění ladění** .
 
-- Vlákna, jsou primární nástroje pro ladění vláken **vlákna** okna, značky vlákna ve zdrojových oknech, **paralelní zásobníky** okně **paralelního sledování** okno, a **umístění ladění** nástrojů.
+- Pro vlákna jsou primární nástroje pro ladění vláken okno **vlákna** , značky vláken v okně zdrojové okna, **paralelní zásobníky** , okno **paralelního sledování** a panel nástrojů **umístění ladění** .
 
-- Pro kód, který se používá <xref:System.Threading.Tasks.Task> v [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl), [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime/) (nativní kód), primární nástroje pro ladění aplikací s více vlákny jsou **Paralelní zásobníky** okně **paralelního sledování** okně a **úlohy** okno ( **úlohy** okna podporuje také Objekt promise jazyka JavaScript).
+- Pro kód, který používá <xref:System.Threading.Tasks.Task> v [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl), [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime/) (nativní kód), jsou primární nástroje pro ladění vícevláknových aplikací okno **paralelní zásobníky** , **paralelní sledování** okno a okno **úlohy** (okno **úlohy** také podporuje objekt Promise JavaScriptu).
 
-- Pro ladění vláken v GPU je primárním nástrojem **vlákna GPU** systému windows.
+- Pro ladění vláken na GPU je primárním nástrojem okna **vláken GPU** .
 
-  Následující tabulka uvádí dostupné informace a akce, které můžete provádět v každém z těchto míst:
+  V následující tabulce jsou uvedené informace, které jsou k dispozici, a akce, které můžete provádět v každém z těchto umístění:
 
-|Uživatelské rozhraní|Informace, které jsou k dispozici|Akce, které můžete provést|
+|Uživatelské rozhraní|Dostupné informace|Akce, které můžete provádět|
 |--------------------|---------------------------|-----------------------------|
-|**Připojit k procesu** dialogové okno|Dostupné procesy, které lze připojit k:<br /><br /> -Název procesu (.exe)<br />-Zpracování identifikační číslo<br />– Nadpis řádku nabídek<br />– Typ (Managed v4.0; Managed v2.0, v1.1, v1.0; x86; x64; IA64)<br />-Uživatelské jméno (název účtu)<br />– Číslo relace|Vyberte proces pro připojení<br /><br /> Výběr vzdáleného počítače<br /><br /> Změnit typ spojení na připojení ke vzdáleným počítačům|
-|**Procesy** okna|Připojené procesy:<br /><br /> -Proces název<br />-Zpracování identifikační číslo<br />– Cesta ke zpracování .exe<br />– Nadpis řádku nabídek<br />– Stav (Break. Spuštění)<br />-Ladění (nativní, spravované atd.)<br />-Typ přenosu (výchozí, nativní bez ověření)<br />-Kvalifikátor transport (vzdálený počítač)|Nástroje:<br /><br /> – Připojení<br />– Odpojení<br />-Ukončit<br /><br /> Místní nabídka:<br /><br /> – Připojení<br />– Odpojení<br />-Odpojit při zastavení ladění<br />-Ukončit|
-|**Vlákna** okna|Vlákna v aktuálním procesu:<br /><br /> – ID vlákna<br />-Spravované ID<br />-Kategorie (hlavní vlákno, vlákno rozhraní, vzdálené volání rutiny procedury nebo pracovní vlákno)<br />-Název vlákna<br />-Umístění, kde bylo vlákno vytvořeno<br />-Priority<br />-Maska příbuznosti<br />-Pozastavený počet<br />-Proces název<br />-Indikátor příznaku<br />– Indikátor pozastavení|Nástroje:<br /><br /> – Hledání<br />– Zásobník volání hledání<br />-Označit jen můj kód<br />-Volba vlastního modulu příznaků<br />-Seskupit podle<br />-Sloupců<br />-Rozbalit/sbalit zásobníky volání<br />-Rozbalit/sbalit skupiny<br />-Zmrazit/odblokovat vlákna<br /><br /> Místní nabídka:<br /><br /> -Zobrazit vlákna ve zdroji<br />-Přepnout na vlákno<br />-Zmrazit spuštěné vlákno<br />-Povolit zmrazené vlákno<br />-Označit vlákno pro další studie<br />-Zrušit označení vlákna<br />-Přejmenovat vlákno<br />– Zobrazení a skrytí vláken<br /><br /> Další akce:<br /><br /> – Zobrazení zásobníku volání pro vlákno v DataTip|
-|Okno zdroje|Indikátory vláken v levém hřbetu označují jedno nebo více vláken (vypnuté ve výchozím nastavení, zapnuté pomocí místní nabídky v **vlákna** okna)|Místní nabídka:<br /><br /> -Přepnout na vlákno<br />-Označit vlákno pro další studie<br />-Zrušit označení vlákna|
-|**Ladit umístění** nástrojů|-Aktuální proces<br />-Pozastaví aplikaci<br />-Obnovte chod aplikace<br />-Pozastavit a vypnout aplikaci<br />-Aktuální vlákno<br />– Přepnout aktuální značku stavu vlákna<br />-Zobrazit pouze vlákna označená příznakem<br />-Zobrazit pouze aktuální proces<br />-Aktuální rámec zásobníku|-Přepnout na jiný proces<br />-Pozastavit, pokračovat nebo vypnout aplikaci<br />-Přepnout do jiného vlákna v aktuálním procesu<br />-Přepnout do jiného zásobníku v aktuálním vlákně<br />-Příznak nebo odstranění označení aktuálních vláken<br />-Zobrazit pouze vlákna označená příznakem<br />-Zobrazit pouze aktuální proces|
-|**Paralelní zásobníky** okna|-Zásobníky volání pro více vláken v jednom okně.<br />-Aktivní zásobník snímků pro každé vlákno.<br />-Volající a volané pro libovolnou metodu.|-Odfiltrovat zadaná vlákna<br />-Přepnout do zobrazení úlohy<br />-Označit nebo zrušit označení vlákna<br />-Přiblížení|
-|**Paralelní sledování** okna|-Sloupec příznaku, ve kterém můžete označit vlákno, kterému chcete věnovat zvláštní pozornost.<br />-Sloupec rámce, ve kterém šipka označuje vybraný rámec.<br />-Konfigurovatelný sloupec, který může zobrazit počítač, proces, dlaždici, úloh a vlákna.|-Označit nebo zrušit označení vlákna<br />-Zobrazit pouze vlákna označená příznakem<br />-Rámce přepínačů<br />-Řazení sloupce<br />-Skupiny vláken<br />-Zmrazit nebo odblokovat vlákna<br />-export dat v okně paralelního sledování|
-|**Úlohy** okna|– Zobrazení informací o <xref:System.Threading.Tasks.Task> objektů včetně ID úkolu, stavu úkolu (naplánované, spuštěný, čekající, zablokována), a které vlákno je přiřazeno k úkolu.<br />-Aktuální umístění v zásobníku volání.<br />-Delegát předaný do úlohy v okamžiku vytvoření|-Přepnout do aktuální úlohy<br />-Příznak nebo odznačit úlohu<br />-Zmrazit nebo odblokovat úkol|
-|**Vlákna GPU** okna|-Sloupec příznaku, ve kterém můžete označit vlákno, kterému chcete věnovat zvláštní pozornost.<br />-Aktuální vlákno sloupec, ve kterém žlutá šipka označuje aktuální vlákno.<br />– **Počet vláken** sloupec, který zobrazuje počet vláken ve stejném umístění.<br />– **Řádku** sloupec, který zobrazuje řádek kódu, kde je každá skupina vlákna umístěna.<br />– **Adresu** sloupec, který zobrazuje adresu instrukce, kde je každá skupina vlákna umístěna.<br />– **Umístění** sloupec, který je umístěním v kódu adresy.<br />– **Stav** sloupec, který ukazuje, zda je podproces aktivní nebo blokován.<br />– **Dlaždici** sloupec, který zobrazuje indexu dlaždice pro podprocesy v řádku.|– Změnit na jiném vlákně<br />– Zobrazení konkrétní pole a vlákno<br />-Zobrazit nebo skrýt sloupec<br />-Řazení podle sloupce<br />-Skupiny vláken<br />-Zmrazit nebo odblokovat vlákna<br />-Označit nebo zrušit označení vlákna<br />-Zobrazit pouze vlákna označená příznakem|
+|Dialogové okno **připojit k procesu**|Dostupné procesy, ke kterým se můžete připojit:<br /><br /> -Název procesu (. exe)<br />– Číslo ID procesu<br />– Název řádku nabídek<br />-Type (spravované v 4.0; Managed v 2.0, v 1.1, v 1.0; architektur platformě SYSTÉMY<br />-Uživatelské jméno (název účtu)<br />– Číslo relace|Vyberte proces, ke kterému se chcete připojit.<br /><br /> Vybrat vzdálený počítač<br /><br /> Změnit typ přenosu pro připojení ke vzdáleným počítačům|
+|Okno **procesů**|Připojené procesy:<br /><br /> – Název procesu<br />– Číslo ID procesu<br />-Cesta ke zpracování. exe<br />– Název řádku nabídek<br />-State (Break. Instalovanou<br />-Ladění (nativní, spravované atd.)<br />-Transport – typ (výchozí, nativní bez ověřování)<br />– Kvalifikátor přenosu (vzdálený počítač)|Nástroje<br /><br /> – Připojit<br />– Odpojit<br />– Ukončit<br /><br /> Místní nabídka:<br /><br /> – Připojit<br />– Odpojit<br />-Odpojit při zastavení ladění<br />– Ukončit|
+|Okno **vláken**|Vlákna v aktuálním procesu:<br /><br /> – ID vlákna<br />– Spravované ID<br />-Kategorie (hlavní vlákno, vlákno rozhraní, obslužná rutina vzdáleného volání procedury nebo pracovní vlákno)<br />– Název vlákna<br />– Umístění, kde se vytvoří vlákno<br />-Priorita<br />– Maska spřažení<br />-Počet pozastavených<br />– Název procesu<br />-Příznak – indikátor<br />– Indikátor pozastavení|Nástroje<br /><br /> – Search<br />-Vyhledat zásobník volání<br />– Příznak Pouze můj kód<br />-Flag – výběr vlastního modulu<br />– Seskupit podle<br />-Columns<br />-Rozbalit/sbalit zásobníky volání<br />-Rozbalit/sbalit skupiny<br />– Zablokovat/uvolnit vlákna<br /><br /> Místní nabídka:<br /><br /> -Zobrazit vlákna ve zdroji<br />– Přepnout na vlákno<br />– Zmrazení běžícího vlákna<br />– Uvolnění zmrazeného vlákna<br />-Označit vlákno pro další studii<br />-Zrušit označení vlákna<br />-Přejmenovat vlákno<br />-Zobrazit a skrýt vlákna<br /><br /> Další akce:<br /><br /> -Zobrazení zásobníku volání pro vlákno v DataTip|
+|Okno zdroje|Indikátory vlákna v levém hřbetu naznačují jedno nebo více vláken (ve výchozím nastavení vypnuté, zapnuté pomocí místní nabídky v okně **vláken** ).|Místní nabídka:<br /><br /> – Přepnout na vlákno<br />-Označit vlákno pro další studii<br />-Zrušit označení vlákna|
+|Panel nástrojů **umístění ladění**|– Aktuální proces<br />-Pozastavit aplikaci<br />– Obnovení aplikace<br />– Pozastavit a vypnout aplikaci<br />– Aktuální vlákno<br />-Přepnout stav příznaku aktuálního vlákna<br />-Zobrazit pouze vlákna označená příznakem<br />-Zobrazit pouze aktuální proces<br />– Aktuální rámec zásobníku|– Přepnout na jiný proces<br />– Pozastavení, obnovení nebo ukončení aplikace<br />– Přepne na jiné vlákno v aktuálním procesu.<br />– Přepnout na jiný rámec zásobníku v aktuálním vlákně<br />– Příznak nebo odoznačení aktuálního vlákna<br />-Zobrazit pouze vlákna označená příznakem<br />-Zobrazit pouze aktuální proces|
+|Okno **paralelní zásobníky**|-Zásobníky volání pro více vláken v jednom okně.<br />– Aktivní rámec zásobníku pro každé vlákno.<br />– Volající a volané pro jakoukoliv metodu.|– Filtrování zadaných vláken<br />– Přepnout na zobrazení úkolů<br />– Příznak nebo odoznačení vlákna<br />– Lupa|
+|Okno **paralelního sledování**|– Sloupec příznak, ve kterém můžete označit vlákno, kterému chcete věnovat zvláštní pozornost.<br />– Sloupec Frame, ve kterém šipka indikuje vybraný snímek.<br />– Konfigurovatelný sloupec, který může zobrazit počítač, proces, dlaždici, úlohu a vlákno.|– Příznak nebo odoznačení vlákna<br />-Zobrazit pouze vlákna označená příznakem<br />-Switch – snímky<br />-Řazení sloupce<br />-Seskupit vlákna<br />– Zmrazení nebo odmrazení vláken<br />-Exportujte data v paralelním okno Kukátko|
+|Okno **úlohy**|-Zobrazit informace o <xref:System.Threading.Tasks.Task> objektů včetně ID úlohy, stavu úlohy (naplánované, spuštěné, čekání, zablokované) a který podproces je přiřazen k úloze.<br />– Aktuální umístění v zásobníku volání.<br />-Delegát byl předán do úlohy v okamžiku vytvoření.|– Přepnout na aktuální úlohu<br />– Příznak nebo odoznačení úlohy<br />– Zmrazení nebo odmrazení úlohy|
+|Okno **vláken GPU**|– Sloupec příznak, ve kterém můžete označit vlákno, kterému chcete věnovat zvláštní pozornost.<br />– Aktuální sloupec vlákna, ve kterém žlutá šipka indikuje aktuální vlákno.<br />– Sloupec **počet vláken** , který zobrazuje počet vláken ve stejném umístění.<br />– Sloupec **line** , který zobrazuje řádek kódu, kde se nachází každá skupina vláken.<br />– Sloupec **adresa** , který zobrazuje adresu instrukcí, kde se nachází každá skupina vláken.<br />– Sloupec **Location (umístění** ), což je umístění v kódu adresy.<br />– Sloupec **Status (stav** ), který ukazuje, zda je vlákno aktivní nebo blokované.<br />– Sloupec **dlaždice** , ve kterém se zobrazuje index dlaždice pro vlákna na řádku.|– Změna na jiné vlákno<br />-Zobrazit konkrétní dlaždici a vlákno<br />-Zobrazit nebo skrýt sloupec<br />– Řazení podle sloupce<br />-Seskupit vlákna<br />– Zmrazení nebo odmrazení vláken<br />– Příznak nebo odoznačení vlákna<br />-Zobrazit pouze vlákna označená příznakem|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Připojení ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
 - [Ladění vícevláknových aplikací](../debugger/debug-multithreaded-applications-in-visual-studio.md)

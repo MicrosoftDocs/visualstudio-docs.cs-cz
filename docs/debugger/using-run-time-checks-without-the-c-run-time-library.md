@@ -1,5 +1,5 @@
 ---
-title: Použití za běhu bez běhové knihovny jazyka C kontroluje | Dokumentace Microsoftu
+title: Použití kontrol za běhu bez běhové knihovny jazyka C | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -23,17 +23,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2d9d97b9ba8a93864ec9af6ff02df7b20bbb35e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 029aafa634ba0e6837cdc7d4304d0419420dd912
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929653"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72728667"
 ---
 # <a name="using-run-time-checks-without-the-c-run-time-library"></a>Použití kontrol za běhu bez běhové knihovny jazyka C
-Pokud jste programu bez knihovny run-time jazyka C, pomocí **: / NODEFAULTLIB**a chcete použít kontroly za běhu, je třeba propojit s RunTmChk.lib.
+Pokud propojíte program bez běhové knihovny jazyka C, pomocí **/NODEFAULTLIB**a chcete použít kontroly za běhu, musíte propojit s RunTmChk. lib.
 
-`_RTC_Initialize` Inicializuje programu pro kontroly za běhu. Pokud nepropojíte s knihovny run-time jazyka C, je nutné zkontrolovat pro zjištění, jestli je váš program kompilován s kontroly chyb za běhu před voláním `_RTC_Initialize`, následujícím způsobem:
+`_RTC_Initialize` inicializuje program pro kontroly za běhu. Pokud neprovedete propojení s knihovnou run-time jazyka C, je nutné zkontrolovat, zda je program kompilován pomocí kontroly chyb za běhu před voláním `_RTC_Initialize` následujícím způsobem:
 
 ```cpp
 #ifdef __MSVC_RUNTIME_CHECKS
@@ -41,7 +41,7 @@ Pokud jste programu bez knihovny run-time jazyka C, pomocí **: / NODEFAULTLIB**
 #endif
 ```
 
-Pokud nepropojíte s knihovny run-time jazyka C, musíte také definovat funkci s názvem `_CRT_RTC_INITW`. `_CRT_RTC_INITW` uživatelem definované funkce se nainstaluje jako výchozí zpráv o chybách funkce, následujícím způsobem:
+Pokud neprovedete propojení s knihovnou run-time jazyka C, je nutné také definovat funkci nazvanou `_CRT_RTC_INITW`. `_CRT_RTC_INITW` nainstaluje uživatelsky definovanou funkci jako výchozí funkci zasílání zpráv o chybách následujícím způsobem:
 
 ```cpp
 // C version:
@@ -61,7 +61,7 @@ extern "C" _RTC_error_fnW __cdecl _CRT_RTC_INITW(
 }
 ```
 
-Po dokončení instalace výchozí zpráv o chybách funkce můžete nainstalovat další zpráv o chybách funkce s `_RTC_SetErrorFuncW`. Další informace najdete v tématu [_RTC_SetErrorFuncW](/cpp/c-runtime-library/reference/rtc-seterrorfuncw).
+Po instalaci výchozí funkce zasílání zpráv o chybách můžete pomocí `_RTC_SetErrorFuncW` nainstalovat další funkce zasílání zpráv o chybách. Další informace najdete v tématu [_RTC_SetErrorFuncW](/cpp/c-runtime-library/reference/rtc-seterrorfuncw).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 [Postupy: Použití nativních kontrol za běhu](../debugger/how-to-use-native-run-time-checks.md)

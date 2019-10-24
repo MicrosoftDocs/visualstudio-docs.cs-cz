@@ -1,5 +1,5 @@
 ---
-title: Představení nástroje Spy ++ | Dokumentace Microsoftu
+title: Představení nástroje Spy + + | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,48 +10,48 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95c3f83f67eb2a20b058300abaf96d37ad16687d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 4d04b2e9e04e1f2b952baadbdf0cca32cc3b301b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387580"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731821"
 ---
 # <a name="introducing-spy"></a>Představení nástroje Spy++
-Spy ++ umožňuje provádět následující úlohy:
+Spy + + umožňuje provádět následující úlohy:
 
-- Zobrazte grafické strom vztahů mezi objekty systému. Patří mezi ně [procesy](../debugger/processes-view.md), [vlákna](../debugger/threads-view.md), a [windows](../debugger/windows-view.md).
+- Zobrazení grafického stromu vztahů mezi systémovými objekty. Mezi ně patří [procesy](../debugger/processes-view.md), [vlákna](../debugger/threads-view.md)a [okna](../debugger/windows-view.md).
 
-- Hledání pro zadané [windows](../debugger/how-to-search-for-a-window-in-windows-view.md), [vlákna](../debugger/how-to-search-for-a-thread-in-threads-view.md), [procesy](../debugger/how-to-search-for-a-process-in-processes-view.md), nebo [zprávy](../debugger/how-to-search-for-a-message-in-messages-view.md).
+- Vyhledat zadaná [okna](../debugger/how-to-search-for-a-window-in-windows-view.md), [vlákna](../debugger/how-to-search-for-a-thread-in-threads-view.md), [procesy](../debugger/how-to-search-for-a-process-in-processes-view.md)nebo [zprávy](../debugger/how-to-search-for-a-message-in-messages-view.md).
 
-- Zobrazit vlastnosti vybrané [windows](../debugger/how-to-display-window-properties.md), [vlákna](../debugger/how-to-display-thread-properties.md), [procesy](../debugger/how-to-display-process-properties.md), nebo [zprávy](../debugger/how-to-display-message-properties.md).
+- Zobrazí vlastnosti vybraných [oken](../debugger/how-to-display-window-properties.md), [vláken](../debugger/how-to-display-thread-properties.md), [procesů](../debugger/how-to-display-process-properties.md)nebo [zpráv](../debugger/how-to-display-message-properties.md).
 
-- Vyberte okno, vlákno, proces nebo zprávy přímo v zobrazení.
+- Výběr okna, vlákna, procesu nebo zprávy přímo v zobrazení.
 
-- Použití [tažením nástroje hledání](../debugger/how-to-use-the-finder-tool.md) vyberte okno umístěním ukazatele myši.
+- Pomocí [Nástroje pro hledání](../debugger/how-to-use-the-finder-tool.md) vyberte okno umístění ukazatele myši.
 
-- Nastavte [zprávy možnost](../debugger/how-to-open-messages-view-from-find-window.md) s využitím komplexních zprávy protokolu výběr parametrů.
+- [Možnost nastavit zprávu](../debugger/how-to-open-messages-view-from-find-window.md) pomocí složitých parametrů výběru protokolu zpráv.
 
-  Spy ++ má panel nástrojů a hypertextové odkazy vám pomohou při práci rychleji. Poskytuje také **aktualizovat** příkaz k aktualizaci zobrazení aktivní **nástroj pro hledání oken** aby bylo sledování snazší a **písmo** dialogové okno pro přizpůsobení zobrazení systému windows. Kromě toho nástroje Spy ++ umožňuje uložení a obnovení uživatelských předvoleb.
+  Nástroj Spy + + obsahuje panel nástrojů a hypertextové odkazy, které vám pomůžou pracovat rychleji. Nabízí **také příkaz k aktualizaci aktivního** zobrazení, **Nástroj hledání oken** , který zjednodušuje Spying, a dialogové okno **písmo** pro přizpůsobení zobrazení oken. Kromě toho umožňuje Spy + + ukládat a obnovovat předvolby uživatele.
 
-  V různých nástroje Spy ++ windows kliknete pravým tlačítkem na Zobrazit místní nabídku s často používanými příkazy. Příkazy, které jsou zobrazeny, závisí na místě, kde je ukazatel. Například pokud kliknete pravým tlačítkem na položku v zobrazení okna a je vybrané okno viditelné, pak levým na **zvýrazněte** na zástupce v nabídce způsobí, že hranice vybrané okno pro flash, takže může být umístěn snadněji.
-
-> [!NOTE]
-> Existují dva nástroje, které se podobají nástroje Spy ++: PView, která zobrazuje podrobnosti o procesech a vláknech a DDESPY. Exe souboru, který vám umožní monitorovat dynamické výměny dat (DDE) zprávy.
-
-## <a name="64-bit-operating-systems"></a>64bitová verze operačních systémů
- Existují dvě verze nástroje Spy ++. První verze, s názvem nástroje Spy ++ (spyxx.exe) slouží k zobrazení zprávy odeslané do okna, na kterém běží v 32bitový proces. Visual Studio spustí třeba v 32bitový proces. Proto můžete nástroje Spy ++ pro zobrazení zprávy odeslané do **Průzkumníka řešení**. Jelikož výchozí konfigurace pro většinu sestavení v sadě Visual Studio je spuštění v procesu 32-bit, první verzi nástroje Spy ++, je ten, který je k dispozici na **nástroje** nabídky v sadě Visual Studio, pokud [požadované součásti nainstalované](../debugger/how-to-start-spy-increment.md).
-
- Druhá verze, s názvem nástroje Spy ++ (64-bit) (spyxx_amd64.exe), je navržená pro zobrazení zprávy odeslané do okna, na kterém běží v 64bitové proces. Na 64bitový operační systém, například Poznámkový blok spustí v 64bitového procesu. Proto můžete nástroje Spy ++ (64-bit) k zobrazení zprávy odeslané do poznámkového bloku. Spy ++ (64-bit) se obvykle nachází v
-
- ..\\*Visual Studio installation folder*\Common7\Tools\spyxx_amd64.exe.
-
- Buď verzi nástroje Spy ++ lze spustit přímo z příkazového řádku.
+  V různých oknech Spy + + můžete kliknout pravým tlačítkem myši a zobrazit místní nabídku často používaných příkazů. Příkazy, které jsou zobrazeny, závisí na umístění ukazatele. Pokud například kliknete pravým tlačítkem myši na položku v zobrazení okna a vybrané okno je viditelné, pak po kliknutí na tlačítko **Zvýraznit** v místní nabídce dojde k tomu, že se ohraničení vybraného okna nastaví na hodnotu, aby bylo možné snadněji najít.
 
 > [!NOTE]
-> I když se název souboru (64-bit) nástroje Spy ++ obsahuje "amd", běží na libovolné x64 operačního systému Windows.
+> Existují dva další nástroje, které se podobají Spy + +: PView, které zobrazují podrobnosti o procesech a vláknech a DDESPY. EXE, který umožňuje monitorovat zprávy DDE (DDE).
 
-## <a name="see-also"></a>Viz také
+## <a name="64-bit-operating-systems"></a>64 – bitové operační systémy
+ K dispozici jsou dvě verze nástroje Spy + +. První verze s názvem Spy + + (Spyxx. exe) je navržena tak, aby zobrazovala zprávy odesílané do okna, které běží v procesu 32. Například Visual Studio běží v procesu 32. Proto můžete pomocí nástroje Spy + + zobrazovat zprávy odesílané do **Průzkumník řešení**. Vzhledem k tomu, že výchozí konfigurace pro většinu sestavení v aplikaci Visual Studio je spuštěna v procesu 32, je tato první verze nástroje Spy + + ta, která je k dispozici v nabídce **nástroje** v aplikaci Visual Studio, pokud [jsou požadované součásti nainstalovány](../debugger/how-to-start-spy-increment.md).
+
+ Druhá verze s názvem Spy + + (64-bit) (spyxx_amd64. exe) je navržena tak, aby zobrazovala zprávy odeslané do okna, které běží v procesu 64. Například v 64ém operačním systému Poznámkový blok běží v procesu 64. Proto můžete pomocí nástroje Spy + + (64-bit) zobrazit zprávy odesílané do programu Poznámkový blok. Spy + + (64-bit) se obvykle nachází v
+
+ .. \\*instalační složky sady Visual Studio*\Common7\Tools\spyxx_amd64.exe.
+
+ Z příkazového řádku můžete spustit jednu z verzí nástroje Spy + + přímo.
+
+> [!NOTE]
+> I když název souboru Spy + + (64-bit) obsahuje "AMD", běží v jakémkoli operačním systému Windows x64.
+
+## <a name="see-also"></a>Viz také:
 - [Postupy: Spuštění nástroje Spy++](../debugger/how-to-start-spy-increment.md)
 - [Použití nástroje Spy++](../debugger/using-spy-increment.md)
 - [Zobrazení nástroje Spy++](../debugger/spy-increment-views.md)

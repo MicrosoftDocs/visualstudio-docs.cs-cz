@@ -1,5 +1,5 @@
 ---
-title: Idialoadcallback::restrictsymbolserveraccess – | Dokumentace Microsoftu
+title: 'IDiaLoadCallback:: RestrictSymbolServerAccess | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0de567f0417714e1246e11ba074c9b0134e92ce8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 87d590af5162d3efd2ef2c9702a3fe9f45250993
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839768"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743023"
 ---
 # <a name="idialoadcallbackrestrictsymbolserveraccess"></a>IDiaLoadCallback::RestrictSymbolServerAccess
-Určuje, pokud je povolen přístup na server symbolů k překladu symbolů.
+Určuje, zda je povolen přístup k překladu symbolů na server symbolů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,10 +29,10 @@ HRESULT RestrictSymbolServerAccess();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Žádné jiné než návratový kód `S_OK` brání použití serveru symbolů, chcete-li vyřešit symboly.
+ Libovolný návratový kód jiný než `S_OK` zabraňuje použití serveru symbolů k překladu symbolů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_statement – | Dokumentace Microsoftu
+title: 'IDiaLineNumber:: get_statement | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 397873a65176024327f371e9727b15984cd7d03f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0a37052944f74e36b488541074a0033f5b8aca9e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828390"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743134"
 ---
-# <a name="idialinenumbergetstatement"></a>IDiaLineNumber::get_statement
-Získá příznak označující, že informace o tomto řádku popisuje začátku příkazu namísto výrazu, ve zdrojovém programu.
+# <a name="idialinenumberget_statement"></a>IDiaLineNumber::get_statement
+Načte příznak označující, že tyto informace o řádku popisují začátek příkazu, nikoli výraz ve zdroji programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_statement ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` Pokud informace o tomto řádku popisuje počátku příkazu ve zdrojovém programu.
+mimo Vrátí `TRUE`, pokud informace o tomto řádku popisují začátek příkazu ve zdroji programu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Příkazy může zahrnovat více řádků. Tato metoda znamená, pokud přidružený řádek číslo označuje začátek Víceřádkový příkazu.
+ Příkazy mohou být rozloženy na více řádků. Tato metoda označuje, zda přidružené číslo řádku označuje začátek takového víceřádkového příkazu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

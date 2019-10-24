@@ -434,6 +434,10 @@
                   href: deploy-windows-store-apps-from-visual-studio.md
             - name: Ladění balíčku nainstalované aplikace
               href: debug-installed-app-package.md
+            - name: Kontrola vlastností XAML při ladění
+              href: inspect-xaml-properties-while-debugging.md
+            - name: Psaní a ladění spuštěného kódu XAML
+              href: xaml-hot-reload.md
             - name: Ladění kódu XAML v programu Blend
               href: ../xaml-tools/debug-xaml-in-blend.md?toc=/visualstudio/debugger/toc.json
             - name: HTML a CSS
@@ -490,6 +494,10 @@
               items:
                 - name: Ladění WPF
                   href: debugging-wpf.md
+                - name: Kontrola vlastností XAML při ladění
+                  href: inspect-xaml-properties-while-debugging.md
+                - name: Psaní a ladění spuštěného kódu XAML
+                  href: xaml-hot-reload.md
                 - name: Použití vizualizéru stromu WPF
                   href: how-to-use-the-wpf-tree-visualizer.md
                 - name: Zobrazení informací o trasování WPF

@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_length – | Dokumentace Microsoftu
+title: 'IDiaSectionContrib:: get_Length | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cd7b349cd3b048d68adf21aa11f89c33e7a05f5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f4d77854ca3c7b2d7edb8e1917927462af19dc31
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839560"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742604"
 ---
-# <a name="idiasectioncontribgetlength"></a>IDiaSectionContrib::get_length
-Získá počet bajtů v oddílu.
+# <a name="idiasectioncontribget_length"></a>IDiaSectionContrib::get_length
+Načte počet bajtů v oddílu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_length ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí počet bajtů v oddílu.
+mimo Vrátí počet bajtů v oddílu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

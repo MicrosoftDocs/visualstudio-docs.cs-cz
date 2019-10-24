@@ -1,5 +1,5 @@
 ---
-title: Idiaenumdebugstreamdata – | Dokumentace Microsoftu
+title: IDiaEnumDebugStreamData | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e2865dbf3da103610407cd33eeeaf934caba3c7a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f5929f6f36c183d3a580ab605d313695cb584664
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838334"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744838"
 ---
 # <a name="idiaenumdebugstreamdata"></a>IDiaEnumDebugStreamData
 Poskytuje přístup k záznamům v datovém proudu ladění.
@@ -28,28 +28,28 @@ Poskytuje přístup k záznamům v datovém proudu ladění.
 IDiaEnumDebugStreamData : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
-V následující tabulce jsou uvedeny metody objektu `IDiaEnumDebugStreamData`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+Následující tabulka ukazuje metody `IDiaEnumDebugStreamData`.
 
 |Metoda|Popis|
 |------------|-----------------|
-|[IDiaEnumDebugStreamData::get__NewEnum](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-newenum.md)|Načte [rozhraní IEnumVARIANT](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant) verzi výčet.|
-|[IDiaEnumDebugStreamData::get_Count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)|Získá počet záznamů v datovém proudu ladění.|
-|[IDiaEnumDebugStreamData::get_name](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-name.md)|Načte název datový proud ladění.|
+|[IDiaEnumDebugStreamData::get__NewEnum](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-newenum.md)|Načte verzi [rozhraní IEnumVARIANT](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant) tohoto enumerátoru.|
+|[IDiaEnumDebugStreamData::get_Count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)|Načte počet záznamů v datovém proudu ladění.|
+|[IDiaEnumDebugStreamData::get_name](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-name.md)|Načte název ladicího datového proudu.|
 |[IDiaEnumDebugStreamData::Item](../../debugger/debug-interface-access/idiaenumdebugstreamdata-item.md)|Načte zadaný záznam.|
-|[IDiaEnumDebugStreamData::Next](../../debugger/debug-interface-access/idiaenumdebugstreamdata-next.md)|Načte zadaný počet záznamů z výčtu pořadí.|
-|[IDiaEnumDebugStreamData::Skip](../../debugger/debug-interface-access/idiaenumdebugstreamdata-skip.md)|Vynechá zadaný počet záznamů v sekvenci výčtu.|
-|[IDiaEnumDebugStreamData::Reset](../../debugger/debug-interface-access/idiaenumdebugstreamdata-reset.md)|Návrat na začátek pořadí výčtu.|
-|[IDiaEnumDebugStreamData::Clone](../../debugger/debug-interface-access/idiaenumdebugstreamdata-clone.md)|Vytvoří čítač, který obsahuje stejné pořadí výčtu jako aktuální enumerátor.|
+|[IDiaEnumDebugStreamData::Next](../../debugger/debug-interface-access/idiaenumdebugstreamdata-next.md)|Načte zadaný počet záznamů z výčtové sekvence.|
+|[IDiaEnumDebugStreamData::Skip](../../debugger/debug-interface-access/idiaenumdebugstreamdata-skip.md)|Přeskočí zadaný počet záznamů v sekvenci výčtu.|
+|[IDiaEnumDebugStreamData::Reset](../../debugger/debug-interface-access/idiaenumdebugstreamdata-reset.md)|Obnoví výčtovou sekvenci na začátek.|
+|[IDiaEnumDebugStreamData::Clone](../../debugger/debug-interface-access/idiaenumdebugstreamdata-clone.md)|Vytvoří enumerátor, který obsahuje stejnou výčtovou sekvenci jako aktuální enumerátor.|
 
 ## <a name="remarks"></a>Poznámky
-Toto rozhraní představuje datový proud záznamy v datovém proudu ladění. Velikost a výkladu každého záznamu je závislá na záznam pochází z datového proudu. Toto rozhraní poskytuje efektivní přístup k nezpracovaným datům bajtů v souboru symbolů.
+Toto rozhraní představuje datový proud záznamů v ladicím datovém streamu. Velikost a interpretace jednotlivých záznamů závisí na datovém proudu, ze kterého záznam pochází. Toto rozhraní efektivně poskytuje přístup k nezpracovaným datovým bajtům v souboru symbolů.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Volání [idiaenumdebugstreams::Item –](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md) nebo [idiaenumdebugstreams::Next –](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md) metody k získání `IDiaEnumDebugStreamData` objektu.
+Voláním metody [IDiaEnumDebugStreams:: Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md) nebo [IDiaEnumDebugStreams:: Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md) získejte objekt `IDiaEnumDebugStreamData`.
 
 ## <a name="example"></a>Příklad
- Tento příklad ukazuje, jak získat přístup k jedné datového proudu a jeho záznamy.
+ Tento příklad ukazuje, jak přistupovat k jednomu datovému proudu a jeho záznamům.
 
 ```C++
 void PrintStreamData(IDiaEnumDebugStreamData* pStream)
@@ -103,13 +103,13 @@ void PrintStreamData(IDiaEnumDebugStreamData* pStream)
 ```
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: Dia2.h
+Záhlaví: Dia2. h
 
-Knihovna: diaguids.lib
+Knihovna: diaguids. lib
 
-DLL: msdia80.dll
+Knihovna DLL: Msdia80. dll
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumDebugStreams::Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)
 - [IDiaEnumDebugStreams::Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md)

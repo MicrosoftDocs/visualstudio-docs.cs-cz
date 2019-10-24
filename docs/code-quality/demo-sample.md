@@ -11,16 +11,16 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 648d00cd59d056e0874c91338a39667088d93e2e
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 071c16267486e1dda1e183cad3c488345974a3cc
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018444"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745924"
 ---
 # <a name="sample-c-project-for-code-analysis"></a>Ukázkový C++ projekt pro analýzu kódu
 
-Následující postupy ukazují, jak vytvořit ukázku pro [Walkthrough: Analyzovat C/C++ kód pro vady @ no__t-1. Postupy vytvoří:
+Následující postupy ukazují, jak vytvořit ukázku pro [Návod: Analýza kódu C/C++ pro vady](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md). Postupy vytvoří:
 
 - Řešení sady Visual Studio s názvem CppDemo.
 
@@ -34,7 +34,7 @@ Procedury také poskytují kód pro hlavičku a soubory *. cpp* pro statické kn
 
 1. Klikněte na nabídku **soubor** , přejděte na příkaz **Nový**a poté klikněte na možnost **Nový projekt**.
 
-2. V seznamu stromu **typů projektů** není vizuál C++ ve výchozím jazyku v sadě vs. **Další jazyky**.
+2. V seznamu stromu **typů projektu** , není- C++ li výchozí jazyk v sadě Visual Studio a rozšířené **jiné jazyky**.
 
 3. Rozbalte **vizuál C++** a pak klikněte na **Obecné**.
 

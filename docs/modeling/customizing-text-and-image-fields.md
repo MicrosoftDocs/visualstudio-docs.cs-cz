@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 04cd8d1eb94ba488b621fb30f9ac598ce9c71722
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9d3a3e1995dbc36b02d90da6343e8cc9a6d48eba
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653991"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748441"
 ---
 # <a name="customizing-text-and-image-fields"></a>Přizpůsobení textových a obrazových polí
 Při definování dekoratér textu v obrazci, je reprezentována TextField. Příklady inicializace TextField a dalších ShapeFields naleznete v Dsl\GeneratedCode\Shapes.cs v řešení DSL.
@@ -261,7 +261,7 @@ partial class ExampleShape
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Definování obrazců a konektorů](../modeling/defining-shapes-and-connectors.md)
 - [Nastavení obrázku pozadí v diagramu](../modeling/setting-a-background-image-on-a-diagram.md)

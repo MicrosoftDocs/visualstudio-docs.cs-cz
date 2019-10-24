@@ -13,12 +13,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 229ee7f4384c5ab93a329104ecbe165e0e1136a4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 894d425d934043b7ed06b29bc3d6fa19115ccf17
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666461"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748675"
 ---
 # <a name="my-extensions-page-project-designer-visual-basic"></a>Stránka Moje rozšíření, návrhář projektu (Visual Basic)
 Pomocí stránky **Moje rozšíření** v **Návrháři projektu** můžete spravovat `My` rozšíření oboru názvů v projektu. rozšíření oboru názvů `My` umožňují přizpůsobit `My` oboru názvů tak, aby bylo možné přidat vlastní členy. Informace o vytváření vlastních rozšíření oboru názvů `My` naleznete v tématu [rozšíření oboru názvů My v Visual Basic](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace).
@@ -40,7 +40,7 @@ Kliknutím na toto tlačítko přidáte do projektu nainstalované rozšíření
 
 Vyberte jeden nebo více odkazů v seznamu **rozšíření rozhraní My Namespace** a potom kliknutím na toto tlačítko odeberte z projektu rozšíření oboru názvů `My`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Rozšíření oboru názvů My v Visual Basic](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace)
 - [Balení a nasazení vlastních rozšíření oboru názvů My](/dotnet/visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions)

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Stránku nahoru nebo dolů v paměti | Dokumentace Microsoftu'
+title: 'Postupy: stránka nahoru nebo dolů v paměti | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,34 +19,34 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b8452100eb744d019c0f4c8d5e62566ac761210
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c9f93b24c9349a28176164d667c96133668cf3f4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894018"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733026"
 ---
-# <a name="how-to-page-up-or-down-in-memory"></a>Postupy: Stránku nahoru nebo dolů v paměti
+# <a name="how-to-page-up-or-down-in-memory"></a>Postupy: O stránku nahoru nebo dolů v paměti
 
-Při prohlížení obsah paměti **paměti** okno nebo **zpětný překlad** můžete použít svislý posuvník přesunout nahoru nebo dolů v paměti prostoru.
+Když zobrazíte obsah paměti v okně **paměti** nebo v okně **zpětný překlad** , můžete pomocí svislého posuvníku přesunout nahoru nebo dolů v paměťovém prostoru.
 
-### <a name="to-page-up-or-down-in-memory"></a>Na stránce nahoru nebo dolů v paměti
+### <a name="to-page-up-or-down-in-memory"></a>Pro stránku nahoru nebo dolů v paměti
 
-1. Na stránce dolů (Přejít na vyšší adresy paměti), klikněte na svislý posuvník posuvníku.
+1. Chcete-li posunout stránku dolů (přesunout na vyšší adresu paměti), klikněte na svislý posuvník pod posuvníkem.
 
-2. Na stránce nahoru (Přejít na nižší adresa paměti), klikněte na svislý posuvník nad jezdce.
+2. Chcete-li stránku nahoru (přesunout na nižší adresu paměti), klikněte na svislý posuvník nad jezdcem.
 
-   Můžete si všimnout, že svislý posuvník funguje v nestandardním způsobem. Adresní prostor moderní počítače je velmi velké a je snadné získat ztráty uchopíte jeho thumb posuvník a jeho přetažením do náhodných umístění. Z tohoto důvodu jezdce je "springloaded" a vždy zůstane v centru posuvník. V nativním kódu aplikace můžete stránku nahoru nebo dolů ale nejde o volně přejděte.
+   Všimněte si také, že svislý posuvník funguje nestandardním způsobem. Adresní prostor moderního počítače je velmi velký a je snadné ho ztratit tím, že se podíváme na miniaturu ScrollBar a přetáhnete ji do náhodného umístění. Z tohoto důvodu je palec "springloaded" a vždy zůstává ve středu posuvníku. V aplikacích s nativním kódem můžete stránku nahoru nebo dolů, ale nemůžete se pohybovat volně.
 
-   Ve spravovaných aplikacích zpětného překladu je omezená na jednu funkci a můžete posouvat normálně.
+   Ve spravovaných aplikacích je zpětný překlad omezen na jednu funkci a můžete se posouvat normálně.
 
-   Můžete si všimnout, že vyšší adresy se zobrazí v dolní části okna. Chcete-li zobrazit adresu vyšší musí přesunout dolů, nikoli nahoru.
+   Všimněte si, že v dolní části okna se zobrazí vyšší adresy. Chcete-li zobrazit vyšší adresu, je nutné přesunout dolů, ne.
 
-#### <a name="to-move-up-or-down-one-instruction"></a>Chcete-li přesunout nahoru nebo dolů jedna instrukce
+#### <a name="to-move-up-or-down-one-instruction"></a>Přesun nahoru nebo dolů o jednu instrukci
 
-- Klikněte na šipku v horní nebo dolní svislý posuvník.
+- Klikněte na šipku v horní nebo dolní části svislého posuvníku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Okna paměti](../debugger/memory-windows.md)
 - [Postupy: Použití okna zpětného překladu](../debugger/how-to-use-the-disassembly-window.md)
 - [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)

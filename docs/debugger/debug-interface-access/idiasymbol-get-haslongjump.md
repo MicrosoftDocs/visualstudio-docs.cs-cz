@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_haslongjump – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_hasLongJump | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70036cd8add5c9c72262f29ba92fa6c7eaf8977d
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 8fb1e23d252b7cb4f2685a9b07d6e3e92db801bd
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64817130"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740503"
 ---
-# <a name="idiasymbolgethaslongjump"></a>IDiaSymbol::get_hasLongJump
-Získá příznak, který určuje, zda obsahuje funkci k využívání [longjmp](/cpp/c-runtime-library/reference/longjmp) příkazu (spárované s [setjmp](/cpp/c-runtime-library/reference/setjmp) příkazu, vytvářejí C-style způsob zpracování výjimek).
+# <a name="idiasymbolget_haslongjump"></a>IDiaSymbol::get_hasLongJump
+Načte příznak, který určuje, zda funkce obsahuje použití příkazu [longjmp](/cpp/c-runtime-library/reference/longjmp) (spárovaného s příkazem [setjmp](/cpp/c-runtime-library/reference/setjmp) , tato forma metody zpracování výjimek ve stylu C).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,22 +33,22 @@ HRESULT get_hasLongJump
 #### <a name="parameters"></a>Parametry
  `pFlag`
 
-[out] Vrátí `TRUE` pokud obsahuje funkce `longjmp` příkazu; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud funkce obsahuje příkaz `longjmp`; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|Ve verzi 8.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaSymbol::get_hasSetJump](../../debugger/debug-interface-access/idiasymbol-get-hassetjump.md)
 - [longjmp](/cpp/c-runtime-library/reference/longjmp)

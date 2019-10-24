@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 51173fcf2e8f6785b61bfd348178a59b5fb933dc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 27d8672ea94cf2a1547904f313ac36509f111462
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654021"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748462"
 ---
 # <a name="customize-file-storage-and-xml-serialization"></a>Přizpůsobení úložiště souborů a serializace XML
 
@@ -306,7 +306,7 @@ Uzly dat role se nacházejí v uzlech zdrojové třídy.
 |Název elementu role|Určuje název elementu XML, který je odvozen ze zdrojové role. Výchozí hodnota je název vlastnosti role.|
 |Použít úplný formulář|Je-li nastavena hodnota true, je každý cílový element nebo moniker uzavřen v uzlu XML představujícím relaci. Tato hodnota by měla být nastavena na hodnotu true, pokud má vztah své vlastní doménové vlastnosti.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Navigace v modelu a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)

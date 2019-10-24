@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findsymbolbyvaex – | Dokumentace Microsoftu
+title: 'IDiaSession:: findSymbolByVAEx | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 16b62c5efb520e90606d6311b60a839404359720
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 56dd91e76380bb4f43fae4f26d4124b2f9bc3ebf
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832360"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741990"
 ---
 # <a name="idiasessionfindsymbolbyvaex"></a>IDiaSession::findSymbolByVAEx
-Načte typ zadaný symbol, který obsahuje, nebo co nejblíže, zadanou virtuální adresu (VA) a posun.
+Načte zadaný typ symbolu, který obsahuje nebo je nejbližší, zadanou virtuální adresu (VA) a posun.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,22 +36,22 @@ HRESULT findSymbolByVAEx ( 
 #### <a name="parameters"></a>Parametry
  `va`
 
-[in] Určuje, VA.
+pro Určuje VA.
 
  `symtag`
 
-[in] Typ symbolu, která se má najít. Hodnoty pocházejí ze [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) výčtu.
+pro Typ symbolu, který se má najít Hodnoty jsou pořízeny výčtem [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) .
 
  `ppSymbol`
 
-[out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) načíst objekt představující symbol.
+mimo Vrátí objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) , který představuje načtený symbol.
 
  `displacement`
 
-[out] Vrátí hodnotu, která určuje prodlevu virtuální adresy poskytnuté `va`.
+mimo Vrátí hodnotu, která určuje posun od virtuální adresy zadané `va`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
 
@@ -61,7 +61,7 @@ LONG disp = 0;
 pSession->findSymbolByVAEx( va, SymTagFunction, &pFunc, &disp );
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)
 - [IDiaSession::findSymbolByVA](../../debugger/debug-interface-access/idiasession-findsymbolbyva.md)

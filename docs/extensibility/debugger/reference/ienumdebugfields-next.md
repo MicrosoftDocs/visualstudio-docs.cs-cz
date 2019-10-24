@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugFields::Next | Dokumentace Microsoftu
+title: 'IEnumDebugFields:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ee2cc5273b5ec47f99916a308312f6d26c718033
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 216ce9d49ba9de33307ad692787d6e6d36ee15c3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350429"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72727650"
 ---
 # <a name="ienumdebugfieldsnext"></a>IEnumDebugFields::Next
-Tato metoda vrátí další sadu elementů z výčtu.
+Tato metoda vrací další sadu prvků z výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,17 +45,17 @@ int Next(
 
 ## <a name="parameters"></a>Parametry
 `celt`\
-[in] Počet prvků, které mají načíst. Také určuje maximální velikost `rgelt` pole.
+pro Počet prvků, které mají být načteny. Určuje také maximální velikost `rgelt` pole.
 
 `rgelt`\
-[out v] Pole [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) prvků, které mají být vyplněna.
+[in, out] Pole [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) prvků, které se mají vyplnit
 
 `pceltFetched`\
-[out] Vrátí počet prvků ve skutečnosti vrácených v `rgelt`.
+mimo Vrátí počet prvků, které jsou ve skutečnosti vráceny v `rgelt`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` pokud menší než požadovaný počet prvků, které může být vrácena; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud bylo vráceno méně než požadovaný počet prvků. v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

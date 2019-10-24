@@ -1,5 +1,5 @@
 ---
-title: Vzdálené ladění C# nebo projektu VB | Dokumentace Microsoftu
+title: Vzdálené ladění a C# projekt VB | Microsoft Docs
 ms.custom:
 - remotedebugging"=
 - seodec18
@@ -19,59 +19,59 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3490cab7c902dcdf1a7d0095eb69dd44de47a727
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 5f147acae956ad380c6e85984de29d5316394c0a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211124"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72730261"
 ---
-# <a name="remote-debugging-a-c-or-visual-basic-project-in-visual-studio"></a>Vzdálené ladění projektu C# nebo Visual Basic v sadě Visual Studio
-Ladění aplikace Visual Studio, který byl nasazen na jiný počítač, nainstalovat a spustit nástroje remote tools v počítači, kam jste nasadili aplikaci, nakonfigurujte projekt tak, aby připojení ke vzdálenému počítači ze sady Visual Studio a spusťte aplikaci.
+# <a name="remote-debugging-a-c-or-visual-basic-project-in-visual-studio"></a>Vzdálené ladění a C# nebo Visual Basic projektu v aplikaci Visual Studio
+Chcete-li ladit aplikaci Visual Studio, která byla nasazena v jiném počítači, nainstalujte a spusťte nástroje Remote Tools v počítači, kde jste nasadili aplikaci, nakonfigurujte projekt tak, aby se připojil ke vzdálenému počítači ze sady Visual Studio, a pak spusťte aplikaci.
 
-![Vzdálený ladicí program komponenty](../debugger/media/remote-debugger-client-apps.png "Remote_debugger_components")
+![Komponenty vzdáleného ladicího programu](../debugger/media/remote-debugger-client-apps.png "Remote_debugger_components")
 
-Informace o vzdáleném ladění aplikací pro univerzální aplikace Windows (UPW) najdete v tématu [ladit nainstalovaný balíček aplikace](debug-installed-app-package.md).
+Informace o vzdáleném ladění univerzálních aplikací pro Windows (UWP) najdete v tématu [ladění nainstalovaného balíčku aplikace](debug-installed-app-package.md).
 
 ## <a name="requirements"></a>Požadavky
 
-Vzdálený ladicí program podporuje se ve Windows 7 a novější (ne telefon) a verze systému Windows Server od verze Windows Server 2008 Service Pack 2. Úplný seznam požadavků, najdete v části [požadavky](../debugger/remote-debugging.md#requirements_msvsmon).
+Vzdálený ladicí program je podporován ve Windows 7 a novějších (ne v telefonu) a verzích Windows serveru počínaje verzí Windows Server 2008 Service Pack 2. Úplný seznam požadavků najdete v tématu [požadavky](../debugger/remote-debugging.md#requirements_msvsmon).
 
 > [!NOTE]
-> Ladění mezi dvěma počítači připojený prostřednictvím proxy serveru není podporováno. Ladění přes vysokou latencí nebo připojení s malou šířkou pásma, jako je například telefonického Internetu, nebo přes Internet napříč zeměmi se nedoporučuje a může selhat nebo být příliš pomalé.
+> Ladění mezi dvěma počítači připojenými prostřednictvím proxy serveru není podporováno. Ladění přes vysokou latenci nebo připojení s nízkou šířkou pásma, jako je například telefonické připojení k Internetu nebo přes Internet v zemích, se nedoporučuje a může být neúspěšné nebo nepřijatelně pomalé.
 
-## <a name="download-and-install-the-remote-tools"></a>Stáhněte a nainstalujte nástroje remote tools
+## <a name="download-and-install-the-remote-tools"></a>Stažení a instalace nástrojů Remote Tools
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
 > [!TIP]
-> V některých případech může být nejúčinnější pro spuštění vzdáleného ladicího programu ze sdílené složky. Další informace najdete v tématu [spuštění vzdáleného ladicího programu ze sdílené složky](../debugger/remote-debugging.md#fileshare_msvsmon).
+> V některých scénářích může být pro spuštění vzdáleného ladicího programu ze sdílené složky nejúčinnější. Další informace najdete v tématu [spuštění vzdáleného ladicího programu ze sdílené složky](../debugger/remote-debugging.md#fileshare_msvsmon).
 
-## <a name="BKMK_setup"></a> Nastavení vzdáleného ladicího programu
+## <a name="BKMK_setup"></a>Nastavení vzdáleného ladicího programu
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
 > [!NOTE]
-> Pokud potřebujete přidat oprávnění pro další uživatele, změnit režim ověřování, nebo číslo portu pro vzdálené ladění, naleznete v tématu [konfigurovat vzdálený ladicí program](../debugger/remote-debugging.md#configure_msvsmon).
+> Pokud potřebujete přidat oprávnění pro další uživatele, změňte režim ověřování nebo číslo portu vzdáleného ladicího programu. Další informace najdete v tématu [Konfigurace vzdáleného ladicího programu](../debugger/remote-debugging.md#configure_msvsmon).
 
-## <a name="remote_csharp"></a> Vzdálené ladění projektu
-Ladicí program nemůže nasadit Visual C# nebo Visual Basic desktopové aplikace ke vzdálenému počítači, ale můžete stále ladit vzdáleně následujícím způsobem. Následující postup předpokládá, že chcete ladit v počítači s názvem **MJO DL**, jak je znázorněno na obrázku níže.
+## <a name="remote_csharp"></a>Vzdálené ladění projektu
+Ladicí program nemůže nasazovat C# vizuální nebo Visual Basic desktopové aplikace do vzdáleného počítače, ale můžete je vzdáleně ladit následujícím způsobem. Následující postup předpokládá, že ho chcete ladit v počítači s názvem **mjo-DL**, jak je znázorněno na následujícím obrázku.
 
-1. Vytvoření projektu WPF s názvem **MyWpf**.
+1. Vytvořte projekt WPF s názvem **MyWpf**.
 
-2. Nastavte zarážku někde v kódu, který je snadno dosaženo.
+2. Nastavte zarážku někam v kódu, který je snadno dosažitelný.
 
-    Může například nastavit zarážku v rutině tlačítka. Uděláte to tak, otevřete soubor MainWindow.xaml a přidejte ovládací prvek tlačítko z panelu nástrojů a potom dvakrát klikněte na tlačítko otevřít její obslužná rutina.
+    Například můžete nastavit zarážku v obslužné rutině tlačítka. Provedete to tak, že otevřete MainWindow. XAML a přidáte ovládací prvek tlačítko ze sady nástrojů a potom dvakrát kliknete na tlačítko pro otevření jeho obslužné rutiny.
 
-3. V Průzkumníku řešení klikněte pravým tlačítkem na projekt a zvolte **vlastnosti**.
+3. V Průzkumník řešení klikněte pravým tlačítkem na projekt a vyberte **vlastnosti**.
 
-4. Na **vlastnosti** zvolte **ladění** kartu.
+4. Na stránce **vlastnosti** klikněte na kartu **ladění** .
 
     ![RemoteDebuggerCSharp](../debugger/media/remotedebuggercsharp.png "RemoteDebuggerCSharp")
 
-5. Ujistěte se, **pracovní adresář** textové pole je prázdné.
+5. Ujistěte se, že je textové pole **pracovní adresář** prázdné.
 
-6. Vyberte možnost **použít vzdálený počítač**a do textového pole zadejte **yourmachinename: port** . (Číslo portu se zobrazí v okně vzdáleného ladicího programu. Číslo portu zvýší 2 v každé verzi sady Visual Studio).
+6. Vyberte možnost **použít vzdálený počítač**a do textového pole zadejte **yourmachinename: port** . (Číslo portu se zobrazí v okně vzdáleného ladicího programu. Číslo portu zvýší hodnotu 2 v každé verzi sady Visual Studio).
 
     V tomto příkladu použijte:
     ::: moniker range=">=vs-2019"
@@ -81,42 +81,42 @@ Ladicí program nemůže nasadit Visual C# nebo Visual Basic desktopové aplikac
     **Mjo-DL: 4022** v aplikaci Visual Studio 2017
     ::: moniker-end
 
-7. Ujistěte se, že **povolit ladění nativního kódu** není vybraná.
+7. Ujistěte se, že není vybraná **možnost Povolit ladění nativního kódu** .
 
 8. Sestavte projekt.
 
-9. Vytvoření složky na vzdáleném počítači, který se stejnou cestou jako **ladění** složky v počítači aplikace Visual Studio:  **\<zdrojová_cesta_operačního_systému > \MyWPF\MyWPF\bin\Debug**.
+9. Vytvořte složku na vzdáleném počítači, která je stejná jako složka **ladění** v počítači sady Visual Studio: **\<source cesta > \MyWPF\MyWPF\bin\Debug**.
 
-10. Zkopírujte spustitelný soubor, který jste právě sestavili ze sady Visual Studio do nově vytvořené složky na vzdáleném počítači.
+10. Zkopírujte spustitelný soubor, který jste právě vytvořili z počítače se systémem Visual Studio, do nově vytvořené složky ve vzdáleném počítači.
 
     > [!CAUTION]
-    > Nedovolte, aby byly změny v kódu nebo opětovné sestavení (nebo je nutné tento krok opakovat). Spustitelný soubor, který jste zkopírovali do vzdáleného počítače se musí přesně odpovídat, místní zdroje a symbolů.
+    > Neprovádějte změny kódu nebo znovu sestavte (nebo je nutné tento krok zopakovat). Spustitelný soubor, který jste zkopírovali do vzdáleného počítače, se musí přesně shodovat s vaším místním zdrojem a symboly.
 
-    Můžete zkopírovat projektu ručně, pomocí příkazu Xcopy, Robocopy, Powershellu nebo jiné možnosti.
+    Projekt můžete kopírovat ručně pomocí příkazu xcopy, Robocopy, PowerShellu nebo jiných možností.
 
-11. Ujistěte se, že vzdálený ladicí program je spuštěn na cílovém počítači (Pokud není, vyhledejte **vzdálený ladicí program** v **Start** nabídky). V okně vzdáleného ladicího programu vypadá takto.
+11. Ujistěte se, že je na cílovém počítači spuštěný vzdálený ladicí program (Pokud není, vyhledejte v nabídce **Start** **vzdálený ladicí program** ). Okno vzdáleného ladicího programu vypadá takto.
 
      ![RemoteDebuggerWindow](../debugger/media/remotedebuggerwindow.png "RemoteDebuggerWindow")
 
-12. V sadě Visual Studio spustit ladění (**ladit > Spustit ladění**, nebo **F5**).
+12. V aplikaci Visual Studio spusťte ladění (**ladění > spustit ladění**nebo **F5**).
 
-13. Pokud se zobrazí výzva, zadejte přihlašovací údaje k síti pro připojení ke vzdálenému počítači.
+13. Pokud se zobrazí výzva, zadejte síťové přihlašovací údaje pro připojení ke vzdálenému počítači.
 
-     Požadované přihlašovací údaje se liší v závislosti na konfiguraci zabezpečení vaší sítě. V počítači domény, můžete například zadat název domény a heslo. Na počítači mimo doménu, můžete například zadat název počítače a platné uživatelské jméno účtu, jako je třeba <strong>MJO-DL\name@something.com</strong>, spolu s správné heslo.
+     Požadovaná pověření se liší v závislosti na konfiguraci zabezpečení vaší sítě. Například v počítači domény můžete zadat název domény a heslo. V počítači, který není doménou, můžete zadat název počítače a platný název uživatelského účtu, například <strong>MJO-DL\name@something.com</strong>společně se správným heslem.
 
-     Měli byste vidět, že hlavní okno aplikace WPF je otevřít na vzdáleném počítači.
+     Mělo by se zobrazit, že je hlavní okno aplikace WPF otevřeno na vzdáleném počítači.
 
-14. V případě potřeby proveďte akce na zarážce. Měli byste vidět, že zarážka je aktivní. Pokud tomu tak není, ještě nebyly načteny symboly pro aplikaci. Zkuste to znovu a pokud to nepomůže, získejte informace o načítání symbolů a jak řešit je na [soubory symbolů principy a sady Visual Studio symbol nastavení](https://devblogs.microsoft.com/devops/understanding-symbol-files-and-visual-studios-symbol-settings/).
+14. V případě potřeby proveďte akci, aby se zarážka narazí. Měla by se zobrazit, že je zarážka aktivní. Pokud tomu tak není, symboly pro aplikaci se nenačte. Zkuste to znovu, a pokud to nefunguje, Získejte informace o načítání symbolů a o tom, jak je řešit, v tématu [Principy souborů symbolů a nastavení symbolů sady Visual Studio](https://devblogs.microsoft.com/devops/understanding-symbol-files-and-visual-studios-symbol-settings/).
 
-15. Na počítač s Visual Studio měli byste vidět, že vykonávání se zastavilo na zarážku.
+15. Na počítači se systémem Visual Studio by se mělo zobrazit, že se na zarážce zastavilo provádění.
 
-    Pokud máte jakékoli souborům bez kódu, které je potřeba v aplikaci použít, budete muset zahrnout je do projektu sady Visual Studio. Vytvořte složku projektu pro další soubory (v **Průzkumníka řešení**, klikněte na tlačítko **Přidat > Nová složka**). Pak přidejte soubory do složky (v **Průzkumníka řešení**, klikněte na tlačítko **Přidat > existující položku**, vyberte soubory). Na **vlastnosti** stránky pro každý soubor, nastavte **kopírovat do výstupního adresáře** k **vždy Kopírovat**.
+    Pokud máte nějaké soubory bez kódu, které musí aplikace používat, je nutné je zahrnout do projektu aplikace Visual Studio. Vytvořte složku projektu pro další soubory (v **Průzkumník řešení**klikněte na **Přidat > Nová složka**). Pak přidejte soubory do složky (v **Průzkumník řešení**klikněte na **Přidat > existující položku**a pak vyberte soubory). Na stránce **vlastnosti** pro každý soubor nastavte vždy hodnotu **Kopírovat do výstupního adresáře** na **Kopírovat**.
 
-## <a name="set-up-debugging-with-remote-symbols"></a>Nastavení se vzdálený symboly ladění
+## <a name="set-up-debugging-with-remote-symbols"></a>Nastavení ladění pomocí vzdálených symbolů
 
 [!INCLUDE [remote-debugger-symbols](../debugger/includes/remote-debugger-symbols.md)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
 - [Konfigurace brány firewall ve Windows pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md)

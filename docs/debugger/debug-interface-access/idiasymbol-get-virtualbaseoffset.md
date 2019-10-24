@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_virtualBaseOffset | Microsoft Docs
+title: 'IDiaSymbol:: get_virtualBaseOffset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f1cb4a34f9947d2f5ee50488876d44042b4cb228
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: c72c605b47a5f34542b46cae9943b03c7072b1f5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64830833"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738869"
 ---
-# <a name="idiasymbolgetvirtualbaseoffset"></a>IDiaSymbol::get_virtualBaseOffset
+# <a name="idiasymbolget_virtualbaseoffset"></a>IDiaSymbol::get_virtualBaseOffset
 Načte posun v tabulce virtuální funkce virtuální funkce.
 
 ## <a name="syntax"></a>Syntaxe
@@ -33,13 +33,13 @@ HRESULT get_virtualBaseOffset ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí posunutí v tabulce virtuální funkce virtuální funkce.
+mimo Vrátí posun v tabulce virtuální funkce virtuální funkce.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

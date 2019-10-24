@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findInlineeLinesByVA | Dokumentace Microsoftu
+title: 'IDiaSession:: findInlineeLinesByVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58f572fcce0b490fad8f94f1e3e3d941e8568211
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 24807114cbb28c4112f538b8aa88b26bf5491fef
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827721"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742186"
 ---
 # <a name="idiasessionfindinlineelinesbyva"></a>IDiaSession::findInlineeLinesByVA
-Načte výčet, který umožňuje klientovi k iteraci v rámci o počtu řádků všech funkcí, které jsou vloženy, přímo nebo nepřímo, symbolem zadaný nadřazený prvek a jsou obsaženy v rámci zadané virtuální adresy (VA).
+Načte výčet, který umožňuje klientovi iterovat informace o číslech řádků všech funkcí, které jsou vloženy přímo nebo nepřímo, zadaným nadřazeným symbolem a jsou obsaženy v rámci zadané virtuální adresy (VA).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,24 +32,24 @@ HRESULT findInlineeLinesByVA ( 
 #### <a name="parameters"></a>Parametry
  `parent`
 
-[in] `IDiaSymbol` Představující nadřazeného objektu.
+pro Objekt `IDiaSymbol` reprezentující nadřazený prvek.
 
  `va`
 
-[in] Určuje adresu jako VA.
+pro Určuje adresu jako VA.
 
  `length`
 
-[in] Určuje rozsah adres v počet bajtů, aby pokryl s Tento dotaz.
+pro Určuje rozsah adres, který má být pokrytý pomocí tohoto dotazu, v počtu bajtů.
 
  `ppResult`
 
-[out] Obsahuje `IDiaEnumLineNumbers` objekt, který obsahuje seznam čísel řádků, které jsou načteny.
+mimo Obsahuje objekt `IDiaEnumLineNumbers`, který obsahuje seznam čísel řádků, které se načítají.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)

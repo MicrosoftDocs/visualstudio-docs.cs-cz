@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_subTypeId | Microsoft Docs
+title: 'IDiaSymbol:: get_subTypeId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e54f800b5843a17e0617b57de21bfcdd4616cef4
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 66c7a05ef6b8e90eda2b29bdbb7d33fcf25a2af2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62841637"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739271"
 ---
-# <a name="idiasymbolgetsubtypeid"></a>IDiaSymbol::get_subTypeId
-Načte ID typu. sub
+# <a name="idiasymbolget_subtypeid"></a>IDiaSymbol::get_subTypeId
+Načte ID dílčího typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,10 +30,10 @@ HRESULT get_subTypeId(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Ukazatel `DWORD` , který obsahuje ID typu. sub
+mimo Ukazatel na `DWORD`, který obsahuje ID dílčího typu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

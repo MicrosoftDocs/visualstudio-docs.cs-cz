@@ -1,5 +1,5 @@
 ---
-title: Úloha ParallelCustomBuild | Dokumentace Microsoftu
+title: Úloha ParallelCustomBuild | Microsoft Docs
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -11,34 +11,34 @@ dev_langs:
 - jsharp
 - C++
 helpviewer_keywords:
-- MSBuild (Visual C++), ParallelCustomBuild task
-- ParallelCustomBuild task (MSBuild (Visual C++))
+- MSBuild (C++), ParallelCustomBuild task
+- ParallelCustomBuild task (MSBuild (C++))
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - multiple
-ms.openlocfilehash: 54623ab1c58d85de55c5b8a24384bf0be46f1a61
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c6ea14e61eb2d62f3fc9ccdac3a17010ccc9194f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963751"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747222"
 ---
-# <a name="parallelcustombuild-task"></a>ParallelCustomBuild úkolu
+# <a name="parallelcustombuild-task"></a>ParallelCustomBuild – úloha
 
-Spouštění paralelních instancí [CustomBuild úloh](../msbuild/custombuild-task.md).
+Spusťte paralelní instance [CustomBuild úlohy](../msbuild/custombuild-task.md).
 
 ## <a name="parameters"></a>Parametry
 
-Následující tabulka popisuje parametry **ParallelCustomBuild** úloh.
+Následující tabulka popisuje parametry úlohy **ParallelCustomBuild** .
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**BreakOnFirstFailure**|Volitelné **bool** parametru.|
-|**MaxItemsInBatch**|Volitelné **int** parametru.|
-|**MaxProcesses**|Volitelné **int** parametru.|
-|**Zdroje**|Vyžaduje **[] ITaskItem** parametru.|
+|**BreakOnFirstFailure**|Volitelný parametr **bool** .|
+|**MaxItemsInBatch**|Volitelný parametr **int**|
+|**MaxProcesses**|Volitelný parametr **int**|
+|**Prostředky**|Povinný parametr **ITaskItem []** .|
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+[Odkaz na úkol](../msbuild/msbuild-task-reference.md)

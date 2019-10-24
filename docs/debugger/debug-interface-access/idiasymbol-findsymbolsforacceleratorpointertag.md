@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findSymbolsForAcceleratorPointerTag | Dokumentace Microsoftu
+title: 'IDiaSymbol:: findSymbolsForAcceleratorPointerTag | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bf55f372b9beb0a4cb0feda0dc5869ee9eb7c5f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 1544471bd4ff9166d4c8f4c10f48840db6f576f3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62827742"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741121"
 ---
 # <a name="idiasymbolfindsymbolsforacceleratorpointertag"></a>IDiaSymbol::findSymbolsForAcceleratorPointerTag
-Vrátí počet značky akcelerátoru ukazatel ve funkci se zakázaným inzerováním C++ AMP.
+Vrátí počet značek akcelerátoru v rámci C++ funkce zástupného kódu amp.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,15 +31,15 @@ HRESULT findSymbolsForAccleratorPointerTag (
 #### <a name="parameters"></a>Parametry
  `tagValue`
 
-[in] Hodnota značky ukazatel, pro kterou jsou nalezeny záznamy pointee symbol.
+pro Hodnota značky ukazatele, pro kterou jsou nalezeny záznamy symbolů pointee.
 
  `ppResult`
 
-[out] Ukazatel `IDiaEnumSymbols` ukazatel rozhraní, který je inicializován s výsledkem.
+mimo Ukazatel na ukazatel rozhraní `IDiaEnumSymbols`, který je inicializován s výsledkem.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

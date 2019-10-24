@@ -1,5 +1,5 @@
 ---
-title: Přehled integrace správy zdrojového | Dokumentace Microsoftu
+title: Přehled integrace správy zdrojového kódu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,70 +10,70 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9dd54872325766b432af7e3104e7ab9f431b79d7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6f714bfdfc94cb9481071becf1cdc95f5259e975
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322512"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72723539"
 ---
 # <a name="source-control-integration-overview"></a>Přehled integrace správy zdrojového kódu
-Tato část porovná dva způsoby, jak integrovat do správy zdrojového kódu sady Visual Studio; ovládací prvek zdroje modulu Plug-in a VSPackage, která poskytuje source řešení pro řízení a označuje nové funkce správy zdrojového kódu. Visual Studio umožňuje ruční přepínání mezi balíčků VSPackage správy zdrojového kódu a ovládací prvek moduly plug-in zdrojového kódu, stejně jako automatické přepínání založené na řešení.
+Tato část Porovnává dva způsoby, jak integrovat do správy zdrojového kódu sady Visual Studio. Modul plug-in správy zdrojových kódů a VSPackage, který poskytuje řešení správy zdrojového kódu a zvýrazňuje nové funkce správy zdrojového kódu. Visual Studio umožňuje ruční přepínání mezi prvky VSPackage správy zdrojového kódu a moduly plug-in správy zdrojových kódů a také automatickým přepínáním na základě řešení.
 
 ## <a name="source-control-integration"></a>Integrace správy zdrojového kódu
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podporuje dva typy možností integrace správy zdrojového kódu. Ve všech verzích [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], stále můžete integrovat modulu plug-in podle rozhraní zdroje ovládacího prvku modulu Plug-in API (dříve také označuje jako rozhraní API MSSCCI), které poskytuje funkce správy základní zdrojového kódu při používání sady Visual Studio zdrojového ovládacího prvku uživatelského rozhraní ( UŽIVATELSKÉ ROZHRANÍ). VSPackage správy zdrojového kódu na druhé straně poskytuje novou, hloubkové integrace [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] cesty, které jsou vhodné pro integraci správy zdrojového kódu, která vyžaduje vysokou úroveň vyspělosti a autonomie v jeho model správy zdrojového kódu.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podporuje dva typy možností integrace správy zdrojového kódu. Ve všech verzích [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] můžete i nadále integrovat modul plug-in na základě rozhraní API modulu plug-in správy zdrojového kódu (dříve označovaného také jako rozhraní MSSCCI API), které poskytuje základní funkce správy zdrojového kódu při použití uživatelského rozhraní správy zdrojového kódu sady Visual Studio. VSPackage správy zdrojového kódu na druhé straně poskytuje novou, hloubkovou [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] cestu vhodnou pro integraci správy zdrojového kódu, která vyžaduje vysokou úroveň sofistikovanější a autonomii v modelu správy zdrojového kódu.
 
- ![Přehled ovládacího prvku zdroje](../../extensibility/internals/media/sourcectnrloverview.gif "SourceCtnrlOverview")
+ ![Přehled správy zdrojového kódu](../../extensibility/internals/media/sourcectnrloverview.gif "SourceCtnrlOverview")
 
-## <a name="source-control-plug-in"></a>Modul Plug-in správy zdrojového kódu
- Všechny verze sady Visual Studio podporují rozhraní API modulu Plug-in zdroje ovládacího prvku specifikace verze 1.2 jako cestu k integraci. Zdrojový ovládací prvek modulu plug-in implementátora zapíše knihovnu DLL, která implementuje rozhraní API modulu Plug-in zdroje ovládacího prvku funkce integrace správy zdrojového kódu a registrace, jak je popsáno v [vytváření modulu Plug-in zdrojového ovládacího prvku](../../extensibility/internals/creating-a-source-control-plug-in.md). V takovém případě integrované vývojové prostředí (IDE) používá [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] uživatelského rozhraní pro dialogová okna, jako je vrácení se změnami, rezervace, stránky vlastností nástroje/Možnosti, panely nástrojů a glyfy zdrojového ovládacího prvku. Striktní dodržování rozhraní API modulu Plug-in zdroje ovládacího prvku zajistí snadnou integraci do sady Visual Studio a o bezproblémové prostředí pro uživatele. To znamená, že modul plug-in správy zdrojového kódu musí implementovat většinu funkcí a zpětná volání, které jsou podrobně popsané v rozhraní API.
+## <a name="source-control-plug-in"></a>Modul plug-in správy zdrojového kódu
+ Všechny verze sady Visual Studio podporují specifikaci rozhraní API modulu plug-in správy zdrojového kódu verze 1,2 jako integrační cestu. Modul plug-in správy zdrojových kódů zapisuje knihovnu DLL, která implementuje funkce rozhraní API modulu plug-in správy zdrojového kódu pro integraci a registraci správy zdrojového kódu, jak je popsáno v [tématu Vytvoření modulu plug-in správy](../../extensibility/internals/creating-a-source-control-plug-in.md)zdrojového kódu. V tomto přístupu integrované vývojové prostředí (IDE) používá [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] uživatelské rozhraní pro dialogová okna, jako je například vrácení se změnami, rezervace, nástroje/Možnosti stránky vlastností, panely nástrojů a glyfy správy zdrojového kódu. Striktní dodržování rozhraní API pro modul plug-in správy zdrojových kódů zajišťuje jednoduchou integraci do sady Visual Studio a možnosti bezplatného řešení pro uživatele v bezproblémovém prostředí. To znamená, že modul plug-in správy zdrojových kódů musí implementovat většinu funkcí a zpětných volání, která jsou popsána v rozhraní API.
 
- K implementaci modulu plug-in pomocí rozhraní API pro zdrojový ovládací prvek modulu Plug-in správy zdrojového kódu, postupujte podle těchto kroků:
+ Chcete-li implementovat modul plug-in správy zdrojových kódů pomocí rozhraní API modulu plug-in správy zdrojového kódu, postupujte následovně:
 
-1. Vytvořit knihovnu DLL, která implementuje funkcí zadaných v [moduly plug-in správy zdrojových kódů](../../extensibility/source-control-plug-ins.md).
+1. Vytvořte knihovnu DLL, která implementuje funkce určené v [modulu plug-in správy zdrojového kódu](../../extensibility/source-control-plug-ins.md).
 
-2. Zaregistruje knihovnu DLL tak, že položky odpovídající registru (popsané v [jak: Instalace modulu Plug-in správy zdrojového kódu](../../extensibility/internals/how-to-install-a-source-control-plug-in.md)).
+2. Zaregistrujte knihovnu DLL tak, že provedete příslušné položky registru (popsané v tématu [Postupy: Instalace modulu plug-in správy zdrojových kódů](../../extensibility/internals/how-to-install-a-source-control-plug-in.md)).
 
-3. Vytvořte pomocné rutiny uživatelského rozhraní a zobrazení po zobrazení výzvy zdrojový ovládací prvek adaptér balíček (součást sady Visual Studio, která zajišťuje funkce správy zdrojového kódu pomocí ovládacího prvku moduly plug-in zdrojového kódu)
+3. Vytvoření uživatelského rozhraní pomocníka a zobrazení po zobrazení výzvy balíčkem adaptéru správy zdrojového kódu (součást sady Visual Studio, která zpracovává funkce správy zdrojového kódu přes moduly plug-in správy zdrojového kódu)
 
-   V reakci na příkaz řízení zdroje integrovaném vývojovém prostředí sady Visual Studio nabízí standardní uživatelské rozhraní pro základní operace a potom předává informace do správy zdrojového kódu modulu plug-in prostřednictvím funkce definované v rozhraní API modulu Plug-in zdroje ovládacího prvku. Pro pokročilé možnosti modulu plug-in správy zdrojového kódu může být volána na prezentovat své vlastní uživatelské rozhraní, například procházení projektu se spravovanými zdroji. To znamená, že uživatel může se vám dva by mohly mít odlišné styly uživatelského rozhraní při práci se správou zdrojového kódu: rozhraní, které nabízí Visual Studio a rozhraní, které představuje modul plug-in správy zdrojového kódu. Toto je nejvíce patrné s operací správy zdrojů pokročilé.
+   V reakci na příkaz správy zdrojového kódu integrované vývojové prostředí (IDE) sady Visual Studio prezentuje standardní uživatelské rozhraní pro základní operace a pak předá informace do modulu plug-in správy zdrojových kódů prostřednictvím funkcí definovaných v rozhraní API modulu plug-in správy zdrojového kódu. V případě pokročilých možností může být modul plug-in správy zdrojových kódů volán pro vlastní uživatelské rozhraní, například procházení pro projekt se spravovanými zdroji. To znamená, že uživatel může být při práci se správou zdrojových kódů zobrazen se dvěma případně různými styly uživatelského rozhraní: uživatelské rozhraní, které Visual Studio prezentuje, a uživatelské rozhraní, které modul plug-in správy zdrojových kódů prezentuje. To je nejužitečnější s pokročilými operacemi správy zdrojových kódů.
 
-### <a name="drawbacks-to-implementing-a-source-control-plug-in"></a>Nevýhody prováděcí modul Plug-in správy zdrojového kódu
+### <a name="drawbacks-to-implementing-a-source-control-plug-in"></a>Nevýhody implementace modulu plug-in správy zdrojových kódů
 
-- Pro pokročilé funkce může uživatel zobrazit dva různé styly rozhraní, což vede k potenciální záměna.
+- V případě pokročilých funkcí může uživatel vidět dva různé styly rozhraní, což může vést k nejasnostem.
 
-- Modul plug-in správy zdrojového kódu je omezena na model správy zdrojového kódu odvozené od rozhraní API modulu Plug-in zdroje ovládacího prvku.
+- Modul plug-in správy zdrojových kódů je omezen na model správy zdrojového kódu odvozený rozhraním API modulu plug-in správy zdrojového kódu.
 
-- Rozhraní API modulu Plug-in zdroje ovládacího prvku může být příliš omezující pro některých scénářích správy zdrojového kódu.
+- Rozhraní API modulu plug-in správy zdrojového kódu může být pro některé scénáře správy zdrojových kódů příliš omezující.
 
-### <a name="advantages-to-implementing-a-source-control-plug-in"></a>Výhody pro implementaci modulu Plug-in správy zdrojového kódu
+### <a name="advantages-to-implementing-a-source-control-plug-in"></a>Výhody implementace modulu plug-in správy zdrojového kódu
 
-- Visual Studio poskytuje uživatelské rozhraní pro všechny operace základní zdroj ovládacího prvku tak, aby modul plug-in správy zdrojového kódu není nutné implementovat potenciálně velmi složitý uživatelského rozhraní.
+- Visual Studio poskytuje všechna rozhraní pro všechny základní operace správy zdrojových kódů, aby modul plug-in správy zdrojových kódů nemusel implementovat potenciálně komplexní uživatelské rozhraní.
 
-- Z důvodu striktní rozhraní API modul plug-in správy zdrojového kódu můžete snadno komunikovali s programy ovládací prvek externího zdroje nakonfigurovánu rozsáhlejší; Visual Studio nezáleží, příliš daleko, jak funkce správy zdrojového se provádí, pouze to, že se provádí podle rozhraní API modulu Plug-in zdroje ovládacího prvku.
+- Z důvodu striktního rozhraní API může modul plug-in správy zdrojových kódů snadno komunikovat s externími programy pro správu zdrojového kódu, aby poskytoval širší funkčnost. Visual Studio nezáleží na tom, jak se provádí funkce správy zdrojového kódu, a to pouze v souladu s rozhraním API modulu plug-in správy zdrojového kódu.
 
-- Je snazší implementovat než balíčku VSPackage správy zdrojového kódu modulu plug-in správy zdrojového kódu.
+- Je snazší implementovat modul plug-in správy zdrojového kódu, než je VSPackage správy zdrojového kódu.
 
-## <a name="source-control-vspackage"></a>Ovládací prvek zdroje balíčku VSPackage
- [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] Umožňuje těsnou integraci s Visual Studio s úplnou kontrolu nad funkce správy zdrojového kódu a úplné nahrazení zadaného sady Visual Studio zdrojového ovládacího prvku uživatelského rozhraní. Ovládací prvek zdroje balíčku VSPackage zaregistrován pomocí sady Visual Studio a poskytuje funkce správy zdrojového kódu. I když pomocí sady Visual Studio lze registrovat několika správy zdrojového kódu rozšíření VSPackages, pouze jeden z nich může být aktivní v daný okamžik. Balíčku VSPackage správy zdrojového kódu má plnou kontrolu nad funkce správy zdrojového kódu a vzhled v sadě Visual Studio, zatímco je aktivní. Všechny ostatní správy zdrojového kódu rozšíření VSPackages, které mohou být registrovány v systému nejsou aktivní a vůbec nezobrazí žádné uživatelské rozhraní.
+## <a name="source-control-vspackage"></a>VSPackage správy zdrojového kódu
+ [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] umožňuje hloubkovou integraci do sady Visual Studio s plnou kontrolou funkcí správy zdrojového kódu a úplné nahrazení sady Visual Studio, které poskytuje uživatelské rozhraní správy zdrojového kódu. Balíček VSPackage správy zdrojového kódu je zaregistrován v aplikaci Visual Studio a poskytuje funkce správy zdrojového kódu. I když se sadou Visual Studio dá zaregistrovat několik VSPackage správy zdrojového kódu, může být v jednom okamžiku aktivní jenom jeden z nich. VSPackage správy zdrojového kódu má plnou kontrolu nad funkcemi a vzhled správy zdrojového kódu v aplikaci Visual Studio, když je aktivní. Všechny ostatní sady VSPackage správy zdrojového kódu, které mohou být zaregistrované v systému, jsou neaktivní a nezobrazí se žádné uživatelské rozhraní.
 
- Implementace balíčku VSPackage správy zdrojového kódu vyžaduje strategii "všechno nebo nic". Tvůrce balíčku VSPackage správy zdrojového kódu musí investovat značné úsilí při implementaci řady rozhraní ovládacího prvku zdroje a nových prvků uživatelského rozhraní (dialogová okna, nabídek a panelů nástrojů) se věnuje funkcím celý zdrojový ovládací prvek. Zobrazit [vytváření VSPackage ovládací prvek zdroje](../../extensibility/internals/creating-a-source-control-vspackage.md) další podrobnosti.
+ Implementace balíčku VSPackage správy zdrojového kódu vyžaduje strategii "vše nebo Nothing". Tvůrce balíčku VSPackage pro správu zdrojového kódu musí investovat značnou náročnost při implementaci řady rozhraní správy zdrojového kódu a nových prvků uživatelského rozhraní (dialogová okna, nabídky a panely nástrojů), aby pokryly celou funkci správy zdrojového kódu. Další podrobnosti najdete v tématu [Vytvoření balíčku VSPackage správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-vspackage.md) .
 
-### <a name="drawbacks-to-implementing-a-source-control-vspackage"></a>Nevýhody implementace VSPackage zdrojového ovládacího prvku
+### <a name="drawbacks-to-implementing-a-source-control-vspackage"></a>Nevýhody implementace balíčku VSPackage správy zdrojového kódu
 
-- Počet složitých rozhraní pro integraci s Visual Studio úspěšně musí implementovat sady VSPackage.
+- VSPackage musí implementovat řadu složitých rozhraní pro úspěšnou integraci se sadou Visual Studio.
 
-- Sady VSPackage musíte zadat všechna rozhraní požadované pro správu zdrojového kódu; Visual Studio bude poskytovat bez pomoci v této oblasti.
+- VSPackage musí poskytovat veškeré uživatelské rozhraní požadované pro správu zdrojového kódu; Visual Studio nebude v této oblasti poskytovat žádnou pomoc.
 
-- Ovládací prvek zdroje balíčku VSPackage úzce souvisí se sadou Visual Studio a nelze použít samostatné programy, takže funkce nelze snadno sdílet s externí verzi zdrojového ovládacího prvku programu.
+- Prvek VSPackage správy zdrojového kódu je podrobnějším pohledu zjistíte svázaný se sadou Visual Studio a nemůže pracovat se samostatnými programy, takže funkčnost nemůže být stejně snadné sdílet s externí verzí programu správy zdrojového kódu.
 
-### <a name="advantages-to-implementing-a-source-control-vspackage"></a>Výhody implementace VSPackage zdrojového ovládacího prvku
+### <a name="advantages-to-implementing-a-source-control-vspackage"></a>Výhody implementace balíčku VSPackage správy zdrojového kódu
 
-- Protože sady VSPackage má plnou kontrolu nad správy zdrojového kódu uživatelského rozhraní a funkce, uživateli zobrazí s bezproblémové rozhraní pro správu zdrojového kódu.
+- Protože VSPackage má úplnou kontrolu nad uživatelským rozhraním a funkcemi správy zdrojových kódů, zobrazí se uživateli bezproblémové rozhraní pro správu zdrojového kódu.
 
-- Sady VSPackage nejsou omezené na konkrétní zdrojového ovládacího prvku modelu.
+- VSPackage není omezen na konkrétní model správy zdrojového kódu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Správa zdrojového kódu](../../extensibility/internals/source-control.md)
 - [Vytvoření modulu plug-in správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-plug-in.md)
 - [Vytvoření balíčku VSPackage správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-vspackage.md)

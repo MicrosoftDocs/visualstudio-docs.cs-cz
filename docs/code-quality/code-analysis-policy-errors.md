@@ -12,12 +12,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3c1f6761c6cef968c965a7f0d766d3b7da6183e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9e6ff6000f0eab60e17642bf2bd8257154e54a9d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72622602"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745943"
 ---
 # <a name="code-analysis-policy-errors"></a>Chyby zásad Analýzy kódu
 
@@ -73,6 +73,6 @@ Tato chyba se aplikuje na [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.m
 
 Tato chyba se týká nespravovaných projektů. Zásady analýzy kódu vyžadují analýzu kódu pro C/C++, ale nejsou povolené v aktuálním projektu na klientovi.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Chyby aplikace Analýzy kódu](../code-quality/code-analysis-application-errors.md)

@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 3289fd82f8a3b99bf49ee796e49a285ffb93793c
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: 9f8391d355b2f540db4e38486b8992d940336464
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72536010"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733790"
 ---
 # <a name="how-to-debug-aspnet-exceptions"></a>Postupy: Ladění výjimek ASP.NET
 Výjimky ladění jsou důležitou součástí vývoje robustní aplikace [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]. Obecné informace o ladění výjimek naleznete v tématu [Správa výjimek pomocí ladicího programu](../debugger/managing-exceptions-with-the-debugger.md).
@@ -47,5 +47,5 @@ Výjimky ladění jsou důležitou součástí vývoje robustní aplikace [!INCL
 
 - Umístěte `try ... catch` bloky kolem kódu, který může vyvolat výjimky, které můžete odhadnout a zjistit, jak se má zpracovat. Například pokud aplikace provádí volání webové služby XML nebo přímo do SQL Server, měl by být tento kód v rámci **Try... bloky catch** , protože existuje mnoho výjimek, ke kterým může dojít.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění aplikací ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)

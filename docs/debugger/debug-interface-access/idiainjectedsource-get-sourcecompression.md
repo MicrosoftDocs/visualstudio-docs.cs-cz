@@ -1,5 +1,5 @@
 ---
-title: Idiainjectedsource::get_sourcecompression – | Dokumentace Microsoftu
+title: 'IDiaInjectedSource:: get_sourceCompression | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 00c7783752a183e8afc580c4c74285add8a51041
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9428b30df82d92a8c74511644aaf97f2166807a2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839911"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743323"
 ---
-# <a name="idiainjectedsourcegetsourcecompression"></a>IDiaInjectedSource::get_sourceCompression
-Načte ukazatel zdroj komprese používá.
+# <a name="idiainjectedsourceget_sourcecompression"></a>IDiaInjectedSource::get_sourceCompression
+Načte indikátor použité zdrojové komprese.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_sourceCompression ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí ukazatel zdroj komprese používá. Hodnota nula označuje, že se použil bez komprese zdroje.
+mimo Vrátí indikátor použité zdrojové komprese. Hodnota nula znamená, že se nepoužila žádná zdrojová komprese.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Hodnota vrácená touto metodou je specifické pro kompilátor používají. Kompilátor může například používat kódování s délkou spustit nebo Huffmanova – vizuální styl kompresi.
+ Hodnota vrácená touto metodou je specifická pro použitý kompilátor. Kompilátor může například použít kódování Run-Length nebo Huffmanova kompresi.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

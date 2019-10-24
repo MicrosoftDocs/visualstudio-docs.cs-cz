@@ -1,5 +1,5 @@
 ---
-title: Nastavení projektu ladicího programu | Dokumentace Microsoftu
+title: Nastavení projektu ladicího programu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,37 +16,37 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bfaf520658edfdcf5b80fb89f89489a47c7fffa3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f6a4e3fde3d98b83f8b92ffe039e3bff5c8eae4f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62852696"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738330"
 ---
 # <a name="debugger-project-settings"></a>Nastavení projektu ladicího programu
-Určitá nastavení projektu také ovlivnit ladění. Tato nastavení určují, například jaké adresáře ladicí program zjistí, příkazu a argumentů příkazu použitý ke spuštění programu a zadejte informace o ladění pro program. V těchto nastavení můžete změnit **stránky vlastností** dialogové okno.
+Určité nastavení projektu má vliv také na ladění. Tato nastavení určují, co se v adresářích ladicí program zobrazuje, argumenty příkazu a příkazu používané k spuštění programu a typ informací o ladění vytvořených pro program. Tato nastavení můžete změnit v dialogovém okně **stránky vlastností** .
 
- Tato část popisuje, jaké možnosti jsou k dispozici a jak je nastavit.
+ Tato část popisuje, jaké možnosti jsou k dispozici, a jak je nastavit.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Postupy: Určení nastavení ladicího programu](../debugger/how-to-specify-debugger-settings.md) popisuje nastavení ladicího programu v **možnosti** dialogové okno.
+ [Postupy: určení nastavení ladicího programu](../debugger/how-to-specify-debugger-settings.md) Popisuje nastavení ladicího programu v dialogovém okně **Možnosti** .
 
- [Postupy: Nastavení konfigurace ladění a verzí](../debugger/how-to-set-debug-and-release-configurations.md) popisuje **ladění** a **vydání** nastavení a jak mezi nimi přepínat.
+ [Postupy: nastavení konfigurace ladění a vydání](../debugger/how-to-set-debug-and-release-configurations.md) Popisuje nastavení **ladění** a **vydání** a přepínání mezi nimi.
 
- [Nastavení pro konfiguraci ladění jazyka C++ projektu](../debugger/project-settings-for-a-cpp-debug-configuration.md) jsou uvedeny vlastnosti, které jsou k dispozici v **stránky vlastností** dialogové okno pro projekty jazyka C nebo C++.
+ [Nastavení projektu pro seznamy C++ konfigurací ladění](../debugger/project-settings-for-a-cpp-debug-configuration.md) , které jsou k dispozici v dialogovém okně **stránky vlastností** pro C++ projekty C nebo.
 
- [Nastavení pro projektu C# ladění konfigurace](../debugger/project-settings-for-csharp-debug-configurations.md) jsou uvedeny vlastnosti, které jsou k dispozici v **stránky vlastností** dialogové okno pro C# projekty.
+ [Nastavení projektu pro C# konfigurace ladění](../debugger/project-settings-for-csharp-debug-configurations.md) seznam vlastností, které jsou k dispozici v dialogovém C# okně **stránky vlastností** pro projekty.
 
- [Nastavení stránek vlastností pro webové projekty](../debugger/property-pages-settings-for-web-projects.md) jsou uvedeny vlastnosti, které jsou k dispozici v **stránky vlastností** dialogové okno pro webové projekty.
+ [Nastavení stránek vlastností pro webové projekty](../debugger/property-pages-settings-for-web-projects.md) Zobrazí seznam vlastností, které jsou k dispozici v dialogovém okně **stránky vlastností** pro webové projekty.
 
- [Nastavení pro konfiguraci ladění jazyka Visual Basic projektu](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) jsou uvedeny vlastnosti, které jsou k dispozici v **stránky vlastností** dialogové okno pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projekty.
+ [Nastavení projektu pro konfiguraci Visual Basicho ladění](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) Zobrazí seznam vlastností, které jsou k dispozici v dialogovém okně **stránky vlastností** pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projekty.
 
 ## <a name="related-sections"></a>Související oddíly
- [Zadání symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) popisuje, jak ladicí program používá soubory symbolů a zdrojové soubory pro zobrazení informací pro ladění.
+ [Zadat symbol (PDB) a zdrojové soubory](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) Popisuje, jak ladicí program používá soubory symbolů a zdrojové soubory k zobrazení informací pro ladění.
 
- [Ladění aplikací v sadě Visual Studio](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps) popisuje, jak ladit aplikace pro UPW. (Windows Dev Center)
+ [Ladění aplikací v aplikaci Visual Studio](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps) Popisuje, jak ladit aplikace pro UWP. (Windows Dev Center)
 
- [Ladicí program nastavení a příprava](../debugger/debugger-settings-and-preparation.md) popisuje nastavení vlastnosti související s ladicí program a příprava potřebných pro ladění programu s [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ladicího programu.
+ [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md) Popisuje nastavení vlastností související s ladicím programem a přípravu potřebné k ladění programu pomocí ladicího programu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)

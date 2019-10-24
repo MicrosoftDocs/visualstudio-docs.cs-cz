@@ -1,5 +1,5 @@
 ---
-title: Udtkind – | Dokumentace Microsoftu
+title: Udtkind – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 511beae100529f0db555eca0a8ddb995d7a335d1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 45ed43bf65c38890ca7ebda1a6b1719532697eae
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62853515"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738449"
 ---
 # <a name="udtkind"></a>UdtKind
-Popisuje různé uživatelem definovaný typ (UDT).
+Popisuje nejrůznější uživatelsky definované typy (UDT).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,11 +43,11 @@ UdtUnion UDT je sjednocení.
 UdtInterface UDT je rozhraní.
 
 ## <a name="remarks"></a>Poznámky
-Jsou vrácené hodnoty v tento výčet [idiasymbol::get_udtkind –](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md) metody.
+Hodnoty v tomto výčtu jsou vráceny metodou [IDiaSymbol:: get_udtKind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md) .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: cvconst.h
+Záhlaví: cvconst. h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSymbol::get_udtKind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md)

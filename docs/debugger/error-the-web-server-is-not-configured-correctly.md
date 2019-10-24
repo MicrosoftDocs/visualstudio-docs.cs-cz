@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Webový server není správně nakonfigurován. | Dokumentace Microsoftu'
+title: 'Chyba: webový server není správně nakonfigurován | Microsoft Docs'
 ms.date: 09/20/2017
 ms.topic: troubleshooting
 f1_keywords:
@@ -16,37 +16,37 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fc0c61b766b6f93fd1321b15861000d7c628f124
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: be5db0a08a287e2611c29396e96e72719b5106a7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850410"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736932"
 ---
-# <a name="error-the-web-server-is-not-configured-correctly"></a>Chyba: Webový server není správně nakonfigurovaný.
+# <a name="error-the-web-server-is-not-configured-correctly"></a>Chyba: Webový server není správně nakonfigurován.
 
-Až provedete kroky popsané tady řešení tohoto problému a před dalším pokusem o ladění může být také potřeba resetovat služby IIS. Můžete to udělat tak, že otevřete příkazový řádek správce a zadáním `iisreset`.
+Po provedení kroků popsaných tady můžete problém vyřešit a před opakovaným pokusem o ladění může být potřeba resetovat službu IIS. Můžete to udělat tak, že otevřete příkazový řádek správce a zadáte `iisreset`.
 
-Proveďte tyto kroky k vyřešení tohoto problému:
+Tento problém vyřešíte provedením těchto kroků:
 
-1. Pokud webové aplikace hostované na serveru je nakonfigurovaný jako znovu publikovat jako sestavení pro ladění sestavení pro vydání a ověřte, že soubor web.config obsahuje `debug=true` v elementu kompilace. Resetování služby IIS a zkuste to znovu.
+1. Pokud je webová aplikace hostovaná na serveru nakonfigurovaná jako sestavení pro vydání, publikujte je znovu jako sestavení pro ladění a ověřte, že soubor Web. config obsahuje `debug=true` v elementu compilation. Obnovte IIS a zkuste to znovu.
 
-    Pokud používáte profil publikování pro sestavení pro vydání, změňte ho na ladění a znovu publikovat. V opačném případě bude nastaven atribut ladění `false` po publikování.
+    Například pokud používáte profil publikování pro sestavení vydaných verzí, změňte ho na ladění a opětovné publikování. V opačném případě se atribut ladění nastaví na `false` při publikování.
 
-2. SLUŽBY (IIS) Ověřte správnost fyzickou cestu. Ve službě IIS, najdete v tomto nastavení **základní nastavení > fyzická cesta** (nebo **Upřesnit nastavení** ve starších verzích služby IIS).
+2. SLUŽBU Ověřte, zda je fyzická cesta správná. Ve službě IIS najdete toto nastavení v části **základní nastavení > fyzickou cestu** (nebo **Rozšířené nastavení** ve starších verzích služby IIS).
 
-    Fyzická cesta může být nesprávný, pokud webová aplikace byl zkopírován do jiného počítače, ručně přejmenovat nebo přesunout. Resetování služby IIS a zkuste to znovu.
+    Pokud byla webová aplikace zkopírována do jiného počítače, ručně přejmenována nebo přesunuta, nemusí být fyzická cesta správná. Obnovte IIS a zkuste to znovu.
 
-3. Jestliže ladíte místně v sadě Visual Studio, ověřte, že je vybrán správný server ve vlastnostech. (Otevřete **vlastnosti > Web > servery** nebo **vlastnosti > ladění** v závislosti na typu vašeho projektu. Pro projekt webových formulářů, otevřete **stránky vlastností > Možnosti spuštění > Server**).
+3. Pokud provádíte ladění lokálně v aplikaci Visual Studio, ověřte, zda je ve vlastnostech vybrán správný server. (Otevřené **vlastnosti > serverech a vlastnostech webového >** **> ladit** v závislosti na typu projektu. V případě projektu webových formulářů otevřete **stránky vlastností > možnosti Start > Server**).
 
-    Pokud používáte externí (vlastní) serveru, například službou IIS, adresa URL musí být správná. V opačném případě vyberte služby IIS Express a zkuste to znovu.
+    Pokud používáte externí (vlastní) Server, jako je IIS, musí být adresa URL správná. V opačném případě vyberte IIS Express a zkuste to znovu.
 
-4. SLUŽBY (IIS) Ujistěte se, že je na serveru nainstalována správná verze technologie ASP.NET.
+4. SLUŽBU Ujistěte se, že je na serveru nainstalovaná správná verze ASP.NET.
 
-    Neshoda verzí technologie ASP.NET ve službě IIS a v projektu sady Visual Studio může způsobit potíže. Budete muset nastavit verzi rozhraní framework v souboru web.config. Instalace technologie ASP.NET na IIS, použijte [instalačního programu webové platformy (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx). Viz také [IIS 8.0 pomocí technologie ASP.NET 3.5 a technologii ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) nebo pro ASP.NET Core, [hostitelská služba ve Windows se službou IIS](https://docs.asp.net/en/latest/publishing/iis.html).
+    Tyto potíže mohou způsobovat neshodné verze ASP.NET ve službě IIS a v projektu sady Visual Studio. Možná budete muset nastavit verzi architektury v souboru Web. config. K instalaci ASP.NET ve službě IIS použijte [instalační program webové platformy (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx). Přečtěte si také téma [IIS 8,0 s použitím ASP.NET 3,5 a ASP.NET 4,5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) nebo, pro ASP.NET Core [hostitele ve Windows se službou IIS](https://docs.asp.net/en/latest/publishing/iis.html).
 
-4. Pokud `maxConnection` limit ve službě IIS je příliš nízká a máte příliš mnoho připojení, možná budete muset [zvýšil limit připojení](/iis/configuration/system.applicationhost/sites/sitedefaults/limits).
+4. Pokud je limit `maxConnection` ve službě IIS příliš nízký a máte příliš mnoho připojení, možná bude nutné [zvýšit limit připojení](/iis/configuration/system.applicationhost/sites/sitedefaults/limits).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Vzdálené ladění ASP.NET na vzdáleném počítači se službou IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)
 - [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

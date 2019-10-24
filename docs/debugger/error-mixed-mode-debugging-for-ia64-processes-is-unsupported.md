@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Ladění ve smíšeném režimu pro procesy IA64 není podporován | Dokumentace Microsoftu'
+title: 'Chyba: ladění ve smíšeném režimu pro procesy architektury IA64 není podporováno | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -14,19 +14,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c4414651249aa7622e7f7be59e6150a4925f1b8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0bddbb1572bd0258eae2052eb34dfa3d0d67a134
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850861"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737628"
 ---
-# <a name="error-mixed-mode-debugging-for-ia64-processes-is-unsupported"></a>Chyba: Ladění ve smíšeném režimu není pro procesy IA64 podporované.
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Ladicí program nepodporuje ladění smíšené nativního a spravovaného kódu v procesu s procesorem Itanium.
+# <a name="error-mixed-mode-debugging-for-ia64-processes-is-unsupported"></a>Chyba: Ladění ve smíšeném režimu není pro procesy IA64 podporováno.
+Ladicí program [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nepodporuje ladění smíšeného nativního a spravovaného kódu v procesu založeném na procesorech Itanium.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-- Sestavení 32bitové verze ladění vaší aplikace.
+- Sestavte 32 verzi vaší aplikace pro ladění.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Vzdálené ladění](../debugger/remote-debugging.md)

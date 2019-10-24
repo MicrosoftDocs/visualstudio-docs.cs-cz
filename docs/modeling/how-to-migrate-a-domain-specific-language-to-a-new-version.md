@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c9678bf0c98774a504f17e9ea74197f82d9ba7ad
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6be4a8205935d131d880923e721e342ea904134d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605377"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747544"
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>Postupy: Migrace jazyka specifického pro doménu na novou verzi
 Můžete migrovat projekty, které definují a používají jazyk specifický pro doménu [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] z verze [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], která byla distribuována s [!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)].
@@ -84,6 +84,6 @@ Můžete migrovat projekty, které definují a používají jazyk specifický pr
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Související blogové příspěvky](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)

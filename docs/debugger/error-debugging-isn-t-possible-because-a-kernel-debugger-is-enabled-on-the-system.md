@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Ladění není&#39;t možné, protože v systému je povolen ladicí program jádra | Dokumentace Microsoftu'
+title: 'Chyba: ladění&#39;není možné, protože v systému je povolen ladicí program jádra | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -16,15 +16,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63666302bcbf9f8f44c6121b583f0cf7b259f3ba
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2a966869ff1d200a51c6019a6ae937bea7c447bd
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850954"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737748"
 ---
-# <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>Chyba: Ladění není&#39;t možné, protože v systému je povolen ladicí program jádra
-Při ladění spravovaného kódu, může se zobrazit následující chybová zpráva:
+# <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>Chyba: ladění&#39;není možné, protože v systému je povolen ladicí program jádra.
+Při ladění spravovaného kódu se může zobrazit následující chybová zpráva:
 
 ```cmd
 Debugging isn't possible because a kernel debugger is enabled on the system
@@ -32,19 +32,19 @@ Debugging isn't possible because a kernel debugger is enabled on the system
 
  Tato zpráva se zobrazí při pokusu o ladění spravovaného kódu:
 
-- na [!INCLUDE[win7](../debugger/includes/win7_md.md)] nebo [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)]systém, který se spustil v režimu ladění.
+- na [!INCLUDE[win7](../debugger/includes/win7_md.md)] nebo [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)]system, které byly spuštěny v režimu ladění.
 
-- aplikace používá CLR verze CLR 2.0, 3.0 nebo 3.5.
+- aplikace používá CLR verze CLR 2,0, 3,0 nebo 3,5.
 
 ## <a name="solution"></a>Řešení
 
-#### <a name="to-fix-this-problem"></a>Chcete-li vyřešit tento problém
+#### <a name="to-fix-this-problem"></a>Chcete-li tento problém vyřešit
 
-- Upgrade aplikace pomocí modulu CLR verze 4.0 nebo 4.5
+- Upgradujte aplikaci tak, aby používala CLR verze 4,0 nebo 4,5.
 
    —nebo—
 
-- Zakázat ladění jádra a ladit v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+- Zakáže ladění a ladění jádra v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
 
    —nebo—
 
@@ -54,7 +54,7 @@ Debugging isn't possible because a kernel debugger is enabled on the system
 
 - V ladicím programu jádra zakažte výjimky v uživatelském režimu.
 
-#### <a name="to-disable-kernel-debugging-in-the-current-session"></a>Chcete-li zakázat ladění jádra v aktuální relaci.
+#### <a name="to-disable-kernel-debugging-in-the-current-session"></a>Zakázání ladění jádra v aktuální relaci
 
 - V příkazovém řádku zadejte příkaz:
 
@@ -62,7 +62,7 @@ Debugging isn't possible because a kernel debugger is enabled on the system
     Kdbgctrl.exe -d
     ```
 
-#### <a name="to-disable-kernel-debugging-for-all-sessions-windows-vista-and-windows-7"></a>Chcete-li zakázat ladění jádra na všechny relace (Windows Vista a Windows 7)
+#### <a name="to-disable-kernel-debugging-for-all-sessions-windows-vista-and-windows-7"></a>Zakázání ladění jádra pro všechny relace (Windows Vista a Windows 7)
 
 1. V příkazovém řádku zadejte příkaz:
 
@@ -72,15 +72,15 @@ Debugging isn't possible because a kernel debugger is enabled on the system
 
 2. Restartujte počítač.
 
-#### <a name="to-disable-kernel-debugging-for-all-sessions-other-windows-operating-systems"></a>Chcete-li zakázat ladění jádra na všechny relace (ostatní Windows operační systémy)
+#### <a name="to-disable-kernel-debugging-for-all-sessions-other-windows-operating-systems"></a>Zakázání ladění jádra pro všechny relace (ostatní operační systémy Windows)
 
-1. Vyhledejte soubor boot.ini na systémovou jednotku (obvykle C:\\). Soubor boot.ini může být skrytý, jen pro čtení. Takže je třeba použít následující příkaz a prohlédněte si ho:
+1. Vyhledejte soubor Boot. ini na systémové jednotce (obvykle C: \\). Soubor Boot. ini může být skrytý a jen pro čtení. Proto je nutné použít následující příkaz k zobrazení:
 
     ```cmd
     dir /ASH
     ```
 
-2. Otevřete soubor boot.ini pomocí poznámkového bloku a odeberte následující možnosti:
+2. Otevřete soubor Boot. ini pomocí poznámkového bloku a odeberte následující možnosti:
 
     ```cmd
     /debug
@@ -90,14 +90,14 @@ Debugging isn't possible because a kernel debugger is enabled on the system
 
 3. Restartujte počítač.
 
-#### <a name="to-debug-with-the-kernel-debugger"></a>Chcete-li ladit pomocí ladicího programu jádra
+#### <a name="to-debug-with-the-kernel-debugger"></a>Ladění pomocí ladicího programu jádra
 
-1. Pokud ladicí program jádra je připojili, zobrazí se zpráva s dotazem, jestli chcete pokračovat v ladění. Klikněte na tlačítko Pokračovat.
+1. Pokud je ladicí program jádra zapojen, zobrazí se zpráva s dotazem, zda chcete pokračovat v ladění. Pokračujte kliknutím na tlačítko.
 
-2. Může se zobrazit `User break exception(Int 3).` Pokud k tomu dojde, zadejte následující příkaz ladicí program jádra a pokračujte v ladění:
+2. Může se zobrazit `User break exception(Int 3).` Pokud k tomu dojde, zadáním následujícího příkazu ladicího programu jádra pokračujte v ladění:
 
      `gn`
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)

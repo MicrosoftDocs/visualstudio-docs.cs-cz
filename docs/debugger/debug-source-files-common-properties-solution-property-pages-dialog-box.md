@@ -1,5 +1,5 @@
 ---
-title: Ladit zdrojové soubory/Common vlastnosti nebo řešení vlastnosti stránky
+title: Ladit zdrojové soubory/společné vlastnosti/stránky vlastností řešení
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -22,23 +22,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 631ec8ed4f6b5cd410b3af51c55fa87935b9cddf
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 735432db485277e2265479e625f5e8acaa2cc2e3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263136"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738402"
 ---
 # <a name="debug-source-files-common-properties-solution-property-pages-dialog-box"></a>Ladění zdrojových souborů, společná nastavení, dialogové okno stránek vlastností řešení
-Tuto stránku vlastností určuje, kde ladicí program vyhledá zdrojové soubory při ladění řešení.
+Tato stránka vlastností určuje, kde bude ladicí program při ladění řešení hledat zdrojové soubory.
 
- Pro přístup **zdrojové soubory ladění** stránky vlastností, klikněte pravým tlačítkem na řešení v **Průzkumníka řešení** a vyberte **vlastnosti** z místní nabídky. Rozbalte **společné vlastnosti** složky a klikněte na tlačítko **zdrojové soubory ladění** stránky.
+ Chcete-li získat přístup ke stránce vlastností **zdrojové soubory ladění** , klikněte pravým tlačítkem myši na řešení v **Průzkumník řešení** a v místní nabídce vyberte možnost **vlastnosti** . Rozbalte složku **Společná nastavení** a klikněte na stránku **zdrojové soubory ladění** .
 
- **Adresáře obsahujícího zdrojový kód** obsahuje seznam adresářů, ve kterých ladicí program vyhledává zdrojové soubory při ladění řešení. Vyhledávají také podadresáře zadaných adresářích.
+ **Adresáře obsahující zdrojový kód** Obsahuje seznam adresářů, ve kterých ladicí program vyhledává zdrojové soubory při ladění řešení. Prohledají se také podadresáře určených adresářů.
 
- **Nehledat tyto zdrojové soubory** zadejte názvy všech souborů, které nechcete, aby ladicí program ke čtení. Pokud ladicí program nalezne některý z těchto souborů v jednom z adresářů zadaných výše, se bude ignorovat. Pokud **najít zdroj** dialogové okno se zobrazí při ladění a kliknutí na **zrušit**, tak, aby ladicí program nebude pokračovat ve vyhledávání pro tento soubor získá do tohoto seznamu přidat soubor jste hledali.
+ **Nehledat tyto zdrojové soubory** Zadejte názvy všech souborů, které nechcete, aby ladicí program četl. Pokud ladicí program nalezne jeden z těchto souborů v jednom z výše uvedených adresářů, bude ho ignorovat. Pokud se dialogové okno **Najít zdroj** objeví během ladění a, kliknete na **Zrušit**, soubor, který jste hledali, se přidá do tohoto seznamu, aby ladicí program nepokračoval v hledání tohoto souboru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)

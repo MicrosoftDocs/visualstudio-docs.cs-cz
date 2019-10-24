@@ -1,5 +1,5 @@
 ---
-title: 'Testovací oblast 6: Odstranit | Dokumentace Microsoftu'
+title: 'Testovací oblast 6: odstranit | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,46 +11,46 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 935c735009d83274cc1a8ae126d46f8ee9dbe1ae
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1d75721a09615026cd10a42e4b6d8d8520b41239
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66327993"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72722447"
 ---
-# <a name="test-area-6-delete"></a>Testovací oblast 6: Odstranit
-Tato oblast testovací modul plug-in správy zdrojového kódu zahrnuje akce odstranění.
+# <a name="test-area-6-delete"></a>Testovací oblast 6: Odstranění
+Tato testovací oblast modulu plug-in zdrojového ovládacího prvku pokrývá akce odstranění.
 
- Ovládací prvek zdroje reaguje na akce v odstranění **Průzkumníka řešení**.
+ Správa zdrojového kódu reaguje na akce odstranění v **Průzkumník řešení**.
 
- Tady je seznam položek, které je možné odstranit:
+ Následuje seznam položek, které je možné odstranit:
 
 - Soubory
 
-- Složky
+- Složka
 
 - Project
 
-  V závislosti na typu projektu, může mít možnost **odebrat** projektu (ponechá soubory na disku) nebo **odstranit** projektu (odebere soubory na disku). Obě akce odebere projekt nebo položku z **Průzkumníka řešení**.
+  V závislosti na typu projektu může být k dispozici možnost **Odebrat** projekt (nechat soubory na disku) nebo **Odstranit** projekt (soubory budou odstraněny na disku). Buď akce odebere projekt nebo položku z **Průzkumník řešení**.
 
 ## <a name="expected-behavior"></a>Očekávané chování
- Očekávané chování u testovací případy v testovací oblast odstranění je:
+ Očekávané chování pro testovací případy v oblasti odstranění testu je:
 
-- Odstraněné položky už nejsou viditelné v rámci **Průzkumníka řešení**.
+- Odstraněná položka již není viditelná v **Průzkumník řešení**.
 
-- Nadřazený odstraněný projekt nebo položku je rezervován podle potřeby (případně s výzvou.)
+- Nadřazená položka odstraněného projektu nebo položky je rezervována podle potřeby (případně s výzvou.)
 
-- Po odstranění rezervovaný nebo položka se přidala, se nezobrazí v **čekající vrácení se změnami** okna.
+- Po odstranění rezervované nebo přidané položky se tato položka nezobrazí v okně **nedokončené vrácení se změnami** .
 
-- Položka stále existuje v rámci úložiště správy zdrojových kódů, i po jejím odstranění a musí být ručně odstraněna.
+- Položka stále existuje v úložišti správy zdrojů, i po odstranění, a je nutné ji ručně vyprázdnit.
 
-|Akce|Testovací kroky|Chcete-li ověřit očekávané výsledky|
+|Akce|Testovací kroky|Očekávané výsledky k ověření|
 |------------|----------------|--------------------------------|
-|Odstranit klientský projekt|1.  Vytvoření projektu klienta.<br />2.  Přidáte řešení do správy zdrojového kódu.<br />3.  Odebrat celý projekt z řešení|Běžné očekávané chování.|
-|Odstranit prázdný soubor|1.  Vytvoření projektu klienta.<br />2.  Do projektu přidat soubor nula bajtů.<br />3.  Přidáte řešení do správy zdrojového kódu.<br />4.  Vyberte soubor, odstraňte ho.|Běžné očekávané chování.|
-|Odstranit složku s jedním souborem|1.  Vytvořte řešení pro jeden projekt.<br />2.  Přidáte složku.<br />3.  Přidejte jeden soubor do složky.<br />4.  Přidáte řešení do správy zdrojového kódu.<br />5.  Podívejte se na projekt tak, aby se zabránilo zobrazí výzvu.<br />6.  Odstraňte složku.|Běžné očekávané chování.|
-|Odstranit projekt webového systému souborů|1.  Vytvoření webového systému souboru projektu (pomocí tlačítka Procházet k určení cesty UNC).<br />2.  Přidáte řešení do správy zdrojového kódu.<br />3.  Odeberte celý projekt z řešení.<br />4.  Opakujte kroky 1 až 3 pro místní webový projekt (vykonává různých cest skrze kód, ale má stejné externí rozhraní a chování).|Běžné očekávané chování.|
-|Odstranit soubor z webového systému souboru projektu|1.  Vytvoření webového systému souboru projektu.<br />2.  Přidáte řešení do správy zdrojového kódu.<br />3.  Odstranění souboru z projektu.<br />4.  Opakujte kroky 1 až 3 pro místní webový projekt (vykonává různých cest skrze kód, ale má stejné externí rozhraní a chování).|Běžné očekávané chování.|
+|Odstranění klientského projektu|1. Vytvořte projekt klienta.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. odeberte celý projekt z řešení.|Obvyklé očekávané chování.|
+|Odstranit prázdný soubor|1. Vytvořte projekt klienta.<br />2. Přidejte do projektu soubor s nulovým bajtem.<br />3. Přidejte řešení do správy zdrojového kódu.<br />4. Vyberte soubor a odstraňte ho.|Obvyklé očekávané chování.|
+|Odstraní složku s jedním souborem.|1. Vytvořte jedno řešení projektu.<br />2. přidejte složku.<br />3. Přidejte do složky jeden soubor.<br />4. Přidejte řešení do správy zdrojového kódu.<br />5. Prohlédněte si projekt, abyste se vyhnuli zobrazování výzev.<br />6. Odstraňte složku.|Obvyklé očekávané chování.|
+|Odstranit webový projekt systému souborů|1. Vytvořte webový projekt systému souborů (pomocí tlačítka Procházet zadejte cestu UNC).<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. odeberte celý projekt z řešení.<br />4. Opakujte kroky 1 až 3 pro místní webový projekt (cvičení různých cest prostřednictvím kódu, ale má stejné externí rozhraní a chování).|Obvyklé očekávané chování.|
+|Odstranění souboru z webového projektu systému souborů|1. Vytvořte webový projekt systému souborů.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. Odstraňte soubor z projektu.<br />4. Opakujte kroky 1 až 3 pro místní webový projekt (cvičení různých cest prostřednictvím kódu, ale má stejné externí rozhraní a chování).|Obvyklé očekávané chování.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Testovací příručka pro moduly plug-in správy zdrojového kódu](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

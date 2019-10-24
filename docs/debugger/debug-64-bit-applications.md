@@ -1,5 +1,5 @@
 ---
-title: Ladění 64bitové aplikace | Dokumentace Microsoftu
+title: Ladit 64 – bitové aplikace | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,46 +16,46 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5326ef7aa66de124f3be5db96cf156b57cb339d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 849862f98fb90cdd742e1794ecb57c35a9aaca73
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62563647"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745586"
 ---
-# <a name="debug-64-bit-applications"></a>Ladění 64bitové aplikace
-Můžete ladit 64bitovou aplikaci, na kterém běží na místním počítači nebo ve vzdáleném počítači.
+# <a name="debug-64-bit-applications"></a>Ladění 64bitových aplikací
+Můžete ladit 64 aplikaci, která běží na místním počítači nebo na vzdáleném počítači.
 
- Chcete-li ladit 64bitovou aplikaci, která běží na vzdáleném počítači, naleznete v tématu [vzdálené ladění](../debugger/remote-debugging.md).
+ Chcete-li ladit 64 aplikaci, která běží na vzdáleném počítači, přečtěte si téma [vzdálené ladění](../debugger/remote-debugging.md).
 
- Ladění 64bitové aplikace místně, Visual Studio používá 64-bit pracovním procesem (msvsmon.exe) k provádění operací nízké úrovně, které nelze provést uvnitř 32bitový proces sady Visual Studio.
+ K místnímu ladění 64 aplikací Visual Studio používá 64 pracovní proces (Msvsmon. exe) k provedení operací nízké úrovně, které nelze provést v procesu 32-bit sady Visual Studio.
 
- Ladění ve smíšeném režimu není podporováno pro 64bitové procesy, které používají rozhraní .NET Framework verze 3.5 nebo starší.
+ Ladění ve smíšeném režimu není podporováno pro 64 procesy, které používají .NET Framework verze 3,5 nebo starší.
 
-## <a name="debug-a-64-bit-application"></a>Ladění 64bitové aplikace
- Vyzkoušet ladění 64bitové aplikace:
+## <a name="debug-a-64-bit-application"></a>Ladění 64 aplikace
+ Chcete-li vyzkoušet ladění 64 aplikace:
 
-1. Vytvoření řešení sady Visual Studio, například C# konzolové aplikace.
+1. Vytvořte řešení sady Visual Studio, například C# konzolovou aplikaci.
 
-2. Nastavte konfiguraci do 64-bit pomocí nástroje Configuration Manager. Další informace najdete v tématu [jak: Konfigurace projektů pro cílové platformy](../ide/how-to-configure-projects-to-target-platforms.md).
+2. Nastavte konfiguraci na 64-bit pomocí Configuration Manager. Další informace najdete v tématu [Postupy: konfigurace projektů pro cílové platformy](../ide/how-to-configure-projects-to-target-platforms.md).
 
-3. V tomto okamžiku začne 64bitovou verzi vzdáleného ladicího programu (msvsmon.exe). Spuštění, dokud je otevřené řešení pomocí konfigurace 64bitové.
+3. V tomto okamžiku se spustí 64 verze vzdáleného ladicího programu (Msvsmon. exe). Spustí se, pokud je otevřené řešení s 64 konfigurací.
 
-4. Spusťte ladění. Stejně jako u 32-bit konfigurace byste měli mít stejné prostředí. Pokud dojde k chybám, najdete v článku níže v části řešení potíží.
+4. Spustit ladění. Měli byste mít stejné prostředí jako s 32 konfigurací. Pokud se zobrazí chyby, přečtěte si část řešení potíží níže.
 
-## <a name="troubleshooting-64-bit-debugging"></a>Řešení potíží s 64bitové ladění
- Může se zobrazit chyba: "Operaci ladicí 64bitových trvá déle, než se očekávalo." V takovém případě sada Visual Studio odeslal žádost o 64bitové verze msvsmon.exe a vždycky trvalo dlouhou dobu pro výsledek žádosti k téhle akci vrátit.
+## <a name="troubleshooting-64-bit-debugging"></a>Řešení potíží s 64 bitového ladění
+ Může se zobrazit chyba: "64-bitová operace ladění trvá déle, než se čekalo." V tomto případě aplikace Visual Studio odeslala požadavek na 64. exe msvsmon. exe, ale výsledek této žádosti se vrátí zpět.
 
- Existují dva hlavní příčiny této chyby:
+ K této chybě dochází dvěma hlavními příčinami:
 
-- Máte síťové zabezpečení softwaru nainstalovaného v počítači, který způsobil síťového zásobníku je nespolehlivý, a klesla paketů prostřednictvím místního hostitele. Zkuste zakázat veškerého softwaru zabezpečení sítě a podívejte se, pokud to vyřeší. Pokud ano, sestavy pro dodavatele softwaru zabezpečení sítě, který software je v konfliktu s provozem localhost.
+- Máte nainstalovaný software zabezpečení sítě v počítači, který způsobil, že síťový zásobník je nespolehlivý a že přestaly pakety, které přechází z místního hostitele. Zkuste zakázat veškerý software zabezpečení sítě a zjistit, jestli ho vyřeší. Pokud ano, nahlaste se od dodavatele softwaru zabezpečení sítě, že software je v konfliktu s provozem localhost.
 
-- Spustíte na výkon nebo zablokování problém se sadou Visual Studio. Pokud tento problém nastává pravidelně, můžete shromažďovat výpisy sady Visual Studio (devenv.exe) a pracovním procesem (msvsmon.exe) a odesílat do Microsoftu. Informace o vytváření sestav problému najdete v tématu [postup ohlášení problému se sadou Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md).
+- Pracujete v rámci sady Visual Studio k problémům se zachováním nebo zablokování. Pokud k problému dochází pravidelně, můžete shromáždit výpisy sady Visual Studio (devenv. exe) a pracovní proces (Msvsmon. exe) a odeslat je do Microsoftu. Informace o tom, jak nahlásit problém, najdete v tématu [postup nahlášení problému se sadou Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [64bitové aplikace](https://docs.microsoft.com/dotnet/framework/64-bit-apps)
-- [Konfigurace programů pro 64bitové prostředí](/cpp/build/configuring-programs-for-64-bit-visual-cpp)
+- [Konfigurace programů pro 64. bit](/cpp/build/configuring-programs-for-64-bit-visual-cpp)
 - [Podpora pro 64bitové integrované vývojové prostředí sady Visual Studio](../ide/visual-studio-ide-64-bit-support.md)
 - [Použití souborů výpisu paměti](../debugger/using-dump-files.md)
 - [Vzdálené ladění](../debugger/remote-debugging.md)

@@ -1,5 +1,5 @@
 ---
-title: Starší verze jazyka analyzátor a skener služby | Dokumentace Microsoftu
+title: Analyzátor a skener služby starší verze jazyka | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +11,18 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b8ed17e67246479772636d67bc8d9f218a3a3fc
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 11b172fee8f6f5cf1c80d306a8a8b154f7316bf8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333476"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72726728"
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>Analyzátor a skener služby starší verze jazyka
-Analyzátor je srdce komunity služby jazyka. Třídy jazyka Managed Package Framework (MPF) vyžadují analyzátoru jazyka pro výběr informací o kódu se zobrazí. Analyzátor oddělí text do lexikální tokenů a pak identifikuje těchto tokenů podle typu a funkce.
+Analyzátor je srdcem jazykové služby. Třídy jazyka Managed Package Framework (MPF) vyžadují analyzátor jazyka pro výběr informací o zobrazeném kódu. Analyzátor odděluje text na lexikální tokeny a pak tyto tokeny identifikuje podle typu a funkce.
 
-## <a name="discussion"></a>Diskuse
- Následuje metoda C#.
+## <a name="discussion"></a>Účely
+ Následuje C# metoda.
 
 ```csharp
 namespace MyNamespace
@@ -41,97 +41,97 @@ namespace MyNamespace
 
 |Název tokenu|Typ tokenu|
 |----------------|----------------|
-|obor názvů, třídy, veřejná, void, int|klíčové slovo|
+|obor názvů, třída, veřejný, void, int|klíčové slovo|
 |=|– operátor|
 |{ } ( ) ;|Oddělovač|
-|MyNamespace, MyClass, MáFunkce, arg1, var1|identifikátor|
+|MyNamespace, MyClass, MyFunction, arg1, var1|identifikátor|
 |MyNamespace|– obor názvů|
 |MyClass|třída|
-|MáFunkce|– metoda|
+|Funkci|– metoda|
 |arg1|parametr|
 |var1|Lokální proměnná|
 
- Role Analyzátor je identifikace tokeny. Některé tokeny může mít více než jeden typ. Po analyzátor zjistil tokeny, že služba jazyka můžete použít operace IntelliSense a informace o zajištění užitečné funkce, jako jsou zvýraznění syntaxe, párování složených závorek.
+ Role analyzátoru slouží k identifikaci tokenů. Některé tokeny mohou mít více než jeden typ. Poté, co analyzátor identifikuje tokeny, může služba jazyka využít tyto informace k poskytnutí užitečných funkcí, jako je například zvýrazňování syntaxe, spárování složených závorek a operace IntelliSense.
 
-## <a name="types-of-parsers"></a>Typy analyzátory
- Služba analyzátor jazyka není stejný jako analyzátor používá jako součást kompilátoru. Tento druh analyzátor však musí používat skeneru a analyzátor, stejně jako analyzátor kompilátoru.
+## <a name="types-of-parsers"></a>Typy analyzátorů
+ Analyzátor jazykové služby není stejný jako analyzátor používaný jako součást kompilátoru. Tento druh analyzátoru však musí použít skener i analyzátor, a to stejným způsobem jako analyzátor kompilátoru.
 
-- Skener slouží k identifikaci typy tokenů. Tyto informace slouží pro zvýraznění syntaxe a umožňuje rychle identifikovat pro typy tokenů, které můžete aktivovat další operace, například související závorky. Je reprezentován Tento skener <xref:Microsoft.VisualStudio.Package.IScanner> rozhraní.
+- K identifikaci typů tokenů se používá skener. Tyto informace slouží k zvýrazňování syntaxe a k rychlé identifikaci typů tokenů, které mohou aktivovat jiné operace, například spárování složených závorek. Tento skener je reprezentován rozhraním <xref:Microsoft.VisualStudio.Package.IScanner>.
 
-- Analyzátor se používá k popisu funkce a oboru tokenů. Tyto informace slouží v operacích IntelliSense k identifikaci prvků jazyka, jako jsou metody, proměnné, parametry a deklarace a poskytnout seznam členů a podpisy metod na základě kontextu. Tento analyzátor je také používaná k nalezení odpovídající dvojice elementu jazyka, například složené závorky a závorky. Tento analyzátor je přístupný prostřednictvím <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metodu <xref:Microsoft.VisualStudio.Package.LanguageService> třídy.
+- K popisu funkcí a rozsahu tokenů se používá analyzátor. Tyto informace se používají v operacích IntelliSense k identifikaci prvků jazyka, jako jsou metody, proměnné, parametry a deklarace, a k poskytnutí seznamů členů a signatur metod na základě kontextu. Tento analyzátor slouží také k vyhledání odpovídajícího páru prvků jazyka, jako jsou složené závorky a závorky. Tento analyzátor je k dispozici prostřednictvím metody <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> ve třídě <xref:Microsoft.VisualStudio.Package.LanguageService>.
 
-  Jak implementovat analyzátor a skener služby jazyka je na vás. Jsou k dispozici několik prostředků, které popisují, jak fungují analyzátory a tom, jak psát vlastní analyzátor. Kromě toho jsou k dispozici několik produktů bezplatná a komerční, které pomáhají při vytváření analyzátor.
+  Způsob implementace skeneru a analyzátoru pro službu jazyka je až na vás. K dispozici je několik prostředků, které popisují, jak analyzátory fungují a jak psát vlastní analyzátor. K dispozici je také několik bezplatných a komerčních produktů, které vám pomůžou při vytváření analyzátoru.
 
 ### <a name="the-parsesource-parser"></a>Analyzátor ParseSource
- Na rozdíl od analyzátor, který se používá jako součást kompilátor (kde tokeny jsou převedeny na nějakou formu spustitelného kódu) lze volat analyzátoru služby jazyka pro mnoho různých důvodů, proč a v mnoha různých kontextech. Implementace tohoto přístupu v <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metodu <xref:Microsoft.VisualStudio.Package.LanguageService> třída je jenom na vás. Je důležité mít na paměti, která <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metoda může být volána na vlákně na pozadí.
+ Na rozdíl od analyzátoru, který se používá jako součást kompilátoru (kde jsou tokeny převedeny na určitou formu spustitelného kódu), může být analyzátor služby jazyka volán z mnoha různých důvodů a v mnoha různých kontextech. Způsob implementace tohoto přístupu v metodě <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> třídy <xref:Microsoft.VisualStudio.Package.LanguageService> je až vám. Je důležité mít na paměti, že <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metoda může být volána ve vlákně na pozadí.
 
 > [!CAUTION]
-> <xref:Microsoft.VisualStudio.Package.ParseRequest> Struktura obsahuje odkaz na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> objektu. To <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> objekt nelze použít ve vlákně na pozadí. Ve skutečnosti mnoho základních tříd MPF nelze použít ve vlákně na pozadí. Patří mezi ně <xref:Microsoft.VisualStudio.Package.Source>, <xref:Microsoft.VisualStudio.Package.ViewFilter>, <xref:Microsoft.VisualStudio.Package.CodeWindowManager> třídy a další třídu, která přímo nebo nepřímo komunikuje s zobrazení.
+> Struktura <xref:Microsoft.VisualStudio.Package.ParseRequest> obsahuje odkaz na objekt <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>. Tento objekt <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> nelze použít ve vlákně na pozadí. Ve skutečnosti nelze mnoho základních tříd MPF použít ve vlákně na pozadí. Patří mezi ně <xref:Microsoft.VisualStudio.Package.Source>, <xref:Microsoft.VisualStudio.Package.ViewFilter>, <xref:Microsoft.VisualStudio.Package.CodeWindowManager> třídy a jakákoliv jiná třída, kterou přímo nebo nepřímo komunikuje se zobrazením.
 
- Tento analyzátor obvykle analyzuje soubor první čas celý zdroj je volána, nebo když analýzy z důvodu hodnotu <xref:Microsoft.VisualStudio.Package.ParseReason> je uveden. Následující volání <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metoda zpracování malou část analyzovaný kód a mohou být provedeny mnohem rychleji s využitím výsledky předchozí operace úplné analýzy. <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> Metoda komunikuje výsledky operace analýzy prostřednictvím <xref:Microsoft.VisualStudio.Package.AuthoringSink> a <xref:Microsoft.VisualStudio.Package.AuthoringScope> objekty. <xref:Microsoft.VisualStudio.Package.AuthoringSink> Objektu se používá ke shromažďování informací z určitého důvodu analýzy, například informace o rozsahy párování závorek nebo složených podpisy metod, které mají seznamy parametrů. <xref:Microsoft.VisualStudio.Package.AuthoringScope> Poskytuje kolekce deklarace a podpisy metod a také podporu přejít na rozšířených upravit možnosti (**přejít k definici**, **přejít na deklaraci**, **přejít na Odkazovat**).
+ Tento analyzátor obvykle analyzuje celý zdrojový soubor při prvním volání nebo v případě, že je zadána hodnota důvod analýzy <xref:Microsoft.VisualStudio.Package.ParseReason>. Následná volání metody <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> zpracovávají malou část analyzovaného kódu a mohou být provedeny mnohem rychleji pomocí výsledků předchozí operace analýzy. Metoda <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> komunikuje výsledky operace analýzy prostřednictvím objektů <xref:Microsoft.VisualStudio.Package.AuthoringSink> a <xref:Microsoft.VisualStudio.Package.AuthoringScope>. Objekt <xref:Microsoft.VisualStudio.Package.AuthoringSink> se používá ke shromažďování informací pro konkrétní důvod analýzy, například informace o rozložené závorkách nebo podpisech metod, které mají seznamy parametrů. @No__t_0 poskytuje kolekce deklarací a signatur metod a také podporuje možnost přejít na pokročilou úpravu (**Přejít k definici**, **Přejít na deklaraci**, **Přejít na odkaz**).
 
-### <a name="the-iscanner-scanner"></a>Skener IScanner
- Musíte také implementovat skener, který implementuje <xref:Microsoft.VisualStudio.Package.IScanner>. Ale protože tento skener funguje na základě řádek po řádku prostřednictvím <xref:Microsoft.VisualStudio.Package.Colorizer> třídy, je obvykle jednodušší implementaci. Na začátku každého řádku, poskytuje MPF <xref:Microsoft.VisualStudio.Package.Colorizer> třídy hodnotu pro použití jako stavová proměnná, která je předána skeneru. Na konci každého řádku vrací skener proměnnou aktualizovaný stav. MPF ukládá do mezipaměti tyto informace stav pro každý řádek tak, aby skener můžete spouštět analýzy z jakéhokoli řádku bez nutnosti spouštět na začátku zdrojového souboru. Toto rychlé vyhledávání z jednoho řádku umožňuje editoru poskytnout rychlé zpětné vazby pro uživatele.
+### <a name="the-iscanner-scanner"></a>IScanner skener
+ Musíte taky implementovat skener, který implementuje <xref:Microsoft.VisualStudio.Package.IScanner>. Vzhledem k tomu, že tento skener pracuje na řádku po jednotlivých řádcích prostřednictvím <xref:Microsoft.VisualStudio.Package.Colorizer> třídy, je obvykle jednodušší implementovat. Na začátku každého řádku poskytne hodnota MPF hodnotu <xref:Microsoft.VisualStudio.Package.Colorizer> třídu a, která se má použít jako stavová proměnná, která je předána skeneru. Na konci každého řádku skener vrátí aktualizovanou stavovou proměnnou. Soubor MPF ukládá tyto informace o stavu pro každý řádek, aby mohl skener začít analyzovat z libovolného řádku, aniž by bylo nutné začít na začátku zdrojového souboru. Tato rychlá kontrola jediného řádku umožňuje editoru poskytnout uživateli rychlou zpětnou vazbu.
 
-## <a name="parsing-for-matching-braces"></a>Analýza kódu pro párování závorek
- Tento příklad ukazuje tok řízení pro odpovídající uzavírací závorkou, která uživatel zadal. V tomto procesu, který se používá pro barevné zvýraznění skener slouží také určit typ tokenu a určuje, zda token, který můžete aktivovat operace shody složenou závorku. Pokud trigger nenajde, <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metoda je volána k nalezení odpovídající závorce. A konečně dva složené závorky jsou zvýrazněné.
+## <a name="parsing-for-matching-braces"></a>Analýza pro párové závorky
+ Tento příklad ukazuje tok ovládacího prvku pro porovnání uzavírací závorky, kterou zadal uživatel. V tomto procesu se k určení typu tokenu použije také skener, který se používá k obarvení, a to, jestli token může aktivovat operaci shody se závorkami. Pokud je nalezen Trigger, je volána metoda <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> k nalezení odpovídajícího složené závorky. Nakonec se zvýrazní dvě složené závorky.
 
- I když složené závorky se používají v názvech aktivačních událostí a analyzovat z důvodů, tento proces není omezený na skutečné složené závorky. Pár znaků, který je nastaven na odpovídající dvojice je podporována. Mezi příklady patří (a), \< a >, a [a].
+ I když se v názvech triggerů a důvodů analýzy používají složené závorky, tento proces není omezený na skutečné složené závorky. Podporuje se všechny dvojice znaků, které jsou určené jako párové dvojice. Mezi příklady patří (a), \< a > a [a].
 
- Předpokládejme, že služba jazyka podporuje odpovídající složené závorky.
+ Předpokládat, že jazyková služba podporuje odpovídající závorky.
 
-1. Uživatel zadá uzavírací složená závorka (}).
+1. Uživatel zadá pravou složenou závorku (}).
 
-2. Vložení složené závorky na pozici kurzoru ve zdrojovém souboru a kurzor je rozšířená o jednu.
+2. Složená závorka je vložena na kurzor ve zdrojovém souboru a kurzor je rozšířen o jednu.
 
-3. <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> Metodu <xref:Microsoft.VisualStudio.Package.Source> třída se nazývá s typem pravou složenou závorku.
+3. Metoda <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> ve třídě <xref:Microsoft.VisualStudio.Package.Source> je volána pomocí typové uzavírací závorky.
 
-4. <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> Volání metod <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> metoda ve <xref:Microsoft.VisualStudio.Package.Source> třídy se získat token na pozici těsně před aktuální pozici kurzoru. Tento token odpovídá typu pravou složenou závorku).
+4. Metoda <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> volá metodu <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> ve třídě <xref:Microsoft.VisualStudio.Package.Source>, aby získala token na pozici těsně před aktuální pozicí kurzoru. Tento token odpovídá typované pravé závorce.
 
-    1. <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> Volání metod <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> metodu <xref:Microsoft.VisualStudio.Package.Colorizer> objekt k získání všech tokenů na aktuálním řádku.
+    1. Metoda <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> volá metodu <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> na objektu <xref:Microsoft.VisualStudio.Package.Colorizer>, aby získala všechny tokeny na aktuálním řádku.
 
-    2. <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> Volání metod <xref:Microsoft.VisualStudio.Package.IScanner.SetSource%2A> metodu <xref:Microsoft.VisualStudio.Package.IScanner> objekt s textem aktuálního řádku.
+    2. Metoda <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> volá metodu <xref:Microsoft.VisualStudio.Package.IScanner.SetSource%2A> na objektu <xref:Microsoft.VisualStudio.Package.IScanner> s textem aktuálního řádku.
 
-    3. <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> Opakovaně volá metodu <xref:Microsoft.VisualStudio.Package.IScanner.ScanTokenAndProvideInfoAboutIt%2A> metodu <xref:Microsoft.VisualStudio.Package.IScanner> objekt ke shromažďování všech tokenů z aktuálního řádku.
+    3. Metoda <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> opakovaně volá metodu <xref:Microsoft.VisualStudio.Package.IScanner.ScanTokenAndProvideInfoAboutIt%2A> na objektu <xref:Microsoft.VisualStudio.Package.IScanner> pro shromáždění všech tokenů z aktuálního řádku.
 
-    4. <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> Metoda volá privátní metodu <xref:Microsoft.VisualStudio.Package.Source> třídy k získání tokenu, který obsahuje požadované místo, a předá v seznamu tokenů získané z <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> metody.
+    4. Metoda <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> volá soukromou metodu ve třídě <xref:Microsoft.VisualStudio.Package.Source>, aby získala token, který obsahuje požadovanou pozici a předá je v seznamu tokenů získaných z metody <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A>.
 
-5. Tím <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> metoda vyhledá token trigger příznak <xref:Microsoft.VisualStudio.Package.TokenTriggers> na token, který je vrácen z <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> metoda; to znamená, že token, který představuje pravou složenou závorku).
+5. Metoda <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> vyhledá příznak triggeru tokenu <xref:Microsoft.VisualStudio.Package.TokenTriggers> na tokenu, který je vrácen z metody <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A>; To znamená token, který představuje pravou složenou závorku.
 
-6. Pokud příznak trigger <xref:Microsoft.VisualStudio.Package.TokenTriggers> nenajde, <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> metodu <xref:Microsoft.VisualStudio.Package.Source> třída se nazývá.
+6. Pokud je nalezen příznak triggeru <xref:Microsoft.VisualStudio.Package.TokenTriggers>, je volána metoda <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> ve třídě <xref:Microsoft.VisualStudio.Package.Source>.
 
-7. <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> Metoda začíná operace analýzy s hodnotou z důvodu analýzy <xref:Microsoft.VisualStudio.Package.ParseReason>. Takže v konečném důsledku volá tuto operaci <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metodu <xref:Microsoft.VisualStudio.Package.LanguageService> třídy. Pokud asynchronní analýza kódu je povoleno, toto volání <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> vyvolá metodu ve vlákně na pozadí.
+7. Metoda <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> spustí operaci analýzy s hodnotou důvodu rozboru <xref:Microsoft.VisualStudio.Package.ParseReason>. Tato operace nakonec zavolá metodu <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> třídy <xref:Microsoft.VisualStudio.Package.LanguageService>. Pokud je povoleno asynchronní analýze, dojde k tomuto volání metody <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> ve vlákně na pozadí.
 
-8. Při dokončení operace analýzy, obslužné rutiny dokončení vnitřní (označované také jako metody zpětného volání) s názvem `HandleMatchBracesResponse` je volána <xref:Microsoft.VisualStudio.Package.Source> třídy. Toto volání provádí automaticky <xref:Microsoft.VisualStudio.Package.LanguageService> základní třídy, ne společnost analyzátor.
+8. Po dokončení operace analýzy je ve třídě <xref:Microsoft.VisualStudio.Package.Source> volána interní obslužná rutina dokončení (označovaná také jako metoda zpětného volání) s názvem `HandleMatchBracesResponse`. Toto volání je provedeno automaticky <xref:Microsoft.VisualStudio.Package.LanguageService> základní třídou, nikoli analyzátorem.
 
-9. `HandleMatchBracesResponse` Metoda získá seznam rozsahy z <xref:Microsoft.VisualStudio.Package.AuthoringSink> objekt, který je uložen v <xref:Microsoft.VisualStudio.Package.ParseRequest> objektu. (Značka span je <xref:Microsoft.VisualStudio.TextManager.Interop.TextSpan> struktura, která určuje rozsah řádků a znaků ve zdrojovém souboru.) Tento seznam rozsahy obvykle obsahuje dva rozsahy, jeden pro otevírací a uzavírací závorky.
+9. Metoda `HandleMatchBracesResponse` získá seznam rozsahů z objektu <xref:Microsoft.VisualStudio.Package.AuthoringSink>, který je uložen v objektu <xref:Microsoft.VisualStudio.Package.ParseRequest>. (Rozpětí je <xref:Microsoft.VisualStudio.TextManager.Interop.TextSpan> struktura, která určuje rozsah řádků a znaků ve zdrojovém souboru.) Tento seznam rozsahů obsahuje obvykle dvě rozpětí, jednu pro levou a pravou závorku.
 
-10. `HandleBracesResponse` Volání metod <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.HighlightMatchingBrace%2A> metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> objekt, který je uložen v <xref:Microsoft.VisualStudio.Package.ParseRequest> objektu. Tím se zvýrazní dané rozpětí.
+10. Metoda `HandleBracesResponse` volá metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.HighlightMatchingBrace%2A> na objektu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>, který je uložen v objektu <xref:Microsoft.VisualStudio.Package.ParseRequest>. Tím se zvýrazní dané rozsahy.
 
-11. Pokud <xref:Microsoft.VisualStudio.Package.LanguagePreferences> vlastnost <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A> je povoleno, `HandleBracesResponse` metoda získá text, který je vlastněný odpovídající značky span a ve stavovém řádku zobrazí nejprve 80 znaků tohoto rozpětí. Toto funguje nejlépe, pokud <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metoda obsahuje prvek jazyka, který doprovází shodnou dvojici. Další informace najdete v tématu <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A> vlastnost.
+11. Pokud je povolena vlastnost <xref:Microsoft.VisualStudio.Package.LanguagePreferences> <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A>, metoda `HandleBracesResponse` získá text, který je zahrnut v odpovídajícím rozsahu, a zobrazí první 80 znaků tohoto rozsahu ve stavovém řádku. To funguje nejlépe v případě, že metoda <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> obsahuje prvek jazyka, který doprovází odpovídající dvojici. Další informace najdete v tématu vlastnost <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A>.
 
 12. Hotovo.
 
 ### <a name="summary"></a>Souhrn
- Odpovídající složené závorky operace je obvykle omezené na jednoduché dvojice prvků jazyka. Složitější prvky, jako je například porovnávání trojic ("`if(...)`","`{`"a"`}`", nebo "`else`","`{`"a"`}`"), může být zvýrazněný jako součást operace dokončování slov. Například slovo "else" dokončení odpovídající "`if`" může být zvýrazněný příkaz. Pokud došlo k řadě `if` / `else if` příkazy, všechny z nich může být zvýrazněný pomocí mechanismu stejné jako odpovídající složené závorky. <xref:Microsoft.VisualStudio.Package.Source> Základní třídy již podporuje, následujícím způsobem: Skener musí vracet hodnotu tokenu trigger <xref:Microsoft.VisualStudio.Package.TokenTriggers> v kombinaci s hodnotou aktivační událost <xref:Microsoft.VisualStudio.Package.TokenTriggers> pro daný token, který je před pozice kurzoru.
+ Operace párování složených závorek je obvykle omezena na jednoduché páry jazykových prvků. Složitější prvky, jako jsou například párové tři ("`if(...)`", "`{`" a "`}`" nebo "`else`", "`{`" a "`}`"), mohou být zvýrazněny jako součást operace dokončování slov. Například když je slovo "else" dokončeno, je možné zvýraznit shodný příkaz "`if`". Pokud existovala řada `if` / `else if` příkazy, všechny mohou být zvýrazněny pomocí stejného mechanismu jako u shod složených závorek. @No__t_0 základní třídu již podporuje následujícím způsobem: skener musí vrátit hodnotu triggeru tokenu <xref:Microsoft.VisualStudio.Package.TokenTriggers> kombinaci s hodnotou triggeru <xref:Microsoft.VisualStudio.Package.TokenTriggers> pro token, který je před pozicí kurzoru.
 
- Další informace najdete v tématu [závorky ve službě starší verze jazyka](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md).
+ Další informace najdete v tématu [spárování složených závorek ve službě starší verze jazyka](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md).
 
-## <a name="parsing-for-colorization"></a>Analýza kódu pro barevné zvýraznění
- Barevné zvýrazňování zdrojový kód je jednoduché, stačí identifikuje typ barva tokenu a vrátí informace o typu. <xref:Microsoft.VisualStudio.Package.Colorizer> Třída slouží jako zprostředkovatel mezi editoru a skener informovat například o barvu každého tokenu. <xref:Microsoft.VisualStudio.Package.Colorizer> Třídy používá <xref:Microsoft.VisualStudio.Package.IScanner> objektu, které vám pomůžou barevné označování řádku a také ke shromažďování informací o stavu pro všechny řádky ve zdrojovém souboru. Ve třídách MPF jazykové služby <xref:Microsoft.VisualStudio.Package.Colorizer> třída nemá přepsat, protože komunikuje pomocí skeneru pouze prostřednictvím <xref:Microsoft.VisualStudio.Package.IScanner> rozhraní. Můžete zadat objekt, který implementuje <xref:Microsoft.VisualStudio.Package.IScanner> rozhraní tak, že přepíšete <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> metodu <xref:Microsoft.VisualStudio.Package.LanguageService> třídy.
+## <a name="parsing-for-colorization"></a>Analýza barev
+ Zdrojový kód Colorizing je jednoduchý, stačí identifikovat typ tokenu a vrátit informace o barvách tohoto typu. Třída <xref:Microsoft.VisualStudio.Package.Colorizer> funguje jako prostředník mezi editorem a skenerem, který poskytuje informace o barvách pro každý token. Třída <xref:Microsoft.VisualStudio.Package.Colorizer> používá objekt <xref:Microsoft.VisualStudio.Package.IScanner> k usnadnění colorizingí řádku a také k získání informací o stavu pro všechny řádky ve zdrojovém souboru. Ve třídách služeb jazyka MPF není nutné přepsat třídu <xref:Microsoft.VisualStudio.Package.Colorizer>, protože komunikuje se skenerem pouze prostřednictvím rozhraní <xref:Microsoft.VisualStudio.Package.IScanner>. Objekt, který implementuje rozhraní <xref:Microsoft.VisualStudio.Package.IScanner>, zadáte přepsáním metody <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> třídy <xref:Microsoft.VisualStudio.Package.LanguageService>.
 
- <xref:Microsoft.VisualStudio.Package.IScanner> Skener dostane řádku zdrojového kódu až <xref:Microsoft.VisualStudio.Package.IScanner.SetSource%2A> metody. Volání <xref:Microsoft.VisualStudio.Package.IScanner.ScanTokenAndProvideInfoAboutIt%2A> metoda se opakují získat další token v řádku, až do vyčerpání řádku tokenů. Pro barevné zvýraznění MPF považuje pořadí řádků s veškerým zdrojovým kódem. Skener proto musí být schopen čelit zdroj už ji jako řádky. Kromě toho libovolném řádku může být předán skener kdykoli a jediná záruka je, že skener obdrží od řádku před řádkem asi ke kontrole proměnné stavu.
+ @No__t_0 skeneru je prostřednictvím metody <xref:Microsoft.VisualStudio.Package.IScanner.SetSource%2A> přiřazen řádek zdrojového kódu. Volání metody <xref:Microsoft.VisualStudio.Package.IScanner.ScanTokenAndProvideInfoAboutIt%2A> se opakují za účelem získání dalšího tokenu na řádku, dokud není vyčerpána čára z tokenů. V případě barevného nabarvení MPF zpracuje veškerý zdrojový kód jako sekvenci řádků. Proto musí být skener schopný odolat tomu, že se zdroj připravuje jako řádky. Kromě toho může být jakýkoli řádek kdykoli předán skeneru a jedinou zárukou je, že skener přijme proměnnou stavu z řádku před vyhledáním řádku.
 
- <xref:Microsoft.VisualStudio.Package.Colorizer> Třída se používá také k identifikaci token aktivační události. Tyto triggery informace MPF, že konkrétní token může iniciovat operaci s mnohem složitější, jako je například dokončení slova nebo odpovídající složené závorky. Protože identifikující tyto aktivační události musí být rychlé a v libovolném umístění se musí vyskytovat skener je nejvhodnější pro tuto úlohu.
+ Třída <xref:Microsoft.VisualStudio.Package.Colorizer> slouží také k identifikaci triggerů tokenů. Tyto triggery říká hodnotu MPF, že konkrétní token může iniciovat složitější operaci, jako je například dokončování slov nebo párové závorky. Vzhledem k tomu, že identifikace takových triggerů musí být rychlá a musí se nacházet v jakémkoli umístění, je pro tento úkol nejvhodnější skener.
 
- Další informace najdete v tématu [barevné zvýrazňování syntaxe ve službě starší verze jazyka](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md).
+ Další informace najdete v tématu [syntaxe Colorizing ve službě starší verze jazyka](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md).
 
-## <a name="parsing-for-functionality-and-scope"></a>Analýza kódu pro funkce a oboru
- Analýza kódu pro funkce a oboru vyžaduje další úsilí než jen Rychlá kontrola typy tokenů, které se vyskytují. Analyzátor musí identifikovat nejen typ tokenu, ale také funkce, pro který se používá token. Například identifikátor je pouze název, ale ve vašem jazyce, může být identifikátor názvu třídy, oboru názvů, metody nebo proměnné, v závislosti na kontextu. Obecný typ tokenu může být identifikátor, ale identifikátor mohou mít i jiné význam, a to v závislosti na tom, co je a kde je definován. Tato identifikace vyžaduje analyzátor, který má více rozsáhlé znalosti o jazyk, ve kterém je analyzován. Tady <xref:Microsoft.VisualStudio.Package.AuthoringSink> třídy je k dispozici ve. <xref:Microsoft.VisualStudio.Package.AuthoringSink> Třídy shromažďuje informace o identifikátory, metody, odpovídající dvojice jazyka (například složené závorky a závorek) a jazyk trojic (podobně jako dvojice jazyků s tím rozdílem, že existují tři části, například "`foreach()`" "`{`"a"`}`"). Kromě toho můžete přepsat <xref:Microsoft.VisualStudio.Package.AuthoringSink> třídy pro podporu identifikační kód, který se používá v rané fázi ověřování zarážek, tak, aby ladicí program má být načten, a **automatické hodnoty** ladění okna, která zobrazuje místní proměnné a parametry automaticky při programu je právě laděna a vyžaduje analyzátor identifikovat příslušné místní proměnné a parametry než ty, které ladicí program zobrazí.
+## <a name="parsing-for-functionality-and-scope"></a>Analýza funkcí a rozsahu
+ Analýza funkcí a rozsahu vyžaduje větší úsilí, než stačí určit typy tokenů, ke kterým došlo. Analyzátor musí identifikovat nejen typ tokenu, ale také funkčnost, pro kterou je token použit. Například identifikátor je pouze název, ale ve vašem jazyce, identifikátor může být název třídy, oboru názvů, metody nebo proměnné v závislosti na kontextu. Obecný typ tokenu může být identifikátor, ale identifikátor může mít také jiné významy v závislosti na tom, co je a kde je definován. Tato identifikace vyžaduje, aby analyzátor měl více rozsáhlých znalostí o jazyku, který se analyzuje. Zde je místo, kde se <xref:Microsoft.VisualStudio.Package.AuthoringSink> Třída nachází. Třída <xref:Microsoft.VisualStudio.Package.AuthoringSink> shromažďuje informace o identifikátorech, metodách, odpovídající dvojici jazyků (jako jsou složené závorky a závorky) a jazykové Trojnásobky (podobně jako dvojice jazyků s tím rozdílem, že existují tři části, například "`foreach()`" `{` "a" `}` ") . Kromě toho můžete přepsat třídu <xref:Microsoft.VisualStudio.Package.AuthoringSink> pro podporu Identifikace kódu, která se používá při počátečním ověřování zarážek, aby se ladicí program nemusel načíst a okno **Automatické** ladění, které zobrazuje místní proměnné a parametry. automaticky při ladění programu a vyžaduje, aby analyzátor identifikoval vhodné lokální proměnné a parametry kromě těch, které ladicí program prezentuje.
 
- <xref:Microsoft.VisualStudio.Package.AuthoringSink> Objekt je předán do analyzátor jako součást <xref:Microsoft.VisualStudio.Package.ParseRequest> objektu a nový <xref:Microsoft.VisualStudio.Package.AuthoringSink> objektu je vytvořena pokaždé, když nové <xref:Microsoft.VisualStudio.Package.ParseRequest> je vytvořen objekt. Kromě toho <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metoda musí vracet <xref:Microsoft.VisualStudio.Package.AuthoringScope> objektu, který se používá ke zpracování různé operace IntelliSense. <xref:Microsoft.VisualStudio.Package.AuthoringScope> Objekt udržuje seznam pro deklarace a seznam metod, buď z nichž se vyplní, v závislosti na důvodu pro analýzu. <xref:Microsoft.VisualStudio.Package.AuthoringScope> Třída musí implementovat.
+ Objekt <xref:Microsoft.VisualStudio.Package.AuthoringSink> je předán analyzátoru jako součást objektu <xref:Microsoft.VisualStudio.Package.ParseRequest> a při každém vytvoření nového objektu <xref:Microsoft.VisualStudio.Package.ParseRequest> je vytvořen nový objekt <xref:Microsoft.VisualStudio.Package.AuthoringSink>. Kromě toho musí metoda <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> vracet objekt <xref:Microsoft.VisualStudio.Package.AuthoringScope>, který se používá pro zpracování různých operací IntelliSense. Objekt <xref:Microsoft.VisualStudio.Package.AuthoringScope> udržuje seznam pro deklarace a seznam pro metody, z nichž každá je vyplněna v závislosti na důvodu analýzy. Třída <xref:Microsoft.VisualStudio.Package.AuthoringScope> musí být implementovaná.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Implementace služby starší verze jazyka](../../extensibility/internals/implementing-a-legacy-language-service1.md)
 - [Přehled služby starší verze jazyka](../../extensibility/internals/legacy-language-service-overview.md)
 - [Barevné zvýrazňování syntaxe ve službě starší verze jazyka](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)

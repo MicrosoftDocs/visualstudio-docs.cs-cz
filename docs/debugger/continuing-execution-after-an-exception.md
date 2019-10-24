@@ -1,5 +1,5 @@
 ---
-title: Pokračování v provádění po výjimce | Dokumentace Microsoftu
+title: Pokračování v provádění po výjimce | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -25,24 +25,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d557fc0ec056cac22603338f95920e5c721f67dd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e7be214a950c8cc93d986f97834a848bd9ab824e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564096"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745651"
 ---
 # <a name="continuing-execution-after-an-exception"></a>Pokračování v provádění po výjimce
-Pokud ladicí program přeruší provádění z důvodu výjimky, zobrazí se **pomocníka výjimky**, ve výchozím nastavení. Pokud jste zakázali **pomocníka výjimky** v **možnosti** dialogovém okně se zobrazí **Pomocníka pro výjimky** (C# nebo Visual Basic) nebo  **Výjimka** dialogové okno (C++).
+Pokud ladicí program přeruší provádění z důvodu výjimky, ve výchozím nastavení se zobrazí **Pomocník pro výjimky**. Pokud jste zakázali **pomocníka výjimky** v dialogovém okně **Možnosti** , zobrazí se **Pomocník pro výjimky** (C# nebo Visual Basic) nebo dialogové okno **výjimky** (C++).
 
- Když **pomocníka výjimky** se zobrazí, můžete se pokusit opravit problém, který způsobil výjimku.
+ Po zobrazení **pomocníka výjimky** se můžete pokusit opravit problém, který způsobil výjimku.
 
 ## <a name="managed-and-native-code"></a>Spravovaný a nativní kód
- V spravovaného a nativního kódu můžete pokračovat v provádění ve stejném vlákně po neošetřené výjimce. **Pomocníka výjimky** unwinds zásobník volání do bodu, kde byla výjimka vydána.
+ Ve spravovaném a nativním kódu můžete pokračovat v provádění ve stejném vlákně po neošetřené výjimce. **Pomocné rutina výjimky** odvíjí zásobník volání do bodu, kde byla vyvolána výjimka.
 
 ## <a name="mixed-code"></a>Smíšený kód
- Pokud dosáhnete neošetřenou výjimku při ladění smíšená nativní a spravované kódové, omezení operačního systému zakázat odvíjení zásobníku volání. Pokud se pokusíte zpět zásobník volání pomocí místní nabídky, chybová zpráva vysvětluje, že ladicí program nelze vrátit zpět z neošetřenou výjimkou během ladění Smíšeného kódu.
+ Pokud při ladění smíšeného nativního a spravovaného kódu dojde k neošetřené výjimce, omezení operačního systému zabrání odvinutí zásobníku volání. Pokud se pokusíte převinout zásobník volání pomocí místní nabídky, zobrazí se chybová zpráva s vysvětlením, že ladicí program nemůže provést zpětnou akci před neošetřenou výjimkou při ladění smíšeného kódu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Správa výjimek pomocí ladicího programu](../debugger/managing-exceptions-with-the-debugger.md)

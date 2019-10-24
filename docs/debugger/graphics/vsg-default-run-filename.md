@@ -8,15 +8,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb56f7ef08241aed2e109e6845af8fb596cb42e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 835e2cec19e36418091e094abd2ec76bd6403398
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62895377"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72734833"
 ---
-# <a name="vsgdefaultrunfilename"></a>VSG_DEFAULT_RUN_FILENAME
-Definuje výchozí název souboru pro soubor protokolu grafiky.
+# <a name="vsg_default_run_filename"></a>VSG_DEFAULT_RUN_FILENAME
+Definuje výchozí název souboru protokolu grafiky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,22 +25,22 @@ Definuje výchozí název souboru pro soubor protokolu grafiky.
 ```
 
 #### <a name="parameters"></a>Parametry
- `filename` Název souboru zadaný ve výchozím nastavení pro soubor protokolu grafiky při informací grafiky je zachycena prostřednictvím kódu programu.
+ `filename` název souboru, který se ve výchozím nastavení používá, při programovém zachycení informací grafiky do souboru protokolu grafiky.
 
-## <a name="value"></a>Value
- Řetězcový literál, který představuje název souboru grafiky souboru protokolu. Ve výchozím nastavení, L"default.vsglog".
+## <a name="value"></a>Hodnota
+ Řetězcový literál, který představuje název souboru protokolu grafiky. Ve výchozím nastavení je to L "default. vsglog".
 
 ```C++
 #define VSG_DEFAULT_FILENAME L"default.vsglog"
 ```
 
 ## <a name="remarks"></a>Poznámky
- Pokud se symbol preprocesoru `DONT_SAVE_VSGLOG_TO_TEMP` je definován, pak název souboru je relativní vzhledem k aktuální adresář zachycené aplikace, nebo je absolutní cesta; v opačném případě je relativní k adresáři dočasné soubory uživatele a nemůže být absolutní cesta.
+ Pokud je definován symbol preprocesoru `DONT_SAVE_VSGLOG_TO_TEMP`, je název souboru relativní vzhledem k aktuálnímu adresáři zachycené aplikace nebo je absolutní cesta. v opačném případě je relativní vzhledem k adresáři dočasných souborů uživatele a nemůže se jednat o absolutní cestu.
 
- Chcete-li změnit název definovaný souboru, je třeba znovu definovat ho předtím, než zahrnete `vsgcapture.h` ve svém programu.
+ Chcete-li změnit definovaný název souboru, je nutné jej předefinovat před zahrnutím `vsgcapture.h` do programu.
 
 ## <a name="example"></a>Příklad
- Tento příklad ukazuje, jak změnit výchozí název souboru zachytávací soubor:
+ Tento příklad ukazuje, jak změnit výchozí název souboru digitalizačního souboru:
 
 ```C++
 // Redefine the default capture filename before including vsgcapture.h
@@ -49,5 +49,5 @@ Definuje výchozí název souboru pro soubor protokolu grafiky.
 #include <vsgcapture.h>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [DONT_SAVE_VSGLOG_TO_TEMP](dont-save-vsglog-to-temp.md)

@@ -1,5 +1,5 @@
 ---
-title: Žádný zdroj není k dispozici | Dokumentace Microsoftu
+title: Není k dispozici žádný zdroj | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,25 +17,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 85d1d1307a119fa23bf7ba015130ab9c7b6f69d5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9f08ed499e61e54ffbc6508bc8353ea955d9a20c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62905216"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72730863"
 ---
 # <a name="no-source-available"></a>Žádný zdroj není k dispozici.
-Váš projekt obsahuje zdrojový kód pro kód, který se pokoušíte zobrazit. Obvyklou příčinou je dvojitým kliknutím modul, který nemá ve zdrojovém kódu **okně zásobník volání** nebo **okno vláken**. Můžete pokračovat v ladění, ale můžete nastavovat zarážky a provádět jiné akce na tomto místě nelze použít v okně zdroje. Pokud je potřeba nastavit zarážku, použijte **okno zpětného překladu** místo.
+Projekt neobsahuje zdrojový kód pro kód, který se pokoušíte zobrazit. Obvyklou příčinou je dvojité kliknutí na modul, který nemá zdrojový kód v okně **zásobník volání** nebo v **okně vlákna**. Můžete pokračovat v ladění, ale nemůžete použít zdrojové okno k nastavování zarážek a provádění dalších akcí v tomto umístění. Pokud potřebujete nastavit zarážku, použijte místo toho okno zpětného **překladu** .
 
- Na stránkách vlastností řešení můžete změnit adresáře, ve kterém se ladicí program vyhledá zdrojové soubory a zjistit, aby ladicí program ignorovat vybrané zdrojové soubory. Zobrazit [ladit zdroj souborů, společná nastavení řešení vlastnost dialogového okna stránky](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md).
+ Na stránkách vlastností řešení můžete změnit adresáře, ve kterých ladicí program vyhledává zdrojové soubory, a sdělit ladicímu programu, že má ignorovat vybrané zdrojové soubory. Viz [dialogové okno ladit zdrojové soubory, společné vlastnosti, stránky vlastností řešení](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md).
 
- **Procházet a najít zdrojový kód** kliknutím na tento odkaz otevřete dialogové okno, kde můžou procházet zdrojový kód.
+ Vyhledat **zdrojový kód** Kliknutím na tento odkaz otevřete dialogové okno, ve kterém můžete vyhledat zdrojový kód.
 
- **Zobrazit zpětný překlad** spustí **okno zpětného překladu**.
+ **Zobrazit zpětný překlad** Spustí **zpětný překlad okna**.
 
- **Vždy zobrazit zpětný překlad pro chybějící zdrojové soubory** výběr této možnosti se zobrazí **okno zpětného překladu** automaticky v při, žádný zdroj není k dispozici. Toto nastavení lze také změnit v **možnosti** dialogovém okně **ladění** kategorie, **Obecné** stránky zaškrtnutím nebo zrušením zaškrtnutí **zobrazit zpětný překlad, pokud zdroj není k dispozici**.
+ **Vždy zobrazit zpětný překlad pro chybějící zdrojové soubory** Tuto možnost vyberte, pokud chcete automaticky zobrazit **okno zpětný překlad** , když není k dispozici žádný zdroj. Toto nastavení lze také změnit v dialogovém okně **Možnosti** , kategorie **ladění** , **Obecné** , výběrem nebo zrušením zaškrtnutí **Zobrazit zpětný překlad, pokud není k dispozici zdroj**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění zdrojových souborů, běžné vlastnosti, dialogové okno stránek vlastností řešení](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md)
 - [Zadání symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
 - [SOS.dll (rozšíření ladění SOS)](/dotnet/framework/tools/sos-dll-sos-debugging-extension)

@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findSymbolsByRVAForAcceleratorPointerTag | Dokumentace Microsoftu
+title: 'IDiaSession:: findSymbolsByRVAForAcceleratorPointerTag | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bcf399dcf80cb574b6018dde5ffa44e72a4c988
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: eb1b24d24de35de30b24937a6cfbf59d12f69482
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839209"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741994"
 ---
 # <a name="idiasessionfindsymbolsbyrvaforacceleratorpointertag"></a>IDiaSession::findSymbolsByRVAForAcceleratorPointerTag
-Odpovídající hodnota značky zadány, tato metoda vrátí výčet symboly, které jsou obsaženy ve funkci se zakázaným inzerováním akcelerátor zadaný nadřazený prvek na zadaný relativní virtuální adrese.
+S ohledem na odpovídající hodnotu značky vrátí tato metoda výčet symbolů, které jsou obsaženy v zadané relativní virtuální adrese v zadané nadřazené funkci akcelerátoru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,27 +34,27 @@ HRESULT findSymbolsByRVAForAcceleratorPointerTag ( 
 #### <a name="parameters"></a>Parametry
  `parent`
 
-[in] `IDiaSymbol` , Který odpovídá zástupné procedury funkce akcelerátoru pro hledání.
+pro @No__t_0, který odpovídá funkci pro vyhledávání zástupných procedur akcelerátoru.
 
  `tagValue`
 
-[in] Hodnota ukazatele značka.
+pro Hodnota značky ukazatele.
 
  `rva`
 
-[in] Relativní virtuální adresu.
+pro Relativní virtuální adresa.
 
  `ppResult`
 
-[out] Ukazatel `IDiaEnumSymbols` ukazatel rozhraní, který je inicializován s výsledkem.
+mimo Ukazatel na ukazatel rozhraní `IDiaEnumSymbols`, který je inicializován s výsledkem.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tuto metodu volat jenom na `IDiaSymbol` rozhraní, které odpovídá funkci se zakázaným inzerováním akcelerátoru.
+ Tuto metodu volejte pouze v rozhraní `IDiaSymbol`, které odpovídá funkci zástupné procedury akcelerátoru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

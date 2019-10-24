@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_locationtype – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_locationType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: add36da660b9ab8130884db0a4088b693af18a6d
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: b10668a4767d411f48df213c79ae6508e7c0bf28
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64785673"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739858"
 ---
-# <a name="idiasymbolgetlocationtype"></a>IDiaSymbol::get_locationType
+# <a name="idiasymbolget_locationtype"></a>IDiaSymbol::get_locationType
 Načte typ umístění datového symbolu.
 
 ## <a name="syntax"></a>Syntaxe
@@ -33,14 +33,14 @@ HRESULT get_locationType ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí hodnotu z [locationtype – výčet](../../debugger/debug-interface-access/locationtype.md) výčet, který určuje typ umístění datového symbolu, jako například `static` nebo `local`.
+mimo Vrací hodnotu z výčtu [výčtu LocationType –](../../debugger/debug-interface-access/locationtype.md) , který určuje typ umístění symbolu dat, například `static` nebo `local`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [LocationType – výčet](../../debugger/debug-interface-access/locationtype.md)

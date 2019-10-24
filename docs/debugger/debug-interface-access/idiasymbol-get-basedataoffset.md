@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_baseDataOffset | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_baseDataOffset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33967e2e3fd241bae772e1ec208f42f7c9ac7419
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 298903e4e76c34fe1013b0f26729fb900c7b3fea
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62837617"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740987"
 ---
-# <a name="idiasymbolgetbasedataoffset"></a>IDiaSymbol::get_baseDataOffset
-Načte posun základní data.
+# <a name="idiasymbolget_basedataoffset"></a>IDiaSymbol::get_baseDataOffset
+Načte posunutí základního data.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,10 +30,10 @@ HRESULT get_baseDataOffset(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Ukazatel `DWORD` obsahující posun základní data.
+mimo Ukazatel na `DWORD`, který drží základní posun dat.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,5 +1,5 @@
 ---
-title: Sccwillcreatesccfile – funkce | Dokumentace Microsoftu
+title: Funkce SccWillCreateSccFile | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1dc7b9f5b298260b2bcca88c75087059bd8f0065
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2ac7657258b79b2e53bee8138bc5b2728f618eac
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66338452"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720109"
 ---
 # <a name="sccwillcreatesccfile-function"></a>SccWillCreateSccFile – funkce
-Tato funkce určí, zda modul plug-in správy zdrojového kódu podporuje vytváření MSSCCPRJ. Soubor SCC pro každou z dané soubory.
+Tato funkce určuje, zda modul plug-in správy zdrojových kódů podporuje vytváření MSSCCPRJ. SCC soubor pro každý z daných souborů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,32 +36,32 @@ SCCRTN SccWillCreateSccFile(
 #### <a name="parameters"></a>Parametry
  pContext
 
-[in] Ukazatel kontext modulu plug-in zdroje ovládacího prvku.
+pro Ukazatel kontextu modulu plug-in správy zdrojových kódů.
 
- %{nfiles/
+ nFiles
 
-[in] Počet názvů souborů, které jsou součástí `lpFileNames` pole a délky `pbSccFiles` pole.
+pro Počet názvů souborů obsažených v poli `lpFileNames` a také délka pole `pbSccFiles`.
 
  lpFileNames
 
-[in] Pole názvů úplný soubor ke kontrole (pole přidělené volajícímu).
+pro Pole plně kvalifikovaných názvů souborů k ověření (pole musí být přiděleno volajícím).
 
  pbSccFiles
 
-[out v] Pole, ve kterém můžete ukládat výsledky.
+[in, out] Pole, do kterého mají být uloženy výsledky.
 
 ## <a name="return-value"></a>Návratová hodnota
- Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Úspěch.|
-|SCC_E_INVALIDFILEPATH|Jedna z cest v poli je neplatný.|
-|SCC_E_NONSPECIFICERROR|K nespecifikované chybě.|
+|SCC_OK|Nástup.|
+|SCC_E_INVALIDFILEPATH|Jedna z cest v poli je neplatná.|
+|SCC_E_NONSPECIFICERROR|Nespecifická chyba.|
 
 ## <a name="remarks"></a>Poznámky
- Tato funkce je volána s seznam souborů k určení, pokud modul plug-in správy zdrojového kódu poskytuje podporu v MSSCCPRJ. Soubor SCC pro každou z dané soubory (pro další informace o MSSCCPRJ. Soubor SCC, naleznete v tématu [MSSCCPRJ. Soubor SCC](../extensibility/mssccprj-scc-file.md)). Ovládací prvek moduly plug-in zdrojového kódu můžete deklarovat, zda mají možnost vytvoření MSSCCPRJ. Soubory SCC deklarováním `SCC_CAP_SCCFILE` během inicializace. Modul plug-in vrátí `TRUE` nebo `FALSE` každý soubor `pbSccFiles` pole k označení, která dané soubory mají MSSCCPRJ. Podpora SCC. Pokud modul plug-in vrátí kód úspěšnosti z funkce, jsou hodnoty v poli návratový dodržena. Při selhání pole se ignoruje.
+ Tato funkce se volá se seznamem souborů, abyste zjistili, jestli modul plug-in správy zdrojových kódů poskytuje podporu v MSSCCPRJ. SCC soubor pro každý z daných souborů (Další informace najdete v MSSCCPRJ. Soubor SCC, viz [MSSCCPRJ. Soubor SCC](../extensibility/mssccprj-scc-file.md)). Moduly plug-in správy zdrojových kódů můžou deklarovat, jestli mají schopnost vytvářet MSSCCPRJ. SCC soubory deklarováním `SCC_CAP_SCCFILE` během inicializace. Modul plug-in vrátí `TRUE` nebo `FALSE` na soubor v poli `pbSccFiles` a určí, který z daných souborů má MSSCCPRJ. Podpora SCC Pokud modul plug-in vrátí kód úspěchu z funkce, jsou dodrženy hodnoty v poli Return. Při selhání se pole ignoruje.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)
 - [Soubor MSSCCPRJ.SCC](../extensibility/mssccprj-scc-file.md)

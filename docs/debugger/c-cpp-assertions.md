@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 154abe3d73fa71ac897f0442697196cd859f32bd
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 9e2e6d69e4c621d6be81a00a61482b71199bc0fc
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72435891"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745754"
 ---
 # <a name="cc-assertions"></a>Kontrolní výrazy jazyka C/C++
 Příkaz kontrolního výrazu Určuje podmínku, kterou očekáváte, že bude platit v bodě programu. Pokud tato podmínka není pravdivá, kontrolní výraz se nezdařil, provádění programu je přerušeno a zobrazí se [dialogové okno kontrolní výraz selhal](../debugger/assertion-failed-dialog-box.md) .
@@ -81,7 +81,7 @@ Použijte kontrolní výrazy k detekci chyb během vývoje. Jako pravidlo použi
 [V tomto tématu](#BKMK_In_this_topic)
 
 ## <a name="BKMK_Assertions_in_Debug_and_Release_builds"></a>Kontrolní výrazy v sestaveních pro ladění a vydání
-Příkazy kontrolního výrazu lze zkompilovat pouze v případě, že je definována hodnota `_DEBUG`. V opačném případě kompilátor považuje kontrolní výrazy za příkazy null. Proto příkazy kontrolního výrazu nedovolují žádné režijní náklady ani náklady na výkon v konečném programu pro vydávání verzí a umožňují vyhnout se použití direktiv `#ifdef`.
+Příkazy kontrolního výrazu se zkompiluje pouze v případě, že je definována `_DEBUG`. V opačném případě kompilátor považuje kontrolní výrazy za příkazy null. Proto příkazy kontrolního výrazu nedovolují žádné režijní náklady ani náklady na výkon v konečném programu pro vydávání verzí a umožňují vyhnout se použití direktiv `#ifdef`.
 
 ## <a name="BKMK_Side_effects_of_using_assertions"></a>Vedlejší účinky použití kontrolních výrazů
 Pokud přidáte kontrolní výrazy do kódu, ujistěte se, že kontrolní výrazy nemají vedlejší účinky. Zvažte například následující kontrolní výraz, který upravuje hodnotu `nM`:
@@ -111,9 +111,9 @@ SOUBORU Crtdbg. Soubor hlaviček H definuje [makra _ASSERT a _ASSERTE](/cpp/c-ru
 | `_ASSERT` | Pokud se zadaný výraz vyhodnotí jako FALSE, název souboru a číslo řádku `_ASSERT`. |
 | `_ASSERTE` | Stejné jako `_ASSERT` a také řetězcové vyjádření výrazu, který byl uplatněn. |
 
-`_ASSERTE` je výkonnější, protože oznamuje výraz, který je vyměněn jako nepravdivý. To může být dostačující k identifikaci problému bez odkazování na zdrojový kód. Ladicí verze aplikace však bude obsahovat řetězcovou konstantu pro každý výraz vyhodnotit pomocí `_ASSERTE`. Použijete-li mnoho maker `_ASSERTE`, tyto řetězcové výrazy zabírají značnou velikost paměti. Pokud se to ukáže jako problém, použijte `_ASSERT` k uložení paměti.
+`_ASSERTE` je výkonnější, protože oznamuje výraz, který je vyměněn jako nepravdivý. To může být dostačující k identifikaci problému bez odkazování na zdrojový kód. Ladicí verze aplikace však bude obsahovat řetězcovou konstantu pro každý výraz, který je vydaný pomocí `_ASSERTE`. Použijete-li mnoho `_ASSERTE` maker, tyto řetězcové výrazy zabírají značnou velikost paměti. Pokud se to ukáže jako problém, použijte `_ASSERT` k uložení paměti.
 
-Je-li definována hodnota `_DEBUG`, je makro `_ASSERTE` definováno následujícím způsobem:
+Je-li definována `_DEBUG`, je makro `_ASSERTE` definováno následujícím způsobem:
 
 ```cpp
 #define _ASSERTE(expr) \
@@ -124,7 +124,7 @@ Je-li definována hodnota `_DEBUG`, je makro `_ASSERTE` definováno následujíc
     } while (0)
 ```
 
-Pokud je výraz ASSERT vyhodnocen jako FALSE, je volána metoda [_CrtDbgReport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) k nahlášení selhání kontrolního výrazu (pomocí dialogového okna zprávy ve výchozím nastavení). Pokud v dialogovém okně zpráva zvolíte **Opakovat** , `_CrtDbgReport` vrátí hodnotu 1 a `_CrtDbgBreak` volání ladicího programu prostřednictvím `DebugBreak`.
+Pokud je výraz ASSERT vyhodnocen jako FALSE, je volána metoda [_CrtDbgReport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) k nahlášení selhání kontrolního výrazu (pomocí dialogového okna zprávy ve výchozím nastavení). Pokud v dialogovém okně zpráva kliknete na tlačítko **Opakovat** , `_CrtDbgReport` vrátí hodnotu 1 a `_CrtDbgBreak` volání ladicího programu prostřednictvím `DebugBreak`.
 
 ### <a name="checking-for-heap-corruption"></a>Kontroluje se poškození haldy.
 Následující příklad používá [_CrtCheckMemory](/cpp/c-runtime-library/reference/crtcheckmemory) ke kontrole poškození haldy:
@@ -156,7 +156,7 @@ _ASSERTE(_CrtIsMemoryBlock (myData, size, &requestNumber, &filename, &linenumber
 [V tomto tématu](#BKMK_In_this_topic)
 
 ## <a name="BKMK_MFC_assertions"></a>Kontrolní výrazy MFC
-MFC definuje makro [kontrolního](https://msdn.microsoft.com/Library/1e70902d-d58c-4e7b-9f69-2aeb6cbe476c) výrazu pro kontrolu kontrolního výrazu. Definuje také metody `MFC ASSERT_VALID` a `CObject::AssertValid` pro kontrolu vnitřního stavu @no__t objektu odvozeného od -2.
+MFC definuje makro [kontrolního](https://msdn.microsoft.com/Library/1e70902d-d58c-4e7b-9f69-2aeb6cbe476c) výrazu pro kontrolu kontrolního výrazu. Definuje také `MFC ASSERT_VALID` a `CObject::AssertValid` metody pro kontrolu vnitřního stavu objektu odvozeného od `CObject`.
 
 Pokud je argument makra `ASSERT` vyhodnocen jako nula nebo false, makro zastaví spuštění programu a upozorní uživatele. v opačném případě se provádění pokračuje.
 
@@ -337,7 +337,7 @@ Tento kód spoléhá na příkaz kontrolního výrazu, který zpracovává chybo
 
 [V tomto tématu](#BKMK_In_this_topic)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Ladění nativního kódu](../debugger/debugging-native-code.md)

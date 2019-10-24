@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_numberOfAcceleratorPointerTags | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_numberOfAcceleratorPointerTags | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 283533b20614ea727be620669ea5ab66cf00e5ed
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 47c5827348c7b7cb450017a0e6176d71f555c841
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62835771"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739702"
 ---
-# <a name="idiasymbolgetnumberofacceleratorpointertags"></a>IDiaSymbol::get_numberOfAcceleratorPointerTags
-Vrátí počet značky akcelerátoru ukazatel ve funkci se zakázaným inzerováním C++ AMP.
+# <a name="idiasymbolget_numberofacceleratorpointertags"></a>IDiaSymbol::get_numberOfAcceleratorPointerTags
+Vrátí počet značek akcelerátoru v rámci C++ funkce zástupného kódu amp.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,13 +30,13 @@ HRESULT get_numberOfAcceleratorPointerTags(
 #### <a name="parameters"></a>Parametry
  `count`
 
-[out] Ukazatel na `DWORD` , který obsahuje počet akcelerátoru ukazatel značek v C++ funkci AMP zástupné procedury.
+mimo Ukazatel na `DWORD`, který obsahuje počet značek akcelerátoru v rámci C++ funkce zástupného kódu amp.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je volána na `IDiaSymbol` rozhraní, který odpovídá zástupné procedury funkce C++ AMP akcelerátor.
+ Tato metoda se volá na rozhraní `IDiaSymbol`, které odpovídá funkci zástupného kódu C++ akcelerátoru amp.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

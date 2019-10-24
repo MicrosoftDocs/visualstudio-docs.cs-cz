@@ -1,5 +1,5 @@
 ---
-title: Funkce háku přidělení | Dokumentace Microsoftu
+title: Funkce zavěšení přidělení | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -22,20 +22,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 406647ae086285df8dfdfc00daf4b62be66e74a2
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f684c6c66448fdab2ee7607a81ff7ed769a5e607
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63402704"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745823"
 ---
 # <a name="allocation-hook-functions"></a>Funkce háku přidělení
-Funkce háku přidělení, nainstalovat pomocí [_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook), je volána pokaždé, když přidělená, nevyčerpané nebo uvolnění paměti. Tento typ připojení můžete použít k mnoha různým účelům. Pomocí něho můžete testovat, jak aplikace zpracovává situace nedostatku paměti, například k prozkoumání vzory přidělování nebo protokolovat informace o přidělení paměti pro pozdější analýzu.
+Funkce zavěšení přidělení, která je nainstalována pomocí [_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook), je volána při každém přidělení, přidělení nebo uvolnění paměti. Tento typ zavěšení můžete použít pro mnoho různých účelů. Použijte ji k otestování, jak aplikace zpracovává nedostatečné paměťové situace, například pro kontrolu způsobů přidělení, nebo informace o přidělení protokolu pro pozdější analýzu.
 
 > [!NOTE]
-> Mějte na paměti omezení týkající se použití funkce knihovny run-time jazyka C ve funkci háku přidělení, je popsáno v [zavěšení přidělení a přidělení paměti jazyka C Run-Time](../debugger/allocation-hooks-and-c-run-time-memory-allocations.md).
+> Pamatujte na omezení použití funkcí běhové knihovny jazyka C ve funkci zavěšení přidělení popsané v části [zavěšení přidělení a přidělení paměti za běhu jazyka c](../debugger/allocation-hooks-and-c-run-time-memory-allocations.md).
 
- Funkce háku přidělení by měl mít prototyp jako v následujícím příkladu:
+ Funkce Hooku přidělení by měla mít prototyp podobný následujícímu příkladu:
 
 ```cpp
 int YourAllocHook(int nAllocType, void *pvData,
@@ -43,16 +43,16 @@ int YourAllocHook(int nAllocType, void *pvData,
         const unsigned char * szFileName, int nLine )
 ```
 
- Ukazatel, který můžete předat [_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook) je typu **_crt_alloc_hook –**, jak jsou definovány v CRTDBG. V:
+ Ukazatel, který předáte do [_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook) , je typu **_CRT_ALLOC_HOOK**, jak je definováno v souboru Crtdbg. Y
 
 ```cpp
 typedef int (__cdecl * _CRT_ALLOC_HOOK)
     (int, void *, size_t, int, long, const unsigned char *, int);
 ```
 
- Při volání knihovny run-time hook, *nAllocType* argument určuje, jaké přidělení operace se provést (**_HOOK_ALLOC**, **_HOOK_REALLOC**, nebo **_HOOK_FREE**). V bezplatné nebo realokace `pvData` má ukazatel na článek uživatele bloku se být uvolněna. Ale pro přidělení, ukazatele this má hodnotu null, protože nedošlo k přidělení paměti. Zbývající argumenty obsahují velikost přidělení Nejistá, jeho typ bloku číslo sekvenční žádosti přidružené a ukazatel na název souboru. Pokud je k dispozici, argumenty také zahrnovat číslo řádku, ve kterém bylo provedeno přidělení. Poté, co funkce háku provádí libovolné analýzu a jiné úlohy jeho autor potřebuje, musí vracet buď **TRUE**, což indikuje, že operace přidělení může pokračovat, nebo **FALSE**, která udává, který operace by selhat. Jednoduché hook tohoto typu může zkontrolovat množství paměti přidělené zatím a vrátit **FALSE** malé limit překročení velikosti. Aplikace pak neprovádějí druh chyby přidělení, která by obvykle dochází pouze v případě, že dostupná paměť byla velmi nízký. Složitější háky může udržovat přehled o přidělení vzory, analýza využití paměti nebo zprávy při výskytu určitých situacích.
+ Když knihovna run-time volá váš Hook, argument *nAllocType* určuje, jakou operaci přidělení se má vytvořit ( **_HOOK_ALLOC**, **_HOOK_REALLOC**nebo **_HOOK_FREE**). V bezplatném nebo ve přerozdělování `pvData` má ukazatel na článek o uživateli bloku, který se má uvolnit. U přidělení je však tento ukazatel null, protože přidělení neproběhlo. Zbývající argumenty obsahují velikost příslušného přidělení, jeho typ bloku, pořadové číslo požadavku, který je k němu přidružen, a ukazatel na název souboru. Pokud je k dispozici, argumenty také obsahují číslo řádku, ve kterém bylo přidělení provedeno. Jakmile funkce Hooku provede jakoukoli analýzu a další úkoly, které chce autor, musí vrátit **hodnotu true**, která značí, že operace přidělení může pokračovat nebo **hodnota false**, což značí, že operace by neměla selhat. Jednoduchý vidlice tohoto typu může ověřit množství přidělené paměti a vrátit **hodnotu false** , pokud by tato hodnota přesáhla malý limit. Aplikace by pak vyvolala druh chyb přidělení, ke kterým by normálně docházelo pouze v případě, že je dostupná paměť velmi nízká. Složitější zavěšení můžou sledovat vzory přidělování, analyzovat využití paměti nebo nahlásit, kdy nastane určitá situace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Volání přidělení a přidělení běhové paměti jazyka C](../debugger/allocation-hooks-and-c-run-time-memory-allocations.md)
 - [Zápis funkce volání pro ladění](../debugger/debug-hook-function-writing.md)

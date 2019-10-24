@@ -1,5 +1,5 @@
 ---
-title: IDiaFrameData::get_addressOffset | Microsoft Docs
+title: 'IDiaFrameData:: get_addressOffset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4460f5102fbb5fd62f332f41a2901d1759731e7f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 651ff39eed19a22c1ace24453a44b38ef512b9b8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829100"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743680"
 ---
-# <a name="idiaframedatagetaddressoffset"></a>IDiaFrameData::get_addressOffset
-Načte posunu částí adresy kód pro rámec.
+# <a name="idiaframedataget_addressoffset"></a>IDiaFrameData::get_addressOffset
+Načte část s odsazením kódu pro rámec.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_addressOffset ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí posunutí částí adresy kód pro rámec.
+mimo Vrátí část adresy kódu pro rámec.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

@@ -1,5 +1,5 @@
 ---
-title: Příprava na ladění aplikací pro Windows Forms | Dokumentace Microsoftu
+title: Příprava na ladění aplikací model Windows Forms | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -20,51 +20,51 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5cc06e33b3549bda9bdc9fe04073ca4cf0d9e9a5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5ff927e5b917834341e442afa00e4acad4af2d2f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851779"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738102"
 ---
-# <a name="debugging-preparation-windows-forms-applications"></a>Příprava ladění: Formulářová aplikace Windows
-Šablona projektu Windows Forms vytvoří aplikace modelu Windows Forms. Ladění tohoto typu aplikace v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je jednoduché. Další informace najdete v tématu [vytvoření projektu aplikace Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100)).
+# <a name="debugging-preparation-windows-forms-applications"></a>Příprava na ladění: Formulářová aplikace Windows
+Šablona projektu model Windows Forms vytvoří aplikaci model Windows Forms. Ladění tohoto typu aplikace v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je jednoduché. Další informace naleznete v tématu [Vytvoření projektu aplikace pro systém Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100)).
 
- Při vytváření projektu Windows Forms pomocí šablony projektu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky vytvoří požadované nastavení konfigurace Debug a Release. V případě potřeby můžete tato nastavení změnit. Tato nastavení lze změnit v  **\<název projektu > stránky vlastností** dialogové okno (**Můj projekt** v jazyce Visual Basic).
+ Při vytváření projektu model Windows Forms se šablonou projektu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky vytvoří požadované nastavení pro ladění a vydání. V případě potřeby můžete tato nastavení změnit. Tato nastavení se dají změnit v dialogovém okně **\<project název > stránky vlastností** (**můj projekt** v Visual Basic).
 
- Další informace najdete v tématu [doporučené nastavení vlastností](../debugger/managed-debugging-recommended-property-settings.md).
+ Další informace najdete v tématu [Nastavení Doporučené vlastnosti](../debugger/managed-debugging-recommended-property-settings.md).
 
- Následující tabulka obsahuje jeden další vlastnost doporučené nastavení.
+ V následující tabulce je uvedeno jedno další nastavení Doporučené vlastnosti.
 
 ### <a name="configuration-properties-in-debug-tab"></a>Vlastnosti konfigurace na kartě ladění
 
-|**Název vlastnosti**|**Nastavení**|
+|**Název vlastnosti**|**Nastavením**|
 |-----------------------|-----------------|
-|**Spustit akci**|– Nastavte na **spustit projekt** většinu času. Nastavte na **externí program Start** Pokud budete chtít spustit jiné spustitelný soubor při spuštění ladění (většinou pro ladění knihoven DLL).|
+|**Spustit akci**|-Nastavte na hodnotu **spustit projekt, a** to ve většinu času. Nastavte na **spustit externí program** , pokud chcete spustit další spustitelný soubor při spuštění ladění (obvykle pro ladění knihoven DLL).|
 
- Můžete ladit aplikace Windows Forms z uvnitř [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], nebo připojením k již běžícímu aplikace. Další informace o připojení najdete v tématu [připojení k běžící procesy](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).
+ Můžete ladit model Windows Forms aplikace zevnitř [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nebo připojením k již spuštěné aplikaci. Další informace o připojení najdete v tématu [připojení ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).
 
-### <a name="to-debug-a-c-f-or-visual-basic-windows-forms-application"></a>Chcete-li ladit C#, F#, nebo aplikaci Windows Forms jazyka Visual Basic
+### <a name="to-debug-a-c-f-or-visual-basic-windows-forms-application"></a>Ladění aplikace C#, F#nebo Visual Basic model Windows Forms
 
 1. Otevřete projekt v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
 
-2. Podle potřeby vytvořte zarážky.
+2. V případě potřeby vytvořte zarážky.
 
-    Protože aplikace Windows Forms jsou založené na událostech, vaše zarážky přejde do kódu obslužné rutiny události nebo do metody volané kódem obslužné rutiny události. Typické události, ve které chcete umístit zarážky zahrnují:
+    Vzhledem k tomu, že aplikace model Windows Forms jsou založené na událostech, vaše zarážky budou přecházet do kódu obslužné rutiny události nebo do metod volaných kódem obslužné rutiny události. Mezi obvyklé události, do kterých se mají umístit zarážky, patří:
 
-   1. Události související s ovládacím prvkem, jako je například klikněte na Enter, atd.
+   1. Události přidružené k ovládacímu prvku, jako je například Click, ENTER atd.
 
-   2. Události související s aplikací při spuštění a vypnutí, jako je zatížení, aktivováno atd.
+   2. Události spojené s spuštěním a vypnutím aplikace, jako je například Load, aktivované atd.
 
-   3. Fokus a události ověřování.
+   3. Události fokusu a ověření.
 
-      Další informace najdete v tématu [vytváření obslužných rutin událostí ve Windows Forms](/dotnet/framework/winforms/creating-event-handlers-in-windows-forms).
+      Další informace naleznete v tématu [vytváření obslužných rutin událostí v model Windows Forms](/dotnet/framework/winforms/creating-event-handlers-in-windows-forms).
 
-3. Na **ladění** nabídky, klikněte na tlačítko **Start**.
+3. V nabídce **ladit** klikněte na tlačítko **Start**.
 
-4. Ladění pomocí technik popsaných v [nejdřív se podívejte na ladicí program](../debugger/debugger-feature-tour.md).
+4. Ladění pomocí technik popsaných v [části první pohled na ladicí program](../debugger/debugger-feature-tour.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)
 - [Typy projektů jazyka C#, F# a Visual Basic](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)
 - [Postupy: Nastavení konfigurace ladění a verzí](../debugger/how-to-set-debug-and-release-configurations.md)

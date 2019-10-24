@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_acceleratorPointerTags | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_acceleratorPointerTags | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c1724ee3e81ac00ed048f323105842361ec22bc7
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: f36b4bf9fdd362f4941e33745d59d481a473c607
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62827291"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741118"
 ---
-# <a name="idiasymbolgetacceleratorpointertags"></a>IDiaSymbol::get_acceleratorPointerTags
-Vrátí všechny akcelerátoru hodnoty značky ukazatele, které odpovídají funkci jazyka C++ AMP akcelerátor zástupné procedury.
+# <a name="idiasymbolget_acceleratorpointertags"></a>IDiaSymbol::get_acceleratorPointerTags
+Vrátí všechny hodnoty značek akcelerátoru, které odpovídají funkci C++ zástupného kódu akcelerátoru amp.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,21 +32,21 @@ HRESULT get_acceleratorPointerTags(
 #### <a name="parameters"></a>Parametry
  `cnt`
 
-[in] Velikost pole výstup `pPointerTags`.
+pro Velikost výstupního pole `pPointerTags`.
 
  `pcnt`
 
-[out] Počet značek ukazatel akcelerátoru v C++ AMP akcelerátor zástupné procedury funkcí.
+mimo Počet značek akcelerátoru v rámci C++ funkce zástupného kódu akcelerátoru amp.
 
  `pPointerTags`
 
-[out] A `DWORD` pole ukazatel, který je vyplněna hodnot značek akcelerátoru ukazatel v C++ AMP akcelerátor zástupné procedury funkcí.
+mimo @No__t_0 ukazatel pole, který je vyplněn hodnotami značek akcelerátoru v zástupné C++ funkci akcelerátoru amp.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je volána na `IDiaSymbol` rozhraní, který odpovídá zástupné procedury funkce C++ AMP akcelerátor.
+ Tato metoda se volá na rozhraní `IDiaSymbol`, které odpovídá funkci zástupného kódu C++ akcelerátoru amp.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

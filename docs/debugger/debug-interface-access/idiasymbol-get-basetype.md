@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_basetype – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_baseType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1d38e39fd7687de3ff87737b49972cb389187aa
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 0a3d1bb8b2f3095fd35488c47f823e7b3603995b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62837604"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740922"
 ---
-# <a name="idiasymbolgetbasetype"></a>IDiaSymbol::get_baseType
-Získá základní typ pro tento symbol<em>.</em>
+# <a name="idiasymbolget_basetype"></a>IDiaSymbol::get_baseType
+Načte základní typ pro tento symbol<em>.</em>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,16 +33,16 @@ HRESULT get_baseType (
 #### <a name="parameters"></a>Parametry
 `pRetVal`
 
-[out] Vrátí hodnotu z [basictype – výčet](../../debugger/debug-interface-access/basictype.md) výčet určující základní typ symbolu.
+mimo Vrací hodnotu z výčtu [výčtu basictype –](../../debugger/debug-interface-access/basictype.md) určující základní typ symbolu.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
-Prvním načtení typ symbolu a pak dotazem, který vrátil typ pro základní typ stanovit základní typ pro symbol. Všimněte si, že některé symboly nemusí mít základní typ. – například název struktury.
+Základní typ pro symbol může být určen tak, že nejprve získá typ symbolu a potom interrogating, který vrátil typ pro základní typ. Všimněte si, že některé symboly nemusí mít základní typ, například název struktury.
 
 ## <a name="example"></a>Příklad
 
@@ -63,10 +63,10 @@ if (pType->get_type( &pBaseType ) == S_OK)
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|V7.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [BasicType – výčet](../../debugger/debug-interface-access/basictype.md)
 - [IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)

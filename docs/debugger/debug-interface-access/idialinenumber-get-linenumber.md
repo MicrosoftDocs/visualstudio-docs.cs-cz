@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_linenumber – | Dokumentace Microsoftu
+title: 'IDiaLineNumber:: get_lineNumber | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 77a1554e749e6f5186f7c99844cb793814b0129b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 726f5df7ff898675fc9253b47785c666d435a387
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839833"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743207"
 ---
-# <a name="idialinenumbergetlinenumber"></a>IDiaLineNumber::get_lineNumber
-Získá číslo řádku ve zdrojovém souboru.
+# <a name="idialinenumberget_linenumber"></a>IDiaLineNumber::get_lineNumber
+Načte číslo řádku ve zdrojovém souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_lineNumber ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí číslo řádku ve zdrojovém souboru.
+mimo Vrátí číslo řádku ve zdrojovém souboru.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
 
@@ -46,5 +46,5 @@ DWORD linenum;
 pLine->get_lineNumber( &linenum );
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

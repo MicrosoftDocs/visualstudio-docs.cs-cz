@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_pure – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_pure | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ee8b08c724f88c2fcbde7e2001aa89b47442e61
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 489a50da8c5af4c7e63f0c8109c2810716d598e7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64796106"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739469"
 ---
-# <a name="idiasymbolgetpure"></a>IDiaSymbol::get_pure
-Získá příznak, který určuje, jestli je funkce čistě virtuální.
+# <a name="idiasymbolget_pure"></a>IDiaSymbol::get_pure
+Načte příznak, který určuje, zda je funkce čistě virtuální.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_pure ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` Pokud funkce je čistě virtuální; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud je funkce čistě virtuální; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

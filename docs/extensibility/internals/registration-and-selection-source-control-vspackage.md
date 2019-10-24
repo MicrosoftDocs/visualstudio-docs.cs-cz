@@ -1,5 +1,5 @@
 ---
-title: Registrace a výběr (řízení zdrojového balíčku VSPackage) | Dokumentace Microsoftu
+title: Registrace a výběr (VSPackage správy zdrojového kódu) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,75 +11,75 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f9bb993f6acaa7cd1cf3980e128e869a643d028c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3d6ca60c74ae9956f38418ea6048bb0c8050be2c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310913"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72724510"
 ---
 # <a name="registration-and-selection-source-control-vspackage"></a>Registrace a výběr (balíček VSPackage správy zdrojového kódu)
-Ovládací prvek zdroje balíčku VSPackage musí být zaregistrovaný k vystavení tak, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Pokud se více než jeden ovládací prvek zdroje balíčku VSPackage zaregistruje, může uživatel vybrat které VSPackage načíst ve vhodných chvílích. Zobrazit [rozšíření VSPackages](../../extensibility/internals/vspackages.md) podrobné informace o rozšíření VSPackages a jak se zaregistrovat.
+Aby bylo možné zpřístupnit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], musí být balíček VSPackage správy zdrojového kódu zaregistrován. Pokud je registrováno více než jeden prvek VSPackage správy zdrojového kódu, může uživatel vybrat, který VSPackage se má načíst v odpovídajících časech. Další informace o VSPackage a o tom, jak je zaregistrovat, najdete v tématu [VSPackage](../../extensibility/internals/vspackages.md) .
 
-## <a name="registering-a-source-control-package"></a>Registrace balíčku zdrojového ovládacího prvku
- Zdrojový ovládací prvek balíček je zaregistrovaný tak, aby [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prostředí můžete najít a dotazů pro jeho podporované funkce. Toto je v souladu s zpoždění načítání schématu, ve kterém je vytvořena instance balíčku pouze při jeho funkce nebo příkazy jsou povinné nebo jsou explicitně požadována.
+## <a name="registering-a-source-control-package"></a>Registrace balíčku správy zdrojového kódu
+ Balíček správy zdrojového kódu je zaregistrovaný, aby [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prostředí mohl najít a dotaz na jeho podporované funkce. Je v souladu se schématem pro opožděné načítání, ve kterém se vytvoří instance balíčku pouze v případě, že jsou funkce nebo příkazy požadovány nebo jsou požadovány explicitně.
 
- Rozšíření VSPackages umístit informace v klíči registru specifické pro verzi, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*X.Y*, kde *X* je číslo hlavní verze a *Y* je číslo podverze. Tento postup umožňuje podporují instalaci více verzí modulu vedle sebe [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
+ VSPackage umístí informace do klíče registru specifického pro verzi HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio \\*X. Y*, kde *X* je hlavní číslo verze a *Y* je číslo menší verze. Tento postup nabízí možnost podporovat souběžnou instalaci více verzí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Uživatelského rozhraní (UI) podporuje výběru z několika nainstalovaný ovládací prvek moduly plug-in zdrojového kódu (prostřednictvím zdrojový ovládací prvek adaptér balíček) a také balíčků VSPackage správy zdrojového kódu. Může existovat pouze jeden modul plug-in správy zdrojů aktivní nebo VSPackage najednou. Ale jak je popsáno níže, integrované vývojové prostředí umožňuje přepínání mezi zdrojového ovládacího prvku moduly plug-in a rozšíření VSPackages prostřednictvím řešení na základě balíčku prohození mechanismus automatického. Existují některé požadavky ze strany správy zdrojového kódu VSPackage povolit tento mechanismus výběru.
+ Rozhraní [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] uživatelské rozhraní podporuje výběr z více instalovaných modulů plug-in pro správu zdrojového kódu (prostřednictvím balíčku správy zdrojového kódu) i správy zdrojového kódu. V jednom okamžiku může být pouze jeden modul plug-in nebo VSPackage aktivního ovládacího prvku zdrojového kódu. Jak je popsáno níže, integrované vývojové prostředí (IDE) umožňuje přepínání mezi moduly plug-in správy zdrojového kódu a VSPackage prostřednictvím automatického mechanismu výměny balíčků, který je založený na řešení. Pro povolení tohoto mechanismu výběru existují některé požadavky na součást balíčku VSPackage správy zdrojového kódu.
 
 ### <a name="registry-entries"></a>Položky registru
- Zdrojový ovládací prvek balíček potřebuje tři soukromé identifikátory GUID:
+ Balíček správy zdrojového kódu potřebuje tři privátní identifikátory GUID:
 
-- Identifikátor GUID balíčku: Toto je hlavní identifikátor GUID pro balíček, který obsahuje implementaci ovládacího prvku zdroje (nazývané ID_Package v této části).
+- GUID balíčku: Toto je hlavní identifikátor GUID balíčku, který obsahuje implementaci správy zdrojových kódů (s názvem ID_Package v této části).
 
-- Identifikátor GUID správy zdrojového kódu: Toto je identifikátor GUID pro správu verzí používá k registraci ve službě Visual Studio pomocí zástupných procedur ovládací prvek zdroje balíčku VSPackage a slouží také jako kontextu uživatelského rozhraní příkaz identifikátor GUID. Službu správy zdrojových kódů GUID je zaregistrovaný pod správou zdrojových kódů identifikátor GUID. V tomto příkladu se nazývá modul správy zdrojových kódů GUID ID_SccProvider.
+- Identifikátor GUID správy zdrojového kódu: Jedná se o identifikátor GUID pro VSPackage správy zdrojového kódu, který se používá k registraci ve službě Visual Studio Source Control stub a používá se také jako identifikátor GUID kontextu uživatelského rozhraní příkazu. Identifikátor GUID služby správy zdrojového kódu je zaregistrován pod identifikátorem GUID správy zdrojového kódu. V příkladu se identifikátor GUID správy zdrojového kódu nazývá ID_SccProvider.
 
-- Službu správy zdrojových kódů GUID: Jedná se o privátní službu GUID používá sada Visual Studio (nazývané SID_SccPkgService v této části). Kromě toho zdrojový balíček ovládací prvek musí definovat jiné identifikátory GUID pro balíčky VSPackages, okna nástrojů, a tak dále.
+- Identifikátor GUID služby správy zdrojového kódu: Toto je privátní GUID služby, kterou používá Visual Studio (s názvem SID_SccPkgService v této části). Kromě toho musí balíček správy zdrojových kódů definovat jiné identifikátory GUID pro VSPackage, okna nástrojů atd.
 
-  Následující položky registru musí být provedené balíčku VSPackage správy zdrojového kódu:
+  Následující položky registru musí být vytvořeny pomocí balíčku VSPackage správy zdrojového kódu:
 
 | Název klíče | Položky |
 | - | - |
-| `HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SourceControlProviders\` | (výchozí) = rg_sz: {ID_SccProvider} |
-| `HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SourceControlProviders\             {ID_SccProvider}\` | (výchozí) = rg_sz:\<popisný název balíčku ><br /><br /> Služba = rg_sz: {SID_SccPkgService} |
-| `HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SourceControlProviders\             {ID_SccProvider}\               Name\` | (výchozí) = rg_sz: #\<ID prostředku pro lokalizovaný název ><br /><br /> Balíček = rg_sz: {ID_Package} |
-| `HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SolutionPersistence\             <PackageName>\`<br /><br /> (Všimněte si, že název klíče, `SourceCodeControl`, je již využíván jiným [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a není k dispozici jako volba pro \<název_balíčku >.) | (výchozí) = rg_sz: {ID_Package} |
+| `HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SourceControlProviders\` | (výchozí) = RG_SZ: {ID_SccProvider} |
+| `HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SourceControlProviders\             {ID_SccProvider}\` | (výchozí) = RG_SZ: \<Friendly název balíčku ><br /><br /> Služba = RG_SZ: {SID_SccPkgService} |
+| `HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SourceControlProviders\             {ID_SccProvider}\               Name\` | (výchozí) = RG_SZ: # \<Resource ID pro lokalizovaný název ><br /><br /> Package = RG_SZ: {ID_Package} |
+| `HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SolutionPersistence\             <PackageName>\`<br /><br /> (Všimněte si, že název klíče, `SourceCodeControl`, je již využíván [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a není k dispozici jako volba pro \<PackageName >.) | (výchozí) = RG_SZ: {ID_Package} |
 
-## <a name="selecting-a-source-control-package"></a>Vyberte zdrojový balíček ovládacího prvku
- Několik založené na rozhraní API modulu Plug-in zdroje ovládacího prvku moduly plug-in a rozšíření VSPackages může současně zaregistrovat správy zdrojového kódu. Výběr modulu plug-in správy zdrojového kódu nebo balíčku VSPackage proces musíte zajistit, aby [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načte modul plug-in nebo VSPackage v příslušnou dobu a můžete odložit načítání zbytečné komponent, dokud jsou povinné. Kromě toho [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] musíte odebrat všechny uživatelského rozhraní od jiných neaktivní rozšíření VSPackages, včetně nabídek, dialogová okna a panely nástrojů a zobrazit uživatelské rozhraní pro aktivní VSPackage.
+## <a name="selecting-a-source-control-package"></a>Výběr balíčku správy zdrojového kódu
+ Některé moduly plug-in založené na rozhraní API pro správu zdrojového kódu a rozšíření pro správu zdrojového kódu mohou být souběžně registrovány. Proces výběru modulu plug-in nebo VSPackage pro správu zdrojového kódu musí zajistit, aby [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načetly modul plug-in nebo VSPackage v příslušném čase, a může odložit načítání zbytečných součástí, dokud nebudou požadovány. Kromě toho musí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] odebrat všechna uživatelská rozhraní z jiných neaktivních VSPackage, včetně položek nabídky, dialogových oken a panelů nástrojů, a zobrazit uživatelské rozhraní pro aktivní VSPackage.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načtení balíčku VSPackage správy zdrojového kódu při provádění kterékoli z následujících operací:
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načte VSPackage správy zdrojového kódu, když se provede kterákoli z následujících operací:
 
-- Otevření řešení (Pokud je řešení pod správou zdrojových kódů).
+- Řešení je otevřeno (když je řešení pod správou zdrojových kódů).
 
-   Při otevření řešení nebo projekt pod správou zdrojových kódů, rozhraní IDE způsobí, že správy zdrojového kódu VSPackage, která byla určena pro příslušné řešení, který se má načíst.
+   Když je otevřeno řešení nebo projekt pod správou zdrojového kódu, rozhraní IDE způsobí načtení balíčku pro správu zdrojového kódu, který byl určen pro toto řešení.
 
-- Některé příkazy ze zdrojového balíčku VSPackage provádějí.
+- Spustí se všechny příkazy nabídky balíčku VSPackage správy zdrojového kódu.
 
-  Ovládací prvek zdroje balíčku VSPackage by se měly načíst všechny součásti, které potřebuje pouze v případě, že se ve skutečnosti má být použita (jinak známé jako zpožděného načtení).
+  VSPackage správy zdrojového kódu by měl načítat jakékoli součásti, které potřebuje, jenom když se skutečně budou používat (jinak označované jako opožděné načítání).
 
-### <a name="automatic-solution-based-vspackage-swapping"></a>Vzájemná záměna automatické řešení na základě balíčku VSPackage
- Ručně odkládacího souboru správy zdrojového kódu rozšíření VSPackages prostřednictvím [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **možnosti** dialogového okna **správy zdrojových kódů** kategorie. Automatické řešení balíčků založená na vzájemné záměny znamená, že zdroj balíčku ovládací prvek, který je určený pro konkrétní řešení je automaticky nastaven na aktivní při otevření tohoto řešení. Každý balíček ovládací prvek zdroje by měly implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetActive%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetInactive%2A>. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zpracovává přepínání mezi oba zdroje moduly plug-in správy (implementace rozhraní API modulu Plug-in zdroje ovládacího prvku) a balíčků VSPackage správy zdrojového kódu.
+### <a name="automatic-solution-based-vspackage-swapping"></a>Automatické prohození balíčku VSPackage založené na řešení
+ Pomocí dialogového okna **možnosti** [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] v kategorii **Správa zdrojového kódu** můžete ručně prohodit správu zdrojového kódu. Automatické prohození balíčků založené na řešení znamená, že balíček správy zdrojového kódu, který je určený pro konkrétní řešení, je automaticky nastaven na aktivní, když je toto řešení otevřeno. Každý balíček správy zdrojového kódu by měl implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetActive%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetInactive%2A>. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zpracovává přepínač mezi moduly plug-in správy zdrojového kódu (implementací rozhraní API modulu plug-in správy zdrojových kódů) a VSPackage správy zdrojového kódu.
 
- Přepnout na každém založené na rozhraní API modulu Plug-in zdroje ovládacího prvku se používá balíček adaptér ovládací prvek zdroj modulu plug-in. Proces přepínání zprostředkující zdrojový ovládací prvek adaptér balíček a určení, které plug-in správy zdrojových kódů musí být nastavena na aktivní nebo neaktivní je pro uživatele transparentní. Balíček adaptér je aktivní, vždy když žádné plug-in správy zdrojových kódů je aktivní. Přepínání mezi dvě hodnoty moduly plug-in ovládací prvek zdroje k jednoduše načítání a uvolňování knihovnu DLL modulu plug-in. Přepnutí do balíčku VSPackage správy zdrojového kódu, ale zahrnuje interakce s integrovaným vývojovým prostředím k načtení příslušné VSPackage.
+ Balíček řídicího adaptéru zdrojového kódu se používá pro přepnutí na libovolný modul plug-in založený na modulu API pro správu zdrojového kódu. Proces přepnutí do balíčku zprostředkujícího adaptéru správy zdrojového kódu a určení, který modul plug-in správy zdrojových kódů musí být nastaven na hodnotu aktivní nebo neaktivní, je pro uživatele transparentní. Pokud je aktivní libovolný modul plug-in správy zdrojových kódů, je balíček adaptéru vždy aktivní. Přepínání mezi dvěma moduly plug-in pro správu zdrojového kódu – stačí k načtení a uvolnění knihovny DLL modulu plug-in. Přepnutí na VSPackage správy zdrojového kódu nicméně zahrnuje interakci s IDE k načtení vhodného VSPackage.
 
- Ovládací prvek zdroje balíčku VSPackage je volána, když je otevřené žádné řešení a klíče registru pro sady VSPackage je v souboru řešení. Po otevření řešení [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hodnotu registru vyhledá a načte odpovídající zdrojového balíčku VSPackage. Všechny správy zdrojového kódu rozšíření VSPackages musí mít položky registru je popsáno výše. Řešení, které je pod správou zdrojových kódů je označena jako jsou spojeny s konkrétní zdrojového balíčku VSPackage. Musí implementovat balíčků VSPackage správy zdrojového kódu <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence> povolit automatické řešení na základě balíčku VSPackage prohození.
+ Rozhraní VSPackage správy zdrojového kódu se volá, když se otevře nějaké řešení a klíč registru pro VSPackage je v souboru řešení. Po otevření řešení [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] najde hodnotu registru a načte příslušný balíček VSPackage pro správu zdrojového kódu. Všechny VSPackage správy zdrojového kódu musí obsahovat položky registru popsané výše. Řešení, které je pod správou zdrojových kódů, je označeno jako přidružené ke konkrétnímu balíčku VSPackage správy zdrojového kódu. Sady VSPackage správy zdrojového kódu musí implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence>, aby se povolilo automatické prohození sady VSPackage založené na řešení.
 
-### <a name="visual-studio-ui-for-package-selection-and-switching"></a>Visual Studio uživatelského rozhraní pro výběr balíčku a přepínání
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] poskytuje uživatelské rozhraní pro balíčku VSPackage správy zdrojového kódu a výběr modulu plug-in v **možnosti** dialogového okna **správy zdrojových kódů** kategorie. Umožňuje uživateli vybrat aktivní plug-in správy zdrojových kódů nebo VSPackage. Rozevírací seznam obsahuje:
+### <a name="visual-studio-ui-for-package-selection-and-switching"></a>Uživatelské rozhraní sady Visual Studio pro výběr a přepínání balíčku
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] poskytuje uživatelské rozhraní pro VSPackage správy zdrojového kódu a výběr modulů plug-in v dialogovém okně **Možnosti** v kategorii **Správa zdrojového kódu** . Umožňuje uživateli vybrat modul plug-in nebo VSPackage aktivního ovládacího prvku pro správu zdrojového kódu. Rozevírací seznam obsahuje:
 
 - Všechny nainstalované balíčky správy zdrojového kódu
 
-- Všechny nainstalované moduly plug-in programu zdrojového ovládacího prvku
+- Všechny nainstalované moduly plug-in správy zdrojových kódů
 
-- "Žádná" možnost, která zakáže zdrojového kódu
+- Možnost None, která zakazuje řízení zdrojového kódu
 
-  Je viditelný pouze v uživatelském rozhraní podle výběru ovládacího prvku aktivní zdrojové. Výběr balíčku VSPackage skryje uživatelské rozhraní pro předchozí VSPackage a zobrazuje uživatelské rozhraní pro nový uzel. Aktivní VSPackage je vybrána na základě jednotlivých uživatelů. Pokud má několik kopií [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] otevřete souběžně, potenciálně každé z nich můžete použít jiné aktivní VSPackage. Pokud více uživatelům přihlášení do stejného počítače, každý uživatel může mít samostatné instance [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] otevřete, každý s jinou aktivní VSPackage. Pokud více instancí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zavřou uživatelem, správy zdrojového kódu VSPackage, který byl aktivní pro poslední otevřít řešení stane výchozí zdrojového balíčku VSPackage nastavit aktivní při restartování.
+  Je viditelné pouze uživatelské rozhraní pro volbu aktivní správy zdrojového kódu. Výběr VSPackage skryje uživatelské rozhraní pro předchozí VSPackage a zobrazí uživatelské rozhraní pro nový. Aktivní VSPackage se vybere na základě jednotlivých uživatelů. Pokud má uživatel více kopií [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] otevřeno souběžně, každá z nich může potenciálně použít jiný aktivní VSPackage. Pokud se ke stejnému počítači přihlašuje více uživatelů, může mít každý uživatel samostatné instance [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] otevřít, z nichž každý má jiný aktivní VSPackage. Když uživatel zavře víc instancí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], otevře se sada VSPackage správy zdrojového kódu, která byla aktivní pro poslední otevřené řešení, jako výchozí prvek VSPackage správy zdrojového kódu, který se nastaví jako aktivní při restartu.
 
-  Na rozdíl od předchozích verzí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], restartování integrovaného vývojového prostředí již není jediným způsobem, jak přepnout balíčků VSPackage správy zdrojového kódu. Výběr balíčku VSPackage je automatické. Přepínání balíčky vyžaduje oprávnění uživatele Windows (ne správce nebo Power Users).
+  Na rozdíl od předchozích verzí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] není restartování IDE jediným způsobem, jak přepínat VSPackage správy zdrojového kódu. Výběr VSPackage je automatický. Přepínání balíčků vyžaduje oprávnění uživatele systému Windows (nikoli správce nebo Power Users).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence>
 - [Funkce](../../extensibility/internals/source-control-vspackage-features.md)
 - [Vytvoření modulu plug-in správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-plug-in.md)

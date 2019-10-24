@@ -1,5 +1,5 @@
 ---
-title: IDiaPropertyStorage::ReadBSTR | Dokumentace Microsoftu
+title: 'IDiaPropertyStorage:: Readbstr – | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f0bff81499fe8ea66ce5d4f50616adfec44d3002
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ef0b5bac11a1bf3da7e8081f7ae24b6a7a6f1a71
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839625"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742921"
 ---
 # <a name="idiapropertystoragereadbstr"></a>IDiaPropertyStorage::ReadBSTR
-Přečte `BSTR` hodnoty v sadu vlastností.
+Přečte `BSTR` hodnoty v sadě vlastností.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,17 +34,17 @@ HRESULT ReadBSTR ( 
 #### <a name="parameters"></a>Parametry
  `id`
 
-[in] Identifikátor vlastnosti pro čtení (`PROPID` je definována v WTypes.h jako `ULONG`).
+pro Identifikátor vlastnosti, která má být načtena (`PROPID` je definována v WTypes. h jako `ULONG`).
 
  `pValue`
 
-[out] Vrátí hodnotu vlastnosti.
+mimo Vrátí hodnotu vlastnosti.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_INVALIDARG` Pokud vlastnost není typu `BSTR`.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_INVALIDARG`, pokud vlastnost není typu `BSTR`.
 
 ## <a name="remarks"></a>Poznámky
- A `BSTR` je definován Windows jako řetězec širokých znaků ukončit nulou.
+ @No__t_0 definuje systém Windows jako řetězec znaků s nulovou šířkou zakončený řetězcem.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

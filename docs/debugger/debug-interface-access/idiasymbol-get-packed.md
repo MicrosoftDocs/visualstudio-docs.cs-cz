@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_packed – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_packed | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 91e99da7832bb2a0e067de6eb3c09f90255eaf32
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 420ba5b56342b4b1d5b8e4c2756aa828e5fe53b4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64785843"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739528"
 ---
-# <a name="idiasymbolgetpacked"></a>IDiaSymbol::get_packed
-Získá příznak, který určuje, zda je zabalena uživatelsky definovaný datový typ (UDT).
+# <a name="idiasymbolget_packed"></a>IDiaSymbol::get_packed
+Načte příznak, který určuje, zda je uživatelem definovaný datový typ (UDT) zabalen.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,16 +33,16 @@ HRESULT get_packed ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` Pokud UDT je zabalena; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud je sbalený parametr UDT; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Provedené zabalené znamená, že všichni členové UDT jsou umístěny v co nejblíže k sobě, s žádné odsazení použité pro zarovnání na hranicích paměti.
+ Zabalený znamená, že všechny členy UDT jsou umístěné co nejblíže k dispozici, bez toho, aby se odsazení nerovnalo hranicím paměti.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

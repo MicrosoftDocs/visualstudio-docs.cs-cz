@@ -1,5 +1,5 @@
 ---
-title: Příkazy definované prostředím IDE, nabídky a skupiny | Dokumentace Microsoftu
+title: Příkazy, nabídky a skupiny definované rozhraním IDE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,43 +12,43 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5158a9d1a06ec6f08c67777e4f1ce2e4d37220e3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: af6d3e180e2b3d5eb2e0f6c85b7488761e160c69
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66315662"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72727287"
 ---
 # <a name="ide-defined-commands-menus-and-groups"></a>Příkazy, nabídky a skupiny definované integrovaným vývojovým prostředím
-Počet nabídek, příkazy a skupinu příkazů jsou již definovány pro použití [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí. Tyto příkazy jsou také k dispozici pro použití při rozšíření [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
+Mnoho nabídek, příkazů a skupin příkazů je již definováno pro použití rozhraním IDE [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Tyto příkazy jsou k dispozici také pro vaše použití při rozšiřování [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
 
-## <a name="finding-environment-defined-commands"></a>Hledání příkazů prostředí definované
- Příkazy prostředí jsou definovány v sadě čtyři soubory .vsct:
+## <a name="finding-environment-defined-commands"></a>Hledání příkazů definovaných prostředím
+ Příkazy prostředí jsou definované v sadě čtyř souborů. vsct:
 
-- SharedCmdDef.vsct
+- SharedCmdDef. vsct
 
-- SharedCmdPlace.vsct
+- SharedCmdPlace. vsct
 
-- ShellCmdDef.vsct
+- ShellCmdDef. vsct
 
-- ShellCmdPlace.vsct
+- ShellCmdPlace. vsct
 
-  Tyto soubory jsou umístěny v  *\<Visual Studio SDK instalační_cesta >* \VisualStudioIntegration\Common\Inc\\. Tyto soubory poskytují definice a identifikátory GUID nabídek a skupiny, které můžete použít v souboru konfigurace (.vsct) tabulky příkazů z vašeho balíčku VSPackage jako kontejnery pro nabídky, skupiny a příkazy.
+  Tyto soubory jsou umístěny v *instalační cestě sady \<Visual Studio SDK >* \VisualStudioIntegration\Common\Inc \\. Tyto soubory obsahují definice a identifikátory GUID nabídek a skupin, které můžete použít v souboru konfigurace příkazového řádku (. vsct) své sady VSPackage jako kontejnery pro vlastní nabídky, skupiny a příkazy.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 - [Identifikátory GUID a ID nabídek sady Visual Studio](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)
 
- Poskytuje hodnoty GUID a ID nabídky na řádku nabídek sady Visual Studio a skupin, které obsahují.
+ Poskytuje hodnoty identifikátoru GUID a ID pro nabídky na řádku nabídek sady Visual Studio a ve skupinách, které obsahují.
 
 - [Identifikátory GUID a ID panelů nástrojů sady Visual Studio](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)
 
- Poskytuje hodnoty GUID a ID panelů nástrojů v sadě Visual Studio IDE a skupin, které obsahují.
+ Poskytuje hodnoty identifikátoru GUID a ID pro panely nástrojů v integrovaném vývojovém prostředí sady Visual Studio a skupiny, které obsahují.
 
 - [Identifikátory GUID a ID příkazů sady Visual Studio](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md)
 
- Poskytuje hodnoty GUID a ID příkazy definované v integrovaném vývojovém prostředí sady Visual Studio.
+ Poskytuje identifikátory GUID a ID příkazů, které jsou definovány v integrovaném vývojovém prostředí sady Visual Studio.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 - [Příkazy definované prostředím IDE pro rozšíření systémů projektů](../../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)
 - [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)

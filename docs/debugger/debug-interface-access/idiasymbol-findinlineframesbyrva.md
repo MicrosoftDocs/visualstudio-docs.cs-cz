@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findInlineFramesByRVA | Dokumentace Microsoftu
+title: 'IDiaSymbol:: findInlineFramesByRVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d43863f44ec80dce283b1746be12f7a6f47cfe4f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 3e174db264a7d8c3576054fcccf8da333d3e1e76
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62838981"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741167"
 ---
 # <a name="idiasymbolfindinlineframesbyrva"></a>IDiaSymbol::findInlineFramesByRVA
-Načte výčet, který umožňuje klientovi iterovat přes všechny vložené rámce na zadaný relativní virtuální adrese (RVA).
+Načte výčet, který umožňuje klientovi iterovat všemi vloženými snímky na zadané relativní virtuální adrese (RVA).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,16 +31,16 @@ HRESULT findInlineFramesByRVA (    DWORD             rva,
 #### <a name="parameters"></a>Parametry
  `rva`
 
-[in] Určuje adresu jako adresu RVA.
+pro Určuje adresu jako RVA.
 
  `ppResult`
 
-[out] Obsahuje `IDiaEnumSymbols` objekt, který obsahuje seznam snímků, které jsou načteny.
+mimo Obsahuje objekt `IDiaEnumSymbols`, který obsahuje seznam rámců, které jsou načteny.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)

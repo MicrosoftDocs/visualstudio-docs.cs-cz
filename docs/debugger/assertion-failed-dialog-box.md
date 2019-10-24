@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno selhání kontrolního výrazu | Dokumentace Microsoftu
+title: Dialogové okno kontrolního seznamu se nezdařilo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -20,22 +20,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 39362adf5837e3293782df04627af9acd06fdd88
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cb42067bb4c88777a6c25ace71f53b9d9b3aa36b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564616"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745771"
 ---
 # <a name="assertion-failed-dialog-box"></a>Dialogové okno Kontrolní výraz je neplatný
-Příkaz kontrolní výraz určuje podmínku, která očekávat k uložení true v určitém okamžiku konkrétní aplikace. Pokud tuto podmínku neobsahuje hodnotu true, výraz se nezdaří, dojde k přerušení provádění programu a se zobrazí toto dialogové okno.
+Příkaz kontrolního výrazu Určuje podmínku, kterou očekáváte, že v určitém místě v programu bude platit hodnota true. Pokud tato podmínka nedrží hodnotu true, kontrolní výraz se nezdařil, provádění programu je přerušeno a toto dialogové okno se zobrazí.
 
 |Klikněte na...|Chcete-li|
 |-----------|--------|
-|Retry|Kontrolní výraz ladění nebo získat nápovědu k nepodmíněné výrazy.|
-|Ignorovat|Ignorovat kontrolního výrazu a pokračování ve spouštění programu.|
-|Přerušení|Zastavit provádění programu a ukončení relace ladění.|
+|Opakujte|Ladit kontrolní výraz nebo získat nápovědu k kontrolním výrazům.|
+|Ohled|Ignorujte kontrolní výraz a pokračujte v běhu programu.|
+|Přerušit|Zastaví provádění programu a ukončí relaci ladění.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Kontrolní výrazy jazyka C/C++](../debugger/c-cpp-assertions.md)

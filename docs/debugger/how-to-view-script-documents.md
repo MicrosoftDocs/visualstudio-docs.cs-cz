@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zobrazení dokumentů skriptu | Dokumentace Microsoftu'
+title: 'Postupy: zobrazení dokumentů skriptu | Microsoft Docs'
 ms.date: 01/08/2019
 ms.topic: conceptual
 dev_langs:
@@ -15,35 +15,35 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 821e3bc4abc379f0ed7fc1343867f88fefe54b17
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7696122cc9f0d431f310b8d6efb10819af995823
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62906064"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731853"
 ---
-# <a name="how-to-view-script-documents-javascript"></a>Postupy: Zobrazení dokumentů skriptu (JavaScript)
+# <a name="how-to-view-script-documents-javascript"></a>Postupy: zobrazení dokumentů skriptu (JavaScript)
 
-Soubory skriptu na straně serveru jsou viditelné v Průzkumníku řešení. Soubory skriptu na straně klienta jsou viditelné pouze v případě, že jsou v režimu ladění nebo v režimu pozastavení. Soubory skriptu na straně klienta se zobrazí v **dokumenty skriptu** uzlu.
+Soubory skriptu na straně serveru jsou viditelné v Průzkumník řešení. Soubory skriptu na straně klienta jsou viditelné pouze v režimu ladění nebo režimu přerušení. Soubory skriptu na straně klienta se zobrazí v uzlu **dokumenty skriptu** .
 
 > [!NOTE]
-> Před [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)], skript na straně klienta soubory vygenerované ze skriptu na straně serveru se zobrazily v okně Průzkumník skriptů.
+> Předchozí [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] se v okně Průzkumník skriptů objevily soubory skriptu na straně klienta generované ze skriptu na straně serveru.
 
-### <a name="to-view-a-server-side-script-document"></a>Chcete-li zobrazit dokument skriptu na straně serveru
+### <a name="to-view-a-server-side-script-document"></a>Zobrazení dokumentu skriptu na straně serveru
 
-1. V **Průzkumníka řešení**, otevřete  **\<webu cesta >** uzlu.
+1. V **Průzkumník řešení**otevřete uzel **\<Website cesta >** .
 
-2. Poklikejte na soubor skriptu, který chcete zobrazit.
+2. Dvakrát klikněte na soubor skriptu, který chcete zobrazit.
 
-     Soubor skriptu na straně serveru se otevře v okně zdroje.
+     V okně zdrojového kódu se otevře soubor skriptu na straně serveru.
 
-### <a name="to-view-a-client-side-script-document"></a>Chcete-li zobrazit dokument skriptu na straně klienta
+### <a name="to-view-a-client-side-script-document"></a>Zobrazení dokumentu skriptu na straně klienta
 
-1. V **Průzkumníka řešení**, otevřete **dokumenty skriptu** uzlu.
+1. V **Průzkumník řešení**otevřete uzel **dokumenty skriptu** .
 
-2. Poklikejte na soubor skriptu, který chcete zobrazit.
+2. Dvakrát klikněte na soubor skriptu, který chcete zobrazit.
 
-     Soubor skriptu na straně klienta se otevře v okně zdroje.
+     V okně zdrojového kódu se otevře soubor skriptu na straně klienta.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)

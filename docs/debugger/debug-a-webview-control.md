@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 8ba9b0eb17a492bf1912281038ffc35732ece96d
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: 2ce889f83c4d21a8b2464cab108fa165e1144791
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589072"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745578"
 ---
 # <a name="debug-a-webview-control-in-a-uwp-app"></a>Ladění ovládacího prvku WebView v aplikaci UWP
 
@@ -83,6 +83,6 @@ ms.locfileid: "72589072"
 
 6. Zobrazení a úprava proměnných ve vaší aplikaci nebo použití příkazů konzoly, jak je popsáno v tématu [rychlý Start: ladění](../debugger/quickstart-debug-javascript-using-the-console.md) [příkazů konzoly](../debugger/javascript-console-commands.md?view=vs-2017)JavaScript a JavaScript.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Rychlý start: Ladění kódu HTML a CSS](../debugger/quickstart-debug-html-and-css.md)

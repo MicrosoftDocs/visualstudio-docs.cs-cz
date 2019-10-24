@@ -1,5 +1,5 @@
 ---
-title: Registrace generátorů tvořených jedním souborem | Dokumentace Microsoftu
+title: Registrují se generátory jednoho souboru | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,21 +11,21 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5b0c3bf7c8260506eabf56113992c985e1cc8669
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e9026da08272d69bac246f98ae741a47527d627f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351013"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72724556"
 ---
 # <a name="registering-single-file-generators"></a>Registrace generátorů tvořených jedním souborem
-Zpřístupnit ve vlastní nástroj [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], je třeba jej zaregistrovat tak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] lze vytvořit instanci a přidruží ji k konkrétní typ projektu.
+Chcete-li zpřístupnit vlastní nástroj v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], je nutné jej zaregistrovat, aby [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] mohl vytvořit jeho instanci a přidružit ho k určitému typu projektu.
 
-### <a name="to-register-a-custom-tool"></a>K registraci vlastního nástroje
+### <a name="to-register-a-custom-tool"></a>Registrace vlastního nástroje
 
-1. Buď registrovat vlastní nástroj knihovny DLL v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] místního registru nebo v systémovém registru, v části HKEY_CLASSES_ROOT.
+1. Zaregistrujte vlastní knihovnu DLL nástrojů buď v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] místním registru, nebo v registru systému v registru HKEY_CLASSES_ROOT.
 
-    Například tady je registrační informace pro spravované MSDataSetGenerator vlastní nástroj, který se dodává s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]:
+    Tady je například registrační informace pro vlastní nástroj spravované MSDataSetGenerator, který se dodává s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]:
 
    ```
    [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0\CLSID\{E76D53CC-3D4F-40A2-BD4D-4F3419755476}]
@@ -36,24 +36,24 @@ Zpřístupnit ve vlastní nástroj [!INCLUDE[vsprvs](../../code-quality/includes
    "Assembly"="Microsoft.VSDesigner, Version=14.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a"
    ```
 
-2. Vytvořte klíč registru v požadovaný [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hive v rámci generátorů\\*GUID* kde *GUID* identifikátor GUID určen systém projektu konkrétní jazyk nebo služby. Název klíče bude programový název vlastního nástroje. Vlastní nástroj klíč má následující hodnoty:
+2. Vytvořte klíč registru v požadovaném podregistru [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] v části generátory \\*GUID* , kde *GUID* je identifikátor GUID definovaný systémem projektu nebo službou konkrétního jazyka. Název klíče se bude programovým názvem vlastního nástroje. Klíč vlastního nástroje má následující hodnoty:
 
    - (Výchozí)
 
         Volitelné. Poskytuje uživatelsky přívětivý popis vlastního nástroje. Tento parametr je nepovinný, ale doporučený.
 
-   - IDENTIFIKÁTOR CLSID
+   - CLSID
 
-        Povinný parametr. Určuje identifikátor knihovně tříd rozhraní komponenty modelu COM, který implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>.
+        Požadováno. Určuje identifikátor knihovny tříd komponenty modelu COM, která implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>.
 
    - GeneratesDesignTimeSource
 
-        Povinný parametr. Určuje, zda typy z soubory vytvořené jazykem tohoto vlastního nástroje jsou k dispozici pro vizuální návrháře. Hodnota tohoto parametru musí být 0 (nula) typy nejsou k dispozici pro vizuální návrháře nebo 1 (jeden) pro typy, které jsou k dispozici pro vizuální návrháře.
+        Požadováno. Určuje, zda jsou typy ze souborů vytvořených tímto vlastním nástrojem zpřístupněny vizuálním návrhářům. Hodnota tohoto parametru musí být (nula) 0 pro typy, které nejsou k dispozici pro vizuální návrháře nebo (jedna) 1 pro typy, které jsou k dispozici pro vizuální návrháře.
 
    > [!NOTE]
-   > Je nutné zaregistrovat vlastní nástroj samostatně pro každý jazyk, pro které chcete vlastní nástroj být k dispozici.
+   > Vlastní nástroj musíte zaregistrovat samostatně pro každý jazyk, pro který chcete, aby byl vlastní nástroj dostupný.
 
-    Například MSDataSetGenerator registruje sama sebe jednou pro každý jazyk:
+    Například MSDataSetGenerator registruje sebe sama pro každý jazyk:
 
    ```
    [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0\Generators\{164b10b9-b200-11d0-8c61-00a0c91e29d5}\MSDataSetGenerator]
@@ -67,8 +67,8 @@ Zpřístupnit ve vlastní nástroj [!INCLUDE[vsprvs](../../code-quality/includes
    "GeneratesDesignTimeSource"=dword:00000001
    ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>
 - [Implementace generátorů tvořených jedním souborem](../../extensibility/internals/implementing-single-file-generators.md)
 - [Zveřejnění typů pro vizuální návrháře](../../extensibility/internals/exposing-types-to-visual-designers.md)
-- [Představení objektu BuildManager](https://msdn.microsoft.com/library/50080ec2-c1c9-412c-98ef-18d7f895e7fa)
+- [Úvod do objektu BuildManager](https://msdn.microsoft.com/library/50080ec2-c1c9-412c-98ef-18d7f895e7fa)

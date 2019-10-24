@@ -1,5 +1,5 @@
 ---
-title: IDiaSourceFile::get_uniqueId | Microsoft Docs
+title: 'IDiaSourceFile:: get_uniqueId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c4a204e04c1c99dcbe8c6ba6d5e3457ca875dde4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 30a210c12384cbde55dafe6f3410b8fc840e8507
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832250"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741793"
 ---
-# <a name="idiasourcefilegetuniqueid"></a>IDiaSourceFile::get_uniqueId
-Načte hodnotu klíče jednoduché celé číslo, které jsou jedinečné pro tuto bitovou kopii.
+# <a name="idiasourcefileget_uniqueid"></a>IDiaSourceFile::get_uniqueId
+Načte jednoduchou celočíselnou hodnotu klíče, která je pro tento obrázek jedinečná.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_uniqueId ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí hodnotu klíče jednoduché celé číslo, které jsou jedinečné pro tuto bitovou kopii.
+mimo Vrací jednoduchou celočíselnou hodnotu klíče, která je pro tento obrázek jedinečná.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Porovnání klíčů, nikoli řetězce může zrychlit zpracování čísla řádku.
+ Porovnávání klíčů, nikoli řetězců, může urychlit zpracování čísla řádku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)
