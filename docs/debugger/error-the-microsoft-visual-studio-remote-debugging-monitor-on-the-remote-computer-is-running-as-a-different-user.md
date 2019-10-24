@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Sledování vzdáleného ladění sady Microsoft Visual Studio je na vzdáleném počítači spuštěné pod jiným uživatelským účtem.'
+title: 'Chyba: Microsoft Visual Studio Remote Debugging Monitor na vzdáleném počítači běží jako jiný uživatel.'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
@@ -21,27 +21,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 607369b4b10a98e9464a0ede15e2f9dce5fac5a9
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: b5ff383b279bbdac85ce85de6e65b857cec6a8e7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63399149"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737480"
 ---
-# <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user"></a>Chyba: Sledování vzdáleného ladění sady Microsoft Visual Studio je na vzdáleném počítači spuštěné pod jiným uživatelským účtem.
-Při pokusu o provádět vzdálené ladění, může zobrazit následující chybová zpráva:
+# <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user"></a>Chyba: Microsoft Visual Studio Remote Debugging Monitor na vzdáleném počítači běží jako jiný uživatel.
+Při pokusu o vzdálené ladění se může zobrazit následující chybová zpráva:
 
- Microsoft Visual Studio Remote Debugging Monitor na vzdáleném počítači běží jako jiný uživatel.
+ Microsoft Visual Studio Sledování vzdáleného ladění na vzdáleném počítači je spuštěný jako jiný uživatel.
 
 ## <a name="cause"></a>příčina
- Tato zpráva se zobrazí při ladění v módu bez ověřování a uživatel, který spuštění msvsmon není uživatel, který se systémem Visual Studio.
+ Tato zpráva se zobrazí, když ladíte v režimu bez ověřování a uživatel, který spustil msvsmon, není uživatel, který používá Visual Studio.
 
 ## <a name="solution"></a>Řešení
- Nejbezpečnější a nejlepší řešení je pro spuštění sledování vzdáleného ladění (msvsmon.exe) pod stejným uživatelským účtem jako Visual Studio. Pokud nemůžete udělat, můžete pod jiným účtem se spustit sledování vzdáleného ladění **dovolit ladění jakémukoliv uživateli** možnosti vybrané v sledování vzdáleného ladění **možnosti** dialogové okno.
+ Nejbezpečnější a nejlepší řešení je spustit Sledování vzdáleného ladění (Msvsmon. exe) pod stejným uživatelským účtem jako Visual Studio. Pokud to nemůžete udělat, můžete spustit Sledování vzdáleného ladění pod druhým účtem s možností **Povolit libovolný uživatel k ladění** vybraný v dialogovém okně **Možnosti** sledování vzdáleného ladění.
 
 > [!CAUTION]
-> Udělení oprávnění pro připojení jiných uživatelů umožňuje možnost nechtěným připojením k nesprávné relace vzdáleného ladění. Ladění v **bez ověřování** režimu se nikdy zabezpečené a by měl třeba používat opatrně.
+> Udělení oprávnění ostatním uživatelům pro připojení umožňuje nechtěnému připojení k nesprávnému relaci vzdáleného ladění. Ladění v režimu **bez ověřování** není nikdy zabezpečené a mělo by se používat opatrně.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Chyby při vzdáleném ladění a jejich řešení](../debugger/remote-debugging-errors-and-troubleshooting.md)
 - [Vzdálené ladění](../debugger/remote-debugging.md)

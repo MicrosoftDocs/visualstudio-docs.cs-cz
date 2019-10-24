@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3add6e3e4f38b5ba73cd5154720d7b283189526e
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 8cf721e9880ce7f0b7c3191f73f16366637f0704
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461490"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748873"
 ---
 # <a name="manage-assembly-and-manifest-signing"></a>Správa podepsání sestavení a manifestu
 
@@ -29,7 +29,7 @@ Silný název se skládá z identity sestavení (jednoduchý textový název, č
 
 Informace o podepisování sestavení v Visual Basic a C# projektech naleznete v tématu [Create and use silně pojmenované sestavení](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).
 
-Informace o podepisování sestavení v vizuálních C++ projektech naleznete v tématu [sestavení se silnýmC++názvem (/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli).
+Informace o podepisování sestavení v C++ projektech naleznete v tématu [sestavení se silným názvemC++(/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli).
 
 > [!NOTE]
 > Podepisování silného názvu není chráněno proti zpětné analýze sestavení. Informace o ochraně před zpětným inženýrstvím najdete v tématu [komunita Dotfuscator](dotfuscator/index.md).
@@ -48,7 +48,7 @@ Můžete podepsat sestavení .NET a manifesty aplikace:
 
 Podepište následující typy assetu:
 
-1. Sestavení, pokud je chcete nasadit do globální mezipaměti sestavení (GAC).
+1. sestavení, pokud je chcete nasadit do globální mezipaměti sestavení (GAC).
 
 2. ClickOnce aplikace a manifesty nasazení. Visual Studio umožňuje přihlášení ve výchozím nastavení pro tyto aplikace.
 
@@ -67,9 +67,9 @@ Zadejte soubor klíče. Pokud se rozhodnete vytvořit nový soubor klíče, budo
 
 Můžete také Ukázat na klíč, který jste už vytvořili. Další informace o vytváření klíčů najdete v tématu [vytvoření dvojice klíčů veřejného a soukromého klíče](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair).
 
-Pokud máte přístup jenom k veřejnému klíči, můžete k odložení přiřazení klíče použít zpožděné podepisování. Zpožděné podepisování povolíte zaškrtnutím políčka **pouze zpožděné přihlášení** . Projekt se zpožděným podpisem se nespustí a nemůžete ho ladit. Ověřování však můžete přeskočit během vývoje pomocí [nástroje Sn. exe Strong Name](/dotnet/framework/tools/sn-exe-strong-name-tool) s `-Vr` možností.
+Pokud máte přístup jenom k veřejnému klíči, můžete k odložení přiřazení klíče použít zpožděné podepisování. Zpožděné podepisování povolíte zaškrtnutím políčka **pouze zpožděné přihlášení** . Projekt se zpožděným podpisem se nespustí a nemůžete ho ladit. Ověřování však můžete přeskočit během vývoje pomocí [nástroje Sn. exe Strong Name](/dotnet/framework/tools/sn-exe-strong-name-tool) s možností `-Vr`.
 
-Informace o podepisování manifestů naleznete v tématu [How to: Podepište manifesty](../ide/how-to-sign-application-and-deployment-manifests.md)aplikace a nasazení.
+Informace o podepisování manifestů naleznete v tématu [How to: Signing Application and Deployment Manifests](../ide/how-to-sign-application-and-deployment-manifests.md).
 
 ## <a name="see-also"></a>Viz také:
 

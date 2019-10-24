@@ -1,5 +1,5 @@
 ---
-title: Idiaenuminjectedsources::get__newenum – | Dokumentace Microsoftu
+title: 'IDiaEnumInjectedSources:: get__NewEnum | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd2eb5df6c5635a2b2407cf9286b175a593dc25a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3b1a1a03545b20591aaa4c4e95f25d5927c428fc
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554170"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744524"
 ---
-# <a name="idiaenuminjectedsourcesgetnewenum"></a>IDiaEnumInjectedSources::get__NewEnum
-Načte <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> verzi výčet.
+# <a name="idiaenuminjectedsourcesget__newenum"></a>IDiaEnumInjectedSources::get__NewEnum
+Načte <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> verzi tohoto enumerátoru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,10 +32,10 @@ HRESULT get__NewEnum ( 
 
 #### <a name="parameters"></a>Parametry
  pRetVal
-- [out, retval] Vrátí `IUnknown` rozhraní zastupující <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> verzi výčet.
+- [out, retval] Vrátí rozhraní `IUnknown`, které představuje <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> verzi tohoto enumerátoru.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

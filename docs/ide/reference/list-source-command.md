@@ -14,12 +14,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3123479d819662905020c27060e1234bd01c9077
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6c211773f20ab4643b62c8c71fc6ae6581a91987
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72610506"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747893"
 ---
 # <a name="list-source-command"></a>Listovat zdroj – příkaz
 Zobrazí zadané řádky zdrojového kódu.
@@ -59,7 +59,7 @@ Tento příklad uvádí zdrojový kód ze řádku 4 souboru Form1. vb s čísly 
 Debug.ListSource /File:"C:\Visual Studio Projects\Form1.vb" /Line:4 /ShowLineNumbers:yes
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)

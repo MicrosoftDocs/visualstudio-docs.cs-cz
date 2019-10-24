@@ -1,5 +1,5 @@
 ---
-title: Seznam instaluje fragmenty kódu (starší verze) | Dokumentace Microsoftu
+title: Získání seznamu nainstalovaných fragmentů kódu (starší verze) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,23 +12,23 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: de116d6abb995375ba04ae1e8407eba7754ae5e9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 072827bbb9676ba49df5ccd69f329ea9b04c78b2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323376"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72721662"
 ---
 # <a name="walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation"></a>Návod: Získání seznamu nainstalovaných fragmentů kódu (implementace starší verze)
-Fragment kódu je část kódu, který může být vložen do zdrojové vyrovnávací paměti pomocí příkazu nabídky (která umožňuje vybrat ze seznamu nainstalovaných fragmentů kódu,) nebo pomocí zástupce fragment výběrem ze seznamu doplňování technologie IntelliSense.
+Fragment kódu je část kódu, kterou lze vložit do zdrojové vyrovnávací paměti buď pomocí příkazu nabídky (který umožňuje výběr ze seznamu nainstalovaných fragmentů kódu), nebo výběrem zástupce fragmentu ze seznamu dokončení technologie IntelliSense.
 
- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.EnumerateExpansions%2A> Metoda získá všechny fragmenty kódu pro konkrétní jazyk identifikátor GUID. Klávesové zkratky pro tyto fragmenty kódu lze vložit do seznamu doplňování technologie IntelliSense.
+ Metoda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.EnumerateExpansions%2A> získá všechny fragmenty kódu pro identifikátor GUID konkrétního jazyka. Zástupce pro tyto fragmenty kódu mohou být vloženy do seznamu dokončení technologie IntelliSense.
 
- Zobrazit [podpora pro fragmenty kódu ve službě starší verze jazyka](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md) podrobnosti implementace fragmentů kódu ve službě jazyka spravovaného balíčku rozhraní framework (MPF).
+ V tématu [Podpora fragmentů kódu ve službě starší verze jazyka](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md) najdete podrobné informace o implementaci fragmentů kódu ve službě Managed Package Framework (MPF) Language.
 
-### <a name="to-retrieve-a-list-of-code-snippets"></a>K načtení seznamu fragmentů kódu
+### <a name="to-retrieve-a-list-of-code-snippets"></a>Načtení seznamu fragmentů kódu
 
-1. Následující kód ukazuje, jak získat seznam fragmenty kódu pro daný jazyk. Výsledky jsou uloženy v poli <xref:Microsoft.VisualStudio.TextManager.Interop.VsExpansion> struktury. Tato metoda používá statickou <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> metodu k získání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager> rozhraní z <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager> služby. Ale můžete také použít poskytovatele služeb na VSPackage a volání <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> metody.
+1. Následující kód ukazuje, jak získat seznam fragmentů kódu pro daný jazyk. Výsledky jsou uloženy v poli <xref:Microsoft.VisualStudio.TextManager.Interop.VsExpansion> struktury. Tato metoda používá metodu statického <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> k získání rozhraní <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager> ze služby <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>. Můžete ale také použít poskytovatele služeb, který je zadaný pro VSPackage, a volat metodu <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A>.
 
     ```csharp
     using System;
@@ -101,12 +101,12 @@ Fragment kódu je část kódu, který může být vložen do zdrojové vyrovná
     }
     ```
 
-### <a name="to-call-the-getsnippets-method"></a>Volání metody GetSnippets
+### <a name="to-call-the-getsnippets-method"></a>Volání metody getfragments
 
-1. Následující metoda ukazuje, jak volat `GetSnippets` metoda po dokončení operace analýzy. <xref:Microsoft.VisualStudio.Package.LanguageService.OnParseComplete%2A> Metoda je volána pro provedení operace analýzy, která byla spuštěna s odůvodněním <xref:Microsoft.VisualStudio.Package.ParseReason>.
+1. Následující metoda ukazuje, jak zavolat metodu `GetSnippets` při dokončení operace analýzy. Metoda <xref:Microsoft.VisualStudio.Package.LanguageService.OnParseComplete%2A> je volána po operaci analýzy, která byla zahájena s <xref:Microsoft.VisualStudio.Package.ParseReason> důvod.
 
 > [!NOTE]
-> `expansionsList` Seznam pole se uloží do mezipaměti z důvodů výkonu. Změny fragmenty kódu se neprojeví v seznamu, dokud služba jazyka je zastavit a znovu načíst (třeba podle zastavení a restartování [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]).
+> Seznam `expansionsList` pole je uložen v mezipaměti z důvodů výkonu. Změny fragmentů kódu se v seznamu neprojeví, dokud se služba jazyka nezastaví a znovu nenačte (například zastavením a restartováním [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]).
 
 ```csharp
 class TestLanguageService : LanguageService
@@ -125,13 +125,13 @@ class TestLanguageService : LanguageService
 }
 ```
 
-### <a name="to-use-the-snippet-information"></a>Použít informace o fragmentu kódu
+### <a name="to-use-the-snippet-information"></a>Použití informací o fragmentu
 
-1. Následující kód ukazuje, jak použít informace o fragmentu kódu, vrácené `GetSnippets` metody. `AddSnippets` Metoda je volána z analyzátor v reakci na z jakéhokoli důvodu analýzy, který se používá k naplnění seznamu fragmentů kódu. To má být provedena po úplné analýzy byla provedena poprvé.
+1. Následující kód ukazuje, jak používat informace o fragmentu vracené metodou `GetSnippets`. Metoda `AddSnippets` je volána z analyzátoru v reakci na libovolný důvod analýzy, který se používá k naplnění seznamu fragmentů kódu. To by mělo proběhnout po prvním provedení úplného rozboru.
 
-     `AddDeclaration` Metoda sestaví seznam deklarací, které se později zobrazí v seznamu dokončení.
+     Metoda `AddDeclaration` vytvoří seznam deklarací, které jsou později zobrazeny v seznamu pro doplňování.
 
-     `TestDeclaration` Třída obsahuje všechny informace, které lze zobrazit v seznamu dokončení, stejně jako typ deklarace.
+     Třída `TestDeclaration` obsahuje všechny informace, které mohou být zobrazeny v seznamu pro doplňování, i typ deklarace.
 
     ```csharp
     class TestAuthoringScope : AuthoringScope
@@ -176,5 +176,5 @@ class TestLanguageService : LanguageService
 
     ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Podpora pro fragmenty kódu ve službě starší verze jazyka](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md)

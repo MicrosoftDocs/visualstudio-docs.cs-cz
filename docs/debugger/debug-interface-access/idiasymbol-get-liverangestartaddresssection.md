@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_liveRangeStartAddressSection | Microsoft Docs
+title: 'IDiaSymbol:: get_liveRangeStartAddressSection | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c99b5a14a321a28bdbe7337dcc7cdfa5febdad5d
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: a23f0661d8af6417d754fd7a71c66c5dd3ef1135
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64786525"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739909"
 ---
-# <a name="idiasymbolgetliverangestartaddresssection"></a>IDiaSymbol::get_liveRangeStartAddressSection
-Vrátí část oddílu počáteční adresu rozsahu, ve kterém je platná místního symbolu.
+# <a name="idiasymbolget_liverangestartaddresssection"></a>IDiaSymbol::get_liveRangeStartAddressSection
+Vrátí část počáteční adresy rozsahu, ve kterém je místní symbol platný.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,25 +33,25 @@ HRESULT get_liveRangeStartAddressSection ( 
 #### <a name="parameters"></a>Parametry
  `section`
 
-[out] Vrátí část oddílu počáteční rozsah adres.
+mimo Vrátí část počátečního rozsahu adres.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 > [!NOTE]
-> Kód chyby znamená, že symbol nemá informace o rozsahu za provozu.
+> Vrácený kód chyby znamená, že symbol neobsahuje informace o živém rozsahu.
 
 ## <a name="remarks"></a>Poznámky
- Adresa tvořen oddílu a posun je začátek rozsahu, ve kterém je platná symbolu.
+ Adresa vytvořená oddílem a odsazením je začátek rozsahu, ve kterém je symbol platný.
 
- K získání posunu částí adresy, použijte [IDiaSymbol::get_liveRangeStartAddressOffset](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddressoffset.md).
+ K získání posunu části adresy použijte [IDiaSymbol:: get_liveRangeStartAddressOffset](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddressoffset.md).
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: Dia2.h
+ Záhlaví: Dia2. h
 
- Knihovna: diaguids.lib
+ Knihovna: diaguids. lib
 
- DLL: msdia100.dll
+ Knihovna DLL: msdia100. dll
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

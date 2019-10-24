@@ -1,5 +1,5 @@
 ---
-title: IDiaImageData::get_imageBase | Microsoft Docs
+title: 'IDiaImageData:: get_imageBase | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de8c333391530cd86c6fc66a8e6c36ce8cfecd5f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7887fea30b04f4ebb6605169c58551122eccf73d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829069"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743441"
 ---
-# <a name="idiaimagedatagetimagebase"></a>IDiaImageData::get_imageBase
-Získá umístění v paměti, kde by měla být založena na obrázku.
+# <a name="idiaimagedataget_imagebase"></a>IDiaImageData::get_imageBase
+Načte umístění paměti, kde má být obrázek založen.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_imageBase ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí image navrhované základní hodnoty.
+mimo Vrátí navrhovanou základní hodnotu obrázku.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Kvůli konfliktům základní image image může přenese se změnami automaticky do umístění nevyužité paměti při spuštění. Tato metoda vrátí základní pomocný parametr (umístění v paměti navrhované), která byla uložená v modulu v době kompilace.
+ Vzhledem k tomu, že jsou v konfliktu s obrázkem, může se při načtení image automaticky znovu zakládat do nevyužitého místa v paměti. Tato metoda vrátí základní pomocný parametr (navrhované umístění v paměti), který byl uložen v modulu v době kompilace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)

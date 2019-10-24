@@ -1,5 +1,5 @@
 ---
-title: Ladění formuláře Windows | Dokumentace Microsoftu
+title: Ladění formuláře Windows | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -23,50 +23,50 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d2f581582acfed38d55a2cfef351856cc0caa945
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 701d156d5fdc23a5e98ac1de43c1882f3065171e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65678910"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72728330"
 ---
 # <a name="walkthrough-debugging-a-windows-form"></a>Návod: Ladění formuláře systému Windows
 Aplikace modelu Windows Form jsou jedny nejběžnějších spravovaných aplikací. Model Windows Form vytvoří standardní aplikaci systému Windows. Tuto rekapitulaci lze dokončit pomocí jazyků Visual Basic, C# nebo C++.
 
  Nejprve je nutné zavřít všechna otevřená řešení.
 
-### <a name="to-prepare-for-this-walkthrough"></a>Příprava pro Tento názorný postup
+### <a name="to-prepare-for-this-walkthrough"></a>Příprava na tento návod
 
-- Pokud již máte své řešení otevřené, zavřete je. (Na **souboru** nabídce vyberte možnost **zavřít řešení**.)
+- Pokud již máte své řešení otevřené, zavřete je. (V nabídce **soubor** vyberte **Zavřít řešení**.)
 
 ## <a name="create-a-new-windows-form"></a>Vytvoření nové aplikace modelu Windows Form
  V dalších krocích vytvoříte nový formulář aplikace modelu Windows Form.
 
 #### <a name="to-create-the-windows-form-for-this-walkthrough"></a>Vytvoření formuláře aplikace modelu Windows Form pro tuto rekapitulaci
 
-1. Na **souboru** nabídce zvolte **nový** a klikněte na tlačítko **projektu**.
+1. V nabídce **soubor** klikněte na příkaz **Nový** a potom na **projekt**.
 
-     **Nový projekt** zobrazí se dialogové okno.
+     Zobrazí se dialogové okno **Nový projekt** .
 
-2. V podokně typy projektů, otevřete **jazyka Visual Basic**, **Visual C#** , nebo **Visual C++** uzlu, pak
+2. V podokně typy projektů otevřete uzel **Visual Basic**, **vizuál C#** nebo **vizuál C++**  a potom
 
-    1. Pro Visual Basic nebo Visual C# vyberte **Windows Desktop** > **aplikaci pro formulář Windows**.
+    1. V případě Visual Basic nebo C#vizuálu vyberte aplikace **Windows Desktop**  > **Windows Form**.
 
-    2. Visual C++, vyberte **aplikace klasické pracovní plochy Windows**.
+    2. V případě C++vizuálu vyberte **desktopová aplikace pro Windows**.
 
-3. V **název** pole, zadejte projekt jedinečný název (například Walkthrough_SimpleDebug).
+3. V poli **název** zadejte jedinečný název projektu (například Walkthrough_SimpleDebug).
 
 4. Klikněte na tlačítko **OK**.
 
-     Systém Visual Studio vytvoří nový projekt a nový formulář zobrazí v Návrháři formulářů Windows Forms. Další informace najdete v tématu [Návrháře formulářů Windows](/previous-versions/visualstudio/visual-studio-2010/e06hs424\(v\=vs.100\)).
+     Systém Visual Studio vytvoří nový projekt a nový formulář zobrazí v Návrháři formulářů Windows Forms. Další informace najdete v tématu [Návrhář formulářů](/previous-versions/visualstudio/visual-studio-2010/e06hs424\(v\=vs.100\)).
 
-5. Na **zobrazení** nabídce vyberte možnost **nástrojů**.
+5. V nabídce **zobrazení** vyberte položku **Sada nástrojů**.
 
-     Otevře se panel nástrojů. Další informace najdete v tématu [nástrojů](../ide/reference/toolbox.md).
+     Otevře se panel nástrojů. Další informace najdete v tématu [Sada nástrojů](../ide/reference/toolbox.md).
 
-6. Na panelu nástrojů klikněte na **tlačítko** řídit a přetáhněte jej na návrhovou plochu formuláře. Přetáhněte tlačítko na formulář.
+6. V sadě nástrojů klikněte na ovládací prvek **tlačítko** a přetáhněte ovládací prvek na návrhovou plochu formuláře. Přetáhněte tlačítko na formulář.
 
-7. Na panelu nástrojů klikněte na **TextBox** řídit a přetáhněte jej na návrhovou plochu formuláře. Přetáhněte **TextBox** ve formuláři.
+7. V sadě nástrojů klikněte na ovládací prvek **TextBox** a přetáhněte ovládací prvek na návrhovou plochu formuláře. Přetáhněte **textové pole** na formuláři.
 
 8. Na návrhové ploše formuláře dvakrát klikněte na tlačítko.
 
@@ -86,7 +86,7 @@ Aplikace modelu Windows Form jsou jedny nejběžnějších spravovaných aplikac
     textBox1->Text = "Button was clicked!";
     ```
 
-11. Na **sestavení** nabídce vyberte možnost **sestavit řešení**.
+11. V nabídce **sestavení** vyberte **Sestavit řešení**.
 
      Projekt by se měl sestavit bez chyb.
 
@@ -109,12 +109,12 @@ Aplikace modelu Windows Form jsou jedny nejběžnějších spravovaných aplikac
     textBox1->Text = "Button was clicked!";
     ```
 
-     Zobrazí se červená tečka a text řádku se zvýrazní červeně. Tato červená tečka představuje zarážku. Další informace najdete v tématu [zarážky](https://msdn.microsoft.com/fe4eedc1-71aa-4928-962f-0912c334d583). Při spuštění aplikace pomocí ladicího programu v tomto místě ladicí program přeruší provádění, když je tento řádek kódu dosažen. Poté lze zobrazit stav aplikace a ladit ji.
+     Zobrazí se červená tečka a text řádku se zvýrazní červeně. Tato červená tečka představuje zarážku. Další informace naleznete v tématu [zarážky](https://msdn.microsoft.com/fe4eedc1-71aa-4928-962f-0912c334d583). Při spuštění aplikace pomocí ladicího programu v tomto místě ladicí program přeruší provádění, když je tento řádek kódu dosažen. Poté lze zobrazit stav aplikace a ladit ji.
 
     > [!NOTE]
-    > Můžete také pravým tlačítkem na kterýkoli řádek v kódu, přejděte na **zarážku**a potom klikněte na tlačítko **vložit zarážku** pro přidání zarážky na daném řádku.
+    > Můžete také kliknout pravým tlačítkem na libovolný řádek kódu, nasměrovat na **zarážku**a potom kliknout na **Vložit zarážku** a přidat zarážku na tento řádek.
 
-2. DÁLE **ladění** nabídce zvolte **spustit**.
+2. V nabídce **ladit** klikněte na tlačítko **Spustit**.
 
      Aplikace modelu Windows Form se spustí.
 
@@ -122,21 +122,21 @@ Aplikace modelu Windows Form jsou jedny nejběžnějších spravovaných aplikac
 
      To vás v systému Visual Studio přenese na stránku kódu k řádku, na který jste nastavili zarážku. Tento řádek by měl být zvýrazněn žlutou barvou. Nyní lze zobrazit proměnné aplikace a řídit její spuštění. Aplikace nyní zastavila provádění a čeká na vaši akci.
 
-4. Na **ladění** nabídce zvolte **Windows**, pak **Watch**a klikněte na tlačítko **Watch1**.
+4. V nabídce **ladění** zvolte možnost **Windows**, pak **Sledujte**a klikněte na **Watch1**.
 
-5. V **Watch1** okna, klikněte na prázdný řádek. V **název** sloupců, typ `textBox1.Text` (Pokud používáte Visual Basic nebo Visual C#) nebo `textBox1->Text` (Pokud používáte C++), stiskněte klávesu ENTER.
+5. V okně **Watch1** klikněte na prázdný řádek. Do sloupce **název** zadejte `textBox1.Text` (pokud používáte Visual Basic nebo vizuál C#) nebo `textBox1->Text` (Pokud používáte C++), a potom stiskněte ENTER.
 
-     **Watch1** okno zobrazuje hodnotu této proměnné v uvozovkách jako:
+     V okně **Watch1** se zobrazí hodnota této proměnné v uvozovkách jako:
 
     `""`
 
-6. Na **ladění** nabídce zvolte **Krokovat s vnořením**.
+6. V nabídce **ladění** vyberte možnost **Krokovat**s vnořením.
 
-     Hodnota TextBox1.text v **Watch1** okna:
+     Hodnota textBox1. text se mění v okně **Watch1** na:
 
     `Button was clicked!`
 
-7. Na **ladění** nabídce zvolte **pokračovat** Chcete-li pokračovat v ladění programu.
+7. V nabídce **ladění** vyberte **pokračovat** a obnovte ladění programu.
 
 8. Klikněte znovu na tlačítko na formuláři aplikace Windows Form.
 
@@ -146,7 +146,7 @@ Aplikace modelu Windows Form jsou jedny nejběžnějších spravovaných aplikac
 
      Tím tuto zarážku odstraníte z kódu.
 
-10. Na **ladění** nabídce zvolte **Zastavit ladění**.
+10. V nabídce **ladění** vyberte možnost **Zastavit ladění**.
 
 ## <a name="attach-to-your-windows-form-application-for-debugging"></a>Připojení k aplikaci modelu Windows Form pro ladění
  V systému [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] lze ladicí program připojit ke spuštěnému procesu. Pokud používáte verzi Express, není tato funkce podporována.
@@ -167,22 +167,22 @@ Aplikace modelu Windows Form jsou jedny nejběžnějších spravovaných aplikac
     textBox1->Text = "Button was clicked!";
     ```
 
-2. Na **ladění** nabídce vyberte možnost **spustit bez ladění**.
+2. V nabídce **ladění** vyberte **Spustit bez ladění**.
 
      Aplikace modelu Windows Form se spustí v systému Windows stejně, jako kdyby jste dvakrát kliknuli na její spustitelný soubor. Ladicí program není připojen.
 
-3. Na **ladění** nabídce vyberte možnost **připojit k procesu**. (Tento příkaz je také k dispozici na **nástroje** nabídky.)
+3. V nabídce **ladění** vyberte možnost **připojit k procesu**. (Tento příkaz je k dispozici také v nabídce **nástroje** .)
 
-     **Připojit k procesu** zobrazí se dialogové okno.
+     Zobrazí se dialogové okno **připojit k procesu** .
 
-4. V **procesy k dispozici** podokno, najděte název procesu (Walkthrough_SimpleDebug.exe) v **procesu** sloupce a klikněte na něj.
+4. V podokně **Dostupné procesy** Najděte ve sloupci **Process** název procesu (Walkthrough_SimpleDebug. exe) a klikněte na něj.
 
-5. Klikněte na tlačítko **připojit** tlačítko.
+5. Klikněte na tlačítko **připojit** .
 
 6. Na formuláři Windows Form vaší aplikace klikněte na tlačítko.
 
      Ladicí program při dosažení zarážky přeruší spuštění formuláře aplikace modelu Windows Form.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)

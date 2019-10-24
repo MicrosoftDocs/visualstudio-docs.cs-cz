@@ -1,5 +1,5 @@
 ---
-title: IDiaImageData::get_virtualAddress | Microsoft Docs
+title: 'IDiaImageData:: get_virtualAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5df2098c4859205ef07648c214f43b74e53673d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 414e065cd9e772e74c573b51bf52f11bcb987b6d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828526"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743415"
 ---
-# <a name="idiaimagedatagetvirtualaddress"></a>IDiaImageData::get_virtualAddress
-Získá umístění ve virtuální paměti bitové kopie.
+# <a name="idiaimagedataget_virtualaddress"></a>IDiaImageData::get_virtualAddress
+Načte umístění ve virtuální paměti obrázku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_virtualAddress ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí adresu virtuální bitové kopie.
+mimo Vrátí virtuální adresu obrázku.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)

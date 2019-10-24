@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b1e3dd8c395c59bc3255c1c9ee55837466c1cef7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 75a81ae23db90b06915e7090a9f2918be3ff18ae
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828508"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743395"
 ---
 # <a name="idiaimagedata"></a>IDiaImageData
-Poskytuje podrobnosti o základní posuny umístění a paměti modulu nebo image.
+Zpřístupňuje podrobné informace o základním umístění a posunech paměti modulu nebo obrázku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,23 +28,23 @@ Poskytuje podrobnosti o základní posuny umístění a paměti modulu nebo imag
 IDiaImageData : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
-V následující tabulce jsou uvedeny metody objektu `IDiaImageData`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+Následující tabulka ukazuje metody `IDiaImageData`.
 
 |Metoda|Popis|
 |------------|-----------------|
-|[IDiaImageData::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-relativevirtualaddress.md)|Získá umístění ve virtuální paměti modulu vzhledem k aplikaci.|
-|[IDiaImageData::get_virtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-virtualaddress.md)|Získá umístění ve virtuální paměti bitové kopie.|
-|[IDiaImageData::get_imageBase](../../debugger/debug-interface-access/idiaimagedata-get-imagebase.md)|Získá umístění v paměti, kde by měla být založena na obrázku.|
+|[IDiaImageData::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-relativevirtualaddress.md)|Načte umístění ve virtuální paměti modulu vzhledem k aplikaci.|
+|[IDiaImageData::get_virtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-virtualaddress.md)|Načte umístění ve virtuální paměti obrázku.|
+|[IDiaImageData::get_imageBase](../../debugger/debug-interface-access/idiaimagedata-get-imagebase.md)|Načte umístění paměti, kde má být obrázek založen.|
 
 ## <a name="remarks"></a>Poznámky
-Některé datové proudy debug (XDATA, PDATA) obsahují kopie dat také uložených v bitové kopii. Tyto datové objekty je možné zadávat dotazy pro datový proud stream `IDiaImageData` rozhraní. V tomto tématu podrobnosti v části "Poznámky pro volající".
+Některé streamy ladění (XDATA, PDATA) obsahují kopie dat také uložené v imagi. Tyto datové objekty streamu se dají dotazovat na rozhraní `IDiaImageData`. Podrobnosti najdete v části "poznámky k volajícím" v tomto tématu.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Získat po zavolání tohoto rozhraní `QueryInterface` na [idiaenumdebugstreamdata –](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) objektu. Podporu streamuje Všimněte si, že ne všechny ladění `IDiaImageData` rozhraní. Například aktuálně podporují pouze XDATA a PDATA datové proudy `IDiaImageData` rozhraní.
+Získejte toto rozhraní voláním `QueryInterface` v objektu [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) . Všimněte si, že ne všechny streamy ladění podporují rozhraní `IDiaImageData`. Například v současné době pouze datové proudy XDATA a PDATA podporují rozhraní `IDiaImageData`.
 
 ## <a name="example"></a>Příklad
-Tento příklad vyhledá všechny datové proudy debug pro datový proud, který podporuje `IDiaImageData` rozhraní. Pokud není nalezen takový stream, zobrazí se nějaké informace týkající se tohoto datového proudu.
+Tento příklad vyhledá všechny streamy ladění pro libovolný datový proud, který podporuje rozhraní `IDiaImageData`. Pokud je takový datový proud nalezen, zobrazí se některé informace o tomto datovém proudu.
 
 ```C++
 void ShowImageData(IDiaSession *pSession)
@@ -111,12 +111,12 @@ void ShowImageData(IDiaSession *pSession)
 ```
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: Dia2.h
+Záhlaví: Dia2. h
 
-Knihovna: diaguids.lib
+Knihovna: diaguids. lib
 
-DLL: msdia80.dll
+Knihovna DLL: Msdia80. dll
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

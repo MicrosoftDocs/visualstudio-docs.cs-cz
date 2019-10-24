@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_relativevirtualaddress – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_relativeVirtualAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bae5deab3a2c7d6d9f912ed584fbdb5961e09612
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: a5425ab60987c93e4697989176e005ee669afbef
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64796361"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739426"
 ---
-# <a name="idiasymbolgetrelativevirtualaddress"></a>IDiaSymbol::get_relativeVirtualAddress
-Načte relativní virtuální adresu (RVA) umístění. Použít, když [locationtype – výčet](../../debugger/debug-interface-access/locationtype.md) je nastavena na `LocIsStatic`.
+# <a name="idiasymbolget_relativevirtualaddress"></a>IDiaSymbol::get_relativeVirtualAddress
+Načte relativní virtuální adresu (RVA) umístění. Použijte, pokud je [výčet LocationType –](../../debugger/debug-interface-access/locationtype.md) nastavený na `LocIsStatic`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_relativeVirtualAddress ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí relativní virtuální adresa umístění.
+mimo Vrátí relativní virtuální adresu umístění.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="example"></a>Příklad
 
@@ -49,6 +49,6 @@ DWORD       rva;
 pSymbol->get_relativeVirtualAddress( &rva );
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [LocationType – výčet](../../debugger/debug-interface-access/locationtype.md)

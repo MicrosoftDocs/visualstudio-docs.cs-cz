@@ -1,5 +1,5 @@
 ---
-title: TemplateData – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: TemplateData – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,17 +13,17 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f9647330aaca2c2ae91aa7e461da17cf4dc3f8c3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b122857a4d916379c070e923ed0753b01287f08b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316677"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72718858"
 ---
 # <a name="templatedata-element-visual-studio-templates"></a>TemplateData – element (šablony sady Visual Studio)
-Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.
+Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .
 
- \<Vstemplate – > \<TemplateData >
+ \<VSTemplate > \<TemplateData >
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,42 +47,42 @@ Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přida
 
 | Prvek | Popis |
 | - | - |
-| [Název](../extensibility/name-element-visual-studio-templates.md) | Požadovaný element.<br /><br /> Určuje název šablony, protože se zobrazí buď **nový projekt** nebo **přidat novou položku** dialogové okno. |
-| [Popis](../extensibility/description-element-visual-studio-templates.md) | Požadovaný element.<br /><br /> Určuje popis šablony, protože se zobrazí buď **nový projekt** nebo **přidat novou položku** dialogové okno. |
-| [Ikona](../extensibility/icon-element-visual-studio-templates.md) | Požadovaný element.<br /><br /> Určuje cestu a název souboru, který slouží jako ikona, která se zobrazí v jednom souboru obrázku **nový projekt** nebo **přidat novou položku** dialogovém okně pro šablonu. |
-| [ProjectType](../extensibility/projecttype-element-visual-studio-templates.md) | Požadovaný element.<br /><br /> Rozděluje šablonu projektu tak, aby se objevila pod zadané skupiny v rámci **nový projekt** dialogové okno. |
-| [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Klasifikuje šablona projektu tak, aby se objevila pod zadanou podkategorie v **nový projekt** dialogové okno. |
-| [TemplateId –](../extensibility/templateid-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje ID šablony. |
-| [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje ID šablony skupiny. |
-| [SortOrder](../extensibility/sortorder-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje hodnotu, která slouží k uspořádání šablony, mezi další šablony ve stejné kategorii, jak se zobrazí v buď **nový projekt** nebo **přidat novou položku** dialogové okno. |
-| [CreateNewFolder](../extensibility/createnewfolder-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje, zda nadřazené složky se vytvoří při vytváření instance projektu. |
-| [Defaultname –](../extensibility/defaultname-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje název, který vygeneruje systém projektu sady Visual Studio pro projekt nebo položku při jeho vytvoření. |
-| [Providedefaultname –](../extensibility/providedefaultname-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje, zda systém projektu sady Visual Studio vygeneruje výchozí název pro projekt nebo položku při jeho vytvoření. |
-| [PromptForSaveOnCreation](../extensibility/promptforsaveoncreation-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje, zda projekt můžete vytvořit podobě dočasného projektu (Visual Studio 2017 pouze). |
-| [EnableLocationBrowseButton](../extensibility/enablelocationbrowsebutton-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje, zda **Procházet** tlačítko je k dispozici v **nový projekt** dialogovém okně tak, aby uživatelé mohli snadno upravovat výchozí adresář, ve kterém je uložený nový projekt. |
-| [Hidden](../extensibility/hidden-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje, jestli se šablona zobrazuje v buď **nový projekt** nebo **přidat novou položku** dialogové okno. |
-| [NumberOfParentCategoriesToRollUp](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje počet nadřazených kategoriích, které se zobrazí v šabloně **nový projekt** dialogové okno. |
-| [LocationFieldMRUPrefix](../extensibility/locationfieldmruprefix-element-visual-studio-templates.md) | Volitelný element. |
-| [LocationField](../extensibility/locationfield-element-visual-studio-project-templates.md) | Volitelný element.<br /><br /> Určuje, zda je či není **umístění** textové pole **nový projekt** dialogové okno je povoleno, zakázané nebo skrytý pro šablonu projektu. |
-| [RequiredFrameworkVersion](../extensibility/requiredframeworkversion-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Pomocí tohoto prvku, pokud šablony podporuje pouze konkrétní minimální verzi a novější verze, pokud je libovolná z rozhraní .NET Framework. |
-| [SupportsMasterPage](../extensibility/supportsmasterpage-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje, zda šablona podporuje stránku předlohy pro webové projekty. |
-| [SupportsCodeSeparation](../extensibility/supportscodeseparation-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje, jestli podporuje šablony oddělení kódu nebo použití modelu code-behind model stránky, pro webové projekty. |
-| [SupportsLanguageDropDown](../extensibility/supportslanguagedropdown-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje, jestli je stejný jako pro řadu jazyků šablony a zda **jazyk** možnost je k dispozici **nový projekt** dialogové okno. |
-| [TargetPlatformName](../extensibility/targetplatformname-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje platformu, která šablona cíle projektu. Tento prvek určuje, že šablona projektu slouží k vytvoření [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] aplikace. |
+| [Jméno](../extensibility/name-element-visual-studio-templates.md) | Požadovaný element.<br /><br /> Určuje název šablony, jak je zobrazen v dialogovém okně **Nový projekt** nebo **Přidat novou položku** . |
+| [Popis](../extensibility/description-element-visual-studio-templates.md) | Požadovaný element.<br /><br /> Určuje popis šablony tak, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** . |
+| [Ikona](../extensibility/icon-element-visual-studio-templates.md) | Požadovaný element.<br /><br /> Určuje cestu a název souboru obrázku, který slouží jako ikona, která se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** pro šablonu. |
+| [ProjectType](../extensibility/projecttype-element-visual-studio-templates.md) | Požadovaný element.<br /><br /> Kategorizuje šablonu projektu tak, aby se zobrazila pod určenou skupinou v dialogovém okně **Nový projekt** . |
+| [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Klasifikuje šablonu projektu tak, aby se zobrazila pod určenou podkategorií v dialogovém okně **Nový projekt** . |
+| [TemplateID](../extensibility/templateid-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje ID šablony. |
+| [TemplateGroupID –](../extensibility/templategroupid-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje ID skupiny šablon. |
+| [Pořadí](../extensibility/sortorder-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje hodnotu, která se používá k uspořádání šablony, mezi ostatními šablonami ve stejné kategorii, jak se zobrazuje v dialogovém okně **Nový projekt** nebo **Přidat novou položku** . |
+| [CreateNewFolder –](../extensibility/createnewfolder-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje, zda je pro instanci projektu vytvořena nadřazená složka. |
+| [Výchozí hodnota](../extensibility/defaultname-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje název, který bude systém projektu sady Visual Studio generovat pro projekt nebo položku při jejím vytvoření. |
+| [ProvideDefaultName –](../extensibility/providedefaultname-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje, zda systém projektu sady Visual Studio vygeneruje výchozí název pro projekt nebo položku při jejím vytvoření. |
+| [PromptForSaveOnCreation –](../extensibility/promptforsaveoncreation-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje, zda lze projekt vytvořit jako dočasný projekt (pouze Visual Studio 2017). |
+| [Enablelocationbrowsebutton –](../extensibility/enablelocationbrowsebutton-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje, zda je v dialogovém okně **Nový projekt** k dispozici tlačítko **Procházet** , aby uživatelé mohli snadno upravit výchozí adresář, do kterého je uložen nový projekt. |
+| [Neobsahuje](../extensibility/hidden-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje, zda se šablona zobrazuje v dialogovém okně **Nový projekt** nebo **Přidat novou položku** . |
+| [NumberOfParentCategoriesToRollUp](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje počet nadřazených kategorií, které budou zobrazovat šablonu v dialogovém okně **Nový projekt** . |
+| [Locationfieldmruprefix –](../extensibility/locationfieldmruprefix-element-visual-studio-templates.md) | Volitelný element. |
+| [LocationField –](../extensibility/locationfield-element-visual-studio-project-templates.md) | Volitelný element.<br /><br /> Určuje, zda je textové pole **umístění** v dialogovém okně **Nový projekt** buď povoleno, zakázáno nebo skryto pro šablonu projektu. |
+| [RequiredFrameworkVersion –](../extensibility/requiredframeworkversion-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Tento prvek použijte v případě, že šablona podporuje pouze konkrétní minimální verzi a novější verze .NET Framework. |
+| [SupportsMasterPage –](../extensibility/supportsmasterpage-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje, zda šablona podporuje stránku předlohy pro webové projekty. |
+| [SupportsCodeSeparation –](../extensibility/supportscodeseparation-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje, zda šablona podporuje oddělení kódu, nebo model stránky na pozadí pro webové projekty. |
+| [SupportsLanguageDropDown –](../extensibility/supportslanguagedropdown-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje, zda je šablona identická pro více jazyků a zda je možnost **jazyk** k dispozici v dialogovém okně **Nový projekt** . |
+| [Targetplatformname –](../extensibility/targetplatformname-element-visual-studio-templates.md) | Volitelný element.<br /><br /> Určuje platformu, na kterou se šablona projektu zaměřuje. Tento prvek určuje, že se šablona projektu používá k vytváření [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]ch aplikací. |
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[Vstemplate –](../extensibility/vstemplate-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Obsahuje všechna metadata pro šablony projektu, šablonu položky nebo starter kit.|
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Obsahuje všechna metadata pro šablonu projektu, šablonu položky nebo Startovní sadu.|
 
 ## <a name="remarks"></a>Poznámky
- `TemplateData` je požadovaný element.
+ `TemplateData` je povinný prvek.
 
- Pokud Volitelný element není zadána, je použita výchozí hodnota pro daný element.
+ Pokud nezahrnete volitelný prvek, je použita výchozí hodnota tohoto prvku.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metadata pro šablona projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikace.
+ Následující příklad ukazuje metadata pro šablonu projektu pro aplikaci [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)].
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -108,6 +108,6 @@ Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přida
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

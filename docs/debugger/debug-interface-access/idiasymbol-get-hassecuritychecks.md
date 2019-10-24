@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_hassecuritychecks – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_hasSecurityChecks | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5a760389f589dc14e8a768991323c0419dac527
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 11fd7f70da9ae47b9858f8265d0608e3d6994ef7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64808709"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740460"
 ---
-# <a name="idiasymbolgethassecuritychecks"></a>IDiaSymbol::get_hasSecurityChecks
-Získá příznak, který určuje, zda kompilace nebo funkce byl zkompilován pomocí kontroly zabezpečení přetečení vyrovnávací paměti (například [/GS (Kontrola zabezpečení vyrovnávací paměti)](/cpp/build/reference/gs-buffer-security-check) přepínač kompilátoru).
+# <a name="idiasymbolget_hassecuritychecks"></a>IDiaSymbol::get_hasSecurityChecks
+Načte příznak, který určuje, zda byla kompilantu nebo funkce kompilována se kontrolami zabezpečení přetečení vyrovnávací paměti (například přepínač kompilátoru [/GS (kontrola zabezpečení vyrovnávací paměti)](/cpp/build/reference/gs-buffer-security-check) ).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,21 +33,21 @@ HRESULT get_hasSecurityChecks(
 #### <a name="parameters"></a>Parametry
  `pFlag`
 
-[out] Vrátí `TRUE` Pokud funkce nemá žádné bezpečnostní kontroly; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud má funkce nějaké kontroly zabezpečení; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|Ve verzi 8.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [/GS (kontrola zabezpečení vyrovnávací paměti)](/cpp/build/reference/gs-buffer-security-check)

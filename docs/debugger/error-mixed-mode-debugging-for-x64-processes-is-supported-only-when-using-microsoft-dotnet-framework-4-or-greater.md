@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Ve smíšeném režimu ladění pro x64 procesy se podporuje jenom při použití rozhraní Microsoft .NET Framework 4 nebo vyšší | Dokumentace Microsoftu'
+title: 'Chyba: ladění ve smíšeném režimu pro procesy x64 je podporováno pouze v případě, že používáte Microsoft .NET Framework 4 nebo vyšší | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -14,23 +14,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9ef0daf5fd28bd829edcdce412839b03ed8347bf
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 67b9d1c737e4490195b209abca824b2d6d51176c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66745439"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737606"
 ---
-# <a name="error-mixed-mode-debugging-for-x64-processes-is-supported-only-when-using-microsoft-net-framework-4-or-greater"></a>Chyba: Ladění ve smíšeném režimu pro procesy x64 je podporované, jenom pokud používáte rozhraní Microsoft .NET Framework 4 nebo vyšší.
-Chcete-li ladit smíšené nativního a spravovaného kódu do 64bitového procesu, musíte mít rozhraní .NET Framework verze 4. Kombinovaný režim ladění 64bitových procesů pomocí rozhraní .NET Framework verze starší než 4 se nepodporuje.
+# <a name="error-mixed-mode-debugging-for-x64-processes-is-supported-only-when-using-microsoft-net-framework-4-or-greater"></a>Chyba: Ladění ve smíšeném režimu pro procesy x64 je podporováno, pouze pokud používáte rozhraní Microsoft .NET Framework 4 nebo vyšší.
+Chcete-li ladit smíšený nativní a spravovaný kód v 64m procesu, je nutné mít .NET Framework verzi 4. Ladění ve smíšeném režimu s 64 procesy s .NET Framework verzemi staršími než 4 se nepodporuje.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
 - Proveďte jeden z následujících kroků:
 
-  - Upgrade rozhraní .NET Framework verze 4.
+  - Upgradujte .NET Framework na verzi 4.
 
-  - Sestavení 32bitové verze ladění vaší aplikace.
+  - Sestavte 32 verzi vaší aplikace pro ladění.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Vzdálené ladění](../debugger/remote-debugging.md)

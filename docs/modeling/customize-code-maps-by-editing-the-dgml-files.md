@@ -20,12 +20,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d871a6aa8cff6e06f02e61407d2c9e59e03cd65
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ace7da233f135aa795d73d43a5e10e411c0d646f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654036"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748472"
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>Přizpůsobení map kódu úpravou souborů DGML
 
@@ -638,7 +638,7 @@ Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je m
 
 5. Chcete-li zobrazit odkazový prvek kódu nebo prvky kódu z mapy, otevřete místní nabídku pro prvek kódu nebo odkaz. Zvolte **Přejít na odkaz** a poté prvek kódu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)
 - [Použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)

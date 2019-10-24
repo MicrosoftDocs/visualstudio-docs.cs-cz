@@ -1,5 +1,5 @@
 ---
-title: Uložení standardního dokumentu | Dokumentace Microsoftu
+title: Ukládání standardního dokumentu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,50 +12,50 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f46d63e9f1145711bd3a32f6fd24e7b61814922
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: df93813d339a45689845b82fe4f5a185301b6c74
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318680"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72724088"
 ---
 # <a name="saving-a-standard-document"></a>Uložení standardního dokumentu
-Prostředí zpracovává uložit, uložit jako a uložte všechny příkazy. Když uživatel vybere **Uložit**, **uložit jako**, nebo **Uložit vše** z **souboru** nabídky nebo zavření řešení, což vede k  **Uložit vše**, spustí následující proces.
+Prostředí zpracuje příkazy Uložit, Uložit jako a uložit všechny. Když uživatel vybere příkaz **Uložit**, **Uložit jako**nebo **Uložit vše** v nabídce **soubor** nebo zavře řešení, výsledkem bude **uložení všech**, dojde k následujícímu procesu.
 
- ![Standardní Editor](../../extensibility/internals/media/public.gif "veřejné") uložit, uložit jako a Uložit vše zpracování příkazů pro standardní editor
+ ![Standardní editor](../../extensibility/internals/media/public.gif "Public") Uložit, Uložit jako a uložit všechny zpracování příkazů pro standardní editor
 
- Tento proces je podrobně popsán v následujících krocích:
+ Tento postup je podrobně popsán v následujících krocích:
 
-1. Když **Uložit** a **uložit jako** příkazy jsou vybrané, používá prostředí <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> služby k určení aktivního okna dokumentu, a proto položky by měly být uloženy. Jakmile okno aktivního dokumentu je známé, vyhledá prostředí hierarchie ukazatele a identifikátor položky (itemID) dokumentu v tabulce spuštěných dokumentů. Další informace najdete v tématu [spuštěná tabulka dokumentů](../../extensibility/internals/running-document-table.md).
+1. Když jsou vybrané příkazy **Uložit** a **Uložit jako** , prostředí používá službu <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> k určení aktivního okna dokumentu, takže by se měly položky ukládat. Po zjištění aktivního okna dokumentu prostředí nalezne ukazatel hierarchie a identifikátor položky (itemID) pro dokument v tabulce spuštěných dokumentů. Další informace najdete v tématu [Spuštění tabulky dokumentů](../../extensibility/internals/running-document-table.md).
 
-    Když **Uložit vše** příkaz, prostředí používá informace v tabulce spuštěných dokumentů pro kompilaci seznam všech položek na Uložit.
+    Když je vybraný příkaz **Uložit vše** , prostředí používá informace v tabulce spuštěných dokumentů ke kompilaci seznamu všech položek, které se mají uložit.
 
-2. Když řešení obdrží <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> volání, prochází sadu vybraných položek (to znamená více výběrů, které jsou vystavené <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> služby).
+2. Když řešení přijme <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> volání, prochází sadu vybraných položek (to znamená vícenásobný výběr vystavený službou <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>).
 
-3. Pro každou položku do výběru, toto řešení využívá ukazatel hierarchie volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IsItemDirty%2A> metodou ke zjištění, zda **Uložit** příkazu nabídky by měla být povolená. Pokud jeden nebo více položek jsou chybná, pak bude **Uložit** je příkaz povolen. Pokud v hierarchii používá standardní editor, pak dotazování na hierarchii delegáty nesprávné stav do editoru voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.IsDocDataDirty%2A> metody.
+3. U každé položky ve výběru používá řešení ukazatel hierarchie pro volání metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IsItemDirty%2A> k určení, zda by mělo být povoleno použití příkazu nabídky **Uložit** . Pokud je jedna nebo více položek nečistých, je povolen příkaz **Uložit** . Pokud hierarchie používá standardní editor, pak hierarchie deleguje dotaz na stav undirty do editoru voláním metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.IsDocDataDirty%2A>.
 
-4. Pro každou vybranou položku není čistá, toto řešení využívá ukazatel hierarchie volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A> metodu na odpovídající hierarchie.
+4. U každé vybrané položky, která je nečistá, používá řešení ukazatel hierarchie pro volání metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A> v příslušných hierarchiích.
 
-    Je běžné, hierarchie a použít standardní editor k úpravě dokumentu. V takovém případě data dokumentu objekt pro tento editor by měl podporovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> rozhraní. Po přijetí <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A> volání metody projektu by měla být podkladem editoru, který je dokument uložen voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.SaveDocData%2A> metodu na datový objekt dokumentu. V editoru můžete povolit prostředí pro zpracování **uložit jako** dialogové okno, voláním `Query Service` pro <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> rozhraní. Vrátí ukazatel <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> rozhraní. Editor musíte pak zavolat <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SaveDocDataToFile%2A> metoda předání ukazatele na editor <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> implementace prostřednictvím `pPersistFile` parametru. Pak provede operaci uložit a poskytuje prostředí **uložit jako** dialogové okno editoru. Prostředí pak zavolá zpět do editoru s <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>.
+    V hierarchii se běžně používá standardní editor pro úpravy dokumentu. V tomto případě by měl datový objekt dokumentu pro tento editor podporovat rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>. Po přijetí volání metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A> by měl projekt informovat editor, že se dokument ukládá, voláním metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.SaveDocData%2A> na objektu data dokumentu. Editor umožňuje prostředí zpracovat dialogové okno **Uložit jako** voláním `Query Service` pro rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>. Tím se vrátí ukazatel na rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell>. Editor musí potom zavolat metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SaveDocDataToFile%2A> a předat ukazatel do implementace <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> editoru pomocí parametru `pPersistFile`. Prostředí pak provede operaci uložit a poskytne dialogové okno **Uložit jako** pro Editor. Prostředí pak zavolá zpět do editoru pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>.
 
-5. Pokud se uživatel pokouší uložit bez názvu dokumentu (to znamená, že dříve neuloženého dokumentu), příkazu Uložit jako ve skutečnosti provedena.
+5. Pokud se uživatel pokouší uložit dokument bez názvu (tj. dříve neuložený dokument), pak se skutečně provede příkaz Uložit jako.
 
-6. Prostředí pro příkazu Uložit jako, zobrazí dialogové okno Uložit jako, do výzvy k zadání názvu souboru.
+6. V případě příkazu Uložit jako prostředí se zobrazí dialogové okno Uložit jako s výzvou uživatele k zadání názvu souboru.
 
-    Pokud se změnil se název souboru a pak hierarchii zodpovídá za aktualizace rámce dokumentu informace uložené v mezipaměti voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.SetProperty%2A>(VSFPROPID_MkDocument).
+    Pokud se název souboru změnil, pak je zodpovědná za aktualizaci informací v mezipaměti rámce dokumentu voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.SetProperty%2A> (VSFPROPID_MkDocument).
 
-   Pokud **uložit jako** příkaz přesune umístění dokumentu a hierarchie je citlivé na umístění dokumentu. pak v hierarchii je zodpovědný za předání vlastnictví okno otevřeného dokumentu do jiné hierarchie. Například k tomu dochází, pokud projekt sleduje, zda soubor je interní nebo externí soubor aplikace (různé) ve vztahu k projektu. Chcete-li změnit vlastnictví souboru do projektu s různorodými soubory pomocí následujícího postupu.
+   Pokud příkaz **Uložit jako** přesune umístění dokumentu a hierarchie je citlivá na umístění dokumentu, pak je hierarchie zodpovědná za předání vlastnictví otevřeného okna dokumentu do jiné hierarchie. K tomu dochází například v případě, že projekt sleduje, zda je soubor interním nebo externím souborem (soubor s různými soubory) ve vztahu k projektu. Chcete-li změnit vlastnictví souboru na projekt různé soubory, použijte následující postup.
 
 ## <a name="changing-file-ownership"></a>Změna vlastnictví souboru
 
-#### <a name="to-change-file-ownership-to-the-miscellaneous-files-project"></a>Chcete-li změnit vlastnictví souborů ostatních souborech projektu
+#### <a name="to-change-file-ownership-to-the-miscellaneous-files-project"></a>Změna vlastnictví souboru na projekt různé soubory
 
-1. Služba pro dotazování <xref:Microsoft.VisualStudio.Shell.Interop.SVsExternalFilesManager> rozhraní.
+1. Služba dotazů pro rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.SVsExternalFilesManager>
 
-     Ukazatel na <xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2> je vrácena.
+     Vrátí se ukazatel na <xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2>.
 
-2. Volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2.TransferDocument%2A> (`pszMkDocumentNew`, `punkWindowFrame`) způsob přenosu dokumentu do nové hierarchie. Provedení příkazu Uložit jako hierarchii volá tuto metodu.
+2. Chcete-li přenést dokument do nové hierarchie, zavolejte metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2.TransferDocument%2A> (`pszMkDocumentNew`, `punkWindowFrame`). Hierarchie provádějící příkaz Uložit jako volá tuto metodu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>
 - [Otevření a uložení položek projektu](../../extensibility/internals/opening-and-saving-project-items.md)

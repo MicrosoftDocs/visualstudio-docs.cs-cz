@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c4a1c902047b76ef3b29814d10cfc112ab9c7274
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 78817f65197c2dd295a6f2202f913c48b54e1ed9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186785"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748809"
 ---
 # <a name="advanced-build-settings-dialog-box-c"></a>Dialogové okno Upřesnit nastavení sestavení (C#)
 
@@ -50,11 +50,11 @@ Určuje, jestli se mají hlásit chyby kompilátoru Microsoftu. Pokud se nastav�
 
 **Kontrolovat aritmetické přetečení a podtečení**
 
-Určuje, zda je celočíselný aritmetický příkaz, který není v rozsahu [kontrolovány](/dotnet/csharp/language-reference/keywords/checked) zkontrolovaných [nezaškrtnuto](/dotnet/csharp/language-reference/keywords/unchecked) nebo nekontrolovaných klíčových slov a který má za následek, že hodnota mimo rozsah datového typu způsobí výjimku za běhu. Další informace naleznete v tématu [/checked (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/checked-compiler-option).
+Určuje, zda je celočíselný aritmetický příkaz, který není v rozsahu [zkontrolovaných](/dotnet/csharp/language-reference/keywords/checked) nebo [nekontrolovaných](/dotnet/csharp/language-reference/keywords/unchecked) klíčových slov a který má za následek, že hodnota mimo rozsah datového typu způsobí výjimku za běhu. Další informace naleznete v tématu [/checked (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/checked-compiler-option).
 
 **Neodkazovat na mscorlib. dll**
 
-Určuje, zda bude do programu importována knihovna mscorlib. dll a definuje celý <xref:System> obor názvů. Zaškrtněte toto políčko, pokud chcete definovat nebo vytvořit vlastní <xref:System> obor názvů a objekty. Další informace naleznete v tématu [/nostdlib (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/nostdlib-compiler-option).
+Určuje, zda bude do programu importována knihovna mscorlib. dll a definuje celý <xref:System> obor názvů. Zaškrtněte toto políčko, pokud chcete definovat nebo vytvořit vlastní obor názvů <xref:System> a objekty. Další informace naleznete v tématu [/nostdlib (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/nostdlib-compiler-option).
 
 ## <a name="output"></a>Výstup
 
@@ -94,7 +94,7 @@ Určuje velikost oddílů ve výstupním souboru. Platné hodnoty jsou **512**, 
 
 Určuje upřednostňovanou základní adresu, na které se má načíst knihovna DLL. Výchozí základní adresa pro knihovnu DLL je nastavena .NET Framework modul CLR (Common Language Runtime). Další informace naleznete v tématu [/BaseAddress (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/baseaddress-compiler-option).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Možnosti kompilátoru jazyka C#](/dotnet/csharp/language-reference/compiler-options/index)
 - [Stránka sestavení, Návrhář projektu (C#)](../../ide/reference/build-page-project-designer-csharp.md)

@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_sourcefile – | Dokumentace Microsoftu
+title: 'IDiaLineNumber:: get_sourceFile | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e026b837205a8bf62f5d33dc2f5449d40cc485e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5f0041ef4d83003d1b42e0c95b1412262d08458c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828619"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743149"
 ---
-# <a name="idialinenumbergetsourcefile"></a>IDiaLineNumber::get_sourceFile
-Získá odkaz na zdrojový soubor.
+# <a name="idialinenumberget_sourcefile"></a>IDiaLineNumber::get_sourceFile
+Načte odkaz na zdrojový soubor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,11 +33,11 @@ HRESULT get_sourceFile ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí [idiasourcefile –](../../debugger/debug-interface-access/idiasourcefile.md) objekt, který reprezentuje zdrojový soubor.
+mimo Vrátí objekt [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) , který představuje zdrojový soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

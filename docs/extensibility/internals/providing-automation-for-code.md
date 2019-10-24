@@ -1,5 +1,5 @@
 ---
-title: Poskytování automatizace pro kód | Dokumentace Microsoftu
+title: Poskytnutí automatizace pro kód | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,27 +10,27 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c7fa6836f3c396471e3b330d94b67d0978252e3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 874446aa6bf2e40a120aac49e7d91fd3d861d1d4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341549"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72724964"
 ---
 # <a name="providing-automation-for-code"></a>Poskytování automatizace pro kód
-Vytvoření modelu automatizace kódu se nevyžaduje. Sada SDK prostředí neposkytuje ukázku to udělat. Přehled o tom, modely kódu, najdete v článku <xref:EnvDTE.CodeModel> objektu.
+Vytvoření modelu automatizace pro váš kód není vyžadováno. Sada SDK prostředí vám neposkytuje ukázku. Informace o modelech kódu naleznete v objektu <xref:EnvDTE.CodeModel>.
 
- K implementaci modelu kódu, je nutné implementovat všechna rozhraní, které jsou určeny vnitřní datovou strukturu. Objekty musí být odvozen od `IDispatch` třídy.
+ Chcete-li implementovat model kódu, je nutné implementovat jakákoli rozhraní, která jsou určena vaší interní datovou strukturou. Objekty musí být odvozeny od `IDispatch` třídy.
 
- Objekty, které můžete rozšířit <xref:EnvDTE.CodeModel> a <xref:EnvDTE.FileCodeModel>, jsou k dispozici na <xref:EnvDTE.Project> objektu a vypadat nějak takto:
+ Objekty, které rozšiřujete, <xref:EnvDTE.CodeModel> a <xref:EnvDTE.FileCodeModel>, jsou k dispozici z objektu <xref:EnvDTE.Project> a vypadají jako následující:
 
 - <xref:EnvDTE.Project.CodeModel%2A>
 
 - <xref:EnvDTE.ProjectItem.FileCodeModel%2A>
 
- Můžete se rozhodnout k implementaci jenom `CodeModel` nebo `FileCodeModel` rozhraní v objektu, kterou vrátíte z vaší `Project` a <xref:EnvDTE.ProjectItem> objekty. Zadejte všechny funkce z tohoto rozhraní, která je vhodná pro váš systém projektu.
+ Můžete zvolit, že se má implementovat pouze `CodeModel` nebo rozhraní `FileCodeModel` v objektu, který vrátíte z objektů `Project` a <xref:EnvDTE.ProjectItem>. Poskytněte jakékoli funkce z tohoto rozhraní, které jsou vhodné pro váš projektový systém.
 
- Pokud chcete přidat funkce, jako je například metody nebo vlastnosti, které nejsou k dispozici prostřednictvím standardu `CodeModel` a `FileCodeModel` rozhraní, vytvořte vlastní rozhraní, která dědí z normy. Ujistěte se, že dokument s váš systém projektu tak, že koncoví uživatelé vědí, vyhledejte ho. Vrátí standardní rozhraní, ale uživatel může volat `QueryInterface` metody nebo přetypování do vašeho rozhraní, pokud je známo, že existují.
+ Chcete-li přidat funkce, jako například metody nebo vlastnosti, které nejsou k dispozici ze standardních `CodeModel` a `FileCodeModel` rozhraní, vytvořte vlastní rozhraní, které dědí z úrovně Standard. Nezapomeňte dokument zdokumentovat v systému projektu, aby ho koncoví uživatelé věděli, jak ho vyhledat. Vrátíte standardní rozhraní, ale uživatel může zavolat metodu `QueryInterface` nebo přetypovat na rozhraní, pokud je známo, že existuje.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Přehled modelu automatizace](../../extensibility/internals/automation-model-overview.md)

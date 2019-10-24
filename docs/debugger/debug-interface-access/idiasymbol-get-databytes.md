@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_databytes – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_dataBytes | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22ae91323300cd148cf13c4c4aef293709ef73f2
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 79c14427e967736b0dbe1ddb235f9e90b3ecc10f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64786535"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740723"
 ---
-# <a name="idiasymbolgetdatabytes"></a>IDiaSymbol::get_dataBytes
-Získá počet bajtů dat symbol výrobce OEM.
+# <a name="idiasymbolget_databytes"></a>IDiaSymbol::get_dataBytes
+Načte datové bajty pro symbol OEM.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,27 +35,27 @@ HRESULT get_dataBytes ( 
 #### <a name="parameters"></a>Parametry
  `cbData`
 
-[in] Velikost vyrovnávací paměti pro data.
+pro Velikost vyrovnávací paměti pro uchovávání dat.
 
  `pcbData`
 
-[out] Vrátí počet bajtů zapsaný, nebo pokud `data` parametr `NULL`, vrátí počet bajtů, které jsou k dispozici.
+mimo Vrátí počet zapsaných bajtů, nebo, pokud je parametr `data` `NULL`, vrátí počet dostupných bajtů.
 
  `data[]`
-- [out] Vyrovnávací paměť je vyplní datových bajtů.
+- [out,] Vyrovnávací paměť, která je vyplněna datovými bajty.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|V7.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_noreturn – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_noReturn | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0857939289091d22aaafb5dc5bb009d4af0e00bb
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 68a1be922df32de2100c22a15b1656b451a603ef
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64830297"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739739"
 ---
-# <a name="idiasymbolgetnoreturn"></a>IDiaSymbol::get_noReturn
-Získá příznak, který určuje, zda funkce byla označena jako nikdy vrátilo [noreturn](/cpp/cpp/noreturn) atribut.
+# <a name="idiasymbolget_noreturn"></a>IDiaSymbol::get_noReturn
+Načte příznak, který určuje, zda byla funkce označena jako nikdy Nenávratná s atributem [return](/cpp/cpp/noreturn) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,21 +33,21 @@ HRESULT get_noReturn(
 #### <a name="parameters"></a>Parametry
  pFlag
 
-[out] Vrátí `TRUE` Pokud funkce byla deklarována jako nikdy vrátilo `noreturn` atribut; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud byla funkce deklarována jako nikdy Nenávratná pomocí atributu `noreturn`; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|Ve verzi 8.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [noreturn](/cpp/cpp/noreturn)

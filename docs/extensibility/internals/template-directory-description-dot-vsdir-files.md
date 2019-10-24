@@ -1,5 +1,5 @@
 ---
-title: Popis šablony adresáře (. Soubory VSDIR) | Dokumentace Microsoftu
+title: Popis adresáře šablon (. Soubory VSDIR) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,56 +12,56 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ad06428905f924e0e339882057ee4e657da47e8a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fb20a1fbc8d5edd9783521fa933dbddc74ac2a22
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331106"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72722817"
 ---
 # <a name="template-directory-description-vsdir-files"></a>Soubory popisu adresáře šablon (.Vsdir)
-Soubor popisu adresáře šablon (.vsdir) je textový soubor, který umožňuje integrované vývojové prostředí (IDE) pro zobrazení složek, souborů průvodce .vsz a souborů šablon, které jsou spojené s projektem v dialogových oknech. Obsah zahrnuje jeden záznam na souboru nebo složky. Všechny soubory .vsdir v odkazované umístění jsou sloučeny, i když jediný projektový soubor je obvykle zadáváno popisující více složek, průvodců nebo soubory šablon.
+Soubor popisu adresáře šablon (. vsdir) je textový soubor, který umožňuje integrované vývojové prostředí (IDE) zobrazovat složky, soubory s příponou. vsz a soubory šablon přidružené k vašemu projektu v dialogových oknech. Obsah zahrnuje jeden záznam na soubor nebo složku. Všechny soubory. vsdir v odkazovaném umístění jsou sloučeny, i když je obecně k dispozici pouze jeden soubor. vsdir, který popisuje více složek, průvodců nebo souborů šablon.
 
- Složky (v podadresářích), soubory, které jsou odkazovány v souboru .vsdir a samotný soubor .vsdir jsou umístěny ve stejném adresáři. Když integrovaného vývojového prostředí spustí průvodce, nebo zobrazuje složky nebo souboru v **nový projekt** nebo **přidat novou položku** dialogových oknech, rozhraní IDE prozkoumá adresáře, který obsahuje prováděnou soubory, které chcete zjistit, zda je soubor .vsdir k dispozici. Pokud je nalezen soubor .vsdir, rozhraní IDE načte ji k určení, zda obsahuje položku pro spuštěný nebo zobrazené složky nebo souboru. Pokud se položka nenajde, integrovaném vývojovém prostředí používá spuštění průvodce nebo zobrazení obsahu.
+ Složky (podadresáře), soubory, na které se odkazuje v souboru. vsdir a samotný soubor. vsdir, se nachází ve stejném adresáři. Když IDE spustí Průvodce nebo zobrazí složku nebo soubor v dialogových oknech **Nový projekt** nebo **Přidat novou položku** , rozhraní IDE ověří adresář, který obsahuje spuštěné soubory k určení, zda je soubor. vsdir přítomen. Pokud je nalezen soubor. vsdir, rozhraní IDE ho přečte a určí, zda obsahuje položku pro spuštěnou nebo zobrazenou složku nebo soubor. Pokud je položka nalezena, rozhraní IDE použije informace při spuštění průvodce nebo zobrazení obsahu.
 
- Následující příklad kódu je ze souboru SourceFiles.vsdir v \<EnvSDK > \BscPrj\BscPrj\BscPrjProjectItems\Source_Files klíč registru:
+ Následující příklad kódu je ze souboru SourceFiles. vsdir v klíči registru \<EnvSDK > \BscPrj\BscPrj\BscPrjProjectItems\Source_Files:
 
 ```
 HeaderFile.h|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#125|130|#126|0|0|0|#127
 SourceFile.cpp|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#122|110|#123|0|0|0|#124
 ```
 
- V tomto případě jsou dva záznamy do jednoho souboru. Nový řádek (návratový znak) odděluje každý záznam. Každý řádek představuje jiný typ souboru. Kanál (&#124;) odděluje pole v jednotlivých záznamech. Jeden adresář může obsahovat více souborů .vsdir, které mají různými názvy, nebo může mít jeden projektový soubor pro každý typ souboru.
+ V tomto případě jsou dva záznamy v jednom souboru. Nový řádek (znak návratu na začátek řádku) odděluje každý záznam. Každý řádek představuje jiný typ souboru. Znak kanálu (&#124;) odděluje pole v každém záznamu. Jeden adresář může obsahovat více souborů. vsdir, které mají různé názvy souborů, nebo můžete mít jeden soubor. vsdir pro každý typ souboru.
 
 ## <a name="fields"></a>Pole
- V následující tabulce jsou uvedeny na pole určená pro každý záznam.
+ V následující tabulce jsou uvedena pole určená pro každý záznam.
 
 | Pole | Popis |
 | - | - |
-| Relativní cesta (RelPathName) | Název souboru složky, šablonu nebo .vsz, například HeaderFile.h nebo MyWizard.vsz. Toto pole může být také název používá k reprezentování složku. |
-| {clsidPackage} | Identifikátor GUID sady VSPackage, která umožňuje přístup k lokalizované řetězce, jako je například LocalizedName, popis, IconResourceId a SuggestedBaseName, sady VSPackage satelitní dynamická knihovna (DLL) prostředky. IconResourceId platí v případě, že není zadán DLLPath. **Poznámka:**  Toto pole je volitelné, pokud jeden nebo více polí předchozí je identifikátor prostředku. Toto pole je obvykle prázdné, pokud souborů .vsdir, které odpovídají s použitím průvodců třetích stran, které nelze lokalizovat jejich textu. |
-| LocalizedName | Lokalizovaný název souboru šablony nebo průvodce. Toto pole může být řetězec nebo identifikátor prostředku ve formě "#ResID". Tento název se zobrazí v **přidat novou položku** dialogové okno. **Poznámka:**  Pokud LocalizedName je identifikátor prostředku, vyžaduje se {clsidPackage}. |
-| SortPriority | Celé číslo představující relativní priorita tohoto souboru šablony nebo průvodce. Například pokud se tato položka má hodnotu 1, pak tato položka se zobrazí vedle dalších položek s hodnotou 1 a před všechny položky s hodnotou řazení 2 nebo větší.<br /><br /> Řazení priorita je relativní vůči položky ve stejném adresáři. Může být více než jeden soubor .vsdir ve stejném adresáři. V takovém případě položky ze všech <em>.</em> soubory VSDIR v tomto adresáři jsou sloučeny. Položky se stejnou prioritou jsou uvedeny ve velkých a malých písmen slovníkovém pořadí zobrazovaný název. `_wcsicmp` Funkce slouží ke třídění položek.<br /><br /> Položky, které nejsou popsané v souborů .vsdir zahrnují priorita je větší než nejvyšší priorita v souborech .vsdir. Výsledkem je, že tyto položky jsou na konci seznamu bez ohledu na jejich název. |
-| Popis | Lokalizovaný popis souboru šablony nebo průvodce. Toto pole může být řetězec nebo identifikátor prostředku ve formě "#ResID". Tento řetězec je zobrazen v **nový projekt** nebo **přidat novou položku** dialogové okno při výběru položky. |
-| DLLPath nebo {clsidPackage} | Umožňuje načíst ikonu pro soubor šablony nebo průvodce. Ikona je načtena jako prostředek ze souboru .dll nebo .exe s použitím IconResourceId. Tento soubor .dll nebo .exe lze identifikovat pomocí úplnou cestu nebo identifikátor GUID sady VSPackage pomocí. Implementace DLL sady VSPackage slouží k načtení ikony (ne satelitní knihovny DLL). |
-| IconResourceId | Identifikátor prostředku v implementaci VSPackage nebo knihovny DLL knihovny DLL, která určuje ikonu k zobrazení. |
-| Příznaky (<xref:Microsoft.VisualStudio.Shell.Interop.__VSDIRFLAGS>) | Umožňuje povolit nebo zakázat **název** a **umístění** pole na **přidat novou položku** dialogové okno. Hodnota **příznaky** pole je desítkový ekvivalent kombinací vyžaduje bitové příznaky.<br /><br /> Když uživatel vybere položku na **nový** kartu, projektu určuje, zda pole název a umístění se zobrazí při **přidat novou položku** nejprve zobrazí dialogové okno. Položky, pomocí souborů .vsdir, můžete určit pouze, zda pole jsou povolené a zakázané při výběru položky. |
-| SuggestedBaseName | Představuje výchozí název souboru, průvodce nebo šablony. Toto pole je řetězec nebo identifikátor prostředku ve formě "#ResID". Integrované vývojové prostředí používá tuto hodnotu jako výchozí název položky. S celočíselnou hodnotou. Chcete-li název jedinečný, jako je například MyFile21.asp se připojí tento základní hodnota.<br /><br /> V předchozím seznamu popis, DLLPath, IconResourceId, příznaky a SuggestedBaseNumber platí pouze pro soubory šablon a průvodce. Tato pole se nevztahují ke složkám. Tato skutečnost je znázorněn v kódu v souboru BscPrjProjectItems \<EnvSDK > \BscPrj\BscPrj\BscPrjProjectItems klíč registru. Tento soubor obsahuje tři záznamy (jeden pro každou složku) s čtyři pole pro každý záznam: RelPathName {clsidPackage} LocalizedName a SortPriority.<br /><br /> `General&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#110&#124;100`<br /><br /> `Source_Files&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#111&#124;110`<br /><br /> `Env&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#112&#124;120` |
+| Název relativní cesty (RelPathName) | Název složky, šablony nebo souboru. vsz, například HeaderFile. h nebo MyWizard. vsz. V tomto poli můžete také použít název, který představuje složku. |
+| {clsidPackage} | Identifikátor GUID sady VSPackage, který umožňuje přístup k lokalizovaným řetězcům, jako jsou například lokalizované, popis, IconResourceId a SuggestedBaseName, v satelitních dynamických odkazech knihovny (DLL) sady VSPackage. IconResourceId platí, pokud není zadán DLLPath. **Poznámka:**  Toto pole je volitelné, pokud jedno nebo více předchozích polí není identifikátorem prostředku. Toto pole je obvykle prázdné pro soubory. vsdir, které odpovídají průvodcům třetích stran, které Nelokalizovat jejich text. |
+| Lokalizovaný | Lokalizovaný název souboru šablony nebo průvodce. Toto pole může být řetězec nebo identifikátor prostředku ve formátu "#ResID". Tento název se zobrazí v dialogovém okně **Přidat novou položku** . **Poznámka:**  Pokud je lokalizovaný identifikátor prostředku, je nutné {clsidPackage}. |
+| SortPriority | Celé číslo představující relativní prioritu tohoto souboru šablony nebo průvodce. Například pokud má tato položka hodnotu 1, pak se tato položka zobrazí vedle jiných položek s hodnotou 1 a před všemi položkami s hodnotou řazení 2 nebo větší.<br /><br /> Priorita řazení je relativní vzhledem k položkám ve stejném adresáři. Ve stejném adresáři může být víc než jeden soubor. vsdir. V takovém případě položky ze všech <em>.</em> soubory VSDIR v tomto adresáři se sloučí. Položky se stejnou prioritou jsou uvedeny v lexikografickým pořadím pořadí zobrazeného názvu v nerozlišování velkých a malých písmen. Funkce `_wcsicmp` slouží k seřazení položek.<br /><br /> Položky, které nejsou popsány v souborech. vsdir, obsahují prioritní číslo větší, než je nejvyšší číslo priority uvedené v souborech. vsdir. Výsledkem je, že tyto položky jsou na konci zobrazeného seznamu bez ohledu na jejich název. |
+| Popis | Lokalizovaný Popis souboru šablony nebo průvodce. Toto pole může být řetězec nebo identifikátor prostředku ve formátu "#ResID". Tento řetězec se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** , pokud je položka vybrána. |
+| DLLPath nebo {clsidPackage} | Slouží k načtení ikony pro soubor šablony nebo průvodce. Ikona je načtena jako prostředek ze souboru. dll nebo. exe pomocí IconResourceId. Tento soubor. dll nebo. exe lze identifikovat buď pomocí úplné cesty, nebo pomocí identifikátoru GUID sady VSPackage. Implementační knihovna VSPackage se používá k načtení ikony (ne satelitní knihovny DLL). |
+| IconResourceId | Identifikátor prostředku v knihovně DLL implementace VSPackage, který určuje ikonu, která má být zobrazena. |
+| Příznaky (<xref:Microsoft.VisualStudio.Shell.Interop.__VSDIRFLAGS>) | Slouží k zakázání nebo povolení polí **název** a **umístění** v dialogovém okně **Přidat novou položku** . Hodnota pole **Flags** je desítková ekvivalent kombinace požadovaných bitových příznaků.<br /><br /> Když uživatel vybere položku na **nové** kartě, projekt určí, zda je pole název a umístění zobrazeno, když se nejprve zobrazí dialogové okno **Přidat novou položku** . Položka, prostřednictvím souboru. vsdir, může řídit pouze to, zda jsou pole povolena a zakázána, když je položka vybrána. |
+| SuggestedBaseName | Představuje výchozí název souboru, průvodce nebo šablony. Toto pole je buď řetězec, nebo identifikátor prostředku ve formátu "#ResID". Rozhraní IDE používá tuto hodnotu k poskytnutí výchozího názvu pro položku. Tato základní hodnota se připojí s celočíselnou hodnotou, aby byl název jedinečný, například MyFile21. ASP.<br /><br /> V předchozím seznamu jsou popisy, DLLPath, IconResourceId, flags a SuggestedBaseNumber platné pouze pro soubory šablon a průvodce. Tato pole se nevztahují na složky. Tento fakt je znázorněn v kódu v souboru BscPrjProjectItems \<EnvSDK v klíči registru > \BscPrj\BscPrj\BscPrjProjectItems. Tento soubor obsahuje tři záznamy (jeden pro každou složku) se čtyřmi poli pro každý záznam: RelPathName, {clsidPackage}, lokalizovaných a SortPriority.<br /><br /> `General&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#110&#124;100`<br /><br /> `Source_Files&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#111&#124;110`<br /><br /> `Env&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#112&#124;120` |
 
- Při vytváření souboru průvodce byste také zvážit následující problémy.
+ Při vytváření souboru Průvodce byste měli také vzít v úvahu následující problémy.
 
-- Libovolné nepovinné pole pro kterou neexistují žádná smysluplná data by měla obsahovat hodnotu 0 (nula) jako zástupný symbol.
+- Jakékoli nepovinné pole, pro které neexistují žádná smysluplná data, by měla obsahovat 0 (nula) jako zástupný symbol.
 
-- Pokud není lokalizovaný název zadán, použije se v souboru průvodce název relativní cestu.
+- Pokud není zadaný žádný lokalizovaný název, použije se v souboru průvodce název relativní cesty.
 
-- DLLPath přepíše clsidPackage pro umístění ikony.
+- DLLPath Přepisuje clsidPackage pro umístění ikony.
 
-- Pokud není definována žádná ikona, IDE nahradí výchozí ikonu pro soubor, který se má toto rozšíření.
+- Pokud není definována žádná ikona, IDE nahradí výchozí ikonu pro soubor, který má příponu.
 
-- Pokud není navrhované základní název zadán, použije se 'Project'.
+- Pokud není zadán žádný navrhovaný základní název, použije se ' Project '.
 
-- Pokud odstraníte soubory .vsz, složky nebo soubory šablon, musíte také odebrat jejich přidružené záznamy ze souboru .vsdir.
+- Pokud odstraníte soubory. vsz, složky nebo soubory šablon, je nutné odebrat také přidružené záznamy ze souboru. vsdir.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Průvodci](../../extensibility/internals/wizards.md)
 - [Soubor průvodce (.Vsz)](../../extensibility/internals/wizard-dot-vsz-file.md)

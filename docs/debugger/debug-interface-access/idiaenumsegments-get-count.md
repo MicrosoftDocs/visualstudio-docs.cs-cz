@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsegments::get_count – | Dokumentace Microsoftu
+title: 'IDiaEnumSegments:: get_Count | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eac1b6d88917ca94db82a3e4e8c20c4be3060560
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 16287d83c19ef01f5ba59127ce49bec4b7312b4b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833194"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744221"
 ---
-# <a name="idiaenumsegmentsgetcount"></a>IDiaEnumSegments::get_Count
-Získá počet segmentů.
+# <a name="idiaenumsegmentsget_count"></a>IDiaEnumSegments::get_Count
+Načte počet segmentů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,8 +35,8 @@ HRESULT get_Count ( 
 - [out, retval] Vrátí počet segmentů.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)
 - [IDiaEnumSegments::Item](../../debugger/debug-interface-access/idiaenumsegments-item.md)

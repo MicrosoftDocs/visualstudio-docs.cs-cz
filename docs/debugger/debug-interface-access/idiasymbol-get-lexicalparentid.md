@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_lexicalparentid – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_lexicalParentId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a1d09e4cba02e1b27ca84a1c678a439f451012ee
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: f59f72ea204fb8417953ffa5156ac8130ea59c52
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64832865"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739957"
 ---
-# <a name="idiasymbolgetlexicalparentid"></a>IDiaSymbol::get_lexicalParentId
-Načte identifikátor lexikální nadřazené symbolu.
+# <a name="idiasymbolget_lexicalparentid"></a>IDiaSymbol::get_lexicalParentId
+Načte lexikální nadřazený identifikátor symbolu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,16 +33,16 @@ HRESULT get_lexicalParentId ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí ID lexikální nadřazeného symbolu.
+mimo Vrátí lexikální nadřazené ID symbolu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Identifikátor je jedinečná hodnota vytvořené DIA SDK označit všechny symboly jako jedinečný.
+ Identifikátor je jedinečná hodnota vytvořená DIA SDK k označení všech symbolů jako jedinečných.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

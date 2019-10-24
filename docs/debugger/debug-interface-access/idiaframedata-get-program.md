@@ -1,5 +1,5 @@
 ---
-title: IDiaFrameData::get_program | Microsoft Docs
+title: 'IDiaFrameData:: get_program | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6b893a40172bfd806130bef663da8676b513042
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 135f2b0a042dd74b573a0746831a48fb27e7c2a9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832835"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743522"
 ---
-# <a name="idiaframedatagetprogram"></a>IDiaFrameData::get_program
-Načte řetězec program, který se používá k výpočtu do registru, nastavte před voláním na aktuální funkci.
+# <a name="idiaframedataget_program"></a>IDiaFrameData::get_program
+Načte řetězec programu, který se používá k výpočtu sady registrů před voláním do aktuální funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,23 +33,23 @@ HRESULT get_program ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí řetězec programu.
+mimo Vrátí řetězec programu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Program řetězec je posloupnost makra, která je interpretován, aby bylo možné navázat prologu. Například typické zásobníku použít program řetězec `"$T0 $ebp = $eip $T0 4 + ^ = $ebp $T0 ^ = $esp $T0 8 + ="`. Formát je polština zpětného zápisu, ve kterém operátory následují operandy. `T0` představuje dočasné proměnné do zásobníku. V tomto příkladu provede následující kroky:
+ Řetězec programu je sekvence maker, která jsou interpretována za účelem vytvoření prologu. Například typický rámec zásobníku může použít řetězec programu `"$T0 $ebp = $eip $T0 4 + ^ = $ebp $T0 ^ = $esp $T0 8 + ="`. Formát je zpětný polský zápis, kde operátory následují za operandy. `T0` představuje dočasnou proměnnou v zásobníku. Tento příklad provádí následující kroky:
 
-1. Přesunout obsah registru `ebp` k `T0`.
+1. Přesunout obsah `ebp` registru do `T0`
 
-2. Přidat `4` s hodnotou v `T0` vytvářel adresu, získat hodnotu z této adresy a uložení hodnoty v registru `eip`.
+2. Přidejte `4` k hodnotě v `T0`, aby se vytvořila adresa, získá hodnotu z této adresy a uloží hodnotu v registru `eip`.
 
-3. Získá hodnotu z adresu uloženou v `T0` a uložit do registru tuto hodnotu `ebp`.
+3. Získá hodnotu z adresy uložené v `T0` a uloží tuto hodnotu do `ebp` registru.
 
-4. Přidat `8` s hodnotou v `T0` a uložit do registru tuto hodnotu `esp`.
+4. Přidejte `8` k hodnotě v `T0` a uložte tuto hodnotu do `esp` registru.
 
-   Všimněte si, že je řetězec program konkrétním procesoru a konvence volání pro funkci reprezentované aktuální rámec zásobníku.
+   Všimněte si, že řetězec programu je specifický pro procesor a na konvenci volání nastavené pro funkci reprezentovanou aktuálním rámcem zásobníku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

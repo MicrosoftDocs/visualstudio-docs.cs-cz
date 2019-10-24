@@ -16,36 +16,36 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31eb3427a441b4b79bbd57d9da9871118173b15c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 11ad6280ad1213008bbb8ca8f6311ca34231d308
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62849412"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72732446"
 ---
-# <a name="how-to-switch-to-another-thread-while-debugging-in-visual-studio-c-visual-basic-c"></a>Postupy: Přepnutí na jiné vlákno během ladění v sadě Visual Studio (C#, Visual Basic, C++)
-Při ladění aplikace s více vlákny, můžete použít některou z několika metod přepnutí z vlákna, které jste pracovali jste se do jiného vlákna.
+# <a name="how-to-switch-to-another-thread-while-debugging-in-visual-studio-c-visual-basic-c"></a>Postupy: přepnutí na jiné vlákno během ladění v aplikaci Visual Studio (C#Visual Basic, C++)
+Při ladění vícevláknové aplikace můžete použít některou z několika metod k přepnutí z vlákna, se kterým jste pracovali, s jiným vláknem.
 
 > [!NOTE]
-> Pokud chcete určit pořadí, ve kterém spuštění vlákna, budete muset [zablokovat a odblokovat vlákna](../debugger/get-started-debugging-multithreaded-apps.md).
+> Chcete-li řídit pořadí, ve kterém jsou vlákna spouštěna, je nutné [zablokovat a uvolnit vlákna](../debugger/get-started-debugging-multithreaded-apps.md).
 
-Při kontrole vláken v editoru kódu a jiné vícevláknové ladění systému windows, žlutá šipka označuje aktuální vlákno. Zelená šipka s vlnitým ocáskem znamená, že není aktuální vlákno má aktuální kontext ladicího programu.
+Při prozkoumávání vláken v editoru kódu a různých oknech s více vlákny pro ladění, žlutá šipka indikuje aktuální vlákno. Zelená šipka s kudrlinkou zakončením označuje, že neaktuální vlákno má aktuální kontext ladicího programu.
 
-### <a name="to-switch-to-any-thread-that-appears"></a>Chcete-li přepnout do libovolného vlákna, která se zobrazí
+### <a name="to-switch-to-any-thread-that-appears"></a>Přepnutí na jakékoli vlákno, které se zobrazí
 
-- V **vlákna** nebo **paralelní sledování** okna, dvakrát klikněte na vlákno.
+- V okně **vlákna** nebo **paralelní sledování** dvakrát klikněte na vlákno.
 
-### <a name="to-switch-to-a-thread-in-a-source-window"></a>Chcete-li přepnout na vlákno v okně zdroje
+### <a name="to-switch-to-a-thread-in-a-source-window"></a>Přepnutí na vlákno v okně zdrojového kódu
 
-- V levém hřbetu, klikněte pravým tlačítkem na ikonu značky vlákna ![značky vlákna](../debugger/media/dbg-thread-marker.png "ThreadMarker"), přejděte na **přepnout na**a pak klikněte na název tohoto vlákna, do kterého chcete přejít . V místní nabídce zobrazí vlákna v tomto konkrétním umístění.
+- V levém hřbetu klikněte pravým tlačítkem myši na ![značku vlákna](../debugger/media/dbg-thread-marker.png "ThreadMarker")ikony vlákna, přejděte na možnost **Přepnout na**a potom klikněte na název vlákna, na které chcete přepnout. Místní nabídka zobrazuje pouze vlákna na daném konkrétním místě.
 
-     Pokud se nezobrazí žádné značky vlákna, klepněte pravým tlačítkem myši **vlákna** okno a ověřte, že **zobrazit vlákna ve zdroji** zaškrtnuto.
+     Pokud se nezobrazí žádné značky vlákna, klikněte pravým tlačítkem myši v okně **vlákna** a ověřte, zda je vybrána možnost **Zobrazit vlákna ve zdroji** .
 
-### <a name="to-switch-to-a-thread-in-the-debug-location-toolbar"></a>Chcete-li přepnout na vlákno na panelu nástrojů umístění ladění
+### <a name="to-switch-to-a-thread-in-the-debug-location-toolbar"></a>Přepnutí na vlákno na panelu nástrojů umístění ladění
 
-1. Na **umístění ladění** nástrojů, klikněte na tlačítko **vlákna** seznamu.
+1. Na panelu nástrojů **umístění ladění** klikněte na seznam **vláken** .
 
-2. V seznamu klikněte na tlačítko vlákna, do kterého chcete přejít.
+2. V seznamu klikněte na vlákno, na které chcete přepnout.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění vícevláknových aplikací](../debugger/debug-multithreaded-applications-in-visual-studio.md)

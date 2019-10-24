@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_liveRangeLength | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_liveRangeLength | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c85288902d1a8c75b067bec0c77242e9a246561
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: b663ef54959544764016fe59e4b0fb41607854b1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64808242"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739935"
 ---
-# <a name="idiasymbolgetliverangelength"></a>IDiaSymbol::get_liveRangeLength
-Vrátí délku objektu rozsah adres, ve kterém je platná místního symbolu.
+# <a name="idiasymbolget_liverangelength"></a>IDiaSymbol::get_liveRangeLength
+Vrátí délku rozsahu adres, ve kterém je místní symbol platný.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,22 +33,22 @@ HRESULT get_liveRangeLength ( 
 #### <a name="parameters"></a>Parametry
  `length`
 
-[out] Vrátí délku objektu rozsah adres.
+mimo Vrátí délku rozsahu adres.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 > [!NOTE]
-> Kód chyby znamená, že symbol nemá informace o rozsahu za provozu.
+> Vrácený kód chyby znamená, že symbol neobsahuje informace o živém rozsahu.
 
 ## <a name="remarks"></a>Poznámky
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: Dia2.h
+ Záhlaví: Dia2. h
 
- Knihovna: diaguids.lib
+ Knihovna: diaguids. lib
 
- DLL: msdia100.dll
+ Knihovna DLL: msdia100. dll
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

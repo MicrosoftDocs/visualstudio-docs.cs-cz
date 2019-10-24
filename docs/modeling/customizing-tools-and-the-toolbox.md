@@ -13,12 +13,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75e3a791fc53f7a1e9ff093cc46e3d73003417cf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8099773dbbfdd06e4ce806401400bf3d2443b57f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653956"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747594"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>Přizpůsobení nástrojů a panelu nástrojů
 
@@ -232,7 +232,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
  Pomocí vlastního kódu můžete použít omezení typu "Hard", ale měli byste zvážit, zda by uživatelé měli být schopni dočasně vytvořit neplatná připojení. Pokud by měly, můžete tato omezení upravit tak, aby se neověřilo, dokud se uživatelé nepokusí Uložit změny.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přizpůsobení vytvoření a přesunutí elementu](../modeling/customizing-element-creation-and-movement.md)
 - [Přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md)

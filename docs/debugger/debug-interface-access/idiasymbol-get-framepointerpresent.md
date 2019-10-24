@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_framepointerpresent – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_framePointerPresent | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7914845bccb43ce302665428c824bbf3ebb2c819
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 1fce085f134b844d7e53e19d9e2ec057aa8a89ca
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64825338"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740670"
 ---
-# <a name="idiasymbolgetframepointerpresent"></a>IDiaSymbol::get_framePointerPresent
-Získá příznak, který určuje, zda je k dispozici ukazatel na rámec. Použít, když [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) je nastavena na `SymTagFunction`.
+# <a name="idiasymbolget_framepointerpresent"></a>IDiaSymbol::get_framePointerPresent
+Načte příznak, který určuje, zda je k dispozici ukazatel na rámec. Použijte, pokud je [výčet SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) nastavený na `SymTagFunction`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,22 +33,22 @@ HRESULT get_framePointerPresent( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out]] Vrátí `TRUE` , pokud ukazatel na rámec je k dispozici; jinak vrátí hodnotu, vrátí `FALSE`.
+[out]] Vrátí `TRUE`, pokud je přítomný ukazatel na rámec. v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: Dia2.h
+ Záhlaví: Dia2. h
 
- Knihovna: diaguids.lib
+ Knihovna: diaguids. lib
 
- DLL: msdia100.dll
+ Knihovna DLL: msdia100. dll
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

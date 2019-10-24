@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbols::Skip – | Dokumentace Microsoftu
+title: 'IDiaEnumSymbols:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ea2b1ea99eb2801259d58a12c359e9fffd887a64
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9252826470decd3cddfabdcc2a00e22037d5de5c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830433"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743910"
 ---
 # <a name="idiaenumsymbolsskip"></a>IDiaEnumSymbols::Skip
-Vynechá zadaný počet symbolů v sekvenci výčtu.
+Přeskočí zadaný počet symbolů v sekvenci výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT Skip ( 
 #### <a name="parameters"></a>Parametry
  celt
 
-[in] Počet symbolů v pořadí výčtu pro přeskočení.
+pro Počet symbolů v sekvenci výčtu k přeskočení.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` Pokud neexistují žádné další symboly pro přeskočení.
+ V případě úspěchu vrátí `S_OK`; jinak vrátí `S_FALSE`, pokud nejsou k dispozici žádné další symboly, které by bylo možné přeskočit.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

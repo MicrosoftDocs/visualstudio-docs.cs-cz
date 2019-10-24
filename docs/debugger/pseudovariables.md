@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b6856517a680809ccc802c02dc880b6349eadc5
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: e328e85f58e69ef1d579fd979f629c59b90caf3e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72535957"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72730516"
 ---
 # <a name="pseudovariables-in-the-visual-studio-debugger"></a>Pseudoproměnné v ladicím programu sady Visual Studio
 Pseudoproměnné jsou výrazy používané k zobrazení určitých informací v okně proměnných nebo v dialogovém okně **QuickWatch** . Pseudoproměnnou můžete zadat stejným způsobem, jako byste zadali normální proměnnou. Pseudoproměnné nejsou proměnné, ale neodpovídají názvům proměnných v programu.
@@ -67,6 +67,6 @@ Pseudoproměnné jsou výrazy používané k zobrazení určitých informací v 
 |`$` *N* `#`|Zobrazí objekt s ID objektu větším než *N*.|
 |`$dynamic`|Zobrazí speciální uzel **dynamického zobrazení** pro objekt, který implementuje `IDynamicMetaObjectProvider`. Prostředí. Syntaxe je `$dynamic,` *objekt*. Tato funkce se vztahuje pouze na kód, který používá .NET Framework verze 4 nebo novější.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Okna Kukátko a Rychlé kukátko](../debugger/watch-and-quickwatch-windows.md)
 - [Okna proměnných](../debugger/debugger-windows.md)

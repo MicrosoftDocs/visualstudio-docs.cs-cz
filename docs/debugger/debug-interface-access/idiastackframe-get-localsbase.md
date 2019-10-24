@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_localsbase – | Dokumentace Microsoftu
+title: 'IDiaStackFrame:: get_localsBase | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cbe6dd1d5b72faea57ecb015b0da294798527c0b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4ae3f83469e14e826802ca82d3d58686a340d9e0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838204"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741664"
 ---
-# <a name="idiastackframegetlocalsbase"></a>IDiaStackFrame::get_localsBase
-Získá základní adresu lokální proměnné pro rámec.
+# <a name="idiastackframeget_localsbase"></a>IDiaStackFrame::get_localsBase
+Načte základní adresu místních proměnných pro daný rámec.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_localsBase ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí základní adresu místní proměnné.
+mimo Vrátí základní adresu místních proměnných.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_intro | Microsoft Docs
+title: 'IDiaSymbol:: get_intro | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 153daa1f43ba4945a5eb32aea82c5d58ff57c5f6
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 4680af2d41ef3fa06a89784003c98982a09c2b63
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62836797"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740352"
 ---
-# <a name="idiasymbolgetintro"></a>IDiaSymbol::get_intro
-Získá příznak, který určuje, zda je funkce Představujeme virtuální funkce.
+# <a name="idiasymbolget_intro"></a>IDiaSymbol::get_intro
+Načte příznak, který určuje, zda je funkce Představujeme virtuální funkci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_intro ( 
 #### <a name="parameters"></a>Parametry
 `pRetVal`
 
-[out] Vrátí `TRUE` Pokud je funkce Úvod virtuální; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud je funkce webvirtual; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="example"></a>Příklad
 
@@ -52,14 +52,14 @@ class B : public A {
 }
 ```
 
-Obě `A::f1` a `B::f1` jsou virtuální funkce, ale `A::f1` Úvod je virtuální.
+@No__t_0 i `B::f1` jsou virtuální funkce, ale `A::f1` je webvirtual.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|V7.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

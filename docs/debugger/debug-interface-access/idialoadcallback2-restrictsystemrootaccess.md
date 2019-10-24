@@ -1,5 +1,5 @@
 ---
-title: Idialoadcallback2::restrictsystemrootaccess – | Dokumentace Microsoftu
+title: 'IDiaLoadCallback2:: RestrictSystemRootAccess | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 421581520f28037bc4b8fce9d546eaffad557f75
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0cf1a29019de2d3ffdfdb3cc7b9006e964495aa9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839716"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742976"
 ---
 # <a name="idialoadcallback2restrictsystemrootaccess"></a>IDiaLoadCallback2::RestrictSystemRootAccess
-Určuje, jestli hledání souborů PDB je povolený v kořenovém adresáři systému.
+Určuje, zda je v kořenovém adresáři systému povoleno hledání souborů. pdb.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,10 +29,10 @@ HRESULT RestrictSystemRootAccess();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Žádné jiné než návratový kód `S_OK` zabrání vyhledávání kořenový adresář pro soubory typu .pdb.
+ Libovolný návratový kód jiný než `S_OK` zabraňuje prohledávání kořenového adresáře systému souborů PDB.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

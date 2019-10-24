@@ -1,5 +1,5 @@
 ---
-title: Idiastackwalkframe::put_registervalue – | Dokumentace Microsoftu
+title: IDiaStackWalkFrame::p ut_registerValue | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 440c7d19382b813b3f34451d7c177c6e8b57f16f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 24bcafcc373e3c03bd1e656f26ee9a8aa443d320
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831844"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741493"
 ---
-# <a name="idiastackwalkframeputregistervalue"></a>IDiaStackWalkFrame::put_registerValue
+# <a name="idiastackwalkframeput_registervalue"></a>IDiaStackWalkFrame::put_registerValue
 Nastaví hodnotu registru.
 
 ## <a name="syntax"></a>Syntaxe
@@ -34,15 +34,15 @@ HRESULT put_registerValue ( 
 #### <a name="parameters"></a>Parametry
  `index`
 
-[in] Hodnota z [cv_hreg_e – výčet](../../debugger/debug-interface-access/cv-hreg-e.md) výčet určující k zápisu do registru.
+pro Hodnota z výčtu [výčtu CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md) určující registraci, do které se má zapisovat.
 
  `NewVal`
 
-[in] Nové hodnoty registru.
+pro Nová hodnota registru.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)
 - [CV_HREG_e – výčet](../../debugger/debug-interface-access/cv-hreg-e.md)

@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_hasAlloca | Microsoft Docs
+title: 'IDiaSymbol:: get_hasAlloca | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 457f446af4a91141962fbbd3055d9ce4980c719a
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: b4d476d5b2ecf9edf29aea1bbbc68e7890b59b13
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64808785"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740589"
 ---
-# <a name="idiasymbolgethasalloca"></a>IDiaSymbol::get_hasAlloca
-Získá příznak, který určuje, zda funkce obsahuje volání `alloca` (který se používá k přidělení paměti na zásobníku).
+# <a name="idiasymbolget_hasalloca"></a>IDiaSymbol::get_hasAlloca
+Načte příznak, který určuje, zda funkce obsahuje volání metody `alloca` (která se používá k přidělení paměti v zásobníku).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,20 +31,20 @@ HRESULT get_hasAlloca(   BOOL *pFlag);
 #### <a name="parameters"></a>Parametry
  `pFlag`
 
-[out] Vrátí `TRUE` Pokud funkce obsahuje volání `alloca`; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud funkce obsahuje volání `alloca`; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|Ve verzi 8.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

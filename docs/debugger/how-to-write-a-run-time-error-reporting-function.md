@@ -1,5 +1,5 @@
 ---
-title: Zápis chyb za běhu funkce vytváření sestav | Dokumentace Microsoftu
+title: Zápis funkce zasílání zpráv o chybách za běhu | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -18,15 +18,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ff16a1443b05dc7021406cde03a4153f3234602
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b145e34b0dfeafbb7fde436dd561721962a89f3b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62905899"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731798"
 ---
-# <a name="how-to-write-a-run-time-error-reporting-function-c"></a>Postupy: Zápis Run-Time chybách – funkce (C++)
-Vlastní vytváření sestav funkce pro chyby za běhu musí mít stejné deklaraci jako `_CrtDbgReportW`. V ladicím programu, měla by vrátit hodnotu 1.
+# <a name="how-to-write-a-run-time-error-reporting-function-c"></a>Postupy: zápis funkce zasílání zpráv o chybách za běhu (C++)
+Vlastní funkce vytváření sestav pro běhové chyby musí mít stejnou deklaraci jako `_CrtDbgReportW`. Měl by vrátit hodnotu 1 ladicímu programu.
 
 Následující příklad ukazuje, jak definovat vlastní funkci generování sestav.
 
@@ -62,7 +62,7 @@ int MyErrorFunc(int errorType, const wchar_t *filename,
 ```
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje mnohem složitější vlastní funkci generování sestav. V tomto příkladu zpracovává příkaz switch různých typů chyb podle definice `reportType` parametr `_CrtDbgReportW`. Protože nahrazujete `_CrtDbgReportW`, nemůžete použít `_CrtSetReportMode`. Funkce musí umět zpracovat výstup. Prvním argumentem proměnné v tato funkce přijímá počet chyb za běhu. Další informace najdete v tématu [_RTC_SetErrorType](/cpp/c-runtime-library/reference/rtc-seterrortype).
+Následující příklad ukazuje komplexnější vlastní funkci generování sestav. V tomto příkladu příkaz switch zpracovává různé typy chyb, jak jsou definovány parametrem `reportType` `_CrtDbgReportW`. Protože nahrazujete `_CrtDbgReportW`, nemůžete použít `_CrtSetReportMode`. Vaše funkce musí zpracovat výstup. První argument proměnné v této funkci přebírá běhové číslo chyby. Další informace najdete v tématu [_RTC_SetErrorType](/cpp/c-runtime-library/reference/rtc-seterrortype).
 
 ```cpp
 #include <windows.h>
@@ -107,7 +107,7 @@ int Catch_RTC_Failure(int errType, const wchar_t *file, int line,
 ```
 
 ## <a name="example"></a>Příklad
-Použití `_RTC_SetErrorFuncW` instalace svoji funkci místo `_CrtDbgReportW`. Další informace najdete v tématu [_RTC_SetErrorFuncW](/cpp/c-runtime-library/reference/rtc-seterrorfuncw). `_RTC_SetErrorFuncW` Vrátit hodnotu předchozí funkce vytváření sestav, která můžete uložit a obnovit v případě potřeby.
+Použijte `_RTC_SetErrorFuncW` k instalaci vlastní funkce místo `_CrtDbgReportW`. Další informace najdete v tématu [_RTC_SetErrorFuncW](/cpp/c-runtime-library/reference/rtc-seterrorfuncw). Návratová hodnota `_RTC_SetErrorFuncW` je předchozí funkce vytváření sestav, kterou můžete v případě potřeby uložit a obnovit.
 
 ```cpp
 #include <rtcapi.h>
@@ -122,5 +122,5 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 [Přizpůsobení nativních kontrol za běhu](../debugger/native-run-time-checks-customization.md)

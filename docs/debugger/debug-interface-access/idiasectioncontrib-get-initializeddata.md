@@ -1,5 +1,5 @@
 ---
-title: IDiaSectionContrib::get_initializedData | Microsoft Docs
+title: 'IDiaSectionContrib:: get_initializedData | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ef878dcae9f8d6d29761bcda5f5aa9588f26d66c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6386fc6bb460f7e0947680a9776af7646f1bec14
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828171"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742638"
 ---
-# <a name="idiasectioncontribgetinitializeddata"></a>IDiaSectionContrib::get_initializedData
-Získá příznak označující, zda oddíl obsahuje inicializovaná data.
+# <a name="idiasectioncontribget_initializeddata"></a>IDiaSectionContrib::get_initializedData
+Načte příznak označující, zda oddíl obsahuje inicializovaná data.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_initializedData ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` Pokud oddíl obsahuje inicializovaná data; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud oddíl obsahuje inicializovaná data; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

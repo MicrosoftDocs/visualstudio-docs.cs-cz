@@ -1,5 +1,5 @@
 ---
-title: Templategroupid – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: TemplateGroupID – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,17 +14,17 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4b4e0ccae38b79cf8efb4b7b426fb65ae909c5d5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7f710a73d8b9c4e31c8189d3322c518f20def5bb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316596"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72718660"
 ---
 # <a name="templategroupid-element-visual-studio-templates"></a>TemplateGroupID – element (šablony sady Visual Studio)
-Určuje, jaký typ projektu šablony položek se zobrazí. Tento element je důležité, když [ShowByDefault (šablony sady Visual Studio)](../extensibility/showbydefault-visual-studio-templates.md) je nastavena na `false`. Když [ShowByDefault (šablony sady Visual Studio)](../extensibility/showbydefault-visual-studio-templates.md) je nastavena na `true`, bude k dispozici ve všech typech projektů, šablony položky.
+Určuje, v jakém typu projektu se budou šablony položek zobrazovat. Tento prvek je významný, pokud je [ShowByDefault (šablony sady Visual Studio)](../extensibility/showbydefault-visual-studio-templates.md) nastavené na `false`. Když je [ShowByDefault (šablony sady Visual Studio)](../extensibility/showbydefault-visual-studio-templates.md) nastaveno na `true`, je šablona položky k dispozici ve všech typech projektů.
 
- \<VSTemplate> \<TemplateData> \<TemplateGroupID>
+ \<VSTemplate > \<TemplateData > \<TemplateGroupID >
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,30 +45,30 @@ Určuje, jaký typ projektu šablony položek se zobrazí. Tento element je důl
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text určuje identifikátor pro kategorii šablony položek.
+ Text určuje identifikátor pro kategorii šablon položek.
 
 ## <a name="remarks"></a>Poznámky
- `TemplateGroupID` představuje prvek.
+ `TemplateGroupID` je prvek.
 
- Hodnota `TemplateGroupID` element se používá spolu s registrace systému projektu (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ *\<číslo verze >* \Projects\\) do šablony filtrů, které se zobrazují v **přidat novou položku** dialogové okno.
+ Hodnota prvku `TemplateGroupID` se používá společně s registrací systému projektu (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio \\ *\<version číslo >* \Projects \\) pro filtrování šablon, které se zobrazí v **položce Přidat novou položku.** dialogové okno.
 
-|Hodnota Visual C++|Význam|
+|Vizuální C++ hodnota|Význam|
 |------------------------|-------------|
-|VC-Native|Použít u nativních projektů. Také výchozí Pokud nelze určit typ projektu.|
-|Spravované VC|Použít pro spravované (/ clr) projekty|
-|VC-Windows|Používá pro všechny projekty, které cílí na platformu windows (nativní a spravovaná/úložiště)|
-|WinRT-Native-UAP|Používá pro projekty pro Windows 10 store|
-|CodeSharing-Native|Používá pro projekty sdílené položky|
-|WinRT-Native-6.3|Používá pro projekty pro Windows 8.1 Store|
-|WinRT-Native-Phone-6.3|Používá pro projekty pro Windows Phone 8.1|
-|WinRT-Native|Používá pro projekty Windows Store 8.0|
-|VC-Android|Použít pro projekty pro Android|
+|VC – nativní|Používá se pro nativní projekty. Také výchozí, pokud nelze určit typ projektu.|
+|Spravované VC|Používá se pro spravované projekty (/CLR).|
+|VC – Windows|Používá se pro všechny projekty, které cílí na platformu Windows (nativní/spravovaná/Store).|
+|WinRT – nativní – UAP|Používá se pro projekty Windows 10 Store.|
+|CodeSharing – nativní|Používá se pro projekty sdílených položek.|
+|WinRT – nativní-6,3|Používá se pro projekty Windows 8.1 Storu.|
+|WinRT – nativní – telefon – 6,3|Používá se pro projekty Windows Phone 8,1.|
+|WinRT – nativní|Používá se pro projekty Windows 8,0 Store.|
+|VC – Android|Používá se pro projekty Androidu.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

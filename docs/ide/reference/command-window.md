@@ -16,12 +16,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d89b06c406d0495a5699f707c85b4e9e9b3a804
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 75792518eadc5449f070b90f3f1e8c2da38bf2b3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654594"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748787"
 ---
 # <a name="command-window"></a>Příkazové okno
 **Příkazové** okno se používá ke spouštění příkazů nebo aliasů přímo v integrovaném vývojovém prostředí (IDE) [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Příkazy nabídky a příkazy, které se nezobrazí v žádné nabídce, můžete spustit. Chcete-li zobrazit **příkazové** okno, zvolte možnost **Další okna** v nabídce **zobrazení** a vyberte **příkazová okna**.
@@ -109,7 +109,7 @@ Blikající kurzor funguje stejně, bez ohledu na to, zda se nachází uvnitř n
 ## <a name="use-quotes-for-path-names-with-spaces"></a>Použití uvozovek pro názvy cest s mezerami
 Pokud například chcete otevřít soubor, který obsahuje cestu obsahující mezery, je nutné umístit dvojité uvozovky kolem cesty nebo segmentu cesty, který obsahuje mezery: **C: \\ "Program Files"** nebo **"C:\Program Files"** .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)

@@ -13,11 +13,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: dcb7d784121639acd94333053371d454d79bf007
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 64da704fed655d622e51d3bfb53ab23082106530
+ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "38810173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "72738224"
 ---
 Windows Server 2012

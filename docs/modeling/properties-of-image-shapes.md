@@ -12,12 +12,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a89d7e5710f7a80c4e1f134ce2dfe2bd35ed5337
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: beb401b4056edd8f1edac5e61d02237c60504cd9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658144"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748294"
 ---
 # <a name="properties-of-image-shapes"></a>Vlastnosti obrazových obrazců
 
@@ -71,6 +71,6 @@ Obrazce obrázků mají vlastnosti, které jsou uvedeny v následující tabulce
 |Klíčové slovo Help|Klíčové slovo, které se používá k indexování Nápověda F1 pro tento element.|\<none >|
 |Image|Cesta k souboru obrázku, který se používá pro tento obrazec.|\<none >|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

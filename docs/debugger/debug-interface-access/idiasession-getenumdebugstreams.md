@@ -1,5 +1,5 @@
 ---
-title: Idiasession::getenumdebugstreams – | Dokumentace Microsoftu
+title: 'IDiaSession:: getEnumDebugStreams | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c962a9bbdebe10b97c47b67b6ce0597027f2c25b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2bc097330e1585e34f308288f1933c2fa2d5b524
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832342"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741951"
 ---
 # <a name="idiasessiongetenumdebugstreams"></a>IDiaSession::getEnumDebugStreams
-Načte Výčtový posloupnost ladění datových proudů.
+Načte výčtové sekvence datových proudů ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,11 +33,11 @@ HRESULT getEnumDebugStreams ( 
 #### <a name="parameters"></a>Parametry
  `ppEnumDebugStreams`
 
-[out] Vrátí [idiaenumdebugstreams –](../../debugger/debug-interface-access/idiaenumdebugstreams.md) objekt, který obsahuje seznam datové proudy debug.
+mimo Vrátí objekt [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md) , který obsahuje seznam streamů ladění.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)

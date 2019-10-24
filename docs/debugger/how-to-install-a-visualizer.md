@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Instalace Vizualizéru | Dokumentace Microsoftu'
+title: 'Postupy: instalace Vizualizátoru | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,33 +17,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b9b09bc837cae4eaad2c0dbcb2bb82a7daa248eb
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 3c9c2fa8a8fb300c3b7eb702ae3efd216e17141a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63389324"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733110"
 ---
-# <a name="how-to-install-a-visualizer"></a>Postupy: Instalace Vizualizéru
-Po vytvoření vizualizéru, musíte nainstalovat vizualizéru tak, že bude k dispozici v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Instalace vizualizéru je jednoduchý proces.
+# <a name="how-to-install-a-visualizer"></a>Postupy: Instalace vizualizéru
+Po vytvoření Vizualizér musíte nainstalovat vizualizér, aby byl dostupný v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Instalace Vizualizátoru je jednoduchý proces.
 
 > [!NOTE]
-> V aplikacích pro UPW, pouze standardní text, HTML, XML a JSON vizualizéry jsou podporovány. Vizualizéry vlastní (uživatelem vytvořené) nejsou podporovány.
+> V aplikacích pro UWP jsou podporované jenom standardní vizualizace textu, HTML, XML a JSON. Vlastní (uživatelsky vytvořené) vizualizace se nepodporují.
 
-### <a name="to-install-a-visualizer"></a>Instalace vizualizéru
+### <a name="to-install-a-visualizer"></a>Instalace Vizualizátoru
 
-1. Vyhledejte knihovnu DLL, která obsahuje vizualizaci, kterou jste vytvořili.
+1. Vyhledejte knihovnu DLL, která obsahuje vámi sestavený Vizualizér.
 
-2. Kopie knihovny DLL některou z následujících umístění:
+2. Zkopírujte knihovnu DLL do některého z následujících umístění:
 
     - *VisualStudioInstallPath* `\Common7\Packages\Debugger\Visualizers`
 
     - `My Documents\` *VisualStudioVersion* `\Visualizers`
 
-3. Pokud chcete používat spravované vizualizéru pro vzdálené ladění, zkopírujte knihovnu DLL do stejného umístění na vzdáleném počítači.
+3. Pokud chcete použít spravovaný Vizualizér pro vzdálené ladění, zkopírujte knihovnu DLL do stejné cesty na vzdáleném počítači.
 
-4. Restartujte relaci ladění.
+4. Restartujte ladicí relaci.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Vytváření vlastních vizualizérů](../debugger/create-custom-visualizers-of-data.md)
-- [Postupy: Zápis vizualizéru](/visualstudio/debugger/create-custom-visualizers-of-data)
+- [How to: Write a Visualizer](/visualstudio/debugger/create-custom-visualizers-of-data)

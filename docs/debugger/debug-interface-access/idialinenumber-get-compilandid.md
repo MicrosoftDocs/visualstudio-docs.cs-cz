@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_compilandid – | Dokumentace Microsoftu
+title: 'IDiaLineNumber:: get_compilandId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9874dec57c873164ec1875f31fd15c817781bb7a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9ab4776029f13a68746a6b4d6ca0343450f477a9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839924"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743222"
 ---
-# <a name="idialinenumbergetcompilandid"></a>IDiaLineNumber::get_compilandId
-Získá jedinečný identifikátor souboru pro kompilaci, která uživatel tento řádek.
+# <a name="idialinenumberget_compilandid"></a>IDiaLineNumber::get_compilandId
+Načte jedinečný identifikátor pro kompilantu, který přispěl k tomuto řádku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_compilandId ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `DWORD` , který obsahuje jedinečný identifikátor souboru pro kompilaci, která uživatel tento řádek.
+mimo Vrátí `DWORD`, která obsahuje jedinečný identifikátor pro kompilantu, který přispěl k tomuto řádku.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

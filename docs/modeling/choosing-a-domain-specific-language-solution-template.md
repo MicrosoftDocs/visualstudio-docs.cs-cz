@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d5eac08833c534e9da3a998687992cca6bc47c2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 110d357bd113913ab73990b8e3cfa12e4dd1cdae
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653684"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748527"
 ---
 # <a name="choosing-a-domain-specific-language-solution-template"></a>Výběr šablony řešení jazyka specifického pro doménu
 Pokud chcete vytvořit řešení jazyka specifického pro doménu, vyberte jednu ze šablon řešení, které jsou k dispozici v průvodci návrháře jazyka specifického pro doménu. Když zvolíte šablonu, která se nejvíce podobá jazyku, který chcete vytvořit, můžete minimalizovat změny, které musíte udělat ve spouštěcím řešení.
@@ -31,6 +31,6 @@ Pokud chcete vytvořit řešení jazyka specifického pro doménu, vyberte jednu
 |Návrhář s minimálním WPF|– Malý model<br />-Windows Presentation Foundation uživatelské rozhraní, které zobrazuje model|Tuto šablonu použijte v případě, že chcete vytvořit aplikaci, ve které je linka DSL svázána s uživatelským rozhraním WPF, nikoli pomocí grafického návrháře.<br /><br /> Návrhář uživatelského rozhraní je ve složce Dsl\UI.<br /><br /> Projekt byste měli sestavit před otevřením návrháře uživatelského rozhraní.<br /><br /> Další informace najdete v tématu [Vytvoření jazyka specifického pro doménu založeného na WPF](../modeling/creating-a-wpf-based-domain-specific-language.md).|
 |Knihovna DSL|– Minimální knihovna|Tuto šablonu použijte v případě, že chcete vytvořit částečnou definici DSL, kterou je možné naimportovat do jiných definic DSL.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přehled Nástrojů DSL](../modeling/overview-of-domain-specific-language-tools.md)

@@ -1,5 +1,5 @@
 ---
-title: Seznam objektů okna Vlastnosti | Dokumentace Microsoftu
+title: Seznam objektů okna vlastností | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,24 +10,24 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 751339d0e9f8d4dd6d43a1f786e08b57d0ac7555
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e50b3fe46edb8d14cad9a03a45bc8650cb9713ab
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347802"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72725188"
 ---
 # <a name="properties-window-object-list"></a>Seznam objektů okna Vlastnosti
-V seznamu objektů **vlastnosti** okno je rozevírací seznam, který vám umožní změnit výběr na jiné objekty, které jsou k dispozici v rámci jednoho nebo více vybraných windows. Vyberte jiný objekt z v rámci tohoto seznamu aktivuje volání <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> prostředí informovat, že byla vybrána nový objekt. Informace zobrazené **vlastnosti** okno se pak změní na Zobrazit vlastnosti přidružené k nově vybraného objektu.
+Seznam objektů v okně **vlastnosti** je rozevírací seznam, který umožňuje změnit výběr na jiné objekty, které jsou k dispozici v rámci jedné nebo více vybraných oken. Výběr jiného objektu v rámci tohoto seznamu aktivuje volání <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> pro informování prostředí, že byl vybrán nový objekt. Informace zobrazené v okně **vlastnosti** se pak změní tak, aby se zobrazily vlastnosti přidružené k nově vybranému objektu.
 
-## <a name="the-object-list"></a>V seznamu objektů
- Seznam objektů se skládá ze dvou polí: název objektu (zobrazená tučným písmem) a typ objektu.
+## <a name="the-object-list"></a>Seznam objektů
+ Seznam objektů se skládá ze dvou polí: název objektu (zobrazený tučně) a typ objektu.
 
- Název objektu zobrazena nalevo od typ objektu tučným písmem je načten z objektu samotného pomocí `Name` vlastnost poskytované <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo> rozhraní. <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo.GetClassInfo%2A>, jedinou metodou na <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo>, vrátí <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo> pro toto rozhraní coclass. **Vlastnosti** okno používá <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo> a získat tak název třídy typu coclass, který se zobrazí jako název objektu v rozevíracím seznamu.
+ Název objektu zobrazený vlevo od typu objektu je tučně načten z objektu, který je uveden pomocí vlastnosti `Name` poskytované rozhraním <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo>. <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo.GetClassInfo%2A> jediná metoda na <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo> vrací <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo> pro třídu coclass daného rozhraní. Okno **vlastnosti** používá <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo> k získání názvu coclass, který se zobrazí jako název objektu v rozevíracím seznamu.
 
- Pokud objekt nemá `Name` vlastnost názvu se nezobrazí v oblasti název seznamu objektů. Vlastnost názvu můžete přidat do objektu, pokud chcete, aby název zobrazený v seznamu objektů.
+ Pokud objekt nemá vlastnost `Name`, název se nezobrazí v oblasti název seznamu objektů. Chcete-li název zobrazit v seznamu objektů, lze do objektu přidat vlastnost Name.
 
- Pokud objekt COM neimplementuje <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo>, **vlastnosti** okna zobrazuje název rozhraní místo názvu objektu na levé straně seznamu.
+ Pokud objekt COM neimplementuje <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo>, zobrazí se v okně **vlastnosti** název rozhraní místo názvu objektu na levé straně seznamu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Rozšíření vlastností](../../extensibility/internals/extending-properties.md)

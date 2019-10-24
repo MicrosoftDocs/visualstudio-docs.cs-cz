@@ -1,5 +1,5 @@
 ---
-title: Sccquerychanges – funkce | Dokumentace Microsoftu
+title: Funkce SccQueryChanges | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5e2b1e504bef3ec9507afcddf4f75bc5f697e843
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 617f07a11f92ab65f079c7d1b41773494e3d0c8b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353504"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720857"
 ---
 # <a name="sccquerychanges-function"></a>SccQueryChanges – funkce
-Tato funkce vytvoří výčet daný seznam files a poskytuje informace o změnách název pro každý soubor prostřednictvím funkce zpětného volání.
+Tato funkce vypíše daný seznam souborů a poskytuje informace o změnách názvů jednotlivých souborů prostřednictvím funkce zpětného volání.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,38 +37,38 @@ SCCRTN SccQueryChanges(
 #### <a name="parameters"></a>Parametry
  pContext
 
-[in] Ukazatel kontext modulu plug-in zdroje ovládacího prvku.
+pro Ukazatel kontextu modulu plug-in správy zdrojových kódů.
 
- %{nfiles/
+ nFiles
 
-[in] Počet souborů v `lpFileNames` pole.
+pro Počet souborů v `lpFileNames` poli
 
  lpFileNames
 
-[in] Pole názvy souborů, chcete-li získat informace.
+pro Pole názvů souborů, o kterých se mají získat informace
 
  pfnCallback
 
-[in] Funkce zpětného volání, která se zavolá k názvu každého souboru v seznamu (viz [QUERYCHANGESFUNC](../extensibility/querychangesfunc.md) podrobnosti).
+pro Funkce zpětného volání, která se má volat pro každý název souboru v seznamu (podrobnosti najdete v [QUERYCHANGESFUNC](../extensibility/querychangesfunc.md) )
 
  pvCallerData
 
-[in] Hodnota, která se předají beze změny funkci zpětného volání.
+pro Hodnota, která bude předána beze změny funkci zpětného volání.
 
 ## <a name="return-value"></a>Návratová hodnota
- Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Dotaz proces úspěšně dokončil.|
+|SCC_OK|Proces dotazu byl úspěšně dokončen.|
 |SCC_E_PROJNOTOPEN|Projekt nebyl otevřen ve správě zdrojového kódu.|
-|SCC_E_ACCESSFAILURE|Došlo k problému, přístup k systému správy zdrojového kódu, pravděpodobně kvůli problémům se síti nebo kolize.|
-|SCC_E_NONSPECIFICERROR|Došlo k neurčené nebo obecné chybě.|
+|SCC_E_ACCESSFAILURE|Při přístupu do systému správy zdrojů došlo k potížím, pravděpodobně kvůli problémům se sítí nebo kolize.|
+|SCC_E_NONSPECIFICERROR|Došlo k nespecifikované nebo obecné chybě.|
 
 ## <a name="remarks"></a>Poznámky
- Změny, která je dotazována pro mají obor názvů: konkrétně, přejmenování, přidávání a odebírání souboru.
+ Dotazy na změny jsou v oboru názvů: konkrétně, přejmenování, přidání a odebrání souboru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)
 - [QUERYCHANGESFUNC](../extensibility/querychangesfunc.md)
 - [Chybové kódy](../extensibility/error-codes.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Ladění metody OnStart | Dokumentace Microsoftu'
+title: 'Postupy: ladění metody OnStart | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,17 +19,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fc5e8a7e0bbc80fd7fa0aa2d242239a9be6a219
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 107ce6d5ca2b327d77fe588e1ac7ffda10a0a3a3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894414"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733630"
 ---
 # <a name="how-to-debug-the-onstart-method"></a>Postupy: Ladění metody OnStart
-Služba Windows můžete ladit spuštění služby a připojování ladicího programu k procesu služby. Další informace najdete v tématu [jak: Ladění aplikace služby Windows](/dotnet/framework/windows-services/how-to-debug-windows-service-applications). Ale chcete-li ladit <xref:System.ServiceProcess.ServiceBase.OnStart%2A?displayProperty=fullName> metody služby Windows, musíte spustit ladicí program z uvnitř metody.
+Službu systému Windows můžete ladit spuštěním služby a připojením ladicího programu k procesu služby. Další informace naleznete v tématu [How to: Debug Application Service Applications](/dotnet/framework/windows-services/how-to-debug-windows-service-applications). Chcete-li však ladit metodu <xref:System.ServiceProcess.ServiceBase.OnStart%2A?displayProperty=fullName> služby systému Windows, je nutné spustit ladicí program zevnitř metody.
 
-1. Přidejte volání do <xref:System.Diagnostics.Debugger.Launch%2A> na začátku `OnStart()`metody.
+1. Přidejte volání <xref:System.Diagnostics.Debugger.Launch%2A> na začátku `OnStart()`method.
 
     ```csharp
     protected override void OnStart(string[] args)
@@ -38,20 +38,20 @@ Služba Windows můžete ladit spuštění služby a připojování ladicího pr
     }
     ```
 
-2. Spusťte službu (můžete použít `net start`, nebo jej spustit v **služby** okno).
+2. Spusťte službu (můžete použít `net start` a spustit ji v okně **služby** ).
 
-    Zobrazí se dialogové okno vypadat asi takto:
+    Mělo by se zobrazit dialogové okno podobné následujícímu:
 
     ![OnStartDebug](../debugger/media/onstartdebug.png "OnStartDebug")
 
-3. Vyberte **Ano, ladit \<název služby >.**
+3. Vyberte **Ano, \<service > název pro ladění.**
 
-4. V okně ladicího programu za běhu vyberte verzi sady Visual Studio, kterou chcete použít pro ladění.
+4. V okně ladicí program za běhu vyberte verzi sady Visual Studio, kterou chcete použít pro ladění.
 
     ![JustInTimeDebugger](../debugger/media/justintimedebugger.png "JustInTimeDebugger")
 
-5. Novou instanci třídy spustí aplikace Visual Studio a provedení je zastaveno `Debugger.Launch()` metody.
+5. Spustí se nová instance sady Visual Studio a spuštění se zastaví v `Debugger.Launch()` metodě.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)

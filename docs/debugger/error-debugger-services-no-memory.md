@@ -1,5 +1,5 @@
 ---
-title: Ladicí program služby nemá dostatek paměti | Dokumentace Microsoftu
+title: Služby ladicího programu mají nedostatek paměti | Microsoft Docs
 ms.date: 07/10/2019
 ms.topic: troubleshooting
 f1_keywords:
@@ -16,21 +16,21 @@ ms.author: isgarcia
 manager: caslan
 ms.workload:
 - multiple
-ms.openlocfilehash: 05664ffd056f69215e6fb00d6d49a59382a3692f
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.openlocfilehash: 12215f9c740e68c4f2749a51b06c09a1385dae1a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861171"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737845"
 ---
-# <a name="debugger-services-running-out-of-memory"></a>Ladicí program služby nemá dostatek paměti
-Ladění služby není dostatek paměti a způsobila ukončení relace ladění.
+# <a name="debugger-services-running-out-of-memory"></a>Službám ladicího programu začíná docházet paměť
+Služba Debugging Services nemá dostatek paměti a způsobila ukončení relace ladění.
 
-## <a name="to-investigate-this-error-on-windows"></a>K prozkoumání této chybě ve Windows
-- Graf paměti procesu můžete zkontrolovat **diagnostické nástroje** okno a zobrazit, pokud je cílová aplikace dochází k velký nárůst v paměti. Pokud ano, použít **využití paměti** nástroj pro diagnostiku, co je daný problém, naleznete v tématu [analýza využití paměti](../profiling/memory-usage.md).
+## <a name="to-investigate-this-error-on-windows"></a>Chcete-li tuto chybu prozkoumat ve Windows
+- V okně **diagnostické nástroje** můžete sledovat graf paměti procesu a zjistit, jestli má cílová aplikace velký nárůst velikosti paměti. V takovém případě použijte nástroj **využití paměti** k diagnostice základního problému, viz téma [Analýza využití paměti](../profiling/memory-usage.md).
 
-- Pokud je cílová aplikace nefunguje by spotřebovávalo velké množství paměti, použijte **Správce úloh** okno a podívejte se na využití paměti sady Visual Studio (devenv.exe), pracovním procesem (msvsmon.exe), nebo VS Code (vsdbg.exe/vsdbg-ui.exe) Určete, pokud se jedná o problém ladicího programu. Pokud proces, který běží mimo paměť je devenv.exe, zvažte snížení počtu rozšíření sady Visual Studio spuštěná.
+- Pokud cílová aplikace nespotřebovává spoustu paměti, použijte okno **Správce úloh** k rezervaci využití paměti sady Visual Studio (devenv. exe), pracovního procesu (Msvsmon. exe) nebo vs Code (vsdbg. exe/vsdbg-UI. exe), abyste zjistili, jestli se jedná o problém ladicího programu. Pokud je proces s nedostatkem paměti nástrojem devenv. exe, zvažte snížení počtu spuštěných rozšíření aplikace Visual Studio.
 
-## <a name="see-also"></a>Viz také
-- [Blogový příspěvek: Analýza využití procesoru a paměti během ladění](https://devblogs.microsoft.com/visualstudio/analyze-cpu-memory-while-debugging/)
-- [Správa paměti](/windows/win32/memory/about-memory-management)
+## <a name="see-also"></a>Viz také:
+- [Blogový příspěvek: analýza procesoru a paměti během ladění](https://devblogs.microsoft.com/visualstudio/analyze-cpu-memory-while-debugging/)
+- [O správě paměti](/windows/win32/memory/about-memory-management)

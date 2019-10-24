@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_base – | Dokumentace Microsoftu
+title: 'IDiaStackFrame:: get_base | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f72c39e7cbfe9589d2fdf6ed8d1b8f25dee99936
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6802737a69467fb823fb2df8df8160f459e739f1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838155"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741736"
 ---
-# <a name="idiastackframegetbase"></a>IDiaStackFrame::get_base
-Získá základní adresu rámce.
+# <a name="idiastackframeget_base"></a>IDiaStackFrame::get_base
+Načte základní adresu rámce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_base ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí základní adresa.
+mimo Vrátí základní adresu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

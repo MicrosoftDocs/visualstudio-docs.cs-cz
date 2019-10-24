@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d6603ca7ffc39ecc819fb2e54024776760ccfa60
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: 2704f4e73b1077f14c89e377453a858d341a2738
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72536063"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738283"
 ---
 # <a name="debugger-settings-and-preparation"></a>Nastavení a příprava ladicího programu
 Tato část popisuje nastavení vlastností souvisejících s ladicím programem a přípravu potřebnou k ladění programu pomocí ladicího programu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Pokud vytvoříte program v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] pomocí šablon projektu, tato nastavení jsou nastavena správně v konfiguraci ladění.
@@ -46,7 +46,7 @@ Tato část popisuje nastavení vlastností souvisejících s ladicím programem
 
  [Postupy: určení starší verze .NET Framework pro ladění](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md) Popisuje, jak nastavit klíč registru tak, aby označoval ladicí program, který má verze používat.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

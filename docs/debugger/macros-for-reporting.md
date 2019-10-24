@@ -1,5 +1,5 @@
 ---
-title: Makra pro vytváření sestav | Dokumentace Microsoftu
+title: Makra pro vytváření sestav | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -22,22 +22,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c92424275a1dff69863b81fbf8567fbc4b84499
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c2129db98293cef678527fb331992c6c5960d8f9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62905552"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731392"
 ---
 # <a name="macros-for-reporting"></a>Makra pro vytváření sestav
-Pro ladění, můžete použít **_RPTn** a **_RPTFn** makra, definovaná v CRTDBG. H, chcete-li nahradit použití `printf` příkazy. Není nutné je inclose **#ifdef**s, protože jejich automaticky zmizí ve svojí vydané verzi sestavení, když **_DEBUG** není definován.
+Pro ladění můžete použít makra **_RPTn** a **_RPTFN** definovaná v souboru Crtdbg. H, chcete-li nahradit použití příkazů `printf`. Nemusíte je zavírat v **#ifdef**s, protože se v sestavení pro vydání automaticky zmizí, když není definovaný **_DEBUG** .
 
-|– Makro|Popis|
+|Podokně|Popis|
 |-----------|-----------------|
-|**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3**, **_RPT4**|Vrací řetězec zprávy a 0 až čtyři argumenty. Pro _RPT1 prostřednictvím **_RPT4**, řetězec zprávy slouží jako řetězec stylu printf formátování pro argumenty.|
-|**_RPTF0**, **_RPTF1**, **_RPTF2**, **_RPTF4**|Stejné jako **_RPTn**, ale tato makra také výstup souboru název a číslo řádku kde se nachází makra.|
+|**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3**, **_RPT4**|Vytvoří výstup řetězce zprávy a 0 až čtyř argumentů. Pro _RPT1 prostřednictvím **_RPT4**řetězec zprávy slouží jako formátovací řetězec ve stylu printf pro argumenty.|
+|**_RPTF0**, **_RPTF1**, **_RPTF2**, **_RPTF4**|Stejné jako **_RPTn**, ale tato makra také výstupují název souboru a číslo řádku, kde je makro umístěno.|
 
- Vezměte v úvahu v následujícím příkladu:
+ Vezměte v úvahu následující příklad:
 
 ```cpp
 #ifdef _DEBUG
@@ -48,13 +48,13 @@ Pro ladění, můžete použít **_RPTn** a **_RPTFn** makra, definovaná v CRTD
 #endif
 ```
 
- Tento kód vracel hodnoty `someVar` a `otherVar` k **stdout**. Můžete použít následující volání do `_RPTF2` hlášení tyto hodnoty stejné a navíc souboru název a číslo řádku:
+ Tento kód vytvoří výstup hodnot `someVar` a `otherVar` do **stdout**. Pomocí následujícího volání `_RPTF2` můžete nahlásit stejné hodnoty a navíc název souboru a číslo řádku:
 
 ```cpp
 if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d, otherVar= %d\n", someVar, otherVar );
 ```
 
-Můžete zjistit, konkrétní aplikace potřebuje, ladění, které neposkytují součástí knihovny run-time C makra. Pro tyto případy můžete napsat makro navržené, aby vyhovovaly vašim požadavkům. Jedním ze souborů hlaviček, například můžete zahrnout kód jako následující definovat makro volá **ALERT_IF2**:
+Může se stát, že určitá aplikace potřebuje ladit hlášení, že makra dodaná pomocí knihovny run-time jazyka C neposkytují. V těchto případech můžete napsat makro navržené konkrétně pro splnění vlastních požadavků. V jednom z vašich hlavičkových souborů můžete například zahrnout kód podobný následujícímu pro definování makra s názvem **ALERT_IF2**:
 
 ```cpp
 #ifndef _DEBUG                  /* For RELEASE builds */
@@ -70,14 +70,14 @@ Můžete zjistit, konkrétní aplikace potřebuje, ladění, které neposkytují
 #endif
 ```
 
- Volání **ALERT_IF2** může provádět všechny funkce **printf** kódu:
+ Jedno volání **ALERT_IF2** může provádět všechny funkce **printf** kódu:
 
 ```cpp
 ALERT_IF2(someVar > MAX_SOMEVAR, "OVERFLOW! In NameOfThisFunc( ),
 someVar=%d, otherVar=%d.\n", someVar, otherVar );
 ```
 
- Můžete snadno změnit vlastní – makro oznámit víc nebo míň informací do různých cílů. Tento přístup je zvlášť užitečné, jak se vyvíjí vaše požadavky na ladění.
+ Můžete snadno změnit vlastní makro a ohlásit více nebo méně informací do různých míst. Tento přístup je užitečný hlavně v případě, že se vyvíjí vaše požadavky na ladění.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Techniky ladění CRT](../debugger/crt-debugging-techniques.md)

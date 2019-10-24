@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: b2fa0bd62b88602ee5a4d5091821e2c2a18f6374
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: d902403b111e92f302ff907a29eaaa99ee181058
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72430760"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737991"
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Nasazení aplikací pro UPW ze sady Visual Studio
 
@@ -98,7 +98,7 @@ Na stránce vlastností ladění spouštěného projektu můžete nastavit násl
 
 **Povolení zpětné smyčky sítě**
 
-Z bezpečnostních důvodů nemá aplikace pro UWP nebo @no__t 0, která je nainstalovaná standardním způsobem, povolená síťová volání zařízení, na kterém je nainstalovaná. Ve výchozím nastavení vytvoří nasazení sady Visual Studio výjimku z tohoto pravidla pro nasazenou aplikaci. Tato výjimka umožňuje testovat komunikační postupy na jednom počítači. Před odesláním aplikace do [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] byste měli aplikaci testovat bez výjimky.
+Z bezpečnostních důvodů není povolená aplikace pro UWP nebo [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)], která je nainstalovaná standardním způsobem, aby na zařízení, na kterém je nainstalovaná, mohla volat síťová volání. Ve výchozím nastavení vytvoří nasazení sady Visual Studio výjimku z tohoto pravidla pro nasazenou aplikaci. Tato výjimka umožňuje testovat komunikační postupy na jednom počítači. Před odesláním aplikace do [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] byste měli aplikaci otestovat bez výjimky.
 
 Odebrání výjimky zpětné smyčky sítě z aplikace:
 
@@ -114,7 +114,7 @@ Konfigurace nasazení tak, aby automaticky spouštěla relaci ladění při spu�
 
 - Na stránce C++ vlastnost ladění nastavte hodnotu **Spustit aplikaci** na **Ano**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Rozšířené možnosti vzdáleného nasazení](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)
 - [Ladění balíčku nainstalované aplikace](../debugger/debug-installed-app-package.md)

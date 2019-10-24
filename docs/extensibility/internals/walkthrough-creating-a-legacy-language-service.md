@@ -10,12 +10,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ba09df818b95ac96f2092685ce4100873a18a05f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 694b1a53e72ca4e890e11befdc9b90f049e33dd1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647996"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72721780"
 ---
 # <a name="walkthrough-creating-a-legacy-language-service"></a>Návod: Vytvoření služby starší verze jazyka
 Použití tříd jazyka Managed Package Framework (MPF) pro implementaci jazykové služby v [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] je jednoduché. Pro hostování jazykové služby, samotné služby jazyka a analyzátoru pro váš jazyk potřebujete VSPackage.
@@ -130,5 +130,5 @@ Použití tříd jazyka Managed Package Framework (MPF) pro implementaci jazykov
 
      Zadejte například `public override` pro zobrazení seznamu všech metod, které lze v této třídě přepsat.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Implementace služby starší verze jazyka](../../extensibility/internals/implementing-a-legacy-language-service1.md)

@@ -1,5 +1,5 @@
 ---
-title: THREADSTATE | Dokumentace Microsoftu
+title: THREADSTATE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 50f487b3d44fc1b871b00348ec28693b36c49685
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d86baeeab046a7e605979d3af2d6329998f796ba
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316144"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72727501"
 ---
 # <a name="threadstate"></a>THREADSTATE
 Určuje stav vlákna.
@@ -50,30 +50,30 @@ public enum enum_THREADSTATE { 
 
 ## <a name="fields"></a>Pole
  `THREADSTATE_RUNNING`\
- Určuje, zda je spuštěn podproces.
+ Indikuje, že vlákno běží.
 
  `THREADSTATE_STOPPED`\
- Označuje, že vlákno zastavena kvůli zarážku.
+ Označuje, že vlákno je zastaveno z důvodu zarážky.
 
  `THREADSTATE_FRESH`\
- Označuje, že se vytvořila vlákno, ale ještě není spuštěno kódu.
+ Indikuje, že vlákno bylo vytvořeno, ale ještě neběží s kódem.
 
  `THREADSTATE_DEAD`\
- Označuje, že vlákno je neaktivní.
+ Indikuje, že vlákno je neaktivní.
 
  `THREADSTATE_FROZEN`\
- Označuje, že je zmrazené vlákno (bez spuštění lze provést).
+ Indikuje, že je vlákno zmrazeno (nelze provést žádné spuštění).
 
 ## <a name="remarks"></a>Poznámky
- Používá pro `dwThreadState` pole [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) struktury.
+ Používá se pro pole `dwThreadState` struktury [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
- Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
+ Sestavení: Microsoft. VisualStudio. Debugger. Interop. dll
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)

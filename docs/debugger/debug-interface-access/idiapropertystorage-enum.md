@@ -1,5 +1,5 @@
 ---
-title: IDiaPropertyStorage::Enum | Dokumentace Microsoftu
+title: 'IDiaPropertyStorage:: Enum | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e39693f63ea706ecdfa30a9ce0202444f51d4f57
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 00bd1ea5e20d30fa1d2c32101b56f55d169f1ce2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839677"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742946"
 ---
 # <a name="idiapropertystorageenum"></a>IDiaPropertyStorage::Enum
 Získá enumerátor pro vlastnosti v rámci této sady.
@@ -33,10 +33,10 @@ HRESULT Enum ( 
 #### <a name="parameters"></a>Parametry
  `ppenum`
 
-[out] Vrátí `IEnumSTATPROPSTG` objekt (v oboru názvů sestavení Microsoft.VisualStudio.OLE.Interop) představující výčet vlastností.
+mimo Vrátí objekt `IEnumSTATPROPSTG` (v oboru názvů Microsoft. VisualStudio. OLE. Interop) představující výčet vlastností.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

@@ -1,5 +1,5 @@
 ---
-title: Sdkreference – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: SDKReference – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,15 +9,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: da11d9e01802bff8162b2767444c7a1d225200a0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3cf1b3bed942894e20132ecd7b06c1884caa9a93
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66338485"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720094"
 ---
 # <a name="sdkreference-element-visual-studio-templates"></a>SDKReference – element (šablony sady Visual Studio)
-Určuje, že šablonu položky používá odkaz na sadu SDK.
+Určuje, že šablona položky používá odkaz na sadu SDK.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,13 +42,13 @@ Určuje, že šablonu položky používá odkaz na sadu SDK.
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[Referenční informace](../extensibility/reference-element-visual-studio-templates.md)|Určuje odkaz na sestavení přidat, pokud je položka přidána do projektu.|
+|[Reference](../extensibility/reference-element-visual-studio-templates.md)|Určuje odkaz na sestavení, který se má přidat při přidání položky do projektu.|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
 ## <a name="remarks"></a>Poznámky
- Tento text určuje odkazu sady SDK do projektu přidat při vytváření instance šablony položky.
+ Tento text určuje odkaz sady SDK, který se má přidat do projektu při vytvoření instance šablony položky.
 
 ```xml
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
@@ -60,7 +60,7 @@ Určuje, že šablonu položky používá odkaz na sadu SDK.
 ...
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [References – element (šablony sady Visual Studio)](../extensibility/references-element-visual-studio-templates.md)
 - [Reference – element (šablony sady Visual Studio)](../extensibility/reference-element-visual-studio-templates.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

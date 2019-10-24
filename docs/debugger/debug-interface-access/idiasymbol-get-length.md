@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_length – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_Length | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b1a583a9afd2a43d48399d5e2787369ab9bef95
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 114d9f7b00bbe5d322e7b6893e96fbbabec9d002
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64858105"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739986"
 ---
-# <a name="idiasymbolgetlength"></a>IDiaSymbol::get_length
-Získá počet bitů nebo počet bajtů paměti, které používají objekt reprezentovaný tímto symbolem.
+# <a name="idiasymbolget_length"></a>IDiaSymbol::get_length
+Načte počet bitů nebo bajtů paměti, které používá objekt reprezentovaný tímto symbolem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,16 +33,16 @@ HRESULT get_length ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí počet bajtů nebo bits paměť používanou objekt reprezentovaný tímto symbolem.
+mimo Vrátí počet bajtů nebo bitů paměti využívaných objektem reprezentovaným tímto symbolem.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Pokud [locationtype – výčet](../../debugger/debug-interface-access/locationtype.md) symbolu je `LocIsBitField`, délka vrácený touto metodou je v bitech; v opačném případě je délka v bajtech pro všechny ostatní typy umístění.
+ Pokud je [LocationType – výčet](../../debugger/debug-interface-access/locationtype.md) symbolu `LocIsBitField`, délka vrácená touto metodou je v bitech; v opačném případě je délka v bajtech pro všechny ostatní typy umístění.
 
 ## <a name="example"></a>Příklad
 
@@ -56,9 +56,9 @@ pSymbol->get_length( &length );
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|V7.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [LocationType – výčet](../../debugger/debug-interface-access/locationtype.md)

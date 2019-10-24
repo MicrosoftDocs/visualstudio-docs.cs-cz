@@ -1,5 +1,5 @@
 ---
-title: Sccgetversion – funkce | Dokumentace Microsoftu
+title: Funkce SccGetVersion | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1ad37e30cfcf913477044e67baaa65dc3af5b9d3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 69078200743f30c4ecfedce8e9be05ef9e7ce20b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353621"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72721483"
 ---
 # <a name="sccgetversion-function"></a>SccGetVersion – funkce
-Tato funkce získá číslo verze rozhraní API modulu Plug-in zdroje ovládacího prvku podporuje modul plug-in správy zdrojového kódu.
+Tato funkce získá číslo verze rozhraní API modulu plug-in správy zdrojového kódu podporovaného modulem plug-in správy zdrojových kódů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,15 +32,15 @@ LONG SccGetVersion(void);
  Žádné
 
 ## <a name="return-value"></a>Návratová hodnota
- A `LONG` datový typ, který obsahuje číslo verze rozhraní API podporované zdrojového ovládacího prvku modulu Plug-in:
+ @No__t_0 datový typ obsahující číslo verze podporovaného rozhraní API modulu plug-in správy zdrojového kódu:
 
 |WORD|Popis|
 |----------|-----------------|
 |HIWORD|Hlavní verze|
-|LOWORD|Podverze|
+|LOWORD|Dílčí verze|
 
 ## <a name="remarks"></a>Poznámky
- Například pokud modul plug-in správy zdrojového kódu podporuje verze 1.3 rozhraní API modulu Plug-in zdroje ovládacího prvku, vrátila by tato funkce 0x0103.
+ Pokud například modul plug-in správy zdrojových kódů podporuje verzi 1,3 rozhraní API modulu plug-in správy zdrojového kódu, vrátí tato funkce 0x0103.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

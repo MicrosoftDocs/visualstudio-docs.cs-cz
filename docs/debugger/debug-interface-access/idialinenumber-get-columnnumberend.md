@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_columnnumberend – | Dokumentace Microsoftu
+title: 'IDiaLineNumber:: get_columnNumberEnd | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 567df436093b53432e44e21fb96f0d092b71c81d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4433bc243a7a4f5352f0476370853572be8ddd38
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839846"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743251"
 ---
-# <a name="idialinenumbergetcolumnnumberend"></a>IDiaLineNumber::get_columnNumberEnd
-Načte založen na jedničce zdrojový sloupec Číslo ukončení výrazu nebo příkazu.
+# <a name="idialinenumberget_columnnumberend"></a>IDiaLineNumber::get_columnNumberEnd
+Načte číslo zdrojového sloupce s jedním základem, kde končí výraz nebo příkaz.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_columnNumberEnd ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí číslo sloupce, kde končí výraz nebo příkaz. Pokud je hodnota nula, není informace o sloupci end nainstalovaná.
+mimo Vrátí číslo sloupce, kde končí výraz nebo příkaz. Pokud je hodnota nulová, nejsou k dispozici informace o konci sloupce.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Hodnota sloupce vrácený touto metodou je bajt posun do řádku na pozici za posledním znakem příkazem na řádku.
+ Hodnota sloupce vrácená touto metodou je posun bajtů na řádek na pozici za posledním znakem příkazu na řádku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

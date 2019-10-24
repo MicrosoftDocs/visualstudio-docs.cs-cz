@@ -7,12 +7,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c95990eb875c52a66cd0efa5579c9d39eab5469
-ms.sourcegitcommit: 3cda0d58c5cf1985122b8977b33a171c7359f324
+ms.openlocfilehash: b0a909c25af3de22019327bb890da9e26bcce1c8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154908"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748583"
 ---
 # <a name="configure-a-c-project-for-intellisense"></a>Konfigurace projektu C++ pro IntelliSense
 
@@ -38,7 +38,7 @@ Pokud spustíte vaše sestavení mimo prostředí Visual Studio IDE a vaše sest
 
 ![Adresáře zahrnutí VC + +](media/vcpp-intellisense-include-paths.png)
 
-Chcete-li zobrazit aktuální hodnoty pro makra sestavení, jako je například **VC_IncludePath**, vyberte řádek zahrnout adresáře a klikněte na rozevírací seznam na pravé straně. Pak zvolte  **\<Upravit >** a klikněte na tlačítko **makra** .
+Chcete-li zobrazit aktuální hodnoty pro makra sestavení, jako je například **VC_IncludePath**, vyberte řádek zahrnout adresáře a klikněte na rozevírací seznam na pravé straně. Pak zvolte **\<Edit >** a klikněte na tlačítko **makra** .
 
 ### <a name="makefile-projects"></a>Projekty makefile
 
@@ -120,6 +120,6 @@ Pokud nastavíte proměnnou prostředí TRACEDESIGNTIME na hodnotu true a restar
 
 Další informace o proměnné prostředí TRACEDESIGNTIME naleznete v tématu [Roslyn](https://github.com/dotnet/roslyn/wiki/Diagnosing-Project-System-Build-Errors) a [Common Project System](https://github.com/dotnet/project-system/blob/master/docs/design-time-builds.md). Informace v těchto článcích jsou relevantní pro C++ projekty.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Visual C++ IntelliSense](visual-cpp-intellisense.md)

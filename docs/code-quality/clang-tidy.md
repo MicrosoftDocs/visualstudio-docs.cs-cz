@@ -8,12 +8,12 @@ author: frozenpandaman
 ms.author: efessler
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430d0e271f83332f7163c9c0c947f96756ca7a7d
-ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.openlocfilehash: e226ac6c83839474b9d8ac6be7fb57e376de4a4f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72165190"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745982"
 ---
 # <a name="using-clang-tidy-in-visual-studio"></a>Použití Clang-uklizený v aplikaci Visual Studio
 
@@ -28,29 +28,29 @@ Clang-uklizený se spouští po úspěšné kompilaci; Možná budete muset vyř
 
 ## <a name="msbuild"></a>MSBuild
 
-Clang-uklizený lze nakonfigurovat tak, aby běžel jako součást analýzy kódu a sestavení pod stránkou**obecné** @no__t pro **analýzu kódu**v projektu okno Vlastnosti. Možnosti pro konfiguraci tohoto nástroje najdete v podnabídce Clang-uklizený.
+Clang-uklizený můžete nakonfigurovat tak, aby běžela jako součást analýzy kódu a sestavení pod stránkou**obecné**  >  pro **analýzu kódu** v projektu okno Vlastnosti. Možnosti pro konfiguraci tohoto nástroje najdete v podnabídce Clang-uklizený.
 
-Další informace najdete v tématu [jak: Nastavení vlastností analýzy kódu pro projekty CC++ /projekty @ no__t-1.
+Další informace naleznete v tématu [Postupy: nastavení vlastností analýzy kódu pro projekty C/C++ ](../code-quality/how-to-set-code-analysis-properties-for-c-cpp-projects.md).
 
 ## <a name="cmake"></a>CMake
 
 V projektech CMake můžete nakonfigurovat kontroly Clang-uklizený v rámci `CMakeSettings.json`. Po otevření klikněte na Upravit JSON v pravém horním rohu editoru nastavení projektu CMake. Rozpoznávají se tyto klíče:
 
-- `enableMicrosoftCodeAnalysis`: Povolí Microsoft Code Analysis.
-- `enableClangTidyCodeAnalysis`: Povolí analýzu Clang-uklizený.
-- `clangTidyChecks`: Clang-uklizený konfigurace zadaná jako seznam oddělený čárkami, tj. kontroly, které mají být povoleny nebo zakázány
+- `enableMicrosoftCodeAnalysis`: povolí analýzu kódu společnosti Microsoft.
+- `enableClangTidyCodeAnalysis`: povoluje analýzu Clang-uklizený.
+- `clangTidyChecks`: Konfigurace Clang-uklizený zadaná jako seznam oddělený čárkami, tj. kontroly, které mají být povoleny nebo zakázány.
 
 Pokud není zadána žádná z možností "Enable", sada Visual Studio vybere Nástroj pro analýzu, který odpovídá použité sadě nástrojů platformy.
 
 ## <a name="warning-display"></a>Zobrazení upozornění
 
-Clang-uklizený spustí výsledek v upozorněních zobrazených v Seznam chyb a jako editor vlnovek pod relevantními oddíly kódu. Použijte sloupec Category v Seznam chyb k řazení a uspořádání upozornění Clang-uklizený. Můžete nakonfigurovat upozornění v editoru přepnutím nastavení "zakázat vlnovkou analýzy kódu" v části **nástroje** > **Možnosti**.
+Clang-uklizený spustí výsledek v upozorněních zobrazených v Seznam chyb a jako editor vlnovek pod relevantními oddíly kódu. Použijte sloupec Category v Seznam chyb k řazení a uspořádání upozornění Clang-uklizený. Můžete nakonfigurovat upozornění v editoru tak, že v nabídce **nástroje**  > **Možnosti**zakážete nastavení zakázat vlnovky analýzy kódu.
 
 ## <a name="clang-tidy-configuration"></a>Konfigurace Clang-uklizený
 
 Můžete nakonfigurovat kontroly, které Clang-uklizený spouští v rámci sady Visual Studio prostřednictvím možnosti **Clang-uklizený Checks** . Tento vstup je poskytován argumentem **--Checks** nástroje. Do vlastních souborů **. Clang-uklizený** je možné zahrnout jakoukoli další konfiguraci. Další podrobnosti najdete v [dokumentaci k Clang-uklizený na LLVM.org](https://clang.llvm.org/extra/clang-tidy/) .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Podpora Clang/LLVM pro projekty MSBuild](https://aka.ms/cpp/clangmsbuild)
 - [Podpora Clang/LLVM pro projekty CMake](https://aka.ms/cpp/clangcmake)

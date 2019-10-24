@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Zaznamenání grafických informací | Dokumentace Microsoftu'
+title: 'Návod: zachycení informací grafiky | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 48f12f6e-57b4-48ec-a145-89fa71a42424
@@ -8,55 +8,55 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd7136367bfb883cfc5d962a1373fec738413fc6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aab86d42cd158ad64ebb16497b8d2d9f5a7002df
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62897661"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72734730"
 ---
 # <a name="walkthrough-capturing-graphics-information"></a>Návod: Zaznamenání grafických informací
-Tento návod ukazuje, jak používat [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] diagnostiky grafiky k ručně zachytit informace grafiky z aplikace Direct3D.
+Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Diagnostika grafiky k ručnímu zachycení informací grafiky z aplikace Direct3D.
 
- Tento návod ilustruje tyto úkoly:
+ Tento návod ilustruje tyto úlohy:
 
-- Zachycení diagnostiky grafiky do vaší aplikace
+- Zapojování Diagnostika grafiky do vaší aplikace
 
 - Zachycení informací grafiky
 
 ## <a name="capturing-graphics-information"></a>Zachycení informací grafiky
- Použití nástrojů diagnostiky grafiky, je nejprve nutné zachytit informace grafiky, která ho využívá. K povolení funkce capture, použijte **spustit diagnostiku** příkaz, který připojí nástroj Diagnostika grafiky do vaší aplikace při spuštění.
+ Chcete-li použít nástroje Diagnostika grafiky, musíte nejprve zachytit informace o grafice, na kterých se spoléhá. Pokud chcete povolit Capture, pomocí příkazu **Spustit diagnostiku** zapojte Diagnostika grafiky do vaší aplikace při spuštění.
 
-#### <a name="to-enable-the-capture-of-graphics-information-after-a-project-or-solution-is-loaded"></a>Chcete-li povolit zachycení informací grafiky po projekt nebo řešení je načteno
+#### <a name="to-enable-the-capture-of-graphics-information-after-a-project-or-solution-is-loaded"></a>Povolení zachycení informací grafiky po načtení projektu nebo řešení
 
-1. V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], načtení souboru projektu nebo řešení pro aplikaci, kterou chcete zachytit informace grafiky z.
+1. V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načtěte projekt nebo soubor řešení pro aplikaci, ze které chcete zachytit informace grafiky.
 
-2. Na panelu nástrojů diagnostiky grafiky **spustit diagnostiku**.
+2. Na panelu nástrojů Diagnostika grafiky vyberte **Spustit diagnostiku**.
 
-#### <a name="to-enable-the-capture-of-graphics-information-without-loading-a-project-or-solution"></a>Chcete-li povolit zachycení informací grafiky bez načítání projektu nebo řešení
+#### <a name="to-enable-the-capture-of-graphics-information-without-loading-a-project-or-solution"></a>Povolení zachycení informací grafiky bez načtení projektu nebo řešení
 
-1. V panelu nabídky zvolte **souboru**, **otevřít**, **projekt či řešení**. **Otevřít projekt** zobrazí se dialogové okno.
+1. Na panelu nabídek vyberte možnosti **soubor**, **otevřít**, **projekt/řešení**. Zobrazí se dialogové okno **Otevřít projekt** .
 
-2. Místo souboru projektu nebo řešení, zadejte spustitelný soubor pro aplikaci, kterou chcete zachytit informace grafiky z a klikněte na tlačítko **otevřít**.
+2. Místo souboru projektu nebo řešení určete spustitelný soubor pro aplikaci, ze které chcete zachytit informace grafiky, a pak zvolte **otevřít**.
 
-3. V panelu nabídky zvolte **ladění**, **grafiky**, **spustit diagnostiku**.
+3. Na panelu nabídek vyberte možnost **ladění**, **Grafika**, **Spustit diagnostiku**.
 
-   Po spuštění aplikace a je vykreslování rámce, může zachytit grafické informace.
+   Po spuštění aplikace a při vykreslování snímků můžete zachytit informace grafiky.
 
-#### <a name="to-capture-graphics-information"></a>Chcete-li zachytit informace grafiky
+#### <a name="to-capture-graphics-information"></a>Zachycení informací grafiky
 
-- Na panelu nástrojů diagnostiky grafiky **zachycení** tlačítko. ![Zachytávání grafiky ikonu tlačítka](media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")
+- Na panelu nástrojů Diagnostika grafiky klikněte na tlačítko **zachytit** . ![Ikona tlačítka pro zachycení grafiky](media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")
 
    -nebo-
 
-   S aplikací fokus, stiskněte klávesu **Print Screen**.
+   Pokaždé, když máte aplikaci aktivní, stiskněte **tiskovou obrazovku**.
 
-  Pokaždé, když zaznamenat informace o snímek, diagnostiky grafiky zaznamenává události rozhraní Direct3D a přidružený stav a přidá tato data do protokolu grafiky. Pro každou relaci diagnostiky grafiky je vytvořen nový protokol grafiky. Informace o protokoly grafiky, naleznete v tématu [přehled](overview-of-visual-studio-graphics-diagnostics.md).
+  Pokaždé, když zachytíte informace o snímku, Diagnostika grafiky zaznamenává události Direct3D a související stav a přidává tato data do protokolu grafiky. Pro každou relaci Diagnostika grafiky se vytvoří nový protokol grafiky. Informace o grafických protokolech najdete v tématu [Přehled](overview-of-visual-studio-graphics-diagnostics.md).
 
 ## <a name="next-steps"></a>Další kroky
- Tento názorný postup ukázal, jak lze zachytit informace grafiky ručně. V dalším kroku vezměte v úvahu tuto možnost:
+ Tento návod ukázal, jak ručně zachytit informace o grafice. Jako další krok zvažte tuto možnost:
 
-- Zjistěte, jak analyzovat zachycené informace grafiky pomocí nástrojů diagnostiky grafiky. Zobrazit [přehled](overview-of-visual-studio-graphics-diagnostics.md).
+- Naučte se analyzovat informace o zachycené grafice pomocí nástrojů Diagnostika grafiky. Další informace najdete v tématu [Přehled](overview-of-visual-studio-graphics-diagnostics.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zaznamenání grafických informací](capturing-graphics-information.md)

@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno informace o načítání symbolů | Dokumentace Microsoftu
+title: Dialogové okno informace o načtení symbolů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,20 +15,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5606101d4c4a790db57f2a5b051bc128ea50c684
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c6bc7a795d45caf712b837f7d59e3ce6a0f9c8aa
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62901925"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72729015"
 ---
 # <a name="symbol-load-information-dialog-box"></a>Dialogové okno Informace o načtení symbolů
-**Informace o načítání symbolů** dialogové okno otevře, když kliknete pravým tlačítkem na **moduly** okno a zvolte **informace o načítání symbolů**.
+Když kliknete pravým tlačítkem myši na okno **moduly** a zvolíte **informace o načítání symbolů**, otevře se dialogové okno **informace o načtení symbolu** .
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
- **Informace o** zobrazuje pro soubory symbolů (soubory PDB) založené na sadě Visual Studio nainstalovat nastavení a změny provedené nastavení symbolu v prohledávané adresáře **možnosti** dialogové okno.
+ **Informace o** Zobrazuje adresáře prohledávané soubory symbolů (soubory PDB) na základě nastavení instalace sady Visual Studio a změn, které jste provedli v nastavení symbolů v dialogovém okně **Možnosti** .
 
- **Symbol nastavení** kliknutí na toto tlačítko, chcete-li změnit nastavení symbolu v **možnosti** dialogové okno (**ladění** kategorie, **symboly** stránky). Na této stránce můžete přidat nebo odebrat umístění symbolů, zadejte umístění místní mezipaměti, pokud používáte symbolový server a řídit, kdy jsou prohledávány umístění symbolů.
+ **Nastavení symbolu** Kliknutím na toto tlačítko můžete změnit nastavení symbolu v dialogovém okně **Možnosti** (kategorie**ladění** , stránka **symboly** ). Na této stránce můžete přidat nebo odebrat umístění symbolů, určit umístění místní mezipaměti, pokud používáte server symbolů, a určit, kdy se mají vyhledávat umístění symbolů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zadání symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

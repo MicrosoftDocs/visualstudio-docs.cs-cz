@@ -1,5 +1,5 @@
 ---
-title: Idiaenuminjectedsources::get_count – | Dokumentace Microsoftu
+title: 'IDiaEnumInjectedSources:: get_Count | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8da7e672ba447d1453d451da0040aef44ecaa799
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1ed8e0ca64e7e15fe38d706a1a7e0ed9f45cdcd3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833517"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744537"
 ---
-# <a name="idiaenuminjectedsourcesgetcount"></a>IDiaEnumInjectedSources::get_Count
-Získá počet vloženého zdroje.
+# <a name="idiaenuminjectedsourcesget_count"></a>IDiaEnumInjectedSources::get_Count
+Načte počet vložených zdrojů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,11 +33,11 @@ HRESULT get_Count ( 
 #### <a name="parameters"></a>Parametry
  pRetVal
 
-[out] Vrátí počet vloženého zdroje.
+mimo Vrátí počet vložených zdrojů.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)
 - [IDiaEnumInjectedSources::Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md)

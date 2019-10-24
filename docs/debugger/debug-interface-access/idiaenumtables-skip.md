@@ -1,5 +1,5 @@
 ---
-title: Idiaenumtables::Skip – | Dokumentace Microsoftu
+title: 'IDiaEnumTables:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24232878452082dd1769c9bc9f1cd22d081968f2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 48e4da48699bc9797c7ccbfb0f21bb0b2007c752
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832666"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743718"
 ---
 # <a name="idiaenumtablesskip"></a>IDiaEnumTables::Skip
-Vynechá zadaný počet tabulek v sekvenci výčtu.
+Přeskočí zadaný počet tabulek ve výčtové sekvenci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT Skip ( 
 #### <a name="parameters"></a>Parametry
  `celt`
 
-[in] Počet tabulek v pořadí výčtu pro přeskočení.
+pro Počet tabulek v sekvenci výčtu k přeskočení.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` Pokud nejsou žádné další tabulky, které se mají přeskočit.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE`, pokud neexistují žádné další tabulky, které by bylo možné přeskočit.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)

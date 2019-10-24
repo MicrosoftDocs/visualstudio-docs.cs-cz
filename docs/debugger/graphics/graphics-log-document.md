@@ -1,5 +1,5 @@
 ---
-title: Dokumentu protokolu grafiky | Dokumentace Microsoftu
+title: Dokument protokolu grafiky | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,98 +12,98 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aed2acd4dbf921d99bcefe2e74575401fc01c7d7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6d9bdfdb23d199c50b8d7ec6520964043dee8aa6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62895977"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72735521"
 ---
 # <a name="graphics-log-document"></a>Dokument grafických protokolů
-Dokumentu protokol grafiky je záznam událostí grafiky, ke kterým došlo, když byla aplikace spuštěna v rámci relace diagnostiky grafiky. Po zapsání můžete prozkoumat v protokolu ve Visual Studio Graphics Analyzer k diagnostice problémů vykreslování a výkonu.
+Dokument protokolu grafiky je záznam událostí grafiky, ke kterým došlo v době, kdy byla aplikace spuštěna v relaci diagnostiky grafiky. Po nahrání můžete prostudovat Analyzátor grafiky sady Visual Studio přihlášení a diagnostikovat problémy s vykreslováním a výkonem.
 
- Toto je co dokument grafických protokolů vypadá podobně jako v analyzátoru grafiky:
+ To je to, co vypadá v analyzátoru grafiky v podobě dokumentu protokolu grafiky:
 
- ![Protokol grafiky obsahuje dva zachycené snímky. ](media/gfx_diag_demo_graphics_log_orientation.png "gfx_diag_demo_graphics_log_orientation")
+ ![Protokol grafiky obsahující dva zachycené snímky.](media/gfx_diag_demo_graphics_log_orientation.png "gfx_diag_demo_graphics_log_orientation")
 
-## <a name="understanding-graphics-log-documents"></a>Vysvětlení grafiky protokolu dokumenty
- Pomocí analyzátoru grafiky sady k prozkoumání dokument grafických protokolů můžete sledovat účinky událostmi rozhraní Direct3D na cíl vykreslování, ke které došlo při zachytávání. Můžete určit oblasti cíle vykreslování, které obsahují neočekávaný výstup. Když vyberte pixel v ovlivněné oblasti, můžete ke kontrole, jeho shadery, události rozhraní Direct3D, které měla vliv na to, zásobník volání aplikace, která vedla k těmto událostem a objekty rozhraní DirectX, které podporují tyto události modulu Diagnostika grafiky. Tyto informace můžete použít k diagnostice problémů vykreslování ve hře nebo aplikaci.
+## <a name="understanding-graphics-log-documents"></a>Porozumění dokumentům s protokolem grafiky
+ Pomocí analyzátoru grafiky pro prohlížení dokumentu s grafickým protokolem můžete vizualizovat účinky událostí Direct3D na cíl vykreslování, ke kterému došlo během zachytávání. Můžete určit oblasti cíle vykreslování, které obsahují Neočekávaný výstup. Když vyberete pixel v ovlivněné oblasti, můžete k jeho kontrole použít Diagnostika grafiky, jeho shadery, události Direct3D, které to ovlivnilo, zásobník volání aplikace, který vedl k těmto událostem, a objekty rozhraní DirectX, které tyto události podporují. Tyto informace můžete použít k diagnostice problémů s vykreslováním ve vaší hře nebo aplikaci.
 
- Horní část okna (**grafiky Experiment.vsglog**) zobrazí aktuální výstup cíle vykreslení vybraného snímku a v dolní části zobrazují **seznam snímků** obsahující obrázky miniatur zachycené snímky.
+ Horní část okna (**Graphics experiment. vsglog**) zobrazí aktuální výstup cíle vykreslování vybraného rámce a dolní část zobrazí **seznam rámců** , který obsahuje miniatury zachycených snímků.
 
-#### <a name="to-inspect-a-frame"></a>Chcete-li prověřit blok
+#### <a name="to-inspect-a-frame"></a>Kontrola rámce
 
-- V **seznam snímků**, vyberte snímek, který chcete zkontrolovat. Výstup cíle vykreslení v horní části dokumentu protokol grafiky se aktualizuje a zobrazí vybraný rámec.
+- V **seznamu snímků**vyberte rámec, který chcete zkontrolovat. Výstup cíle vykreslování v horní části dokumentu protokolu grafiky je aktualizován tak, aby zobrazoval vybraný snímek.
 
-#### <a name="to-inspect-a-pixel"></a>Chcete-li prověřit pixel
+#### <a name="to-inspect-a-pixel"></a>Kontrola pixelu
 
-- V horní části dokumentu protokol grafiky vyberte pixel, který chcete výstup cíle vykreslení. Když je vybraný pixel, můžete **historie pixelů grafiky** okno k zobrazení podrobných informací o vybraný pixel. Další informace najdete v tématu [historie pixelů](graphics-pixel-history.md).
+- V horní části dokumentu protokolu grafiky vyberte pixel, který chcete z výstupu cíle vykreslování. Když vyberete pixel, můžete použít okno **Historie pixelů grafiky** k zobrazení podrobných informací o vybraném pixelu. Další informace najdete v tématu [Historie pixelů](graphics-pixel-history.md).
 
 ## <a name="playback-machine"></a>Počítač pro přehrávání
- Zobrazí také v pravém horním rohu **seznam snímků** je **počítač pro přehrávání**. Počítač pro přehrávání je počítač nebo zařízení, které slouží k přehrání událostí grafiky z grafického protokolu souboru během novější relace diagnostiky grafiky. Pomocí jiného zařízení místo svého vývojového počítače k přehrání zachycené události může přesněji reprodukovat spouštěcí prostředí, ve kterém dochází k problému – například můžete použít počítač, který má jiný grafický hardware nebo ovladače než ty, které používá vývojovém počítači, nebo jiných typů zařízení, například tablety Windows RT založené na ARM nebo zařízení Windows Phone.
+ Zobrazuje se také v pravém horním rohu **seznamu rámců** , který je **počítač pro přehrávání**. Počítač pro přehrávání je počítač nebo zařízení, které se používá k přehrávání grafických událostí ze souboru protokolu grafiky během pozdější relace diagnostiky grafiky. Když místo vývojového počítače použijete jiné zařízení, abyste mohli přehrávat zachycené události, můžete přesnější reprodukci spouštěcího prostředí, ve kterém dojde k problému, například použít počítač s jiným grafickým hardwarem nebo ovladači. než ty, které váš vývojový počítač používá, nebo jiné druhy zařízení, jako je například tablet s Windows RT nebo zařízení s Windows Phone s procesorem ARM.
 
- Informace o tom, jak určit počítač pro přehrávání, naleznete v tématu [jak: Změnit počítač pro přehrávání diagnostiky grafiky](how-to-change-the-graphics-diagnostics-playback-machine.md).
+ Informace o tom, jak zadat počítač pro přehrávání, najdete v tématu [Postup: změna Diagnostika grafiky počítač pro přehrávání](how-to-change-the-graphics-diagnostics-playback-machine.md).
 
-## <a name="graphics-log-summary-information"></a>Souhrnné informace protokolu grafiky
- Když soubor protokolu grafiky je aktivní dokument **vlastnosti** okno zobrazuje informace o prostředí, jehož hostitelem relace zachycení diagnostiky grafiky. Zobrazí se několik kategorií informací.
+## <a name="graphics-log-summary-information"></a>Souhrnné informace o protokolu grafiky
+ Když je soubor protokolu grafiky aktivním dokumentem, zobrazí se v okně **vlastnosti** informace o prostředí, které hostuje relaci Diagnostika grafiky Capture. Zobrazí se několik kategorií informací.
 
- **Informace o rozhraní Direct3D** informacemi o funkcí hardwaru a ovladače grafického adaptéru, který se používá během relace zachytávání.
-
-|Vlastnost|Popis|
-|--------------|-----------------|
-|**Formát High Color 10-bit XR**|**Hodnota TRUE** Pokud 10-bit XR high color formát je podporovaná; v opačném případě **False**.|
-|**DirectCompute CS 4.x**|**Hodnota TRUE** Pokud výpočetní Shader 4.0 je podporovaná; v opačném případě **False**.|
-|**Shadery dvojnásobné přesnosti**|**Hodnota TRUE** Pokud grafický adaptér podporuje dvojité přesnosti s plovoucí desetinnou čárkou hodnoty (64 bitů); v opačném případě **False**.|
-|**Seznamy příkazů ovladače**|**Hodnota TRUE** Jestliže ovladač podporuje seznamy příkazů; v opačném případě **False**.|
-|**Souběžné produkty ovladače**|**Hodnota TRUE** Jestliže ovladač podporuje souběžné vytvoření (asynchronní); v opačném případě **False**.|
-|**Rozšířené formáty (BGRA atd.)**|**Hodnota TRUE** Pokud rozšířené formátech, jako jsou BGRA jsou podporované; v opačném případě **False**.|
-|**Úroveň hardwarové výbavy Max**|Zobrazí nejvyšší úroveň funkce, který podporuje grafický adaptér.|
-
- **Zobrazení informací** informacemi o grafický adaptér, který se používá během relace zachytávání.
+ **Informace Direct3D** Zobrazí informace o vlastnostech hardwaru a ovladače grafického adaptéru, který se použil během relace zachycení.
 
 |Vlastnost|Popis|
 |--------------|-----------------|
-|**Popis**|Zobrazovaný řetězec popis adaptéru.|
-|**Zobrazení paměti**|Velikost paměti, která je nainstalovaná na grafický adaptér.|
+|**XR high color Format ve formátu 10 bitů**|**True** , pokud je podporován formát High Color XR s vysokým rozlišením. v opačném případě **false**.|
+|**DirectCompute CS 4. x**|**True** , pokud je podporována funkce compute shader 4,0; v opačném případě **false**.|
+|**Shadery s dvojitou přesností**|**True** , pokud zobrazovací adaptér podporuje hodnoty s plovoucí desetinnou čárkou s dvojitou přesností (64 bitů); v opačném případě **false**.|
+|**Seznamy příkazů ovladače**|**True** , pokud ovladač podporuje seznamy příkazů; v opačném případě **false**.|
+|**Souběžné vytváření ovladačů**|**True** , pokud ovladač podporuje souběžné (asynchronní) vytváření; v opačném případě **false**.|
+|**Rozšířené formáty (BGRA atd.)**|**True** , pokud jsou podporovány rozšířené formáty jako BGRA; v opačném případě **false**.|
+|**Maximální úroveň hardwarové funkce**|Zobrazuje nejvyšší úroveň funkce, kterou adaptér zobrazení podporuje.|
+
+ **Zobrazit informace** Zobrazí informace o zobrazovacím adaptéru, který se použil během relace zachycení.
+
+|Vlastnost|Popis|
+|--------------|-----------------|
+|**Popis**|Řetězec popisu zobrazovaného adaptéru|
+|**Zobrazit paměť**|Velikost paměti, která je nainstalovaná na grafickém adaptéru.|
 |**Název ovladače**|Název ovladače grafického adaptéru.|
 |**Verze ovladače**|Verze ovladače grafického adaptéru.|
-|**Název**|Název grafického adaptéru.|
+|**Jméno**|Název grafického adaptéru.|
 
- **Experimentujte souboru** uvádí informace o souboru experiment, který je spojen s relace zachytávání.
-
-|Vlastnost|Popis|
-|--------------|-----------------|
-|**Cesta**|Cestu k souboru .vsglog. **Poznámka:**  V rámci starší verze zachycení tato vlastnost se nepoužívá.|
-
- **Informace o modulu** se zobrazuje název a verze dynamické knihovny (DLL), která byla načtena aplikace během relace zachycení.
-
- **Informace o systému** uvádí informace o hardwaru a operačního systému, který je hostitelem aplikace během relace zachycení.
+ **Experimentovat soubor** Obsahuje seznam informací o souboru experimentu, který je přidružen k relaci zachycení.
 
 |Vlastnost|Popis|
 |--------------|-----------------|
-|**Paměť**|Množství paměti, která je nainstalována v počítači.|
-|**Architektura operačního systému**|Cílové architektury procesoru operačního systému.|
+|**Dílčí**|Cesta k souboru. vsglog **Poznámka:**  V části starší zachytávání se tato vlastnost nepoužívá.|
+
+ **Informace o modulu** Zobrazuje název a verzi knihoven DLL, které aplikace zavedly během relace zachycení.
+
+ **Systémové informace** Zobrazí informace o hardwaru a operačním systému, který hostuje aplikaci během relace zachycení.
+
+|Vlastnost|Popis|
+|--------------|-----------------|
+|**Rezident**|Velikost paměti, která je nainstalována v počítači.|
+|**Architektura operačního systému**|Cílová architektura procesoru operačního systému.|
 |**Verze operačního systému**|Verze operačního systému.|
-|**Procesor**|Procesor, který je nainstalován v počítači.|
-|**Architektura cílové aplikace**|Cílové architektuře procesoru v aplikaci. To může být jiné než **Architektura operačního systému**.|
+|**Mobilních**|Procesor, který je nainstalován v počítači.|
+|**Architektura cílové aplikace**|Cílová architektura procesoru aplikace Může se lišit od **architektury operačního systému**.|
 
- **Cílová aplikace** uvádí informace o aplikaci, která je předmětem relace zachytávání.
+ **Cílová aplikace** Zobrazí informace o aplikaci, která je předmětem relace zachycení.
 
 |Vlastnost|Popis|
 |--------------|-----------------|
-|**Datum/čas poslední změny**|Datum a čas, kterou byla aplikace vytvořena.|
-|**Cesta**|Cesta aplikace.|
-|**ID procesu**|ID procesu, který byl zadán pro aplikaci.|
-|**Verze**|Verze aplikace.|
+|**Datum a čas poslední změny**|Datum a čas, kdy byla aplikace sestavena.|
+|**Dílčí**|Cesta k aplikaci|
+|**ID procesu**|ID procesu, které bylo přiděleno aplikaci.|
+|**Verze**|Verze aplikace|
 
- **Soubor protokolu VSG** uvádí informace o dokumentu protokol grafiky.
+ **Soubor protokolu VSG** Zobrazí informace o dokumentu protokolu grafiky.
 
 | Vlastnost | Popis |
 |------------------------| - |
-| **Vytvořil** | Název aplikace, kterou vytvořili grafiky protokolu dokumentu. Například, pokud byla relace zachytávání iniciovaná [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (ruční capture) hodnota této vlastnosti je [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. |
-| **Čas spuštění relace** | Datum a čas zahájení relace zachytávání. |
-| **Velikost** | Velikost dokument grafických protokolů. |
+| **Vytvořil** | Název aplikace, která vytvořila dokument protokolu grafiky. Pokud byla například relace zachycení iniciována z [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (ruční zachytávání), hodnota této vlastnosti je [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. |
+| **Čas spuštění relace** | Datum a čas, kdy začala relace zachycení. |
+| **Hodnota** | Velikost dokumentu protokolu grafiky |
 
-## <a name="see-also"></a>Viz také
-- [Návod: Chybějící objekty kvůli vertex shaderu](walkthrough-missing-objects-due-to-vertex-shading.md)
-- [Návod: Ladění chyb při vykreslování, které jsou způsobené stínováním](walkthrough-debugging-rendering-errors-due-to-shading.md)
+## <a name="see-also"></a>Viz také:
+- [Návod: Chybějící objekty z důvodu použití funkce vertex shading](walkthrough-missing-objects-due-to-vertex-shading.md)
+- [Návod: Ladění chyb při vykreslování způsobených stínováním](walkthrough-debugging-rendering-errors-due-to-shading.md)

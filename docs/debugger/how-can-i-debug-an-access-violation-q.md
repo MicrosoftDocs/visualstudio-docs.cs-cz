@@ -1,5 +1,5 @@
 ---
-title: Ladění narušení přístupu jazyka C++ | Dokumentace Microsoftu
+title: Ladění narušení C++ přístupu | Microsoft Docs
 ms.custom: seodec18
 ms.date: 02/05/2019
 ms.topic: conceptual
@@ -19,24 +19,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be6c13e2a3c83d31540399dd3387addb08e8686
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: eebbdfd7774018ecf49801c6b01b5867b7bd3408
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62895127"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72734546"
 ---
-# <a name="how-can-i-debug-a-c-access-violation"></a>Jak mohu ladit porušení přístupu jazyka C++?
+# <a name="how-can-i-debug-a-c-access-violation"></a>Jak mohu ladit narušení C++ přístupu?
 
 ## <a name="problem-description"></a>Popis problému
 
-Tento program vytvoří narušení přístupu. Jak to lze odladit?
+Program vytvoří porušení přístupu. Jak se dá ladit?
 
 ## <a name="solution"></a>Řešení
 
-Pokud dojde k narušení přístupu na řádek kódu, který přistoupí přes většího počtu ukazatelů, může být obtížné zjistit, které ukazatel způsobil narušení přístupu. Od verze Visual Studio 2015 Update 1, dialogové okno výjimky nyní explicitně názvy ukazatel, který způsobil narušení přístupu.
+Pokud dojde k narušení přístupu na řádku kódu, který odkazuje na více ukazatelů, může být obtížné zjistit, který ukazatel způsobil narušení přístupu. Počínaje verzí Visual Studio 2015 Update 1 se v dialogovém okně výjimka teď explicitně pojmenuje ukazatel, který způsobil narušení přístupu.
 
-Například směru následujícím kódem, měli byste získat narušení přístupu:
+Například s ohledem na následující kód byste měli mít porušení přístupu:
 
 ```C++
 #include <iostream>
@@ -73,11 +73,11 @@ int main() {
 }
 ```
 
-Při spuštění tohoto kódu ve Visual Studio 2015 Update 1, byste měli vidět následující dialogové okno výjimky:
+Pokud spustíte tento kód v aplikaci Visual Studio 2015 Update 1, mělo by se zobrazit následující dialog výjimky:
 
 ![AccessViolationCPlus](../debugger/media/accessviolationcplus.png "AccessViolationCPlus")
 
-Pokud nelze určit, proč je ukazatel způsobil narušení přístupu, trasování skrze kód a ujistěte se, že ukazatel příčinou problému, má přiřazenou správně.  Pokud je předán jako parametr, ujistěte, že je jí předán správně, a nejsou omylem vytváření [Nedávná kopírování](http://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy). Ověřte, že hodnoty nejsou mění neúmyslně někde v programu vytvořením datové zarážky pro ukazatele dotyčný zajistit, aby že se nemění jinde v programu. Další informace o datové zarážky, najdete v části zarážky data v [pomocí zarážek](../debugger/using-breakpoints.md).
+Pokud nemůžete určit, proč ukazatel způsobil narušení přístupu, Sledujte kód, abyste se ujistili, že ukazatel způsobující problém byl správně přiřazen.  Pokud se předává jako parametr, ujistěte se, že je předaný správně, a Vy nechtěně nevytvoříte [kopii](http://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy)s podmnožinou. Pak ověřte, že se hodnoty neúmyslně v programu nezměnily, vytvořením datové zarážky pro daný ukazatel, abyste se ujistili, že se nemění jinde v programu. Další informace o zarážekch dat naleznete v části datové zarážky v tématu [použití zarážek](../debugger/using-breakpoints.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Nejčastější dotazy k ladění nativního kódu](../debugger/debugging-native-code-faqs.md)

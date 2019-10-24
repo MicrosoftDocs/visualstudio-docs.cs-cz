@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e9a99eef692eb776908c6b8c4a32eb361092855a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8aacaa43dc9a95faee886440623fb4238abf9be5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658310"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748358"
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>Přehled uživatelského rozhraní Jazykových nástrojů specifických pro doménu
 Při prvním otevření řešení Nástroje DSL (DSL Tools) v aplikaci Visual Studio bude uživatelské rozhraní vypadat podobně jako na následujícím obrázku.
@@ -46,7 +46,7 @@ Při prvním otevření řešení Nástroje DSL (DSL Tools) v aplikaci Visual St
 |Tvary a konektory|Tvary určují, jak se mají prvky modelu zobrazovat na diagramu DSL. konektory určují čáry na diagramu DSL, které se dají použít k zobrazení vztahů.<br /><br /> Chcete-li vytvořit tvar nebo spojnici, přetáhněte nástroj na **prvky diagramu** na straně diagramu.|
 |Mapy obrazců|Mapa obrazce se zobrazí jako čára v diagramu doménového modelu, propojuje obrazec s doménovou třídou, kterou zobrazuje, nebo konektor k doménovým vztahům, které zobrazuje.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přehled Nástrojů DSL](../modeling/overview-of-domain-specific-language-tools.md)
 - [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsectioncontribs::Next – | Dokumentace Microsoftu
+title: 'IDiaEnumSectionContribs:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e8fd088ff6be619de56f27f91b198aed18e428c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 61d99b0c881abdb8974e94352911ae3234c440c1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829781"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744277"
 ---
 # <a name="idiaenumsectioncontribsnext"></a>IDiaEnumSectionContribs::Next
-Načte zadaný počet příspěvků oddíl v pořadí výčtu.
+Načte zadaný počet příspěvků oddílu do sekvence výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,19 +35,19 @@ HRESULT Next( 
 #### <a name="parameters"></a>Parametry
  celt
 
-[in] Číslo části příspěvků v enumerátor, který se má načíst.
+pro Počet příspěvků oddílu ve výčtu, který má být načten.
 
  rgelt
 
-[out] Pole, které má být vyplněny [idiasectioncontrib –](../../debugger/debug-interface-access/idiasectioncontrib.md) objekty, které představují požadované části příspěvků.
+mimo Pole, které má být vyplněno objekty [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) , které reprezentují požadovaný oddíl.
 
  pceltFetched
 
-[out] Vrátí číslo části příspěvků v načtení enumerátoru.
+mimo Vrátí počet příspěvků v sekci v načteném výčtu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné příspěvky v další části. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud neexistují žádné další příspěvky k oddílu. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_upperbound – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_upperBound | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a25db69ac60fcc045637b797a4be3c45a4147cf
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 3528780e80e8afc5076446f16b1a64ef1700ee30
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64816480"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738961"
 ---
-# <a name="idiasymbolgetupperbound"></a>IDiaSymbol::get_upperBound
-Načte symbol představující horní mez až po FORTRAN dimenze pole.
+# <a name="idiasymbolget_upperbound"></a>IDiaSymbol::get_upperBound
+Načte symbol představující horní mez dimenze pole FORTRAN.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_upperBound ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt, který představuje horní mez až po FORTRAN dimenze pole.
+mimo Vrátí objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) , který představuje horní mez dimenze pole FORTRAN.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

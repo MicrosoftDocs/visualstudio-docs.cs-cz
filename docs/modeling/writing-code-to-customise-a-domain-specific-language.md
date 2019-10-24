@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c8a65b19baeb3a03c8ada039bce354140aecbf6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3954f271d4bcdc222841bbcb435cdadf115ac263
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666874"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748128"
 ---
 # <a name="write-code-to-customize-a-domain-specific-language"></a>Zápis kódu pro úpravu jazyka specifického pro doménu
 
@@ -72,6 +72,6 @@ udržování objektů v úložišti (místo stejně jako běžné objekty) posky
 
 - **Serializace**. Úložiště poskytuje standardní způsob, jak serializovat objekty, které obsahuje, do souboru. Můžete přizpůsobit pravidla pro serializaci a deserializaci. Další informace naleznete v tématu [přizpůsobení File Storage a serializace XML](../modeling/customizing-file-storage-and-xml-serialization.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md)

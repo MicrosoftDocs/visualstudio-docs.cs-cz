@@ -1,5 +1,5 @@
 ---
-title: Implementace barevného zvýrazňování syntaxe | Dokumentace Microsoftu
+title: Implementace Obarvení syntaxe | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,57 +12,57 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3f577f4cf21110a1b40680059b385d413c9c6902
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cab338e253cca8c7f8457752980e7f3624317d9c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324238"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72727029"
 ---
 # <a name="implementing-syntax-coloring"></a>Implementace barevného zvýrazňování syntaxe
-Když služba jazyka nabízí barevné zvýrazňování syntaxe, analyzátor převede řádek textu do pole položek, které lze zabarvit a vrátí odpovídající tyto které lze zabarvit položky pro typy tokenů. Analyzátor by měl vrátit typy tokenů, které patří do seznamu položek, které lze zabarvit. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] které lze zabarvit položky se zobrazí v okně kódu podle atributů přiřazených objektem colorizer odpovídající typ tokenu.
+Když jazyková služba poskytuje barevné zvýrazňování syntaxe, analyzátor převede řádek textu na pole barevně vydaných položek a vrátí typy tokenů odpovídající těmto barevně vydaným položkám. Analyzátor by měl vracet typy tokenů, které patří do seznamu barevně vydaných položek. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zobrazuje každou barevnou položku v okně kódu podle atributů přiřazených objektem Colorizer k příslušnému typu tokenu.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] analyzátor rozhraní, neurčuje a implementaci analyzátoru je zcela na vás. Výchozí implementace analyzátor však je součástí projektu Visual Studio jazykový balíček. Pro spravovaný kód framework spravovaného balíčku (MPF) poskytuje úplnou podporu pro barevné zvýrazňování textu.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] neurčuje rozhraní analyzátoru a implementace analyzátoru je zcela na vás. Výchozí implementace analyzátoru je však k dispozici v projektu balíčku jazyka sady Visual Studio. Pro spravovaný kód poskytuje rozhraní Managed Package Framework (MPF) úplnou podporu pro Colorizing text.
 
- Služby starší verze jazyka jsou implementovány jako součást sady VSPackage, ale novější způsob implementace funkce služba jazyka je pro použití rozšíření MEF. Další informace o nový způsob implementace barevné zvýrazňování syntaxe, naleznete v tématu [názorný postup: Zvýraznění textu](../../extensibility/walkthrough-highlighting-text.md).
+ Starší jazykové služby jsou implementovány jako součást sady VSPackage, ale novější způsob, jak implementovat funkce jazykové služby, je použít rozšíření MEF. Další informace o novém způsobu implementace Obarvení syntaxe naleznete v tématu [Návod: zvýraznění textu](../../extensibility/walkthrough-highlighting-text.md).
 
 > [!NOTE]
-> Doporučujeme vám, že začnete používat nový editor API co nejdříve. Tím vylepšíme výkonu vaší služby jazyka a umožňují využívat nové funkce editoru.
+> Doporučujeme začít používat nové rozhraní API editoru co nejrychleji. Tím se vylepšit výkon vaší jazykové služby a umožní vám využít nové funkce editoru.
 
-## <a name="steps-followed-by-an-editor-to-colorize-text"></a>Kroky, následuje editoru barevně zvýrazňovat Text
+## <a name="steps-followed-by-an-editor-to-colorize-text"></a>Postup následovaný editorem, který zabarvovat text
 
-1. Editoru colorizer získá voláním <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A> metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> objektu.
+1. Editor získá Colorizer voláním metody <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A> na objektu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>.
 
-2. Editor volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.GetStateMaintenanceFlag%2A> metodou ke zjištění, zda colorizer potřebuje stavu každého řádku být zachován mimo colorizer.
+2. Editor volá metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.GetStateMaintenanceFlag%2A>, aby určil, jestli Colorizer potřebuje zachovat stav každého řádku mimo colorizer.
 
-3. Pokud colorizer vyžaduje stav, který má být zachován mimo colorizer, zavolá editoru <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.GetStartState%2A> metodu k získání stavu na prvním řádku.
+3. Pokud colorizer vyžaduje, aby byl stav udržován mimo Colorizer, volá Editor metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.GetStartState%2A>, aby získal stav prvního řádku.
 
-4. Pro každý řádek ve vyrovnávací paměti volá editoru <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> metodu, která provede následující kroky:
+4. Pro každý řádek ve vyrovnávací paměti volá Editor metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A>, která provádí následující kroky:
 
-    1. Řádek textu je předáno scanner k převodu textu na tokeny. Každý token Určuje text tokenu a typ tokenu.
+    1. Řádek textu se předává skeneru, který převede text na tokeny. Každý token Určuje text tokenu a typ tokenu.
 
-    2. Typ tokenu je převést na index do seznamu, které lze zabarvit položky.
+    2. Typ tokenu je převeden na index do seznamu položek, které jsou barevně nabarvené.
 
-    3. Informace o tokenu se používá k vyplnění pole tak, aby každý prvek pole odpovídá znaku v řádku. Hodnoty uložené v poli se indexy, do které lze zabarvit položky seznamu.
+    3. Informace o tokenu slouží k vyplnění pole tak, aby každý prvek pole odpovídal znaku na řádku. Hodnoty uložené v poli jsou indexy do seznamu barevně napsaných položek.
 
-    4. Stav na konci řádku se vrací pro každý řádek.
+    4. Stav na konci řádku se vrátí pro každý řádek.
 
-5. Pokud colorizer vyžaduje stav, který má být zachována, editoru ukládá do mezipaměti stavu pro tento řádek.
+5. Pokud colorizer vyžaduje, aby byl stav udržován, editor ukládá do mezipaměti stav pro daný řádek.
 
-6. Editor vykreslí řádek textu s použitím informací vrácených <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> metody. To vyžaduje následující kroky:
+6. Editor vykreslí řádek textu pomocí informací vrácených z metody <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A>. To vyžaduje následující kroky:
 
-    1. Pro každý znak na řádku získání index které lze zabarvit položky.
+    1. Pro každý znak na řádku Získá index položky barvy.
 
-    2. Pokud používáte výchozí které lze zabarvit položky, přístup k editoru které lze zabarvit položky seznamu.
+    2. Pokud použijete výchozí barevně vybarvené položky, přejděte k seznamu barevně vydaných položek editoru.
 
-    3. V opačném případě volání služby language <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A> metodu k získání které lze zabarvit položky.
+    3. Jinak Zavolejte metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A> služby jazyka, abyste získali barevnou položku.
 
-    4. Pomocí informací v které lze zabarvit položky k vykreslení textu do zobrazení.
+    4. Použijte informace v položce barev k vykreslení textu do zobrazení.
 
 ## <a name="managed-package-framework-colorizer"></a>Managed Package Framework Colorizer
- Rozhraní spravovaného balíčku (MPF) poskytuje všechny třídy, které jsou nutné k implementaci colorizer. Vaše třída jazyka služby by měla dědit <xref:Microsoft.VisualStudio.Package.LanguageService> třídy a implementuje požadované metody. Musíte zadat analyzátor a skener implementací <xref:Microsoft.VisualStudio.Package.IScanner> rozhraní a vracet instanci rozhraní z <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> – metoda (jedné z metod, které je třeba implementovat v <xref:Microsoft.VisualStudio.Package.LanguageService> třídy). Další informace najdete v tématu [barevné zvýrazňování syntaxe ve službě starší verze jazyka](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md).
+ Sada Managed Package Framework (MPF) poskytuje všechny třídy, které jsou vyžadovány k implementaci rozhraní colorizer. Třída služby jazyka by měla dědit třídu <xref:Microsoft.VisualStudio.Package.LanguageService> a implementovat požadované metody. Je nutné dodat skener a analyzátor implementací rozhraní <xref:Microsoft.VisualStudio.Package.IScanner> a vrátit instanci tohoto rozhraní z metody <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> (jedna z metod, které musí být implementována ve třídě <xref:Microsoft.VisualStudio.Package.LanguageService>). Další informace najdete v tématu [syntaxe Colorizing ve službě starší verze jazyka](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Postupy: Použití předdefinovaných položek, které lze zabarvit](../../extensibility/internals/how-to-use-built-in-colorable-items.md)
 - [Vlastní položky, které lze zabarvit](../../extensibility/internals/custom-colorable-items.md)
 - [Vývoj služby starší verze jazyka](../../extensibility/internals/developing-a-legacy-language-service.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsectioncontribs::Item – | Dokumentace Microsoftu
+title: 'IDiaEnumSectionContribs:: Item | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2cd51bd663087aa04a7ec4e60e5c4291a35d9193
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d021b5016bd0e0039f2bf175102dc44f04dabaab
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833282"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744296"
 ---
 # <a name="idiaenumsectioncontribsitem"></a>IDiaEnumSectionContribs::Item
-Načte části příspěvků prostřednictvím indexu.
+Načte příspěvky oddílu pomocí indexu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,15 +34,15 @@ HRESULT Item ( 
 #### <a name="parameters"></a>Parametry
  index
 
-[in] Index o [idiasectioncontrib –](../../debugger/debug-interface-access/idiasectioncontrib.md) objekt, který se má načíst. Index je v rozsahu 0 až `count`-1, kde `count` je vrácený [idiaenumsectioncontribs::get_count –](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-count.md) metody.
+pro Index objektu [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) , který se má načíst Index je v rozsahu 0 až `count`-1, kde `count` vrací metoda [IDiaEnumSectionContribs:: get_Count](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-count.md) .
 
  section
 
-[out] Vrátí [idiasectioncontrib –](../../debugger/debug-interface-access/idiasectioncontrib.md) objekt představující požadované části příspěvku.
+mimo Vrátí objekt [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) představující požadovaný příspěvek oddílu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumSectionContribs::get_Count](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-count.md)
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

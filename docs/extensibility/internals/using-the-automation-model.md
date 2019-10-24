@@ -1,5 +1,5 @@
 ---
-title: Použití modelu automatizace | Dokumentace Microsoftu
+title: Použití modelu automatizace | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,18 +10,18 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: be793e5cc4db30fa410e0218a7f780b6c2826838
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4f1e1479232a684758359de7527f0c2fc9990cc7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324601"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72722093"
 ---
 # <a name="using-the-automation-model"></a>Použití modelu automatizace
-Po připojení vaší VSPackage automatizace, lze získat vlastnosti a metody voláním <xref:EnvDTE.DTEClass.GetObject%2A> metodu <xref:EnvDTE._DTE> objekt předáním řetězce představující objekt, který chcete načíst.
+Po připojení VSPackage ke službě Automation můžete získat vlastnosti a metody voláním metody <xref:EnvDTE.DTEClass.GetObject%2A> na objektu <xref:EnvDTE._DTE> a předáním řetězce představujícího objekt, který chcete načíst.
 
-## <a name="obtaining-project-objects"></a>Získávání objektů projektu
- Následují dva příklady kódu, které ukazují, jak spotřebitel automatizace získá projektu objekty automatizace. Informace o tom, jak získat objekt DTE najdete v tématu [jak: Získat odkazy objekty DTE a DTE2](https://msdn.microsoft.com/Library/c92e3c8e-82e6-4a67-85da-e43c50ffd8e4).
+## <a name="obtaining-project-objects"></a>Získání objektů projektu
+ Níže jsou uvedeny dva příklady kódu, které ukazují, jak spotřebitel automatizace získává objekty automatizace projektu. Informace o tom, jak získat objekt DTE, naleznete v tématu [How to: Get References to the DTE and DTE2 Objects](https://msdn.microsoft.com/Library/c92e3c8e-82e6-4a67-85da-e43c50ffd8e4).
 
 ```vb
 Sub DoAutomation()
@@ -43,9 +43,9 @@ void DoAutomation(void)
 
 ```
 
- V tomto okamžiku můžete použít standardní projekt objekty, které jsou součástí konkrétního balíčku VSPackage přesunout dolů hierarchickému modelu.
+ V tomto okamžiku můžete použít standardní objekty projektu, které jsou součástí konkrétního VSPackage, a přesunout tak model hierarchie dolů.
 
- Následující příklad kódu ukazuje, jak získat vlastní objekt, který je součástí do vlastního typu projektu.:
+ Následující příklad kódu ukazuje, jak získat vlastní objekt, který je vlastností vlastního typu projektu.:
 
 ```vb
 Dim MyPrj As Project
@@ -58,7 +58,7 @@ objMyObject = MyPrj.Object 'You call .Object to get to special Project
 objMyObject.MySpecialMethodOrProperty
 ```
 
- Následující kód obsahuje seznam všech vlastností v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prostředí **Obecné** možnost **nástroje** nabídky:
+ Následující kód obsahuje seznam všech vlastností v možnosti [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prostředí **Obecné** v nabídce **nástroje** :
 
 ```vb
 dim objDTE
@@ -71,5 +71,5 @@ Next
 
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - <xref:EnvDTE.DTEClass.GetObject%2A>

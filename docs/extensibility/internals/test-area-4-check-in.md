@@ -1,5 +1,5 @@
 ---
-title: 'Testovací oblast 4: Vrátit se změnami | Dokumentace Microsoftu'
+title: 'Testovací oblast 4: vrácení se změnami | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,60 +11,60 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 257dce02614cc562c5a5d9d3756df27365a9f7df
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9144bf3aa677a2478bce81634d22d6446e77626b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331025"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72722524"
 ---
 # <a name="test-area-4-check-in"></a>Testovací oblast 4: Vrácení se změnami
-Tento modul plug-in testu oblast správy zdrojového kódu obsahuje informace o odesílání aktualizované položky k úložišti verzí prostřednictvím **vrátit se změnami** příkazu.
+Tato testovací oblast modulu plug-in zdrojového ovládacího prvku pokrývá odeslání aktualizovaných položek do úložiště verzí prostřednictvím příkazu **vrácení se** změnami.
 
-## <a name="command-menu-access"></a>Přístup do příkazu nabídky
- Následující [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí nabídky cesty se používají v testovacích procesech.
+## <a name="command-menu-access"></a>Přístup k nabídce příkazů
+ V testovacích případech se používají následující [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] cesty nabídky integrovaného vývojového prostředí.
 
 ##### <a name="check-in"></a>Přihlásit se:
- **Soubor**, **správy zdrojového kódu**, **vrátit se změnami**.
+ **Soubor**, **Správa zdrojového kódu**, **vrácení se změnami**.
 
  **Soubor**, **vrátit se změnami**.
 
- Místní nabídka **vrátit se změnami**.
+ Místní nabídka, **vrátit se změnami**
 
-## <a name="common-expected-behavior"></a>Běžné očekávané chování
+## <a name="common-expected-behavior"></a>Obvyklé očekávané chování
 
-- Projekty a soubory přidané do řešení nebo projekt pod správou zdrojového kódu se zobrazí v **vrátit se změnami** dialogové okno a **čekající vrácení se změnami** okna.
+- Projekty a soubory přidané do řešení nebo projektu pod správou zdrojových kódů se zobrazí v dialogovém okně **vrátit** se změnami a v okně **nedokončené vrácení se změnami** .
 
-- Po vrácení se změnami přidané položky se zobrazí ve správě zdrojového kódu.
+- Po vrácení se změnami se přidané položky zobrazí ve správě zdrojového kódu.
 
-- Po vrácení se změnami jsou aktualizované položky správně označené verzí v úložišti.
+- Po vrácení se změnami jsou aktualizované položky ve Storu správně ve verzi.
 
 ## <a name="test-cases"></a>Testovací případy
- Tady jsou konkrétní testovací případy pro testovací oblast vrácení se změnami.
+ Níže jsou uvedené konkrétní testovací případy pro testovací oblast pro vrácení se změnami.
 
-### <a name="case-4a-modified-items"></a>Případu 4a: Změněné položky
- Popisuje použití kontroly v akci aktualizovat soubor pod správou zdrojových kódů, která byla změněna.
+### <a name="case-4a-modified-items"></a>Případ 4a: upravené položky
+ Popisuje použití akce vrácení se změnami k aktualizaci souboru v rámci správy zdrojového kódu, který byl změněn.
 
-|Akce|Testovací kroky|Chcete-li ověřit očekávané výsledky|
+|Akce|Testovací kroky|Očekávané výsledky k ověření|
 |------------|----------------|--------------------------------|
-|Upravte textový soubor, který byl rezervován, vrátit se změnami pouze soubor (**vrátit se změnami** dialogové okno)|1.  Vytvoření nového projektu pomocí textového souboru.<br />2.  Přidáte řešení do správy zdrojového kódu.<br />3.  Přečtěte si a upravte textový soubor.<br />4.  Vrátit se změnami prostřednictvím dialogu vrátit se změnami (**souboru**, **správy zdrojových kódů**, **vrátit se změnami**).|Běžné očekávané chování.|
-|Upravte textový soubor, který byl rezervován, vrátit se změnami pouze soubor (**čekající vrácení se změnami** okna)|1.  Vytvoření nového projektu pomocí textového souboru.<br />2.  Přidáte řešení do správy zdrojového kódu.<br />3.  Přečtěte si a upravte textový soubor.<br />4.  Vrátit se změnami prostřednictvím **čekající vrácení se změnami** okna.|Běžné očekávané chování.|
+|Upravený textový soubor, který je rezervován, pouze soubor se změnami (zaškrtávací políčko se**změnami** )|1. Vytvořte nový projekt s textovým souborem.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. Prohlédněte si a upravte textový soubor.<br />4. Vraťte se změnami pomocí dialogového okna vrátit se změnami (**soubor**, Správa **zdrojového kódu**, **vrátit se změnami**).|Obvyklé očekávané chování.|
+|Upravený textový soubor, který je rezervován, vrátit se změnami pouze do souboru (okno**čeká na vrácení se změnami** )|1. Vytvořte nový projekt s textovým souborem.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. Prohlédněte si a upravte textový soubor.<br />4. Projděte si okno s **nedokončenými změnami** .|Obvyklé očekávané chování.|
 
-### <a name="case-4b-adding-files"></a>Případu 4b: Přidávání souborů
- Při přidání souboru do projektu nebo položky řešení, projekt nebo řešení musí také změnit. Proto nadřazený soubor je také rezervovat a musí být vráceny se změnami do dokončení přidání.
+### <a name="case-4b-adding-files"></a>Případ 4b: Přidání souborů
+ Při přidávání souboru do projektu nebo položky do řešení se musí také změnit projekt nebo řešení. Proto je nadřazený soubor také rezervován a musí být vrácen se změnami, aby bylo možné dokončit sčítání.
 
-|Akce|Testovací kroky|Chcete-li ověřit očekávané výsledky|
+|Akce|Testovací kroky|Očekávané výsledky k ověření|
 |------------|----------------|--------------------------------|
-|Přidání textového souboru a vše se změnami (**vrátit se změnami** dialogové okno)|1.  Vytvořte nový projekt.<br />2.  Přidáte řešení do správy zdrojového kódu.<br />3.  Přidání textového souboru do projektu.<br />4.  Prohlédněte si projekt přijměte, pokud se zobrazí výzva.<br />5.  Vyberte řešení v **Průzkumníka řešení**.<br />6.  Vrátit se změnami z **vrátit se změnami** dialogové okno.|Běžné očekávané chování.|
-|Přidání textového souboru a vše se změnami (**čekající vrácení se změnami** okna)|1.  Vytvořte nový projekt.<br />2.  Přidáte řešení do správy zdrojového kódu.<br />3.  Přidání textového souboru do projektu.<br />4.  Prohlédněte si projekt přijměte, pokud se zobrazí výzva.<br />5.  Vrátit se změnami řešení z **čekající vrácení se změnami** okna.|Běžné očekávané chování|
+|Přidat textový soubor a vrátit se změnami vše (dialogové okno**vrátit se změnami** )|1. Vytvořte nový projekt.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. Přidejte do projektu textový soubor.<br />4. Pokud se zobrazí výzva, přijměte rezervaci projektu.<br />5. Vyberte řešení v **Průzkumník řešení**.<br />6. Vraťte se změnami v dialogovém okně **vrátit** se změnami.|Obvyklé očekávané chování.|
+|Přidat textový soubor a vrátit se změnami vše (okno**čeká na vrácení se změnami** )|1. Vytvořte nový projekt.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. Přidejte do projektu textový soubor.<br />4. Pokud se zobrazí výzva, přijměte rezervaci projektu.<br />5. vrátit se změnami řešení z **nedokončených vrácení se změnami** do okna|Obvyklé očekávané chování|
 
-### <a name="case-4c-adding-projects"></a>Případ 4c: Přidávání projektů
- Při přidání objektu project do řešení, musíte změnit taky řešení. Proto soubor řešení je také rezervovat a musí být vráceny se změnami do dokončení přidání.
+### <a name="case-4c-adding-projects"></a>Případ 4C: Přidání projektů
+ Při přidávání projektu do řešení se musí také změnit řešení. Proto je soubor řešení také rezervován a musí být vrácen se změnami, aby bylo možné dokončit sčítání.
 
-|Akce|Testovací kroky|Chcete-li ověřit očekávané výsledky|
+|Akce|Testovací kroky|Očekávané výsledky k ověření|
 |------------|----------------|--------------------------------|
-|Přidat projekt do prázdné řešení pod správou zdrojových kódů (**vrátit se změnami** dialogové okno)|1.  Vytvořte prázdné řešení.<br />2.  Přidáte řešení do správy zdrojového kódu.<br />3.  Přidáte nový projekt.<br />4.  Prohlédněte si řešení přijměte, pokud se zobrazí výzva.<br />5.  Vrátit se změnami z **vrátit se změnami** dialogové okno.|Běžné očekávané chování.|
-|Přidat projekt do prázdné řešení pod správou zdrojových kódů (**čekající vrácení se změnami** okna)|1.  Vytvořte prázdné řešení.<br />2.  Přidáte řešení do správy zdrojového kódu.<br />3.  Přidáte nový projekt.<br />4.  Prohlédněte si řešení přijměte, pokud se zobrazí výzva.<br />5.  Vrátit se změnami řešení z **čekající vrácení se změnami** okna.|Běžné očekávané chování.|
+|Přidání projektu do prázdného řešení v rámci správy zdrojového kódu (**zaškrtávací políčko vrátit se** změnami)|1. Vytvořte prázdné řešení.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. Přidejte nový projekt.<br />4. Pokud se zobrazí výzva, přijměte rezervaci řešení.<br />5. Vraťte se změnami v dialogovém okně **vrátit** se změnami.|Obvyklé očekávané chování.|
+|Přidání projektu do prázdného řešení v rámci správy zdrojového kódu (okno**čeká na vrácení se změnami** )|1. Vytvořte prázdné řešení.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. Přidejte nový projekt.<br />4. Pokud se zobrazí výzva, přijměte rezervaci řešení.<br />5. vrátit se změnami řešení z **nedokončených vrácení se změnami** do okna|Obvyklé očekávané chování.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Testovací příručka pro moduly plug-in správy zdrojového kódu](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

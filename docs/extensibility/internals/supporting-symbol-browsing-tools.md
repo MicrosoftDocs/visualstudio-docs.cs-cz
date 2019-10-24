@@ -1,5 +1,5 @@
 ---
-title: Podpůrné nástroje procházení symbolů | Dokumentace Microsoftu
+title: Podpůrné nástroje pro procházení symbolů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,37 +18,37 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5e79969c3b4be22a3c9bb01f06297f54b0734ee
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: ca171fa75adda3deef5b941852fc3e6c648c84c6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746010"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72723085"
 ---
 # <a name="supporting-symbol-browsing-tools"></a>Podpůrné nástroje procházení symbolů
-**Prohlížeč objektů**, **zobrazení tříd**, **volání prohlížeče** a **výsledky hledáni symbolu** nástroje poskytují možnosti v sadě Visual Studio procházení symbolů. Tyto nástroje hierarchické stromové zobrazení symbolů a zobrazení vztahů mezi symboly ve stromové struktuře. Symboly mohou představovat obory názvů, objektů, tříd, členů třídy a další prvky jazyka, které jsou obsažené v různých komponent. Součásti zahrnují projektů sady Visual Studio, externí komponenty rozhraní .NET Framework a knihovny typů (.tlb). Další informace najdete v tématu [zobrazení struktury kódu](../../ide/viewing-the-structure-of-code.md).
+Nástroje výsledků hledání symbolů **Prohlížeč objektů**, **zobrazení tříd**, **prohlížeč volání** a **hledání symbolů** poskytují možnosti procházení symbolů v aplikaci Visual Studio. Tyto nástroje zobrazují hierarchické stromové zobrazení symbolů a zobrazují vztahy mezi symboly ve stromové struktuře. Symboly mohou představovat obory názvů, objekty, třídy, členy třídy a další prvky jazyka obsažené v různých součástech. Součástí jsou projekty aplikace Visual Studio, externí .NET Framework komponenty a knihovny typů (. tlb). Další informace naleznete v tématu [zobrazení struktury kódu](../../ide/viewing-the-structure-of-code.md).
 
-## <a name="symbol-browsing-libraries"></a>Procházení symbolů knihovny
- Jako implementátora jazyk můžete rozšířit možnosti procházení symbolů Visual Studio tak, že vytvoříte knihovny, které sledovat symboly v vaše komponenty a k poskytování seznamů symbolů pro objekt správce sady Visual Studio prostřednictvím sady rozhraní. Knihovny je popsán <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2> rozhraní. Objekt správce sady Visual Studio odpovídá na požadavky pro nová data z nástroje procházení symbolů získáním dat z knihoven a uspořádání. Následně naplní nebo aktualizuje nástroje požadovaná data. K získání odkazu na objekt správce sady Visual Studio, <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>, předat <xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager> ID do služby `GetService` metody.
+## <a name="symbol-browsing-libraries"></a>Knihovny procházení symbolů
+ Jako implementátor jazyka můžete roztáhnout možnosti procházení symbolů sady Visual Studio tak, že vytvoříte knihovny, které sledují symboly ve vašich komponentách, a poskytnete seznamy symbolů pro správce objektů sady Visual Studio prostřednictvím sady rozhraní. Knihovna je popsána rozhraním <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2>. Správce objektů sady Visual Studio reaguje na požadavky na nová data z nástrojů pro procházení symbolů tím, že získá data z knihoven a organizuje je. Následně naplní nebo aktualizuje nástroje s požadovanými daty. Chcete-li získat odkaz na správce objektů aplikace Visual Studio <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>, předejte ID služby <xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager> do metody `GetService`.
 
- Každou knihovnu musí zaregistrovat pomocí objektu správce sady Visual Studio, které shromažďuje informace o všech knihoven. Chcete-li zaregistrovat knihovnu, zavolejte <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> metody. V závislosti na tom, který nástroj zahájí požadavek správci objektu sady Visual Studio vyhledá příslušnou knihovnu a vyžádá data. Data se přenáší mezi knihoven a [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] object Manageru v seznamech symboly popsaného <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> rozhraní.
+ Každá knihovna se musí zaregistrovat pomocí Správce objektů sady Visual Studio, který shromažďuje informace o všech knihovnách. Chcete-li zaregistrovat knihovnu, zavolejte metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A>. V závislosti na tom, který nástroj iniciuje požadavek, vyhledá správce objektů sady Visual Studio příslušnou knihovnu a požadavky na data. Mezi knihovnami a správcem objektů [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] se přenáší data v seznamech symbolů popsaných rozhraním <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2>.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Object manager je odpovědná za aktualizaci pravidelně nástroje procházení symbolů tak, aby odrážely nejnovější data obsažená v knihovnách.
+ Správce objektů [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zodpovídá za pravidelnou aktualizaci nástrojů pro procházení symbolů tak, aby odrážela nejaktuálnější data obsažená v knihovnách.
 
- Následující diagram obsahuje příklad klíčové prvky procesu žádosti o/dat serveru exchange mezi knihovnou a správci objektu sady Visual Studio. Rozhraní v diagramu jsou součástí aplikace spravovaného kódu.
+ Následující diagram obsahuje ukázku klíčových prvků procesu požadavků/výměny dat mezi knihovnou a správcem objektů aplikace Visual Studio. Rozhraní v diagramu jsou součástí aplikace spravovaného kódu.
 
- ![Tok dat mezi knihovnou a správci objektů](../../extensibility/internals/media/callbrowserdiagram.gif "CallBrowserDiagram")
+ ![Tok dat mezi knihovnou a správcem objektů](../../extensibility/internals/media/callbrowserdiagram.gif "CallBrowserDiagram")
 
- Seznam symbolů poskytovat správci objektu sady Visual Studio, musíte se nejprve zaregistrovat knihovny pomocí Správce objektů sady Visual Studio pomocí volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> metoda. Po registraci knihovny požádá o objekt správce sady Visual Studio určité informace o možnostech knihovny. Například požadavky příznaky knihovny a podporované kategorie voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetLibFlags2%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetSupportedCategoryFields2%2A> metody. V určitém okamžiku v případě jedním z nástrojů vyžaduje data z této knihovny, správce objektů požaduje nejvyšší úrovně seznam symbolů voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetList2%2A> metody. V odpovědi, knihovně vyrábí seznam symbolů a zpřístupní ho do objektu správce sady Visual Studio prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> rozhraní. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Objekt správce určuje, kolik položek jsou v seznamu voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetItemCount%2A> metody. Všechny tyto požadavky se vztahují na danou položku v seznamu a zadejte číslo index položky v každém požadavku. Objekt správce sady Visual Studio pokračuje ke shromažďování informací na typ, dostupnost a další vlastnosti položky voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetCategoryField2%2A> metody.
+ Chcete-li poskytnout seznam symbolů pro správce objektů sady Visual Studio, musíte nejprve zaregistrovat knihovnu pomocí Správce objektů sady Visual Studio voláním metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A>. Po registraci knihovny aplikace Visual Studio Object Manager požaduje určité informace o schopnostech knihovny. Například požaduje příznaky knihovny a podporované kategorie voláním metod <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetLibFlags2%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetSupportedCategoryFields2%2A>. V určitém okamžiku, když jeden z nástrojů požaduje data z této knihovny, správce objektů požaduje seznam symbolů nejvyšší úrovně voláním metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetList2%2A>. V reakci knihovna vyrábí seznam symbolů a zpřístupňuje ji správci objektů aplikace Visual Studio prostřednictvím rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2>. Správce objektů [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] určuje, kolik položek se nachází v seznamu voláním metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetItemCount%2A>. Všechny následující požadavky se vztahují k dané položce v seznamu a poskytují číslo indexu položky v každé žádosti. Správce objektů sady Visual Studio pokračuje ve shromažďování informací o typu, přístupnosti a dalších vlastnostech položky voláním metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetCategoryField2%2A>.
 
- Určuje název položky voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetTextWithOwnership%2A> – metoda a požadavky na ikonu informace pomocí volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetDisplayData%2A> metoda. Ikona se zobrazí nalevo od názvu položky a znázorňuje typ položky, dostupnost a dalších vlastností.
+ Určuje název položky voláním metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetTextWithOwnership%2A> a požádá o informace ikony voláním metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetDisplayData%2A>. Ikona se zobrazí vlevo od názvu položky a znázorňuje typ položky, přístupnost a další vlastnosti.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Objekt Správce volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetExpandable3%2A> metodu pro určení, zda daný seznam položek je rozšiřitelná a obsahuje podřízené položky. Pokud uživatelského rozhraní odešle žádost o rozšíření elementu, objekt správce požaduje podřízený seznam symbolů voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetList2%2A> metody. Proces pokračuje s různé části stromu vytváří na vyžádání.
+ Správce [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] objektů volá metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetExpandable3%2A> a určí, zda je daná položka seznamu rozšiřitelná a má podřízené položky. Pokud uživatelské rozhraní odešle požadavek na rozbalení prvku, správce objektů vyžádá podřízený seznam symbolů voláním metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetList2%2A>. Proces pokračuje s různými částmi stromu sestavenými na vyžádání.
 
 > [!NOTE]
-> Pro implementaci zprostředkovatele symbol nativní kód, použijte <xref:Microsoft.VisualStudio.Shell.Interop.IVsLibrary2> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectList2> rozhraní.
+> Chcete-li implementovat poskytovatele nativních symbolů kódu, použijte rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsLibrary2> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectList2>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Postupy: Registrace knihovny pomocí správce objektů](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)
 - [Postupy: Zveřejnění seznamů symbolů poskytovaných knihovnou správci objektů](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)
 - [Postupy: Identifikace symbolů v knihovně](../../extensibility/internals/how-to-identify-symbols-in-a-library.md)

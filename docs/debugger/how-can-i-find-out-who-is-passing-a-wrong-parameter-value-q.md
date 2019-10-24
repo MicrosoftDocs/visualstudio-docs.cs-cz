@@ -1,5 +1,5 @@
 ---
-title: Zjistěte, kdo předává nesprávnou hodnotu parametru | Dokumentace Microsoftu
+title: Zjistěte, kdo předává nesprávnou hodnotu parametru | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,36 +22,36 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 548851a4e5811864e60d3a14368d6380f14f9e7e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 42884cd6498f00cfe2df2d0396ff9ea6b03c2f98
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894876"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72734229"
 ---
 # <a name="how-can-i-find-out-who-is-passing-a-wrong-parameter-value"></a>Jak zjistím, kdo předává nesprávnou hodnotu parametru?
 ## <a name="problem-description"></a>Popis problému
- Chybná hodnota parametru je předána jedné z mých funkcí. Tato funkce je volána odkudkoliv. Jak zjistím, co ho nesprávnou hodnotu předává?
+ Nesprávná hodnota parametru se předává do jedné z mých funkcí. Tato funkce se volá z celého místa. Jak zjistím, co znamená chybnou hodnotu?
 
 ## <a name="solution"></a>Řešení
 
-#### <a name="to-resolve-this-problem"></a>Chcete-li vyřešit tento problém
+#### <a name="to-resolve-this-problem"></a>Řešení tohoto problému
 
-1. Nastavte zarážku umístění na začátek funkce.
+1. Nastavte zarážku umístění na začátku funkce.
 
-2. Klikněte pravým tlačítkem myši zarážka a vyberte **podmínku**.
+2. Klikněte pravým tlačítkem na zarážku a vyberte **Podmínka**.
 
-3. V **podmínka zarážky** dialogové okno, klikněte na **podmínku** zaškrtávací políčko. Zobrazit [Advanced zarážky](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression).
+3. V dialogovém okně **Podmínka zarážky** klikněte na zaškrtávací políčko **Podmínka** . Viz [Pokročilé zarážky](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression).
 
-4. Zadejte výraz, jako například `Var==3`, do textového pole, ve kterém `Var` je název parametru, který obsahuje chybnou hodnotu, a `3` je předaná chybná hodnota k němu.
+4. Do textového pole zadejte výraz, například `Var==3`, kde `Var` je název parametru, který obsahuje chybnou hodnotu a `3` je předána chybná hodnota.
 
-5. Vyberte **true** přepínač a klikněte na tlačítko **OK** tlačítko.
+5. Vyberte přepínač **má hodnotu true** a klikněte na tlačítko **OK** .
 
-6. Nyní spusťte program znovu. Zarážka způsobí zastavení na začátku funkce programu při `Var` parametr má hodnotu `3`.
+6. Nyní spusťte program znovu. Zarážka způsobí zastavení programu na začátku funkce, když má parametr `Var` hodnotu `3`.
 
-7. Použití okna zásobník volání najděte volající funkci a přejděte k jejímu zdrojovému kódu. Další informace najdete v tématu [jak: Použijte okno zásobníku volání](../debugger/how-to-use-the-call-stack-window.md).
+7. Použijte okno zásobník volání k vyhledání volající funkce a přejděte ke svému zdrojovému kódu. Další informace naleznete v tématu [Postupy: použití okna zásobník volání](../debugger/how-to-use-the-call-stack-window.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Nejčastější dotazy k ladění nativního kódu](../debugger/debugging-native-code-faqs.md)
 - [Zarážky](https://msdn.microsoft.com/library/fe4eedc1-71aa-4928-962f-0912c334d583)
 - [Ladění nativního kódu](../debugger/debugging-native-code.md)

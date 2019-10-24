@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ddfc17d4f9bcb1f4f2585aa91319f06be6936e6f
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: e92e27b123102cb45069c47ebf9de3971039801d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72431469"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738137"
 ---
 # <a name="debugging-preparation-console-projects-c-c-visual-basic-f"></a>Příprava ladění: projekty konzoly (C#, C++, Visual Basic, F#)
 
@@ -57,7 +57,7 @@ Stejně jako všechny vlastnosti projektu jsou tyto argumenty trvalé mezi relac
 
   Při spuštění konzolové aplikace ze sady Visual Studio se okno **konzoly** někdy zobrazuje v okně sady Visual Studio. Pokud se pokusíte spustit konzolovou aplikaci ze sady Visual Studio a nic se nestane, zkuste přesunout okno aplikace Visual Studio.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění nativního kódu](../debugger/debugging-native-code.md)
 - [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)
 - [Příprava na ladění C++ projektů](../debugger/debugging-preparation-visual-cpp-project-types.md)

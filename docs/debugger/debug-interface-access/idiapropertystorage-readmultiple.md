@@ -1,5 +1,5 @@
 ---
-title: IDiaPropertyStorage::ReadMultiple | Dokumentace Microsoftu
+title: 'IDiaPropertyStorage:: ReadMultiple | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ec66de4feea1a59ca1ef71f48bae49ed5ac2232
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9cd1e419e1d08120274fc627a672eb52331ca50f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839534"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742875"
 ---
 # <a name="idiapropertystoragereadmultiple"></a>IDiaPropertyStorage::ReadMultiple
-Přečte určený vlastností z aktuální sadu vlastností.
+Přečte zadané vlastnosti z aktuální sady vlastností.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,21 +35,21 @@ HRESULT ReadMultiple( 
 #### <a name="parameters"></a>Parametry
  `cpspec`
 
-[in] Počet podle vlastnosti `rgpspec` pole. Pokud je nula, metoda vrátí žádné vlastnosti, ale vrátí `S_OK` jako kód úspěchu.
+pro Počet vlastností určených v poli `rgpspec`. Pokud je nula, metoda nevrátí žádné vlastnosti, ale vrátí `S_OK` jako kód úspěšnosti.
 
  `rgpspec`
 
-[in] Pole vlastnosti pro čtení. Vlastnosti lze zadat ID vlastnosti nebo názvu volitelný řetězec. Není potřeba zadávat vlastnosti v libovolném pořadí v poli. Pole může obsahovat duplicitní vlastnosti, což vede k duplicitní vlastnost hodnoty na návratovou hodnotu pro jednoduché vlastnosti. Non jednoduché vlastnosti by měla vrátit odepřen přístup při pokusu otevřít znovu. Pole může obsahovat kombinaci ID vlastnosti a řetězec ID. Toto pole musí mít minimálně `cpspec` počet hodnot vlastností.
+pro Pole vlastností, které mají být čteny. Vlastnosti lze zadat buď ID vlastnosti, nebo nepovinným názvem řetězce. V určitém pořadí v poli není nutné zadávat vlastnosti. Pole může obsahovat duplicitní vlastnosti. výsledkem jsou duplicitní hodnoty vlastností při návratu pro jednoduché vlastnosti. Nejednoduché vlastnosti by měly vracet odepření přístupu při pokusu o jejich otevření podruhé. Pole může obsahovat kombinaci ID vlastností a ID řetězců. V tomto poli musí být minimálně `cpspec` počet hodnot vlastností.
 
  `rgvar`
 
-[out v] Pole `PROPVARIANT` struktury (v oboru názvů sestavení Microsoft.VisualStudio.OLE.Interop) Chcete-li vyplní hodnoty pro každou vlastnost. Pole musí být dlouhý aspoň `cpspec` prvky velikosti. Volající není potřeba inicializovat hodnoty v poli.
+[in, out] Pole struktur `PROPVARIANT` (v oboru názvů Microsoft. VisualStudio. OLE. Interop), které se má vyplnit hodnotami pro každou vlastnost. Velikost pole musí být alespoň `cpspec` prvky. Volající nemusí v poli inicializovat hodnoty.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud jeden nebo více vlastností nebyl nalezen. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud nebyla nalezena jedna nebo více vlastností. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Pokud nebyla nalezena vlastnost, odpovídající položku v `rgvar` obsahuje pole `VARIANT` s typem `VT_EMPTY`.
+ Pokud vlastnost nebyla nalezena, odpovídající položka v `rgvar`ovém poli obsahuje `VARIANT` typu `VT_EMPTY`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

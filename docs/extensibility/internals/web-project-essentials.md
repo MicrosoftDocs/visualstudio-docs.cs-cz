@@ -1,5 +1,5 @@
 ---
-title: Web Essentials projektu | Dokumentace Microsoftu
+title: Základy webového projektu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,52 +10,52 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3ddc8bcef8612459ce9816e79250ba8b93194292
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5f3d3069d8cc539deeda7c9d44f8d1cbf27e8821
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323313"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72721663"
 ---
 # <a name="web-project-essentials"></a>Základy webového projektu
-Webové projekty vytvářet webové aplikace. Webový projekt můžete použít k vytvoření webové aplikace, která obsahuje inteligentní webové stránky. Inteligentní webová stránka obsahuje kód na straně serveru, který vykreslí webovou stránku na vyžádání.
+Webové projekty vytvářejí webové aplikace. Webový projekt můžete použít k vytvoření webové aplikace, která má inteligentní webové stránky. Inteligentní webová stránka obsahuje kód na straně serveru, který vykresluje webovou stránku na vyžádání.
 
- Pomocí tradičních programovacích jazycích, jako například [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] nebo [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)], můžete vytvářet inteligentní webové stránky ke shromažďování a zpracování informací od uživatele, ukládat v databázi a tak dále.
+ Pomocí tradičních programovacích jazyků, jako je [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] nebo [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)], můžete vytvořit inteligentní webové stránky, které budou shromažďovat a zpracovávat informace od uživatele, ukládat je do databáze a tak dále.
 
-- Model použití modelu code-behind přidruží webové stránky, které mají soubor .aspx rozšíření nebo ASMX závislé zdrojové soubory. Například hello.aspx pravděpodobně hello.aspx.cs závislé zdrojový kód souboru.
+- Model kódu na pozadí přidruží závislé soubory zdrojového kódu k webovým stránkám, které mají příponu. aspx nebo. asmx. Hello. aspx může mít například závislé soubory zdrojového kódu hello.aspx.cs.
 
-- Kód na straně serveru související s inteligentní webové stránky je zkompilován do spustitelného souboru, který je umístěný ve složce/Bin webové stránky.
+- Kód na straně serveru spojený s inteligentní webovou stránkou je zkompilován do spustitelného souboru, který je umístěn ve složce/Bin webu.
 
-- Soubory další zdrojového kódu, jako je například tříd pomocných rutin, které nejsou spojeny s konkrétní webovou stránku, jsou umístěny ve složce /App_Code webu.
+- Další soubory zdrojového kódu, jako jsou pomocné třídy, které nejsou přidruženy k určité webové stránce, jsou umístěny ve složce/App_Code webu.
 
-  - Projekt webu (soubor WSP) generuje jeden spustitelný soubor pro každé inteligentní webové stránky. Další spustitelné soubory jsou generovány z jakékoli soubory zdrojového kódu ve složce /App_Code.
+  - Projekt webu (WSP) generuje jeden spustitelný soubor pro každou inteligentní webovou stránku. Další spustitelné soubory jsou vygenerovány ze všech souborů zdrojového kódu ve složce/App_Code.
 
-  - Projekt webové aplikace (WAP) vytvoří jeden spustitelný soubor, který kombinuje kód pro všechny inteligentní webové stránky, jakož i všechny zdrojové soubory ve složce /App_Code.
+  - Projekt webové aplikace (WAP) vytvoří jeden spustitelný soubor, který kombinuje kód pro všechny inteligentní webové stránky a všechny zdrojové soubory ve složce/App_Code.
 
-- Soubor řešení pro webový projekt nachází odděleně od samotného webového serveru. Ve výchozím nastavení, řešení soubory jsou umístěny v \Documents and nastavení\\*Váš_účet*\My dokumenty\\ *\<sady Visual Studio ### >* \Projects\\ *YourWebSite*.
+- Soubor řešení pro webový projekt je umístěn odděleně od samotného webu. Ve výchozím nastavení se soubory řešení nacházejí v umístění \Documents and Settings \\*YourAccount*\My documents \\ *\<Visual Studio # # # # >* \Projects \\*YourWebSite*.
 
   > [!NOTE]
-  > Pokud chcete zachovat soubor řešení s webovým serverem, stačí přesuňte ho tam a znovu ho otevřete.
+  > Pokud chcete soubor řešení zachovat na webu, stačí ho jednoduše přesunout a znovu otevřít.
 
-- Pokud otevřete web, který nemá žádný soubor řešení v sadě Visual Studio nový soubor řešení není automaticky vygenerován pro něj.
+- Pokud otevřete web, který neobsahuje žádný soubor řešení v aplikaci Visual Studio, automaticky se vygeneruje nový soubor řešení.
 
-- Webové projekty mít žádné soubory projektu. Informace o projektu je uložen v souboru řešení, v souboru web.config a jinde.
+- Webové projekty nemají žádné soubory projektu. Informace o projektu jsou uloženy v souboru řešení, v souboru Web. config a jinde.
 
-- Přidání globálních vlastností do webového projektu automaticky vytvoří soubor úložiště ve složce webového projektu řešení.
+- Přidáním globálních vlastností do webového projektu se automaticky vytvoří soubor úložiště ve složce řešení webového projektu.
 
-- Inteligentní webové stránky můžou být spojené s programovací jazyk na straně serveru pomocí direktivě stránky nebo \<skriptu runat = "server" > značky.
+- Inteligentní webová stránka může být přidružena k programovacímu jazyku na straně serveru pomocí direktivy stránky nebo značky \<script runat = "Server" >.
 
-- Kromě toho webové stránky můžete mít libovolný počet bloků skriptování na straně klienta napsané v libovolném jazyce skriptování.
+- Kromě toho může mít webová stránka libovolný počet skriptovacích bloků na straně klienta napsaných v jakémkoli skriptovacím jazyce.
 
-- Systém projektu webu je implementováno přidávání šablon projektů a položek a registraci [!INCLUDE[vwprvw](../../extensibility/internals/includes/vwprvw_md.md)] projektu.
+- Systém projektu webu je implementován přidáním šablon projektů a položek a registrací do projektu [!INCLUDE[vwprvw](../../extensibility/internals/includes/vwprvw_md.md)].
 
-- Systém WAP se implementuje jako podtyp projektu, také nazývané charakterem projektu. [!INCLUDE[vwprvw](../../extensibility/internals/includes/vwprvw_md.md)] Projektu je flavored podle podtyp WAP k vytvoření systému WAP. Další informace o podtypů projektů, naleznete v tématu [podtypů projektů](../../extensibility/internals/project-subtypes.md).
+- Systém WAP je implementován jako podtyp projektu, označovaný také jako charakter projektu. @No__t_0 projekt je určen podtypem WAP pro vytvoření systému WAP. Další informace o podtypůch projektů naleznete v tématu [podtypy projektu](../../extensibility/internals/project-subtypes.md).
 
-- Inteligentní webové stránky kombinuje HTML s programovací jazyk na straně serveru. Jazyk na straně serveru se nazývá omezením jazyka. Pro podporu omezením jazyka, musí implementovat systém webového projektu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguage> řady rozhraní.
+- Inteligentní webová stránka kombinuje kód HTML s programovacím jazykem na straně serveru. Jazyk na straně serveru se nazývá obsažený jazyk. Pro podporu obsaženého jazyka musí systém webového projektu implementovat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguage> rodinu rozhraní.
 
-  - Pro podporu jazyka obsažené v editoru, musíte odložit služba jazyka HTML zobrazení kódu s omezením jazyka službě omezením jazyka.
+  - Pro podporu obsažených jazyků v editoru musí služba jazyka HTML odložit zobrazení obsaženého kódu jazyka do obsažené jazykové služby.
 
-  - Označování chyb (červená squigglies) by měl vždycky vytvořit v primární vyrovnávací paměť editoru kódu.
+  - Chybové značky (červené vlnovky) by se měly vždy vytvořit v primární vyrovnávací paměti editoru kódu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Webové projekty](../../extensibility/internals/web-projects.md)

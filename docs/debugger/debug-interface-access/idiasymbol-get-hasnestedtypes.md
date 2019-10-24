@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_hasNestedTypes | Microsoft Docs
+title: 'IDiaSymbol:: get_hasNestedTypes | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61073f5630e5da7edeb761774e4ba8b4c341a8cd
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 315e009e264523b6f64deefa4a1b0367e262d034
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64796571"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740482"
 ---
-# <a name="idiasymbolgethasnestedtypes"></a>IDiaSymbol::get_hasNestedTypes
-Získá příznak, který určuje, jestli má uživatelský datový typ vnořené definice typu.
+# <a name="idiasymbolget_hasnestedtypes"></a>IDiaSymbol::get_hasNestedTypes
+Načte příznak, který určuje, zda uživatelsky definovaný datový typ obsahuje definice vnořeného typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,20 +33,20 @@ HRESULT get_hasNestedTypes ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` Pokud uživatelský datový typ má vnořené definice typu; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud uživatelsky definovaný datový typ obsahuje definice vnořeného typu; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|V7.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

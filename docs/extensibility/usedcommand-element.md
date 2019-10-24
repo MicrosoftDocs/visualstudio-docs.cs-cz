@@ -1,5 +1,5 @@
 ---
-title: Usedcommand – Element | Dokumentace Microsoftu
+title: Element UsedCommand | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +11,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 36dbfa484b69832c67c7a1dd28f217706e1a91a6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 44ea8f27cafb166968f66c53dc68398526e0aa5d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316307"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72718776"
 ---
 # <a name="usedcommand-element"></a>UsedCommand – element
-Umožňuje pro přístup k příkazu, který je definován v jiném souboru .vsct VSPackage. Například, pokud vaše VSPackage používá standardní **kopírování** příkaz, který je definovaný [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] prostředí, můžete přidat příkaz nabídky nebo panelu nástrojů bez znova implementovány.
+Umožňuje VSPackage získat přístup k příkazu, který je definován v jiném souboru. vsct. Pokud například vaše VSPackage používá příkaz standardního **kopírování** , který je definován [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Shell, můžete příkaz Přidat do nabídky nebo panelu nástrojů, aniž byste ho znovu implementovali.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,24 +34,24 @@ Umožňuje pro přístup k příkazu, který je definován v jiném souboru .vsc
 
 |Atribut|Popis|
 |---------------|-----------------|
-|identifikátor GUID|Povinný parametr. Identifikátor GUID, které odpovídá páru ID identifikátoru GUID identifikující příkazu.|
-|id|Povinný parametr. ID, které odpovídá páru ID identifikátoru GUID identifikující příkazu.|
+|Hlavních|Požadováno. Identifikátor GUID páru identifikátorů GUID, který identifikuje příkaz|
+|id|Požadováno. ID páru identifikátorů GUID, který identifikuje příkaz|
 |Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené elementy
 
 |Prvek|Popis|
 |-------------|-----------------|
-|Žádný||
+|Žádné||
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[UsedCommands – element](../extensibility/usedcommands-element.md)|Seskupí usedcommand – elementy a ostatní usedcommands – seskupení.|
+|[UsedCommands – element](../extensibility/usedcommands-element.md)|Seskupí prvky UsedCommand a další skupiny UsedCommands.|
 
 ## <a name="remarks"></a>Poznámky
- Přidáním příkazu, který bude `<UsedCommands>` informuje VSPackage elementu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] prostředí, že sady VSPackage vyžaduje, aby příkaz. Měli byste přidat `<UsedCommand>` – element pro kterýkoli příkaz vašeho balíčku vyžaduje, aby nemusí obsahovat všechny verze a konfigurace sady Visual Studio. Například pokud váš balíček volá příkaz, který je specifický pro aplikaci Visual C++, příkaz nebude dostupné uživatelům aplikace Visual Web Developer nezahrnete `<UsedCommand>` – element pro příkaz.
+ Přidáním příkazu do prvku `<UsedCommands>`, VSPackage informuje [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] prostředí, které VSPackage vyžaduje příkaz. Měli byste přidat `<UsedCommand>` element pro všechny příkazy, které váš balíček vyžaduje, aby se nezahrnuly do všech verzí a konfigurací sady Visual Studio. Například pokud váš balíček volá příkaz, který je specifický pro vizuál C++, příkaz nebude dostupný uživatelům aplikace Visual Web Developer, Pokud nezahrnete `<UsedCommand>` element pro příkaz.
 
 ## <a name="example"></a>Příklad
 
@@ -63,6 +63,6 @@ Umožňuje pro přístup k příkazu, který je definován v jiném souboru .vsc
 </UsedCommands>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [UsedCommands – element](../extensibility/usedcommands-element.md)
 - [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

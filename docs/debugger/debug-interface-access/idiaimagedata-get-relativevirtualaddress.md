@@ -1,5 +1,5 @@
 ---
-title: IDiaImageData::get_relativeVirtualAddress | Microsoft Docs
+title: 'IDiaImageData:: get_relativeVirtualAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c6a0ff03784df581fc2f6c57b51b896096d97bba
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bfc7a808da6bb11907fc239f4b320e4dd93a2d19
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830211"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743431"
 ---
-# <a name="idiaimagedatagetrelativevirtualaddress"></a>IDiaImageData::get_relativeVirtualAddress
-Získá umístění ve virtuální paměti modulu vzhledem k aplikaci.
+# <a name="idiaimagedataget_relativevirtualaddress"></a>IDiaImageData::get_relativeVirtualAddress
+Načte umístění ve virtuální paměti modulu vzhledem k aplikaci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_relativeVirtualAddress ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí posunutí relativní virtuální paměti modulu.
+mimo Vrátí relativní posun virtuální paměti modulu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)

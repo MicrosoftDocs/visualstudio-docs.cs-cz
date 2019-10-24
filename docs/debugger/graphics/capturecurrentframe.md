@@ -1,5 +1,5 @@
 ---
-title: CaptureCurrentFrame | Dokumentace Microsoftu
+title: CaptureCurrentFrame | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 4509311d-6fe2-4b65-9b4a-ff0522585d6a
@@ -8,15 +8,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ec67013b41a5ec8876866044355534c42bfe2ee0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b9967d776845088e707035c7b1c56855ac80af82
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62848705"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736139"
 ---
 # <a name="capturecurrentframe"></a>CaptureCurrentFrame
-Zaznamená zbytek aktuálního snímku do souboru protokolu grafiky.
+Zachycuje zbytek aktuálního rámce do souboru protokolu grafiky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,10 +25,10 @@ void CaptureCurrentFrame();
 ```
 
 ## <a name="remarks"></a>Poznámky
- Pokud právě probíhá jiné sběrného – například zachycení, kterou zahájil `BeginCapture` funkce – zachycení je dokončena a zaznamenána do protokolu grafiky jako odlišné rámce. Okamžitě diagnostiky grafiky později, začne zachytávání zbytek aktuální rámec, která je také zaznamenána jako odlišné rámce. Konec aktuálního snímku je označen volání k dispozici.
+ Pokud v současné době probíhá jiné zachycení – například zachytávání, které bylo spuštěno funkcí `BeginCapture` – potom toto zachycení je dokončeno a zaznamenáno do protokolu grafiky jako samostatný rámec. Ihned poté Diagnostika grafiky zahájí zachycení zbývajícího aktuálního rámce, který je také zaznamenán jako samostatný rámec. Konec aktuálního rámce je označen voláním k dispozici.
 
- K zachycení snímku, musíte připravit aplikaci tak, aby zachycení a zaznamenání informací grafiky – to znamená, musí zavoláte [Init](init.md) prostřednictvím instance `VsgDbg` třídy před voláním `CaptureCurrentFrame`.
+ Chcete-li zachytit snímek, je nutné připravit aplikaci pro zachycení a záznam informací o grafice – to znamená, že před voláním `CaptureCurrentFrame` je nutné volat metodu [init](init.md) prostřednictvím instance třídy `VsgDbg`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Init](init.md)
 - [BeginCapture](begincapture.md)

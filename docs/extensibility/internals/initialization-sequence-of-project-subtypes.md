@@ -1,5 +1,5 @@
 ---
-title: Inicializační sekvence podtypů projektů | Dokumentace Microsoftu
+title: Inicializační sekvence podtypů projektů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,42 +10,42 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f8b256e25bc9a63093d14eab50d7628c76558b9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 678f704c73a39cdf2130d36fcfb1a74925dd89d1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349843"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72726880"
 ---
 # <a name="initialization-sequence-of-project-subtypes"></a>Inicializační sekvence podtypů projektů
-Prostředí vytvoří projekt zavoláním implementace objektu factory základního projektu z <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>. Konstrukce podtyp projektu začne, když prostředí určuje, zda seznam identifikátor GUID typu projektu pro příponu souboru projektu není prázdný. Přípona souboru projektu a projekt GUID určete, jestli má projekt [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] nebo [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] typ projektu. Například rozšíření .vbproj a {F184B08F-C81C-45F6-A57F-5ABD9991F28F} identifikovat [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] projektu.
+Prostředí vytvoří projekt voláním základní implementace výroby projektu <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>. Konstrukce podtypu projektu začíná, když prostředí určí, že seznam identifikátorů GUID typu projektu pro rozšíření souboru projektu není prázdný. Přípona souboru projektu a GUID projektu určují, zda se jedná o typ projektu [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] nebo [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]. Například rozšíření. vbproj a {F184B08F-C81C-45F6-A57F-5ABD9991F28F} identifikují projekt [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)].
 
-## <a name="environments-initialization-of-project-subtypes"></a>Inicializace prostředí podtypů projektů
- Následující postup podrobně popisuje pořadí inicializace pro projekt systému agregované podle více podtypů projektů.
+## <a name="environments-initialization-of-project-subtypes"></a>Inicializace podtypů projektu v prostředí
+ Následující postup podrobně popisuje sekvenci inicializace pro systém projektu agregovaný více podtypy projektu.
 
-1. Prostředí volá základní projekt <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>, a zatímco projektu analyzuje svůj soubor projektu zjistí, že typ agregace projektu seznamu identifikátorů GUID není `null`. Projekt navrátí přímé vytváření svůj projekt.
+1. Prostředí volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A> základního projektu a zatímco projekt analyzuje svůj soubor projektu, zjistí, že seznam identifikátorů GUID typu agregace projektu není `null`. Projekt nepokračuje přímo v vytváření projektu.
 
-2. Volání projektu `QueryService` na <xref:Microsoft.VisualStudio.Shell.Interop.SVsCreateAggregateProject> služby k vytvoření podtyp projektu pomocí prostředí provádění <xref:Microsoft.VisualStudio.Shell.Interop.IVsCreateAggregateProject.CreateAggregateProject%2A> metody. V rámci této metody prostředí volá rekurzivní funkce do vaší implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProjectFactory.PreCreateForOuter%2A>, <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.SetInnerProject%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.InitializeForOuter%2A> metod během jeho je procházení seznamu projektu zadejte identifikátory GUID, počínaje podtyp nejkrajnější projektu.
+2. Projekt volá `QueryService` ve službě <xref:Microsoft.VisualStudio.Shell.Interop.SVsCreateAggregateProject> k vytvoření podtypu projektu pomocí implementace metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsCreateAggregateProject.CreateAggregateProject%2A> prostředí. V rámci této metody prostředí provádí rekurzivní volání funkcí do vašich implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProjectFactory.PreCreateForOuter%2A>, <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.SetInnerProject%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.InitializeForOuter%2A> metody při procházení seznamu identifikátorů GUID typu projektu, počínaje podtypem vnějšího projektu.
 
-     Následující části najdete postup inicializace.
+     Následující podrobnosti popisují kroky inicializace.
 
-    1. Prostředí provádění <xref:Microsoft.VisualStudio.Shell.Interop.IVsCreateAggregateProject.CreateAggregateProject%2A> volání metod `HrCreateInnerProj` metody s deklarací následující funkce:
+    1. Implementace metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsCreateAggregateProject.CreateAggregateProject%2A> v prostředí volá metodu `HrCreateInnerProj` s následující deklarací funkce:
 
-         \<CodeContentPlaceHolder>0</CodeContentPlaceHolder>
+         \<CodeContentPlaceHolder > 0 </CodeContentPlaceHolder>
 
-         Když tato funkce je volána poprvé, to znamená, pro podtyp projektu nejkrajnější parametry `pOuter` a `pOwner` předaný jako `null` a funkce nastaví podtyp projektu nejkrajnější `IUnknown` k `pOuter`.
+         Při prvním volání této funkce, tj. pro podtyp vnějšího projektu, jsou parametry `pOuter` a `pOwner` předány jako `null` a funkce nastaví `IUnknown` podtypu projektu na hodnotu `pOuter`.
 
-    2. Vedle prostředí volá `HrCreateInnerProj` funkce druhého typu projektu GUID v seznamu. Tento identifikátor GUID odpovídá druhý vnitřní projektu podtyp krokování směrem k základního projektu postupně agregace.
+    2. V dalším prostředí volá `HrCreateInnerProj` Function s druhým typem GUID typu projektu v seznamu. Tento identifikátor GUID odpovídá druhému krokování vnějšího typu projektu v rámci směrem k základnímu projektu v agregační sekvenci.
 
-    3. `pOuter` Teď přejdete `IUnknown` podtypu nejkrajnější projektu a `HrCreateInnerProj` volá vaši implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProjectFactory.PreCreateForOuter%2A> za nímž následuje volání implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.SetInnerProject%2A>. V <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProjectFactory.PreCreateForOuter%2A> metodu předáním řízení `IUnknown` podtypu nejkrajnější projektu `pOuter`. Vlastněné projektu (vnitřní projektu podtyp) potřebuje k vytvoření jeho agregační projektu objekt. V <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.SetInnerProject%2A> můžete předat ukazatel na implementaci metody `IUnknown` vnitřní projektu, který je agregaci. Tyto dvě metody vytvoření agregace objektu, a vaše implementace muset postupovat podle modelu COM agregace pravidla pro zajištění, že podtyp projektu nekončí nahoru obsahující počet odkazů na sebe sama.
+    3. @No__t_0 nyní odkazuje na `IUnknown` vnějšího typu projektu a `HrCreateInnerProj` volá vaši implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProjectFactory.PreCreateForOuter%2A> následovanou voláním implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.SetInnerProject%2A>. V <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProjectFactory.PreCreateForOuter%2A> metoda předáváte `IUnknown` podtypu vnějšího projektu `pOuter`. Vlastněný projekt (podtyp vnitřního projektu) musí vytvořit svůj agregovaný objekt projektu zde. V implementaci metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.SetInnerProject%2A> předáte ukazatel na `IUnknown` vnitřního projektu, který je agregován. Tyto dvě metody vytvoří agregační objekt a vaše implementace musí dodržovat pravidla agregace modelu COM, aby se zajistilo, že podtyp projektu neukončí podíl počtu odkazů sám na sebe.
 
-    4. `HrCreateInnerProj` volá vaši implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProjectFactory.PreCreateForOuter%2A>. V této metodě podtyp projektu nemá svoji inicializaci. Můžete například zaregistrovat řešení události v <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.InitializeForOuter%2A>.
+    4. `HrCreateInnerProj` volá vaši implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProjectFactory.PreCreateForOuter%2A>. V této metodě je dílčí typ projektu svou inicializační prací. Můžete například zaregistrovat události řešení v <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.InitializeForOuter%2A>.
 
-    5. `HrCreateInnerProj` rekurzivně je volána, dokud nebude dosaženo poslední GUID (základní projekt) v seznamu. Pro každou z těchto volání kroky, až d, c se opakují. `pOuter` odkazuje na podtyp projektu nejkrajnější `IUnknown` na jednotlivých úrovních agregace.
+    5. `HrCreateInnerProj` se volá rekurzivně, dokud se nedosáhne posledního GUID (základní projekt) v seznamu. Pro každé z těchto volání se kroky, c až d, opakují. `pOuter` odkazuje na vnější podtyp projektu `IUnknown` pro každou úroveň agregace.
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu je podrobně popsán programový proces v reprezentaci přibližné <xref:Microsoft.VisualStudio.Shell.Interop.IVsCreateAggregateProject.CreateAggregateProject%2A> metody, jak je implementované prostředí. Kód je uvedené jenom jako příklad; není určena ke kompilaci, a všechny kontroly chyb byl odebrán nejasnostem.
+Následující příklad podrobně popisuje programový proces v přibližné reprezentaci metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsCreateAggregateProject.CreateAggregateProject%2A>, jak je implementováno v prostředí. Kód je pouze příkladem; není určeno k zkompilování a veškerá kontrola chyb byla odebrána pro přehlednost.
 
 ```cpp
 HRESULT CreateAggregateProject
@@ -131,7 +131,7 @@ HRESULT HrCreateInnerProj
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - <xref:Microsoft.VisualStudio.Shell.Flavor>
 - [Podtypy projektů](../../extensibility/internals/project-subtypes.md)

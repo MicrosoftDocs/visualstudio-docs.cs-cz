@@ -1,5 +1,5 @@
 ---
-title: Idiasourcefile::get_compilands – | Dokumentace Microsoftu
+title: 'IDiaSourceFile:: get_compilands | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 15ebc8296bdf78515b31d38a7543a4f41db84664
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dea4b53daae31c90753ef7afb293e69157f58e41
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838243"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741816"
 ---
-# <a name="idiasourcefilegetcompilands"></a>IDiaSourceFile::get_compilands
-Získá enumerátor souborech určených ke kompilaci čísla řádku odkazující na tento soubor.
+# <a name="idiasourcefileget_compilands"></a>IDiaSourceFile::get_compilands
+Načte enumerátor compilands, který má čísla řádků odkazující na tento soubor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,11 +33,11 @@ HRESULT get_compilands ( 
 #### <a name="parameters"></a>Parametry
  `ppRetVal`
 
-[out] Vrátí [idiaenumsymbols –](../../debugger/debug-interface-access/idiaenumsymbols.md) objekt, který obsahuje seznam všech souborech určených ke kompilaci, které mají čísla řádků odkazující na tento soubor.
+mimo Vrátí objekt [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) , který obsahuje seznam všech compilands, které mají čísla řádků odkazující na tento soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

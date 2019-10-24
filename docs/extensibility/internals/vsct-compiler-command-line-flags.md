@@ -1,5 +1,5 @@
 ---
-title: Příznaky příkazového řádku pro kompilátor VSCT | Dokumentace Microsoftu
+title: Příznaky příkazového řádku kompilátoru VSCT | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,24 +11,24 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b0e70d6695b76df9a6ef66586713e27a61697ae
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 71634a007019dd39e843ccc63af1c3188f778ea9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66332910"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72722021"
 ---
 # <a name="vsct-compiler-command-line-flags"></a>Příznaky příkazového řádku pro kompilátor VSCT
-Kompilátor Visual Studio příkaz tabulky (VSCT) poskytuje přepínače příkazového řádku k zajištění úspěšné kompilaci souborů .vsct.
+Kompilátor sady příkazů sady Visual Studio (VSCT) poskytuje přepínače příkazového řádku, které zajistí úspěšnou kompilaci souborů. vsct.
 
 ## <a name="command-line-parameters"></a>Parametry příkazového řádku
- Chcete-li zobrazit základní VSCT pomoc od [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **příkaz** okno, přejděte na *cestu instalace sady Visual Studio SDK*\VisualStudioIntegration\Tools\Bin\ složky a typ:
+ Pokud chcete zobrazit základní VSCTou podporu z **příkazového** okna [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], přejděte do složky pro *instalaci sady Visual Studio SDK*\VisualStudioIntegration\Tools\Bin\ a zadejte:
 
 ```
 vsct /?
 ```
 
- Vrátí:
+ Tato akce vrátí:
 
 ```
 Microsoft (R) Visual Studio (R) Command Table Compiler Version 3.00.2000
@@ -50,31 +50,31 @@ Syntax: vsct <infile> [<outfile>] [-S[symbols file]] [-D<preprocessor-define>]*
 ```
 
 > [!NOTE]
-> Znaky - (pomlčka) a / (lomítko) jsou obě přijaté zápis pro ukazování parametry příkazového řádku.
+> Znaky – (pomlčka) a/(lomítko) jsou oba přijímány zápisem pro označení parametrů příkazového řádku.
 
- Přijatelné příznaků a jejich význam jsou.
+ Přijatelné příznaky a význam jsou následující.
 
 |Přepínač|Popis|
 |------------|-----------------|
-|-D|Zadejte libovolné další definované symboly.|
-|-I|Značí, že další cesty, které má být použit při řešení odkazů na soubory zahrnutí.|
-|-L|Zadejte <xref:System.Globalization.CultureInfo> název jazykové verze, například "en US".|
-|-E|Generování C# objektů v určeném oboru názvů pro příkaz položky, za nímž následuje [C&#124;H&#124;N]:*filename*kde C = C#, H = C++ záhlaví, N = oboru názvů. Obor názvů se vyžaduje pro jazyk C#.|
+|– D|Zadejte jakékoli další definované symboly.|
+|– I|Určete další zahrnuté cesty, které se mají použít při překladu odkazů na soubory.|
+|– L|Zadejte název jazykové verze <xref:System.Globalization.CultureInfo>, například "en-US".|
+|-E|Vygeneruje C# &#124;objekty v zadaném oboru názvů pro položky příkazu následované [C H&#124;N]:*filename*, kde C = C#, H = C++ Header, N = obor názvů. Obor názvů je vyžadován pro C#.|
 |-v|Podrobný výstup.|
 
- Přepínač -L instruuje kompilátor, aby vyberte skupinu pro řetězce pro vytvoření .cto binární soubor, který odpovídá daný <xref:System.Globalization.CultureInfo> název jazykové verze. Název zadaná jazyková verze by měl odpovídat atribut Language jednoho nebo víc [Strings – Element](../../extensibility/strings-element.md) v souboru .vsct. Pokud prvek řetězců nemá žádný atribut Language, je zděděno z obsahuje [commandtable – Element](../../extensibility/commandtable-element.md).
+ Přepínač-L instruuje kompilátor, aby vybral skupinu řetězců k vytvoření binárního souboru. technický ředitel, který odpovídá danému názvu jazykové verze <xref:System.Globalization.CultureInfo>. Zadaný název jazykové verze by měl odpovídat atributu jazyka jednoho nebo více [elementů řetězce](../../extensibility/strings-element.md) v souboru. vsct. Pokud element řetězce nemá atribut Language, je zděděn z prvku obsahujícího [příkazového](../../extensibility/commandtable-element.md)pole.
 
- Souboru .vsct může mít více prvků řetězce a každý může mít jiný atribut Language. Globalizace se dosahuje spuštěním kompilátor VSCT více než jednou a změnou přepínač -L pro každý název jazykové verze.
+ Soubor. vsct může mít více elementů řetězce a každá z nich může mít jiný atribut Language. Globalizaci je dosaženo spuštěním kompilátoru VSCT několikrát a změnou přepínače-L pro každý název jazykové verze.
 
- Pokud daný název jazykové verze přepínačem -L neodpovídá atributu jazyk libovolného elementu řetězce, kompilátor se pokusí jazyk a není v oblasti. Například pokud nelze najít "en US", kompilátor se pokusí "en" místo toho. Pokud se to nepovede zkusí aktuální jazykové verze operačního systému. Pokud se to nepovede zkompiluje prvního prvku řetězce, které nalezne.
+ Pokud název jazykové verze zadaný přepínačem-L neodpovídá atributu jazyka žádného elementu řetězce, kompilátor se pokusí porovnat s jazykem a nikoli oblastí. Pokud se například nenajde "en-US", kompilátor místo toho zkusí "en". V takovém případě se pokusí o aktuální jazykovou verzi operačního systému. V takovém případě se zkompiluje první nalezený prvek řetězce.
 
- Přepínač -E je možné generovat soubor záhlaví ve stylu jazyka C, který obsahuje symboly, které jsou používány tabulky příkazů nebo ke generování souboru C#, která obsahuje objekty symbolů příkazu.
+ Přepínač-E lze použít k vygenerování hlavičkového souboru ve stylu jazyka C, který obsahuje symboly, které jsou používány tabulkou příkazů, nebo k vygenerování C# souboru obsahujícího objekty pro symboly příkazů.
 
- -D a - přepínače mají syntaxi Cl.exe C preprocesoru příznaků, které mají stejný název. -D definice, které mají formát X = Y se používají pro rozšiřování založený na formátu XML \<definované > testy v `Condition` atributy. -I cesty zahrnutí slouží k rozpoznání \<zahrnout >, \<Extern > a \<rastrový obrázek > soubor odkazy. Další informace najdete v tématu [VSCT – referenční dokumentace schématu XML](../../extensibility/vsct-xml-schema-reference.md).
+ Přepínače-D a-I obsahují syntaxi příznaků preprocesoru CL. exe v jazyce C, které mají stejný název. -D definice, které mají formát X = Y, se používají pro rozšíření \<Defined založeném na XML >ch testů v atributech `Condition`. -I se používají cesty k překladu \<Include >, \<Extern > a \<Bitmap >ch odkazů na soubory. Další informace najdete v referenčních informacích ke [schématu XML vsct](../../extensibility/vsct-xml-schema-reference.md).
 
- Kompilátor VSCT můžete také dekompilovat dřívější sestavené binární soubor. Chcete-li to provést, zadejte binární soubor pro \<infile >.   Pokud je binární soubor byl vytvořen kompilátor VSCT, bude mít jeho symboly již vložen a bude generovat výstup s symbolické názvy v \<symboly > části výstupu. Pokud je binární soubor se vytvořil parametrem kompilátoru CTC, výstup bude obsahovat skutečné identifikátory GUID a ID. Pokud *.ctsym soubor, který vytvořil aktuální verze Ctc.exe je ve stejné složce jako vstupní binární soubor, symboly načteny z tohoto souboru a použít pro výstup.
+ Kompilátor VSCT může také dekompilovat dříve sestavený binární soubor. Pokud to chcete provést, zadejte binární soubor pro \<infile >.   Pokud byl binární soubor vytvořen kompilátorem VSCT, bude mít již vložené symboly a vytvoří výstup se symbolickými názvy v \<Symbols > části výstupu. Pokud byl binární soubor vytvořen kompilátorem CTC, výstup bude obsahovat skutečné identifikátory GUID a ID. Pokud je soubor *. ctsym, který je vytvořen pomocí aktuální verze nástroje CTC. exe, ve stejné složce jako binární vstupní soubor, symboly budou načteny z tohoto souboru a použity pro výstup.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 - [XML schéma VSCT – referenční informace](../../extensibility/vsct-xml-schema-reference.md)
 - [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)

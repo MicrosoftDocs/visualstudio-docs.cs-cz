@@ -1,5 +1,5 @@
 ---
-title: Idialoadcallback2::restrictoriginalpathaccess – | Dokumentace Microsoftu
+title: 'IDiaLoadCallback2:: RestrictOriginalPathAccess | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 26539d4217682b4d5357f13e9f9368c81297da78
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6bcdaa7c1896a0ef29706e3650ad8ac56537f778
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839742"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743001"
 ---
 # <a name="idialoadcallback2restrictoriginalpathaccess"></a>IDiaLoadCallback2::RestrictOriginalPathAccess
-Určuje, zda je možné najít soubor .pdb v původní adresář ladění.
+Určuje, zda je v pořádku hledání souboru PDB v původním adresáři pro ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,10 +29,10 @@ HRESULT RestrictOriginalPathAccess ();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Žádné jiné než návratový kód `S_OK` brání hledá soubor .pdb v původní adresář ladění. Původní adresář ladění je cesta k souboru symbolů, které jsou zkompilovány do spustitelného souboru při ladění je zapnuté. Tato cesta není nutně stejné jako cesta kde spustitelný soubor existuje.
+ Libovolný návratový kód jiný než `S_OK` zabraňuje v původním ladicím adresáři vyhledat soubor. pdb. Původní ladicí adresář je cesta k souboru symbolů kompilovaný do spustitelného souboru, když je zapnuto ladění. Tato cesta není nutně stejná jako cesta, ve které spustitelný soubor existuje.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

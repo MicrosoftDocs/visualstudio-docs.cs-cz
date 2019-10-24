@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_bitposition – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_bitPosition | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7752e5f6bc7cb09fb80668aed8c3f8bc2bbeb312
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 709bb7e57ee6260ffcd7d8b1421526d3dd41052a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64813749"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740910"
 ---
-# <a name="idiasymbolgetbitposition"></a>IDiaSymbol::get_bitPosition
-Načte pozici bit umístění. Použít, pokud [locationtype – výčet](../../debugger/debug-interface-access/locationtype.md) je `LocIsBitField`.
+# <a name="idiasymbolget_bitposition"></a>IDiaSymbol::get_bitPosition
+Načte bitovou pozici umístění. Používá se při `LocIsBitField` [výčtu LocationType –](../../debugger/debug-interface-access/locationtype.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,21 +33,21 @@ HRESULT get_bitPosition ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí pozici bit umístění.
+mimo Vrátí bitovou pozici umístění.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|V7.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [LocationType – výčet](../../debugger/debug-interface-access/locationtype.md)

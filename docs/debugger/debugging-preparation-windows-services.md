@@ -1,5 +1,5 @@
 ---
-title: Příprava na ladění služeb Windows | Dokumentace Microsoftu
+title: Příprava na ladění služeb systému Windows | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,17 +17,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e734a500d12c15022421383743c1fe1f45794d1b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3161f6d2c328e8e33dd82ed206aa8aa20e654cc9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62852577"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738078"
 ---
-# <a name="debugging-preparation-windows-services"></a>Příprava ladění: Služby systému Windows
-Služba Windows je program, který běží na pozadí v rámci Microsoft Windows. Mezi příklady patří služby Systémový čas Windows, která aktualizuje viditelné hodiny a službu Telnet. Služba Windows nemůže být spuštěna v rámci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]; se musí spustit v rámci kontextu správce řízení služeb. Další informace najdete v tématu [vytváření služeb Windows](/dotnet/framework/windows-services/how-to-create-windows-services), [ladění aplikace služby Windows](/dotnet/framework/windows-services/how-to-debug-windows-service-applications), a [aplikace služby Windows](/dotnet/framework/windows-services/index).
+# <a name="debugging-preparation-windows-services"></a>Příprava ladění: služby systému Windows
+Služba systému Windows je program, který běží na pozadí v systému Microsoft Windows. Mezi příklady patří služba Telnet a služba Systémový čas, která aktualizuje zobrazené hodiny vašeho počítače. Služba systému Windows nemůže být spuštěna v rámci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]; musí běžet v kontextu správce řízení služeb. Další informace naleznete v tématu [vytváření služeb systému Windows](/dotnet/framework/windows-services/how-to-create-windows-services), [ladění aplikací služby systému Windows](/dotnet/framework/windows-services/how-to-debug-windows-service-applications)a [aplikací služby systému Windows](/dotnet/framework/windows-services/index).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)
 - [Typy projektů jazyka C#, F# a Visual Basic](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)
 - [Nastavení projektu pro konfiguraci ladění jazyka C#](../debugger/project-settings-for-csharp-debug-configurations.md)

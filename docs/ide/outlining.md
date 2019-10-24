@@ -15,12 +15,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61772ead029dccaff9b1090a469865fcc3742df6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 791663c04d1c1e79eebaed39d339d8d118ffeaae
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666825"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748856"
 ---
 # <a name="outlining"></a>Sbalování
 
@@ -48,8 +48,8 @@ Následující příkazy lze najít v podnabídce **upravit** ** > .**
 |Zastavit sbalení|(**Ctrl** +**M**, **CTRL** +**P**) – Odebere všechny informace o sbalení celého dokumentu.|
 |Zastavit skrývání aktuálního|(**Ctrl** +**M**, **CTRL** +**U**) – odebere informace o Sbalení aktuálně vybrané uživatelem definované oblasti. Není k dispozici v Visual Basic.|
 |Sbalit do definic|(**Ctrl** +**M**, **CTRL** +**O**) – sbalí členy všech typů.|
-|Sbalit blok: \<logical hranici >|(Vizuální C++) Sbalí oblast ve funkci, která obsahuje bod vložení. Například pokud bod vložení leží uvnitř smyčky, je smyčka skrytá.|
-|Sbalit vše v: \<logical struktury >|(Vizuální C++) Sbalí všechny struktury uvnitř funkce.|
+|Sbalit blok: \<logical hranici >|(C++) Sbalí oblast ve funkci, která obsahuje bod vložení. Například pokud bod vložení leží uvnitř smyčky, je smyčka skrytá.|
+|Sbalit vše v: \<logical struktury >|(C++) Sbalí všechny struktury uvnitř funkce.|
 
 Můžete také použít sadu Visual Studio SDK k definování textových oblastí, které chcete rozbalit nebo sbalit. Viz [Návod: sbalení](../extensibility/walkthrough-outlining.md).
 

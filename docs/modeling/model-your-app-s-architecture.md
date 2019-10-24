@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1316f56b9a780e101c6ab76ee55b79e0b5a181d8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6e87759206f6d05267e2be5be25fdb8c3e9b70df
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658384"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747541"
 ---
 # <a name="model-your-app39s-architecture"></a>Modelování architektury aplikace&#39;
 Aby bylo zajištěno, že váš softwarový systém nebo aplikace vyhovují potřebám vašich uživatelů, můžete vytvořit modely v aplikaci Visual Studio jako součást popisu celkové struktury a chování softwarového systému nebo aplikace. Pomocí modelů můžete také popsat vzory používané v celém návrhu. Tyto modely vám pomůžou pochopit stávající architekturu, diskutovat o změnách a jasně sdělit své záměry.
@@ -102,7 +102,7 @@ Aby bylo zajištěno, že váš softwarový systém nebo aplikace vyhovují pot�
 
 - Popis variací, které mohou vývojáři přijmout.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vizualizace kódu](../modeling/visualize-code.md)
 - [Modelování uživatelských požadavků](../modeling/model-user-requirements.md)

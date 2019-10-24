@@ -25,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1380cf2cfd4d1ffe729fdd4a6ce9cfb2ba7d9ab6
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: dd4a481a8d4f283204b99cfef4a07106d3e479cb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72435641"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731281"
 ---
 # <a name="mfc-debugging-techniques"></a>Techniky ladění MFC
 Při ladění programu knihovny MFC mohou být tyto techniky ladění užitečné.
@@ -75,7 +75,7 @@ _asm int 3
 
 Na jiných platformách `AfxDebugBreak` pouze volá `DebugBreak`.
 
-Nezapomeňte odebrat příkazy `AfxDebugBreak` při vytváření sestavení pro vydání nebo použít `#ifdef _DEBUG` k jejich obnově.
+Nezapomeňte odebrat `AfxDebugBreak` příkazy při vytváření sestavení pro vydání nebo použijte `#ifdef _DEBUG` k jejich obnově.
 
 [V tomto tématu](#BKMK_In_this_topic)
 
@@ -97,7 +97,7 @@ TRACE( "x = %d and y = %d\n", x, y );
 TRACE( "x = %d and y = %x and z = %f\n", x, y, z );
 ```
 
-Makro TRACE vhodně zpracovává parametry char @ no__t-0 a wchar_t @ no__t-1. Následující příklady ukazují použití SLEDOVACÍho makra spolu s různými typy řetězcových parametrů.
+Makro TRACE vhodným způsobem zpracovává parametry char \* a wchar_t \*. Následující příklady ukazují použití SLEDOVACÍho makra spolu s různými typy řetězcových parametrů.
 
 ```cpp
 TRACE( "This is a test of the TRACE macro that uses an ANSI string: %s %d\n", "The number is:", 2);
@@ -115,7 +115,7 @@ Další informace o makru **trasování** naleznete v tématu [diagnostické slu
 Knihovna MFC poskytuje třídy a funkce pro zjišťování paměti, která je přidělena, ale nikdy neuvolněna.
 
 ### <a name="BKMK_Tracking_memory_allocations"></a>Sledování přidělení paměti
-V knihovně MFC můžete použít makro [DEBUG_NEW](https://msdn.microsoft.com/Library/9b379344-4093-4bec-a3eb-e0d8a63ada9d) místo operátoru **New** , které vám pomůžou najít nevracení paměti. V ladicí verzi programu `DEBUG_NEW` sleduje název souboru a číslo řádku pro každý objekt, který přiděluje. Když kompilujete verzi programu, `DEBUG_NEW` se přeloží na jednoduchou **novou** operaci bez názvu souboru a čísla řádku. Proto platíte bez snížení rychlosti v prodejní verzi programu.
+V knihovně MFC můžete použít makro [DEBUG_NEW](https://msdn.microsoft.com/Library/9b379344-4093-4bec-a3eb-e0d8a63ada9d) místo operátoru **New** , které vám pomůžou najít nevracení paměti. V ladicí verzi programu `DEBUG_NEW` uchovává záznam o názvu souboru a čísle řádku pro každý objekt, který přiděluje. Když kompilujete verzi programu, `DEBUG_NEW` se přeloží na jednoduchou **novou** operaci bez názvu souboru a informace o čísle řádku. Proto platíte bez snížení rychlosti v prodejní verzi programu.
 
 Pokud nechcete přepsat celý program, aby používal `DEBUG_NEW` místo **nového**, můžete toto makro definovat ve zdrojových souborech:
 
@@ -125,7 +125,7 @@ Pokud nechcete přepsat celý program, aby používal `DEBUG_NEW` místo **nové
 
 Když provedete [Výpis objektu](#BKMK_Taking_object_dumps), každý objekt přidělený pomocí `DEBUG_NEW` zobrazí soubor a číslo řádku, kde byl přidělen, což vám umožní určit zdroje nevracení paměti.
 
-Ladicí verze rozhraní knihovny MFC používá `DEBUG_NEW` automaticky, ale váš kód nikoli. Pokud chcete mít výhody `DEBUG_NEW`, je třeba použít explicitně `DEBUG_NEW` nebo **#define nové** , jak je uvedeno výše.
+Ladicí verze rozhraní knihovny MFC používá `DEBUG_NEW` automaticky, ale váš kód nikoli. Pokud chcete využít výhod `DEBUG_NEW`, je nutné použít `DEBUG_NEW` explicitně nebo **#define nové** , jak je uvedeno výše.
 
 [V tomto tématu](#BKMK_In_this_topic)
 
@@ -160,7 +160,7 @@ Předtím, než budete moci použít funkce diagnostiky paměti, je nutné povol
 
 2. Poté, co program provede operace přidělení paměti a zrušení přidělení, vytvořte další objekt `CMemoryState` a zavolejte `Checkpoint` pro daný objekt. Tím se získá druhý snímek využití paměti.
 
-3. Vytvořte třetí objekt @no__t 0 a zavolejte jeho členskou funkci [CMemoryState::D ifference](/cpp/mfc/reference/cmemorystate-structure#difference) a poskytněte jako argumenty dva předchozí objekty `CMemoryState`. Pokud existuje rozdíl mezi dvěma stavy paměti, funkce `Difference` vrátí nenulovou hodnotu. To znamená, že některé bloky paměti nebyly navráceny.
+3. Vytvořte třetí objekt `CMemoryState` a zavolejte jeho členskou funkci [CMemoryState::D ifference](/cpp/mfc/reference/cmemorystate-structure#difference) a poskytněte jako argumenty dva předchozí objekty `CMemoryState`. Pokud existuje rozdíl mezi dvěma stavy paměti, funkce `Difference` vrátí nenulovou hodnotu. To znamená, že některé bloky paměti nebyly navráceny.
 
     Tento příklad ukazuje, jak kód vypadá takto:
 
@@ -264,9 +264,9 @@ Phone #: 581-0215
 
 Čísla v závorkách na začátku většiny řádků určují pořadí, ve kterém byly objekty přiděleny. Poslední přidělený objekt má nejvyšší číslo, které se zobrazí v horní části výpisu paměti.
 
-Chcete-li získat maximální množství informací z výpisu objektu, můžete přepsat členskou funkci `Dump` libovolného objektu odvozeného z @no__t -1 k přizpůsobení výpisu objektu.
+Chcete-li získat maximální množství informací z výpisu objektu, můžete přepsat `Dump` členské funkce libovolného objektu odvozeného `CObject` pro přizpůsobení výpisu objektu.
 
-Můžete nastavit zarážku na konkrétní přidělení paměti nastavením globální proměnné `_afxBreakAlloc` na číslo zobrazené ve složených závorkách. Pokud program znovu spustíte, ladicí program přeruší provádění, když toto přidělení bude provedeno. Pak se můžete podívat na zásobník volání a zjistit, jak váš program získal daný bod.
+Můžete nastavit zarážku pro konkrétní přidělení paměti nastavením globální proměnné `_afxBreakAlloc` na číslo zobrazené ve složených závorkách. Pokud program znovu spustíte, ladicí program přeruší provádění, když toto přidělení bude provedeno. Pak se můžete podívat na zásobník volání a zjistit, jak váš program získal daný bod.
 
 Běhová knihovna jazyka C má podobnou funkci [_CrtSetBreakAlloc](/cpp/c-runtime-library/reference/crtsetbreakalloc), kterou lze použít pro přidělení za běhu c.
 
@@ -299,7 +299,7 @@ CPerson* p = new CPerson( "Smith", "Alan", "581-0215" );
 
 Konstruktor `CPerson` přebírá tři argumenty, které jsou ukazatele na `char`, které se používají k inicializaci proměnných členů `CString`. V výpisu paměti můžete zobrazit objekt `CPerson` spolu se třemi bloky, které nejsou objekty (3, 4 a 5). Tyto znaky obsahují znaky pro členské proměnné `CString` a nebudou odstraněny při vyvolání destruktoru objektu `CPerson`.
 
-Blok číslo 2 je objekt @no__t 0 samotný. `$51A4` představuje adresu bloku a za ním následuje obsah objektu, který byl výstupem `CPerson`:: `Dump` při volání [DumpAllObjectsSince](/cpp/mfc/reference/cmemorystate-structure#dumpallobjectssince).
+Blok číslo 2 je `CPerson` samotný objekt. `$51A4` představuje adresu bloku a za ním následuje obsah objektu, který byl výstupem `CPerson`:: `Dump` při volání [DumpAllObjectsSince](/cpp/mfc/reference/cmemorystate-structure#dumpallobjectssince).
 
 Můžete odhadnout, že blok číslo 1 je přidružen k proměnné rámce `CString` z důvodu jeho sekvence a velikosti, která odpovídá počtu znaků v proměnné `CString` rámce. Proměnné, které jsou přiděleny v rámci rámce, jsou automaticky uvolněny, když se rámec přechází z rozsahu.
 
@@ -378,7 +378,7 @@ public:
 };
 ```
 
-Vzhledem k tomu, že výpis objektu má smysl pouze v případě, že ladíte program, deklarace funkce `Dump` je lomena pomocí **#ifdef _DEBUG/#endif** bloku.
+Vzhledem k tomu, že výpis objektu dává smysl pouze při ladění programu, je deklarace funkce `Dump` v závorkách s **#ifdef _DEBUG/#endif** .
 
 V následujícím příkladu funkce `Dump` nejprve zavolá funkci `Dump` pro svou základní třídu. Pak zapíše krátký popis každé členské proměnné spolu s hodnotou člena do diagnostického datového proudu.
 
@@ -480,5 +480,5 @@ Sestavování vybraných modulů pomocí ladicích knihoven knihovny MFC vám um
 
    [V tomto tématu](#BKMK_In_this_topic)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 [Ladění nativního kódu](../debugger/debugging-native-code.md)

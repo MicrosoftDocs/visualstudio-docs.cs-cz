@@ -1,5 +1,5 @@
 ---
-title: Idiasession::getsymbolsbyaddr – | Dokumentace Microsoftu
+title: 'IDiaSession:: getSymbolsByAddr | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f114d14da44d782dbda9e9f792f9268ceb598e23
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bfe5c047876b6e23c24ad850900cb0c66a4819d2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832328"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741904"
 ---
 # <a name="idiasessiongetsymbolsbyaddr"></a>IDiaSession::getSymbolsByAddr
-Získá enumerátor, který hledá symboly v pořadí jejich adresy.
+Načte enumerátor, který vyhledá symboly v pořadí jejich adres.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,11 +33,11 @@ HRESULT getSymbolsByAddr( 
 #### <a name="parameters"></a>Parametry
  `ppEnumbyAddr`
 
-[out] Vrátí [idiaenumsymbolsbyaddr –](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md) objektu. Pomocí tohoto rozhraní pro hledání symbolů do úložiště symbolů podle umístění v paměti.
+mimo Vrátí objekt [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md) . Pomocí tohoto rozhraní můžete vyhledat symboly v úložišti symbolů podle umístění v paměti.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)

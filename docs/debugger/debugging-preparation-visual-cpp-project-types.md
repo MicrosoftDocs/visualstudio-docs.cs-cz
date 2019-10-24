@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cf22bceedd026a641709640a6e29d1970000e3b
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 9c7d223b9ea542177176045c9abd103958e5ae33
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72431408"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738116"
 ---
 # <a name="debugging-preparation-c-project-types"></a>Příprava ladění: C++ typy projektů
 Tato část popisuje, jak ladit základní typy projektů vytvořené pomocí šablon projektů [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)].
@@ -64,7 +64,7 @@ Tato část popisuje, jak ladit základní typy projektů vytvořené pomocí š
 
  Aplikace Win32 zahrnují MFC aplikace a projekty ATL. Používají rozhraní API systému Windows a mohou používat knihovnu MFC nebo ATL, ale nepoužívají modul CLR (Common Language Runtime). Mohou však volat spravovaný kód, který používá CLR.
 
- Následující postup vysvětluje, jak ladit projekt Win32 v rámci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Dalším způsobem, jak ladit aplikaci Win32, je spustit aplikaci mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a připojit k ní. Další informace najdete v tématu [připojení ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).
+ Následující postup vysvětluje, jak ladit projekt Win32 z aplikace [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Dalším způsobem, jak ladit aplikaci Win32, je spustit aplikaci mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a připojit k ní. Další informace najdete v tématu [připojení ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).
 
 ### <a name="BKMK_To_debug_a_C_or_C___Win32_application"></a>Ladění aplikace C nebo C++ Win32
 
@@ -97,11 +97,11 @@ Tato část popisuje, jak ladit základní typy projektů vytvořené pomocí š
    [V tomto tématu](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)
 
 ## <a name="BKMK_Windows_Forms_Applications___NET_"></a>Model Windows Forms aplikace (.NET)
- Šablona **aplikace model Windows Forms (.NET)** vytvoří model Windows Forms aplikaci [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]. Další informace najdete v tématu [Postupy: vytvoření projektu aplikace pro systém Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100)).
+ Šablona **aplikace model Windows Forms (.NET)** vytvoří [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] model Windows Forms aplikaci. Další informace najdete v tématu [Postupy: vytvoření projektu aplikace pro systém Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100)).
 
  Ladění tohoto typu aplikace v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je podobné jako u spravovaných aplikací model Windows Forms.
 
- Při vytváření projektu model Windows Forms se šablonou projektu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky vytvoří požadovaná nastavení pro ladění a vydání. V případě potřeby můžete tato nastavení změnit v dialogovém okně **\<project název > stránky vlastností** . Další informace najdete v tématu [Konfigurace ladění a vydání](../debugger/how-to-set-debug-and-release-configurations.md).
+ Při vytváření projektu model Windows Forms se šablonou projektu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky vytvoří požadované nastavení pro ladění a vydání. V případě potřeby můžete tato nastavení změnit v dialogovém okně **\<project název > stránky vlastností** . Další informace najdete v tématu [Konfigurace ladění a vydání](../debugger/how-to-set-debug-and-release-configurations.md).
 
  Další informace naleznete v tématu [nastavení projektu pro konfiguraci C++ ladění](../debugger/project-settings-for-a-cpp-debug-configuration.md).
 
@@ -109,7 +109,7 @@ Tato část popisuje, jak ladit základní typy projektů vytvořené pomocí š
 
  [V tomto tématu](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
 - [Nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md)
 - [Připojení ke spuštěnému programu nebo více programům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)

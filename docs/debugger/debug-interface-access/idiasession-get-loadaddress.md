@@ -1,5 +1,5 @@
 ---
-title: Idiasession::get_loadaddress – | Dokumentace Microsoftu
+title: 'IDiaSession:: get_loadAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fed7653b5f1a270d2e297cdd2b59366b5b563c3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2b23aff5cd5d2b94a44e3e9139ff4c97acb2225d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839183"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741932"
 ---
-# <a name="idiasessiongetloadaddress"></a>IDiaSession::get_loadAddress
-Načte adresu zatížení pro spustitelný soubor, který odpovídá symboly v tomto úložišti symbolů.
+# <a name="idiasessionget_loadaddress"></a>IDiaSession::get_loadAddress
+Načte adresu načtení pro spustitelný soubor, který odpovídá symbolům v tomto úložišti symbolů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,14 +33,14 @@ HRESULT get_loadAddress ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí virtuální adresy (VA), kde je načtena souboru .exe nebo .dll soubor.
+mimo Vrátí virtuální adresu (VA), kde je načten soubor. exe nebo. dll.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Adresa vrácené zatížení je vždy nula není-li nastavit pomocí [idiasession::put_loadaddress –](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) metoda.
+ Vrácená adresa zatížení je vždycky nula, pokud se konkrétně nenastaví pomocí metody [IDiaSession::P ut_loadaddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSession::put_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md)

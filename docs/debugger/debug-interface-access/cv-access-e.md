@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 90230bd95e1dbcd3e4c186257c6c36faad6ba1f7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bbe338ba9d3aa6cbc795606c3fa285526afdfd36
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62555127"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745360"
 ---
-# <a name="cvaccesse"></a>CV_access_e
-Určuje obor viditelnost (úroveň přístupu) členské funkce a proměnné.
+# <a name="cv_access_e"></a>CV_access_e
+Určuje rozsah viditelnosti (úroveň přístupu) členských funkcí a proměnných.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,19 +33,19 @@ typedef enum CV_access_e {
 ```
 
 ## <a name="elements"></a>Elementy
-Člen CV_private má soukromý přístup.
+Člen CV_private má privátní přístup.
 
-Člen CV_protected chrání přístup.
+Člen CV_protected má chráněný přístup.
 
 Člen CV_public má veřejný přístup.
 
 ## <a name="remarks"></a>Poznámky
-`friend` Specifikátor přístupu zde není obsažena vzhledem k tomu, že se obvykle používá funkce bez členů, které mají přístup k soukromým a chráněným elementy třídy. Použití [idiasymbol::get_symtag –](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) metodu pro hledání symbolů se `SymTagFriend` přístup.
+Specifikátor přístupu `friend` není zde obsažen, protože je obvykle používán nečlenskémi funkcemi, které mají přístup k soukromým i chráněným prvkům třídy. Pomocí metody [IDiaSymbol:: get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) vyhledejte symboly s přístupem `SymTagFriend`.
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: cvconst.h
+Záhlaví: cvconst. h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSymbol::get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)
 - [IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)

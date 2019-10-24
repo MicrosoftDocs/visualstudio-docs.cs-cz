@@ -24,12 +24,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: ac3d6225bc765ec404784589d2faa06f155265ab
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 93c6826f2903f30fbbdcb9c40ec5f695df32ac05
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72446294"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747054"
 ---
 # <a name="annotating-structs-and-classes"></a>Zadávání poznámek ke strukturám a třídám
 
@@ -39,17 +39,17 @@ ms.locfileid: "72446294"
 
 - `_Field_range_(low, high)`
 
-     Pole je v rozsahu (včetně) od `low` do `high`.  Ekvivalent `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` aplikovaný na objekt s poznámkou pomocí příslušných podmínek před nebo po odeslání.
+     Pole je v rozsahu (včetně) od `low` do `high`.  Ekvivalentem `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` použitým u objektu s poznámkou pomocí příslušných podmínek před nebo po odeslání.
 
-- `_Field_size_(size)`, `_Field_size_opt_(size)` `_Field_size_bytes_(size)`, `_Field_size_bytes_opt_(size)`
+- `_Field_size_(size)`, `_Field_size_opt_(size)`, `_Field_size_bytes_(size)` `_Field_size_bytes_opt_(size)`
 
      Pole, které má zapisovatelné velikosti v prvcích (nebo bajtech), jak je určeno `size`.
 
-- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)` `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`
+- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`, `_Field_size_bytes_part_(size, count)` `_Field_size_bytes_part_opt_(size, count)`
 
      Pole, které má zapisovatelné velikosti v prvcích (nebo bajtech), jak je určeno `size` a `count` z těchto prvků (bajtů), které jsou čitelné.
 
-- `_Field_size_full_(size)`, `_Field_size_full_opt_(size)` `_Field_size_bytes_full_(size)`, `_Field_size_bytes_full_opt_(size)`
+- `_Field_size_full_(size)`, `_Field_size_full_opt_(size)`, `_Field_size_bytes_full_(size)` `_Field_size_bytes_full_opt_(size)`
 
      Pole, které má čitelné i zapisovatelné velikosti v elementech (nebo bajtech), jak je určeno `size`.
 
@@ -108,9 +108,9 @@ Poznámky k tomuto příkladu:
 
 - `_Field_z_` je ekvivalentem `_Null_terminated_`.  `_Field_z_` pro pole název určuje, že pole název je řetězec zakončený hodnotou null.
 - `_Field_range_` pro `bufferSize` určuje, že hodnota `bufferSize` by měla být v rozmezí od 1 do `MaxBufferSize` (včetně).
-- Konečné výsledky `_Struct_size_bytes_` a poznámky `_Field_size_` jsou ekvivalentní. U struktur nebo tříd, které mají podobné rozložení, je `_Field_size_` snazší si je přečíst a udržovat, protože má méně odkazů a výpočtů než ekvivalentní anotace `_Struct_size_bytes_`. `_Field_size_` nevyžaduje převod na velikost bajtu. Je-li velikost bajtu jedinou možností, například pro pole ukazatele void, lze použít `_Field_size_bytes_`. Pokud existují oba `_Struct_size_bytes_` i `_Field_size_`, budou k dispozici obě nástroje. V případě nesouhlasu dvou poznámek se jedná o nástroj.
+- Konečné výsledky `_Struct_size_bytes_` a `_Field_size_` poznámek jsou ekvivalentní. U struktur nebo tříd, které mají podobné rozložení, `_Field_size_` je snazší je číst a udržovat, protože má méně odkazů a výpočtů než ekvivalentní `_Struct_size_bytes_` anotace. `_Field_size_` nevyžaduje převod na velikost bajtu. Je-li velikost bajtu jedinou možností, například pro pole typu void, lze použít `_Field_size_bytes_`. Pokud existují `_Struct_size_bytes_` i `_Field_size_`, bude k dispozici pro nástroje. V případě nesouhlasu dvou poznámek se jedná o nástroj.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Použití poznámek SAL k snížení míry výskytu závad kódu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Porozumění SAL](../code-quality/understanding-sal.md)

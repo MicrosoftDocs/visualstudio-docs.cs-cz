@@ -1,5 +1,5 @@
 ---
-title: MIDL – úloha | Dokumentace Microsoftu
+title: Úloha MIDL | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,402 +18,402 @@ dev_langs:
 - C++
 - jsharp
 helpviewer_keywords:
-- MSBuild (Visual C++), MIDL task
-- MIDL task (MSBuild (Visual C++))
+- MSBuild (C++), MIDL task
+- MIDL task (MSBuild (C++))
 ms.assetid: 727efa8c-3336-40b8-8bef-ae6cbd77a422
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 301ca4ee88368b9134bbbcd2dc41435590becaed
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b2c5f7e425a7a8c1220ee4b9b09831831c8f0a9a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817568"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747254"
 ---
 # <a name="midl-task"></a>MIDL – úloha
-Zabalí nástroj kompilátoru Microsoft Interface Definition Language (MIDL) *midl.exe*. Další informace najdete v tématu [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *MIDL. exe*. Další informace naleznete v tématu [Reference k příkazovému řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 ## <a name="parameters"></a>Parametry
- Následující text popisuje parametry **MIDL** úloh. Většinu úkolů parametrů a několik sad parametrů, odpovídají možnost příkazového řádku.
+ Následující popis popisuje parametry úlohy **MIDL** . Většina parametrů úlohy a několik sad parametrů odpovídá možnosti příkazového řádku.
 
 - **AdditionalIncludeDirectories**
 
-     Volitelné **String []** parametru.
+     Parametr volitelného **řetězce []** .
 
-     Přidá adresář na seznam adresářů, které se vyhledávají importované soubory IDL zahrnuté hlavičkové soubory a konfigurační soubory aplikace (ACF).
+     Přidá adresář do seznamu adresářů, ve kterých jsou prohledány importované soubory IDL, zahrnuté hlavičkové soubory a konfigurační soubory aplikace (ACF).
 
-     Další informace najdete v tématu **/I** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v části **/i** v tématu [Reference k příkazovému řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **AdditionalOptions**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
-     Seznam možností příkazového řádku. Třeba /\<možnost1 > /\<možnost2 > /\<možnost #>. Tento parametr použijte k určení možnosti příkazového řádku, které nejsou reprezentovány všechny ostatní parametry MIDL – úloha.
+     Seznam možností příkazového řádku Například/\<option1 >/\<option2 >/\<option # >. Pomocí tohoto parametru můžete zadat možnosti příkazového řádku, které nejsou reprezentované žádným jiným parametrem úlohy MIDL.
 
-     Další informace najdete v tématu [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu [Reference k příkazovému řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **ApplicationConfigurationMode**
 
-     Volitelné **logická** parametru.
+     Volitelný **logický** parametr.
 
-     Pokud `true`, vám umožní používat některé klíčová slova ACF v souboru IDL.
+     Pokud `true`, umožňuje použít některá klíčová slova ACF v souboru IDL.
 
-     Další informace najdete v tématu **/app_config** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/app_config** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **ClientStubFile**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
      Určuje název souboru zástupné procedury klienta pro rozhraní RPC.
 
-     Další informace najdete v tématu **/cstub** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). Viz také **ServerStubFile** parametr v této tabulce.
+     Další informace naleznete v tématu možnost **/cstub** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). V této tabulce se také zobrazí parametr **ServerStubFile** .
 
 - **CPreprocessOptions**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
-     Určuje možnosti, které chcete předat preprocesoru C/C++. Zadejte seznam možnosti preprocesoru oddělených mezerami.
+     Určuje možnosti, které se mají předat CC++ /preprocesoru. Zadejte seznam možností preprocesoru oddělených mezerami.
 
-     Další informace najdete v tématu **/cpp_opt** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/cpp_opt** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **DefaultCharType**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
-     Určuje výchozí znakový typ kompilátoru jazyka C bude používat pro kompilaci vygenerovaného kódu.
+     Určuje výchozí typ znaku, který kompilátor jazyka C použije pro zkompilování generovaného kódu.
 
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.
+     Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
     |Hodnota|Možnost příkazového řádku|
     |-----------|--------------------------|
-    |**podepsané**|**/ Char podepsané**|
-    |**bez znaménka**|**/ Char unsigned**|
-    |**Ascii**|**/char ascii7**|
+    |**Podpisy**|**/char podepsané**|
+    |**Celé**|**/char bez znaménka**|
+    |**Abecední**|**/char ascii7**|
 
-     Další informace najdete v tématu **/char** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/char** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **DllDataFileName**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
-     Určuje název souboru pro vygenerovaný *dlldata* soubor pro proxy server knihovny DLL.
+     Určuje název souboru vygenerovaného souboru *dlldata* pro proxy server dll.
 
-     Další informace najdete v tématu **/dlldata** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/dlldata** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **EnableErrorChecks**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
-     Určuje typ Chyba při kontrole, že generované zástupné procedury provede v době běhu.
+     Určuje typ kontroly chyb, který vygenerované zástupné procedury budou provádět za běhu.
 
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.
-
-    |Value|Možnost příkazového řádku|
-    |-----------|--------------------------|
-    |**Žádné**|**/ Error none**|
-    |**EnableCustom**|**/error**|
-    |**Vše**|**/ Error všechny**|
-
-     Další informace najdete v tématu **/Error** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
-
-- **ErrorCheckAllocations**
-
-     Volitelné **logická** parametru.
-
-     Pokud `true`, zkontrolujte chyby na více instancí z důvodu nedostatku paměti.
-
-     Další informace najdete v tématu **/Error allocation** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
-
-- **ErrorCheckBounds**
-
-     Volitelné **logická** parametru.
-
-     Pokud `true`, kontroluje velikost s různými splňující podmínky a různých polí proti specifikací délky přenosu.
-
-     Další informace najdete v tématu **/Error bounds_check** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
-
-- **ErrorCheckEnumRange**
-
-     Volitelné **logická** parametru.
-
-     Pokud `true`, zkontroluje, zda jsou hodnoty výčtu v povoleném rozmezí.
-
-     Další informace najdete v tématu **/Error enum** možnost Nápověda příkazového řádku (**/?**) pro *midl.exe*.
-
-- **ErrorCheckRefPointers**
-
-     Volitelné **logická** parametru.
-
-     Pokud `true`, zkontrolujte, zda klienta zástupné procedury jsou předány žádné ukazatele odkaz s hodnotou null.
-
-     Další informace najdete v tématu **/Error ref** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
-
-- **ErrorCheckStubData**
-
-     Volitelné **logická** parametru.
-
-     Pokud `true`, generuje zástupnou proceduru, která zachytává unmarshaling výjimky na straně serveru a šíří je zpět do klienta.
-
-     Další informace najdete v tématu **/Error stub_data** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
-
-- **GenerateClientFiles**
-
-     Volitelné **řetězec** parametru.
-
-     Určuje, zda kompilátor generuje zdrojových souborů C na straně klienta pro rozhraní RPC.
-
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.
-
-    |Value|Možnost příkazového řádku|
-    |-----------|--------------------------|
-    |**Žádné**|**/ Client none**|
-    |**Zástupné procedury**|**Zástupná procedura/Client**|
-
-     Další informace najdete v tématu **/Client** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
-
-- **GenerateServerFiles**
-
-     Volitelné **řetězec** parametru.
-
-     Určuje, zda kompilátor generuje zdrojových souborů C na straně serveru v rámci rozhraní RPC.
-
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.
+     Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
     |Hodnota|Možnost příkazového řádku|
     |-----------|--------------------------|
-    |**Žádné**|**/ Server žádné**|
-    |**Zástupné procedury**|**Zástupná Procedura/Server**|
+    |**NTato**|**/Error None**|
+    |**EnableCustom**|**/Error**|
+    |**Všem**|**/Error All**|
 
-     Další informace najdete v tématu **/server** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/Error** v [referenci příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+
+- **ErrorCheckAllocations**
+
+     Volitelný **logický** parametr.
+
+     Pokud `true`, vyhledejte chyby nedostatku paměti.
+
+     Další informace naleznete v části **/Error Allocation** v [odkazu příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+
+- **ErrorCheckBounds**
+
+     Volitelný **logický** parametr.
+
+     Pokud `true`, zkontroluje velikost vyhovujících a proměnlivých polí podle specifikace délky přenosu.
+
+     Další informace naleznete v části **bounds_check** v tématu Reference k [příkazovému řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+
+- **ErrorCheckEnumRange**
+
+     Volitelný **logický** parametr.
+
+     Pokud `true`, zkontroluje, jestli jsou hodnoty výčtu v povoleném rozsahu.
+
+     Další informace naleznete v možnosti **/Error enum** v příkazovém řádku Help ( **/?** ) pro soubor *MIDL. exe*.
+
+- **ErrorCheckRefPointers**
+
+     Volitelný **logický** parametr.
+
+     Pokud `true`, ověřte, že neexistují žádné ukazatele odkazů s hodnotou null do zástupných procedur klienta.
+
+     Další informace naleznete v tématu možnost **/Error ref** v [referenci příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+
+- **ErrorCheckStubData**
+
+     Volitelný **logický** parametr.
+
+     Pokud `true`, vygeneruje zástupnou proceduru, která zachytává výjimky při zařazování na straně serveru a šíří je zpátky do klienta.
+
+     Další informace naleznete v části **stub_data** v tématu Reference k [příkazovému řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+
+- **GenerateClientFiles**
+
+     Volitelný **řetězcový** parametr.
+
+     Určuje, zda kompilátor generuje zdrojové soubory jazyka C na straně klienta pro rozhraní RPC.
+
+     Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
+
+    |Hodnota|Možnost příkazového řádku|
+    |-----------|--------------------------|
+    |**NTato**|**/Client žádné**|
+    |**Metrik**|**/Client zástupná procedura**|
+
+     Další informace naleznete v tématu možnost **/Client** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+
+- **GenerateServerFiles**
+
+     Volitelný **řetězcový** parametr.
+
+     Určuje, zda kompilátor generuje zdrojové soubory jazyka C na straně serveru pro rozhraní vzdáleného volání procedur (RPC).
+
+     Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
+
+    |Hodnota|Možnost příkazového řádku|
+    |-----------|--------------------------|
+    |**NTato**|**/Server žádné**|
+    |**Metrik**|**/Server – zástupná procedura**|
+
+     Další informace naleznete v části **/Server** v tématu [Reference k příkazovému řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **GenerateStublessProxies**
 
-     Volitelné **logická** parametru.
+     Volitelný **logický** parametr.
 
-     Pokud `true`, generuje plně interpretované zástupné procedury spolu s proxy bez zástupných procedur pro rozhraní objektů.
+     Pokud `true`, vygeneruje plně interpretované zástupné procedury spolu s proxy bez zástupných procedur pro rozhraní objektů.
 
-     Další informace najdete v tématu **/oicf** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/oicf** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **GenerateTypeLibrary**
 
-     Volitelné **logická** parametru.
+     Volitelný **logický** parametr.
 
-     Pokud `true`, knihovnu typů (*.tlb*) soubor.
+     Pokud `true`, soubor knihovny typů ( *. tlb*) se nevygeneruje.
 
-     Další informace najdete v tématu **/notlb** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/notlb** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **HeaderFileName**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
-     Určuje název vygenerovaného souboru hlavičky.
+     Určuje název vygenerovaného souboru hlaviček.
 
-     Další informace najdete v tématu **/h** nebo **/header** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/h** nebo **/header** v [odkazu na příkazový řádek MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **IgnoreStandardIncludePath**
 
-     Volitelné **logická** parametru.
+     Volitelný **logický** parametr.
 
-     Pokud `true`, MIDL – úloha v adresářích jenom určené vlastností **AdditionalIncludeDirectories** přepnutí a bude ignorovat aktuální adresář a adresáře určené proměnnou prostředí INCLUDE.
+     Pokud `true`, úloha MIDL vyhledá pouze adresáře určené pomocí přepínače **AdditionalIncludeDirectories** a ignoruje aktuální adresář a adresáře určené PROMĚNNOU prostředí include.
 
-     Další informace najdete v tématu **/no_def_idir** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/no_def_idir** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **InterfaceIdentifierFileName**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
-     Určuje název *souboru identifikátoru rozhraní* pro rozhraní modelu COM. Tím se přepíše výchozí název, získat tak, že přidáte "_i.c" k názvu souboru IDL.
+     Určuje název *souboru identifikátoru rozhraní* modelu COM. Tato možnost přepíše výchozí název získaný přidáním "_i. c" do názvu souboru IDL.
 
-     Další informace najdete v tématu **/iid** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/IID** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **LocaleID**
 
-     Volitelné **int** parametru.
+     Volitelný parametr **int**
 
-     Určuje, *identifikátor národního prostředí* , který umožňuje použití mezinárodní znaky ve vstupních souborů, názvy souborů a cesty k adresářům. Zadejte identifikátor desítkové národního prostředí.
+     Určuje *identifikátor národního prostředí* , který umožňuje použití mezinárodních znaků ve vstupních souborech, názvech souborů a cestách adresářů. Zadejte desítkový identifikátor národního prostředí.
 
-     Další informace najdete v tématu **/LCID** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). Viz také [identifikátory národního prostředí](https://docs.microsoft.com/windows/desktop/intl/locale-identifiers).
+     Další informace naleznete v tématu možnost **/LCID** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). Viz také [identifikátory národního prostředí](https://docs.microsoft.com/windows/desktop/intl/locale-identifiers).
 
 - **MkTypLibCompatible**
 
-     Volitelné **logická** parametru.
+     Volitelný **logický** parametr.
 
-     Pokud `true`, vyžaduje formát vstupního souboru, aby byl kompatibilní s *mktyplib.exe* verze 2.03 nástroje MkTypLib.exe.
+     Pokud `true`, vyžaduje, aby Formát vstupního souboru byl kompatibilní s *MkTypLib. exe* verze 2,03.
 
-     Další informace najdete v tématu **/mktyplib203** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). Viz také [syntaxi souboru ODL](/previous-versions/windows/desktop/automat/odl-file-syntax) na webu MSDN.
+     Další informace naleznete v tématu možnost **/mktyplib203** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). Viz také [syntaxe souboru ODL](/previous-versions/windows/desktop/automat/odl-file-syntax) na webu MSDN.
 
 - **OutputDirectory**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
-     Určuje výchozí adresář, ve kterém MIDL – úloha zapíše výstupní soubory.
+     Určuje výchozí adresář, ve kterém úloha MIDL zapisuje výstupní soubory.
 
-     Další informace najdete v tématu **/out** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/out** v [referenci příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **PreprocessorDefinitions**
 
-     Volitelné **String []** parametru.
+     Parametr volitelného **řetězce []** .
 
-     Určuje jeden nebo více *definuje*; to znamená, názvu a které se mají předat preprocesoru C jako volitelná hodnota if podle `#define` směrnice. Každá definice má hodnotu, *[= value] název*.
+     Určuje jednu nebo více *definicí*; To znamená, že název a volitelná hodnota, která má být předána preprocesoru jazyka C, jako by byla direktivou `#define`. Formát každé definice je, *název [= hodnota]* .
 
-     Další informace najdete v tématu **/D** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). Další informace naleznete **UndefinePreprocessorDefinitions** parametr v této tabulce.
+     Další informace naleznete v tématu **/d** možnost v [referenci příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). Viz také parametr **UndefinePreprocessorDefinitions** v této tabulce.
 
 - **ProxyFileName**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
-     Určuje název souboru proxy rozhraní pro rozhraní modelu COM.
+     Určuje název souboru proxy rozhraní pro rozhraní COM.
 
-     Další informace najdete v tématu **/proxy** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/proxy** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **RedirectOutputAndErrors**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
-     Přesměruje výstup, jako je například chybové zprávy a upozornění z standardní výstup do zadaného souboru.
+     Přesměruje výstup, například chybové zprávy a upozornění, ze standardního výstupu do zadaného souboru.
 
-     Další informace najdete v tématu **/o** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/o** v [referenci příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **ServerStubFile**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
-     Určuje název souboru serveru zástupných procedur pro rozhraní RPC.
+     Určuje název souboru zástupné procedury serveru pro rozhraní RPC.
 
-     Další informace najdete v tématu **/sstub** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). Další informace naleznete **ClientStubFile** parametr v této tabulce.
+     Další informace naleznete v tématu možnost **/sstub** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). Viz také parametr **ClientStubFile** v této tabulce.
 
-- **Zdroj**
+- **Zdrojová**
 
-     Vyžaduje `ITaskItem[]` parametru.
+     Vyžaduje se `ITaskItem[]` parametr.
 
-     Určuje seznam zdrojových souborů, oddělené mezerami.
+     Určuje seznam zdrojových souborů oddělených mezerami.
 
 - **StructMemberAlignment**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
-     Určuje zarovnání (*balení úroveň*) struktur v cílovém systému.
+     Určuje zarovnání (*úroveň balení*) struktur v cílovém systému.
 
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.
+     Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-    |Value|Možnost příkazového řádku|
+    |Hodnota|Možnost příkazového řádku|
     |-----------|--------------------------|
-    |**NotSet**|*\<žádné >*|
-    |**1**|**/Zp1**|
-    |**2**|**/Zp2**|
+    |**NotSet**|*\<none >*|
+    |**první**|**/Zp1**|
+    |**odst**|**/Zp2**|
     |**4**|**/Zp4**|
-    |**8**|**/Zp8**|
+    |**8**|**/ZP8**|
 
-     Další informace najdete v tématu **/zp** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). **/Zp** možnost je ekvivalentní **/pack** možnost a starší **/ align** možnost.
+     Další informace naleznete v tématu možnost **/zp** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). Možnost **/zp** je ekvivalentní možnosti **/Pack** a starší možnosti **/align** .
 
 - **SuppressCompilerWarnings**
 
-     Volitelné **logická** parametru.
+     Volitelný **logický** parametr.
 
-     Pokud `true`, potlačí zprávy upozornění z MIDL – úloha.
+     Pokud `true`, potlačí zprávy upozornění z úlohy MIDL.
 
-     Další informace najdete v tématu **/no_warn** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/no_warn** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **SuppressStartupBanner**
 
-     Volitelné `Boolean` parametru.
+     Volitelný parametr `Boolean`.
 
-     Pokud `true`, zabraňuje zobrazování čísel zprávu o autorských právech a verze při spuštění úlohy.
+     Pokud `true`, zabrání zobrazení zprávy o autorských právech a číslech verze při spuštění úlohy.
 
-     Další informace najdete v tématu **/nologo** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/nologo** v [referenci příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **TargetEnvironment**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
-     Určuje prostředí, ve kterém je aplikace spuštěná.
+     Určuje prostředí, ve kterém se aplikace spouští.
 
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.
+     Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-    |Value|Možnost příkazového řádku|
+    |Hodnota|Možnost příkazového řádku|
     |-----------|--------------------------|
-    |**NotSet**|*\<žádné >*|
-    |**Win32**|**/ env win32**|
-    |**Itanium**|**/ env ia64**|
-    |**X64**|**/env x64**|
+    |**NotSet**|*\<none >*|
+    |**Chyb**|**/ENV Win32**|
+    |**Procesor**|**/ENV ia64**|
+    |**Platformě**|**/ENV x64**|
 
-     Další informace najdete v tématu **/env** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/ENV** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **TrackerLogDirectory**
 
-     Volitelné `String` parametru.
+     Volitelný parametr `String`.
 
-     Určuje zprostředkující adresář, kde jsou uloženy protokoly sledování pro tuto úlohu.
+     Určuje zprostředkující adresář, ve kterém jsou uložené protokoly sledování pro tento úkol.
 
 - **TypeLibFormat**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
      Určuje formát souboru knihovny typů.
 
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.
+     Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-    |Value|Možnost příkazového řádku|
+    |Hodnota|Možnost příkazového řádku|
     |-----------|--------------------------|
     |**NewFormat**|**/newtlb**|
     |**OldFormat**|**/oldtlb**|
 
-     Další informace najdete v tématu **/newtlb** a **/oldtlb** možnosti [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnosti **/newtlb** a **/oldtlb** v článku [Referenční příručka příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
-- **TypeLibraryName**
+- **Názevknihovnytypů**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
      Určuje název souboru knihovny typů.
 
-     Další informace najdete v tématu **/TLB** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnost **/TLB** v [Referenční příručce příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
 - **UndefinePreprocessorDefinitions**
 
-     Volitelné **String []** parametru.
+     Parametr volitelného **řetězce []** .
 
-     Odebere všechny předchozí definice názvu předáním názvu pro preprocesor C jako if podle `#undefine` směrnice. Zadejte jeden nebo více dříve definované názvy.
+     Odebere všechny předchozí definice názvu předáním názvu do preprocesoru jazyka C, jako by bylo direktivou `#undefine`. Zadejte jeden nebo více dříve definovaných názvů.
 
-     Další informace najdete v tématu **/U** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). Další informace naleznete **PreprocessorDefinitions** parametr v této tabulce.
+     Další informace naleznete v tématu možnost **/u** v [referenci příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). Viz také parametr **PreprocessorDefinitions** v této tabulce.
 
 - **ValidateAllParameters**
 
-     Volitelné `Boolean` parametru.
+     Volitelný parametr `Boolean`.
 
-     Pokud `true`, vygeneruje další kontrolu chyb informace, které slouží k provádění kontrol integrity za běhu. Pokud `false`, kontrolu chyb informace se nevygeneroval.
+     Pokud `true`, vygeneruje další informace o kontrole chyb, které se používají k provádění kontrol integrity v době běhu. Pokud `false`, informace o kontrole chyb nejsou vygenerovány.
 
-     Další informace najdete v tématu **/ robust** a **/no_robust** možnosti [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
+     Další informace naleznete v tématu možnosti **/Robust** a **/no_robust** v článku [Referenční příručka příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference).
 
-- **WarnAsError**
+- **Warnaserror –**
 
-     Volitelné `Boolean` parametru.
+     Volitelný parametr `Boolean`.
 
-     Pokud `true`, zpracuje všechna upozornění jako chyby.
+     Pokud `true`, zpracovává všechna upozornění jako chyby.
 
-     Pokud **WarningLevel** MIDL – úloha parametr není zadán, upozornění na výchozí úrovni úrovně 1, jsou považována za chyby.
+     Pokud není zadán parametr úlohy **WarningLevel** MIDL, jsou upozornění na výchozí úrovni úrovně 1 považována za chyby.
 
-     Další informace najdete v tématu **/WX** možnosti [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). Další informace naleznete **WarningLevel** parametr v této tabulce.
+     Další informace naleznete v tématu **/WX** Options in [MIDL příkazového řádku reference](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). Viz také parametr **WarningLevel** v této tabulce.
 
 - **WarningLevel**
 
-     Volitelné **řetězec** parametru.
+     Volitelný **řetězcový** parametr.
 
-     Určuje závažnost (*úroveň pro upozornění*) ke generování upozornění. Bez upozornění je vygenerován pro hodnotu 0. V opačném případě je aktivováno upozornění, pokud jeho úroveň pro upozornění je číselně menší nebo rovna zadané hodnotě.
+     Určuje závažnost (*úroveň upozornění*) upozornění, která se mají vygenerovat. Nevysílá se žádné upozornění na hodnotu 0. V opačném případě je vygenerováno upozornění, pokud je úroveň upozornění numericky menší nebo rovna zadané hodnotě.
 
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.
+     Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-    |Value|Možnost příkazového řádku|
+    |Hodnota|Možnost příkazového řádku|
     |-----------|--------------------------|
-    |**0**|**/W0**|
-    |**1**|**/W1**|
-    |**2**|**/W2**|
-    |**3**|**/W3**|
+    |**0,8**|**/W0**|
+    |**první**|**/W1**|
+    |**odst**|**/W2**|
+    |**1**|**/W3**|
     |**4**|**/W4**|
 
-     Další informace najdete v tématu **/W** možnost [příkazového řádku MIDL odkazu](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). Další informace naleznete **WarnAsError** parametr v této tabulce.
+     Další informace naleznete v tématu možnost **/w** v [referenci příkazového řádku MIDL](https://docs.microsoft.com/windows/desktop/Midl/midl-command-line-reference). Viz také parametr **warnaserror –** v této tabulce.
 
 ## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

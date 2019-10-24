@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_hasAssignmentOperator | Microsoft Docs
+title: 'IDiaSymbol:: get_hasAssignmentOperator | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 54593a8a59c500e05cdd359331b83f14199b5b64
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: ce2da67192ed5ab3bea2f24c2ed52a7655ff1f8e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64787947"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740581"
 ---
-# <a name="idiasymbolgethasassignmentoperator"></a>IDiaSymbol::get_hasAssignmentOperator
-Získá příznak, který určuje, zda uživatelský datový typ má všechny operátory přiřazení definované.
+# <a name="idiasymbolget_hasassignmentoperator"></a>IDiaSymbol::get_hasAssignmentOperator
+Načte příznak, který určuje, zda uživatelem definovaný datový typ má definované operátory přiřazení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,20 +33,20 @@ HRESULT get_hasAssignmentOperator ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` Pokud uživatelský datový typ má všechny operátory přiřazení definované; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud uživatelsky definovaný datový typ má definované operátory přiřazení; v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
-|Záhlaví:|dia2.h|
-|Verze:|V7.0 DIA SDK|
+|Hlaviček|Dia2. h|
+|Znění|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

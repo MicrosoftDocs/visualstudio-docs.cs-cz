@@ -1,5 +1,5 @@
 ---
-title: Vybrat zarážky – dialogové okno | Dokumentace Microsoftu
+title: Vybrat zarážky – dialogové okno | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,22 +21,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 50547507bf37eb22346bcbf3f48585c9cb0b26b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fdec8c8d1b53f87e14700f5c14099cf0d2e6e392
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564779"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745734"
 ---
 # <a name="choose-breakpoints-dialog-box"></a>Dialogové okno Vybrat zarážky
-**Vybrat zarážky** při pokusu o nastavení zarážky z nejednoznačného vstupu, otevře se dialogové okno **Nová zarážka** dialogové okno. Běžné příkladem dvojznačného vstupu je název přetížené funkce.
+Dialogové okno **Vybrat zarážky** se otevře při pokusu o nastavení zarážky z nejednoznačného vstupu v dialogovém okně **Nová zarážka** . Běžným příkladem dvojznačného vstupu je přetížený název funkce.
 
- **Zarážky** obsahuje seznam možných zarážek, které může být nastavena na základě nejednoznačného vstupu. Můžete vybrat jeden nebo více zarážek pro nastavení.
+ **Zarážky** Zobrazuje seznam možných zarážek, které lze nastavit na základě nejednoznačného vstupu. Můžete vybrat jednu nebo více zarážek k nastavení.
 
- **Všechny** vybere všechny zarážky uvedené v **zarážky** pole.
+ **Vše** Vybere všechny zarážky, které jsou uvedeny v poli **zarážky** .
 
- **Žádný** vymaže všechny zarážky uvedené v **zarážky** pole.
+ **Žádné** Vymaže všechny zarážky uvedené v poli **zarážky** .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Použití zarážek](../debugger/using-breakpoints.md)

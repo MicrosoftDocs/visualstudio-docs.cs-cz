@@ -1,5 +1,5 @@
 ---
-title: Kompilace | Dokumentace Microsoftu
+title: Kompilantu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -13,31 +13,31 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ecdd4284e4c7c417af6ebd935418d56cf601bb74
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ccb4ca05374c86912cd48956262645b80fb14e40
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62555258"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745443"
 ---
 # <a name="compiland"></a>Kompilace
-Existuje jedna `SymTagCompiland` symbol pro každý Kompilantu propojený soubor .exe. Kompilace informací je rozdělená mezi symboly s `SymTagCompiland` značku, která se dá načíst bez načítání symbolů další kompilace, a symboly, s `SymTagCompilandDetails` značky, který může vyžadovat načítání dalších symbolů.
+Pro každý Kompilantu propojený se souborem. exe je k dispozici jeden symbol `SymTagCompiland`. Informace kompilantu jsou rozděleny mezi symboly pomocí značky `SymTagCompiland`, která může být načtena bez načtení dalších symbolů kompilantu, a symboly se značkou `SymTagCompilandDetails`, která může vyžadovat načtení dalších symbolů.
 
 ## <a name="properties"></a>Vlastnosti
  V následující tabulce jsou uvedeny vlastnosti, které jsou platné pro tento typ symbolu.
 
 |Vlastnost|Datový typ|Popis|
 |--------------|---------------|-----------------|
-|[IDiaSymbol::get_editAndContinueEnabled](../../debugger/debug-interface-access/idiasymbol-get-editandcontinueenabled.md)|`BOOL`|`TRUE` je-li upravit a pokračovat bylo povoleno během kompilace.|
-|[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|Symbol pro soubor .exe.|
-|[IDiaSymbol::get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)|`DWORD`|ID nadřazené lexikální symbolu.|
-|[IDiaSymbol::get_libraryName](../../debugger/debug-interface-access/idiasymbol-get-libraryname.md)|`BSTR`|Název souboru knihovny nebo objekt, kde byl načten objekt z.|
-|[IDiaSymbol::get_name](../../debugger/debug-interface-access/idiasymbol-get-name.md)|`BSTR`|Název souboru pro kompilaci souboru objektu.|
-|[IDiaSymbol::get_sourceFileName](../../debugger/debug-interface-access/idiasymbol-get-sourcefilename.md)|`BSTR`|Název zdrojového souboru.|
-|[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|ID indexu symbolu.|
-|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Vrátí `SymTagCompiland` (jeden z [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) hodnoty).|
+|[IDiaSymbol::get_editAndContinueEnabled](../../debugger/debug-interface-access/idiasymbol-get-editandcontinueenabled.md)|`BOOL`|`TRUE`, zda byla při kompilaci povolena možnost upravit a pokračovat.|
+|[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|Symbol pro soubor. exe.|
+|[IDiaSymbol::get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)|`DWORD`|ID lexikálního nadřazeného symbolu|
+|[IDiaSymbol::get_libraryName](../../debugger/debug-interface-access/idiasymbol-get-libraryname.md)|`BSTR`|Název knihovny nebo souboru objektu, ze kterého byl načten objekt.|
+|[IDiaSymbol::get_name](../../debugger/debug-interface-access/idiasymbol-get-name.md)|`BSTR`|Název souboru objektu kompilantu|
+|[IDiaSymbol::get_sourceFileName](../../debugger/debug-interface-access/idiasymbol-get-sourcefilename.md)|`BSTR`|Název zdrojového souboru|
+|[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|ID indexu symbolu|
+|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Vrátí `SymTagCompiland` (jedna z hodnot [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) ).|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)
 - [CompilandEnv](../../debugger/debug-interface-access/compilandenv.md)
 - [Lexikální hierarchie typů symbolů](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)

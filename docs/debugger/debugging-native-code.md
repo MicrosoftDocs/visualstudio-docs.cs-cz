@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e51918122834dd6b50952b9cc81a1d24a6477dd0
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: f98b99a31d9215d661879aa7fa52d4b671024496
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72431774"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738158"
 ---
 # <a name="debugging-native-code"></a>Ladění nativního kódu
 Oddíl popisuje některé běžné problémy s laděním a techniky pro nativní aplikace. Techniky popsané v této části jsou techniky na vysoké úrovni. Informace o mechanismu používání ladicího programu sady Visual Studio naleznete v tématu [první pohled na ladicí program](../debugger/debugger-feature-tour.md).
@@ -35,7 +35,7 @@ Oddíl popisuje některé běžné problémy s laděním a techniky pro nativní
 
  [DebugBreak a __debugbreak](../debugger/debugbreak-and-debugbreak.md) Popisuje funkci Win32 `DebugBreak` a poskytuje odkaz na své referenční téma v sadě SDK platformy. Popisuje také vnitřní `__debugbreak`.
 
- [Výrazy CC++ /kontrolní výrazy](../debugger/c-cpp-assertions.md) Popisuje příkazy kontrolního výrazu, jak fungují, výhody jejich použití (zachycení chyb logiky, kontrola výsledků operace a testování chybových podmínek), jejich interakce s `_DEBUG` a typy kontrolních výrazů, které jsou podporovány v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+ [Výrazy CC++ /kontrolní výrazy](../debugger/c-cpp-assertions.md) Popisuje příkazy kontrolního výrazu, jak fungují, výhody jejich použití (zachycení chyb logiky, kontrola výsledků operace a testování chybových podmínek), jejich interakce s `_DEBUG` a typy výrazů podporovaných v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
 
  [Postupy: ladění vloženého kódu sestavení](../debugger/how-to-debug-inline-assembly-code.md) Poskytuje krátké pokyny k použití okna zpětného překladu k zobrazení instrukcí sestavení a okna Registry k zobrazení obsahu registru a obsahuje odkazy na témata týkající se těchto oken.
 
@@ -58,7 +58,7 @@ Oddíl popisuje některé běžné problémy s laděním a techniky pro nativní
 
  [První pohled na ladicí program](../debugger/debugger-feature-tour.md) Obsahuje odkazy na větší části dokumentace ladění. Informace zahrnují novinky v ladicím programu, nastavení a přípravu, zarážky, zpracování výjimek, úpravy a pokračování, ladění spravovaného kódu, ladění nativního kódu, ladění SQL a odkazy na uživatelské rozhraní.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Ladění v sadě Visual Studio](../debugger/index.yml)

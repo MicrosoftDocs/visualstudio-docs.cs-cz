@@ -1,5 +1,5 @@
 ---
-title: 'Testovací oblast 8: Přepínání modulu plug-in | Dokumentace Microsoftu'
+title: 'Testovací oblast 8: přepínání modulů plug-in | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,46 +11,46 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6af0a0333131697526d1ffcc8394f7bfe81ca6b4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fb815a773351c1bb6212962a639e2758114a0e2c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66327802"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72722435"
 ---
-# <a name="test-area-8-plug-in-switching"></a>Testovací oblast 8: Přepínání modulů plug-in
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Integrované vývojové prostředí (IDE) má uživatelského rozhraní (UI) Chcete-li změnit aktuální plug-in správy zdrojových kódů. Tato oblast testu obsahuje testovací případy pro proces výběru, který modul plug-in pro použití pro řešení správy zdrojového kódu.
+# <a name="test-area-8-plug-in-switching"></a>Testovací oblast 8: Přepínání modulu plug-in
+@No__t_0 integrované vývojové prostředí (IDE) má uživatelské rozhraní (UI), které umožňuje změnit aktuální modul plug-in správy zdrojových kódů. Tato testovací oblast poskytuje testovací případy pro proces výběru, který modul plug-in bude použit pro správu zdrojového kódu řešení.
 
-## <a name="command-menu-access"></a>Přístup do příkazu nabídky
- Následující [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí nabídky cesty se používají v testovacích procesech.
+## <a name="command-menu-access"></a>Přístup k nabídce příkazů
+ V testovacích případech se používají následující [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] cesty nabídky integrovaného vývojového prostředí.
 
-- Aktuální modul plug-in správy zdrojů: **Nástroje** -> **možnosti** -> **správy zdrojového kódu** -> **výběr modulu Plug-in**.
+- Aktuální modul plug-in správy zdrojových kódů: **nástroje**  -> **Možnosti**  -> **Správa zdrojového kódu**  -> **výběr modulu plug-in**.
 
-- Změnit zdroj ovládací prvek vazby: **Soubor** -> **správy zdrojového kódu** -> **Změna správy zdrojového kódu**...
+- Změnit vazbu správy zdrojového kódu **:** **správa zdrojového** kódu  ->   -> **změnit správu zdrojového kódu**...
 
-## <a name="common-expected-behavior"></a>Běžné očekávané chování
- Změna modulu plug-in pro řešení správy zdrojového kódu je možné bez ukončení sady Visual Studio a znovu načíst řešení. Kromě toho aktuální modul plug-in správy zdrojového automaticky změní na použitému řešení při načtení tohoto řešení.
+## <a name="common-expected-behavior"></a>Obvyklé očekávané chování
+ Změna modulu plug-in správy zdrojového kódu pro řešení je možná bez ukončení sady Visual Studio nebo opětovného načtení řešení. Kromě toho se aktuální modul plug-in správy zdrojových kódů automaticky změní na ten, který řešení používá, když je toto řešení načteno.
 
 ## <a name="test-cases"></a>Testovací případy
- Tady jsou konkrétní testovací případy pro modul plug-in přepínání testovací oblast.
+ Níže jsou uvedené konkrétní testovací případy pro přepínání v oblasti testu modulu plug-in.
 
-### <a name="case-8a-automatic-change"></a>Případu 8a: Automaticky změnit
+### <a name="case-8a-automatic-change"></a>Případ 8a: Automatická změna
 
 #### <a name="expected-behavior"></a>Očekávané chování
- Pokud uživatel načte řešení, které je pod správou zdrojových kódů, řešení se automaticky načtou a vhodné plug-in správy zdrojových kódů je vybrán jako aktuální.
+ Když uživatel načte řešení, které je pod správou zdrojových kódů, řešení se načte automaticky a příslušný modul plug-in správy zdrojových kódů se vybere jako aktuální.
 
-| Akce | Testovací kroky | Chcete-li ověřit očekávané výsledky |
+| Akce | Testovací kroky | Očekávané výsledky k ověření |
 | - | - | - |
-| Změnit modul plug-in automatické zdroje ovládacího prvku | 1.  Výběr modulu plug-in v rámci testovacích jako aktuální (**nástroje** -> **možnosti** -> **správy zdrojových kódů** -> **modulu Plug-in Výběr**.)<br />2.  Vytvořte nový projekt.<br />3.  Přidáte řešení do správy zdrojového kódu.<br />4.  Vyberte jiný modul plug-in (například [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)]).<br />5.  Potvrďte výzvu uvolnění řešení.<br />6.  Znovu otevřete řešení z disku. | Otevření řešení.<br /><br /> Modul plug-in v rámci testu je aktuální plug-in správy zdrojových kódů. |
+| Automatická změna modulu plug-in správy zdrojového kódu | 1. Vyberte modul plug-in v části test jako aktuální (**nástroje**  -> **Možnosti**  -> **Správa zdrojového kódu**  -> **výběr modulu plug-in**.)<br />2. Vytvořte nový projekt.<br />3. Přidejte řešení do správy zdrojového kódu.<br />4. Vyberte jiný modul plug-in (například [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)]).<br />5. přijetí výzvy k uvolnění řešení.<br />6. znovu otevřete řešení z disku. | Řešení je otevřeno.<br /><br /> Modul plug-in v rámci testu je aktuálním modulem plug-in pro správu zdrojového kódu. |
 
-### <a name="case-8b-solution-based-change"></a>Případu 8b: Řešení na základě změn
+### <a name="case-8b-solution-based-change"></a>Případ 8B: Změna založená na řešení
 
 #### <a name="expected-behavior"></a>Očekávané chování
- Řešení může mít jeho přidružené plug-in správy zdrojových kódů změnit.
+ K řešení může být změněn modul plug-in správy zdrojového kódu.
 
-| Akce | Testovací kroky | Chcete-li ověřit očekávané výsledky |
+| Akce | Testovací kroky | Očekávané výsledky k ověření |
 |----------------------------------| - | - |
-| Změna modulu plug-in pro řešení | 1.  Výběr modulu plug-in v rámci testovacích jako aktuální (**nástroje** -> **možnosti** -> **správy zdrojových kódů** -> **modulu Plug-in Výběr**).<br />2.  Vytvoření nového projektu a řešení.<br />3.  Přidáte řešení do správy zdrojového kódu.<br />4.  Odpojit řešení ze správy zdrojového kódu (pomocí **změnit správu zdrojových kódů** dialogové okno).<br />5.  Vyberte jiný modul plug-in (například [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)]).<br />6.  Znovu načte řešení z disku, pokud byla uvolněna.<br />7.  Přidáte řešení do správy zdrojového kódu.<br />8.  Odpojit řešení ze správy zdrojového kódu (pomocí **změnit správu zdrojových kódů** dialogové okno).<br />9. Vyberte modul plug-in v rámci testu znovu.<br />10. Znovu načte řešení z disku, pokud byla uvolněna.<br />11. Vytvoření vazby řešení do původního umístění (pomocí **změnit správu zdrojových kódů** dialogové okno). | Přidání řešení do správy zdrojového kódu s použitím vybraného modulu plug-in. |
+| Změna modulu plug-in pro řešení | 1. Vyberte modul plug-in v části test jako aktuální (**nástroje**  -> **Možnosti**  -> **správy zdrojového kódu**  -> **výběr modulu plug-in**).<br />2. Vytvořte nový projekt a řešení.<br />3. Přidejte řešení do správy zdrojového kódu.<br />4. zrušte vazbu řešení ze správy zdrojového kódu (pomocí dialogového okna **změnit správu zdrojového kódu** ).<br />5. Vyberte jiný modul plug-in (například [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)]).<br />6. Pokud je toto řešení načtené, načtěte ho z disku.<br />7. Přidejte řešení do správy zdrojového kódu.<br />8. zrušte vazbu řešení ze správy zdrojového kódu (pomocí dialogového okna **změnit správu zdrojového kódu** ).<br />9. v části test znovu vyberte modul plug-in.<br />10. znovu načíst řešení z disku při uvolnění<br />11. Připojte řešení k původnímu umístění (pomocí dialogového okna **změnit správu zdrojového kódu** ). | Řešení se přidá do správy zdrojového kódu pomocí vybraného modulu plug-in. |
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Testovací příručka pro moduly plug-in správy zdrojového kódu](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

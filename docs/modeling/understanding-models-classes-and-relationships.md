@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 42cbc0ea5694e462faf6d3995bc68723a3f522e7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 391dff6540bcea26f63d8ea88f344455722b742a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605845"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748225"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Porozumění modelům, třídám a vztahům
 Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společně s jakýmkoli vlastním programovým kódem, který můžete napsat. Většina kódu programu v řešení DSL je vygenerována z tohoto souboru.
@@ -148,6 +148,6 @@ Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společn
 
  Odvozený vztah se specializuje na základní vztah. Třídy domény, na které odkazuje, by měly být odvozeny od nebo stejné jako třídy propojené základní relací. Je-li v modelu vytvořen odkaz odvozeného vztahu, jedná se o instanci odvozeného i základního vztahu. V programovém kódu můžete přejít na opačný konec odkazu pomocí vlastností generovaných buď základní třídou, nebo odvozenou třídou.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_memorySpaceKind | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_memorySpaceKind | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb6fca61dfaf4577f4818c84e1570739c6d63149
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 5d146df46defd0b0d052e0d65d5c40ae58a404d6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62835955"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739804"
 ---
-# <a name="idiasymbolgetmemoryspacekind"></a>IDiaSymbol::get_memorySpaceKind
-Načte druh místo paměti.
+# <a name="idiasymbolget_memoryspacekind"></a>IDiaSymbol::get_memorySpaceKind
+Načte druh paměťového prostoru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,10 +30,10 @@ HRESULT get_memorySpaceKind(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Ukazatel `DWORD` , který obsahuje typ místo paměti.
+mimo Ukazatel na `DWORD`, který obsahuje druh paměťového prostoru.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

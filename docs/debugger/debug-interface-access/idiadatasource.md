@@ -1,5 +1,5 @@
 ---
-title: Idiadatasource – | Dokumentace Microsoftu
+title: IDiaDataSource | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b8618cc3484584430bbe3ae3fde59b6e5d5fc78
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 453be1d77f1d2b1759e3de4433225cf97d026054
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838516"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744907"
 ---
 # <a name="idiadatasource"></a>IDiaDataSource
-Iniciuje přístup ke zdroji symboly ladění.
+Inicializuje přístup ke zdroji ladicích symbolů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,23 +28,23 @@ Iniciuje přístup ke zdroji symboly ladění.
 IDiaDataSource : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí
-V následující tabulce jsou uvedeny metody objektu `IDiaDataSource`.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+Následující tabulka ukazuje metody `IDiaDataSource`.
 
 |Metoda|Popis|
 |------------|-----------------|
-|[IDiaDataSource::get_lastError](../../debugger/debug-interface-access/idiadatasource-get-lasterror.md)|Načte název souboru pro poslední chyba načtení.|
-|[IDiaDataSource::loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)|Otevře a připraví soubor databáze (PDB) programu jako zdroj dat ladění.|
-|[IDiaDataSource::loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)|Otevře a ověřuje, že soubor databáze (PDB) programu odpovídá podpisu údaje; připraví soubor typu .pdb jako zdroj dat ladění.|
-|[IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)|Otevře a připraví data ladění přidružené k souboru.exe/.dll.|
-|[IDiaDataSource::loadDataFromIStream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)|Připraví data ladění uložených v souboru databáze (PDB) programu přistupovat prostřednictvím proud dat v paměti.|
-|[IDiaDataSource::openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md)|Otevře relaci pro dotazování na symboly.|
+|[IDiaDataSource::get_lastError](../../debugger/debug-interface-access/idiadatasource-get-lasterror.md)|Načte název souboru pro poslední chybu načtení.|
+|[IDiaDataSource::loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)|Otevře a připraví soubor databáze programu (PDB) jako zdroj dat pro ladění.|
+|[IDiaDataSource::loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)|Otevře a ověří, že soubor databáze programu (PDB) odpovídá poskytnutým informacím o podpisu. připraví soubor. pdb jako zdroj dat pro ladění.|
+|[IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)|Otevře a připraví ladicí data přidružená k souboru. exe/. dll.|
+|[IDiaDataSource::loadDataFromIStream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)|Připraví ladicí data uložená v souboru programové databáze (PDB), který je k dispozici prostřednictvím datového proudu v paměti.|
+|[IDiaDataSource::openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md)|Otevře relaci pro zadávání dotazů na symboly.|
 
 ## <a name="remarks"></a>Poznámky
-Volání do jedné z metod zatížení `IDiaDataSource` rozhraní otevře zdroj symbol. Úspěšné volání [idiadatasource::opensession –](../../debugger/debug-interface-access/idiadatasource-opensession.md) vrátí metoda [idiasession –](../../debugger/debug-interface-access/idiasession.md) rozhraní, které podporuje dotazování na zdroj dat. Pokud metoda zatížení vrátí chybu týkající se souborů pak bude [idiadatasource::get_lasterror –](../../debugger/debug-interface-access/idiadatasource-get-lasterror.md) metoda vrátit hodnota obsahuje název souboru, který je přidružený k chybě.
+Volání jedné z metod zatížení rozhraní `IDiaDataSource` otevře zdroj symbolu. Úspěšné volání metody [IDiaDataSource:: openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md) vrátí rozhraní [IDiaSession](../../debugger/debug-interface-access/idiasession.md) , které podporuje dotazování na zdroj dat. Pokud metoda Load vrátí chybu související se souborem, návratová hodnota metody [IDiaDataSource:: get_lastError](../../debugger/debug-interface-access/idiadatasource-get-lasterror.md) obsahuje název souboru přidruženého k chybě.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Toto rozhraní je získán voláním `CoCreateInstance` funkce s identifikátorem třídy `CLSID_DiaSource` a interface ID `IID_IDiaDataSource`. Příklad ukazuje, jak získat toto rozhraní.
+Toto rozhraní se získá voláním funkce `CoCreateInstance` s identifikátorem třídy `CLSID_DiaSource` a ID rozhraní `IID_IDiaDataSource`. Příklad ukazuje, jak se toto rozhraní získává.
 
 ## <a name="example"></a>Příklad
 
@@ -63,11 +63,11 @@ if (FAILED(hr))
 ```
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: Dia2.h
+Záhlaví: Dia2. h
 
-Knihovna: diaguids.lib
+Knihovna: diaguids. lib
 
-DLL: msdia80.dll
+Knihovna DLL: Msdia80. dll
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

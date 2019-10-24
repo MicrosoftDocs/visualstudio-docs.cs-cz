@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9c2b06e8d89405b38afe2b740ce860a78bc46cc
-ms.sourcegitcommit: 044bb54cb4552c8f4651feb11d62e52726117e75
+ms.openlocfilehash: 61905c0c6c40d893cc8723b711d67690133a7155
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661826"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738618"
 ---
 # <a name="namesearchoptions"></a>NameSearchOptions
 Určuje možnosti hledání symbolů a názvů souborů.
@@ -43,17 +43,17 @@ enum NameSearchOptions {
 ```
 
 ## <a name="elements"></a>Elementy
-`nsNone`Nejsou zadány žádné možnosti.
+`nsNone` nejsou zadány žádné možnosti.
 
-`nsfCaseSensitive`Použije shodu názvů rozlišující velká a malá písmena.
+`nsfCaseSensitive` použije shodu názvů rozlišující velikosti písmen.
 
-`nsfCaseInsensitive`Použije porovnávání názvů bez rozlišení velkých a malých písmen.
+`nsfCaseInsensitive` aplikuje shodu názvů bez rozlišení velkých a malých písmen.
 
-`nsfFNameExt`Považuje názvy za cesty a použije název souboru. přípona rozšíření se shoduje s názvem.
+`nsfFNameExt` považuje názvy za cesty a použije název souboru. přípona rozšíření se shoduje.
 
-`nsfRegularExpression`Aplikuje název rozlišovat velikost písmen pomocí hvězdičky (*) a otazníků (?) jako zástupných znaků. (Jiné běžné znaky regulárních výrazů se nepodporují.)
+`nsfRegularExpression` použije název rozlišovat velká a malá písmena pomocí hvězdičky (*) a otazníků (?) jako zástupných znaků. (Jiné běžné znaky regulárních výrazů se nepodporují.)
 
-`nsfUndecoratedName`Platí pouze pro symboly, které mají nedekorované i dekorované názvy.
+`nsfUndecoratedName` platí pouze pro symboly, které mají nedekorované i dekorované názvy.
 
 ## <a name="remarks"></a>Poznámky
 Hodnoty z tohoto výčtu jsou předány do následujících metod:
@@ -67,7 +67,7 @@ Hodnoty z tohoto výčtu jsou předány do následujících metod:
 ## <a name="requirements"></a>Požadavky
 Záhlaví: Dia2. h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)
 - [IDiaSession::findFile](../../debugger/debug-interface-access/idiasession-findfile.md)

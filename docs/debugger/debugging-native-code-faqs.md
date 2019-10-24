@@ -1,5 +1,5 @@
 ---
-title: Ladění nativního kódu nejčastější dotazy | Dokumentace Microsoftu
+title: Nejčastější dotazy k ladění nativního kódu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -20,25 +20,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28942594abb6291a7b0103b8abf1736ca68346e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 15a94d20ade7bfe3e5aaac2c90bb3ba452ef4330
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851672"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738176"
 ---
 # <a name="debugging-native-code-faqs"></a>Nejčastější dotazy k ladění nativního kódu
 Následující témata obsahují odpovědi na některé nejčastější dotazy:
 
-- [Jak mohu ladit narušení přístupu při spuštění můj samostatný Program?](../debugger/how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger-q.md)
+- [Jak mohu ladit narušení přístupu při použití samostatného programu?](../debugger/how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger-q.md)
 
 - [Jak můžu ladit narušení přístupu?](../debugger/how-can-i-debug-an-access-violation-q.md)
 
-- [Jak lze zjistit, pokud jsou moje ukazatele poškozující adresu paměti?](../debugger/how-can-i-find-out-if-my-pointers-corrupt-a-memory-address-q.md)
+- [Jak zjistím, jestli moje ukazatele poškozují adresu paměti?](../debugger/how-can-i-find-out-if-my-pointers-corrupt-a-memory-address-q.md)
 
 - [Jak zjistím, kdo předává nesprávnou hodnotu parametru?](../debugger/how-can-i-find-out-who-is-passing-a-wrong-parameter-value-q.md)
 
-- [Při volání funkce stovky časů, které nezdařených volání?](../debugger/when-calling-a-function-hundreds-of-times-how-do-i-know-which-call-failed-q.md)
+- [Při volání funkce stovky časů, které se nezdařily?](../debugger/when-calling-a-function-hundreds-of-times-how-do-i-know-which-call-failed-q.md)
 
 - [Kde najdu kódy chyb systému Win32?](../debugger/where-can-i-look-up-win32-error-codes-q.md)
 
@@ -46,8 +46,8 @@ Následující témata obsahují odpovědi na některé nejčastější dotazy:
 
 - [Jak můžu používat okna ladicího programu během ladění programu na popředí?](../debugger/how-can-i-use-debugger-windows-while-debugging-a-foreground-program-q.md)
 
-- [Při zastavení v knihovně MFC, jak získat zpět na funkci, která volala MFC?](../debugger/how-to-get-back-to-the-function-that-called-mfc-if-halted.md)
+- [Pokud je v prostředí MFC zastaveno, jak se mohu vrátit k funkci, která se nazývá MFC?](../debugger/how-to-get-back-to-the-function-that-called-mfc-if-halted.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Ladění nativního kódu](../debugger/debugging-native-code.md)

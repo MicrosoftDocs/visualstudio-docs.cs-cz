@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_offsetinudt – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_offsetInUdt | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 14832698e186e23b33862ccb1c9f22f3792a6300
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: f0eeffba743d7fae1d473c45eb350fbfc8bcd0b9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64793779"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739562"
 ---
-# <a name="idiasymbolgetoffsetinudt"></a>IDiaSymbol::get_offsetInUdt
-Načte posun k začátku uživatelem definovaný typ (UDT) člena v UDT.
+# <a name="idiasymbolget_offsetinudt"></a>IDiaSymbol::get_offsetInUdt
+Načte posun na začátek uživatelsky definovaného typu (UDT) člena v UDT.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,23 +33,23 @@ HRESULT get_offsetInUdt( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrací posun v bajtech umístění symbolu.
+mimo Vrátí posun v bajtech umístění symbolu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Tato funkce se používá jenom v místních záznamů v optimalizovaných sestavení.
+ Tato funkce se používá pouze v místních záznamech v optimalizovaném sestavení.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: Dia2.h
+ Záhlaví: Dia2. h
 
- Knihovna: diaguids.lib
+ Knihovna: diaguids. lib
 
- DLL: msdia100.dll
+ Knihovna DLL: msdia100. dll
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

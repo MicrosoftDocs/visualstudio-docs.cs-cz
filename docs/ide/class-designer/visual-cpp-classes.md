@@ -1,5 +1,5 @@
 ---
-title: Třídy jazyka Visual C++ v návrháři tříd
+title: C++Třídy v Návrhář tříd
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,14 +12,14 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 596d7a41b9f63179a0469840d948430ed0294b56
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 84fc10a3f62ea4bef82a466b2d76c46e73eb7e6e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647638"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748931"
 ---
-# <a name="visual-c-classes-in-class-designer"></a>Třídy C++ vizuálu v Návrhář tříd
+# <a name="c-classes-in-class-designer"></a>C++třídy v Návrhář tříd
 
 **Návrhář tříd** podporuje C++ třídy a vizualizuje nativní C++ třídy stejným způsobem jako obrazce Visual Basic a C# třídy, s výjimkou toho C++ , že třídy mohou mít více vztahů dědičnosti. Můžete rozbalit obrazec třídy a zobrazit tak více polí a metod ve třídě nebo ho sbalit tak, aby ušetřilo místo.
 
@@ -174,7 +174,7 @@ V následující tabulce jsou uvedeny některé příklady kanonického speciali
 
 ## <a name="see-also"></a>Viz také:
 
-- [Práce s kódem jazyka Visual C++](working-with-visual-cpp-code.md)
+- [Práce s C++ kódem](working-with-visual-cpp-code.md)
 - [Třídy a struktury](/cpp/cpp/classes-and-structs-cpp)
 - [Anonymní typy tříd](/cpp/cpp/anonymous-class-types)
 - [Vícenásobná dědičnost](https://msdn.microsoft.com/library/6td5yws2.aspx)

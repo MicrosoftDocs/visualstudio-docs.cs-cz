@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_relativevirtualaddress – | Dokumentace Microsoftu
+title: 'IDiaLineNumber:: get_relativeVirtualAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 087bd1cb40be2129853807f3f43ea0e87615c36a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 52afbcdf07c41cfa39476aa055d62f02267356a2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839784"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743181"
 ---
-# <a name="idialinenumbergetrelativevirtualaddress"></a>IDiaLineNumber::get_relativeVirtualAddress
+# <a name="idialinenumberget_relativevirtualaddress"></a>IDiaLineNumber::get_relativeVirtualAddress
 Načte relativní virtuální adresu (RVA) bloku.
 
 ## <a name="syntax"></a>Syntaxe
@@ -33,10 +33,10 @@ HRESULT get_relativeVirtualAddress ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí image relativní virtuální adresu bloku.
+mimo Vrátí virtuální adresu bloku relativní vzhledem k obrázkům.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

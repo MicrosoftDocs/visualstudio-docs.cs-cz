@@ -1,5 +1,5 @@
 ---
-title: Idiaenuminjectedsources::Next – | Dokumentace Microsoftu
+title: 'IDiaEnumInjectedSources:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aea793f33eb78ee1637d7f22eb46ba34514e0e8f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 84dd3e1d107b8e55d5e94979627d1c1586534127
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554030"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744499"
 ---
 # <a name="idiaenuminjectedsourcesnext"></a>IDiaEnumInjectedSources::Next
-Načte zadaný počet vloženého zdroje v pořadí výčtu.
+Načte zadaný počet vložených zdrojů v sekvenci výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,19 +35,19 @@ HRESULT Next ( 
 #### <a name="parameters"></a>Parametry
  celt
 
-[in] Počet vloženého zdroje v enumerátor, který se má načíst.
+pro Počet vložených zdrojů ve výčtu, který má být načten.
 
  rgelt
 
-[out] Vrátí pole [idiainjectedsource –](../../debugger/debug-interface-access/idiainjectedsource.md) objekty, které představuje požadované vloženého zdroje.
+mimo Vrátí pole objektů [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) , které představují požadované vložené zdroje.
 
  pceltFetched
 
-[out] Vrátí počet vloženého zdroje v načtených enumerátor.
+mimo Vrátí počet vložených zdrojů v načteném enumerátoru.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další vloženého zdroje. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud neexistují žádné další vložené zdroje. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

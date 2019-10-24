@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_symTag | Microsoft Docs
+title: 'IDiaSymbol:: get_symTag | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bdd4ed102718a1c81be55c848a2d3c891c0ba99
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 99f24e47ff04c6a7d37633c4f04bbd058b861cd6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64830615"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739234"
 ---
-# <a name="idiasymbolgetsymtag"></a>IDiaSymbol::get_symTag
-Načte typ třídění symbol.
+# <a name="idiasymbolget_symtag"></a>IDiaSymbol::get_symTag
+Načte klasifikátor typu symbolu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_symTag ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí hodnotu z [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) výčet, který určuje typ třídění symbol.
+mimo Vrací hodnotu z výčtu [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) , který určuje klasifikátor typu symbolu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="example"></a>Příklad
 
@@ -49,6 +49,6 @@ DWORD       tag = 0;
 pType->get_symTag( &tag );
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)

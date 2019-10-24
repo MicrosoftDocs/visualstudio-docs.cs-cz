@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsourcefiles::clone – | Dokumentace Microsoftu
+title: 'IDiaEnumSourceFiles:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 328536b64bdea2591b4ab8c242348b8304984466
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2b1e3d1dde9d58fb11bd5e06b7394eaab4cc41e9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829703"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744127"
 ---
 # <a name="idiaenumsourcefilesclone"></a>IDiaEnumSourceFiles::Clone
-Vytvoří čítač, který obsahuje stejného stavu jako aktuální enumerátor výčtu.
+Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT Clone ( 
 #### <a name="parameters"></a>Parametry
  ppenum
 
-[out] Vrátí [idiaenumsourcefiles –](../../debugger/debug-interface-access/idiaenumsourcefiles.md) objekt, který obsahuje duplicitní čítače výčtu. Zdrojový soubory nejsou duplicitní pouze enumerátor.
+mimo Vrátí objekt [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md) , který obsahuje duplikát objektu Enumerator. Zdrojové soubory nejsou duplikovány, pouze enumerátor.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsourcefiles::Skip – | Dokumentace Microsoftu
+title: 'IDiaEnumSourceFiles:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b80a2a0f270ccd76d052d4c7863170448648e138
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d7aef3ea724bbb50f0342032a62e0044a1f0eb30
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833360"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744054"
 ---
 # <a name="idiaenumsourcefilesskip"></a>IDiaEnumSourceFiles::Skip
-Vynechá zadaný počet zdrojových souborů v sekvenci výčtu.
+Přeskočí zadaný počet zdrojových souborů v sekvenci výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT Skip ( 
 #### <a name="parameters"></a>Parametry
  celt
 
-[in] Počet zdrojových souborů v pořadí výčtu pro přeskočení.
+pro Počet zdrojových souborů v sekvenci výčtu, které se mají přeskočit.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` Pokud nejsou žádné další zdrojové soubory pro přeskočení.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE`, pokud neexistují žádné další zdrojové soubory, které by bylo možné přeskočit.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)

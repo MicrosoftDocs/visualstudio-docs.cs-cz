@@ -22,12 +22,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 443d272216eaf88bcbd4dcb75c034779403f1ef7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f4a52250806d4ff3ee51f61117831f51cc4a9d7e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666619"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747672"
 ---
 # <a name="browse-and-rearrange-code-maps"></a>Procházení a změna uspořádání map kódu
 
@@ -326,7 +326,7 @@ Mapy můžete sloučit kopírováním a vložením prvků kódu mezi mapami. Pok
 
 Alternativně můžete tato sestavení nebo binární soubory přetáhnout na stejnou mapu z této složky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)
 - [Použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)

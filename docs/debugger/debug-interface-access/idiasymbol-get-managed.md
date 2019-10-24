@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_managed – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_managed | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1096487cc154e0c6addd87d3e051078bfbc84f16
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 515b8931eff37338aa53ac204c7ef61a27987aba
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64824884"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739819"
 ---
-# <a name="idiasymbolgetmanaged"></a>IDiaSymbol::get_managed
-Získá příznak, který určuje, zda symbol odkazuje na spravovaný kód.
+# <a name="idiasymbolget_managed"></a>IDiaSymbol::get_managed
+Načte příznak, který určuje, zda symbol odkazuje na spravovaný kód.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_managed ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` Pokud symbol se odkazuje na spravovaný kód; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud symbol odkazuje na spravovaný kód. v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

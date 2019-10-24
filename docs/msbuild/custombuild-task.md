@@ -1,5 +1,5 @@
 ---
-title: Úloha CustomBuild | Dokumentace Microsoftu
+title: Úloha CustomBuild | Microsoft Docs
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -11,33 +11,33 @@ dev_langs:
 - jsharp
 - C++
 helpviewer_keywords:
-- MSBuild (Visual C++), CustomBuild task
-- CustomBuild task (MSBuild (Visual C++))
+- MSBuild (C++), CustomBuild task
+- CustomBuild task (MSBuild (C++))
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - multiple
-ms.openlocfilehash: 04f33f3852f051e1f492cb2b6dca44fcdb260e11
-ms.sourcegitcommit: 32144a09ed46e7223ef7dcab647a9f73afa2dd55
+ms.openlocfilehash: 678068d1b6acc055fa65e6d0305b07152ed28695
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67587007"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748102"
 ---
-# <a name="custombuild-task"></a>CustomBuild úkolu
+# <a name="custombuild-task"></a>CustomBuild – úloha
 
-Zabalí nástroj kompilátoru Visual C++ cmd.exe. Tato třída je odvozena z [TrackedVCToolTask](../msbuild/trackedvctooltask-base-class.md), ale nepoužívá sledování souborů ke zjištění závislostem. Všechny závislosti by měl být explicitně zadané jako AdditionalDependencies pro přírůstkové sestavení funguje správně.
+Zabalí nástroj Microsoft C++ Compiler Tool, cmd. exe. Tato třída je odvozena z [TrackedVCToolTask](../msbuild/trackedvctooltask-base-class.md), ale nepoužívá sledování souborů k zjišťování závislostí souborů. Všechny závislosti by měly být explicitně zadány jako AdditionalDependencies pro správné fungování přírůstkového sestavení.
 
 ## <a name="parameters"></a>Parametry
 
-Následující tabulka popisuje parametry **CustomBuild** úloh.
+Následující tabulka popisuje parametry úlohy **CustomBuild** .
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**BuildSuffix**|Volitelné **řetězec** parametru.|
-|**Zdroje**|Vyžaduje **[] ITaskItem** parametru.|
-|**TrackerLogDirectory**|Volitelné **řetězec** parametru.|
+|**BuildSuffix**|Volitelný **řetězcový** parametr.|
+|**Prostředky**|Povinný parametr **ITaskItem []** .|
+|**TrackerLogDirectory**|Volitelný **řetězcový** parametr.|
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+[Odkaz na úkol](../msbuild/msbuild-task-reference.md)

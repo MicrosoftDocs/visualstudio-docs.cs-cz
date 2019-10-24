@@ -1,5 +1,5 @@
 ---
-title: Idiaenumlinenumbers::get_count – | Dokumentace Microsoftu
+title: 'IDiaEnumLineNumbers:: get_Count | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33078226c0610d0d992147e2ce4bec3697e3b3ae
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 45e062f8ad2842634eabcb2c71ed69fd9ce35673
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829882"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744429"
 ---
-# <a name="idiaenumlinenumbersgetcount"></a>IDiaEnumLineNumbers::get_Count
-Získá počet čísel řádků.
+# <a name="idiaenumlinenumbersget_count"></a>IDiaEnumLineNumbers::get_Count
+Načte počet čísel řádků.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,11 +33,11 @@ HRESULT get_Count ( 
 #### <a name="parameters"></a>Parametry
  pRetVal
 
-[out] Vrátí počet čísel řádků.
+mimo Vrátí počet čísel řádků.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 - [IDiaEnumLineNumbers::Item](../../debugger/debug-interface-access/idiaenumlinenumbers-item.md)

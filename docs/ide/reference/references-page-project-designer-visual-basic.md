@@ -15,12 +15,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a92523f182300c17a3e6b08ad04ba2b6049be6c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2ca3d54a7e2643baebe44e0f2756d6ae65eb228d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655641"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747801"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>Stránka Odkazy, návrhář projektu (Visual Basic)
 
@@ -88,7 +88,7 @@ V seznamu obory názvů vyberte obor názvů zadaný uživatelem, zadejte název
 
 - Obory názvů XML, například `<xmlns:xsl="http://www.w3.org/1999/XSL/Transform">`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Správa odkazů v projektu](../../ide/managing-references-in-a-project.md)
 - [Postupy: Přidání nebo odebrání importovaných oborů názvů (Visual Basic)](../../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md)

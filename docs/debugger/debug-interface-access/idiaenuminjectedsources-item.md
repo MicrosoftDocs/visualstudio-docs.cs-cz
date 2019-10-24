@@ -1,5 +1,5 @@
 ---
-title: Idiaenuminjectedsources::Item – | Dokumentace Microsoftu
+title: 'IDiaEnumInjectedSources:: Item | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fd803520a6b6bb58679dd30dbf913450ce6066a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 91be2f4f437cfeed30b0741d10bf719ba0ed2b71
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833567"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744506"
 ---
 # <a name="idiaenuminjectedsourcesitem"></a>IDiaEnumInjectedSources::Item
-Načte vložený zdroj pomocí indexu.
+Načte vložený zdroj prostřednictvím indexu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,15 +34,15 @@ HRESULT Item ( 
 #### <a name="parameters"></a>Parametry
  index
 
-[in] Index o [idiainjectedsource –](../../debugger/debug-interface-access/idiainjectedsource.md) objekt, který se má načíst. Index je rozsahu 0 až `count`-1, kde `count` je vrácený [idiaenuminjectedsources::get_count –](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md) metody.
+pro Index objektu [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) , který se má načíst Index je rozsah 0 až `count`-1, kde `count` vrací metoda [IDiaEnumInjectedSources:: get_Count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md) .
 
  injectedSource
 
-[out] Vrátí [idiainjectedsource –](../../debugger/debug-interface-access/idiainjectedsource.md) objekt představující vložené zdroje.
+mimo Vrátí objekt [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) představující vložený zdroj.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

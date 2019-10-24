@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_share – | Dokumentace Microsoftu
+title: 'IDiaSectionContrib:: get_share | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b3a77ec9f1b088b135b3947250841d10eb9aa169
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2ecdb0bf3690f1f61da68fb1976945d196add02e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839638"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742511"
 ---
-# <a name="idiasectioncontribgetshare"></a>IDiaSectionContrib::get_share
-Získá příznak, který označuje, zda je možné sdílet části v paměti.
+# <a name="idiasectioncontribget_share"></a>IDiaSectionContrib::get_share
+Načte příznak, který označuje, jestli se oddíl může sdílet v paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_share ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out] Vrátí `TRUE` oddíl je ke sdílení v paměti; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE`, pokud je oddíl sdílen v paměti. v opačném případě vrátí `FALSE`.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

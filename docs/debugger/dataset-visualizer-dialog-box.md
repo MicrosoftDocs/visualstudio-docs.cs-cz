@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno vizualizér datasetu | Dokumentace Microsoftu
+title: Dialogové okno Vizualizér datových sad | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -19,22 +19,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e4086c473270befcf2213f003e516128b45c4227
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1e215d4a52965b4e89bc3a01b15da57fc8919437
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62563543"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745592"
 ---
 # <a name="dataset-visualizer-dialog-box"></a>Dialogové okno Vizualizér DataSetu
-Vizualizér datasetu vám umožní zobrazit obsah objektu datové sady, datové tabulky, zobrazení dat nebo objekt DataViewManager. Tento vizualizér se zpřístupní po kliknutí na ikonu lupy, které se zobrazí vedle hodnoty pro jeden z těchto objektů v okně ladicího programu proměnné nebo v datovém tipu.
+Vizualizér DataSet umožňuje zobrazit obsah objektu DataSet, DataTable, DataView nebo objektu DataViewManager. K tomuto Vizualizér máte přístup kliknutím na ikonu lupy, která se zobrazí vedle hodnoty pro jeden z těchto objektů v okně proměnné ladicího programu nebo v DataTip.
 
- Objekty v tento vizualizér můžou měnit. Změny se uloží, poté, co jste se zavázali řádek.
+ V tomto Vizualizér můžete provádět změny objektů. Změny se uloží hned po potvrzení řádku.
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
- Tabulky pomocí tohoto rozevíracího seznamu vyberte tabulku v datové sadě, kterou chcete vizualizovat.
+ Tabulka: pomocí tohoto rozevíracího seznamu můžete vybrat tabulku v rámci datové sady, kterou chcete vizualizovat.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Vytváření vlastních vizualizérů](../debugger/create-custom-visualizers-of-data.md)

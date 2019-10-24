@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 665e778fc0881ac05e165c85700d15285622c762
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: a4d11875a7ab2ca3f21f364308580a732b7516e6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186354"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737933"
 ---
 # <a name="edit-and-continue-visual-c"></a>Upravit a pokračovat (Visual C#)
  S úpravou a pokračováním pro C#můžete provádět změny kódu v režimu pozastavení při ladění. Změny lze použít bez nutnosti zastavit a znovu spustit ladicí relaci. V režimu spuštění je zdrojový Editor určen jen pro čtení.
@@ -36,9 +36,9 @@ ms.locfileid: "71186354"
 
  Když je povolená možnost upravit a pokračovat, podporované změny se použijí automaticky, když použijete příkaz pro spuštění ladicího programu, jako je například **pokračovat**, **Krok**, **nastavit další příkaz**nebo provést vyhodnocení funkce v okně ladicího programu.
 
- Další informace najdete v tématu [jak: Použijte úpravy a pokračování (C#)](../debugger/how-to-use-edit-and-continue-csharp.md).
+ Další informace najdete v tématu [Postupy: použití funkce upravit a pokračovat (C#)](../debugger/how-to-use-edit-and-continue-csharp.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Postupy: Použití operace Upravit a pokračovat (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)
 - [Podporované změny kódu (C# a Visual Basic)](../debugger/supported-code-changes-csharp.md)
 - [Zápis a ladění spuštěného kódu XAML pomocí programu XAML Hot reloading v aplikaci Visual Studio](../debugger/xaml-hot-reload.md)

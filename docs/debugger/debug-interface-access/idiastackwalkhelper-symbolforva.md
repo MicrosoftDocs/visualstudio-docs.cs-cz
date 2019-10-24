@@ -1,5 +1,5 @@
 ---
-title: Idiastackwalkhelper::symbolforva – | Dokumentace Microsoftu
+title: 'IDiaStackWalkHelper:: symbolForVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01c457947eb84859f2ce92378688dd03c624c86d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f646616fddc0e7727ef9e8e80d9c29fbcba6ebc0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837885"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741327"
 ---
 # <a name="idiastackwalkhelpersymbolforva"></a>IDiaStackWalkHelper::symbolForVA
 Načte symbol, který obsahuje zadanou virtuální adresu.
@@ -34,15 +34,15 @@ HRESULT symbolForVA( 
 #### <a name="parameters"></a>Parametry
  `va`
 
-[in] Virtuální adresu, která je součástí požadované symbol. Musí být symbol `SymTagFunctionType` (hodnoty z [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) výčet).
+pro Virtuální adresa, která je obsažena v požadovaném symbolu. Symbol musí být `SymTagFunctionType` (hodnota z výčtu [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) ).
 
  `ppSymbol`
 
-[out] [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt představující symbol na zadané adrese.
+mimo Objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) , který představuje symbol na zadané adrese.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

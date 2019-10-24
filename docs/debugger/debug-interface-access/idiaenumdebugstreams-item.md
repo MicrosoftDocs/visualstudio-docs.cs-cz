@@ -1,5 +1,5 @@
 ---
-title: Idiaenumdebugstreams::Item – | Dokumentace Microsoftu
+title: 'IDiaEnumDebugStreams:: Item | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f07ecb151b6bf2cd4a9d48fbe6596bc7a533f97a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7a07669e36d397550c28d1cc4a5de2ad300763e6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838256"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744745"
 ---
 # <a name="idiaenumdebugstreamsitem"></a>IDiaEnumDebugStreams::Item
-Načte datový proud ladění index nebo název.
+Načte datový proud ladění prostřednictvím indexu nebo názvu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,14 +34,14 @@ HRESULT Item (
 #### <a name="parameters"></a>Parametry
 index
 
-[in] Index nebo název datový proud ladění se má načíst. Pokud varianta celé číslo se používá, musí být v rozsahu 0 až `count`-1, kde `count` je vrácená rozhraním [idiaenumdebugstreams::get_count –](../../debugger/debug-interface-access/idiaenumdebugstreams-get-count.md) metody.
+pro Index nebo název streamu ladění, který se má načíst Je-li použita celočíselná varianta, musí být v rozsahu 0 až `count`-1, kde `count` je vráceno metodou [IDiaEnumDebugStreams:: get_Count](../../debugger/debug-interface-access/idiaenumdebugstreams-get-count.md) .
 
 datový proud
 
-[out] Vrátí [idiaenumdebugstreamdata –](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) reprezentující datový proud ladění zadaného objektu.
+mimo Vrátí objekt [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) představující zadaný datový proud ladění.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
 
@@ -69,6 +69,6 @@ IDiaEnumDebugStreamData *GetStreamData(IDiaEnumDebugStreams *pStreamList,
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)
 - [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)
