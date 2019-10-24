@@ -42,12 +42,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c33ccbaa21008ab3fa3d1122847c5e18708f9fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 22ab23911baab30c7617525d318795b1be708bb9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666354"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747841"
 ---
 # <a name="options-dialog-box-text-editor--all-languages"></a>Dialogové okno Možnosti: textový editor \> všechny jazyky
 
@@ -124,7 +124,7 @@ Toto nastavení nemá žádný vliv na kopírování nebo vyjmutí, pokud řáde
 > [!TIP]
 > Chcete-li zobrazit indikátory pro mezery, tabulátory a konce řádků, a odlišit odsazené řádky od řádků, které jsou zcela prázdné, v nabídce **Upravit** vyberte možnost **Upřesnit** a zvolte možnost **Zobrazit prázdné znaky**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Možnosti, Textový editor, Všechny jazyky, Tabulátory](../../ide/reference/options-text-editor-all-languages-tabs.md)
 - [Obecné, Prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)

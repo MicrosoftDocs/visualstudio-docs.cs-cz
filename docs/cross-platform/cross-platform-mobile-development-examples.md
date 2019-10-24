@@ -12,14 +12,14 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 31619757684811fb5090e6edb05c464be59fa4dd
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: 8eb8b53da30f0c0896ac9576407d34f9a2f9bdbc
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589003"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777713"
 ---
-# <a name="cross-platform-mobile-development-examples"></a>Příklady vývoje mobilních aplikací pro různé platformy
+# <a name="cross-platform-mobile-development-examples"></a>Příklady vývoje multiplatformních mobilních řešení
 
 Některé z šablon nainstalovaných **mobilním vývojem s C++**  využitím úlohy generují kompletní příklady, ze kterých můžete získat informace. Centrum vývojářů pro Windows navíc obsahuje několik ukázkových aplikací, které si můžete stáhnout a vyzkoušet v aplikaci Visual Studio.
 
