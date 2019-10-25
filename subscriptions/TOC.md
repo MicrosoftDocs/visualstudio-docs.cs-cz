@@ -25,7 +25,7 @@
 ### [Kontaktování správce předplatných](contact-my-admin.md)
 ### Výhody
 #### Nástroje
-##### [Kredit Azure](vs-azure.md)
+##### [Individuální kredit v Azure DevTest](vs-azure.md)
 ##### [Azure DevOps](vs-azure-devops.md)
 ##### [Průběžné platby za Azure](vs-azure-payg.md)
 ##### [CAST Highlight](vs-cast.md)
