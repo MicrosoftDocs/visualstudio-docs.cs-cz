@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/31/2019
 ms.topic: conceptual
 description: Naučte se aktivovat předplatné Parasoft Virtualization/SOA Test Professional, které je součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 64aa689780dc30a5a6fcadf3e31ec24d3289056a
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: a1bd6525df65ee8cc0c9f3dd9dfd60673dbb6df1
+ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787721"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816472"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Parasoft Virtualization/SOAtest Professional Desktop v předplatných sady Visual Studio
 
@@ -23,11 +23,11 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 
 2. Vyhledejte dlaždici Parasoft v části nástroje a klikněte na odkaz **získat kód** v dolní části dlaždice výhody.   Obdržíte oznámení, že kód byl úspěšně načten.  Klikněte na tlačítko **aktivovat**.
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice výhod Parasoft](_img/vs-parasoft/vs-parasoft-tile.png)
+   > Dlaždice výhody ![Parasoft](_img/vs-parasoft/vs-parasoft-tile.png)
 
 3. Budete přesměrováni na web Parasoft, kde vytvoříte účet.  Stačí zadat kontaktní informace a kliknout na **Odeslat**.
    > [!div class="mx-imgBorder"]
-   > ![Parasoft výhody vytváření účtů](_img/vs-parasoft/vs-parasoft-new-account.png)
+   > Účet ![Parasoft výhody vytvořit účet](_img/vs-parasoft/vs-parasoft-new-account.png)
 
    > [!Note]
    > Tabulka na stránce zobrazuje ceny za celý rok a navíc slevu sady Visual Studio. Tyto ceny budou platit po použití předplatného po dobu šesti měsíců.  
@@ -38,7 +38,7 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 
 6. Klikněte na odkaz, který odpovídá vašemu operačnímu systému.
    > [!div class="mx-imgBorder"]
-   > ![Uvítací E-mail pro Parasoft zvýhodnění](_img/vs-parasoft/vs-parasoft-email.png)
+   > Uvítací E-mail pro ![zvýhodnění Parasofte](_img/vs-parasoft/vs-parasoft-email.png)
 
 7. V závislosti na tom, který prohlížeč používáte, se můžete setkat s různými dialogy, které vám poskytnou možnost spustit instalační program.  V Internet Exploreru se například zobrazí seznam posledních souborů ke stažení s parasoft_soavirt_ 9.10.2 _win32_x86_64. exe, který je uvedený v horní části. Kliknutím na **Spustit** spusťte instalační program.
 
@@ -46,9 +46,9 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 
 9. Vyberte požadovaný jazyk a klikněte na tlačítko **OK**.
 
-10. Spustí se Průvodce instalací nástroje Parasoft SOAtest & Virtualization.  Klikněte na **Další**.
+10. Spustí se Průvodce instalací nástroje Parasoft SOAtest & Virtualization.  Klikněte na tlačítko **Další**.
     > [!div class="mx-imgBorder"]
-    > ![Začátek instalace výhody Parasoft](_img/vs-parasoft/vs-parasoft-start-install.png)
+    > ![spuštění instalace výhod Parasofta](_img/vs-parasoft/vs-parasoft-start-install.png)
 
 11. Klikněte na **Přijímám smlouvu**a pak klikněte na **Další**.
 
@@ -73,13 +73,13 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 | Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  Ano       |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                           |Není k dispozici         |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                           |Není k dispozici         |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                                           |Není k dispozici         |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |Není k dispozici|
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                           |NÁ         |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                           |NÁ         |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                                           |NÁ         |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |NÁ|
 ||
 
-<sup></sup>1*zahrnuje:   Microsoft Partner Network (Enterprise).  Vyloučí  Ne pro účely opětovného prodeje (NFR), Visual Studio Industry Partner (VSIP), ekvivalent, MCT software & Services, vývojář, BizSpark, představte, (MVP), oblastní ředitel (RD).  MCT software & služby.*
+<sup>1</sup>  *zahrnuje: Microsoft Partner Network (Enterprise).  Nezahrnuje se: ne pro účely opětovného prodeje (NFR), Visual Studio Industry Partner (VSIP), ekvivalent, MCT software & Services Developer, BizSpark, představte, nejčastější profesionální specialista (MVP), regionální ředitel (RD).  MCT software & služby.*
 
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
@@ -88,8 +88,8 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 - Potřebujete pomáhat s produkty v Parasoft?  Podívejte se na tyto prostředky:
   - Technická podpora: https://www.parasoft.com/support/
   - Centrum prostředků Parasoft: https://www.parasoft.com/resources/
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu](https://visualstudio.microsoft.com/subscriptions/support/)předplatných sady Visual Studio
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="next-steps"></a>Další postup
-Využijte své vlastní vývojové prostředí pro vývoj tím, že aktivujete [kredity Azure](vs-azure.md). 
+## <a name="next-steps"></a>Další kroky
+Využijte svůj vlastní vývojový prostor pro vývoj tím, že aktivujete svůj [jednotlivý kredit Azure DevTest](vs-azure.md). 

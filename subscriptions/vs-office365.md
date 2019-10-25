@@ -6,12 +6,12 @@ manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
 description: Přečtěte si o výhodách Office 365 zahrnutých v některých předplatných sady Visual Studio.
-ms.openlocfilehash: ae28df2f66ff976fffd44f42c3063f790db9feb3
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: 65a071cbfcdc31ca2ef8a36ac5a779fc99467c17
+ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787924"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816462"
 ---
 # <a name="office-365-proplus-in-visual-studio-subscriptions"></a>Office 365 ProPlus v předplatných sady Visual Studio
 
@@ -24,18 +24,18 @@ Pomocí těchto kroků si stáhněte a aktivujte Office 365 ProPlus:
 2. Klikněte na kartu **stažené soubory** .
 3. Zobrazí se seznam doporučených souborů ke stažení. V seznamu kancelář vyberte možnost **Office 365**.
    > [!div class="mx-imgBorder"]
-   > ![Soubory ke stažení pro Office 365](_img/vs-office365/vs-office365-downloads.png)
+   > ![Office 365 stahuje](_img/vs-office365/vs-office365-downloads.png)
 0. K instalaci Office 365 ProPlus budete potřebovat kód Product Key.  V seznamu Office 365 klikněte na odkaz **získat klíč** .
    > [!div class="mx-imgBorder"]
    > ![Office 365 získat kód Product Key](_img/vs-office365/vs-office365-get-key.png)
 0. V okně se zobrazí všechny klíče, které jste už uvedli, a také ty, které máte k dispozici.  Pokud chcete získat nový klíč, klikněte na **klíč deklarací** v seznamu **Office Professional Plus 2019** .
    > [!div class="mx-imgBorder"]
-   > ![Product Key pro deklaraci identity Office 365](_img/vs-office365/vs-office365-claim-key.png)
+   > ![produktového kódu deklarace identity Office 365](_img/vs-office365/vs-office365-claim-key.png)
 0. Poznamenejte si klíč, který jste právě nažádali. (Pokud se chcete podívat znovu, můžete se kdykoli vrátit do tohoto seznamu.)
 0. Zavřete okno pro rozběhu.
 0. Klikněte na tlačítko **Stáhnout** .
    > [!div class="mx-imgBorder"]
-   > ![Stažení Office 365 Start](_img/vs-office365/vs-office365-download-button.png)
+   > ![Office 365 Start stažení](_img/vs-office365/vs-office365-download-button.png)
 0. Přihlaste se pomocí svého účet Microsoft. (Pokud už jste přihlášení, klikněte na **Další**.)
 0. Zadejte kód Product Key, zemi nebo oblast a pak klikněte na **Další**.
    > [!div class="mx-imgBorder"]
@@ -43,7 +43,7 @@ Pomocí těchto kroků si stáhněte a aktivujte Office 365 ProPlus:
 0. Znovu klikněte na tlačítko **Další** .
 0. Kliknutím na **instalovat** nainstalujete aplikace Office.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Pokud plánujete vývoj aplikací pro Office, budete chtít aktivovat [předplatné vývojářů pro Office](vs-office-dev.md) .
 
@@ -59,20 +59,20 @@ Pokud plánujete vývoj aplikací pro Office, budete chtít aktivovat [předplat
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | Není k dispozici |
 |  |
 
-<sup></sup>1*zahrnuje:    Neprodejné (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), ekvivalent, MCT software & Services Developer, BizSpark, nejvíc hodnotný Professional (MVP), oblastní ředitel (RD), MCT software & Services, Představte si, Microsoft Partnerská síť.*
+<sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), ekvivalent, MCT software & Services Developer, BizSpark, nejvíc HODNOTNÝ Professional (MVP), oblastní ředitel (RD), MCT software & Služby, Představte si Microsoft Partner Network.*
 
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
 
-Nejste si jistí, jaké Předplatné používáte?  Připojte se [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) a zobrazte všechna předplatná přiřazená k vaší e-mailové adrese. Pokud nevidíte všechna Vaše předplatná, může být jedna nebo více přiřazená k jiné e-mailové adrese.  K zobrazení těchto předplatných se budete muset přihlásit pomocí této e-mailové adresy.
+Nejste si jistí, jaké Předplatné používáte?  Pokud chcete zobrazit všechna předplatná přiřazená k vaší e-mailové adrese, připojte se k [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) . Pokud nevidíte všechna Vaše předplatná, může být jedna nebo více přiřazená k jiné e-mailové adrese.  K zobrazení těchto předplatných se budete muset přihlásit pomocí této e-mailové adresy.
 
 ## <a name="support-resources"></a>Prostředky podpory
-- Technickou podporu pro všechny komponenty EMS https://support.microsoft.com/allproducts najdete v části a výběr produktu.
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu](https://visualstudio.microsoft.com/subscriptions/support/)předplatných sady Visual Studio
+- Technickou podporu pro všechny komponenty EMS najdete na https://support.microsoft.com/allproducts a vyberte produkt.
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 Nezapomeňte tyto skvělé výhody aktivovat, abyste mohli využít maximum vašeho předplatného sady Visual Studio:
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
-- [Kredity Azure](vs-azure.md)
+- [Individuální kredit Azure DevTest](vs-azure.md)

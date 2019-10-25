@@ -1,6 +1,6 @@
 ---
 title: Testování částí JavaScript a TypeScript
-description: Visual Studio poskytuje podporu testování částí JavaScriptu a kódu TypeScript pomocí nástrojů Node. js Tools for Visual Studio.
+description: Visual Studio poskytuje podporu testování částí JavaScriptu a kódu TypeScript pomocí Node.js Tools for Visual Studio
 ms.date: 06/06/2018
 ms.topic: conceptual
 ms.devlang: javascript
@@ -11,23 +11,23 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: b1ef763295db7673896189ce000ed59d5da5becf
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: 90a440ce88690c12792c17729e93f9fa287dabb6
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787980"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888634"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Testování částí JavaScriptu a TypeScript v aplikaci Visual Studio
 
 Nástroje Node. js Tools for Visual Studio umožňují psát a spouštět testy jednotek pomocí některých z oblíbených rozhraní JavaScript, aniž by bylo nutné přepnout na příkazový řádek.
 
 Podporované architektury:
-* Mocha ([mochajs.org](http://mochajs.org/))
-* Jasmine ([Jasmine.github.io](https://jasmine.github.io/))
-* Pásky ([github.com/substack/tape](https://github.com/substack/tape))
+* Mocha ([mochajs.org](https://mochajs.org/))
+* Jednotek Jasmine ([Jasmine.GitHub.IO](https://jasmine.github.io/))
+* Páska ([GitHub.com/substack/Tape](https://github.com/substack/tape))
 * Jest ([jestjs.IO](https://jestjs.io/))
-* Exportovat Runner (Toto rozhraní je specifické pro Node. js Tools for Visual Studio)
+* Exportovat Runner (Toto rozhraní je specifické pro Node.js Tools for Visual Studio)
 
 > [!WARNING]
 > Problém v pásce aktuálně brání spuštění testů pásky. Pokud se sloučí [#361 PR](https://github.com/substack/tape/pull/361) , problém by se měl vyřešit.
@@ -65,17 +65,17 @@ describe('Test Suite 1', function() {
 
 Pokud jste nenastavili možnosti testu jednotek ve vlastnostech projektu, je nutné zajistit, aby vlastnost **testovacího rozhraní** v okně **vlastnosti** byla nastavena na správné testovací rozhraní pro soubory testů jednotek. To se provádí automaticky pomocí šablon souborů testu jednotek.
 
-![Rozhraní pro testování](../javascript/media/UnitTestsFrameworkMocha.png)
+![Testovací rozhraní](../javascript/media/UnitTestsFrameworkMocha.png)
 
 > [!Note]
 > Možnosti testu jednotek budou mít přednost před nastaveními pro jednotlivé soubory.
 
-Po otevření Průzkumníka testů (zvolte **testovací** > **Windows** > **Průzkumník testů**), Visual Studio zjistí a zobrazí testy. Pokud testy nejsou zpočátku zobrazeny, pak znovu sestavte projekt, aby se seznam aktualizoval.
+Po otevření Průzkumníka testů (zvolit **test** > **Windows** > **Průzkumník testů**), Visual Studio zjistí a zobrazí testy. Pokud testy nejsou zpočátku zobrazeny, pak znovu sestavte projekt, aby se seznam aktualizoval.
 
 ![Průzkumník testů](../javascript/media/UnitTestsDiscoveryMocha.png)
 
 > [!NOTE]
-> Nepoužívejte `outdir` možnost ani `outfile` v souboru *tsconfig. JSON*, protože Průzkumník testů nebude moci nalézt testy jednotek v souborech TypeScript.
+> Nepoužívejte možnost `outdir` ani `outfile` v souboru *tsconfig. JSON*, protože Průzkumník testů nebude moci nalézt testy jednotek v souborech TypeScript.
 
 ## <a name="run-tests"></a>Spouštění testů
 
@@ -86,7 +86,7 @@ Můžete spustit testy v aplikaci Visual Studio 2017 nebo z příkazového řád
 Testy můžete spustit kliknutím na odkaz **Spustit vše** v Průzkumníku testů. Nebo můžete spustit testy tak, že vyberete jeden nebo více testů nebo skupin, kliknete pravým tlačítkem myši a vyberete možnost **Spustit vybrané testy** z místní nabídky. Testy běží na pozadí a Průzkumník testů automaticky aktualizuje a zobrazí výsledky. Kromě toho můžete také ladit vybrané testy výběrem možnosti **ladit vybrané testy**.
 
 > [!Warning]
-> Ladění testů jednotek pomocí uzlu 8 + v současné době funguje pouze pro testovací soubory jazyka JavaScript, testovací soubory TypeScript neumožní volání zarážek. Alternativním řešením je použití `debugger` klíčového slova.
+> Ladění testů jednotek pomocí uzlu 8 + v současné době funguje pouze pro testovací soubory jazyka JavaScript, testovací soubory TypeScript neumožní volání zarážek. Alternativním řešením je použití klíčového slova `debugger`.
 
 > [!NOTE]
 > V současné době nepodporujeme testy profilování nebo pokrytí kódu.
@@ -141,7 +141,7 @@ Tato složka musí obsahovat soubor JavaScriptu se stejným názvem, který vyex
 * `find_tests`
 * `run_tests`
 
-Dobrý příklad `find_tests` `run_tests` a implementace naleznete v tématu implementace pro rozhraní Mocha pro testování částí v:
+Dobrý příklad `find_tests` a implementace `run_tests` naleznete v tématu implementace pro rozhraní testování částí Mocha v:
 
 `<VisualStudioFolder>\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter\TestFrameworks\mocha\mocha.js`
 

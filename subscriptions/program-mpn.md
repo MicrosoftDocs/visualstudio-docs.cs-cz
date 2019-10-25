@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
 description: Podrobnosti o tom, jaká předplatná jsou nabízená, jaká pravidla se použijí a kolik předplatných se nabízí v programu MPN.
-ms.openlocfilehash: 063c0348af226f0cbe06256426352edac7124b11
-ms.sourcegitcommit: b761a4a457646d04adfda510c8837734ee4d8f17
+ms.openlocfilehash: e32ae547327c4e51b7d49f6dffe9130afa843c49
+ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929760"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816564"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Předplatná sady Visual Studio nabízená partnerům v Microsoft Partner Network (MPN)
 
@@ -57,7 +57,7 @@ Pomocí sady Action Pack získají partneři **3 Visual Studio Professional (MPN
 
 Předplatitelé Visual Studio Professional (MPN) mohou také stahovat a používat software pro vývoj, včetně edice SQL Server Developer.
 
-Předplatné Visual Studio Professional (MPN) nezahrnuje Azure DevOps Services výhody, měsíční kredity Azure, technickou podporu, školení nebo jiné výhody pro předplatitele, které jsou dostupné v předplatných sady Visual Studio, které jsou nabízeny. komerčně.
+Předplatné Visual Studio Professional (MPN) nezahrnuje Azure DevOps Services výhody, kredity Azure DevTest individiaul, technickou podporu, školení nebo jiné výhody pro předplatitele, které jsou k dispozici v předplatných sady Visual Studio. nabídka komerčního obchodu.
 
 ## <a name="internal-use-only-restriction"></a>Omezení jenom pro interní použití
 

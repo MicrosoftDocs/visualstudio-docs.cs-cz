@@ -1,5 +1,5 @@
 ---
-title: JavaScript a TypeScript ve Visual Studio 2019
+title: JavaScript a TypeScript v aplikaci Visual Studio 2019
 ms.date: 03/27/2019
 ms.technology: vs-javascript
 ms.topic: conceptual
@@ -11,35 +11,35 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 3000510c6bb6079629a3df05909417593569c932
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3412e1d27a365a6c6302c56ada865f33a436b639
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62553252"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888623"
 ---
-# <a name="javascript-and-typescript-in-visual-studio-2019"></a>JavaScript a TypeScript ve Visual Studio 2019
+# <a name="javascript-and-typescript-in-visual-studio-2019"></a>JavaScript a TypeScript v aplikaci Visual Studio 2019
 
 ## <a name="overview"></a>Přehled
 
-Visual Studio 2019 poskytuje Rozsáhlá podpora vývoji v jazyce JavaScript, jak přímo pomocí JavaScriptu a také pomocí [programovacího jazyka TypeScript](http://www.typescriptlang.org), který byl vyvinut zajistit produktivitu a zajímavější JavaScript vývojové prostředí, zejména v případě, že vývoj projektů ve velkém měřítku. Můžete napsat kód jazyka JavaScript nebo TypeScript v sadě Visual Studio pro mnoho typů aplikací a služeb.
+Visual Studio 2019 nabízí bohatou podporu pro vývoj v JavaScriptu, a to jak přímo pomocí JavaScriptu, tak i pomocí [programovacího jazyka TypeScript](http://www.typescriptlang.org/), který byl vyvinutý za účelem zajištění produktivnějšího a užívejte vývoje JavaScriptu. zkušenosti, zejména při vývoji projektů ve velkém měřítku. V aplikaci Visual Studio můžete psát kód JavaScript nebo TypeScript pro mnoho typů aplikací a služeb.
 
 ## <a name="javascript-language-service"></a>Služba jazyka JavaScript
 
-Prostředí jazyka JavaScript v aplikaci Visual Studio 2019 používá stejný modul, který poskytuje podporu TypeScript. To poskytuje lepší podporu funkcí, kombinujícím a integrace okamžitě out-of-the-box.
+Prostředí JavaScript v aplikaci Visual Studio 2019 používá stejný modul, který poskytuje podporu TypeScript. Díky tomu získáte lepší podporu funkcí, bohatou škálu a integraci hned předem.
 
-Obnovit starší službě jazyka JavaScript je již k dispozici. Uživatelé teď mají nové JavaScript language služby out-of-the-box. Nová jazyková služba je založen výhradně na službě jazyka TypeScript, který používá statické analýzy. Umožňuje nám to poskytují lepší nástroje, takže kódu jazyka JavaScript využívat propracovanější IntelliSense podle definice typu. Tato nová služba je nenáročná a využívá méně paměti, než je starší verze služby, poskytuje lepší výkon jako škálování vašeho kódu. Vylepšili jsme také výkon služby jazyka ke zpracování větší projekty.
+Možnost obnovení starší verze služby jazyka JavaScript již není k dispozici. Uživatelé teď mají novou službu JavaScript Language Service. Nová jazyková služba je založená výhradně na službě jazyka TypeScript, která využívá statickou analýzu. Díky tomu můžeme poskytovat lepší nástroje, takže váš kód JavaScriptu může využít bohatší technologii IntelliSense na základě definic typů. Nová služba je odlehčená a spotřebovává méně paměti než starší služba, což vám poskytne lepší výkon při škálování kódu. Vylepšili jsme také výkon služby jazyka, aby bylo možné zpracovávat větší projekty.
 
-## <a name="typescript-support"></a>Podpora pro TypeScript
+## <a name="typescript-support"></a>Podpora TypeScript
 
-Visual Studio 2019 poskytuje několik možností pro integraci TypeScript kompilace do projektu:
+Visual Studio 2019 poskytuje několik možností pro integraci kompilace TypeScript do vašeho projektu:
 
-* [Balíček TypeScript NuGet](https://www.nuget.org/packages/Microsoft.TypeScript.MSBuild). Při instalaci balíčku NuGet pro TypeScript 3.2 nebo vyšší do projektu bude načten odpovídající verze služby jazyka TypeScript v editoru.
-* TypeScript SDK, k dispozici v instalačním programu sady Visual Studio, jakož i SDK stáhnout samostatně z ve výchozím nastavení [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=TypeScriptTeam.typescript-331-vs2017).
-* [Balíček npm TypeScript](https://www.npmjs.com/package/typescript). Při instalaci balíčku npm pro TypeScript 2.1 nebo vyšší do projektu bude načten odpovídající verze služby jazyka TypeScript v editoru.
+* [Balíček NuGet pro TypeScript](https://www.nuget.org/packages/Microsoft.TypeScript.MSBuild) Při instalaci balíčku NuGet pro TypeScript 3,2 nebo vyšší do projektu se v editoru načte odpovídající verze jazykové služby TypeScript.
+* TypeScript SDK, který je ve výchozím nastavení dostupný v instalačním programu sady Visual Studio, a také samostatnou sadu SDK stáhnout z [webu vs Marketplace](https://marketplace.visualstudio.com/items?itemName=TypeScriptTeam.typescript-331-vs2017).
+* [Balíček TypeScript npm](https://www.npmjs.com/package/typescript) Při instalaci balíčku npm pro TypeScript 2,1 nebo vyšší do projektu se v editoru načte odpovídající verze jazykové služby TypeScript.
 
-Pro projekty vyvinuté v aplikaci Visual Studio 2019 doporučujeme vám používat balíčky npm a TypeScript NuGet pro větší přenositelnost napříč různými platformami a prostředí.
+Pro projekty vyvinuté v aplikaci Visual Studio 2019 doporučujeme, abyste používali balíčky TypeScript NuGet a npm pro větší přenositelnost napříč různými platformami a prostředími.
 
 ## <a name="projects"></a>Projekty
 
-Javascriptové aplikace UPW se už v sadě Visual Studio 2019 nepodporují. Nejde vytvořit nebo otevřít projekty UPW v JavaScriptu (soubory s příponou *.jsproj*). Přečtěte si víc prostřednictvím naší dokumentace na [vytváření progresivní webových aplikací (PWAs)](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started) , která dobře fungovat na Windows.
+Javascriptové aplikace UPW se už v sadě Visual Studio 2019 nepodporují. Nemůžete vytvářet ani otevírat projekty UWP v JavaScriptu (soubory s příponou *. JSProj*). Další informace najdete v dokumentaci k [vytváření progresivních Web Apps (PWAs)](/microsoft-edge/progressive-web-apps/get-started) , které se dobře spouštějí v systému Windows.

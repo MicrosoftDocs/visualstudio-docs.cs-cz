@@ -1,139 +1,153 @@
 ---
-title: Nástroje kontejneru sady Visual Studio na Windows
-description: Poznejte k dispozici v sadě Visual Studio tools pro práci s Dockerem
+title: Nástroje kontejneru sady Visual Studio ve Windows
+description: Získejte informace o nástrojích, které jsou k dispozici v aplikaci Visual Studio pro práci s Docker
 author: ghogen
 ms.author: ghogen
 ms.topic: overview
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: fbe363e8f78cba9fa46f3634e59beb22e523ddfa
-ms.sourcegitcommit: db30651dc0ce4d0b274479b23a6bd102a5559098
+ms.openlocfilehash: badb06b8c3eea5158054ba4c32f72e51dae0d60d
+ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65084036"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816358"
 ---
 # <a name="container-tools-in-visual-studio"></a>Nástroje kontejneru v sadě Visual Studio
 
-Nástroje v sadě Visual Studio pro vývoj s využitím kontejnerů se snadno používá a výrazně zjednodušuje tvorbu, ladění a nasazování kontejnerizovaných aplikací. Můžete pracovat jako kontejner pro jeden projekt, nebo pomocí Orchestrace kontejnerů pomocí Docker Compose, Service Fabric nebo Kubernetes pracovat s více službami v kontejnerech.
-
-> [!NOTE]
-> Tento článek se týká sady Visual Studio ve Windows a ne Visual Studio pro Mac.
-
-> [!TIP]
-> Další informace o instalaci Dockeru pro Windows najdete v tématu [Desktop Docker pro Windows](https://docs.docker.com/docker-for-windows/).
-
-## <a name="docker-support-in-visual-studio"></a>Podpora dockeru v sadě Visual Studio
-
-Podporu dockeru je k dispozici pro projekty ASP.NET, ASP.NET Core projekty a projekty konzoly .NET Core a .NET Framework.
-
-Podpora pro Docker v sadě Visual Studio změnilo několik verzí v reakci na požadavky zákazníků. Existují dvě úrovně podpory Dockeru, které můžete přidat do projektu a podporované možnosti se liší podle typu projektu a verzi sady Visual Studio. U některých typů podporovaných projektu Pokud chcete kontejner pro jeden projekt, bez použití orchestraci, Uděláte to tak, že přidáte podporu Dockeru.  Další úrovní je podporu Orchestrace kontejnerů, která přidá odpovídající podpůrné soubory pro konkrétní orchestrátoru, který zvolíte.  
+Nástroje zahrnuté v aplikaci Visual Studio pro vývoj s kontejnery se snadno používají a významně zjednodušují sestavování, ladění a nasazování pro kontejnery aplikací. Můžete pracovat s kontejnerem pro jeden projekt nebo orchestrace kontejnerů pomocí Docker Compose, Service Fabric nebo Kubernetes pro práci s více službami v kontejnerech.
 
 ::: moniker range="vs-2017"
 
-Pomocí sady Visual Studio 2017 můžete použít jako služeb Orchestrace kontejnerů Docker Compose a Service Fabric.  Můžete také použít Kubernetes, pokud nainstalujete [Visual Studio Tools pro systém Kubernetes](https://aka.ms/get-vsk8stools).
+## <a name="prerequisites"></a>Požadavky
+
+* [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+* [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) s nainstalovanou úlohou **vývoje pro web**, úlohy **nástrojů Azure** a/nebo **.NET Core pro vývoj pro různé platformy**
+* Pokud chcete publikovat Azure Container Registry, předplatné Azure. [Zaregistrujte si bezplatnou zkušební verzi](https://azure.microsoft.com/offers/ms-azr-0044p/).
+
+## <a name="docker-support-in-visual-studio"></a>Podpora Docker v aplikaci Visual Studio
+
+Podpora Docker je k dispozici pro projekty ASP.NET, projekty ASP.NET Core a projekty konzoly .NET Core a .NET Framework.
+
+Podpora Docker v aplikaci Visual Studio se v reakci na potřeby zákazníka změnila v několika verzích. Existují dvě úrovně podpory Docker, které můžete přidat do projektu a podporované možnosti se liší podle typu projektu a verze aplikace Visual Studio. U některých podporovaných typů projektů, pokud chcete pouze kontejner pro jeden projekt bez použití orchestrace, můžete to provést přidáním podpory Docker.  Další úrovní je podpora orchestrace kontejnerů, která umožňuje přidat vhodné podpůrné soubory pro konkrétní produkt Orchestrator, který zvolíte.  
+
+V rámci sady Visual Studio 2017 můžete použít Docker Compose a Service Fabric jako služby pro orchestraci kontejnerů.  Kubernetes můžete použít také v případě, že nainstalujete [Visual Studio Tools for Kubernetes](https://aka.ms/get-vsk8stools).
 
 > [!NOTE]
-> Pokud používáte verzi sady Visual Studio 2017 před 15.8 nebo použijete šablony projektů rozhraní .NET Framework (ne .NET Core), pokud chcete přidat podporu Dockeru, je automaticky přidána podpora Orchestrace pomocí Docker Compose. Podpora Orchestrace kontejnerů pomocí Docker Compose, je automaticky přidán v sadě Visual Studio 2017 verze 15.0: 15.7 a pro projekty .NET Framework.
+> Pokud používáte verzi sady Visual Studio 2017 před 15,8 nebo pokud používáte šablonu projektu .NET Framework (ne .NET Core), při přidání podpory Docker se podpora orchestrace pomocí Docker Compose přidá automaticky. Podpora orchestrace kontejnerů prostřednictvím Docker Compose je automaticky přidána do sady Visual Studio 2017 verze 15,0 do 15,7 a pro .NET Framework projekty.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-S Visual Studio 2019 můžete použít jako služeb Orchestrace kontejnerů Docker Compose, Kubernetes a Service Fabric.
+## <a name="prerequisites"></a>Požadavky
+
+* [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) s nainstalovanou úlohou **vývoje pro web**, úlohy **nástrojů Azure** a/nebo **.NET Core pro vývoj pro různé platformy**
+* [Vývojové nástroje .NET core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2) pro vývoj pomocí .net Core 2,2
+* Pokud chcete publikovat Azure Container Registry, předplatné Azure. [Zaregistrujte si bezplatnou zkušební verzi](https://azure.microsoft.com/offers/ms-azr-0044p/).
+
+## <a name="docker-support-in-visual-studio"></a>Podpora Docker v aplikaci Visual Studio
+
+Podpora Docker je k dispozici pro projekty ASP.NET, projekty ASP.NET Core a projekty konzoly .NET Core a .NET Framework.
+
+Podpora Docker v aplikaci Visual Studio se v reakci na potřeby zákazníka změnila v několika verzích. Existují dvě úrovně podpory Docker, které můžete přidat do projektu a podporované možnosti se liší podle typu projektu a verze aplikace Visual Studio. U některých podporovaných typů projektů, pokud chcete pouze kontejner pro jeden projekt bez použití orchestrace, můžete to provést přidáním podpory Docker.  Další úrovní je podpora orchestrace kontejnerů, která umožňuje přidat vhodné podpůrné soubory pro konkrétní produkt Orchestrator, který zvolíte.  
+
+
+Pomocí sady Visual Studio 2019 můžete použít Docker Compose, Kubernetes a Service Fabric jako služby pro orchestraci kontejnerů.
 
 > [!NOTE]
-> Pokud používáte úplné rozhraní .NET Framework konzoly šablony projektu, když přidáte podporu Dockeru, je automaticky přidána podpora pro orchestraci pomocí Docker Compose.
+> Pokud používáte úplnou šablonu projektu .NET Framework konzolu, když přidáte podporu Docker, automaticky se přidá podpora orchestrace pomocí Docker Compose.
 ::: moniker-end
 
-### <a name="adding-docker-support"></a>Přidání podpory Dockeru
+### <a name="adding-docker-support"></a>Přidání podpory Docker
 
-Můžete povolit podporu Dockeru během vytváření projektu tak, že vyberete **povolit podporu Dockeru** při vytváření nového projektu, jak je znázorněno na následujícím snímku obrazovky:
+Podporu Docker můžete povolit během vytváření projektu výběrem možnosti **Povolit podporu Docker** při vytváření nového projektu, jak je znázorněno na následujícím snímku obrazovky:
 
 ::: moniker range="vs-2017"
-![Povolit podporu Dockeru pro novou webovou aplikaci ASP.NET Core v sadě Visual Studio](./media/overview/enable-docker-support-visual-studio.png)
+![Povolit podporu Docker pro novou ASP.NET Core webovou aplikaci v aplikaci Visual Studio](./media/overview/enable-docker-support-visual-studio.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-![Povolit podporu Dockeru pro novou webovou aplikaci ASP.NET Core v sadě Visual Studio](./media/overview/vs-2019/enable-docker-support-visual-studio.png)
+![Povolit podporu Docker pro novou ASP.NET Core webovou aplikaci v aplikaci Visual Studio](./media/overview/vs-2019/enable-docker-support-visual-studio.png)
 ::: moniker-end
 
 > [!NOTE]
-> Pro projekty .NET Framework (ne .NET Core) jsou k dispozici pouze pro kontejnery Windows.
+> Pro .NET Framework projekty (ne .NET Core) jsou k dispozici pouze kontejnery Windows.
 
-Můžete přidat podporu Dockeru do existujícího projektu tak, že vyberete **přidat** > **podporu Dockeru** v **Průzkumníka řešení**. **Přidat > Podpora Dockeru** a **Přidat > Podpora Orchestrátoru kontejnerů** příkazy jsou umístěné v místní nabídce (nebo kontextovou nabídku) uzel projektu pro projekt ASP.NET Core v  **Průzkumník řešení**, jak je znázorněno na následujícím snímku obrazovky:
+Podporu Docker můžete přidat do existujícího projektu výběrem možnosti **přidat** > **podporu docker** v **Průzkumník řešení**. Příkazy **Přidat podporu > Docker** a **Přidat > kontejneru nástroje Orchestrator** jsou umístěné v místní nabídce (nebo v kontextové nabídce) uzlu projektu pro ASP.NET Core projektu v **Průzkumník řešení**, jak je znázorněno v následujícím příkladu. –
 
-![Přidejte podporu Dockeru nabídky v sadě Visual Studio](./media/overview/add-docker-support-menu.png)
+![Přidat možnost nabídky Docker support v aplikaci Visual Studio](./media/overview/add-docker-support-menu.png)
 
-Když přidáváte nebo povolit podporu Dockeru, Visual Studio přidá do projektu následující:
+Když přidáte nebo povolíte podporu Docker, Visual Studio přidá do projektu následující:
 
-- *soubor Dockerfile* souboru
-- soubor .dockerignore
-- odkaz na balíček NuGet do Microsoft.VisualStudio.Azure.Containers.Tools.Targets
+- soubor *souboru Dockerfile*
+- soubor. dockerignore
+- odkaz na balíček NuGet na Microsoft. VisualStudio. Azure. containers. Tools. targets
 
 ::: moniker range=">=vs-2019"
-Řešení se po přidání podpory Dockeru vypadá například takto:
+Toto řešení po přidání podpory Docker vypadá takto:
 
-![Snímek obrazovky Průzkumníka řešení se souborem Dockerfile a .dockerignore](media/overview/vs-2019/dockerfile-dockerignore.png)
+![Snímek obrazovky Průzkumníka řešení se souborem souboru Dockerfile a. dockerignore](media/overview/vs-2019/dockerfile-dockerignore.png)
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> Když povolit podporu Dockeru během vytváření projektu pro projekt ASP.NET (.NET Framework, ne k projektu .NET Core), jak je znázorněno na následujícím snímku obrazovky, přidá se také podpora Orchestrace kontejnerů.
+> Pokud povolíte podporu Docker během vytváření projektu pro projekt ASP.NET (.NET Framework, ne projekt .NET Core), jak je znázorněno na následujícím snímku obrazovky, je přidána i podpora orchestrace kontejnerů.
 
-![Povolit Docker compose podporu pro technologie ASP.NET](media/overview/enable-docker-compose-support.png)
+![Povolit podporu pro vytváření Docker pro projekt ASP.NET](media/overview/enable-docker-compose-support.png)
 ::: moniker-end
 
-## <a name="docker-compose-support"></a>Podpora docker Compose
+## <a name="docker-compose-support"></a>Podpora Docker Compose
 
-Pokud chcete vytvořit řešení více kontejnerů pomocí Docker Compose, přidáte do vašich projektů podpora Orchestrace kontejnerů. To vám umožní spouštět a ladit skupinu kontejnerů (celé řešení nebo skupinu projektů) ve stejnou dobu, pokud jsou definovány ve stejném *docker-compose.yml* souboru.
+Pokud chcete vytvořit řešení s více kontejnery pomocí Docker Compose, přidejte do svých projektů podporu orchestrace kontejnerů. To umožňuje spustit a ladit skupinu kontejnerů (celé řešení nebo skupiny projektů), pokud jsou definovány ve stejném souboru *Docker-Compose. yml* .
 
-Chcete-li přidat podporu Orchestrace kontejnerů pomocí Docker Compose, klikněte pravým tlačítkem na uzel řešení nebo projektu v **Průzkumníku řešení**a zvolte **Přidat > Podpora Orchestrace kontejnerů**. Klikněte na tlačítko **Docker Compose** Spravovat kontejnery.
+Chcete-li přidat podporu orchestrace kontejnerů pomocí Docker Compose, klikněte pravým tlačítkem myši na uzel řešení nebo projektu v **Průzkumník řešení**a vyberte možnost **Přidat > podporu orchestrace kontejnerů**. Pak zvolte **Docker Compose** pro správu kontejnerů.
 
-Když přidáte do projektu podporu Orchestrace kontejnerů, zobrazí se *soubor Dockerfile* přidány do projektu (pokud existuje nenašli jste jednu již) a **docker-compose** složky přidán do řešení v  **Průzkumník řešení**, jak je znázorněno zde:
+Po přidání podpory orchestrace kontejnerů do projektu se zobrazí *souboru Dockerfile* do projektu (Pokud ještě neexistuje) a složka **Docker-Docker** , která je přidána do řešení v **Průzkumník řešení**, jak je znázorněno zde:
 
-![Soubory docker v Průzkumníku řešení v sadě Visual Studio](media/overview/docker-support-solution-explorer.png)
+![Soubory Docker v Průzkumník řešení v aplikaci Visual Studio](media/overview/docker-support-solution-explorer.png)
 
-Pokud *docker-compose.yml* již existuje, požadovaných řádků kódu, konfigurace sady Visual Studio právě přidá k němu.
+Pokud *Docker-Compose. yml* už existuje, Visual Studio přidá do něj požadované řádky konfiguračního kódu.
 
-Postupujte stejně jako s projekty, které chcete kontrolovat pomocí Docker Compose.
+Opakujte tento postup s ostatními projekty, které chcete řídit pomocí Docker Compose.
 
-## <a name="kubernetes-support"></a>Podpora pro Kubernetes
+## <a name="kubernetes-support"></a>Podpora Kubernetes
 
 ::: moniker range="vs-2017"
-Chcete-li přidat podporu Kubernetes, nainstalujte [Visual Studio Tools pro systém Kubernetes](https://aka.ms/get-vsk8stools).
+Pokud chcete přidat podporu Kubernetes, nainstalujte [Visual Studio Tools for Kubernetes](https://aka.ms/get-vsk8stools).
 ::: moniker-end
 
-Díky podpoře Kubernetes, můžete povolit připojení mezi místní projekt a clusterů Kubernetes spuštěných [Azure Kubernetes Service (AKS)](/azure/aks)a tím upravovat a ladit vaše služby spuštěné ve službě AKS pomocí sady Visual Studio.  Tato služba je poskytovaná [Azure Dev prostory](/azure/dev-spaces/quickstart-netcore-visualstudio). Azure Dev prostory také budete moct nastavit samostatných větvích vaší služby Kubernetes s názvem *dev prostory* pro účely vývoje, tak můžete efektivně izolovat produkční služby z pracovní verze ve vývoji a zachovat různé úpravy jasně oddělen od sebe navzájem.
+Díky podpoře Kubernetes můžete povolit připojení mezi místním projektem a clusterem Kubernetes běžícím ve [službě Azure Kubernetes Service (AKS)](/azure/aks)a tím upravit a ladit vaše služby běžící v AKS pomocí sady Visual Studio.  Tuto službu poskytuje [Azure dev Spaces](/azure/dev-spaces/quickstart-netcore-visualstudio). Azure Dev Spaces taky umožňuje nastavit oddělené větve služeb Kubernetes s názvem *vývojové prostory* pro účely vývoje, takže můžete efektivně izolovat provozní služby od pracovních verzí ve vývoji a zachovat různé úpravy. čistě oddělené od sebe.
 
-Chcete-li přidat podporu Kubernetes do vašich projektů, zvolte **Kubernetes a Helm** když přidáte podporu Orchestrace kontejnerů. Několik souborů jsou přidány do projektu, včetně *azds.yaml*, které konfiguruje Azure Dev mezery a grafy Helm, které popisují strukturu vašich služeb Kubernetes.
+Pokud chcete přidat podporu Kubernetes do projektů, vyberte **Kubernetes/Helm** , když přidáte podporu orchestrace kontejnerů. Do projektu se přidalo několik souborů, včetně *azds. yaml*, které konfiguruje Azure dev Spaces a Helm grafy, které popisují strukturu vašich služeb Kubernetes.
 
 ## <a name="service-fabric-support"></a>Podpora Service Fabric
 
-Pomocí nástroje Service Fabric v sadě Visual Studio vývoj a ladění pro Azure Service Fabric, spouštět a ladit lokálně a nasazení do Azure.
+Pomocí nástrojů Service Fabric v aplikaci Visual Studio můžete vyvíjet a ladit službu Azure Service Fabric, spouštět a ladit místně a nasazovat do Azure.
 
 ::: moniker range="vs-2017"
-Visual Studio 2017 verze 15.9 nebo novější s nainstalovaná úloha vývoj pro Azure podporuje vývoj kontejnerizovaných mikroslužeb a využívající kontejnery Windows a Orchestrace Service Fabric.
+Visual Studio 2017 verze 15,9 a novější s nainstalovanou úlohou vývoj pro Azure podporuje vývoj kontejnerových mikroslužeb pomocí kontejnerů Windows a Service Fabric orchestrace.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Visual Studio 2019 podporuje vývoj kontejnerizované mikroslužby a využívající kontejnery Windows a Orchestrace Service Fabric.
+Visual Studio 2019 podporuje vývoj kontejnerových mikroslužeb pomocí kontejnerů Windows a Service Fabric orchestrace.
 ::: moniker-end
 
-Podrobný kurz najdete v tématu [kurzu: Nasazení aplikace .NET v kontejneru Windows do Azure Service Fabric](/azure/service-fabric/service-fabric-host-app-in-a-container).
+Podrobný kurz najdete v tématu [kurz: nasazení aplikace .NET v kontejneru Windows do Azure Service Fabric](/azure/service-fabric/service-fabric-host-app-in-a-container).
 
-Další informace o Azure Service Fabric najdete v tématu [Service Fabric](/azure/service-fabric).
+Další informace o Azure Service Fabric najdete v článku [Service Fabric](/azure/service-fabric).
 
-## <a name="continuous-delivery-and-continuous-integration-cicd"></a>Průběžné doručování a průběžnou integraci (CI/CD)
+## <a name="continuous-delivery-and-continuous-integration-cicd"></a>Průběžné doručování a průběžná integrace (CI/CD)
 
-Visual Studio snadno integrovat Azure kanály pro automatizované a průběžná integrace a doručování změn do kódu služby a konfiguraci. Abyste mohli začít, najdete v článku [vytvořit svůj první kanál](/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=tfs-2018-2).
+Visual Studio se snadno integruje s Azure Pipelines pro automatizovanou a průběžnou integraci a doručování změn kódu a konfigurace služby. Informace o tom, jak začít, najdete v tématu [Vytvoření prvního kanálu](/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=tfs-2018-2).
 
-Service Fabric najdete v části [kurzu: Nasazení aplikace ASP.NET Core do Azure Service Fabric pomocí projektů Azure DevOps](/azure/devops-project/azure-devops-project-service-fabric).
+Service Fabric najdete v tématu [kurz: nasazení ASP.NET Core aplikace do Azure Service Fabric pomocí Azure DevOps Projects](/azure/devops-project/azure-devops-project-service-fabric).
 
-Kubernetes, naleznete v tématu [nasazení aplikace typu kontejner Dockeru do služby Azure Kubernetes Service](/azure/devops/pipelines/apps/cd/deploy-aks?view=azure-devops).
+Kubernetes najdete v tématu [nasazení aplikace kontejneru Docker do služby Azure Kubernetes](/azure/devops/pipelines/apps/cd/deploy-aks?view=azure-devops).
 
 ## <a name="next-steps"></a>Další kroky
 
-Další podrobnosti o službách implementaci a použití sady Visual Studio tools pro práci s kontejnery, v následujících článcích:
+Další podrobnosti o implementaci služeb a používání nástrojů sady Visual Studio pro práci s kontejnery najdete v následujících článcích:
 
-[Ladění aplikací v místním kontejneru Dockeru](vs-azure-tools-docker-edit-and-refresh.md)
+[Ladění aplikací v místním kontejneru Docker](vs-azure-tools-docker-edit-and-refresh.md)
 
-[Nasazení kontejneru ASP.NET do služby container registry pomocí sady Visual Studio](vs-azure-tools-docker-hosting-web-apps-in-docker.md)
+[Nasazení kontejneru ASP.NET do registru kontejneru pomocí sady Visual Studio](vs-azure-tools-docker-hosting-web-apps-in-docker.md)

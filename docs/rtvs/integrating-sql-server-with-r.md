@@ -1,6 +1,6 @@
 ---
-title: Integrace s R systému SQL Server
-description: Visual Studio podporuje vytváření a spouštění dotazů SQL z R a možnost R pro práci s uloženými procedurami.
+title: Integrace SQL Server s R
+description: Visual Studio podporuje vytváření a spouštění dotazů SQL z R a schopnost jazyka R pracovat s uloženými procedurami.
 ms.date: 06/25/2018
 ms.topic: conceptual
 author: kraigb
@@ -8,78 +8,78 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: f15c785658b5c4cd5a6b158b05eb67ff9a4e4c2d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 10b5dfee629b5b6e67ab544ca0bdd905ed2a120a
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62814365"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888447"
 ---
-# <a name="work-with-sql-server-and-r"></a>Práce s využitím SQL serveru a jazyka R
+# <a name="work-with-sql-server-and-r"></a>Práce s SQL Server a R
 
-Visual Studio skvělou podporu pro SQL Server pomáhá data, která odborníci pracovat s databází SQL a R prostřednictvím schopnost vytvářet a spouštět dotazy SQL a práce s uloženými procedurami.
+Vynikající podpora pro SQL Server v rámci sady Visual Studio pomáhá datovým vědcům pracovat s databázemi R a SQL prostřednictvím možnosti vytvářet a spouštět dotazy SQL a pracovat s uloženými procedurami.
 
 > [!Note]
-> Spolupráce s SQL a jazyka R, musíte mít nainstalovaný SQL Server Data Tools:
-> - Visual Studio 2017: Spusťte instalační program sady Visual Studio a vyberte úložiště dat a zpracování úloh, která zahrnuje SQL Server Data tools.
-> - Visual Studio 2015: postupujte podle pokynů [stáhnout SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).
+> Pokud chcete pracovat s SQL a R společně, musíte mít nainstalované nástroje SQL Server Data Tools:
+> - Visual Studio 2017: Spusťte instalační program sady Visual Studio a vyberte úlohu ukládání a zpracování dat, která zahrnuje SQL Server datových nástrojů.
+> - Visual Studio 2015: postupujte podle pokynů ke [stažení SQL Server datových nástrojů](/sql/ssdt/download-sql-server-data-tools-ssdt).
 
 |   |   |
 |---|---|
-| ![Ikona filmové kamery pro video](../install/media/video-icon.png "Sledovat video") | [Podívejte se na video (webu youtube.com)](https://www.youtube.com/watch?v=n4AYr0QIwdQ) přehled SQL serveru a jazyka R (3 m 03s). |
+| ![ikona filmové kamery pro video](../install/media/video-icon.png "Přehrát video") | [Podívejte se na video (YouTube.com)](https://www.youtube.com/watch?v=n4AYr0QIwdQ) , kde můžete zobrazit přehled SQL Server a R (3m 03s). |
 
 ## <a name="create-and-run-sql-queries"></a>Vytváření a spouštění dotazů SQL
 
-RTVS podporuje přidávání dotazů SQL do projekty v R, umožňuje iterativní vývoj dotazy SQL v rámci samostatné, dokud se nedostanete výsledky, které hledáte.
+RTVS podporuje přidávání dotazů SQL do projektů jazyka R, což vám umožní iterativní vývoj dotazů SQL v samostatném kontextu, dokud nedosáhnete výsledků, které hledáte.
 
-Chcete-li přidat soubor dotazu SQL, klikněte pravým tlačítkem na projekt v Průzkumníku řešení, vyberte **přidat** > **nová položka**a vyberte **dotaz SQL** typ souboru:
+Chcete-li přidat soubor dotazu SQL, klikněte pravým tlačítkem myši na projekt v Průzkumník řešení, vyberte **přidat** > **novou položku**a vyberte typ souboru **dotazu SQL** :
 
-![Přidat dotaz SQL položku do projektu](media/sql-add-item.png)
+![Přidat položku dotazu SQL do projektu](media/sql-add-item.png)
 
-Tento příkaz otevře soubor v editoru jazyka Transact-SQL Visual Studio, které poskytuje plnou podporou technologie IntelliSense pro SQL a možnost spouštět dotazy. Pro tyto funkce pro práci, budete muset připojit k databázi pomocí tlačítka připojit na panelu nástrojů editoru nebo pokusu o spuštění dotazu (**Ctrl**+**Shift**+**E** , která funguje taky na výběr). V obou případech se zobrazí dialogové okno připojení:
+Tento příkaz otevře soubor v editoru jazyka Transact-SQL sady Visual Studio, který poskytuje úplnou technologii IntelliSense pro SQL a možnost spouštět dotazy. Aby tyto funkce fungovaly, musíte se připojit k databázi pomocí tlačítka připojit na panelu nástrojů editoru nebo se pokusit spustit dotaz (**Ctrl**+**SHIFT**+**E**, který funguje také u výběru). V obou případech se otevře dialogové okno připojení:
 
 ![Dialogové okno připojení SQL](media/sql-connection-dialog.png)
 
-Jakmile se naváže připojení, můžete spouštět dotazy a analyzovat výsledky:
+Po navázání připojení můžete spustit dotazy a zobrazit výsledky:
 
-![Výsledky dotazu okno SQL](media/sql-query-results.png)
+![Výsledky dotazu na okno SQL](media/sql-query-results.png)
 
-Editor jazyka Transact-SQL podporuje celou řadu dalších funkcí, jako je například zobrazení plán spuštění dotazu a dotaz ladicího programu.
-Další informace najdete v tématu [pomocí editoru jazyka Transact-SQL pro úpravy a provádění skriptů](https://msdn.microsoft.com/library/hh272706.aspx).
+Editor Transact-SQL podporuje různé funkce, jako je například zobrazení plánu spuštění dotazu a ladicího programu pro dotazy.
+Další informace najdete v tématu [použití editoru jazyka Transact-SQL pro úpravy a spouštění skriptů](https://msdn.microsoft.com/library/hh272706.aspx).
 
-## <a name="work-with-sql-server-stored-procedures"></a>Práce s uložených procedur SQL serveru
+## <a name="work-with-sql-server-stored-procedures"></a>Práce s uloženými procedurami SQL Server
 
-[SQL Server R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services) (SQL Server 2016 nebo novějším) umožňuje vložení a spuštění kódu jazyka R z jazyka T-SQL uloženou proceduru. Můžete spustit kód R na počítači systému SQL Server, použít pro data vrácená z dotazu SQL a generovat sadu výsledků dotazu SQL, který může být zpracována další SQL nebo vrácen do klienta.
+[SQL Server R Services](/sql/advanced-analytics/r/sql-server-r-services) (SQL Server 2016 a novější) umožňuje vložit a spustit kód R z uložené procedury T-SQL. Můžete spustit kód R na SQL Serverovém počítači, pracovat s daty vrácenými z dotazu SQL a vygenerovat sadu výsledků dotazu SQL, kterou lze zpracovat další SQL nebo vrátit do klienta.
 
-RTVS zjednodušuje proces jinak nepraktické a je náchylné kombinace SQL a kódu r. v jediném příkazu SQL, jak je popsáno v následujících částech:
+RTVS zjednodušuje proces kombinování kódu SQL a R v rámci jednoho příkazu jazyka SQL, který je náchylný k chybám, jak je popsáno v následujících částech:
 
 - [Přidat připojení k databázi](#add-a-database-connection)
-- [Psaní a testování uložené procedury SQL](#write-and-test-a-sql-stored-procedure)
-- [Publikovat uložené procedury SQL](#publish-a-sql-stored-procedure)
+- [Zápis a testování uložené procedury SQL](#write-and-test-a-sql-stored-procedure)
+- [Publikování uložené procedury SQL](#publish-a-sql-stored-procedure)
 
 |   |   |
 |---|---|
-| ![Ikona filmové kamery pro video](../install/media/video-icon.png "Sledovat video") | [Podívejte se na video (webu youtube.com)](https://www.youtube.com/watch?v=dFKIT2OitWQ) pro přehled R a SQL, uložených procedur (6 min 09s). |
+| ![ikona filmové kamery pro video](../install/media/video-icon.png "Přehrát video") | [Podívejte se na video (YouTube.com)](https://www.youtube.com/watch?v=dFKIT2OitWQ) , kde můžete zobrazit přehled uložených procedur R a SQL (6 min 09s). |
 
 ### <a name="add-a-database-connection"></a>Přidat připojení k databázi
 
-1. Vyberte **nástroje R** > **Data** > **přidat připojení k databázi** zobrazíte **vlastnosti připojení** Dialogové okno. Sem zadejte název zdroje dat (SQL Server v tomto případě), název serveru, režim ověřování a název databáze. Vyberte **Test připojení** ověřit váš vstup, před jeho zavřením dialogu.
+1. Vyberte možnost **R nástroje** > **data** > **Přidat připojení k databázi** a zobrazte dialog **Vlastnosti připojení** . Tady zadáte název zdroje dat (v tomto případě SQL Server), název serveru, režim ověřování a název databáze. Před zavřením dialogového okna vyberte možnost **Test připojení** , abyste ověřili vstup.
 
     ![Dialogové okno připojení SQL](media/sql-connection-string-dialog.png)
 
-1. Jakmile vyberete **OK** s platné připojení, Visual Studio vygeneruje připojovací řetězec s názvem `dbConnection` v novém *nastavení. R* souboru. RTVS automaticky (spuštěno) zdroje tohoto souboru, takže připojení pomocí skriptů R můžete okamžitě použít:
+1. Jakmile vyberete **OK** s platným připojením, Visual Studio vygeneruje připojovací řetězec s názvem `dbConnection` v novém *nastavení. Soubor R* . RTVS automaticky (spustí) Tento soubor, takže můžete okamžitě použít připojení ze skriptů R:
 
-![Soubor SQL Settings.R](media/sql-settings-dot-r.png)
+![Soubor. R nastavení SQL](media/sql-settings-dot-r.png)
 
-### <a name="write-and-test-a-sql-stored-procedure"></a>Psaní a testování uložené procedury SQL
+### <a name="write-and-test-a-sql-stored-procedure"></a>Zápis a testování uložené procedury SQL
 
-Pokud chcete přidat nové uložené procedury SQL, klikněte pravým tlačítkem na projekt, vyberte **přidat** > **nová položka**vyberte **uložená procedura SQL s jazykem R** ze seznamu šablon, Pojmenujte soubor a vyberte **OK**. Výchozí název souboru je *SqlSProc.R*; pro snadnější čtení, název souboru *StoredProcedure.R* se používá ve zbývající části tohoto oddílu. Pokud máte více uložených procedur, každého souboru musí mít jedinečný název souboru.
+Chcete-li přidat novou uloženou proceduru SQL, klikněte pravým tlačítkem myši na projekt, vyberte možnost **přidat** > **novou položku**, v seznamu šablon vyberte **uloženou proceduru SQL** a zadejte název souboru a vyberte **OK**. Výchozí název souboru je *SqlSProc. R*; pro usnadnění čtení se ve zbývající části tohoto oddílu používá název souboru *StoredProcedure. R* . Pokud máte více uložených procedur, každý soubor musí mít jedinečný název souboru.
 
-RTVS vytvoří tři soubory pro uložené procedury: *. R* soubor pro váš kód R *. Query.SQL* souboru pro kód SQL a *. Template.SQL* soubor, který kombinuje dvě. Druhé dvě zobrazí v Průzkumníku řešení jako podřízené objekty jsou *. R* souboru:
+RTVS vytvoří pro uloženou proceduru tři soubory: *. Soubor r* pro kód r, a *. Soubor Query. SQL* pro kód SQL a *. Soubor Template. SQL* , který kombinuje dva. Druhá se zobrazí v Průzkumník řešení jako podřízené položky *. Soubor R* :
 
-![Průzkumník řešení rozbalené zobrazení SQL uložená procedura s jazykem R](media/sql-solution-explorer-expanded.png)
+![Průzkumník řešení rozšířené zobrazení uložené procedury SQL pomocí jazyka R](media/sql-solution-explorer-expanded.png)
 
-*. R* souboru (*StoredProcedure.R* v tomto příkladu) je místo, kde píšete kód R. Výchozí obsah jsou:
+Rozhraní *. Soubor r* (příklad*StoredProcedure. R* ) je místo, kam píšete kód r. Výchozí obsah:
 
 ```R
 # @InputDataSet: input data frame, result of SQL query execution
@@ -94,24 +94,24 @@ RTVS vytvoří tři soubory pro uložené procedury: *. R* soubor pro váš kód
 OutputDataSet <- InputDataSet
 ```
 
-Jednoduše ale nutné dodat, obdrží kód R datový rámec volá `InputDataSet` a vrátí výsledky v `OutputDataSet`, kódem šablony pouze kopírování vstup do výstupu.
+Jednoduše řečeno, kód obdrží datový rámec R s názvem `InputDataSet` a vrátí jeho výsledky v `OutputDataSet`a kód šablony zkopíruje vstup pouze do výstupu.
 
 > [!Note]
-> Názvy těchto datových rámců jsou řízeny `@input_data_1_name` a `@output_data_1_name` parametrů při volání `sp_execute_external_script` systémové uložené procedury. Další informace o návrhu Tato konvence volání a některé příklady využití naleznete v tématu [sp_execute_external_script (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
+> Názvy těchto datarámečcích jsou ovládány `@input_data_1_name` a `@output_data_1_name` parametrů ve volání systémové uložené procedury `sp_execute_external_script`. Další informace o návrhu této konvence volání a některých příkladů jejich použití naleznete v tématu [sp_execute_external_script (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
 
-Další generovaný kód (v komentářích) poskytuje skript malý test, který se používá [RODBC balíčku](https://cran.r-project.org/web/packages/RODBC/index.html) přenášet příkaz SQL pro SQL Server, spusťte jej a načíst výsledek nastavit jako datový rámec R. Můžete odkomentovat tento test kód interaktivně psát kód R proti výsledek nastavte, že dostanete ze serveru SQL Server.
+Druhý vygenerovaný kód (v komentářích) poskytuje malý testovací skript, který používá [balíček RODBC](https://cran.r-project.org/web/packages/RODBC/index.html) k přenosu příkazu jazyka SQL do SQL Server, spuštění a načtení jeho sady výsledků jako datový rámec R. Můžete zrušit komentář k tomuto testovacímu kódu pro interaktivní zápis kódu R proti sadě výsledků, kterou získáte z SQL Server.
 
-*. Query.SQL* souboru (*StoredProcedure.Query.sql* v tomto příkladu) zápisu a otestujte dotaz SQL, který generuje data pro `InputDataSet`. S tímto *.sql* souboru, editor poskytuje všechny běžné funkce jazyka Transact-SQL pro vás.
+Rozhraní *. Dotaz. SQL* soubor (*StoredProcedure. Query. SQL* v tomto příkladu) je místo, kam píšete a otestujete dotaz SQL, který generuje data pro `InputDataSet`. V tomto souboru *. SQL* Editor poskytuje všechny běžné funkce jazyka Transact-SQL.
 
-Jakmile budete spokojeni s vaším kódem SQL, ji integrovat s vaším kódem R přetažením *.sql* soubor do otevřete editor pro *. R* souboru. Na obrázku níže *StoredProcedure.Query.sql* byla přetažena na bod v *StoredProcedure.R* za čárkou v `sqlQuery(channel, )`:
+Až budete s vaším kódem SQL spokojeni, Integrujte ho s vaším kódem R přetažením souboru *. SQL* do otevřeného Editoru pro *. Soubor R* . Na obrázku níže byl *StoredProcedure. Query. SQL* přetažen do bodu v *StoredProcedure. R* za čárkou v `sqlQuery(channel, )`:
 
-![Čtení souboru SQL do proměnné řetězce jazyka R](media/sql-reference-sql-file-from-r.png)
+![Čtení souboru SQL do řetězcové proměnné R](media/sql-reference-sql-file-from-r.png)
 
-Jak je vidět, tento krok jednoduché automaticky generuje kód R a otevřete *.sql* souboru, přečtěte si jeho obsah do řetězce a předejte jej do balíčku RODBC zásadu odeslat do systému SQL Server.
+Jak vidíte, tento jednoduchý krok automaticky generuje kód R pro otevření souboru *. SQL* , načtení jeho obsahu do řetězce a jeho předání do balíčku RODBC k odeslání do SQL Server.
 
-Teď můžete interaktivně zápisu R kód, který pracuje `InputDataSet` datového rámce podle potřeby. Mějte na paměti, že stačí vybrat kód R v editoru a odeslat do [interaktivní okno](interactive-repl-for-r-in-visual-studio.md) stisknutím kombinace kláves **Ctrl**+**Enter**.
+Nyní můžete interaktivně psát kód R, který zpracovává `InputDataSet` datový rámec podle potřeby. Mějte na paměti, že v editoru můžete jednoduše vybrat kód R a poslat ho do [interaktivního okna](interactive-repl-for-r-in-visual-studio.md) stisknutím **klávesy CTRL**+**ENTER**.
 
-*. Template.SQL* souboru (*StoredProcedure.Template.sql* v tomto příkladu), a konečně, obsahuje šablony pro generování SQL uložená procedura:
+Rozhraní *. Soubor Template. SQL* (*StoredProcedure. template. SQL* v tomto příkladu), nakonec obsahuje šablonu pro vygenerování uložené procedury SQL:
 
 ```sql
 CREATE PROCEDURE [StoredProcedure]
@@ -125,30 +125,30 @@ EXEC sp_execute_external_script @language = N'R'
 END;
 ```
 
-- `_RCODE_` Obsah se nahradí zástupný symbol *. R* souboru (například *StoredProcedure.R*).
-- `_INPUT_QUERY_` Obsah se nahradí zástupný symbol *. Query.SQL* souboru (například *StoredProcedure.Query.sql*).
-- Upravit `WITH RESULT SETS` klauzule, která popisují schéma sada výsledků vrácená z úložné procedury. Konkrétně identifikovat sloupce z `OutputDataSet` datového rámce, který chcete vracet volajícímu uložené procedury.
+- Zástupný symbol `_RCODE_` je nahrazen obsahem *. Soubor R* (například *StoredProcedure. R*).
+- Zástupný symbol `_INPUT_QUERY_` je nahrazen obsahem *. Soubor dotazu. SQL* (například *StoredProcedure. Query. SQL*).
+- Upravte klauzuli `WITH RESULT SETS` pro popis schématu sady výsledků vrácené z uložené procedury. Konkrétně Identifikujte sloupce z `OutputDataSet` dataframe, které chcete vrátit volajícímu uložené proceduře.
 
-Například následující dotaz:
+Například pro následující dotaz:
 
 ```sql
 SELECT TOP 100 medallion, hack_license FROM nyctaxi_sample
 ```
 
-Můžete využít následující `WITH RESULT SETS` klauzule k určení datové typy vrácených hodnot:
+K určení datových typů vrácených hodnot použijte následující klauzuli `WITH RESULT SETS`:
 
 ```sql
 WITH RESULT SETS ((medallion NVARCHAR(max), hack_license NVARCHAR(max)));
 ```
 
-### <a name="publish-a-sql-stored-procedure"></a>Publikovat uložené procedury SQL
+### <a name="publish-a-sql-stored-procedure"></a>Publikování uložené procedury SQL
 
-1. Vyberte **nástroje R** > **Data** > **s možností publikování** příkazu nabídky.
-1. V zobrazeném dialogovém okně Změnit **publikování:** k **databáze**zadejte cíl, vyberte **publikovat**, a RTVS vytvoří a publikuje uložené procedury:
+1. Vyberte příkaz **R nástroje** > **data** > **publikovat pomocí** příkazu nabídky možnosti.
+1. V dialogovém okně, které se zobrazí, změňte položku **publikovat na:** na **databázi**, zadejte cíl, vyberte **publikovat**a RTVS sestavení a publikujte uloženou proceduru:
 
-    ![Uložená procedura dialogové okno pro publikování](media/sql-publish-with-options.png)
+    ![Dialog publikovat uloženou proceduru](media/sql-publish-with-options.png)
 
-1. Chcete-li publikovat všechny uložené procedury v projektu, můžete použít **nástroje R** > **Data** > **publikovat uložené procedury** příkaz, který je také Tato možnost je k dispozici, když kliknete pravým tlačítkem na projekt v Průzkumníku řešení.
+1. Chcete-li publikovat všechny uložené procedury v projektu, můžete použít příkaz **R nástroje** > **data** > **publikování uložených procedur** , který je také k dispozici, když kliknete pravým tlačítkem myši na projekt v Průzkumník řešení.
 
 > [!Tip]
-> Pokud máte Průzkumníku objektů SQL serveru otevřete v sadě Visual Studio, zobrazí se v publikovaných uložená procedura **programovatelnosti** > **uložené procedury** složky vaší databáze. Můžete ho spustit také z Průzkumníku objektů tak, že kliknete pravým tlačítkem a vyberete **provést proceduru**, nebo pomocí volání interaktivně z *.sql* okno dotazu.
+> Pokud máte Průzkumník objektů systému SQL Server otevřít v aplikaci Visual Studio, publikovaná uložená procedura se zobrazí ve složce **pro** ukládání > **uložených procedur** vaší databáze. Můžete ho také spustit z Průzkumník objektů tak, že kliknete pravým tlačítkem a vyberete možnost **Spustit**nebo když ho zavoláte interaktivně z okna dotazu *. SQL* .

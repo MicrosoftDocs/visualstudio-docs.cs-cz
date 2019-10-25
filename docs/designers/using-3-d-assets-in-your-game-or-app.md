@@ -15,12 +15,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 400e69ddaf9ebd3596edf3b926484b623225d672
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4df842f83f92afe8a8f747135632eb30a715d43f
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72634536"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888505"
 ---
 # <a name="how-to-use-3d-assets-in-your-game-or-app"></a>Postupy: použití 3D prostředků ve hře nebo aplikaci
 
@@ -97,7 +97,7 @@ Použijete-li nástroj pro vytváření textur obsahu k sestavení prostředků 
 
 |Vlastnost|Popis|
 |--------------|-----------------|
-|**Komprimují**|Určuje typ komprese, který se používá pro výstupní soubor.<br /><br /> K dispozici jsou tyto možnosti:<br /><br /> -   **bez komprese**<br />-   **Komprese BC1_UNORM**<br />-   **Komprese BC1_UNORM_SRGB**<br />-   **Komprese BC2_UNORM**<br />-   **Komprese BC2_UNORM_SRGB**<br />-   **Komprese BC3_UNORM**<br />-   **Komprese BC3_UNORM_SRGB**<br />-   **Komprese BC4_UNORM**<br />-   **Komprese BC4_SNORM**<br />-   **Komprese BC5_UNORM**<br />-   **Komprese BC5_SNORM**<br />-   **Komprese BC6H_UF16**<br />-   **Komprese BC6H_SF16**<br />-   **Komprese BC7_UNORM**<br />-   **Komprese BC7_UNORM_SRGB**<br /><br /> Informace o tom, které formáty komprese jsou podporovány v různých verzích rozhraní DirectX, najdete v tématu [Průvodce programováním pro DXGI](http://go.microsoft.com/fwlink/p/?LinkId=246265).|
+|**Komprimují**|Určuje typ komprese, který se používá pro výstupní soubor.<br /><br /> K dispozici jsou tyto možnosti:<br /><br /> -   **bez komprese**<br />-   **Komprese BC1_UNORM**<br />-   **Komprese BC1_UNORM_SRGB**<br />-   **Komprese BC2_UNORM**<br />-   **Komprese BC2_UNORM_SRGB**<br />-   **Komprese BC3_UNORM**<br />-   **Komprese BC3_UNORM_SRGB**<br />-   **Komprese BC4_UNORM**<br />-   **Komprese BC4_SNORM**<br />-   **Komprese BC5_UNORM**<br />-   **Komprese BC5_SNORM**<br />-   **Komprese BC6H_UF16**<br />-   **Komprese BC6H_SF16**<br />-   **Komprese BC7_UNORM**<br />-   **Komprese BC7_UNORM_SRGB**<br /><br /> Informace o tom, které formáty komprese jsou podporovány v různých verzích rozhraní DirectX, najdete v tématu [Průvodce programováním pro DXGI](/windows/win32/direct3ddxgi/dx-graphics-dxgi-overviews).|
 |Převést na předem vynásobený formát alfa|**Ano** , pokud chcete převést obrázek na předem vynásobený formát alfa ve výstupním souboru; v opačném případě **ne**. Dojde ke změně pouze výstupního souboru, zdrojový obrázek zůstane beze změny.|
 |**Generovat MIPS**|**Ano** , pokud chcete vygenerovat úplný řetěz mip v čase sestavení a zahrnout ho do výstupního souboru; v opačném případě **ne**. Pokud **ne**a zdrojový soubor již obsahuje mipmap řetězec, bude mít výstupní soubor řetězec MIP; v opačném případě výstupní soubor nebude mít žádný řetězec MIP.|
 |**Výstup obsahu**|Určuje název výstupního souboru. **Důležité informace:**  Změna přípony názvu souboru výstupního souboru nemá žádný vliv na formát souboru.|
@@ -122,7 +122,7 @@ Při použití nástroje shader Content Pipeline k sestavení assetu shaderu mů
 
 ### <a name="use-textures-and-images"></a>Používání textur a imagí
 
-Rozhraní Direct3D poskytuje funkce pro vytváření prostředků textury. V rozhraní Direct3D 11 poskytuje knihovna nástrojů D3DX11 další funkce pro vytváření prostředků textury a zobrazení prostředků přímo z obrazových souborů. Další informace o tom, jak vytvořit prostředek textury v Direct3D 11, najdete v tématu [textury](http://go.microsoft.com/fwlink/p/?LinkID=246267). Další informace o tom, jak pomocí knihovny D3DX11 vytvořit prostředek textury nebo zobrazení prostředků z obrázkového souboru, naleznete v tématu [How to: Initialize a Texture from a File](http://go.microsoft.com/fwlink/p/?LinkId=246268).
+Rozhraní Direct3D poskytuje funkce pro vytváření prostředků textury. V rozhraní Direct3D 11 poskytuje knihovna nástrojů D3DX11 další funkce pro vytváření prostředků textury a zobrazení prostředků přímo z obrazových souborů. Další informace o tom, jak vytvořit prostředek textury v Direct3D 11, najdete v tématu [textury](/windows/win32/direct3d11/overviews-direct3d-11-resources-textures). Další informace o tom, jak pomocí knihovny D3DX11 vytvořit prostředek textury nebo zobrazení prostředků z obrázkového souboru, naleznete v tématu [How to: Initialize a Texture from a File](/windows/win32/direct3d11/overviews-direct3d-11-resources-textures-how-to).
 
 ### <a name="use-3d-models"></a>Použití 3D modelů
 
@@ -130,7 +130,7 @@ Direct3D 11 neposkytuje funkce pro vytváření prostředků z 3D modelů. Míst
 
 ### <a name="use-shaders"></a>Použít shadery
 
-Rozhraní Direct3D poskytuje funkce pro vytváření prostředků shaderu a jejich vazbu na programovatelné grafické kanály. Další informace o tom, jak vytvořit prostředek shaderu v rozhraní Direct3D a vytvořit jeho propojení s kanálem, najdete v tématu [Průvodce programováním pro HLSL](http://go.microsoft.com/fwlink/p/?LinkID=261521).
+Rozhraní Direct3D poskytuje funkce pro vytváření prostředků shaderu a jejich vazbu na programovatelné grafické kanály. Další informace o tom, jak vytvořit prostředek shaderu v rozhraní Direct3D a vytvořit jeho propojení s kanálem, najdete v tématu [Průvodce programováním pro HLSL](/windows/win32/direct3dhlsl/dx-graphics-hlsl-pguide).
 
 V programovatelném grafickém kanálu musí každá fáze kanálu poskytnout další fázi kanálu, která je naformátována způsobem, který dokáže pochopit. Vzhledem k tomu, že návrhář shaderů může vytvářet pouze pixel shadery, znamená to, že je až do vaší aplikace, aby se zajistilo, že data, která obdrží, jsou ve formátu, který očekává. Několik programovatelných fází shaderu nastává před shaderem pixel a provádění geometrických transformací – shader vrcholů, shader trupu, shader domény a shader geometrie. K neprogramovatelné fázi teselace dojde také před shaderem pixel. Bez ohledu na to, které z těchto fází přímo předchází pixel shader, musí mít výsledek v tomto formátu:
 

@@ -6,12 +6,12 @@ manager: lank
 ms.date: 08/01/2019
 ms.topic: conceptual
 description: Naučte se stáhnout a nainstalovat integrované vývojové prostředí (IDE) sady Visual Studio zahrnuté v předplatném Visual studia.
-ms.openlocfilehash: 62992b2c9dc21063d78c135894368c93f07f76a8
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: 5a5acda814739f907aaa36e9b3408527b5ece732
+ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787865"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816516"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Výhody sady Visual Studio 2019
 
@@ -22,30 +22,30 @@ Jako předplatitelé sady Visual Studio máte přístup k integrovanému vývojo
 *(V tomto příkladu se používá Visual Studio Enterprise.)*
 
 Stažení integrovaného vývojového prostředí (IDE):
-1. Přihlaste se k webu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
+1. Přihlaste se k [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 2. V části nástroje Najděte dlaždici integrovaného vývojového prostředí sady Visual Studio a klikněte na odkaz **ke stažení** v dolní části dlaždice výhody.  Můžete ji také stáhnout ze stránky [soubory ke stažení](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs) .
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-tile.png)
+   > dlaždice Visual Studio Enterprise ![](_img/vs-ide-experience/vs-ide-tile.png)
 
-3. Budete přesměrováni na stránku výsledků stahování pro Visual Studio, kde budete mít možnost stáhnout si rozhraní IDE a získat kód Product Key pro jeho aktivaci. Můžete také získat kód Product Key tak, že kliknete na odkaz modrý **přístup** k klávesám nebo na stránce [kódy Product](https://my.visualstudio.com/productkeys) Key vyžádáte klíč později.
+3. Budete přesměrováni na stránku výsledků stahování pro Visual Studio, kde budete mít možnost stáhnout si rozhraní IDE a získat kód Product Key pro jeho aktivaci. Můžete také získat kód Product Key tak, že kliknete na odkaz modrý **přístup k klávesám** nebo na stránce [kódy Product](https://my.visualstudio.com/productkeys) Key vyžádáte klíč později.
 4. Na kartě Podrobnosti na stránce výsledky stahování:
    - Vyberte požadovanou architekturu (x86, x64).
    - Vyberte preferovaný jazyk.
 5. Klikněte na modré tlačítko pro stažení.
    > [!div class="mx-imgBorder"]
-   > ![Podrobnosti o Visual Studio Enterprise stažení](_img/vs-ide-experience/vs-ide-download-details.png)
+   > ![Visual Studio Enterprise stažení podrobností](_img/vs-ide-experience/vs-ide-download-details.png)
 6. Klikněte na stažený balíček instalačního programu.  Pokud se zobrazí výzva k instalaci hned, klikněte na **Spustit**.
 7. V dialogovém okně Řízení uživatelských účtů klikněte na **Ano**.
 8. Kliknutím na tlačítko **pokračovat** přijměte licenční podmínky.
 9. Po spuštění instalačního programu zvolte požadované úlohy, jednotlivé komponenty a jazykové sady, a to tak, že je vyberete na příslušných kartách.
    > [!div class="mx-imgBorder"]
-   > ![Přizpůsobení Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-customize-install-cropped.png)
+   > ![přizpůsobení Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-customize-install-cropped.png)
 
-10. Klikněte na tlačítko **nainstalovat**.
+10. Klikněte na **nainstalovat**.
 
 11. Po dokončení instalace budete mít možnost upravit instalaci nebo spustit aplikaci Visual Studio.  Začněte tím, že kliknete na **Spustit** .  Pokud je nainstalováno více verzí, budou uvedeny.
     > [!div class="mx-imgBorder"]
-    > ![Spustit Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-versions.png)
+    > ![spuštění Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-versions.png)
 
 12. Přihlaste se pomocí účtu přidruženého k vašemu předplatnému sady Visual Studio.
 
@@ -54,7 +54,7 @@ Stažení integrovaného vývojového prostředí (IDE):
 14. Otevře se Visual Studio. Jste připraveni začít s používáním sady Visual Studio!
 
     > [!div class="mx-imgBorder"]
-    > ![Začněte používat Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-start-cropped.png)
+    > ![začít používat Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-start-cropped.png)
 
 
 ## <a name="eligibility"></a>Vznik
@@ -66,21 +66,21 @@ Stažení integrovaného vývojového prostředí (IDE):
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici                                             |  Ano         |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  Není k dispozici          |
 
-<sup></sup>1*zahrnuje:    Ne pro účely opětovného prodeje (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), ekvivalent, MCT software & Services Developer, BizSpark, představte, MVP Professional (MVP), regionální ředitel (RD).  Vyloučí MCT software & služby.*
+<sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), ekvivalent, MCT software & Services Developer, BizSpark, představte, MVP (MVP), regionální ředitel (RD).  Nezahrnuje se: MCT software & služby.*
 
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
 
-Nejste si jistí, jaké Předplatné používáte?  Připojte se [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) a zobrazte všechna předplatná přiřazená k vaší e-mailové adrese. Pokud nevidíte všechna Vaše předplatná, může být jedna nebo více přiřazená k jiné e-mailové adrese.  K zobrazení těchto předplatných se budete muset přihlásit pomocí této e-mailové adresy.
+Nejste si jistí, jaké Předplatné používáte?  Pokud chcete zobrazit všechna předplatná přiřazená k vaší e-mailové adrese, připojte se k [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) . Pokud nevidíte všechna Vaše předplatná, může být jedna nebo více přiřazená k jiné e-mailové adrese.  K zobrazení těchto předplatných se budete muset přihlásit pomocí této e-mailové adresy.
 
 ## <a name="support-resources"></a>Prostředky podpory
 - Potřebujete pomáhat s IDE sady Visual Studio, podívejte se na tyto prostředky:
-  - Technická podpora:[https://visualstudio.microsoft.com/support/](https://visualstudio.microsoft.com/support/)
+  - Technická podpora: [https://visualstudio.microsoft.com/support/](https://visualstudio.microsoft.com/support/)
   - [Dokumentace](/visualstudio/)
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu](https://visualstudio.microsoft.com/subscriptions/support/)předplatných sady Visual Studio
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 Jakmile máte nainstalovanou aplikaci Visual Studio, nezapomeňte aktivovat tyto další důležité výhody:
 - [Azure DevOps](vs-azure-devops.md)
-- [Kredity Azure](vs-azure.md)
+- [Individuální kredit Azure DevTest](vs-azure.md)
 - [Vývojářský účet pro Windows](vs-windows-dev.md)

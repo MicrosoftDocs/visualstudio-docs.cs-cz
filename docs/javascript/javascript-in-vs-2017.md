@@ -13,55 +13,55 @@ author: bowdenk7
 ms.author: wilkelly
 manager: jillfra
 monikerRange: vs-2017
-ms.openlocfilehash: c86dd5090d2cee6c49bd97f0895bba397e10c1ae
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 653b2576b0076d02f2e18cedc6f9f9890fd98fe5
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263027"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888665"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>JavaScript v sadě Visual Studio 2017
 
-JavaScript je prvotřídní jazyk v sadě Visual Studio. Při psaní kódu v jazyce JavaScript v sadě Visual Studio IDE můžete použít téměř všechny standardní editační pomůcky (fragmenty kódu, funkci IntelliSense atd.). Můžete napsat kód jazyka JavaScript pro mnoho typů aplikací a služeb.
+JavaScript je první třídou jazyka v aplikaci Visual Studio. Při psaní kódu v jazyce JavaScript v sadě Visual Studio IDE můžete použít téměř všechny standardní editační pomůcky (fragmenty kódu, funkci IntelliSense atd.). Můžete psát kód JavaScriptu pro mnoho typů aplikací a služeb.
 
 > [!NOTE]
-> Jsme se připojili k celé komunitě úsilí, aby [MDN web dokumentace](https://developer.mozilla.org/en-US/) komplexní, vedoucí vývoje prostředků na webu, přesměrováním všechny (víc než 500 stránky) reference k rozhraní API jazyka JavaScript společnosti Microsoft z webu docs.microsoft.com pro své zprávy MDN. protějšky. Podrobnosti najdete v tomto [oznámení](https://blogs.windows.com/msedgedev/2018/06/26/chakra-docs-mdn-web-docs/).
+> Spojili jsme se s úsilím na celou komunitu, aby [webové dokumenty MDN webovým](https://developer.mozilla.org/en-US/) a vývojovým prostředkem na jednom zastavení webu. tím, že přesměruje všechny (500 + stránky) referenčních rozhraní API Microsoftu pro JavaScript z docs.Microsoft.com na své MDN protějšky. Podrobnosti najdete v tomto [oznámení](https://blogs.windows.com/msedgedev/2018/06/26/chakra-docs-mdn-web-docs/).
 
-## <a name="ES6"></a> Podporu pro ECMAScript 2015 (ES6) a další
+## <a name="ES6"></a>Podpora pro ECMAScript 2015 (ES6) a novější
 
-Visual Studio teď podporuje syntaxi pro aktualizace jazyka ECMAScript například ECMAScript 2015/2016.
+Visual Studio teď podporuje syntaxi pro aktualizace jazyka ECMAScript, jako je například ECMAScript 2015/2016.
 
 ### <a name="what-is-ecmascript-2015"></a>Co je ECMAScript 2015?
 
-JavaScript se dál vyvíjejí jako programovací jazyk a [TC39](https://www.ecma-international.org/memento/tc39-m.htm) zodpovídá výbor pro provedení aktualizací.
-ECMAScript 2015 je aktualizace, která přináší užitečné novou syntaxi a funkce jazyka JavaScript. Podrobné informace o funkcích ES6, projděte si [to](http://es6-features.org) referenční webový server.
+JavaScript se stále vyvíjí jako programovací jazyk a [TC39](https://www.ecma-international.org/memento/tc39-m.htm) je výbor zodpovědný za provádění aktualizací.
+ECMAScript 2015 je aktualizace jazyka JavaScriptu, který přináší užitečnou novou syntaxi a funkčnost. Podrobné informace o funkcích ES6 najdete na [tomto](http://es6-features.org/#Constants) referenčním webu.
 
-Kromě podporu pro ECMAScript 2015 Visual Studio také podporuje ECMAScript 2016 a bude zahrnovat podporu pro budoucí verze ECMAScript při jejich vydání. Jak držet krok s TC39 a nejnovější změny v ECMAScript, sledujte práci na [githubu](https://github.com/tc39).
+Kromě podpory pro ECMAScript 2015 podporuje Visual Studio také ECMAScript 2016 a bude mít podporu pro budoucí verze ECMAScript při jejich vydání. Pokud chcete zachovat TC39 a nejnovější změny v ECMAScriptu, postupujte podle svých prací na [GitHubu](https://github.com/tc39).
 
-### <a name="transpile-javascript"></a>Transpiluje JavaScript
+### <a name="transpile-javascript"></a>Převýšení JavaScriptu
 
-Běžný problém s použitím jazyka JavaScript je, že chcete používat nejnovější funkce jazyků ES6 + vzhledem k tomu, že vám pomohly zvýšit produktivitu, ale prostředí modulu runtime (často prohlížeče) zatím nepodporují tyto nové funkce. To znamená, že buď muset udržovat přehled o které prohlížeče podporujete funkcích (která může být pracná), nebo pokud potřebujete způsob, jak převést váš kód ES6 + na verzi, že vaše cílové prostředí runtime pochopit (obvykle ES5). Převod vašeho kódu na verzi, která modul runtime, rozumí se obvykle označuje jako "transpiling".
+Běžným problémem s JavaScriptem je, že chcete používat nejnovější funkce ES6 + Language, protože vám pomůžou zvýšit produktivitu, ale běhová prostředí (často prohlížeče) tyto nové funkce ještě nepodporují. To znamená, že musíte sledovat, které prohlížeče podporují funkce (které můžou být únavné), nebo potřebujete způsob, jak převést ES6 + kód na verzi, kterou vaše cílové moduly runtime chápou (obvykle ES5). Převod kódu na verzi, kterou modul runtime zná, se běžně označuje jako "transpiling".
 
-Jednou z klíčových funkcí TypeScript je možnost transpiluje ES6 + kódu ES5 nebo ES3, takže můžete napsat kód, který vám umožňuje být nejproduktivnější, ale stále svůj kód spustit na libovolné platformě. Protože jazyk JavaScript v [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] používá stejný jazyk služby jako TypeScript, příliš může trvat výhod ES6 + ES5 transpilation.
+Jedna z klíčových funkcí TypeScript je schopnost přeES6 + kód na ES5 nebo ES3, takže můžete napsat kód, který vám dává největší produktivitu, ale pořád spustit váš kód na libovolné platformě. Protože JavaScript v [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] používá stejnou jazykovou službu jako TypeScript, může také využít výhod ES6 + až ES5 transpilation.
 
-Než transpilation můžete nastavit, vyžaduje se některé pochopení možností konfigurace.
-TypeScript je nakonfigurovaný přes `tsconfig.json` souboru.
-Chybí tento soubor se používají výchozí hodnoty.
-Z důvodu kompatibility se liší v kontextu tam, kde je to jenom tyto výchozí hodnoty soubory jazyka JavaScript (a volitelně `.d.ts` soubory) jsou k dispozici.
-Pro kompilaci souborů JavaScript `tsconfig.json` soubor musí být přidán, a některé z těchto možností musí být explicitně nastaveno.
+Aby bylo možné nastavit transpilation, jsou vyžadovány některé možnosti konfigurace.
+TypeScript je nakonfigurovaný pomocí souboru `tsconfig.json`.
+V případě, že takový soubor není k dispozici, jsou použity některé výchozí hodnoty.
+Z důvodu kompatibility se tyto výchozí hodnoty liší v kontextu, kde jsou přítomny pouze soubory JavaScriptu (a volitelně `.d.ts` soubory).
+Aby bylo možné kompilovat soubory JavaScriptu, je nutné přidat `tsconfig.json` soubor a některé z těchto možností musí být nastaveny explicitně.
 
-Požadovaná nastavení pro souboru tsconfig jsou následující:
+Požadovaná nastavení souboru tsconfig jsou následující:
 
-- `allowJs`: Tato hodnota musí být nastavená na `true` pro soubory jazyka JavaScript, chcete-li rozpoznán. Výchozí hodnota je `false`, protože zkompiluje TypeScript pro JavaScript a kompilátor by neměl obsahovat soubory, které je zkompilován.
-- `outDir`: Tato hodnota měla nastavit na umístění není zahrnutý v projektu, aby emitovaný souborů JavaScriptu nejsou zjištěny a pak zahrnutý v projektu (viz `exclude`).
-- `module`: Pokud používáte moduly, toto nastavení instruuje kompilátor, který formát modulu emitovaný kód by měl používat (třeba `commonjs` pro uzel nebo to software instalující například Browserify).
-- `exclude`: Toto nastavení stavy které složky nechcete zahrnout do projektu.
-Umístění výstupu, jakož i mimo projekt složky jako `node_modules` nebo `temp`, by se měl přidat k tomuto nastavení.
-- `enableAutoDiscovery`: Toto nastavení umožňuje automatické zjišťování a stahování souborů definice, jak je uvedeno dříve.
-- `compileOnSave`: Toto nastavení instruuje kompilátor, pokud by měl znovu zkompilovat pokaždé, když zdrojový soubor je uložen v sadě Visual Studio.
-- `typeAcquisition`: Tuto sadu nastavení řídí chování získání automatické typu (dále vysvětlili v [v této části](/visualstudio/ide/javascript-intellisense#Auto))
+- `allowJs`: Tato hodnota musí být nastavená na `true` pro rozpoznané soubory JavaScriptu. Výchozí hodnota je `false`, protože TypeScript kompiluje do JavaScriptu a kompilátor by neměl obsahovat soubory, které právě zkompiluje.
+- `outDir`: Tato hodnota by měla být nastavená na umístění, které není zahrnuté v projektu, aby se nezjistily vygenerované soubory JavaScriptu a pak se do projektu zahrnuly (viz `exclude`).
+- `module`: při použití modulů toto nastavení instruuje kompilátor, který formát modulu, který generovaný kód vygeneroval (například `commonjs` pro uzel nebo to software instalující, jako je například Browserify).
+- `exclude`: Toto nastavení určuje, které složky nechcete do projektu zahrnout.
+Do tohoto nastavení byste měli přidat umístění výstupu i neprojektové složky, například `node_modules` nebo `temp`.
+- `enableAutoDiscovery`: Toto nastavení povoluje automatickou detekci a stahování definičních souborů, jak je uvedeno dříve.
+- `compileOnSave`: Toto nastavení instruuje kompilátor, pokud by měl znovu kompilovat pokaždé, když je uložen zdrojový soubor v aplikaci Visual Studio.
+- `typeAcquisition`: Tato sada nastavení řídí chování automatického pořízení typu (dále Vysvětlete v [této části](/visualstudio/ide/javascript-intellisense#Auto)).
 
-Aby bylo možné převést soubory jazyka JavaScript na moduly CommonJS a umístit je do `./out` složky, můžete použít následující `tsconfig.json` souboru:
+Aby bylo možné převést soubory JavaScriptu na CommonJS moduly a umístit je do složky `./out`, můžete použít následující `tsconfig.json` soubor:
 
 ```json
 {
@@ -82,7 +82,7 @@ Aby bylo možné převést soubory jazyka JavaScript na moduly CommonJS a umíst
 }
 ```
 
-S nastavením na místě, pokud zdrojový soubor (`./app.js`) existovala a obsahovala několik funkcí jazyka ECMAScript 2015 následujícím způsobem:
+Pokud se jedná o nastavení, pokud zdrojový soubor (`./app.js`) existoval a obsahoval několik funkcí jazyka ECMAScript 2015, jak je znázorněno níže:
 
 ```js
 import {Subscription} from 'rxjs/Subscription';  // ES6 import
@@ -97,7 +97,7 @@ export let sqr = x => x * x;  //ES6 export, let, and arrow function
 export default Subscription;  //ES6 default export
 ```
 
-Pak soubor by měl vyzařovaného k `./out/app.js` cílení na ECMAScript 5 (výchozí), která vypadá nějak takto:
+Pak se soubor vygeneruje, aby se `./out/app.js` cílení na ECMAScript 5 (výchozí), který vypadá nějak takto:
 
 ```js
 "use strict";
@@ -115,23 +115,23 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = Subscription_1.Subscription;
 ```
 
-## <a name="better-intellisense"></a>Vylepšení IntelliSense
+## <a name="better-intellisense"></a>Lepší IntelliSense
 
-Technologie IntelliSense jazyka JavaScript v [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] bude nyní zobrazit mnohem víc o parametry a seznamech členů. Služba jazyka TypeScript, který používá statickou analýzu na pozadí pro lepší pochopení kódu poskytuje tyto nové informace. Můžete si přečíst další informace o nové prostředí IntelliSense a jak to funguje [tady](/visualstudio/ide/javascript-intellisense/).
+JavaScript IntelliSense v [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] nyní zobrazí další informace o parametrech a seznamech členů. Tyto nové informace poskytuje služba jazyka TypeScript, která používá statickou analýzu na pozadí pro lepší pochopení kódu. Můžete si přečíst další informace o novém prostředí IntelliSense a o [tom, jak to funguje.](/visualstudio/ide/javascript-intellisense/)
 
-## <a name="JSX"></a> Podpora syntaxi JSX
+## <a name="JSX"></a>Podpora syntaxe JSX
 
-JavaScript v [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] má bohatou podporu pro syntaxi JSX. JSX je sada syntaxe, která umožňuje značek HTML v rámci soubory jazyka JavaScript.
+JavaScript v [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] má bohatou podporu syntaxe JSX. JSX je sada syntaxe, která umožňuje značky HTML v souborech JavaScriptu.
 
-Následující obrázek znázorňuje React komponentu podle `comps.tsx` soubor TypeScript a potom tuto součást je používán z `app.jsx` souboru, bylo dokončeno s podporou technologie IntelliSense pro dokončování a dokumentace v rámci výrazy JSX.
-Není nutné TypeScript tady, v tomto konkrétním příkladu prostě se to děje tak, aby obsahovala kód TypeScript.
+Následující ilustrace znázorňuje komponentu reakce, která je definována v `comps.tsx` souboru TypeScript, a poté, co je tato součást používána ze souboru `app.jsx`, dokončete s IntelliSense pro dokončení a dokumentaci v rámci výrazů JSX.
+V tuto chvíli nepotřebujete TypeScript, tento konkrétní příklad se může skládat i z nějakého kódu TypeScript.
 
-![Syntaxi JSX](../javascript/media/js-react.png)
+![Syntaxe JSX](../javascript/media/js-react.png)
 
 > [!NOTE]
-> K převodu syntaxi JSX React volání, nastavení `"jsx": "react"` musí být přidané do `compilerOptions` v `tsconfig.json` souboru.
+> Chcete-li převést syntax JSX na reagující volání, musí být nastavení `"jsx": "react"` přidáno do `compilerOptions` v souboru `tsconfig.json`.
 
-Soubor JavaScript vytvořeno v ". / out/app.js při sestavení by obsahovat kód:
+Soubor JavaScriptu vytvořený v './out/App.js ' při sestavení by měl obsahovat kód:
 
 ```js
 "use strict";
@@ -139,25 +139,25 @@ var comps_1 = require('./comps');
 var x = React.createElement(comps_1.RepoDisplay, {description: "test"});
 ```
 
-## <a name="configure-your-javascript-project"></a>Konfigurace projektu JavaScript
+## <a name="configure-your-javascript-project"></a>Konfigurace projektu JavaScriptu
 
-Služba jazyka používá statickou analýzu, což znamená, že analyzuje zdrojový kód bez ve skutečnosti provádí ho, aby bylo možné vrátit výsledky technologie IntelliSense a poskytují další funkce pro úpravu.
-Proto větší množství a velikosti souborů, které jsou zahrnuty kontext projektu, víc paměti a procesoru se použije během analýzy.
-Z tohoto důvodu jsou několik výchozí předpoklady, které jsou provedeny o obrazec projektu:
+Služba jazyka používá statickou analýzu, což znamená, že analyzuje váš zdrojový kód bez skutečného spuštění, aby se vracely výsledky IntelliSense a poskytovaly další funkce úprav.
+Čím větší množství a velikost souborů, které jsou součástí vašeho kontextu projektu, tím více paměti a CPU budou použity při analýze.
+Z tohoto důvodu je k dispozici několik výchozích předpokladů týkajících se vašeho obrazce projektu:
 
-- `package.json` a `bower.json` seznam závislostí ve vašem projektu a ve výchozím nastavení jsou zahrnuty v automatické získání typu (ATA)
-- Nejvyšší úrovně `node_modules` složka obsahuje zdrojový kód knihovny a jeho obsah jsou vyloučené z kontext projektu ve výchozím nastavení
-- Každých dalších `.js`, `.jsx`, `.ts`, a `.tsx` soubor je pravděpodobně jednou z *vlastní* zdrojové soubory a musí být zahrnuty v kontextu projektu
+- `package.json` a `bower.json` seznam závislostí používaných vaším projektem a ve výchozím nastavení jsou zahrnuté do automatického pořízení typu (ATA).
+- `node_modules` složka na nejvyšší úrovni obsahuje zdrojový kód knihovny a její obsah je ve výchozím nastavení vyloučený z kontextu projektu.
+- Každé jiné `.js`, `.jsx`, `.ts`a soubor `.tsx` je pravděpodobně jeden z *vašich vlastních* zdrojových souborů a musí být zahrnut v kontextu projektu.
 
-Ve většině případů bude moct stačí otevřít vašeho projektu a mají skvělé zkušenosti s používáním výchozí konfigurace projektu. Nicméně v projektech, které je velký nebo mají jinou složku struktury, může být žádoucí dále konfigurovat službu jazyk lépe zaměřit jenom na zdrojové soubory.
+Ve většině případů budete moci otevřít projekt a mít skvělé zkušenosti s používáním výchozí konfigurace projektu. Nicméně v projektech, které jsou velké nebo mají jiné struktury složek, může být žádoucí, aby služba Language Service byla lépe nakonfigurovaná tak, aby se lépe zaostřely jenom na vaše vlastní zdrojové soubory.
 
-### <a name="override-defaults"></a>Přepsat výchozí hodnoty
+### <a name="override-defaults"></a>Přepsat výchozí
 
-Výchozí konfigurace můžete přepsat tak, že přidáte `tsconfig.json` soubor do kořenového adresáře projektu.
-A `tsconfig.json` obsahuje celou řadu různých možností, které můžete pracovat s kontext projektu.
-Několik z nich jsou uvedeny níže, ale pro úplnou sadu všechny možnosti, které jsou k dispozici, [zobrazit schéma, ukládání](http://json.schemastore.org/tsconfig).
+Můžete přepsat výchozí konfiguraci přidáním souboru `tsconfig.json` do kořenového adresáře projektu.
+`tsconfig.json` má několik různých možností, které mohou manipulovat s kontextem projektu.
+Níže jsou uvedeny některé z nich, ale úplnou sadu dostupných možností najdete v části [úložiště schémat](http://json.schemastore.org/tsconfig).
 
-## <a name="important-tsconfigjson-options"></a>Důležité `tsconfig.json` možnosti
+## <a name="important-tsconfigjson-options"></a>Důležité možnosti `tsconfig.json`
 
 ```json
 {
@@ -178,16 +178,16 @@ Několik z nich jsou uvedeny níže, ale pro úplnou sadu všechny možnosti, kt
 
 ### <a name="example-project-configuration"></a>Příklad konfigurace projektu
 
-Zadaný projekt s následujícím nastavením:
+S ohledem na projekt s následujícím nastavením:
 
-- zdrojové soubory projektu jsou v `wwwroot/js`
-- soubory projektu knihovny lib `wwwroot/lib`
-- `bootstrap`, `jquery`, `jquery-validation`, a `jquery-validation-unobtrusive` jsou uvedeny v `bower.json`
-- `kendo-ui` byl ručně přidán do složky lib
+- zdrojové soubory projektu jsou `wwwroot/js`
+- soubory LIB projektu jsou v `wwwroot/lib`
+- `bootstrap`, `jquery`, `jquery-validation`a `jquery-validation-unobtrusive` jsou uvedeny v `bower.json`
+- `kendo-ui` bylo ručně přidáno do složky lib.
 
-![struktura složek](../javascript/media/js-folderstructure.png)
+![Struktura složek](../javascript/media/js-folderstructure.png)
 
-Můžete použít následující `tsconfig.json` k Ujistěte se, že jazyk služby pouze analyzuje vaše zdrojové soubory v `js` složku, ale stále načítá a používá `.d.ts` souborů knihoven v vaše `lib` složky.
+Následující `tsconfig.json` můžete použít k ujištění, že služba jazyka analyzuje zdrojové soubory pouze ve složce `js`, ale stále načítá a používá `.d.ts` soubory pro knihovny ve složce `lib`.
 
 ```json
 {
@@ -203,10 +203,10 @@ Můžete použít následující `tsconfig.json` k Ujistěte se, že jazyk služ
 }
 ```
 
-## <a name="troubleshooting-the-javascript-language-service-has-been-disabled-for-the-following-projects"></a>Řešení potíží s JavaScript language service je zakázané pro následující projekty
-Když otevřete projekt jazyka JavaScript, která má velmi velké množství obsahu, může se zobrazit zpráva "služba jazyka JavaScript je zakázané pro následující projekty". Nejčastější příčinou nutnosti velmi velký objem zdrojového jazyka JavaScript je z důvodu včetně knihovny se zmírněními hrozeb zdrojový kód, který překračuje limit projektu 20 MB.
+## <a name="troubleshooting-the-javascript-language-service-has-been-disabled-for-the-following-projects"></a>Řešení potíží se službou jazyka JavaScript bylo zakázáno pro následující projekty.
+Když otevřete projekt JavaScriptu, který má velmi velký objem obsahu, může se zobrazit zpráva "služba jazyka JavaScript je pro následující projekty zakázaná." Nejběžnějším důvodem pro velmi velký objem zdrojů JavaScriptu je zahrnutí knihoven se zdrojovým kódem, který překračuje limit projektu 20MB.
 
-Jednoduchý způsob, jak optimalizovat váš projekt je přidat `tsconfig.json` soubor v kořenovém adresáři projektu, aby služba jazyka zjistit, které soubory jsou bezpečně ignorovat. Podle následující ukázky vyloučit nejběžnější adresáře, kde jsou uloženy knihovny:
+Jednoduchým způsobem, jak optimalizovat projekt, je přidat soubor `tsconfig.json` do kořenového adresáře projektu, aby služba jazyka mohla zjistit, které soubory jsou bezpečné pro ignorování. Pomocí níže uvedeného příkladu vylučte nejběžnější adresáře, ve kterých se ukládají knihovny:
 
 ```json
 {
@@ -228,39 +228,39 @@ Jednoduchý způsob, jak optimalizovat váš projekt je přidat `tsconfig.json` 
 }
 ```
 
-Přidáte další adresáře podle svých potřeb. Příklady zahrnují "dodavatele" nebo "wwwroot/lib" adresáře.
+Přidejte další adresáře podle potřeby. Mezi další příklady patří adresáře "dodavatel" nebo "wwwroot/lib".
 
 > [!NOTE]
-> Vlastnost kompilátoru `disableSizeLimit` lze také zakázat kontrolu limit 20 MB. Opatření speciální při použití této vlastnosti, protože limit zakázat, mohou selhat, služba jazyka.
+> Vlastnost kompilátoru `disableSizeLimit` lze použít také k zakázání limitu kontroly 20MB. Při použití této vlastnosti Vezměte v úvahu zvláštní opatření, protože zakázáním tohoto limitu by mohlo dojít k chybě služby jazyka.
 
-## <a name="notable-changes-from-visual-studio-2015"></a>Upozorňují na důležité změny ze sady Visual Studio 2015
+## <a name="notable-changes-from-visual-studio-2015"></a>Významné změny ze sady Visual Studio 2015
 
-Jako [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] funkce zcela nová jazyková služba, existuje pár chování, které se bude lišit nebo zcela chybět z předchozí zkušenosti.
-Nejdůležitější změny jsou nahrazení VSDoc s JSDoc, odebrání vlastní `.intellisense.js` rozšíření a omezené IntelliSense pro konkrétní kódech vzorků.
+Jelikož [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] nabízí zcela novou jazykovou službu, je k dispozici několik chování, která se liší nebo nevyskytují v předchozím prostředí.
+Nejvýznamnější změny jsou nahrazení VSDoc pomocí JSDoc, odebrání vlastních rozšíření `.intellisense.js` a omezení technologie IntelliSense pro konkrétní vzory kódu.
 
-### <a name="no-more-references-or-referencesjs"></a>Žádné další `///<references/>` nebo `_references.js`
+### <a name="no-more-references-or-_referencesjs"></a>Žádné další `///<references/>` ani `_references.js`
 
-Dříve bylo poměrně složité porozumět v kterémkoli daném okamžiku, které soubory byly ve vašem oboru technologie IntelliSense. Byl někdy žádoucí, aby všechny soubory v oboru a jindy nebylo, a to vedlo k komplexní konfigurace týkajících se správy ruční odkaz. Do budoucna, už nemusíte uvažovat o odkaz na správu a nepotřebujete tedy Trojitá lomítko odkazuje na komentáře nebo `_references.js` soubory.
+Dřív bylo poměrně komplikované pochopit, že v daném okamžiku byly soubory v oboru IntelliSense. V některých případech je žádoucí mít všechny vaše soubory v rozsahu a dalších časech a to vedlo ke složitým konfiguracím, které zahrnují ruční správu odkazů. Už nebudete muset myslet na správu odkazů, takže nepotřebujete tři lomítka s odkazy na komentáře nebo `_references.js` soubory.
 
-Zobrazit [technologie IntelliSense jazyka JavaScript](/visualstudio/ide/javascript-intellisense/) stránky pro další informace o tom, jak funguje technologie IntelliSense.
+Další informace o tom, jak funguje technologie IntelliSense, najdete na stránce [JavaScript IntelliSense](/visualstudio/ide/javascript-intellisense/) .
 
 ### <a name="vsdoc"></a>VSDoc
 
-Dokumentační komentáře XML, který se někdy označuje jako VSDocs, může použít dříve k vyplnění zdrojového kódu s další data, která se použije k buff výsledky technologie IntelliSense.
-VSDoc se už nepodporuje nahrazený [JSDoc](https://jsdoc.app/about-getting-started.html) tedy usnadňují zápis a přijaté standard pro jazyk JavaScript.
+Komentáře dokumentace XML, někdy označované jako VSDocs, mohou být použity k vyplnění zdrojového kódu dalšími daty, která by se použila k buffí výsledků technologie IntelliSense.
+VSDoc už není podporovaný ve prospěch [JSDoc](https://jsdoc.app/about-getting-started.html) , který je snazší psát a přijatý standard pro JavaScript.
 
-### <a name="intellisensejs-extensions"></a>`.intellisense.js` Rozšíření
+### <a name="intellisensejs-extensions"></a>rozšíření `.intellisense.js`
 
-Dříve, můžete třeba vytvořit [rozšíření technologie IntelliSense](https://msdn.microsoft.com/library/hh874692.aspx) které by bylo možné přidat vlastní dokončení výsledky pro knihovny třetích stran.
-Tato rozšíření se poměrně obtížně zápisu a instalaci a odkazy na ně byla náročnější, takže od této chvíle nová jazyková služba nebude podporovat tyto soubory.
-Jako alternativu snadnější, můžete napsat definiční soubor TypeScript a poskytuje stejné výhody IntelliSense jako původní `.intellisense.js` rozšíření.
-Další informace o deklaraci (`.d.ts`) vytváření souborů [tady](http://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).
+Dřív jste mohli vytvořit [rozšíření IntelliSense](https://msdn.microsoft.com/library/hh874692.aspx) , která vám umožní přidat vlastní výsledky dokončení pro knihovny třetích stran.
+Tato rozšíření byla poměrně obtížná při zápisu a instalaci a odkazování na ně byla nenáročná, takže nová jazyková služba nebude podporovat tyto soubory.
+Jednodušší Alternativně můžete napsat definiční soubor TypeScript, který poskytuje stejné výhody IntelliSense jako stará `.intellisense.js` rozšíření.
+Další informace o vytváření souborů deklarace (`.d.ts`) najdete [tady](http://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).
 
-### <a name="unsupported-patterns"></a>Nepodporovaná vzory
+### <a name="unsupported-patterns"></a>Nepodporované vzory
 
-Protože nová jazyková služba používá technologii statické analýzy spíše než prováděcího modulu (čtení [tento problém](https://github.com/Microsoft/TypeScript/issues/4789) informace rozdílů), existuje několik vzorových postupů jazyka JavaScript, které už můžete zjistit.
-Nejběžnější vzor je vzor "expando".
-Služba jazyka momentálně nemůže poskytnout technologii IntelliSense pro objekty, které mají skládaný po deklaraci vlastnosti.
+Vzhledem k tomu, že je nová jazyková služba poháněna statickou analýzou, nikoli prováděcím modulem ( [Tento problém](https://github.com/Microsoft/TypeScript/issues/4789) si přečtěte z informací o rozdílech), existuje několik vzorů JavaScriptu, které už se nedají detekovat.
+Nejběžnějším vzorem je vzor "expando".
+V současné době služba jazyka nemůže poskytnout IntelliSense pro objekty, které mají vlastnosti po deklaraci.
 Příklad:
 
 ```js
@@ -270,7 +270,7 @@ obj.b = "hello world";
 obj. // IntelliSense won't show properties a or b
 ```
 
-Můžete obejít tím deklarováním vlastnosti při vytváření objektu:
+To lze obejít deklarováním vlastností během vytváření objektu:
 
 ```js
 var obj = {
@@ -280,7 +280,7 @@ var obj = {
 obj. // IntelliSense shows properties a and b
 ```
 
-Komentáře JSDoc můžete také přidat následovně:
+Komentář JSDoc můžete také přidat následujícím způsobem:
 
 ```js
 /**

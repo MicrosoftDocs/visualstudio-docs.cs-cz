@@ -1,7 +1,7 @@
 ---
-title: Nainstalovat Visual Studio Build Tools do kontejneru
+title: Instalace Visual Studio Build Tools do kontejneru
 titleSuffix: ''
-description: Zjistěte, jak nainstalovat Visual Studio Build Tools do kontejneru Windows pro podporu kontinuální integrace a pracovní postupy průběžné doručování (CI/CD).
+description: Naučte se, jak nainstalovat Visual Studio Build Tools do kontejneru Windows, aby se podporovaly pracovní postupy průběžné integrace a průběžného doručování (CI/CD).
 ms.date: 07/03/2019
 ms.custom: seodec18
 ms.topic: conceptual
@@ -13,49 +13,49 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 24e27c8ca2c75e2345bea4f4393fcb00bba1a0d8
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 0a16f9501b9ce1e7c69eaa8f2460a50affd6d579
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67821713"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888716"
 ---
-# <a name="install-build-tools-into-a-container"></a>Instalace Build Tools do kontejneru
+# <a name="install-build-tools-into-a-container"></a>Instalace nástrojů sestavení do kontejneru
 
-Visual Studio Build Tools můžete nainstalovat do kontejneru Windows pro podporu kontinuální integrace a pracovní postupy průběžné doručování (CI/CD). Tento článek vás provede změny konfigurace Dockeru se vyžadují i co [úlohy a komponenty](workload-component-id-vs-build-tools.md) můžete nainstalovat v kontejneru.
+Můžete nainstalovat Visual Studio Build Tools do kontejneru Windows, aby se podporovaly pracovní postupy průběžné integrace a průběžného doručování (CI/CD). Tento článek vás provede jednotlivými požadavky na konfiguraci Docker a také o tom, jaké [úlohy a součásti](workload-component-id-vs-build-tools.md) můžete v kontejneru nainstalovat.
 
-[Kontejnery](https://www.docker.com/what-container) jsou skvělý způsob, jak systém konzistentní sestavení, můžete použít pouze v prostředí s CI/CD servery, ale pro vývojové prostředí a balíčků. Například můžete připojit váš zdrojový kód do kontejneru, který má být sestaven přizpůsobené prostředí. když budete pokračovat v používání sady Visual Studio nebo jinými nástroji psát kód. Pokud váš pracovní postup CI/CD používá stejnou image kontejneru, máte jistotu, které se kód sestavil konzistentně. Kontejnery můžete použít pro modul runtime konzistence, což je běžné, že mikroslužby pomocí systému Orchestrace; více kontejnerů je ale nad rámec tohoto článku.
+[Kontejnery](https://www.docker.com/what-container) představují skvělý způsob, jak zabalit konzistentní systém sestavení, můžete použít nejen v prostředí serveru CI/CD, ale také pro vývojová prostředí. Svůj zdrojový kód můžete například připojit do kontejneru, aby jej bylo možné sestavit v přizpůsobeném prostředí, zatímco budete nadále používat aplikaci Visual Studio nebo jiné nástroje pro zápis kódu. Pokud váš pracovní postup CI/CD používá stejnou image kontejneru, můžete si být jisti, že se kód konzistentně vytváří. Kontejnery můžete použít také pro konzistenci za běhu, což je běžné pro mikroslužby, které používají více kontejnerů se systémem orchestrace. Nejedná se však o rámec tohoto článku.
 
-Pokud Visual Studio Build Tools neobsahuje nezbytné k sestavování zdrojového kódu, stejný postup lze použít pro produkty Visual Studio. Mějte na paměti, ale kontejnerů Windows, je potřeba automatizovat všechny příkazy nepodporují interaktivní uživatelské rozhraní.
+Pokud Visual Studio Build Tools nemá pro sestavení zdrojového kódu k dispozici, můžete stejný postup použít pro jiné produkty sady Visual Studio. Upozorňujeme však, že kontejnery Windows nepodporují interaktivní uživatelské rozhraní, aby všechny příkazy musely být automatizované.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
-Některé znalost [Docker](https://www.docker.com/what-docker) se předpokládá, že níže. Pokud již nejste obeznámeni s Dockerem a systémem Windows, přečtěte si informace o tom, jak [nainstalovat a nakonfigurovat modul Docker na Windows](https://docs.microsoft.com/virtualization/windowscontainers/manage-docker/configure-docker-daemon).
+Níže je popsána některá ze znalostí s [Docker](https://www.docker.com/what-docker) . Pokud ještě nejste obeznámeni se spouštěním Docker ve Windows, přečtěte si informace o tom, jak [nainstalovat a nakonfigurovat modul Docker ve Windows](/virtualization/windowscontainers/manage-docker/configure-docker-daemon).
 
-Základní obrázku níže je příklad a nemusí fungovat pro váš systém. Čtení [Kompatibilita verzí kontejnerů Windows](https://docs.microsoft.com/virtualization/windowscontainers/deploy-containers/version-compatibility) Chcete-li určit, které základní image, měli byste použít pro vaše prostředí.
+Základní image níže je ukázkou a nemusí fungovat pro váš systém. Pokud chcete zjistit, jakou základní image byste měli použít pro vaše prostředí, přečtěte si [kompatibilitu verzí kontejnerů Windows](/virtualization/windowscontainers/deploy-containers/version-compatibility) .
 
-## <a name="create-and-build-the-dockerfile"></a>Vytvoření a vytvoření souboru Dockerfile
+## <a name="create-and-build-the-dockerfile"></a>Vytvoření a sestavení souboru Dockerfile
 
-Uložte soubor Dockerfile v následujícím příkladu do nového souboru na disku. Pokud je soubor nazván jednoduše soubor Dockerfile"", je rozpoznán ve výchozím nastavení.
+Následující příklad souboru Dockerfile uložte do nového souboru na disku. Pokud je soubor pojmenován jednoduše "souboru Dockerfile", je ve výchozím nastavení rozpoznán.
 
 > [!WARNING]
-> V tomto příkladu soubor Dockerfile vyloučí pouze starší Windows sad SDK, kterou nejde instalovat do kontejnerů. Dřívější verze způsobit selhání příkazu sestavení.
+> Tento příklad souboru Dockerfile vyloučí jenom starší sady Windows SDK, které se nedají nainstalovat do kontejnerů. Starší verze způsobují selhání příkazu sestavení.
 
 1. Otevřete příkazový řádek.
 
-1. Vytvořte nový adresář (doporučeno):
+1. Vytvořit nový adresář (doporučeno):
 
    ```shell
    mkdir C:\BuildTools
    ```
 
-1. Změňte adresář na tento nový adresář:
+1. Změňte adresáře do tohoto nového adresáře:
 
    ```shell
    cd C:\BuildTools
    ```
 
-1. Uložte C:\BuildTools\Dockerfile následujícím obsahem.
+1. Uložit následující obsah do C:\BuildTools\Dockerfile.
  
    ::: moniker range="vs-2017"
 
@@ -89,11 +89,11 @@ Uložte soubor Dockerfile v následujícím příkladu do nového souboru na dis
    ```
 
    > [!WARNING]
-   > Pokud základní image přímo na microsoft/windowsservercore nebo mcr.microsoft.com/windows/servercore (naleznete v tématu [syndikátní Microsoft podniky kontejneru katalogu](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/)), nemusí správně nainstalovat rozhraní .NET Framework a je žádná chyba instalace uvedené. Po dokončení instalace nemusí spouštět spravovaný kód. Místo toho na základní image [microsoft/dotnet-framework:4.7.2](https://hub.docker.com/r/microsoft/dotnet-framework) nebo novější. Všimněte si také, že Image, které jsou označené verzí 4.7.2 nebo vyšší může pomocí prostředí PowerShell jako výchozí `SHELL`, což způsobí, že `RUN` a `ENTRYPOINT` pokyny k selhání.
+   > Pokud jste image zavedli přímo na Microsoft/windowsservercore nebo mcr.microsoft.com/windows/servercore (viz téma [Microsoft syndikáting Container Catalog](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/)), .NET Framework nemusí být správně nainstalováno a nebude zobrazena žádná chyba instalace. Spravovaný kód se po dokončení instalace nemusí spustit. Místo toho použijte obrázek na bázi [Microsoft/DotNET-Framework: 4.7.2](https://hub.docker.com/r/microsoft/dotnet-framework) nebo novější. Všimněte si také, že image s označením verze 4.7.2 nebo novější může jako výchozí `SHELL`používat PowerShell, což způsobí, že se `RUN` a pokyny `ENTRYPOINT` nezdařily.
    >
-   > Visual Studio 2017 verze 15,8 nebo starší (libovolný produkt) se nenainstaluje správně mcr.microsoft.com/windows/servercore:1809 nebo novější. Se nezobrazí žádná chyba.
+   > Visual Studio 2017 verze 15,8 nebo starší (jakýkoli produkt) nebude správně nainstalován v mcr.microsoft.com/windows/servercore:1809 nebo novějším. Nezobrazuje se žádná chyba.
    >
-   > Zobrazit [Kompatibilita verzí kontejnerů Windows](https://docs.microsoft.com/virtualization/windowscontainers/deploy-containers/version-compatibility) zobrazíte, které verze kontejneru operačního systému se podporují na hostitelském operačním systému verze, a [známé problémy pro kontejnery](build-tools-container-issues.md) známých problémů.
+   > Informace o podporovaných verzích operačních systémů, ve kterých verzích operačního systému hostitele a [známých problémech pro kontejnery](build-tools-container-issues.md) pro známé problémy najdete v tématu [Kompatibilita verzí kontejnerů Windows](/virtualization/windowscontainers/deploy-containers/version-compatibility) .
 
    ::: moniker-end
 
@@ -129,13 +129,13 @@ Uložte soubor Dockerfile v následujícím příkladu do nového souboru na dis
    ```
 
    > [!WARNING]
-   > Pokud vytváříte svou image přímo na microsoft/windowsservercore, nemusí správně nainstalovat rozhraní .NET Framework a je uvedena žádná chyba instalace. Po dokončení instalace nemusí spouštět spravovaný kód. Místo toho na základní image [microsoft/dotnet-framework: 4.8](https://hub.docker.com/r/microsoft/dotnet-framework) nebo novější. Také může Všimněte si, že Image, které jsou označené verze 4,8 nebo novější pomocí Powershellu, jako výchozí `SHELL`, což způsobí, že `RUN` a `ENTRYPOINT` pokyny k selhání.
+   > Pokud bitovou kopii založíte přímo na Microsoft/windowsservercore, .NET Framework se nemusí správně nainstalovat a nebude se naznačit žádná chyba instalace. Spravovaný kód se po dokončení instalace nemusí spustit. Místo toho použijte obrázek na bázi [Microsoft/DotNET-Framework: 4.8](https://hub.docker.com/r/microsoft/dotnet-framework) nebo novější. Všimněte si také, že image s označením verze 4,8 nebo novější můžou jako výchozí `SHELL`používat PowerShell, což způsobí, že se `RUN` a pokyny `ENTRYPOINT` nezdařily.
    >
-   > Zobrazit [Kompatibilita verzí kontejnerů Windows](https://docs.microsoft.com/virtualization/windowscontainers/deploy-containers/version-compatibility) zobrazíte, které verze kontejneru operačního systému se podporují na hostitelském operačním systému verze, a [známé problémy pro kontejnery](build-tools-container-issues.md) známých problémů.
+   > Informace o podporovaných verzích operačních systémů, ve kterých verzích operačního systému hostitele a [známých problémech pro kontejnery](build-tools-container-issues.md) pro známé problémy najdete v tématu [Kompatibilita verzí kontejnerů Windows](/virtualization/windowscontainers/deploy-containers/version-compatibility) .
 
    ::: moniker-end
 
-1. Spusťte následující příkaz v tomto adresáři.
+1. V tomto adresáři spusťte následující příkaz.
 
    ::: moniker range="vs-2017"
 
@@ -143,9 +143,9 @@ Uložte soubor Dockerfile v následujícím příkladu do nového souboru na dis
    docker build -t buildtools2017:latest -m 2GB .
    ```
 
-   Tento příkaz sestaví soubor Dockerfile v aktuálním adresáři pomocí 2 GB paměti. Výchozí hodnota 1 GB nestačí při instalaci některých úloh; Nicméně je možné vytvářet pouze 1 GB paměti, v závislosti na požadavcích sestavení.
+   Tento příkaz vytvoří souboru Dockerfile v aktuálním adresáři pomocí 2 GB paměti. Výchozí 1 GB není při instalaci některých úloh dostačující; v závislosti na požadavcích na sestavení však může být možné sestavení vytvořit pouze s 1 GB paměti.
 
-   Finální image je označený "buildtools2017:latest", takže můžete snadno ji spustit v kontejneru jako "buildtools2017" od "posledního" značka je výchozí, pokud není zadána žádná značka. Pokud chcete použít konkrétní verzi sady Visual Studio vytvářet 2017 nástroje více [pokročilý scénář](advanced-build-tools-container.md), může být místo toho značku kontejneru s konkrétním Visual Studio build číslo stejně jako "posledního", tak kontejnery lze použít konkrétní verze konzistentně.
+   Konečný obrázek je označený jako "buildtools2017: nejnovější", takže ho můžete snadno spustit v kontejneru jako "buildtools2017", protože značka "poslední" je výchozí, pokud není zadaná žádná značka. Pokud chcete v pokročilejším [scénáři](advanced-build-tools-container.md)použít určitou verzi Visual Studio Build Tools 2017, můžete místo toho označit kontejner pomocí konkrétního čísla sestavení sady Visual Studio a také "poslední", aby kontejnery mohli používat konkrétní verzi konzistentně.
 
    ::: moniker-end
 
@@ -155,19 +155,19 @@ Uložte soubor Dockerfile v následujícím příkladu do nového souboru na dis
    docker build -t buildtools2019:latest -m 2GB .
    ```
 
-   Tento příkaz sestaví soubor Dockerfile v aktuálním adresáři pomocí 2 GB paměti. Výchozí hodnota 1 GB nestačí při instalaci některých úloh; Nicméně je možné vytvářet pouze 1 GB paměti, v závislosti na požadavcích sestavení.
+   Tento příkaz vytvoří souboru Dockerfile v aktuálním adresáři pomocí 2 GB paměti. Výchozí 1 GB není při instalaci některých úloh dostačující; v závislosti na požadavcích na sestavení však může být možné sestavení vytvořit pouze s 1 GB paměti.
 
-   Finální image je označený "buildtools2019:latest", takže můžete snadno ji spustit v kontejneru jako "buildtools2019" od "posledního" značka je výchozí, pokud není zadána žádná značka. Pokud chcete použít konkrétní verzi sady Visual Studio vytvářet 2019 nástroje více [pokročilý scénář](advanced-build-tools-container.md), může být místo toho značku kontejneru s konkrétním Visual Studio build číslo stejně jako "posledního", tak kontejnery lze použít konkrétní verze konzistentně.
+   Konečný obrázek je označený jako "buildtools2019: nejnovější", takže ho můžete snadno spustit v kontejneru jako "buildtools2019", protože značka "poslední" je výchozí, pokud není zadaná žádná značka. Pokud chcete v pokročilejším [scénáři](advanced-build-tools-container.md)použít určitou verzi Visual Studio Build Tools 2019, můžete místo toho označit kontejner pomocí konkrétního čísla sestavení sady Visual Studio a také "poslední", aby kontejnery mohli používat konkrétní verzi konzistentně.
 
    ::: moniker-end
 
-## <a name="using-the-built-image"></a>Pomocí sestavenou image
+## <a name="using-the-built-image"></a>Použití sestavené image
 
-Teď, když jste vytvořili image, můžete ji spustit v kontejneru provádět interaktivní a automatizované sestavování. V příkladu se používá Developer Command Prompt, takže vaše cesta i ostatním proměnným prostředí jsou už nakonfigurovaná.
+Teď, když jste vytvořili image, ji můžete spustit v kontejneru, abyste mohli provádět interaktivní i automatizované sestavení. V příkladu se používá Developer Command Prompt, takže vaše cesta a další proměnné prostředí jsou již nakonfigurovány.
 
 1. Otevřete příkazový řádek.
 
-1. Spuštění kontejneru začínat prostředí PowerShell pro všechny vývojáře nastavení proměnné prostředí:
+1. Spusťte kontejner a spusťte prostředí PowerShell se sadou proměnných prostředí pro vývojáře:
 
    ::: moniker range="vs-2017"
 
@@ -185,7 +185,7 @@ Teď, když jste vytvořili image, můžete ji spustit v kontejneru provádět i
 
    ::: moniker-end
 
-Pokud chcete použít tuto bitovou kopii pro pracovní postup CI/CD, je možné ji publikovat na vlastní [Azure Container Registry](https://azure.microsoft.com/services/container-registry) nebo jiných interní [registru Dockeru](https://docs.docker.com/registry/deploying) tak servery potřebují jenom chcete stáhnout.
+Pokud chcete tuto image pro svůj pracovní postup CI/CD použít, můžete ji publikovat do vlastního [Azure Container Registry](https://azure.microsoft.com/services/container-registry) nebo jiného interního [registru Docker](https://docs.docker.com/registry/deploying) , aby se servery musely načíst jenom.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
@@ -193,4 +193,4 @@ Pokud chcete použít tuto bitovou kopii pro pracovní postup CI/CD, je možné 
 
 * [Rozšířený příklad pro kontejnery](advanced-build-tools-container.md)
 * [Známé problémy s kontejnery](build-tools-container-issues.md)
-* [ID pracovního vytížení a komponenta Visual Studio Build Tools](workload-component-id-vs-build-tools.md)
+* [Visual Studio Build Tools úlohy a ID komponent](workload-component-id-vs-build-tools.md)

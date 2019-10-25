@@ -6,12 +6,12 @@ ms.author: sayedha
 ms.date: 04/02/2019
 ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
-ms.openlocfilehash: ef59a45bd3dd5b3ab2f3e5219d6674c8e7b095e2
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.openlocfilehash: 493e03ecd2a10d7cd9e81467d5886f863cd7229b
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108080"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888598"
 ---
 # <a name="introduction-to-azure-functions"></a>Úvod do Azure Functions
 
@@ -36,7 +36,7 @@ K vytváření a nasazování funkcí budete potřebovat také předplatné Azur
 
     > [!TIP]
     > I když jsou v sadě Azure Functions běhové prostředí a šablony (CLI) zachované jako dostupné, nevyhnutelně jsou zastaralé. Při vytváření nového projektu Functions Visual Studio pro Mac zkontroluje aktualizace rozhraní příkazového řádku a upozorní vás, jak je znázorněno na následujícím obrázku. Stačí kliknout na tlačítko a stáhnout aktualizované šablony.
-    > ![K dispozici je dialogové okno Nový projekt zobrazující aktualizace služby Azure Functions.](media/azure-functions-update.png)
+    > ![dialogového okna Nový projekt zobrazující aktualizace služby Azure Functions jsou k dispozici](media/azure-functions-update.png)
 
     V závislosti na typu vybrané funkce vás na další stránce zobrazí výzva k zadání podrobností, jako jsou například přístupová práva, jak je znázorněno na následujícím obrázku:
 
@@ -72,7 +72,7 @@ Díky podpoře Azure Functions v Visual Studio pro Mac můžete testovat a ladit
 
     Zkopírujte adresu URL z výstupu.
 
-3. Vložte adresu URL požadavku HTTP do adresního řádku prohlížeče. Přidejte řetězec `?name=<yourname>` dotazu na konec adresy URL a spusťte požadavek. Následující obrázek ukazuje odpověď v prohlížeči na místní požadavek GET vrácený funkcí:
+3. Vložte adresu URL požadavku HTTP do adresního řádku prohlížeče. Přidejte řetězec dotazu `?name=<yourname>` na konec adresy URL a spusťte požadavek. Následující obrázek ukazuje odpověď v prohlížeči na místní požadavek GET vrácený funkcí:
 
     ![požadavek HTTP v prohlížeči](media/azure-functions-httpreq.png)
 
@@ -94,16 +94,16 @@ Výše uvedený postup můžete použít k přidání dalších funkcí do proje
 
 ## <a name="publish-to-azure"></a>Publikování do Azure
 
-1. Klikněte pravým tlačítkem na název projektu a vyberte **publikovat > publikovat do Azure**:  ![Možnost publikování do nabídky Azure](media/azure-functions-image5.png)
+1. Klikněte pravým tlačítkem na název projektu a vyberte **publikovat > publikovat do Azure**: ![možnosti publikovat do Azure](media/azure-functions-image5.png)
 2. Pokud jste už účet Azure připojili k Visual Studio pro Mac zobrazí se seznam dostupných služeb App Services. Pokud jste se přihlásili, budete vyzváni k tomu.
 3. V dialogovém okně **publikovat do Azure App Service** můžete buď vybrat existující službu App Service, nebo vytvořit novou, kliknutím na **Nový**.
-4. V dialogovém okně **vytvořit nový App Service** zadejte nastavení:  ![Možnost publikování do nabídky Azure](media/azure-functions-image7.png)
+4. V dialogovém okně **vytvořit nový App Service** zadejte nastavení: ![možnosti publikovat do Azure](media/azure-functions-image7.png)
 
-    |Nastavení  |Popis  |
+    |Nastavením  |Popis  |
     |---------|---------|
     |**Název App Service**|Globálně jedinečný název, který identifikuje vaši novou aplikaci Function App.|
-    |**Předplatné**|Předplatné Azure, které se má použít.|
-    |**[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)**|Název skupiny prostředků, ve které se má vytvořit aplikace Function App Vyberte **+** vytvořit novou skupinu prostředků.|
+    |**Formě**|Předplatné Azure, které se má použít.|
+    |**[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)**|Název skupiny prostředků, ve které se má vytvořit aplikace Function App Pokud chcete vytvořit novou skupinu prostředků, vyberte **+** .|
     |**[Plán služby](/azure/azure-functions/functions-scale)**|Vyberte existující plán nebo vytvořte vlastní plán. Vyberte umístění v oblasti poblíž nebo v blízkosti jiných služeb, ke kterým máte přístup.|
 
 5. Kliknutím na **Další** vytvořte účet úložiště. Modul runtime Functions vyžaduje účet služby Azure Storage. Kliknutím na **vlastní** vytvořte účet úložiště pro obecné účely nebo použijte existující:
@@ -120,7 +120,7 @@ Výše uvedený postup můžete použít k přidání dalších funkcí do proje
 
 Všechna nastavení, která jste přidali v Local. Settings. JSON, se musí taky přidat do aplikace Function App v Azure. Tato nastavení nejsou nahrána automaticky při publikování projektu.
 
-Přístup k nastavení aplikace získáte tak, že přejdete na [https://ms.portal.azure.com/](https://ms.portal.azure.com/)Azure Portal na adrese. V části **aplikace Functions**vyberte **aplikace Function** App a zvýrazněte název vaší funkce:
+Přístup k nastavení aplikace získáte tak, že přejdete na Azure Portal [https://ms.portal.azure.com/](https://ms.portal.azure.com/). V části **aplikace Functions**vyberte **aplikace Function** App a zvýrazněte název vaší funkce:
 
 ![Nabídka Azure Functions](media/azure-functions-image9.png)
 
@@ -132,7 +132,7 @@ Tady můžete nastavit nastavení aplikace pro aplikaci Function App, kde může
 
 ![oblast nastavení aplikace Azure Portal](media/azure-functions-image11.png)
 
-Možná budete muset nastavit `FUNCTIONS_EXTENSION_VERSION`jedno důležité nastavení. Při publikování z Visual Studio pro Mac by tato hodnota měla být nastavená na **beta**.
+Je možné, že budete muset nastavit jedno z důležitých nastavení `FUNCTIONS_EXTENSION_VERSION`. Při publikování z Visual Studio pro Mac by tato hodnota měla být nastavená na **beta**.
 
 ## <a name="available-function-templates"></a>Dostupné šablony funkcí
 
@@ -152,10 +152,10 @@ Možná budete muset nastavit `FUNCTIONS_EXTENSION_VERSION`jedno důležité nas
 
 - **Trigger objektu BLOB** – proces Azure Storage objekty BLOB při přidání do kontejneru Kromě názvu funkce Tato šablona také přebírá cestu a vlastnost připojení. Vlastnost Path (cesta) je cesta v účtu úložiště, kterou bude aktivační událost monitorovat. Účet pro připojení je název nastavení aplikace, které obsahuje připojovací řetězec účtu úložiště. Další informace najdete v článku o [službě Azure functions BLOB Storage](/azure/azure-functions/functions-create-storage-blob-triggered-function).
 
-- **Obecný Webhook** – jedná se o jednoduchou funkci, která se spustí pokaždé, když přijme žádost od libovolné služby, která podporuje Webhooky. Další informace najdete v [článku Azure Functions na obecných](/azure/azure-functions/functions-create-generic-webhook-triggered-function)webhookech.
+- **Obecný Webhook** – jedná se o jednoduchou funkci, která se spustí pokaždé, když přijme žádost od libovolné služby, která podporuje Webhooky. Další informace najdete v [článku Azure Functions na obecných webhookech](/azure/azure-functions/functions-create-generic-webhook-triggered-function).
 
-- **Orchestrace trvalých funkcí** – Durable Functions umožňuje psát stavové funkce v prostředí bez serveru. Rozšíření pro vás spravuje stav, kontrolní body a restarty. Další informace najdete v průvodci funkcemi Azure na trvalých [funkcích](/azure/azure-functions/durable-functions-overview).
+- **Orchestrace trvalých funkcí** – Durable Functions umožňuje psát stavové funkce v prostředí bez serveru. Rozšíření pro vás spravuje stav, kontrolní body a restarty. Další informace najdete v průvodci funkcemi Azure na [trvalých funkcích](/azure/azure-functions/durable-functions-overview).
 
 - **Změna velikosti obrázku** – Tato funkce vytvoří obrázky se změněnou velikostí pokaždé, když se do kontejneru přidá objekt BLOB. Šablona používá cestu a připojovací řetězec pro aktivační událost, malý výstup obrázku a střední výstup obrázku.
 
-- **Token SAS** – Tato funkce GENERUJE token SAS pro daný Azure Storage kontejner a název objektu BLOB. Kromě názvu funkce Tato šablona také přebírá cestu a vlastnost připojení. Vlastnost Path (cesta) je cesta v účtu úložiště, kterou bude aktivační událost monitorovat. Účet pro připojení je název nastavení aplikace, které obsahuje připojovací řetězec účtu úložiště. Je také potřeba nastavit **přístupová práva** . Úroveň autorizace řídí, jestli funkce vyžaduje klíč rozhraní API a který klíč se má použít; Funkce používá klíč funkce. Správce používá váš hlavní klíč. Další informace najdete v tématu Ukázka [ C# funkce Azure Functions pro vygenerování tokenů SAS](https://azure.microsoft.com/resources/samples/functions-dotnet-sas-token/) .
+- **Token SAS** – Tato funkce GENERUJE token SAS pro daný Azure Storage kontejner a název objektu BLOB. Kromě názvu funkce Tato šablona také přebírá cestu a vlastnost připojení. Vlastnost Path (cesta) je cesta v účtu úložiště, kterou bude aktivační událost monitorovat. Účet pro připojení je název nastavení aplikace, které obsahuje připojovací řetězec účtu úložiště. Je také potřeba nastavit **přístupová práva** . Úroveň autorizace řídí, jestli funkce vyžaduje klíč rozhraní API a který klíč se má použít; Funkce používá klíč funkce. Správce používá váš hlavní klíč. Další informace najdete v tématu Ukázka [ C# funkce Azure Functions pro vygenerování tokenů SAS](https://github.com/Azure-Samples/functions-dotnet-sas-token/) .

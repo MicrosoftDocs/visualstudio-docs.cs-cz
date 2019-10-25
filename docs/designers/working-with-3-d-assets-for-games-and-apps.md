@@ -10,12 +10,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 55986a703bd53318f8c0f74b8cf661412a82b716
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4269a6f17c83e7fe6f111c4e564ace0e40cfa7e6
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72634002"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888480"
 ---
 # <a name="work-with-3d-assets-for-games-and-apps"></a>Práce s 3D prostředky pro hry a aplikace
 
@@ -46,11 +46,11 @@ Shadery jsou malé, programy specifické pro doménu, které běží na grafick�
 K vytváření vlastních vizuálních efektů bez znalosti programování v HLSL můžete použít Visual Studio Shader Designer, což je nástroj pro návrh shaderu založený na grafu.
 
 > [!NOTE]
-> Další informace o tom, jak začít s programováním v rozhraní DirectX, najdete v tématu [DirectX](http://go.microsoft.com/fwlink/p/?LinkId=224633). Další informace o ladění aplikace založené na rozhraní DirectX najdete v tématu [Diagnostika grafiky (ladění grafiky DirectX)](../debugger/graphics/visual-studio-graphics-diagnostics.md).
+> Další informace o tom, jak začít s programováním v rozhraní DirectX, najdete v tématu [DirectX](/windows/win32/directx). Další informace o ladění aplikace založené na rozhraní DirectX najdete v tématu [Diagnostika grafiky (ladění grafiky DirectX)](../debugger/graphics/visual-studio-graphics-diagnostics.md).
 
 ## <a name="directx-version-compatibility"></a>Kompatibilita verzí DirectX
 
-Visual Studio používá rozhraní DirectX k vykreslování 2D a 3D prostředků. Můžete vybrat buď vykreslovací modul rozhraní DirectX 11, nebo systém Windows Advanced Rastring Platform (pokřivení) softwaru. Vykreslovací modul rozhraní DirectX 11 poskytuje vysoce výkonné vykreslování s hardwarovou akcelerací na procesorech DirectX 11 a DirectX 10. Zobrazovací jednotka pro pokřivení pomáhá zajistit, aby vaše prostředky pracovaly s širokou škálou počítačů – to zahrnuje počítače, které nemají moderní grafický hardware a počítače s integrovaným grafickým hardwarem. Další informace o prostudování najdete v tématu [Příručka k platformě Windows Advanced rastring Platform (POkřivení)](http://go.microsoft.com/fwlink/p/?LinkId=224634).
+Visual Studio používá rozhraní DirectX k vykreslování 2D a 3D prostředků. Můžete vybrat buď vykreslovací modul rozhraní DirectX 11, nebo systém Windows Advanced Rastring Platform (pokřivení) softwaru. Vykreslovací modul rozhraní DirectX 11 poskytuje vysoce výkonné vykreslování s hardwarovou akcelerací na procesorech DirectX 11 a DirectX 10. Zobrazovací jednotka pro pokřivení pomáhá zajistit, aby vaše prostředky pracovaly s širokou škálou počítačů – to zahrnuje počítače, které nemají moderní grafický hardware a počítače s integrovaným grafickým hardwarem. Další informace o prostudování najdete v tématu [Příručka k platformě Windows Advanced rastring Platform (POkřivení)](/windows/win32/direct3darticles/directx-warp).
 
 ## <a name="related-topics"></a>Související témata
 
