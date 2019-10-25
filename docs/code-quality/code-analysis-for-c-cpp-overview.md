@@ -21,16 +21,16 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a20637b7c7c3afcf594d1498b6030c685e4be72
-ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.openlocfilehash: 515b9b7eb1b1a4d2dbee6329be782386b8370338
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163054"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806307"
 ---
 # <a name="code-analysis-for-cc-overview"></a>Analýza kódu pro C/C++ přehled
 
-Nástroj Analýza kóduC++ v jazyce c/a poskytuje informace o možných chybách ve vašemC++ kódu C/source. Běžné chyby kódování hlášené nástrojem zahrnují přetečení vyrovnávací paměti, neinicializovaná paměť, zpětné odkazy na ukazatel s hodnotou null a paměti a nevrácené prostředky. Nástroj může také spustit kontroly se [ C++ základními pokyny](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md).
+Nástroj Analýza kóduC++ v jazyce c/a poskytuje informace o možných chybách ve vašemC++ kódu C/source. Běžné chyby kódování hlášené nástrojem zahrnují přetečení vyrovnávací paměti, neinicializovaná paměť, zpětné odkazy na ukazatel s hodnotou null a paměti a nevrácené prostředky. Nástroj může také spustit kontroly se [ C++ základními pokyny](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md).
 
 ## <a name="ide-integrated-development-environment-integration"></a>Integrace integrovaného vývojového prostředí (IDE)
 
@@ -50,7 +50,7 @@ C:\>cl /analyze Sample.cpp
 
 ## <a name="pragma-support"></a>Podpora #pragma
 
-Pomocí direktivy `#pragma` můžete zacházet s upozorněními jako s chybami. Povolit nebo zakázat upozornění a potlačit upozornění pro jednotlivé řádky kódu. Další informace naleznete v tématu [direktivy pragma a klíčové slovo __pragma](https://docs.microsoft.com/cpp/preprocessor/pragma-directives-and-the-pragma-keyword).
+Pomocí direktivy `#pragma` můžete považovat upozornění za chyby. Povolit nebo zakázat upozornění a potlačit upozornění pro jednotlivé řádky kódu. Další informace naleznete v tématu [direktivy pragma a klíčové slovo __pragma](/cpp/preprocessor/pragma-directives-and-the-pragma-keyword).
 
 ## <a name="annotation-support"></a>Podpora poznámek
 
@@ -62,12 +62,12 @@ Možná budete chtít vyžadovat, aby všechna vrácení se změnami zdrojového
 
 ## <a name="team-build-integration"></a>Integrace sestavení týmu
 
-Pomocí integrovaných funkcí systému sestavení lze nástroj pro analýzu kódu spustit jako krok procesu sestavení [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]. Další informace najdete v tématu [kanály Azure](/azure/devops/pipelines/index?view=vsts).
+Pomocí integrovaných funkcí systému sestavení lze nástroj pro analýzu kódu spustit jako krok procesu [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] sestavení. Další informace najdete v tématu [Azure Pipelines](/azure/devops/pipelines/index?view=vsts).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Rychlý start: Analýza kódu pro C/C++](quick-start-code-analysis-for-c-cpp.md)
-- [Návod: Analyzovat C/C++ kód pro vady @ no__t-1
+- [Rychlý Start: Analýza kódu pro C/C++](quick-start-code-analysis-for-c-cpp.md)
+- [Návod: Analýza kódu CC++ /pro vady](walkthrough-analyzing-c-cpp-code-for-defects.md)
 - [Upozornění Analýzy kódu pro C/C++](code-analysis-for-c-cpp-warnings.md)
 - [Použití kontrolních mechanismů C++ Core Guidelines](using-the-cpp-core-guidelines-checkers.md)
 - [C++Reference k základní kontrole – referenční pokyny](code-analysis-for-cpp-corecheck.md)

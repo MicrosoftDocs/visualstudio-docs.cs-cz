@@ -128,12 +128,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: ca1e66defbce50a9119e817155bcc2a98d01af9d
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 8437a18bf2b732ee3f12774b04baedf12003d554
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72442407"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806804"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>Zadávání poznámek k parametrům funkcí a návratovým hodnotám
 Tento článek popisuje typické použití poznámek pro jednoduché parametry funkcí – skalární objekty a ukazatele na struktury a třídy – a většinu druhů vyrovnávacích pamětí.  Tento článek také ukazuje běžné způsoby použití pro poznámky. Další poznámky, které se vztahují k funkcím, najdete v tématu věnovaném [chování funkcí s poznámkami](../code-quality/annotating-function-behavior.md).
@@ -169,7 +169,7 @@ Pro poznámky v následující tabulce, pokud je parametr ukazatele označen př
 
      Ukazatel na pole, který je čten funkcí.  Pole má velikost `s` prvků, přičemž všechny musí být platné.
 
-     Varianta `_bytes_` dává velikost v bajtech namísto prvků. Tuto hodnotu použijte pouze v případě, že velikost nelze vyjádřit jako prvky.  Například `char` řetězce by používaly variantu `_bytes_` pouze v případě, že je podobná funkce, která používá `wchar_t`.
+     `_bytes_` variant dává velikost v bajtech namísto prvků. Tuto hodnotu použijte pouze v případě, že velikost nelze vyjádřit jako prvky.  Například `char` řetězců by používala `_bytes_` variant pouze v případě, že je podobná funkce, která používá `wchar_t`.
 
 - `_In_reads_z_(s)`
 
@@ -177,7 +177,7 @@ Pro poznámky v následující tabulce, pokud je parametr ukazatele označen př
 
 - `_In_reads_or_z_(s)`
 
-     Ukazatel na pole, které je zakončené hodnotou null nebo má známou velikost nebo obojí. Prvky až do ukončovacího znaku null, nebo `s`, pokud neexistuje ukončovací znak null – musí být platný v předběžném stavu.  Pokud je velikost známá v bajtech, škálovat `s` podle velikosti prvku.  (Používá se pro @no__t řady 0)
+     Ukazatel na pole, které je zakončené hodnotou null nebo má známou velikost nebo obojí. Prvky až do ukončovacího znaku null, nebo `s`, pokud neexistuje ukončovací znak null – musí být platný v předběžném stavu.  Pokud je velikost známá v bajtech, škálovat `s` podle velikosti prvku.  (Používá se pro rodinu `strn`)
 
 - `_Out_writes_(s)`
 
@@ -187,9 +187,9 @@ Pro poznámky v následující tabulce, pokud je parametr ukazatele označen př
 
      `typedef _Null_terminated_ wchar_t *PWSTR; void MyStringCopy(_Out_writes_ (size) PWSTR p1,    _In_ size_t size,    _In_ PWSTR p2);`
 
-     V tomto příkladu volající poskytuje vyrovnávací paměť `size` prvků pro `p1`.  `MyStringCopy` způsobí, že některé z těchto elementů jsou platné. Důležitější je, `_Null_terminated_` anotace v `PWSTR` znamená, že `p1` je v post-State zakončené znakem null.  Tímto způsobem je počet platných prvků stále správně definován, ale konkrétní počet prvků není vyžadován.
+     V tomto příkladu volající poskytuje vyrovnávací paměť `size` prvků pro `p1`.  `MyStringCopy` způsobí, že některé z těchto elementů jsou platné. Důležitější je, `_Null_terminated_` anotace `PWSTR` znamená, že `p1` ve stavu post jsou zakončené znakem null.  Tímto způsobem je počet platných prvků stále správně definován, ale konkrétní počet prvků není vyžadován.
 
-     Varianta `_bytes_` dává velikost v bajtech namísto prvků. Tuto hodnotu použijte pouze v případě, že velikost nelze vyjádřit jako prvky.  Například `char` řetězce by používaly variantu `_bytes_` pouze v případě, že je podobná funkce, která používá `wchar_t`.
+     `_bytes_` variant dává velikost v bajtech namísto prvků. Tuto hodnotu použijte pouze v případě, že velikost nelze vyjádřit jako prvky.  Například `char` řetězců by používala `_bytes_` variant pouze v případě, že je podobná funkce, která používá `wchar_t`.
 
 - `_Out_writes_z_(s)`
 
@@ -201,7 +201,7 @@ Pro poznámky v následující tabulce, pokud je parametr ukazatele označen př
 
      Ukazatel na pole, které je ve funkci čteno a zapisováno.  Má velikost `s` prvků a je platná v předběžném stavu a po stavu.
 
-     Varianta `_bytes_` dává velikost v bajtech namísto prvků. Tuto hodnotu použijte pouze v případě, že velikost nelze vyjádřit jako prvky.  Například `char` řetězce by používaly variantu `_bytes_` pouze v případě, že je podobná funkce, která používá `wchar_t`.
+     `_bytes_` variant dává velikost v bajtech namísto prvků. Tuto hodnotu použijte pouze v případě, že velikost nelze vyjádřit jako prvky.  Například `char` řetězců by používala `_bytes_` variant pouze v případě, že je podobná funkce, která používá `wchar_t`.
 
 - `_Inout_updates_z_(s)`
 
@@ -215,7 +215,7 @@ Pro poznámky v následující tabulce, pokud je parametr ukazatele označen př
 
      `_Out_writes_bytes_all_(s)`
 
-     Ukazatel na pole `s` prvků.  Elementy nemusí být platné v předběžném stavu.  V rámci po stavu musí být prvky až @no__t -0-th platné.  Pokud je velikost známá v bajtech, Škálujte `s` a `c` podle velikosti prvku nebo použijte variantu `_bytes_`, která je definována jako:
+     Ukazatel na pole `s` prvků.  Elementy nemusí být platné v předběžném stavu.  V rámci po stavu musí být prvky až do `c`-tém elementu platné.  Pokud je velikost známá v bajtech, Škálujte `s` a `c` velikostí prvku nebo použijte `_bytes_` variantu, která je definována jako:
 
      `_Out_writes_to_(_Old_(s), _Old_(s))    _Out_writes_bytes_to_(_Old_(s), _Old_(s))`
 
@@ -227,9 +227,9 @@ Pro poznámky v následující tabulce, pokud je parametr ukazatele označen př
 
      `_Inout_updates_bytes_to_(s,c)`
 
-     Ukazatel na pole, který je čten a zapisován funkcí.  Má velikost @no__t prvky-0, všechny musí být platné v představech a elementy `c` musí být platné v post-State.
+     Ukazatel na pole, který je čten a zapisován funkcí.  Má velikost `s` elementy, všechny musí být platné v předběžném stavu a `c` prvky musí být platné v post-State.
 
-     Varianta `_bytes_` dává velikost v bajtech namísto prvků. Tuto hodnotu použijte pouze v případě, že velikost nelze vyjádřit jako prvky.  Například `char` řetězce by používaly variantu `_bytes_` pouze v případě, že je podobná funkce, která používá `wchar_t`.
+     `_bytes_` variant dává velikost v bajtech namísto prvků. Tuto hodnotu použijte pouze v případě, že velikost nelze vyjádřit jako prvky.  Například `char` řetězců by používala `_bytes_` variant pouze v případě, že je podobná funkce, která používá `wchar_t`.
 
 - `_Inout_updates_all_(s)`
 
@@ -241,27 +241,27 @@ Pro poznámky v následující tabulce, pokud je parametr ukazatele označen př
 
      Jinými slovy, každý prvek, který existuje ve vyrovnávací paměti až do `s` v předběžném stavu, je platný v představovém a následném stavu.
 
-     Varianta `_bytes_` dává velikost v bajtech namísto prvků. Tuto hodnotu použijte pouze v případě, že velikost nelze vyjádřit jako prvky.  Například `char` řetězce by používaly variantu `_bytes_` pouze v případě, že je podobná funkce, která používá `wchar_t`.
+     `_bytes_` variant dává velikost v bajtech namísto prvků. Tuto hodnotu použijte pouze v případě, že velikost nelze vyjádřit jako prvky.  Například `char` řetězců by používala `_bytes_` variant pouze v případě, že je podobná funkce, která používá `wchar_t`.
 
 - `_In_reads_to_ptr_(p)`
 
-     Ukazatel na pole, pro které se výraz `p` @ no__t-1 @ no__t-2 (tj. `p` minus `_Curr_`), je definován odpovídajícím standardem jazyka.  Prvky před `p` musí být platné v předběžném stavu.
+     Ukazatel na pole, pro které je výraz `p` - `_Curr_` (tj. `p` mínus `_Curr_`) je definován odpovídajícím standardem jazyka.  Prvky před `p` musí být platné v předběžném stavu.
 
 - `_In_reads_to_ptr_z_(p)`
 
-     Ukazatel na pole zakončené hodnotou null, pro které se výraz `p` @ no__t-1 @ no__t-2 (tj. `p` minus `_Curr_`) je definován odpovídajícím standardem jazyka.  Prvky před `p` musí být platné v předběžném stavu.
+     Ukazatel na pole zakončené hodnotou null, pro které se výraz `p` - `_Curr_` (tj. `p` mínus `_Curr_`) je definován odpovídajícím standardem jazyka.  Prvky před `p` musí být platné v předběžném stavu.
 
 - `_Out_writes_to_ptr_(p)`
 
-     Ukazatel na pole, pro které se výraz `p` @ no__t-1 @ no__t-2 (tj. `p` minus `_Curr_`), je definován odpovídajícím standardem jazyka.  Prvky před `p` nemusí být platné v představu a musí být platné v post-State.
+     Ukazatel na pole, pro které je výraz `p` - `_Curr_` (tj. `p` mínus `_Curr_`) je definován odpovídajícím standardem jazyka.  Prvky před `p` nemusí být platné v představu a musí být platné v post-State.
 
 - `_Out_writes_to_ptr_z_(p)`
 
-     Ukazatel na pole zakončené hodnotou null, pro které se výraz `p` @ no__t-1 @ no__t-2 (tj. `p` minus `_Curr_`) je definován odpovídajícím standardem jazyka.  Prvky před `p` nemusí být platné v představu a musí být platné v post-State.
+     Ukazatel na pole zakončené hodnotou null, pro které se výraz `p` - `_Curr_` (tj. `p` mínus `_Curr_`) je definován odpovídajícím standardem jazyka.  Prvky před `p` nemusí být platné v představu a musí být platné v post-State.
 
 ## <a name="optional-pointer-parameters"></a>Volitelné parametry ukazatele
 
-Když Poznámka parametru ukazatele obsahuje `_opt_`, znamená to, že parametr může mít hodnotu null. Jinak Poznámka vychází z verze, která nezahrnuje `_opt_`. Tady je seznam variant `_opt_` pro parametry ukazatele poznámky:
+Když Poznámka parametru ukazatele obsahuje `_opt_`, indikuje, že parametr může mít hodnotu null. V opačném případě Poznámka provede stejnou verzi jako verze, která neobsahuje `_opt_`. Tady je seznam `_opt_` variant poznámek k parametrům ukazatele:
 
 ||||
 |-|-|-|
@@ -288,7 +288,7 @@ Parametry výstupního ukazatele vyžadují zvláštní notaci pro jednoznačné
 
    Parametr může mít hodnotu null a v rámci následného stavu může být odkaz na umístění null.
 
-  V následující tabulce jsou do názvu poznámky vloženy další podřetězce, aby bylo možné lépe kvalifikovat význam poznámky.  Jednotlivé podřetězce jsou `_z`, `_COM_`, `_buffer_`, `_bytebuffer_` a `_to_`.
+  V následující tabulce jsou do názvu poznámky vloženy další podřetězce, aby bylo možné lépe kvalifikovat význam poznámky.  Jednotlivé podřetězce jsou `_z`, `_COM_`, `_buffer_`, `_bytebuffer_`a `_to_`.
 
 > [!IMPORTANT]
 > Pokud je rozhraní, které přidáváte, k disznámce COM, použijte ve formuláři modelu COM tyto poznámky. Nepoužívejte anotace COM s žádným jiným typem rozhraní.
@@ -303,7 +303,7 @@ Parametry výstupního ukazatele vyžadují zvláštní notaci pro jednoznačné
 
    `_Ouptr_opt_result_maybenull_z_`
 
-   Vrácený ukazatel má anotaci `_Null_terminated_`.
+   Vrácený ukazatel má `_Null_terminated_` anotace.
 
 - `_COM_Outptr_`
 
@@ -313,7 +313,7 @@ Parametry výstupního ukazatele vyžadují zvláštní notaci pro jednoznačné
 
    `_COM_Outptr_opt_result_maybenull_`
 
-   Vrácený ukazatel má sémantiku modelu COM, a proto má za předpokladu `_On_failure_`, že vrácený ukazatel je null.
+   Vrácený ukazatel má sémantiku modelu COM, a proto přenese `_On_failure_` po stavu, který vrácený ukazatel má hodnotu null.
 
 - `_Outptr_result_buffer_(s)`
 
@@ -333,7 +333,7 @@ Parametry výstupního ukazatele vyžadují zvláštní notaci pro jednoznačné
 
    `_Outptr_opt_result_bytebuffer_to_(s,c)`
 
-   Vrácený ukazatel ukazuje na vyrovnávací paměť velikosti @no__t 0 prvků nebo bajtů, z nichž první `c` jsou platné.
+   Vrácený ukazatel ukazuje na vyrovnávací paměť velikosti `s` elementy nebo bajtů, jejichž první `c` je platná.
 
   Některé konvence rozhraní předpokládají, že výstupní parametry jsou nullified při selhání.  S výjimkou explicitního kódu COM jsou upřednostňovány formuláře v následující tabulce.  Pro kód COM použijte odpovídající formuláře modelu COM, které jsou uvedeny v předchozí části.
 
@@ -361,7 +361,7 @@ Parametry výstupního ukazatele vyžadují zvláštní notaci pro jednoznačné
 
 ## <a name="output-reference-parameters"></a>Výstupní parametry odkazu
 
-Běžné použití referenčního parametru je pro výstupní parametry.  U jednoduchých výstupních referenčních parametrů – například `int&` – `_Out_` poskytuje správnou sémantiku.  Pokud je však výstupní hodnota ukazatel, například `int *&` – ekvivalentní anotace s ukazateli, jako je `_Outptr_ int **`, neposkytují správnou sémantiku.  Pro stručné vyjádření sémantiky výstupních referenčních parametrů pro typy ukazatelů použijte tyto složené poznámky:
+Běžné použití referenčního parametru je pro výstupní parametry.  V případě jednoduchých výstupních referenčních parametrů – například `int&`–`_Out_` poskytuje správnou sémantiku.  Pokud je však výstupní hodnota ukazatel, například `int *&`– ekvivalentní anotace s ukazateli, jako `_Outptr_ int **`, neposkytují správnou sémantiku.  Pro stručné vyjádření sémantiky výstupních referenčních parametrů pro typy ukazatelů použijte tyto složené poznámky:
 
 **Poznámky a popisy**
 
@@ -423,7 +423,7 @@ Běžné použití referenčního parametru je pro výstupní parametry.  U jedn
 
 ## <a name="return-values"></a>Návratové hodnoty
 
-Návratová hodnota funkce připomíná parametr `_Out_`, ale je na jiné úrovni de reference a nemusíte považovat koncept ukazatele na výsledek.  Pro následující poznámky je vrácená hodnota objekt s poznámkou – skalární, ukazatel na strukturu nebo ukazatel na vyrovnávací paměť. Tyto poznámky mají stejnou sémantiku jako odpovídající anotace `_Out_`.
+Návratová hodnota funkce se podobá parametru `_Out_`, ale je na jiné úrovni de reference a nemusíte považovat koncept ukazatele na výsledek.  Pro následující poznámky je vrácená hodnota objekt s poznámkou – skalární, ukazatel na strukturu nebo ukazatel na vyrovnávací paměť. Tyto poznámky mají stejnou sémantiku jako odpovídající anotace `_Out_`.
 
 |||
 |-|-|
@@ -494,16 +494,16 @@ Návratová hodnota funkce připomíná parametr `_Out_`, ale je na jiné úrovn
 
      `_Field_range_(low, hi)`
 
-     Parametr, pole nebo výsledek jsou v rozsahu (včetně) od `low` do `hi`.  Ekvivalent `_Satisfies_(_Curr_ >= low && _Curr_ <= hi)`, který se aplikuje na objekt s poznámkami spolu s příslušnými podmínkami předběžného nebo po stavu.
+     Parametr, pole nebo výsledek jsou v rozsahu (včetně) od `low` do `hi`.  Ekvivalent `_Satisfies_(_Curr_ >= low && _Curr_ <= hi)`, který se aplikuje na objekt s poznámkami spolu s příslušnými podmínkami představy nebo po stavu.
 
     > [!IMPORTANT]
-    > I když názvy obsahují "in" a "out", sémantika `_In_` a `_Out_` se na tyto poznámky **nevztahují** .
+    > I když názvy obsahují "in" a "out", sémantika `_In_` a `_Out_` na tyto poznámky **neplatí.**
 
 - `_Pre_equal_to_(expr)`
 
      `_Post_equal_to_(expr)`
 
-     Hodnota v poznámce je přesně `expr`.  Ekvivalent `_Satisfies_(_Curr_ == expr)`, který se aplikuje na objekt s poznámkami spolu s příslušnými podmínkami předběžného nebo po stavu.
+     Hodnota v poznámce je přesně `expr`.  Ekvivalent `_Satisfies_(_Curr_ == expr)`, který se aplikuje na objekt s poznámkami spolu s příslušnými podmínkami představy nebo po stavu.
 
 - `_Struct_size_bytes_(size)`
 
@@ -517,9 +517,9 @@ Návratová hodnota funkce připomíná parametr `_Out_`, ale je na jiné úrovn
 
 ## <a name="related-resources"></a>Související prostředky
 
-[Blog týmu analýzy kódu](http://go.microsoft.com/fwlink/?LinkId=251197)
+[Blog týmu analýzy kódu](https://blogs.msdn.microsoft.com/codeanalysis/)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Použití poznámek SAL k snížení míry výskytu závad kódu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Porozumění SAL](../code-quality/understanding-sal.md)

@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 02e8beae03dc2828d81b80813325300fe31b3cea
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.openlocfilehash: 006ecdffd7b109c32f7063fee5f454e43c6c4597
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128160"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806927"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>První pohled na nasazení v aplikaci Visual Studio
 
@@ -40,7 +40,7 @@ Podrobné pokyny k nasazení najdete v tématu rychlé starty a kurzy. Přehled 
 
 Nasazení do místní složky se obvykle používá pro testování nebo pro zahájení dvoufázového nasazení, ve kterém se pro konečné nasazení používá jiný nástroj.
 
-- **ASP.NET**, **ASP.NET Core**, **Node. js**, **Python**a. **.NET Core**: K nasazení do místní složky použijte nástroj pro publikování. Přesné možnosti, které jsou k dispozici, závisí na typu vaší aplikace. V Průzkumník řešení klikněte pravým tlačítkem myši na projekt a vyberte možnost **publikovat**. (Pokud jste dosud nenakonfigurovali žádné publikační profily, musíte kliknout na **vytvořit nový profil**.) Pak vyberte **Složka**. Další informace najdete v tématu [nasazení do místní složky](quickstart-deploy-to-local-folder.md).
+- **ASP.NET**, **ASP.NET Core**, **Node. js**, **Python**a. **.NET Core**: k nasazení do místní složky použijte nástroj pro publikování. Přesné možnosti, které jsou k dispozici, závisí na typu vaší aplikace. V Průzkumník řešení klikněte pravým tlačítkem myši na projekt a vyberte možnost **publikovat**. (Pokud jste dosud nenakonfigurovali žádné publikační profily, musíte kliknout na **vytvořit nový profil**.) Pak vyberte **Složka**. Další informace najdete v tématu [nasazení do místní složky](quickstart-deploy-to-local-folder.md).
 
     ![Zvolit publikování](../deployment/media/quickstart-publish.png)
 
@@ -48,9 +48,9 @@ Nasazení do místní složky se obvykle používá pro testování nebo pro zah
 
 ## <a name="publish-to-azure"></a>Publikování do Azure
 
-- **ASP.NET**, **ASP.NET Core**, **Python**a **Node. js**: Publikování do Azure App Service nebo Azure App Service Linux (pomocí kontejnerů) pomocí jedné z následujících metod.
+- **ASP.NET**, **ASP.NET Core**, **Python**a **Node. js**: publikování do Azure App Service nebo Azure App Service Linux (pomocí kontejnerů) pomocí jedné z následujících metod.
 
-  - Pro průběžné (nebo automatizované) nasazení aplikací použijte Azure DevOps s [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml?view=azdevops).
+  - Pro průběžné (nebo automatizované) nasazení aplikací použijte Azure DevOps s [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops).
 
   - Pro jednorázové (nebo ruční) nasazení aplikací použijte nástroj **publikování** v aplikaci Visual Studio.
 
@@ -73,7 +73,7 @@ Nasazení do místní složky se obvykle používá pro testování nebo pro zah
 
 ## <a name="publish-to-web-or-deploy-to-network-share"></a>Publikování na webu nebo nasazení do síťové sdílené složky
 
-- **ASP.NET**, **ASP.NET Core**, **Node. js**a **Python**: Nástroj publikovat můžete použít k nasazení na web pomocí FTP nebo Nasazení webu. Další informace najdete v tématu [nasazení na web](quickstart-deploy-to-a-web-site.md).
+- **ASP.NET**, **ASP.NET Core**, **Node. js**a **Python**: pomocí nástroje pro publikování můžete nasadit na web pomocí FTP nebo nasazení webu. Další informace najdete v tématu [nasazení na web](quickstart-deploy-to-a-web-site.md).
 
     V Průzkumník řešení klikněte pravým tlačítkem na projekt a vyberte **publikovat**. (Pokud jste dříve nakonfigurovali všechny publikační profily, musíte kliknout na **vytvořit nový profil**.) V nástroji publikování vyberte požadovanou možnost a postupujte podle kroků konfigurace.
 
@@ -81,7 +81,7 @@ Nasazení do místní složky se obvykle používá pro testování nebo pro zah
 
     Informace o importu profilu publikování v aplikaci Visual Studio naleznete v tématu [Import nastavení publikování a nasazení do služby IIS](../deployment/tutorial-import-publish-settings-iis.md).
 
-    Aplikace a služby ASP.NET můžete také nasadit různými způsoby. Další informace najdete v tématu [nasazení webových aplikací a služeb ASP.NET](http://www.asp.net/aspnet/overview/deployment).
+    Aplikace a služby ASP.NET můžete také nasadit různými způsoby. Další informace najdete v tématu [nasazení webových aplikací a služeb ASP.NET](/aspnet/mvc/overview/deployment/).
 
 - **Plocha Windows** Pomocí nasazení ClickOnce můžete publikovat desktopovou aplikaci pro Windows na webový server nebo do síťové sdílené složky. Uživatelé pak mohou aplikaci nainstalovat jediným kliknutím. Další informace najdete v tématu [nasazení desktopové aplikace pomocí](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) technologie ClickOnceC# (a Visual Basic). V C++případě/CLI si přečtěte téma [nasazení nativní aplikace pomocí ClickOnce](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) nebo pro CC++/, viz [nasazení nativní aplikace pomocí projektu instalace](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
 
@@ -89,11 +89,11 @@ Nasazení do místní složky se obvykle používá pro testování nebo pro zah
 
 Ze sady Visual Studio můžete vytvořit balíčky aplikací pro nasazení do Microsoft Store.
 
-- **UWP**PRO: Svou aplikaci můžete zabalit a nasadit pomocí položek nabídky. Další informace najdete v tématu [zabalení aplikace pro UWP pomocí sady Visual Studio](/windows/uwp/packaging/packaging-uwp-apps).
+- **UWP**: aplikaci můžete zabalit a nasadit pomocí položek nabídky. Další informace najdete v tématu [zabalení aplikace pro UWP pomocí sady Visual Studio](/windows/uwp/packaging/packaging-uwp-apps).
 
     ![Vytvoření balíčku aplikace](../deployment/media/feature-tour-create-app-package.jpg)
 
-- **Plocha Windows**: Můžete nasadit na Microsoft Store počínaje verzí Visual Studio 2017 verze 15,4. Pokud to chcete provést, Začněte vytvořením projektu pro vytváření balíčků aplikací pro Windows. Další informace najdete v tématu [zabalení desktopové aplikace pro Microsoft Store](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net).
+- **Plocha Windows**: nasazení můžete nasadit do Microsoft Store počínaje verzí Visual Studio 2017 verze 15,4. Pokud to chcete provést, Začněte vytvořením projektu pro vytváření balíčků aplikací pro Windows. Další informace najdete v tématu [zabalení desktopové aplikace pro Microsoft Store](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net).
 
     ![Zabalení desktopové aplikace](../deployment/media/feature-tour-desktop-bridge.png)
 
@@ -118,7 +118,7 @@ Pokud potřebujete komplexnější instalaci desktopové aplikace, než je [Clic
    Pro sadu Visual Studio 2019 Získejte [rozšíření sady nástrojů Visual studio 2019 pro WIX](https://marketplace.visualstudio.com/items?itemName=WixToolset.WixToolsetVisualStudio2019Extension).
    ::: moniker-end
 
-- Instalační balíček MSI nebo EXE se dá vytvořit pomocí programu [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) ze Flexera softwaru. InstallShield se dá použít se sadou Visual Studio 2017 a novějšími verzemi (edice Community není podporovaná). Všimněte si, že program InstallShield unedition již není součástí sady Visual Studio a není podporován v aplikaci Visual Studio 2017 a novějších verzích. Podívejte se na [Flexera Software](http://learn.flexerasoftware.com/content/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio) o budoucí dostupnost.
+- Instalační balíček MSI nebo EXE se dá vytvořit pomocí programu [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) ze Flexera softwaru. InstallShield se dá použít se sadou Visual Studio 2017 a novějšími verzemi (edice Community není podporovaná). Všimněte si, že program InstallShield unedition již není součástí sady Visual Studio a není podporován v aplikaci Visual Studio 2017 a novějších verzích. Podívejte se na [Flexera Software](https://info.flexerasoftware.com/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio) o budoucí dostupnost.
 
 - Instalační balíček MSI nebo EXE lze vytvořit pomocí projektu instalace (vdproj). Chcete-li použít tuto možnost, nainstalujte [rozšíření instalační program pro Visual Studio projekty](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.MicrosoftVisualStudio2017InstallerProjects#overview).
 
@@ -144,11 +144,11 @@ K povolení průběžného nasazování aplikace můžete použít Azure Pipelin
 
 ## <a name="deployment-for-other-app-types"></a>Nasazení pro jiné typy aplikací
 
-| Typ aplikace | Scénář nasazení | Odkaz |
+| Typ aplikace | Scénář nasazení | Propojit |
 | --- | --- | --- |
 | **Aplikace Office** | Doplněk pro Office můžete publikovat ze sady Visual Studio. | [Nasazení a publikování doplňku pro Office](https://dev.office.com/docs/add-ins/publish/publish) |
 | **WCF nebo služba OData** | Jiné aplikace mohou používat služby WCF RIA, které nasadíte na webový server. | [Vývoj a nasazení WCF Data Services](/dotnet/framework/data/wcf/developing-and-deploying-wcf-data-services) |
-| **Aplikace LightSwitch** | LightSwitch již není v sadě Visual Studio 2017 podporován, ale lze jej stále nasadit ze sady Visual Studio 2015 a starší. | [Nasazení aplikací LightSwitch](https://msdn.microsoft.com/Library/4818d933-295c-4ecc-9148-7ad9ca28dcdb) |
+| **Sady** | LightSwitch již není v sadě Visual Studio 2017 podporován, ale lze jej stále nasadit ze sady Visual Studio 2015 a starší. | [Nasazení aplikací LightSwitch](https://msdn.microsoft.com/Library/4818d933-295c-4ecc-9148-7ad9ca28dcdb) |
 
 ## <a name="next-steps"></a>Další kroky
 

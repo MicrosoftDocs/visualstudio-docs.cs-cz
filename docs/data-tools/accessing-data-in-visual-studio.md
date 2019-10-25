@@ -14,12 +14,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f2a33a0090be980c221ebfbe7f3116cdfef7b23b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 07c7c9db37a951b689e28e87a02c7f41a667685b
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648988"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807050"
 ---
 # <a name="access-data-in-visual-studio"></a>Přístup k datům v sadě Visual Studio
 
@@ -94,7 +94,7 @@ Pokud se připojujete ke službám Azure, nezapomeňte si stáhnout nejnovějš�
 
 ### <a name="data-providers"></a>Poskytovatelé dat
 
-Aby databáze byla v ADO.NET spotřební, musí mít vlastního *poskytovatele dat ADO.NET* nebo jinak musí vystavit rozhraní ODBC nebo OLE DB. Společnost Microsoft poskytuje [seznam zprostředkovatelů ADO.NET dat](https://docs.microsoft.com/dotnet/framework/data/adonet/ado-net-overview) pro produkty SQL Server a také poskytovatele rozhraní ODBC a OLE DB.
+Aby databáze byla v ADO.NET spotřební, musí mít vlastního *poskytovatele dat ADO.NET* nebo jinak musí vystavit rozhraní ODBC nebo OLE DB. Společnost Microsoft poskytuje [seznam zprostředkovatelů ADO.NET dat](/dotnet/framework/data/adonet/ado-net-overview) pro produkty SQL Server a také poskytovatele rozhraní ODBC a OLE DB.
 
 ### <a name="data-modeling"></a>Modelování dat
 
@@ -144,9 +144,9 @@ Pokud chcete vytvářet aplikace v Pythonu, nainstalujte [podporu Pythonu v apli
 
 [ADO.NET](/dotnet/framework/data/adonet/index) &mdash;Describes architektury ADO.NET a jak používat třídy ADO.NET ke správě aplikačních dat a interakci se zdroji dat a XML.
 
-[ADO.NET Entity Framework](https://docs.microsoft.com/ef/ef6/) &mdash;Describes vytváření datových aplikací, které vývojářům umožňují programovat na koncepčním modelu místo přímo proti relační databázi.
+[ADO.NET Entity Framework](/ef/ef6/) &mdash;Describes vytváření datových aplikací, které vývojářům umožňují programovat na koncepčním modelu místo přímo proti relační databázi.
 
-[WCF Data Services 4,5](/dotnet/framework/data/wcf/index) &mdash;Describes způsob použití [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] k nasazení datových služeb na webu nebo v intranetu, který implementuje [protokol OData (Open Data Protocol)](https://www.odata.org/).
+[WCF Data Services 4,5](/dotnet/framework/data/wcf/index)&mdash;popisuje, jak používat [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] k nasazení datových služeb na webu nebo v intranetu, který implementuje [protokol OData (Open Data Protocol)](https://www.odata.org/).
 
 [Data v řešeních office](../vsto/data-in-office-solutions.md) &mdash;Contains odkazují na témata, která vysvětlují, jak fungují data v řešeních pro systém Office. To zahrnuje informace o programování orientovaném na schéma, ukládání dat do mezipaměti a přístupu k datům na straně serveru.
 

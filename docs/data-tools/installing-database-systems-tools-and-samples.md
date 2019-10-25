@@ -12,12 +12,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 94ce946f7c14706b57618f3d9aeb90cc207fcf04
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dd469f955a24c6d3c2fb5e438d81e6b8a2db8458
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648296"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806995"
 ---
 # <a name="compatible-database-systems-for-visual-studio"></a>Kompatibilní databázové systémy pro Visual Studio
 
@@ -35,19 +35,19 @@ SQL Server je nabídka databáze Microsoft nejdůležitější. SQL Server 2016 
 
 ## <a name="oracle"></a>Oracle
 
-Můžete si stáhnout placené nebo bezplatné edice databáze Oracle ze stránky [technologie Oracle pro síť](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index-092322.html) . Pro podporu Entity Framework a objekty TableAdapter v době návrhu budete potřebovat [nástroje Oracle Developer Tools for Visual Studio](http://www.oracle.com/technetwork/developer-tools/visual-studio/overview/index.html). Ostatní oficiální produkty Oracle, včetně okamžitého klienta Oracle, jsou k dispozici prostřednictvím Správce balíčků NuGet. Ukázková schémata Oracle si můžete stáhnout podle pokynů v [online dokumentaci k Oracle](http://docs.oracle.com/cd/E11882_01/server.112/e10831/toc.htm).
+Můžete si stáhnout placené nebo bezplatné edice databáze Oracle ze stránky [technologie Oracle pro síť](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html) . Pro podporu Entity Framework a objekty TableAdapter v době návrhu budete potřebovat [nástroje Oracle Developer Tools for Visual Studio](https://www.oracle.com/database/technologies/developer-tools/visual-studio/). Ostatní oficiální produkty Oracle, včetně okamžitého klienta Oracle, jsou k dispozici prostřednictvím Správce balíčků NuGet. Ukázková schémata Oracle si můžete stáhnout podle pokynů v [online dokumentaci k Oracle](https://docs.oracle.com/cd/E11882_01/server.112/e10831/toc.htm).
 
 ## <a name="mysql"></a>MySQL
 
-MySQL je oblíbený Open Source databázový systém, který se široce používá v podnicích a webech. Soubory ke stažení pro MySQL, MySQL pro Visual Studio a související produkty jsou k dispozici v [MySQL ve Windows](http://www.mysql.com/why-mysql/windows/). Třetí strany nabízejí různá rozšíření aplikace Visual Studio a samostatné aplikace pro správu pro MySQL. Nabídky můžete procházet ve Správci balíčků NuGet (**nástroje**  > **správce balíčků NuGet**  > **Spravovat balíčky NuGet pro řešení**).
+MySQL je oblíbený Open Source databázový systém, který se široce používá v podnicích a webech. Soubory ke stažení pro MySQL, MySQL pro Visual Studio a související produkty jsou k dispozici v [MySQL ve Windows](https://www.mysql.com/why-mysql/windows/). Třetí strany nabízejí různá rozšíření aplikace Visual Studio a samostatné aplikace pro správu pro MySQL. Nabídky můžete procházet ve Správci balíčků NuGet (**nástroje**  > **správce balíčků NuGet**  > **Spravovat balíčky NuGet pro řešení**).
 
 ## <a name="postgresql"></a>PostgreSQL
 
-PostgreSQL je bezplatný Open Source objekt relační databázový systém. Pokud ho chcete nainstalovat ve Windows, můžete si ho stáhnout ze [stránky pro stažení PostgreSQL](http://www.postgresql.org/download/windows/). Můžete také vytvořit PostgreSQL ze zdrojového kódu. Základní systém PostgreSQL obsahuje rozhraní jazyka C. Mnohé třetí strany poskytují balíčky NuGet pro použití PostgreSQL z aplikací .NET. Nabídky můžete procházet ve Správci balíčků NuGet (**nástroje**  > **správce balíčků NuGet**  > **Spravovat balíčky NuGet pro řešení**). Nejoblíbenější balíček je možná [npgsql.org](http://www.npgsql.org).
+PostgreSQL je bezplatný Open Source objekt relační databázový systém. Pokud ho chcete nainstalovat ve Windows, můžete si ho stáhnout ze [stránky pro stažení PostgreSQL](https://www.postgresql.org/download/windows/). Můžete také vytvořit PostgreSQL ze zdrojového kódu. Základní systém PostgreSQL obsahuje rozhraní jazyka C. Mnohé třetí strany poskytují balíčky NuGet pro použití PostgreSQL z aplikací .NET. Nabídky můžete procházet ve Správci balíčků NuGet (**nástroje**  > **správce balíčků NuGet**  > **Spravovat balíčky NuGet pro řešení**). Nejoblíbenější balíček je možná [npgsql.org](http://www.npgsql.org).
 
 ## <a name="sqlite"></a>SQLite
 
-SQLite je vložený modul SQL Database, který běží ve vlastním procesu aplikace. Můžete si ho stáhnout ze [stránky pro stažení SQLite](http://www.sqlite.org/download.html). K dispozici je také řada balíčků NuGet třetích stran pro SQLite. Nabídky můžete procházet ve Správci balíčků NuGet (**nástroje**  > **správce balíčků NuGet**  > **Spravovat balíčky NuGet pro řešení**).
+SQLite je vložený modul SQL Database, který běží ve vlastním procesu aplikace. Můžete si ho stáhnout ze [stránky pro stažení SQLite](https://www.sqlite.org/download.html). K dispozici je také řada balíčků NuGet třetích stran pro SQLite. Nabídky můžete procházet ve Správci balíčků NuGet (**nástroje**  > **správce balíčků NuGet**  > **Spravovat balíčky NuGet pro řešení**).
 
 ## <a name="firebird"></a>Firebird
 
@@ -56,4 +56,4 @@ Firebird je open source systém SQL Database. Můžete si ho stáhnout ze [strá
 ## <a name="see-also"></a>Viz také:
 
 - [Přístup k datům v sadě Visual Studio](../data-tools/accessing-data-in-visual-studio.md)
-- [Jak určit verzi a edici SQL Server a jejích komponent](http://support.microsoft.com/kb/321185)
+- [Jak určit verzi a edici SQL Server a jejích komponent](https://support.microsoft.com/help/321185/how-to-determine-the-version-edition-and-update-level-of-sql-server-an)

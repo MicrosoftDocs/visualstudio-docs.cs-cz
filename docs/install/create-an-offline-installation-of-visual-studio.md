@@ -1,7 +1,7 @@
 ---
 title: Vytvoření offline instalace
 description: Přečtěte si, jak nainstalovat Visual Studio offline, když máte nespolehlivé připojení k Internetu nebo malou šířku pásma.
-ms.date: 10/11/2019
+ms.date: 10/22/2019
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: b9c8b60914e814ab6957ee9ec9307b12d9c3d1ba
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: c8b59ce38657bab157b966a25e0cd27109510215
+ms.sourcegitcommit: 58000baf528da220fdf7a999d8c407a4e86c1278
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516878"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72789989"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Vytvoření offline instalace sady Visual Studio
 
@@ -180,6 +180,8 @@ Potom pomocí tohoto příkazu spusťte instalaci:
 ```cmd
 c:\vslayout\vs_community.exe --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional
 ```
+
+Další příklady použití [parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)naleznete na stránce s [Příklady parametrů příkazového řádku pro instalaci sady Visual Studio](command-line-parameter-examples.md) . 
 
 > [!NOTE]
 > Pokud se zobrazí chyba, že signatura není platná, musíte nainstalovat aktualizované certifikáty. Otevřete složku certifikáty v offline mezipaměti. Dvakrát klikněte na jednotlivé soubory certifikátů a potom klikněte na Průvodce správcem certifikátů. Pokud se zobrazí výzva k zadání hesla, ponechte prázdné.

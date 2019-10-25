@@ -1,5 +1,5 @@
 ---
-title: ClickOnce a kód Authenticode | Dokumentace Microsoftu
+title: ClickOnce a Authenticode | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,58 +18,58 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eecf482d5ae90894e66e790423b514cc349701f8
-ms.sourcegitcommit: 9d3529e40438ca45dcb0b31742c4cd5a89daa61e
+ms.openlocfilehash: 0920da406e911f388c2b9ae77db16ee325aaae65
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399020"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806972"
 ---
 # <a name="clickonce-and-authenticode"></a>ClickOnce a kód Authenticode
-*Authenticode* je technologie společnosti Microsoft, které používá standardní kryptografie pro podepsání kódu aplikace s digitálními certifikáty, které ověření pravosti vydavatele. Pomocí technologie Authenticode pro nasazení aplikace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] snižuje riziko trojského koně. Trojský kůň, není virus nebo jiný škodlivý program, který zkresluje skutečnost třetí strana jako legitimní program pocházejí z důvěryhodného zdroje a zavedené. Podepisování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení pomocí digitálního certifikátu je volitelný krok pro ověření, že se sestaveními a soubory nebylo manipulováno.
+*Authenticode* je technologie Microsoftu, která používá standardní kryptografii pro podepsání kódu aplikace digitálními certifikáty, které ověřují pravost vydavatele aplikace. Pomocí technologie Authenticode pro nasazení aplikací [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] snižuje riziko trojského koně. Trojský kůň je Vir nebo jiný škodlivý program, který škodlivá třetí strana nepředstavuje legitimní program pocházející z vytvořeného důvěryhodného zdroje. Podepisování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení pomocí digitálního certifikátu je volitelný krok k ověření, že sestavení a soubory nejsou úmyslně poškozeny.
 
- Následující části popisují různé druhy digitálních certifikátů používaných v Authenticode, jak certifikáty se ověřují pomocí certifikační autority (CA), role časovým razítkem v certifikátech a metody k dispozici pro úložiště certifikáty.
+ Následující části popisují různé typy digitálních certifikátů používaných v technologii Authenticode, způsob ověřování certifikátů pomocí certifikačních autorit (CA), role časového razítka v certifikátech a metody úložiště dostupné pro certifikáty.
 
-## <a name="authenticode-and-code-signing"></a>Authenticode a podepisování kódu
- A *digitální certifikát* je soubor, který obsahuje veřejného a privátního klíče páru kryptografických, spolu s metadata popisující vydavatele a kterému certifikát byl vydán a subjekt, který vystavila certifikát.
+## <a name="authenticode-and-code-signing"></a>Technologie Authenticode a podepisování kódu
+ *Digitální certifikát* je soubor, který obsahuje kryptografický pár veřejného a privátního klíče, spolu s metadaty, které popisují vydavatele, kterým byl certifikát vystavený, a agenturou, která certifikát vystavila.
 
- Existují různé typy certifikátů Authenticode. Každý z nich je nakonfigurovaný pro různé typy podepisování. Pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikací, musí mít Authenticode certifikát, který je platný pro podepisování kódu. Pokud se pokusíte přihlásit [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace s jiným typem certifikátu, jako jsou e-mailu digitální certifikát, nebude fungovat. Další informace najdete v tématu [Úvod k podepisování kódu](https://docs.microsoft.com/windows/desktop/seccrypto/cryptography-tools).
+ Existují různé typy certifikátů technologie Authenticode. Každá z nich je nakonfigurována pro různé typy podepisování. Pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace musíte mít certifikát Authenticode, který je platný pro podepisování kódu. Pokud se pokusíte podepsat aplikaci [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] s jiným typem certifikátu, například digitálním e-mailovým certifikátem, nebude to fungovat. Další informace najdete v tématu [Úvod do podepisování kódu](/windows/desktop/seccrypto/cryptography-tools).
 
- Certifikát pro podepisování v jednom ze tří způsobů kódu můžete získat:
+ Certifikát pro podepsání kódu můžete získat jedním ze tří způsobů:
 
-- Zakupte od dodavatele certifikátu.
+- Zakupte si ho od dodavatele certifikátu.
 
-- Zobrazí se jedna ze skupiny ve vaší organizaci, který je zodpovědný za vytváření digitálních certifikátů.
+- Od skupiny ve vaší organizaci, která je odpovědná za vytváření digitálních certifikátů, můžete získat jednu ze skupiny.
 
-- Generovat vlastní certifikát pomocí rutiny New-SelfSignedCertificate Powershellu nebo pomocí *MakeCert.exe*, který je součástí [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)].
+- Vygenerujte vlastní certifikát pomocí rutiny New-SelfSignedCertificate prostředí PowerShell nebo pomocí nástroje *Makecert. exe*, který je součástí [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)].
 
-### <a name="how-using-certificate-authorities-helps-users"></a>Jak používat certifikační autority pomáhá uživatelům
- Certifikát vytvořený pomocí New-SelfSignedCertificate nebo *MakeCert.exe* nástroje se běžně nazývá *samoobslužného cert* nebo *testovacího certifikátu*. Tento druh certifikátu funguje podobně stejným způsobem jako *.snk* soubor bude fungovat v rozhraní .NET Framework. Se skládá pouze z dvojice veřejného/soukromého kryptografických klíčů a neobsahuje žádné ověřitelné informace o vydavateli. Vlastní certifikáty můžete použít k nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikací s vysokou důvěryhodností na intranetu. Ale pokud tyto aplikace se spouštějí na klientském počítači, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bude identifikovat jako pocházející od neznámého vydavatele. Ve výchozím nastavení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace podepsána s vlastní certifikáty a nasazení přes Internet nelze využít Trusted Application Deployment.
+### <a name="how-using-certificate-authorities-helps-users"></a>Jak používání certifikačních autorit pomáhá uživatelům
+ Certifikát generovaný pomocí New-SelfSignedCertificate nebo nástroje *Makecert. exe* se často označuje jako certifikát s certifikátem *držitele* nebo *testu*. Tento druh certifikátu funguje podobně jako soubor *. snk* v .NET Framework. Skládá se výhradně z páru veřejného a soukromého kryptografického klíče a neobsahuje žádné ověřitelné informace o vydavateli. Certifikáty můžete použít k nasazení aplikací [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] s vysokou důvěryhodností na intranetu. Pokud jsou však tyto aplikace spuštěny v klientském počítači, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] je budou identifikovat jako pocházející od neznámého vydavatele. Ve výchozím nastavení nemůžou aplikace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] podepsané pomocí vlastních certifikátů a nasazené přes Internet využívat nasazení důvěryhodných aplikací.
 
- Naopak pokud přijetí certifikátu od certifikační Autority, jako je například certifikát dodavatele nebo oddělení v rámci vašeho podniku certifikátu nabízí lepší zabezpečení pro vaše uživatele. Nejen identifikuje vydavatele softwaru podepsané, ale tuto identitu ověří tak, že zkontrolujete s certifikační Autoritou, která je podepsána. Pokud certifikační Autorita není kořenová autorita, Authenticode bude také "řetězce" zpět na kořenovou autoritou, chcete-li ověřit, že certifikační Autorita je oprávnění k vydávání certifikátů. Pro lepší zabezpečení používejte certifikát vydaný certifikační Autority, kdykoli je to možné.
+ Naopak pokud obdržíte certifikát od certifikační autority, jako je například dodavatel certifikátu nebo oddělení v rámci podniku, certifikát nabízí větší zabezpečení pro vaše uživatele. Neidentifikuje pouze vydavatele podepsaného softwaru, ale ověřuje tuto identitu tím, že zkontroluje certifikační autoritu, která ho podepsala. Pokud certifikační autorita není kořenovou autoritou, technologie Authenticode se také "řetězit" zpět k kořenové autoritě a ověří, zda je certifikační autorita autorizována k vydávání certifikátů. Pro zajištění vyššího zabezpečení byste měli použít certifikát vydaný certifikační autoritou, kdykoli to bude možné.
 
- Další informace o generování vlastní certifikáty najdete v tématu [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate) nebo [MakeCert](/windows/desktop/SecCrypto/makecert).
+ Další informace o generování vlastních certifikátů najdete v tématu [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate) nebo [Makecert](/windows/desktop/SecCrypto/makecert).
 
 ### <a name="timestamps"></a>Časová razítka
- Certifikáty používané k podepisování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikací vyprší po určité době obvykle dvanáct měsíců. Aby bylo možné zbavují uživatele nutnosti provádět neustále znovu podepisovat aplikace pomocí nové certifikáty [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] podporuje časové razítko. Když je aplikace podepsána s časovým razítkem, svůj certifikát bude přijata i po vypršení platnosti, za předpokladu, že je platné časové razítko. Díky tomu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] s certifikáty s vypršenou platností, ale platná časová razítka ke stažení a spuštění aplikace. Umožňuje také nainstalované aplikace s certifikáty s vypršenou platností nadále stahovat a instalovat aktualizace.
+ Certifikáty používané k podepisování aplikací [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] vyprší po určité době, většinou dvanáct měsíců. Aby bylo možné odstranit nutnost nepřetržitě znovu podepisovat aplikace pomocí nových certifikátů, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] podporuje časové razítko. Pokud je aplikace podepsána pomocí časového razítka, její certifikát bude nadále přijat i po vypršení platnosti, pokud je časové razítko platné. To umožňuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikacím s certifikáty s vypršenou platností, ale s platnými časovými razítky ke stažení a spuštění. Umožňuje taky nainstalované aplikace s certifikáty s vypršenou platností, aby bylo možné dál stahovat a instalovat aktualizace.
 
- Zahrnout časové razítko aplikační server, musí být k dispozici serveru časového razítka. Informace o tom, jak vybrat časového razítka serveru najdete v tématu [jak: Podepsání manifestů aplikace a nasazení](../ide/how-to-sign-application-and-deployment-manifests.md).
+ Chcete-li zahrnout časové razítko na aplikační server, musí být k dispozici server časového razítka. Informace o tom, jak vybrat server časových razítek, naleznete v tématu [How to: Signing Application and Deployment Manifests](../ide/how-to-sign-application-and-deployment-manifests.md).
 
-### <a name="update-expired-certificates"></a>Aktualizujte certifikáty s vypršenou platností
- V dřívějších verzích rozhraní .NET Framework aktualizace prošlou platností certifikátu aplikace může způsobit, že aplikace přestane fungovat. Chcete-li tento problém vyřešit, použijte jednu z následujících metod:
+### <a name="update-expired-certificates"></a>Aktualizace certifikátů s vypršenou platností
+ V dřívějších verzích .NET Framework mohla aktualizace aplikace, jejíž certifikát vypršel, způsobit, že aplikace přestane fungovat. Chcete-li tento problém vyřešit, použijte jednu z následujících metod:
 
-- Aktualizace rozhraní .NET Framework verze 2.0 SP1 nebo později se systémem Windows XP, verze 3.5 nebo později na Windows Vista.
+- Aktualizujte .NET Framework na verzi 2,0 SP1 nebo novější v systému Windows XP nebo verze 3,5 nebo novější v systému Windows Vista.
 
-- Tuto aplikaci odinstalujte a znovu nainstalujte novou verzi s platným certifikátem.
+- Odinstalujte aplikaci a znovu nainstalujte novou verzi s platným certifikátem.
 
-- Vytvořte sestavení příkazového řádku, která aktualizuje certifikát. Podrobné informace o tomto procesu najdete v [článku technické podpory Microsoftu 925521](http://go.microsoft.com/fwlink/?LinkId=179454).
+- Vytvořte sestavení příkazového řádku, které aktualizuje certifikát. Podrobné informace o tomto procesu najdete na [Podpora Microsoftu článku 925521](https://support.microsoft.com/help/925521).
 
-### <a name="store-certificates"></a>Certifikáty Store
+### <a name="store-certificates"></a>Uložení certifikátů
 
-- Jako certifikáty můžete uložit *.pfx* souboru v systému souborů, nebo můžete ukládat do kontejneru klíčů. Uživatel v doméně Windows může mít několik kontejnerů klíčů. Ve výchozím nastavení *MakeCert.exe* uloží certifikáty v kontejnerech osobního klíče, pokud určíte, že ho měli uložit ho. tím *.pfx* místo. *Mage.exe* a *MageUI.exe*, [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] nástroje pro vytváření [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení, umožňují používat certifikáty uložené v obou způsobem.
+- Certifikáty můžete ukládat jako soubor *. pfx* v systému souborů, nebo je můžete uložit do kontejneru klíčů. Uživatel v doméně systému Windows může mít několik kontejnerů klíčů. Nástroj *Makecert. exe* ve výchozím nastavení uloží certifikáty do kontejneru osobních klíčů, pokud nezadáte, že by ho místo toho měl Uložit do souboru *. pfx* . *Mage. exe* a *MageUI. exe*, [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] nástroje pro vytváření nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], umožňují používat certifikáty uložené v libovolném způsobem.
 
 ## <a name="see-also"></a>Viz také:
 - [ClickOnce – zabezpečení a nasazení](../deployment/clickonce-security-and-deployment.md)
-- [Zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md)
+- [Zabezpečené aplikace ClickOnce](../deployment/securing-clickonce-applications.md)
 - [Přehled nasazení důvěryhodných aplikací](../deployment/trusted-application-deployment-overview.md)
 - [Mage.exe (Manifest Generation and Editing Tool)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)

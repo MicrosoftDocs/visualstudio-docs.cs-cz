@@ -32,12 +32,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 2460ca1c76eb43bdff89c87c880f405cdce12b48
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 26c788319331d0da4024844b50b4c495ed2c3a37
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72446325"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806764"
 ---
 # <a name="annotating-locking-behavior"></a>Zadávání poznámek o chování při zamykání
 Aby nedocházelo k chybám souběžnosti v programu s více vlákny, vždy postupujte podle příslušného pravidla uzamykání a použijte poznámky SAL.
@@ -101,7 +101,7 @@ V následující tabulce jsou uvedeny poznámky pro přístup ke sdíleným dat�
 |Poznámka|Popis|
 |----------------|-----------------|
 |`_Guarded_by_(expr)`|Označí proměnnou jako poznámku a určí, že pokaždé, když je k proměnné přistupovat, je počet zámků objektu zámku, který je pojmenován `expr`, aspoň jeden.|
-|`_Interlocked_`|Doznámí proměnnou a je ekvivalentní `_Guarded_by_(_Global_interlock_)`.|
+|`_Interlocked_`|Označí proměnnou jako poznámku a je ekvivalentní `_Guarded_by_(_Global_interlock_)`.|
 |`_Interlocked_operand_`|Parametr funkce s poznámkou je cílovým operandem jedné z různých vzájemně propojených funkcí.  Tyto operandy musí mít konkrétní další vlastnosti.|
 |`_Write_guarded_by_(expr)`|Označí proměnnou jako poznámku a určí, že pokaždé, když je upravena proměnná, je počet zámků objektu zámku, který je pojmenován `expr`, aspoň jeden.|
 
@@ -112,12 +112,12 @@ Inteligentní Zámky obvykle zabalí Nativní zámky a spravují jejich životno
 |----------------|-----------------|
 |`_Analysis_assume_smart_lock_acquired_`|Dává analyzátoru pokyn, aby předpokládal, že byl získán inteligentní zámek. Tato poznámka očekává jako svůj parametr typ zámku odkazu.|
 |`_Analysis_assume_smart_lock_released_`|Dává analyzátoru pokyn, aby předpokládal, že byl vydán inteligentní zámek. Tato poznámka očekává jako svůj parametr typ zámku odkazu.|
-|`_Moves_lock_(target, source)`|Popisuje operaci `move constructor`, která přenáší stav zámku z objektu `source` do `target`. @No__t-0 se považuje za nově vytvořený objekt, takže všechny stavy, které dříve existovaly, jsou ztraceny a nahrazeny stavem `source`. @No__t-0 se také resetuje na čistý stav bez počtu zámků nebo cíle aliasu, ale aliasy ukazující na něj zůstanou beze změny.|
+|`_Moves_lock_(target, source)`|Popisuje operaci `move constructor`, která přenáší stav zámku z objektu `source` do `target`. `target` se považuje za nově vytvořený objekt, takže všechny stavy, které dříve existovaly, jsou ztraceny a nahrazeny stavem `source`. `source` se také resetuje na čistý stav bez počtu zámků nebo cíle aliasu, ale aliasy ukazující na něj zůstanou beze změny.|
 |`_Replaces_lock_(target, source)`|Popisuje sémantiku `move assignment operator`, kde je cílový zámek vydán před přenosem stavu ze zdroje. To lze považovat za kombinaci `_Moves_lock_(target, source)` předchází `_Releases_lock_(target)`.|
-|`_Swaps_locks_(left, right)`|Popisuje standardní chování @no__t 0, které předpokládá, že objekty `left` a `right` vyměňují svůj stav. Výměna stavu zahrnuje počet zámků a cíl aliasů, pokud je k dispozici. Aliasy, které odkazují na objekty @no__t 0 a `right` zůstanou beze změny.|
-|`_Detaches_lock_(detached, lock)`|Popisuje scénář, ve kterém typ zámku obálky umožňuje zrušení bylo s jeho obsaženým prostředkem. To se podobá tomu, jak `std::unique_ptr` funguje s vnitřním ukazatelem: umožňuje programátorům extrahovat ukazatel a opustit jeho kontejner inteligentních ukazatelů v čistém stavu. Podobná logika je podporována `std::unique_lock` a lze ji implementovat ve vlastních obálkách zámku. Odpojený zámek si zachová svůj stav (počet zámků a cíl aliasů), zatímco obálka je resetována tak, aby obsahovala nulový počet zámků a žádný cíl pro vytváření aliasů a současně si zachovává vlastní aliasy. Neexistují žádné operace na počtu zámků (uvolnění a získání). Tato anotace se chová přesně jako `_Moves_lock_` s tím rozdílem, že odpojený argument by měl být `return` místo `this`.|
+|`_Swaps_locks_(left, right)`|Popisuje standardní `swap` chování, které předpokládá, že objekty `left` a `right` vyměňují svůj stav. Výměna stavu zahrnuje počet zámků a cíl aliasů, pokud je k dispozici. Aliasy, které ukazují na `left` a objekty `right` zůstávají beze změny.|
+|`_Detaches_lock_(detached, lock)`|Popisuje scénář, ve kterém typ zámku obálky umožňuje zrušení bylo s jeho obsaženým prostředkem. To se podobá tomu, jak `std::unique_ptr` pracuje s vnitřním ukazatelem: umožňuje programátorům extrahovat ukazatel a opustit jeho kontejner inteligentního ukazatele v čistém stavu. Podobná logika je podporována nástrojem `std::unique_lock` a lze ji implementovat ve vlastních obálkách zámku. Odpojený zámek si zachová svůj stav (počet zámků a cíl aliasů), zatímco obálka je resetována tak, aby obsahovala nulový počet zámků a žádný cíl pro vytváření aliasů a současně si zachovává vlastní aliasy. Neexistují žádné operace na počtu zámků (uvolnění a získání). Tato poznámka se chová stejně jako `_Moves_lock_` s tím rozdílem, že odpojený argument by měl být `return` spíše než `this`.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Použití poznámek SAL k snížení míry výskytu závad kódu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Porozumění SAL](../code-quality/understanding-sal.md)
@@ -127,4 +127,4 @@ Inteligentní Zámky obvykle zabalí Nativní zámky a spravují jejich životno
 - [Určení, kdy a kde se má poznámka použít](../code-quality/specifying-when-and-where-an-annotation-applies.md)
 - [Vnitřní funkce](../code-quality/intrinsic-functions.md)
 - [Doporučené postupy a příklady](../code-quality/best-practices-and-examples-sal.md)
-- [Blog týmu analýzy kódu](http://go.microsoft.com/fwlink/p/?LinkId=251197)
+- [Blog týmu analýzy kódu](https://blogs.msdn.microsoft.com/codeanalysis/)

@@ -7,12 +7,12 @@ ms.author: mblome
 manager: markl
 dev_langs:
 - CPP
-ms.openlocfilehash: fee4478f52cd107d2173919617aca8acd07234eb
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 762ba639c1443bb737087233d04c9e3753f2f455
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445653"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807082"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>Použití kontrolních mechanismů C++ Core Guidelines
 
@@ -80,17 +80,17 @@ Při přidání nových pravidel do nástroje pro C++ kontrolu základních poky
 Referenční témata pro většinu pravidel najdete v části [základní C++ informace o kontrole sady Visual Studio](code-analysis-for-cpp-corecheck.md).
 
 Od verze Visual Studio 2017 verze 15,3 jsou podporované sady pravidel:
-- **Pravidla ukazatele vlastníka** vynutila [kontroly správy prostředků související s vlastníkem @ no__t-2T > ze C++ základních pokynů](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management).
+- **Pravidla ukazatele vlastníka** vynutila [kontroly správy prostředků související s vlastníkem\<t > v C++ základních pokynech](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management).
 
-- **Konstantní pravidla** vynutila [kontroly související s const podle C++ základních pokynů](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability).
+- **Konstantní pravidla** vynutila [kontroly související s const podle C++ základních pokynů](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability).
 
-- **Pravidla nezpracovaných ukazatelů** vynutila [kontroly správy prostředků související s nezpracovanými ukazateli podle C++ základních pokynů](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management).
+- **Pravidla nezpracovaných ukazatelů** vynutila [kontroly správy prostředků související s nezpracovanými ukazateli podle C++ základních pokynů](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management).
 
-- **Pravidla jedinečných ukazatelů** vynutila [kontroly správy prostředků související s typy se sémantikou jedinečných C++ ukazatelů z hlavních pokynů](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management).
+- **Pravidla jedinečných ukazatelů** vynutila [kontroly správy prostředků související s typy se sémantikou jedinečných C++ ukazatelů z hlavních pokynů](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management).
 
-- **Pravidla vazeb** vynutily [profil mezí C++ základních pokynů](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile).
+- **Pravidla vazeb** vynutily [profil mezí C++ základních pokynů](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile).
 
-- **Pravidla typu** vynutily [profil typu C++ základních pokynů](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile).
+- **Pravidla typu** vynutily [profil typu C++ základních pokynů](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile).
 
 **Visual Studio 2017 verze 15,5**:
 
@@ -131,7 +131,7 @@ Tato makra odpovídají sadám pravidel a rozšiřují seznam čísel upozorněn
 
 ## <a name="attributes"></a>Atributy
 
-Microsoft Visual C++ Compiler má omezené podpory pro atribut GSL potlačit. Dá se použít k potlačení upozornění na výrazy a příkazy bloku uvnitř funkce.
+Kompilátor společnosti C++ Microsoft má omezené podpory pro atribut GSL potlačit. Dá se použít k potlačení upozornění na výrazy a příkazy bloku uvnitř funkce.
 
 ```cpp
 // Suppress only warnings from the 'r.11' rule in expression.
@@ -224,18 +224,18 @@ Je nutné nastavit několik proměnných prostředí a použít pro kompilátor 
 
 1. **Proměnné prostředí**
    - `set esp.extensions=cppcorecheck.dll` znamená to, že modul načte C++ základní pokyny.
-   - @no__t – 0 tím zakážete logiku, která zpracovává poznámky SAL. Poznámky neovlivňují analýzu kódu v nástroji C++ kontrola základních pokynů, jejich zpracování ale trvá čas (někdy dlouhou dobu). Toto nastavení je volitelné, ale důrazně se doporučuje.
-   - @no__t – 0 důrazně doporučujeme, abyste zakázali upozornění, která se aktivují ve standardních hlavičkách. Sem můžete přidat další cesty, například cestu k běžným hlavičkám v projektu.
+   - `set esp.annotationbuildlevel=ignore` tím zakážete logiku, která zpracovává poznámky SAL. Poznámky neovlivňují analýzu kódu v nástroji C++ kontrola základních pokynů, jejich zpracování ale trvá čas (někdy dlouhou dobu). Toto nastavení je volitelné, ale důrazně se doporučuje.
+   - `set caexcludepath=%include%` důrazně doporučujeme, abyste zakázali upozornění, která se aktivují ve standardních hlavičkách. Sem můžete přidat další cesty, například cestu k běžným hlavičkám v projektu.
 2. **Možnosti příkazového řádku**
    - `/analyze` povolí analýzu kódu (Zvažte také použití/analyze: Only a/analyze: quiet).
    - `/analyze:plugin EspXEngine.dll` Tato možnost načte modul rozšíření analýzy kódu do rychlého režimu. Tento modul zase načte základní pokyny pro C++ kontrolu.
 
 ## <a name="use-the-guideline-support-library"></a>Použití knihovny podpory zásad
-Knihovna podpory směrnic je navržená tak, aby vám pomohla postupovat podle základních pokynů. GSL obsahuje definice, které umožňují nahradit konstrukce náchylné k chybám s bezpečnějšími alternativami. Můžete například nahradit pár parametrů `T*, length` pomocí typu `span<T>`. GSL je k dispozici na adrese [http://www.nuget.org/packages/Microsoft.Gsl](http://www.nuget.org/packages/Microsoft.Gsl). Knihovna je open source, takže můžete zobrazit zdroje, vytvářet komentáře nebo přispívat. Projekt najdete na adrese [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL).
+Knihovna podpory směrnic je navržená tak, aby vám pomohla postupovat podle základních pokynů. GSL obsahuje definice, které umožňují nahradit konstrukce náchylné k chybám s bezpečnějšími alternativami. Můžete například nahradit pár parametrů `T*, length` pomocí typu `span<T>`. GSL je k dispozici na adrese [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl). Knihovna je open source, takže můžete zobrazit zdroje, vytvářet komentáře nebo přispívat. Projekt najdete na adrese [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL).
 
 ## <a name="vs2015_corecheck"></a>Použití C++ základních pokynů pro kontrolu v projektech sady Visual Studio 2015
 
-Pokud používáte sadu Visual Studio 2015, není C++ standardně nainstalována sada pravidel analýzy kódu základní kontroly. Než budete moci povolit C++ základní nástroje pro analýzu kódu v aplikaci Visual Studio 2015, je nutné provést některé další kroky. Společnost Microsoft poskytuje podporu pro projekty sady Visual Studio 2015 pomocí balíčku NuGet. Balíček má název Microsoft. CppCoreCheck a je k dispozici na adrese [http://www.nuget.org/packages/Microsoft.CppCoreCheck](http://www.nuget.org/packages/Microsoft.CppCoreCheck). Tento balíček vyžaduje aspoň sadu Visual Studio 2015 s nainstalovanou aktualizací Update 1.
+Pokud používáte sadu Visual Studio 2015, není C++ standardně nainstalována sada pravidel analýzy kódu základní kontroly. Než budete moci povolit C++ základní nástroje pro analýzu kódu v aplikaci Visual Studio 2015, je nutné provést některé další kroky. Společnost Microsoft poskytuje podporu pro projekty sady Visual Studio 2015 pomocí balíčku NuGet. Balíček má název Microsoft. CppCoreCheck a je k dispozici na adrese [http://www.nuget.org/packages/Microsoft.CppCoreCheck](https://www.nuget.org/packages/Microsoft.CppCoreCheck). Tento balíček vyžaduje aspoň sadu Visual Studio 2015 s nainstalovanou aktualizací Update 1.
 
 Balíček také nainstaluje jiný balíček jako závislost, a to pouze v případě, že je k disřádku podpůrná knihovna zásad (GSL). GSL je také k dispozici na GitHubu na adrese [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL).
 
@@ -253,6 +253,6 @@ Z důvodu způsobu, jakým jsou načtena pravidla analýzy kódu, je nutné nain
 
    Balíček NuGet přidá další soubor MSBuild *. targets* do projektu, který je vyvolán při povolení analýzy kódu v projektu. Tento soubor *. targets* přidá C++ pravidla základní kontroly jako další rozšíření nástroje Visual Studio Code Analysis Tool. Po instalaci balíčku můžete použít dialogové okno stránky vlastností k povolení nebo zakázání vydaných a experimentálních pravidel.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Základní informace C++ o kontrole sady Visual Studio](code-analysis-for-cpp-corecheck.md)
