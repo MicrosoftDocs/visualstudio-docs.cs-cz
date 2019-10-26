@@ -16,18 +16,18 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: fc954fe372ccd571151ab6ea09e9c1e3db96206a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ee858c7c17798f327d323f632d4cb9e8a77b6712
+ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648775"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72924531"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Vytvoření vazby ovládacích prvků WPF k datům v sadě Visual Studio
 
 Data můžete uživatelům vaší aplikace zobrazit tak, že data svážete s ovládacími prvky [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)]. Chcete-li vytvořit tyto ovládací prvky vázané na data, můžete přetáhnout položky z okna **zdroje dat** do [!INCLUDE[wpfdesigner_current_short](../data-tools/includes/wpfdesigner_current_short_md.md)] v aplikaci Visual Studio. Toto téma popisuje některé nejběžnější úlohy, nástroje a třídy, které lze použít k vytváření aplikací [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] vázaných na data.
 
-Obecné informace o tom, jak vytvořit ovládací prvky vázané na data v aplikaci Visual Studio, naleznete v tématu [vázání ovládacích prvků na data v aplikaci Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md). Další informace o [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] datové vazby najdete v tématu [Přehled datových vazeb](/dotnet/framework/wpf/data/data-binding-overview).
+Obecné informace o tom, jak vytvořit ovládací prvky vázané na data v aplikaci Visual Studio, naleznete v tématu [vázání ovládacích prvků na data v aplikaci Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md). Další informace o [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] datové vazby najdete v tématu [Přehled datových vazeb](/dotnet/desktop-wpf/data/data-binding-overview).
 
 ## <a name="tasks-involved-in-binding-wpf-controls-to-data"></a>Úlohy, které jsou součástí vazby ovládacích prvků WPF na data
 
@@ -61,7 +61,7 @@ V následující tabulce je uveden seznam [!INCLUDE[TLA#tla_titlexaml](../data-t
 
 Při přetažení tabulky nebo sloupce z okna **zdroje dat** do návrháře aplikace Visual Studio vygeneruje [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)], který provede následující akce:
 
-- Přidá datovou sadu a novou <xref:System.Windows.Data.CollectionViewSource> do prostředků kontejneru, do kterého jste přetáhli položku. @No__t_0 je objekt, který lze použít k procházení a zobrazení dat v datové sadě.
+- Přidá datovou sadu a novou <xref:System.Windows.Data.CollectionViewSource> do prostředků kontejneru, do kterého jste přetáhli položku. <xref:System.Windows.Data.CollectionViewSource> je objekt, který lze použít k procházení a zobrazení dat v datové sadě.
 
 - Vytvoří datové vazby pro ovládací prvek. Pokud přetáhnete položku na existující ovládací prvek v návrháři, XAML naváže ovládací prvek na položku. Pokud přetáhnete položku do kontejneru, XAML vytvoří ovládací prvek, který byl vybrán pro přetaženou položku, a naváže ovládací prvek na položku. Ovládací prvek je vytvořen v novém <xref:System.Windows.Controls.Grid>.
 
@@ -73,7 +73,7 @@ Sada Visual Studio rovněž provede následující změny v souboru s kódem n
 
 Když přetáhnete entitu nebo vlastnost entity z okna **zdroje dat** do návrháře, aplikace Visual Studio vygeneruje [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)], který provede následující:
 
-- Přidá novou <xref:System.Windows.Data.CollectionViewSource> do prostředků kontejneru, do kterého jste přetáhli položku. @No__t_0 je objekt, který lze použít k procházení a zobrazení dat v entitě.
+- Přidá novou <xref:System.Windows.Data.CollectionViewSource> do prostředků kontejneru, do kterého jste přetáhli položku. <xref:System.Windows.Data.CollectionViewSource> je objekt, který lze použít k procházení a zobrazení dat v entitě.
 
 - Vytvoří datové vazby pro ovládací prvek. Pokud přetáhnete položku na existující ovládací prvek v návrháři, [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] sváže ovládací prvek s položkou. Pokud přetáhnete položku do kontejneru, [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] vytvoří ovládací prvek, který byl vybrán pro přetaženou položku, a naváže ovládací prvek na položku. Ovládací prvek je vytvořen v novém <xref:System.Windows.Controls.Grid>.
 
@@ -89,7 +89,7 @@ Když přetáhnete objekt nebo vlastnost služby z okna **zdroje dat** do návrh
 
 Sada Visual Studio generuje jazyk XAML, který provede následující akce:
 
-- Přidá novou <xref:System.Windows.Data.CollectionViewSource> do prostředků kontejneru, do kterého jste přetáhli položku. @No__t_0 je objekt, který lze použít k procházení a zobrazení dat v objektu, který je vrácen službou.
+- Přidá novou <xref:System.Windows.Data.CollectionViewSource> do prostředků kontejneru, do kterého jste přetáhli položku. <xref:System.Windows.Data.CollectionViewSource> je objekt, který lze použít k procházení a zobrazení dat v objektu, který je vrácen službou.
 
 - Vytvoří datové vazby pro ovládací prvek. Pokud přetáhnete položku na existující ovládací prvek v návrháři, [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] sváže ovládací prvek s položkou. Pokud přetáhnete položku do kontejneru, [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] vytvoří ovládací prvek, který byl vybrán pro přetaženou položku, a naváže ovládací prvek na položku. Ovládací prvek je vytvořen v novém <xref:System.Windows.Controls.Grid>.
 
@@ -102,7 +102,7 @@ Když přetáhnete objekt nebo vlastnost z okna **zdroje dat** do návrháře, a
 
 Visual Studio vygeneruje [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)], který provede následující akce:
 
-- Přidá novou <xref:System.Windows.Data.CollectionViewSource> do prostředků kontejneru, do kterého jste přetáhli položku. @No__t_0 je objekt, který lze použít k procházení a zobrazení dat v objektu.
+- Přidá novou <xref:System.Windows.Data.CollectionViewSource> do prostředků kontejneru, do kterého jste přetáhli položku. <xref:System.Windows.Data.CollectionViewSource> je objekt, který lze použít k procházení a zobrazení dat v objektu.
 
 - Vytvoří datové vazby pro ovládací prvek. Pokud přetáhnete položku na existující ovládací prvek v návrháři, XAML naváže ovládací prvek na položku. Pokud přetáhnete položku do kontejneru, XAML vytvoří ovládací prvek, který byl vybrán pro přetaženou položku, a naváže ovládací prvek na položku. Ovládací prvek je vytvořen v novém <xref:System.Windows.Controls.Grid>.
 

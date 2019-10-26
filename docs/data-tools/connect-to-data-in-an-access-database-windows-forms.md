@@ -12,12 +12,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d24fc2fa1ee34567e0c32859eeccf6af62813a20
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 65fa8b823a49644110dc773eb614da6022f4e8f5
+ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648711"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72924521"
 ---
 # <a name="connect-to-data-in-an-access-database"></a>Připojení k datům v accessové databázi
 
@@ -109,7 +109,7 @@ Pomocí následujícího postupu se připojte k databázím vytvořeným pomocí
 
 Datová sada, kterou jste právě vytvořili, je k dispozici v okně **zdroje dat** . Nyní můžete provádět následující úlohy:
 
-- V okně **zdroje dat** vyberte položky a přetáhněte je na formulář nebo návrhovou plochu (viz téma [vazba model Windows Forms ovládací prvky na data v nástroji Visual Studio nebo v](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) tématu [Přehled datové vazby WPF](/dotnet/framework/wpf/data/data-binding-overview)).
+- V okně **zdroje dat** vyberte položky a přetáhněte je na formulář nebo návrhovou plochu (viz téma [vazba model Windows Forms ovládací prvky na data v nástroji Visual Studio nebo v](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) tématu [Přehled datové vazby WPF](/dotnet/desktop-wpf/data/data-binding-overview)).
 
 - Otevřete zdroj dat v **Návrhář datových sad** , chcete-li přidat nebo upravit objekty, které tvoří datovou sadu.
 

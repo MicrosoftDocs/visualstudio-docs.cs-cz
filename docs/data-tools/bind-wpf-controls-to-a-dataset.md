@@ -15,12 +15,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 56c49f0d3cef6dbb054c8d7d97b4e875b83cb518
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 68ffb040e7d642fc2bf285f0510850edc343a5ce
+ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648821"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72924537"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>Vytvoření vazby ovládacích prvků WPF k datové sadě
 
@@ -50,7 +50,7 @@ Předchozí znalosti následujících konceptů jsou také užitečné, ale nevy
 
 - Datové sady a objekty TableAdapter. Další informace najdete v tématu [nástroje datové sady v sadě Visual Studio](../data-tools/dataset-tools-in-visual-studio.md) a [objekty TableAdapter](../data-tools/create-and-configure-tableadapters.md).
 
-- Datová vazba WPF Další informace najdete v tématu [Přehled datových vazeb](/dotnet/framework/wpf/data/data-binding-overview).
+- Datová vazba WPF Další informace najdete v tématu [Přehled datových vazeb](/dotnet/desktop-wpf/data/data-binding-overview).
 
 ## <a name="create-the-project"></a>Vytvoření projektu
 
@@ -110,7 +110,7 @@ Předtím, než můžete vytvořit ovládací prvky vázané na data, je nutné 
 
 8. Klikněte na tlačítko **Dokončit**.
 
-   Visual Studio přidá nový soubor `AdventureWorksLTDataSet.xsd` do projektu a přidá odpovídající položku **AdventureWorksLTDataSet** do okna **zdroje dat** . @No__t_0 soubor definuje typovou datovou sadu s názvem `AdventureWorksLTDataSet` a TableAdapter s názvem `ProductTableAdapter`. Později v tomto návodu použijete `ProductTableAdapter` k vyplnění datové sady daty a k uložení změn zpět do databáze.
+   Visual Studio přidá nový soubor `AdventureWorksLTDataSet.xsd` do projektu a přidá odpovídající položku **AdventureWorksLTDataSet** do okna **zdroje dat** . `AdventureWorksLTDataSet.xsd` soubor definuje typovou datovou sadu s názvem `AdventureWorksLTDataSet` a TableAdapter s názvem `ProductTableAdapter`. Později v tomto návodu použijete `ProductTableAdapter` k vyplnění datové sady daty a k uložení změn zpět do databáze.
 
 9. Sestavte projekt.
 
@@ -197,7 +197,7 @@ Přidejte kód, který umožňuje uživatelům procházet záznamy produktů pom
 
      Visual Studio otevře soubor kódu na pozadí a vytvoří novou `backButton_Click` obslužnou rutinu události pro událost <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.
 
-2. Upravte obslužnou rutinu události `Window_Loaded`, aby `ProductViewSource`, `AdventureWorksLTDataSet` a `AdventureWorksLTDataSetProductTableAdapter` byly mimo metodu a přístupná k celému formuláři. Deklarujete pouze ty, které mají být globální pro formulář, a přiřaďte je v rámci obslužné rutiny `Window_Loaded` události podobné následujícímu:
+2. Upravte obslužnou rutinu události `Window_Loaded`, aby `ProductViewSource`, `AdventureWorksLTDataSet`a `AdventureWorksLTDataSetProductTableAdapter` byly mimo metodu a přístupná k celému formuláři. Deklarujete pouze ty, které mají být globální pro formulář, a přiřaďte je v rámci obslužné rutiny `Window_Loaded` události podobné následujícímu:
 
      [!code-csharp[Data_WPFDATASET#1](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_1.cs)]
      [!code-vb[Data_WPFDATASET#1](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_1.vb)]
@@ -262,4 +262,4 @@ Po dokončení tohoto postupu můžete vyzkoušet následující související �
 
 - [Vytvoření vazby ovládacích prvků WPF k datům v sadě Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
 - [Nástroje datových sad v sadě Visual Studio](../data-tools/dataset-tools-in-visual-studio.md)
-- [Přehled datových vazeb](/dotnet/framework/wpf/data/data-binding-overview)
+- [Přehled datových vazeb](/dotnet/desktop-wpf/data/data-binding-overview)

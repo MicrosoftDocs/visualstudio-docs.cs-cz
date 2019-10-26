@@ -8,12 +8,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f921ce292e34147d54af977567373634610becfd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8b7794b4dd300cf66ea894227f9346e80ee68085
+ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72637292"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72924499"
 ---
 # <a name="get-started-with-wpf"></a>Začínáme s WPF (Windows Presentation Foundation)
 
@@ -27,12 +27,13 @@ V této části najdete témata, která zavádějí a vám pomůžou začít s W
 |-|-|
 |Chci se pustit přímo v...|[Návod: Moje první desktopová aplikace WPF](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)|
 |Chci porovnat vývojové nástroje XAML...|[Návrh XAML v aplikaci Visual Studio a Blend pro Visual Studio](../designers/designing-xaml-in-visual-studio.md)|
-|Začínáte s .NET?|[Přehled rozhraní .NET](/dotnet/framework/get-started/overview)<br /><br /> [Základy vytváření aplikací](/dotnet/standard/application-essentials)<br /><br /> [Začínáme s Visual C# a Visual Basic](../ide/quickstart-visual-basic-console.md)|
-|Řekněte mi více o WPF...|[Přehled WPF](../designers/introduction-to-wpf.md)<br /><br /> [Přehled XAML (WPF)](/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br /> [Ovládací prvky](/dotnet/framework/wpf/controls/)<br /><br /> [Přehled datových vazeb](/dotnet/framework/wpf/data/data-binding-overview)<br /><br /> [Datová vazba WPF s LINQ to XML](../designers/wpf-data-binding-with-linq-to-xml-overview.md)|
-|Jste vývojář model Windows Forms?|[Ovládací prvky model Windows Forms a ekvivalentní ovládací prvky WPF](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls)<br /><br /> [Podporované scénáře v technologii WPF a model Windows Formsch operacích](/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|
+|Začínáte s .NET?|[Průvodce .NET](/dotnet/standard/)<br /><br />[Základy vytváření aplikací](/dotnet/standard/application-essentials)<br /><br />[Začínáme s VisualC#](../ide/quickstart-csharp-console.md)|
+|Řekněte mi více o WPF...|[Přehled WPF](/dotnet/framework/wpf/introduction-to-wpf)<br /><br />[Přehled XAML (WPF)](/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br />[Ovládací prvky](/dotnet/framework/wpf/controls/)<br /><br />[Přehled datových vazeb](/dotnet/desktop-wpf/data/data-binding-overview)<br /><br />[Datová vazba WPF s LINQ to XML](/dotnet/framework/wpf/data/wpf-data-binding-with-linq-to-xml-overview)|
+|Jste vývojář model Windows Forms?|[Ovládací prvky model Windows Forms a ekvivalentní ovládací prvky WPF](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls)<br /><br />[Podporované scénáře v technologii WPF a model Windows Formsch operacích](/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|
 
 ## <a name="see-also"></a>Viz také:
 
+- [Desktopová příručka pro WPF](/dotnet/desktop-wpf/overview/index)
 - [Knihovna tříd (WPF)](/dotnet/framework/wpf/class-library-wpf)
 - [Komunitní materiály pro WPF](/dotnet/framework/wpf/getting-started/community-feedback)
 - [Přehled vývoje aplikací](/dotnet/framework/wpf/app-development/index)

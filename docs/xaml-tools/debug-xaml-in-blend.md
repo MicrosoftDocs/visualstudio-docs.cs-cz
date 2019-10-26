@@ -9,12 +9,12 @@ manager: jillfra
 ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: a9e111f904f0c017dbbe4487401e8e3c363931ac
-ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
-ms.translationtype: HT
+ms.openlocfilehash: 0c785be0002a1e6d4fd1934e559743502611f5fb
+ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919208"
+ms.locfileid: "72924497"
 ---
 # <a name="debug-xaml-in-blend"></a>Ladění kódu XAML v programu Blend
 
@@ -37,7 +37,7 @@ Některé běžné příčiny chyb syntaxe XAML:
 
 - Prvek XAML existuje v umístění, kde není povolen.
 
-Další informace o běžných syntaxech jazyka XAML naleznete v tématu [základní průvodce syntaxí jazyka XAML](/previous-versions/windows/apps/hh700351(v=win.10)).
+Další informace o běžných syntaxech jazyka XAML naleznete v tématu [základní průvodce syntaxí jazyka XAML](/windows/uwp/xaml-platform/xaml-syntax-guide).
 
 Můžete také identifikovat a vyřešit jednoduché chyby syntaxe kódu na pozadí, chyby kompilace a běhové chyby v Blendu. Chyby kódu na pozadí ale můžou být snáze identifikovatelné a řešitelné v aplikaci Visual Studio.
 
@@ -119,7 +119,7 @@ Když jsou zjištěny chyby XAML, návrhová plocha zobrazí výstrahu, že proj
 
 Projekty Blendu v aplikaci Visual Studio můžete otevřít pro snazší ladění kódu v aplikaci. Chcete-li otevřít projekt Blend v aplikaci Visual Studio, klikněte pravým tlačítkem myši na projekt na panelu **projekty** a potom klikněte na možnost **Upravit v aplikaci Visual Studio**. Po dokončení ladění relace v aplikaci Visual Studio stiskněte kombinaci kláves CTRL + SHIFT + S a uložte všechny změny a pak přepněte zpět do Blendu. Zobrazí se výzva k opětovnému načtení projektu. Pokud chcete pokračovat v práci v Blendu, klikněte na **Ano** .
 
-Další informace o ladění aplikace naleznete v tématu [ladění aplikací pro UWP v aplikaci Visual Studio](/visualstudio/debugger/debug-store-apps-in-visual-studio?view=vs-2015&redirectedfrom=MSDN).
+Další informace o ladění aplikace naleznete v tématu [ladění aplikací pro UWP v aplikaci Visual Studio](../debugger/debug-store-apps-in-visual-studio.md).
 
 ## <a name="get-help"></a>Získat nápovědu
 
