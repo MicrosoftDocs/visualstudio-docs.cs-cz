@@ -18,12 +18,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e59ee1305c0c482686505959aac7187902906086
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 75faa3e4d38f961c38b23a95765d6466e008714f
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748900"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919051"
 ---
 # <a name="work-with-c-code-in-class-designer"></a>Práce s C++ kódem v Návrhář tříd
 
@@ -84,7 +84,7 @@ Chyba, kterou nejčastěji vidíte pro problém s rozlišením typu, nebyl **nal
 
 ### <a name="troubleshoot-other-error-messages"></a>Řešení potíží s jinými chybovými zprávami
 
-Pomoc s chybami a upozorněními při řešení potíží najdete ve veřejných fórech MSDN (Microsoft Developer Network). Podívejte se na [Fórum sady Visual Studio Návrhář tříd](http://go.microsoft.com/fwlink/?linkid=160754).
+Pomoc s chybami a upozorněními při řešení potíží najdete ve veřejných fórech MSDN (Microsoft Developer Network). Podívejte se na [Fórum sady Visual Studio Návrhář tříd](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsclassdesigner).
 
 ## <a name="limitations-for-c-code-elements"></a>Omezení pro C++ prvky kódu
 

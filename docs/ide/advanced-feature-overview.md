@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c54983ee9025cf3e1c4df0161a6be55ebf9b2fa
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2283da7c212102ac948ea368bb95315344d2274e
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72631985"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919105"
 ---
 # <a name="features-of-visual-studio"></a>Funkce sady Visual Studio
 
@@ -68,7 +68,7 @@ Další informace najdete v tématu [Přesun do cloudu pomocí sady Visual Studi
 
 ## <a name="create-apps-for-the-web"></a>Vytváření aplikací pro web
 
-Webové jednotky našeho moderního světa a Visual Studio vám může pomáhat s psaním aplikací. Můžete vytvářet webové aplikace s využitím ASP.NET, Node. js, Pythonu, JavaScriptu a TypeScript. Visual Studio rozumí webovým rozhraním, jako jsou úhlová, jQuery, Express a další. ASP.NET Core a .NET Core běží na operačních systémech Windows, Mac a Linux. [ASP.NET Core](http://www.asp.net/core/overview) je hlavní aktualizace pro MVC, WebApi a Signal a běží v systémech Windows, Mac a Linux.  ASP.NET Core je od základu navržená tak, aby vám poskytovala štíhlou a sestavitelnou sadu .NET Stack pro vytváření moderních cloudových webových aplikací a služeb.
+Webové jednotky našeho moderního světa a Visual Studio vám může pomáhat s psaním aplikací. Můžete vytvářet webové aplikace s využitím ASP.NET, Node. js, Pythonu, JavaScriptu a TypeScript. Visual Studio rozumí webovým rozhraním, jako jsou úhlová, jQuery, Express a další. ASP.NET Core a .NET Core běží na operačních systémech Windows, Mac a Linux. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core) je hlavní aktualizace pro MVC, WebApi a Signal a běží v systémech Windows, Mac a Linux.  ASP.NET Core je od základu navržená tak, aby vám poskytovala štíhlou a sestavitelnou sadu .NET Stack pro vytváření moderních cloudových webových aplikací a služeb.
 
 Další informace najdete v tématu [moderní webové nástroje](https://visualstudio.microsoft.com/vs/modern-web-tooling/).
 

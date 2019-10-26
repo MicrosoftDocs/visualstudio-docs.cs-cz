@@ -7,16 +7,16 @@ helpviewer_keywords:
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cab93bcf60c5a4fb5034bfdfd7601e4f846996d0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7cbb8c9be8ed56294d865d2612a8d79fcdb39df8
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652619"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919118"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>Vytvoření přenosného a vlastního nastavení editoru pomocí EditorConfig
 
-Můžete přidat soubor [EditorConfig](http://editorconfig.org/) do projektu nebo základ kódu k prosazování konzistentních stylů kódování pro všechny, které fungují v základu kódu. Nastavení EditorConfig mají přednost před globálním nastavením textového editoru sady Visual Studio. To znamená, že můžete každý základ kódu přizpůsobit tak, aby se používala nastavení textového editoru, která jsou specifická pro daný projekt. Vlastní předvolby osobního editoru můžete nastavit i v dialogovém okně **Možnosti** sady Visual Studio. Tato nastavení platí vždy, když pracujete v základu kódu bez souboru *. editorconfig* nebo když soubor *. editorconfig* nepřepíše konkrétní nastavení. Příkladem takové preference je styl odsazení &mdash;tabs nebo mezery.
+Můžete přidat soubor [EditorConfig](https://editorconfig.org/) do projektu nebo základ kódu k prosazování konzistentních stylů kódování pro všechny, které fungují v základu kódu. Nastavení EditorConfig mají přednost před globálním nastavením textového editoru sady Visual Studio. To znamená, že můžete každý základ kódu přizpůsobit tak, aby se používala nastavení textového editoru, která jsou specifická pro daný projekt. Vlastní předvolby osobního editoru můžete nastavit i v dialogovém okně **Možnosti** sady Visual Studio. Tato nastavení platí vždy, když pracujete v základu kódu bez souboru *. editorconfig* nebo když soubor *. editorconfig* nepřepíše konkrétní nastavení. Příkladem takové preference je styl odsazení &mdash;tabs nebo mezery.
 
 Nastavení EditorConfig jsou podporovaná mnoha editory kódu a prostředími IDEs, včetně sady Visual Studio. Je to přenosná komponenta, která se přenáší s vaším kódem a může vymáhat styly kódování i mimo sadu Visual Studio.
 
@@ -50,22 +50,22 @@ Nastavení v souborech EditorConfig umožňují zachovat konzistentní styly a n
 
 Konvence kódování, které použijete v osobních projektech, se můžou lišit od těch, které se používají v projektech týmu. Můžete například chtít, aby při kódování a odsazení přidal znak tabulátoru. Váš tým však může preferovat, že odsazení přičítá místo znaku tabulátoru znaky mezer. Soubory EditorConfig tento problém řeší tím, že vám umožní mít konfiguraci pro každý scénář.
 
-Vzhledem k tomu, že nastavení jsou obsažena v souboru v základu kódu, cestují spolu s tímto základem kódu. Pokud otevřete soubor kódu v editoru kompatibilním s EditorConfig, nastavení textového editoru jsou implementovaná. Další informace o souborech EditorConfig najdete na webu [EditorConfig.org](http://editorconfig.org/) .
+Vzhledem k tomu, že nastavení jsou obsažena v souboru v základu kódu, cestují spolu s tímto základem kódu. Pokud otevřete soubor kódu v editoru kompatibilním s EditorConfig, nastavení textového editoru jsou implementovaná. Další informace o souborech EditorConfig najdete na webu [EditorConfig.org](https://editorconfig.org/) .
 
 > [!NOTE]
 > Konvence nastavené v souboru EditorConfig se momentálně nedají vykonat v kanálu CI/CD jako chyby sestavení nebo upozornění. Jakékoli odchylky stylu se zobrazí pouze v editoru sady Visual Studio a **Seznam chyb**.
 
 ## <a name="supported-settings"></a>Podporovaná nastavení
 
-Editor v sadě Visual Studio podporuje základní sadu [vlastností EditorConfig](http://editorconfig.org/#supported-properties):
+Editor v sadě Visual Studio podporuje základní sadu [vlastností EditorConfig](https://editorconfig.org/#supported-properties):
 
 - indent_style
 - indent_size
 - tab_width
-- ukončit \_of_line
+- konec\_of_line
 - charset
-- \_trailing_whitespace střihu
-- Vložit \_final_newline
+- Oříznout\_trailing_whitespace
+- Vložit\_final_newline
 - kořen
 
 Nastavení editoru EditorConfig jsou podporovaná ve všech jazycích podporovaných v aplikaci Visual Studio s výjimkou XML. Kromě toho EditorConfig podporuje konvence [stylu kódu](../ide/editorconfig-code-style-settings-reference.md) , včetně [jazyků](../ide/editorconfig-language-conventions.md), [formátování](../ide/editorconfig-formatting-conventions.md)a konvencí [pojmenování](../ide/editorconfig-naming-conventions.md) pro C# a Visual Basic.
@@ -182,6 +182,6 @@ Rozsah konvencí EditorConfig můžete řídit nastavením vlastnosti ```root=tr
 
 - [Konvence stylu kódu .NET](../ide/editorconfig-code-style-settings-reference.md)
 - [Podpora EditorConfig pro službu jazyka](../extensibility/supporting-editorconfig.md)
-- [EditorConfig.org](http://editorconfig.org/)
+- [EditorConfig.org](https://editorconfig.org/)
 - [Funkce editoru kódu](writing-code-in-the-code-and-text-editor.md)
 - [EditorConfig (Visual Studio pro Mac)](/visualstudio/mac/editorconfig)

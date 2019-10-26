@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e5af132efde0c1a49e5404fa602363aab0554e6f
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 07c0a3e24ac089bf29501dfd4e101baef73318fb
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72572463"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919139"
 ---
 # <a name="step-9-try-other-features"></a>Krok 9: Vyzkoušejte jiné funkce
 Chcete-li získat další informace, zkuste změnit ikony a barvy, přidat časovač hry a zvuky. Chcete-li, aby hra byla náročnější, zkuste zvětšit hrací plochu a upravte časovač.
@@ -37,7 +37,7 @@ Pokud si chcete stáhnout dokončenou verzi ukázky, přečtěte si [ukázku s k
 - Pokud hráč najde shodu, přidejte zvuk, jiný zvuk, když hráč odkryje dvě ikony, které neodpovídají, a třetí zvuk, když program znovu skryje ikony.
 
     > [!TIP]
-    > Chcete-li přehrát zvuky, můžete použít obor názvů <xref:System.Media>. Další informace najdete v tématu [přehráníC#zvuku v aplikaci model Windows Forms App ()](http://youtu.be/qOh4ooHg1UU) nebo [o tom, jak přehrát zvuk v Visual Basic](http://youtu.be/-4oPDeQrtMs) .
+    > Chcete-li přehrát zvuky, můžete použít obor názvů <xref:System.Media>. Další informace najdete v tématu [přehráníC#zvuku v aplikaci model Windows Forms App ()](https://www.youtube.com/watch?v=qOh4ooHg1UU&feature=youtu.be) nebo [o tom, jak přehrát zvuk v Visual Basic](https://www.youtube.com/watch?v=-4oPDeQrtMs&feature=youtu.be) .
 
 - Udělejte hru obtížnější tím, že zvětšíte hrací plochu.
 

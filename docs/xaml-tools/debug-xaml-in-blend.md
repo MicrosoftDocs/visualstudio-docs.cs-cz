@@ -9,12 +9,12 @@ manager: jillfra
 ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: c9a89155b81b88f46f4849ce8d739772fd6760fe
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
-ms.translationtype: MT
+ms.openlocfilehash: a9e111f904f0c017dbbe4487401e8e3c363931ac
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451183"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919208"
 ---
 # <a name="debug-xaml-in-blend"></a>Ladění kódu XAML v programu Blend
 
@@ -37,7 +37,7 @@ Některé běžné příčiny chyb syntaxe XAML:
 
 - Prvek XAML existuje v umístění, kde není povolen.
 
-Další informace o běžných syntaxech jazyka XAML naleznete v tématu [základní průvodce syntaxí jazyka XAML](http://go.microsoft.com/fwlink/?LinkId=329942).
+Další informace o běžných syntaxech jazyka XAML naleznete v tématu [základní průvodce syntaxí jazyka XAML](/previous-versions/windows/apps/hh700351(v=win.10)).
 
 Můžete také identifikovat a vyřešit jednoduché chyby syntaxe kódu na pozadí, chyby kompilace a běhové chyby v Blendu. Chyby kódu na pozadí ale můžou být snáze identifikovatelné a řešitelné v aplikaci Visual Studio.
 
@@ -101,13 +101,13 @@ Když jsou zjištěny chyby XAML, návrhová plocha zobrazí výstrahu, že proj
 
 #### <a name="to-resolve-the-xaml-errors"></a>Řešení chyb XAML
 
-1. Dvakrát klikněte na první chybu v seznamu. Popis je "hodnota" < "není platná v atributu". " Když dvakrát kliknete na chybu, ukazatel najde odpovídající umístění v kódu. @No__t-0 předcházející `Button` je platný a nikoli atribut navrhovaný v chybové zprávě. Pokud se podíváte na předchozí řádek kódu, všimnete si, že uzavírací uvozovky pro atribut `Top` chybí. Zadejte uzavírací uvozovky. Všimněte si, že seznam chyb na panelu **výsledky** se aktualizuje tak, aby odrážel vaše změny.
+1. Dvakrát klikněte na první chybu v seznamu. Popis je "hodnota" < "není platná v atributu". " Když dvakrát kliknete na chybu, ukazatel najde odpovídající umístění v kódu. `<` předchozí `Button` je platný, a nikoli atribut navrhovaný v chybové zprávě. Pokud se podíváte na předchozí řádek kódu, všimnete si, že uzavírací uvozovky pro atribut `Top` chybí. Zadejte uzavírací uvozovky. Všimněte si, že seznam chyb na panelu **výsledky** se aktualizuje tak, aby odrážel vaše změny.
 
 2. Dvakrát klikněte na popis "0" není platný na začátku názvu. " `Margin="0,149,0,0"` se zdá být ve správném formátu. Všimněte si však, že barevné kódování `Margin` neodpovídá ostatním instancím `Margin` v kódu. Vzhledem k tomu, že uzavírací uvozovky chybí v předchozí dvojici název/hodnota (`VerticalAlignment="Top`), je `Margin="` čtena jako součást hodnoty předcházejícího atributu a hodnota 0 je čtena jako začátek dvojice název/hodnota. Zadejte uzavírací uvozovky pro `Top`. Seznam chyb na panelu **výsledky** se aktualizuje tak, aby odrážel vaše změny.
 
 3. Dvakrát klikněte na zbývající chybu a "tlačítko uzavírací značky XML" se neshoduje. " Ukazatel je umístěn na pravé značce **mřížky** (`</Grid>`), což naznačuje, že chyba je uvnitř objektu `Grid`. Všimněte si, že druhý objekt `Button` postrádá koncovou značku. Po přidání uzavíracího `/` se seznam panelů **výsledků** aktualizuje. Nyní, když byly vyřešeny tyto počáteční chyby, byly zjištěny dvě další chyby.
 
-4. Dvakrát klikněte na "obsah" není rozpoznán nebo není přístupný. " @No__t-0 v `content` by měla být velká písmena. Nahraďte malý případ "c" velkým písmenem "c".
+4. Dvakrát klikněte na "obsah" není rozpoznán nebo není přístupný. " `c` v `content` by měla být velká písmena. Nahraďte malý případ "c" velkým písmenem "c".
 
 5. Dvakrát klikněte na vlastnost mame neexistuje v oboru názvů ' <http://schemas.microsoft.com/winfx/2006/xaml> '. "M" v "mame" musí být "N". Nahradí "M" za "N". Teď, když je možné XAML analyzovat, se aplikace zobrazí na návrhové ploše.
 
@@ -119,8 +119,8 @@ Když jsou zjištěny chyby XAML, návrhová plocha zobrazí výstrahu, že proj
 
 Projekty Blendu v aplikaci Visual Studio můžete otevřít pro snazší ladění kódu v aplikaci. Chcete-li otevřít projekt Blend v aplikaci Visual Studio, klikněte pravým tlačítkem myši na projekt na panelu **projekty** a potom klikněte na možnost **Upravit v aplikaci Visual Studio**. Po dokončení ladění relace v aplikaci Visual Studio stiskněte kombinaci kláves CTRL + SHIFT + S a uložte všechny změny a pak přepněte zpět do Blendu. Zobrazí se výzva k opětovnému načtení projektu. Pokud chcete pokračovat v práci v Blendu, klikněte na **Ano** .
 
-Další informace o ladění aplikace naleznete v tématu [ladění aplikací pro UWP v aplikaci Visual Studio](http://go.microsoft.com/fwlink/?LinkId=329944).
+Další informace o ladění aplikace naleznete v tématu [ladění aplikací pro UWP v aplikaci Visual Studio](/visualstudio/debugger/debug-store-apps-in-visual-studio?view=vs-2015&redirectedfrom=MSDN).
 
 ## <a name="get-help"></a>Získat nápovědu
 
-Pokud potřebujete další nápovědu k ladění aplikace Blendu, můžete ve [fórech komunity aplikací pro UWP](http://go.microsoft.com/fwlink/?LinkId=280308) vyhledat příspěvky související s vaším problémem nebo odeslat otázku.
+Pokud potřebujete další nápovědu k ladění aplikace Blendu, můžete ve [fórech komunity aplikací pro UWP](https://social.msdn.microsoft.com/Forums/windowsapps/home?category=windowsapps) vyhledat příspěvky související s vaším problémem nebo odeslat otázku.

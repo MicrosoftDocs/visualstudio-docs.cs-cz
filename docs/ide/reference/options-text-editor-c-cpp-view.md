@@ -11,18 +11,18 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b15952c8262ea1e8dec1e89816a5887f9bfe9bf6
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: b867d81e4f0719ebf239bc89a6200fe833bc27b1
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461274"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919032"
 ---
 # <a name="options-text-editor-cc-view"></a>Možnosti, textový editor, C/C++, zobrazení
 
 Pomocí těchto stránek vlastností můžete změnit výchozí chování editoru kódu při programování v jazyce C nebo C++.
 
-Chcete-li získat přístup k této stránce vlastností, zvolte**možnost** **nástroje** > a rozbalte **Text Editor**, pak **C/C++** a pak zvolte možnost **Zobrazit**.
+Chcete-li získat přístup k této stránce vlastností, zvolte **nástroje** > **Možnosti** a rozbalte **Text Editor**, pak **C/C++** a pak klikněte na tlačítko **Zobrazit**.
 
 ## <a name="code-squiggles"></a>Vlnovky kódu
 
@@ -30,7 +30,7 @@ Můžete povolit nebo zakázat následující nastavení pro správu způsobu, j
 
 - **Makra v vynechaných oblastech procházení** – definuje, jak zvýraznit makra, která jsou uvnitř vynechaných oblastí v databázi procházení, například makra, jejichž definice obsahují složené závorky.
 
-- **Makra převoditelná na constexpr** – definuje, jak zvýraznit definice maker, které je možné `constexpr` převést na definice.
+- **Makra převoditelná na constexpr** – definuje, jak zvýraznit definice maker, které je možné převést na `constexpr` definice.
 
 ## <a name="inactive-code"></a>Neaktivní kód
 
@@ -42,7 +42,7 @@ Můžete povolit nebo zakázat následující nastavení pro správu způsobu, j
 
 ## <a name="miscellaneous"></a>Různé
 
-- Zobrazení **výčtu úkolů** s komentářem – vyhledá v otevřených zdrojových souborech tokeny vs a nahlásí je v okně seznam úkolů.
+- Zobrazení **výčtu úkolů s komentářem** – vyhledá v otevřených zdrojových souborech tokeny vs a nahlásí je v okně seznam úkolů.
 
 - **Zvýraznit odpovídající tokeny** – zvýrazněte uzavírací závorky nebo syntaxi, které odpovídají místu, kde je kurzor umístěný.
 
@@ -50,11 +50,11 @@ Můžete povolit nebo zakázat následující nastavení pro správu způsobu, j
 
 - **Povolit sbalení** – po otevření souboru zadejte režim sbalení.
 
-- **Vytvoření osnovy oblastí pragma** – automatické `#pragma` bloky osnovy oblasti
+- **Vytvoření osnovy oblastí pragma** – Automatická osnova `#pragma` bloků oblastí.
 
 - **Bloky příkazů osnovy** – automatické bloky příkazů osnovy.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Nastavení možností editoru pro konkrétní jazyk](../../ide/reference/setting-language-specific-editor-options.md)
-- [Refaktoring v C++ (blog VC)](http://blogs.msdn.com/b/vcblog/archive/2014/11/14/all-about-c-refactoring-in-visual-studio-2015-preview.aspx)
+- [Refaktoring v C++ (blog VC)](https://devblogs.microsoft.com/cppblog/all-about-c-refactoring-in-visual-studio-2015-preview/)

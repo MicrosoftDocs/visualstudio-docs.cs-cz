@@ -93,12 +93,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2741e86bdc8e59434472242210cd6de2ffa8cee9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c71b281a89d0465ac80f04de868b16cc5468429a
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655544"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919066"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Zdroje informací pro řešení potíží s integrovaným vývojovým prostředím
 
@@ -119,7 +119,7 @@ Na webu [technické komunity Microsoftu](https://techcommunity.microsoft.com/t5/
 
 ## <a name="product-support"></a>Produktová podpora
 
-Pokud máte i po vyzkoušení dalších prostředků nějaké dotazy, můžete kontaktovat služby podpory Microsoftu na webu [Podpora Microsoftu](http://go.microsoft.com/fwlink/?linkid=1782) . Informace o podpoře produktu dostupné ve vaší oblasti najdete na stránce [Možnosti zpětné vazby pro Visual Studio](../../ide/feedback-options.md) .
+Pokud máte i po vyzkoušení dalších prostředků nějaké dotazy, můžete kontaktovat služby podpory Microsoftu na webu [Podpora Microsoftu](https://support.microsoft.com/en-us) . Informace o podpoře produktu dostupné ve vaší oblasti najdete na stránce [Možnosti zpětné vazby pro Visual Studio](../../ide/feedback-options.md) .
 
 ## <a name="see-also"></a>Viz také:
 
