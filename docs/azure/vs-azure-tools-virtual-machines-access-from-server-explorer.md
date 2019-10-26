@@ -1,6 +1,6 @@
 ---
-title: Přístup k Azure Virtual Machines z Průzkumníka serveru | Dokumentace Microsoftu
-description: Získat přehled o tom, jak zobrazit, vytvářet a spravovat virtuální počítače Azure (VM) v Průzkumníku serveru v sadě Visual Studio.
+title: Přístup k Azure Virtual Machines z Průzkumník serveru | Microsoft Docs
+description: Získejte přehled o tom, jak zobrazit vytváření a správu virtuálních počítačů Azure v Průzkumník serveru v systému Visual Studio.
 author: ghogen
 manager: jillfra
 assetId: eb3afde6-ba90-4308-9ac1-3cc29da4ede0
@@ -9,35 +9,35 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/31/2017
 ms.author: ghogen
-ms.openlocfilehash: e4f8f72dcc19ebe721e79c7b5268fd73d2cc469e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8fd5d81e721bc2df7041d4cb724687e5ee540a7f
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62427025"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911661"
 ---
 # <a name="accessing-azure-virtual-machines-from-server-explorer"></a>Přístup ke službě Azure Virtual Machines z Průzkumníka serveru
 
-Pokud máte virtuální počítače hostované v Azure, můžete k nim přistupovat v Průzkumníku serveru. Musíte nejdřív se přihlásit ke svému předplatnému Azure pro zobrazení vašich mobilních službách. Pro přihlášení, otevřete místní nabídku pro uzel Azure v Průzkumníku serveru a zvolte **připojit se k Microsoft Azure**.
+Pokud máte virtuální počítače hostované v Azure, můžete k nim přistupovat v Průzkumník serveru. Abyste mohli zobrazit vaše mobilní služby, musíte se nejdřív přihlásit k předplatnému Azure. Pokud se chcete přihlásit, otevřete místní nabídku uzlu Azure v Průzkumník serveru a vyberte **připojit k Microsoft Azure**.
 
-1. V Průzkumníku cloudu vyberte virtuální počítač a potom stisknutím klávesy F4 zobrazit její vlastnosti.
+1. V Průzkumníku cloudu zvolte virtuální počítač a potom stisknutím klávesy F4 zobrazte okno vlastností.
 
-    Následující tabulka uvádí, které vlastnosti jsou k dispozici, ale jsou všechny jen pro čtení. Chcete-li změnit, použijte [webu Azure portal](http://go.microsoft.com/fwlink/p/?LinkID=525040).
-
-   | Vlastnost | Popis |
-   | --- | --- |
-   | Název DNS |Adresa URL s adresou Internetu z virtuálního počítače. |
-   | Prostředí |Pro virtuální počítač hodnota této vlastnosti je vždy produkčního prostředí. |
-   | Název |Název virtuálního počítače. |
-   | Velikost |Velikost virtuálního počítače, která odráží objem paměti a místa na disku, který je k dispozici. Další informace najdete v tématu [velikostí virtuálních počítačů](https://docs.microsoft.com/azure/cloud-services/cloud-services-sizes-specs). |
-   | Stav |Mezi hodnoty patří spouštění, spuštěno, zastavení, zastaveno a stav načítání. Pokud se zobrazí stav načítání, aktuální stav neznámý. Hodnoty této vlastnosti se liší od hodnoty, které se používají na [webu Azure portal](http://go.microsoft.com/fwlink/p/?LinkID=525040). |
-   | ID předplatného |ID předplatného pro váš účet Azure. Tyto informace můžete zobrazit na [webu Azure portal](http://go.microsoft.com/fwlink/p/?LinkID=525040) zobrazením vlastností pro odběr. |
-2. Zvolte některý uzel koncového bodu a následně zobrazit **vlastnosti** okna.
-3. Následující tabulka popisuje dostupné vlastnosti koncových bodů, ale jsou jen pro čtení. Chcete-li přidat nebo upravit koncových bodů pro virtuální počítač, použijte [webu Azure portal](http://go.microsoft.com/fwlink/p/?LinkID=525040).
+    V následující tabulce jsou uvedeny vlastnosti, které jsou k dispozici, ale všechny jsou jen pro čtení. Pokud je chcete změnit, použijte [Azure Portal](https://portal.azure.com).
 
    | Vlastnost | Popis |
    | --- | --- |
-   | Název |Identifikátor pro koncový bod. |
-   | Privátní Port |Port pro přístup k síti, interním do vaší aplikace. |
-   | Protocol (Protokol) |Protokol, který používá přenosové vrstvy pro tento koncový bod TCP nebo UDP. |
-   | Veřejný Port |Port, který se používá pro veřejný přístup k aplikaci. |
+   | Název DNS |Adresa URL s internetovou adresou virtuálního počítače |
+   | Prostředí |U virtuálního počítače je hodnota této vlastnosti vždy produkční. |
+   | Name |Název virtuálního počítače |
+   | Velikost |Velikost virtuálního počítače, která odráží množství paměti a místa na disku, které je k dispozici. Další informace najdete v tématu [velikosti virtuálních počítačů](/azure/cloud-services/cloud-services-sizes-specs). |
+   | Stav |Mezi hodnoty patří spuštění, spuštění, zastavení, zastavení a načítání stavu. Pokud se zobrazí stav načítání, aktuální stav je neznámý. Hodnoty této vlastnosti se liší od hodnot používaných v [Azure Portal](https://portal.azure.com). |
+   | SubscriptionID |ID předplatného pro váš účet Azure. Tyto informace o [Azure Portal](https://portal.azure.com) můžete zobrazit zobrazením vlastností předplatného. |
+2. Zvolte uzel koncového bodu a pak zobrazte okno **vlastnosti** .
+3. Následující tabulka popisuje dostupné vlastnosti koncových bodů, ale jsou jen pro čtení. K přidání nebo úpravě koncových bodů pro virtuální počítač použijte [Azure Portal](https://portal.azure.com).
+
+   | Vlastnost | Popis |
+   | --- | --- |
+   | Name |Identifikátor koncového bodu. |
+   | Privátní port |Port pro interní přístup k síti vaší aplikace |
+   | Protokol |Protokol, který používá transportní vrstva pro tento koncový bod, buď TCP, nebo UDP. |
+   | Veřejný port |Port, který se používá pro veřejný přístup k vaší aplikaci. |

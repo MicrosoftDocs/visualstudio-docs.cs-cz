@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1e9109493ea78542afaedabbcce3841e3eac0e7
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.openlocfilehash: 913984bcc5f9546589421d66d95b6bfb2740b870
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128135"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72912032"
 ---
 # <a name="concurrency-visualizer"></a>Vizualizér souběžnosti
 
@@ -29,7 +29,7 @@ ms.locfileid: "71128135"
 >
 > - Stáhněte si rozšíření [Concurrency pro Vizualizér pro Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ConcurrencyVisualizer2017#overview) .
 > - Stáhněte si rozšíření [Concurrency pro Vizualizér pro Visual Studio 2015](https://marketplace.visualstudio.com/items?itemName=Diagnostics.ConcurrencyVisualizerforVisualStudio2015) .
-> - Stáhněte si [nástroje kolekce Vizualizátor souběžnosti pro Visual Studio 2015](http://www.microsoft.com/download/details.aspx?id=49103).
+> - Stáhněte si [nástroje kolekce Vizualizátor souběžnosti pro Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=49103).
 >
 > [Nástroj příkazového řádku Vizualizátor souběžnosti (CVCollectionCmd)](../profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd.md) umožňuje shromažďovat trasování z příkazového řádku, které můžete zobrazit v Vizualizátor souběžnosti pro Visual Studio 2015. Nástroj lze použít na počítačích, ve kterých není nainstalována aplikace Visual Studio.
 
@@ -38,7 +38,7 @@ Pomocí Vizualizátor souběžnosti můžete zjistit, jak aplikace s více vlák
 > [!NOTE]
 > Vizualizátor souběžnosti nepodporuje webové projekty.
 
-Vizualizátor souběžnosti spoléhá na [trasování událostí pro funkce Windows](http://go.microsoft.com/fwlink/?LinkId=234579) .
+Vizualizátor souběžnosti spoléhá na [trasování událostí pro funkce Windows](/windows/win32/etw/event-tracing-portal) .
 
 ## <a name="related-topics"></a>Související témata
 
@@ -48,7 +48,7 @@ Vizualizátor souběžnosti spoléhá na [trasování událostí pro funkce Wind
 |[Zobrazení vláken](../profiling/threads-view-parallel-performance.md)|Popisuje, jak analyzovat interakce mezi vlákny v programu.|
 |[Zobrazení jader](../profiling/cores-view.md)|Popisuje, jak analyzovat migraci vláken napříč jádry.|
 |[Obecné vzory pro vícevláknové aplikace s nevhodným chováním](../profiling/common-patterns-for-poorly-behaved-multithreaded-applications.md)|Popisuje několik běžných vzorů a ukazuje, jak se zobrazují ve Vizualizátor souběžnosti.|
-|[Paralelní vývoj v blogu sady Visual Studio](http://go.microsoft.com/fwlink/?LinkId=235385)|Poskytuje tipy a osvědčené postupy pro Vizualizátor souběžnosti.|
+|[Paralelní vývoj v blogu sady Visual Studio](https://blogs.msdn.microsoft.com/visualizeparallel/)|Poskytuje tipy a osvědčené postupy pro Vizualizátor souběžnosti.|
 |[Zobrazení sestav výkonu](../profiling/performance-report-views.md)|Poskytuje referenční informace o sestavách a zobrazeních sady Visual Studio Nástroje pro profilaci.|
 |[SDK Vizualizéru souběžnosti](../profiling/concurrency-visualizer-sdk.md)|Popisuje, jak instrumentovat zdrojový kód pro zobrazení dalších informací v Vizualizátor souběžnosti.|
 |[Nástroj příkazového řádku Vizualizátor souběžnosti (CVCollectionCmd)](../profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd.md)|Popisuje, jak použít nástroj příkazového řádku Vizualizátor souběžnosti (CVCollectionCmd. exe) ke shromáždění a zpracování trasování na počítačích, které nemají aplikaci Visual Studio.|
@@ -56,4 +56,4 @@ Vizualizátor souběžnosti spoléhá na [trasování událostí pro funkce Wind
 ## <a name="see-also"></a>Viz také:
 
 - [Profilace v sadě Visual Studio](../profiling/index.yml)
-- [Nejdřív se podívejte na nástroje pro profilaci](../profiling/profiling-feature-tour.md)
+- [První pohled na nástroje pro profilaci](../profiling/profiling-feature-tour.md)

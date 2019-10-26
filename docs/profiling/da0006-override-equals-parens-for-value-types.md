@@ -1,5 +1,5 @@
 ---
-title: 'DA0006: Přepište Equals () pro typy hodnot | Microsoft Docs'
+title: 'DA0006: přepište Equals () pro typy hodnot | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,30 +13,30 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cb4ac65442d9dbcb384ee3765f6fa827e3fa5d8
-ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
+ms.openlocfilehash: 805fa62b003559eb92c0531b0f4df7133cf0cdf5
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72306156"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911992"
 ---
-# <a name="da0006-override-equals-for-value-types"></a>DA0006: Přepis Equals() pro typy hodnot
+# <a name="da0006-override-equals-for-value-types"></a>DA0006: Přepište Equals() pro hodnoty
 
 |||
 |-|-|
-|Id pravidla|DA0006|
-|Category|Využití .NET Framework|
+|ID pravidla|DA0006|
+|Kategorie|Využití .NET Framework|
 |Metody Profiiling|Kontrol|
-|Message|Přepište rovnost a operátor rovnosti na hodnotových typech.|
+|Zpráva|Přepište rovnost a operátor rovnosti na hodnotových typech.|
 |Typ messge|Upozornění|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
  Volání metody Equals nebo operátorů rovnosti typu veřejné hodnoty jsou významným podílem dat profilování. Zvažte implementaci efektivnější metody.
 
 ## <a name="rule-description"></a>Popis pravidla
- U hodnotových typů zděděná implementace Equals používá knihovnu <xref:System.Reflection> a porovnává obsah všech polí v typu. Reflexe je výpočetně náročná a porovnání rovnosti všech polí může být zbytečné. Pokud očekáváte, že uživatelé budou porovnávat nebo třídit instance nebo je používat jako klíče zatřiďovací tabulky, váš typ hodnoty by měl implementovat Equals. Pokud váš programovací jazyk podporuje přetížení operátoru, měli byste také poskytnout implementaci operátorů rovnosti a nerovnosti.
+ V případě hodnotových typů zděděná implementace Equals používá knihovnu <xref:System.Reflection> a porovnává obsah všech polí v typu. Reflexe je výpočetně náročná a porovnání rovnosti všech polí může být zbytečné. Pokud očekáváte, že uživatelé budou porovnávat nebo třídit instance nebo je používat jako klíče zatřiďovací tabulky, váš typ hodnoty by měl implementovat Equals. Pokud váš programovací jazyk podporuje přetížení operátoru, měli byste také poskytnout implementaci operátorů rovnosti a nerovnosti.
 
- Další informace o tom, jak přepsat rovnost a operátory rovnosti, naleznete v tématu [pokyny pro implementaci Equals a operátoru rovnosti (= =)](http://go.microsoft.com/fwlink/?LinkId=177818).
+ Další informace o tom, jak přepsat rovnost a operátory rovnosti, naleznete v tématu [pokyny pro implementaci Equals a operátoru rovnosti (= =)](/dotnet/standard/design-guidelines/equality-operators).
 
 ## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění
- Příklad implementace operátorů Equals a rovnost naleznete v tématu pravidlo analýzy kódu @no__t – 0CA1815: Přepište Equals a operátor Equals na hodnotových typech @ no__t-0
+ Příklad implementace operátorů Equals a rovnosti naleznete v tématu pravidlo analýzy kódu [CA1815: přepište Equals a operator Equals on Value Types](../code-quality/ca1815.md)

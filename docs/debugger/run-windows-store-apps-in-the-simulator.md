@@ -1,5 +1,5 @@
 ---
-title: Spouštění aplikací pro UWP v simulátoru | Dokumentace Microsoftu
+title: Spouštění aplikací pro UWP v simulátoru | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -13,149 +13,149 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 30952d191d6163e6ba82491342b5084e8e3f67b2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ae0b559f4684fd4fd8b9eabff4b46b1defb5ef1f
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62930173"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911341"
 ---
 # <a name="run-uwp-apps-in-the-simulator"></a>Spouštění aplikací pro UPW na simulátoru
 
-Simulátor aplikace Visual Studio pro aplikace pro UPW je desktopová aplikace, která simuluje aplikace pro UPW. Obvykle můžete ladit na místním počítači, připojeného zařízení nebo vzdálený počítač. Ale v některých případech můžete chtít použít simulátor aplikace Visual Studio k emulaci různých fyzických obrazovku a řešení. Můžete také simulovat běžné touch a otočení události a simulovat vlastnosti připojení k síti.
+Simulátor sady Visual Studio pro aplikace UWP je desktopová aplikace, která simuluje aplikaci pro UWP. Obvykle budete chtít ladit na místním počítači, připojeném zařízení nebo na vzdáleném počítači. V některých scénářích však můžete chtít použít simulátor sady Visual Studio k emulaci jiné velikosti fyzické obrazovky a rozlišení. Můžete také simulovat běžné události dotykové ovládání a rotace a simulovat vlastnosti síťového připojení.
 
-Simulátor poskytuje prostředí, ve kterém můžete návrh, vývoj, ladění a testování aplikací pro UPW. Ale předtím, než můžete publikovat aplikaci pro Microsoft Store, měli byste otestovat aplikace skutečný zařízení.
+Simulátor poskytuje prostředí, ve kterém můžete navrhovat, vyvíjet, ladit a testovat aplikace pro UWP. Před publikováním aplikace v Microsoft Store byste však měli aplikaci otestovat na skutečném zařízení.
 
-Simulátor aplikace Visual Studio pro aplikace pro UPW se nespouští v izolovaném prostředí v místním počítači. Proto se chyby, ke kterým dochází v simulátoru, jako je neobnovitelná systémová chyba, může také ovlivnit celý počítač.
+Simulátor sady Visual Studio pro aplikace pro UWP neběží v izolovaném prostředí na místním počítači. Chyby, ke kterým dochází v simulátoru, jako je například neobnovitelná chyba systému, mohou také ovlivnit celý počítač.
 
 > [!IMPORTANT]
-> Simulátor aplikace Visual Studio 2015 neobsahuje informace o zeměpisné poloze tlačítko. Je to proto, že simulátor systému Windows 10 neobsahuje informace o zeměpisné poloze simulace.
+> Simulátor sady Visual Studio 2015 nezahrnuje tlačítko geografického umístění. Důvodem je to, že simulátor Windows 10 neobsahuje simulaci geografického umístění.
 
-## <a name="BKMK_Set_the_simulator_as_the_target"></a> Nastavit jako cíl simulátoru
+## <a name="BKMK_Set_the_simulator_as_the_target"></a>Nastavit simulátor jako cíl
 
-Ke spuštění vaší aplikace pro UWP v simulátoru, vyberte **simulátor** z rozevíracího seznamu vedle položky **spustit ladění** tlačítko na ladicí program **standardní** nástrojů. Tato možnost je k dispozici, pouze pokud vaše aplikace **Min cílové platformy. Verze** je menší než nebo rovna operačního systému na vývojovém počítači.
+Pokud chcete aplikaci UWP spustit v simulátoru, vyberte v rozevíracím seznamu vedle tlačítka **Spustit ladění** na panelu nástrojů **standardní** ladicí program **simulátor** . Tato možnost je dostupná jenom v případě, že je **Minimální verze cílové platformy** vaší aplikace menší než nebo se rovná operačnímu systému na vašem vývojovém počítači.
 
-![Běžících v simulátoru](../debugger/media/vsrun_f5_simulator.png "VSRUN_F5_Simulator")
+![Běžící v simulátoru](../debugger/media/vsrun_f5_simulator.png "VSRUN_F5_Simulator")
 
-## <a name="BKMK_Choose_an_interaction_mode"></a> Volba režimu interakce
+## <a name="BKMK_Choose_an_interaction_mode"></a>Zvolit režim interakce
 
-Můžete použít následující režimy interakce:
+Můžete zvolit následující režimy interakce:
 
-- ![Tlačítko myši režimu](../debugger/media/simulator_mousemodebtn.png "SIMULATOR_MouseModeBtn") režim myši: Nastaví režim interakce na gesta myší. Zahrnout kliknutí, gesta myší dvakrát klikne a drags.
+- ![Tlačítko režimu myši](../debugger/media/simulator_mousemodebtn.png "SIMULATOR_MouseModeBtn") Režim myši: nastaví režim interakce na gesta myši. Gesta myši zahrnují kliknutí, dvojité kliknutí a přetahování.
 
-- ![Spouštěcí tlačítko emulace dotykového ovládání](../debugger/media/simulator_starttouchemulationbtn.png "SIMULATOR_StartTouchEmulationBtn") spuštění emulace dotykového ovládání: Nastaví režim interakce na dotyk gesta jeden prstem. Jedním prstem události obsahují klepnete, přetahování a potažení prstem.
+- ![Tlačítko spustit emulaci dotykového ovládání](../debugger/media/simulator_starttouchemulationbtn.png "SIMULATOR_StartTouchEmulationBtn") Zahájit emulaci dotykového ovládání: nastaví režim interakce na dotykové gesta jednoho prstu. Události s jedním prstem zahrnují klepnutí, přetahování a přetáhnutí.
 
-   ![Cíl simulátoru jedním prstem](../debugger/media/simulator_onefinger.png "SIMULATOR_OneFinger")
+   ![Simulátor – jeden cíl Finger](../debugger/media/simulator_onefinger.png "SIMULATOR_OneFinger")
    
-   Ikona jediný cíl označuje umístění události v simulátoru. Umístěte ukazatel pomocí myši.
+   Ikona s jedním cílem indikuje umístění událostí v simulátoru. Ukazatel myši umístěte pomocí myši.
 
-   ![Cíl touch jedním prstem](../debugger/media/simulator_onefingerengaged.png "SIMULATOR_OneFingerEngaged")
+   ![Cíl dotykového ovládání](../debugger/media/simulator_onefingerengaged.png "SIMULATOR_OneFingerEngaged")
    
-   Stisknutím klávesy levým tlačítkem myši na aktivovat režim dotykového ovládání. Například klikněte na tlačítko k simulaci tap, nebo stiskněte a podržte tlačítko a přetáhněte nebo potažením prstem přejděte.
+   Stisknutím levého tlačítka myši aktivujete režim dotykového ovládání. Například klikněte na tlačítko pro simulaci klepnutí nebo stiskněte a držte tlačítko při přetahování myší nebo potažením prstem.
 
-## <a name="pinch-and-zoom"></a>Ovládání stažením prstů a přiblížení
+## <a name="pinch-and-zoom"></a>Gesto roztažení prstů a přiblížení
 
-Nastaví režim interakce pro ovládání stažením prstů a gesta dvěma prsty přiblížení.
+Nastaví režim interakce na gesto roztažení prstů a přiblížení gest dvou prsty.
 
-![Cíl simulátoru dvě prstem](../debugger/media/simulator_twofinger.png)
+![Kosimulátor – cíl dvou prstů](../debugger/media/simulator_twofinger.png)
 
-Dvojité cílovou ikonu označuje umístění dvěma prsty na obrazovce zařízení.
+Ikona dvojitého cíle indikuje umístění dvou prsty na obrazovce zařízení.
 
-- Najeďte myší na pozici ikony na objekt na obrazovce zařízení.
+- Přesunutím myši umístěte ikony nad objekt na obrazovce zařízení.
 
-- Otočení kolečka myši, chcete-li změnit simulované vzdálenost dvěma prsty před roztažením prstů nebo zvětšení dopředu nebo dozadu.
+- Otočením kolečka myši směrem dozadu nebo dopředu můžete změnit simulovanou vzdálenost dvou prsty před tím, než jste gesto roztažení prstů nebo přiblížení.
 
-![Ovládání stažením prstů, přibližování a otáčení cíle](../debugger/media/simulator_twofingerengaged.png)
+![Gesto roztažení prstů, přiblížení a rotace cílů](../debugger/media/simulator_twofingerengaged.png)
 
-- Stiskněte tlačítko vlevo a otočit kolečko dozadu (směrem k) Chcete-li zvětšit (stažení).
+- Stiskněte levé tlačítko a otáčejte kolečkem (směrem dozadu) k přiblížení (gesto roztažení prstů).
 
-- Stiskněte tlačítko vlevo a otáčením kolečko myši dopředu (směrem od) horizonální oddálení (Lupa).
+- Stiskněte levé tlačítko a otáčejte kolečkem myši (od sebe), které chcete oddálit (přiblížení).
 
 ## <a name="object-rotation"></a>Otočení objektu
 
-**Emulace dotykového ovládání otočit** tlačítka nastaví režim interakce na gesta otočení pomocí dvěma prsty.
+Tlačítko pro **otočení dotykového ovládání** nastaví režim interakce k otočení gesty pomocí dvou prsty.
 
-- Najeďte myší na pozici ikony na objekt na obrazovce zařízení. Otočení kolečka myši, chcete-li změnit simulované orientace dvěma prsty před otočit objekt dopředu nebo dozadu.
+- Přesunutím myši umístěte ikony nad objekt na obrazovce zařízení. Otočením kolečka myši směrem dozadu nebo dopředu změňte simulovanou orientaci dvou prsty před otočením objektu.
 
-- Stiskněte tlačítko vlevo a otáčením kolečka zpětné (směrem k) Otočit proti směru hodinových ručiček objektu. Jak otočení kolečka myši, jednu z ikon dvou cílové otočí kolem druhý k určení relativní velikosti otočení.
+- Stiskněte levé tlačítko a otáčejte kolečkem (směrem dozadu), abyste přetočili objekt proti směru hodinových ručiček. Při otočení kolečka myši se jedna ze dvou cílových ikon otočí kolem druhé, aby označovala relativní velikost otočení.
 
-- Stiskněte tlačítko vlevo a otočení objektu po směru hodinových ručiček otáčením kolečko myši dopředu (směrem od).
+- Stiskněte levé tlačítko a otočte kolečkem myši (od sebe), aby se objekt otáčí po směru hodinových ručiček.
 
-## <a name="BKMK_Enable_or_disable_Always_on_top_mode"></a> Povolení nebo zakázání vždy na začátek režimu
- Můžete nastavit okno simulátoru vždy být nad ostatními okny. **Nejvrchnější okna přepnout** tlačítko povolí nebo zakáže **vždy navrchu** režimu okno simulátoru.
+## <a name="BKMK_Enable_or_disable_Always_on_top_mode"></a>Povolit nebo zakázat režim Always On Top
+ Okno simulátoru můžete nastavit tak, aby se vždy nacházet na dalších oknech. Tlačítko **Přepnout nad oknem okna** povolí nebo zakáže **horní** režim okna simulátoru.
 
-## <a name="BKMK_Change_the_device_orientation"></a> Změna orientace zařízení
- Orientace zařízení mezi na výšku a šířku můžete přepnout otočením v simulátoru 90 stupňů vede libovolným směrem.
-
-> [!NOTE]
-> Simulátor nerespektuje [DisplayProperties.AutoRotationPreferences](http://go.microsoft.com/fwlink/?LinkId=249460) vlastnost projektu. Například, pokud váš projekt nastaví orientaci `Landscape`a potom otočit simulator pro orientaci na výšku, obraz simulátor také se otočí a se změněnou velikostí. Vyzkoušejte nastavení na příslušném zařízení.
+## <a name="BKMK_Change_the_device_orientation"></a>Změna orientace zařízení
+ Orientaci zařízení mezi úrovněmi na výšku a na šířku můžete přepínat otočením simulátoru 90 stupňů v libovolném směru.
 
 > [!NOTE]
-> Pokud otočíte simulátoru tak, aby jednomu z okrajů simulátoru je větší, než se zobrazí na obrazovce, simulátor je automaticky přizpůsobí na obrazovce. Simulátor nezmění původní velikost, pokud znovu otočit.
-
-## <a name="BKMK_Change_the_simulated_screen_size_and_resolution"></a> Změna velikosti obrazovky s Simulovaná a řešení
- Chcete-li změnit velikost simulované obrazovky a rozlišení, zvolte **změnit rozlišení** tlačítko na paletě a v seznamu vyberte novou velikost a řešení.
-
- Velikost obrazovky a rozlišení, které jsou uvedené jako *palce šířka obrazovky, pixel šířka a výška pixel*. Mějte na paměti, že se simulované velikosti obrazovky a rozlišení. Souřadnice umístění na simulátoru jsou přeloženy na souřadnice velikost vybraného zařízení a řešení.
+> Simulátor nerespektuje vlastnost [DisplayProperties. AutoRotationPreferences](/uwp/api/Windows.Graphics.Display.DisplayProperties#Windows_Graphics_Display_DisplayProperties_AutoRotationPreferences) projektu. Například pokud váš projekt nastaví orientaci na `Landscape`a pak dojde k otočení simulátoru na orientaci na výšku, zobrazí se také obrázek simulátoru, který se změní na výšku. Otestujte tato nastavení na skutečném zařízení.
 
 > [!NOTE]
-> Škálovaná verze bitmapové obrázky můžete uložit ve vaší aplikaci a Windows se načte správné bitové kopie pro aktuální měřítko. Další informace najdete v tématu [návrhu a uživatelského rozhraní ÚVOD](/windows/uwp/layout/design-and-ui-intro). Ale pokud změníte na simulátoru řešení tak, že Windows vybere jinou image podle rozlišení, budete muset zastavte a restartujte relaci ladění zobrazíte novou bitovou kopii.
+> Pokud otočíte simulátor tak, že je jeden okraj simulátoru větší než obrazovka, na které je zobrazený, simulátor se automaticky přizpůsobí velikosti obrazovky. Při opětovném otočení se simulátor nemění na původní velikost.
 
-## <a name="BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store"></a> Zachytit snímek obrazovky aplikace k odeslání do Microsoft Store
- Při odesílání aplikace pro Microsoft Store, musíte zahrnout snímky obrazovky aplikace.
+## <a name="BKMK_Change_the_simulated_screen_size_and_resolution"></a>Změna velikosti simulované obrazovky a jejich rozlišení
+ Chcete-li změnit simulovanou velikost a rozlišení obrazovky, vyberte v paletě tlačítko **rozlišení změn** a v seznamu vyberte novou velikost a rozlišení.
+
+ Velikost obrazovky a rozlišení jsou uvedeny jako *Šířka obrazovky, Šířka pixelů X pixelů*. Všimněte si, že velikost obrazovky i rozlišení jsou simulované. Poloha souřadnice na simulátoru se převede na vybrané velikosti a rozlišení zařízení.
 
 > [!NOTE]
-> Na snímku obrazovky je uložen na aktuální řešení simulátoru. Chcete-li změnit na řešení, zvolte **změnit rozlišení** tlačítko.
+> V aplikaci můžete ukládat verze rastrových obrázků s horizontálním škálováním a systém Windows načte správnou image pro aktuální měřítko. Další informace najdete v tématu [Návrh a úvodní uživatelské rozhraní](/windows/uwp/layout/design-and-ui-intro). Pokud však změníte rozlišení simulátoru, takže systém Windows vybere jiný obrázek, aby odpovídal rozlišení, je nutné zastavit a znovu spustit ladicí relaci, aby zobrazila nový obrázek.
 
-- Chcete-li vytvořit snímky obrazovek pro vaši aplikaci v simulátoru, zvolte **zachytit snímek obrazovky do schránky** tlačítko.
+## <a name="BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store"></a>Zachytit snímek obrazovky vaší aplikace pro odeslání do Microsoft Store
+ Když odešlete aplikaci do Microsoft Store, musíte zahrnout snímky obrazovky aplikace.
 
-- Chcete-li nastavit umístění, kde se nachází snímky obrazovky, zvolte **nastavení snímku obrazovky** tlačítko a vyberte umístění v místní nabídce.
+> [!NOTE]
+> Snímek obrazovky je uložený v aktuálním rozlišení simulátoru. Chcete-li změnit rozlišení, klikněte na tlačítko **změnit rozlišení** .
 
-   ![Snímek obrazovky nastavení kontextové nabídky](../debugger/media/simulator_screenshotsettingscntxmnu.png)
+- Chcete-li vytvořit snímky obrazovky vaší aplikace z simulátoru, klikněte na tlačítko **zachytit snímek obrazovky se schránkou** .
 
-## <a name="BKMK_Simulate_network_connection_properties"></a> Simulovat vlastnosti připojení k síti
+- Chcete-li nastavit umístění, kde jsou umístěny snímky obrazovky, klikněte na tlačítko **nastavení snímku obrazovky** a z místní nabídky vyberte umístění.
 
-Můžete uživatelům vaší aplikace, spravovat náklady na měřeném připojení k síti zachování povědomí o síťové připojení zdarma nebo dat plánu změny stavu a povolením aplikaci pomocí těchto informací zabránit bez dalších nákladů pro roaming nebo vyšší než pomoci omezení přenosu zadaná data. [Windows.Networking.Connectivity](/uwp/api/windows.networking.connectivity) rozhraní API umožňuje reagovat na [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation) a [TriggerType](/uwp/api/windows.applicationmodel.background.systemtrigger) události, které se přihlaste. Zobrazit [rychlý start: Správa omezení náklady na síť s měřením dat](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx).
+   ![Místní nabídka nastavení snímků obrazovky](../debugger/media/simulator_screenshotsettingscntxmnu.png)
 
-K ladění a testování kódu s ohledem na náklady na síť, můžete simulátoru napodobují vlastnosti sítě, které jsou vystaveny prostřednictvím [ConnectionProfile](/uwp/api/windows.networking.connectivity.connectionprofile) vrácený [GetInternetConnectionProfile](/uwp/api/windows.networking.connectivity.networkinformation).
+## <a name="BKMK_Simulate_network_connection_properties"></a>Simulovat vlastnosti síťového připojení
 
-Pro simulaci sítě-vlastnosti:
+Můžete uživatelům vaší aplikace spravovat náklady na měřené síťové připojení tím, že zachováte povědomí o nákladech síťového připojení nebo změnách stavu datového tarifu a umožníte vaší aplikaci používat tyto informace k tomu, abyste se vyhnuli dalším nákladům na roaming nebo překročení stanovený limit přenosu dat. Rozhraní API pro [Windows. Networking. Connectivity](/uwp/api/windows.networking.connectivity) umožňuje reagovat na události [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation) a [TriggerType](/uwp/api/windows.applicationmodel.background.systemtrigger) , které se podepisují. Další informace najdete v tématu [rychlý Start: Správa omezení podle objemu nákladů na síť](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx).
 
-1. Na panelu nástrojů themeroller simulátor **změnit vlastnosti sítě** tlačítko.
+Pro ladění a testování kódu, který zohledňuje náklady na síť, může simulátor napodobovat vlastnosti sítě, které jsou vystaveny prostřednictvím objektu [ConnectionProfile](/uwp/api/windows.networking.connectivity.connectionprofile) , který vrací [GetInternetConnectionProfile](/uwp/api/windows.networking.connectivity.networkinformation).
 
-2. Na **nastavit vlastnosti sítě** dialogu **použití simulované sítě-vlastnosti**.
+Simulace vlastností sítě:
 
-    Zrušte zaškrtnutí políčka odebrat simulace a vraťte se do vlastností síťového rozhraní aktuálně připojené.
+1. Na panelu nástrojů simulátor klikněte na tlačítko **změnit vlastnosti sítě** .
 
-3. Zadejte **název profilu** pro simulované síti. Doporučujeme použít jedinečný název, který můžete použít k identifikaci simulace v [ProfileName](/uwp/api/windows.networking.connectivity.connectionprofile) vlastnost [ConnectionProfile](/uwp/api/windows.networking.connectivity.connectionprofile) objektu.
+2. V dialogovém okně **nastavit vlastnosti sítě** vyberte **použít vlastnosti simulované sítě**.
 
-4. Vyberte [NetworkCostType](/uwp/api/windows.networking.connectivity.networkcosttype) hodnotu z profilu **typ náklady na síť** seznamu.
+    Zrušením zaškrtnutí políčka odeberte simulaci a vraťte se do vlastností sítě aktuálně připojeného rozhraní.
 
-5. Z **příznak stavu limitu dat** seznamu, můžete nastavit [ApproachingDataLimit](/uwp/api/windows.networking.connectivity.connectioncost) vlastnost nebo [OverDataLimit](/uwp/api/windows.networking.connectivity.connectioncost) vlastnost na hodnotu true, nebo můžete zvolit  **V části omezení dat** nastavení obě hodnoty na hodnotu false.
+3. Zadejte **název profilu** simulované sítě. Doporučujeme použít jedinečný název, který můžete použít k identifikaci simulace [ve vlastnosti](/uwp/api/windows.networking.connectivity.connectionprofile) [proConnectionProfile](/uwp/api/windows.networking.connectivity.connectionprofile) objektu.
 
-6. Z **Roaming stavu** seznam, nastavte [Roaming](/uwp/api/windows.networking.connectivity.connectioncost) vlastnost.
+4. Vyberte hodnotu [NetworkCostType](/uwp/api/windows.networking.connectivity.networkcosttype) pro profil ze seznamu **Typ nákladů na síť** .
 
-7. Zvolte **nastavit vlastnosti** simulovat vlastnosti sítě aktivací popředí [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation) událostí a na pozadí [SystemTrigger](/uwp/api/windows.applicationmodel.background.systemtrigger) typu  **NetworkStateChange**.
+5. V seznamu **příznak stavu limitu dat** můžete nastavit vlastnost [ApproachingDataLimit](/uwp/api/windows.networking.connectivity.connectioncost) nebo vlastnost [OverDataLimit](/uwp/api/windows.networking.connectivity.connectioncost) na hodnotu true, nebo můžete vybrat možnost **v části omezení dat** a nastavit obě hodnoty na hodnotu false.
 
-Další informace o správě připojení k síti najdete v tématu:
+6. V seznamu **stav roamingu** nastavte vlastnost [roaming](/uwp/api/windows.networking.connectivity.connectioncost) .
 
-[Rychlý start: Správa omezení náklady na síť s měřením dat](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)
+7. Vyberte **nastavit vlastnosti** pro simulaci vlastností sítě aktivací události [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation) popředí a [SystemTrigger](/uwp/api/windows.applicationmodel.background.systemtrigger) na pozadí typu **NetworkStateChange**.
 
-[Ukázka informace o síti](https://code.msdn.microsoft.com/windowsapps/Network-Information-Sample-63aaa201)
+Další informace o správě síťových připojení najdete v těchto tématech:
+
+[Rychlý Start: Správa omezení pro náklady na měření sítě](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)
+
+[Ukázka informací o síti](https://code.msdn.microsoft.com/windowsapps/Network-Information-Sample-63aaa201)
 
 [Analýza spotřeby energie](../profiling/analyze-energy-use-in-store-apps.md)
 
-[Windows.Networking.Connectivity](/uwp/api/windows.networking.connectivity)
+[Windows. Networking. Connectivity](/uwp/api/windows.networking.connectivity)
 
-[Jak reagovat na události systému s úlohami na pozadí](/previous-versions/windows/apps/hh977058(v=win.10))
+[Postup reakce na události systému s úlohami na pozadí](/previous-versions/windows/apps/hh977058(v=win.10))
 
 [Jak aktivovat pozastavení, obnovení a události na pozadí v aplikacích pro UWP](how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md)
 
-## <a name="BKMK_Navigate_the_simulator_with_the_keyboard"></a> Přejděte simulátoru pomocí klávesnice
+## <a name="BKMK_Navigate_the_simulator_with_the_keyboard"></a>Procházení simulátoru pomocí klávesnice
 
-Simulátor nástrojů můžete přejít stisknutím klávesy **CTRL + ALT + Šipka nahoru** k přepnutí okno simulátoru na panel nástrojů simulátoru. Použití **šipka nahoru** a **šipka dolů** přesouvat mezi tlačítka na panelu nástrojů.
+Panel nástrojů simulátor můžete procházet stisknutím **kombinace kláves CTRL + ALT + šipka nahoru** a přepnout fokus z okna simulátoru na panel nástrojů simulátoru. Pomocí **šipky nahoru** a **dolů** se můžete pohybovat mezi tlačítky na panelu nástrojů.
 
-Simulátor můžete ukončit stisknutím kombinace kláves **CTRL + ALT + F4**.
+Simulátor můžete vypnout stisknutím **kombinace kláves CTRL + ALT + F4**.
 
 ## <a name="see-also"></a>Viz také:
 

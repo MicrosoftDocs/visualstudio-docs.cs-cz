@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fe890d5a2c88ea9d4d35a6bd01f6012d97e6ce0
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d5c4e8f39ff77779985536e53d98ddc2785b109b
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72735552"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911494"
 ---
 # <a name="graphics-event-list"></a>Seznam událostí grafiky
 Pomocí seznamu událostí grafiky v Analyzátor grafiky sady Visual Studio můžete prozkoumat události Direct3D, které byly zaznamenány při vykreslování snímku vaší hry nebo aplikace.
@@ -88,18 +88,18 @@ Pomocí seznamu událostí grafiky v Analyzátor grafiky sady Visual Studio mů�
 ### <a name="user-defined-events-in-direct3d-11-and-earlier"></a>Uživatelem definované události v Direct3D 11 a starších verzích
  Chcete-li vytvořit skupiny a značky v Direct3D 11 nebo starších, použijte rozhraní API popsaná v této části. Následující tabulka shrnuje rozhraní API, která můžete použít pro různé verze Direct3D 11 a starších verzí rozhraní Direct3D.
 
-|Popis rozhraní API|[ID3D11DeviceContext2](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) (Direct3D 11,2)|[ID3DUserDefinedAnnotation](http://go.microsoft.com/fwlink/p/?LinkID=250967) (Direct3D 11,1)|D3DPerf_ API Family (Direct3D 11,0 a starší)|
+|Popis rozhraní API|[ID3D11DeviceContext2](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) (Direct3D 11,2)|[ID3DUserDefinedAnnotation](/windows/win32/api/d3d11_1/nn-d3d11_1-id3duserdefinedannotation) (Direct3D 11,1)|D3DPerf_ API Family (Direct3D 11,0 a starší)|
 |---------------------| - | - | - |
 |Zahájení skupiny událostí|`BeginEventInt`|`BeginEvent`|`D3DPerf_BeginEvent`|
 |Ukončení skupiny událostí|`EndEventInt`|`EndEvent`|`D3DPerf_EndEvent`|
 |Vytvoření značky události|`SetMarkerInt`|`SetMarker`|`D3DPerf_SetMarker`|
 
- Můžete použít kterékoli z těchto rozhraní API, které podporuje vaše verze technologie Direct3D – například pokud cílíte na rozhraní Direct3D 11,1 API, můžete k vytvoření značky události použít buď `SetMarker`, nebo `D3DPerf_SetMarker`, ale ne `SetMarkerInt`, protože jsou dostupné jenom v Direct3D 11.2 – a můžete dokonce i m. IX ty, které podporují různé verze Direct3D společně ve stejné aplikaci.
+ Můžete použít kterékoli z těchto rozhraní API, které podporuje vaše verze Direct3D – například pokud cílíte na rozhraní Direct3D 11,1 API, můžete k vytvoření značky události použít buď `SetMarker`, nebo `D3DPerf_SetMarker`, ale ne `SetMarkerInt`, protože je dostupná jenom v Direct3D 11.2 – a můžete dokonce i kombinace těch, které podporují různé verze Direct3D společně ve stejné aplikaci.
 
 <!-- VERSIONLESS -->
 <a name="resource-history"></a>
 ## <a name="resource-history"></a>Historie prostředků
-Visual Studio 2017 a vyšší obsahuje okno **historie prostředků** .  Když vyberete ikonu kukátka ![watch ](media/gfx_watch.png) vedle položky v okně **seznam událostí** , zobrazí se okno **historie prostředků** zobrazené níže:
+Visual Studio 2017 a vyšší obsahuje okno **historie prostředků** .  Když vyberete ikonu kukátka ![Watch ikona](media/gfx_watch.png) vedle položky v okně **seznam událostí** , zobrazí se okno **historie prostředků** zobrazené níže:
 
 ![Historie prostředků](media/gfx_diag_resource_history.png)
 
@@ -109,7 +109,7 @@ Toto okno umožňuje zobrazit historii vybrané položky v seznamu událostí.  
 |-----------| - |
 | **Textový** | Zobrazuje typ položky, obvykle *vytvořit*, *číst* a *zapisovat*. |
 | **Zobrazení** | Zobrazuje miniaturu prostředku v daném časovém okamžiku.  Dvojitým kliknutím na miniaturu otevřete v daném čase zobrazení podrobností o prostředku. |
-| **Event** | Zobrazuje volání metody, ke kterým došlo, která vygenerovala událost.  Jakoukoli další historii jednotlivých položek lze zobrazit výběrem ikony kukátka ![watch ikony ](media/gfx_watch.png) na příslušném řádku.  Pro další podrobnosti je také možné vybrat jakoukoli položku, která je vykreslena modře text, například `m_commandList` na snímku obrazovky. |
+| **Event** | Zobrazuje volání metody, ke kterým došlo, která vygenerovala událost.  Jakoukoli další historii jednotlivých položek si můžete zobrazit tak, že na příslušném řádku vyberete ikonu kukátka ![ikona kukátka](media/gfx_watch.png).  Pro další podrobnosti je také možné vybrat jakoukoli položku, která je vykreslena modře text, například `m_commandList` na snímku obrazovky. |
 
 <!-- /VERSIONLESS -->
 

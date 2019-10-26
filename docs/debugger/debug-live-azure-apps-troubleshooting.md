@@ -1,5 +1,5 @@
 ---
-title: Řešení potíží při ladění snímků | Dokumentace Microsoftu
+title: Řešení potíží s laděním snímků | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2019
 ms.topic: troubleshooting
@@ -11,18 +11,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 27df4c097d829a4d28a77b9b1ad96eb389f4096c
-ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
+ms.openlocfilehash: dc0d5ce27c3241b89a1baaf540cab4f1f56d24b5
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71962930"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911601"
 ---
-# <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Řešení potíží a známé problémy pro ladění snímků v sadě Visual Studio
+# <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Řešení potíží a známé problémy pro ladění snímků v aplikaci Visual Studio
 
-Pokud kroky popsané v tomto článku problém nevyřeší, vyhledejte problém v [komunitě vývojářů](https://developercommunity.visualstudio.com/spaces/8/index.html) nebo nahlásit nový problém výběrem možnosti **help** > **Odeslat názor** > **ohlásit problém** v aplikaci Visual Studio.
+Pokud kroky popsané v tomto článku problém nevyřeší, vyhledejte problém v [komunitě vývojářů](https://developercommunity.visualstudio.com/spaces/8/index.html) nebo nahlásit nový problém výběrem možnosti **help** > **Odeslat názor** > **nahlásit problém** v aplikaci Visual Studio.
 
-## <a name="issue-attach-snapshot-debugger-encounters-an-http-status-code-error"></a>Problém: Při "připojení Snapshot Debugger" dojde k chybě stavového kódu HTTP
+## <a name="issue-attach-snapshot-debugger-encounters-an-http-status-code-error"></a>Problém: "připojit Snapshot Debugger" narazí na chybu stavového kódu HTTP
 
 Pokud se v okně **výstup** zobrazí následující chyba během pokusu o připojení, může se jednat o známý problém uvedený níže. Vyzkoušejte navrhovaná řešení a Pokud potíže přetrvávají, obraťte se na předchozí alias.
 
@@ -34,7 +34,7 @@ Tato chyba označuje, že volání REST vydané aplikací Visual Studio do Azure
 
 Proveďte tyto kroky:
 
-* Ujistěte se, že váš účet přizpůsobení sady Visual Studio má oprávnění k předplatnému Azure a prostředku, ke kterému se připojujete. Rychlý způsob, jak to zjistit, je ověřit, jestli je prostředek k dispozici v dialogovém okně z **ladění** > **připojit Snapshot Debugger...**  > **prostředek Azure** > **Vyberte existující**nebo v Průzkumníku cloudu.
+* Ujistěte se, že váš účet přizpůsobení sady Visual Studio má oprávnění k předplatnému Azure a prostředku, ke kterému se připojujete. Rychlý způsob, jak to zjistit, je ověřit, jestli je prostředek k dispozici v dialogovém okně **ladění** > **připojit Snapshot Debugger...**  > **prostředek Azure** > **Vyberte existující**nebo v Průzkumníku cloudu.
 * Pokud tato chyba nadále zůstává zachována, použijte jeden z kanálů zpětné vazby popsaných na začátku tohoto článku.
 
 ### <a name="403-forbidden"></a>(403) zakázáno
@@ -43,7 +43,7 @@ Tato chyba označuje, že oprávnění bylo odepřeno. To může být způsobeno
 
 Proveďte tyto kroky:
 
-* Ověřte, že váš účet sady Visual Studio má platné předplatné Azure s potřebnými oprávněními pro Access Control na základě rolí (RBAC) pro daný prostředek. V případě AppService se podívejte, jestli máte oprávnění k [dotazování](https://docs.microsoft.com/rest/api/appservice/appserviceplans/get) plánu App Service hostování vaší aplikace.
+* Ověřte, že váš účet sady Visual Studio má platné předplatné Azure s potřebnými oprávněními pro Access Control na základě rolí (RBAC) pro daný prostředek. V případě AppService se podívejte, jestli máte oprávnění k [dotazování](/rest/api/appservice/appserviceplans/get) plánu App Service hostování vaší aplikace.
 * Ověřte, zda je časové razítko klientského počítače správné a aktuální. Servery s časovými razítky od více než 15 minut v časovém razítku požadavku obvykle vyvolávají tuto chybu.
 * Pokud tato chyba nadále zůstává zachována, použijte jeden z kanálů zpětné vazby popsaných na začátku tohoto článku.
 
@@ -54,8 +54,8 @@ Tato chyba označuje, že web nebyl na serveru nalezen.
 Proveďte tyto kroky:
 
 * Ověřte, že je web nasazený a spuštěný na prostředku App Service, ke kterému se připojujete.
-* Ověřte, že je web k dispozici na adrese https://@no__t -0resource\>.azurewebsites.net
-* Ověřte, že vaše správně běžící vlastní webová aplikace nevrátí stavový kód 404 při použití https://@no__t -0resource\>.azurewebsites.net
+* Ověřte, že je web k dispozici na adrese https://\<prostředek\>. azurewebsites.net
+* Ověřte, že vaše správně běžící vlastní webová aplikace nevrátí stavový kód 404, když se k němu přistupoval v https://\<prostředku\>. azurewebsites.net
 * Pokud tato chyba nadále zůstává zachována, použijte jeden z kanálů zpětné vazby popsaných na začátku tohoto článku.
 
 ### <a name="406-not-acceptable"></a>(406) nepřijatelný
@@ -64,7 +64,7 @@ Tato chyba značí, že server nemůže reagovat na sadu typů v hlavičce Accep
 
 Proveďte tyto kroky:
 
-* Ověřte, že je web k dispozici na adrese https://@no__t -0resource\>.azurewebsites.net
+* Ověřte, že je web k dispozici na adrese https://\<prostředku\>. azurewebsites.net
 * Ověřte, že se váš web nemigruje na nové instance. Snapshot Debugger používá pojem ARRAffinity pro směrování požadavků na konkrétní instance, které mohou tuto chybu způsobit občas.
 * Pokud tato chyba nadále zůstává zachována, použijte jeden z kanálů zpětné vazby popsaných na začátku tohoto článku.
 
@@ -88,7 +88,7 @@ Proveďte tyto kroky:
 
 ### <a name="500-internal-server-error"></a>(500) vnitřní chyba serveru
 
-Tato chyba označuje, že lokalita je zcela mimo provoz, nebo Server nemůže zpracovat žádost. Snapshot Debugger pouze funkce spuštěné aplikace. [Application Insights Snapshot Debugger](https://docs.microsoft.com/azure/azure-monitor/app/snapshot-debugger) poskytuje snapshotting na výjimky a může to být nejlepší nástroj podle vašich potřeb.
+Tato chyba označuje, že lokalita je zcela mimo provoz, nebo Server nemůže zpracovat žádost. Snapshot Debugger pouze funkce spuštěné aplikace. [Application Insights Snapshot Debugger](/azure/azure-monitor/app/snapshot-debugger) poskytuje snapshotting na výjimky a může to být nejlepší nástroj podle vašich potřeb.
 
 ### <a name="502-bad-gateway"></a>(502) chybná brána
 
@@ -99,39 +99,39 @@ Proveďte tyto kroky:
 * Před opětovným připojením Snapshot Debugger Zkuste počkat několik minut.
 * Pokud tato chyba nadále zůstává zachována, použijte jeden z kanálů zpětné vazby popsaných na začátku tohoto článku.
 
-## <a name="issue-snappoint-does-not-turn-on"></a>Problém: Snímkovací bod se nezapíná
+## <a name="issue-snappoint-does-not-turn-on"></a>Problém: snímkovací bod se nezapne
 
-Pokud se zobrazí výstražná ikona ![snímkovací bod výstražná ikona](../debugger/media/snapshot-troubleshooting-snappoint-warning-icon.png "snímkovací bod výstražná ikona") s vaší snímkovacích bodů namísto ikonu regulární snímkovací bod, pak snímkovací bod není zapnuté.
+Pokud se zobrazí výstražná ikona ![snímkovací bod výstražná ikona](../debugger/media/snapshot-troubleshooting-snappoint-warning-icon.png "Ikona upozornění snímkovací bod") se svým snímkovací bod namísto normální ikony snímkovací bod, není tato snímkovací bod zapnutá.
 
-![Snímkovací bod nezapne](../debugger/media/snapshot-troubleshooting-dont-turn-on.png "snímkovací bod nezapne")
-
-Proveďte tyto kroky:
-
-1. Ujistěte se, že máte stejnou verzi zdrojového kódu, která se použila k sestavení a nasazení vaší aplikace. Ujistěte se, že se načítají správné symbolů pro vaše nasazení. Pokud chcete to provést, podívejte se **moduly** okno při ladění snímků a ověřit soubor symbolů sloupci zobrazí soubor .pdb načtené pro modul, který ladíte. Snapshot Debugger se pokusí automaticky stáhnout a použít symbolů pro vaše nasazení.
-
-## <a name="issue-symbols-do-not-load-when-i-open-a-snapshot"></a>Problém: Po otevření snímku se symboly nenačte
-
-Pokud se zobrazí následující okno, symboly se nenačetl.
-
-![Symboly se nenačtou](../debugger/media/snapshot-troubleshooting-symbols-wont-load.png "symboly nenačtou.")
+![Snímkovací bod se nezapíná](../debugger/media/snapshot-troubleshooting-dont-turn-on.png "Snímkovací bod se nezapíná")
 
 Proveďte tyto kroky:
 
-- Klikněte na tlačítko **změnit nastavení symbolů...** odkaz na této stránce. V **ladění > symboly** nastavení, přidejte adresář mezipaměti symbolů. Restartujte ladění snímků po nastavení cesty k symbolu.
+1. Ujistěte se, že máte stejnou verzi zdrojového kódu, která se použila k sestavení a nasazení vaší aplikace. Ujistěte se, že načítáte správné symboly pro vaše nasazení. Provedete to tak, že zobrazíte okno **moduly** při ladění snímku a ověříte, že sloupec soubor symbolů zobrazuje soubor. pdb načtený pro modul, který ladíte. Snapshot Debugger se pokusí automaticky stáhnout a používat symboly pro vaše nasazení.
 
-   Nasazení služby App Service musí odpovídat symboly nebo soubory PDB, k dispozici ve vašem projektu. Většině nasazeních (nasazení prostřednictvím sady Visual Studio, CI/CD s kanály Azure nebo Kudu, atd.) budou soubory symbolů podél publikovat do služby App Service. Adresář mezipaměti symbolů nastavení umožní sadě Visual Studio používat tyto symboly.
+## <a name="issue-symbols-do-not-load-when-i-open-a-snapshot"></a>Problém: symboly se při otevření snímku nenačte
 
-   ![Symbol nastavení](../debugger/media/snapshot-troubleshooting-symbol-settings.png "Symbol nastavení")
+Pokud se zobrazí následující okno, symboly se nenačte.
 
-- Případně pokud vaše organizace používá server symbolů nebo sníží symboly v jinou cestu, použijte nastavení symbolu načtení správné symbolů pro vaše nasazení.
-
-## <a name="issue-i-cannot-see-the-attach-snapshot-debugger-option-in-the-cloud-explorer"></a>Problém: V Průzkumníkovi cloudu nejde zobrazit možnost připojit Snapshot Debugger
+![Symboly se nečtou](../debugger/media/snapshot-troubleshooting-symbols-wont-load.png "Symboly se nečtou")
 
 Proveďte tyto kroky:
 
-- Ujistěte se, že je nainstalovaná komponenta Snapshot Debugger. Otevřete instalační program sady Visual Studio a zkontrolujte **Snapshot Debugger** komponenta v úloze Azure.
+- Klikněte na tlačítko **změnit nastavení symbolu...** odkaz na tuto stránku. V nastavení **ladění > symbol** Přidejte adresář mezipaměti symbolů. Po nastavení cesty k symbolu restartujte ladění snímků.
+
+   Symboly nebo soubory. pdb, které jsou k dispozici ve vašem projektu, se musí shodovat s vaším nasazením App Service. Většina nasazení (nasazení prostřednictvím sady Visual Studio, CI/CD s Azure Pipelines nebo Kudu atd.) publikuje soubory symbolů spolu s App Service. Nastavení adresáře mezipaměti symbolů umožní aplikaci Visual Studio používat tyto symboly.
+
+   ![Nastavení symbolu](../debugger/media/snapshot-troubleshooting-symbol-settings.png "Nastavení symbolu")
+
+- Případně, pokud vaše organizace používá symbolový server nebo zahodí symboly v jiné cestě, použijte nastavení symbolu pro načtení správných symbolů pro vaše nasazení.
+
+## <a name="issue-i-cannot-see-the-attach-snapshot-debugger-option-in-the-cloud-explorer"></a>Problém: v Průzkumníkovi cloudu nejde zobrazit možnost připojit Snapshot Debugger
+
+Proveďte tyto kroky:
+
+- Ujistěte se, že je nainstalovaná součást Snapshot Debugger. Otevřete Instalační program pro Visual Studio a podívejte se na součást **Snapshot Debugger** v rámci úlohy Azure.
 ::: moniker range="< vs-2019"
-- Zajistěte, aby že vaše aplikace je podporovaná. V současné době pouze technologie ASP.NET (4.6.1+) a podporují aplikace ASP.NET Core (2.0 +) nasazené do služby Azure App Services.
+- Ujistěte se, že je vaše aplikace podporovaná. V současné době jsou podporovány pouze aplikace ASP.NET (4.6.1 +) a ASP.NET Core (2.0 +) nasazené do Azure App Services.
 ::: moniker-end
 ::: moniker range=">= vs-2019"
 - Ujistěte se, že je vaše aplikace podporovaná:
@@ -144,24 +144,24 @@ Proveďte tyto kroky:
   - Služby Azure Kubernetes Services – ASP.NET Core aplikace běžící na .NET Core 2,2 nebo novější v Ubuntu 18,04.
 ::: moniker-end
 
-## <a name="issue-i-only-see-throttled-snapshots-in-the-diagnostic-tools"></a>Problém: V Diagnostické nástroje se zobrazují jenom omezené snímky
+## <a name="issue-i-only-see-throttled-snapshots-in-the-diagnostic-tools"></a>Problém: v Diagnostické nástroje se zobrazují pouze omezené snímky
 
-![Omezený snímkovací bod](../debugger/media/snapshot-troubleshooting-throttled-snapshots.png "omezený snímkovací bod")
+![Omezení snímkovací bod](../debugger/media/snapshot-troubleshooting-throttled-snapshots.png "Omezení snímkovací bod")
 
 Proveďte tyto kroky:
 
-- Snímky spotřebovávat málo paměti, ale máte poplatek za potvrzení. Pokud ladicí program snímků zjistí, že je server v paměti v případě velkého zatížení, nepořizuje snímky. Zastavuje se relace ladicího programu snímků a zkusit to znovu, můžete odstranit již zachycené snímky.
+- Snímky zabírají málo paměti, ale mají poplatek za potvrzení. Pokud Snapshot Debugger zjistí, že je váš server v paměti zatížený, nepřejde na snímky. Již zachycené snímky můžete odstranit zastavením Snapshot Debugger relace a opětovným pokusem.
 
 ::: moniker range=">= vs-2019"
-## <a name="issue-snapshot-debugging-with-multiple-versions-of-the-visual-studio-gives-me-errors"></a>Problém: Ladění snímků pomocí více verzí sady Visual Studio obsahuje chyby
+## <a name="issue-snapshot-debugging-with-multiple-versions-of-the-visual-studio-gives-me-errors"></a>Problém: ladění snímků pomocí více verzí sady Visual Studio obsahuje chyby
 
 Visual Studio 2019 vyžaduje pro Azure App Service novější verzi rozšíření Snapshot Debugger webu.  Tato verze není kompatibilní se starší verzí rozšíření Snapshot Debugger webového serveru, kterou používá Visual Studio 2017.  Tato chyba se zobrazí, pokud se pokusíte připojit Snapshot Debugger v aplikaci Visual Studio 2019 k Azure App Service, která byla dříve Laděna Snapshot Debugger v aplikaci Visual Studio 2017:
 
-![Nekompatibilní Snapshot Debugger rozšíření webu Visual studio 2019](../debugger/media/snapshot-troubleshooting-incompatible-vs2019.png "nekompatibilní Snapshot Debugger rozšíření webu Visual Studio 2019")
+![Nekompatibilní rozšíření Snapshot Debugger webu Visual Studio 2019](../debugger/media/snapshot-troubleshooting-incompatible-vs2019.png "Nekompatibilní rozšíření Snapshot Debugger webu Visual Studio 2019")
 
 Naopak, pokud použijete Visual Studio 2017 k připojení Snapshot Debugger k Azure App Service, která byla dříve Laděna Snapshot Debugger v aplikaci Visual Studio 2019, zobrazí se následující chyba:
 
-![Nekompatibilní Snapshot Debugger rozšíření webu Visual studio 2017](../debugger/media/snapshot-troubleshooting-incompatible-vs2017.png "nekompatibilní Snapshot Debugger rozšíření webu Visual Studio 2017")
+![Nekompatibilní rozšíření Snapshot Debugger webu Visual Studio 2017](../debugger/media/snapshot-troubleshooting-incompatible-vs2017.png "Nekompatibilní rozšíření Snapshot Debugger webu Visual Studio 2017")
 
 Pokud to chcete opravit, odstraňte v Azure Portal následující nastavení aplikace a připojte Snapshot Debugger znovu:
 
@@ -169,7 +169,7 @@ Pokud to chcete opravit, odstraňte v Azure Portal následující nastavení apl
 - SNAPSHOTDEBUGGER_EXTENSION_VERSION
 ::: moniker-end
 
-## <a name="issue-i-am-having-problems-snapshot-debugging-and-i-need-to-enable-more-logging"></a>Problém: Mám potíže s laděním snímků a potřebuji povolit další protokolování
+## <a name="issue-i-am-having-problems-snapshot-debugging-and-i-need-to-enable-more-logging"></a>Problém: Mám problémy s laděním snímků a potřebuji povolit další protokolování.
 
 ### <a name="enable-agent-logs"></a>Povolit protokoly agentů
 
@@ -179,9 +179,9 @@ Protokoly agentů najdete v následujících umístěních:
 
 - App Services:
   - Přejděte na web Kudu vašeho App Service (to znamená yourappservice. **SCM**. azurewebsites.NET) a přejděte na konzolu ladění.
-  - Protokoly agentů jsou uloženy v následujícím adresáři:  D:\home\LogFiles\SiteExtensions\DiagnosticsAgentLogs\
-- VM/VMSS:
-  - Přihlaste se k VIRTUÁLNÍmu počítači a protokoly agentů se ukládají takto:  C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Diagnostics.IaaSDiagnostics\<Version>\SnapshotDebuggerAgent_*.txt
+  - Protokoly agentů jsou uloženy v následujícím adresáři: D:\home\LogFiles\SiteExtensions\DiagnosticsAgentLogs\
+- VIRTUÁLNÍ POČÍTAČ/VMSS:
+  - Přihlaste se k VIRTUÁLNÍmu počítači a protokoly agentů se ukládají takto: C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Diagnostics.IaaSDiagnostics\<verze > \SnapshotDebuggerAgent_ *. txt
 - AKS
   - Přejděte do následujícího adresáře:/tmp/diag/AgentLogs/*
 
@@ -190,10 +190,10 @@ Protokoly agentů najdete v následujících umístěních:
 Protokoly instrumentace najdete v následujících umístěních:
 
 - App Services:
-  - Protokolování chyb je automaticky odesláno do D:\Home\LogFiles\eventlog.xml, události jsou označeny `<Provider Name="Instrumentation Engine" />` nebo "produkčními zarážkami".
-- VM/VMSS:
+  - Protokolování chyb je automaticky odesláno do D:\Home\LogFiles\eventlog.xml, události jsou označeny `<Provider Name="Instrumentation Engine" />` nebo "produkční zarážky".
+- VIRTUÁLNÍ POČÍTAČ/VMSS:
   - Přihlaste se ke svému VIRTUÁLNÍmu počítači a otevřete Prohlížeč událostí.
-  - Otevřete následující zobrazení: *Protokoly Windows > aplikaci*.
+  - Otevřete následující zobrazení: *protokoly Windows > aplikaci*.
   - *Filtrovat aktuální protokol* podle *zdroje událostí* pomocí *zarážek v produkčním* prostředí nebo *modulu instrumentace*.
 - AKS
   - Protokolování modulu instrumentace na/TMP/diag/log.txt (nastavení MicrosoftInstrumentationEngine_FileLogPath v souboru Dockerfile)
@@ -201,27 +201,27 @@ Protokoly instrumentace najdete v následujících umístěních:
 
 ## <a name="known-issues"></a>Známé problémy
 
-- Ladění snímků s více klienty sady Visual Studio na stejné služby App Service se momentálně nepodporuje.
-- Optimalizace Roslyn IL nejsou plně podporovány v projektech ASP.NET Core. Pro některé projekty ASP.NET Core nebudete moci zobrazit některé proměnné nebo použití proměnných podmíněné příkazy.
-- Speciální proměnné, jako například *$FUNCTION* nebo *$CALLER*, nelze vyhodnotit v podmíněné příkazy nebo protokolovací body pro projekty ASP.NET Core.
-- Ladění snímků nefunguje v App Service, které mají [místní ukládání do mezipaměti](/azure/app-service/app-service-local-cache) zapnuté.
-- Snímek ladění aplikace API se momentálně nepodporuje.
+- Ladění snímků s více klienty sady Visual Studio proti stejnému App Service není v současné době podporováno.
+- Optimalizace Roslyn IL nejsou v ASP.NET Corech projektech plně podporované. U některých ASP.NET Core projektů možná nebudete moci zobrazit některé proměnné nebo použít některé proměnné v podmíněných příkazech.
+- Speciální proměnné, jako například *$Function* nebo *$Caller*, nelze vyhodnotit v podmíněných příkazech nebo protokolovacích bodů pro projekty ASP.NET Core.
+- Ladění snímků nefunguje na App Services, která má zapnuté [místní ukládání do mezipaměti](/azure/app-service/app-service-local-cache) .
+- API Apps ladění snímků se momentálně nepodporuje.
 
 ## <a name="site-extension-upgrade"></a>Upgrade rozšíření webu
 
-Ladění snímků a Application Insights závisí na ICorProfiler, který načte do procesu lokality a způsobí, že soubor zamykání problémy při upgradu. Doporučujeme, abyste tento postup Ujistěte se, že neexistuje žádný dolů čas na produkční lokality.
+Ladění a Application Insights snímků závisí na ICorProfiler, který se načte do procesu lokality a způsobuje během upgradu problémy s uzamykáním souborů. Tento proces doporučujeme, abyste zajistili, že váš provozní web nebude mít čas mimo provoz.
 
-- Vytvoření [Slot nasazení](/azure/app-service/web-sites-staged-publishing) ve službě App Service a nasaďte svůj web do slotu.
-- Prohodit s produkčním slotu z Průzkumníku cloudu v sadě Visual Studio nebo z webu Azure portal.
-- Zastavte Slot webu. Bude to trvat několik sekund ukončit vypnutí procesu w3wp.exe lokality ze všech instancí.
-- Upgrade rozšíření webu slotu z webu kudu nebo na webu Azure portal (*okno App Service > vývojářské nástroje > Rozšíření > aktualizace*).
-- Spusťte Slot webu. Doporučujeme navštívit web znovu zahřívání.
-- Přepnout Slot s produkčním prostředí.
+- Vytvořte ve svém App Service [slot nasazení](/azure/app-service/web-sites-staged-publishing) a nasaďte svůj web do slotu.
+- V aplikaci Visual Studio nebo z Azure Portal Proměňte slot s produkčním prostředím z Průzkumníka cloudu.
+- Zastavte lokalitu slotu. Ukončení procesu W3wp. exe lokality ze všech instancí bude trvat několik sekund.
+- Upgradujte rozšíření lokality slotu z webu Kudu nebo z Azure Portal (*App Service okno > vývojové nástroje > rozšíření > aktualizace*).
+- Spusťte lokalitu slotu. Doporučujeme, abyste web navštívili znovu.
+- Zaměňte slot v produkčním prostředí.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
-- [Ladění živé aplikace v ASP.NET pomocí ladicího programu snímků](../debugger/debug-live-azure-applications.md)
+- [Ladění živých aplikací ASP.NET pomocí Snapshot Debugger](../debugger/debug-live-azure-applications.md)
 - [Ladění živých ASP.NET počítačů Azure Virtual Machines\Virtual pro škálování pomocí Snapshot Debugger](../debugger/debug-live-azure-virtual-machines.md)
 - [Ladění Live ASP.NET Azure Kubernetes pomocí Snapshot Debugger](../debugger/debug-live-azure-kubernetes.md)
 - [Nejčastější dotazy k ladění snímků](../debugger/debug-live-azure-apps-faq.md)

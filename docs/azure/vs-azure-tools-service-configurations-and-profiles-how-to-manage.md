@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/11/2017
 ms.author: ghogen
-ms.openlocfilehash: b91e2df31ae0e188d0d1e0e3076ab410bf8c2296
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 55fc29117b1b01bd6c9b214d1db111af72127871
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919837"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911689"
 ---
 # <a name="how-to-manage-service-configurations-and-profiles"></a>Postup správy konfigurací a profilů služby
 ## <a name="overview"></a>Přehled
@@ -56,12 +56,12 @@ Můžete také otevřít dialogové okno **Správa konfigurací** ze stránek vl
     Název konfiguračního souboru služby se v projektu Azure v Průzkumník řešení změnil.
 
 ### <a name="to-change-a-service-configuration"></a>Změna konfigurace služby
-* Pokud chcete změnit konfiguraci služby, otevřete místní nabídku pro konkrétní roli, kterou chcete změnit v projektu Azure, a pak vyberte **vlastnosti**. Viz [jak: Další informace najdete v části Konfigurace rolí pro cloudovou službu](vs-azure-tools-configure-roles-for-cloud-service.md) Azure pomocí sady Visual Studio.
+* Pokud chcete změnit konfiguraci služby, otevřete místní nabídku pro konkrétní roli, kterou chcete změnit v projektu Azure, a pak vyberte **vlastnosti**. Další informace najdete v tématu [How to: Configure a role pro cloudovou službu Azure pomocí sady Visual Studio](vs-azure-tools-configure-roles-for-cloud-service.md) .
 
 ## <a name="make-different-setting-combinations-by-using-profiles"></a>Vytváření různých kombinací nastavení pomocí profilů
 Pomocí profilu můžete automaticky vyplnit **Průvodce publikováním** s různými kombinacemi nastavení pro různé účely. Můžete mít například jeden profil pro ladění a další pro sestavení vydaných verzí. V takovém případě váš **ladicí** profil by měl povolený **IntelliTrace** a vybraná konfigurace **ladění** a váš profil **verze** by **IntelliTrace** byl zakázán a konfigurace **vydání** Vyberte. K nasazení služby pomocí jiného účtu úložiště můžete použít také jiné profily.
 
-Při prvním spuštění Průvodce se vytvoří výchozí profil. Visual Studio uloží profil do souboru, který má příponu. azurePubXml, která se přidá do vašeho projektu Azure ve složce Profiles . Pokud ručně zadáte různé volby při spuštění Průvodce později, soubor se automaticky aktualizuje. Než spustíte následující postup, měli byste už mít cloudovou službu aspoň jednou.
+Při prvním spuštění Průvodce se vytvoří výchozí profil. Visual Studio uloží profil do souboru, který má příponu. azurePubXml, která se přidá do vašeho projektu Azure ve složce **Profiles** . Pokud ručně zadáte různé volby při spuštění Průvodce později, soubor se automaticky aktualizuje. Než spustíte následující postup, měli byste už mít cloudovou službu aspoň jednou.
 
 ### <a name="to-add-a-profile"></a>Přidání profilu
 1. Otevřete místní nabídku pro projekt Azure a pak vyberte **publikovat**.
@@ -78,7 +78,7 @@ Při prvním spuštění Průvodce se vytvoří výchozí profil. Visual Studio 
 
     Nový profil se zobrazí v seznamu cílový profil.
 6. V seznamu **cílový profil** vyberte profil, který jste právě vytvořili. Nastavení Průvodce publikováním se vyplní možnostmi z profilu, který jste vybrali.
-7. Výběrem tlačítek **předchozí** a **Další** Zobrazte jednotlivé stránky průvodce publikováním a potom Přizpůsobte nastavení pro tento profil. Informace najdete v tématu [Průvodce publikováním aplikace Azure](http://go.microsoft.com/fwlink/p/?LinkID=623085) .
+7. Výběrem tlačítek **předchozí** a **Další** Zobrazte jednotlivé stránky průvodce publikováním a potom Přizpůsobte nastavení pro tento profil. Informace najdete v tématu [Průvodce publikováním aplikace Azure](vs-azure-tools-publish-azure-application-wizard.md) .
 8. Po dokončení přizpůsobení nastavení vyberte **Další** a vraťte se na stránku nastavení. Profil se uloží při publikování služby pomocí těchto nastavení nebo v případě, že vyberete možnost **Uložit** vedle seznamu profilů.
 
 ### <a name="to-rename-or-delete-a-profile"></a>Přejmenování nebo odstranění profilu
@@ -91,9 +91,9 @@ Při prvním spuštění Průvodce se vytvoří výchozí profil. Visual Studio 
 ### <a name="to-change-a-profile"></a>Změna profilu
 1. Otevřete místní nabídku pro projekt Azure a pak vyberte **publikovat**.
 2. V seznamu **cílový profil** vyberte profil, který chcete změnit.
-3. Výběrem tlačítek **předchozí** a **Další** Zobrazte jednotlivé stránky průvodce publikováním a pak změňte požadovaná nastavení. Informace najdete v tématu [Průvodce publikováním aplikace Azure](http://go.microsoft.com/fwlink/p/?LinkID=623085) .
+3. Výběrem tlačítek **předchozí** a **Další** Zobrazte jednotlivé stránky průvodce publikováním a pak změňte požadovaná nastavení. Informace najdete v tématu [Průvodce publikováním aplikace Azure](vs-azure-tools-publish-azure-application-wizard.md) .
 4. Po dokončení změny nastavení vyberte **Další** a vraťte se na stránku **Nastavení** .
 5. (Volitelné) vyberte **publikovat** a publikujte cloudovou službu pomocí nového nastavení. Pokud nechcete momentálně publikovat cloudovou službu a zavřete Průvodce publikováním, zobrazí se v aplikaci Visual Studio, jestli chcete změny profilu Uložit.
 
-## <a name="next-steps"></a>Další postup
-Další informace o konfiguraci dalších částí projektu Azure ze sady Visual Studio najdete v tématu [konfigurace projektu Azure](http://go.microsoft.com/fwlink/p/?LinkID=623075).
+## <a name="next-steps"></a>Další kroky
+Další informace o konfiguraci dalších částí projektu Azure ze sady Visual Studio najdete v tématu [konfigurace projektu Azure](vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address.md).

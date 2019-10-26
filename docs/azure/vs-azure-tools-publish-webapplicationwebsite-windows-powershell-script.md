@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: e1085d13612cefee370aeac5fe67c7ddd2af8bae
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: c5eff35247c85783659f66b13d03c3a5f781df07
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919787"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911761"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite (skript Windows PowerShellu)
 ## <a name="syntax"></a>Syntaxe
@@ -30,7 +30,7 @@ Publish-WebApplicationWebSite
 -Verbose
 ```
 
-## <a name="configuration"></a>Konfiguraci
+## <a name="configuration"></a>Konfigurace
 Cesta ke konfiguračnímu souboru JSON, který popisuje podrobnosti nasazení.
 
 | Parametr | Výchozí hodnota |
@@ -55,7 +55,7 @@ Název předplatného Azure, ve kterém chcete vytvořit web.
 | Přijmout zástupné znaky? |false |
 
 ## <a name="webdeploypackage"></a>WebDeployPackage
-Cesta k balíčku pro nasazení webu, který má být publikován na webu. Tento balíček můžete vytvořit pomocí Průvodce publikováním webu v aplikaci Visual Studio. Další informace najdete v tématu [Začínáme s Azure Cloud Services a ASP.NET](http://go.microsoft.com/fwlink/p/?LinkID=623089).
+Cesta k balíčku pro nasazení webu, který má být publikován na webu. Tento balíček můžete vytvořit pomocí Průvodce publikováním webu v aplikaci Visual Studio. Další informace najdete v tématu [Začínáme s Azure Cloud Services a ASP.NET](vs-azure-tools-publish-webapplicationwebsite-windows-powershell-script.md).
 
 | Parametr | Výchozí hodnota |
 | --- | --- |
@@ -121,5 +121,5 @@ Konfigurační soubor JSON určuje podrobnosti o tom, co má být nasazeno. Obsa
 
 Můžete upravit konfigurační soubor JSON pro změnu toho, co je nasazeno. Oddíl webu je povinný, ale oddíl databáze je nepovinný.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 Další informace najdete v tématu [Publishing-WebApplicationVM (skript prostředí Windows PowerShell)](vs-azure-tools-publish-webapplicationvm.md).

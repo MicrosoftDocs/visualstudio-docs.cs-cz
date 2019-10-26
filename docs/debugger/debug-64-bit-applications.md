@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 849862f98fb90cdd742e1794ecb57c35a9aaca73
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3a805942e85540b776ceacd972a09a71bb80cbb4
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745586"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911588"
 ---
 # <a name="debug-64-bit-applications"></a>Ladění 64bitových aplikací
 Můžete ladit 64 aplikaci, která běží na místním počítači nebo na vzdáleném počítači.
@@ -54,7 +54,7 @@ Můžete ladit 64 aplikaci, která běží na místním počítači nebo na vzd�
 
 ## <a name="see-also"></a>Viz také:
 
-- [64bitové aplikace](https://docs.microsoft.com/dotnet/framework/64-bit-apps)
+- [64bitové aplikace](/dotnet/framework/64-bit-apps)
 - [Konfigurace programů pro 64. bit](/cpp/build/configuring-programs-for-64-bit-visual-cpp)
 - [Podpora pro 64bitové integrované vývojové prostředí sady Visual Studio](../ide/visual-studio-ide-64-bit-support.md)
 - [Použití souborů výpisu paměti](../debugger/using-dump-files.md)

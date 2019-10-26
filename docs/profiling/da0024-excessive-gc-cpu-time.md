@@ -1,5 +1,5 @@
 ---
-title: 'DA0024: Čas procesoru uvolňování paměti nadměrné | Dokumentace Microsoftu'
+title: 'DA0024: Nadměrný čas procesoru GC | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,39 +12,39 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ecd968c5be30e50550fb29a5c44cb7065630a63
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 46dfce74e02faffb90cf5984651968633c27a16d
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442342"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72910610"
 ---
 # <a name="da0024-excessive-gc-cpu-time"></a>DA0024: Nadměrný čas procesoru uvolňování paměti
 
 |||
 |-|-|
-|Id pravidla|DA0024|
-|Kategorie|Použití rozhraní .NET framework|
+|ID pravidla|DA0024|
+|Kategorie|Využití .NET Framework|
 |Metoda profilace|Všechny|
-|Zpráva|% Času v uvolňování paměti je velmi vysoké. Existuje nadměrné množství režie uvolňování paměti.|
+|Zpráva|% Času v uvolňování paměti je velmi vysoké. Existuje nadměrné množství režijních nákladů na uvolňování paměti.|
 |Typ pravidla|Upozornění|
 
- Při profilování pomocí vzorkování, paměti .NET nebo metodám sporu prostředků, musíte shromáždit minimálně 10 vzorky k aktivaci tohoto pravidla.
+ Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit aspoň 10 vzorků.
 
-## <a name="cause"></a>Příčina
- Údaje o výkonu systému, která byla shromážděna během profilování označuje, že množství času stráveného při uvolňování paměti je příliš vysoká ve srovnání s časem zpracování celkový počet aplikací.
+## <a name="cause"></a>příčina
+ Údaje o výkonu systému, které byly shromážděny během profilace, ukazují, že množství času stráveného uvolňováním paměti je příliš vysoké v porovnání s celkovou dobou zpracování aplikace.
 
 ## <a name="rule-description"></a>Popis pravidla
- Rozhraní Microsoft .NET common language runtime (CLR) poskytuje mechanismus správy automatické paměti, která používá systému uvolňování paměti pro uvolnění paměti z objektů, které aplikace se už používá. Uvolňování paměti je orientované na generování založeno na předpokladu, že jsou krátkodobé a jednorázové mnoho přidělení. Lokální proměnné by měl být například krátkodobou. Spustit nově vytvořené objekty v generaci 0 (0. generace) a potom pokroku na generaci 1, pokud se uvolňování paměti spusťte a nakonec přechod do 2. generace zvládnout situaci, kdy aplikace stále používá.
+ Modul CLR (Common Language Runtime) platformy Microsoft .NET poskytuje automatický mechanismus správy paměti, který používá systém uvolňování paměti k uvolnění paměti z objektů, které aplikace již nepoužívá. Systém uvolňování paměti je zaměřený na generaci, a to na základě předpokladu, že mnoho přidělení je krátkodobé. Místní proměnné, například by měly být krátkodobé. Nově vytvořené objekty začínají v generaci 0 (gen 0) a poté budou dokončeny na generaci 1, když přestanou běžet v uvolňování paměti, a nakonec přechod na generaci 2, pokud je aplikace stále používá.
 
- Objekty v generaci 0 se vybírají obvykle velmi efektivně a často. Objekty v 1. generace jsou shromažďovány méně často a méně efektivní. Nakonec dlouhodobými objekty v generaci 2 by měl být shromažďovány i méně často. 2. generace kolekce, která je spuštění úplného uvolňování paměti kolekce, je také nejvíce náročná operace.
+ Objekty v generaci 0 jsou často shromažďovány a obvykle velmi efektivně. Objekty v generaci 1 jsou shromažďovány méně často a méně efektivní. A konečně dlouhodobé objekty v generaci 2 by měly být shromažďovány ještě méně často. Největší náročná operace je shromažďování 2, což je úplné spuštění uvolňování paměti.
 
- Toto pravidlo je vyvoláno, když množství času stráveného při uvolňování paměti je příliš vysoká. ve srovnání s časem zpracování celkový počet aplikací.
+ Toto pravidlo je vyvoláno, když je množství času stráveného uvolňováním paměti příliš vysoké v porovnání s celkovou dobou zpracování aplikace.
 
 > [!NOTE]
-> Když poměr doby trvání uvolňování paměti je důležité, ale ne příliš velké ve srovnání s časem zpracování celkový počet aplikací [DA0023: Vysoký čas procesoru uvolňování paměti](../profiling/da0023-high-gc-cpu-time.md) namísto toto pravidlo aktivuje se upozornění.
+> Pokud je poměr času stráveného uvolňováním paměti značný, ale není nadměrně v porovnání s celkovou dobou zpracování aplikace, [DA0023: vysoký čas procesoru GC](../profiling/da0023-high-gc-cpu-time.md) se místo tohoto pravidla aktivuje.
 
-## <a name="how-to-investigate-a-warning"></a>Zkoumání upozornění
- Dvakrát klikněte na zprávu v okně Seznam chyb, přejděte [zobrazení značky](../profiling/marks-view.md) dat profilování. Najít **paměť .NET CLR\\% času v uvolňování paměti** sloupce. Zjistěte, jestli konkrétní fázích provádění programu kde je těžší než ostatní fáze režie uvolňování paměti spravované paměti. Ohlášení porovnat hodnoty % času v uvolňování paměti hodnota, která se frekvence uvolňování paměti **Počet úklidů 0**, **Počet úklidů 1**, **Počet úklidů 2** hodnoty .
+## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění
+ Dvakrát klikněte na zprávu v okně Seznam chyb, abyste přešli na [zobrazení značek](../profiling/marks-view.md) dat profilování. Vyhledá **paměť .NET CLR\\% času ve SLOUPCI GC** . Určete, zda existují konkrétní fáze provádění programu, kde režie pro uvolňování paměti spravované paměti je těžší než jiné fáze. Porovná hodnoty% času v GC na míru uvolňování paměti hlášené v počtu **kolekcí 0. generace**, **počet kolekcí 1**. generace, počet kolekcí **s hodnotou 2** . generace.
 
- % Času v uvolňování paměti hodnotu pokusí ohlásit množství času, kterou aplikace stráví provádí uvolňování paměti úměrná celkový objem zpracování. Mějte na paměti, že existují okolnosti, kdy % času v uvolňování paměti hodnotu můžete ohlásit na vysokou hodnotu, ale není kvůli nadměrné uvolňování paměti. Další informace o způsobu, jakým se počítá % času v uvolňování paměti hodnotu, najdete v článku [rozdíl mezi výkonu Data hlášených různých nástrojů – 4](http://go.microsoft.com/fwlink/?LinkId=177863) vstupu **Maoni na Weblogu** na webové stránce MSDN. Pokud se vyskytnou chyby stránky nebo aplikace je dojde ke zrušení pomocí jiné vyšší prioritu práce na počítači během uvolňování paměti, projeví se % času v uvolňování paměti čítače tyto další zpoždění.
+ Hodnota% času v GC se pokusí hlásit množství času, který aplikace stráví prováděním uvolňování paměti úměrnou celkovému množství zpracování. Počítejte s tím, že pokud hodnota% času v GC může vykazovat vysokou hodnotu, ale není to kvůli nadměrnému uvolňování paměti. Další informace o tom, jak se počítá hodnota% času v GC, najdete v tématu [rozdíl mezi daty výkonu hlášených různými nástroji – 4](https://devblogs.microsoft.com/maoni/archive/difference-between-perf-data-reported-by-different-tools-4.aspx) vstupem do **blogového blogu Maoni** na webu MSDN. Pokud dojde k chybám stránky nebo je aplikace před uvolňováním paměti přerušené jinou úlohou s vyšší prioritou, bude% času v čítači GC tyto další prodlevy odrážet.

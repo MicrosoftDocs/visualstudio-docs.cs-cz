@@ -1,5 +1,5 @@
 ---
-title: Testování výkonu cloudové služby | Dokumentace Microsoftu
+title: Testování výkonu cloudové služby | Microsoft Docs
 description: Testování výkonu cloudové služby pomocí profileru sady Visual Studio
 author: mikejo5000
 manager: jillfra
@@ -8,103 +8,103 @@ ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
-ms.openlocfilehash: fd436a6b7e38c8f76de5d113c326e194e4011155
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 04e3ee89498447f7743fc1b5119e129f046b4fcc
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62427397"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911783"
 ---
 # <a name="testing-the-performance-of-a-cloud-service"></a>Testování výkonu cloudové služby
 ## <a name="overview"></a>Přehled
-Testování výkonu cloudové služby následujícími způsoby:
+Výkon cloudové služby můžete testovat následujícími způsoby:
 
-* Pomocí diagnostiky Azure shromažďovat informace o požadavcích a připojení a ke kontrole Statistika webu, která ukazuje, jak služba provádí z hlediska zákazníků. Chcete-li začít používat, naleznete v tématu [konfigurace diagnostiky pro Azure Cloud Services a Virtual Machines](http://go.microsoft.com/fwlink/p/?LinkId=623009).
-* Pomocí profileru sady Visual Studio můžete získat podrobné analýzy výpočetní aspektů jak je služba spuštěna. Toto téma popisuje, jak můžete použít profilování k měření výkonu služby běží v Azure. Informace o tom, jak měřit výkon, protože je služba spuštěna místně v emulátoru compute pomocí profileru, naleznete v tématu [testování výkonu Azure Cloud Service místně v výpočetní emulátor pomocí Visual Studio Profiler](http://go.microsoft.com/fwlink/p/?LinkId=262845).
+* Pomocí Azure Diagnostics můžete shromažďovat informace o požadavcích a připojeních a kontrolovat statistiky lokality, které ukazují, jak služba vykonává z perspektivy zákazníka. Informace o tom, jak začít, najdete v tématu [Konfigurace diagnostiky pro Azure Cloud Services a Virtual Machines](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md).
+* Pomocí profileru sady Visual Studio můžete získat podrobnou analýzu výpočetních aspektů, jak se služba spouští. Jak je popsáno v tomto tématu, můžete použít profiler k měření výkonu jako služby běžící v Azure. Informace o tom, jak používat profiler k měření výkonu při místním spouštění služby v emulátoru výpočtů, najdete v tématu [testování výkonu cloudové služby Azure v místním počítači v emulátoru služby COMPUTE pomocí nástroje Visual Studio Profiler](/azure/cloud-services/cloud-services-performance-testing-visual-studio-profiler).
 
-## <a name="choosing-a-performance-testing-method"></a>Volba metody pro testování výkonu
-### <a name="use-azure-diagnostics-to-collect"></a>Pomocí diagnostiky Azure shromažďovat:
-* Statistika na webové stránky nebo služby, jako jsou požadavky a připojení.
-* Statistické údaje o rolích, jako je například jak často se role restartuje.
-* Informace o využití paměti, jako je například procento času, který přijímá systému uvolňování paměti nebo paměti celkové sady spuštěné roli.
+## <a name="choosing-a-performance-testing-method"></a>Výběr metody testování výkonu
+### <a name="use-azure-diagnostics-to-collect"></a>Pro shromáždění použijte Azure Diagnostics:
+* Statistika webových stránek a služeb, jako jsou požadavky a připojení.
+* Statistika rolí, například jak často je role restartována.
+* Celkové informace o využití paměti, jako je například procento času, který systém uvolňování paměti využívá, nebo paměťovou sadu spuštěné role.
 
-### <a name="use-the-visual-studio-profiler-to"></a>Pomocí profileru sady Visual Studio:
-* Určení, které funkce zaberou nejvíce času.
-* Změřit, jak dlouho trvá každé části výpočetně náročné aplikace.
-* Porovnejte sestavy výkonu podrobné pro dvě verze služby.
-* Přidělení paměti podrobnější než úroveň přidělení paměti jednotlivých analyzujte.
-* Analýza souběžnosti problémy v kódu s více vlákny.
+### <a name="use-the-visual-studio-profiler-to"></a>Použijte Profiler sady Visual Studio k těmto akcím:
+* Určete, které funkce se vybírají nejvíce času.
+* Změřte, kolik času má každá součást výpočetně náročného programu.
+* Porovnejte podrobné sestavy výkonu pro dvě verze služby.
+* Analyzovat přidělování paměti podrobněji než úroveň individuálního přidělení paměti.
+* Analyzujte problémy souběžnosti v kódu s více vlákny.
 
-Při použití profiler může shromažďovat data, při spuštění cloudové služby místně nebo v Azure.
+Když použijete Profiler, můžete shromažďovat data, když se cloudová služba spustí místně nebo v Azure.
 
-### <a name="collect-profiling-data-locally-to"></a>Shromažďování dat profilace místně na:
-* Testování výkonu součást cloudové služby, jako je například provádění konkrétní pracovní roli, která nevyžaduje realistické simulované zatížení.
-* Testování výkonu cloudové služby izolovaně, řízených podmínek.
-* Testování výkonu cloudové služby, než ho nasadíte do Azure.
-* Testování výkonu cloudové služby soukromě, nenaruší stávající nasazení.
-* Testování výkonu služby, aniž by platili za provoz v Azure.
+### <a name="collect-profiling-data-locally-to"></a>Shromažďování dat profilování místně do:
+* Otestujte výkon součásti cloudové služby, jako je třeba spuštění konkrétní role pracovního procesu, která nevyžaduje reálné simulované zatížení.
+* V rámci kontrolovaných podmínek otestujte výkon cloudové služby v izolaci.
+* Otestujte výkon cloudové služby předtím, než ji nasadíte do Azure.
+* Otestujte výkon cloudové služby soukromě, aniž by došlo k narušení stávajících nasazení.
+* Otestujte výkon služby bez poplatků za provoz v Azure.
 
-### <a name="collect-profiling-data-in-azure-to"></a>Shromažďování dat profilace v Azure:
-* Testování výkonu cloudové služby v rámci simulované nebo skutečné zatížení.
-* Pomocí metody instrumentace shromažďování dat profilování, podle postupu popsaného v tomto tématu později.
-* Testování výkonu služby ve stejném prostředí jako při spuštění služby v produkčním prostředí.
+### <a name="collect-profiling-data-in-azure-to"></a>Shromažďování dat profilace v Azure do:
+* Otestujte výkon cloudové služby v simulovaném nebo reálném zatížení.
+* Použijte metodu instrumentace shromažďování dat profilace, jak je popsáno dále v tomto tématu.
+* Otestujte výkon služby ve stejném prostředí, jako by služba běžela v produkčním prostředí.
 
-Obvykle simulovat zatížení pro test cloudových služeb v rámci normální nebo podmínek vysoké zátěže.
+Obvykle se simuluje zátěž pro testování cloudových služeb v podmínkách normálního nebo zátěže.
 
 ## <a name="profiling-a-cloud-service-in-azure"></a>Profilace cloudové služby v Azure
-Při publikování cloudové služby v sadě Visual Studio můžete Profilovat službu a nastavení profilování, které vám poskytnou informace, které chcete. Pro každou instanci role spuštění relace profilování. Další informace o tom, jak publikovat službu ze sady Visual Studio najdete v tématu [publikování do cloudové služby Azure ze sady Visual Studio](vs-azure-tools-publishing-a-cloud-service.md).
+Když publikujete cloudovou službu ze sady Visual Studio, můžete profilovat službu a zadat nastavení profilování, které vám poskytne požadované informace. Pro každou instanci role se spustí relace profilování. Další informace o tom, jak publikovat službu ze sady Visual Studio, najdete v tématu [publikování do cloudové služby Azure ze sady Visual Studio](vs-azure-tools-publishing-a-cloud-service.md).
 
-Další informace o výkonu profilace v sadě Visual Studio najdete v tématu [Průvodce začátečníka profilací výkonu](https://msdn.microsoft.com/library/azure/ms182372.aspx) a [Analýza výkonu aplikace pomocí nástrojů pro profilaci](https://msdn.microsoft.com/library/azure/z9z62c29.aspx).
+Další informace o profilování výkonu v aplikaci Visual Studio naleznete v tématu [Příručka pro začátečníky k profilaci výkonu](https://msdn.microsoft.com/library/azure/ms182372.aspx) a [Analýza výkonu aplikace pomocí nástroje pro profilaci](https://msdn.microsoft.com/library/azure/z9z62c29.aspx).
 
 > [!NOTE]
-> Můžete povolit IntelliTrace nebo profilování při publikování vaší cloudové služby. Nelze povolit obojí.
+> Když publikujete cloudovou službu, můžete povolit buď IntelliTrace, nebo profilaci. Nemůžete povolit obojí.
 >
 >
 
-### <a name="profiler-collection-methods"></a>Metody kolekce Profiler
-Můžete použít jinou kolekci metody profilace, podle vašeho problémy s výkonem:
+### <a name="profiler-collection-methods"></a>Metody kolekce profileru
+V závislosti na vašich problémech s výkonem můžete použít různé metody shromažďování pro profilaci:
 
-* **Vzorkování procesoru** – tato metoda shromažďuje statistiky aplikace, které jsou užitečné při počáteční analýze problémy s využitím procesoru. Vzorkování procesoru je navržený způsob spuštění většina vyšetřování výkonu. V aplikaci, která profilujete při shromažďování dat vzorkování procesoru je malý vliv.
-* **Instrumentace** – tato metoda shromažďuje podrobných dat časování, které jsou užitečné pro přesně zacílenou analýzu a analyzovat problémy s výkonem vstupu a výstupu. Metoda instrumentace zaznamenává každou položku, ukončení a volání funkce z funkcí v modulu během profilování. Tato metoda je užitečná pro shromažďování podrobných informací o časování o části kódu a pochopení dopadu vstupních a výstupních operací na výkon aplikace. Tato metoda je zakázaná pro počítač s operačním systémem 32-bit. Tato možnost je dostupná pouze při spuštění cloudové služby v Azure, ne místně v emulátoru služby compute.
-* **Přidělení paměti .NET** – tato metoda pomocí metoda profilování vzorkování shromažďuje data o přidělování paměti rozhraní .NET Framework. Shromážděná data zahrnují počet a velikost přidělené objekty.
-* **Souběžnost** – tato metoda shromažďuje data kolize prostředků a data spuštění procesů a vláken, která je užitečné při analýze více procesů a vícevláknové aplikace. Za použití metody souběžnosti shromažďuje data pro každou událost, pozastaví spuštění kódu, například když vlákno čeká uzamčen přístup k prostředku aplikace k uvolnění. Tato metoda je užitečná pro analýzu vícevláknových aplikacích.
-* Můžete také povolit **profilace interakce vrstev**, který poskytuje další informace o spuštění s úspěšností synchronní ADO.NET volání funkce víceúrovňových aplikací, které komunikují po jedné nebo víc databází. Shromažďování dat interakce vrstev s některou z metod profilace. Další informace o profilování interakce vrstev, naleznete v tématu [zobrazení interakcí vrstev](https://msdn.microsoft.com/library/azure/dd557764.aspx).
+* **Vzorkování procesoru** – Tato metoda shromažďuje statistiky aplikací, které jsou užitečné při počáteční analýze problémů s využitím procesoru. Vzorkování procesoru je navrhovaná metoda pro spuštění většiny šetření výkonu. Při shromažďování dat vzorkování procesoru má aplikace profilaci, které vytváříte, má malý vliv.
+* **Instrumentace** – Tato metoda shromažďuje detailní časová data, která jsou užitečná pro cílené analýzy a pro analýzu problémů s výkonem vstupu a výstupu. Metoda instrumentace zaznamenává každé zadání, ukončení a volání funkcí v modulu během běhu profilace. Tato metoda je užitečná pro shromažďování podrobných informací o časování oddílu kódu a pro porozumění dopadu vstupních a výstupních operací na výkon aplikace. Tato metoda je zakázána pro počítač s 32 operačním systémem. Tato možnost je dostupná jenom v případě, že spustíte cloudovou službu v Azure, ne místně v emulátoru služby Compute.
+* **Alokace paměti .NET** – Tato metoda shromažďuje .NET Framework data o přidělování paměti pomocí metody profilace vzorkování. Shromážděná data zahrnují počet a velikost přidělených objektů.
+* **Concurrency** – Tato metoda shromažďuje data kolizí prostředků a zpracovává a zpracovává data vláken, která jsou užitečná při analýze vícevláknových a vícevláknových aplikací. Metoda souběžnosti shromažďuje data pro každou událost, která blokuje provádění kódu, například když vlákno čeká na zamčený přístup k prostředku aplikace, který se má uvolnit. Tato metoda je užitečná pro analýzu aplikací s více vlákny.
+* Můžete také povolit **profilaci interakce vrstev**, která poskytuje další informace o době spuštění synchronních volání ADO.NET ve funkcích vícevrstvých aplikací, které komunikují s jednou nebo více databázemi. Data interakce vrstev můžete shromáždit pomocí kterékoli z metod profilace. Další informace o profilování interakce vrstev najdete v tématu [zobrazení interakcí vrstev](https://msdn.microsoft.com/library/azure/dd557764.aspx).
 
 ## <a name="configuring-profiling-settings"></a>Konfigurace nastavení profilace
-Následující obrázek ukazuje, jak konfigurovat nastavení profilování v dialogovém okně publikovat aplikaci Azure.
+Následující obrázek ukazuje, jak nakonfigurovat nastavení profilování v dialogovém okně publikovat aplikaci Azure.
 
-![Konfigurace nastavení profilace](./media/vs-azure-tools-performance-profiling-cloud-services/IC526984.png)
+![Konfigurovat nastavení profilace](./media/vs-azure-tools-performance-profiling-cloud-services/IC526984.png)
 
 > [!NOTE]
-> Povolit **povolit profilaci** zaškrtávací políčko, musí mít profiler nainstalované na místním počítači, který používáte k publikování cloudové služby. Profiler je ve výchozím nastavení nainstalován při instalaci sady Visual Studio.
+> Pokud chcete povolit zaškrtávací políčko **Povolit profilaci** , musíte mít nainstalovaný Profiler na místním počítači, který používáte k publikování cloudové služby. Ve výchozím nastavení se Profiler nainstaluje při instalaci sady Visual Studio.
 >
 >
 
-### <a name="to-configure-profiling-settings"></a>Chcete-li konfigurovat nastavení profilování
-1. V Průzkumníku řešení otevřete místní nabídku pro projekt Azure a klikněte na tlačítko **publikovat**. Podrobné pokyny o tom, jak publikovat cloudovou službu, naleznete v tématu [publikování cloudové služby pomocí nástroje Azure](http://go.microsoft.com/fwlink/p?LinkId=623012).
-2. V **publikování aplikaci Azure** dialogové okno, zvolili **Upřesnit nastavení** kartu.
-3. Chcete-li povolit profilaci, vyberte **povolit profilaci** zaškrtávací políčko.
-4. Chcete-li konfigurovat nastavení profilování, zvolte **nastavení** hypertextový odkaz. Zobrazí se dialogové okno nastavení profilace.
-5. Z **jakou metodu profilace chcete použít** přepínačů, zvolte typ profilace, že potřebujete.
-6. Chcete-li shromažďovat data profilace interakce vrstev, vyberte **povolit profilaci interakce vrstev** zaškrtávací políčko.
-7. Chcete-li uložit nastavení, zvolte **OK** tlačítko.
+### <a name="to-configure-profiling-settings"></a>Konfigurace nastavení profilace
+1. V Průzkumník řešení otevřete místní nabídku pro projekt Azure a pak zvolte **publikovat**. Podrobné pokyny, jak publikovat cloudovou službu, najdete v tématu [publikování cloudové služby pomocí nástrojů Azure](vs-azure-tools-publishing-a-cloud-service.md).
+2. V dialogovém okně **publikovat aplikaci Azure** zvolte kartu **Upřesnit nastavení** .
+3. Chcete-li povolit profilaci, zaškrtněte políčko **Povolit profilování** .
+4. Chcete-li konfigurovat nastavení profilace, vyberte hypertextový odkaz **Nastavení** . Zobrazí se dialogové okno nastavení profilace.
+5. Z **toho, jakou metodu profilace chcete použít** , vyberte typ profilace, kterou potřebujete.
+6. Chcete-li shromáždit data profilování interakce vrstev, zaškrtněte políčko **Povolit Profilování interakce vrstev** .
+7. Nastavení uložíte tak, že kliknete na tlačítko **OK** .
 
-    Při publikování této aplikace, tato nastavení slouží k vytvoření relace profilování pro každou roli.
+    Při publikování této aplikace se tato nastavení použijí k vytvoření relace profilování pro každou roli.
 
-## <a name="viewing-profiling-reports"></a>Zobrazení zprávy o profilování
-Relace profilování se vytvoří pro každou instanci role v cloudové službě. Chcete-li zobrazit sestavy profilování každé relace ze sady Visual Studio, můžete zobrazit v okně Průzkumníka serveru a pak zvolte možnost Azure Compute node vybrat instanci role. Pak můžete zobrazit sestavy profilování jak je znázorněno na následujícím obrázku.
+## <a name="viewing-profiling-reports"></a>Zobrazení sestav profilace
+Relace profilování se vytvoří pro každou instanci role v cloudové službě. Chcete-li zobrazit sestavy profilace každé relace ze sady Visual Studio, můžete zobrazit okno Průzkumník serveru a pak vybrat uzel Azure COMPUTE pro výběr instance role. Pak můžete zobrazit sestavu profilace, jak je znázorněno na následujícím obrázku.
 
 ![Zobrazit sestavu profilace z Azure](./media/vs-azure-tools-performance-profiling-cloud-services/IC748914.png)
 
-### <a name="to-view-profiling-reports"></a>Chcete-li zobrazit sestavy profilování
-1. Chcete-li zobrazit okno Průzkumníka serveru v sadě Visual Studio, zvolte v panelu nabídky zobrazení Průzkumníka serveru.
-2. Vyberte uzel Azure Compute a pak vyberte uzel Azure nasazení pro cloudovou službu, kterou jste vybrali profil při publikování ze sady Visual Studio.
-3. Chcete-li zobrazit sestavy profilování pro instanci, zvolte roli ve službě, otevřete místní nabídku pro konkrétní instanci a klikněte na tlačítko **zobrazit sestavu profilace**.
+### <a name="to-view-profiling-reports"></a>Zobrazení sestav profilace
+1. Chcete-li zobrazit okno Průzkumník serveru v aplikaci Visual Studio, na panelu nabídek vyberte možnost zobrazení, Průzkumník serveru.
+2. Zvolte uzel COMPUTE Azure a pak zvolte uzel nasazení Azure pro cloudovou službu, kterou jste vybrali k profilaci při publikování ze sady Visual Studio.
+3. Chcete-li zobrazit sestavy profilování pro instanci, zvolte roli ve službě, otevřete místní nabídku pro určitou instanci a pak zvolte možnost **Zobrazit sestavu profilace**.
 
-    Sestavu souboru .vsp se teď stáhne z Azure a stav souboru ke stažení se zobrazí v protokolu aktivit Azure. Po dokončení stahování sestavy profilování se zobrazí na kartě v editoru sady Visual Studio s názvem < název Role\>*< číslo Instance\>*< identifikátor\>.vsp. Souhrnná data pro sestavy se zobrazí.
-4. K zobrazení různých zobrazení sestavy v seznamu aktuální zobrazení, zvolte typ zobrazení, které chcete. Další informace najdete v tématu [zobrazeních sestav nástrojů pro profilaci](https://msdn.microsoft.com/library/azure/bb385755.aspx).
+    Sestava, soubor. VSP, je teď stažená z Azure a stav stahování se zobrazí v protokolu aktivit Azure. Po dokončení stahování se sestava profilace zobrazí na kartě v editoru sady Visual Studio s názvem < název role\> *< číslo Instance\>* < identifikátor\>. vsp. Zobrazí se souhrnná data pro sestavu.
+4. Chcete-li zobrazit různá zobrazení sestavy, vyberte v seznamu aktuální zobrazení typ zobrazení, které chcete. Další informace najdete v tématu [Nástroje pro profilaci zobrazení sestav](https://msdn.microsoft.com/library/azure/bb385755.aspx).
 
 ## <a name="next-steps"></a>Další kroky
-[Ladění cloudové služby](vs-azure-tools-debug-cloud-services-virtual-machines.md)
+[Cloud Services ladění](vs-azure-tools-debug-cloud-services-virtual-machines.md)
 
 [Publikování do cloudové služby Azure ze sady Visual Studio](vs-azure-tools-publishing-a-cloud-service.md)

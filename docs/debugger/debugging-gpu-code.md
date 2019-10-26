@@ -13,18 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db053317b3678cfaa7ee0ed6061074b156359d2f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: cec341df3cfe81f339322f5e7c584151d9030490
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738212"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911577"
 ---
 # <a name="debugging-gpu-code"></a>Ladění kódu GPU
 Můžete ladit C++ kód, který je spuštěn na grafické jednotce procesoru (GPU). Podpora ladění GPU v aplikaci Visual Studio zahrnuje detekci časování, spouštění procesů a připojování k nim a integraci do ladicích oken.
 
 ## <a name="supported-platforms"></a>Podporované platformy
- Ladění je podporováno na [!INCLUDE[win7](../debugger/includes/win7_md.md)], [!INCLUDE[win8](../debugger/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../debugger/includes/winsvr08_r2_md.md)] a [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)]. Pro ladění v emulátoru softwaru se vyžaduje [!INCLUDE[win8](../debugger/includes/win8_md.md)] nebo [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)]. Pro ladění na hardwaru je nutné nainstalovat ovladače pro grafickou kartu. Ne všichni dodavatelé hardwaru implementují všechny funkce ladicího programu. Omezení najdete v dokumentaci dodavatele.
+ Ladění je podporováno na [!INCLUDE[win7](../debugger/includes/win7_md.md)], [!INCLUDE[win8](../debugger/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../debugger/includes/winsvr08_r2_md.md)]a [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)]. Pro ladění v emulátoru softwaru se vyžaduje [!INCLUDE[win8](../debugger/includes/win8_md.md)]nebo [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)]. Pro ladění na hardwaru je nutné nainstalovat ovladače pro grafickou kartu. Ne všichni dodavatelé hardwaru implementují všechny funkce ladicího programu. Omezení najdete v dokumentaci dodavatele.
 
 > [!NOTE]
 > Nezávislí výrobci hardwaru, kteří chtějí podporovat ladění GPU v aplikaci Visual Studio, musí vytvořit knihovnu DLL, která implementuje rozhraní VSD3DDebug a cílí na jejich vlastní ovladače.
@@ -77,9 +77,9 @@ Můžete ladit C++ kód, který je spuštěn na grafické jednotce procesoru (GP
  K této chybě dochází, pokud provádíte ladění na vzdáleném počítači. Ladicí program nemůže určit, do kdy spustit, zda jsou ovladače nainstalovány na vzdáleném počítači. Ovladače jsou k dispozici od výrobce grafické karty.
 
 ### <a name="error-timeout-detection-and-recovery-tdr-must-be-disabled-at-the-remote-site"></a>Chyba: zjišťování časový limit a obnovení (TDR) musí být zakázáno ve vzdálené lokalitě.
- Je možné, aby C++ výpočty amp překročily výchozí časový interval, který je nastavený při detekci a procesu obnovení časového limitu systému Windows (TDR). Pokud k tomu dojde, bude výpočet zrušen a data budou ztracena. Další informace najdete v tématu [zpracování TDRS v C++ amp](http://go.microsoft.com/fwlink/p/?LinkId=249154).
+ Je možné, aby C++ výpočty amp překročily výchozí časový interval, který je nastavený při detekci a procesu obnovení časového limitu systému Windows (TDR). Pokud k tomu dojde, bude výpočet zrušen a data budou ztracena. Další informace najdete v tématu [zpracování TDRS v C++ amp](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/06/handling-tdrs-in-c-amp/).
 
 ## <a name="see-also"></a>Viz také:
 - [Návod: Ladění aplikace C++ AMP](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)
 - [Nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md)
-- [Spuštění ladění GPU v aplikaci Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=255381)
+- [Spuštění ladění GPU v aplikaci Visual Studio](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/17/start-gpu-debugging-in-visual-studio-2012/)

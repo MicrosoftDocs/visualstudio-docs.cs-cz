@@ -9,26 +9,26 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/25/2017
 ms.author: ghogen
-ms.openlocfilehash: a5be67673e6f806cb149b19b08244ca0da555ae2
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 5a69fb83f28f4446a91e4125e75706400401ea1f
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70179795"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911732"
 ---
 # <a name="manage-the-resources-associated-with-your-azure-accounts-in-visual-studio-cloud-explorer"></a>Správa prostředků přidružených k účtům Azure v Průzkumníkovi cloudu sady Visual Studio
 
 Průzkumník cloudu umožňuje zobrazit prostředky a skupiny prostředků Azure, zkoumat jejich vlastnosti a provádět klíčové vývojářské akce v rámci sady Visual Studio.
 
-Podobně jako u [Azure Portal](http://go.microsoft.com/fwlink/p/?LinkID=525040)je Cloud Explorer postaven na Azure Resource Manager Stack. Proto Průzkumník cloudu rozumí prostředky, jako jsou skupiny prostředků Azure a služby Azure, jako jsou Logic Apps a API Apps, a podporuje [řízení přístupu na základě role](/azure/role-based-access-control/role-assignments-portal) (RBAC).
+Podobně jako u [Azure Portal](https://portal.azure.com)je Cloud Explorer postaven na Azure Resource Manager Stack. Proto Průzkumník cloudu rozumí prostředky, jako jsou skupiny prostředků Azure a služby Azure, jako jsou Logic Apps a API Apps, a podporuje [řízení přístupu na základě role](/azure/role-based-access-control/role-assignments-portal) (RBAC).
 
 ## <a name="prerequisites"></a>Požadavky
 
 * Visual Studio 2017 nebo novější (viz [Stažení sady Visual Studio](https://visualstudio.microsoft.com/downloads)) se zvolenou **úlohou Azure** . Můžete také použít starší verzi sady Visual Studio s [Microsoft Azure SDK pro .NET 2,9](https://www.microsoft.com/download/details.aspx?id=51657).
-* Účet Microsoft Azure – Pokud účet nemáte, můžete si [zaregistrovat bezplatnou zkušební verzi](http://go.microsoft.com/fwlink/?LinkId=623901) nebo [aktivovat výhody pro předplatitele sady Visual Studio](http://go.microsoft.com/fwlink/?LinkId=623901).
+* Účet Microsoft Azure – Pokud účet nemáte, můžete si [zaregistrovat bezplatnou zkušební verzi](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) nebo [aktivovat výhody pro předplatitele sady Visual Studio](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/).
 
 > [!NOTE]
-> Chcete-li zobrazit Průzkumníka cloudu, stiskněte klávesu **CTRL**+**Q** pro aktivaci vyhledávacího pole a poté zadejte **Průzkumníka cloudu**.
+> Chcete-li zobrazit Průzkumníka cloudu, stiskněte klávesu **Ctrl**+**Q** pro aktivaci vyhledávacího pole a pak zadejte **Průzkumníka cloudu**.
 
 ## <a name="add-an-azure-account-to-cloud-explorer"></a>Přidat účet Azure do Průzkumníka cloudu
 
@@ -76,7 +76,7 @@ Pokud chcete zobrazit prostředky Azure, můžete zvolit **typy prostředků** n
 
 1. V místní nabídce vyberte požadované zobrazení:
 
-   * Zobrazení **typů prostředků** – běžné zobrazení, které se používá na [Azure Portal](http://go.microsoft.com/fwlink/p/?LinkID=525040), zobrazuje vaše prostředky Azure v kategoriích podle jejich typu, jako jsou webové aplikace, účty úložiště a virtuální počítače.
+   * Zobrazení **typů prostředků** – běžné zobrazení, které se používá na [Azure Portal](https://portal.azure.com), zobrazuje vaše prostředky Azure v kategoriích podle jejich typu, jako jsou webové aplikace, účty úložiště a virtuální počítače.
    * Zobrazení **skupin prostředků** – kategorizuje prostředky Azure skupinou prostředků Azure, ke které jsou přidružené. Skupina prostředků je sada prostředků Azure, která se obvykle používá v konkrétní aplikaci. Další informace o skupinách prostředků Azure najdete v tématu [přehled Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview).
 
    Následující obrázek znázorňuje porovnání dvou zobrazení prostředků:
@@ -95,7 +95,7 @@ Následující obrázek ukazuje příklad porovnání toho, co vidíte na jednot
 
   ![Snímek obrazovky Průzkumníka cloudu](./media/vs-azure-tools-resources-managing-with-cloud-explorer/actions-and-properties.png)
 
-Každý prostředek má otevřenou akci **na portálu**. Když vyberete tuto akci, Průzkumník cloudu zobrazí vybraný prostředek v [Azure Portal](http://go.microsoft.com/fwlink/p/?LinkID=525040). Funkce **otevřít v portálu** je užitečná pro přechod na hluboce vnořené prostředky.
+Každý prostředek má **otevřenou akci na portálu**. Když vyberete tuto akci, Průzkumník cloudu zobrazí vybraný prostředek v [Azure Portal](https://portal.azure.com). Funkce **otevřít v portálu** je užitečná pro přechod na hluboce vnořené prostředky.
 
 V závislosti na prostředku Azure se můžou objevit i další akce a hodnoty vlastností. Například webové aplikace a aplikace logiky mají kromě **otevření na portálu**také **otevřené akce v prohlížeči** a **připojení ladicího programu** . Akce otevření editory se zobrazí při výběru objektu blob, fronty nebo tabulky účtu úložiště. Aplikace Azure mají vlastnosti **Adresa URL** a **stav** , zatímco prostředky úložiště mají vlastnosti klíče a připojovacího řetězce.
 
@@ -105,4 +105,4 @@ Pokud chcete v předplatných účtu Azure vyhledat prostředky s určitým náz
 
   ![Hledání prostředků v Průzkumníkovi cloudu](./media/vs-azure-tools-resources-managing-with-cloud-explorer/search-for-resources.png)
 
-Při zadávání znaků do vyhledávacího pole se ve stromu zdrojů zobrazí pouze prostředky, které odpovídají těmto znakům.
+Při zadávání znaků do **vyhledávacího** pole se ve stromu zdrojů zobrazí pouze prostředky, které odpovídají těmto znakům.

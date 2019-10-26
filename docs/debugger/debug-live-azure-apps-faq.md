@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ceda2dd4e85c8db5b66ef753a748977204b8caab
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 5e0d8839daac2d470f4275257bfcfbc83fc7a62f
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211211"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911397"
 ---
 # <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>Nejčastější dotazy k ladění snímků v aplikaci Visual Studio
 
@@ -125,7 +125,7 @@ V případě virtuálních počítačů nebo virtuálních počítačů můžete
 
    - Certifikát serveru
       - Odpovídající kryptografický otisk certifikátu serveru je nasazený jako tajný kód do trezoru klíčů Azure. VS se pokusí najít nebo vytvořit Trezor klíčů s předponou MSVSAZ * v oblasti odpovídající virtuálnímu počítači nebo prostředku Virtual Machine Scale Sets. Všechny prostředky virtuálních počítačů nebo Virtual Machine Scale Sets nasazené do této oblasti budou sdílet stejný Trezor klíčů.
-      - Pokud chcete odstranit tajný kód kryptografického otisku certifikátu serveru, přejdete na Azure Portal a najděte úložiště klíčů MSVSAZ * ve stejné oblasti, která je hostitelem vašeho prostředku. Odstraní tajný klíč, který by měl být označený.`remotedebugcert<<ResourceName>>`
+      - Pokud chcete odstranit tajný kód kryptografického otisku certifikátu serveru, přejdete na Azure Portal a najděte úložiště klíčů MSVSAZ * ve stejné oblasti, která je hostitelem vašeho prostředku. Odstranit tajný klíč, který by měl být označený `remotedebugcert<<ResourceName>>`
       - Budete taky muset z prostředku odstranit tajný klíč serveru přes PowerShell.
 
       Pro virtuální počítače:
@@ -181,7 +181,7 @@ K dispozici je několik způsobů, jak Snapshot Debugger zakázat:
 
 - Azure Portal > v okně prostředků virtuálního počítače nebo virtuálního počítače > rozšíření > Odinstalace rozšíření Microsoft. Insights. VMDiagnosticsSettings
 
-- Rutiny PowerShellu z [AZ PowerShell](https://docs.microsoft.com/powershell/azure/overview)
+- Rutiny PowerShellu z [AZ PowerShell](/powershell/azure/overview)
 
    Virtuální počítač:
 
@@ -199,7 +199,7 @@ K dispozici je několik způsobů, jak Snapshot Debugger zakázat:
 ## <a name="see-also"></a>Viz také:
 
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
-- [Ladění živé aplikace v ASP.NET pomocí ladicího programu snímků](../debugger/debug-live-azure-applications.md)
+- [Ladění živých aplikací ASP.NET pomocí Snapshot Debugger](../debugger/debug-live-azure-applications.md)
 - [Ladění živých ASP.NET počítačů Azure Virtual Machines\Virtual pro škálování pomocí Snapshot Debugger](../debugger/debug-live-azure-virtual-machines.md)
 - [Ladění Live ASP.NET Azure Kubernetes pomocí Snapshot Debugger](../debugger/debug-live-azure-kubernetes.md)
 - [Řešení potíží a známé problémy pro ladění snímků](../debugger/debug-live-azure-apps-troubleshooting.md)

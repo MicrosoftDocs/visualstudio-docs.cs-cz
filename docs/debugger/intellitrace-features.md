@@ -20,18 +20,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 852070c74a7e7171525a5feaa6cc7617fe83c00d
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: bcdb1b2b6dc4b64d180eb03fc76b26b4ef16e9d0
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925363"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911421"
 ---
 # <a name="intellitrace-features-c-visual-basic-c"></a>Funkce IntelliTrace (C#, Visual Basic, C++)
 
-IntelliTrace můžete použít k zaznamenání událostí a metod volání do vaší aplikace, což vám umožní prostudovat svůj stav (a hodnoty zásobníku volání a lokální proměnné) v různých fázích provádění. Stačí spustit ladění, protože standardně je ve výchozím nastavení zapnuté – IntelliTrace, a informace IntelliTrace se zaznamenávají do nového **diagnostické nástroje** okna na kartě **události** . Výběrem události a kliknutím na **aktivovat historické ladění** zobrazíte zásobník volání a místní údaje zaznamenané pro tuto událost.
+IntelliTrace můžete použít k zaznamenání událostí a metod volání do vaší aplikace, což vám umožní prostudovat svůj stav (a hodnoty zásobníku volání a lokální proměnné) v různých fázích provádění. Stačí spustit ladění, protože standardně je ve výchozím nastavení zapnutá – IntelliTrace. informace IntelliTrace se zaznamenávají do nového **diagnostické nástroje** okna na kartě **události** . Vyberte událost a klikněte na **aktivovat historické ladění.** pro zobrazení zásobníku volání a místních hodnot zaznamenaných pro tuto událost.
 
-Podrobný popis najdete v tématu [Názorný postup: Pomocí IntelliTrace](../debugger/walkthrough-using-intellitrace.md).
+Podrobný popis najdete v tématu [Návod: použití IntelliTrace](../debugger/walkthrough-using-intellitrace.md).
 
 IntelliTrace je k dispozici v edici Visual Studio Enterprise, ale ne v edicích Visual Studio Professional nebo Community.
 
@@ -123,7 +123,7 @@ Když ukládáte IntelliTrace data do souboru, získáte jeden soubor. iTrace pr
 
 ## <a name="forums"></a>Diskuzní fóra
 
-[Ladicí program sady Visual Studio](http://go.microsoft.com/fwlink/?LinkId=262263)
+[Ladicí program sady Visual Studio](https://social.msdn.microsoft.com/Forums/en-US/home)
 
 ## <a name="videos"></a>Videa
 

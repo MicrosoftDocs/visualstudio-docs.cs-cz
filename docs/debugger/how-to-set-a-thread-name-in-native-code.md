@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f9df52bee88722006c21c28e88a2e32113942e4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1e719563c831c50cc325d70d0de431f4be1bf514
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732748"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911431"
 ---
 # <a name="how-to-set-a-thread-name-in-native-code"></a>Postupy: Nastavení názvu vlákna v nativním kódu
 Pojmenování vlákna je možné v libovolné verzi sady Visual Studio. Pojmenovávání vláken je užitečné pro identifikaci podprocesů zájmu v okně **vlákna** při ladění spuštěného procesu. Rozpoznatelně pojmenovaná vlákna můžou být užitečná také při provádění ladění po porážce prostřednictvím kontroly výpisu stavu systému a při analýze zachycení výkonu pomocí různých nástrojů.
@@ -37,7 +37,7 @@ Je potřeba poznamenat, že _oba_ přístupy je možné v případě potřeby po
 Výhodnější
 * Názvy vláken jsou viditelné při ladění v aplikaci Visual Studio bez ohledu na to, zda byl ladicí program připojen k procesu v době volání SetThreadDescription.
 * Po načtení výpisu stavu systému v aplikaci Visual Studio jsou názvy vláken viditelné při provádění ladění po porážce.
-* Názvy vláken jsou také viditelné při použití jiných nástrojů, jako je například ladicí program [WinDbg](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools) a analyzátor výkonu [Windows Performance Analyzer](https://docs.microsoft.com/windows-hardware/test/wpt/windows-performance-analyzer) .
+* Názvy vláken jsou také viditelné při použití jiných nástrojů, jako je například ladicí program [WinDbg](/windows-hardware/drivers/debugger/debugger-download-tools) a analyzátor výkonu [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer) .
 
 Upozornění
 * Názvy vláken jsou viditelné pouze v systému Visual Studio 2017 verze 15,6 a novějších verzích.

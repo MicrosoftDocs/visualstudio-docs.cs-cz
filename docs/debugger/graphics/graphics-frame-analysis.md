@@ -1,5 +1,5 @@
 ---
-title: Analýzy grafických snímků | Dokumentace Microsoftu
+title: Analýza grafických snímků | Microsoft Docs
 ms.date: 02/09/2017
 ms.topic: conceptual
 f1_keywords:
@@ -9,184 +9,184 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6df598717685d3f198b61e4a750c3133e50f5a2d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 943436a64f50523905a03ed2a87e91508d1b7471
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63388713"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911485"
 ---
 # <a name="graphics-frame-analysis"></a>Analýza grafických snímků
-Analýza grafických snímků v analyzátoru grafiky sady Visual Studio použijte k analýze a optimalizovat výkon vykreslování Direct3D hře nebo aplikaci.
+Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio můžete analyzovat a optimalizovat výkon vykreslování vaší hry nebo aplikace Direct3D.
 
 ## <a name="frame-analysis"></a>Analýza snímků
- Analýza snímků používá stejné informace, které jsou zachyceny v souboru protokolu grafiky pro účely diagnostiky, ale používá ke shrnutí výkon vykreslování místo. Informace o výkonu se zaznamenávají do protokolu při zachytávání; Místo toho informace o výkonu je generováno později během analýzu snímků, události časování a shromažďování statistik přehrát rámce. Tento přístup má několik výhod oproti zaznamenávání informací o výkonu při zachytávání:
+ Analýza snímků používá stejné informace, které jsou zachyceny v souboru protokolu grafiky pro účely diagnostiky, ale používá je k sumarizaci výkonu vykreslování. Informace o výkonu se během zachytávání nezaznamenají do protokolu. místo toho jsou informace o výkonu generovány později během analýzy snímků pomocí událostí časování a shromažďováním statistik při přehrávání snímku. Tento přístup má několik výhod oproti zaznamenávání informací o výkonu během zachytávání:
 
-- Analýza snímků můžete průměrné výsledky z více jednotlivými cykly stejné rámce, který zajišťuje souhrnu výkonu statisticky zvuku.
+- Analýza snímků může průměrně vymezit více přehráváními stejného snímku, aby bylo zajištěno, že souhrn výkonu bude statisticky zdravý.
 
-- Analýza snímků můžete generovat informace o výkonu pro hardwarové konfigurace a jiná zařízení než ten, ve kterém byly informace zachyceny.
+- Analýza snímků může vygenerovat informace o výkonu pro hardwarové konfigurace a jiná zařízení než ta, ve které byly informace zachyceny.
 
-- Analýza snímků můžete vygenerovat nový souhrny výkonu z dříve zaznamenaných informací – například když jsou optimalizované nebo zpřístupňují další funkce ladění ovladače GPU.
+- Analýza snímků může vygenerovat nové souhrnné údaje o výkonu z dříve zaznamenaných informací – například když jsou ovladače GPU optimalizované nebo zpřístupňují další funkce ladění.
 
-  Kromě těchto výhod analýza snímků můžete také provádět změny rámce vykreslení během přehrávání tak, aby se může zobrazit informace o tom, jak tyto změny mohou ovlivnit výkon vykreslování aplikace. Tyto informace můžete se rozhodnout mezi potenciální optimalizační strategie, aniž by bylo nutné implementovat všechny a pak zachytíte a všechny jeho výsledky porovnání sami.
+  Kromě těchto výhod může analýza snímků také provádět změny v tom, jak je snímek vykreslen během přehrávání, aby mohl prezentovat informace o tom, jak tyto změny mohou ovlivnit výkon vykreslování aplikace. Tyto informace můžete použít k rozhodnutí z potenciálních strategií optimalizace bez nutnosti jejich implementace a následnému zachycení a porovnání všech výsledků.
 
-  I když se analýza snímků je primárně určena pomoci dosáhnout vyšší výkon vykreslování, je stejně můžete dosáhnout lepší vizuální kvality pro danou výkonu cíl nebo snížení spotřeby energie GPU.
+  I když je analýza snímků primárně určena k tomu, aby vám pomohla dosáhnout rychlejšího vykreslování, může vám to zároveň usnadnit lepší vizuální kvalitu pro daný cíl výkonu nebo snížit spotřebu energie GPU.
 
-  Pokud chcete zobrazit ukázku analýzy snímků přínosech pro vaši aplikaci, můžete se podívat [analýza grafických snímků Visual Studio](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool) videa na webu Channel 9.
+  Chcete-li zobrazit ukázku, která analýza snímků může pro vaši aplikaci udělat, můžete se podívat na video v [aplikaci Visual Studio Analýza grafických snímků](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool) na Channel 9.
 
-## <a name="using-frame-analysis"></a>Pomocí analýza snímků
- Než budete moct použít analýzu snímků, budete muset zachytit informace grafiky z aplikace za běhu, stejně jako když použijete některou z dalších analyzátoru grafiky sady nástrojů. Pak v okně dokumentu (.vsglog) protokol grafiky zvolte **analýza snímků** kartu.
+## <a name="using-frame-analysis"></a>Použití analýzy snímků
+ Než budete moct použít analýzu snímků, musíte zachytit informace grafiky z vaší aplikace při jejich spuštění, stejně jako při použití některého z dalších nástrojů pro analyzátor grafiky. Pak v okně dokument protokolu grafiky (. vsglog) zvolte kartu **Analýza snímků** .
 
- ![Vyberte kartu analýza snímků](media/pix_frame_analysis_select_tab.png "pix_frame_analysis_select_tab")
+ ![Vyberte kartu analýza snímků.](media/pix_frame_analysis_select_tab.png "pix_frame_analysis_select_tab")
 
- Po dokončení analýzy, výsledky se zobrazí. Horní části na kartu analýza snímků zobrazí časového harmonogramu a tabulku souhrnu. Dolní část zobrazuje tabulky podrobností. Pokud se během přehrávání byly vygenerovány chyby nebo varování, ty jsou uvedené výše na časové ose; odtud můžete použít odkazy na další informace o chybách a upozorněních.
+ Po dokončení analýzy se zobrazí výsledky. Horní část karty analýza snímků zobrazuje časovou osu a tabulku souhrnu. V dolní části se zobrazí tabulky podrobností. Pokud byly během přehrávání generovány chyby nebo upozornění, jsou shrnuty nad časovou osou. odtud můžete postupovat podle odkazů a získat další informace o chybách a upozorněních.
 
 ### <a name="interpreting-results"></a>Interpretace výsledků
- Interpretací výsledků jednotlivých variant lze odvodit, užitečné informace o vaší aplikaci prvku vykreslování, výkonu a chování. Další informace o vykreslování variant najdete v tématu [varianty](#Variants) dále v tomto článku.
+ Interpretací výsledků jednotlivých variant můžete odvodit užitečné informace o výkonu a chování vykreslování vaší aplikace. Další informace o vygenerování variant naleznete v části [varianty](#Variants) dále v tomto článku.
 
- Některé výsledky přímo udávají, jak varianty ovlivňuje výkon vykreslování:
+ Některé výsledky přímo ukazují, jak varianta ovlivňuje výkon vykreslování:
 
-- Pokud varianta varianty filtrování textur zvýšení výkonu jsme si ukázali, potom pomocí filtrování ve vaší aplikaci varianty textur zobrazí podobné zvýšení výkonu.
+- Pokud variace filtrování textury varianty ukázala zvýšení výkonu, pak se pomocí filtrování textury varianty ve vaší aplikaci zobrazí podobné nárůsty výkonu.
 
-- Pokud varianta oblasti zobrazení 1 x 1 jsme si ukázali, zvýšení výkonu, pak snižuje velikost cíle vykreslování v aplikaci bude vylepšit výkon vykreslování.
+- Pokud 1x1 zobrazení variant ukázalo nárůst výkonu, pak se zmenšení velikosti cílů vykreslování v aplikaci zvýší jeho výkon.
 
-- Pokud varianta komprese textur BC zvýšení výkonu jsme si ukázali, pak pomocí komprese textur BC ve vaší aplikaci se zobrazí podobné zvýšení výkonu.
+- Pokud variace komprese textury BC ukázala zvýšení výkonu, pak se pomocí komprese textury BC ve vaší aplikaci zobrazí podobný nárůst výkonu.
 
-- Pokud varianta 2xMSAA má skoro stejný výkon jako typ variant 0xMSAA, můžete povolit 2xMSAA ve vaší aplikaci zlepšovat kvalitu vykreslování bez dalších nákladů ve výkonu.
+- Pokud má varianta 2xMSAA skoro stejný výkon jako 0xMSAA varianta, můžete povolit 2xMSAA ve vaší aplikaci, aby se zlepšila kvalita vykreslování bez nákladů na výkon.
 
-  Další výsledky by mohla naznačovat hlubší, jemnější dopady na výkon vaší aplikace:
+  Další výsledky můžou navrhnout hlubší a jemnější dopad na výkon vaší aplikace:
 
-- Pokud varianta oblasti zobrazení 1 x 1 zobrazuje velmi náročné na výkon, vaše aplikace pravděpodobně spotřebovává další fillrate, než je k dispozici. Pokud se tato varianta zobrazí bez zvýšení výkonu, pravděpodobně příliš mnoho vrcholy aplikace zpracovává.
+- Pokud zobrazení variant 1x1 znázorňuje velmi velký nárůst výkonu, aplikace pravděpodobně spotřebovává více fillrate, než je k dispozici. Pokud tato varianta neukazuje žádné nárůsty výkonu, aplikace pravděpodobně zpracovává příliš mnoho vrcholů.
 
-- Pokud varianta 16bpp vykreslování cílového formátu ukazuje významného zvýšení výkonu, vaše aplikace pravděpodobně spotřebovává příliš mnoho paměti šířky pásma.
+- Pokud varianta cílového formátu 16bpp vykreslování ukazuje výrazné zvýšení výkonu, aplikace pravděpodobně spotřebovává příliš velkou šířku pásma paměti.
 
-- Pokud varianta rozměrů textury Half/Quarter ukazuje významného zvýšení výkonu, vaše textury pravděpodobně zabírat moc paměti, spotřebovat příliš velkou šířku pásma nebo neefektivnímu využití mezipaměti textur. Pokud se tato varianta zobrazí žádné změny ve výkonu, můžete použít větší, podrobnější textury pravděpodobně bez nutnosti platit snížení výkonu.
+- Pokud variace v poloviční/Čtvrtine znázorňuje výrazné zvýšení výkonu, vaše textury pravděpodobně zabírají příliš mnoho paměti, spotřebují příliš velkou šířku pásma nebo neefektivně používají mezipaměť textury. Pokud tato varianta ve výkonu nezobrazuje žádnou změnu, můžete pravděpodobně použít větší, podrobnější textury, aniž byste museli platit náklady na výkon.
 
-  Když jsou k dispozici čítačů hardwaru, můžete je shromažďovat velmi podrobné informace o proč může utrpení vykreslování výkon vaší aplikace. Hloubka uzavření dotazy nepodporují všechna zařízení 9.2 a vyšší úroveň funkcí (**pixelů occluded** čítače) a časová razítka. Další čítače hardwaru může být k dispozici, v závislosti na, jestli má výrobce GPU implementované čítačů hardwaru a vystavený v jeho ovladače. Potvrďte přesnou příčinu na výsledky zobrazené v souhrnu tabulce můžete použít tyto čítače – například můžete určit, jestli overdraw je faktor prozkoumáním procento pixelů, které byly occluded testem hloubky.
+  Když jsou k dispozici hardwarové čítače, můžete je použít ke shromáždění velmi podrobných informací o tom, proč může být výkon vykreslování vaší aplikace nakažený. Všechna zařízení na úrovni funkcí 9,2 a vyšší podporují hloubkové dotazy překrytí (zastíněna počítadla**pixelů** ) a časová razítka. Další hardwarové čítače můžou být dostupné v závislosti na tom, jestli výrobce GPU implementoval hardwarové čítače a vystavuje ho v jeho ovladači. Tyto čítače lze použít k potvrzení přesné příčiny výsledků zobrazených v tabulce souhrn – například můžete určit, zda je překreslování faktor, prozkoumáním procenta pixelů, které byly zastíněna testem hloubky.
 
-### <a name="timeline-and-summary-table"></a>Časová osa a souhrnnou tabulku
- Ve výchozím nastavení časového harmonogramu a tabulku se souhrnem se zobrazí a ostatní oddíly, jsou sbaleny.
+### <a name="timeline-and-summary-table"></a>Časová osa a Souhrnná tabulka
+ Ve výchozím nastavení se zobrazuje časová osa a tabulka souhrnů a ostatní oddíly jsou sbalené.
 
-#### <a name="timeline"></a>Časová osa
- Časová osa ukazuje základní informace o časování volání draw vzhledem k mezi sebou. Protože větší pruhy odpovídají delší dobu draw, můžete rychle najít v rámci nejdražší volání vykreslování. Po zobrazení zachyceného snímku obsahuje velký počet volání draw, nakreslit více kreslí volání jsou sloučeny do jednoho panelu jehož délka je součtem těchto volání.
+#### <a name="timeline"></a>Včasnost
+ Časová osa zobrazuje přehled časování volání vytažení vzhledem k jinému typu. Vzhledem k tomu, že větší pruhy odpovídají delší době kreslení, můžete je použít k rychlému vyhledání nejdražších volání vykreslování v rámci rámce. Když zachycený snímek obsahuje velký počet volání remíz, vícenásobná volání vykreslování jsou kombinována do jednoho panelu, jehož délka je součet těchto volání vykreslování.
 
- ![Časová osa ukazuje draw&#45;volání náklady. ](media/pix_frame_analysis_timeline.png "pix_frame_analysis_timeline")
+ ![Časová osa ukazuje&#45;náklady na volání remíz.](media/pix_frame_analysis_timeline.png "pix_frame_analysis_timeline")
 
- Přesuňte ukazatel na pruh zobrazíte která volání draw událost odpovídá panelu. Že vybereme pruh způsobí, že seznam událostí k synchronizaci na tuto událost.
+ Můžete si ponechit ukazatel na panelu a zjistit, která událost nakresleného volání odpovídá pruhu. Výběr pruhu způsobí, že se seznam událostí synchronizuje s touto událostí.
 
 #### <a name="table"></a>Tabulka
- Všechna čísla pod na časové ose tabulce relativní výkon jednotlivých vykreslování variant pro každé volání draw s ohledem na vaše aplikace výchozí vykreslení. Každý sloupec zobrazuje hodnotu typu variant různých vykreslování a každý řádek představuje jinou draw volání, který je identifikován v sloupci nejvíce vlevo. Odsud můžete použít odkaz na událost v okně seznam událostí grafiky.
+ Tabulka s čísly pod časovou osou zobrazuje relativní výkon jednotlivých variant vykreslování pro každé volání remíz s ohledem na výchozí vykreslování vaší aplikace. Každý sloupec zobrazuje jinou variantu vykreslování a každý řádek představuje jiné volání remízy, které je identifikované ve sloupci nejvíce vlevo; odsud můžete sledovat odkaz na událost v okně seznam událostí grafiky.
 
- ![V souhrnu tabulce jsou uvedeny různé varianty. ](media/pix_frame_analysis_summary.png "pix_frame_analysis_summary")
+ ![Tabulka souhrnu zobrazuje různé varianty.](media/pix_frame_analysis_summary.png "pix_frame_analysis_summary")
 
- Druhý sloupec v tabulce shrnutí nejvíce vlevo zobrazí čas vykreslování směrného plánu vaší aplikace – to znamená, dobu trvá, vaše aplikace výchozí vykreslení. k dokončení volání draw. Zbývající sloupce zobrazí relativní výkon jednotlivých vykreslování variant jako procento směrného plánu, takže je snazší zjistit, jestli se výkon. Procenta větší než 100 % trval déle, než standardních hodnot – to znamená výkonu byl vypnut – a menší než 100 % jeho obsahu trvalo méně času procenta – zvýšil výkon.
+ Druhý sloupec nejvíce vlevo v tabulce souhrn zobrazuje dobu vykreslování vaší aplikace, což je doba, po kterou bude mít výchozí vykreslování vaší aplikace k dokončení volání remízy. Zbývající sloupce znázorňují relativní výkon každé varianty vykreslování jako procentuální hodnotu směrného plánu, aby bylo snazší zjistit, zda se zvýšil výkon. Procentuální hodnoty větší než 100% trvaly déle než směrný plán – to znamená, že výkon je mimo provoz – a procentuální podíly menší než 100% trvalo méně času – výkon se zvýšil.
 
- Hodnoty absolutní časování směrný plán a relativní časování vykreslování variant jsou ve skutečnosti střední průměry více běhů – 5 ve výchozím nastavení. Tento průměrný pomáhá zajistit data časování spolehlivý a konzistentní. Lze ukazatele pro každou buňku v tabulce k prozkoumání minimum, maximum, průměr a hodnoty mediánu časování, které nebyly pozorovány při kreslení výsledky, které volání a vykreslování variant byly vygenerovány. Zobrazí se také standardní hodnoty časování.
+ Hodnoty absolutního časování standardních hodnot a relativního časování variant vykreslování jsou ve skutečnosti průměrem více spuštění – 5 ve výchozím nastavení. Tento průměr pomáhá zajistit spolehlivou a konzistentní časová data. Ukazatel na každou buňku v tabulce můžete podržet, chcete-li zjistit minimální, maximální, střední a mediánové hodnoty časování, které byly pozorovány při vygenerování výsledků pro toto volání vykreslení a variant vykreslování. Zobrazí se také časování standardních hodnot.
 
-#### <a name="hot-draw-calls"></a>"Horkou" volání kreslení
- Aby pozornost k vykreslení volání, které využívají větší část celkové čas vykreslování nebo, který může být neobvykle pomalé z důvodů, které by se vyhnout, řádek, který obsahuje následující volání draw "horkými" je označeno šedou barvou red při vlastní směrný plán časování je více než jeden Směrodatná odchylka delší než střední načasování všechna volání příkazu pro vykreslení v rámci směrného plánu.
+#### <a name="hot-draw-calls"></a>Volání "horkého" vykreslování
+ Chcete-li věnovat pozornost vykreslení volání, která spotřebují větší část celkového času vykreslování nebo která by mohla být obvykle z důvodů, že se jim může vyhnout, je řádek, který obsahuje tato volání "horká", šedá červeně, pokud je vlastní časování vlastního směrného plánu více než jeden směrodatná odchylka je delší než střední hodnota načasování všech volání vykreslování v rámci rámečku.
 
- ![Toto volání DrawIndexed má horké a studené variant. ](media/pix_frame_analysis_hot_calls.png "pix_frame_analysis_hot_calls")
+ ![Toto volání DrawIndexed má horkou a studenou variantu.](media/pix_frame_analysis_hot_calls.png "pix_frame_analysis_hot_calls")
 
-#### <a name="statistical-significance"></a>Statistický význam
- Analýza snímků vám pozornost k vykreslení varianty, které mají nejvyšší relevanci Určuje statistické význam jednotlivých vykreslování variant a zobrazí ta významné jako tučné písmo. Zobrazí ty, které zlepšují výkon zeleně a ty, které sníží výkon červeně. Zobrazí výsledky, které nejsou statisticky významná jako normální typu.
+#### <a name="statistical-significance"></a>Statistická významnost
+ Chcete-li věnovat pozornost vykreslování odchylek s nejvyšší závažností, analýza snímků určuje statistický význam každé varianty vykreslování a zobrazuje důležité hodnoty jako tučné písmo. Zobrazuje ty, které zlepšují výkon jako zelenou a ty, které snižují výkon jako červené. Zobrazuje výsledky, které nejsou statisticky důležité jako normální typ.
 
- ![Statistické relevance variant volání draw](media/pix_frame_analysis_summary_stats.png "pix_frame_analysis_summary_stats")
+ ![Statistická významnost varianty volání draw](media/pix_frame_analysis_summary_stats.png "pix_frame_analysis_summary_stats")
 
- Pokud chcete zjistit statistické relevance, analýza snímků používá [Studentova t-test](http://www.wikipedia.org/wiki/Student%27s_t-test).
+ Aby bylo možné určit statistickou relevanci, analýza snímků používá [t-test studenta](https://en.wikipedia.org/wiki/Student's_t-test).
 
 ### <a name="details-table"></a>Tabulka podrobností
- Pod souhrnem tabulka je tabulka podrobnosti, které ve výchozím nastavení je sbalený. Obsah z tabulky Details závisí na hardwarové platformě zařízení pro přehrávání. Informace o podporovaných hardwarové platformy najdete v tématu [hardwarovou podporu](#HardwareSupport).
+ Pod souhrnnou tabulkou je tabulka podrobností, která je ve výchozím nastavení sbalená. Obsah tabulky Details závisí na hardwarové platformě počítače pro přehrávání. Informace o podporovaných hardwarových platformách najdete v tématu [hardwarová podpora](#HardwareSupport).
 
-#### <a name="platforms-that-do-not-support-hardware-counters"></a>Platformy, které nepodporují čítačů hardwaru
- Většina platforem plně nepodporují čítačů hardwaru s GPU – patří mezi ně všechny procesory Intel, AMD a nVidia v současnosti nabízejí. Pokud neexistují žádné čítače hardwaru shromažďovat, se zobrazí pouze jedna tabulka podrobností a obsahuje střední absolutní časování všech variant.
+#### <a name="platforms-that-do-not-support-hardware-counters"></a>Platformy, které nepodporují čítače hardwaru
+ Většina platforem plně nepodporuje hardwarové čítače GPU – zahrnuje všechny GPU aktuálně nabízené technologií Intel, AMD a nVidia. Pokud neexistují žádné hardwarové čítače ke shromáždění, zobrazí se pouze jedna tabulka podrobností, která obsahuje střední absolutní časování všech variant.
 
- ![Tabulka podrobností a některé varianty přehrávání. ](media/pix_frame_analysis_details.png "pix_frame_analysis_details")
+ ![Tabulka podrobností a některé varianty přehrávání.](media/pix_frame_analysis_details.png "pix_frame_analysis_details")
 
-#### <a name="platforms-that-support-hardware-counters"></a>Platformy, které podporují čítačů hardwaru
- Pro platformy, které podporují čítačů hardwaru s GPU – například nVidia T40 SOC a všechny Soc Qualcomm – několik tabulek podrobnosti jsou zobrazeny, jeden pro každý typ variant. Každý čítač dostupného hardwaru shromážděných pro každý typ variant vykreslování a zobrazit své vlastní tabulky Podrobnosti.
+#### <a name="platforms-that-support-hardware-counters"></a>Platformy, které podporují čítače hardwaru
+ Pro platformy, které podporují čítače grafického procesoru (například nVidia T40 SOC a All Qualcomm SOC) se zobrazí několik tabulek s podrobnostmi, jedna pro každou variantu. Všechny dostupné čítače hardwaru se shromažďují pro každou variantu vykreslování a zobrazují se ve vlastní tabulce podrobností.
 
- ![Pokud je podporovaná, zobrazí se čítačů hardwaru. ](media/pix_frame.png "pix_frame")
+ ![Čítače hardwaru se zobrazí, pokud jsou podporovány.](media/pix_frame.png "pix_frame")
 
- Informace z čítače hardwaru poskytuje velmi podrobné zobrazení chování specifické hardwarové platformy pro každé volání draw, která vám pomůže identifikovat příčiny problémových míst výkonu velmi přesně.
+ Informace o čítači hardwaru poskytují velmi podrobné zobrazení konkrétního chování hardwarových platforem pro každé volání remíz, které vám může přispět k tomu, aby bylo obtížné určit příčinu kritických bodů výkonu.
 
 > [!NOTE]
-> Jiné hardwarové platformy podporují různé čítače; neexistuje žádný standardní. Čítače a co představují jsou určeny výhradně každého výrobce GPU.
+> Různé hardwarové platformy podporují různé čítače; neexistuje žádný standardní. Čítače a jejich reprezentace jsou určeny výhradně pro každého výrobce GPU.
 
-### <a name="marker-regions-and-events"></a>Oblasti značky a události
- Analýza snímků podporuje uživatelem definované události značek a skupiny událostí. Jsou zobrazeny v souhrnnou tabulku a podrobností tabulky.
+### <a name="marker-regions-and-events"></a>Oblasti a události značek
+ Analýza snímků podporuje uživatelsky definované značky událostí a skupiny událostí. Zobrazují se v tabulce souhrn a v tabulkách podrobností.
 
- Rozhraní API ID3DUserDefinedAnnotation nebo starší verzi D3DPERF_ řadu rozhraní API slouží k vytvoření značky a skupiny. Při použití řady D3DPERF_ rozhraní API můžete přiřadit každý značky a skupiny barva, která se analýza snímků se zobrazí jako barevný vzdálené správy v rámci řádky, které obsahují značka události nebo značky begin/end skupiny událostí a jejich obsah. Tato funkce vám umožňují rychle identifikovat důležité vykreslování události nebo zvýrazňující skupiny událostí.
+ K vytváření značek a skupin můžete použít buď rozhraní API ID3DUserDefinedAnnotation, nebo starší D3DPERF_ rozhraní API. Když použijete rodinu rozhraní API D3DPERF_, můžete přiřadit každou značku a seskupit barvu, kterou analýza snímků zobrazí jako barevný pruh v řádcích, které obsahují značku události nebo značky begin/end skupiny událostí a jejich obsah. Tato funkce vám může přispět k rychlé identifikaci důležitých událostí vykreslování nebo skupin událostí.
 
 ### <a name="warnings-and-errors"></a>Upozornění a chyby
- Analýza snímků se příležitostně dokončí s upozornění ani chyby, které jsou shrnuty nad časovou osou a podrobně popsané v dolní části na kartu analýza snímků.
+ Analýza snímků se občas dokončí s upozorněními nebo chybami, které jsou shrnuté nad časovou osou a podrobně popsány v dolní části karty analýza snímků.
 
- Obvykle upozornění a chyby jsou pouze k informačním účelům a nevyžadují zásahu.
+ Upozornění a chyby se většinou týkají pouze informativních účelů a nevyžadují žádný zásah.
 
- Upozornění obvykle signalizují, že hardwarovou podporu chybí, ale je možné pracovat kolem, není možné shromáždit čítače hardwaru nebo některé údaje o výkonu nemusí být spolehlivé – například při řešení má nepříznivý vliv na to.
+ Upozornění obvykle signalizují, že hardwarová podpora není k dispozici, ale lze je vypracovat, nelze shromáždit čítače hardwaru nebo některá data o výkonu nemusí být spolehlivá – například v případě, že by to nepříznivě ovlivnilo alternativní řešení.
 
- Chyby obvykle signalizují, že implementace analýzy snímků má chyby, ovladač obsahuje chyby, hardwarovou podporu chybí a nelze pracoval kolem nebo aplikace bude něco, co není podporovaná přehráváním.
+ Chyby obvykle signalizují, že implementace analýzy snímků má chyby, ovladač obsahuje chyby, hardwarová podpora není k dispozici a nelze ji vymezit nebo se aplikace pokusí o něco, co přehrávání nepodporuje.
 
-### <a name="retries"></a>Počet opakování
- Pokud GPU při přechodu stavu napájení během analýzy snímků, musí průchodu ovlivněné analýzy opakovat, protože GPU clockspeed změnit a relativní časování výsledky a tím zneplatněny.
+### <a name="retries"></a>Opakování
+ Pokud se GPU při analýze snímku dostanou přechodem do stavu napájení, je nutné opakovat úspěšnou analýzu, protože se změnila Clockspeed GPU a následně neověřené výsledky relativního časování.
 
- Analýza snímků omezuje počet 10 opakování. Pokud má vaše platforma agresivní spotřeby nebo prostřednictvím brány hodiny, může způsobit analýza snímků ohlásit chybu, protože došlo k překročení limitu opakování a selhání. Je možné zmírnit potíže resetováním řízení spotřeby vaší platformě a hodiny, bude méně agresivní, pokud ji povolí platformu omezování rychlosti.
+ Analýza snímků omezuje počet opakování na 10. Pokud vaše platforma má agresivní řízení spotřeby nebo časová omezení, může způsobit selhání analýzy snímků a nahlásit chybu, protože překročila limit opakování. Tento problém možná budete moct zmírnit tím, že resetujete řízení spotřeby vaší platformy a omezení rychlosti hodin na méně agresivní, pokud to platforma umožňuje.
 
-## <a name="HardwareSupport"></a> Hardwarovou podporu
+## <a name="HardwareSupport"></a>Hardwarová podpora
 
-### <a name="timestamps-and-occlusion-queries"></a>Časová razítka a uzavření dotazů
- Časová razítka jsou podporované na všech platformách, které podporují analýzu snímků. Hloubka uzavření dotazy – vyžadované pro čítač pixelů Occluded – jsou podporovány na platformách, které podporují úroveň funkcí 9.2 nebo vyšší.
+### <a name="timestamps-and-occlusion-queries"></a>Časová razítka a dotazy překrytí
+ Časová razítka jsou podporovaná na všech platformách, které podporují analýzu snímků. Podrobné dotazy překrytí – vyžadované pro čítač pixelů zastíněna – jsou podporované na platformách, které podporují úroveň funkcí 9,2 nebo vyšší.
 
 > [!NOTE]
-> I když časová razítka se podporuje na všech platformách, které podporují analýzu snímků, přesnost a důslednost časová razítka se liší od platformách.
+> Přestože jsou časová razítka podporována na všech platformách, které podporují analýzu snímků, přesnost a konzistence časových razítek se liší od platforem až po platformu.
 
 ### <a name="gpu-counters"></a>Čítače GPU
- Podpora GPU čítačů hardwaru je závislá na hardwaru.
+ Podpora hardwarových čítačů GPU je závislá na hardwaru.
 
- Vzhledem k tomu, že žádný počítač GPU nVidia, Intel nebo AMD v současné době nabízena podporuje čítačů hardwaru s GPU spolehlivě, analýza snímků neshromažďuje čítače z nich. Analýza snímků však čítačů hardwaru shromažďovat následující GPU, která je spolehlivě podporuje:
+ Vzhledem k tomu, že žádný počítač GPU, který aktuálně nenabízí procesory Intel, AMD nebo nVidia, podporuje spolehlivé hardwarové čítače GPU, analýza snímků neshromažďuje čítače z nich. Analýza snímků ale shromažďuje čítače hardwaru z následujícího GPU, který je spolehlivě podporuje:
 
 - nVidia T40 (Tegra4)
 
-  Žádná jiná platforma, která podporuje analýzu snímků shromažďuje čítače hardwarové GPU.
+  Žádná jiná platforma, která nepodporuje analýzu snímků, shromažďuje hardwarové čítače GPU.
 
 > [!NOTE]
-> Vzhledem k tomu čítačů hardwaru s GPU hardwarové prostředky, může trvat několik průchodů za účelem shromažďování kompletní sadu čítačů hardwaru pro každý typ variant vykreslování. V důsledku toho neurčené pořadí, ve které GPU se shromažďují čítače.
+> Vzhledem k tomu, že hardwarové čítače GPU jsou hardwarové prostředky, může trvat více průchodů, aby bylo možné shromáždit kompletní sadu hardwarových čítačů pro každou variantu vykreslování. V důsledku toho je pořadí, ve kterém se shromažďují počítadla GPU, neurčilo.
 
 ## <a name="unsupported-scenarios"></a>Nepodporované scénáře
- Některé z mnoha možností použití analýza snímků nejsou podporovány nebo jsou právě nápad.
+ Některé způsoby použití analýzy snímků nejsou podporované nebo se nejedná o špatný nápad.
 
-### <a name="playback-of-high-feature-level-captures-on-down-level-devices"></a>Zaznamená přehrávání vysokou úroveň funkcí na zařízeních s nižší úrovně
- V analyzátoru grafiky sady při přehrávání souboru protokolu grafiky, která používá vyšší úroveň funkcí než počítač pro přehrávání podporuje, se automaticky vrátí k technologiím WARP. V analýza snímků se explicitně nepřecházel k WARP a vygeneruje chybu, je užitečné pro zkoumání správnosti aplikace Direct3D, ale ne pro zkoumání jeho výkon.
+### <a name="playback-of-high-feature-level-captures-on-down-level-devices"></a>Přehrávání zachytávání na nejvyšší úrovni funkcí na zařízeních nižší úrovně
+ Při použití analyzátoru grafiky při přehrávání souboru protokolu grafiky, který používá vyšší úroveň funkcí než počítač pro přehrávání, se automaticky vrátí k pokřivení. V analýze snímků se explicitně nevrátí zpět na OSNOVu a vygeneruje chybu – OSNOVa je užitečná pro zkoumání správnosti vaší aplikace Direct3D, ale ne pro zkoumání jejího výkonu.
 
 > [!NOTE]
-> I když je potřeba vzít v úvahu problémy úroveň funkcí, můžete zachytit a přehrávání souborů na zařízeních a jiné hardwarové konfigurace protokolu grafiky. Protokol grafiky můžete přehrát zpět, dokud nebude obsahovat rozhraní API nebo použijte úrovní funkcí, které nejsou podporovány na počítači pro přehrávání souboru protokolu.
+> I když je důležité mít na paměti na úrovni funkcí problémy, můžete zachytit a přehrát soubory protokolu grafiky v různých konfiguracích hardwaru a zařízeních. Protokol grafiky se dá přehrát, dokud soubor protokolu neobsahuje rozhraní API nebo nepoužívá úrovně funkcí, které se na počítači pro přehrávání nepodporují.
 
 ### <a name="direct3d-10-and-lower"></a>Direct3D 10 a nižší
- Pokud vaše aplikace volá rozhraní API Direct3D 10, analýza snímků nebudou rozpoznávání nebo je profil, i když jsou rozpoznány a používají jiné nástroje pro analyzátor grafiky sady.
+ Pokud vaše aplikace volá rozhraní API Direct3D 10, analýza snímků nebude rozpoznána ani profilování, i když jsou rozpoznána a používána jinými nástroji pro analyzátor grafiky.
 
 > [!NOTE]
-> To platí jenom pro rozhraní Direct3D volání rozhraní API, které používáte, není úrovní funkcí.
+> To platí jenom pro volání rozhraní Direct3D API, která používáte, a ne na úrovně funkcí.
 
 ### <a name="warp"></a>WARP
- Analýza snímků je určena pro použití k profilu a zvýšení výkonu vykreslování na skutečný hardware. Spouštění analýzy snímků na zařízení WARP není zabráněno, ale není obvykle vhodné výkonu vzhledem k tomu, že běží na vyšší kategorie procesoru WARP je pomalejší než i nejméně podporující moderní GPU a protože WARP výkonu může značně lišit v závislosti na konkrétním procesoru je spuštěn na.
+ Analýza snímků je určena k profilování a zlepšení výkonu vykreslování na reálném hardwaru. Spuštění analýzy snímků na zařízeních s vysokým výkonem se neznemožňuje, ale většinou se to neprojeví, protože se špičkovým procesorem v horním procesorovém procesoru pracuje pomalu, než s nejmenšími dostupnými moderními grafickými procesory a vzhledem k tomu, že se výkon pokřivení může velmi běží na.
 
-## <a name="Variants"></a> Varianty
- Každá změna, kterou analýza snímků se provede tak, jak je vykreslen blok při přehrávání se označuje jako *variant*. Varianty, které zkoumá analýza snímků odpovídají běžné, je poměrně snadné provedených změn může zlepšit výkon při vykreslování nebo kvality vaší aplikace – například nezmenšit velikost této textury, komprese textur nebo povolte různé druhy anti-aliasing. Varianty přepsání kontextu obvykle vykreslování a parametry vaší aplikace. Toto je souhrn:
+## <a name="Variants"></a>Typy
+ Každá změna, kterou analýza snímků provede, způsobem, jakým je snímek vykreslen během přehrávání, je označována jako *varianta*. Varianty, které analyzuje rámec, jsou v souladu se společnými, poměrně jednoduchými změnami, které můžete využít ke zlepšení výkonu nebo vizuální kvality vaší aplikace, například ke zmenšení velikosti textur, použití komprese textury nebo povolení různé druhy ochrany proti aliasům. Varianty přepíšou obvyklý kontext vykreslování a parametry vaší aplikace. Tady je přehled:
 
-|Variant|Popis|
+|Varianty|Popis|
 |-------------|-----------------|
-|**Velikosti oblasti zobrazení 1 x 1**|Snižuje rozměry zobrazení na všechny cíle vykreslení na 1 × 1 pixelů.<br /><br /> Další informace najdete v tématu [varianta velikosti oblasti zobrazení 1 x 1](1x1-viewport-size-variant.md)|
-|**0x MSAA**|Zakáže více ukázka vyhlazování (MSAA) na všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0 x / 2 x / 4 x MSAA variant](0x-2x-4x-msaa-variants.md)|
-|**2x MSAA**|Umožňuje 2 x více ukázka vyhlazování (MSAA) na všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0 x / 2 x / 4 x MSAA variant](0x-2x-4x-msaa-variants.md)|
-|**4x MSAA**|Umožňuje 4 x více ukázka vyhlazování (MSAA) na všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0 x / 2 x / 4 x MSAA variant](0x-2x-4x-msaa-variants.md)|
-|**Filtrování bodu textury**|Nastaví režim filtrování `DXD11_FILTER_MIN_MAG_MIP_POINT` (bod filtrování textur) pro všechny ukázky odpovídající textury.<br /><br /> Další informace najdete v tématu [bod, bilineární, Trilinear a varianty Anisotropního filtrování textur](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|
-|**Filtrování varianty textury**|Nastaví režim filtrování `DXD11_FILTER_MIN_MAG_LINEAR_MIP_POINT` (varianty textury filtrování) pro všechny ukázky odpovídající textury.<br /><br /> Další informace najdete v tématu [bod, bilineární, Trilinear a varianty Anisotropního filtrování textur](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|
-|**Filtrování trilineárního textury**|Nastaví režim filtrování `DXD11_FILTER_MIN_MAG_MIP_LINEAR` (trilineárního textury filtrování) pro všechny ukázky odpovídající textury.<br /><br /> Další informace najdete v tématu [bod, bilineární, Trilinear a varianty Anisotropního filtrování textur](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|
-|**Textura anisotropního filtrování**|Nastaví režim filtrování `DXD11_FILTER_ANISOTROPIC` a `MaxAnisotropy` k `16` (16 x textury anisotropního filtrování) pro všechny ukázky odpovídající textury.<br /><br /> Další informace najdete v tématu [bod, bilineární, Trilinear a varianty Anisotropního filtrování textur](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|
-|**16bpp vykreslování cílového formátu**|Nastaví formát pixelu na `DXGI_FORMAT_B5G6R5_UNORM` (16bpp 565 formátu) pro všechny vykreslování cíle a backbuffers.<br /><br /> Další informace najdete v tématu [16bpp vykreslování cílového formátu typu Variant](16bpp-render-target-format-variant.md)|
-|**Generování Mipmap**|Umožňuje mapy mip na všechny textury, které nejsou cíle vykreslování.<br /><br /> Další informace najdete v tématu [varianta generování Mipmap](mip-map-generation-variant.md).|
-|**Rozměry textury polovinu**|Snižuje rozměrů textury na všechny textury, které nejsou cíle vykreslení na polovinu své původní velikosti v každém rozměru. Například 256 x 128 textury se zkrátilo na texely 128 x 64.<br /><br /> Další informace najdete v tématu [Half/Quarter textury dimenze Variant](half-quarter-texture-dimensions-variant.md).|
-|**Rozměry textury čtvrtletí**|Snižuje rozměrů textury na všechny textury, které nejsou cíle vykreslování na čtvrtletí jejich původní velikost v každém rozměru. Například 256 x 128 textury sníží texely 64 x 32.<br /><br /> Další informace najdete v tématu [Half/Quarter textury dimenze Variant](half-quarter-texture-dimensions-variant.md).|
-|**Komprese textur BC**|Umožňuje zablokovat kompresi na všechny textury, které mají B8G8R8X8, B8G8R8A8 nebo R8G8B8A8 variant formát pixelu. Varianty formátu B8G8R8X8 komprimování pomocí BC1; S použitím BC3 jsou komprimované B8G8R8A8 a R8G8B8A8 formátu variant.<br /><br /> Další informace najdete v tématu [BC textury komprese Variant](bc-texture-compression-variant.md).|
+|**Velikost zobrazení 1x1**|Zmenší rozměry zobrazení na všech cílech vykreslování na 1x1 pixelů.<br /><br /> Další informace najdete v tématu [varianta velikosti zobrazení 1x1](1x1-viewport-size-variant.md) .|
+|**0x MSAA**|Zakáže multi-Sample anti-aliasing (MSAA) pro všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0x/2x/4x varianty rozhraní MSAA](0x-2x-4x-msaa-variants.md) .|
+|**2x MSAA**|Povoluje 2x multi-Sample anti-aliasing (MSAA) pro všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0x/2x/4x varianty rozhraní MSAA](0x-2x-4x-msaa-variants.md) .|
+|**4x 4x**|Povoluje 4x multi-Sample anti-aliasing (MSAA) pro všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0x/2x/4x varianty rozhraní MSAA](0x-2x-4x-msaa-variants.md) .|
+|**Filtrování textury bodu**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_MIP_POINT` (filtrování textury bodu) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|
+|**Varianty filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_LINEAR_MIP_POINT` (filtrování textury varianty) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|
+|**Trilineárního filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_MIP_LINEAR` (filtrování textury trilineárního) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|
+|**Anisotropního filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_ANISOTROPIC` a `MaxAnisotropy` na `16` (filtrování textury 16x anisotropního) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|
+|**Cílový formát vykreslování 16bpp**|Nastaví formát pixelu na `DXGI_FORMAT_B5G6R5_UNORM` (formát 16bpp, 565) pro všechny cíle vykreslování a přetečení.<br /><br /> Další informace najdete v tématu [variantu cílového formátu 16Bpp vykreslování](16bpp-render-target-format-variant.md) .|
+|**MIP – generování mapování**|Povoluje mapy MIP u všech textur, které nejsou cílem vykreslování.<br /><br /> Další informace najdete v tématu [varianta generace v mapě MIP](mip-map-generation-variant.md).|
+|**Rozměry s poloviční texturou**|Zmenší Rozměry textury na všech texturách, které nejsou v každé dimenzi cílem vykreslení na polovinu původní velikosti. Například textura 256x128 je zmenšena na 128x64 texelů.<br /><br /> Další informace najdete v tématu [variantní rozměry pro texturu v polovičním/čtvrtletí](half-quarter-texture-dimensions-variant.md).|
+|**Čtvrtletí – dimenze textury**|Zmenší Rozměry textury na všech texturách, které nejsou vykreslovatelné na čtvrtletí původní velikosti v každé dimenzi. Například textura 256x128 je zmenšena na 64x32 texelů.<br /><br /> Další informace najdete v tématu [variantní rozměry pro texturu v polovičním/čtvrtletí](half-quarter-texture-dimensions-variant.md).|
+|**Komprese textury BC**|Povoluje kompresi bloku na všech texturách, které mají variantu formátu B8G8R8X8, B8G8R8A8 nebo R8G8B8A8 pixelů. Varianty formátu B8G8R8X8 se komprimují pomocí BC1; Varianty formátu B8G8R8A8 a R8G8B8A8 se komprimují pomocí BC3.<br /><br /> Další informace naleznete v tématu [variace komprese textury BC](bc-texture-compression-variant.md).|
 
- Výsledek pro většinu varianty je doporučené: "Snížení velikosti textury na polovinu je 25 procent rychleji." nebo "Povolení 2 x MSAA je pouze 2 % pomaleji". Ostatní varianty může vyžadovat další výklad – například pokud variantu, která změní rozměry zobrazení 1 x 1 zobrazuje velké výkonnější, může to znamenat, že se tak s nízkou výplně mírou; bottlenecked vykreslování případně pokud neexistuje žádné významné změny ve výkonu, může to znamenat, že se zpracováním vrcholu bottlenecked vykreslování.
+ Výsledek pro většinu variant je doporučený: "zmenšení velikosti textury na polovinu je 25 procent rychlejší" nebo "povolení dvojnásobku MSAA je pouze 2% pomalejší". Jiné varianty můžou vyžadovat další výklad – například pokud varianta, která mění rozměry zobrazení na 1x1, ukazuje velký nárůst výkonu, může to znamenat, že vykreslování je kritické kvůli nízké rychlosti vyplňování; případně, pokud nedochází ke značným změnám ve výkonu, může to znamenat, že při zpracování vrcholu je problém kritický pro vykreslování.

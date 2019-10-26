@@ -1,6 +1,6 @@
 ---
-title: Ladění publikování Azure cloud service s použitím technologie IntelliTrace
-description: Zjistěte, jak ladění cloudové služby pomocí IntelliTrace a sady Visual Studio
+title: Ladění publikované cloudové služby Azure pomocí IntelliTrace
+description: Naučte se ladit cloudovou službu pomocí sady Visual Studio a IntelliTrace
 author: mikejo5000
 manager: jillfra
 ms.assetid: 5e6662fc-b917-43ea-bf2b-4f2fc3d213dc
@@ -9,71 +9,71 @@ ms.custom: seodec18
 ms.workload: azure-vs
 ms.date: 03/21/2017
 ms.author: mikejo
-ms.openlocfilehash: e5304011b27717f8967d2fc77c66c0cf0e6bc908
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 35e790f9651e0f358fe60dd7ebdc131496259102
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62555415"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911812"
 ---
 # <a name="debugging-a-published-azure-cloud-service-with-visual-studio-and-intellitrace"></a>Ladění publikované cloudové služby Azure pomocí sady Visual Studio a nástroje IntelliTrace
-Pomocí nástroje IntelliTrace můžete protokolovat podrobné ladicí informace pro instanci role při spuštění v Azure. Pokud je potřeba najít příčinu problému, můžete protokoly IntelliTrace ke krokování kódu ze sady Visual Studio, jako kdyby byly spuštěné v Azure. Nástroj IntelliTrace zaznamenává v důsledku toho klíčů provádění kódu a dat prostředí, když vaše aplikace Azure běží jako cloudová služba v Azure a umožňuje přehrát zaznamenaná data ze sady Visual Studio.
+Pomocí IntelliTrace můžete protokolovat rozsáhlé ladicí informace pro instanci role, když běží v Azure. Pokud potřebujete najít příčinu problému, můžete pomocí protokolů IntelliTrace Procházet kód ze sady Visual Studio, jako kdyby běžel v Azure. V důsledku toho IntelliTrace zaznamenává provádění kódu klíče a data prostředí, když je vaše aplikace Azure spuštěná jako cloudová služba v Azure a umožňuje přehrajte zaznamenaná data ze sady Visual Studio.
 
-Můžete použít nástroj IntelliTrace, pokud máte nainstalované Visual Studio Enterprise a vaše aplikace Azure cílí rozhraní .NET Framework 4 nebo novější. Nástroj IntelliTrace shromažďuje informace o Azure role. Virtuální počítače pro tyto role ke spuštění vždy 64bitové operační systémy.
+IntelliTrace můžete použít, pokud máte nainstalovaný Visual Studio Enterprise a vaše aplikace Azure cílí .NET Framework 4 nebo novější verze. IntelliTrace shromažďuje informace pro vaše role Azure. Virtuální počítače pro tyto role vždycky spouštějí 64 operační systémy.
 
-Jako alternativu můžete použít [vzdálené ladění](http://go.microsoft.com/fwlink/p/?LinkId=623041) připojit přímo do cloudové služby, na kterém běží v Azure.
+Alternativně můžete [vzdálené ladění](vs-azure-tools-debugging-cloud-services-overview.md) použít k přímému připojení ke cloudové službě běžící v Azure.
 
 > [!IMPORTANT]
-> Nástroj IntelliTrace je určená pro účely ladění pouze a neměl by se používat pro produkční nasazení.
+> IntelliTrace je určený jenom pro scénáře ladění a neměl by se používat pro produkční nasazení.
 >
 
-## <a name="configure-an-azure-application-for-intellitrace"></a>Konfigurace aplikace Azure pro technologii IntelliTrace
-K povolení technologie IntelliTrace pro aplikaci Azure, musíte vytvořit a publikovat aplikace z projektu sady Visual Studio v Azure. Před publikováním na Azure, je nutné nakonfigurovat nástroj IntelliTrace pro vaše aplikace Azure. Pokud publikujete aplikaci bez nástroje IntelliTrace, budete muset znovu publikujte projekt. Další informace najdete v tématu [publikování Azure cloud services projektů s použitím sady Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=623012).
+## <a name="configure-an-azure-application-for-intellitrace"></a>Konfigurace aplikace Azure pro IntelliTrace
+Pokud chcete povolit IntelliTrace pro aplikaci Azure, musíte vytvořit a publikovat aplikaci z projektu Visual Studio Azure. Musíte nakonfigurovat IntelliTrace pro aplikaci Azure ještě před tím, než ji publikujete do Azure. Pokud publikujete aplikaci bez konfigurace IntelliTrace, je nutné projekt znovu publikovat. Další informace najdete v tématu [publikování projektů cloudových služeb Azure pomocí sady Visual Studio](vs-azure-tools-publishing-a-cloud-service.md).
 
-1. Až budete připravení nasadit vaše aplikace Azure, ověřte, že váš projekt cílí sestavení jsou nastaveny na **ladění**.
+1. Až budete připraveni k nasazení aplikace Azure, ověřte, že cíle sestavení projektu jsou nastavené na **ladění**.
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a v místní nabídce vyberte **publikovat**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a v místní nabídce vyberte **publikovat**.
 
-1. V **publikování aplikaci Azure** dialogového okna, vyberte předplatné Azure a vyberte **Další**.
+1. V dialogovém okně **publikovat aplikaci Azure** vyberte předplatné Azure a **pak vyberte další**.
 
-1. V **nastavení** stránky, vyberte **Upřesnit nastavení** kartu.
+1. Na stránce **Nastavení** vyberte kartu **Rozšířená nastavení** .
 
-1. Zapnout **povolit IntelliTrace** možnost shromažďovat protokoly IntelliTrace pro vaši aplikaci, když je publikován v cloudu.
+1. Zapněte možnost **Povolit IntelliTrace** pro shromažďování protokolů IntelliTrace pro vaši aplikaci, když je publikovaná v cloudu.
 
-1. Chcete-li přizpůsobit základní konfigurace technologie IntelliTrace, vyberte **nastavení** vedle **povolit IntelliTrace**.
+1. Pokud chcete přizpůsobit základní konfiguraci IntelliTrace, vyberte **Nastavení** vedle možnosti **Povolit IntelliTrace**.
 
-    ![Odkaz nastavení IntelliTrace](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/intellitrace-settings-link.png)
+    ![Odkaz na nastavení IntelliTrace](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/intellitrace-settings-link.png)
 
-1. V **nastavení IntelliTrace** dialogového okna, můžete zadat události do protokolu, jestli se má shromažďovat informace o volání, které moduly a procesy pro shromažďování protokolů pro a tom, kolik místa k přidělení na záznam. Další informace o IntelliTrace naleznete v tématu [ladění pomocí nástroje IntelliTrace](http://go.microsoft.com/fwlink/?LinkId=214468).
+1. V dialogovém okně **Nastavení IntelliTrace** můžete určit, které události se mají protokolovat, jestli se mají shromažďovat informace o voláních, které moduly a procesy mají shromažďovat protokoly, a kolik místa k záznamu se má přidělit. Další informace o IntelliTrace naleznete v tématu [ladění pomocí IntelliTrace](../debugger/intellitrace.md).
 
-    ![Nastavení technologie IntelliTrace](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/IC519063.png)
+    ![Nastavení IntelliTrace](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/IC519063.png)
 
-Protokol nástroje IntelliTrace je cyklická soubor protokolu o maximální velikosti zadaného v nastavení nástroje IntelliTrace (výchozí velikost je 250 MB). Do souboru v systému souborů virtuálního počítače jsou shromážděné protokoly IntelliTrace. Pokud si vyžádáte protokoly, snímku je přijata od tohoto okamžiku v čase a stáhnou do místního počítače.
+Protokol IntelliTrace je Cyklický soubor protokolu s maximální velikostí zadanou v nastavení IntelliTrace (výchozí velikost je 250 MB). Protokoly IntelliTrace jsou shromažďovány do souboru v systému souborů virtuálního počítače. Když vyžádáte protokoly, v tomto okamžiku se vytvoří snímek a stáhne se do místního počítače.
 
-Po publikování cloudové služby Azure do Azure, můžete určit, pokud nástroj IntelliTrace je povolen v Azure uzlu **Průzkumníka serveru**, jak je znázorněno na následujícím obrázku:
+Po publikování cloudové služby Azure do Azure můžete zjistit, jestli je IntelliTrace povolený z uzlu Azure v **Průzkumník serveru**, jak je znázorněno na následujícím obrázku:
 
-![Průzkumník serveru – IntelliTrace povoleno](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/IC744134.png)
+![Průzkumník serveru – IntelliTrace povolen](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/IC744134.png)
 
-## <a name="download-intellitrace-logs-for-a-role-instance"></a>Stáhnout protokoly IntelliTrace pro instanci role
-Pomocí sady Visual Studio, si můžete stáhnout protokoly IntelliTrace pro instanci role pomocí následujících kroků:
+## <a name="download-intellitrace-logs-for-a-role-instance"></a>Stažení protokolů IntelliTrace pro instanci role
+Pomocí sady Visual Studio můžete stáhnout protokoly IntelliTrace pro instanci role pomocí následujících kroků:
 
-1. V **Průzkumníka serveru**, rozbalte **Cloud Services** uzel a vyhledejte instance role, jehož protokoly chcete stáhnout.
+1. V **Průzkumník serveru**rozbalte uzel **Cloud Services** a najděte instanci role, jejíž protokoly chcete stáhnout.
 
-1. Klikněte pravým tlačítkem na instanci role a v místní nabídce s, vyberte **zobrazit protokoly IntelliTrace**.
+1. Klikněte pravým tlačítkem myši na instanci role a v kontextové nabídce s vyberte **Zobrazit protokoly IntelliTrace**.
 
-    ![Zobrazit možnost nabídky protokoly IntelliTrace](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/view-intellitrace-logs.png)
+    ![Zobrazit možnost nabídky protokolů IntelliTrace](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/view-intellitrace-logs.png)
 
-1. Protokoly IntelliTrace se stáhnou do souboru v adresáři v místním počítači. Protokoluje pokaždé, když, abyste si vyžádali nástroje IntelliTrace, je vytvořen nový snímek. Během stahování protokolů, Visual Studio zobrazí průběh operace **protokolu aktivit Azure** okna. Jak je znázorněno na následujícím obrázku, můžete rozbalit položku řádku pro operace, která se zobrazí podrobnější údaje.
+1. Protokoly IntelliTrace se stáhnou do souboru v adresáři na místním počítači. Pokaždé, když požádáte o protokoly IntelliTrace, vytvoří se nový snímek. Během stahování protokolů Visual Studio zobrazí průběh operace v okně **protokolu aktivit Azure** . Jak je znázorněno na následujícím obrázku, můžete rozbalit položku řádku pro operaci a zobrazit tak další podrobnosti.
 
 ![VST_IntelliTraceDownloadProgress](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/IC745551.png)
 
-Můžete pokračovat v práci v sadě Visual Studio při stahování protokolu IntelliTrace. Po dokončení stahování protokolu se otevře v sadě Visual Studio.
+Během stahování protokolů IntelliTrace můžete pokračovat v práci v aplikaci Visual Studio. Až se stahování protokolu dokončí, otevře se v aplikaci Visual Studio.
 
 > [!NOTE]
-> Protokoly nástroje IntelliTrace může obsahovat výjimky, které rozhraní framework generuje a zpracovává později. Interní rámec kód generuje tyto výjimky v rámci normálního spouštění role, takže může bezpečně ignorovat.
+> Protokoly IntelliTrace mohou obsahovat výjimky, které rozhraní generuje a následně zpracuje. Kód interního rozhraní generuje tyto výjimky jako normální součást spuštění role, takže je můžete bezpečně ignorovat.
 >
 >
 
 ## <a name="next-steps"></a>Další kroky
-- [Možnosti pro ladění cloudových služeb Azure](vs-azure-tools-debugging-cloud-services-overview.md)
+- [Možnosti ladění cloudových služeb Azure](vs-azure-tools-debugging-cloud-services-overview.md)
 - [Publikování cloudové služby Azure pomocí sady Visual Studio](vs-azure-tools-publishing-a-cloud-service.md)

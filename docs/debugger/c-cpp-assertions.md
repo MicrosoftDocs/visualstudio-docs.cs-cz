@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e2e6d69e4c621d6be81a00a61482b71199bc0fc
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f7ac27b46252582b3982082a2a9a90a09223574f
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745754"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911609"
 ---
 # <a name="cc-assertions"></a>Kontrolní výrazy jazyka C/C++
 Příkaz kontrolního výrazu Určuje podmínku, kterou očekáváte, že bude platit v bodě programu. Pokud tato podmínka není pravdivá, kontrolní výraz se nezdařil, provádění programu je přerušeno a zobrazí se [dialogové okno kontrolní výraz selhal](../debugger/assertion-failed-dialog-box.md) .
@@ -109,7 +109,7 @@ SOUBORU Crtdbg. Soubor hlaviček H definuje [makra _ASSERT a _ASSERTE](/cpp/c-ru
 | Podokně | Výsledek |
 |------------| - |
 | `_ASSERT` | Pokud se zadaný výraz vyhodnotí jako FALSE, název souboru a číslo řádku `_ASSERT`. |
-| `_ASSERTE` | Stejné jako `_ASSERT` a také řetězcové vyjádření výrazu, který byl uplatněn. |
+| `_ASSERTE` | Stejné jako `_ASSERT`a také řetězcové vyjádření výrazu, který byl uplatněn. |
 
 `_ASSERTE` je výkonnější, protože oznamuje výraz, který je vyměněn jako nepravdivý. To může být dostačující k identifikaci problému bez odkazování na zdrojový kód. Ladicí verze aplikace však bude obsahovat řetězcovou konstantu pro každý výraz, který je vydaný pomocí `_ASSERTE`. Použijete-li mnoho `_ASSERTE` maker, tyto řetězcové výrazy zabírají značnou velikost paměti. Pokud se to ukáže jako problém, použijte `_ASSERT` k uložení paměti.
 
@@ -169,7 +169,7 @@ int x = SomeFunc(y);
 ASSERT(x >= 0);   //  Assertion fails if x is negative
 ```
 
-Můžete použít ASSERT s funkcí [IsKindOf](https://docs.microsoft.com/cpp/mfc/reference/cobject-class#iskindof) k poskytnutí kontroly typu argumentů funkce:
+Můžete použít ASSERT s funkcí [IsKindOf](/cpp/mfc/reference/cobject-class#iskindof) k poskytnutí kontroly typu argumentů funkce:
 
 ```cpp
 ASSERT( pObject1->IsKindOf( RUNTIME_CLASS( CPerson ) ) );
@@ -178,7 +178,7 @@ ASSERT( pObject1->IsKindOf( RUNTIME_CLASS( CPerson ) ) );
 Makro `ASSERT` negeneruje ve vydané verzi žádný kód. Pokud potřebujete vyhodnotit výraz ve vydané verzi, použijte místo výrazu ASSERT makro [verify](https://msdn.microsoft.com/library/s8c29sw2.aspx#verify) .
 
 ### <a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a>MFC ASSERT_VALID a CObject:: AssertValid
-Metoda [CObject:: AssertValid](https://docs.microsoft.com/cpp/mfc/reference/cobject-class#assertvalid) zajišťuje kontroly vnitřního stavu objektu v době běhu. I když nemusíte přepsat `AssertValid` při odvozování vaší třídy z `CObject`, můžete tuto třídu lépe spolehlivit. `AssertValid` by měl provádět kontrolní výrazy pro všechny členské proměnné objektu pro ověření, že obsahují platné hodnoty. Například by měla kontrolovat, že proměnné členů ukazatele nejsou NULL.
+Metoda [CObject:: AssertValid](/cpp/mfc/reference/cobject-class#assertvalid) zajišťuje kontroly vnitřního stavu objektu v době běhu. I když nemusíte přepsat `AssertValid` při odvozování vaší třídy z `CObject`, můžete tuto třídu lépe spolehlivit. `AssertValid` by měl provádět kontrolní výrazy pro všechny členské proměnné objektu pro ověření, že obsahují platné hodnoty. Například by měla kontrolovat, že proměnné členů ukazatele nejsou NULL.
 
 Následující příklad ukazuje, jak deklarovat funkci `AssertValid`:
 

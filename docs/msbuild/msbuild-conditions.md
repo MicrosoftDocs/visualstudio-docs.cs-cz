@@ -1,5 +1,5 @@
 ---
-title: Podmínky nástroje MSBuild | Dokumentace Microsoftu
+title: Podmínky nástroje MSBuild | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,30 +16,30 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b1070483e492bbbf6cc9f6e9f4a8f4b225f2b74b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cf77e4630cd52e8dcb354b5625ae24eabc9d8ae9
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62842458"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72912075"
 ---
 # <a name="msbuild-conditions"></a>Podmínky nástroje MSBuild
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] podporuje konkrétní sadu podmínek, které lze použít všude, kde `Condition` atribut je povolen. Následující tabulka vysvětluje tyto podmínky.
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] podporuje konkrétní sadu podmínek, které lze použít všude, kde je povolen atribut `Condition`. Tyto podmínky jsou vysvětleny v následující tabulce.
 
 |Podmínka|Popis|
 |---------------|-----------------|
-|'`stringA`' == '`stringB`'|Vyhodnotí jako `true` Pokud `stringA` rovná `stringB`.<br /><br /> Příklad:<br /><br /> `Condition="'$(CONFIG)'=='DEBUG'"`<br /><br /> Jednoduché uvozovky nejsou požadována pro jednoduché alfanumerické řetězce nebo logické hodnoty. Nicméně jednoduché uvozovky jsou povinné pro prázdné hodnoty.|
-|'`stringA`' != '`stringB`'|Vyhodnotí jako `true` Pokud `stringA` není roven `stringB`.<br /><br /> Příklad:<br /><br /> `Condition="'$(CONFIG)'!='DEBUG'"`<br /><br /> Jednoduché uvozovky nejsou požadována pro jednoduché alfanumerické řetězce nebo logické hodnoty. Nicméně jednoduché uvozovky jsou povinné pro prázdné hodnoty.|
-|\<, >, \<=, >=|Číselné hodnoty z operandů vyhodnotí. Vrátí `true` Pokud relační vyhodnocení má hodnotu true. Operandy musí vyhodnotit na desítkové nebo šestnáctkové číslo. Šestnáctková čísla musí začínat řetězcem "0 x". **Poznámka:**  V kódu XML znaky `<` a `>` musí být uvozeny řídicími znaky. Symbol `<` je vyjádřena jako `&lt;`. Symbol `>` je vyjádřena jako `&gt;`.|
-|Existuje ("`stringA`")|Vyhodnotí jako `true` Pokud soubor nebo složka s názvem `stringA` existuje.<br /><br /> Příklad:<br /><br /> `Condition="!Exists('$(builtdir)')"`<br /><br /> Jednoduché uvozovky nejsou požadována pro jednoduché alfanumerické řetězce nebo logické hodnoty. Nicméně jednoduché uvozovky jsou povinné pro prázdné hodnoty.|
-|HasTrailingSlash('`stringA`')|Vyhodnotí jako `true` Pokud zadaný řetězec obsahuje buď koncové zpětné lomítko (\\) nebo předávání znak lomítka (/).<br /><br /> Příklad:<br /><br /> `Condition="!HasTrailingSlash('$(OutputPath)')"`<br /><br /> Jednoduché uvozovky nejsou požadována pro jednoduché alfanumerické řetězce nebo logické hodnoty. Nicméně jednoduché uvozovky jsou povinné pro prázdné hodnoty.|
-|!|Vyhodnotí jako `true` Pokud operand je vyhodnocen jako `false`.|
-|A|Vyhodnotí jako `true` Pokud mají oba operandy `true`.|
-|Nebo|Vyhodnotí jako `true` Pokud se alespoň jeden z operandů vyhodnotí jako `true`.|
-|()|Seskupovací mechanismus, který se vyhodnotí `true` Pokud výrazy obsažené uvnitř `true`.|
-|$if$ (% výrazem %), $else$, $endif$|Kontroluje, zda zadaný `%expression%` shoduje s hodnotou řetězce parametr předaný vlastní šablony. Pokud `$if$` podmínka vyhodnocena jako `true`, pak jeho příkazy spuštění; v opačném případě `$else$` podmínka je zaškrtnuté políčko. Pokud `$else$` podmínka je `true`, pak jeho příkazy spuštění; v opačném případě `$endif$` podmínka ukončení vyhodnocení výrazu.<br /><br /> Příklady využití naleznete v tématu [logiky parametr šablony projektu/položky sady Visual Studio](http://stackoverflow.com/questions/6709057/visual-studio-project-item-template-parameter-logic).|
+|' `stringA`' = '`stringB`'|Vyhodnotí na `true`, pokud `stringA` rovná `stringB`.<br /><br /> Příklad:<br /><br /> `Condition="'$(CONFIG)'=='DEBUG'"`<br /><br /> Pro jednoduché alfanumerické řetězce nebo logické hodnoty se nevyžadují jednoduché uvozovky. Pro prázdné hodnoty jsou však požadovány jednoduché uvozovky.|
+|' `stringA`'! = '`stringB`'|Vyhodnotí na `true`, pokud `stringA` není rovno `stringB`.<br /><br /> Příklad:<br /><br /> `Condition="'$(CONFIG)'!='DEBUG'"`<br /><br /> Pro jednoduché alfanumerické řetězce nebo logické hodnoty se nevyžadují jednoduché uvozovky. Pro prázdné hodnoty jsou však požadovány jednoduché uvozovky.|
+|\<, >, \<=, > =|Vyhodnotí číselné hodnoty operandů. Vrátí `true`, pokud je relační vyhodnocení true. Operandy musí být vyhodnoceny jako desítkové nebo šestnáctkové číslo. Šestnáctková čísla musí začínat znakem "0x". **Poznámka:**  V jazyce XML musí být znaky `<` a `>` uvozeny řídicími znaky. Symbol `<` je reprezentován jako `&lt;`. Symbol `>` je reprezentován jako `&gt;`.|
+|Existuje ('`stringA`')|Vyhodnotí pro `true`, jestli existuje soubor nebo složka s názvem `stringA`.<br /><br /> Příklad:<br /><br /> `Condition="!Exists('$(builtdir)')"`<br /><br /> Pro jednoduché alfanumerické řetězce nebo logické hodnoty se nevyžadují jednoduché uvozovky. Pro prázdné hodnoty jsou však požadovány jednoduché uvozovky.|
+|HasTrailingSlash ('`stringA`')|Vyhodnotí na `true`, pokud zadaný řetězec obsahuje buď koncové zpětné lomítko (\\), nebo znak lomítka (/).<br /><br /> Příklad:<br /><br /> `Condition="!HasTrailingSlash('$(OutputPath)')"`<br /><br /> Pro jednoduché alfanumerické řetězce nebo logické hodnoty se nevyžadují jednoduché uvozovky. Pro prázdné hodnoty jsou však požadovány jednoduché uvozovky.|
+|!|Vyhodnotí na `true`, pokud je operand vyhodnocen jako `false`.|
+|Ani|Vyhodnotí na `true`, pokud se oba operandy vyhodnotí jako `true`.|
+|Nebo|Vyhodnotí na `true`, pokud se alespoň jeden z operandů vyhodnocuje jako `true`.|
+|()|Mechanismus seskupení, který se vyhodnotí jako `true`, pokud jsou výrazy obsažené uvnitř vyhodnoceny jako `true`.|
+|$if $ (% Expression%), $else $, $endif $|Kontroluje, zda zadaný `%expression%` odpovídá hodnotě řetězce předaného parametru vlastní šablony. Pokud je podmínka `$if$` vyhodnocena jako `true`, pak se jejich příkazy spouštějí; v opačném případě je zaškrtnuta podmínka `$else$`. Pokud je `$else$` podmínka `true`, pak se spustí jeho příkazy; v opačném případě `$endif$` podmínka ukončí vyhodnocení výrazu.<br /><br /> Příklady použití naleznete v tématu [Logical Project/Item Template Parameter Logic](https://stackoverflow.com/questions/6709057/visual-studio-project-item-template-parameter-logic).|
 
 ## <a name="see-also"></a>Viz také:
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
 - [Podmíněné konstrukce](../msbuild/msbuild-conditional-constructs.md)
-- [Návod: Vytvoření souboru projektu MSBuild od začátku](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)
+- [Návod: vytvoření souboru projektu MSBuild od začátku](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)

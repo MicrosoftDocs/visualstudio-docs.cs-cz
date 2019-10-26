@@ -1,5 +1,5 @@
 ---
-title: Nástroje pro měření výkonu pro aplikace z Windows 8 a Windows Server 2012
+title: Nástroje pro sledování výkonu ve Windows 8 & aplikacích pro Windows Server 2012
 ms.date: 06/19/2017
 ms.topic: conceptual
 author: mikejo5000
@@ -7,118 +7,118 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 69b817af15b782ebd1e281d51855d62b11e8f470
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 8a42651792848ffd4de9eccb40c2949d113b10b4
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66262959"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911888"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Nástroje pro výkon v aplikacích pro Windows 8 a Windows Server 2012
 
-Rozšířené funkce zabezpečení v systému Windows 8 a Windows Server 2012 požadované významných změnách v nástroji Sledování výkonu sady Visual Studio způsob, jak shromažďovat data na těchto platformách. U aplikací pro UPW také vyžadují nové techniky kolekce. Toto téma popisuje změny pro nástroje pro měření výkonu spouští na platformách systému Windows 8 a Windows Server 2012.
+Rozšířené funkce zabezpečení spouštěné ve Windows 8 a Windows Serveru 2012 vyžadují významné změny ve způsobu, jakým nástroje pro výkon sady Visual Studio shromažďují data na těchto platformách. Aplikace pro UWP také vyžadují nové techniky shromažďování. Toto téma popisuje změny pro nástroje pro sledování výkonu, které začínají na platformách Windows 8 a Windows Server 2012.
 
 > [!NOTE]
-> Sada Performance tools for ostatní podporované verze Windows (Windows 7, Windows Server 2008 R2) se nezměnily.
+> Nástroje výkonu pro jiné podporované verze systému Windows (Windows 7, Windows Server 2008 R2) se nezměnily.
 
-## <a name="collect-data-on-uwp-apps-from-the-visual-studio-ide"></a>Shromažďování dat v aplikacích pro UWP v integrovaném vývojovém prostředí sady Visual Studio
+## <a name="collect-data-on-uwp-apps-from-the-visual-studio-ide"></a>Shromažďování dat aplikací pro UWP z integrovaného vývojového prostředí (IDE) sady Visual Studio
 
-Při profilování aplikace pro UPW, která je napsána v jazyce JavaScript a HTML 5, shromažďování dat instrumentace pro kód jazyka JavaScript. Při profilování aplikace pro UPW nebo komponenty, která je napsána v jazyce Visual C++, Visual C# nebo Visual Basic, shromažďování dat vzorkování pro nativního a spravovaného kódu. Aplikace můžete Profilovat, místně nebo ve vzdáleném počítači.
+Při profilování aplikace pro UWP, která je napsaná v JavaScriptu a HTML 5, shromažďujete data instrumentace pro kód JavaScriptu. Při profilování aplikace pro UWP nebo komponenty, která je napsaná C++v jazyce C#visual, vizuálu nebo Visual Basic, shromažďujete data vzorkování pro nativní a spravovaný kód. Svou aplikaci můžete profilovat lokálně nebo na vzdáleném počítači.
 
-Tyto profilování funkce a možnosti nejsou podporovány při profilování aplikací pro UPW:
+Tyto funkce profilování a možnosti se při profilování aplikací pro UWP nepodporují:
 
-- Profilace aplikací jazyka JavaScript pomocí metody odběru vzorků.
+- Profilování aplikací JavaScriptu pomocí metody vzorkování.
 - Profilace spravovaného a nativního kódu pomocí metody instrumentace.
-- Profilace souběžnosti
-- Profilování paměti .NET
-- Interakce vrstev (TIP) pro profilaci
-- Možnosti vzorkování, například nastavit událost odběru vzorků a interval časování nebo shromažďování dat čítače výkonu Další.
-- Instrumentace možnosti, jako je shromažďování dat čítačů windows a výkonu nebo zadání další možnosti příkazového řádku.
+- Profilace souběžného zpracování
+- Profilace paměti .NET
+- Profilace interakce vrstev (TIP)
+- Možnosti vzorkování, jako je například nastavení události vzorkování a intervalu časování nebo shromažďování dalších dat čítače výkonu.
+- Možnosti instrumentace, jako je například shromažďování výkonu a dat čítače systému Windows nebo určení dalších možností příkazového řádku.
 
-Další informace o vytváření profilů aplikací pro UWP najdete v následujících článcích:
+Další informace o profilování aplikací pro UWP najdete v následujících článcích:
 
 - [Spouštění aplikací pro UWP v místním počítači](/visualstudio/debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml)
 - [Spouštění aplikací pro UWP ve vzdáleném počítači](../debugger/run-windows-store-apps-on-a-remote-machine.md)
-- [Nejdřív se podívejte na nástroje pro profilaci](profiling-feature-tour.md)
-- [Paměti jazyka JavaScript](../profiling/javascript-memory.md)
-- [Kód profilu Visual C++, Visual C# a Visual Basic v aplikacích pro UWP v místním počítači](https://msdn.microsoft.com/2d0c939e-0bac-48c5-b727-46f6c6113060)
-- [Kód profilu Visual C++, Visual C# a Visual Basic v aplikacích pro UWP ve vzdáleném zařízení](https://msdn.microsoft.com/b932a2be-11b0-40fd-b996-75c6b6a79d22)
-- [Analýza výkonnostních dat pro kód jazyka Visual C++, Visual C# a Visual Basic v aplikacích pro UWP](https://msdn.microsoft.com/5de4a413-d924-425f-afc4-e1ecfb0fca18)
+- [První pohled na nástroje pro profilaci](profiling-feature-tour.md)
+- [Paměť JavaScriptu](../profiling/javascript-memory.md)
+- [Vizuální C++kód, vizuál C#a Visual Basic kódu v aplikacích pro UWP na místním počítači](https://msdn.microsoft.com/2d0c939e-0bac-48c5-b727-46f6c6113060)
+- [Vizuální C++kód, vizuál C#a Visual Basic kódu v aplikacích pro UWP na vzdáleném zařízení](https://msdn.microsoft.com/b932a2be-11b0-40fd-b996-75c6b6a79d22)
+- [Analýza údajů o výkonu pro C++vizuál, C#vizuál a Visual Basic kódu v aplikacích pro UWP](https://msdn.microsoft.com/5de4a413-d924-425f-afc4-e1ecfb0fca18)
 
-## <a name="collect-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-from-the-visual-studio-ide"></a>Shromažďování dat na aplikace, které běží na ploše systému Windows 8 nebo Windows serveru 2012 z integrovaného vývojového prostředí sady Visual Studio
+## <a name="collect-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-from-the-visual-studio-ide"></a>Shromažďovat data o aplikacích spuštěných na desktopu Windows 8 nebo na Windows Serveru 2012 z integrovaného vývojového prostředí (IDE) sady Visual Studio
 
-Profilace pomocí metody instrumentace nedošlo ke změně pro systém Windows 8.
+Profilace pomocí metody instrumentace se pro systém Windows 8 nezměnila.
 
-Interakce vrstev (TIP) profilace není podporováno pomocí metody vzorkování.
+Profilace interakce vrstev (TIP) není podporována pomocí metody vzorkování.
 
-## <a name="collect-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-by-using-sampling-from-the-visual-studio-ide"></a>Shromažďování dat na aplikace, které běží na ploše systému Windows 8 nebo Windows Server 2012 s použitím vzorkování z integrovaného vývojového prostředí sady Visual Studio
+## <a name="collect-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-by-using-sampling-from-the-visual-studio-ide"></a>Shromažďování dat z aplikací běžících na desktopu Windows 8 nebo na Windows Serveru 2012 pomocí vzorkování z integrovaného vývojového prostředí (IDE) sady Visual Studio
 
-Tyto profilování funkce a možnosti nejsou podporovány při profilování desktopových aplikací Windows 8 nebo Windows Server 2012 aplikace pomocí metody vzorkování:
+Tyto funkce profilování a možnosti se nepodporují při profilování aplikací pro stolní počítače s Windows 8 nebo Windows Server 2012 pomocí metody vzorkování:
 
-- Profilace sledováním interakce vrstev (TIP). Shromažďování dat TIP je podporován pomocí instrumentace.
+- Profilace interakce vrstev (TIP). Shromažďování dat s tipem je podporované pomocí instrumentace.
 
-- Možnosti, jako je nastavení událost odběru vzorků a interval časování nebo shromažďování dat čítače výkonu Další vzorkování.
+- Možnosti vzorkování, jako je například nastavení události vzorkování a intervalu časování nebo shromažďování dalších dat čítače výkonu.
 
 ## <a name="profile-from-the-command-line"></a>Profil z příkazového řádku
 
-Ke shromažďování dat profilace na zařízeních s Windows 8 a Windows Server 2012, včetně zařízení, která není nutné instalaci sady Visual Studio, použijte dva nástroje příkazového řádku:
+K shromažďování dat profilování na zařízeních se systémem Windows 8 a Windows Server 2012 můžete použít dva nástroje příkazového řádku, včetně zařízení, která nemají instalaci sady Visual Studio:
 
 |Název nástroje|Popis|
 |---------------|-----------------|
-|[VSPerf](../profiling/vsperf.md)|Shromažďuje data profilace z aplikací pro UWP a shromažďuje data profilace vzorku z aplikací klasické pracovní plochy systému Windows 8 a Windows Server 2012 aplikace...|
-|[VSPerfCmd](../profiling/vsperfcmd.md)|Shromažďuje instrumentace, souběžnost a data z aplikací, které jsou spuštěny na ploše sadě Windows 8 nebo Windows Server 2012 profilace interakce vrstev. Shromažďuje všechny typy dat profilování z předchozích verzí Windows.|
+|[VSPerf](../profiling/vsperf.md)|Shromažďuje data profilování z aplikací pro UWP a shromažďuje ukázková data profilování z aplikací pro stolní počítače s Windows 8 a aplikací Windows Server 2012.|
+|[VSPerfCmd](../profiling/vsperfcmd.md)|Shromažďuje data profilace, souběžnosti a interakce vrstev z aplikací, které běží v theWindows 8 Desktop nebo Windows Serveru 2012. Shromažďuje všechny typy dat profilování z předchozích verzí Windows.|
 
 Oba nástroje jsou nainstalovány se sadou Visual Studio pro použití v místním počítači.
 
-Do profilu aplikace na zařízeních, které nemají nainstalované, Visual Studio proveďte jednu z následujících akcí:
+Chcete-li Profilovat aplikace na zařízeních, ve kterých není nainstalována aplikace Visual Studio, proveďte jednu z následujících akcí:
 
-- Stáhněte si nástroje jako součást nástrojů Remote Tools for Visual Studio z [webu MSDN](http://go.microsoft.com/fwlink/?LinkID=219549).
+- Stáhněte si nástroje jako součást Remote Tools for Visual Studio z webu [MSDN](https://visualstudio.microsoft.com/#downloads+d-additional-software).
 
-- Kopírování a spusťte instalační program nástroje samostatného profileru z počítače Visual Studio. Chcete-li získat cestu k nástrojů pro profilaci, naleznete v tématu [zadejte cestu k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). Zvolte instalační program pro operační systém (x86/x64) vzdáleného počítače.
+- Zkopírujte a spusťte instalační program nástrojů samostatného profileru z počítače se systémem Visual Studio. Postup získání cesty k nástrojům pro profilaci najdete v tématu [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). Vyberte instalační program operačního systému (x86/x64) vzdáleného počítače.
 
 > [!NOTE]
-> Chcete-li shromažďovat data profilování TIP, musí instalace samostatného profileru z vašeho počítače Visual Studio na vzdáleném počítači.
+> Chcete-li shromáždit data profilování, je nutné nainstalovat samostatný Profiler z počítače se systémem Visual Studio na vzdáleném počítači.
 
-Tyto profilování funkce a možnosti nejsou podporovány při profilování aplikací Windows 8 a Windows Server 2012 z příkazového řádku:
+Tyto funkce a možnosti profilování nejsou podporované při profilování aplikací Windows 8 a Windows Server 2012 z příkazového řádku:
 
-- Shromažďování dat z webových aplikací systému Windows 8 a Windows Server 2012 pomocí režimu vzorkování s [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md).
+- Shromažďování dat z webových aplikací Windows 8 a Windows Server 2012 pomocí režimu vzorkování s [VSPerfASPNETCmd](../profiling/vsperfaspnetcmd.md).
 
-- Shromažďování dat vzorkování pomocí VsPerfCmd.exe.
+- Shromažďování dat vzorkování pomocí VsPerfCmd. exe.
 
-- Možnosti, jako je nastavení událost odběru vzorků a interval časování nebo shromažďování dat čítače výkonu Další vzorkování.
+- Možnosti vzorkování, jako je například nastavení události vzorkování a intervalu časování nebo shromažďování dalších dat čítače výkonu.
 
-## <a name="collect-tier-interaction-tip-data"></a>Shromažďování dat (TIP) interakce vrstev
+## <a name="collect-tier-interaction-tip-data"></a>Shromáždit data interakce vrstev (TIP)
 
-Profilování interakce vrstev poskytuje další informace o spuštění s úspěšností funkce víceúrovňových aplikací, které komunikují s databázemi prostřednictvím služeb ADO.NET. Data se shromažďují pouze pro synchronní volání.
+Profilace interakce vrstev poskytuje další informace o době spuštění funkcí vícevrstvých aplikací, které komunikují s databázemi prostřednictvím služby ADO.NET Services. Data jsou shromažďována pouze pro volání synchronních funkcí.
 
-**Visual Studio editions**
+**Edice sady Visual Studio**
 
-Data profilace interakce vrstev lze shromažďovat pomocí libovolné edice sady Visual Studio. Nicméně data profilace interakce vrstev lze zobrazit pouze v sadě Visual Studio Enterprise.
+Data profilování interakce vrstev je možné shromažďovat pomocí libovolné edice sady Visual Studio. Data profilování interakce vrstev ale můžete zobrazit jenom v Visual Studio Enterprise.
 
 **Windows 8 a Windows Server 2012**
 
-1. Ke shromažďování dat interakce vrstev z aplikací, které jsou spuštěny na ploše systému Windows 8 nebo Windows Server 2012, musíte použít metody instrumentace.
+1. Chcete-li shromáždit data interakce vrstev z aplikací, které jsou spuštěny v počítači se systémem Windows 8 nebo Windows Server 2012, je nutné použít metodu instrumentace.
 
-2. Nelze shromažďování dat interakce vrstev pro aplikace pro UPW.
+2. Nemůžete shromažďovat data interakce vrstev pro aplikace pro UWP.
 
-3. Dat interakce vrstev můžete zahrnout všechny metody profilování na ostatní podporované verze systému Windows.
+3. Data interakce vrstev můžete zahrnout do všech metod profilování v jiné podporované verzi systému Windows.
 
-**Průvodce výkonu a prohlížeč výkonu**
+**Průvodce výkonem a Prohlížeč výkonu**
 
-Je nutné přidat možnost kolekce dat interakce vrstvy do běhu profilování z prohlížeče výkonu. Musíte také přidat projekt, spustitelný soubor nebo web na cílový uzel prohlížeč výkonu. Zobrazit [shromažďování dat interakce vrstev](../profiling/collecting-tier-interaction-data.md).
+Je nutné přidat možnost shromažďování dat interakce vrstev ke spuštění profilace z Prohlížeč výkonu. Také je nutné přidat projekt, spustitelný soubor nebo web do cílového uzlu Prohlížeč výkonu. Viz [shromáždění dat interakce vrstev](../profiling/collecting-tier-interaction-data.md).
 
-**Shromažďování dat TIP na vzdáleném počítači**
+**Shromažďování dat s tipem na vzdáleném počítači**
 
-Ke shromažďování dat interakce vrstev ve vzdáleném počítači, je nutné zkopírovat **vs\_profiler\_** _\<platformy >_ **\_**  _\<Jazyk >_ **.exe** soubor *%VSInstallDir%\Team Tools\Setups nástroje* složky počítače do sady Visual Studio vzdáleném počítači a nainstalujte ho. Nelze použít v nástrojů pro profilaci [vzdálené ladění](../debugger/remote-debugging.md) stažení balíčku.
+Pokud chcete shromažďovat data interakce vrstev na vzdáleném počítači, musíte zkopírovat **\_\_profileru a** _\<platformy >_ **\_** souboru\<_jazyka_ **. exe** z *%VSINSTALLDIR%\Team Tools\Performance složka Tools\Setups* počítače sady Visual Studio ke vzdálenému počítači a nainstalujte ji. Nástroje pro profilaci nelze použít v balíčku pro stažení [vzdáleného ladění](../debugger/remote-debugging.md) .
 
-Můžete použít [VSPerfCmd](../profiling/vsperfcmd.md) nebo [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md) ke shromažďování dat profilování.
+K shromažďování dat profilace můžete použít [VSPerfCmd](../profiling/vsperfcmd.md) nebo [VSPerfASPNETCmd](../profiling/vsperfaspnetcmd.md) .
 
-**TIP sestavy**
+**Sestavy tipů**
 
-Dat interakce vrstev lze zobrazit pouze v sadě Visual Studio Enterprise. Interakce vrstev souborovému sestavy prostřednictvím [VSPerfReport](../profiling/vsperfreport.md) nejsou k dispozici.
+Data interakce vrstev se dají zobrazit jenom v Visual Studio Enterprise. Sestavy interakce na úrovni souborů prostřednictvím [VSPerfReport](../profiling/vsperfreport.md) nejsou k dispozici.
 
 ## <a name="see-also"></a>Viz také:
 
 [Prohlížeč výkonu](../profiling/performance-explorer.md)
-[konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)
+[konfigurace relací výkonu](../profiling/configuring-performance-sessions.md)
 [profilu z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 06/28/2018
 ms.author: mikejo
-ms.openlocfilehash: 911a366aa69cf0a45cb030bb83017895500ad32f
-ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
+ms.openlocfilehash: d8da94fc7b4735198eafa33edfe72cba0eb1ea59
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71962976"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911857"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>Nastavení diagnostiky pro službu Azure Cloud Services a virtuální počítače
 Pokud potřebujete řešit potíže s cloudovou službou Azure nebo virtuálním počítačem, můžete pomocí sady Visual Studio snadněji nastavit Azure Diagnostics. Diagnostika zaznamenává systémová data a data protokolování do virtuálních počítačů a instancí virtuálních počítačů, které spouštějí vaši cloudovou službu. Diagnostická data se přenesou na účet úložiště, který zvolíte. Další informace o protokolování diagnostiky v Azure najdete v tématu [Povolení protokolování diagnostiky pro Web Apps v Azure App Service](/azure/app-service/web-sites-enable-diagnostic-log).
@@ -28,15 +28,15 @@ K nastavení Azure Diagnostics můžete použít jednu z následujících možno
 ## <a name="azure-sdk-26-diagnostics-changes"></a>Změny diagnostiky Azure SDK 2,6
 Následující změny se vztahují na projekty Azure SDK 2,6 a novější v sadě Visual Studio:
 
-* Místní emulátor teď podporuje diagnostiku. To znamená, že můžete shromažďovat diagnostická data a zajistit, že vaše aplikace vytvoří správné trasování při vývoji a testování v aplikaci Visual Studio. Připojovací řetězec `UseDevelopmentStorage=true` zapne shromažďování diagnostických dat při spuštění projektu cloudové služby v sadě Visual Studio pomocí emulátoru úložiště Azure. Všechna diagnostická data se shromažďují v účtu úložiště pro vývoj.
+* Místní emulátor teď podporuje diagnostiku. To znamená, že můžete shromažďovat diagnostická data a zajistit, že vaše aplikace vytvoří správné trasování při vývoji a testování v aplikaci Visual Studio. Připojovací řetězec `UseDevelopmentStorage=true` při spuštění projektu cloudové služby v sadě Visual Studio pomocí emulátoru úložiště Azure zapne shromažďování diagnostických dat. Všechna diagnostická data se shromažďují v účtu úložiště pro vývoj.
 * Připojovací řetězec účtu úložiště diagnostiky `Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString` je uložený v souboru konfigurace služby (. cscfg). V sadě Azure SDK 2,5 je účet úložiště diagnostiky zadaný v souboru Diagnostics. wadcfgx.
 
 Připojovací řetězec funguje jinak v některých klíčových způsobech v sadě Azure SDK 2,6 a novější oproti Azure SDK 2,4 a staršímu:
 
 * V Azure SDK 2,4 a starších verzích se připojovací řetězec používá modulem plug-in pro diagnostiku k získání informací o účtu úložiště pro přenos diagnostických protokolů.
 * Sada Visual Studio v sadě Azure SDK 2,6 a novějších používá připojovací řetězec pro diagnostiku k nastavení rozšíření Azure Diagnostics s příslušnými informacemi o účtu úložiště během publikování. Připojovací řetězec můžete použít k definování různých účtů úložiště pro různé konfigurace služby, které aplikace Visual Studio používá během publikování. Vzhledem k tomu, že modul plug-in Diagnostika není po sadě Azure SDK 2,5 k dispozici, nemůže soubor. cscfg sám nastavit diagnostické rozšíření. Rozšíření musíte nastavit samostatně pomocí nástrojů, jako je Visual Studio nebo PowerShell.
-* Z důvodu zjednodušení procesu nastavení diagnostického rozšíření pomocí prostředí PowerShell obsahuje výstup balíčku ze sady Visual Studio pro rozšíření diagnostiky pro každou roli kód XML pro veřejnou konfiguraci. Visual Studio používá připojovací řetězec pro diagnostiku k naplnění informací o účtu úložiště ve veřejné konfiguraci. Veřejné konfigurační soubory se vytvoří ve složce rozšíření. Veřejné konfigurační soubory používají vzor pojmenování PaaSDiagnostics. &lt;role název @ no__t-1. PubConfig. XML. Jakékoli nasazení založené na prostředí PowerShell mohou pomocí tohoto modelu namapovat každou konfiguraci na roli.
-* [Azure Portal](http://go.microsoft.com/fwlink/p/?LinkID=525040) používá připojovací řetězec v souboru. cscfg pro přístup k diagnostickým datům. Data se zobrazí na kartě **monitorování** . Připojovací řetězec je nutný k nastavení služby pro zobrazení podrobných dat monitorování na portálu.
+* Z důvodu zjednodušení procesu nastavení diagnostického rozšíření pomocí prostředí PowerShell obsahuje výstup balíčku ze sady Visual Studio pro rozšíření diagnostiky pro každou roli kód XML pro veřejnou konfiguraci. Visual Studio používá připojovací řetězec pro diagnostiku k naplnění informací o účtu úložiště ve veřejné konfiguraci. Veřejné konfigurační soubory se vytvoří ve složce rozšíření. Veřejné konfigurační soubory používají vzor pojmenování PaaSDiagnostics.\>název&lt;role. PubConfig. XML. Jakékoli nasazení založené na prostředí PowerShell mohou pomocí tohoto modelu namapovat každou konfiguraci na roli.
+* [Azure Portal](https://portal.azure.com) používá připojovací řetězec v souboru. cscfg pro přístup k diagnostickým datům. Data se zobrazí na kartě **monitorování** . Připojovací řetězec je nutný k nastavení služby pro zobrazení podrobných dat monitorování na portálu.
 
 ## <a name="migrate-projects-to-azure-sdk-26-and-later"></a>Migrace projektů do Azure SDK 2,6 a novější
 Když migrujete ze sady Azure SDK 2,5 na sadu Azure SDK 2,6 nebo novější, pokud jste v souboru. wadcfgx měli zadaný účet úložiště diagnostiky, zůstane účet úložiště v tomto souboru. Pokud chcete využít flexibilitu při používání různých účtů úložiště pro různé konfigurace úložiště, přidejte do svého projektu připojovací řetězec ručně. Pokud migrujete projekt ze sady Azure SDK 2,4 nebo starší do sady Azure SDK 2,6, připojovací řetězce diagnostiky se zachovají. Všimněte si ale změn v tématu Jak se zpracovávají připojovací řetězce v sadě Azure SDK 2,6 popsané v předchozí části.
@@ -49,7 +49,7 @@ Když migrujete ze sady Azure SDK 2,5 na sadu Azure SDK 2,6 nebo novější, pok
 ### <a name="what-does-the-update-development-storage-connection-strings-check-box-do"></a>Co jsou připojovací řetězce pro aktualizaci vývoje pro vývoj... Chcete udělat zaškrtávací políčko?
 Možnost **aktualizace připojovacích řetězců úložiště pro vývoj pro diagnostiku a ukládání do mezipaměti s Microsoft Azure přihlašovací údaje účtu úložiště při publikování do Microsoft Azure** je pohodlný způsob, jak aktualizovat jakékoli připojení účtu úložiště pro vývoj. řetězce s účtem služby Azure Storage, který zadáte během publikování.
 
-Například pokud zaškrtnete toto políčko a připojovací řetězec diagnostiky určuje `UseDevelopmentStorage=true`, při publikování projektu do Azure Visual Studio automaticky aktualizuje připojovací řetězec diagnostiky s účtem úložiště, který jste zadali v části Průvodce publikováním. Pokud se ale skutečný účet úložiště zadal jako připojovací řetězec diagnostiky, použije se místo něj tento účet.
+Například pokud zaškrtnete toto políčko a připojovací řetězec diagnostiky určí `UseDevelopmentStorage=true`, při publikování projektu do Azure Visual Studio automaticky aktualizuje připojovací řetězec diagnostiky s účtem úložiště, který jste zadali v části Průvodce publikováním. Pokud se ale skutečný účet úložiště zadal jako připojovací řetězec diagnostiky, použije se místo něj tento účet.
 
 ## <a name="diagnostics-functionality-differences-in-azure-sdk-24-and-earlier-vs-azure-sdk-25-and-later"></a>Rozdíly v diagnostických funkcích v sadě Azure SDK 2,4 a starších verzích vs. Azure SDK 2,5 a novější
 Pokud upgradujete projekt ze sady Azure SDK 2,4 a starší na sadu Azure SDK 2,5 nebo novější, pamatujte na následující rozdíly v diagnostických funkcích:
@@ -67,7 +67,7 @@ V aplikaci Visual Studio můžete shromažďovat diagnostická data pro role, kt
 ### <a name="to-turn-on-diagnostics-in-visual-studio-before-deployment"></a>Zapnutí diagnostiky v aplikaci Visual Studio před nasazením
 
 1. V místní nabídce role vyberte možnost **vlastnosti**. V dialogovém okně **vlastnosti** role vyberte kartu **Konfigurace** .
-2. V **diagnostiky** části, ujistěte se, že **povolit diagnostiku** je zaškrtnuto políčko.
+2. V části **Diagnostika** se ujistěte, že je zaškrtnuté políčko **Povolit diagnostiku** .
 
     ![Přístup k možnosti Povolit diagnostiku](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796660.png)
 3. Chcete-li zadat účet úložiště pro diagnostická data, vyberte tlačítko se třemi tečkami (...).
@@ -77,10 +77,10 @@ V aplikaci Visual Studio můžete shromažďovat diagnostická data pro role, kt
 
     ![Účet Storage – dialogové okno](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796662.png)
 
-   * Pokud vyberete **Microsoft Azure emulátor úložiště**, připojovací řetězec je nastaven na `UseDevelopmentStorage=true`.
+   * Pokud vyberete **Microsoft Azure emulátor úložiště**, připojovací řetězec je nastavený na `UseDevelopmentStorage=true`.
    * Pokud vyberete **své předplatné**, můžete vybrat předplatné Azure, které chcete použít, a zadat název účtu. Pokud chcete spravovat předplatná Azure, vyberte **Spravovat účty**.
    * Pokud vyberete možnost **ručně zadané přihlašovací údaje**, zadejte název a klíč účtu Azure, který chcete použít.
-5. Chcete-li zobrazit dialogové okno **Konfigurace diagnostiky** , vyberte možnost **Konfigurovat**. S výjimkou adresářů pro **Obecné** a **protokoly**představuje každá karta zdroj dat diagnostiky, který můžete shromažďovat. Výchozí karta **Obecné** nabízí následující možnosti shromažďování diagnostických dat: **Jenom chyby**, **všechny informace**a **vlastní plán**. Možnost **pouze výchozí chyby** používá minimální velikost úložiště, protože nepřenáší upozornění nebo zprávy trasování. Možnost **všechny informace** přenáší většinu informací, používá nejvíce úložiště, a proto je nejdražším parametrem.
+5. Chcete-li zobrazit dialogové okno **Konfigurace diagnostiky** , vyberte možnost **Konfigurovat**. S výjimkou adresářů pro **Obecné** a **protokoly**představuje každá karta zdroj dat diagnostiky, který můžete shromažďovat. Výchozí karta **Obecné** nabízí následující možnosti shromažďování diagnostických dat: **jenom chyby**, **všechny informace**a **vlastní plán**. Možnost **pouze výchozí chyby** používá minimální velikost úložiště, protože nepřenáší upozornění nebo zprávy trasování. Možnost **všechny informace** přenáší většinu informací, používá nejvíce úložiště, a proto je nejdražším parametrem.
 
    > [!NOTE]
    > Minimální podporovaná velikost pro "disková kvóta v MB" je 50 MB a výchozí velikost je 4 GB. Pokud však shromažďujete výpisy paměti, zvyšte tuto hodnotu na vyšší hodnotu, jako je 10 GB.
@@ -89,7 +89,7 @@ V aplikaci Visual Studio můžete shromažďovat diagnostická data pro role, kt
     ![Povolit diagnostiku a konfiguraci Azure](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758144.png)
 6. V tomto příkladu vyberte možnost **vlastního plánu** , abyste mohli shromážděná data přizpůsobit.
 7. V poli disková **kvóta v MB** můžete nastavit, kolik místa se má v účtu úložiště pro diagnostická data přidělit. Můžete změnit nebo přijmout výchozí hodnotu.
-8. Na každé kartě diagnostických dat, která chcete shromáždit, zaškrtněte políčko **Povolit přenos @no__t – 1log typ @ no__t-2** . Například pokud chcete shromažďovat protokoly aplikací, zaškrtněte na kartě **protokoly aplikací** políčko **Povolit přenos protokolů aplikací** . Také zadejte všechny další informace, které jsou požadovány pro každý typ dat diagnostiky. Informace o konfiguraci pro každou kartu najdete v části **Nastavení diagnostických zdrojů dat** dále v tomto článku.
+8. Na každé kartě diagnostických dat, která chcete shromáždit, zaškrtněte políčko **Povolit přenos \<typ protokolu\>** . Například pokud chcete shromažďovat protokoly aplikací, zaškrtněte na kartě **protokoly aplikací** políčko **Povolit přenos protokolů aplikací** . Také zadejte všechny další informace, které jsou požadovány pro každý typ dat diagnostiky. Informace o konfiguraci pro každou kartu najdete v části **Nastavení diagnostických zdrojů dat** dále v tomto článku.
 9. Po povolení shromažďování všech diagnostických dat vyberte **OK**.
 10. Spusťte v aplikaci Visual Studio projekt cloudové služby Azure obvyklým způsobem. Při použití vaší aplikace se informace protokolu, které jste povolili, uloží do účtu úložiště Azure, který jste zadali.
 
@@ -108,7 +108,7 @@ V aplikaci Visual Studio můžete shromažďovat diagnostická data pro virtuál
     ![Nainstalovat rozšíření virtuálního počítače Azure](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766024.png)
 
     > [!NOTE]
-   > K dispozici jsou další diagnostická rozšíření pro vaše virtuální počítače. Další informace najdete v tématu [rozšíření virtuálních počítačů a funkce pro Windows](https://docs.microsoft.com/azure/virtual-machines/windows/extensions-features).
+   > K dispozici jsou další diagnostická rozšíření pro vaše virtuální počítače. Další informace najdete v tématu [rozšíření virtuálních počítačů a funkce pro Windows](/azure/virtual-machines/windows/extensions-features).
    >
    >
 5. Chcete-li přidat rozšíření a zobrazit dialogové okno **Konfigurace diagnostiky** , vyberte možnost **Přidat**.
@@ -118,10 +118,10 @@ V aplikaci Visual Studio můžete shromažďovat diagnostická data pro virtuál
 
     ![Povolit diagnostiku a konfiguraci Azure](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758144.png)
 
-    Výchozí karta **všeobecně**nabízí následující možnosti shromažďování diagnostických dat: **Jenom chyby**, **všechny informace**a **vlastní plán**. Výchozí možnost, **pouze chyby**, využívá minimální velikost úložiště, protože nepřenosuje upozornění nebo zprávy trasování. Možnost **všechny informace** přenáší nejvíc informací a je tedy nejdražším parametrem z podmínek úložiště.
+    Výchozí karta **všeobecně**nabízí následující možnosti shromažďování diagnostických dat: **jenom chyby**, **všechny informace**a **vlastní plán**. Výchozí možnost, **pouze chyby**, využívá minimální velikost úložiště, protože nepřenosuje upozornění nebo zprávy trasování. Možnost **všechny informace** přenáší nejvíc informací a je tedy nejdražším parametrem z podmínek úložiště.
 7. V tomto příkladu vyberte možnost **vlastního plánu** , abyste mohli přizpůsobit shromážděná data.
 8. V poli **disková kvóta v MB** určuje, kolik místa chcete přidělit účtu úložiště pro diagnostická data. Pokud chcete, můžete změnit výchozí hodnotu.
-9. Na každé kartě diagnostických dat, která chcete shromáždit, zaškrtněte políčko **Povolit přenos @no__t – 1log typ @ no__t-2** .
+9. Na každé kartě diagnostických dat, která chcete shromáždit, zaškrtněte políčko **Povolit přenos \<typ protokolu\>** zaškrtávací políčko.
 
     Například pokud chcete shromažďovat protokoly aplikací, zaškrtněte políčko **Povolit přenos protokolů aplikace** na kartě **protokoly aplikací** . Také zadejte všechny další informace, které jsou požadovány pro každý typ dat diagnostiky. Informace o konfiguraci pro každou kartu najdete v části **Nastavení diagnostických zdrojů dat** dále v tomto článku.
 10. Až budete mít povolenou kolekci všech diagnostických dat, vyberte **OK**.
@@ -144,7 +144,7 @@ Chcete-li zaznamenat protokoly událostí systému Windows, zaškrtněte políč
 
 ![Protokoly událostí](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796664.png)
 
-Pokud používáte sadu Azure SDK 2,6 nebo novější a chcete zadat vlastní zdroj dat, zadejte ho do textového pole **\<Data Source Name @ no__t-2** a potom vyberte **Přidat**. Zdroj dat se přidá do souboru Diagnostics. cfcfg.
+Pokud používáte sadu Azure SDK 2,6 nebo novější a chcete zadat vlastní zdroj dat, zadejte ho do textového pole **\<název zdroje dat\>** a pak vyberte **Přidat**. Zdroj dat se přidá do souboru Diagnostics. cfcfg.
 
 Pokud používáte sadu Azure SDK 2,5 a chcete zadat vlastní zdroj dat, můžete ho přidat do oddílu `WindowsEventLog` souboru Diagnostics. wadcfgx, jako v následujícím příkladu:
 
@@ -194,7 +194,7 @@ Aktuálně sledované procesy jsou uvedeny na následujícím snímku obrazovky.
 
 ![Výpisy stavu systému](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766026.png)
 
-Další informace najdete v tématu [převzetí řízení protokolování a trasování v Microsoft Azure](https://msdn.microsoft.com/magazine/ff714589.aspx) a [Microsoft Azure Diagnostics část 4: Vlastní protokolovací komponenty a Azure Diagnostics 1,3 změny @ no__t-0.
+Další informace najdete v tématu [převzetí řízení protokolování a trasování v Microsoft Azure](https://msdn.microsoft.com/magazine/ff714589.aspx) a [Diagnostika Microsoft Azure části 4: Vlastní protokolovací komponenty a Azure Diagnostics 1,3 změny](https://www.red-gate.com/simple-talk/cloud/platform-as-a-service/microsoft-azure-diagnostics-part-4-custom-logging-components-and-azure-diagnostics-1.3-changes/).
 
 ## <a name="view-the-diagnostics-data"></a>Zobrazit diagnostická data
 Jakmile shromáždíte diagnostická data pro cloudovou službu nebo virtuální počítač, můžete si ji zobrazit.
@@ -216,13 +216,13 @@ Jakmile shromáždíte diagnostická data pro cloudovou službu nebo virtuální
     V Průzkumníku cloudu nebo Průzkumník serveru otevřete účet úložiště, který je přidružený k nasazení.
 3. Otevřete diagnostické tabulky v prohlížeči tabulky a potom zkontrolujte shromážděná data. Pro protokoly služby IIS a vlastní protokoly můžete otevřít kontejner objektů BLOB. V následující tabulce jsou uvedeny tabulky nebo kontejnery objektů blob, které obsahují data pro různé soubory protokolu. Kromě dat pro tento soubor protokolu obsahují položky tabulky **EventTickCount**, **DeploymentID**, **role**a **RoleInstance**, které vám pomůžou zjistit, který virtuální počítač a role vygenerovala data a kdy.
 
-   | Diagnostická data | Popis | Location |
+   | Diagnostická data | Popis | Umístění |
    | --- | --- | --- |
    | Protokoly aplikací |Protokoluje, že váš kód generuje voláním metod třídy **System. Diagnostics. Trace** . |WADLogsTable |
    | Protokoly událostí |Data z protokolů událostí systému Windows na virtuálních počítačích. Systém Windows ukládá informace v těchto protokolech, ale aplikace a služby používají protokoly k nahlášení chyb nebo informací o protokolu. |WADWindowsEventLogsTable |
    | Čítače výkonu |Data můžete shromažďovat na jakémkoli čítači výkonu, který je k dispozici na virtuálním počítači. Operační systém poskytuje čítače výkonu, které zahrnují řadu statistik, jako je využití paměti a čas procesoru. |WADPerformanceCountersTable |
    | Protokoly infrastruktury |Protokoly, které jsou generovány přímo z diagnostické infrastruktury. |WADDiagnosticInfrastructureLogsTable |
-   | Protokoly IIS |Protokoly, které zaznamenávají webové požadavky. Pokud vaše cloudová služba získá značný objem provozu, můžou být tyto protokoly zdlouhavé. Tato data je vhodné shromažďovat a ukládat pouze v případě, že je potřebujete. |V kontejneru objektů BLOB v části wad-IIS-failedreqlogs se v cestě k tomuto nasazení, roli a instanci můžete najít protokoly neúspěšných požadavků. Úplné protokoly najdete v části wad-IIS-LogFiles. Položky pro každý soubor jsou vytvořeny v tabulce WADDirectories. |
+   | Protokoly služby IIS |Protokoly, které zaznamenávají webové požadavky. Pokud vaše cloudová služba získá značný objem provozu, můžou být tyto protokoly zdlouhavé. Tato data je vhodné shromažďovat a ukládat pouze v případě, že je potřebujete. |V kontejneru objektů BLOB v části wad-IIS-failedreqlogs se v cestě k tomuto nasazení, roli a instanci můžete najít protokoly neúspěšných požadavků. Úplné protokoly najdete v části wad-IIS-LogFiles. Položky pro každý soubor jsou vytvořeny v tabulce WADDirectories. |
    | Výpisy stavu systému |Poskytuje binární image procesu vaší cloudové služby (obvykle role pracovního procesu). |WAD-drcení – výpis kontejneru objektů BLOB |
    | Vlastní soubory protokolu |Protokoly dat, která jste předdefinovány. |V části kód můžete zadat umístění vlastních souborů protokolů v účtu úložiště. Můžete například zadat vlastní kontejner objektů BLOB. |
 4. Pokud jsou data libovolného typu zkrácena, můžete zkusit zvětšit vyrovnávací paměť pro tento datový typ nebo zkrátit interval mezi přenosy dat z virtuálního počítače na účet úložiště.
@@ -256,9 +256,9 @@ Pokud zkoumáte problém s cloudovou službou, která je už spuštěná, možn�
     Pokud změníte shromažďování dat v Průzkumník serveru, změny zůstanou v platnosti, dokud nebudete plně znovu nasazovat cloudovou službu. Použijete-li výchozí nastavení publikování, změny nebudou přepsány. Výchozím nastavením publikování je aktualizovat existující nasazení, nikoli provést úplné opětovné nasazení. Pokud chcete mít jistotu, že se nastavení v době nasazení vymažou, v Průvodci publikováním klikněte na kartu **Pokročilé nastavení** a zrušte zaškrtnutí políčka **aktualizace nasazení** . Při opětovném nasazení s tímto zaškrtávacím políčkem se nastavení vrátí do souboru. wadcfgx (nebo. wadcfg) jako nastaveného prostřednictvím editoru **vlastností** pro danou roli. Pokud aktualizujete nasazení, Azure zachová předchozí nastavení.
 
 ## <a name="troubleshoot-azure-cloud-service-issues"></a>Řešení potíží s cloudovou službou Azure
-Pokud máte problémy s projekty cloudové služby, jako je například role, která se zablokuje ve stavu "zaneprázdněno", opakovaně recykluje nebo vyvolá vnitřní chybu serveru, existují nástroje a techniky, které můžete použít k diagnostice a vyřešení problému. Konkrétní příklady běžných problémů a řešení a přehled konceptů a nástrojů, které můžete použít k diagnostice a opravě těchto chyb, najdete v tématu [diagnostická data služby Azure PaaS COMPUTE](http://blogs.msdn.com/b/kwill/archive/2013/08/09/windows-azure-paas-compute-diagnostics-data.aspx).
+Pokud máte problémy s projekty cloudové služby, jako je například role, která se zablokuje ve stavu "zaneprázdněno", opakovaně recykluje nebo vyvolá vnitřní chybu serveru, existují nástroje a techniky, které můžete použít k diagnostice a vyřešení problému. Konkrétní příklady běžných problémů a řešení a přehled konceptů a nástrojů, které můžete použít k diagnostice a opravě těchto chyb, najdete v tématu [diagnostická data služby Azure PaaS COMPUTE](https://blogs.msdn.microsoft.com/kwill/2013/08/09/windows-azure-paas-compute-diagnostics-data/).
 
-## <a name="q--a"></a>Dotazy a odpovědi
+## <a name="q--a"></a>Otázka & A
 **Jaká je velikost vyrovnávací paměti a jak velká má být?**
 
 U každé instance virtuálního počítače omezuje kvóta, kolik dat diagnostiky může být uloženo v místním systému souborů. Kromě toho určujete velikost vyrovnávací paměti pro každý typ dat diagnostiky, který je k dispozici. Tato velikost vyrovnávací paměti funguje jako individuální kvóta pro tento typ dat. Chcete-li určit celkovou kvótu a množství paměti, které zbývá, Prohlédněte si dolní část dialogového okna pro diagnostický datový typ. Pokud zadáte větší vyrovnávací paměť nebo více typů dat, získáte přístup k celkové kvótě. Celkovou kvótu můžete změnit úpravou konfiguračního souboru Diagnostics. wadcfg nebo. wadcfgx. Diagnostická data jsou uložena ve stejném systému souborů jako data vaší aplikace. Pokud vaše aplikace používá velké množství místa na disku, neměli byste zvýšit celkovou kvótu pro diagnostiku.
@@ -271,9 +271,9 @@ Doba přenosu je doba, která uplyne mezi zachycením dat. Po každém období p
 
 Časová razítka jsou v místním časovém pásmu datového centra, které hostuje vaši cloudovou službu. Používají se tři následující sloupce s časovým razítkem v tabulkách protokolu:
 
-* **PreciseTimeStamp**: Časové razítko ETW události To znamená čas, kdy se událost protokoluje z klienta.
-* **ČASOVÉ RAZÍTKO**: Hodnota pro **PreciseTimeStamp** se zaokrouhluje na hranici četnosti nahrávání. Například pokud je vaše frekvence nahrávání 5 minut a čas události 00:17:12, časové RAZÍTKo je 00:15:00.
-* **Časové razítko**: Časové razítko, pro které se entita vytvořila v tabulce Azure.
+* **PreciseTimeStamp**: časové razítko ETW události. To znamená čas, kdy se událost protokoluje z klienta.
+* **Timestamp**: hodnota pro **PreciseTimeStamp** se zaokrouhluje na hranici četnosti nahrávání. Například pokud je vaše frekvence nahrávání 5 minut a čas události 00:17:12, časové RAZÍTKo je 00:15:00.
+* **Časové razítko**: časové razítko, pro které se entita vytvořila v tabulce Azure.
 
 **Návody spravovat náklady při shromažďování diagnostických informací?**
 
@@ -283,7 +283,7 @@ Výchozí nastavení (**úroveň protokolu** je nastavená **na chyba**a **perio
 
 Služba IIS ve výchozím nastavení neshromažďuje protokoly chybných požadavků. Službu IIS můžete nastavit tak, aby shromáždila protokoly neúspěšných požadavků úpravou souboru Web. config pro webovou roli.
 
-@no__t – 0I'm se nezískávají informace o trasování z metod RoleEntryPoint, jako je OnStart. Co je špatné? **
+**Nedaří se mi získat informace o trasování z RoleEntryPoint metod, jako je OnStart. Co je?**
 
 Metody **RoleEntryPoint** jsou volány v kontextu WAIISHost. exe, nikoli ve službě IIS. Informace o konfiguraci v souboru Web. config, které obvykle umožňují trasování, se nepoužijí. Chcete-li tento problém vyřešit, přidejte do projektu webové role soubor. config a pojmenujte jej tak, aby odpovídal výstupnímu sestavení, které obsahuje kód **RoleEntryPoint** . V projektu výchozí webové role by měl mít název souboru. config příponu WAIISHost. exe. config. Do tohoto souboru přidejte následující řádky:
 

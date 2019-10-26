@@ -30,12 +30,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f2241daa50a35a9714fd66b10966298279bc37fe
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 98bf3e143a3fcb6613752362acf83f5c2441b98b
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747293"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911265"
 ---
 # <a name="link-task"></a>odkaz – úloha
 Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje soubory objektů a knihoven Common Object File Format (COFF) a vytvoří spustitelný soubor ( *. exe*) nebo dynamickou knihovnu (DLL). Další informace naleznete v tématu [Možnosti linkeru](/cpp/build/reference/linker-options).
@@ -65,7 +65,7 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   Určuje atributy, které budou umístěny v sekci `dependency` souboru manifestu.
 
-  Další informace najdete v tématu [/MANIFESTDEPENDENCY (určení závislostí manifestu)](/cpp/build/reference/manifestdependency-specify-manifest-dependencies). Viz také [konfigurační soubory vydavatele](https://docs.microsoft.com/windows/desktop/SbsCs/publisher-configuration-files).
+  Další informace najdete v tématu [/MANIFESTDEPENDENCY (určení závislostí manifestu)](/cpp/build/reference/manifestdependency-specify-manifest-dependencies). Viz také [konfigurační soubory vydavatele](/windows/desktop/SbsCs/publisher-configuration-files).
 
 - **AdditionalOptions**
 
@@ -751,13 +751,13 @@ Zabalí nástroj Microsoft C++ linker, *Link. exe*. Nástroj Linker propojuje so
 
   - **Nativní**  -  **/SUBSYSTEM: Native**
 
-  - **Aplikace rozhraní EFI**  -  **/SUBSYSTEM: EFI_APPLICATION**
+  - **Aplikace rozhraní EFI** -  **/SUBSYSTEM: EFI_APPLICATION**
 
-  - **Ovladač spouštěcí služby EFI**  -  **/SUBSYSTEM: EFI_BOOT_SERVICE_DRIVER**
+  - **Ovladač spouštěcí služby EFI** -  **/SUBSYSTEM: EFI_BOOT_SERVICE_DRIVER**
 
-  - **EFI ROM**  -  **/SUBSYSTEM: EFI_ROM**
+  - **EFI ROM** -  **/SUBSYSTEM: EFI_ROM**
 
-  - **Běhové prostředí EFI**  -  **/SUBSYSTEM: EFI_RUNTIME_DRIVER**
+  - **Běhové prostředí EFI** -  **/SUBSYSTEM: EFI_RUNTIME_DRIVER**
 
   - **WindowsCE**  -  **/SUBSYSTEM: WindowsCE**
 

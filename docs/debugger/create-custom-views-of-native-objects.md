@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2f9d9319a943182c8256256ca6ea7334c532d1
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
+ms.openlocfilehash: 53483979600093133c2b059d9ea921cdb8a08ab1
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349488"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911618"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>Vytváření vlastních zobrazení C++ objektů v ladicím programu pomocí architektury Natvis
 
@@ -30,15 +30,15 @@ Natvis nahrazuje soubor *autoexp. dat* v dřívějších verzích sady Visual St
 
 Pomocí architektury Natvis vytvoříte pravidla vizualizace pro typy, které vytvoříte, aby se vývojáři mohli snadněji zobrazit během ladění.
 
-Například následující ilustrace ukazuje proměnnou typu [Windows:: UI:: XAML:: Controls:: TextBox](http://go.microsoft.com/fwlink/?LinkId=258422) v okně ladicího programu, aniž by byly aplikovány vlastní vizualizace.
+Například následující ilustrace ukazuje proměnnou typu [Windows:: UI:: XAML:: Controls:: TextBox](/uwp/api/Windows.UI.Xaml.Controls.TextBox) v okně ladicího programu, aniž by byly aplikovány vlastní vizualizace.
 
-Výchozí vizualizace – výchozí(../debugger/media/dbg_natvis_textbox_default.png "pole") s ![výchozím nastavením vizualizace]
+![Výchozí vizualizace textového pole](../debugger/media/dbg_natvis_textbox_default.png "Výchozí vizualizace textového pole")
 
 Zvýrazněný řádek zobrazuje vlastnost `Text` třídy `TextBox`. Složitá hierarchie tříd usnadňuje vyhledání této vlastnosti. Ladicí program neví, jak interpretovat typ vlastního řetězce, takže se nezobrazuje řetězec umístěný uvnitř textového pole.
 
 Stejný `TextBox` v okně proměnných vypadá mnohem jednodušší, když se používají pravidla vlastního Vizualizátoru pro Natvis. Důležité členy třídy se zobrazí společně a ladicí program zobrazí základní řetězcovou hodnotu vlastního typu řetězce.
 
-![Data TextBox s použitím](../debugger/media/dbg_natvis_textbox_visualizer.png "dat v poli") Vizualizér pomocí Vizualizér
+![Data textového pole používající Vizualizér](../debugger/media/dbg_natvis_textbox_visualizer.png "Data textového pole používající Vizualizér")
 
 ## <a name="BKMK_Using_Natvis_files"></a>Použití souborů. Natvis v C++ projektech
 
@@ -138,7 +138,7 @@ Vizualizace Natvis používají C++ výrazy k určení datových položek, kter�
 
 ## <a name="natvis-views"></a>Zobrazení Natvis
 
-Můžete definovat různá zobrazení Natvis pro zobrazení typů různými způsoby. Například zde je vizualizace `std::vector` definující zjednodušené zobrazení s názvem `simple`. @No__t_0 a `ArrayItems` prvky se zobrazí ve výchozím zobrazení a v zobrazení `simple`, zatímco položky `[size]` a `[capacity]` se v zobrazení `simple` nezobrazují.
+Můžete definovat různá zobrazení Natvis pro zobrazení typů různými způsoby. Například zde je vizualizace `std::vector` definující zjednodušené zobrazení s názvem `simple`. `DisplayString` a `ArrayItems` prvky se zobrazí ve výchozím zobrazení a v zobrazení `simple`, zatímco položky `[size]` a `[capacity]` se v zobrazení `simple` nezobrazují.
 
 ```xml
 <Type Name="std::vector&lt;*&gt;">
@@ -156,7 +156,7 @@ Můžete definovat různá zobrazení Natvis pro zobrazení typů různými způ
 
 V okně **kukátko** použijte specifikátor formátu **zobrazení** k určení alternativního zobrazení. Jednoduché zobrazení se zobrazí jako **vec, zobrazení (jednoduché)** :
 
-![Okno kukátko s jednoduchým]zobrazením(../debugger/media/watch-simpleview.png "okno kukátko jednoduché zobrazení")
+![okno Kukátko s jednoduchým zobrazením](../debugger/media/watch-simpleview.png "okno Kukátko s jednoduchým zobrazením")
 
 ## <a name="BKMK_Diagnosing_Natvis_errors"></a>Chyby Natvis
 
@@ -256,7 +256,7 @@ Následující příklad nejprve analyzuje položku, která se shoduje s 2015 ST
 ```
 
 ### <a name="optional-attribute"></a>Volitelný atribut
-Atribut `Optional` můžete umístit na libovolný uzel. Pokud se dílčí výraz uvnitř volitelného uzlu nedokáže analyzovat, ladicí program tento uzel ignoruje, ale použije zbývající pravidla `Type`. V následujícím typu `[State]` není nepovinný, ale `[Exception]` je volitelná.  Pokud `MyNamespace::MyClass` obsahuje pole s názvem _ `M_exceptionHolder`, zobrazí se uzel `[State]` i uzel `[Exception]`, ale pokud není k dispozici žádné `_M_exceptionHolder` pole, zobrazí se pouze uzel `[State]`.
+Atribut `Optional` můžete umístit na libovolný uzel. Pokud se dílčí výraz uvnitř volitelného uzlu nedokáže analyzovat, ladicí program tento uzel ignoruje, ale použije zbývající pravidla `Type`. V následujícím typu `[State]` není nepovinný, ale `[Exception]` je volitelná.  Pokud `MyNamespace::MyClass` obsahuje pole s názvem _`M_exceptionHolder`, zobrazí se uzel `[State]` i uzel `[Exception]`, ale pokud není k dispozici žádné `_M_exceptionHolder` pole, zobrazí se pouze uzel `[State]`.
 
 ```xml
 <Type Name="MyNamespace::MyClass">
@@ -271,7 +271,7 @@ Atribut `Optional` můžete umístit na libovolný uzel. Pokud se dílčí výra
 
 Volitelný atribut `Condition` je k dispozici pro mnoho prvků vizualizace a určuje, kdy použít pravidlo vizualizace. Pokud se výraz uvnitř atributu Condition přeloží na `false`, pravidlo vizualizace se nepoužije. Pokud se vyhodnotí jako `true` nebo neexistuje žádný `Condition` atribut, vizualizace se použije. Tento atribut lze použít pro logiku if-else v položkách vizualizace.
 
-Například následující vizualizace má dva prvky `DisplayString` pro typ inteligentního ukazatele. Pokud je člen `_Myptr` prázdný, je podmínka prvního prvku `DisplayString` překládána na `true`, takže se formulář zobrazí. Pokud člen `_Myptr` není prázdný, je podmínka vyhodnocena jako `false` a druhý `DisplayString` prvek zobrazí.
+Například následující vizualizace má dva prvky `DisplayString` pro typ inteligentního ukazatele. Pokud je člen `_Myptr` prázdný, je podmínka prvního prvku `DisplayString` překládána na `true`, takže se formulář zobrazí. Pokud člen `_Myptr` není prázdný, je podmínka vyhodnocena jako `false`a druhý `DisplayString` prvek zobrazí.
 
 ```xml
 <Type Name="std::auto_ptr&lt;*&gt;">
@@ -285,7 +285,7 @@ Například následující vizualizace má dva prvky `DisplayString` pro typ int
 
 ### <a name="includeview-and-excludeview-attributes"></a>Atributy IncludeView a ExcludeView
 
-Atributy `IncludeView` a `ExcludeView` určují prvky pro zobrazení nebo zobrazení v konkrétních zobrazeních. Například v následující specifikaci Natvis `std::vector` `simple` zobrazení nezobrazí `[size]` a `[capacity]` položky.
+Atributy `IncludeView` a `ExcludeView` určují prvky pro zobrazení nebo zobrazení v konkrétních zobrazeních. Například v následující specifikaci Natvis `std::vector``simple` zobrazení nezobrazí `[size]` a `[capacity]` položky.
 
 ```xml
 <Type Name="std::vector&lt;*&gt;">
@@ -331,7 +331,7 @@ Element `DisplayString` určuje řetězec, který se zobrazí jako hodnota prom�
 
 Znamená, že proměnné typu `CPoint` zobrazit jako na tomto obrázku:
 
- ![Použít element DisplayString](../debugger/media/dbg_natvis_cpoint_displaystring.png "použít element DisplayString")
+ ![Použít element DisplayString](../debugger/media/dbg_natvis_cpoint_displaystring.png "Použít element DisplayString")
 
 Ve výrazu `DisplayString` `x` a `y`, které jsou členy `CPoint`, jsou uvnitř složených závorek, takže jejich hodnoty jsou vyhodnocovány. Příklad také ukazuje, jak lze pomocí dvojitých složených závorek (`{{` nebo `}}`) uniknout složené závorky.
 
@@ -350,7 +350,7 @@ Element `StringView` definuje hodnotu, kterou může ladicí program odeslat do 
 
 Objekt `CStringT` se zobrazí v okně proměnné jako v tomto příkladu:
 
-![CStringT – element DisplayString](../debugger/media/dbg_natvis_displaystring_cstringt.png "CStringT element DisplayString")
+![CStringt – element DisplayString](../debugger/media/dbg_natvis_displaystring_cstringt.png "CStringt – element DisplayString")
 
 Přidání prvku `StringView` říká ladicímu programu, že může zobrazit hodnotu jako vizualizaci textu.
 
@@ -363,7 +363,7 @@ Přidání prvku `StringView` říká ladicímu programu, že může zobrazit ho
 
 Během ladění můžete vybrat ikonu lupy vedle proměnné a pak vybrat **Vizualizér textu** pro zobrazení řetězce, na který odkazuje **m_pszData** .
 
- ![Data z cstringu pomocí StringView Vizualizér](../debugger/media/dbg_natvis_stringview_cstringt.png "CStringT data s využitím StringView Vizualizér")
+ ![Data CStringt pomocí Vizualizér StringView](../debugger/media/dbg_natvis_stringview_cstringt.png "Data CStringt pomocí Vizualizér StringView")
 
 Výraz `{m_pszData,su}` obsahuje specifikátor C++ formátu **Su**pro zobrazení hodnoty jako řetězce Unicode. Další informace naleznete v tématu [specifikátory formátu v C++ ](../debugger/format-specifiers-in-cpp.md).
 
@@ -417,9 +417,9 @@ Uzel `ArrayItems` použijte, pokud chcete, aby ladicí program sady Visual Studi
 </Type>
 ```
 
-@No__t_0 zobrazuje jeho jednotlivé prvky při rozbalení v okně proměnné:
+`std::vector` zobrazuje jeho jednotlivé prvky při rozbalení v okně proměnné:
 
-![std:: Vector využívající ArrayItems rozšíření](../debugger/media/dbg_natvis_expand_arrayitems_stdvector.png "std:: Vector pomocí rozšíření ArrayItems")
+![std:: Vector s použitím rozšíření ArrayItems](../debugger/media/dbg_natvis_expand_arrayitems_stdvector.png "std:: Vector s použitím rozšíření ArrayItems")
 
 Uzel `ArrayItems` musí mít:
 
@@ -454,7 +454,7 @@ Můžete také zadat multidimenzionální pole. V takovém případě ladicí pr
 
 Tady je postup, jak v okně ladicího programu vypadá dvourozměrný `Concurrency::array` objekt:
 
-Dvojrozměrné ![pole s RozArrayItemsm rozbalením]dvojrozměrného(../debugger/media/dbg_natvis_expand_arrayitems_2d.png "pole s rozšířením ArrayItems")
+![Dvourozměrné pole s rozšířením ArrayItems](../debugger/media/dbg_natvis_expand_arrayitems_2d.png "Dvourozměrné pole s rozšířením ArrayItems")
 
 #### <a name="BKMK_IndexListItems_expansion"></a>Rozšíření IndexListItems
 
@@ -541,7 +541,7 @@ Můžete použít `Exec` k provedení kódu v rozšíření `CustomListItems` po
 
 `CustomListItems` podporuje následující vnitřní funkce:
 
-- `strlen`, `wcslen`, `strnlen`, `wcsnlen`, `strcmp`, `wcscmp`, `_stricmp`, `_strcmpi`, `_wcsicmp`, `strncmp`, 0, 1, 2, 3, 4, 5 , 6, 7, 8, 9, 0, 1, 2, 3
+- `strlen`, `wcslen`, `strnlen`, `wcsnlen`, `strcmp`, `wcscmp`, `_stricmp`, `_strcmpi`, `_wcsicmp`, `strncmp`, `wcsncmp`, `_strnicmp`, `_wcsnicmp`, `memcmp`, `memicmp`, `wmemcmp`, `strchr`, `wcschr`, `memchr`, `wmemchr`, `strstr`, `wcsstr`, `__log2`, `__findNonNull`
 - `GetLastError`, `TlsGetValue`, `DecodeHString`, `WindowsGetStringLen`, `WindowsGetStringRawBuffer`, `WindowsCompareStringOrdinal`, `RoInspectCapturedStackBackTrace`, `CoDecodeProxy`, `GetEnvBlockLength`, `DecodeWinRTRestrictedException`, 0, 1, 2
 - `ConcurrencyArray_OperatorBracket_idx // Concurrency::array<>::operator[index<>] and operator(index<>)`
 - `ConcurrencyArray_OperatorBracket_int // Concurrency::array<>::operator(int, int, ...)`
@@ -582,7 +582,7 @@ Syntaxe je podobná `LinkedListItems` uzlu. `LeftPointer`, `RightPointer` a `Val
 
 Například typ inteligentního ukazatele `auto_ptr<vector<int>>` obvykle zobrazuje:
 
- výchozí rozšíření ![výchozí&#60;rozšíření&#62; &#62; auto&#95;&#60;PTR Vector int](../debugger/media/dbg_natvis_expand_expandeditem_default.png "")
+ ![výchozí&#95;rozšíření&#60;auto&#60;PTR&#62; &#62; Vector int](../debugger/media/dbg_natvis_expand_expandeditem_default.png "Výchozí rozšíření")
 
  Chcete-li zobrazit hodnoty vektoru, je nutné přejít na dvě úrovně v okně proměnné a procházející členem `_Myptr`. Přidáním prvku `ExpandedItem` můžete eliminovat `_Myptr` proměnnou z hierarchie a přímo zobrazit prvky Vector:
 
@@ -595,7 +595,7 @@ Například typ inteligentního ukazatele `auto_ptr<vector<int>>` obvykle zobraz
 </Type>
 ```
 
- (../debugger/media/dbg_natvis_expand_expandeditem_visualized.png "rozšíření ExpandedItem") pro ![rozšíření&#62; &#62; ExpandedItem (&#95;autoptr&#60;Vector&#60;int])
+ ![ExpandedItem&#95;rozšíření&#60;auto&#60;PTR&#62; &#62; Vector int](../debugger/media/dbg_natvis_expand_expandeditem_visualized.png "Rozšíření ExpandedItem")
 
 Následující příklad ukazuje, jak agregovat vlastnosti ze základní třídy v odvozené třídě. Předpokládejme, `CPanel` třída je odvozena z `CFrameworkElement`. Namísto opakování vlastností, které pocházejí ze základní `CFrameworkElement` třídy, vizualizace `ExpandedItem` uzel tyto vlastnosti připojí do podřízeného seznamu třídy `CPanel`.
 
@@ -661,11 +661,11 @@ Tady je příklad prvku UIVisualizer:
 </AutoVisualizer>
 ```
 
-- Dvojice atributů `ServiceId`  -  `Id` identifikuje `UIVisualizer`. @No__t_0 je identifikátor GUID služby, kterou balíček Vizualizér zpřístupňuje. `Id` je jedinečný identifikátor, který odlišuje vizualizace, pokud služba poskytuje více než jednu. V předchozím příkladu má stejná služba Vizualizér dva nástroje pro vizualizaci.
+- Dvojice atributů `ServiceId`  -  `Id` identifikuje `UIVisualizer`. `ServiceId` je identifikátor GUID služby, kterou balíček Vizualizér zpřístupňuje. `Id` je jedinečný identifikátor, který odlišuje vizualizace, pokud služba poskytuje více než jednu. V předchozím příkladu má stejná služba Vizualizér dva nástroje pro vizualizaci.
 
 - Atribut `MenuName` definuje název Vizualizátoru, který se zobrazí v rozevíracím seznamu vedle ikony lupy v ladicím programu. Příklad:
 
-  Místní nabídka nabídky(../debugger/media/dbg_natvis_vectorvisualizer.png "UIVisualizer") ![místní nabídky UIVisualizer]
+  ![Místní nabídka nabídky UIVisualizer](../debugger/media/dbg_natvis_vectorvisualizer.png "Místní nabídka nabídky UIVisualizer")
 
 Každý typ definovaný v souboru *. Natvis* musí explicitně uvést jakékoli vizualizace uživatelského rozhraní, které je možné zobrazit. Ladicí program odpovídá odkazům na Vizualizér v záznamech typu s registrovanými vizualizacemi. Například následující položka typu pro `std::vector` odkazuje na `UIVisualizer` v předchozím příkladu.
 

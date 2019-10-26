@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b908e4fe9ed0087abaf5f1390bb8faf5cc12bdaa
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 27e551132e66ef0cb380b56441d19b1436d19df2
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737560"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911536"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a>Chyba: Zdá se, že Microsoft Visual Studio Remote Debugging Monitor (MSVSMON.EXE) na vzdáleném počítači neběží.
 Tato chybová zpráva znamená, že Visual Studio nemohlo najít správnou instanci sady Visual Studio Sledování vzdáleného ladění na vzdáleném počítači. Aby mohla vzdálené ladění fungovat, musí být nainstalovaná aplikace Visual Studio Sledování vzdáleného ladění. Informace o stažení a nastavení vzdáleného ladicího programu naleznete v tématu [vzdálené ladění](../debugger/remote-debugging.md).
@@ -41,7 +41,7 @@ Tato chybová zpráva znamená, že Visual Studio nemohlo najít správnou insta
  Zkuste provést [test testu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee624059(v=ws.10)) na vzdáleném počítači. Pokud neodpovídá na příkaz pro odeslání odpovědi na adresu příkazového testu, nástroje Remote Tools se nebudou moci připojit ani. Zkuste restartovat vzdálený počítač a jinak se ujistěte, že je správně nakonfigurovaný v síti.
 
 ## <a name="the-version-of-the-remote-debugger-doesnt-match-the-version-of-visual-studio"></a>Verze vzdáleného ladicího programu se neshoduje s verzí sady Visual Studio.
- Verze sady Visual Studio, kterou používáte místně, musí odpovídat verzi sledování vzdáleného ladění, která běží na vzdáleném počítači. Chcete-li tento problém vyřešit, Stáhněte a nainstalujte si verzi sledování vzdáleného ladění. Pro vyhledání správné verze vzdáleného ladicího programu navštivte [Centrum stahování](http://www.microsoft.com/en-us/download) .
+ Verze sady Visual Studio, kterou používáte místně, musí odpovídat verzi sledování vzdáleného ladění, která běží na vzdáleném počítači. Chcete-li tento problém vyřešit, Stáhněte a nainstalujte si verzi sledování vzdáleného ladění. Pro vyhledání správné verze vzdáleného ladicího programu navštivte [Centrum stahování](https://www.microsoft.com/download) .
 
 ## <a name="the-local-and-remote-machines-have-different-authentication-modes"></a>Místní a vzdálené počítače mají odlišné režimy ověřování.
  Místní a vzdálené počítače musí používat stejný režim ověřování. Pokud to chcete opravit, ujistěte se, že oba počítače používají stejný režim ověřování. Další informace o režimech ověřování najdete v tématu [Přehled ověřování systému Windows](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831472(v=ws.11)).
@@ -72,7 +72,7 @@ Tato chybová zpráva znamená, že Visual Studio nemohlo najít správnou insta
 ## <a name="more-help"></a>Další informace
  Pokud chcete získat další nápovědu ke vzdálenému ladicímu programu, včetně přepínačů příkazového řádku, klikněte na **nápověda > využití** v okně vzdáleného ladicího programu. Pokud ho ještě nemáte, můžete zobrazit webovou stránku tak, že zkopírujete následující řádek do okna **Průzkumníka souborů** . (K umístění instalace sady Visual Studio je potřeba nahradit instalační adresář aplikace \<Visual Studio >.)
 
- res:// *\<Visual Studio instalační adresář >* \ COMMON7 \ IDE \ Remote %2 0 Debugger \ x64 \ msvsmon. exe/help. htm
+ res:// *\<instalační adresář sady Visual Studio >* \ COMMON7 \ IDE \ Remote %2 0 Debugger \ x64 \ msvsmon. exe/help. htm
 
 ## <a name="see-also"></a>Viz také:
 - [Chyby při vzdáleném ladění a jejich řešení](../debugger/remote-debugging-errors-and-troubleshooting.md)

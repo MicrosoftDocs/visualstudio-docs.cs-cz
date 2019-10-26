@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 16b46d47ec5850a79d78667671c7eb671d859f3e
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.openlocfilehash: 56ecf4cb1d777362daf381646094c20f82f30f85
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128237"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72910350"
 ---
 # <a name="analyze-memory-usage-without-the-debugger"></a>Analýza využití paměti bez ladicího programu
 
@@ -36,7 +36,7 @@ Nástroj **využití paměti** lze spustit s ladicím programem nebo bez něj. N
 
 1. Otevřete projekt C# pro univerzální platformu Windows (UWP) v aplikaci Visual Studio.
 
-1. Na panelu nabídek vyberte **ladit** > **výkon Profiler**.
+1. Na panelu nabídek vyberte možnost **ladit** > **profilování výkonu**.
 
 1. Vyberte **využití paměti**a pak vyberte **Spustit**.
 
@@ -78,10 +78,10 @@ Po zastavení shromažďování dat nástroj **využití paměti** zastaví apli
 
 |||
 |-|-|
-|![1. krok](../profiling/media/procguid_1.png "ProcGuid_1")|Celkový počet bajtů v paměti při pořízení snímku.<br /><br /> Kliknutím na tento odkaz zobrazíte sestavu s podrobnostmi o snímku, která je seřazená podle celkové velikosti instancí typu.|
-|![2. krok](../profiling/media/procguid_2.png "ProcGuid_2")|Celkový počet objektů v paměti, kdy byl snímek proveden.<br /><br /> Kliknutím na tento odkaz zobrazíte sestavu podrobností snímku seřazenou podle počtu instancí typů.|
-|![3. krok](../profiling/media/procguid_3.png "ProcGuid_3")|Rozdíl mezi celkovou velikostí paměťových objektů v tomto snímku a předchozím snímkem. <br /><br /> Kladné číslo znamená, že velikost paměti tohoto snímku je větší než předchozí a záporná hodnota znamená, že velikost je menší. **Směrný plán** znamená, že snímek je v relaci diagnostiky první. **Žádný rozdíl** znamená, že rozdíl je nulový.<br /><br /> Kliknutím na tento odkaz zobrazíte sestavu rozdílů snímků seřazenou podle rozdílů v celkové velikosti instancí typů.|
-|![4. krok](../profiling/media/procguid_4.png "ProcGuid_4")|Rozdíl mezi celkovým počtem paměťových objektů v tomto snímku a předchozím snímkem.<br /><br /> Kliknutím na tento odkaz zobrazíte sestavu rozdílů snímků seřazenou podle rozdílů v celkovém počtu instancí typů.|
+|![Krok 1](../profiling/media/procguid_1.png "ProcGuid_1")|Celkový počet bajtů v paměti při pořízení snímku.<br /><br /> Kliknutím na tento odkaz zobrazíte sestavu s podrobnostmi o snímku, která je seřazená podle celkové velikosti instancí typu.|
+|![Krok 2](../profiling/media/procguid_2.png "ProcGuid_2")|Celkový počet objektů v paměti, kdy byl snímek proveden.<br /><br /> Kliknutím na tento odkaz zobrazíte sestavu podrobností snímku seřazenou podle počtu instancí typů.|
+|![Krok 3](../profiling/media/procguid_3.png "ProcGuid_3")|Rozdíl mezi celkovou velikostí paměťových objektů v tomto snímku a předchozím snímkem. <br /><br /> Kladné číslo znamená, že velikost paměti tohoto snímku je větší než předchozí a záporná hodnota znamená, že velikost je menší. **Směrný plán** znamená, že snímek je v relaci diagnostiky první. **Žádný rozdíl** znamená, že rozdíl je nulový.<br /><br /> Kliknutím na tento odkaz zobrazíte sestavu rozdílů snímků seřazenou podle rozdílů v celkové velikosti instancí typů.|
+|![Krok 4](../profiling/media/procguid_4.png "ProcGuid_4")|Rozdíl mezi celkovým počtem paměťových objektů v tomto snímku a předchozím snímkem.<br /><br /> Kliknutím na tento odkaz zobrazíte sestavu rozdílů snímků seřazenou podle rozdílů v celkovém počtu instancí typů.|
 
 ## <a name="memory-usage-snapshot-reports"></a>Sestavy snímku využití paměti
 
@@ -217,6 +217,6 @@ Pro typ v **cestě ke stromu kořene** se počet objektů, které obsahují odka
 ## <a name="see-also"></a>Viz také:
 - [Paměť JavaScriptu](../profiling/javascript-memory.md)
 - [Profilace v sadě Visual Studio](../profiling/index.yml)
-- [Nejdřív se podívejte na nástroje pro profilaci](../profiling/profiling-feature-tour.md)
-- [Osvědčené postupy z hlediska výkonu pro aplikace pro UPW pomocí jazyka C++, C# a Visual Basic](/previous-versions/windows/apps/hh750313\(v\=win.10\))
-- [Diagnostikování problémů s pamětí pomocí nového nástroje využití paměti v aplikaci Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=394706)
+- [První pohled na nástroje pro profilaci](../profiling/profiling-feature-tour.md)
+- [Osvědčené postupy výkonu pro aplikace pro C++UWP C#pomocí, a Visual Basic](/previous-versions/windows/apps/hh750313\(v\=win.10\))
+- [Diagnostikování problémů s pamětí pomocí nového nástroje využití paměti v aplikaci Visual Studio](https://devblogs.microsoft.com/devops/diagnosing-memory-issues-with-the-new-memory-usage-tool-in-visual-studio/)
