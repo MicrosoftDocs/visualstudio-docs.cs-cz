@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4932a20fbcaee4d5aef6aac03252ee6062fbd035
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 410bc879ff4822f19436794d3cb99732be9d413e
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606211"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72983706"
 ---
 # <a name="t4-template-directive"></a>T4 – direktiva Template
 
@@ -40,7 +40,7 @@ Všechny platné parametry kompilátoru.
 
 U šablon běhu (předzpracovaných) se ignoruje.
 
-Tyto možnosti jsou aplikovány, pokud byla šablona převedena do [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] nebo [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] a výsledný kód je zkompilován.
+Tyto možnosti jsou aplikovány, pokud byla šablona převedena do [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] nebo [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)]a výsledný kód je zkompilován.
 
 ## <a name="culture-attribute"></a>Atribut culture
 
@@ -235,7 +235,7 @@ Textová šablona v době návrhu je soubor, pro který je **vlastní nástroj**
 
 Pro textovou šablonu návrhu můžete zadat libovolnou základní třídu, která je odvozena od <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName>. Použijte direktivu `<#@assembly#>` pro načtení sestavení nebo projektu, který obsahuje základní třídu.
 
-Další informace najdete v [blogu Gareth Novák v tématu "dědičnost v textových šablonách"](http://go.microsoft.com/fwlink/?LinkId=208373).
+Další informace najdete v [blogu Gareth Novák v tématu "dědičnost v textových šablonách"](https://blogs.msdn.microsoft.com/garethj/2011/01/03/vs2010-sp1-t4-template-inheritance-part-i-sample-metadata/).
 
 ## <a name="linepragmas-attribute"></a>linePragmas – atribut
 

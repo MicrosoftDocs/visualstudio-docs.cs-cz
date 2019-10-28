@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7a8a49f2b72745dac18a46fe8567578bca090834
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 1439bef59c621523b74f0e0634cd809deea1f3ee
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551493"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986066"
 ---
 # <a name="get-started-office-development-in-visual-studio"></a>Začínáme (vývoj pro Office v sadě Visual Studio)
   Tato část obsahuje témata, která vám pomohou začít používat nástroje systém Microsoft Office Developer Tools v aplikaci Visual Studio.
@@ -33,7 +33,7 @@ ms.locfileid: "69551493"
 
 - [Změny v návrhu projektů Office cílených na .NET Framework 4 nebo .NET Framework 4,5](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)
 
- Popisuje nový návrh projektů Office, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, a uvádí zásadní změny kódu v projektech Office, které migrujete [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] do nebo později.
+ Popisuje nový návrh projektů Office, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, a uvádí zásadní změny kódu v projektech Office, které migrujete do [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novějšího.
 
 - [Dostupné funkce podle aplikace systému Office a typu projektu](../vsto/features-available-by-office-application-and-project-type.md)
 
@@ -88,4 +88,4 @@ ms.locfileid: "69551493"
 
  Obsahuje informace o tom, jak zpřístupnit řešení Office uživatelům a popisuje hlavní problémy, které je potřeba vzít v úvahu při výběru metody nasazení a nastavení zabezpečení.
 
-- [Visual Studio Tools for Office technické články a Visual how for TOS](http://go.microsoft.com/fwlink/?LinkID=106640) Obsahuje odkazy na videa a technické články o řešeních pro systém Office vytvořených pomocí sady Visual Studio.
+- [Visual Studio Tools for Office technické články a Visual how for TOS](/previous-versions/office/developer/office-2007/bb871648(v=office.12)) Obsahuje odkazy na videa a technické články o řešeních pro systém Office vytvořených pomocí sady Visual Studio.

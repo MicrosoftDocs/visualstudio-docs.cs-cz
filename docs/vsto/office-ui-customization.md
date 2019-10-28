@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e5fd0253c6ca560c58724c8a83e343164b678923
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 15c7061030bec6aebca9cdc63d0cd0e0c79cc9aa
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254145"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985702"
 ---
 # <a name="office-ui-customization"></a>Přizpůsobení uživatelského rozhraní systému Office
   Můžete přizpůsobit uživatelské rozhraní (UI) systém Microsoft Office aplikací pomocí nástrojů Office Developer Tools v sadě Visual Studio. Toto téma popisuje funkce uživatelského rozhraní, které můžete přizpůsobit v následujících částech:
@@ -76,7 +76,7 @@ ms.locfileid: "71254145"
 
  Visual Studio neposkytuje návrháře ani rozhraní API pro přizpůsobení zobrazení Backstage. Pokud však přidáte položku **pásu karet (XML)** do projektu sady Office, můžete přidat XML do souboru XML pásu karet pro přizpůsobení zobrazení Backstage. Další informace o položkách **pásu karet (XML)** najdete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
 
- Další informace o přizpůsobení zobrazení Backstage najdete v tématu [Úvod do zobrazení Backstage office 2010 pro vývojáře](http://go.microsoft.com/fwlink/?LinkId=182189) a [přizpůsobení zobrazení Backstage Office 2010 pro vývojáře](http://go.microsoft.com/fwlink/?LinkId=182188).
+ Další informace o přizpůsobení zobrazení Backstage najdete v tématu [Úvod do zobrazení Backstage office 2010 pro vývojáře](/previous-versions/office/developer/office-2010/ee691833(v=office.14)) a [přizpůsobení zobrazení Backstage Office 2010 pro vývojáře](/previous-versions/office/developer/office-2010/ee815851(v=office.14)).
 
 ## <a name="FormRegion"></a>Oblasti formulářů aplikace Outlook
  Pomocí oblastí formuláře můžete přidat vlastní funkce do formulářů Standard systém Microsoft Office Outlook. Můžete vytvořit oblasti formulářů, které rozšíří libovolný existující formulář s dalšími poli nebo ovládacími prvky. Pokud vytvoříte novou oblast formuláře pomocí nástrojů pro vývoj pro Office v sadě Visual Studio, můžete použít pouze ovládací prvky model Windows Forms v oblasti formuláře. Pokud importujete oblast formuláře, která byla navržena v aplikaci Outlook, můžete použít pouze nativní ovládací prvky aplikace Outlook.
@@ -93,7 +93,7 @@ ms.locfileid: "71254145"
  Další informace naleznete v tématu Přehled [hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md) a [ovládací prvky Windows Forms v dokumentech Office](../vsto/windows-forms-controls-on-office-documents-overview.md).
 
 ## <a name="Shortcut"></a>Místní nabídky
- Místní nabídka se zobrazí po kliknutí pravým tlačítkem myši v dokumentu nebo v okně aplikace. Můžete nastavit místní nabídku, která se zobrazí poté, co dojde k události, například když uživatel klikne pravým tlačítkem myši na dokument, sešit nebo hostitelský ovládací prvek. Do místní nabídky můžete přidat několik různých příkazů nebo ovládacích prvků nabídky. Vytvořte místní nabídky pomocí XML. Pokud přidáte položku **pásu karet (XML)** do projektu sady Office, můžete přidat XML do souboru XML pásu karet a vytvořit tak místní nabídky. Další informace o použití jazyka XML k vytvoření místních nabídek naleznete v [tématu How to: Přidejte příkazy do místních nabídek](../vsto/how-to-add-commands-to-shortcut-menus.md).
+ Místní nabídka se zobrazí po kliknutí pravým tlačítkem myši v dokumentu nebo v okně aplikace. Můžete nastavit místní nabídku, která se zobrazí poté, co dojde k události, například když uživatel klikne pravým tlačítkem myši na dokument, sešit nebo hostitelský ovládací prvek. Do místní nabídky můžete přidat několik různých příkazů nebo ovládacích prvků nabídky. Vytvořte místní nabídky pomocí XML. Pokud přidáte položku **pásu karet (XML)** do projektu sady Office, můžete přidat XML do souboru XML pásu karet a vytvořit tak místní nabídky. Další informace o použití jazyka XML k vytvoření místních nabídek naleznete v tématu [How to: Add Commands to a Shortcut Menus](../vsto/how-to-add-commands-to-shortcut-menus.md).
 
 ## <a name="see-also"></a>Viz také:
 - [Přehled pásu karet](../vsto/ribbon-overview.md)
@@ -102,6 +102,6 @@ ms.locfileid: "71254145"
 - [Vytvoření oblastí formuláře aplikace Outlook](../vsto/creating-outlook-form-regions.md)
 - [Vlastní podokna úloh](../vsto/custom-task-panes.md)
 - [Použití ovládacích prvků WPF v řešeních pro systém Office](../vsto/using-wpf-controls-in-office-solutions.md)
-- [Postupy: Zobrazení karty Vývojář na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)
-- [Postupy: Zobrazit chyby uživatelského rozhraní doplňku](../vsto/how-to-show-add-in-user-interface-errors.md)
-- [Návod: Shromažďování dat pomocí formuláře Windows](../vsto/walkthrough-collecting-data-using-a-windows-form.md)
+- [Postupy: zobrazení karty Vývojář na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)
+- [Postupy: zobrazení chyb uživatelského rozhraní doplňku](../vsto/how-to-show-add-in-user-interface-errors.md)
+- [Návod: shromáždění dat pomocí formuláře Windows](../vsto/walkthrough-collecting-data-using-a-windows-form.md)

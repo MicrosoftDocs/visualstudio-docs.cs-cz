@@ -20,31 +20,31 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c4241464fe8a43af882fbdbad0f898838e8fd897
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 87cea877928baf52b0442ed9b0d952fcf649f155
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62826778"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986012"
 ---
 # <a name="how-to-add-controls-to-the-backstage-view"></a>Postupy: Přidání ovládacích prvků do zobrazení Backstage
-  Návrhář pásu karet můžete použít k přidávání ovládacích prvků do nabídky, které se otevře po kliknutí **souboru** kartu. Při spuštění aplikace, ovládací prvky, které přidáte **souboru** karta se skupina s názvem **Add-ins**.
+  Pomocí Návrháře pásu karet můžete přidat ovládací prvky do nabídky, která se otevře po kliknutí na kartu **soubor** . Když aplikaci spustíte, ovládací prvky, které přidáte na kartu **soubor** , se zobrazí ve skupině s názvem **Doplňky**.
 
- Ovládací prvky nelze umístit před nebo za vestavěné ovládací prvky pomocí Návrháře pásu karet v sadě Visual Studio. Předdefinovaný ovládací prvek je ovládací prvek, který se již nachází v zobrazení Backstage. Pokud chcete umístit ovládací prvky před nebo po vestavěných ovládacích prvcích, je nutné použít pás karet XML. Další informace o **pásu karet (XML)**, naleznete v tématu [kódu XML pásu karet](../vsto/ribbon-xml.md). Další informace o úpravách zobrazení Backstage naleznete v tématu [Úvod do zobrazení Office 2010 Backstage pro vývojáře](http://go.microsoft.com/fwlink/?LinkId=182189) a [přizpůsobení zobrazení Office 2010 Backstage pro vývojáře](http://go.microsoft.com/fwlink/?LinkId=182188).
+ Ovládací prvky nelze umístit před nebo za předdefinované ovládací prvky pomocí Návrháře pásu karet v aplikaci Visual Studio. Předdefinovaný ovládací prvek je ovládací prvek, který se již zobrazuje v zobrazení Backstage. Chcete-li umístit ovládací prvky před nebo po předdefinovaných ovládacích prvcích, je nutné použít kód XML pásu karet. Další informace o **pásu karet (XML)** najdete v tématu [XML pásu karet](../vsto/ribbon-xml.md). Další informace o přizpůsobení zobrazení Backstage najdete v tématu [Úvod do zobrazení Backstage office 2010 pro vývojáře](/previous-versions/office/developer/office-2010/ee691833(v=office.14)) a [přizpůsobení zobrazení Backstage Office 2010 pro vývojáře](/previous-versions/office/developer/office-2010/ee815851(v=office.14)).
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
 ### <a name="to-add-controls-to-backstage-view"></a>Přidání ovládacích prvků do zobrazení Backstage
 
-1. V návrhovém zobrazení otevřete položku pásu karet.
+1. Otevřete položku pásu karet v zobrazení Návrh.
 
-     Informace o tom, jak přidat **pás karet (vizuální návrhář)** položky do projektu, přečtěte si téma [jak: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md).
+     Informace o tom, jak přidat položku **pásu karet (vizuální Návrhář)** do projektu, naleznete v tématu [How to: Začínáme Customizing a na pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md).
 
-2. V Návrháři pásu karet klikněte na tlačítko **souboru** kartu.
+2. V Návrháři pásu karet klikněte na kartu **soubor** .
 
-     Otevře se Návrhář nabídek. Tuto návrhovou plochu neobsahuje žádné ovládací prvky.
+     Zobrazí se Návrhář nabídek. Tato návrhová plocha neobsahuje žádné ovládací prvky.
 
-3. Z **ovládací prvky Ribbon Office** karty **nástrojů**, přetáhněte kterýkoli z následujících ovládacích prvků na nabídce Návrhář:
+3. Na kartě **ovládací prvky pásu karet sady Office** **přetáhněte do návrháře**nabídky libovolný z následujících ovládacích prvků:
 
     - Tlačítko
 
@@ -60,11 +60,11 @@ ms.locfileid: "62826778"
 
     - ToggleButton
 
-4. Přetáhněte ovládací prvky a přesunout jej do nového umístění v nabídce.
+4. Přetáhněte ovládací prvky pro přesunutí na nové pozice v nabídce.
 
 ## <a name="see-also"></a>Viz také:
 - [Přehled pásu karet](../vsto/ribbon-overview.md)
 - [Návrhář pásu karet](../vsto/ribbon-designer.md)
 - [Pás karet – XML](../vsto/ribbon-xml.md)
-- [Postupy: Začínáme přizpůsobení pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md)
+- [Postupy: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md)
 - [Návod: Vytvoření vlastní karty pomocí Návrháře pásu karet](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)

@@ -1,5 +1,5 @@
 ---
-title: Vytváření stránek pro službu SharePoint | Dokumentace Microsoftu
+title: Vytváření stránek pro SharePoint | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,53 +17,53 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f58af55b18d7cd6341b779d71da2994875c98a62
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 297ebf0e7c2ed1273dd5a8ac973ce497c4c64781
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62419882"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986345"
 ---
-# <a name="create-pages-for-sharepoint"></a>Vytváření stránek pro službu SharePoint
-  Můžete vytvořit stránky aplikace, weby, stránky předlohy a rozložení stránek webu služby SharePoint.
+# <a name="create-pages-for-sharepoint"></a>Vytváření stránek pro SharePoint
+  Můžete vytvářet stránky aplikace, stránky webu, stránky předlohy a rozložení stránek pro web služby SharePoint.
 
- Stránky aplikací můžete vytvořit pomocí šablony v sadě Visual Studio. Vytvoření stránky, stránky předlohy a rozložení stránek pomocí návrháře služby SharePoint. Pak můžete importovat tyto stránky do sady Visual Studio pro použití v projektu služby SharePoint.
+ Stránky aplikace můžete vytvořit pomocí šablony v aplikaci Visual Studio. Pomocí SharePoint designeru Vytvářejte stránky webu, stránky předlohy a rozložení stránek. Pak můžete tyto stránky importovat do sady Visual Studio, aby je bylo možné použít v projektu služby SharePoint.
 
- Můžete také upravit vzhled a chování stránky s použitím šablony stylů CSS, ECMAScript a motivů.
+ Vzhled a chování stránek můžete také upravit pomocí šablon stylů, ECMAScriptu a motivů.
 
-## <a name="types-of-sharepoint-pages"></a>Typy stránek služby SharePoint
+## <a name="types-of-sharepoint-pages"></a>Typy stránek SharePoint
  Následující tabulka popisuje čtyři hlavní typy stránek, které obsahuje web služby SharePoint.
 
 |Typ stránky|Popis|
 |---------------|-----------------|
-|Stránky aplikací|Vytvoření stránky aplikace, pokud chcete stránku tak, aby obsahovala vlastní kód nebo chcete stránku sdílet mezi více servery. Stránka webu v opačném případě může být nejlepší volbou.|
-|Stránky webu|Vytvoření stránky webu, pokud chcete provádět následující úkoly:<br /><br /> -Přidáte na stránku do knihovny služby SharePoint.<br />-Aktivovat stránku hostitele funkce jako dynamické webové části a zóny webové části.<br />-Umožňují uživatelům přizpůsobit stránky s použitím návrháře služby SharePoint.<br /><br /> Pokud chcete, aby stránka obsahuje vlastní kód není vytvoření stránky webu. I když přidáte vlastní kód na stránku webu, se zastaví kód spuštěn, když uživatel přizpůsobuje stránky s použitím návrháře služby SharePoint.|
-|Stránky předlohy|Vytvoření stránky předlohy, pokud chcete definovat společnou strukturu pro stránky a stránky aplikace.|
-|Rozložení stránek|Rozložení stránek, které jsou specifické pro [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] a umožňují definovat další běžné strukturu pro stránky a stránky aplikace.|
+|Stránky aplikace|Stránku aplikace vytvořte, pokud chcete, aby stránka obsahovala vlastní kód, nebo chcete, aby se stránka sdílela ve více lokalitách. V opačném případě může být nejlepší volbou stránka webu.|
+|Stránky webu|Stránku vytvořit web, pokud chcete provést některou z následujících úloh:<br /><br /> – Přidejte stránku do knihovny služby SharePoint.<br />– Povolí hostování funkcí této stránky, jako je například dynamická Webové části a zóny webových částí.<br />– Povolte uživatelům přizpůsobení stránky pomocí SharePoint designeru.<br /><br /> Nevytvářejte stránku webu, pokud chcete, aby stránka obsahovala vlastní kód. I když můžete přidat vlastní kód na stránku webu, kód se ukončí, když uživatel přizpůsobuje stránku pomocí SharePoint designeru.|
+|Stránky předlohy|Pokud chcete definovat společnou strukturu stránek webu a stránek aplikace, vytvořte stránku předlohy.|
+|Rozložení stránek|Rozložení stránek jsou specifická pro [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] a umožňují vám dále definovat společnou strukturu stránek webů a stránek aplikací.|
 
- Přehled každý typ stránky, naleznete v tématu [stavebních bloků: Stránky a uživatelské rozhraní](http://go.microsoft.com/fwlink/?LinkID=182095), a [stránce rozložení a stránkami předloh](http://go.microsoft.com/fwlink/?LinkID=182096).
+ Přehled každého typu stránky naleznete v tématech [stavební blok: stránky a uživatelské rozhraní](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)), [rozložení stránek a stránky předlohy](/previous-versions/office/developer/sharepoint-2010/ms543497(v=office.14)).
 
-## <a name="create-application-pages"></a>Vytvoření stránky aplikace
- Stránky aplikací v sadě Visual Studio můžete vytvořit přidáním **stránky aplikace** položky projektu služby SharePoint. Můžete přidat ovládací prvky na stránku a pak zpracovat události ovládacího prvku přidáním kódu.
+## <a name="create-application-pages"></a>Vytvořit stránky aplikace
+ Můžete vytvořit stránky aplikace v aplikaci Visual Studio tak, že přidáte položku **stránky aplikace** do projektu služby SharePoint. Můžete přidat ovládací prvky na stránku a poté zpracovat události řízení přidáním kódu.
 
- Můžete nastavit zarážky v souboru kódu stránky, spusťte ladicí program a otestovat stránku na místním Sharepointovém webu bez provedení všech dalších kroků konfigurace. Další informace najdete v tématu [vytváření stránek aplikací pro SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md).
+ Můžete nastavit zarážky v souboru kódu stránky, spustit ladicí program a otestovat stránku na místním webu služby SharePoint bez provedení jakýchkoli dalších kroků konfigurace. Další informace najdete v tématu [vytváření stránek aplikací pro službu SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md).
 
-## <a name="create-site-pages-master-pages-and-page-layouts"></a>Vytvoření stránky, stránky předlohy a rozložení stránek
- Můžete vytvořit stránky, stránky předlohy a rozložení stránek pomocí návrháře služby SharePoint. Pak můžete importovat tyto stránky do sady Visual Studio. Pokud chcete využít výhod nasazení nebo funkce správy zdrojového kódu, které jsou k dispozici v sadě Visual Studio umožňuje importujte vaše stránky. Další informace najdete v tématu [import položek z existující stránky SharePoint](../sharepoint/importing-items-from-an-existing-sharepoint-site.md).
+## <a name="create-site-pages-master-pages-and-page-layouts"></a>Vytváření stránek webu, stránek předlohy a rozložení stránek
+ Můžete vytvářet stránky webu, stránky předlohy a rozložení stránek pomocí služby SharePoint Designer. Pak můžete tyto stránky importovat do sady Visual Studio. Importujte své stránky, pokud chcete využít výhod nasazení nebo funkcí správy zdrojového kódu, které jsou k dispozici v aplikaci Visual Studio. Další informace naleznete v tématu [Import položek z existujícího webu služby SharePoint](../sharepoint/importing-items-from-an-existing-sharepoint-site.md).
 
- Protože je obtížné upravit tyto stránky po importu, měli byste navrhnout tyto stránky před importem.
+ Vzhledem k tomu, že je obtížné tyto stránky po importu importovat, je třeba navrhnout tyto stránky před jejich importem.
 
-## <a name="create-cascading-style-sheets-ecmascript-and-themes"></a>Vytvoření šablony stylů CSS, ECMAScript a motivů
- Visual Studio neposkytuje šablony pro vývoj stylů CSS (Cascading Style), ECMAScript (JavaScript nebo JScript) nebo soubory motivu pro weby služby SharePoint. Tyto soubory můžete vytvořit pomocí doprovodné materiály k dispozici v sadě SDK služby SharePoint nebo pomocí nástrojů, jako je SharePoint designeru.
+## <a name="create-cascading-style-sheets-ecmascript-and-themes"></a>Vytváření kaskádových šablon stylů, ECMAScript a motivů
+ Visual Studio neposkytuje šablony pro vývoj šablony stylů CSS (CSS), ECMAScript (JavaScript, JScript) nebo souborů motivů pro weby služby SharePoint. Tyto soubory můžete vytvořit pomocí pokynů, které jsou k dispozici v sadě SharePoint SDK nebo pomocí nástrojů, jako je například SharePoint Designer.
 
- Tyto soubory do svého řešení můžete přidat přímo nebo je importovat. V obou případech musíte vytvořit odpovídající mapované složky pro každou položku, která přidáte. Další informace o tom, jak vytvořit mapované složky, najdete v části [postupy: Přidání a odebrání mapovaných složek](../sharepoint/how-to-add-and-remove-mapped-folders.md).
+ Tyto soubory můžete do svého řešení přidat přímo nebo je můžete importovat. V obou případech je nutné vytvořit příslušné mapované složky pro každou položku, kterou přidáte. Další informace o tom, jak vytvořit mapovanou složku, naleznete v tématu [How to: Add and Remove mapované složky](../sharepoint/how-to-add-and-remove-mapped-folders.md).
 
- Další informace o vytváření kaskádová šablona stylů, najdete v části [CSS stylu listů třídy využití ve službě SharePoint Foundation](http://go.microsoft.com/fwlink/?LinkID=182098). Další informace o vytváření souborů JavaScript a JScript pro řešení služby SharePoint, naleznete v tématu [nastavení až základní stránku ASPX pro ECMAScript](http://go.microsoft.com/fwlink/?LinkID=182099). Další informace o motivech najdete v tématu [stavebních bloků: Stránky a uživatelské rozhraní](http://go.microsoft.com/fwlink/?LinkID=182095).
+ Další informace o vytváření šablony stylů CSS naleznete v tématu [šablony stylů CSS použití třídy v SharePoint Foundation](/previous-versions/office/developer/sharepoint-2010/ms438349(v=office.14)). Další informace o vytváření souborů JavaScriptu a JScript pro řešení služby SharePoint naleznete v tématu [nastavení základní stránky ASPX pro ECMAScript](/previous-versions/office/developer/sharepoint-2010/ee535709(v=office.14)). Další informace o motivech naleznete v tématu [stavební blok: stránky a uživatelské rozhraní](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)).
 
 ## <a name="related-topics"></a>Související témata
 
 |Název|Popis|
 |-----------|-----------------|
-|[Vytváření stránek aplikací pro SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md)|Popisuje postup přidání stránky aplikace: *.aspx* obsah, který je sloučen s hlavní stránkou služby SharePoint.|
-|[Postupy: Vytvoření stránky aplikace](../sharepoint/how-to-create-an-application-page.md)|Ukazuje, jak vytvořit stránek ASP.NET, které běží na webu služby SharePoint.|
-|[Návod: Vytvoření stránky aplikace služby SharePoint](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)|Ukazuje, jak navrhovat a ladit webové stránky ASP.NET pro web služby SharePoint.|
+|[Vytváření stránek aplikací pro službu SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md)|Popisuje postup přidání stránek aplikace: obsah *. aspx* , který je sloučen se stránkou předlohy služby SharePoint.|
+|[Postupy: Vytvoření stránky aplikace](../sharepoint/how-to-create-an-application-page.md)|Ukazuje, jak vytvořit ASP.NET stránky, které běží na webu služby SharePoint.|
+|[Návod: Vytvoření stránky aplikace služby SharePoint](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)|Ukazuje, jak navrhnout a ladit webovou stránku ASP.NET pro web služby SharePoint.|

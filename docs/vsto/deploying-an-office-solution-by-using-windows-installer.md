@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 20df85952b4e76e60d6e93067c1f1e7838b692cd
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: a44781c6fea0ecf75dcdb8a5ab2e2b3bed8e52e9
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69551716"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986137"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>Nasazení řešení Office pomocí Instalační služba systému Windows
 
@@ -59,15 +59,15 @@ Pomocí sady Visual Studio k vytvoření Instalační služba systému Windows m
 
 Další informace o tom, jak nasadit řešení pro Office pomocí ClickOnce, najdete v tématu [nasazení řešení pro Office pomocí technologie ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md).
 
-Informace o tom, jak vytvořit soubor Instalační služba systému Windows pomocí [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)], najdete v tématu [nasazení nástrojů sady Visual Studio 2010 pro řešení Office pomocí Instalační služba systému Windows](http://go.microsoft.com/fwlink/?LinkId=201807).
+Informace o tom, jak vytvořit soubor Instalační služba systému Windows pomocí [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)], najdete v tématu [nasazení nástrojů sady Visual Studio 2010 pro řešení Office pomocí Instalační služba systému Windows](/previous-versions/visualstudio/visual-studio-2010/ff937654(v=msdn.10)).
 
 ## <a name="Download"></a>Stáhnout ukázky
 Toto téma se týká následujících ukázek ke stažení.
 
 |Ukázka<br /><br />|Popis<br /><br />|
 |----------|---------------|
-|[ExcelAddIn](http://go.microsoft.com/fwlink/?LinkID=275492)<br /><br />|Doplněk VSTO pro Excel, který můžete nainstalovat na počítač, na kterém běží 32 nebo 64 verze systému Office.<br /><br />|
-|[ExcelWorkbook](http://go.microsoft.com/fwlink/?LinkID=275493)<br /><br />|Přizpůsobení na úrovni dokumentu aplikace Excel, které můžete nainstalovat na počítač, na kterém běží 32 nebo 64 bitová verze systému Office.<br /><br />|
+|[ExcelAddIn](https://code.msdn.microsoft.com/VSTO-Deploy-an-Office-fbcc09ad)<br /><br />|Doplněk VSTO pro Excel, který můžete nainstalovat na počítač, na kterém běží 32 nebo 64 verze systému Office.<br /><br />|
+|[ExcelWorkbook](https://code.msdn.microsoft.com/VSTO-Deploy-a-Customization-f70fae33)<br /><br />|Přizpůsobení na úrovni dokumentu aplikace Excel, které můžete nainstalovat na počítač, na kterém běží 32 nebo 64 bitová verze systému Office.<br /><br />|
 
 ## <a name="ApplySecurity"></a>Rozhodnutí o tom, jak udělit důvěru k řešení
 Předtím, než může být řešení spuštěno v počítačích uživatelů, je nutné udělit důvěryhodnost jedním z následujících způsobů nebo uživatelé musí při instalaci řešení reagovat na výzvu k zadání vztahu důvěryhodnosti.
@@ -103,7 +103,7 @@ Soubor Instalační služba systému Windows můžete vytvořit pomocí nástroj
 
 ## <a name="Create"></a>Vytvořit projekt instalace
 
-1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevřete projekt Office, který chcete nasadit.
+1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]otevřete projekt Office, který chcete nasadit.
 
    Ukázky doplňku VSTO spojené s tímto tématem obsahují projekt s názvem **ExcelAddIn**. Ukázky přizpůsobení na úrovni dokumentu obsahují projekt s názvem **ExcelWorkbook**. Toto téma bude odkazovat na projekt sady Office ve vašem řešení pomocí jednoho z těchto dvou názvů.
 
@@ -231,9 +231,9 @@ Stránka **distribuovatelné** obsahuje položku s názvem **Microsoft VSTO 2010
 
 10. Ze složky **plocha** zkopírujte soubor *Visual Studio 2010 Tools for Office runtime. prq* do jednoho z následujících adresářů v počítači.
 
-   Pro 32 operační systémy: *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites \\*
+   Pro 32 operační systémy: *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites\\*
 
-   Pro 64 – bitové operační systémy: *% ProgramFiles (x86)% \ 2013LE \ SetupPrerequisites \\*
+   Pro 64 – bitové operační systémy: *% ProgramFiles (x86)% \ 2013LE \ SetupPrerequisites\\*
 
 11. V rámci **Redistribuovatelné** stránky projektu InstallShield klikněte na tlačítko **aktualizovat** , čímž aktualizujete seznam distribuovatelných komponent, jak je znázorněno na následujícím obrázku.
 
@@ -510,4 +510,4 @@ Chcete-li upravit vlastní vlastnosti, vytvořte program, který odebere přizp�
 - [Přehled vlastních vlastností dokumentu](../vsto/custom-document-properties-overview.md)
 - [Udělení vztahu důvěryhodnosti řešením pro systém Office](../vsto/granting-trust-to-office-solutions.md)
 - [Udělení důvěryhodnosti k dokumentům](../vsto/granting-trust-to-documents.md)
-- [Nasazení nástrojů sady Visual Studio 2010 pro řešení Office pomocí Instalační služba systému Windows](http://go.microsoft.com/fwlink/?LinkId=201807)
+- [Nasazení nástrojů sady Visual Studio 2010 pro řešení Office pomocí Instalační služba systému Windows](/previous-versions/visualstudio/visual-studio-2010/ff937654(v=msdn.10))

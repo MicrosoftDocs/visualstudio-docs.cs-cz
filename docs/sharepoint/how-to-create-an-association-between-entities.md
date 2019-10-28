@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Vytvoření přidružení mezi entitami | Dokumentace Microsoftu'
+title: 'Postupy: vytvoření přidružení mezi entitami | Microsoft Docs'
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -21,56 +21,56 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ce6d0bad9da4f11b5fae1daf93657c6908cf5e95
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cba9d712e2bcfa90ae37d47e3c518697f10b6add
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62966793"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981837"
 ---
-# <a name="how-to-create-an-association-between-entities"></a>Postupy: Vytvoření přidružení mezi entitami
-  Je možné definovat vztahy mezi entitami v modelu obchodní Data připojení (BDC) tak, že vytvoříte přidružení. Visual Studio generuje metody, které poskytují příjemci modelu s informacemi o každé přidružení. Tyto metody mohou být spotřebovány webových částí služby SharePoint, seznamy nebo vlastní aplikace pro zobrazení relací mezi daty v uživatelském rozhraní (UI).
+# <a name="how-to-create-an-association-between-entities"></a>Postupy: vytvoření přidružení mezi entitami
+  Vytvořením přidružení můžete definovat vztahy mezi entitami v modelu služby připojení obchodních dat. Visual Studio generuje metody, které poskytují uživatelům modelu informace o jednotlivých přidruženích. Tyto metody mohou být využívány webovými částmi, seznamy nebo vlastními aplikacemi služby SharePoint pro zobrazení relací dat v uživatelském rozhraní (UI).
 
- Dva druhy přidružení můžete vytvořit v Návrháři služby BDC: přidružení cizího na základě klíčů a cizích bez klíčů přidružení. Další informace najdete v tématu [vytvoření přidružení mezi entitami](../sharepoint/creating-an-association-between-entities.md).
+ V Návrháři služby BDC můžete vytvořit dva typy přidružení: přidružení založená na cizím klíči a cizí bez klíčů přidružení. Další informace najdete v tématu [vytvoření přidružení mezi entitami](../sharepoint/creating-an-association-between-entities.md).
 
 ### <a name="to-create-an-association-between-entities"></a>Vytvoření přidružení mezi entitami
 
-1. Na **služby Připojení obchodních dat** karty **nástrojů**, zvolte **přidružení** položky.
+1. Na kartě **BusinessDataConnectivity** sady **nástrojů**vyberte položku **přidružení** .
 
-2. V Návrháři služby BDC zvolte zdrojové entity a klikněte na tlačítko Cílová entita.
+2. V Návrháři BDC Zvolte zdrojovou entitu a pak zvolte cílovou entitu.
 
-     **Editor asociace** se zobrazí.
+     Zobrazí se **Editor přidružení** .
 
-3. Pokud chcete vytvořit přidružení cizího klíče na základě, vyberte **je přidružení cizího klíče** zaškrtávací políčko.
+3. Pokud chcete vytvořit přidružení založené na cizím klíči, zaškrtněte políčko **je přidružení cizího klíče** .
 
-    1. V **ID zdroje** sloupec **identifikátor mapování** tabulky, zvolte identifikátor vedle každé odpovídající popisovač typu, který se zobrazí **pole** sloupce.
+    1. Ve sloupci **ID zdroje** v tabulce **mapování identifikátorů** vyberte identifikátor vedle každého odpovídajícího popisovače typu, který se zobrazí ve sloupci **pole** .
 
-         Například v **ID zdroje** sloupci vyberte `ContactID` vedle `ReadList.salesOrderList.SalesOrderList.SalesOrder.ContactID` popisovač typu a `ReadItem.salesOrder.SalesOrder.ContactID` popisovačem typu.
+         Například ve sloupci **ID zdroje** vyberte `ContactID` vedle deskriptoru typu `ReadList.salesOrderList.SalesOrderList.SalesOrder.ContactID` a popisovač typu `ReadItem.salesOrder.SalesOrder.ContactID`.
 
-4. Pokud chcete vytvořit přidružení cizího bez klíčů, zrušte zaškrtnutí políčka **je přidružení cizího klíče** zaškrtávací políčko.
+4. Pokud chcete vytvořit přidružení cizího bez klíčů, zrušte zaškrtnutí políčka **je přidružení cizího klíče** .
 
-5. Zvolte **OK** tlačítko.
+5. Klikněte na tlačítko **OK** .
 
-6. V Návrháři služby BDC zobrazí se řádek, který představuje přidružení mezi entitou zdrojové a cílové entity.
+6. V Návrháři BDC se zobrazí čára, která představuje přidružení mezi zdrojovou entitou a cílovou entitou.
 
-     Visual Studio přidá metodu přidružení Navigátor třídu služby cílové entity a třídu služby zdrojové entity. Další informace o přidružení navigační metody, naleznete v tématu [podporované operace](http://go.microsoft.com/fwlink/?LinkId=169286).
+     Visual Studio přidá metodu navigátoru asociace do třídy služby cílové entity a třídy služby zdrojové entity. Další informace o metodách navigace v přidružení najdete v tématu [podporované operace](/previous-versions/office/developer/sharepoint-2010/ee557363(v=office.14)).
 
-7. Metoda přidružení Navigátor zdrojové entitě přidejte kód, který vrátí kolekce z cílové entity.
+7. V metodě navigátor přidružení zdrojové entity přidejte kód, který vrátí kolekci cílových entit.
 
-8. Metoda přidružení Navigátor Cílová entita přidejte kód, který vrátí související zdrojové entity.
+8. V metodě navigátoru přidružení cílové entity přidejte kód, který vrátí související zdrojovou entitu.
 
-     Příklady metod Navigátor přidružení, najdete v článku [vytvoření přidružení mezi entitami](../sharepoint/creating-an-association-between-entities.md).
+     Příklady metod navigátoru přidružení najdete v tématu [vytvoření přidružení mezi entitami](../sharepoint/creating-an-association-between-entities.md).
 
 ## <a name="see-also"></a>Viz také:
 - [Vytvoření přidružení mezi entitami](../sharepoint/creating-an-association-between-entities.md)
-- [Navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)
+- [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)
 - [Postupy: Přidání vyhledávací metody](../sharepoint/how-to-add-a-finder-method.md)
 - [Postupy: Přidání konkrétní vyhledávací metody](../sharepoint/how-to-add-a-specific-finder-method.md)
-- [Postupy: Přidání metody vytvoření](../sharepoint/how-to-add-a-creator-method.md)
+- [Postupy: Přidání metody autora](../sharepoint/how-to-add-a-creator-method.md)
 - [Postupy: Přidání metody odstranění](../sharepoint/how-to-add-a-deleter-method.md)
 - [Postupy: Přidání aktualizační metody](../sharepoint/how-to-add-an-updater-method.md)
-- [Přehled nástroje pro navrhování modelů služby BDC](../sharepoint/bdc-model-design-tools-overview.md)
-- [Postupy: Přidání parametru k metodě](../sharepoint/how-to-add-a-parameter-to-a-method.md)
-- [Postupy: Definování instance metody](../sharepoint/how-to-define-a-method-instance.md)
-- [Postupy: Definování deskriptoru typu pro parametr](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)
+- [Přehled nástrojů pro návrh modelu služby BDC](../sharepoint/bdc-model-design-tools-overview.md)
+- [Postupy: Přidání parametru do metody](../sharepoint/how-to-add-a-parameter-to-a-method.md)
+- [Postupy: definování instance metody](../sharepoint/how-to-define-a-method-instance.md)
+- [Postupy: definování deskriptoru typu pro parametr](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)
 - [Návod: Vytvoření externího seznamu ve službě SharePoint s použitím obchodních dat](../sharepoint/walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md)

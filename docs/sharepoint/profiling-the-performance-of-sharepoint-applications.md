@@ -1,5 +1,5 @@
 ---
-title: Profilace výkonu aplikací služby SharePoint | Dokumentace Microsoftu
+title: Profilace výkonu aplikací služby SharePoint | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,53 +18,53 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8b59a3de88403300a46b7992a2dad72e3d6b59e0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fc337b1ac753c214ad2484c26c9149e9a1a6ca04
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62563309"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981202"
 ---
-# <a name="profile-the-performance-of-sharepoint-applications"></a>Profil výkonu aplikací služby SharePoint
+# <a name="profile-the-performance-of-sharepoint-applications"></a>Profilace výkonu aplikací služby SharePoint
 
-Pokud vaše aplikace SharePoint fungují pomalu nebo neefektivně, můžete použít funkce profilování v sadě Visual Studio k určení problematického kódu a další prvky. Pomocí funkce testování zatížení, můžete určit, jakým způsobem aplikace SharePoint funguje pod zátěží, například když mnoho uživatelů současně k aplikaci. Spuštěním testů webového výkonu lze změřit, jak aplikace funguje na webu. Pomocí programových testů UI můžete ověřit, zda celá aplikaci SharePoint, včetně uživatelského rozhraní, funguje správně. Použijete-li tyto testy společně, mohou pomoci identifikovat problémy s výkonem před nasazením aplikace.
+Pokud vaše aplikace SharePoint pracuje pomalu nebo neefektivně, můžete použít funkce profilování v aplikaci Visual Studio k identifikaci problematického kódu a dalších prvků. Pomocí funkce testování zatížení můžete určit, jak má aplikace služby SharePoint provádět zátěž, například když mnoho uživatelů přistupuje k aplikaci současně. Spuštěním testů výkonnosti webu můžete měřit, jak aplikace provádí na webu. Pomocí programových testů uživatelského rozhraní můžete ověřit, zda celá aplikace služby SharePoint, včetně jejího uživatelského rozhraní, funguje správně. Použijete-li tyto testy společně, mohou vám pomohou identifikovat problémy s výkonem před nasazením aplikace.
 
-## <a name="profile-tools-overview"></a>Přehled nástroje profilu
+## <a name="profile-tools-overview"></a>Přehled nástrojů pro profilaci
 
-Profilování se vztahuje k procesu sledování a zaznamenávání chování výkonu aplikace při jejím spuštění. Pomocí Profilování vaší aplikace můžete odhalit problémy, jako jsou problémová místa, neefektivní kód a problémy s přidělením paměti, které způsobují aplikace pracuje pomalu nebo používá příliš mnoho paměti. Například můžete profilování k identifikaci aktivních bodů ve vašem kódu, které jsou segmenty kódů, které jsou často volány a mohou zpomalit výkon vaší aplikace. Po identifikaci aktivních oblastí, můžete často optimalizovat nebo odstranit.
+Profilace odkazuje na proces pozorování a zaznamenávání chování vaší aplikace při jejich spuštění. Po profilaci aplikace můžete odhalit problémy, jako jsou například kritická místa, neefektivní kód a problémy s přidělením paměti, což způsobuje, že aplikace běží pomalu nebo využívají příliš mnoho paměti. Profilování můžete například použít k identifikaci hotspotů ve vašem kódu, což jsou segmenty kódu, které jsou často volány a mohou zpomalit celkový výkon aplikace. Po identifikaci aktivních bodů je můžete často optimalizovat nebo eliminovat.
 
-Několik nástrojů pro profilaci v integrovaném vývojovém prostředí (IDE) můžete použít k identifikaci a vyhledání tyto typů problémů s výkonem. Tyto nástroje pracují stejným způsobem pro projekty služby SharePoint, jako je tomu u jiných typů projektů sady Visual Studio. Průvodce Profilováním výkonu nástroje vás provede vytvořením relace výkonu, která používá testy, které zadáte. Relace výkonu je sada konfiguračních dat, která se používá ke shromažďování informací o výkonu z aplikace spolu s výsledky jednoho nebo několika spuštění profilování. Výkonnostní relace jsou uloženy ve složce vašeho projektu a můžete zobrazit v **prohlížeč výkonu**. Další informace najdete v tématu [metody kolekce výkonu Principy](../profiling/understanding-performance-collection-methods.md).
+Můžete použít několik nástrojů pro profilaci v integrovaném vývojovém prostředí (IDE) k identifikaci a vyhledání těchto typů problémů s výkonem. Tyto nástroje fungují stejným způsobem pro projekty služby SharePoint, stejně jako pro jiné typy projektů aplikace Visual Studio. Průvodce výkonem Nástroje pro profilaci vás provede vytvořením relace výkonu, která používá testy, které zadáte. Výkonnostní relace je sada konfiguračních dat, která se používá ke shromažďování informací o výkonu z aplikace spolu s výsledky jednoho nebo více spuštění profilování. Relace výkonu jsou uloženy ve složce projektu a lze je zobrazit v **prohlížeč výkonu**. Další informace najdete v tématu [principy metod shromažďování výkonu](../profiling/understanding-performance-collection-methods.md).
 
-Po vytvoření a spuštění analýzy profilu v aplikaci sestava obsahuje podrobné informace o jeho výkonu. Tato sestava může obsahovat položky jako graf využití procesoru v čase, zásobník volání hierarchické funkce nebo volání stromu. Přesný obsah zprávy se může lišit v závislosti na typu testu, který spouštíte, jako je například vzorkování nebo instrumentace. Další informace najdete v tématu [přehled nástrojů profilování sestavy](http://go.microsoft.com/fwlink/?LinkId=224689).
+Po vytvoření a spuštění analýzy profilů v aplikaci vám Sestava poskytne podrobnosti o jejím výkonu. Tato sestava může obsahovat položky, jako je například graf využití procesoru v čase, zásobník volání hierarchické funkce nebo strom volání. Přesný obsah sestavy se může lišit v závislosti na typu testu, který spustíte, jako je například vzorkování nebo instrumentace. Další informace najdete v tématu [přehled nástroje pro profilaci sestavy](../profiling/performance-report-overview.md).
 
 ## <a name="performance-session-process"></a>Proces relace výkonu
 
-Chcete-li Profilovat aplikaci, začněte pomocí Průvodce Profilováním výkonu nástroje pro tvorbu relace výkonu. V panelu nabídky zvolte **analyzovat**, **spustit Průvodce výkonem**. Po dokončení průvodce, zadejte požadované informace pro vaši relaci výkonu, jako je například požadovanou metodu profilu a aplikaci, kterou chcete Profilovat. Další informace najdete v tématu [jak: Profilovat webové stránky nebo webové aplikace pomocí průvodcem výkonu](http://go.microsoft.com/fwlink/?LinkId=224692). Jako alternativu můžete použít možnosti příkazového řádku k nastavení a spuštění relace výkonu. Další informace najdete v tématu [Profiling Tools z příkazového řádku pomocí](http://go.microsoft.com/fwlink/?LinkId=224703). Pokud chcete ručně konfigurovat každý aspekt relace výkonu, přečtěte si téma [jak: Ruční vytváření výkonnostních relací s nástroji pro profilaci](http://go.microsoft.com/fwlink/?LinkId=224691). Můžete také vytvořit relaci výkonu z testu jednotky, v **výsledky testu** okno, otevřením místní nabídky pro test jednotek a následným výběrem možnosti **vytvořit relaci výkonu**.
+Chcete-li profilovat aplikaci, začněte pomocí Průvodce Nástroje pro profilaci výkon a vytvořte relaci výkonu. Na panelu nabídek vyberte možnost **analyzovat**, **Spustit Průvodce výkonem**. Při dokončování Průvodce zadáte požadované informace pro vaši relaci výkonu, například požadovanou metodu profilu, a aplikaci, kterou chcete profilovat. Další informace najdete v tématu [Postup: profilování webu nebo webové aplikace pomocí Průvodce výkonem](../profiling/how-to-collect-performance-data-for-a-web-site.md). Alternativně můžete použít možnosti příkazového řádku k nastavení a spuštění relace výkonu. Další informace najdete v tématu [použití nástroje pro profilaci z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md). Pokud chcete nakonfigurovat všechny aspekty relace výkonu ručně, přečtěte si téma [Postup: Ruční vytvoření relací výkonu pomocí nástroje pro profilaci](../profiling/how-to-manually-create-performance-sessions.md). Můžete také vytvořit relaci výkonu z testu jednotky tak, že v okně **výsledky testů** otevřete místní nabídku pro test jednotky a pak zvolíte možnost **vytvořit relaci výkonu**.
 
-Po nastavení relace výkonu, konfigurace relace uložena, server je nakonfigurován pro poskytnutí profilování dat a spuštění aplikace. Při použití aplikace, data výkonu jsou zapsána do souboru protokolu. Výkonnostní relace jsou uvedeny v **prohlížeč výkonu** pod **cíle** složky. Po ukončení relace výkonu se jeho sestava zobrazí ve **sestavy** složky **prohlížeč výkonu**. Pokud chcete zobrazit sestavy, otevřete ho v **prohlížeč výkonu**. Chcete-li zobrazit nebo nakonfigurovat vlastnosti relace výkonu, otevřete místní nabídku v **prohlížeč výkonu**a klikněte na tlačítko **vlastnosti**. Další informace o konkrétních vlastnostech relace výkonu naleznete v tématu [konfigurace výkonnostních relací pro nástroje pro profilaci sady](http://go.microsoft.com/fwlink/?LinkId=224694). Informace o interpretaci výsledků výkonu relace naleznete v tématu [analýza dat nástrojů pro profilaci](http://go.microsoft.com/fwlink/?LinkId=224704).
+Po nastavení relace výkonu se konfigurace relace uloží, server se nakonfiguruje tak, aby poskytoval data profilace a aplikace se spustí. Při použití aplikace se data o výkonu zapisují do souboru protokolu. Relace výkonu jsou uvedené v **prohlížeč výkonu** ve složce **cíle** . Po dokončení relace výkonu se její sestava zobrazí ve složce **sestavy** v **prohlížeč výkonu**. Chcete-li zobrazit sestavu, otevřete ji v **prohlížeč výkonu**. Chcete-li zobrazit nebo nakonfigurovat vlastnosti relace výkonu, otevřete její místní nabídku v **prohlížeč výkonu**a zvolte možnost **vlastnosti**. Další informace o konkrétních vlastnostech relace výkonu najdete v tématu [Konfigurace relací výkonu pro nástroje pro profilaci](../profiling/configuring-performance-sessions.md). Informace o tom, jak interpretovat výsledky relace výkonu, najdete v tématu [analýza nástroje pro profilacich dat](../profiling/analyzing-performance-tools-data.md).
 
 ## <a name="stress-test"></a>Zátěžový test
 
-Výkon napětí aplikací můžete analyzovat vytvořením zátěžových testů a testů výkonnosti webu v sadě Visual Studio. Když vytvoříte zátěžový test v sadě Visual Studio, určete kombinace faktorů, nazývá scénář, chcete-li aplikaci otestovat. Tyto faktory zahrnují vzor zatížení, model kombinace testů, kombinaci testů, kombinaci sítí a kombinaci webového prohlížeče. Scénáře testování zatížení můžete zahrnout jednotkové testy i testy výkonnosti webu.
+Můžete analyzovat výkon zátěže vašich aplikací vytvořením zátěžových testů a testů výkonnosti webu v aplikaci Visual Studio. Při vytváření zátěžového testu v aplikaci Visual Studio určíte kombinaci faktorů označovaných jako scénář a otestujete tak aplikaci. Tyto faktory zahrnují vzor zatížení, model kombinace testů, kombinaci testů, kombinaci sítí a kombinaci webového prohlížeče. Scénáře zátěžového testu mohou zahrnovat testy jednotek i testy výkonnosti webu.
 
 Obrázek 1: Příklad výsledků zátěžového testování
 
-![Spuštění zátěžového testu zobrazení grafů](../sharepoint/media/load-webgraphs.png "běžícímu zátěžovému testu zobrazení grafů")
+![Spuštění zobrazení grafů zátěžového testu](../sharepoint/media/load-webgraphs.png "Spuštění zobrazení grafů zátěžového testu")
 
-Testy výkonu webu simulují, jak koncový uživatel může interaktivně pracovat s aplikací SharePoint. Můžete vytvořit testy webového výkonu zaznamenáním požadavků HTTP v relaci prohlížeče nebo pomocí **rekordéru testů výkonnosti webu**. Webové požadavky zobrazují v **editoru testu výkonnosti webu** po ukončení relace prohlížeče. Potom můžete ladit výsledky v **prohlížeče výsledků testu výkonnosti webu**. Testy výkonnosti webu můžete vytvořit také ručně pomocí **editoru testu výkonnosti webu**.
+Testy webového výkonu simulují, jak může koncový uživatel pracovat s aplikací služby SharePoint. Testy výkonnosti webu můžete vytvořit zaznamenáváním požadavků HTTP v relaci prohlížeče nebo pomocí **zapisovače testu výkonnosti webu**. Webové požadavky se zobrazí v **Editor testu výkonnosti webu** po dokončení relace prohlížeče. Pak můžete ladit výsledky v **prohlížeči výsledky testů webového výkonu**. Testy výkonnosti webu můžete také vytvořit ručně pomocí **Editor testu výkonnosti webu**.
 
-## <a name="test-user-interfaces"></a>Testování uživatelského rozhraní
+## <a name="test-user-interfaces"></a>Testovací uživatelská rozhraní
 
-Programové testy UI bude automaticky řídit aplikaci SharePoint prostřednictvím jeho uživatelské rozhraní (UI). Tyto testy zahrnují ovládací prvky uživatelského rozhraní, jako jsou tlačítka a nabídky, chcete-li ověřit, že správně fungují. Tento druh testování je zvláště užitečný, pokud ověření nebo jiná logika se provádí v uživatelském rozhraní, například na webové stránce. Programové testy uživatelského rozhraní můžete také použít k automatizaci ručních testů. Můžete vytvořit kódované testy uživatelského rozhraní aplikací služby SharePoint stejně jako při vytváření testů pro ostatní typy aplikací. Další informace najdete v tématu [testování aplikací pro SharePoint 2010 pomocí programových testů uživatelského rozhraní](../test/testing-sharepoint-2010-applications-with-coded-ui-tests.md).
+Programové testy uživatelského rozhraní automaticky zařídí svou aplikaci SharePoint prostřednictvím uživatelského rozhraní (UI). Tyto testy pokrývají ovládací prvky uživatelského rozhraní, jako jsou tlačítka a nabídky, k ověření, že fungují správně. Tento druh testování je zvláště užitečný v případě, že se ověřování nebo jiná logika provádí v uživatelském rozhraní, například na webové stránce. Můžete také použít programové testy uživatelského rozhraní k automatizaci ručních testů. Programové testy uživatelského rozhraní pro aplikace SharePoint vytvoříte stejným způsobem jako při vytváření testů pro jiné typy aplikací. Další informace naleznete v tématu [testování aplikací SharePoint 2010 pomocí programových testů uživatelského rozhraní](../test/testing-sharepoint-2010-applications-with-coded-ui-tests.md).
 
 ## <a name="related-topics"></a>Související témata
 
 |Název|Popis|
 |-----------|-----------------|
-|[Návod: Profil aplikace služby SharePoint](../sharepoint/walkthrough-profiling-a-sharepoint-application.md)|Ukazuje, jak provést analýzu profilu odběru vzorků v aplikaci SharePoint.|
-|[Testování výkonu aplikace před vydáním](/azure/devops/test/load-test/run-performance-tests-app-before-release?view=vsts)|Popisuje, jak vytvořit testy zatížení, které vám pomohou testovat zátěže aplikace SharePoint.|
-|[Testování částí kódu](../test/unit-test-your-code.md)|Popisuje, jak najít logické chyby v kódu pomocí testování částí.|
-|[Testování aplikací pro SharePoint 2010 pomocí programových testů uživatelského rozhraní](../test/testing-sharepoint-2010-applications-with-coded-ui-tests.md)|Tento článek popisuje testování uživatelského rozhraní aplikací služby SharePoint.|
+|[Návod: profilování aplikace SharePoint](../sharepoint/walkthrough-profiling-a-sharepoint-application.md)|Ukazuje, jak provést analýzu profilu vzorkování v aplikaci SharePoint.|
+|[Test výkonu aplikace před vydáním](/azure/devops/test/load-test/run-performance-tests-app-before-release?view=vsts)|Popisuje, jak vytvořit zátěžové testy, které vám pomůžou zátěžové testování aplikací SharePoint.|
+|[Testování částí kódu](../test/unit-test-your-code.md)|Popisuje, jak najít logické chyby ve vašem kódu pomocí testů jednotek.|
+|[Testování aplikací pro SharePoint 2010 pomocí programových testů uživatelského rozhraní](../test/testing-sharepoint-2010-applications-with-coded-ui-tests.md)|Popisuje postup testování uživatelského rozhraní aplikací služby SharePoint.|
 
 ## <a name="see-also"></a>Viz také:
 

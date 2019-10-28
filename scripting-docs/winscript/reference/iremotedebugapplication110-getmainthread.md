@@ -13,15 +13,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ff99c43f633da8454eb5fa32463886877e06ed72
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: a8e4ae024429702f3268a01c1e2e1fb4b40294d8
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72574123"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985291"
 ---
 # <a name="iremotedebugapplication110getmainthread"></a>IRemoteDebugApplication110::GetMainThread
-Vrátí hlavní vlákno pro hostitele, kteří volají [SetSite](http://go.microsoft.com/fwlink/?LinkId=232439), v opačném případě vrátí E_FAIL.  
+Vrátí hlavní vlákno pro hostitele, kteří volají [SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite), v opačném případě vrátí E_FAIL.  
   
 > [!IMPORTANT]
 > [Rozhraní iremotedebugapplication –](../../winscript/reference/iremotedebugapplication-interface.md) je implementováno pomocí PDM v 11.0 a větší. Nachází se v souboru activdbg100.h.  
@@ -37,5 +37,5 @@ HRESULT GetMainThread([out] IRemoteDebugApplicationThread **ppThread);
  mimo Hlavní [rozhraní iremotedebugapplicationthread –](../../winscript/reference/iremotedebugapplicationthread-interface.md).  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní iremotedebugapplication –](../../winscript/reference/iremotedebugapplication-interface.md)  
+   [rozhraní iremotedebugapplication –](../../winscript/reference/iremotedebugapplication-interface.md)  
  [IRemoteDebugApplication110 – rozhraní](../../winscript/reference/iremotedebugapplication110-interface.md)

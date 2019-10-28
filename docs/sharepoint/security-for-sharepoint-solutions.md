@@ -1,5 +1,5 @@
 ---
-title: Zabezpečení pro řešení služby SharePoint | Dokumentace Microsoftu
+title: Zabezpečení pro řešení služby SharePoint | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,73 +15,73 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 31bcd41dc1a6fd7f314c7d701f52c3728dd2ee8c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 16fb3e4a0e1aed14e4a3f1b3178dc753f5dc10b4
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63009785"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984184"
 ---
 # <a name="security-for-sharepoint-solutions"></a>Zabezpečení pro řešení služby SharePoint
-  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] zahrnuje následující funkce, které pomáhají zvýšit zabezpečení aplikací služby SharePoint.
+  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] zahrnuje následující funkce, které vám pomůžou zvýšit zabezpečení aplikací SharePoint.
 
 ## <a name="safe-control-entries"></a>Položky bezpečného řízení
- Každé položky projektu služby SharePoint vytvoří v [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] má **položky bezpečných ovládacích prvků** vlastnost, která představuje bezpečný ovládací prvky kolekce. Jeho **bezpečné** podvlastností umožňuje určit, které považujete za zabezpečené. Další informace najdete v tématu [poskytují informace o nasazení balíčků a v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) a [zadání bezpečných webové části](http://go.microsoft.com/fwlink/?LinkId=177521).
+ Každá položka projektu služby SharePoint vytvořená v [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] má vlastnost **bezpečného řízení položky** , která představuje kolekci bezpečných ovládacích prvků. Jeho **bezpečná** podvlastnost umožňuje zadat ovládací prvky, které považujete za bezpečné. Další informace naleznete v tématu [poskytnutí informací o balíčku a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) a [určení bezpečného webové části](/previous-versions/office/developer/sharepoint2003/dd583154(v=office.11)#sharepoint_northwindwebparts_topic19).
 
-## <a name="allowpartiallytrustedcallers-attribute"></a>Atribut AllowPartiallyTrustedCallers
- Ve výchozím nastavení můžete přístup pouze aplikace, které jsou plně důvěryhodný pro security (CAS) systémem přístup kódu modulu runtime sestavení sdílené spravovaného kódu. Označení plně důvěryhodná sestavení pomocí atributu AllowPartiallyTrustedCallers umožňuje částečně důvěryhodné sestavení k němu přistupovat.
+## <a name="allowpartiallytrustedcallers-attribute"></a>AllowPartiallyTrustedCallers – atribut
+ Ve výchozím nastavení mají přístup ke sdílenému sestavení spravovaného kódu pouze aplikace, které jsou plně důvěryhodné pro systém CAS (Code Access Security). Označení plně důvěryhodného sestavení pomocí atributu AllowPartiallyTrustedCallers umožňuje částečně důvěryhodným sestavením přístup k němu.
 
- Atribut AllowPartiallyTrustedCallers je přidán do jakékoli řešení služby SharePoint, který není nasazený do systému globální mezipaměti sestavení ( [!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)]). To zahrnuje řešení v izolovaném prostoru nebo nasazení řešení do adresáře Bin aplikace služby SharePoint. Další informace najdete v tématu [změny zabezpečení verze 1 pro rozhraní Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=177515) a [nasazení webové části SharePoint Foundation](http://go.microsoft.com/fwlink/?LinkId=177509).
+ Atribut AllowPartiallyTrustedCallers je přidán do jakéhokoli řešení služby SharePoint, které není nasazeno do globální mezipaměti sestavení (GAC) systému ([!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)]). To zahrnuje řešení v izolovaném prostoru nebo řešení nasazená do adresáře bin aplikace služby SharePoint. Další informace najdete v tématu [změny zabezpečení verze 1 pro Microsoft .NET Framework](/previous-versions/msp-n-p/ff921345(v=pandp.10)) a [nasazení webové části ve službě SharePoint Foundation](/previous-versions/office/developer/sharepoint-2010/cc768621(v=office.14)).
 
-## <a name="safe-against-script-property"></a>Zabezpečeno proti vlastnosti skriptu
- *Skriptu* je vložení potenciálně škodlivý kód do ovládacích prvků nebo webové stránky. Přispěvatelé pomáhá chránit weby Sharepointu 2010 proti injektáži skriptu, nelze zobrazit nebo upravit webové části nebo jejich vlastnosti ve výchozím nastavení. Toto chování se řídí tím SafeControl – atribut SafeAgainstScript. V [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)], nastavte tento atribut v položce projektu **položky bezpečných ovládacích prvků** podvlastností **bezpečné skriptu proti**. Další informace najdete v tématu [poskytují informace o nasazení balíčků a v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) a [jak: Označení ovládacích prvků jako bezpečných](../sharepoint/how-to-mark-controls-as-safe-controls.md).
+## <a name="safe-against-script-property"></a>Bezpečná proti vlastnosti skriptu
+ Vložení *skriptu* je vložení potenciálně škodlivého kódu do ovládacích prvků nebo webových stránek. Aby mohli přispěvatelé chránit weby SharePoint 2010 proti injektáže skriptu, nemohou je ve výchozím nastavení zobrazovat ani upravovat webové části nebo jejich vlastnosti. Toto chování je řízeno atributem SafeControl – nazvaným SafeAgainstScript. V [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)]nastavte tento atribut v podvlastnosti **položky bezpečného řízení** položky projektu na **zabezpečený proti skriptu**. Další informace naleznete v tématu [poskytnutí informací o balíčku a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) a [Postupy: označení ovládacích prvků jako bezpečných ovládacích prvků](../sharepoint/how-to-mark-controls-as-safe-controls.md).
 
-## <a name="vista-and-windows-7-user-account-control"></a>Vista a Windows 7 nástroj Řízení uživatelských účtů
- [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] a [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] začlenit funkce zabezpečení označované jako řízení uživatelských účtů (UAC). Pro vývoj řešení služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] na [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] a [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] systémů nástroje Řízení uživatelských účtů vyžaduje, abyste používali [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] jako správce systému. Z **Start** nabídky, otevřete místní nabídku pro [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]a klikněte na tlačítko **spustit jako správce**.
+## <a name="vista-and-windows-7-user-account-control"></a>Řízení uživatelských účtů systému Vista a Windows 7
+ [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] a [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] zahrňte funkci zabezpečení, která se nazývá řízení uživatelských účtů (UAC). Pro vývoj řešení služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] v systémech [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] a [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] vyžaduje nástroj řízení uživatelských účtů, abyste spustili [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] jako správce systému. V nabídce **Start** otevřete místní nabídku pro [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]a pak zvolte možnost **Spustit jako správce**.
 
- Ke konfiguraci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] zástupce vždy spusťte jako správce, otevřete místní nabídku a zvolte **vlastnosti**, zvolte **Upřesnit** tlačítko **vlastnosti**dialogové okno a potom vyberte **spustit jako správce** zaškrtávací políčko.
+ Chcete-li nakonfigurovat zástupce [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vždy spustit jako správce, otevřete místní nabídku, zvolte možnost **vlastnosti**, klikněte na tlačítko **Upřesnit** v dialogovém okně **vlastnosti** a pak zaškrtněte políčko **Spustit jako správce** .
 
- Další informace najdete v tématu [porozumění a nastavení řízení uživatelských účtů ve Windows Vista](http://go.microsoft.com/fwlink/?LinkID=156476). a [řízení uživatelských účtů Windows 7](http://go.microsoft.com/fwlink/?LinkId=177523).
+ Další informace najdete v tématu [Principy a konfigurace řízení uživatelských účtů v systému Windows Vista](/previous-versions/windows/it-pro/windows-vista/cc709628(v=ws.10)). a [řízení uživatelských účtů systému Windows 7](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731416(v=ws.10)).
 
-## <a name="sharepoint-permissions-considerations"></a>Důležité informace o oprávnění služby SharePoint
- Pro vývoj řešení služby SharePoint, musí mít dostatečná oprávnění ke spouštění a ladění řešení služby SharePoint. Před otestováním řešení služby SharePoint, proveďte následující kroky k zajištění, že máte potřebná oprávnění:
+## <a name="sharepoint-permissions-considerations"></a>Požadavky na oprávnění služby SharePoint
+ Pro vývoj řešení služby SharePoint je nutné mít dostatečná oprávnění ke spouštění a ladění řešení služby SharePoint. Než budete moct otestovat řešení služby SharePoint, proveďte následující kroky, abyste měli jistotu, že máte potřebná oprávnění:
 
-1. Přidáte uživatelský účet s oprávněními správce na systému.
+1. Přidejte svůj uživatelský účet jako správce systému.
 
-2. Přidáte uživatelský účet jako správce farmy pro SharePoint server.
+2. Přidejte svůj uživatelský účet jako správce farmy pro server SharePoint.
 
-    1. V Centrální správy služby SharePoint 2010, zvolte **spravovat skupinu správců farmy** odkaz.
+    1. V centrální správě SharePoint 2010 vyberte odkaz **spravovat skupinu správců farmy** .
 
-    2. Na **správci farmy** zvolte **nový** nabídky
+    2. Na stránce **Správci farmy** klikněte na možnost **Nová** nabídka.
 
-3. Přidejte svůj uživatelský účet ke skupině WSS_ADMIN_WPG.
+3. Přidejte svůj uživatelský účet do skupiny WSS_ADMIN_WPG.
 
-## <a name="additional-security-resources"></a>Zvýšení zabezpečení prostředků
- Další informace o problémy se zabezpečením naleznete v následujících tématech.
+## <a name="additional-security-resources"></a>Další zdroje zabezpečení
+ Další informace o problémech se zabezpečením najdete v následujících tématech.
 
 ### <a name="visual-studio-security"></a>zabezpečení produktu Visual Studio
 
-- [Zabezpečení a uživatelských oprávnění](http://go.microsoft.com/fwlink/?LinkId=177503)
+- [Zabezpečení a uživatelská oprávnění](/previous-versions/visualstudio/visual-studio-2010/ms165099(v=vs.100))
 
-- [Zabezpečení v nativním kódu a kódu rozhraní .NET Framework](http://go.microsoft.com/fwlink/?LinkId=177504)
+- [Zabezpečení v nativním a .NET Frameworkovém kódu](/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 
-- [Zabezpečení v rozhraní .NET Framework](http://go.microsoft.com/fwlink/?LinkId=177502)
+- [Zabezpečení v .NET Framework](/previous-versions/dotnet/netframework-4.0/fkytk30f(v=vs.100))
 
 ### <a name="sharepoint-security"></a>Zabezpečení služby SharePoint
 
-- [Správa služby SharePoint Foundation a zabezpečení](http://go.microsoft.com/fwlink/?LinkId=177501)
+- [Správa a zabezpečení služby SharePoint Foundation](/previous-versions/office/developer/sharepoint-2010/ee537811(v=office.14))
 
-- [Centrum zabezpečení prostředků služby SharePoint](http://go.microsoft.com/fwlink/?LinkId=177498)
+- [Centrum prostředků zabezpečení služby SharePoint](/sharepoint/dev/)
 
-- [Zabezpečení webové části SharePoint Foundation](http://go.microsoft.com/fwlink/?LinkId=177511)
+- [Zabezpečení Webové části ve službě SharePoint Foundation](/previous-versions/office/developer/sharepoint-2010/cc768613(v=office.14))
 
-- [Zlepšení zabezpečení webové aplikace: Hrozby a opatření](http://go.microsoft.com/fwlink/?LinkID=140080)
+- [Vylepšení zabezpečení webových aplikací: hrozby a protiopatření](/previous-versions/msp-n-p/ff649874(v=pandp.10))
 
 ### <a name="general-security"></a>Obecné zabezpečení
 
-- [MSDN Security Development Lifecycle](http://go.microsoft.com/fwlink/?LinkID=147149)
+- [Životní cyklus vývoje zabezpečení MSDN](https://www.microsoft.com/msrc?rtc=1)
 
-- [Vytváření aplikací ASP.NET zabezpečení: Ověřování, autorizaci a zabezpečenou komunikaci](http://go.microsoft.com/fwlink/?LinkId=177494)
+- [Sestavování zabezpečených aplikací ASP.NET: ověřování, autorizace a zabezpečená komunikace](/previous-versions/msp-n-p/ff649100(v=pandp.10))
 
 ## <a name="see-also"></a>Viz také:
 

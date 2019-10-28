@@ -13,18 +13,18 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5cc42a5346498c04f759956b2ca00094ac1df119
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: aac250053f90d99e7db27a9862d2dc1b33fadbfb
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72718724"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72983043"
 ---
 # <a name="the-structure-of-the-content_typesxml-file"></a>Struktura souboru [Content_types].xml
 Obsahuje informace o typech obsahu v balíčku VSIX. Sada Visual Studio používá soubor [Content_Types]. XML k instalaci balíčku, ale neinstaluje samotný soubor.
 
 > [!NOTE]
-> I když toto téma se týká pouze souborů [Content_Type]. XML, které se používají v balíčcích VSIX, typ souboru [Content_Types]. XML je součástí standardu *OPC (Open balení Convention)* . Další informace najdete v tématu [OPC: nový standard pro balení dat](http://go.microsoft.com/fwlink/?LinkID=148207) na webu MSDN.
+> I když toto téma se týká pouze souborů [Content_Type]. XML, které se používají v balíčcích VSIX, typ souboru [Content_Types]. XML je součástí standardu *OPC (Open balení Convention)* . Další informace najdete v tématu [OPC: nový standard pro balení dat](https://msdn.microsoft.com/magazine/cc163372.aspx) na webu MSDN.
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují kořenový prvek a jeho atributy a podřízené prvky.
@@ -102,4 +102,4 @@ Obsahuje informace o typech obsahu v balíčku VSIX. Sada Visual Studio použív
 ## <a name="see-also"></a>Viz také:
 - [Anatomie balíčku VSIX](../extensibility/anatomy-of-a-vsix-package.md)
 - [Referenční dokumentace schématu rozšíření VSIX 1,0](https://msdn.microsoft.com/library/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)
-- [OPC: nový standard pro vytváření balíčků dat](http://go.microsoft.com/fwlink/?LinkID=148207)
+- [OPC: nový standard pro vytváření balíčků dat](https://msdn.microsoft.com/magazine/cc163372.aspx)

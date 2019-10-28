@@ -12,15 +12,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 859944c51be0abf2e6a326a06a5e4432a69ee4ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bd2e42f48a6881b533a2f098e47ac92511b85aa3
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655927"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984828"
 ---
 # <a name="walkthrough-create-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>Návod: Vytvoření webové části Silverlight, která zobrazuje OData pro SharePoint
-  SharePoint 2010 zpřístupňuje svá data seznamu prostřednictvím protokolu OData. Služba OData je ve službě SharePoint implementovaná službou RESTful Service ListData. svc. Tento návod ukazuje, jak vytvořit webovou část služby SharePoint, která je hostitelem aplikace Silverlight. Aplikace Silverlight zobrazuje informace o seznamu oznámení služby SharePoint pomocí ListData. svc. Další informace najdete v tématu [rozhraní REST SharePoint Foundation](http://go.microsoft.com/fwlink/?LinkId=225999) a [Open Data Protocol](http://go.microsoft.com/fwlink/?LinkId=226000).
+  SharePoint 2010 zpřístupňuje svá data seznamu prostřednictvím protokolu OData. Služba OData je ve službě SharePoint implementovaná službou RESTful Service ListData. svc. Tento návod ukazuje, jak vytvořit webovou část služby SharePoint, která je hostitelem aplikace Silverlight. Aplikace Silverlight zobrazuje informace o seznamu oznámení služby SharePoint pomocí ListData. svc. Další informace najdete v tématu [rozhraní REST SharePoint Foundation](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14)) a [Open Data Protocol](https://www.odata.org/).
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -228,7 +228,7 @@ ms.locfileid: "72655927"
      Webová část Silverlight by nyní měla zobrazovat data oznámení z webu služby SharePoint. Ve výchozím nastavení je stránka uložena v seznamu stránek webu na SharePointu.
 
     > [!NOTE]
-    > Při přístupu k datům v programu Silverlight napříč doménami program Silverlight chrání před chybami zabezpečení, které lze použít pro zneužití webových aplikací. Pokud narazíte na problémy při přístupu ke vzdáleným datům v Silverlightu, podívejte se na téma [Vytvoření služby dostupné napříč hranicemi domén](http://go.microsoft.com/fwlink/?LinkId=223276).
+    > Při přístupu k datům v programu Silverlight napříč doménami program Silverlight chrání před chybami zabezpečení, které lze použít pro zneužití webových aplikací. Pokud narazíte na problémy při přístupu ke vzdáleným datům v Silverlightu, podívejte se na téma [Vytvoření služby dostupné napříč hranicemi domén](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc197955(v=vs.95)).
 
 ## <a name="see-also"></a>Viz také:
 - [Vytváření webových částí pro službu SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)

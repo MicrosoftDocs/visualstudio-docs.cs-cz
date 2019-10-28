@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Nasazení definice seznamu úloh projektu | Dokumentace Microsoftu'
+title: 'Návod: nasazení definice Seznam úkolů projektu | Microsoft Docs'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,167 +12,167 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7ea7063ce432841e812312b7c7c36721a7d2d099
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 854037d096ceac01969bcb0ec2e074f4cd24a2f3
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62784212"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72983853"
 ---
-# <a name="walkthrough-deploy-a-project-task-list-definition"></a>Návod: Nasazení definice seznamu úloh projektu
+# <a name="walkthrough-deploy-a-project-task-list-definition"></a>Návod: nasazení definice seznamu úkolů projektu
 
-Tento návod ukazuje, jak používat [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] vytvořit, upravit, ladit a nasadit Sharepointového seznamu, aby sledování úkolů v projektu.
+V tomto návodu se dozvíte, jak použít [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] k vytvoření, přizpůsobení, ladění a nasazení SharePointového seznamu pro sledování úkolů projektu.
 
 [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Podporované vydání systému Microsoft Windows a SharePoint.
+- Podporované edice Microsoft Windows a SharePointu.
 
-- Visual Studio 2017 nebo služby Azure DevOps.
+- Visual Studio 2017 nebo Azure DevOps Services.
 
-## <a name="create-a-sharepoint-list"></a>Vytvoření Sharepointového seznamu
+## <a name="create-a-sharepoint-list"></a>Vytvoření SharePointového seznamu
 
-Vytvoření seznamu projektu služby SharePoint a přidružení definice seznamu úkolů.
+Vytvořte projekt SharePointového seznamu a přidružte definici seznamu k úkolům.
 
-1. Otevřít **nový projekt** dialogového okna rozbalte **SharePoint** uzel a klikněte na tlačítko **2010** uzlu.
+1. Otevřete dialogové okno **Nový projekt** , rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
 
-2. V **šablony** podokně, vyberte **projektu služby SharePoint 2010** šablony, pojmenujte projekt **ProjectTaskList**a klikněte na tlačítko **OK**tlačítko.
+2. V podokně **šablony** zvolte šablonu **projektu SharePoint 2010** , pojmenujte projekt **ProjectTaskList**a pak klikněte na tlačítko **OK** .
 
-     **Průvodce přizpůsobením SharePoint** se zobrazí.
+     Zobrazí se **Průvodce přizpůsobením SharePointu** .
 
-3. Zadejte místní web služby SharePoint, který používáte pro ladění, zvolte **nasadit jako řešení farmy** přepínač a klikněte na tlačítko **Dokončit** tlačítko.
+3. Zadejte místní web služby SharePoint, který používáte pro ladění, zvolte přepínač **nasadit jako řešení farmy** a pak klikněte na tlačítko **Dokončit** .
 
-4. Otevřete místní nabídku pro projekt a klikněte na tlačítko **přidat** > **nová položka**.
+4. Otevřete místní nabídku projektu a poté zvolte možnost **přidat** > **novou položku**.
 
-5. V **šablony** podokně, vyberte **seznamu** šablony a klikněte na tlačítko **přidat** tlačítko.
+5. V podokně **šablony** zvolte šablonu **seznamu** a pak klikněte na tlačítko **Přidat** .
 
-     **Průvodce přizpůsobením SharePoint** se zobrazí.
+     Zobrazí se **Průvodce přizpůsobením SharePointu** .
 
-6. V **zadejte název chcete pro seznam zobrazit?** zadejte **seznamu úkolů projektu**.
+6. V poli **jaký název chcete zobrazit pro váš seznam?** zadejte **projekt seznam úkolů**.
 
-7. Zvolte **vytvořit nepřizpůsobitelná seznam založený na existujícím typu seznamu z** přepínač a pak ve svém seznamu zvolte **úlohy**a klikněte na tlačítko **Dokončit** tlačítko.
+7. Zvolte možnost **vytvořit nepřizpůsobitelný seznam na základě existujícího typu seznamu** možností a potom v seznamu vyberte položku **úlohy**a pak klikněte na tlačítko **Dokončit** .
 
-     Seznam, funkce a balíku joinkind **Průzkumníka řešení**.
+     V **Průzkumník řešení**se zobrazí seznam, funkce a balíček.
 
-## <a name="add-an-event-receiver"></a>Přidat přijímače událostí
+## <a name="add-an-event-receiver"></a>Přidat přijímač událostí
 
-V seznamu úkolů můžete přidat přijímače událostí, který automaticky nastaví splatnosti datum a popis úlohy. Následující procedura přidá obslužnou rutinu jednoduché události pro instanci seznamu jako přijímače událostí.
+V seznamu úkolů můžete přidat přijímač událostí, který automaticky nastaví datum splatnosti a popis úkolu. Následující postup přidá jednoduchou obslužnou rutinu události do instance seznamu jako přijímač událostí.
 
-1. Otevřete místní nabídku pro uzel projektu, zvolte **přidat**a klikněte na tlačítko **nová položka**.
+1. Otevřete místní nabídku uzlu projektu, zvolte možnost **Přidat**a poté možnost **Nová položka**.
 
-2. V seznamu šablon služby SharePoint, zvolte **příjemce událostí** šablony a pojmenujte jej **ProjectTaskListEventReceiver**.
+2. V seznamu šablon služby SharePoint vyberte šablonu **příjemce událostí** a pojmenujte ji **ProjectTaskListEventReceiver**.
 
-     **Průvodce přizpůsobením SharePoint** se zobrazí.
+     Zobrazí se **Průvodce přizpůsobením SharePointu** .
 
-3. Na **zvolit nastavení příjemce událostí** zvolte **události položky seznamu** jako typ příjemce událostí v **jaký typ příjemce událostí požadujete** seznamu.
+3. Na stránce **zvolit nastavení přijímače událostí** vyberte v seznamu typ přijímače událostí, **který chcete používat** , jako typ přijímače událostí možnost **události položky seznamu** .
 
-4. V **jaká položka by měla být zdroj událostí** klikněte na položku **úlohy**.
+4. V seznamu **jaká položka by měla být zdroj události** vyberte možnost **úlohy**.
 
-5. V seznamu událostí ke zpracování, zaškrtněte políčko vedle položky **byla přidána položka**a klikněte na tlačítko **Dokončit** tlačítko.
+5. V seznamu událostí, které mají být zpracovány zaškrtněte políčko vedle **položky bylo přidáno**, a poté klikněte na tlačítko **Dokončit** .
 
-     Přidání nového uzlu příjemce událostí do projektu se souborem kódu, který je pojmenován **ProjectTaskListEventReceiver**.
+     Do projektu se přidá nový uzel přijímače událostí se souborem kódu s názvem **ProjectTaskListEventReceiver**.
 
-6. Přidejte kód, který `ItemAdded` metoda ve **ProjectTaskListEventReceiver** soubor kódu. Do úlohy pokaždé, když je přidán nový úkol, je přidán výchozí datum splatnosti a popis. Výchozí hodnota z důvodu je datum 1. července 2009.
+6. Přidejte kód do metody `ItemAdded` v souboru kódu **ProjectTaskListEventReceiver** . Pokaždé, když se přidá nový úkol, do úkolu se přidá výchozí datum splatnosti a popis. Výchozí datum splatnosti je 1. července 2009.
 
      [!code-vb[SPProjectTaskList#1](../sharepoint/codesnippet/VisualBasic/projecttasklist1/projecttasklisteventreceiver/projecttasklisteventreceiver.vb#1)]
      [!code-csharp[SPProjectTaskList#1](../sharepoint/codesnippet/CSharp/projecttasklist/projecttasklisteventreceiver/projecttasklisteventreceiver.cs#1)]
 
-## <a name="customize-the-project-task-list-feature"></a>Přizpůsobit funkci seznamu úkolů projektu
+## <a name="customize-the-project-task-list-feature"></a>Přizpůsobení funkce seznamu úkolů projektu
 
-Při vytváření řešení služby SharePoint sady Visual Studio automaticky vytvoří funkce pro výchozí položky projektu. Nastavení seznamu úkolů projektu pro web služby SharePoint lze přizpůsobit pomocí návrháře funkcí.
+Když vytvoříte řešení služby SharePoint, Visual Studio automaticky vytvoří funkce pro výchozí položky projektu. Můžete přizpůsobit nastavení seznamu úkolů projektu pro web služby SharePoint pomocí návrháře funkcí.
 
-1. V **Průzkumníka řešení**, rozbalte **funkce**.
+1. V **Průzkumník řešení**rozbalte možnost **funkce**.
 
-2. Otevřete místní nabídku pro **Feature1**a klikněte na tlačítko **Návrhář zobrazení**.
+2. Otevřete místní nabídku pro **Feature1**a pak zvolte možnost **Návrhář zobrazení**.
 
-3. V **Title** zadejte **funkci seznamu úkolů projektu**.
+3. Do pole **název** zadejte **funkce Project seznam úkolů**.
 
-4. V **oboru** klikněte na položku **webové**.
+4. V seznamu **obor** vyberte možnost **Web**.
 
-5. V **vlastnosti** okno, zadejte **1.0.0.0** hodnotu **verze** vlastnost.
+5. V okně **vlastnosti** zadejte **1.0.0.0** jako hodnotu vlastnosti **Version** .
 
-## <a name="customize-the-project-task-list-package"></a>Přizpůsobení balíčku seznamu úloh projektu
+## <a name="customize-the-project-task-list-package"></a>Přizpůsobení balíčku seznamu úkolů projektu
 
-Při vytváření projektu služby SharePoint sady Visual Studio automaticky přidá funkce, které obsahují výchozí položky projektu do balíčku. Nastavení seznamu úkolů projektu pro web služby SharePoint lze přizpůsobit pomocí návrháře balíčků.
+Při vytváření projektu služby SharePoint sada Visual Studio automaticky přidá funkce, které obsahují výchozí položky projektu, do balíčku. Můžete přizpůsobit nastavení seznamu úkolů projektu pro web služby SharePoint pomocí návrháře balíčků.
 
-1. V **SolutionExplorer**, otevřete místní nabídku pro **balíčku**a klikněte na tlačítko **Návrhář zobrazení**.
+1. V **SolutionExplorer**otevřete místní nabídku pro **balíček**a zvolte možnost **Návrhář zobrazení**.
 
-2. V **název** zadejte **ProjectTaskListPackage**.
+2. Do pole **název** zadejte **ProjectTaskListPackage**.
 
-3. Vyberte **resetovat Webový Server** zaškrtávací políčko.
+3. Vyberte zaškrtávací políčko **resetovat webový server** .
 
-## <a name="build-and-test-the-project-task-list"></a>Vytváření a testování seznamu úkolů projektu
+## <a name="build-and-test-the-project-task-list"></a>Sestavování a testování seznamu úkolů projektu
 
-Při spuštění projektu se otevře web služby SharePoint. Však musí ručně přejdete do umístění seznamu úkolů.
+Při spuštění projektu se otevře web služby SharePoint. Je však nutné ručně přejít do umístění seznamu úkolů.
 
-1. Zvolte **F5** klíč pro sestavování a nasazování seznamu úkolů projektu.
+1. Kliknutím na klávesu **F5** sestavíte a nasadíte seznam úkolů projektu.
 
      Otevře se web služby SharePoint.
 
-2. Zvolte **Domů** kartu.
+2. Klikněte na kartu **Domů** .
 
-3. Na levém bočním panelu, vyberte **seznamu úkolů projektu** odkaz.
+3. Na levém bočním panelu vyberte odkaz **projekt seznam úkolů** .
 
-     Zobrazí se stránka seznamu úkolů projektu.
+     Zobrazí se stránka Seznam úkolů projektu.
 
-4. V **nástroje seznamu** , vyberte **položky** kartu.
+4. Na kartě **Nástroje seznamu** klikněte na kartu **položky** .
 
-5. V **položky** skupině, zvolte **nová položka** tlačítko.
+5. Ve skupině **položky** klikněte na tlačítko **Nová položka** .
 
-6. V **Title** textové pole, zadejte **Task1**.
+6. Do textového pole **název** zadejte **Task1**.
 
-7. Zvolte **Uložit** tlačítko.
+7. Klikněte na tlačítko **Uložit** .
 
-     Po aktualizaci lokality **Task1** úloh se zobrazí s termínem splnění 7/1/2009.
+     Po obnovení lokality se zobrazí úloha **Task1** s datem splatnosti 7/1/2009.
 
-8. Zvolte **Task1**.
+8. Vyberte **Task1**.
 
-     Zobrazí se v podrobném zobrazení úlohy a popis se zobrazí "Toto je důležité úlohy."
+     Zobrazí se podrobné zobrazení úlohy a popis zobrazuje "Toto je kritická úloha."
 
-## <a name="deploy-the-project-task-list"></a>Nasadit projekt seznamu úkolů
+## <a name="deploy-the-project-task-list"></a>Nasazení seznamu úkolů projektu
 
-Po sestavení a testování seznamu úkolů projektu, můžete ji nasazujete *místní systém* nebo *vzdálený systém*. Místní systém je do stejného počítače, na kterém jste vytvořili řešení, že vzdálený systém je do jiného počítače.
+Po sestavení a otestování seznamu úkolů projektu jej můžete nasadit do *místního systému* nebo do *vzdáleného systému*. Místní systém je stejný počítač, na kterém jste toto řešení vyvinuli, zatímco vzdálený systém je jiný počítač.
 
 ### <a name="to-deploy-the-project-task-list-to-the-local-system"></a>Nasazení seznamu úkolů projektu do místního systému
 
-Na řádku nabídek sady Visual Studio, zvolte **sestavení** > **nasadit řešení**.
+Na řádku nabídek sady Visual Studio vyberte **sestavení** > **nasadit řešení**.
 
-Recykluje se fond aplikací IIS, odvolá všechny existující verze řešení, zkopíruje balíček řešení sady Visual Studio (*.wsp*) souboru na Sharepointu a potom aktivuje její funkce. Nyní můžete řešení služby SharePoint. Další informace o postupu konfigurace nasazení najdete v tématu [jak: Úprava konfigurace nasazení služby SharePoint](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md).
+Sada Visual Studio recykluje fond aplikací služby IIS, odvolá všechny existující verze řešení, zkopíruje soubor balíčku řešení ( *. wsp*) do služby SharePoint a poté aktivuje jeho funkce. Nyní můžete použít řešení v SharePointu. Další informace o postupu konfigurace nasazení najdete v tématu [Postupy: Úprava konfigurace nasazení služby SharePoint](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md).
 
 ### <a name="to-deploy-the-project-task-list-to-a-remote-system"></a>Nasazení seznamu úkolů projektu do vzdáleného systému
 
-1. Na řádku nabídek sady Visual Studio, zvolte **sestavení** > **publikovat**.
+1. Na panelu nabídek aplikace Visual Studio vyberte možnost **sestavit** > **publikovat**.
 
-2. V **publikovat** dialogového okna zvolte **publikování do souborového systému** přepínač.
+2. V dialogovém okně **publikovat** klikněte na tlačítko možnosti **publikovat do systému souborů** .
 
-     V cílovém umístění můžete změnit **publikovat** dialogové okno kliknutím tlačítko se třemi tečkami ![ikonu se třemi tečkami](../sharepoint/media/ellipsisicon.gif "ikonu se třemi tečkami") a pak přejdete do jiného umístění.
+     Cílové umístění můžete změnit v dialogovém okně **publikovat** tak, že vyberete ikonu tří teček se ![třemi tečkami](../sharepoint/media/ellipsisicon.gif "Ikona se třemi tečkami") a pak přejdete na jiné místo.
 
-3. Zvolte **publikovat** tlačítko.
+3. Klikněte na tlačítko **publikovat** .
 
-     A *.wsp* vytvoří soubor řešení.
+     Pro řešení se vytvoří soubor *. wsp* .
 
-4. Kopírovat *.wsp* souboru do vzdáleného systému SharePoint.
+4. Zkopírujte soubor *. wsp* do vzdáleného systému SharePoint.
 
-5. Pomocí prostředí PowerShell `Add-SPUserSolution` příkaz k instalaci balíčku na vzdálenou instalaci služby SharePoint. (Pro řešení farmy, použijte `Add-SPSolution` příkazu.)
+5. Pomocí příkazu PowerShellu `Add-SPUserSolution` nainstalujte balíček do vzdálené instalace služby SharePoint. (Pro řešení farmy použijte příkaz `Add-SPSolution`.)
 
-     Například, `Add-SPUserSolution C:\MyProjects\ProjectTaskList\ProjectTaskList\bin\Debug\ProjectTaskList.wsp`.
+     Například `Add-SPUserSolution C:\MyProjects\ProjectTaskList\ProjectTaskList\bin\Debug\ProjectTaskList.wsp`.
 
-6. Pomocí prostředí PowerShell `Install-SPUserSolution` příkaz pro nasazení řešení. (Pro řešení farmy, použijte `Install-SPSolution` příkazu.)
+6. K nasazení řešení použijte příkaz `Install-SPUserSolution` PowerShellu. (Pro řešení farmy použijte příkaz `Install-SPSolution`.)
 
-     Například, `Install-SPUserSolution -Identity ProjectTaskList.wsp -Site http://NewSiteName`.
+     Například `Install-SPUserSolution -Identity ProjectTaskList.wsp -Site http://NewSiteName`.
 
-     Další informace o vzdáleném nasazení naleznete v tématu [pomocí řešení](http://go.microsoft.com/fwlink/?LinkId=217680) a [přidání a nasazení řešení pomocí prostředí PowerShell ve službě SharePoint 2010](http://go.microsoft.com/fwlink/?LinkId=217682).
+     Další informace o vzdáleném nasazení najdete v tématu [používání řešení](/previous-versions/office/developer/sharepoint-2010/ee534972(v=office.14)) a [přidávání a nasazování řešení pomocí PowerShellu v SharePointu 2010](http://www.dotnetmafia.com/blogs/dotnettipoftheday/archive/2009/12/02/adding-and-deploying-solutions-with-powershell-in-sharepoint-2010.aspx).
 
 ## <a name="next-steps"></a>Další kroky
 
-Další informace o postupu při přizpůsobení a nasazení řešení služby SharePoint v následujících tématech:
+Další informace o přizpůsobení a nasazení řešení služby SharePoint najdete v následujících tématech:
 
-- [Návod: Vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)
+- [Návod: vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)
 
-- [Postupy: Vytvoření přijímače událostí](../sharepoint/how-to-create-an-event-receiver.md)
+- [Postupy: vytvoření přijímače událostí](../sharepoint/how-to-create-an-event-receiver.md)
 
-- [Prostředí Windows PowerShell pro SharePoint Server 2010](http://go.microsoft.com/fwlink/?LinkId=217684)
+- [Prostředí Windows PowerShell pro SharePoint Server 2010](/powershell/module/sharepoint-server/&view=sharepoint-ps)
 
 ## <a name="see-also"></a>Viz také:
 [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

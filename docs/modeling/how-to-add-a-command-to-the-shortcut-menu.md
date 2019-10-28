@@ -10,12 +10,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f7d873a3401e37a18b938cb5785f33eb0bc9b8fb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e476f1db1e30a04e67e6b53f593f55ee3867fae2
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666722"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985133"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>Postupy: Přidání příkazu do místní nabídky
 
@@ -28,8 +28,6 @@ V souhrnu jsou kroky provedeny v projektu DslPackage následujícím způsobem:
 2. [Aktualizujte číslo verze balíčku v Package.TT](#version). To je nutné provést pokaždé, když změníte příkazy. vsct
 
 3. [Metody zápisu do třídy CommandSet](#CommandSet) , aby příkaz byl viditelný a definoval, co má příkaz dělat.
-
-   Ukázky najdete na [webu sady SDK pro vizualizaci a modelování](http://go.microsoft.com/fwlink/?LinkID=185579).
 
 > [!NOTE]
 > Můžete také změnit chování některých existujících příkazů, jako je například vyjmout, vložit, vybrat vše a tisknout přepsáním metod v CommandSet.cs. Další informace naleznete v tématu [How to: Modify a Standard a Command nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
@@ -361,7 +359,7 @@ protected override IList<MenuCommand> GetMenuCommands()
 
 ## <a name="see-also"></a>Viz také:
 
-- [Zápis kódu pro úpravu jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md)
+- [Psaní kódu pro přizpůsobení jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md)
 - [Postupy: Úprava příkazu standardní nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)
 - [Nasazení řešení jazyka specifického pro doménu](msi-and-vsix-deployment-of-a-dsl.md)
 - [Vzorový kód: diagramy okruhů](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)

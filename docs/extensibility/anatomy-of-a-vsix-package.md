@@ -1,5 +1,5 @@
 ---
-title: Anatomie balíčku VSIX | Dokumentace Microsoftu
+title: Anatomie balíčku VSIX | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,49 +12,49 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d8f0b748e80726d69e5b826982596a0a32675bd7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d215849036e76cb51080775f5ea55e1eb0b28c56
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352277"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981681"
 ---
 # <a name="anatomy-of-a-vsix-package"></a>Anatomie balíčku VSIX
-Je balíčku VSIX *VSIX* soubor, který obsahuje jeden nebo více rozšíření sady Visual Studio spolu s metadaty sady Visual Studio používá ke klasifikaci a nainstalovat rozšíření. Tato metadata jsou obsaženy v manifestu VSIX a *[Content_Types] .xml* souboru. Balíčku VSIX může obsahovat také jeden nebo více *Extension.vsixlangpack* soubory k poskytování lokalizované textu instalace a může obsahovat další balíčky VSIX nainstalovat závislosti.
+VSIX balíček je soubor *VSIX* , který obsahuje jedno nebo více rozšíření sady Visual Studio, společně s metadaty, které Visual Studio používá ke klasifikaci a instalaci rozšíření. Tato metadata jsou obsažena v manifestu VSIX a souboru *[Content_Types]. XML* . Balíček VSIX může také obsahovat jeden nebo více souborů s *příponou. vsixlangpack* pro poskytnutí lokalizovaného textu instalace a může obsahovat další balíčky VSIX pro instalaci závislostí.
 
- Formát balíčku VSIX dodržuje standardní konvence Open Packaging (OPC). Balíček obsahuje binární soubory a podpůrné soubory, spolu s *[Content_Types] .xml* souboru a *VSIX* soubor manifestu. Jeden VSIX balíček může obsahovat výstupu více projektů nebo dokonce více balíčků, které mají své vlastní manifest.
+ Formát balíčku VSIX se řídí standardními konvencemi OPC (Open balení). Balíček obsahuje binární soubory a podpůrné soubory spolu se souborem *[Content_Types]. XML* a souborem manifestu *. vsix* . Jeden balíček VSIX může obsahovat výstup více projektů nebo dokonce i více balíčků, které mají vlastní manifesty.
 
 > [!NOTE]
-> Názvy souborů součástí balíčků VSIX nesmí obsahovat mezery ani znaky, které jsou vyhrazené v identifikátory URI (Uniform Resource), jako jsou definované v části [ \[RFC2396\]](http://go.microsoft.com/fwlink/?LinkId=90339).
+> Názvy souborů obsažených v balíčcích VSIX nesmí obsahovat mezery, ani znaky rezervované v identifikátorech URI (Uniform Resource Identifier), jak je definováno v části [\[RFC2396\]](https://www.rfc-editor.org/rfc/rfc2396.txt).
 
-## <a name="the-vsix-manifest"></a>VSIX manifest
- VSIX manifest obsahuje informace o rozšíření k instalaci a způsobem VSX schématu. Další informace najdete v tématu [referenční dokumentace schématu 1.0 rozšíření VSIX](https://msdn.microsoft.com/library/76e410ec-b1fb-4652-ac98-4a4c52e09a2b). Manifest VSIX příklad naleznete v tématu [PackageManifest – element (kořenový element, schéma VSX)](https://msdn.microsoft.com/library/f8ae42ba-775a-4d2b-976a-f556e147f187).
+## <a name="the-vsix-manifest"></a>Manifest VSIX
+ Manifest VSIX obsahuje informace o rozšíření, které se má nainstalovat, a následuje po schématu VSX. Další informace najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](https://msdn.microsoft.com/library/76e410ec-b1fb-4652-ac98-4a4c52e09a2b). Příklad manifestu VSIX naleznete v tématu [PackageManifest element (root element, VSX Schema)](https://msdn.microsoft.com/library/f8ae42ba-775a-4d2b-976a-f556e147f187).
 
- VSIX manifest musí mít název `extension.vsixmanifest` když je součástí ^ soubor .vsix *.
+ Manifest VSIX musí být pojmenován `extension.vsixmanifest`, když je zahrnutý v souboru ^. VSIX *.
 
 ## <a name="the-content"></a>Obsah
- Balíčku VSIX může obsahovat šablony, položky panelu nástrojů, rozšíření VSPackages nebo jakékoli jiné rozšíření, které podporuje Visual Studio.
+ Balíček VSIX může obsahovat šablony, položky nástrojů, sady VSPackage nebo jakýkoli jiný druh rozšíření, které podporuje Visual Studio.
 
 ## <a name="language-packs"></a>Jazykové sady
- Balíčku VSIX může obsahovat jedno nebo více *Extension.vsixlangpack* soubory k poskytování lokalizovanému textu během instalace. Další informace najdete v tématu [balíčků VSIX lokalizace](../extensibility/localizing-vsix-packages.md).
+ Balíček VSIX může obsahovat jeden nebo více souborů s *příponou. vsixlangpack* k poskytnutí lokalizovaného textu během instalace. Další informace najdete v tématu [lokalizace balíčků VSIX](../extensibility/localizing-vsix-packages.md).
 
 ## <a name="dependencies-and-references"></a>Závislosti a odkazy
- Balíčku VSIX může obsahovat další balíčky VSIX jako odkazy. Každá z těchto balíčků musí obsahovat manifestu VSIX.
+ VSIX balíček může obsahovat další balíčky VSIX jako odkazy. Každý z těchto dalších balíčků musí zahrnovat svůj vlastní manifest VSIX.
 
- Pokud se uživatel pokusí nainstalovat rozšíření, která obsahuje závislosti, instalační služba zkontroluje, že požadovaná sestavení jsou nainstalovány v systému uživatele. Pokud nejsou požadované sestavení nalezeno, **rozšíření a aktualizace** zobrazí seznam chybějících sestavení.
+ Pokud se uživatel pokusí nainstalovat rozšíření, které má závislosti, instalační program ověří, že požadovaná sestavení jsou nainstalována v uživatelském systému. Pokud požadovaná sestavení nejsou nalezena, **rozšíření a aktualizace** zobrazí seznam chybějících sestavení.
 
- Pokud manifest rozšíření obsahuje jeden nebo více [odkaz](/previous-versions/visualstudio/visual-studio-2010/dd393687(v=vs.100)) prvky, **rozšíření a aktualizace** porovná manifestu každý odkaz na rozšíření, které jsou nainstalované v systému a nainstaluje odkazované rozšíření, pokud ještě není nainstalovaná. Pokud je nainstalovaná starší verze odkazovaného rozšíření, nahradí jej na novější verzi.
+ Pokud manifest rozšíření obsahuje jeden nebo více [referenčních](/previous-versions/visualstudio/visual-studio-2010/dd393687(v=vs.100)) prvků, **rozšíření a aktualizace** porovnává manifest všech odkazů na rozšíření, která jsou nainstalována v systému, a nainstaluje odkazované rozšíření, pokud ještě není instalovat. Pokud je nainstalovaná starší verze odkazovaného rozšíření, novější verze ho nahradí.
 
- Pokud projekt ve víceprojektové řešení obsahuje odkaz na jiný projekt ve stejném řešení, balíčku VSIX obsahuje závislosti projektu. Toto chování můžete přepsat kliknutím na odkaz pro interní projekt a pak v **vlastnosti** okno nastavení **výstupní skupiny součástí VSIX** vlastnost `BuiltProjectOutputGroup`.
+ Pokud projekt v řešení více projektů obsahuje odkaz na jiný projekt ve stejném řešení, balíček VSIX obsahuje závislosti daného projektu. Toto chování můžete přepsat kliknutím na odkaz na interní projekt a potom v okně **vlastnosti** nastavením **výstupních skupin zahrnutých do vlastnosti VSIX** na `BuiltProjectOutputGroup`.
 
- Chcete-li zahrnout satelitní knihovny DLL z odkazovaných sestavení v balíčku souboru VSIX, přidejte `SatelliteDllsProjectOutputGroup` k **výstupní skupiny součástí VSIX** vlastnost.
+ Chcete-li zahrnout satelitní knihovny DLL z odkazovaných sestavení v balíčku VSIX, přidejte `SatelliteDllsProjectOutputGroup` do **výstupních skupin zahrnutých ve vlastnosti VSIX** .
 
-## <a name="installation-location"></a>Umístění instalace
- Během instalace **rozšíření a aktualizace** hledá obsah balíčku VSIX v rámci *%LocalAppData%\Microsoft\VisualStudio\14.0\Extensions*.
+## <a name="installation-location"></a>umístění instalace
+ Během instalace vyhledá **rozšíření a aktualizace** obsah balíčku VSIX ve složce v rámci *%localappdata%\Microsoft\VisualStudio\14.0\Extensions*.
 
- Ve výchozím nastavení, instalaci platí pouze pro aktuálního uživatele, protože *% LocalAppData %* je adresář specifické pro uživatele. Ale pokud nastavíte [AllUsers](https://msdn.microsoft.com/library/ac817f50-3276-4ddb-b467-8bbb1432455b) elementu v manifestu do `True`, nainstaluje rozšíření v rámci <em>... \\</em> VisualStudioInstallationFolder<em>\Common7\IDE\Extensions</em> a bude k dispozici pro všechny uživatele počítače.
+ Ve výchozím nastavení se instalace vztahuje pouze na aktuálního uživatele, protože *% localappdata%* je adresářem specifickým pro uživatele. Nicméně pokud nastavíte prvek [AllUsers](https://msdn.microsoft.com/library/ac817f50-3276-4ddb-b467-8bbb1432455b) manifestu na `True`, rozšíření bude nainstalováno pod <em>..\\</em>VisualStudioInstallationFolder<em>\Common7\IDE\Extensions</em> a bude k dispozici pro všechny uživatele počítače.
 
-## <a name="contenttypesxml"></a>[Content_Types].xml
- *[Content_Types] .xml* souboru Určuje typy souborů v rozbalených *VSIX* souboru. Tento soubor používá při instalaci balíčku Visual Studio, ale není možné nainstalovat samotný soubor. Další informace o tomto souboru najdete v tématu [struktura souboru [Content_types] .xml](the-structure-of-the-content-types-dot-xml-file.md).
+## <a name="content_typesxml"></a>[Content_Types]. XML
+ Soubor *[Content_Types]. XML* identifikuje typy souborů v rozbaleném souboru *. vsix* . Sada Visual Studio používá tento soubor během instalace balíčku, ale neinstaluje samotný soubor. Další informace o tomto souboru naleznete v tématu [struktura souboru [Content_Types]. XML](the-structure-of-the-content-types-dot-xml-file.md).
 
- A *[Content_Types] .xml* vyžaduje soubor standardu Open Packaging konvence OPC (). Další informace o OPC, naleznete v tématu [OPC: Nový standard balení data](https://blogs.msdn.microsoft.com/msdnmagazine/2007/08/08/opc-a-new-standard-for-packaging-your-data/) na webové stránce MSDN.
+ Soubor *[Content_Types]. XML* je vyžadován standardem OPC (Open balení Convention). Další informace o OPC naleznete v tématu [OPC: nový standard pro balení dat](https://blogs.msdn.microsoft.com/msdnmagazine/2007/08/08/opc-a-new-standard-for-packaging-your-data/) na webu MSDN.

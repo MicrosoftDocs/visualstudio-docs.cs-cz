@@ -21,12 +21,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 996f0336742441e565d16b0fe491e846d0d24329
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 95df70a3458c758fb886cbe2bc5d52d3192ba7cc
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654121"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984431"
 ---
 # <a name="create-models-for-your-app"></a>Vytváření modelů pro aplikaci
 
@@ -55,5 +55,5 @@ K vizualizaci architektury systému nebo existujícího kódu vytvořte následu
 
 ## <a name="resources"></a>Prostředky
 
-- [Fórum Visual Studio vizualizace & modelování nástrojů](http://go.microsoft.com/fwlink/?LinkId=184720)
+- [Fórum Visual Studio vizualizace & modelování nástrojů](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)
 - [Fórum rozšiřitelnosti sady Visual Studio](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx)

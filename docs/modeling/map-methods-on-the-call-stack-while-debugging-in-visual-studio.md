@@ -28,12 +28,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c294ce3c6dcf3a880cf5f57ca825064366e08e2b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 736b203feb5b1a640d7865b92a6d3ad191397d26
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668236"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985034"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Mapování metod v zásobníku volání při ladění v sadě Visual Studio
 
@@ -59,7 +59,7 @@ Vytvořte mapu kódu pro vizuální trasování zásobníku volání při laděn
 
   Další informace:
 
-- [Video: vizuální ladění díky integraci ladicího programu mapy kódu (kanál 9)](http://go.microsoft.com/fwlink/?LinkId=293418)
+- [Video: vizuální ladění díky integraci ladicího programu mapy kódu (kanál 9)](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012Debug-visually-with-Code-Map-debugger-integration)
 
 - [Mapování zásobníku volání](#MapStack)
 
@@ -178,7 +178,7 @@ Vytvořte mapu kódu pro vizuální trasování zásobníku volání při laděn
 
 - **Návody zastavit mapu, aby se automaticky přidaly nové zásobníky volání?**
 
-   Vyberte ![Button &#45; zobrazit zásobník volání na mapě kódu automaticky ](../debugger/media/debuggermap_automaticupdateicon.gif) na panelu nástrojů mapa. Chcete-li ručně přidat aktuální zásobník volání k mapě, stiskněte klávesu **Ctrl**  + **SHIFT**  +  **`** .
+   Vyberte ![tlačítko &#45; zobrazit zásobník volání na mapě kódu automaticky](../debugger/media/debuggermap_automaticupdateicon.gif)na panelu nástrojů mapa. Chcete-li ručně přidat aktuální zásobník volání k mapě, stiskněte klávesu **Ctrl**  + **SHIFT**  +  **`** .
 
    Mapa bude pokračovat ve zvýraznění existujících zásobníků volání na mapě během ladění.
 

@@ -17,12 +17,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5bd96732a905d3fc0732ccfeaf2b65ada82957f4
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 0f4bbcc694b24ffafd4333f635c7cdf0c67793a7
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72577232"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985338"
 ---
 # <a name="iactivescriptauthoraddtypelib"></a>IActiveScriptAuthor::AddTypeLib
 Přidá knihovnu typů do oboru názvů pro skript.  
@@ -52,7 +52,7 @@ HRESULT AddTypeLib(
  pro Nepoužívá se.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
@@ -62,6 +62,6 @@ HRESULT AddTypeLib(
  Tato metoda volá `LoadTypeLib`, aby se načetla knihovna typů. Po úspěchu tato metoda volá `IActiveScriptAuthor::AddNamedItem` pro přidání informací o typu.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní iactivescriptauthor –](../../winscript/reference/iactivescriptauthor-interface.md)  
+   [rozhraní iactivescriptauthor –](../../winscript/reference/iactivescriptauthor-interface.md)  
  [Iactivescriptauthor –:: AddNamedItem](../../winscript/reference/iactivescriptauthor-addnameditem.md)    
- [LoadTypeLib](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelib)
+ [LoadTypeLib](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelib)

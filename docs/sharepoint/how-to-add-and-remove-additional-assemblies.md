@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání a odebrání dalších sestavení | Dokumentace Microsoftu'
+title: 'Postupy: Přidání a odebrání dalších sestavení | Microsoft Docs'
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -14,101 +14,101 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fa25413a40c9b2333acbaba96d55008dbcebfd39
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bdcc1c478bead4df89622a7311b074965cdc0226
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967027"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985237"
 ---
 # <a name="how-to-add-and-remove-additional-assemblies"></a>Postupy: Přidání a odebrání dalších sestavení
-  Pokud balíček Sharepointu závisí na jiné sestavení, pro funkce nebo data, můžete přidat sestavení do vašeho řešení balíčku (.wsp). Tímto způsobem, SharePoint server zajišťuje, že vlastní sestavení se instalují s balíčkem.
+  Pokud balíček služby SharePoint závisí na jiných sestaveních pro funkce nebo data, můžete přidat sestavení do balíčku řešení (. wsp). Tímto způsobem server SharePoint zajistí, že vlastní sestavení jsou nainstalována s balíčkem.
 
- Můžete také přidat, změnit bezpečné ovládací prvky a souborů prostředků třídy přidružené k sestavení.
+ Můžete také přidat a změnit bezpečné ovládací prvky a soubory prostředků třídy přidružené k sestavením.
 
-## <a name="add-additional-assemblies-safe-controls-and-class-resources"></a>Přidejte další sestavení, bezpečné ovládací prvky a prostředky třídy
- Můžete přidat další sestavení do balíčku řešení služby SharePoint. Dodatečná sestavení v řešení v izolovaném prostoru nasazení do globální mezipaměti sestavení, ale položky Sharepointového projektu v řešení v izolovaném prostoru se přidají do databáze obsahu. Bezpečné ovládací prvky a prostředky třídy můžete také přidat na tyto další sestavení. Další informace o bezpečné ovládací prvky najdete v tématu [poskytuje balení a informace o nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) nebo "Vytváření bezpečný ovládací prvek položky" v [nasazení webové části SharePoint Foundation](http://go.microsoft.com/fwlink/?LinkId=245505).
+## <a name="add-additional-assemblies-safe-controls-and-class-resources"></a>Přidat další sestavení, bezpečné ovládací prvky a prostředky třídy
+ Do balíčku řešení služby SharePoint můžete přidat další sestavení. Další sestavení v řešení v izolovaném prostoru se nasazují do globální mezipaměti sestavení (GAC), ale položky projektu služby SharePoint v řešení v izolovaném prostoru jsou přidány do databáze obsahu. Do těchto dalších sestavení můžete také přidat bezpečné ovládací prvky a prostředky třídy. Další informace o bezpečných ovládacích prvcích naleznete v tématu [poskytnutí informací o balení a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) nebo "vytvoření položky SafeControl –" při [nasazení webové části ve službě SharePoint Foundation](/previous-versions/office/developer/sharepoint-2010/cc768621(v=office.14)).
 
-#### <a name="to-add-an-existing-assembly"></a>Chcete-li přidat existující sestavení
+#### <a name="to-add-an-existing-assembly"></a>Přidání existujícího sestavení
 
-1. Otevřít **balíček návrháře**. Další informace najdete v tématu [jak: Přizpůsobení balíčku řešení služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
+1. Otevřete **Návrháře balíčků**. Další informace najdete v tématu [Postup: Přizpůsobení balíčku řešení služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
 
-2. Zvolte **Upřesnit** kartu.
+2. Vyberte kartu **Upřesnit** .
 
-3. Zvolte **přidat** tlačítko a pak zvolte **přidat existující sestavení** ze seznamu.
+3. Klikněte na tlačítko **Přidat** a zvolte možnost **Přidat existující sestavení** ze seznamu.
 
-     **Přidat existující sestavení** zobrazí se dialogové okno.
+     Zobrazí se dialogové okno **Přidat existující sestavení** .
 
-4. Zvolte tři tečky (![ASP.NET – Návrhář mobilních řešení Elipsa](../sharepoint/media/mwellipsis.gif "elipsa ASP.NET – Návrhář mobilních řešení")) a klikněte na tlačítko sestavení, které chcete přidat. Doporučujeme používat pro účely přenositelnosti relativní cesta k vybrané sestavení.
+4. Zvolte tři tečky (![ASP.NET Mobile Designer](../sharepoint/media/mwellipsis.gif "Elipsa ASP.NET Mobile Designer")) a pak vyberte sestavení, které chcete přidat. Pro účely přenositelnosti doporučujeme použít relativní cestu k vybranému sestavení.
 
-5. Pro **cíl nasazení**, zvolte **GlobalAssemblyCache** přepínač k nasazení sestavení do globální mezipaměti sestavení, nebo zvolte **WebApplication** možnost tlačítko pro nasazení sestavení do složky webovou aplikaci na serveru, na kterém je spuštěna služba SharePoint.
+5. Pro **cíl nasazení**vyberte možnost **GlobalAssemblyCache** pro nasazení sestavení do globální mezipaměti sestavení (GAC), nebo kliknutím na tlačítko možnosti **WebApplication** nasaďte sestavení do složky WebApplication v Server, na kterém je spuštěna služba SharePoint.
 
-#### <a name="to-add-an-assembly-from-project-output"></a>Chcete-li přidat sestavení z výstupu projektu
+#### <a name="to-add-an-assembly-from-project-output"></a>Přidání sestavení z výstupu projektu
 
-1. Otevřít **balíček návrháře**.
+1. Otevřete **Návrháře balíčků**.
 
-     Další informace najdete v tématu [jak: Přizpůsobení balíčku řešení služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
+     Další informace najdete v tématu [Postup: Přizpůsobení balíčku řešení služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
 
-2. Zvolte **Upřesnit** kartu.
+2. Vyberte kartu **Upřesnit** .
 
-3. Zvolte **přidat** tlačítko a pak zvolte **přidat sestavení z výstupu projektu** ze seznamu.
+3. Klikněte na tlačítko **Přidat** a poté ze seznamu zvolte možnost **Přidat sestavení z výstupu projektu** .
 
-     **Přidat sestavení z výstupu projektu** zobrazí se dialogové okno.
+     Zobrazí se dialogové okno **Přidat sestavení z výstupu projektu** .
 
-4. V **zdrojový projekt** seznam a vyberte zdrojový projekt, který chcete přidat.
+4. V seznamu **zdrojový projekt** a vyberte zdrojový projekt, který chcete přidat.
 
-5. Pro **cíl nasazení**, zvolte **GlobalAssemblyCache** přepínač k nasazení sestavení do globální mezipaměti sestavení, nebo zvolte **WebApplication** možnost tlačítko pro nasazení sestavení do složky webovou aplikaci na serveru, na kterém je spuštěna služba SharePoint.
+5. Pro **cíl nasazení**vyberte možnost **GlobalAssemblyCache** pro nasazení sestavení do globální mezipaměti sestavení (GAC), nebo kliknutím na tlačítko možnosti **WebApplication** nasaďte sestavení do složky WebApplication v Server, na kterém je spuštěna služba SharePoint.
 
-#### <a name="to-add-a-safe-control"></a>Chcete-li přidat bezpečný ovládací prvek
+#### <a name="to-add-a-safe-control"></a>Postup přidání bezpečného ovládacího prvku
 
-1. Otevřít **upravit existující sestavení** dialogové okno. K tomu, otevřete návrhář balíčku, vyberte **Upřesnit** kartu, zvolte sestavení a klikněte na tlačítko **upravit** tlačítko.
+1. Otevřete dialogové okno **Upravit existující sestavení** . Chcete-li to provést, otevřete návrháře balíčků, zvolte kartu **Upřesnit** , zvolte sestavení a klikněte na tlačítko **Upravit** .
 
-2. V **bezpečné ovládací prvky** podokně, vyberte **kliknutím sem přidáte novou položku** tlačítko.
+2. V podokně **bezpečné ovládací prvky** vyberte **kliknutím sem tlačítko Přidat novou položku** .
 
-3. V **název sestavení** sloupce, zadejte název sestavení.
+3. Do sloupce **název sestavení** zadejte název sestavení.
 
-4. V **Namespace** sloupce, zadejte název oboru názvů pro bezpečný ovládací prvek.
+4. Do sloupce **obor názvů** zadejte název oboru názvů pro bezpečný ovládací prvek.
 
-5. V **název typu** sloupce, zadejte název typu.
+5. Do sloupce **název typu** zadejte název typu.
 
-#### <a name="to-add-a-class-resource"></a>Chcete-li přidat prostředek třídy
+#### <a name="to-add-a-class-resource"></a>Přidání prostředku třídy
 
-1. Otevřít **upravit existující sestavení** dialogové okno. K tomu, otevřete návrhář balíčku, vyberte **Upřesnit** kartu, zvolte sestavení a klikněte na tlačítko **upravit** tlačítko.
+1. Otevřete dialogové okno **Upravit existující sestavení** . Chcete-li to provést, otevřete návrháře balíčků, zvolte kartu **Upřesnit** , zvolte sestavení a klikněte na tlačítko **Upravit** .
 
-2. V **prostředky třídy** podokně, vyberte **kliknutím sem přidáte novou položku** tlačítko.
+2. V podokně **prostředky třídy** klikněte na tlačítko **kliknutím sem přidejte novou položku** .
 
-3. V **název_souboru** sloupce, zvolte tři tečky (![elipsa ASP.NET – Návrhář mobilních řešení](../sharepoint/media/mwellipsis.gif "elipsa ASP.NET – Návrhář mobilních řešení")) a zvolte prostředek, který chcete přidat.
+3. Ve sloupci **název souboru** klikněte na tlačítko se třemi tečkami (![Elipsa ASP.NET Mobile Designer](../sharepoint/media/mwellipsis.gif "Elipsa ASP.NET Mobile Designer")) a vyberte prostředek třídy, který chcete přidat.
 
-## <a name="delete-custom-assemblies"></a>Odstranit vlastní sestavení
+## <a name="delete-custom-assemblies"></a>Odstranění vlastních sestavení
  Můžete odstranit sestavení z balíčku služby SharePoint nebo odstranit bezpečné ovládací prvky a prostředky třídy z existujících sestavení.
 
-#### <a name="to-delete-an-existing-assembly"></a>Chcete-li odstranit existující sestavení
+#### <a name="to-delete-an-existing-assembly"></a>Odstranění existujícího sestavení
 
-1. Otevřít **balíček návrháře**. Další informace najdete v tématu [jak: Přizpůsobení balíčku řešení služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
+1. Otevřete **Návrháře balíčků**. Další informace najdete v tématu [Postup: Přizpůsobení balíčku řešení služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
 
-2. Zvolte **Upřesnit** kartu.
+2. Vyberte kartu **Upřesnit** .
 
-3. V **dodatečná sestavení** podokně zvolte vlastní sestavení, které chcete odstranit.
+3. V podokně **Další sestavení** vyberte vlastní sestavení, které chcete odstranit.
 
-4. Zvolte **odstranit** tlačítko.
+4. Klikněte na tlačítko **Odstranit** .
 
-#### <a name="to-delete-a-safe-control-for-an-assembly"></a>Chcete-li odstranit bezpečný ovládací prvek pro sestavení
+#### <a name="to-delete-a-safe-control-for-an-assembly"></a>Odstranění bezpečného ovládacího prvku pro sestavení
 
-1. Otevřít **upravit existující sestavení** dialogové okno. K tomu, otevřete návrhář balíčku, vyberte **Upřesnit** kartu, zvolte sestavení a klikněte na tlačítko **upravit** tlačítko.
+1. Otevřete dialogové okno **Upravit existující sestavení** . Chcete-li to provést, otevřete návrháře balíčků, zvolte kartu **Upřesnit** , zvolte sestavení a klikněte na tlačítko **Upravit** .
 
-2. Zvolte bezpečný ovládací prvek, který chcete odstranit.
+2. Vyberte bezpečný ovládací prvek, který chcete odstranit.
 
-3. Stiskněte klávesu Delete.
+3. Vyberte klávesu DELETE.
 
-#### <a name="to-delete-a-class-resource-for-an-assembly"></a>Odstranit prostředek třídy pro sestavení
+#### <a name="to-delete-a-class-resource-for-an-assembly"></a>Odstranění prostředku třídy pro sestavení
 
-1. Otevřít **upravit existující sestavení** dialogové okno. K tomu, otevřete návrhář balíčku, vyberte **Upřesnit** kartu, zvolte sestavení a klikněte na tlačítko **upravit** tlačítko.
+1. Otevřete dialogové okno **Upravit existující sestavení** . Chcete-li to provést, otevřete návrháře balíčků, zvolte kartu **Upřesnit** , zvolte sestavení a klikněte na tlačítko **Upravit** .
 
-2. Vyberte prostředek, který chcete odstranit.
+2. Vyberte prostředek třídy, který chcete odstranit.
 
-3. Stiskněte klávesu Delete.
+3. Vyberte klávesu DELETE.
 
 ## <a name="see-also"></a>Viz také:
 - [Vytvoření funkcí služby SharePoint](../sharepoint/creating-sharepoint-features.md)
 - [Postupy: Přizpůsobení funkce služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-feature.md)
-- [Postupy: Přidání a odebrání položek z funkcí služby SharePoint](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)
+- [Postupy: přidávání a odebírání položek do funkcí služby SharePoint](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)

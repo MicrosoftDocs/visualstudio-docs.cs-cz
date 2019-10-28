@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 73a1c6458bf6afc5d6fce34208dd8c2c3ddda37f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: fecf0d146c1116e6ec6376ffd9ad929cc9179d1c
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748205"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985225"
 ---
 # <a name="structure-your-modeling-solution"></a>Strukturujte svá řešení modelování
 
@@ -30,7 +30,7 @@ Ve středních nebo rozsáhlých projektech je struktura týmu založena na stru
 
 ### <a name="to-divide-an-application-into-layers"></a>Rozdělení aplikace do vrstev
 
-1. Základem struktury vašich řešení ve struktuře aplikace, například webové aplikace, aplikace služby nebo aplikace klasické pracovní plochy. Celá řada běžných architektur je popsána v tématu [Application archetypes v průvodci architekturou aplikací Microsoftu](http://go.microsoft.com/fwlink/?LinkId=196681).
+1. Základem struktury vašich řešení ve struktuře aplikace, například webové aplikace, aplikace služby nebo aplikace klasické pracovní plochy. Celá řada běžných architektur je popsána v tématu [Application archetypes v průvodci architekturou aplikací Microsoftu](/previous-versions/msp-n-p/ee658107(v=pandp.10)).
 
 2. Vytvořte řešení sady Visual Studio, které budeme volat do řešení architektury. Toto řešení se použije k vytvoření celkového návrhu systému. Bude obsahovat modely, ale žádný kód.
 
@@ -92,7 +92,7 @@ Například pokud často používáte řešení, která mají prezentační, obc
 
 ### <a name="to-create-a-solution-template"></a>Vytvoření šablony řešení
 
-1. [Stáhněte a nainstalujte Průvodce exportem šablony](http://go.microsoft.com/fwlink/?LinkId=196686).
+1. [Stáhněte a nainstalujte Průvodce exportem šablony](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ExportTemplateWizard).
 
 2. Vytvořte strukturu řešení, kterou chcete použít jako výchozí bod pro budoucí projekty.
 

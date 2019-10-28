@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Návrh oblasti formuláře Outlooku'
+title: 'Návod: návrh oblasti formuláře aplikace Outlook'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4a346686ee89862abef046c066614eddce1cf3a3
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 01cfe55964a1d61c2ad200c9538ced9ff0aa5599
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255761"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985473"
 ---
-# <a name="walkthrough-design-an-outlook-form-region"></a>Návod: Návrh oblasti formuláře Outlooku
+# <a name="walkthrough-design-an-outlook-form-region"></a>Návod: návrh oblasti formuláře aplikace Outlook
   Vlastní oblasti formuláře rozšíří standardní nebo vlastní systém Microsoft Office Outlook Forms. V tomto návodu navrhnete vlastní oblast formuláře, která se zobrazí jako nová stránka v okně inspektoru položky kontaktu. Tato oblast formuláře zobrazuje mapu každé adresy, která je uvedena u kontaktu, odesláním informací o adrese na web místní vyhledávání na webu Windows Live. Informace o oblastech formuláře najdete v tématu [vytvoření oblastí formuláře aplikace Outlook](../vsto/creating-outlook-form-regions.md).
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
@@ -44,22 +44,22 @@ ms.locfileid: "71255761"
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
-- [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)]nebo novější.
+- [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)] nebo novější.
 
-  ![odkaz na video](../vsto/media/playvideo.gif "odkaz na video") Verzi videa tohoto tématu najdete v tématu [video postupy: Návrh oblasti](http://go.microsoft.com/fwlink/?LinkID=140824)formuláře Outlooku
+  ![odkaz na video](../vsto/media/playvideo.gif "odkaz na video") Verzi videa tohoto tématu naleznete v části [Video postupy: návrh oblasti formuláře aplikace Outlook](/previous-versions/visualstudio/visual-studio-2008/cc837160(v=vs.90)).
 
 ## <a name="create-a-new-outlook-vsto-add-in-project"></a>Vytvoření nového projektu doplňku VSTO pro Outlook
  Nejdřív vytvořte základní projekt doplňku VSTO.
 
 ### <a name="to-create-a-new-outlook-vsto-add-in-project"></a>Vytvoření nového projektu doplňku VSTO pro Outlook
 
-1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]aplikaci vytvořte projekt doplňku VSTO pro Outlook s názvem **MapItAddIn**.
+1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]vytvořte projekt doplňku VSTO pro Outlook s názvem **MapItAddIn**.
 
 2. V dialogovém okně **Nový projekt** vyberte **vytvořit adresář pro řešení**.
 
 3. Uložte projekt do libovolného adresáře.
 
-     Další informace najdete v tématu [jak: Vytváření projektů Office v sadě Visual](../vsto/how-to-create-office-projects-in-visual-studio.md)Studio.
+     Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
 ## <a name="add-a-form-region-to-the-outlook-vsto-add-in-project"></a>Přidání oblasti formuláře do projektu doplňku VSTO pro Outlook
  Řešení doplňku VSTO pro Outlook může obsahovat jednu nebo více položek oblastí formuláře Outlooku. Přidejte položku oblasti formuláře do projektu pomocí Průvodce vytvořením **nové oblasti formuláře Outlooku** .
@@ -120,18 +120,18 @@ ms.locfileid: "71255761"
 
 2. Rozbalte oblast kód pro **vytváření oblasti formuláře** .
 
-    Třída factory oblasti formuláře s názvem `MapItFactory` je vystavena.
+    Třída factory oblasti formuláře s názvem `MapItFactory` je vystavená.
 
-3. Přidejte následující kód do `MapItFactory_FormRegionInitializing` obslužné rutiny události. Tato obslužná rutina události se volá, když uživatel otevře položku kontaktu. Následující kód určuje, zda položka kontaktu obsahuje adresu. Pokud položka kontaktu neobsahuje adresu, tento kód nastaví <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> vlastnost <xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs> třídy na **hodnotu true** a oblast formuláře se nezobrazí. V opačném případě doplněk VSTO vyvolá <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> událost a zobrazí oblast formuláře.
+3. Do obslužné rutiny události `MapItFactory_FormRegionInitializing` přidejte následující kód. Tato obslužná rutina události se volá, když uživatel otevře položku kontaktu. Následující kód určuje, zda položka kontaktu obsahuje adresu. Pokud položka kontaktu neobsahuje adresu, tento kód nastaví vlastnost <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> třídy <xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs> na **hodnotu true** a oblast formuláře se nezobrazí. V opačném případě doplněk VSTO vyvolá událost <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> a zobrazí oblast formuláře.
 
     [!code-csharp[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#1)]
     [!code-vb[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#1)]
 
-4. Přidejte následující kód do <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> obslužné rutiny události. Tento kód provede následující:
+4. Do obslužné rutiny události <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> přidejte následující kód. Tento kód provede následující:
 
    - Zřetězí každou adresu v položce kontaktu a vytvoří řetězec adresy URL.
 
-   - <xref:System.Windows.Forms.WebBrowser.Navigate%2A> Volá metodu <xref:System.Windows.Forms.WebBrowser> objektu a předá řetězec adresy URL jako parametr.
+   - Volá metodu <xref:System.Windows.Forms.WebBrowser.Navigate%2A> objektu <xref:System.Windows.Forms.WebBrowser> a předá řetězec adresy URL jako parametr.
 
      Místní web hledání se zobrazí v oblasti mapa IT a uvede každou adresu v panelu pro vymazání.
 
@@ -151,10 +151,10 @@ ms.locfileid: "71255761"
 
 3. Ve formuláři kontaktu jako jméno kontaktu zadejte **Ann Beebe** a pak zadejte následující tři adresy.
 
-    |Typ adresy|Adresa|
+    |Typ adresy|Adresáře|
     |------------------|-------------|
-    |**firmy**|**4567 Main St. buvolí, NY**|
-    |**Domovská stránka**|**1234 Severní St. buvolí, NY**|
+    |**Obchodní**|**4567 Main St. buvolí, NY**|
+    |**Domovské**|**1234 Severní St. buvolí, NY**|
     |**Jiné**|**3456 Main St. Praha, WA**|
 
 4. Uložte a zavřete položku kontaktu.
@@ -176,8 +176,8 @@ ms.locfileid: "71255761"
 - [Přístup k oblasti formuláře v době běhu](../vsto/accessing-a-form-region-at-run-time.md)
 - [Vytvoření oblastí formuláře aplikace Outlook](../vsto/creating-outlook-form-regions.md)
 - [Pokyny pro vytváření oblastí formulářů aplikace Outlook](../vsto/guidelines-for-creating-outlook-form-regions.md)
-- [Návod: Import oblasti formuláře navržené v aplikaci Outlook](../vsto/walkthrough-importing-a-form-region-that-is-designed-in-outlook.md)
-- [Postupy: Přidání oblasti formuláře do projektu doplňku pro Outlook](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)
+- [Návod: import oblasti formuláře navržené v aplikaci Outlook](../vsto/walkthrough-importing-a-form-region-that-is-designed-in-outlook.md)
+- [Postupy: Přidání oblasti formuláře do projektu doplňku aplikace Outlook](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)
 - [Přidružení oblasti formuláře k třídě zpráv aplikace Outlook](../vsto/associating-a-form-region-with-an-outlook-message-class.md)
 - [Vlastní akce v oblastech formulářů aplikace Outlook](../vsto/custom-actions-in-outlook-form-regions.md)
-- [Postupy: Zabránit zobrazení oblasti formuláře v aplikaci Outlook](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)
+- [Postupy: zabránění zobrazení oblasti formuláře v aplikaci Outlook](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)

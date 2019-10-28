@@ -12,22 +12,22 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 921bef3514b802672296dda6d680b665f1f42482
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 289ffc3b5260260c9da8d0ec61e5c79890394802
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978312"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985552"
 ---
 # <a name="troubleshoot-office-solution-security"></a>Řešení potíží se zabezpečením řešení pro systém Office
-  Toto téma obsahuje tipy pro řešení běžných problémů, které můžete narazit při práci s zabezpečení řešení pro Office.
+  Toto téma obsahuje tipy pro řešení běžných problémů, se kterými se můžete setkat při práci s zabezpečením řešení pro systém Office.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-## <a name="trusted-solutions-cannot-be-installed-from-restricted-sites"></a>Řešení pro důvěryhodného nelze nainstalovat z lokalit s omezeným přístupem
- Uživatelé nemůžou instalovat řešení z webového umístění, pokud je uvedená na webu v zóně Internet Exploreru lokalit s omezeným přístupem. To platí i v případě, že toto řešení je podepsaná důvěryhodným certifikátem.
+## <a name="trusted-solutions-cannot-be-installed-from-restricted-sites"></a>Důvěryhodná řešení nelze instalovat z lokalit s omezeným přístupem.
+ Pokud je web uveden v zóně Servery s omezeným přístupem aplikace Internet Explorer, nemohou uživatelé instalovat řešení z webového umístění. To platí i v případě, že je řešení podepsané důvěryhodným certifikátem.
 
- Adresa URL v manifestu nasazení lze rozdělit do jedné z pěti zón:
+ Adresa URL manifestu nasazení může být rozdělená do jedné z pěti zón:
 
 - Tento počítač
 
@@ -35,18 +35,18 @@ ms.locfileid: "62978312"
 
 - Místní intranet
 
-- Důvěryhodných serverů
+- Důvěryhodné servery
 
 - Servery s omezeným přístupem
 
-  Pokud byla přiřazena umístění manifestu nasazení pro zónu lokalit s omezeným přístupem [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] není možné nainstalovat řešení. Pokud se označuje umístění a může být důvěryhodný, uživatel můžete odebrat umístění z zónu lokalit s omezeným přístupem a nainstalovat řešení. Informace o tom, jak spravovat zóny najdete v tématu [konfigurace ClickOnce Důvěryhodní vydavatelé](http://go.microsoft.com/fwlink/?LinkId=94774).
+  Pokud bylo umístění manifestu nasazení přiřazeno k zóně lokalit s omezeným přístupem, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] nenainstaluje řešení. Pokud je umístění známé a může být důvěryhodné, může uživatel odebrat umístění ze zóny servery s omezeným přístupem a nainstalovat řešení. Informace o tom, jak spravovat zóny, najdete v tématu [Konfigurace důvěryhodných vydavatelů ClickOnce](/previous-versions/dotnet/articles/ms996418(v=msdn.10)).
 
-## <a name="solutions-cannot-be-installed-from-network-file-shares-or-web-locations-when-internet-explorer-enhanced-security-configuration-or-internet-explorer-7-is-installed"></a>Řešení nelze nainstalovat ze síťové sdílené složky nebo webové umístění při instalaci konfigurace rozšířeného zabezpečení aplikace Internet Explorer nebo Internet Explorer 7
- Internet Explorer rozšířené zabezpečení konfigurace (IEESC) ve Windows serveru 2003 a vyšší a prohlížeče Internet Explorer 7 a vyšší, výrazně omezuje možnost uživatelů procházet Internet. Co uživatelé vyzkouší k instalaci řešení pro systém Office ze souboru síťové sdílené složky nebo umístění webu, může se zobrazit následující chybová zpráva: "Vlastní funkce v této aplikaci nebude fungovat, protože tento certifikát umožňuje podepsat manifest nasazení pro *SolutionName* není důvěryhodný. Požádejte správce o pomoc. "
+## <a name="solutions-cannot-be-installed-from-network-file-shares-or-web-locations-when-internet-explorer-enhanced-security-configuration-or-internet-explorer-7-is-installed"></a>Řešení nelze instalovat ze sdílených síťových složek nebo webových umístění, když je nainstalována konfigurace rozšířeného zabezpečení aplikace Internet Explorer nebo aplikace Internet Explorer 7.
+ Konfigurace rozšířeného zabezpečení aplikace Internet Explorer (IEESC) v systému Windows Server 2003 a vyšší a Internet Explorer 7 a vyšší výrazně omezuje schopnost uživatelů procházet Internet. Když se uživatelé pokusí nainstalovat řešení Office ze sdílené síťové složky nebo webového umístění, může se zobrazit následující chybová zpráva: "přizpůsobené funkce v této aplikaci nebudou fungovat, protože certifikát použitý k podepsání manifestu nasazení pro  *Řešení* není důvěryhodné. O další pomoc požádejte správce. "
 
- S IEESC a Internet Explorer 7 a vyšší Pokud adresa URL v manifestu nasazení jsou rozdělené do kategorií v zóně Internet, manifest musí mít certifikát od důvěryhodné vydavatele nebo řešení nelze nainstalovat. Bez IEESC je výchozí chování výzvu k provedení rozhodnutí důvěryhodnosti.
+ Pokud je adresa URL manifestu nasazení zařazena do kategorie sítě Internet v IEESC a Internet Exploreru 7 a novějším, musí mít manifest certifikát od důvěryhodného vydavatele, jinak se řešení nedá nainstalovat. Bez IEESC je výchozím chováním vyzvat koncového uživatele k tomu, aby se rozhodlo o důvěryhodnosti.
 
- Ke správě účinek IEESC a Internet Explorer 7 a vyšší, identifikovat webových stránek a universal naming convention (UNC) cesty, které důvěřujete a přidat je do jedné ze zón zabezpečení pro důvěryhodného (místní intranet nebo Důvěryhodné servery). Informace o tom, jak spravovat zóny najdete v tématu [konfigurace ClickOnce důvěryhodného vydavatele](http://go.microsoft.com/fwlink/?LinkId=94774).
+ Chcete-li spravovat účinek IEESC a Internet Exploreru 7 a vyšší, identifikujte weby a cesty UNC (Universal Naming Convention), kterým důvěřujete, a přidejte je do jedné z důvěryhodných zón zabezpečení (místní intranet nebo důvěryhodné servery). Informace o tom, jak spravovat zóny, najdete v tématu [Konfigurace důvěryhodných vydavatelů ClickOnce](/previous-versions/dotnet/articles/ms996418(v=msdn.10)).
 
 ## <a name="see-also"></a>Viz také:
 - [Zabezpečení řešení pro systém Office](../vsto/securing-office-solutions.md)

@@ -1,5 +1,5 @@
 ---
-title: Ukázky ladění sady Visual Studio | Dokumentace Microsoftu
+title: Ukázky ladění sady Visual Studio | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +12,16 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e43c2b38d1da055a1a0a4533acc61cb3b8e6760
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ea408640b47b04041e99b9a4bff2605b6231a92f
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348301"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981222"
 ---
 # <a name="visual-studio-debugging-samples"></a>Ukázky ladění sady Visual Studio
-Dvě ukázky ukazují, jak rozšířit pomocí ladicího programu sady Visual Studio [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)].
+Dva ukázky ukazují, jak pomocí [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]roztáhnout ladicí program sady Visual Studio.
 
-- Je součástí vzorku Chyba při vyhodnocování výrazu ladicího programu, pro spravované jazyky, [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]. V [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] okna, klikněte na tlačítko **ukázky** klikněte na tlačítko **všechny** nebo **jazyka C#** v seznamu jazyků a pak klikněte na tlačítko **ladicí program**.
+- Ukázka vyhodnocení výrazu ladicího programu pro spravované jazyky je součástí [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]. V okně [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] klikněte na kartu **ukázky** , klikněte na **vše** nebo **C#** v seznamu jazyků a pak klikněte na **ladicí program**.
 
-- Visual Studio ladit modul vzorek, nativním jazyce, je k dispozici na Galerie kódu na webu MSDN. Další informace najdete v tématu [ukázku modul ladění Visual Studio](http://go.microsoft.com/fwlink/?LinkId=150236) na webu společnosti Microsoft.
+- Ukázka ladicího modulu sady Visual Studio, pro nativní jazyky, je k dispozici v galerii kódu na webu MSDN. Další informace najdete v tématu [Ukázka ladicího modulu sady Visual Studio](https://code.msdn.microsoft.com/Visual-Studio-Debug-Engine-c2e21c0e) na webu společnosti Microsoft.

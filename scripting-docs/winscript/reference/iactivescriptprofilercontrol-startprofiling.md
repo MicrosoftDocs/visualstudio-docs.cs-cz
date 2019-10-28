@@ -15,15 +15,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cfc59dd43ac3eed433f92af2cdd0aefe40392c4a
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: b37b60f50351496faceb97190ae0d173eba3a5f4
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72571569"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72983260"
 ---
 # <a name="iactivescriptprofilercontrolstartprofiling"></a>IActiveScriptProfilerControl::StartProfiling
-Spustí profilování v skriptovacím stroji. Skriptovací stroj vytvoří instanci objektu profileru tak, že vyvolá volání funkce [CoCreateInstance](https://docs.microsoft.com/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
+Spustí profilování v skriptovacím stroji. Skriptovací stroj vytvoří instanci objektu profileru tak, že vyvolá volání funkce [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
 ## <a name="syntax"></a>Syntaxe  
   

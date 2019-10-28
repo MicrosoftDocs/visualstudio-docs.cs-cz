@@ -1,5 +1,5 @@
 ---
-title: Ukázky vývoje pro SharePoint | Dokumentace Microsoftu
+title: Ukázky vývoje pro SharePoint | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,19 +12,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f1719656c475dc6ee78de27f068baaf77c8b2a85
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2a52dbb77145d1389995813d89384966fea35cec
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62971405"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984160"
 ---
 # <a name="sharepoint-development-samples"></a>Ukázky vývoje pro SharePoint
-  Visual Studio můžete použít ke stažení a instalaci příkladů aplikací služby SharePoint z [galerie kódů MSDN](http://go.microsoft.com/fwlink/?LinkId=254185).
+  Můžete použít Visual Studio ke stažení a instalaci ukázek aplikací služby SharePoint z [Galerie kódu na webu MSDN](https://code.msdn.microsoft.com/).
 
- Každý vzorek je možné stáhnout jednotlivě. Můžete také stáhnout vzorový balík, který obsahuje související ukázky sdílející technologii nebo článku. Obdržíte oznámení, když změny zdrojového kódu budou publikovány pro libovolnou ukázku, kterou stáhnete.
+ Jednotlivé vzorky si můžete stáhnout jednotlivě. Můžete si také stáhnout ukázkový balíček, který obsahuje související ukázky, které sdílejí technologii nebo článek. Obdržíte oznámení, když změny zdrojového kódu budou publikovány pro libovolnou ukázku, kterou stáhnete.
 
 ## <a name="see-also"></a>Viz také:
-- [Vytvoření řešení služby SharePoint](../sharepoint/create-sharepoint-solutions.md)
-- [Ukázky sady Visual Studio](http://go.microsoft.com/fwlink/?LinkId=150928)
+- [Vytváření řešení pro SharePoint](../sharepoint/create-sharepoint-solutions.md)
+- [Ukázky sady Visual Studio](https://code.msdn.microsoft.com/vstudio)
 - [Běžné úlohy při programování pro systém Office](../vsto/common-tasks-in-office-programming.md)

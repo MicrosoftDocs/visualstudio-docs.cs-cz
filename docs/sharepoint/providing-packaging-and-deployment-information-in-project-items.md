@@ -1,5 +1,5 @@
 ---
-title: Informace o balení a nasazení v položkách projektu
+title: Balení informací o nasazení & v položkách projektu
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -24,72 +24,72 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a9af945ff377b30925a51875db205bcd882f4585
-ms.sourcegitcommit: 13ab9a5ab039b070b9cd9251d0b83dd216477203
+ms.openlocfilehash: db805c308fd245554824997b24236eb2e2d80e62
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177709"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984205"
 ---
-# <a name="provide-packaging-and-deployment-information-in-project-items"></a>Zadání informací o balení a nasazení v položkách projektu
-  Všechny položky Sharepointového projektu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] mít vlastnosti, které můžete použít k poskytnutí dalších údajů, když projekt je nasazen na server SharePoint. Tyto vlastnosti jsou následující:
+# <a name="provide-packaging-and-deployment-information-in-project-items"></a>Poskytnutí informací o balení a nasazení v položkách projektu
+  Všechny položky projektu služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] mají vlastnosti, které lze použít k poskytnutí dalších dat při nasazení projektu do služby SharePoint. Tyto vlastnosti jsou následující:
 
 - Vlastnosti funkce
 
-- Příjemce funkce
+- Přijímače funkcí
 
 - Odkazy na výstup projektu
 
 - Položky bezpečného řízení
 
-  Tyto vlastnosti se zobrazí v **vlastnosti** okna.
+  Tyto vlastnosti se zobrazí v okně **vlastnosti** .
 
 ## <a name="feature-properties"></a>Vlastnosti funkce
- Použití **vlastnosti funkce** vlastnosti a určit tak data, která používá funkci. Data vlastnosti funkce je sada hodnot (uložených jako páry klíč hodnota), která je součástí funkce při nasazování do služby SharePoint. Po nasazení funkce můžete přistupovat hodnoty vlastností v kódu.
+ Pomocí vlastnosti **vlastnosti funkce** určete data, která funkce používá. Data vlastností funkcí jsou sada hodnot (uložené jako páry klíč/hodnota), která je součástí funkce při nasazení na SharePoint. Po nasazení funkce můžete získat přístup k hodnotám vlastností v kódu.
 
- Když přidáte hodnotu vlastnosti funkce do položky projektu, hodnota se přidá jako elementu v manifestu funkce položky. V projektu obchodní Data připojení (BDC) model například vlastnost funkce ModelFileName zobrazí jako:
+ Když přidáte hodnotu vlastnosti funkce do položky projektu, hodnota je přidána jako prvek v manifestu funkce položky. V projektu modelu připojení obchodních dat (BDC) se například vlastnost funkce ModelFileName zobrazí jako:
 
 ```xml
 <Property Key="ModelFileName" Value="BdcModel1\BdcModel1.bdcm" />
 ```
 
- Jakmile nastavíte hodnotu vlastnosti funkce, se přidá jako FeatureProperty – element v projektu *.spdata* souboru. Informace o přístup k vlastnostem ve službě SharePoint, naleznete v tématu [SPFeaturePropertyCollection třídy](http://go.microsoft.com/fwlink/?LinkId=177391).
+ Po nastavení hodnoty vlastnosti funkce je přidána do souboru *. spdata* projektu jako element FeatureProperty –. Informace o přístupu k vlastnostem v SharePointu naleznete v tématu [Třída SPFeaturePropertyCollection](/previous-versions/office/sharepoint-server/ms461895(v=office.15)).
 
- Hodnoty vlastností identické funkce ze všech položek projektu jsou sloučeny do manifestu funkce. Nicméně pokud dvě položky jiného projektu zadejte stejný klíč vlastnosti funkce neodpovídající hodnotami, dojde k chybě ověřování.
+ Stejné hodnoty vlastností funkcí ze všech položek projektu jsou sloučeny společně v manifestu funkce. Pokud však dvě různé položky projektu určují stejný klíč vlastnosti funkce s nevyhovujícími hodnotami, dojde k chybě ověření.
 
- Přidání vlastnosti funkcí přímo do souboru funkcí (*.feature*), zavolejte [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] metody modelu objektu služby SharePoint <xref:Microsoft.VisualStudio.SharePoint.Features.IPropertyCollection.Add%2A>. Pokud použijete tuto metodu, mějte na paměti, že stejné pravidlo o přidání hodnoty vlastností identické funkce ve vlastnosti funkcí platí také pro vlastnosti přidat přímo do souboru funkcí.
+ Chcete-li přidat vlastnosti funkce přímo do souboru funkce ( *. funkce*), zavolejte <xref:Microsoft.VisualStudio.SharePoint.Features.IPropertyCollection.Add%2A>metodu [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] objektového modelu služby SharePoint. Pokud použijete tuto metodu, pamatujte na to, že stejné pravidlo pro přidání stejných hodnot vlastností funkcí ve vlastnostech funkce platí také pro vlastnosti přidané přímo do souboru funkce.
 
-## <a name="feature-receiver"></a>Příjemce funkce
- Příjemce funkce se, že kód, který se spustí při výskytu určitých událostí položky projektu obsahující funkci. Můžete například definovat přijímačů funkce, které jsou spuštěny při instalaci, aktivaci nebo upgradu funkce. Jeden ze způsobů, jak přidat příjemce funkce, je přidat přímo do funkce, jak je popsáno v [názorný postup: Přidání přijímačů událostí funkce](../sharepoint/walkthrough-add-feature-event-receivers.md). Dalším způsobem, je tak, aby odkazovaly název třídy příjemce funkce a sestavení v **příjemce funkce** vlastnost.
+## <a name="feature-receiver"></a>Přijímač funkcí
+ Přijímače funkcí jsou kód, který se spustí, když dojde k určitým událostem obsahujícím funkci položky projektu. Můžete například definovat přijímače funkcí, které se spouštějí při instalaci, aktivaci nebo upgradu funkce. Jedním ze způsobů, jak přidat přijímače funkcí, je přidat ho přímo do funkce, jak je popsáno v tématu [Návod: Přidání přijímačů událostí funkce](../sharepoint/walkthrough-add-feature-event-receivers.md). Dalším způsobem je odkazování na název třídy příjemce funkce a sestavení ve vlastnosti **přijímače funkce** .
 
-### <a name="direct-method"></a>Přímé metody
- Při přidání příjemce funkce do funkce přímo, v části je umístěn soubor s kódem **funkce** uzlu v Průzkumníkovi řešení. Při sestavování řešení služby SharePoint se kód zkompiluje do sestavení a nasazení do služby SharePoint. Ve výchozím nastavení vlastnosti funkce **sestavení příjemce** a **přijímače** odkazovat na název třídy a sestavení.
+### <a name="direct-method"></a>Direct – metoda
+ Když přidáte přijímač funkcí přímo do funkce, je soubor kódu umístěn pod uzlem **funkce** v Průzkumník řešení. Při sestavování řešení služby SharePoint se kód zkompiluje do sestavení a nasadí se do služby SharePoint. Ve výchozím nastavení vlastnosti funkce **příjemce** a **Třída přijímače** odkazují na název a sestavení třídy.
 
 ### <a name="reference-method"></a>Reference – metoda
- Dalším způsobem, jak přidat příjemce funkce je použít **příjemce funkce** vlastnosti položky projektu odkazovat na sestavení příjemce funkce. Hodnota vlastnosti příjemce funkce má dva podvlastnosti: **Sestavení** a **název třídy**. Sestavení musí používat jeho plně kvalifikovaný, "silné" název a název třídy musí být úplný název typu. Další informace najdete v tématu [sestavení se silným názvem](http://go.microsoft.com/fwlink/?LinkID=169573). Po nasazení řešení služby SharePoint, používá funkci příjemce odkazované funkce zpracování událostí funkce.
+ Dalším způsobem, jak přidat přijímač funkcí, je pomocí vlastnosti **přijímač funkcí** položky projektu odkazovat na sestavení přijímače funkcí. Hodnota vlastnosti přijímače funkce má dvě podvlastnosti: název **sestavení** a **třídy**. Sestavení musí používat plně kvalifikovaný název "silného" a název třídy musí být úplný název typu. Další informace naleznete v tématu [sestavení se silným názvem](/previous-versions/dotnet/netframework-4.0/wd40t7ad(v=vs.100)). Po nasazení řešení do služby SharePoint funkce používá příjemce odkazované funkce ke zpracování událostí funkcí.
 
- Řešení na čas, funkci sestavení příjemce hodnoty vlastností ve funkci a jeho projekty sloučit nastavit atributy ReceiverAssembly a ReceiverClass funkce elementu v manifestu funkce řešení služby SharePoint (*WSP* ) soubor. Proto pokud je zadán název třídy sestavení a hodnoty vlastností položky projektu a funkce, musí odpovídat hodnot vlastností funkce a položky projektu. Pokud hodnoty neshodují, zobrazí se chyba ověření. Pokud chcete položku projektu tak, aby odkazovaly sestavení příjemce funkce jiné než té, jeho funkce používá, ji přesunout do jiné funkce.
+ V době sestavování řešení se hodnoty vlastností přijímače funkce v rámci funkce a jejích projektů sloučí dohromady, aby se nastavily atributy ReceiverAssembly a ReceiverClass elementu funkce v manifestu funkce souboru řešení služby SharePoint ( *. wsp*). Proto pokud jsou zadány hodnoty vlastností název sestavení a třídy položky projektu a funkce, musí se shodovat hodnoty vlastností položky projektu a funkce. Pokud se hodnoty neshodují, zobrazí se chyba ověřování. Chcete-li, aby položka projektu odkazovala na jiné než takové sestavení příjemce funkce, přesuňte ho do jiné funkce.
 
- Pokud odkazujete sestavení příjemce funkce, který ještě není na serveru, musíte taky zahrnout samotný soubor sestavení v balíčku. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] nepřidá za vás. Při nasazení funkce sestavení soubor je zkopírován do obou systému [!INCLUDE[TLA#tla_gac](../sharepoint/includes/tlasharptla-gac-md.md)] nebo složce Bin ve fyzickém adresáři služby SharePoint. Další informace najdete v tématu Postupy: [Postupy: Přidání a odebrání dalších sestavení](../sharepoint/how-to-add-and-remove-additional-assemblies.md).
+ Pokud odkazujete na sestavení příjemce funkce, které ještě není na serveru, musíte do balíčku zahrnout taky samotný soubor sestavení. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ji nepřidá za vás. Při nasazení funkce je soubor sestavení zkopírován do [!INCLUDE[TLA#tla_gac](../sharepoint/includes/tlasharptla-gac-md.md)] systému nebo do složky bin ve fyzickém adresáři služby SharePoint. Další informace najdete v tématu Postupy: [Přidání a odebrání dalších sestavení](../sharepoint/how-to-add-and-remove-additional-assemblies.md).
 
- Další informace o funkci příjemci, naleznete v tématu [příjemce událostí funkce](http://go.microsoft.com/fwlink/?LinkID=169574) a [událostí funkce](http://go.microsoft.com/fwlink/?LinkID=169575).
+ Další informace o přijímačích funkcí najdete v tématu [přijímač událostí funkcí](/previous-versions/office/developer/sharepoint-2007/bb862634(v=office.12)) a [události funkcí](/previous-versions/office/developer/sharepoint-2010/ms469501(v=office.14)).
 
 ## <a name="project-output-references"></a>Odkazy na výstup projektu
- Vlastnost odkazy na výstup projektu určuje závislost, jako je například sestavení, které položky projektu je potřeba spustit. Předpokládejme například, zda že má vaše řešení projektu BDC a třídy project. Pokud služby BDC projekt obsahuje závislost na sestavení, která je výstupem projektu tříd, můžete odkazovat na sestavení v projektu BDC odkazy na výstup projektu vlastnost. Když je zabalený projektu BDC, závislé sestavení součástí balíčku.
+ Vlastnost výstupní odkazy projektu určuje závislost, jako je například sestavení, kterou musí vaše položka projektu spustit. Předpokládejme například, že vaše řešení má projekt BDC a projekt třídy. Pokud má projekt služby BDC závislost na sestavení, které je výstupem projektu třídy, můžete odkazovat na sestavení ve vlastnosti výstupních odkazů projektu projektu služby BDC. Po zabalení projektu služby BDC je závislé sestavení zahrnuto do balíčku.
 
- Odkazy na výstup projektu jsou obvykle sestavení, ale v některých případech (například projekty technologie Silverlight), může být jiné typy souborů.
+ Odkazy na výstup projektu jsou obvykle sestavení, ale v některých případech (například projekty Silverlight) mohou být jiné typy souborů.
 
- Další informace najdete v tématu [jak: Přidání odkazu na výstup projektu](../sharepoint/how-to-add-a-project-output-reference.md).
+ Další informace najdete v tématu [Postup: Přidání odkazu na výstup projektu](../sharepoint/how-to-add-a-project-output-reference.md).
 
 ## <a name="safe-control-entries"></a>Položky bezpečného řízení
- SharePoint poskytuje mechanismus zabezpečení, volá položky bezpečného řízení, chcete-li omezit přístup nedůvěryhodným uživatelům některé ovládací prvky. Návrh umožňuje SharePoint nedůvěryhodným uživatelům k nahrání a vytvoření stránky ASPX na Sharepointovém serveru. K těmto uživatelům zabránit v přidávání nezabezpečený kód do stránky ASPX, SharePoint omezuje přístup k *bezpečné ovládací prvky*. Bezpečné ovládací prvky jsou ovládacích prvcích ASPX a webovými částmi, které jsou označeny jako bezpečné a, který je možné ji žádný uživatel ve vaší lokalitě. Další informace najdete v tématu [krok 4: Přidat do seznamu bezpečných ovládacích prvků webové části](http://go.microsoft.com/fwlink/?LinkID=171014).
+ SharePoint poskytuje bezpečnostní mechanismus, který se nazývá položky bezpečného řízení, aby omezil přístup nedůvěryhodných uživatelů na určité ovládací prvky. V rámci návrhu služba SharePoint umožňuje nedůvěryhodným uživatelům nahrávat a vytvářet stránky ASPX na SharePointovém serveru. Aby mohli tito uživatelé zabránit přidávání nezabezpečeného kódu na stránky ASPX, SharePoint omezuje přístup k *bezpečným ovládacím prvkům*. Bezpečné ovládací prvky jsou ovládací prvky ASPX a webové části označené jako zabezpečené a mohou být použity jakýmkoli uživatelem na webu. Další informace najdete v části [Krok 4: Přidání webové části do seznamu bezpečných ovládacích prvků](/previous-versions/office/developer/sharepoint-2007/ms581321(v=office.12)).
 
- Každé položky projektu služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] má vlastnost s názvem **položky bezpečných ovládacích prvků** , která má dvě logické objektu třídy subproperties: **Bezpečné** a **zabezpečený proti skriptům**. Bezpečné vlastnost určuje, zda nedůvěryhodným uživatelům můžete přistupovat k ovládacímu prvku. Vlastnost bezpečné vůči skriptu určuje, zda lze nedůvěryhodným uživatelům zobrazení a změna vlastností ovládacího prvku.
+ Každá položka SharePointového projektu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] má vlastnost nazvanou **položky bezpečného řízení** , které mají dvě logické podvlastnosti: **bezpečné** a **bezpečné proti skriptu**. Vlastnost Safe určuje, zda mohou nedůvěryhodní uživatelé přistupovat k ovládacímu prvku. Vlastnost Safe proti skriptu určuje, zda mohou nedůvěryhodní uživatelé zobrazovat a měnit vlastnosti ovládacího prvku.
 
- Položky bezpečného řízení je odkazováno na základě sestavení. Přidat položky bezpečného řízení projektu sestavení tak, že zadáte v položce projektu **položky bezpečných ovládacích prvků** vlastnost. Ale můžete také přidat položky bezpečného řízení k sestavení projektu prostřednictvím **Upřesnit** kartu **návrháři balíčku** při přidávání dalších sestavení do balíčku. Další informace najdete v tématu [jak: Označení ovládacích prvků jako bezpečných](../sharepoint/how-to-mark-controls-as-safe-controls.md) nebo [registrace do webové části sestavení jako ovládací prvek bezpečný](http://go.microsoft.com/fwlink/?LinkID=171013).
+ Položky bezpečného řízení jsou odkazovány na základě sestavení. Do sestavení projektu přidáte položky bezpečného řízení jeho zadáním do vlastnosti **položky bezpečného řízení** položky projektu. Můžete však také přidat položky bezpečného řízení do sestavení projektu prostřednictvím karty **Upřesnit** v **Návrháři balíčku** při přidání dalšího sestavení do balíčku. Další informace naleznete v tématu [Postupy: označení ovládacích prvků jako bezpečných ovládacích prvků](../sharepoint/how-to-mark-controls-as-safe-controls.md) nebo [registrace sestavení webové části jako bezpečného řízení](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11)).
 
-### <a name="xml-entries-for-safe-controls"></a>Záznamů jazyka XML pro bezpečné ovládací prvky
- Když přidáte položku bezpečný ovládací prvek do položky projektu a sestavení projektu, odkaz je zapsán do manifestu balíčku v následujícím formátu:
+### <a name="xml-entries-for-safe-controls"></a>Položky XML pro bezpečné ovládací prvky
+ Když přidáte položku bezpečného řízení do položky projektu nebo do sestavení projektu, odkaz je zapsán do manifestu balíčku v následujícím formátu:
 
 ```xml
 <Assemblies>
@@ -106,6 +106,6 @@ ms.locfileid: "66177709"
 ```
 
 ## <a name="see-also"></a>Viz také:
-- [Balení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
-- [Vložení souborů do řešení pomocí modulů](../sharepoint/using-modules-to-include-files-in-the-solution.md)
-- [Rozšíření balení a nasazení SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md)
+- [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [Zahrnutí souborů do řešení pomocí modulů](../sharepoint/using-modules-to-include-files-in-the-solution.md)
+- [Rozšiřování balení a nasazení služby SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md)

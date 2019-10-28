@@ -1,5 +1,5 @@
 ---
-title: Vytváření sloupců webu, typů obsahu a seznamů pro službu SharePoint | Dokumentace Microsoftu
+title: Vytváření sloupců webu, typů obsahu a seznamů pro službu SharePoint | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,35 +18,35 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8cecb3e78cea90b927dc6b67b5b4a2cb50bfa87c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 538d82794fcecb91e4f13ab6d7718d0bf407b86f
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62581093"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984520"
 ---
 # <a name="create-site-columns-content-types-and-lists-for-sharepoint"></a>Vytváření sloupců webu, typů obsahu a seznamů pro službu SharePoint
-  Visual Studio obsahuje šablony položek projektu pro mnoho různých základní položek služby SharePoint, včetně *uvádí* a *typů obsahu*, které můžete začlenit sloupců webu (nebo  *pole*). Návrháři nových typů obsahu a seznamů Ujistěte se, vytváří tyto položky se nyní ještě snazší.
+  Visual Studio poskytuje šablony položek projektu pro mnoho různých základních položek SharePointu, včetně *seznamů* a *typů obsahu*, které mohou zahrnovat sloupce (nebo *pole*) webu. Noví návrháři pro typy obsahu a seznamy vytvářejí tyto položky snadněji než kdy dřív.
 
 ## <a name="site-columns"></a>Sloupce webu
- Sloupce webu jsou základní prvky, které přidáte do projektu služby SharePoint. Sloupec webu představuje typ dat, jako je například telefonní číslo, komentáře nebo název města kontaktu v seznamu kontaktů.
+ Sloupce webu jsou jedním z nejvíce základních prvků, které lze přidat do projektu služby SharePoint. Sloupec webu představuje typ dat, jako je telefonní číslo, komentář nebo jméno města kontaktu v seznamu kontaktů.
 
- Šablony položky projektu sloupce nové lokality usnadňuje vytváření sloupců webu než v předchozích verzích sady Visual Studio. Po vytvoření nového sloupce webu, můžete upravit kód XML v sloupce webu *Elements.xml* souboru pro zahrnutí informací, které chcete, jako je například své zobrazované jméno, jeho datový typ a skupiny, ve kterém chcete sloupec webu se zobrazí v SharePoint. Další informace o sloupců webu, naleznete v tématu [Úvod do sloupce](http://go.microsoft.com/fwlink/?LinkId=224996).
+ Šablona položky projektu sloupce nového webu usnadňuje vytváření sloupců webu, než je v dřívější verzi sady Visual Studio. Po vytvoření nového sloupce webu můžete upravit kód XML v souboru *Elements. XML* sloupce webu tak, aby obsahoval požadované informace, jako je jeho zobrazované jméno, datový typ a skupina, ve které chcete sloupec web zobrazit ve službě SharePoint. Další informace o sloupcích webu najdete v tématu [Úvod do sloupců](/previous-versions/office/developer/sharepoint-2010/ms450825(v=office.14)).
 
-## <a name="content-types-and-lists"></a>Typy obsahu a seznamů
- Typy obsahu a seznamů patří mezi nejčastěji používaných prvků v Sharepointu.
+## <a name="content-types-and-lists"></a>Typy obsahu a seznamy
+ Typy obsahu a seznamy jsou mezi nejčastěji používanými prvky na SharePointu.
 
- Typ obsahu definuje metadat, pracovní postup a chování pro kategorie položek v knihovně dokumentů nebo seznamu služby SharePoint. Můžete například vytvořit typ obsahu informace v seznamu kontaktů nebo seznamu úloh. Typ kontaktu obsahu může obsahovat sloupců, jako je jméno, e-mailu, telefonní číslo a adresu. Typ obsahu, který můžete definovat na úrovni webu nezávisí žádné seznam nebo knihovna dokumentů na webu. Různé seznamy nebo knihovny dokumentů na webu služby SharePoint můžete použít stejný typ obsahu. Můžete také použít několik typů obsahu na stejný seznam nebo knihovna dokumentů.
+ Typ obsahu definuje metadata, pracovní postup a chování pro kategorii položek v SharePointovém seznamu nebo v knihovně dokumentů. Můžete například vytvořit typ obsahu pro informace v seznamu kontaktů nebo v seznamu úkolů. Typ obsahu kontaktu může zahrnovat sloupce, jako je jméno, E-mail, telefonní číslo a adresa. Typ obsahu, který definujete na úrovni webu, je nezávislý na jakémkoli seznamu nebo knihovně dokumentů v lokalitě. Můžete použít stejný typ obsahu s různými seznamy nebo knihovnami dokumentů na webu služby SharePoint. Ve stejném seznamu nebo knihovně dokumentů můžete také použít několik typů obsahu.
 
- Seznam je kolekce informací ve službě SharePoint, které můžete sdílet s ostatními. Seznamy se skládají z řádků sloupců, které obsahují data. Některé příklady seznamy: seznam úkolů, seznam kontaktů a seznam oznámení.
+ Seznam je kolekce informací na SharePointu, které můžete sdílet s ostatními. Seznamy se skládají z řádků sloupců, které obsahují data. Mezi příklady seznamů patří: seznam úkolů, seznam kontaktů a seznam oznámení.
 
- Nový typ obsahu a seznamu návrhářů v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] zkontrolujte vytváření typů obsahu webu a seznamů mnohem jednodušší a intuitivnější než v předchozích verzích sady Visual Studio. Uživatelské rozhraní umožňuje vizuálně sestavit typy obsahu a seznamů v podobě známé a umožňuje řazení a seskupení dat v seznamech a používat skupiny záhlaví. Další informace o typy obsahu, najdete v části [typy obsahu](http://go.microsoft.com/fwlink/?LinkId=224997). Další informace o seznamech najdete v tématu [formuláře seznamu](http://go.microsoft.com/fwlink/?LinkId=224998) a [seznamy](http://go.microsoft.com/fwlink/?LinkId=224999).
+ Nový typ obsahu a návrháři seznamů v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvářet typy obsahu webu a seznamy jsou mnohem jednodušší a intuitivnější než v dřívější verzi sady Visual Studio. Uživatelské rozhraní umožňuje vizuálně sestavovat typy a seznamy obsahu a umožňuje seřazení a seskupování dat v seznamech a používání hlaviček skupin. Další informace o typech obsahu najdete v tématu [typy obsahu](/previous-versions/office/developer/sharepoint-2010/ms479905(v=office.14)). Další informace o seznamech naleznete v tématu [formuláře seznamu](/previous-versions/office/developer/sharepoint-2010/aa543232(v=office.14)) a [zobrazení seznamu](/previous-versions/office/developer/sharepoint-2010/ff604021(v=office.14)).
 
 ## <a name="related-topics"></a>Související témata
 
 |Název|Popis|
 |-----------|-----------------|
-|[Návod: Vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)|Popisuje způsob vytvoření sloupce webu, které se používají ve vlastní typ obsahu. Typ obsahu se pak použije v vlastního seznamu.|
+|[Návod: vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)|Ukazuje, jak vytvořit sloupce webu, které se používají ve vlastním typu obsahu. Typ obsahu se pak použije ve vlastním seznamu.|
 
 ## <a name="see-also"></a>Viz také:
-- [Začněte s vývojem na verzi SharePoint 2010](http://go.microsoft.com/fwlink/?LinkId=225000)
+- [Začínáme s vývojem na SharePointu 2010](/sharepoint/dev/)

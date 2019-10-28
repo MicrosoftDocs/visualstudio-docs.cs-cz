@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Naplnění listů daty z databáze'
+title: 'Postupy: naplnění listů daty z databáze'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,69 +14,65 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 67c12843d00bf8d5af51fa7af3175077527afa58
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0a1e01f5c9fc1372cda4d7d31f8ba56b90e166e7
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967758"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985851"
 ---
-# <a name="how-to-populate-worksheets-with-data-from-a-database"></a>Postupy: Naplnění listů daty z databáze
+# <a name="how-to-populate-worksheets-with-data-from-a-database"></a>Postupy: naplnění listů daty z databáze
 
-Stejným způsobem, že přistupujete k datům v projektech Windows Forms, můžou k datům v projektech Office úrovni dokumentu. Použít stejné nástroje a kódu přenést data do vašeho řešení a ovládací prvky Windows Forms můžete použít i pro zobrazení údajů. Kromě toho můžete využít výhod ovládací prvky hostitelské ovládací prvky, které jsou nativních objektů v aplikaci Microsoft Office Excel, které je vylepšené o události a datové vazby funkce volána. Další informace najdete v tématu [hostovat položky a hostujte Přehled ovládacích prvků](../vsto/host-items-and-host-controls-overview.md).
+K datům v projektech Office na úrovni dokumentu můžete přistupovat stejným způsobem jako při přístupu k datům v model Windows Forms projektech. Můžete použít stejné nástroje a kód k přenesení dat do vašeho řešení a můžete dokonce použít ovládací prvky model Windows Forms k zobrazení dat. Kromě toho můžete využít ovládací prvky označované jako hostitelské ovládací prvky, které jsou nativní objekty v systém Microsoft Office Excel, které byly vylepšeny s událostmi a schopností vazby dat. Další informace naleznete v tématu [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md).
 
 [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
-Následující příklad ukazuje, jak přidat ovládací prvky vázané na data v projekty na úrovni dokumentu pomocí návrháře. Příklad toho, jak přidat ovládací prvky vázané na data v projektech na úrovni aplikace za běhu, naleznete v tématu [názorný postup: Rozšířené datové vazby v projektu doplňku VSTO](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md).
+Následující příklad ukazuje, jak přidat ovládací prvky vázané na data v projektech na úrovni dokumentu pomocí návrháře. Příklad přidání ovládacích prvků vázaných na data v projektech na úrovni aplikace v době běhu naleznete v tématu [Návod: složitá datová vazba v projektu doplňku VSTO](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md).
 
-![odkaz na video](../vsto/media/playvideo.gif "odkaz na video") související video ukázku naleznete v tématu [postup: Přenos dat do listu aplikace Excel? ](http://go.microsoft.com/fwlink/?LinkID=130277), a [postup: Využití dat z databáze v aplikaci Excel? ](http://go.microsoft.com/fwlink/?LinkID=130287).
+## <a name="add-a-data-bound-control-to-a-worksheet-at-design-time"></a>Přidání ovládacího prvku vázaného na data do listu v době návrhu
 
-## <a name="add-a-data-bound-control-to-a-worksheet-at-design-time"></a>Přidejte ovládací prvek vázaný na data na list v době návrhu
+### <a name="to-populate-a-worksheet-with-data-from-a-database"></a>Naplnění listu daty z databáze
 
-### <a name="to-populate-a-worksheet-with-data-from-a-database"></a>K naplnění listů daty z databáze
+1. Otevřete projekt na úrovni dokumentu aplikace Excel v aplikaci Visual Studio s listem otevřeným v návrháři.
 
-1. Otevřete úrovni dokumentu projektu aplikace Excel v sadě Visual Studio, otevřete sešit v návrháři.
+2. Otevřete okno **zdroje dat** a vytvořte zdroj dat pro projekt. Další informace najdete v tématu [Přidání nových připojení](../data-tools/add-new-connections.md).
 
-2. Otevřít **zdroje dat** okna a vytvořte zdroj dat pro váš projekt. Další informace najdete v tématu [přidat nové připojení](../data-tools/add-new-connections.md).
+3. Přetáhněte pole nebo tabulku z okna **zdroje dat** do listu.
 
-3. Přetáhněte pole nebo tabulku, kterou z **zdroje dat** okno do listu.
+Na listu se vytvoří jeden z následujících ovládacích prvků:
 
-Jeden z následujících ovládacích prvků je vytvořena na listu:
+- Pokud přetáhnete pole, na listu se vytvoří ovládací prvek <xref:Microsoft.Office.Tools.Excel.NamedRange>. Další informace naleznete v tématu [NamedRange Control](../vsto/namedrange-control.md).
 
-- Pokud přetáhnete pole, <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek je vytvořen v listu. Další informace najdete v tématu [namedrange – ovládací prvek](../vsto/namedrange-control.md).
+- Pokud tabulku přetáhnete, na listu se vytvoří ovládací prvek <xref:Microsoft.Office.Tools.Excel.ListObject>. Další informace naleznete v tématu [ListObject Control](../vsto/listobject-control.md).
 
-- Pokud přetáhnete tabulky <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek je vytvořen v listu. Další informace najdete v tématu [ListObject – ovládací prvek](../vsto/listobject-control.md).
-
-Můžete přidat jiného ovládacího prvku tak, že vyberete v tabulce nebo pole **zdroje dat** okno a následným výběrem jiného ovládacího prvku z rozevíracího seznamu.
+Můžete přidat jiný ovládací prvek výběrem tabulky nebo pole v okně **zdroje dat** a následným výběrem jiného ovládacího prvku v rozevíracím seznamu.
 
 ## <a name="objects-in-the-project"></a>Objekty v projektu
 
-Kromě ovládacího prvku jsou následující objekty související s daty automaticky přidány do projektu:
+Kromě ovládacího prvku jsou do projektu automaticky přidány následující objekty související s daty:
 
-- Typové datové sady, který zapouzdřuje tabulek dat, které jste se připojili v databázi. Další informace najdete v tématu [datovou sadu nástrojů v sadě Visual Studio](../data-tools/dataset-tools-in-visual-studio.md).
+- Typová datová sada, která zapouzdřuje tabulky dat, ke kterým jste se připojili v databázi. Další informace najdete v tématu [nástroje datové sady v sadě Visual Studio](../data-tools/dataset-tools-in-visual-studio.md).
 
-- A <xref:System.Windows.Forms.BindingSource> ovládacího prvku, která se připojuje k typové datové sady. Další informace najdete v tématu [přehled komponenty BindingSource](/dotnet/framework/winforms/controls/bindingsource-component-overview).
+- <xref:System.Windows.Forms.BindingSource>, který spojuje ovládací prvek s typovou datovou sadou. Další informace najdete v tématu [Přehled komponent BindingSource](/dotnet/framework/winforms/controls/bindingsource-component-overview).
 
-- TableAdapter, který se připojuje k databázi typové datové sady. Další informace najdete v tématu [TableAdapter – přehled](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
+- TableAdapter, který připojuje typovou datovou sadu k databázi. Další informace najdete v tématu [TableAdapter Overview](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
 
-- TableAdapterManager, který se používá ke koordinaci adaptéry tabulek v datové sadě, aby povolovala hierarchické aktualizace. Další informace najdete v tématu [hierarchické aktualizace](../data-tools/hierarchical-update.md) a [TableAdapterManager odkaz](../data-tools/fill-datasets-by-using-tableadapters.md#tableadaptermanager-reference).
+- TableAdapterManager, který se používá ke koordinaci tabulkových adaptérů v datové sadě za účelem povolení hierarchických aktualizací. Další informace najdete v tématu [Hierarchická aktualizace](../data-tools/hierarchical-update.md) a [TableAdapterManager reference](../data-tools/fill-datasets-by-using-tableadapters.md#tableadaptermanager-reference).
 
-Při spuštění projektu ovládací prvek zobrazí první záznam ve zdroji dat. Můžete použít <xref:System.Windows.Forms.BindingSource> umožňující uživatelům procházet záznamy.
+Při spuštění projektu ovládací prvek zobrazí první záznam ve zdroji dat. Pomocí <xref:System.Windows.Forms.BindingSource> můžete uživatelům umožnit procházení záznamů.
 
-### <a name="to-scroll-through-the-records"></a>Procházet záznamy
+### <a name="to-scroll-through-the-records"></a>Procházení záznamů
 
-- Použití <xref:System.Windows.Forms.BindingSource> metody jako <xref:System.Windows.Forms.BindingSource.MoveNext%2A> a <xref:System.Windows.Forms.BindingSource.MovePrevious%2A>.
+- Použijte <xref:System.Windows.Forms.BindingSource> metody, jako je <xref:System.Windows.Forms.BindingSource.MoveNext%2A> a <xref:System.Windows.Forms.BindingSource.MovePrevious%2A>.
 
-Informace o tom, jak odesílat aktualizace do typové datové sady a databáze najdete v tématu [jak: Aktualizace zdroje dat s použitím dat z hostitelského ovládacího prvku](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
+Informace o tom, jak odeslat aktualizace typové datové sadě a databázi, naleznete v tématu [How to: Update a data source to data z hostitelského ovládacího prvku](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Přidání nových zdrojů dat](../data-tools/add-new-data-sources.md)
 - [Vytvoření vazby ovládacích prvků modelu Windows Forms k datům v sadě Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
 - [Postupy: Naplnění dokumentů daty z objektů](../vsto/how-to-populate-documents-with-data-from-objects.md)
 - [Postupy: Naplnění dokumentů daty z databáze](../vsto/how-to-populate-documents-with-data-from-a-database.md)
 - [Postupy: Naplnění dokumentů daty ze služeb](../vsto/how-to-populate-documents-with-data-from-services.md)
-- [Postupy: Aktualizace zdroje dat s použitím dat z hostitelského ovládacího prvku](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
-- [Postup: Přenos dat do Excelového listu](http://go.microsoft.com/fwlink/?LinkID=130277)
-- [Postup: Využití dat z databáze v aplikaci Excel?](http://go.microsoft.com/fwlink/?LinkID=130287)
+- [Postupy: aktualizace zdroje dat s použitím dat z hostitelského ovládacího prvku](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)

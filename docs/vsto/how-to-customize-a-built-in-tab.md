@@ -13,58 +13,58 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8e6f2d0da758a8897f28a22dec8adf1f8e05a36c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 3550c3bd48a02d5daf4ef7156960e8a8fab3b93a
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63419449"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985949"
 ---
 # <a name="how-to-customize-a-built-in-tab"></a>Postupy: Přizpůsobení předdefinované karty
-  Můžete přidat skupiny a ovládací prvky k předdefinované kartě. Vestavěná karta je karta, který je již na pásu karet aplikace Microsoft Office. Například **Data** karta je integrovanou kartou v aplikaci Excel. Když vytvoříte vlastní skupiny, se zobrazí poslední na kartě, ale vaši skupinu můžete přesunout kamkoli na kartě.
+  Můžete přidat skupiny a ovládací prvky na integrovanou kartu. Integrovaná karta je karta, která je již na pásu karet aplikace systém Microsoft Office. Karta **data** je například Integrovaná karta v aplikaci Excel. Když vytvoříte vlastní skupinu, zobrazí se na kartě jako poslední, ale skupinu můžete přesunout kdekoli na kartě.
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
 > [!NOTE]
-> Můžete přidat skupiny k předdefinované kartě, ale předdefinované skupiny nelze odebrat z předdefinované karty.
+> Skupiny můžete přidat na integrovanou kartu, nemůžete ale odebrat předdefinované skupiny z předdefinované karty.
 
-### <a name="to-add-groups-to-a-built-in-tab"></a>Přidání skupin do předdefinované karty
+### <a name="to-add-groups-to-a-built-in-tab"></a>Přidání skupin na integrovanou kartu
 
-1. Klikněte pravým tlačítkem na soubor kódu pásu karet v **Průzkumníka řešení**a potom klikněte na tlačítko **Návrhář zobrazení**.
-
-    > [!NOTE]
-    > Pokud soubor kódu pásu karet se nezobrazí v **Průzkumníka řešení**, je nutné přidat **položky pásu karet** do projektu. Zobrazit [jak: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md).
-
-2. Klikněte pravým tlačítkem na libovolné kartě v Návrháři pásu karet a potom klikněte na tlačítko **vlastnosti**.
-
-3. V **vlastnosti** okna, rozbalte **ControlId** vlastnost a poté nastavte **ControlIdType** vlastnost **Office**.
-
-4. Nastavte **OfficeId** vlastnost *ID ovládacího prvku* předdefinované karty, kterou chcete upravit.
-
-     ID ovládacího prvku je název, který jednoznačně identifikuje karty, skupiny a ovládací prvky, které jsou integrované do aplikace Microsoft Office.
-
-     Seznam ID ovládacích prvků naleznete v tématu [soubory nápovědy Office 2010: Office fluent uživatelského rozhraní ovládacího prvku identifikátory](http://go.microsoft.com/fwlink/?LinkID=181052).
-
-5. Z **ovládací prvky Ribbon Office** karty **nástrojů**, přetáhněte skupin na kartě.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na soubor kódu pásu karet a pak klikněte na tlačítko **Návrhář zobrazení**.
 
     > [!NOTE]
-    > Předdefinované skupiny v Návrháři nezobrazí. Proto je jediný způsob, jak určit, jestli pracujete s předdefinovanou kartu prozkoumat **ControlId** vlastnosti na kartě.
+    > Pokud se soubor kódu pásu karet v **Průzkumník řešení**nezobrazí, musíte do projektu přidat **položku pásu karet** . Přečtěte si téma [Postupy: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md).
 
-### <a name="to-position-groups-on-a-built-in-tab"></a>Pokud chcete umístit na integrované kartě skupiny
+2. Klikněte pravým tlačítkem myši na libovolnou kartu v Návrháři pásu karet a pak klikněte na **vlastnosti**.
 
-1. V Návrháři pásu karet vyberte vlastní skupiny.
+3. V okně **vlastnosti** rozbalte vlastnost **ControlID** a pak nastavte vlastnost **ControlIdType** na hodnotu **Office**.
 
-2. V **vlastnosti** okna, rozbalte **pozice** vlastnost.
+4. Nastavte vlastnost **OfficeId** na *ID ovládacího prvku* předdefinované karty, kterou chcete přizpůsobit.
 
-3. Nastavte **PositionType** k odpovídající hodnotě:
+     ID ovládacího prvku je název, který jednoznačně identifikuje karty, skupiny a ovládací prvky, které jsou integrovány v aplikacích systém Microsoft Office.
 
-    - **BeforeOfficeId** umístí skupině před zadaným předdefinovanou skupinu.
+     Seznam ID ovládacích prvků najdete v tématu [soubory s nápovědu pro office 2010: identifikátory ovládacích prvků uživatelského rozhraní pro Office Fluent](https://www.microsoft.com/download/details.aspx?id=6627).
 
-    - **AfterOfficeId** umístí skupině po zadané integrované skupiny.
+5. Na kartě **ovládací prvky pásu karet Office** v **panelu nástrojů**přetáhněte skupiny na kartu.
 
-4. Nastavte **OfficeId** vlastnosti ID ovládacího prvku předdefinovanou skupinu.
+    > [!NOTE]
+    > Předdefinované skupiny se nezobrazí v návrháři. Proto jediným způsobem, jak určit, zda pracujete s integrovanou kartou, je prozkoumávat vlastnost **ControlID** karty.
 
-     Seznam ID ovládacích prvků naleznete v tématu [soubory nápovědy Office 2010: Office fluent uživatelského rozhraní ovládacího prvku identifikátory](http://go.microsoft.com/fwlink/?LinkID=181052).
+### <a name="to-position-groups-on-a-built-in-tab"></a>Umístění skupin na integrovanou kartu
+
+1. V Návrháři pásu karet vyberte vlastní skupinu.
+
+2. V okně **vlastnosti** rozbalte vlastnost **pozice** .
+
+3. Nastavte vlastnost **PositionType** na odpovídající hodnotu:
+
+    - **BeforeOfficeId** umístí skupinu před zadanou vestavěnou skupinu.
+
+    - **AfterOfficeId** umístí skupinu po zadané předdefinované skupině.
+
+4. Nastavte vlastnost **OfficeId** na ID ovládacího prvku předdefinované skupiny.
+
+     Seznam ID ovládacích prvků najdete v tématu [soubory s nápovědu pro office 2010: identifikátory ovládacích prvků uživatelského rozhraní pro Office Fluent](https://www.microsoft.com/download/details.aspx?id=6627).
 
 ## <a name="see-also"></a>Viz také:
 - [Přehled pásu karet](../vsto/ribbon-overview.md)
@@ -73,6 +73,6 @@ ms.locfileid: "63419449"
 - [Návod: Vytvoření vlastní karty pomocí Návrháře pásu karet](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)
 - [Návod: Vytvoření vlastní karty pomocí kódu XML pásu karet](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)
 - [Postupy: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md)
-- [Postupy: Změna umístění karty na pásu karet](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)
+- [Postupy: Změna pozice karty na pásu karet](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)
 - [Postupy: Přidání ovládacích prvků do zobrazení Backstage](../vsto/how-to-add-controls-to-the-backstage-view.md)
-- [Postupy: Zobrazení doplňku uživatele chyb rozhraní](../vsto/how-to-show-add-in-user-interface-errors.md)
+- [Postupy: zobrazení chyb uživatelského rozhraní doplňku](../vsto/how-to-show-add-in-user-interface-errors.md)

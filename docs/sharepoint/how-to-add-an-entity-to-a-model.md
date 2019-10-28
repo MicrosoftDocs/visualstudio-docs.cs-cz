@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání Entity do modelu | Dokumentace Microsoftu'
+title: 'Postupy: Přidání entity do modelu | Microsoft Docs'
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -17,38 +17,38 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c7d74b731bd1857330c40a7929d84efe40a03201
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b1a7ec1eab5cdcf2e415a4803c51c9da91be29c9
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431252"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985247"
 ---
 # <a name="how-to-add-an-entity-to-a-model"></a>Postupy: Přidání entity do modelu
-  Jak vytvořit entitu, přidejte ovládací prvek entity ze sady Visual Studio **nástrojů** na Návrhář obchodních dat připojení (BDC).
+  Pokud chcete vytvořit entitu, přidejte ovládací prvek entity z **panelu nástrojů sady** Visual Studio do návrháře služby připojení obchodních dat.
 
 ### <a name="to-add-an-entity-to-the-model"></a>Přidání entity do modelu
 
-1. Vytvoření projektu BDC nebo otevřete existující projekt služby BDC. Další informace najdete v tématu [vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md).
+1. Vytvořte projekt služby BDC nebo otevřete existující projekt služby BDC. Další informace najdete v tématu [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md).
 
-2. V **nástrojů**, z **BusinessDataCatalog** skupině, přidejte **Entity** ovládacího prvku do návrháře.
+2. V **sadě nástrojů**ze skupiny **BusinessDataCatalog** přidejte ovládací prvek **entity** do návrháře.
 
-     Nová entita se zobrazí v návrháři. Visual Studio přidá `<Entity>` elementu XML souboru modelu služby BDC do projektu. Další informace o atributech elementu Entity najdete v tématu [Entity](http://go.microsoft.com/fwlink/?LinkId=169296).
+     Nová entita se zobrazí v návrháři. Visual Studio přidá prvek `<Entity>` do souboru XML modelu služby BDC v projektu. Další informace o atributech elementu entity najdete v tématu [entita](/previous-versions/office/developer/sharepoint-2010/ee558325(v=office.14)).
 
-3. V Návrháři otevřete místní nabídku pro entitu, zvolte **přidat**a klikněte na tlačítko **identifikátor**.
+3. V Návrháři otevřete místní nabídku pro entitu, zvolte možnost **Přidat**a pak zvolte možnost **identifikátor**.
 
-     Nový identifikátor se zobrazí v entitě.
+     V entitě se zobrazí nový identifikátor.
 
     > [!NOTE]
-    > Můžete změnit název entity a identifikátoru **vlastnosti** okna.
+    > Název entity a identifikátor můžete změnit v okně **vlastnosti** .
 
-4. Definujte pole entity ve třídě. Můžete buď přidejte novou třídu do projektu, nebo použijte existující třídy vytvořené pomocí jiných nástrojů, jako je například Návrhář relací objektů (O/R Designer). Následující příklad ukazuje třídu entity s názvem kontaktu.
+4. Definujte pole entity ve třídě. Můžete buď přidat novou třídu do projektu, nebo použít existující třídu vytvořenou pomocí jiných nástrojů, jako je například Návrhář relací objektů (Návrhář O/R). Následující příklad ukazuje třídu entity s názvem kontakt.
 
      [!code-csharp[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/CSharp/sp_bdc_entity_data_class/bdcmodel1/contact.cs#1)]
      [!code-vb[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/VisualBasic/sp_bdc_entity_data_class/bdcmodel1/contact.vb#1)]
 
 ## <a name="see-also"></a>Viz také:
-- [Postupy: Přidání metody vytvoření](../sharepoint/how-to-add-a-creator-method.md)
+- [Postupy: Přidání metody autora](../sharepoint/how-to-add-a-creator-method.md)
 - [Postupy: Přidání metody odstranění](../sharepoint/how-to-add-a-deleter-method.md)
 - [Postupy: Přidání aktualizační metody](../sharepoint/how-to-add-an-updater-method.md)
 - [Postupy: Přidání vyhledávací metody](../sharepoint/how-to-add-a-finder-method.md)

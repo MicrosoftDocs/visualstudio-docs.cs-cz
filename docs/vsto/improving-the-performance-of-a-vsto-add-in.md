@@ -10,12 +10,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 79f1c4a55321a1b039cc2702b1040e2ab9d4ac9d
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 564672e01eeffbdcb53bf1af08f329d2f6bf218f
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255644"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985773"
 ---
 # <a name="improve-the-performance-of-a-vsto-add-in"></a>Zlepšení výkonu doplňku VSTO
   Uživatelům můžete poskytnout lepší prostředí tím, že optimalizujete doplňky VSTO, které vytvoříte pro aplikace Office tak, aby se rychle spouštěly, vypnuly, otevíraly položky a prováděly další úkoly. Pokud je doplněk VSTO pro Outlook k dispozici, můžete také snížit pravděpodobnost, že bude váš doplněk VSTO zakázán z důvodu špatného výkonu. Výkon doplňku VSTO můžete zvýšit implementací následujících strategií:
@@ -28,7 +28,7 @@ ms.locfileid: "71255644"
 
 - [Provádějte náročné operace v samostatném vlákně pro spuštění](#Perform).
 
-  Další informace o tom, jak optimalizovat doplněk pro Outlook VSTO, najdete v tématu [kritéria výkonu, aby doplňky VSTO byly povolené](http://go.microsoft.com/fwlink/?LinkID=266503).
+  Další informace o tom, jak optimalizovat doplněk pro Outlook VSTO, najdete v tématu [kritéria výkonu, aby doplňky VSTO byly povolené](/previous-versions/office/jj228679(v=office.15)#ol15WhatsNew_AddinDisabling).
 
 ## <a name="Load"></a>Načíst doplňky VSTO na vyžádání
  Doplněk VSTO můžete nakonfigurovat tak, aby se načetl jenom za následujících okolností:
@@ -43,7 +43,7 @@ ms.locfileid: "71255644"
 
 1. V **Průzkumník řešení**vyberte uzel projektu.
 
-2. V panelu nabídky zvolte **zobrazení** > **stránky vlastností**.
+2. Na panelu nabídek vyberte možnost **zobrazit**  > **stránky vlastností**.
 
 3. Na kartě **publikovat** klikněte na tlačítko **Možnosti** .
 
@@ -51,13 +51,13 @@ ms.locfileid: "71255644"
 
 ### <a name="to-configure-a-windows-installer-solution-to-load-vsto-add-ins-on-demand"></a>Konfigurace řešení Instalační služba systému Windows, aby se načetly doplňky VSTO na vyžádání
 
-1. V registru nastavte `LoadBehavior` zadáním klíče **_root_\Software\Microsoft\Office\\_ApplicationName_\Addins\\_Add-in_** na **0x10**.
+1. V registru nastavte `LoadBehavior` zadáním klíče  **_ID doplňku_\\ApplicationName \Addins\\_ApplicationName_\Software\Microsoft\Office** do **0x10**.
 
      Další informace najdete v tématu [položky registru pro doplňky VSTO](../vsto/registry-entries-for-vsto-add-ins.md).
 
 ### <a name="to-configure-a-solution-to-load-vsto-add-ins-on-demand-while-you-debug-the-solution"></a>Konfigurace řešení, které načte doplňky VSTO na vyžádání při ladění řešení
 
-1. Vytvořte skript, který `LoadBehavior` nastaví položku klíč **_ID doplňku_ _root_\Software\Microsoft\Office\\_ApplicationName_\Addins\\** na **0x10**.
+1. Vytvořte skript, který nastaví `LoadBehavior` klíč  **_ID doplňku_\\_ApplicationName_\Addins\\** pro **0x10**.
 
      Následující kód ukazuje příklad tohoto skriptu.
 
@@ -79,9 +79,9 @@ ms.locfileid: "71255644"
 
     ```
 
-     Informace o tom, jak vytvořit událost po sestavení v C# projektu, naleznete v tématu [How to: Zadejte &#40;události sestavení C&#35;&#41;](../ide/how-to-specify-build-events-csharp.md).
+     Informace o tom, jak vytvořit událost po sestavení v C# projektu, naleznete v tématu [How to: zadat události &#40;sestavení C&#35;](../ide/how-to-specify-build-events-csharp.md).
 
-     Informace o tom, jak vytvořit událost po sestavení v projektu Visual Basic, naleznete v tématu [How to: Zadejte &#40;&#41;VisualBasic](../ide/how-to-specify-build-events-visual-basic.md)události sestavení.
+     Informace o tom, jak vytvořit událost po sestavení v projektu Visual Basic, naleznete v tématu [How to: zadejte &#40;události sestavení Visual Basic&#41;](../ide/how-to-specify-build-events-visual-basic.md).
 
 ## <a name="Publish"></a>Publikování řešení pro Office pomocí Instalační služba systému Windows
  Pokud publikujete řešení pomocí Instalační služba systému Windows, sada Visual Studio 2010 Tools for Office runtime při načtení doplňku VSTO obejít následující kroky.
@@ -98,9 +98,9 @@ ms.locfileid: "71255644"
   Další informace najdete v tématu [nasazení řešení pro Office pomocí Instalační služba systému Windows](../vsto/deploying-an-office-solution-by-using-windows-installer.md).
 
 ## <a name="Bypass"></a>Vynechat odraz pásu karet
- Pokud vytváříte řešení pomocí [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]nástroje, ujistěte se, že uživatelé nainstalovali nejnovější verzi sady Visual Studio 2010 Tools for Office runtime při nasazení řešení. Starší verze modulu VSTO runtime, které se projeví v sestaveních řešení pro vyhledání přizpůsobení pásu karet. Tento proces může způsobit pomalejší načtení doplňku VSTO.
+ Pokud vytváříte řešení pomocí [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)], ujistěte se, že uživatelé nainstalovali nejnovější verzi sady Visual Studio 2010 Tools for Office runtime při nasazení řešení. Starší verze modulu VSTO runtime, které se projeví v sestaveních řešení pro vyhledání přizpůsobení pásu karet. Tento proces může způsobit pomalejší načtení doplňku VSTO.
 
- Alternativně můžete zabránit jakékoli verzi nástrojů sady Visual Studio 2010 pro prostředí Office runtime z použití reflexe k identifikaci přizpůsobení pásu karet. Chcete-li postupovat podle této `CreateRibbonExtensibility` strategie, přepište metodu a explicitně vraťte objekty pásu karet. Pokud doplněk VSTO neobsahuje žádné vlastní nastavení pásu karet, vraťte `null` se v rámci metody.
+ Alternativně můžete zabránit jakékoli verzi nástrojů sady Visual Studio 2010 pro prostředí Office runtime z použití reflexe k identifikaci přizpůsobení pásu karet. Chcete-li postupovat podle této strategie, přepište metodu `CreateRibbonExtensibility` a explicitně vraťte objekty pásu karet. Pokud doplněk VSTO neobsahuje žádné vlastní nastavení pásu karet, vraťte `null` v rámci metody.
 
  Následující příklad vrátí objekt pásu karet na základě hodnoty pole.
 

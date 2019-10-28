@@ -1,5 +1,5 @@
 ---
-title: IWebAppDiagnosticsSetup::DiagnosticsSupported | Microsoft Docs
+title: Iwebappdiagnosticssetup –::D iagnosticsSupported | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1d4214dea16c1e8a96ece7428f9ea73640025a9c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: dd27e7c8759054fa2d7d67858d8d006fa9c9a152
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443674"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984574"
 ---
 # <a name="iwebappdiagnosticssetupdiagnosticssupported"></a>IWebAppDiagnosticsSetup::DiagnosticsSupported
-Určuje, zda jsou podporovány diagnostiky pro tuto aplikaci. Pokud [setsite –](http://go.microsoft.com/fwlink/?LinkId=232439) byla volána pro objekt implementace tohoto rozhraní s NENULOVOU hodnotu, [DiagnosticsSupported](../../winscript/reference/iwebappdiagnosticssetup-diagnosticssupported.md) vrátí `true`. Pokud ne, vrátí `false` a volání [IWebAppDiagnosticsSetup::CreateObjectWithSiteAtWebApp](../../winscript/reference/iwebappdiagnosticssetup-createobjectwithsiteatwebapp.md) nezdaří.  
+Určuje, zda je v této aplikaci podporována Diagnostika. Pokud byla volána metoda [SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) na objektu, který implementuje toto rozhraní s hodnotou jinou než null, vrátí [DiagnosticsSupported](../../winscript/reference/iwebappdiagnosticssetup-diagnosticssupported.md) hodnotu `true`. V opačném případě vrátí `false` a volání [iwebappdiagnosticssetup –:: CreateObjectWithSiteAtWebApp](../../winscript/reference/iwebappdiagnosticssetup-createobjectwithsiteatwebapp.md) selže.  
   
 > [!IMPORTANT]
-> [Iwebappdiagnosticssetup – rozhraní](../../winscript/reference/iwebappdiagnosticssetup-interface.md) je implementováno komponentou Pdm verze 11.0 nebo novější. Součástí activdbg100.  
+> [Rozhraní iwebappdiagnosticssetup –](../../winscript/reference/iwebappdiagnosticssetup-interface.md) je implementováno pomocí PDM v 11.0 a větší. Nalezeno v activdbg100.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,4 +34,4 @@ HRESULT DiagnosticsSupported(        [out, retval] VARIANT_BOOL* pRetVal        
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- Pokud [setsite –](http://go.microsoft.com/fwlink/?LinkId=232439) byla volána pro objekt implementace tohoto rozhraní s NENULOVOU hodnotu, [DiagnosticsSupported](../../winscript/reference/iwebappdiagnosticssetup-diagnosticssupported.md) vrátí `true`. Pokud ne, vrátí `false`a volání [IWebAppDiagnosticsSetup::CreateObjectWithSiteAtWebApp](../../winscript/reference/iwebappdiagnosticssetup-createobjectwithsiteatwebapp.md) nezdaří.
+ Pokud byla volána metoda [SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) na objektu, který implementuje toto rozhraní s hodnotou jinou než null, vrátí [DiagnosticsSupported](../../winscript/reference/iwebappdiagnosticssetup-diagnosticssupported.md) hodnotu `true`. V opačném případě vrátí `false`a volání [iwebappdiagnosticssetup –:: CreateObjectWithSiteAtWebApp](../../winscript/reference/iwebappdiagnosticssetup-createobjectwithsiteatwebapp.md) selže.

@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e9e42b5156ced1c01995882e3250c7243c18d24d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 73c81d88f055ea7a585e3d14ab4a0086d9236938
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658365"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984453"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>Nasazení DSL v MSI a VSIX
 Jazyk specifický pro doménu můžete nainstalovat na vlastní počítač nebo na jiné počítače. V cílovém počítači již musí být nainstalována aplikace Visual Studio.
@@ -68,7 +68,7 @@ Pokud je vaše DSL nainstalovaná touto metodou, uživatel může otevřít soub
 
  Další informace o souborech MSI a dalších možnostech nasazení najdete v tématu [nasazení aplikací, služeb a součástí](../deployment/deploying-applications-services-and-components.md).
 
- Chcete-li vytvořit soubor MSI, přidejte projekt instalace do řešení sady Visual Studio. Nejjednodušší způsob, jak vytvořit projekt instalace, je použít šablonu CreateMsiSetupProject.tt, kterou si můžete stáhnout z [webu VMSDK](http://go.microsoft.com/fwlink/?LinkID=186128).
+ Chcete-li vytvořit soubor MSI, přidejte projekt instalace do řešení sady Visual Studio. Nejjednodušší způsob, jak vytvořit projekt instalace, je použít šablonu CreateMsiSetupProject.tt, kterou si můžete stáhnout z [webu VMSDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db).
 
 ### <a name="to-deploy-a-dsl-in-an-msi"></a>Nasazení DSL do MSI
 
@@ -96,7 +96,7 @@ Pokud je vaše DSL nainstalovaná touto metodou, uživatel může otevřít soub
 
    - V nabídce **sestavení** otevřete **Configuration Manager**a vyberte konfiguraci, kterou chcete sestavit, například **vydaná verze** nebo **ladění**.
 
-4. Přejít na [domovskou stránku vizualizace a modelování sady SDK](http://go.microsoft.com/fwlink/?LinkID=186128)a na kartě **stažené soubory** stáhněte **CreateMsiSetupProject.TT**.
+4. Přejít na [domovskou stránku vizualizace a modelování sady SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)a na kartě **stažené soubory** stáhněte **CreateMsiSetupProject.TT**.
 
 5. Přidejte **CreateMsiSetupProject.TT** do projektu DSL.
 
@@ -126,7 +126,7 @@ Pokud je vaše DSL nainstalovaná touto metodou, uživatel může otevřít soub
 
     - Když dvakrát kliknete na soubor, spustí se Visual Studio a otevře se soubor DSL v editoru DSL.
 
-    Pokud dáváte přednost, můžete vytvořit projekt instalace ručně namísto použití textové šablony. Návod, který obsahuje tento postup, najdete v kapitole 5 [testovacího prostředí sady SDK pro vizualizaci a modelování](http://go.microsoft.com/fwlink/?LinkId=208878).
+    Pokud dáváte přednost, můžete vytvořit projekt instalace ručně namísto použití textové šablony. Návod, který obsahuje tento postup, najdete v kapitole 5 [testovacího prostředí sady SDK pro vizualizaci a modelování](https://code.msdn.microsoft.com/DSLToolsLab/Release/ProjectReleases.aspx?ReleaseId=4207).
 
 ### <a name="to-uninstall-a-dsl-that-was-installed-from-an-msi"></a>Odinstalace DSL, která byla nainstalována z MSI
 

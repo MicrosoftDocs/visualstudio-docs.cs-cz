@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b27abf8470527e4e5de5c05ca3438a8471b7c80e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9b5a0ad18c7b1472e8c08ccc2902cade7714f2b9
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667781"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985269"
 ---
 # <a name="integrate-models-by-using-visual-studio-modelbus"></a>Integrace modelů pomocí Visual Studio Modelbus
 
@@ -36,15 +36,13 @@ Další informace a ukázku kódu naleznete v tématu:
 
 ### <a name="expose"></a>Vystavení definice DSL pro sběrnici modelu
 
-1. Stáhněte a nainstalujte rozšíření sběrnice sady Visual Studio, pokud jste ho ještě nenainstalovali. Další informace najdete v tématu [sada SDK pro vizualizaci a modelování](http://go.microsoft.com/fwlink/?LinkID=185579).
+1. Otevřete soubor definice DSL. Klikněte pravým tlačítkem myši na návrhovou plochu a pak klikněte na **povolit ModelBus**.
 
-2. Otevřete soubor definice DSL. Klikněte pravým tlačítkem myši na návrhovou plochu a pak klikněte na **povolit ModelBus**.
+2. V dialogovém okně vyberte možnost **chci zveřejnit tuto DSL pro ModelBus**. Obě možnosti si můžete zvolit, pokud chcete, aby tato DSL mohla vystavovat své modely a využívat odkazy na jiné DSL.
 
-3. V dialogovém okně vyberte možnost **chci zveřejnit tuto DSL pro ModelBus**. Obě možnosti si můžete zvolit, pokud chcete, aby tato DSL mohla vystavovat své modely a využívat odkazy na jiné DSL.
+3. Klikněte na tlačítko **OK**. Do řešení DSL se přidá nový projekt "ModelBusAdapter".
 
-4. Klikněte na tlačítko **OK**. Do řešení DSL se přidá nový projekt "ModelBusAdapter".
-
-5. Pokud chcete k DSL přistupovat z textové šablony, musíte upravit AdapterManager.tt v novém projektu. Tento krok vynechejte, pokud chcete k DSL přistupovat z jiného kódu, jako jsou příkazy a obslužné rutiny událostí. Další informace najdete v tématu [použití Visual Studio Modelbus v textové šabloně](../modeling/using-visual-studio-modelbus-in-a-text-template.md).
+4. Pokud chcete k DSL přistupovat z textové šablony, musíte upravit AdapterManager.tt v novém projektu. Tento krok vynechejte, pokud chcete k DSL přistupovat z jiného kódu, jako jsou příkazy a obslužné rutiny událostí. Další informace najdete v tématu [použití Visual Studio Modelbus v textové šabloně](../modeling/using-visual-studio-modelbus-in-a-text-template.md).
 
    1. Změňte základní třídu AdapterManagerBase na [VsTextTemplatingModelingAdapterManager](/previous-versions/ee844317(v=vs.140)).
 
@@ -56,9 +54,9 @@ Další informace a ukázku kódu naleznete v tématu:
 
       Pokud chcete k DSL přistupovat z textových šablon i z jiného kódu, budete potřebovat dva adaptéry, jednu upravenou a jednu nezměněnou.
 
-6. Klikněte na **transformovat všechny šablony**.
+5. Klikněte na **transformovat všechny šablony**.
 
-7. Znovu sestavte řešení.
+6. Znovu sestavte řešení.
 
    ModelBus je teď možné otevřít na instancích této DSL.
 
@@ -124,7 +122,7 @@ Pokud chcete DSL povolit použití odkazů na jinou DSL, měli byste nejdřív v
 
 2. Vyberte vhodný **druh ModelBusReference**: k modelu nebo prvku uvnitř modelu.
 
-3. Do řetězce filtru dialogu souboru zadejte řetězec, například `Family Tree files |*.ftree`. Subsitute příponu souboru vystavené DSL.
+3. Do řetězce filtru dialogu souboru zadejte řetězec, například `Family Tree files |*.ftree`. Nahraďte příponu souboru vystavené DSL.
 
 4. Pokud jste se rozhodli odkazovat na prvek v modelu, můžete přidat seznam typů, které může uživatel vybrat, například Company. FamilyTree. Person.
 
@@ -358,7 +356,7 @@ Hlavní spouštěcí záznam (MBR), který je tímto způsobem serializován, je
 
 ### <a name="serializing-relative-to-a-specified-file-path"></a>Serializace vzhledem k zadané cestě k souboru
 
-@No__t_0 obsahuje `ReferenceContext`, což je slovník, ve kterém můžete ukládat informace, například relativní cestu k souboru, do které by měl být serializován.
+`ModelBusReference` obsahuje `ReferenceContext`, což je slovník, ve kterém můžete ukládat informace, například relativní cestu k souboru, do které by měl být serializován.
 
 Pro serializaci relativně k cestě:
 
@@ -382,7 +380,7 @@ ModelBusReference elementReferenceRestored =
 ### <a name="modelbusreferences-created-by-other-adapters"></a>ModelBusReferences vytvořené jinými adaptéry
  Následující informace jsou užitečné, pokud chcete vytvořit vlastní adaptér.
 
- @No__t_0 (MBR) se skládá ze dvou částí: hlavičky hlavního spouštěcího záznamu (MBR), která je deserializovaná sběrnicí modelu, a konkrétního adaptéru, který je zpracováván konkrétní správcem adaptéru. To umožňuje zadat vlastní formát serializace adaptéru. Například můžete odkazovat na databázi místo souboru nebo můžete uložit další informace v odkazu na adaptér. Vlastní adaptér může do `ReferenceContext` umístit další informace.
+ `ModelBusReference` (MBR) se skládá ze dvou částí: hlavičky hlavního spouštěcího záznamu (MBR), která je deserializovaná sběrnicí modelu, a konkrétního adaptéru, který je zpracováván konkrétní správcem adaptéru. To umožňuje zadat vlastní formát serializace adaptéru. Například můžete odkazovat na databázi místo souboru nebo můžete uložit další informace v odkazu na adaptér. Vlastní adaptér může do `ReferenceContext` umístit další informace.
 
  Při deserializaci hlavního spouštěcího záznamu (MBR) je nutné zadat ReferenceContext, který je pak uložen v objektu MBR. Při serializaci hlavního spouštěcího záznamu (MBR) používá adaptér uložené ReferenceContext k vytvoření řetězce. Deserializovaný řetězec neobsahuje všechny informace v ReferenceContext. Například v jednoduchém adaptéru založeném na souboru obsahuje ReferenceContext cestu ke kořenovému souboru, který není uložen v serializovaném řetězci MBR.
 

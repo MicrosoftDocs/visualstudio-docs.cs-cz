@@ -1,5 +1,5 @@
 ---
-title: IWebAppDiagnosticsSetup::CreateObjectWithSiteAtWebApp | Microsoft Docs
+title: 'Iwebappdiagnosticssetup –:: CreateObjectWithSiteAtWebApp | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 42f92cfe9245a5e3a6342c31fc996ae2db50ef70
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 253b995c200566868ac9ccc06b259e0a152e1676
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443697"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984611"
 ---
 # <a name="iwebappdiagnosticssetupcreateobjectwithsiteatwebapp"></a>IWebAppDiagnosticsSetup::CreateObjectWithSiteAtWebApp
-Tato metoda vytvoří společně třídy, jejíž ID předáte pomocí `rclsid` pomocí `dwClsContext`. Toto je podobným způsobem, jakým [IRemoteDebugApplication::CreateInstanceAtApplication](../../winscript/reference/iremotedebugapplication-createinstanceatapplication.md) funguje, s výjimkou, že v případě třídy `CreateObjectWithSiteAtWebApp` objekt je vytvořen asynchronně na vlákně UI webové aplikace. Objekt určený pomocí ID třídy by měly implementovat [iwebappdiagnosticsobjectinitialization – rozhraní](../../winscript/reference/iwebappdiagnosticsobjectinitialization-interface.md). Po vytvoření objektu [IWebAppDiagnosticsObjectInitialization::Initialize](../../winscript/reference/iwebappdiagnosticsobjectinitialization-initialize.md) je volána s odkazem na aplikaci PDM ladění a `hPassToObject` parametr `CreateObjectWithSiteAtWebApp`. Tuto metodu můžete použít k předání do aplikace popisovač nepojmenovaného kanálu, kterou jste zkopírovali pomocí [DuplicateHandle](http://go.microsoft.com/fwlink/?LinkId=232450).  
+Tato metoda společně vytvoří třídu, jejíž ID se předává pomocí `rclsid` pomocí `dwClsContext`. To je podobné jako [iremotedebugapplication –:: CreateInstanceAtApplication](../../winscript/reference/iremotedebugapplication-createinstanceatapplication.md) funguje s tím rozdílem, že v případě `CreateObjectWithSiteAtWebApp` objekt je vytvořen asynchronně ve VLÁKNĚ uživatelského rozhraní webové aplikace. Objekt určený IDENTIFIKÁTORem třídy by měl implementovat [rozhraní iwebappdiagnosticsobjectinitialization –](../../winscript/reference/iwebappdiagnosticsobjectinitialization-interface.md). Po vytvoření objektu je volána metoda [iwebappdiagnosticsobjectinitialization –:: Initialize](../../winscript/reference/iwebappdiagnosticsobjectinitialization-initialize.md) s odkazem na aplikaci PDM Debug a parametrem `hPassToObject` `CreateObjectWithSiteAtWebApp`. Tuto metodu můžete použít k předání do aplikace popisovači do anonymního kanálu, který jste zkopírovali pomocí [DuplicateHandle](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle).  
   
 > [!IMPORTANT]
-> [Iwebappdiagnosticssetup – rozhraní](../../winscript/reference/iwebappdiagnosticssetup-interface.md) je implementováno komponentou Pdm verze 11.0 nebo novější. Nachází se v souboru activdbg100.h.  
+> [Rozhraní iwebappdiagnosticssetup –](../../winscript/reference/iwebappdiagnosticssetup-interface.md) je implementováno pomocí PDM v 11.0 a větší. Nachází se v souboru activdbg100.h.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,13 +34,13 @@ HRESULT CreateObjectWithSiteAtWebApp(        [in] REFCLSID rclsid,         [in] 
   
 #### <a name="parameters"></a>Parametry  
  `rclsid`  
- ID třídy k vytvoření třídy.  
+ ID třídy, která se má vytvořit  
   
  `dwClsContext`  
- Kontext, ve kterém se spustí kód. Ve většině případů je CLSCTX_INPROC_SERVER.  
+ Kontext, ve kterém bude kód spuštěn. Ve většině případů se jedná o CLSCTX_INPROC_SERVER.  
   
  `riid`  
  Nepoužívá se.  
   
  `hPassToObject`  
- Hodnota, která se předají do objektu Jakmile je vytvořen na vlákně uživatelského rozhraní, pokud objekt implementuje [iwebappdiagnosticsobjectinitialization – rozhraní](../../winscript/reference/iwebappdiagnosticsobjectinitialization-interface.md).
+ Hodnota, která bude předána objektu po jeho vytvoření ve vlákně uživatelského rozhraní, pokud objekt implementuje [rozhraní iwebappdiagnosticsobjectinitialization –](../../winscript/reference/iwebappdiagnosticsobjectinitialization-interface.md).

@@ -20,12 +20,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7711d0b0f369f43cc7becf92cbdcfc986cd3a6a8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 07cba8f8ae813ae223ef3da110a046f65c81b091
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661485"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984073"
 ---
 # <a name="dependency-diagrams-reference"></a>Diagramy závislostí: Referenční dokumentace
 
@@ -48,7 +48,7 @@ Použijte diagram závislosti, který vám umožní provádět následující ú
 
 - Posílit zamýšlenou architekturu během vývoje a údržby kódu tím, že zahrnete ověření pomocí operací vrácení se změnami a sestavování.
 
-Toto téma popisuje prvky, které lze použít v diagramu závislostí. Podrobnější informace o vytváření a vykreslování diagramů závislostí najdete v tématu [diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md). Další informace o vzorech vrstvení najdete na [webu vzory & postupy](http://go.microsoft.com/fwlink/?LinkId=145794).
+Toto téma popisuje prvky, které lze použít v diagramu závislostí. Podrobnější informace o vytváření a vykreslování diagramů závislostí najdete v tématu [diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md). Další informace o vzorech vrstvení najdete na [webu vzory & postupy](https://archive.codeplex.com/?p=apparch).
 
 ## <a name="reading-dependency-diagrams"></a>Čtení diagramů závislostí
 

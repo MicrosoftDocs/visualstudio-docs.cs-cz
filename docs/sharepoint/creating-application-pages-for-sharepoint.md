@@ -1,5 +1,5 @@
 ---
-title: Vytváření stránek aplikací pro SharePoint | Dokumentace Microsoftu
+title: Vytváření stránek aplikace pro SharePoint | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,62 +16,62 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8ac9340ea853a1852d039f05a3ecbb100845ab84
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 47f403f4eec6ec66563ae88bec226e073f625716
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443540"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981101"
 ---
-# <a name="create-application-pages-for-sharepoint"></a>Vytváření stránek aplikací pro SharePoint
-  *Stránky aplikace* je webová stránka ASP.NET, který je určený k použití na webu služby SharePoint. Stránky aplikací jsou speciální typ stránky ASP.NET. Hlavní rozdíl mezi stránku aplikace a standardní stránky technologie ASP.NET je, že stránky aplikace obsahuje obsah, který je sloučen s hlavní stránkou služby SharePoint. Hlavní stránky umožňuje, aby aplikace stránky, které sdílejí stejný vzhled a chování jako další stránky na webu.
+# <a name="create-application-pages-for-sharepoint"></a>Vytváření stránek aplikací pro službu SharePoint
+  *Stránka aplikace* je webová stránka ASP.NET, která je navržena pro použití na webu služby SharePoint. Stránky aplikace jsou specializovaného typu stránky ASP.NET. Hlavním rozdílem mezi stránkou aplikace a standardní stránkou ASP.NET je, že stránka aplikace obsahuje obsah, který je sloučen se stránkou předlohy služby SharePoint. Stránka předlohy umožňuje stránkám aplikace sdílet stejný vzhled a chování jako ostatní stránky na webu.
 
- Visual Studio umožňuje návrh stránek aplikací pomocí návrháře. Návrhář zobrazí oblasti obsahu pro každou zástupný symbol obsahu, který je definován na hlavní stránce. Stránka aplikace můžete navrhnout přetažením ovládacích prvků na tyto oblasti obsahu.
+ Visual Studio umožňuje navrhovat stránky aplikací pomocí návrháře. Návrhář zobrazí oblast obsahu pro každý zástupný text obsahu, který je definován na stránce předlohy. Stránku aplikace lze navrhnout přetažením ovládacích prvků do těchto oblastí obsahu.
 
-## <a name="application-pages"></a>Stránky aplikací
- Stránky aplikace se sdílí na všech webech na serveru, zatímco stránky webu je specifická pro jednu lokalitu. Další informace najdete [typů stránku služby SharePoint](http://go.microsoft.com/fwlink/?LinkID=211584).
+## <a name="application-pages"></a>Stránky aplikace
+ Stránky aplikace jsou sdíleny ve všech webech na serveru, zatímco stránka lokality je specifická pro jednu lokalitu. Další informace, [typy stránek služby SharePoint](/previous-versions/office/developer/sharepoint-2010/aa979592(v=office.14)).
 
- Většina těchto stránek, které se zobrazí při vytváření webu služby SharePoint jsou ve výchozím nastavení stránky webu. Stránka webu je přidat do knihovny SharePoint stránky. Uživatelé mohou přizpůsobit stránky webu pomocí nástrojů, jako je SharePoint designeru. Stránka webu mohli hostovat i funkce, jako je dynamické webové části a zóny webové části.
+ Ve výchozím nastavení se většina stránek, které se zobrazí při vytváření webu služby SharePoint, nachází na stránkách webu. Stránku webu lze přidat do knihovny stránek služby SharePoint. Uživatelé mohou přizpůsobit stránku webu pomocí nástrojů, jako je například SharePoint Designer. Stránka webu může také hostovat funkce, jako jsou dynamické Webové části a zóny webových částí.
 
- Stránky aplikací nemůžete provádět tyto akce. Stránky aplikace je ale nejlepší typ stránky pro vytvoření, pokud chcete, aby stránka obsahuje vlastní kód. I když přidáte vlastní kód na stránku webu, kód zastaví spuštění, když uživatel přizpůsobuje stránky s využitím nástrojů, jako je SharePoint designeru.
+ Stránky aplikace nemůžou dělat tyto věci. Stránka aplikace je ale nejlepší typ stránky, která se má vytvořit, pokud chcete, aby stránka obsahovala vlastní kód. I když můžete přidat vlastní kód na stránku webu, kód se zastaví, když uživatel stránku přizpůsobí pomocí nástrojů, jako je SharePoint Designer.
 
 > [!NOTE]
-> Visual Studio neposkytuje šablony, které vám pomůžou vytvořit stránky webu pro web služby SharePoint. Další informace najdete v tématu [typů stránku služby SharePoint](http://go.microsoft.com/fwlink/?LinkID=211584).
+> Visual Studio neposkytuje šablony, které vám pomůžou vytvářet stránky webu pro SharePointový Web. Další informace naleznete v tématu [typy stránek služby SharePoint](/previous-versions/office/developer/sharepoint-2010/aa979592(v=office.14)).
 
 ## <a name="create-an-application-page"></a>Vytvoření stránky aplikace
- Chcete-li vytvořit stránku aplikace, přidejte **stránky aplikace** položky projektu služby SharePoint. Při vytváření stránky aplikace Visual Studio přidá následující složky do projektu:
+ Chcete-li vytvořit stránku aplikace, přidejte položku **stránky aplikace** do projektu služby SharePoint. Když vytvoříte stránku aplikace, Visual Studio přidá do projektu následující složky:
 
 |Folder|Popis|
 |------------|-----------------|
-|Rozložení|Mapuje se na virtuální adresář _layouts systému souborů služby SharePoint.|
-|Rozložení podsložky|Obsahuje soubory, které tvoří stránky aplikace. Ve výchozím nastavení tato složka obsahuje stejný název jako projekt. Kdykoli můžete přejmenovat tuto složku. Při spuštění projektu sady Visual Studio nasadí tato složka na virtuální adresář _layouts systému souborů služby SharePoint.|
+|Rozložení|Mapuje se na virtuální adresář _layouts systému souborů SharePoint.|
+|Podsložka rozložení|Obsahuje soubory, které tvoří stránku aplikace. Ve výchozím nastavení má tato složka stejný název jako projekt. Tuto složku můžete kdykoli přejmenovat. Při spuštění projektu aplikace Visual Studio nasadí tuto složku do virtuálního adresáře _layouts systému souborů SharePoint.|
 
- Visual Studio přidá následující soubory do projektu:
+ Visual Studio přidá do projektu následující soubory:
 
 |Soubor|Popis|
 |----------|-----------------|
-|Soubor stránky technologie ASP.NET (*.aspx*)|Obsahuje kód XML, který definuje stránky.|
-|Soubor kódu stránky aplikace|Obsahuje kódu stránky aplikace. Přidejte kód, který zpracovává události do tohoto souboru.|
-|Soubor návrháře kódu stránky aplikace|Obsahuje kód, který je generovaný návrhářem. Neupravujte přímo tohoto souboru.|
+|Stránkovací soubor ASP.NET ( *. aspx*)|Obsahuje kód XML, který definuje stránku.|
+|Soubor kódu stránky aplikace|Obsahuje kód za stránkou aplikace. Přidejte kód, který zpracovává události do tohoto souboru.|
+|Soubor s kódem návrháře stránky aplikace|Obsahuje kód, který je generován návrhářem. Neupravujte přímo tento soubor.|
 
 ## <a name="design-and-debug-an-application-page"></a>Návrh a ladění stránky aplikace
- Návrh obsah stránky aplikace pomocí návrháře zobrazení v sadě Visual Studio. Tento návrhář zobrazí při otevření stránky aplikace ve vašem projektu (poklepáním nebo otevřením jeho místní nabídku a následným výběrem možnosti **otevřete**) a klikněte na tlačítko **návrhu** tlačítko v dolní části editor.
+ Navrhněte obsah stránky aplikace pomocí zobrazení návrháře v aplikaci Visual Studio. Tento návrhář se zobrazí, když otevřete stránku aplikace ve vašem projektu (dvojitým kliknutím na něj nebo otevřením jeho místní nabídky a následným výběrem možnosti **otevřít**) a kliknutím na tlačítko **Návrh** v dolní části editoru.
 
 > [!NOTE]
-> Na stránce můžete navrhnout pouze v **zdroj** zobrazení návrháře. **Návrhu** zobrazení návrháře je zakázaná pro stránky aplikace.
+> Stránku lze navrhnout pouze v zobrazení **zdroj** v návrháři. **Návrhové** zobrazení návrháře je pro stránky aplikací zakázané.
 
- Stránky aplikace můžete ladit stejně, jako by ladění ostatních položek projektu služby SharePoint v sadě Visual Studio. Při spuštění ladicího programu sady Visual Studio, Visual Studio otevře web služby SharePoint.
+ Můžete ladit stránku aplikace stejně, jako byste ladit jiné položky projektu služby SharePoint v aplikaci Visual Studio. Když spustíte ladicí program sady Visual Studio, Visual Studio otevře web služby SharePoint.
 
- Pokud chcete zobrazit stránku aplikace, je nutné ručně přejít na umístění aplikace na stránce (například: http://<em>název_serveru</em>adresáři /_layouts/*Project_Name*/ApplicationPage1.aspx).
+ Chcete-li zobrazit stránku aplikace, je nutné ručně přejít do umístění stránky aplikace (například: http://<em>název_serveru</em>/_layouts/*PROJECT_NAME*/ApplicationPage1.aspx).
 
- Další informace o tom, jak ladění projektů SharePoint naleznete v tématu [řešení potíží s SharePoint](../sharepoint/troubleshooting-sharepoint-solutions.md).
+ Další informace o tom, jak ladit projekty služby SharePoint, naleznete v tématu [řešení potíží s řešeními služby SharePoint](../sharepoint/troubleshooting-sharepoint-solutions.md).
 
-## <a name="choose-a-master-page"></a>Vyberte stránku předlohy
- Ve výchozím nastavení **stránky aplikace** položka odkazuje na hlavní stránku webu, který používáte k ladění projektu. Že stránka s názvem v4.master a najdete ho podle **Galerie stránky předlohy** webu služby SharePoint.
+## <a name="choose-a-master-page"></a>Výběr stránky předlohy
+ Ve výchozím nastavení položka **stránky aplikace** odkazuje na stránku předlohy webu, kterou používáte k ladění projektu. Tato stránka má název v4. Master a najdete ji v **galerii stránek předlohy** webu služby SharePoint.
 
- Můžete explicitně změnit na stránce, které hlavní stránky aplikace používá tak, že nastavíte `MasterPageFile` atribut aplikace `Page` elementu. (Příklad: `MasterPageFile="~/_layouts/applicationv4.master"`). Ve skutečnosti je nutné nastavit tento atribut, pokud na serveru SharePoint nejsou povoleny dynamické stránky předlohy. Další informace o stránkách předlohy služby SharePoint, naleznete v tématu [stránky předlohy](http://go.microsoft.com/fwlink/?LinkID=169281).
+ Můžete explicitně změnit, která hlavní stránka je používána stránkou aplikace, nastavením atributu `MasterPageFile` `Page` elementu aplikace. (Například: `MasterPageFile="~/_layouts/applicationv4.master"`). Ve skutečnosti je nutné nastavit tento atribut, pokud nejsou na serveru SharePoint povoleny dynamické stránky předlohy. Další informace o stránkách předlohy v SharePointu najdete v tématu [stránky předlohy](/previous-versions/office/developer/sharepoint-2010/ms443795(v=office.14)).
 
 ## <a name="see-also"></a>Viz také:
-- [Vývoj pro SharePoint Foundation do hloubky](http://go.microsoft.com/fwlink/?LinkID=182103)
+- [Vývoj pro SharePoint Foundation v Hloubkě](/previous-versions/office/developer/sharepoint-2010/ee539092(v=office.14))
 - [Přehled ASP.NET](/aspnet/overview)
 - [Webové stránky ASP.NET](/aspnet/web-pages/index)

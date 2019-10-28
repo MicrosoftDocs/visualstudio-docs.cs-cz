@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: dfdbe972034920869908c1bac1cb349c98d96d3f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2efea8f23e42b9f4839c8a1ae0d74248738b9cf4
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650714"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985355"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>Dialogové okno Procházet a vybrat typ .NET
 
@@ -31,7 +31,7 @@ Toto dialogové okno se používá v řadě uživatelských scénářů, včetn�
 - Při přidávání catch na aktivitu <xref:System.Activities.Statements.TryCatch>.
 
 > [!NOTE]
-> Prohlížeč typů se může zobrazit Visual Basic vícenásobné typy polí, ale ne typy multidimenzionálního pole. Podrobnosti najdete v tématu [vícenásobná pole](http://go.microsoft.com/fwlink/?LinkId=195226) a [multidimenzionální pole](http://go.microsoft.com/fwlink/?LinkId=195227) .
+> Prohlížeč typů se může zobrazit Visual Basic vícenásobné typy polí, ale ne typy multidimenzionálního pole. Podrobnosti najdete v tématu [vícenásobná pole](/previous-versions/visualstudio/visual-studio-2008/hkhhsz9t(v=vs.90)) a [multidimenzionální pole](/previous-versions/visualstudio/visual-studio-2008/d2de1t93(v=vs.90)) .
 
 ## <a name="selecting-a-value-or-reference-type-from-the-type-browser"></a>Výběr hodnoty nebo typu odkazu z prohlížeče typu
 

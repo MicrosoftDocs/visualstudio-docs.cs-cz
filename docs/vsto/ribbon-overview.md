@@ -18,17 +18,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5067a52fb9d6a0b6d8991b68a2fce8cdbae987c9
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 668517705caa7ba6baef0b85305bf4470bc3b26b
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255944"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985614"
 ---
 # <a name="ribbon-overview"></a>Přehled pásu karet
   Pás karet je způsob, jak uspořádat související příkazy, aby bylo snazší je najít. Příkazy se zobrazí jako ovládací prvky na pásu karet. Ovládací prvky jsou uspořádány do *skupin* podél vodorovného pruhu v horním rohu okna aplikace. Související skupiny jsou uspořádány na kartách.
 
- Většina funkcí, k nimž došlo pomocí nabídek a panelů nástrojů v předchozích verzích systém Microsoft Office systému, teď může být dostupná pomocí pásu karet. Další informace najdete v technickém článku [Přehled pro vývojáře uživatelského rozhraní pro systém 2007 systém Microsoft Office](http://go.microsoft.com/fwlink/?LinkID=70860).
+ Většina funkcí, k nimž došlo pomocí nabídek a panelů nástrojů v předchozích verzích systém Microsoft Office systému, teď může být dostupná pomocí pásu karet. Další informace najdete v technickém článku [Přehled pro vývojáře uživatelského rozhraní pro systém 2007 systém Microsoft Office](/previous-versions/office/developer/office-2007/aa338198(v=office.12)).
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
@@ -81,12 +81,12 @@ ms.locfileid: "71255944"
 
  Kromě toho se ve výsledném souboru XML pásu karet nezobrazí všechny nezměněné výchozí hodnoty vlastností.
 
- Další informace o tom, jak vyexportovat pás karet do XML [, najdete v tématu How to: Exportujte pás karet z Návrháře pásu karet do XML](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)pásu karet.
+ Další informace o exportu pásu karet do XML najdete v tématu [How to: Export pásu karet z Návrháře pásu karet do XML pásu karet](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md).
 
 ### <a name="update-the-code"></a>Aktualizace kódu
- Do **Průzkumník řešení**se přidá nový soubor kódu pásu karet. Tento soubor obsahuje třídu XML pásu karet. Pro zpracování akcí uživatele, jako je `Ribbon Callbacks` například kliknutí na tlačítko, je nutné v oblasti této třídy vytvořit metody zpětného volání. Přesuňte kód z obslužných rutin událostí do těchto metod zpětného volání a upravte kód tak, aby fungoval s programovacím modelem rozšíření pásu karet (Ribbon Extensibility). Další informace najdete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
+ Do **Průzkumník řešení**se přidá nový soubor kódu pásu karet. Tento soubor obsahuje třídu XML pásu karet. Pro zpracování akcí uživatele, jako je například kliknutí na tlačítko, je nutné vytvořit metody zpětného volání v oblasti `Ribbon Callbacks` této třídy. Přesuňte kód z obslužných rutin událostí do těchto metod zpětného volání a upravte kód tak, aby fungoval s programovacím modelem rozšíření pásu karet (Ribbon Extensibility). Další informace najdete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
 
- Musíte také `ThisAddIn`přidat kód do třídy, `ThisWorkbook` `CreateRibbonExtensibilityObject` nebo `ThisDocument` , která přepisuje metodu a vrátí třídu XML pásu karet do aplikace sady Office.
+ Je také nutné přidat kód do třídy `ThisAddIn`, `ThisWorkbook`nebo `ThisDocument`, která přepíše metodu `CreateRibbonExtensibilityObject` a vrátí třídu XML pásu karet do aplikace sady Office.
 
  Další informace najdete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
 
@@ -103,7 +103,7 @@ ms.locfileid: "71255944"
 ### <a name="select-which-ribbons-to-display-at-run-time"></a>Vybrat, které pásy se mají zobrazit v době běhu
  Vzhledem k tomu, že projekt může obsahovat více než jeden pás karet, můžete vybrat, který pás karet se má zobrazit v době běhu.
 
- Chcete-li vybrat pás karet, který má být zobrazen v `CreateRibbonExtensibilityObject` době běhu, `ThisAddin`přepište metodu `ThisDocument` ve třídě, `ThisWorkbook`nebo v projektu a vraťte pás karet, který chcete zobrazit. Následující příklad zkontroluje hodnotu pole s názvem `myCondition` a vrátí příslušný pás karet.
+ Chcete-li vybrat pás karet, který má být zobrazen v době běhu, přepište metodu `CreateRibbonExtensibilityObject` v `ThisAddin`, `ThisWorkbook`nebo `ThisDocument` třídy projektu a vraťte pás karet, který chcete zobrazit. Následující příklad zkontroluje hodnotu pole s názvem `myCondition` a vrátí příslušný pás karet.
 
 > [!NOTE]
 > Syntaxe použitá v tomto příkladu vrací pás karet, který byl vytvořen pomocí položky **pásu karet (vizuální Návrhář)** . Syntaxe pro vrácení pásu karet, která je vytvořena pomocí položky **pásu karet (XML)** , je mírně odlišná. Další informace o vracení položky **pásu karet (XML)** najdete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
@@ -121,7 +121,7 @@ ms.locfileid: "71255944"
 |[Návrhář pásu karet](../vsto/ribbon-designer.md)|Popisuje, jak můžete pomocí Návrháře pásu karet přidat vlastní karty, skupiny a ovládací prvky na pás karet aplikace systém Microsoft Office.|
 |[Návod: Vytvoření vlastní karty pomocí Návrháře pásu karet](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)|Ukazuje, jak vytvořit vlastní kartu pásu karet pomocí Návrháře pásu karet. Pomocí Návrháře pásu karet můžete přidat a umístit ovládací prvky na vlastní kartě.|
 |[Přehled modelu objektů pásu karet](../vsto/ribbon-object-model-overview.md)|Poskytuje přehled modelu objektu silného typu, který můžete použít k získání a nastavení vlastností ovládacích prvků pásu karet v době běhu.|
-|[Návod: Aktualizace ovládacích prvků na pásu karet v době běhu](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)|Ukazuje, jak použít objektový model pásu karet k aktualizaci ovládacích prvků na pásu karet po načtení pásu karet do aplikace sady Office.|
+|[Návod: aktualizace ovládacích prvků na pásu karet v době běhu](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)|Ukazuje, jak použít objektový model pásu karet k aktualizaci ovládacích prvků na pásu karet po načtení pásu karet do aplikace sady Office.|
 |[Přizpůsobení pásu karet pro Outlook](../vsto/customizing-a-ribbon-for-outlook.md)|Poskytuje pokyny pro přizpůsobení pásu karet v aplikaci systém Microsoft Office Outlook.|
 |[Přizpůsobení pásu karet pro aplikaci InfoPath](../vsto/customizing-a-ribbon-for-infopath.md)|Poskytuje pokyny pro přizpůsobení pásu karet v aplikaci systém Microsoft Office InfoPath.|
 |[Přístup k pásu karet za běhu](../vsto/accessing-the-ribbon-at-run-time.md)|Ukazuje, jak zobrazit, skrýt a upravit pás karet a povolit uživatelům spouštění kódu z ovládacích prvků ve vlastním podokně úloh, podokně akce nebo oblasti formuláře aplikace Outlook.|

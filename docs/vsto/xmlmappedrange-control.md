@@ -1,5 +1,5 @@
 ---
-title: Xmlmappedrange – ovládací prvek
+title: Ovládací prvek XmlMappedRange –
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,32 +14,30 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cde5489d970de02afbce28ab9c60c677ab199c84
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 01417d9c08491edc882f7f758bb36e6184500e52
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62810748"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985364"
 ---
-# <a name="xmlmappedrange-control"></a>Xmlmappedrange – ovládací prvek
-  <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> Rozsahu, který se vytvoří pouze v případě, že element neopakujícími schématu je namapována na buňku v aplikaci Microsoft Office Excel je ovládací prvek. Například, když `maxOccurs` atribut na prvek schématu se rovná 1. Poté, co Visual Studio vytvoří rozsah XML, namapované, můžete programovat proti ho přímo bez nutnosti procházení objektovému modelu Excelu. Můžete ho jenom odstranit <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> ovládací prvek v rámci aplikace Excel při odebrání mapování elementu.
+# <a name="xmlmappedrange-control"></a>Ovládací prvek XmlMappedRange –
+  <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> ovládací prvek je rozsah, který je vytvořen pouze v případě, že je neopakující se prvek schématu mapován na buňku v aplikaci systém Microsoft Office Excel. Například pokud atribut `maxOccurs` elementu Schema se rovná 1. Poté, co aplikace Visual Studio vytvoří rozsah mapovaného kódu XML, lze naprogramovat přímo bez nutnosti procházení objektového modelu aplikace Excel. Ovládací prvek <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> lze odstranit pouze v aplikaci Excel, pokud je odebráno mapování elementu.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
- ![odkaz na video](../vsto/media/playvideo.gif "odkaz na video") související video ukázku naleznete v tématu [postup: Použití mapování XML v aplikaci Excel? ](http://go.microsoft.com/fwlink/?LinkID=130288).
+## <a name="bind-data-to-the-control"></a>Vázání dat k ovládacímu prvku
+ Ovládací prvek <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> podporuje vazbu s jedním datovým polem (jednoduchou datovou vazbu). Ovládací prvek <xref:Microsoft.Office.Tools.Excel.ListObject> může podporovat složitou datovou vazbu a je automaticky vytvořen při mapování opakujícího se elementu schématu na buňku. Další informace naleznete v tématu [ListObject Control](../vsto/listobject-control.md).
 
-## <a name="bind-data-to-the-control"></a>Vytvoření vazby dat k ovládacímu prvku
- <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> Ovládací prvek podporuje vazbu do jednoho datového pole (jednoduché datové vazby). <xref:Microsoft.Office.Tools.Excel.ListObject> Může ovládací prvek podporuje rozšířené datové vazby a se automaticky vytvoří během opakující se element schématu je namapována na buňku. Další informace najdete v tématu [ListObject – ovládací prvek](../vsto/listobject-control.md).
+ Ovládací prvek <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> je svázán se zdrojem dat pomocí vlastnosti <xref:System.Windows.Forms.Control.DataBindings%2A>. Když je do buňky listu přidána <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>, sada Visual Studio automaticky vygeneruje datovou sadu z dat v mapovaných buňkách a naváže ovládací prvek na tuto datovou sadu. Výchozí vlastnost datové vazby <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> je <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value2%2A>.
 
- <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> Ovládací prvek vázán na zdroj dat pomocí <xref:System.Windows.Forms.Control.DataBindings%2A> vlastnost. Když <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> se přidá na buňku listu, Visual Studio automaticky generuje sadu dat z dat v mapovaných buněk a naváže ovládací prvek na této datové sady. Výchozí vazby vlastnosti data <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> je <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value2%2A>.
-
- Pokud data v vázaný datové sady se aktualizují všechny mechanismem <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> ovládací prvek se změny projeví.
+ Pokud jsou data v vázané datové sadě aktualizována prostřednictvím libovolného mechanismu, ovládací prvek <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> odráží změny.
 
 ## <a name="formatting"></a>Formátování
- Můžete použít stejný formátování, které se <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> ovládací prvek, který lze použít <xref:Microsoft.Office.Interop.Excel.Range>. To zahrnuje ohraničení, písma, formát čísla a styly.
+ Můžete použít stejné formátování <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>mu ovládacímu prvku, který můžete použít na <xref:Microsoft.Office.Interop.Excel.Range>. To zahrnuje ohraničení, písma, formát čísel a styly.
 
 ## <a name="events"></a>Události
- K dispozici pro události <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> ovládacího prvku:
+ K dispozici jsou události pro ovládací prvek <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>:
 
 - <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.BeforeDoubleClick>
 
@@ -58,8 +56,8 @@ ms.locfileid: "62810748"
 - <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.SelectionChange>
 
 ## <a name="see-also"></a>Viz také:
-- [Automatizace aplikace Excel s použitím rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
-- [Postupy: Přidání ovládacích prvků XMLMappedRange do listů](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)
-- [Vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
-- [Postupy: Mapování schémat na listy v prostředí Visual Studio](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)
-- [Programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Automatizace Excelu pomocí rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
+- [Postupy: Přidání ovládacích prvků XmlMappedRange – do listů](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)
+- [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Postupy: mapování schémat na listy v rámci sady Visual Studio](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)
+- [Programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)

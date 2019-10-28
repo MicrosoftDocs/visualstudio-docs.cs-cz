@@ -1,5 +1,5 @@
 ---
-title: Rozšíření služby jazyka pro podporu EditorConfig
+title: Rozšiřování jazykové služby na podporu EditorConfig
 ms.date: 11/22/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,40 +10,40 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c6974c7943a751f50cafb0b141ba9c1dfc85677
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 663a87ba15121896edcb4c049e7adc6b5c38492a
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353494"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72983106"
 ---
-# <a name="supporting-editorconfig-for-your-language-service"></a>Podpora EditorConfig pro vaši službu jazyka
+# <a name="supporting-editorconfig-for-your-language-service"></a>Podpora EditorConfig pro vaši jazykovou službu
 
-[EditorConfig](http://editorconfig.org/) soubory umožňují popsat běžné možnosti textového editoru, jako je například velikost odsazení v jednotlivých projektů. Další informace o Visual Studio – podpora pro EditorConfig soubory, naleznete v tématu [vytvoření přenosné editor nastavení pomocí EditorConfig](../ide/create-portable-custom-editor-options.md).
+Soubory [EditorConfig](https://editorconfig.org/) umožňují popsat možnosti běžných textových editorů, jako je například velikost odsazení, na základě jednotlivých projektů. Další informace o podpoře sady Visual Studio pro soubory EditorConfig najdete v tématu [Vytvoření nastavení přenosného editoru pomocí EditorConfig](../ide/create-portable-custom-editor-options.md).
 
-Ve většině případů při implementaci jazyka služby Visual Studio bez další práce je potřeba podpory EditorConfig univerzální vlastnosti. Základní editor automaticky zjistí a načte soubor .editorconfig, když uživatelé otevřít soubory, a nastaví odpovídající text vyrovnávací paměť a zobrazení možností. Ale pro úpravy, jako jsou karty a mezery, některých jazykových služeb vyjádřit souhlas se službou použijte možnost zobrazení odpovídající kontextové text, nikoli pomocí globální nastavení. V těchto případech služba jazyka musí být aktualizována o podporu souborů EditorConfig.
+Ve většině případů při implementaci jazykové služby sady Visual Studio není potřeba žádná další práce, která by podporovala univerzální vlastnosti EditorConfig. Základní editor automaticky zjistí a přečte soubor. editorconfig, když uživatel otevře soubory a nastaví odpovídající vyrovnávací paměť textu a možnosti zobrazení. U úprav, jako jsou tabulátory a mezery, se ale některé jazykové služby místo použití globálních nastavení použijí jako vhodná možnost zobrazení kontextového textu. V těchto případech je potřeba aktualizovat jazykovou službu tak, aby podporovala soubory EditorConfig.
 
-Toto jsou změny, které jsou potřeba k aktualizaci služby jazyka pro podporu souborů EditorConfig nahrazením globální _specifické pro jazyk_ spolu s možností _kontextové_ možnost:
+Níže jsou uvedené změny, které jsou potřeba k aktualizaci jazykové služby na podporu souborů EditorConfig, nahrazením globální možnosti _specifické pro konkrétní jazyk_ pomocí _kontextové_ možnosti:
 
-## <a name="indent-style"></a>Odsazení stylu
-
-Možnosti specifické pro jazyk | Kontextové možnosti
--------|--------
-Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.fInsertTabs<br/>Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs|!textBufferOptions.GetOptionValue(DefaultOptions.ConvertTabsToSpacesOptionId)<br/>!textView.Options.GetOptionValue(DefaultOptions.ConvertTabsToSpacesOptionId)
-
-## <a name="indent-size"></a>Velikost odsazení
+## <a name="indent-style"></a>Styl odsazení
 
 Možnosti specifické pro jazyk | Kontextové možnosti
 -------|--------
-Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.uIndentSize<br/>Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs.IndentSize|textBufferOptions.GetOptionValue(DefaultOptions.IndentSizeOptionId)<br/>textView.Options.GetOptionValue(DefaultOptions.IndentSizeOptionId)
+Microsoft. VisualStudio. TextManager. Interop. LANGPREFERENCES. fInsertTabs<br/>Microsoft. VisualStudio. Package. LanguagePreferences. InsertTabs|! textBufferOptions. getoptionvalue (DefaultOptions. ConvertTabsToSpacesOptionId)<br/>! textView. Options. getoptionvalue (DefaultOptions. ConvertTabsToSpacesOptionId)
+
+## <a name="indent-size"></a>Zvětšit velikost
+
+Možnosti specifické pro jazyk | Kontextové možnosti
+-------|--------
+Microsoft. VisualStudio. TextManager. Interop. LANGPREFERENCES. uIndentSize<br/>Microsoft. VisualStudio. Package. LanguagePreferences. InsertTabs. IndentSize|textBufferOptions. getoptionvalue (DefaultOptions. IndentSizeOptionId)<br/>textView. Options. getoptionvalue (DefaultOptions. IndentSizeOptionId)
 
 ## <a name="tab-size"></a>Velikost tabulátoru
 
 Možnosti specifické pro jazyk | Kontextové možnosti
 -------|--------
-Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.uTabSize<br/>Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs.TabSize|textBufferOptions.GetOptionValue(DefaultOptions.TabSizeOptionId)<br/>textView.Options.GetOptionValue(DefaultOptions.TabSizeOptionId)
+Microsoft. VisualStudio. TextManager. Interop. LANGPREFERENCES. uTabSize<br/>Microsoft. VisualStudio. Package. LanguagePreferences. InsertTabs. TabSize|textBufferOptions. getoptionvalue (DefaultOptions. TabSizeOptionId)<br/>textView. Options. getoptionvalue (DefaultOptions. TabSizeOptionId)
 
 ## <a name="see-also"></a>Viz také:
 
-- [Vytvoření přenosné editor nastavení pomocí EditorConfig](../ide/create-portable-custom-editor-options.md)
-- [Rozšíření služeb jazyk a editor](../extensibility/extending-the-editor-and-language-services.md)
+- [Vytvoření nastavení přenosného editoru pomocí EditorConfig](../ide/create-portable-custom-editor-options.md)
+- [Rozšíření editoru a jazykových služeb](../extensibility/extending-the-editor-and-language-services.md)

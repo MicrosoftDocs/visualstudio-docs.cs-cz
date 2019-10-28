@@ -1,5 +1,5 @@
 ---
-title: Přehled programovacího modelu SharePoint rozšíření nástrojů
+title: Přehled programovacího modelu rozšíření nástrojů služby SharePoint
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,99 +14,99 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: dbb496b077f1ff55fda53d3325765e8e58911096
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 160751e7f580ede458232f98dc753a1145094f57
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66401788"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985148"
 ---
-# <a name="overview-of-the-programming-model-of-sharepoint-tools-extensions"></a>Přehled programovacího modelu SharePoint rozšíření nástrojů
-  Při vytváření rozšíření pro nástroje služby SharePoint v sadě Visual Studio, můžete začít implementací jeden nebo více rozhraní rozšíření, které jsou vystaveny nástroje služby SharePoint. Ve většině případů bude také použít jiné typy poskytované nástroje služby SharePoint k implementaci funkcí v rozšíření. V některých scénářích můžete také použít typy v jiné objektové modely, které poskytuje Visual Studio a SharePoint. Musí pochopit účel každé z těchto objektové modely a vědět, jak pomocí nich mezi sebou můžete vytvořit rozšíření pro nástroje služby SharePoint.
+# <a name="overview-of-the-programming-model-of-sharepoint-tools-extensions"></a>Přehled programovacího modelu rozšíření nástrojů služby SharePoint
+  Při vytváření rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio začínáte implementací jednoho nebo více rozhraní rozšíření, která jsou zpřístupněna pomocí nástrojů služby SharePoint. Ve většině případů budete k implementaci funkcí v rozšíření používat také další typy poskytované nástroji SharePoint. V některých scénářích můžete také použít typy v jiných objektových modelech poskytovaných aplikací Visual Studio a SharePoint. Je nutné pochopit účel každého z těchto objektových modelů a zjistit, jak je lze vzájemně používat k vytváření rozšíření pro nástroje služby SharePoint.
 
-## <a name="extend-the-sharepoint-tools-by-implementing-extensibility-interfaces"></a>Rozšíření nástrojů SharePoint prostřednictvím implementace rozhraní rozšíření
- Visual Studio využívá Managed Extensibility Framework (MEF) v rozhraní .NET Framework 4 poskytuje model rozšiřitelnosti pro nástroje služby SharePoint. MEF je rozhraní API (implementované v sestavení System.ComponentModel.Composition), která umožňuje aplikacím vystavit bodů rozšiřitelnosti a zjišťovat a načíst rozšíření za běhu. Další informace o rozhraní MEF, naleznete v tématu [Managed Extensibility Framework &#40;MEF&#41;](/dotnet/framework/mef/index).
+## <a name="extend-the-sharepoint-tools-by-implementing-extensibility-interfaces"></a>Rozšíření nástrojů služby SharePoint implementací rozhraní rozšíření
+ Visual Studio používá rozhraní Managed Extensibility Framework (MEF) v .NET Framework 4 k poskytnutí modelu rozšiřitelnosti pro nástroje služby SharePoint. MEF je rozhraní API (implementované v sestavení System. ComponentModel. složení), které umožňuje aplikacím vystavit body rozšiřitelnosti a zjišťovat a načítat rozšíření za běhu. Další informace o MEF naleznete v tématu [Managed Extensibility Framework &#40;MEF&#41;](/dotnet/framework/mef/index).
 
- K rozšíření nástrojů služby SharePoint, implementujte jeden nebo více rozhraní rozšíření, které jsou přístupné pomocí sady Visual Studio. Musíte taky použít <xref:System.ComponentModel.Composition.ExportAttribute>, a pro atributy další SharePoint nástroje specifické pro danou implementaci rozhraní podle potřeby. V následující tabulce jsou uvedeny rozhraní, které můžete implementovat pro rozšíření nástrojů služby SharePoint.
+ Chcete-li rozšíření nástrojů služby SharePoint, implementujte jedno nebo více rozhraní rozšíření, která jsou zpřístupněna v rámci sady Visual Studio. K implementaci rozhraní je také nutné použít <xref:System.ComponentModel.Composition.ExportAttribute>a další atributy specifické pro nástroje služby SharePoint. Následující tabulka uvádí rozhraní, která lze implementovat pro rozšiřování nástrojů služby SharePoint.
 
 |Rozhraní|Popis|
 |---------------|-----------------|
-|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider>|Implementace tohoto rozhraní k definování nového typu položky Sharepointového projektu. Příklad najdete v tématu [jak: Definování typu položky projektu SharePoint](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).|
-|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension>|Implementace tohoto rozhraní pro rozšíření typu položky projektu služby SharePoint, která je již nainstalována v sadě Visual Studio. Příklad najdete v tématu [jak: Vytváření rozšíření položky projektu SharePoint](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md).|
-|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension>|Implementace tohoto rozhraní k rozšíření projektů SharePoint. Příklad najdete v tématu [jak: Vytváření rozšíření projektu služby SharePoint](../sharepoint/how-to-create-a-sharepoint-project-extension.md).|
-|<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep>|Implementace tohoto rozhraní stanovit nový krok nasazení, které mohou být provedeny, když se položky projektu služby SharePoint nasazen nebo stažen. Příklad najdete v tématu [názorný postup: Vytvoření vlastního kroku nasazení pro projekty SharePoint](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).|
-|<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension>|Implementovat toto rozhraní k rozšíření existující uzel v rámci **připojení služby SharePoint** uzlu **Průzkumníka serveru** okno. Příklad najdete v tématu [jak: Rozšíření uzlu služby SharePoint v Průzkumníku serveru](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).|
-|<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider>|Implementovat toto rozhraní k definování nového typu uzlu **připojení služby SharePoint** uzlu **Průzkumníka serveru** okna. Příklad najdete v tématu [jak: Rozšíření uzlu služby SharePoint v Průzkumníku serveru](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).|
-|<xref:Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationRule>|Implementace tohoto rozhraní stanovit funkce vlastní ověřovací pravidlo. Příklad najdete v tématu [jak: Vytvoření vlastní funkce a balíku ověřovacích pravidel pro řešení služby SharePoint](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).|
-|<xref:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule>|Implementace tohoto rozhraní k definování vlastní balíček ověřovacího pravidla. Příklad najdete v tématu [jak: Vytvoření vlastní funkce a balíku ověřovacích pravidel pro řešení služby SharePoint](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).|
+|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider>|Implementujte toto rozhraní pro definování nového typu položky projektu služby SharePoint. Příklad naleznete v tématu [How to: define a typu položky projektu SharePoint](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).|
+|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension>|Implementujte toto rozhraní pro rozšiřování typu položky projektu služby SharePoint, která je již nainstalována v aplikaci Visual Studio. Příklad naleznete v tématu [Postupy: Vytvoření rozšíření položky projektu služby SharePoint](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md).|
+|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension>|Implementujte toto rozhraní pro rozšiřování projektů SharePoint. Příklad naleznete v tématu [How to: Create a SharePoint Project Extension](../sharepoint/how-to-create-a-sharepoint-project-extension.md).|
+|<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep>|Implementujte toto rozhraní pro definování nového kroku nasazení, který lze provést při nasazení nebo odvolání položky projektu služby SharePoint. Příklad naleznete v tématu [Návod: Vytvoření vlastního kroku nasazení pro projekty služby SharePoint](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).|
+|<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension>|Implementujte toto rozhraní, abyste rozšířili existující uzel pod uzlem **připojení služby SharePoint** v okně **Průzkumník serveru** . Příklad naleznete v tématu [How to: extend a Node SharePoint in Průzkumník serveru](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).|
+|<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider>|Implementujte toto rozhraní pro definování nového typu uzlu v uzlu **připojení služby SharePoint** v okně **Průzkumník serveru** . Příklad naleznete v tématu [How to: extend a Node SharePoint in Průzkumník serveru](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).|
+|<xref:Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationRule>|Implementujte toto rozhraní a definujte vlastní ověřovací pravidlo funkce. Příklad najdete v tématu [Postup: Vytvoření vlastní funkce a pravidel ověřování balíčku pro řešení služby SharePoint](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).|
+|<xref:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule>|Implementací tohoto rozhraní můžete definovat vlastní ověřovací pravidlo balíčku. Příklad najdete v tématu [Postup: Vytvoření vlastní funkce a pravidel ověřování balíčku pro řešení služby SharePoint](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).|
 
- Po implementaci rozšíření nástrojů služby SharePoint, je nutné nasadit sestavení rozšíření v balíčku sady Visual Studio extension (VSIX) umožňuje zjišťovat a načíst rozšíření Visual Studio. Další informace najdete v tématu [nasadit rozšíření pro nástroje služby SharePoint v sadě Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
+ Po implementaci rozšíření nástrojů služby SharePoint je nutné nasadit sestavení rozšíření v balíčku rozšíření sady Visual Studio (VSIX), aby sada Visual Studio mohla vyhledat a načíst rozšíření. Další informace naleznete v tématu [nasazení rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
 
-## <a name="understand-the-object-models-that-you-use-in-sharepoint-tools-extensions"></a>Vysvětlení objektové modely, které můžete použít rozšíření nástrojů SharePoint
- Existuje několik objektové modely, které můžete použít při vytváření rozšíření pro nástroje služby SharePoint:
+## <a name="understand-the-object-models-that-you-use-in-sharepoint-tools-extensions"></a>Pochopení objektových modelů, které používáte v rozšířeních nástrojů služby SharePoint
+ K dispozici je několik modelů objektů, které můžete použít při vytváření rozšíření pro nástroje služby SharePoint:
 
-- *Nástroje služby SharePoint objektu modelu*. Tento objektový model poskytuje rozhraní rozšíření, které můžete implementovat pro vytvoření rozšíření nástrojů služby SharePoint a dalších souvisejících typů.
+- *Objektový model nástrojů služby SharePoint*. Tento objektový model poskytuje rozhraní rozšíření, které implementujete pro vytváření rozšíření nástrojů služby SharePoint a další související typy.
 
-- *Visual Studio automatizace a integrace objektové modely*. Tyto modely objektů použijte pro přístup k Visual Studio funkce, které jsou nad rámec objektového modelu SharePoint tools.
+- *Modely automatizace a objekty integrace sady Visual Studio*. Tyto objektové modely použijte pro přístup k funkcím sady Visual Studio, které jsou nad rámec modelu objektů nástrojů služby SharePoint.
 
     > [!NOTE]
-    > Můžete převést některé objekty v objektového modelu SharePoint tools na objekty v sadě Visual Studio automatizaci a integraci objektové modely a naopak, použití služby projektu služby SharePoint. Další informace najdete v tématu [převod mezi systémovými typy projektů SharePoint a jinými typy projektů Visual Studio](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md).
+    > Můžete převést některé objekty v objektovém modelu nástrojů služby SharePoint na objekty v modelech automatizace a objektů integrace sady Visual Studio a naopak, pomocí služby projektu služby SharePoint. Další informace naleznete v tématu [Převod mezi systémovými typy projektů SharePoint a jinými typy projektů aplikace Visual Studio](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md).
 
-- *SharePoint server a klienta objektové modely*. Tyto modely objektů použijte k úpravě webu služby SharePoint nebo k načtení dat z webu služby SharePoint z kontextu rozšíření nástrojů služby SharePoint.
+- *Modely a objekty klienta serveru SharePoint*. Pomocí těchto objektových modelů můžete upravit web služby SharePoint nebo načíst data z webu služby SharePoint z kontextu rozšíření nástrojů služby SharePoint.
 
-### <a name="sharepoint-tools-object-model"></a>Nástroje objektového modelu SharePoint
- Každé rozšíření nástrojů SharePoint používá typy v objektovém modelu serveru SharePoint nástroje k určení základní chování a funkce rozšíření. Následující tabulky popisují obory názvů, které jsou zahrnuty v tomto modelu objektu sestavení, který je obsahuje.
+### <a name="sharepoint-tools-object-model"></a>Objektový model nástrojů služby SharePoint
+ Každé rozšíření nástrojů služby SharePoint používá typy v objektovém modelu nástrojů služby SharePoint k definování základního chování a funkce rozšíření. Následující tabulky popisují obory názvů, které jsou zahrnuty v tomto objektovém modelu, sestavením, které je obsahuje.
 
 #### <a name="microsoftvisualstudiosharepointdll"></a>Microsoft.VisualStudio.SharePoint.dll
 
 |Obor názvů|Popis|
 |-|-|
-|<xref:Microsoft.VisualStudio.SharePoint>|Obsahuje typy, které používáte pro rozšíření a automatizaci systému Sharepointových projektů. Například můžete rozšířit vestavěné projekty SharePoint a položky projektu, nebo můžete vytvořit vlastní položky projektu. Další informace najdete v tématu [rozšíření systému projektu služby SharePoint](../sharepoint/extending-the-sharepoint-project-system.md).|
-|<xref:Microsoft.VisualStudio.SharePoint.Deployment>|Obsahuje typy, které můžete použít k rozšíření procesu nasazení pro projekty služby SharePoint, jako je například vytváření kroky nasazení a konfigurace nasazení. Další informace najdete v tématu [balení a nasazení rozšíření SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md).|
-|<xref:Microsoft.VisualStudio.SharePoint.Explorer>|Obsahuje typy, které používáte pro rozšíření uzlů v rámci **připojení služby SharePoint** uzlu **Průzkumníka serveru** okno, nebo k definování nových typů uzlů. Další informace najdete v tématu [rozšíření uzlu připojení služby SharePoint v Průzkumníku serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).|
-|<xref:Microsoft.VisualStudio.SharePoint.Features>|Obsahuje typy, které používáte pro přístup k definici funkce v projektu služby SharePoint.|
+|<xref:Microsoft.VisualStudio.SharePoint>|Obsahuje typy, které slouží k rozšiřování a automatizaci systému projektu služby SharePoint. Můžete například zvětšit předdefinované projekty služby SharePoint a položky projektu, nebo můžete vytvořit vlastní položky projektu. Další informace najdete v tématu věnovaném [roztažení systému projektu služby SharePoint](../sharepoint/extending-the-sharepoint-project-system.md).|
+|<xref:Microsoft.VisualStudio.SharePoint.Deployment>|Obsahuje typy, které slouží k rozšiřování procesu nasazení pro projekty služby SharePoint, jako je například vytváření vlastních kroků nasazení a konfigurace nasazení. Další informace najdete v tématu věnovaném [rozšiřování balení a nasazení služby SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md).|
+|<xref:Microsoft.VisualStudio.SharePoint.Explorer>|Obsahuje typy, které slouží k rozšiřování uzlů v uzlu **připojení služby SharePoint** v okně **Průzkumník serveru** , nebo pro definování nových typů uzlů. Další informace najdete v tématu věnovaném [rozšiřování uzlu připojení služby SharePoint v Průzkumník serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).|
+|<xref:Microsoft.VisualStudio.SharePoint.Features>|Obsahuje typy, které používáte pro přístup k definicím funkcí v projektu služby SharePoint.|
 |<xref:Microsoft.VisualStudio.SharePoint.Packages>|Obsahuje typy, které používáte pro přístup k definici balíčku v řešení služby SharePoint.|
-|<xref:Microsoft.VisualStudio.SharePoint.Validation>|Obsahuje typy, které můžete použít k přizpůsobení funkce a balíku chování ověřování pro projekty služby SharePoint. Další informace najdete v tématu [jak: Vytvoření vlastní funkce a balíku ověřovacích pravidel pro řešení služby SharePoint](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).|
+|<xref:Microsoft.VisualStudio.SharePoint.Validation>|Obsahuje typy, které slouží k přizpůsobení funkce a chování ověření balíčku pro projekty služby SharePoint. Další informace najdete v tématu [Postupy: vytváření vlastních funkcí a pravidel ověřování balíčku pro řešení služby SharePoint](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).|
 
-#### <a name="microsoftvisualstudiosharepointcommandsdll"></a>Microsoft.VisualStudio.SharePoint.Commands.dll
-
-|Obor názvů|Popis|
-|-|-|
-|<xref:Microsoft.VisualStudio.SharePoint.Commands>|Obsahuje typy, které můžete použít k vytvoření vlastních *příkazů služby SharePoint*. Příkaz serveru SharePoint je metoda, která volá do objektového modelu serveru SharePoint z rozšíření nástrojů služby SharePoint. Další informace najdete v tématu [volání do objektových modelů služby SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md).|
-
-#### <a name="microsoftvisualstudiosharepointexplorerextensionsdll"></a>Microsoft.VisualStudio.SharePoint.Explorer.Extensions.dll
+#### <a name="microsoftvisualstudiosharepointcommandsdll"></a>Microsoft. VisualStudio. SharePoint. Commands. dll
 
 |Obor názvů|Popis|
 |-|-|
-|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions>|Obsahuje typy, které vám umožní získat informace o předdefinovaných **Průzkumníka serveru** uzly, které představují jednotlivé součásti na Sharepointovém webu, jako je například uzel, který představuje seznam, pole nebo typ obsahu. Další informace najdete v tématu [rozšíření uzlu připojení služby SharePoint v Průzkumníku serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).|
+|<xref:Microsoft.VisualStudio.SharePoint.Commands>|Obsahuje typy, které lze použít k vytvoření vlastních *příkazů služby SharePoint*. Příkaz služby SharePoint je metoda, která volá do objektového modelu serveru SharePoint z rozšíření nástrojů služby SharePoint. Další informace naleznete v tématu [volání do objektových modelů služby SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md).|
 
-### <a name="visual-studio-automation-object-model"></a>Model objektu automatizace aplikace Visual Studio
- Model objektu automatizace sady Visual Studio poskytuje rozhraní API, která vám umožní automatizovat projektů sady Visual Studio a rozhraní IDE. Použijte model objektu sady Visual Studio, provádět úlohy související s projektem, které nejsou specifické pro projekty SharePoint nebo provádět další úlohy obecné automatizace v sadě Visual Studio. Tradičně tento objektový model se často používá v doplňky sady Visual Studio a makra, ale můžete ho použít také v rozšíření nástrojů služby SharePoint.
+#### <a name="microsoftvisualstudiosharepointexplorerextensionsdll"></a>Microsoft. VisualStudio. SharePoint. Explorer. Extensions. dll
 
- Hlavní část objektového modelu automatizace sady Visual Studio je definován v *EnvDTE.dll* sestavení. *EnvDTE\\\<verze > .dll* sestavení poskytují další funkce, která byla zavedena v konkrétní verze sady Visual Studio. Tato sestavení jsou součástí sady Visual Studio.
+|Obor názvů|Popis|
+|-|-|
+|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions>|Obsahuje typy, které můžete použít k získání informací o předdefinovaných **Průzkumník serveru** uzlech, které představují jednotlivé komponenty na webu služby SharePoint, jako je například uzel, který představuje seznam, pole nebo typ obsahu. Další informace najdete v tématu věnovaném [rozšiřování uzlu připojení služby SharePoint v Průzkumník serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).|
 
- Další informace o modelu automatizačních objektů naleznete v tématu [referenční dokumentace jazyka Visual Studio SDK](../extensibility/visual-studio-sdk-reference.md).
+### <a name="visual-studio-automation-object-model"></a>Model automatizačních objektů sady Visual Studio
+ Objektový model automatizace sady Visual Studio poskytuje rozhraní API, která můžete použít k automatizaci projektů sady Visual Studio a rozhraní IDE. Model objektu sady Visual Studio použijte k provádění úloh souvisejících s projektem, které nejsou specifické pro projekty služby SharePoint, nebo k provádění dalších obecných úloh automatizace v aplikaci Visual Studio. Tradičně se tento objektový model často používá v doplňcích a makrech sady Visual Studio, ale můžete ho použít také v rozšířeních nástrojů služby SharePoint.
 
-### <a name="visual-studio-integration-object-model"></a>Objektový model sady Visual Studio integrace
- Integrace objektový model poskytuje rozhraní API, která slouží k přidání funkcí do sady Visual Studio tak, že vytvoříte *VSPackage*. VSPackage je modul, který je rozšířením rozhraní IDE sady Visual Studio poskytuje vlastní funkce, jako je například okna nástrojů, editory, návrháře, služby a projekty.
+ Hlavní část modelu objektu automatizace sady Visual Studio je definována v sestavení *EnvDTE. dll* . Sestavení *EnvDTE\\\<verze >. dll* poskytují další funkce, které byly představeny v určitých verzích sady Visual Studio. Tato sestavení jsou součástí sady Visual Studio.
 
- Pokud chcete přidat nové funkce sady Visual Studio, který se použije pomocí integrovaných nástrojů služby SharePoint, můžete použít objektový model integrace. Například pokud vytvoříte vlastní položky projektu služby SharePoint, který představuje vlastní akce pro web služby SharePoint, můžete také vytvořit VSPackage, která implementuje návrháře pro vlastní akci. Můžete přidružit návrháři vlastní akce přidáním položky místní nabídky do položky projektu, který představuje vlastní akce v **Průzkumníka řešení**. Můžete otevřít návrháře tak, že otevřete místní nabídku (kliknutím pravým tlačítkem myši vlastní položky projektu akce nebo jej vyberete a potom kliknete **Shift**+**F10** klíče) a následným výběrem možnosti **Otevřít**.
+ Další informace o modelu automatizačních objektů naleznete v tématu [Referenční dokumentace sady Visual Studio SDK](../extensibility/visual-studio-sdk-reference.md).
 
- Tento objektový model je definován v sadě sestavení, které jsou součástí sady Visual Studio SDK. Mezi hlavní sestavení v tomto modelu objektu patří *Microsoft.VisualStudio.Shell.11.0.dll*, *Microsoft.VisualStudio.Shell.Interop.dll*, a  *Microsoft.VisualStudio.OLE.Interop.dll*.
+### <a name="visual-studio-integration-object-model"></a>Model integračních objektů sady Visual Studio
+ Model integračních objektů poskytuje rozhraní API, která lze použít k přidání funkcí do sady Visual Studio vytvořením *VSPackage*. VSPackage je modul, který rozšiřuje prostředí Visual Studio IDE tím, že poskytuje vlastní funkce, jako jsou například okna nástrojů, editory, návrháři, služby a projekty.
 
- Další informace o integraci objektový model, najdete v části [přehled modelu automatizace](../extensibility/internals/automation-model-overview.md) a [referenční dokumentace jazyka Visual Studio SDK](../extensibility/visual-studio-sdk-reference.md).
+ Model integračních objektů můžete použít, pokud chcete přidat novou funkci sady Visual Studio, která bude použita s vestavěnými nástroji služby SharePoint. Například pokud vytvoříte vlastní položku projektu služby SharePoint, která představuje vlastní akci pro web služby SharePoint, můžete také vytvořit VSPackage, který implementuje návrháře pro vlastní akci. Můžete přidružit návrháře k vlastní akci přidáním položky místní nabídky do položky projektu, která představuje vlastní akci v **Průzkumník řešení**. Návrháře můžete otevřít tak, že otevřete jeho místní nabídku (buď kliknutím pravým tlačítkem myši na položku projektu vlastní akce, nebo výběrem možnosti a následným stisknutím klávesy **Shift**+**F10** ) a následným výběrem možnosti **otevřít**.
 
-### <a name="sharepoint-object-models"></a>Objektových modelů služby SharePoint
- Rozšíření nástrojů služby SharePoint můžete použít rozhraní API služby SharePoint k úpravě webu služby SharePoint nebo k načtení dat z webu služby SharePoint. [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] a [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] poskytují dvou různých objektových modelů: objektový model serveru a objektového modelu klienta.
+ Tento objektový model je definován v sadě sestavení, která jsou součástí sady Visual Studio SDK. Mezi hlavní sestavení v tomto objektovém modelu patří *Microsoft. VisualStudio. Shell. 11.0. dll*, *Microsoft. VisualStudio. Shell. Interop. dll*a *Microsoft. VisualStudio. OLE. Interop. dll*.
 
- Rozhraní API můžete použít v objektovém modelu v rozšíření nástrojů služby SharePoint, ale každý model objektu má některé výhody a nevýhody v rámci rozšíření nástrojů služby SharePoint. Další informace najdete v tématu [volání do objektových modelů služby SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md).
+ Další informace o modelu integračních objektů naleznete v tématu [Přehled modelu automatizace](../extensibility/internals/automation-model-overview.md) a [Referenční dokumentace sady Visual Studio SDK](../extensibility/visual-studio-sdk-reference.md).
+
+### <a name="sharepoint-object-models"></a>Objektové modely služby SharePoint
+ Rozšíření nástrojů služby SharePoint mohou používat rozhraní API služby SharePoint k úpravě webu služby SharePoint nebo k načítání dat z webu služby SharePoint. [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] a [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] poskytují dva různé objektové modely: serverový objektový model a klientský objektový model.
+
+ Rozhraní API můžete použít buď v objektovém modelu v rozšíření nástrojů služby SharePoint, ale každý objektový model má některé výhody a nevýhody v kontextu rozšíření nástrojů služby SharePoint. Další informace naleznete v tématu [volání do objektových modelů služby SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md).
 
 |Objektový model|Popis|
 |------------------|-----------------|
-|Objektový model serveru|Objektový model serveru poskytuje přístup ke všem funkcím, které [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] a [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] zveřejnit prostřednictvím kódu programu. Tento objektový model je navržená pro řešení služby SharePoint, které běží na serveru SharePoint. Většina tento objektový model je definován v *Microsoft.SharePoint.dll* sestavení. Další informace o objektovém modelu serveru najdete v tématu [pomocí objektového modelu SharePoint Foundation na straně serveru](http://go.microsoft.com/fwlink/?LinkId=177796).|
-|Model klientského objektu|Objektového modelu klienta je podmnožinou objektový model serveru, který umožňuje vzájemnou spolupráci se službami data služby SharePoint ze vzdáleného klienta nebo serveru. Je určená k minimalizaci počet zpátečních cest, které je třeba spustit provádění běžných úloh. Většina objektového modelu klienta je definována v *sestavení Microsoft.SharePoint.Client.dll* a *Microsoft.SharePoint.Client.Runtime.dll* sestavení. Další informace o objektovém modelu klienta najdete v tématu [spravované objektového modelu klienta](http://go.microsoft.com/fwlink/?LinkId=177797).|
+|Objektový model serveru|Objektový model serveru poskytuje přístup ke všem funkcím, které [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] a [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] vystavování prostřednictvím kódu programu. Tento objektový model je navržený tak, aby ho mohli používat řešení SharePoint, která běží na SharePointovém serveru. Většina tohoto objektového modelu je definována v sestavení *Microsoft. SharePoint. dll* . Další informace o objektovém modelu serveru naleznete v tématu [použití modelu objektu na straně serveru služby SharePoint Foundation](/previous-versions/office/developer/sharepoint-2010/ee538251(v=office.14)).|
+|Objektový model klienta|Objektový model klienta je podmnožinou objektového modelu serveru, který lze použít pro spolupráci se službou SharePoint data ze vzdáleného klienta nebo serveru. Je navržena tak, aby minimalizovala počet zpátečních cest, které je nutné provést, aby bylo možné provádět běžné úkoly. Většina objektového modelu klienta je definována v sestaveních *Microsoft. SharePoint. Client. dll* a *Microsoft. SharePoint. Client. Runtime. dll* . Další informace o objektovém modelu klienta najdete v tématu [model objektu spravovaného klienta](/previous-versions/office/developer/sharepoint-2010/ee537247(v=office.14)).|
 
 ## <a name="see-also"></a>Viz také:
-- [Rozšíření nástrojů SharePoint v sadě Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
+- [Rozšiřování nástrojů služby SharePoint v aplikaci Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
 - [Volání do objektových modelů služby SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md)
 - [Použití služby projektu SharePoint](../sharepoint/using-the-sharepoint-project-service.md)

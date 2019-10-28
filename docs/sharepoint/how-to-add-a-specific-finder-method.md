@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání konkrétní vyhledávací metody | Dokumentace Microsoftu'
+title: 'Postupy: Přidání konkrétní vyhledávací metody | Microsoft Docs'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,80 +17,80 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8fdd467f2b3a06398198f6fd8452c6a548bf0872
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 732921b021d7887faf31dd3f602f5400c1d06a59
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431272"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985253"
 ---
 # <a name="how-to-add-a-specific-finder-method"></a>Postupy: Přidání konkrétní vyhledávací metody
-  Může vrátit instanci jednu entitu tím, že vytvoříte *Specific Finder* metody. Služba obchodní Data připojení (BDC) provede metody Specific Finder, když uživatel vybere entity v obchodních dat webové části nebo externí seznam. Další informace najdete v tématu [navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
+  Jednu instanci entity můžete vrátit vytvořením *konkrétní vyhledávací* metody. Služba BDC (Business Data Connectivity) spouští konkrétní vyhledávací metodu, když uživatel zvolí entitu ve webové části nebo v externím seznamu obchodních dat. Další informace najdete v tématu [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
 
-### <a name="to-create-a-specific-finder-method"></a>Chcete-li vytvořit konkrétní metodu Finder
+### <a name="to-create-a-specific-finder-method"></a>Vytvoření konkrétní vyhledávací metody
 
-1. Na **návrháři služby BDC**, zvolit entitu.
+1. V **Návrháři BDC**vyberte entitu.
 
-    Informace o tom, jak přidat entitu, aby **návrháři služby BDC** v sadě Visual Studio, naleznete v tématu [jak: Přidání entity do modelu](../sharepoint/how-to-add-an-entity-to-a-model.md).
+    Informace o tom, jak přidat entitu do **návrháře služby BDC** v aplikaci Visual Studio, naleznete v tématu [How to: Add a entity to a model](../sharepoint/how-to-add-an-entity-to-a-model.md).
 
-2. V panelu nabídky zvolte **zobrazení** > **ostatní Windows**, **podrobnosti metody služby BDC**.
+2. Na panelu nabídek vyberte možnost **zobrazit** > **ostatní okna**, **Podrobnosti metody služby BDC**.
 
-    **Podrobnosti metody služby BDC** otevře se okno. Další informace o tomto okně najdete v tématu [přehled nástrojů pro návrh modelu služby BDC](../sharepoint/bdc-model-design-tools-overview.md).
+    Otevře se okno **Podrobnosti metody služby BDC** . Další informace o tomto okně najdete v tématu [Přehled nástrojů pro návrh modelu služby BDC](../sharepoint/bdc-model-design-tools-overview.md).
 
-3. V **přidejte metodu** klikněte na položku **vytvořit konkrétní metodu Finder**.
+3. V seznamu **Přidat metodu** vyberte možnost **vytvořit konkrétní vyhledávací metodu**.
 
-    Visual Studio přidá následující prvky modelu. Tyto prvky se zobrazí v **podrobnosti metody služby BDC** okna.
+    Visual Studio přidá do modelu následující prvky. Tyto prvky se zobrazí v okně **Podrobnosti metody služby BDC** .
 
    - Metoda.
 
-   - Vstupní parametr metody.
+   - Vstupní parametr pro metodu.
 
-   - Návratový parametr metody.
+   - Návratový parametr pro metodu.
 
    - Popisovač typu pro každý parametr.
 
-   - Instance metody k metodě.
+   - Instance metody pro metodu.
 
-     Další informace najdete v tématu [navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
+     Další informace najdete v tématu [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
 
-4. Otevřít Visual Studio **vlastnosti** okna.
+4. Otevřete okno **vlastnosti** sady Visual Studio.
 
-5. Nakonfigurujte typ popisovače návratového parametru jako popisovač pro typ entity. Informace o tom, jak vytvořit popisovač typu entity, naleznete v tématu [jak: Definování deskriptoru typu pro parametr](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md).
-
-   > [!NOTE]
-   > Není nutné tento krok proveďte, pokud jste přidali vyhledávací metody k entitě. Visual Studio používá typ popisovače, který jste definovali v vyhledávací metody.
+5. Nakonfigurujte popisovač typu návratového parametru jako popisovač typu entity. Informace o tom, jak vytvořit popisovač typu entity, naleznete v tématu [How to: define a Type deskriptor parametru](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md).
 
    > [!NOTE]
-   > Pokud identifikátor pole entity typu představuje pole v databázové tabulce, který je generován automaticky, nastavte **jen pro čtení** vlastnost identifikátor pole tak, aby **True**.
+   > Pokud jste k entitě přidali vyhledávací metodu, nemusíte tento krok provádět. Visual Studio používá popisovač typu, který jste definovali v metodě Finder.
 
-6. V **podrobnosti metody** okna, vyberte instanci metody metody.
+   > [!NOTE]
+   > Pokud pole identifikátor typu entity představuje pole v databázové tabulce, které je automaticky vygenerováno, nastavte vlastnost **atributu jen pro čtení** pole identifikátor na **hodnotu true**.
 
-7. V **okno vlastností**, nastavte **vrátí název parametru** nastavte název návratového parametru metody. Další informace o metodu instance vlastnosti najdete v tématu [třídu MethodInstance](http://go.microsoft.com/fwlink/?LinkID=169282).
+6. V okně **Podrobnosti metody** vyberte instanci metody metody.
 
-8. V **Průzkumníka řešení**, otevřete místní nabídku souboru služby kód, který byl vygenerován pro entitu a pak zvolte **zobrazit kód**.
+7. V **okně Vlastnosti**nastavte vlastnost **název návratového parametru** na název návratového parametru metody. Další informace o vlastnostech instance metody naleznete v tématu [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
 
-    Soubor kódu služby entity se otevře v editoru kódu. Další informace o souboru kód služby entity, naleznete v tématu [vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md).
+8. V **Průzkumník řešení**otevřete místní nabídku souboru kódu služby, který byl vygenerován pro danou entitu, a pak zvolte možnost **Zobrazit kód**.
 
-9. Přidejte kód do metody Specific Finder. Tento kód provede následující:
+    V editoru kódu se otevře soubor kódu entity Service. Další informace o souboru kódu entity Service najdete v tématu [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md).
 
-   - Načte ze zdroje dat záznam.
+9. Přidejte kód do konkrétní vyhledávací metody. Tento kód provede následující:
 
-   - Vrátí entity do služby BDC.
+   - Načte záznam ze zdroje dat.
+
+   - Vrátí entitu ke službě BDC.
 
      Následující příklad vrátí kontakt z ukázkové databáze AdventureWorks pro SQL Server.
 
      > [!NOTE]
-     > Nahraďte hodnotu `ServerName` pole s názvem vašeho serveru.
+     > Hodnotu pole `ServerName` nahraďte názvem vašeho serveru.
 
      [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]
      [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]
 
 ## <a name="see-also"></a>Viz také:
-- [Navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)
+- [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)
 - [Postupy: Přidání vyhledávací metody](../sharepoint/how-to-add-a-finder-method.md)
-- [Postupy: Přidání metody vytvoření](../sharepoint/how-to-add-a-creator-method.md)
+- [Postupy: Přidání metody autora](../sharepoint/how-to-add-a-creator-method.md)
 - [Postupy: Přidání metody odstranění](../sharepoint/how-to-add-a-deleter-method.md)
 - [Postupy: Přidání aktualizační metody](../sharepoint/how-to-add-an-updater-method.md)
-- [Přehled nástroje pro navrhování modelů služby BDC](../sharepoint/bdc-model-design-tools-overview.md)
-- [Postupy: Přidání parametru k metodě](../sharepoint/how-to-add-a-parameter-to-a-method.md)
-- [Postupy: Definování instance metody](../sharepoint/how-to-define-a-method-instance.md)
+- [Přehled nástrojů pro návrh modelu služby BDC](../sharepoint/bdc-model-design-tools-overview.md)
+- [Postupy: Přidání parametru do metody](../sharepoint/how-to-add-a-parameter-to-a-method.md)
+- [Postupy: definování instance metody](../sharepoint/how-to-define-a-method-instance.md)

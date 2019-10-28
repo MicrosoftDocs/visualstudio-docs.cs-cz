@@ -1,7 +1,7 @@
 ---
-title: Přečtěte si kurz na Flask v sadě Visual Studio kroku 2, zobrazení a šablony
+title: Kurz k Přečtěte si kurz v aplikaci Visual Studio Step 2, zobrazení a šablony
 titleSuffix: ''
-description: Názorný postup základy Flask v rámci projektů sady Visual Studio, konkrétně postup vytvoření aplikace a používání zobrazení a šablony.
+description: Návod základů baněk v kontextu projektů aplikace Visual Studio, konkrétně kroky při vytváření aplikace a používání zobrazení a šablon.
 ms.date: 01/07/2019
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -11,32 +11,32 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 188865b715c7c071222f7132c6f9bdd9b3dc596a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1786c8c57c841744ed27b03e4969fe2bd21ce2c7
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62961732"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985198"
 ---
-# <a name="step-2-create-a-flask-app-with-views-and-page-templates"></a>Krok 2: Vytvoření aplikace Flask pomocí zobrazení a šablony
+# <a name="step-2-create-a-flask-app-with-views-and-page-templates"></a>Krok 2: Vytvoření aplikace v baňce se zobrazeními a šablonami stránek
 
-**Předchozí krok: [Vytvoření projektu sady Visual Studio a řešení](learn-flask-visual-studio-step-01-project-solution.md)**
+**Předchozí krok: [Vytvoření projektu a řešení sady Visual Studio](learn-flask-visual-studio-step-01-project-solution.md)**
 
-Máte z kroku 1 tohoto kurzu je aplikace Flask pomocí jedné stránce a veškerý kód v jednom souboru. Povolit pro budoucí vývoj, je nejlepší Refaktorovat kód a vytvořit strukturu pro stránku šablony. Zejména budete chtít oddělují kód pro zobrazení aplikace od jiné aspekty spuštění kódu.
+To, co máte z kroku 1 tohoto kurzu, je aplikace v baňce s jednou stránkou a veškerým kódem v jednom souboru. Aby bylo umožněno budoucí vývoj, je vhodné kód Refaktorovat a vytvořit strukturu pro šablony stránky. Konkrétně je vhodné oddělit kód pro zobrazení aplikace z jiných aspektů, jako je kód při spuštění.
 
-V tomto kroku se nyní dozvíte, jak:
+V tomto kroku se dozvíte, jak:
 
 > [!div class="checklist"]
-> - Refaktorování kódu aplikace k oddělení od spuštění kódu zobrazení (krok 2 - 1)
+> - Refaktorujte kód aplikace a oddělte zobrazení od spouštěcího kódu (krok 2-1).
 > - Vykreslení zobrazení pomocí šablony stránky (krok 2-2)
 
-## <a name="step-2-1-refactor-the-project-to-support-further-development"></a>Krok 2-1: Refaktorovat projektu pro podporu dalšího vývoje aplikací
+## <a name="step-2-1-refactor-the-project-to-support-further-development"></a>Krok 2-1: refaktorace projektu pro podporu dalšího vývoje
 
-V kód vytvořený pomocí šablony "Prázdné Flask webového projektu", máte jediný *app.py* soubor, který obsahuje spouštěcí kód společně s jedním zobrazením. Povolit pro další vývoj aplikace s více zobrazení a šablony, je vhodné oddělit tyto problémy.
+V kódu vytvořeném šablonou "prázdný webový projekt" je k dispozici jeden soubor *App.py* , který obsahuje spouštěcí kód vedle jednoho zobrazení. Aby bylo možné další vývoj aplikace s více zobrazeními a šablonami, je vhodné tyto aspekty oddělit.
 
-1. Ve složce projektu, vytvořte složku aplikace s názvem `HelloFlask` (klikněte pravým tlačítkem na projekt v **Průzkumníka řešení** a vyberte **přidat** > **novou složku** .)
+1. Ve složce projektu vytvořte složku aplikace s názvem `HelloFlask` (klikněte pravým tlačítkem myši na projekt v **Průzkumník řešení** a vyberte **Přidat** > **Nová složka**.)
 
-2. V *HelloFlask* složce vytvořte soubor s názvem  *\_ \_init\_\_.py* s použitím následujícího obsahu, které vytvoří `Flask` instance a načte zobrazení aplikace (vytvořený v dalším kroku):
+2. Ve složce *HelloFlask* vytvořte soubor s názvem *\_\_init\_\_. py* s následujícím obsahem, který vytvoří instanci `Flask` a načte zobrazení aplikace (vytvořené v dalším kroku):
 
     ```python
     from flask import Flask
@@ -45,7 +45,7 @@ V kód vytvořený pomocí šablony "Prázdné Flask webového projektu", máte 
     import HelloFlask.views
     ```
 
-3. V *HelloFlask* složce vytvořte soubor s názvem *views.py* s následujícím obsahem. Název *views.py* je důležité, protože jste použili `import HelloFlask.views` v rámci  *\_ \_init\_\_.py*; zobrazí se vám Chyba za běhu Pokud názvy se neshodují.
+3. Ve složce *HelloFlask* vytvořte soubor s názvem *views.py* s následujícím obsahem. Název *views.py* je důležitý, protože jste použili `import HelloFlask.views` v rámci *\_\_init\_\_. py*; Pokud se názvy neshodují, zobrazí se v době běhu chyba.
 
     ```python
     from flask import Flask
@@ -57,11 +57,11 @@ V kód vytvořený pomocí šablony "Prázdné Flask webového projektu", máte 
         return "Hello Flask!"
     ```
 
-    Kromě přejmenování funkce a tras do `home`, tento kód obsahuje kód pro vykreslování stránky z *app.py* a importuje `app` objekt, který je deklarován v  *\_ \_init\_\_.py*.
+    Kromě přejmenování funkce a směrování na `home`obsahuje tento kód kód vykreslování stránky z *App.py* a importuje objekt `app`, který je deklarován v *\_\_init\_\_. py*.
 
-4. Vytvořte podsložku v *HelloFlask* s názvem *šablony*, které zůstávají prázdné i nyní.
+4. Vytvoří podsložku v *HelloFlask* s názvem *Templates*, která teď zůstává prázdná.
 
-5. V kořenové složce projektu, přejmenujte *app.py* k *runserver.py*a ujistěte se, obsah následujícím kódem:
+5. V kořenové složce projektu přejmenujte *App.py* na *runserver.py*a nastavte obsah tak, aby odpovídal následujícímu kódu:
 
     ```python
     import os
@@ -78,43 +78,43 @@ V kód vytvořený pomocí šablony "Prázdné Flask webového projektu", máte 
         app.run(HOST, PORT)
     ```
 
-6. Strukturu projektu by měl vypadat jako na následujícím obrázku:
+6. Struktura projektu by měla vypadat jako na následujícím obrázku:
 
-    ![Struktura projektu po refaktorování kódu](media/flask/step02-project-structure.png)
+    ![Struktura projektu po refaktoringu kódu](media/flask/step02-project-structure.png)
 
-7. Vyberte **ladění** > **spustit ladění** (**F5**) nebo použít **Webový Server** tlačítko na panelu nástrojů (prohlížeči najdete v květnu Spusťte aplikaci a otevřít prohlížeč lišit). Zkuste oba / a/home tras adresy URL.
+7. Vyberte **ladit** > **Spustit ladění** (**F5**) nebo použijte tlačítko **webový server** na panelu nástrojů (prohlížeč, který vidíte, se může lišit) a spusťte aplikaci a otevřete prohlížeč. Vyzkoušejte trasy adresy URL/a/Home.
 
-8. Můžete také nastavit zarážky na různé části kódu a restartujte aplikaci rozhodování o pořadí spouštění. Například nastavte zarážku na první řádky *runserver.py* a *HelloFlask\_* init_*.py*a na `return "Hello Flask!"` řádku v *views.py*. Restartujte aplikaci (**ladění** > **restartovat**, **Ctrl**+**F5**, nebo tlačítko panelu nástrojů je uvedeno níže) a Projděte skrze (**F10**) kód nebo spustit z každého zarážky pomocí **F5**.
+8. Můžete také nastavit zarážky v různých částech kódu a restartovat aplikaci, aby následovala za spouštěcí sekvenci. Například nastavte zarážku na prvních řádcích *runserver.py* a *HelloFlask\_* init_ *. py*a na `return "Hello Flask!"` řádku v *views.py*. Pak aplikaci znovu spusťte (**ladění** > **restart**, **CTRL**+**F5**nebo tlačítko panelu nástrojů zobrazené níže) a krok po (F10) kódu nebo spusťte z každé zarážky pomocí**klávesy** **F5**.
 
-    ![Restartujte na panelu nástrojů ladění v sadě Visual Studio](media/debugging-restart-toolbar-button.png)
+    ![Tlačítko restartovat na panelu nástrojů ladění v sadě Visual Studio](media/debugging-restart-toolbar-button.png)
 
-9. Jakmile budete hotovi, zastavte aplikaci.
+9. Až skončíte, zastavte aplikaci.
 
-### <a name="commit-to-source-control"></a>Potvrzení změn do správy zdrojového kódu
+### <a name="commit-to-source-control"></a>Potvrdit do správy zdrojových kódů
 
-Protože jste provedli změny kódu a je otestovali úspěšně, teď je vhodná doba ke kontrole a potvrzení provedených změn do správy zdrojového kódu. Pozdější kroky v tomto kurzu vás upozorní na vhodných chvílích se znovu zapsat do správy zdrojového kódu a vrátit zpět do této části.
+Vzhledem k tomu, že jste provedli změny kódu a úspěšně jste je otestovali, nyní je vhodný čas ke kontrole a potvrzení změn ve správě zdrojových kódů. V dalších krocích v tomto kurzu se znovu přihlásíte ke správě zdrojových kódů a vrátíte se zpátky k této části.
 
-1. Vyberte tlačítko změn v dolní části sady Visual Studio (v kruhu níže), která přejde na **Team Exploreru**.
+1. Vyberte tlačítko změny podél dolní části sady Visual Studio (v kruhu níže), které přechází na **Team Explorer**.
 
-    ![Tlačítka změny správy zdrojového kódu ve stavovém řádku sady Visual Studio](media/flask/step02-source-control-changes-button.png)
+    ![Tlačítko změny správy zdrojového kódu na stavovém řádku sady Visual Studio](media/flask/step02-source-control-changes-button.png)
 
-1. V **Team Exploreru**, zadejte zprávu potvrzení jako "Refaktorujte kód" a vyberte **Potvrdit vše**. Po dokončení potvrzení změn, zobrazí se zpráva **potvrzení \<hash > vytvořeno místně. Synchronizace pro sdílení změn se serverem.** Pokud chcete zapsat změny do vzdáleného úložiště, vyberte **synchronizace**a pak vyberte **nabízených** pod **odchozí potvrzení změn**. Můžete také shromažďovat více místních potvrzení změn před doručením (push) Vzdálená.
+1. V **Team Explorer**zadejte potvrzovací zprávu, jako je refaktoring Code, a vyberte **potvrdit vše**. Po dokončení potvrzení se zobrazí **hodnota hash \<potvrzení zprávy > vytvořena místně. Synchronizace pro sdílení změn se serverem.** Pokud chcete doručovat změny do vzdáleného úložiště, vyberte **synchronizovat**a potom v části **odchozí potvrzení**vyberte možnost **push** . Před odesláním do vzdáleného úložiště můžete také shromáždit několik místních potvrzení.
 
-    ![Vložit potvrzení změn do vzdáleného v Průzkumníku týmových projektů](media/flask/step02-source-control-push-to-remote.png)
+    ![Vložení potvrzení do vzdáleného úložiště v Team Explorer](media/flask/step02-source-control-push-to-remote.png)
 
-### <a name="question-how-frequently-should-one-commit-to-source-control"></a>Otázka: Jak často by měla jedna potvrzení do správy zdrojových kódů?
+### <a name="question-how-frequently-should-one-commit-to-source-control"></a>Otázka: jak často má být jeden potvrzení do správy zdrojového kódu?
 
-Odpověď: Potvrzují se změny do správy zdrojového kódu vytvoří záznam v protokolu změn a bod na které můžete se vrátit úložiště v případě potřeby. Každé potvrzení se dají prozkoumat také jeho konkrétní změny. Vzhledem k tomu potvrzení změn v Gitu cenově dostupné, je lepší časté potvrzení změn, než se shromažďování většího počtu změn do jediného potvrzení změn. Je zřejmé není nutné potvrdit každou malou změnu do jednotlivých souborů. Obvykle provedete potvrzení při přidávání funkcí, změna struktury, jako jste v tomto kroku nebo provést některé refaktoringu kódu. Také zkontrolujte s ostatními ve vašem týmu pro členitost potvrzení změn, která nejlépe vyhovuje všem uživatelům.
+Odpověď: potvrzení změn ve správě zdrojového kódu vytvoří záznam v protokolu změn a bod, na který můžete v případě potřeby obnovit úložiště. U každého potvrzení lze také prozkoumat konkrétní změny. Vzhledem k tomu, že potvrzení v Gitu jsou nákladná, je lepší provádět častá potvrzení změn, než je potřeba shromáždit větší počet změn do jediného potvrzení. Jasně není nutné potvrzovat každou malou změnu v jednotlivých souborech. Při přidávání funkce se obvykle provádí potvrzení změn struktury, jako jste provedli v tomto kroku, nebo když jste provedli nějaký refaktoring kódu. Také se poraďte s ostatními členy týmu, aby bylo možné členitost potvrzení, která fungují nejlépe pro každého.
 
-Jak často potvrzení a jak často potvrzení změn vložíte do vzdáleného úložiště jsou dvě různé aspekty. Můžete shromažďovat několik potvrzení změn v místním úložišti před nahráním do vzdáleného úložiště. Jak často potvrzení znovu, závisí na jak váš tým chce, aby se pro správu úložiště.
+Jak často provádíte potvrzení a jak často se přidávají potvrzení do vzdáleného úložiště, mají dva různé obavy. Před odesláním do vzdáleného úložiště můžete shromáždit několik potvrzení v místním úložišti. Znovu, jak často potvrzujete, závisí na tom, jak váš tým chce spravovat úložiště.
 
-## <a name="step-2-2-use-a-template-to-render-a-page"></a>Krok 2 – 2: Použití šablony k vykreslení stránky
+## <a name="step-2-2-use-a-template-to-render-a-page"></a>Krok 2-2: použití šablony k vykreslení stránky
 
-`home` Funkce, která jste dosud v *views.py* generuje nic jiného než prostého textu odpovědi HTTP pro stránky. Většina skutečných webové stránky, ale odpovědět bohaté stránky HTML, které často zahrnují živá data. Primární z důvodu definování zobrazení pomocí funkce je ve skutečnosti dynamicky generovat obsah.
+Funkce `home`, kterou máte k dispozici v *views.py* , vygeneruje pro stránku nic víc než odpověď HTTP v podobě prostého textu. Většina skutečných webových stránek ale reaguje s bohatou stránkou HTML, která často zahrnuje živá data. Hlavním důvodem pro definování zobrazení pomocí funkce je skutečně generování obsahu dynamicky.
 
-Protože vrácená hodnota pro zobrazení je právě řetězec, můžete také vytvořit veškeré kódování HTML, který chcete v rámci řetězce, pomocí dynamického obsahu. Protože je nejlepší k oddělení od data značek, je však mnohem lepší umístěte kód v šabloně a ponechat data v kódu.
+Vzhledem k tomu, že návratová hodnota zobrazení je pouze řetězec, můžete vytvořit libovolný HTML v rámci řetězce pomocí dynamického obsahu. Vzhledem k tomu, že je nejlepší oddělit značky z dat, je mnohem lepší umístit značku do šablony a zachovat data v kódu.
 
-1. Pokud začínáte, upravit *views.py* tak, aby obsahovala následující kód, který používá vložené HTML stránky s některé dynamického obsahu:
+1. U starts upravte *views.py* tak, aby obsahovala následující kód, který používá vloženou HTML pro stránku s nějakým dynamickým obsahem:
 
     ```python
     from datetime import datetime
@@ -134,9 +134,9 @@ Protože vrácená hodnota pro zobrazení je právě řetězec, můžete také v
         return html_content
     ```
 
-1. Spusťte aplikaci a aktualizujte stránku několikrát zobrazíte, že se aktualizuje data a času. Jakmile budete hotovi, zastavte aplikaci.
+1. Spusťte aplikaci a několikrát aktualizujte stránku, aby bylo vidět, že se datum a čas aktualizovala. Až skončíte, zastavte aplikaci.
 
-1. Převést vykreslování části stránky chcete použít šablonu, vytvořte soubor s názvem *index.html* v *šablony* složka s následujícím obsahem, kde `{{ content }}` je zástupný symbol nebo nahrazení tokenu (také volá se *proměnnou šablony*) u kterého zadáte hodnotu do kódu:
+1. Chcete-li převést vykreslování stránky na použití šablony, vytvořte soubor s názvem *index. html* ve složce *šablony* s následujícím obsahem, kde `{{ content }}` je zástupný symbol nebo token pro nahrazení (označovaný také jako *proměnná šablony*), pro který jste Zadejte hodnotu v kódu:
 
     ```html
     <html>
@@ -148,7 +148,7 @@ Protože vrácená hodnota pro zobrazení je právě řetězec, můžete také v
     </html>
     ```
 
-1. Upravit `home` použitá funkce `render_template` k načtení šablony a zadat hodnotu "obsah", která se provádí pomocí pojmenovaný argument, který odpovídá názvu zástupný symbol. Flask automaticky vyhledá šablony v *šablony* složku, tak cestu k šabloně je relativní vzhledem k této složce:
+1. Upravte funkci `home`, aby používala `render_template` k načtení šablony a zadání hodnoty "content", která se provádí pomocí pojmenovaného argumentu, který odpovídá názvu zástupného symbolu. Baňka automaticky vyhledá šablony ve složce *šablony* , takže cesta k šabloně je relativní vzhledem k této složce:
 
     ```python
     def home():
@@ -160,9 +160,9 @@ Protože vrácená hodnota pro zobrazení je právě řetězec, můžete také v
             content = "<strong>Hello, Flask!</strong> on " + formatted_now)
     ```
 
-1. Spuštění aplikace se ve výsledcích a zda se zobrazila zpráva vložené HTML v `content` hodnotu nevykreslí *jako* HTML, protože šablonování stroje (šablonovacím systémem) automaticky řídící obsah ve formátu HTML. Automatické uvození zabrání náhodnému ohrožení zabezpečení, útoky prostřednictvím injektáže: vývojáři často shromažďovat vstup z jedné stránky a použít jako hodnotu do jiné prostřednictvím šablony zástupný symbol. Uvozovací znaky slouží taky jako připomenutí, že je znovu nejlepší mít HTML z kódu.
+1. Spusťte aplikaci, podívejte se na výsledky a sledujte, že vložený kód HTML v `content` hodnota se nevykreslí *jako* HTML, protože modul šablonování (Jinja) automaticky řídí obsah HTML. Automatické uvozovací znaky zabraňují náhodným útokům prostřednictvím injektáže: vývojáři často shromažďují vstupy z jedné stránky a používají je jako hodnotu v jiné prostřednictvím zástupného symbolu šablony. Řídicí uvozovací znaky také slouží jako připomenutí, že je znovu vhodné zachovat kód HTML z kódu.
 
-    Odpovídajícím způsobem, zkontrolujte *templates\index.html* tak, aby obsahovala distinct zástupné symboly pro jednotlivá data v rámci značky:
+    Proto zkontrolujte *templates\index.html* , aby obsahovala odlišné zástupné symboly pro každý údaj v rámci značky:
 
     ```html
     <html>
@@ -175,7 +175,7 @@ Protože vrácená hodnota pro zobrazení je právě řetězec, můžete také v
     </html>
     ```
 
-    Pak aktualizujte `home` funkce k poskytnutí hodnot pro všechny zástupné symboly:
+    Pak aktualizujte funkci `home`, aby poskytovala hodnoty pro všechny zástupné symboly:
 
     ```python
     def home():
@@ -189,36 +189,36 @@ Protože vrácená hodnota pro zobrazení je právě řetězec, můžete také v
             content = " on " + formatted_now)
     ```
 
-1. Spusťte aplikaci znovu, abyste viděli správně vykresleného výstupu.
+1. Spusťte aplikaci znovu, abyste viděli správně Vykreslený výstup.
 
-    ![Spuštěné aplikace pomocí šablony](media/flask/step02-result.png)
+    ![Spuštění aplikace pomocí šablony](media/flask/step02-result.png)
 
-1. Potvrďte změny do správy zdrojového kódu a aktualizovat vaše vzdálené úložiště, v případě potřeby, jak je popsáno v části [krok 2-1](#commit-to-source-control).
+1. Potvrďte změny ve správě zdrojového kódu a v případě potřeby aktualizujte vzdálené úložiště, jak je popsáno v části [krok 2-1](#commit-to-source-control).
 
-### <a name="question-do-page-templates-have-to-be-in-a-separate-file"></a>Otázka: Mají být v samostatném souboru šablony?
+### <a name="question-do-page-templates-have-to-be-in-a-separate-file"></a>Otázka: Chcete, aby šablony stránky byly v samostatném souboru?
 
-Odpověď: Přestože šablony jsou obvykle spravované do samostatných souborů HTML, můžete také použít šablonu vložené. Použití samostatného souboru se doporučuje, ale udržovat čisté oddělení mezi značek a kódu.
+Odpověď: Přestože šablony jsou obvykle udržovány v samostatných souborech HTML, můžete také použít vloženou šablonu. Použití samostatného souboru je však doporučeno pro zachování čistého oddělení mezi značkami a kódem.
 
-### <a name="question-must-templates-use-the-html-file-extension"></a>Otázka: Šablony, který je nutné použít příponu souboru HTML?
+### <a name="question-must-templates-use-the-html-file-extension"></a>Otázka: je třeba, aby šablony používaly příponu souboru. html?
 
-Odpověď: *.Html* rozšíření pro stránkovací soubory šablony je naprosto volitelné, protože vždy identifikovat přesné relativní cesta k souboru v první argument `render_template` funkce. Ale sady Visual Studio (a ostatní editory) obvykle poskytují funkce, jako je dokončení a syntaxe zabarvení kódu s *.html* soubory, které převažuje skutečnost, že stránka šablony nejsou nezbytně HTML.
+Odpověď: přípona *. html* pro soubory šablony stránky je zcela volitelná, protože vždy identifikujete přesnou relativní cestu k souboru v prvním argumentu funkce `render_template`. Visual Studio (a další editory) ale obvykle poskytují funkce jako dokončování kódu a zabarvení syntaxe pomocí souborů *. html* , což převažuje na to, že šablony stránek nejsou striktně HTML.
 
-Ve skutečnosti když pracujete s projektem Flask, Visual Studio automaticky rozpozná, pokud soubor HTML, který upravujete je ve skutečnosti šablon Flask a poskytuje některé funkce automatického dokončování. Například když začnete psát Flask stránku šablony komentář, `{#`, Visual Studio automaticky poskytuje uzavírací `#}` znaků. **Zakomentovat výběr** a **Odkomentovat výběr** příkazy (na **upravit** > **Upřesnit** nabídky a na panelu nástrojů) komentáře k šabloně používají taky místo komentáře HTML.
+Když pracujete s projektem v baňce, Visual Studio se automaticky detekuje, když soubor HTML, který upravujete, je šablonou baňky, a poskytuje určité automatické dokončování funkcí. Když například začnete psát komentář šablony stránky, `{#`, Visual Studio vám automaticky poskytne uzavírací `#}` znaky. Příkazy pro výběr **Komentáře** a zrušení **Komentáře** (v **Rozšířené** nabídce **Upravit** > a na panelu nástrojů) také používají komentáře k šablonám namísto komentářů jazyka HTML.
 
-### <a name="question-when-i-run-the-project-i-see-an-error-that-the-template-cannot-be-found-whats-wrong"></a>Otázka: Při spuštění projektu se zobrazit chyba, která šablona se nenašel. Co je?
+### <a name="question-when-i-run-the-project-i-see-an-error-that-the-template-cannot-be-found-whats-wrong"></a>Otázka: při spuštění projektu se zobrazí chyba, že šablona nebyla nalezena. Co je?
 
-Odpověď: Pokud se zobrazí chyby, které nejde najít šablonu, ujistěte se, že přidání aplikace do projektu Flask *settings.py* v `INSTALLED_APPS` seznamu. Bez této položky nebude vědět o Flask podívejte se aplikace *šablony* složky.
+Odpověď: Pokud se zobrazí chyby, které se nepovedlo najít, ujistěte se, že jste aplikaci přidali do *Settings.pyy* projektu v seznamu `INSTALLED_APPS`. Bez této položky se v baňce nedozvíte, jak ve složce *šablon* aplikace Hledat.
 
-### <a name="question-can-templates-be-organized-into-further-subfolders"></a>Otázka: Je možné uspořádat šablony do podsložky další?
+### <a name="question-can-templates-be-organized-into-further-subfolders"></a>Otázka: je možné šablony uspořádat do dalších podsložek?
 
-Odpověď: Ano, můžete použít podsložky a potom použijte relativní cesta pod *šablony* ve voláních `render_template`. To je skvělý způsob, jak efektivně vytvořit obory názvů pro šablony.
+Odpověď: Ano, můžete použít podsložky a potom v rámci *šablon* v voláních `render_template`odkazovat na relativní cestu. Je to skvělý způsob, jak efektivně vytvořit obory názvů pro vaše šablony.
 
 ## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
-> [Doručování statických souborů a přidejte stránky, použijte šablonu dědičnosti](learn-flask-visual-studio-step-03-serve-static-files-add-pages.md)
+> [Obsluha statických souborů, přidávání stránek a použití dědičnosti šablon](learn-flask-visual-studio-step-03-serve-static-files-add-pages.md)
 
-## <a name="go-deeper"></a>Seznamte se blíž
+## <a name="go-deeper"></a>Přejít hlouběji
 
-- [Rychlý start Flask – vykreslení šablony](http://flask.pocoo.org/docs/1.0/quickstart/#rendering-templates) (flask.pocoo.org)
-- Kurz zdrojového kódu na Githubu: [Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)
+- [Rychlý Start k vygenerování baněk – šablony pro vykreslování](https://flask.palletsprojects.com/en/1.0.x/quickstart/#rendering-templates) (Flask.pocoo.org)
+- Kurz zdrojového kódu na GitHubu: [Microsoft/Python-Sample-vs-Learning-baněk](https://github.com/Microsoft/python-sample-vs-learning-flask)

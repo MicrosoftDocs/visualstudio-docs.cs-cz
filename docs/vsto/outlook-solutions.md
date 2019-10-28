@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3b27f874766853fb5239c96ec178233935484d1b
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 21e6478bb0f02383066a2c63dad1bdaf980a0b5b
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551483"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985676"
 ---
 # <a name="outlook-solutions"></a>řešení pro aplikaci Outlook
   Visual Studio poskytuje šablony projektů, pomocí kterých můžete vytvářet doplňky VSTO pro systém Microsoft Office Outlook. Doplňky VSTO můžete použít k automatizaci Outlooku, rozšiřování funkcí Outlooku nebo k přizpůsobení uživatelského rozhraní Outlooku (UI). Další informace o doplňcích VSTO najdete v tématu [architektura doplňků VSTO](../vsto/architecture-of-vsto-add-ins.md).
@@ -33,14 +33,14 @@ ms.locfileid: "69551483"
 [!include[Add-ins note](includes/addinsnote.md)]
 
 ## <a name="create-an-outlook-vsto-add-in-project"></a>Vytvoření projektu doplňku VSTO pro Outlook
- Vytváření projektů aplikace Outlook pomocí šablony projektu doplňku pro **Outlook** v dialogovém okně **Nový projekt** . Tato šablona obsahuje požadované odkazy na sestavení a soubory projektu.
+ Vytváření projektů aplikace Outlook pomocí šablony projektu **doplňku pro Outlook** v dialogovém okně **Nový projekt** . Tato šablona obsahuje požadované odkazy na sestavení a soubory projektu.
 
- Další informace o tom, jak vytvořit projekt doplňku VSTO, najdete v tématu [How to: Vytváření projektů Office v sadě Visual](../vsto/how-to-create-office-projects-in-visual-studio.md)Studio. Další informace o šablonách projektů naleznete v tématu [Přehled šablon projektů Office](../vsto/office-project-templates-overview.md).
+ Další informace o tom, jak vytvořit projekt doplňku VSTO, najdete v tématu [Postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md). Další informace o šablonách projektů naleznete v tématu [Přehled šablon projektů Office](../vsto/office-project-templates-overview.md).
 
 ## <a name="outlook-vsto-add-in-programming-model"></a>Programovací model doplňku aplikace Outlook VSTO
- Když vytvoříte projekt doplňku VSTO pro Outlook, Visual Studio vygeneruje třídu, která je volána `ThisAddIn`, což je základem vašeho řešení. Tato třída poskytuje výchozí bod pro psaní kódu a také zpřístupňuje objektový model aplikace Outlook pro doplněk VSTO.
+ Když vytvoříte projekt doplňku VSTO pro Outlook, Visual Studio vygeneruje třídu nazvanou `ThisAddIn`, což je základem vašeho řešení. Tato třída poskytuje výchozí bod pro psaní kódu a také zpřístupňuje objektový model aplikace Outlook pro doplněk VSTO.
 
- Další informace o `ThisAddIn` třídě a dalších funkcích, které můžete použít v doplňku VSTO, najdete v tématu Programová doplňky [VSTO](../vsto/programming-vsto-add-ins.md).
+ Další informace o třídě `ThisAddIn` a dalších funkcích, které můžete použít v doplňku VSTO, najdete v tématu [Programová doplňky VSTO](../vsto/programming-vsto-add-ins.md).
 
 ## <a name="automate-outlook-by-using-the-outlook-object-model"></a>Automatizace Outlooku pomocí objektového modelu aplikace Outlook
  Objektový model aplikace Outlook zpřístupňuje mnoho typů, které lze použít k automatizaci aplikace Outlook. Tyto typy umožňují psát kód pro provádění běžných úloh:
@@ -70,5 +70,5 @@ ms.locfileid: "69551483"
 |-----------|-----------------|
 |[Přehled modelu objektů aplikace Outlook](../vsto/outlook-object-model-overview.md)|Poskytuje přehled o objektech, které jsou k dispozici v objektovém modelu aplikace Outlook.|
 |[Vytvoření oblastí formuláře aplikace Outlook](../vsto/creating-outlook-form-regions.md)|Vysvětluje nástroje poskytované aplikací Visual Studio, které usnadňují návrh, vývoj a ladění oblastí formuláře.|
-|[Návod: Vytvoření prvního doplňku VSTO pro Outlook](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)|Ukazuje, jak vytvořit doplněk VSTO pro systém Microsoft Office Outlook.|
-|[Outlook 2010 ve vývoji pro Office](http://go.microsoft.com/fwlink/?LinkId=199013)|Oblast knihovny MSDN, kde najdete články a referenční dokumentaci týkající se vývoje řešení Outlooku (netýká se vývoj pro Office pomocí sady Visual Studio).|
+|[Návod: vytvoření prvního doplňku VSTO pro Outlook](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)|Ukazuje, jak vytvořit doplněk VSTO pro systém Microsoft Office Outlook.|
+|[Outlook 2010 ve vývoji pro Office](/previous-versions/office/developer/office-2010/ff458122(v=office.14))|Oblast knihovny MSDN, kde najdete články a referenční dokumentaci týkající se vývoje řešení Outlooku (netýká se vývoj pro Office pomocí sady Visual Studio).|

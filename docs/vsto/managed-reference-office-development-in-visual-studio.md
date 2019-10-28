@@ -13,15 +13,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: da10833f8340d5308321038bb0500ca8408b40bb
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 137031202075d1c646cc7415042dd8d6eab72b78
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551766"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985772"
 ---
 # <a name="managed-reference-office-development-in-visual-studio"></a>Spravované referenční materiály (vývoj pro Office v sadě Visual Studio)
-  Tato část obsahuje referenční dokumentaci rozhraní API pro obory názvů a typy, které se používají v projektech [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] Office, [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]které cílí na nebo. Referenční dokumentace k rozhraní API pro obory názvů a typy, které se používají v projektech Office cílených na .NET Framework 3,5 naleznete v následující referenční části v dokumentaci k sadě [http://go.microsoft.com/fwlink/?LinkId=160658](http://go.microsoft.com/fwlink/?LinkId=160658)Visual Studio:.
+  Tato část obsahuje referenční dokumentaci rozhraní API pro obory názvů a typy, které se používají v projektech Office, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](includes/net-v45-md.md)]. Referenční dokumentace k rozhraní API pro obory názvů a typy, které se používají v projektech Office, které cílí na .NET Framework 3,5, najdete v následující referenční části v dokumentaci k sadě Visual Studio: [Managed Reference (vývoj pro Office v sadě Visual Studio )](managed-reference-office-development-in-visual-studio.md).
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
@@ -56,22 +56,22 @@ ms.locfileid: "69551766"
 
  <xref:Microsoft.VisualStudio.Tools.Applications>
 
- <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> Obsahuje třídu a sadu souvisejících datových tříd uložených v mezipaměti. Tyto třídy lze použít k úpravě některých aspektů přizpůsobení na úrovni dokumentu na počítačích, které nemají nainstalované systém Microsoft Office.
+ Obsahuje třídu <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> a sadu souvisejících datových tříd uložených v mezipaměti. Tyto třídy lze použít k úpravě některých aspektů přizpůsobení na úrovni dokumentu na počítačích, které nemají nainstalované systém Microsoft Office.
 
  <xref:Microsoft.VisualStudio.Tools.Applications.Deployment>
 
- Obsahuje rozhraní (které můžete implementovat pro vytvoření *akce po nasazení* pro řešení Office), výjimky, které mohou být vyvolány při instalaci řešení Office a dalších rozhraní API, která jsou součástí infrastruktury sady Visual Studio. <xref:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction>
+ Obsahuje rozhraní <xref:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction> (které můžete implementovat k vytvoření *akce po nasazení* pro řešení pro Office), výjimky, které mohou být vyvolány při instalaci řešení Office a dalších rozhraní API, která jsou součástí infrastruktury sady Visual Studio.
 
  <xref:Microsoft.VisualStudio.Tools.Applications.Runtime>
 
- Obsahuje většinu výjimek, které mohou být vyvolány [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)], několik tříd, které lze použít k ukládání dat do mezipaměti v přizpůsobení na úrovni dokumentu a dalších rozhraní API, která jsou součástí infrastruktury sady Visual Studio.
+ Obsahuje většinu výjimek, které mohou být vyvolány [!INCLUDE[vsto_runtime](includes/vsto-runtime-md.md)], několik tříd, které lze použít k ukládání dat do mezipaměti v přizpůsobení na úrovni dokumentu a dalších rozhraní API, která jsou součástí infrastruktury sady Visual Studio.
 
  <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks>
 
  Obsahuje třídy úloh nástroje MSBuild, které slouží k sestavování projektů Office.
 
 ## <a name="see-also"></a>Viz také:
-- [Přehled nástrojů Visual Studio Tools for Office runtime](../vsto/visual-studio-tools-for-office-runtime-overview.md)
-- [Začínáme &#40;s vývojem pro Office v sadě Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
-- [Ukázky a návody pro vývoj pro Office](../vsto/office-development-samples-and-walkthroughs.md)
-- [Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
+- [Přehled nástrojů Visual Studio Tools for Office runtime](visual-studio-tools-for-office-runtime-overview.md)
+- [Začínáme &#40;s vývojem pro Office v sadě Visual Studio&#41;](getting-started-office-development-in-visual-studio.md)
+- [Ukázky a návody pro vývoj pro Office](office-development-samples-and-walkthroughs.md)
+- [Návrh a tvorba řešení pro systém Office](designing-and-creating-office-solutions.md)

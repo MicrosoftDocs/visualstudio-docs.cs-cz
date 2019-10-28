@@ -1,5 +1,5 @@
 ---
-title: Řešení potíží s chybami v řešeních pro systém Office
+title: Řešení chyb v řešeních pro systém Office
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -20,111 +20,111 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cdfa5724b25a551a65318fea3ebcaf52d7f397ba
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2aa971a79c0b0f5592c0da5c52a457c585bb0f15
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978442"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985575"
 ---
-# <a name="troubleshoot-errors-in-office-solutions"></a>Řešení potíží s chybami v řešeních pro systém Office
-  Při provádění následujících úloh při vývoji řešení pro systém Office v sadě Visual Studio se můžete setkat s problémy:
+# <a name="troubleshoot-errors-in-office-solutions"></a>Řešení chyb v řešeních pro systém Office
+  Při vývoji řešení pro systém Office v sadě Visual Studio mohou nastat problémy při provádění následujících úloh:
 
-- [Vytvářet, upgradovat a otevřít projekty](#creating)
+- [Vytváření, upgrade a otevírání projektů](#creating)
 
-- [Pomocí návrhářů](#designers)
+- [Použití návrhářů](#designers)
 
-- [Psaní kódu](#code)
+- [Napsat kód](#code)
 
-- [Sestavení projektů](#building)
+- [Sestavit projekty](#building)
 
-- [Ladění projektů](#debugging)
+- [Ladit projekty](#debugging)
 
-## <a name="creating"></a> Vytvářet, upgradovat a otevřít projekty
- Při vytváření nebo otevírání projektů Office, mohou se vyskytnout následující chyby.
+## <a name="creating"></a>Vytváření, upgrade a otevírání projektů
+ Při vytváření nebo otevírání projektů Office se mohou vyskytnout následující chyby.
 
-### <a name="the-project-cannot-be-created"></a>Projekt nejde vytvořit.
- Pokud jste se pokusili k vytvoření nebo otevření projektu pro Office, ale Visual Studio nemá dostatek informací k určení příčiny došlo k chybě. Zkuste zavřít projekt, ukončení sady Visual Studio a znovu spustit.
+### <a name="the-project-cannot-be-created"></a>Projekt se nedá vytvořit.
+ Došlo k chybě při pokusu o vytvoření nebo otevření projektu sady Office, ale sada Visual Studio neměla dostatek informací k určení příčiny. Zkuste projekt zavřít, ukončete aplikaci Visual Studio a začněte znovu.
 
- Pokud se pokoušíte vytvořit projekt úrovni dokumentu, je možné, že jiný dokument se stejným názvem jako dokument v novém projektu je již otevřen v aplikaci Excel nebo Word. Ujistěte se, že jsou uzavřeny všechny instance aplikace Excel nebo Word.
+ Pokud se pokoušíte vytvořit projekt na úrovni dokumentu, je možné, že v aplikaci Excel nebo Word je již otevřen jiný dokument se stejným názvem jako dokument v novém projektu. Přesvědčte se, zda jsou všechny ostatní instance aplikace Excel nebo Word zavřeny.
 
-### <a name="control-properties-are-lost-when-you-create-a-new-project-based-on-a-document-from-an-existing-project"></a>Vlastnosti ovládacích prvků budou ztraceny, když vytvoříte nový projekt založený na dokument z existujícího projektu
- Pokud vytvoříte nový projekt Office založený na dokument z existujícího projektu, vlastnosti pro všechny ovládací prvky, které jsou v dokumentu nejsou zkopírovány do nového projektu. Je nutné ručně obnovit vlastnosti pro všechny stávající ovládací prvky. Alternativně můžete zachovat vlastnosti ovládacích prvků tak, že vytvoříte kopii existujícího projektu místo vytvoření nového projektu nebo načítání existující projekt do nového řešení (v návrháři) a zkopírováním a vložením z existující ovládací prvky dokument nový dokument.
+### <a name="control-properties-are-lost-when-you-create-a-new-project-based-on-a-document-from-an-existing-project"></a>Vlastnosti ovládacího prvku jsou při vytváření nového projektu na základě dokumentu z existujícího projektu ztraceny.
+ Pokud vytvoříte nový projekt Office založený na dokumentu z existujícího projektu, vlastnosti pro všechny ovládací prvky, které jsou v dokumentu, nebudou zkopírovány do nového projektu. Vlastnosti pro všechny existující ovládací prvky musíte resetovat ručně. Alternativně můžete zachovat vlastnosti ovládacího prvku vytvořením kopie existujícího projektu místo vytvoření nového projektu nebo načtením existujícího projektu do nového řešení (v Návrháři) a zkopírováním a vložením ovládacích prvků ze stávajícího dokument do nového dokumentu.
 
-### <a name="errors-when-you-create-an-excel-workbook-project-based-on-an-existing-workbook"></a>Chyby při vytváření projektu sešitu aplikace Excel založené na existující sešit
- Pokud vytvoříte nový projekt sešitu aplikace Excel založený na existující sešit, může se zobrazit kombinaci následující chyby.
+### <a name="errors-when-you-create-an-excel-workbook-project-based-on-an-existing-workbook"></a>Chyby při vytváření projektu excelového sešitu na základě existujícího sešitu
+ Pokud vytvoříte nový projekt sešitu aplikace Excel na základě existujícího sešitu, může se zobrazit kombinace následujících chyb.
 
- Z aplikace Excel: "Upozornění o ochraně osobních údajů: Tento dokument obsahuje makra, ovládací prvky ActiveX, informace o balíčku rozšíření XML nebo webové součásti. Ty mohou obsahovat osobní informace, které nebude moct odebrat metadat."
+ Z aplikace Excel: "upozornění na ochranu osobních údajů: Tento dokument obsahuje makra, ovládací prvky ActiveX, informace rozšiřovacího balíku XML nebo webové součásti. To může zahrnovat osobní informace, které není možné odebrat nástrojem Document Inspector. "
 
- Ze sady Visual Studio: "Návrhář se nenačetl správně."
+ Ze sady Visual Studio: "návrháře se nepodařilo načíst správně."
 
- K těmto chybám může dojít, že se že pokusíte vytvořit projekt, který je založen na sešit, který měl jeho osobní údaje, pomocí metadat. K této chybě předejít, proveďte následující kroky před vytvořením projektu.
+ K těmto chybám může dojít při pokusu o vytvoření projektu, který je založen na sešitu, který měl své osobní informace odebrat pomocí nástroje Document Inspector. Chcete-li se této chybě vyhnout, proveďte následující kroky před vytvořením projektu.
 
-1. Otevřete sešit v Excelu.
+1. Otevřete sešit v aplikaci Excel.
 
-2. V aplikaci Excel otevřete v Centru zabezpečení.
+2. V aplikaci Excel otevřete Centrum zabezpečení.
 
-3. Na **možnosti ochrany osobních údajů** vymazat kartu **odebrat osobní údaje z vlastností souboru uložit** zaškrtávací políčko.
+3. Na kartě **Možnosti ochrany osobních údajů** zrušte zaškrtnutí políčka při **ukládání odebrat osobní údaje z vlastností souboru** .
 
-4. Sešit uložte a zavřete aplikaci Excel.
+4. Uložte sešit a zavřete aplikaci Excel.
 
-### <a name="cannot-open-a-project-after-migration"></a>Projekt nejde otevřít po migraci
- Po Office, které řešení je migrovat na systém Microsoft Office 2010 nelze projekt otevírán ve vývojovém počítači s pouze systému Microsoft Office 2007 nainstalovaný. Může se zobrazit následující chyby.
+### <a name="cannot-open-a-project-after-migration"></a>Po migraci nejde otevřít projekt.
+ Po migraci řešení Office na systém Microsoft Office 2010 se projekt nedá otevřít na vývojovém počítači, který má nainstalovaný jenom systém Microsoft Office systém 2007. Můžou se zobrazit následující chyby.
 
- "Jeden nebo více projektů v řešení nebylo správně načteno. Podrobnosti najdete ve výstupním okně Podrobnosti."
+ Jeden nebo více projektů v řešení nebylo načteno správně. Podrobnosti najdete v okno Výstup. "
 
- "Nejde vytvořit projekt, protože na tomto počítači není nainstalována aplikace spojené s tímto typem projektu. Je nutné nainstalovat aplikaci Microsoft Office, která souvisí s tímto typem projektu."
+ "Nelze vytvořit projekt, protože aplikace přidružená k tomuto typu projektu není na tomto počítači nainstalována. Je nutné nainstalovat aplikaci systém Microsoft Office, která je přidružena k tomuto typu projektu. "
 
- Chcete-li tento problém vyřešit, upravte *.vbproj* nebo *.csproj* souboru. Projekt aplikace Word nahradit HostPackage = "{763FDC83-64E5-4651-AC9B-28C4FEB985A1}" s HostPackage = "{6CE98B71-D55A-4305-87A8-0D6E368D9600}". Projektu aplikace Excel, nahraďte HostPackage = "{B284B16A-C42C-4438-BDCD-B72F4AC43CFB}" s HostPackage = "{825100CF-0BA7-47EA-A084-DCF3308DAF74}". Projekt aplikace Outlook, nahraďte HostPackage = "{D2B20FF5-A6E5-47E1-90E8-463C6860CB05}" s HostPackage = "{20A848B8-E01F-4801-962E-25DB0FF57389}".
+ Chcete-li tento problém vyřešit, upravte soubor *. vbproj* nebo *. csproj* . V případě projektu aplikace Word nahraďte HostPackage = "{763FDC83-64E5-4651-AC9B-28C4FEB985A1}" HostPackage = "{6CE98B71-D55A-4305-87A8-0D6E368D9600}". V případě projektu aplikace Excel nahraďte HostPackage = "{B284B16A-C42C-4438-BDCD-B72F4AC43CFB}" výrazem HostPackage = "{825100CF-0BA7-47EA-A084-DCF3308DAF74}". V případě projektu Outlook nahraďte HostPackage = "{D2B20FF5-A6E5-47E1-90E8-463C6860CB05}" HostPackage = "{20A848B8-E01F-4801-962E-25DB0FF57389}".
 
- Další možností je zajistěte, že migrované projekty jsou otevřít jenom ve vývojových počítačích se systémem Microsoft Office 2010 už nainstalovaná.
+ Případně se ujistěte, že migrované projekty jsou otevřeny pouze ve vývojových počítačích s již nainstalovaným systém Microsoft Office 2010.
 
-### <a name="errors-in-upgraded-office-2003-document-level-projects-that-contain-windows-forms-controls"></a>Chyby v upgradovaných projektů Office 2003 úrovni dokumentu, které obsahují ovládací prvky Windows Forms
- Pokud upgradujete projekt úrovni dokumentu aplikace Microsoft Office 2003 a dokument obsahuje ovládací prvky Windows Forms, upgradovaný projekt může být chyby kompilace nebo za běhu. K tomuto problému vyhnout, nainstalujte Visual Studio 2005 Tools for Office Second Edition Runtime na vývojovém počítači před upgradem projektu. Tato verze modulu runtime je k dispozici jako redistribuovatelný balíček ze služby Microsoft Download Center na [Microsoft Visual Studio 2005 Tools for Office Second Edition Runtime (VSTO 2005 SE) (x86)](http://go.microsoft.com/fwlink/?linkid=49612).
+### <a name="errors-in-upgraded-office-2003-document-level-projects-that-contain-windows-forms-controls"></a>Chyby v upgradovaných projektech na úrovni dokumentu Office 2003, které obsahují model Windows Forms ovládací prvky
+ Pokud upgradujete projekt na úrovni dokumentu systém Microsoft Office 2003 a dokument obsahuje model Windows Forms ovládací prvky, upgradovaný projekt může obsahovat chyby kompilace nebo běhu. Chcete-li se tomuto problému vyhnout, před upgradem projektu nainstalujte do vývojového počítače Visual Studio 2005 Tools for Office Second Edition Runtime. Tato verze modulu runtime je k dispozici jako Distribuovatelný balíček z webu Microsoft Download Center v [nástroji Microsoft Visual Studio 2005 Tools for Office Second Edition Runtime (VSTO 2005 se) (x86)](https://www.microsoft.com/download/details.aspx?id=2392).
 
- Po dokončení upgradu projektu můžete odinstalovat Visual Studio 2005 Tools for Office Second Edition Runtime z vývojového počítače. Pokud není používán jinými řešeními sady Office.
+ Po dokončení upgradu projektu můžete odinstalovat modul Visual Studio 2005 Tools for Office Second Edition Runtime z vývojového počítače, pokud ho nepoužívá žádná jiná řešení pro systém Office.
 
-## <a name="designers"></a> Pomocí návrhářů
- Při práci s dokumentu, sešitu nebo listu návrháře v projekty na úrovni dokumentu, mohou se vyskytnout následující chyby.
+## <a name="designers"></a>Použití návrhářů
+ Při práci s dokumentem, sešitem nebo návrhářem listů v projektech na úrovni dokumentu může dojít k následujícím chybám.
 
-### <a name="designer-failed-to-load-correctly"></a>Návrhář se nenačetl správně
+### <a name="designer-failed-to-load-correctly"></a>Návrhář se nepovedlo správně načíst.
  Visual Studio nemůže otevřít návrháře v následujících případech:
 
-- Aplikace Excel nebo Word je již otevřen a je zobrazení modálního dialogového okna. Otevřít návrháře, zkontrolujte, zda aplikace Excel nebo Word má modální dialogové okno otevřít a zavřít všechny otevřené modálních dialogových oken. Pokud nejsou otevřeny žádné modálních dialogových oken, může být nějakou jinou akci, která je požadována aplikace Excel nebo Word reaguje.
+- Aplikace Excel nebo Word je již otevřena a zobrazuje modální dialogové okno. Chcete-li otevřít návrháře, zkontrolujte, zda je v aplikaci Excel nebo Word otevřeno modální dialogové okno a zavřete všechna otevřená modální dialogová okna. Pokud neexistují žádná modální dialogová okna, může se stát, že před tím, než aplikace Excel nebo Word odpoví, bude nutné provést nějakou akci.
 
-- Projekt je momentálně laděna. Otevřete návrháři, zastavte nebo ukončete ladění.
+- Projekt se právě ladí. Chcete-li otevřít návrháře, zastavte nebo dokončete ladění.
 
-- VSTO Excelový doplněk, který je nainstalován na vývojovém počítači je zobrazení dialogového okna, při spuštění aplikace Excel. Vytvoření projektu úrovni dokumentu aplikace Excel, musíte nejprve zakázat doplňku VSTO.
+- Doplněk VSTO pro Excel, který je nainstalovaný ve vývojovém počítači, zobrazuje dialogové okno při spuštění Excelu. Chcete-li vytvořit projekt na úrovni dokumentu aplikace Excel, je nutné nejprve zakázat doplněk VSTO.
 
-### <a name="controls-appear-as-black-rectangles-on-the-document-or-worksheet"></a>Ovládací prvky se zobrazí jako černá obdélníků v dokumentu nebo listu
- Pokud jste skupinu pro ovládací prvky v dokumentu nebo listu, Visual Studio již nerozpoznává ovládací prvky. Seskupené ovládací prvky nelze přistupovat ve **vlastnosti** okně a zobrazí jako černá obdélníků v dokumentu nebo sešitu. Aby bylo možné obnovit jejich funkce musíte oddělit ovládací prvky.
+### <a name="controls-appear-as-black-rectangles-on-the-document-or-worksheet"></a>Ovládací prvky se zobrazí v dokumentu nebo listu jako černé obdélníky.
+ Pokud seskupete ovládací prvky na dokument nebo list, Visual Studio již nerozpozná ovládací prvky. Seskupené ovládací prvky nejsou dostupné v okně **vlastnosti** a zobrazují se jako černé obdélníky na dokumentu nebo listu. Aby bylo možné obnovit své funkce, je nutné zrušit seskupení ovládacích prvků.
 
-### <a name="controls-on-a-word-template-are-not-visible-in-visual-studio"></a>Ovládací prvky na šablonu aplikace Word se nezobrazí v sadě Visual Studio
- Pokud otevřete šablonu aplikace Word v návrháři aplikace Visual Studio nemusí být viditelné ovládací prvky na této šabloně, které nejsou v textu. Důvodem je, že Visual Studio otevře šablony aplikace Word v **normální** zobrazení. Chcete-li zobrazit ovládací prvky, klikněte na tlačítko **zobrazení** nabídky, přejděte k **Microsoft Office Word zobrazení** a potom klikněte na tlačítko **rozložení při tisku**.
+### <a name="controls-on-a-word-template-are-not-visible-in-visual-studio"></a>Ovládací prvky v šabloně aplikace Word nejsou viditelné v aplikaci Visual Studio.
+ Pokud otevřete šablonu aplikace Word v návrháři aplikace Visual Studio, ovládací prvky šablony, které nejsou v řádku s textem, nemusí být viditelné. Je to proto, že Visual Studio otevře šablony aplikace Word v **normálním** zobrazení. Chcete-li zobrazit ovládací prvky, klikněte na nabídku **zobrazení** , přejděte na příkaz **systém Microsoft Office zobrazení aplikace Word** a pak klikněte na tlačítko **rozložení tisku**.
 
-### <a name="insert-clip-art-command-does-nothing-in-the-visual-studio-designer"></a>Příkaz Insert klip obrázky neprovede v návrháři aplikace Visual Studio
- Pokud aplikace Excel nebo Word je otevřen v návrháři aplikace Visual Studio, kliknutím na tlačítko **klipart** tlačítko **ilustrace** nelze otevřít kartu na pásu karet **klipart** podokna úloh. Chcete-li přidat klipart, je nutné otevřít kopii sešitu nebo dokument, který je ve složce hlavní projekt (nelze kopírovat, který je v *\bin* složky) mimo sadu Visual Studio, přidejte klipart a pak uložte sešit nebo dokumentu.
+### <a name="insert-clip-art-command-does-nothing-in-the-visual-studio-designer"></a>Příkaz Vložit klipart v návrháři sady Visual Studio nic nedělá.
+ Když je Excel nebo Word otevřený v návrháři sady Visual Studio, kliknutím na **tlačítko Klipart** na kartě **ilustrace** na pásu karet se neotevře podokno úloh **klipartu** . Chcete-li přidat klipart, je nutné otevřít kopii sešitu nebo dokumentu, který je v hlavní složce projektu (nikoli kopii, která je ve složce *\Bin* ) mimo aplikaci Visual Studio, přidat klipart a následně uložit sešit nebo dokument.
 
-## <a name="code"></a> Psaní kódu
- Pokud píšete kód v projektech Office, mohou se vyskytnout následující chyby.
+## <a name="code"></a>Napsat kód
+ Při psaní kódu v projektech pro systém Office může dojít k následujícím chybám.
 
-### <a name="some-events-of-office-objects-are-not-accessible-when-using-c"></a>Některé události z objektů sady Office nejsou přístupné, při použití jazyka C\#
- V některých případech se může zobrazit chyba kompilátoru následujícím postupem při pokusu o přístup k určité události instance Office primární sestavení vzájemné spolupráce (PIA) zadejte v projektu jazyka Visual C#.
+### <a name="some-events-of-office-objects-are-not-accessible-when-using-c"></a>Některé události objektů Office nejsou při použití jazyka C\# dostupné.
+ V některých případech se může při pokusu o přístup k určité události instance typu PIA (Primary Interop Assembly) ve Visual C# projektu zobrazit chyba kompilátoru, například následující.
 
- "Byla zjištěna dvojznačnost mezi"Microsoft.Office.Interop.Excel._Application.NewWorkbook"a"Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook."
+ "Nejednoznačnost mezi" Microsoft. Office. Interop. Excel. _Application. NewWorkbook "a" Microsoft. Office. Interop. Excel. AppEvents_Event. NewWorkbook ""
 
- Tato chyba znamená, že se pokoušíte získat přístup k události, která má stejný název jako jiný vlastnost nebo metodu objektu. Pro přístup k události, musíte vysílat na objekt jeho *rozhraní události*.
+ Tato chyba znamená, že se pokoušíte o přístup k události, která má stejný název jako jiná vlastnost nebo metoda objektu. Chcete-li získat přístup k události, je nutné přetypovat objekt na jeho *rozhraní události*.
 
- Typy PIA sady Office, které události mají implementovat dvě rozhraní: základní rozhraní se všemi vlastnosti a metody a události rozhraní, které obsahuje události, které jsou vystaveny v objektu. Tyto události rozhraní použít zásady vytváření názvů *objectname*události*n*_událostí, jako například <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> a <xref:Microsoft.Office.Interop.Word.ApplicationEvents2_Event>. Pokud nelze získat přístup k události, ke které jste očekávali na objekt, objekt přetypujte na jeho rozhraní události.
+ Typy PIA Office, které mají události, implementují dvě rozhraní: základní rozhraní se všemi vlastnostmi a metodami a rozhraní události obsahující události, které jsou vystavené objektem. Tato rozhraní událostí používají zásady pojmenování *ObjectName*události*n*_Event, například <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> a <xref:Microsoft.Office.Interop.Word.ApplicationEvents2_Event>. Pokud nemůžete získat přístup k události, kterou očekáváte najít u objektu, přetypování objektu na jeho rozhraní události.
 
- Například <xref:Microsoft.Office.Interop.Excel.Application> objekty mají <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> událostí a <xref:Microsoft.Office.Interop.Excel._Application.NewWorkbook%2A> vlastnost. Zpracování <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> přetypovat <xref:Microsoft.Office.Interop.Excel.Application> k <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> rozhraní. Následující příklad kódu ukazuje, jak to provést v projektu úrovni dokumentu pro Excel.
+ Například <xref:Microsoft.Office.Interop.Excel.Application> objektů mají událost <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> a vlastnost <xref:Microsoft.Office.Interop.Excel._Application.NewWorkbook%2A>. Chcete-li zpracovat událost <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook>, přetypování <xref:Microsoft.Office.Interop.Excel.Application> na rozhraní <xref:Microsoft.Office.Interop.Excel.AppEvents_Event>. Následující příklad kódu ukazuje, jak to provést v projektu na úrovni dokumentu pro Excel.
 
  [!code-csharp[Trin_VstcoreTroubleshootingExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingExcelCS/ThisWorkbook.cs#1)]
 
- Další informace o rozhraních událostí v sestavení PIA sady Office naleznete v tématu [přehled třídy a rozhraní v primární spolupracující sestavení Office](/previous-versions/office/office-12//ms247299(v=office.12)).
+ Další informace o rozhraních událostí v rámci PIA pro Office naleznete v tématu [Přehled tříd a rozhraní v primárních sestaveních vzájemné spolupráce pro systém Office](/previous-versions/office/office-12//ms247299(v=office.12)).
 
-### <a name="cannot-reference-office-pia-classes-in-projects-that-target-the-includenetv40shortsharepointincludesnet-v40-short-mdmd-or-the-includenetv45vstoincludesnet-v45-mdmd"></a>Nelze odkaz Office PIA tříd v projektech, které se zaměřují [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]
- V projektech, které se zaměřují [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], ve výchozím nastavení nebude kompilovat kód, který odkazuje na třídu, která je definována v Office PIA. Třídy v sestavení PIA použít zásady vytváření názvů *objectname*třídy, jako například <xref:Microsoft.Office.Interop.Word.DocumentClass> a <xref:Microsoft.Office.Interop.Excel.WorkbookClass>. Například následující kód z projektu doplňku VSTO pro Word, nebude kompilovat.
+### <a name="cannot-reference-office-pia-classes-in-projects-that-target-the-includenet_v40_shortsharepointincludesnet-v40-short-mdmd-or-the-includenet_v45vstoincludesnet-v45-mdmd"></a>Nejde odkazovat na třídy Office PIA v projektech, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]
+ V projektech, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], kód, který odkazuje na třídu, která je definována v Office PIA, se ve výchozím nastavení nezkompiluje. Třídy v PIA využívají třídu *ObjectName*pro pojmenování, například <xref:Microsoft.Office.Interop.Word.DocumentClass> a <xref:Microsoft.Office.Interop.Excel.WorkbookClass>. Například následující kód z projektu doplňku VSTO aplikace Word nebude zkompilován.
 
 ```vb
 Dim document As Word.DocumentClass = Globals.ThisAddIn.Application.ActiveDocument
@@ -134,13 +134,13 @@ Dim document As Word.DocumentClass = Globals.ThisAddIn.Application.ActiveDocumen
 Word.DocumentClass document = (Word.DocumentClass) Globals.ThisAddIn.Application.ActiveDocument;
 ```
 
- Tento kód vrátí následující chyby kompilace:
+ Výsledkem tohoto kódu jsou následující chyby při kompilaci:
 
-- Visual Basic: "Odkaz na třídu"Třídu DocumentClass"není povolena, pokud je její sestavení odkazováno prostřednictvím režimu No-PIA."
+- Visual Basic: odkaz na třídu DocumentClass není povolený, pokud je jeho sestavení propojeno pomocí režimu no-PIA.
 
-- Vizuální C#: "Typ spolupráce, které 'Microsoft.Office.Interop.Word.DocumentClass' nemůže být vložený. Použijte příslušné rozhraní."
+- Visual C#: typ spolupráce Microsoft. Office. Interop. Word. DocumentClass nemůže být vložený. Místo toho použijte příslušné rozhraní. "
 
-  Chcete-li vyřešit tuto chybu, upravte kód, který odkazuje odpovídající rozhraní místo. Například místo odkazu <xref:Microsoft.Office.Interop.Word.DocumentClass> objektu, odkazovat na instanci <xref:Microsoft.Office.Interop.Word.Document> místo toho rozhraní.
+  Chcete-li tuto chybu vyřešit, upravte kód tak, aby odkazoval na odpovídající rozhraní. Například namísto odkazování na objekt <xref:Microsoft.Office.Interop.Word.DocumentClass>, místo toho odkazování na instanci rozhraní <xref:Microsoft.Office.Interop.Word.Document>.
 
 ```vb
 Dim document As Word.Document = Globals.ThisAddIn.Application.ActiveDocument
@@ -150,70 +150,70 @@ Dim document As Word.Document = Globals.ThisAddIn.Application.ActiveDocument
 Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
 ```
 
- Projekty, které cílí [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], automaticky vložit všechny typy spolupráce ze sestavení PIA sady Office ve výchozím nastavení. Tuto chybu kompilace dochází, protože funkce vestavěné typy spolupráce funguje pouze s rozhraními, nikoliv třídy. Další informace o rozhraní a třídy v sestavení PIA sady Office naleznete v tématu [přehled třídy a rozhraní v primární spolupracující sestavení Office](http://go.microsoft.com/fwlink/?LinkId=189592). Další informace o funkci vestavěné typy spolupráce na projektech pro systém Office naleznete v tématu [návrhu a vytvořte řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md).
+ Projekty, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], ve výchozím nastavení automaticky vloží všechny typy spolupráce z PIA pro Office. K této chybě kompilace dojde, protože funkce vloženého typu spolupráce funguje pouze s rozhraními, nikoli třídy. Další informace o rozhraních a třídách v rámci PIA pro Office naleznete v tématu [Přehled tříd a rozhraní v primárních sestaveních vzájemné spolupráce pro systém Office](/previous-versions/office/office-12/ms247299(v=office.12)). Další informace o funkci vložených typů spolupráce v projektech Office najdete v tématu [Návrh a vytváření řešení pro Office](../vsto/designing-and-creating-office-solutions.md).
 
-### <a name="references-to-office-classes-are-not-recognized"></a>Odkazy na třídy Office nejsou rozpoznány.
- V několika oborech názvů, jako jsou některé názvy tříd, například aplikace, <xref:Microsoft.Office.Interop.Word> a <xref:System.Windows.Forms>. Z tohoto důvodu **importy**/**pomocí** příkazu v horní části šablony projektu zahrnuje sdružená kvalifikaci – konstanta, například:
+### <a name="references-to-office-classes-are-not-recognized"></a>Odkazy na třídy sady Office nejsou rozpoznány.
+ Některé názvy tříd, například aplikace, jsou ve více oborech názvů, například <xref:Microsoft.Office.Interop.Word> a <xref:System.Windows.Forms>. Z tohoto důvodu příkaz **imports**/**using** v horní části šablon projektu obsahuje zkrácený kvalifikační konstantu, například:
 
  [!code-csharp[Trin_VstcoreTroubleshootingWord#2](../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs#2)]
  [!code-vb[Trin_VstcoreTroubleshootingWord#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb#2)]
 
- Toto použití **importy**/**pomocí** vyžaduje rozlišení odkazů na třídy Office s kvalifikátorem Word nebo Excel, například:
+ Toto použití příkazu **imports**/**using** vyžaduje, abyste rozlišili odkazy na třídy Office pomocí kvalifikátoru Wordu nebo Excelu, například:
 
  [!code-csharp[Trin_VstcoreTroubleshootingWord#3](../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs#3)]
  [!code-vb[Trin_VstcoreTroubleshootingWord#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb#3)]
 
- Chyby se zobrazí, když použijete nekvalifikované prohlášení, například:
+ Pokud použijete nekvalifikovanou deklaraci, zobrazí se chyby, například:
 
  [!code-csharp[Trin_VstcoreTroubleshootingWord#4](../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs#4)]
  [!code-vb[Trin_VstcoreTroubleshootingWord#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb#4)]
 
- I když jste importovali obor názvů aplikaci Word nebo Excel a mají přístup ke všem třídám dovnitř musí plně kvalifikovat všechny typy s Word nebo Excel k odebrání oboru názvů nejednoznačnost.
+ I když jste naimportovali obor názvů Wordu nebo Excelu a máte přístup ke všem třídám uvnitř něj, musíte plně kvalifikovat všechny typy pomocí Wordu nebo Excelu, aby se odstranila nejednoznačnost oboru názvů.
 
-## <a name="building"></a> Sestavení projektů
- Při sestavování projektů Office, mohou se vyskytnout následující chyby.
+## <a name="building"></a>Sestavit projekty
+ Při sestavování projektů Office může dojít k následujícím chybám.
 
-### <a name="cannot-build-a-document-level-project-that-is-based-on-a-document-with-restricted-permissions"></a>Nelze sestavit projekt úrovni dokumentu, který je založen na dokument s omezenými oprávněními
- Visual Studio nemůže vytvořit projekty na úrovni dokumentu, pokud dokument má omezená oprávnění. Pokud váš projekt obsahuje dokument, který má omezená oprávnění, projekt nepůjde kompilovat a zobrazí se následující zpráva **seznam chyb** okna.
+### <a name="cannot-build-a-document-level-project-that-is-based-on-a-document-with-restricted-permissions"></a>Nejde sestavit projekt na úrovni dokumentu, který je založený na dokumentu s omezenými oprávněními.
+ Visual Studio nemůže sestavit projekty na úrovni dokumentu, pokud má dokument omezená oprávnění. Pokud projekt obsahuje dokument, který má omezená oprávnění, projekt nebude zkompilován a v okně **Seznam chyb** se zobrazí následující zpráva.
 
- "Nepovedlo se přidat přizpůsobení."
+ "Nepovedlo se přidat vlastní nastavení."
 
- Pokud chcete zahrnout dokument, který má omezená oprávnění, použijte dokument neomezený při vývoji a sestavte řešení. Po publikování řešení pak použijte omezená oprávnění k dokumentu v umístění pro publikování.
+ Pokud chcete zahrnout dokument s omezenými oprávněními, použijte při vývoji a sestavení řešení neomezený dokument. Pak po publikování řešení použijte omezená oprávnění k dokumentu v umístění publikování.
 
-### <a name="compiler-errors-occur-after-a-namedrange-control-is-deleted"></a>Po odstranění ovládacím prvkem namedrange dojít k chybám kompilátoru
- Pokud odstraníte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku z listu, který není v aktivním listu v návrháři, automaticky vygenerovaný kód nemusí být odebráno z projektu a může dojít k chybám kompilátoru. Pokud chcete mít jistotu, kód se odebere, byste měli vždy vybrat list, který obsahuje <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku k němu aktivního listu před odstraněním ovládacího prvku. Pokud automaticky generovaný kód není odstraněn, když odstraníte ovládací prvek, může způsobit návrháře odstranit kód tak, že aktivace listu a listu bude označena jako upravená tak, aby provedením změny. Při opětovném sestavování projektu kódu se odebere.
+### <a name="compiler-errors-occur-after-a-namedrange-control-is-deleted"></a>Po odstranění ovládacího prvku NamedRange dojde k chybám kompilátoru.
+ Pokud odstraníte ovládací prvek <xref:Microsoft.Office.Tools.Excel.NamedRange> z listu, který není aktivním listem v návrháři, automaticky generovaný kód nemusí být odebrán z projektu a může dojít k chybám kompilátoru. Abyste se ujistili, že je kód odebraný, měli byste vždy vybrat list, který obsahuje ovládací prvek <xref:Microsoft.Office.Tools.Excel.NamedRange>, aby byl aktivním listem před odstraněním ovládacího prvku. Pokud se automaticky generovaný kód neodstraní při odstranění ovládacího prvku, můžete způsobit, že návrhář tento kód odstraní aktivací listu a provedením změny tak, aby byl list označený jako změněný. Při opětovném sestavování projektu se kód odebere.
 
-## <a name="debugging"></a> Ladění projektů
- Při ladění projektů Office, mohou se vyskytnout následující chyby.
+## <a name="debugging"></a>Ladit projekty
+ Při ladění projektů Office může dojít k následujícím chybám.
 
-### <a name="prompt-to-uninstall-appears-when-you-publish-and-install-a-solution-on-the-development-computer"></a>Řádek pro odinstalaci se zobrazí, když publikujete a instalaci řešení na vývojovém počítači
- Při ladění řešení pro Office se může zobrazit následující chyba.
+### <a name="prompt-to-uninstall-appears-when-you-publish-and-install-a-solution-on-the-development-computer"></a>Při publikování a instalaci řešení na vývojovém počítači se zobrazí výzva k odinstalaci.
+ Při ladění řešení pro systém Office se může zobrazit následující chyba.
 
- "Přizpůsobení nelze nainstalovat, protože jiná verze je nainstalovaná a nedá se upgradovat z tohoto umístění."
+ "Přizpůsobení se nedá nainstalovat, protože je aktuálně nainstalovaná jiná verze a nedá se upgradovat z tohoto umístění."
 
- Tato chyba označuje, že jste publikována a nainstalované řešení Office na vývojovém počítači. Chcete-li zabránit zobrazování zprávu, řešení v seznamu nainstalovaných programů v počítači před odinstalujte ladění řešení. Alternativně můžete vytvořit jiný uživatelský účet na vašem vývojovém počítači a otestujte instalaci publikované řešení.
+ Tato chyba znamená, že jste již dříve publikovali a nainstalovali řešení Office na vývojovém počítači. Chcete-li zabránit zobrazení zprávy, odinstalujte řešení ze seznamu nainstalovaných programů v počítači před laděním řešení. Případně můžete na svém vývojovém počítači vytvořit jiný uživatelský účet, který otestuje instalaci publikovaného řešení.
 
-### <a name="document-level-projects-created-at-unc-network-locations-do-not-run-from-visual-studio"></a>Projekty na úrovni dokumentu vytvořeno v umístění v síti UNC nespouštějte ze sady Visual Studio
- Pokud vytvoříte projekt úrovni dokumentu pro Excel nebo Word v síťovém umístění UNC, je nutné přidat umístění dokumentu do seznamu důvěryhodných umístění v aplikaci Excel nebo Word. V opačném případě přizpůsobení se nenačte při pokusu o spuštění nebo ladění projektu v sadě Visual Studio. Další informace o důvěryhodných umístění naleznete v tématu [udělit důvěryhodnost dokumenty](../vsto/granting-trust-to-documents.md).
+### <a name="document-level-projects-created-at-unc-network-locations-do-not-run-from-visual-studio"></a>Projekty na úrovni dokumentu vytvořené v umístění UNC do sítě se nespouštějí ze sady Visual Studio.
+ Pokud vytvoříte projekt na úrovni dokumentu pro aplikaci Excel nebo Word v umístění v síti UNC, je nutné přidat umístění dokumentu do seznamu důvěryhodných umístění v aplikaci Excel nebo Word. V opačném případě se přizpůsobení nenačte při pokusu o spuštění nebo ladění projektu v aplikaci Visual Studio. Další informace o důvěryhodných umístěních najdete v tématu [udělení důvěryhodnosti k dokumentům](../vsto/granting-trust-to-documents.md).
 
-### <a name="threads-are-not-stopped-correctly-after-debugging"></a>Vlákna nejsou správně zastavena po ladění
- Projekty Office v sadě Visual Studio podle vlákna konvence, které umožňují ladicímu programu řádně ukončit program. Pokud vytvoříte vlákna ve vašem řešení, byste měli pojmenovat každé vlákno s předponou VSTA_ Ujistěte se, že tato vlákna jsou správně zpracovány, když zastavíte ladění. Například může být nastaven `Name` vlastnost vlákna, která čeká na událost sítě **VSTA_NetworkListener**.
+### <a name="threads-are-not-stopped-correctly-after-debugging"></a>Po ladění se vlákna nezastavila správně.
+ Projekty Office v sadě Visual Studio následují konvence vytváření názvů vláken, která umožňuje ladicímu programu program správně zavřít. Pokud vytvoříte vlákna ve vašem řešení, měli byste pojmenovat každé vlákno s předponou VSTA_, abyste zajistili, že tato vlákna budou zpracována správně při zastavení ladění. Například můžete nastavit vlastnost `Name` vlákna, které čeká na **VSTA_NetworkListener**síťovou událost.
 
-### <a name="cannot-run-or-debug-any-office-solution-on-the-development-computer"></a>Nelze spustit nebo ladit jakékoli řešení Office na vývojovém počítači
- Pokud nelze spustit nebo vývoj projektu aplikace Office na vývojovém počítači, zobrazí se následující chybová zpráva.
+### <a name="cannot-run-or-debug-any-office-solution-on-the-development-computer"></a>Nejde spustit ani ladit žádné řešení Office na vývojovém počítači.
+ Pokud nemůžete spustit nebo vyvíjet projekt sady Office na vývojovém počítači, může se zobrazit následující chybová zpráva.
 
- "Vlastního nastavení nelze načíst, protože nelze vytvořit doménu aplikace."
+ "Přizpůsobení nelze načíst, protože doménu aplikace nelze vytvořit."
 
- Visual Studio používá Fusion, zavaděč sestavení rozhraní .NET Framework, pro ukládání do mezipaměti sestavení před načtením řešení pro systém Office. Ujistěte se, že Visual Studio můžete zapsat do mezipaměti fúze a zkuste to znovu. Další informace najdete v tématu [sestavení stínových kopií](/dotnet/framework/app-domains/shadow-copy-assemblies).
+ Sada Visual Studio používá rozhraní Fusion, .NET Framework zavaděč sestavení, aby sestavení mohla ukládat do mezipaměti před načtením řešení pro systém Office. Zajistěte, aby aplikace Visual Studio mohla zapisovat do mezipaměti Fusion, a akci opakujte. Další informace najdete v tématu [sestavení stínových kopií](/dotnet/framework/app-domains/shadow-copy-assemblies).
 
-### <a name="error-when-stopping-the-debugger-in-a-document-level-project-after-using-edit-and-continue"></a>Chyba při zastavení ladicího programu v projektu úrovni dokumentu po použitím funkce upravit a pokračovat
- Pokud používáte **upravit** a **pokračovat** provést změny kódu v projektu úrovni dokumentu pro aplikaci Excel nebo Word projekt je v režimu přerušení, může se zobrazit dialogové okno s následující chybová zpráva. Pokud jste následně ukončete ladicí program.
+### <a name="error-when-stopping-the-debugger-in-a-document-level-project-after-using-edit-and-continue"></a>Chyba při zastavování ladicího programu v projektu na úrovni dokumentu po použití operace Upravit a pokračovat
+ Použijete-li příkaz **Upravit** a **pokračovat** k provedení změn kódu v projektu na úrovni dokumentu aplikace Excel nebo Word v době, kdy je projekt v režimu pozastavení, může se zobrazit dialogové okno s následující chybovou zprávou, pokud následně zastavíte ladicí program.
 
- "Ukončení procesu v jejím aktuálním stavu způsobit nežádoucí výsledky včetně ztráty dat a nestability systému."
+ "Ukončení procesu v jeho aktuálním stavu může způsobit neočekávané výsledky, včetně ztráty dat a nestability systému."
 
- Určuje, zda kliknete **Ano** nebo **ne** v dialogovém okně Visual Studio ukončí proces aplikace Excel nebo Word a ladicí program se zastaví. Pokud chcete zastavit ladění projektu bez zobrazení dialogovému oknu, ukončete aplikaci Excel nebo Word přímo spíše než při zastavení ladicího programu v sadě Visual Studio.
+ Bez ohledu na to, zda v dialogovém okně kliknete na tlačítko **Ano** nebo **ne** , aplikace Visual Studio ukončí proces aplikace Excel nebo Word a zastaví ladicí program. Chcete-li zastavit ladění projektu bez zobrazení tohoto dialogového okna, ukončete aplikaci Excel nebo Word přímo místo zastavení ladicího programu v aplikaci Visual Studio.
 
 ## <a name="see-also"></a>Viz také:
-- [Řešení potíží s řešení pro systém Office](../vsto/troubleshooting-office-solutions.md)
+- [Řešení potíží s řešeními pro systém Office](../vsto/troubleshooting-office-solutions.md)
 - [Řešení potíží se zabezpečením řešení pro systém Office](../vsto/troubleshooting-office-solution-security.md)
 - [Řešení potíží s nasazením řešení pro systém Office](../vsto/troubleshooting-office-solution-deployment.md)

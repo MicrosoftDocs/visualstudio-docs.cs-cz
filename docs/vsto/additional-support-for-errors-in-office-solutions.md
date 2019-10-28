@@ -56,22 +56,22 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fb5877bccdc60d031e6ccd799eb6536df15fda38
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 01b225b27dfe9c5e1f006105b8e2676a509234b9
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62953185"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984625"
 ---
 # <a name="additional-support-for-errors-in-office-solutions"></a>Další podpora pro chyby v řešeních pro systém Office
 
-Můžete použít následující zdroje vám pomůžou najít odpovědi na problémy, na které narazíte, jako je vytváření řešení pro systém Office v sadě Visual Studio.
+Následující prostředky vám pomohou najít odpovědi na problémy, se kterými se setkáte při vytváření řešení pro systém Office v sadě Visual Studio.
 
-## <a name="troubleshoot-specific-errors"></a>Poradce při potížích s konkrétními chybami
+## <a name="troubleshoot-specific-errors"></a>Řešení specifických chyb
 
-Potřebujete pomoc se některé běžné chyby v řešeních pro systém Office naleznete v následujících tématech:
+Pomoc s některými běžnými chybami v řešeních pro systém Office najdete v následujících tématech:
 
-- [Řešení potíží s chybami v řešeních pro systém Office](../vsto/troubleshooting-errors-in-office-solutions.md)
+- [Řešení chyb v řešeních pro systém Office](../vsto/troubleshooting-errors-in-office-solutions.md)
 
 - [Řešení potíží se zabezpečením řešení pro systém Office](../vsto/troubleshooting-office-solution-security.md)
 
@@ -79,21 +79,21 @@ Potřebujete pomoc se některé běžné chyby v řešeních pro systém Office 
 
 ## <a name="other-resources"></a>Další zdroje
 
-[Visual Studio tools pro Office fórum](http://go.microsoft.com/fwlink/?LinkId=149744)
+[Fórum pro Visual Studio Tools for Office](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vsto)
 
-Poskytuje diskusní fórum pro otázky týkající se nástroje Office developer tools v sadě Visual Studio.
+Poskytuje fórum pro otázky týkající se vývojářských nástrojů Office v sadě Visual Studio.
 
-[Nápovědu a podporu Microsoftu](http://go.microsoft.com/fwlink/?LinkID=108287)
+[Pomoc a podpora společnosti Microsoft](https://support.microsoft.com)
 
 Poskytuje přístup k článkům znalostní báze, souborům ke stažení a aktualizacím, webovému vysílání podpory a jiným službám.
 
-[Další zdroje informací pro vývoj řešení pro systém Office](../vsto/additional-resources-for-developing-office-solutions.md)
+[Další zdroje informací o vývoji řešení pro systém Office](../vsto/additional-resources-for-developing-office-solutions.md)
 
-Obsahuje odkazy na další zdroje informací pro dostávat další informace o vývoji řešení pro systém Office a vývoj pro Office pomocí sady Visual Studio.
+Poskytuje odkazy na další zdroje informací o vývoji řešení pro systém Office a vývoji pro Office pomocí sady Visual Studio.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Řešení potíží s chybami v řešeních pro systém Office](../vsto/troubleshooting-errors-in-office-solutions.md)
+- [Řešení chyb v řešeních pro systém Office](../vsto/troubleshooting-errors-in-office-solutions.md)
 - [Řešení potíží se zabezpečením řešení pro systém Office](../vsto/troubleshooting-office-solution-security.md)
 - [Řešení potíží s nasazením řešení pro systém Office](../vsto/troubleshooting-office-solution-deployment.md)
-- [Další zdroje informací pro vývoj řešení pro systém Office](../vsto/additional-resources-for-developing-office-solutions.md)
+- [Další zdroje informací o vývoji řešení pro systém Office](../vsto/additional-resources-for-developing-office-solutions.md)

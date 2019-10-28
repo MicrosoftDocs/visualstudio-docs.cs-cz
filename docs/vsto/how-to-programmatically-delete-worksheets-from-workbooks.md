@@ -13,63 +13,63 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9ecc39e72a336c390c85f1caf2c80c6643acbb61
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 04c7eafd99d122c0b502e4b804b050bf7c59761f
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63412540"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985832"
 ---
 # <a name="how-to-programmatically-delete-worksheets-from-workbooks"></a>Postupy: Odstraňování listů ze sešitů prostřednictvím kódu programu
-  Můžete odstranit všechny listu v sešitu. Pokud chcete odstranit tabulku, pomocí hostitelská položka worksheet nebo přistupovat ke listu pomocí kolekce listů sešitu.
+  Můžete odstranit kterýkoli list v sešitu. Chcete-li odstranit list, použijte položku hostitele listu nebo přejděte k listu pomocí kolekce listů sešitu.
 
- [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
+ [!INCLUDE[appliesto_xlalldocapp](includes/appliesto-xlalldocapp-md.md)]
 
-## <a name="use-the-worksheet-host-item"></a>Použití hostitelská položka worksheet
- Pokud v době návrhu v přizpůsobení na úrovni dokumentu byla přidána do listu, použijte <xref:Microsoft.Office.Tools.Excel.Worksheet.Delete%2A> metoda odstranění zadaného listu. Následující kód do listu odstraní ze sešitu odkazem hostitelská položka worksheet přímo.
+## <a name="use-the-worksheet-host-item"></a>Použít položku hostitele listu
+ Pokud byl sešit přidán v době návrhu v přizpůsobení na úrovni dokumentu, použijte metodu <xref:Microsoft.Office.Tools.Excel.Worksheet.Delete%2A> k odstranění zadaného listu. Následující kód odstraní list ze sešitu odkazem přímo na položku hostitele na listu.
 
 > [!IMPORTANT]
-> Tento kód se spustí jenom v projektech, které vytvoříte pomocí některého z následujících šablon projektu:
+> Tento kód se spouští pouze v projektech, které vytvoříte pomocí kterékoli z následujících šablon projektu:
 >
 > - Sešit aplikace Excel 2013
-> - Šablonu v Excelu 2013
+> - Šablona Excelu 2013
 > - Sešit aplikace Excel 2010
 > - Šablona aplikace Excel 2010
 >
->   Pokud chcete k provedení této úlohy v jakýkoli jiný typ projektu, je nutné přidat odkaz na **Microsoft.Office.Interop.Excel** sestavení a pak pomocí třídy z tohoto sestavení k otevření sešitu a odstranění listu. Další informace najdete v tématu [jak: Cílení na aplikace Office primárních sestaveních vzájemné spolupráce](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md) a [odkaz na primární spolupracující sestavení aplikace Excel 2010](http://go.microsoft.com/fwlink/?LinkId=189585).
+>   Chcete-li tuto úlohu provést v jakémkoli jiném typu projektu, je nutné přidat odkaz na sestavení **Microsoft. Office. Interop. Excel** a poté je nutné použít třídy z tohoto sestavení k otevření sešitu a odstranění listu. Další informace najdete v tématu [Postupy: cílení aplikací Office prostřednictvím primárních sestavení spolupráce](how-to-target-office-applications-through-primary-interop-assemblies.md) a [odkaz na primární definiční sestavení v Excelu 2010](office-primary-interop-assemblies.md).
 
-### <a name="to-delete-a-worksheet-by-using-a-worksheet-host-item"></a>Chcete-li odstranit na listu s použitím hostitelská položka worksheet
+### <a name="to-delete-a-worksheet-by-using-a-worksheet-host-item"></a>Odstranění listu pomocí položky hostitele na listu
 
-1. Volání <xref:Microsoft.Office.Tools.Excel.Worksheet.Delete%2A> metoda `Sheet1`.
+1. Zavolejte metodu <xref:Microsoft.Office.Tools.Excel.Worksheet.Delete%2A> `Sheet1`.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#17](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#17)]
-     [!code-vb[Trin_VstcoreExcelAutomation#17](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#17)]
+     [!code-csharp[Trin_VstcoreExcelAutomation#17](codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#17)]
+     [!code-vb[Trin_VstcoreExcelAutomation#17](codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#17)]
 
-## <a name="use-the-sheets-collection-of-the-excel-workbook"></a>Kolekce stylů Excelový sešit
- Přístup k listů prostřednictvím aplikace Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Sheets> kolekce v následujících případech:
+## <a name="use-the-sheets-collection-of-the-excel-workbook"></a>Použití kolekce listů excelového sešitu
+ Přístup k listům prostřednictvím kolekce systém Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Sheets> v následujících případech:
 
-- Chcete odstranit tabulku v doplňku VSTO.
+- Chcete odstranit list v doplňku VSTO.
 
-- List, který chcete odstranit byl vytvořen v době běhu v přizpůsobení na úrovni dokumentu.
+- List, který chcete odstranit, byl vytvořen v době běhu v přizpůsobení na úrovni dokumentu.
 
-  Následující kód odstraní tabulku ze sešitu odkazováním na listu prostřednictvím indexové číslo **seznamy** kolekce. Tento kód předpokládá, že se vytvořil programově do nového listu.
+  Následující kód odstraní list ze sešitu odkazem na list s číslem indexu kolekce **listů** . Tento kód předpokládá, že byl vytvořen nový list programově.
 
 > [!IMPORTANT]
-> Pokud chcete k provedení této úlohy v jakýkoli jiný typ projektu, je nutné přidat odkaz na **Microsoft.Office.Interop.Excel** sestavení a pak pomocí třídy z tohoto sestavení k otevření sešitu a odstranění listu. Další informace najdete v tématu [jak: Cílení na aplikace Office primárních sestaveních vzájemné spolupráce](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md) a [odkaz na primární spolupracující sestavení aplikace Excel 2010](http://go.microsoft.com/fwlink/?LinkId=189585).
+> Chcete-li tuto úlohu provést v jakémkoli jiném typu projektu, je nutné přidat odkaz na sestavení **Microsoft. Office. Interop. Excel** a poté je nutné použít třídy z tohoto sestavení k otevření sešitu a odstranění listu. Další informace najdete v tématu [Postupy: cílení aplikací Office prostřednictvím primárních sestavení spolupráce](how-to-target-office-applications-through-primary-interop-assemblies.md) a [odkaz na primární definiční sestavení v Excelu 2010](office-primary-interop-assemblies.md).
 
-### <a name="to-delete-a-worksheet-by-using-the-sheets-collection-of-the-excel-workbook"></a>Chcete-li odstranit listu pomocí kolekce listech sešitu aplikace Excel
+### <a name="to-delete-a-worksheet-by-using-the-sheets-collection-of-the-excel-workbook"></a>Odstranění listu pomocí kolekce listů sešitu aplikace Excel
 
-1. Volání <xref:Microsoft.Office.Interop.Excel._Worksheet.Delete%2A> metodu <xref:Microsoft.Office.Interop.Excel.Sheets> kolekce.
+1. Volejte metodu <xref:Microsoft.Office.Interop.Excel._Worksheet.Delete%2A> kolekce <xref:Microsoft.Office.Interop.Excel.Sheets>.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#18](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#18)]
-     [!code-vb[Trin_VstcoreExcelAutomation#18](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#18)]
+     [!code-csharp[Trin_VstcoreExcelAutomation#18](codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#18)]
+     [!code-vb[Trin_VstcoreExcelAutomation#18](codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#18)]
 
 ## <a name="see-also"></a>Viz také:
-- [Práce s listy](../vsto/working-with-worksheets.md)
-- [Postupy: Skrývání listů prostřednictvím kódu programu](../vsto/how-to-programmatically-hide-worksheets.md)
-- [Postupy: Přesouvání listů v sešitech prostřednictvím kódu programu](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md)
-- [Postupy: Výběr listů prostřednictvím kódu programu](../vsto/how-to-programmatically-select-worksheets.md)
-- [Postupy: Přidávání nových listů do sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)
-- [Hostitelská položka Worksheet](../vsto/worksheet-host-item.md)
-- [Globální přístup k objektům v projektech pro systém Office](../vsto/global-access-to-objects-in-office-projects.md)
-- [Programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Práce s listy](working-with-worksheets.md)
+- [Postupy: skrývání listů prostřednictvím kódu programu](how-to-programmatically-hide-worksheets.md)
+- [Postupy: přesouvání listů v sešitech prostřednictvím kódu programu](how-to-programmatically-move-worksheets-within-workbooks.md)
+- [Postupy: Výběr listů prostřednictvím kódu programu](how-to-programmatically-select-worksheets.md)
+- [Postupy: přidávání nových listů do sešitů prostřednictvím kódu programu](how-to-programmatically-add-new-worksheets-to-workbooks.md)
+- [Položka hostitele listu](worksheet-host-item.md)
+- [Globální přístup k objektům v projektech pro systém Office](global-access-to-objects-in-office-projects.md)
+- [Programové omezení hostitelských položek a hostitelských ovládacích prvků](programmatic-limitations-of-host-items-and-host-controls.md)

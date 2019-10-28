@@ -1,5 +1,5 @@
 ---
-title: Ladění aplikace SharePoint s použitím technologie IntelliTrace
+title: Ladění aplikace SharePoint pomocí IntelliTrace
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,32 +16,32 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 59407696743b15262db83f915feb075a10e22225
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: fe1130880db42e920e656d5efef1ea6a5af4d2d0
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66401046"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984139"
 ---
-# <a name="walkthrough-debug-a-sharepoint-application-by-using-intellitrace"></a>Návod: Ladění aplikace SharePoint s použitím technologie IntelliTrace
+# <a name="walkthrough-debug-a-sharepoint-application-by-using-intellitrace"></a>Návod: ladění aplikace služby SharePoint pomocí IntelliTrace
 
-S použitím technologie IntelliTrace, můžete snadněji ladit řešení služby SharePoint. Tradiční ladicí programy poskytují pouze snímek řešení v tuto chvíli aktuální. Můžete však použít IntelliTrace ke kontrole minulých událostech, ke kterým došlo ve vašem řešení a kontext, ve kterém došlo k chybě a přejde na kód.
+Pomocí IntelliTrace můžete snadněji ladit řešení služby SharePoint. Tradiční ladicí program poskytuje pouze snímek řešení v aktuálním okamžiku. IntelliTrace však můžete použít ke kontrole minulých událostí, ke kterým došlo ve vašem řešení, a kontextu, ve kterém k nim došlo, a přejít k kódu.
 
- Tento návod ukazuje, jak ladit projekt služby SharePoint 2010 a SharePoint 2013 v sadě Visual Studio shromažďovat IntelliTrace data z nasazených aplikací pomocí agenta Microsoft Monitoring Agent. Pokud chcete analyzovat tato data, musíte použít Visual Studio Enterprise. Tento projekt obsahuje příjemce funkce, která, pokud je funkce aktivovaná, přidá úkol do seznamu úkolů a oznámení seznam oznámení. Při deaktivaci funkce je úkol označený jako dokončený a druhý oznámení se přidá do seznamu oznámení. Postup však obsahuje logické chyby, která brání projektu ve správném spuštění. S použitím technologie IntelliTrace, budete vyhledejte a opravte chybu.
+ Tento návod ukazuje, jak ladit projekt SharePoint 2010 nebo SharePoint 2013 v aplikaci Visual Studio pomocí Microsoft Monitoring Agent ke shromáždění dat IntelliTrace z nasazených aplikací. K analýze těchto dat je nutné použít Visual Studio Enterprise. Tento projekt obsahuje přijímač funkcí, který při aktivaci funkce přidá úkol do seznamu úkolů a oznámení do seznamu oznámení. Po deaktivaci této funkce bude úkol označen jako dokončený a do seznamu oznámení se přidá druhé oznámení. Procedura však obsahuje logickou chybu, která brání správnému spuštění projektu. Při použití IntelliTrace vyhledáte a opravíte chybu.
 
- **Platí pro:** Informace v tomto tématu se vztahují na SharePoint 2010 a SharePoint 2013 řešení, které byly vytvořeny v sadě Visual Studio.
+ **Platí pro:** Informace v tomto tématu se vztahují na řešení SharePoint 2010 a SharePoint 2013 vytvořená v aplikaci Visual Studio.
 
  Tento návod znázorňuje následující úlohy:
 
-- [Vytvoření příjemce funkce](#create-a-feature-receiver)
+- [Vytvoření přijímače funkcí](#create-a-feature-receiver)
 
 - [Přidání kódu do příjemce funkce](#add-code-to-the-feature-receiver)
 
 - [Testování projektu](#test-the-project)
 
-- [Shromažďování dat IntelliTrace pomocí agenta Microsoft Monitoring Agent](#collect-intellitrace-data-by-using-microsoft-monitoring-agent)
+- [Shromažďovat data IntelliTrace pomocí Microsoft Monitoring Agent](#collect-intellitrace-data-by-using-microsoft-monitoring-agent)
 
-- [Ladění a opravy řešení SharePoint](#debug-and-fix-the-sharepoint-solution)
+- [Ladění a oprava řešení služby SharePoint](#debug-and-fix-the-sharepoint-solution)
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -49,33 +49,33 @@ S použitím technologie IntelliTrace, můžete snadněji ladit řešení služb
 
 K dokončení tohoto návodu budete potřebovat následující komponenty:
 
-- Podporované edice systému Windows a SharePoint.
+- Podporované edice Windows a SharePointu.
 
 - Visual Studio Enterprise.
 
-## <a name="create-a-feature-receiver"></a>Vytvoření příjemce funkce
+## <a name="create-a-feature-receiver"></a>Vytvoření přijímače funkcí
 
-Nejprve vytvořte prázdný projekt SharePoint, který má příjemce funkce.
+Nejprve vytvořte prázdný projekt služby SharePoint, který má přijímač funkcí.
 
-1. Vytvořte projekt řešení služby SharePoint 2010 a SharePoint 2013 a pojmenujte ho **IntelliTraceTest**.
+1. Vytvořte projekt řešení SharePoint 2010 nebo SharePoint 2013 a pojmenujte ho **IntelliTraceTest**.
 
-     **Průvodce přizpůsobením SharePoint** se zobrazí, ve kterém můžete zadat web služby SharePoint pro váš projekt a úroveň důvěryhodnosti řešení.
+     Zobrazí se **Průvodce přizpůsobením SharePointu** , ve kterém můžete zadat web služby SharePoint pro váš projekt a úroveň důvěryhodnosti řešení.
 
-2. Zvolte **nasadit jako řešení farmy** přepínač a klikněte na tlačítko **Dokončit** tlačítko.
+2. Zvolte možnost **nasadit jako řešení farmy** a pak klikněte na tlačítko **Dokončit** .
 
-     IntelliTrace pracuje pouze řešení farmy.
+     IntelliTrace funguje pouze pro řešení farmy.
 
-3. V **Průzkumníka řešení**, otevřete místní nabídku **funkce** uzel a klikněte na tlačítko **přidat funkci**.
+3. V **Průzkumník řešení**otevřete místní nabídku uzlu **funkce** a zvolte možnost **Přidat funkci**.
 
-     *Feature1.Feature* se zobrazí.
+     Zobrazí se *Feature1. Feature* .
 
-4. Otevřete místní nabídku pro Feature1.feature a klikněte na tlačítko **přidat příjemce událostí** přidat modul kódu k funkci.
+4. Otevřete místní nabídku pro Feature1. Feature a pak zvolte **Přidat příjemce událostí** a přidejte do funkce modul kódu.
 
 ## <a name="add-code-to-the-feature-receiver"></a>Přidání kódu do příjemce funkce
 
-V dalším kroku přidejte kód do dvou metod v příjemce funkce: `FeatureActivated` a `FeatureDeactivating`. Tyto metody aktivuje pokaždé, když se funkce aktivuje nebo deaktivuje v Sharepointu, v uvedeném pořadí.
+Dále do přijímače funkce přidejte kód do dvou metod: `FeatureActivated` a `FeatureDeactivating`. Tyto metody se aktivují pokaždé, když se aktivuje nebo deaktivuje funkce služby SharePoint v uvedeném pořadí.
 
-1. V horní části `Feature1EventReceiver` třídy, přidejte následující kód, který deklaruje proměnné, které určují Sharepointový web a podřízené lokality:
+1. V horní části třídy `Feature1EventReceiver` přidejte následující kód, který deklaruje proměnné, které určují web služby SharePoint a podřízený web:
 
     ```vb
     ' SharePoint site and subsite.
@@ -89,7 +89,7 @@ V dalším kroku přidejte kód do dvou metod v příjemce funkce: `FeatureActiv
     private string webUrl = "/";
     ```
 
-2. Nahradit `FeatureActivated` metodu s následujícím kódem:
+2. Metodu `FeatureActivated` nahraďte následujícím kódem:
 
     ```vb
     Public Overrides Sub FeatureActivated(ByVal properties As SPFeatureReceiverProperties)
@@ -155,7 +155,7 @@ V dalším kroku přidejte kód do dvou metod v příjemce funkce: `FeatureActiv
     }
     ```
 
-3. Nahradit `FeatureDeactivating` metodu s následujícím kódem:
+3. Metodu `FeatureDeactivating` nahraďte následujícím kódem:
 
     ```vb
     Public Overrides Sub FeatureDeactivating(ByVal properties As SPFeatureReceiverProperties)
@@ -247,90 +247,90 @@ V dalším kroku přidejte kód do dvou metod v příjemce funkce: `FeatureActiv
 
 ## <a name="test-the-project"></a>Testování projektu
 
-Přidání kódu do příjemce funkce a data Collection je spuštěna, nasazení a spuštění řešení služby SharePoint k ověření, zda správně funguje.
+Teď, když je kód přidaný do přijímače funkcí a kolekce dat je spuštěný, nasaďte a spusťte řešení SharePoint, abyste otestovali, jestli funguje správně.
 
 > [!IMPORTANT]
-> V tomto příkladu dojde k chybě v obslužné rutině události FeatureDeactivating. Dále v tomto názorném postupu vyhledat tuto chybu pomocí souboru .iTrace, který vytvoří kolekce dat.
+> V tomto příkladu je vyvolána chyba v obslužné rutině události FeatureDeactivating. Později v tomto návodu najdete tuto chybu pomocí souboru. iTrace, který vytvořila kolekce dat.
 
-1. Nasazení řešení služby SharePoint a potom v prohlížeči otevřete web služby SharePoint.
+1. Nasaďte řešení do služby SharePoint a pak otevřete web služby SharePoint v prohlížeči.
 
-     Tato funkce automaticky aktivuje, což způsobí jeho příjemce funkce přidání oznámení a úlohy.
+     Tato funkce se automaticky aktivuje, což způsobí, že příjemce funkce přidá oznámení a úlohu.
 
-2. Zobrazení obsahu seznamů oznámení a úkoly.
+2. Zobrazí obsah seznamů oznámení a úkoly.
 
-     Seznam oznámení by měl mít nové oznámení s názvem **aktivováno funkce: IntelliTraceTest_Feature1**, a seznam úkolů musí mít nový úkol, který je pojmenován **deaktivovat funkce: IntelliTraceTest_Feature1**. Pokud platí některá z těchto položek chybí, ověřte, zda je funkce aktivovaná. Pokud není aktivovaná, aktivujte ji.
+     Seznam oznámení by měl mít nové oznámení s názvem **aktivovaná funkce: IntelliTraceTest_Feature1**a seznam úkoly by měl mít novou úlohu s názvem **deaktivovat funkci: IntelliTraceTest_Feature1**. Pokud některá z těchto položek chybí, ověřte, zda je funkce aktivována. Pokud není aktivována, aktivujte ji.
 
-3. Deaktivace funkce provedením následujících kroků:
+3. Deaktivujte funkci provedením následujících kroků:
 
-   1. Na **Akce webu** nabídku v Sharepointu, zvolte **nastavení webu**.
+   1. V nabídce **Akce webu** ve službě SharePoint vyberte možnost **Nastavení webu**.
 
-   2. V části **Akce webu**, zvolte **spravovat funkce webu** odkaz.
+   2. V části **Akce webu**vyberte odkaz **Spravovat funkce webu** .
 
-   3. Vedle položky **IntelliTraceTest Feature1**, zvolte **deaktivovat** tlačítko.
+   3. Vedle **IntelliTraceTest Feature1**klikněte na tlačítko **deaktivovat** .
 
-   4. Na stránce s varováním, zvolte **deaktivovat tuto funkci** odkaz.
+   4. Na stránce s upozorněním klikněte na odkaz **deaktivovat tuto funkci** .
 
-      Obslužná rutina události FeatureDeactivating() vyvolá chybu.
+      Obslužná rutina události FeatureDeactivating () vyvolá chybu.
 
-## <a name="collect-intellitrace-data-by-using-microsoft-monitoring-agent"></a>Shromažďování dat IntelliTrace pomocí agenta Microsoft Monitoring Agent
+## <a name="collect-intellitrace-data-by-using-microsoft-monitoring-agent"></a>Shromažďovat data IntelliTrace pomocí Microsoft Monitoring Agent
 
-Pokud instalujete agenta Microsoft Monitoring Agent na počítači se systémem SharePoint, můžete ladit řešení služby SharePoint s použitím dat, která jsou podrobnější než obecné informace, které vrátí IntelliTrace. Agent pracuje mimo sadu Visual Studio pomocí rutin prostředí PowerShell k zaznamenání informací ladění při spuštění řešení služby SharePoint.
+Pokud nainstalujete Microsoft Monitoring Agent do systému, na kterém je spuštěna služba SharePoint, můžete ladit řešení služby SharePoint pomocí dat, která jsou konkrétnější než obecné informace, které IntelliTrace vrací. Agent funguje mimo sadu Visual Studio pomocí rutin PowerShellu pro zachycení informací o ladění během běhu řešení služby SharePoint.
 
 > [!NOTE]
-> Informace o konfiguraci v této části je specifická pro tento příklad. Další informace o dalších možnostech konfigurace naleznete v tématu [použití samostatného kolektoru IntelliTrace](../debugger/using-the-intellitrace-stand-alone-collector.md).
+> Informace o konfiguraci v této části jsou specifické pro tento příklad. Další informace o dalších možnostech konfigurace najdete v tématu [Použití samostatného kolektoru IntelliTrace](../debugger/using-the-intellitrace-stand-alone-collector.md).
 
-1. Na počítači, na kterém běží SharePoint [nastavení agenta Microsoft Monitoring Agent a začít monitorovat vaše řešení](../debugger/using-the-intellitrace-stand-alone-collector.md).
+1. V počítači, na kterém je spuštěna služba SharePoint, [nastavte Microsoft Monitoring Agent a začněte monitorovat vaše řešení](../debugger/using-the-intellitrace-stand-alone-collector.md).
 
-2. Deaktivace funkce:
+2. Deaktivovat funkci:
 
-   1. Na **Akce webu** nabídku v Sharepointu, zvolte **nastavení webu**.
+   1. V nabídce **Akce webu** ve službě SharePoint vyberte možnost **Nastavení webu**.
 
-   2. V části **Akce webu**, zvolte **spravovat funkce webu** odkaz.
+   2. V části **Akce webu**vyberte odkaz **Spravovat funkce webu** .
 
-   3. Vedle položky **IntelliTraceTest Feature1**, zvolte **deaktivovat** tlačítko.
+   3. Vedle **IntelliTraceTest Feature1**klikněte na tlačítko **deaktivovat** .
 
-   4. Na stránce s varováním, zvolte **deaktivovat tuto funkci** odkaz.
+   4. Na stránce s upozorněním klikněte na odkaz **deaktivovat tuto funkci** .
 
-      (V tomto případě z důvodu chyby vyvolané v obslužné rutině události FeatureDeactivating()) dojde k chybě.
+      Dojde k chybě (v tomto případě z důvodu chyby vyvolané v obslužné rutině události FeatureDeactivating ()).
 
-3. V okně Powershellu, spusťte [Stop-WebApplicationMonitoring](http://go.microsoft.com/fwlink/?LinkID=313687) příkaz pro vytvoření souboru .iTrace, zastavit monitorování a restartujte řešení služby SharePoint.
+3. V okně PowerShellu spusťte příkaz [Stop-WebApplicationMonitoring](/previous-versions/system-center/powershell/system-center-2012-r2/dn472753(v=sc.20)) , který vytvoří soubor. iTrace, zastaví monitorování a restartuje řešení služby SharePoint.
 
-     **Stop-WebApplicationMonitoring**  *"\<SharePointSite>\\<SharePointAppName\>"*
+     **Stop-WebApplicationMonitoring**  *"\<SharePointSite >\\< SharePointAppName\>"*
 
-## <a name="debug-and-fix-the-sharepoint-solution"></a>Ladění a opravy řešení SharePoint
+## <a name="debug-and-fix-the-sharepoint-solution"></a>Ladění a oprava řešení služby SharePoint
 
-Nyní můžete zobrazit soubor protokolu IntelliTrace v sadě Visual Studio můžete najít a opravit chyby v řešení služby SharePoint.
+Nyní můžete zobrazit soubor protokolu IntelliTrace v aplikaci Visual Studio a vyhledat a opravit chybu v řešení služby SharePoint.
 
-1. Ve složce \IntelliTraceLogs otevřete soubor .iTrace v sadě Visual Studio.
+1. Ve složce \IntelliTraceLogs otevřete soubor. iTrace v aplikaci Visual Studio.
 
-     **IntelliTrace – Souhrn** se zobrazí stránka. Vzhledem k tomu, že chyba nebyla zpracována, ID korelace SharePoint (GUID) se zobrazí v oblasti neošetřená výjimka **analýzy** oddílu. Zvolte **zásobník volání** tlačítko, pokud chcete zobrazit zásobník volání, kde došlo k chybě.
+     Zobrazí se stránka **Souhrn IntelliTrace** . Vzhledem k tomu, že chyba nebyla zpracována, zobrazí se ID korelace SharePoint (identifikátor GUID) v neošetřené oblasti výjimek v části **Analýza** . Vyberte tlačítko **zásobník volání** , pokud chcete zobrazit zásobník volání, ve kterém došlo k chybě.
 
-2. Zvolte **ladit výjimku** tlačítko.
+2. Klikněte na tlačítko **výjimka ladění** .
 
-     Pokud se zobrazí výzva, načte soubory symbolů. V **IntelliTrace** okno, jako je zvýrazněn výjimku "vyvolání: Došlo k závažné chybě! ".
+     Pokud se zobrazí výzva, načtěte soubory symbolů. V okně **IntelliTrace** je výjimka zvýrazněna jako "vyvolaná: došlo k závažné chybě!".
 
-     V okně IntelliTrace zvolte výjimku k zobrazení kódu, který selhal.
+     V okně IntelliTrace vyberte výjimku pro zobrazení kódu, který selhal.
 
-3. Opravte chybu otevření řešení služby SharePoint a potom buď okomentováním odpovídajícího nebo odebráním **throw** příkazu v horní části FeatureDeactivating() procedury.
+3. Opravte chybu tak, že otevřete řešení SharePoint a potom buď Odkomentujte, nebo odeberte příkaz **throw** v horní části postupu FeatureDeactivating ().
 
-4. Znovu sestavte řešení v sadě Visual Studio a následně ho znovu nasadíte do služby SharePoint.
+4. Znovu sestavte řešení v aplikaci Visual Studio a potom ho znovu nasaďte do SharePointu.
 
-5. Deaktivace funkce provedením následujících kroků:
+5. Deaktivujte funkci provedením následujících kroků:
 
-    1. Na **Akce webu** nabídku v Sharepointu, zvolte **nastavení webu**.
+    1. V nabídce **Akce webu** ve službě SharePoint vyberte možnost **Nastavení webu**.
 
-    2. V části **Akce webu**, zvolte **spravovat funkce webu** odkaz.
+    2. V části **Akce webu**vyberte odkaz **Spravovat funkce webu** .
 
-    3. Vedle položky **IntelliTraceTest Feature1**, zvolte **deaktivovat** tlačítko.
+    3. Vedle **IntelliTraceTest Feature1**klikněte na tlačítko **deaktivovat** .
 
-    4. Na stránce s varováním, zvolte **deaktivovat tuto funkci** odkaz.
+    4. Na stránce s upozorněním klikněte na odkaz **deaktivovat tuto funkci** .
 
-6. Otevření seznamu úkolů a ověřte, zda **stav** hodnotu deaktivovat úkolu je "dokončeno" a jeho **dokončeno %** hodnota je 100 %.
+6. Otevřete seznam úkolů a ověřte, zda je hodnota **stav** úlohy deaktivace dokončená a zda je její hodnota **dokončeno%** 100%.
 
-     Kód bude nyní fungovat správně.
+     Kód teď funguje správně.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Ověřte a ladění kódu pro SharePoint](../sharepoint/verifying-and-debugging-sharepoint-code.md)
+- [Ověření a ladění kódu pro SharePoint](../sharepoint/verifying-and-debugging-sharepoint-code.md)
 - [IntelliTrace](../debugger/intellitrace.md)
-- [Návod: Ověření kódu pro SharePoint pomocí testů jednotek](/previous-versions/visualstudio/visual-studio-2010/gg599006\(v\=vs.100\))
+- [Návod: ověření kódu služby SharePoint pomocí testů jednotek](/previous-versions/visualstudio/visual-studio-2010/gg599006\(v\=vs.100\))

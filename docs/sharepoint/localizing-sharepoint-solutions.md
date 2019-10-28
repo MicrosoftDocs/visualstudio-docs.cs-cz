@@ -1,5 +1,5 @@
 ---
-title: Lokalizace řešení služby SharePoint | Dokumentace Microsoftu
+title: Lokalizace řešení služby SharePoint | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -17,70 +17,70 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 90da60cb904ba6e3db2be3805256fcf4eb9122ee
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: e6444f559902841c13a56265569a0bdc13a9ed26
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444346"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981716"
 ---
 # <a name="localize-sharepoint-solutions"></a>Lokalizace řešení služby SharePoint
 
-  Proces přípravy aplikací tak, aby bylo možné po celém světě je znám jako lokalizace. Lokalizace je převod prostředků pro konkrétní jazykovou verzi. Další informace najdete v tématu [Globalizing a lokalizace aplikací](../ide/globalizing-and-localizing-applications.md). Toto téma poskytuje přehled o tom, jak lokalizovat řešení služby SharePoint.
+  Proces přípravy aplikací, aby je bylo možné používat po celém světě, se označuje jako lokalizace. Lokalizace překládá prostředky na konkrétní jazykovou verzi. Další informace najdete v tématu [globalizace a lokalizace aplikací](../ide/globalizing-and-localizing-applications.md). Toto téma poskytuje přehled o lokalizaci řešení služby SharePoint.
 
- Chcete-li lokalizovat řešení, odeberte z kódu pevně zakódované řetězce a přidáte je do souborů prostředků. Soubor prostředků je [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]– na základě souboru *RESX* rozšíření. Soubor prostředků obsahuje přeložené verze řetězců používané v rámci vašeho řešení. Další informace najdete v tématu [prostředky v aplikacích](http://go.microsoft.com/fwlink/?LinkID=155844).
+ Chcete-li lokalizovat řešení, odeberte pevně kódované řetězce z kódu a abstrakce je do souborů prostředků. Soubor prostředků je soubor založený na [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]s příponou *. resx* . Soubor prostředků obsahuje přeložené verze řetězců používané ve vašem řešení. Další informace najdete v tématu [prostředky v aplikacích](/previous-versions/dotnet/netframework-4.0/f45fce5x(v=vs.100)).
 
 > [!NOTE]
-> Přidejte pouze prostředky řetězců do souborů prostředků řešení služby SharePoint. Přestože Editor prostředků umožňuje přidávat neřetězcové prostředky, neřetězcové prostředky nelze nasazovat do Sharepointu.
+> Přidejte pouze řetězcové prostředky do souborů prostředků řešení služby SharePoint. I když editor prostředků umožňuje přidat neřetězcové prostředky, neřetězcové prostředky nejsou nasazeny do služby SharePoint.
 
 ## <a name="resource-files"></a>Soubory prostředků
  Existují tři typy souborů prostředků: výchozí, jazykově neutrální a specifické pro jazyk.
 
-|Typ zdrojového souboru|Popis|
+|Typ souboru prostředků|Popis|
 |------------------------|-----------------|
-|Výchozí|Označované také jako záložní prostředky, výchozí soubory prostředků obsahují řetězce lokalizované pro výchozí jazykovou verzi, například angličtinu. Používají se, pokud lze najít žádné lokalizované soubory prostředků pro určený jazyk. Výchozí prostředky nemají samostatné soubory, jsou uloženy v sestavení hlavní aplikace.|
-|Neutrální jazyk|Soubor prostředků obsahující řetězce lokalizované pro jazyk, avšak nikoli konkrétní jazykovou verzi. Například "fr" pro francouzštinu.|
+|Výchozí|Také označované jako záložní prostředek, výchozí soubory prostředků obsahují řetězce lokalizované pro výchozí jazykovou verzi, například angličtinu. Používají se, pokud nelze najít žádné lokalizované soubory prostředků pro zadaný jazyk. Výchozí prostředky nemají samostatné soubory, jsou uloženy v sestavení hlavní aplikace.|
+|Jazykově neutrální|Soubor prostředků obsahující řetězce lokalizované pro jazyk, ale ne specifickou jazykovou verzi. Například "fr" pro francouzštinu.|
 |Specifické pro jazyk|Soubor prostředků obsahující řetězce lokalizované pro jazyk a jazykovou verzi. Například "fr-CA" pro kanadskou francouzštinu.|
 
- Další informace najdete v tématu [hierarchická organizace zdrojů pro lokalizaci](http://go.microsoft.com/fwlink/?LinkId=178360).
+ Další informace najdete v tématu [Hierarchická organizace prostředků k lokalizaci](../ide/hierarchical-organization-of-resources-for-localization.md).
 
- Chcete-li určit výchozí soubory prostředků v projektech SharePoint, které vyvíjíte v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], zvolte **neutrální jazyk (neutrální země)** ze seznamu jazykových verzí sady **přidat prostředek** dialogu, když jste Přidání zdrojového souboru.
+ Chcete-li určit výchozí soubory prostředků v projektech služby SharePoint, které vyvíjíte v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], zvolte **neutrální jazyk (neutrální země)** v seznamu jazykové verze dialogového okna **Přidat prostředek** při přidání souboru prostředků.
 
-## <a name="localize-visual-studio-sharepoint-solutions"></a>Lokalizace řešení služby SharePoint Visual Studio
- Když lokalizujete řešení, měli byste zvážit všechny textové informace, které se zobrazí uživatelům vašeho řešení. Informační zprávy, chybové zprávy a [!INCLUDE[TLA2#tla_ui](../sharepoint/includes/tla2sharptla-ui-md.md)] řetězce musí být přeloženy a tyto překlady umístěny v souborech prostředků.
+## <a name="localize-visual-studio-sharepoint-solutions"></a>Lokalizace řešení služby SharePoint v aplikaci Visual Studio
+ Při lokalizaci řešení byste měli vzít v úvahu všechny textové informace, které vaše řešení zobrazuje uživatelům. Informační zprávy, chybové zprávy a řetězce [!INCLUDE[TLA2#tla_ui](../sharepoint/includes/tla2sharptla-ui-md.md)] musí být přeloženy a tyto překlady jsou umístěny do souborů prostředků.
 
- Každý řetězec v souboru prostředků má jedinečný identifikátor. Použijte stejný identifikátor pro řetězce přeložené v každém souboru prostředků. Například pokud je "Řetězec1" identifikátor pro první řetězec v souboru prostředků výchozí, použijte stejný identifikátor pro první řetězec v souborech prostředků specifických pro jazyk.
+ Každý řetězec v souboru prostředků má jedinečný identifikátor. V každém souboru prostředků použijte stejný identifikátor pro přeložený řetězec. Například pokud "řetězec1" je identifikátor prvního řetězce ve výchozím souboru prostředků, použijte stejný identifikátor jako první řetězec v souborech prostředků specifických pro jazyk.
 
- Existují tři oblasti, které obvykle lokalizujete ve [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] aplikací služby SharePoint: funkce, stránky ASPX a kód. Pro účely ilustrace v následujících částech Předpokládejme, že máte řešení SharePoint, které chcete lokalizovat do němčiny a japonštiny. Výchozím jazykem je angličtina.
+ Existují tři oblasti, které jsou obvykle lokalizovány do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] aplikací služby SharePoint: funkce, kód stránky ASPX a kód. Pro účely ilustrace se v následujících částech předpokládá, že máte řešení služby SharePoint, které chcete lokalizovat do němčiny a japonštiny. Výchozím jazykem je angličtina.
 
-### <a name="localize-features"></a>Lokalizace funkce
- Chcete-li lokalizovat funkci, budete muset nahraďte pevně kódovaného názvu a popisu funkce výrazem, který odkazuje na přeložený nadpis a řetězec v tomto lokalizovaném souboru zdroje. Provedení této změny v **návrháře funkcí** v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Další informace najdete v tématu [jak: Lokalizace funkce](../sharepoint/how-to-localize-a-feature.md).
+### <a name="localize-features"></a>Lokalizace funkcí
+ Chcete-li lokalizovat funkci, je nutné nahradit pevně zakódovaný název a popis funkce výrazem, který odkazuje na přeložený název a řetězec v lokalizovaném souboru prostředků. Tuto změnu provedete v **Návrháři funkcí** v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Další informace naleznete v tématu [How to: Lokalizace funkce](../sharepoint/how-to-localize-a-feature.md).
 
- Chcete-li lokalizovat funkci v angličtině do němčiny a japonštiny, přidejte tři položky souborů prostředků projektu do projektu: jeden pro angličtinu, jeden pro němčinu a jeden pro japonštinu. Soubory prostředků funkcí nelze použít k lokalizování ASPX značek nebo kódu. jsou pro ně požadovány samostatné soubory prostředků.
+ Chcete-li lokalizovat anglickou funkci do němčiny a japonštiny, přidejte tři položky projektu soubor prostředků do projektu: jeden pro angličtinu, jeden pro němčinu a jeden pro japonštinu. Soubory prostředků funkce nelze použít k lokalizaci kódu ASPX nebo kódu; pro ně jsou vyžadovány samostatné soubory prostředků.
 
- Jakmile vytvoříte funkci soubory prostředků, přidáte do nich přeložené řetězce. Přístup k lokalizovaným řetězcům pomocí výrazu v následujícím formátu:
+ Po vytvoření souborů prostředků funkce přidejte do nich přeložené řetězce. Přístup k lokalizovaným řetězcům pomocí výrazu v následujícím formátu:
 
 ```aspx-csharp
 $Resources:String ID
 ```
 
- Zdroje funkcí v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] jsou vždy pojmenovány prostředky. Pokud vyberete jiný jazyk než neutrální jazyk, pak jazykovou verzi [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] se přidá k názvu souboru prostředků. Například pokud přidáte soubor prostředků neutrální jazyk (výchozí) funkce, je volána *Resources.resx*. Pokud chcete přidat funkce specifické pro jazyk prostředku výběrem kultury japonština (Japonsko), soubor se nazývá *Resources.ja-JP.resx*. Názvy souborů prostředků funkcí jsou automaticky přiřazeny a nedá se změnit.
+ Prostředky funkcí v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] jsou vždy pojmenované prostředky. Pokud vyberete jiný jazyk než neutrální jazyk, pak se do názvu souboru prostředků přidá jazyková verze [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)]. Například pokud přidáte soubor prostředků funkce invariantního jazyka (výchozí), nazývá se *Resources. resx*. Pokud přidáte prostředek funkce specifický pro jazyk tak, že vyberete jazykovou verzi japonštiny (Japonsko), soubor se nazývá *Resources. ja-JP. resx*. Názvy souborů prostředků funkcí jsou automaticky přiřazeny a nelze je změnit.
 
- Rozsah zdrojů funkcí je místní pro funkci, které se přidají do. Chcete-li vytvořit prostředky, které mohou využívat všechny funkce nebo elementy souboru v řešení, přidejte **globální soubor prostředků** položky projektu namísto funkce zdrojového souboru. **Globální soubor prostředků** položka projektu se nachází v **2010** ve složce **SharePoint** v **přidat novou položku** dialogové okno. Soubory globálních prostředků nasadit do složky \Resources kořenové složky Sharepointu.
+ Rozsah prostředků funkcí je místní pro funkci, ke které se přidávají. Chcete-li vytvořit prostředky, které mohou být použity jakýmkoli souborem funkcí nebo prvků v řešení, přidejte položku projektu **globálních prostředků** namísto souboru prostředků funkce. Položka projektu **globální soubor prostředků** je umístěna ve složce **2010** v části **SharePoint** v dialogovém okně **Přidat novou položku** . Soubory globálních prostředků se nasazují do složky \Resources v kořenové složce SharePointu.
 
-### <a name="localize-aspx-page-markup"></a>Lokalizace značky stránky ASPX
- Chcete-li lokalizovat [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] stránek, přidejte tři položky souborů prostředků projektu do projektu: jeden pro angličtinu, jeden pro němčinu a jeden pro japonštinu. Pokud nemáte lokalizovat kód spolu se značkou, můžete místo toho přidat globální soubory prostředků.
+### <a name="localize-aspx-page-markup"></a>Kód stránky ASPX pro lokalizaci
+ Chcete-li lokalizovat [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] stránky, přidejte do projektu tři položky souborů prostředků projektu: jeden pro angličtinu, jeden pro němčinu a jeden pro japonštinu. Pokud nemusíte lokalizovat kód spolu se značkou, můžete místo toho přidat globální soubory prostředků.
 
- Zadejte název pro soubor prostředků výchozího jazyka. Dejte zdrojovým souborům stejný název s jazykově specifickou kulturu [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)]. Například *MyAppResources.de-DE.resx* pro němčinu a *MyAppResources.ja JP.resx* pro japonštinu.
+ Zadejte název souboru prostředků výchozího jazyka. Poskytněte lokalizované soubory prostředků se stejným názvem, který se připojí k jazykově specifické jazykové verzi [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)]. Například *MyAppResources.de-de. resx* pro němčinu a *MyAppResources. ja-JP. resx* pro japonštinu.
 
- Nastavte **typ nasazení** vlastnosti každého souboru prostředků na **AppGlobalResource**. To způsobí, že soubory prostředků pro nasazení do složky App_GlobalResources, kde jsou k dispozici pro všechny stránky ASPX a ovládací prvky v řešení. Složka App_GlobalResources je umístěna v C:\inetpub\wwwroot\wss\VirtualDirectories\\< číslo portu\>\App_GlobalResources.
+ Nastavte vlastnost **typ nasazení** každého souboru prostředků na **AppGlobalResource**. To způsobí, že soubory prostředků se nasadí do složky App_GlobalResources, kde jsou k dispozici pro všechny stránky ASPX a ovládací prvky v řešení. Složka App_GlobalResources se nachází v C:\inetpub\wwwroot\wss\VirtualDirectories\\< číslo portu\>\App_GlobalResources.
 
 > [!NOTE]
-> Pokud používáte jiné globální soubory prostředků, přesuňte je do složky položky projektu, aby vlastnost typ nasazení a další vlastnosti specifické pro SharePoint.
+> Použijete-li neglobální soubory prostředků, přesuňte je do složky položky projektu, čímž povolíte vlastnost typ nasazení a další vlastnosti specifické pro službu SharePoint.
 
- Soubory prostředků značek ASPX lze také použít k lokalizaci kódu. Pokud používáte prostředky k lokalizaci kódu kromě značek ASPX, nechte akce sestavení vlastnost nastavení každého souboru jako vložený prostředek způsobit, že zdroj kompiloval do satelitního sestavení. Ale pokud používáte pouze k lokalizaci značky soubory prostředků, můžete volitelně změnit akce sestavení na obsah, který zabránit souboru v kompilaci do sestavení hlavní aplikace.
+ Soubory prostředků značek ASPX lze také použít k lokalizaci kódu. Pokud používáte prostředky k lokalizaci kódu kromě značek ASPX, nechte nastavení vlastnosti akce sestavení každého souboru jako vložený prostředek, aby se prostředek mohl kompilovat do satelitního sestavení. Nicméně pokud používáte soubory prostředků pouze k lokalizaci kódu, můžete volitelně změnit akci sestavení na obsah, aby se zabránilo kompilování souboru do hlavního sestavení aplikace.
 
- Nahraďte všechny řetězce pevně zakódovanými vlastnostmi ve vašem kódu stránek a ovládacích prvcích ASPX za výraz v následujícím formátu:
+ Nahraďte všechny řetězce pevně zakódovaných vlastností ve vašich stránkách ASPX a ovládacích prvcích pomocí výrazu v následujícím formátu:
 
 ```aspx-csharp
 <asp:<class> runat="server" Text="<%$Resources:<Resource File Name>, <String ID>%>" />
@@ -104,33 +104,33 @@ $Resources:String ID
 <asp:literal ID="Literal1" runat="server" Text="<%$Resources:Resource1, String9%>" />
 ```
 
- Další informace najdete v tématu [jak: Lokalizace značek ASPX](../sharepoint/how-to-localize-aspx-markup.md).
+ Další informace naleznete v tématu [How to: Localize. aspx Markup](../sharepoint/how-to-localize-aspx-markup.md).
 
-### <a name="localize-code"></a>Lokalizace kódu
- Kromě lokalizace funkce řetězce a [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] značek, také musíte lokalizovat řetězce zprávy a chybové řetězce, které se zobrazují v kódu řešení. Lokalizované informační a chybové zprávy jsou obsaženy v satelitních sestaveních. Satelitní sestavení obsahují řetězce, které jsou viditelné pro uživatele, jako je například [!INCLUDE[TLA2#tla_ui](../sharepoint/includes/tla2sharptla-ui-md.md)] text a výstupní zprávy, jako jsou výjimky.
+### <a name="localize-code"></a>Lokalizovat kód
+ Kromě lokalizace řetězců funkcí a [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] značek je také nutné lokalizovat řetězce zpráv a chybové řetězce, které se zobrazí v kódu řešení. Lokalizované informativní a chybové zprávy jsou obsaženy v satelitních sestaveních. Satelitní sestavení obsahují řetězce, které jsou viditelné uživatelům, například [!INCLUDE[TLA2#tla_ui](../sharepoint/includes/tla2sharptla-ui-md.md)] textové a výstupní zprávy, jako jsou výjimky.
 
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] používá standardní model střed a paprsek rozhraní .NET Framework. Rozbočovač nebo sestavení hlavní aplikace obsahuje výchozí jazykové prostředky. Paprsky nebo satelitní sestavení obsahují prostředky specifické pro jazyk. Další informace najdete v tématu [Packaging and Deploying Resources](http://go.microsoft.com/fwlink/?LinkId=179280). Satelitní sestavení jsou zkompilovaná ze zdroje (*RESX*) soubory. Když přidáte soubory prostředků specifické pro jazyk do projektu a balíček řešení [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] zkompiluje soubory prostředků do satelitních sestavení s názvem *{název projektu}.resources.dll*.
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] používá model standardního centra .NET Framework a paprsků. Centrum nebo sestavení hlavní aplikace obsahuje výchozí jazykové prostředky. Paprsky nebo satelitní sestavení obsahují prostředky specifické pro jazyk. Další informace najdete v tématu [balení a nasazení prostředků](/previous-versions/dotnet/netframework-4.0/sb6a8618(v=vs.100)). Satelitní sestavení jsou zkompilována ze souborů prostředků ( *. resx*). Když do projektu a balíčku řešení přidáte soubory prostředků pro konkrétní jazyk, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] zkompiluje soubory prostředků do satelitních sestavení s názvem *{Project Name}. Resources. dll*.
 
- Stejně jako u značky ASPX můžete Lokalizujte kód aplikace služby SharePoint přidáním samostatných položek projektu souboru prostředků do vašeho projektu. jeden pro výchozí jazyk a jeden pro každý lokalizovaný jazyk. Ale jak bylo zmíněno dříve, pokud již máte soubor prostředků pro lokalizaci značky ASPX, můžete je využít pro lokalizaci kódu. Pokud je potřeba vytvořit soubor prostředků, pojmenujte soubor prostředků výchozího jazyka podle vašeho výběru s příponou *RESX* rozšíření. Pojmenujte zdrojovým souborům stejný název s jazykově specifickou kulturu [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)]. Nastavte vlastnost Akce sestavení každého souboru prostředků na integrovaný prostředek a umožněte tak sestavení satelitních prostředků.
+ Stejně jako u značek ASPX můžete lokalizovat kód aplikace SharePoint přidáním samostatných prostředků souborových položek projektu do projektu; jeden pro výchozí jazyk a jeden pro každý lokalizovaný jazyk. Jak již bylo zmíněno dříve, pokud již máte soubory prostředků pro lokalizaci značek ASPX, můžete je znovu použít pro lokalizaci kódu. Pokud potřebujete vytvořit soubory prostředků, pojmenujte soubor prostředků výchozího jazyka názvem vaší volby, který je připojený s příponou *. resx* . Pojmenujte lokalizované soubory prostředků se stejným názvem, který se připojí k jazykově specifické jazykové verzi [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)]. Nastavte vlastnost Akce sestavení každého souboru prostředků na integrovaný prostředek, aby bylo možné vytvořit satelitní sestavení prostředků.
 
- Chcete-li vytvořit satelitní sestavení, sestavte projekt a pak přidejte další sestavení pomocí **Upřesnit** karty **návrháři balíčku**. Pokud přidáte sestavení, předřaďte jazykovou verzi [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] složku pro cestu k umístění, jako například *de-DE\\{název položky projektu}.resources.dll*. To umožňuje balíčku, který bude obsahovat soubory, které mají stejný název.
+ Chcete-li vytvořit satelitní sestavení, sestavte projekt a pak přidejte soubory jako další sestavení prostřednictvím karty **Upřesnit** v **Návrháři balíčků**. Při přidávání sestavení předřaďte jazykovou [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] složku do cesty k umístění, například *de-de\\{název položky projektu}. Resources. dll*. Balíček tak může obsahovat soubory, které mají stejný název.
 
- Ve vašem kódu nahraďte pevně zakódované řetězce volání <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> metodu pomocí následující syntaxe:
+ V kódu nahraďte pevně kódované řetězce voláním metody <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> pomocí následující syntaxe:
 
 ```aspx-csharp
 HttpContext.GetGlobalResourceObject("<Resource File Name>", "<String ID>")
 ```
 
- Další informace najdete v tématu [jak: Lokalizace kódu](../sharepoint/how-to-localize-code.md).
+ Další informace naleznete v tématu [How to: Localize Code](../sharepoint/how-to-localize-code.md).
 
-#### <a name="web-part-code-localization"></a>Lokalizace kódu webové součásti
- Webové součásti zahrnují funkce editoru vlastních vlastností, které obsahují atributy kódu, které používají pevně zakódované řetězce, jako je například WebDisplayName, Category a WebDescription. Chcete-li nahradit řetězec hodnoty pro tyto atributy, vytvořte samostatné třídy, která je odvozena z třídy atributu. V těchto třídách nastavte vlastnost atributu. Vlastnost atributu závisí na základní třídu. Například vlastnost atributu WebDisplayName je DisplayNameValue a vlastnost atributu WebDescription je DescriptionValue.
+#### <a name="web-part-code-localization"></a>Lokalizace kódu webové části
+ Webové části obsahují funkci vlastního editoru vlastností, která obsahuje atributy kódu, které používají pevně zakódované řetězce, jako je například WebDisplayName, Category a WebDescription. Chcete-li nahradit hodnoty řetězce pro tyto atributy, vytvořte samostatnou třídu, která je odvozena od třídy atributu. V těchto třídách nastavte vlastnost atributu. Vlastnost atributu závisí na základní třídě. Například vlastnost atributu WebDisplayName je DisplayNameValue a vlastnost atributu WebDescription je DescriptionValue.
 
- V odvozené třídě odkazu na Identifikátor řetězce ze souboru prostředků a objektu ResourceManager získáte lokalizované hodnoty identifikátoru řetězce Vrátí tuto hodnotu na atribut editoru vlastností.
+ V odvozené třídě odkaz na ID řetězce ze souboru prostředků a objektu ResourceManager pro získání lokalizované hodnoty pro ID řetězce. Vrátí tuto hodnotu k atributu editoru vlastností.
 
 ## <a name="see-also"></a>Viz také:
 - [Postupy: Lokalizace funkce](../sharepoint/how-to-localize-a-feature.md)
-- [Postupy: Lokalizace značek ASPX](../sharepoint/how-to-localize-aspx-markup.md)
+- [Postupy: lokalizace značek ASPX](../sharepoint/how-to-localize-aspx-markup.md)
 - [Postupy: Lokalizace kódu](../sharepoint/how-to-localize-code.md)
-- [Postupy: Přidejte soubor prostředků](../sharepoint/how-to-add-a-resource-file.md)
-- [Postupy: Určení lokalizovaných názvů, vlastností a oprávnění pomocí zdrojového souboru](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)
+- [Postupy: Přidání souboru prostředků](../sharepoint/how-to-add-a-resource-file.md)
+- [Postupy: použití souboru prostředků k určení lokalizovaných názvů, vlastností a oprávnění](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)

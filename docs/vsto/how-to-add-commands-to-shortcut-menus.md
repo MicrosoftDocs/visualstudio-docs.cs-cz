@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání příkazů do místních nabídek'
+title: 'Postupy: přidávání příkazů do místních nabídek'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,42 +13,42 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3b20b10a37908e2c9744aeac63bb3eda091da478
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 82c26022f0c88f1ce125c64f5ec3b2df8d20346e
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62826402"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986032"
 ---
-# <a name="how-to-add-commands-to-shortcut-menus"></a>Postupy: Přidání příkazů do místních nabídek
-  Toto téma ukazuje, jak přidat příkazy místní nabídky v aplikaci Office pomocí doplňku VSTO.
+# <a name="how-to-add-commands-to-shortcut-menus"></a>Postupy: přidávání příkazů do místních nabídek
+  Toto téma ukazuje, jak přidat příkazy do místní nabídky v aplikaci Office pomocí doplňku VSTO.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-### <a name="to-add-commands-to-shortcut-menus-in-office"></a>Přidání příkazů do místních nabídek v aplikaci Office
+### <a name="to-add-commands-to-shortcut-menus-in-office"></a>Přidání příkazů do místních nabídek v Office
 
-1. Přidat **kódu XML pásu karet** položky na úrovni dokumentu nebo projektu doplňku VSTO. Další informace najdete v tématu [jak: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md). V
+1. Přidejte položku **XML pásu karet** do projektu doplňku VSTO na úrovni dokumentu nebo VSTO. Další informace najdete v tématu [Postupy: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md). V
 
-2. **Průzkumník řešení**vyberte **ThisAddin.cs** nebo **ThisAddin.vb**.
+2. **Průzkumník řešení**vyberte **ThisAddIn.cs** nebo **ThisAddIn. vb**.
 
-3. V panelu nabídky zvolte **zobrazení** > **kód**.
+3. Na panelu nabídek vyberte možnost **zobrazit**  > **kód**.
 
-     **ThisAddin** soubor třídy se otevře v editoru kódu.
+     V editoru kódu se otevře soubor třídy **ThisAddIn** .
 
-4. Přidejte následující kód, který **ThisAddin** třídy. Tento kód přepíše `CreateRibbonExtensibilityObject` třídu metodu a vrátí kódu XML pásu karet aplikace sady Office.
+4. Do třídy **ThisAddIn** přidejte následující kód. Tento kód přepíše metodu `CreateRibbonExtensibilityObject` a vrátí třídu XML pásu karet do aplikace sady Office.
 
      [!code-csharp[Trin_WordAddIn_Menus#1](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs#1)]
      [!code-vb[Trin_WordAddIn_Menus#1](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb#1)]
 
-5. V **Průzkumníka řešení**, vyberte soubor XML pásu karet. Ve výchozím nastavení, je název souboru XML pásu karet *Ribbon1.xml*.
+5. V **Průzkumník řešení**vyberte soubor XML pásu karet. Ve výchozím nastavení má soubor XML pásu karet název *Ribbon1. XML*.
 
-6. V panelu nabídky zvolte **zobrazení** > **kód**.
+6. Na panelu nabídek vyberte možnost **zobrazit**  > **kód**.
 
-     Soubor xml pásu karet se otevře v editoru kódu.
+     V editoru kódu se otevře soubor XML pásu karet.
 
-7. V editoru kódu přidejte kód XML, který popisuje místní nabídku a ovládací prvek, který chcete přidat do místní nabídky.
+7. V editoru kódu přidejte XML, které popisuje místní nabídku a ovládací prvek, který chcete přidat do místní nabídky.
 
-     Následující příklad přidá tlačítko, zobrazí se nabídka a ovládací prvek galerie na místní nabídku pro wordový dokument. ID ovládacího prvku tuto nabídku je ContextMenuText. Úplný seznam ovládacího prvku Office 2010 místní ID, naleznete v tématu [soubory nápovědy Office 2010: Office fluent uživatelského rozhraní ovládacího prvku identifikátory](http://go.microsoft.com/fwlink/?LinkID=181052).
+     Následující příklad přidá tlačítko, nabídku a ovládací prvek galerie do místní nabídky pro wordový dokument. ID ovládacího prvku této místní nabídky je ContextMenuText. Úplný seznam ID ovládacího prvku zástupce Office 2010 najdete v tématu soubory s [nápovědu pro office 2010: identifikátory ovládacích prvků uživatelského rozhraní](https://www.microsoft.com/download/details.aspx?id=6627)pro Office Fluent.
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -70,17 +70,17 @@ ms.locfileid: "62826402"
     </customUI>
     ```
 
-8. V **Průzkumníka řešení**, zvolte **MyRibbon.cs** nebo **MyRibbon.vb**.
+8. V **Průzkumník řešení**vyberte **MyRibbon.cs** nebo **MyRibbon. vb**.
 
-9. Přidejte metodu zpětného volání pro `Ribbon1` třídy pro každý ovládací prvek, který chcete zpracovat.
+9. Přidejte metodu zpětného volání do třídy `Ribbon1` pro každý ovládací prvek, který chcete zpracovat.
 
-     Následující metoda zpracovává zpětného volání **tlačítko Moje** tlačítko. Tento kód přidá řetězec do aktivního dokumentu v aktuálním umístění kurzor.
+     Následující metoda zpětného volání zpracovává tlačítko **moje tlačítko** . Tento kód přidá řetězec do aktivního dokumentu v aktuálním umístění nástroje pro vydaný kurzor.
 
      [!code-vb[Trin_WordAddIn_Menus#2](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/ribbon1.vb#2)]
      [!code-csharp[Trin_WordAddIn_Menus#2](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/ribbon1.cs#2)]
 
 ## <a name="see-also"></a>Viz také:
 - [Přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization.md)
-- [Návod: Vytváření místních nabídek pro záložky](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)
+- [Návod: Vytvoření místních nabídek pro záložky](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)
 - [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)
-- [Kontextové nabídky v aplikaci Office 2010](http://go.microsoft.com/fwlink/?LinkId=182186)
+- [Přizpůsobení kontextových nabídek v sadě Office 2010](/previous-versions/office/developer/office-2010/ee691832(v=office.14))

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání deskriptoru filtru do vyhledávací metody | Dokumentace Microsoftu'
+title: 'Postupy: Přidání deskriptoru filtru do vyhledávací metody | Microsoft Docs'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,54 +15,54 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fceb6270aea9da5af1a53adf7560df7dd3702349
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f9dd853142d970cd14de20f4782accb3ce3e17eb
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63418315"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986253"
 ---
 # <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>Postupy: Přidání deskriptoru filtru do vyhledávací metody
-  Deskriptory filtrů povolení příjemcům modelu předat hodnoty metody předtím, než se provedou. Další informace najdete v tématu [navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
+  Deskriptory filtru umožňují spotřebitelům modelu předat hodnoty metodám před jejich spuštěním. Další informace najdete v tématu [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
 
- Jeden běžný scénář je, že chcete získat instance externího typu obsahu, které odpovídají kritérií uživatelů v Sharepointu. Přidání deskriptoru filtru do vyhledávací metody můžete podpořit tento scénář.
+ Jedním z běžných scénářů je, že uživatelé v SharePointu chtějí načíst instance externího typu obsahu, které odpovídají určitým kritériím. Tento scénář můžete podporovat přidáním popisovače filtru k metodě hledání.
 
 ### <a name="to-add-a-filter-descriptor-to-a-finder-method"></a>Přidání deskriptoru filtru do vyhledávací metody
 
-1. V **podrobnosti metody služby BDC** okna, rozbalte uzel vyhledávací metody, rozbalte **parametry** uzel a pak přidejte vstupní parametr. Další informace najdete v tématu [jak: Přidání parametru k metodě](../sharepoint/how-to-add-a-parameter-to-a-method.md).
+1. V okně **Podrobnosti metody služby BDC** rozbalte uzel vyhledávací metody, rozbalte uzel **parametry** a přidejte vstupní parametr. Další informace naleznete v tématu [How to: Add a parametr to a Method](../sharepoint/how-to-add-a-parameter-to-a-method.md).
 
-2. V **podrobnosti metody** okna, vyberte typ popisovače parametru.
+2. V okně **Podrobnosti metody** vyberte popisovač typu parametru.
 
-3. V panelu nabídky zvolte **zobrazení** > **okno vlastností**.
+3. Na panelu nabídek vyberte možnost **zobrazit** > **okno Vlastnosti**.
 
-4. V **vlastnosti** okno, nastaveno **název typu** vlastnost na datový typ, který je vhodný pro filtr.
+4. V okně **vlastnosti** nastavte vlastnost **název typu** na datový typ, který je vhodný pro filtr.
 
-     Například filtr použít data objednávky a omezit počet prodejních objednávek vrácený metodou. Pro podporu tohoto filtru, **název typu** musí být nastavena vlastnost popisovače typu **System.DateTime**.
+     Filtr může například použít datum objednávky k omezení počtu prodejních objednávek vrácených metodou. Pro podporu tohoto filtru musí být vlastnost **název typu** deskriptoru typu nastavená na **System. DateTime**.
 
-5. V **podrobnosti metody** okna, rozbalte **deskriptory filtrů** uzlu.
+5. V okně **Podrobnosti o metodě** rozbalte uzel **popisovače filtru** .
 
-6. V **přidání deskriptoru filtru** klikněte na položku **vytvořit popisovač filtru**.
+6. V seznamu **Přidat Deskriptor filtru** vyberte možnost **vytvořit popisovač filtru**.
 
-     Nový popisovač filtru se zobrazí pod **deskriptory filtrů** uzlu.
+     Pod uzlem **popisovače filtru** se zobrazí nový popisovač filtru.
 
-7. V panelu nabídky zvolte **zobrazení** > **okno vlastností**.
+7. Na panelu nabídek vyberte možnost **zobrazit** > **okno Vlastnosti**.
 
-8. V **vlastnosti** okna, vyberte **typ** vlastnost.
+8. V okně **vlastnosti** vyberte vlastnost **typ** .
 
-9. V seznamu, který se zobrazí pro **typ** vlastnost, zvolte možnost filtrování vzor, který chcete.
+9. V seznamu, který se zobrazí pro vlastnost **typ** , vyberte požadovaný vzor filtrování.
 
-     Například chcete-li vytvořit filtr, který používá data objednávky a omezit počet prodejních objednávek vrácená do vyhledávací metody, zvolte **porovnání**. Filtr porovnávání zajistí, že vyhledávací metody vrátí pouze ty instance, které splňují určité podmínky. Další informace o jednotlivých filtrování vzor, naleznete v tématu [typy filtry podporované službou BDC](http://go.microsoft.com/fwlink/?LinkId=169287).
+     Chcete-li například vytvořit filtr, který používá datum objednávky k omezení počtu prodejních objednávek vrácených v metodě hledání, vyberte možnost **porovnání**. Filtr porovnání zajišťuje, že metoda vyhledávání vrátí pouze ty instance, které splňují určitou podmínku. Další informace o jednotlivých vzorech filtrování najdete v tématu [typy filtrů podporované službou BDC](/previous-versions/office/developer/sharepoint-2010/ee556392(v=office.14)).
 
-10. V **vlastnosti** okna, vyberte **přidružené popisovače typů** vlastnost.
+10. V okně **vlastnosti** vyberte vlastnost **popisovače přidruženého typu** .
 
-11. V seznamu, který se zobrazí pro **přidružené popisovače typů** vlastnosti, vyberte typ popisovače, který jste vytvořili dříve v tomto postupu. To se týká filtr vstupní parametr metody Finder.
+11. V seznamu, který se zobrazí pro vlastnost **přidružených popisovačů typu** , vyberte popisovač typu, který jste vytvořili dříve v tomto postupu. Tím se filtr vztahuje na vstupní parametr vyhledávací metody.
 
-12. Přidejte kód do vyhledávací metody, která vrací data. Vstupní parametr můžete použít jako podmínku v dotazu select.
+12. Přidejte kód do metody Finder, která vrací data. Vstupní parametr můžete použít jako podmínku v dotazu Select.
 
-     Následující příklad vrátí prodejní objednávky, které mají datum zadané pořadí.
+     Následující příklad vrátí prodejní objednávky, které mají zadané datum objednávky.
 
     > [!NOTE]
-    > Nahraďte hodnotu `ServerName` pole s názvem vašeho serveru.
+    > Hodnotu pole `ServerName` nahraďte názvem vašeho serveru.
 
      [!code-csharp[SP_BDC#11](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#11)]
      [!code-vb[SP_BDC#11](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#11)]
@@ -70,7 +70,7 @@ ms.locfileid: "63418315"
 ## <a name="see-also"></a>Viz také:
 - [Postupy: Přidání vyhledávací metody](../sharepoint/how-to-add-a-finder-method.md)
 - [Postupy: Přidání konkrétní vyhledávací metody](../sharepoint/how-to-add-a-specific-finder-method.md)
-- [Postupy: Přidání parametru k metodě](../sharepoint/how-to-add-a-parameter-to-a-method.md)
-- [Postupy: Definování deskriptoru typu pro parametr](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)
-- [Navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)
+- [Postupy: Přidání parametru do metody](../sharepoint/how-to-add-a-parameter-to-a-method.md)
+- [Postupy: definování deskriptoru typu pro parametr](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)
+- [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)
 - [Integrace obchodních dat do služby SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md)

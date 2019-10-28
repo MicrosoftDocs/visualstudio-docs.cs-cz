@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bcbe7a132f7e2f6f7d72cfd2ba210e5edba21b57
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e33ab59660263a5053642c95ec62ab36663f8e7b
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654093"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984308"
 ---
 # <a name="customizing-copy-behavior"></a>Přizpůsobení chování kopírování
 V sadě DSL (Domain-Specific Language) vytvořené pomocí sady Visual Studio vizualizace and modeling SDK můžete změnit, co se stane, když uživatel zkopíruje a vloží prvky.
@@ -86,7 +86,7 @@ Přepište *MyDsl* `ClipboardCommandSet.ProcessOnMenuCopyCommand()` v projektu D
 Přepište *MyDsl* `ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` v projektu DslPackage.
 
  **Zachovat rozložení obrazce pomocí kopírování a vložení**
-Když uživatel zkopíruje více obrazců, můžete při jejich vložení zachovat jejich relativní pozice. Tato technika je znázorněna příkladem na [VMSDK: Ukázka diagramů okruhů](http://go.microsoft.com/fwlink/?LinkId=213879).
+Když uživatel zkopíruje více obrazců, můžete při jejich vložení zachovat jejich relativní pozice. Tato technika je znázorněna příkladem na [VMSDK: Ukázka diagramů okruhů](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8).
 
  Pro dosažení tohoto efektu přidejte obrazce a konektory do zkopírovaného ElementGroupPrototype. Nejpohodlnější způsob přepsání je ElementOperations. CreateElementGroupPrototype (). Chcete-li to provést, přidejte do projektu DSL následující kód:
 
@@ -142,7 +142,7 @@ partial class MyDslDiagram // EDIT NAME
 ```
 
  **Vloží tvary do zvoleného umístění, jako je například aktuální pozice kurzoru.**
-Když uživatel zkopíruje více obrazců, můžete při jejich vložení zachovat jejich relativní pozice. Tato technika je znázorněna příkladem na [VMSDK: Ukázka diagramů okruhů](http://go.microsoft.com/fwlink/?LinkId=213879).
+Když uživatel zkopíruje více obrazců, můžete při jejich vložení zachovat jejich relativní pozice. Tato technika je znázorněna příkladem na [VMSDK: Ukázka diagramů okruhů](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8).
 
  Chcete-li dosáhnout tohoto efektu, přepište `ClipboardCommandSet.ProcessOnMenuPasteCommand()` pro použití verze `ElementOperations.Merge()` specifické pro umístění. Chcete-li to provést, přidejte do projektu DslPackage následující kód:
 
@@ -556,6 +556,6 @@ namespace Company.MyDsl
 
 - [Přizpůsobení vytvoření a přesunutí elementu](../modeling/customizing-element-creation-and-movement.md)
 - [Postupy: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md)
-- [Ukázka: Ukázka diagramů okruhu VMSDK](http://go.microsoft.com/fwlink/?LinkId=213879)
+- [Ukázka: Ukázka diagramů okruhu VMSDK](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

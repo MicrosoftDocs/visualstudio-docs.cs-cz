@@ -1,5 +1,5 @@
 ---
-title: Zajistit jeho důvěryhodnost do dokumentů
+title: Udělení důvěryhodnosti k dokumentům
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,35 +15,35 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: be8a17496788b0f4fe8abc9859b46cbfa11a6ed7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9d245ddf00e4005b763bcd4437d3f8c18d05291e
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827034"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986044"
 ---
-# <a name="grant-trust-to-documents"></a>Zajistit jeho důvěryhodnost do dokumentů
-  Úrovni dokumentu projekt má stejné požadavky na zabezpečení jako projekty na úrovni aplikace: podepisování manifestů s certifikátem nebo kliknutím na výzvu vztahu důvěryhodnosti. Kromě toho dokumentem nebo sešitem, musí být umístěn v adresáři, který je určený jako důvěryhodného umístění.
+# <a name="grant-trust-to-documents"></a>Udělení důvěryhodnosti k dokumentům
+  Projekt na úrovni dokumentu má stejné požadavky na zabezpečení jako projekty na úrovni aplikace: podepisování manifestů pomocí certifikátu nebo kliknutí na výzvu vztahu důvěryhodnosti. Kromě toho musí být dokument nebo sešit umístěn v adresáři, který je určen jako důvěryhodné umístění.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
 ## <a name="trusted-locations"></a>Důvěryhodná umístění
- Aplikace v [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] a Office 2010 centra vztahu důvěryhodnosti, kde uživatelé můžou konfigurovat nastavení zabezpečení a ochrana osobních údajů, jako je například důvěryhodných umístění. Pro řešení Office místním počítači se považuje za důvěryhodného umístění. Kvůli vyššímu riziku, existují však určité adresáře, která se nesmí nikdy důvěryhodné, jako je například dočasných složek pro systém, pro každého uživatele a pro Internet Explorer.
+ Aplikace v [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] a Office 2010 mají centra zabezpečení, kde můžou uživatelé konfigurovat nastavení zabezpečení a ochrany osobních údajů, jako je třeba důvěryhodná umístění. V případě řešení pro systém Office se místní počítač považuje za důvěryhodné umístění. Kvůli vyššímu riziku ale existují některé adresáře, které nemusí být nikdy důvěryhodné, například dočasné složky systému, pro každého uživatele a pro Internet Explorer.
 
- Další informace o Centru zabezpečení najdete v tématu [zabezpečení a zásady a nastavení v aplikaci Office 2010](http://go.microsoft.com/fwlink/?LinkId=89202). Další informace o tom, jak vytvořit, spravovat, odebrat a konfigurovat důvěryhodné složky, najdete v části [nakonfigurovat důvěryhodné umístění a nastavení důvěryhodných vydavatelů v systému Office 2007](http://go.microsoft.com/fwlink/?LinkId=89203) a [vytvořit, odebrat nebo změnit důvěryhodné umístění souborů](https://support.office.com/article/Create-remove-or-change-a-trusted-location-for-your-files-f5151879-25ea-4998-80a5-4208b3540a62).
+ Další informace o centru zabezpečení najdete v tématu [zabezpečení a zásady a nastavení v sadě Office 2010](/previous-versions/office/office-2010/cc178946(v=office.14)). Další informace o tom, jak vytvářet, spravovat, odebírat a konfigurovat důvěryhodné složky, najdete v tématu [Konfigurace nastavení důvěryhodných umístění a důvěryhodných vydavatelů v systému Office 2007](/previous-versions/office/office-2007-resource-kit/cc178948(v=office.12)) a [Vytvoření, odebrání nebo změna důvěryhodného umístění souborů](https://support.office.com/article/Create-remove-or-change-a-trusted-location-for-your-files-f5151879-25ea-4998-80a5-4208b3540a62).
 
-## <a name="security-considerations-for-office-solutions"></a>Informace o zabezpečení pro řešení pro systém Office
- Existuje několik otázky zabezpečení při zvažování složky, které chcete přidat do seznamu důvěryhodných umístění:
+## <a name="security-considerations-for-office-solutions"></a>Otázky zabezpečení pro řešení Office
+ Při zvažování, které složky se mají přidat do důvěryhodných umístění, dochází k několika bezpečnostním hlediskům:
 
-- Místní složky jsou považovány za další zabezpečení a jsou implicitně důvěryhodné. Vzdálených umístěních, jako jsou sdílené složky musí být určena jako důvěryhodných umístění.
+- Místní složky jsou považovány za bezpečnější a jsou implicitně důvěryhodné. Vzdálená umístění, jako jsou sdílené složky, se musí jmenovat jako důvěryhodná umístění.
 
-- Když přidáte do seznamu důvěryhodných umístění adresáře, tato akce uděluje úplný vztah důvěryhodnosti, nejen pro řešení pro Office, ale také pro kód VBA a ActiveX. Z tohoto důvodu, kořenový adresář a *dokumenty* složky by neměl být určen jako důvěryhodné.
+- Když přidáte adresář do důvěryhodných umístění, tato akce udělí úplný vztah důvěryhodnosti nejen pro řešení systému Office, ale také pro kód VBA a ActiveX. Z tohoto důvodu by kořenový adresář a složky *dokumenty* neměly být označeny jako důvěryhodné.
 
-- I když samotný dokument je důvěryhodný pro používání důvěryhodných umístění, další oprávnění jsou nutná k přizpůsobení důvěřovat. Můžete udělit úplný vztah důvěryhodnosti k přizpůsobení pomocí podepisování manifestů s certifikátem, klepnutím na výzvu vztahu důvěryhodnosti nebo instalací řešení Office tak, aby *Program Files* adresáře.
+- I když je samotný dokument důvěryhodný pomocí důvěryhodných umístění, je potřeba další oprávnění pro důvěřování přizpůsobení. Můžete udělit úplný vztah důvěryhodnosti k přizpůsobení pomocí podepisování manifestů s certifikátem, kliknutím na výzvu vztahu důvěryhodnosti nebo instalací řešení Office do adresáře *Program Files* .
 
-- Můžete ukládat dokumentem nebo sešitem, řešení úrovni dokumentu ve stejném adresáři jako sestavení nebo v jiném adresáři. Například dokument může nacházet na serveru SharePoint server a sestavení nebyly nalezeny ve sdílené síti. Další informace najdete v tématu [jak: Publikování řešení Office úrovni dokumentu na SharePoint serveru s použitím technologie ClickOnce](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58).
+- Dokument nebo sešit řešení na úrovni dokumentu můžete uložit do stejného adresáře jako sestavení nebo v jiném adresáři. Dokument může být například umístěn na serveru SharePoint a sestavení může být umístěno v síťové sdílené složce. Další informace najdete v tématu [Postup: publikování řešení Office na úrovni dokumentu na server SharePoint pomocí technologie ClickOnce](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58).
 
 ## <a name="see-also"></a>Viz také:
-- [Zajistit jeho důvěryhodnost do řešení pro systém Office](../vsto/granting-trust-to-office-solutions.md)
+- [Udělení vztahu důvěryhodnosti řešením pro systém Office](../vsto/granting-trust-to-office-solutions.md)
 - [Řešení potíží se zabezpečením řešení pro systém Office](../vsto/troubleshooting-office-solution-security.md)
 - [Zabezpečení řešení pro systém Office](../vsto/securing-office-solutions.md)

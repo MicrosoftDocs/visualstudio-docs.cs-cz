@@ -19,12 +19,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a2b972c3c275f3e43819220532ac0a3c4a597e3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9fc852b4d5003cf809248c72ca3ac42ad3a6bf23
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662940"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981124"
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>Ověřování kódu pomocí diagramů závislostí
 
@@ -52,7 +52,7 @@ Chcete-li zajistit, aby kód nekoliduje s jeho návrhem, ověřte kód pomocí d
 
 Pokud chcete zjistit, které edice sady Visual Studio podporují tuto funkci, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-Kód lze ověřit ručně z otevřeného diagramu závislostí v aplikaci Visual Studio nebo z příkazového řádku. Kód lze také automaticky ověřit při spuštění místních sestavení nebo sestavení Azure Pipelines. Podívejte [se na video pro kanál 9: návrh a ověření architektury pomocí diagramů závislostí](http://go.microsoft.com/fwlink/?LinkID=252073).
+Kód lze ověřit ručně z otevřeného diagramu závislostí v aplikaci Visual Studio nebo z příkazového řádku. Kód lze také automaticky ověřit při spuštění místních sestavení nebo sestavení Azure Pipelines. Podívejte [se na video pro kanál 9: návrh a ověření architektury pomocí diagramů závislostí](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Using-layer-diagrams-to-design-and-validate-your-architecture).
 
 > [!IMPORTANT]
 > Pokud chcete spustit ověřování vrstvy pomocí Team Foundation Server (TFS), musíte na server sestavení také nainstalovat stejnou verzi sady Visual Studio.

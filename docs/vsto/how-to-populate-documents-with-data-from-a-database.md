@@ -13,65 +13,65 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4ec56ae4345405cfc704a97ec624f9c2e4d96a5b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 907b3deeadd0a56f9e47a6e17a40579a0c9ffa64
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967908"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985888"
 ---
 # <a name="how-to-populate-documents-with-data-from-a-database"></a>Postupy: Naplnění dokumentů daty z databáze
 
-Stejným způsobem, že přistupujete k datům v projektech Windows Forms můžou k datům v projektech na úrovni dokumentu pro aplikace Microsoft Office. Použít stejné nástroje a kódu k načítání dat z databáze do vašeho řešení a ovládací prvky Windows Forms slouží k zobrazení data.
+K datům v systém Microsoft Office projektech na úrovni dokumentu můžete přistupovat stejným způsobem jako při přístupu k datům v model Windows Formsch projektech. Pomocí stejných nástrojů a kódu můžete přenést data z databáze do vašeho řešení a pomocí ovládacího prvku model Windows Forms zobrazit data.
 
-Kromě toho můžete zobrazit data pomocí hostitelské ovládací prvky. Hostitelské ovládací prvky jsou nativních objektů v aplikaci Microsoft Office Word, které je vylepšené o události a datové vazby funkce. Další informace najdete v tématu [hostovat položky a hostujte Přehled ovládacích prvků](../vsto/host-items-and-host-controls-overview.md).
+Kromě toho můžete zobrazit data pomocí hostitelských ovládacích prvků. Hostitelské ovládací prvky jsou nativní objekty v systém Microsoft Office Wordu, které byly vylepšeny pomocí událostí a schopností datových vazeb. Další informace naleznete v tématu [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md).
 
 [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
-Následující příklad ukazuje, jak přidat ovládací prvky vázané na data v projekty na úrovni dokumentu pomocí návrháře. Příklad toho, jak přidat ovládací prvky vázané na data v projekty doplňku VSTO v době běhu, naleznete v tématu [názorný postup: Jednoduché datové vazby v projektu doplňku VSTO](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md).
+Následující příklad ukazuje, jak přidat ovládací prvky vázané na data v projektech na úrovni dokumentu pomocí návrháře. Příklad přidání ovládacích prvků vázaných na data v projektech doplňku VSTO za běhu najdete v tématu [Návod: jednoduché datové vazby v projektu doplňku VSTO](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md).
 
-![odkaz na video](../vsto/media/playvideo.gif "odkaz na video") související video ukázku naleznete v tématu [vytvoření vazby dat k obsahu aplikace Word 2007 řídí pomocí Visual Studio Tools pro systém Office (3.0)](http://go.microsoft.com/fwlink/?LinkId=136785).
+![odkaz na video](../vsto/media/playvideo.gif "odkaz na video") Související video ukázku naleznete v tématu [vázání dat na Word 2007 ovládací prvky obsahu pomocí Visual Studio Tools pro systém Office (3,0)](/previous-versions/office/developer/office-2007/bb967663(v=office.12)).
 
-## <a name="add-a-control-to-a-document-at-design-time"></a>Přidání ovládacího prvku na dokument v době návrhu
+## <a name="add-a-control-to-a-document-at-design-time"></a>Přidání ovládacího prvku do dokumentu v době návrhu
 
-### <a name="to-populate-a-document-with-data-from-a-database"></a>K naplnění dokumentů daty z databáze
+### <a name="to-populate-a-document-with-data-from-a-database"></a>Naplnění dokumentu daty z databáze
 
-1. Otevřete projekt úrovni dokumentu aplikace Word v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], v Návrháři otevřený dokument.
+1. Otevřete projekt na úrovni dokumentu aplikace Word v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]s dokumentem otevřeným v návrháři.
 
-2. Otevřít **zdroje dat** okno a vytvořit zdroj dat z databáze. Další informace najdete v tématu [přidat nové připojení](../data-tools/add-new-connections.md).
+2. Otevřete okno **zdroje dat** a vytvořte zdroj dat z databáze. Další informace najdete v tématu [Přidání nových připojení](../data-tools/add-new-connections.md).
 
-3. Přetáhněte pole ze **zdroje dat** okno dokumentu.
+3. Přetáhněte pole, které chcete, z okna **zdroje dat** do dokumentu.
 
-Ovládací prvek obsahu se přidá do dokumentu. Typ obsahu ovládacího prvku závisí na typu dat pole, které jste vybrali. Další informace najdete v tématu [ovládací prvky obsahu](../vsto/content-controls.md).
+Do dokumentu se přidá ovládací prvek obsahu. Typ ovládacího prvku obsahu závisí na datovém typu pole, které jste vybrali. Další informace najdete v tématu [ovládací prvky obsahu](../vsto/content-controls.md).
 
-Můžete přidat jiného ovládacího prvku tak, že vyberete datové pole v **zdroje dat** okno a následným výběrem jiného ovládacího prvku z rozevíracího seznamu.
+Můžete přidat jiný ovládací prvek tak, že vyberete datové pole v okně **zdroje dat** a potom v rozevíracím seznamu vyberete jiný ovládací prvek.
 
 ## <a name="objects-in-the-project"></a>Objekty v projektu
 
-Kromě ovládacího prvku jsou následující objekty související s daty automaticky přidány do projektu:
+Kromě ovládacího prvku jsou do projektu automaticky přidány následující objekty související s daty:
 
-- Typové datové sady, který zapouzdřuje tabulek dat, které jste se připojili v databázi. Další informace najdete v tématu [datovou sadu nástrojů v sadě Visual Studio](../data-tools/dataset-tools-in-visual-studio.md).
+- Typová datová sada, která zapouzdřuje tabulky dat, ke kterým jste se připojili v databázi. Další informace najdete v tématu [nástroje datové sady v sadě Visual Studio](../data-tools/dataset-tools-in-visual-studio.md).
 
-- A <xref:System.Windows.Forms.BindingSource> ovládacího prvku, která se připojuje k typové datové sady. Další informace najdete v tématu [přehled komponenty BindingSource](/dotnet/framework/winforms/controls/bindingsource-component-overview).
+- <xref:System.Windows.Forms.BindingSource>, který spojuje ovládací prvek s typovou datovou sadou. Další informace najdete v tématu [Přehled komponent BindingSource](/dotnet/framework/winforms/controls/bindingsource-component-overview).
 
-- TableAdapter, který se připojuje k databázi typové datové sady. Další informace najdete v tématu [vytvoření a konfigurace objektů TableAdapter](../data-tools/create-and-configure-tableadapters.md).
+- TableAdapter, který připojuje typovou datovou sadu k databázi. Další informace najdete v tématu [Vytvoření a konfigurace objekty TableAdapter](../data-tools/create-and-configure-tableadapters.md).
 
-- TableAdapterManager, který se používá ke koordinaci adaptéry tabulek v datové sadě, aby povolovala hierarchické aktualizace. Další informace najdete v tématu [hierarchické aktualizace](../data-tools/hierarchical-update.md) a [TableAdapterManager odkaz](../data-tools/fill-datasets-by-using-tableadapters.md#tableadaptermanager-reference).
+- TableAdapterManager, který se používá ke koordinaci tabulkových adaptérů v datové sadě za účelem povolení hierarchických aktualizací. Další informace najdete v tématu [Hierarchická aktualizace](../data-tools/hierarchical-update.md) a [TableAdapterManager reference](../data-tools/fill-datasets-by-using-tableadapters.md#tableadaptermanager-reference).
 
-Při spuštění projektu ovládací prvek zobrazí první záznam ve zdroji dat. Můžete použít <xref:System.Windows.Forms.BindingSource> umožňující uživatelům procházet záznamy.
+Při spuštění projektu ovládací prvek zobrazí první záznam ve zdroji dat. Pomocí <xref:System.Windows.Forms.BindingSource> můžete uživatelům umožnit procházení záznamů.
 
-### <a name="to-scroll-through-the-records"></a>Procházet záznamy
+### <a name="to-scroll-through-the-records"></a>Procházení záznamů
 
-- Použití <xref:System.Windows.Forms.BindingSource> metody jako <xref:System.Windows.Forms.BindingSource.MoveNext%2A> a <xref:System.Windows.Forms.BindingSource.MovePrevious%2A>.
+- Použijte <xref:System.Windows.Forms.BindingSource> metody, jako je <xref:System.Windows.Forms.BindingSource.MoveNext%2A> a <xref:System.Windows.Forms.BindingSource.MovePrevious%2A>.
 
-Informace o tom, jak odesílat aktualizace do typové datové sady a databáze najdete v tématu [jak: Aktualizace zdroje dat s použitím dat z hostitelského ovládacího prvku](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
+Informace o tom, jak odeslat aktualizace typové datové sadě a databázi, naleznete v tématu [How to: Update a data source to data z hostitelského ovládacího prvku](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Přidání nových zdrojů dat](../data-tools/add-new-data-sources.md)
 - [Vytvoření vazby ovládacích prvků modelu Windows Forms k datům v sadě Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
 - [Postupy: Naplnění dokumentů daty z objektů](../vsto/how-to-populate-documents-with-data-from-objects.md)
-- [Postupy: Aktualizace zdroje dat s použitím dat z hostitelského ovládacího prvku](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
-- [Použití místních souborů databáze v přehled řešení pro systém Office](../vsto/using-local-database-files-in-office-solutions-overview.md)
+- [Postupy: aktualizace zdroje dat s použitím dat z hostitelského ovládacího prvku](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
+- [Přehled použití místních souborů databáze v řešeních pro systém Office](../vsto/using-local-database-files-in-office-solutions-overview.md)
 - [Přehled komponenty BindingSource](/dotnet/framework/winforms/controls/bindingsource-component-overview)

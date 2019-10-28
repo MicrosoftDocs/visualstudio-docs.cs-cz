@@ -14,26 +14,23 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5487bd64e835f876141afb6657dd885c38223cc5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2c939d15375696aeef47754eec31f63d15b4371a
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72719466"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72982433"
 ---
 # <a name="support-for-the-visual-studio-sdk"></a>Podpora sady Visual Studio SDK
 K dispozici je několik možností podpory pro zákazníky, kteří mají dotazy ohledně postupu při rozšiřování integrovaného vývojového prostředí (IDE) sady Visual Studio.
 
 ## <a name="free-support"></a>Bezplatná podpora
 
-### <a name="msdn-development-center"></a>Vývojové centrum MSDN
- [Středisko pro vývojáře rozšiřitelnosti sady Visual Studio](http://go.microsoft.com/fwlink/?LinkID=84381) na webu MSDN obsahuje zdroje informací, které vám pomůžou zodpovědět otázky týkající se rozšíření sady Visual Studio. Například existuje několik odkazů na VSIP vývojářské Blogy.
-
 ### <a name="microsoft-newsgroups"></a>Diskusní skupiny společnosti Microsoft
  Členové vývojového týmu sady Visual Studio a další vývojáři, kteří sadu Visual Studio rozšířili, se často účastní diskusní skupiny Microsoft. Public. vstudio. rozšiřitelnost. Tato diskusní skupina je spravovaná. Pokud jste univerzální předplatitelem MSDN, ujistěte se, že jste zaregistrovali alias bez nevyžádané pošty, který může Microsoft reagovat.
 
 ### <a name="msdn-forums"></a>Fóra MSDN
- [Fóra MSDN](http://go.microsoft.com/fwlink/?LinkID=76632) poskytují jiný způsob, jak s kolegy a odborníky komunikovat. Grafické uživatelské rozhraní (UI) fór je navrženo tak, aby bylo snazší je používat než diskusní skupiny. [Fórum rozšiřitelnosti sady Visual Studio](http://go.microsoft.com/fwlink/?LinkID=121964) je dobrým místem, kde můžete začít vyhledávat odpovědi na otázky týkající se rozšiřitelnosti. Vždycky Vyhledávejte před dotazem, protože někdo jiný už mohl požádat o stejnou otázku.
+ [Fóra MSDN](https://social.msdn.microsoft.com/Forums/en-US/home) poskytují jiný způsob, jak s kolegy a odborníky komunikovat. Grafické uživatelské rozhraní (UI) fór je navrženo tak, aby bylo snazší je používat než diskusní skupiny. [Fórum rozšiřitelnosti sady Visual Studio](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts) je dobrým místem, kde můžete začít vyhledávat odpovědi na otázky týkající se rozšiřitelnosti. Vždycky Vyhledávejte před dotazem, protože někdo jiný už mohl požádat o stejnou otázku.
 
 ### <a name="visual-studio-gallery"></a>Galerie sady Visual Studio
  [Visual Studio Marketplace](https://marketplace.visualstudio.com/) je místo pro rozšíření a vzorový kód. Můžete najít nástroje, které zlepšují produktivitu a uživatelské prostředí pomocí sady Visual Studio, ukázkové aplikace, které ukazují, jak používat VSPackage a Managed Extensibility Framework (MEF) a další druhy ukázek.
@@ -63,7 +60,7 @@ Zákazníci, kteří chtějí použít [!INCLUDE[vsipsdk](../extensibility/inclu
 
 Dotazy týkající se nabídek Premier Support v kombinaci s programem VSIP lze odeslat do [vsipsvs@microsoft.com](mailto:vsipsvs@microsoft.com). Dotazy týkající se nového programu partner Advantage lze odeslat do [advantg@microsoft.com](mailto:advantg@microsoft.com).
 
-Informace o jednotlivých žádostech o podporu najdete v [jednotlivých žádostech o podporu](http://go.microsoft.com/fwlink/?LinkID=82385).
+Informace o jednotlivých žádostech o podporu najdete v [jednotlivých žádostech o podporu](https://support.microsoft.com/supportforbusiness/productselection).
 
 ## <a name="see-also"></a>Viz také:
 
