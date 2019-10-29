@@ -10,12 +10,12 @@ author: jillre
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: cbb47e07bbe3697f905a28d9771cf55fe6fcc74c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6c980ab2d920a80e49450f6ffe4a9433f490b412
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659742"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72982852"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>Vzájemná izolace částí aplikace pomocí zástupných procedur za účelem testování částí
 
@@ -35,7 +35,7 @@ Vzhledem k tomu, že zástupné procedury závisí na vaší schopnosti struktur
 
 ### <a name="design-for-dependency-injection"></a>Návrh pro vkládání závislostí
 
-Abyste mohli používat zástupné procedury, musí být vaše aplikace navržena tak, aby různé součásti nebyly závislé navzájem, ale byly závislé pouze na definicích rozhraní. Místo toho, aby byly součásti vázány v době kompilace, jsou propojeny v době běhu. Tento způsob napomáhá vytvářet software, který je robustní a snadno aktualizovatelný, protože změny nejsou obvykle přenášeny přes hranice součástí. Doporučujeme vám, i když nepoužíváte zástupné procedury. Pokud píšete nový kód, je snadné postupovat podle vzoru [vkládání závislostí](http://en.wikipedia.org/wiki/Dependency_injection) . Při psaní testů pro stávající software jej můžete chtít refaktorovat. V případě, že by to bylo nepraktické, můžete místo toho zvážit použití překrytí.
+Abyste mohli používat zástupné procedury, musí být vaše aplikace navržena tak, aby různé součásti nebyly závislé navzájem, ale byly závislé pouze na definicích rozhraní. Místo toho, aby byly součásti vázány v době kompilace, jsou propojeny v době běhu. Tento způsob napomáhá vytvářet software, který je robustní a snadno aktualizovatelný, protože změny nejsou obvykle přenášeny přes hranice součástí. Doporučujeme vám, i když nepoužíváte zástupné procedury. Pokud píšete nový kód, je snadné postupovat podle vzoru [vkládání závislostí](https://en.wikipedia.org/wiki/Dependency_injection) . Při psaní testů pro stávající software jej můžete chtít refaktorovat. V případě, že by to bylo nepraktické, můžete místo toho zvážit použití překrytí.
 
 Pojďme tuto diskuzi začít s příkladem motivace, který je v diagramu. Třída StockAnalyzer čte ceny akcií a vytváří některé zajímavé výsledky. Má některé veřejné metody, které chceme otestovat. Abychom mohli něco zjednodušit, Podívejme se jen na jednu z těchto metod, což je velmi jednoduchá, která oznamuje aktuální cenu konkrétní sdílené složky. Chceme napsat jednotkový test této metody. Zde je první koncept testu:
 
@@ -212,7 +212,7 @@ Class TestStockAnalyzer
 End Class
 ```
 
-Speciální část Magic je `StubIStockFeed` třídy. Pro každý veřejný typ v odkazovaném sestavení generuje mechanismus rozhraní Microsoft Fakes zástupnou třídu. Název třídy zástupné procedury je odvozen z názvu rozhraní, s "`Fakes.Stub`" jako předponu a s připojenými názvy typů parametrů.
+Speciální část Magic je `StubIStockFeed`třídy. Pro každý veřejný typ v odkazovaném sestavení generuje mechanismus rozhraní Microsoft Fakes zástupnou třídu. Název třídy zástupné procedury je odvozen z názvu rozhraní, s "`Fakes.Stub`" jako předponu a s připojenými názvy typů parametrů.
 
 Zástupné procedury jsou také generovány pro mechanismy získání a nastavení vlastností, pro události a pro obecné metody.
 
@@ -294,7 +294,7 @@ End Class
 
 ### <a name="methods"></a>Metody
 
-Jak je popsáno v příkladu, mohou být metody zastoupeny připojením delegáta k instanci zástupné třídy. Název typu zástupné procedury je odvozen z názvu metody a parametrů. Například s ohledem na následující `IMyInterface` rozhraní a `MyMethod` metody:
+Jak je popsáno v příkladu, mohou být metody zastoupeny připojením delegáta k instanci zástupné třídy. Název typu zástupné procedury je odvozen z názvu metody a parametrů. Například s ohledem na následující `IMyInterface` rozhraní a `MyMethod`metody:
 
 ```csharp
 // application under test
@@ -312,7 +312,7 @@ var stub = new StubIMyInterface ();
 stub.MyMethodString = (value) => 1;
 ```
 
-Pokud neposkytnete zástupnou proceduru pro funkci, napodobeniny vygeneruje funkci, která vrací výchozí hodnotu návratového typu. Pro čísla je výchozí hodnota 0 a pro typy tříd je to `null` (C#) nebo `Nothing` (Visual Basic).
+Pokud neposkytnete zástupnou proceduru pro funkci, napodobeniny vygeneruje funkci, která vrací výchozí hodnotu návratového typu. Pro čísla je výchozí hodnota 0 a pro typy tříd je to `null` (C#) nebo`Nothing`(Visual Basic).
 
 ### <a name="properties"></a>Vlastnosti
 
@@ -371,7 +371,7 @@ interface IGenericMethod
 }
 ```
 
-můžete napsat test, který má zástupnou proceduru vytváření instancí `GetValue<int>`:
+Můžete napsat test, který má zástupnou proceduru vytváření instancí `GetValue<int>`:
 
 ```csharp
 // unit test code

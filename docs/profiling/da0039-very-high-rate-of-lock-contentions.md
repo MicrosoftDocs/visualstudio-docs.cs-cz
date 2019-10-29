@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a952f3172f1ade9f72491e961de372de3897eb60
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 6185b080967c83be827e34baddfe5b37554398ff
+ms.sourcegitcommit: bb5425b9c6d8fd7135d9584c2963831754071347
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911957"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024689"
 ---
 # <a name="da0039-very-high-rate-of-lock-contentions"></a>DA0039: velmi vysoká míra kolizí zámků
 
@@ -37,7 +37,7 @@ ms.locfileid: "72911957"
 ## <a name="rule-description"></a>Popis pravidla
  Zámky slouží k ochraně kritických oddílů kódu, které musí být spuštěny v jednom vlákně v čase v aplikaci s více vlákny. Modul runtime CLR (Common Language Runtime) platformy Microsoft .NET poskytuje úplnou sadu synchronizačních a uzamykání primitiv. Například C# jazyk podporuje příkaz lock (SyncLock in Visual Basic). Spravovaná aplikace může zavolat monitor. k získání a uvolnění zámku použijte metody v oboru názvů System. Threading. .NET Framework podporuje další prvky synchronizace a zamykání, včetně tříd, které podporují mutexy, ReaderWriterLocks a semafory. Další informace najdete v tématu [Přehled primitiv synchronizace](/dotnet/standard/threading/overview-of-synchronization-primitives) v příručce pro vývojáře .NET Framework na webu MSDN. .NET Framework třídy jsou samy vrstveny na nižší úrovni synchronizačních služeb, které jsou integrované v operačním systému Windows. Patří mezi ně důležité objekty oddílu a mnoho různých funkcí čekání a signalizace událostí. Další informace najdete v části [synchronizace](/windows/win32/sync/synchronization) pro vývoj v systémech Win32 a com v knihovně MSDN.
 
- Základními .NET Framework třídy i nativní objekty Windows, které se používají pro synchronizaci a uzamykání, jsou sdílené paměťové umístění, které se musí změnit pomocí propojených operací. Propojené operace používají pro změnu jejich stavu pomocí atomických operací pokyny specifické pro hardware, které pracují na umístěních sdílené paměti. U atomických operací je zaručena konzistence v rámci všech procesorů v počítači. Zámky a WaitHandles jsou objekty .NET, které automaticky používají propojené operace při jejich nastavení nebo resetování. V aplikaci mohou být k dispozici další struktury dat sdílené paměti, které také vyžadují, abyste používali propojené operace, aby je bylo možné aktualizovat pouze v bezpečném vlákně. Další informace najdete v tématu [propojené operace](/dotnet/api/system.threading.interlocked&view=netframework-4.8) v části .NET Framework v knihovně MSDN.
+ Základními .NET Framework třídy i nativní objekty Windows, které se používají pro synchronizaci a uzamykání, jsou sdílené paměťové umístění, které se musí změnit pomocí propojených operací. Propojené operace používají pro změnu jejich stavu pomocí atomických operací pokyny specifické pro hardware, které pracují na umístěních sdílené paměti. U atomických operací je zaručena konzistence v rámci všech procesorů v počítači. Zámky a WaitHandles jsou objekty .NET, které automaticky používají propojené operace při jejich nastavení nebo resetování. V aplikaci mohou být k dispozici další struktury dat sdílené paměti, které také vyžadují, abyste používali propojené operace, aby je bylo možné aktualizovat pouze v bezpečném vlákně. Další informace najdete v tématu [propojené operace](/dotnet/api/system.threading.interlocked) v části .NET Framework v knihovně MSDN.
 
  Synchronizace a uzamykání jsou mechanismy, pomocí kterých se zajišťuje správné spouštění aplikací s více vlákny. Každé vlákno aplikace s více vlákny je nezávislá jednotka spuštění, která je naplánována nezávisle na operačním systému. K kolizí zámků dochází pokaždé, když je vlákno, které se pokouší získat zámek, zpožděno, protože zámek zadrží jiné vlákno.
 

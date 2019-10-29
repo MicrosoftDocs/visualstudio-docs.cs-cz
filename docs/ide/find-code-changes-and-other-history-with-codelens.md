@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: da45af92a11cfe61d5027d0710304e57ad657e48
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f4b9f55f0dc7d2b0a9fb57fa6177cd8a250f6f62
+ms.sourcegitcommit: bb5425b9c6d8fd7135d9584c2963831754071347
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653851"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024838"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>Nalezení změn kódu a další historie pomocí CodeLensu
 
@@ -217,7 +217,7 @@ Můžete zjistit testy jednotek, které existují pro váš C# kód nebo Visual 
 
 1. Přejít na kód aplikace, který má přidružený [kód pro testování částí](../test/unit-test-your-code.md).
 
-2. Pokud jste to ještě neučinili, sestavte aplikaci tak, aby se načetly indikátory testu CodeLens. Ujistěte se, že je zapnuto [zjišťování podle sestavených sestavení](../test/test-explorer-faq.md#assembly-based-discovery) .
+2. Pokud jste to ještě neučinili, sestavte aplikaci tak, aby se načetly indikátory testu CodeLens. 
 
 3. Zkontrolujte testy kódu stisknutím klávesy **Alt** +**3**.
 
@@ -231,7 +231,7 @@ Můžete zjistit testy jednotek, které existují pro váš C# kód nebo Visual 
 
      ![CodeLens – přejít k definici testování částí](../ide/media/codelens-unit-test-definition.png)
 
-6. Chcete-li zkontrolovat výsledky testu, zvolte indikátor stavu testu (![test ikonu pro neúspěšnou ](../ide/media/codelenstestfailedicon.png) nebo ![test ikona předaná ](../ide/media/codelenstestpassedicon.png)) nebo stiskněte **Alt** +**1**.
+6. Chcete-li zkontrolovat výsledky testu, zvolte indikátor stavu testu (![ikonu neúspěšných testů](../ide/media/codelenstestfailedicon.png) nebo ![test prošel](../ide/media/codelenstestpassedicon.png)) nebo stiskněte klávesu **Alt**+**1**.
 
      ![CodeLens – viz výsledek testu jednotek](../ide/media/codelens-unit-test-result.png)
 
@@ -322,7 +322,7 @@ Použití klávesnice:
 
 ### <a name="q-can-i-move-the-codelens-heads-up-display"></a>Otázka: Lze přesunout pohotové zobrazení funkce CodeLens?
 
-**A:** Ano, vyberte ikonu ![Dock ](../ide/media/codelensdockwindow.png) k ukotvení CodeLens jako okna.
+**A:** Ano, vyberte ikonu ![Dock](../ide/media/codelensdockwindow.png) a ukotvěte CodeLens jako okno.
 
 ![Ukotvit tlačítko v okně indikátoru CodeLens](../ide/media/codelensselectdockwindow.png)
 
@@ -352,8 +352,7 @@ Použití klávesnice:
 
 ### <a name="q-my-codelens-test-indicators-no-longer-appear-in-my-file-when-i-first-open-my-solution-how-can-i-load-them"></a>Otázka: moje indikátory testu CodeLens se při prvním otevření mého řešení již neobjevují v souboru my. Jak je můžu načíst?
 
-**A:** Znovu sestavte projekt, abyste získali indikátory CodeLens testů, které se mají načíst do souboru. Ujistěte se, že je zapnuto [zjišťování podle sestavených sestavení](../test/test-explorer-faq.md#assembly-based-discovery
-) . Pro zlepšení výkonu Visual Studio již nenačítá zdrojové informace pro testovací indikátory, když jsou načteny soubory kódu. Testovací indikátory jsou načteny po sestavení nebo při přechodu na test dvojitým kliknutím na něj v **Průzkumníku testů**.
+**A:** Znovu sestavte projekt, abyste získali indikátory CodeLens testů, které se mají načíst do souboru. Pro zlepšení výkonu Visual Studio již nenačítá zdrojové informace pro testovací indikátory, když jsou načteny soubory kódu. Testovací indikátory jsou načteny po sestavení nebo při přechodu na test dvojitým kliknutím na něj v **Průzkumníku testů**.
 
 ## <a name="see-also"></a>Viz také:
 
