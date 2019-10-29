@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: d526d5df8ba03374fd26ceb870d4b240b6fc2fa4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c3c5d648a5880da43d96e6741656da1023f7cf7f
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648962"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777754"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>Vývoj aplikací pro Univerzální platformu Windows (UWP)
 
@@ -40,7 +40,7 @@ Tady je seznam softwaru, který potřebujete:
 
 ::: moniker range="vs-2017"
 
-- [Windows 10](http://windows.microsoft.com/windows/downloads). Visual Studio 2017 podporuje vývoj UWP jenom ve Windows 10. Další podrobnosti najdete v tématu [cílení na platformu](/visualstudio/productinfo/vs2017-compatibility-vs) a [požadavky na systém](/visualstudio/productinfo/vs2017-system-requirements-vs)pro Visual Studio.
+- [Windows 10](https://support.microsoft.com/help/17777/downloads-for-windows). Visual Studio 2017 podporuje vývoj UWP jenom ve Windows 10. Další podrobnosti najdete v tématu [cílení na platformu](/visualstudio/productinfo/vs2017-compatibility-vs) a [požadavky na systém](/visualstudio/productinfo/vs2017-system-requirements-vs)pro Visual Studio.
 
 - [Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download). Budete také potřebovat volitelnou úlohu vývoje Univerzální platforma Windows.
 
@@ -50,7 +50,7 @@ Tady je seznam softwaru, který potřebujete:
 
 ::: moniker range="vs-2019"
 
-- [Windows 10](http://windows.microsoft.com/windows/downloads). Visual Studio 2019 podporuje vývoj UWP jenom ve Windows 10. Další podrobnosti najdete v tématu [cílení na platformu](/visualstudio/releases/2019/compatibility/) a [požadavky na systém](/visualstudio/releases/2019/system-requirements/)pro Visual Studio.
+- [Windows 10](https://support.microsoft.com/help/17777/downloads-for-windows). Visual Studio 2019 podporuje vývoj UWP jenom ve Windows 10. Další podrobnosti najdete v tématu [cílení na platformu](/visualstudio/releases/2019/compatibility/) a [požadavky na systém](/visualstudio/releases/2019/system-requirements/)pro Visual Studio.
 
 - [Visual Studio](https://visualstudio.microsoft.com/downloads). Budete také potřebovat volitelnou úlohu vývoje Univerzální platforma Windows.
 
