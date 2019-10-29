@@ -751,6 +751,8 @@
                   href: ca5397.md
                 - name: 'CA5398: Vyhněte se pevně zakódovaným hodnotám SslProtocols'
                   href: ca5398.md
+                - name: 'CA5403: Nepoužívejte pevně zakódovaný certifikát'
+                  href: ca5403.md
             - name: Upozornění využití
               items:
                 - name: Přehled

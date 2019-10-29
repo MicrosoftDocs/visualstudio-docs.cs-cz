@@ -7,12 +7,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf2b8669fe9b516f3150829612d6999895cc69f8
-ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
+ms.openlocfilehash: a891f6d18657bad65a1cf087da975849642b7aec
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72306249"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72912040"
 ---
 # <a name="update-an-existing-application-for-msbuild-15"></a>Aktualizace existující aplikace pro MSBuild 15
 
@@ -38,9 +38,9 @@ Mechanismus pro změnu projektu, aby nedocházelo k načítání MSBuild z centr
 
 #### <a name="use-nuget-packages-preferred"></a>Používat balíčky NuGet (preferované)
 
-V těchto pokynech se předpokládá, že používáte [odkazy na PackageReference ve stylu NuGet](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files).
+V těchto pokynech se předpokládá, že používáte [odkazy na PackageReference ve stylu NuGet](/nuget/consume-packages/package-references-in-project-files).
 
-Soubory projektu můžete změnit tak, aby odkazovaly na sestavení MSBuild ze svých balíčků NuGet. Zadejte `ExcludeAssets=runtime` a sdělte tak, že sestavení jsou potřebná pouze v době sestavení a neměla by být zkopírována do výstupního adresáře.
+Soubory projektu můžete změnit tak, aby odkazovaly na sestavení MSBuild ze svých balíčků NuGet. Určete `ExcludeAssets=runtime` pro informování NuGet, že sestavení jsou potřebná pouze v době sestavování a neměla by být zkopírována do výstupního adresáře.
 
 Hlavní a dílčí verze balíčků MSBuild musí být menší než nebo rovna minimální verzi sady Visual Studio, kterou chcete podporovat. Například pokud chcete podporovat sadu Visual Studio 2017 a novější verze, referenční verze balíčku `15.1.548`.
 
@@ -55,7 +55,7 @@ Můžete například použít tento kód XML:
 
 #### <a name="use-extension-assemblies"></a>Použít sestavení rozšíření
 
-Pokud nemůžete použít balíčky NuGet, můžete odkazovat na sestavení nástroje MSBuild, která jsou distribuována se sadou Visual Studio. Pokud přímo odkazujete na MSBuild, ujistěte se, že nebude zkopírován do výstupního adresáře nastavením `Copy Local` na `False`. V souboru projektu bude toto nastavení vypadat jako v následujícím kódu:
+Pokud nemůžete použít balíčky NuGet, můžete odkazovat na sestavení nástroje MSBuild, která jsou distribuována se sadou Visual Studio. Pokud přímo odkazujete na MSBuild, ujistěte se, že se nezkopíruje do výstupního adresáře nastavením `Copy Local` na `False`. V souboru projektu bude toto nastavení vypadat jako v následujícím kódu:
 
 ```xml
     <Reference Include="Microsoft.Build, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -69,7 +69,7 @@ Vytvořte odkaz na balíček Microsoft. Build. Locator, abyste zajistili, že va
 
 ### <a name="ensure-output-is-clean"></a>Zajistěte, aby byl výstup čistý.
 
-Sestavte projekt a zkontrolujte výstupní adresář, abyste měli jistotu, že neobsahuje žádné *Microsoft.Build\*. Knihovna DLL* sestavení jiný než *Microsoft.Build.Locator.dll*přidali v dalším kroku.
+Sestavte projekt a zkontrolujte výstupní adresář, abyste se ujistili, že neobsahuje žádná sestavení *Microsoft. Build.\*. dll* kromě *Microsoft. Build. Locator. dll*, přidané v dalším kroku.
 
 ### <a name="add-package-reference-for-microsoftbuildlocator"></a>Přidat odkaz na balíček pro Microsoft. Build. Locator
 
@@ -95,4 +95,4 @@ MSBuildLocator.RegisterDefaults();
 
 ve spouštěcím kódu aplikace.
 
-Chcete-li, aby bylo možné v průběhu načítání nástroje MSBuild jemnější kontrolu, můžete vybrat výsledek `MSBuildLocator.QueryVisualStudioInstances()`, který bude `MSBuildLocator.RegisterInstance()` předávat ručně, ale většinou to není potřeba.
+Pokud byste chtěli přesnější kontrolu nad načítáním MSBuild, můžete vybrat výsledek `MSBuildLocator.QueryVisualStudioInstances()`, který se má předat `MSBuildLocator.RegisterInstance()` ručně, ale většinou to není potřeba.
