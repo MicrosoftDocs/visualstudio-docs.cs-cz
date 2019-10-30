@@ -1,6 +1,6 @@
 ### YamlMime:Landing
-title: Měřit výkon aplikace v sadě Visual Studio
-summary: Profilace a Diagnostika nástroje pomáhají diagnostikovat paměť a využití procesoru a dalších problémů na úrovni aplikací. Pomocí těchto nástrojů můžete shromažďovat údaje o výkonu při spuštění aplikace.
+title: Měření výkonu aplikace v aplikaci Visual Studio
+summary: Nástroje pro profilaci a diagnostiku vám pomůžou diagnostikovat využití paměti a procesoru a dalších problémů na úrovni aplikace. Pomocí těchto nástrojů můžete shromažďovat údaje o výkonu při spuštění aplikace.
 metadata:
   title: Měření výkonu v aplikaci Visual Studio
   description: Naučte se používat Visual Studio k měření výkonu pomocí nástrojů pro profilaci.
@@ -9,12 +9,12 @@ metadata:
   ms.author: mikejo
   manager: jillfra
   ms.date: 09/17/2019
-  ms.openlocfilehash: fcb3e40870d6f916cf754368359a90215ce1b665
-  ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+  ms.openlocfilehash: b0fb7ff139ce91e981fa5fd5a9c43d1e335a1525
+  ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 09/19/2019
-  ms.locfileid: "71130641"
+  ms.lasthandoff: 10/30/2019
+  ms.locfileid: "73061103"
 landingContent:
 - title: O profilaci
   linkLists:
@@ -41,7 +41,7 @@ landingContent:
     - text: Začínáme s analýzou využití CPU
       url: beginners-guide-to-performance-profiling.md
     - text: Začít s měřením využití paměti
-      url: beginners-guide-to-performance-profiling.md
+      url: memory-usage.md
 - title: Další nástroje pro výkon
   linkLists:
   - linkListType: how-to-guide

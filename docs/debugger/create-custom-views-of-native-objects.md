@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53483979600093133c2b059d9ea921cdb8a08ab1
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: c38ff2fcc762ccc202e2a02ecd36e942db75ad3d
+ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911618"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73061083"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>Vytváření vlastních zobrazení C++ objektů v ladicím programu pomocí architektury Natvis
 
@@ -319,6 +319,10 @@ V následujícím příkladu je vizualizace platná jenom pro `DirectUI::Border`
   </Expand>
 </Type>
 ```
+
+Nepotřebujete `Min` i `Max`. Jsou to volitelné atributy. Nejsou podporovány žádné zástupné znaky.
+
+Atribut `Name` má formát *filename. ext*, například *Hello. exe* nebo *nějaké. dll*. Nejsou povoleny žádné názvy cest.
 
 ### <a name="BKMK_DisplayString"></a>Element DisplayString
 Element `DisplayString` určuje řetězec, který se zobrazí jako hodnota proměnné. Přijímá libovolné řetězce smíšené s výrazy. Vše uvnitř složených závorek je interpretováno jako výraz. Například následující `DisplayString` položku:
