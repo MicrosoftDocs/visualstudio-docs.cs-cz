@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 92d1c327c168bfd2881ad014b7f9ab87f771b95d
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
-ms.translationtype: MT
+ms.openlocfilehash: 70276b8ba4efb08b0a6a57dc48716bd608f0429a
+ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72536076"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144743"
 ---
 # <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>Přečtěte si tipy a triky k produktivitě pro ladicí program v aplikaci Visual Studio.
 
@@ -140,6 +140,7 @@ Pokud potřebujete ladit druhy problémů, které jsou společné pro vícevlák
 
     Můžete také zobrazit umístění vláken v [okně paralelní zásobníky](../debugger/get-started-debugging-multithreaded-apps.md).
 
+::: moniker range="vs-2017"
 ## <a name="examine-payloads-for-web-services-and-network-resources-uwp"></a>Kontrola datových částí pro webové služby a síťové prostředky (UWP)
 
 V aplikacích pro UWP můžete analyzovat síťové operace prováděné pomocí rozhraní `Windows.Web.Http` API. Pomocí tohoto nástroje můžete ladit webové služby a síťové prostředky. Chcete-li použít nástroj, vyberte možnost **ladit > Performance Profiler**. Vyberte **síť**a pak zvolte **Spustit**. Ve své aplikaci Projděte scénář, který používá `Windows.Web.Http` a pak zvolte možnost **Zastavit shromažďování** pro vygenerování sestavy.
@@ -151,6 +152,7 @@ Výběrem operace v souhrnném zobrazení zobrazíte další podrobnosti.
 ![Podrobné informace v nástroji využití sítě](../profiling/media/prof-tour-network-usage-details.png "DetailedViewNetworkUsage")
 
 Další informace najdete v tématu [využití sítě](../profiling/network-usage.md).
+::: moniker-end
 
 ## <a name="modules_window"></a>Seznamte se s tím, jak se ladicí program připojí k vašíC#aplikaci C++(,, F#Visual Basic,).
 

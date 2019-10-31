@@ -13,12 +13,13 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 1259f92b89fc6d83bb0b7296cc07844bf25df705
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+monikerRange: vs-2017
+ms.openlocfilehash: 0fc78a84d0c2f86e8db6c4703cc7404a32508d72
+ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128324"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144742"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>Analýza využití energie v aplikacích pro UWP
 
@@ -54,12 +55,12 @@ Například plně nabitá baterie v tabletu uchovává určité množství energ
 
  **Přidání značek do C#, Visual Basic, C++ kódu**
 
- Chcete-li přidat značku uživatele C#do, Visual Basic C++ kód, <xref:Windows.Foundation.Diagnostics.LoggingChannel?displayProperty=fullName> nejprve vytvořte objekt. Pak vložte volání <xref:Windows.Foundation.Diagnostics.LoggingChannel.LogMessage%2A?displayProperty=nameWithType> metod v místech v kódu, který chcete označit. Použijte [LoggingLevel. informace](xref:Windows.Foundation.Diagnostics.LoggingLevel) v voláních.
+ Chcete-li přidat značku uživatele C#do, Visual Basic C++ kód, nejprve vytvořte objekt <xref:Windows.Foundation.Diagnostics.LoggingChannel?displayProperty=fullName>. Poté vložte volání metod <xref:Windows.Foundation.Diagnostics.LoggingChannel.LogMessage%2A?displayProperty=nameWithType> v místech v kódu, který chcete označit. Použijte [LoggingLevel. informace](xref:Windows.Foundation.Diagnostics.LoggingLevel) v voláních.
 
  Jakmile se metoda spustí, uživatelská značka je spolu se zprávou přidána do profilových dat.
 
 > [!NOTE]
-> - <xref:Windows.Foundation.Diagnostics.LoggingChannel?displayProperty=nameWithType>implementuje rozhraní (projekt jako <xref:System.IDisposable?displayProperty=nameWithType> v C# a VB). <xref:Windows.Foundation.IClosable?displayProperty=nameWithType> Aby se zabránilo úniku prostředků operačního systému <xref:Windows.Foundation.Diagnostics.LoggingChannel.Close%2A?displayProperty=nameWithType> ,<xref:Windows.Foundation.Diagnostics.LoggingChannel.Dispose%2A?displayProperty=nameWithType> zavolejte C# (v a VB), až budete hotovi s kanálem protokolování.
+> - <xref:Windows.Foundation.Diagnostics.LoggingChannel?displayProperty=nameWithType> implementuje rozhraní <xref:Windows.Foundation.IClosable?displayProperty=nameWithType> (projektuje jako <xref:System.IDisposable?displayProperty=nameWithType> v C# a VB). Aby nedošlo k úniku prostředků operačního systému, zavolejte <xref:Windows.Foundation.Diagnostics.LoggingChannel.Close%2A?displayProperty=nameWithType> ( C#<xref:Windows.Foundation.Diagnostics.LoggingChannel.Dispose%2A?displayProperty=nameWithType> v a VB), až budete hotovi s kanálem protokolování.
 > - Každý otevřený protokolovací kanál musí mít jedinečný název. Pokud se pokusíte vytvořit nový kanál protokolování se stejným názvem jako neuvolněný kanál, vyvolá se výjimka.
 
 Příklad kódu naleznete v ukázce Windows SDK Sample [LoggingSession](https://code.msdn.microsoft.com/windowsapps/LoggingSession-Sample-ccd52336)Sample.
@@ -95,7 +96,7 @@ if (performance && performance.mark) {
 2. Zvolte **Spotřeba energie** a pak zvolte **Spustit**.
 
     > [!NOTE]
-    > Když spustíte Profiler **spotřeby energie** , může se zobrazit okno **řízení uživatelských účtů** požadující vaše oprávnění ke spuštění *VsEtwCollector. exe*. Zvolte **Ano**.
+    > Když spustíte Profiler **spotřeby energie** , může se zobrazit okno **řízení uživatelských účtů** požadující vaše oprávnění ke spuštění *VsEtwCollector. exe*. Vyberte **Ano**.
 
 3. Spusťte v aplikaci shromažďování dat.
 
@@ -125,10 +126,10 @@ if (performance && performance.mark) {
 
 |||
 |-|-|
-|![1. krok](../profiling/media/procguid_1.png "ProcGuid_1")|Soubor sestavy má název Report*RRRRMMDD-hhmm*. diagsession. Pokud se rozhodnete sestavu uložit, můžete název změnit.|
-|![2. krok](../profiling/media/procguid_2.png "ProcGuid_2")|Časová osa ukazuje délku relace profilace, aktivační události životního cyklu aplikace a uživatelské značky.|
-|![3. krok](../profiling/media/procguid_3.png "ProcGuid_3")|Přetažením modrých panelů můžete vybrat určitou oblast časové osy a omezit tak sestavu jen na tuto část časové osy.|
-|![4. krok](../profiling/media/procguid_4.png "ProcGuid_4")|Graf **využití napájení** je víceřádkový graf, který zobrazuje změnu ve výstupu napájení způsobenou prostředkem zařízení během relace profilování. Profiler Spotřeba energie sleduje výkon využívaný procesorem, síťovou aktivitou a displejem.|
+|![Krok 1](../profiling/media/procguid_1.png "ProcGuid_1")|Soubor sestavy má název Report*RRRRMMDD-hhmm*. diagsession. Pokud se rozhodnete sestavu uložit, můžete název změnit.|
+|![Krok 2](../profiling/media/procguid_2.png "ProcGuid_2")|Časová osa ukazuje délku relace profilace, aktivační události životního cyklu aplikace a uživatelské značky.|
+|![Krok 3](../profiling/media/procguid_3.png "ProcGuid_3")|Přetažením modrých panelů můžete vybrat určitou oblast časové osy a omezit tak sestavu jen na tuto část časové osy.|
+|![Krok 4](../profiling/media/procguid_4.png "ProcGuid_4")|Graf **využití napájení** je víceřádkový graf, který zobrazuje změnu ve výstupu napájení způsobenou prostředkem zařízení během relace profilování. Profiler Spotřeba energie sleduje výkon využívaný procesorem, síťovou aktivitou a displejem.|
 |![Krok 5](../profiling/media/procguid_6.png "ProcGuid_6")|Graf **prostředky (zapnuto/vypnuto)** poskytuje podrobné informace o nákladech na energii sítě. Panel **síť** představuje čas, kdy bylo připojení k síti otevřeno. Podřízený panel **přenos dat** je čas, kdy aplikace přijímala nebo odesílala data přes síť.|
 |![Krok 6](../profiling/media/procguid_6a.png "ProcGuid_6a")|**Souhrn využití energie** zobrazuje poměrnou hodnotu celkové energie, která se použila ve vybrané časové ose podle procesoru, síťové aktivity a displeje obrazovky.|
 
@@ -139,7 +140,7 @@ if (performance && performance.mark) {
 ## <a name="optimize-energy-use"></a>Optimalizace spotřeby energie
  Kromě přenosu dat vynakládají síťová připojení energii také na inicializaci, udržování a ukončování připojení. Některé sítě udržují připojení po určitou dobu po odeslání nebo přijetí dat, aby umožnily přenos většího množství dat v rámci jednoho připojení. Podokno **prostředky (zapnuto/vypnuto)** můžete použít k prohlédnutí způsobu, jakým vaše aplikace komunikuje s připojením.
 
- ![ &#40;Prostředky&#47;mimo&#41; podokno](../profiling/media/energyprof_resources.png "ENERGYPROF_Resources")
+ ![Prostředky &#40;&#47;mimo&#41; podokno](../profiling/media/energyprof_resources.png "ENERGYPROF_Resources")
 
  Pokud se u **sítě** a **přenos dat** panely ukáže, že je připojení otevřeno pro dlouhou dobu, aby bylo možné občasně přenášet řadu malých objemů dat, můžete data dávkovat za účelem jejich odeslání v jednom přenosu, zkrátit dobu, po kterou je síť otevřená, a tedy ušetříte náklady na energii.
 
@@ -158,4 +159,4 @@ if (performance && performance.mark) {
 ## <a name="see-also"></a>Viz také:
 
 - [Profilace v sadě Visual Studio](../profiling/index.yml)
-- [Nejdřív se podívejte na nástroje pro profilaci](../profiling/profiling-feature-tour.md)
+- [První pohled na nástroje pro profilaci](../profiling/profiling-feature-tour.md)

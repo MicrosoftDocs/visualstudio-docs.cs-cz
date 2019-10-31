@@ -6,16 +6,19 @@ manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
 description: Přečtěte si o výhodách Office 365 zahrnutých v některých předplatných sady Visual Studio.
-ms.openlocfilehash: 65a071cbfcdc31ca2ef8a36ac5a779fc99467c17
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 58bfed3de99e3a3fa0a46e084ea566ae0451c47f
+ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816462"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144716"
 ---
 # <a name="office-365-proplus-in-visual-studio-subscriptions"></a>Office 365 ProPlus v předplatných sady Visual Studio
 
 Vytvořte nejlepší práci. Pracujte odkudkoli s aplikacemi, které se vždycky aktualizují. Office 365 ProPlus je předplatné, které přináší aplikace Premium, jako je Word, Excel, PowerPoint, OneNote, Outlook, Publisher a Access (Vydavatel a přístup k dispozici jenom na počítači). Aplikace se dají instalovat na víc zařízení, včetně počítačů PC, Mac, iPady, iPhone, tabletů s Androidem a telefonů s Androidem. V rámci předplatného získáte nejnovější verze aplikací a automaticky obdržíte aktualizace, když k nim dojde.
+
+> [!NOTE]
+> Vaše předplatné sady Visual Studio vám opravňuje k použití Office 365 pro produkční použití.  
 
 ## <a name="getting-started-with-office-365-proplus"></a>Začínáme se sadou Office 365 ProPlus
 
@@ -42,10 +45,6 @@ Pomocí těchto kroků si stáhněte a aktivujte Office 365 ProPlus:
    > ![Office 365 zadejte kód Product Key](_img/vs-office365/vs-office365-enter-key.png)
 0. Znovu klikněte na tlačítko **Další** .
 0. Kliknutím na **instalovat** nainstalujete aplikace Office.
-
-## <a name="next-steps"></a>Další kroky
-
-Pokud plánujete vývoj aplikací pro Office, budete chtít aktivovat [předplatné vývojářů pro Office](vs-office-dev.md) .
 
 ## <a name="eligibility"></a>Vznik
 
@@ -75,4 +74,4 @@ Nejste si jistí, jaké Předplatné používáte?  Pokud chcete zobrazit všech
 Nezapomeňte tyto skvělé výhody aktivovat, abyste mohli využít maximum vašeho předplatného sady Visual Studio:
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
-- [Individuální kredit Azure DevTest](vs-azure.md)
+- [Individuální kredit Azure DevTest](vs-azure.md) Pokud plánujete vývoj aplikací pro Office, budete chtít aktivovat [předplatné vývojářů pro Office](vs-office-dev.md) .

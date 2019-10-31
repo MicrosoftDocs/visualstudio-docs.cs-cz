@@ -1,6 +1,6 @@
 ---
-title: Měřit výkon pomocí nástroje pro profilaci
-description: Stručný podívejte se na různé diagnostické nástroje, který je k dispozici v sadě Visual Studio.
+title: Měření výkonu pomocí nástrojů pro profilaci
+description: Podívejte se na krátké zobrazení různých diagnostických nástrojů, které jsou k dispozici v aplikaci Visual Studio.
 ms.custom: mvc
 ms.date: 05/18/2018
 ms.topic: quickstart
@@ -12,161 +12,178 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5dff10c90a51dffece1e93e575ab7ae3cbf75367
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
-ms.translationtype: MT
+ms.openlocfilehash: 9c78c56d00f087bdef7733ee1ef2cbf90afd9638
+ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65704509"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144757"
 ---
-# <a name="quickstart-first-look-at-profiling-tools"></a>Rychlý start: Nejdřív se podívejte na nástroje pro profilaci
+# <a name="quickstart-first-look-at-profiling-tools"></a>Rychlý Start: první pohled na nástroje pro profilaci
 
-Visual Studio poskytuje širokou škálu profilování nástroje, které pomáhají diagnostikovat různé druhy problémů s výkonem v závislosti na typu aplikace.
+Visual Studio poskytuje celou řadu nástrojů pro profilaci, které vám pomůžou s diagnostikou různých typů problémů s výkonem v závislosti na typu aplikace.
 
-V okně diagnostické nástroje jsou k dispozici nástrojů pro profilaci, ke kterým může přistupovat během relace ladění. V okně diagnostické nástroje se zobrazí automaticky, pokud jste ji vypnuli. Otevřete okno, klikněte na tlačítko **ladění / Windows / zobrazit diagnostické nástroje**. V otevřeném okně můžete vybrat nástroje, pro které chcete shromažďovat data.
+Nástroje pro profilaci, ke kterým můžete přistupovat během relace ladění, jsou k dispozici v okně Diagnostické nástroje. Okno Diagnostické nástroje se automaticky zobrazí, pokud jste ho nevypnuli. Okno zobrazíte kliknutím na **ladit/Windows/zobrazit diagnostické nástroje**. V otevřeném okně můžete vybrat nástroje, pro které chcete shromažďovat data.
 
-![Okno diagnostické nástroje](../profiling/media/prof-tour-diagnostic-tools.png "diagnostické nástroje")
+![Diagnostické nástroje okno](../profiling/media/prof-tour-diagnostic-tools.png "Diagnostické nástroje")
 
-Při ladění, můžete použít **diagnostické nástroje** okna k analýze procesoru a využití paměti a můžete zobrazit události, které obsahuje informace související s výkonem.
+Při ladění můžete použít okno **diagnostické nástroje** k analýze využití CPU a paměti a můžete zobrazit události, které zobrazují informace související s výkonem.
 
-![Diagnostické nástroje souhrnné zobrazení](../profiling/media/prof-tour-cpu-and-memory-graph.gif "souhrn diagnostické nástroje")
+![Zobrazení souhrnu Diagnostické nástroje](../profiling/media/prof-tour-cpu-and-memory-graph.gif "Souhrn Diagnostické nástroje")
 
-**Diagnostické nástroje** okno je často preferovaný způsob, jak profil aplikace, ale pro buildy vydaných verzí. můžete také provést a dodatečně analyzovat aplikace místo. Pokud chcete další informace o různých přístupů, přečtěte si téma [spustit s nebo bez ladicího programu nástroje pro profilaci](../profiling/running-profiling-tools-with-or-without-the-debugger.md). Profilace nástroj pro podporu různých typů aplikací najdete v tématu [který nástroj mám použít?](#which-tool-should-i-use).
+**Diagnostické nástroje** okno je často upřednostňovaným způsobem, jak Profilovat aplikace, ale pro buildy vydaných verzí můžete místo toho provést i analýzu aplikace po porážce. Pokud chcete získat další informace o různých přístupech, přečtěte si téma [spuštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md). Pokud chcete zobrazit podporu nástrojů pro profilaci pro různé typy aplikací, přečtěte si téma [který nástroj mám použít?](#which-tool-should-i-use).
 
 > [!NOTE]
-> Můžete použít nástroje a dodatečně s Windows 7 a novější. Windows 8 a novější se vyžaduje pro spuštění nástrojů pro profilaci s ladicím programem (**diagnostické nástroje** okno).
+> Můžete použít nástroje po porážce v systému Windows 7 nebo novějším. Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnostické nástroje** okno) se vyžaduje systém Windows 8 nebo novější.
 
 ## <a name="analyze-cpu-usage"></a>Analýza využití procesoru
 
-Nástroj využití CPU je dobrým začátkem analýzu výkonu vaší aplikace. To zjistíte další informace o prostředky procesoru, které vaše aplikace spotřebovává. Podrobnější návod, nástroj využití CPU, naleznete v tématu [příručka začátečníka profilací výkonu](../profiling/beginners-guide-to-performance-profiling.md).
+Nástroj využití CPU je vhodným místem pro zahájení analýzy výkonu vaší aplikace. Dozvíte se víc o prostředcích procesoru, které vaše aplikace spotřebovává. Podrobnější návod k nástroji využití CPU najdete v tématu [Příručka pro začátečníky k profilaci výkonu](../profiling/beginners-guide-to-performance-profiling.md).
 
-Z **Souhrn** zobrazení diagnostických nástrojů, zvolte **povolit profilaci procesoru** (musíte být v relaci ladění).
+V zobrazení **souhrnu** diagnostické nástroje vyberte **Povolit profilaci procesoru** (musíte být v relaci ladění).
 
-![Povolit využití procesoru v okně diagnostické nástroje](../profiling/media/prof-tour-enable-cpu-profiling.png "diagnostické nástroje povolit využití procesoru")
+![Povolit využití CPU v Diagnostické nástroje](../profiling/media/prof-tour-enable-cpu-profiling.png "Diagnostické nástroje povolit využití CPU")
 
-K co nejefektivnějšímu nástrojem nastavte dva zarážky v kódu, jeden na začátku a na konci funkce nebo oblasti kód, který chcete analyzovat. Když je pozastaveno na zarážce druhý, zkontrolujte dat profilování.
+Chcete-li použít nástroj efektivně, nastavte v kódu dvě zarážky, jeden na začátku a druhý na konci funkce nebo oblast kódu, který chcete analyzovat. Prohlédněte si data profilování při pozastavené druhé zarážce.
 
-**Využití procesoru** zobrazení se zobrazí seznam funkcí, které jsou seřazené podle nejdelší spuštění s nejdelší dobou funkce v horní části. To vám pomůže funkcí kde jsou kritické body výkonu děje.
+V zobrazení **využití CPU** se zobrazuje seznam funkcí seřazený podle nejdelšího běhu s nejdelší spuštěnou funkcí v horní části. To vám může pomáhat s funkcemi, kde dochází k kritickým bodům výkonu.
 
-![Zobrazit diagnostické nástroje využití CPU](../profiling/media/prof-tour-cpu-usage.png "diagnostické nástroje využití CPU")
+![Diagnostické nástroje zobrazení využití procesoru](../profiling/media/prof-tour-cpu-usage.png "Diagnostické nástroje využití CPU")
 
-Poklikejte na funkci, že máte zájem, a zobrazí podrobnější pohled na tři podokna "motýlkový", s vybranou funkci uprostřed období, volání funkce na levé straně a volat funkce na pravé straně. **Tělo funkce** část ukazuje celkové množství času (a procentuální hodnotu času) strávený v těle funkce kromě času stráveného při volání funkce a funkce s názvem. Tato data můžou pomoct vyhodnotit, jestli nezpůsobuje výkonu samotné funkce.
+Dvakrát klikněte na funkci, kterou vás zajímá, a zobrazí se podrobnější zobrazení se třemi podokny "motýlku", ve kterém je vybraná funkce uprostřed okna, volání funkce na levé straně a volané funkce na pravé straně. Část **tělo funkce** ukazuje celkovou dobu (a procento času) strávenou v těle funkce s výjimkou času stráveného voláním a voláním funkce. Tato data vám pomohou vyhodnotit, zda se jedná o problém s výkonem samotné funkce.
 
-![Diagnostické nástroje volající/volaný "motýlkový" zobrazení](../profiling/media/prof-tour-cpu-usage-caller-callee.png "diagnostické nástroje volající/volaný zobrazení")
+![Diagnostické nástroje volající volal "škrticí" zobrazení](../profiling/media/prof-tour-cpu-usage-caller-callee.png "Zobrazení volaný volající Diagnostické nástroje")
 
 ## <a name="analyze-memory-usage"></a>Analýza využití paměti
 
-**Diagnostické nástroje** okna také umožňuje vyhodnotit využití paměti v aplikaci. Například můžete si prohlédnout počtu a velikosti objektů na haldě. Podrobnější pokyny pro analýzu paměti najdete v článku [analýza využití paměti](../profiling/memory-usage.md).
+Okno **diagnostické nástroje** také umožňuje vyhodnotit využití paměti ve vaší aplikaci. Například můžete se podívat na počet a velikost objektů v haldě. Podrobnější pokyny k analýze paměti najdete v tématu [Analýza využití paměti](../profiling/memory-usage.md).
 
-Analýza využití paměti, budete muset trvat aspoň jeden snímek paměti během ladění. Často je nejlepší způsob, jak analyzovat paměti se dvěma snímky první těsně před paměti podezřelý problém a druhý snímek bezprostředně za podezřelý paměti problému dochází. Pak můžete zobrazit rozdíly ve dvou snímků a zobrazit, co přesně se změnilo.
+Chcete-li analyzovat využití paměti, je třeba při ladění provést alespoň jeden snímek paměti. Nejlepším způsobem, jak analyzovat paměť, je často provedení dvou snímků. první napravo před problémem s podezřelou pamětí a druhý snímek hned po výskytu problému s podezřelou pamětí. Pak můžete zobrazit rozdíl dvou snímků a podívat se přesně, co se změnilo.
 
-![Pořízení snímku v okně diagnostické nástroje](../profiling/media/prof-tour-take-snapshots.gif "snímky trvat diagnostické nástroje")
+![Pořídit snímek v Diagnostické nástroje](../profiling/media/prof-tour-take-snapshots.gif "Diagnostické nástroje pořizování snímků")
 
-Když vyberete jeden z odkazů šipku, budete mít rozdílové zobrazení haldy (červená šipka nahoru ![zvýšit využití paměti](../profiling/media/prof-tour-mem-usage-up-arrow.png "zvýšit využití paměti") ukazuje (vlevo) rostoucí počet objektů nebo zvýšení kapacity Velikost haldy (vpravo)). Pokud kliknete na odkaz vpravo, získáte haldy rozdílové zobrazení seřazené podle objekty, které se zvýšila maximální velikost haldy. To může pomoct identifikovat problémy s pamětí. Například na následující ilustraci bajty používané `ClassHandlersStore` objekty zvýšila 3,492 bajtů druhý snímek.
+Když vyberete jednu z odkazů na šipky, získáte rozdílové zobrazení haldy (červená šipka ![zvětšení využití paměti](../profiling/media/prof-tour-mem-usage-up-arrow.png "Zvýšení využití paměti") ukazuje zvýšení počtu objektů (vlevo) nebo zvýšení velikosti haldy (vpravo). Pokud kliknete na odkaz vpravo, dostanete zobrazení rozdílové haldy seřazené podle objektů, které zvýšily velikost haldy. To vám může pomáhat identifikovat problémy s pamětí. Například na obrázku níže jsou bajty využívané `ClassHandlersStore` objekty zvyšovány o 3 492 bajtů ve druhém snímku.
 
-![Diagnostické nástroje v haldě rozdílové zobrazení](../profiling/media/prof-tour-mem-usage-diff-heap.png "diagnostické nástroje haldy rozdílové zobrazení")
+![Zobrazení rozdílu Diagnostické nástroje haldy](../profiling/media/prof-tour-mem-usage-diff-heap.png "Zobrazení rozdílu Diagnostické nástroje haldy")
 
-Pokud místo toho klikněte na odkaz na levé straně v **využití paměti** zobrazení, zobrazení haldy je uspořádaný podle počet objektů; se v horní části zobrazí objekty určitého typu, která zvýšil největší číslo (seřazené podle **počet Diff** sloupec).
+Pokud kliknete na odkaz vlevo místo v zobrazení **využití paměti** , zobrazení haldy se uspořádá podle počtu objektů; objekty konkrétního typu, které zvyšují číslo nejvíce v, jsou uvedeny v horní části (seřazené podle sloupce s **rozdílem podle počtu** ).
 
-## <a name="examine-performance-events"></a>Zkoumat události související s výkonem
+## <a name="examine-performance-events"></a>Kontrola událostí výkonu
 
-**Události** zobrazení v okně diagnostické nástroje se zobrazí jednotlivé události, ke kterým dochází při ladění, jako je například nastavení zarážky nebo operaci krokování kódu. Můžete zkontrolovat informace, jako je doba trvání události (měřená od kdy naposledy pozastavila ladicího programu, nebo při spuštění aplikace). Pokud můžete krokovat kód (F10, F11), například **události** Zobrazí dobu trvání modulu runtime aplikace z předchozího kroku operace pro stávající krok.
+Zobrazení **události** v diagnostické nástroje zobrazuje různé události, ke kterým dochází při ladění, jako je například nastavení zarážky nebo operace krokování kódu. Můžete kontrolovat informace, jako je například doba trvání události (měřeno od okamžiku, kdy byl ladicí program naposledy pozastaven nebo když byla aplikace spuštěna). Pokud například projdete kód (F10, F11), zobrazí se v zobrazení **události** doba běhu aplikace z operace předchozí krok do aktuálního kroku.
 
-![Zobrazit události diagnostických nástrojů](../profiling/media/prof-tour-events.png "zobrazení události diagnostických nástrojů")
+![Zobrazení Diagnostické nástrojech událostí](../profiling/media/prof-tour-events.png "Zobrazit události Diagnostické nástroje")
 
  > [!NOTE]
- > Pokud máte Visual Studio Enterprise, můžete také zobrazit [události IntelliTrace](../debugger/intellitrace.md) na této kartě.
+ > Pokud máte Visual Studio Enterprise, můžete na této kartě Zobrazit také [události IntelliTrace](../debugger/intellitrace.md) .
 
-Stejné události se také zobrazí v editoru kódu, který se zobrazí jako tipy pro výkon.
+Stejné události jsou také zobrazeny v editoru kódu, které lze zobrazit jako tipy pro výkon.
 
-![Profilace tipy pro výkon Tour](../profiling/media/prof-tour-perf-tips.png "profilace Tour tipy pro výkon")
+![Tipy pro výkon Tour profilace](../profiling/media/prof-tour-perf-tips.png "Tipy pro výkon Tour profilace")
 
-## <a name="examine-ui-performance-and-accessibility-events-uwp"></a>Zkoumat události uživatelského rozhraní výkon a usnadnění přístupu (UPW)
+## <a name="examine-ui-performance-and-accessibility-events-uwp"></a>Kontrola výkonu uživatelského rozhraní a událostí přístupnosti (UWP)
 
-V aplikacích pro UWP můžete povolit **Analýza uživatelského prostředí** v **diagnostické nástroje** okna. Nástroj vyhledá běžné problémy výkonu nebo dostupnosti a zobrazí je v **události** zobrazení při ladění. Popisy událostí poskytují informace, které mohou přispět k vyřešení problémů.
+V aplikacích pro UWP můžete v **diagnostické nástroje** okně Povolit **analýzu uživatelského rozhraní** . Nástroj vyhledává běžné problémy s výkonem nebo přístupností a při ladění je zobrazuje v zobrazení **událostí** . Popis události poskytuje informace, které mohou pomáhat při řešení problémů.
 
-![Zobrazit události analýzy uživatelského rozhraní v okně diagnostické nástroje](../profiling/media/prof-tour-ui-analysis.png "diagnostické nástroje události analýzy uživatelského rozhraní pro zobrazení")
+![Zobrazení událostí analýzy uživatelského rozhraní v diagnostických nástrojích](../profiling/media/prof-tour-ui-analysis.png "Diagnostické nástroje zobrazit události analýzy uživatelského rozhraní")
 
-## <a name="post_mortem"></a> Sestavení pro vydání profilu bez ladicího programu
+## <a name="post_mortem"></a>Sestavení pro vydání profilu bez ladicího programu
 
-Profilace nástrojů jako využití CPU a využití paměti je možné pomocí ladicího programu (najdete v dřívějších částech), nebo ji můžete spustit profilování nástroje následné pomocí Profiler výkonu, která je určená k zajištění analýzy pro **vydání** sestavení . V Profiler výkonu můžete shromažďovat diagnostické informace, když aplikace spuštěna a pak zkontrolujte shromážděných informací, jakmile je aplikace pozastavená. Další informace o těchto rozdílných přístupů najdete v tématu [spustit s nebo bez ladicího programu nástroje pro profilaci](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
+Nástroje pro profilaci, jako je využití procesoru a využití paměti, se dají použít spolu s ladicím programem (viz předchozí části) nebo můžete spouštět nástroje pro profilaci po porážce pomocí profileru výkonu, který je určený k poskytnutí analýzy pro sestavení vydaných **verzí** . V profileru výkonu můžete shromažďovat diagnostické informace, když je aplikace spuštěná, a potom po zastavení aplikace prohlédnout shromážděné informace. Další informace o těchto různých přístupůch naleznete v tématu [spuštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
 ![Profiler výkonu](../profiling/media/prof-tour-performance-profiler.png "Profiler výkonu")
 
-Otevřít Profiler výkonu výběrem **ladění** > **Profiler výkonu**.
+Kliknutím na **ladit** > **Performance Profiler**otevřete Profiler výkonu.
 
-V okně vám umožní vybrat více nástrojů pro profilaci v některých scénářích. Nástroje, jako je využití procesoru může poskytovat doplňující data, která mohou používat ke v analýze.
+V některých scénářích můžete v tomto okně vybrat více nástrojů pro profilaci. Nástroje, jako je využití CPU, můžou poskytovat doplňková data, která můžete použít k usnadnění analýzy.
 
-## <a name="analyze-resource-consumption-xaml"></a>Analýza spotřeby prostředků (XAML)
+## <a name="analyze-resource-consumption-xaml"></a>Analyzovat spotřebu prostředků (XAML)
 
-V aplikacích XAML, například WPF aplikace klasické pracovní plochy Windows a aplikací pro UWP můžete analyzovat využití prostředků pomocí nástroje časová osa aplikace. Můžete třeba analyzovat dobu stráví přípravou snímků uživatelského rozhraní (rozložení a vykreslení), zpracování síťových a diskových požadavků aplikace a ve scénářích, jako je spuštění aplikace, stránek zatížení a změna velikosti okna. Chcete-li použít nástroj, zvolte **časová osa aplikace** v Profiler výkonu a klikněte na tlačítko **Start**. Ve vaší aplikaci projít scénář s problémem spotřeby prostředků podezřelého softwaru a klikněte na tlačítko **zastavit shromažďování** generování sestav.
+V aplikacích XAML, jako jsou aplikace WPF pro Windows Desktop a aplikace pro UWP, můžete pomocí nástroje Časová osa aplikace analyzovat spotřebu prostředků. Můžete například analyzovat čas strávený vaší aplikací při přípravě rámců uživatelského rozhraní (rozložení a vykreslování), obsluhování síťových a diskových požadavků a ve scénářích, jako je spuštění aplikace, načítání stránky a změna velikosti okna. Chcete-li použít nástroj, zvolte možnost **Časová osa aplikace** v profileru výkonu a pak zvolte možnost **Spustit**. Ve své aplikaci Projděte scénář s podezřelým problémem spotřeby prostředků a pak zvolte možnost **Zastavit shromažďování** pro vygenerování sestavy.
 
-Nedostatek framerates v **vizuální propustnost** graf může odpovídat vizuální problémy, které se zobrazí při spuštění aplikace. Podobně vysoké čísla ve **využití vlákna UI** graf může také odpovídají problémů s rychlostí odezvy uživatelského rozhraní. V sestavě můžete vybrat časové období se problému s výkonem podezřelého softwaru a pak zkontrolujte podrobné aktivity vlákno uživatelského rozhraní v podrobném zobrazení časové osy (dolní podokno).
+Nízká framerates v grafu **propustnosti vizuálů** může odpovídat vizuálním problémům, které vidíte při spuštění aplikace. Podobně vysoké hodnoty v grafu **využití vlákna uživatelského rozhraní** můžou také odpovídat problémům s odezvou uživatelského rozhraní. V sestavě můžete vybrat časové období s podezřelým problémem s výkonem a pak prostudovat podrobné aktivity vlákna uživatelského rozhraní v zobrazení Podrobnosti časové osy (dolní podokno).
 
-![Profilace nástroj časová osa aplikace](../profiling/media/prof-tour-application-timeline.gif "časová osa aplikace profilace prohlídku")
+![Nástroj pro profilaci Časová osa aplikace](../profiling/media/prof-tour-application-timeline.gif "Časová osa aplikace prohlídka profilace")
 
-V podrobném zobrazení časové osy najdete informace, jako je typ činnosti (nebo zahrnutých prvek uživatelského rozhraní) spolu s doba trvání aktivity. Například v ukázce **rozložení** události pro ovládací prvek mřížky trvá 57.53 ms.
+V zobrazení podrobností časové osy můžete najít informace, jako je například typ activitiy (nebo související prvek uživatelského rozhraní) spolu s dobou trvání aktivity. Například na obrázku je událost **rozložení** ovládacího prvku mřížky převzata 57,53 MS.
 
-Další informace najdete v tématu [časová osa aplikace](../profiling/application-timeline.md).
+Další informace najdete v tématu [Časová osa aplikace](../profiling/application-timeline.md).
 
 ## <a name="analyze-gpu-usage-direct3d"></a>Analýza využití GPU (Direct3D)
 
-V aplikacích rozhraní Direct3D (Direct3D součásti musí být v jazyce C++) můžete prozkoumat aktivity na GPU a analyzovat problémy s výkonem. Další informace najdete v tématu [využití GPU](../debugger/gpu-usage.md). Chcete-li použít nástroj, zvolte **využití GPU** v Profiler výkonu a klikněte na tlačítko **Start**. Ve vaší aplikaci, projděte si scénáře, který vás zajímá profilace a klikněte na tlačítko **zastavit shromažďování** do generování sestavy.
+V aplikacích Direct3D (komponenty Direct3D musí být v C++) můžete prozkoumat činnost na GPU a analyzovat problémy s výkonem. Další informace najdete v tématu [využití GPU](../debugger/gpu-usage.md). Chcete-li použít nástroj, zvolte možnost **použití GPU** v profileru výkonu a pak zvolte možnost **Spustit**. Ve své aplikaci Projděte scénář, který vás zajímá, a pak zvolte **Zastavit shromažďování** pro vygenerování sestavy.
 
-Když vyberete časové období na grafy a zvolte **podrobnosti**, podrobné zobrazení se zobrazí ve spodní části podokna. V podrobném zobrazení můžete zkontrolovat, kolik aktivit se děje každou CPU a GPU. Vyberte události v podokně nejnižší získat automaticky otevíraná okna na časové ose. Vyberte například **k dispozici** událost, abyste viděli **k dispozici** volání automaticky otevíraná okna. (Světle šedá svislé čáry impulsu VSync lze použít jako referenci pochopit, jestli některé **k dispozici** volání vynechalo impulsu Vsync. Musí obsahovat jeden **k dispozici** volání mezi každé dvě Vsyncs mohl aplikaci neustále narazila na 60 snímků za Sekundu.)
+Když vyberete časové období v grafech a zvolíte **Zobrazit podrobnosti**, zobrazí se v dolním podokně podrobné zobrazení. V podrobném zobrazení můžete zjistit, kolik aktivit se děje na jednotlivých PROCESORech a GPU. Výběrem události v dolním podokně získáte místní nabídky na časové ose. Vyberte například **tuto událost k** zobrazení **současných** překryvných oken volání. (Světlé šedé svislé vsync čáry lze použít jako referenci pro pochopení, zda některá **přítomná** volání vynechala vsync. Aby aplikace neustále dosáhla 60 FPS, musí **existovat jedno volání** mezi dvěma Vsyncs.)
 
-![Profilace nástroj využití GPU](../profiling/media/prof-tour-gpu-usage.png "Diag využití GPU")
+![Nástroj pro profilaci využití GPU](../profiling/media/prof-tour-gpu-usage.png "Využití GPU diagnostiky")
 
-V grafech můžete také použít k určení, zda jsou závislá na procesoru, nebo GPU vázán problémových míst výkonu.
+Pomocí grafů můžete také zjistit, zda jsou k dispozici slabá místa výkonu vázaného na procesor nebo GPU.
 
 ::: moniker range="vs-2017"
-## <a name="analyze-performance-javascript-uwp"></a>Analýza výkonu (UPW v JavaScriptu)
+## <a name="analyze-performance-javascript-uwp"></a>Analýza výkonu (JavaScript UWP)
 
-Pro aplikace pro UPW můžete použít nástroje paměti jazyka JavaScript a HTML rychlosti odezvy uživatelského rozhraní.
+Pro aplikace pro UWP můžete použít nástroj pro paměť v jazyce JavaScript a nástroj pro odezvu uživatelského rozhraní HTML.
 
-Nástroj paměti jazyka JavaScript je podobný nástroj využití paměti, která je k dispozici pro další typy aplikací. Tento nástroj můžete použít k pochopení způsobu využívání paměti a nevracení paměti v aplikaci najít. Další podrobnosti o tomto nástroji naleznete v tématu [paměti jazyka JavaScript](../profiling/javascript-memory.md).
+Nástroj pro paměť JavaScriptu je podobný nástroji využití paměti, který je dostupný pro jiné typy aplikací. Tento nástroj můžete použít k pochopení využití paměti a nalezení nevracení paměti ve vaší aplikaci. Další informace o tomto nástroji najdete v tématu [paměť JavaScriptu](../profiling/javascript-memory.md).
 
-![Nástroje pro profilaci paměti jazyka JavaScript](../profiling/media/diagjsmemory.png "DiagJSMemory")
+![Nástroj pro profilaci paměti JavaScriptu](../profiling/media/diagjsmemory.png "DiagJSMemory")
 
-Diagnostikovat odezvu uživatelského rozhraní, pomalé načítání času a v aplikacích pro UPW, pomalé aktualizace sady visual použijte nástroj rychlost odezvy UI HTML. Využití je podobný nástroj časová osa aplikace pro další typy aplikací. Další informace najdete v tématu [rychlost odezvy HTML UI](../profiling/html-ui-responsiveness.md).
+K diagnostikování odezvy uživatelského rozhraní, pomalé doby načítání a pomalých vizuálních aktualizací v aplikacích pro UWP použijte nástroj pro odezvu uživatelského rozhraní HTML. Použití je podobné nástroji Časová osa aplikace pro jiné typy aplikací. Další informace najdete v tématu [odezva uživatelského rozhraní HTML](../profiling/html-ui-responsiveness.md).
 
-![Profilace nástroj rychlost odezvy UI HTML](../profiling/media/diaghtmlresp.png "DiagHTMLResp")
+![Nástroj pro profilaci odezvy uživatelského rozhraní HTML](../profiling/media/diaghtmlresp.png "DiagHTMLResp")
 ::: moniker-end
 
-## <a name="analyze-network-usage-uwp"></a>Analýza využití sítě (UPW)
+::: moniker range="vs-2017"
+## <a name="analyze-network-usage-uwp"></a>Analýza využití sítě (UWP)
 
-V aplikacích pro UPW, můžete analyzovat pomocí provádí síťové operace `Windows.Web.Http` rozhraní API. Tento nástroj může pomoct vyřešit problémy, jako jsou problémy přístupu a ověřování, nesprávné použití mezipaměti a špatné zobrazení a stáhnout výkonu. Chcete-li použít nástroj, zvolte **sítě** v Profiler výkonu a klikněte na tlačítko **Start**. Ve vaší aplikaci, projděte si scénáře, který používá `Windows.Web.Http`a klikněte na tlačítko **zastavit shromažďování** generování sestav.
+V aplikacích pro UWP můžete analyzovat síťové operace prováděné pomocí rozhraní `Windows.Web.Http` API. Tento nástroj vám může pomáhat vyřešit problémy, jako jsou problémy s přístupem a ověřováním, nesprávné použití mezipaměti a špatný výkon zobrazení a stahování. Chcete-li použít nástroj, zvolte v profileru výkonu položku **síť** a pak zvolte možnost **Spustit**. Ve své aplikaci Projděte scénář, který používá `Windows.Web.Http` a pak zvolte možnost **Zastavit shromažďování** pro vygenerování sestavy.
 
-![Síť používání nástrojů pro profilaci](../profiling/media/prof-tour-network-usage.png "Diag využití sítě")
+![Nástroj pro profilaci využití sítě](../profiling/media/prof-tour-network-usage.png "Využití sítě diag")
 
-Vyberte operaci v souhrnné zobrazení zobrazte další podrobnosti.
+Výběrem operace v souhrnném zobrazení zobrazíte další podrobnosti.
 
-![Podrobné informace o nástroji pro využití sítě](../profiling/media/prof-tour-network-usage-details.png "Diag podrobnosti o využití sítě")
+![Podrobné informace v nástroji využití sítě](../profiling/media/prof-tour-network-usage-details.png "Podrobnosti použití diagnostiky sítě")
 
 Další informace najdete v tématu [využití sítě](../profiling/network-usage.md).
+::: moniker-end
 
-## <a name="analyze-performance-legacy-tools"></a>Analýza výkonu (starší verze nástroje)
+## <a name="analyze-performance-legacy-tools"></a>Analýza výkonu (starší nástroje)
 
-Pokud potřebujete funkce, jako je instrumentace, které se aktuálně nenachází v nástroje využití CPU nebo využití paměti a používáte desktop nebo aplikace v ASP.NET, můžete použít prohlížeč výkonu pro profilování. (Není podporováno v aplikacích pro UPW). Další informace najdete v tématu [prohlížeč výkonu](../profiling/performance-explorer.md).
+Pokud potřebujete funkce, jako je instrumentace, které aktuálně nejsou k dispozici v nástroji využití procesoru nebo paměti, a máte spuštěné aplikace Desktop nebo ASP.NET, můžete k profilaci použít Prohlížeč výkonu. (Nepodporováno v aplikacích pro UWP) Další informace najdete v tématu [prohlížeč výkonu](../profiling/performance-explorer.md).
 
-![Nástroj Průzkumník výkonu](../profiling/media/prof-tour-performance-explorer.png "prohlížeč výkonu")
+![Nástroj Prohlížeč výkonu](../profiling/media/prof-tour-performance-explorer.png "Prohlížeč výkonu")
 
-## <a name="which-tool-should-i-use"></a>Jaké nástroje můžu použít?
+## <a name="which-tool-should-i-use"></a>Který nástroj mám použít?
 
-Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Visual Studio a různých typech projektů je můžete využít s:
+Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Visual Studio, a různé typy projektů, pomocí kterých můžete:
 
-|Nástroje výkonu|Plocha Windows|UWP|ASP.NET/ASP.NET Core|
+::: moniker range=">=vs-2019"
+|Nástroj Performance Tool|Plocha Windows|UWP|Jádro ASP.NET/ASP.NET|
 |----------------------|---------------------|-------------|-------------|
-|[Využití procesoru](../profiling/cpu-usage.md)|ano|ano|ano|
-|[Využití paměti](../profiling/memory-usage.md)|ano|ano|ano|
-|[Využití GPU](../debugger/gpu-usage.md)|ano|ano|Ne|
-|[Časová osa aplikace](../profiling/application-timeline.md)|ano|ano|Ne|
-|[Tipy pro výkon](../profiling/perftips.md)|ano|Ano pro XAML, ne pro kód HTML|ano|
-|[Prohlížeč výkonu](../profiling/performance-explorer.md)|ano|Ne|ano|
-|[IntelliTrace](../debugger/intellitrace.md)|.NET se sadou Visual Studio Enterprise pouze|.NET se sadou Visual Studio Enterprise pouze|.NET se sadou Visual Studio Enterprise pouze|
-|[Využití sítě](../profiling/network-usage.md)|Ne|ano|Ne|
-|[Rychlost odezvy uživatelského rozhraní HTML](../profiling/html-ui-responsiveness.md)|Ne|Ano pro kód HTML, ne pro XAML|Ne|
-|[Paměť JavaScriptu](../profiling/javascript-memory.md)|Ne|Ano pro kód HTML, ne pro XAML|Ne|
+|[Využití procesoru](../profiling/cpu-usage.md)|Ano|Ano|Ano|
+|[Využití paměti](../profiling/memory-usage.md)|Ano|Ano|Ano|
+|[Využití GPU](../debugger/gpu-usage.md)|Ano|Ano|Ne|
+|[Časová osa aplikace](../profiling/application-timeline.md)|Ano|Ano|Ne|
+|[Tipy pro výkon](../profiling/perftips.md)|Ano|Ano pro XAML, ne pro HTML|Ano|
+|[Prohlížeč výkonu](../profiling/performance-explorer.md)|Ano|Ne|Ano|
+|[IntelliTrace](../debugger/intellitrace.md)|.NET jenom s Visual Studio Enterprise|.NET jenom s Visual Studio Enterprise|.NET jenom s Visual Studio Enterprise|
+::: moniker-end
+
+::: moniker range="vs-2017"
+|Nástroj Performance Tool|Plocha Windows|UWP|Jádro ASP.NET/ASP.NET|
+|----------------------|---------------------|-------------|-------------|
+|[Využití procesoru](../profiling/cpu-usage.md)|Ano|Ano|Ano|
+|[Využití paměti](../profiling/memory-usage.md)|Ano|Ano|Ano|
+|[Využití GPU](../debugger/gpu-usage.md)|Ano|Ano|Ne|
+|[Časová osa aplikace](../profiling/application-timeline.md)|Ano|Ano|Ne|
+|[Tipy pro výkon](../profiling/perftips.md)|Ano|Ano pro XAML, ne pro HTML|Ano|
+|[Prohlížeč výkonu](../profiling/performance-explorer.md)|Ano|Ne|Ano|
+|[IntelliTrace](../debugger/intellitrace.md)|.NET jenom s Visual Studio Enterprise|.NET jenom s Visual Studio Enterprise|.NET jenom s Visual Studio Enterprise|
+|[Využití sítě](../profiling/network-usage.md)|Ne|Ano|Ne|
+|[Rychlost odezvy uživatelského rozhraní HTML](../profiling/html-ui-responsiveness.md)|Ne|Ano pro HTML, ne pro XAML|Ne|
+|[Paměť JavaScriptu](../profiling/javascript-memory.md)|Ne|Ano pro HTML, ne pro XAML|Ne|
+::: moniker-end
+
 
 ## <a name="see-also"></a>Viz také:
 - [Ladění v sadě Visual Studio](/visualstudio/debugger/debugger-feature-tour)
