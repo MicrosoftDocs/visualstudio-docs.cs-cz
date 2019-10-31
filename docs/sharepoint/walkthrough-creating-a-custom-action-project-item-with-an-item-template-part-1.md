@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2a9370fbbd5c806bd3978e3c642da8a6dbd79fd1
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 4a114345363deb9c5ddd0f5a4141cd7d99f0ac1c
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984991"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189177"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-1"></a>Návod: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 1
   Systém projektu služby SharePoint v aplikaci Visual Studio můžete roztáhnout tak, že vytvoříte vlastní typy položek projektu. V tomto návodu vytvoříte položku projektu, kterou lze přidat do projektu služby SharePoint a vytvořit tak vlastní akci na webu služby SharePoint. Vlastní akce přidá položku nabídky do nabídky **Akce webu** na webu služby SharePoint.
@@ -218,7 +218,7 @@ ms.locfileid: "72984991"
     </VSTemplate>
     ```
 
-     Tento soubor definuje obsah a chování šablony položky. Další informace o obsahu tohoto souboru naleznete v tématu Referenční dokumentace [schématu šablon sady Visual Studio](/visualstudio/extensibility/visual-studio-template-schema-reference).
+     Tento soubor definuje obsah a chování šablony položky. Další informace o obsahu tohoto souboru naleznete v tématu Referenční dokumentace [schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md).
 
 4. V **Průzkumník řešení**otevřete místní nabídku pro projekt **ItemTemplate** , zvolte možnost **Přidat**a poté možnost **Nová položka**.
 
@@ -455,6 +455,6 @@ ms.locfileid: "72984991"
 - [Definování vlastních typů položek projektu služby SharePoint](../sharepoint/defining-custom-sharepoint-project-item-types.md)
 - [Vytváření šablon položek a šablon projektů pro položky projektu služby SharePoint](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
 - [Použití služby projektu SharePoint](../sharepoint/using-the-sharepoint-project-service.md)
-- [Odkaz na schéma šablon sady Visual Studio](/visualstudio/extensibility/visual-studio-template-schema-reference)
+- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Editor obrázků pro ikony](/cpp/windows/image-editor-for-icons)
 - [Vytvoření ikony nebo jiného editoru obrázků &#40;obrázků pro ikony&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)

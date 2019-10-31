@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 13ede811cf2e9d900a0c78aca2214b43bd8438fe
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 6c8d4949bc8bbef0231986d2eeedfd36a2f678ea
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984691"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189166"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-1"></a>Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1
   Projekty služby SharePoint jsou kontejnery pro jednu nebo více položek projektu služby SharePoint. Systém projektu služby SharePoint v aplikaci Visual Studio můžete roztáhnout tak, že vytvoříte vlastní typy položek projektu SharePoint a pak je přidružíte k šabloně projektu. V tomto návodu definujete typ položky projektu pro vytvoření sloupce web a potom vytvoříte šablonu projektu, kterou lze použít k vytvoření nového projektu, který obsahuje položku projektu sloupce webu.
@@ -433,7 +433,7 @@ ms.locfileid: "72984691"
 
    - Používá obor názvů "<http://schemas.microsoft.com/developer/vstemplate/2005>". Jiné soubory projektu v tomto řešení používají obor názvů "<http://schemas.microsoft.com/developer/msbuild/2003>". Proto budou vygenerovány zprávy upozornění schématu XML, ale můžete je v tomto návodu ignorovat.
 
-     Další informace o obsahu souborů *. vstemplate* naleznete v tématu Referenční dokumentace [schématu šablon sady Visual Studio](/visualstudio/extensibility/visual-studio-template-schema-reference).
+     Další informace o obsahu souborů *. vstemplate* naleznete v tématu Referenční dokumentace [schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md).
 
 2. Soubor uložte a zavřete.
 

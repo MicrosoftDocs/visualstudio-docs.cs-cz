@@ -1,5 +1,5 @@
 ---
-title: Přidání příkazu do panelu nástrojů Průzkumník řešení | Dokumentace Microsoftu
+title: Přidání příkazu na panel nástrojů Průzkumník řešení | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,39 +12,39 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2cb5c0a8aac049b7d5ff0e79843724b87e4999e4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 99a21a4dd4c39a4cefdf6be30171c503fc2ce005
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313533"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187106"
 ---
-# <a name="add-a-command-to-the-solution-explorer-toolbar"></a>Přidání příkazu do panelu nástrojů Průzkumníka řešení
-Tento návod ukazuje, jak přidat tlačítko **Průzkumníka řešení** nástrojů.
+# <a name="add-a-command-to-the-solution-explorer-toolbar"></a>Přidání příkazu na panel nástrojů Průzkumník řešení
+Tento návod ukazuje, jak přidat tlačítko na panel nástrojů **Průzkumník řešení** .
 
- Jakýkoli příkaz na panelu nástrojů nebo nabídky se nazývá tlačítko v sadě Visual Studio. Po kliknutí na tlačítko je proveden kód v obslužné rutině příkazu. Související příkazy jsou obvykle seskupené dohromady a vytvoří jednu skupinu. Nabídky a panely nástrojů fungují jako kontejnery pro skupiny. Priorita určuje pořadí, ve kterém jednotlivé příkazy ve skupině zobrazí v nabídce nebo na panelu nástrojů. Tlačítko můžete zabránit zobrazené na panelu nástrojů nebo nabídce řízení viditelnost. Příkaz, který je uveden v `<VisibilityConstraints>` část *.vsct* souboru se zobrazí pouze v kontextu přidružené. Viditelnost nejde použít u skupiny.
+ Libovolný příkaz na panelu nástrojů nebo v nabídce se nazývá tlačítko v sadě Visual Studio. Po kliknutí na tlačítko je proveden kód v obslužné rutině příkazu. Související příkazy jsou obvykle seskupené dohromady, aby tvořily jednu skupinu. Nabídky nebo panely nástrojů slouží jako kontejnery pro skupiny. Priorita určuje pořadí, ve kterém se jednotlivé příkazy ve skupině zobrazí v nabídce nebo na panelu nástrojů. Můžete zabránit zobrazení tlačítka na panelu nástrojů nebo v nabídce pomocí řízení jeho viditelnosti. Příkaz, který je uveden v oddílu `<VisibilityConstraints>` souboru *. vsct* , se zobrazí pouze v přidruženém kontextu. Viditelnost nelze použít pro skupiny.
 
- Další informace o nabídkách, příkazy nástrojů a *.vsct* soubory, naleznete v tématu [příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md).
+ Další informace o nabídkách, příkazech panelů nástrojů a souborech *. vsct* naleznete v tématech [příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md).
 
 > [!NOTE]
-> Pomocí tabulky příkazů XML ( *.vsct*) místo příkazu konfigurace tabulky souborů ( *.ctc*) soubory k definování, jak zobrazit nabídek a příkazů vaše rozšíření VSPackages. Další informace najdete v tématu [tabulky příkazů aplikace Visual Studio (. Vsct) soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
+> Použijte soubory tabulky příkazů XML ( *. vsct*) místo souborů konfigurace příkazového řádku ( *. ctc*), abyste definovali, jak se nabídky a příkazy zobrazí ve vašich VSPackage. Další informace naleznete v tématu [tabulka příkazů sady Visual Studio (. Vsct) soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
 
 ## <a name="prerequisites"></a>Požadavky
- Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-an-extension-with-a-menu-command"></a>Vytvoření rozšíření pomocí příkazu nabídky
- Vytvořte projekt VSIX s názvem `SolutionToolbar`. Přidat šablonu položky příkaz nabídky s názvem **ToolbarButton**. Informace o tom, jak to provést, najdete v tématu [vytváření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
+ Vytvořte projekt VSIX s názvem `SolutionToolbar`. Přidejte šablonu položky příkazu nabídky s názvem **ToolBarButton**. Informace o tom, jak to provést, najdete v tématu [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
 
-## <a name="add-a-button-to-the-solution-explorer-toolbar"></a>Přidání tlačítka na panelu nástrojů Průzkumníka řešení
- Tato část návodu ukazuje, jak přidat tlačítko **Průzkumníka řešení** nástrojů. Po kliknutí na tlačítko spuštění kódu v metodě zpětného volání.
+## <a name="add-a-button-to-the-solution-explorer-toolbar"></a>Přidání tlačítka na panel nástrojů Průzkumník řešení
+ V této části návodu se dozvíte, jak přidat tlačítko na panel nástrojů **Průzkumník řešení** . Při kliknutí na tlačítko je spuštěn kód v metodě zpětného volání.
 
-1. V *ToolbarButtonPackage.vsct* souboru, přejděte `<Symbols>` oddílu. `<GuidSymbol>` Uzel obsahuje skupiny nabídek a příkaz, který byl vytvořen balíček šablony. Přidat `<IDSymbol>` – element pro tento uzel, chcete-li deklarovat skupiny, která bude obsahovat svých rukou.
+1. V souboru *ToolbarButtonPackage. vsct* přejít do části `<Symbols>`. Uzel `<GuidSymbol>` obsahuje skupinu nabídek a příkaz, který byl vygenerován šablonou balíčku. Přidáním prvku `<IDSymbol>` do tohoto uzlu deklarujete skupinu, která bude obsahovat váš příkaz.
 
     ```xml
     <IDSymbol name="SolutionToolbarGroup" value="0x0190"/>
     ```
 
-2. V `<Groups>` části po položce existující skupiny definovat novou skupinu, která je deklarována v předchozím kroku.
+2. V části `<Groups>` pro existující položku skupiny Definujte novou skupinu, kterou jste deklarovali v předchozím kroku.
 
     ```xml
     <Group guid="guidToolbarButtonPackageCmdSet"
@@ -53,9 +53,9 @@ Tento návod ukazuje, jak přidat tlačítko **Průzkumníka řešení** nástro
           </Group>
     ```
 
-     Nastavení nadřazeného GUID:ID pár `guidSHLMainMenu` a `IDM_VS_TOOL_PROJWIN` umístí na tuto skupinu **Průzkumníku řešení** nástrojů a nastavení hodnoty s vysokou prioritou umístí po další příkaz skupiny.
+     Nastavení dvojice nadřazený identifikátor GUID: ID na `guidSHLMainMenu` a `IDM_VS_TOOL_PROJWIN` vloží tuto skupinu na panel nástrojů **Průzkumník řešení** a nastavením hodnoty s vysokou prioritou se umístí za ostatní skupiny příkazů.
 
-3. V `<Buttons>` oddíl, změňte ID nadřazeného generované `<Button>` položky tak, aby odrážely skupině, která jste definovali v předchozím kroku. Upravené `<Button>` prvek by měl vypadat takto:
+3. V části `<Buttons>` změňte nadřazené ID generované položky `<Button>` tak, aby odráželo skupinu, kterou jste definovali v předchozím kroku. Upravený `<Button>` element by měl vypadat takto:
 
     ```xml
     <Button guid="guidToolbarButtonPackageCmdSet" id="ToolbarButtonId" priority="0x0100" type="Button">
@@ -67,29 +67,29 @@ Tento návod ukazuje, jak přidat tlačítko **Průzkumníka řešení** nástro
     </Button>
     ```
 
-4. Sestavte projekt a spusťte ladění. Zobrazí se experimentální instance.
+4. Sestavte projekt a spusťte ladění. Objeví se experimentální instance.
 
-     **Průzkumníka řešení** nástrojů zobrazeno tlačítko Nový příkaz napravo od existující tlačítka. Ikona tlačítka je přeškrtnutím.
+     Na panelu nástrojů **Průzkumník řešení** by se mělo zobrazit nové příkazové tlačítko napravo od stávajících tlačítek. Ikona tlačítka je přeškrtnuté.
 
 5. Klikněte na tlačítko Nový.
 
-     Dialogové okno, které se má zpráva **ToolbarButtonPackage uvnitř SolutionToolbar.ToolbarButton.MenuItemCallback()** by se mělo zobrazit.
+     Mělo by se zobrazit dialogové okno, které obsahuje zprávu **ToolbarButtonPackage uvnitř SolutionToolbar. ToolBarButton. MenuItemCallback ()** .
 
 ## <a name="control-the-visibility-of-a-button"></a>Řízení viditelnosti tlačítka
- Tato část návodu ukazuje, jak řídit, zda tlačítko na panelu nástrojů. Tím, že nastavíte na jeden nebo více projektů v kontextu `<VisibilityConstraints>` část *SolutionToolbar.vsct* soubor, můžete omezit tlačítko se zobrazí, pouze pokud projekt nebo projekty jsou otevřené.
+ V této části návodu se dozvíte, jak ovládat viditelnost tlačítka na panelu nástrojů. Nastavením kontextu na jeden nebo více projektů v části `<VisibilityConstraints>` souboru *SolutionToolbar. vsct* omezíte tlačítko tak, aby se zobrazilo pouze v případě, že je projekt nebo projekty otevřeny.
 
-### <a name="to-display-a-button-when-one-or-more-projects-are-open"></a>K zobrazení tlačítka, když jsou otevřené jeden nebo více projektů
+### <a name="to-display-a-button-when-one-or-more-projects-are-open"></a>Chcete-li zobrazit tlačítko při otevření jednoho nebo více projektů
 
-1. V `<Buttons>` část *ToolbarButtonPackage.vsct*, dvěma příznaky příkazu přidat ke stávající `<Button>` elementu, mezi `<Strings>` a `<Icons>` značky.
+1. V části `<Buttons>` v *ToolbarButtonPackage. vsct*přidejte do existujícího elementu `<Button>` dva příznaky příkazu mezi značky `<Strings>` a `<Icons>`.
 
    ```xml
    <CommandFlag>DefaultInvisible</CommandFlag>
    <CommandFlag>DynamicVisibility</CommandFlag>
    ```
 
-    `DefaultInvisible` a `DynamicVisibility` příznaky musí být nastaven tak této položky `<VisibilityConstraints>` oddíl se projeví.
+    Musí být nastavené příznaky `DefaultInvisible` a `DynamicVisibility`, aby se mohly projevit položky v oddílu `<VisibilityConstraints>`.
 
-2. Vytvoření `<VisibilityConstraints>` oddíl, který má dva `<VisibilityItem>` položky. Vložit nový oddíl bezprostředně po zavření `</Commands>` značky.
+2. Vytvoří `<VisibilityConstraints>` oddíl, který obsahuje dvě položky `<VisibilityItem>`. Novou část vložte hned za uzavírací značku `</Commands>`.
 
    ```xml
    <VisibilityConstraints>
@@ -102,19 +102,19 @@ Tento návod ukazuje, jak přidat tlačítko **Průzkumníka řešení** nástro
    </VisibilityConstraints>
    ```
 
-    Každá položka viditelnost představuje podmínku, pod kterým se zobrazí určeného tlačítka. Chcete-li použít více podmínek, musíte vytvořit několik záznamů pro stejný tlačítko.
+    Každá položka viditelnosti představuje podmínku, pod kterou se zobrazí zadané tlačítko. Chcete-li použít více podmínek, je třeba vytvořit více položek pro stejné tlačítko.
 
-3. Sestavte projekt a spusťte ladění. Zobrazí se experimentální instance.
+3. Sestavte projekt a spusťte ladění. Objeví se experimentální instance.
 
-    **Průzkumníka řešení** panelu nástrojů tlačítko přeškrtnout neobsahuje.
+    Panel nástrojů **Průzkumník řešení** neobsahuje tlačítko přeškrtnuté.
 
-4. Otevřete jakéhokoli řešení, které obsahuje projekt.
+4. Otevřete jakékoli řešení, které obsahuje projekt.
 
-    Na panelu nástrojů vpravo od existující tlačítka se zobrazí strikethrough tlačítko.
+    Tlačítko přeškrtnuté se zobrazí na panelu nástrojů vpravo od stávajících tlačítek.
 
-5. Na **souboru** nabídky, klikněte na tlačítko **zavřít řešení**. Tlačítko dané zařízení zmizí z panelu nástrojů.
+5. V nabídce **soubor** klikněte na příkaz **Zavřít řešení**. Tlačítko zmizí z panelu nástrojů.
 
-   Řídí, zda tlačítko [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] dokud načtení sady VSPackage. Po načtení sady VSPackage, zda tlačítko je řízena sady VSPackage.  Další informace najdete v tématu [MenuCommands vs. OleMenuCommands](../extensibility/menucommands-vs-olemenucommands.md).
+   Viditelnost tlačítka je ovládána [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] až do načtení sady VSPackage. Po načtení balíčku VSPackage je viditelnost tlačítka ovládána VSPackage.  Další informace najdete v tématu [MenuCommands vs. OleMenuCommands](/visualstudio/extensibility/menucommands-vs-olemenucommands?view=vs-2015).
 
 ## <a name="see-also"></a>Viz také:
 - [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

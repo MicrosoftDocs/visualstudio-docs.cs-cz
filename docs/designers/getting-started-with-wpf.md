@@ -8,12 +8,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b7794b4dd300cf66ea894227f9346e80ee68085
-ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
+ms.openlocfilehash: b8cc1ea22c5cdbe85bf1d24d1641709c5fe5da7a
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72924499"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187132"
 ---
 # <a name="get-started-with-wpf"></a>Začínáme s WPF (Windows Presentation Foundation)
 
@@ -26,7 +26,7 @@ V této části najdete témata, která zavádějí a vám pomůžou začít s W
 |Závislosti|Zboží|
 |-|-|
 |Chci se pustit přímo v...|[Návod: Moje první desktopová aplikace WPF](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)|
-|Chci porovnat vývojové nástroje XAML...|[Návrh XAML v aplikaci Visual Studio a Blend pro Visual Studio](../designers/designing-xaml-in-visual-studio.md)|
+|Chci porovnat vývojové nástroje XAML...|[Návrh XAML v aplikaci Visual Studio a Blend pro Visual Studio](../xaml-tools/designing-xaml-in-visual-studio.md)|
 |Začínáte s .NET?|[Průvodce .NET](/dotnet/standard/)<br /><br />[Základy vytváření aplikací](/dotnet/standard/application-essentials)<br /><br />[Začínáme s VisualC#](../ide/quickstart-csharp-console.md)|
 |Řekněte mi více o WPF...|[Přehled WPF](/dotnet/framework/wpf/introduction-to-wpf)<br /><br />[Přehled XAML (WPF)](/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br />[Ovládací prvky](/dotnet/framework/wpf/controls/)<br /><br />[Přehled datových vazeb](/dotnet/desktop-wpf/data/data-binding-overview)<br /><br />[Datová vazba WPF s LINQ to XML](/dotnet/framework/wpf/data/wpf-data-binding-with-linq-to-xml-overview)|
 |Jste vývojář model Windows Forms?|[Ovládací prvky model Windows Forms a ekvivalentní ovládací prvky WPF](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls)<br /><br />[Podporované scénáře v technologii WPF a model Windows Formsch operacích](/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|

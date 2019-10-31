@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.date: 10/16/2019
 ms.technology: vs-azure
 monikerRange: vs-2019
-ms.openlocfilehash: a398adf047ebfe2e76ed91da72513eb7646c36c3
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: 355a08b2ff322226d347d999f4ec8a9ebb7ba5fc
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72535588"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188720"
 ---
 # <a name="how-to-view-and-diagnose-containers-and-images-in-visual-studio"></a>Jak zobrazit a diagnostikovat kontejnery a obrázky v aplikaci Visual Studio
 
@@ -32,7 +32,7 @@ Okno **kontejnery** se automaticky otevře při spuštění kontejnerového proj
 Na levé straně se zobrazí seznam kontejnerů na místním počítači. Kontejnery spojené s vaším řešením jsou uvedené v části **kontejnery řešení**. Napravo se zobrazí podokno s kartami pro **prostředí**, **porty**, **protokoly**a **soubory**.
 
 > [!TIP]
-> V aplikaci Visual Studio můžete snadno přizpůsobit, kde je ukotveno okno nástrojů **kontejnery** . Viz [přizpůsobení rozložení oken v aplikaci Visual Studio](/visualstudio/ide/customizing-window-layouts-in-visual-studio). Ve výchozím nastavení je okno **kontejnery** ukotveno v okně **kukátka** při spuštění ladicího programu.
+> V aplikaci Visual Studio můžete snadno přizpůsobit, kde je ukotveno okno nástrojů **kontejnery** . Viz [přizpůsobení rozložení oken v aplikaci Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md). Ve výchozím nastavení je okno **kontejnery** ukotveno v okně **kukátka** při spuštění ladicího programu.
 
 ## <a name="view-environment-variables"></a>Zobrazit proměnné prostředí
 

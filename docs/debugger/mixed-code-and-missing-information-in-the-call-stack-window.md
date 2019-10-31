@@ -23,17 +23,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a314634766618340e3fb69052bc896cae700d4b4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 25fb7bc54899d8c9a079d3f2706065d690904540
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72731142"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187534"
 ---
 # <a name="mixed-code-and-missing-information-in-the-call-stack-window"></a>Smíšený kód a chybějící informace v okně Zásobník volání
 Z důvodu rozdílů mezi zásobníky volání pro spravovaný a nativní kód nemůže ladicí program vždy zobrazit kompletní zásobník volání, když jsou typy kódu smíšeny. Pokud nativní kód volá spravovaný kód, můžete si všimnout následujících nedostatků v okně **zásobník volání** :
 
-- V okně **zásobník volání** může chybět nativní rámec hned nad spravovaným kódem. Další informace naleznete v tématu [Postup: krokování ze spravovaného kódu, pokud v okně zásobník volání chybějí nativní rámce](../debugger/how-to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-window.md).
+- V okně **zásobník volání** může chybět nativní rámec hned nad spravovaným kódem. Další informace naleznete v tématu [Postup: krokování ze spravovaného kódu, pokud v okně zásobník volání chybějí nativní rámce](how-to-use-the-call-stack-window.md).
 
 - V případě aplikací se smíšeným režimem, které jsou spouštěny mimo ladicí program, může okno **zásobník volání** zobrazit pouze spravovaný kód a žádný z nativních snímků nebude viditelný.
 

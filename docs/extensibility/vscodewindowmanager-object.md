@@ -1,5 +1,5 @@
 ---
-title: Vscodewindowmanager – objekt | Dokumentace Microsoftu
+title: Objekt VSCodeWindowManager | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,21 +13,19 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1da94495019d30a8ba3df8bdaa7df0ccf2ae4d6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c67fb719c6ec87e7707a406e2e7f67cd71569b39
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322937"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189031"
 ---
-# <a name="vscodewindowmanager-object"></a>Vscodewindowmanager – objekt
-Služba jazyka implementuje Správce oken kódu a zodpovídá za správu vylepšení (například panel rozevíracího seznamu). Další informace najdete v tématu [přizpůsobení kódu Windows s použitím rozhraní API starší verze](../extensibility/customizing-code-windows-by-using-the-legacy-api.md).
+# <a name="vscodewindowmanager-object"></a>Objekt VSCodeWindowManager
 
- V následující tabulce jsou uvedeny rozhraní v `VSCodeWindowManager` objektu.
+Jazyková služba implementuje správce oken kódu a zodpovídá za správu doplňků (například rozevírací panel). Další informace najdete v tématu [přizpůsobení oken kódu pomocí starší verze rozhraní API](/visualstudio/extensibility/customizing-code-windows-by-using-the-legacy-api?view=vs-2015).
+
+Následující tabulka ukazuje rozhraní v objektu `VSCodeWindowManager`.
 
 |Rozhraní|Popis|
 |---------------|-----------------|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Vylepšení (např. rozevírací panely) umožňuje přidán či odebrán z okna kódu.|
-
-## <a name="see-also"></a>Viz také:
-- [Přizpůsobení windows kód pomocí starší verze rozhraní API](../extensibility/customizing-code-windows-by-using-the-legacy-api.md)
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Umožňuje přidat nebo odebrat doplňky (například rozevírací panely) v okně kódu.|

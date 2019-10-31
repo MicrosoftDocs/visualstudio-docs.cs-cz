@@ -11,12 +11,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9e53cc877a4e462a458f3bfd455ed222c3b2e17b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: c3b2fc34807be6ae03fe5aacab64439c918a0f5e
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984674"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189136"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 2
   Po definování vlastního typu položky projektu služby SharePoint a jejich přidružení k šabloně projektu v aplikaci Visual Studio můžete také pro šablonu poskytnout průvodce. Průvodce můžete použít ke shromáždění informací z uživatelů při použití šablony k vytvoření nového projektu, který obsahuje položku projektu. Informace, které shromáždíte, lze použít k inicializaci položky projektu.
@@ -116,7 +116,7 @@ ms.locfileid: "72984674"
 
 3. Ujistěte se, že je cílová architektura nastavena na .NET Framework 4,5, nikoli na profil klienta .NET Framework 4,5.
 
-     Další informace najdete v tématu [Postup: cílení na verzi .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md).
+     Další informace najdete v tématu [Postup: cílení na verzi .NET Framework](../ide/visual-studio-multi-targeting-overview.md).
 
 4. Otevřete místní nabídku projektu **ProjectTemplateWizard** , zvolte možnost **Přidat**a pak zvolte možnost **Nová položka**.
 
@@ -233,7 +233,7 @@ ms.locfileid: "72984674"
      [!code-xml[SPExtensibility.ProjectItem.SiteColumn#10](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml#10)]
 
     > [!NOTE]
-    > Okno, které je vytvořeno v tomto XAML, je odvozeno z <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> základní třídy. Když přidáte vlastní dialogové okno WPF do sady Visual Studio, doporučujeme, abyste z této třídy odvodili dialogové okno tak, aby měly konzistentní styly s ostatními dialogovými okny sady Visual Studio, a aby se předešlo problémům s modálními dialogy, které by jinak mohly nastat. Další informace naleznete v tématu [vytváření a Správa modálních](/visualstudio/extensibility/creating-and-managing-modal-dialog-boxes)dialogových oken.
+    > Okno, které je vytvořeno v tomto XAML, je odvozeno z <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> základní třídy. Když přidáte vlastní dialogové okno WPF do sady Visual Studio, doporučujeme, abyste z této třídy odvodili dialogové okno tak, aby měly konzistentní styly s ostatními dialogovými okny sady Visual Studio, a aby se předešlo problémům s modálními dialogy, které by jinak mohly nastat. Další informace naleznete v tématu [vytváření a Správa modálních](../extensibility/creating-and-managing-modal-dialog-boxes.md)dialogových oken.
 
 3. Pokud vyvíjíte Visual Basic projekt, odeberte `ProjectTemplateWizard` obor názvů z názvu třídy `WizardWindow` v atributu `x:Class` prvku `Window`. Tento prvek je na prvním řádku XAML. Až budete hotovi, první řádek by měl vypadat jako v následujícím příkladu.
 
@@ -403,7 +403,7 @@ ms.locfileid: "72984674"
     </WizardExtension>
     ```
 
-     Další informace o prvku `WizardExtension` naleznete v tématu [WizardExtension – element &#40;&#41;Templates sady Visual Studio](/visualstudio/extensibility/wizardextension-element-visual-studio-templates).
+     Další informace o prvku `WizardExtension` naleznete v tématu [WizardExtension – element &#40;&#41;Templates sady Visual Studio](../extensibility/wizardextension-element-visual-studio-templates.md).
 
 3. Soubor uložte a zavřete.
 
@@ -536,11 +536,11 @@ ms.locfileid: "72984674"
 
 4. Zavřete experimentální instanci sady Visual Studio a instanci, ve které je řešení CustomActionProjectItem otevřené.
 
-     Informace o tom, jak nasadit rozšíření [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], najdete v tématu [přenos rozšíření sady Visual Studio](/visualstudio/extensibility/shipping-visual-studio-extensions).
+     Informace o tom, jak nasadit rozšíření [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], najdete v tématu [přenos rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md).
 
 ## <a name="see-also"></a>Viz také:
 - [Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)
 - [Definování vlastních typů položek projektu služby SharePoint](../sharepoint/defining-custom-sharepoint-project-item-types.md)
 - [Vytváření šablon položek a projektů pro položky projektu služby SharePoint](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
-- [Odkaz na schéma šablon sady Visual Studio](/visualstudio/extensibility/visual-studio-template-schema-reference)
+- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Postupy: Použití průvodců se šablonami projektů](../extensibility/how-to-use-wizards-with-project-templates.md)

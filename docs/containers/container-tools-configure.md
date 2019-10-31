@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: conceptual
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: f05eb5d92c0cdaa1242f0d98c3d877eebae27bb1
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 0ae81ed19a7fa8a967a3f9c3fe83c9f0d9e3ae51
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253155"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188770"
 ---
 # <a name="how-to-configure-visual-studio-container-tools"></a>Jak konfigurovat nástroje kontejneru sady Visual Studio
 
@@ -23,18 +23,18 @@ V hlavní nabídce vyberte **nástroje > možnosti**a rozbalte položku **nástr
 
 ::: moniker range="vs-2017"
 
-![Možnosti nástrojů kontejnerů sady Visual Studio zobrazující: Automatické vyžádání požadovaných imagí Docker při načtení projektu, automatické spuštění kontejnerů na pozadí, automatické ukončení kontejnerů při zavření řešení a nedotazování na důvěryhodný certifikát SSL.](./media/overview/visual-studio-docker-tools-options.png)
+![Možnosti nástrojů kontejnerů sady Visual Studio, které ukazují: automatické vyžádání požadovaných imagí Docker při načtení projektu, automatické spuštění kontejnerů na pozadí, automatické ukončení kontejnerů při zavření řešení a nedotazování na důvěryhodný certifikát SSL.](./media/overview/visual-studio-docker-tools-options.png)
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
 **Obecné** nastavení nástrojů kontejneru:
 
-![Možnosti nástrojů kontejnerů sady Visual Studio zobrazující: V případě potřeby nainstalujte Docker Desktop a ASP.NET Core certifikát SSL.](./media/configure-container-tools/tools-options-1.png)
+![Možnosti nástrojů kontejnerů sady Visual Studio, zobrazení: instalace Docker desktopu v případě potřeby a důvěryhodnost ASP.NET Core certifikát SSL.](./media/configure-container-tools/tools-options-1.png)
 
 Nastavení **jednoho projektu** a **Docker Compose** v nástrojích kontejnerů:
 
-![Možnosti nástrojů kontejnerů sady Visual Studio zobrazující: Dezaktivační kontejnery při zavření projektu, vyžádané obrázky Docker v otevřeném projektu a spuštění kontejnerů v otevřeném projektu.](./media/configure-container-tools/tools-options-2.png)
+![Možnosti nástrojů kontejnerů sady Visual Studio, zobrazení: deaktivační kontejnery při zavření projektu, vyžádané obrázky Docker v otevřeném projektu a spuštění kontejnerů v otevřeném projektu.](./media/configure-container-tools/tools-options-2.png)
 ::: moniker-end
 
 Následující tabulka vám může pomáhat při rozhodování, jak tyto možnosti nastavit.
@@ -61,9 +61,9 @@ Následující tabulka popisuje nastavení **jednoho projektu** a **Docker Compo
 
 | Name | Výchozí nastavení | Platí pro | Popis |
 | -----|:---------------:|:----------:| ----------- |
-| Při otevření projektu vyžadovat vyžádání imagí Docker | Pravda | Jeden projekt, Docker Compose | Pro zvýšení výkonu při načítání projektů aplikace Visual Studio spustí operaci získání dat Docker na pozadí, takže až budete připraveni ke spuštění kódu, image je již stažena nebo v procesu stahování. Pokud načítáte pouze projekty a kód procházení, můžete nastavit na **hodnotu false** , aby nedocházelo ke stahování imagí kontejneru, které nepotřebujete. |
-| Spustit kontejnery v otevřeném projektu | Pravda | Jeden projekt, Docker Compose | Pro zvýšení výkonu Visual Studio vytvoří kontejner předem, aby byl připravený pro sestavení a spuštění kontejneru. Pokud chcete řídit, kdy se kontejner vytvoří, nastavte **hodnotu false**. |
-| Zastavit kontejnery při zavření projektu | Pravda | Jeden projekt a Docker Compose | Nastavte na **hodnotu false** , pokud chcete, aby kontejnery pro vaše řešení pokračovaly v běhu i po zavření řešení nebo ukončení sady Visual Studio. |
+| Při otevření projektu vyžadovat vyžádání imagí Docker | Podmínka | Jeden projekt, Docker Compose | Pro zvýšení výkonu při načítání projektů aplikace Visual Studio spustí operaci získání dat Docker na pozadí, takže až budete připraveni ke spuštění kódu, image je již stažena nebo v procesu stahování. Pokud načítáte pouze projekty a kód procházení, můžete nastavit na **hodnotu false** , aby nedocházelo ke stahování imagí kontejneru, které nepotřebujete. |
+| Spustit kontejnery v otevřeném projektu | Podmínka | Jeden projekt, Docker Compose | Pro zvýšení výkonu Visual Studio vytvoří kontejner předem, aby byl připravený pro sestavení a spuštění kontejneru. Pokud chcete řídit, kdy se kontejner vytvoří, nastavte **hodnotu false**. |
+| Zastavit kontejnery při zavření projektu | Podmínka | Jeden projekt a Docker Compose | Nastavte na **hodnotu false** , pokud chcete, aby kontejnery pro vaše řešení pokračovaly v běhu i po zavření řešení nebo ukončení sady Visual Studio. |
 
 ::: moniker-end
 > [!WARNING]
@@ -71,4 +71,4 @@ Následující tabulka popisuje nastavení **jednoho projektu** a **Docker Compo
 
 ## <a name="next-steps"></a>Další kroky
 
-Další informace o práci s kontejnery v aplikaci Visual Studio najdete v tomto [přehledu](visual-studio-tools-for-docker.md).
+Další informace o práci s kontejnery v aplikaci Visual Studio najdete v tomto [přehledu](overview.md).

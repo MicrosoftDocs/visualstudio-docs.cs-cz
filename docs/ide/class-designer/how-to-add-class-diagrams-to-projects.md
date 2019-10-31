@@ -11,18 +11,18 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3cd898f2c4d7a84c9526ca9f56ce65a9b706f11d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 37f7a909196a3b345b39c006e9bf7cd6a52c9bde
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647783"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188981"
 ---
 # <a name="how-to-add-class-diagrams-to-projects"></a>Postupy: Přidání diagramů tříd do projektů
 
 Chcete-li navrhovat, upravovat a Refaktorovat třídy a jiné typy, přidejte diagram tříd do C#Visual Basic nebo C++ projektu. Chcete-li vizualizovat různé části kódu v projektu, přidejte do projektu více diagramů tříd.
 
-Diagramy tříd nemůžete vytvářet z projektů, které sdílejí kód napříč více aplikacemi. Chcete-li vytvořit diagramy tříd UML, přečtěte si téma [vytváření projektů a diagramů modelování UML](../../modeling/create-uml-modeling-projects-and-diagrams.md).
+Diagramy tříd nemůžete vytvářet z projektů, které sdílejí kód napříč více aplikacemi. Chcete-li vytvořit diagramy tříd UML, přečtěte si téma [vytváření projektů a diagramů modelování UML](../../modeling/what-s-new-for-design-in-visual-studio.md).
 
 ## <a name="install-the-class-designer-component"></a>Instalace součásti Návrhář tříd
 

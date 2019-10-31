@@ -9,16 +9,16 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 801ccc48f913b36366ac27292abd472d6ea11207
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7213bd271b5c690d78443339039d09bf14163e91
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668816"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189614"
 ---
 # <a name="pen-tool-modifier-keys-in-blend-for-visual-studio"></a>Modifikační klávesy nástroje pero v Blend pro Visual Studio
 
-V následující tabulce jsou uvedeny zkratky, které můžete použít k úpravě cesty při jejím vytváření pomocí nástroje **pero** ![Pen nástrojů ](../designers/media/d514358f-185a-412f-a55d-36633b25dc8a.png). Nástroj **pero** můžete také použít k přidání nebo odebrání bodů v existující cestě nebo ke spojení dvou existujících cest.
+V následující tabulce jsou uvedeny zkratky, které můžete použít k úpravě cesty při jejím vytváření pomocí nástroje **pero** ![nástrojů Pero](../designers/media/d514358f-185a-412f-a55d-36633b25dc8a.png). Nástroj **pero** můžete také použít k přidání nebo odebrání bodů v existující cestě nebo ke spojení dvou existujících cest.
 
 |K provedení této akce|Postup|Ukazatele|
 | - |-------------|-------------|
@@ -40,4 +40,4 @@ V následující tabulce jsou uvedeny zkratky, které můžete použít k úprav
 
 - [Modifikační klávesy návrhové plochy](../designers/artboard-modifier-keys-in-blend.md)
 - [Modifikační klávesy nástroje Přímý výběr](../designers/direct-selection-tool-modifier-keys-in-blend.md)
-- [Kreslení tvarů a cest](../designers/draw-shapes-and-paths.md)
+- [Kreslení tvarů a cest](draw-shapes-and-paths.md)

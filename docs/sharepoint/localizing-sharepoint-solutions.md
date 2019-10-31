@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e6444f559902841c13a56265569a0bdc13a9ed26
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 7bcd11d7860e1d191479d4a2ea5f9fac78dcdfe2
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981716"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189219"
 ---
 # <a name="localize-sharepoint-solutions"></a>Lokalizace řešení služby SharePoint
 
@@ -42,7 +42,7 @@ ms.locfileid: "72981716"
 |Jazykově neutrální|Soubor prostředků obsahující řetězce lokalizované pro jazyk, ale ne specifickou jazykovou verzi. Například "fr" pro francouzštinu.|
 |Specifické pro jazyk|Soubor prostředků obsahující řetězce lokalizované pro jazyk a jazykovou verzi. Například "fr-CA" pro kanadskou francouzštinu.|
 
- Další informace najdete v tématu [Hierarchická organizace prostředků k lokalizaci](../ide/hierarchical-organization-of-resources-for-localization.md).
+ Další informace najdete v tématu [Hierarchická organizace prostředků k lokalizaci](../ide/globalizing-and-localizing-applications.md).
 
  Chcete-li určit výchozí soubory prostředků v projektech služby SharePoint, které vyvíjíte v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], zvolte **neutrální jazyk (neutrální země)** v seznamu jazykové verze dialogového okna **Přidat prostředek** při přidání souboru prostředků.
 

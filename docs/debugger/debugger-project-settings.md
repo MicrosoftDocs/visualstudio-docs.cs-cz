@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f6a4e3fde3d98b83f8b92ffe039e3bff5c8eae4f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 77f5ca5dcc1b886ec56b7177dd0d6aa62a8ce4f0
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738330"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188629"
 ---
 # <a name="debugger-project-settings"></a>Nastavení projektu ladicího programu
 Určité nastavení projektu má vliv také na ladění. Tato nastavení určují, co se v adresářích ladicí program zobrazuje, argumenty příkazu a příkazu používané k spuštění programu a typ informací o ladění vytvořených pro program. Tato nastavení můžete změnit v dialogovém okně **stránky vlastností** .
@@ -44,7 +44,7 @@ Určité nastavení projektu má vliv také na ladění. Tato nastavení určuj�
 ## <a name="related-sections"></a>Související oddíly
  [Zadat symbol (PDB) a zdrojové soubory](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) Popisuje, jak ladicí program používá soubory symbolů a zdrojové soubory k zobrazení informací pro ladění.
 
- [Ladění aplikací v aplikaci Visual Studio](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps) Popisuje, jak ladit aplikace pro UWP. (Windows Dev Center)
+ [Ladění aplikací v aplikaci Visual Studio](debugging-windows-store-and-windows-universal-apps.md) Popisuje, jak ladit aplikace pro UWP. (Windows Dev Center)
 
  [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md) Popisuje nastavení vlastností související s ladicím programem a přípravu potřebné k ladění programu pomocí ladicího programu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
 

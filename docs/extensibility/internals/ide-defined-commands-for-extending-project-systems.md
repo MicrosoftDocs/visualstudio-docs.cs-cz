@@ -11,12 +11,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e406fb5ba9f221fa22faadfecaa8f0baaefebf75
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1c8be1cff099a713413957cfa5f8b3f383ca4bae
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72727349"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73186343"
 ---
 # <a name="ide-defined-commands-for-extending-project-systems"></a>Příkazy definované prostředím IDE pro rozšíření systémů projektů
 Pokud chcete systémy projektů rozšíříte, můžete použít příkazy a skupiny příkazů poskytované [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE.
@@ -70,6 +70,6 @@ Pokud chcete systémy projektů rozšíříte, můžete použít příkazy a sku
 |IDG_VS_CTXT_PROJECT_PROPERTIES|Příkazy, které poskytují přístup k dialogovému oknu **Vlastnosti projektu** .|
 
 ## <a name="see-also"></a>Viz také:
+
 - [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [MenuCommands vs. OleMenuCommands](../../extensibility/menucommands-vs-olemenucommands.md)
 - [Vytváření znovu použitelných skupin tlačítek](../../extensibility/creating-reusable-groups-of-buttons.md)

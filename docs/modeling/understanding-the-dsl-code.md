@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 017c28af68efa98507286e8acdc2b4d694353aa1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 44f66ed25ab43db2d08db3cb93263bd61ac3a907
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747398"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189457"
 ---
 # <a name="understanding-the-dsl-code"></a>Porozumění kódu DSL
 
@@ -192,7 +192,7 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 
  `CommandSet.cs`
 
- Příkazy nabídky po kliknutí pravým tlačítkem, které jsou viditelné v diagramu. Tuto sadu můžete přizpůsobovat nebo přidat. Tento soubor obsahuje kód pro příkazy. Umístění příkazů v nabídkách je určeno souborem Commands. vsct. Další informace najdete v tématu [zápis uživatelských příkazů a akcí](../modeling/writing-user-commands-and-actions.md).
+ Příkazy nabídky po kliknutí pravým tlačítkem, které jsou viditelné v diagramu. Tuto sadu můžete přizpůsobovat nebo přidat. Tento soubor obsahuje kód pro příkazy. Umístění příkazů v nabídkách je určeno souborem Commands. vsct. Další informace najdete v tématu [zápis uživatelských příkazů a akcí](how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
 
  `Constants.cs`
 
@@ -282,7 +282,7 @@ namespace Company.EmbedInForm
 
  `GeneratedVSCT.vsct`
 
- Vyhledá standardní příkazy nabídky v nabídkách, například v diagramu klikněte pravým tlačítkem myši na nabídku (kontext), nabídce **Upravit** a tak dále. Kód pro příkazy je v CommandSet.cs. Můžete přemístit nebo upravit standardní příkazy a můžete přidat vlastní příkazy. Další informace najdete v tématu [zápis uživatelských příkazů a akcí](../modeling/writing-user-commands-and-actions.md).
+ Vyhledá standardní příkazy nabídky v nabídkách, například v diagramu klikněte pravým tlačítkem myši na nabídku (kontext), nabídce **Upravit** a tak dále. Kód pro příkazy je v CommandSet.cs. Můžete přemístit nebo upravit standardní příkazy a můžete přidat vlastní příkazy. Další informace najdete v tématu [zápis uživatelských příkazů a akcí](how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
 
  `ModelExplorer.cs`
 

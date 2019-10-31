@@ -14,12 +14,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: eb0bbc0cdf7aff548053c813cdf1b29ed1fed080
-ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
+ms.openlocfilehash: 9606b02cb26e8e0ad37f490e330e7d81f3089e27
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913312"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188993"
 ---
 # <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>Kurz: Začínáme s Visual Basic v aplikaci Visual Studio
 
@@ -27,13 +27,13 @@ V tomto kurzu pro Visual Basic (VB) použijete Visual Studio k vytvoření a spu
 
 ::: moniker range="vs-2017"
 
-Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) stránku a nainstalovat zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/downloads) stránku a nainstalovat zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
@@ -55,7 +55,7 @@ Nejprve vytvoříme projekt aplikace Visual Basic. Typ projektu se dodává se v
 
 Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete ji získat přidáním úlohy **vývoje .NET Core pro různé platformy** . Tuto úlohu můžete přidat jedním ze dvou způsobů, v závislosti na tom, které aktualizace sady Visual Studio 2017 jsou nainstalovány na vašem počítači.
 
-#### <a name="option-1-use-the-new-project-dialog-box"></a>Možnost 1: Použití dialogového okna Nový projekt
+#### <a name="option-1-use-the-new-project-dialog-box"></a>Možnost 1: použití dialogového okna Nový projekt
 
 1. Klikněte na odkaz **otevřít instalační program pro Visual Studio** v levém podokně dialogového okna **Nový projekt** .
 
@@ -65,9 +65,9 @@ Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete
 
    ![Úlohy vývoje .NET Core pro různé platformy v Instalační program pro Visual Studio](../media/tutorial-aspnet-workload.png)
 
-#### <a name="option-2-use-the-tools-menu-bar"></a>Možnost 2: Použití panelu nabídek nástrojů
+#### <a name="option-2-use-the-tools-menu-bar"></a>Možnost 2: použití panelu nabídky nástroje
 
-1. Zrušte z dialogového okna **Nový projekt** a v horním řádku nabídky vyberte **nástroje** > **získat nástroje a funkce**.
+1. Zrušte výběr dialogového okna **Nový projekt** a v horním řádku nabídky vyberte **nástroje** > **získat nástroje a funkce**.
 
 1. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
 
@@ -76,7 +76,7 @@ Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete
 ::: moniker range="vs-2019"
 
 > [!NOTE]
-> Některé snímky obrazovky v tomto kurzu používají tmavý motiv. Pokud nepoužíváte tmavý motiv, ale chtěli, najdete v článku [přizpůsobit IDE sady Visual Studio a Editor](../../ide/quickstart-personalize-the-ide.md) stránku a zjistěte, jak.
+> Některé snímky obrazovky v tomto kurzu používají tmavý motiv. Pokud nepoužíváte tmavý motiv, ale chcete, přečtěte si téma [přizpůsobení stránky IDE a editoru sady Visual Studio](../../ide/quickstart-personalize-the-ide.md) , kde se dozvíte, jak.
 
 1. Otevřete Visual Studio 2019.
 
@@ -117,7 +117,7 @@ Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobraz
 
 1. Pokud ještě není otevřený, otevřete projekt *WhatIsYourName* .
 
-1. Zadejte následující kód Visual Basic hned za levou hranatou závorku, která `Sub Main(args As String())` následuje po řádku a `End Sub` před řádkem:
+1. Zadejte následující kód Visual Basic hned za levou hranatou závorku, která následuje `Sub Main(args As String())` čára a před `End Sub` řádek:
 
      ```vb
      Console.WriteLine(vbCrLf + "What is your name? ")
@@ -128,7 +128,7 @@ Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobraz
      Console.ReadKey(True)
     ```
 
-    Tento kód nahradí existující <xref:System.Console.WriteLine%2A>příkazy, <xref:System.Console.Write%2A>a. <xref:System.Console.ReadKey%2A>
+    Tento kód nahrazuje stávající příkazy <xref:System.Console.WriteLine%2A>, <xref:System.Console.Write%2A>a <xref:System.Console.ReadKey%2A>.
 
    ![Okno Code zobrazující, jaký je váš kód vašeho názvu](./media/vs-2019/vb-codewindow-what-name-dark.png)
 
@@ -142,18 +142,18 @@ Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobraz
 
 ::: moniker range="vs-2019"
 
-1. V projektu *WhatIsYourName* zadejte následující kód Visual Basic hned za levou závorku, která následuje `Sub Main(args As String())` za `End Sub` řádkem a před řádkem:
+1. V projektu *WhatIsYourName* zadejte následující kód Visual Basic hned za levou hranatou závorku, která následuje `Sub Main(args As String())` čára a před `End Sub` řádek:
 
      ```vb
      Console.WriteLine(vbCrLf + "What is your name? ")
      Dim name = Console.ReadLine()
      Dim currentDate = DateTime.Now
-     Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}")
+     Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}!")
      Console.Write(vbCrLf + "Press any key to exit... ")
      Console.ReadKey(True)
     ```
 
-    Tento kód nahradí existující <xref:System.Console.WriteLine%2A>příkazy, <xref:System.Console.Write%2A>a. <xref:System.Console.ReadKey%2A>
+    Tento kód nahrazuje stávající příkazy <xref:System.Console.WriteLine%2A>, <xref:System.Console.Write%2A>a <xref:System.Console.ReadKey%2A>.
 
    ![Okno Code zobrazující, jaký je váš kód vašeho názvu](./media/vs-2019/vb-codewindow-what-name-dark.png)
 
@@ -173,7 +173,7 @@ Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobraz
 
 1. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual Basic**a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)** . Pak název souboru *CalculateThis*.
 
-1. Mezi `Module Program` řádek a `End Module` řádek zadejte následující kód:
+1. Zadejte následující kód mezi `Module Program`ovou čárou a `End Module` řádek:
 
    ```vb
    Public num1 As Integer
@@ -208,9 +208,9 @@ Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobraz
 
 1. Po použití filtrů jazyků a platforem zvolte šablonu **aplikace konzoly (.NET Core)** a pak zvolte možnost **Další**.
 
-   Pak v okně **Konfigurovat nový projekt** zadejte nebo zadejte *WhatIsYourName* do pole **název projektu** . Pak vyberte **vytvořit**.
+   Pak v okně **Konfigurovat nový projekt** zadejte nebo zadejte *CalculateThis* do pole **název projektu** . Pak vyberte **vytvořit**.
 
-1. Mezi `Module Program` řádek a `End Module` řádek zadejte následující kód:
+1. Zadejte následující kód mezi `Module Program`ovou čárou a `End Module` řádek:
 
    ```vb
    Public num1 As Integer

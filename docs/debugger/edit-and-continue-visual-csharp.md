@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a4d11875a7ab2ca3f21f364308580a732b7516e6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5d54673ee46c594bd1a4bea2990d3b9bbe90ce1f
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737933"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188187"
 ---
 # <a name="edit-and-continue-visual-c"></a>Upravit a pokračovat (Visual C#)
  S úpravou a pokračováním pro C#můžete provádět změny kódu v režimu pozastavení při ladění. Změny lze použít bez nutnosti zastavit a znovu spustit ladicí relaci. V režimu spuštění je zdrojový Editor určen jen pro čtení.
@@ -41,4 +41,4 @@ ms.locfileid: "72737933"
 ## <a name="see-also"></a>Viz také:
 - [Postupy: Použití operace Upravit a pokračovat (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)
 - [Podporované změny kódu (C# a Visual Basic)](../debugger/supported-code-changes-csharp.md)
-- [Zápis a ladění spuštěného kódu XAML pomocí programu XAML Hot reloading v aplikaci Visual Studio](../debugger/xaml-hot-reload.md)
+- [Zápis a ladění spuštěného kódu XAML pomocí programu XAML Hot reloading v aplikaci Visual Studio](../xaml-tools/xaml-hot-reload.md)

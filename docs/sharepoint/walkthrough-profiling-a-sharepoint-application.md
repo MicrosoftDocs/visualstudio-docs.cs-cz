@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d001edcd281a0c21d244704f0a068850804b8762
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 4d3afc8ff48355c74544edf123689495bfde1302
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981158"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189134"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>Návod: profilování aplikace SharePoint
   Tento návod ukazuje, jak používat nástroje pro profilaci v aplikaci Visual Studio k optimalizaci výkonu aplikace služby SharePoint. Ukázková aplikace je přijímač událostí funkce SharePointu, který obsahuje smyčku nečinnosti, která snižuje výkon přijímače událostí funkce. Profiler sady Visual Studio umožňuje vyhledat a eliminovat nejnákladný (nejpomalejší) část projektu, označovanou také jako *horká cesta*.
@@ -197,7 +197,7 @@ ms.locfileid: "72981158"
 
 2. Na stránce jeden z **Průvodce výkonem**ponechte metodu profilování jako **vzorkování procesoru** a klikněte na tlačítko **Další** .
 
-     Další metody profilace lze použít v pokročilejších situacích profilace. Další informace najdete v tématu [principy metod shromažďování výkonu](/visualstudio/profiling/understanding-performance-collection-methods).
+     Další metody profilace lze použít v pokročilejších situacích profilace. Další informace najdete v tématu [principy metod shromažďování výkonu](../profiling/understanding-performance-collection-methods.md).
 
 3. Na druhé straně **Průvodce výkonem**ponechte cíl profilu jako **ProfileTest** a klikněte na tlačítko **Další** .
 
@@ -273,7 +273,7 @@ ms.locfileid: "72981158"
      Tato funkce by se měla aktivovat mnohem rychleji, když se neodstraní volání do nečinné smyčky. Sestava profilace vzorku by se měla odrážet.
 
 ## <a name="see-also"></a>Viz také:
-- [Prohlížeč výkonu](/visualstudio/profiling/performance-explorer)
-- [Přehled výkonnostní relace](/visualstudio/profiling/performance-session-overview)
-- [Průvodce začátečníka profilací výkonu](/visualstudio/profiling/beginners-guide-to-performance-profiling)
+- [Prohlížeč výkonu](../profiling/performance-explorer.md)
+- [Přehled výkonnostní relace](../profiling/performance-session-overview.md)
+- [Průvodce začátečníka profilací výkonu](../profiling/beginners-guide-to-performance-profiling.md)
 - [Hledání kritických bodů aplikace pomocí profileru sady Visual Studio](https://msdn.microsoft.com/magazine/cc337887.aspx)

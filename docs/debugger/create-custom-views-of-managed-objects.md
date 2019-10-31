@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 196ba13b95245b8c42e6d946572665792f71346d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f5247a56667f5715d9f155c662eb333967878d71
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745642"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188645"
 ---
 # <a name="create-custom-views-of-managed-objects-c-visual-basic-f-ccli"></a>Vytváření vlastních zobrazení spravovaných objektů (C#, Visual Basic, F#, C++/CLI)
 Můžete přizpůsobit způsob, jakým aplikace Visual Studio zobrazuje datové typy v oknech proměnných ladicího programu.
@@ -41,10 +41,10 @@ V kódu .NET Framework 2,0 Visual Basic nepodporuje atribut DebuggerBrowsable. T
 
 ## <a name="visualizers"></a>Vizualizéry
 
-Můžete napsat Vizualizér pro zobrazení libovolného spravovaného datového typu. Další informace naleznete v tématu [How to: Write a Vizualizér](/visualstudio/debugger/create-custom-visualizers-of-data).
+Můžete napsat Vizualizér pro zobrazení libovolného spravovaného datového typu. Další informace naleznete v tématu [How to: Write a Vizualizér](create-custom-visualizers-of-data.md).
 
 > [!NOTE]
-> Pro C++ kód můžete přidat rozšíření vlastních typů dat pomocí rozhraní Natvis, jak je popsáno v tématu [Vytvoření vlastních zobrazení C++ objektů v ladicím programu](/visualstudio/debugger/create-custom-views-of-native-objects).
+> Pro C++ kód můžete přidat rozšíření vlastních typů dat pomocí rozhraní Natvis, jak je popsáno v tématu [Vytvoření vlastních zobrazení C++ objektů v ladicím programu](create-custom-views-of-native-objects.md).
 
 ## <a name="see-also"></a>Viz také:
 

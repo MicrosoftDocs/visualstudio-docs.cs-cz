@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f6dc69a18aa09536e5735431aa451bc2dd3933ee
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 0a818cfde2996b26bd9d5f31b128e41f2a9fe2e1
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745685"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188679"
 ---
 # <a name="com-and-activex-debugging"></a>Ladění modelů COM a prvků ActiveX
 V této části najdete tipy pro ladění aplikací modelu COM a ovládacích prvků ActiveX.
@@ -46,4 +46,4 @@ V této části najdete tipy pro ladění aplikací modelu COM a ovládacích pr
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Úvod do modelu COM](/cpp/atl/introduction-to-com)
 - [ActiveX – ovládací prvky](/cpp/mfc/activex-controls)
-- [Aplikace serveru SDI](../debugger/sdi-server-applications.md)
+- [Aplikace serveru SDI](com-server-and-container-debugging.md)

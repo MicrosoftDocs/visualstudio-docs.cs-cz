@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Mezipaměť dat pro použití v režimu offline nebo na serveru'
+title: 'Postupy: ukládání dat do mezipaměti pro použití v režimu offline nebo na serveru'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,51 +17,51 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 510d923d2503aeb6e07859813537c9094fe25b09
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 551d27cf8d40f2e6e9c996b031fa6c4e0a233355
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63419706"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189573"
 ---
-# <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>Postupy: Mezipaměť dat pro použití v režimu offline nebo na serveru
-  Můžete označit položku dat do mezipaměti v dokumentu, tak, aby byly k dispozici offline. To také umožňuje pro data v dokumentu, abychom manipulovat jiným kódem, když je dokument uložen na serveru.
+# <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>Postupy: ukládání dat do mezipaměti pro použití v režimu offline nebo na serveru
+  Můžete označit datovou položku, která se uloží do mezipaměti v dokumentu, aby byla dostupná offline. To také umožňuje, aby data v dokumentu byla zpracována jiným kódem při uložení dokumentu na server.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Můžete označit položku dat do mezipaměti, když položka dat je deklarovaný ve vašem kódu, nebo pokud používáte <xref:System.Data.DataSet>, nastavením vlastnosti **vlastnosti** okno. Pokud se ukládání do mezipaměti datové položky, které nejsou <xref:System.Data.DataSet> nebo <xref:System.Data.DataTable>, ujistěte se, že splňuje kritéria pro ukládat se do mezipaměti v dokumentu. Další informace najdete v tématu [ukládat data do mezipaměti](../vsto/caching-data.md).
+ Můžete označit datovou položku, která má být uložena do mezipaměti, je-li datová položka deklarována v kódu, nebo pokud používáte <xref:System.Data.DataSet>, nastavením vlastnosti v okně **vlastnosti** . Pokud ukládáte do mezipaměti datovou položku, která není <xref:System.Data.DataSet> ani <xref:System.Data.DataTable>, zajistěte, aby splňovala kritéria pro ukládání do mezipaměti v dokumentu. Další informace najdete v tématu [cache data](../vsto/caching-data.md).
 
 > [!NOTE]
-> Datové sady vytvořené pomocí jazyka Visual Basic, která jsou označena jako **mezipamětí** a **WithEvents** (včetně datových sad, které jsou přetáhnout z **zdroje dat** okna nebo **Nástrojů** , které mají **CacheInDocument** vlastnost nastavena na hodnotu **True**) mají podtržítkem předponou jejich názvů v mezipaměti. Pokud vytvoříte datovou sadu a pojmenujte ji třeba **zákazníkům**, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> bude mít název **_Customers** v mezipaměti. Při použití <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> pro přístup k této položce v mezipaměti, je nutné zadat **_Customers** místo **zákazníkům**.
+> Datové sady vytvořené pomocí Visual Basic, které jsou označené jako **mezipaměti** a **WithEvents** (včetně datových sad, které jsou přetažené z okna **zdroje dat** nebo **sady nástrojů** , které mají vlastnost **CacheInDocument** nastavenou na **hodnotu true** ) mají podtržítka s předponou a jejich názvy v mezipaměti. Například pokud vytvoříte datovou sadu a pojmenujte ji **zákazníci**, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> název bude v mezipaměti **_Customers** . Když použijete <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> k přístupu k této položce v mezipaměti, musíte místo **zákazníků**zadat **_Customers** .
 
 ### <a name="to-cache-data-in-the-document-using-code"></a>Ukládání dat do mezipaměti v dokumentu pomocí kódu
 
-1. Deklarovat veřejné pole nebo vlastnost pro položky dat jako člen třídy položku hostitele ve vašem projektu, jako `ThisDocumen`t třídy v projektu aplikace Word nebo `ThisWorkbook` třídu v projektu aplikace Excel.
+1. Deklarujte veřejné pole nebo vlastnost pro datovou položku jako člena třídy položky hostitele ve vašem projektu, jako je například třída `ThisDocumen`t ve wordovém projektu nebo třída `ThisWorkbook` v projektu aplikace Excel.
 
-2. Použít <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> atribut na člen k označení položek dat k uložení do mezipaměti dat dokumentu. Následující příklad používá k deklaraci pole pro tento atribut <xref:System.Data.DataSet>.
+2. Použijte atribut <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> pro člena k označení datové položky, která má být uložena v mezipaměti dat dokumentu. Následující příklad aplikuje tento atribut na deklaraci pole pro <xref:System.Data.DataSet>.
 
      [!code-csharp[Trin_VstcoreDataExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#11)]
      [!code-vb[Trin_VstcoreDataExcel#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#11)]
 
-3. Přidejte kód k vytvoření instance datové položky a v případě potřeby načíst z databáze.
+3. Přidejte kód pro vytvoření instance datové položky a v případě potřeby pro načtení z databáze.
 
-     Datová položka je načtena pouze při prvním vytvoření; Po tomto datu zůstane mezipaměti se dokument a je nutné napsat další kód ji aktualizovat.
+     Datová položka je načtena pouze při prvním vytvoření; poté mezipaměť zůstává s dokumentem a Vy musíte napsat jiný kód pro jeho aktualizaci.
 
-### <a name="to-cache-a-dataset-in-the-document-by-using-the-properties-window"></a>Pro ukládání do mezipaměti pomocí okna Vlastnosti datové sady v dokumentu
+### <a name="to-cache-a-dataset-in-the-document-by-using-the-properties-window"></a>Mezipaměť datové sady v dokumentu pomocí okno Vlastnosti
 
-1. Přidat datovou sadu do projektu pomocí nástrojů v návrháři aplikace Visual Studio, například přidáním zdroje dat do vašeho projektu pomocí **zdroje dat** okna.
+1. Přidejte do projektu datovou sadu pomocí nástrojů v návrháři sady Visual Studio, například přidáním zdroje dat do projektu pomocí okna **zdroje dat** .
 
-2. Vytvoření instance datové sady, pokud ještě není účet máte a vyberte instanci v návrháři.
+2. Vytvořte instanci sady dat, pokud ji ještě nemáte, a vyberte instanci v návrháři.
 
-3. V **vlastnosti** okno, nastaveno **CacheInDocument** vlastnost **True**.
+3. V okně **vlastnosti** nastavte vlastnost **CacheInDocument** na **hodnotu true**.
 
-     Další informace najdete v tématu [Properties in Office Projects](../vsto/properties-in-office-projects.md).
+     Další informace najdete v tématu [vlastnosti v projektech Office](../vsto/properties-in-office-projects.md).
 
-4. V **vlastnosti** okno, nastaveno **modifikátory** vlastnost **veřejné** (ve výchozím nastavení je **interní**).
+4. V okně **vlastnosti** nastavte vlastnost **modifikátory** na hodnotu **Public** (ve výchozím nastavení je to **interní**).
 
 ## <a name="see-also"></a>Viz také:
-- [Data v mezipaměti](../vsto/caching-data.md)
-- [Postupy: Zdroj dat v dokumentu systému Office do mezipaměti prostřednictvím kódu programu](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)
-- [Postupy: Data v mezipaměti v dokumentu chráněném heslem](../vsto/how-to-cache-data-in-a-password-protected-document.md)
+- [Data mezipaměti](../vsto/caching-data.md)
+- [Postupy: ukládání zdroje dat v dokumentu Office do mezipaměti prostřednictvím kódu programu](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)
+- [Postupy: ukládání dat do mezipaměti v dokumentu chráněném heslem](../vsto/how-to-cache-data-in-a-password-protected-document.md)
 - [Přístup k datům v dokumentech na serveru](../vsto/accessing-data-in-documents-on-the-server.md)
-- [Ukládání dat](../data-tools/saving-data.md)
+- [Uložit data](../data-tools/save-data-back-to-the-database.md)

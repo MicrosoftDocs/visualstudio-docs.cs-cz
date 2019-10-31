@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 875c2578d5f8cc1aa68cc624adc0a6e2a1713472
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: e69d88bb5764836d82232cec26606009eaf694d7
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911367"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187745"
 ---
 # <a name="visual-studio-graphics-diagnostics"></a>Diagnostika grafiky sady Visual Studio
 Visual Studio*Diagnostika grafiky* je sada nástrojů pro zaznamenávání a analýzu problémů s výkonem a výkonem v aplikacích Direct3D. Diagnostika grafiky můžete použít pro aplikace, které běží místně na počítači s Windows, v emulátoru zařízení s Windows nebo na vzdáleném počítači nebo zařízení.
@@ -38,7 +38,7 @@ Visual Studio*Diagnostika grafiky* je sada nástrojů pro zaznamenávání a ana
 
  [Zachytávání informací grafiky](capturing-graphics-information.md) Pokud chcete použít Diagnostika grafiky k prohlédnutí problému s vykreslováním aplikace, nejprve si zaznamenejte informace o tom, jak aplikace používá rozhraní DirectX. Během relace nahrávání se při normálním spuštění aplikace *zachytí* (to znamená výběr) rámců, které vás zajímají. Zachycení obsahují podrobné informace o způsobu vykreslování rámců. Zachycené informace můžete uložit jako dokument protokolu grafiky pro pozdější prošetření nebo sdílení s ostatními členy týmu.
 
- [Využití GPU](gpu-usage.md) Pokud chcete použít Diagnostika grafiky k profilaci vaší aplikace, použijte nástroj využití GPU. Využití GPU se dá použít ve vzájemné součinnosti s jinými nástroji pro profilaci, jako je využití CPU, ke sladění aktivity CPU a GPU, které můžou přispět k problémům s výkonem ve vaší aplikaci.
+ [Využití GPU](../../profiling/gpu-usage.md) Pokud chcete použít Diagnostika grafiky k profilaci vaší aplikace, použijte nástroj využití GPU. Využití GPU se dá použít ve vzájemné součinnosti s jinými nástroji pro profilaci, jako je využití CPU, ke sladění aktivity CPU a GPU, které můžou přispět k problémům s výkonem ve vaší aplikaci.
 
  [Dokument protokolu grafiky](graphics-log-document.md) Chcete-li spustit kontrolu zaznamenaného protokolu grafiky, použijte okno dokument protokolu grafiky k výběru zachyceného snímku nebo dokonce konkrétního pixelu, aby bylo možné podrobněji prostudovat *události* (tj. volání rozhraní API DirectX), která to ovlivňují.
 
@@ -66,5 +66,5 @@ Visual Studio*Diagnostika grafiky* je sada nástrojů pro zaznamenávání a ana
 
 | Název | Popis |
 | - | - |
-| [Prohlídka funkcí ladicího programu](/visualstudio/debugger/debugger-feature-tour) | Zavádí funkce ladění v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. |
+| [Prohlídka funkcí ladicího programu](../debugger-feature-tour.md) | Zavádí funkce ladění v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. |
 | [Grafika rozhraní DirectX a hry](/windows/win32/directx) | Poskytuje články, které popisují technologii DirectX Graphics Technologies. |

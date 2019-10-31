@@ -1,6 +1,6 @@
 ---
 title: Ladění kódu R
-description: Visual Studio poskytuje úplné možnosti ladění pro R, včetně zarážek, připojit, volání zásobníku a zkontrolujete proměnné.
+description: Sada Visual Studio poskytuje úplné ladicí prostředí pro R, včetně zarážek, připojení, zásobníku volání a kontrol proměnných.
 ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
@@ -8,24 +8,24 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 98dcbaaeb6f330cda3a14cf8c32afe403b50aa85
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5efa0a32f51e1f5060474a0d277bfca7f1e7d548
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939266"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189252"
 ---
-# <a name="debug-r-in-visual-studio"></a>Ladění jazyka R v sadě Visual Studio
+# <a name="debug-r-in-visual-studio"></a>Ladění R v aplikaci Visual Studio
 
-Nástroje R pro Visual Studio (RTVS) integruje do úplného ladicího prostředí sady Visual Studio (viz [ladění v sadě Visual Studio](/visualstudio/debugger/debugger-feature-tour). Tato podpora zahrnuje zarážky, připojení ke spuštěným procesům, proměnné kontrolní a sledováním a zkontrolujete zásobníku volání. Tento článek se věnuje pak tyto aspekty ladění, které jsou jedinečné pro R a RTVS.
+Nástroje R pro Visual Studio (RTVS) se integruje s plným prostředím ladění sady Visual Studio (viz [ladění v aplikaci Visual Studio](../debugger/debugger-feature-tour.md). Tato podpora zahrnuje zarážky, připojení ke spuštěným procesům, kontrolu a sledování proměnných a kontrolu zásobníku volání. Tento článek popisuje tyto aspekty ladění, které jsou jedinečné pro R a RTVS.
 
-Spouští se ladicí program pro spouštěcí R soubor v projektu jazyka R je stejný jako u jiných typů projektů: použijte **ladění** > **spustit ladění**, **F5** klíč, nebo **Zdrojový soubor spouštěcí** na panelu nástrojů ladění:
+Spuštění ladicího programu pro spouštěcí soubor R v projektu R je stejné jako u jiných typů projektů **: použijte ladění** > **Spustit ladění**, klávesu **F5** nebo **zdrojový spouštěcí soubor** na panelu nástrojů ladění:
 
-![Ladicí program tlačítko start pro R](media/debugger-start-button.png)
+![Tlačítko pro spuštění ladicího programu pro R](media/debugger-start-button.png)
 
-Chcete-li změnit spouštěcí soubor, klikněte pravým tlačítkem na soubor v Průzkumníku řešení a vyberte **nastavit jako spouštěcí skript jazyka R**.
+Chcete-li změnit spouštěcí soubor, klikněte pravým tlačítkem myši na soubor v Průzkumník řešení a vyberte možnost **nastavit jako spouštěcí skript jazyka R**.
 
-Ve všech případech se spuštění ladicího programu "zdroje" soubor v interaktivním okně, což znamená, že načtením a spouštět ho existuje, jak je znázorněno v interaktivním okně výstupu:
+Ve všech případech spustí ladicí program "sources" soubor v interaktivním okně, což znamená, že ho načte a spustí, jak je znázorněno ve výstupu interaktivního okna:
 
 ```output
 > rtvs::debug_source("c:/proj/rproject1/rproject1/script.R")
@@ -33,11 +33,11 @@ Sourcing: c:\proj\rproject1\rproject1\script.R
 Sourcing: c:\proj\rproject1\rproject1\Settings.R
 ```
 
-Všimněte si, že `rtvs::debug_source` funkce se používá jako zdroj skript. Tato funkce se totiž RTVS je potřeba upravit kód v rámci přípravy pro ladění. Když je připojen pomocí libovolného příkazu zdrojové RTVS a ladicí program, Visual Studio automaticky použije `rtvs::debug_source`.
+Všimněte si, že funkce `rtvs::debug_source` se používá ke zdroji skriptu. Tato funkce je povinná, protože RTVS potřebuje upravit kód v přípravě pro ladění. Při použití libovolného RTVSého příkazu a k připojení ladicího programu Visual Studio automaticky používá `rtvs::debug_source`.
 
-Můžete také ručně připojit ladicí program v interaktivním okně přímo pomocí **nástroje R** > **relace** > **připojit ladicí program** příkaz **ladění** > **připojit k interaktivní R** příkazu, nebo **připojit ladicí program** příkaz na interaktivní okno nástrojů. Jakmile to uděláte, je vaší odpovědností, abyste zdrojové soubory, které chcete ladit. Pokud chcete ručně zdrojové soubory, ujistěte se, že používáte `rtvs::debug_source` a není standardní `source` příkaz v jazyce R.
+Ladicí program můžete také ručně připojit z interaktivního okna přímo pomocí příkazu > **nástroje R** > **relace** **připojit ladicí program** **, > ** **připojit k interaktivní RMU** příkazu nebo Příkaz **připojit ladicí program** na panelu nástrojů interaktivního okna. Až to uděláte, je vaše zodpovědnost za zdroj souborů, které chcete ladit. Pokud chcete soubory vytvořit ručně, ujistěte se, že používáte `rtvs::debug_source` a ne regulární `source` příkaz v jazyce R.
 
-Toto připojení mezi ladicího programu a interaktivní okno je snazší provádět věci, jako je volání (a ladění) funkce s různými hodnotami parametrů. Předpokládejme například, že máte následující funkci v souboru source (tj. je načten do relace):
+Toto připojení mezi ladicím programem a interaktivním oknem usnadňuje provádění akcí, jako je volání (a ladění) funkce s různými hodnotami parametrů. Předpokládejme například, že máte následující funkci ve zdrojovém souboru (to znamená, že je načten do relace):
 
 ```R
 add <- function(x, y) {
@@ -45,23 +45,23 @@ add <- function(x, y) {
 }
 ```
 
-Nastavit zarážku na `return` příkazu. Teď v interaktivním okně zadáte `add(4,5)` ladicí program se zastaví na zarážku.
+Pak nastavíte zarážku na příkaz `return`. V interaktivním okně teď zadáte `add(4,5)` zastaví ladicí program na zarážce.
 
-## <a name="environment-browser-in-the-interactive-window"></a>Prohlížeče prostředí v interaktivním okně
+## <a name="environment-browser-in-the-interactive-window"></a>Prohlížeč prostředí v interaktivním okně
 
-Po zastavení v ladicím programu můžete také zastavit na příkazový řádek prohlížeče prostředí v [interaktivní okno](interactive-repl-for-r-in-visual-studio.md). Zobrazení výzvy se zobrazí jako `Browse[n]>` kde n je číslo.
+Když jste v ladicím programu zastavili, zastaví se také v okně [interaktivní okno](interactive-repl-for-r-in-visual-studio.md)s výzvou v prohlížeči prostředí. Výzva se zobrazí jako `Browse[n]>`, kde n je číslo.
 
-Prohlížeč prostředí podporuje řadu příkazů, speciální:
+Prohlížeč prostředí podporuje řadu speciálních příkazů:
 
 | Příkaz | Popis |
 | --- | --- |
-| n | Další: spustí další příkaz v kódu souboru (stejně jako krok přes). |
-| s | Krok dovnitř: spustí další příkaz v souboru kódu, krokování s vnořením do oboru funkce. Pokud je volání funkce další příkaz. |
-| f | Dokončit: spustí zbývající část rozsahu aktuální funkce a vrátí řízení volajícímu, (stejně jako krok out). |
-| c, pokračování | pokračovat: spustí program až k další zarážce. |
-| Q | Ukončí: ukončení relace ladění. |
+| N | Další: spustí další příkaz v souboru kódu (totéž jako krok over). |
+| s | Krok do: spustí další příkaz v souboru kódu, krokování do oboru funkce, pokud je dalším příkazem volání funkce. |
+| FJ | dokončit: spustí zbytek aktuálního rozsahu funkcí a vrátí volajícímu (stejné jako krok ven). |
+| c, pokračování | pokračovat: spustí program na další zarážku. |
+| Q | konec: ukončí relaci ladění. |
 | kde | Zobrazit zásobník: zobrazí zásobník volání v interaktivním okně. |
-| Nápověda | Zobrazit nápovědu pro: Zobrazí dostupné příkazy v interaktivním okně. |
-| &lt;výraz&gt; | vyhodnocení výrazu v *expr*. |
+| Nápověda | Zobrazit Help: zobrazí dostupné příkazy v interaktivním okně. |
+| výraz &lt;&gt; | vyhodnotit výraz *ve výrazu*. |
 
-![Prohlížeče prostředí v interaktivním okně](media/debugger-environment-browser.png)
+![Prohlížeč prostředí v interaktivním okně](media/debugger-environment-browser.png)

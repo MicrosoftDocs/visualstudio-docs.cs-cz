@@ -16,18 +16,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 27e551132e66ef0cb380b56441d19b1436d19df2
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 9a2c35befa92e72e08fe2e058afe10d19ac116e0
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911536"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188144"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a>Chyba: Zdá se, že Microsoft Visual Studio Remote Debugging Monitor (MSVSMON.EXE) na vzdáleném počítači neběží.
 Tato chybová zpráva znamená, že Visual Studio nemohlo najít správnou instanci sady Visual Studio Sledování vzdáleného ladění na vzdáleném počítači. Aby mohla vzdálené ladění fungovat, musí být nainstalovaná aplikace Visual Studio Sledování vzdáleného ladění. Informace o stažení a nastavení vzdáleného ladicího programu naleznete v tématu [vzdálené ladění](../debugger/remote-debugging.md).
 
 > [!IMPORTANT]
-> Pokud se domníváte, že jste tuto zprávu dostali kvůli chybě produktu, [ohlaste prosím tento problém aplikaci Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md). Pokud potřebujete další nápovědu, přečtěte si článek o způsobech, jak kontaktovat Microsoft, v článku kontaktujte [nás](../ide/talk-to-us.md) .
+> Pokud se domníváte, že jste tuto zprávu dostali kvůli chybě produktu, [ohlaste prosím tento problém aplikaci Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md). Pokud potřebujete další nápovědu, přečtěte si článek o způsobech, jak kontaktovat Microsoft, v článku kontaktujte [nás](../ide/feedback-options.md) .
 
 ## <a name="i-got-this-message-while-i-was-debugging-in-visual-studio-2010-or-earlier"></a>Zobrazila se mi zpráva při ladění v aplikaci Visual Studio 2010 nebo starší
  Pokud je verze sady Visual Studio, kterou používáte, sady Visual Studio 2010 nebo starší, může se tato chyba zobrazit také v případě, že není povoleno sdílení souborů a tiskáren. Chcete-li získat další informace o tomto problému, přečtěte si prosím verzi sady Visual Studio 2010 této dokumentace: [Chyba: Microsoft Visual Studio sledování vzdáleného ladění (Msvsmon. EXE) Zdá se, že na vzdáleném počítači neběží. – Visual Studio 2010](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms164726(v=vs.100))

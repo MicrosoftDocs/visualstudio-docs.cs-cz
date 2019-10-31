@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Profilace z příkazového řádku pomocí vzorkování | Dokumentace Microsoftu'
+title: 'Návod: profilace z příkazového řádku s použitím vzorkování | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,67 +11,67 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c76fd1d18b41073bf92ed18dadeeeb3a90c9209
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 20804e6ada568828ea1850ae249d9bf0d24855e0
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433615"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189280"
 ---
-# <a name="walkthrough-command-line-profiling-using-sampling"></a>Návod: Příkazový řádek profilování pomocí vzorkování
+# <a name="walkthrough-command-line-profiling-using-sampling"></a>Návod: profilace z příkazového řádku s použitím vzorkování
 
-Tento návod ukazuje, jak chcete-li Profilovat aplikaci pomocí nástroje příkazového řádku a vzorkování identifikovat problémy s výkonem.
+Tento návod ukazuje, jak profilovat aplikaci pomocí nástrojů příkazového řádku a vzorkování k identifikaci problémů s výkonem.
 
-V tomto názorném postupu projít procesem profilaci spravované aplikace pomocí nástrojů příkazového řádku a pomocí vzorkování izolovat a identifikovat problémy s výkonem v aplikaci.
+V tomto návodu provedete kroky procesu profilování spravované aplikace pomocí nástrojů příkazového řádku a pomocí vzorkování můžete izolovat a identifikovat problémy s výkonem v aplikaci.
 
-V tomto podrobném návodu postupujte podle těchto kroků:
+V tomto návodu budete postupovat podle těchto kroků:
 
-- Profilovat aplikaci pomocí nástrojů příkazového řádku a vzorkování.
-- Analýza vzorky profilování výsledků k vyhledání a opravě problémů s výkonem.
+- Profilování aplikace pomocí nástrojů příkazového řádku a vzorkování.
+- Analyzovat ukázkové výsledky profilace, které hledají a odstraňují problémy s výkonem.
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Zprostředkující znalost [!INCLUDE[csharp_current_short](../misc/includes/csharp_current_short_md.md)]
-- Zprostředkující znalost práce pomocí nástrojů příkazového řádku
-- Kopie [peopletrax – ukázka](/visualstudio/profiling/performance-explorer)
-- Pro práci s profilace na základě informací poskytnutých, je nejlepší mít ladění k dispozici informace o symbolech.
+- Zprostředkující porozumění [!INCLUDE[csharp_current_short](../misc/includes/csharp_current_short_md.md)]
+- Zprostředkující porozumění práci s nástroji příkazového řádku
+- Kopie [ukázky PeopleTrax –](performance-explorer.md)
+- Chcete-li pracovat s informacemi poskytnutými profilací, je vhodné mít k dispozici informace o symbolech ladění.
 
 ## <a name="command-line-profiling-using-the-sampling-method"></a>Profilace z příkazového řádku pomocí metody vzorkování
 
-Vzorkování je metodě profilování pomocí kterého konkrétní proces pravidelně dotazovaní určit aktivní funkce. Výsledná data poskytuje přehled o četnosti funkce byla vrcholu zásobníku volání při procesu vzorkováno.
+Vzorkování je metoda profilace, pomocí které se pravidelně dotazuje konkrétní proces, aby se zjistila aktivní funkce. Výsledná data poskytují počet, jak často byla funkce nad zásobníkem volání při vzorkování procesu.
 
 > [!NOTE]
-> Chcete-li získat cestu k nástrojů pro profilaci, naleznete v tématu [zadejte cestu k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). Na 64bitových počítačích jsou k dispozici 64bitové i 32bitové verze nástrojů. Použití nástroje příkazového řádku profileru, musíte přidat cestu k nástrojům do proměnné prostředí PATH v okně příkazového řádku nebo ho přidejte do příkazu samého.
+> Postup získání cesty k nástrojům pro profilaci najdete v tématu [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). Na 64 počítačích jsou k dispozici i 64 32 a 32bitové verze nástrojů. Chcete-li použít nástroje příkazového řádku profileru, je nutné přidat cestu k nástrojům do proměnné prostředí PATH v okně příkazového řádku nebo je přidat do samotného příkazu.
 
-### <a name="to-profile-the-peopletrax-application-by-using-the-sampling-method"></a>Chcete-li Profilovat aplikaci PeopleTrax pomocí metody vzorkování
+### <a name="to-profile-the-peopletrax-application-by-using-the-sampling-method"></a>Profilování aplikace PeopleTrax – pomocí metody vzorkování
 
-1. Nainstalovat ukázkovou aplikaci peopletrax – a vytvářet verze aplikace.
+1. Nainstalujte ukázkovou aplikaci PeopleTrax – a sestavte prodejní verzi aplikace.
 
-2. Otevřete okno příkazového řádku a přidejte adresář nástrojů profilování do místní proměnné prostředí Path.
+2. Otevřete okno příkazového řádku a přidejte Nástroje pro profilaci adresář do proměnné prostředí místní cesta.
 
-3. Změňte pracovní adresář na adresář, který obsahují PeopleTrax binární soubory.
+3. Změňte pracovní adresář na adresář, který obsahuje binární soubory PeopleTrax –.
 
-4. Zadejte následující příkaz nastavit příslušné proměnné prostředí:
+4. Zadejte následující příkaz pro nastavení příslušných proměnných prostředí:
 
     ```cmd
     VSPerfCLREnv /sampleon
     ```
 
-5. Spustit profilování spuštěním *VSPerfCmd.exe*, což je nástroj příkazového řádku, který řídí profileru. Následující příkaz spustí v režimu vzorkování aplikace a profiler:
+5. Spusťte profilaci spuštěním *VSPerfCmd. exe*, což je nástroj příkazového řádku, který řídí Profiler. Následující příkaz spustí aplikaci a Profiler v režimu vzorkování:
 
     ```cmd
     VsPerfCmd /start:sample /output:PeopleTraxReport.vsp /launch:PeopleTrax.exe
     ```
 
-     Spustí se připojí k profileru proces *PeopleTrax.exe* procesu. Spustí se proces profiler zapisovat shromážděná data profilování do souboru sestavy.
+     Spustí se proces profileru a připojí se k procesu *PeopleTrax –. exe* . Proces profileru začne zapisovat shromážděná data profilování do souboru sestavy.
 
-6. Klikněte na tlačítko **získá osoby**.
+6. Klikněte na **získat lidi**.
 
-7. Klikněte na tlačítko **ExportData**.
+7. Klikněte na **ExportData**.
 
-     Poznámkový blok se otevře a zobrazí nový soubor, který obsahuje data exportovaná z **PeopleTrax**.
+     Poznámkový blok otevře a zobrazí nový soubor, který obsahuje exportovaná data z **PeopleTrax –** .
 
-8. Zavřete poznámkový blok a pak **PeopleTrax** aplikace.
+8. Zavřete Poznámkový blok a pak zavřete aplikaci **PeopleTrax –** .
 
 9. Vypněte profiler. Zadejte následující příkaz:
 
@@ -79,19 +79,19 @@ Vzorkování je metodě profilování pomocí kterého konkrétní proces pravid
     VSPerfCmd /shutdown
     ```
 
-10. Chcete-li obnovit proměnné prostředí, použijte následující příkaz:
+10. K resetování proměnných prostředí použijte následující příkaz:
 
     ```cmd
     VSPerfCLREnv /sampleoff
     ```
 
-11. Data profilování jsou uložena v. *vsp* soubor analyzovat výsledky pomocí jedné z následujících metod:
+11. Data profilování jsou uložena v. soubor *VSP* analyzuje výsledky pomocí jedné z následujících metod:
 
-    - Otevřít. *vsp* soubor v integrovaném vývojovém prostředí sady Visual Studio.
+    - Otevřete. soubor *VSP* v integrovaném vývojovém prostředí sady Visual Studio.
 
-         – nebo –
+         ani
 
-    - Generování hodnot oddělených čárkami (. *sdílený svazek clusteru*) souborů pomocí nástroje příkazového řádku *VSPerfReport.exe*. Ke generování sestav pro použití mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí pomocí následujícího příkazu:
+    - Vygeneruje hodnotu oddělenou čárkou (. *CSV*) soubor pomocí nástroje příkazového řádku *VSPerfReport. exe*. Chcete-li generovat sestavy pro použití mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí, použijte následující příkaz:
 
         ```cmd
         VSPerfReport <dir> PeopleTraxReport.vsp /output:<dir> /summary:all
@@ -100,7 +100,7 @@ Vzorkování je metodě profilování pomocí kterého konkrétní proces pravid
 ## <a name="see-also"></a>Viz také:
 
 [Přehled výkonnostní relace](../profiling/performance-session-overview.md)
-[profilu z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)
+[profil z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)
 [VSPerfCmd](../profiling/vsperfcmd.md)
-[pochopení dat vzorkování hodnoty](../profiling/understanding-sampling-data-values.md)
+[porozumění hodnotám dat vzorkování](../profiling/understanding-sampling-data-values.md)
 [zobrazení sestav výkonu](../profiling/performance-report-views.md)

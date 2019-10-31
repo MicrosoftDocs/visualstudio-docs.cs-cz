@@ -263,12 +263,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d8700d058c694afbea551e5b117a0e4a0461f2e8
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 2811c905650f215272b650bff955b7264f56d4b5
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806163"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188835"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>Upozornění analýzy kódu pro spravovaný kód podle CheckId
 
@@ -276,7 +276,7 @@ Následující tabulka obsahuje seznam upozornění analýzy kódu pro spravovan
 
 | CheckId | Upozornění | Popis |
 |---------| - | - |
-| CA2007 | [CA2007: nečekat přímo na úlohu](ca2007-do-not-directly-await-task.md) | Asynchronní metoda [čeká](/dotnet/csharp/language-reference/keywords/await) přímo <xref:System.Threading.Tasks.Task>. Když asynchronní metoda čeká přímo <xref:System.Threading.Tasks.Task>, pokračování probíhá ve stejném vláknu, které úlohu vytvořilo. Toto chování může být nákladné v souvislosti s výkonem a může způsobit zablokování ve vlákně uživatelského rozhraní. Zvažte volání <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> k signalizaci záměru pro pokračování. |
+| CA2007 | [CA2007: nečekat přímo na úlohu](ca2007.md) | Asynchronní metoda [čeká](/dotnet/csharp/language-reference/keywords/await) přímo <xref:System.Threading.Tasks.Task>. Když asynchronní metoda čeká přímo <xref:System.Threading.Tasks.Task>, pokračování probíhá ve stejném vláknu, které úlohu vytvořilo. Toto chování může být nákladné v souvislosti s výkonem a může způsobit zablokování ve vlákně uživatelského rozhraní. Zvažte volání <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> k signalizaci záměru pro pokračování. |
 | CA1000 | [CA1000: Nedeklarujte statické členy v obecných typech](../code-quality/ca1000.md) | Při volání statického členu obecného typu musí být pro tento typ zadán argument typu. Je-li zavolán obecný člen instance, který nepodporuje odvozování, musí být pro tento člen zadán argument typu. V těchto dvou případech je syntaxe zadávání argumentu typu různá a snadno zaměnitelná. |
 | CA1001 | [CA1001: Typy vlastních uvolnitelných polí, které by měly být uvolnitelné](../code-quality/ca1001.md) | Třída deklaruje a implementuje pole instance typu System.IDisposable, přičemž neimplementuje rozhraní IDisposable. Třída, která deklaruje pole IDisposable nepřímo, vlastní nespravovaný zdroj a měla by rozhraní IDisposable implementovat. |
 | CA1002 | [CA1002: Nezveřejňujte obecné seznamy](../code-quality/ca1002.md) | System. Collections. Generic. list < (of \< (T >) >) je obecná kolekce navržená pro výkon, nikoli dědičnost. Proto třída List neobsahuje žádné virtuální členy. Místo ní by měly být vystaveny kolekce navržené pro dědičnost. |

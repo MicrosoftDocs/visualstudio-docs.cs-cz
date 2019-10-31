@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f6dd305b55e1ff7dd11b46f023906a8422b5504f
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: 76b841d94aee93a1bc88f6d01161239828dee166
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72536043"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188413"
 ---
 # <a name="debug-managed-code-c-visual-basic-f-ccli"></a>Ladění spravovaného kóduC#(, Visual Basic F#, C++,/CLI)
 
@@ -48,9 +48,9 @@ Poskytuje příklady kódu, které vám umožní ladit metodu `OnStart` spravova
 Popisuje ladění aplikací se smíšeným režimem. To znamená, že všechny aplikace, které spojují nativní kód se spravovaným kódem.
 
 [Chyba: ladění není možné, protože v systému je povolen ladicí program jádra](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md) \
-Popisuje chybovou zprávu, která se zobrazí, pokud se pokusíte ladit spravovaný kód v [!INCLUDE[win7](../debugger/includes/win7_md.md)], [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)], [!INCLUDE[winxp](../code-quality/includes/winxp_md.md)], [!INCLUDE[Win2kFamily](../code-quality/includes/win2kfamily_md.md)] nebo systému Windows NT, který byl spuštěn v režimu ladění.
+Popisuje chybovou zprávu, která se zobrazí, pokud se pokusíte ladit spravovaný kód v [!INCLUDE[win7](../debugger/includes/win7_md.md)], [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)], [!INCLUDE[winxp](../code-quality/includes/winxp_md.md)], [!INCLUDE[Win2kFamily](../code-quality/includes/win2kfamily_md.md)]nebo systému Windows NT, který byl spuštěn v režimu ladění.
 
-@No__t_1 [optimalizace a ladění JIT](../debugger/jit-optimization-and-debugging.md)
+\ [optimalizace a ladění JIT](../debugger/jit-optimization-and-debugging.md)
 Popisuje účinky optimalizace JIT na ladění.
 
 [Ladění LINQ a DLINQ](../debugger/debugging-linq.md) \
@@ -76,7 +76,7 @@ Obsahuje pokyny pro ladění aplikací služby systému Windows, včetně nastav
 [Ladění a profilace](/dotnet/framework/debug-trace-profile/index) \
 Popisuje ladění aplikací .NET a požadavků na konfiguraci.
 
-[Ladění skriptů a webových aplikací](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications) \
+[Ladění skriptů a webových aplikací](how-to-enable-debugging-for-aspnet-applications.md) \
 Popisuje běžné problémy s laděním a techniky, se kterými se můžete setkat při ladění skriptů a webových aplikací.
 
 ## <a name="see-also"></a>Viz také:

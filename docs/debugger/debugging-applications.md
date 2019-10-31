@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 159f641b1ae5d05233e997d8dc41513a484eae75
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: baa028029081ee1c9c88b75aac416b634632b21a
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018785"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188379"
 ---
 # <a name="debugging-applications"></a>Ladicí aplikace
 Následující části se týkají ladění pro konkrétní typy aplikací. Různé typy aplikací a různé jazyky vyžadují různá nastavení a techniky a představují různé problémy, které je potřeba ladit.
@@ -31,7 +31,7 @@ Následující části se týkají ladění pro konkrétní typy aplikací. Růz
 |[Ladění spravovaného kódu](../debugger/debugging-managed-code.md)|Popisuje, jak ladit spravovaný kód (Visual C#, Visual Basic, F#a C++/CLI).|
 |[Ladění nativního kódu](../debugger/debugging-native-code.md)|Popisuje, jak ladit různé druhy nativních C++ aplikací.|
 |[Ladění kódu GPU](../debugger/debugging-gpu-code.md)|Popisuje, jak ladit C++ kód, který běží na grafické procesorové jednotce (GPU).|
-|[Diagnostika grafiky (ladění grafiky DirectX)](/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics)|Popisuje ladění grafiky rozhraní DirectX.|
+|[Diagnostika grafiky (ladění grafiky DirectX)](graphics/visual-studio-graphics-diagnostics.md)|Popisuje ladění grafiky rozhraní DirectX.|
 |[Ladění aplikací ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)|Popisuje, jak ladit aplikace ASP.NET.|
 |[Ladění kódu Pythonu](../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md)|Popisuje, jak ladit kód Pythonu.|
 |[Ladění aplikací JavaScript a TypeScript](../javascript/debug-nodejs.md)|Popisuje, jak ladit aplikace JavaScript, TypeScript a Node. js.|

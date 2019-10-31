@@ -8,12 +8,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fb62644b362a7630d454db2740b354c546b0155b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9c553b7069243d5a701b94fd1f5f011e4075d4c9
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649989"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188921"
 ---
 # <a name="runtime-activity-designers"></a>Návrháři runtime aktivit
 Návrháři běhové aktivity se používají k uchování a ukončení aktivit pracovních postupů. Témata v této části poskytují pokyny k použití Návrhář postupu provádění návrháři aktivit.
@@ -35,4 +35,4 @@ Návrháři běhové aktivity se používají k uchování a ukončení aktivit 
 
 ## <a name="see-also"></a>Viz také:
 
-- [Používání návrhářů aktivit](../workflow-designer/using-the-activity-designers.md)
+- [Používání návrhářů aktivit](control-flow-activity-designers.md)

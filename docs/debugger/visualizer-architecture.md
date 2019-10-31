@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c92723a1b6abb371b44f1793f9ea5b1f8ad3bca
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a6dfbc8c57ff2e78bf0c6ebbd4e9899c372d7084
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72728477"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187168"
 ---
 # <a name="visualizer-architecture"></a>Architektura vizualizéru
 Architektura Vizualizér ladicího programu má dvě části:
@@ -67,7 +67,7 @@ Architektura Vizualizér ladicího programu má dvě části:
 
  Všimněte si, že zprostředkovatel objektu může použít buď <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A>, nebo <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A>. Rozhraní API má za následek volání <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.GetData%2A> ve zdroji objektu. Volání <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.GetData%2A?displayProperty=fullName> vyplní <xref:System.IO.Stream?displayProperty=fullName>, která představuje serializovanou formu objektu, který je vizuálně vytvořen.
 
- <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A?displayProperty=fullName> deserializace data zpět do formuláře objektu, který pak můžete zobrazit v uživatelském rozhraní, které vytvoříte pomocí <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer>. <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName> vyplní data jako nezpracovaný `Stream`, které je nutné odkonstruovat sami. <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A?displayProperty=fullName> funguje voláním <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName> k získání serializovaného `Stream` a pak deserializaci dat. Použijte <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName>, pokud objekt není serializovatelný rozhraním .NET a vyžaduje vlastní serializaci. V takovém případě je nutné také přepsat metodu <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.Serialize%2A?displayProperty=fullName>.
+ <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A?displayProperty=fullName> deserializace data zpět do formuláře objektu, který pak můžete zobrazit v uživatelském rozhraní, které vytvoříte pomocí <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer>. <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName> vyplní data jako nezpracovaný `Stream`, které je nutné odkonstruovat sami. <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A?displayProperty=fullName> funguje voláním <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName> k získání serializovaného `Stream`a pak deserializaci dat. Použijte <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName>, pokud objekt není serializovatelný rozhraním .NET a vyžaduje vlastní serializaci. V takovém případě je nutné také přepsat metodu <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.Serialize%2A?displayProperty=fullName>.
 
  Pokud vytváříte Vizualizér jen pro čtení, bude stačit jednosměrná komunikace s <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A> nebo <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A>. Pokud vytváříte vizualizér, který podporuje úpravy datových objektů, je nutné provést další. Musíte být schopni odeslat datový objekt z poskytovatele objektu zpátky do zdroje objektu. Následující tabulka ukazuje poskytovatele objektu a zdrojová rozhraní API objektů používaná pro tento účel:
 
@@ -77,7 +77,7 @@ Architektura Vizualizér ladicího programu má dvě části:
 
  Všimněte si znovu, že existují dvě rozhraní API, která může použít poskytovatel objektů. Data jsou vždy odesílána z poskytovatele objektu do zdroje objektu jako `Stream`, ale <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceData%2A> vyžaduje, abyste objekt serializováni do `Stream` sami.
 
- <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceObject%2A> převezme objekt, který zadáte, zaserializaci ho do `Stream` a pak zavolá <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceData%2A> k odeslání `Stream` do <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.CreateReplacementObject%2A>.
+ <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceObject%2A> převezme objekt, který zadáte, zaserializaci ho do `Stream`a pak zavolá <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceData%2A> k odeslání `Stream` do <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.CreateReplacementObject%2A>.
 
  Použití jedné z metod Replace vytvoří nový datový objekt v laděného procesu, který nahradí vizuálně vyladěný objekt. Chcete-li změnit obsah původního objektu bez jeho nahrazení, použijte jednu z metod přenosu, které jsou uvedeny v následující tabulce. Tato rozhraní API přenášejí data v obou směrech současně bez nahrazení objektu, který je vizuálně vytvořen:
 
@@ -86,7 +86,7 @@ Architektura Vizualizér ladicího programu má dvě části:
 |<xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferData%2A><br /><br /> —nebo—<br /><br /> <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferObject%2A>|<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.TransferData%2A>|
 
 ## <a name="see-also"></a>Viz také:
-- [How to: Write a Visualizer](/visualstudio/debugger/create-custom-visualizers-of-data)
+- [How to: Write a Visualizer](create-custom-visualizers-of-data.md)
 - [Návod: Zápis vizualizéru v jazyce C#](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)
 - [Návod: Zápis vizualizéru v jazyce Visual Basic](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)
 - [Návod: Zápis vizualizéru v jazyce Visual Basic](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)

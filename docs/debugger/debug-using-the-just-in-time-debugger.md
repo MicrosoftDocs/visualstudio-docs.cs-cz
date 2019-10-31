@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 32a3ebd6e9047271a21425ac5b7eaaf715955b61
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: b842fa4ce7c75e061a58d980cefe5648094c2ef7
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911395"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188667"
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Ladění pomocí ladicího programu za běhu v aplikaci Visual Studio
 
@@ -104,7 +104,7 @@ Tento příklad vás provede laděním za běhu, když aplikace vyvolá chybu.
 
 V tomto příkladu vytvoříte C# konzolovou aplikaci v aplikaci Visual Studio, která vyvolá [NullReferenceException](/dotnet/api/system.nullreferenceexception).
 
-1. V aplikaci Visual C# Studio vytvořte konzolovou aplikaci (**soubor** > **Nový** > **projekt** > **Konzolová aplikace** **Visual C#**  > ) s názvem *ThrowsNullException*. Další informace o vytváření projektů v aplikaci Visual Studio naleznete v tématu [Návod: Vytvoření jednoduché aplikace](/visualstudio/get-started/csharp/tutorial-wpf).
+1. V aplikaci Visual C# Studio vytvořte konzolovou aplikaci (**soubor** > **Nový** > **projekt** > **Konzolová aplikace** **Visual C#**  > ) s názvem *ThrowsNullException*. Další informace o vytváření projektů v aplikaci Visual Studio naleznete v tématu [Návod: Vytvoření jednoduché aplikace](../get-started/csharp/tutorial-wpf.md).
 
 1. Po otevření projektu v aplikaci Visual Studio otevřete soubor *program.cs* . Metodu Main () nahraďte následujícím kódem, který vytiskne čáru do konzoly a poté vyvolá výjimku NullReferenceException:
 

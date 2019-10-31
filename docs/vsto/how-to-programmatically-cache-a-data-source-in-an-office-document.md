@@ -1,5 +1,5 @@
 ---
-title: Zdroj dat v dokumentu systému Office do mezipaměti prostřednictvím kódu programu
+title: Ukládat do mezipaměti zdroj dat v dokumentu Office prostřednictvím kódu programu
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,48 +16,48 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5e63b478fb16965f639a76dad0cbc3b2715bc7e2
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 241ce42c2d411fdaf611f3a7f2b52eb40c8c32a2
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66401405"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189579"
 ---
-# <a name="how-to-programmatically-cache-a-data-source-in-an-office-document"></a>Postupy: Zdroj dat v dokumentu systému Office do mezipaměti prostřednictvím kódu programu
-  Můžete programově přidat datového objektu do datové mezipaměti v dokumentu voláním `StartCaching` metoda hostitele položky, jako například <xref:Microsoft.Office.Tools.Word.Document>, <xref:Microsoft.Office.Tools.Excel.Workbook>, nebo <xref:Microsoft.Office.Tools.Excel.Worksheet>. Odebrat datový objekt z mezipaměti dat voláním `StopCaching` metoda položky hostitele.
+# <a name="how-to-programmatically-cache-a-data-source-in-an-office-document"></a>Postupy: ukládání zdroje dat v dokumentu Office do mezipaměti prostřednictvím kódu programu
+  Můžete programově přidat datový objekt do mezipaměti dat v dokumentu voláním metody `StartCaching` položky hostitele, jako je například <xref:Microsoft.Office.Tools.Word.Document>, <xref:Microsoft.Office.Tools.Excel.Workbook>nebo <xref:Microsoft.Office.Tools.Excel.Worksheet>. Odstraňte datový objekt z mezipaměti dat voláním metody `StopCaching` položky hostitele.
 
- `StartCaching` Metoda a `StopCaching` metody jsou privátní, ale zobrazí se v IntelliSense.
+ Metoda `StartCaching` a metoda `StopCaching` jsou obě privátní, ale zobrazují se v IntelliSense.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Při použití `StartCaching` není potřeba deklarovat metodu pro přidání datového objektu do datové mezipaměti datový objekt <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> atribut. Datový objekt však musí splňovat určité požadavky mají být přidány do datové mezipaměti. Další informace najdete v tématu [ukládat data do mezipaměti](../vsto/caching-data.md).
+ Použijete-li metodu `StartCaching` k přidání datového objektu do mezipaměti dat, datový objekt nemusí být deklarován s atributem <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute>. Datový objekt však musí splňovat určité požadavky, které mají být přidány do mezipaměti dat. Další informace najdete v tématu [cache data](../vsto/caching-data.md).
 
-## <a name="to-programmatically-cache-a-data-object"></a>Chcete-li datový objekt mezipaměti prostřednictvím kódu programu
+## <a name="to-programmatically-cache-a-data-object"></a>Programové ukládání datového objektu do mezipaměti
 
-1. Datový objekt na úrovni třídy, ne uvnitř metodu deklarujte. Tento příklad předpokládá, že deklarujete <xref:System.Data.DataSet> s názvem `dataSet1` , které chcete ukládat do mezipaměti prostřednictvím kódu programu.
+1. Deklarujte datový objekt na úrovni třídy, ne uvnitř metody. V tomto příkladu se předpokládá, že deklarujete <xref:System.Data.DataSet> s názvem `dataSet1`, které chcete ukládat do mezipaměti prostřednictvím kódu programu.
 
      [!code-csharp[Trin_VstcoreDataExcel#12](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#12)]
      [!code-vb[Trin_VstcoreDataExcel#12](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#12)]
 
-2. Vytvoření instance objektu data a následně zavolat `StartCaching` metoda instance dokumentu nebo listu a předat mu název datového objektu.
+2. Vytvořte instanci datového objektu a potom zavolejte metodu `StartCaching` instance dokumentu nebo listu a předejte jí název datového objektu.
 
      [!code-csharp[Trin_VstcoreDataExcel#13](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#13)]
      [!code-vb[Trin_VstcoreDataExcel#13](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#13)]
 
-## <a name="to-stop-caching-a-data-object"></a>Zastavit ukládání do mezipaměti datový objekt
+## <a name="to-stop-caching-a-data-object"></a>Zastavení ukládání datového objektu do mezipaměti
 
-1. Volání `StopCaching` metoda instance dokumentu nebo listu a předat mu název datového objektu. Tento příklad předpokládá, že máte <xref:System.Data.DataSet> s názvem `dataSet1` , kterou chcete zastavit ukládání do mezipaměti.
+1. Zavolejte metodu `StopCaching` instance dokumentu nebo listu a předejte název datového objektu. V tomto příkladu se předpokládá, že máte <xref:System.Data.DataSet> s názvem `dataSet1`, který chcete zastavit ukládání do mezipaměti.
 
      [!code-csharp[Trin_VstcoreDataExcel#14](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#14)]
      [!code-vb[Trin_VstcoreDataExcel#14](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#14)]
 
     > [!NOTE]
-    > Nevolejte `StopCaching` z obslužné rutiny události pro `Shutdown` události z dokumentu nebo sešitu. Časem `Shutdown` událost se vyvolá, je příliš pozdě upravit datovou mezipaměť. Další informace o `Shutdown` událostí, naleznete v tématu [události v projektech pro systém Office](../vsto/events-in-office-projects.md).
+    > Nevolejte `StopCaching` z obslužné rutiny události `Shutdown` události dokumentu nebo listu. V době vyvolání události `Shutdown` je příliš pozdě upravovat mezipaměť dat. Další informace o události `Shutdown` najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Data v mezipaměti](../vsto/caching-data.md)
-- [Postupy: Mezipaměť dat pro použití v režimu offline nebo na serveru](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)
-- [Postupy: Data v mezipaměti v dokumentu chráněném heslem](../vsto/how-to-cache-data-in-a-password-protected-document.md)
+- [Data mezipaměti](../vsto/caching-data.md)
+- [Postupy: ukládání dat do mezipaměti pro použití v režimu offline nebo na serveru](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)
+- [Postupy: ukládání dat do mezipaměti v dokumentu chráněném heslem](../vsto/how-to-cache-data-in-a-password-protected-document.md)
 - [Přístup k datům v dokumentech na serveru](../vsto/accessing-data-in-documents-on-the-server.md)
-- [Ukládání dat](../data-tools/saving-data.md)
+- [Uložit data](../data-tools/save-data-back-to-the-database.md)

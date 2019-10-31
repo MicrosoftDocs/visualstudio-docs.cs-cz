@@ -9,12 +9,12 @@ manager: jillfra
 ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: 0c785be0002a1e6d4fd1934e559743502611f5fb
-ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
+ms.openlocfilehash: 5d6f0e54c37c394fce464b07440daa99b4dd7d5e
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72924497"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188895"
 ---
 # <a name="debug-xaml-in-blend"></a>Ladění kódu XAML v programu Blend
 
@@ -119,7 +119,7 @@ Když jsou zjištěny chyby XAML, návrhová plocha zobrazí výstrahu, že proj
 
 Projekty Blendu v aplikaci Visual Studio můžete otevřít pro snazší ladění kódu v aplikaci. Chcete-li otevřít projekt Blend v aplikaci Visual Studio, klikněte pravým tlačítkem myši na projekt na panelu **projekty** a potom klikněte na možnost **Upravit v aplikaci Visual Studio**. Po dokončení ladění relace v aplikaci Visual Studio stiskněte kombinaci kláves CTRL + SHIFT + S a uložte všechny změny a pak přepněte zpět do Blendu. Zobrazí se výzva k opětovnému načtení projektu. Pokud chcete pokračovat v práci v Blendu, klikněte na **Ano** .
 
-Další informace o ladění aplikace naleznete v tématu [ladění aplikací pro UWP v aplikaci Visual Studio](../debugger/debug-store-apps-in-visual-studio.md).
+Další informace o ladění aplikace naleznete v tématu [ladění aplikací pro UWP v aplikaci Visual Studio](../debugger/debugging-windows-store-and-windows-universal-apps.md).
 
 ## <a name="get-help"></a>Získat nápovědu
 

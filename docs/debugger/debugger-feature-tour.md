@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 40b7a097f0544459083b5217e6ad97f2b3f31bfa
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 8741d0815aa3e5478a7dcf93585fc0be6e266ae0
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911641"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188716"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>První pohled na ladicí program sady Visual Studio
 
@@ -124,7 +124,7 @@ Ve většině jazyků podporovaných v rámci sady Visual Studio můžete upravi
 
 Další informace o používání funkce a omezení funkcí najdete v tématu [Upravit a pokračovat](../debugger/edit-and-continue.md).
 
-Chcete-li upravit kód XAML během relace ladění, [Přečtěte si téma zápis a ladění spouštění kódu XAML pomocí programu XAML Hot reloading](xaml-hot-reload.md).
+Chcete-li upravit kód XAML během relace ladění, [Přečtěte si téma zápis a ladění spouštění kódu XAML pomocí programu XAML Hot reloading](../xaml-tools/xaml-hot-reload.md).
 
 ## <a name="inspect-variables-with-data-tips"></a>Kontrola proměnných pomocí tipů k datům
 

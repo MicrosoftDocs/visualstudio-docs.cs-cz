@@ -8,12 +8,12 @@ ms.devlang: dotnet
 ms.topic: article
 ms.date: 03/08/2019
 ms.author: ghogen
-ms.openlocfilehash: 9431046c57851e31a3711b4785f9cce45acab45f
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 5d1f160435fd8c62a44d3e5d3192870143558de4
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70179875"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188790"
 ---
 # <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>Nasazení kontejneru ASP.NET Core pro Azure App Service pomocí sady Visual Studio
 
@@ -23,7 +23,7 @@ Pokud ještě nemáte předplatné Azure, vytvořte si [bezplatný účet](https
 
 ## <a name="prerequisites"></a>Požadavky
 
-K provedení kroků v tomto kurzu je potřeba:
+Postup dokončení tohoto kurzu:
 
 ::: moniker range="vs-2017"
 - Nainstalujte si nejnovější verzi sady [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) s úlohou vývoj ASP.NET a webu.
@@ -40,9 +40,9 @@ Následující kroky vás provedou vytvořením základní aplikace ASP.NET Core
 ::: moniker range="vs-2017"
 1. V nabídce aplikace Visual Studio vyberte **soubor > nový > projekt**.
 2. V části **šablony** v dialogovém okně **Nový projekt** vyberte **Visual C# > Web**.
-3. Vyberte **webová aplikace ASP.NET Core**.
+3. Vyberte **ASP.NET Core webové aplikace**.
 4. Dejte nové aplikaci název (nebo pojmenujte výchozí) a vyberte **OK**.
-5. Vyberte **webovou aplikaci**.
+5. Vyberte **Webová aplikace**.
 6. Zaškrtněte políčko **Povolit podporu Docker** .
 7. Vyberte typ kontejneru **Linux** a klikněte na tlačítko **OK**. Nasazení kontejnerů Windows do Azure App Service jako kontejneru se nepodporuje.
 ::: moniker-end
@@ -70,7 +70,7 @@ Následující kroky vás provedou vytvořením základní aplikace ASP.NET Core
 
    ![Snímek obrazovky s nastavením publikování](media/deploy-app-service/publish-app-service-linux2.png)
 
-1. Zvolte **Vytvořit**. Váš kontejner se do Azure nasadí v rámci skupiny prostředků a registru kontejneru, který jste vybrali. Tento proces trvá trochu času. Po dokončení se na kartě **publikovat** zobrazí informace o tom, co bylo publikováno, včetně adresy URL webu.
+1. Vyberte **vytvořit**. Váš kontejner se do Azure nasadí v rámci skupiny prostředků a registru kontejneru, který jste vybrali. Tento proces trvá trochu času. Po dokončení se na kartě **publikovat** zobrazí informace o tom, co bylo publikováno, včetně adresy URL webu.
 
    ![Snímek obrazovky s kartou publikovat](media/deploy-app-service/publish-succeeded.PNG)
 
@@ -79,18 +79,18 @@ Následující kroky vás provedou vytvořením základní aplikace ASP.NET Core
    ![Snímek obrazovky webové aplikace](media/deploy-app-service/web-application-running.png)
 
 1. Profil publikování se uloží se všemi podrobnostmi, které jste vybrali, například skupiny prostředků a registru kontejnerů.
-1. Chcete-li znovu nasadit se stejným publikačním profilem, použijte tlačítko **publikovat** v okně **aktivity publikování webu** nebo klikněte pravým tlačítkem myši na projekt v **Průzkumník řešení** a vyberte položku **publikovat** na Kontextová nabídka
+1. Chcete-li znovu nasadit se stejným publikačním profilem, **použijte tlačítko** **publikovat** v okně **aktivity publikování webu** nebo klikněte pravým tlačítkem myši na projekt v **Průzkumník řešení** a vyberte položku **publikovat** na Kontextová nabídka
 
 ## <a name="clean-up-resources"></a>Vyčištění prostředků
 
-Pokud chcete odebrat všechny prostředky Azure přidružené k tomuto kurzu, odstraňte skupinu prostředků pomocí [Azure Portal](https://portal.azure.com). Chcete-li najít skupinu prostředků přidruženou k publikované webové aplikaci, zvolte možnost **Zobrazit** > další**webovou aktivitu publikování** **systému Windows** > a pak zvolte ikonu ozubeného kolečka. Otevře se karta **publikovat** , která obsahuje skupinu prostředků.
+Pokud chcete odebrat všechny prostředky Azure přidružené k tomuto kurzu, odstraňte skupinu prostředků pomocí [Azure Portal](https://portal.azure.com). Chcete-li najít skupinu prostředků přidruženou k publikované webové aplikaci, zvolte možnost **zobrazit** > ostatní **webová aktivita publikování** > **Windows** a pak zvolte ikonu ozubeného kolečka. Otevře se karta **publikovat** , která obsahuje skupinu prostředků.
 
 V Azure Portal zvolte **skupiny prostředků**, vyberte skupinu prostředků a otevřete její stránku s podrobnostmi. Ověřte, jestli se jedná o správnou skupinu prostředků, a pak zvolte **Odebrat skupinu prostředků**, zadejte název a zvolte **Odstranit**.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Pomocí [Azure Pipelines](/azure/devops/pipelines/?view=azure-devops)nastavte průběžnou integraci a doručování (CI/CD).
 
 ## <a name="see-also"></a>Viz také:
 
-[Nasadit do Azure Container Registry](vs-azure-tools-docker-hosting-web-apps-in-docker.md)
+[Nasadit do Azure Container Registry](hosting-web-apps-in-docker.md)

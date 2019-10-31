@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: d902403b111e92f302ff907a29eaaa99ee181058
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4c58dbb32ef0a476ac7e22a840e27e389c710f97
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737991"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188277"
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Nasazení aplikací pro UPW ze sady Visual Studio
 
@@ -98,7 +98,7 @@ Na stránce vlastností ladění spouštěného projektu můžete nastavit násl
 
 **Povolení zpětné smyčky sítě**
 
-Z bezpečnostních důvodů není povolená aplikace pro UWP nebo [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)], která je nainstalovaná standardním způsobem, aby na zařízení, na kterém je nainstalovaná, mohla volat síťová volání. Ve výchozím nastavení vytvoří nasazení sady Visual Studio výjimku z tohoto pravidla pro nasazenou aplikaci. Tato výjimka umožňuje testovat komunikační postupy na jednom počítači. Před odesláním aplikace do [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] byste měli aplikaci otestovat bez výjimky.
+Z bezpečnostních důvodů není povolená aplikace pro UWP nebo [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)], která je nainstalovaná standardním způsobem, aby na zařízení, na kterém je nainstalovaná, mohla volat síťová volání. Ve výchozím nastavení vytvoří nasazení sady Visual Studio výjimku z tohoto pravidla pro nasazenou aplikaci. Tato výjimka umožňuje testovat komunikační postupy na jednom počítači. Před odesláním aplikace do [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)]byste měli aplikaci otestovat bez výjimky.
 
 Odebrání výjimky zpětné smyčky sítě z aplikace:
 
@@ -118,4 +118,4 @@ Konfigurace nasazení tak, aby automaticky spouštěla relaci ladění při spu�
 
 - [Rozšířené možnosti vzdáleného nasazení](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)
 - [Ladění balíčku nainstalované aplikace](../debugger/debug-installed-app-package.md)
-- [Spouštění aplikací ze sady Visual Studio](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)
+- [Spouštění aplikací ze sady Visual Studio](debugging-windows-store-and-windows-universal-apps.md)

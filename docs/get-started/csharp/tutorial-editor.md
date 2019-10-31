@@ -12,12 +12,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: f40111e59aa97180c98f0fc12d6b8eeb5d06ecec
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1b5fb79430b081986764f0ee1789f68471667498
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647872"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189075"
 ---
 # <a name="learn-to-use-the-code-editor"></a>Naučte se používat editor kódu.
 
@@ -171,7 +171,7 @@ Editor sady Visual Studio usnadňuje kontrolu definice typu, metody atd. Jedním
 
 Nikdo nezíská kód napravo poprvé a jedna z věcí, kterou je třeba změnit, je název proměnné nebo metody. Pojďme si vyzkoušet funkci [refaktoru](../../ide/refactoring-in-visual-studio.md) sady Visual Studio a přejmenovat `_words` proměnnou na `words`.
 
-1. Umístěte ukazatel myši nad definici proměnné `_words` a zvolte možnost **Přejmenovat** v místní nabídce nebo v místní nabídce nebo stiskněte **klávesovou zkratku CTRL** +**R**, **CTRL** +**r**.
+1. Umístěte ukazatel myši nad definici proměnné `_words` a zvolte možnost **Přejmenovat** v místní nabídce nebo v místní nabídce nebo stiskněte **klávesovou zkratku CTRL**+**R**, **CTRL**+**r**.
 
    Automaticky otevíraná okna pro **přejmenování** se zobrazí v pravém horním rohu editoru.
 
@@ -186,7 +186,7 @@ Nikdo nezíská kód napravo poprvé a jedna z věcí, kterou je třeba změnit,
 ## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
-> [Další informace o projektech a řešeních](tutorial-projects-solutions.md)
+> [Další informace o projektech a řešeních](../tutorial-projects-solutions.md)
 
 ## <a name="see-also"></a>Viz také:
 

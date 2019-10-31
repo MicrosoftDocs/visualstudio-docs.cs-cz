@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: d12c9848409f57b16c733b587edff193311bcfdd
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: da634246bfa9f800779c761458028f55b9317f6f
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732273"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187628"
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>Jak aktivovat události pozastavení, obnovení a na pozadí při ladění aplikací pro UWP v aplikaci Visual Studio
 
@@ -110,7 +110,7 @@ Další informace o správě životního cyklu procesu a úlohách na pozadí na
 4. Vyberte **diagnostický** protokol.
 
 ## <a name="see-also"></a>Viz také:
-- [Testování aplikací pro UWP se sadou Visual Studio](../test/testing-store-apps-with-visual-studio.md)
-- [Ladění aplikací v sadě Visual Studio](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)
+- [Testování aplikací pro UWP se sadou Visual Studio](/visualstudio/test/create-and-run-unit-tests-for-a-store-app-in-visual-studio)
+- [Ladění aplikací v sadě Visual Studio](debugging-windows-store-and-windows-universal-apps.md)
 - [Životní cyklus aplikace](/windows/uwp/launch-resume/app-lifecycle)
 - [Spouštění, obnovování a práce s více úlohami](/windows/uwp/launch-resume/index)

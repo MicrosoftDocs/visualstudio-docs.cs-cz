@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d53df0bc83e2068488c8a7c919f8b76258ad827
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c1c18ec84a6a62da6cd564c69ef4b83ea76bcfd6
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72728386"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187144"
 ---
 # <a name="visualizer-security-considerations"></a>Hlediska zabezpečení vizualizéru
 Zápis Vizualizér zahrnuje možné bezpečnostní hrozby. Pro tyto potenciální hrozby aktuálně neexistuje žádný známý zneužitcí software, ale vývojáři je musí znát a přijmout vhodná bezpečnostní opatření, jak je popsáno zde, abyste se mohli chránit před neoprávněným zneužitím.
@@ -39,6 +39,6 @@ Zápis Vizualizér zahrnuje možné bezpečnostní hrozby. Pro tyto potenciáln�
 
 ## <a name="see-also"></a>Viz také:
 - [Architektura vizualizéru](../debugger/visualizer-architecture.md)
-- [How to: Write a Visualizer](/visualstudio/debugger/create-custom-visualizers-of-data)
+- [How to: Write a Visualizer](create-custom-visualizers-of-data.md)
 - [Vytváření vlastních vizualizérů](../debugger/create-custom-visualizers-of-data.md)
 - [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)

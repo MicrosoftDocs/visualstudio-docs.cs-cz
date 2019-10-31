@@ -8,20 +8,20 @@ ms.devlang: dotnet
 ms.topic: article
 ms.date: 07/23/2019
 ms.author: ghogen
-ms.openlocfilehash: 267e0c1ed1ac3911aad2161f186bf4a482f069b6
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: b033825bbe8facbeae3dcdee6a5b563461921522
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68886403"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188745"
 ---
-# <a name="deploy-to-docker-hub"></a>Nasadit do Docker Hub
+# <a name="deploy-to-docker-hub"></a>Nasazení do Docker Hubu
 
 Docker Hub poskytuje pohodlný hostující službu pro vaše úložiště imagí. V aplikaci Visual Studio můžete snadno nasazovat do Docker Hub ručně.
 
 ## <a name="create-a-docker-account-and-docker-hub-repository"></a>Vytvoření účtu Docker a úložiště Docker Hub
 
-[](https://hub.docker.com/signup) Zaregistrujte si účet Docker, pokud ho ještě nemáte.
+[Zaregistrujte](https://hub.docker.com/signup) si účet Docker, pokud ho ještě nemáte.
 
 Pokud nemáte úložiště Docker Hub, vytvořte ho v [Dock hub](https://hub.docker.com/).
 
@@ -45,11 +45,11 @@ Pokud nemáte úložiště Docker Hub, vytvořte ho v [Dock hub](https://hub.doc
 
 ## <a name="next-steps"></a>Další kroky
 
-Publikování do [Azure Container Registry](/azure/container-registry/) podle kroků uvedených v části [nasazení na Azure Container Registry](vs-azure-tools-docker-hosting-web-apps-in-docker.md).
+Publikování do [Azure Container Registry](/azure/container-registry/) podle kroků uvedených v části [nasazení na Azure Container Registry](hosting-web-apps-in-docker.md).
 
 Pomocí [Azure Pipelines](/azure/devops/pipelines/?view=azure-devops)nastavte průběžnou integraci a doručování (CI/CD).
 
 ## <a name="see-also"></a>Viz také:
 
 [Nasaďte do Azure App Service](deploy-app-service.md)
-[nástrojů kontejnerů sady Visual Studio](/visualstudio/containers/).
+[nástrojích kontejnerů sady Visual Studio](/visualstudio/containers/).
