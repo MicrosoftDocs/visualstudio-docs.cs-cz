@@ -8,12 +8,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c7426ea21e1928eb46a2b733df7eb24c9de6e147
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 01727901f5ce063a16954f98914833ba39f8ab5d
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650443"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189675"
 ---
 # <a name="flowchart-activity-designers"></a>Návrháři aktivit vývojového diagramu
 
@@ -33,7 +33,7 @@ Návrhář postupu provádění zahrnuje řadu aktivit poskytovaných systémem,
 
  [Tok řízení](../workflow-designer/control-flow-activity-designers.md)
 
- [Používání návrhářů aktivit](../workflow-designer/using-the-activity-designers.md)
+ [Používání návrhářů aktivit](control-flow-activity-designers.md)
 
  [Messaging](../workflow-designer/messaging-activity-designers.md)
 

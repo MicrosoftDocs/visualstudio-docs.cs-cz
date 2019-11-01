@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9f66d757f5f46530619be1424eb0810ce546ff5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9f0ac06712810e39432f1d19c250c3e7976f4a01
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745703"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188695"
 ---
 # <a name="client-side-script-debugging"></a>Ladění skriptů na straně klienta
 Ladicí program sady Visual Studio poskytuje ucelené prostředí pro ladění pro hledání a opravy chyb na klientských skriptech na stránkách ASP.NET.
@@ -61,7 +61,7 @@ V **Průzkumník řešení** můžete zobrazit seznamy dokumentů skriptů na st
 
 ## <a name="see-also"></a>Viz také:
 
-- [Ladění aplikací ASP.NET a AJAX](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)
+- [Ladění aplikací ASP.NET a AJAX](how-to-enable-debugging-for-aspnet-applications.md)
 - [Omezení při ladění skriptů](../debugger/limitations-on-script-debugging.md)
 - [Okna proměnných](../debugger/debugger-windows.md)
 - [Příkazové podokno](../ide/reference/immediate-window.md)

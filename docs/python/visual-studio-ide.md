@@ -11,12 +11,12 @@ dev_langs:
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3b01d088618c07f1a3ff24aff2386584ebfad060
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 91f80d648450447a6ba0e80f10e5c39764445cef
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72983690"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189306"
 ---
 # <a name="welcome-to-the-visual-studio-ide--python"></a>Vítejte v integrovaném vývojovém prostředí sady Visual Studio | Python
 
@@ -26,7 +26,7 @@ ms.locfileid: "72983690"
 
 Tento obrázek ukazuje Visual Studio s otevřeným projektem v Pythonu a několik oken s klíčovými okny, které budete pravděpodobně používat:
 
-- [**Průzkumník řešení**](../ide/solutions-and-projects-in-visual-studio.md) (vpravo nahoře) umožňuje zobrazit, navigovat a spravovat soubory kódu. **Průzkumník řešení** může přispět k uspořádání kódu seskupením souborů do [řešení a projektů](/visualstudio/get-started/tutorial-projects-solutions).
+- [**Průzkumník řešení**](../ide/solutions-and-projects-in-visual-studio.md) (vpravo nahoře) umožňuje zobrazit, navigovat a spravovat soubory kódu. **Průzkumník řešení** může přispět k uspořádání kódu seskupením souborů do [řešení a projektů](../get-started/tutorial-projects-solutions.md).
   - Vedle **Průzkumník řešení** jsou [**prostředí Pythonu**](managing-python-environments-in-visual-studio.md), kde můžete spravovat různé interprety Pythonu, které jsou nainstalované v počítači.
 
   ::: moniker range=">=vs-2019"

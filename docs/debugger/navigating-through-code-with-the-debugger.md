@@ -15,44 +15,43 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e07e2612e01453115cf4cd6120d92bfd5b0168bd
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: 6dfffdf0c12ea2a8f14769f26bb40a3943579248
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "70222651"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187591"
 ---
 # <a name="navigate-through-code-with-the-visual-studio-debugger"></a>Procházení kódu pomocí ladicího programu sady Visual Studio
 
 Ladicí program sady Visual Studio vám může pomáhat s procházením kódu pro kontrolu stavu aplikace a zobrazení toku provádění. Pomocí klávesových zkratek, příkazů ladění, zarážek a dalších funkcí můžete rychle získat kód, který chcete prošetřit. Znalost navigačních příkazů a zástupců ladicího programu usnadňuje a usnadňuje hledání a řešení problémů s aplikacemi.  Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprostou začátečníky](../debugger/debugging-absolute-beginners.md) a [techniky a nástroje pro ladění](../debugger/write-better-code-with-visual-studio.md) .
 
-## <a name="basic-debugging"></a>Základní ladění
+## <a name="get-into-break-mode"></a>Přejít do režimu přerušení
 
-Chcete-li spustit aplikaci pomocí připojeného ladicího programu, stiskněte klávesu **F5**, vyberte možnost **ladění**  > **Spustit ladění**nebo vyberte zelenou šipku na panelu nástrojů sady Visual Studio.
+V *režimu pozastavení*je spuštění aplikace pozastaveno, zatímco funkce, proměnné a objekty zůstávají v paměti. Jakmile je ladicí program v režimu pozastavení, můžete procházet kód. Nejběžnější způsoby, jak rychle získat režim přerušení, je:
 
- ![Základní&#95;informace&#95;o&#95;DBG Start ladění](../debugger/media/dbg_basics_start_debugging.png "DBG_Basics_Start_Debugging")
+- Zahajte krokování kódu stisknutím klávesy **F10** nebo **F11**. To vám umožní rychle najít vstupní bod vaší aplikace, a pak můžete pokračovat stisknutím příkazů Step pro procházení kódu.
 
-Během ladění zobrazuje žlutý zvýraznění řádek kódu, který se spustí jako další.
+- [Spustit do konkrétního umístění nebo funkce](#BKMK_Break_into_code_by_using_breakpoints_or_Break_All), například [nastavením zarážky](using-breakpoints.md) a spuštěním vaší aplikace.
 
- ![Režim&#95;přerušení&#95;&#95;základy dbg](../debugger/media/dbg_basics_break_mode.png "Režim přerušení")
+   Například z editoru kódu v aplikaci Visual Studio můžete pomocí příkazu **Spustit ke kurzoru** spustit aplikaci, připojit ladicí program a získat režim přerušení a potom klávesu **F11** přejít ke kódu.
 
-Většina oken ladicího programu, jako jsou **moduly** a **sledovací** okna, jsou k dispozici pouze v době, kdy je spuštěn ladicí program. Některé funkce ladicího programu, například zobrazení hodnot proměnných v okně **místních** hodnot nebo vyhodnocování výrazů v okně **kukátka** jsou k dispozici pouze v případě, že ladicí program je pozastaven na zarážce, označovaný také jako *režim přerušení*.
+   ![Spustit ke kurzoru a krokovat kód](../debugger/media/navigate-code-code-stepping.gif "Spustit ke kurzoru a krokovat kód")
 
-V režimu pozastavení je spuštění aplikace pozastaveno, zatímco funkce, proměnné a objekty zůstávají v paměti. Můžete zkontrolovat umístění a stavy prvků a vyhledat porušení nebo chyby. U některých typů projektů můžete také provádět úpravy aplikace v režimu pozastavení. Video znázorňující tyto funkce naleznete v tématu [Začínáme s ladicím programem](https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6).
+Jednou v režimu pozastavení můžete použít celou řadu příkazů k procházení kódu. V režimu pozastavení můžete zkontrolovat hodnoty proměnných a vyhledat porušení nebo chyby. U některých typů projektů můžete také provádět úpravy aplikace v režimu pozastavení.
 
-Pokud přerušíte kód, který nemá načítat zdrojové soubory nebo soubory symbolů (*PDB*), ladicí program zobrazí stránku **nenalezené zdrojové soubory** nebo **symboly nebyly nalezeny** , které vám pomohou najít a načíst soubory. Viz [určení symbolu (. pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md). Pokud nemůžete načíst symbol nebo zdrojové soubory, můžete přesto ladit pokyny sestavení v okně zpětného **překladu** .
+Většina oken ladicího programu, jako jsou **moduly** a **sledovací** okna, jsou k dispozici pouze tehdy, když je ladicí program připojen k vaší aplikaci. Některé funkce ladicího programu, jako je například zobrazení hodnot proměnných v okně **místních** hodnot nebo vyhodnocování výrazů v okně **kukátka** , jsou k dispozici pouze v případě, že ladicí program je pozastaven (tj. v režimu pozastavení).
 
-Nemusíte vždy spouštět ladění spuštěním aplikace na začátku. Můžete také stisknutím klávesy **F11** přejít ke [kódu](#BKMK_Step_into__over__or_out_of_the_code), stisknout klávesu **F10** a [krokovat kód](#BKMK_Step_over_Step_out)nebo [spustit do konkrétního umístění nebo funkce](#BKMK_Break_into_code_by_using_breakpoints_or_Break_All).
+> [!NOTE]
+> Pokud přerušíte kód, který nemá načítat zdrojové soubory nebo soubory symbolů (*PDB*), ladicí program zobrazí stránku **nenalezené zdrojové soubory** nebo **symboly nebyly nalezeny** , které vám pomohou najít a načíst soubory. Viz [určení symbolu (. pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md). Pokud nemůžete načíst symbol nebo zdrojové soubory, můžete přesto ladit pokyny sestavení v okně zpětného **překladu** .
 
 ## <a name="step-through-code"></a>Krokovat kód
 
 Příkazy kroku ladicího programu vám pomůžou zkontrolovat stav aplikace nebo zjistit další informace o jeho toku provádění.
 
-Pokud potřebujete najít vstupní bod v aplikaci, začněte nástrojem **F10** nebo **F11**.
-
 ### <a name="BKMK_Step_into__over__or_out_of_the_code"></a>Krokovat s kódem řádek po řádku
 
-Chcete-li zastavit na každém řádku kódu nebo příkazu během ladění, použijte  > **Krok** **ladění** do nebo stiskněte klávesu **F11**.
+Chcete-li zastavit u každého příkazu během ladění, použijte **Krok** **ladění** > do nebo stiskněte klávesu **F11**.
 
 Ladicí program provede kroky kódu, ne fyzických řádků. Například klauzuli `if` lze zapsat na jeden řádek:
 
@@ -73,11 +72,11 @@ Nicméně když na tento řádek zadáte krok, ladicí program považuje podmín
 U vnořeného volání funkce **Krok do** nejhlouběji vnořené funkce. Například pokud použijete **Krok do** pro volání, jako je `Func1(Func2())`, ladicí program kroky do funkce `Func2`.
 
 >[!TIP]
->Při provádění jednotlivých řádků kódu můžete umístit ukazatele myši nad proměnné, abyste viděli jejich hodnoty, nebo použít [místní](autos-and-locals-windows.md) okna a [kukátka](watch-and-quickwatch-windows.md) ke sledování změn hodnot. Můžete také vizuálně sledovat zásobník volání při krokování do funkcí. Viz [metody map v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).
+>Při provádění jednotlivých řádků kódu můžete umístit ukazatele myši nad proměnné, abyste viděli jejich hodnoty, nebo použít [místní](autos-and-locals-windows.md) okna a [kukátka](watch-and-quickwatch-windows.md) ke sledování změn hodnot. Můžete také vizuálně sledovat [zásobník volání](how-to-use-the-call-stack-window.md) při krokování do funkcí. (Pouze pro Visual Studio Enterprise, viz [metody map v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)).
 
 ### <a name="BKMK_Step_over_Step_out"></a>Krokovat kód a přeskočit některé funkce
 
-Při ladění nemůžete zajímat funkci, nebo víte, že funguje, jako dobře testovaný kód knihovny. Pomocí následujících příkazů můžete přeskočit kód. Funkce se pořád spustí, ale ladicí program je přeskočí.
+Při ladění nemůžete zajímat funkci, nebo víte, že funguje, jako dobře testovaný kód knihovny. Pomocí následujících příkazů můžete přeskočit kód při krokování kódu. Funkce se pořád spustí, ale ladicí program je přeskočí.
 
 |Příkaz klávesnice|Příkaz nabídky Ladit|Popis|
 |----------------------|------------------|-----------------|

@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae62a380e4e0feb23a901a4fc6a2628fcd8c6a0c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 0bf8cbcc699f015cae954400744d9bd724d70c57
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72734928"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187912"
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Přehled diagnostiky grafiky sady Visual Studio
 Visual Studio *Diagnostika grafiky* je sada nástrojů pro zaznamenávání a analýzu problémů s výkonem a výkonem v aplikacích Direct3D. Diagnostika grafiky lze použít pro aplikace, které jsou spuštěny místně na počítači s Windows nebo na vzdáleném počítači nebo zařízení.
@@ -21,7 +21,7 @@ Visual Studio *Diagnostika grafiky* je sada nástrojů pro zaznamenávání a an
 ## <a name="using-graphics-diagnostics-to-debug-rendering-problems"></a>Použití Diagnostiky grafiky k ladění problémů s vykreslováním
  Ladění problémů s vykreslováním v aplikaci s bohatou grafikou není tak přímočaré jako spuštění ladicího programu a krokování kódu. V každém snímku jsou produkovány stovky tisíc jedinečných pixelů podle komplexní sady stavu, dat, parametrů a kódu. Z těchto pixelů může problém, který chcete diagnostikovat, vykazovat pouze několik málo pixelů. A aby věci byly ještě složitější, kód, který generuje každý pixel, je spouštěn na specializovaném hardwaru, který paralelně zpracovává stovky pixelů. Tradiční nástroje a techniky ladění, které je obtížné využít i v kódu s malým počtem vláken, jsou v případě velkého množství dat neúčinné.
 
- Nástroje Diagnostika grafiky v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] jsou navržené tak, aby vám pomohly najít problémy s vykreslováním, počínaje vizuálními artefakty, které ukazují problém a potom se vrátí zpět ke zdroji problému, a zaměřením jenom na relevantní kód shaderu, fáze zřetězení, Nakreslete volání, prostředky a stav zařízení – ve zdrojovém kódu aplikace.
+ Nástroje Diagnostika grafiky v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] jsou navržené tak, aby vám pomohly najít problémy s vykreslováním, počínaje vizuálními artefakty, které ukazují problém a pak se vrátí zpět ke zdroji problému, a zaměřením pouze na relevantní kód shaderu, fáze zřetězení , nakreslete volání, prostředky a stav zařízení – ve zdrojovém kódu aplikace.
 
 ## <a name="directx-version-compatibility"></a>Kompatibilita verzí DirectX
  Diagnostika grafiky podporuje aplikace, které používají Direct3D 10 nebo vyšší, a poskytuje omezená podpora pro aplikace, které používají Direct2D. Nepodporuje aplikace, které používají starší verze rozhraní Direct3D, DirectDraw nebo jiné grafické rozhraní API.
@@ -52,7 +52,7 @@ Visual Studio *Diagnostika grafiky* je sada nástrojů pro zaznamenávání a an
 ### <a name="gpu-usage"></a>Využití GPU
  Diagnostika grafiky může také Profilovat výkon aplikace Direct3D. Vzhledem k tomu, že se data profilace budou zkosit pomocí zaznamenávání podrobností o grafických událostech, je to oddělené od zachytávání snímků, které se mají prozkoumat pomocí analyzátoru grafiky.
 
- Další informace najdete v tématu [použití GPU](/visualstudio/profiling/gpu-usage) .
+ Další informace najdete v tématu [použití GPU](../../profiling/gpu-usage.md) .
 
 ### <a name="directx-control-panel"></a>Ovládací panel rozhraní DirectX
  Ovládací panel rozhraní DirectX je součástí rozhraní DirectX, které můžete použít ke změně způsobu, jakým se rozhraní DirectX chová – například povolit verzi ladění runtime komponent rozhraní DirectX a výběr druhu zpráv ladění, které jsou zaznamenány, a zakázat použití určitých funkcí hardwaru grafiky k emulaci hardwaru s méně funkcemi. Tato úroveň kontroly nad rozhraním DirectX vám může pomoct ladit a testovat vaši aplikaci DirectX. Ovládací panel rozhraní DirectX zobrazíte ze sady Visual Studio.

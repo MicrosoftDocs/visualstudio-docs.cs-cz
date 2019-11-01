@@ -1,5 +1,5 @@
 ---
-title: Lokalizace balíčků VSIX | Dokumentace Microsoftu
+title: Lokalizace balíčků VSIX | Microsoft Docs
 ms.date: 10/26/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +12,22 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e0ef2cc0c2404a2148f471d12f313b158f3bd64
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 171c8635c2d6db2c346fb836701e630812ecbb28
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66344561"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73186452"
 ---
 # <a name="localizing-vsix-packages"></a>Lokalizace balíčků VSIX
 
-Je možné lokalizovat VSIX balíček vytvořením *Extension.vsixlangpack* souboru pro každý cílový jazyk a umístit je do správné složky. Při instalaci balíčku lokalizované lokalizovaný název rozšíření se zobrazí spolu s lokalizovaný popis. Pokud zadáte lokalizované licenčního souboru nebo adresu URL, která odkazuje na lokalizované informace, jsou také zobrazeny.
+VSIX balíček můžete lokalizovat vytvořením souboru s *příponou. vsixlangpack* pro každý cílový jazyk a jeho vložením do správné složky. Při instalaci lokalizovaného balíčku se lokalizovaný název rozšíření zobrazuje spolu s lokalizovaným popisem. Pokud zadáte lokalizovaný licenční soubor nebo adresu URL, která odkazuje na lokalizované informace, zobrazí se také.
 
-Pokud obsah obsahuje VSIX balíček VSPackage, která přidá příkazy nabídky nebo jiný prvek uživatelského rozhraní, přečtěte si téma [lokalizace příkazů nabídky](../extensibility/localizing-menu-commands.md) informace o lokalizaci nových prvků uživatelského rozhraní.
+Pokud obsah vašeho balíčku VSIX obsahuje VSPackage, který přidá příkazy nabídky nebo jiné uživatelské rozhraní, přečtěte si téma [lokalizace příkazů nabídky](../extensibility/localizing-menu-commands.md) , kde najdete informace o lokalizaci nových prvků uživatelského rozhraní.
 
 ## <a name="directory-structure"></a>Adresářová struktura
 
- Když uživatel nainstaluje rozšíření, **rozšíření a aktualizace** kontroluje nejvyšší úrovni balíčku VSIX pro složku, jejíž název odpovídá národní prostředí sady Visual Studio na cílovém počítači. Pokud **rozšíření a aktualizace** najde *.vsixlangpack* souboru ve složce, nahradí jej lokalizované hodnoty v tomto souboru pro odpovídající hodnoty v *.vsixmanifest*souboru. Tyto hodnoty se zobrazí, když se instaluje rozšíření. Následující příklad ukazuje strukturu adresáře pro balíček VSIX, který je lokalizován do Španělština (es-ES) a Francouzština (fr-FR).
+ Když uživatel nainstaluje rozšíření, **rozšíření a aktualizace** ověří nejvyšší úroveň balíčku VSIX pro složku, jejíž název se shoduje s národním prostředím sady Visual Studio cílového počítače. Pokud **rozšíření a aktualizace** naleznou soubor *. vsixlangpack* ve složce, nahradí lokalizované hodnoty v tomto souboru odpovídajícími hodnotami v souboru *. vsixmanifest* . Tyto hodnoty se zobrazí při instalaci rozšíření. Následující příklad ukazuje adresářovou strukturu balíčku VSIX, který je lokalizován do španělštiny (ES-ES) a francouzštiny (fr-FR).
 
 ```text
 .
@@ -41,29 +41,29 @@ Pokud obsah obsahuje VSIX balíček VSPackage, která přidá příkazy nabídky
 ```
 
 > [!NOTE]
-> Šablony projektů VSIX podporované v [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] generování manifestu VSIX a pojmenujte ho *source.extension.vsixmanifest*. Když Visual Studio vytvoří projekt, zkopíruje obsah tohoto souboru do Extension.VsixManifest v balíčku souboru VSIX.
+> Šablony projektů podporované VSIX v [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] generují manifest VSIX a pojmenujte ho *source. extension. vsixmanifest*. Když Visual Studio sestaví projekt, zkopíruje obsah tohoto souboru do souboru extension. VsixManifest v balíčku VSIX.
 
-## <a name="the-extensionvsixlangpack-file"></a>Soubor Extension.vsixlangpack
+## <a name="the-extensionvsixlangpack-file"></a>Soubor Extension. vsixlangpack
 
-*Extension.vsixlangpack* souboru způsobem [VSIX Language Pack schema 2.0](../extensibility/vsix-language-pack-schema-2-0-reference.md). Toto schéma je `PackageLanguagePackManifest`, který je okamžitě následován `Metadata` podřízený element. Metadata element může obsahovat až 6 podřízené prvky `DisplayName`, `Description`, `MoreInfo`, `License`, `ReleaseNotes`, a `Icon`. Tyto podřízené prvky odpovídají `DisplayName`, `Description`, `MoreInfo`, `License`, `ReleaseNotes`, a `Icon` podřízených elementů `Metadata` elementu *Extension.vsixmanifest*souboru.
+Soubor *extension. vsixlangpack* se řídí [schématem jazykové sady VSIX 2,0](../extensibility/vsix-language-pack-schema-2-0-reference.md). Toto schéma má `PackageLanguagePackManifest`, což je okamžitě následováno `Metadata` podřízeným prvkem. Element metadata může obsahovat až 6 podřízených elementů, `DisplayName`, `Description`, `MoreInfo`, `License`, `ReleaseNotes`a `Icon`. Tyto podřízené prvky odpovídají `DisplayName`, `Description`, `MoreInfo`, `License`, `ReleaseNotes`a `Icon` podřízených prvků prvku `Metadata` souboru *extension. vsixmanifest* .
 
-Když vytvoříte soubor vsixlangpack, je nutné nastavit `Include in Vsix` vlastnost `true`. V opačném případě lokalizovaného instalačního text se bude ignorovat.
+Při vytváření souboru vsixlangpack je nutné nastavit vlastnost `Include in Vsix` na hodnotu `true`. V opačném případě bude lokalizovaný text instalace ignorován.
 
-### <a name="to-set-the-include-in-vsix-property"></a>Chcete-li nastavit zahrnutí ve vlastnosti Vsix
+### <a name="to-set-the-include-in-vsix-property"></a>Nastavení vlastnosti include v souboru VSIX
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na soubor Extension.vsixlangpack a pak klikněte na tlačítko **vlastnosti**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na soubor Extension. vsixlangpack a potom klikněte na příkaz **vlastnosti**.
 
-2. V **mřížky vlastností**, klikněte na tlačítko **zahrnout do Vsix**a přiřadíte jí hodnotu `true`.
+2. V **mřížce vlastností**klikněte na **zahrnout do VSIX**a nastavte jeho hodnotu na `true`.
 
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
 
-Následující příklad ukazuje příslušné části třídy *Extension.vsixmanifest* souboru. Soubor obsahuje také odpovídající *Extension.vsixlangpack* soubor pro španělštinu. Pokud národní prostředí sady Visual Studio na cílovém počítači je nastaven na španělštinu, nahraďte hodnoty z této jazykové sady hodnot z manifestu.
+Následující příklad ukazuje relevantní části souboru *extension. vsixmanifest* . Soubor obsahuje také odpovídající soubor *extension. vsixlangpack* pro španělštinu. Hodnoty z jazykové sady nahradí hodnoty z manifestu, pokud je národní prostředí sady Visual Studio cílového počítače nastaveno na španělštinu.
 
 ### <a name="code"></a>Kód
 
-- [*Extension.vsixmanifest*]
+- [*Extension. vsixmanifest*]
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -83,7 +83,7 @@ Následující příklad ukazuje příslušné části třídy *Extension.vsixma
 </PackageManifest>
 ```
 
-- [*Extension.vsixlangpack*]
+- [*Extension. vsixlangpack*]
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -103,6 +103,6 @@ Následující příklad ukazuje příslušné části třídy *Extension.vsixma
 
 |Název|Popis|
 |-----------|-----------------|
-|[VSIX Language Pack schema 2.0 odkaz](/visualstudio/extensibility/vsix-language-pack-schema-2-0-reference)|Jazykové sady VSIX popisuje informace o lokalizaci nasazení souboru .vsix.|
-|[Anatomie balíčku VSIX](../extensibility/anatomy-of-a-vsix-package.md)|Popisuje strukturu a obsah balíčku vsix.|
-|[Lokalizace příkazů nabídky](../extensibility/localizing-menu-commands.md)|Ukazuje, jak lokalizovat další prostředky textu v rozšíření.|
+|[Referenční dokumentace schématu 2,0 pro jazykové sady VSIX](vsix-language-pack-schema-2-0-reference.md)|Jazyková sada VSIX popisuje informace o lokalizaci souboru nasazení. VSIX.|
+|[Anatomie balíčku VSIX](../extensibility/anatomy-of-a-vsix-package.md)|Popisuje strukturu a obsah balíčku VSIX.|
+|[Příkazy nabídky lokalizace](../extensibility/localizing-menu-commands.md)|Ukazuje, jak lokalizovat jiné textové prostředky v rozšíření.|

@@ -1,5 +1,5 @@
 ---
-title: Ladění a proces hostování | Dokumentace Microsoftu
+title: Ladění a proces hostování | Microsoft Docs
 ms.date: 08/01/2018
 ms.topic: conceptual
 dev_langs:
@@ -16,31 +16,31 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: af0d57e39fa8d1312032bacbbd9af95d44449ca1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f77df2eae643b658e915662e0f50f6a376141d27
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62852483"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188469"
 ---
 # <a name="debugging-and-the-hosting-process"></a>Ladění a proces hostování
-Hostující proces sady Visual Studio zlepšuje výkon ladicího programu a umožňuje nové funkce ladicího programu, jako je ladění částečným vztahem důvěryhodnosti a vyhodnocení výrazu v době návrhu. Pokud je potřeba, můžete zákaz procesu hostování. Následující části popisují některé rozdíly mezi ladění a nemusíte hostitelský proces.
+Proces hostování sady Visual Studio vylepšuje výkon ladicího programu a umožňuje nové funkce ladicího programu, jako je například ladění částečného vztahu důvěryhodnosti a vyhodnocení výrazu v době návrhu. V případě potřeby můžete hostitelský proces zakázat. Následující části popisují některé rozdíly mezi laděním s a bez hostujícího procesu.
 
 > [!NOTE]
-> Spouští se v sadě Visual Studio 2017, možnost ladění pomocí hostitelský proces už je nepotřebujete a byl odebrán. Další informace najdete v tématu [ladění: Visual Studio 2017 cílem je urychlit nejméně oblíbené úlohy](https://vslive.com/Blogs/News-and-Tips/2017/02/Debugging-Visual-Studio-2017-aims-to-speed-up-your-least-favorite-job.aspx).
+> Od sady Visual Studio 2017 není možnost ladění pomocí hostitelského procesu nadále potřebná a byla odebrána. Další informace naleznete v tématu [ladění: Visual Studio 2017 směřuje k urychlení nejméně oblíbené úlohy](https://vslive.com/Blogs/News-and-Tips/2017/02/Debugging-Visual-Studio-2017-aims-to-speed-up-your-least-favorite-job.aspx).
 
-## <a name="partial-trust-debugging-and-click-once-security"></a>Ladění částečným vztahem důvěryhodnosti a klikněte na tlačítko-jednou zabezpečení
- Ladění částečným vztahem důvěryhodnosti vyžaduje hostující proces. Pokud je hostitelský proces zakázat, částečným vztahem důvěryhodnosti ladění nebudou fungovat i v případě, že je zapnutá částečným vztahem důvěryhodnosti zabezpečení **zabezpečení** stránce **vlastnosti projektu**. Další informace najdete v tématu [jak: Ladění aplikace s částečnou důvěryhodností](/visualstudio/debugger/debugger-security).
+## <a name="partial-trust-debugging-and-click-once-security"></a>Ladění s částečným vztahem důvěryhodnosti a zabezpečení po kliknutí
+ Ladění s částečným vztahem důvěryhodnosti vyžaduje hostující proces. Pokud zakážete hostující proces, ladění s částečným vztahem důvěryhodnosti nebude fungovat ani v případě, že je na stránce **zabezpečení** **vlastností projektu**povoleno zabezpečení s částečnou důvěryhodností. Další informace najdete v tématu [Postup: ladění aplikace s částečnou důvěryhodností](debugger-security.md).
 
-## <a name="design-time-expression-evaluation"></a>Vyhodnocení výrazu v době návrhu
- Výraz návrhu vždy používá hostitelský proces. Zakázání hostování v procesu **vlastnosti projektu** zakáže vyhodnocení výrazu v době návrhu pro projekty knihovny tříd. Vyhodnocení výrazu v době návrhu není zakázáno, pro ostatní typy projektů. Místo toho Visual Studio spustí skutečný program a použije ho k vyhodnocení doby návrhu bez hostitelský proces. Tento rozdíl může mít různé výsledky.
+## <a name="design-time-expression-evaluation"></a>Vyhodnocení výrazu pro dobu návrhu
+ Výraz při návrhu vždy používá hostitelský proces. Zakázání hostitelského procesu ve **vlastnostech projektu** zakáže vyhodnocení výrazu v době návrhu pro projekty knihovny tříd. Pro jiné typy projektů není vyhodnocení výrazu v době návrhu zakázáno. Místo toho Visual Studio spustí skutečný spustitelný soubor a použije ho pro vyhodnocení v době návrhu bez hostujícího procesu. Tento rozdíl může způsobit odlišné výsledky.
 
-## <a name="appdomaincurrentdomainfriendlyname-differences"></a>AppDomain.CurrentDomain.FriendlyName Differences
- `AppDomain.CurrentDomain.FriendlyName` Vrátí odlišné výsledky v závislosti na tom, zda je povoleno hostitelský proces. Při volání `AppDomain.CurrentDomain.FriendlyName` s proces hostování povoleno, vrátí *app_name*`.vhost.exe`. Pokud při volání hostitelský proces zakázán, vrátí *app_name*`.exe`.
+## <a name="appdomaincurrentdomainfriendlyname-differences"></a>Rozdíly v AppDomain. CurrentDomain. FriendlyName
+ `AppDomain.CurrentDomain.FriendlyName` vrátí různé výsledky v závislosti na tom, zda je proces hostování povolen. Pokud zavoláte `AppDomain.CurrentDomain.FriendlyName` s povoleným hostitelským procesem, vrátí *app_name*`.vhost.exe`. Pokud je zavoláte, je hostitelský proces zakázán, vrátí *app_name*`.exe`.
 
-## <a name="assemblygetcallingassemblyfullname-differences"></a>Assembly.GetCallingAssembly(). Jméno a příjmení rozdíly
- `Assembly.GetCallingAssembly().FullName` Vrátí odlišné výsledky v závislosti na tom, zda je povoleno hostitelský proces. Při volání `Assembly.GetCallingAssembly().FullName` s proces hostování povoleno, vrátí `mscorlib`. Při volání `Assembly.GetCallingAssembly().FullName` se hostitelský proces zakázán, vrátí název aplikace.
+## <a name="assemblygetcallingassemblyfullname-differences"></a>Assembly. GetCallingAssembly (). Nafullname rozdíly
+ `Assembly.GetCallingAssembly().FullName` vrátí různé výsledky v závislosti na tom, zda je proces hostování povolen. Pokud zavoláte `Assembly.GetCallingAssembly().FullName` s povoleným hostitelským procesem, vrátí `mscorlib`. Pokud zavoláte `Assembly.GetCallingAssembly().FullName` s hostitelským procesem zakázán, vrátí název aplikace.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Postupy: Ladění částečně důvěryhodné aplikace](/visualstudio/debugger/debugger-security)
+- [Postupy: Ladění aplikace s částečnou důvěryhodností](debugger-security.md)

@@ -17,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 52235ab4770f5267de8507ff67fcda0aa1370392
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 12f66658cd8069f58355a96b2c3b3031a4cb6808
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72730557"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187566"
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Ladění HTML a CSS v aplikacích pro UWP v aplikaci Visual Studio
 
@@ -30,7 +30,7 @@ Pro aplikace JavaScriptu nabízí Visual Studio komplexní ladicí prostředí, 
 
 Pomocí modelu interaktivního ladění, který poskytuje nástroje pro kontrolu DOM, můžete zobrazit a upravit vykreslený kód HTML a CSS. To všechno můžete udělat bez zastavení a restartování ladicího programu.
 
-Informace o dalších funkcích ladění JavaScriptu, jako je použití okna konzoly JavaScriptu a nastavení zarážek, najdete v tématu [rychlý Start: ladění JavaScriptu](../debugger/quickstart-debug-javascript-using-the-console.md) a [ladění aplikací v aplikaci Visual Studio](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps).
+Informace o dalších funkcích ladění JavaScriptu, jako je použití okna konzoly JavaScriptu a nastavení zarážek, najdete v tématu [rychlý Start: ladění JavaScriptu](../debugger/quickstart-debug-javascript-using-the-console.md) a [ladění aplikací v aplikaci Visual Studio](debugging-windows-store-and-windows-universal-apps.md).
 
 ## <a name="InspectingDOM"></a>Kontrola živého modelu DOM
 Průzkumník modelu DOM zobrazuje vykreslenou stránku a k změně hodnot a okamžitému zobrazení výsledků můžete použít Průzkumníka modelu DOM. To umožňuje testovat změny bez zastavení a restartování ladicího programu. Zdrojový kód v projektu se při interakci se stránkou nemění pomocí této metody, takže pokud najdete požadované opravy kódu, provedete změny ve zdrojovém kódu.
@@ -182,7 +182,7 @@ V následujícím postupu projdeme proces interaktivního ladění aplikace pomo
 14. V hlavním okně klikněte dvakrát na `width: 100px;height: 100px;`, stiskněte klávesu **Delete** a potom stiskněte klávesu **ENTER**. Po stisknutí klávesy ENTER se nové hodnoty v aplikaci okamžitě projeví, i když jste nezastavili relaci ladění.
 
     > [!IMPORTANT]
-    > Jak můžete aktualizovat atributy v okně Průzkumníka modelu DOM, můžete také aktualizovat hodnoty, které se zobrazí na kartách **styly**, **vypočítané**a **rozložení** . Další informace naleznete v tématu [Ladění stylů CSS pomocí Průzkumníka modelu DOM](../debugger/debug-css-styles-using-dom-explorer.md) a [rozložení ladění pomocí Průzkumníka modelu DOM](../debugger/debug-layout-using-dom-explorer.md).
+    > Jak můžete aktualizovat atributy v okně Průzkumníka modelu DOM, můžete také aktualizovat hodnoty, které se zobrazí na kartách **styly**, **vypočítané**a **rozložení** . Další informace naleznete v tématu [Ladění stylů CSS pomocí Průzkumníka modelu DOM](../debugger/debug-css-styles-using-dom-explorer.md) a [rozložení ladění pomocí Průzkumníka modelu DOM](quickstart-debug-html-and-css.md).
 
 15. Přepněte na aplikaci tak, že ji vyberete nebo použijete ALT + TAB.
 
@@ -255,7 +255,7 @@ Při ladění aplikace můžete vybrat prvky DOM třemi způsoby:
 > Zvýraznění prvků přesunutím myší na ně je pouze částečně podporováno v emulátoru Windows Phone.
 
 ## <a name="see-also"></a>Viz také:
-- [Ladění aplikací v sadě Visual Studio](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)
+- [Ladění aplikací v sadě Visual Studio](debugging-windows-store-and-windows-universal-apps.md)
 - [Aktualizace aplikace (JavaScript)](../debugger/refresh-an-app-javascript.md)
 - [Ladění ovládacího prvku WebView](../debugger/debug-a-webview-control.md)
 - [Klávesové zkratky](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017)

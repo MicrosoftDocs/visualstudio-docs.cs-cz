@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4e8ccaaf877c04b3d58fc6d54bb658c2cef77b6f
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 046f3bbca7b66d14e9b6a3eae96b613492292be0
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985312"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189196"
 ---
 # <a name="troubleshoot-sharepoint-solutions"></a>Řešení potíží s řešeními služby SharePoint
   Při ladění řešení služby SharePoint pomocí ladicího programu [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] mohou nastat následující problémy nebo výstrahy. Další informace najdete v tématu [ladění řešení pracovních postupů pro SharePoint 2007](https://msdn.microsoft.com/3a5392f3-66f3-48be-956e-02de23fa6247).
@@ -281,4 +281,4 @@ ms.locfileid: "72985312"
 
 - [Řešení potíží s balením a nasazením služby SharePoint](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)
 - [Sestavování a ladění řešení služby SharePoint](../sharepoint/building-and-debugging-sharepoint-solutions.md)
-- [Ladění v sadě Visual Studio](../debugger/debugging-in-visual-studio.md)
+- [Ladění v sadě Visual Studio](../debugger/debugger-feature-tour.md)

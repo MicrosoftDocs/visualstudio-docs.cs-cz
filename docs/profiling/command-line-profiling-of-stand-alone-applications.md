@@ -1,5 +1,5 @@
 ---
-title: Profilace samostatných aplikací z příkazového řádku | Dokumentace Microsoftu
+title: Profilace samostatných aplikací z příkazového řádku | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,30 +11,30 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bcd48f421dcae74e82b0d9249a958f2a834f0a45
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5a3bcc9dabbd325674e0731adaf4fcfb5b1abcbb
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831678"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189400"
 ---
 # <a name="command-line-profiling-of-stand-alone-applications"></a>Profilace samostatných aplikací z příkazového řádku
-Tato část popisuje postupy a možnosti pro shromažďování dat výkonu pro samostatné (klientské) aplikace s použitím [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástroje pro profilaci z příkazového řádku.
+Tato část popisuje postupy a možnosti pro shromažďování údajů o výkonu pro samostatné (klientské) aplikace pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci z příkazového řádku.
 
-## <a name="common-tasks"></a>Běžné úkoly
+## <a name="common-tasks"></a>Běžné úlohy
 
 | Úloha | Související obsah |
 | - | - |
-| **Shromažďování statistik aplikace:** Shromažďování statistik výkonu pomocí metody odběru vzorků. Vzorkování dat je užitečné analyzovat problémy s využitím procesoru a pochopení charakteristik obecné informace o výkonu aplikace. | -   [Shromažďování statistik aplikace pomocí vzorkování](../profiling/collecting-application-statistics-for-stand-alone-applications.md) |
-| **Shromažďování podrobných dat časování:** Pomocí metody instrumentace ke shromažďování podrobných informací o časování. Data instrumentace je užitečná pro analýzu problémů vstupně-výstupních operací a k podrobné analýze scénáře aplikací. | -   [Shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application.md) |
-| **Shromažďování dat paměti .NET:** Pomocí vzorkování nebo instrumentace lze shromažďovat data o přidělování paměti .NET, který vám ukáže, velikost a počet přidělených objektů. Může také shromažďovat data o životním cyklu objektu, který vám ukáže, velikost a počet objektů, které jsou uvolněny v každé generaci uvolňování paměti. | -   [Shromažďování dat paměti .NET Framework](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications.md) |
-| **Shromažďování dat souběžnosti:** Za použití metody souběžnosti můžete shromažďovat data kolize prostředků a data aktivity vláken, která ukazuje využití procesoru, kolize vlákna, migrace vlákna, zpoždění synchronizace, míst překrytí I/O a další systémové události. | -   [Shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-stand-alone-applications.md) |
-| **Přidání dat interakce vrstev:** Můžete přidat data o výkonu o synchronní ADO.NET, který volá žádosti služby Microsoft [!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)] databáze. Přidání dat interakce vrstvy do běhu profilování vyžaduje zvláštní procedury s nástroji pro profilaci příkazového řádku. | -   [Shromažďování dat interakce vrstev](../profiling/adding-tier-interaction-data-from-the-command-line.md) |
-| **Vyzkoušejte si to:** Krok za krokem postupem ukázková klientská aplikace profilu pomocí metody vzorkování nebo instrumentace. | -   [Návod: Příkazový řádek profilování pomocí vzorkování](../profiling/walkthrough-command-line-profiling-using-sampling.md)<br />-   [Návod: Příkazový řádek, profilace s použitím instrumentace](/visualstudio/profiling/command-line-profiling-of-stand-alone-applications) |
+| **Shromáždit statistiku aplikace:** Ke shromažďování statistik výkonu použijte metodu vzorkování. Vzorkování dat je užitečné při analýze problémů s využitím procesoru a pro porozumění obecným vlastnostem výkonu aplikace. | -   [shromažďovat statistiky aplikací pomocí vzorkování](../profiling/collecting-application-statistics-for-stand-alone-applications.md) |
+| **Shromažďování podrobných dat časování:** Použijte metodu instrumentace ke shromažďování podrobných informací o časování. Data instrumentace jsou užitečná pro analýzu problémů v/v a pro jemně odstupňovanou analýzu scénářů aplikací. | -   [shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application.md) |
+| **Shromáždit data paměti .NET:** Pomocí vzorkování nebo instrumentace Shromážděte data o přidělování paměti .NET, která zobrazují velikost a počet přidělených objektů. Můžete také shromažďovat data o životnosti objektů, která zobrazují velikost a počet objektů, které jsou v každé generaci uvolňování paměti uvolněny. | -   [shromažďovat data o .NET Framework paměti](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications.md) |
+| **Shromáždit data souběžnosti:** Použijte metodu souběžnosti ke shromáždění dat o kolize prostředku a data aktivity vláken, která vám ukáže využití procesoru, kolize vláken, migraci vláken, zpoždění synchronizace, oblasti překrývajících se vstupně-výstupních operací a další systémové události. | -   [shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-stand-alone-applications.md) |
+| **Přidat data interakce vrstev:** Můžete přidat údaje o výkonu o synchronních voláních ADO.NET, která aplikace provedla v databázi Microsoft [!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)]. Přidání dat interakce vrstev do běhu profilování vyžaduje konkrétní procedury s nástroji pro profilaci příkazového řádku. | -   [shromažďovat data interakce vrstev](../profiling/adding-tier-interaction-data-from-the-command-line.md) |
+| **Vyzkoušet:** Pomocí podrobných kroků můžete profilovat ukázkovou klientskou aplikaci pomocí metody vzorkování nebo instrumentace. | -   [Návod: profilace z příkazového řádku s použitím vzorkování](../profiling/walkthrough-command-line-profiling-using-sampling.md)<br />-   [Návod: profilování z příkazového řádku pomocí instrumentace](command-line-profiling-of-stand-alone-applications.md) |
 
 ## <a name="related-tasks"></a>Související úlohy
 
 |Úloha|Související obsah|
 |----------|---------------------|
-|**Profil aplikace ASP.NET**|-   [Webové aplikace ASP.NET profilu](../profiling/command-line-profiling-of-aspnet-web-applications.md)|
-|**Profil služby**|-   [Profil služby](../profiling/command-line-profiling-of-services.md)|
+|**Profilování aplikací ASP.NET**|[webové aplikace ASP.NET profilu](../profiling/command-line-profiling-of-aspnet-web-applications.md) -   |
+|**Profilovací služby**|[služby profilů](../profiling/command-line-profiling-of-services.md) -   |

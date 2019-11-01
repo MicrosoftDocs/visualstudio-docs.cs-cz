@@ -15,12 +15,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b2b42143c2971bcbb172958b8da42a1e887e4699
-ms.sourcegitcommit: 3e94d9fb6dc56fa8b23fbacd5d11cf8d6e7e18f1
+ms.openlocfilehash: 94f71014440c55da0151d0ebd817aac9f5d2c7ed
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252641"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73186276"
 ---
 # <a name="localize-menu-commands"></a>Příkazy nabídky lokalizace
 
@@ -92,7 +92,7 @@ Textové prostředky jiné než názvy příkazů jsou definovány v souborech p
 
 5. Otevřete jednotlivé soubory *. resx* pro úpravu hodnot řetězce podle potřeby pro konkrétní jazyk a jazykovou verzi. Následující příklad ukazuje lokalizovanou definici prostředků v záhlaví okna nástroje.
 
-     [*Resources.en-US.resx*]
+     [*Resources. en-US. resx*]
 
     ```xml
     <data name="ToolWindowTitle" xml:space="preserve">
@@ -126,7 +126,7 @@ Je nutné upravit soubor *AssemblyInfo.cs* a soubor projektu pro zahrnutí lokal
 
 4. Otevřete soubor projektu v editoru.
 
-5. V kořenovém elementu `Project` přidejte prvek `PropertyGroup` s elementem `UICulture`, který odpovídá vašemu výchozímu jazyku.
+5. V kořenovém `Project` elementu přidejte prvek `PropertyGroup` s `UICulture` element, který odpovídá vašemu výchozímu jazyku.
 
     ```xml
     <PropertyGroup>
@@ -138,7 +138,7 @@ Je nutné upravit soubor *AssemblyInfo.cs* a soubor projektu pro zahrnutí lokal
 
 6. Vyhledejte prvek `ItemGroup`, který obsahuje prvky `EmbeddedResource`.
 
-7. V elementu `EmbeddedResource`, který volá *VSPackage. en-US. resx*, nahraďte prvek `ManifestResourceName` prvkem `LogicalName`, který je nastaven na `VSPackage.en-US.Resources`, následovně:
+7. V elementu `EmbeddedResource`, který volá *VSPackage. en-US. resx*, nahraďte `ManifestResourceName` element prvkem `LogicalName`, který je nastaven na `VSPackage.en-US.Resources`, následovně:
 
     ```xml
     <EmbeddedResource Include="VSPackage.en-US.resx">
@@ -147,7 +147,7 @@ Je nutné upravit soubor *AssemblyInfo.cs* a soubor projektu pro zahrnutí lokal
     </EmbeddedResource>
     ```
 
-8. Pro každý lokalizovaný jazyk zkopírujte prvek `EmbeddedResource` pro `VsPackage.en-US` a nastavte atribut **include** a element **logického** atributu pro kopírování do cílového národního prostředí.
+8. Pro každý lokalizovaný jazyk zkopírujte prvek `EmbeddedResource` pro `VsPackage.en-US`a nastavte atribut **include** a element **logického** atributu pro kopírování do cílového národního prostředí.
 
 9. Do každého lokalizovaného prvku `VSCTCompile` přidejte prvek `ResourceName`, který odkazuje na `Menus.ctmenu`, jak je znázorněno v následujícím příkladu:
 
@@ -166,6 +166,6 @@ Je nutné upravit soubor *AssemblyInfo.cs* a soubor projektu pro zahrnutí lokal
      Tím se vytvoří hlavní sestavení a sestavení prostředků pro jednotlivé jazyky. Informace o lokalizaci procesu nasazení najdete v tématu [lokalizace balíčků VSIX](../extensibility/localizing-vsix-packages.md) .
 
 ## <a name="see-also"></a>Viz také:
+
 - [Rozšiřování nabídek a příkazů](../extensibility/extending-menus-and-commands.md)
-- @no__t – 0MenuCommands vs. OleMenuCommands @ no__t-0
 - [Globalizace a lokalizace aplikací](../ide/globalizing-and-localizing-applications.md)
