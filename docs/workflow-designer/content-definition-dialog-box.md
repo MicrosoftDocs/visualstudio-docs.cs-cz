@@ -10,12 +10,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 307540325ac2f6bd35d33cb540fa93aa1a41254a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4925d6f6321cd039daca469844ebac6627b08f81
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650620"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189788"
 ---
 # <a name="content-definition-dialog-box"></a>Dialogové okno Definice obsahu
 
@@ -36,4 +36,4 @@ Obsah lze zadat v části **zprávy** pro aktivitu <xref:System.ServiceModel.Act
 
 ## <a name="see-also"></a>Viz také:
 
-- [Nápověda k uživatelskému rozhraní návrháře postupu provádění](../workflow-designer/workflow-designer-ui-help.md)
+- [Nápověda k uživatelskému rozhraní návrháře postupu provádění](browse-and-select-a-dotnet-type-dialog-box.md)

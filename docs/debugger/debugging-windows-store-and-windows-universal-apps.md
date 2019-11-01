@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: b008dd22b99e0024fcba479564c02cfad148f14a
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 73b9b78be6a6325a422c945db8c51caa7a11b487
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888466"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188264"
 ---
 # <a name="debug-universal-windows-apps-uwp-in-visual-studio"></a>Ladění univerzálních aplikací pro Windows (UWP) v aplikaci Visual Studio
 
@@ -33,4 +33,4 @@ Ladicí program sady Visual Studio poskytuje kompletní podporu pro ladění apl
 |Analýza efektu třídy ContentPrefetcher v aplikacích pro UWP|[Předběžné načtení obsahu pro aplikace pro UWP](../debugger/prefetch-content-for-windows-store-apps.md)|
 
 ## <a name="see-also"></a>Viz také:
-- [Analýza kvality kódu pomocí analýzy statického kódu](/visualstudio/code-quality/code-analysis-for-managed-code-overview)
+- [Analýza kvality kódu pomocí analýzy statického kódu](../code-quality/code-analysis-for-managed-code-overview.md)

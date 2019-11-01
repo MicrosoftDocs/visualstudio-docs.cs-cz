@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a4667fc630d86691d95e9dc9cd205b29f7b0f525
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
+ms.openlocfilehash: 8467463b5a97c5bf7de1c3864ee6a5e5fc4681d1
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349707"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188095"
 ---
 # <a name="find-your-debugging-task-in-visual-studio"></a>Hledání úlohy ladění v aplikaci Visual Studio
 
@@ -43,11 +43,15 @@ V opačném C# případě F# můžete pro a jenom [sledovat ID objektu s podmín
 
 ### <a name="pause-code-inside-a-loop-at-a-certain-iteration"></a>Pozastavení kódu uvnitř smyčky v určité iteraci
 
-Nastavte zarážku pomocí **čítače přístupů** jako podmínky. Další informace najdete v tématu [Počet volání](using-breakpoints.md#hit-count).
+Nastavte zarážku pomocí **čítače přístupů** jako podmínky. Další informace najdete v tématu [Počet volání](using-breakpoints.md#set-a-hit-count-condition).
 
 ### <a name="pause-code-at-the-start-of-a-function-when-you-know-the-function-name-but-not-its-location"></a>Pozastaví kód na začátku funkce, pokud znáte název funkce, ale ne její umístění.
 
 Můžete to provést pomocí zarážky funkce. Další informace najdete v tématu [nastavení zarážek funkce](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file).
+
+### <a name="pause-code-at-the-start-of-multiple-functions-with-the-same-name"></a>Pozastavit kód na začátku více funkcí se stejným názvem
+
+Pokud máte více funkcí se stejným názvem (přetížené funkce nebo funkce v různých projektech), můžete použít [zarážku funkce](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file).
 
 ### <a name="manage-and-keep-track-of-your-breakpoints"></a>Správa a sledování zarážek
 
@@ -101,11 +105,15 @@ Konfigurace možností ladicího programu a nastavení projektu ladicího progra
 
 ### <a name="edit-code-during-a-debugging-session"></a>Úprava kódu během relace ladění
 
-Použijte [Upravit a pokračovat](edit-and-continue.md). Pro XAML použijte [Hot reloading XAML](xaml-hot-reload.md).
+Použijte [Upravit a pokračovat](edit-and-continue.md). Pro XAML použijte [Hot reloading XAML](../xaml-tools/xaml-hot-reload.md).
 
 ### <a name="send-messages-to-the-output-window-without-modifying-code"></a>Odeslat zprávy do okna výstupu beze změny kódu
 
 Nastavte zarážka s trasováním. Další informace najdete v tématu [použití trasováním](using-tracepoints.md).
+
+## <a name="view-the-order-in-which-functions-are-called"></a>Zobrazit pořadí, ve kterém jsou funkce volány
+
+Viz [jak zobrazit zásobník volání](how-to-use-the-call-stack-window.md).
 
 ### <a name="debug-on-remote-machines"></a>Ladit na vzdálených počítačích
 

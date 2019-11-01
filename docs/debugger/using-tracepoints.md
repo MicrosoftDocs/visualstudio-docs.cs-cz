@@ -1,6 +1,6 @@
 ---
-title: Použití trasováním v ladicím programu | Microsoft Docs
-ms.date: 9/17/2019
+title: Protokolovat informace pomocí trasováním | Microsoft Docs
+ms.date: 10/28/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - tracepoints, about tracepoints
@@ -9,16 +9,16 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 263657213f1720eaca7a0462bb31585adaacf9bb
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: fcc9f01315d3783af1a1f124785cd74fafb215bf
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72516393"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187310"
 ---
-# <a name="use-tracepoints-in-the-visual-studio-debugger"></a>Použití trasováním v ladicím programu sady Visual Studio
+# <a name="log-info-to-the-output-window-using-tracepoints-in-visual-studio"></a>Protokolování informací do okna výstup pomocí trasováním v aplikaci Visual Studio
 
-Trasováním umožňuje protokolovat informace do okna výstup v části konfigurovatelné podmínky bez nutnosti změny nebo zastavení kódu. Tato funkce je podporována pro spravovaný i nativní kód i pro několik jazyků, jako je například JavaScript a C#.
+Trasováním umožňuje protokolovat informace do okna výstup v části konfigurovatelné podmínky bez nutnosti změny nebo zastavení kódu. Tato funkce je podporována pro spravované jazyky (C#, Visual Basic, F#) i pro nativní kód i pro jazyky, jako je JavaScript a Python.
 
 ## <a name="let39s-take-an-example"></a>Pojďme&#39;si příklad
 
@@ -129,7 +129,7 @@ Uzavřete řetězce (například názvy) do dvojitých uvozovek. Hodnoty lze zad
 
 I když jsou trasováním určeny pro ladění čisticího a plynulejšího prostředí, je potřeba mít na paměti několik důležitých informací, o kterých byste měli vědět, kdy je budete používat.
 
-Při kontrole vlastnosti nebo atributu objektu se někdy může změnit jeho hodnota. Nejedná se o chybu způsobenou funkcí zarážka s trasováním, ale je třeba uvést, že použití trasováním ke kontrole objektů nevylučuje tyto nechtěné úpravy.
+Při kontrole vlastnosti nebo atributu objektu se někdy může změnit jeho hodnota. Pokud se hodnota během kontroly změní, nejedná se o chybu způsobenou funkcí zarážka s trasováním. Nicméně použití trasováním ke kontrole objektů nevylučuje tyto nechtěné úpravy.
 
 Způsob, jakým jsou výrazy vyhodnocovány v okně zprávy **Akce** , se může lišit od jazyka, který aktuálně používáte pro vývoj. Například pro výstup řetězce nemusíte zabalit zprávu v uvozovkách, i když byste normálně používali `Debug.WriteLine()` nebo `console.log()`. Také syntaxe složených závorek (`{ }`) na výstupní výrazy se může lišit od konvence pro výstup hodnot ve vývojovém jazyce. (Obsah ve složených závorkách (`{ }`) by se ale měl pořád zapisovat pomocí syntaxe vašeho vývojového jazyka).
 

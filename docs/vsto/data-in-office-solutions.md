@@ -14,46 +14,46 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bb8cf959d5f1d915f5614dc2b92d74a603493f7e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a5f0b85acfd45996dd00208aae820b24265be9f5
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955973"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189693"
 ---
 # <a name="data-in-office-solutions"></a>Data v řešeních pro systém Office
-  Mnoho řešení pro systém Office uživatelům umožnit načtení nebo upravovat data. Při vytváření řešení pro systém Office s použitím sady Visual Studio existuje několik různých způsobů, kterými můžete pracovat s daty.
+  Mnoho řešení pro systém Office umožňuje uživatelům načíst nebo upravit data. Při vytváření řešení pro systém Office pomocí sady Visual Studio existuje několik různých způsobů, jak pracovat s daty.
 
 ## <a name="in-this-section"></a>V tomto oddílu
-- [Vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 
- Popisuje postup vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office.
+ Popisuje, jak vytvořit vazby dat k ovládacím prvkům v řešeních pro systém Office.
 
 - [Přehled vlastních částí XML](../vsto/custom-xml-parts-overview.md)
 
- Popisuje, jak pracovat s daty v řešeních pro systém Office pomocí vlastních částí XML.
+ Popisuje, jak používat vlastní části XML pro práci s daty v řešeních pro systém Office.
 
 - [Data uložená v mezipaměti v přizpůsobeních na úrovni dokumentu](../vsto/cached-data-in-document-level-customizations.md)
 
- Popisuje, jak ukládat data v ostrůvku vložená data, která je přístupná bez spuštění aplikace sady Office.
+ Popisuje, jak ukládat data do vloženého datového ostrova, který je přístupný bez spuštění aplikace Office.
 
 - [Schémata XML a data v přizpůsobeních na úrovni dokumentu](../vsto/xml-schemas-and-data-in-document-level-customizations.md)
 
- Popisuje, jak vytvořit ovládací prvky, které jsou vázány na XML data pomocí schémat XML v přizpůsobeních na úrovni dokumentu.
+ Popisuje, jak používat schémata XML v přizpůsobeních na úrovni dokumentu k vytváření ovládacích prvků, které jsou vázány na data XML.
 
-- [Použití místních souborů databáze v přehled řešení pro systém Office](../vsto/using-local-database-files-in-office-solutions-overview.md)
+- [Přehled použití místních souborů databáze v řešeních pro systém Office](../vsto/using-local-database-files-in-office-solutions-overview.md)
 
- Popisuje, jak importovat soubory databáze ve vašich projektech a můžete ukládat do mezipaměti dat pro použití v offline režimu.
+ Popisuje, jak importovat soubory databáze do projektů a kdy můžete ukládat data do mezipaměti pro použití v režimu offline.
 
 ## <a name="related-sections"></a>Související oddíly
 - [Přístup k datům v sadě Visual Studio](../data-tools/accessing-data-in-visual-studio.md)
 
- Seznam témat, která ukazují, jak pracovat s daty v sadě Visual Studio.
+ Obsahuje seznam témat, která ukazují, jak pracovat s daty v aplikaci Visual Studio.
 
-- [Ukládání dat](../data-tools/saving-data.md)
+- [Uložit data](../data-tools/save-data-back-to-the-database.md)
 
- Poskytuje odkazy na témata týkající se práce s datovými sadami, včetně úprava dat v datové sadě a jejich zápisu změn zpět do zdroje dat.
+ Obsahuje odkazy na témata týkající se práce s datovými sadami, včetně úpravy dat v datové sadě a napsání změn zpět do zdroje dat.
 
-- [Návrh a vytvoření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
+- [Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
 
- Obsahuje odkazy na informace o tom, jak hned začít vytvářet projekty pro systém Office s použitím sady Visual Studio.
+ Obsahuje odkazy na informace o tom, jak začít vytvářet projekty Office pomocí sady Visual Studio.

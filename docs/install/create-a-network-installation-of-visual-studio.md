@@ -1,7 +1,7 @@
 ---
 title: Vytvoření síťové instalace
 description: Naučte se vytvořit bod instalace sítě pro nasazení sady Visual Studio v rámci podniku.
-ms.date: 10/11/2019
+ms.date: 10/29/2019
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: fcc4a3d3d99deab62971c40b26c9a4252367438f
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: ca393af528abc7f685ceca83ac4c59ebb75dedfe
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516331"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189492"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Vytvoření síťové instalace sady Visual Studio
 
@@ -88,8 +88,9 @@ K dokončení tohoto kroku je nutné připojení k Internetu. Chcete-li vytvoři
 
 ## <a name="modify-the-responsejson-file"></a>Úprava souboru Response. JSON
 
-Můžete upravit soubor Response. JSON a nastavit výchozí hodnoty, které se použijí při spuštění instalačního programu.  Můžete například nakonfigurovat soubor `response.json` pro výběr konkrétní sady úloh, které se automaticky vybraly.
-Podrobnosti najdete v tématu [Automatizace instalace sady Visual Studio se souborem odpovědí](automated-installation-with-response-file.md) .
+Můžete upravit soubor Response. JSON a nastavit výchozí hodnoty, které se použijí při spuštění instalačního programu.  Můžete například nakonfigurovat soubor `response.json` pro výběr konkrétní sady úloh, které se automaticky vybraly. Podrobnosti najdete v tématu [Automatizace instalace sady Visual Studio se souborem odpovědí](automated-installation-with-response-file.md) .
+
+A pokud narazíte na problém s zaváděcím nástrojem sady Visual Studio při párování se souborem Response. JSON dojde k chybě, přečtěte si část "selhání analýzy ID z nadřazeného procesu" v tématu [řešení potíží souvisejících se sítí při instalaci nebo používání vizuálu. ](troubleshooting-network-related-errors-in-visual-studio.md#error-failed-to-parse-id-from-parent-process)Na stránce studia najdete další informace o tom, co dělat.
 
 ## <a name="copy-the-layout-to-a-network-share"></a>Zkopírování rozložení do síťové sdílené složky
 
@@ -219,7 +220,7 @@ Správci mohou do klientských pracovních stanic nasadit sadu Visual Studio jak
 
 > [!IMPORTANT]
 > Aby se zabránilo chybě, ujistěte se, že cesta k celému rozložení má méně než 80 znaků.
->
+
 > [!TIP]
 > Při spuštění jako součást dávkového souboru zajistí možnost `--wait`, že proces `vs_enterprise.exe` počká, dokud nebude instalace dokončena, než vrátí ukončovací kód.
 >
@@ -287,6 +288,7 @@ K dispozici jsou i další možnosti podpory. Seznam najdete na naší stránce 
 
 - [Příručka pro správce sady Visual Studio](visual-studio-administrator-guide.md)
 - [Aktualizace síťové instalace sady Visual Studio](update-a-network-installation-of-visual-studio.md)
+- [Řešení chyb souvisejících se sítí při instalaci nebo používání sady Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md)
 - [Řízení aktualizací pro nasazení sady Visual Studio založené na síti](controlling-updates-to-visual-studio-deployments.md)
 - [Životní cyklus produktu Visual Studio a údržba](/visualstudio/releases/2019/servicing/)
 - [Aktualizace sady Visual Studio na standardních hodnotách údržby](update-servicing-baseline.md)

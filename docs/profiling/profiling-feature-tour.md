@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c78c56d00f087bdef7733ee1ef2cbf90afd9638
-ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
-ms.translationtype: HT
+ms.openlocfilehash: 9cc8ab1ac26f4aa01342d9949243772edd3de91f
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144757"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189408"
 ---
 # <a name="quickstart-first-look-at-profiling-tools"></a>Rychlý Start: první pohled na nástroje pro profilaci
 
@@ -111,7 +111,7 @@ Další informace najdete v tématu [Časová osa aplikace](../profiling/applica
 
 ## <a name="analyze-gpu-usage-direct3d"></a>Analýza využití GPU (Direct3D)
 
-V aplikacích Direct3D (komponenty Direct3D musí být v C++) můžete prozkoumat činnost na GPU a analyzovat problémy s výkonem. Další informace najdete v tématu [využití GPU](../debugger/gpu-usage.md). Chcete-li použít nástroj, zvolte možnost **použití GPU** v profileru výkonu a pak zvolte možnost **Spustit**. Ve své aplikaci Projděte scénář, který vás zajímá, a pak zvolte **Zastavit shromažďování** pro vygenerování sestavy.
+V aplikacích Direct3D (komponenty Direct3D musí být v C++) můžete prozkoumat činnost na GPU a analyzovat problémy s výkonem. Další informace najdete v tématu [využití GPU](/visualstudio/debugger/graphics/gpu-usage). Chcete-li použít nástroj, zvolte možnost **použití GPU** v profileru výkonu a pak zvolte možnost **Spustit**. Ve své aplikaci Projděte scénář, který vás zajímá, a pak zvolte **Zastavit shromažďování** pro vygenerování sestavy.
 
 Když vyberete časové období v grafech a zvolíte **Zobrazit podrobnosti**, zobrazí se v dolním podokně podrobné zobrazení. V podrobném zobrazení můžete zjistit, kolik aktivit se děje na jednotlivých PROCESORech a GPU. Výběrem události v dolním podokně získáte místní nabídky na časové ose. Vyberte například **tuto událost k** zobrazení **současných** překryvných oken volání. (Světlé šedé svislé vsync čáry lze použít jako referenci pro pochopení, zda některá **přítomná** volání vynechala vsync. Aby aplikace neustále dosáhla 60 FPS, musí **existovat jedno volání** mezi dvěma Vsyncs.)
 
@@ -162,7 +162,7 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 |----------------------|---------------------|-------------|-------------|
 |[Využití procesoru](../profiling/cpu-usage.md)|Ano|Ano|Ano|
 |[Využití paměti](../profiling/memory-usage.md)|Ano|Ano|Ano|
-|[Využití GPU](../debugger/gpu-usage.md)|Ano|Ano|Ne|
+|[Využití GPU](/visualstudio/debugger/graphics/gpu-usage)|Ano|Ano|Ne|
 |[Časová osa aplikace](../profiling/application-timeline.md)|Ano|Ano|Ne|
 |[Tipy pro výkon](../profiling/perftips.md)|Ano|Ano pro XAML, ne pro HTML|Ano|
 |[Prohlížeč výkonu](../profiling/performance-explorer.md)|Ano|Ne|Ano|
@@ -174,7 +174,7 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 |----------------------|---------------------|-------------|-------------|
 |[Využití procesoru](../profiling/cpu-usage.md)|Ano|Ano|Ano|
 |[Využití paměti](../profiling/memory-usage.md)|Ano|Ano|Ano|
-|[Využití GPU](../debugger/gpu-usage.md)|Ano|Ano|Ne|
+|[Využití GPU](/visualstudio/debugger/graphics/gpu-usage)|Ano|Ano|Ne|
 |[Časová osa aplikace](../profiling/application-timeline.md)|Ano|Ano|Ne|
 |[Tipy pro výkon](../profiling/perftips.md)|Ano|Ano pro XAML, ne pro HTML|Ano|
 |[Prohlížeč výkonu](../profiling/performance-explorer.md)|Ano|Ne|Ano|
@@ -186,4 +186,4 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 
 
 ## <a name="see-also"></a>Viz také:
-- [Ladění v sadě Visual Studio](/visualstudio/debugger/debugger-feature-tour)
+- [Ladění v sadě Visual Studio](../debugger/debugger-feature-tour.md)

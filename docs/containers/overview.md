@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: overview
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: badb06b8c3eea5158054ba4c32f72e51dae0d60d
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 19a6149e60e61cad347dda9bf8b2a75be7b1885d
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816358"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188734"
 ---
 # <a name="container-tools-in-visual-studio"></a>Nástroje kontejneru v sadě Visual Studio
 
@@ -150,4 +150,4 @@ Další podrobnosti o implementaci služeb a používání nástrojů sady Visua
 
 [Ladění aplikací v místním kontejneru Docker](vs-azure-tools-docker-edit-and-refresh.md)
 
-[Nasazení kontejneru ASP.NET do registru kontejneru pomocí sady Visual Studio](vs-azure-tools-docker-hosting-web-apps-in-docker.md)
+[Nasazení kontejneru ASP.NET do registru kontejneru pomocí sady Visual Studio](hosting-web-apps-in-docker.md)

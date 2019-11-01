@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c4cc5b43880df06752cbce79d58ec71921817a4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 37f208421079f77cadaf85556e00a8f8548c6182
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649412"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188801"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Postupy: generování dat metrik kódu
 
@@ -33,7 +33,7 @@ Data metriky kódu můžete generovat třemi způsoby:
 [Balíček NuGet FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) zahrnuje několik pravidel [analyzátoru](roslyn-analyzers-overview.md) metrik kódu:
 
 - [CA1501](ca1501-avoid-excessive-inheritance.md)
-- [CA1502](ca1502-avoid-excessive-complexity.md)
+- [CA1502](ca1502.md)
 - [CA1505](ca1505-avoid-unmaintainable-code.md)
 - [CA1506](ca1506-avoid-excessive-class-coupling.md)
 
@@ -60,7 +60,7 @@ Můžete nakonfigurovat prahové hodnoty, při kterých se pravidla metrik kódu
    CA1502: 10
    ```
 
-   V tomto příkladu je [CA1502](ca1502-avoid-excessive-complexity.md) pravidla nastavená tak, aby se aktivovalo, když je cyklomatickáá složitost větší než 10.
+   V tomto příkladu je [CA1502](ca1502.md) pravidla nastavená tak, aby se aktivovalo, když je cyklomatickáá složitost větší než 10.
 
 3. V okně **vlastnosti** aplikace Visual Studio nebo v souboru projektu označte akci sestavení konfiguračního souboru jako [**AdditionalFiles**](../ide/build-actions.md#build-action-values). Příklad:
 
