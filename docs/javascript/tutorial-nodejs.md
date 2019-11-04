@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: bfb5f28763e4f95a2713e67543fca35398536fa9
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: ecc14e4dc98caa17ac3849e9231ab17491f2acc8
+ms.sourcegitcommit: 2f64b3b231900018fceafb72b5a1c65140213a18
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180304"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73428782"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>Kurz: Vytvoření aplikace v Node. js a Express v aplikaci Visual Studio
 
@@ -24,13 +24,13 @@ V tomto kurzu pro vývoj sady Visual Studio pomocí Node. js a Express vytvoří
 
 ::: moniker range="vs-2017"
 
-Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) stránku a nainstalovat zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/downloads) stránku a nainstalovat zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
@@ -42,7 +42,7 @@ V tomto kurzu se naučíte:
 > * Spuštění aplikace
 > * Volání zarážky v ladicím programu
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Tady je stručné Nejčastější dotazy, které vám povedou k předvedeným klíčovým konceptům.
 
@@ -63,15 +63,15 @@ Express je rozhraní webové aplikace, které se používá jako serverová arch
 * Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje Node. js.
 
     ::: moniker range=">=vs-2019"
-    Pokud jste ještě nenainstalovali Visual Studio 2019, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení](https://visualstudio.microsoft.com/downloads/) pro Visual Studio.
+    Pokud jste ještě nenainstalovali Visual Studio 2019, Stáhněte si ho do sady [Visual Studio downloads](https://visualstudio.microsoft.com/downloads/)  page, abyste ho mohli zdarma nainstalovat.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Pokud jste ještě nenainstalovali Visual Studio 2017, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení](https://visualstudio.microsoft.com/downloads/) pro Visual Studio.
+    Pokud jste ještě nenainstalovali Visual Studio 2017, Stáhněte si ho do sady [Visual Studio downloads](https://visualstudio.microsoft.com/downloads/)  page, abyste ho mohli zdarma nainstalovat.
     ::: moniker-end
 
-    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít do části **nástroje** > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
+    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít na **nástroje**  > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
 
-    ![Úloha Node.js v instalačním programu VS](../ide/media/quickstart-nodejs-workload.png)
+    ![Úlohy Node. js v instalačním programu VS](../ide/media/quickstart-nodejs-workload.png)
 
 * Je nutné mít nainstalovaný modul runtime Node.js.
 
@@ -85,7 +85,7 @@ Visual Studio spravuje soubory pro jednu aplikaci v *projektu*. Projekt obsahuje
 
 V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro Node. js a aplikaci Express.
 
-1. Otevřít Visual Studio.
+1. Otevřete Visual Studio.
 
 1. Vytvořte nový projekt.
 
@@ -113,7 +113,7 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro Node. js 
 
 1. Otevřete uzel **npm** a ujistěte se, že jsou k dispozici všechny požadované balíčky npm.
 
-    Pokud všechny balíčky, které chybí (ikona vykřičník), kliknete pravým tlačítkem **npm** uzlu a zvolte **instalovat chybějící balíčky npm**.
+    Pokud chybí některé balíčky (ikona s vykřičníkem), můžete kliknout pravým tlačítkem na uzel **npm** a zvolit **Instalovat chybějící balíčky npm**.
 
 ## <a name="add-some-code"></a>Přidat kód
 
@@ -147,7 +147,7 @@ Aplikace používá Pug pro front-end JavaScript Framework. Pug používá jedno
 
 1. Ve složce Routes otevřete *index. js*.
 
-1. Před voláním metody `router.get`přidejte následující kód:
+1. Před voláním `router.get`přidejte následující kód:
 
     ```js
     var getData = function () {
@@ -172,17 +172,19 @@ Aplikace používá Pug pro front-end JavaScript Framework. Pug používá jedno
 
     Předchozí kód nastaví aktuální stránku pomocí objektu Express router a vykreslí stránku, předáním názvu a datového objektu na stránku. Soubor *index. pug* je zde určen jako stránka, která se má načíst při spuštění souboru *index. js* . *index. js* je nakonfigurovaný jako výchozí trasa v kódu *App. js* (není zobrazený).
 
-    Chcete-li předvést několik funkcí sady Visual Studio, existuje záměrné chyba v řádku kódu obsahujícího `res.render`. Před spuštěním aplikace je potřeba chybu opravit, a to v další části.
+    Chcete-li předvést několik funkcí sady Visual Studio, existuje záměrné chyba v řádku kódu, který obsahuje `res.render`. Před spuštěním aplikace je potřeba chybu opravit, a to v další části.
 
 ## <a name="use-intellisense"></a>Používání technologie IntelliSense
 
 IntelliSense je nástroj sady Visual Studio, který vám pomáhá při psaní kódu.
 
-1. V *indexu. js*, přejít na řádek kódu, který obsahuje `res.render`.
+1. V *indexu. js*přejít na řádek kódu, který obsahuje `res.render`.
 
-1. Umístěte kurzor za `data` řetězec, typ `: get` a `getData` IntelliSense zobrazí funkci definovanou dříve v kódu. Vyberte `getData`.
+1. Umístěte kurzor za `data` řetězec, zadejte `: get` a IntelliSense zobrazí `getData` funkci definovanou dříve v kódu. Vyberte `getData`.
 
     ![Používání technologie IntelliSense](../javascript/media/tutorial-nodejs-intellisense.png)
+
+1. Přidejte závorky pro volání funkce, `getData()`.
 
 1. Odeberte čárku (`,`) před `"data"` a uvidíte zeleně zvýrazněnou syntaxi výrazu. Najeďte myší na zvýrazňování syntaxe.
 
@@ -196,9 +198,9 @@ IntelliSense je nástroj sady Visual Studio, který vám pomáhá při psaní k�
 
     ![Zobrazit seznam chyb](../javascript/media/tutorial-nodejs-error-list.png)
 
-1. Opravte kód přidáním čárky (`,`) před. `"data"`
+1. Opravte kód přidáním čárky (`,`) před `"data"`.
 
-    Po opravě by měl řádek kódu vypadat takto:`res.render('index', { title: 'Express', "data": getData() });`
+    Po opravě by měl řádek kódu vypadat takto: `res.render('index', { title: 'Express', "data": getData() });`
 
 ## <a name="set-a-breakpoint"></a>Nastavení zarážky
 
@@ -225,15 +227,15 @@ Dál budete pokračovat ve spuštění aplikace s připojeným ladicím programe
 
     Pokud je v počítači k dispozici Chrome, ale nezobrazuje se jako možnost, zvolte **Procházet pomocí** v rozevíracím seznamu cíl ladění a jako výchozí cíl prohlížeče vyberte Chrome (zvolte **nastavit jako výchozí**).
 
-1. Stisknutím klávesy **F5** (**ladění** > **Spusťte ladění**) spusťte aplikaci.
+1. Stisknutím klávesy **F5** (**ladění** > **Spustit ladění**) spusťte aplikaci.
 
     Ladicí program se zastaví na zarážce, kterou jste nastavili. Nyní můžete zkontrolovat stav aplikace.
 
-1. Najeďte `getData` myší na zobrazení vlastností DataTip
+1. Najeďte myší na `getData`, abyste viděli jeho vlastnosti v DataTip
 
     ![Kontrola proměnných](../javascript/media/tutorial-nodejs-inspect-variables.png)
 
-1. Pokračujte stisknutím klávesy **F5** (**ladění** > **pokračuje**).
+1. Pokračujte stisknutím klávesy **F5** (**ladění** > **pokračovat**).
 
     Aplikace se otevře v prohlížeči.
 
@@ -265,7 +267,7 @@ Dál budete pokračovat ve spuštění aplikace s připojeným ladicím programe
 
 Blahopřejeme k dokončení tohoto kurzu!
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
-> [Nasazení aplikace do služby App Service pro Linux](../javascript/publish-nodejs-app-azure.md)
+> [Nasazení aplikace na Linux App Service](../javascript/publish-nodejs-app-azure.md)

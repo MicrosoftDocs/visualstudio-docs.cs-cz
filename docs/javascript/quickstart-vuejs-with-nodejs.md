@@ -1,11 +1,10 @@
 ---
 title: 'Rychlý Start: Vytvoření první aplikace v Vue. js'
 description: V tomto rychlém startu vytvoříte aplikaci Vue. js v aplikaci Visual Studio pomocí Node.js Tools for Visual Studio
-ms.custom: seodec18
-ms.date: 09/24/2018
+ms.custom: ''
+ms.date: 10/31/2019
 ms.topic: quickstart
 ms.devlang: javascript
-ms.assetid: b0e4ebed-1a01-41ef-aad1-4d8465ce5322
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
@@ -13,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: ba1f403cd722b4d3dd1860c4a8b135c87b80bb4d
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 5f7b877d825a573b935a9bf0f2c907ec2ce6f808
+ms.sourcegitcommit: 2f64b3b231900018fceafb72b5a1c65140213a18
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189479"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73428763"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-vuejs-app"></a>Rychlý Start: použití sady Visual Studio k vytvoření první aplikace Vue. js
 
@@ -104,9 +103,13 @@ Nejprve vytvoříte projekt webové aplikace Vue. js.
 
 1. (Jenom projekt TypeScript) V aplikaci Visual Studio vyberte možnost **sestavit** > **Vyčistit řešení**.
 
+    ::: moniker range=">=vs-2019"
+    V šabloně TypeScript, která je součástí sady Visual Studio 2019, tento krok přeskočte.
+    ::: moniker-end
+
 1. V dalším kroku vyberte **sestavit** > **řešení sestavení** a sestavte projekt. V okně **výstup** Zkontrolujte výsledky sestavení a v seznamu **Zobrazit výstup ze** vyberte **sestavení** .
 
-    Šablona projektu Vue. js používá skript `build` npm konfigurací události po sestavení. Chcete-li toto nastavení změnit, otevřete soubor projektu ( *\<projectname\>. njsproj*) z Průzkumníka Windows a vyhledejte tento řádek kódu:
+    Šablona projektu Vue. js JavaScriptu (a starší verze šablony TypeScript) používá skript `build` npm konfigurací události po sestavení. Chcete-li toto nastavení změnit, otevřete soubor projektu ( *\<projectname\>. njsproj*) z Průzkumníka Windows a vyhledejte tento řádek kódu:
 
     ```xml
     <PostBuildEvent>npm run build</PostBuildEvent>
@@ -119,6 +122,8 @@ Nejprve vytvoříte projekt webové aplikace Vue. js.
    V konzole se zobrazí zpráva s *počátkem vývojového serveru*.
 
    Pak se aplikace otevře v prohlížeči.
+   
+   Pokud nevidíte spuštěnou aplikaci, aktualizujte stránku.
 
    ![Aplikace Vue. js spuštěná v prohlížeči](../javascript/media/vuejs-running-app.png)
 
