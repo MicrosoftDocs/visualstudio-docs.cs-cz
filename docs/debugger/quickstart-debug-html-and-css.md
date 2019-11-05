@@ -17,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 12f66658cd8069f58355a96b2c3b3031a4cb6808
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 75bdfe55d516deb34872007a9461a286b4d742e0
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73187566"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568920"
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Ladění HTML a CSS v aplikacích pro UWP v aplikaci Visual Studio
 
@@ -49,7 +49,7 @@ Průzkumník modelu DOM můžete použít k těmto akcím:
   Při ladění aplikací je často nutné vybrat prvky v Průzkumníku modelu DOM. Když vyberete prvek, hodnoty, které se zobrazí na kartách na pravé straně Průzkumníka modelu DOM, se automaticky aktualizují tak, aby odrážely vybraný prvek v Průzkumníku modelu DOM. Toto jsou karty: **Styles**, **vypočítaná**, **layout**. Aplikace pro UWP také podporují karty **události** a **změny** . Další informace o výběru prvků naleznete v tématu [Select Elements](#SelectingElements).
 
 > [!TIP]
-> Pokud je okno Průzkumníka modelu DOM zavřeno, vyberte možnost **ladění** >**Windows**  > **modelu DOM Explorer** a znovu jej otevřete. Okno se zobrazí pouze během relace ladění skriptu.
+> Pokud je okno Průzkumníka modelu DOM zavřeno, vyberte možnost **ladění**>**Windows** > **modelu DOM Explorer** a znovu jej otevřete. Okno se zobrazí pouze během relace ladění skriptu.
 
 V následujícím postupu projdeme proces interaktivního ladění aplikace pomocí Průzkumníka modelu DOM. Vytvoříme aplikaci, která používá ovládací prvek `FlipView` a pak ho provedeme ladit. Aplikace obsahuje několik chyb.
 
@@ -58,9 +58,9 @@ V následujícím postupu projdeme proces interaktivního ladění aplikace pomo
 
 #### <a name="to-debug-by-inspecting-the-live-dom"></a>Ladění pomocí živého modelu DOM
 
-1. Vytvořte nové řešení v aplikaci Visual Studio tak, že kliknete na **soubor**  > **Nový projekt**.
+1. Vytvořte nové řešení v aplikaci Visual Studio tak, že kliknete na **soubor** > **Nový projekt**.
 
-2. Zvolte **JavaScript**  > **univerzální pro Windows**a pak zvolte **aplikace WinJS**.
+2. Zvolte **JavaScript** > **univerzální pro Windows**a pak zvolte **aplikace WinJS**.
 
 3. Zadejte název projektu, například `FlipViewApp`, a kliknutím na **tlačítko OK** vytvořte aplikaci.
 
@@ -149,7 +149,7 @@ V následujícím postupu projdeme proces interaktivního ladění aplikace pomo
 
     ![Vybrat cílový seznam pro ladění](../debugger/media/js_select_target.png "JS_Select_Target")
 
-8. Zvolte **ladění**  > **Spustit ladění**nebo stiskněte klávesu F5 pro spuštění aplikace v režimu ladění.
+8. Zvolte **ladění** > **Spustit ladění**nebo stiskněte klávesu F5 pro spuštění aplikace v režimu ladění.
 
     Tím se aplikace spustí, ale zobrazí se většinou prázdná obrazovka, protože tento styl obsahuje několik chyb. První `FlipView` obrázek se zobrazí v malém čtverečku uprostřed obrazovky.
 
@@ -182,7 +182,7 @@ V následujícím postupu projdeme proces interaktivního ladění aplikace pomo
 14. V hlavním okně klikněte dvakrát na `width: 100px;height: 100px;`, stiskněte klávesu **Delete** a potom stiskněte klávesu **ENTER**. Po stisknutí klávesy ENTER se nové hodnoty v aplikaci okamžitě projeví, i když jste nezastavili relaci ladění.
 
     > [!IMPORTANT]
-    > Jak můžete aktualizovat atributy v okně Průzkumníka modelu DOM, můžete také aktualizovat hodnoty, které se zobrazí na kartách **styly**, **vypočítané**a **rozložení** . Další informace naleznete v tématu [Ladění stylů CSS pomocí Průzkumníka modelu DOM](../debugger/debug-css-styles-using-dom-explorer.md) a [rozložení ladění pomocí Průzkumníka modelu DOM](quickstart-debug-html-and-css.md).
+    > Jak můžete aktualizovat atributy v okně Průzkumníka modelu DOM, můžete také aktualizovat hodnoty, které se zobrazí na kartách **styly**, **vypočítané**a **rozložení** .
 
 15. Přepněte na aplikaci tak, že ji vyberete nebo použijete ALT + TAB.
 
@@ -255,6 +255,7 @@ Při ladění aplikace můžete vybrat prvky DOM třemi způsoby:
 > Zvýraznění prvků přesunutím myší na ně je pouze částečně podporováno v emulátoru Windows Phone.
 
 ## <a name="see-also"></a>Viz také:
+
 - [Ladění aplikací v sadě Visual Studio](debugging-windows-store-and-windows-universal-apps.md)
 - [Aktualizace aplikace (JavaScript)](../debugger/refresh-an-app-javascript.md)
 - [Ladění ovládacího prvku WebView](../debugger/debug-a-webview-control.md)

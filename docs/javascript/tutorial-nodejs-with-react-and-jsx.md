@@ -2,7 +2,7 @@
 title: Vytvoření aplikace Node.js a React
 description: V tomto kurzu vytvoříte aplikaci pomocí nástrojů Node.js Tools for Visual Studio.
 ms.custom: mvc
-ms.date: 11/01/2018
+ms.date: 11/01/2019
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 6c7bec91f6a938a131f99abfd5ab9cbef6479a85
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: dd34d0afa9f1b83a3795a9bccd0578d88c585ffa
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888677"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73569032"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>Kurz: Vytvoření aplikace Node.js a React v sadě Visual Studio
 
@@ -60,13 +60,13 @@ sada Webpack rozbalí soubory JavaScriptu tak, aby mohly běžet v prohlížeči
 * Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje Node. js.
 
     ::: moniker range=">=vs-2019"
-    Pokud jste ještě nenainstalovali Visual Studio 2019, Stáhněte si ho do sady [Visual Studio downloads](https://visualstudio.microsoft.com/downloads/)  page, abyste ho mohli zdarma nainstalovat.
+    Pokud jste ještě nenainstalovali aplikaci Visual Studio 2019, můžete ji nainstalovat zdarma na stránce  [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) .
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Pokud jste ještě nenainstalovali Visual Studio 2017, Stáhněte si ho do sady [Visual Studio downloads](https://visualstudio.microsoft.com/downloads/)  page, abyste ho mohli zdarma nainstalovat.
+    Pokud jste ještě nenainstalovali aplikaci Visual Studio 2017, můžete ji nainstalovat zdarma na stránce  [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) .
     ::: moniker-end
 
-    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít na **nástroje**  > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
+    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít na **nástroje** > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
 
     ![Úlohy Node. js v instalačním programu VS](../ide/media/quickstart-nodejs-workload.png)
 
@@ -146,7 +146,9 @@ Tato aplikace vyžaduje ke správnému fungování řadu modulů npm.
     }
     ```
 
-    Pokud je ve vaší verzi prázdné šablony již `dependencies` oddíl, stačí ho nahradit předchozím kódem JSON. Další informace o používání tohoto souboru najdete v tématu [Konfigurace Package. JSON.](../javascript/configure-packages-with-package-json.md)
+    Pokud je ve vaší verzi prázdné šablony již `dependencies` oddíl, stačí ho nahradit předchozím kódem JSON. Další informace o používání tohoto souboru najdete v tématu [Konfigurace Package. JSON](../javascript/configure-packages-with-package-json.md).
+
+1. Uložte změny.
 
 1. V projektu klikněte pravým tlačítkem na uzel **npm** a vyberte **Aktualizovat balíčky npm**.
 
@@ -172,7 +174,7 @@ Nové soubory projektu pro tuto jednoduchou aplikaci přidáte do kořenu projek
 
 1. V Průzkumníku řešení klikněte pravým tlačítkem na projekt **NodejsWebAppBlank** a zvolte **Přidat** > **Nová položka**.
 
-1. V dialogovém okně **Přidat novou položku** zvolte **soubor TypeScript JSX**, zadejte název *App. TSX*a vyberte **OK**.
+1. V dialogovém okně **Přidat novou položku** zvolte **soubor TypeScript JSX**, zadejte název *App. TSX*a vyberte **Přidat** nebo **OK**.
 
 1. Opakováním tohoto postupu přidejte *webpack config.js*. Místo souboru TypeScript JSX vyberte **soubor JavaScriptu**.
 
@@ -308,7 +310,7 @@ V předchozím postupu jste do projektu přidali *webpack-config.js*. Dále při
 
     Pokud se místo uvedeného výstupu zobrazují nějaké chyby, je potřeba je před použitím aplikace odstranit. Příčinou těchto chyb může být skutečnost, že se vaše verze balíčků npm liší od verzí používaných v tomto kurzu. Jednou možností, jak chyby odstranit, je použití přesně těch verzí, které jsou uvedené v dřívějším postupu. Pokud jsou některé z těchto verzí balíčků zastaralé a způsobují chyby, může být k odstranění chyb potřeba nainstalovat novější verze. Informace o použití *balíčku Package. JSON* k řízení verzí balíčku npm najdete v tématu [Konfigurace Package. JSON](../javascript/configure-packages-with-package-json.md).
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu a vyberte **přidat**  > **existující složku**, zvolte složku *DIST* a zvolte **možnost vybrat složku**.
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu a vyberte **přidat** > **existující složku**, zvolte složku *DIST* a zvolte **možnost vybrat složku**.
 
     Visual Studio přidá do projektu složku *dist*, která obsahuje *app-bundle.js* a *app-bundle.js.map*.
 
@@ -334,7 +336,7 @@ Počínaje verzí Visual Studio 2019 je vyžadován skript sestavení. Namísto 
 
 ## <a name="run-the-app"></a>Spuštění aplikace
 
-1. Jako aktuální cíl ladění vyberte Chrome.
+1. Jako aktuální cíl ladění vyberte buď Microsoft Edge, nebo Chrome.
 
     ::: moniker range=">=vs-2019"
     ![Výběr Chromu jako cíle ladění](../javascript/media/vs-2019/tutorial-nodejs-react-debug-target.png)
@@ -343,7 +345,12 @@ Počínaje verzí Visual Studio 2019 je vyžadován skript sestavení. Namísto 
     ![Výběr Chromu jako cíle ladění](../javascript/media/tutorial-nodejs-react-debug-target.png)
     ::: moniker-end
 
-    Pokud je v počítači k dispozici Chrome, ale nezobrazuje se jako možnost, zvolte **webový prohlížeč (browser)**  > **Google Chrome** z rozevíracího seznamu cíl ladění a jako výchozí cíl prohlížeče vyberte Chrome.
+    ::: moniker range=">=vs-2019"
+    Pokud je v počítači k dispozici Chrome, ale nezobrazuje se jako možnost, zvolte **webový prohlížeč (browser)** > v rozevíracím seznamu cíl ladění vyberte **webový prohlížeč** a jako výchozí cíl prohlížeče vyberte **Chrome** .
+    ::: moniker-end
+    ::: moniker range="vs-2017"
+    Pokud je v počítači k dispozici Chrome, ale nezobrazuje se jako možnost, zvolte **webový prohlížeč (browser)** > **Google Chrome** z rozevíracího seznamu cíl ladění a jako výchozí cíl prohlížeče vyberte **Chrome** .
+    ::: moniker-end
 
 1. Ke spuštění aplikace stiskněte **F5** (**Ladit** > **Spustit ladění**) nebo tlačítko se zelenou šipkou.
 
@@ -371,7 +378,7 @@ Počínaje verzí Visual Studio 2019 je vyžadován skript sestavení. Namísto 
 
 1. Pokud chcete pokračovat v aplikaci, stiskněte **F5**.
 
-1. Pokud chcete použít nástroje Chrome Developer Tools, stiskněte **F12**. Pomocí těchto nástrojů můžete prozkoumat model DOM a provádět interakce s aplikací pomocí konzoly jazyka JavaScript.
+1. Pokud chcete použít Vývojářské nástroje nebo nástroje pro Chrome pro Microsoft Edge, stiskněte klávesu **F12**. Pomocí těchto nástrojů můžete prozkoumat model DOM a provádět interakce s aplikací pomocí konzoly jazyka JavaScript.
 
 1. Zavřete webový prohlížeč a konzolu.
 
@@ -379,45 +386,75 @@ Počínaje verzí Visual Studio 2019 je vyžadován skript sestavení. Namísto 
 
 V předchozí části jste připojili ladicí program ke kódu Node.js na straně serveru. K připojení ladicího programu ze sady Visual Studio a používání zarážek v kódu React na straně klienta se v ladicím programu vyžaduje pomoc s identifikací správného procesu. Tady je jedna možnost, jak to udělat.
 
-1. Zavřete všechna okna Chromu.
+::: moniker range=">=vs-2019"
+V tomto scénáři použijte Microsoft Edge (chrom), aktuálně pojmenovaný **Microsoft Edge beta** , v integrovaném vývojovém prostředí (IDE) nebo Chrome.
+::: moniker-end
+::: moniker range="vs-2017"
+V tomto scénáři použijte Chrome.
+::: moniker-end
+
+1. Zavřete všechna okna pro cílový prohlížeč.
+
+   Jiné instance prohlížeče můžou zabránit tomu, aby se ladicí program připojil.
 
 2. Otevřete příkaz **Spustit** z tlačítka Windows **Start** (klikněte na něj pravým tlačítkem a zvolte **Spustit**) a zadejte následující příkaz:
 
     `chrome.exe --remote-debugging-port=9222`
+    ::: moniker range=">=vs-2019"
+    nebo `msedge --remote-debugging-port=9222`
+    ::: moniker-end
 
-    Spustí se Chrome s povoleným laděním.
+    Spustí se prohlížeč s povoleným laděním.
 
     ::: moniker range=">=vs-2019"
 
-    > [!NOTE]
-    > Příznak `--remote-debugging-port` můžete nastavit také při spuštění prohlížeče, a to tak, že na panelu nástrojů **ladění** vyberete **Procházet pomocí...** > a pak zvolíte **Přidat**a pak nastavíte příznak v poli **argumenty** . Použijte jiný popisný název prohlížeče, jako je například **Chrome s laděním**. Podrobnosti najdete v [poznámkách k verzi](/visualstudio/releases/2019/release-notes-preview).
+    > [!TIP]
+    > Od sady Visual Studio 2019 můžete nastavit příznak `--remote-debugging-port` při spuštění prohlížeče tak, že vyberete **Procházet s...** > z panelu nástrojů **ladění** a pak vyberete **Přidat**a pak nastavíte příznak v poli **argumenty** . Použijte jiný popisný název prohlížeče, jako je například **Edge s laděním** nebo **Chrome s laděním**. Podrobnosti najdete v [poznámkách k verzi](/visualstudio/releases/2019/release-notes-v16.2).
+
+    ![Nastavte prohlížeč tak, aby se otevřel s povoleným laděním.](../javascript/media/tutorial-nodejs-react-edge-with-debugging.png)
 
     ::: moniker-end
 
-3. Přepněte do sady Visual Studio a nastavte zarážku v kódu *app-bundle.js* na funkci `render()`, jak je znázorněno na následujícím obrázku:
+    Aplikace ještě není spuštěná, takže získáte prázdnou stránku prohlížeče.
+
+3. Přepněte do sady Visual Studio a potom v kódu *App-Bundle. js* ve funkci `render()` nastavte zarážku, jak je znázorněno na následujícím obrázku:
 
     ![Nastavení zarážky](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
-    Chcete-li najít funkci `render()` *v App-Bundle. js*, použijte **kombinaci kláves CTRL** +**F** (**Upravit**  > **Najít a nahradit**  > **Rychlé hledání**).
+    Chcete-li najít funkci `render()` *v App-Bundle. js*, použijte **kombinaci kláves CTRL**+**F** (**Upravit** > **Najít a nahradit** > **Rychlé hledání**).
 
-4. Jako cíl ladění je v sadě Visual Studio vybraný Chrome. Stisknutím **Ctrl**+**F5** (**Ladit** > **Spustit bez ladění**) spusťte aplikaci v prohlížeči.
+4. Vyberte cílový prohlížeč jako cíl ladění v aplikaci Visual Studio a potom stiskněte **klávesu Ctrl**+**F5** (**ladění** > **Spustit bez ladění**) pro spuštění aplikace v prohlížeči.
 
     Aplikace se otevře na nové kartě prohlížeče.
 
 5. Zvolte **Ladit** > **Připojit k procesu**.
 
-6. V dialogovém okně **Připojit k procesu** v poli **Připojit k** zvolte **Webkit kód** a zadáním slova **chrome** do pole pro filtr vyfiltrujte výsledky hledání.
+6. V dialogovém okně **připojit k procesu** Získejte filtrovaný seznam instancí prohlížeče, ke kterým se můžete připojit.
 
-7. V tomto příkladu vyberte proces Chrome se správným portem hostitele (1337) a vyberte **připojit**.
+    ::: moniker range=">=vs-2019"
+    V aplikaci Visual Studio 2019 vyberte v poli **připojit ke** správnému cílovému prohlížeči, **JavaScriptu (Chrome)** nebo **JavaScript (Microsoft Edge-chrom)** , aby se výsledky hledání vyfiltroval **v poli** filtru. Pokud jste vytvořili konfiguraci prohlížeče s popisným názvem, vyberte ho místo toho.
+    ::: moniker-end
+    ::: moniker range="vs-2017"
+    V aplikaci Visual Studio 2017 v poli **připojit k** vyberte **WebKit kód** , do pole Filtr zadejte **Chrome** a vyfiltrujte výsledky hledání.
+    ::: moniker-end
 
+7. V tomto příkladu vyberte proces prohlížeče se správným hostitelským portem (localhost) a vyberte **připojit**.
+
+    Port (1337) se může také zobrazit v poli **název** , abyste si mohli vybrat správnou instanci prohlížeče.
+
+    ::: moniker range=">=vs-2019"
+    Následující příklad ukazuje, jak to vypadá v prohlížeči Microsoft Edge (chrom).
+
+    ![Připojení k procesu](../javascript/media/tutorial-nodejs-react-attach-to-process-edge.png)
+    ::: moniker-end
+    ::: moniker range="vs-2017"
     ![Připojení k procesu](../javascript/media/tutorial-nodejs-react-attach-to-process.png)
 
-    ::: moniker range="vs-2017"
     Pokud se v sadě Visual Studio otevřely Průzkumník modelu DOM a konzola jazyka JavaScript, je ladicí program správně připojený. Tyto ladicí nástroje jsou podobné nástrojům Chrome Vývojářské nástroje a F12 pro Microsoft Edge.
     ::: moniker-end
 
-    > [!NOTE]
-    > Pokud se ladicí program nepřipojí a zobrazí se zpráva „Nelze připojit k procesu. Operace není v aktuálním stavu platná“, zavřete před spuštěním Chromu v režimu ladění všechny instance Chromu pomocí Správce úloh. Můžou být spuštěná rozšíření Chromu, která brání plnému režimu ladění.
+    > [!TIP]
+    > Pokud se ladicí program nepřipojí a zobrazí se zpráva „Nelze připojit k procesu. Operace není v aktuálním stavu platná. pomocí Správce úloh zavřete všechny instance cílového prohlížeče před spuštěním prohlížeče v režimu ladění. Rozšíření prohlížeče můžou být spuštěná a zabraňují úplnému režimu ladění.
 
 8. Kód se zarážkou se už spustil, a proto aktualizujte stránku prohlížeče, aby narazil na zarážku.
 
@@ -425,9 +462,9 @@ V předchozí části jste připojili ladicí program ke kódu Node.js na stran�
 
     V závislosti na vašem prostředí a stavu prohlížeče můžete narazit na zarážku v souboru *app-bundle.js* nebo v jeho namapovaném umístění v souboru *app.tsx*. V obou případech můžete procházet kód pomocí krokování a zkoumat proměnné.
 
-   * Pokud potřebujete proniknout do kódu v *app.tsx* a nedaří se vám to, připojte ladicí program pomocí dialogového okna **Připojit k procesu**, jak bylo popsáno v předchozím postupu. Pak otevřete dynamicky vygenerovaný Průzkumník řešení soubor *App. TSX* , a to tak, že otevřete **dokumenty skriptů**  > **App. TSX**, nastavíte zarážku a aktualizujete stránku v prohlížeči (nastaví zarážku na řádku kódu, který umožňuje zarážky. , jako je například příkaz `return` nebo deklarace `var`).
+   * Pokud potřebujete proniknout do kódu v *app.tsx* a nedaří se vám to, připojte ladicí program pomocí dialogového okna **Připojit k procesu**, jak bylo popsáno v předchozím postupu. Pak otevřete dynamicky vygenerovaný Průzkumník řešení soubor *App. TSX* , a to tak, že otevřete **dokumenty skriptů** > **App. TSX**, nastavíte zarážku a aktualizujete stránku v prohlížeči (nastaví zarážku na řádek kódu, který umožňuje zarážky, jako je například příkaz `return` nebo deklarace `var`).
 
-       Když potřebujete proniknout do kódu v *app.tsx* a nedaří se vám to, můžete také zkusit použít příkaz `debugger;` v *app.tsx* nebo nastavit zarážky v nástrojích Chrome Developer Tools.
+       Případně, pokud potřebujete přerušit kód v souboru *App. TSX* a nemůžete to provést, zkuste použít příkaz `debugger;` v *App. TSX*nebo nastavit zarážky v sadě Chrome vývojářské nástroje (nebo v nástrojích F12 pro Microsoft Edge) místo toho. Pro soubory sourcemap generované nástrojem Webpack obvykle fungují nástroje prohlížeče (**F12**) nejlépe pro ladění.
 
    * Pokud potřebujete proniknout do kódu v *app-bundle.js* a nedaří se vám to, odeberte soubor zdrojového mapování *app-bundle.js.map*.
 

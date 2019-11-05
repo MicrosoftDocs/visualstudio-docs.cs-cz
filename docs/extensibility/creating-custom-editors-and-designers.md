@@ -11,12 +11,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 08d9ee33d49985fed8e8c0180fa652aed39b25d9
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 7a6cb0d70566eaabb2ba37cb209041e03684c958
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73186816"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568894"
 ---
 # <a name="create-custom-editors-and-designers"></a>Vytváření vlastních editorů a návrhářů
 
@@ -59,7 +59,7 @@ Informace o základním editoru sady Visual Studio najdete v tématu věnovaném
 
 - Potřebuje váš Editor hostovat ovládací prvky ActiveX?
 
-   Pokud editor hostuje ovládací prvky ActiveX, proveďte implementaci místního editoru aktivace, jak je uvedeno v [místní aktivaci](../extensibility/in-place-activation.md). Pokud nehostuje ovládací prvky ActiveX, použijte zjednodušený Editor vkládání nebo Přizpůsobte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] výchozí editor.
+   Pokud editor hostuje ovládací prvky ActiveX, proveďte implementaci místního editoru aktivace, jak je uvedeno v [místní aktivaci](/visualstudio/misc/in-place-activation?view=vs-2015). Pokud nehostuje ovládací prvky ActiveX, použijte zjednodušený Editor vkládání nebo Přizpůsobte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] výchozí editor.
 
 - Bude váš Editor podporovat více zobrazení? Chcete-li zobrazit zobrazení editoru ve stejnou dobu jako výchozí editor, je nutné podporovat více zobrazení.
 

@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: overview
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: 19a6149e60e61cad347dda9bf8b2a75be7b1885d
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: b60e5df4d94c290ca8aa7bf56471b5fed6c1879a
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188734"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568898"
 ---
 # <a name="container-tools-in-visual-studio"></a>Nástroje kontejneru v sadě Visual Studio
 
@@ -148,6 +148,6 @@ Kubernetes najdete v tématu [nasazení aplikace kontejneru Docker do služby Az
 
 Další podrobnosti o implementaci služeb a používání nástrojů sady Visual Studio pro práci s kontejnery najdete v následujících článcích:
 
-[Ladění aplikací v místním kontejneru Docker](vs-azure-tools-docker-edit-and-refresh.md)
+[Ladění aplikací v místním kontejneru Docker](edit-and-refresh.md)
 
 [Nasazení kontejneru ASP.NET do registru kontejneru pomocí sady Visual Studio](hosting-web-apps-in-docker.md)

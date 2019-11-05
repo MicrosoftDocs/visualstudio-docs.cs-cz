@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37f208421079f77cadaf85556e00a8f8548c6182
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 55f9904c95be45c7f293355340c814faafb5de2b
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188801"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568845"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Postupy: generování dat metrik kódu
 
@@ -24,7 +24,7 @@ Data metriky kódu můžete generovat třemi způsoby:
 
 - Instalací [analyzátorů FxCop](#fxcop-analyzers-code-metrics-rules) a povolením čtyř pravidel metriky kódu (udržovatelnosti), která obsahuje.
 
-- Kliknutím na příkaz v nabídce [ **analyzovat**  > **Vypočítat metriky kódu** ](#calculate-code-metrics-menu-command) v sadě Visual Studio.
+- Kliknutím na příkaz v nabídce [ **analyzovat** > **Vypočítat metriky kódu** ](#calculate-code-metrics-menu-command) v sadě Visual Studio.
 
 - Z [příkazového řádku](#command-line-code-metrics) pro C# a Visual Basic projekty.
 
@@ -35,7 +35,7 @@ Data metriky kódu můžete generovat třemi způsoby:
 - [CA1501](ca1501-avoid-excessive-inheritance.md)
 - [CA1502](ca1502.md)
 - [CA1505](ca1505-avoid-unmaintainable-code.md)
-- [CA1506](ca1506-avoid-excessive-class-coupling.md)
+- [CA1506](ca1506.md)
 
 Tato pravidla jsou ve výchozím nastavení zakázaná, ale můžete je povolit z [**Průzkumník řešení**](use-roslyn-analyzers.md#set-rule-severity-from-solution-explorer) nebo v souboru [sady pravidel](using-rule-sets-to-group-code-analysis-rules.md) . Například pokud chcete, aby se pravidlo CA1502 jako upozornění, váš soubor. ruleset by obsahoval následující položku:
 
@@ -72,13 +72,13 @@ Můžete nakonfigurovat prahové hodnoty, při kterých se pravidla metrik kódu
 
 ## <a name="calculate-code-metrics-menu-command"></a>Příkaz nabídky pro výpočet metriky kódu
 
-Vygenerujte metriky kódu pro jeden nebo všechny otevřené projekty v integrovaném vývojovém prostředí pomocí nabídky **analyzovat**  > **Vypočítat metriky kódu** .
+Vygenerujte metriky kódu pro jeden nebo všechny otevřené projekty v integrovaném vývojovém prostředí pomocí nabídky **analyzovat** > **Vypočítat metriky kódu** .
 
 ### <a name="generate-code-metrics-results-for-an-entire-solution"></a>Generování výsledků metrik kódu pro celé řešení
 
 Můžete generovat Výsledky metrik kódu pro celé řešení některým z následujících způsobů:
 
-- Z panelu nabídek vyberte možnost **analyzovat**  > **Vypočítat metriky kódu**  > **pro řešení**.
+- Z panelu nabídek vyberte možnost **analyzovat** > **Vypočítat metriky kódu** > **pro řešení**.
 
 - V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a pak zvolte **Vypočítat metriky kódu**.
 
@@ -90,7 +90,7 @@ Výsledky jsou generovány a zobrazí se okno **Výsledky metrik kódu** . Chcet
 
 1. V **Průzkumník řešení**vyberte jeden nebo více projektů.
 
-1. Z panelu nabídek vyberte možnost **analyzovat**  > **Vypočítat metriky kódu**  > **pro vybrané projekty**.
+1. Z panelu nabídek vyberte možnost **analyzovat** > **Vypočítat metriky kódu** > **pro vybrané projekty**.
 
 Výsledky jsou generovány a zobrazí se okno **Výsledky metrik kódu** . Chcete-li zobrazit podrobnosti výsledků, rozbalte stromovou strukturu v **hierarchii**.
 

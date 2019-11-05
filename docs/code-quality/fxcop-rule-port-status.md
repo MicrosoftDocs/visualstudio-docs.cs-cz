@@ -10,12 +10,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 571ba2a0c015d6d3a3c8757c25a0058d8e3ad8e1
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: a33286ffb678bf37cf684bb603d81ec8091e7405
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188812"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568816"
 ---
 # <a name="fxcop-rule-port-status"></a>Stav portu pravidla FxCop
 
@@ -67,8 +67,8 @@ ID pravidla | Název
 [CA1063](ca1063-implement-idisposable-correctly.md) | Implementovat správně IDisposable
 [CA1064](ca1064-exceptions-should-be-public.md) | Výjimky by měly být veřejné
 [CA1065](ca1065-do-not-raise-exceptions-in-unexpected-locations.md) | Nevyvolávejte výjimky v neočekávaných umístěních
-CA1066 | Typ {0} by měl implementovat IEquatable \<T >, protože přepisuje rovnost.
-CA1067 | Při implementaci IEquatable \<T přepsat Object. Equals (Object) >
+CA1066 | Typ {0} by měl implementovat IEquatable\<T >, protože přepisuje rovnost.
+CA1067 | Při implementaci IEquatable\<T přepsat Object. Equals (Object) >
 [CA1068](ca1068.md) | Parametry CancellationToken musí být poslední.
 CA1200 | Nepoužívejte značky cref s předponou
 [CA1303](ca1303-do-not-pass-literals-as-localized-parameters.md) | Nepředávejte literály jako lokalizované parametry
@@ -286,7 +286,7 @@ Následující starší pravidla analýzy FxCop jsou zastaralá a nebudou implem
 - [CA1406](ca1406-avoid-int64-arguments-for-visual-basic-6-clients.md)
 - [CA1504](ca1504-review-misleading-field-names.md)
 - [CA1701](ca1701-resource-string-compound-words-should-be-cased-correctly.md)
-- [CA1702](ca1702-compound-words-should-be-cased-correctly.md)
+- [CA1702](ca1702.md)
 - [CA1703](ca1703.md)
 - [CA1800](ca1800.md)
 - [CA1809](ca1809.md)

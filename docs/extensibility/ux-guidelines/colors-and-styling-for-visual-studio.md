@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac04f7ef5d7ad445bec470b3d019418a3bec1f7b
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 4ceea00a3fa77a9c1106f24f28ac1d5890437b41
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188892"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568967"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Barvy a styly pro Visual Studio
 
@@ -340,7 +340,7 @@ Někdy budete chtít, aby koncový uživatel mohl přizpůsobit uživatelské ro
 
 VSPackage může řídit písma a barvy pomocí vlastních kategorií a zobrazovat položky na stránce vlastností písma a barvy. Při použití tohoto mechanismu musí sady VSPackage implementovat rozhraní [IVsFontAndColorDefaultsProvider](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider) a jeho přidružená rozhraní.
 
-V zásadě lze tento mechanismus použít pro úpravu všech existujících položek zobrazení a kategorií, které je obsahují. Neměli byste je ale používat k úpravám kategorie textový editor ani zobrazení položek. Další informace o kategorii textový editor najdete v tématu [Přehled písma a barev](../font-and-color-overview.md).
+V zásadě lze tento mechanismus použít pro úpravu všech existujících položek zobrazení a kategorií, které je obsahují. Neměli byste je ale používat k úpravám kategorie textový editor ani zobrazení položek. Další informace o kategorii textový editor najdete v tématu [Přehled písma a barev](/visualstudio/extensibility/font-and-color-overview?view=vs-2015).
 
 Chcete-li implementovat vlastní kategorie nebo zobrazit položky, VSPackage musí:
 
