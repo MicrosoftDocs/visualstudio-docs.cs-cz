@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: dd34d0afa9f1b83a3795a9bccd0578d88c585ffa
-ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
+ms.openlocfilehash: c5f3c4a0a2acdf73aae96c5cb5629252e712da64
+ms.sourcegitcommit: ee9c55616a22addc89cf1cf1942bf371d73e2e11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73569032"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73618120"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>Kurz: Vytvoření aplikace Node.js a React v sadě Visual Studio
 
@@ -60,13 +60,13 @@ sada Webpack rozbalí soubory JavaScriptu tak, aby mohly běžet v prohlížeči
 * Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje Node. js.
 
     ::: moniker range=">=vs-2019"
-    Pokud jste ještě nenainstalovali aplikaci Visual Studio 2019, můžete ji nainstalovat zdarma na stránce  [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) .
+    Pokud jste ještě nenainstalovali Visual Studio 2019, Stáhněte si ho do sady [Visual Studio downloads](https://visualstudio.microsoft.com/downloads/)  page, abyste ho mohli zdarma nainstalovat.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Pokud jste ještě nenainstalovali aplikaci Visual Studio 2017, můžete ji nainstalovat zdarma na stránce  [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) .
+    Pokud jste ještě nenainstalovali Visual Studio 2017, Stáhněte si ho do sady [Visual Studio downloads](https://visualstudio.microsoft.com/downloads/)  page, abyste ho mohli zdarma nainstalovat.
     ::: moniker-end
 
-    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít na **nástroje** > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
+    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít na **nástroje**  > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
 
     ![Úlohy Node. js v instalačním programu VS](../ide/media/quickstart-nodejs-workload.png)
 
@@ -310,7 +310,7 @@ V předchozím postupu jste do projektu přidali *webpack-config.js*. Dále při
 
     Pokud se místo uvedeného výstupu zobrazují nějaké chyby, je potřeba je před použitím aplikace odstranit. Příčinou těchto chyb může být skutečnost, že se vaše verze balíčků npm liší od verzí používaných v tomto kurzu. Jednou možností, jak chyby odstranit, je použití přesně těch verzí, které jsou uvedené v dřívějším postupu. Pokud jsou některé z těchto verzí balíčků zastaralé a způsobují chyby, může být k odstranění chyb potřeba nainstalovat novější verze. Informace o použití *balíčku Package. JSON* k řízení verzí balíčku npm najdete v tématu [Konfigurace Package. JSON](../javascript/configure-packages-with-package-json.md).
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu a vyberte **přidat** > **existující složku**, zvolte složku *DIST* a zvolte **možnost vybrat složku**.
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu a vyberte **přidat**  > **existující složku**, zvolte složku *DIST* a zvolte **možnost vybrat složku**.
 
     Visual Studio přidá do projektu složku *dist*, která obsahuje *app-bundle.js* a *app-bundle.js.map*.
 
@@ -395,7 +395,11 @@ V tomto scénáři použijte Chrome.
 
 1. Zavřete všechna okna pro cílový prohlížeč.
 
-   Jiné instance prohlížeče můžou zabránit tomu, aby se ladicí program připojil.
+   Jiné instance prohlížeče můžou zabránit otevírání prohlížeče s povoleným laděním. (Rozšíření prohlížeče můžou běžet a bránit úplnému režimu ladění, takže možná budete muset otevřít Správce úloh a najít neočekávané instance Chromu.)
+
+   ::: moniker range=">=vs-2019"
+   V případě Microsoft Edge (chrom) vypněte také všechny instance aplikace Chrome. Vzhledem k tomu, že oba prohlížeče sdílí základní kód Chromu, dává to nejlepší výsledky.
+   ::: moniker-end
 
 2. Otevřete příkaz **Spustit** z tlačítka Windows **Start** (klikněte na něj pravým tlačítkem a zvolte **Spustit**) a zadejte následující příkaz:
 
@@ -417,19 +421,44 @@ V tomto scénáři použijte Chrome.
 
     Aplikace ještě není spuštěná, takže získáte prázdnou stránku prohlížeče.
 
-3. Přepněte do sady Visual Studio a potom v kódu *App-Bundle. js* ve funkci `render()` nastavte zarážku, jak je znázorněno na následujícím obrázku:
+3. Přepněte do sady Visual Studio a pak nastavte zarážku ve zdrojovém kódu, buď *App-Bundle. js* , nebo *App. TSX*.
+
+    Pro *App-Bundle. js*nastavte zarážku ve funkci `render()`, jak je znázorněno na následujícím obrázku:
 
     ![Nastavení zarážky](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
-    Chcete-li najít funkci `render()` *v App-Bundle. js*, použijte **kombinaci kláves CTRL**+**F** (**Upravit** > **Najít a nahradit** > **Rychlé hledání**).
+    Chcete-li najít funkci `render()` v souboru *App-Bundle. js* , použijte **kombinaci kláves CTRL**+**F** (**Upravit** > **Najít a nahradit** > **Rychlé hledání**).
 
-4. Vyberte cílový prohlížeč jako cíl ladění v aplikaci Visual Studio a potom stiskněte **klávesu Ctrl**+**F5** (**ladění** > **Spustit bez ladění**) pro spuštění aplikace v prohlížeči.
+    Pro *App. TSX*nastavte zarážku uvnitř funkce `render()` v příkazu `return`.
+
+    ![Nastavení zarážky](../javascript/media/tutorial-nodejs-react-set-breakpoint-in-tsx-file.png)
+
+4. Pokud nastavujete zarážku v souboru *. TSX* (spíše než *App-Bundle. js*), musíte aktualizovat *Webpack-config. js*. Nahraďte následující kód:
+
+    ```javascript
+    output: {
+        filename: "./app-bundle.js",
+    },
+    ```
+
+    s tímto kódem:
+
+    ```javascript
+    output: {
+        filename: "./app-bundle.js",
+        devtoolModuleFilenameTemplate: '[resource-path]'  // removes the webpack:/// prefix
+    },
+    ```
+
+    Toto je nastavení jenom pro vývoj, které umožňuje ladění v aplikaci Visual Studio. Toto nastavení umožňuje přepsat vygenerované odkazy v souboru sourcemap *App-Bundle. js. map*při sestavování aplikace. Ve výchozím nastavení jsou odkazy na sadu Webpack v souboru sourcemap zahrnuty jako předpona *Webpack:///* , což zabrání sadě Visual Studio najít zdrojový soubor *App. TSX*. Konkrétně při provedení této změny se odkaz na zdrojový soubor *App. TSX*změní z *Webpack:///./app.TSX* na *./app.TSX*, který umožňuje ladění.
+
+5. Vyberte cílový prohlížeč jako cíl ladění v aplikaci Visual Studio a potom stiskněte **klávesu Ctrl**+**F5** (**ladění** > **Spustit bez ladění**) pro spuštění aplikace v prohlížeči.
 
     Aplikace se otevře na nové kartě prohlížeče.
 
-5. Zvolte **Ladit** > **Připojit k procesu**.
+6. Zvolte **Ladit** > **Připojit k procesu**.
 
-6. V dialogovém okně **připojit k procesu** Získejte filtrovaný seznam instancí prohlížeče, ke kterým se můžete připojit.
+7. V dialogovém okně **připojit k procesu** Získejte filtrovaný seznam instancí prohlížeče, ke kterým se můžete připojit.
 
     ::: moniker range=">=vs-2019"
     V aplikaci Visual Studio 2019 vyberte v poli **připojit ke** správnému cílovému prohlížeči, **JavaScriptu (Chrome)** nebo **JavaScript (Microsoft Edge-chrom)** , aby se výsledky hledání vyfiltroval **v poli** filtru. Pokud jste vytvořili konfiguraci prohlížeče s popisným názvem, vyberte ho místo toho.
@@ -438,7 +467,7 @@ V tomto scénáři použijte Chrome.
     V aplikaci Visual Studio 2017 v poli **připojit k** vyberte **WebKit kód** , do pole Filtr zadejte **Chrome** a vyfiltrujte výsledky hledání.
     ::: moniker-end
 
-7. V tomto příkladu vyberte proces prohlížeče se správným hostitelským portem (localhost) a vyberte **připojit**.
+8. V tomto příkladu vyberte proces prohlížeče se správným hostitelským portem (localhost) a vyberte **připojit**.
 
     Port (1337) se může také zobrazit v poli **název** , abyste si mohli vybrat správnou instanci prohlížeče.
 
@@ -456,15 +485,19 @@ V tomto scénáři použijte Chrome.
     > [!TIP]
     > Pokud se ladicí program nepřipojí a zobrazí se zpráva „Nelze připojit k procesu. Operace není v aktuálním stavu platná. pomocí Správce úloh zavřete všechny instance cílového prohlížeče před spuštěním prohlížeče v režimu ladění. Rozšíření prohlížeče můžou být spuštěná a zabraňují úplnému režimu ladění.
 
-8. Kód se zarážkou se už spustil, a proto aktualizujte stránku prohlížeče, aby narazil na zarážku.
+9. Kód se zarážkou se už spustil, a proto aktualizujte stránku prohlížeče, aby narazil na zarážku.
 
     Při pozastavení můžete v ladicím programu zkontrolovat stav aplikace tak, že přesunete ukazatel myši nad proměnné a použijete okna ladicího programu. Můžete v ladicím programu procházet kód pomocí krokování (**F5**, **F10** a **F11**).
 
-    V závislosti na vašem prostředí a stavu prohlížeče můžete narazit na zarážku v souboru *app-bundle.js* nebo v jeho namapovaném umístění v souboru *app.tsx*. V obou případech můžete procházet kód pomocí krokování a zkoumat proměnné.
+    Zarážku můžete narazit buď na *App-Bundle. js* , nebo na jeho mapované umístění v *App. TSX*v závislosti na tom, jaké kroky jste předtím použili, spolu s vaším prostředím a stavem prohlížeče. V obou případech můžete procházet kód pomocí krokování a zkoumat proměnné.
 
-   * Pokud potřebujete proniknout do kódu v *app.tsx* a nedaří se vám to, připojte ladicí program pomocí dialogového okna **Připojit k procesu**, jak bylo popsáno v předchozím postupu. Pak otevřete dynamicky vygenerovaný Průzkumník řešení soubor *App. TSX* , a to tak, že otevřete **dokumenty skriptů** > **App. TSX**, nastavíte zarážku a aktualizujete stránku v prohlížeči (nastaví zarážku na řádek kódu, který umožňuje zarážky, jako je například příkaz `return` nebo deklarace `var`).
+   * Pokud potřebujete proniknout do kódu v *app.tsx* a nedaří se vám to, připojte ladicí program pomocí dialogového okna **Připojit k procesu**, jak bylo popsáno v předchozím postupu. Ujistěte se, že je prostředí správně nastavené:
 
-       Případně, pokud potřebujete přerušit kód v souboru *App. TSX* a nemůžete to provést, zkuste použít příkaz `debugger;` v *App. TSX*nebo nastavit zarážky v sadě Chrome vývojářské nástroje (nebo v nástrojích F12 pro Microsoft Edge) místo toho. Pro soubory sourcemap generované nástrojem Webpack obvykle fungují nástroje prohlížeče (**F12**) nejlépe pro ladění.
+      * Zavřeli jste všechny instance prohlížeče, včetně rozšíření Chrome (pomocí Správce úloh), abyste mohli spustit prohlížeč v režimu ladění. Ujistěte se, že jste spustili prohlížeč v režimu ladění.
+
+      * Ujistěte se, že váš soubor sourcemap obsahuje odkaz na *./app.TSX* a nikoli *Webpack:///./app.TSX*, což brání ladicímu programu sady Visual Studio v umístění *App. TSX*.
+
+       Případně, pokud potřebujete přerušit kód v souboru *App. TSX* a nemůžete to provést, zkuste použít příkaz `debugger;` v *App. TSX*nebo nastavit zarážky v sadě Chrome vývojářské nástroje (nebo v nástrojích F12 pro Microsoft Edge) místo toho.
 
    * Pokud potřebujete proniknout do kódu v *app-bundle.js* a nedaří se vám to, odeberte soubor zdrojového mapování *app-bundle.js.map*.
 

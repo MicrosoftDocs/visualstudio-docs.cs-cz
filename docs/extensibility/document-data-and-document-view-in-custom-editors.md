@@ -10,12 +10,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94c30279683a6d367ede31c00133e6fbf8c293e5
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 2aa8779a069f4b001743326470f69f3cb35a8c10
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73186754"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568877"
 ---
 # <a name="document-data-and-document-view-in-custom-editors"></a>Zobrazení dat dokumentů a dokumentů ve vlastních editorech
 Vlastní editor se skládá ze dvou částí: datového objektu dokumentu a objektu zobrazení dokumentu. Jak naznačuje názvy, objekt data dokumentu představuje textová data, která se mají zobrazit. Podobně objekt zobrazení dokumentu (nebo "zobrazení") představuje jedno nebo více oken, ve kterých se má zobrazit datový objekt dokumentu.
@@ -34,7 +34,7 @@ Vlastní editor se skládá ze dvou částí: datového objektu dokumentu a obje
 
  Rozhraní IDE oznamuje zobrazení o událostech (například při zavření řešení obsahujícího dokument) porovnáním identifikátoru položky (ItemID) pro každou položku v běžící tabulce dokumentů. Další informace najdete v tématu [Spuštění tabulky dokumentů](../extensibility/internals/running-document-table.md).
 
- Existují dvě možnosti pro vytvoření zobrazení vlastního editoru. Jedním z nich je místní aktivační model, ve kterém je zobrazení hostováno v okně pomocí ovládacího prvku ActiveX nebo datového objektu dokumentu. Druhým je zjednodušený model vkládání, ve kterém je zobrazení hostováno [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> je implementováno pro zpracování příkazů okna. Informace o integrovaném modelu aktivace najdete v tématu [Aktivace na místě](../extensibility/in-place-activation.md). Informace o zjednodušeném modelu vkládání najdete v tématu [zjednodušené vkládání](../extensibility/simplified-embedding.md).
+ Existují dvě možnosti pro vytvoření zobrazení vlastního editoru. Jedním z nich je místní aktivační model, ve kterém je zobrazení hostováno v okně pomocí ovládacího prvku ActiveX nebo datového objektu dokumentu. Druhým je zjednodušený model vkládání, ve kterém je zobrazení hostováno [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> je implementováno pro zpracování příkazů okna. Informace o integrovaném modelu aktivace najdete v tématu [Aktivace na místě](/visualstudio/misc/in-place-activation?view=vs-2015). Informace o zjednodušeném modelu vkládání najdete v tématu [zjednodušené vkládání](../extensibility/simplified-embedding.md).
 
 ## <a name="see-also"></a>Viz také:
 

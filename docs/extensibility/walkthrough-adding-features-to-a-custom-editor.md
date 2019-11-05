@@ -10,12 +10,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c5ea1c1bfa34399f4a2428aec2f51f97c9884216
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 5fa926b21171c3e09b5a0f4d74e9415da090bf2f
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189057"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73569078"
 ---
 # <a name="walkthrough-add-features-to-a-custom-editor"></a>Návod: Přidání funkcí do vlastního editoru
 Po vytvoření vlastního editoru můžete do něj přidat další funkce.
@@ -38,7 +38,7 @@ Po vytvoření vlastního editoru můžete do něj přidat další funkce.
 
 4. Rozhodněte, zda chcete, aby Editor používal místní aktivaci nebo zjednodušené vložení pro správu okna zobrazení dokumentu.
 
-     Zjednodušené okno editoru vkládání je hostitelem standardního zobrazení dokumentu, zatímco místní okno editoru aktivace hostuje ovládací prvek ActiveX nebo jiný aktivní objekt jako jeho zobrazení dokumentu. Další informace najdete v tématu [zjednodušené vkládání](../extensibility/simplified-embedding.md) a [místní aktivace](../extensibility/in-place-activation.md).
+     Zjednodušené okno editoru vkládání je hostitelem standardního zobrazení dokumentu, zatímco místní okno editoru aktivace hostuje ovládací prvek ActiveX nebo jiný aktivní objekt jako jeho zobrazení dokumentu. Další informace najdete v tématu [zjednodušené vkládání](../extensibility/simplified-embedding.md) a [místní aktivace](/visualstudio/misc/in-place-activation?view=vs-2015).
 
 5. Implementujte rozhraní <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> pro zpracování příkazů.
 

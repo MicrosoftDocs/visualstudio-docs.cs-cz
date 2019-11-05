@@ -7,12 +7,12 @@ ms.assetid: 288e2415-9fcf-408e-bc35-9848315e14fd
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ec10ea271fad4c49402e75ad7f8b5a84ad287cea
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: d9cfa2d216baf89d4b7a886ff9d7b56b8b946b8b
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188880"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73569052"
 ---
 # <a name="design-xaml-in-visual-studio-and-blend-for-visual-studio"></a>Návrh XAML v aplikaci Visual Studio a Blend pro Visual Studio
 
@@ -47,7 +47,7 @@ Pokud chcete zvýšit produktivitu, zvažte použití Blend pro Visual Studio pr
 | **Návrh vizuálních stavů** | Neexistuje žádný nástroj, který by vám mohl pomáhat s návrhem vizuálních stavů. je nutné je vytvořit programově. | Pomocí návrhových nástrojů můžete změnit vzhled ovládacího prvku na základě jeho stavu. | [Vizuální stavy](modify-the-style-of-objects-in-blend.md#visual-states) |
 | **Vytváření animací** |Pro animace není k dispozici žádný nástroj pro návrh; je nutné je vytvořit programově. To vyžaduje pochopení systému animace a časování v technologii WPF a rozsáhlé znalosti kódování.|Animace můžete vizuálně vytvářet a můžete je zobrazit ve Blend pro Visual Studio. To je rychlejší a přesnější než vytváření animací v kódu. Můžete přidat triggery pro zpracování interakce uživatele a můžete přepnout do kódu pro přidání obslužných rutin událostí a dalších funkcí.|[Animace objektů](../xaml-tools/animate-objects-in-xaml-designer.md)|
 |**Změnit tvar a text na cesty pro snadnější manipulaci**|Není podporováno.|Můžete provádět drobné nebo výrazné změny tvarů (například obdélníky a elipsy) jejich převodem na cesty, které poskytují lepší ovládací prvek pro úpravy. Můžete přetvarovat nebo kombinovat cesty a vytvářet složené cesty z více tvarů.<br /><br />Můžete také převést textové bloky na cesty, abyste je mohli manipulovat jako vektorové obrázky.|[Kreslení tvarů a cest](../xaml-tools/draw-shapes-and-paths.md)|
-|**Úpravy ovládacích prvků, šablon a stylů**|Vyžaduje kódování a znalosti stylů a šablon WPF.|Přepněte libovolný obrázek do ovládacího prvku.<br /><br />Pomocí nástrojů pro úpravu šablon můžete provádět změny ovládacích prvků, stylů a šablon pomocí několika kliknutí myší.<br /><br />Například můžete použít prostředky stylu Blend pro Visual Studio k implementaci běžných ovládacích prvků WPF (jako jsou tlačítka, seznamy, posuvníky, nabídky atd.) a změnit jejich barvu, styl nebo podkladovou šablonu přímo v Blend pro Visual Studio. V případě potřeby můžete přepnout na kód pro dokončení dotykového ovládání.|[Úpravy stylu objektů](../designers/modify-the-style-of-objects-in-blend.md)|
+|**Úpravy ovládacích prvků, šablon a stylů**|Vyžaduje kódování a znalosti stylů a šablon WPF.|Přepněte libovolný obrázek do ovládacího prvku.<br /><br />Pomocí nástrojů pro úpravu šablon můžete provádět změny ovládacích prvků, stylů a šablon pomocí několika kliknutí myší.<br /><br />Například můžete použít prostředky stylu Blend pro Visual Studio k implementaci běžných ovládacích prvků WPF (jako jsou tlačítka, seznamy, posuvníky, nabídky atd.) a změnit jejich barvu, styl nebo podkladovou šablonu přímo v Blend pro Visual Studio. V případě potřeby můžete přepnout na kód pro dokončení dotykového ovládání.|[Úpravy stylu objektů](modify-the-style-of-objects-in-blend.md)|
 |**Připojení uživatelského rozhraní k datům**|Můžete vytvořit zdroj dat z prostředků, jako jsou SQL Server databáze, WCF nebo webová služba, objekt nebo SharePointový seznam, a pak vytvořit propojení zdroje dat s ovládacími prvky uživatelského rozhraní.<br /><br />Data v době návrhu se musí vytvořit ručně pro interaktivní prostředí návrhu.|Pro .NET Framework aplikace Vytvářejte ukázková data snadno pro vytváření prototypů a testování. Až budete připraveni, přepněte na živá data.<br /><br />Možnosti generování dat Blend pro Visual Studio jsou nedokončené (můžete rychle přidat názvy, čísla, adresy URL a fotky) a můžete si ušetřit spoustu času.<br /><br />Pro živá data můžete navazovat ovládací prvky uživatelského rozhraní k souboru XML nebo k jakémukoli zdroji dat CLR.|[Zobrazení dat](display-data-in-blend.md)|
 
 Další informace o pokročilém návrhu jazyka XAML naleznete v tématu [Vytvoření uživatelského rozhraní pomocí Blend pro Visual Studio](../xaml-tools/creating-a-ui-by-using-blend-for-visual-studio.md).

@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7213bd271b5c690d78443339039d09bf14163e91
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 255b3de916215759615384dce26c5affbc07a995
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189614"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73569094"
 ---
 # <a name="pen-tool-modifier-keys-in-blend-for-visual-studio"></a>Modifikační klávesy nástroje pero v Blend pro Visual Studio
 
@@ -39,5 +39,5 @@ V následující tabulce jsou uvedeny zkratky, které můžete použít k úprav
 ## <a name="see-also"></a>Viz také:
 
 - [Modifikační klávesy návrhové plochy](../designers/artboard-modifier-keys-in-blend.md)
-- [Modifikační klávesy nástroje Přímý výběr](../designers/direct-selection-tool-modifier-keys-in-blend.md)
+- [Modifikační klávesy nástroje Přímý výběr](direct-selection-tool-modifier-keys-in-blend.md)
 - [Kreslení tvarů a cest](draw-shapes-and-paths.md)
