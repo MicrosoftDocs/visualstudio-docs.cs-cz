@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 046f3bbca7b66d14e9b6a3eae96b613492292be0
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: fcb30056021a865d0b0e605de462ff72ced5a383
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189196"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661884"
 ---
 # <a name="troubleshoot-sharepoint-solutions"></a>Řešení potíží s řešeními služby SharePoint
   Při ladění řešení služby SharePoint pomocí ladicího programu [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] mohou nastat následující problémy nebo výstrahy. Další informace najdete v tématu [ladění řešení pracovních postupů pro SharePoint 2007](https://msdn.microsoft.com/3a5392f3-66f3-48be-956e-02de23fa6247).
@@ -172,9 +172,9 @@ ms.locfileid: "73189196"
 ### <a name="resolution"></a>Řešení
  Chcete-li tento problém vyřešit, odstraňte model ručně a pak znovu nasaďte řešení.  Model můžete odstranit pomocí některého z následujících nástrojů:
 
-- Centrální správa SharePoint 2010 Další informace najdete v tématu [Správa modelů BDC](/previous-versions/office/sharepoint-server-2010/ee524073(v=office.14)#deleteamodel) na webu Microsoft TechNet.
+- Centrální správa SharePoint 2010 Další informace najdete v tématu [Správa modelů BDC](/previous-versions/office/sharepoint-server-2010/ee524073(v=office.14)#delete-a-bdc-model) na webu Microsoft TechNet.
 
-- Prostředí Windows PowerShell. Tento model můžete odstranit zadáním tohoto příkazu na příkazovém řádku: **Remove-SPBusinessDataCatalogModel**. Další informace najdete v tématu [Obecné rutiny (SharePoint Server 2010)](/powershell/module/sharepoint-server/&view=sharepoint-ps) na webu Microsoft TechNet.
+- Prostředí Windows PowerShell. Tento model můžete odstranit zadáním tohoto příkazu na příkazovém řádku: **Remove-SPBusinessDataCatalogModel**. Další informace najdete v tématu [Obecné rutiny (SharePoint Server 2010)](/powershell/module/sharepoint-server) na webu Microsoft TechNet.
 
 ## <a name="an-error-appears-when-you-try-to-view-a-visual-web-part-in-sharepoint"></a>Při pokusu o zobrazení vizuální webové části na SharePointu se zobrazí chyba
  K tomuto problému dochází, pokud vlastnost **path** uživatelského ovládacího prvku nezačíná řetězcem "CONTROLTEMPLATES\\".

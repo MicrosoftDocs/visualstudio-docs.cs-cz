@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 263759cc463bf21afa20877db320b4c83f1dc761
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: b7d68a23ffba12e9654ac047629bd64ecfae4bb6
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73187522"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661908"
 ---
 # <a name="run-uwp-apps-in-the-simulator"></a>Spouštění aplikací pro UPW na simulátoru
 
@@ -88,7 +88,7 @@ Tlačítko pro **otočení dotykového ovládání** nastaví režim interakce k
  Orientaci zařízení mezi úrovněmi na výšku a na šířku můžete přepínat otočením simulátoru 90 stupňů v libovolném směru.
 
 > [!NOTE]
-> Simulátor nerespektuje vlastnost [DisplayProperties. AutoRotationPreferences](/uwp/api/Windows.Graphics.Display.DisplayProperties#Windows_Graphics_Display_DisplayProperties_AutoRotationPreferences) projektu. Například pokud váš projekt nastaví orientaci na `Landscape`a pak dojde k otočení simulátoru na orientaci na výšku, zobrazí se také obrázek simulátoru, který se změní na výšku. Otestujte tato nastavení na skutečném zařízení.
+> Simulátor nerespektuje vlastnost [DisplayProperties. AutoRotationPreferences](/uwp/api/windows.graphics.display.displayproperties.autorotationpreferences) projektu. Například pokud váš projekt nastaví orientaci na `Landscape`a pak dojde k otočení simulátoru na orientaci na výšku, zobrazí se také obrázek simulátoru, který se změní na výšku. Otestujte tato nastavení na skutečném zařízení.
 
 > [!NOTE]
 > Pokud otočíte simulátor tak, že je jeden okraj simulátoru větší než obrazovka, na které je zobrazený, simulátor se automaticky přizpůsobí velikosti obrazovky. Při opětovném otočení se simulátor nemění na původní velikost.

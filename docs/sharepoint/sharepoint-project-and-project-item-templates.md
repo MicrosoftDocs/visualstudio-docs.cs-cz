@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 825e985820ac7a4d72bf321133491e312adb0a0e
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 762fce80ad1e97f700af0768cdb68251a3ee8017
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981953"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661865"
 ---
 # <a name="sharepoint-project-and-project-item-templates"></a>Šablony projektů a položek projektu služby SharePoint
   V následujících částech jsou popsány dostupné šablony projektu a položky projektu služby SharePoint a způsob jejich použití.
@@ -132,7 +132,7 @@ ms.locfileid: "72981953"
  *Pracovní postup stavového stroje* je sada stavů, přechodů a akcí obchodní logiky. Kroky v pracovním postupu stavového stroje nejsou prováděny v sekvenci. místo toho jsou aktivovány akcemi a stavy. Podobně jako sekvenční pracovní postup jsou pracovní postupy stavového stroje přidruženy k položkám SharePointu, jako jsou seznamy a dokumenty. Znovu můžete vytvořit pracovní postupy na úrovni webu nebo pracovní postupy na úrovni seznamu (místní). Můžete také vybrat, jestli se má pracovní postup spustit automaticky nebo ručně. Tuto položku projektu lze použít pouze v řešeních farmy. Tuto položku projektu můžete přidat pouze do řešení farmy. Další informace najdete v tématu [vytvoření řešení pracovního postupu služby SharePoint](../sharepoint/creating-sharepoint-workflow-solutions.md), [pracovních postupů v SharePoint serveru 2010](/previous-versions/office/developer/sharepoint-2010/ms549489(v=office.14))a [novinky: Vylepšení pracovního postupu](/previous-versions/office/developer/sharepoint-2010/ee537015(v=office.14)).
 
 ### <a name="user-control-farm-solution-only"></a>Uživatelský ovládací prvek (pouze pro řešení farmy)
- *Uživatelský ovládací prvek* je vlastní, opakovaně použitelný ovládací prvek, do kterého můžete přidat další ovládací prvky ASP.NET a SharePoint. Uživatelský ovládací prvek lze přidat na stránky aplikace a webové části, které jsou spuštěny v rámci služby SharePoint. Tuto položku projektu lze použít pouze v řešeních farmy. Tuto položku projektu můžete přidat pouze do řešení farmy. Další informace naleznete v tématu [vytváření opakovaně použitelných ovládacích prvků pro webové části nebo stránky aplikací](/visualstudio/sharepoint/creating-reusable-controls-for-web-parts-or-application-pages&view=vs-2019).
+ *Uživatelský ovládací prvek* je vlastní, opakovaně použitelný ovládací prvek, do kterého můžete přidat další ovládací prvky ASP.NET a SharePoint. Uživatelský ovládací prvek lze přidat na stránky aplikace a webové části, které jsou spuštěny v rámci služby SharePoint. Tuto položku projektu lze použít pouze v řešeních farmy. Tuto položku projektu můžete přidat pouze do řešení farmy. Další informace naleznete v tématu [vytváření opakovaně použitelných ovládacích prvků pro webové části nebo stránky aplikací](/visualstudio/sharepoint/creating-reusable-controls-for-web-parts-or-application-pages).
 
 ### <a name="visual-web-part"></a>Vizuální webová část
  Položka projektu *vizuální webové části* obsahuje soubor definice *Elements. XML* , položku **webové části** a položku **uživatelského ovládacího prvku** . Vzhled vizuální webové části lze navrhnout přetažením nebo zkopírováním ovládacích prvků z panelu nástrojů sady Visual Studio na plochu uživatelského ovládacího prvku. Další informace naleznete v tématu [Postupy: Vytvoření webové části služby SharePoint pomocí návrháře](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) a [stavebního bloku: webové části](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14)).

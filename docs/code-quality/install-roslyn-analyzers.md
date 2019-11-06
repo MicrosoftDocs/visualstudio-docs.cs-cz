@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b204d6824f06037341420d27083c120e6e4b2a95
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9013d7be60a8091f7ce4fc4fe92fa4acaef43720
+ms.sourcegitcommit: f9f389e72787de30eb869a55ef7725a10a4011f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649293"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73636527"
 ---
 # <a name="install-net-compiler-platform-code-analyzers"></a>Nainstalovat .NET Compiler Platform analyzátory kódu
 
@@ -26,7 +26,7 @@ Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform
 
 1. Najděte balíček analyzátoru, který chcete nainstalovat na www.nuget.org.
 
-   Například můžete chtít [nainstalovat analyzátory nástroje Microsoft FxCop](install-fxcop-analyzers.md#nuget-package) , abyste mohli kontrolovat kód pro problémy se zabezpečením a výkonem mimo jiné. Případně nainstalujte [StyleCopAnalyzers](https://www.nuget.org/packages/stylecop.analyzers/) a vyhledejte problémy se stylem v základu kódu.
+   Například můžete chtít [nainstalovat analyzátory nástroje Microsoft FxCop](install-fxcop-analyzers.md#nuget-package) , abyste mohli kontrolovat kód pro problémy se zabezpečením a výkonem mimo jiné. Případně můžete nainstalovat [StyleCop. analyzers](https://www.nuget.org/packages/stylecop.analyzers/) pro hledání problémů se stylem v základu kódu.
 
 2. Nainstalujte balíček v aplikaci Visual Studio pomocí [konzoly Správce balíčků](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console) nebo [uživatelského rozhraní Správce balíčků](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console).
 

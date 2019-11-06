@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a709c4b76f23529e0ffee7027bd1b6257ba00d84
-ms.sourcegitcommit: bb5425b9c6d8fd7135d9584c2963831754071347
+ms.openlocfilehash: 5e269e19a09aec157e38eaf8938b5995c2647803
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024713"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661946"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Jak vytvářet a spravovat prostředí Pythonu v aplikaci Visual Studio
 
@@ -124,7 +124,7 @@ Z tohoto důvodu vývojáři často vytvářejí *virtuální prostředí* pro p
 
 Visual Studio poskytuje přímou podporu pro vytváření virtuálních prostředí pro projekt. Například pokud otevřete projekt, který obsahuje *požadavky. txt*nebo vytvořte projekt ze šablony, která obsahuje tento soubor, Visual Studio zobrazí výzvu k automatickému vytvoření virtuálního prostředí a instalaci těchto závislostí.
 
-V otevřeném projektu můžete kdykoli vytvořit nové virtuální prostředí. V **Průzkumník řešení**rozbalte uzel projekt, klikněte pravým tlačítkem na **prostředí Python**a vyberte Přidat virtuální prostředí. Další informace najdete v tématu [Vytvoření virtuálního prostředí](selecting-a-python-environment-for-a-project.md#create-a-virtual-environment-1).
+V otevřeném projektu můžete kdykoli vytvořit nové virtuální prostředí. V **Průzkumník řešení**rozbalte uzel projekt, klikněte pravým tlačítkem na **prostředí Python**a vyberte Přidat virtuální prostředí. Další informace najdete v tématu [Vytvoření virtuálního prostředí](/visualstudio/python/selecting-a-python-environment-for-a-project?view=vs-2019#create-a-virtual-environment-1).
 
 Visual Studio také poskytuje příkaz pro vygenerování souboru *. txt s požadavky* z virtuálního prostředí, což usnadňuje opětovné vytvoření prostředí v jiných počítačích. Další informace najdete v tématu [použití virtuálních prostředí](selecting-a-python-environment-for-a-project.md#use-virtual-environments).
 

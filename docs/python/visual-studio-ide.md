@@ -11,12 +11,12 @@ dev_langs:
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 91f80d648450447a6ba0e80f10e5c39764445cef
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 8b8b656aaefe4440e811378da2b84d1b944d4fb1
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189306"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661935"
 ---
 # <a name="welcome-to-the-visual-studio-ide--python"></a>Vítejte v integrovaném vývojovém prostředí sady Visual Studio | Python
 
@@ -94,7 +94,7 @@ Některé z oblíbených funkcí v aplikaci Visual Studio, které vám pomůžou
     Počínaje verzí sady Visual Studio 2019 můžete otevřít složku obsahující kód Pythonu, abyste mohli využívat funkce, jako je IntelliSense a ladění, aniž byste museli vytvořit projekt sady Visual Studio pro kód.
 ::: moniker-end
 
-- [Spolupráce ve Visual Studiu](/visualstudio/liveshare/use/vs)
+- [Spolupráce ve Visual Studiu](/visualstudio/liveshare/)
   
     Visual Studio Live Share umožňuje spolupracovat s ostatními uživateli v reálném čase, a to bez ohledu na to, jaký programovací jazyk používáte, nebo typy aplikací, které vytváříte. 
 

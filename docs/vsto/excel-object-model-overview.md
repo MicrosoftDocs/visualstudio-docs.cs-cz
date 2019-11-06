@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 29ede9dd29952e87e7f1dd76875905973bada6a6
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: cf81dea230c2cfc33eb19ca001d8c9ed06b0489c
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986090"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661852"
 ---
 # <a name="excel-object-model-overview"></a>Přehled modelu objektů aplikace Excel
   Pro vývoj řešení, která používají systém Microsoft Office Excel, můžete pracovat s objekty poskytovanými modelem objektu aplikace Excel. V tomto tématu se seznámíte s nejdůležitějšími objekty:
@@ -103,7 +103,7 @@ ms.locfileid: "72986090"
  Úplné informace o objektovém modelu aplikace Excel naleznete v tématu odkaz na primární definiční sestavení (PIA) aplikace Excel a referenční materiály k objektovému modelu VBA.
 
 ### <a name="primary-interop-assembly-reference"></a>Odkaz na primární definiční sestavení
- Referenční dokumentace k aplikaci Excel PIA popisuje typy v primárním sestavení vzájemné spolupráce pro aplikaci Excel. Tato dokumentace je k dispozici z následujícího umístění: [odkaz na primární definiční sestavení aplikace Excel 2010](/visualstudio/vsto/office-primary-interop-assemblies&view=vs-2019).
+ Referenční dokumentace k aplikaci Excel PIA popisuje typy v primárním sestavení vzájemné spolupráce pro aplikaci Excel. Tato dokumentace je k dispozici z následujícího umístění: [odkaz na primární definiční sestavení aplikace Excel 2010](/visualstudio/vsto/office-primary-interop-assemblies).
 
  Další informace o návrhu aplikace Excel PIA, jako jsou rozdíly mezi třídami a rozhraními PIA a jak jsou implementovány události v PIA, naleznete v tématu [Přehled tříd a rozhraní v primárních sestaveních vzájemné spolupráce pro systém Office](/previous-versions/office/office-12/ms247299(v=office.12)).
 
