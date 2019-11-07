@@ -654,18 +654,8 @@
               href: javascript-console-commands.md
             - name: Klávesové zkratky (HTML a JavaScript)
               href: keyboard-shortcuts-html-and-javascript.md
-            - name: Skripty na straně klienta
-              items:
-                - name: Ladění skriptů na straně klienta
-                  href: client-side-script-debugging.md
-                - name: Omezení při ladění skriptů
-                  href: limitations-on-script-debugging.md
-                - name: Připojení (skript)
-                  items:
-                    - name: Připojení ke skriptu
-                      href: how-to-attach-to-script.md
-                    - name: 'Upozornění: Ladění skriptů zakázáno'
-                      href: warning-script-debugging-disabled.md
+            - name: 'Upozornění: Ladění skriptů zakázáno'
+              href: warning-script-debugging-disabled.md
         - name: Služby WCF
           items:
             - name: Ladění služeb WCF
