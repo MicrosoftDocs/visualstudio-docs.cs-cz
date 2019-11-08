@@ -5,12 +5,12 @@ author: therealjohn
 ms.author: johmil
 ms.date: 06/18/2019
 ms.assetid: 339F6051-5F90-48DC-8237-EBBC8A03A32B
-ms.openlocfilehash: c8b6bddac92a9ec6b40ba08ebcdc3fe3577b0bc8
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 31fb7fa4c2a87820285809d24b98fe8e59a6be01
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211472"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714476"
 ---
 # <a name="xamarin-mobile-app-development"></a>Vývoj mobilních aplikací Xamarin
 
@@ -22,13 +22,13 @@ Verze XAML Hot reloading pro Xamarin. Forms je integrovaná do Visual Studio pro
 
 Hot reloading XAML se dá povolit zaškrtnutím políčka **Povolit Xamarin Hot reload** v **aplikaci Visual Studio > předvolby > projekty > Xamarin Hot reloading**.
 
-Další informace o opětovném načtení najdete v dokumentaci v tématu [Hot reloading v jazyce XAML pro Xamarin. Forms](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/xaml/hot-reload) .
+Další informace o opětovném načtení najdete v dokumentaci v tématu [Hot reloading v jazyce XAML pro Xamarin. Forms](/xamarin/xamarin-forms/xaml/hot-reload) .
 
 ## <a name="android"></a>Android
 
 Visual Studio pro Mac má svého vlastního integrovaného správce Android SDK a umožňuje přístup k sadám SDK, na které chcete aplikaci cílit.
 
-Pro aplikace pro Android Visual Studio pro Mac obsahuje vlastní Návrhář, který spolupracuje se soubory `.axml` pro Android a umožňuje vizuálně sestavovat uživatelská rozhraní. Visual Studio pro Mac tyto soubory otevřou v Android Designer, jak je znázorněno na následujícím obrázku:
+V případě aplikací pro Android Visual Studio pro Mac zahrnuje vlastní návrháře, který spolupracuje se soubory pro Android `.axml` a umožňuje vizuálně sestavovat uživatelská rozhraní. Visual Studio pro Mac tyto soubory otevřou v Android Designer, jak je znázorněno na následujícím obrázku:
 
 ![Návrhář uživatelského rozhraní pro Android](media/intro-image31.png)
 
@@ -40,7 +40,7 @@ IOS Designer je plně integrovaný s Visual Studio pro Mac a umožňuje vizuáln
 
 ![Návrhář scénářů pro iOS](media/intro-image30.png)
 
-Další informace o používání návrháře pro iOS najdete v příručkách pro [Návrháře](https://docs.microsoft.com/xamarin/ios/user-interface/designer/?tabs=macos) .
+Další informace o používání návrháře pro iOS najdete v příručkách pro [Návrháře](/xamarin/ios/user-interface/designer/?tabs=macos) .
 
 ### <a name="mac"></a>Mac
 

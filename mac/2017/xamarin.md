@@ -5,12 +5,12 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/12/2019
 ms.assetid: 339F6051-5F90-48DC-8237-EBBC8A03A32B
-ms.openlocfilehash: c9b150c55e54b851e96e3bfb22e5e9a77646f7d7
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 7d9cfbcafc90340d15172dd0d862ef9904fd6715
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68872261"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73716110"
 ---
 # <a name="xamarin-mobile-app-development"></a>Vývoj mobilních aplikací Xamarin
 
@@ -20,11 +20,11 @@ Prvotřídní podpora [Xamarinu](/xamarin) umožňuje vývoj propracovaných nat
 
 Visual Studio pro Mac má svého vlastního integrovaného správce Android SDK a umožňuje přístup k sadám SDK, na které chcete aplikaci cílit.
 
-Pro aplikace pro Android Visual Studio pro Mac obsahuje vlastní Návrhář, který spolupracuje se soubory `.axml` pro Android a umožňuje vizuálně sestavovat uživatelská rozhraní. Visual Studio pro Mac tyto soubory otevřou v Android Designer, jak je znázorněno na následujícím obrázku:
+V případě aplikací pro Android Visual Studio pro Mac zahrnuje vlastní návrháře, který spolupracuje se soubory pro Android `.axml` a umožňuje vizuálně sestavovat uživatelská rozhraní. Visual Studio pro Mac tyto soubory otevřou v Android Designer, jak je znázorněno na následujícím obrázku:
 
 ![Návrhář uživatelského rozhraní pro Android](media/intro-image31.png)
 
-Další informace o Android Designer najdete v průvodci přehledem [Xamarin. Android Designer](/xamarin/android/user-interface/android-designer/index) .
+Další informace o Android Designer najdete v průvodci [přehledem Xamarin. Android Designer](/xamarin/android/user-interface/android-designer/index) .
 
 ## <a name="ios"></a>iOS
 
@@ -32,7 +32,7 @@ IOS Designer je plně integrovaný s Visual Studio pro Mac a umožňuje vizuáln
 
 ![Návrhář scénářů pro iOS](media/intro-image30.png)
 
-Další informace o používání návrháře pro iOS najdete v příručkách pro [Návrháře](https://docs.microsoft.com/xamarin/ios/user-interface/designer/?tabs=macos) .
+Další informace o používání návrháře pro iOS najdete v příručkách pro [Návrháře](/xamarin/ios/user-interface/designer/?tabs=macos) .
 
 ### <a name="mac"></a>Mac
 

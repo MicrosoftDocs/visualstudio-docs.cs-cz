@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: f585a4ee58408e5f48c875602ba5531419dfd2ff
-ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
+ms.openlocfilehash: f1b928d04ae581b0df04ab74f3a756d359abc06f
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73661829"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713958"
 ---
 # <a name="troubleshoot-network-related-errors-when-you-install-or-use-visual-studio"></a>Řešení chyb souvisejících se sítí při instalaci nebo používání sady Visual Studio
 
@@ -137,7 +137,7 @@ Povolit připojení pro následující adresy URL:
 
 Tato chybová zpráva se může zobrazit při použití zaváděcího nástroje sady Visual Studio a souboru Response. JSON na síťové jednotce. Zdroj chyby je řízení uživatelských účtů (UAC) ve Windows.
 
-K této chybě může dojít z tohoto důvodu: namapovaná síťová jednotka nebo sdílená složka [UNC](/dotnet/standard/io/file-path-formats#unc-paths) je propojena s přístupovým tokenem uživatele. Když je povolený nástroj řízení uživatelských účtů, vytvoří se dva uživatelské [tokeny přístupu](/windows/win32/secauthz/access-tokens) : jeden *s* přístupem správce a druhý *bez* přístupu správce. Když je vytvořena síťová jednotka nebo sdílená složka, je k ní připojen aktuální přístupový token uživatele. Vzhledem k tomu, že zaváděcí nástroj musí být spuštěn jako správce, nebude mít přístup k síťové jednotce ani ke sdílení, pokud buď jednotka nebo sdílená složka není propojena s tokenem přístupu uživatele, který má přístup správce.
+K této chybě může dojít z tohoto důvodu: namapovaná síťová jednotka nebo sdílená složka [UNC](/dotnet/standard/io/file-path-formats#unc-paths) je propojena s přístupovým tokenem uživatele. Když je povolený nástroj řízení uživatelských účtů, vytvoří se dva uživatelské [tokeny přístupu](/windows/win32/secauthz/access-tokens) : jeden *s* přístupem správce a druhý *bez* přístupu správce. Když se vytvoří síťová jednotka nebo sdílená složka, k ní se napojí aktuální přístupový token uživatele. Vzhledem k tomu, že zaváděcí nástroj musí být spuštěn jako správce, nebude mít přístup k síťové jednotce ani ke sdílení, pokud buď jednotka nebo sdílená složka není propojena s tokenem přístupu uživatele, který má přístup správce.
 
 ### <a name="to-fix-this-error"></a>Odstranění této chyby
 

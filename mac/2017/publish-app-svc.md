@@ -11,12 +11,12 @@ ms.prod: visual-studio-mac
 ms.custom: video
 ms.workload:
 - azure
-ms.openlocfilehash: 335f94ddbf0b06eb1a8de093baee98b0b3105369
-ms.sourcegitcommit: fe212f8960d7882a1b0fdae9e22f008996aacf3c
+ms.openlocfilehash: 97964589b832b05f4d528a801a1899eeb8385883
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222786"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714463"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio-for-mac"></a>Publikování webové aplikace pro Azure App Service pomocí Visual Studio pro Mac
 
@@ -25,8 +25,8 @@ K publikování ASP.NET Corech aplikací do Azure App Service můžete použít 
 ## <a name="prerequisites"></a>Požadavky
 
 - Je nainstalována [aplikace Visual Studio 2017 pro systém Mac](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2017) s povoleným ASP.NET Core.
-- Předplatné Azure. Pokud ještě předplatné nemáte, zaregistrujte se [zdarma](https://azure.microsoft.com/free/dotnet/), včetně $200 na kreditu po dobu 30 dnů a 12 měsíců oblíbených bezplatných služeb.
-- ASP.NET Core projekt. Pokud projekt ještě nemáte, můžete [vytvořit nový](https://docs.microsoft.com/visualstudio/mac/create-new-projects?view=vsmac-2017).
+- Předplatné Azure. Pokud ještě předplatné nemáte, [Zaregistrujte se zdarma](https://azure.microsoft.com/free/dotnet/), včetně $200 na kreditu po dobu 30 dnů a 12 měsíců oblíbených bezplatných služeb.
+- ASP.NET Core projekt. Pokud projekt ještě nemáte, můžete [vytvořit nový](/visualstudio/mac/create-new-projects?view=vsmac-2017).
 
 ## <a name="publish-to-azure-app-service"></a>Publikování do Azure App Service
 
@@ -56,7 +56,7 @@ K publikování ASP.NET Corech aplikací do Azure App Service můžete použít 
 
     Předplatné, ke kterému se App Service přidruží, můžete změnit pomocí rozevírací nabídky **předplatné** .
 
-    Pomocí rozevíracího seznamu můžete vybrat existující **skupinu prostředků** , nebo můžete vytvořit novou pomocí **+** tlačítka.
+    Pomocí rozevíracího seznamu můžete vybrat existující **skupinu prostředků** , nebo můžete vytvořit novou pomocí tlačítka **+** .
 
     U App Serviceho plánu vyberte existující přepínač, nebo vytvořte nový. tím, že vyberete **vlastní** přepínač.
 

@@ -8,12 +8,12 @@ author: sayedihashimi
 ms.author: sayedha
 manager: unniravindranathan
 ms.prod: visual-studio-mac
-ms.openlocfilehash: 165cfc38b8289946e0966083785defd18ca87d77
-ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
+ms.openlocfilehash: 5dfee3999eddd8c4dacdd6180e18a4a50e6535dc
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095413"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73715906"
 ---
 # <a name="publish-to-a-folder-using-visual-studio-for-mac"></a>Publikování do složky pomocí Visual Studio pro Mac
 
@@ -22,7 +22,7 @@ Pomocí nástroje Publikovat můžete publikovat konzolu .NET Core nebo ASP.NET 
 ## <a name="prerequisites"></a>Požadavky
 
 - Je nainstalována [aplikace Visual Studio 2019 pro systém Mac](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2019) s povoleným rozhraním .NET Core.
-- Konzola rozhraní .NET Core nebo projekt ASP.NET Core. Pokud projekt ještě nemáte, můžete [vytvořit nový](https://docs.microsoft.com/visualstudio/mac/create-new-projects?view=vsmac-2019).
+- Konzola rozhraní .NET Core nebo projekt ASP.NET Core. Pokud projekt ještě nemáte, můžete [vytvořit nový](/visualstudio/mac/create-new-projects?view=vsmac-2019).
 
 ## <a name="publish-to-folder"></a>Publikování do složky
 
@@ -40,7 +40,7 @@ Pomocí Visual Studio pro Mac můžete publikovat projekty .NET Core do složky 
 
  4. Zobrazí se dialogové okno **publikovat do složky** . V tomto dialogovém okně můžete přizpůsobit složku, do které bude projekt publikován. K provedení tohoto postupu nebo vložení do cesty můžete použít tlačítko **Procházet** .
 
- 5. Po kliknutí na **publikovat** se stane několik věcí. Nejprve je vytvořen profil publikování. Profil publikování je soubor MSBuild, který se importuje do projektu během procesu publikování. Obsahuje vlastnosti, které se používají během procesu publikování. Tyto soubory jsou uloženy v `Properties/PublishProfiles` nástroji a mají příponu. `.pubxml` V dalším kroku se spustí proces publikování. Průběh můžete sledovat sledováním stavového řádku v Visual Studio pro Mac.
+ 5. Po kliknutí na **publikovat** se stane několik věcí. Nejprve je vytvořen profil publikování. Profil publikování je soubor MSBuild, který se importuje do projektu během procesu publikování. Obsahuje vlastnosti, které se používají během procesu publikování. Tyto soubory jsou uloženy v `Properties/PublishProfiles` a mají `.pubxml`rozšíření. V dalším kroku se spustí proces publikování. Průběh můžete sledovat sledováním stavového řádku v Visual Studio pro Mac.
 
     ![Stavový řádek IDE se stavem publikování](media/publish-to-folder-status-bar.png)
 
@@ -54,6 +54,6 @@ Pomocí Visual Studio pro Mac můžete publikovat projekty .NET Core do složky 
 
 Chcete-li změnit název profilu publikování (který se zobrazí v místní nabídce publikovat), přejmenujte soubor profilu publikování. Ujistěte se, že neměníte příponu souboru (`.puxbml`).
 
-Chcete-li změnit cestu ke složce pro publikování, otevřete profil publikování a `publishUrl` upravte hodnotu.
+Chcete-li změnit cestu ke složce pro publikování, otevřete profil publikování a upravte hodnotu `publishUrl`.
 
-Chcete-li změnit použitou konfiguraci sestavení, změňte `LastUsedBuildConfiguration` vlastnost v profilu publikování.
+Chcete-li změnit použitou konfiguraci sestavení, změňte vlastnost `LastUsedBuildConfiguration` v profilu publikování.

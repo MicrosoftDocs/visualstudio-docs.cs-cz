@@ -6,12 +6,12 @@ ms.author: jomatthi
 ms.date: 09/02/2019
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
-ms.openlocfilehash: fc300ccd37ade6418ef093306441afe4d10080e2
-ms.sourcegitcommit: fe212f8960d7882a1b0fdae9e22f008996aacf3c
+ms.openlocfilehash: e56aec03aabe818731c65acb30eafcc18f170ac3
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222749"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714511"
 ---
 # <a name="does-visual-studio-for-mac-support-team-foundation-version-control"></a>Podporuje Visual Studio pro Mac Správa verzí Team Foundation?
 
@@ -56,31 +56,31 @@ Nejjednodušším řešením je **použití HomeBrew**, což je správce balíč
 
 1. Spusťte aplikaci macOS Terminal.
 1. Nainstalujte homebrew pomocí terminálu a pokynů na [domovské stránce homebrew](https://brew.sh/).
-1. Po instalaci homebrew spusťte z terminálu následující příkaz:`brew install tee-clc`
+1. Po instalaci homebrew spusťte z terminálu následující příkaz: `brew install tee-clc`
 
 **Ruční nastavení Tee-CLC**:
 
 1. [Stáhněte si nejnovější verzi Tee-CLC](https://github.com/Microsoft/team-explorer-everywhere/releases) ze Team Explorer Everywhere stránky vydání úložiště GitHub (např. tee-CLC-14.134.0. zip v době psaní tohoto zápisu).
 1. Extrahujte obsah souboru. zip do složky na disku.
-1. Otevřete aplikaci terminálu MacOS a pomocí `cd` příkazu přejděte do složky, kterou jste použili v předchozím kroku.
-1. V rámci této složky spusťte příkaz `./tf` pro otestování, zda lze spustit klienta příkazového řádku, může se zobrazit výzva k instalaci jazyka Java nebo jiných závislostí.
+1. Otevřete aplikaci terminálu macOS a pomocí příkazu `cd` přepněte do složky, kterou jste použili v předchozím kroku.
+1. V rámci složky spusťte `./tf` příkazu, abyste otestovali, že je možné spustit klienta příkazového řádku, může se zobrazit výzva k instalaci Java nebo jiných závislostí.
 
-Po instalaci Tee-CLC můžete spustit příkaz `tf eula` a zobrazit a přijmout licenční smlouvu pro klienta.
+Po instalaci TEE-CLC můžete spustit příkaz `tf eula` a zobrazit a přijmout licenční smlouvu pro klienta.
 
-Nakonec, pokud chcete ověřit své prostředí TFS nebo Azure DevOps, musíte na serveru vytvořit osobní přístupový token. Přečtěte si další informace o [ověřování pomocí tokenů osobních přístupů](https://docs.microsoft.com/azure/devops/integrate/get-started/authentication/pats?view=azure-devops). Při vytváření osobního přístupového tokenu pro použití s TFVC se ujistěte, že při konfiguraci tokenu zadáte úplný přístup.
+Nakonec, pokud chcete ověřit své prostředí TFS nebo Azure DevOps, musíte na serveru vytvořit osobní přístupový token. Přečtěte si další informace o [ověřování pomocí tokenů osobních přístupů](/azure/devops/integrate/get-started/authentication/pats?view=azure-devops). Při vytváření osobního přístupového tokenu pro použití s TFVC se ujistěte, že při konfiguraci tokenu zadáte úplný přístup.
 
 #### <a name="using-the-tee-clc-to-connect-to-your-repo"></a>Připojení k úložišti pomocí TEE-CLC
 
-Abyste se mohli připojit ke svému zdrojovému kódu, musíte nejprve vytvořit pracovní prostor pomocí `tf workspace` příkazu. Například následující příkazy se připojují k organizaci v Azure DevOps Services s názvem "MyOrganization": 
+Abyste se mohli připojit ke svému zdrojovému kódu, musíte nejprve vytvořit pracovní prostor pomocí příkazu `tf workspace`. Například následující příkazy se připojují k organizaci v Azure DevOps Services s názvem "MyOrganization": 
 
 ```bash
 export TF_AUTO_SAVE_CREDENTIALS=1
 tf workspace -new MyWorkspace -collection:https://dev.azure.com/MyOrganization
 ```
 
-Nastavení `TF_AUTO_SAVE_CREDENTIALS` prostředí slouží k uložení vašich přihlašovacích údajů, takže se k nim nebudete muset zadávat víckrát. Po zobrazení výzvy k zadání uživatelského jména použijte token osobní přístup, který jste vytvořili v předchozí části, a použijte prázdné heslo.
+Nastavení prostředí `TF_AUTO_SAVE_CREDENTIALS` slouží k uložení vašich přihlašovacích údajů, takže se k nim nebudete muset zadávat víckrát. Po zobrazení výzvy k zadání uživatelského jména použijte token osobní přístup, který jste vytvořili v předchozí části, a použijte prázdné heslo.
 
-Chcete-li vytvořit mapování zdrojových souborů do místní složky, použijte `tf workfold` příkaz. Následující příklad mapuje složku s názvem "WebApp. Services" z projektu "MyRepository" TFVC a nastaví ji tak, aby byla zkopírována do místní složky ~/Projects/(tj. složka "projekty" v domovské složce aktuálního uživatele).
+Chcete-li vytvořit mapování zdrojových souborů do místní složky, použijte příkaz `tf workfold`. Následující příklad mapuje složku s názvem "WebApp. Services" z projektu "MyRepository" TFVC a nastaví ji tak, aby byla zkopírována do místní složky ~/Projects/(tj. složka "projekty" v domovské složce aktuálního uživatele).
 
 ```bash
 tf workfold -map $/MyRepository/WebApp.Services -workspace:MyWorkspace ~/Projects/
@@ -94,7 +94,7 @@ tf get
 
 #### <a name="committing-changes-using-the-tee-clc"></a>Potvrzování změn pomocí TEE-CLC
 
-Až provedete změny souborů v Visual Studio pro Mac, můžete přejít zpět na terminál a vrátit se změnami provedené úpravy. Příkaz slouží k přidání souborů do seznamu probíhajících změn, které mají být vráceny se změnami `tf checkin` , a příkaz provede skutečné vrácení se změnami na server. `tf add` `checkin` Příkaz obsahuje parametry pro přidání komentáře nebo k přidružení související pracovní položky. V následujícím fragmentu kódu jsou všechny soubory ve `WebApp.Services` složce přidány rekurzivně do vrácení se změnami. Pak je kód vrácen se změnami pomocí komentáře a přidružen k pracovní položce s ID "42".
+Až provedete změny souborů v Visual Studio pro Mac, můžete přejít zpět na terminál a vrátit se změnami provedené úpravy. Příkaz `tf add` slouží k přidání souborů do seznamu probíhajících změn, které mají být vráceny se změnami, a příkaz `tf checkin` provede skutečné vrácení se změnami na server. Příkaz `checkin` obsahuje parametry pro přidání komentáře nebo k přidružení související pracovní položky. V následujícím fragmentu kódu jsou všechny soubory ve složce `WebApp.Services` přidány rekurzivně na vrácení se změnami. Pak je kód vrácen se změnami pomocí komentáře a přidružen k pracovní položce s ID "42".
 
 ```bash
 cd WebApp.Services

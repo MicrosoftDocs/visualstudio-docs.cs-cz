@@ -5,12 +5,12 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/18/2019
 ms.assetid: 5399BCB1-E317-4C7B-87B1-C531E985DE6E
-ms.openlocfilehash: 5a0d7c6646fac83ef70fbe2aa7384dcee992d726
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.openlocfilehash: d089f38bd91eda2565f215e8d15a74cc119b8767
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128438"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714400"
 ---
 # <a name="build-actions"></a>Akce sestavení
 
@@ -33,10 +33,10 @@ Některé běžné akce sestavení pro projekty, které můžete sestavit v Visu
 
 |Akce sestavení | Typy projektů | Popis |
 |--|--|--|
-| **Sestavení** | Jakýmikoli | Soubor je předán C# kompilátoru jako zdrojový soubor.|
-| **Obsah** | .NET, Xamarin | Pro projekty ASP.NET jsou tyto soubory zahrnuty jako součást webu při jeho nasazení. Pro projekty Xamarin. iOS a Xamarin. Mac budou zahrnuty do sady prostředků aplikace.|
-| **Vložený prostředek** | .NET | Soubor je předán C# kompilátoru jako prostředek, který má být vložen do sestavení. [Assembly. GetManifestResourceStream](https://docs.microsoft.com/dotnet/api/system.reflection.assembly.getmanifestresourcestream)z `System.Reflection` oboru názvů pak lze použít ke čtení souboru ze sestavení.|
-| **Žádné** | Jakýmikoli | Soubor není součástí sestavení jakýmkoli způsobem a je součástí projektu pro snadný přístup z integrovaného vývojového prostředí (IDE). Tato hodnota se dá použít například pro soubory dokumentace, například soubory Readme.|
+| **Sestavení** | jakýmikoli | Soubor je předán C# kompilátoru jako zdrojový soubor.|
+| **Sušin** | .NET, Xamarin | Pro projekty ASP.NET jsou tyto soubory zahrnuty jako součást webu při jeho nasazení. Pro projekty Xamarin. iOS a Xamarin. Mac budou zahrnuty do sady prostředků aplikace.|
+| **Vložený prostředek** | .NET | Soubor je předán C# kompilátoru jako prostředek, který má být vložen do sestavení. [Assembly. GetManifestResourceStream](/dotnet/api/system.reflection.assembly.getmanifestresourcestream)z oboru názvů `System.Reflection` lze použít ke čtení souboru ze sestavení.|
+| **NTato** | jakýmikoli | Soubor není součástí sestavení jakýmkoli způsobem a je součástí projektu pro snadný přístup z integrovaného vývojového prostředí (IDE). Tato hodnota se dá použít například pro soubory dokumentace, například soubory Readme.|
 
 > [!NOTE]
 > Další akce sestavení mohou být definovány pro konkrétní typy projektů, takže seznam akcí sestavení závisí na typu projektu a hodnoty mohou být zobrazeny, které nejsou v tomto seznamu.  

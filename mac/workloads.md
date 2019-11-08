@@ -6,12 +6,12 @@ author: therealjohn
 ms.author: johmil
 ms.date: 06/18/2019
 ms.assetid: DDC39599-8C5D-4CB9-8DA5-229E085384CA
-ms.openlocfilehash: 676193bc84b680c3c78f3b5ddff546a64e4767af
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.openlocfilehash: b4c5b460670a438b1aeaeb11cd8ae540b39cf9b7
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108181"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714418"
 ---
 # <a name="visual-studio-for-mac-workloads"></a>Visual Studio pro Mac úlohy
 
@@ -31,7 +31,7 @@ Informace o použití Xamarin v Visual Studio pro Mac najdete v [centru pro výv
 
 ## <a name="mac-desktop-applications"></a>Desktopové aplikace pro Mac
 
-Můžete vytvářet aplikace systému Mac pomocí [Xamarin. Mac](https://docs.microsoft.com/xamarin/mac/) a [Xamarin. Forms na Macu](https://docs.microsoft.com/xamarin/xamarin-forms/platform/other/mac) k vytváření aplikací, které sdílejí kód a uživatelské rozhraní s jinými platformami.
+Můžete vytvářet aplikace systému Mac pomocí [Xamarin. Mac](/xamarin/mac/) a [Xamarin. Forms na Macu](/xamarin/xamarin-forms/platform/other/mac) k vytváření aplikací, které sdílejí kód a uživatelské rozhraní s jinými platformami.
 
 ## <a name="net-core-applications"></a>Aplikace .NET Core
 

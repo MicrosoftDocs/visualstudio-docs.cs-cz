@@ -1,33 +1,33 @@
 ---
-title: Updating Visual Studio for Mac
-description: Pokyny k aktualizaci sady Visual Studio for Mac na nejnovější verzi.
+title: Aktualizace Visual Studio pro Mac
+description: Pokyny pro aktualizaci Visual Studio pro Mac na nejnovější verzi.
 author: asb3993
 ms.author: amburns
 ms.date: 06/20/2018
 ms.technology: vs-ide-install
 ms.assetid: BC836802-CC65-41F7-BAEC-A42AED0371A9
 hide_comments: false
-ms.openlocfilehash: 26b943d94f11adbc4415e552d2a6b3a73bb95c81
-ms.sourcegitcommit: 7eb2fb21805d92f085126f3a820ac274f2216b4e
+ms.openlocfilehash: 66461beec5fa619c33e0d33aeb4e57bfefd43d96
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67328367"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73715674"
 ---
-# <a name="update-visual-studio-2017-for-mac-version-7-to-visual-studio-2019-for-mac-version-80"></a>Aktualizace sady Visual Studio 2017 pro Mac (verze 7), aby Visual Studio 2019 pro Mac (verze 8.0)
+# <a name="update-visual-studio-2017-for-mac-version-7-to-visual-studio-2019-for-mac-version-80"></a>Aktualizace sady Visual Studio 2017 pro Mac (verze 7) na Visual Studio 2019 pro Mac (verze 8,0)
 
-2019 Visual Studio for Mac přináší spoustu nových vylepšení: úplně nové C# editoru, po spuštění nové prostředí, podpora více instancí a celou řadu nových vylepšení pro vývojáře v .NET Core, Xamarin a Unity. Další informace o všechno, co je součástí sady Visual Studio pro Mac 2019 najdete v následujících příspěvcích na blogu:
+Visual Studio 2019 for Mac přináší spoustu nových vylepšení: zcela nový C# editor, nové prostředí pro spouštění, podporu více instancí a hostitele nových vylepšení pro vývojáře pro Xamarin, Unity a .NET Core. Další informace o všech zahrnutých v Visual Studio pro Mac 2019 najdete v těchto blogových příspěvcích:
 
-- [2019 Visual Studio for Mac je nyní k dispozici](https://devblogs.microsoft.com/visualstudio/visual-studio-2019-for-mac-is-now-available/)
-- [2019 Visual Studio pro Mac verze 8.1 je teď k dispozici (a ve verzi Preview pro 8.2)](https://devblogs.microsoft.com/visualstudio/visual-studio-2019-for-mac-version-8-1-is-now-available-and-a-preview-for-8-2/)
+- [Visual Studio 2019 pro Mac je teď k dispozici.](https://devblogs.microsoft.com/visualstudio/visual-studio-2019-for-mac-is-now-available/)
+- [Visual Studio 2019 for Mac verze 8,1 je teď k dispozici (a verze Preview pro 8,2).](https://devblogs.microsoft.com/visualstudio/visual-studio-2019-for-mac-version-8-1-is-now-available-and-a-preview-for-8-2/)
 
 > [!IMPORTANT]
-> Existuje známý problém s Visual Studio 2017 for Mac **verze 7.7.3**, kde se zobrazí aktualizátoru neustále "Chyba při načítání informací o aktualizacích". Pokud k tomu dojde, [stáhněte si Visual Studio pro Mac](https://visualstudio.microsoft.com/vs/mac/) a postupujte podle kroků pro [nainstalovat](https://docs.microsoft.com/visualstudio/mac/installation?view=vsmac-2019) 2019 Visual Studio pro Mac. Všimněte si, že tato akce přepíše stávající instanci sady Visual Studio 2017 for Mac.
+> Došlo k známému problému se sadou Visual Studio 2017 for Mac **verze 7.7.3**, kde se aktualizace průběžně zobrazuje "Chyba při načítání informací o aktualizaci". Pokud k tomu dojde, [Stáhněte si Visual Studio pro Mac](https://visualstudio.microsoft.com/vs/mac/) a postupujte podle pokynů k [instalaci](/visualstudio/mac/installation?view=vsmac-2019) sady Visual Studio 2019 for Mac. Všimněte si, že tato akce přepíše stávající instanci sady Visual Studio 2017 for Mac.
 
-Chcete-li získat nejnovější verzi, můžete použít [updater](https://docs.microsoft.com/visualstudio/mac/update?view=vsmac-2017) tak, že přejdete do **sady Visual Studio > vyhledat aktualizace...** :
+Pokud chcete získat nejnovější verzi, můžete aktualizaci [použít tak, že](/visualstudio/mac/update?view=vsmac-2017) přejdete na **Visual Studio > Vyhledat aktualizace...** :
 
-![Dialogové okno aktualizátor](media/update-vsmac-updater.png)
+![dialog aktualizačního programu](media/update-vsmac-updater.png)
 
-Nebo, pokud tomu dáváte přednost nebo máte problémy aktualizační [Stáhnout](https://visualstudio.microsoft.com/vs/mac/) úplně nový instalační program. 2019 a získejte rychle zprovoznit rychle:
+Nebo, pokud chcete nebo máte problémy s nástrojem [aktualizace, Stáhněte si](https://visualstudio.microsoft.com/vs/mac/) značku nového instalačního programu 2019 a rychle si ho spusťte:
 
-![instalační obrazovce](media/update-vsmac-installer.png)
+![instalační obrazovka](media/update-vsmac-installer.png)

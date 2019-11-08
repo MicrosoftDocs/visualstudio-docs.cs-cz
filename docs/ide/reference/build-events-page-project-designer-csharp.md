@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: cca0ec0491d7a2c513f8bc52acaadf7c80d7fd22
-ms.sourcegitcommit: 58000baf528da220fdf7a999d8c407a4e86c1278
+ms.openlocfilehash: 4842a5a08de96cd40a45d0765d427cc74cbf5432
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72789828"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714391"
 ---
 # <a name="build-events-page-project-designer-c"></a>Stránka Události sestavení, návrhář projektu (C#)
 
@@ -77,11 +77,19 @@ nastavení soubor projektu je:
 </PropertyGroup>
 ```
 
-Visual Studio 2019 (a Visual Studio 2017 v novějších aktualizacích) přidá cíl MSBuild s názvem `PreBuild` nebo `PostBuild` pro nastavení **PreBuildEvent** a **PostBuildEvent** . Například pro předchozí příklad nyní Visual Studio generuje následující kód:
+Pro projekty .NET Core Visual Studio 2019 (a Visual Studio 2017 v novějších aktualizacích) přidá cíl MSBuild s názvem `PreBuild` nebo `PostBuild` pro nastavení **PreBuildEvent** a **PostBuildEvent** . Tyto cíle používají atributy **BeforeTargets** a **AfterTargets** , které nástroj MSBuild rozpozná. Například pro předchozí příklad nyní Visual Studio generuje následující kód:
 
 ```xml
 <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="&quot;$(ProjectDir)PreBuildEvent.bat&quot; &quot;$(ProjectDir)..\&quot; &quot;$(ProjectDir)&quot; &quot;$(TargetDir)&quot;" />
+</Target>
+```
+
+Pro událost po sestavení použijte název `PostBuild` a nastavte atribut `AfterTargets` na `PostBuildEvent`.
+
+```xml
+<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+   <Exec Command="echo Output written to $(TargetDir)" />
 </Target>
 ```
 

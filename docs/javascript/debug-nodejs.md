@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 386a489faf859038cd0f529da74a0fbac07b7250
-ms.sourcegitcommit: f9f389e72787de30eb869a55ef7725a10a4011f0
+ms.openlocfilehash: 7bd03ead39d0b2b5013075de017954f0c0c30e8c
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73636540"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714484"
 ---
 # <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>Ladění JavaScriptu nebo aplikace TypeScriptu v aplikaci Visual Studio
 
@@ -86,7 +86,7 @@ V tomto scénáři použijte Chrome.
 
     `msedge --remote-debugging-port=9222`
 
-    Ani
+    ani
 
     `chrome.exe --remote-debugging-port=9222`
     ::: moniker-end
@@ -157,9 +157,9 @@ Chcete-li připojit ladicí program ze sady Visual Studio a zarážky volání v
 
     Při pozastavení můžete v ladicím programu zkontrolovat stav aplikace tak, že přesunete ukazatel myši nad proměnné a použijete okna ladicího programu. Můžete v ladicím programu procházet kód pomocí krokování (**F5**, **F10** a **F11**). Další informace o funkcích základního ladění naleznete v tématu [první pohled na ladicí program](../debugger/debugger-feature-tour.md).
 
-    Zarážku můžete narazit buď v souboru *. js* , nebo ve zdrojovém souboru v závislosti na tom, jaké kroky jste předtím použili, spolu s vaším prostředím a stavem prohlížeče. V obou případech můžete procházet kód pomocí krokování a zkoumat proměnné.
+    Zarážku můžete obdržet v souboru *. js* nebo ve zdrojovém souboru, v závislosti na typu aplikace, krocích, které jste použili dříve, a dalších faktorech, jako je například stav prohlížeče. V obou případech můžete procházet kód pomocí krokování a zkoumat proměnné.
 
-   * Pokud potřebujete přerušit kód ve zdrojovém souboru TypeScript, JSX nebo *. Vue* a nemůžete ho provést, ujistěte se, že je prostředí správně nastavené, jak je popsáno v části [řešení potíží](#troubleshooting_source_maps) .
+   * Pokud potřebujete přerušit kód ve zdrojovém souboru TypeScript, JSX nebo *. Vue* a nemůžete ho provést, ujistěte se, že je správně nastavené prostředí, jak je popsáno v části [řešení potíží](#troubleshooting_source_maps) .
 
    * Pokud potřebujete přerušit kód v souboru JavaScriptu (například *App-Bundle. js*) a nemůžete ho provést, odeberte zdrojový soubor mapování souboru *filename. js. map*.
 
@@ -171,7 +171,7 @@ Pokud potřebujete přerušit kód ve zdrojovém souboru TypeScript, JSX nebo *.
       
 * Ujistěte se, že jste [spustili prohlížeč v režimu ladění](#prepare_the_browser_for_debugging).
 
-* Ujistěte se, že váš zdrojový soubor mapování obsahuje správný odkaz na zdrojový soubor a že neobsahuje nepodporované předpony, jako je například *Webpack:///* , což brání ladicímu programu sady Visual Studio najít zdrojový soubor. Například odkaz, jako je *Webpack:///.app.TSX* , může být opraven na *./app.TSX*. To můžete provést ručně ve zdrojovém souboru mapování nebo pomocí vlastní konfigurace sestavení. Další informace najdete v tématu [generování zdrojových mapování pro ladění](#generate_source_maps).
+* Ujistěte se, že váš zdrojový soubor mapování obsahuje správnou relativní cestu ke zdrojovému souboru a že neobsahuje nepodporované předpony, jako je například *Webpack:///* , což brání ladicímu programu sady Visual Studio najít zdrojový soubor. Například odkaz, jako je *Webpack:///.app.TSX* , může být opraven na *./app.TSX*. To můžete provést ručně ve zdrojovém souboru mapování (což je užitečné pro testování) nebo pomocí vlastní konfigurace sestavení. Další informace najdete v tématu [generování zdrojových mapování pro ladění](#generate_source_maps).
 
 Případně, pokud potřebujete přerušit kód ve zdrojovém souboru (například *App. TSX*) a nemůžete ho provést, zkuste použít příkaz `debugger;` ve zdrojovém souboru nebo nastavte zarážky v vývojářské nástroje Chrome (nebo v nástrojích F12 pro Microsoft Edge).
 

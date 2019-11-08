@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Vyloučení projektů ze sestavení'
+title: 'Postupy: vyloučení projektů ze sestavení'
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -9,14 +9,14 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 54e65c411afe9815696112dfbcc99bcb9433c4db
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: e72b072ad2cabab643d64f149a31b1b8dbb2a054
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416862"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713939"
 ---
-# <a name="how-to-exclude-projects-from-a-build"></a>Postupy: Vyloučení projektů ze sestavení
+# <a name="how-to-exclude-projects-from-a-build"></a>Postupy: vyloučení projektů ze sestavení
 
 Můžete sestavit řešení bez nutnosti sestavovat všechny projekty, které obsahuje. Můžete například vyloučit projekt, který přerušuje sestavení. Po prozkoumání a vyřešení problémů pak můžete sestavit projekt.
 
@@ -30,7 +30,7 @@ Další informace najdete v tématu [Principy konfigurací sestavení](../ide/un
 
 ## <a name="to-temporarily-remove-a-project-from-the-active-solution-configuration"></a>Dočasné odebrání projektu z aktivní konfigurace řešení
 
-1. Na panelu nabídek vyberte možnost **sestavit** > **Configuration Manager**.
+1. Na panelu nabídek vyberte možnost **sestavit**  > **Configuration Manager**.
 
 2. V tabulce **kontexty projektu** vyhledejte projekt, který chcete ze sestavení vyloučit.
 
@@ -40,9 +40,9 @@ Další informace najdete v tématu [Principy konfigurací sestavení](../ide/un
 
 ## <a name="to-create-a-solution-configuration-that-excludes-a-project"></a>Vytvoření konfigurace řešení, která vylučuje projekt
 
-1. Na panelu nabídek vyberte možnost **sestavit** > **Configuration Manager**.
+1. Na panelu nabídek vyberte možnost **sestavit**  > **Configuration Manager**.
 
-2. V seznamu **aktivní konfigurace řešení** vyberte možnost  **\<nový >** .
+2. V seznamu **aktivní konfigurace řešení** vyberte možnost **\<New >** .
 
 3. Do pole **název** zadejte název pro konfiguraci řešení.
 
@@ -52,10 +52,23 @@ Další informace najdete v tématu [Principy konfigurací sestavení](../ide/un
 
 6. Na **standardním** panelu nástrojů ověřte, zda je nová konfigurace řešení aktivní konfigurace v poli **Konfigurace řešení** .
 
-7. V panelu nabídky zvolte **sestavení** > **znovu sestavit řešení**.
+7. Na panelu nabídek vyberte možnost **sestavit**  >  znovu**Sestavit řešení**.
+
+## <a name="skipped-projects"></a>Přeskočené projekty
+
+Projekty mohou být během sestavení přeskočeny, protože nejsou aktuální nebo protože jsou vyloučeny z konfigurace. Visual Studio používá MSBuild k sestavení vašich projektů. Nástroj MSBuild sestaví cíl pouze v případě, že výstup je starší než vstup, jak určuje časová razítka souborů. K vynucení opětovného sestavení použijte příkaz **sestavit** > znovu **Sestavit řešení**.
+
+V podokně **sestavení** v okně **výstup** hlásí Visual Studio počet projektů, které byly aktuální, číslo, které bylo úspěšně sestaveno, číslo, které selhalo, a číslo, které bylo vynecháno. Počet vynechaných prvků nezahrnuje projekty, které nebyly vytvořeny, protože byly aktuální. Když jsou projekty vyloučeny z aktivní konfigurace, jsou během sestavení přeskočeny. Ve výstupu sestavení se zobrazí zpráva oznamující, že se projekt přeskočí:
+
+```output
+2>------ Skipped Build: Project: ConsoleApp2, Configuration: Debug x86 ------
+2>Project not selected to build for this solution configuration
+```
+
+Chcete-li zjistit, proč byl projekt přeskočen, poznamenejte si aktivní konfiguraci (`Debug x86` v předchozím příkladu) a vyberte možnost **sestavit** > **Configuration Manager**. Můžete zobrazit nebo změnit, které projekty jsou přeskočeny pro každou konfiguraci, jak je popsáno v tomto článku.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Principy konfigurací sestavení](../ide/understanding-build-configurations.md)
-- [Postupy: Vytvoření a úprava konfigurací](../ide/how-to-create-and-edit-configurations.md)
-- [Postupy: Sestavování několika konfigurací současně](../ide/how-to-build-multiple-configurations-simultaneously.md)
+- [Postupy: vytváření a úpravy konfigurací](../ide/how-to-create-and-edit-configurations.md)
+- [Postupy: sestavení více konfigurací současně](../ide/how-to-build-multiple-configurations-simultaneously.md)

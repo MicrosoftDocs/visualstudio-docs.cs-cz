@@ -2,7 +2,7 @@
 title: Vytvoření webové aplikace v ASP.NET CoreC#
 description: Naučte se, jak vytvořit jednoduchou webovou aplikaci v Hello World v aplikaci C# Visual Studio pomocí a ASP.NET Core, Step-by-Step.
 ms.custom: mvc,seodec18
-ms.date: 10/15/2019
+ms.date: 11/06/2019
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: quickstart
@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: e57a72262e9fdf3224b97d6d107e8547dc0a267e
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: c87fd68a68076ab0ccab2d86f758f2217e956e26
+ms.sourcegitcommit: 292ccebc601d465931fb94218a1c289c5cf77795
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516890"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73753956"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>Rychlý Start: použití sady Visual Studio k vytvoření první ASP.NET Core webové aplikace
 
@@ -120,6 +120,8 @@ Brzy poté aplikace Visual Studio otevře soubor projektu.
 
 ## <a name="create-and-run-the-app"></a>Vytvoření a spuštění aplikace
 
+::: moniker range="vs-2017"
+
 1. V **Průzkumník řešení**rozbalte složku **stránky** a zvolte možnost **o. cshtml**.
 
    ![Vyberte soubor About. cshtml z Průzkumník řešení](../ide/media/csharp-aspnet-about-page-html-file.png)
@@ -168,6 +170,41 @@ Prohlédněte si následující animaci a zkontrolujte práci, kterou jste dokon
   ![Podívejte se na animovaný soubor. gif, který ukazuje, jak vytvořit a spustit C# jednoduchou webovou aplikaci ASP.NET Core v aplikaci Visual Studio.](../ide/media/csharp-aspnet-animated-hello-world.gif)
 
 Blahopřejeme k dokončení tohoto rychlého startu! Doufáme, že jste se dozvěděli C#trochu o, ASP.NET Core a integrovaném vývojovém prostředí (IDE) sady Visual Studio (integrované vývojové prostředí).
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. V **Průzkumník řešení**rozbalte složku **stránky** a pak zvolte **index. cshtml**.
+
+   ![Vyberte soubor index. cshtml z Průzkumník řešení](../ide/media/vs-2019/csharp-aspnet-index-page-cshtml-file.png)
+
+   Tento soubor odpovídá stránce s názvem **Domů** ve webové aplikaci, která běží ve webovém prohlížeči.
+
+   ![Stránka o službě ve webové aplikaci](../ide/media/vs-2019/csharp-aspnet-index-page.png)
+
+   V editoru uvidíte kód HTML pro text, který se zobrazí na **domovské** stránce.
+
+   ![Kód HTML v souboru index. cshtml pro domovskou stránku v editoru sady Visual Studio](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page.png)
+
+1. Změňte úvodní text tak, aby se načetl**Hello World!** .
+
+   ![V editoru sady Visual Studio změňte výchozí kód HTML, který říká úvodní Hello World místo toho.](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page-hello-world.png)
+
+1. Zvolte **IIS Express** nebo stiskněte **CTRL** +**F5** a spusťte aplikaci a otevřete ji ve webovém prohlížeči.
+
+   ![Výběr tlačítka IIS Express v aplikaci Visual Studio](../ide/media/vs-2019/csharp-aspnet-generic-iisbutton.png)
+
+   > [!NOTE]
+   > Pokud se zobrazí chybová zpráva s oznámením, že se **nelze připojit k webovému serveru ' IIS Express '** nebo chybová zpráva, která uvádí certifikát protokolu SSL, ukončete aplikaci Visual Studio. Dále otevřete aplikaci Visual Studio pomocí možnosti **Spustit jako správce** z místní nabídky klikněte pravým tlačítkem myši. Pak aplikaci spusťte znovu.
+
+1. Ve webovém prohlížeči ověřte, zda je na **domovské** stránce zahrnut aktualizovaný text.
+
+   ![Zobrazit aktualizovanou domovskou stránku, která obsahuje změny, které jste provedli](../ide/media/vs-2019/csharp-aspnet-index-page-hello-world.png)
+
+1. Zavřete webový prohlížeč.
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Další kroky
 
