@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 7bd03ead39d0b2b5013075de017954f0c0c30e8c
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: 0405488f6f456f22711498e81789881ffc5a0a8a
+ms.sourcegitcommit: 308a2bdbea81df78bffc3a01afce4ab13131fabc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73714484"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912994"
 ---
 # <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>Ladění JavaScriptu nebo aplikace TypeScriptu v aplikaci Visual Studio
 
@@ -105,13 +105,13 @@ V tomto scénáři použijte Chrome.
 
 Chcete-li připojit ladicí program ze sady Visual Studio a zarážky volání v kódu na straně klienta, ladicí program potřebuje k identifikaci správného procesu. Tady je jedna možnost, jak to udělat.
 
-1. Přepněte do sady Visual Studio a pak nastavte zarážku ve zdrojovém kódu, což může být soubor JavaScriptu, soubor TypeScript, soubor *. Vue* nebo soubor JSX. (Nastavte zarážku na řádek kódu, který umožňuje zarážky, jako je například návratový příkaz nebo deklarace var.)
+1. Přepněte do sady Visual Studio a pak nastavte zarážku ve zdrojovém kódu, což může být soubor JavaScriptu, soubor TypeScript nebo soubor JSX. (Nastavte zarážku na řádek kódu, který umožňuje zarážky, jako je například návratový příkaz nebo deklarace var.)
 
     ![Nastavení zarážky](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
     Chcete-li najít konkrétní kód v souboru s předaným souborem, použijte **kombinaci kláves Ctrl**+**F** (**upravit** > **Najít a nahradit** > **Rychlé hledání**).
 
-    Pro kód na straně klienta pro volání zarážky v souboru TypeScript, *. Vue*nebo souboru JSX obvykle vyžaduje použití [zdrojových mapování](#generate_source_maps). Zdrojové mapování musí být správně nakonfigurované, aby podporovalo ladění v aplikaci Visual Studio.
+    Pro kód na straně klienta pro volání zarážky v souboru TypeScript nebo souboru JSX obvykle vyžaduje použití [zdrojových mapování](#generate_source_maps). Zdrojové mapování musí být správně nakonfigurované, aby podporovalo ladění v aplikaci Visual Studio.
 
 2. Vyberte cílový prohlížeč jako cíl ladění v aplikaci Visual Studio a potom stiskněte **klávesu Ctrl**+**F5** (**ladění** > **Spustit bez ladění**) pro spuštění aplikace v prohlížeči.
 
@@ -165,7 +165,7 @@ Chcete-li připojit ladicí program ze sady Visual Studio a zarážky volání v
 
 ### <a name="troubleshooting_source_maps"></a>Řešení potíží se zarážkami a zdrojovými mapami
 
-Pokud potřebujete přerušit kód ve zdrojovém souboru TypeScript, JSX nebo *. Vue* a nemůžete ho provést, použijte příkaz **připojit k procesu** , jak je popsáno v předchozích krocích pro připojení ladicího programu. Ujistěte se, že je prostředí správně nastavené:
+Pokud potřebujete přerušit kód ve zdrojovém souboru TypeScript nebo JSX a nemůžete ho provést, použijte příkaz **připojit k procesu** , jak je popsáno v předchozích krocích pro připojení ladicího programu. Ujistěte se, že je prostředí správně nastavené:
 
 * Zavřeli jste všechny instance prohlížeče, včetně rozšíření Chrome (pomocí Správce úloh), abyste mohli spustit prohlížeč v režimu ladění.
       
