@@ -202,8 +202,6 @@
               href: how-to-open-standard-editors.md
             - name: Otevření editorů pro otevřené dokumenty
               href: how-to-open-editors-for-open-documents.md
-        - name: Průvodce migrací rozšiřitelnosti návrhářů XAML
-          href: xaml-designer-extensibility-migration.md
 - name: Rozšíření projektů
   items:
     - name: Rozšíření projektů

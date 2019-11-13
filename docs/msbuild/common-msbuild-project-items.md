@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0493e7d16a7c7ecb7a9cf7d414e3bd13cb9ad9a7
-ms.sourcegitcommit: f9f389e72787de30eb869a55ef7725a10a4011f0
+ms.openlocfilehash: cb759ba9571e16d0030f1fd6baf6d4feb03efb2e
+ms.sourcegitcommit: 510529f2f86a9897ed5767973e60c99c0d3a77a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73636573"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73956149"
 ---
 # <a name="common-msbuild-project-items"></a>Společné položky projektu nástroje MSBuild
 V [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]položka je pojmenovaný odkaz na jeden nebo více souborů. Položky obsahují metadata, jako jsou názvy souborů, cesty a čísla verzí. Všechny typy projektů v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] mají společné několik položek. Tyto položky jsou definovány v souboru *Microsoft. Build. CommonTypes. xsd*.
@@ -46,7 +46,7 @@ V [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md
 |Název metadat položky|Popis|
 |---------------|-----------------|
 |Name|Volitelný řetězec. Zobrazovaný název součásti.|
-|Hlavních|Povinný řetězec. Identifikátor GUID pro komponentu ve formuláři {12345678-1234-1234-1234-1234567891234}.|
+|hlavních|Povinný řetězec. Identifikátor GUID pro komponentu ve formuláři {12345678-1234-1234-1234-1234567891234}.|
 |VersionMajor|Povinný řetězec. Hlavní část čísla verze součásti. Například "5", pokud je číslo úplné verze "5,46".|
 |VersionMinor|Povinný řetězec. Vedlejší část čísla verze součásti. Například "46", pokud je číslo úplné verze "5,46".|
 |IDENTIFIKÁTORY|Volitelný řetězec. LocaleID pro komponentu|
@@ -141,13 +141,14 @@ V [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md
 
 > [!NOTE]
 > To platí jenom pro projekty, které používají jenom .NET Core SDK.
+
 ### <a name="baseapplicationmanifest"></a>BaseApplicationManifest
  Představuje manifest základní aplikace pro sestavení a obsahuje informace o zabezpečení nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)].
 
 ### <a name="codeanalysisimport"></a>CodeAnalysisImport
  Představuje projekt FxCop, který se má importovat.
 
-### <a name="import"></a>Importovat
+### <a name="import"></a>importovat
  Představuje sestavení, jejichž obory názvů by měly být importovány [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] kompilátorem.
 
 ## <a name="see-also"></a>Viz také:
