@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c9e75d003031d591c8ae777c606e6f7a2b6ea8c0
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: e3a83ad65232e75ffa74b66035e5c01a8491b426
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72912004"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983706"
 ---
 # <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001: Pro zřetězování používejte StringBuilder
 
@@ -41,4 +41,4 @@ ms.locfileid: "72912004"
 ## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění
  Dvakrát klikněte na zprávu v okně **Seznam chyb** , abyste přešli na [zobrazení podrobností o funkcích](../profiling/function-details-view.md) profilu vzorkování. Najděte části programu, které zjednodušují zřetězení řetězců. Použijte třídu StringBuilder pro komplexní manipulaci s řetězci, včetně častých operací zřetězení řetězců.
 
- Další informace o tom, jak pracovat s řetězci, najdete v části [operace s řetězci](/previous-versions/msp-n-p/ff647790(v=pandp.10)#scalenetchapt05_topic26) v [kapitole 5 – zlepšení výkonu spravovaného kódu](/previous-versions/msp-n-p/ff647790(v=pandp.10)) v knihovně Microsoft Patterns and Practices Library.
+ Další informace o tom, jak pracovat s řetězci, najdete v části [operace s řetězci](/previous-versions/msp-n-p/ff647790(v=pandp.10)#string-operations) v [kapitole 5 – zlepšení výkonu spravovaného kódu](/previous-versions/msp-n-p/ff647790(v=pandp.10)) v knihovně Microsoft Patterns and Practices Library.

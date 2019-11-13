@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: Seznamte se s výhodou podpory komunity Azure, která je součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 128147833baf450c0d161f39628a0928e9118412
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 32a1c962e238bfc5ab8083ff643a99a77b699925
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816536"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983752"
 ---
 # <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Fórum podpory komunity Azure v předplatných sady Visual Studio
 Získejte pomoc přímo od týmu Azure v rámci vybraných fór podpory prostřednictvím komunity Azure.  Výhoda komunity Azure poskytuje přístup ke kolekci fór zaměřené na témata související s Azure.
@@ -50,7 +50,9 @@ Dostupnost výhod komunity Azure závisí na úrovni předplatného, jak je zná
 |                                          Úroveň předplatného                                           |     Kanály      |    Výhodnosti    | Mlčky? |
 |-------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
 |                           Visual Studio Enterprise (Standard)                           | VL, Azure, Retail |   Jeden rok    |    Ano     |
+|                           Visual Studio Enterprise s GitHubem Enterprise                           | VL, Azure, Retail |   Jeden rok    |    Ano     |
 |                          Visual Studio Professional (Standard)                          | VL, Azure, Retail |   Jeden rok    |    Ano     |
+|                          Visual Studio Professional s GitHubem Enterprise                          | VL, Azure, Retail |   Jeden rok    |    Ano     |
 |                              Visual Studio Test Professional (Standard)                               |    VL, maloobchodní prodej     |   Jeden rok    |    Ano     |
 |                                       MSDN Platforms (Standard)                                       |    VL, maloobchodní prodej     |   Jeden rok    |    Ano     |
 | Visual Studio Enterprise (měsíční Cloud), Visual Studio Professional (měsíční Cloud), NFR<sup>1</sup> |        Všechny        | Není k dispozici |     Ne     |

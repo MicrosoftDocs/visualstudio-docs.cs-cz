@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/30/2019
 ms.topic: conceptual
 description: Přečtěte si o výhodách zvýraznění přetypování dostupných ve vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: c55891b9aacb81c5169a9082f7e1fd1d922eda92
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: c985a4ae4c1cdcf5c034293d2848a764d6be3d24
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816438"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983741"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Výhoda zvýraznění přetypování v předplatných sady Visual Studio
 Při migraci do cloudu potřebují vývojáři důležité poznatky o jejich softwaru. S zvýrazňováním přetypování může Visual Studio Enterprise předplatitelé rychle prověřit svůj zdrojový kód aplikace, aby identifikovali připravenost cloudu svých aplikací pro migraci do Azure a sledovali průběh své aplikace jak během migrace, tak i po ní.
@@ -76,7 +76,9 @@ Po schválení vaší žádosti obdržíte druhý e-mail potvrzující úspěšn
 | Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | Vyhodnotit 5 aplikací na 30 dní|  Ne.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | Vyhodnotit 5 aplikací na 30 dní|  Ne.  Dostupné jenom pro nové předplatitele          |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                             |  Není k dispozici          |
+| Visual Studio Professional s GitHubem Enterprise | VL                                       | Není k dispozici                                                             |  Není k dispozici          |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                             |  Není k dispozici           |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  Není k dispozici          |
 | Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | Není k dispozici |
@@ -98,6 +100,6 @@ Nejste si jistí, jaké Předplatné používáte?  Pokud chcete zobrazit všech
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="next-steps"></a>Další kroky
-Pokud jste ještě neaktivovali výhody Azure, které jsou součástí vašeho předplatného, přejděte na [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) a klikněte na dlaždici Azure v kategorii Nástroje, abyste si nastavili předplatné Azure a využili svůj jednotlivý kredit Azure DevTest.
+Pokud jste ještě neaktivovali zvýhodněné kredity Azure DevTest, která se dodává s vaším předplatným, přejděte na [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) a klikněte na dlaždici Azure v kategorii Nástroje, abyste si nastavili předplatné Azure a využili svůj jednotlivý kredit Azure DevTest.
 
 A nezapomeňte se podívat na ukázková videa, uživatelské příručky a kurzy uvedené v e-mailu Greg.

@@ -15,18 +15,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 16fb3e4a0e1aed14e4a3f1b3178dc753f5dc10b4
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 6dc1449a40528670274ea5b275cca3f0a8d2f277
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984184"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983781"
 ---
 # <a name="security-for-sharepoint-solutions"></a>Zabezpečení pro řešení služby SharePoint
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] zahrnuje následující funkce, které vám pomůžou zvýšit zabezpečení aplikací SharePoint.
 
 ## <a name="safe-control-entries"></a>Položky bezpečného řízení
- Každá položka projektu služby SharePoint vytvořená v [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] má vlastnost **bezpečného řízení položky** , která představuje kolekci bezpečných ovládacích prvků. Jeho **bezpečná** podvlastnost umožňuje zadat ovládací prvky, které považujete za bezpečné. Další informace naleznete v tématu [poskytnutí informací o balíčku a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) a [určení bezpečného webové části](/previous-versions/office/developer/sharepoint2003/dd583154(v=office.11)#sharepoint_northwindwebparts_topic19).
+ Každá položka projektu služby SharePoint vytvořená v [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] má vlastnost **bezpečného řízení položky** , která představuje kolekci bezpečných ovládacích prvků. Jeho **bezpečná** podvlastnost umožňuje zadat ovládací prvky, které považujete za bezpečné. Další informace naleznete v tématu [poskytnutí informací o balíčku a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) a [určení bezpečného webové části](/previous-versions/office/developer/sharepoint2003/dd583154(v=office.11)#specifying-safe-web-parts).
 
 ## <a name="allowpartiallytrustedcallers-attribute"></a>AllowPartiallyTrustedCallers – atribut
  Ve výchozím nastavení mají přístup ke sdílenému sestavení spravovaného kódu pouze aplikace, které jsou plně důvěryhodné pro systém CAS (Code Access Security). Označení plně důvěryhodného sestavení pomocí atributu AllowPartiallyTrustedCallers umožňuje částečně důvěryhodným sestavením přístup k němu.

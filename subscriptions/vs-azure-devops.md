@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/30/2019
 ms.topic: conceptual
 description: Zjistěte, jak můžete Azure DevOps použít jako předplatitel sady Visual Studio.
-ms.openlocfilehash: 227ba1652c592a6fdf3f20bdb5052d9330f142a1
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: 9b4c616c870f0834b6974d59540035687b32fc12
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314153"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983695"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Výhody Azure DevOps pro předplatitele sady Visual Studio
 Jako aktivní předplatitelé sady Visual Studio můžete využívat řadu funkcí v Azure DevOps, které jsou součástí vašeho předplatného jako výhod. Tyto stejné funkce budete moct používat v každé organizaci Azure DevOps, ve které jste členem, ať už jste organizaci vytvořili nebo ji přidali někdo jiný.
@@ -25,7 +25,9 @@ Když se přihlásíte k Azure DevOps pomocí identity, kterou jste použili k a
 | Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (standardní, měsíční Cloud)   | VL, Azure, Retail, vybrané NFR<sup>1</sup>  | Azure Boards & úložišť (Basic), Azure Test Plans Azure Pipelines (v místním prostředí)       |  Ano          |
-| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail,                                        | Úložiště & Azure Boards (základní)                                                            |  Ano          |
+| Visual Studio Enterprise s GitHubem Enterprise   | VL| Azure Boards & úložišť (Basic), Azure Test Plans Azure Pipelines (v místním prostředí)       |  Ano          |
+| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                        | Úložiště & Azure Boards (základní)                                                            |  Ano          |
+| Visual Studio Professional s GitHubem Enterprise | VL| Úložiště & Azure Boards (základní)                                                            |  Ano          |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Azure Boards & úložišť (Basic), Azure Test Plans                                              |  Ano          |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Azure Boards & úložišť (Basic), Azure Test Plans                                              |  Ano          |
 ||
@@ -49,3 +51,5 @@ Další informace o funkcích Azure DevOps:
 - [Úložiště & Azure Boards (základní)](https://azure.microsoft.com/services/devops/compare-features/)
 - [Azure Test Plans](https://marketplace.visualstudio.com/items?itemName=ms.vss-testmanager-web)
 - [Azure Artifacts](https://marketplace.visualstudio.com/items?itemName=ms.feed)
+
+Naučte se aktivovat [jednotlivé kredity Azure DevTest](vs-azure.md).
