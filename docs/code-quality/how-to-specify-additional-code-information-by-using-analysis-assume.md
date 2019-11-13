@@ -12,20 +12,20 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 186ea6ac58736098720d60c644c30801073b7453
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 9933a013ed4f2df0978fb66e3aff87b4cdc024f9
+ms.sourcegitcommit: c6af923c1f485959d751b23ab3f03541013fc4a7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018728"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73925965"
 ---
-# <a name="how-to-specify-additional-code-information-by-using-_analysis_assume"></a>Postupy: Určení dalších informací o kódu pomocí funkce _Analysis_assume
+# <a name="how-to-specify-additional-code-information-by-using-_analysis_assume"></a>Postupy: určení dalších informací o kódu pomocí _Analysis_assume
 
 Můžete poskytnout nápovědu nástroji pro analýzu kódu pro C/C++ kód, který pomůže procesu analýzy a omezit upozornění. Chcete-li zadat další informace, použijte následující funkci:
 
 `_Analysis_assume(`  `expr`  `)`
 
-`expr` – libovolný výraz, který se předpokládá, že se vyhodnotí jako true.
+`expr` – libovolný výraz, který se předpokládá pro vyhodnocení na hodnotu true.
 
 Nástroj Analýza kódu předpokládá, že podmínka reprezentovaná výrazem je pravdivá v místě, kde je funkce zobrazena a zůstává true, dokud není výraz změněn, například přiřazením proměnné.
 
@@ -34,7 +34,7 @@ Nástroj Analýza kódu předpokládá, že podmínka reprezentovaná výrazem j
 
 ## <a name="example"></a>Příklad
 
-Následující kód používá `_Analysis_assume` pro opravu upozornění analýzy kódu [C6388](../code-quality/c6388.md):
+Následující kód používá `_Analysis_assume` k opravě upozornění analýzy kódu [C6388](../code-quality/c6388.md):
 
 ```cpp
 #include<windows.h>
@@ -52,7 +52,7 @@ void test()
 {
     char pc = (char)malloc(5);
     FreeAndNull(&pc);
-    __analysis_assume(pc == NULL);
+    _Analysis_assume(pc == NULL);
     f(pc);
 }
 ```

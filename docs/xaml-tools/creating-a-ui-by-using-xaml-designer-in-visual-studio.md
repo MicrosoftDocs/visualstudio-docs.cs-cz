@@ -1,5 +1,5 @@
 ---
-title: Přehled Návrhář XAML
+title: Přehled Návrháře XAML
 ms.date: 07/31/2019
 ms.topic: conceptual
 f1_keywords:
@@ -12,24 +12,24 @@ ms.assetid: c54969a7-d75a-4a35-9b37-af7a596a7c24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0f43222e593b836f44a84e5f64642403f0263ca5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0facc87df720af8376561ae7599fe20afeab1a12
+ms.sourcegitcommit: c6af923c1f485959d751b23ab3f03541013fc4a7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649711"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73925968"
 ---
 # <a name="create-a-ui-by-using-xaml-designer"></a>Vytvoření uživatelského rozhraní pomocí Návrháře XAML
 
 Návrhář XAML v aplikaci Visual Studio a Blend pro Visual Studio poskytuje vizuální rozhraní, které vám umožňuje navrhovat aplikace založené na jazyce XAML, například WPF, UWP a Xamarin. Forms. Můžete vytvořit uživatelská rozhraní pro aplikace přetažením ovládacích prvků z okna panelu nástrojů (okno assets v Blend pro Visual Studio) a nastavením vlastností v okno Vlastnosti. Můžete také upravit XAML přímo v zobrazení XAML.
 
-V případě pokročilých uživatelů můžete [Návrhář XAML přizpůsobit](../extensibility/xaml-designer-extensibility-migration.md).
+V případě pokročilých uživatelů můžete [Návrhář XAML přizpůsobit](https://github.com/microsoft/xaml-designer-extensibility/blob/master/documents/xaml-designer-extensibility-migration.md).
 
 ## <a name="xaml-designer-workspace"></a>Pracovní prostor Návrhář XAML
 
 Pracovní prostor v Návrhář XAML se skládá z několika prvků vizuálního rozhraní. Mezi ně patří *Kreslicí* plocha (což je vizuální návrhová plocha), Editor XAML, okno Osnova dokumentu (objekty a časová osa okno v Blend pro Visual Studio) a okno Vlastnosti. Chcete-li otevřít Návrhář XAML, klikněte pravým tlačítkem myši na soubor XAML v **Průzkumník řešení** a vyberte možnost **Návrhář zobrazení**.
 
-Návrhář XAML poskytuje zobrazení XAML a synchronizovaný zobrazení Návrh vykresleného kódu XAML vaší aplikace. Se souborem XAML otevřeným v aplikaci Visual Studio nebo Blend pro Visual Studio můžete přepínat mezi zobrazení Návrh a zobrazením XAML pomocí karet **design** a **XAML** . K přepnutí zobrazeného okna v horní části můžete použít tlačítko **odkládacích podoken** ![Swap podokna v Návrhář XAML ](media/swap-panes.PNG): buď na návrhovou plochu, nebo na Editor XAML.
+Návrhář XAML poskytuje zobrazení XAML a synchronizovaný zobrazení Návrh vykresleného kódu XAML vaší aplikace. Se souborem XAML otevřeným v aplikaci Visual Studio nebo Blend pro Visual Studio můžete přepínat mezi zobrazení Návrh a zobrazením XAML pomocí karet **design** a **XAML** . Můžete použít tlačítko **odkládacích panelů** ![tlačítko odkládacích panelů v Návrhář XAML](media/swap-panes.PNG) pro přepnutí zobrazeného okna nahoře: buď na návrhovou plochu, nebo na Editor XAML.
 
 ### <a name="design-view"></a>zobrazení Návrh
 
