@@ -1,6 +1,6 @@
 ---
 title: Obecné, ladění, dialogové okno Možnosti | Microsoft Docs
-ms.date: 11/09/2018
+ms.date: 11/12/2019
 ms.topic: reference
 f1_keywords:
 - vs.debug.options.General
@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbd99d260ba61d9e3ae9e877ecc1cefb1a22892e
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 528fa04b081937af69e647b01911ed00c1ec40c9
+ms.sourcegitcommit: 9801fc66a14c0f855b9ff601fb981a9e5321819e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72569068"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74072719"
 ---
 # <a name="general-debugging-options"></a>Obecné možnosti ladění
 
@@ -137,6 +137,12 @@ Chcete-li zjistit, jaké symboly jsou k dispozici v exportní tabulce knihovny D
 - **Zobrazit běhové nástroje v aplikaci**: zobrazí příkazy **živého vizuálního stromu** na panelu nástrojů v hlavním okně aplikace XAML, které je laděno. Tato možnost byla představena v aktualizaci Visual Studio 2015 Update 2.
 
 - **Povolit kódování XAML Hot Loading**: umožňuje používat funkci XAML Hot reload s kódem XAML, když je vaše aplikace spuštěná. (Tato funkce se dřív nazývala "úpravy a pokračování v jazyce XAML")
+
+::: moniker range=">= vs-2019" 
+- **Povolit pouze můj kód XAML**: počínaje verzí visual Studio 2019 verze 16,4, **dynamický vizuální strom** ve výchozím nastavení zobrazuje pouze XAML, který je klasifikován jako uživatelský kód. Pokud tuto možnost zakážete, zobrazí se v nástroji celý generovaný kód XAML.
+
+- Vypnout **režim výběru, když je vybrán element** Počínaje verzí Visual Studio 2019 verze 16,4 je tlačítko selektor prvků panelu nástrojů v aplikaci (**Povolit výběr**) vypnuto při výběru prvku. Pokud tuto možnost zakážete, výběr prvků zůstane zapnutý, dokud znovu nekliknete na tlačítko na panelu nástrojů aplikace.
+::: moniker-end
 
 **Povolit diagnostické nástroje při ladění**: během ladění se zobrazí okno **diagnostické nástroje** .
 

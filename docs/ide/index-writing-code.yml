@@ -1,6 +1,6 @@
 ### YamlMime:Landing
-title: Úprava kódu v aplikaci Visual Studio
-summary: Přečtěte si o úpravách úkolů, jako je například otevření projektu, použití funkcí editoru kódu a zachování konzistentního stylu kódu.
+title: Organizování a úpravy kódu v aplikaci Visual Studio
+summary: Další informace o práci s projekty kódu, použití funkcí editoru kódu a zachování konzistentního stylu kódu.
 metadata:
   title: Funkce editoru kódu
   description: Přečtěte si o funkcích pro úpravu kódu v aplikaci Visual Studio.
@@ -10,12 +10,12 @@ metadata:
   author: gewarren
   ms.author: gewarren
   ms.date: 10/15/2019
-  ms.openlocfilehash: 30345839ca1c5f4f07b3c36415f7aad277693069
-  ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+  ms.openlocfilehash: 8cecddb4c8b9a49d56a6f133b751be53302b4347
+  ms.sourcegitcommit: 20325d85cd74906f5f30668133bd11a40f229b0c
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 10/17/2019
-  ms.locfileid: "72516827"
+  ms.lasthandoff: 11/14/2019
+  ms.locfileid: "74087249"
 landingContent:
 - title: Otevřete nebo vytvořte projekt
   linkLists:
