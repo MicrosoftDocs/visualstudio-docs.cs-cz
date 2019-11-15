@@ -3,15 +3,15 @@ title: Zvýhodnění Visual Studio IDE v Visual Studio Subscription | Microsoft 
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 08/01/2019
+ms.date: 11/14/2019
 ms.topic: conceptual
 description: Naučte se stáhnout a nainstalovat integrované vývojové prostředí (IDE) sady Visual Studio zahrnuté v předplatném Visual studia.
-ms.openlocfilehash: 5a5acda814739f907aaa36e9b3408527b5ece732
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 74f7de0272130f88c683dcabefaecccf1554ab12
+ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816516"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74099630"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Výhody sady Visual Studio 2019
 
@@ -62,7 +62,9 @@ Stažení integrovaného vývojového prostředí (IDE):
 | Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (standardní, měsíční Cloud)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Ano          |
+| Visual Studio Enterprise s GitHubem Enterprise   | VL | K dispozici       |  Ano          |
 | Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | K dispozici                                                            |  Ano          |
+| Visual Studio Professional s GitHubem Enterprise | VL   | K dispozici              |  Ano          |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici                                             |  Ano         |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  Není k dispozici          |
 
@@ -82,5 +84,5 @@ Nejste si jistí, jaké Předplatné používáte?  Pokud chcete zobrazit všech
 ## <a name="next-steps"></a>Další kroky
 Jakmile máte nainstalovanou aplikaci Visual Studio, nezapomeňte aktivovat tyto další důležité výhody:
 - [Azure DevOps](vs-azure-devops.md)
-- [Individuální kredit Azure DevTest](vs-azure.md)
+- [Individuální kredit v Azure DevTest](vs-azure.md)
 - [Vývojářský účet pro Windows](vs-windows-dev.md)

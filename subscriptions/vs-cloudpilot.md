@@ -3,15 +3,15 @@ title: Výhody pro CloudPilot předplatných sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/30/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 description: Přečtěte si o výhodách CloudPilot dostupných ve vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 5f8592b15f61dff454b6fe29d4d207dd609ab461
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 253a1b1c3b6996a200a236661d621c43975cb1ed
+ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816503"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74099620"
 ---
 # <a name="the-cloudpilot-benefit-in-visual-studio-subscriptions"></a>Výhoda CloudPilot v předplatných sady Visual Studio
 Přesuňte své aplikace do Microsoft Azure v několika snadných krocích. V minutách identifikujte všechny požadované změny kódu až do řádku kódu pro úspěšnou migraci na: kontejnery, virtuální počítače, App Services, SQL Azure a/nebo SQL MI. Pak migrujte aplikace do Azure pomocí průvodců využívajících ASR, DMA a DMS.
@@ -59,7 +59,9 @@ CloudPilot podle UnifyCloud je navržená tak, aby pomáhala vývojářům rychl
 | Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | 2 licence, 90 dní, neomezený počet kontrol       |  Ne.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Enterprise s GitHubem Enterprise   | VL | 2 licence, 90 dní, neomezený počet kontrol       |  Ne.  Dostupné jenom pro nové předplatitele          |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | 1 licence, 30 dní, jedna kontrola                                                            |  Ne.  Dostupné jenom pro nové předplatitele           |
+| Visual Studio Professional s GitHubem Enterprise | VL | 1 licence, 30 dní, jedna kontrola                                                            |  Ne.  Dostupné jenom pro nové předplatitele           |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                             |  Není k dispozici           |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  Není k dispozici          |
 | Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | Není k dispozici |
@@ -83,4 +85,4 @@ Nejste si jistí, jaké Předplatné používáte?  Pokud chcete zobrazit všech
 
 ## <a name="next-steps"></a>Další kroky
 
-Pokud jste ještě neaktivovali výhody Azure, které jsou součástí vašeho předplatného, přejděte na [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) a klikněte na dlaždici Azure v kategorii Nástroje, abyste si nastavili předplatné Azure a využili svůj jednotlivý kredit Azure DevTest.
+Pokud jste ještě neaktivovali zvýhodněné kredity Azure DevTest, která se dodává s vaším předplatným, přejděte na [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) a klikněte na dlaždici Azure v kategorii Nástroje, abyste si nastavili předplatné Azure a využili svůj jednotlivý kredit Azure DevTest.

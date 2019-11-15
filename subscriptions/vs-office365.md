@@ -6,12 +6,12 @@ manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
 description: Přečtěte si o výhodách Office 365 zahrnutých v některých předplatných sady Visual Studio.
-ms.openlocfilehash: 58bfed3de99e3a3fa0a46e084ea566ae0451c47f
-ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
+ms.openlocfilehash: 2dde8489f15d8bd2e6a5d04045b99aea2245f73d
+ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144716"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74099609"
 ---
 # <a name="office-365-proplus-in-visual-studio-subscriptions"></a>Office 365 ProPlus v předplatných sady Visual Studio
 
@@ -51,8 +51,10 @@ Pomocí těchto kroků si stáhněte a aktivujte Office 365 ProPlus:
 | Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard)   | VL, Azure, Retail| K dispozici       |  Ano          |
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici       |  Ano          |
 | Visual Studio Enterprise (Standard)   | NFR<sup>1</sup> | Není k dispozici       |  Není k dispozici          |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                            |  Není k dispozici          |
+| Visual Studio Professional s GitHubem Enterprise | VL | Není k dispozici         |  Není k dispozici          |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                             |  Není k dispozici          |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  Není k dispozici          |
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | Není k dispozici |

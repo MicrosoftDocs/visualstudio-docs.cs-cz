@@ -1,210 +1,75 @@
 ### YamlMime:Hub
-title: Dokumentace sady Visual Studio
-summary: Naučte se používat Visual Studio k vývoji aplikací, služeb a nástrojů v jazyce podle vašeho výběru, pro vaše platformy a zařízení.
+title: Dokumentace k produktové rodině sady Visual Studio
+summary: Prozkoumejte dokumentaci pro produktovou řadu Visual Studio.
 brand: visual-studio
 metadata:
-  title: Dokumentace k sadě Visual Studio | Microsoft Docs
-  titleSuffix: ''
-  description: Naučte se používat Visual Studio k vývoji aplikací, služeb a nástrojů v jazyce podle vašeho výběru, a to pro libovolnou platformu nebo zařízení.
+  title: Dokumentace k produktové rodině sady Visual Studio
+  description: Prozkoumejte dokumentaci pro produktovou řadu Visual Studio.
   ms.topic: hub-page
+  ms.date: 11/13/2019
+  searchScope: []
+  titleSuffix: ''
+  ms.author: ghogen
+  author: ghogen
+  ms.manager: jillfra
   monikerRange: '>=vs-2017'
-  f1_keywords:
-  - MSDNSTART
-  ms.openlocfilehash: 16566f855e2e7504616da3d4196440facf145e6b
-  ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+  hide_bc: true
+  ms.openlocfilehash: b36b1835f38a4ce6fe46d72935dc8cfc144561c3
+  ms.sourcegitcommit: 890ae10c8ea3bff8306ed25b06256578dee08397
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 10/16/2019
-  ms.locfileid: "72380953"
-highlightedContent:
+  ms.lasthandoff: 11/15/2019
+  ms.locfileid: "74118930"
+productDirectory:
   items:
-  - title: Nastavení a instalace
-    itemType: download
-    url: /visualstudio/install/install-visual-studio
-  - title: Vítejte v integrovaném vývojovém prostředí sady Visual Studio
-    itemType: overview
-    url: /visualstudio/ide/visual-studio-ide
-  - title: Novinky v sadě Visual Studio 2019
-    itemType: get-started
-    url: /visualstudio/ide/whats-new-visual-studio-2019
-  - title: Zlepšení schopností vývoje
-    itemType: learn
-    url: /learn/
-conceptualContent:
-  title: Začínáme
-  items:
-  - title: Naučte se používat Visual Studio
+  - title: Visual Studio
+    imageSrc: ./media/vs-ide-2019.svg
     links:
-    - text: Spustit prohlídku s asistencí
-      url: ide/visual-studio-ide.md
-      itemType: overview
-    - text: Otevření kódu z úložiště
-      url: get-started/tutorial-open-project-from-repo.md
-      itemType: tutorial
-    - text: Psaní kódu a jeho úpravy
-      url: ide/index-writing-code.yml
-      itemType: tutorial
-    - text: Sestavení kódu
-      url: ide/compiling-and-building-in-visual-studio.md
-      itemType: tutorial
-    - text: Ladění kódu
-      itemType: tutorial
-      url: debugger/debugger-feature-tour.md
-    - text: Testování kódu
-      itemType: tutorial
-      url: test/getting-started-with-unit-testing.md
-    - text: Přístup k datům místně nebo v cloudu
-      itemType: tutorial
-      url: data-tools/create-a-sql-database-by-using-a-designer.md
-  - title: Postupujte podle kurzu
+    - url: /visualstudio/windows?view=vs-2019
+      text: Visual Studio 2019 (aktuální)
+    - url: /visualstudio/windows?view=vs-2017
+      text: Visual Studio 2017
+    - url: https://docs.microsoft.com/previous-versions/visualstudio/
+      text: Předchozí verze
+    - url: https://docs.microsoft.com/visualstudio/releases/2019/release-notes
+      text: Zpráva k vydání verze
+    - url: https://visualstudio.microsoft.com/
+      text: Stránka produktu
+  - title: Visual Studio for Mac
+    imageSrc: ./media/vs-mac-2019.svg
     links:
-    - text: C#
-      url: /visualstudio/get-started/csharp
-      itemType: get-started
-    - text: F#
-      url: /visualstudio/ide/quickstart-fsharp
-      itemType: get-started
-    - text: Visual Basic
-      url: /visualstudio/get-started/visual-basic/
-      itemType: get-started
-    - text: C++
-      url: /cpp/get-started/tutorial-console-cpp
-      itemType: get-started
-    - text: Python
-      url: /visualstudio/python
-      itemType: get-started
-    - text: JavaScript
-      url: /visualstudio/javascript
-      itemType: get-started
-  - title: Vytvoření aplikace
+    - url: https://docs.microsoft.com/visualstudio/mac
+      text: Visual Studio 2019 pro Mac (aktuální)
+    - url: https://docs.microsoft.com/visualstudio/mac/?view=vsmac-2017
+      text: Visual Studio 2017 for Mac
+    - url: https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes
+      text: Zpráva k vydání verze
+    - url: https://visualstudio.microsoft.com/vs/mac/
+      text: Stránka produktu
+  - title: Visual Studio Code
+    imageSrc: ./media/vs-code-logo.svg
     links:
-    - text: Desktopová aplikace pro Windows
-      itemType: tutorial
-      url: /visualstudio/ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic
-    - text: Univerzální aplikace pro Windows
-      itemType: tutorial
-      url: /visualstudio/get-started/csharp/tutorial-uwp
-    - text: Mobilní aplikace
-      itemType: overview
-      url: /visualstudio/cross-platform/cross-platform-mobile-development-in-visual-studio
-    - text: Hra Unity
-      itemType: tutorial
-      url: /visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity
-    - text: Webová aplikace s ASP.NET Core
-      itemType: quickstart
-      url: /aspnet/core/tutorials/razor-pages/razor-pages-start
-tools:
-  title: Jazyky
-  items:
-  - title: C++
-    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
-    url: /cpp/
-  - title: C#
-    imageSrc: https://docs.microsoft.com/media/logos/logo_Csharp.svg
-    url: /dotnet/csharp
-  - title: F#
-    imageSrc: https://docs.microsoft.com/media/logos/logo_Fsharp.svg
-    url: /dotnet/fsharp
-  - title: Visual Basic
-    imageSrc: https://docs.microsoft.com/media/logos/logo_VB.svg
-    url: /dotnet/visual-basic
-  - title: Python
-    imageSrc: https://docs.microsoft.com/media/logos/logo_python.svg
-    url: /visualstudio/python
-  - title: JavaScript
-    imageSrc: https://docs.microsoft.com/media/logos/logo_js.svg
-    url: /visualstudio/javascript
-  - title: TypeScript
-    imageSrc: https://docs.microsoft.com/media/logos/logo_TS.svg
-    url: http://www.typescriptlang.org/docs/tutorial.html
-  - title: R
-    imageSrc: https://docs.microsoft.com/media/logos/logo_R.svg
-    url: /visualstudio/rtvs/?view=vs-2017
-additionalContent:
-  sections:
-  - title: Úkoly
-    items:
-    - title: Vývoj
-      summary: Zápis a Správa kódu pomocí editoru kódu.
-      url: ide/index-writing-code.yml
-    - title: Sestavení
-      summary: Zkompilujte a sestavte zdrojový kód.
-      url: ide/compiling-and-building-in-visual-studio.md
-    - title: Ladit
-      summary: Prozkoumejte a opravte chyby ve vašem kódu.
-      url: debugger/index.yml
-    - title: Test
-      summary: Spouštějte testy na projektech.
-      url: test/improve-code-quality.md
-    - title: Nasazení
-      summary: Sdílejte své aplikace a kód pomocí Nasazení webu, InstallShield, NuGet, průběžné integrace a dalších.
-      url: deployment/index.yml
-    - title: Správa verzí
-      summary: Sdílejte kód pomocí technologií pro správu verzí, jako jsou Git a TFVC.
-      url: /azure/devops/repos/index
-    - title: DevOps
-      summary: Průběžné sestavování a uvolňování vašich aplikací v cloudu a implementace agilních postupů pomocí Azure DevOps Services.
-      url: /azure/devops
-    - title: Měření výkonu
-      summary: Identifikujte slabá místa a Optimalizujte výkon kódu pomocí diagnostických nástrojů.
-      url: profiling/index.yml
-    - title: Zvětšení
-      summary: Přidáním vlastních funkcí do integrovaného vývojového prostředí sady Visual Studio můžete zlepšit vývojové prostředí.
-      url: extensibility/index.md
-    - title: Data
-      summary: Vytvářejte datové aplikace, které se připojují k jakékoli databázi nebo službě a kdekoli – v místním prostředí nebo cloudu.
-      url: data-tools/accessing-data-in-visual-studio.md
-    - title: Spolupráce
-      summary: Sdílejte, upravujte a ladíte kód v prostředí pro týmovou práci v reálném čase.
-      url: /visualstudio/liveshare/
-    - title: Vývoj s využitím kontejnerů
-      summary: Pomocí kontejnerů můžete izolovat modulární součásti a zlepšit škálovatelnost.
-      url: containers/index.yml
-  - title: Úkoly
-    items:
-    - title: Web a Cloud
-      links:
-      - text: Vývoj pro web
-        url: /aspnet/
-      - text: Vývoj a Správa Azure
-        url: /visualstudio/azure
-      - text: Python
-        url: /visualstudio/python
-      - text: Node.js
-        url: /visualstudio/javascript
-      - text: Ukládání a zpracování dat
-        url: data-tools/index.md
-      - text: Vědecké zpracování dat
-        url: python/data-science-and-analytical-applications-workload.md
-      - text: Vývoj pro Office/SharePoint
-        url: https://developer.microsoft.com/office/docs
-    - title: Windows
-      links:
-      - text: Vývoj pro desktopy .NET
-        url: /dotnet/framework/develop-client-apps
-      - text: Vývoj pro univerzální platformu Windows
-        url: cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md
-      - text: Vývoj pro Windows pomocíC++
-        url: /cpp/windows/desktop-applications-visual-cpp
-    - title: Mobilní zařízení a hry
-      links:
-      - text: Vývoj pro mobilní zařízení pomocí .NET (Xamarin)
-        url: /xamarin/
-      - text: Vývoj her pomocí Unity
-        url: cross-platform/visual-studio-tools-for-unity.md
-      - text: Vývoj pro mobilní zařízení pomocí JavaScriptu
-        url: /visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017
-        note: (Pouze Visual Studio 2017 a 2015)
-      - text: Vývoj pro mobilní zařízení pomocíC++
-        url: /visualstudio/cross-platform/
-      - text: Vývoj her pomocíC++
-        url: /windows/uwp/gaming/e2e
-    - title: Další sady nástrojů
-      links:
-      - text: Vývoj rozšíření sady Visual Studio
-        url: extensibility/index.md
-      - text: Vývoj pro Linux pomocíC++
-        url: /cpp/linux/
-      - text: Vývoj pro různé platformy .NET Core
-        url: /dotnet/core/
-  footer: '[Blogy](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [hlášení problémů](ide/talk-to-us.md) -  –[komunita vývojářů](https://developercommunity.visualstudio.com/spaces/8/index.html)'
+    - url: https://code.visualstudio.com/docs
+      text: Dokumentace
+    - url: https://code.visualstudio.com/updates
+      text: Zpráva k vydání verze
+    - url: https://code.visualstudio.com
+      text: Stránka produktu
+  - title: Visual Studio App Center
+    imageSrc: ./media/vs-mobile-center.svg
+    links:
+    - url: https://docs.microsoft.com/appcenter
+      text: Dokumentace
+    - url: https://visualstudio.microsoft.com/app-center/
+      text: Bran
+  - title: Předplatná sady Visual Studio
+    imageSrc: ./media/vs-subscription-temp.svg
+    links:
+    - url: https://docs.microsoft.com/visualstudio/subscriptions
+      text: Dokumentace
+    - url: https://visualstudio.microsoft.com/subscriptions
+      text: Informace o visualstudio.com
+    - url: https://my.visualstudio.com
+      text: Bran
+    - url: https://manage.visualstudio.com
+      text: Správa

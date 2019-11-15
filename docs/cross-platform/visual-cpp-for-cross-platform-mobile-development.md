@@ -1,7 +1,7 @@
 ---
 title: Vývoj mobilních aplikací pro různé platformy C++ s využitím | Microsoft Docs
 ms.custom: ''
-ms.date: 10/17/2019
+ms.date: 11/14/2019
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 61bb3e17b104759995852959a7396d5a76927cfb
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: bc4164ec405aed2941e807934ee8d66b7ae72504
+ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589043"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74098975"
 ---
-# <a name="cross-platform-mobile-development-with-c"></a>Vývoj mobilních aplikací pro různé platformy sC++
+# <a name="cross-platform-mobile-development-with-c"></a>Vývoj multiplatformních mobilních řešení v jazyce C++
 
 Nativní C++ aplikace pro zařízení s iOS, Androidem a Windows můžete vytvářet pomocí nástrojů pro různé platformy, které jsou k dispozici v aplikaci Visual Studio. **Vývoj pro mobilní C++ zařízení v nástroji** je pracovní zatížení, které je dostupné v instalačním programu sady Visual Studio. Nainstaluje sady SDK a nástroje, které potřebujete pro vývoj sdílených knihoven a nativních aplikací pro různé platformy. Po nainstalování můžete použít C++ k vytvoření kódu, který běží na zařízeních s iOS a Androidem, na platformách Windows, Windows Store a Xbox.
 
@@ -42,10 +42,6 @@ Vývoj pro mobilní C++ zařízení s je instalovatelným zatížením, které s
 Pokud přecházíte na vývoj pro Android nebo iOS, máme k dispozici nějaký skvělý materiál o tom, jak začít. Visual Studio je prostředí pro rychlé a podporující vývoj. Pokud se chcete dozvědět, jak ho používat, zkuste začít [pro vývojáře v Androidu](/previous-versions/windows/apps/dn275875\(v=win.10\)) nebo začít [pro vývojáře v iOS](/previous-versions/windows/apps/jj657966\(v=win.10\)). Tyto články vás seznámí se systémem Visual Studio a koncepty, které budete potřebovat pro vývoj aplikací pro různé platformy pro Windows a Windows Store. Pokud chcete začít psát svoji první aplikaci pro více platforem pro iOS a Android, přečtěte si téma [Vytvoření aplikace OPENGL ES v Androidu a iOS](../cross-platform/build-an-opengl-es-application-on-android-and-ios.md).
 
 Vývoj mobilních aplikací pomocí C++ úlohy zahrnuje několik šablon, které vám pomůžou začít s aplikacemi:
-
-- Aplikace OpenGLes 2 (Android, iOS, Windows Universal)
-
-  Vytvoří řešení, které obsahuje sadu projektů pro sestavení nativní aplikace aktivity pro Android, aplikaci pro iOS a univerzální aplikaci pro Windows spolu se sdílenou C++ knihovnou kódu. Tyto aplikace používají knihovny specifické pro platformu vytvořené pomocí běžných C++ kódů OpenGL ES k vykreslování stejné otáčející se datové krychle v každé aplikaci. Chcete-li použít tuto šablonu, zahrňte při instalaci sady Visual Studio úlohu **vývoj pro univerzální platformu Windows** .
 
 - Aplikace s nativní aktivitou (Android)
 
