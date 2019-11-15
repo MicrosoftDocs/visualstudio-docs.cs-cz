@@ -5,19 +5,19 @@ description: Seznam vydaných verzí a čísel sestavení pro sadu Visual Studio
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.date: 11/12/2019
+ms.date: 11/14/2019
 ms.topic: reference
 ms.custom: seodec18
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 338cb064e8acdc375c8c724bcd2e12dc06b3f809
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.openlocfilehash: 798158e39ee59140276c2a3c933008c7fe9a98ae
+ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983715"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74099563"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Čísla sestavení a data vydání sady Visual Studio
 
@@ -29,6 +29,7 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 
 | **Verze**| **Kanál** | **Datum vydání** | **Verze buildu** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.4.0 | Preview 5 | 14. listopadu 2019 | 16.4.29512.175 |
 | 16.3.9 | Vydaná verze | 12. listopadu 2019 | 16.3.29509.3 |
 | 16.4.0 | Preview 4 | 6\. listopadu 2019 | 16.4.29505.145 |
 | 16.3.8 | Vydaná verze | 5\. listopadu 2019 | 16.3.29503.13 |
