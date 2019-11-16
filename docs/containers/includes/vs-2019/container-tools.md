@@ -1,44 +1,44 @@
 ---
-title: Visual Studio Tools for Docker s ASP.NET Core
+title: Visual Studio Tools for Docker と ASP.NET Core
 author: ghogen
-description: Naučte se používat nástroje sady Visual Studio 2019 a Docker for Windows
+description: Visual Studio 2019 ツールと Docker for Windows を使用する方法について説明します
 ms.author: ghogen
 ms.date: 02/01/2019
 ms.prod: visual-studio-dev16
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 124f60a4a632115625524b4e30ab28f795d41660
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 7eae92f7c65208dfeda9cd19e14eaa627e12a22a
+ms.sourcegitcommit: bbff780cda82bb64862d77fe8f407f1803beb876
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70197114"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142188"
 ---
-Pomocí sady Visual Studio můžete snadno sestavovat, ladit a spouštět kontejnerové ASP.NET Core aplikace a publikovat je do Azure Container Registry (ACR), Docker Hub, Azure App Service nebo vlastního registru kontejneru. V tomto článku budeme publikovat na ACR.
+Visual Studio を使用すると、コンテナー化された ASP.NET Core アプリを簡単にビルド、デバッグ、および実行して、Azure Container Registry (ACR)、Docker Hub、Azure App Service、または独自のコンテナー レジストリに発行することができます。 この記事では、ACR に発行します。
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>必要条件
 
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) s nainstalovanou úlohou **vývoje pro web**, úlohy **nástrojů Azure** a/nebo **.NET Core pro vývoj pro různé platformy**
-* [Vývojové nástroje .NET core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2) pro vývoj pomocí .net Core 2,2
-* Pokud chcete publikovat Azure Container Registry, předplatné Azure. [Zaregistrujte si bezplatnou zkušební verzi](https://azure.microsoft.com/offers/ms-azr-0044p/).
+* **Web 開発**、**Azure Tools** ワークロード、および/または **.NET Core クロスプラットフォーム開発**ワークロードがインストールされた [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
+* .NET Core 2.2 を使って開発するための [.NET Core 2.2 開発ツール](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+* Azure Container Registry に発行する場合、Azure サブスクリプション。 [無料試用版にサインアップします](https://azure.microsoft.com/offers/ms-azr-0044p/)。
 
-## <a name="installation-and-setup"></a>Instalace a nastavení
+## <a name="installation-and-setup"></a>インストールとセットアップ
 
-Pro instalaci Docker si nejdřív přečtěte informace v [Docker desktopu pro Windows: Co potřebujete znát před instalací](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install). Dále nainstalujte [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows).
+For Docker installation, first review the information at [Docker Desktop for Windows: What to know before you install](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install). 次に、[Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows) をインストールします。
 
-## <a name="add-a-project-to-a-docker-container"></a>Přidání projektu do kontejneru Docker
+## <a name="add-a-project-to-a-docker-container"></a>Docker コンテナーにプロジェクトを追加する
 
-1. Vytvořte nový projekt pomocí šablony **ASP.NET Core webové aplikace** .
-1. Vyberte **Webová aplikace**a ujistěte se, že je zaškrtnuté políčko **Povolit podporu Docker** .
+1. **[ASP.NET Core Web アプリケーション]** テンプレートを使って新しいプロジェクトを作成します。
+1. **[Web アプリケーション]** を選択し、 **[Enable Docker Support]\(Docker サポートを有効にする\)** チェックボックスがオンになっていることを確認します。
 
-   ![Zaškrtávací políčko Povolit podporu Docker](../../media/container-tools/vs-2019/create-new-web-application.PNG)
+   ![[Enable Docker Support]\(Docker サポートを有効にする\) チェック ボックス](../../media/container-tools/vs-2019/create-new-web-application.PNG)
 
-1. Vyberte požadovaný typ kontejneru (Windows nebo Linux) a klikněte na **vytvořit**.
+1. コンテナーの種類 (Windows または Linux) を選択し、 **[作成]** をクリックします。
 
-## <a name="dockerfile-overview"></a>Souboru Dockerfile – přehled
+## <a name="dockerfile-overview"></a>Dockerfile の概要
 
-*Souboru Dockerfile*je v projektu vytvořen recept pro vytvoření finální image Docker. Porozumění příkazům, které jsou v něm, najdete v referenčních informacích k [souboru Dockerfile](https://docs.docker.com/engine/reference/builder/) :
+*Dockerfile* (Docker の最終イメージを作成するためのレシピ) は、プロジェクトで作成されます。 その中に含まれるコマンドの詳細については、「[Dockerfile reference](https://docs.docker.com/engine/reference/builder/)」 (Dockerfile リファレンス) を参照してください。
 
 ```
 FROM microsoft/dotnet:2.2-aspnetcore-runtime-stretch-slim AS base
@@ -63,19 +63,19 @@ COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "HelloDockerTools.dll"]
 ```
 
-Předchozí *souboru Dockerfile* vychází z image [Microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) a obsahuje pokyny pro úpravu základní image sestavením projektu a jeho přidáním do kontejneru.
+前の *Dockerfile* は、[microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) イメージに基づいており、プロジェクトをビルドしてコンテナーに追加することで基本イメージを変更するための手順が含まれています。
 
-Když je zaškrtnuté políčko **Konfigurovat pro protokol HTTPS** v dialogovém okně Nový projekt, *souboru Dockerfile* zpřístupňuje dva porty. Pro přenosy HTTP se používá jeden port; druhý port se používá pro protokol HTTPS. Pokud políčko není zaškrtnuté, bude pro přenosy HTTP vystaven jeden port (80).
+新しいプロジェクト ダイアログの **[Configure for HTTPS]\(HTTPS 用に構成する\)** チェック ボックスがオンになっている場合、*Dockerfile* は 2 つのポートを公開します。 1 つのポートは HTTP トラフィック用、もう 1 つのポートは HTTPS 用に使用されます。 チェック ボックスがオンになっていない場合は、HTTP トラフィック用に単一のポート (80) が公開されます。
 
-## <a name="debug"></a>Ladění
+## <a name="debug"></a>デバッグ
 
-V rozevíracím seznamu ladění na panelu nástrojů vyberte Docker a spusťte ladění aplikace. Může se zobrazit zpráva s výzvou k důvěřování certifikátu. Chcete-li pokračovat, vyberte možnost důvěryhodného certifikátu.
+ツールバーのデバッグ ドロップダウンから **[Docker]** を選択し、アプリのデバッグを開始します。 証明書の信頼を求めるメッセージが表示される場合があります。続行するには、証明書を信頼することを選びます。
 
-V okně **výstup** se zobrazí možnost **nástroje kontejneru** , kde se zobrazují akce, které probíhají.
+**[出力]** ウィンドウの **[コンテナー ツール]** オプションに、実行されているアクションの内容が表示されます。
 
-Otevřete **konzolu Správce balíčků** (PMC) z **nástrojů**nabídky > Správce balíčků NuGet, **Konzola správce balíčků**.
+**[ツール]** メニュー、[NuGet パッケージ マネージャー]、 **[パッケージ マネージャー コンソール]** の順に選択して、 **[パッケージ マネージャー コンソール]** (PMC) を開きます。
 
-Výsledná image Docker aplikace je označená jako *vývoj*. Obrázek je založen na značce *2,2-aspnetcore-runtime* základní image *Microsoft/dotNET* . Spusťte příkaz v okně **konzoly Správce balíčků** (PMC). `docker images` Zobrazí se obrázky na počítači:
+アプリの結果の Docker イメージは、*dev* としてタグ付けされます。 このイメージは、*microsoft/dotnet* 基本イメージの *2.2-aspnetcore-runtime* タグに基づいています。 **パッケージ マネージャー コンソール** (PMC) ウィンドウで `docker images` コマンドを実行します。 コンピューター上のイメージが表示されます。
 
 ```console
 REPOSITORY        TAG                     IMAGE ID      CREATED         SIZE
@@ -84,41 +84,53 @@ microsoft/dotnet  2.2-aspnetcore-runtime  fcc3887985bb  6 days ago      255MB
 ```
 
 > [!NOTE]
-> **Vývojová** image neobsahuje binární soubory aplikace a další obsah, protože konfigurace **ladění** používá k zajištění iterativního prostředí pro iterativní úpravu a ladění připojení svazků. Pokud chcete vytvořit produkční image obsahující veškerý obsah, použijte konfiguraci **vydané verze** .
+> **[デバッグ]** 構成ではボリュームのマウントを使用して、反復編集とデバッグ操作を提供するため、**dev** イメージにはアプリのバイナリやその他のコンテンツは含まれません。 すべてのコンテンツを含む実稼働イメージを作成するには、 **[リリース]** 構成を使用します。
 
-`docker ps` Spusťte příkaz v PMC. Všimněte si, že aplikace je spuštěná pomocí kontejneru:
+PMC で `docker ps` コマンドを実行します。 アプリがコンテナーを使用して実行されていることがわかります。
 
 ```console
 CONTAINER ID        IMAGE                  COMMAND               CREATED             STATUS              PORTS                                           NAMES
 cf5d2ef5f19a        hellodockertools:dev   "tail -f /dev/null"   2 minutes ago       Up 2 minutes        0.0.0.0:52036->80/tcp, 0.0.0.0:44342->443/tcp   priceless_cartwright
 ```
 
-## <a name="publish-docker-images"></a>Publikování imagí Docker
+## <a name="containers-window"></a>Containers window
 
-Jakmile se cyklus vývoje a ladění aplikace dokončí, můžete vytvořit provozní image aplikace.
+If you have Visual Studio 2019 version 16.4 or later, you can use the **Containers** window to view running containers on your machine, as well as images that you have available.
 
-1. Změňte rozevírací seznam konfigurace na vydaná a sestavte aplikaci.
-1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **publikovat**.
-1. V dialogovém okně Publikovat cíl vyberte kartu **Container Registry** .
-1. Vyberte **vytvořit novou Azure Container Registry** a klikněte na **publikovat**.
-1. Do pole **vytvořit nový Azure Container Registry**zadejte požadované hodnoty.
+Open the **Containers** window by using the search box in the IDE (press **Ctrl**+**Q** to use it), type in `container`, and choose the **Containers** window from the list.
 
-    | Nastavení      | Navrhovaná hodnota  | Popis                                |
+You can mount the **Containers** window in a convenient place, such as below the editor, by moving it around and following the window placement guides.
+
+In the window, find your container and step through each tab to view the environment variables, port mappings, logs, and the filesystem.
+
+For more information, see [View and diagnose containers and images in Visual Studio](../../view-and-diagnose-containers.md).
+
+## <a name="publish-docker-images"></a>Docker イメージの発行
+
+アプリの開発とデバッグのサイクルが完了すると、アプリの実稼働イメージを作成できます。
+
+1. 構成ドロップダウンを **[リリース]** に変更し、アプリを構築します。
+1. **ソリューション エクスプローラー**で対象のプロジェクトを右クリックし、 **[発行]** を選択します。
+1. 発行先ダイアログで **[コンテナー レジストリ]** タブを選択します。
+1. **[新しい Azure コンテナー レジストリを作成する]** を選択し、 **[発行]** をクリックします。
+1. **[新しい Azure コンテナー レジストリを作成する]** で、目的の値を入力します。
+
+    | 設定      | 推奨値  | 説明                                |
     | ------------ |  ------- | -------------------------------------------------- |
-    | **Předpona DNS** | Globálně jedinečný název | Název, který jedinečně identifikuje váš registr kontejneru. |
-    | **Předplatné** | Výběr předplatného | Předplatné Azure, které se má použít. |
-    | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Název skupiny prostředků, ve které se má vytvořit registr kontejneru Pokud chcete vytvořit novou skupinu prostředků, vyberte možnost **nové** .|
-    | **[SKLADOVÉ](https://docs.microsoft.com/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
-    | **Umístění registru** | Umístění, které je blízko vás | Vyberte umístění v [oblasti](https://azure.microsoft.com/regions/) poblíž nebo v blízkosti jiných služeb, které budou používat váš registr kontejneru. |
+    | **DNS プレフィックス** | グローバルに一意の名前 | コンテナー レジストリを一意に識別する名前。 |
+    | **サブスクリプション** | サブスクリプションの選択 | 使用する Azure のサブスクリプション。 |
+    | **[リソース グループ](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  コンテナー レジストリを作成するリソース グループの名前。 新しいリソース グループを作成する場合は、 **[新規]** を選択します。|
+    | **[SKU](https://docs.microsoft.com/azure/container-registry/container-registry-skus)** | 標準 | コンテナー レジストリのサービス層  |
+    | **レジストリの場所** | 近くの場所 | [[地域]](https://azure.microsoft.com/regions/) で、自分に近いか、またはコンテナー レジストリを使用する他のサービスに近い場所を選択します。 |
 
-    ![Dialog pro vytváření Azure Container Registry v aplikaci Visual Studio][0]
+    ![Visual Studio の Azure コンテナー レジストリを作成するダイアログ][0]
 
-1. Klikněte na **Vytvořit**.
+1. **[作成]**
 
-   ![Snímek obrazovky znázorňující úspěšné publikování](../../media/container-tools/publish-succeeded.png)
+   ![発行の成功を示すスクリーンショット](../../media/container-tools/publish-succeeded.png)
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>次のステップ
 
-Kontejner teď můžete načíst z registru do libovolného hostitele, který podporuje spouštění imagí Docker, například [Azure Container Instances](/azure/container-instances/container-instances-tutorial-deploy-app).
+これでレジストリからコンテナーを、[Azure Container Instances](/azure/container-instances/container-instances-tutorial-deploy-app) などの Docker イメージを実行できるホストにプルできるようになりました。
 
 [0]:../../media/hosting-web-apps-in-docker/vs-acr-provisioning-dialog-2019.png
