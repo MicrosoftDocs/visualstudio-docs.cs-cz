@@ -3,15 +3,15 @@ title: Zvýhodněné Parasoft Virtualization Desktop/SOAtest Professional | Micr
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/31/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 description: Naučte se aktivovat předplatné Parasoft Virtualization/SOA Test Professional, které je součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: a1bd6525df65ee8cc0c9f3dd9dfd60673dbb6df1
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 036b265f9ca1accc7027477abfc27ce4e66c4033
+ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816472"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74161937"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Parasoft Virtualization/SOAtest Professional Desktop v předplatných sady Visual Studio
 
@@ -40,7 +40,7 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
    > [!div class="mx-imgBorder"]
    > Uvítací E-mail pro ![zvýhodnění Parasofte](_img/vs-parasoft/vs-parasoft-email.png)
 
-7. V závislosti na tom, který prohlížeč používáte, se můžete setkat s různými dialogy, které vám poskytnou možnost spustit instalační program.  V Internet Exploreru se například zobrazí seznam posledních souborů ke stažení s parasoft_soavirt_ 9.10.2 _win32_x86_64. exe, který je uvedený v horní části. Kliknutím na **Spustit** spusťte instalační program.
+7. V závislosti na tom, který prohlížeč používáte, se můžete setkat s různými dialogy, které vám poskytnou možnost spustit instalační program.  V Internet Exploreru se například zobrazí seznam posledních souborů ke stažení s parasoft_soavirt_9 .10.2_win32_x86_64. exe, který je uvedený v horní části. Kliknutím na **Spustit** spusťte instalační program.
 
 8. Po otevření dialogového okna řízení uživatelských účtů klikněte na **Ano**.
 
@@ -73,7 +73,9 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 | Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  Ano       |
+| Visual Studio Enterprise s GitHubem Enterprise | VL | 6 měsíců       |  Ano       |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                           |NÁ         |
+| Visual Studio Professional s GitHubem Enterprise | VL                                      | Není k dispozici                                                           |NÁ         |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                           |NÁ         |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                                           |NÁ         |
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |NÁ|

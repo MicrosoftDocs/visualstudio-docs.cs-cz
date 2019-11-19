@@ -3,15 +3,15 @@ title: Výhody technické podpory
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/29/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 description: Naučte se aktivovat výhody technické podpory, které jsou součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 6d76fa3bdff63a31598fb9a977f6ed024d214af1
-ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
+ms.openlocfilehash: f88cf221f47f2b8aa89a733a4794e424ac938261
+ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061149"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74161965"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Aktivace a používání výhod technické podpory v předplatných sady Visual Studio
 Výhoda technické podpory v rámci předplatných sady Visual Studio je určena pro řešení problémů s opravou chyb v **neprodukčních prostředích** pro produkty, které jsou stále ve fázi běžné podpory [životního cyklu podpory](https://support.microsoft.com/lifecycle/search). Visual Studio Enterprise standardní a roční cloudová předplatná obdrží čtyři incidenty, zatímco Visual Studio Professional standardní a roční předplatné cloudu obdrží dvě incidenty až po dobu 1 roku od aktivace výhod. Aktivace výhody musí nastat, když je předplatné aktuální.
@@ -112,7 +112,9 @@ Pokud chcete použít výhody technické podpory předplatného sady Visual Stud
 | Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 4 incidenty       |  Ano|
+| Visual Studio Enterprise s GitHubem Enterprise | VL | 4 incidenty       |  Ano|
 | Visual Studio Professional (Standard) | VL, Azure, Retail, vybrané NFR<sup>2</sup>                                        | 2 incidenty                                                          |Ano         |
+| Visual Studio Professional s GitHubem Enterprise | VL                                     | 2 incidenty                                                          |Ano         |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | 2 incidenty                                             |  Ano         |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | 2 incidenty                                               | Ano         |
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |NÁ|
@@ -123,3 +125,9 @@ Pokud chcete použít výhody technické podpory předplatného sady Visual Stud
 <sup>2</sup> *zahrnuje: Představte si Standard.*
 
 Nejste si jistí, jaké Předplatné používáte?  Pokud chcete zobrazit všechna předplatná přiřazená k vaší e-mailové adrese, připojte se k [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) . Pokud nevidíte všechna Vaše předplatná, může být jedna nebo více přiřazená k jiné e-mailové adrese.  K zobrazení těchto předplatných se budete muset přihlásit pomocí této e-mailové adresy.
+
+## <a name="next-steps"></a>Další kroky
+Nezapomeňte tyto skvělé výhody aktivovat, abyste mohli využít maximum vašeho předplatného sady Visual Studio:
+- [Visual Studio](vs-ide-benefit.md)
+- [Azure DevOps](vs-azure-devops.md)
+- [Individuální kredit v Azure DevTest](vs-azure.md)
