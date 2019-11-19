@@ -4,87 +4,101 @@
   items:
     - name: Visual Studio
       tocHref: /visualstudio/
-      topicHref: /visualstudio/ide/
+      topicHref: /visualstudio/
       items:
-        - name: Kvalita kódu
-          tocHref: /visualstudio/code-quality/
-          topicHref: /visualstudio/code-quality/analyzing-application-quality-by-using-code-analysis-tools
-        - name: Různé platformy
-          tocHref: /visualstudio/cross-platform/
-          topicHref: /visualstudio/cross-platform/index
-        - name: Datové nástroje
-          tocHref: /visualstudio/data-tools/
-          topicHref: /visualstudio/data-tools/index
-        - name: Ladění
-          tocHref: /visualstudio/debugger/
-          topicHref: /visualstudio/debugger/index
+        - name: Windows
+          tocHref: /visualstudio/windows
+          topicHref: /visualstudio/windows/index
           items:
-            - name: Přístup k rozhraní ladění SDK
-              tocHref: /visualstudio/debugger/debug-interface-access/
-              topicHref: /visualstudio/debugger/debug-interface-access/debug-interface-access-sdk
-            - name: Grafika
-              tocHref: /visualstudio/debugger/graphics/
-              topicHref: /visualstudio/debugger/graphics/overview-of-visual-studio-graphics-diagnostics
-        - name: Nasazení
-          tocHref: /visualstudio/deployment/
-          topicHref: /visualstudio/deployment/deploying-applications-services-and-components
-        - name: Rozšiřitelnost
-          tocHref: /visualstudio/extensibility/
-          topicHref: /visualstudio/extensibility/index
-          items:
-            - name: Práce se sadou Visual Studio SDK
-              tocHref: /visualstudio/extensibility/internals/
-              topicHref: /visualstudio/extensibility/internals/inside-the-visual-studio-sdk
-            - name: Rozšiřitelnost ladicího programu
-              tocHref: /visualstudio/extensibility/debugger/
-              topicHref: /visualstudio/extensibility/debugger/visual-studio-debugger-extensibility
+            - name: IDE – integrované vývojové prostředí
+              tocHref: /visualstudio/ide/
+              topicHref: /visualstudio/ide/
               items:
-                - name: Odkaz
-                  tocHref: /visualstudio/extensibility/debugger/reference/
-                  topicHref: /visualstudio/extensibility/debugger/reference/reference-visual-studio-debugging-apis
-            - name: Pravidla pro práci s uživatelským prostředím
-              tocHref: /visualstudio/extensibility/ux-guidelines/
-              topicHref: /visualstudio/extensibility/ux-guidelines/visual-studio-user-experience-guidelines
-        - name: Návrhář tříd Integrovaného vývojového prostředí (IDE)
-          tocHref: /visualstudio/ide/class-designer
-          topicHref: /visualstudio/ide/class-designer/designing-and-viewing-classes-and-types
-        - name: Modelování architektury
-          tocHref: /visualstudio/modeling/
-          topicHref: /visualstudio/modeling/analyze-and-model-your-architecture
-        - name: MSBuild
-          tocHref: /visualstudio/msbuild/
-          topicHref: /visualstudio/msbuild/msbuild
-        - name: JavaScript a TypeScript
-          tocHref: /visualstudio/javascript/
-          topicHref: /visualstudio/javascript/index
-        - name: Profilace
-          tocHref: /visualstudio/profiling/
-          topicHref: /visualstudio/profiling/index
-        - name: Python
-          tocHref: /visualstudio/python/
-          topicHref: /visualstudio/python/overview-of-python-tools-for-visual-studio
-        - name: R
-          tocHref: /visualstudio/rtvs/
-          topicHref: /visualstudio/rtvs/index
-        - name: Office a SharePoint
-          tocHref: /visualstudio/vsto/
-          topicHref: /visualstudio/vsto/office-and-sharepoint-development-in-visual-studio
-          items:
-            - name: SharePoint
-              tocHref: /visualstudio/sharepoint/
-              topicHref: /visualstudio/sharepoint/create-sharepoint-solutions
-            - name: VSTO
+                - name: Kvalita kódu
+                  tocHref: /visualstudio/code-quality/
+                  topicHref: /visualstudio/code-quality/analyzing-application-quality-by-using-code-analysis-tools
+                - name: Různé platformy
+                  tocHref: /visualstudio/cross-platform/
+                  topicHref: /visualstudio/cross-platform/index
+                - name: Datové nástroje
+                  tocHref: /visualstudio/data-tools/
+                  topicHref: /visualstudio/data-tools/index
+                - name: Ladění
+                  tocHref: /visualstudio/debugger/
+                  topicHref: /visualstudio/debugger/index
+                  items:
+                    - name: Přístup k rozhraní ladění SDK
+                      tocHref: /visualstudio/debugger/debug-interface-access/
+                      topicHref: /visualstudio/debugger/debug-interface-access/debug-interface-access-sdk
+                    - name: Grafika
+                      tocHref: /visualstudio/debugger/graphics/
+                      topicHref: /visualstudio/debugger/graphics/overview-of-visual-studio-graphics-diagnostics
+                - name: Nasazení
+                  tocHref: /visualstudio/deployment/
+                  topicHref: /visualstudio/deployment/deploying-applications-services-and-components
+                - name: Návrhář tříd Integrovaného vývojového prostředí (IDE)
+                  tocHref: /visualstudio/ide/class-designer
+                  topicHref: /visualstudio/ide/class-designer/designing-and-viewing-classes-and-types
+                - name: Modelování architektury
+                  tocHref: /visualstudio/modeling/
+                  topicHref: /visualstudio/modeling/analyze-and-model-your-architecture
+                - name: Profilace
+                  tocHref: /visualstudio/profiling/
+                  topicHref: /visualstudio/profiling/index
+                - name: Testování
+                  tocHref: /visualstudio/test/
+                  topicHref: /visualstudio/test/improve-code-quality
+                - name: Návrhář postupu provádění
+                  tocHref: /visualstudio/workflow-designer/
+                  topicHref: /visualstudio/workflow-designer/developing-applications-with-the-workflow-designer
+                - name: Nástroje XAML
+                  tocHref: /visualstudio/xaml-tools/
+                  topicHref: /visualstudio/xaml-tools/
+                - name: Nástroje XML
+                  tocHref: /visualstudio/xml-tools/
+                  topicHref: /visualstudio/xml-tools/xml-tools-in-visual-studio
+                - name: 'Začínáme s jazykem C#'
+                  tocHref: /visualstudio/get-started/csharp/
+                  topicHref: /visualstudio/get-started/csharp/index
+                - name: "Začínáme s\_jazykem Visual Basic"
+                  tocHref: /visualstudio/get-started/visual-basic/
+                  topicHref: /visualstudio/get-started/visual-basic/
+            - name: Rozšiřitelnost
+              tocHref: /visualstudio/extensibility/
+              topicHref: /visualstudio/extensibility/index
+              items:
+                - name: Práce se sadou Visual Studio SDK
+                  tocHref: /visualstudio/extensibility/internals/
+                  topicHref: /visualstudio/extensibility/internals/inside-the-visual-studio-sdk
+                - name: Rozšiřitelnost ladicího programu
+                  tocHref: /visualstudio/extensibility/debugger/
+                  topicHref: /visualstudio/extensibility/debugger/visual-studio-debugger-extensibility
+                  items:
+                    - name: Odkaz
+                      tocHref: /visualstudio/extensibility/debugger/reference/
+                      topicHref: /visualstudio/extensibility/debugger/reference/reference-visual-studio-debugging-apis
+                - name: Pravidla pro práci s uživatelským prostředím
+                  tocHref: /visualstudio/extensibility/ux-guidelines/
+                  topicHref: /visualstudio/extensibility/ux-guidelines/visual-studio-user-experience-guidelines
+            - name: MSBuild
+              tocHref: /visualstudio/msbuild/
+              topicHref: /visualstudio/msbuild/msbuild
+            - name: JavaScript a TypeScript
+              tocHref: /visualstudio/javascript/
+              topicHref: /visualstudio/javascript/index
+            - name: Python
+              tocHref: /visualstudio/python/
+              topicHref: /visualstudio/python/overview-of-python-tools-for-visual-studio
+            - name: R
+              tocHref: /visualstudio/rtvs/
+              topicHref: /visualstudio/rtvs/index
+            - name: Office a SharePoint
               tocHref: /visualstudio/vsto/
-              topicHref: /visualstudio/vsto/create-vsto-add-ins-for-office-by-using-visual-studio
-        - name: Testování
-          tocHref: /visualstudio/test/
-          topicHref: /visualstudio/test/improve-code-quality
-        - name: Návrhář postupu provádění
-          tocHref: /visualstudio/workflow-designer/
-          topicHref: /visualstudio/workflow-designer/developing-applications-with-the-workflow-designer
-        - name: Nástroje XAML
-          tocHref: /visualstudio/xaml-tools/
-          topicHref: /visualstudio/xaml-tools/
-        - name: Nástroje XML
-          tocHref: /visualstudio/xml-tools/
-          topicHref: /visualstudio/xml-tools/xml-tools-in-visual-studio
+              topicHref: /visualstudio/vsto/office-and-sharepoint-development-in-visual-studio
+              items:
+                - name: SharePoint
+                  tocHref: /visualstudio/sharepoint/
+                  topicHref: /visualstudio/sharepoint/create-sharepoint-solutions
+                - name: VSTO
+                  tocHref: /visualstudio/vsto/
+                  topicHref: /visualstudio/vsto/create-vsto-add-ins-for-office-by-using-visual-studio
