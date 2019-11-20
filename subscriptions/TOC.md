@@ -35,7 +35,6 @@
 ##### [Předplatné Office 365](vs-office365.md)
 ##### [Parasoft](vs-parasoft.md)
 ##### [Power BI Pro](vs-pbi.md)
-##### [RStudio](vs-rstudio.md)
 ##### [Visual Studio App Center](vs-visual-studio-app-center.md)
 ##### [Integrované vývojové prostředí sady Visual Studio](vs-ide-benefit.md)
 ##### [WhiteSource Bolt](vs-whitesource.md)
@@ -44,7 +43,6 @@
 ##### [CODE Magazine](vs-code-magazine.md)
 ##### [DataCamp](vs-datacamp.md)
 ##### [LinkedIn Learning](vs-linkedin-learning.md)
-##### [Předplatné MSDN Magazine](vs-msdn.md)
 ##### [Pluralsight](vs-pluralsight.md)
 #### Podpora 
 ##### [Komunita Azure](vs-azure-community.md)
