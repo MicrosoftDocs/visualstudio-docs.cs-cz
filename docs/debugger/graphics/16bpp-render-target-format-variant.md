@@ -1,5 +1,5 @@
 ---
-title: 16bpp vykreslování cílového formátu Variant | Dokumentace Microsoftu
+title: 16bpp Render Target Format Variant | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 24b22ad9-5ad0-4161-809a-9b518eb924bf
@@ -8,57 +8,57 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94775b717a3095d54d3fa52e3d2a5325dc3d21c5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8a63261a4ef8a6304bec8c2bdde1d9ec9113405e
+ms.sourcegitcommit: 8530d15aa72fe058ee3a3b4714c36b8638f8b494
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62896420"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188595"
 ---
-# <a name="16-bpp-render-target-format-variant"></a>16 bitů na pixel vykreslování cílového formátu typu Variant
-Nastaví formát pixelu DXGI_FORMAT_B5G6R5_UNORM pro všechny cíle vykreslování a zpět vyrovnávací paměti.
+# <a name="16-bpp-render-target-format-variant"></a>16 bpp Render Target Format Variant
+Sets the pixel format to DXGI_FORMAT_B5G6R5_UNORM for all render targets and back buffers.
 
-## <a name="interpretation"></a>interpretace
- Cíl vykreslování nebo přípravné vyrovnávací paměti používá obvykle 32 bitů na pixel (32 bitů na pixel) formát jako je například B8G8R8A8_UNORM. formáty 32 bitů na pixel může spotřebovat velké množství paměti šířky pásma. Protože B5G6R5_UNORM formát je 16 bitů na pixel formátu, který je poloviční velikost 32 bitů na pixel formáty, můžete ho pomocí obdobná tlak na šířce pásma paměti, ale za cenu sníženou barva věrnost.
+## <a name="interpretation"></a>Interpretation
+ A render target or back buffer typically uses a 32 bpp (32 bits per pixel) format such as B8G8R8A8_UNORM. 32-bpp formats can consume a large amount of memory bandwidth. Because the B5G6R5_UNORM format is a 16-bpp format that's half the size of 32-bpp formats, using it can relieve pressure on memory bandwidth, but at the cost of reduced color fidelity.
 
- Pokud tato varianta zobrazuje velké výkonnější, pravděpodobně znamená, že vaše aplikace využívá příliš velkou šířku pásma, paměti. Významné výkonnostní zlepšení, můžete získat, zejména v případě, že rámec profilovaných měl značné množství overdraw nebo alfa blending.
+ If this variant shows a large performance gain, it likely indicates that your app consumes too much memory bandwidth. You can gain significant performance improvement, especially when the profiled frame had a significant amount of overdraw or alpha-blending.
 
-16 bitů na pixel vykreslování cílového formátu můžete zmenšit obsluhy vzdálené správy paměti s využitím aplikace obsahuje následující podmínky:
-- Nevyžaduje, aby reprodukce a věrného barev.
-- Nevyžaduje, aby kanál alfa.
-- Nemá ofent smooth přechody (které jsou náchylné k řazení do pásem artefakty pod věrnost sníženou barvu).
+A 16-bpp render target format can reduce memory band with usage when your application has the following conditions:
+- Doesn't require high-fidelity color reproduction.
+- Doesn't require an alpha channel.
+- Doesn't often have smooth gradients (which are susceptible to banding artifacts under reduced color fidelity).
 
-Další strategie zaměřené na ke snížení šířky pásma paměti patří:
-- Snížíte množství overdraw nebo prolnutí alfa.
-- Snížení velikosti vyrovnávací paměť snímku.
-- Snižte rozměry textury prostředků.
-- Snižte komprimace prostředky textur.
+Other strategies to reduce memory bandwidth include:
+- Reduce the amount of overdraw or alpha-blending.
+- Reduce the dimensions of the frame buffer.
+- Reduce dimensions of texture resources.
+- Reduce compressions of texture resources.
 
-Obvyklým způsobem je nutné zvážit kvality kompromisy, které jsou součástí některý z těchto optimalizacích bitovou kopii.
+As usual, you have to consider the image quality trade-offs that come with any of these optimizations.
 
-Aplikace, které jsou součástí řetězce přepnutí mít formát vyrovnávací paměti (DXGI_FORMAT_B5G6R5_UNORM), který nepodporuje 16 bitů na pixel. Tyto řetězce přepnutí se vytvářejí pomocí `D3D11CreateDeviceAndSwapChain` nebo `IDXGIFactory::CreateSwapChain`. Chcete-li toto omezení obejít, postupujte takto:
-1. Vytvořit cíl B5G6R5_UNORM formát vykreslování pomocí `CreateTexture2D` a vykreslování, které cílí.
-2. Zkopírujte cíl vykreslování do přípravné vyrovnávací paměti řetězce přepnutí kreslením quad celé obrazovky se cíl vykreslení jako zdrojovou texturu.
-3. Nevolají Present na vaše řetězec přepnutí.
+Applications that are a part of a swap chain have a back buffer format (DXGI_FORMAT_B5G6R5_UNORM) that doesn't support 16 bpp. These swap chains are created by using `D3D11CreateDeviceAndSwapChain` or `IDXGIFactory::CreateSwapChain`. To work around this limitation, do the following steps:
+1. Create a B5G6R5_UNORM format render target by using `CreateTexture2D` and render to that target.
+2. Copy the render target onto the swap-chain backbuffer by drawing a full-screen quad with the render target as your source texture.
+3. Call Present on your swap chain.
 
-   Pokud tato strategie uloží větší šířku pásma, než je využívána kopírování cíle vykreslování přípravné vyrovnávací paměti řetězce přepnutí, je lepší výkon při vykreslování.
+   If this strategy saves more bandwidth than is consumed by copying the render target to the swap-chain backbuffer, then rendering performance is improved.
 
-   Architektury GPU, používající techniky vedle sebe vykreslování můžete zobrazit výhody výkonu pomocí formátu 16 bitů na pixel rámce vyrovnávací paměti. Toto vylepšení totiž větší část vyrovnávací paměť snímku lze zobrazit v mezipaměti Každá dlaždice místní snímek vyrovnávací paměti. Vedle sebe vykreslování architektury jsou někdy součástí grafickými procesory v mobilních telefonů a tabletů počítače; zřídka nacházet mimo tento volné místo.
+   GPU architectures that use tiled rendering techniques can see significant performance benefits by using a 16 bpp frame buffer format. This improvement is because a larger portion of the frame buffer can fit in each tile's local frame buffer cache. Tiled rendering architectures are sometimes found in GPUs in mobile handsets and tablet computers; they rarely appear outside of this niche.
 
 ## <a name="remarks"></a>Poznámky
- Cílový formát vykreslení se resetují na DXGI_FORMAT_B5G6R5_UNORM na všechna volání `ID3D11Device::CreateTexture2D` , který vytvoří cíl vykreslování. Konkrétně je formát přepsána při D3D11_TEXTURE2D_DESC objekt předaný v pDesc popisuje cíl vykreslování; To je:
+ The render target format is reset to DXGI_FORMAT_B5G6R5_UNORM on every call to `ID3D11Device::CreateTexture2D` that creates a render target. Specifically, the format is overridden when the D3D11_TEXTURE2D_DESC object passed in pDesc describes a render target; that is:
 
-- Člen BindFlags má příznak D3D11_BIND_REDNER_TARGET nastavený.
+- The BindFlags member has the D3D11_BIND_REDNER_TARGET flag set.
 
-- Člen BindFlags má příznak D3D11_BIND_DEPTH_STENCIL vymazána.
+- The BindFlags member has the D3D11_BIND_DEPTH_STENCIL flag cleared.
 
-- Využití člen je nastavený na D3D11_USAGE_DEFAULT.
+- The Usage member is set to D3D11_USAGE_DEFAULT.
 
-## <a name="restrictions-and-limitations"></a>Omezení a omezení
- Protože formátu B5G6R5 nemá kanál alfa, nezachová se tato varianta alfa obsah. Pokud vaše aplikace vykreslování vyžaduje alfa kanál v vaše cíle vykreslování, nebudete moci přepnout jen na B5G6R5 formátu.
+## <a name="restrictions-and-limitations"></a>Restrictions and limitations
+ Because the B5G6R5 format doesn't have an alpha channel, alpha content is not preserved by this variant. If your app's rendering requires an alpha channel in your render target, you can't just switch to the B5G6R5 format.
 
 ## <a name="example"></a>Příklad
- **16 bitů na pixel vykreslování cílového formátu** možné reprodukovat typu variant pro vykreslení cíle vytvořené využitím `CreateTexture2D` pomocí kódu takto:
+ The **16 bpp Render Target Format** variant can be reproduced for render targets created by using `CreateTexture2D` by using code like this:
 
 ```cpp
 D3D11_TEXTURE2D_DESC target_description;

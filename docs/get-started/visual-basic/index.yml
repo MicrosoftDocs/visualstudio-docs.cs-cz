@@ -1,12 +1,12 @@
 ### YamlMime:Landing
-title: Kurzy pro Visual Studio | Visual Basic
-summary: Vytvářejte Visual Basic aplikace pomocí sady Visual Studio.
+title: Visual Studio tutorials | Visual Basic
+summary: Create Visual Basic apps with Visual Studio.
 metadata:
-  title: Vývoj Visual Basic se sadou Visual Studio
-  description: Vytvářejte Visual Basic aplikace pomocí sady Visual Studio.
+  title: Visual Basic development with Visual Studio
+  description: Create Visual Basic apps by using Visual Studio.
   ms.custom: seodec18
   ms.topic: landing-page
-  ms.date: 09/20/2019
+  ms.date: 11/19/2019
   ms.author: ghogen
   author: ghogen
   manager: jillfra
@@ -14,12 +14,12 @@ metadata:
   ms.technology: vs-acquisition
   dev_langs:
   - VB
-  ms.openlocfilehash: 729388bf6eaa799580576b12076dc3da880a6386
-  ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
+  ms.openlocfilehash: 3462f85ea571e163617c6c5f315a28c98342acab
+  ms.sourcegitcommit: 8530d15aa72fe058ee3a3b4714c36b8638f8b494
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 10/04/2019
-  ms.locfileid: "71962843"
+  ms.lasthandoff: 11/19/2019
+  ms.locfileid: "74188621"
 landingContent:
 - title: Začínáme
   linkLists:
@@ -29,25 +29,29 @@ landingContent:
       url: ../../install/install-visual-studio.md
   - linkListType: get-started
     links:
-    - text: Spustit prohlídku s asistencí
+    - text: Start a guided tour
       url: visual-studio-ide.md
-- title: Vytváření Visual Basicch aplikací
+  - linkListType: quickstart
+    links:
+    - text: Create a "Hello World" console app
+      url: ../../ide/quickstart-visual-basic-console.md
+- title: Create Visual Basic apps
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Vytvoření aplikace konzoly
+    - text: Vytvoření konzolové aplikace
       url: tutorial-console.md
-    - text: Vytvoření desktopové aplikace pro Windows
+    - text: Create a Windows Desktop app
       url: tutorial-wpf.md
     - text: Vytvoření aplikace modelu Windows Forms
       url: ../../ide/create-a-visual-basic-winform-in-visual-studio.md
-    - text: Další informace o jazyce Visual Basic
+    - text: Learn about the Visual Basic language
       url: /dotnet/visual-basic/developing-apps/programming/
 - title: Poznejte Visual Studio
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Otevření kódu z úložiště
+    - text: Open code from a repo
       url: ../tutorial-open-project-from-repo.md
     - text: Psaní kódu a jeho úpravy
       url: tutorial-editor.md
@@ -55,7 +59,7 @@ landingContent:
       url: ../../ide/compiling-and-building-in-visual-studio.md
     - text: Ladění kódu
       url: ../csharp/tutorial-debugger.md
-    - text: Testování kódu
+    - text: Test your code
       url: ../../test/getting-started-with-unit-testing.md
   - linkListType: how-to-guide
     links:

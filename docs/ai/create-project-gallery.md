@@ -1,7 +1,7 @@
 ---
 title: Vytvoření projektu
-description: Vytvoření projektu pomocí ukázky z Galerie Azure Machine Learning
-keywords: AI, Visual Studio, Azure Machine Learning
+description: create project using sample from azure machine learning gallery
+keywords: ai, visual studio, azure machine learning
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -9,54 +9,54 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 3967b637d547ed99ed840761b3b843068afee1af
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: 6f84051e4450926136064b9af7f3c09e2e91a2f9
+ms.sourcegitcommit: 8530d15aa72fe058ee3a3b4714c36b8638f8b494
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777489"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188570"
 ---
-# <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>Vytvoření projektu AI z Galerie Azure Machine Learning v aplikaci Visual Studio
+# <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>Create an AI project from the Azure Machine Learning Gallery in Visual Studio
 
-Azure Machine Learning je integrována s Visual Studio Tools for AI. Můžete ji použít k odesílání úloh strojového učení do vzdálených výpočetních cílů, jako jsou virtuální počítače Azure, clustery Spark a další. Další informace o [experimentování ve službě Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/preview/experimentation-service-configuration)
+Azure Machine Learning is integrated with Visual Studio Tools for AI. You can use it to submit machine learning jobs to remote compute targets like Azure virtual machines, Spark clusters, and more. 
 
-Po [instalaci Visual Studio Tools for AI](installation.md)je snadné vytvořit nový projekt v Pythonu pomocí předem připraveného recepty v galerii Azure Machine Learning Sample Gallery.
+Once you've [installed Visual Studio Tools for AI](installation.md), it's easy to create a new Python project using pre-made recipes in the Azure Machine Learning Sample Gallery.
 
 > [!NOTE]
-> Azure Machine Learning Workbench musí být nainstalované. Pokud ho chcete nainstalovat, přečtěte si [rychlý Start k instalaci Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/preview/quickstart-installation) .
+> Azure Machine Learning Workbench must be installed. To install it please see the [Azure Machine Learning installation quickstart](https://docs.microsoft.com/azure/machine-learning/preview/quickstart-installation)
 
-1. Spusťte Visual Studio. Otevřete **Průzkumník serveru** otevřením nabídky **nástroje AI** a výběrem možnosti **Vybrat cluster** .
+1. Launch Visual Studio. Open the **Server Explorer** by opening the **AI Tools** menu and choosing **Select Cluster**
 
-    ![Výběr clusteru](media/create-project-gallery/select-cluster.png)
+    ![Cluster chooser](media/create-project-gallery/select-cluster.png)
 
-2. Přihlaste se k předplatnému Azure Machine Learning tak, že kliknete pravým tlačítkem na uzel **Azure Machine Learning** v Průzkumník serveru pak vyberete **přihlášení** a postupujte podle pokynů.
+2. Sign in to your Azure Machine Learning subscription by right-clicking the **Azure Machine Learning** node in the Server Explorer then select **Login** and follow the directions.
 
-    ![Hlas](media/create-project-gallery/azureml-login.png)
+    ![login](media/create-project-gallery/azureml-login.png)
 
-3. Vyberte možnost **nástroje AI > Azure Machine Learning Galerie ukázek**.
+3. Select **AI Tools > Azure Machine Learning Sample Gallery**.
 
-    ![Galerie ukázek](media/create-project-gallery/gallery.png)
+    ![Sample gallery](media/create-project-gallery/gallery.png)
 
-4. Pro tento rychlý Start vyberte ukázku "**mnist ručně zapsaných using TensorFlow**" a klikněte na **instalovat**. Zadejte následující:
+4. For this Quickstart, select the "**MNIST using TensorFlow**" sample and click **Install**. Provide the following:
 
-   - **Skupina prostředků**: Skupina prostředků Azure, do které se uloží vaše metadata
-   - **Účet**: Azure Machine Learning experimentální účet
-   - **Pracovní prostor**: Azure Machine Learning pracovní prostor
-   - **Typ projektu**: architektura strojového učení. V tomto případě vyberte **TensorFlow**
-   - **Přidat do řešení**: Určuje, jestli se má přidat do aktuálního řešení sady Visual Studio, nebo vytvořit a otevřít nové řešení.
-   - **Cesta k projektu**: umístění pro uložení kódu
-   - **Název projektu**: typ **TensorFlowMNIST**
+   - **Resource Group**: Azure resource group where your metadata will be stored
+   - **Account**: Azure Machine Learning experimentation Account
+   - **Workspace**: Azure Machine Learning workspace
+   - **Project Type**: The machine learning framework. In this case choose **TensorFlow**
+   - **Add to Solution**: determines whether to add to your current Visual Studio Solution or a create and open a new solution
+   - **Project Path**: Location to save the code
+   - **Project Name**: Type **TensorFlowMNIST**
 
-   ![Výsledný projekt při použití šablony aplikace Pythonu](media/create-project-gallery/new-AzureSampleProject.png)
+   ![Resulting project when using the Python Application template](media/create-project-gallery/new-AzureSampleProject.png)
 
-5. Visual Studio vytvoří soubor projektu (`.pyproj` soubor na disku) spolu s dalšími soubory definovanými v ukázce. S šablonou "MNIST ručně zapsaných" projekt obsahuje několik souborů.
+5. Visual Studio creates the project file (a `.pyproj` file on disk) along with other files defined in the sample. With the "MNIST" template, the project contains several files.
 
-    ![mnist ručně zapsaných](media/create-project-gallery/azml-mnist.png)
+    ![mnist](media/create-project-gallery/azml-mnist.png)
 
-6. Odešlete úlohu do Azure Machine Learning.
+6. Submit the job to Azure Machine Learning.
 
-    ![mnist ručně zapsaných](media/create-project-gallery/submit-azml.png)
+    ![mnist](media/create-project-gallery/submit-azml.png)
 
-7. Spuštění v kontejneru Docker nebo na místním počítači
+7. Run in a Docker container or on your local machine
 
-    ![mnist ručně zapsaných](media/create-project-gallery/azml-local.png)
+    ![mnist](media/create-project-gallery/azml-local.png)
