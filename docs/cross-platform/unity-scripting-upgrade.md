@@ -8,85 +8,85 @@ ms.assetid: E2C9420F-A5D5-4472-9020-2B63FB27A133
 ms.technology: vs-unity-tools
 ms.workload:
 - unity
-ms.openlocfilehash: b1f10778c4866e67630fcac7af3b92b3de780aa5
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: 01363ab1588507f31dc74800c85b159039c9bab6
+ms.sourcegitcommit: 9c7d8693108ecd2042a70c04cebe3c44af657baf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777746"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74239430"
 ---
 # <a name="using-net-4x-in-unity"></a>Používání .NET 4.x v Unity
 
-C#a .NET, technologie, které jsou základem skriptování Unity, již nadále získávat aktualizace od společnosti Microsoft, které byly původně vydány v 2002. Vývojáři Unity ale nemusí znát stálý proud nových funkcí přidaných do C# jazyka a .NET Framework. To je z toho 2017,1 důvodu, že Unity používá ekvivalentní skriptovací modul runtime .NET 3,5 a chybějící roky aktualizací.
+C# and .NET, the technologies underlying Unity scripting, have continued to receive updates since Microsoft originally released them in 2002. But Unity developers may not be aware of the steady stream of new features added to the C# language and .NET Framework. That's because before Unity 2017.1, Unity has been using a .NET 3.5 equivalent scripting runtime, missing years of updates.
 
-V případě vydání Unity 2017,1 představila Unity experimentální verzi svého skriptovacího modulu runtime upgradovanou na verzi kompatibilní s .NET C# 4,6, 6. V Unity 2018,1 se ekvivalentní modul runtime .NET 4. x už nepovažuje za experimentální, zatímco starší modul runtime ekvivalentní .NET 3,5 se teď považuje za starší verzi. A s vydáním Unity 2018,3 se Unity přizpůsobuje, aby byl upgradovaný skriptovací modul runtime výchozím výběrem a aby se aktualizoval ještě C# 7. Pokud chcete získat další informace a nejnovější aktualizace tohoto plánu, přečtěte si [Blogový příspěvek](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/) v Unity nebo navštivte své [experimentální fórum s náhledy pro skriptování](https://forum.unity.com/forums/experimental-scripting-previews.107/). Mezitím se podívejte na následující části, kde se dozvíte další informace o nových funkcích, které jsou teď dostupné s modulem runtime skriptování .NET 4. x.
+With the release of Unity 2017.1, Unity introduced an experimental version of its scripting runtime upgraded to a .NET 4.6, C# 6 compatible version. In Unity 2018.1, the .NET 4.x equivalent runtime is no longer considered experimental, while the older .NET 3.5 equivalent runtime is now considered to be the legacy version. And with the release of Unity 2018.3, Unity is projecting to make the upgraded scripting runtime the default selection, and to update even further to C# 7. For more information and the latest updates on this roadmap, read Unity's [blog post](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/) or visit their [Experimental Scripting Previews forum](https://forum.unity.com/forums/experimental-scripting-previews.107/). In the meantime, check out the sections below to learn more about the new features available now with the .NET 4.x scripting runtime.
 
 ## <a name="prerequisites"></a>Požadavky
 
-* [Unity 2017,1 nebo vyšší](https://unity3d.com/) (doporučeno 2018,2)
+* [Unity 2017.1 or above](https://unity3d.com/) (2018.2 recommended)
 * [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
 
-## <a name="enabling-the-net-4x-scripting-runtime-in-unity"></a>Povolení skriptovacího modulu runtime .NET 4. x v Unity
+## <a name="enabling-the-net-4x-scripting-runtime-in-unity"></a>Enabling the .NET 4.x scripting runtime in Unity
 
-Pokud chcete povolit modul runtime skriptování .NET 4. x, proveďte následující kroky:
+To enable the .NET 4.x scripting runtime, take the following steps:
 
-1. Otevřete PlayerSettings v inspektoru Unity tak, že vyberete **upravit > nastavení projektu > Player**.
+1. Open PlayerSettings in the Unity Inspector by selecting **Edit > Project Settings > Player**.
 
-1. Pod hlavičkou **Konfigurace** klikněte na rozevírací seznam **verze skriptovacího modulu runtime** a vyberte **ekvivalent .NET 4. x**. Zobrazí se výzva k restartování Unity.
+1. Under the **Configuration** heading, click the **Scripting Runtime Version** dropdown and select **.NET 4.x Equivalent**. You will be prompted to restart Unity.
 
-![Vybrat ekvivalent .NET 4. x](media/vstu_scripting-runtime-version.png)
+![Select .NET 4.x equivalent](media/vstu_scripting-runtime-version.png)
 
-## <a name="choosing-between-net-4x-and-net-standard-20-profiles"></a>Volba mezi profily .NET 4. x a .NET Standard 2,0
+## <a name="choosing-between-net-4x-and-net-standard-20-profiles"></a>Choosing between .NET 4.x and .NET Standard 2.0 profiles
 
-Po přepnutí na ekvivalentní skriptovací modul runtime .NET 4. x můžete určit **úroveň kompatibility API** pomocí rozevírací nabídky v PlayerSettings (**Upravit > nastavení projektu > Player**). K dispozici jsou dvě možnosti:
+Once you've switched to the .NET 4.x equivalent scripting runtime, you can specify the **Api Compatibility Level** using the dropdown menu in the PlayerSettings (**Edit > Project Settings > Player**). There are two options:
 
-* **.NET Standard 2,0**. Tento profil se shoduje s [profilem .NET Standard 2,0](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md) zveřejněným rozhraním .NET Foundation. Unity doporučuje .NET Standard 2,0 pro nové projekty. Je menší než .NET 4. x, což je výhodné pro platformy s omezením velikosti. V Unity se navíc zavázala podporovat tento profil napříč všemi platformami, které podporuje Unity.
+* **.NET Standard 2.0**. This profile matches the [.NET Standard 2.0 profile](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md) published by the .NET Foundation. Unity recommends .NET Standard 2.0 for new projects. It's smaller than .NET 4.x, which is advantageous for size-constrained platforms. Additionally, Unity has committed to supporting this profile across all platforms that Unity supports.
 
-* **.NET 4. x**. Tento profil poskytuje přístup k nejnovějšímu rozhraní API .NET 4. Zahrnuje veškerý kód, který je k dispozici v knihovnách tříd .NET Framework a podporuje také profily .NET Standard 2,0. Použijte profil .NET 4. x, pokud váš projekt vyžaduje součást rozhraní API, která není obsažena v profilu .NET Standard 2,0. Některé části tohoto rozhraní API ale nemusí být podporované na všech platformách Unity.
+* **.NET 4.x**. This profile provides access to the latest .NET 4 API. It includes all of the code available in the .NET Framework class libraries and supports .NET Standard 2.0 profiles as well. Use the .NET 4.x profile if your project requires part of the API not included in the .NET Standard 2.0 profile. However, some parts of this API may not be supported on all of Unity's platforms.
 
-Další informace o těchto možnostech si můžete přečíst v [příspěvku na blogu](https://blogs.unity3d.com/2018/03/28/updated-scripting-runtime-in-unity-2018-1-what-does-the-future-hold/)v Unity.
+You can read more about these options in Unity's [blog post](https://blogs.unity3d.com/2018/03/28/updated-scripting-runtime-in-unity-2018-1-what-does-the-future-hold/).
 
-### <a name="adding-assembly-references-when-using-the-net-4x-api-compatibility-level"></a>Přidávání odkazů na sestavení při použití úrovně kompatibility rozhraní .NET 4. x
+### <a name="adding-assembly-references-when-using-the-net-4x-api-compatibility-level"></a>Adding assembly references when using the .NET 4.x Api Compatibility Level
 
-Při použití nastavení .NET Standard 2,0 v rozevíracím seznamu **úroveň kompatibility rozhraní API** jsou odkazována a použitelná všechna sestavení v profilu rozhraní API. Pokud však používáte větší profil rozhraní .NET 4. x, některá sestavení, na kterých se Unity dodává, nejsou ve výchozím nastavení odkazována. Chcete-li použít tato rozhraní API, je nutné ručně přidat odkaz na sestavení. Sestavení Unity se dodává s použitím v adresáři **MonoBleedingEdge/lib/mono** instalace editoru Unity:
+When using the .NET Standard 2.0 setting in the **Api Compatibility Level** dropdown, all assemblies in the API profile are referenced and usable. However, when using the larger .NET 4.x profile, some of the assemblies that Unity ships with aren't referenced by default. To use these APIs, you must manually add an assembly reference. You can view the assemblies Unity ships with in the **MonoBleedingEdge/lib/mono** directory of your Unity editor installation:
 
-![Adresář MonoBleedingEdge](media/vstu_monobleedingedge.png)
+![MonoBleedingEdge directory](media/vstu_monobleedingedge.png)
 
-Například pokud používáte profil .NET 4. x a chcete použít `HttpClient`, je nutné přidat odkaz na sestavení pro System. NET. http. dll. Bez něj kompilátor bude stěžovateli, že nechybí odkaz na sestavení:
+For example, if you're using the .NET 4.x profile and want to use `HttpClient`, you must add an assembly reference for System.Net.Http.dll. Without it, the compiler will complain that you're missing an assembly reference:
 
-![chybějící odkaz na sestavení](media/vstu_missing-reference.png)
+![missing assembly reference](media/vstu_missing-reference.png)
 
-Visual Studio znovu generuje soubory. csproj a. sln pro projekty Unity pokaždé, když jsou otevřené. V důsledku toho nebudete moci přidat odkazy na sestavení přímo v sadě Visual Studio, protože budou po opětovném otevření projektu ztraceny. Místo toho je nutné použít speciální textový soubor s názvem **MCS. rsp** :
+Visual Studio regenerates .csproj and .sln files for Unity projects each time they're opened. As a result, you cannot add assembly references directly in Visual Studio because they'll be lost upon reopening the project. Instead, a special text file named **mcs.rsp** must be used:
 
-1. Vytvořte nový textový soubor s názvem **MCS. rsp** v adresáři kořenových **assetů** vašeho projektu Unity.
+1. Create a new text file named **mcs.rsp** in your Unity project's root **Assets** directory.
 
-1. Do prvního řádku v prázdném textovém souboru zadejte: `-r:System.Net.Http.dll` a pak soubor uložte. "System. NET. http. dll" můžete nahradit případným sestavením, které by mohlo chybět odkaz.
+1. On the first line in the empty text file, enter: `-r:System.Net.Http.dll` and then save the file. You can replace "System.Net.Http.dll" with any included assembly that might be missing a reference.
 
-1. Restartujte Editor Unity.
+1. Restart the Unity editor.
 
-## <a name="taking-advantage-of-net-compatibility"></a>Využití výhod kompatibility .NET
+## <a name="taking-advantage-of-net-compatibility"></a>Taking advantage of .NET compatibility
 
-Kromě nových C# funkcí syntaxe a jazyka modul runtime skriptování .NET 4. x poskytuje uživatelům Unity přístup k velké knihovně balíčků .NET, které nejsou kompatibilní se staršími moduly runtime skriptování .NET 3,5.
+In addition to new C# syntax and language features, the .NET 4.x scripting runtime gives Unity users access to a huge library of .NET packages that are incompatible with the legacy .NET 3.5 scripting runtime.
 
-### <a name="add-packages-from-nuget-to-a-unity-project"></a>Přidání balíčků z NuGet do projektu Unity
+### <a name="add-packages-from-nuget-to-a-unity-project"></a>Add packages from NuGet to a Unity project
 
-[NuGet](https://www.nuget.org/) je správce balíčků pro .NET. NuGet je integrovaný do sady Visual Studio. Projekty Unity však vyžadují speciální proces pro přidání balíčků NuGet. Důvodem je to, že když otevřete projekt v Unity, jejich soubory projektu sady Visual Studio se znovu vygenerují a zrušením potřebných konfigurací. Chcete-li přidat balíček ze sady NuGet do projektu Unity, postupujte následovně:
+[NuGet](https://www.nuget.org/) is the package manager for .NET. NuGet is integrated into Visual Studio. However, Unity projects require a special process to add NuGet packages. This is because when you open a project in Unity, its Visual Studio project files are regenerated, undoing necessary configurations. To add a package from NuGet to your Unity project do the following:
 
-1. Procházet NuGet a vyhledat kompatibilní balíček, který chcete přidat (.NET Standard 2,0 nebo .NET 4. x). Tento příklad předvádí přidání [JSON.NET](https://www.nuget.org/packages/Newtonsoft.Json/), oblíbeného balíčku pro práci s JSON, pro projekt .NET Standard 2,0.
+1. Browse NuGet to locate a compatible package you'd like to add (.NET Standard 2.0 or .NET 4.x). This example will demonstrate adding [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/), a popular package for working with JSON, to a .NET Standard 2.0 project.
 
-1. Klikněte na tlačítko **Stáhnout** :
+1. Click the **Download** button:
 
-    ![tlačítko Stáhnout](media/vstu_nuget-download.png)
+    ![download button](media/vstu_nuget-download.png)
 
-1. Vyhledejte stažený soubor a změňte jeho příponu z **. nupkg** na **. zip**.
+1. Locate the downloaded file and change the extension from **.nupkg** to **.zip**.
 
-1. V souboru ZIP přejděte do adresáře **lib/netstandard 2.0** a zkopírujte soubor **Newtonsoft. JSON. dll** .
+1. Within the zip file, navigate to the **lib/netstandard2.0** directory and copy the **Newtonsoft.Json.dll** file.
 
-1. Ve složce Root **assets** vašeho projektu Unity vytvořte novou složku s názvem **pluginy**. Moduly plug-in jsou speciálním názvem složky v Unity. Další informace najdete v [dokumentaci k Unity](https://docs.unity3d.com/Manual/Plugins.html) .
+1. In your Unity project's root **Assets** folder, create a new folder named **Plugins**. Plugins is a special folder name in Unity. See the [Unity documentation](https://docs.unity3d.com/Manual/Plugins.html) for more information.
 
-1. Vložte soubor **Newtonsoft. JSON. dll** do adresáře **modulů plug-in** vašeho projektu Unity.
+1. Paste the **Newtonsoft.Json.dll** file into your Unity project's **Plugins** directory.
 
-1. V adresáři **assetů** projektu Unity vytvořte soubor s názvem **Link. XML** a přidejte následující kód XML.  Tím zajistíte, že proces odstranění kódu Unity při exportování na IL2CPP platformu neodstraní potřebná data.  I když je tento krok specifický pro tuto knihovnu, můžete narazit na problémy s jinými knihovnami, které používají reflexi podobným způsobem.  Další informace najdete v dokumentaci k [Unity](https://docs.unity3d.com/Manual/IL2CPP-BytecodeStripping.html) v tomto tématu.
+1. Create a file named **link.xml** in your Unity project's **Assets** directory and add the following XML.  This will ensure Unity's bytecode stripping process does not remove necessary data when exporting to an IL2CPP platform.  While this step is specific to this library, you may run into problems with other libraries that use Reflection in similar ways.  For more information, please see [Unity's docs](https://docs.unity3d.com/Manual/IL2CPP-BytecodeStripping.html) on this topic.
 
     ```xml
     <linker>
@@ -96,7 +96,7 @@ Kromě nových C# funkcí syntaxe a jazyka modul runtime skriptování .NET 4. x
     </linker>
     ```
 
-Díky všechno, co je na místě, teď můžete použít balíček Json.NET.
+With everything in place, you can now use the Json.NET package.
 
 ```csharp
 using Newtonsoft.Json;
@@ -126,15 +126,15 @@ public class JSONTest : MonoBehaviour
 }
 ```
 
-Toto je jednoduchý příklad použití knihovny, která nemá žádné závislosti. Pokud se balíčky NuGet spoléhají na jiné balíčky NuGet, je nutné tyto závislosti stáhnout ručně a přidat je do projektu stejným způsobem.
+This is a simple example of using a library which has no dependencies. When NuGet packages rely on other NuGet packages, you would need to download these dependencies manually and add them to the project in the same way.
 
-## <a name="new-syntax-and-language-features"></a>Nové funkce syntaxe a jazyka
+## <a name="new-syntax-and-language-features"></a>New syntax and language features
 
-Použití aktualizovaného skriptovacího modulu runtime poskytuje vývojářům C# Unity přístup k 6 a hostiteli nových funkcí jazyka a syntaxe.
+Using the updated scripting runtime gives Unity developers access to C# 6 and a host of new language features and syntax.
 
-### <a name="auto-property-initializers"></a>Inicializátory automatických vlastností
+### <a name="auto-property-initializers"></a>Auto-property initializers
 
-V modulu runtime skriptování .NET 3,5 v Unity umožňuje syntaxe automatických vlastností snadno rychle definovat neinicializované vlastnosti, ale inicializace musí probíhat jinde ve vašem skriptu. Nyní s modulem runtime .NET 4. x je možné inicializovat automatické vlastnosti na stejném řádku:
+In Unity's .NET 3.5 scripting runtime, the auto-property syntax makes it easy to quickly define uninitialized properties, but initialization has to happen elsewhere in your script. Now with the .NET 4.x runtime, it's possible to initialize auto-properties in the same line:
 
 ```csharp
 // .NET 3.5
@@ -144,9 +144,9 @@ public int Health { get; set; } // Health has to be initialized somewhere else, 
 public int Health { get; set; } = 100;
 ```
 
-### <a name="string-interpolation"></a>Interpolace řetězců
+### <a name="string-interpolation"></a>String interpolation
 
-Se starším modulem runtime .NET 3,5 vyžaduje zřetězení řetězců nevhodný syntax. Nyní s modulem runtime .NET 4. x umožňuje funkce [interpolace `$` řetězců](https://docs.microsoft.com/dotnet/csharp/language-reference/tokens/interpolated) vkládat do řetězců výrazy v přímější a čitelné syntaxi:
+With the older .NET 3.5 runtime, string concatenation required awkward syntax. Now with the .NET 4.x runtime, the [`$` string interpolation](https://docs.microsoft.com/dotnet/csharp/language-reference/tokens/interpolated) feature allows expressions to be inserted into strings in a more direct and readable syntax:
 
 ```csharp
 // .NET 3.5
@@ -159,7 +159,7 @@ Debug.Log($"Player health: {Health}");
 
 ### <a name="expression-bodied-members"></a>Členové tvoření výrazy
 
-V případě, C# že je k dispozici novější syntaxe v modulu runtime .NET 4. x, mohou [výrazy lambda](https://docs.microsoft.com/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions) nahradit tělo funkcí a vytvořit tak stručnější:
+With the newer C# syntax available in the .NET 4.x runtime, [lambda expressions](https://docs.microsoft.com/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions) can replace the body of functions to make them more succinct:
 
 ```csharp
 // .NET 3.5
@@ -172,7 +172,7 @@ private int TakeDamage(int amount)
 private int TakeDamage(int amount) => Health -= amount;
 ```
 
-Můžete také použít členy Expression-těle ve vlastnostech jen pro čtení:
+You can also use expression-bodied members in read-only properties:
 
 ```csharp
 // .NET 4.x
@@ -181,9 +181,9 @@ public string PlayerHealthUiText => $"Player health: {Health}";
 
 ### <a name="task-based-asynchronous-pattern-tap"></a>Asynchronní vzor založený na úlohách (TAP)
 
-[Asynchronní programování](https://docs.microsoft.com/dotnet/csharp/async) umožňuje provádět časově náročné operace, aniž by došlo k tomu, že aplikace přestane reagovat. Tato funkce také umožňuje vašemu kódu počkat na dokončení operací, které jsou časově náročné, než budete pokračovat v kódu, který závisí na výsledcích těchto operací. Můžete například počkat na dokončení souboru nebo síťové operace.
+[Asynchronous programming](https://docs.microsoft.com/dotnet/csharp/async) allows time consuming operations to take place without causing your application to become unresponsive. This functionality also allows your code to wait for time consuming operations to finish before continuing with code that depends on the results of these operations. For example, you could wait for a file to load or a network operation to complete.
 
-V Unity je asynchronní programování obvykle provedeno s [korutinami](https://docs.unity3d.com/Manual/Coroutines.html). Od C# 5 ale upřednostňovaná metoda asynchronního programování při vývoji .NET byla [asynchronním vzorem založeným na úlohách (klepnutím)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap) pomocí `async` a `await` klíčová slova with [System. Threading. Task](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task). V souhrnu ve `async` funkce můžete `await` dokončení úkolu bez blokování, že zbytek aplikace neblokuje aktualizace:
+In Unity, asynchronous programming is typically accomplished with [coroutines](https://docs.unity3d.com/Manual/Coroutines.html). However, since C# 5, the preferred method of asynchronous programming in .NET development has been the [Task-based Asynchronous Pattern (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap) using the `async` and `await` keywords with [System.Threading.Task](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task). In summary, in an `async` function you can `await` a task's completion without blocking the rest of your application from updating:
 
 ```csharp
 // Unity coroutine
@@ -223,35 +223,35 @@ public class AsyncAwaitExample : MonoBehaviour
 }
 ```
 
-Klepněte na složitý předmět. vývojáři drobné odlišnosti specifické pro Unity by si měli zvážit. V důsledku toho není v Unity klepněte na univerzální náhradu za korutiny. je však možné využít jiný nástroj. Rozsah této funkce je nad rámec tohoto článku, ale níže jsou uvedeny některé obecné osvědčené postupy a tipy.
+TAP is a complex subject, with Unity-specific nuances developers should consider. As a result, TAP isn't a universal replacement for coroutines in Unity; however, it is another tool to leverage. The scope of this feature is beyond this article, but some general best practices and tips are provided below.
 
-#### <a name="getting-started-reference-for-tap-with-unity"></a>Úvodní odkaz na použití s Unity
+#### <a name="getting-started-reference-for-tap-with-unity"></a>Getting started reference for TAP with Unity
 
-Tyto tipy vám pomůžou začít s klepnutím v Unity:
+These tips can help you get started with TAP in Unity:
 
-* Asynchronní funkce, které mají být očekávány, by měly mít návratový typ [`Task`](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task) nebo [`Task<TResult>`](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1).
-* Asynchronní funkce, které vracejí úlohu, by měly mít ke svým názvům připojené příponu **"Async"** . Přípona "Async" pomáhá označovat, že by měla být funkce vždy očekávána.
-* Pro funkce, které aktivují asynchronní funkce z tradičního synchronního kódu, použijte pouze `async void` návratový typ. Takové funkce se nedají očekávat sami a neměla by mít v názvu "Async" příponu.
-* Unity používá UnitySynchronizationContext k zajištění toho, aby se asynchronní funkce spouštěly v hlavním vlákně ve výchozím nastavení. Rozhraní API Unity není přístupné mimo hlavní vlákno.
-* Je možné spouštět úlohy na vláknech na pozadí s metodami, jako jsou [`Task.Run`](https://msdn.microsoft.com/library/hh195051.aspx) a [`Task.ConfigureAwait(false)`](https://msdn.microsoft.com/library/system.threading.tasks.task.configureawait.aspx). Tato technika je užitečná pro snižování zátěže náročných operací z hlavního vlákna za účelem zvýšení výkonu. Nicméně použití vláken na pozadí může vést k problémům, které je obtížné ladit, jako jsou třeba [Konflikty časování](https://wikipedia.org/wiki/Race_condition).
-* Rozhraní API Unity není přístupné mimo hlavní vlákno.
-* Úlohy, které používají vlákna, nejsou v WebGL sestaveních Unity podporovány.
+* Asynchronous functions intended to be awaited should have the return type [`Task`](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task) or [`Task<TResult>`](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1).
+* Asynchronous functions that return a task should have the suffix **"Async"** appended to their names. The "Async" suffix helps indicate that a function should always be awaited.
+* Only use the `async void` return type for functions that fire off async functions from traditional synchronous code. Such functions cannot themselves be awaited and shouldn't have the "Async" suffix in their names.
+* Unity uses the UnitySynchronizationContext to ensure async functions run on the main thread by default. The Unity API isn't accessible outside of the main thread.
+* It's possible to run tasks on background threads with methods like [`Task.Run`](https://msdn.microsoft.com/library/hh195051.aspx) and [`Task.ConfigureAwait(false)`](https://msdn.microsoft.com/library/system.threading.tasks.task.configureawait.aspx). This technique is useful for offloading expensive operations from the main thread to enhance performance. However, using background threads can lead to problems that are difficult to debug, such as [race conditions](https://wikipedia.org/wiki/Race_condition).
+* The Unity API isn't accessible outside the main thread.
+* Tasks that use threads aren't supported on Unity WebGL builds.
 
-#### <a name="differences-between-coroutines-and-tap"></a>Rozdíly mezi korutinami a klepnutím
+#### <a name="differences-between-coroutines-and-tap"></a>Differences between coroutines and TAP
 
-Existují některé důležité rozdíly mezi korutinami a klepnutím/Async-await:
+There are some important differences between coroutines and TAP / async-await:
 
-* Korutiny nemůžou vracet hodnoty, ale `Task<TResult>` můžou.
-* Nelze vložit `yield` do příkazu try-catch, což ztěžuje zpracování chyb pomocí korutiny. Ale try-catch funguje s klepnutím.
-* Funkce korutiny Unity není k dispozici ve třídách, které se neodvozují z MonoBehaviour. Klepněte skvěle na asynchronní programování v těchto třídách.
-* V tuto chvíli není Unity navržený jako velkoobchodní náhrada za spolurutiny. Profilace je jediným způsobem, jak zjistit konkrétní výsledky jednoho přístupu oproti druhému pro každý daný projekt.
+* Coroutines cannot return values, but `Task<TResult>` can.
+* You cannot put a `yield` in a try-catch statement, making error handling difficult with coroutines. However, try-catch works with TAP.
+* Unity's coroutine feature isn't available in classes that don't derive from MonoBehaviour. TAP is great for asynchronous programming in such classes.
+* At this point, Unity doesn't suggest TAP as a wholesale replacement of coroutines. Profiling is the only way to know the specific results of one approach versus the other for any given project.
 
 > [!NOTE]
-> Od Unity 2018,2 není ladění asynchronních metod s body přerušení plně podporováno; [Tato funkce se však očekává v Unity 2018,3](https://twitter.com/jbevain/status/900043560665235456).
+> As of Unity 2018.2, debugging async methods with break points isn't fully supported; however, [this functionality is expected in Unity 2018.3](https://twitter.com/jbevain/status/900043560665235456).
 
 ### <a name="nameof-operator"></a>nameof – operátor
 
-Operátor `nameof` Získá název řetězce proměnné, typu nebo členu. Některé případy, kdy `nameof` jsou užitečné, jsou chyby protokolování a získání názvu řetězce výčtu:
+The `nameof` operator gets the string name of a variable, type, or member. Some cases where `nameof` comes in handy are logging errors, and getting the string name of an enum:
 
 ```csharp
 // Get the string name of an enum:
@@ -272,25 +272,25 @@ private void RecordHighScore(string playerName)
 }
 ```
 
-### <a name="caller-info-attributes"></a>Atributy informací o volajícím
+### <a name="caller-info-attributes"></a>Caller info attributes
 
-[Atributy informace o volajícím](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/caller-information) poskytují informace o volajícím metody. Je nutné zadat výchozí hodnotu pro každý parametr, který chcete použít s atributem informace o volajícím:
+[Caller info attributes](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/caller-information) provide information about the caller of a method. You must provide a default value for each parameter you want to use with a Caller Info attribute:
 
 ```csharp
 private void Start ()
-    {
-        ShowCallerInfo("Something happened.");
-    }
-    public void ShowCallerInfo(string message,
-            [System.Runtime.CompilerServices.CallerMemberName] string memberName = "",
-            [System.Runtime.CompilerServices.CallerFilePath] string sourceFilePath = "",
-            [System.Runtime.CompilerServices.CallerLineNumber] int sourceLineNumber = 0)
-    {
-        Debug.Log($"message: {message}");
-        Debug.Log($"member name: {memberName}");
-        Debug.Log($"source file path: {sourceFilePath}");
-        Debug.Log($"source line number: {sourceLineNumber}");
-    }
+{
+    ShowCallerInfo("Something happened.");
+}
+public void ShowCallerInfo(string message,
+        [System.Runtime.CompilerServices.CallerMemberName] string memberName = "",
+        [System.Runtime.CompilerServices.CallerFilePath] string sourceFilePath = "",
+        [System.Runtime.CompilerServices.CallerLineNumber] int sourceLineNumber = 0)
+{
+    Debug.Log($"message: {message}");
+    Debug.Log($"member name: {memberName}");
+    Debug.Log($"source file path: {sourceFilePath}");
+    Debug.Log($"source line number: {sourceLineNumber}");
+}
 // Output:
 // Something happened
 // member name: Start
@@ -298,9 +298,9 @@ private void Start ()
 // source line number: 10
 ```
 
-### <a name="using-static"></a>Použití static
+### <a name="using-static"></a>Using static
 
-[Použití static](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-static) umožňuje použití statických funkcí bez zadání názvu jeho třídy. Když použijete statickou funkci, můžete ušetřit místo a čas, pokud potřebujete použít několik statických funkcí ze stejné třídy:
+[Using static](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-static) allows you to use static functions without typing its class name. With using static, you can save space and time if you need to use several static functions from the same class:
 
 ```csharp
 // .NET 3.5
@@ -331,21 +331,21 @@ public class UsingStaticExample: MonoBehaviour
 }
 ```
 
-## <a name="il2cpp-considerations"></a>IL2CPP požadavky
+## <a name="il2cpp-considerations"></a>IL2CPP Considerations
 
-Při exportování hry na platformy, jako je iOS, Unity použije svůj modul IL2CPP k "přepracovávání" IL C++ na kód, který se pak zkompiluje pomocí nativního kompilátoru cílové platformy. V tomto scénáři je k dispozici několik funkcí rozhraní .NET, které nejsou podporovány, například části reflexe a použití klíčového slova `dynamic`. I když můžete pomocí těchto funkcí řídit vlastní kód, může dojít k potížím s použitím knihoven DLL a sad SDK třetích stran, které nebyly zapsány v Unity a IL2CPP na vědomí. Další informace o tomto tématu najdete v dokumentaci k [omezením skriptování](https://docs.unity3d.com/Manual/ScriptingRestrictions.html) na webu Unity.
+When exporting your game to platforms like iOS, Unity will use its IL2CPP engine to "transpile" IL to C++ code which is then compiled using the native compiler of the target platform. In this scenario, there are several .NET features which are not supported, such as parts of Reflection, and usage of the `dynamic` keyword. While you can control using these features in your own code, you may run into problems using 3rd party DLLs and SDKs which were not written with Unity and IL2CPP in mind. For more information on this topic, please see the [Scripting Restrictions](https://docs.unity3d.com/Manual/ScriptingRestrictions.html) docs on Unity's site.
 
-Kromě toho, jak je uvedeno v předchozím příkladu Json.NET, Unity se pokusí vydělit nepoužitý kód během procesu exportu IL2CPP.  Přestože se obvykle nejedná o problém s knihovnami, které používají reflexi, může dojít k náhodnému vystavení vlastností nebo metod, které budou volány za běhu, které nelze určit v době exportu.  Chcete-li tyto problémy vyřešit, přidejte do projektu soubor **Link. XML** , který obsahuje seznam sestavení a oborů názvů pro nespuštění procesu odstranění proti.  Úplné podrobnosti najdete v [dokumentaci k odstraňování kódu v Unity](https://docs.unity3d.com/Manual/IL2CPP-BytecodeStripping.html).
+Additionally, as mentioned in the Json.NET example above, Unity will attempt to strip out unused code during the IL2CPP export process.  While this typically isn't an issue, with libraries that use Reflection, it can accidentally strip out properties or methods that will be called at run time that can't be determined at export time.  To fix these issues, add a **link.xml** file to your project which contains a list of assemblies and namespaces to not run the stripping process against.  For full details, please see [Unity's docs on bytecode stripping](https://docs.unity3d.com/Manual/IL2CPP-BytecodeStripping.html).
 
-## <a name="net-4x-sample-unity-project"></a>Ukázkový projekt Unity .NET 4. x
+## <a name="net-4x-sample-unity-project"></a>.NET 4.x Sample Unity Project
 
-Ukázka obsahuje příklady několika funkcí rozhraní .NET 4. x. Můžete si stáhnout projekt nebo zobrazit zdrojový kód na [GitHubu](https://github.com/Microsoft/unity-scripting-upgrade).
+The sample contains examples of several .NET 4.x features. You can download the project or view the source code on [GitHub](https://github.com/Microsoft/unity-scripting-upgrade).
 
 ## <a name="additional-resources"></a>Další zdroje
 
-* [Blog Unity – vylepšení prostředí pro skriptování v Unity 2018,2](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/)
-* [HistorieC#](https://docs.microsoft.com/dotnet/csharp/whats-new/csharp-version-history)
-* [Co je nového v C# 6](https://docs.microsoft.com/dotnet/csharp/whats-new/csharp-6)
-* [Asynchronní programování v Unity, použití korutiny a klepnutí](https://blogs.msdn.microsoft.com/appconsult/2017/09/01/unity-coroutine-tap)
-* [Async-await místo korutin v Unity 2017](http://www.stevevermeulen.com/index.php/2017/09/using-async-await-in-unity3d-2017/)
-* [Fórum Unity – experimentální náhledy skriptů](https://forum.unity.com/forums/experimental-scripting-previews.107/)
+* [Unity Blog - Scripting Runtime Improvements in Unity 2018.2](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/)
+* [History of C#](https://docs.microsoft.com/dotnet/csharp/whats-new/csharp-version-history)
+* [What's New in C# 6](https://docs.microsoft.com/dotnet/csharp/whats-new/csharp-6)
+* [Asynchronous programming in Unity, Using Coroutine and TAP](https://blogs.msdn.microsoft.com/appconsult/2017/09/01/unity-coroutine-tap)
+* [Async-Await Instead of Coroutines in Unity 2017](http://www.stevevermeulen.com/index.php/2017/09/using-async-await-in-unity3d-2017/)
+* [Unity Forum - Experimental Scripting Previews](https://forum.unity.com/forums/experimental-scripting-previews.107/)

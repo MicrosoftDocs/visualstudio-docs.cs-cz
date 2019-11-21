@@ -1,5 +1,5 @@
 ---
-title: Přiřazení portů vzdáleného ladicího programu | Microsoft Docs
+title: Remote Debugger Port Assignments | Microsoft Docs
 ms.custom: ''
 ms.date: 05/18/2018
 ms.topic: reference
@@ -9,67 +9,67 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf3d3ce704d517224452731c52a891ac2263f738
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2d99a1aff2c241e81e8914a247d2f6d8981ee273
+ms.sourcegitcommit: 9c7d8693108ecd2042a70c04cebe3c44af657baf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72730245"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74239460"
 ---
 # <a name="remote-debugger-port-assignments"></a>Přiřazení portů vzdáleného ladicího programu
-Visual Studio Remote Debugger může běžet jako aplikace nebo jako služba na pozadí. Když je aplikace spuštěna jako aplikace, používá port, který je přiřazen ve výchozím nastavení následujícím způsobem:
+The Visual Studio Remote Debugger can run as an application or as a background service. When it runs as an application, it uses a port that is assigned by default as follows:
 ::: moniker range=">=vs-2019"
-- Visual Studio 2019:4024
+- Visual Studio 2019: 4024
 ::: moniker-end
-- Visual Studio 2017:4022
+- Visual Studio 2017: 4022
 
-- Visual Studio 2015:4020
+- Visual Studio 2015: 4020
 
-- Visual Studio 2013:4018
+- Visual Studio 2013: 4018
 
-- Visual Studio 2012:4016
+- Visual Studio 2012: 4016
 
-  Jinými slovy, číslo portu přiřazené vzdálenému ladicímu programu se zvýší o 2 pro každou verzi. Můžete nastavit jiné číslo portu, které chcete. Vyvysvětlíme, jak se v pozdější části nastavují čísla portů.
+In other words, the number of the port assigned to the remote debugger is incremented by 2 for each release. You can set a different port number of you like. We will explain how to set port numbers in a later section.
 
-## <a name="the-remote-debugger-port-on-32-bit-operating-systems"></a>Port vzdáleného ladicího programu v 32 operačních systémech
+## <a name="the-remote-debugger-port-on-32-bit-operating-systems"></a>The Remote Debugger Port on 32-bit Operating Systems
 
 ::: moniker range=">=vs-2019"
- TCP 4024 (v aplikaci Visual Studio 2019) je hlavní port a je vyžadován pro všechny scénáře. Můžete ji nakonfigurovat buď z příkazového řádku, nebo z okna vzdáleného ladicího programu.
+ TCP 4024 (in Visual Studio 2019) is the main port, and is required for all scenarios. You can configure this from either the command line or the remote debugger window.
 ::: moniker-end
 ::: moniker range="vs-2017"
- TCP 4022 (v aplikaci Visual Studio 2017) je hlavní port a je vyžadován pro všechny scénáře. Můžete ji nakonfigurovat buď z příkazového řádku, nebo z okna vzdáleného ladicího programu.
+ TCP 4022 (in Visual Studio 2017) is the main port, and is required for all scenarios. You can configure this from either the command line or the remote debugger window.
 ::: moniker-end
 
- V okně vzdáleného ladicího programu klikněte na **nástroje > možnosti**a nastavte číslo portu TCP/IP.
+ In the remote debugger window, click **Tools > Options**, and set the TCP/IP port number.
 
- Na příkazovém řádku spusťte vzdálený ladicí program s přepínačem **/port** : **msvsmon/port \<port číslo >** .
+ On the command line, start the remote debugger with the **/port** switch: **msvsmon /port \<port number>** .
 
- Všechny přepínače příkazového řádku vzdáleného ladícího programu najdete v nápovědě pro vzdálené ladění (stisknutím klávesy **F1** nebo kliknutím na **Nápověda > použití** v okně vzdáleného ladicího programu).
+ You can find all the remote debugger command line switches in the remote debugging help (press **F1** or click **Help > Usage** in the remote debugger window).
 
-## <a name="the-remote-debugger-port-on-64-bit-operating-systems"></a>Port vzdáleného ladicího programu v 64 operačních systémech
+## <a name="the-remote-debugger-port-on-64-bit-operating-systems"></a>The Remote Debugger Port on 64-bit Operating Systems
 ::: moniker range=">=vs-2019"
- 64 po spuštění 32bitové verze vzdáleného ladicího programu se ve výchozím nastavení používá hlavní port (4024).  Pokud provedete ladění 32ho procesu, verze 64 vzdáleného ladicího programu 32 spustí na portu 4025 verzi vzdáleného ladicího programu, která je na portu (číslo hlavního portu se zvyšuje o 1). Pokud spustíte 32 vzdálený ladicí program, použije 4024 a 4025 se nepoužije.
+ When the 64-bit version of the remote debugger is started, it uses the main port (4024) by default.  If you debug a 32-bit process, the 64-bit version of the remote debugger starts a 32-bit version of the remote debugger on port 4025 (the main port number incremented by 1). If you run the 32-bit remote debugger, it uses 4024, and 4025 is not used.
 ::: moniker-end
 ::: moniker range="vs-2017"
- 64 po spuštění 32bitové verze vzdáleného ladicího programu se ve výchozím nastavení používá hlavní port (4022).  Pokud provedete ladění 32ho procesu, verze 64 vzdáleného ladicího programu 32 spustí na portu 4023 verzi vzdáleného ladicího programu, která je na portu (číslo hlavního portu se zvyšuje o 1). Pokud spustíte 32 vzdálený ladicí program, použije 4022 a 4023 se nepoužije.
+ When the 64-bit version of the remote debugger is started, it uses the main port (4022) by default.  If you debug a 32-bit process, the 64-bit version of the remote debugger starts a 32-bit version of the remote debugger on port 4023 (the main port number incremented by 1). If you run the 32-bit remote debugger, it uses 4022, and 4023 is not used.
 :::moniker-end
 
- Tento port lze konfigurovat z příkazového řádku: **msvsmon/wow64port \<port číslo >** .
+ This port is configurable from the command line: **Msvsmon /wow64port \<port number>** .
 
-## <a name="the-discovery-port"></a>Port zjišťování
- UDP 3702 se používá k nalezení spuštěných instancí vzdáleného ladicího programu v síti (například dialogového okna **Najít** v dialogovém okně **připojit k procesu** ). Používá se jenom pro zjišťování počítače, na kterém běží vzdálený ladicí program, takže je volitelný, pokud máte nějaký jiný způsob, jak znát název počítače nebo IP adresu cílového počítače. Toto je standardní port pro zjišťování, takže číslo portu nelze nakonfigurovat.
+## <a name="the-discovery-port"></a>The Discovery Port
+ UDP 3702 is used for finding running instances of the remote debugger on the network (for example, the **Find** dialog in the **Attach to Process** dialog). It is used only for discovering a machine running the remote debugger, so it is  optional if you have some other way of knowing the machine name or IP address of the target computer. This is a standard port for discovery, so the port number cannot be configured.
 
- Pokud nechcete povolit zjišťování, můžete spustit msvsmon z příkazového řádku se zakázaným zjišťováním: **msvsmon/nodiscovery**.
+ If you do not want to enable discovery, you can start msvsmon from the command line with discovery disabled:  **Msvsmon /nodiscovery**.
 
-## <a name="remote-debugger-ports-on-azure"></a>Porty vzdáleného ladicího programu v Azure
- Následující porty používá vzdálený ladicí program v Azure. Porty v cloudové službě jsou namapované na porty na jednotlivém virtuálním počítači. Všechny porty jsou TCP.
+## <a name="remote-debugger-ports-on-azure"></a>Remote Debugger Ports on Azure
+ The following ports are used by the remote debugger on Azure. The ports on the cloud service are mapped to the ports on the individual VM. All ports are TCP.
 
-|Vázán|Port v cloudové službě|Port na virtuálním počítači|
+|Connection|Port on Cloud Service|Port on VM|
 |-|-|-|
-|Microsoft. WindowsAzure. plugins. Remotedebuggeru. Connector|30400|30398|
-|Microsoft. WindowsAzure. plugins. Remotedebuggeru. resílaer|31400|31398|
-|Microsoft. WindowsAzure. plugins. Remotedebuggeru. Forwarderx86|31401|31399|
-|Nahrání Microsoft. WindowsAzure. plugins. Remotedebuggeru.|32400|32398|
+|Microsoft.WindowsAzure.Plugins.RemoteDebugger.Connector|30400|30398|
+|Microsoft.WindowsAzure.Plugins.RemoteDebugger.Forwarder|31400|31398|
+|Microsoft.WindowsAzure.Plugins.RemoteDebugger.Forwarderx86|31401|31399|
+|Microsoft.WindowsAzure.Plugins.RemoteDebugger.FileUpload|32400|32398|
 
 ## <a name="see-also"></a>Viz také:
 - [Vzdálené ladění](../debugger/remote-debugging.md)
