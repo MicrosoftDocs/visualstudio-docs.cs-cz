@@ -1,5 +1,5 @@
 ---
-title: Jak zpětná rozšíření
+title: How to Roundtrip Extensions
 ms.date: 06/25/2017
 ms.topic: conceptual
 ms.assetid: 2d6cf53c-011e-4c9e-9935-417edca8c486
@@ -8,100 +8,100 @@ ms.author: madsk
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: 392a0157522f5baa8e8736d52c940b31c0a44cde
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 44b5c5c58c46017730f06142548505c628894a11
+ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826034"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74316492"
 ---
-# <a name="how-to-make-extensions-compatible-with-visual-studio-2017-and-visual-studio-2015"></a>Postupy: Ujistěte se, rozšíření kompatibilní s Visual Studio 2017 a Visual Studio 2015
+# <a name="how-to-make-extensions-compatible-with-visual-studio-2017-and-visual-studio-2015"></a>How to: Make extensions compatible with Visual Studio 2017 and Visual Studio 2015
 
-Tento dokument vysvětluje, jak vytvořit projekty rozšiřitelnosti přenosu mezi Visual Studio 2015 a Visual Studio 2017. Po dokončení tohoto upgradu, projekt bude moct otevírat, sestavení, nainstalovat a spustit v sadě Visual Studio 2015 a Visual Studio 2017. Jako odkaz, nějaké rozšíření, které se dají zpátečního převodu mezi Visual Studio 2015 a Visual Studio 2017 najdete v [ukázky rozšiřitelnosti VS SDK](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
+This document explains how to make extensibility projects round-trip between Visual Studio 2015 and Visual Studio 2017. After completing this upgrade, a project will be able to open, build, install, and run in both Visual Studio 2015 and Visual Studio 2017. As a reference, some extensions that can round-trip between Visual Studio 2015 and Visual Studio 2017 can be found in the [VS SDK extensibility samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
 
-Pokud chcete pouze na sestavení v sadě Visual Studio 2017, ale má výstup VSIX ke spuštění v sadě Visual Studio 2015 a Visual Studio 2017, pak se podívejte [dokumentu migrace rozšíření](how-to-migrate-extensibility-projects-to-visual-studio-2017.md).
+If you only intend to build in Visual Studio 2017, but want the output VSIX to run in both Visual Studio 2015 and Visual Studio 2017, then refer to the [Extension migration document](how-to-migrate-extensibility-projects-to-visual-studio-2017.md).
 
 > [!NOTE]
-> Z důvodu změn v sadě Visual Studio mezi verzemi nefungují některé věci, které fungovaly v jedné verzi v jiném. Zkontrolujte, že se pokoušíte získat přístup k funkce jsou dostupné v obou verzích nebo rozšíření bude mít neočekávané výsledky.
+> Due to changes in Visual Studio between versions, some things that worked in one version don't work in another. Ensure that the features you are trying to access are available in both versions or the extension will have unexpected results.
 
-Tady je přehled kroků, které dokončíte v tomto dokumentu ho zpátečního převodu VSIX:
+Here is an outline of the steps you'll complete in this document to round-trip a VSIX:
 
-1. Importujte správné balíčky NuGet.
-2. Aktualizujte Manifest rozšíření:
-    * Cíl instalace
+1. Import correct NuGet packages.
+2. Update Extension Manifest:
+    * Installation target
     * Požadavky
-3. Aktualizace souboru CSProj:
-    * Aktualizace `<MinimumVisualStudioVersion>`.
-    * Přidat `<VsixType>` vlastnost.
-    * Přidat vlastnost ladění `($DevEnvDir)` 3 místech.
-    * Přidání podmínek pro import nástroje sestavení a cíle.
+3. Update CSProj:
+    * Update `<MinimumVisualStudioVersion>`.
+    * Add the `<VsixType>` property.
+    * Add the debugging property `($DevEnvDir)` 3 times.
+    * Add conditions for importing build tools and targets.
 
-4. Sestavení a testování
+4. Build and Test
 
-## <a name="environment-setup"></a>Nastavení prostředí
+## <a name="environment-setup"></a>Environment setup
 
-Tento dokument předpokládá, že máte v počítači byly nainstalovány následující:
+This document assumes that you have the following installed on your machine:
 
-* Visual Studio 2015 se sadou VS SDK nainstalovaná
-* Visual Studio 2017 s nainstalovaná rozšíření úloha
+* Visual Studio 2015 with the VS SDK installed
+* Visual Studio 2017 with the Extensibility workload installed
 
-## <a name="recommended-approach"></a>Doporučený postup
+## <a name="recommended-approach"></a>Recommended approach
 
-Důrazně doporučujeme spustit tento upgrade pomocí sady Visual Studio 2015, místo sady Visual Studio 2017. Hlavní výhodou vývoje v sadě Visual Studio 2015 je zajistit odkaz sestavení, která nejsou k dispozici v sadě Visual Studio 2015. Pokud tak učiníte vývoje v sadě Visual Studio 2017, existuje riziko, že může dojít ke vzniku závislost na sestavení, která existuje pouze v sadě Visual Studio 2017.
+It is highly recommended to start this upgrade with Visual Studio 2015, instead of Visual Studio 2017. The main benefit of developing in Visual Studio 2015 is to ensure that you do not reference assemblies that are not available in Visual Studio 2015. If you do development in Visual Studio 2017, there is a risk that you might introduce a dependency on an assembly that only exists in Visual Studio 2017.
 
-## <a name="ensure-there-is-no-reference-to-projectjson"></a>Ujistěte se, že neexistuje žádný odkaz na project.json
+## <a name="ensure-there-is-no-reference-to-projectjson"></a>Ensure there is no reference to project.json
 
-Dále v tomto dokumentu jsme se vloží příkazy podmíněné importu v k vaší * *.csproj* souboru. To nebude fungovat, pokud vaše odkazy na NuGet se ukládají v *project.json*. V důsledku toho doporučujeme přesunout všechny odkazy NuGet *souboru packages.config* souboru.
-Pokud váš projekt obsahuje *project.json* souboru:
+Later in this document, we will insert conditional import statements in to your * *.csproj* file. This won't work if your NuGet references are stored in *project.json*. As such, it is advised to move all NuGet references to the *packages.config* file.
+If your project contains a *project.json* file:
 
-* Poznamenejte si odkazy v *project.json*.
-* Z **Průzkumníka řešení**, odstranit *project.json* soubor z projektu. Tím se odstraní *project.json* souboru a odebere z projektu.
-* Přidáte že odkazy na NuGet zpátky do projektu:
-  * Klikněte pravým tlačítkem na **řešení** a zvolte **spravovat balíčky NuGet pro řešení**.
-  * Visual Studio automaticky vytvoří *souboru packages.config* souboru za vás.
+* Take a note of the references in *project.json*.
+* From the **Solution Explorer**, delete the *project.json* file from the project. This deletes the *project.json* file and removes it from the project.
+* Add the NuGet references back in to the project:
+  * Right-click on the **Solution** and choose **Manage NuGet Packages for Solution**.
+  * Visual Studio automatically creates the *packages.config* file for you.
 
 > [!NOTE]
-> Pokud váš projekt obsahoval EnvDTE balíčky, může potřebovat přidat kliknutím pravým tlačítkem na **odkazy** výběr **přidat odkaz na** a přidejte příslušný odkaz. Pomocí balíčků NuGet může vytvořit chyby při pokusu o svůj projekt sestavit.
+> If your project contained EnvDTE packages, they may need to be added by right clicking on **References** selecting **Add reference** and adding the appropriate reference. Using NuGet packages may create errors while trying to build your project.
 
-## <a name="add-appropriate-build-tools"></a>Přidat nástroje pro sestavení
+## <a name="add-appropriate-build-tools"></a>Add appropriate build tools
 
-Opravdu potřebujeme přidat nástroje pro vytváření, které vám umožní nám umožňuje vytvářet a ladit odpovídajícím způsobem. Společnost Microsoft vytvořila sestavení pro tento volané Microsoft.VisualStudio.Sdk.BuildTasks.
+We need to be sure to add build tools that will allow us to build and debug appropriately. Microsoft has created an assembly for this called Microsoft.VisualStudio.Sdk.BuildTasks.
 
-K vytvoření a nasazení VSIXv3 v sadě Visual Studio 2015 a 2017, budete potřebovat následující balíčky NuGet:
+To build and deploy a VSIXv3 in both Visual Studio 2015 and 2017, you will require the following NuGet packages:
 
-Version | Nástroje pro sestavení
+Version | Built Tools
 --- | ---
 Visual Studio 2015 | Microsoft.VisualStudio.Sdk.BuildTasks.14.0
 Visual Studio 2017 | Microsoft.VSSDK.BuildTool
 
-Postup:
+To do so:
 
-* Do projektu přidejte balíček NuGet Microsoft.VisualStudio.Sdk.BuildTasks.14.0.
-* Pokud projekt neobsahuje Microsoft.VSSDK.BuildTools, přidejte ji.
-* Ujistěte se verze balíčku Microsoft.VSSDK.BuildTools je 15.x nebo vyšší.
+* Add the NuGet package Microsoft.VisualStudio.Sdk.BuildTasks.14.0 to your project.
+* If your project does not contain Microsoft.VSSDK.BuildTools, add it.
+* Ensure the Microsoft.VSSDK.BuildTools version is 15.x or greater.
 
-## <a name="update-extension-manifest"></a>Aktualizujte manifest rozšíření
+## <a name="update-extension-manifest"></a>Update extension manifest
 
-### <a name="1-installation-targets"></a>1. Instalace cíle
+### <a name="1-installation-targets"></a>1. Installation targets
 
-Je potřeba zjistit, jaké verze zacílené pro vytváření rozšíření VSIX sady Visual Studio. Tyto odkazy jsou obvykle, verze 14.0 (Visual Studio 2015), verze 15.0 (Visual Studio 2017) nebo verze 16.0 (Visual Studio 2019). V našem případě chceme sestavení VSIX, který bude instalovat rozšíření pro obě, takže potřebujeme mít obě verze. Pokud chcete sestavit a nainstalovat do verze starší než 14.0 VSIX, to můžete udělat tak, že nastavíte číslo starší verze; verze 10.0 a starší se však již nejsou podporovány.
+We need to tell Visual Studio what versions to target for building a VSIX. Typically, these references are either to version 14.0 (Visual Studio 2015), version 15.0 (Visual Studio 2017), or version 16.0 (Visual Studio 2019). In our case, we want to build a VSIX that will install an extension for both, so we need to target both versions. If you want your VSIX to build and install on versions earlier than 14.0, this can be done by setting the earlier version number; however, version 10.0 and earlier are no longer supported.
 
-* Otevřít *source.extension.vsixmanifest* souboru v sadě Visual Studio.
-* Otevřít **cíle instalace** kartu.
-* Změnit **rozsah verzí** k [14,0, úhlopříčka 17,0). ' [' Říká sady Visual Studio pro verze 14,0 a všechny minulé ho. Tím ')' říká sady Visual Studio pro všemi verzemi až, ale nezahrnuje, verze 17,0.
-* Uložte všechny změny a zavřete všechny instance sady Visual Studio.
+* Open the *source.extension.vsixmanifest* file in Visual Studio.
+* Open the **Install Targets** tab.
+* Change the **Version Range** to [14.0, 17.0). The '[' tells Visual Studio to include 14.0 and all versions past it. The  ')' tells Visual Studio to include all versions up to, but not including, version 17.0.
+* Save all changes and close all instances of Visual Studio.
 
-![Obrázek cíle instalace](media/visual-studio-installation-targets-example.png)
+![Installation Targets Image](media/visual-studio-installation-targets-example.png)
 
-### <a name="2-adding-prerequisites-to-the-extensionvsixmanifest-file"></a>2. Požadavky pro přidání *extension.vsixmanifest* souboru
+### <a name="2-adding-prerequisites-to-the-extensionvsixmanifest-file"></a>2. Adding Prerequisites to the *extension.vsixmanifest* file
 
-Jako předpoklad potřebujeme základním editoru sady Visual Studio. Otevřít Visual Studio a vložte požadavky pomocí aktualizovaný manifest designer.
+We need the Visual Studio Core Editor as a prerequisite. Open Visual Studio and use the updated manifest designer to insert the prerequisites.
 
-Chcete-li to provést ručně:
+To do this manually:
 
-* Přejděte do adresáře projektu v Průzkumníku souborů.
-* Otevřít *extension.vsixmanifest* souboru v textovém editoru.
-* Přidejte následující značku:
+* Navigate to the project directory in File Explorer.
+* Open the *extension.vsixmanifest* file with a text editor.
+* Add the following tag:
 
 ```xml
 <Prerequisites>
@@ -112,58 +112,58 @@ Chcete-li to provést ručně:
 * Soubor uložte a zavřete.
 
 > [!NOTE]
-> Budete muset ručně upravit požadované verze zajistit, že je kompatibilní se všemi verzemi sady Visual Studio 2017. Je to proto, že návrhář vloží minimální verze jako aktuální verze sady Visual Studio (například 15.0.26208.0). Ale protože jiní uživatelé mohou mít starší verzi, můžete ručně upravit na 15.0.
+> You may need to manually edit the Prerequisite version to ensure it is compatible with all versions of Visual Studio 2017. This is because the designer will insert the minimum version as your current version of Visual Studio (for example, 15.0.26208.0). However, since other users may have an earlier version, you will want to manually edit this to 15.0.
 
-Váš soubor manifestu v tomto okamžiku by měl vypadat přibližně takto:
+At this point, your manifest file should look something like this:
 
-![Příklad požadavky](media/visual-studio-prerequisites-example.png)
+![Prerequisites Example](media/visual-studio-prerequisites-example.png)
 
-## <a name="modify-the-project-file-myprojectcsproj"></a>Úprava souboru projektu (myproject.csproj)
+## <a name="modify-the-project-file-myprojectcsproj"></a>Modify the project file (myproject.csproj)
 
-Důrazně doporučujeme mít odkaz na upravenou .csproj otevřít v průběhu tohoto kroku. Můžete najít několik příkladů [tady](https://github.com/Microsoft/VSSDK-Extensibility-Samples). Vyberte libovolnou ukázku rozšiřitelnosti, vyhledejte *.csproj* pro odkaz na soubor a proveďte následující kroky:
+It is highly recommended to have a reference to a modified .csproj open while doing this step. You can find several examples [here](https://github.com/Microsoft/VSSDK-Extensibility-Samples). Select any extensibility sample, find the *.csproj* file for reference and execute the following steps:
 
-* Přejděte do adresáře projektu v **Průzkumníka souborů**.
-* Otevřít *myproject.csproj* souboru v textovém editoru.
+* Navigate to the project directory in **File Explorer**.
+* Open the *myproject.csproj* file with a text editor.
 
-### <a name="1-update-the-minimumvisualstudioversion"></a>1. Aktualizace MinimumVisualStudioVersion
+### <a name="1-update-the-minimumvisualstudioversion"></a>1. Update the MinimumVisualStudioVersion
 
-* Nastavte minimální sady visual studio verzi `$(VisualStudioVersion)` a přidejte podmíněný příkaz pro něj. Pokud ještě neexistují, přidejte tyto značky. Ujistěte se, že značky jsou nastavené, jak je uvedeno níže:
+* Set the minimum visual studio version to `$(VisualStudioVersion)` and add a conditional statement for it. Add these tags if they do not exist. Ensure the tags are set as below:
 
 ```xml
 <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
 <MinimumVisualStudioVersion>$(VisualStudioVersion)</MinimumVisualStudioVersion>
 ```
 
-### <a name="2-add-the-vsixtype-property"></a>2. Přidáte vlastnost VsixType.
+### <a name="2-add-the-vsixtype-property"></a>2. Add the VsixType property.
 
-* Přidejte následující značku `<VsixType>v3</VsixType>` do vlastností skupiny.
+* Add the following tag `<VsixType>v3</VsixType>` to a property group.
 
 > [!NOTE]
-> Doporučuje se přidat níže `<OutputType></OutputType>` značky.
+> It is recommended to add this below the `<OutputType></OutputType>` tag.
 
-### <a name="3-add-the-debugging-properties"></a>3. Přidání vlastnosti ladění
+### <a name="3-add-the-debugging-properties"></a>3. Add the debugging properties
 
-* Přidejte následující vlastnosti skupiny:
+* Add the following property group:
 
 ```xml
 <PropertyGroup>
     <StartAction>Program</StartAction>
-    <StartPrograms>$(DevEnvDir)devenv.exe</StartPrograms>
+    <StartProgram>$(DevEnvDir)devenv.exe</StartProgram>
     <StartArguments>/rootsuffix Exp</StartArguments>
 </PropertyGroup>
 ```
 
-* Odstranit všechny instance v následujícím příkladu kódu z *.csproj* soubor a všechny *. csproj.user* soubory:
+* Delete all instances of the following code example from the *.csproj* file and any *.csproj.user* files:
 
 ```xml
 <StartAction>Program</StartAction>
-<StartPrograms>$(ProgramFiles)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe</StartPrograms>
+<StartProgram>$(ProgramFiles)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe</StartProgram>
 <StartArguments>/rootsuffix Exp</StartArguments>
 ```
 
-### <a name="4-add-conditions-to-the-build-tools-imports"></a>4. Přidání podmínky do importy nástroje sestavení
+### <a name="4-add-conditions-to-the-build-tools-imports"></a>4. Add conditions to the build tools imports
 
-* Přidávat další podmíněné příkazy `<import>` značky, které mají Microsoft.VSSDK.BuildTools odkaz. Vložit `'$(VisualStudioVersion)' != '14.0' And` do přední části příkaz podmínky. Tyto příkazy se zobrazí v záhlaví a zápatí souboru csproj.
+* Add additional conditional statements to the `<import>` tags that have a Microsoft.VSSDK.BuildTools reference. Insert `'$(VisualStudioVersion)' != '14.0' And` at the front of the condition statement. These statements will appear in the header and footer of the csproj file.
 
 Příklad:
 
@@ -171,7 +171,7 @@ Příklad:
 <Import Project="packages\Microsoft.VSSDK.BuildTools.15.0.26201…" Condition="'$(VisualStudioVersion)' != '14.0' And Exists(…" />
 ```
 
-* Přidávat další podmíněné příkazy `<import>` značky, které mají Microsoft.VisualStudio.Sdk.BuildTasks.14.0. Vložit `'$(VisualStudioVersion)' == '14.0' And` do přední části příkaz podmínky. Tyto příkazy se zobrazí v záhlaví a zápatí souboru csproj.
+* Add additional conditional statements to the `<import>` tags that have a Microsoft.VisualStudio.Sdk.BuildTasks.14.0. Insert `'$(VisualStudioVersion)' == '14.0' And` at the front of the condition statement. These statements will appear in the header and footer of the csproj file.
 
 Příklad:
 
@@ -179,7 +179,7 @@ Příklad:
 <Import Project="packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" Condition="'$(VisualStudioVersion)' == '14.0' And Exists(…" />
 ```
 
-* Přidávat další podmíněné příkazy `<Error>` značky, které mají Microsoft.VSSDK.BuildTools odkaz. To provést vložením `'$(VisualStudioVersion)' != '14.0' And` do přední části příkaz podmínky. Tyto příkazy se zobrazí v zápatí souboru csproj.
+* Add additional conditional statements to the `<Error>` tags that have a Microsoft.VSSDK.BuildTools reference. Do this by inserting `'$(VisualStudioVersion)' != '14.0' And` at the front of the condition statement. These statements will appear in the footer of the csproj file.
 
 Příklad:
 
@@ -187,7 +187,7 @@ Příklad:
 <Error Condition="'$(VisualStudioVersion)' != '14.0' And Exists('packages\Microsoft.VSSDK.BuildTools.15.0.26201…" />
 ```
 
-* Přidávat další podmíněné příkazy `<Error>` značky, které mají Microsoft.VisualStudio.Sdk.BuildTasks.14.0. Vložit `'$(VisualStudioVersion)' == '14.0' And` do přední části příkaz podmínky. Tyto příkazy se zobrazí v zápatí souboru csproj.
+* Add additional conditional statements to the `<Error>` tags that have a Microsoft.VisualStudio.Sdk.BuildTasks.14.0. Insert `'$(VisualStudioVersion)' == '14.0' And` at the front of the condition statement. These statements will appear in the footer of the csproj file.
 
 Příklad:
 
@@ -195,21 +195,22 @@ Příklad:
 <Error Condition="'$(VisualStudioVersion)' == '14.0' And Exists('packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" />
 ```
 
-* Uložte soubor csproj a zavřete ho.
+* Save the csproj file and close it.
 
-## <a name="test-the-extension-installs-in-visual-studio-2015-and-visual-studio-2017"></a>Testování nainstaluje rozšíření v sadě Visual Studio 2015 a Visual Studio 2017
+## <a name="test-the-extension-installs-in-visual-studio-2015-and-visual-studio-2017"></a>Test the extension installs in Visual Studio 2015 and Visual Studio 2017
 
-V tomto okamžiku by měl být projektu připravení sestavit VSIXv3, který můžete nainstalovat na Visual Studio 2015 a Visual Studio 2017.
+At this point, your project should be ready to build a VSIXv3 that can install on both Visual Studio 2015 and Visual Studio 2017.
 
-* Otevřete svůj projekt v sadě Visual Studio 2015.
-* Sestavte projekt a potvrďte ve výstupu, který VSIX se sestaví správně.
-* Přejděte do adresáře projektu.
-* Otevřít *\bin\Debug* složky.
-* Poklikejte na soubor VSIX a instalace rozšíření v sadě Visual Studio 2015 a Visual Studio 2017.
-* Ujistěte se, že vidíte rozšíření v **nástroje** > **rozšíření a aktualizace** v **nainstalováno** oddílu.
-* Pokus o spuštění/použití rozšíření ke kontrole, že funguje.
+* Open your project in Visual Studio 2015.
+* Build your project and confirm in the output that a VSIX builds correctly.
+* Navigate to your project directory.
+* Open the *\bin\Debug* folder.
+* Double-click on the VSIX file and install your extension on Visual Studio 2015 and Visual Studio 2017.
+* Make sure that you can see the extension in **Tools** > **Extensions and Updates** in the **Installed** section.
+* Attempt to run/use the extension to check that it works.
 
-![Najít rozšíření VSIX](media/finding-a-VSIX-example.png)
+![Find a VSIX](media/finding-a-VSIX-example.png)
 
 > [!NOTE]
-> Pokud váš projekt přestane reagovat s touto zprávou **otevírání souboru**vynutit ukončení sady Visual Studio, přejděte do adresáře projektu, zobrazit skryté složky a odstranit *.vs* složky.
+> If your project hangs with the message **opening the file**, force shut down Visual Studio, navigate to your project directory, show hidden folders, and delete the *.vs* folder.
+ 

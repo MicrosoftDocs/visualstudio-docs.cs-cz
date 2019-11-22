@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přírůstkové sestavování | Dokumentace Microsoftu'
+title: 'How to: Build Incrementally | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +12,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e78ce202c04b8b2af60a7b3d09b149c7e02f2e50
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0d2bf2f8a45618e8b1f7540479a02c1a5f91b9bf
+ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977365"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74316473"
 ---
-# <a name="how-to-build-incrementally"></a>Postupy: Přírůstkové sestavování
-Při sestavování velkých projektů, je důležité nejsou, která dříve vytvořená součásti, které jsou stále aktuální znovu sestavit. Pokud všechny cíle jsou sestaveny pokaždé, když každého sestavení bude trvat dlouhou dobu pro dokončení. Chcete-li povolit přírůstkové buildy (sestavení, ve kterém jen pro tyto cíle, které nejsou sestavené před nebo, zaměřuje jsou zastaralé, jsou znovu sestavit), [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) můžete porovnat časová razítka vstupních souborů s časovými razítky výstupních souborů a zjistěte, jestli se má přeskočit, sestavení nebo částečně znovu sestavit cíl. Musí však být mapování 1: 1 mezi vstupy a výstupy. Použití transformací umožňující cíle k identifikaci této přímé mapování. Další informace o transformace, najdete v části [transformuje](../msbuild/msbuild-transforms.md).
+# <a name="how-to-build-incrementally"></a>How to: Build incrementally
+When you build a large project, it is important that previously built components that are still up-to-date are not rebuilt. If all targets are built every time, each build will take a long time to complete. To enable incremental builds (builds in which only those targets that have not been built before or targets that are out of date, are rebuilt), the [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) can compare the timestamps of the input files with the timestamps of the output files and determine whether to skip, build, or partially rebuild a target. However, there must be a one-to-one mapping between inputs and outputs. You can use transforms to enable targets to identify this direct mapping. For more information on transforms, see [Transforms](../msbuild/msbuild-transforms.md).
 
-## <a name="specify-inputs-and-outputs"></a>Zadejte vstupy a výstupy
-Cíl může postupně sestavena, pokud jsou zadané vstupy a výstupy v souboru projektu.
+## <a name="specify-inputs-and-outputs"></a>Specify inputs and outputs
+A target can be built incrementally if the inputs and outputs are specified in the project file.
 
-#### <a name="to-specify-inputs-and-outputs-for-a-target"></a>K určení vstupů a výstupů pro cíl
+#### <a name="to-specify-inputs-and-outputs-for-a-target"></a>To specify inputs and outputs for a target
 
-- Použití `Inputs` a `Outputs` atributy `Target` elementu. Příklad:
+- Use the `Inputs` and `Outputs` attributes of the `Target` element. Příklad:
 
   ```xml
   <Target Name="Build"
@@ -35,7 +35,7 @@ Cíl může postupně sestavena, pokud jsou zadané vstupy a výstupy v souboru 
       Outputs="hello.exe">
   ```
 
-  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] můžete porovnat časová razítka vstupních souborů s časovými razítky výstupních souborů a určit, jestli se má přeskočit, sestavení nebo částečně znovu sestavit cíl. V následujícím příkladu, pokud jakýkoli soubor v `@(CSFile)` seznam položek je novější než *hello.exe* souboru [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] spustí cíl; v opačném případě bude přeskočen:
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] can compare the timestamps of the input files with the timestamps of the output files and determine whether to skip, build, or partially rebuild a target. In the following example, if any file in the `@(CSFile)` item list is newer than the *hello.exe* file, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] will run the target; otherwise it will be skipped:
 
 ```xml
 <Target Name="Build"
@@ -48,26 +48,26 @@ Cíl může postupně sestavena, pokud jsou zadané vstupy a výstupy v souboru 
 </Target>
 ```
 
-Když v cíli jsou zadané vstupy a výstupy, každý výstup můžete mapovat pouze jeden vstup nebo může být žádné přímé mapování mezi vstupy a výstupy. V předchozím [CSC – úloha](../msbuild/csc-task.md), například výstupu *hello.exe*, nelze mapovat na jakýkoli jeden vstup - závisí na všechny z nich.
+When inputs and outputs are specified in a target, either each output can map to only one input or there can be no direct mapping between the outputs and inputs. In the previous [Csc task](../msbuild/csc-task.md), for example, the output, *hello.exe*, cannot be mapped to any single input - it depends on all of them.
 
 > [!NOTE]
-> Cíl, ve které není žádné přímé mapování mezi vstupy a výstupy vždy sestavovat častěji než cíl, ve kterém každý výstup můžete mapovat pouze jeden vstup protože [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] nelze určit výstupy, které je třeba znovu sestavit některých vstupních hodnot změnila-li .
+> A target in which there is no direct mapping between the inputs and outputs will always build more often than a target in which each output can map to only one input because [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] cannot determine which outputs need to be rebuilt if some of the inputs have changed.
 
-Úlohy, ve kterých můžete identifikovat přímé mapování mezi vstupů a výstupů, jako [LC – úloha](../msbuild/lc-task.md), jsou nejvhodnější pro přírůstkové sestavení, na rozdíl od úlohy, jako je například [Csc](../msbuild/csc-task.md) a [Vbc –](../msbuild/vbc-task.md), který vytvoří jeden výstupní sestavení z počet vstupů.
+Tasks in which you can identify a direct mapping between the outputs and inputs, such as the [LC task](../msbuild/lc-task.md), are most suitable for incremental builds, unlike tasks such as [Csc](../msbuild/csc-task.md) and [Vbc](../msbuild/vbc-task.md), which produce one output assembly from a number of inputs.
 
 ## <a name="example"></a>Příklad
-Následující příklad používá projekt, který vytvoří soubory nápovědy pro hypotetické systému nápovědy. Projekt funguje tak, že převod zdroj *.txt* soubory do zprostředkující *.content* soubory, které pak spolu se soubory XML metadat k vytvoření finální *.help* souboru používá systém nápovědy. Projekt používá hypotetické následující úkoly:
+The following example uses a project that builds Help files for a hypothetical Help system. The project works by converting source *.txt* files into intermediate *.content* files, which then are combined with XML metadata files to produce the final *.help* file used by the Help system. The project uses the following hypothetical tasks:
 
-- `GenerateContentFiles`: Převede *.txt* soubory do *.content* soubory.
+- `GenerateContentFiles`: Converts *.txt* files into *.content* files.
 
-- `BuildHelp`: Kombinuje *.content* soubory a soubory XML metadat k sestavení konečné *.help* souboru.
+- `BuildHelp`: Combines *.content* files and XML metadata files to build the final *.help* file.
 
-Pomocí transformace vytvoří mapování 1: 1 mezi vstupy a výstupy projektu `GenerateContentFiles` úloh. Další informace najdete v tématu [transformuje](../msbuild/msbuild-transforms.md). Navíc `Output` prvek je nastaven na hodnotu automaticky použít výstup z `GenerateContentFiles` úkolu jako vstupy pro `BuildHelp` úloh.
+The project uses transforms to create a one-to-one mapping between inputs and outputs in the `GenerateContentFiles` task. For more information, see [Transforms](../msbuild/msbuild-transforms.md). Also, the `Output` element is set to automatically use the outputs from the `GenerateContentFiles` task as the inputs for the `BuildHelp` task.
 
-Tento soubor projektu obsahuje i `Convert` a `Build` cíle. `GenerateContentFiles` a `BuildHelp` úkoly jsou umístěny v `Convert` a `Build` cílí v uvedeném pořadí tak, aby každý cíl je možné sestavit přírůstkově. S použitím `Output` elementu, výstupy `GenerateContentFiles` úloh jsou umístěny v `ContentFile` seznam položek, které lze použít jako vstupy pro `BuildHelp` úloh. Použití `Output` element tímto způsobem automaticky poskytuje výstupy z jednoho úkolu jako vstupy pro jiné úlohy tak, aby nebylo nutné jednotlivé položky seznamu nebo položky seznamů ručně v jednotlivých úkolech.
+This project file contains both the `Convert` and `Build` targets. The `GenerateContentFiles` and `BuildHelp` tasks are placed in the `Convert` and `Build` targets respectively so that each target can be built incrementally. By using the `Output` element, the outputs of the `GenerateContentFiles` task are placed in the `ContentFile` item list, where they can be used as inputs for the `BuildHelp` task. Using the `Output` element in this way automatically provides the outputs from one task as the inputs for another task so that you do not have to list the individual items or item lists manually in each task.
 
 > [!NOTE]
-> I když `GenerateContentFiles` cílové můžete sestavit přírůstkově, všechny výstupy z tohoto cíle jsou vždy vyžaduje jako vstup pro `BuildHelp` cíl. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] všechny výstupy z jednoho cíle automaticky poskytuje jako vstupy pro jiný cíl při použití `Output` elementu.
+> Although the `GenerateContentFiles` target can build incrementally, all outputs from that target always are required as inputs for the `BuildHelp` target. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] automatically provides all the outputs from one target as inputs for another target when you use the `Output` element.
 
 ```xml
 <Project DefaultTargets="Build"
@@ -103,7 +103,7 @@ Tento soubor projektu obsahuje i `Convert` a `Build` cíle. `GenerateContentFile
 
 ## <a name="see-also"></a>Viz také:
 - [Cíle](../msbuild/msbuild-targets.md)
-- [Target – element (MSBuild)](../msbuild/target-element-msbuild.md)
+- [Target element (MSBuild)](../msbuild/target-element-msbuild.md)
 - [Transformace](../msbuild/msbuild-transforms.md)
-- [CSC – úloha](../msbuild/csc-task.md)
-- [Vbc – úloha](../msbuild/vbc-task.md)
+- [Csc task](../msbuild/csc-task.md)
+- [Vbc task](../msbuild/vbc-task.md)

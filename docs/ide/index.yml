@@ -1,22 +1,22 @@
 ### YamlMime:Landing
 title: Dokumentace k integrovanému vývojovému prostředí (IDE) v sadě Visual Studio
-summary: Integrované vývojové prostředí (IDE) je aplikace s bohatou funkcí, kterou lze použít pro mnoho aspektů vývoje softwaru. Integrované vývojové prostředí (IDE) sady Visual Studio usnadňuje úpravy, ladění, vytváření a publikování vaší aplikace.
+summary: An integrated development environment (IDE) is a feature-rich application that can be used for many aspects of software development. The Visual Studio IDE makes it easy to edit, debug, build, and publish your app.
 metadata:
   title: Dokumentace k integrovanému vývojovému prostředí (IDE) v sadě Visual Studio
   titleSuffix: ''
-  description: Přejděte na jiné stránky, které vám pomůžou naučit se používat interaktivní vývojové prostředí sady Visual Studio.
+  description: Navigate to different pages that help you learn how to use the Visual Studio interactive development environment.
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
   ms.topic: landing-page
-  author: gewarren
-  ms.author: gewarren
+  author: jillre
+  ms.author: jillfra
   ms.date: 09/24/2019
-  ms.openlocfilehash: f45e063db85f782f7b51b3cc71b69cca61589f27
-  ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+  ms.openlocfilehash: 0db1718cbb1a43a2ebacafbdaac0ba0667b28dda
+  ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 09/25/2019
-  ms.locfileid: "71254567"
+  ms.lasthandoff: 11/22/2019
+  ms.locfileid: "74316426"
 landingContent:
 - title: Začínáme
   linkLists:
@@ -30,31 +30,31 @@ landingContent:
       url: ../install/install-visual-studio.md
   - linkListType: overview
     links:
-    - text: Přehled sady Visual Studio
+    - text: Overview of Visual Studio
       url: ../get-started/visual-studio-ide.md
-- title: Použití sady Visual Studio
+- title: Use Visual Studio
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Použití editoru kódu
+    - text: Use the code editor
       url: ../get-started/tutorial-editor.md
     - text: Kompilace a sestavení
       url: ../ide/compiling-and-building-in-visual-studio.md
-    - text: Ladění kódu
+    - text: Debug code
       url: ../debugger/debugger-feature-tour.md
-    - text: Zápis testů
+    - text: Write tests
       url: ../test/getting-started-with-unit-testing.md
-    - text: Analýza kvality kódu
+    - text: Analyze code quality
       url: ../code-quality/roslyn-analyzers-overview.md
-    - text: Publikování webu
+    - text: Publish a web site
       url: ../deployment/quickstart-deploy-to-a-web-site.md
     - text: Přístup k datům
       url: ../data-tools/create-a-simple-data-application-by-using-adonet.md
-    - text: Přizpůsobení integrovaného vývojového prostředí
+    - text: Personalize the IDE
       url: ../ide/quickstart-personalize-the-ide.md
     - text: Produktivita – funkce
       url: ../ide/productivity-features.md
-- title: Vývoj v jazyce
+- title: Develop in your language
   linkLists:
   - linkListType: tutorial
     links:
@@ -70,7 +70,7 @@ landingContent:
       url: /visualstudio/javascript/tutorial-nodejs
     - text: F#
       url: /dotnet/fsharp/get-started/get-started-visual-studio
-- title: Zjistit, co je nového
+- title: Discover what's new
   linkLists:
   - linkListType: whats-new
     links:
