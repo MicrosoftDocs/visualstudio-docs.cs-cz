@@ -9,12 +9,12 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 53542ec2a5270aec6836864fa3108d5f84da2df9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5acbb4d2966e89f7913fa1479b882fad5c9650f7
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669883"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295819"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>Definování zásady zamykání pro vytváření segmentů jen pro čtení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ Rozhraní neměnnosti API sady [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vizu
 > [!NOTE]
 > Zásady zamykání lze obejít pomocí reflexe. Poskytuje jasné hranice pro vývojáře třetích stran, ale neposkytuje silné zabezpečení.
 
- Další informace a ukázky jsou k dispozici na webu [sady SDK [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pro vizualizaci a modelování](http://go.microsoft.com/fwlink/?LinkId=186128) .
+ Další informace a ukázky jsou k dispozici na webu [sady SDK [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pro vizualizaci a modelování](https://go.microsoft.com/fwlink/?LinkId=186128) .
 
 ## <a name="setting-and-getting-locks"></a>Nastavení a získání zámků
  Zámky můžete nastavit pro úložiště, na oddíl nebo na jednotlivé prvky. Například tento příkaz zabrání odstranění prvku modelu a zároveň zabrání změně jeho vlastností:
@@ -79,10 +79,10 @@ partition.SetLocks(Locks.Delete);
 
 |Hodnota|Význam, pokud je `IsLocked(Value)` true|
 |-----------|------------------------------------------|
-|Žádné|Bez omezení.|
+|Žádný|Bez omezení.|
 |Vlastnost|Vlastnosti domény prvků nelze změnit. Toto neplatí pro vlastnosti, které jsou generovány rolí doménové třídy v relaci.|
 |Přidejte|V oddílu nebo v úložišti nelze vytvořit nové prvky a odkazy.<br /><br /> Nedá se použít pro `ModelElement`.|
-|Pøesunout|Element nelze přesunout mezi oddíly, pokud `element.IsLocked(Move)` má hodnotu true, nebo pokud má `targetPartition.IsLocked(Move)` hodnotu true.|
+|Přesunutí|Element nelze přesunout mezi oddíly, pokud `element.IsLocked(Move)` má hodnotu true, nebo pokud má `targetPartition.IsLocked(Move)` hodnotu true.|
 |Odstranit|Element nelze odstranit, je-li tento zámek nastaven na samotném prvku nebo na některé prvky, na které by se rozšířilo odstranění, jako jsou vložené prvky a tvary.<br /><br /> Pomocí `element.CanDelete()` můžete zjistit, zda lze prvek odstranit.|
 |Změnit pořadí|Řazení odkazů na RolePlayer se nedá změnit.|
 |RolePlayer|Sadu odkazů, které jsou nasource v tomto prvku, nelze změnit. Například nové prvky nemohou být vloženy do tohoto elementu. To nemá vliv na odkazy, pro které je tento prvek cílem.<br /><br /> Pokud je tento prvek odkazem, nebude ovlivněn jeho zdroj a cíl.|

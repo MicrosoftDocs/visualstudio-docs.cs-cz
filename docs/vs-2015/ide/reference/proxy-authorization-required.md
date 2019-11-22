@@ -9,12 +9,12 @@ caps.latest.revision: 9
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7456e60b42b18ad706b951ee58ca5c33f05cabc1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 848817691d7fae32f2240e3d6cac4451c4ce58c4
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665719"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297816"
 ---
 # <a name="proxy-authorization-required"></a>Vyžaduje se autorizace proxy serveru
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -23,9 +23,9 @@ K chybě **požadovaná autorizace proxy** většinou dochází, když jsou uži
 
 Pokud chcete tuto chybu opravit, zkuste jeden nebo několik následujících kroků:
 
-- Restartujte sadu Visual Studio. Mělo by se zobrazit dialogové okno ověřování proxy. Do dialogového okna zadejte svoje přihlašovací údaje.
+- Restartujte sadu Visual Studio. By se zobrazit dialogové okno ověřování proxy serveru. Do dialogového okna zadejte svoje přihlašovací údaje.
 
-- Pokud výše uvedený krok problém nevyřeší, může to být způsobeno tím, že proxy server nezobrazuje výzvu k zadání přihlašovacích údajů pro http://go.microsoft.com adresy, ale pro adresy *. visualStudio.com. Pro tyto servery je nutné přidat následující adresy URL do seznamu povolených adres pro odblokování všech scénářů přihlášení v aplikaci Visual Studio:
+- Pokud výše uvedený krok problém nevyřeší, může to být způsobeno tím, že proxy server nezobrazuje výzvu k zadání přihlašovacích údajů pro https://go.microsoft.com adresy, ale pro adresy *. visualStudio.com. Pro tyto servery je nutné přidat následující adresy URL do seznamu povolených adres pro odblokování všech scénářů přihlášení v aplikaci Visual Studio:
 
   - *.windows.net
 
@@ -37,7 +37,7 @@ Pokud chcete tuto chybu opravit, zkuste jeden nebo několik následujících kro
 
   - *.live.com
 
-- @No__t_0ovou adresu můžete ze seznamu povolených adres odebrat, aby se dialogové okno ověřování proxy serveru zobrazilo jak pro http://go.microsoft.com adresu, tak pro koncové body serveru při restartu sady Visual Studio.
+- https://go.microsoft.comovou adresu můžete ze seznamu povolených adres odebrat, aby se dialogové okno ověřování proxy serveru zobrazilo jak pro https://go.microsoft.com adresu, tak pro koncové body serveru při restartu sady Visual Studio.
 
 - Pokud chcete použít výchozí pověření s vaším proxy serverem, udělejte toto:
 
@@ -51,6 +51,6 @@ Pokud chcete tuto chybu opravit, zkuste jeden nebo několik následujících kro
       </defaultProxy>
       ```
 
-      Vložte do `proxyaddress="<http://<yourproxy:port#>` správnou adresu proxy serveru pro vaši síť.
+      Vložte do `proxyaddress="<http://<yourproxy:port#>`správnou adresu proxy serveru pro vaši síť.
 
-- Podle pokynů v [tomto příspěvku blogu](http://blogs.msdn.com/b/rido/archive/2010/05/06/how-to-connect-to-tfs-through-authenticated-web-proxy.aspx) přidejte kód, který vám umožní používat proxy server.
+- Podle pokynů v [tomto příspěvku blogu](https://blogs.msdn.microsoft.com/rido/2010/05/06/how-to-connect-to-tfs-through-authenticated-web-proxy/) přidejte kód, který vám umožní používat proxy server.

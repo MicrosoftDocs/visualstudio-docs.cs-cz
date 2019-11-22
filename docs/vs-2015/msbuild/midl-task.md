@@ -1,5 +1,5 @@
 ---
-title: MIDL – úloha | Dokumentace Microsoftu
+title: Úloha MIDL | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -27,388 +27,388 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c1404ae5fce31eb59d2bb484ce1d97956f4cfefc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7e007830a91f0450f6c26c6c175196db308e3a43
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68191564"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300215"
 ---
 # <a name="midl-task"></a>MIDL – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zabalí nástroj kompilátoru Microsoft Interface Definition Language (MIDL), midl.exe. Další informace najdete v tématu "Reference k příkazovému řádku MIDL" na [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MIDL. exe. Další informace naleznete v tématu "Reference k příkazovému řádku" MIDL "na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
   
 ## <a name="parameters"></a>Parametry  
- Následující tabulka popisuje parametry **MIDL** úloh. Většinu úkolů parametrů a několik sad parametrů, odpovídají možnost příkazového řádku.  
+ Následující tabulka popisuje parametry úlohy **MIDL** . Většina parametrů úlohy a několik sad parametrů odpovídá možnosti příkazového řádku.  
   
 - **AdditionalIncludeDirectories**  
   
-     Volitelné **String []** parametru.  
+     Parametr volitelného **řetězce []** .  
   
-     Přidá adresář na seznam adresářů, které se vyhledávají importované soubory IDL zahrnuté hlavičkové soubory a konfigurační soubory aplikace (ACF).  
+     Přidá adresář do seznamu adresářů, ve kterých jsou prohledány importované soubory IDL, zahrnuté hlavičkové soubory a konfigurační soubory aplikace (ACF).  
   
-     Další informace najdete v tématu **/I** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/I** v tématu Reference příkazového řádku MIDL.  
   
 - **AdditionalOptions**  
   
-     Volitelné **řetězec** parametru.  
+     Volitelný **řetězcový** parametr.  
   
-     Seznam možností příkazového řádku. Například **"** _/option1 /option2 /option#_ ". Tento parametr použijte k určení možnosti příkazového řádku, které nejsou reprezentovány všechny ostatní parametry MIDL – úloha.  
+     Seznam možností příkazového řádku Například **"** _/option1/option2/Option #_ ". Pomocí tohoto parametru můžete zadat možnosti příkazového řádku, které nejsou reprezentované žádným jiným parametrem úlohy MIDL.  
   
-     Další informace najdete v tématu "Reference k příkazovému řádku MIDL" na [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete v tématu "Reference k příkazovému řádku" MIDL "na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
   
 - **ApplicationConfigurationMode**  
   
-     Volitelné **logická** parametru.  
+     Volitelný **logický** parametr.  
   
-     Pokud `true`, vám umožní používat některé klíčová slova ACF v souboru IDL.  
+     Pokud `true`, umožňuje použít některá klíčová slova ACF v souboru IDL.  
   
-     Další informace najdete v tématu **/app_config** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete v tématu možnost **/app_config** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
   
 - **ClientStubFile**  
   
-     Volitelné **řetězec** parametru.  
+     Volitelný **řetězcový** parametr.  
   
      Určuje název souboru zástupné procedury klienta pro rozhraní RPC.  
   
-     Další informace najdete v tématu **/cstub** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu. Viz také **ServerStubFile** parametr v této tabulce.  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/cstub** v části "Reference příkazového řádku MIDL". V této tabulce se také zobrazí parametr **ServerStubFile** .  
   
 - **CPreprocessOptions**  
   
-     Volitelné **řetězec** parametru.  
+     Volitelný **řetězcový** parametr.  
   
-     Určuje možnosti, které chcete předat preprocesoru C/C++. Zadejte seznam možnosti preprocesoru oddělených mezerami.  
+     Určuje možnosti, které se mají předat CC++ /preprocesoru. Zadejte seznam možností preprocesoru oddělených mezerami.  
   
-     Další informace najdete v tématu **/cpp_opt** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete v tématu možnost **/cpp_opt** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
   
 - **DefaultCharType**  
   
-     Volitelné **řetězec** parametru.  
+     Volitelný **řetězcový** parametr.  
   
-     Určuje výchozí znakový typ kompilátoru jazyka C bude používat pro kompilaci vygenerovaného kódu.  
+     Určuje výchozí typ znaku, který kompilátor jazyka C použije pro zkompilování generovaného kódu.  
   
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.  
+     Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-    |Value|Možnost příkazového řádku|  
+    |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**podepsané**|**/ Char podepsané**|  
-    |**bez znaménka**|**/ Char unsigned**|  
+    |**Podpisy**|**/char podepsané**|  
+    |**Celé**|**/char bez znaménka**|  
     |**Ascii**|**/char ascii7**|  
   
-     Další informace najdete v tématu **/char** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/char** v části "Reference příkazového řádku MIDL".  
   
 - **DllDataFileName**  
   
-     Volitelné **řetězec** parametru.  
+     Volitelný **řetězcový** parametr.  
   
-     Určuje název souboru pro vygenerovaný *dlldata* soubor pro proxy server knihovny DLL.  
+     Určuje název souboru vygenerovaného souboru *dlldata* pro proxy server dll.  
   
-     Další informace najdete v tématu **/dlldata** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/dlldata** v části "Reference příkazového řádku MIDL".  
   
 - **EnableErrorChecks**  
   
-     Volitelné **řetězec** parametru.  
+     Volitelný **řetězcový** parametr.  
   
-     Určuje typ Chyba při kontrole, že generované zástupné procedury provede v době běhu.  
+     Určuje typ kontroly chyb, který vygenerované zástupné procedury budou provádět za běhu.  
   
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.  
+     Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**Žádné**|**/ Error none**|  
-    |**EnableCustom**|**/ Error**|  
-    |**Vše**|**/ Error všechny**|  
+    |**Žádné**|**/Error None**|  
+    |**EnableCustom**|**/Error**|  
+    |**Vše**|**/Error All**|  
   
-     Další informace najdete v tématu **/Error** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete v možnosti **/Error** v tématu Referenční příručka příkazového řádku MIDL na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
   
 - **ErrorCheckAllocations**  
   
-     Volitelné **logická** parametru.  
+     Volitelný **logický** parametr.  
   
-     Pokud `true`, zkontrolujte chyby na více instancí z důvodu nedostatku paměti.  
+     Pokud `true`, vyhledejte chyby nedostatku paměti.  
   
-     Další informace najdete v tématu **/Error allocation** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/Error alokace** v tématu "Reference příkazového řádku MIDL".  
   
 - **ErrorCheckBounds**  
   
-     Volitelné **logická** parametru.  
+     Volitelný **logický** parametr.  
   
-     Pokud `true`, kontroluje velikost s různými splňující podmínky a různých polí proti specifikací délky přenosu.  
+     Pokud `true`, zkontroluje velikost vyhovujících a proměnlivých polí podle specifikace délky přenosu.  
   
-     Další informace najdete v tématu **/Error bounds_check** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/Error Bounds_check** v tématu Referenční příručka příkazového řádku MIDL.  
   
 - **ErrorCheckEnumRange**  
   
-     Volitelné **logická** parametru.  
+     Volitelný **logický** parametr.  
   
-     Pokud `true`, zkontroluje, zda jsou hodnoty výčtu v povoleném rozmezí.  
+     Pokud `true`, zkontroluje, jestli jsou hodnoty výčtu v povoleném rozsahu.  
   
-     Další informace najdete v tématu **/Error enum** možnost Nápověda příkazového řádku ( **/?** ) pro midl.exe.  
+     Další informace naleznete v možnosti **/Error enum** v příkazovém řádku Help ( **/?** ) pro soubor MIDL. exe.  
   
 - **ErrorCheckRefPointers**  
   
-     Volitelné **logická** parametru.  
+     Volitelný **logický** parametr.  
   
-     Pokud `true`, zkontrolujte, zda klienta zástupné procedury jsou předány žádné ukazatele odkaz s hodnotou null.  
+     Pokud `true`, ověřte, že neexistují žádné ukazatele odkazů s hodnotou null do zástupných procedur klienta.  
   
-     Další informace najdete v tématu **/Error ref** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/Error ref** v tématu "MIDL příkazového řádku Reference".  
   
 - **ErrorCheckStubData**  
   
-     Volitelné **logická** parametru.  
+     Volitelný **logický** parametr.  
   
-     Pokud `true`, generuje zástupnou proceduru, která zachytává unmarshaling výjimky na straně serveru a šíří je zpět do klienta.  
+     Pokud `true`, vygeneruje zástupnou proceduru, která zachytává výjimky při zařazování na straně serveru a šíří je zpátky do klienta.  
   
-     Další informace najdete v tématu **/Error stub_data** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/Error Stub_data** v tématu Referenční příručka příkazového řádku MIDL.  
   
 - **GenerateClientFiles**  
   
-     Volitelné **řetězec** parametru.  
+     Volitelný **řetězcový** parametr.  
   
-     Určuje, zda kompilátor generuje zdrojových souborů C na straně klienta pro rozhraní RPC.  
+     Určuje, zda kompilátor generuje zdrojové soubory jazyka C na straně klienta pro rozhraní RPC.  
   
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.  
-  
-    |Value|Možnost příkazového řádku|  
-    |-----------|--------------------------|  
-    |**Žádné**|**/ Client none**|  
-    |**Zástupné procedury**|**Zástupná procedura/Client**|  
-  
-     Další informace najdete v tématu **/Client** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
-  
-- **GenerateServerFiles**  
-  
-     Volitelné **řetězec** parametru.  
-  
-     Určuje, zda kompilátor generuje zdrojových souborů C na straně serveru v rámci rozhraní RPC.  
-  
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.  
-  
-    |Value|Možnost příkazového řádku|  
-    |-----------|--------------------------|  
-    |**Žádné**|**/ Server žádné**|  
-    |**Zástupné procedury**|**Zástupná Procedura/Server**|  
-  
-     Další informace najdete v tématu **/server** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
-  
-- **GenerateStublessProxies**  
-  
-     Volitelné **logická** parametru.  
-  
-     Pokud `true`, generuje plně interpretované zástupné procedury spolu s proxy bez zástupných procedur pro rozhraní objektů.  
-  
-     Další informace najdete v tématu **/oicf** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
-  
-- **GenerateTypeLibrary**  
-  
-     Volitelné **logická** parametru.  
-  
-     Pokud `true`, negeneruje souboru typu knihovna (.tlb).  
-  
-     Další informace najdete v tématu **/notlb** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
-  
-- **HeaderFileName**  
-  
-     Volitelné **řetězec** parametru.  
-  
-     Určuje název vygenerovaného souboru hlavičky.  
-  
-     Další informace najdete v tématu **/h** nebo **/header** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
-  
-- **IgnoreStandardIncludePath**  
-  
-     Volitelné **logická** parametru.  
-  
-     Pokud `true`, MIDL – úloha v adresářích jenom určené vlastností **AdditionalIncludeDirectories** přepnutí a bude ignorovat aktuální adresář a adresáře určené proměnnou prostředí INCLUDE.  
-  
-     Další informace najdete v tématu **/no_def_idir** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
-  
-- **InterfaceIdentifierFileName**  
-  
-     Volitelné **řetězec** parametru.  
-  
-     Určuje název *souboru identifikátoru rozhraní* pro rozhraní modelu COM. Tím se přepíše výchozí název, získat tak, že přidáte "_i.c" k názvu souboru IDL.  
-  
-     Další informace najdete v tématu **/iid** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
-  
-- **LocaleID**  
-  
-     Volitelné **int** parametru.  
-  
-     Určuje, *identifikátor národního prostředí* , který umožňuje použití mezinárodní znaky ve vstupních souborů, názvy souborů a cesty k adresářům. Zadejte identifikátor desítkové národního prostředí.  
-  
-     Další informace najdete v tématu **/LCID** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu. Také naleznete v tématu "Národní prostředí ID přiřazené službou Microsoft" na webu MSDN.  
-  
-- **MkTypLibCompatible**  
-  
-     Volitelné **logická** parametru.  
-  
-     Pokud `true`, vyžaduje formát vstupního souboru, aby byl kompatibilní s mktyplib.exe verze 2.03 nástroje MkTypLib.exe.  
-  
-     Další informace najdete v tématu **/mktyplib203** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu. Také naleznete v tématu "Syntaxi souboru ODL" na webu MSDN.  
-  
-- **OutputDirectory**  
-  
-     Volitelné **řetězec** parametru.  
-  
-     Určuje výchozí adresář, ve kterém MIDL – úloha zapíše výstupní soubory.  
-  
-     Další informace najdete v tématu **/out** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
-  
-- **PreprocessorDefinitions**  
-  
-     Volitelné **String []** parametru.  
-  
-     Určuje jeden nebo více *definuje*; to znamená, názvu a které se mají předat preprocesoru C jako volitelná hodnota if podle `#define` směrnice. Každá definice má hodnotu, *[= value] název*.  
-  
-     Další informace najdete v tématu **/D** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu. Další informace naleznete **UndefinePreprocessorDefinitions** parametr v této tabulce.  
-  
-- **ProxyFileName**  
-  
-     Volitelné **řetězec** parametru.  
-  
-     Určuje název souboru proxy rozhraní pro rozhraní modelu COM.  
-  
-     Další informace najdete v tématu **/proxy** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
-  
-- **RedirectOutputAndErrors**  
-  
-     Volitelné **řetězec** parametru.  
-  
-     Přesměruje výstup, jako je například chybové zprávy a upozornění z standardní výstup do zadaného souboru.  
-  
-     Další informace najdete v tématu **/o** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
-  
-- **ServerStubFile**  
-  
-     Volitelné **řetězec** parametru.  
-  
-     Určuje název souboru serveru zástupných procedur pro rozhraní RPC.  
-  
-     Další informace najdete v tématu **/sstub** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu. Další informace naleznete **ClientStubFile** parametr v této tabulce.  
-  
-- **Zdroj**  
-  
-     Vyžaduje `ITaskItem[]` parametru.  
-  
-     Určuje seznam zdrojových souborů, oddělené mezerami.  
-  
-- **StructMemberAlignment**  
-  
-     Volitelné **řetězec** parametru.  
-  
-     Určuje zarovnání (*balení úroveň*) struktur v cílovém systému.  
-  
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.  
+     Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**Nenastaveno**|*\<žádné >*|  
+    |**Žádné**|**/Client žádné**|  
+    |**Metrik**|**/Client zástupná procedura**|  
+  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/Client** v části "Reference příkazového řádku MIDL".  
+  
+- **GenerateServerFiles**  
+  
+     Volitelný **řetězcový** parametr.  
+  
+     Určuje, zda kompilátor generuje zdrojové soubory jazyka C na straně serveru pro rozhraní vzdáleného volání procedur (RPC).  
+  
+     Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
+  
+    |Hodnota|Možnost příkazového řádku|  
+    |-----------|--------------------------|  
+    |**Žádné**|**/Server žádné**|  
+    |**Metrik**|**/Server – zástupná procedura**|  
+  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/Server** v tématu Reference příkazového řádku MIDL.  
+  
+- **GenerateStublessProxies**  
+  
+     Volitelný **logický** parametr.  
+  
+     Pokud `true`, vygeneruje plně interpretované zástupné procedury spolu s proxy bez zástupných procedur pro rozhraní objektů.  
+  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/oicf** v části "Reference příkazového řádku MIDL".  
+  
+- **GenerateTypeLibrary**  
+  
+     Volitelný **logický** parametr.  
+  
+     Pokud `true`, soubor knihovny typů (. tlb) se nevygeneruje.  
+  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/notlb** v části "Reference příkazového řádku MIDL".  
+  
+- **HeaderFileName**  
+  
+     Volitelný **řetězcový** parametr.  
+  
+     Určuje název vygenerovaného souboru hlaviček.  
+  
+     Další informace naleznete v části **/h** nebo **/header** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
+  
+- **IgnoreStandardIncludePath**  
+  
+     Volitelný **logický** parametr.  
+  
+     Pokud `true`, úloha MIDL vyhledá pouze adresáře určené pomocí přepínače **AdditionalIncludeDirectories** a ignoruje aktuální adresář a adresáře určené PROMĚNNOU prostředí include.  
+  
+     Další informace naleznete v tématu možnost **/no_def_idir** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
+  
+- **InterfaceIdentifierFileName**  
+  
+     Volitelný **řetězcový** parametr.  
+  
+     Určuje název *souboru identifikátoru rozhraní* modelu COM. Tato možnost přepíše výchozí název získaný přidáním "_i. c" do názvu souboru IDL.  
+  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/IID** v části "Reference příkazového řádku MIDL".  
+  
+- **LocaleID**  
+  
+     Volitelný parametr **int**  
+  
+     Určuje *identifikátor národního prostředí* , který umožňuje použití mezinárodních znaků ve vstupních souborech, názvech souborů a cestách adresářů. Zadejte desítkový identifikátor národního prostředí.  
+  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/LCID** v části "Reference příkazového řádku MIDL". Viz také "ID národního prostředí přiřazené společností Microsoft" na webu MSDN.  
+  
+- **MkTypLibCompatible**  
+  
+     Volitelný **logický** parametr.  
+  
+     Pokud `true`, vyžaduje, aby Formát vstupního souboru byl kompatibilní s MkTypLib. exe verze 2,03.  
+  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/mktyplib203** v části "Reference příkazového řádku MIDL". Viz také "syntaxe souboru jazyka ODL" na webu MSDN.  
+  
+- **OutputDirectory**  
+  
+     Volitelný **řetězcový** parametr.  
+  
+     Určuje výchozí adresář, ve kterém úloha MIDL zapisuje výstupní soubory.  
+  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/out** v tématu Referenční příručka příkazového řádku MIDL.  
+  
+- **PreprocessorDefinitions**  
+  
+     Parametr volitelného **řetězce []** .  
+  
+     Určuje jednu nebo více *definicí*; To znamená, že název a volitelná hodnota, která má být předána preprocesoru jazyka C, jako by byla direktivou `#define`. Formát každé definice je, *název [= hodnota]* .  
+  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/D** v tématu Referenční příručka příkazového řádku MIDL. Viz také parametr **UndefinePreprocessorDefinitions** v této tabulce.  
+  
+- **ProxyFileName**  
+  
+     Volitelný **řetězcový** parametr.  
+  
+     Určuje název souboru proxy rozhraní pro rozhraní COM.  
+  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/proxy** v části "Reference příkazového řádku MIDL".  
+  
+- **RedirectOutputAndErrors**  
+  
+     Volitelný **řetězcový** parametr.  
+  
+     Přesměruje výstup, například chybové zprávy a upozornění, ze standardního výstupu do zadaného souboru.  
+  
+     Další informace naleznete v části **/o** v tématu Referenční příručka příkazového řádku MIDL na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
+  
+- **ServerStubFile**  
+  
+     Volitelný **řetězcový** parametr.  
+  
+     Určuje název souboru zástupné procedury serveru pro rozhraní RPC.  
+  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/sstub** v části "Reference příkazového řádku MIDL". Viz také parametr **ClientStubFile** v této tabulce.  
+  
+- **Zdroj**  
+  
+     Vyžaduje se `ITaskItem[]` parametr.  
+  
+     Určuje seznam zdrojových souborů oddělených mezerami.  
+  
+- **StructMemberAlignment**  
+  
+     Volitelný **řetězcový** parametr.  
+  
+     Určuje zarovnání (*úroveň balení*) struktur v cílovém systému.  
+  
+     Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
+  
+    |Hodnota|Možnost příkazového řádku|  
+    |-----------|--------------------------|  
+    |**NotSet**|*\<žádné >*|  
     |**1**|**/Zp1**|  
     |**2**|**/Zp2**|  
     |**4**|**/Zp4**|  
     |**8**|**/Zp8**|  
   
-     Další informace najdete v tématu **/zp** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu. **/Zp** možnost je ekvivalentní **/pack** možnost a starší **/ align** možnost.  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/zp** v části "Reference příkazového řádku MIDL". Možnost **/zp** je ekvivalentní možnosti **/Pack** a starší možnosti **/align** .  
   
 - **SuppressCompilerWarnings**  
   
-     Volitelné **logická** parametru.  
+     Volitelný **logický** parametr.  
   
-     Pokud `true`, potlačí zprávy upozornění z MIDL – úloha.  
+     Pokud `true`, potlačí zprávy upozornění z úlohy MIDL.  
   
-     Další informace najdete v tématu **/no_warn** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete v tématu možnost **/no_warn** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
   
 - **SuppressStartupBanner**  
   
-     Volitelné `Boolean` parametru.  
+     Volitelný parametr `Boolean`.  
   
-     Pokud `true`, zabraňuje zobrazování čísel zprávu o autorských právech a verze při spuštění úlohy.  
+     Pokud `true`, zabrání zobrazení zprávy o autorských právech a číslech verze při spuštění úlohy.  
   
-     Další informace najdete v tématu **/nologo** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/nologo** v tématu Referenční příručka příkazového řádku MIDL.  
   
 - **TargetEnvironment**  
   
-     Volitelné **řetězec** parametru.  
+     Volitelný **řetězcový** parametr.  
   
-     Určuje prostředí, ve kterém je aplikace spuštěná.  
+     Určuje prostředí, ve kterém se aplikace spouští.  
   
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.  
+     Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-    |Value|Možnost příkazového řádku|  
+    |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**Nenastaveno**|*\<žádné >*|  
-    |**Win32**|**/ env win32**|  
-    |**Itanium**|**/ env ia64**|  
+    |**NotSet**|*\<žádné >*|  
+    |**Win32**|**/ENV Win32**|  
+    |**Procesor**|**/ENV ia64**|  
     |**X64**|**/env x64**|  
   
-     Další informace najdete v tématu **/env** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/ENV** v části "Reference příkazového řádku MIDL".  
   
 - **TrackerLogDirectory**  
   
-     Volitelné `String` parametru.  
+     Volitelný parametr `String`.  
   
-     Určuje zprostředkující adresář, kde jsou uloženy protokoly sledování pro tuto úlohu.  
+     Určuje zprostředkující adresář, ve kterém jsou uložené protokoly sledování pro tento úkol.  
   
 - **TypeLibFormat**  
   
-     Volitelné **řetězec** parametru.  
+     Volitelný **řetězcový** parametr.  
   
      Určuje formát souboru knihovny typů.  
   
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.  
+     Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-    |Value|Možnost příkazového řádku|  
+    |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
     |**NewFormat**|**/newtlb**|  
     |**OldFormat**|**/oldtlb**|  
   
-     Další informace najdete v tématu **/newtlb** a **/oldtlb** možnosti v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete v možnostech **/newtlb** a **/oldtlb** v tématu "MIDL příkazového řádku Reference" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
   
 - **TypeLibraryName**  
   
-     Volitelné **řetězec** parametru.  
+     Volitelný **řetězcový** parametr.  
   
      Určuje název souboru knihovny typů.  
   
-     Další informace najdete v tématu **/TLB** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/TLB** v části "Reference příkazového řádku MIDL".  
   
 - **UndefinePreprocessorDefinitions**  
   
-     Volitelné **String []** parametru.  
+     Parametr volitelného **řetězce []** .  
   
-     Odebere všechny předchozí definice názvu předáním názvu pro preprocesor C jako if podle `#undefine` směrnice. Zadejte jeden nebo více dříve definované názvy.  
+     Odebere všechny předchozí definice názvu předáním názvu do preprocesoru jazyka C, jako by bylo direktivou `#undefine`. Zadejte jeden nebo více dříve definovaných názvů.  
   
-     Další informace najdete v tématu **/U** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu. Další informace naleznete **PreprocessorDefinitions** parametr v této tabulce.  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/U** v tématu Referenční příručka příkazového řádku MIDL. Viz také parametr **PreprocessorDefinitions** v této tabulce.  
   
 - **ValidateAllParameters**  
   
-     Volitelné `Boolean` parametru.  
+     Volitelný parametr `Boolean`.  
   
-     Pokud `true`, vygeneruje další kontrolu chyb informace, které slouží k provádění kontrol integrity za běhu. Pokud `false`, kontrolu chyb informace se nevygeneroval.  
+     Pokud `true`, vygeneruje další informace o kontrole chyb, které se používají k provádění kontrol integrity v době běhu. Pokud `false`, informace o kontrole chyb nejsou vygenerovány.  
   
-     Další informace najdete v tématu **/ robust** a **/no_robust** možnosti v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+     Další informace naleznete v možnostech **/Robust** a **/no_robust** v části "referenční příručka příkazového řádku" MIDL "na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
   
 - **WarnAsError**  
   
-     Volitelné `Boolean` parametru.  
+     Volitelný parametr `Boolean`.  
   
-     Pokud `true`, zpracuje všechna upozornění jako chyby.  
+     Pokud `true`, zpracovává všechna upozornění jako chyby.  
   
-     Pokud **WarningLevel** MIDL – úloha parametr není zadán, upozornění na výchozí úrovni úrovně 1, jsou považována za chyby.  
+     Pokud není zadán parametr úlohy **WarningLevel** MIDL, jsou upozornění na výchozí úrovni úrovně 1 považována za chyby.  
   
-     Další informace najdete v tématu **/WX** možnosti v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu. Další informace naleznete **WarningLevel** parametr v této tabulce.  
+     Další informace naleznete v tématu **/WX** Options in "MIDL příkazového řádku Reference" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) . Viz také parametr **WarningLevel** v této tabulce.  
   
 - **WarningLevel**  
   
-     Volitelné **řetězec** parametru.  
+     Volitelný **řetězcový** parametr.  
   
-     Určuje závažnost (*úroveň pro upozornění*) ke generování upozornění. Bez upozornění je vygenerován pro hodnotu 0. V opačném případě je aktivováno upozornění, pokud jeho úroveň pro upozornění je číselně menší nebo rovna zadané hodnotě.  
+     Určuje závažnost (*úroveň upozornění*) upozornění, která se mají vygenerovat. Nevysílá se žádné upozornění na hodnotu 0. V opačném případě je vygenerováno upozornění, pokud je úroveň upozornění numericky menší nebo rovna zadané hodnotě.  
   
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.  
+     Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-    |Value|Možnost příkazového řádku|  
+    |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
     |**0**|**/W0**|  
     |**1**|**/W1**|  
@@ -416,7 +416,7 @@ Zabalí nástroj kompilátoru Microsoft Interface Definition Language (MIDL), mi
     |**3**|**/W3**|  
     |**4**|**/W4**|  
   
-     Další informace najdete v tématu **/W** možnost v "Příkazového řádku MIDL" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu. Další informace naleznete **WarnAsError** parametr v této tabulce.  
+     Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/w** v části "Reference k příkazovému řádku" MIDL. Viz také parametr **warnaserror –** v této tabulce.  
   
 ## <a name="remarks"></a>Poznámky  
   

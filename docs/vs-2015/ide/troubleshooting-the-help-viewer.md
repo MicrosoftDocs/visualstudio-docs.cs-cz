@@ -12,12 +12,12 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 490525cded11a4cddbbfb3f650d87c55b2fa196b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 01049d5ecf8710cd680278dbf95dbe70767cd5bf
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654772"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299898"
 ---
 # <a name="troubleshooting-the-help-viewer"></a>Řešení potíží s programem Help Viewer
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,9 +45,9 @@ Toto téma popisuje problémy, se kterými se můžete setkat v aplikaci Help Vi
 ## <a name="additional-resources"></a>Další prostředky
  Další informace a poskytnutí zpětné vazby v aplikaci Help Viewer můžete získat pomocí následujících zdrojů:
 
-- Pokud chcete poskytnout zpětnou vazbu, přečtěte si článek [Microsoft Connect](http://go.microsoft.com/fwlink/?linkid=243983) na webu Microsoftu nebo pošlete e-mail na [hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com).
+- Pokud chcete poskytnout zpětnou vazbu, přečtěte si článek [Microsoft Connect](https://go.microsoft.com/fwlink/?linkid=243983) na webu Microsoftu nebo pošlete e-mail na [hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com).
 
-- Další informace najdete v tématu [dokumentace pro vývojáře a](http://go.microsoft.com/fwlink/?LinkId=232741) fórum k systému pro nápovědu a [na blogu Guy](http://go.microsoft.com/fwlink/?LinkId=232743) .
+- Další informace najdete v tématu [dokumentace pro vývojáře a](https://go.microsoft.com/fwlink/?LinkId=232741) fórum k systému pro nápovědu a [na blogu Guy](https://go.microsoft.com/fwlink/?LinkId=232743) .
 
 ## <a name="see-also"></a>Viz také
- [Příručka pro správce Help Viewer 2,1](http://go.microsoft.com/fwlink/?LinkId=243985)
+ [Příručka pro správce Help Viewer 2,1](https://go.microsoft.com/fwlink/?LinkId=243985)

@@ -1,5 +1,5 @@
 ---
-title: InstallShield Limited Edition | Dokumentace Microsoftu
+title: InstallShield omezená edice | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -9,27 +9,27 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: ab2f063f684407c89cd3ec73cd256d0219805b66
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 2e56618138fccf6ac431741769b1d4b5ebe7bad4
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63409431"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295126"
 ---
 # <a name="installshield-limited-edition"></a>InstallShield Limited Edition
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pomocí programu InstallShield Limited Edition, můžete vytvořit instalační soubor a distribuovat ji uživatelům tak, aby si můžou nainstalovat aplikace klasické pracovní plochy nebo komponenty bez připojení k síti. InstallShield Limited Edition je zdarma pro uživatele verze sady Visual Studio Professional a Enterprise. Nahradí Windows Installer, která sadě Visual Studio už nepodporuje. Jako alternativu můžete distribuovat aplikace a komponenty s použitím technologie ClickOnce, která vyžaduje připojení k síti. Zobrazit [ClickOnce – zabezpečení a nasazení](../deployment/clickonce-security-and-deployment.md).  
+Pomocí InstallShield omezené edice můžete vytvořit instalační soubor a distribuovat ho uživatelům, aby mohli nainstalovat desktopovou aplikaci nebo komponentu bez připojení k síti. Pro uživatele, kteří Visual Studio Professional a Enterprise Edition, je program InstallShield omezená edice zdarma. Nahrazuje Instalační služba systému Windowsou technologii, kterou už Visual Studio nepodporuje. Alternativně můžete distribuovat aplikace a komponenty pomocí technologie ClickOnce, která vyžaduje připojení k síti. Viz téma [zabezpečení a nasazení ClickOnce](../deployment/clickonce-security-and-deployment.md).  
   
 > [!NOTE]
-> Můžete pokračovat v používání Instalační služby systému Windows projektů vytvořených v dřívějších verzích sady Visual Studio po instalaci rozšíření projektů instalačního programu Visual Studio. Zobrazit [instalační program sady Visual Studio projekty rozšíření](http://blogs.msdn.com/b/visualstudio/archive/2014/04/17/visual-studio-installer-projects-extension.aspx).  
+> Můžete pokračovat v používání Instalační služba systému Windows projektů vytvořených v dřívějších verzích sady Visual Studio instalací rozšíření Instalační program pro Visual Studioch projektů. Viz [rozšíření instalační program pro Visual Studio projekty](https://devblogs.microsoft.com/visualstudio/visual-studio-installer-projects-extension/).  
   
-### <a name="to-enable-installshield-limited-edition"></a>To enable InstallShield Limited Edition  
+### <a name="to-enable-installshield-limited-edition"></a>Povolení programu InstallShield limit Edition  
   
 1. V panelu nabídky zvolte **souboru**, **nový**, **projektu**.  
   
-2. V **nový projekt** dialogového okna rozbalte **ostatní typy projektů** uzel a klikněte na tlačítko **instalace a nasazení** uzlu.  
+2. V dialogovém okně **Nový projekt** rozbalte uzel **ostatní typy projektů** a pak zvolte uzel **nastavení a nasazení** .  
   
-3. V seznamu šablon vyberte **Povolit InstallShield Limited Edition**a klikněte na tlačítko **OK** tlačítko.  
+3. V seznamu Šablona zvolte možnost **Povolit InstallShield Limited Edition**a pak klikněte na tlačítko **OK** .  
   
-4. V okně prohlížeče, které se otevře, přečtěte si pokyny a klikněte na tlačítko **přejít na web stažení** odkaz.
+4. V okně prohlížeče, které se otevře, si přečtěte pokyny a potom zvolte odkaz **Přejít na web stáhnout** .

@@ -12,12 +12,12 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5b22e120161a3fefb5688a71c8e4d7540b8bc66e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a23a8d28f336728789fe9cbbe38f965cc56763d7
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669689"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295512"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>Obslužné rutiny události šíří změny mimo model
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -94,7 +94,7 @@ namespace Company.MusicLib
 ```
 
 ## <a name="using-events-to-make-undoable-adjustments-in-the-store"></a>Provedení nevratných úprav v úložišti pomocí událostí
- Události úložiště se obvykle nepoužívají pro rozšiřování změn v úložišti, protože se obslužná rutina události spustí po potvrzení transakce. Místo toho byste použili pravidlo obchodu. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
+ Události úložiště se obvykle nepoužívají pro rozšiřování změn v úložišti, protože se obslužná rutina události spustí po potvrzení transakce. Místo toho byste použili pravidlo obchodu. Další informace najdete v tématu [pravidla šíření změn v rámci the Model](../modeling/rules-propagate-changes-within-the-model.md).
 
  Můžete však použít obslužnou rutinu události k provedení dalších aktualizací úložiště, pokud chcete, aby uživatel mohl vrátit další aktualizace odděleně od původní události. Předpokládejme například, že malá písmena představují obvyklou konvenci pro názvy alb. Můžete napsat obslužnou rutinu události úložiště, která opravuje nadpis na malý případ poté, co ho uživatel zadal velkými písmeny. Ale uživatel může použít příkaz zpět k zrušení opravy a obnovení velkých písmen. Druhý příkaz zpět by odebral změnu uživatele.
 
@@ -190,4 +190,4 @@ private static void AlbumTitleAdjuster(object sender,
 |TransactionRolledBack||
 
 ## <a name="see-also"></a>Viz také
- [Jak reagovat na a šířit změny](../modeling/responding-to-and-propagating-changes.md) [Ukázka kódu: diagramy obvodu](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+ [Reagování na změny a šíření změn](../modeling/responding-to-and-propagating-changes.md)

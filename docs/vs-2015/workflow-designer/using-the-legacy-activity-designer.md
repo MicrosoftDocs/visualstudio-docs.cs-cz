@@ -16,12 +16,12 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 534af8da414cb3b9cc0dd786f7b79abe00e2ed66
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a13aeeb3394ee6b8896376c0e7d520b90fb56fa6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606890"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302820"
 ---
 # <a name="using-the-legacy-activity-designer"></a>Používání starší verze návrháře aktivit
 Toto téma popisuje, jak používat návrháře aktivit ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší verzi návrháře, pokud cílíte na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
@@ -48,13 +48,13 @@ Toto téma popisuje, jak používat návrháře aktivit ve starších [!INCLUDE[
 
 |Vlastnost|Komentáře|
 |--------------|--------------|
-|**Jméno**|Název aktivity|
-|**Základní třída**|Základní třída, ze které je odvozena aktivita. Výchozí základní třída je [SequenceActivity](http://go.microsoft.com/fwlink?LinkID=65020). V okně **vlastnosti** klikněte na tři tečky **základní třídy** **[...]** pro výběr jiné základní třídy v [dialogovém okně Procházet a vyberte možnost typ .NET (starší verze)](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box-legacy.md).|
+|**Název**|Název aktivity|
+|**Základní třída**|Základní třída, ze které je odvozena aktivita. Výchozí základní třída je [SequenceActivity](https://go.microsoft.com/fwlink?LinkID=65020). V okně **vlastnosti** klikněte na tři tečky **základní třídy** **[...]** pro výběr jiné základní třídy v [dialogovém okně Procházet a vyberte možnost typ .NET (starší verze)](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box-legacy.md).|
 |**Popis**|Uživatelsky definovaný Popis aktivity.|
-|**Umožněn**|Ve výchozím nastavení nastavte na **hodnotu true** , aby se povolilo provádění a ověřování aktivity. Nastavte na **hodnotu false** , chcete-li zakázat provádění a ověřování aktivity. Informace o provádění a ověřování aktivit najdete v tématu [vývoj aktivit pracovních postupů](http://go.microsoft.com/fwlink?LinkID=65024).|
+|**Umožněn**|Ve výchozím nastavení nastavte na **hodnotu true** , aby se povolilo provádění a ověřování aktivity. Nastavte na **hodnotu false** , chcete-li zakázat provádění a ověřování aktivity. Informace o provádění a ověřování aktivit najdete v tématu [vývoj aktivit pracovních postupů](https://go.microsoft.com/fwlink?LinkID=65024).|
 
 ## <a name="adding-child-activities"></a>Přidávání podřízených aktivit
  Podřízené aktivity lze přetáhnout ze sady nástrojů na aktivitu, kterou navrhujete. Potom můžete nakonfigurovat každou podřízenou aktivitu pomocí prohlížeče vlastností.
 
 ## <a name="see-also"></a>Viz také
- [Vývoj aktivit pracovních postupů](http://go.microsoft.com/fwlink?LinkID=65024) , které [vytvářejí vlastní aktivity](http://go.microsoft.com/fwlink?LinkID=65021) [starší aktivity pracovních postupů](../workflow-designer/legacy-workflow-activities.md) [](http://go.microsoft.com/fwlink?LinkID=65022) [, popisují postupy: Vytvoření knihovny aktivity pracovního postupu (starší verze)](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md) [pomocí starší verze Návrhář postupu provádění ](../workflow-designer/using-the-legacy-workflow-designer.md)
+ [Vývoj aktivit pracovních postupů](https://go.microsoft.com/fwlink?LinkID=65024) , které [vytvářejí vlastní aktivity](https://go.microsoft.com/fwlink?LinkID=65021) [starší aktivity pracovních postupů](../workflow-designer/legacy-workflow-activities.md) [](https://go.microsoft.com/fwlink?LinkID=65022) [, popisují postupy: Vytvoření knihovny aktivity pracovního postupu (starší verze)](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md) [pomocí starší verze Návrhář postupu provádění](../workflow-designer/using-the-legacy-workflow-designer.md)

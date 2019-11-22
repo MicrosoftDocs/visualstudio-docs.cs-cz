@@ -11,12 +11,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4c8365f045618b92b4b34935bf5024c2ff781650
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 67eb1a6ce55292415da4a5c4e363941a4285d8b7
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669745"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296010"
 ---
 # <a name="display-a-uml-model-on-diagrams"></a>Zobrazení modelu UML v diagramech
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,9 +43,9 @@ V tomto tématu:
 |---------------------|-----------------|-------------------------------------|
 |Třídění|`Class`<br /><br /> `Component`<br /><br /> `Actor`<br /><br /> `Use Case`|Vytvoření přidružených tvarů na zadaných diagramech. Pro jednotlivé klasifikátory můžete vytvořit libovolný počet tvarů.<br /><br /> `diagram.Display<modelElementType>`<br /><br /> `(modelElement, parentShape,`<br /><br /> `xPosition , yPosition);`<br /><br /> Nastavte `parentShape` na `null` pro tvar na nejvyšší úrovni diagramu.<br /><br /> Zobrazení jednoho obrazce v jiném:<br /><br /> `IShape<IUseCase> usecaseShape =`<br /><br /> `useCaseDiagram.Display`<br /><br /> `(useCase,`<br /><br /> `subsystemShape,`<br /><br /> `subsystemShape.XPosition + 5,`<br /><br /> `subsystemShape.YPosition + 5);` **Poznámka:** Pokud provedete zobrazení uvnitř transakce **ILinkedUndo** , metoda někdy nevrátí žádnou `IShape`. Ale tvar je správně vytvořený a je přístupný pomocí `IElement.Shapes().`|
 |Podřízená položka třídění|Atribut, operace,<br /><br /> Součást, port|Automatický – není vyžadován žádný kód.<br /><br /> Zobrazuje se jako součást nadřazeného objektu.|
-|Předvídatelně|Interakce (sekvence),<br /><br /> Aktivita|Navažte chování na příslušný diagram.<br /><br /> Každé chování může být vázáno na maximálně jeden diagram najednou.<br /><br /> Příklad:<br /><br /> `sequenceDiagram.Bind(interaction);`<br /><br /> `activityDiagram.Bind(activity);`|
+|Chování|Interakce (sekvence),<br /><br /> Aktivita|Navažte chování na příslušný diagram.<br /><br /> Každé chování může být vázáno na maximálně jeden diagram najednou.<br /><br /> Příklad:<br /><br /> `sequenceDiagram.Bind(interaction);`<br /><br /> `activityDiagram.Bind(activity);`|
 |Podřízený objekt chování|Životnosti, zprávy, akce, uzly objektů|Automatický – není vyžadován žádný kód.<br /><br /> Je zobrazen, pokud je nadřazený objekt svázán s diagramem.|
-|Vztah|Asociace, generalizace, tok, závislost|Automatický – není vyžadován žádný kód.<br /><br /> Zobrazuje se na každém diagramu, na kterém jsou zobrazeny oba konce.|
+|Relace|Asociace, generalizace, tok, závislost|Automatický – není vyžadován žádný kód.<br /><br /> Zobrazuje se na každém diagramu, na kterém jsou zobrazeny oba konce.|
 
 ## <a name="GetShapes"></a>Přístup k tvarům, které reprezentují element
  Obrazec představující prvek patří do těchto typů:
@@ -60,12 +60,12 @@ V tomto tématu:
 |-|-|
 |`anElement.Shapes ()`|Všechny `IShapes`, které představují tento prvek v otevřených diagramech.|
 |`anElement.Shapes(aDiagram)`|Všechny `IShapes`, které reprezentují tento prvek na konkrétním diagramu.|
-|`anIShape.GetElement()`|@No__t_0, který tvar představuje. Normálně byste ji přetypování na podtřídu třídy IElement.|
-|`anIShape.Diagram`|@No__t_0, který obsahuje tvar|
+|`anIShape.GetElement()`|`IElement`, který tvar představuje. Normálně byste ji přetypování na podtřídu třídy IElement.|
+|`anIShape.Diagram`|`IDiagram`, který obsahuje tvar|
 |`anIShape.ParentShape`|Tvar, který obsahuje `anIShape`. Například obrazec portu je obsažen v obrazci součásti.|
 |`anIShape.ChildShapes`|Tvary obsažené v `IShape` nebo `IDiagram`|
 |`anIShape.GetChildShapes<IUseCase>()`|Tvary obsažené v `IShape` nebo `IDiagram` reprezentující prvky zadaného typu, například `IUseCase`.|
-|`IShape iShape = ...;`<br /><br /> `IShape<IClass> classShape = iShape.ToIShape<IClass>();`<br /><br /> `IClass aClass = classShape.Element;`|Přetypování obecného `IShape` na `IShape<IElement>` silného typu.|
+|`IShape iShape = ...;`<br /><br /> `IShape<IClass> classShape = iShape.ToIShape<IClass>();`<br /><br /> `IClass aClass = classShape.Element;`|Přetypování obecného `IShape` na `IShape<IElement>`silného typu.|
 |`IShape<IClassifier> classifierShape;`<br /><br /> `IShape<IUseCase> usecaseShape =`<br /><br /> `classifierShape.ToIShape<IUseCase>();`|Přetypování tvaru z jednoho parametrizovaného typu obrazce na jiný.|
 
 ## <a name="Moving"></a>Přesun a změna velikosti tvarů
@@ -152,7 +152,7 @@ foreach (ProjectItem item in project.ProjectItems)
   { ... } } }
 ```
 
- Po návratu ovládacího prvku do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nejsou instance `IDiagram` a jeho podtypy platné.
+ Po návratu ovládacího prvku do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]nejsou instance `IDiagram` a jeho podtypy platné.
 
  Můžete také získat úložiště modelu z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ho projektu:
 
@@ -379,4 +379,4 @@ namespace AlignCommand
 ```
 
 ## <a name="see-also"></a>Viz také
- [Rozšiřování modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md) [Navigace v modelu UML](../modeling/navigate-the-uml-model.md) ukázka [: zarovnání obrazců v nabídce diagramu ukázka příkazu](http://go.microsoft.com/fwlink/?LinkId=213809) [: vytváření elementů, tvarů a stereotypů](http://go.microsoft.com/fwlink/?LinkId=213811)
+ [Rozšiřování modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md) [Navigace v modelu UML](../modeling/navigate-the-uml-model.md) ukázka [: zarovnání obrazců v nabídce diagramu ukázka příkazu](https://go.microsoft.com/fwlink/?LinkId=213809) [: vytváření elementů, tvarů a stereotypů](https://go.microsoft.com/fwlink/?LinkId=213811)

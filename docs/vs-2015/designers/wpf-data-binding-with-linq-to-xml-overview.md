@@ -9,12 +9,12 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 09c0c26a75d6881f06e67fa84f30ac7279bddf33
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 751840960288f46c0a1ca09ebe80a2b8e7603359
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663895"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299525"
 ---
 # <a name="wpf-data-binding-with-linq-to-xml-overview"></a>Přehled datové vazby WPF s LINQ to XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -89,4 +89,4 @@ V tomto tématu se seznámíte s funkcemi dynamické vazby dat v oboru názvů <
  Chcete-li implementovat dynamickou vazbu WPF, budou dynamické vlastnosti použity v zařízeních poskytovaných oborem názvů <xref:System.Windows.Data>, zejména v <xref:System.Windows.Data.Binding> třídě.
 
 ## <a name="see-also"></a>Viz také
- [Datová vazba WPF s LINQ to XML](../designers/wpf-data-binding-with-linq-to-xml.md) [LINQ to XML dynamické vlastnosti](../designers/linq-to-xml-dynamic-properties.md) [XAML ve](https://msdn.microsoft.com/library/5d858575-a83b-42df-ad3f-047ed2d6e3c8) [vazbě dat WPF (WPF)](https://msdn.microsoft.com/library/90f79b97-17e7-40d1-abf0-3ba600ad1d7e) [pomocí značek pracovního postupu](http://go.microsoft.com/fwlink/?LinkId=98685)
+ [Datová vazba WPF s LINQ to XML](../designers/wpf-data-binding-with-linq-to-xml.md) [LINQ to XML dynamické vlastnosti](../designers/linq-to-xml-dynamic-properties.md) [XAML ve](https://msdn.microsoft.com/library/5d858575-a83b-42df-ad3f-047ed2d6e3c8) [vazbě dat WPF (WPF)](https://msdn.microsoft.com/library/90f79b97-17e7-40d1-abf0-3ba600ad1d7e) [pomocí značek pracovního postupu](https://go.microsoft.com/fwlink/?LinkId=98685)

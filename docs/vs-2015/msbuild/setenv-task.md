@@ -1,5 +1,5 @@
 ---
-title: SETENV – úloha | Dokumentace Microsoftu
+title: Úloha setenv – | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -20,28 +20,28 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 49d25d49554c587bcaaba8ef09bac967d4b5599a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7dc9b15efb8fca12382fae94912d22c39b96bd4c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157379"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295976"
 ---
 # <a name="setenv-task"></a>SetEnv – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nastaví nebo vymaže hodnotu proměnné zadané prostředí.  
+Nastaví nebo odstraní hodnotu zadané proměnné prostředí.  
   
 ## <a name="parameters"></a>Parametry  
- Následující tabulka popisuje parametry **SetEnv** úloh.  
+ Následující tabulka popisuje parametry úlohy **setenv –** .  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|**Název**|Vyžaduje **řetězec** parametru.<br /><br /> Název proměnné prostředí.|  
-|**OutputEnvironmentVariable**|Volitelné **řetězec** výstupní parametr.<br /><br /> Obsahuje hodnotu, která je přiřazená k proměnné prostředí, která je zadána **název** parametru.|  
-|**Prefix**|Povinné `Boolean` parametru.<br /><br /> Pokud `true`, zřetězí hodnoty **hodnotu** parametr před hodnotu proměnné prostředí, která je zadána **název** parametr a poté přiřadí výsledek do prostředí Proměnná. Pokud `false`, přiřadí pouze hodnotu **hodnotu** parametr do proměnné prostředí.|  
-|**Cíl**|Volitelné **řetězec** parametru.<br /><br /> Určuje umístění, kde je uložen na proměnnou prostředí. Zadejte "`User`"nebo"`Machine`".<br /><br /> Další informace najdete v tématu "EnvironmentVariableTarget výčet" na [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.|  
-|**Hodnota**|Volitelné **řetězec** parametru.<br /><br /> Hodnota přiřazená k proměnné prostředí, která je zadána **název** parametru. Pokud **hodnotu** je prázdný a existuje proměnná, proměnná je Odstraněná. Pokud proměnná neexistuje, nedojde k žádné chybě i v případě, že operaci nejde provést.<br /><br /> Další informace najdete v tématu "Environment::SetEnvironmentVariable metoda" na [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.|  
+|**Název**|Povinný parametr **řetězce**<br /><br /> Název proměnné prostředí.|  
+|**OutputEnvironmentVariable**|Volitelný výstupní parametr **řetězce** .<br /><br /> Obsahuje hodnotu, která je přiřazena proměnné prostředí, která je určena parametrem **Name** .|  
+|**Prefix**|Povinný parametr `Boolean`.<br /><br /> Pokud `true`, zřetězí hodnotu parametru **Value** před hodnotu proměnné prostředí, která je určena parametrem **Name** , a poté přiřadí výsledek proměnné prostředí. Pokud `false`, přiřadí pouze hodnotu parametru **Value** proměnné prostředí.|  
+|**Cílové**|Volitelný **řetězcový** parametr.<br /><br /> Určuje umístění, kde je uložena proměnná prostředí. Zadejte "`User`" nebo "`Machine`".<br /><br /> Další informace najdete v části "výčet EnvironmentVariableTarget" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .|  
+|**Hodnota**|Volitelný **řetězcový** parametr.<br /><br /> Hodnota přiřazená proměnné prostředí, která je určena parametrem **Name** Pokud je **hodnota** prázdná a proměnná existuje, proměnná se odstraní. Pokud proměnná neexistuje, nedošlo k žádné chybě, i když operaci nelze provést.<br /><br /> Další informace naleznete v části "prostředí:: SetEnvironmentVariable metoda" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .|  
   
 ## <a name="remarks"></a>Poznámky  
   

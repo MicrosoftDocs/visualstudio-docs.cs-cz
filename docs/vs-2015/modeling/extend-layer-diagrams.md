@@ -12,12 +12,12 @@ caps.latest.revision: 41
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 48fdddd8711086ff185e64df6981cd6848ad1f51
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bfcec64f9401fdbf79e67bee5fe8430452632fbc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669635"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301029"
 ---
 # <a name="extend-layer-diagrams"></a>Rozšíření diagramů vrstev
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,14 +34,14 @@ Můžete napsat kód pro vytváření a aktualizaci diagramů vrstev a k ověře
 
 - [Ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)
 
-## <a name="prereqs"></a>Požadavků
+## <a name="prereqs"></a> Požadavky
  V počítači, na kterém chcete vyvíjet rozšíření vrstev, je nutné mít nainstalované následující:
 
 - Visual Studio
 
 - [Visual Studio SDK](../extensibility/visual-studio-sdk.md)
 
-- [Sada Modeling SDK pro Visual Studio 2015](http://www.microsoft.com/download/details.aspx?id=48148)
+- [Sada Modeling SDK pro Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48148)
 
   V počítači, na kterém chcete spustit rozšíření vrstvy, musíte mít nainstalovanou vhodnou verzi sady Visual Studio. Další informace najdete v tématu [nasazení rozšíření modelu vrstvy](../modeling/deploy-a-layer-model-extension.md).
 
@@ -61,4 +61,4 @@ Můžete napsat kód pro vytváření a aktualizaci diagramů vrstev a k ověře
  [Řešení potíží s rozšířeními pro diagramy vrstev](../modeling/troubleshoot-extensions-for-layer-diagrams.md)
 
 ## <a name="see-also"></a>Viz také
- [Definice a instalace diagramů rozšíření modelování](../modeling/define-and-install-a-modeling-extension.md) [: diagramy referenčních](../modeling/layer-diagrams-reference.md) [vrstev: pokyny](../modeling/layer-diagrams-guidelines.md) k [vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md) [ověření kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md) [generování souborů z modelu UML](../modeling/generate-files-from-a-uml-model.md) [ Otevření modelu UML pomocí rozhraní API sady Visual Studio](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md)
+ [Definování a instalace diagramů rozšíření modelování](../modeling/define-and-install-a-modeling-extension.md) [: diagramy referenčních](../modeling/layer-diagrams-reference.md) [vrstev: pokyny](../modeling/layer-diagrams-guidelines.md) [k vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md) [ověření kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md) [generují soubory z modelu UML](../modeling/generate-files-from-a-uml-model.md) [otevření modelu UML pomocí rozhraní API sady Visual Studio](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md)

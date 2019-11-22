@@ -13,12 +13,12 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6e6664f78123864073d605b59c7f43e5b2db36cc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 19d673d9d09ce95580e25033966e1a901255fd90
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72609253"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74292639"
 ---
 # <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>Přidání vlastnosti sledování do definice jazyka specifického pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,9 +50,9 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185579](http://go.microsoft.com/fwlink/?LinkID=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](http://go.microsoft.com/fwlink/?LinkID=185580)|
-|[!INCLUDE[dsl](../includes/dsl-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185581](http://go.microsoft.com/fwlink/?LinkID=185581)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185579](https://go.microsoft.com/fwlink/?LinkID=185579)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](https://go.microsoft.com/fwlink/?LinkID=185580)|
+|[!INCLUDE[dsl](../includes/dsl-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185581](https://go.microsoft.com/fwlink/?LinkID=185581)|
 
 ## <a name="creating-the-dsl-project"></a>Vytváření projektu DSL
  Vytvořte projekt pro jazyk specifický pro doménu.
@@ -65,7 +65,7 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
 
     1. Vyberte šablonu **MinimalLanguage** .
 
-    2. Pro jazyk specifický pro doménu `TrackingPropertyDSL` použijte výchozí název.
+    2. Pro jazyk specifický pro doménu `TrackingPropertyDSL`použijte výchozí název.
 
     3. Nastavte rozšíření pro soubory modelu na `trackingPropertyDsl`.
 
@@ -96,9 +96,9 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
 
 1. V Návrháři DSL klikněte pravým tlačítkem na doménovou třídu **ExampleModel** , přejděte na **Přidat**a pak klikněte na **doménová vlastnost**.
 
-    1. Pojmenujte `DefaultNamespace` novou vlastnost.
+    1. Pojmenujte `DefaultNamespace`novou vlastnost.
 
-    2. V okně **vlastnosti** nové vlastnosti nastavte **výchozí hodnota** na `DefaultNamespace` a nastavte **typ** na **řetězec**.
+    2. V okně **vlastnosti** nové vlastnosti nastavte **výchozí hodnota** na `DefaultNamespace`a nastavte **typ** na **řetězec**.
 
 2. Do třídy domény **ExampleModel** přidejte doménovou vlastnost s názvem `CustomElements`.
 
@@ -110,7 +110,7 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
 
 4. Do třídy domény **ExampleElement** přidejte doménovou vlastnost s názvem `IsNamespaceTracking`.
 
-     V okně **vlastnosti** pro novou vlastnost **je** nastaveno procházení na **false**, nastavte **výchozí hodnotu** na `true` a nastavte **typ** na **Boolean**.
+     V okně **vlastnosti** pro novou vlastnost **je** nastaveno procházení na **false**, nastavte **výchozí hodnotu** na `true`a nastavte **typ** na **Boolean**.
 
 #### <a name="to-update-the-diagram-elements-and-dsl-details"></a>Aktualizace elementů diagramu a podrobností DSL
 
@@ -152,15 +152,15 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
 
 #### <a name="to-create-the-code-files"></a>Vytvoření souborů kódu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt **DSL** , přejděte na **Přidat**a pak klikněte na **Nová složka**. Pojmenujte `CustomCode` nové složky.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt **DSL** , přejděte na **Přidat**a pak klikněte na **Nová složka**. Pojmenujte `CustomCode`nové složky.
 
 2. Klikněte pravým tlačítkem na novou složku **CustomCode** , přejděte na **Přidat**a klikněte na **Nová položka**.
 
-3. Vyberte šablonu **soubor kódu** , nastavte **název** na `NamespaceTrackingProperty.cs` a pak klikněte na **OK**.
+3. Vyberte šablonu **soubor kódu** , nastavte **název** na `NamespaceTrackingProperty.cs`a pak klikněte na **OK**.
 
      Soubor NamespaceTrackingProperty.cs se vytvoří a otevře pro úpravy.
 
-4. Ve složce vytvořte následující soubory kódu: `ExampleModel.cs,``HelperClasses.cs`, `Serialization.cs` a `TypeDescriptor.cs`.
+4. Ve složce vytvořte následující soubory kódu: `ExampleModel.cs,``HelperClasses.cs`, `Serialization.cs`a `TypeDescriptor.cs`.
 
 5. V projektu **DslPackage** vytvořte také složku `CustomCode` a přidejte do ní soubor kódu `Package.cs`.
 
@@ -346,9 +346,9 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
 > [!NOTE]
 > Kód, který vygeneruje nástroje DSL pro `ExampleModel` volá `GetCustomElementsValue`; Nástroje DSL ale negenerují kód, který implementuje metodu.
 
- Definování metody `GetCustomElementsValue` poskytuje logiku pro vypočítanou vlastnost `ExampleModel` CustomElements. Tato metoda spočítá počet `ExampleElement` doménových tříd, které mají vlastnost sledování oboru názvů s uživatelsky aktualizovanou hodnotou, a vrátí řetězec, který představuje tento počet jako podíl celkových prvků v modelu.
+ Definování metody `GetCustomElementsValue` poskytuje logiku pro vypočítanou vlastnost `ExampleModel`CustomElements. Tato metoda spočítá počet `ExampleElement` doménových tříd, které mají vlastnost sledování oboru názvů s uživatelsky aktualizovanou hodnotou, a vrátí řetězec, který představuje tento počet jako podíl celkových prvků v modelu.
 
- Kromě toho přidejte `OnDefaultNamespaceChanged` metodu pro `ExampleModel` a přepište metodu `OnValueChanged` `DefaultNamespacePropertyHandler` vnořené třídy `ExampleModel` k volání `OnDefaultNamespaceChanged`.
+ Kromě toho přidejte `OnDefaultNamespaceChanged` metodu pro `ExampleModel`a přepište metodu `OnValueChanged` `DefaultNamespacePropertyHandler` vnořené třídy `ExampleModel` k volání `OnDefaultNamespaceChanged`.
 
  Vzhledem k tomu, že vlastnost DefaultNamespace se používá k výpočtu vlastnosti sledování oboru názvů, `ExampleModel` musí informovat všechny třídy domény `ExampleElement`, že se změnila hodnota DefaultNamespace.
 
@@ -722,9 +722,9 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
 
 #### <a name="to-exercise-the-language"></a>Postup při cvičení jazyka
 
-1. V nabídce **sestavení** klikněte na příkaz **znovu sestavit řešení**.
+1. Na **sestavení** nabídky, klikněte na tlačítko **znovu sestavit řešení**.
 
-2. V nabídce **ladit** klikněte na **Spustit ladění**.
+2. Na **ladění** nabídky, klikněte na tlačítko **spustit ladění**.
 
      Experimentální sestavení [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] otevře **ladicí** řešení, které obsahuje prázdný testovací soubor.
 
@@ -760,5 +760,5 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
  Pokud plánujete použít více než jednu vlastnost sledování nebo implementovat vlastnosti sledování ve více než jedné DSL, můžete vytvořit textovou šablonu, která generuje společný kód pro podporu jednotlivých vlastností sledování. Další informace o textových šablonách naleznete v tématu [Code Generation and T4 text Templates](../modeling/code-generation-and-t4-text-templates.md).
 
 ## <a name="see-also"></a>Viz také
- <xref:Microsoft.VisualStudio.Modeling.Design.TrackingPropertyDescriptor><xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>
+ <xref:Microsoft.VisualStudio.Modeling.Design.TrackingPropertyDescriptor> <xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>
  [Definování jazyka specifického pro doménu](../modeling/how-to-define-a-domain-specific-language.md) [Postupy: vytvoření řešení jazyka](../modeling/how-to-create-a-domain-specific-language-solution.md) specifického pro doménu [: postup přizpůsobení definice jazyka specifického pro doménu](../misc/walkthrough-customizing-the-domain-specific-language-definition.md)

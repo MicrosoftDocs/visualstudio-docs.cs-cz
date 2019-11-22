@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Webový Server nenalezl požadovaný prostředek | Dokumentace Microsoftu'
+title: 'Chyba: webový server nenalezl požadovaný prostředek | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -16,24 +16,24 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b3904a9fcb2e15190018dbc4caabe925690e023f
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 904d628b09c7add48460273ecaff7d8ac288cbc3
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263712"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297419"
 ---
-# <a name="error-the-web-server-could-not-find-the-requested-resource"></a>Chyba: Webový server nemohl najít požadovaný prostředek.
+# <a name="error-the-web-server-could-not-find-the-requested-resource"></a>Chyba: Webový server nenalezl požadovaný prostředek.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kvůli požadavky na zabezpečení služby IIS vrátilo Obecná chyba.  
+Služba IIS kvůli bezpečnostním hlediskům vrátila obecnou chybu.  
   
- Jednou z možných příčin je konfigurace zabezpečení serveru. Služba IIS 6.0 a starší verze umožňuje aplikace doplňku, označované jako URLScan, filtrujte požadavky podezřelé nebo poškozený. Služba IIS 7.0 má integrované filtrování požadavků k tomuto účelu. V obou případech příliš omezující požadavek filtrování můžete zabránit sady Visual Studio ladění serveru.  
+ Jednou z možných příčin je konfigurace zabezpečení serveru. Služba IIS 6,0 a starší verze používaly doplněk, který se označuje jako URLScan, aby vyfiltroval podezřelé a poškozené požadavky. Služba IIS 7,0 obsahuje integrované filtrování požadavků pro stejný účel. V obou případech může aplikace sady Visual Studio zabránit v ladění serveru.  
   
- Existuje mnoho možných příčin této chyby. Některé nejčastější příčiny patří potíže s instalaci služby IIS nebo konfigurace, konfiguraci webového serveru nebo oprávnění v systému souborů. Přístup k prostředku s prohlížečem, který můžete vyzkoušet. V závislosti na konfiguraci služby IIS, budete muset použít místní prohlížeč na serveru nebo zkontrolujte protokol chyb služby IIS k získání podrobné chybové zprávy.  
+ Existuje mnoho možných příčin této chyby. Mezi nejběžnější příčiny patří problém s instalací nebo konfigurací služby IIS, konfigurací webu nebo oprávněními v systému souborů. Můžete se pokusit o přístup k prostředku pomocí prohlížeče. V závislosti na tom, jak je služba IIS nakonfigurovaná, možná budete muset použít místní prohlížeč na serveru nebo zkontrolovat protokol chyb služby IIS a získat podrobnou chybovou zprávu.  
   
- Další informace o řešení potíží s IIS najdete v tématu [správu služby IIS a správu](http://go.microsoft.com/fwlink/?LinkId=255872).  
+ Další informace o řešení potíží služby IIS najdete v tématu [Správa a Správa služby IIS](https://go.microsoft.com/fwlink/?LinkId=255872).  
   
 ## <a name="see-also"></a>Viz také  
- [Nástroj UrlScan zabezpečení](/iis/extensions/working-with-urlscan/urlscan-3-reference)   
- [Chyba: Webový server je zamčený, a proto blokuje příkaz DEBUG.](../debugger/error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md)
+ [Nástroj zabezpečení nástroje UrlScan](/iis/extensions/working-with-urlscan/urlscan-3-reference)   
+ [Chyba: Webový server byl uzamčen a blokuje příkaz DEBUG.](../debugger/error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md)

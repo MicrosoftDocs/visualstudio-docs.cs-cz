@@ -15,17 +15,17 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 77220ef55871d59bf8c8810547fccae5399869ce
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2439f280ee590f1b13e339b69c6f3f147bb1ea39
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665681"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297806"
 ---
 # <a name="quick-launch-environment-options-dialog-box"></a>Dialogové okno Snadné spuštění, Prostředí, Možnosti
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-**Rychlé spuštění** můžete použít k rychlému vyhledávání a provádění akcí pro prostředky IDE, jako jsou například možnosti, šablony nebo nabídky. Nelze použít funkci **snadného spuštění** k hledání kódu a symbolů. Vyhledávací pole **Snadné spuštění** se nachází v pravém horním rohu řádku nabídek a je přístupné výběrem kláves CTRL + Q. Jednoduše do pole zadejte hledaný řetězec. Pokud chcete hledat řetězce, které obsahují @, použijte @ @.
+**Rychlé spuštění** můžete použít k rychlému vyhledávání a provádění akcí pro prostředky IDE, jako jsou například možnosti, šablony nebo nabídky. Nelze použít funkci **snadného spuštění** k hledání kódu a symbolů. Vyhledávací pole **Snadné spuštění** se nachází v pravém horním rohu řádku nabídek a je přístupné výběrem kláves CTRL + Q. Jednoduše do pole zadejte hledaný řetězec. K vyhledání řetězce, které obsahují @, použijte ”@@”.
 
  Při instalaci sady Visual Studio je **Rychlé spuštění** povoleno ve výchozím nastavení. Na panelu nabídek můžete zobrazit nebo skrýt **panel Snadné spuštění** výběrem možnosti **nástroje**, **Možnosti**. Rozbalte uzel **prostředí** a pak zvolte možnost **Snadné spuštění**. Zaškrtněte nebo zrušte zaškrtnutí políčka **Povolit rychlé spuštění** . Na této stránce můžete také povolit nebo zakázat kategorie hledání.
 
@@ -36,10 +36,10 @@ ms.locfileid: "72665681"
 
 |Kategorie|Zástupce|Popis zástupce|
 |--------------|--------------|--------------------------|
-|Naposledy použité|@mru<br /><br /> Třeba `@mru font`.|Zobrazí až pět položek, které jste **naposledy použili**.|
-|Nabídky|@menu<br /><br /> Třeba `@menu font`.|Omezí hledání na položky nabídky.|
-|Možnosti|@opt<br /><br /> Třeba `@opt font`.|Omezí hledání na nastavení v dialogovém okně **Možnosti** .|
-|Dokumenty|@doc<br /><br /> Třeba `@doc font`.|Omezí hledání na názvy souborů a cesty k otevřeným dokumentům pro kritéria hledání, ale nehledá text v samotných souborech.|
+|Naposledy použité|@mru<br /><br /> Například `@mru font`.|Zobrazí až pět položek, které jste **naposledy použili**.|
+|Nabídky|@menu<br /><br /> Například `@menu font`.|Omezí hledání na položky nabídky.|
+|Možnosti|@opt<br /><br /> Například `@opt font`.|Omezí hledání na nastavení v dialogovém okně **Možnosti** .|
+|Dokumenty|@doc<br /><br /> Například `@doc font`.|Omezí hledání na názvy souborů a cesty k otevřeným dokumentům pro kritéria hledání, ale nehledá text v samotných souborech.|
 
 > [!NOTE]
 > Klávesové zkratky můžete změnit na stránce **Obecné**, **klávesnice** v dialogovém okně **Možnosti** .
@@ -47,7 +47,7 @@ ms.locfileid: "72665681"
 ## <a name="show-previous-results"></a>Zobrazit předchozí výsledky
  Ve výchozím nastavení se hledaný termín, který zadáte, netrval mezi vyhledávacími relacemi. Hledaný řetězec je při hledání termínu vymazán, přesuňte kurzor mimo oblast snadné **spuštění** a pak se vraťte zpět. Chcete-li zachovat výsledky hledání, otevřete dialogové okno **Možnosti** , zvolte možnost **Snadné spuštění**a pak vyberte možnost **Zobrazit výsledky hledání z předchozího hledání, když je aktivováno snadné spuštění.** zaškrtávací políčko. Při příštím hledání ponechte oblast snadné spuštění a vraťte se zpátky. rychlé spuštění zachová hledaný termín a také zobrazí výsledky hledání.
 
- Nejaktuálnější tipy a triky pro použití **panelu snadného spuštění**najdete v [blogu sady Visual Studio](http://go.microsoft.com/fwlink/?LinkId=236054).
+ Nejaktuálnější tipy a triky pro použití **panelu snadného spuštění**najdete v [blogu sady Visual Studio](https://go.microsoft.com/fwlink/?LinkId=236054).
 
 ## <a name="see-also"></a>Viz také
  Obecné možnosti prostředí pro [prvky uživatelského rozhraní (Visual Studio)](../../ide/reference/general-user-interface-elements-visual-studio.md) – [dialogové okno](../../ide/reference/environment-options-dialog-box.md)

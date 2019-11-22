@@ -11,17 +11,17 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d3bc95e74c9e80596ea46efa42abce5c4ed48fa8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5d5284bb163f474d67324c395a4342ccef6f8561
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659442"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298254"
 ---
 # <a name="use-models-in-your-development-process"></a>Použití modelů ve vývojových procesech
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V aplikaci Visual Studio můžete použít model, který vám pomůže pochopit a změnit systém, aplikaci nebo komponentu. Model vám může přispět k vizualizaci světa, ve kterém váš systém funguje, objasnit potřeby uživatelů, definovat architekturu vašeho systému, analyzovat kód a ujistit se, že váš kód splňuje požadavky. Viz [video o kanálu 9: vylepšení architektury prostřednictvím modelování](http://go.microsoft.com/fwlink/?LinkID=252078).
+V aplikaci Visual Studio můžete použít model, který vám pomůže pochopit a změnit systém, aplikaci nebo komponentu. Model vám může přispět k vizualizaci světa, ve kterém váš systém funguje, objasnit potřeby uživatelů, definovat architekturu vašeho systému, analyzovat kód a ujistit se, že váš kód splňuje požadavky. Viz [video o kanálu 9: vylepšení architektury prostřednictvím modelování](https://go.microsoft.com/fwlink/?LinkID=252078).
 
  Chcete-li zjistit, které verze aplikace Visual Studio podporují jednotlivé typy modelů, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -48,7 +48,7 @@ V aplikaci Visual Studio můžete použít model, který vám pomůže pochopit 
  V obou případech vytvoření modelu téměř vždy vede k výraznému snížení nekonzistencí a nejednoznačnosti. Různí účastníci mají často různé porozumění obchodnímu světě, ve kterém systém funguje, a různí vývojáři mají často různé informace o tom, jak systém funguje. Použití modelu jako fokusu diskuze obvykle zveřejňuje tyto rozdíly. Další informace o použití modelu ke snížení nekonzistencí najdete v tématu [model uživatelských požadavků](../modeling/model-user-requirements.md).
 
 ### <a name="use-models-with-other-artifacts"></a>Použití modelů s jinými artefakty
- Model není sám o sobě specifikací požadavků nebo architekturou. Jedná se o nástroj, který vám umožní vyjádřit některé aspekty těchto věcí podrobněji, ale ne všechny koncepty požadované během návrhu softwaru. Modely by se proto měly používat společně s jinými komunikačními prostředky, jako jsou stránky nebo odstavce OneNotu, systém Microsoft Office dokumenty, pracovní položky v [!INCLUDE[esprfound](../includes/esprfound-md.md)] nebo rychlé poznámky na stěně na místnosti projektu. Kromě poslední položky mohou být všechny tyto typy objektů propojeny s částmi prvků modelu.
+ Model není sám o sobě specifikací požadavků nebo architekturou. Jedná se o nástroj, který vám umožní vyjádřit některé aspekty těchto věcí podrobněji, ale ne všechny koncepty požadované během návrhu softwaru. Modely by se proto měly používat společně s jinými komunikačními prostředky, jako jsou stránky nebo odstavce OneNotu, systém Microsoft Office dokumenty, pracovní položky v [!INCLUDE[esprfound](../includes/esprfound-md.md)]nebo rychlé poznámky na stěně na místnosti projektu. Kromě poslední položky mohou být všechny tyto typy objektů propojeny s částmi prvků modelu.
 
  Další aspekty specifikace, které se obvykle používají společně s modely, zahrnují následující. V závislosti na měřítku a stylu vašeho projektu můžete použít několik těchto aspektů nebo nepoužívat vůbec:
 
@@ -130,12 +130,12 @@ V aplikaci Visual Studio můžete použít model, který vám pomůže pochopit 
 
 ## <a name="external-resources"></a>Externí zdroje
 
-|**Kategorií**|**Odkazy**|
+|**Kategorie**|**Odkazy**|
 |------------------|---------------|
-|**Videa**|![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN jak mám videa: jak vytvářet a používat modely a diagramy UML (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kanál 9: UML se sadou Visual Studio 2010](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN postup I série: nástroje a rozšiřitelnost UML (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkID=214467)|
-|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](http://go.microsoft.com/fwlink/?LinkId=184721)|
-|**Blogy**|[Blog sady Visual Studio ALM + Team Foundation Server](http://go.microsoft.com/fwlink/?LinkID=201340)|
-|**Technické články a deníky**|[Centrum architektury MSDN](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Pokyny k nástrojům architektury sady Visual Studio](../modeling/visual-studio-architecture-tooling-guidance.md)|
+|**Videa**|![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN jak mám videa: jak vytvářet a používat modely a diagramy UML (Visual Studio 2010 Ultimate)](https://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kanál 9: UML se sadou Visual Studio 2010](https://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN postup I série: nástroje a rozšiřitelnost UML (Visual Studio 2010 Ultimate)](https://go.microsoft.com/fwlink/?LinkID=214467)|
+|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://go.microsoft.com/fwlink/?LinkId=184721)|
+|**Blogy**|[Blog sady Visual Studio ALM + Team Foundation Server](https://go.microsoft.com/fwlink/?LinkID=201340)|
+|**Technické články a deníky**|[Centrum architektury MSDN](https://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Pokyny k nástrojům architektury sady Visual Studio](../modeling/visual-studio-architecture-tooling-guidance.md)|
 
 ## <a name="see-also"></a>Viz také
  [Použití modelů v agilním vývoji](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f) [vytváření modelů pro model](../modeling/create-models-for-your-app.md) [požadavků uživatelů](../modeling/model-user-requirements.md) modelu aplikace vývoj [architektury vaší aplikace](../modeling/model-your-app-s-architecture.md) při [vývoji testů ze struktury modelu](../modeling/develop-tests-from-a-model.md) v [rámci modelování vašeho řešení](../modeling/structure-your-modeling-solution.md)

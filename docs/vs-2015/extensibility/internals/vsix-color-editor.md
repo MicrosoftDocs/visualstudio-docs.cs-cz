@@ -1,85 +1,85 @@
 ---
-title: Editor barev VSIX | Dokumentace Microsoftu
+title: Editor barev VSIX | Microsoft Docs
 ms.date: 11/15/2016
 ms.topic: conceptual
 ms.assetid: 70879c5d-e0f0-4845-993c-2f4229869706
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: fe8e54876f5b2ab3eda5c1bd8d35f0b0d0c788b2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ea5695c41b19cbd77c56a63f22b52fca5ee6f1eb
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68197279"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295443"
 ---
 # <a name="vsix-color-editor"></a>Editor barev VSIX
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Nástroj editoru barev rozšíření sady Visual Studio můžete vytvářet a upravovat vlastní barvy pro sadu Visual Studio. Nástroj může také generovat klíče motivů prostředků tak, aby barvy můžete použít v kódu. Tento nástroj je užitečný pro provádění barvy pro rozšíření sady Visual Studio, který podporuje motivů. Tento nástroj můžete otevřít soubory .pkgdef a XML. Visual Studio motivů (.vstheme soubory) je možné rozšíření barva Editor sady Visual Studio tak, že změníte příponu .xml. Kromě toho lze importovat .vstheme soubory do aktuálního souboru .xml.  
+Nástroj Editor barev rozšíření sady Visual Studio může vytvářet a upravovat vlastní barvy pro Visual Studio. Nástroj může také generovat klíče prostředků motivu, aby bylo možné použít barvy v kódu. Tento nástroj je užitečný pro vytváření barev pro rozšíření sady Visual Studio, které podporuje. Tento nástroj může otevřít soubory. pkgdef a. XML. Motivy sady Visual Studio (soubory. vstheme) lze použít s editorem barev rozšíření sady Visual Studio změnou přípony souboru na. XML. Soubory. vstheme lze navíc importovat do aktuálního souboru. XML.  
   
- ![VSIX Color Editor Hero](../../extensibility/internals/media/vsix-color-editor-hero.png "VSIX Color Editor Hero")  
+ ![Editor barev VSIX Hero](../../extensibility/internals/media/vsix-color-editor-hero.png "Editor barev VSIX Hero")  
   
- **Definičních souborech balíčku**  
+ **Definiční soubory balíčku**  
   
- Balíček definice (.pkgdef) soubory jsou soubory, které definují motivů. Barvy sami jsou uloženy v souborech XML barvu motivu, které jsou kompilovány do souboru .pkgdef. Soubor .pkgdef jsou nasazené do sady Visual Studio prohledávatelná umístění, zpracovaných za běhu a sloučení definovat motivů.  
+ Soubory definice balíčku (. pkgdef) jsou soubory, které definují motivy. Barvy samotné jsou uloženy v souborech Color. XML motivu, které jsou zkompilovány do souboru. pkgdef. Soubory. pkgdef jsou nasazeny do vyhledávacích umístění sady Visual Studio, zpracované za běhu a sloučeny dohromady pro definování motivů.  
   
- **Barva tokeny**  
+ **Barevné tokeny**  
   
- Barva token se skládá ze čtyř prvků:  
+ Barevný token se skládá ze čtyř prvků:  
   
-- **Název kategorie:** Logické seskupení pro sadu barev. Použijte stávající název kategorie, pokud jsou již barvy, které jsou specifické pro požadovaný prvek uživatelského rozhraní nebo skupiny prvků uživatelského rozhraní.  
+- **Název kategorie:** Logické seskupení pro sadu barev. Pokud již existují barvy, které jsou specifické pro požadovaný prvek uživatelského rozhraní nebo skupinu prvků uživatelského rozhraní, použijte existující název kategorie.  
   
-- **Název tokenu:** Nastaví popisný název pro barvu tokenu a tokenu. Sady zahrnují na pozadí a popředí (text) token názvy, jakož i jejich stavů, a ty by měly být pojmenovány tak, aby se snadno rozpoznat páry a stavy, které se vztahují na.  
+- **Název tokenu:** Popisný název pro tokeny barev a sady tokenů. Sady obsahují názvy tokenů pozadí a popředí (text) a také všechny jejich stavy a ty by měly být pojmenovány tak, aby bylo možné snadno identifikovat páry a stavy, na které se vztahují.  
   
-- **Hodnoty barvy (nebo bubliny):** Třeba každý barevný motiv. Vždy vytvořte textu a pozadí hodnot barev v párech. Barvy jsou párovat pro pozadí a popředí, tak, aby vždy čitelné barevném pozadí, na kterém je vykreslen barva textu (popředí). Tyto barvy jsou propojeny a použije se současně v uživatelském rozhraní. Pokud na pozadí není určena pro použití s textem, nedefinují barvu popředí.  
+- **Hodnoty barev (nebo odstíny):** Nutné pro každý barevný motiv. Vždy vytvářet hodnoty barev pozadí a textu ve dvojicích. Barvy jsou spárovány pro pozadí/popředí, takže barva textu (popředí) je vždy čitelná vzhledem k barvě pozadí, na které je vykreslena. Tyto barvy jsou propojené a použijí se společně v uživatelském rozhraní. Pokud pozadí není určeno pro použití s textem, nedefinujte barvu popředí.  
   
-- **Název systémové barvy:** Pro použití v zobrazení s vysokým kontrastem.  
+- **Název systémové barvy:** Pro použití v horních displejích.  
   
 ## <a name="how-to-use-the-tool"></a>Jak používat nástroj  
- Co je to možné, a kde je to vhodné, by měl znovu použít existující sady Visual Studio barvy místo provedení nové značky. V případech, kde jsou definovány žádné odpovídající barvy, měl by být vlastních barev však vytvořen zachovat kompatibilitu s rozšíření motivů.  
+ Jak je to možné, a tam, kde je to vhodné, by se měly znovu použít stávající barvy sady Visual Studio místo toho, aby se prováděly nové. Nicméně pro případy, kdy nejsou definovány žádné odpovídající barvy, by měly být vytvořeny vlastní barvy, aby bylo udržování kompatibility s rozšířeními kompatibilní.  
   
- **Vytváření nových tokenů barva**  
+ **Vytváření nových barevných tokenů**  
   
- Pokud chcete vytvořit vlastní barvy pomocí editoru barev rozšíření sady Visual Studio, postupujte takto:  
+ Chcete-li vytvořit vlastní barvy pomocí editoru barev rozšíření sady Visual Studio, postupujte podle následujících kroků:  
   
-1. Určete název kategorie a token pro nové tokeny barvu.  
+1. Určete kategorii a názvy tokenů pro nové tokeny barev.  
   
-2. Vyberte bubliny, která prvek uživatelského rozhraní pro vysoký kontrast – použije pro každý motiv a systémovou barvou.  
+2. Vyberte odstíny, které prvek uživatelského rozhraní použije pro každý motiv a systémovou barvu pro Vysoký kontrast.  
   
-3. Vytvořit nové barevné tokeny pomocí editoru barev.  
+3. Pomocí editoru barev vytvořte nové barevné tokeny.  
   
-4. Použití barev v rozšíření sady Visual Studio.  
+4. Použijte barvy v rozšíření sady Visual Studio.  
   
-5. Otestujte změny v sadě Visual Studio.  
+5. Otestujte změny v aplikaci Visual Studio.  
   
-   **Krok 1: Určete název kategorie a token pro nové tokeny barvu.**  
+   **Krok 1: určení kategorie a názvů tokenů pro nové tokeny barev**  
   
-   Upřednostňované pojmenování schéma je VSColor **[kategorie] [uživatelské rozhraní typu] [stav]** . Nepoužívejte slova "color" v názvech VSColor, protože je redundantní.  
+   Preferované schéma pojmenování pro VSColor je **[Category] [typ uživatelského rozhraní] [State]** . Nepoužívejte slovo "Color" v názvech VSColor, protože je redundantní.  
   
-   Názvy kategorií zajišťují logické seskupení a musí být definován jako nejpřesnějším co nejvíc. Například název okna jediného nástroje může být název kategorie, ale není název celý obchodní jednotky nebo projektu týmu. Seskupení položek do kategorií pomáhá zabránit nejasnostem mezi barvy se stejným názvem.  
+   Názvy kategorií poskytují logické seskupení a měly by být definovány co nejpřesněji. Například název jednoho okna nástroje může být název kategorie, ale název celé obchodní jednotky nebo týmu projektu není. Seskupení položek do kategorií pomáhá zabránit záměnám mezi barvami se stejným názvem.  
   
-   Název tokenu musí jasně označují typ elementu a situace nebo "stavu" pro které se použijí barvy. Například aktivní data tip. **[uživatelské rozhraní typu]** by mohla mít název "**datového tipu**" a **[stavu]** by mohla mít název "**aktivní**," výsledkem Barva názvu "**DataTipActive**." Protože datových tipech obsahují text, popředí a barvu pozadí je potřeba určit. Pomocí na pozadí a popředí párování editor barev automaticky vytvoří barvy "**DataTipActive**" pozadí a "**DataTipActiveText**" pro popředí.  
+   Název tokenu musí jasně označovat typ prvku a situace, nebo "State", pro který bude použita barva. Například aktivní Tip pro data **[typ uživatelského rozhraní]** může být pojmenován "**DataTip**" a " **[State]** " může mít název "**aktivní**", což má za následek název barvy "**DataTipActive**". Vzhledem k tomu, že tipy k datům obsahují text, musí být definován popředí i barva pozadí. Pomocí párování pozadí a popředí automaticky vytvoří Editor barev barvy "**DataTipActive**" pro pozadí a "**DataTipActiveText**" pro popředí.  
   
-   Pokud se část uživatelského rozhraní obsahuje pouze jeden stav **[stavu]** lze vynechat část názvu. Například pokud není žádná změna stavu, které má vliv na barvu ohraničení vaší vyhledávací pole má ohraničení, pak názvu pro token Barva okraje lze jednoduše volat "**SearchBoxBorder**."  
+   Pokud má část uživatelského rozhraní pouze jeden stav, může být část názvu **[State]** vynechána. Například pokud má vyhledávací pole ohraničení a nedochází k žádné změně stavu, která by ovlivnila barvu ohraničení, název tokenu barvy ohraničení lze jednoduše vyvolat "**SearchBoxBorder**".  
   
-   Některé běžné názvy patří:  
+   Mezi běžné názvy stavů patří:  
   
 - Aktivní  
   
-- Neaktivní  
+- Termín  
   
-- Myš nad  
+- MouseOver  
   
 - MouseDown  
   
 - Vybráno  
   
-- Fokus  
+- Zaměřil  
   
-  Příklady několik tokenů názvů pro část ovládacího prvku položky seznamu:  
+  Příklady několika názvů tokenů pro části ovládacího prvku položky seznamu:  
   
-- ListItem  
+- Collection  
   
 - ListItemBorder  
   
@@ -95,51 +95,51 @@ Nástroj editoru barev rozšíření sady Visual Studio můžete vytvářet a up
   
 - ListItemDisabledBorder  
   
-  **Krok 2: Vyberte bubliny, která prvek uživatelského rozhraní pro vysoký kontrast – použije pro každý motiv a systémovou barvou.**  
+  **Krok 2: vyberte odstíny, které prvek uživatelského rozhraní použije pro každý motiv a systémovou barvu pro Vysoký kontrast.**  
   
-  Pokud výběr vlastních barev pro uživatelské rozhraní, vyberte podobné existující prvek uživatelského rozhraní a používat jeho barvy jako základ. Barev pro prvky uživatelského rozhraní in-the-box byly podrobeny kontrolu a testování, takže se chovají se odpovídající a fungují správně v všechny motivy.  
+  Při volbě vlastních barev uživatelského rozhraní vyberte podobný existující prvek uživatelského rozhraní a použijte jeho barvy jako základ. Barvy pro prvky uživatelského rozhraní v dialogovém okně prošly kontrolou a testováním, takže budou vypadat vhodně a chovají se správně ve všech motivech.  
   
-  **Krok 3: Vytvořit nové barevné tokeny pomocí editoru barev.**  
+  **Krok 3: pomocí editoru barev vytvořte nové barevné tokeny.**  
   
-  Spusťte editor barev a otevřete nebo vytvořte nový soubor .xml barvy vlastní motiv. Vyberte **Upravit > novou barvu** z nabídky. Otevře se dialogové okno pro zadání kategorie a jeden nebo více názvů pro barvu položky v rámci dané kategorie:  
+  Spusťte Editor barev a otevřete nebo vytvořte nový soubor. XML barvy vlastního motivu. V nabídce vyberte **upravit > novou barvu** . Tím se otevře dialogové okno pro zadání kategorie a jednoho nebo více názvů pro položky barev v rámci této kategorie:  
   
-  ![Nová barva Editor barev VSIX](../../extensibility/internals/media/vsix-color-editor-new-color.png "novou barvu Editor barev VSIX")  
+  ![Nová barva editoru barev VSIX](../../extensibility/internals/media/vsix-color-editor-new-color.png "Nová barva editoru barev VSIX")  
   
-  Zvolte existující kategorii nebo vyberte **novou kategorii** vytvořit novou kategorii. Otevře se další dialog, vytváří se nový název kategorie:  
+  Vyberte existující kategorii nebo vyberte **Nová kategorie** a vytvořte novou kategorii. Otevře se další dialog a vytvoří se nový název kategorie:  
   
-  ![Nová kategorie Editor barev VSIX](../../extensibility/internals/media/vsix-color-editor-new-category.png "novou kategorii Editor barev VSIX")  
+  ![Editor barev VSIX – nová kategorie](../../extensibility/internals/media/vsix-color-editor-new-category.png "Editor barev VSIX – nová kategorie")  
   
-  Novou kategorii poté bude k dispozici v **novou barvu** kategorie rozevírací nabídky. Když vyberete kategorii, zadejte jeden název na řádek pro každý nový token barvu a vyberte možnost "Vytvořit" po dokončení:  
+  Nová kategorie pak bude k dispozici v rozevírací nabídce **Nová kategorie barev** . Po výběru kategorie zadejte jeden název na řádek pro každý nový token barvy a po dokončení vyberte vytvořit.  
   
-  ![Editor barev novou barvu VSIX vyplněné](../../extensibility/internals/media/vsix-color-editor-new-color-filled.png "VSIX Editor barev novou barvu vyplněné")  
+  ![Editor barev VSIX – nová barva vyplněná](../../extensibility/internals/media/vsix-color-editor-new-color-filled.png "Editor barev VSIX – nová barva vyplněná")  
   
-  Barevných jsou zobrazeny v párech na pozadí a popředí, s "None" označující, že barva nebyla definována. Poznámka: Pokud barvu nemá textového barvu pár barev na pozadí, pak pouze na pozadí musí být definován.  
+  Hodnoty barvy jsou zobrazeny ve dvojicích pozadí a popředí s hodnotou "none", což značí, že barva nebyla definována. Poznámka: Pokud barva neobsahuje dvojici barev textu/pozadí, je nutné definovat pouze pozadí.  
   
-  ![Hodnoty barev Editor barev VSIX](../../extensibility/internals/media/vsix-color-editor-color-values.png "hodnot barev Editor barev VSIX")  
+  ![Hodnoty barvy v editoru barev VSIX](../../extensibility/internals/media/vsix-color-editor-color-values.png "Hodnoty barvy v editoru barev VSIX")  
   
-  Upravit token barvy, vyberte položku barvu motivu (sloupec) tohoto tokenu. Hodnota barvy přidáte buď zadáním barvu hexadecimálně hodnotu ve formátu číslice 8 ARGB, do buňky zadávat název barvy systému nebo pomocí rozevírací nabídky vyberte požadovanou barvu přes sadu posuvníky nebo seznam systémových barev.  
+  Chcete-li upravit barevný token, vyberte položku barvy pro motiv (sloupec) daného tokenu. Hodnotu barvy přidejte buď zadáním hodnoty hexadecimální barvy ve formátu ARGB s 8 číslicemi, zadáním názvu systémové barvy do buňky nebo použitím rozevírací nabídky k výběru požadované barvy pomocí sady posuvníků barev nebo seznamu systémových barev.  
   
-  ![Barva úpravy Editor barev VSIX](../../extensibility/internals/media/vsix-color-editor-edit-color.png "barva úpravy Editor barev VSIX")  
+  ![Editor barev VSIX – úprava barvy](../../extensibility/internals/media/vsix-color-editor-edit-color.png "Editor barev VSIX – úprava barvy")  
   
-  ![Pozadí Editor barev VSIX](../../extensibility/internals/media/vsix-color-editor-background.png "pozadí Editor barev VSIX")  
+  ![Pozadí editoru barev VSIX](../../extensibility/internals/media/vsix-color-editor-background.png "Pozadí editoru barev VSIX")  
   
-  Součástí, které není potřeba zobrazovat text, zadejte hodnotu pouze jednu barvu: barvu pozadí. V opačném případě zadejte hodnoty pro barvu textu a pozadí, oddělené lomítkem.  
+  Pro součásti, které nepotřebují zobrazovat text, zadejte pouze jednu hodnotu barvy: barvu pozadí. V opačném případě zadejte hodnoty pro barvu pozadí a textu oddělené lomítkem.  
   
-  Při zadávání hodnot pro vysoký kontrast, zadejte platné názvy barev systému Windows. Nezadávejte hodnoty ARGB pevně zakódované. Můžete zobrazit seznam názvy barev platný systém tak, že vyberete "na pozadí: Systém"nebo" popředí: Systém"z rozevíracích nabídek hodnotu barvy. Při vytváření prvky, které mají textové komponenty, použít pár barva systému správné/text na pozadí nebo textu může být nejde přečíst.  
+  Při zadávání hodnot pro Vysoký kontrast zadejte platné názvy barev systému Windows. Nezadávejte hodnoty pevně zakódované ARGB. Seznam platných systémových barev můžete zobrazit tak, že v rozevíracích nabídkách hodnota barvy vyberete "Background: System" nebo "popředí: systém". Při vytváření prvků, které mají textové komponenty, použijte správný dvojici barev pozadí/textu nebo je možné, že text nebude čitelný.  
   
-  Po dokončení vytváření, nastavení a úprava tokenů barvu, je uložte do požadovaného XML nebo formátu .pkgdef. Barva tokeny s ani pozadí ani popředí sady budou uloženy jako prázdný barvy ve formátu XML, ale zahozeny ve formátu .pkgdef. Dialogové okno upozorní vás na potenciální ztrátě Barva při pokusu uložit barvy prázdný soubor .pkgdef.  
+  Až dokončíte vytváření, nastavování a upravování barevných tokenů, uložte je do požadovaného formátu. XML nebo. pkgdef. Tokeny barev bez nastaveného pozadí ani sady popředí budou uloženy jako prázdné barvy ve formátu. XML, ale byly zahozeny ve formátu. pkgdef. Pokud se pokusíte uložit prázdné barvy do souboru. pkgdef, zobrazí se dialogové okno s upozorněním na potenciální ztrátu barev.  
   
-  **Krok 4: Použití barev v rozšíření sady Visual Studio.**  
+  **Krok 4: použijte barvy v rozšíření sady Visual Studio.**  
   
-  Po definování novou barvou tokeny, zahrnout .pkgdef v souboru projektu "Akce sestavení" nastavena na "Obsah" a "Zahrnout do VSIX" nastavena na hodnotu "True".  
+  Po definování nových tokenů barev zahrňte do souboru projektu. pkgdef s akcí sestavit "nastavit na" obsah "a" zahrnout do VSIX "nastavenou na hodnotu" true ".  
   
   ![Editor barev VSIX pkgdef](../../extensibility/internals/media/vsix-color-editor-pkgdef.png "Editor barev VSIX pkgdef")  
   
-  V editoru sady Visual Studio rozšíření Color, zvolte Soubor > zobrazení prostředků kódu zobrazíte kód, který se používá pro přístup k vlastní barvy v uživatelském rozhraní založeného na WPF.  
+  V editoru barev rozšíření sady Visual Studio vyberte soubor > zobrazení kód prostředku pro zobrazení kódu, který se používá pro přístup k vlastním barvám v uživatelském rozhraní založeném na WPF.  
   
-  ![Prohlížeč kód prostředku Editor barev VSIX](../../extensibility/internals/media/vsix-color-editor-resource-code-viewer.png "prohlížeč kód prostředku Editor barev VSIX")  
+  ![Prohlížeč kódu prostředku pro Editor barev VSIX](../../extensibility/internals/media/vsix-color-editor-resource-code-viewer.png "Prohlížeč kódu prostředku pro Editor barev VSIX")  
   
-  Zahrňte tento kód ve statické třídě v projektu. Odkaz na **Microsoft.VisualStudio.Shell.\< VSVersion >.0.dll** musí být přidán do projektu pro použití **ThemeResourceKey** typu.  
+  Zahrňte tento kód do statické třídy v projektu. Odkaz na **Microsoft. VisualStudio. Shell.\<VSVersion > 0. dll** je nutné přidat do projektu pro použití typu **ThemeResourceKey** .  
   
 ```csharp  
 namespace MyCustomColors  
@@ -163,7 +163,7 @@ namespace MyCustomColors
 }  
 ```  
   
- To umožňuje přístup k barvy v kódu XAML a umožní reagovat na změny motiv uživatelského rozhraní.  
+ To umožňuje přístup k barvám v kódu XAML a umožňuje uživatelskému rozhraní reagovat na změny motivu.  
   
 ```xaml  
 <UserControl x:Class="NewTestProject.TestPackageControl" Name="MyToolWindow"  
@@ -179,21 +179,21 @@ namespace MyCustomColors
 </UserControl>  
 ```  
   
- **Krok 5: Otestujte změny v sadě Visual Studio.**  
+ **Krok 5: testování změn v aplikaci Visual Studio.**  
   
- Editor barev dočasně použít barvu tokeny pro spuštěné instance sady Visual Studio, chcete-li zobrazit změny barvy v za provozu bez nutnosti opětovného sestavení balíček rozšíření. Uděláte to tak, klepněte na tlačítko "Použít ke spuštění sady Visual Studio windows tento motiv" umístěné na záhlaví každého sloupce motiv. Tento dočasný motiv zmizí při zavření editoru barev VSIX.  
+ Editor barev může dočasně použít barevné tokeny na spuštěné instance sady Visual Studio pro zobrazení živých změn barev bez nového sestavení balíčku rozšíření. Provedete to tak, že kliknete na tlačítko použít tento motiv ke spuštění sady Visual Studio Windows v záhlaví každého sloupce motivu. Tento dočasný motiv zmizí, až bude editor barev VSIX uzavřen.  
   
- ![Použít Editor barev VSIX](../../extensibility/internals/media/vsix-color-editor-apply.png "použít Editor barev VSIX")  
+ ![Použije se Editor barev VSIX.](../../extensibility/internals/media/vsix-color-editor-apply.png "Použije se Editor barev VSIX.")  
   
- Aby byly změny trvalé, sestavili a rozšíření sady Visual Studio po přidání nové barvy do souboru .pkgdef a psaní kódu, který bude používat tyto barvy. Znovu sestavit rozšíření sady Visual Studio sloučí hodnoty registru pro nové barvy do ostatních motivy. Potom znovu spustit Visual Studio, zobrazení uživatelského rozhraní a ověřte, že nové barvy zobrazují podle očekávání.  
+ Chcete-li provést změny trvale, znovu sestavte a znovu nasaďte rozšíření sady Visual Studio po přidání nových barev do souboru. pkgdef a psaní kódu, který bude tyto barvy používat. Opětovným sestavením rozšíření sady Visual Studio dojde k sloučení hodnot registru pro nové barvy do zbývajících motivů. Pak znovu spusťte aplikaci Visual Studio, zobrazte uživatelské rozhraní a ověřte, zda se nové barvy zobrazí podle očekávání.  
   
 ## <a name="notes"></a>Poznámky  
- Tento nástroj je určena pro použití k vytvoření vlastních barev pro stávající motivů aplikace Visual Studio, nebo pro úpravu barvy vlastní motiv sady Visual Studio. Vytvoření kompletní vlastní motivů aplikace Visual Studio, stáhněte si [Editor motivů sady Visual Studio rozšíření](http://visualstudiogallery.msdn.microsoft.com/6f4b51b6-5c6b-4a81-9cb5-f2daa560430b) z Galerie rozšíření sady Visual Studio.  
+ Tento nástroj je určen pro vytváření vlastních barev pro existující motivy sady Visual Studio nebo pro úpravu barev vlastního motivu sady Visual Studio. Chcete-li vytvořit kompletní vlastní motiv sady Visual Studio, Stáhněte si z galerie rozšíření sady Visual Studio [rozšíření editoru barevných motivů](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.VisualStudio2015ColorThemeEditor) sady Visual Studio.  
   
 ## <a name="sample-output"></a>Vzorový výstup  
- **Výstupní barva XML**  
+ **Výstup barvy XML**  
   
- Soubor .xml generovaný nástrojem bude podobný tomuto:  
+ Soubor. XML generovaný nástrojem bude vypadat přibližně takto:  
   
 ```xml  
 <Themes>  
@@ -222,9 +222,9 @@ namespace MyCustomColors
   
 ```  
   
- **Výstupní barva PKGDEF**  
+ **Výstup barvy PKGDEF**  
   
- Soubor .pkgdef generovaný nástrojem bude podobný tomuto:  
+ Soubor. pkgdef generovaný nástrojem bude vypadat přibližně takto:  
   
 ```  
 [$RootKey$\Themes\{de3dbbcd-f642-433c-8353-8f1df4370aba}\CategoryName]  
@@ -238,9 +238,9 @@ namespace MyCustomColors
   
 ```  
   
- **Obálka klíče prostředku jazyka C#**  
+ **C#Obálka klíčů prostředků**  
   
- Klíče prostředku barva generovaný nástrojem bude podobný tomuto:  
+ Barvy klíče prostředků vygenerované nástrojem budou vypadat podobně jako v tomto příkladu:  
   
 ```csharp  
 namespace MyNamespace  
@@ -269,7 +269,7 @@ namespace MyNamespace
   
  **Obálka slovníku prostředků WPF**  
   
- Barva **ResourceDictionary** klíče generovaný nástrojem bude podobný tomuto:  
+ Klíče **ResourceDictionary** barvy generované nástrojem budou podobné tomuto:  
   
 ```xaml  
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  

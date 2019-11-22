@@ -27,17 +27,17 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 49f5d1d0cef7ec4d5a6f8ab61c785ea01f77d24b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ba8a37ac9e049455ffe19314dee0e228c3c14c97
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652659"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295607"
 ---
 # <a name="using-the-toolbox"></a>Používání sady nástrojů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-K přidání ovládacích prvků a dalších položek do projektu lze použít sadu nástrojů. Můžete přetáhnout různé ovládací prvky na povrch návrháře, který používáte, a změnit velikost ovládacích prvků a jejich velikost a umístění.
+K přidání ovládacích prvků a dalších položek do projektu lze použít sadu nástrojů. Můžete přetáhnout a vyřadit různé ovládací prvky na povrch návrháře používáte a změnit velikost a umístění ovládacích prvků.
 
  Sada nástrojů se zobrazí ve spojení se zobrazeními návrháře, jako je například zobrazení návrháře souboru XAML. Panel nástrojů zobrazuje pouze ovládací prvky, které lze použít v aktuálním návrháři.
 
@@ -48,23 +48,23 @@ K přidání ovládacích prvků a dalších položek do projektu lze použít s
 
  Můžete změnit uspořádání položek na kartě panelu nástrojů nebo přidat vlastní karty a položky pomocí následujících příkazů v místní nabídce:
 
-- **Přejmenovat položku** – Přejmenuje vybranou položku.
+- **Přejmenovat položku** – přejmenuje na vybranou položku.
 
-- **Zobrazit vše** – zobrazí všechny možné ovládací prvky (nikoli pouze ty, které se vztahují k aktuálnímu návrháři).
+- **Zobrazit všechny** -zobrazí všechny možné ovládací prvky (nikoli pouze ty, které se vztahují k aktuální návrháře).
 
-- **Zobrazení seznamu** – zobrazí ovládací prvky ve svislém seznamu. Pokud není zaškrtnuto, ovládací prvky se zobrazí vodorovně.
+- **Zobrazení seznamu** – zobrazuje ovládací prvky v svislé seznamu. Pokud není zaškrtnuto, zobrazí ovládací prvky vodorovně.
 
-- **Zvolit položky** – otevře dialogové okno **zvolit položky sady nástrojů** , ve kterém můžete určit položky, které se zobrazí v **sadě nástrojů**. Položku můžete zobrazit nebo skrýt zaškrtnutím políčka nebo zrušením jeho zaškrtnutí.
+- **Výběr položek** -otevře **zvolit položky nástrojů** dialogové okno tak, aby můžete určit položky, které se zobrazují v **nástrojů**. Můžete zobrazit nebo skrýt položku zaškrtnutím nebo zrušením zaškrtnutí jejího políčka.
 
-- **Seřadit položky abecedně** – Seřadí položky podle názvu.
+- **Řadit položky podle abecedy** -Seřadí položky podle názvu.
 
 - **Resetovat panel nástrojů** – obnoví výchozí nastavení a položky sady nástrojů.
 
 - **Přidat tabulátor** – přidá novou kartu panelu nástrojů.
 
-- **Nahoru – přesune** vybranou položku nahoru.
+- **Přesunout nahoru** – Přesune vybrané položky nahoru.
 
-- **Přesunout dolů** – Přesune vybranou položku dolů.
+- **Přesunout dolů** – Přesune vybrané položky dolů.
 
 ## <a name="creating-and-distributing-custom-toolbox-controls"></a>Vytváření a distribuce vlastních ovládacích prvků panelu nástrojů
- Vlastní ovládací prvek sady nástrojů lze vytvořit buď Visual Basic nebo vizuál C#, a můžete začít se šablonou projektu založenou na [Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) nebo [model Windows Forms](../misc/how-to-create-a-toolbox-control-that-uses-windows-forms.md). Potom můžete svůj ovládací prvek distribuovat do ostatními týmu nebo ho publikovat na webu pomocí [instalačního programu ovládacích prvků sady nástrojů](http://download.microsoft.com/download/8/3/6/836657BD-9CCB-4ED4-B9D2-FB769473B284/TCI_whitepaper.docx).
+ Vlastní ovládací prvek sady nástrojů lze vytvořit buď Visual Basic nebo vizuál C#, a můžete začít se šablonou projektu založenou na [Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) nebo [model Windows Forms](../misc/how-to-create-a-toolbox-control-that-uses-windows-forms.md). Potom můžete svůj ovládací prvek distribuovat do ostatními týmu nebo ho publikovat na webu pomocí [instalačního programu ovládacích prvků sady nástrojů](http://www.unicode.org/versions/Unicode5.2.0/ch04.pdf).

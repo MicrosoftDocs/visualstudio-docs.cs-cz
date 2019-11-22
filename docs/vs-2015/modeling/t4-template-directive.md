@@ -9,12 +9,12 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d4c6176caee5551b860029ac98b19d52fcb7b51f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d3a17275730cd093f8f9fa433aa28c7f9ca86e80
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658556"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298136"
 ---
 # <a name="t4-template-directive"></a>T4 – direktiva Template
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72658556"
 
  U šablon běhu (předzpracovaných) se ignoruje.
 
- Tyto možnosti jsou aplikovány, pokud byla šablona převedena do [!INCLUDE[csprcs](../includes/csprcs-md.md)] nebo [!INCLUDE[vb_current_short](../includes/vb-current-short-md.md)] a výsledný kód je zkompilován.
+ Tyto možnosti jsou aplikovány, pokud byla šablona převedena do [!INCLUDE[csprcs](../includes/csprcs-md.md)] nebo [!INCLUDE[vb_current_short](../includes/vb-current-short-md.md)]a výsledný kód je zkompilován.
 
 ## <a name="culture-attribute"></a>Atribut culture
  Příklad: `culture="de-CH"`
@@ -211,7 +211,7 @@ This is the common footer.
 
  Pro textovou šablonu návrhu můžete zadat libovolnou základní třídu, která je odvozena od <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName>. Použijte direktivu `<#@assembly#>` pro načtení sestavení nebo projektu, který obsahuje základní třídu.
 
- Další informace najdete v [blogu Gareth Novák v tématu "dědičnost v textových šablonách"](http://go.microsoft.com/fwlink/?LinkId=208373).
+ Další informace najdete v [blogu Gareth Novák v tématu "dědičnost v textových šablonách"](https://go.microsoft.com/fwlink/?LinkId=208373).
 
 ## <a name="linepragmas-attribute"></a>Atribut LinePragmas
  Příklad: `linePragmas="false"`

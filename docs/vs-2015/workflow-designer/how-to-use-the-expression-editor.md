@@ -11,17 +11,17 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6157646526a2d634ff5034d98eb497c00585c067
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7d40cefc3dd47f7f4ad7e8255d8bdc06bc5f1651
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659093"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300942"
 ---
 # <a name="how-to-use-the-expression-editor"></a>Postupy: použití editoru výrazů
 Editor výrazů je [!INCLUDE[wfd1](../includes/wfd1-md.md)] ovládací prvek, který se používá v mnoha aktivitách pracovního postupu jako způsob, jak zadávat a vyhodnocovat tyto výrazy. Editor výrazů poskytuje podrobnějším prostředí pro úpravy integrovaného vývojového prostředí (IDE), včetně IntelliSense, barev, ParamInfo, chybových vlnovek, mimo jiné funkce. Kompilátor po zadání vyhodnotí výraz. Pokud je výraz neplatný, zobrazí se ikona chyby. Editor lze také otevřít jako dialogové okno **Editor výrazů** .
 
- Výrazy jsou hodnoty literálu nebo [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] kód vázaný na argumenty nebo vlastnosti. Obsahují prvky hodnoty (např. proměnné, konstanty, literály, vlastnosti), které jsou kombinovány s operacemi, aby vydávaly novou hodnotu. Výrazy jsou zapisovány pomocí syntaxe VB.NET, i když je aplikace v programu pomocí C#. To znamená, že při použití velkých a malých písmen je porovnávání provedeno pomocí jednoho znaménka rovná se ("=") namísto ("= ="), logické operátory jsou slova "a" nebo "namísto symbolů" & & "a"&#124;&#124;"a **nic** se nepoužívá. místo **hodnoty null**. Další informace o výrazech a operátorech v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] a některých ukázkách naleznete v tématu [operátory a výrazy v Visual Basic](http://go.microsoft.com/fwlink/?LinkId=186818).
+ Výrazy jsou hodnoty literálu nebo [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] kód vázaný na argumenty nebo vlastnosti. Obsahují prvky hodnoty (např. proměnné, konstanty, literály, vlastnosti), které jsou kombinovány s operacemi, aby vydávaly novou hodnotu. Výrazy jsou zapisovány pomocí syntaxe VB.NET, i když je aplikace v programu pomocí C#. To znamená, že při použití velkých a malých písmen je porovnávání provedeno pomocí jednoho znaménka rovná se ("=") namísto ("= ="), logické operátory jsou slova "a" nebo "namísto symbolů" & & "&#124;&#124;a" "a namísto **hodnoty null**nejsou použity **žádné** místo. Další informace o výrazech a operátorech v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] a některých ukázkách naleznete v tématu [operátory a výrazy v Visual Basic](https://go.microsoft.com/fwlink/?LinkId=186818).
 
  **Editor výrazů** se chová takto:
 
@@ -36,7 +36,7 @@ Editor výrazů je [!INCLUDE[wfd1](../includes/wfd1-md.md)] ovládací prvek, kt
 
 ### <a name="using-the-expression-editor"></a>Použití editoru výrazů
 
-1. V [!INCLUDE[vs2010](../includes/vs2010-md.md)] otevřete nový nebo existující projekt pracovního postupu.
+1. V [!INCLUDE[vs2010](../includes/vs2010-md.md)]otevřete nový nebo existující projekt pracovního postupu.
 
 2. Přidejte například aktivitu <xref:System.Activities.Statements.Assign> do pracovního postupu.
 
@@ -45,7 +45,7 @@ Editor výrazů je [!INCLUDE[wfd1](../includes/wfd1-md.md)] ovládací prvek, kt
 
 3. Klikněte na levý Editor výrazů v Návrháři aktivit pro aktivitu <xref:System.Activities.Statements.Assign>.
 
-     Šedé řetězce vodoznaku **\<To >** a **\<Enter > výrazu VB** jsou výchozí textové řetězce pro Editor výrazů v aktivitě <xref:System.Activities.Statements.Assign>.
+     Šedé řetězce vodoznaku **\<do >** a **\<zadejte výraz VB >** jsou výchozí textové řetězce pro Editor výrazů v aktivitě <xref:System.Activities.Statements.Assign>.
 
 4. Zadejte svůj výraz. Pokud zadáte řetězec, nezapomeňte kolem řetězce vložit uvozovky. Pokud se rozhodnete vytvořit vazbu argumentu výrazu na proměnnou, ponechte uvozovky vypnuté.
 

@@ -1,5 +1,5 @@
 ---
-title: Funkce IntelliTrace | Dokumentace Microsoftu
+title: Funkce IntelliTrace | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -22,97 +22,97 @@ caps.latest.revision: 73
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5c5c775dc309c02ca24d27e8b8ac19d2c9d9d588
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: dc16094c98a912d073bd6b873ecb3d1b3b411d1e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440181"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298952"
 ---
 # <a name="intellitrace-features"></a>Funkce IntelliTrace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete zaznamenat události IntelliTrace a volá metodu vaší aplikace, který umožňuje zkontrolovat jeho stav (zásobník volání a místní proměnné hodnoty) v různých fázích provádění. Stačí obvyklým způsobem spustit ladění – nástroj IntelliTrace je ve výchozím nastavení zapnutá a zobrazí se informace, které nástroj IntelliTrace zaznamenává v novém **diagnostické nástroje** okně **události** kartu. Vyberte událost a klikněte na tlačítko **aktivovat historické ladění** zobrazíte zásobník volání a místní hodnoty pro tuto událost.  
+IntelliTrace můžete použít k zaznamenání událostí a metod volání do vaší aplikace, což vám umožní prostudovat svůj stav (a hodnoty zásobníku volání a lokální proměnné) v různých fázích provádění. Stačí spustit ladění, protože standardně je ve výchozím nastavení zapnutá – IntelliTrace. informace IntelliTrace se zaznamenávají do nového **diagnostické nástroje** okna na kartě **události** . Vyberte událost a kliknutím na **aktivovat historické ladění** zobrazíte zásobník volání a místní údaje zaznamenané pro tuto událost.  
   
- Podrobný popis najdete v tématu [názorný postup: Pomocí IntelliTrace](../debugger/walkthrough-using-intellitrace.md).  
+ Podrobný popis najdete v tématu [Návod: použití IntelliTrace](../debugger/walkthrough-using-intellitrace.md).  
   
- Nástroj IntelliTrace je k dispozici v edici Visual Studio Enterprise, ale ne v edicích Visual Studio Professional nebo Community.  
+ IntelliTrace je k dispozici v edici Visual Studio Enterprise, ale ne v edicích Visual Studio Professional nebo Community.  
   
- Chcete-li ověřit, že nástroj IntelliTrace je zapnutý, otevřete **nástroje / Možnosti / IntelliTrace** stránka možností. **Povolení technologie IntelliTrace** by měl být ve výchozím nastavení zaškrtnuto.  
+ Pokud chcete potvrdit, že je IntelliTrace zapnutý, otevřete stránku možnosti **Nástroje/možnosti/IntelliTrace** . **Povolit IntelliTrace** by mělo být ve výchozím nastavení zaškrtnuté.  
   
 > [!NOTE]
-> Obor všechna nastavení na **IntelliTrace** stránka možností je sada Visual Studio jako celek, nikoli jednotlivé projekty nebo řešení. Změna těchto nastavení se vztahuje na všechny instance sady Visual Studio, všechny ladicí relace a všechny projekty nebo řešení.  
+> Rozsah všech nastavení na stránce možnosti **IntelliTrace** je Visual Studio jako celek, ne jednotlivé projekty nebo řešení. Změna v těchto nastaveních platí pro všechny instance aplikace Visual Studio, všechny relace ladění a všechny projekty nebo řešení.  
   
-## <a name="ChooseEvents"></a> Vyberte události, které nástroj IntelliTrace zaznamenává.  
- Můžete zapnout nebo vypnout zaznamenávání určitých událostí IntelliTrace.  
+## <a name="ChooseEvents"></a>Zvolit události, které IntelliTrace záznamy  
+ Záznam pro konkrétní události IntelliTrace můžete zapnout nebo vypnout.  
   
- Pokud ladíte, zastavte ladění. Přejděte na **nástroje / Možnosti / IntelliTrace nebo události IntelliTrace**. Zvolte událostí, které má IntelliTrace zaznamenávat.  
+ Pokud ladíte, zastavte ladění. Přejdete na **události nástroje/možnosti/IntelliTrace/IntelliTrace**. Vyberte události, které mají IntelliTrace zaznamenávat.  
   
-## <a name="GoingFurther"></a> Shromažďovat události IntelliTrace a informací o volání  
- Tato možnost není povolena ve výchozím nastavení, ale nástroj IntelliTrace umí zaznamenat volání metody spolu s událostmi. Povolte shromažďování metoda volání přejít na **nástroje / Možnosti / IntelliTrace / Obecné**a vyberte **události IntelliTrace a informací o volání**.  
+## <a name="GoingFurther"></a>Shromažďovat události IntelliTrace a informace o voláních  
+ Tato možnost není ve výchozím nastavení povolená, ale IntelliTrace může zaznamenat volání metod spolu s událostmi. Chcete-li povolit shromažďování volání metod, použijte možnost **Nástroje/možnosti/IntelliTrace/obecné**a vyberte **události IntelliTrace a informace o volání**.  
   
- To umožňuje zobrazit historii zásobníku volání, krokovat zpět a vpřed mezi voláními ve vašem kódu. Nástroj IntelliTrace zaznamenává data, jako jsou názvy metod, metoda vstupní a výstupní body a některé hodnoty parametrů a návratové hodnoty.  
+ To vám umožní zobrazit historii zásobníku volání a krokovat zpět a vpřed prostřednictvím volání ve vašem kódu. IntelliTrace zaznamenává data, jako jsou názvy metod, vstupní a výstupní body metody a některé hodnoty parametrů a návratové hodnoty.  
   
 > [!TIP]
-> Tato možnost není standardně povolená, protože přidá značné režijní náklady. Nejen IntelliTrace musí zachytit každé volání metody, které vaše aplikace provádí, ale má také řešit mnohem větší sadě dat při přechodu do režimu zobrazení na obrazovce nebo uložením na disk.  
+> Tato možnost není ve výchozím nastavení povolená, protože přináší značnou režii. Pouze IntelliTrace musí zachytit všechny metody, které vaše aplikace dělá, ale také musí zabývat s mnohem větším množstvím dat, když se na obrazovce zobrazí nebo trvale zachová na disk.  
 >   
-> Můžete snížit nároky na výkon tak, že omezíte nástroj IntelliTrace zaznamenává. seznam událostí a udržováním počet modulů shromažďujete na minimum. Další informace najdete v tématu [řízení množství informací o volání nástroj IntelliTrace zaznamenává](../debugger/intellitrace-features.md#ControlCallData).  
+> Omezením výkonu můžete snížit nároky na výkon tím, že omezíte seznam událostí, které IntelliTrace záznamy, a zachováte tak minimální počet modulů, které shromažďujete. Další informace najdete v tématu [určení toho, kolik informací o volání IntelliTrace záznamy](../debugger/intellitrace-features.md#ControlCallData).  
   
-### <a name="using-the-navigation-gutter"></a>Pomocí navigační ovládací prvek  
- Můžete použít navigační ovládací prvek, který se zobrazí nalevo od okna kódu. Pokud nevidíte navigační ovládací prvek, přejděte na **nástroje / Možnosti / IntelliTrace / pokročilé**a vyberte **zobrazit navigační ovládací prvek v režimu ladění**.  
+### <a name="using-the-navigation-gutter"></a>Použití navigačního hřbetu  
+ Můžete použít navigační hřbet, který se zobrazí nalevo od okna Code (kód). Pokud se navigační hřbet nezobrazuje, přejděte na **Nástroje/možnosti/IntelliTrace/Upřesnit**a vyberte **Zobrazit navigační tlačítko v režimu ladění**.  
   
- Navigační ovládací prvek umožňuje přesunout vpřed a zpět prostřednictvím volání metody a události v režimu historické ladění. Další informace o historické ladění, naleznete v tématu [historické ladění](../debugger/historical-debugging.md). Má řadu příkazů:  
+ Navigační hřbet umožňuje přesunout vpřed a zpět prostřednictvím volání metod a událostí v historickém režimu ladění. Další informace o historických ladění naleznete v tématu [historická ladění](../debugger/historical-debugging.md). Má několik příkazů:  
   
 |||  
 |-|-|  
-|**Zde nastavit kontext ladicího programu**|Nastavte kontext ladění na časový rámec volání, kde se zobrazí.<br /><br /> Tato ikona se zobrazuje jenom na aktuální zásobník volání.|  
-|**Vrátit se k volání webu**|Přesune ukazatel a kontext ladění zpět do kde byla volána aktuální funkce.<br /><br /> Pokud jste v režimu živého ladění, tento příkaz zapne historické ladění. Pokud přejdete zpět na původní přerušení provádění, je vypnutá historické ladění a živé ladění je zapnuté.|  
-|**Přejít na předchozí volání nebo událost IntelliTrace**|Přesune ukazatel a kontext ladění zpět na předchozí volání nebo událost.<br /><br /> Pokud jste v režimu živého ladění, tento příkaz zapne historické ladění.|  
-|**Vstoupit**|Krokovat s vnořením aktuálně vybrané funkce.<br /><br /> Tento příkaz je k dispozici pouze v případě, že jste v režimu historické ladění.|  
-|**Přejít na další volání nebo událost IntelliTrace**|Přesune ukazatel a kontext ladění na další volání nebo událost, pro které nástroj IntelliTrace dat existuje.<br /><br /> Tento příkaz je k dispozici pouze v případě, že jste v režimu historické ladění.|  
-|**Přejít do živého režimu**|Vraťte se do režimu živého ladění.|  
+|**Zde nastavit kontext ladicího programu**|Nastavte kontext ladění na časový rámec volání, kde se zobrazí.<br /><br /> Tato ikona se zobrazí pouze v aktuálním zásobníku volání.|  
+|**Vrátit se k volání webu**|Přesuňte ukazatel a kontext ladění zpátky na místo, kde byla volána aktuální funkce.<br /><br /> Pokud jste v režimu živého ladění, tento příkaz zapne historické ladění na. Pokud přejdete zpět k původnímu přerušení spuštění, bude ladění historických verzí vypnuto a je zapnuté živé ladění.|  
+|**Přejít na předchozí volání nebo událost IntelliTrace**|Přesune ukazatel a kontext ladění zpátky na předchozí volání nebo událost.<br /><br /> Pokud jste v režimu živého ladění, tento příkaz zapne historické ladění.|  
+|**Krokovat s**|Krok do aktuálně vybrané funkce.<br /><br /> Tento příkaz je k dispozici, pouze pokud jste v historickém režimu ladění.|  
+|**Přejít na další volání nebo událost IntelliTrace**|Přesuňte ukazatel a kontext ladění na další volání nebo událost, pro kterou existuje IntelliTrace data.<br /><br /> Tento příkaz je k dispozici, pouze pokud jste v historickém režimu ladění.|  
+|**Přejít do živého režimu**|Vrátí se do režimu živého ladění.|  
   
-### <a name="search-for-a-line-or-method-in-intellitrace"></a>Vyhledejte řádek nebo metody v IntelliTrace  
- Metody můžete prohledávat pouze v případě, že se povolila informací o volání metody. Můžete prohledat historii nástroje IntelliTrace na konkrétní řádek nebo metodu. Při zastavení spuštění ladicího programu, klikněte pravým tlačítkem uvnitř těla funkce Zobrazit kontextovou nabídku a klikněte na možnost **vyhledávání pro tento řádek v IntelliTrace** nebo **vyhledávání pro tuto metodu v IntelliTrace**.  
+### <a name="search-for-a-line-or-method-in-intellitrace"></a>Hledání řádku nebo metody v IntelliTrace  
+ Metody můžete hledat pouze v případě, že byly povoleny informace o volání metody. Můžete hledat v historii IntelliTrace konkrétního řádku nebo metody. I když je spuštění ladicího programu zastaveno, klikněte pravým tlačítkem myši uvnitř těla funkce, aby se zobrazila kontextová nabídka, a klikněte buď na **Hledat tento řádek v IntelliTrace** , nebo **vyhledejte tuto metodu v IntelliTrace**.  
   
-### <a name="ControlCallData"></a> Řízení množství informací o volání nástroj IntelliTrace zaznamenává  
- Ve výchozím nastavení nástroj IntelliTrace zaznamenává informace pro všechny moduly používané v řešení. Nástroj IntelliTrace můžete nastavit na zaznamenávat informace o voláních pouze u modulů, které vás zajímají. V **nástroje / Možnosti / IntelliTrace / moduly**, můžete určit moduly, které chcete zahrnout nebo moduly, které chcete vyloučit z nástroje IntelliTrace. IntelliTrace se shromažďuje pouze události, které pochází z modulů, které jste zadali, a volání metod, ke kterým došlo v rámci moduly se zajímáte.  
+### <a name="ControlCallData"></a>Určit, kolik informací o volání IntelliTrace záznamy  
+ Ve výchozím nastavení IntelliTrace zaznamenává informace pro všechny moduly, které vaše řešení používá. Můžete nastavit IntelliTrace na záznam informací o volání pouze pro moduly, které vás zajímají. V **nabídce Nástroje/možnosti/IntelliTrace/moduly**můžete určit moduly, které mají být zahrnuty, nebo moduly, které mají být vyloučeny z IntelliTrace. IntelliTrace shromáždí pouze události, které pocházejí z určených modulů, a volání metody, k nimž došlo v rámci modulů, které vás zajímají.  
   
  Chcete-li přidat více modulů, použijte zástupný znak * na začátku nebo konci řetězce. V případě názvů modulů použijte názvy souborů, nikoli názvy sestavení. Není možné použít cesty k souborům.  
   
- Pokuste se zachovat počet modulů na minimum. Protože je méně dat, které se mají shromažďovat, dosahovat vyšších výkonů. Získáte také menší šumu v uživatelském rozhraní vzhledem k tomu je méně dat a absolvovat.  
+ Snažte se udržet počet modulů na minimum. Získáte lepší výkon, protože se shromažďují méně dat. V uživatelském rozhraní získáte také menší šum, protože je k dispozici méně dat, než je možné projít.  
   
-## <a name="SaveSession"></a> Ukládání dat IntelliTrace do souboru  
- Data shromážděná IntelliTrace můžete uložit na **ladění / IntelliTrace / uložit relaci IntelliTrace** při ladění a aplikace je ve stavu přerušení. Položka nabídky je zakázaná a není možné uložit data, která nástroj IntelliTrace se budou shromažďovat v Pokud je stále spuštěná aplikace nebo zastavení ladění.  
+## <a name="SaveSession"></a>Ukládání dat IntelliTrace do souboru  
+ Můžete uložit data, která IntelliTrace shromáždila při ladění **/IntelliTrace/ukládání relace IntelliTrace** během ladění, a aplikace je ve stavu přerušení. Položka nabídky je zakázaná a nebudete moct uložit data IntelliTrace, pokud je aplikace pořád spuštěná, nebo pokud jste zastavili ladění.  
   
- Můžete nakonfigurovat IntelliTrace automaticky uloží do souboru tak, že přejdete do **nástroje / Možnosti / IntelliTrace / pokročilé** a vyberete **záznamy Store IntelliTrace v tomto adresáři**. Můžete také nakonfigurovat nastavení velikosti pro generovaný soubor, což způsobí, že nástroj IntelliTrace zapisovat přes starší data, pokud jí dojde místo. Visual Studio vytvoří dva soubory pro každou relaci IntelliTrace, když se automaticky uloží a proces hostování (vshost.exe) sady Visual Studio je zapnuté.  
+ IntelliTrace můžete nakonfigurovat tak, aby se automaticky ukládaly do souboru, a to tak, že v tomto adresáři kliknete na **Nástroje/možnosti/IntelliTrace/Upřesnit** a vyberete **ukládat IntelliTrace záznamy**. Pro generovaný soubor můžete také nakonfigurovat velikost sady, která způsobí, že IntelliTrace při vynechání volného místa zapisuje přes starší data. Visual Studio vytvoří dva soubory pro každou IntelliTrace relaci, když jsou uloženy automaticky a hostující proces sady Visual Studio (vshost. exe) je zapnutý.  
   
 > [!TIP]
-> Chcete-li ušetřit místo na disku vypněte ukládání souborů automaticky, když už nepotřebujete. Veškeré stávající soubory se neodstraní. Vždy můžete uložit do souboru na vyžádání v místní nabídce.  
+> Pokud chcete ušetřit místo na disku, vypněte ukládání souborů automaticky, když je už nepotřebujete. Existující soubory nebudou smazány. V místní nabídce můžete vždycky ukládat do souboru na vyžádání.  
   
- Při ukládání dat IntelliTrace do souboru získáte jeden soubor .itrace pro každý proces, který nástroj IntelliTrace shromažďuje ze. Pak můžete otevřít soubor .itrace v sadě Visual Studio tak, že přejdete do **souboru / otevřít / File** a vyberete soubor .itrace v dialogovém okně Otevřít soubor. Další informace najdete v tématu [použití uložených dat řešení IntelliTrace](../debugger/using-saved-intellitrace-data.md).  
+ Když ukládáte IntelliTrace data do souboru, získáte jeden soubor. iTrace pro každý proces, ze kterého byl IntelliTrace shromážděn. Pak můžete soubor. iTrace otevřít v aplikaci Visual Studio tak, že v dialogovém okně otevřít soubor zadáte **soubor/otevřít/soubor** a vyberete soubor. iTrace. Další informace najdete v tématu [použití uložených IntelliTrace dat](../debugger/using-saved-intellitrace-data.md).  
   
 ## <a name="blogs"></a>Blogy  
- [Nástroj IntelliTrace v sadě Visual Studio Enterprise 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/intellitrace-in-visual-studio-ultimate-2015.aspx)  
+ [IntelliTrace v Visual Studio Enterprise 2015](https://devblogs.microsoft.com/devops/intellitrace-in-visual-studio-ultimate-2015/)  
   
- [Názorný postup z živého ladění pomocí IntelliTrace v sadě Visual Studio 2015 (textový Editor)](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-text-editor.aspx)  
+ [Návod k živému ladění pomocí IntelliTrace v aplikaci Visual Studio 2015 (textový editor)](https://devblogs.microsoft.com/devops/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-text-editor/)  
   
- [Názorný postup z živého ladění pomocí IntelliTrace v sadě Visual Studio 2015 (sociální klub)](http://blogs.msdn.com/b/visualstudioalm/archive/2000/1/1/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-social-club.aspx)  
+ [Návod k živému ladění pomocí IntelliTrace ve Visual Studiu 2015 (sociální klub)](https://devblogs.microsoft.com/devops/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-social-club/)  
   
- [IntelliTrace v sadě Visual Studio Enterprise 2015 nyní podporuje připojení!](http://blogs.msdn.com/b/visualstudioalm/archive/2015/05/14/intellitrace-in-visual-studio-enterprise-2015-now-supports-attach.aspx)  
+ [IntelliTrace v Visual Studio Enterprise 2015 teď podporuje připojení!](https://devblogs.microsoft.com/devops/intellitrace-in-visual-studio-enterprise-2015-now-supports-attach/)  
   
- [Shromažďování dat ze služby systému windows pomocí samostatného Kolektoru IntelliTrace](http://blogs.msdn.com/b/visualstudioalm/archive/2015/05/14/collect-data-from-a-windows-service-using-the-intellitrace-standalone-collector.aspx)  
+ [Shromažďování dat ze služby systému Windows pomocí samostatného kolektoru IntelliTrace](https://devblogs.microsoft.com/devops/collect-data-from-a-windows-service-using-the-intellitrace-standalone-collector/)  
   
- [Úpravě plánu kolekce IntelliTrace](http://blogs.msdn.com/b/visualstudioalm/archive/2015/03/09/editing-the-intellitrace-collection-plan.aspx)  
+ [Úprava plánu kolekce IntelliTrace](https://devblogs.microsoft.com/devops/editing-the-intellitrace-collection-plan/)  
   
- [Vlastní třídy TraceSource a ladění pomocí IntelliTrace](http://blogs.msdn.com/b/visualstudioalm/archive/2014/12/17/custom-tracesource-and-debugging-using-intellitrace.aspx)  
+ [Vlastní TraceSource a ladění pomocí IntelliTrace](https://devblogs.microsoft.com/devops/custom-tracesource-and-debugging-using-intellitrace/)  
   
- [Spuštění samostatného Kolektoru IntelliTrace a fondy aplikací v rámci účtů služby Active Directory](http://blogs.msdn.com/b/visualstudioalm/archive/2014/12/22/intellitrace-standalone-collector-and-application-pools-running-under-active-directory-accounts.aspx)  
+ [IntelliTrace samostatnou kolekci a fondy aplikací spuštěné v rámci účtů Active Directory](https://devblogs.microsoft.com/devops/intellitrace-standalone-collector-and-application-pools-running-under-active-directory-accounts/)  
   
 ## <a name="forums"></a>Diskuzní fóra  
- [Visual Studio Debugger](http://go.microsoft.com/fwlink/?LinkId=262263)  
+ [Ladicí program sady Visual Studio](https://go.microsoft.com/fwlink/?LinkId=262263)  
   
 ## <a name="videos"></a>Videa  
  [Prostředí IntelliTrace](https://channel9.msdn.com/Series/Visual-Studio-2015-Enterprise-Videos/IntelliTrace-Experience)  
   
- [Historické ladění pomocí nástroje IntelliTrace v sadě Microsoft Visual Studio Ultimate 2015](https://channel9.msdn.com/events/Ignite/2015/BRK3716)
+ [Historické ladění pomocí IntelliTrace v Microsoft Visual Studio Ultimate 2015](https://channel9.msdn.com/events/Ignite/2015/BRK3716)

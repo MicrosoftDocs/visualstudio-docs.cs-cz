@@ -1,5 +1,5 @@
 ---
-title: Ladění XAML v programu Blend | Dokumentace Microsoftu
+title: Ladění XAML v Blendu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,60 +14,60 @@ caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: beea8cd3ad6ac12bef284e0d5fda9e995a8613c5
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: d90e495ba64018479758e4fa38de0035601a8f0d
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434087"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298318"
 ---
 # <a name="debug-xaml-in-blend"></a>Ladění kódu XAML v programu Blend
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete použít nástroje v [!INCLUDE[blend_first](../includes/blend-first-md.md)] pro ladění XAML ve vaší aplikaci. Při vytváření projektu se zobrazí nějaké chyby v **výsledky** panelu. Klikněte dvakrát na chybu najděte značku týkající se chyby. Pokud potřebujete více místa k práci, můžete skrýt **výsledky** panel stisknutím klávesy F12.  
+Pomocí nástrojů v [!INCLUDE[blend_first](../includes/blend-first-md.md)] můžete ladit XAML ve vaší aplikaci. Při sestavování projektu jsou všechny chyby zobrazeny na panelu **výsledků** . Dvojím kliknutím na chybu vyhledejte značku týkající se chyby. Pokud potřebujete více místa pro práci, můžete panel **výsledků** skrýt stisknutím klávesy F12.  
   
 ## <a name="syntax-errors"></a>Chyby syntaxe  
- Chyby syntaxe dojít, pokud XAML nebo soubory kódu na pozadí nepostupujte podle pravidla formátování jazyka. Popis chyby, pomůže vám pochopit, jak ho opravit. V seznamu také určuje název souboru a číslo řádku, kde dojde k chybě. XAML chyby jsou uvedené na **značek** kartu **výsledky** panelu.  
+ Pokud soubory XAML nebo kódu na pozadí nedodržují pravidla formátování jazyka, dojde k chybám syntaxe. Popis chyby vám může pomoct pochopit, jak je opravit. V seznamu se také určuje název souboru a číslo řádku, ve kterém k chybě dochází. Chyby XAML jsou uvedeny na kartě **značky** na panelu **výsledků** .  
   
 > [!TIP]
-> XAML je jazyk založený na formátu XML kód a řídí se pravidla syntaxe jazyka XML.  
+> XAML je jazyk značek založený na jazyce XML a následující pravidla syntaxe XML.  
   
- Některé běžné příčiny chyby syntaxe XAML:  
+ Některé běžné příčiny chyb syntaxe XAML:  
   
-- Bylo zadáno chybně klíčového slova nebo je nesprávná velikost písmen.  
+- Klíčové slovo bylo špatně napsáno nebo je nesprávné zadání velkých a malých písmen.  
   
-- Chybí uvozovky kolem atributů nebo textové řetězce.  
+- Okolo atributů nebo textových řetězců chybí uvozovky.  
   
-- XAML elementu chybí ukončovací značku.  
+- V elementu XAML chybí uzavírací značka.  
   
-- Prvek XAML existuje v umístění, kde není povoleno.  
+- Prvek XAML existuje v umístění, kde není povolen.  
   
-  Další informace o běžných syntaxe XAML, naleznete v tématu [průvodci syntaxí základní XAML](http://go.microsoft.com/fwlink/?LinkId=329942).  
+  Další informace o běžných syntaxech jazyka XAML naleznete v tématu [základní průvodce syntaxí jazyka XAML](https://go.microsoft.com/fwlink/?LinkId=329942).  
   
-  Také můžete zjišťovat a řešit chyby syntaxe jednoduchého kódu, chyby při kompilaci a chyby za běhu v [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]. Použití modelu code-behind chyby může být však usnadňuje identifikaci a řešení v sadě Visual Studio.  
+  Můžete také identifikovat a vyřešit jednoduché chyby syntaxe kódu na pozadí, chyby kompilace a běhové chyby v [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]. Chyby kódu na pozadí ale můžou být snáze identifikovatelné a řešitelné v aplikaci Visual Studio.  
   
-### <a name="debugging-sample-xaml-code"></a>Ladění vzorového kódu XAML  
- Následující příklad vás provede jednoduchou XAML ladicí relace v [!INCLUDE[blend_subs](../includes/blend-subs-md.md)].  
+### <a name="debugging-sample-xaml-code"></a>Ladění ukázkového kódu XAML  
+ Následující příklad vás provede jednoduchou ladicí relací XAML v [!INCLUDE[blend_subs](../includes/blend-subs-md.md)].  
   
 ##### <a name="to-create-a-project"></a>Vytvoření projektu  
   
-1. V [!INCLUDE[blend_subs](../includes/blend-subs-md.md)], otevřete **souboru** nabídky a pak klikněte na tlačítko **nový projekt**.  
+1. V [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]otevřete nabídku **soubor** a poté klikněte na možnost **Nový projekt**.  
   
-    V **nový projekt** dialogovém okně se zobrazí na levé straně seznamu typů projektů. Po kliknutí na typu projektu, šablony projektů, které jsou s ní spojené se zobrazí na pravé straně.  
+    V dialogovém okně **Nový projekt** se zobrazí seznam typů projektu na levé straně. Když kliknete na typ projektu, šablony projektu, které jsou k němu přidruženy, se zobrazí na pravé straně.  
   
-2. V seznamu typů projektů klepněte **XAML (Windows Store)**.  
+2. V seznamu typů projektů klikněte na **XAML (Windows Store)** .  
   
-3. V seznamu šablon projektu klikněte na tlačítko **prázdnou aplikaci**.  
+3. V seznamu šablon projektů klikněte na **prázdná aplikace**.  
   
-4. V **název** textového pole, typ `DebuggingSample`.  
+4. Do textového pole **název** zadejte `DebuggingSample`.  
   
-5. V **umístění** textové pole, ověřte umístění projektu.  
+5. V textovém poli **umístění** ověřte umístění projektu.  
   
-6. V **jazyk** klikněte na možnost **Visual C#** a potom klikněte na tlačítko **OK** pro vytvoření projektu.  
+6. V seznamu **jazyk** klikněte na možnost **vizuál C#** a potom kliknutím na tlačítko **OK** vytvořte projekt.  
   
-7. Klikněte pravým tlačítkem na návrhové ploše a potom klikněte na tlačítko **zobrazit zdroj** přepnout na **rozdělení** zobrazení.  
+7. Klikněte pravým tlačítkem myši na návrhovou plochu a potom kliknutím na tlačítko **Zobrazit zdroj** přepněte na **rozdělené** zobrazení.  
   
-8. Zkopírujte následující kód kliknutím **kopírování** odkaz v pravém horním rohu kódu.  
+8. Zkopírujte následující kód kliknutím na odkaz **Kopírovat** v pravém horním rohu kódu.  
   
    ```  
    <Grid HorizontalAlignment="Left" Height="222" VerticalAlignment="Top>  
@@ -80,7 +80,7 @@ Můžete použít nástroje v [!INCLUDE[blend_first](../includes/blend-first-md.
   
    ```  
   
-9. Vyhledejte výchozí **mřížky**a vložte kód mezi otevírací a zavírací **mřížky** značky. Jakmile budete hotovi, váš kód by měl vypadat nějak takto:  
+9. Vyhledejte výchozí **mřížku**a vložte kód mezi otevírací a uzavírací značkou **mřížky** . Až budete hotovi, váš kód by měl vypadat takto:  
   
     ```  
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">  
@@ -95,35 +95,35 @@ Můžete použít nástroje v [!INCLUDE[blend_first](../includes/blend-first-md.
   
     ```  
   
-10. Stiskněte kombinaci kláves Ctrl + Shift + B a sestavte projekt.  
+10. Stisknutím kombinace kláves CTRL + SHIFT + B Sestavte projekt.  
   
-    Zobrazí se chybová zpráva, upozorní vás, který nemůže být sestaven projekt, a **výsledky** panel s chybami se zobrazí v dolní části aplikace.  
+    Zobrazí se chybová zpráva s upozorněním, že projekt nelze sestavit, a na panelu **výsledků** se zobrazí chyby v dolní části aplikace.  
   
-    ![Ladění XAML v programu Blend for Visual Studio](../debugger/media/blend-debugxaml-xaml.png "blend_debugXAML_XAML")  
+    ![Ladění kódu XAML v programu Blend pro Visual Studio](../debugger/media/blend-debugxaml-xaml.png "blend_debugXAML_XAML")  
   
 ### <a name="resolving-xaml-errors"></a>Řešení chyb XAML  
- Při zjištění chyb XAML, návrhovou plochu zobrazí upozornění, že váš projekt obsahuje neplatný kód. Protože případné chyby opravte seznam chyb v **výsledky** panel se aktualizuje. Po vyřešení všech chyb je povolená na návrhovou plochu a aplikace se zobrazí na návrhové ploše.  
+ Když jsou zjištěny chyby XAML, návrhová plocha zobrazí výstrahu, že projekt obsahuje neplatné označení. Při řešení chyb se seznam chyb na panelu **výsledky** aktualizuje. Po vyřešení všech chyb je návrhová plocha zapnutá a vaše aplikace se zobrazí na návrhové ploše.  
   
-##### <a name="to-resolve-the-xaml-errors"></a>Chcete-li vyřešit chyby XAML  
+##### <a name="to-resolve-the-xaml-errors"></a>Řešení chyb XAML  
   
-1. Dvakrát klikněte na první chybu v seznamu. Popis je "hodnotu ' <' není platná v atributu." Když dvakrát kliknete chyby, vyhledá ukazatele příslušné místo v kódu. `<` Předchozí `Button` je platný a ne atributem, jak je navrženo v chybové zprávě. Když se podíváte na předchozím řádku kódu, můžete si všimnout, že uzavírací uvozovky atributu `Top` chybí. Zadejte koncovými uvozovkami. Všimněte si, že seznam chyb v **výsledky** panelu aktualizace tak, aby odrážely změny.  
+1. Dvakrát klikněte na první chybu v seznamu. Popis je "hodnota" < "není platná v atributu". " Když dvakrát kliknete na chybu, ukazatel najde odpovídající umístění v kódu. `<` předchozí `Button` je platný, a nikoli atribut navrhovaný v chybové zprávě. Pokud se podíváte na předchozí řádek kódu, všimnete si, že uzavírací uvozovky pro atribut `Top` chybět. Zadejte uzavírací uvozovky. Všimněte si, že seznam chyb na panelu **výsledky** se aktualizuje tak, aby odrážel vaše změny.  
   
-2. Klikněte dvakrát na popis "'0' není platný na začátku názvu." `Margin="0,149,0,0"` Zdá se být správně utvořena. Všimněte si však, že barevné kódování `Margin` se neshoduje s další výskyty `Margin` v kódu. Protože předchozí dvojice název/hodnota chybí uzavírací uvozovky (`VerticalAlignment="Top`), `Margin="` je pro čtení jako část hodnoty předchozí atributu a 0 je pro čtení jako začátek dvojici název/hodnota. Zadejte uzavírací uvozovky u `Top`. V seznamu chyb **výsledky** panelu aktualizace tak, aby odrážely změny.  
+2. Dvakrát klikněte na popis "0" není platný na začátku názvu. " Zdá se, že `Margin="0,149,0,0"` správně vytvořená. Všimněte si však, že barevné kódování `Margin` neodpovídá ostatním instancím `Margin` v kódu. Vzhledem k tomu, že uzavírací uvozovky chybí v předchozí dvojici název/hodnota (`VerticalAlignment="Top`), `Margin="` je čtena jako součást hodnoty předcházejícího atributu a hodnota 0 je čtena jako začátek dvojice název/hodnota. Zadejte uzavírací uvozovky pro `Top`. Seznam chyb na panelu **výsledky** se aktualizuje tak, aby odrážel vaše změny.  
   
-3. Klikněte dvakrát na zbývající chybu "je neshoda uzavírací značky XML"Tlačítko"." Ukazatel myši nachází v ukončovací **mřížky** značky (`</Grid>`), návrh, který je chyba uvnitř `Grid` objektu. Všimněte si, že druhá `Button` objektu chybí uzavírací značka. Po přidání ukončovací `/`, **výsledky** panel seznam se aktualizuje. Teď, když tyto počáteční chyby byly vyřešeny, dva další chyby byly zjištěny.  
+3. Dvakrát klikněte na zbývající chybu a "tlačítko uzavírací značky XML" se neshoduje. " Ukazatel je umístěn na pravé značce **mřížky** (`</Grid>`), což naznačuje, že chyba je uvnitř objektu `Grid`. Všimněte si, že v druhém objektu `Button` chybí uzavírací značka. Po přidání uzavírací `/`se seznam panelu **výsledků** aktualizuje. Nyní, když byly vyřešeny tyto počáteční chyby, byly zjištěny dvě další chyby.  
   
-4. Dvakrát klikněte na "člena 'content' není rozpoznaný nebo není přístupný." `c` v `content` by měl být velká písmena. Malá "c" nahraďte velká písmena "c".  
+4. Dvakrát klikněte na "obsah" není rozpoznán nebo není přístupný. " `c` v `content` by měla být velká písmena. Nahraďte malý případ "c" velkým písmenem "c".  
   
-5. Dvakrát klikněte na "vlastnosti 'Mame' neexistuje v"<http://schemas.microsoft.com/winfx/2006/xaml>"oboru názvů." "M" v "Mame" by měl být "N" Nahraďte "M", "N" Teď, když XAML může být analyzován, aplikace se zobrazí na návrhové ploše.  
+5. Poklikejte na vlastnost mame neexistuje v oboru názvů '<https://schemas.microsoft.com/winfx/2006/xaml>'. "M" v "mame" musí být "N". Nahradí "M" za "N". Teď, když je možné XAML analyzovat, se aplikace zobrazí na návrhové ploše.  
   
-    ![Ladění XAML v programu Blend for Visual Studio](../debugger/media/blend-debugartboard-xaml.png "blend_debugArtboard_XAML")  
+    ![Ladění XAML v Blend pro Visual Studio](../debugger/media/blend-debugartboard-xaml.png "blend_debugArtboard_XAML")  
   
-    Stiskněte kombinaci kláves Ctrl + Shift + B pro svůj projekt sestavit a potvrďte, že neexistují žádné zbývající chyby.  
+    Stisknutím kombinace kláves CTRL + SHIFT + B Sestavte projekt a potvrďte, že nejsou žádné zbývající chyby.  
   
 ## <a name="debugging-in-visual-studio"></a>Ladění v sadě Visual Studio  
- Můžete otevřít [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] projekty v sadě Visual Studio, které mají více snadno ladit kód ve vaší aplikaci. Chcete-li otevřít [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] projektu v sadě Visual Studio, klikněte pravým tlačítkem na projekt v **projekty** panelu a potom klikněte na **upravit v sadě Visual Studio**. Po dokončení vaší relace ladění v sadě Visual Studio, stiskněte kombinaci kláves Ctrl + Shift + S uložte všechny provedené změny a pak přejděte zpátky do [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]. Zobrazí se výzva k opětovnému načtení projektu. Klikněte na tlačítko **Ano všem** pokračovat v práci [!INCLUDE[blend_subs](../includes/blend-subs-md.md)].  
+ Můžete otevřít [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] projekty v aplikaci Visual Studio pro snazší ladění kódu v aplikaci. Chcete-li otevřít projekt [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] v aplikaci Visual Studio, klikněte pravým tlačítkem myši na projekt na panelu **projekty** a poté klikněte na možnost **Upravit v aplikaci Visual Studio**. Po dokončení ladění relace v aplikaci Visual Studio stiskněte kombinaci kláves CTRL + SHIFT + S a uložte všechny změny a pak přepněte zpět na [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]. Zobrazí se výzva k opětovnému načtení projektu. Pokud chcete pokračovat v práci [!INCLUDE[blend_subs](../includes/blend-subs-md.md)], klikněte na **Ano** .  
   
- Další informace o ladění vaší aplikace najdete v tématu [aplikace Windows Store ladění ve Visual Studiu](http://go.microsoft.com/fwlink/?LinkId=329944).  
+ Další informace o ladění aplikace naleznete v tématu [ladění aplikací pro Windows Store v aplikaci Visual Studio](https://go.microsoft.com/fwlink/?LinkId=329944).  
   
 ## <a name="getting-help"></a>Získání nápovědy  
- Pokud potřebujete další pomoc ladění vašeho [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] aplikace, můžete vyhledávat [fóra komunity aplikací pro Windows Store](http://go.microsoft.com/fwlink/?LinkId=280308) příspěvky související problém nebo odeslat dotaz.
+ Pokud potřebujete další nápovědu k ladění aplikace [!INCLUDE[blend_subs](../includes/blend-subs-md.md)], můžete ve [fórech komunity aplikací pro Windows Store](https://go.microsoft.com/fwlink/?LinkId=280308) vyhledat příspěvky související s vaším problémem nebo odeslat otázku.

@@ -1,5 +1,5 @@
 ---
-title: Uživatelská oprávnění | Microsoft Docs
+title: Oprávnění pro uživatele | Dokumentace Microsoftu
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b7ffc3a6b3fe5ad5952ecfde6091cbe7e656f305
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dc49a628cdf5695df7744295d2c1d990986bcfbe
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672676"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295626"
 ---
 # <a name="user-permissions-and-visual-studio"></a>Uživatelská oprávnění a sada Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,42 +33,42 @@ Z důvodu bezpečnosti by měl být systém Visual Studio spuštěn s normáln
 
 |Oblast|Úloha|Další informace|
 |----------|----------|--------------------------|
-|Instalace|Instalace sady Visual Studio|[Instalace sady Visual Studio 2015](../install/install-visual-studio-2015.md)|
+|Instalace|Instalace sady Visual Studio|[Instalaci sady Visual Studio 2015](../install/install-visual-studio-2015.md)|
 ||Upgrade ze zkušební edice sady Visual Studio|[Postupy: Upgrade ze zkušební edice sady Visual Studio](../install/how-to-upgrade-from-a-trial-edition-of-visual-studio.md)|
 ||Instalace, aktualizace nebo odebrání obsahu místní nápovědy|[Instalace a správa místního obsahu](../ide/install-and-manage-local-content.md)|
 |Typy aplikací|Vývoj řešení pro SharePoint 2010|[Požadavky na vývoj řešení služby SharePoint](https://msdn.microsoft.com/library/ae8ff69d-4540-4380-ab0b-845f7108e89c)|
-||Získává se vývojářská licence pro [!INCLUDE[win8_appstore_long](../includes/win8-appstore-long-md.md)].|[Získat vývojářskou licenci (aplikace pro Windows Store)](http://go.microsoft.com/fwlink/?LinkID=241313)|
-|Sada nástrojů|Přidání klasických ovládacích prvků modelu COM do **sady nástrojů**.|[Používání sady nástrojů](../ide/using-the-toolbox.md)|
+||Získání vývojářské licence pro [!INCLUDE[win8_appstore_long](../includes/win8-appstore-long-md.md)].|[Získejte licenci vývojáře (aplikace pro Windows Store)](https://go.microsoft.com/fwlink/?LinkID=241313)|
+|Sada nástrojů|Přidání klasického modelu COM ovládacích prvků do **nástrojů**.|[Používání sady nástrojů](../ide/using-the-toolbox.md)|
 |Doplňky|Instalace a používání doplňků, které byly vytvořeny pomocí klasického modelu COM v rozhraní IDE|[Vytváření doplňků a průvodců](https://msdn.microsoft.com/library/c5a47c21-6668-4de3-898d-afa969317e73)|
 |Sestavování|Použití událostí po sestavení, které registrují komponentu|[Seznámení s kroky vlastního sestavení a s událostmi sestavení](https://msdn.microsoft.com/library/beb2f017-3e9f-4b2c-9b57-2572fd2628e4)|
 ||Zahrnutí registračního kroku do sestavování projektů v jazyce C++|[Seznámení s kroky vlastního sestavení a s událostmi sestavení](https://msdn.microsoft.com/library/beb2f017-3e9f-4b2c-9b57-2572fd2628e4)|
 |Ladění|Ladění aplikací spouštěných se zvýšenými oprávněními|[Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)|
 ||Ladění aplikací, které běží pod jiným uživatelským účtem, jako jsou weby ASP.NET|[Ladění aplikací ASP.NET a AJAX](../debugger/debugging-aspnet-and-ajax-applications.md)|
 ||Ladění v zóně pro aplikace prohlížeče XAML (XBAP)|[Hostitel WPF (PresentationHost.exe)](https://msdn.microsoft.com/library/3215bfa1-722c-4ac8-a7c5-bdd02d30afbd)|
-||Použití emulátoru k ladění projektů cloudových služeb pro Microsoft Azure.|[Ladění cloudové služby v aplikaci Visual Studio](http://go.microsoft.com/fwlink/?LinkId=266725)|
-||Konfigurace brány firewall pro vzdálené ladění|[Nastavení nástrojů Remote Tools na zařízení](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c)|
+||Použití emulátoru k ladění projektů cloudových služeb pro Microsoft Azure.|[Ladění cloudové služby v sadě Visual Studio](https://go.microsoft.com/fwlink/?LinkId=266725)|
+||Konfigurace brány firewall pro vzdálené ladění|[Nastavení nástroje Remote Tools na zařízení](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c)|
 |Nástroje pro měření výkonu|Profilace aplikace|[Průvodce začátečníka profilací výkonu](../profiling/beginners-guide-to-performance-profiling.md)|
-|Nasazení|Nasazení webové aplikace do Internetové informační služby (IIS) v místním počítači|[Nasazení webové aplikace v ASP.NET k poskytovateli hostingu pomocí sady Visual Studio nebo Visual Web Developer: nasazení do služby IIS jako testovacího prostředí](http://go.microsoft.com/fwlink/?LinkId=266478)|
+|Nasazení|Nasazení webové aplikace do Internetové informační služby (IIS) v místním počítači|[Nasazení webové aplikace ASP.NET u poskytovatele hostingu pomocí sady Visual Studio nebo Visual Web Developer: nasazení do služby IIS jako testovacího prostředí](https://go.microsoft.com/fwlink/?LinkId=266478)|
 |Poskytování zpětné vazby společnosti Microsoft|Změna způsobu účasti v programu Visual Studio Customer Experience Program|[Postupy: odeslání názoru](../misc/how-to-send-feedback-about-visual-studio.md)|
 
 ## <a name="running-visual-studio-as-an-administrator"></a>Spuštění sady Visual Studio jako správce
  Sadu Visual Studio můžete spustit s oprávněními správce při každém spuštění rozhraní IDE nebo můžete upravit zástupce sady tak, aby se vždy spustila s oprávněními správce. Další informace naleznete v nápovědě pro Windows.
 
-#### <a name="to-run-visual-studio-with-administrative-permissions-on-includewin8includeswin8-mdmd-includewin81includeswin81-mdmd-includewinserver8includeswinserver8-mdmd-or-includewinblue_server_2includeswinblue-server-2-mdmd"></a>Spuštění sady Visual Studio s oprávněními správce v [!INCLUDE[win8](../includes/win8-md.md)], [!INCLUDE[win81](../includes/win81-md.md)], [!INCLUDE[winserver8](../includes/winserver8-md.md)] nebo [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)]
+#### <a name="to-run-visual-studio-with-administrative-permissions-on-includewin8includeswin8-mdmd-includewin81includeswin81-mdmd-includewinserver8includeswinserver8-mdmd-or-includewinblue_server_2includeswinblue-server-2-mdmd"></a>Spuštění sady Visual Studio s oprávněními správce [!INCLUDE[win8](../includes/win8-md.md)], [!INCLUDE[win81](../includes/win81-md.md)], [!INCLUDE[winserver8](../includes/winserver8-md.md)], nebo [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)]
 
-1. Na **úvodní** obrazovce zadejte **Visual Studio**. Měli byste vidět verzi nebo verze systému Visual Studio, které jste nainstalovali.
+1. Na **Start** zadejte **sady Visual Studio**. Měli byste vidět verzi nebo verze systému Visual Studio, které jste nainstalovali.
 
-2. Vyberte verzi systému Visual Studio, kterou chcete spustit, a následně vyvolejte místní nabídku (zobrazí se v dolní části obrazovky). Vyberte **Spustit jako správce**.
+2. Vyberte verzi systému Visual Studio, kterou chcete spustit, a následně vyvolejte místní nabídku (zobrazí se v dolní části obrazovky). Zvolte **spustit jako správce**.
 
-     Po spuštění sady Visual Studio se za názvem produktu v záhlaví zobrazí **(správce)** .
+     Při spuštění sady Visual Studio **(správce)** se zobrazí za názvem produktu v záhlaví programu.
 
 #### <a name="to-run-visual-studio-with-administrative-permissions-on-includewin7includeswin7-mdmd-or-includewinsvr08_r2includeswinsvr08-r2-mdmd"></a>Spuštění sady Visual Studio s oprávněními správce [!INCLUDE[win7](../includes/win7-md.md)] nebo [!INCLUDE[winsvr08_r2](../includes/winsvr08-r2-md.md)]
 
-1. V nabídce **Start** klikněte na položku **všechny programy**.
+1. Na **Start** nabídce zvolte **všechny programy**.
 
-2. Ve složce **Microsoft Visual Studio** *verze* vyberte možnost *verze* sady **Visual Studio** , otevřete místní nabídku a pak zvolte možnost **Spustit jako správce**.
+2. V **sady Microsoft Visual Studio** *verze* vyberte složku **sady Visual Studio** *verze* otevřete místní nabídku a zvolte  **Spustit jako správce**.
 
-     Po spuštění sady Visual Studio se za názvem produktu v záhlaví zobrazí **(správce)** .
+     Při spuštění sady Visual Studio **(správce)** se zobrazí za názvem produktu v záhlaví programu.
 
 ## <a name="see-also"></a>Viz také
- [Přenos, migrace a upgrade projektů sady Visual Studio](../porting/porting-migrating-and-upgrading-visual-studio-projects.md) s [instalací sady Visual Studio 2015](../install/install-visual-studio-2015.md)
+ [Přenosy, migrace a upgrade projektů sady Visual Studio](../porting/porting-migrating-and-upgrading-visual-studio-projects.md) [instalaci sady Visual Studio 2015](../install/install-visual-studio-2015.md)

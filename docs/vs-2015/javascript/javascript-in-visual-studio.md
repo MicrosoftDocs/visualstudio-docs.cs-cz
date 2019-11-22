@@ -9,12 +9,12 @@ caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 700417e0cf6bb93c96c0826a7d49d4d0deb7395f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 175cb6f6a8a3f240c244e139406841b0546209cc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65705790"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295906"
 ---
 # <a name="javascript-in-visual-studio"></a>JavaScript ve Visual Studiu 2012
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,13 +25,13 @@ JavaScript je prvotřídní jazyk v sadě Visual Studio. Při psaní kódu v jaz
 
  Konkrétní verze sady Visual Studio, nebo konkrétní rozšíření sady Visual Studio, může být nutné vyvíjet typy konkrétní aplikace a služby pomocí HTML a JavaScriptu. Následující seznam obsahuje odkazy na další informace.
 
-- Vytvoření aplikace pro různé platformy pomocí Apache Cordova, [získat Visual Studio Tools pro Apache Cordova](http://go.microsoft.com/fwlink/p/?LinkId=397606).
+- Vytvoření aplikace pro různé platformy pomocí Apache Cordova, [získat Visual Studio Tools pro Apache Cordova](https://go.microsoft.com/fwlink/p/?LinkId=397606).
 
-- Chcete-li vytvořit [Windows Store](http://dev.windows.com/develop), [Windows Phone](http://dev.windows.com/develop)a univerzálních aplikací pro (, které podporují obě platformy), [získat potřebné nástroje](https://developer.microsoft.com/windows/downloads).
+- Chcete-li vytvořit [Windows Store](https://developer.microsoft.com/), [Windows Phone](https://developer.microsoft.com/)a univerzálních aplikací pro (, které podporují obě platformy), [získat potřebné nástroje](https://developer.microsoft.com/windows/downloads).
 
 - Vytvoření cloudové služby, najdete v tématu [webu Microsoft Azure](https://azure.microsoft.com/documentation/).
 
-- Chcete-li vytvořit weby a webové aplikace, [najdete v článku webu ASP.NET](http://www.asp.net/get-started/websites).
+- Chcete-li vytvořit weby a webové aplikace, [najdete v článku webu ASP.NET](https://dotnet.microsoft.com/apps/aspnet/web-apps).
 
   > [!NOTE]
   > Můžete vytvořit prázdný web ASP.Net a použít pro programování HTML, CSS a JavaScriptu. Soubor Webconfig poskytovaných technologií ASP.NET povolí ladění v sadě Visual Studio (nebo můžete použít nástroje F12 při spuštění aplikace).
@@ -45,7 +45,7 @@ JavaScript je prvotřídní jazyk v sadě Visual Studio. Při psaní kódu v jaz
 |-------------|-----------------|
 |Třídy|Podporuje novou syntaxi deklarace [třídy](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/class).|
 |Co|[Co](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) umožňují snadněji a čisticí asynchronní programování. Promise konstruktory jsou podporovány, spolu s `all` a `race` pomocné metody.|
-|Iterátory|Nyní můžete iterovat iterable objekty (včetně polí, jako pole objektů a iterátory), vyvolání hook vlastní iterace pomocí příkazů ke spuštění pro hodnotu každé různé vlastnosti. Další informace najdete v tématu [iterátory a generátory](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Iterators_and_Generators). **Poznámka:**  Generátory se zatím nepodporují.|
+|Iterátory|Nyní můžete iterovat iterable objekty (včetně polí, jako pole objektů a iterátory), vyvolání hook vlastní iterace pomocí příkazů ke spuštění pro hodnotu každé různé vlastnosti. Další informace najdete v tématu [iterátory a generátory](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Iterators_and_Generators). **Poznámka:** generátorů se zatím nepodporují.|
 |Funkce šipky|Funkce šipky (= >) poskytuje syntaxi ve zkráceném tvaru pro `function` – klíčové slovo, které funkce lexikální `this` vazby.|
 |Nové metody pro předdefinované objekty|[Objekt Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array), [Math – objekt](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math), [číslo objektu](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number), [objekt objektu](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object), a [řetězec objektu](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) předdefinované objekty zahrnují mnoho nových funkcí nástroje a vlastnosti pro manipulaci a prohledávaní údaje.|
 |Vylepšení literálu objektu|Objektů teď podporují vypočítané vlastnosti, definice stručné metod a syntaxi ve zkráceném tvaru pro vlastnosti, jehož hodnota je inicializována na proměnnou se stejným názvem. Další informace najdete v tématu [vytváření objektů](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object).|

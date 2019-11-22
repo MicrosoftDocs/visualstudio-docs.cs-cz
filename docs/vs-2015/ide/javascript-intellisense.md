@@ -26,12 +26,12 @@ caps.latest.revision: 67
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 39c90a8550736c945f04467e9366a73039cfa2b1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e367ff6d6abbf40cdf7efebed04aee6fc74a384c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670481"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300743"
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -60,7 +60,7 @@ Technologie IntelliSense umožňuje napsat kód rychleji a s menším množství
 
 - [Ověřování JavaScriptu](#Validation)
 
-  Další informace o funkcích technologie IntelliSense [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] naleznete v tématu [Using IntelliSense](../ide/using-intellisense.md).
+  Další informace o funkcích technologie IntelliSense [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]naleznete v tématu [Using IntelliSense](../ide/using-intellisense.md).
 
 ## <a name="DeterminingIntelliSenseContext"></a>Určení kontextu IntelliSense
  Technologie IntelliSense jazyka JavaScript poskytuje možnosti kódování na základě veškerého skriptu, který je relevantní pro váš aktuální skriptovací kontext. To zahrnuje skriptovací prvky v aktuálním souboru. Patří sem také jakýkoli kód, na který váš skript odkazuje přímo nebo nepřímo, například odkazy na soubor skriptu, odkazy na skript sestavení, odkazy na služby a odkazy související se stránkami.
@@ -79,7 +79,7 @@ Technologie IntelliSense umožňuje napsat kód rychleji a s menším množství
 
 - Ovládací prvky <xref:System.Web.UI.ScriptManager> a <xref:System.Web.UI.ScriptManagerProxy>, pokud webová aplikace je ASP.NET aplikace s podporou jazyka AJAX.
 
-- @No__t_0, pokud pracujete v ASP.NET webové aplikaci s podporou AJAX.
+- [!INCLUDE[atlaslib_current_ext](../includes/atlaslib-current-ext-md.md)], pokud pracujete v ASP.NET webové aplikaci s podporou AJAX.
 
     > [!NOTE]
     > Technologie IntelliSense není podporována pro skript, který je v atributech obslužných rutin událostí v prvcích HTML nebo který je definován v `href` atributy.
@@ -119,15 +119,15 @@ Technologie IntelliSense umožňuje napsat kód rychleji a s menším množství
   Pokud technologie IntelliSense nedokáže určit typ objektu, poskytuje možnosti pro doplňování výrazů pomocí identifikátorů v aktivním dokumentu. Další informace najdete v tématu [dokončování příkazů pro identifikátory](../ide/statement-completion-for-identifiers.md).
 
 ### <a name="HTMLDom"></a>HTML elementy DOM
- Technologie IntelliSense jazyka JavaScript poskytuje programovací odkazy pro elementy dynamického HTML (DHTML) modelu DOM, například `body`, `form` a `div`. Technologie IntelliSense zobrazuje pouze prvky, které jsou obsaženy v aktuálním dokumentu a na hlavní stránce. JavaScript IntelliSense také podporuje objekty `window` a `document` a jejich členy.
+ Technologie IntelliSense jazyka JavaScript poskytuje programovací odkazy pro elementy dynamického HTML (DHTML) modelu DOM, například `body`, `form`a `div`. Technologie IntelliSense zobrazuje pouze prvky, které jsou obsaženy v aktuálním dokumentu a na hlavní stránce. JavaScript IntelliSense také podporuje objekty `window` a `document` a jejich členy.
 
 ### <a name="IntrinsicObjects"></a>Vnitřní objekty
- Technologie IntelliSense jazyka JavaScript poskytuje programovací odkazy pro vnitřní objekty, jako jsou `Array`, `String`, `Math`, `Date` a `Number`. Další informace o vnitřních objektech naleznete v tématu [standardní předdefinované objekty](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects).
+ Technologie IntelliSense jazyka JavaScript poskytuje programovací odkazy pro vnitřní objekty, jako jsou `Array`, `String`, `Math`, `Date`a `Number`. Další informace o vnitřních objektech naleznete v tématu [standardní předdefinované objekty](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects).
 
 ### <a name="UserDefined"></a>Uživatelem definované proměnné, funkce a objekty
  Když změníte soubor JavaScriptu, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] prověřování otevřených a odkazovaných dokumentů k určení všech dostupných prostředků kódu. To zahrnuje proměnné, funkce a objekty, které jste vytvořili. Tyto prostředky jsou pak k dispozici technologii IntelliSense jazyka JavaScript.
 
- Další informace o uživatelem definovaných proměnných, funkcích a objektech naleznete v tématu [vytváření vlastních objektů](http://go.microsoft.com/fwlink/?LinkId=108671) na webu MSDN.
+ Další informace o uživatelem definovaných proměnných, funkcích a objektech naleznete v tématu [vytváření vlastních objektů](https://go.microsoft.com/fwlink/?LinkId=108671) na webu MSDN.
 
 ### <a name="External"></a>Odkazy na externí soubory
  Můžete zahrnout různé typy odkazů na externí soubory, které má technologie IntelliSense ve vašem kódu podporovat. Odkazy na externí soubory mohou být odkazy skriptu, direktivy odkazů nebo mohou být určeny pomocí referenčních skupin.
@@ -137,7 +137,7 @@ Technologie IntelliSense umožňuje napsat kód rychleji a s menším množství
 
  Pokud nepracujete s webovou stránkou s podporou AJAX ASP.NET, můžete odkazovat na externí soubor skriptu pomocí atributu `src` v otevírací značce `script` elementu. Atribut `src` Určuje adresu URL externího souboru, který obsahuje zdrojový kód nebo data.
 
- Následující příklad ukazuje značky, které používají atribut `src` v < `script` značky > pro odkazování na soubor skriptu.
+ Následující příklad ukazuje značky, které používají atribut `src` v <`script`značky > pro odkazování na soubor skriptu.
 
 ```html
 <script type="text/javascript" src="~/Scripts/JavaScript.js">
@@ -283,6 +283,6 @@ Technologie IntelliSense umožňuje napsat kód rychleji a s menším množství
 - [Rozšíření JavaScript IntelliSense](../ide/extending-javascript-intellisense.md)
 - [Doplňování výrazů pro identifikátory](../ide/statement-completion-for-identifiers.md)
 - [Dokumentační komentáře XML](../ide/xml-documentation-comments-javascript.md)
-- [O modelu objektu DHTML](http://go.microsoft.com/fwlink/?LinkID=92344)
+- [O modelu objektu DHTML](https://go.microsoft.com/fwlink/?LinkID=92344)
 - [Seznam členů](https://msdn.microsoft.com/1b9cc469-9cd4-4d42-9999-1f9479635ff8)
-- [SRC – &#124; vlastnost src atributu](http://go.microsoft.com/fwlink/?LinkId=92345)
+- [SRC – &#124; vlastnost src atributu](https://go.microsoft.com/fwlink/?LinkId=92345)

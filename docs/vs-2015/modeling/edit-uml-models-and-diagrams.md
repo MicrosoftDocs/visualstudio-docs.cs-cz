@@ -21,12 +21,12 @@ caps.latest.revision: 86
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6585fbfa7c16e710633e81841b4c8eb380f9f564
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 00ac30cc7e9ee3aff0dd64f015a4b4954972c09a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669729"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295533"
 ---
 # <a name="edit-uml-models-and-diagrams"></a>Úpravy modelů a diagramů UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -140,7 +140,7 @@ Model UML můžete vytvořit a upravit pomocí zobrazení poskytovaných několi
 
    - Stiskněte klávesu **CTRL** a přesuňte konec.
 
-     \- nebo-
+     \- nebo –
 
    - Klikněte pravým tlačítkem na konektor a pak klikněte na **znovu připojit**.
 
@@ -158,11 +158,11 @@ Model UML můžete vytvořit a upravit pomocí zobrazení poskytovaných několi
 
 - Stisknutím a podržením klávesy **CTRL** při otočení kolečka myši.
 
-     \- nebo-
+     \- nebo –
 
 - Stiskněte a podržte **kombinaci kláves CTRL + SHIFT**a potom klikněte na levé nebo pravé tlačítko myši.
 
-     \- nebo-
+     \- nebo –
 
 - Na panelu nástrojů **Návrháře architektury** klikněte na znaménko plus ( **+** ) nebo mínus ( **-** ) nebo vyberte úroveň přiblížení.
 
@@ -173,7 +173,7 @@ Model UML můžete vytvořit a upravit pomocí zobrazení poskytovaných několi
 
 1. Stiskněte **kombinaci kláves CTRL + F**.
 
-     \- nebo-
+     \- nebo –
 
      V nabídce **Upravit** přejděte na **Najít a nahradit**a pak klikněte na **Rychlé hledání**.
 
@@ -282,7 +282,7 @@ Model UML můžete vytvořit a upravit pomocí zobrazení poskytovaných několi
 
 - Klikněte pravým tlačítkem na prvek v diagramu a pak klikněte na **Odebrat z diagramu**.
 
-  \- nebo-
+  \- nebo –
 
 - Klikněte na prvek v diagramu a potom stiskněte klávesu **Delete** .
 
@@ -320,23 +320,11 @@ Model UML můžete vytvořit a upravit pomocí zobrazení poskytovaných několi
 
 - Chcete-li přidat poznámky a vysvětlení k prvkům modelu, můžete vytvořit komentáře a propojit je s prvky.
 
-- Chcete-li v diagramu v grafu sjednotit zarovnání sloupcových nebo řádkových tvarů, můžete nainstalovat příkaz Zarovnat tvary. Tato akce je k dispozici jako ukázka rozšíření UML: [UML: příkaz pro zarovnání obrazců](http://code.msdn.microsoft.com/UML-command-to-Align-4139c0d7)
-
 ### <a name="to-export-a-diagram-as-an-image"></a>Export diagramu jako obrázku
  Další informace najdete v tématu [Export diagramů jako obrázků](../modeling/export-diagrams-as-images.md).
 
 ## <a name="extensions"></a>Rozšíření návrhářů UML
  Do nástrojů UML můžete přidat nové funkce a přizpůsobit zápis diagramu vlastním potřebám. Další informace najdete v tématu věnovaném [rozšiřování modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md).
-
- K dispozici je několik ukázkových rozšíření. Můžete je buď nainstalovat a používat, nebo můžete použít svůj zdrojový kód jako základ pro vlastní rozšíření. Mezi tyto ukázky patří:
-
-|||
-|-|-|
-|[Zarovnat obrazce](http://code.msdn.microsoft.com/UML-command-to-Align-4139c0d7)|Příkaz nabídky, který vám pomůže uklizený diagram.|
-|[Odkaz na dokumenty](http://code.msdn.microsoft.com/Link-UML-elements-to-0adbf5a8)|Propojte libovolný element UML s nadpisy aplikace Word, snímky aplikace PowerPoint, soubory libovolného typu, diagramy UML nebo jiné prvky UML. Odkaz lze vytvořit jednoduše přetažením. Později můžete dvakrát kliknout na prvek a zobrazit tak propojenou položku. Například můžete propojit případy použití se specifikacemi slov nebo podrobnými diagramy aktivit a akcemi na snímky scénářů.|
-|[Rychlá položka](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)|Vytvářejte model rychle pomocí zadávání textu. Užitečné pro zaznamenávání nápadů na schůzkách.|
-|[Barva podle stereotypu](http://code.msdn.microsoft.com/UML-Color-Classes-by-07de2b70)|Třídy barev podle stereotypu Kód můžete snadno roztáhnout, aby fungoval pro vlastní stereotypy.|
-|[Modelování domén](http://code.msdn.microsoft.com/UML-Domain-Modeling-6df6f7f4)|Pohodlné výchozí hodnoty pro obchodní modely. Asociace se ve výchozím nastavení zobrazují bez šipek a operace se v třídách neobjeví.|
 
 ## <a name="see-also"></a>Viz také
  [Vytváření projektů a diagramů modelování UML](../modeling/create-uml-modeling-projects-and-diagrams.md) [Analýza a modelování architektury](../modeling/analyze-and-model-your-architecture.md) [vytvoření modelů pro vaši aplikaci](../modeling/create-models-for-your-app.md)

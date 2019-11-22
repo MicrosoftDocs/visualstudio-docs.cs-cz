@@ -1,5 +1,5 @@
 ---
-title: Rozšíření VSPackages a rozhraní Managed Package Framework | Dokumentace Microsoftu
+title: Sady VSPackage a Managed Package Framework | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -11,33 +11,33 @@ helpviewer_keywords:
 ms.assetid: e8d80e0f-6b5b-4baf-a7df-59fd808c60cd
 caps.latest.revision: 16
 manager: jillfra
-ms.openlocfilehash: 5b72b2c3bd6b03d1d3f3e50135c2ddf4758a4bd9
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 84fb41bfc80415535ca41d6b1a8c9dcf47124c7a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65683050"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298237"
 ---
-# <a name="vspackages-and-the-managed-package-framework"></a>Rozšíření VSPackages a rozhraní Managed Package Framework
-Tím, že vytvoříte VSPackage spolu s balíčkem spravované třídy rozhraní framework (MPF) namísto pomocí třídy modelu COM interop můžete zkrátit dobu vývoje.  
+# <a name="vspackages-and-the-managed-package-framework"></a>Sady VSPackage a Managed Package Framework
+Čas vývoje můžete zkrátit vytvořením VSPackage s třídami "MPF" (Managed Package Framework) místo pomocí tříd typu COM Interop.  
   
- Existují dva způsoby vytvoření spravované VSPackage:  
+ Existují dva způsoby, jak vytvořit spravovaný VSPackage:  
   
-- Použití [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] balíček šablony projektu  
+- Použití šablony projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] balíčku  
   
-     Další informace najdete v tématu [názorný postup: Vytvoření příkazu nabídky s použitím šablony sady Visual Studio balíček](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de).  
+     Další informace naleznete v tématu [Návod: vytvoření příkazu nabídky pomocí šablony balíčku sady Visual Studio](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de).  
   
-- Vytvoření vašeho balíčku VSPackage bez [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] balíček šablony projektu  
+- Sestavení balíčku VSPackage bez [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] šablony projektu  
   
-     Například můžete zkopírovat ukázková VSPackage a změňte identifikátory GUID a názvů. Ukázky najdete v části VSX [Galerie kódu na](http://code.msdn.microsoft.com/vsx/).  
+     Můžete například zkopírovat ukázkový VSPackage a změnit identifikátory GUID a názvy. 
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Managed Package Framework třídy](../misc/managed-package-framework-classes.md)  
- Popisuje a obsahuje seznam oborů názvů MPF třídy a soubory DLL.  
+ [Spravované třídy architektury balíčku](../misc/managed-package-framework-classes.md)  
+ Popisuje a vypíše obory názvů a soubory DLL třídy MPF.  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Návod: Vytvoření příkazu nabídky s použitím balíčku šablony sady Visual Studio](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de)  
+ [Návod: vytvoření příkazu nabídky pomocí šablony balíčku sady Visual Studio](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de)  
  Vysvětluje, jak vytvořit spravovaný VSPackage.  
   
- [Spravovaná rozšíření VSPackages](../misc/managed-vspackages.md)  
- Zavádí aspekty rozšíření VSPackages, které platí pro spravovaný kód.
+ [Spravované VSPackage](../misc/managed-vspackages.md)  
+ Zavádí aspekty VSPackage, které se vztahují ke spravovanému kódu.

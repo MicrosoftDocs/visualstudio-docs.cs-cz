@@ -9,12 +9,12 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bf06151265c1647de29725917624c5984577bf6a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d5e41dbf3422374add68e351da1e4b703772a3a4
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658605"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296852"
 ---
 # <a name="walkthrough-create-a-simple-application-with-visual-c-or-visual-basic"></a>Návod: Vytvoření jednoduché aplikace s použitím jazyka Visual C# nebo Visual Basic
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -23,21 +23,21 @@ V tomto návodu se seznámíte s mnoha nástroji, dialogovými okny a návrh�
 
  Toto téma obsahuje následující oddíly:
 
- [Konfigurace integrovaného vývojového prostředí](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md#BKMK_ConfigureIDE)
+ [Nastavení integrovaného vývojového prostředí (IDE)](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md#BKMK_ConfigureIDE)
 
  [Vytvoření jednoduché aplikace](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md#BKMK_CreateApp)
 
  [Ladění a testování aplikace](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md#BKMK_DebugTest)
 
 > [!NOTE]
-> Tento návod vychází ze systému Visual Studio Professional, který nabízí šablonu aplikace WPF, na které vytvoříte projekt pro tento návod. Visual Studio Express pro stolní počítače se systémem Windows tuto šablonu nabízí také, ale Visual Studio Express pro Windows a Visual Studio Express pro Web nikoli. Úvodní informace o tom, jak používat Visual Studio Express pro Windows, najdete v [centru pro vývojáře pro aplikace pro Windows Store](https://msdn.microsoft.com/windows/apps/br229519). Úvodní informace o tom, jak používat Visual Studio Express pro web, najdete v tématu Začínáme [s ASP.NET](http://www.asp.net/get-started). Vaše verze aplikace Visual Studio a nastavení, která používáte, určují také názvy a umístění některých prvků uživatelského rozhraní. Viz [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Tento návod vychází ze systému Visual Studio Professional, který nabízí šablonu aplikace WPF, na které vytvoříte projekt pro tento návod. Visual Studio Express pro stolní počítače se systémem Windows tuto šablonu nabízí také, ale Visual Studio Express pro Windows a Visual Studio Express pro Web nikoli. Úvodní informace o tom, jak používat Visual Studio Express pro Windows, najdete v [centru pro vývojáře pro aplikace pro Windows Store](https://msdn.microsoft.com/windows/apps/br229519). Úvodní informace o tom, jak používat Visual Studio Express pro web, najdete v tématu Začínáme [s ASP.NET](https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro). Vaše verze aplikace Visual Studio a nastavení, která používáte, určují také názvy a umístění některých prvků uživatelského rozhraní. Zobrazit [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ## <a name="BKMK_ConfigureIDE"></a>Konfigurace integrovaného vývojového prostředí
- Při prvním spuštění sady Visual Studio se zobrazí výzva, abyste se přihlásili pomocí účtu služby Microsoft (MSA) a [přihlásili se k aplikaci Visual Studio](http://blogs.msdn.com/b/visualstudio/archive/2013/06/28/welcome-sign-in-to-visual-studio.aspx). Nemusíte se přihlašovat a můžete to provést později.
+ Při prvním spuštění sady Visual Studio se zobrazí výzva, abyste se přihlásili pomocí účtu služby Microsoft (MSA) a [přihlásili se k aplikaci Visual Studio](https://devblogs.microsoft.com/visualstudio/welcome-sign-in-to-visual-studio/). Nemusíte se přihlašovat a můžete to provést později.
 
  V sadě Visual Studio Launch (další) musíte zvolit kombinaci nastavení, která aplikuje sadu předdefinovaných úprav na integrované vývojové prostředí (IDE). Každá kombinace nastavení byla navržena za účelem usnadnění vývoje aplikací.
 
- Tento názorný postup předpokládá, že jste použili **Obecná nastavení pro vývoj**, která v IDE aplikuje nejmenší množství přizpůsobení. Pokud jste už zvolili C# nebo Visual Basici (jsou to dobrá volba), nemusíte měnit nastavení.  Pokud chcete změnit nastavení, můžete použít **Průvodce importem a exportem nastavení**. Viz [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+ Tento názorný postup předpokládá, že jste použili **Obecná nastavení pro vývoj**, která v IDE aplikuje nejmenší množství přizpůsobení. Pokud jste už zvolili C# nebo Visual Basici (jsou to dobrá volba), nemusíte měnit nastavení.  Pokud chcete změnit nastavení, můžete použít **Průvodce importem a exportem nastavení**. Zobrazit [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
  Po otevření sady Visual Studio lze rozeznat okna nástrojů, nabídky, panely nástrojů a prostor hlavního okna. Okna nástrojů jsou ukotvena na levé a pravé straně okna aplikace, s možností **snadného spuštění**, řádku nabídek a standardní panel nástrojů v horní části. Ve středu okna aplikace je **Úvodní stránka**. Při načítání řešení nebo projektu se zobrazí editory a návrháři v prostoru, kde je **Úvodní stránka** . Při vývoji aplikace strávíte nejvíce času v této centrální oblasti.
 
@@ -69,7 +69,7 @@ V tomto návodu se seznámíte s mnoha nástroji, dialogovými okny a návrh�
 
    Barevný motiv, který se používá pro obrázky ve zbývající části tohoto návodu, je světlý motiv. Další informace o přizpůsobení rozhraní IDE naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
-## <a name="BKMK_CreateApp"></a>Vytvoření jednoduché aplikace
+## <a name="BKMK_CreateApp"></a> Vytvoření jednoduché aplikace
 
 ### <a name="create-the-project"></a>Vytvoření projektu
  Při vytváření aplikace v systému Visual Studio je třeba nejprve vytvořit projekt a řešení. V tomto příkladu vytvoříte projekt Windows Presentation Foundation (WPF).
@@ -92,7 +92,7 @@ V tomto návodu se seznámíte s mnoha nástroji, dialogovými okny a návrh�
 
     ![Vytvoření projektu Visual C++&#35; WPF, HelloWPFApp](../ide/media/exploreide-newprojectcsharp.png "ExploreIDE-NewProjectcsharp")
 
-   Visual Studio vytvoří projekt a řešení HelloWPFApp a **Průzkumník řešení** zobrazí různé soubory. Návrhář WPF zobrazuje návrhové zobrazení a zobrazení XAML souboru MainWindow. XAML v rozděleném zobrazení. Posunutí příčky můžete zobrazit více nebo méně z obou zobrazení.  Můžete zvolit, zda chcete zobrazit pouze vizuální zobrazení nebo pouze zobrazení XAML. (Další informace najdete v tématu [Návrhář WPF pro model Windows Forms vývojáře](https://msdn.microsoft.com/47ad0909-e89b-4996-b4ac-874d929f94ca)). V **Průzkumník řešení**se zobrazí následující položky:
+   Visual Studio vytvoří projekt a řešení HelloWPFApp a **Průzkumník řešení** zobrazí různé soubory. Návrhář WPF zobrazuje návrhové zobrazení a zobrazení XAML souboru MainWindow. XAML v rozděleném zobrazení. Posunutí příčky můžete zobrazit více nebo méně z obou zobrazení.  Můžete zvolit, zda chcete zobrazit pouze vizuální zobrazení nebo pouze zobrazení XAML. (Další informace najdete v tématu [Návrhář WPF pro model Windows Forms vývojáře](https://msdn.microsoft.com/47ad0909-e89b-4996-b4ac-874d929f94ca)). Následující položky se zobrazí v **Průzkumníka řešení**:
 
    Obrázek 5: Položky projektu
 
@@ -106,7 +106,7 @@ V tomto návodu se seznámíte s mnoha nástroji, dialogovými okny a návrh�
 
     ![okno Vlastnosti se zvýrazněným názvem souboru](../ide/media/exploreide-filenameinpropertieswindow.png "ExploreIDE-FilenameinPropertiesWindow")
 
-    **Průzkumník řešení** ukazuje, že název souboru je nyní Greetings. XAML a když rozbalíte uzel MainWindow. XAML (tak, že umístíte fokus do uzlu a stisknete rightarrow klíč), uvidíte teď název MainWindow. XAML. vb nebo MainWindow.XAML.cs. Greetings. XAML. vb nebo Greetings.xaml.cs. Tento soubor kódu je vnořený pod uzlem souboru. XAML, aby zobrazoval, že jsou velmi úzce spojeny.
+    **Průzkumník řešení** ukazuje, že název souboru je nyní Greetings. XAML a když rozbalíte uzel MainWindow. XAML (tak, že umístíte fokus do uzlu a stisknete rightarrow klíč), zobrazí se název MainWindow. XAML. vb nebo MainWindow.XAML.cs je nyní Greetings. XAML. vb nebo Greetings.XAML.cs. Tento soubor kódu je vnořený pod uzlem souboru. XAML, aby zobrazoval, že jsou velmi úzce spojeny.
 
    > [!WARNING]
    > Tato změna způsobí chybu, kterou zjistíte později během ladění a opravování.
@@ -168,7 +168,7 @@ V tomto návodu se seznámíte s mnoha nástroji, dialogovými okny a návrh�
 
 3. V okně **vlastnosti** levého ovládacího prvku RadioButton změňte vlastnost **Name** (vlastnost v horní části okna **vlastnosti** ) na `RadioButton1`.  Ujistěte se, že jste vybrali přepínač RadioButton a nikoli mřížku na pozadí ve formuláři. pole typ v okně vlastností pod polem název by měl vyslovit RadioButton.
 
-4. V okně **vlastnosti** pravého ovládacího prvku RadioButton změňte vlastnost **Name** na `RadioButton2` a poté změny uložte stisknutím kombinace kláves CTRL-s nebo pomocí položky nabídky **soubor** .  Před změnou a uložením je třeba vybrat přepínač RadioButton.
+4. V okně **vlastnosti** pravého ovládacího prvku RadioButton změňte vlastnost **Name** na `RadioButton2`a poté změny uložte stisknutím kombinace kláves CTRL-s nebo pomocí položky nabídky **soubor** .  Před změnou a uložením je třeba vybrat přepínač RadioButton.
 
    Nyní můžete zadat text k zobrazení u obou ovládacích prvků RadioButton. Následující postup aktualizuje vlastnost **obsah** ovládacího prvku RadioButton.
 
@@ -184,7 +184,7 @@ V tomto návodu se seznámíte s mnoha nástroji, dialogovými okny a návrh�
 
 1. V sadě **nástrojů**vyhledejte ovládací prvek **tlačítko** a pak ho přidejte na návrhovou plochu pod ovládacími prvky RadioButton tak, že vyberete tlačítko a přetáhnete ho do formuláře v zobrazení Návrh.
 
-2. V zobrazení XAML změňte hodnotu **obsahu** pro ovládací prvek tlačítko z `Content=”Button”` na `Content=”Display”` a pak změny uložte (CTRL + s nebo použijte nabídku **soubor** ).
+2. V zobrazení XAML změňte hodnotu **obsahu** pro ovládací prvek tlačítko z `Content=”Button”` na `Content=”Display”`a pak změny uložte (CTRL + s nebo použijte nabídku **soubor** ).
 
     Značka by měla vypadat podobně jako v následujícím příkladu: `<Button Content="Display" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="215,204,0,0"/>`
 
@@ -271,7 +271,7 @@ V tomto návodu se seznámíte s mnoha nástroji, dialogovými okny a návrh�
 
 1. V **Průzkumník řešení**otevřete soubor App. XAML (v C# projektu) nebo soubor Application. xaml (v projektu Visual Basic) v zobrazení XAML (nemůže být otevřen v zobrazení Návrh) tím, že ho vyberete a stisknete klávesu ENTER nebo dvakrát kliknete na něj.
 
-2. Změňte `StartupUri="MainWindow.xaml"` na `StartupUri="Greetings.xaml"` a pak změny uložte pomocí kombinace kláves CTRL + s.
+2. Změňte `StartupUri="MainWindow.xaml"` na `StartupUri="Greetings.xaml"`a pak změny uložte pomocí kombinace kláves CTRL + s.
 
    Znovu spusťte ladicí program (stiskněte klávesu F5). Měli byste vidět okno Greetings aplikace.
 
@@ -329,7 +329,7 @@ V tomto návodu se seznámíte s mnoha nástroji, dialogovými okny a návrh�
 
     ![Příkaz Sestavit řešení v nabídce sestavení](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")
 
-   Blahopřejeme k dokončení tohoto návodu! Můžete najít soubor. exe, který jste vytvořili v rámci vašeho řešení a adresáře projektu (. ..\HelloWPFApp\HelloWPFApp\bin\Release \\). Pokud chcete prozkoumat další příklady, přečtěte si téma [ukázky sady Visual Studio](../ide/visual-studio-samples.md).
+   Blahopřejeme k dokončení tohoto návodu! Můžete najít soubor. exe, který jste vytvořili v rámci vašeho řešení a adresáře projektu (. ..\HelloWPFApp\HelloWPFApp\bin\Release\\). Pokud budete chtít projít Další příklady, přečtěte si téma [ukázky sady Visual Studio](../ide/visual-studio-samples.md).
 
 ## <a name="see-also"></a>Viz také
  [Novinky v aplikaci Visual studio 2015](../what-s-new-in-visual-studio-2015.md) [Začínáme s vývojem v rámci sady Visual Studio](../ide/get-started-developing-with-visual-studio.md) – [tipy pro produktivitu](../ide/productivity-tips-for-visual-studio.md)

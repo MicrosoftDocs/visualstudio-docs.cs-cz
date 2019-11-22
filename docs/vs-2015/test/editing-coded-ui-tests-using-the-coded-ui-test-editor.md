@@ -12,12 +12,12 @@ ms.assetid: 76435c4b-593e-43a3-a9fe-709a7f9f5e0f
 caps.latest.revision: 42
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 41b589526fb1f864c97571db893506bc612893ff
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d408f21555deee835cd8f00926bb9c73fd3167f3
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660610"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302638"
 ---
 # <a name="editing-coded-ui-tests-using-the-coded-ui-test-editor"></a>Úpravy programových testů uživatelského rozhraní pomocí Editoru programových testů uživatelského rozhraní
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,7 +52,7 @@ Editor programového testu UI umožňuje snadno upravit kódované testy uživat
 9. [Vyhledat vše](#CodedUITestEditor_LocateDecendants) vám pomůže ověřit vlastnost ovládacího prvku a významné změny ovládacích prvků aplikace.
 
 ## <a name="how-do-i-do-this"></a>Návody to udělat?
- V [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] otevření souboru UIMap. UITest přidruženého k kódovanému testu uživatelského rozhraní v projektu programového testu uživatelského rozhraní automaticky zobrazí programový test uživatelského rozhraní v editoru programového testu UI. Následující postupy popisují, jak můžete vyhledat a upravit testovací metody a vlastnosti pro akce uživatelského rozhraní a ovládací prvky pomocí panelu nástrojů a místních nabídek editoru.
+ V [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]otevření souboru UIMap. UITest přidruženého k kódovanému testu uživatelského rozhraní v projektu programového testu uživatelského rozhraní automaticky zobrazí programový test uživatelského rozhraní v editoru programového testu UI. Následující postupy popisují, jak můžete vyhledat a upravit testovací metody a vlastnosti pro akce uživatelského rozhraní a ovládací prvky pomocí panelu nástrojů a místních nabídek editoru.
 
 ## <a name="open-a-coded-ui-test"></a>Otevření programového testu uživatelského rozhraní
  Pomocí editoru programového testu uživatelského rozhraní C# můžete zobrazit a upravit vizuální a Visual Basic kódovaný programový test uživatelského rozhraní.
@@ -65,7 +65,7 @@ Editor programového testu UI umožňuje snadno upravit kódované testy uživat
 > Když vyberete akci uživatelského rozhraní, která je umístěna v metodě v podokně **akce uživatelského rozhraní** , je zvýrazněn odpovídající ovládací prvek. Můžete také upravit akci uživatelského rozhraní nebo vlastnosti ovládacích prvků.
 
  *Nevidím* Editor programového testu UI.
-Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor programového testu uživatelského rozhraní byl také k dispozici v sadě Visual Studio 2010 Feature Pack 2 s předplatným MSDN. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Microsoft Visual Studio 2010 Feature Pack 2](http://go.microsoft.com/fwlink/?LinkID=204119).
+Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor programového testu uživatelského rozhraní byl také k dispozici v sadě Visual Studio 2010 Feature Pack 2 s předplatným MSDN. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Microsoft Visual Studio 2010 Feature Pack 2](https://go.microsoft.com/fwlink/?LinkID=204119).
 
 ## <a name="CodedUITestEditor_EditActionAndControlProperties"></a>Úprava vlastností akce uživatelského rozhraní a jejich odpovídajících vlastností ovládacích prvků
  Pomocí editoru programového testu UI můžete rychle najít a zobrazit všechny akce uživatelského rozhraní v testovacích metodách. Když vyberete akci uživatelského rozhraní v editoru, odpovídající ovládací prvek se automaticky zvýrazní. Podobně pokud vyberete ovládací prvek, jsou zvýrazněny související akce uživatelského rozhraní. Když vyberete akci uživatelského rozhraní nebo ovládací prvek, je pak snadné použít okno Vlastnosti pro úpravu vlastností, které s ním odpovídají.
@@ -74,7 +74,7 @@ Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor p
 
  Chcete-li upravit vlastnosti akce uživatelského rozhraní, v podokně **akce uživatelského rozhraní** rozbalte testovací metodu obsahující akci uživatelského rozhraní, pro kterou chcete upravit vlastnosti, vyberte akci uživatelského rozhraní a pak upravte vlastnosti pomocí okno Vlastnosti.
 
- Pokud například server není k dispozici a máte přidruženou akci uživatelského rozhraní k vašemu webovému prohlížeči, který uvádí stav **Přejít na webovou stránku <http://Contoso1/default.aspx’>** , můžete změnit adresu URL na `‘ http://Contoso2/default.aspx’`.
+ Pokud například server není k dispozici a máte přidruženou akci uživatelského rozhraní k vašemu webovému prohlížeči, který uvádí stav **Přejít na webovou stránku<http://Contoso1/default.aspx’>** , můžete změnit adresu URL na `‘ http://Contoso2/default.aspx’`.
 
  ![Vlastnosti ovládacího prvku](../test/media/codeduitestcontrolprop.png "CodedUITestControlProp") Upravit vlastnosti ovládacího prvku
 
@@ -118,7 +118,7 @@ Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor p
  *Co dalšího mám vědět?*
  **Důležité problémy**
 
-- ![](../test/media/caution.gif "Upozornění") **Upozornění** na ikonu upozornění: Pokud rozdělíte metodu, je třeba upravit jakýkoli kód, který volá existující metodu, aby také volal novou metodu, kterou vytváříte, pokud stále chcete tyto akce uživatelského rozhraní zahrnout. Při rozdělení metody se zobrazí dialogové okno Microsoft Visual Studio. Upozorňuje vás, že je nutné upravit jakýkoli kód, který volá existující metodu pro volání nové metody, kterou vytváříte. Vyberte **Ano**.
+- ![](../test/media/caution.gif "Upozornění") **Upozornění** na ikonu upozornění: Pokud rozdělíte metodu, je třeba upravit jakýkoli kód, který volá existující metodu, aby také volal novou metodu, kterou vytváříte, pokud stále chcete tyto akce uživatelského rozhraní zahrnout. Při rozdělení metody se zobrazí dialogové okno Microsoft Visual Studio. Upozorňuje vás, že je nutné upravit jakýkoli kód, který volá existující metodu pro volání nové metody, kterou vytváříte. Zvolte **Ano**.
 
   **Tip**
 
@@ -130,7 +130,7 @@ Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor p
 
    Otevřete místní nabídku pro novou testovací metodu a vyberte možnost **Přejmenovat**.
 
-   Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že je nutné upravit jakýkoli kód, který odkazuje na metodu. Vyberte **Ano**.
+   Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že je nutné upravit jakýkoli kód, který odkazuje na metodu. Zvolte **Ano**.
 
 ## <a name="CodedUITestEditor_MoveMethods"></a>Přesunutí testovací metody do souboru UIMap, aby se usnadnilo přizpůsobení
  Pokud určíte, že jedna z vašich zkušebních metod v programovém testu UI vyžaduje vlastní kód, je nutné ji přesunout do souboru UIMap.cs nebo UIMap. vb. V opačném případě bude váš kód při každém překompilování kódovaného testu uživatelského rozhraní přepsán. Pokud tuto metodu nepřesunete, váš vlastní kód se přepíše pokaždé, když je test znovu zkompilován.
@@ -142,7 +142,7 @@ Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor p
  *Co dalšího mám vědět?*
  **Důležité problémy**
 
-- ![](../test/media/caution.gif "Upozornění") **Upozornění** na ikonu upozornění: Pokud jste přepnuli metodu, nemůžete ji již upravovat pomocí editoru programového testu UI. Musíte přidat vlastní kód a spravovat jej pomocí Editoru kódu. Při přesunutí metody se zobrazí dialogové okno Microsoft Visual Studio. Upozorňuje vás, že metoda bude přesunuta ze souboru UIMap. UITest do souboru UIMap.cs nebo UIMap. vb a že již nebudete moci upravovat metodu pomocí editoru programového testu uživatelského rozhraní. Vyberte **Ano**.
+- ![](../test/media/caution.gif "Upozornění") **Upozornění** na ikonu upozornění: Pokud jste přepnuli metodu, nemůžete ji již upravovat pomocí editoru programového testu UI. Musíte přidat vlastní kód a spravovat jej pomocí Editoru kódu. Při přesunutí metody se zobrazí dialogové okno Microsoft Visual Studio. Upozorňuje vás, že metoda bude přesunuta ze souboru UIMap. UITest do souboru UIMap.cs nebo UIMap. vb a že již nebudete moci upravovat metodu pomocí editoru programového testu uživatelského rozhraní. Zvolte **Ano**.
 
   **Tip**
 
@@ -203,15 +203,15 @@ Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor p
 ## <a name="external-resources"></a>Externí zdroje
 
 ### <a name="guidance"></a>Doprovodné materiály
- [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](http://go.microsoft.com/fwlink/?LinkID=255188)
+ [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](https://go.microsoft.com/fwlink/?LinkID=255188)
 
 ### <a name="faq"></a>Nejčastější dotazy
- [Nejčastější dotazy k programovým testům UI – 1](http://go.microsoft.com/fwlink/?LinkID=230576)
+ [Nejčastější dotazy k programovým testům UI – 1](https://go.microsoft.com/fwlink/?LinkID=230576)
 
- [Nejčastější dotazy k programovým testům UI – 2](http://go.microsoft.com/fwlink/?LinkID=230578)
+ [Nejčastější dotazy k programovým testům UI – 2](https://go.microsoft.com/fwlink/?LinkID=230578)
 
 ### <a name="forum"></a>Fórum
- [Testování automatizace uživatelského rozhraní sady Visual Studio (zahrnuje CodedUI)](http://go.microsoft.com/fwlink/?LinkID=224497)
+ [Testování automatizace uživatelského rozhraní sady Visual Studio (zahrnuje CodedUI)](https://go.microsoft.com/fwlink/?LinkID=224497)
 
 ## <a name="see-also"></a>Viz také
- [Použití automatizace uživatelského rozhraní k otestování kódu](../test/use-ui-automation-to-test-your-code.md) [vytváření](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) programových testů UI Vytvoření programového testu UI založeného na [datech](../test/creating-a-data-driven-coded-ui-test.md) [generování kódovaného testu uživatelského rozhraní z existujícího návodu k záznamu akce](https://msdn.microsoft.com/library/56736963-9027-493b-b5c4-2d4e86d1d497) [: vytváření, úpravy a údržba programového testu UI ](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
+ [Použití automatizace uživatelského rozhraní k otestování kódu](../test/use-ui-automation-to-test-your-code.md) [vytváření](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) programových testů UI Vytvoření programového testu UI založeného na [datech](../test/creating-a-data-driven-coded-ui-test.md) [generování kódovaného testu uživatelského rozhraní z existujícího návodu k záznamu akce](https://msdn.microsoft.com/library/56736963-9027-493b-b5c4-2d4e86d1d497) [: vytváření, úpravy a údržba programového testu UI](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)

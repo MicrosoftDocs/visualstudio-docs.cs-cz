@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/26/2017
 ms.author: ghogen
-ms.openlocfilehash: e68f7503ecc75c03e9f4beda2003415d3175ee7e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6d7bf7901ab33dc6dba50013ebdfa05c3188cd6c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963846"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300176"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>Přidání služby Azure storage pomocí připojených služeb sady Visual Studio
 Pomocí sady Visual Studio, můžete připojit cokoli z následujícího do služby Azure Storage s použitím **přidání připojené služby** dialogové okno:
@@ -63,12 +63,12 @@ Po dokončení **přidání připojené služby** dialogové okno automaticky zo
 ## <a name="how-your-project-is-modified"></a>Jak se váš projekt změnil
 Po dokončení dialogové okno sady Visual Studio přidá odkazy a změní některé konfigurační soubory. Konkrétní změny závisí na typu projektu:
 
-- Projekt ASP.NET – [co se stalo – projekty ASP.NET](http://go.microsoft.com/fwlink/p/?LinkId=513126)
-- Projekt ASP.NET Core – [co se stalo – projekty ASP.NET 5](http://go.microsoft.com/fwlink/p/?LinkId=513124)
-- Projekt cloudové služby (webové role a role pracovního procesu) - [co se stalo – projekty cloudových služeb](http://go.microsoft.com/fwlink/p/?LinkId=516965)
+- Projekt ASP.NET – [co se stalo – projekty ASP.NET](https://go.microsoft.com/fwlink/p/?LinkId=513126)
+- Projekt ASP.NET Core – [co se stalo – projekty ASP.NET 5](https://go.microsoft.com/fwlink/p/?LinkId=513124)
+- Projekt cloudové služby (webové role a role pracovního procesu) - [co se stalo – projekty cloudových služeb](https://go.microsoft.com/fwlink/p/?LinkId=516965)
 - Projektu úlohy WebJob - [co se stalo – projekty webové úlohy](/azure/visual-studio/vs-storage-webjobs-what-happened)
 
 ## <a name="next-steps"></a>Další kroky
 - [Fórum na webu MSDN: Azure Storage](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
-- [Blog týmu Microsoft Azure Storage](http://blogs.msdn.com/b/windowsazurestorage/)
+- [Blog týmu Microsoft Azure Storage](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [Dokumentace ke službě Azure Storage](https://docs.microsoft.com/azure/storage/)

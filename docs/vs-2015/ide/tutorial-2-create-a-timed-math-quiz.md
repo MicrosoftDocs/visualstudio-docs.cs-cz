@@ -9,12 +9,12 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a5112ac6b0fc14d7a5bfc5066ae6fbabbc3c0bc3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b91e5f864bc15f1fbcab9400d0cd3a4a2e8224a9
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654747"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299864"
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>Tutoriál 2: Vytvoření matematického kvízu s časovým limitem
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,8 +32,6 @@ V tomto kurzu sestavíte kvíz, ve kterém musí příjemce kvízu odpovědět n
   Po dokončení bude kvíz vypadat jako na následujícím obrázku, s výjimkou různých čísel.
 
   ![Matematický kvíz se čtyřmi problémy](../ide/media/express-finishedquiz.png "Express_FinishedQuiz") Kvíz, který vytvoříte v tomto kurzu
-
-  Pokud si chcete stáhnout dokončenou verzi kvízu, přečtěte si [ukázku kurz dokončení matematického kvízu](http://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 > [!NOTE]
 > Tento kurz se zabývá vizuálů C# i Visual Basic, takže se zaměřte na informace, které jsou specifické pro programovací jazyk, který používáte.

@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření základní aplikace prostředí izolované | Dokumentace Microsoftu'
+title: 'Návod: Vytvoření základní aplikace izolovaného prostředí | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,121 +12,121 @@ ms.assetid: 8b12e223-aae3-4c23-813d-ede1125f5f69
 caps.latest.revision: 55
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: e92fa99a266dc1d1b537387f3dae848a6ecb285d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b6dc84dd8d9f19012c4d09ba9bfd974ec181b9f6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442287"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74291270"
 ---
-# <a name="walkthrough-creating-a-basic-isolated-shell-application"></a>Návod: Vytváření základní aplikace izolovaného prostředí
+# <a name="walkthrough-creating-a-basic-isolated-shell-application"></a>Návod: Vytvoření základní aplikace izolovaného prostředí
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento návod ukazuje, jak vytvořit řešení izolovaného prostředí, přizpůsobit panel nástrojů nápovědy a vytvořit instalační program, který nainstaluje izolovaného prostředí.  
+Tento návod ukazuje, jak vytvořit řešení izolovaného prostředí, přizpůsobit nápovědu k oknu nástrojů a vytvořit instalační program, který nainstaluje izolované prostředí.  
   
 ## <a name="prerequisites"></a>Požadavky  
- Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md). Pokud chcete nasadit izolovaného prostředí, musíte použít také Distribuovatelný balíček prostředí Visual Studio Shell (izolovaný režim).  
+ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md). Pro nasazení izolovaného prostředí je nutné také použít Distribuovatelný balíček prostředí Visual Studio Shell (izolovaný režim).  
   
 ## <a name="creating-an-isolated-shell-solution"></a>Vytvoření řešení izolovaného prostředí  
- V této části ukazuje, jak vytvořit řešení izolovaného prostředí pomocí Visual Studio Shell izolované šablony projektu. Řešení obsahuje následující projekty:  
+ V této části se dozvíte, jak použít šablonu projektu izolované prostředí sady Visual Studio k vytvoření řešení izolovaného prostředí. Řešení obsahuje následující projekty:  
   
-- *SolutionName*. AboutBoxPackage projekt, který umožňuje přizpůsobit vzhled Nápověda/o pole.  
+- *Řešení*. AboutBoxPackage projekt, který umožňuje přizpůsobit vzhled okna s popisem a nápovědu.  
   
-- ShellExtensionsVSIX projektu, který obsahuje soubor source.extension.vsixmanifest, který definuje různé součásti aplikací izolovaného prostředí.  
+- Projekt ShellExtensionsVSIX, který obsahuje soubor source. extension. vsixmanifest definující různé komponenty aplikace izolovaného prostředí.  
   
-- *SolutionName* projekt, který vytvoří spustitelný soubor, který volá aplikací izolovaného prostředí. Tento projekt obsahuje složku vlastního nastavení prostředí, která umožňuje přizpůsobit vzhled a chování aplikací izolovaného prostředí.  
+- Projekt *řešení* , který vytváří spustitelný soubor, který vyvolá aplikaci izolovaného prostředí. Tento projekt obsahuje složku pro přizpůsobení prostředí, která umožňuje upravit vzhled a chování aplikace izolovaného prostředí.  
   
-- *SolutionName* projekt uživatelského rozhraní, který vytvoří satelitní sestavení, který definuje aktivní příkazy a lokalizovatelných řetězců.  
+- Projekt uživatelského rozhraní pro *řešení* , který vytváří satelitní sestavení definující příkazy aktivní nabídky a lokalizovatelné řetězce.  
   
-#### <a name="to-create-a-basic-isolated-shell-solution"></a>K vytvoření řešení základní izolovaného prostředí  
+#### <a name="to-create-a-basic-isolated-shell-solution"></a>Vytvoření základního řešení izolovaného prostředí  
   
-1. Otevřít Visual Studio a vytvořte nový projekt.  
+1. Otevřete Visual Studio a vytvořte nový projekt.  
   
-2. V **nový projekt** okna rozbalte **ostatní typy projektů** a potom **rozšiřitelnost**. Vyberte **Visual Studio Shell izolované** šablony projektu.  
+2. V okně **Nový projekt** rozbalte položku **jiné typy projektů** a potom **rozšiřitelnost**. Vyberte šablonu projektu **izolované prostředí sady Visual Studio** .  
   
-3. Pojmenujte projekt `MyVSShellStub` a zadejte umístění. Ujistěte se, že **vytvořit adresář pro řešení** je zaškrtnuté políčko a potom klikněte na tlačítko **OK**.  
+3. Pojmenujte projekt `MyVSShellStub` a zadejte umístění. Ujistěte se, že je zaškrtnuté políčko **vytvořit adresář pro řešení** a pak klikněte na **OK**.  
   
-     Nové řešení se zobrazí v **Průzkumníka řešení**.  
+     Nové řešení se zobrazí v **Průzkumník řešení**.  
   
-4. Sestavte řešení a spuštění ladění aplikací izolovaného prostředí.  
+4. Sestavte řešení a spusťte ladění aplikace izolovaného prostředí.  
   
-     Visual Studio, které se zobrazí izolovaného prostředí. Načte záhlaví **MyVSShellStub**. Ikona záhlaví se generuje z \MyVSShellStub\Resource Files\ApplicationIcon.ico.  
+     Zobrazí se izolované prostředí sady Visual Studio. Záhlaví se přečte **MyVSShellStub**. Ikona záhlaví je vygenerována z \MyVSShellStub\Resource Files\ApplicationIcon.ico.  
   
-## <a name="customizing-the-application-name-and-icon"></a>Přizpůsobení aplikace názvu a ikony  
- Můžete k vytvoření aplikace s použitím názvu vaší společnosti a jeho loga v záhlaví programu. Následující kroky ukazují, jak chcete-li změnit název a ikonu, která se zobrazí v záhlaví okna vlastní aplikaci tak, že změníte definiční soubor balíčku, MyVSShellStub.Application.pkgdef.  
+## <a name="customizing-the-application-name-and-icon"></a>Přizpůsobení názvu a ikony aplikace  
+ Svou aplikaci můžete chtít označit pomocí názvu vaší společnosti a jejího loga v záhlaví. Následující kroky ukazují, jak změnit název a ikonu, které se zobrazí v záhlaví vlastní aplikace, změnou definičního souboru balíčku MyVSShellStub. Application. pkgdef.  
   
-#### <a name="to-customize-the-application-name-and-icon"></a>Chcete-li přizpůsobit název aplikace a ikona  
+#### <a name="to-customize-the-application-name-and-icon"></a>Přizpůsobení názvu a ikony aplikace  
   
 1. V projektu MyVSShellStub otevřete \Shell Customization\MyVSShellStub.Application.pkgdef.  
   
-2. Změnit `AppName` hodnotu prvku na **"AppName" = "Editor Hudba Fabrikam"**  
+2. Změňte hodnotu `AppName` elementu na **"AppName" = "Fabrikam Music Editor"** .  
   
-3. Chcete-li změnit ikonu aplikace, zkopírujte do adresáře \MyVSShellStub\MyVSShellStub\MyVSShellStub\ jinou ikonu. Přejmenujte stávající soubor ApplicationIcon.ico na ApplicationIcon1.ico. Přejmenujte tento nový soubor do ApplicationIcon.ico.  
+3. Chcete-li změnit ikonu aplikace, zkopírujte do adresáře \MyVSShellStub\MyVSShellStub\MyVSShellStub\ jinou ikonu. Přejmenujte existující soubor ApplicationIcon. ico na ApplicationIcon1. ico. Přejmenujte nový soubor na ApplicationIcon. ico.  
   
-4. Sestavte řešení a spusťte ladění. Izolované prostředí IDE se zobrazí. Záhlaví má vaše nová ikona vedle slov **Fabrikam Hudba Editor**.  
+4. Sestavte řešení a spusťte ladění. Zobrazí se rozhraní IDE izolovaného prostředí. Záhlaví má novou ikonu vedle slov **Editor společnosti Fabrikam Music**.  
   
-## <a name="customizing-the-default-web-browser-home-page"></a>Přizpůsobení stránky výchozí webový prohlížeč-Domů  
- Tato část ukazuje, jak změnit výchozí domovskou stránku **webový prohlížeč** okna tak, že změníte definiční soubor balíčku.  
+## <a name="customizing-the-default-web-browser-home-page"></a>Přizpůsobení domovské stránky výchozího webového prohlížeče  
+ V této části se dozvíte, jak změnit výchozí domovskou stránku okna **webového prohlížeče** změnou definičního souboru balíčku.  
   
-#### <a name="to-customize-the-default-web-browser-home-page"></a>Chcete-li přizpůsobit výchozí domovskou stránku webového prohlížeče  
+#### <a name="to-customize-the-default-web-browser-home-page"></a>Přizpůsobení výchozí domovské stránky webového prohlížeče  
   
-1. V souboru MyVSShellStub.Application.pkgdef změnit `DefaultHomePage` hodnotu prvku na "<http://www.microsoft.com>".  
+1. V souboru MyVSShellStub. Application. pkgdef změňte hodnotu prvku `DefaultHomePage` na "<https://www.microsoft.com>".  
   
 2. Znovu sestavte projekt MyVSShellStub.  
   
 3. Sestavte řešení a spusťte ladění.  
   
-4. V **zobrazení / ostatní Windows**, klikněte na tlačítko **webový prohlížeč**. **Webový prohlížeč** okně se zobrazí domovská stránka Microsoft Corporation.  
+4. V **zobrazení/jiných oknech**klikněte na **webový prohlížeč**. V okně **webového prohlížeče** se zobrazí domovská stránka společnosti Microsoft Corporation.  
   
-## <a name="removing-the-print-command"></a>Odebírá se příkaz pro tisk  
- Souboru .vsct v projektu aplikace izolovaného prostředí uživatelského rozhraní se skládá ze sady deklarací v podobě `<Define name=No_` *Element*`>`, kde *Element* je jedním z standardní nabídky sady Visual Studio a příkazy.  
+## <a name="removing-the-print-command"></a>Odebrání příkazu tisk  
+ Soubor. vsct v projektu s uživatelským rozhraním izolovaného prostředí se skládá ze sady deklarací`>`*prvku* `<Define name=No_`formuláře, kde *element* je jednou ze standardních nabídek a příkazů sady Visual Studio.  
   
- Pokud je prohlášení neokomentovaném textu, tuto nabídku nebo příkaz je vyloučen z izolovaného prostředí. Naopak pokud deklarace je zakomentovaný, nabídky nebo příkaz je součástí izolované prostředí.  
+ Pokud je deklarace odkomentována, tato nabídka nebo příkaz jsou vyloučeny z izolovaného prostředí. Naopak, pokud je deklarace deklarována, nabídka nebo příkaz jsou součástí izolovaného prostředí.  
   
- V následujících krocích Odkomentujte příkaz pro tisk v souboru .vsct.  
+ V následujících krocích zrušíte komentář k příkazu Print v souboru. vsct.  
   
-#### <a name="to-remove-the-print-command"></a>Chcete-li odebrat příkaz pro tisk  
+#### <a name="to-remove-the-print-command"></a>Odebrání příkazu tisk  
   
-1. Ověřte, že **tisk** příkazu se zobrazí na **souboru** nabídky v aplikaci izolovaného prostředí.  
+1. Ověřte, že se příkaz **Tisk** zobrazuje v nabídce **soubor** v aplikaci izolovaného prostředí.  
   
 2. V projektu MyVSShellStubUI otevřete \Resource Files\MyVSShellStubUI.vsct pro úpravy.  
   
-3. Zrušením komentáře u tohoto řádku:  
+3. Odkomentovat tento řádek:  
   
     ```  
     <!-- <Define name="No_PrintChildrenCommand"/> -->  
     ```  
   
-4. Tato operace odebere příkaz pro tisk.  
+4. Tím se odebere příkaz Print.  
   
-5. Spusťte ladění aplikací izolovaného prostředí. Ověřte, že **souboru / tisk** příkaz je odstraněný.  
+5. Spusťte ladění aplikace izolovaného prostředí. Ověřte, že je pryč příkaz **soubor/tisk** .  
   
-## <a name="removing-features-from-the-isolated-shell"></a>Odebírání funkcí z izolovaného prostředí  
- Můžou odebrat některé balíčky, které jsou načteny pomocí sady Visual Studio pomocí úpravy souboru .pkgundef, pokud nechcete, aby tyto funkce v aplikaci vlastní izolovaného prostředí. Zadejte balíček v jednom z podklíčů klíče registru \Packages $RootKey$.  
+## <a name="removing-features-from-the-isolated-shell"></a>Odebrání funkcí z izolovaného prostředí  
+ Některé balíčky, které jsou načteny se sadou Visual Studio, můžete odebrat úpravou souboru. pkgundef, pokud nechcete tyto funkce ve vlastní aplikaci izolovaného prostředí. Balíček zadáte v jednom z podklíčů klíče registru $RootKey $ \Packages.  
   
 > [!NOTE]
-> Identifikátory GUID sady Visual Studio funkce, najdete v tématu [balíček identifikátory GUID z funkce sady Visual Studio](../extensibility/package-guids-of-visual-studio-features.md).  
+> Identifikátory GUID funkcí sady Visual Studio najdete v tématu [GUID balíčků funkcí sady Visual Studio](../extensibility/package-guids-of-visual-studio-features.md).  
   
- Následující postup ukazuje, jak odebrat XML editor z izolovaného prostředí.  
+ Následující postup ukazuje, jak odebrat Editor XML z izolovaného prostředí.  
   
-#### <a name="to-remove-the-xml-editor"></a>Chcete-li odebrat editoru XML  
+#### <a name="to-remove-the-xml-editor"></a>Odebrání editoru XML  
   
-1. Otevřete soubor MyVSShellStub.pkgundef ve složce projektu MyVSShellStub vlastního nastavení prostředí.  
+1. Otevřete soubor MyVSShellStub. pkgundef ve složce vlastního nastavení prostředí projektu MyVSShellStub.  
   
-2. Zrušte komentář u následujícího řádku:  
+2. Odkomentujte následující řádek:  
   
      [$RootKey$\Packages\\{87569308-4813-40a0-9cd0-d7a30838ca3f}]  
   
-3. Znovu sestavte řešení a spustit ladění izolovaného prostředí. Otevřete soubor XML, třeba \MyVSShellStub\MyVSShellStub\MyVSShellStubUI\MyVSShellStubUI.vsct. Ověřte, že nejsou barevně zvýrazněné klíčová slova jazyka XML v souboru a zadejte tento text "<" na řádku nelze vyvolat popisy XML.  
+3. Znovu sestavte řešení a spusťte ladění izolovaného prostředí. Otevřete soubor XML, například \MyVSShellStub\MyVSShellStub\MyVSShellStubUI\MyVSShellStubUI.vsct. Ověřte, že klíčová slova XML v souboru nejsou zabarvení a že při zadání "<" na řádku se nepřinesou popisy XML.  
   
-## <a name="customizing-the-helpabout-box"></a>Přizpůsobení Nápověda/o pole  
- Můžete přizpůsobit Nápověda/o pole, který je vytvořen jako součást šablony projektu izolovaného prostředí.  
+## <a name="customizing-the-helpabout-box"></a>Přizpůsobení pole help/o  
+ Můžete přizpůsobit pole pro nápovědu/informace, které je vytvořeno jako součást šablony projektu izolované prostředí.  
   
-#### <a name="to-customize-the-company-name"></a>Chcete-li přizpůsobit název společnosti  
+#### <a name="to-customize-the-company-name"></a>Přizpůsobení názvu společnosti  
   
-1. Název společnosti, informace o autorských právech, verze produktu a popis produktu se nacházejí v projektu MyVSShellStub.AboutBoxPackage v souboru \Properties\AssemblyInfo.cs. Tento soubor otevřete.  
+1. Název společnosti, informace o autorských právech, verze produktu a popis produktu najdete v projektu MyVSShellStub. AboutBoxPackage v souboru \Properties\AssemblyInfo.cs. Otevřete tento soubor.  
   
-2. Změnit `AssemblyCompany` hodnota, která se **Fabrikam**, `AssemblyProduct` a `AssemblyTitle` hodnoty **Fabrikam Hudba Editor**a `AssemblyCopyright` hodnota, která se **Copyright © Společnost Fabrikam 2015**:  
+2. Změňte `AssemblyCompany` hodnotu na **Fabrikam**, `AssemblyProduct` a `AssemblyTitle` hodnoty na **Fabrikam Music Editor**a `AssemblyCopyright` hodnotu **Copyright © Fabrikam 2015**:  
   
     ```  
     [assembly: AssemblyTitle("Fabrikam Music Editor")]  
@@ -139,15 +139,15 @@ Tento návod ukazuje, jak vytvořit řešení izolovaného prostředí, přizpů
     [assembly: AssemblyCopyright("Copyright © Fabrikam 2015”)]  
     ```  
   
-3. Chcete-li přidat popis produktu, změňte `AssemblyDescription` hodnota, která se **popis editor Fabrikam Music.**:  
+3. Chcete-li přidat popis produktu, změňte hodnotu `AssemblyDescription` na popis programu **Fabrikam Music Editor.** :  
   
     ```  
     [assembly: AssemblyDescription("The description of Fabrikam Music editor.”)]  
     ```  
   
-4. Spustit ladění a v izolovaném prostředí aplikace, otevřete **Nápověda / o** pole. Měli byste vidět změněných řetězců. Název Nápověda/o pole je stejné jako `AssemblyTitle` hodnotu v AssemblyInfo.cs.  
+4. Spusťte ladění a v aplikaci izolovaného prostředí otevřete okno **help/o** . Měli byste vidět změněné řetězce. Název pole help/o je stejný jako hodnota `AssemblyTitle` v AssemblyInfo.cs.  
   
-5. Vlastnosti **Nápověda/o** samotného pole se nacházejí v souboru MyVSShellStub.AboutBoxPackage\AboutBox.xaml. Chcete-li změnit šířku Nápověda/o aplikaci, přejděte na `AboutDialogStyle` blokovat a nastavit `Width` vlastnost na hodnotu 200:  
+5. V souboru MyVSShellStub. AboutBoxPackage\AboutBox.xaml se nacházejí vlastnosti samotného pole **help/o** . Chcete-li změnit šířku pole help/o, přejděte do bloku `AboutDialogStyle` a nastavte vlastnost `Width` na 200:  
   
     ```  
     <Style x:Key="AboutDialogStyle" TargetType="Window">  
@@ -160,47 +160,47 @@ Tento návod ukazuje, jak vytvořit řešení izolovaného prostředí, přizpů
     </Style>  
     ```  
   
-6. Znovu sestavte řešení a spustit ladění izolovaného prostředí. Nápověda/o pole by měla být přibližně čtvereček.  
+6. Znovu sestavte řešení a spusťte ladění izolovaného prostředí. Pole help/o by mělo být přibližně čtvercové.  
   
-## <a name="before-you-deploy-the-isolated-shell-application"></a>Před nasazením aplikací izolovaného prostředí  
- Vaše aplikace izolovaného prostředí lze nainstalovat na jakýkoli počítač, který má Distribuovatelný balíček prostředí Visual Studio Shell (izolovaný režim). Další informace o opětovné distribuci balíčku najdete v tématu [stahování rozšíření sady Visual Studio](http://go.microsoft.com/fwlink/?LinkID=119298) webu.  
+## <a name="before-you-deploy-the-isolated-shell-application"></a>Před nasazením aplikace izolovaného prostředí  
+ Vaše aplikace izolovaného prostředí se dá nainstalovat na libovolný počítač, který má Distribuovatelný balíček prostředí Visual Studio Shell (izolovaný režim). Další informace o redistribuovatelných balíčcích najdete na webu věnovaném [stažení rozšiřitelnosti sady Visual Studio](https://go.microsoft.com/fwlink/?LinkID=119298) .  
   
-## <a name="deploying-the-isolated-shell-application"></a>Nasazení aplikací izolovaného prostředí  
- Nasazení aplikace izolovaného prostředí na cílovém počítači tak, že vytvoříte projekt instalace. Je nutné zadat tyto věci:  
+## <a name="deploying-the-isolated-shell-application"></a>Nasazení aplikace izolovaného prostředí  
+ Aplikaci izolovaného prostředí nasadíte do cílového počítače vytvořením projektu instalace. Je nutné zadat tyto věci:  
   
-- Rozložení složky a soubory v cílovém počítači.  
+- Rozložení složek a souborů v cílovém počítači.  
   
-- Podmínky spuštění, které zaručit, že rozhraní .NET Framework a sady Visual Studio prostředí modulu runtime jsou nainstalovány v cílovém počítači.  
+- Podmínky spuštění, které zaručují, že .NET Framework a modul runtime prostředí sady Visual Studio jsou nainstalovány v cílovém počítači.  
   
-  V následujícím postupu musíte do počítače nainstalovat program InstallShield Limited Edition.  
+  V následujícím postupu budete muset na svém počítači nainstalovat program InstallShield Limited Edition.  
   
 #### <a name="to-create-the-setup-project"></a>Vytvoření projektu instalace  
   
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel řešení a potom klikněte na tlačítko **přidat nový projekt**.  
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel řešení a pak klikněte na **Přidat nový projekt**.  
   
-2. V **nový projekt** dialogového okna rozbalte **ostatní typy projektů** a pak vyberte **instalace a nasazení**. Vyberte šablonu InstallShield. Název nového projektu `MySetup` a potom klikněte na tlačítko **OK**.  
+2. V dialogovém okně **Nový projekt** rozbalte položku **jiné typy projektů** a potom vyberte možnost **nastavení a nasazení**. Vyberte šablonu InstallShield. Zadejte název nového projektu `MySetup` a klikněte na tlačítko **OK**.  
   
-3. Pokud je už nainstalovaný program InstallShield Limited Edition, pokračujte k dalšímu kroku.  
+3. Pokud je již nainstalována aplikace InstallShield s omezením verze, pokračujte k dalšímu kroku.  
   
-    Pokud ještě není nainstalovaný program InstallShield Limited Edition, zobrazí se stránka stahování programu InstallShield. Postupujte podle pokynů ke stažení a instalace produktu, výběr verze nástroje InstallShield, který je kompatibilní s vaší verzí sady Visual Studio. Musíte se rozhodnout, jestli se má zaregistrovat instalaci programu InstallShield nebo ho používat jako zkušební verzi. Po dokončení instalace je nutné restartovat Visual Studio.  
+    Pokud již není nainstalována aplikace InstallShield s omezením verze, zobrazí se stránka pro stažení InstallShield. Podle pokynů stáhněte a nainstalujte produkt a zvolte verzi programu InstallShield, která je kompatibilní s vaší verzí sady Visual Studio. Musíte se rozhodnout, jestli chcete zaregistrovat instalaci programu InstallShield, nebo ho použít jako zkušební verzi. Po dokončení instalace je nutné restartovat aplikaci Visual Studio.  
   
    > [!IMPORTANT]
-   > Před vytvořením projektu InstallShield, je nutné spustit aplikaci Visual Studio jako správce. Pokud to neprovedete, zobrazí se chyba při vytváření projektu.  
+   > Před vytvořením projektu InstallShield je nutné spustit aplikaci Visual Studio jako správce. Pokud to neuděláte, při sestavování projektu se zobrazí chyba.  
   
-   Další kroky ukazují, jak nakonfigurovat nastavení projektu.  
+   Následující kroky ukazují, jak nakonfigurovat projekt instalace.  
   
 > [!IMPORTANT]
-> Ujistěte se, že jste vytvořili konfigurace pro vydání izolovaného prostředí projektu nejméně jednou předtím, než nakonfigurujete nastavení projektu.  
+> Před konfigurací projektu instalace se ujistěte, že jste sestavili konfiguraci verze svého projektu izolovaného prostředí alespoň jednou.  
   
 #### <a name="to-configure-the-setup-project"></a>Konfigurace projektu instalace  
   
-1. V **Průzkumníka řešení**v části **MySetup** projektu, zvolte **Project Assistant**. V dolním řádku **Project Assistant** okně zvolte **informací o aplikaci**. Zadejte **Fabrikam** jako název vaší společnosti a **Fabrikam Hudba Editor** jako název vaší aplikace. Zvolte šipku vpřed v pravém dolním rohu **Project Assistant**.  
+1. V **Průzkumník řešení**v projektu **MySetup** vyberte možnost **Pomocník projektu**. V dolním řádku okna **asistenta projektu** vyberte možnost **informace o aplikaci**. Jako název vaší aplikace zadejte **Fabrikam** jako název vaší společnosti a programový **Editor Fabrikam** . V pravém dolním rohu **pomocníka projektu**vyberte šipku pro posun.  
   
-2. Vyberte **Ano** pod **vaše aplikace vyžaduje veškerý software nainstalovaný na počítači?** a pak vyberte **balíček úplné rozhraní Microsoft .NET Framework 4.5**.  
+2. V **části** **aplikace vyžaduje, aby byl v počítači nainstalován veškerý software?** potom vyberte možnost **Microsoft .NET Framework 4,5 úplný balíček**.  
   
-3. Zvolte **soubory aplikace** tlačítko v dolní části okna a ujistěte se, že **Fabrikam Hudba Editor** je vybrána složka.  
+3. V dolní části okna klikněte na tlačítko **soubory aplikace** a ujistěte se, že je vybraná složka **Editor hudby společnosti Fabrikam** .  
   
-4. Zvolte **přidat soubory** tlačítko. V **přidat soubory** dialogového okna přidejte následující soubory z **MyVSShellStub\Release** složky:  
+4. Klikněte na tlačítko **Přidat soubory** . V dialogovém okně **Přidat soubory** přidejte ze složky **MyVSShellStub\Release** následující soubory:  
   
     1. MyVSShellStub.exe.config  
   
@@ -210,53 +210,53 @@ Tento návod ukazuje, jak vytvořit řešení izolovaného prostředí, přizpů
   
     4. MyVSShellStub.pkgdef  
   
-    5. MyVSShellStub.pkgundef  
+    5. MyVSShellStub. pkgundef  
   
     6. MyVSShellStub.winprf  
   
-    7. Splash.bmp  
+    7. Úvodní. bmp  
   
-5. Klikněte na tlačítko **přidat výstupy projektu** tlačítko a přidejte **MyVSShellStub/primární výstup**. Klikněte na **OK**.  
+5. Klikněte na tlačítko **Přidat výstupy projektu** a přidejte **MyVSShellStub/primární výstup**. Klikněte na tlačítko **OK**.  
   
-6. V levém podokně v části **cílový počítač**, klikněte pravým tlačítkem na **Fabrikam Hudba Editor [INSTALLDIR]** uzlu a přidejte **novou složku** s názvem **rozšíření** .  
+6. V levém podokně v části **cílový počítač**klikněte pravým tlačítkem myši na **uzel programu pro úpravu hudby společnosti Fabrikam [INSTALLDIR]** a přidejte **novou složku** s názvem **Extensions**.  
   
-7. Klikněte pravým tlačítkem myši **rozšíření** uzlu v levém podokně a přidejte novou složku s názvem **aplikace**.  
+7. V levém podokně klikněte pravým tlačítkem na uzel **rozšíření** a přidejte novou složku s názvem **Application (aplikace**).  
   
-8. Vyberte **aplikace** složky a klikněte na tlačítko **přidat výstupy projektu** tlačítko a pak vyberte primární výstup z projektu MyVSShellStub.AboutBoxPackage.  
+8. Vyberte složku **aplikace** a klikněte na tlačítko **Přidat výstupy projektu** a pak vyberte primární výstup z projektu MyVSShellStub. AboutBoxPackage.  
   
-9. Klikněte na tlačítko **přidat soubory** tlačítko a ve složce \MyVSShellStub\Release\Extensions\Application\ přidat následující soubory:  
+9. Klikněte na tlačítko **Přidat soubory** a ze složky \MyVSShellStub\Release\Extensions\Application\ přidejte následující soubory:  
   
     - MyVSShellStub.AboutBoxPackage.pkgdef  
   
     - MyVSShellStub.Application.pkgdef  
   
-10. Klikněte pravým tlačítkem myši **Fabrikam Hudba Editor [INSTALLDIR]** uzlu v levém podokně a přidejte novou složku s názvem **1033**.  
+10. V levém podokně klikněte pravým tlačítkem na uzel **hudební editor společnosti Fabrikam [INSTALLDIR]** a přidejte novou složku s názvem **1033**.  
   
-11. Vyberte složku, 1033 a potom klikněte na tlačítko **přidat výstupy projektu** tlačítko a vyberte primární výstup z projektu MyVSShellStubUI.  
+11. Vyberte složku 1033 a potom klikněte na tlačítko **Přidat výstupy projektu** a vyberte primární výstup z projektu MyVSShellStubUI.  
   
-12. Přesunout **aplikačních zkratek** okna.  
+12. Přejděte do okna s **použitím klávesových zkratek** .  
   
-13. Klikněte na tlačítko **nový** vytvořte zástupce a vyberte **[ProgramFilesFolder] \Fabrikam\Fabrikam Music Editor\MyVSShellStub.Primary Output**.  
+13. Kliknutím na **Nový** vytvořte zástupce a vyberte **[Složkaprogramfiles] \Fabrikam\Fabrikam Music Editor\MyVSShellStub.Primary Output**.  
   
-14. Přesunout **instalační Interview** podokně.  
+14. Přejděte do podokna **pohovor na instalaci** .  
   
-15. Nastavit všechny položky **ne**.  
+15. Nastavit všechny položky na **ne**.  
   
-16. V **Průzkumníka řešení**, otevřete v projektu MySetup **definovat požadavky na nastavení a akce \ požadavky**. **Požadavky** otevře se okno.  
+16. V **Průzkumník řešení**v projektu MySetup otevřete položku **definovat požadavky na instalaci a akce \ požadavky**. Otevře se okno **požadavky** .  
   
-17. Klikněte pravým tlačítkem myši **systémové požadavky softwaru** a vyberte **vytvořit novou podmínku spuštění**. **Průvodce vyhledáváním systému** se zobrazí.  
+17. Klikněte pravým tlačítkem na **požadavky na systémový software** a vyberte **vytvořit novou podmínku spuštění**. Zobrazí se **Průvodce systémem vyhledávání** .  
   
-18. V **co chcete najít?** podokně zvolte **záznam v registru** v rozevíracím seznamu a klikněte na **Další**.  
+18. V podokně **co chcete najít?** v rozevíracím seznamu vyberte **položku registru** a klikněte na **Další**.  
   
-19. V **jak chcete hledat?** vyberte **HKEY_LOCAL_MACHINE** jako kořenový klíč registru. Zadejte **SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** pro 64bitové systémy nebo **SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** pro 32bitové systémy a zadejte  **Nainstalujte** jako hodnotu registru. Klikněte na **Další**.  
+19. V podokně **jak ho chcete vyhledat?** vyberte jako kořen registru **HKEY_LOCAL_MACHINE** . Zadejte **SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** pro 64 systémy nebo **SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** pro 32 bitové systémy a jako hodnotu registru zadejte **install** . Klikněte na **Další**.  
   
-20. V **co chcete udělat s hodnotou?** podokně zadejte **vyžaduje Visual Studio 2015 izolovaného prostředí Redistributable k instalaci tohoto produktu.** zobrazení textu a klikněte na **Dokončit**.  
+20. V podokně **co chcete s hodnotou?** zadejte **Tento produkt vyžaduje instalaci sady Visual Studio 2015 Isolated Shell Redistributable.** jako text zobrazení a klikněte na tlačítko **Dokončit**.  
   
-21. Znovu sestavte řešení izolovaného prostředí pro vytvoření projektu instalace.  
+21. Znovu sestavte řešení izolovaného prostředí a vytvořte projekt instalace.  
   
-     Soubor setup.exe najdete v následující složce:  
+     Soubor Setup. exe můžete najít v následující složce:  
   
      \MyVSShellStub\MySetup\MySetup\Express\SingleImage\DiskImages\DISK1  
   
 ## <a name="testing-the-installation-program"></a>Testování instalačního programu  
- Pokud chcete otestovat nastavení, zkopírujte soubor setup.exe na jiný počítač a spusťte spustitelný soubor instalace. Je třeba možné spouštět aplikace izolovaného prostředí.
+ Chcete-li otestovat instalaci, zkopírujte soubor Setup. exe do jiného počítače a spusťte spustitelný soubor instalace. Měli byste být schopni spustit aplikaci izolovaného prostředí.

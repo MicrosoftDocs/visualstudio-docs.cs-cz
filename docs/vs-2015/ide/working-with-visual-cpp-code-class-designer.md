@@ -19,12 +19,12 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5a543e7a1e2aca4590df320261aef2c653a55132
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cb2b5a55f778b8025ea9da25713eca903f9cbf74
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662609"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296218"
 ---
 # <a name="working-with-visual-c-code-class-designer"></a>Práce s kódem jazyka Visual C++ (návrhář tříd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,7 +41,7 @@ Návrhář tříd zobrazuje vizuální návrhovou plochu nazvanou *Diagram tří
 
 - Struktura
 
-- Výčet
+- Enum
 
 - Makro (zobrazí zobrazení po zpracování v makru)
 
@@ -65,13 +65,13 @@ Návrhář tříd zobrazuje vizuální návrhovou plochu nazvanou *Diagram tří
 
 - Typ je v projektu nebo sestavení, které není odkazováno z projektu, který obsahuje diagram třídy. Chcete-li opravit tuto chybu, přidejte odkaz na projekt nebo sestavení, které obsahuje daný typ. Další informace naleznete v tématu [NIB postupy: Přidání nebo odebrání odkazů pomocí dialogového okna Přidat odkaz](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9).
 
-- Typ není ve správném rozsahu, takže ho Návrhář tříd nemůže najít. Ujistěte se, že v kódu chybí příkaz `using`, `imports` nebo `#include`. Také se ujistěte, že jste nepřesunuli typ (nebo související typ) mimo obor názvů, ve kterém byl původně umístěn.
+- Typ není ve správném rozsahu, takže ho Návrhář tříd nemůže najít. Ujistěte se, že v kódu chybí příkaz `using`, `imports`nebo `#include`. Také se ujistěte, že jste nepřesunuli typ (nebo související typ) mimo obor názvů, ve kterém byl původně umístěn.
 
 - Typ neexistuje (nebo byl zakomentován). Chcete-li tuto chybu opravit, ujistěte se, že jste tento typ nepřidali nebo neodstranili.
 
 - Typ se nachází v knihovně, na kterou odkazuje direktiva #import. Možným řešením je ruční přidání generovaného kódu (soubor. TLH) do direktivy #include do souboru hlaviček.
 
-  Chyba, kterou nejčastěji vidíte pro problém s rozlišením typu, nebyl **nalezen v jednom nebo více tvarech v diagramu tříd ' \<element > '** . Tato chybová zpráva nemusí nutně znamenat, že váš kód je v chybovém prostředí. Označuje pouze to, že návrhář tříd nemůže zobrazit váš kód. Vyzkoušejte následující míry.
+  Chyba, kterou nejčastěji vidíte pro problém s rozlišením typu, nebyl **nalezen v jednom nebo více tvarech v diagramu tříd '\<elementu > '** . Tato chybová zpráva nemusí nutně znamenat, že váš kód je v chybovém prostředí. Označuje pouze to, že návrhář tříd nemůže zobrazit váš kód. Vyzkoušejte následující míry.
 
 - Ujistěte se, že typ existuje. Ujistěte se, že jste neúmyslně zakomentováni nebo odstranili zdrojový kód.
 
@@ -79,10 +79,10 @@ Návrhář tříd zobrazuje vizuální návrhovou plochu nazvanou *Diagram tří
 
 - Zkuste typ vyřešit. Typ může být v projektu nebo sestavení, které není odkazováno z projektu, který obsahuje diagram třídy. Chcete-li opravit tuto chybu, přidejte odkaz na projekt nebo sestavení, které obsahuje daný typ. Další informace naleznete v tématu [NIB postupy: Přidání nebo odebrání odkazů pomocí dialogového okna Přidat odkaz](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9).
 
-- Zajistěte, aby byl typ ve správném rozsahu, aby ho Návrhář tříd mohl najít. Ujistěte se, že v kódu chybí příkaz `using`, `imports` nebo `#include`. Také se ujistěte, že jste nepřesunuli typ (nebo související typ) mimo obor názvů, ve kterém byl původně umístěn.
+- Zajistěte, aby byl typ ve správném rozsahu, aby ho Návrhář tříd mohl najít. Ujistěte se, že v kódu chybí příkaz `using`, `imports`nebo `#include`. Také se ujistěte, že jste nepřesunuli typ (nebo související typ) mimo obor názvů, ve kterém byl původně umístěn.
 
 ### <a name="troubleshooting-other-error-messages"></a>Řešení potíží s jinými chybovými zprávami
- Pomoc s chybami a upozorněními při řešení potíží najdete ve veřejných fórech MSDN (Microsoft Developer Network). Podívejte se na [Fórum sady Visual Studio Návrhář tříd](http://go.microsoft.com/fwlink/?linkid=160754).
+ Pomoc s chybami a upozorněními při řešení potíží najdete ve veřejných fórech MSDN (Microsoft Developer Network). Podívejte se na [Fórum sady Visual Studio Návrhář tříd](https://go.microsoft.com/fwlink/?linkid=160754).
 
 ## <a name="limitations"></a>Omezení pro C++ prvky kódu
 
@@ -107,4 +107,4 @@ Návrhář tříd zobrazuje vizuální návrhovou plochu nazvanou *Diagram tří
 - Návrhář tříd nemůže zobrazit typy, které jsou anulovány nebo odvozeny od typu void.
 
 ## <a name="see-also"></a>Viz také
- [Navrhování a zobrazování tříd a typů](../ide/designing-and-viewing-classes-and-types.md) [pracujících s třídami a jinými typy (návrhář tříd)](../ide/working-with-classes-and-other-types-class-designer.md) [práce s diagramy tříd (návrhář tříd)](../ide/working-with-class-diagrams-class-designer.md) [navrhování tříd a typů (návrhář tříd)](../ide/designing-classes-and-types-class-designer.md) [Další informace o Návrhář tříd chyby](../ide/additional-information-about-class-designer-errors.md) [vizuální C++ třídy v Návrhář tříd](../ide/visual-cpp-classes-in-class-designer.md) [vizuální C++ struktury v Návrhář tříd](../ide/visual-cpp-structures-in-class-designer.md) [vizuální C++ výčty v Návrhář tříd](../ide/visual-cpp-enumerations-in-class-designer.md) [Visual C++ definice typedef v Návrhář tříd](../ide/visual-cpp-typedefs-in-class-designer.md)
+ [Navrhování a zobrazování tříd a typů](../ide/designing-and-viewing-classes-and-types.md) [pracujících s třídami a jinými typy (návrhář tříd)](../ide/working-with-classes-and-other-types-class-designer.md) [práce s diagramy tříd (návrhář tříd)](../ide/working-with-class-diagrams-class-designer.md) [navrhování tříd a typů (návrhář tříd)](../ide/designing-classes-and-types-class-designer.md) [Další informace o Návrhář třídch](../ide/additional-information-about-class-designer-errors.md) [ C++ vizuálních třídách chyb v](../ide/visual-cpp-classes-in-class-designer.md) [ C++ Návrhář tříd](../ide/visual-cpp-structures-in-class-designer.md) vizuálních [ C++ výčtech](../ide/visual-cpp-enumerations-in-class-designer.md) v Návrhář tříd vizuálních výčtech v Návrhář tříd Visual [ C++ definice typedef v](../ide/visual-cpp-typedefs-in-class-designer.md) Návrhář tříd

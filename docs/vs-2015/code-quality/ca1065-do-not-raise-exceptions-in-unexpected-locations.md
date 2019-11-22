@@ -15,12 +15,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 4b49ea9c293128efd400a1aa22d78ae4ee945092
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 439c6b5fc30be2e76eb6c0b6a44b1ec5226633b1
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663603"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295943"
 ---
 # <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065: Nevyvolávejte výjimky v neočekávaných umístěních
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "72663603"
 |-|-|
 |TypeName|DoNotRaiseExceptionsInUnexpectedLocations|
 |CheckId|CA1065|
-|Kategorie|Microsoft. Design|
+|Kategorie|Microsoft.Design|
 |Narušující změna|Bez přerušení|
 
 ## <a name="cause"></a>příčina
@@ -69,9 +69,9 @@ ms.locfileid: "72663603"
 
 - <xref:System.NotSupportedException?displayProperty=fullName> a všechny deriváty
 
-- <xref:System.ArgumentException?displayProperty=fullName> (pouze z indexovaného Get)
+- <xref:System.ArgumentException?displayProperty=fullName> (jenom z indexovaného Get)
 
-- <xref:System.Collections.Generic.KeyNotFoundException> (pouze z indexovaného Get)
+- <xref:System.Collections.Generic.KeyNotFoundException> (jenom z indexovaného Get)
 
 ### <a name="event-accessor-methods"></a>Metody přístupového objektu události
  Přístupové objekty událostí by měly být jednoduché operace, které nevyvolají výjimky. Událost by neměla vyvolat výjimku při pokusu o přidání nebo odebrání obslužné rutiny události.
@@ -89,16 +89,16 @@ ms.locfileid: "72663603"
 
 - <xref:System.Object.Equals%2A?displayProperty=fullName>
 
-- [M:IEquatable.Equals](http://go.microsoft.com/fwlink/?LinkId=113472)
+- [M:IEquatable.Equals](https://go.microsoft.com/fwlink/?LinkId=113472)
 
-  Metoda **Equals** by měla vracet `true` nebo `false` namísto vyvolání výjimky. Například pokud se rovná se předává dvěma neodpovídajícím typům, by měl vrátit `false` namísto vyvolání <xref:System.ArgumentException>.
+  Metoda **EQUAL** by měla vracet `true` nebo `false` namísto vyvolání výjimky. Například pokud se rovná se předává dvěma neodpovídajícím typům, měl by vracet pouze `false` namísto vyvolání <xref:System.ArgumentException>.
 
 ### <a name="gethashcode-methods"></a>Metody GetHashCode
  Následující metody **GetHashCode** by obvykle neměly vyvolat výjimky:
 
 - <xref:System.Object.GetHashCode%2A>
 
-- [M:IEqualityComparer.GetHashCode (T)](http://go.microsoft.com/fwlink/?LinkId=113477)
+- [M:IEqualityComparer.GetHashCode(T)](https://go.microsoft.com/fwlink/?LinkId=113477)
 
   **GetHashCode** by měla vždycky vracet hodnotu. V opačném případě můžete ztratit položky v zatřiďovací tabulce.
 
@@ -114,7 +114,7 @@ ms.locfileid: "72663603"
  Vyvolání výjimky z finalizační metody způsobí, že modul CLR nebude úspěšný, což rozvine proces. Proto by se měly vyvarovat výjimky v finalizační metodě vždy.
 
 ### <a name="dispose-methods"></a>Metody Dispose
- Metoda <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> by neměla vyvolat výjimku. Dispose se často volá jako součást logiky vyčištění v klauzuli `finally`. Proto explicitní vyvolání výjimky z Dispose vynutí uživatele přidat zpracování výjimek v klauzuli `finally`.
+ Metoda <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> by neměla vyvolat výjimku. Dispose se často volá jako součást logiky vyčištění v klauzuli `finally`. Proto explicitní vyvolání výjimky z Dispose vynutí uživatele přidat zpracování výjimek v rámci klauzule `finally`.
 
  Cesta k **Dispose (false)** kódu by nikdy neměla vyvolat výjimky, protože to je téměř vždy voláno od finalizační metody.
 

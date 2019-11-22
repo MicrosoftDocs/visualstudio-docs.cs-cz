@@ -10,12 +10,12 @@ ms.assetid: 91b167a3-280a-498b-8fc2-f67859a2c64e
 caps.latest.revision: 29
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9a860ad5408038cced1f5aa2ac20420e35a1240a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 56f2d4cb0b02cc661177a4f781a5c40db924ee2c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672225"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302106"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů částí pomocí Průzkumníka testů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "72672225"
 Pomocí Průzkumníka testů můžete spouštět testy jednotek ze sady Visual Studio nebo projektů testování částí třetích stran, seskupit testy do kategorií, filtrovat seznam testů a vytvářet, ukládat a spouštět seznamy testů. Můžete také ladit testy a analyzovat výkon testu a pokrytí kódu.
 
 ## <a name="BKMK_Contents"></a>Obsah
- [Architektury testování částí a projekty testů](#BKMK_Unit_test_frameworks_and_test_projects)
+ [Rozhraní pro testování částí a Testovací projekty](#BKMK_Unit_test_frameworks_and_test_projects)
 
  [Spustit testy v Průzkumníku testů](#BKMK_Run_tests_in_Test_Explorer)
 
@@ -37,21 +37,21 @@ Pomocí Průzkumníka testů můžete spouštět testy jednotek ze sady Visual S
 
  [Externí prostředky](#BKMK_External_resources)
 
-## <a name="BKMK_Unit_test_frameworks_and_test_projects"></a>Architektury testování částí a projekty testů
+## <a name="BKMK_Unit_test_frameworks_and_test_projects"></a> Rozhraní pro testování částí a Testovací projekty
  Visual Studio obsahuje rozhraní pro testování částí společnosti Microsoft pro spravovaný i nativní kód. Nicméně Průzkumník testů může také spustit libovolné rozhraní testování částí, které implementovalo adaptér Průzkumníka testů. Další informace o instalaci rozhraní pro testování částí třetích stran najdete v tématu [instalace rozhraní pro testování částí třetích stran](../test/install-third-party-unit-test-frameworks.md) .
 
- Průzkumník testů může spustit testy z více projektů testů v řešení a z testovacích tříd, které jsou součástí projektů produkčního kódu. Testovací projekty mohou používat různé architektury testování částí. Při zápisu testovaného kódu pro .NET Framework lze testovací projekt zapsat v jakémkoli jazyce, který také cílí na .NET Framework, bez ohledu na jazyk cílového kódu. Nativní projekty CC++ /kódu musí být testovány pomocí rozhraní C++ testování částí.
+ Průzkumník testů může spouštět testy z více zkušebních projektů v řešení a z testů tříd, které jsou součástí výroby kódu projektů. Testovací projekty mohou používat různé architektury testování částí. Při zápisu testovaného kódu pro .NET Framework lze testovací projekt zapsat v jakémkoli jazyce, který také cílí na .NET Framework, bez ohledu na jazyk cílového kódu. Nativní projekty kódu C/C++ musí být testovány pomocí rozhraní testování částí C++.
 
  ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [](#BKMK_Contents)
 
 ## <a name="BKMK_Run_tests_in_Test_Explorer"></a>Spustit testy v Průzkumníku testů
  Spustit testy [spuštění testů po každém sestavení](#BKMK_Run_tests_after_every_build) [](#BKMK_Run_tests) **&#124;**
 
- Při sestavování testovacího projektu se testy zobrazí v Průzkumníku testů. Pokud není Průzkumník testů viditelný, zvolte možnost **test** v nabídce aplikace Visual Studio, zvolte možnost **Windows**a pak zvolte možnost **Průzkumník testů**.
+ Když sestavíte testovací projekt, testy se zobrazí v Průzkumníku testů. Pokud se nezobrazí Průzkumník testů, zvolte **testovací** v nabídce sady Visual Studio, zvolte **Windows**a klikněte na tlačítko **Průzkumník testů**.
 
  ![Průzkumník testů jednotek](../ide/media/ute-failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")
 
- Při spuštění, zápisu a opětovném spuštění testů se v Průzkumníku testů zobrazí výsledky ve výchozích skupinách **neúspěšných testů**, **Úspěšné testy**, **přeskočené testy** a **nespouštějí se testy**. Můžete změnit způsob, jakým Průzkumník testů seskupí testy.
+ Jak spustit, zápis a znovu spouštěny, zobrazuje Průzkumník testů výsledky ve výchozích skupinách **neúspěšné testy**, **úspěšné testy**, **přeskočené testy** a  **Nespuštěné testy**. Můžete změnit způsob, jakým Průzkumník testů seskupuje vaše testy.
 
  Na panelu nástrojů Průzkumníka testů můžete provádět spoustu práce při hledání, organizování a spouštění testů.
 
@@ -60,17 +60,17 @@ Pomocí Průzkumníka testů můžete spouštět testy jednotek ze sady Visual S
  ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [](#BKMK_Contents)
 
 ### <a name="BKMK_Run_tests"></a>Spustit testy
- Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které vyberete. Proveďte jednu z těchto akcí:
+ Spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které jste vybrali. Proveďte jednu z těchto akcí:
 
-- Chcete-li spustit všechny testy v řešení, vyberte možnost **Spustit vše**.
+- Chcete-li spustit všechny testy v řešení, zvolte **spustit všechny**.
 
-- Chcete-li spustit všechny testy ve výchozí skupině, zvolte možnost **Spustit...** a poté vyberte skupinu v nabídce.
+- Chcete-li spustit všechny testy ve výchozí skupině, zvolte **spuštění...**  a pak vyberte skupinu v nabídce.
 
 - Vyberte jednotlivé testy, které chcete spustit, otevřete kontextovou nabídku pro vybraný test a pak zvolte možnost **Spustit vybrané testy**.
 
-- Pokud jednotlivé testy neobsahují žádné závislosti, které brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů ![pomocí&#95;malého&#45;](../test/media/ute-parallelicon-small.png "UTE_parallelicon – malý") přepínacího tlačítka ustit parallelicon na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
+- Pokud jednotlivé testy neobsahují žádné závislosti, které brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů ![pomocí&#95;malého&#45;](../test/media/ute-parallelicon-small.png "UTE_parallelicon – malý") přepínacího tlačítka ustit parallelicon na panelu nástrojů. To může výrazně snížit čas potřebný ke spuštění všech testů.
 
-  V horní části okna Průzkumníka testů je animovaný řádek Pass/selhat, protože testy jsou spouštěny. Při uzavírání testovacího běhu se pruh úspěch/selhání změní na zelený, pokud všechny testy proběhly úspěšně, nebo pokud dojde k selhání testu na červenou.
+  Panel úspěšný/selhání v horní části okna Průzkumníka testů je animovaný během spuštění testů. V závěru testovacího běhu panel úspěšný/selhání se změní na zelenou Pokud všechny testy předat, nebo zčervená, pokud některé testy selhaly.
 
   ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [](#BKMK_Contents)
 
@@ -88,26 +88,26 @@ Pomocí Průzkumníka testů můžete spouštět testy jednotek ze sady Visual S
 ## <a name="BKMK_View_test_results"></a>Zobrazit výsledky testu
  [Zobrazit podrobnosti](#BKMK_View_test_details) **&#124;** testu [Zobrazit zdrojový kód testovací metody](#BKMK_View_the_source_code_of_a_test_method)
 
- Když spouštíte, píšete a znovu spustíte testy, Průzkumník testů zobrazí výsledky ve skupinách **neúspěšných testů**, **úspěšných testů**, **přeskočených testů** a **nespustí testy**. Podokno podrobností v dolní části Průzkumníka testů zobrazuje souhrn testovacího běhu.
+ Jak spustit, zápis a znovu spouštěny, zobrazuje Průzkumník testů výsledky ve skupinách **neúspěšné testy**, **úspěšné testy**, **přeskočené testy** a **není spuštěn Testy**. V podokně podrobností v dolní části Průzkumníku testů zobrazí shrnutí testu spusťte.
 
 ### <a name="BKMK_View_test_details"></a>Zobrazit podrobnosti testu
- Chcete-li zobrazit podrobnosti o jednotlivých testech, vyberte test.
+ Chcete-li zobrazit podrobnosti o konkrétním testu, vyberte test.
 
  ![Podrobnosti spuštění testu](../test/media/ute-testdetails.png "UTE_TestDetails")
 
- V podokně podrobností testu se zobrazí následující informace:
+ Podokno podrobností testu zobrazí následující informace:
 
-- Název zdrojového souboru a číslo řádku testovací metody.
+- Název zdrojového souboru a číslo řádku zkušební metody.
 
 - Stav testu.
 
-- Uplynulý čas, po který trvalo spuštění testovací metody.
+- Uplynulý čas trvalo spuštění zkušební metody.
 
-  Pokud se test nezdařil, podokno podrobností také obsahuje:
+  Pokud se test nezdaří, zobrazí se také v podokně podrobností:
 
-- Zpráva vrácená jednotkou testu jednotek pro test.
+- Zprávy vrácené jednotkou testovacího rozhraní pro test.
 
-- Trasování zásobníku v době, kdy se test nezdařil.
+- Trasování zásobníku v době testu se nezdařilo.
 
   ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [](#BKMK_Contents)
 
@@ -130,10 +130,10 @@ Pomocí Průzkumníka testů můžete spouštět testy jednotek ze sady Visual S
 
 |Skupina|Popis|
 |-----------|-----------------|
-|**Úkolu**|Seskupuje test podle doby spuštění: **rychlá**, **střední**a **pomalá**.|
-|**Zaznamenaný**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
+|**Doba trvání**|Seskupuje test podle doby spuštění: **rychlá**, **střední**a **pomalá**.|
+|**Výsledek**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 |**Traits**|Seskupí testy podle párů kategorií/hodnot, které definujete. Syntaxe pro určení kategorií vlastností a hodnot je definována v rámci testovacího rozhraní jednotky.|
-|**Projektem**|Seskupí testy podle názvu projektů.|
+|**Projekt**|Seskupí testy podle názvu projektů.|
 
  ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [](#BKMK_Contents)
 
@@ -153,13 +153,13 @@ Pomocí Průzkumníka testů můžete spouštět testy jednotek ze sady Visual S
 
  **Vlastnosti v architektuře testování částí společnosti Microsoft proC++**
 
- Pro definování vlastností použijte makro `TEST_METHOD_ATTRIBUTE`. Například pro definování vlastnosti s názvem `TEST_MY_TRAIT`:
+ Chcete-li definovat vlastnost, použijte `TEST_METHOD_ATTRIBUTE` – makro. Například pro definici znaku s názvem `TEST_MY_TRAIT`:
 
 ```cpp
 #define TEST_MY_TRAIT(traitValue) TEST_METHOD_ATTRIBUTE(L"MyTrait", traitValue)
 ```
 
- Použití definovaného vlastností při testování částí:
+ Použití definované vlastnosti v testech jednotek:
 
 ```
 BEGIN_TEST_METHOD_ATTRIBUTE(Method1)
@@ -175,13 +175,13 @@ TEST_METHOD(Method1)
 }
 ```
 
-### <a name="c-trait-attribute-macros"></a>C++makra atributu vlastnosti
+### <a name="c-trait-attribute-macros"></a>Atributy a makra C++ vlastností
 
-|Podokně|Popis|
+|– Makro|Popis|
 |-----------|-----------------|
-|`TEST_METHOD_ATTRIBUTE(attributeName, attributeValue)`|Použijte makro TEST_METHOD_ATTRIBUTE k definování vlastnosti.|
-|`TEST_OWNER(ownerAlias)`|Použijte předdefinovaný vlastnický vlastník a určete vlastníka testovací metody.|
-|`TEST_PRIORITY(priority)`|Pomocí předdefinované vlastnosti priority můžete přiřadit relativní priority k testovacím metodám.|
+|`TEST_METHOD_ATTRIBUTE(attributeName, attributeValue)`|Chcete-li definovat vlastnost, použijte makro TEST_METHOD_ATTRIBUTE.|
+|`TEST_OWNER(ownerAlias)`|Použijte předdefinovanou vlastnost Owner k zadání vlastníka testovací metody.|
+|`TEST_PRIORITY(priority)`|Pomocí předdefinované vlastnosti Priority přiřaďte relativní priority testovacím metodám.|
 
  ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [](#BKMK_Contents)
 
@@ -206,12 +206,12 @@ TEST_METHOD(Method1)
 |Kvalifikátor|Popis|
 |---------------|-----------------|
 |**Znak**|Vyhledá shody v kategorii a hodnotě vlastností. Syntaxe pro určení kategorií vlastností a hodnot je definována v rámci testovacího rozhraní jednotky.|
-|**Projektem**|Vyhledá shody v názvech projektů testů.|
+|**Projekt**|Vyhledá shody v názvech projektů testů.|
 |**Chybová zpráva**|Vyhledá shodu v uživatelsky definovaných chybových zprávách vrácených neúspěšnými kontrolními výrazy.|
 |**Cesta k souboru**|Vyhledá shody v plně kvalifikovaném názvu souboru zdrojových souborů testu.|
 |**Plně kvalifikovaný název**|Vyhledá plně kvalifikovaný název souboru testovacích oborů názvů, tříd a metod pro shody.|
 |**Output**|Vyhledá chybové zprávy definované uživatelem, které jsou zapsány do standardního výstupu (stdout) nebo standardní chyby (stderr). Syntaxe pro určení výstupních zpráv je definována v rámci testovacího rozhraní jednotky.|
-|**Zaznamenaný**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
+|**Výsledek**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 
  K vyloučení podmnožiny výsledků filtru použijte následující syntaxi:
 
@@ -240,7 +240,7 @@ FullName:"MyClass" - FullName:"PerfTest"
 
  **Chcete-li otevřít seznam stop**, zvolte možnost test, seznam testů v nabídce aplikace Visual Studio a buď vyberte ze seznamu naposledy použitých seznamů stop, nebo zvolte možnost otevřít seznam stop a zadejte název a umístění seznamu skladeb.
 
- Pokud jednotlivé testy neobsahují žádné závislosti, které brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů ![pomocí&#95;malého&#45;](../test/media/ute-parallelicon-small.png "UTE_parallelicon – malý") přepínacího tlačítka ustit parallelicon na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
+ Pokud jednotlivé testy neobsahují žádné závislosti, které brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů ![pomocí&#95;malého&#45;](../test/media/ute-parallelicon-small.png "UTE_parallelicon – malý") přepínacího tlačítka ustit parallelicon na panelu nástrojů. To může výrazně snížit čas potřebný ke spuštění všech testů.
 
  ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [](#BKMK_Contents)
 
@@ -248,16 +248,16 @@ FullName:"MyClass" - FullName:"PerfTest"
  **&#124;** [Problémy s výkonem diagnostiky testovacích](#BKMK_Diagnose_test_method_performance_issues) [testů](#BKMK_Debug_unit_tests) **&#124;** jednotek [Analýza pokrytí kódu testu jednotek](#BKMK_Analyzeunit_test_code_coverage)
 
 ### <a name="BKMK_Debug_unit_tests"></a>Ladit testy jednotek
- Pomocí Průzkumníka testů můžete spustit ladicí relaci pro testy. Krokování kódu pomocí ladicího programu sady Visual Studio plynule přebírá mezi testy jednotek a testovaným projektem zpět. Spuštění ladění:
+ Průzkumník testů můžete použít ke spuštění relace ladění pro testy. Krokování kódu s ladicím programem Visual Studio bez problémů přejdete vpřed a zpět mezi testováním částí a testovaný projekt. Spuštění ladění:
 
-1. V editoru sady Visual Studio nastavte zarážku v jedné nebo více testovacích metodách, které chcete ladit.
+1. V editoru sady Visual Studio nastavte zarážku v jedné nebo více testovacích metod, které chcete ladit.
 
    > [!NOTE]
-   > Vzhledem k tomu, že testovací metody lze spustit v libovolném pořadí, nastavte zarážky ve všech testovacích metodách, které chcete ladit.
+   > Vzhledem k tomu, že zkušební metody lze spustit v libovolném pořadí, nastavte zarážky v všechny testovací metody, které chcete ladit.
 
 2. V Průzkumníku testů vyberte testovací metody a pak zvolte možnost **ladit vybrané testy** v místní nabídce.
 
-   Další informace o ladicím programu naleznete v tématu [ladění v aplikaci Visual Studio](../debugger/debugging-in-visual-studio.md).
+   Další informace o ladicím programu, najdete v části [ladění v sadě Visual Studio](../debugger/debugging-in-visual-studio.md).
 
    ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [](#BKMK_Contents)
 
@@ -269,7 +269,7 @@ FullName:"MyClass" - FullName:"PerfTest"
 > [!NOTE]
 > Pokrytí kódu testu jednotek je k dispozici pouze v Visual Studio Enterprise.
 
- Můžete určit množství kódu produktu, který je skutečně testován pomocí testu jednotek pomocí nástroje pokrytí kódu sady Visual Studio. Můžete spustit pokrytí kódu pro vybrané testy nebo pro všechny testy v řešení.
+ Můžete určit množství kódu produktu, který je skutečně testován pomocí testu jednotek pomocí nástroje pokrytí kódu sady Visual Studio. Můžete spustit pokrytí kódem u vybraných testů nebo u všech testů v řešení.
 
  Spuštění pokrytí kódu pro testovací metody v řešení:
 
@@ -290,7 +290,7 @@ FullName:"MyClass" - FullName:"PerfTest"
 ## <a name="BKMK_External_resources"></a>Externí prostředky
 
 ### <a name="BKMK_Guidance"></a>Směrné
- [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](http://go.microsoft.com/fwlink/?LinkID=255188)
+ [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](https://go.microsoft.com/fwlink/?LinkID=255188)
 
 ## <a name="see-also"></a>Viz také
  [Testování částí kódu](../test/unit-test-your-code.md) [Spusťte test jednotek jako 64 proces](../test/run-a-unit-test-as-a-64-bit-process.md) .

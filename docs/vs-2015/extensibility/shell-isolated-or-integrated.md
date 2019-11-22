@@ -1,5 +1,5 @@
 ---
-title: Prostředí (izolované nebo integrované) | Dokumentace Microsoftu
+title: Prostředí (izolovaný nebo integrovaný režim) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,48 +14,48 @@ ms.assetid: c64a9bf0-9bf8-45c3-8fa2-306fa6cab66a
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: d570c181125a1f94108624e6f9b1ce23bdcca25a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 0db0ab2c2a97f7cedde5b9b3a5ab925467a25146
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63447218"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300481"
 ---
 # <a name="shell-isolated-or-integrated"></a>Prostředí (izolované nebo integrované)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Vytvoření sady Visual Studio na základě aplikace v režimu integrované nebo izolované. V integrovaném režimu mnoho funkcí sady Visual Studio jsou k dispozici kromě vaší aplikace. V izolovaném režimu si zvolíte dílčí skupinu funkcí nástroje Visual Studio, které chcete distribuovat spolu se svým vlastním rozšířením.  
+Vlastní aplikaci založenou na aplikaci Visual Studio můžete vytvořit v integrovaném nebo izolovaném režimu. V integrovaném režimu je kromě vaší aplikace k dispozici i mnoho funkcí sady Visual Studio. V izolovaném režimu zvolíte podmnožinu funkcí sady Visual Studio, kterou chcete distribuovat spolu s vlastním rozšířením.  
   
 ## <a name="integrated-mode"></a>Integrovaný režim  
- Integrovaný režim umožňuje uživatelům používat standardní funkce sady Visual Studio spolu s vlastní nástroje. Integrované prostředí je určený primárně pro hostování programovacích jazyků a nástrojů pro vývoj softwaru.  
+ Integrovaný režim umožňuje uživatelům používat standardní funkce sady Visual Studio spolu s vlastními nástroji. Integrované prostředí je určeno hlavně pro hostování programovacích jazyků a nástrojů pro vývoj softwaru.  
   
- Vlastní nástroje, které jsou založené na prostředí integrated shell automaticky sloučit s jinou edici sady Visual Studio, který je nainstalovaný na stejném počítači. Distribuovatelné součásti verzi sady Visual Studio integrované prostředí můžete zadat, pokud ještě není nainstalované Visual Studio.  
+ Vlastní nástroje, které jsou postavené na integrovaném prostředí, se automaticky sloučí s jakoukoli jinou verzí sady Visual Studio, která je nainstalovaná na stejném počítači. Pokud již není nainstalována aplikace Visual Studio, můžete poskytnout Distribuovatelný verzi integrovaného prostředí sady Visual Studio.  
   
- Distribuovatelné součásti verzi prostředí sady Visual Studio integrované nezahrnuje programovacích jazyků a funkcí pro podporu systémů jejich příslušného projektu.  
+ Redistribuovatelná verze integrovaného prostředí sady Visual Studio nezahrnuje programovací jazyky a funkce, které podporují jejich příslušné projektové systémy.  
   
 > [!NOTE]
-> Režim integrovaného prostředí Visual Studio je možné nainstalovat společně s všechny edice sady Visual Studio s výjimkou edice Express.  
+> Integrovaný režim prostředí sady Visual Studio lze nainstalovat společně se všemi edicemi sady Visual Studio s výjimkou edice Express.  
   
  Další informace najdete v tématu [Visual Studio Shell (integrovaný režim)](../extensibility/visual-studio-shell-integrated.md).  
   
 ## <a name="isolated-mode"></a>Izolovaný režim  
- Izolovaný režim vám umožní vytvořit vlastní nástroje, na kterých běží vedle sebe s jinými verzemi nástroje Visual Studio. Je určená primárně pro nástroje, které mají přístup ke službám Visual Studio bez v závislosti na všechny standardní funkce sady Visual Studio. Můžete přizpůsobit vzhled aplikace založené na prostředí sady Visual Studio izolované. Snadno můžete vypnout funkcí a příkaz skupiny nabídek, které nechcete, aby se zobrazí spolu s aplikací.  
+ Izolovaný režim umožňuje vytvářet vlastní nástroje, které jsou spouštěny souběžně s jinými verzemi sady Visual Studio. Je určena hlavně pro nástroje, které mají přístup ke službám Visual Studio bez závislosti na všech standardních funkcích sady Visual Studio. Můžete přizpůsobit vzhled aplikací postavených na izolovaném prostředí sady Visual Studio. Můžete snadno vypnout skupiny funkcí a příkazů nabídky, které nechcete spolu s vaší aplikací zobrazit.  
   
  Další informace najdete v tématu [izolované prostředí sady Visual Studio](../extensibility/visual-studio-isolated-shell.md).  
   
-## <a name="distributing-your-integrated-or-isolated-shell-application"></a>Distribuce vaší aplikace integrované nebo izolované prostředí  
- Integrované nebo izolované prostředí se aplikace dala distribuovat, budete muset zahrnout aplikace, speciální integrované nebo izolované prostředí distribuovatelné součásti a instalační program. Další informace o distribuci a instalaci najdete v tématu [distribuce aplikací izolovaného prostředí](../extensibility/distributing-isolated-shell-applications.md).  
+## <a name="distributing-your-integrated-or-isolated-shell-application"></a>Distribuce integrované nebo izolované aplikace prostředí  
+ Aby bylo možné distribuovat integrovanou nebo izolovanou aplikaci prostředí, je nutné zahrnout aplikaci, speciální integrovaný nebo izolovaný prostředí pro distribuci a instalační program. Další informace o distribuci a instalaci najdete v tématu [distribuce aplikací izolovaného prostředí](../extensibility/distributing-isolated-shell-applications.md).  
   
 > [!IMPORTANT]
-> [Licenční smlouvy koncovým uživatelem (EULA)](https://www.visualstudio.com/support/legal/mt171552) pro Visual Studio integrované a izolované prostředí obsahuje oddíl na shromažďování dat (**části 3. Data**).  Popisuje zákaznická data využití, které může společnost Microsoft shromažďovat od uživatelů buď integrované nebo izolované prostředí softwaru, který jste vytvořili do vaší aplikace. Další informace najdete v tématu [prohlášení společnosti Microsoft Visual Studio Product řady](https://www.visualstudio.com/dn948229).  
+> [Licenční smlouva s koncovým uživatelem (EULA)](https://www.visualstudio.com/support/legal/mt171552) pro integrované a izolované prostředí sady Visual Studio obsahuje oddíl pro shromažďování dat (**oddíl 3). Data**).  Popisuje údaje o využití zákazníka, které může společnost Microsoft shromažďovat od uživatelů integrovaného nebo izolovaného softwaru prostředí, který sestavíte do své aplikace. Další informace najdete v tématu [Microsoft Visual Studio prohlášení o zásadách ochrany osobních údajů pro produktovou řadu produktů](https://www.visualstudio.com/dn948229).  
 > 
-> Budete-li shromažďovat data o využití samostatné od svých zákazníků prostřednictvím vaší aplikace, musíte zadat příslušné oznámení pro uživatele vaší aplikace můžete shromažďovat.  Při distribuci softwaru izolované nebo integrované prostředí v rámci vaší aplikace, podle této licence Visual Studio Software Development Kit, musí obsahovat jednu z následujících akcí:  
+> Pokud shromažďujete oddělená data o využití od zákazníků prostřednictvím vaší aplikace, musíte poskytnout příslušné oznámení uživatelům vaší aplikace, kterou shromažďujete.  Když distribuujete software izolovaného nebo integrovaného prostředí v rámci vaší aplikace podle licence sady Visual Studio Software Development Kit, musíte zahrnout jednu z následujících možností:  
 > 
-> - Licenční smlouva koncového uživatele jako součást vaší licence aplikace  
-> - vaše vlastní smlouva EULA, který vyžaduje, aby vaši zákazníci souhlas s podmínkami, které chrání aplikace Visual Studio integrované nebo izolované prostředí alespoň tolik jako koncový uživatel licenční podmínky společnosti Microsoft pro software prostředí  
+> - Licenční smlouva s koncovým uživatelem v rámci licence aplikace  
+> - vaše vlastní smlouva EULA, která vyžaduje, aby vaši zákazníci souhlasili s podmínkami ochrany integrovaného nebo izolovaného prostředí sady Visual Studio aspoň stejně jako licenční podmínky pro koncové uživatele Microsoftu pro software Shell  
   
 ## <a name="additional-resources"></a>Další prostředky  
- Další informace o distribuovatelných balíčků naleznete v tématu [stahování rozšíření sady Visual Studio](http://go.microsoft.com/fwlink/?LinkID=119298) webu.  
+ Další informace o redistribuovatelných balíčcích najdete na webu [Visual Studio rozšiřitelné soubory ke stažení](https://go.microsoft.com/fwlink/?LinkID=119298) .  
   
 ## <a name="see-also"></a>Viz také  
  [Odesílání rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md)

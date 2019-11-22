@@ -9,12 +9,12 @@ caps.latest.revision: 13
 author: kraigb
 ms.author: kraigb
 manager: jillfra
-ms.openlocfilehash: 5c5cea89b337f4da586ba4ca1954e49b96c84638
-ms.sourcegitcommit: 3cda0d58c5cf1985122b8977b33a171c7359f324
+ms.openlocfilehash: 21e724e585f2a5bf0e1fe2a6b70f89c1bd5f5eec
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154946"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298189"
 ---
 # <a name="getting-started-with-python"></a>Začínáme s Pythonem
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,7 +38,7 @@ V programovacím jazyce je Python:
 
 Pokud chcete získat další informace o jazyce, začněte v [Pythonu pro začátečníky](https://www.python.org/about/gettingstarted/) na Python.org.
 
-Pro instalaci samotného Pythonu [https://www.python.org/download/](https://www.python.org/download/)navštivte.
+Pokud chcete nainstalovat samotný Python, navštivte [https://www.python.org/download/](https://www.python.org/download/).
 
 ## <a name="python-tools-for-visual-studio"></a>Python Tools for Visual Studio
   
@@ -63,11 +63,11 @@ Následující materiály vám pomůžou začít:
 - Instalace a funkce ukázka (27 min)]( https://www.youtube.com/watch?v=JNNAOypc6Ek)  
 - [Dokumentace](https://github.com/Microsoft/PTVS/wiki)  
 
-Všimněte si, že Visual Studio v současné době neposkytuje způsob vytvoření samostatného spustitelného souboru pomocí Pythonu, což v podstatě znamená program s vloženým překladačem Pythonu. V komunitě Pythonu ale existují různé způsoby, jak je popsáno v [StackOverflow](http://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency). CPython podporuje také vkládání do nativní aplikace, jak je popsáno v blogovém příspěvku [pomocí souboru ZIP](https://devblogs.microsoft.com/python/cpython-embeddable-zip-file/)s možnou vloženou do CPython.
+Všimněte si, že Visual Studio v současné době neposkytuje způsob vytvoření samostatného spustitelného souboru pomocí Pythonu, což v podstatě znamená program s vloženým překladačem Pythonu. V komunitě Pythonu ale existují různé způsoby, jak je popsáno v [StackOverflow](https://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency). CPython podporuje také vkládání do nativní aplikace, jak je popsáno v blogovém příspěvku [pomocí souboru ZIP](https://devblogs.microsoft.com/python/cpython-embeddable-zip-file/)s možnou vloženou do CPython.
   
 ## <a name="building-ui-with-python"></a>Sestavování uživatelského rozhraní pomocí Pythonu  
 
-Hlavní nabídka pro vytváření uživatelského rozhraní s Pythonem je [projekt QT](https://www.qt.io/qt-for-application-development/)s vazbami pro Python označované jako [PySide (oficiální vazba)](http://wiki.qt.io/PySide) (viz také [soubory PySide ke stažení](https://download.qt.io/official_releases/pyside/.)) a [PyQt](https://wiki.python.org/moin/PyQt). V současné době podpora Pythonu v sadě Visual Studio neobsahuje žádné konkrétní nástroje pro vývoj uživatelského rozhraní.
+Hlavní nabídka pro vytváření uživatelského rozhraní s Pythonem je [projekt QT](https://www.qt.io/qt-for-application-development/)s vazbami pro Python označované jako [PySide (oficiální vazba)](https://wiki.qt.io/PySide) (viz také [soubory PySide ke stažení](https://download.qt.io/official_releases/pyside/.)) a [PyQt](https://wiki.python.org/moin/PyQt). V současné době podpora Pythonu v sadě Visual Studio neobsahuje žádné konkrétní nástroje pro vývoj uživatelského rozhraní.
 
 ## <a name="azure-sdk-for-python"></a>Azure SDK pro Python
   
@@ -87,13 +87,13 @@ Sada Azure SDK pro Python, která podporuje Windows, Mac a Linux, usnadňuje vyu
 
 Kromě všech knihoven dat Pythonu pro odborníky na data, Python Tools for Visual Studio podporují poznámkové bloky IPython a IPython, které můžou být hostované v Azure.
 
-Doporučujeme, abyste získali IPython a vědecké výpočetní knihovny (matplotlib, scipy, numpy atd.) z [University of California, Irvine](http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy-stack).  
+Doporučujeme, abyste získali IPython a vědecké výpočetní knihovny (matplotlib, scipy, numpy atd.) z [University of California, Irvine](https://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy-stack).  
   
 ## <a name="see-also"></a>Viz také  
 
-[Začínáme s PTVS: Nastavení sady Visual Studio](../python/getting-started-with-ptvs-setting-up-visual-studio.md)
-[Začínáme pomocí PTVS: Spustit kódování (projekty)](../python/getting-started-with-ptvs-start-coding-projects.md)
+[Začínáme s PTVS: nastavení sady Visual Studio](../python/getting-started-with-ptvs-setting-up-visual-studio.md)
+[Začínáme s PTVS: začátek kódování (projekty)](../python/getting-started-with-ptvs-start-coding-projects.md)
 [Začínáme s PTVS: Úprava kódu](../python/getting-started-with-ptvs-editing-code.md)
-ZačínámepomocíPTVS[: Začínáme](../python/getting-started-with-ptvs-debugging.md)ladění
-pomocíPTVS[: Interaktivní Začínáme](../python/getting-started-with-ptvs-interactive-python.md)
-Pythonu[s PTVS: Vytvoření webu v Azure](../python/getting-started-with-ptvs-building-a-website-in-azure.md)
+[Začínáme pomocí PTVS: ladění](../python/getting-started-with-ptvs-debugging.md)
+[Začínáme pomocí PTVS: interaktivní Python](../python/getting-started-with-ptvs-interactive-python.md)
+[Začínáme with PTVS: vytvoření webu v Azure](../python/getting-started-with-ptvs-building-a-website-in-azure.md)

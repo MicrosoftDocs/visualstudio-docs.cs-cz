@@ -15,19 +15,19 @@ caps.latest.revision: 38
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2d3434236908771cbc2149e766b841e7bcf4cb4e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7c9ccd5285f9a2744704c0ee13094a1dac31c53b
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667848"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302831"
 ---
 # <a name="uml-use-case-diagrams-guidelines"></a>Diagramy případů použití UML: Pokyny
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro sumarizaci, kdo používá vaši aplikaci nebo systém a co s ním můžou dělat. Chcete-li vytvořit diagram případu použití UML, v nabídce **Architektura** klikněte na **Nový UML nebo Diagram vrstev**.
 
- Ukázku videa najdete v tématu [uspořádání funkcí do případů použití](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-2-Organizing-Features-Into-Use-Cases/).
+ Ukázku videa najdete v tématu [uspořádání funkcí do případů použití](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-2-organizing-features-into-use-cases).
 
  Chcete-li zjistit, které verze aplikace Visual Studio tuto funkci podporují, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -170,7 +170,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
  ![Případ použití znázorňující násobnost mnoha k mnoha](../modeling/media/uml-ucguidemulti2.png "UML_UCGuideMulti2")
 
-- Chcete-li určit, že několik objektů actor stejné třídy může být součástí jednoho výskytu případu použití, nastavte násobnost na konci přidružení na **1.. \*** .
+- Chcete-li určit, že několik objektů actor stejné třídy může být součástí jednoho výskytu případu použití, nastavte násobnost na konci přidružení na **1..\*** .
 
    Na ilustraci může být jedna nebo více restaurací součástí plnění stejné objednávky na jídlo.
 
@@ -190,7 +190,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
    - **1** pro stav, že se v každém odkazu účastní přesně jedna instance této role.
 
-   - **1.. \*** , aby se do každého odkazu účastnila jedna nebo více instancí této role.
+   - **1..\*** , aby se do každého odkazu účastnila jedna nebo více instancí této role.
 
    - **0.. 1** pro stav, že účast je volitelná.
 
@@ -270,7 +270,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
 #### <a name="to-link-to-a-shared-document-onenote-element-or-web-page"></a>Připojení ke sdílenému dokumentu, prvku OneNotu nebo webové stránce
 
-1. Získejte adresu URL sdíleného elementu. Může to být například cesta k síťovému souboru začínající na ' \\ \\ ', nebo webová stránka nebo adresa URL SharePointu začínající na ' http://', nebo odkaz na oddíl, stránku nebo odstavec aplikace OneNote začínající na ' OneNote: '.
+1. Získejte adresu URL sdíleného elementu. Může to být například cesta k síťovému souboru začínající na '\\\\', nebo webová stránka nebo adresa URL SharePointu začínající na ' http://', nebo odkaz na oddíl, stránku nebo odstavec aplikace OneNote začínající na ' OneNote: '.
 
 2. V sadě nástrojů klikněte na **artefakt** a pak klikněte v diagramu případu použití.
 
@@ -420,7 +420,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
 3. Pokud chcete upravit obsah, přetáhněte existující případy použití do nebo ven z subsystému.
 
-   \- nebo-
+   \- nebo –
 
    Chcete-li vytvořit nový případ použití přímo v podsystému, klikněte na panelu nástrojů na možnost **použít případ** a pak klikněte na možnost uvnitř subsystému.
 
@@ -441,4 +441,4 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
  ![Subsystémy zobrazují různé verze systému.](../modeling/media/uml-ucguidesystem.png "UML_UCGuideSystem")
 
 ## <a name="see-also"></a>Viz také
- [Modely uživatelských požadavků modelu](../modeling/model-user-requirements.md) [UML sekvenční diagramy: pokyny](../modeling/uml-sequence-diagrams-guidelines.md) [Upravit modely a diagramy UML](../modeling/edit-uml-models-and-diagrams.md) [použití diagramů případů použití UML: referenční](../modeling/uml-use-case-diagrams-reference.md) diagramy [tříd](../modeling/uml-class-diagrams-reference.md) UML [: Referenční dokumentace](../modeling/uml-component-diagrams-reference.md) [UML Diagramy činnosti: pokyny](../modeling/uml-activity-diagrams-guidelines.md) [video: uspořádání funkcí do případů použití](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-2-Organizing-Features-Into-Use-Cases/)
+ [Modely uživatelských požadavků modelu](../modeling/model-user-requirements.md) [UML sekvenční diagramy: pokyny](../modeling/uml-sequence-diagrams-guidelines.md) [Upravit modely UML a diagramy](../modeling/edit-uml-models-and-diagrams.md) [případů použití UML: referenční](../modeling/uml-use-case-diagrams-reference.md) diagramy [tříd](../modeling/uml-class-diagrams-reference.md) UML: referenční diagramy [komponent](../modeling/uml-component-diagrams-reference.md) UML: referenční informace k diagramům aktivit UML: [pokyny](../modeling/uml-activity-diagrams-guidelines.md) [video: uspořádání funkcí v případech použití](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-2-organizing-features-into-use-cases)

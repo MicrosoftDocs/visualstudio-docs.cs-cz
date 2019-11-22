@@ -1,5 +1,5 @@
 ---
-title: Využívání sítě | Dokumentace Microsoftu
+title: Využití sítě | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -9,39 +9,39 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: d85b71c2ed54a8ab8bc85c93ce61e3ed274d86e0
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: eed389a3847145a0f37eb3141526a38e4374d368
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65673825"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297909"
 ---
 # <a name="network-usage"></a>Využití sítě
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio **sítě** diagnostický nástroj, který shromažďuje data o síťových operacích pomocí provádí [Windows.Web.Http API](https://msdn.microsoft.com/library/windows/apps/windows.web.http.aspx). Analýza dat vám může pomoct vyřešit problémy, jako jsou problémy přístupu a ověřování, nesprávné použití mezipaměti a špatné zobrazení a stáhnout výkonu.  
   
- Nástroj pro sítě podporuje pouze aplikace univerzální platformy Windows. Jiné platformy nejsou v tuto chvíli nepodporuje.  
+ Síťový nástroj podporuje pouze aplikace pro univerzální platformu Windows. Jiné platformy nejsou v tuto chvíli nepodporuje.  
   
 > [!NOTE]
-> Úplný popis nástroj sítě, naleznete v tématu [Představujeme nástroje Visual Studio vaší sítě](http://blogs.msdn.com/b/visualstudio/archive/2015/05/04/introducing-visual-studio-s-network-tool.aspx).  
+> Podrobnější popis síťového nástroje najdete v tématu [představení síťového nástroje sady Visual Studio](https://devblogs.microsoft.com/visualstudio/?m=20155).  
   
-## <a name="collecting-network-tool-data"></a>Shromažďování dat v síti nástroj  
+## <a name="collecting-network-tool-data"></a>Shromažďování dat nástroje sítě  
  Měli byste spustit **sítě** nástroj s otevřít projekt aplikace Visual Studio na počítači aplikace Visual Studio.  
   
 1. Otevřete projekt v sadě Visual Studio.  
   
-2. V nabídce klikněte na tlačítko **ladění / Profiler výkonu...** . Zvolte **sítě**a klikněte na tlačítko **Start**.  
+2. V nabídce klikněte na **ladění/profilování výkonu...** . Zvolte **síť**a pak zvolte **Spustit**.  
   
-3. Nástroj pro sítě začne shromažďování provoz protokolu HTTP vaší aplikace.  
+3. Nástroj sítě zahájí shromažďování přenosů HTTP vaší aplikace.  
   
     Při spouštění vaší aplikace, souhrnné zobrazení v levém podokně automaticky zobrazí seznam zachycených operace HTTP. Vyberte položku na souhrnné zobrazení zobrazíte další informace najdete v podokně podrobností v pravém podokně.  
   
 4. Zvolte **Zastavit** zavřít aplikaci.  
   
-   V okně sestavy by měl vypadat přibližně takto:  
+   Okno sestavy by mělo vypadat přibližně takto:  
   
-   ![V okně sítě](../profiling/media/network-fullwindow.png "NETWORK_FullWindow")  
+   ![Okno síť](../profiling/media/network-fullwindow.png "NETWORK_FullWindow")  
   
 ## <a name="analyzing-data"></a>Analýza dat  
  Když vaše aplikace spuštěna, nebo i po zavření aplikace výběrem některé síťové operace zobrazí v souhrnném zobrazení můžete analyzovat zachycená data protokolu HTTP.  
@@ -52,7 +52,7 @@ Visual Studio **sítě** diagnostický nástroj, který shromažďuje data o sí
   
  **Sítě** zobrazení podrobností se zobrazí další informace o síťové operace v souhrnném zobrazení.  
   
- ![Podokno podrobností nástroj Network](../profiling/media/network-detailsviewpane.png "NETWORK_DetailsViewPane")  
+ ![Panel podrobností nástroje sítě](../profiling/media/network-detailsviewpane.png "NETWORK_DetailsViewPane")  
   
 |||  
 |-|-|  
@@ -65,15 +65,15 @@ Visual Studio **sítě** diagnostický nástroj, který shromažďuje data o sí
  Síť **souhrnu** panel ukazuje počet síťových operací, které jsou zobrazeny v libovolném časovém okamžiku, kolik dat se přenesl, jak dlouho trvalo ke stažení je a kolik chyby (počet požadavků s odpověďmi 4xx nebo 5xx) viditelné.  
   
 ### <a name="analysis-tips"></a>Tipy pro analýzy  
- Tento nástroj světla, které určité oblasti, které mohou být užitečné při používání sítě související analýzy:  
+ Tento nástroj zvýrazňuje některé oblasti, které mohou být užitečné při spuštění analýzy související se sítí:  
   
 1. Požadavky, které jsou plně obsluhovat z mezipaměti se zobrazují jako **(z mezipaměti)** v **přijaté** sloupce. To může pomoct určit, jestli používáte mezipaměti efektivně ušetříte šířku pásma uživatele, nebo zda omylem ukládání do mezipaměti odpovědi a poskytuje koncových uživatelů vaší aplikace pomocí zastaralá data.  
   
-2. Chybové odpovědi (4xx nebo 5xx) se zobrazí v v **výsledky** sloupec v červeném stavu kódu a jsou také zvýrazněna v panelu souhrnu. Díky tomu je snadné sledovat chyby mezi mnoha potenciální požadavky na vaši aplikaci.  
+2. Odpovědi na chyby (4xx nebo 5xx) se zobrazí ve sloupci **výsledky** s červeným stavovým kódem a jsou zvýrazněny také na panelu souhrnu. Díky tomu je snadné sledovat chyby mezi mnoha potenciální požadavky na vaši aplikaci.  
   
-3. Tlačítko Tisk pretty odpovědi (uvnitř těla kartu) můžete analyzovat prostřednictvím datové části odpovědi JSON, XML, HTML, CSS, JavaScript a TypeScript zvýšením čitelnost obsahu.  
+3. Tlačítko pro tisk s odezvou na více odpovědí (uvnitř karty tělo) vám může pomáhat s analýzou dat pomocí formátu JSON, XML, HTML, CSS, JavaScriptu a TypeScript, a to zvýšením čitelnosti obsahu.  
   
 ## <a name="see-also"></a>Viz také  
- [Spustit profilování nástroje bez ladění](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01)   
- [Visual Studio blog: Představení sady Visual Studio sítě inspektoru](http://go.microsoft.com/fwlink/?LinkId=535022)   
- [Video pro kanál 9: Diagnostické nástroje VS – Profiler nové sítě](http://channel9.msdn.com/Series/ConnectOn-Demand/206)
+ [Spustit nástroje pro profilaci bez ladění](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01)   
+ [Blog sady Visual Studio: představujeme  kontroly sítě sady Visual Studio](https://go.microsoft.com/fwlink/?LinkId=535022)  
+ [Video pro kanál 9: nástroje VS Diagnostic Tools – nový síťový profiler](https://channel9.msdn.com/Series/ConnectOn-Demand/206)

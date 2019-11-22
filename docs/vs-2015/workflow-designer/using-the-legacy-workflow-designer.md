@@ -11,19 +11,19 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c09c4588bb1fcd0aa7487a6896d2fc286253e198
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2fa11cd0b29f3b8ee6008b8c0b3369b16812f0e5
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606774"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302782"
 ---
 # <a name="using-the-legacy-workflow-designer"></a>Používání starší verze návrháře postupu provádění
 Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] poskytované pomocí [!INCLUDE[vs2010](../includes/vs2010-md.md)] lze použít k cílení na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
 
  K němu se dostanete tak, že v rozevíracím seznamu v horní části okna **Nový projekt** vyberete buď možnost **.NET Framework 3,0** , nebo možnost **.NET Framework 3,5** . Výchozí možnost v [!INCLUDE[vs2010](../includes/vs2010-md.md)] je **.NET Framework 4** , která se používá k vytváření [!INCLUDE[wf](../includes/wf-md.md)] aplikací, které cílí na [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)].
 
- @No__t_0 poskytuje způsob, jak vytvořit [!INCLUDE[wf](../includes/wf-md.md)] aplikace pomocí známých [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uživatelského rozhraní. [!INCLUDE[wf](../includes/wf-md.md)] aplikace se skládají z kroků procesu pracovního postupu nazývaných aktivity. Chcete-li vytvořit pracovní postup, sestavte aktivity na návrhové ploše přetažením jejich příslušných návrhářů aktivit ze **sady nástrojů** na návrhovou plochu.
+ [!INCLUDE[wfd2](../includes/wfd2-md.md)] poskytuje způsob, jak vytvořit [!INCLUDE[wf](../includes/wf-md.md)] aplikace pomocí známých [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uživatelského rozhraní. [!INCLUDE[wf](../includes/wf-md.md)] aplikace se skládají z kroků procesu pracovního postupu nazývaných aktivity. Chcete-li vytvořit pracovní postup, sestavte aktivity na návrhové ploše přetažením jejich příslušných návrhářů aktivit ze **sady nástrojů** na návrhovou plochu.
 
  V následující tabulce jsou uvedeny klíčové funkce [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pro programovací model Windows Workflow Foundation.
 
@@ -54,4 +54,4 @@ Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] poskytované pomocí [!I
  [Nápověda k uživatelskému rozhraní návrháře pro programovací model Windows Workflow Foundation](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)
 
 ## <a name="see-also"></a>Viz také
- [Vývoj pracovních postupů](http://go.microsoft.com/fwlink?LinkID=65010)
+ [Vývoj pracovních postupů](https://go.microsoft.com/fwlink?LinkID=65010)

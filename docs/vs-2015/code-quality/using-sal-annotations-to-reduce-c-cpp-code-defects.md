@@ -1,5 +1,5 @@
 ---
-title: Použití poznámek SAL k omezení defektů kódu C / C++ | Dokumentace Microsoftu
+title: Použití poznámek SAL k omezení vadC++ kódu C | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -13,23 +13,23 @@ caps.latest.revision: 29
 author: mikeblome
 ms.author: mblome
 manager: jillfra
-ms.openlocfilehash: cb1d5b7f7368b0168a0de6a540a4f025f3179f24
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d8ea7122c5dcd086d10e4b937792dd7e47f68547
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201205"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74291896"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>Použití poznámek SAL k snížení míry výskytu závad kódu C/C++
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Poznámky SAL je poznámka jazyk Microsoft zdrojového kódu. S použitím kódu poznámek ke zdroji, můžete provést záměr za kódu explicitní. Tyto poznámky také povolit automatické statické analýzy nástroje pro analýzu kódu přesněji, se výrazně menší počet falešně pozitivních výsledků a falešně negativní.  
+SAL je jazyk poznámky ke zdrojovému kódu společnosti Microsoft. Pomocí poznámek zdrojového kódu můžete provést explicitní záměr za kódem. Tyto poznámky také umožňují automatizované statické analytické nástroje k přesnější analýze kódu, s podstatně menším počtem falešně pozitivních a falešně negativních hodnot.  
   
- Články v této části dokumentace popisují aspekty SAL zadejte referenční SAL syntaxi a poskytnout příklady jeho použití.  
+ Články v této části dokumentace projednávají aspekty SAL, poskytují referenční informace pro syntaxi SAL a poskytují příklady jejich použití.  
   
 - [Porozumění SAL](../code-quality/understanding-sal.md)  
   
-     Poskytuje informace a příklady, které ukazují základní poznámky SAL.  
+     Obsahuje informace a příklady, které ukazují základní poznámky SAL.  
   
 - [Zadávání poznámek k parametrům funkcí a návratovým hodnotám](../code-quality/annotating-function-parameters-and-return-values.md)  
   
@@ -37,30 +37,30 @@ Poznámky SAL je poznámka jazyk Microsoft zdrojového kódu. S použitím kódu
   
 - [Zadávání poznámek k chování funkcí](../code-quality/annotating-function-behavior.md)  
   
-     Obsahuje poznámky SAL pro funkce a chování funkce.  
+     Obsahuje poznámky SAL pro chování funkcí a funkcí.  
   
 - [Zadávání poznámek ke strukturám a třídám](../code-quality/annotating-structs-and-classes.md)  
   
-     Obsahuje poznámky SAL pro struktury a třídy.  
+     Zobrazuje poznámky SAL pro struktury a třídy.  
   
 - [Zadávání poznámek o chování při zamykání](../code-quality/annotating-locking-behavior.md)  
   
-     Vysvětluje způsob použití anotací SAL mechanismů zámku.  
+     Vysvětluje, jak používat poznámky SAL s mechanismy zámku.  
   
 - [Určení, kdy a kde se má poznámka použít](../code-quality/specifying-when-and-where-an-annotation-applies.md)  
   
-     Uvádí, které určují podmínku nebo oboru (umístění) se další poznámky SAL poznámky SAL.  
+     Obsahuje poznámky SAL, které určují podmínku nebo rozsah (umístění) jiných poznámek SAL.  
   
 - [Vnitřní funkce](../code-quality/intrinsic-functions.md)  
   
-     Obsahuje seznam vnitřních poznámky SAL.  
+     Zobrazí seznam vnitřních poznámek SAL.  
   
 - [Doporučené postupy a příklady](../code-quality/best-practices-and-examples-sal.md)  
   
-     Poskytuje příklady, které ukazují, jak použití anotací SAL. Také popisuje běžné nástrahy.  
+     Obsahuje příklady, které ukazují, jak používat poznámky SAL. Vysvětluje také běžné nástrah.  
   
 ## <a name="related-resources"></a>Související prostředky  
- [Blog týmu analýzy kódu](http://go.microsoft.com/fwlink/?LinkId=251197)  
+ [Blog týmu analýzy kódu](https://go.microsoft.com/fwlink/?LinkId=251197)  
   
 ## <a name="see-also"></a>Viz také  
- [Poznámky SAL 2.0 poznámky pro ovladače Windows](http://go.microsoft.com/fwlink/?LinkId=250979)
+ [Poznámky SAL 2,0 pro ovladače Windows](https://go.microsoft.com/fwlink/?LinkId=250979)

@@ -1,5 +1,5 @@
 ---
-title: Vytvářejte multiplatformní mobilní aplikace s jazykem Visual C++ | Dokumentace Microsoftu
+title: Vytváření mobilních aplikací pro různé platformy pomocí vizuálu C++ | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,17 +9,17 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: jillfra
-ms.openlocfilehash: 860ca971d8c3e42ef6d690c7f55b3ce2716b1c4e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 60dbeacbbb4b4e169dd84d0018a0c078ccca7def
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946814"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299363"
 ---
-# <a name="build-cross-platform-mobile-apps-with-visual-c"></a>Vytvářejte multiplatformní mobilní aplikace s jazykem Visual C++
-Kódu napříč platformami můžete vytvořit pro zařízení Windows, iOS a Android pomocí Visual C++ pro vývoj mobilních řešení napříč platformami. Toto je volitelná funkce k dispozici v sadě Visual Studio 2015, který umožňuje vývoj kódu pro iOS, Android a Windows pomocí jazyka Visual C++ pro různé platformy.  
+# <a name="build-cross-platform-mobile-apps-with-visual-c"></a>Vytváření mobilních aplikací pro různé platformy pomocí VisualC++
+Kód pro různé platformy pro zařízení s Androidem, iOS a Windows můžete vytvořit pomocí vizuálu C++ pro vývoj mobilních aplikací pro různé platformy. Toto je volitelná funkce, která je dostupná v aplikaci Visual Studio 2015, která umožňuje vývoj kódu pro různé platformy pro iOS, Android C++a Windows pomocí vizuálu.  
   
- Pokyny k instalaci a příklady kódu naleznete v tématu [Visual C++ pro vývoj mobilních řešení napříč platformami](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md).  
+ Pokyny k instalaci a příklady kódu naleznete v [tématu C++ Visual for pro vývoj mobilních aplikací pro různé platformy](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Stáhněte si Visual Studio 2015](http://go.microsoft.com/fwlink/?linkid=517106)
+ [Stáhnout Visual Studio 2015](https://go.microsoft.com/fwlink/?linkid=517106)

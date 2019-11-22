@@ -9,19 +9,17 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9e05fc6615fb2d836f3ea029912374f49b4d97a1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 379fc9c28b8d36f7bd606719a443b16108f0095d
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646888"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299977"
 ---
 # <a name="step-9-try-other-features"></a>Krok 9: Vyzkoušejte jiné funkce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Chcete-li získat další informace, zkuste změnit ikony a barvy, přidat časovač hry a zvuky. Chcete-li, aby hra byla náročnější, zkuste zvětšit hrací plochu a upravte časovač.
-
- Pokud si chcete stáhnout dokončenou verzi ukázky, přečtěte si [ukázku s kurzem kompletní porovnávací hru](http://code.msdn.microsoft.com/Complete-Matching-Game-4cffddba).
 
 ### <a name="to-try-other-features"></a>Vyzkoušení dalších funkcí
 
@@ -38,7 +36,7 @@ Chcete-li získat další informace, zkuste změnit ikony a barvy, přidat časo
 - Pokud hráč najde shodu, přidejte zvuk, jiný zvuk, když hráč odkryje dvě ikony, které neodpovídají, a třetí zvuk, když program znovu skryje ikony.
 
     > [!TIP]
-    > Chcete-li přehrát zvuky, můžete použít obor názvů System.media. Další informace najdete v tématu [přehráníC# zvuku v aplikaci model Windows Forms App (.NET)](http://youtu.be/qOh4ooHg1UU) nebo [o tom, jak přehrát zvuk v Visual Basic](http://youtu.be/-4oPDeQrtMs) .
+    > Chcete-li přehrát zvuky, můžete použít obor názvů System.media. Další informace najdete v tématu [přehráníC# zvuku v aplikaci model Windows Forms App (.NET)](https://www.youtube.com/watch?v=qOh4ooHg1UU&feature=youtu.be) nebo [o tom, jak přehrát zvuk v Visual Basic](https://www.youtube.com/watch?v=-4oPDeQrtMs&feature=youtu.be) .
 
 - Udělejte hru obtížnější tím, že zvětšíte hrací plochu.
 
@@ -49,8 +47,8 @@ Chcete-li získat další informace, zkuste změnit ikony a barvy, přidat časo
 
 ### <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud si nevíte rady nebo máte otázky k programování, můžete zveřejnit svůj dotaz na jednom z diskuzních fór MSDN. Viz [Visual Basic Fórum](http://social.msdn.microsoft.com/Forums/home?forum=vbgeneral) a [vizuální C# Fórum](http://social.msdn.microsoft.com/Forums/home?forum=csharpgeneral).
+- Pokud si nevíte rady nebo máte otázky k programování, můžete zveřejnit svůj dotaz na jednom z diskuzních fór MSDN. Viz [Visual Basic Fórum](https://social.msdn.microsoft.com/Forums/en-US/home) a [vizuální C# Fórum](https://social.msdn.microsoft.com/Forums/en-US/home).
 
-- K dispozici jsou užitečné bezplatné video výukové materiály. Další informace o programování v Visual Basic najdete v tématu [Visual Basic základy: vývoj pro absolutní začátečníky](http://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners). Další informace o programování v vizuálů C#najdete v tématu [ C# základy: vývoj pro absolutní začátečníky](http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners).
+- K dispozici jsou užitečné bezplatné video výukové materiály. Další informace o programování v Visual Basic najdete v tématu [Visual Basic základy: vývoj pro absolutní začátečníky](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners). Další informace o programování v vizuálů C#najdete v tématu [ C# základy: vývoj pro absolutní začátečníky](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners).
 
 - Pokud se chcete vrátit k předchozímu kroku kurzu, přečtěte si [Krok 8: Přidání metody pro ověření, zda hráč zvítězil](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md).

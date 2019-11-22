@@ -9,18 +9,18 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b7c34e9cae335af12f59e6c25d5fb3c24e5c1749
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6fae0bb2cca6f6f8a4ffb4e5af58473d041a12eb
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659347"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301324"
 ---
 # <a name="visual-studio-architecture-tooling-guidance"></a>Pokyny k nástrojům architektury Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento návod k nástrojům architektury je balíček ke stažení praktických pokynů k používání nástrojů pro modelování v aplikaci Visual Studio 2010. Prezentuje základní pohled na použití všech nástrojů modelování integrovaným způsobem a popisuje nejběžnější scénáře, ve kterých se nástroje používají.
+Tato nástrojů doprovodné materiály k architektuře je ke stažení balíčku, který obsahuje praktické rady týkající se používání nástrojů pro modelování v sadě Visual Studio 2010. Uvede široký přehled o tom, jak používat všechny nástroje modelování integrovaným způsobem a popisuje nejběžnější scénáře, ve kterých se tyto nástroje používají.
 
  Obsah byl vytvořen [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ALM, kde je speciální skupina, která má členy od [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] produktového týmu, služeb Microsoftu, Microsoft nejvíc spolupracovníků (MVP) a [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] komunitních zájemců.
 
- Pokud [si chcete stáhnout pokyny k nástrojům architektury, klikněte sem.](http://go.microsoft.com/fwlink/?LinkID=191984)
+ Pokud [si chcete stáhnout pokyny k nástrojům architektury, klikněte sem.](https://go.microsoft.com/fwlink/?LinkID=191984)

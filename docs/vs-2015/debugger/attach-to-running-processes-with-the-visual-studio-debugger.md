@@ -29,12 +29,12 @@ caps.latest.revision: 62
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 15b9921514f76d788430c1eda66603e9fc446361
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.openlocfilehash: 03cd890802e5563ce2daeb78438c56f4452d74f0
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67891030"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299513"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Připojení ke spuštěným procesům pomocí ladicího programu sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -87,7 +87,7 @@ Tato funkce slouží k ladění aplikací, které běží na místním nebo vzd�
    1. Zadejte název do **kvalifikátor** pole se seznamem.
 
       > [!NOTE]
-      > Pokud v dalších krocích se nemůžete připojit, pomocí názvu vzdáleného počítače, použijte IP adresu. (Číslo portu může automaticky zobrazit po výběru procesu. Můžete také zadat ho ručně. Na následující ilustraci 4020 je výchozí port pro vzdálené ladění.)
+      > Pokud se v pozdějších krocích nemůžete připojit pomocí názvu vzdáleného počítače, použijte IP adresu. (Číslo portu může automaticky zobrazit po výběru procesu. Můžete také zadat ho ručně. Na následující ilustraci 4020 je výchozí port pro vzdálené ladění.)
 
    2. Klikněte na šipku rozevíracího seznamu, který je připojen k **kvalifikátor** a z rozevíracího seznamu vyberte název počítače.
 
@@ -107,11 +107,11 @@ Tato funkce slouží k ladění aplikací, které běží na místním nebo vzd�
 
 ## <a name="additional-info"></a>Další informace
 
-Můžete být připojení k více programům při ladění, ale pouze jeden program je v každém okamžiku aktivní v ladicím programu. Můžete nastavit aktivní program **umístění ladění** nástrojů nebo **procesy** okna. Další informace najdete v tématu [jak: Nastavit aktuální Program](https://msdn.microsoft.com/7e1d7fa5-0e40-44cf-8c41-d3dba31c969e).
+Můžete být připojení k více programům při ladění, ale pouze jeden program je v každém okamžiku aktivní v ladicím programu. Můžete nastavit aktivní program **umístění ladění** nástrojů nebo **procesy** okna. Další informace najdete v tématu [postupy: nastavení aktuálního programu](https://msdn.microsoft.com/7e1d7fa5-0e40-44cf-8c41-d3dba31c969e).
 
-Pokud se pokusíte připojit k procesu vlastněnému nedůvěryhodným uživatelským účtem, zobrazí se potvrzovací dialogové okno s upozorněním zabezpečení. Další informace najdete v části [upozornění zabezpečení: Připojení k procesu, který patří nedůvěryhodnému uživateli, může být nebezpečné. Pokud následující informace vypadají podezřele nebo si nejste jisti, nepřipojujte k tomuto procesu](/visualstudio/debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user?view=vs-2015).
+Pokud se pokusíte připojit k procesu vlastněnému nedůvěryhodným uživatelským účtem, zobrazí se potvrzovací dialogové okno s upozorněním zabezpečení. Další informace najdete v tématu [Upozornění zabezpečení: připojení k procesu, který vlastní nedůvěryhodný uživatel, může být nebezpečné. Pokud tyto informace vypadají podezřele nebo si nejste jistí, nepřipojujte se k tomuto procesu](/visualstudio/debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user?view=vs-2015).
 
-V některých případech při ladění v relaci vzdálené plochy (Terminálová služba) **procesy k dispozici** seznamu nezobrazí všechny procesy k dispozici. Pokud používáte Visual Studio jako uživatel, který má omezený uživatelský účet, **procesy k dispozici** seznamu nezobrazí procesy spuštěné v relaci 0, který se používá pro služby a ostatních serverové procesy, včetně w3wp.exe. Problém můžete vyřešit spuštěním [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pod účtem správce nebo spuštěním [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] z konzoly serveru místo relace Terminálové služby. Pokud ani jeden z těchto řešení je možné, třetí možnost je připojit k procesu spuštěním `vsjitdebugger.exe -p` *ProcessId* z příkazového řádku Windows. Můžete určit id procesu pomocí tlist.exe. Chcete-li získat tlist.exe, stáhněte a nainstalujte ladění nástroje pro Windows, k dispozici na [soubory ke stažení sady WDK a WinDbg](http://go.microsoft.com/fwlink/?LinkId=168279).
+V některých případech při ladění v relaci vzdálené plochy (Terminálová služba) **procesy k dispozici** seznamu nezobrazí všechny procesy k dispozici. Pokud používáte Visual Studio jako uživatel, který má omezený uživatelský účet, **procesy k dispozici** seznamu nezobrazí procesy spuštěné v relaci 0, který se používá pro služby a ostatních serverové procesy, včetně w3wp.exe. Problém můžete vyřešit spuštěním [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pod účtem správce nebo spuštěním [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] z konzoly serveru místo relace Terminálové služby. Pokud ani jeden z těchto řešení je možné, třetí možnost je připojit k procesu spuštěním `vsjitdebugger.exe -p` *ProcessId* z příkazového řádku Windows. Můžete určit id procesu pomocí tlist.exe. Chcete-li získat tlist.exe, stáhněte a nainstalujte ladění nástroje pro Windows, k dispozici na [soubory ke stažení sady WDK a WinDbg](https://go.microsoft.com/fwlink/?LinkId=168279).
 
 ## <a name="BKMK_Scenarios"></a> Běžné scénáře ladění
 

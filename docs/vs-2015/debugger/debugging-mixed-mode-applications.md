@@ -1,5 +1,5 @@
 ---
-title: Ladění ve smíšeném režimu aplikací | Dokumentace Microsoftu
+title: Ladění aplikací ve smíšeném režimu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -25,21 +25,21 @@ caps.latest.revision: 22
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9c8e9f36e7118b1681701f6c8ac60a5bc851308f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: b462d5d0c449b8e47c936242908e5bbe6e433429
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65691360"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298310"
 ---
 # <a name="debugging-mixed-mode-applications"></a>Ladění aplikací ve smíšeném režimu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Aplikace pracující v kombinovaném režimu je libovolná aplikace, která kombinuje nativní kód (jazyk C++) se spravovaným kódem (například jazyk Visual Basic, Visual C# nebo C++, který běží na modulu CLR). Ladění aplikací ve smíšeném režimu je z velké části transparentní [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]; není příliš odlišné od ladění režimu jedné aplikace. Existuje však několik důležitých informací.  
+Aplikace pracující v kombinovaném režimu je libovolná aplikace, která kombinuje nativní kód (jazyk C++) se spravovaným kódem (například jazyk Visual Basic, Visual C# nebo C++, který běží na modulu CLR). Ladění aplikací se smíšeným režimem je v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]hlavně transparentní. není příliš odlišné od ladění aplikace v jednom režimu. Existuje však několik důležitých informací.  
   
 ## <a name="enable-c-edit-and-continue-in-mixed-mode-debugging"></a>Povolení příkazů Edit a Continue jazyka C++ v kombinovaném režimu ladění  
   
-- Pokud chcete používat příkazy Edit a Continue (Upravit a pokračovat) jazyka C++ v sadě Visual Studio 2013, budete muset přejít na starší verzi modulu pro ladění. Zobrazit [přepnutí do spravovaného režimu kompatibility v sadě Visual Studio 2013](http://blogs.msdn.com/b/visualstudioalm/archive/2013/10/16/switching-to-managed-compatibility-mode-in-visual-studio-2013.aspx) na blogu Microsoft Application Lifecycle Management.  
+- Pokud chcete používat příkazy Edit a Continue (Upravit a pokračovat) jazyka C++ v sadě Visual Studio 2013, budete muset přejít na starší verzi modulu pro ladění. Přečtěte si téma [Přepnutí do spravovaného režimu kompatibility v Visual Studio 2013](https://devblogs.microsoft.com/devops/switching-to-managed-compatibility-mode-in-visual-studio-2013/) na blogu Správa životního cyklu aplikací Microsoft.  
   
 ## <a name="property-evaluation-in-mixed-mode-applications"></a>Vyhodnocení vlastnosti v aplikacích pracujících v kombinovaném režimu  
  Vyhodnocení vlastností ladicím programem je v aplikaci pracující v kombinovaném režimu náročná operace. V důsledku toho se operace ladění, jako je například krokování, mohou zdát pomalé. Další informace najdete v tématu [krokování](https://msdn.microsoft.com/8791dac9-64d1-4bb9-b59e-8d59af1833f9). Pokud se při ladění v kombinovaném režimu setkáváte s nízkým výkonem, lze vyhodnocení vlastností vypnout v oknech ladicího programu.  
@@ -51,11 +51,11 @@ Aplikace pracující v kombinovaném režimu je libovolná aplikace, která komb
   
 1. Na **nástroje** nabídce zvolte **možnosti**.  
   
-2. V **možnosti** dialogovém okně Otevřít **ladění** a pak zvolte položku **Obecné** kategorie.  
+2. V dialogovém okně **Možnosti** otevřete složku **ladění** a vyberte kategorii **Obecné** .  
   
-3. Zrušte **povolit vyhodnocování vlastností a jiných implicitních volání funkcí** zaškrtávací políčko.  
+3. Zrušte zaškrtnutí políčka **Povolit vyhodnocování vlastností a další volání implicitní funkce** .  
   
-   Vzhledem k tomu, že se nativní a spravované zásobníky volání liší, ladicí program nemůže vždy pro smíšený kód stanovit úplný zásobník volání. Když nativní kód volá spravovaný kód, lze zaznamenat některé nesrovnalosti. Další informace najdete v tématu [smíšený kód a chybějící informace v okně zásobník volání](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md).  
+   Vzhledem k tomu, že se nativní a spravované zásobníky volání liší, ladicí program nemůže vždy pro smíšený kód stanovit úplný zásobník volání. Když nativní kód volá spravovaný kód, lze zaznamenat některé nesrovnalosti. Další informace naleznete v části [smíšený kód a chybějící informace v okně zásobník volání](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)

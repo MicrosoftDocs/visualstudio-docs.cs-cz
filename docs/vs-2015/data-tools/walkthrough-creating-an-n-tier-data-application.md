@@ -17,12 +17,12 @@ caps.latest.revision: 51
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 720f50fe486c0e625fcd67191f43897eba466698
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bd77006eda03b716e3c54c0b5b52ac633a383377
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660165"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299590"
 ---
 # <a name="walkthrough-creating-an-n-tier-data-application"></a>Návod: Vytvoření víceúrovňové datové aplikace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,7 +53,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
 
 - Napište kód pro naplnění tabulek dat.
 
-  ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu naleznete v části [Video postupy: vytváření N-vrstvých datových aplikací](http://go.microsoft.com/fwlink/?LinkId=115188).
+  ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu naleznete v části [Video postupy: vytváření N-vrstvých datových aplikací](https://go.microsoft.com/fwlink/?LinkId=115188).
 
 ## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat:
@@ -99,7 +99,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
      Projekt DataAccessTier je vytvořen a přidán do řešení NTierWalkthrough.
 
 ## <a name="creating-the-dataset"></a>Vytvoření datové sady
- Dalším krokem je vytvořit typovou datovou sadu. Typové datové sady jsou vytvořeny pomocí třídy DataSet (včetně tříd DataTables) a tříd `TableAdapter` v jednom projektu. (Všechny třídy jsou generovány do jediného souboru.) Když datovou sadu oddělíte a `TableAdapter`sete do různých projektů, jedná se o třídu datové sady, která je přesunuta do jiného projektu, přičemž třídy `TableAdapter` v původním projektu. Proto Vytvořte datovou sadu v projektu, která bude nakonec obsahovat `TableAdapter`s (projekt DataAccessTier). Datovou sadu vytvoříte pomocí **Průvodce konfigurací zdroje dat**.
+ Dalším krokem je vytvořit typovou datovou sadu. Typové datové sady jsou vytvořeny pomocí třídy DataSet (včetně tříd DataTables) a tříd `TableAdapter` v jednom projektu. (Všechny třídy jsou generovány do jediného souboru.) Když datovou sadu oddělíte a `TableAdapter`s různými projekty, je to Třída datové sady, která je přesunuta do jiného projektu, přičemž třídy `TableAdapter` v původním projektu. Proto Vytvořte datovou sadu v projektu, která bude nakonec obsahovat `TableAdapter`s (projekt DataAccessTier). Datovou sadu vytvoříte pomocí **Průvodce konfigurací zdroje dat**.
 
 > [!NOTE]
 > Abyste mohli vytvořit připojení, musíte mít přístup k ukázkové databázi Northwind.
@@ -108,7 +108,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
 
 1. V **Průzkumník řešení**klikněte na DataAccessTier.
 
-2. V nabídce **data** klikněte na možnost **Zobrazit zdroje dat**.
+2. Na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
 
 3. V okně **zdroje dat** klikněte na tlačítko **Přidat nový zdroj dat** a spusťte **Průvodce konfigurací zdroje dat**.
 
@@ -148,7 +148,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
 
 4. V seznamu **projekt datové sady** klikněte na **DataEntityTier**.
 
-5. V nabídce **sestavení** klikněte na **Sestavit řešení**.
+5. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
    Datová sada a objekty TableAdapter jsou rozděleny do dvou knihoven tříd projektů. Projekt, který původně obsahoval celou datovou sadu (DataAccessTier), teď obsahuje jenom objekty TableAdapter. Projekt určený ve vlastnosti **DataSet Project** (DataEntityTier) obsahuje typovou datovou sadu: NorthwindDataSet. DataSet. Designer. vb (nebo NorthwindDataSet.DataSet.Designer.cs).
 
@@ -201,7 +201,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
 
 6. Klikněte na tlačítko **Dokončit**.
 
-7. V nabídce **sestavení** klikněte na **Sestavit řešení**.
+7. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
 ## <a name="adding-a-reference-to-the-data-entity-and-data-access-tiers-to-the-data-service"></a>Přidání odkazu na vrstvu datové entity a vrstvu přístupu k datům do datové služby
  Vzhledem k tomu, že datová služba vyžaduje informace z datové sady a objekty TableAdapter, přidejte odkazy na projekty DataEntityTier a DataAccessTier.
@@ -280,7 +280,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
     }
     ```
 
-5. V nabídce **sestavení** klikněte na **Sestavit řešení**.
+5. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
 ## <a name="creating-a-presentation-tier-to-display-data-from-the-data-service"></a>Vytvoření prezentační vrstvy zobrazující data z datové služby
  Teď, když řešení obsahuje datovou službu, která obsahuje metody, které volají do úrovně přístupu k datům, vytvořte další projekt, který bude volat do datové služby a prezentuje data uživatelům. Pro tento návod vytvořte aplikaci model Windows Forms, Toto je prezentační vrstva aplikace v n-vrstvé aplikaci.

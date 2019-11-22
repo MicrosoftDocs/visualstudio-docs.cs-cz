@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7cfdf356d21558f2024cb83e00bdfc930284b1d8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ce5b21f92eecf2e8929c142bc1ee32e20d386335
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68164104"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299254"
 ---
 # <a name="how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger"></a>Jak mohu ladit porušení přístupu, když program spouštím mimo ladicí program?
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ Popis problému
 ## <a name="solution"></a>Řešení  
  Nastavte [Just-in-time ladění](../debugger/just-in-time-debugging-in-visual-studio.md) možnost a spusťte svůj program samostatné, dokud dojde k narušení přístupu. Potom v **narušení přístupu** dialogové okno, můžete kliknout na **zrušit** spuštění ladicího programu.  
   
- Také najdete v článku znalostní báze Knowledge Base Q133174, "Jak najít, kde dochází k chybu obecné ochrany (zásady skupiny)." Články znalostní báze můžete vyhledat na disku CD knihovny MSDN nebo tak, že [ http://support.microsoft.com/ ](http://support.microsoft.com/).  
+ Podívejte se také na článek znalostní báze Q133174, jak najít, kde dochází k chybě obecné ochrany (GP). " Články znalostní báze najdete na disku CD knihovny MSDN nebo v [http://support.microsoft.com/](https://support.microsoft.com/)hledání.  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění nativního kódu nejčastější dotazy](../debugger/debugging-native-code-faqs.md)   

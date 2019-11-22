@@ -1,5 +1,5 @@
 ---
-title: Upravit a pokračovat chyby a upozornění (C#) | Dokumentace Microsoftu
+title: Chyby a upozornění pro úpravy a pokračováníC#() | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -61,29 +61,29 @@ ms.assetid: c0e12b0a-8009-4a4a-979f-c804a91a5d9b
 caps.latest.revision: 11
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f83f421203b25edbbccf767c0661ece709dd63c4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d0865e06c5abb5faccce51a2bc38bb223f7fa3eb
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822951"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299279"
 ---
 # <a name="edit-and-continue-errors-and-warnings-c"></a>Chyby a upozornění operace Upravit a pokračovat (C#)
-Provedli jste úpravy část kódu, který není povolen v aplikaci Visual C# upravit a pokračovat.  
+Provedli jste úpravy oddílu kódu, který není povolený pro vizuální C# úpravu a pokračování.  
   
- [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)] Upravit a pokračovat umožňuje zastaví spuštění programu v režimu přerušení, měnit kód a potom pokračovat v provádění programu s nově zahrnutých změny.  
+ [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)] upravit a pokračovat umožňuje zastavit provádění programu v režimu pozastavení, provádět změny ve spuštěném kódu a potom pokračovat v provádění programu s nově začleněnými změnami.  
   
- Úpravy deklarativního kódu, které ovlivňují Veřejná struktura třídy jsou obecně zakázán a některé úpravy, které můžete provést metoda, vlastnost text nebo privátní deklarace v rámci třídy nejsou povoleny. Kdykoli je to možné, upravit a pokračovat označí kód, který nemůže být upravena jako světle šedá a zobrazí chybovou zprávu.  
+ Deklarativní úpravy kódu, které mají vliv na veřejnou strukturu třídy, jsou obecně zakázané a některé úpravy, které lze provést v metodě, tělo vlastnosti nebo soukromé deklarace v rámci třídy, nejsou povoleny. Kdykoli je to možné, kód pro úpravu a pokračování značky, který se nedá upravovat jako světle šedý, a zobrazí chybovou zprávu.  
   
- Další informace o podporovaných úpravy v dialogu Upravit a pokračovat pro [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)], naleznete v tématu [podporované změny kódu (C#)](../debugger/supported-code-changes-csharp.md). Pokud potřebujete další informace o konkrétní chyba nebo upozornění, můžete hledat nebo publikovat na MSDN [fórum Visual C# IDE](http://go.microsoft.com/fwlink/?LinkId=214693).  
+ Další informace o podporovaných úpravách v části Upravit a pokračovat pro [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)]najdete v tématu [podporované změnyC#kódu ()](../debugger/supported-code-changes-csharp.md). Pokud potřebujete další informace o konkrétní chybě nebo upozornění, můžete vyhledávat nebo publikovat na [fóru MSDN Visual C# IDE](https://go.microsoft.com/fwlink/?LinkId=214693).  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-1. Na **ladění** nabídce zvolte **zpět** změny vrátit zpět.  
+1. V nabídce **ladění** vyberte možnost **zpět** a vraťte změny zpět.  
   
      -nebo-  
   
-2. Zastavit relaci ladění, udělejte úpravy a spuštění nové ladicí relace.  
+2. Zastavte ladicí relaci, proveďte úpravy a spusťte novou relaci ladění.  
   
 ## <a name="see-also"></a>Viz také  
  [Upravit a pokračovat (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)

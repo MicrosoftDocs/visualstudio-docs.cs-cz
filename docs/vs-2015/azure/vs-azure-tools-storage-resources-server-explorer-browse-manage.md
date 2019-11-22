@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
-ms.openlocfilehash: 1f2199907ab6a59e329624046079436ca7cd08dd
-ms.sourcegitcommit: 3cc73e74921a9ceb622542e0e263abeebc455c00
+ms.openlocfilehash: 36b2691525eb66bf946317c1bb5254796d5cd639
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67624158"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74291234"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>Procházení a správa prostředků úložiště pomocí Průzkumníka serveru
 
@@ -122,7 +122,7 @@ Ve výchozím nastavení se stáhne objekt blob do dočasného adresáře. Ke st
 
 K nahrání objektů BLOB, vyberte **nahrát objekt Blob** tlačítko při otevření pro zobrazení v zobrazení kontejneru objektů blob v kontejneru.
 
-Můžete vybrat jeden nebo více souborů k nahrání a můžete nahrát soubory libovolného typu. **Protokolu aktivit Azure** okno zobrazuje průběh nahrávání. Další informace o tom, jak pracovat s daty objektů blob najdete v tématu [jak používat Azure Blob storage v rozhraní .NET](http://go.microsoft.com/fwlink/p/?LinkId=267911).
+Můžete vybrat jeden nebo více souborů k nahrání a můžete nahrát soubory libovolného typu. **Protokolu aktivit Azure** okno zobrazuje průběh nahrávání. Další informace o tom, jak pracovat s daty objektů blob najdete v tématu [jak používat Azure Blob storage v rozhraní .NET](https://go.microsoft.com/fwlink/p/?LinkId=267911).
 
 ### <a name="to-view-logs-transferred-to-blobs"></a>Chcete-li zobrazit protokoly přenosu k objektům BLOB
 
@@ -157,7 +157,7 @@ Následující obrázek znázorňuje frontu, která obsahuje dvě zprávy:
 
 ![Zobrazení fronty](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC651470.png)
 
-Další informace o službě storage services fronty, naleznete v tématu [Začínáme s Azure Queue storage pomocí .NET](http://go.microsoft.com/fwlink/?LinkID=264702). Informace o webové službě storage services fronty, naleznete v tématu [koncepty služby front](http://go.microsoft.com/fwlink/?LinkId=264788). Informace o tom, jak odesílat zprávy do fronty služby storage s použitím sady Visual Studio najdete v tématu [odesílání zpráv do fronty služby Storage](/azure/visual-studio/vs-storage-cloud-services-getting-started-queues).
+Další informace o službě storage services fronty, naleznete v tématu [Začínáme s Azure Queue storage pomocí .NET](https://go.microsoft.com/fwlink/?LinkID=264702). Informace o webové službě storage services fronty, naleznete v tématu [koncepty služby front](https://go.microsoft.com/fwlink/?LinkId=264788). Informace o tom, jak odesílat zprávy do fronty služby storage s použitím sady Visual Studio najdete v tématu [odesílání zpráv do fronty služby Storage](/azure/visual-studio/vs-storage-cloud-services-getting-started-queues).
 
 > [!NOTE]
 > Fronty služby Storage se liší od fronty Azure Service Bus. Další informace o fronty služby Service Bus, najdete v části [fronty služby Service Bus, témat a odběrů](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions).
@@ -227,7 +227,7 @@ Následující obrázek znázorňuje příklad řetězce platný filtr:
 
 ## <a name="refresh-storage-data"></a>Aktualizace úložiště dat
 
-Pokud Průzkumník serveru se připojí k nebo získá data z účtu úložiště, operace může trvat až jednu minutu na dokončení. Pokud Průzkumník serveru nemůžete připojit, operace může být vypršení časového limitu. Když se data načítají, můžete pokračovat v práci v ostatních částech aplikace Visual Studio. Chcete-li zrušit operaci, pokud je trvá moc dlouho, vyberte **Zastavit aktualizaci** tlačítko na panelu nástrojů Průzkumníka serveru.
+Pokud Průzkumník serveru se připojí k nebo získá data z účtu úložiště, operace může trvat až jednu minutu na dokončení. Pokud se Průzkumník serveru nemůže připojit, může časový limit operace trvat. Při načítání dat můžete pokračovat v práci v jiných částech sady Visual Studio. Chcete-li zrušit operaci, pokud je trvá moc dlouho, vyberte **Zastavit aktualizaci** tlačítko na panelu nástrojů Průzkumníka serveru.
 
 ### <a name="to-refresh-blob-container-data"></a>Aktualizovat data objektů blob v kontejneru
 
@@ -264,7 +264,7 @@ Existují dva způsoby, jak přidat účty úložiště pomocí Průzkumníka se
 
    ![Vytvoření účtu služby Azure storage](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744166.png)
 
-1. Vyberte **vytvořit**.
+1. Vyberte **Vytvořit**.
 
 Nový účet úložiště se zobrazí v **úložiště** seznamu v Průzkumníku řešení.
 
@@ -295,4 +295,4 @@ Pokud odstraníte účet úložiště z Průzkumníka serveru, to nemá vliv na 
 
 ## <a name="next-steps"></a>Další kroky
 
-Další informace o tom, jak pomocí služby Azure storage najdete v tématu [Úvod do služby Azure Storage](/azure/storage/common/storage-introduction).
+Další informace o tom, jak používat služby Azure Storage, najdete v tématu [Úvod do Azure Storage](/azure/storage/common/storage-introduction).

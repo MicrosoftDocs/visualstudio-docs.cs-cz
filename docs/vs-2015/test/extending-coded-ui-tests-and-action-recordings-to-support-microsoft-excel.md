@@ -8,12 +8,12 @@ ms.assetid: 6b0f72a4-70ca-4e55-b236-2ea1034fd8a7
 caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a48c01203d2e951e917482de3c0d9c2bec29ae01
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4e8e167f42a2f00553f1462db058e1b4e6d81b0f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660573"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302568"
 ---
 # <a name="extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel"></a>Rozšiřování programových testů UI a záznamů akcí k podpoře Microsoft Excel
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,7 +39,7 @@ Testovací rozhraní pro programové testy uživatelského rozhraní a záznamy 
 
 - SampleTestProject
 
-  Získejte ukázku z tohoto [příspěvku na blogu](http://go.microsoft.com/fwlink/?LinkID=185592).
+  Získejte ukázku z tohoto [příspěvku na blogu](https://go.microsoft.com/fwlink/?LinkID=185592).
 
 > [!NOTE]
 > Ukázka je určena pro použití v aplikaci Microsoft Excel 2010. Ukázka může pracovat s jinými verzemi aplikace Microsoft Excel, ale v současné době není podporována.
@@ -63,7 +63,7 @@ Testovací rozhraní pro programové testy uživatelského rozhraní a záznamy 
 
  "`%CommonProgramFiles(x86)%\Microsoft Shared\VSTT\<version number>\UITestExtensionPackages\*.*`", kde číslo verze může být 11,0, 12,0 atd. v závislosti na vaší verzi sady Visual Studio.
 
- @No__t_0 DLL a soubory PDB se zkopírují do `"%ProgramFiles(x86)%\Microsoft Visual Studio <version number>\Common7\IDE\PrivateAssemblies”`.
+ `ExcelUICommunicationHelper` DLL a soubory PDB se zkopírují do `"%ProgramFiles(x86)%\Microsoft Visual Studio <version number>\Common7\IDE\PrivateAssemblies”`.
 
  Možná budete muset upravit přesné cesty kopírování, ale nevyžaduje se žádná další instalace. Na 64 počítači pomocí příkazového řádku 32 bitové Visual Studio Enterprise spusťte soubor `CopyDrop.bat`.
 

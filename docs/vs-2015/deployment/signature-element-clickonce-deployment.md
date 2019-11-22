@@ -1,5 +1,5 @@
 ---
-title: '&lt;Podpis&gt; – Element (nasazení ClickOnce) | Dokumentace Microsoftu'
+title: '&gt; element signatury &lt;(ClickOnce nasazení) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -15,17 +15,17 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: df18b63ff306525cba74ef0932c97edd64eee797
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: db696546fdd64199753054b38fa2ac554f6a774f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68198110"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295076"
 ---
-# <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;Podpis&gt; – Element (nasazení ClickOnce)
+# <a name="ltsignaturegt-element-clickonce-deployment"></a>Element&gt; Signature &lt;(nasazení ClickOnce)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Obsahuje informace potřebné k digitálnímu podpisu manifestu nasazení.  
+Obsahuje nezbytné informace pro Digitální podepsání tohoto manifestu nasazení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,12 +37,12 @@ Obsahuje informace potřebné k digitálnímu podpisu manifestu nasazení.
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Podpis manifestu nasazení použitím signatury obálky je volitelná, avšak doporučená. Další informace o podepisování XML souborů naleznete v tématu World Wide Web Consortium doporučení, "Syntaxe a zpracování XML – podpis" je popsáno v [ http://www.w3.org/TR/xmldsig-core/ ](http://www.w3.org/TR/xmldsig-core/).  
+ Podpis manifestu nasazení pomocí podpisu obálky je volitelný, ale doporučený. Další informace o podepisování souborů XML naleznete v konsorcium World Wide Web doporučení "XML-Signature and Processing", popsané v [http://www.w3.org/TR/xmldsig-core/](https://www.w3.org/TR/xmldsig-core/).  
   
- Pokud chcete pro podepsání manifestu, třeba zadat hodnoty hash pro všechny soubory. Manifest se soubory, které se mají hodnotu hash nelze podepsat, protože uživatelé nemohou ověřit obsah nezašifrované souborů.  
+ Pokud chcete manifest podepsat, je nutné zadat hodnoty hash pro všechny soubory. Manifest se soubory, které nemají hodnotu hash, nelze podepsat, protože uživatelé nemohou ověřit obsah nezatřiďovacích souborů.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje `Signature` elementu v manifestu nasazení používané [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení.  
+ Následující příklad kódu ukazuje `Signature` prvek v manifestu nasazení používaném v nasazení [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)].  
   
 ```  
 <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">  

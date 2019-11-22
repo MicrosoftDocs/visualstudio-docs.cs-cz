@@ -11,12 +11,12 @@ caps.latest.revision: 33
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 27692c31c2c0f1c52ab026fb2d55e5d240839ff3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ac299f18e544ef4f3215707abbdc3d9e8d266de6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654906"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299291"
 ---
 # <a name="define-a-custom-modeling-toolbox-item"></a>Definování vlastní položky sady nástrojů pro modelování
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -113,7 +113,7 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
 
 - Jak je znázorněno v příkladu, `<bmp fileName="…"/>` pro ikonu panelu nástrojů a `<value>string</value>` pro ostatní položky.
 
-  \- nebo-
+  \- nebo –
 
 - `<resource fileName="Resources.dll"`
 
@@ -127,11 +127,11 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
 
 |Název uzlu|definuje|
 |---------------|-------------|
-|DisplayName|Název položky sady nástrojů|
+|displayName|Název položky sady nástrojů|
 |tabName|Karta panelu nástrojů, na které se má položka zobrazit Pro tento typ diagramu můžete zadat buď název regulární karty, nebo samostatný název.|
 |obrázek|Umístění souboru rastrového obrázku ( **. bmp**), který musí mít výšku a šířku 16 a barevnou hloubku 24 bitů.|
 |f1Keyword|Klíčové slovo, které vyhledává téma nápovědy.|
-|Okna|Popis tlačítka pro tento nástroj|
+|okna|Popis tlačítka pro tento nástroj|
 
  Můžete upravit rastrový soubor v sadě Visual Studio a nastavit jeho výšku a šířku na 16 v okno Vlastnosti.
 
@@ -139,7 +139,7 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
 > Pokud začnete používat soubor. tbxinfo po experimentování s použitím souborů diagramu sami, můžete zjistit, že sada nástrojů obsahuje jak starou, tak i nové verze položky sady nástrojů. K tomu může dojít také v případě, že název souboru diagramu byl v souboru. tbxinfo chybně natypový. Pokud k tomu dojde, v místní nabídce panelu nástrojů vyberte **obnovit sadu nástrojů**. Vlastní položky panelu nástrojů zmizí. Restartujte Visual Studio a zobrazí se správné vlastní položky.
 
 ## <a name="Extension"></a>Postup distribuce položek panelu nástrojů v rozšíření sady Visual Studio
- Položky panelu nástrojů lze distribuovat jiným [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uživatelům jejich zabalením do rozšíření sady Visual Studio (VSIX). Příkazy, profily a další rozšíření můžete zabalit do stejného souboru VSIX. Další informace najdete v tématu [nasazení rozšíření sady Visual Studio](http://go.microsoft.com/fwlink/?LinkId=160780).
+ Položky panelu nástrojů lze distribuovat jiným [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uživatelům jejich zabalením do rozšíření sady Visual Studio (VSIX). Příkazy, profily a další rozšíření můžete zabalit do stejného souboru VSIX. Další informace najdete v tématu [nasazení rozšíření sady Visual Studio](https://go.microsoft.com/fwlink/?LinkId=160780).
 
  Běžný způsob, jak sestavit rozšíření sady Visual Studio, je použít šablonu projektu VSIX. K tomu je potřeba mít nainstalovanou [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)].
 
@@ -151,7 +151,7 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
 
 3. Otevřete existující projekt rozšíření aplikace Visual Studio.
 
-     \- nebo-
+     \- nebo –
 
      Definujte nový projekt rozšíření sady Visual Studio.
 
@@ -168,11 +168,11 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
 
 5. Nastavte následující vlastnosti všech souborů, které jste právě přidali. Můžete nastavit jejich vlastnosti současně tak, že je vyberete vše v Průzkumník řešení. Dejte pozor, abyste neměnili vlastnosti ostatních souborů v projektu.
 
-     **Kopírovat do výstupního adresáře**  = **Kopírovat vždycky**
+     **Kopírovat do výstupního adresáře** = **Kopírovat vždycky**
 
-     @No__t_1**obsahu** **Akce sestavení**
+      = **obsahu** **Akce sestavení**
 
-     **Zahrnout do VSIX**  = **true**
+     **Zahrnout do VSIX** = **true**
 
 6. Otevřete **source. extension. vsixmanifest**. Otevře se v editoru manifestu rozšíření.
 
@@ -180,14 +180,14 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
 
      V části **assety**zvolte **nové** a pak nastavte pole v dialogovém okně následujícím způsobem:
 
-    - **Typ**  = **vlastní typ rozšíření**
+    - **Typ** = **vlastní typ rozšíření**
 
     - Type = `Microsoft.VisualStudio.ArchitectureTools.CustomToolboxItems`
 
         > [!NOTE]
         > Nejedná se o jednu z možností v rozevíracím seznamu. Je nutné zadat ho pomocí klávesnice.
 
-    - **Zdrojový**  = **soubor v systému souborů**.
+    - **Zdrojový** = **soubor v systému souborů**.
 
     - **Cesta** = váš soubor **. tbxinfo** , například **Moje nástroje. tbxinfo**
 
@@ -214,13 +214,13 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
 
 1. Vytvořte projekt rozšíření aplikace Visual Studio, který obsahuje jeden nebo více vlastních nástrojů.
 
-    V souboru **. tbxinfo** použijte metodu souboru prostředků k definování `displayName` nástroje, panelu nástrojů `tabName` a popisu tlačítka. Vytvořte soubor prostředků, ve kterém jsou tyto řetězce definovány, zkompilujte je do sestavení a odkazujte na ni ze souboru tbxinfo.
+    V souboru **. tbxinfo** použijte metodu souboru prostředků k definování `displayName`nástroje, panelu nástrojů `tabName`a popisu tlačítka. Vytvořte soubor prostředků, ve kterém jsou tyto řetězce definovány, zkompilujte je do sestavení a odkazujte na ni ze souboru tbxinfo.
 
 2. Vytvořte další sestavení, která obsahují soubory prostředků s řetězci v jiných jazycích.
 
 3. Každé další sestavení umístěte do složky, jejíž název je kód jazykové verze pro jazyk. Například vložte francouzskou verzi sestavení do složky s názvem **fr**.
 
-4. Měli byste použít neutrální kód kultury, obvykle dvě písmena, nikoli konkrétní jazykovou verzi, například `fr-CA`. Další informace o kódech kultury naleznete v tématu [CultureInfo. GetCultures](http://go.microsoft.com/fwlink/?LinkId=160782), který poskytuje úplný seznam kódů jazykové verze.
+4. Měli byste použít neutrální kód kultury, obvykle dvě písmena, nikoli konkrétní jazykovou verzi, například `fr-CA`. Další informace o kódech kultury naleznete v tématu [CultureInfo. GetCultures](https://go.microsoft.com/fwlink/?LinkId=160782), který poskytuje úplný seznam kódů jazykové verze.
 
 5. Sestavte rozšíření sady Visual Studio a distribuujte ho.
 
@@ -229,9 +229,9 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
    Tuto metodu nelze použít k instalaci různých verzí diagramu prototypu. Názvy prvků a konektorů budou v každé instalaci stejné.
 
 ## <a name="other-toolbox-operations"></a>Jiné operace sady nástrojů
- V [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] je obvykle možné sadu nástrojů přizpůsobit přejmenováním nástrojů, jejich přesunutím na různé karty sady nástrojů a jejich odstraněním. Tyto změny se ale neuchovávají pro vlastní nástroje pro modelování vytvořené pomocí postupů popsaných v tomto tématu. Po restartování [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] se vlastní nástroje znovu zobrazí se svými definovanými názvy a umístěními sady nástrojů.
+ V [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]je obvykle možné sadu nástrojů přizpůsobit přejmenováním nástrojů, jejich přesunutím na různé karty sady nástrojů a jejich odstraněním. Tyto změny se ale neuchovávají pro vlastní nástroje pro modelování vytvořené pomocí postupů popsaných v tomto tématu. Po restartování [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]se vlastní nástroje znovu zobrazí se svými definovanými názvy a umístěními sady nástrojů.
 
- I když provedete příkaz **obnovit sadu nástrojů** , vaše vlastní nástroje zmizí. Budou se ale po restartování [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] znovu zobrazovat.
+ I když provedete příkaz **obnovit sadu nástrojů** , vaše vlastní nástroje zmizí. Budou se ale po restartování [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]znovu zobrazovat.
 
 ## <a name="see-also"></a>Viz také
  [Rozšiřování modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md) [Definování profilu pro rozšiřování UML](../modeling/define-a-profile-to-extend-uml.md) [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md) [Definování omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md)

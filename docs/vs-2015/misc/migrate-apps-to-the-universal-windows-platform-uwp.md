@@ -9,12 +9,12 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 76590f55b21f1609a20c6fd8eb041a41a0f82131
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5794aa5ab7dc14932c65a9156ea9252e71731155
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656032"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299480"
 ---
 # <a name="migrate-apps-to-the-universal-windows-platform-uwp"></a>Migrace aplikací do Univerzální platformy Windows (UWP)
 Proveďte potřebné ruční změny stávajících souborů projektu pro aplikace Windows Store 8,1, Windows Phone 8,1 aplikace nebo univerzální aplikace pro Windows vytvořené pomocí sady Visual Studio 2015 RC, aby je bylo možné použít se sadou Visual Studio 2015 RTM. (Pokud máte Windows 8.1 univerzální aplikace s projektem aplikace pro Windows a projektem Windows Phone, budete muset při migraci každého projektu použít postup.)
@@ -84,17 +84,17 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
      ![Klikněte na projekt pravým tlačítkem a vyberte Upravit.](../misc/media/uap-editproject.png "UAP_EditProject")
 
-6. Vyhledejte prvek \<PropertyGroup >, který obsahuje prvek \<TargetPlatformVersion > s hodnotou 8,1. Pro tento \<PropertyGroup > element proveďte následující kroky:
+6. Najděte \<vlastností > elementu, který obsahuje prvek \<TargetPlatformVersion > s hodnotou 8,1. Pro tento \<> elementu proveďte následující kroky:
 
-    1. Nastavte hodnotu \<Platform > elementu na: **x86**.
+    1. Nastavte hodnotu > elementu \<Platform na: **x86**.
 
-    2. Přidejte prvek \<TargetPlatformIdentifier > a nastavte jeho hodnotu na: **UAP**.
+    2. Přidejte \<prvek > TargetPlatformIdentifier a nastavte jeho hodnotu na: **UAP**.
 
-    3. Změňte existující hodnotu prvku \<TargetPlatformVersion > tak, aby byla hodnota Univerzální platforma Windows verze, kterou jste nainstalovali. Přidejte také prvek \<TargetPlatformMinVersion > a přidělte mu stejnou hodnotu.
+    3. Změňte existující hodnotu prvku \<TargetPlatformVersion > na hodnotu, kterou jste nainstalovali, do verze Univerzální platforma Windows. Přidejte také \<prvek > TargetPlatformMinVersion a přiřaďte mu stejnou hodnotu.
 
     4. Změňte hodnotu \<MinimumVisualStudioVersion > elementu na: **14**.
 
-    5. Nahraďte prvek \<ProjectTypeGuids >, jak je znázorněno níže:
+    5. Nahraďte \<prvek > ProjectTypeGuids, jak je znázorněno níže:
 
          Pro C#:
 
@@ -108,11 +108,11 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
         <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
         ```
 
-    6. Přidejte prvek \<EnableDotNetNativeCompatibleProfile > a nastavte jeho hodnotu na: **true**.
+    6. Přidejte \<prvek > EnableDotNetNativeCompatibleProfile a nastavte jeho hodnotu na: **true**.
 
-    7. Výchozí škála assetů pro univerzální aplikace pro Windows je 200. Pokud váš projekt obsahuje prostředky, které nejsou škálované v 200, bude nutné přidat prvek \<UapDefaultAssetScale > s hodnotou škálování prostředků do této vlastnosti Property. Přečtěte si další informace o [prostředcích a škálování](https://msdn.microsoft.com/library/jj679352.aspx).
+    7. Výchozí škála assetů pro univerzální aplikace pro Windows je 200. Pokud váš projekt obsahuje prostředky neškálované v 200, bude nutné přidat \<prvku > UapDefaultAssetScale s hodnotou škálování prostředků do této vlastnosti. Přečtěte si další informace o [prostředcích a škálování](https://msdn.microsoft.com/library/jj679352.aspx).
 
-         Nyní by váš \<PropertyGroup > element by měl vypadat podobně jako v tomto příkladu:
+         Vlastnost \<> elementu by teď měla vypadat podobně jako v tomto příkladu:
 
         ```xml
         <PropertyGroup>
@@ -140,7 +140,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
         <VisualStudioVersion>14.0</VisualStudioVersion>
     ```
 
-8. Jako součást atributu Condition Najděte \<PropertyGroup > prvky, které jsou nakonfigurované pro platformu AnyCPU. Odeberte tyto prvky a všechny její podřízené položky. AnyCPU se nepodporuje pro aplikace Windows 10 v aplikaci Visual Studio 2015. Například byste měli odebrat \<PropertyGroup > prvky, jako jsou ty:
+8. \<> elementy, které jsou konfigurovány pro platformu AnyCPU jako součást atributu Condition, najdete vlastností. Odeberte tyto prvky a všechny její podřízené položky. AnyCPU se nepodporuje pro aplikace Windows 10 v aplikaci Visual Studio 2015. Například je třeba odebrat \<vlastností > prvky, jako jsou ty:
 
     ```xml
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -164,7 +164,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
       </PropertyGroup>
     ```
 
-9. Pro každý zbývající \<PropertyGroup > prvek ověřte, zda element má atribut Condition s konfigurací vydání. Pokud má, ale neobsahuje \<UseDotNetNativeToolchain > element, pak ho přidejte. Nastavte hodnotu prvku \<UseDotNetNativeToolchain > na hodnotu true, například:
+9. Pro každý zbývající \<vlastností > prvku ověřte, zda element má atribut Condition s konfigurací vydání. Pokud obsahuje, ale neobsahuje \<UseDotNetNativeToolchain > element, pak ho přidejte. Nastavte hodnotu pro \<UseDotNetNativeToolchain > elementu na hodnotu true, například takto:
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
@@ -181,7 +181,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
       </PropertyGroup>
     ```
 
-10. U Windows Phonech projektů odstraňte prvek > \<PropertyGroup, který obsahuje prvek \<TargetPlatformIdentifier > s hodnotou WindowsPhoneApp. Odeberte také všechny podřízené prvky tohoto prvku:
+10. U Windows Phonech projektů odeberte > element \<vlastností, který obsahuje \<prvek TargetPlatformIdentifier > s hodnotou WindowsPhoneApp. Odeberte také všechny podřízené prvky tohoto prvku:
 
     ```xml
     <PropertyGroup Condition=" '$(TargetPlatformIdentifier)' == '' ">
@@ -189,13 +189,13 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
     </PropertyGroup>
     ```
 
-11. Vyhledejte prvek \<ItemGroup >, který obsahuje prvek \<AppxManifest >. Přidejte následující \<None > prvek jako podřízený prvek \<ItemGroup >:
+11. Vyhledejte prvek > \<položky, který obsahuje prvek \<AppxManifest >. Přidejte následující \<žádný > prvek jako podřízený prvek \<položky >:
 
     ```xml
     <None Include="project.json" />
     ```
 
-12. Vyhledejte prvek \<ItemGroup >, který obsahuje další prostředky, které jsou přidány do projektu, například soubory loga. png (\<Content include = "Assets\Logo.scale-100.png"/>). Do tohoto \<ItemGroup > elementu přidejte následující \<Content > podřízený element:
+12. Vyhledejte prvek > \<položky, který obsahuje další prostředky, které jsou přidány do projektu, například soubory loga. png (\<obsah include = "Assets\Logo.scale-100.png"/>). Do tohoto \<elementu > přidejte následující \<obsahu > podřízený element:
 
      **Pro C#:**
 
@@ -209,7 +209,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
     <Content Include="My Project\default.rd.xml" />
     ```
 
-13. Vyhledejte prvek \<ItemGroup >, který zahrnuje \<Reference > podřízených prvků do balíčků NuGet. Poznamenejte si balíčky NuGet, které použijete, protože je budete muset stáhnout pomocí Správce balíčků NuGet po opětovném načtení projektu. Odeberte tuto \<ItemGroup > spolu se svými podřízenými položkami. Například projekt UWP může mít následující balíčky NuGet, které je třeba odebrat:
+13. Vyhledejte prvek > \<položky, který obsahuje \<odkaz > elementy pro balíčky NuGet. Poznamenejte si balíčky NuGet, které použijete, protože je budete muset stáhnout pomocí Správce balíčků NuGet po opětovném načtení projektu. Odeberte tuto \<ovou >ovou položku společně s jejími potomky. Například projekt UWP může mít následující balíčky NuGet, které je třeba odebrat:
 
     ```xml
     <ItemGroup>
@@ -262,21 +262,21 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
      ![Klikněte&#45;pravým tlačítkem na soubor projektu a vyberte Upravit.](../misc/media/uap-editcplusproject.png "UAP_EditCPlusProject")
 
-3. Vyhledejte prvek \<PropertyGroup >, který obsahuje prvek \<ApplicationTypeRevision > s hodnotou 8,1. Pro tento \<PropertyGroup > element proveďte následující kroky:
+3. Najděte \<vlastností > elementu, který obsahuje prvek \<ApplicationTypeRevision > s hodnotou 8,1. Pro tento \<> elementu proveďte následující kroky:
 
-    1. Přidejte prvek \<WindowsTargetPlatformVersion > a \<WindowsTargetPlatformMinVersion > element a poskytněte jim hodnotu Univerzální platforma Windows verze, kterou jste nainstalovali.
+    1. Přidejte \<prvek > WindowsTargetPlatformVersion a prvek \<WindowsTargetPlatformMinVersion > a poskytněte jim hodnotu Univerzální platforma Windows verze, kterou jste nainstalovali.
 
     2. Aktualizujte hodnotu elementu ApplicationTypeRevision z 8,1 na 10,0.
 
     3. Změňte hodnotu \<MinimumVisualStudioVersion > elementu na: 14.
 
-    4. Přidejte prvek \<EnableDotNetNativeCompatibleProfile > a nastavte jeho hodnotu na: true.
+    4. Přidejte \<prvek > EnableDotNetNativeCompatibleProfile a nastavte jeho hodnotu na: true.
 
-    5. Výchozí škála assetů pro univerzální aplikace pro Windows je 200. Pokud váš projekt obsahuje prostředky, které nejsou škálované v 200, bude nutné přidat prvek \<UapDefaultAssetScale > s hodnotou škálování prostředků do této vlastnosti Property. Přečtěte si další informace o [prostředcích a škálování](https://msdn.microsoft.com/library/jj679352.aspx).
+    5. Výchozí škála assetů pro univerzální aplikace pro Windows je 200. Pokud váš projekt obsahuje prostředky neškálované v 200, bude nutné přidat \<prvku > UapDefaultAssetScale s hodnotou škálování prostředků do této vlastnosti. Přečtěte si další informace o [prostředcích a škálování](https://msdn.microsoft.com/library/jj679352.aspx).
 
-    6. U Windows Phonech projektů změňte hodnotu \<ApplicationType > z Windows Phone na Windows Store.
+    6. U Windows Phonech projektů změňte hodnotu \<typu ApplicationType > z Windows Phone na Windows Store.
 
-         Nyní by váš \<PropertyGroup > element by měl vypadat podobně jako v tomto příkladu:
+         Vlastnost \<> elementu by teď měla vypadat podobně jako v tomto příkladu:
 
         ```xml
         <PropertyGroup>
@@ -292,7 +292,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
         </PropertyGroup>
         ```
 
-4. Změňte všechny instance \<PlatformToolset > prvku tak, aby v140 hodnotu. Příklad:
+4. Změňte všechny instance \<ho prvku > PlatformToolset na hodnotu v140. Příklad:
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -304,7 +304,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
       </PropertyGroup>
     ```
 
-5. Pro každý zbývající \<PropertyGroup > prvek ověřte, zda element má atribut Condition s konfigurací vydání. Pokud má, ale neobsahuje \<UseDotNetNativeToolchain > element, pak ho přidejte. Nastavte hodnotu prvku \<UseDotNetNativeToolchain > na hodnotu true, například:
+5. Pro každý zbývající \<vlastností > prvku ověřte, zda element má atribut Condition s konfigurací vydání. Pokud obsahuje, ale neobsahuje \<UseDotNetNativeToolchain > element, pak ho přidejte. Nastavte hodnotu pro \<UseDotNetNativeToolchain > elementu na hodnotu true, například takto:
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|X64'" Label="Configuration">
@@ -330,9 +330,9 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
 1. Otevřete v projektu soubor Package. appxmanifest. Je potřeba upravit soubor Package. AppxManifest pro každý z vašich projektů Windows Storu a Windows Phone.
 
-2. Je nutné aktualizovat prvek \<Package > novými schématy na základě stávajícího typu projektu. Nejdřív odeberte níže uvedená schémata na základě toho, jestli máte Windows Store nebo Windows Phone projekt.
+2. Musíte aktualizovat balíček \<> elementu novými schématy založenými na vašem existujícím typu projektu. Nejdřív odeberte níže uvedená schémata na základě toho, jestli máte Windows Store nebo Windows Phone projekt.
 
-    **Staré pro projekt Windows Store:** Váš \<Package > prvek bude vypadat podobně jako tento.
+    **Staré pro projekt Windows Store:** > Element balíčku \<bude vypadat podobně jako tento.
 
    ```xml
    <Package
@@ -341,7 +341,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-    **Staré pro Windows Phone projekt:** Váš \<Package > prvek bude vypadat podobně jako tento.
+    **Staré pro Windows Phone projekt:** > Element balíčku \<bude vypadat podobně jako tento.
 
    ```xml
    <Package
@@ -351,7 +351,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
    ```
 
-    **Novinka pro Univerzální platforma Windows:** Přidejte níže uvedená schémata do prvku \<Package >. Odeberte všechny přidružené předpony identifikátoru oboru názvů z prvků pro schémata, která jste právě odebrali. Aktualizujte vlastnost IgnorableNamespaces na: UAP MP. Nový prvek \<Package > by měl vypadat podobně jako tento.
+    **Novinka pro Univerzální platforma Windows:** Přidejte níže uvedená schémata do balíčku \<> elementu. Odeberte všechny přidružené předpony identifikátoru oboru názvů z prvků pro schémata, která jste právě odebrali. Aktualizujte vlastnost IgnorableNamespaces na: UAP MP. Nový \<> elementu balíčku by měl vypadat podobně jako tento.
 
    ```xml
    <Package
@@ -362,7 +362,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-3. Do prvku \<Package > přidejte podřízený element \<Dependencies >. Pak do tohoto \<Dependencies > element přidejte \<TargetDeviceFamily > podřízený element s atributy Name, MinVersion a MaxVersionTested. Zadejte název atributu value: Windows. Universal. Přiřaďte hodnoty MinVersion a MaxVersionTested hodnotu verze Univerzální platforma Windows, kterou jste nainstalovali. Tento element by měl vypadat nějak takto:
+3. Přidejte \<závislosti > podřízeného prvku do \<> element balíčku. Potom do této \<> závislosti přidejte \<TargetDeviceFamily > podřízený element s atributy Name, MinVersion a MaxVersionTested. Zadejte název atributu value: Windows. Universal. Přiřaďte hodnoty MinVersion a MaxVersionTested hodnotu verze Univerzální platforma Windows, kterou jste nainstalovali. Tento element by měl vypadat nějak takto:
 
    ```xml
    <Dependencies>
@@ -370,16 +370,16 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
    </Dependencies>
    ```
 
-4. **Jenom pro Windows Store:** Do prvku \<Package > je nutné přidat \<mp:P honeIdentity > podřízený element. Přidejte atribut PhoneProductId a atribut PhonePublisherId. Nastavte PhoneProductId tak, aby měl stejnou hodnotu jako atribut Name v elementu \<Identity >. Nastavte hodnotu PhonePublishedId na: 00000000-0000-0000-0000-000000000000. Nějak tak:
+4. **Jenom pro Windows Store:** Je nutné přidat podřízený element \<MP: PhoneIdentity > do balíčku \<> elementu. Přidejte atribut PhoneProductId a atribut PhonePublisherId. Nastavte PhoneProductId tak, aby měl stejnou hodnotu jako atribut Name v > elementu \<identity. Nastavte hodnotu PhonePublishedId na: 00000000-0000-0000-0000-000000000000. Nějak tak:
 
    ```xml
    <Identity Name="aa3815a1-2d97-4c71-8c99-578135b28cd8" Publisher="CN=xxxxxxxx" Version="1.0.0.0" />
    <mp:PhoneIdentity PhoneProductId="aa3815a1-2d97-4c71-8c99-578135b28cd8" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
    ```
 
-5. Vyhledejte prvek \<Prerequisites > a odstraňte tento prvek a všechny jeho podřízené prvky.
+5. Vyhledejte \<předpoklady > elementu a odstraňte tento prvek a všechny jeho podřízené prvky.
 
-6. Přidejte obor názvů **UAP** do následujících \<Resource > prvky: Scale, DXFeatureLevel. Příklad:
+6. Přidejte obor názvů **UAP** do následujících \<prostředků > elementů: Scale, DXFeatureLevel. Příklad:
 
    ```xml
    <Resources>
@@ -390,7 +390,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-7. Přidejte obor názvů **UAP** do následujících \<Capability > prvky: DocumentsLibrary, PicturesLibrary, VideosLibrary, MusicLibrary, EnterpriseAuthentication, SharedUserCertificates, removableStorage, schůzky a kontakty. Příklad:
+7. Přidejte obor názvů **UAP** do následujících funkcí \<> prvky: DocumentsLibrary, PicturesLibrary, VideosLibrary, MusicLibrary, EnterpriseAuthentication, SharedUserCertificates, removableStorage, schůzky a kontakty. Příklad:
 
    ```xml
    <Capabilities>
@@ -400,7 +400,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-8. Přidejte obor názvů **UAP** do elementu \<VisualElements > a všech jeho podřízených elementů. Příklad:
+8. Přidejte obor názvů **UAP** do > elementu \<VisualElements a všech jeho podřízených elementů. Příklad:
 
    ```xml
    <uap:VisualElements
@@ -414,7 +414,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-    **Platí jenom pro Windows Store:** Změnily se názvy velikosti dlaždice. Změňte atributy v prvku \<VisualElements > tak, aby odrážely nové sblížené velikosti dlaždic. čtvercové se bude čtvercové a čtvercové se bude 44x44.
+    **Platí jenom pro Windows Store:** Změnily se názvy velikosti dlaždice. Změňte atributy v \<VisualElements > elementu tak, aby odrážely nové sblížené velikosti dlaždic. čtvercové se bude čtvercové a čtvercové se bude 44x44.
 
     **Old:** názvy velikostí dlaždic
 
@@ -454,7 +454,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-10. Přidejte obor názvů **UAP** do následujících \<Extension > prvků a všech jeho podřízených elementů: Windows. accountPictureProvide, Windows. alarm, Windows. appointmentsProvider Windows. autoPlayContent, Windows. autoPlayDevice, Windows. cachedFileUpdate, Windows. cameraSettings, Windows. fileOpenPicker, Windows. fileTypeAssociation, Windows. fileSavePicke, Windows. lockScreenCall, Windows. printTaskSettings, Windows. Protocol, Windows. Search, Windows. shareTarget. Příklad:
+10. Přidejte obor názvů **UAP** do následujících rozšíření \<> elementy a všech jeho podřízených elementů: Windows. accountPictureProvide, Windows. alarm, Windows. appointmentsProvider Windows. autoPlayContent, Windows. autoPlayDevice, Windows. cachedFileUpdate, Windows. cameraSettings, Windows. fileOpenPicker, Windows. fileTypeAssociation, Windows. fileSavePicke, Windows. lockScreenCall, Windows. printTaskSettings, Windows. Protocol, Windows. Search, Windows. shareTarget. Příklad:
 
     ```xml
     <Extensions>
@@ -480,9 +480,9 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-12. Změňte závislosti rozhraní. Přidejte název vydavatele do všech \<PackageDependency > prvky a zadejte hodnotu MinVersion, pokud již není zadána.
+12. Změňte závislosti rozhraní. Přidejte název vydavatele do všech \<PackageDependency prvky > a zadejte hodnotu MinVersion, pokud již není zadána.
 
-     **Old:** \<PackageDependency > element
+     **Old:** \<element > PackageDependency
 
     ```xml
     <Dependencies>
@@ -585,7 +585,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
 17. Než budete moct řešení znovu otevřít, musíte odstranit některé skryté soubory.
 
-    1. Otevřete Průzkumníka souborů, klikněte na tlačítko **Zobrazit** na panelu nástrojů a vyberte položku **skryté položky** a **přípony názvů souborů**. Otevřete tuto složku na vašem počítači: \<path umístění vašeho řešení > \\. vs \\ {Project Name} \v14. Pokud existuje soubor s příponou souboru. suo, odstraňte ho.
+    1. Otevřete Průzkumníka souborů, klikněte na tlačítko **Zobrazit** na panelu nástrojů a vyberte položku **skryté položky** a **přípony názvů souborů**. Otevřete tuto složku na vašem počítači: \<cestu k umístění vašeho řešení >\\. vs\\{Project Name} \v14. Pokud existuje soubor s příponou souboru. suo, odstraňte ho.
 
     2. Teď se vraťte do složky, kde se nachází vaše řešení. Otevřete všechny složky pro projekty, které existují ve vašem řešení. Pokud má soubor v některé z těchto složek projektu příponu. csproj. User nebo. vbproj. User a pak ho odstraňte.
 
@@ -649,11 +649,11 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ![Klikněte na projekt pravým tlačítkem a vyberte Upravit.](../misc/media/uap-editproject.png "UAP_EditProject")
 
-4. Vyhledejte prvek \<PropertyGroup >, který obsahuje \<TargetPlatformVersion > a \<TargetPlatformMinVersion > prvky. Změňte existující hodnotu \<TargetPlatformVersion > a \<TargetPlatformMinVersion > prvky tak, aby byly stejné jako verze Univerzální platforma Windows, kterou jste nainstalovali.
+4. Najděte \<vlastností > elementu, který obsahuje \<TargetPlatformVersion > a \<TargetPlatformMinVersion prvky >. Změňte existující hodnotu \<TargetPlatformVersion > a \<prvky > TargetPlatformMinVersion na stejnou verzi Univerzální platforma Windows, kterou jste nainstalovali.
 
-    Výchozí škála assetů pro univerzální aplikace pro Windows je 200. Projekty vytvořené pomocí sady Visual Studio 2015 RC zahrnují prostředky škálované na 100, bude nutné přidat \<UapDefaultAssetScale > prvek s hodnotou 100 do této třídy Property. Přečtěte si další informace o [prostředcích a škálování](https://msdn.microsoft.com/library/jj679352.aspx).
+    Výchozí škála assetů pro univerzální aplikace pro Windows je 200. Projekty vytvořené pomocí sady Visual Studio 2015 RC zahrnují prostředky škálované na 100, bude nutné přidat \<prvek > UapDefaultAssetScale s hodnotou 100 pro tuto vlastnost Property. Přečtěte si další informace o [prostředcích a škálování](https://msdn.microsoft.com/library/jj679352.aspx).
 
-5. Pokud jste přidali jakékoli odkazy na sady SDK rozšíření UWP (například: Windows Mobile SDK), bude nutné aktualizovat verzi sady SDK. Například \<SDKReference > prvek:
+5. Pokud jste přidali jakékoli odkazy na sady SDK rozšíření UWP (například: Windows Mobile SDK), bude nutné aktualizovat verzi sady SDK. Například \<SDKReference – > element:
 
    ```xml
    <SDKReference Include="WindowsMobile, Version=10.0.0.1">
@@ -671,7 +671,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-6. Vyhledejte prvek \<Target > s atributem Name, který má hodnotu: EnsureNuGetPackageBuildImports. Odstranit tento element a všechny jeho podřízené položky.
+6. Vyhledejte \<cílový > element s atributem Name, který má hodnotu: EnsureNuGetPackageBuildImports. Odstranit tento element a všechny jeho podřízené položky.
 
    ```xml
    <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -683,7 +683,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
    </Target>
    ```
 
-7. Vyhledejte a odstraňte prvky \<Import > s atributy projektu a podmínky odkazující na Microsoft. Diagnostics. Tracing. EventSource a Microsoft. ApplicationInsights, například:
+7. Vyhledejte a odstraňte \<importovat > prvky s atributy projektu a podmínky odkazující na Microsoft. Diagnostics. Tracing. EventSource a Microsoft. ApplicationInsights, například:
 
    ```xml
    <Import Project="..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.16-beta\build\portable-net45+win8+wpa81\Microsoft.Diagnostics.Tracing.EventSource.Redist.targets" Condition="Exists('..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.16-beta\build\portable-net45+win8+wpa81\Microsoft.Diagnostics.Tracing.EventSource.Redist.targets')" />
@@ -691,9 +691,9 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-8. Vyhledejte \<ItemGroup >, které mají \<Reference > podřízených prvků do balíčků NuGet. Poznamenejte si balíčky NuGet, na které se odkazuje, protože tyto informace budete potřebovat pro budoucí krok. Jedním z významných rozdílů mezi formátem projektu Windows 10 mezi Visual Studio 2015 RC a Visual Studio 2015 RTM je, že formát RTM používá [NuGet](http://docs.nuget.org/) verze 3.
+8. Vyhledejte > \<položky, které mají \<odkaz na > podřízených elementů na balíčky NuGet. Poznamenejte si balíčky NuGet, na které se odkazuje, protože tyto informace budete potřebovat pro budoucí krok. Jedním z významných rozdílů mezi formátem projektu Windows 10 mezi Visual Studio 2015 RC a Visual Studio 2015 RTM je, že formát RTM používá [NuGet](https://docs.microsoft.com/nuget/) verze 3.
 
-    Odeberte > \<ItemGroup a všechny její podřízené položky. Například projekt UWP vytvořený pomocí sady Visual Studio RC bude mít následující balíčky NuGet, které je třeba odebrat:
+    Odeberte > \<a všechny její podřízené položky. Například projekt UWP vytvořený pomocí sady Visual Studio RC bude mít následující balíčky NuGet, které je třeba odebrat:
 
    ```xml
    <ItemGroup>
@@ -721,7 +721,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-9. Vyhledejte prvek \<ItemGroup >, který obsahuje prvek \<AppxManifest >. Pokud existuje \<None > element s atributem include nastaveným na: Packages. config, odstraňte jej. Přidejte také prvek \<None > s atributem include a nastavte jeho hodnotu na: Project. JSON.
+9. Vyhledejte prvek > \<položky, který obsahuje prvek \<AppxManifest >. Pokud \<žádný > element s atributem include nastaveným na: Packages. config, odstraňte ho. Přidejte také > element \<None s atributem include a nastavte jeho hodnotu na: Project. JSON.
 
 10. Uložte provedené změny. Pak zavřete soubor projektu.
 
@@ -739,7 +739,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     2. Uložte provedené změny.
 
-14. Pomocí Správce NuGet přidejte balíčky, které jste odstranili v předchozím kroku. Jedním z významných rozdílů mezi formátem projektu Windows 10 mezi Visual Studio 2015 RC a Visual Studio 2015 RTM je, že formát RTM používá [NuGet](http://docs.nuget.org/) verze 3.
+14. Pomocí Správce NuGet přidejte balíčky, které jste odstranili v předchozím kroku. Jedním z významných rozdílů mezi formátem projektu Windows 10 mezi Visual Studio 2015 RC a Visual Studio 2015 RTM je, že formát RTM používá [NuGet](https://docs.microsoft.com/nuget/) verze 3.
 
     Nyní můžete vytvářet kód, sestavovat a ladit aplikaci.
 
@@ -757,13 +757,13 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
      ![Uvolněte projekt a pak upravte soubor projektu.](../misc/media/uap-editearliercplus.png "UAP_EditEarlierCPlus")
 
-3. Vyhledejte jakékoli \<PropertyGroup > prvky, které neobsahují atribut podmínky, ale obsahují prvek \<ApplicationTypeRevision >. Aktualizujte hodnotu ApplicationTypeRevision z 8,2 na 10,0. Přidejte \<WindowsTargetPlatformVersion > a \<WindowsTargetPlatformMinVersion prvek > a nastavte jejich hodnoty tak, aby se staly hodnotou Univerzální platforma Windows verze, kterou jste nainstalovali.
+3. Vyhledejte jakékoli \<vlastností > prvky, které neobsahují atribut Condition, ale obsahují element \<ApplicationTypeRevision >. Aktualizujte hodnotu ApplicationTypeRevision z 8,2 na 10,0. Přidejte \<WindowsTargetPlatformVersion > a prvek > \<WindowsTargetPlatformMinVersion a nastavte jejich hodnoty tak, aby byly nastavené na hodnotu Univerzální platforma Windows verze, kterou jste nainstalovali.
 
-     Přidejte prvek \<EnableDotNetNativeCompatibleProfile > a nastavte jeho hodnotu na true, pokud prvek ještě neexistuje.
+     Přidejte \<prvek > EnableDotNetNativeCompatibleProfile a nastavte jeho hodnotu na true, pokud prvek ještě neexistuje.
 
-     Výchozí škála assetů pro univerzální aplikace pro Windows je 200. Projekty vytvořené pomocí sady Visual Studio 2015 RC zahrnují prostředky škálované na 100, bude nutné přidat \<UapDefaultAssetScale > prvek s hodnotou 100 do této třídy Property. Přečtěte si další informace o [prostředcích a škálování](https://msdn.microsoft.com/library/jj679352.aspx).
+     Výchozí škála assetů pro univerzální aplikace pro Windows je 200. Projekty vytvořené pomocí sady Visual Studio 2015 RC zahrnují prostředky škálované na 100, bude nutné přidat \<prvek > UapDefaultAssetScale s hodnotou 100 pro tuto vlastnost Property. Přečtěte si další informace o [prostředcích a škálování](https://msdn.microsoft.com/library/jj679352.aspx).
 
-     Takže tento \<PropertyGroup > prvek bude nyní podobný tomuto:
+     Takže toto \<vlastnost > elementu se teď bude podobat následujícímu:
 
     ```xml
     <PropertyGroup Label="Globals">
@@ -779,7 +779,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-4. Pro každý zbývající \<PropertyGroup > prvek ověřte, zda element má atribut Condition s konfigurací vydání. Pokud má, ale neobsahuje \<UseDotNetNativeToolchain > element, pak ho přidejte. Nastavte hodnotu prvku \<UseDotNetNativeToolchain > na hodnotu true, například:
+4. Pro každý zbývající \<vlastností > prvku ověřte, zda element má atribut Condition s konfigurací vydání. Pokud obsahuje, ale neobsahuje \<UseDotNetNativeToolchain > element, pak ho přidejte. Nastavte hodnotu pro \<UseDotNetNativeToolchain > elementu na hodnotu true, například takto:
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -792,7 +792,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-5. Je nutné aktualizovat prvek \<EnableDotNetNativeCompatibleProfile > a prvek \<UseDotNetNativeToolchain > pro povolení .NET Native, ale v C++ šablonách není povolená možnost .NET Native.
+5. Je nutné aktualizovat \<element > EnableDotNetNativeCompatibleProfile a element \<UseDotNetNativeToolchain > pro povolení .NET Native, ale v C++ šablonách není povolená možnost .NET Native.
 
      Uložte provedené změny. Pak zavřete soubor projektu.
 
@@ -829,7 +829,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-2. Nahraďte tento element \<EnableCoreRuntime > false \</EnableCoreRuntime > s následujícím elementem:
+2. Nahraďte tento element \<EnableCoreRuntime > false\</EnableCoreRuntime > s následujícím elementem:
 
    ```xml
 
@@ -867,7 +867,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-4. Přidejte tento prvek \<UseDotNetNativeToolchain > hodnotu true \</UseDotNetNativeToolchain > jako podřízený prvek do těchto skupin vlastností:
+4. Přidejte tento element \<UseDotNetNativeToolchain > true\</UseDotNetNativeToolchain > jako podřízený prvek pro tyto skupiny vlastností:
 
    ```xml
 
@@ -877,7 +877,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-5. Odstraňte následující \<ItemGroup > prvky:
+5. Odstraňte následující > prvky \<položky:
 
    ```xml
 
@@ -1005,7 +1005,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-2. Přidejte následující \<ProjectConfiguration > prvky pod tento element \<ItemGroup jmenovka = "ProjectConfigurations" >, pokud již nejsou v této fille:
+2. Přidejte následující \<prvky > ProjectConfiguration pod tento prvek, \<popisek položky = "ProjectConfigurations" >, pokud již nejsou v tomto fille:
 
     ```xml
 
@@ -1036,7 +1036,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-4. Přidejte tyto \<PropertyGroup > prvky, pokud ještě nejsou v souboru:
+4. Přidejte tyto \<> prvky, pokud ještě nejsou v souboru:
 
     ```xml
 
@@ -1086,7 +1086,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-7. Přidejte tyto \<ItemDefinitionGroup > prvky do oddílu, který již obsahuje jiné prvky \<ItemDefinitionGroup >:
+7. Přidejte tyto \<prvky > ItemDefinitionGroup do oddílu, který již obsahuje jiné prvky > \<ItemDefinitionGroup:
 
     ```xml
 
@@ -1127,7 +1127,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-     Nahraďte tímto \<ItemGroup > elementu:
+     Nahraďte tímto \<> elementu této položky:
 
     ```xml
 
@@ -1152,7 +1152,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
     </ItemGroup>
     ```
 
-     Nahraďte je těmito \<ItemGroup > prvky:
+     Nahraďte je těmito > prvky \<položky:
 
     ```xml
 
@@ -1176,7 +1176,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
     <ClCompile Include="UnitTest.cpp"/>
     ```
 
-     Nahraďte je těmito \<CICompile > prvky:
+     Nahraďte je těmito \<prvky > CICompile:
 
     ```xml
 

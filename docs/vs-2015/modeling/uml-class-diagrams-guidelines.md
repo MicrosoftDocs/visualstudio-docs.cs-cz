@@ -17,12 +17,12 @@ caps.latest.revision: 56
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 804678985ae30d833b57fe7589f0903cf1edb291
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c170827825d772f4d97cd22f0b5754232e8d2257
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652279"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297287"
 ---
 # <a name="uml-class-diagrams-guidelines"></a>Diagramy tříd UML: Pokyny
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
  Chcete-li zjistit, které verze aplikace Visual Studio tuto funkci podporují, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 > [!NOTE]
-> Toto téma se zabývá diagramy tříd UML. Existuje jiný typ diagramu tříd, který lze vytvořit a použít jej k vizualizaci kódu programu. Viz [Návrh a zobrazení tříd a typů](http://go.microsoft.com/fwlink/?LinkId=142231).
+> Toto téma se zabývá diagramy tříd UML. Existuje jiný typ diagramu tříd, který lze vytvořit a použít jej k vizualizaci kódu programu. Viz [Návrh a zobrazení tříd a typů](https://go.microsoft.com/fwlink/?LinkId=142231).
 
 ## <a name="Using"></a>Použití diagramů tříd UML
  Diagram tříd UML lze použít pro různé účely:
@@ -180,7 +180,7 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
 
 - Typ, který je definován v modelu.
 
-- Parametrizovaná hodnota typu šablony, napsaná šablona \<Parameter >. Viz [typy šablon](#Templates).
+- Parametrizovaná hodnota typu šablony, napsaná šablona\<parametr >. Viz [typy šablon](#Templates).
 
   Lze rovněž napsat název typu, který ještě nebyl v modelu definován. Název bude uveden v části **neurčené typy** v PRŮZKUMNÍKU modelů UML.
 
@@ -256,7 +256,7 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
 visibility attribute-name : Type
 ```
 
- \- nebo-
+ \- nebo –
 
 ```
 visibility operation-name (parameter1 : Type1, ...) : Type
@@ -346,12 +346,12 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
 - **Agregace**. Zobrazí se ve tvaru kosočtverce na jednom konci spojnice. Tím lze naznačit, že instance agregačních rolí vlastní nebo obsahují instance jiných.
 
-- **Je naviguje**. Pokud je hodnota true pouze u jedné role, zobrazí se v jejím směru šipka. Toto lze použít k indikaci směru spojení a databázových relací v softwaru.
+- **Is Navigable**. Pokud je hodnota true pouze u jedné role, zobrazí se v jejím směru šipka. Toto lze použít k indikaci směru spojení a databázových relací v softwaru.
 
   Úplné podrobnosti o těchto a dalších vlastnostech naleznete v tématu [Vlastnosti přidružení v diagramech tříd UML](../modeling/properties-of-associations-on-uml-class-diagrams.md).
 
 ### <a name="navigability"></a>Navigace
- Po zakreslení má asociace na jednom konci šipku, což označuje, že asociace je provázána v tomto směru. To je užitečné, pokud diagram tříd reprezentuje softwarové třídy a asociace reprezentují ukazatele nebo odkazy. Pokud je však diagram tříd použit k reprezentaci entit a vztahů nebo obchodních konceptů, není použití navigace relevantní. V takovém případě je lepší použít zakreslení asociací bez šipek. To lze provést nastavením vlastnosti **is naviguje** na obou koncích přidružení na hodnotu true. Chcete-li to usnadnit, můžete si stáhnout ukázkový kód [modelování domény UML](http://code.msdn.microsoft.com/UML-Domain-Modeling-6df6f7f4).
+ Po zakreslení má asociace na jednom konci šipku, což označuje, že asociace je provázána v tomto směru. To je užitečné, pokud diagram tříd reprezentuje softwarové třídy a asociace reprezentují ukazatele nebo odkazy. Pokud je však diagram tříd použit k reprezentaci entit a vztahů nebo obchodních konceptů, není použití navigace relevantní. V takovém případě je lepší použít zakreslení asociací bez šipek. To lze provést nastavením vlastnosti **is naviguje** na obou koncích přidružení na hodnotu true.
 
 ### <a name="attributes-and-associations"></a>Atributy a asociace
  Asociace je grafický způsob zobrazení atributu. Například namísto vytvoření třídy Restaurace s atributem typu Nabídka lze nakreslit asociaci z entity Restaurace do entity Nabídka.
@@ -367,7 +367,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
 - Vztah *generalizace* mezi specializovaným typem a obecným typem
 
-   \- nebo-
+   \- nebo –
 
 - Vztah *realizace* mezi třídou a rozhraním, které implementuje.
 
@@ -422,7 +422,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
     Zobrazí se dialogové okno **Editor kolekce parametrů šablony** .
 
-4. Klikněte na tlačítko **Přidat**.
+4. Zvolte **přidat**.
 
 5. Nastavte vlastnost název na název parametru pro typ šablony, například `Key`.
 
@@ -434,7 +434,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
 9. Typům šablony přidejte atributy a operace, jako byste to udělali u tříd.
 
-     Můžete použít parametry, jejichž druh je **Třída**, **rozhraní** nebo **výčet** v definici atributů a operací. Například pomocí tříd parametrů `Key` a `Value` můžete tuto operaci definovat v `Dictionary`:
+     Můžete použít parametry, jejichž druh je **Třída**, **rozhraní** nebo **výčet** v definici atributů a operací. Například pomocí tříd parametrů `Key` a `Value`můžete tuto operaci definovat v `Dictionary`:
 
      `Get(k : Key) : Value`
 
@@ -473,4 +473,4 @@ visibility operation-name (parameter1 : Type1, ...) : Type
      Další informace o nastavení těchto vlastností a přizpůsobení poskytovaných šablon naleznete v tématu [generování kódu z diagramů tříd UML](../modeling/generate-code-from-uml-class-diagrams.md).
 
 ## <a name="see-also"></a>Viz také
- [Umožňuje upravit modely a diagramy UML](../modeling/edit-uml-models-and-diagrams.md) diagramy [tříd UML: referenční](../modeling/uml-class-diagrams-reference.md) [Model požadavky uživatelů](../modeling/model-user-requirements.md) na [diagramy komponent UML: referenční](../modeling/uml-component-diagrams-reference.md) [diagramy UML](../modeling/uml-sequence-diagrams-reference.md) : referenční diagramy [případu použití UML](../modeling/uml-use-case-diagrams-reference.md) [: Referenční dokumentace UML Diagramy komponent: referenční](../modeling/uml-component-diagrams-reference.md) dokumentace
+ [Umožňuje upravit modely a diagramy UML diagramy](../modeling/edit-uml-models-and-diagrams.md) [tříd UML: referenční](../modeling/uml-class-diagrams-reference.md) [Model požadavky uživatelů](../modeling/model-user-requirements.md) na [diagramy komponent UML: odkazy](../modeling/uml-component-diagrams-reference.md) na [sekvenční diagramy](../modeling/uml-sequence-diagrams-reference.md) UML: referenční diagramy [případů použití](../modeling/uml-use-case-diagrams-reference.md) UML: Referenční dokumentace [diagramů komponent UML: referenční informace](../modeling/uml-component-diagrams-reference.md)

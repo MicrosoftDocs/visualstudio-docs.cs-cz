@@ -9,19 +9,19 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c2c131032a97231dce0394065d78505e936e3e91
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 33a7f5a0f183030f9de021df328f8c5e50f5fd5a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656019"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300896"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>Postupy: Rozšíření návrháře jazyka specifického pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Můžete nastavit rozšíření pro návrháře, který použijete k úpravám definic DSL. Mezi typy rozšíření, které lze provést, patří přidávání příkazů nabídky, přidávání obslužných rutin pro gesta přetažení a pravidla, která jsou aktivována při změně konkrétního typu hodnot nebo relací. Rozšíření mohou být zabalena jako rozšíření integrace sady Visual Studio (VSIX) a distribuována jiným uživatelům.
 
- Vzorový kód a další informace o této funkci najdete na webu Visual Studio [vizualizace and MODELING SDK (VMSDK)](http://go.microsoft.com/fwlink/?LinkID=186128).
+ Vzorový kód a další informace o této funkci najdete na webu Visual Studio [vizualizace and MODELING SDK (VMSDK)](https://go.microsoft.com/fwlink/?LinkID=186128).
 
 ## <a name="setting-up-the-solution"></a>Nastavení řešení
  Nastavte projekt, který obsahuje kód vašeho rozšíření a projekt VSIX, který projekt exportuje. Vaše řešení může obsahovat další projekty, které jsou začleněny do stejného VSIX.
@@ -48,30 +48,30 @@ Můžete nastavit rozšíření pro návrháře, který použijete k úpravám d
 
 7. V projektu knihovny tříd přidejte odkazy na následující sestavení:
 
-     Microsoft. VisualStudio. CoreUtility
+     Microsoft.VisualStudio.CoreUtility
 
-     Microsoft. VisualStudio. Modeling. SDK. 11.0
+     Microsoft.VisualStudio.Modeling.Sdk.11.0
 
-     Microsoft. VisualStudio. Modeling. SDK. Diagrams. 11.0
+     Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
 
-     Microsoft. VisualStudio. Modeling. SDK. DslDefinition. 11.0
+     Microsoft.VisualStudio.Modeling.Sdk.DslDefinition.11.0
 
-     Microsoft. VisualStudio. Modeling. SDK. Integration. 11.0
+     Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0
 
-     System. ComponentModel. složení
+     System.ComponentModel.Composition
 
      System. Drawing
 
      System. Drawing. Design
 
-     System. Windows. Forms
+     System.Windows.Forms
 
 ## <a name="testing-and-deployment"></a>Testování a nasazení
  Chcete-li otestovat jakékoli rozšíření v tomto tématu, sestavte a spusťte řešení. Otevře se experimentální instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. V této instanci otevřete řešení DSL. Úprava diagramu DslDefinition. Chování rozšíření lze zobrazit.
 
- Chcete-li nasadit rozšíření do hlavního [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a do jiných počítačů, postupujte podle následujících kroků:
+ Chcete-li nasadit rozšíření do hlavního [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]a do jiných počítačů, postupujte podle následujících kroků:
 
-1. Vyhledejte instalační soubor VSIX v projektu VSIX v přihrádce \\ * \\ \*. vsix
+1. V projektu VSIX v přihrádce najít instalační soubor VSIX\\*\*\\\*.VSIX
 
 2. Zkopírujte tento soubor do cílového počítače a potom v Průzkumníku Windows (nebo v Průzkumníku souborů) poklikejte na něj.
 
@@ -79,14 +79,14 @@ Můžete nastavit rozšíření pro návrháře, který použijete k úpravám d
 
    K odinstalaci rozšíření použijte následující postup:
 
-3. v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v nabídce **nástroje** klikněte na **Správce rozšíření**.
+3. v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]v nabídce **nástroje** klikněte na **Správce rozšíření**.
 
 4. Vyberte rozšíření a odstraňte ho.
 
 ## <a name="adding-a-shortcut-menu-command"></a>Přidání příkazu místní nabídky
  Chcete-li vytvořit příkaz místní nabídky na ploše návrháře DSL nebo v okně Průzkumníka DSL, napište třídu podobnou následující.
 
- Třída musí implementovat `ICommandExtension` a musí mít `DslDefinitionModelCommandExtension` atributu.
+ Třída musí implementovat `ICommandExtension` a musí mít `DslDefinitionModelCommandExtension`atributu.
 
 ```
 using System.Collections.Generic;

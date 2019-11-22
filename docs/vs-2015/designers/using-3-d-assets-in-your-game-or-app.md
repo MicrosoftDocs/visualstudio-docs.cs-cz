@@ -16,12 +16,12 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4b61a187f4e07c73e5c53db382a6ee5e5cb8cb70
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6d838b7519b40d47b644a53befb91391fa30a664
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664073"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74293139"
 ---
 # <a name="using-3-d-assets-in-your-game-or-app"></a>Používání 3D prostředků ve hře nebo aplikaci
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ Tento článek popisuje, jak lze použít [!INCLUDE[vsprvs](../includes/vsprvs-m
     |3D modely|**MeshContentTask (. targets;. props)**|
     |Shadery|**ShaderGraphContentTask (. targets;. props)**|
 
-3. Klikněte na tlačítko **OK** .
+3. Zvolte **OK** tlačítko.
 
 ## <a name="including-assets-in-your-build"></a>Zahrnutí prostředků do sestavení
  Teď, když váš projekt ví o různých druzích 3D prostředků, které chcete použít, je dalším krokem sdělit, které soubory jsou 3D prostředky a jaké druhy prostředků jsou.
@@ -61,7 +61,7 @@ Tento článek popisuje, jak lze použít [!INCLUDE[vsprvs](../includes/vsprvs-m
    > [!IMPORTANT]
    > Ve výchozím nastavení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] předpokládá, že mnoho druhů obrázkových souborů by měly být zařazeny do kategorií pomocí typu položky **Obrázek** , který je integrovaný do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Proto je třeba změnit vlastnost **typ položky** každého obrázku, který chcete zpracovat pomocí kanálu obsahu obrázku. Další typy zdrojových souborů kanálu obsahu pro 3D modely a grafiku vizuálního shaderu jsou ve výchozím nastavení správného **typu položky**.
 
-4. Klikněte na tlačítko **OK** .
+4. Zvolte **OK** tlačítko.
 
    Tady jsou tři typy položek kanálu obsahu a jejich přidružené zdrojové a výstupní typy souborů.
 
@@ -82,14 +82,14 @@ Tento článek popisuje, jak lze použít [!INCLUDE[vsprvs](../includes/vsprvs-m
 
 3. V části **Vlastnosti konfigurace**vyberte uzel Content Pipeline, například **kanál obsahu obrázku** pro prostředky textury a image – a potom v mřížce vlastností nastavte vlastnosti na příslušné hodnoty. Pokud například chcete generovat mipmapy pro prostředek textury v čase sestavení, nastavte vlastnost **Generovat MIPS** na **Ano**.
 
-4. Klikněte na tlačítko **OK** .
+4. Zvolte **OK** tlačítko.
 
 ### <a name="image-content-pipeline-configuration"></a>Konfigurace kanálu obsahu obrázku
  Použijete-li nástroj pro vytváření textur obsahu k sestavení prostředků textury, lze texturu zkomprimovat různými způsoby, označit, zda mají být v době sestavení generovány úrovně MIP, a změnit název výstupního souboru.
 
 |Vlastnost|Popis|
 |--------------|-----------------|
-|**Komprimují**|Určuje typ komprese, který se používá pro výstupní soubor.<br /><br /> K dispozici jsou tyto možnosti:<br /><br /> -   **bez komprese**<br />-   **Komprese BC1_UNORM**<br />-   **Komprese BC1_UNORM_SRGB**<br />-   **Komprese BC2_UNORM**<br />-   **Komprese BC2_UNORM_SRGB**<br />-   **Komprese BC3_UNORM**<br />-   **Komprese BC3_UNORM_SRGB**<br />-   **Komprese BC4_UNORM**<br />-   **Komprese BC4_SNORM**<br />-   **Komprese BC5_UNORM**<br />-   **Komprese BC5_SNORM**<br />-   **Komprese BC6H_UF16**<br />-   **Komprese BC6H_SF16**<br />-   **Komprese BC7_UNORM**<br />-   **Komprese BC7_UNORM_SRGB**<br /><br /> Informace o tom, které formáty komprese jsou podporovány v různých verzích rozhraní DirectX, najdete v tématu [Průvodce programováním pro DXGI](http://go.microsoft.com/fwlink/p/?LinkId=246265).|
+|**Komprimují**|Určuje typ komprese, který se používá pro výstupní soubor.<br /><br /> K dispozici jsou tyto možnosti:<br /><br /> -   **bez komprese**<br />**komprese BC1_UNORM** -   <br />**komprese BC1_UNORM_SRGB** -   <br />**komprese BC2_UNORM** -   <br />**komprese BC2_UNORM_SRGB** -   <br />**komprese BC3_UNORM** -   <br />**komprese BC3_UNORM_SRGB** -   <br />**komprese BC4_UNORM** -   <br />**komprese BC4_SNORM** -   <br />**komprese BC5_UNORM** -   <br />**komprese BC5_SNORM** -   <br />**komprese BC6H_UF16** -   <br />**komprese BC6H_SF16** -   <br />**komprese BC7_UNORM** -   <br />**komprese BC7_UNORM_SRGB** -   <br /><br /> Informace o tom, které formáty komprese jsou podporovány v různých verzích rozhraní DirectX, najdete v tématu [Průvodce programováním pro DXGI](https://go.microsoft.com/fwlink/p/?LinkId=246265).|
 |Převést na předem vynásobený formát alfa|**Ano** , pokud chcete převést obrázek na předem vynásobený formát alfa ve výstupním souboru; v opačném případě **ne**. Dojde ke změně pouze výstupního souboru, zdrojový obrázek zůstane beze změny.|
 |**Generovat MIPS**|**Ano** , pokud chcete vygenerovat úplný řetěz mip v čase sestavení a zahrnout ho do výstupního souboru; v opačném případě **ne**. Pokud **ne**a zdrojový soubor již obsahuje mipmap řetězec, bude mít výstupní soubor řetězec MIP; v opačném případě výstupní soubor nebude mít žádný řetězec MIP.|
 |**Výstup obsahu**|Určuje název výstupního souboru. **Důležité informace:**  Změna přípony názvu souboru výstupního souboru nemá žádný vliv na formát souboru.|
@@ -111,13 +111,13 @@ Tento článek popisuje, jak lze použít [!INCLUDE[vsprvs](../includes/vsprvs-m
 ## <a name="loading-and-using-3-d-assets-at-run-time"></a>Načítání a používání 3D prostředků v době běhu
 
 ### <a name="using-textures-and-images"></a>Používání textur a imagí
- Rozhraní Direct3D poskytuje funkce pro vytváření prostředků textury. V rozhraní Direct3D 11 poskytuje knihovna nástrojů D3DX11 další funkce pro vytváření prostředků textury a zobrazení prostředků přímo z obrazových souborů. Další informace o tom, jak vytvořit prostředek textury v Direct3D 11, najdete v tématu [textury](http://go.microsoft.com/fwlink/p/?LinkID=246267). Další informace o tom, jak pomocí knihovny D3DX11 vytvořit prostředek textury nebo zobrazení prostředků z obrázkového souboru, naleznete v tématu [How to: Initialize a Texture from a File](http://go.microsoft.com/fwlink/p/?LinkId=246268).
+ Rozhraní Direct3D poskytuje funkce pro vytváření prostředků textury. V rozhraní Direct3D 11 poskytuje knihovna nástrojů D3DX11 další funkce pro vytváření prostředků textury a zobrazení prostředků přímo z obrazových souborů. Další informace o tom, jak vytvořit prostředek textury v Direct3D 11, najdete v tématu [textury](https://go.microsoft.com/fwlink/p/?LinkID=246267). Další informace o tom, jak pomocí knihovny D3DX11 vytvořit prostředek textury nebo zobrazení prostředků z obrázkového souboru, naleznete v tématu [How to: Initialize a Texture from a File](https://go.microsoft.com/fwlink/p/?LinkId=246268).
 
 ### <a name="using-3-d-models"></a>Používání 3D modelů
  Direct3D 11 neposkytuje funkce pro vytváření prostředků z 3D modelů. Místo toho musíte napsat kód, který přečte soubor 3D modelu a vytvoří vyrovnávací paměti vrcholů a indexů, které reprezentují 3D model a všechny prostředky, které model vyžaduje – například textury nebo shadery.
 
 ### <a name="using-shaders"></a>Použití shaderů
- Rozhraní Direct3D poskytuje funkce pro vytváření prostředků shaderu a jejich vazbu na programovatelné grafické kanály. Další informace o tom, jak vytvořit prostředek shaderu v rozhraní Direct3D a vytvořit jeho propojení s kanálem, najdete v tématu [Průvodce programováním pro HLSL](http://go.microsoft.com/fwlink/p/?LinkID=261521).
+ Rozhraní Direct3D poskytuje funkce pro vytváření prostředků shaderu a jejich vazbu na programovatelné grafické kanály. Další informace o tom, jak vytvořit prostředek shaderu v rozhraní Direct3D a vytvořit jeho propojení s kanálem, najdete v tématu [Průvodce programováním pro HLSL](https://go.microsoft.com/fwlink/p/?LinkID=261521).
 
  V programovatelném grafickém kanálu musí každá fáze kanálu poskytnout další fázi kanálu, která je naformátována způsobem, který dokáže pochopit. Vzhledem k tomu, že návrhář shaderů může vytvářet pouze pixel shadery, znamená to, že je až do vaší aplikace, aby se zajistilo, že data, která obdrží, jsou ve formátu, který očekává. Několik programovatelných fází shaderu nastává před shaderem pixel a provádění geometrických transformací – shader vrcholů, shader trupu, shader domény a shader geometrie. K neprogramovatelné fázi teselace dojde také před shaderem pixel. Bez ohledu na to, které z těchto fází přímo předchází pixel shader, musí mít výsledek v tomto formátu:
 

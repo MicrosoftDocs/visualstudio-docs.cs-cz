@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a8a0654936ac102891981ecbee43430172487628
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dd2b2d19e55cbaf9af63ddeafdbdf9f6d677c5bc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646120"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301614"
 ---
 # <a name="layer-diagrams-reference"></a>Diagramy vrstev: Referenční dokumentace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,7 +48,7 @@ V aplikaci Visual Studio můžete použít *Diagram vrstev* k vizualizaci logick
 
 - Posílit zamýšlenou architekturu během vývoje a údržby kódu tím, že zahrnete ověření pomocí operací vrácení se změnami a sestavování.
 
-  Toto téma popisuje prvky, které lze použít v diagramu vrstev. Podrobnější informace o tom, jak vytvářet a kreslit diagramy vrstev, najdete v tématu [diagramy vrstev: pokyny](../modeling/layer-diagrams-guidelines.md). Další informace o vzorech vrstvení najdete na [webu vzory & postupy](http://go.microsoft.com/fwlink/?LinkId=145794).
+  Toto téma popisuje prvky, které lze použít v diagramu vrstev. Podrobnější informace o tom, jak vytvářet a kreslit diagramy vrstev, najdete v tématu [diagramy vrstev: pokyny](../modeling/layer-diagrams-guidelines.md). Další informace o vzorech vrstvení najdete na [webu vzory & postupy](https://go.microsoft.com/fwlink/?LinkId=145794).
 
 ## <a name="reading-layer-diagrams"></a>Čtení diagramů vrstev
  ![Prvky v diagramech vrstev](../modeling/media/uml-layerrefreading.png "UML_LayerRefReading")
@@ -57,8 +57,8 @@ V aplikaci Visual Studio můžete použít *Diagram vrstev* k vizualizaci logick
 
 |**Automatického**|**Element**|**Popis**|
 |---------------|-----------------|---------------------|
-|první|**Vrstvení**|Logická skupina fyzických artefaktů ve vašem systému. Tyto artefakty mohou být obory názvů, projekty, třídy, metody a tak dále.<br /><br /> Chcete-li zobrazit artefakty, které jsou propojeny s vrstvou, otevřete místní nabídku pro vrstvu a pak zvolte možnost **Zobrazit odkazy** a otevřete **Průzkumníka vrstev**.<br /><br /> Další informace naleznete v tématu [Průzkumník vrstev](#Explorer).<br /><br /> -   **zakázané závislosti oboru názvů** – určuje, že artefakty přidružené k této vrstvě nemůžou záviset na zadaných oborech názvů.<br />-   **zakázané obory názvů** – určuje, že artefakty přidružené k této vrstvě nesmí patřit do zadaných oborů názvů.<br />-   **požadované obory názvů** – určuje, že artefakty přidružené k této vrstvě musí patřit do jednoho ze zadaných oborů názvů.|
-|odst|**Závislosti**|Označuje, že jedna vrstva může použít funkci v jiné vrstvě, ale ne naopak.<br /><br /> -   **směr** – určuje směr závislosti.|
+|1|**Vrstvení**|Logická skupina fyzických artefaktů ve vašem systému. Tyto artefakty mohou být obory názvů, projekty, třídy, metody a tak dále.<br /><br /> Chcete-li zobrazit artefakty, které jsou propojeny s vrstvou, otevřete místní nabídku pro vrstvu a pak zvolte možnost **Zobrazit odkazy** a otevřete **Průzkumníka vrstev**.<br /><br /> Další informace naleznete v tématu [Průzkumník vrstev](#Explorer).<br /><br /> -   **zakázané závislosti oboru názvů** – určuje, že artefakty přidružené k této vrstvě nemůžou záviset na zadaných oborech názvů.<br />-   **zakázané obory názvů** – určuje, že artefakty přidružené k této vrstvě nesmí patřit do zadaných oborů názvů.<br />-   **požadované obory názvů** – určuje, že artefakty přidružené k této vrstvě musí patřit do jednoho ze zadaných oborů názvů.|
+|2|**Závislost**|Označuje, že jedna vrstva může použít funkci v jiné vrstvě, ale ne naopak.<br /><br /> -   **směr** – určuje směr závislosti.|
 |3|**Obousměrná závislost**|Označuje, že jedna vrstva může používat funkci v jiné vrstvě a naopak.<br /><br /> -   **směr** – určuje směr závislosti.|
 |4|**Vytvořena**|Slouží k přidání obecných poznámek do diagramu nebo prvků v diagramu.|
 |5|**Odkaz na komentář**|Slouží k propojení komentářů s prvky v diagramu.|

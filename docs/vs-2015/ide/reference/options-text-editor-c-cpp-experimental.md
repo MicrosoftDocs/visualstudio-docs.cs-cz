@@ -11,12 +11,12 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7e9d1464481b33bc5fbf5e73bc09a6da4eb082c7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5979363f16f2e9d78a2f50ffbb6511d03146caaa
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662353"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297858"
 ---
 # <a name="options-text-editor-cc-experimental"></a>Možnosti, textový editor, C/C++, experimentální
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ Změnou těchto možností můžete změnit chování související s technologi
  Tyto funkce jsou k dispozici v instalaci sady Visual Studio 2015 Update 1 RC.
 
 > [!NOTE]
-> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Viz [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Zobrazit [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ## <a name="browsingnavigation"></a>Procházení/navigace
  **Povolit nový databázový stroj** To by mělo automaticky zrychlit naplnění databáze a zrychlit všechny operace databáze (bez ztráty přesnosti) pro operace, jako je například **Přejít k definici** a **Najít všechny odkazy**. (Stačí zavřít a znovu otevřít řešení, aby se změny projevily. není nutné restartovat Visual Studio.)
@@ -46,7 +46,7 @@ Změnou těchto možností můžete změnit chování související s technologi
 
  **Povolit rozbalení priority** Pokud je povoleno, můžete vybraný text uzavřít závorkami zadáním ' (' do textového editoru.
 
- Další funkce textového editoru v galerii sady Visual Studio najdete v [tomto](http://go.microsoft.com/fwlink/?LinkId=692016)seznamu. Příkladem jsou [ C++ rychlé opravy](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f), které podporují následující:
+ Další funkce textového editoru v galerii sady Visual Studio najdete v [tomto](https://go.microsoft.com/fwlink/?LinkId=692016)seznamu. Příkladem jsou [ C++ rychlé opravy](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f), které podporují následující:
 
 - **Přidat chybějící #include** – navrhuje relevantní #include pro neznámé symboly v kódu
 
@@ -59,4 +59,4 @@ Změnou těchto možností můžete změnit chování související s technologi
   Chcete-li získat žárovku žárovky nebo použít výchozí klávesovou zkratku CTRL + tečka (CTRL +.), můžete buď najeďte myší na vlnovku. Všimněte si, že u klávesové zkratky není potřeba blikající kurzor umístit na konkrétní chybu nebo token; k vyvolání návrhů na cokoli na daném řádku můžete jednoduše použít stejný řádek jako chyba.
 
 ## <a name="see-also"></a>Viz také
- Nastavení refaktoringu [možností editoru specifických](../../ide/reference/setting-language-specific-editor-options.md) [pro C++ jazyk (blog VC)](http://blogs.msdn.com/b/vcblog/archive/2014/11/14/all-about-c-refactoring-in-visual-studio-2015-preview.aspx)
+ Nastavení refaktoringu [možností editoru specifických](../../ide/reference/setting-language-specific-editor-options.md) [pro C++ jazyk (blog VC)](https://devblogs.microsoft.com/cppblog/all-about-c-refactoring-in-visual-studio-2015-preview/)

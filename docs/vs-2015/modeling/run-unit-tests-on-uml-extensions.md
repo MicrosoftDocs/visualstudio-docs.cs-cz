@@ -9,17 +9,17 @@ caps.latest.revision: 9
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3fdedf3fd9463b25e2c825a0a2d43b069049a2cb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f634f028dafea3260a69537893513f13cc0ebe83
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671232"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74292547"
 ---
 # <a name="run-unit-tests-on-uml-extensions"></a>Spouštění testování částí v rozšířeních UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Abychom vám pomohli udržet kód v průběhu po sobě jdoucích změn, doporučujeme napsat testy jednotek a provádět je v rámci běžného procesu sestavení. Další informace najdete v tématu [testování částí kódu](../test/unit-test-your-code.md). Chcete-li nastavit testy pro rozšíření modelování sady Visual Studio, budete potřebovat některé klíčové informace. V souhrnu:
+Abychom vám pomohli udržet kód v průběhu po sobě jdoucích změn, doporučujeme napsat testy jednotek a provádět je v rámci běžného procesu sestavení. Další informace najdete v tématu [svůj kód testu jednotek](../test/unit-test-your-code.md). Chcete-li nastavit testy pro rozšíření modelování sady Visual Studio, budete potřebovat některé klíčové informace. Souhrn:
 
 - [Nastavení testu jednotek pro rozšíření VSIX](#Host)
 
@@ -43,8 +43,6 @@ Abychom vám pomohli udržet kód v průběhu po sobě jdoucích změn, doporuč
 
   Tyto body jsou vypracované v následujících oddílech.
 
-  Vzorek rozšíření UML testované jednotky najdete v galerii ukázek kódu v [UML – rychlé zadání pomocí textu](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a).
-
 ## <a name="requirements"></a>Požadavky
  Viz [požadavky](../modeling/extend-uml-models-and-diagrams.md#Requirements).
 
@@ -59,7 +57,7 @@ Abychom vám pomohli udržet kód v průběhu po sobě jdoucích změn, doporuč
 
     1. **Projekt rozšíření UML.** Obvykle to vytvoříte pomocí šablon projektů pro příkazy, gesta nebo ověřování. Například viz [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
 
-    2. **Projekt testování částí.** Další informace najdete v tématu [testování částí kódu](../test/unit-test-your-code.md).
+    2. **Projekt testování částí.** Další informace najdete v tématu [svůj kód testu jednotek](../test/unit-test-your-code.md).
 
 2. Vytvořte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení, které obsahuje projekt modelování UML. Toto řešení budete používat jako počáteční stav vašich testů. Mělo by být oddělené od řešení, ve kterém zapisujete rozšíření UML a testy jednotek. Další informace najdete v tématu [vytváření projektů a diagramů modelování UML](../modeling/create-uml-modeling-projects-and-diagrams.md).
 
@@ -82,17 +80,17 @@ Abychom vám pomohli udržet kód v průběhu po sobě jdoucích změn, doporuč
 
     - *Váš projekt rozšíření UML*
 
-    - **EnvDTE. dll**
+    - **EnvDTE.dll**
 
-    - **Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost. dll**
+    - **Microsoft.VisualStudio.ArchitectureTools.Extensibility.dll**
 
-    - **Microsoft. VisualStudio. ComponentModelHost. dll**
+    - **Microsoft.VisualStudio.ComponentModelHost.dll**
 
-    - **Microsoft. VisualStudio. QualityTools. UnitTestFramework. dll**
+    - **Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll**
 
-    - **Microsoft. VisualStudio. Uml. Interfaces. dll**
+    - **Microsoft.VisualStudio.Uml.Interfaces.dll**
 
-    - **Microsoft. VSSDK. TestHostFramework. dll**
+    - **Microsoft.VSSDK.TestHostFramework.dll**
 
 6. Prefixujte atribut `[HostType("VS IDE")]` ke každé testovací metodě, včetně inicializačních metod.
 
@@ -379,4 +377,4 @@ Assert.AreEqual("hello", testInstance.privateField1_Accessor);
  Definování přístupových objektů pomocí reflexe je to způsob, který doporučujeme nejméně. Starší verze [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] poskytly nástroj, který automaticky vytvořil přístupovou metodu pro každou soukromou metodu. I když je to pohodlné, naše prostředí má za následek to, že má za následek testy jednotek, které jsou velmi silně spojeny s interní strukturou aplikace, kterou testuje. Výsledkem je další práce při změně požadavků nebo architektury, protože testy je třeba změnit společně s implementací. Všechny chybné předpoklady v návrhu implementace jsou také integrovány do testů, takže testy nenaleznou chyby.
 
 ## <a name="see-also"></a>Viz také
- [Anatomie testu jednotek](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144) [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md) [UML – rychlý zápis pomocí textu](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)
+ [Anatomie testu jednotek](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144) – [definice příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md)

@@ -8,12 +8,12 @@ ms.assetid: f3fb5df4-3aae-40e4-9450-bbe15b0c5af5
 caps.latest.revision: 25
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 4e9aa77848c3784b1df7a2c1f32651b8d00e5998
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 380de9206b2dc4e78c3719919dfd78720de28129
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263388"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297650"
 ---
 # <a name="troubleshooting-the-visual-studio-emulator-for-android"></a>Poradce při potížích s emulátorem sady Visual Studio pro Android
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -67,7 +67,7 @@ Toto téma obsahuje informace, které pomáhají při řešení problémů, kter
 ## <a name="NoInstall"></a> Emulator se nenainstaluje
  Pokud nemáte nainstalovanou technologii Hyper-V, zobrazí se následující zpráva při pokusu o instalaci emulátoru. Musíte mít počítač, který podporuje Hyper-v a musí být povolené.
 
- ![Android&#95;Emu&#95;Install&#95;Issue](../cross-platform/media/android-emu-install-issue.png "Android_Emu_Install_Issue")
+ ![Problém&#95;instalace&#95;&#95;pro Android EMU](../cross-platform/media/android-emu-install-issue.png "Android_Emu_Install_Issue")
 
 > [!NOTE]
 > Tato zpráva platí jak pro Visual Studio Emulator for Android a emulátor Windows Phone. Windows 8.1 a Windows 10 podporovat emulátor.
@@ -132,9 +132,9 @@ Toto téma obsahuje informace, které pomáhají při řešení problémů, kter
 
 - Ve Správci technologie Hyper-V otevřete Správce virtuálních přepínačů a zkontrolujte, zda máte dvě síťové přepínače; Ověřte, že první z nich je interní přepínač a druhý je externí.
 
-     ![Android&#95;Emu&#95;V&#95;Switch&#95;Man](../cross-platform/media/android-emu-v-switch-man.png "Android_Emu_V_Switch_Man")
+     ![Přepínač&#95;&#95;muž&#95;V&#95;EMU V pro Android](../cross-platform/media/android-emu-v-switch-man.png "Android_Emu_V_Switch_Man")
 
-     Instalační program je nesprávný a používáte Windows 10, může pokusit se [přeinstalovat síťová zařízení pomocí příkazu – d netcfg](http://windows.microsoft.com/windows-10/fix-network-connection-issues) (část 6).
+     Instalační program je nesprávný a používáte Windows 10, může pokusit se [přeinstalovat síťová zařízení pomocí příkazu – d netcfg](https://support.microsoft.com/help/10741/windows-fix-network-connection-issues) (část 6).
 
 - Pokud těchto kroků problém nevyřeší, přečtěte si téma [emulátoru se nepodaří spustit (první použití)](#NoStart) o 3. stran software, který může být zasahovala do emulátoru.
 
@@ -173,7 +173,7 @@ Toto téma obsahuje informace, které pomáhají při řešení problémů, kter
 
      - Zakázat Trusted Execution
 
-       Další informace najdete v článku: Technet: Hyper-V: K vyřešení chyby systému BIOS povolení technologie Hyper-V
+       Další informace najdete v tomto článku: Technet: jak Hyper-V: na oprava systému BIOS chyby povolení Hyper-V
 
   5. Ujistěte se, že máte alespoň 4 GB systémové paměti a že není právě využívat v jiných prostředků náročné aplikace a procesy.
 
@@ -191,7 +191,7 @@ Toto téma obsahuje informace, které pomáhají při řešení problémů, kter
 
    Obecně platí bude až vývojářům tyto produkty se aktualizace softwaru se kvůli kompatibilitě s Windows 8 a technologie Hyper-V.
 
-   Následující produkty můžou vyžadovat upgradu pro Windows 8 dodržování předpisů: VirtualBox, Virtual PC 7, VMWare, někteří klienti VPN, software brány firewall, některé verze klientů Cisco VPN a dalšími systémy virtualizace. Spolupracovat s vývojáři sporná virtualizačního softwaru Doporučte jim upgrade softwaru, aby byl kompatibilní s Windows 8 a technologie Hyper-V.
+   Následující produkty mohou vyžadovat upgradování pro dodržování předpisů pro Windows 8: VirtualBox, virtuální počítače VMWare, 7 někteří klienti VPN software brány firewall, některé verze klientů Cisco VPN a dalšími systémy virtualizace. Spolupracovat s vývojáři sporná virtualizačního softwaru Doporučte jim upgrade softwaru, aby byl kompatibilní s Windows 8 a technologie Hyper-V.
 
    Jako **řešení**, zakážete všechny aplikace, které mohou být zasahovala do virtuální sítě pomocí emulátoru ke komunikaci s aplikací Visual Studio a ovladačů jiných výrobců. Tyto aplikace mohou zahrnovat:
 
@@ -209,7 +209,7 @@ Toto téma obsahuje informace, které pomáhají při řešení problémů, kter
 
   2. Pro adaptér vEthernet (interní Port Windows Phone Emulator interní přepínač Ethernet) vyberte **vlastnosti** v místní nabídce.
 
-      ![Virtuální adaptér používá Hyper&#45;V](../cross-platform/media/android-emu-virtual-adapter.png "Android_Emu_Virtual_Adapter")
+      ![Virtuální adaptér používaný technologií Hyper&#45;V](../cross-platform/media/android-emu-virtual-adapter.png "Android_Emu_Virtual_Adapter")
 
       Zde jsou zobrazeny vlastnosti adaptéru.
 
@@ -254,7 +254,7 @@ Toto téma obsahuje informace, které pomáhají při řešení problémů, kter
 
   Chcete-li tento problém vyřešit, zakažte USB3 v nastavení systému BIOS základní desky a restartujte počítač. Zkontrolujte, zda GB vydala aktualizace systému BIOS základní desky.
 
-  Další informace najdete v následujícím článku znalostní báze Knowledge Base: [Selhání spuštění po instalaci role Hyper-V v systémech GB](https://support.microsoft.com/kb/2693144).
+  Další informace najdete v tématu v následujícím článku znalostní báze Knowledge Base: [spouštěcí selhání po instalaci role Hyper-V v systémech GB](https://support.microsoft.com/kb/2693144).
 
 ## <a name="ADB"></a> Visual Studio zasekne při pokusu o nasazení aplikace na emulátoru nebo emulátor se nezobrazí jako cíl ladění ve jiná Integrovaná vývojová prostředí
  Pokud je spuštěný emulátor, ale nezobrazí se chcete připojit k ADB (Android Debug Bridge) nebo se nezobrazují v nástroje pro Android, která využívají ADB (Android Studio nebo Eclipse), budete muset upravit, kde emulátor hledá ADB. Emulátor používá klíč registru pro určení základní umístění sady Android SDK a hledá soubor \platform-tools\adb.exe v tomto adresáři. Chcete-li změnit cesta sady Android SDK používaná emulátorem:
@@ -268,7 +268,7 @@ Toto téma obsahuje informace, které pomáhají při řešení problémů, kter
   Restartujte emulátor a byste teď měli zobrazíte emulátor připojen k ADB a související nástroje pro Android.
 
 ## <a name="XamarinPlayer"></a> Emulátor přestane reagovat, protože ji nelze nastavit UDP port
- Tento problém z důvodu nekompatibility s Xamarin Playerem může docházet. Pokud se zobrazí emulátor přestane reagovat, nebo pokud se zobrazí tato chybová zpráva "emulátor se nemůže připojit k operační systém zařízení: Nelze nastavit UDP port.  Některé funkce můžou být zakázané", může dojít k tomuto problému. Proveďte následující kroky.
+ Tento problém z důvodu nekompatibility s Xamarin Playerem může docházet. Pokud se zobrazí emulátor přestane reagovat, nebo pokud se zobrazí tato chybová zpráva "nelze se připojit k operační systém zařízení je emulátor: Nelze nastavit UDP port.  Některé funkce můžou být zakázané", může dojít k tomuto problému. Proveďte následující kroky.
 
 1. Odinstalujte Xamarin Playeru.
 
@@ -311,6 +311,6 @@ Toto téma obsahuje informace, které pomáhají při řešení problémů, kter
 ## <a name="Support"></a> Informační zdroje podpory
  Pokud hostitelský počítač splňuje požadavky na systém a narazíte na problém, která nejsou zahrnuta do tohoto průvodce odstraňováním potíží:
 
-- Položit dotaz na StackOverflow pomocí [emulátor android](http://stackoverflow.com/questions/tagged/android-emulator) a visual studio.
+- Položit dotaz na StackOverflow pomocí [emulátor android](https://stackoverflow.com/questions/tagged/android-emulator) a visual studio.
 
 - Nahlaste problém pomocí odeslat úsměv nástroje v sadě Visual Studio nebo v správce emulátoru.

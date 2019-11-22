@@ -15,12 +15,12 @@ caps.latest.revision: 68
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 80811c63ff0b4fa764c95976bf2f69a30123b235
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3ca14cead3b632cb70b817c79fce797078c7069b
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651670"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299385"
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Stránka Aplikace, návrhář projektu (Visual Basic)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -62,14 +62,14 @@ Použijte stránku **aplikace** Návrháře projektu k určení nastavení aplik
 
  Pro projekt webové aplikace je nutné zadat **knihovnu tříd**.
 
- Pokud zadáte možnost **soubor winmd** , typy lze promítnout do libovolného programovacího jazyka prostředí Windows Runtime. Sbalením výstupu projektu jako souboru WinMD můžete kódovat aplikaci v různých jazycích a nechat kód fungovat, jako kdybyste ho vytvořili ve stejném jazyce. Možnost **soubor winmd** můžete použít pro řešení, která cílí na knihovny prostředí Windows Runtime, včetně [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)]ch aplikací. Další informace najdete v tématu [vytváření prostředí Windows runtimech komponent C# v a Visual Basic](http://go.microsoft.com/fwlink/?LinkId=231895).
+ Pokud zadáte možnost **soubor winmd** , typy lze promítnout do libovolného programovacího jazyka prostředí Windows Runtime. Sbalením výstupu projektu jako souboru WinMD můžete kódovat aplikaci v různých jazycích a nechat kód fungovat, jako kdybyste ho vytvořili ve stejném jazyce. Možnost **soubor winmd** můžete použít pro řešení, která cílí na knihovny prostředí Windows Runtime, včetně [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)]ch aplikací. Další informace najdete v tématu [vytváření prostředí Windows runtimech komponent C# v a Visual Basic](https://go.microsoft.com/fwlink/?LinkId=231895).
 
 > [!NOTE]
 > Prostředí Windows Runtime mohou být typy projektů tak, aby se zobrazily jako nativní objekty v jakémkoli jazyku, který je používá. Například aplikace jazyka JavaScript, které pracují s prostředí Windows Runtime používají jako sadu objektů jazyka JavaScript a C# aplikace používají knihovnu jako kolekci objektů rozhraní .NET. Sbalením výstupu projektu jako souboru WinMD můžete využít stejnou technologii, jakou prostředí Windows Runtime používá.
 
  Další informace o vlastnosti **Typ aplikace** naleznete v tématu [/target (Visual Basic)](https://msdn.microsoft.com/library/e0954147-548b-461f-9c4b-a8f88845616c). Informace o tom, jak tuto vlastnost přistupovat prostřednictvím kódu programu, najdete v tématu <xref:VSLangProj.ProjectProperties.OutputType%2A>.
 
- **Ikona** Nastaví soubor. ico, který chcete použít jako ikonu programu. Vybrat **\<Browse... >** vyhledat existující grafiku. Další informace naleznete v tématu [/win32icon](https://msdn.microsoft.com/library/aecaab01-9353-46c5-941c-6edabd4eff92) (nebo [/Win32icon) (C# možnosti kompilátoru)](https://msdn.microsoft.com/library/756d9b6d-ab07-41b7-ba58-5bd88f711138). Chcete-li získat přístup k této vlastnosti programově, přečtěte si téma <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.
+ **Ikona** Nastaví soubor. ico, který chcete použít jako ikonu programu. Vyberte **\<Procházet... >** vyhledat existující grafiku. Další informace naleznete v tématu [/win32icon](https://msdn.microsoft.com/library/aecaab01-9353-46c5-941c-6edabd4eff92) (nebo [/Win32icon) (C# možnosti kompilátoru)](https://msdn.microsoft.com/library/756d9b6d-ab07-41b7-ba58-5bd88f711138). Chcete-li získat přístup k této vlastnosti programově, přečtěte si téma <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.
 
  **Spouštěcí formulář/spouštěcí objekt/spouštěcí identifikátor URI** Určuje spouštěcí formulář nebo vstupní bod aplikace.
 
@@ -83,7 +83,7 @@ Použijte stránku **aplikace** Návrháře projektu k určení nastavení aplik
 
  **Informace o sestavení** Kliknutím na toto tlačítko zobrazíte [dialogové okno informace o sestavení](../../ide/reference/assembly-information-dialog-box.md).
 
- **Povolit aplikační architekturu** Určuje, zda projekt bude používat aplikační rozhraní. Nastavení této možnosti má vliv na možnosti dostupné ve **formuláři po spuštění** /**spouštěcí objekt**.
+ **Povolit aplikační architekturu** Určuje, zda projekt bude používat aplikační rozhraní. Nastavení této možnosti má vliv na možnosti dostupné ve **formuláři po spuštění**/**spouštěcí objekt**.
 
  Pokud je toto políčko zaškrtnuté, vaše aplikace používá standardní `Sub Main`. Zaškrtnutí tohoto políčka povolí funkce v části **Vlastnosti rozhraní Windows Application Framework** a také vyžaduje, abyste vybrali úvodní formulář.
 

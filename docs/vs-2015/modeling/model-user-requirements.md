@@ -13,17 +13,17 @@ caps.latest.revision: 30
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 165214dff519e7db94d5ee8f3a1a6d86856cd4a1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f27fede436ea6cabe0aab6480cd4841299c42293
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72609672"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302794"
 ---
 # <a name="model-user-requirements"></a>Modelování uživatelských požadavků
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich uživatelů vykreslením diagramů o jejich aktivitách a části vašeho systému, který pomáhá dosahovat svých cílů. Model požadavků je sada těchto diagramů, z nichž každá se zaměřuje na jiný aspekt potřeb uživatelů. Ukázku videa najdete v tématu [modelování obchodní domény](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-3-Modeling-the-Business-Domain/).
+Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich uživatelů vykreslením diagramů o jejich aktivitách a části vašeho systému, který pomáhá dosahovat svých cílů. Model požadavků je sada těchto diagramů, z nichž každá se zaměřuje na jiný aspekt potřeb uživatelů. Ukázku videa najdete v tématu [modelování obchodní domény](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain).
 
  Chcete-li zjistit, které verze aplikace Visual Studio podporují jednotlivé typy modelů, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -138,7 +138,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 |Prvky v diagramu koncepční třídy|[Diagramy tříd UML: Referenční dokumentace](../modeling/uml-class-diagrams-reference.md)|
 |Vývoj kódu z koncepčních tříd|[Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)|
 
- V diagramu koncepční třídy není obvykle vhodné umístit šipky na přidružení, aby představovaly schopnost navigace. Důvodem je, že diagram nepředstavuje implementaci. Asociace představuje vztahy mezi objekty reálného světa. Následující rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nastaví nesměrující se šipky výchozí: [Ukázka: funkce modelování domén UML](http://go.microsoft.com/fwlink/?LinkId=213849).
+ V diagramu koncepční třídy není obvykle vhodné umístit šipky na přidružení, aby představovaly schopnost navigace. Důvodem je, že diagram nepředstavuje implementaci. Asociace představuje vztahy mezi objekty reálného světa. Následující rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nastaví nesměrující se šipky výchozí: [Ukázka: funkce modelování domén UML](https://go.microsoft.com/fwlink/?LinkId=213849).
 
 ## <a name="BusinessRules"></a>Zobrazení obchodních pravidel
  Obchodní pravidlo je požadavek, který není přidružený k určitému případu použití, a měl by být pozorován v celém systému.
@@ -168,7 +168,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
 - Zabezpečení
 
-- Použitelnost
+- Použitelnosti
 
 - Spolehlivost
 
@@ -239,4 +239,4 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
   Prozkoumáním vztahů mezi zobrazeními, které různé diagramy poskytují, můžete rychle porozumět hlavním koncepcím, se kterými uživatelé pracují, a pomáhat jim pochopit, co potřebují ze systému. Také se dostanete k lepšímu porozumění požadavkům, o které mají účastníci aspoň určité informace. Můžete naplánovat vývoj těchto funkcí, alespoň ve zjednodušené podobě, v rané fázi projektu, a dovolit uživatelům experimentovat s nimi.
 
 ## <a name="see-also"></a>Viz také
- [Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md) [vyvíjejí testy z modelu](../modeling/develop-tests-from-a-model.md) [použití modelů v modelu procesu vývoje](../modeling/use-models-in-your-development-process.md) [](../modeling/model-your-app-s-architecture.md) [a rozšíření VS: Ukázka funkcí modelování domén v UML](http://go.microsoft.com/fwlink/?LinkId=213849) [Ukázka vs Extension: Color UML Prvky podle příkladu stereotypu](http://go.microsoft.com/fwlink/?LinkID=213841) [vs Extension: propojení prvků UML s diagramy, soubory a dalšími prvky](http://go.microsoft.com/fwlink/?LinkID=213813) [Ukázka vs Extension: zarovnání tvarů v diagramu UML](http://go.microsoft.com/fwlink/?LinkID=213809) [: modelování obchodní domény](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-3-Modeling-the-Business-Domain/)
+ [Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md) [vyvíjejí testy z modelu](../modeling/develop-tests-from-a-model.md) [použití modelů v modelu procesu vývoje](../modeling/use-models-in-your-development-process.md) [](../modeling/model-your-app-s-architecture.md) [. Ukázka vs Extension: funkce Modelování domény UML](https://go.microsoft.com/fwlink/?LinkId=213849) [Ukázka vs: barva prvků UML podle typu stereotypu](https://go.microsoft.com/fwlink/?LinkID=213841) vs. rozšíření: [propojte elementy UML s diagramy, soubory a dalšími prvky](https://go.microsoft.com/fwlink/?LinkID=213813) [Ukázka vs Extension: zarovnání obrazců na video diagramu UML](https://go.microsoft.com/fwlink/?LinkID=213809) [: modelování obchodní domény](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)

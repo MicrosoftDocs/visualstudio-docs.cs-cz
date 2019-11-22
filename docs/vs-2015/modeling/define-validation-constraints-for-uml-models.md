@@ -11,17 +11,17 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2f279216d06972578f5173e57375c89542c71e3f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3dd76deb3b72d3b12d3b5892c2e5664273425c4c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669888"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295842"
 ---
 # <a name="define-validation-constraints-for-uml-models"></a>Definování omezení ověřování pro modely UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete definovat omezení ověřování, která otestuje, zda model splňuje podmínku, kterou zadáte. Můžete například definovat omezení, abyste se ujistili, že uživatel nevytvoří smyčku vztahů dědičnosti. Omezení je vyvoláno, když se uživatel pokusí otevřít nebo uložit model a lze jej také vyvolat ručně. Pokud se omezení nepovede, do okna chyby se přidá chybová zpráva, kterou definujete. Tato omezení můžete zabalit do rozšíření integrace sady Visual Studio ([VSIX](http://go.microsoft.com/fwlink/?LinkId=160780)) a distribuovat je ostatním uživatelům aplikace Visual Studio.
+Můžete definovat omezení ověřování, která otestuje, zda model splňuje podmínku, kterou zadáte. Můžete například definovat omezení, abyste se ujistili, že uživatel nevytvoří smyčku vztahů dědičnosti. Omezení je vyvoláno, když se uživatel pokusí otevřít nebo uložit model a lze jej také vyvolat ručně. Pokud se omezení nepovede, do okna chyby se přidá chybová zpráva, kterou definujete. Tato omezení můžete zabalit do rozšíření integrace sady Visual Studio ([VSIX](https://go.microsoft.com/fwlink/?LinkId=160780)) a distribuovat je ostatním uživatelům aplikace Visual Studio.
 
  Můžete také definovat omezení, která ověřují model proti externím prostředkům, jako jsou databáze. Pokud chcete ověřit kód programu proti diagramu vrstvy, přečtěte si téma [Přidání ověření vlastní architektury do diagramů vrstev](../modeling/add-custom-architecture-validation-to-layer-diagrams.md).
 
@@ -63,7 +63,7 @@ Můžete definovat omezení ověřování, která otestuje, zda model splňuje p
 
 4. Vyzkoušení vašich omezení stisknutím klávesy F5. Další informace najdete v tématu [spuštění omezení ověření](#Executing).
 
-5. Nainstalujte příkaz nabídky do jiného počítače zkopírováním souboru **bin \\ \* \\ \*. vsix** sestaveného vaším projektem. Další informace najdete v tématu [instalace a odinstalace rozšíření](#Installing).
+5. Nainstalujte příkaz nabídky do jiného počítače zkopírováním souboru **bin\\\*\\\*. vsix** sestaveného vaším projektem. Další informace najdete v tématu [instalace a odinstalace rozšíření](#Installing).
 
    Když přidáte jiné soubory **. cs** , budete obvykle vyžadovat následující `using` příkazy:
 
@@ -105,11 +105,11 @@ using Microsoft.VisualStudio.Uml.Classes;
 
     3. Na kartě **assets (prostředky** ) vyberte **Nový**a v dialogovém okně nastavte:
 
-         **Typ**  = **Komponenta MEF**
+         **Typ** = **Komponenta MEF**
 
-         **Zdrojový**  = **projekt v aktuálním řešení**
+         **Zdrojový** = **projekt v aktuálním řešení**
 
-         **Projekt**  = *projektu knihovny tříd*
+         **Projekt** = *projektu knihovny tříd*
 
 #### <a name="to-define-the-validation-class"></a>Definování třídy ověřování
 
@@ -195,7 +195,7 @@ using Microsoft.VisualStudio.Uml.Classes;
 
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
-2. V experimentální [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] otevřete nebo vytvořte projekt modelování a otevřete nebo vytvořte diagram modelování.
+2. V experimentální [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]otevřete nebo vytvořte projekt modelování a otevřete nebo vytvořte diagram modelování.
 
 3. Chcete-li nastavit test pro omezení ukázky uvedené v předchozí části:
 
@@ -372,7 +372,7 @@ context.LogError(... , usecase);
 
     1. V **Průzkumník řešení**v místní nabídce projektu VSIX vyberte možnost **Otevřít složku v Průzkumníku Windows**.
 
-    2. Vyhledejte soubor **bin \\ \* \\** _YourProject_ **. vsix**
+    2. Vyhledejte soubor **bin\\\*\\** _YourProject_ **. vsix**
 
 2. Zkopírujte soubor **. vsix** do cílového počítače, do kterého chcete nainstalovat rozšíření. Může to být váš vlastní počítač nebo jiný.
 
@@ -392,9 +392,9 @@ context.LogError(... , usecase);
 
 3. Vyberte rozšíření a pak zvolte **odinstalovat**.
 
-   Zřídka se vadné rozšíření nedokáže načíst a vytvoří sestavu v okně chyb, ale nezobrazí se ve Správci rozšíření. V takovém případě můžete odebrat rozšíření odstraněním souboru z následujícího umístění, kde *% localappdata%* je obvykle *jednotka*: \Users \\*username*\AppData\Local:
+   Zřídka se vadné rozšíření nedokáže načíst a vytvoří sestavu v okně chyb, ale nezobrazí se ve Správci rozšíření. V takovém případě můžete odebrat rozšíření odstraněním souboru z následujícího umístění, kde *% localappdata%* je obvykle *jednotka*: \Users\\*username*\AppData\Local:
 
-   *% Localappdata%* **\Microsoft\VisualStudio \\ [verze] \Extensions**
+   *%LocalAppData%* **\Microsoft\VisualStudio\\[version]\Extensions**
 
 ## <a name="Example"></a>Případě
  Tento příklad najde smyčky v relaci závislosti mezi prvky.

@@ -1,5 +1,5 @@
 ---
-title: Izolované prostředí sady Visual Studio | Dokumentace Microsoftu
+title: Izolované prostředí sady Visual Studio | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,54 +14,54 @@ ms.assetid: d2620e71-be9e-44c9-b5b7-03a4c8d9cf0b
 caps.latest.revision: 36
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 0309019cc36e9f81596061dbbede0f84b0b78a05
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 36491d9d590a45256e297654f71652ab5de5cd98
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63403583"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299717"
 ---
 # <a name="visual-studio-isolated-shell"></a>Izolované prostředí sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio izolované prostředí umožňuje vytvářet samostatné aplikace, které lze spustit vedle sebe s jinými verzemi nástroje Visual Studio. Se používá především k hostování specializované nástroje, které můžete používat služby Visual Studio, ale také mít přizpůsobený vzhled a značky. Funkce sady Visual Studio a pro skupinu příkazů nabídky je možné snadno zapnout a vypnout. Názvy aplikací, ikony aplikace a úvodní obrazovky jsou plně přizpůsobitelné. Seznam přizpůsobitelných funkcí najdete v tématu [přizpůsobení izolovaného prostředí](../extensibility/customizing-the-isolated-shell.md).  
+Izolované prostředí sady Visual Studio umožňuje vytvářet samostatné aplikace, které mohou běžet souběžně s jinými verzemi sady Visual Studio. Používá se primárně pro hostování specializovaných nástrojů, které mohou používat služby sady Visual Studio, ale také vlastní vzhled a branding. Funkce sady Visual Studio a skupiny příkazů nabídky lze snadno zapnout nebo vypnout. Názvy aplikací, ikony aplikací a úvodní obrazovky jsou plně přizpůsobitelné. Seznam přizpůsobitelných funkcí najdete v tématu [přizpůsobení izolovaného prostředí](../extensibility/customizing-the-isolated-shell.md).  
   
- Pro práci s projektem izolovaného prostředí, je nutné nainstalovat sadu Visual Studio SDK. Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+ Chcete-li pracovat s projektem izolovaného prostředí, je nutné nainstalovat sadu Visual Studio SDK. Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
- K vytvoření aplikací izolovaného prostředí, začněte s projektem Visual Studio Shell izolované. Tento projekt obsahuje všechno, co potřebujete k vývoji a testování aplikace izolované prostředí. Až budete připravení k zápisu instalační program, který nasadí vaši aplikaci, musíte získat Distribuovatelný balíček prostředí isolated shell z [Distribuovatelný balíček prostředí Microsoft Visual Studio Shell (izolovaný režim)](http://go.microsoft.com/fwlink/?LinkId=616022).  
-  
-> [!NOTE]
-> Před přístupem k Distribuovatelný balíček prostředí isolated shell, budete požádáni o vyplnění stručného zákaznického dotazníku.  Po vyplnění, budete přesměrováni na stránku Visual Studio Connect s odkazy na stažení balíčku k opětovné distribuci.  Odkazy ke stažení najdete na následné návštěvy webu Visual Studio Connect pod **programy &#124; VISUAL STUDIO 2015 integrované a IZOLOVANÉHO prostředí** kartu.  
+ Chcete-li vytvořit aplikaci izolovaného prostředí, začněte s projektem s izolovaným prostředím sady Visual Studio. Tento projekt obsahuje vše, co potřebujete k vývoji a testování vlastní aplikace izolovaného prostředí. Až budete připraveni k napsání instalačního programu, který nasadí vaši aplikaci, musíte získat Distribuovatelný balíček izolovaného prostředí z [prostředí sady Microsoft Visual Studio (izolovaný režim) Distribuovatelný balíček](https://go.microsoft.com/fwlink/?LinkId=616022).  
   
 > [!NOTE]
-> Další informace o tom, jak nasadit aplikaci izolovaného prostředí, najdete v části [názorný postup: Vytvoření základní aplikace prostředí izolované](../extensibility/walkthrough-creating-a-basic-isolated-shell-application.md).  
+> Předtím, než budete moci získat přístup k distribuovatelnýmu balíčku izolovaného prostředí, budete požádáni o vyplnění stručného průzkumu zákazníka.  Po vyplnění průzkumu budete přesměrováni na stránku pro připojení sady Visual Studio s distribuovatelnými odkazy na stažení balíčku.  Odkazy ke stažení najdete v následujících návštěvách na webu Visual Studio Connect na kartě programy v **integrovaném a izolovaném prostředí sady &#124; Visual Studio 2015** .  
   
-## <a name="working-with-the-isolated-shell"></a>Práce s izolovaného prostředí  
- Aplikace Visual Studio izolované prostředí má úplný přístup ke službám Visual Studio a podporuje speciální přizpůsobení a značky. Existuje několik způsobů, jak můžete přizpůsobit aplikací izolovaného prostředí:  
+> [!NOTE]
+> Další informace o tom, jak nasadit izolovanou aplikaci založenou na prostředí, najdete v tématu [Návod: Vytvoření základní aplikace izolovaného prostředí](../extensibility/walkthrough-creating-a-basic-isolated-shell-application.md).  
   
-- Součástí rozšíření VSPackages a Managed Extensibility Framework (MEF) můžete použít k rozšíření aplikací izolovaného prostředí, stejně jako můžete využít v jakékoli jiné rozšíření sady Visual Studio. Další informace najdete v tématu [rozšíření izolovaného prostředí](../extensibility/extending-the-isolated-shell.md).  
+## <a name="working-with-the-isolated-shell"></a>Práce s izolovaným prostředím  
+ Aplikace izolovaného prostředí sady Visual Studio má plný přístup ke službám sady Visual Studio a podporuje speciální přizpůsobení a branding. Existuje několik způsobů, jak můžete přizpůsobit aplikaci izolovaného prostředí:  
   
-- Chcete-li funkce aplikace Visual Studio a pro skupinu příkazů nabídky k dispozici nebo není k dispozici, aktualizujte soubor .vsct v projektu uživatelské rozhraní (UI) aplikace.  
+- Můžete použít součásti VSPackage a Managed Extensibility Framework (MEF) k rozšíření aplikace izolovaného prostředí stejným způsobem, jako byste je používali v jakémkoli jiném rozšíření sady Visual Studio. Další informace najdete v tématu [rozšíření izolovaného prostředí](../extensibility/extending-the-isolated-shell.md).  
   
-- Chcete-li odebrat **možnosti** stránky ani jiné součásti sady Visual Studio shell z aplikace, aktualizace souboru .pkgundef aplikace.  
+- Chcete-li zpřístupnit nebo nedostupné skupiny příkazů sady Visual Studio, aktualizujte soubor. vsct v projektu uživatelského rozhraní (UI) aplikace.  
   
-- Pokud chcete upravit další aspekty vzhledu a chování prostředí, aktualizujte soubor .pkgdef aplikace.  
+- Chcete-li odebrat stránky **možností** nebo jiné součásti prostředí sady Visual Studio z aplikace, aktualizujte soubor. pkgundef aplikace.  
   
-- Některé aspekty prostředí je taky možné specifikovat při spuštění aplikace. Provedete to tak, aktualizujte parametry v volání Start vstupní bod appenvstub.dll.  
+- Chcete-li upravit jiné aspekty vzhledu nebo chování prostředí, aktualizujte soubor. pkgdef aplikace.  
   
-  Další informace o různých prvků, které můžete přizpůsobit, najdete v části [prvky izolovaného prostředí](../extensibility/elements-of-the-isolated-shell.md).  
+- Některé aspekty prostředí lze také zadat při spuštění aplikace. Provedete to tak, že aktualizujete parametry ve volání počátečního vstupního bodu knihovny Appenvstub. dll.  
+  
+  Další informace o různých prvcích, které lze přizpůsobit, naleznete v tématu [prvky izolovaného prostředí](../extensibility/elements-of-the-isolated-shell.md).  
   
 ## <a name="standard-features-of-the-isolated-shell"></a>Standardní funkce izolovaného prostředí  
  Následující funkce jsou standardní pro všechny edice sady Visual Studio.  
   
 |Kategorie funkce|Funkce|  
 |----------------------|-------------|  
-|Funkce integrovaného vývojového prostředí|Import a Export nastavení<br /><br /> Instalační program ovládací prvek panelu nástrojů<br /><br /> Seznam úkolů a seznam chyb<br /><br /> Okno Výstup<br /><br /> Úvodní stránka<br /><br /> Okno vlastností<br /><br /> Sada nástrojů<br /><br /> Průzkumník řešení<br /><br /> Okno záložek<br /><br /> zobrazení tříd<br /><br /> prohlížeč objektů<br /><br /> Příkazové okno<br /><br /> Osnova dokumentu<br /><br /> Zobrazení prostředků<br /><br /> Externí nástroje<br /><br /> Přidání odkazu na službu Windows Communication Foundation (WCF)<br /><br /> Language Integrated Query (LINQ) podpory|  
-|Editoru nebo návrháře|Procházení nástroje (jednotné hledání, definici zdroje, dědičnost) kódu<br /><br /> IntelliSense<br /><br /> SmartTags<br /><br /> Správce fragmentů kódů<br /><br /> Fragmenty kódu<br /><br /> Refaktoring<br /><br /> Přehlednou výpis<br /><br /> Filtrování IntelliSense<br /><br /> Definice kódu – okno<br /><br /> Návrhář aplikace<br /><br /> Návrhář formulářů Windows<br /><br /> Návrhář Windows Presentation Foundation (WPF)|  
-|Ladění|Vyhodnocovač výrazů jazyka C#<br /><br /> Místní ladění<br /><br /> Spravované ladění<br /><br /> Upravit a pokračovat<br /><br /> Ladění mezi vlákny<br /><br /> vizualizace<br /><br /> DataTips<br /><br /> Nativní ladění<br /><br /> Ladění skriptů<br /><br /> Definiční ladění<br /><br /> Ladění just-in-time (JIT)<br /><br /> Ladění více procesů<br /><br /> Ladění XSLT<br /><br /> Připojit k místní procesu<br /><br /> Body trasování<br /><br /> Omezení zarážku|  
-|Data|Průzkumník serveru (zjednodušené - jenom Data)<br /><br /> Datové připojení k místním datům (. MDF nebo. MDB)<br /><br /> Vazba dat na objektu<br /><br /> Datové vazby k webové službě<br /><br /> Úplnou sadu ovládací prvky dat<br /><br /> Editor XML<br /><br /> Datové připojení k místní databázi serveru<br /><br /> okno Zdroje dat|  
-|Web|Editor HTML<br /><br /> Webový prohlížeč<br /><br /> Návrhář webových formulářů<br /><br /> Webový projekt<br /><br /> Projekt webové aplikace|  
-|Rozšiřitelnost|Využívá komponenty rozšíření VSPackages a rozhraní MEF|  
+|Funkce IDE|Nastavení importu a exportu<br /><br /> Instalační program ovládacího prvku sady nástrojů<br /><br /> Seznam úkolů & Seznam chyb<br /><br /> Okno Výstup<br /><br /> Úvodní stránka<br /><br /> Okno vlastností<br /><br /> Sada nástrojů<br /><br /> Průzkumník řešení<br /><br /> Okno záložek<br /><br /> zobrazení tříd<br /><br /> prohlížeč objektů<br /><br /> Příkazové okno<br /><br /> Osnova dokumentu<br /><br /> Prostředky<br /><br /> Externí nástroj<br /><br /> Windows Communication Foundation (WCF) Přidat odkaz na službu<br /><br /> Podpora jazyka LINQ (Language Integrated Query)|  
+|Editor/Návrhář|Nástroje pro procházení kódu (sjednocené hledání, definice zdroje, dědičnost)<br /><br /> IntelliSense<br /><br /> SmartTags<br /><br /> Správce fragmentů kódu<br /><br /> Fragmenty kódu<br /><br /> Refaktoring<br /><br /> Poměrně se seznamem<br /><br /> Filtrování IntelliSense<br /><br /> Okno Definice kódu<br /><br /> Návrhář aplikace<br /><br /> Návrhář formulářů Windows<br /><br /> Návrhář Windows Presentation Foundation (WPF)|  
+|Ladění|C#Vyhodnocení výrazu<br /><br /> Místní ladění<br /><br /> Spravované ladění<br /><br /> Upravit a pokračovat<br /><br /> Ladění mezi vlákny<br /><br /> Vizualizace<br /><br /> DataTips<br /><br /> Nativní ladění<br /><br /> Ladění skriptů<br /><br /> Ladění spolupráce<br /><br /> Ladění JIT (just-in-time)<br /><br /> Ladění více procesů<br /><br /> Ladění XSLT<br /><br /> Připojit k místnímu procesu<br /><br /> Body trasování<br /><br /> Omezení zarážek|  
+|Data|Průzkumník serveru (jenom zjednodušená data)<br /><br /> Vazba dat na místní data (. MDF nebo. DATABÁZI<br /><br /> Vázání dat na objekt<br /><br /> Vázání dat na webovou službu<br /><br /> Úplná sada ovládacích prvků dat<br /><br /> Editor XML<br /><br /> Vazba dat na místní databázový server<br /><br /> okno Zdroje dat|  
+|Web|Editor HTML<br /><br /> Webový prohlížeč<br /><br /> Návrhář webových formulářů<br /><br /> Projekt webu<br /><br /> Projekt webové aplikace|  
+|Rozšiřitelnost|Spotřebovává VSPackage a komponenty MEF.|  
   
 ## <a name="see-also"></a>Viz také  
  [Prostředí (izolované nebo integrované)](../extensibility/shell-isolated-or-integrated.md)

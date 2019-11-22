@@ -1,5 +1,5 @@
 ---
-title: Události (VSPerfCmd) | Dokumentace Microsoftu
+title: Události (VSPerfCmd) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -9,19 +9,19 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: dae5bb86cd7f9da6151920a8020d71452bf8863f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 265dc7f84fbd1ec19b520e2e30d3554e2c66683b
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443996"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302130"
 ---
 # <a name="events-vsperfcmd"></a>Události (VSPerfCmd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-VSPerfCmd.exe **události** možnost řídí protokolování trasování událostí pro Windows (ETW). Data trasování událostí pro Windows jsou uložena do souboru ETL, který je oddělené od datového souboru profilování. Data můžete zobrazit v sestavě pomocí [VSPerfReport](../profiling/vsperfreport.md) příkaz/Summary: ETW.  
+Možnost **události** VSPerfCmd. exe řídí protokolování trasování událostí pro Windows (ETW). Data ETW se ukládají do souboru. ETL, který je oddělený od datového souboru profileru. Data je možné zobrazit v sestavě pomocí příkazu [VSPerfReport](../profiling/vsperfreport.md) /Summary: ETW.  
   
- **Události** možnost může být volána kdykoli před příkazu vsperfcmd proveďte **vypnutí** příkaz je volána k zastavení profilování.  
+ Možnost **události** může být volána kdykoli před voláním příkazu VSPerfCmd **shutdown** pro zastavení profilování.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -30,66 +30,66 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
 ```  
   
 #### <a name="parameters"></a>Parametry  
- **On**&#124;**Off**  
- Spuštění nebo zastavení shromažďování dat událostí.  
+ **Zapnuto**&#124;  
+ Spustí nebo zastaví shromažďování dat událostí.  
   
  `Guid`  
- Identifikátor GUID zprostředkovatele ovládacího prvku.  
+ Identifikátor GUID ovládacího prvku poskytovatele  
   
  `ProviderName`  
- Název zprostředkovatele, který je registrován s Windows Management Instrumentation (WMI).  
+ Název zprostředkovatele registrovaného pomocí rozhraní WMI (Windows Management Instrumentation) (WMI).  
   
  `Flags`  
- "0 x"-předponou hexadecimální hodnotu, která je definována poskytovatelem událostí.  
+ "0x"-předem opravené hexadecimální hodnoty, které jsou definovány poskytovatelem událostí.  
   
  `Level`  
- Určuje objem dat shromážděných. `Level` je definována zprostředkovatel událostí.  
+ Určuje množství shromažďovaných dat. `Level` definuje poskytovatel události.  
   
- **Události** možnost rozumí následující jádra klíčová slova jako názvy zprostředkovatelů:  
+ Možnost **události** rozumí následujícím klíčovým slovům jádra jako názvům zprostředkovatelů:  
   
- **Proces**  
+ **Přihlášení**  
  Zpracování událostí  
   
  **vlákno**  
- Události vláken  
+ Události vlákna  
   
  **Obrázek**  
- Obrázek zatížení a uvolnění události  
+ Události načítání a uvolňování obrázku  
   
  **Disk**  
- Události disku vstupně-výstupních operací  
+ Události v/v disku  
   
  **File**  
  Vstupně výstupní události souboru  
   
  **Hardfault**  
- Hardwarových chyb stránky  
+ Závažné chyby stránky  
   
  **Pagefault**  
- Obnovitelně stránkování  
+ Měkké chyby stránky  
   
  **Sítě**  
  Události sítě  
   
- **Registru**  
+ **Rejstříku**  
  Události přístupu k registru  
   
- Všimněte si, že zprostředkovatel jádra jde Povolit jenom. Nejde vypnout, ani je její příznaky možné upravit, dokud se vypne sledování.  
+ Počítejte s tím, že zprostředkovatele jádra lze povolit pouze. Nedá se zakázat, ani změnit jejich příznaky, dokud se monitorování neukončí.  
   
 ## <a name="remarks"></a>Poznámky  
   
 > [!NOTE]
-> Pokud jsou povolené událostí CLR ETW, další spuštění data se shromažďují také v sestavě zobrazení trasování. Události spuštění vyloučit z uvedených v sestavě, použijte následující příkaz:  
+> Pokud jsou povoleny události modulu CLR ETW, jsou v sestavě zobrazení trasování také shromažďována další spouštěcí data. Pokud chcete vyloučit události spuštění v sestavě, použijte následující příkaz:  
   
 ```  
 C:\<path>VSPerfCmd -events on, \".NET Common Language Runtime\", 0x7fffffff, 5  
 ```  
   
 > [!IMPORTANT]
-> Abyste nevylučovali události spuštění, pak vzhledem k tomu, že tyto události nejsou uvedené v souboru formátu MOF (Managed Object) se zobrazí jako identifikátory GUID v sestavě. Další informace najdete v článku na této stránce na webu společnosti Microsoft: [Ukázkové Managed Object Format (MOF) soubor](http://go.microsoft.com/fwlink/?linkid=37118).  
+> Pokud nechcete události po spuštění vyloučit, protože tyto události nejsou uvedené v souboru formát MOF (Managed Object Format) (MOF), zobrazí se v sestavě jako identifikátory GUID. Další informace naleznete na této stránce na webu společnosti Microsoft: [vzorový soubor formát MOF (Managed Object Format) (MOF)](https://go.microsoft.com/fwlink/?linkid=37118).  
   
 ## <a name="see-also"></a>Viz také  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [Profilace samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Profilace webových aplikací ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profilování webových aplikací ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [Profilace služeb](../profiling/command-line-profiling-of-services.md)

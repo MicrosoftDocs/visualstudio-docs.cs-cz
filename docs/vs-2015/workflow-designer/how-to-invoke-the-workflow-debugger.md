@@ -9,32 +9,32 @@ caps.latest.revision: 9
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 34c5cdae4b8730c9058a87061456d5ab6d186c53
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 13fd54eeebf0323fcb9b8cad6a8cd8b75ae11fb3
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72603672"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74292893"
 ---
 # <a name="how-to-invoke-the-workflow-debugger"></a>Postupy: vyvolání ladicího programu pracovního postupu
 Obecně je potřeba ladit pracovní postupy stejně jako při ladění programů napsaných v jiných programovacích jazycích sady Visual Studio. Ladicí program pracovního postupu můžete spustit následujícími způsoby:
 
 - V nabídce **ladění** vyberte **připojit k procesu** a vyberte běžící hostitelský proces pro vaši instanci pracovního postupu. Tento postup je stejný jako připojení k hostitelskému procesu ve spravovaném kódu.
 
-- Stiskněte klávesu **F5** ke spuštění instance pracovního postupu nebo ke spuštění i po dosažení zarážky.
+- Stisknutím klávesy **F5** spouštění instance pracovního postupu, nebo aby kontinuálně běžely, jakmile dosáhne zarážky.
 
-- Použijte vzdálené ladění. Informace o použití vzdáleného ladění naleznete v tématu [How to: Enable Remote Debugging](http://go.microsoft.com/fwlink/?LinkId=196257).
+- Použijte vzdálené ladění. Informace o použití vzdáleného ladění naleznete v tématu [How to: Enable Remote Debugging](https://go.microsoft.com/fwlink/?LinkId=196257).
 
     > [!NOTE]
-    > Pokud se aplikace pracovního postupu zaměřuje na architekturu x86 a je hostovaná na počítači, na kterém běží operační systém 64, pak vzdálené ladění nebude fungovat, pokud se na vzdáleném počítači nenainstaluje [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] nebo když se cíl pro aplikaci pracovního postupu změní na  **Libovolný procesor**.
+    > Pokud se aplikace pracovního postupu zaměřuje na architekturu x86 a je hostovaná na počítači, na kterém běží operační systém 64, pak vzdálené ladění nebude fungovat, pokud se na vzdáleném počítači nenainstaluje [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)], nebo když se cíl pro aplikaci pracovního postupu změní na **Libovolný procesor**.
 
 ### <a name="stepping-through-code"></a>Krokování prostřednictvím kódu
 
-- **Krok**dovnitř: můžete krokovat s aktivitou pomocí **klávesy F11**. Ladicí program popisuje všechny definované obslužné rutiny. Pokud není definována žádná obslužná rutina, můžete krokovat s aktivitou nebo se složenými aktivitami, které obsahují další aktivity, a krokovat s první vykonávanou aktivitou.
+- **Krok dovnitř**: můžete krokovat s vnořením aktivity pomocí **F11**. Ladicí program do libovolné obslužné rutiny, která je definována. Pokud není definována žádná obslužná rutina, Krokovat přes aktivity nebo pomocí složených aktivit, které obsahují další aktivity, přejdete na první spouštěné aktivity.
 
-- **Krok ven:** Můžete krokovat s aktivitou pomocí **SHIFT + F11**. Krokování mimo aktivitu spustí aktuální aktivitu a všechny její aktivity na stejné úrovni jako dokončené. Ladicí program se pak rozdělí na nadřazený objekt aktuální aktivity. Při rozkrokování z obslužné rutiny kódu se ladicí program ukončí u aktivity, ke které je přidružena obslužná rutina.
+- **Krok ven:** Můžete krokovat s aktivitou pomocí **SHIFT + F11**. Krokování mimo aktivitu spouští aktuální aktivitu a jejich na stejné úrovni aktivity do konce. Ladicí program zastaví se na nadřazený prvek aktuální aktivity. Při procházení z obslužné rutiny kód, ladicí program přeruší na aktivitu, ke kterému je přidružené obslužnou rutinu.
 
-- **Krok za krokem**: můžete krokovat aktivitu pomocí **F10**. Při krokování nad složenou aktivitou se ladicí program ukončí u prvního spustitelného prvku složené aktivity. Při rozkrokování mimo nesložené, například <xref:System.Activities.Statements.Assign> aktivity, ladicí program spustí aktivitu a její přidružené obslužné rutiny a přeruší na další aktivitu. Pokud je spuštěná aktivita poslední podřízená aktivita v složené aktivitě, potom po provedení dojde k přerušení ladicího programu u nadřazené aktivity.
+- **Krokovat s přeskočením**: můžete krokovat přes aktivity pomocí **F10**. Při krokování nad složenou aktivitou se ladicí program ukončí u prvního spustitelného prvku složené aktivity. Při rozkrokování mimo nesložené, například <xref:System.Activities.Statements.Assign> aktivity, ladicí program spustí aktivitu a její přidružené obslužné rutiny a přeruší na další aktivitu. Pokud je spuštěná aktivita poslední podřízená aktivita v složené aktivitě, potom po provedení dojde k přerušení ladicího programu u nadřazené aktivity.
 
 ### <a name="debugging-with-f5"></a>Ladění pomocí F5
 

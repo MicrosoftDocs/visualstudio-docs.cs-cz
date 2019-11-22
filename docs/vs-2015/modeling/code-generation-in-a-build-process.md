@@ -12,12 +12,12 @@ caps.latest.revision: 30
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 81c4160ca6d03d55d631cd4dad8c3bce01fa9722
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ae28c59f9c5f19e87b833c90e7dbc6bf3b7497ea
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667869"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297937"
 ---
 # <a name="code-generation-in-a-build-process"></a>Vytvoření kódu v procesu sestavení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,25 +33,25 @@ Pokud chcete povolit úlohy sestavení ve vývojovém počítači, nainstalujte 
 
 Pokud je [Server sestavení](https://msdn.microsoft.com/library/788443c3-0547-452e-959c-4805573813a9) spuštěn v počítači, na kterém není nainstalována aplikace Visual Studio, zkopírujte následující soubory do počítače sestavení z vývojového počítače. Nahradí nejnovější čísla verzí hvězdičkou (*).
 
-- $ (ProgramFiles) \MSBuild\Microsoft\VisualStudio\v *. 0 \ TextTemplating
+- $(ProgramFiles)\MSBuild\Microsoft\VisualStudio\v*.0\TextTemplating
 
-  - Microsoft. VisualStudio. TextTemplating. SDK. Host. *. 0. dll
+  - Microsoft.VisualStudio.TextTemplating.Sdk.Host.*.0.dll
 
   - Microsoft.TextTemplating.Build.Tasks.dll
 
   - Microsoft.TextTemplating.targets
 
-- $ (ProgramFiles) \Microsoft Visual Studio *. 0 \ VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0
+- $(ProgramFiles)\Microsoft Visual Studio *.0\VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0
 
-  - Microsoft. VisualStudio. TextTemplating. *. 0. dll
+  - Microsoft.VisualStudio.TextTemplating.*.0.dll
 
-  - Microsoft. VisualStudio. TextTemplating. Interfaces. *. 0. dll (několik souborů)
+  - Microsoft.VisualStudio.TextTemplating.Interfaces.*.0.dll (several files)
 
-  - Microsoft. VisualStudio. TextTemplating. VSHost. *. 0. dll
+  - Microsoft.VisualStudio.TextTemplating.VSHost.*.0.dll
 
 - $ (ProgramFiles) \Microsoft Visual Studio *. 0 \ Common7\IDE\PublicAssemblies\
 
-  - Microsoft. VisualStudio. TextTemplating. Modeling. *. 0. dll
+  - Microsoft.VisualStudio.TextTemplating.Modeling.*.0.dll
 
 ## <a name="to-edit-the-project-file"></a>Úprava souboru projektu
 
@@ -67,7 +67,7 @@ V souboru .vbproj nebo .csproj vyhledejte řádek podobný následujícímu:
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`
 
-\- nebo-
+\- nebo –
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`
 
@@ -155,7 +155,7 @@ Transformace textu se provede před všemi ostatními úlohami v procesu sestav
   </Target>
 ```
 
-V `AfterTransform` můžete odkazovat na seznamy souborů:
+V `AfterTransform`můžete odkazovat na seznamy souborů:
 
 - GeneratedFiles – seznam souborů zapsaných procesem. U souborů, které přepsaly existující soubory určené jen pro čtení, bude mít %(GeneratedFiles.ReadOnlyFileOverwritten) hodnotu true. Tyto soubory lze rezervovat ze správy zdrojového kódu.
 
@@ -263,7 +263,7 @@ Nyní můžete vlastnost projektu použít v direktivách assembly a include:
 
  Tyto direktivy získají z T4parameterValues hodnoty v hostitelích MSBuild i Visual Studio.
 
-## <a name="q--a"></a>Otázka & A
+## <a name="q--a"></a>Dotazy a odpovědi
 
 **Proč bych chtěl transformovat šablony na serveru sestavení? V aplikaci Visual Studio už byly transformované šablony před vrácením kódu se změnami**
 
@@ -284,5 +284,5 @@ Při aktualizaci vkládaného souboru nebo jiného souboru čteného šablonou n
 Dobrý návod poskytuje šablona T4 nástroje MSbuild, $(VSToolsPath)\TextTemplating\Microsoft.TextTemplating.targets.
 
 - [Zápis textové šablony T4](../modeling/writing-a-t4-text-template.md)
-- [Sada SDK pro vizualizaci a modelování sady Visual Studio](http://go.microsoft.com/fwlink/?LinkID=185579)
+- [Sada SDK pro vizualizaci a modelování sady Visual Studio](https://go.microsoft.com/fwlink/?LinkID=185579)
 - [Oleg Sych: Princip integrace s T4: MSBuild](https://github.com/olegsych/T4Toolbox)

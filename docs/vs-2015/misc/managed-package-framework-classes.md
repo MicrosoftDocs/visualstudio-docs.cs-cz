@@ -1,5 +1,5 @@
 ---
-title: Managed Package Framework tříd | Dokumentace Microsoftu
+title: Spravované třídy architektury balíčku | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -12,33 +12,33 @@ helpviewer_keywords:
 ms.assetid: 15aedcc3-c79a-460b-b620-43223f1ae81e
 caps.latest.revision: 24
 manager: jillfra
-ms.openlocfilehash: 75f7cb153a976614ff790095141a820af80b5834
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 2e9fe1abb82d3d64232e3e5e2a6d117c1068aa1c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63422758"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297700"
 ---
-# <a name="managed-package-framework-classes"></a>Managed Package Framework třídy
-Třídy spravované balíčků framework (MPF) slouží k vytváření balíčků VSPackage pomocí spravovaného kódu. Poskytuje výchozí implementaci pro mnoho rozhraní VSPackage. Skrýt podrobnosti implementace a složitosti, MPF vám umožní vytvořit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrace produktů s minimální část kódu.  
+# <a name="managed-package-framework-classes"></a>Spravované třídy architektury balíčku
+Třídy spravovaného balíčku (MPF) lze použít k vytvoření VSPackage pomocí spravovaného kódu. Poskytují výchozí implementace pro mnoho rozhraní VSPackage. Po skrytí podrobností a složitosti implementace vám umožňuje vytvořit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrační produkty s minimálním množstvím kódu.  
   
 > [!WARNING]
-> Většina sestavení, které obsahují Managed Package Framework třídy, které se dodávají se sadou Visual Studio SDK. Můžete stáhnout zdrojový kód pro spravované zabalí rozhraní pro projekty v [Managed Package Framework pro projekty](http://mpfproj11.codeplex.com/).  
+> Většina sestavení, která obsahují spravované třídy balíčků architektury, je dodávána se sadou Visual Studio SDK. Můžete stáhnout zdrojový kód pro spravovanou zabalenou architekturu pro projekty ve [spravovaném rozhraní balíčku pro projekty](https://archive.codeplex.com/?p=mpfproj11).  
   
-## <a name="mpf-namespaces"></a>Obory názvů MPF  
- V následující tabulce jsou uvedeny MPF obory názvů poskytované [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)].  
+## <a name="mpf-namespaces"></a>MPF – obory názvů  
+ V následující tabulce jsou uvedeny obory názvů MPF poskytované [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)].  
   
 |Obor názvů|Obsah|  
 |----------------|--------------|  
-|<xref:Microsoft.VisualStudio>|Obsahuje třídy užitečné pro zpracování chyb modelu COM, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] konstanty a Win32 pro systém windows.|  
-|<xref:Microsoft.VisualStudio.Package>|Obsahuje spravovaný kód obálky pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] MSBuild, projekty a editory.|  
-|<xref:Microsoft.VisualStudio.Shell>|Zahrnuje MPF základních tříd, ze které odvozujete implementace mnoho běžně používané objekty sady Visual Studio.|  
-|<xref:Microsoft.VisualStudio.Shell.Design>|Obsahuje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření návrháře.|  
-|<xref:Microsoft.VisualStudio.Shell.Design.Serialization>|Obsahuje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření serializace návrháře.|  
-|<xref:Microsoft.VisualStudio.Shell.Design.Serialization.CodeDom>|Obsahuje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření návrháře CodeDom.|  
-|<xref:Microsoft.VisualStudio.Shell.Flavor>|Podporuje projektu podtypů (označované také jako "typy").|  
+|<xref:Microsoft.VisualStudio>|Obsahuje užitečné třídy pro zpracování chyb COM, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] konstant a oken Win32.|  
+|<xref:Microsoft.VisualStudio.Package>|Obsahuje obálku spravovaného kódu pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projekty, editory a MSBuild.|  
+|<xref:Microsoft.VisualStudio.Shell>|Zahrnuje MPF základní třídy, ze kterých můžete odvodit implementaci mnoha běžných objektů sady Visual Studio.|  
+|<xref:Microsoft.VisualStudio.Shell.Design>|Obsahuje rozšíření návrháře [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|  
+|<xref:Microsoft.VisualStudio.Shell.Design.Serialization>|Obsahuje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření návrháře serializace.|  
+|<xref:Microsoft.VisualStudio.Shell.Design.Serialization.CodeDom>|Obsahuje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření CodeDom Designer.|  
+|<xref:Microsoft.VisualStudio.Shell.Flavor>|Podporuje podtypy projektů (označují se také jako "charakter").|  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření VSPackages a rozhraní Managed Package Framework](../misc/vspackages-and-the-managed-package-framework.md)   
- [Pomocí sady Visual Studio sestavení vzájemné spolupráce](../extensibility/internals/using-visual-studio-interop-assemblies.md)   
- [Rozšíření VSPackages a rozhraní Managed Package Framework](../misc/vspackages-and-the-managed-package-framework.md)
+ [Sady VSPackage a  architektury spravovaného balíčku](../misc/vspackages-and-the-managed-package-framework.md)  
+ [Pomocí sestavení spolupráce sady Visual Studio](../extensibility/internals/using-visual-studio-interop-assemblies.md)   
+ [Sady VSPackage a Managed Package Framework](../misc/vspackages-and-the-managed-package-framework.md)

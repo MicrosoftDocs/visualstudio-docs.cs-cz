@@ -11,12 +11,12 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 838f2d4d01372cf99d898c4e0d6584bb838c4f9b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 67d489b1446e7205d72b53e160a8c7ca87f216d7
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655281"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74292332"
 ---
 # <a name="add-stereotypes-to-uml-model-elements"></a>Přidávání stereotypů k elementům modelu UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -63,15 +63,15 @@ Stereotyp můžete přidat do prvku modelu UML a opatřit ho pomocí specializov
 
     - V diagramu tříd UML klikněte na nástroj pro prvek a potom klikněte dovnitř balíčku v diagramu.
 
-         \- nebo-
+         \- nebo –
 
     - V Průzkumníku modelů UML klikněte pravým tlačítkem na balíček, přejděte na **Přidat**a potom klikněte na typ prvku.
 
-         \- nebo-
+         \- nebo –
 
     - V Průzkumníku modelů UML přetáhněte existující prvek do balíčku.
 
-         \- nebo-
+         \- nebo –
 
     - Propojte diagram s balíčkem a potom v diagramu vytvořte prvky.
 
@@ -82,4 +82,5 @@ Stereotyp můžete přidat do prvku modelu UML a opatřit ho pomocí specializov
          To lze provést pouze s některými typy diagramu.
 
 ## <a name="see-also"></a>Viz také
- [Definování profilu pro rozšiřování modelu UML](../modeling/define-a-profile-to-extend-uml.md) [Přizpůsobení modelu pomocí profilů a stereotypů](../modeling/customize-your-model-with-profiles-and-stereotypes.md) [Definování balíčků a oborů názvů](../modeling/define-packages-and-namespaces.md) [barvami tříd UML podle stereotypu](http://code.msdn.microsoft.com/UML-Color-Classes-by-07de2b70)
+ [Definování profilu pro rozšiřování modelu UML](../modeling/define-a-profile-to-extend-uml.md) [Přizpůsobení modelu pomocí profilů a stereotypů](../modeling/customize-your-model-with-profiles-and-stereotypes.md) [Definování balíčků a oborů názvů](../modeling/define-packages-and-namespaces.md)
+

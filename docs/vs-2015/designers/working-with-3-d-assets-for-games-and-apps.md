@@ -11,12 +11,12 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6976d7c0e32739348ec0d78603e6b6d47d01477b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9cc4f8038906de89afd86fd666fbb011e974362d
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661576"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298092"
 ---
 # <a name="working-with-3-d-assets-for-games-and-apps"></a>Práce s 3D prostředky pro hry a aplikace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "72661576"
 Tento dokument popisuje nástroje pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], které můžete použít k vytvoření nebo úpravě 3D modelů, textur a shaderů pro hry a aplikace založené na rozhraní DirectX.
 
 ## <a name="directx-app-development-in-visual-studio"></a>Vývoj aplikací DirectX v aplikaci Visual Studio
- Aplikace DirectX obvykle kombinuje programovací logiku, rozhraní DirectX API a programy HLSL (High Level prostíning Language) spolu se zvukovým a 3D vizuálními prostředky a prezentuje bohatá interaktivní multimediální prostředí. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] obsahuje nástroje, které můžete použít pro práci s imagemi a texturami, 3D modely a shadery, aniž byste opustili rozhraní IDE, aby používaly jiný nástroj. Nástroje sady Visual Studio jsou obzvláště vhodné pro vytváření *zástupných* prostředků, které můžete použít k testování kódu nebo prototypů sestavení před tím, než provedete prostředky připravené pro produkční prostředí, a pro kontrolu a úpravy prostředků připravených k produkci. ladění aplikace.
+ Aplikace DirectX obvykle kombinuje programovací logiku, rozhraní DirectX API a programy HLSL (High Level prostíning Language) spolu se zvukovým a 3D vizuálními prostředky a prezentuje bohatá interaktivní multimediální prostředí.[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] obsahuje nástroje, které můžete použít pro práci s imagemi a texturami, 3D modely a shadery, aniž byste opustili rozhraní IDE, aby používaly jiný nástroj. Nástroje sady Visual Studio jsou zvláště vhodné pro vytváření *zástupných* prostředků, které můžete použít k testování kódu nebo prototypů sestavení před tím, než provedete proaktivované prostředky pro produkční prostředí, a pro kontrolu a úpravy prostředků připravených k produkci při ladění aplikace.
 
  Zde jsou další informace o druzích assetů, se kterými můžete pracovat v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
@@ -44,10 +44,10 @@ Tento dokument popisuje nástroje pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md
  K vytváření vlastních vizuálních efektů bez znalosti programování v HLSL můžete použít nástroj [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Shader Designer, což je nástroj pro návrh shaderu založený na grafu.
 
 > [!NOTE]
-> Další informace o tom, jak začít s programováním v rozhraní DirectX, najdete v tématu [DirectX](http://go.microsoft.com/fwlink/p/?LinkId=224633). Další informace o ladění aplikace založené na rozhraní DirectX najdete v tématu [Diagnostika grafiky (ladění grafiky DirectX)](../debugger/visual-studio-graphics-diagnostics.md).
+> Další informace o tom, jak začít s programováním v rozhraní DirectX, najdete v tématu [DirectX](https://go.microsoft.com/fwlink/p/?LinkId=224633). Další informace o ladění aplikace založené na rozhraní DirectX najdete v tématu [Diagnostika grafiky (ladění grafiky DirectX)](../debugger/visual-studio-graphics-diagnostics.md).
 
 ## <a name="directx-version-compatibility"></a>Kompatibilita verzí DirectX
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] používá k vykreslování 2D a 3D prostředků rozhraní DirectX. Můžete vybrat buď vykreslovací modul rozhraní DirectX 11, nebo systém Windows Advanced Rastring Platform (pokřivení) softwaru. Vykreslovací modul rozhraní DirectX 11 poskytuje vysoce výkonné vykreslování s hardwarovou akcelerací na procesorech DirectX 11 a DirectX 10. Zobrazovací jednotka pro pokřivení pomáhá zajistit, aby vaše prostředky pracovaly s širokou škálou počítačů – to zahrnuje počítače, které nemají moderní grafický hardware a počítače s integrovaným grafickým hardwarem. Další informace o prostudování najdete v tématu [Příručka k platformě Windows Advanced rastring Platform (POkřivení)](http://go.microsoft.com/fwlink/p/?LinkId=224634).
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] používá k vykreslování 2D a 3D prostředků rozhraní DirectX. Můžete vybrat buď vykreslovací modul rozhraní DirectX 11, nebo systém Windows Advanced Rastring Platform (pokřivení) softwaru. Vykreslovací modul rozhraní DirectX 11 poskytuje vysoce výkonné vykreslování s hardwarovou akcelerací na procesorech DirectX 11 a DirectX 10. Zobrazovací jednotka pro pokřivení pomáhá zajistit, aby vaše prostředky pracovaly s širokou škálou počítačů – to zahrnuje počítače, které nemají moderní grafický hardware a počítače s integrovaným grafickým hardwarem. Další informace o prostudování najdete v tématu [Příručka k platformě Windows Advanced rastring Platform (POkřivení)](https://go.microsoft.com/fwlink/p/?LinkId=224634).
 
 ## <a name="related-topics"></a>Související témata
 

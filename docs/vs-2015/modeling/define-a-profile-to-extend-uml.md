@@ -16,12 +16,12 @@ caps.latest.revision: 44
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e621297b36d75a0e48baed4ab24d50abd5e61663
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bdb6620f8d73bf7fae7b7dbb1b92af38e71345b6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668694"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295668"
 ---
 # <a name="define-a-profile-to-extend-uml"></a>Definování profilu pro rozšíření UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,7 +53,7 @@ Můžete definovat *profil UML* pro přizpůsobení standardních prvků modelu 
 
 2. Přidejte definice stereotypu podle pokynů popsaných ve [struktuře profilu](#Schema).
 
-3. Přidejte profil do rozšíření sady Visual Studio (soubor `.vsix`). Můžete buď vytvořit nové rozšíření pro váš profil, nebo přidat profil k existujícímu rozšíření.
+3. Přidejte profil do rozšíření sady Visual Studio (soubor`.vsix`). Můžete buď vytvořit nové rozšíření pro váš profil, nebo přidat profil k existujícímu rozšíření.
 
      Přečtěte si další část, [jak přidat profil do rozšíření sady Visual Studio](#AddProfile).
 
@@ -76,7 +76,7 @@ Můžete definovat *profil UML* pro přizpůsobení standardních prvků modelu 
 6. Odešlete soubor rozšíření jiným uživatelům [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] k instalaci na jejich počítačích.
 
 ## <a name="AddProfile"></a>Postup přidání profilu do rozšíření sady Visual Studio
- Chcete-li nainstalovat profil a chcete-li jej odeslat ostatním uživatelům, je nutné přidat profil do rozšíření aplikace Visual Studio. Další informace najdete v tématu [nasazení rozšíření sady Visual Studio](http://go.microsoft.com/fwlink/?LinkId=160780).
+ Chcete-li nainstalovat profil a chcete-li jej odeslat ostatním uživatelům, je nutné přidat profil do rozšíření aplikace Visual Studio. Další informace najdete v tématu [nasazení rozšíření sady Visual Studio](https://go.microsoft.com/fwlink/?LinkId=160780).
 
 #### <a name="to-define-a-profile-in-a-new-visual-studio-extension"></a>Definování profilu v novém rozšíření sady Visual Studio
 
@@ -105,7 +105,7 @@ Můžete definovat *profil UML* pro přizpůsobení standardních prvků modelu 
 
 5. Na stránce **assets (prostředky** ) přidejte řádek popisující profil:
 
-   - Klikněte na **Nový**. Nastavte pole v dialogovém okně **Přidat nový prostředek** následujícím způsobem.
+   - Klikněte na možnost **Nové**. Nastavte pole v dialogovém okně **Přidat nový prostředek** následujícím způsobem.
 
    - Nastavit **typ** na `Microsoft.VisualStudio.UmlProfile`
 
@@ -123,7 +123,7 @@ Můžete definovat *profil UML* pro přizpůsobení standardních prvků modelu 
 
    1. V Průzkumníku Windows otevřete složku **.\bin\debug** nebo **.\bin\Release** a vyhledejte soubor **. vsix** . Toto je soubor rozšíření [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]. Může být nainstalováno do vašeho počítače a odesláno jiným uživatelům aplikace Visual Studio.
 
-   2. Instalace rozšíření:
+   2. Chcete-li nainstalovat rozšíření:
 
        1. Dvakrát klikněte na soubor `.vsix`. Spustí se instalační program rozšíření sady Visual Studio.
 
@@ -196,7 +196,7 @@ Můžete definovat *profil UML* pro přizpůsobení standardních prvků modelu 
     > [!NOTE]
     > Pokud vytváříte rozšíření pomocí projektu rozšíření sady Visual Studio, použijte Průzkumník řešení k přidání nové složky do projektu.
 
-3. Změňte název nového adresáře na krátký kód ISO pro lokalizovanou jazykovou verzi, jako je například `bg` pro bulharštinu nebo `fr` pro francouzštinu. Měli byste použít neutrální kód kultury, obvykle dvě písmena, nikoli konkrétní jazykovou verzi, například `fr-CA`. Další informace o kódech kultury naleznete v tématu [CultureInfo. GetCultures](http://go.microsoft.com/fwlink/?LinkId=160782), který poskytuje úplný seznam kódů jazykové verze.
+3. Změňte název nového adresáře na krátký kód ISO pro lokalizovanou jazykovou verzi, jako je například `bg` pro bulharštinu nebo `fr` pro francouzštinu. Měli byste použít neutrální kód kultury, obvykle dvě písmena, nikoli konkrétní jazykovou verzi, například `fr-CA`. Další informace o kódech kultury naleznete v tématu [CultureInfo. GetCultures](https://go.microsoft.com/fwlink/?LinkId=160782), který poskytuje úplný seznam kódů jazykové verze.
 
 4. Přidejte do nového adresáře kopii výchozího profilu. Neměňte název souboru.
 
@@ -220,9 +220,9 @@ Můžete definovat *profil UML* pro přizpůsobení standardních prvků modelu 
 7. Sestavte rozšíření sady Visual Studio, a to buď sestavením projektu rozšíření, nebo kompresí všech souborů, jak je popsáno v předchozích částech.
 
 ## <a name="Schema"></a>Struktura profilu
- Soubor XSD pro profily UML najdete v následující ukázce: [Nastavení stereotypů a profilů XSD](http://go.microsoft.com/fwlink/?LinkID=213811). Pro usnadnění úprav souborů profilu nainstalujte `.xsd` soubor v nástroji:
+ Soubor XSD pro profily UML najdete v následující ukázce: [Nastavení stereotypů a profilů XSD](https://go.microsoft.com/fwlink/?LinkID=213811). Pro usnadnění úprav souborů profilu nainstalujte `.xsd` soubor v nástroji:
 
- **%ProgramFiles%\Microsoft Visual Studio [verze] \Xml\Schemas**
+ **%ProgramFiles%\Microsoft Visual Studio [version]\Xml\Schemas**
 
  V této části se C# jako příklad používá profil. Úplnou definici profilu najdete v tématu:
 
@@ -298,7 +298,7 @@ Můžete definovat *profil UML* pro přizpůsobení standardních prvků modelu 
 <stereotype name="CSharpClass" displayName="C# Class"> ...
 ```
 
- Jednotlivé stereotypy obsahují jeden nebo více elementů modelu nebo typů vztahů, na které lze použít. Můžete zadat název základního typu, chcete-li zahrnout všechny odvozené typy. Například pokud zadáte `Microsoft.VisualStudio.Uml.Classes.IType`, stereotyp lze použít na `IClass`, `IInterface`, `IEnumeration` a několik dalších typů prvků.
+ Jednotlivé stereotypy obsahují jeden nebo více elementů modelu nebo typů vztahů, na které lze použít. Můžete zadat název základního typu, chcete-li zahrnout všechny odvozené typy. Například pokud zadáte `Microsoft.VisualStudio.Uml.Classes.IType`, stereotyp lze použít na `IClass`, `IInterface`, `IEnumeration`a několik dalších typů prvků.
 
 ```
 <metaclasses>
@@ -312,7 +312,7 @@ Můžete definovat *profil UML* pro přizpůsobení standardních prvků modelu 
 > [!NOTE]
 > Název monikeru musí začínat na `/yourProfileName/`, kde `yourProfileName` je definovaný v atributu `name` profilu (v tomto příkladu "CSharpProfile"). Moniker končí názvem jedné z položek v oddílu metatřídy.
 
- Každý stereotyp může vypsat nula nebo více vlastností, které přidá do libovolného prvku modelu, na který je použit. @No__t_0 obsahuje odkaz na jeden z typů, které jsou definovány v části `<propertyTypes>`. Odkaz musí být buď `<externalTypeMoniker>`, aby odkazoval na `<externalType>,` nebo `<enumerationTypeMoniker>`, aby odkazoval na `<enumerationType>`. Tento odkaz znovu začíná názvem vašeho profilu.
+ Každý stereotyp může vypsat nula nebo více vlastností, které přidá do libovolného prvku modelu, na který je použit. `<propertyType>` obsahuje odkaz na jeden z typů, které jsou definovány v části `<propertyTypes>`. Odkaz musí být buď `<externalTypeMoniker>`, aby odkazoval na `<externalType>,` nebo `<enumerationTypeMoniker>`, aby odkazoval na `<enumerationType>`. Tento odkaz znovu začíná názvem vašeho profilu.
 
 ```
   <properties>
@@ -347,22 +347,22 @@ Musíte vybrat profil v balíčku nebo modelu. Stereotypy se pak zobrazí na prv
 
 2. Zajistěte, aby byl každý název monikeru ve tvaru/profileName/nodeName. Název profilu je hodnota atributu name v uzlu root Profile. Node je hodnota atributu Name typu Metatřída, externalType nebo enumerationType.
 
-3. Zajistěte, aby byla syntaxe popsaná zde, a jak je znázorněno v části _jednotka_ **: \Program Files\Microsoft Visual Studio [Version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\UmlProfiles \\** .
+3. Zajistěte, aby byla syntaxe popsaná zde, a jak je znázorněno v části _jednotka_ **: \Program Files\Microsoft Visual Studio [Version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\UmlProfiles\\** .
 
-4. Odinstalujte poškozenou příponu. V nabídce **nástroje** klikněte na možnost **rozšíření a aktualizace**.
+4. Odinstalujte poškozenou příponu. Na **nástroje** nabídky, klikněte na tlačítko **rozšíření a aktualizace**.
 
    - Pokud se rozšíření nezobrazí, podívejte se na další položku.
 
 5. Znovu sestavte soubor VSIX a otevřete ho v Průzkumníkovi Windows, abyste ho znovu nainstalovali. Restartujte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
    Rozšíření se nezobrazuje ve Správci rozšíření, ale při pokusu o jeho opětovné instalaci se zobrazí následující zpráva: **rozšíření je již nainstalováno do všech příslušných produktů.**
-   1. Odebrání souboru rozšíření z podsložky *localappdata*\Microsoft\VisualStudio \\ [Version] \Extensions\
+   1. Odebrání souboru rozšíření z podsložky *localappdata*\Microsoft\VisualStudio\\[Version] \Extensions\
 
    - Chcete-li zobrazit *localappdata*, je třeba nastavit možnost Zobrazit skryté soubory a složky na kartě zobrazení možností složky v Průzkumníkovi Windows.
 
-   - *Localappdata* je obvykle ve C:\Users \\*username*\AppData\Local\
+   - *Localappdata* je obvykle ve C:\Users\\*username*\AppData\Local\
 
 6. Restartujte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
 ## <a name="see-also"></a>Viz také
- [Přidání stereotypů do prvků modelu UML](../modeling/add-stereotypes-to-uml-model-elements.md) [Přizpůsobení modelu pomocí profilů a](../modeling/customize-your-model-with-profiles-and-stereotypes.md) [standardních stereotypů pro modely UML](../modeling/standard-stereotypes-for-uml-models.md) [Ukázka: barevné prvky UML podle stereotypu](http://go.microsoft.com/fwlink/?LinkID=213841) [Ukázka: nastavení stereotypů, profily XSD](http://go.microsoft.com/fwlink/?LinkID=213811)
+ [Přidání stereotypů do prvků modelu UML](../modeling/add-stereotypes-to-uml-model-elements.md) [Přizpůsobení modelu pomocí profilů a](../modeling/customize-your-model-with-profiles-and-stereotypes.md) [standardních stereotypů pro modely UML](../modeling/standard-stereotypes-for-uml-models.md) [Ukázka: barevné prvky UML podle stereotypu](https://go.microsoft.com/fwlink/?LinkID=213841) [Ukázka: nastavení stereotypů, profily XSD](https://go.microsoft.com/fwlink/?LinkID=213811)

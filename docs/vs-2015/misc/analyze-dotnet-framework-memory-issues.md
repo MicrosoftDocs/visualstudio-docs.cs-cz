@@ -1,5 +1,5 @@
 ---
-title: Analýza problémů paměti rozhraní .NET Framework | Dokumentace Microsoftu
+title: Analýza problémů s .NET Framework paměti | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -10,180 +10,180 @@ ms.assetid: 43341928-9930-48cf-a57f-ddcc3984b787
 caps.latest.revision: 9
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 885f96a4e1e43fe422c6fd9cfaa414fe5871bce1
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: e94edbeac381ac634171507766126ab954153eb1
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65688578"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295897"
 ---
 # <a name="analyze-net-framework-memory-issues"></a>Analýza problémů s pamětí rozhraní .NET Framework
-Hledání nevrácené paměti a neefektivní paměti použijte v kódu rozhraní .NET Framework pomocí sady Visual Studio managed analyzátoru paměti. Minimální verze rozhraní .NET Framework cílový kód je rozhraní .NET Framework 4.5.  
+Pomocí analyzátoru spravované paměti sady Visual Studio Najděte nevracení paměti a neefektivní využití paměti v .NET Framework kódu. Minimální .NET Framework verze cílového kódu je .NET Framework 4,5.  
   
- Nástroj pro analýzu paměti analyzuje informace v *soubory s daty haldy výpisu paměti* , která kopie objektů v paměti aplikace. Soubory s výpisem paměti (.dmp) můžete shromažďovat z integrovaného vývojového prostředí sady Visual Studio nebo pomocí jiných nástrojů systému.  
+ Nástroj Analýza paměti analyzuje informace v *souborech s výpisem paměti s daty haldy* , které kopíruje objekty v paměti aplikace. Soubory výpisu (. dmp) můžete shromáždit z integrovaného vývojového prostředí (IDE) sady Visual Studio nebo pomocí jiných systémových nástrojů.  
   
 - Jeden snímek pochopit jeho relativní dopad typů objektů na využití paměti a vyhledání kódu vaší aplikace, která používá paměť neefektivně, můžete analyzovat.  
   
-- Můžete také porovnat (*diff*) dvěma snímky aplikaci pro hledání oblastí ve vašem kódu, které způsobují paměť můžete postupem doby zvyšuje.  
+- Můžete také porovnat (*diff*) dva snímky aplikace a vyhledat oblasti v kódu, které způsobí, že se využití paměti zvýší v čase.  
   
-  Návod analýza spravované paměti najdete v tématu [pomocí Visual Studio 2013 k diagnostice problémů paměti rozhraní .NET v produkčním prostředí](http://blogs.msdn.com/b/visualstudioalm/archive/2013/06/20/using-visual-studio-2013-to-diagnose-net-memory-issues-in-production.aspx) na Visual Studio ALM + blog Team Foundation Server.  
+  Návod k analyzátoru spravované paměti najdete v tématu [použití Visual Studio 2013 k diagnostice problémů s pamětí .NET v produkci](https://devblogs.microsoft.com/devops/using-visual-studio-2013-to-diagnose-net-memory-issues-in-production/) na blogu Visual Studio ALM + Team Foundation Server.  
   
-## <a name="BKMK_Contents"></a> Obsah  
- [Využití paměti v aplikacích rozhraní .NET Framework](#BKMK_Memory_use_in__NET_Framework_apps)  
+## <a name="BKMK_Contents"></a>Obsah  
+ [Využití paměti v aplikacích .NET Framework](#BKMK_Memory_use_in__NET_Framework_apps)  
   
- [Identifikovat problém paměti v aplikaci](#BKMK_Identify_a_memory_issue_in_an_app)  
+ [Identifikace problému s pamětí v aplikaci](#BKMK_Identify_a_memory_issue_in_an_app)  
   
- [Shromažďovat snímky paměti](#BKMK_Collect_memory_snapshots)  
+ [Shromáždit snímky paměti](#BKMK_Collect_memory_snapshots)  
   
- [Analýza využití paměti](#BKMK_Analyze_memory_use)  
+ [Analyzovat využití paměti](#BKMK_Analyze_memory_use)  
   
-## <a name="BKMK_Memory_use_in__NET_Framework_apps"></a> Využití paměti v aplikacích rozhraní .NET Framework  
- Rozhraní .NET Framework je uklizena modulem runtime, aby ve většině aplikací, využití paměti nepředstavuje žádný problém. Ale dlouho běžící aplikace jako webové služby a aplikace a zařízení, která mají omezené množství paměti, akumulací objektů v paměti může mít vliv na výkon aplikace a zařízení, na kterém poběží. Použití využívala příliš mnoho paměti se může zhoršit výkon aplikace a počítače prostředky systému uvolňování paměti běží příliš často nebo pokud se musí přesunout paměti mezi paměti RAM a disk operačního systému. V nejhorším případě aplikace může dojít k selhání s výjimkou "nedostatek paměti".  
+## <a name="BKMK_Memory_use_in__NET_Framework_apps"></a>Využití paměti v aplikacích .NET Framework  
+ .NET Framework je modul runtime uvolňován paměti, takže ve většině aplikací není využití paměti problémem. Ale v dlouhotrvajících aplikacích, jako jsou webové služby a aplikace, a v zařízeních, která mají omezené množství paměti, může akumulace objektů v paměti ovlivnit výkon aplikace a zařízení, na kterém je spuštěný. Nadměrné využití paměti může omezují aplikaci a počítač prostředků, pokud je systém uvolňování paměti spuštěn příliš často, nebo pokud je operační systém nucen přesunout paměť mezi pamětí RAM a diskem. V nejhorším případě může dojít k chybě aplikace s výjimkou "nedostatek paměti".  
   
- .NET *spravované haldě* je oblast virtuální paměti, kde jsou uloženy odkazů na objekty vytvořené aplikace. Doba života objektů spravuje systému uvolňování paměti (GC). Uvolňování paměti používá odkazů ke sledování objektů, které zabírají bloky paměti. Pokud objekt je vytvořen a přiřadit proměnné je vytvořen odkaz. Jeden objekt může mít více odkazů. Další odkazy na objekt lze například vytvořit přidáním objekt do třídy, kolekce nebo jiné datové struktury, nebo přiřazení objektu k druhé proměnné. Méně zřejmé způsob vytvoření odkazu je jeden objekt přidání obslužné rutiny událostí jiného objektu. V takovém případě druhý objekt, který obsahuje odkaz na první objekt, dokud se explicitně odebere obslužnou rutinu nebo druhý objekt je zničen.  
+ *Halda spravovaná* rozhraním .NET je oblast virtuální paměti, kde jsou uloženy referenční objekty vytvořené aplikací. Životnost objektů je spravovaná systémem uvolňování paměti (GC). Systém uvolňování paměti používá odkazy k udržení přehledu o objektech, které zabírají bloky paměti. Odkaz je vytvořen při vytvoření objektu a jeho přiřazení proměnné. Jeden objekt může mít více odkazů. Například další odkazy na objekt lze vytvořit přidáním objektu do třídy, kolekce nebo jiné struktury dat nebo přiřazením objektu druhé proměnné. Méně zřejmý způsob, jak vytvořit odkaz, je jedním objektem přidání obslužné rutiny do události jiného objektu. V tomto případě druhý objekt obsahuje odkaz na první objekt, dokud není obslužná rutina explicitně odebrána, nebo když je druhý objekt zničen.  
   
- Pro každou aplikaci uvolňování paměti uchovává strom odkazy, které sleduje objekty odkazují aplikace. *Odkaz stromu* má sadu kořenových adresářů, které zahrnuje globální a statické objekty, a také zásobníky přidružené vlákno a dynamicky vytvořit instanci objektů. Objekt je kořenem, pokud má aspoň jeden nadřazený objekt, který obsahuje odkaz na objekt. Uvolňování paměti mohl uvolnit paměť objektu, pouze v případě, že na ni odkaz nemá žádný objekt nebo proměnná v aplikaci.  
+ V případě každé aplikace udržuje GC strom odkazů, které sledují objekty, na které aplikace odkazuje. *Referenční strom* obsahuje sadu kořenů, včetně globálních a statických objektů, jakož i přidružených zásobníků vláken a dynamicky vytvořených objektů. Objekt je root, pokud má objekt alespoň jeden nadřazený objekt, který obsahuje odkaz na něj. GC může uvolnit paměť objektu pouze v případě, že žádný jiný objekt nebo proměnná v aplikaci na něj neodkazuje.  
   
- ![Zpět na začátek](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [obsah](#BKMK_Contents)  
+ ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [](#BKMK_Contents)  
   
-## <a name="BKMK_Identify_a_memory_issue_in_an_app"></a> Identifikovat problém paměti v aplikaci  
- Většina viditelným projevem problémy s pamětí je výkon vaší aplikace, zejména v případě, že v čase snižuje výkon. Snížení výkonu dalších aplikací, když běží vaše aplikace může také znamenat problém s paměti. Pokud máte podezření na chybu paměti, použijte nástroj jako správce úloh nebo [Windows Performance Monitor](https://technet.microsoft.com/library/cc749249.aspx) dále prozkoumat. Například vyhledejte nárůst celkové velikosti paměti, kterou nelze vysvětlují jako možné příčiny nevracení paměti:  
+## <a name="BKMK_Identify_a_memory_issue_in_an_app"></a>Identifikace problému s pamětí v aplikaci  
+ Nejužitečnější příznak potíží s pamětí je výkon vaší aplikace, zejména v případě, že se výkon snižuje v čase. Snížení výkonu jiných aplikací v době, kdy je aplikace spuštěná, může také znamenat problém s pamětí. Pokud se domníváte, že se jedná o problém s pamětí, použijte nástroj, jako je například Správce úloh nebo [sledování výkonu systému Windows](https://technet.microsoft.com/library/cc749249.aspx) . Můžete například vyhledat nárůst celkové velikosti paměti, kterou nemůžete vysvětlit jako možný zdroj nevracení paměti:  
   
- ![Konzistentní paměti nárůst sledování prostředků](../misc/media/mngdmem-resourcemanagerconsistentgrowth.png "MNGDMEM_ResourceManagerConsistentGrowth")  
+ ![Konzistentní nárůst paměti v Sledování prostředků](../misc/media/mngdmem-resourcemanagerconsistentgrowth.png "MNGDMEM_ResourceManagerConsistentGrowth")  
   
- Můžete také všimnout špičky využití paměti, které jsou větší, než byste navrhnout svoje znalosti v oblasti kód, který může ukazovat na neefektivní využití paměti v postupu:  
+ Můžete si také všimnout špičky paměti, které jsou větší než vaše znalosti kódu, což by vedlo k tomu, že by mohlo Ukázat neefektivní využití paměti v proceduře:  
   
- ![Špičky využití paměti v Resource Manageru](../misc/media/mngdmem-resourcemanagerspikes.png "MNGDMEM_ResourceManagerSpikes")  
+ ![Špičky paměti v Správce prostředků](../misc/media/mngdmem-resourcemanagerspikes.png "MNGDMEM_ResourceManagerSpikes")  
   
-## <a name="BKMK_Collect_memory_snapshots"></a> Shromažďovat snímky paměti  
- Nástroj pro analýzu paměti analyzuje informace v *soubory s výpisem paměti* obsahující informace o haldě. V sadě Visual Studio můžete vytvořit soubory s výpisem paměti, nebo můžete použít nástroje, jako je [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx) z [Windows Sysinternals](https://technet.microsoft.com/sysinternals). Zobrazit [co je výpis paměti, a jak jeden vytvořit?](http://blogs.msdn.com/b/debugger/archive/2009/12/30/what-is-a-dump-and-how-do-i-create-one.aspx) na blogu týmu Visual Studio Debugger.  
+## <a name="BKMK_Collect_memory_snapshots"></a>Shromáždit snímky paměti  
+ Nástroj Analýza paměti analyzuje informace v *souborech výpisu* paměti, které obsahují informace o haldě. Můžete vytvořit soubory s výpisem paměti v aplikaci Visual Studio nebo můžete použít nástroj jako [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx) z [Windows Sysinternals](https://technet.microsoft.com/sysinternals). Podívejte [se, co je výpis paměti a jak ho vytvořit?](https://blogs.msdn.microsoft.com/debugger/2009/12/30/what-is-a-dump-and-how-do-i-create-one/) na blogu týmu ladicího programu sady Visual Studio.  
   
 > [!NOTE]
-> Většina nástrojů může shromažďovat informace z výpisu paměti s nebo bez dat kompletní haldy paměti. Analyzátor paměti Visual Studio vyžaduje úplnou haldy informace.  
+> Většina nástrojů může shromažďovat informace o vystavení s daty paměti haldy nebo bez ní. Analyzátor paměti sady Visual Studio vyžaduje úplné informace o haldě.  
   
- **Shromažďovat výpis ze sady Visual Studio**  
+ **Shromažďování výpisu paměti ze sady Visual Studio**  
   
-1. Můžete vytvořit soubor s výpisem paměti pro proces, který bylo spuštěné z projektu sady Visual Studio, nebo můžete připojit ladicí program ke spuštěnému procesu. Zobrazit [připojení ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
+1. Můžete vytvořit soubor s výpisem paměti pro proces, který byl spuštěn z projektu aplikace Visual Studio, nebo můžete připojit ladicí program ke spuštěnému procesu. Viz [připojit ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
   
-2. Zastavte provádění. Ladicí program zastaví, když zvolíte **příkaz Pozastavit vše** na **ladění** nabídky, nebo na výjimku, nebo na zarážce  
+2. Zastavit provádění. Ladicí program se zastaví, když vyberete možnost **rozdělit vše** v nabídce **ladění** nebo na výjimku nebo na zarážku.  
   
-3. Na **ladění** nabídce zvolte **uložit výpis paměti jako**. V **uložit výpis paměti jako** dialogové okno pole, zadejte umístění a ujistěte se, že **minimální výpis s haldou** (výchozí) je vybraná v **uložit jako typ** seznamu.  
+3. V nabídce **ladění** vyberte možnost **Uložit výpis jako**. V dialogovém okně **Uložit výpis paměti** zadejte umístění a ujistěte se, že je v seznamu **Uložit jako typ** vybrána možnost **s minimálním výpisem s haldou** (výchozí).  
   
-   **K porovnání dvou snímků paměti**  
+   **Porovnání dvou snímků paměti**  
   
-   Pokud chcete analyzovat nárůst využití paměti aplikace, shromážděte dva soubory s výpisem paměti z jedné instance aplikace.  
+   Chcete-li analyzovat nárůst využití paměti aplikací, shromážděte ze samostatné instance aplikace dva soubory s výpisem paměti.  
   
-   ![Zpět na začátek](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [obsah](#BKMK_Contents)  
+   ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [](#BKMK_Contents)  
   
-## <a name="BKMK_Analyze_memory_use"></a> Analýza využití paměti  
- [Filtrovat seznam objektů](#BKMK_Filter_the_list_of_objects) **&#124;** [analýza dat z jednoho snímku paměti](#BKMK_Analyze_memory_data_in_from_a_single_snapshot) **&#124;** [porovnat dva paměti snímky](#BKMK_Compare_two_memory_snapshots)  
+## <a name="BKMK_Analyze_memory_use"></a>Analyzovat využití paměti  
+ [Filtrování seznamu objektů](#BKMK_Filter_the_list_of_objects) **&#124;** [Analýza dat paměti z jednoho snímku](#BKMK_Analyze_memory_data_in_from_a_single_snapshot) **&#124;** [porovnání dvou snímků paměti](#BKMK_Compare_two_memory_snapshots)  
   
- K analýze souboru s výpisem paměti pomocí problémy:  
+ Postup analýzy souboru s výpisem paměti pro problémy s využitím paměti:  
   
-1. V sadě Visual Studio, zvolte **souboru**, **otevřít** a určete soubor s výpisem paměti.  
+1. V aplikaci Visual Studio zvolte **soubor**, **otevřete** a zadejte soubor s výpisem paměti.  
   
-2. Na **soubor souhrnu minimálního výpisu** zvolte **ladit spravovanou paměť**.  
+2. Na stránce **Souhrn souborů s minimálním výpisem** vyberte **ladit spravovanou paměť**.  
   
-    ![Stránka souhrnného souboru výpisu](../misc/media/mngdmem-dumpfilesummary.png "MNGDMEM_DumpFileSummary")  
+    ![Stránka souhrnu souborů výpisu](../misc/media/mngdmem-dumpfilesummary.png "MNGDMEM_DumpFileSummary")  
   
-   Analyzátor paměti spustí relaci ladění analyzovat soubor a zobrazí výsledky v haldě zobrazení stránky:  
+   Analyzátor paměti spustí relaci ladění pro analýzu souboru a zobrazí výsledky na stránce zobrazení haldy:  
   
-   ![Zpět na začátek](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [obsah](#BKMK_Contents)  
+   ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [](#BKMK_Contents)  
   
-### <a name="BKMK_Filter_the_list_of_objects"></a> Filtrovat seznam objektů  
- Analyzátor paměti ve výchozím nastavení, filtruje seznam objektů v paměti snímku zobrazíte jen typy a instance, které mají kód pod licencí uživatelů a zobrazíte pouze ty typy, jejichž celková velikost včetně překročit prahovou hodnotu Procento celkovou velikost haldy. Tyto možnosti v můžete změnit **nastavení zobrazení** seznamu:  
+### <a name="BKMK_Filter_the_list_of_objects"></a>Filtrovat seznam objektů  
+ Analyzátor paměti standardně filtruje seznam objektů ve snímku paměti, aby zobrazil pouze typy a instance, které jsou v uživatelském kódu, a zobrazí pouze typy, jejichž celková celková velikost překračuje prahovou hodnotu celkové velikosti haldy. Tyto možnosti můžete změnit v seznamu **zobrazení nastavení** :  
   
 |||  
 |-|-|  
-|**Povolit volbu pouze vlastní kód**|Pouze můj kód skryje nejběžnější systémové objekty tak, aby se v seznamu zobrazí pouze typy, které vytvoříte.<br /><br /> Můžete také nastavit možnost pouze vlastní kód v sadě Visual Studio **možnosti** dialogové okno. Na **ladění** nabídce zvolte **možnosti a nastavení**. V **ladění**/**Obecné** kartu, vyberte nebo zrušte **pouze můj kód**.|  
-|**Sbalit malé objekty**|**Sbalit malé objekty** skryje všechny typy, jejichž celková velikost (včetně) je menší než 0,5 procent celkovou velikost haldy.|  
+|**Povolit Pouze můj kód**|Pouze můj kód skrývá většinu běžných systémových objektů, takže se v seznamu zobrazí jenom typy, které vytvoříte.<br /><br /> Můžete také nastavit možnost Pouze můj kód v dialogovém okně **Možnosti** aplikace Visual Studio. V nabídce **ladění** vyberte **Možnosti a nastavení**. Na kartě **obecné**/**ladění** vyberte nebo zrušte zaškrtnutí **pouze můj kód**.|  
+|**Sbalit malé objekty**|**Sbalení malých objektů** skryje všechny typy, jejichž celková celková velikost je menší než 0,5 procent celkové velikosti haldy.|  
   
- Můžete také filtrovat seznam typů tak, že zadáte řetězec **hledání** pole. V seznamu zobrazí pouze ty typy, jejichž názvy obsahují řetězec.  
+ Seznam typů můžete filtrovat také zadáním řetězce do **vyhledávacího** pole. V seznamu se zobrazí pouze typy, jejichž názvy obsahují řetězec.  
   
- ![Zpět na začátek](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [obsah](#BKMK_Contents)  
+ ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [](#BKMK_Contents)  
   
-### <a name="BKMK_Analyze_memory_data_in_from_a_single_snapshot"></a> Analýza dat z jednoho snímku paměti  
- Visual Studio spustí novou relaci ladění analyzovat soubor a zobrazí v okně haldě zobrazení dat paměti.  
+### <a name="BKMK_Analyze_memory_data_in_from_a_single_snapshot"></a>Analyzovat data paměti z jednoho snímku  
+ Visual Studio spustí novou relaci ladění pro analýzu souboru a zobrazí data paměti v okně zobrazení haldy.  
   
- ![Typ objektu seznamu](../misc/media/dbg-mma-objecttypelist.png "DBG_MMA_ObjectTypeList")  
+ ![Seznam typů objektů](../misc/media/dbg-mma-objecttypelist.png "DBG_MMA_ObjectTypeList")  
   
- ![Zpět na začátek](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [obsah](#BKMK_Contents)  
+ ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [](#BKMK_Contents)  
   
 #### <a name="object-type-table"></a>Tabulka typů objektů  
- Hlavní tabulka uvádí typy objektů, které jsou uložené v paměti.  
+ Horní tabulka obsahuje seznam typů objektů, které jsou uloženy v paměti.  
   
-- **Počet** zobrazuje počet instancí typu ve snímku.  
+- **Count** zobrazuje počet instancí typu ve snímku.  
   
-- **Velikost (bajty)** je velikost všechny instance daného typu, s výjimkou velikost obsahuje odkazy na objekty. Rozhraní  
+- **Velikost (bajty)** je velikost všech instancí typu s výjimkou velikosti objektů, na které jsou odkazy uloženy. Rozhraní  
   
-- **Celková velikost (bajty)** zahrnuje velikosti odkazované objekty.  
+- **Celková velikost (bajty)** zahrnuje velikosti odkazovaných objektů.  
   
-  Můžete použít ikonu instance (![ikonu instance ve sloupci Typ objektu](../misc/media/dbg-mma-instancesicon.png "DBG_MMA_InstancesIcon")) v **typ objektu** sloupce a zobrazit seznam instancí Zadejte.  
+  Můžete zvolit ikonu instance (![ikona instance ve sloupci Typ objektu](../misc/media/dbg-mma-instancesicon.png "DBG_MMA_InstancesIcon")) ve sloupci **typ objektu** , chcete-li zobrazit seznam instancí tohoto typu.  
   
-#### <a name="instance-table"></a>Instance tabulky  
- ![Instances table](../misc/media/dbg-mma-instancestable.png "DBG_MMA_InstancesTable")  
+#### <a name="instance-table"></a>Tabulka instancí  
+ ![Tabulka instancí](../misc/media/dbg-mma-instancestable.png "DBG_MMA_InstancesTable")  
   
-- **Instance** je umístění v paměti objektu, který slouží jako identifikátor objektu objektu  
+- **Instance** je umístění v paměti objektu, které slouží jako identifikátor objektu objektu.  
   
-- **Hodnota** zobrazovat skutečné hodnoty typů hodnot. Při najetí myší na název typu odkazu k zobrazení hodnot dat v popisu dat.  
+- **Value** zobrazuje skutečnou hodnotu hodnotových typů. Můžete umístit ukazatel myši na název typu odkazu a zobrazit jeho hodnoty dat v datovém popisku.  
   
-   ![Instance hodnoty v popisu dat](../misc/media/dbg-mma-instancevaluesindatatip.png "DBG_MMA_InstanceValuesInDataTip")  
+   ![Hodnoty instancí v popisku dat](../misc/media/dbg-mma-instancevaluesindatatip.png "DBG_MMA_InstanceValuesInDataTip")  
   
-- **Velikost (bajty)** je velikost objektu, s výjimkou velikost obsahuje odkazy na objekty. Rozhraní  
+- **Velikost (bajty)** je velikost objektu s výjimkou velikosti objektů, na které obsahuje odkazy. Rozhraní  
   
-- **Celková velikost (bajty)** zahrnuje velikosti odkazované objekty.  
+- **Celková velikost (bajty)** zahrnuje velikosti odkazovaných objektů.  
   
-  Ve výchozím nastavení, typy a instance jsou seřazeny podle **celkové velikosti (bajty)**. Vyberte záhlaví sloupce v seznamu, chcete-li změnit pořadí řazení.  
+  Ve výchozím nastavení jsou typy a instance seřazené podle **velikosti (bajty)** . Chcete-li změnit pořadí řazení, v seznamu vyberte záhlaví sloupce.  
   
 #### <a name="paths-to-root"></a>Cesty ke kořenu  
   
-- Pro typ vybrali **typ objektu** tabulky, **cesty ke kořenu** tabulce jsou uvedeny jedinečný typ hierarchie, které vedou k kořenové objekty pro všechny objekty typu spolu s počtem odkazů na typ, který je nad ním v hierarchii.  
+- Pro typ vybraný z tabulky **typu objektu** , **cesty k kořenové** tabulce zobrazí jedinečné typy hierarchií, které vedou k kořenovým objektům pro všechny objekty typu, spolu s počtem odkazů na typ, který je nad ním v hierarchii.  
   
-- Vybrat z instance typu, objektu **cesty ke kořenu** zobrazuje graf skutečných objektů, které obsahují odkaz na instanci. Název objektu k zobrazení hodnot dat v popisu dat můžete myši.  
+- Pro objekt vybraný z instance typu **cest k kořenu** zobrazuje graf skutečných objektů, které obsahují odkaz na instanci. Můžete umístit ukazatel myši na název objektu a zobrazit jeho hodnoty dat v datovém popisku.  
   
-#### <a name="referenced-types--referenced-objects"></a>Odkazované typy / odkazované objekty  
+#### <a name="referenced-types--referenced-objects"></a>Odkazované typy/odkazované objekty  
   
-- Pro typ vybrali **typ objektu** tabulky, **odkazované typy** karta zobrazuje velikosti a počtu odkazovaných typů drží všech objektů vybraného typu.  
+- Pro typ vybraný z tabulky **typu objektu** zobrazuje karta **odkazované typy** velikost a počet odkazovaných typů držených všemi objekty vybraného typu.  
   
-- Pro vybranou instanci typu **odkazované objekty** zobrazí objekty, které jsou uloženy ve vybrané instanci. Při najetí myší na název zobrazíte jeho hodnoty dat v popisu dat.  
+- Pro vybranou instanci typu jsou **odkazované objekty** zobrazeny objekty, které jsou uloženy vybranou instancí. Na název můžete umístit ukazatel myši a zobrazit jeho hodnoty dat v tipu dat.  
   
   **Cyklické odkazy**  
   
-  Druhý objekt, který přímo nebo nepřímo obsahuje odkaz na první objekt, který můžete odkazovat na objekt. Když v analyzátoru paměti dojde této situaci, přestane rozšíření cestu odkazu a přidá **[zjištěn cyklus]** poznámky na výpis prvního objektu a zastaví.  
+  Objekt může odkazovat na druhý objekt, který přímo nebo nepřímo drží odkaz na první objekt. Když analyzátor paměti zjistí tuto situaci, zastaví rozšiřování cesty odkazů a přidá anotaci **[zjistilo** se do výpisu prvního objektu a zastaví se.  
   
-  **Typy kořenové**  
+  **Kořenové typy**  
   
-  Analyzátor paměti přidá do kořenové objekty, které popisují typ odkazu, který se koná poznámky:  
+  Analyzátor paměti přidává poznámky ke kořenovým objektům, které popisují druh odkazovaného typu:  
   
 |Poznámka|Popis|  
 |----------------|-----------------|  
 |**Statická proměnná** `VariableName`|Statická proměnná. `VariableName` je název proměnné.|  
-|**Popisovač finalizace**|Odkaz z fronta finalizační metody|  
-|**Lokální proměnná**|Místní proměnné.|  
-|**Silný popisovač**|Popisovač silného odkazu z tabulky popisovač objektu.|  
-|**Asynchronní. Připojený popisovač**|Asynchronní objekt připnuté z tabulky popisovač objektu.|  
-|**Závislý popisovač**|Závislý objekt z tabulky popisovač objektu.|  
-|**Připojený popisovač**|Připnuté silného odkazu z tabulky popisovač objektu.|  
-|**Popisovač RefCount**|Referenčně započítaný objekt z tabulky popisovač objektu.|  
-|**Popisovač Sizedref**|Silný popisovač, který udržuje přibližné velikosti kolektivní ukončení všech objektů a objektů kořeny během uvolňování paměti kolekce.|  
-|**Připnutá lokální proměnná**|Připojenou lokální proměnnou.|  
+|**Konečný popisovač**|Odkaz z fronty finalizační metody|  
+|**Lokální proměnná**|Místní proměnná.|  
+|**Silný popisovač**|Popisovač na silný odkaz z tabulky popisovače objektu.|  
+|**Async. Připnutý popisovač**|Asynchronní připnutý objekt z tabulky popisovače objektu.|  
+|**Závislý popisovač**|Závislý objekt z tabulky popisovače objektu.|  
+|**Připnutý popisovač**|Připnutý silný odkaz z tabulky popisovače objektu.|  
+|**RefCount popisovač**|Objekt pro vypočítané odkazy z tabulky popisovače objektu.|  
+|**Popisovač sizedref popisovač**|Silný popisovač, který při uvolňování paměti udržuje přibližnou velikost souhrnu všech objektů a kořenových objektů.|  
+|**Připnuté místní proměnná**|Připnuté místní proměnná.|  
   
-### <a name="BKMK_Compare_two_memory_snapshots"></a> Porovnání dvou snímků paměti  
- Můžete porovnat dva soubory s výpisem paměti procesu k nalezení objektů, které mohou být příčinou nevracení paměti. Interval mezi sadu první (dříve) a druhé (k tomu později) soubor by měl být dostatečně velký, že nárůst počtu uniklé objektů je snadno zřejmý. Chcete-li porovnat dva soubory:  
+### <a name="BKMK_Compare_two_memory_snapshots"></a>Porovnat dva snímky paměti  
+ Můžete porovnat dva soubory s výpisem paměti a vyhledat objekty, které by mohly být příčinou nevracení paměti. Interval mezi kolekcí prvního (předchozího) a druhého (pozdějšího) souboru by měl být dostatečně velký, aby nárůst počtu nevrácených objektů byl snadno zřejmý. Porovnání těchto dvou souborů:  
   
-1. Otevřete druhý soubor s výpisem paměti a klikněte na tlačítko **ladit spravovanou paměť** na **soubor souhrnu minimálního výpisu** stránky.  
+1. Otevřete druhý soubor výpisu a pak na stránce **Souhrn souborů s minimálním výpisem** zvolte **ladění spravované paměti** .  
   
-2. Na stránce sestavy analýzy paměti, spusťte **vyberte směrný plán** seznamu a klikněte na tlačítko **Procházet** k určení prvního souboru s výpisem paměti.  
+2. Na stránce Sestava analýzy paměti otevřete seznam **Vybrat základní hodnoty** a zvolte možnost **Procházet** a zadejte první soubor s výpisem paměti.  
   
-   Analyzátor přidá sloupce do horní podokno sestavy, který zobrazí rozdíl mezi **počet**, **velikost**, a **celkové velikosti** typy těchto hodnot předchozí snímek.  
+   Analyzátor přidá sloupce do horního podokna sestavy, které zobrazuje rozdíl mezi **počtem**, **velikostí**a **celkovou velikostí** typů s hodnotami v předchozím snímku.  
   
-   ![Diff sloupců v seznamu typ](../misc/media/mngdmem-diffcolumns.png "MNGDMEM_DiffColumns")  
+   ![Rozdílové sloupce v seznamu typů](../misc/media/mngdmem-diffcolumns.png "MNGDMEM_DiffColumns")  
   
-   A **rozdíl počtu odkazů** sloupec je taky přidaný ke **cesty ke kořenu** tabulky.  
+   Sloupec **rozdíl počtu odkazů** je také přidán do **složky cesty ke kořenové** tabulce.  
   
-   ![Zpět na začátek](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [obsah](#BKMK_Contents)  
+   ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [](#BKMK_Contents)  
   
 ## <a name="see-also"></a>Viz také  
- [Blog VS ALM TFS: Pomocí sady Visual Studio 2013 k diagnostice problémů paměti rozhraní .NET v produkčním prostředí](http://blogs.msdn.com/b/visualstudioalm/archive/2013/06/20/using-visual-studio-2013-to-diagnose-net-memory-issues-in-production.aspx)   
- [Na webu Channel 9 &#124; sady Visual Studio TV &#124; spravovaná analýza paměti](http://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Managed-Memory-Analysis)   
- [Na webu Channel 9 &#124; nástrojů sady Visual Studio &#124; spravované paměti analýzy v sadě Visual Studio 2013](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Managed-Memory-Analysis-in-Visual-Studio-2013)
+ [Blog sady TFS Alm vs: použití Visual Studio 2013 k diagnostice problémů s pamětí .NET v produkčním prostředí](https://devblogs.microsoft.com/devops/using-visual-studio-2013-to-diagnose-net-memory-issues-in-production/)   
+ [Analýza paměti &#124; spravovaná televizním &#124; seriálem sady Visual Studio pro Channel 9](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Managed-Memory-Analysis)   
+ [Analýza paměti &#124; spravovaná na panelu &#124; nástrojů sady Visual Studio pro kanál 9 v Visual Studio 2013](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Managed-Memory-Analysis-in-Visual-Studio-2013)

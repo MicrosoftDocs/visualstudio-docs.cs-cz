@@ -8,12 +8,12 @@ ms.assetid: 51b53778-469c-4cc9-854c-4e4992d6389b
 caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2f9df50094676eea5694a29362772c9c44fa456b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 73dd0e406e8e0a00260d922e38dee70135c3645d
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660390"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298005"
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>Testování aplikací pro SharePoint 2010 pomocí programových testů uživatelského rozhraní
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,7 +25,7 @@ Zahrnutí programových testů uživatelského rozhraní do aplikace SharePoint 
 - Visual Studio Enterprise
 
 ## <a name="what-else-should-i-know-about-coded-ui-tests"></a>Co dalšího by měl vědět o programových testech UI?
- Další informace o výhodách použití programových testů UI naleznete v tématu [použití automatizace uživatelského rozhraní k otestování kódu](../test/use-ui-automation-to-test-your-code.md) a [testování pro nepřetržité doručování pomocí sady Visual Studio 2012 – Kapitola 5 automatizace systémových testů](http://go.microsoft.com/fwlink/?LinkID=255196).
+ Další informace o výhodách použití programových testů UI naleznete v tématu [použití automatizace uživatelského rozhraní k otestování kódu](../test/use-ui-automation-to-test-your-code.md) a [testování pro nepřetržité doručování pomocí sady Visual Studio 2012 – Kapitola 5 automatizace systémových testů](https://go.microsoft.com/fwlink/?LinkID=255196).
 
  **Poznámky**
 
@@ -60,7 +60,7 @@ Mouse.DoubliClick(uiItemCell,new Point(31,14));
 uiGridKeyboardInputEdit.Text=value;
 ```
 
- Pokud zaznamenáte akce na neprázdnou buňku, znamená to, že nahrávání bude trochu složitější, protože když do buňky přidáte text, nový ovládací prvek \<div > je přidán jako podřízený objekt buňky. Nový ovládací prvek \<div > obsahuje text, který jste právě zadali. Zapisovač musí zaznamenávat akce na novém ovládacím prvku \<div >; nemůže to však být způsobeno tím, že nový ovládací prvek > \<div neexistuje až po zadání testu. Chcete-li tento problém vyřešit, je nutné ručně provést následující změny kódu.
+ Pokud provádíte zaznamenávání akcí v neprázdné buňce, znamená to, že nahrávání bude trochu složitější, protože když do buňky přidáte text, nový \<ovládací prvek div > je přidán jako podřízený objekt buňky. Nový \<ovládací prvek div > obsahuje text, který jste právě zadali. Zapisovač musí zaznamenávat akce pro nový \<> ovládací prvek div; nemůže to však být způsobeno tím, že nový \<ovládací prvek div > neexistuje až po zadání testu. Chcete-li tento problém vyřešit, je nutné ručně provést následující změny kódu.
 
 1. Přejít na inicializaci buňky a nastavit `RowIndex` a `ColumnIndex` primární vlastnosti:
 
@@ -104,7 +104,7 @@ uiGridKeyboardInputEdit.Text=value;
 
 1. Ujistěte se, že máte nainstalovanou aplikaci Visual Studio 2012,1 nebo novější.
 
-2. Nainstalujte [modul plug-in test uživatelského rozhraní Microsoft Visual Studio pro Silverlight](http://visualstudiogallery.msdn.microsoft.com/28312a61-9451-451a-990c-c9929b751eb4).
+2. Nainstalujte [modul plug-in test uživatelského rozhraní Microsoft Visual Studio pro Silverlight](https://marketplace.visualstudio.com/items?itemName=PrachiBoraMSFT.MicrosoftVisualStudioUITestPluginforSilverlight).
 
 3. Nainstalujte [Fiddler](http://www.fiddler2.com/fiddler2/). Toto je jednoduše nástroj, který zachycuje a protokoluje přenosy HTTP.
 
@@ -124,24 +124,24 @@ uiGridKeyboardInputEdit.Text=value;
 
 5. Měli byste ověřit, že generovaný kód odkazuje na soubor Microsoft. VisualStudio. TestTools. UITest. extension. Silverlight. dll.
 
-     Další informace najdete v tématu [testování uživatelského rozhraní SharePoint 2010 se sadou Visual Studio 2012](http://blogs.msdn.com/b/visualstudioalm/archive/2012/11/01/ui-testing-sharepoint-2010-with-visual-studio-2012.aspx) .
+     Další informace najdete v tématu [testování uživatelského rozhraní SharePoint 2010 se sadou Visual Studio 2012](https://devblogs.microsoft.com/devops/ui-testing-sharepoint-2010-with-visual-studio-2012/) .
 
 ## <a name="external-resources"></a>Externí zdroje
 
 ### <a name="blogs"></a>Blogy
- [Testování uživatelského rozhraní SharePoint 2010 se sadou Visual Studio 2012](http://blogs.msdn.com/b/visualstudioalm/archive/2012/11/01/ui-testing-sharepoint-2010-with-visual-studio-2012.aspx)
+ [Testování uživatelského rozhraní SharePoint 2010 se sadou Visual Studio 2012](https://devblogs.microsoft.com/devops/ui-testing-sharepoint-2010-with-visual-studio-2012/)
 
- [Porozumění logice hledání pro ovládací prvky Silverlight v programovém testu uživatelského rozhraní](http://blogs.msdn.com/b/tapas_sahoos_blog/archive/2010/11/16/understanding-the-search-logic-for-silverlight-controls-in-coded-ui-test.aspx)
+ [Porozumění logice hledání pro ovládací prvky Silverlight v programovém testu uživatelského rozhraní](https://tapas-techsnips.blogspot.com/)
 
- [Načítají se vlastnosti ovládacího prvku Silverlight.](http://blogs.msdn.com/b/tapas_sahoos_blog/archive/2010/11/16/fetching-property-of-a-silverlight-control.aspx)
+ [Načítají se vlastnosti ovládacího prvku Silverlight.](https://tapas-techsnips.blogspot.com/)
 
- [Index obsahu pro programový test uživatelského rozhraní](http://blogs.msdn.com/b/mathew_aniyan/archive/2010/02/11/content-index-for-coded-ui-test.aspx)
+ [Index obsahu pro programový test uživatelského rozhraní](https://blogs.msdn.microsoft.com/mathew_aniyan/2013/02/18/content-index-for-coded-ui-test/)
 
 ### <a name="guidance"></a>Doprovodné materiály
- [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5 automatizace systémových testů](http://go.microsoft.com/fwlink/?LinkID=255196)
+ [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5 automatizace systémových testů](https://go.microsoft.com/fwlink/?LinkID=255196)
 
 ### <a name="forum"></a>Fórum
- [Blog sady Visual Studio ALM + Team Foundation Server](http://go.microsoft.com/fwlink/?LinkID=254496)
+ [Blog sady Visual Studio ALM + Team Foundation Server](https://go.microsoft.com/fwlink/?LinkID=254496)
 
 ## <a name="see-also"></a>Viz také
- [Použití automatizace uživatelského rozhraní k otestování](../test/use-ui-automation-to-test-your-code.md) [výkonu webu kódu a zátěžového testování aplikací sharepoint 2010 a 2013](https://msdn.microsoft.com/library/20c2e469-0e4e-4296-a739-c0e8fff36e54) [vytvoření řešení SharePoint](https://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631) [ověřování a ladění](https://msdn.microsoft.com/library/b5f3bce2-6a51-41b1-a292-9e384bae420c) [sestavení a ladění kódu služby SharePoint Řešení](https://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae) [výkonu aplikací služby SharePoint](https://msdn.microsoft.com/library/61ae02e7-3f37-4230-bae1-54a498c2fae8)
+ [Použití automatizace uživatelského rozhraní k otestování](../test/use-ui-automation-to-test-your-code.md) [výkonu webu kódu a zátěžového testování aplikací sharepoint 2010 a 2013](https://msdn.microsoft.com/library/20c2e469-0e4e-4296-a739-c0e8fff36e54) [vytvoření řešení SharePoint](https://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631) [ověřování a ladění vytváření a ladění kódu SharePointu](https://msdn.microsoft.com/library/b5f3bce2-6a51-41b1-a292-9e384bae420c) [](https://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae) [profilace výkonu aplikací SharePoint](https://msdn.microsoft.com/library/61ae02e7-3f37-4230-bae1-54a498c2fae8)

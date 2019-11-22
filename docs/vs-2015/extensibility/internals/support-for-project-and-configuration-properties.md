@@ -1,5 +1,5 @@
 ---
-title: Podpora pro projekt a vlastnosti konfigurace | Dokumentace Microsoftu
+title: Podpora vlastností projektu a konfigurace | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,26 +11,26 @@ ms.assetid: 9fcfaa0f-7b41-4b68-82ec-7a151dca5d7e
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: ae770d36c0f030a060eccfe86bc3939dad9622d8
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: b03bc04b1d5b87219110aa65bee53c4a4a8f77e2
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65691873"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301073"
 ---
 # <a name="support-for-project-and-configuration-properties"></a>Podpora vlastností projektu a konfigurace
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-**Vlastnosti** okna [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] integrované vývojové prostředí (IDE) můžete zobrazit vlastnosti projektu a konfigurace. Stránky vlastností pro vlastní typ projektu můžete zadat tak, aby uživatel může nastavit vlastnosti pro vaši aplikaci.  
+Okno **vlastnosti** v integrovaném vývojovém prostředí (IDE) [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] může zobrazit vlastnosti projektu a konfigurace. Můžete zadat stránku vlastností pro vlastní typ projektu, aby uživatel mohl nastavit vlastnosti pro vaši aplikaci.  
   
- Vyberte uzel projektu v **Průzkumníka řešení** a pak levým na **vlastnosti** na **projektu** nabídku, můžete otevřít dialogové okno, které obsahuje projekt a konfiguraci Vlastnosti. V [!INCLUDE[csprcs](../../includes/csprcs-md.md)] a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]a typy odvozené z těchto jazyků toto dialogové okno se zobrazí jako stránka s kartami v projektu [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md). Další informace najdete v tématu [není v sestavení: Návod: Vystavení vlastností konfigurace projektů a (C#)](https://msdn.microsoft.com/d850d63b-25e2-4505-9f3d-eb038d7c1d0e).  
+ Výběrem uzlu projektu v **Průzkumník řešení** a následným kliknutím na **vlastnosti** v nabídce **projekt** můžete otevřít dialogové okno, které obsahuje vlastnosti projektu a konfigurace. V [!INCLUDE[csprcs](../../includes/csprcs-md.md)] a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]a typy projektů odvozené z těchto jazyků se toto dialogové okno zobrazí jako stránka s kartami v [dialogovém okně Obecné, prostředí, možnosti](../../ide/reference/general-environment-options-dialog-box.md). Další informace naleznete v tématu [Not in Build: Názorný postup: vystavení vlastností projektuC#a konfigurace ()](https://msdn.microsoft.com/d850d63b-25e2-4505-9f3d-eb038d7c1d0e).  
   
- Managed Package Framework pro projekty (MPFProj) poskytuje pomocné třídy pro vytváření a správu nový systém projektů. Zdrojového kódu a kompilace pokyny najdete v [MPF projektů – Visual Studio 2013](http://mpfproj12.codeplex.com/).  
+ Managed Package Framework for Projects (MPFProj) poskytuje pomocné třídy pro vytváření a správu systému nových projektů. Zdrojový kód a pokyny k kompilaci najdete na stránce [MPF pro projekty – Visual Studio 2013](https://archive.codeplex.com/?p=mpfproj12).  
   
-## <a name="persistence-of-project-and-configuration-properties"></a>Trvalost projektu a vlastnosti konfigurace  
- Vlastnosti projektu a konfigurace jsou ukládány v souboru projektu, který má příponu názvu souboru spojené s typem projektu, například, .csproj, .vbproj a .myproj. Soubor šablony projektů jazyka obvykle používají ke generování souboru projektu. Existují však skutečně několik způsobů, jak přidružit typy projektů a šablon. Další informace najdete v tématu [NIB: Šablony sady Visual Studio](https://msdn.microsoft.com/141fccaa-d68f-4155-822b-27f35dd94041) a [popisu adresáře šablon (. Soubory VSDIR)](../../extensibility/internals/template-directory-description-dot-vsdir-files.md).  
+## <a name="persistence-of-project-and-configuration-properties"></a>Trvalost vlastností projektu a konfigurace  
+ Vlastnosti projektu a konfigurace jsou trvalé v souboru projektu, který má příponu názvu souboru přidruženou k typu projektu, například. csproj,. vbproj a. myproj. Jazykové projekty obvykle používají soubor šablony k vygenerování souboru projektu. Existuje však několik způsobů, jak přidružit typy projektů a šablony. Další informace najdete v tématu [NIB: šablony sady Visual Studio](https://msdn.microsoft.com/141fccaa-d68f-4155-822b-27f35dd94041) a [Popis adresáře šablon (. VSDIR) soubory](../../extensibility/internals/template-directory-description-dot-vsdir-files.md).  
   
- Vlastnosti projektu a konfigurace jsou vytvořena přidáním položky do souboru šablony. Tyto vlastnosti jsou pak k dispozici pro libovolný projekt vytvořen pomocí typu projektu, který používá tuto šablonu. [!INCLUDE[csprcs](../../includes/csprcs-md.md)] projekty a MPFProj používají [není v sestavení: Přehled nástroje MSBuild](https://msdn.microsoft.com/b588fd73-a45b-4706-908f-cc131bccfbde) schéma pro soubory šablon. Tyto soubory obsahují PropertyGroup část pro každou konfiguraci. Vlastnosti projektů jsou obvykle zachované v první části PropertyGroup, která má jako argument konfigurace nastavit na prázdný řetězec.  
+ Vlastnosti projektu a konfigurace jsou vytvořeny přidáním položek do souboru šablony. Tyto vlastnosti jsou následně k dispozici pro všechny projekty vytvořené pomocí typu projektu, který používá tuto šablonu. [!INCLUDE[csprcs](../../includes/csprcs-md.md)] projekty a MPFProj používají pro soubory šablon nástroj [není v sestavách sestavení: MSBuild Overview](https://msdn.microsoft.com/b588fd73-a45b-4706-908f-cc131bccfbde) . Tyto soubory mají oddíl Property pro každou konfiguraci. Vlastnosti projektů jsou obvykle trvale uložené v první části skupiny vlastností, která má argument konfigurace nastavený na řetězec s hodnotou null.  
   
  Následující kód ukazuje začátek základního souboru projektu MSBuild.  
   
@@ -48,54 +48,54 @@ ms.locfileid: "65691873"
     <Optimize>true</Optimize>  
 ```  
   
- V tomto souboru projektu `<Name>` a `<SchemaVersion>` jsou vlastnosti projektu a `<Optimize>` představují vlastnost konfigurace.  
+ V tomto souboru projektu `<Name>` a `<SchemaVersion>` jsou vlastnosti projektu a `<Optimize>` je konfigurační vlastnost.  
   
- Je odpovědností se projekt uchová vlastnosti projektu a konfigurace souboru projektu.  
+ Projekt je zodpovědný za zachování vlastností projektu a konfigurace souboru projektu.  
   
 > [!NOTE]
-> Projekt můžete optimalizovat trvalost zachování pouze hodnoty vlastností, které se liší od výchozí hodnoty.  
+> Projekt může optimalizovat trvalost tím, že uchová pouze hodnoty vlastností, které se liší od jejich výchozích hodnot.  
   
 ## <a name="support-for-project-and-configuration-properties"></a>Podpora vlastností projektu a konfigurace  
- `Microsoft.VisualStudio.Package.SettingsPage` Třída implementuje stránky vlastností projektu a konfigurace. Výchozí implementace `SettingsPage` nabízí veřejné vlastnosti uživatele v mřížce obecných vlastností. `Microsoft.VisualStudio.Package.HierarchyNode.GetPropertyPageGuids` Metoda vybere třídy odvozené od `SettingsPage` pro mřížek vlastností projektu. `Microsoft.VisualStudio.Package.ProjectNode.GetConfigPropertyPageGuids` Metoda vybere třídy odvozené od `SettingsPage` pro mřížek vlastností konfigurace. Typ projektu by měly přepsat tyto metody k výběru příslušné vlastnosti stránky.  
+ Třída `Microsoft.VisualStudio.Package.SettingsPage` implementuje stránky vlastností projektu a konfigurace. Výchozí implementace `SettingsPage` pro uživatele v tabulce obecných vlastností nabízí veřejné vlastnosti. Metoda `Microsoft.VisualStudio.Package.HierarchyNode.GetPropertyPageGuids` vybírá třídy odvozené od `SettingsPage` pro mřížky vlastností projektu. Metoda `Microsoft.VisualStudio.Package.ProjectNode.GetConfigPropertyPageGuids` vybírá třídy odvozené od `SettingsPage` pro mřížky vlastností konfigurace. Typ projektu by měl přepsat tyto metody a vybrat tak příslušné stránky vlastností.  
   
- `SettingsPage` Třídy a `Microsoft.VisualStudio.Package.ProjectNode` třídy nabízí tyto metody se zachovat vlastnosti projektu a konfigurace:  
+ Třída `SettingsPage` a třída `Microsoft.VisualStudio.Package.ProjectNode` nabízejí tyto metody pro zachování vlastností projektu a konfigurace:  
   
-- `Microsoft.VisualStudio.Package.ProjectNode.GetProjectProperty` a `Microsoft.VisualStudio.Package.ProjectNode.SetProjectProperty` zachovat vlastnosti projektu.  
+- `Microsoft.VisualStudio.Package.ProjectNode.GetProjectProperty` a `Microsoft.VisualStudio.Package.ProjectNode.SetProjectProperty` trvalé vlastnosti projektu.  
   
-- `Microsoft.VisualStudio.Package.SettingsPage.GetConfigProperty` a `Microsoft.VisualStudio.Package.SettingsPage.SetConfigProperty` zachovat vlastnosti konfigurace.  
+- `Microsoft.VisualStudio.Package.SettingsPage.GetConfigProperty` a `Microsoft.VisualStudio.Package.SettingsPage.SetConfigProperty` trvalé vlastnosti konfigurace.  
   
   > [!NOTE]
-  > Implementace `Microsoft.VisualStudio.Package.SettingsPage` a `Microsoft.VisualStudio.Package.ProjectNode` třídy použijte `Microsoft.Build.BuildEngine` (MSBuild) metody pro získání a nastavení vlastností projektu a konfigurace ze souboru projektu.  
+  > Implementace tříd `Microsoft.VisualStudio.Package.SettingsPage` a `Microsoft.VisualStudio.Package.ProjectNode` používají metody `Microsoft.Build.BuildEngine` (MSBuild) k získání a nastavení vlastností projektu a konfigurace ze souboru projektu.  
   
-  Odvozujete od třídy `SettingsPage` musí implementovat `Microsoft.VisualStudio.Package.SettingsPage.ApplyChanges` a `Microsoft.VisualStudio.Package.SettingsPage.BindProperties` zachovat vlastnosti projektu nebo konfigurace souboru projektu.  
+  Třída odvozená od `SettingsPage` musí implementovat `Microsoft.VisualStudio.Package.SettingsPage.ApplyChanges` a `Microsoft.VisualStudio.Package.SettingsPage.BindProperties`, aby zachovala vlastnosti projektu nebo konfigurace souboru projektu.  
   
-## <a name="provideobjectattribute-and-registry-path"></a>ProvideObjectAttribute a cesta v registru  
- Třídy odvozené z `SettingsPage` jsou navržené ke sdílení napříč rozšíření VSPackages. Aby bylo možné pro balíček VSPackage pro vytvoření třídy odvozené z `SettingsPage`, přidejte `Microsoft.VisualStudio.Shell.ProvideObjectAttribute` pro třídy odvozené od `Microsoft.VisualStudio.Shell.Package`.  
+## <a name="provideobjectattribute-and-registry-path"></a>ProvideObjectAttribute a cesta k registru  
+ Třídy odvozené od `SettingsPage` jsou navržené tak, aby se sdílely napříč VSPackage. Chcete-li, aby VSPackage vytvořil třídu odvozenou z `SettingsPage`, přidejte `Microsoft.VisualStudio.Shell.ProvideObjectAttribute` do třídy odvozené z `Microsoft.VisualStudio.Shell.Package`.  
   
  [!code-csharp[VSSDKSupportProjectConfigurationProperties#1](../../snippets/csharp/VS_Snippets_VSSDK/vssdksupportprojectconfigurationproperties/cs/vssdksupportprojectconfigurationpropertiespackage.cs#1)]
  [!code-vb[VSSDKSupportProjectConfigurationProperties#1](../../snippets/visualbasic/VS_Snippets_VSSDK/vssdksupportprojectconfigurationproperties/vb/vssdksupportprojectconfigurationpropertiespackage.vb#1)]  
   
- Je důležité sady VSPackage, která je připojena. Když VSPackage zaregistruje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], registrovaný (CLSID) id třídy objektu, který je možné vytvořit tak, aby volání <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry.CreateInstance%2A> můžete ho vytvořit.  
+ VSPackage, ke kterému je atribut připojen, je neimportovaná. Je-li VSPackage zaregistrován s [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], identifikátor třídy (CLSID) libovolného objektu, který lze vytvořit je zaregistrován, aby volání <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry.CreateInstance%2A> mohl vytvořit.  
   
- Objekt, který je možné vytvořit cestu registru je určen tím, že zkombinujete <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A>, slovo, identifikátor CLSID a identifikátor guid typu objektu. Pokud `MyProjectPropertyPage` třída nemá identifikátor guid {3c693da2-5bca-49b3-bd95-ffe0a39dd723} a UserRegistryRoot je HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp, pak by cesta v registru HKEY_CURRENT_USER\Software\Microsoft\VisualStudio \8.0Exp\CLSID\\{3c693da2-5bca-49b3-bd95-ffe0a39dd723}.  
+ Cesta registru objektu, který lze vytvořit, je určena kombinací <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A>, slovo, CLSID a identifikátoru GUID typu objektu. Pokud má třída `MyProjectPropertyPage` identifikátor GUID {3c693da2-5bca-49b3-bd95-ffe0a39dd723} a UserRegistryRoot je HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0Exp, cesta k registru by byla HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0Exp\CLSID\\{3c693da2-5bca-49b3-bd95-ffe0a39dd723}.  
   
-## <a name="project-and-configuration-property-attributes-and-layout"></a>Projekt a atributy vlastnosti konfigurace a rozložení  
- <xref:System.ComponentModel.CategoryAttribute>, <xref:System.ComponentModel.DisplayNameAttribute>, A <xref:System.ComponentModel.DescriptionAttribute> atributy určují, rozložení, označování popisky a popis vlastností projektu a konfigurační stránce obecných vlastností. Tyto atributy určit kategorii, zobrazí název a popis možnosti, v uvedeném pořadí.  
+## <a name="project-and-configuration-property-attributes-and-layout"></a>Atributy a rozložení vlastností projektu a konfigurace  
+ Atributy <xref:System.ComponentModel.CategoryAttribute>, <xref:System.ComponentModel.DisplayNameAttribute>a <xref:System.ComponentModel.DescriptionAttribute> určují rozložení, popis a popis vlastností projektu a konfigurace na stránce Obecné vlastnosti. Tyto atributy určují kategorii, zobrazovaný název a Popis možnosti v uvedeném pořadí.  
   
 > [!NOTE]
-> Ekvivalentní atributy, SRCategory, LocDisplayName a SRDescription, použití řetězcových prostředků pro lokalizaci a jsou definovány v [MPF projektů – Visual Studio 2013](http://mpfproj12.codeplex.com/).  
+> Ekvivalentní atributy, SRCategory, LocDisplayName a SRDescription, používají řetězcové prostředky pro lokalizaci a jsou definovány v atributu [MPF pro projekty – Visual Studio 2013](https://archive.codeplex.com/?p=mpfproj12).  
   
  Předpokládejme následující fragment kódu:  
   
  [!code-csharp[VSSDKSupportProjectConfigurationProperties#2](../../snippets/csharp/VS_Snippets_VSSDK/vssdksupportprojectconfigurationproperties/cs/myprojectpropertypage.cs#2)]
  [!code-vb[VSSDKSupportProjectConfigurationProperties#2](../../snippets/visualbasic/VS_Snippets_VSSDK/vssdksupportprojectconfigurationproperties/vb/myprojectpropertypage.vb#2)]  
   
- `MyConfigProp` Vlastnost konfigurace se zobrazí na stránce vlastností konfigurace jako **Moje konfigurační vlastnost** v kategorii **kategorie Mé**. Pokud je vybraná možnost, popis, **Můj popis**, zobrazí se v panelu Popis.  
+ Vlastnost konfigurace `MyConfigProp` se zobrazí na stránce vlastností konfigurace jako **vlastnost moje** konfigurace v kategorii kategorie, **Moje kategorie**. Pokud je vybraná možnost, popis, zobrazí se **Popis, který**se zobrazí na panelu Popis.  
   
 ## <a name="see-also"></a>Viz také  
- [Není v sestavení: Návod: Vystavení vlastností konfigurace projektů a (C#)](https://msdn.microsoft.com/d850d63b-25e2-4505-9f3d-eb038d7c1d0e)   
+ [Není v sestavení: Návod: vystavení vlastností projektu a konfiguraceC#()](https://msdn.microsoft.com/d850d63b-25e2-4505-9f3d-eb038d7c1d0e)   
  [Přidávání a odebírání stránek vlastností](../../extensibility/adding-and-removing-property-pages.md)   
- [Stav balíčku VSPackage](../../misc/vspackage-state.md)   
+   [stavu balíčku VSPackage](../../misc/vspackage-state.md)  
  [Projekty](../../extensibility/internals/projects.md)   
- [NIB: Šablony sady Visual Studio](https://msdn.microsoft.com/141fccaa-d68f-4155-822b-27f35dd94041)   
+ [NIB: šablony sady Visual Studio](https://msdn.microsoft.com/141fccaa-d68f-4155-822b-27f35dd94041)   
  [Soubory popisu adresáře šablon (.Vsdir)](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)

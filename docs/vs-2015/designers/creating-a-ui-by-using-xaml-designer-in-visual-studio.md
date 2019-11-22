@@ -14,128 +14,128 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1c5d0770115fffd8c81078fd0e3d187ec5d3c5ae
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 879d8457a0f5fd4bf63a2d69a4f3f026ce4c6fe1
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657938"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74294666"
 ---
 # <a name="creating-a-ui-by-using-xaml-designer-in-visual-studio"></a>Vytvoření uživatelského rozhraní pomocí Návrháře XAML v sadě Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Návrhář XAML v aplikaci Visual Studio poskytuje vizuální rozhraní, které vám umožní navrhovat aplikace pro Windows Store, Windows Phone, WPF a Silverlight založené na jazyce XAML. Můžete vytvářet uživatelská rozhraní pro aplikace přetažením ovládacích prvků z **panelu nástrojů** a vlastností nastavení v okně **vlastnosti** . Můžete také upravit XAML přímo v zobrazení XAML.
+Návrhář XAML v sadě Visual Studio poskytuje vizuální rozhraní při návrhu aplikací založených na XAML Windows Store, Windows Phone, WPF a Silverlight. Uživatelská rozhraní pro vaše aplikace můžete vytvořit přetažením ovládacích prvků **nástrojů** a nastavení vlastností ve **vlastnosti** okno. XAML můžete také upravit přímo v XAML zobrazení.
 
- V případě pokročilých úloh návrhu jazyka XAML, jako jsou například animace a chování, najdete informace v tématu [Vytvoření uživatelského rozhraní pomocí Blend pro Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md).
+ Pokročilé úlohy návrhu XAML například animace a chování, naleznete v tématu [vytvoření uživatelského rozhraní pomocí nástroje Blend pro Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md).
 
-## <a name="xaml-designer-workspace"></a>Pracovní prostor Návrhář XAML
- Pracovní prostor v Návrhář XAML se skládá z několika prvků vizuálního rozhraní. Mezi ně patří návrhová plocha, Editor XAML, okno zařízení, okno Osnova dokumentu a okno Vlastnosti. Chcete-li otevřít Návrhář XAML, klikněte pravým tlačítkem myši na soubor XAML v **Průzkumník řešení** a vyberte možnost **Návrhář zobrazení**.
+## <a name="xaml-designer-workspace"></a>Pracovní prostor návrháře XAML
+ Pracovní prostor v Návrháři XAML se skládá z několika prvků vizuální rozhraní. Patří mezi ně návrhové ploše editoru XAML, okno zařízení, Osnova dokumentu – okno a okno Vlastnosti. Chcete-li otevřít Návrhář XAML, klikněte pravým tlačítkem na soubor XAML v **Průzkumníka řešení** a zvolte **Návrhář zobrazení**.
 
-## <a name="authoring-views"></a>Zobrazení vytváření obsahu
- Návrhář XAML poskytuje zobrazení XAML a synchronizovaný zobrazení Návrh vykresleného kódu XAML vaší aplikace. Se souborem XAML otevřeným v aplikaci Visual Studio můžete přepínat mezi zobrazení Návrh a zobrazením XAML pomocí karet **design** a **XAML** . K přepnutí zobrazeného okna v horní části můžete použít tlačítko **podokna záměny** : buď návrhová plocha, nebo Editor XAML.
+## <a name="authoring-views"></a>Zobrazení pro vytváření
+ Návrhář XAML zobrazuje XAML a synchronizované zobrazení návrhu vaší aplikace vykreslované značky XAML. S XAML soubor otevřít v sadě Visual Studio, můžete přepínat mezi návrhové a XAML zobrazení pomocí **návrhu** a **XAML** karty. Můžete použít **zaměnit podokna** tlačítkem přepnete okna se zobrazí v horní části: návrhové ploše nebo v editoru XAML.
 
- V zobrazení Návrh je okno obsahující návrhovou *plochu* aktivním oknem a můžete ho použít jako primární pracovní plochu. Můžete ji použít pro vizuální návrh stránky v aplikaci přidáním nebo kreslením prvků a pak úpravou. Další informace naleznete v tématu [práce s prvky v Návrhář XAML](../designers/working-with-elements-in-xaml-designer.md). Tento obrázek ukazuje návrhovou plochu v zobrazení Návrh.
+ V návrhovém zobrazení okna obsahující *návrhové plochy* aktivní okno a slouží jako primární pracovní plocha. Můžete ho použít přidáním nebo výkresu prvky a jejich úpravou vizuálně navrhnout stránku ve vaší aplikaci. Další informace najdete v tématu [práce s elementy v Návrháři XAML](../designers/working-with-elements-in-xaml-designer.md). Tento obrázek ukazuje návrhové ploše v zobrazení Návrh.
 
  ![zobrazení Návrh Návrhář XAML](../designers/media/xaml-editor-design-view.png "xaml_editor_design_view")
 
- Tyto funkce jsou k dispozici na návrhové ploše:
+ Tyto funkce jsou dostupné v návrhové plochy:
 
- **Zarovnávacím čárám** Zarovnávacím čárám jsou *hranice zarovnání* , které se zobrazí jako přerušované čáry, aby se zobrazily, když jsou zarovnány okraje ovládacích prvků, nebo když jsou zarovnány textové hodnoty. Hranice zarovnání se zobrazí jenom v případě, že je povolený **přichycení k zarovnávacím čárám** .
+ **Zarovnávacích čar** jsou zarovnávacích čar *hranicích zarovnání* , která se zobrazují jako přerušovaná red řádky k zobrazení při okraji ovládací prvky odpovídají nebo když jsou zarovnané text směrné plány. Hranice pro zarovnání se zobrazí pouze tehdy, když **přichycování k zarovnávacím čárám** je povolená.
 
- Pro správu řádků a sloupců na panelu [mřížky](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) se **používají kolejnice `Grid`** kolejnice. Můžete vytvářet a odstraňovat řádky a sloupce a můžete upravit jejich relativní šířky a výšky. Svislá mřížka, která se zobrazuje na levé straně návrhové plochy, se používá pro řádky a vodorovná čára, která se zobrazí v horní části, se používá pro sloupce.
+ **Mřížka rails** `Grid` rails se používají ke správě řádků a sloupců v [mřížky](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) panelu. Můžete vytvářet a odstraňovat řádky a sloupce a můžeme upravit jejich relativní šířky a výšky. Svislé lišty mřížky, které se zobrazí na levé straně návrhové plochy, se používá pro řádky a vodorovná čára, která se zobrazí v horní části, se používá pro sloupce.
 
- **Doplňky mřížky** @No__t_1 doplněk se zobrazí jako trojúhelník, který má k němu připojenou svislou nebo vodorovnou čáru na `Grid` kolejnici. Když přetáhnete `Grid` doplňku, šířky a výšky sousedících sloupců nebo řádků se aktualizují při přesunu myši.
+ **Doplňky pro úpravy mřížky** A `Grid` doplněk pro úpravy se zobrazí jako trojúhelník, který má k němu připojená na svislý nebo vodorovný řádku `Grid` lišty. Při přetažení `Grid` doplněk pro úpravy, šířky nebo výšky sousedící sloupce nebo řádky aktualizovat, protože najeďte myší.
 
- `Grid` doplňky jsou používány k řízení šířky a výšky řádků `Grid` a sloupců. Kliknutím na `Grid` kolejnice můžete přidat nový sloupec nebo řádek. Když přidáte nový řádek řádku nebo sloupce pro `Grid` panel, který má dva nebo více sloupců nebo řádků, na minipanelu nástrojů se objeví mimo kolejnici, která umožňuje explicitně nastavit šířku a výšku. Minipanel nástrojů umožňuje nastavit možnosti změny velikosti pro `Grid` řádky a sloupce.
+ `Grid` doplňky pro úpravy se používají k řízení šířku a výšku `Grid`na řádky a sloupce. Kliknutím můžete přidat nový sloupec nebo řádek `Grid` rails. Když přidáte nový řádek řádku nebo sloupce pro `Grid` mimo lišty, která umožňuje explicitně nastavit šířku a výšku. Otevře se panel, který má dvě nebo více sloupců nebo řádků, zkrácené nástrojů. Zkrácené nástrojů vám umožní nastavit možnosti nastavení velikosti pro `Grid` řádků a sloupců.
 
- **Úchyty pro změnu velikosti** Pro vybrané ovládací prvky se zobrazí úchyty pro změnu velikosti a umožňují změnit velikost ovládacího prvku. Při změně velikosti ovládacího prvku se obvykle zobrazují hodnoty šířky a výšky, které vám pomůžou velikost ovládacího prvku. Další informace o manipulaci s ovládacími prvky v zobrazení Návrh najdete v tématu [práce s prvky v Návrhář XAML](../designers/working-with-elements-in-xaml-designer.md).
+ **Úchyty pro změnu velikosti** úchyty pro změnu velikosti, zobrazí se na vybraných ovládacích prvků a vám umožní změnit velikost ovládacího prvku. Při změně velikosti ovládacího prvku se zobrazí hodnoty šířky a výšky obvykle umožňují upravit velikost ovládacího prvku. Další informace o manipulaci s ovládacích prvků v návrhovém zobrazení najdete v tématu [práce s elementy v Návrháři XAML](../designers/working-with-elements-in-xaml-designer.md).
 
- **Okraje** Okraje znázorňují velikost pevného prostoru mezi okrajem ovládacího prvku a okrajem jeho kontejneru. Okraje ovládacího prvku lze nastavit pomocí vlastností [okraj](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.margin.aspx) v oblasti **rozložení** v okno Vlastnosti.
+ **Okraje** okraje představují velikost pevné mezery mezi okrajem ovládacího prvku a hraničními zařízeními svého kontejneru. Můžete nastavit okraje ovládacího prvku pomocí [okraj](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.margin.aspx) pod **rozložení** v okně Vlastnosti.
 
- **Doplňky okrajů** Chcete-li změnit okraje elementu relativně vzhledem k jeho kontejneru rozložení, můžete použít doplňky pro úpravy okrajů. Když je doplněk pro úpravy okrajů otevřený, okraj není nastavený a doplněk pro úpravy okrajů zobrazuje porušený řetězec. Pokud okraj není nastaven, prvky zůstanou zachovány při změně velikosti kontejneru rozložení v době běhu. Když je doplněk pro úpravy okrajů uzavřený, doplněk pro úpravy okrajů zobrazuje nepřerušený řetězec a prvky se přesunou s okrajem, protože velikost kontejneru rozložení se za běhu (okraj zůstane pevně nastavená).
+ **Doplňky pro úpravy okrajů** Změna okrajů elementu vzhledem k jeho kontejner rozložení můžete použít doplňků pro úpravy rozpětí. Při otevření okrajů není nastavená okraj a doplněk pro úpravy rozpětí zobrazí porušený řetězec. Když není nastavená na okraji, zůstane prvky při změně velikosti kontejneru rozložení v době běhu na místě. Při zavření okrajů okrajů zobrazí Nepřerušený řetěz a prvky budou přesunuty spolu s okrajem při změně velikosti kontejneru rozložení v době běhu (na okraj zůstanou pevné).
 
- **Obslužné rutiny elementů** Můžete upravit element pomocí obslužných rutin, které se zobrazí na návrhové ploše, když přesunete ukazatel myši na rohy modrého pole, které obklopuje element. Tyto popisovače umožňují otočit, změnit velikost, překlopit, přesunout nebo přidat poloměr rohu do prvku. Symbol pro popisovač elementu se liší podle funkce a mění se v závislosti na přesném umístění ukazatele. Pokud nevidíte obslužné rutiny elementu, ujistěte se, že je prvek vybrán.
+ **Element popisovače** upravíte elementu pomocí elementu popisovače, které se zobrazí na návrhové ploše při přesunutí ukazatele myši do rohů modrý obdélník, který kolem prvku. Tyto manipulační body umožňují otočení, změna velikosti, překlopit, přesunout nebo přidat poloměr na prvek. Značka pro element popisovač se liší podle funkcí a mění v závislosti na přesné umístění ukazatele. Pokud nevidíte element popisovače, ujistěte se, že je vybraný prvek.
 
- V zobrazení Návrh jsou k dispozici další příkazy pro návrhovou plochu v levém dolním rohu obrazovky, jak je znázorněno zde:
+ V návrhovém zobrazení jsou k dispozici v levé dolní části obrazovky, příkazy další návrhovou plochu, jak je znázorněno zde:
 
  ![Příkazy zobrazení Návrh](../designers/media/xaml-editor-design-controls.png "xaml_editor_design_controls")
 
  Tyto příkazy jsou k dispozici na tomto panelu nástrojů:
 
- **Zvětšení** Přiblížení umožňuje změnit velikost návrhové plochy. Můžete zvětšit z 12,5% na 800% nebo vybrat možnosti, například **přizpůsobit výběru** a **přizpůsobit vše**.
+ **Přiblížení** přiblížení umožňuje změnit velikost na návrhovou plochu. Můžete zvětšit z % 12,5 800 % nebo vyberte možnosti, jako je například **přizpůsobit výběru** a **přizpůsobit všechny**.
 
- **Zobrazit/skrýt mřížku pro přichycení** Zobrazí nebo skryje mřížku přichycení, která zobrazuje mřížku. Mřížka se používá, pokud je povolená možnost **přichycení k mřížce** nebo **přichycení k zarovnávacím čárám** .
+ **Zobrazit/skrýt přichytávací mřížku** zobrazí nebo skryje přichytávací mřížku, která zobrazuje mřížky. Mřížka se používají při buď **přichycování k čarám mřížky** nebo **přichycování k zarovnávacím čárám** je povolená.
 
- **Zapnout nebo vypnout přichycení k mřížce** Pokud je povoleno **přichycení k mřížce** , když přetáhnete prvek na návrhovou plochu, element zamýšlí zarovnat s nejbližší vodorovnou a svislou mřížkou.
+ **Zapnutí a vypnutí přichycování k čarám mřížky** Pokud **přichycování k čarám mřížky** je povolená, když při přetahování prvku na návrhové ploše, element obvykle bylo v souladu s nejbližší vodorovné a svislé mřížky.
 
- **Zapnout nebo vypnout přichycení k zarovnávacím čárám** Zarovnávacím čárám vám pomůžou Zarovnat ovládací prvky vzhledem k sobě navzájem. Pokud je povoleno **přichycení k zarovnávacím čárám** , když přetáhnete ovládací prvek relativně k jiným ovládacím prvkům, hranice zarovnání se zobrazí, když jsou okraje a text některých ovládacích prvků zarovnány vodorovně nebo svisle. Hranice zarovnání se zobrazí jako červená přerušovaná čára.
+ **Zapnout či vypnout přichycování k zarovnávacím čárám** usnadňují zarovnávacích čar zarovnání určuje relativní vzhledem k sobě navzájem. Pokud **přichycování k zarovnávacím čárám** je povolena, když přetahujete ovládacího prvku vzhledem k další ovládací prvky, zarovnání hranice zobrazí, když okrajů a text některé ovládací prvky jsou zarovnaná vodorovně nebo svisle. Hranici zarovnání se zobrazí jako červená přerušovaná čára.
 
- V zobrazení XAML je okno obsahující Editor XAML aktivním oknem a Editor XAML je vaším primárním nástrojem pro tvorbu. Jazyk Extensible Application Markup Language (XAML) (XAML) poskytuje deklarativní slovní slovník založený na jazyce XML pro určení uživatelského rozhraní aplikace. Zobrazení XAML zahrnuje technologii IntelliSense, automatické formátování, zvýrazňování syntaxe a navigaci značek. Tento obrázek znázorňuje zobrazení XAML:
+ V XAML zobrazení okna obsahujícího editoru XAML je aktivní okno a editoru XAML je primární nástroj pro vytváření. Rozšiřitelné aplikace Markup Language (XAML) obsahuje slovník deklarativní, založený na formátu XML pro zadání uživatelského rozhraní aplikace. Zobrazení XAML obsahuje technologie IntelliSense, automatického formátování, zvýrazňování syntaxe a navigace značek. Tento obrázek ukazuje XAML zobrazení:
 
  ![Zobrazení XAML](../designers/media/xaml-editor.png "xaml_editor")
 
- **Rozdělit pruh zobrazení** Rozdělený pruh zobrazení se zobrazí v horní části zobrazení XAML, když je Editor XAML v dolním okně. Rozdělený panel zobrazení umožňuje řídit relativní velikosti zobrazení Návrh a zobrazení XAML. Můžete také vyměnit umístění zobrazení (pomocí tlačítka **odkládací podokna** ), určit, zda jsou zobrazení uspořádána vodorovně nebo svisle, a sbalit buď zobrazení.
+ **Zobrazení příčku** příčku zobrazení se zobrazí v horní části zobrazení XAML, když je editoru XAML v dolním okně. Zobrazení příčku umožňuje řídit relativní velikosti zobrazení návrhové a XAML zobrazení. Můžete také exchange umístění zobrazení (pomocí **zaměnit podokna** tlačítko), určete, zda jsou vodorovně nebo svisle uspořádané zobrazení a následně sbalí buď zobrazení.
 
- **Zvětšení kódu** Zvětšení kódu umožňuje zobrazit velikost zobrazení XAML. Můžete zvětšit z 20% na 400%.
+ **Přiblížení značek** přiblížení značky vám umožní na velikost zobrazení XAML. Můžete zvětšit z 20 % na 400 %.
 
 ## <a name="device-window"></a>Okno zařízení
- Okno zařízení v Návrhář XAML umožňuje simulovat v době návrhu různá zobrazení, zobrazení a možnosti zobrazení pro Windows Store nebo projekt Windows Phone. Okno zařízení je k dispozici v nabídce **Návrh** při práci na Návrhář XAML. Vypadá to takhle:
+ V okně zařízení v Návrháři XAML umožňuje simulovat v době návrhu různá zobrazení, zobrazení a zobrazení možností pro projekt Windows Store nebo Windows Phone. V okně zařízení je k dispozici na **návrhu** nabídky při práci v Návrháři XAML. Zde je, jak to funguje:
 
  ![Okno zařízení](../designers/media/xaml-editor-device-panel.png "xaml_editor_device_panel")
 
- Tyto možnosti jsou k dispozici v okně zařízení:
+ Jedná se o možnostech dostupných v okně zařízení:
 
- **Zobrazit** Určuje různé velikosti zobrazení a jejich rozlišení pro aplikaci.
+ **Zobrazit** určuje různé velikosti zobrazení a řešení pro aplikaci.
 
- **Orientace** Určuje různé orientace aplikace: **na šířku** nebo **na výšku**.
+ **Orientace** Určuje jinou orientace aplikace: **na šířku** nebo **na výšku**.
 
- **Hraniční** Určuje různá zarovnání okrajů **aplikace:,** **vlevo**, **vpravo**nebo **žádné**.
+ **Edge** Určuje zarovnání různých edge pro vaši aplikaci: **obě**, **vlevo**, **vpravo**, nebo **žádný**.
 
- **Vysoký kontrast** Zobrazte náhled aplikace na základě vybraného nastavení kontrastu. Toto nastavení, pokud je nastaveno na jinou hodnotu než **výchozí**, přepíše vlastnost `RequestedTheme` nastavenou v souboru App. XAML.
+ **Vysoký kontrast –** zobrazte si náhled aplikace podle vybraného nastavení kontrastu. Toto nastavení, při nastavení na hodnotu jiné než **výchozí**, přepíše `RequestedTheme` nastavenou v souboru App.xaml.
 
- **Přepsat škálování** Zapne a vypne emulaci měřítka dokumentu v návrhové ploše. To umožňuje zvýšit procento škálování podle jednoho faktoru. Zaškrtněte políčko pro zapnutí emulace. Pokud je například procento škálování 100%, dokument v návrhové ploše bude škálovat až na 140%. Tato možnost je zakázaná, pokud je aktuální procento škálování 180.
+ **Přepsat škálování** Zapne nebo vypne emulace škálování na návrhovou plochu dokumentu. To umožňuje škálování procento zvýšit jediný faktor. Zaškrtněte políčko Zapnout emulace. Například pokud vaše škálování procentuální hodnota je 100 %, dokumentu na návrhové ploše se bude škálovat 140 %. Tato možnost je zakázaná, pokud je aktuální procento škálování 180.
 
- **Minimální šířka** Určuje nastavení minimální šířky. Minimální šířka se dá změnit v souboru App. XAML.
+ **Minimální šířka** určuje nastavení minimální šířky. Minimální šířka lze změnit v souboru App.xaml.
 
- **Motiv** Určuje motiv aplikace. Můžete například přepínat mezi tmavým a světlým motivem.
+ **Motiv** určuje motivu aplikace. Například může přepínat mezi tmavý a světlý motiv.
 
- **Zobrazit Chrome** Zapne a vypne simulovaný tabletový rámeček kolem vaší aplikace v zobrazení Návrh. Zaškrtněte políčko pro zobrazení rámce.
+ **Zobrazit chrome** Zapne nebo vypne simulované tablet rámeček okolo vaší aplikace v návrhovém zobrazení. Zaškrtněte políčko Zobrazit rámce.
 
- **Vystřihnout k zobrazení** Určuje režim zobrazení. Zaškrtněte políčko pro oříznutí velikosti dokumentu na velikost zobrazení.
+ **Oříznout přesahy displeje** Určuje režim zobrazení. Zaškrtněte políčko do Galerie velikost dokumentu na velikost zobrazení.
 
-## <a name="document-outline-window"></a>Okno Osnova dokumentu
- Okno Osnova dokumentu v Návrhář XAML pomáhá provádět tyto úlohy:
+## <a name="document-outline-window"></a>Osnova dokumentu – okno
+ Okno osnovy dokumentu v Návrháři XAML umožňuje provádět tyto úkoly:
 
-- Zobrazení hierarchické struktury všech prvků na návrhové ploše.
+- Zobrazte hierarchickou strukturu všech prvků na návrhové ploše.
 
-- Vyberte prvky, abyste je mohli upravit (pohybovat v hierarchii, upravovat je na návrhové ploše, nastavit jejich vlastnosti v okno Vlastnosti atd.). Další informace naleznete v tématu [práce s prvky v Návrhář XAML](../designers/working-with-elements-in-xaml-designer.md)
+- Vyberte elementy tak, aby možno upravovat (přesunout je kolem v hierarchii, je upravovat návrhovou plochu, nastavit jejich vlastnosti v okně Vlastnosti a tak dále). Další informace najdete v tématu [práce s elementy v Návrháři XAML](../designers/working-with-elements-in-xaml-designer.md)
 
-- Vytvořte a upravte šablony pro prvky, které jsou ovládacími prvky.
+- Vytvářet a upravovat šablony pro prvky, které jsou ovládací prvky.
 
-- Použijte kontextovou nabídku pro vybrané prvky. Stejná nabídka je k dispozici také pro vybrané prvky na návrhové ploše.
+- Pomocí místní nabídky pro vybrané elementy. Stejnou nabídku je také k dispozici pro vybrané elementy na návrhovou plochu.
 
-  Chcete-li zobrazit okno Osnova dokumentu, na panelu nabídek vyberte možnost **zobrazení**, **ostatní okna**, **Osnova dokumentu**.
+  Chcete-li zobrazit okno osnovy dokumentu, na panelu nabídek zvolte **zobrazení**, **ostatní Windows**, **Osnova dokumentu**.
 
   ![Okno Osnova dokumentu](../designers/media/xaml-editor-doc-outline.png "xaml_editor_doc_outline")
 
-  Tyto možnosti jsou k dispozici v okně Osnova dokumentu:
+  Jedná se o možnostech dostupných v okně Osnova dokumentu:
 
-  **Osnova dokumentu** Hlavní zobrazení v okně Osnova dokumentu zobrazuje hierarchii dokumentu ve stromové struktuře. Hierarchickou povahu osnovy dokumentu můžete použít k prohlížení dokumentu na různých úrovních podrobností a k zamčení a skrytí prvků jednotlivě nebo ve skupinách.
+  **Osnova dokumentu** hlavního zobrazení v okně Osnova dokumentu ukazuje hierarchii dokumentu ve stromové struktuře. Hierarchickou povahu Osnova dokumentu můžete použít k prozkoumání dokumentu na různých úrovních podrobností a k uzamčení nebo skrytí prvků jednotlivě nebo ve skupinách.
 
-  **Zobrazit/skrýt** Zobrazí nebo skryje prvky návrhové plochy, které odpovídají položkám v osnově dokumentu. Pomocí tlačítek **Zobrazit/skrýt** zobrazíte symbol oka, pokud je zobrazený, nebo stisknutím kombinace kláves CTRL + h můžete elementy zobrazit a SHIFT + CTRL + h je zobrazit.
+  **Zobrazit/skrýt** zobrazí nebo skryje prvky návrhové plochy, které odpovídají položkám v Osnova dokumentu. Použití **zobrazit/skrýt** tlačítka, který zobrazí symbol oka, když se zobrazí, nebo stiskněte kombinaci kláves CTRL + H skrýt elementy a SHIFT + CTRL + H k jejich zobrazení.
 
-  **Zamknout/odemknout** Zamkne nebo odemkne prvky návrhové plochy, které odpovídají položkám v osnově dokumentu. Uzamčené prvky nelze upravovat. Použijte tlačítka **zamknout/odemknout** , které zobrazí symbol visacího zámku nezobrazuje při uzamčení, nebo stiskněte klávesy CTRL + L pro zamčení prvků a jejich odemčení stisknutím kláves CTRL + Ctrl + l.
+  **Zamknout/odemknout** zamkne a odemkne prvky návrhové plochy, které odpovídají položkám v Osnova dokumentu. Uzamčené elementy se nedá upravit. Použití **Zamknout/odemknout** tlačítka, které budou zobrazovat ikona zámku symbol v případě, že nebo stiskněte kombinaci kláves CTRL + L prvkům zámek a CTRL + SHIFT + L odemčení.
 
-  **Vrátit rozsah do pageRoot** Možnost v horní části okna Osnova dokumentu, která zobrazuje symbol šipky nahoru, vrátí osnovu dokumentu k předchozímu rozsahu. Rozsah se dá použít jenom v případě, že jste v oboru stylu nebo šablony.
+  **Obnovit obor na pageRoot** možnosti v horní části okna Osnova dokumentu, který zobrazuje symbol šipku nahoru, vrátí do předchozího oboru Osnova dokumentu. Přesouvání rozsahu směrem nahoru platí pouze v případě, že jste v rámci stylu nebo šablony.
 
 ## <a name="properties-window"></a>Vlastnosti – okno
- Okno Vlastnosti umožňuje nastavit hodnoty vlastností ovládacích prvků. Vypadá to takhle:
+ V okně Vlastnosti vám umožní nastavit hodnoty vlastností v ovládacích prvcích. Zde je, jak to funguje:
 
  ![okno Vlastnosti](../designers/media/xaml-editor-prop-window.png "xaml_editor_prop_window")
 
- V horní části okno Vlastnosti jsou k dispozici různé možnosti. Název aktuálně vybraného prvku můžete změnit pomocí pole **název** . V levém horním rohu je ikona, která představuje aktuálně vybraný prvek. Pokud chcete vlastnosti uspořádat podle kategorie nebo abecedně, klikněte v seznamu **Uspořádat podle** na **kategorie**, **název**nebo **zdroj** . Chcete-li zobrazit seznam událostí ovládacího prvku, klikněte na tlačítko **události** , které zobrazuje symbol blesku. Chcete-li vyhledat vlastnost, začněte do pole **Vlastnosti hledání** zadat název vlastnosti. Okno Vlastnosti zobrazuje vlastnosti, které odpovídají vašemu hledání při psaní. Některé vlastnosti umožňují nastavit upřesňující vlastnosti tak, že vyberete tlačítko se šipkou dolů. Další informace o používání vlastností a zpracování událostí najdete v tématu [rychlý Start: Přidání ovládacích prvků a zpracování událostí.](http://go.microsoft.com/fwlink/?LinkID=247983)
+ Existují různé možnosti v horní části okna Vlastnosti. Můžete změnit název aktuálně vybraného prvku s použitím **název** pole. V levém horním rohu je ikona, která reprezentuje aktuálně vybraný element. Chcete-li seřadit vlastnosti podle kategorie nebo abecedy, klikněte na tlačítko **kategorie**, **název**, nebo **zdroje** v **uspořádat podle** seznamu. Pokud chcete zobrazit seznam událostí pro ovládací prvek, klikněte na tlačítko **události** tlačítko, které zobrazí symbol boltu blesku. Vyhledejte vlastnost, začněte zadáním názvu vlastnosti v **vlastnosti hledání** pole. V okně vlastností zobrazuje vlastnosti, které odpovídají zadanému hledání během psaní. Některé vlastnosti umožňují nastavit upřesňující vlastnosti tak, že vyberete šipku dolů. Další informace o používání vlastností a zpracování událostí naleznete v tématu [rychlý start: Přidání ovládacích prvků a zpracování událostí](https://go.microsoft.com/fwlink/?LinkID=247983)
 
- Napravo od každé hodnoty vlastnosti je *značka vlastnosti* , která se zobrazí jako symbol pole. Vzhled značky vlastnosti označuje, zda existuje datová vazba nebo prostředek aplikovaný na vlastnost. Například symbol bílého pole označuje výchozí hodnotu, symbol černého pole obvykle indikuje, že byl použit místní prostředek, a oranžové pole obvykle indikuje, že byla použita datová vazba. Když kliknete na značku vlastnosti, můžete přejít k definici stylu, otevřít Tvůrce datových vazeb nebo otevřít výběr prostředku.
+ Vpravo od každé vlastnosti je hodnota *značka vlastnosti* , který se zobrazí jako pole symbolu. Vzhled značky vlastnost označuje, zda je datové vazby nebo prostředek použitý pro vlastnost. Například symbol bílé pole určuje výchozí hodnotu, symbol černé skříňky obvykle označuje, že použití místního prostředku a oranžová pole se obvykle označuje, že byl použit datové vazby. Po kliknutí na značku vlastnosti, můžete přejít na definici stylu, otevřete Tvůrce vazeb dat nebo otevřít výběr prostředku.
 
 ## <a name="see-also"></a>Viz také
- [Práce s prvky v Návrhář XAML](../designers/working-with-elements-in-xaml-designer.md) [Vytvoření a použití](../designers/how-to-create-and-apply-a-resource.md) [návodu k prostředku: vazba na data v Návrhář XAML](../designers/walkthrough-binding-to-data-in-xaml-designer.md)
+ [Práce s elementy v Návrháři XAML](../designers/working-with-elements-in-xaml-designer.md) [vytvoření a použití prostředku](../designers/how-to-create-and-apply-a-resource.md) [návod: vazba s daty v Návrháři XAML](../designers/walkthrough-binding-to-data-in-xaml-designer.md)

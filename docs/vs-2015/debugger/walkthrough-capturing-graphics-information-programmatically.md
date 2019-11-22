@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Zaznamenání grafických informací prostřednictvím kódu programu | Dokumentace Microsoftu'
+title: 'Návod: Programové zachycení informací grafiky | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -9,46 +9,46 @@ caps.latest.revision: 24
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1eaa3547733432715c5362b20030fe3d4a886900
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 54097420fd212ec9057f4a968e2c6d5de199e56e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444342"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296907"
 ---
-# <a name="walkthrough-capturing-graphics-information-programmatically"></a>Návod: Zaznamenání grafických informací prostřednictvím kódu programu
+# <a name="walkthrough-capturing-graphics-information-programmatically"></a>Návod: Zaznamenání grafických informací prostřednictvím kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete použít [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] diagnostiky grafiky k programově zachytit informace grafiky z aplikace Direct3D.  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Diagnostika grafiky můžete použít k programovému zachycení informací grafiky z aplikace Direct3D.  
   
- Programové zachytávání je užitečné v situacích, jako například:  
+ Programové zachytávání je užitečné ve scénářích, jako jsou:  
   
-- Začne sběr dat prostřednictvím kódu programu grafiky aplikace nepoužívá swapchain k dispozici, například při vykreslení textury.  
+- Pokud vaše grafická aplikace nepoužívá swapchain k dispozici, začněte zachytit programově, například když se vykresluje na texturu.  
   
-- Začněte zachytávání prostřednictvím kódu programu, až vaši aplikaci nevykreslí vůbec, například když používá rozhraní DirectCompute k provádění výpočtů.  
+- Pokud se vaše aplikace vůbec nevykresluje, můžete zachytávání spustit programově, například když k provádění výpočtů používá DirectCompute.  
   
-- Volání `CaptureCurrentFrame`při problému vykreslování je obtížné odhadnout a zachycení při ručním testování, ale můžete programově předpovědět s použitím informací o stavu aplikace za běhu.  
+- Volání `CaptureCurrentFrame`v případě, že problém vykreslování je obtížné odhadnout a zachytit v manuálním testování, ale lze jej předpovědět pomocí informací o stavu aplikace za běhu.  
   
-## <a name="CaptureDX11_2"></a> Programové zachytávání ve Windows 8.1  
- Tato část návodu ukazuje zachytávání prostřednictvím kódu programu do aplikace, které používají rozhraní API pro rozhraní DirectX 11.2 na Windows 8.1, který používá metodu robustní zachycení. Informace o tom, jak použít v aplikacích, které používají starší verze rozhraní DirectX na Windows 8.0 zachytávání prostřednictvím kódu programu najdete v tématu [zachytávání prostřednictvím kódu programu Windows 8.0 a starší](#CaptureDX11_1) dále v tomto názorném postupu.  
+## <a name="CaptureDX11_2"></a>Programové zachycení v Windows 8.1  
+ Tato část návodu ukazuje programový Capture v aplikacích, které používají rozhraní DirectX 11,2 API na Windows 8.1, které používá robustní metodu zachycení. Informace o použití programového zachycení v aplikacích, které používají starší verze rozhraní DirectX v systému Windows 8,0, najdete v tématu [programový Capture v systému windows 8,0 a dříve](#CaptureDX11_1) v tomto návodu.  
   
- Tato část ukazuje, jak k provádění těchto úkolů:  
+ V této části se dozvíte, jak provádět tyto úlohy:  
   
-- Příprava aplikace pro použití zachytávání prostřednictvím kódu programu  
+- Příprava aplikace pro použití programového zachycení  
   
-- Získávání rozhraní IDXGraphicsAnalysis  
+- Získání rozhraní IDXGraphicsAnalysis  
   
 - Zachycení informací grafiky  
   
 > [!NOTE]
-> Předchozích implementacích zachytávání prostřednictvím kódu programu spoléhat Remote Tools for [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nakonfigurovánu zachycení, Windows 8.1 podporuje sběr dat přímo prostřednictvím rozhraní Direct3D 11.2. V důsledku toho již máte k instalaci na Windows 8.1 nástrojů Remote Tools pro zachytávání prostřednictvím kódu programu.  
+> Předchozí implementace programového zachycení se spoléhaly na vzdálené nástroje pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], aby poskytovaly funkci zachycení. Windows 8.1 podporuje zachycení přímo přes Direct3D 11,2. V důsledku toho už nemusíte instalovat nástroje Remote Tools for program Capture na Windows 8.1.  
   
-### <a name="preparing-your-app-to-use-programmatic-capture"></a>Příprava aplikace pro použití zachytávání prostřednictvím kódu programu  
- Použití zachytávání prostřednictvím kódu programu ve vaší aplikaci, musí zahrnovat potřebné hlavičky. Tyto hlavičky jsou součástí sady SDK pro Windows 8.1.  
+### <a name="preparing-your-app-to-use-programmatic-capture"></a>Příprava aplikace pro použití programového zachycení  
+ Pokud chcete ve své aplikaci použít programové zachycení, musí obsahovat potřebné hlavičky. Tato záhlaví jsou součástí sady Windows 8.1 SDK.  
   
-##### <a name="to-include-programmatic-capture-headers"></a>Zahrnout záhlaví zachytávání prostřednictvím kódu programu  
+##### <a name="to-include-programmatic-capture-headers"></a>Zahrnutí programových hlaviček zachycení  
   
-- Obsahovat tato záhlaví ve zdrojovém souboru, ve kterém budete definovat IDXGraphicsAnalysis rozhraní:  
+- Zahrňte tyto hlavičky do zdrojového souboru, kde budete definovat rozhraní IDXGraphicsAnalysis:  
   
     ```  
     #include <DXGItype.h>  
@@ -58,17 +58,17 @@ Můžete použít [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] diagnostiky grafi
     ```  
   
     > [!IMPORTANT]
-    > Záhlaví souboru vsgcapture.h—which podporuje zachytávání prostřednictvím kódu programu na Windows 8.0 a výše nezahrnují – provádět zachytávání prostřednictvím kódu programu do aplikace pro Windows 8.1. Není kompatibilní s rozhraním DirectX 11.2 této hlavičky. Pokud tento soubor je zahrnuto po záhlaví d3d11_2.h je zahrnuta, kompilátor vyvolá upozornění. Pokud před d3d11_2.h je zahrnutý vsgcapture.h, aplikace se nespustí.  
+    > Nezahrnovat hlavičkový soubor vsgcapture. h, který podporuje Programové zachycení na Windows 8,0 a starší verzi – k provádění programového zachycení ve vašich aplikacích Windows 8.1. Tato hlavička není kompatibilní s rozhraním DirectX 11,2. Pokud je tento soubor zahrnutý po zahrnutí hlavičky d3d11_2. h, vyvolá kompilátor upozornění. Pokud je vsgcapture. h zahrnuté před d3d11_2. h, aplikace se nespustí.  
   
     > [!NOTE]
-    > Pokud červen 2010 na vašem počítači je nainstalovaná rozhraní DirectX SDK a cesty zahrnutí váš projekt obsahuje `%DXSDK_DIR%includex86`, přesunout na konec cesty zahrnutí. Proveďte totéž pro vaši cestu ke knihovně.  
+    > Pokud je v počítači nainstalovaná sada DirectX 2010 DirectX SDK a cesta k zahrnutí vašeho projektu obsahuje `%DXSDK_DIR%includex86`, přesuňte ji na konec cesty include. Proveďte stejnou cestu ke knihovně.  
   
-#### <a name="windows-phone-81"></a>Windows Phone 8,1  
- Vzhledem k tomu, že Windows Phone 8.1 SDK neobsahuje záhlaví DXProgrammableCapture.h, budete muset definovat `IDXGraphicsAnalysis` sami rozhraní, aby mohli používat `BeginCapture()` a `EndCapture()` metody. Zahrnout další záhlaví, jak je popsáno v předchozí části.  
+#### <a name="windows-phone-81"></a>Windows Phone 8.1  
+ Vzhledem k tomu, že sada Windows Phone 8,1 SDK neobsahuje hlavičku DXProgrammableCapture. h, bude nutné definovat rozhraní `IDXGraphicsAnalysis` sami, abyste mohli používat metody `BeginCapture()` a `EndCapture()`. Zahrňte další hlavičky, jak je popsáno v předchozí části.  
   
-###### <a name="to-define-the-idxgraphicsanalysis-interface"></a>Chcete-li definovat IDXGraphicsAnalysis rozhraní  
+###### <a name="to-define-the-idxgraphicsanalysis-interface"></a>Definování rozhraní IDXGraphicsAnalysis  
   
-- Definujte rozhraní IDXGraphicsAnalysis ve stejném souboru, ve kterém jste zahrnuli soubory hlaviček.  
+- Definujte rozhraní IDXGraphicsAnalysis ve stejném souboru, ve kterém jste zahrnuli hlavičkové soubory.  
   
   ```  
   interface DECLSPEC_UUID("9f251514-9d4d-4902-9d60-18988ab7d4b5") DECLSPEC_NOVTABLE  
@@ -79,24 +79,24 @@ Můžete použít [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] diagnostiky grafi
   };  
   ```  
   
-  Pro usnadnění práce můžete proveďte tyto kroky v novém souboru záhlaví a pak ji kde je třeba zahrnout do vaší aplikace.  
+  Pro usnadnění práce můžete tyto kroky provést v novém hlavičkovém souboru a pak ho zahrnout tam, kde je potřeba ve vaší aplikaci.  
   
-### <a name="getting-the-idxgraphicsanalysis-interface"></a>Získávání rozhraní IDXGraphicsAnalysis  
- Než budete moct zachytit informace grafiky z rozhraní DirectX 11.2, budete muset získat rozhraní DXGI ladění.  
+### <a name="getting-the-idxgraphicsanalysis-interface"></a>Získání rozhraní IDXGraphicsAnalysis  
+ Předtím, než budete moci zachytit informace grafiky z rozhraní DirectX 11,2, je nutné získat rozhraní ladění DXGI.  
   
 > [!IMPORTANT]
-> Při použití zachytávání prostřednictvím kódu programu, musí i nadále spuštění aplikace v rámci diagnostiky grafiky (Alt + F5 v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]) nebo v části [nástroj příkazového řádku pro zachycení](../debugger/command-line-capture-tool.md).  
+> Při použití programového zachycení je nutné pořád spustit aplikaci v rámci diagnostiky grafiky (ALT + F5 v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]) nebo v rámci [Nástroje pro zachycení z příkazového řádku](../debugger/command-line-capture-tool.md).  
   
-##### <a name="to-get-the-idxgraphicsanalysis-interface"></a>Chcete-li získat IDXGraphicsAnalysis rozhraní  
+##### <a name="to-get-the-idxgraphicsanalysis-interface"></a>Získání rozhraní IDXGraphicsAnalysis  
   
-- Použijte následující kód k připojení k rozhraní ladění DXGI rozhraní IDXGraphicsAnalysis.  
+- Použijte následující kód k připojení rozhraní IDXGraphicsAnalysis k ladicímu rozhraní DXGI.  
   
     ```  
     IDXGraphicsAnalysis* pGraphicsAnalysis;  
     HRESULT getAnalysis = DXGIGetDebugInterface1(0, __uuidof(pGraphicsAnalysis), reinterpret_cast<void**>(&pGraphicsAnalysis));  
     ```  
   
-     Nezapomeňte se podívat `HRESULT` vrácený `DXGIGetDebugInterface1` zajistit získat platný rozhraní před jejich použitím:  
+     Nezapomeňte zkontrolovat `HRESULT` vrácených `DXGIGetDebugInterface1`, abyste zajistili, že budete mít k dispozici platné rozhraní předtím, než ho použijete:  
   
     ```  
     if (FAILED(getAnalysis))  
@@ -106,14 +106,14 @@ Můžete použít [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] diagnostiky grafi
     ```  
   
     > [!NOTE]
-    > Pokud `DXGIGetDebugInterface1` vrátí `E_NOINTERFACE` (`error: E_NOINTERFACE No such interface supported`), ujistěte se, že je aplikace spuštěna v rámci diagnostiky grafiky (Alt + F5 v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]).  
+    > Pokud `DXGIGetDebugInterface1` vrátí `E_NOINTERFACE` (`error: E_NOINTERFACE No such interface supported`), ujistěte se, že je aplikace spuštěná v rámci diagnostiky grafiky (ALT + F5 v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]).  
   
 ### <a name="capturing-graphics-information"></a>Zachycení informací grafiky  
- Teď, když máte platný `IDXGraphicsAnalysis` rozhraní, můžete použít `BeginCapture` a `EndCapture` k zachycení informací grafiky.  
+ Teď, když máte platné `IDXGraphicsAnalysis` rozhraní, můžete k zachycení informací grafiky použít `BeginCapture` a `EndCapture`.  
   
-##### <a name="to-capture-graphics-information"></a>Chcete-li zachytit informace grafiky  
+##### <a name="to-capture-graphics-information"></a>Zachycení informací grafiky  
   
-- Chcete-li spustit zachycení informací grafiky, použijte `BeginCapture`:  
+- Chcete-li začít zachytávání informací o grafice, použijte `BeginCapture`:  
   
     ```  
     ...  
@@ -121,7 +121,7 @@ Můžete použít [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] diagnostiky grafi
     ...  
     ```  
   
-     Sběr dat začne okamžitě po `BeginCapture` nazývá; nečeká na další snímek začít. Zachycení zastaví převedou aktuálního snímku nebo při volání `EndCapture`:  
+     Zachytávání začíná ihned při volání `BeginCapture`; nečeká na zahájení dalšího snímku. Zachycení se zastaví, když se zobrazí aktuální rámec, nebo když zavoláte `EndCapture`:  
   
     ```  
     ...  
@@ -129,76 +129,76 @@ Můžete použít [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] diagnostiky grafi
     ...  
     ```  
   
-## <a name="CaptureDX11_1"></a> Programové zachytávání Windows 8.0 a starší  
- Tato část návodu ukazuje zachytávání prostřednictvím kódu programu v aplikacích pro Windows 8.0 a starší, které používají rozhraní DirectX 11.1 API, které používá metodu starší verze zachycení. Informace o tom, jak použít zachytávání prostřednictvím kódu programu do aplikace, které používají rozhraní DirectX 11.2 na Windows 8.1 najdete v tématu [programátorské zachycení ve Windows 8.1](#CaptureDX11_2) výše v tomto názorném postupu.  
+## <a name="CaptureDX11_1"></a>Programové zachycení ve Windows 8,0 a starší verzi  
+ Tato část návodu ukazuje programový Capture v aplikacích pro Windows 8,0 a starší, které používají rozhraní DirectX 11,1 API, které používá starší metodu zachycení. Informace o tom, jak používat programové zachycení v aplikacích, které používají rozhraní DirectX 11,2 na Windows 8.1, najdete v tématu [programový Capture v Windows 8.1](#CaptureDX11_2) dříve v tomto návodu.  
   
- Tato část ukazuje tyto úlohy:  
+ Tato část zobrazuje tyto úlohy:  
   
-- Příprava počítače pro zachytávání prostřednictvím kódu programu  
+- Příprava počítače na použití programového zachycení  
   
-- Příprava aplikace pro použití zachytávání prostřednictvím kódu programu  
+- Příprava aplikace pro použití programového zachycení  
   
-- Konfigurovat název a umístění souboru protokolu grafiky  
+- Konfigurace názvu a umístění souboru protokolu grafiky  
   
-- Použití `CaptureCurrentFrame` rozhraní API  
+- Používání rozhraní `CaptureCurrentFrame` API  
   
-### <a name="preparing-your-computer-to-use-programmatic-capture"></a>Příprava počítače pro zachytávání prostřednictvím kódu programu  
- Programové zachytávání API používá Remote Tools for [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nakonfigurovánu zachycení. Počítače, ve kterém se spustí aplikace musí mít nainstalovaný, i když používáte v místním počítači zachytávání prostřednictvím kódu programu remote tools. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nemusí být spuštěna na místním počítači při zachytávání prostřednictvím kódu programu.  
+### <a name="preparing-your-computer-to-use-programmatic-capture"></a>Příprava počítače na použití programového zachycení  
+ Programové rozhraní API pro sběr dat využívá nástroje Remote Tools for [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] k zajištění funkcí zachycení. Počítač, ve kterém bude aplikace spuštěna, musí mít nainstalované vzdálené nástroje, i když používáte programové zachycení na místním počítači. Pokud provádíte Programové zachycení na místním počítači, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nemusí běžet.  
   
- Pokud chcete používat vzdálené zachycování rozhraní API v aplikaci, která běží na počítači, je nejprve nutné instalovat nástroje Remote Tools pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] na tomto počítači. Různé verze nástrojů remote Tools podporují jiné hardwarové platformy. Informace o tom, jak instalovat nástroje remote tools, najdete v článku [stránce pro stažení nástroje pro vzdálenou](http://go.microsoft.com/fwlink/p/?LinkId=246691) Microsoftu soubory ke stažení webu.  
+ Chcete-li používat rozhraní API pro vzdálené zachytávání v aplikaci, která je spuštěna v počítači, je nejprve nutné nainstalovat nástroje Remote Tools for [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] na tento počítač. Různé verze nástrojů Remote Tools podporují různé hardwarové platformy. Informace o tom, jak nainstalovat nástroje Remote Tools, najdete na [stránce stažení vzdálených nástrojů](https://go.microsoft.com/fwlink/p/?LinkId=246691) na webu Microsoft downloads.  
   
- Alternativně [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nainstaluje komponenty potřebné k provedení vzdálené zachycování pro 32bitové aplikace.  
+ Případně [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nainstaluje potřebné komponenty pro vzdálené zachytávání pro 32 aplikace.  
   
 > [!NOTE]
-> Protože většina aplikací klasické pracovní plochy Windows – včetně [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]– nejsou podporovány na [!INCLUDE[win8](../includes/win8-md.md)] ARM zařízení pomocí nástroje Remote Tools for [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] spolu s zachytávání prostřednictvím kódu programu API je jediný způsob, jak zachycení diagnostiky grafiky v zařízeních ARM.  
+> Vzhledem k tomu, že většina aplikací pro stolní počítače s Windows (včetně [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]) není v [!INCLUDE[win8](../includes/win8-md.md)] pro zařízení ARM podporovaná, je jediným způsobem, jak zachytit diagnostiku grafiky na zařízeních ARM, použití vzdálených nástrojů pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] společně s rozhraním API pro programové zachycení.  
   
-### <a name="preparing-your-app-to-use-programmatic-capture"></a>Příprava aplikace pro použití zachytávání prostřednictvím kódu programu  
- Použití nástrojů diagnostiky grafiky, je nejprve nutné zachytit informace grafiky, která ho využívá. Informace můžete zaznamenat prostřednictvím kódu programu pomocí `CaptureCurrentFrame` rozhraní API.  
+### <a name="preparing-your-app-to-use-programmatic-capture"></a>Příprava aplikace pro použití programového zachycení  
+ Chcete-li použít nástroje Diagnostika grafiky, musíte nejprve zachytit informace o grafice, na kterých se spoléhá. Tyto informace můžete programově zachytit pomocí rozhraní `CaptureCurrentFrame` API.  
   
-##### <a name="to-prepare-your-app-to-capture-graphics-information-programmatically"></a>Připravit aplikaci tak, aby zaznamenání grafických informací prostřednictvím kódu programu  
+##### <a name="to-prepare-your-app-to-capture-graphics-information-programmatically"></a>Příprava aplikace pro programové zachycení informací grafiky  
   
-1. Ujistěte se, že `vsgcapture.h` obsahovat záhlaví ve zdrojovém kódu aplikace. Mohou být součástí jenom jedno umístění – například v souboru zdrojového kódu, kde bude volat programový zachytit rozhraní API, nebo v souboru předkompilované hlavičky pro volání rozhraní API z více zdrojových souborů s kódem.  
+1. Ujistěte se, že je ve zdrojovém kódu aplikace obsažena hlavička `vsgcapture.h`. Může být součástí pouze jednoho umístění, například v souboru se zdrojovým kódem, kde budete volat programové rozhraní API pro zachycení, nebo v souboru předkompilované hlavičky pro volání rozhraní API z více souborů zdrojového kódu.  
   
-2. Ve zdrojovém kódu aplikace, kdykoli budete chtít zachytit zbytek aktuálního rámce, volání `g_pVsgDbg->CaptureCurrentFrame()`. Tato metoda nemá žádné parametry a nevrací hodnotu.  
+2. Ve zdrojovém kódu aplikace, kdykoli chcete zachytit zbytek aktuálního rámce, zavolejte `g_pVsgDbg->CaptureCurrentFrame()`. Tato metoda nepřijímá žádné parametry a nevrací hodnotu.  
   
-### <a name="configuring-the-name-and-location-of-the-graphics-log-file"></a>Konfigurovat název a umístění souboru protokolu grafiky  
- Protokol grafiky se vytvoří v umístění, který je definován `DONT_SAVE_VSGLOG_TO_TEMP` a `VSG_DEFAULT_RUN_FILENAME` makra.  
+### <a name="configuring-the-name-and-location-of-the-graphics-log-file"></a>Konfigurace názvu a umístění souboru protokolu grafiky  
+ Protokol grafiky je vytvořen v umístění, které je definováno `DONT_SAVE_VSGLOG_TO_TEMP` a `VSG_DEFAULT_RUN_FILENAME` makra.  
   
-##### <a name="to-configure-the-name-and-location-of-the-graphics-log-file"></a>Konfigurovat název a umístění souboru protokolu grafiky  
+##### <a name="to-configure-the-name-and-location-of-the-graphics-log-file"></a>Konfigurace názvu a umístění souboru protokolu grafiky  
   
-- Protokol grafiky zabránit před zápisem do dočasného adresáře `#include <vsgcapture.h>` řádek, přidejte následující:  
+- Chcete-li zabránit zapsání protokolu grafiky do dočasného adresáře, přidejte před `#include <vsgcapture.h>` řádek tento příkaz:  
   
   ```  
   #define DONT_SAVE_VSGLOG_TO_TEMP  
   ```  
   
-   Můžete definovat tuto hodnotu pro zápis v protokolu grafiky do umístění, která je relativní vzhledem k pracovní adresář nebo na absolutní cestu, pokud definice `VSG_DEFAULT_RUN_FILENAME` je absolutní cesta.  
+   Tuto hodnotu můžete definovat pro zápis protokolu grafiky do umístění, které je relativní vzhledem k pracovnímu adresáři, nebo na absolutní cestu, pokud je definice `VSG_DEFAULT_RUN_FILENAME` absolutní cestou.  
   
-- Chcete uložit protokol grafiky do jiného umístění nebo jí jiný název souboru, než `#include <vsgcapture.h>` řádek, přidejte následující:  
+- Chcete-li uložit protokol grafiky do jiného umístění nebo zadat jiný název souboru před `#include <vsgcapture.h>`m řádkem, přidejte tento příkaz:  
   
   ```  
   #define VSG_DEFAULT_RUN_FILENAME <filename>  
   ```  
   
-   Pokud není tento krok proveďte, název souboru je default.vsglog. Pokud definujete neměli `DONT_SAVE_VSGLOG_TO_TEMP`, pak umístění souboru je relativní vzhledem k adresáři temp; v opačném případě je relativní vzhledem k pracovní adresář nebo v jiném umístění případného absolutního názvu souboru.  
+   Pokud tento krok neprovedete, bude název souboru Default. vsglog. Pokud jste nedefinovali `DONT_SAVE_VSGLOG_TO_TEMP`, umístění souboru je relativní vzhledem k dočasnému adresáři. v opačném případě je relativní vzhledem k pracovnímu adresáři nebo v jiném umístění, pokud jste zadali absolutní název souboru.  
   
-  Pro [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] aplikace, umístění dočasného adresáře je specifická pro každého uživatele a aplikace a se obvykle nachází v umístění, jako je například C:\users\\*uživatelské jméno*\AppData\Local\Packages\\ *pfn*\TempState\\. Pro aplikace klasické pracovní plochy, umístění dočasného adresáře je specifická pro jednotlivé uživatele a obvykle nachází v umístění, jako je například C:\Users\\*uživatelské jméno*\AppData\Local\Temp\\.  
+  U [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]ch aplikací je umístění dočasného adresáře specifické pro každého uživatele a aplikaci a obvykle se nachází v umístění, jako je například C:\Users\\*username*\AppData\Local\Packages\\*rodina balíčku název*\TempState\\. Pro desktopové aplikace je umístění dočasného adresáře specifické pro každého uživatele a obvykle se nachází v umístění, jako je například C:\Users\\*username*\AppData\Local\Temp\\.  
   
 > [!NOTE]
-> Zapsat do určitého umístění, musíte mít oprávnění k zápisu do tohoto umístění. v opačném případě dojde k chybě. Mějte na paměti, která [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] aplikace jsou omezeny více než aplikace klasické pracovní plochy o kde umožňuje zápis dat a můžou vyžadovat další konfiguraci k zápisu do určitých umístění.  
+> Chcete-li zapisovat do konkrétního umístění, musíte mít oprávnění k zápisu do tohoto umístění; v opačném případě dojde k chybě. Pamatujte, že aplikace [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] jsou omezenější než aplikace klasické pracovní plochy, kde mohou zapisovat data a mohou vyžadovat další konfiguraci pro zápis do určitých umístění.  
   
-### <a name="capturing-the-graphics-information"></a>Zaznamenání grafických informací  
- Po aplikace připravené pro zachytávání prostřednictvím kódu programu a volitelně nakonfigurovat umístění a název grafiky souboru protokolu, sestavení aplikace a pak spusťte nebo ladění k zaznamenání dat; Nespouštějte nástroj Diagnostika grafiky z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] při použití zachytávání prostřednictvím kódu programu rozhraní API. Protokol grafiky je zapsán do umístění, které jste zadali. Pokud chcete zachovat tuto verzi protokolu, přesuňte ho do jiného umístění; v opačném případě budou přepsány při dalším spuštění aplikace.  
+### <a name="capturing-the-graphics-information"></a>Zachytávání informací o grafice  
+ Po přípravě aplikace pro programové zachycení a volitelně konfiguraci umístění a názvu souboru protokolu grafiky sestavte aplikaci a pak ji spusťte nebo Nalaďte pro zachycení dat. Při použití rozhraní API pro programové zachycení nespouštějte diagnostiku grafiky z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Protokol grafiky je zapsán do umístění, které jste zadali. Pokud chcete zachovat tuto verzi protokolu, přesuňte ji do jiného umístění; v opačném případě bude při opětovném spuštění aplikace přepsána.  
   
 > [!TIP]
-> Můžete stále zachytit informace grafiky ručně při použití zachytávání prostřednictvím kódu programu, s aplikací fokus, stačí stisknout kombinaci kláves **Print Screen**. Tento postup můžete použít k zachycení další grafické informace, které nejsou zachyceny pomocí zachytávání prostřednictvím kódu programu API.  
+> Informace o grafech můžete zachytit ručně, i když používáte programové zachycení – s aplikací se zaměřením, stačí stisknout **tiskovou obrazovku**. Tento postup můžete použít k zachycení dalších grafických informací, které nejsou zachyceny rozhraním API pro programové zachycení.  
   
 ## <a name="next-steps"></a>Další kroky  
- Tento názorný postup ukázal, jak k zaznamenání grafických informací prostřednictvím kódu programu. V dalším kroku vezměte v úvahu tuto možnost:  
+ Tento návod ukázal, jak programově zachytit informace grafiky. Jako další krok zvažte tuto možnost:  
   
-- Zjistěte, jak analyzovat zachycené informace grafiky pomocí nástrojů diagnostiky grafiky. Zobrazit [přehled](../debugger/overview-of-visual-studio-graphics-diagnostics.md).  
+- Naučte se analyzovat informace o zachycených grafikách pomocí nástrojů Diagnostika grafiky. Další informace najdete v tématu [Přehled](../debugger/overview-of-visual-studio-graphics-diagnostics.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Návod: Zaznamenání grafických informací](../debugger/walkthrough-capturing-graphics-information.md)   
- [Zaznamenání grafických informací](../debugger/capturing-graphics-information.md)   
+ [Návod: zachycení informací grafiky](../debugger/walkthrough-capturing-graphics-information.md)   
+ [Zachytávání informací o grafikách](../debugger/capturing-graphics-information.md)   
  [Nástroj příkazového řádku pro zachytávání](../debugger/command-line-capture-tool.md)

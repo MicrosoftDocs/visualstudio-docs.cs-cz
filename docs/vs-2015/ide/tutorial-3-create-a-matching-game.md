@@ -9,12 +9,12 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1d67e81aa90faa59cf5320293aba9e7d82e3f625
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 30ee029fe231202c821c8448d3594192b5ebfdf8
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654735"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299858"
 ---
 # <a name="tutorial-3-create-a-matching-game"></a>Kurz 3: vytvoření porovnávací hry
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,12 +35,10 @@ V tomto tutoriálu vytvoříte porovnávací hru, ve které hráč musí porovna
 
   ![Hra, kterou v tomto kurzu vytvoříte](../ide/media/express-finishedgame.png "Express_FinishedGame") Hra, kterou v tomto kurzu vytvoříte
 
-  Pokud si chcete stáhnout dokončenou verzi ukázky, přečtěte si [ukázku s kurzem kompletní porovnávací hru](http://code.msdn.microsoft.com/Complete-Matching-Game-4cffddba).
-
 > [!NOTE]
 > V tomto tutoriálu je zahrnut jazyk Visual C# i jazyk Visual Basic, takže se zaměřte na informace, které jsou specifické pro vámi používaný programovací jazyk.
 
- Pokud si nevíte rady nebo máte otázky k programování, můžete zveřejnit svůj dotaz na jednom z diskuzních fór MSDN. Viz [Visual Basic Fórum](http://social.msdn.microsoft.com/Forums/home?forum=vbgeneral) a [vizuální C# Fórum](http://social.msdn.microsoft.com/Forums/home?forum=csharpgeneral). K dispozici jsou také užitečné bezplatné video výukové materiály. Další informace o programování v Visual Basic najdete v tématu [Visual Basic základy: vývoj pro absolutní začátečníky](http://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners). Další informace o programování v vizuálů C#najdete v tématu [ C# základy: vývoj pro absolutní začátečníky](http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners).
+ Pokud si nevíte rady nebo máte otázky k programování, můžete zveřejnit svůj dotaz na jednom z diskuzních fór MSDN. Viz [Visual Basic Fórum](https://social.msdn.microsoft.com/Forums/en-US/home) a [vizuální C# Fórum](https://social.msdn.microsoft.com/Forums/en-US/home). K dispozici jsou také užitečné bezplatné video výukové materiály. Další informace o programování v Visual Basic najdete v tématu [Visual Basic základy: vývoj pro absolutní začátečníky](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners). Další informace o programování v vizuálů C#najdete v tématu [ C# základy: vývoj pro absolutní začátečníky](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners).
 
 ## <a name="related-topics"></a>Související témata
 

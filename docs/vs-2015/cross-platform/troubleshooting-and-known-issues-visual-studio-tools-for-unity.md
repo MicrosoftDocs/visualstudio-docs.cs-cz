@@ -9,12 +9,12 @@ caps.latest.revision: 7
 author: conceptdev
 ms.author: crdun
 manager: jillfra
-ms.openlocfilehash: 6e1b34cbc2497bd70f65021c83db4f59480519f1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ad085cc6c41714a551fbb344274e6d0f164ab67e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62573203"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297664"
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>Odstraňování potíží a známé problémy (Visual Studio Tools for Unity)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -22,27 +22,27 @@ ms.locfileid: "62573203"
 V této části vám najít řešení běžných potíží s nástroji Visual Studio Tools for Unity, popis známých problémů a zjistěte, jak můžete pomoci zvýšit zpráv o chybách Visual Studio Tools for Unity.  
   
 ## <a name="troubleshooting"></a>Poradce při potížích  
- Chcete-li vyřešit některé běžné problémy s Visual Studio Tools for Unity, naleznete v následujících částech.  
+ Pokud chcete vyřešit některé běžné problémy s Visual Studio Tools for Unity, přečtěte si následující oddíly.  
   
-### <a name="migrating-from-unityvs-to-visual-studio-tools-for-unity"></a>Migrace z UnityVS pro Visual Studio Tools for Unity  
- Pokud migrujete z UnityVS pro Visual Studio Tools for Unity, budete muset vytvořit nové řešení sady Visual Studio pro své projekty Unity.  
+### <a name="migrating-from-unityvs-to-visual-studio-tools-for-unity"></a>Migrace z UnityVS na Visual Studio Tools for Unity  
+ Pokud migrujete z UnityVS na Visual Studio Tools for Unity, budete muset vygenerovat nová řešení sady Visual Studio pro projekty Unity.  
   
-##### <a name="to-migrate-your-unity-project-from-unityvs-18-to-visual-studio-tools-for-unity-19"></a>K migraci z UnityVS 1.8 svým projektem Unity pro Visual Studio Tools pro Unity 1.9  
+##### <a name="to-migrate-your-unity-project-from-unityvs-18-to-visual-studio-tools-for-unity-19"></a>Migrace projektu Unity z UnityVS 1,8 na Visual Studio Tools for Unity 1,9  
   
-1. Odstraňte staré soubory řešení a projektu z Unity projektu. V kořenovém adresáři vašeho projektu Unity, vyhledejte Visual Studio .sln a. * proj soubory a odstraňte je všechny.  
+1. Odstraňte ze svého projektu Unity staré soubory řešení a projektu. V kořenovém adresáři vašeho projektu Unity vyhledejte soubory Visual Studio. sln a. * proj a odstraňte je.  
   
-2. Visual Studio Tools for Unity balíček naimportujte Unity projektu. Informace o tom, jak importovat balíček VSTU najdete v tématu Konfigurace Visual Studio Tools for Unity na [Začínáme](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) stránky.  
+2. Importujte balíček Visual Studio Tools for Unity do projektu Unity. Informace o tom, jak importovat balíček VSTU, najdete v tématu Konfigurace Visual Studio Tools for Unity na stránce [Začínáme](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) .  
   
-3. Generovat nové soubory řešení a projektu. Pokud chcete vygenerovat teď v Unity editoru v hlavní nabídce zvolte **Visual Studio Tools**, **Generovat soubory projektu**. V opačném případě můžete tento krok přeskočit, pokud chcete zjistit. Visual Studio Tools for Unity vygeneruje nové soubory automaticky při výběru **Visual Studio Tools**, **otevřít v sadě Visual Studio**.  
+3. Vygenerujte nové soubory řešení a projektu. Pokud je chcete vygenerovat nyní, v editoru Unity v hlavní nabídce vyberte možnost **Visual Studio Tools**, **Generovat soubory projektu**. V opačném případě můžete tento krok přeskočit, pokud chcete; Visual Studio Tools for Unity vygeneruje nové soubory automaticky, když vyberete **Visual Studio Tools** **otevřete v aplikaci Visual Studio**.  
   
-### <a name="visual-studio-wont-load-the-solution-that-visual-studio-tools-for-unity-created"></a>Visual Studio se nenačte řešení, které vytvoří Visual Studio Tools for Unity  
- Další informace najdete v tématu [odpověď na tuto otázku stackoverflow](http://stackoverflow.com/a/24035907/36702).  
+### <a name="visual-studio-wont-load-the-solution-that-visual-studio-tools-for-unity-created"></a>Visual Studio nenačte řešení, které Visual Studio Tools for Unity vytvořené.  
+ Další informace najdete v [odpovědi na tuto StackOverflow otázku](https://stackoverflow.com/questions/20086755/unityvs-visual-studio-can-not-open/24035907#24035907).  
   
-### <a name="on-windows-8-visual-studio-asks-to-download-the-unity-target-framework"></a>V systému Windows 8 Visual Studio výzvu ke stažení Cílová architektura Unity  
- UnityVS vyžaduje rozhraní .net framework 3.5, který není nainstalovaný ve výchozím nastavení v systému Windows 8. Chcete-li vyřešit tento problém, postupujte podle pokynů ke stažení a instalaci rozhraní .net framework 3.5.  
+### <a name="on-windows-8-visual-studio-asks-to-download-the-unity-target-framework"></a>Ve Windows 8 se Visual Studio zeptá na stažení cílové architektury Unity.  
+ UnityVS vyžaduje rozhraní .NET Framework 3,5, které není ve výchozím nastavení nainstalované ve Windows 8. Chcete-li tento problém vyřešit, postupujte podle pokynů ke stažení a instalaci rozhraní .NET Framework 3,5.  
   
 ## <a name="known-issues"></a>Známé problémy  
- Jsou známy problémy ve Visual Studio Tools for Unity, které jsou výsledkem způsobu interakce ladicí program Unity a starší verzi kompilátoru jazyka C#. Pracujeme na řešení těchto problémů, ale do té doby může dojít k následujícím problémům.  
+ Jsou známy problémy ve Visual Studio Tools for Unity, které jsou výsledkem způsobu interakce ladicí program Unity a starší verzi kompilátoru jazyka C#. Pracujeme na tom, abychom vám pomohli tyto problémy vyřešit, ale mezitím se můžete setkat s následujícími problémy.  
   
 - Při ladění Unity někdy dojde k chybě.  
   
@@ -64,9 +64,9 @@ V této části vám najít řešení běžných potíží s nástroji Visual St
   
 3. Připojte ladicí modul k zmrazené instanci sady Visual Studio. V **připojit k procesu** dialogového okna, vyberte zmrazené instanci sady Visual Studio z **procesy k dispozici** tabulku a pak zvolte **připojit** tlačítko.  
   
-4. Pozastavte ladicí program. V nové instanci sady Visual Studio, v hlavní nabídce zvolte **ladění**, **příkaz Pozastavit vše** nebo stačí stisknout kombinaci kláves **Ctrl + Alt + Break**.  
+4. Pozastavte ladicí program. V nové instanci aplikace Visual Studio v hlavní nabídce zvolte možnost **ladit**, **přerušit vše** nebo pouze stiskněte **kombinaci kláves CTRL + ALT + BREAK**.  
   
-5. Vytvoření výpisu podprocesu. V příkazovém řádku zadejte následující příkaz a stiskněte klávesu **Enter**.  
+5. Vytvoření výpisu podprocesu. V okno Příkaz zadejte následující příkaz a stiskněte klávesu **ENTER**.  
   
    ```powershell  
    Debug.ListCallStack /AllThreads /ShowExternalCode  

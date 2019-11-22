@@ -12,12 +12,12 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6a821899eb660fb8448b541f9c1be082351dacc6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 989367d395abb56e4f57c4aa2694b5f4ef17fb6e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662586"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300874"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>Postupy: Úprava příkazu standardní nabídky v jazyce specifickém pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -138,7 +138,7 @@ protected override void ProcessOnMenuDeleteCommand()
 
 - `this.CurrentSelection`. Tvar, na který uživatel klikne pravým tlačítkem, je vždy zahrnut v tomto seznamu obrazců a konektorů. Pokud uživatel klikne na prázdnou část diagramu, diagram je jediným členem tohoto seznamu.
 
-- `this.IsDiagramSelected()`  -  `true`, pokud uživatel klikl na prázdnou část diagramu.
+- `this.IsDiagramSelected()` - `true`, pokud uživatel klikl na prázdnou část diagramu.
 
 - `this.IsCurrentDiagramEmpty()`
 
@@ -151,4 +151,4 @@ protected override void ProcessOnMenuDeleteCommand()
   Další informace o tom, jak přejít z prvku na prvek a o tom, jak vytvořit objekty a odkazy, naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
 ## <a name="see-also"></a>Viz také
- <xref:System.ComponentModel.Design.MenuCommand> [psaní kódu pro přizpůsobení jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md) [Postupy: Přidání příkazu do místní nabídky](../modeling/how-to-add-a-command-to-the-shortcut-menu.md) [Návod: získání informací z vybraného odkazu](../misc/walkthrough-getting-information-from-a-selected-link.md) [Jak sady VSPackage přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md) [Visual Studio Příkazová tabulka (. Vsct) soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) [vsct XML Schema Reference](../extensibility/vsct-xml-schema-reference.md) [VMSDK – ukázka diagramů okruhů. Ukázka kódu rozsáhlého vlastního nastavení DSL](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8) [: diagramy okruhů](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+ <xref:System.ComponentModel.Design.MenuCommand> [psaní kódu pro přizpůsobení jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md) [Postupy: Přidání příkazu do místní nabídky](../modeling/how-to-add-a-command-to-the-shortcut-menu.md) [Návod: získání informací z vybraného odkazu](../misc/walkthrough-getting-information-from-a-selected-link.md) [Jak sady VSPackage přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md) [příkazová tabulka sady Visual Studio (. Vsct) soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) [vsct XML Schema Reference](../extensibility/vsct-xml-schema-reference.md)

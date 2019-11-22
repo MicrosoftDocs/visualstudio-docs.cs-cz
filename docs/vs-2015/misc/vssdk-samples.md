@@ -1,5 +1,5 @@
 ---
-title: Ukázky VSSDK | Dokumentace Microsoftu
+title: Ukázky VSSDK | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -7,19 +7,19 @@ ms.topic: conceptual
 ms.assetid: 6aefb510-64cd-4a16-882b-58ada1db02bf
 caps.latest.revision: 17
 manager: jillfra
-ms.openlocfilehash: 47e99e64e96c0572f7b3c9e93c0ee034afcfd9f1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8f5b3ea6b8daef0d1df1110721ec31ef462da924
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63002127"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298175"
 ---
 # <a name="vssdk-samples"></a>Ukázky VSSDK
-Oficiální Domovská stránka pro ukázky rozšiřitelnosti sady Visual Studio je [galerie kódů MSDN](http://go.microsoft.com/fwlink/?LinkID=127810) webu. Lokalita obsahuje úvodní vzorky, ukázky, které ilustrují nové funkce ve Visual Studiu, podrobné informace o dokumentaci, odkazy na sdílené zdroje projekty a jiné prostředky, můžete rozšíření sady Visual Studio. Chcete-li zobrazit seznam těchto prostředků, zadejte **VSX** v **vyhledat ukázky** pole na domovské stránce.  
+Oficiální domovská stránka pro Ukázky rozšiřitelnosti sady Visual Studio je webová stránka [Galerie kódu](https://go.microsoft.com/fwlink/?LinkID=127810) na webu MSDN. Lokalita obsahuje úvodní ukázky, ukázky, které ilustrují nové funkce v sadě Visual Studio, dokumentaci s hloubkou podrobně, odkazy na sdílené zdrojové projekty a další materiály, které vám pomůžou s rozšiřováním sady Visual Studio. Seznam těchto prostředků zobrazíte tak, že do pole **Hledat ukázky** na domovské stránce zadáte **VSX** .  
   
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] SDK ukázky ukazují, jak integrovat rozšíření integrovaného vývojového prostředí (IDE) sady Visual Studio. Adresář se zdrojovým kódem každý ukázky obsahuje dokument s názvem Overview.xml, který obsahuje poznámky k implementaci pro tuto ukázku.  
+ Ukázky [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] SDK ukazují, jak integrovat rozšíření do integrovaného vývojového prostředí (IDE) sady Visual Studio. Adresář zdrojového kódu každé ukázky obsahuje dokument s názvem Overview. XML, který obsahuje poznámky k implementaci pro tuto ukázku.  
   
- Ukázka Ironpythonu je také k dispozici. Je integrován s [projektu IronPython Studio](http://go.microsoft.com/fwlink/?LinkID=183554) na webu CodePlex.  
+ K dispozici je také ukázka Ironpythonu. Je integrován do [projektu aplikace Ironpythonu Studio](https://go.microsoft.com/fwlink/?LinkID=183554) na webu CodePlex.  
   
 ## <a name="see-also"></a>Viz také  
  [Visual Studio SDK](../extensibility/visual-studio-sdk.md)

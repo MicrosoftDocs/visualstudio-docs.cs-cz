@@ -13,17 +13,17 @@ caps.latest.revision: 48
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: d040353aadbc448b6608cd11fc78a134872fdafa
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a146872561c4be5fe48016c17eb64ad6f854106a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65693566"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298023"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>Instalace sady Visual Studio verze vedle sebe
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tuto verzi sady Visual Studio můžete nainstalovat na počítači s již nainstalovanou starší verzí. Pokud dojde k selhání instalace, můžete použít [nástroj pro shromažďování protokolů](http://go.microsoft.com/fwlink/?LinkId=262077) ke shromažďování informací o selhání a tak mohou problémy ladit sami.
+Tuto verzi sady Visual Studio můžete nainstalovat na počítači s již nainstalovanou starší verzí. Pokud dojde k selhání instalace, můžete použít [nástroj pro shromažďování protokolů](https://go.microsoft.com/fwlink/?LinkId=262077) ke shromažďování informací o selhání a tak mohou problémy ladit sami.
 
 > [!NOTE]
 > Doporučujeme, abyste nainstalovali [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] verze v pořadí, ve kterém byly vydány. Například Visual Studio 2013 nainstalujte před instalací sady Visual Studio 2015.
@@ -36,7 +36,7 @@ Tuto verzi sady Visual Studio můžete nainstalovat na počítači s již nainst
 
 - Pokud odinstalujete verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] na počítači, který má více než jedna verze nainstalovaná, přidružení souborů pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] se odeberou pro všechny verze. Přiřazení těchto souborů můžete přemapovat pomocí **obnovit přidružení souborů** tlačítko **prostředí**, **Obecné** stránku [možnosti](../ide/reference/general-environment-options-dialog-box.md) dialogové okno.
 
-- Visual Studio neprovádí automatický upgrade rozšíření vzhledem k tomu, že ne všechna rozšíření jsou kompatibilní. Je třeba přeinstalovat rozšíření od [Visual Studio Marketplace](http://go.microsoft.com/fwlink/?LinkId=178891) nebo vydavatele softwaru.
+- Visual Studio neprovádí automatický upgrade rozšíření vzhledem k tomu, že ne všechna rozšíření jsou kompatibilní. Je třeba přeinstalovat rozšíření od [Visual Studio Marketplace](https://go.microsoft.com/fwlink/?LinkId=178891) nebo vydavatele softwaru.
 
 ## <a name="net-framework-versions-and-side-by-side-installations"></a>Verze rozhraní .NET framework a instalacemi nevyžádaného vedle sebe
 

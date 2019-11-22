@@ -1,5 +1,5 @@
 ---
-title: Propojení úkolů | Dokumentace Microsoftu
+title: Propojit úkol | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -31,898 +31,898 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: efcdbb4f72d47a5044b287f1b40424f5611d6401
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 181c32017a84328037ea46d49698821fa3cb41ea
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65703434"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295882"
 ---
 # <a name="link-task"></a>Úloha odkazu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zabalí nástroj linker Visual C++, link.exe. Nástroj linker k propojení objektových souborů Common Object File Format (COFF) a knihovny, které chcete vytvořit spustitelný soubor (.exe) nebo dynamická knihovna (DLL). Další informace najdete v tématu [možnosti Linkeru](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129).  
+Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje soubory objektů a knihoven Common Object File Format (COFF) a vytvoří spustitelný soubor (. exe) nebo dynamickou knihovnu (DLL). Další informace naleznete v tématu [Možnosti linkeru](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129).  
   
 ## <a name="parameters"></a>Parametry  
- Následující tabulka popisuje parametry **odkaz** úloh. Většinu úkolů parametrů a několik sad parametrů, odpovídají možnost příkazového řádku.  
+ Následující tabulka popisuje parametry úkolu **propojení** . Většina parametrů úlohy a několik sad parametrů odpovídá možnosti příkazového řádku.  
   
 - **AdditionalDependencies**  
   
-   Volitelné **String []** parametru.  
+   Parametr volitelného **řetězce []** .  
   
-   Určuje seznam vstupních souborů přidejte do příkazu.  
+   Určuje seznam vstupních souborů, které mají být přidány do příkazu.  
   
-   Další informace najdete v tématu [vstupní soubory LINK](https://msdn.microsoft.com/library/bb26fcc5-509a-4620-bc3e-b6c6e603a412).  
+   Další informace najdete v tématu [připojení vstupních souborů](https://msdn.microsoft.com/library/bb26fcc5-509a-4620-bc3e-b6c6e603a412).  
   
 - **AdditionalLibraryDirectories**  
   
-   Volitelné **String []** parametru.  
+   Parametr volitelného **řetězce []** .  
   
    Přepíše cestu ke knihovně prostředí. Zadejte název adresáře.  
   
-   Další informace najdete v tématu [/Libpath (další proměnná Libpath)](https://msdn.microsoft.com/library/7240af0b-9a3d-4d53-8169-2a92cd6958ba).  
+   Další informace najdete v tématu [/LIBPATH (Další Libpath)](https://msdn.microsoft.com/library/7240af0b-9a3d-4d53-8169-2a92cd6958ba).  
   
 - **AdditionalManifestDependencies**  
   
-   Volitelné **String []** parametru.  
+   Parametr volitelného **řetězce []** .  
   
-   Určuje atributy, které budou umístěny do `dependency` části souboru manifestu.  
+   Určuje atributy, které budou umístěny v sekci `dependency` souboru manifestu.  
   
-   Další informace najdete v tématu [/MANIFESTDEPENDENCY (určení závislostí manifestu)](https://msdn.microsoft.com/library/e4b68313-33a2-4c3e-908e-ac2b9f7d6a73). Také, naleznete v tématu "Konfiguračních souborů vydavatele" na [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+   Další informace najdete v tématu [/MANIFESTDEPENDENCY (určení závislostí manifestu)](https://msdn.microsoft.com/library/e4b68313-33a2-4c3e-908e-ac2b9f7d6a73). Viz také "konfigurační soubory vydavatele" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
   
 - **AdditionalOptions**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Seznam možností linkeru uvedená na příkazovém řádku. Například **"**_/option1 /option2 /option#_". Tento parametr použijte k určení možnosti linkeru, které nejsou reprezentovány jakýkoli jiný **odkaz** parametr úlohy.  
+   Seznam možností linkeru, jak je uvedeno na příkazovém řádku. Například **"** _/option1/option2/Option #_ ". Pomocí tohoto parametru lze zadat možnosti linkeru, které nejsou reprezentovány žádným jiným parametrem **Propojovací úlohy.**  
   
-   Další informace najdete v tématu [možnosti Linkeru](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129).  
+   Další informace naleznete v tématu [Možnosti linkeru](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129).  
   
 - **AddModuleNamesToAssembly**  
   
-   Volitelné **String []** parametru.  
+   Parametr volitelného **řetězce []** .  
   
-   Přidá odkaz modulu na sestavení.  
+   Přidá do sestavení odkaz na modul.  
   
-   Další informace najdete v tématu [/ASSEMBLYMODULE (Přidání modulu MSIL do sestavení)](https://msdn.microsoft.com/library/67357da8-e4b6-49fd-932c-329a5777f143).  
+   Další informace naleznete v tématu [/ASSEMBLYMODULE (Přidání modulu MSIL do sestavení)](https://msdn.microsoft.com/library/67357da8-e4b6-49fd-932c-329a5777f143).  
   
 - **AllowIsolation**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, způsobí, že operační systém do manifestu vyhledávání a načte. Pokud `false`, označuje, zda jsou načteny knihovny DLL, jako kdyby byl žádný manifest.  
+   Pokud `true`, způsobí, že operační systém provede vyhledání a načtení manifestu. Pokud `false`, označuje, že knihovny DLL jsou načteny, jako kdyby nebyl žádný manifest.  
   
-   Další informace najdete v tématu [/ALLOWISOLATION (vyhledání manifestu)](https://msdn.microsoft.com/library/6d41851e-b3c1-4bdf-beaa-031773089d6f).  
+   Další informace naleznete v tématu [/ALLOWISOLATION (Lookup Manifesting)](https://msdn.microsoft.com/library/6d41851e-b3c1-4bdf-beaa-031773089d6f).  
   
 - **AssemblyDebug**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, generuje **DebuggableAttribute** atribut spolu s ladicí informace o sledování a zakazuje optimalizace JIT. Pokud `false`, generuje **DebuggableAttribute** atribut ale zakáže sledování informací o ladění a povolí optimalizace JIT.  
+   Pokud `true`, vygeneruje atribut **DebuggableAttribute** společně s trasováním informací o ladění a ZAKÁŽE optimalizace JIT. Pokud `false`, vygeneruje atribut **DebuggableAttribute** , ale zakáže sledování ladicích informací a POVOLÍ optimalizace JIT.  
   
-   Další informace najdete v tématu [/assemblydebug (přidání atributu DebuggableAttribute)](https://msdn.microsoft.com/library/94443af3-470c-41d7-83a0-7434563d7982).  
+   Další informace najdete v tématu [/ASSEMBLYDEBUG (Add DebuggableAttribute)](https://msdn.microsoft.com/library/94443af3-470c-41d7-83a0-7434563d7982).  
   
 - **AssemblyLinkResource**  
   
-   Volitelné **String []** parametru.  
+   Parametr volitelného **řetězce []** .  
   
-   Vytvoří odkaz na prostředek rozhraní .NET Framework do výstupního souboru; soubor prostředků není umístěn do výstupního souboru. Zadejte název prostředku.  
+   Vytvoří odkaz na prostředek .NET Framework ve výstupním souboru; zdrojový soubor není umístěný do výstupního souboru. Zadejte název prostředku.  
   
-   Další informace najdete v tématu [/ASSEMBLYLINKRESOURCE (odkaz na prostředek rozhraní .NET Framework)](https://msdn.microsoft.com/library/8b6ad184-1b33-47a4-8513-4803cf915b64).  
+   Další informace najdete v tématu [/ASSEMBLYLINKRESOURCE (odkaz na prostředek .NET Framework)](https://msdn.microsoft.com/library/8b6ad184-1b33-47a4-8513-4803cf915b64).  
   
 - **AttributeFileTracking**  
   
-   Implicitní **logická** parametru.  
+   Implicitní parametr **Boolean**  
   
-   Povolí podrobnější souborů sledování k zachycení odkazu přírůstkové od chování. Vždy vrátí `true`.  
+   Umožňuje hlubší sledování souborů pro funkci přírůstkového propojení při zachytávání. Vždycky vrátí `true`.  
   
 - **BaseAddress**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Nastaví základní adresu pro program nebo knihovnu DLL při sestavování. Zadejte `{address[,size] | @filename,key}`.  
+   Nastaví základní adresu pro sestavení programu nebo knihovny DLL. Zadejte `{address[,size] | @filename,key}`.  
   
-   Další informace najdete v tématu [propojovacího (základní adresa)](https://msdn.microsoft.com/library/00b9f6fe-0bd2-4772-a69c-7365eb199069).  
+   Další informace najdete v tématu [/Base (základní adresa)](https://msdn.microsoft.com/library/00b9f6fe-0bd2-4772-a69c-7365eb199069).  
   
 - **BuildingInIDE**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Hodnota true určuje to, že nástroj MSBuild je vyvolána z rozhraní IDE. V opačném případě označuje, zda nástroj MSBuild je vyvolána z příkazového řádku.  
+   Pokud je nastaveno na true, označuje, že nástroj MSBuild je vyvolán z rozhraní IDE. V opačném případě označuje, že nástroj MSBuild je vyvolán z příkazového řádku.  
   
-   Tento parametr nemá žádný ekvivalent linkeru.  
+   Tento parametr nemá ekvivalentní možnost linkeru.  
   
 - **CLRImageType**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Nastaví typ bitovou kopii common language runtime (CLR).  
+   Nastaví typ image modulu CLR (Common Language Runtime).  
   
-   Zadejte jednu z následujících hodnot, z nichž každý odpovídá možností propojovacího programu.  
+   Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti linkeru.  
   
-  - **Výchozí** - *\<žádné >*  
+  - **Výchozí** -  *\<žádné >*  
   
-  - **ForceIJWImage** - **/CLRIMAGETYPE:IJW**  
+  - **ForceIJWImage** -  **/CLRIMAGETYPE: IJW**  
   
-  - **ForcePureILImage** -   **/CLRIMAGETYPE: PURE**  
+  - **ForcePureILImage** -  **/CLRIMAGETYPE: Pure**  
   
-  - **ForceSafeILImage** - **Safe**  
+  - **ForceSafeILImage** -  **/CLRIMAGETYPE: Safe**  
   
-    Další informace najdete v tématu [/CLRIMAGETYPE (zadat typ z bitové kopie modulu CLR)](https://msdn.microsoft.com/library/04c60ee6-9dd7-4391-bc03-6926ad0fa116).  
+    Další informace najdete v tématu [/CLRIMAGETYPE (určení typu image CLR)](https://msdn.microsoft.com/library/04c60ee6-9dd7-4391-bc03-6926ad0fa116).  
   
 - **CLRSupportLastError**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Zachová poslední kód chyby funkcí volaných mechanismem P/Invoke.  
+   Zachová poslední chybový kód funkcí volaných prostřednictvím mechanismu volání nespravovaného kódu.  
   
-   Zadejte jednu z následujících hodnot, z nichž každý odpovídá možností propojovacího programu.  
+   Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti linkeru.  
   
-  - **Povolené** - **/CLRSupportLastError**  
+  - **Povoleno** -  **/CLRSupportLastError**  
   
-  - **Zakázané** - **/CLRSupportLastError:NO**  
+  - **Disabled** -  **/CLRSupportLastError: No**  
   
-  - **SystemDlls** - **/CLRSupportLastError:SYSTEMDLL**  
+  - **SystemDlls** -  **/CLRSupportLastError: SYSTEMDLL**  
   
-    Další informace najdete v tématu [/CLRSUPPORTLASTERROR (zachování kódu poslední chyby pro volání PInvoke)](https://msdn.microsoft.com/library/b7057990-4154-4b1d-9fc9-6236f7be7575).  
+    Další informace naleznete v tématu [/CLRSUPPORTLASTERROR (zachování kódu poslední chyby pro volání PInvoke)](https://msdn.microsoft.com/library/b7057990-4154-4b1d-9fc9-6236f7be7575).  
   
 - **CLRThreadAttribute**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Explicitně určuje atribut dělení na vlákna pro vstupní bod programu CLR.  
+   Explicitně určuje atribut vlákna pro vstupní bod programu CLR.  
   
-   Zadejte jednu z následujících hodnot, z nichž každý odpovídá možností propojovacího programu.  
+   Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti linkeru.  
   
-  - **DefaultThreadingAttribute** - **/CLRTHREADATTRIBUTE: žádné**  
+  - **DefaultThreadingAttribute** -  **/CLRTHREADATTRIBUTE: žádné**  
   
-  - **MTAThreadingAttribute** - **/CLRTHREADATTRIBUTE:MTA**  
+  - **MTAThreadingAttribute** -  **/CLRTHREADATTRIBUTE: MTA**  
   
-  - **STAThreadingAttribute** - **/CLRTHREADATTRIBUTE:STA**  
+  - **STAThreadingAttribute** -  **/CLRTHREADATTRIBUTE: sta**  
   
-    Další informace najdete v tématu [/CLRTHREADATTRIBUTE (nastavit atribut modulu CLR vlákno)](https://msdn.microsoft.com/library/4907e9ef-5031-446c-aecf-0a0b32fae1e8).  
+    Další informace najdete v tématu [/CLRTHREADATTRIBUTE (nastavení atributu vlákna modulu CLR)](https://msdn.microsoft.com/library/4907e9ef-5031-446c-aecf-0a0b32fae1e8).  
   
 - **CLRUnmanagedCodeCheck**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Určuje, zda linker použije **SuppressUnmanagedCodeSecurityAttribute** linkerem generovaná volání nespravovaného volání ze spravovaného kódu do nativních knihoven DLL.  
+   Určuje, zda linker bude použít **SuppressUnmanagedCodeSecurityAttribute** na volání volání volání nespravovaného kódu do nativních knihoven DLL.  
   
-   Další informace najdete v tématu [/CLRUNMANAGEDCODECHECK (přidat atribut SuppressUnmanagedCodeSecurityAttribute)](https://msdn.microsoft.com/library/73abc426-dab0-45e2-be85-0f9a14206cc2).  
+   Další informace najdete v tématu [/CLRUNMANAGEDCODECHECK (přidání SuppressUnmanagedCodeSecurityAttribute)](https://msdn.microsoft.com/library/73abc426-dab0-45e2-be85-0f9a14206cc2).  
   
 - **CreateHotPatchableImage**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Připravuje obrázek na horké záplatování.  
+   Připraví obrázek pro Hot patching.  
   
-   Zadejte jednu z následujících hodnot, které odpovídá možností propojovacího programu.  
+   Zadejte jednu z následujících hodnot, která odpovídá možnosti linkeru.  
   
-  - **Povolené** - **/FUNCTIONPADMIN**  
+  - **Povoleno** -  **/functionpadmin**  
   
-  - **X86Image** - **/FUNCTIONPADMIN:5**  
+  - **X86Image** -  **/functionpadmin: 5**  
   
-  - **X64Image** - **/FUNCTIONPADMIN:6**  
+  - **X64Image** -  **/functionpadmin: 6**  
   
-  - **ItaniumImage** - **/FUNCTIONPADMIN:16**  
+  - **ItaniumImage** -  **/functionpadmin: 16**  
   
-    Další informace najdete v tématu [/FUNCTIONPADMIN (vytvoření Image vyměnitelné za provozu)](https://msdn.microsoft.com/library/25b02c13-1add-4fbd-add9-fcb30eb2cae7).  
+    Další informace najdete v tématu [/functionpadmin (Create opravitelnou za provozu image)](https://msdn.microsoft.com/library/25b02c13-1add-4fbd-add9-fcb30eb2cae7).  
   
 - **DataExecutionPrevention**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, označuje, že spustitelný soubor byl testován jako kompatibilní s funkcí Zabránění spuštění dat Windows.  
+   Pokud `true`, označuje, že spustitelný soubor byl testován tak, aby byl kompatibilní s funkcí Zabránění spuštění dat systému Windows.  
   
-   Další informace najdete v tématu [/NXCOMPAT (kompatibilní s předcházením spuštění dat)](https://msdn.microsoft.com/library/5858e7ff-24d3-4ac3-9046-af2c9e220d9b).  
+   Další informace najdete v tématu [/NXCOMPAT (kompatibilní se zabráněním spuštění dat)](https://msdn.microsoft.com/library/5858e7ff-24d3-4ac3-9046-af2c9e220d9b).  
   
 - **DelayLoadDLLs**  
   
-   Volitelné **String []** parametru.  
+   Parametr volitelného **řetězce []** .  
   
-   Způsobí, že tento parametr *s odloženým načtením* knihoven DLL. Zadejte název knihovny DLL pro odložené načtení.  
+   Tento parametr způsobí *opožděné načtení* knihoven DLL. Zadejte název knihovny DLL pro odložené načtení.  
   
-   Další informace najdete v tématu [/delayload (Import odloženého načtení)](https://msdn.microsoft.com/library/39ea0f1e-5c01-450f-9c75-2d9761ff9b28).  
+   Další informace najdete v tématu [/DELAYLOAD (import zpožděného načtení)](https://msdn.microsoft.com/library/39ea0f1e-5c01-450f-9c75-2d9761ff9b28).  
   
 - **DelaySign**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, částečně podepíše sestavení. Výchozí hodnota je `false`.  
+   Pokud `true`, částečně podepíše sestavení. Ve výchozím nastavení je hodnota `false`.  
   
-   Další informace najdete v tématu [/delaysign (částečně podepsání sestavení)](https://msdn.microsoft.com/library/15244d30-3ecb-492f-a408-ffe81f38de20).  
+   Další informace naleznete v tématu [/delaysign (částečné podepsání sestavení)](https://msdn.microsoft.com/library/15244d30-3ecb-492f-a408-ffe81f38de20).  
   
 - **Ovladač**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Zadejte tento parametr k vytvoření ovladač režimu jádra Windows NT.  
+   Zadáním tohoto parametru sestavíte ovladač režimu jádra systému Windows NT.  
   
-   Zadejte jednu z následujících hodnot, z nichž každý odpovídá možností propojovacího programu.  
+   Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti linkeru.  
   
-  - **NotSet** - *\<none>*  
+  - **NotSet** -  *\<none>*  
   
-  - **Ovladač** - **Driver/Driver**  
+  - **/Driver** **ovladače** -   
   
-  - **UpOnly** - **/DRIVER:UPONLY**  
+  - **Pouze** -  **/Driver: pouze** pro  
   
-  - **WDM** - **/DRIVER:WDM**  
+  - **Wdm** -  **/Driver: WDM**  
   
-    Další informace najdete v tématu [Driver/Driver (ovladač režimu jádra Windows NT)](https://msdn.microsoft.com/library/aeee8e28-5d97-40f5-ba16-9f370fe8a1b8).  
+    Další informace najdete v tématu [/Driver (ovladač režimu jádra Windows NT)](https://msdn.microsoft.com/library/aeee8e28-5d97-40f5-ba16-9f370fe8a1b8).  
   
 - **EmbedManagedResourceFile**  
   
-   Volitelné **String []** parametru.  
+   Parametr volitelného **řetězce []** .  
   
-   Vloží soubor prostředků v sestavení. Zadejte název souboru požadovaný prostředek. Volitelně zadejte logický název, který slouží k načtení prostředku, a **PRIVÁTNÍ** možnost, která označuje v manifestu sestavení, že soubor prostředků je privátní.  
+   Vloží soubor prostředků do sestavení. Zadejte požadovaný název souboru prostředků. Volitelně můžete zadat logický název, který se používá k načtení prostředku, a možnost **Private** , která označuje manifest sestavení, že soubor prostředků je privátní.  
   
-   Další informace najdete v tématu [narozdíl od (vložení spravovaného prostředku)](https://msdn.microsoft.com/library/0ce6e1fb-921b-4b1b-a59c-d35388d789f2).  
+   Další informace najdete v tématu [/ASSEMBLYRESOURCE (vložení spravovaného prostředku)](https://msdn.microsoft.com/library/0ce6e1fb-921b-4b1b-a59c-d35388d789f2).  
   
 - **EnableCOMDATFolding**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, povoluje skládání identických sekvencí COMDAT.  
+   Pokud `true`, povolí identické skládání COMDAT.  
   
-   Další informace najdete v tématu `ICF[= iterations]` argument [/OPT (optimalizace)](https://msdn.microsoft.com/library/8f229863-5f53-48a8-9478-243a647093ac).  
+   Další informace najdete v argumentu `ICF[= iterations]` [/opt (optimalizace)](https://msdn.microsoft.com/library/8f229863-5f53-48a8-9478-243a647093ac).  
   
 - **EnableUAC**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, určuje, že informace o řízení uživatelských účtů (UAC) je vloženy do manifestu.  
+   Pokud `true`, určuje, že informace nástroje řízení uživatelských účtů (UAC) budou vloženy do manifestu programu.  
   
-   Další informace najdete v tématu [/MANIFESTUAC (vložené informace UAC v manifestu)](https://msdn.microsoft.com/library/2d243c39-fa13-493c-b56f-d0d972a1603a).  
+   Další informace naleznete v tématu [/MANIFESTUAC (vložení informací o nástroji Řízení uživatelských účtů v manifestu)](https://msdn.microsoft.com/library/2d243c39-fa13-493c-b56f-d0d972a1603a).  
   
 - **EntryPointSymbol**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Určuje funkci vstupního bodu jako počáteční adresu souboru .exe nebo knihovny DLL. Zadejte název funkce jako hodnotu parametru.  
+   Určuje funkci vstupního bodu jako počáteční adresu souboru. exe nebo knihovny DLL. Jako hodnotu parametru zadejte název funkce.  
   
-   Další informace najdete v tématu [/Entry (Symbol vstupního bodu)](https://msdn.microsoft.com/library/26c62ba2-4f52-4882-a7bd-7046a0abf445).  
+   Další informace naleznete v tématu [/entry (symbol vstupního bodu)](https://msdn.microsoft.com/library/26c62ba2-4f52-4882-a7bd-7046a0abf445).  
   
 - **FixedBaseAddress**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, vytvoří program nebo knihovnu DLL, který lze načíst pouze na jeho upřednostňované základní adrese.  
+   Pokud `true`, vytvoří program nebo knihovnu DLL, které se dají načíst jenom na upřednostňovanou základní adresu.  
   
    Další informace najdete v tématu [/fixed (pevná základní adresa)](https://msdn.microsoft.com/library/929bba5e-b7d8-40ed-943e-056aa3710fc5).  
   
 - **ForceFileOutput**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Říká linkeru, aby vytvořil soubor platný .exe nebo knihovny DLL i v případě, že symbol se odkazuje ale není definované nebo je vynásobit definované.  
+   Instruuje linker, aby vytvořil platný soubor. exe nebo knihovnu DLL i v případě, že se na symbol odkazuje, ale není definován, nebo je definován násobek.  
   
-   Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.  
+   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-  - **Povolené** -   **/FORCE**  
+  - **Povoleno** -  **/Force**  
   
-  - **MultiplyDefinedSymbolOnly** - **/FORCE:MULTIPLE**  
+  - **MultiplyDefinedSymbolOnly** -  **/Force: více**  
   
-  - **UndefinedSymbolOnly** -   **/FORCE: NEROZPOZNANÝ**  
+  - **UndefinedSymbolOnly** -  **/Force: nevyřešené**  
   
     Další informace najdete v tématu [/Force (vynucení výstupu souboru)](https://msdn.microsoft.com/library/b1e9a218-a5eb-4e60-a4a4-65b4be15e5da).  
   
 - **ForceSymbolReferences**  
   
-   Volitelné **String []** parametru.  
+   Parametr volitelného **řetězce []** .  
   
-   Tento parametr přikazuje linkeru, aby přidal zadaný symbol do tabulky symbolů.  
+   Tento parametr oznamuje linkeru, aby přidal zadaný symbol do tabulky symbolů.  
   
-   Další informace najdete v tématu [parametr/include (vynucení odkazů na symboly)](https://msdn.microsoft.com/library/4a039677-360a-480f-bd0b-448e239b449c).  
+   Další informace naleznete v tématu [/include (vynucení odkazů na symboly)](https://msdn.microsoft.com/library/4a039677-360a-480f-bd0b-448e239b449c).  
   
 - **FunctionOrder**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Tento parametr optimalizuje program tak, že zadaný zabalených funkcí (sekvence Comdat) do bitové kopie v předurčeném pořadí.  
+   Tento parametr optimalizuje program tím, že do bitové kopie umístí zadané zabalené funkce (sekvence COMDAT) do obrazu v předdefinovaném pořadí.  
   
-   Další informace najdete v tématu [/Order (Put funkcí v pořadí)](https://msdn.microsoft.com/library/ecf5eb3e-e404-4e86-9a91-4e5ec157261a).  
+   Další informace najdete v tématu [/Order (vložení funkcí v pořadí)](https://msdn.microsoft.com/library/ecf5eb3e-e404-4e86-9a91-4e5ec157261a).  
   
 - **GenerateDebugInformation**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, vytvoří ladicí informace pro soubor .exe nebo knihovny DLL.  
+   Pokud `true`, vytvoří informace o ladění pro soubor. exe nebo knihovnu DLL.  
   
-   Další informace najdete v tématu [/Debug (Generovat ladicí informace)](https://msdn.microsoft.com/library/1af389ae-3f8b-4d76-a087-1cdf861e9103).  
+   Další informace najdete v tématu [/Debug (generování informací o ladění)](https://msdn.microsoft.com/library/1af389ae-3f8b-4d76-a087-1cdf861e9103).  
   
 - **GenerateManifest**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, vytvoří soubor manifestu vedle sebe.  
+   Pokud `true`, vytvoří soubor souběžného manifestu.  
   
-   Další informace najdete v tématu [volbu/manifest (vytvoření Side-by-Side manifestu sestavení)](https://msdn.microsoft.com/library/98c52e1e-712c-4f49-b149-4d0a3501b600).  
+   Další informace naleznete v tématu [/manifest (Vytvoření manifestu souběžného sestavení)](https://msdn.microsoft.com/library/98c52e1e-712c-4f49-b149-4d0a3501b600).  
   
 - **GenerateMapFile**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, vytvoří *souboru s mapováním*. Přípona názvu souboru souboru s mapováním je .map.  
+   Pokud `true`, vytvoří *soubor mapy*. Přípona názvu souboru souboru mapy je. map.  
   
    Další informace najdete v tématu [parametr/map (generování souboru mapování)](https://msdn.microsoft.com/library/9ccce53d-4e36-43da-87b0-7603ddfdea63).  
   
 - **HeapCommitSize**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Určuje množství fyzické paměti v haldě přidělit najednou.  
+   Určuje velikost fyzické paměti v haldě, která se má přidělit v čase.  
   
-   Další informace najdete v tématu `commit` argument v [/HEAP (nastavení velikosti haldy)](https://msdn.microsoft.com/library/a3f71927-7f1d-492c-9fdb-dfccb1a043da). Další informace naleznete **HeapReserveSize** parametru.  
+   Další informace najdete v argumentu `commit` v [/Heap (nastavení velikosti haldy)](https://msdn.microsoft.com/library/a3f71927-7f1d-492c-9fdb-dfccb1a043da). Další informace najdete také v parametru **HeapReserveSize** .  
   
 - **HeapReserveSize**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Určuje celkový počet haldy ve virtuální paměti.  
+   Určuje celkové přidělení haldy ve virtuální paměti.  
   
-   Další informace najdete v tématu `reserve` argument v [/HEAP (nastavení velikosti haldy)](https://msdn.microsoft.com/library/a3f71927-7f1d-492c-9fdb-dfccb1a043da). Další informace naleznete **HeapCommitSize** parametr v této tabulce.  
+   Další informace najdete v argumentu `reserve` v [/Heap (nastavení velikosti haldy)](https://msdn.microsoft.com/library/a3f71927-7f1d-492c-9fdb-dfccb1a043da). Viz také parametr **HeapCommitSize** v této tabulce.  
   
 - **IgnoreAllDefaultLibraries**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, říká linkeru, aby odebral jednu nebo více výchozích knihoven ze seznamu knihoven prohledává při překladu externích odkazů.  
+   Pokud `true`, přikáže linkeru, aby odebral jednu nebo více výchozích knihoven ze seznamu knihoven, které vyhledává, když přeloží externí odkazy.  
   
-   Další informace najdete v tématu [: / NODEFAULTLIB (ignorování knihoven)](https://msdn.microsoft.com/library/7270b673-6711-468e-97a7-c2925ac2be6e).  
+   Další informace najdete v tématu [/NODEFAULTLIB (ignorování knihoven)](https://msdn.microsoft.com/library/7270b673-6711-468e-97a7-c2925ac2be6e).  
   
 - **IgnoreEmbeddedIDL**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, určuje, že atributy IDL ve zdrojovém kódu nemají být zpracovány do souboru IDL.  
+   Pokud `true`, určuje, že žádné atributy IDL ve zdrojovém kódu by neměly být zpracovány do souboru. idl.  
   
-   Další informace najdete v tématu [/IGNOREIDL (není procesu atributy do MIDL)](https://msdn.microsoft.com/library/29514098-6a1c-4317-af2f-1dc268972780).  
+   Další informace naleznete v tématu [/IGNOREIDL (Nezpracovávat atributy do MIDL)](https://msdn.microsoft.com/library/29514098-6a1c-4317-af2f-1dc268972780).  
   
 - **IgnoreImportLibrary**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, určuje, že knihovna importů generovaná touto konfigurací by neměla být importována do závislých projektů.  
+   Pokud `true`, určuje, že knihovna importu vygenerovaná touto konfigurací by neměla být importována do závislých projektů.  
   
-   Tento parametr neodpovídá možností propojovacího programu.  
+   Tento parametr neodpovídá Možnosti linkeru.  
   
 - **IgnoreSpecificDefaultLibraries**  
   
-   Volitelné **String []** parametru.  
+   Parametr volitelného **řetězce []** .  
   
-   Určuje jeden nebo více názvů výchozích knihoven k ignorování. Více knihoven oddělte středníkem.  
+   Určuje jeden nebo více názvů výchozích knihoven, které se mají ignorovat. Více knihoven oddělte středníkem.  
   
-   Další informace najdete v tématu [: / NODEFAULTLIB (ignorování knihoven)](https://msdn.microsoft.com/library/7270b673-6711-468e-97a7-c2925ac2be6e).  
+   Další informace najdete v tématu [/NODEFAULTLIB (ignorování knihoven)](https://msdn.microsoft.com/library/7270b673-6711-468e-97a7-c2925ac2be6e).  
   
 - **ImageHasSafeExceptionHandlers**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, linker vytvoří bitovou kopii pouze v případě, že můžete také vytvořit tabulku na obrázku bezpečných obslužných rutin výjimek.  
+   Pokud `true`, linker vytvoří obrázek pouze v případě, že může také vytvořit tabulku bezpečných obslužných rutin výjimek pro image.  
   
-   Další informace najdete v tématu [/SAFESEH (bitová kopie má bezpečné obslužné rutiny výjimek)](https://msdn.microsoft.com/library/7722ff99-b833-4c65-a855-aaca902ffcb7).  
+   Další informace naleznete v tématu [/SAFESEH (Image má bezpečné obslužné rutiny výjimek)](https://msdn.microsoft.com/library/7722ff99-b833-4c65-a855-aaca902ffcb7).  
   
 - **ImportLibrary**  
   
-   Název knihovny importu zadané uživatelem, který nahrazuje výchozí název knihovny.  
+   Uživatelem zadaný název knihovny importu, který nahradí výchozí název knihovny.  
   
    Další informace najdete v tématu [/IMPLIB (pojmenování knihovny importu)](https://msdn.microsoft.com/library/fe8f71ab-7055-41b5-8ef8-2b97cfa4a432).  
   
 - **KeyContainer**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
    Kontejner, který obsahuje klíč pro podepsané sestavení.  
   
-   Další informace najdete v tématu [/keycontainer (určení kontejneru klíčů pro podpis sestavení)](https://msdn.microsoft.com/library/94882d12-b77a-49c7-96d0-18a31aee001e). Další informace naleznete **KeyFile** parametr v této tabulce.  
+   Další informace naleznete v tématu [/keycontainer (určení kontejneru klíčů pro podepsání sestavení)](https://msdn.microsoft.com/library/94882d12-b77a-49c7-96d0-18a31aee001e). Podívejte se také na parametr **keyfile** v této tabulce.  
   
 - **KeyFile**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
    Určuje soubor, který obsahuje klíč pro podepsané sestavení.  
   
-   Další informace najdete v tématu [/keyfile (zadat klíč nebo dvojici klíč k podepsání sestavení)](https://msdn.microsoft.com/library/9b71f8c0-541c-4fe5-a0c7-9364f42ecb06). Další informace naleznete **KeyContainer** parametru.  
+   Další informace naleznete v tématu [/keyfile (určení klíče nebo páru klíčů pro podepsání sestavení)](https://msdn.microsoft.com/library/9b71f8c0-541c-4fe5-a0c7-9364f42ecb06). Podívejte se také na parametr **obsahuje** .  
   
 - **LargeAddressAware**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, že aplikace dokáže zpracovat adresy větší než 2 GB.  
+   Pokud `true`, aplikace může zpracovávat adresy větší než 2 gigabajty.  
   
    Další informace najdete v tématu [/LARGEADDRESSAWARE (zpracování velkých adres)](https://msdn.microsoft.com/library/a29756c8-e893-47a9-9750-1f0d25359385).  
   
 - **LinkDLL**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, sestavení a knihovny DLL jako hlavní výstupního souboru.  
+   Pokud `true`, aplikace vytvoří knihovnu DLL jako hlavní výstupní soubor.  
   
-   Další informace najdete v tématu [/DLL (sestavení knihovny DLL)](https://msdn.microsoft.com/library/c7685aec-31d0-490f-9503-fb5171a23609).  
+   Další informace naleznete v tématu [/DLL (sestavení knihovny DLL)](https://msdn.microsoft.com/library/c7685aec-31d0-490f-9503-fb5171a23609).  
   
 - **LinkErrorReporting**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Umožňuje poskytnout informace o kompilátoru vnitřní chybě (ICE) přímo společnosti Microsoft.  
+   Umožňuje poskytnout informace o vnitřní chybě kompilátoru (ICE) přímo společnosti Microsoft.  
   
-   Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.  
+   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-  - **NoErrorReport** -   **/errorreport: žádné**  
+  - **NoErrorReport** -  **/errorreport: none**  
   
-  - **PromptImmediately** - **/ERRORREPORT:PROMPT**  
+  - **Vyzvat okamžitě** -  **/errorreport: prompt**  
   
-  - **QueueForNextLogin** - **/ERRORREPORT:QUEUE**  
+  - **QueueForNextLogin** -  **/ERRORREPORT:QUEUE**  
   
-  - **SendErrorReport** -   **/errorreport: Send**  
+  - **SendErrorReport** -  **/errorreport: Send**  
   
-    Další informace najdete v tématu [/errorreport (sestava interními chybami Linkeru)](https://msdn.microsoft.com/library/f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28).  
+    Další informace najdete v tématu [/errorreport (hlášení chyb interního linkeru)](https://msdn.microsoft.com/library/f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28).  
   
 - **LinkIncremental**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
    Pokud `true`, umožňuje přírůstkové propojení.  
   
-   Další informace najdete v tématu [Parametr/incremental (Inkrementální odkaz)](https://msdn.microsoft.com/library/135656ff-94fa-4ad4-a613-22e1a2a5d16b).  
+   Další informace najdete v tématu [/incremental (propojování přírůstkově)](https://msdn.microsoft.com/library/135656ff-94fa-4ad4-a613-22e1a2a5d16b).  
   
 - **LinkLibraryDependencies**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, určuje, že knihovny vytvořené jako výstupy závislostí projektu automaticky připojeny.  
+   Pokud `true`, určuje, že výstupy knihoven ze závislostí projektu jsou automaticky propojeny v.  
   
-   Tento parametr neodpovídá možností propojovacího programu.  
+   Tento parametr neodpovídá Možnosti linkeru.  
   
 - **LinkStatus**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, určuje, zda linker zobrazit ukazatel průběhu, který ukazuje, jaké je procento odkazu je dokončena.  
+   Pokud `true`, určuje, že linker má zobrazit indikátor průběhu, který ukazuje, jaké procento odkazu je dokončeno.  
   
-   Další informace najdete v tématu `STATUS` argument [parametru/LTCG (generování kódu při propojování odkaz)](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2).  
+   Další informace naleznete v argumentu `STATUS` [/LTCG (generování kódu při propojování)](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2).  
   
 - **LinkTimeCodeGeneration**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Určuje možnosti pro optimalizace na základě profilu.  
+   Určuje možnosti optimalizace na základě profilu.  
   
-   Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.  
+   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-  - **Výchozí** - *\<žádné >*  
+  - **Výchozí** -  *\<žádné >*  
   
-  - **UseLinkTimeCodeGeneration** - **/LTCG**  
+  - **UseLinkTimeCodeGeneration** -  **/LTCG**  
   
-  - **PGInstrument** - **/LTCG:PGInstrument**  
+  - **PGInstrument** -  **/LTCG: PGInstrument**  
   
-  - **PGOptimization** - **/LTCG:PGOptimize**  
+  - **PGOptimization** -  **/LTCG: PGOptimize**  
   
   - **PGUpdate**  
   
      \- **/LTCG:PGUpdate**  
   
-    Další informace najdete v tématu [parametru/LTCG (generování kódu při propojování odkaz)](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2).  
+    Další informace naleznete v tématu [/LTCG (generování kódu při propojování)](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2).  
   
 - **ManifestFile**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Mění název výchozího souboru manifestu pro zadaný název souboru.  
+   Změní výchozí název souboru manifestu na zadaný název souboru.  
   
-   Další informace najdete v tématu [manifestfile (pojmenování souboru manifestu)](https://msdn.microsoft.com/library/befa5ab2-a9cf-4c9b-969a-e7b4a930f08d).  
+   Další informace naleznete v tématu [/MANIFESTFILE (název souboru manifestu)](https://msdn.microsoft.com/library/befa5ab2-a9cf-4c9b-969a-e7b4a930f08d).  
   
 - **MapExports**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, přikazuje linkeru začlenit exportované funkce v souboru mapy.  
+   Pokud `true`, instruuje linker, aby zahrnoval exportované funkce v souboru mapy.  
   
-   Další informace najdete v tématu `EXPORTS` argument [parametr/MapInfo (zahrnout informace do souboru mapování)](https://msdn.microsoft.com/library/533d2bce-f9b7-4fea-ae1c-0b4864c9d10b).  
+   Další informace najdete v argumentu `EXPORTS` [/MapInfo (zahrnutí informací v souboru mapování)](https://msdn.microsoft.com/library/533d2bce-f9b7-4fea-ae1c-0b4864c9d10b).  
   
 - **MapFileName**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Výchozí název souboru mapy se změní na zadaný název souboru.  
+   Změní výchozí název souboru mapy na zadaný název souboru.  
   
 - **MergedIDLBaseFileName**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Určuje název souboru a příponu souboru IDL.  
+   Určuje název souboru a příponu názvu souboru. idl.  
   
-   Další informace najdete v tématu [/IDLOUT (název výstupních souborů MIDL)](https://msdn.microsoft.com/library/10d00a6a-85b4-4de1-8732-e422c6931509).  
+   Další informace naleznete v tématu [/IDLOUT (pojmenování výstupních souborů MIDL)](https://msdn.microsoft.com/library/10d00a6a-85b4-4de1-8732-e422c6931509).  
   
 - **MergeSections**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Kombinuje oddíly v obraze. Zadejte `from-section=to-section`.  
+   Kombinuje oddíly v obrázku. Zadejte `from-section=to-section`.  
   
-   Další informace najdete v tématu [/Merge (kombinovat oddílů)](https://msdn.microsoft.com/library/10fb20c2-0b3f-4c8d-98a8-f69aedf03d52).  
+   Další informace naleznete v tématu [/merge (kombinování oddílů)](https://msdn.microsoft.com/library/10fb20c2-0b3f-4c8d-98a8-f69aedf03d52).  
   
 - **MidlCommandFile**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Zadejte název souboru, který obsahuje parametry příkazového řádku MIDL.  
+   Zadejte název souboru, který obsahuje možnosti příkazového řádku MIDL.  
   
-   Další informace najdete v tématu [/MIDL (určení možností příkazového řádku MIDL)](https://msdn.microsoft.com/library/22dc259e-b34c-4ed3-a380-4beb734482c1).  
+   Další informace naleznete v tématu [/MIDL (určení možností příkazového řádku MIDL)](https://msdn.microsoft.com/library/22dc259e-b34c-4ed3-a380-4beb734482c1).  
   
 - **MinimumRequiredVersion**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Určuje minimální požadovanou verzi subsystému. Argumenty jsou desetinná čísla v rozsahu 0 až 65535.  
+   Určuje minimální požadovanou verzi subsystému. Argumenty jsou desítková čísla v rozsahu 0 až 65535.  
   
 - **ModuleDefinitionFile**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Určuje název [soubor definice modulu](https://msdn.microsoft.com/library/08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8).  
+   Určuje název [souboru definice modulu](https://msdn.microsoft.com/library/08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8).  
   
-   Další informace najdete v tématu [def (zadat soubor definice modulu)](https://msdn.microsoft.com/library/6497fa68-65f0-48ca-8f66-b87166fc631a).  
+   Další informace najdete v tématu [/def (určení souboru definice modulu)](https://msdn.microsoft.com/library/6497fa68-65f0-48ca-8f66-b87166fc631a).  
   
 - **MSDOSStubFileName**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Připojí zadaný zástupný program MS-DOS k programu Win32.  
+   Připojí zadaný program pro zástupné procedury systému MS-DOS k programu Win32.  
   
-   Další informace najdete v tématu [/stub (název souboru zástupného kódu MS-DOS zástupné procedury)](https://msdn.microsoft.com/library/65221ffe-4f9a-4a14-ac69-3cfb79b40b5f).  
+   Další informace najdete v tématu [/stub (název souboru zástupného kódu MS-DOS)](https://msdn.microsoft.com/library/65221ffe-4f9a-4a14-ac69-3cfb79b40b5f).  
   
 - **NoEntryPoint**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, určuje knihovnu DLL pouze prostředků.  
+   Pokud `true`, určuje knihovnu DLL pouze pro prostředky.  
   
-   Další informace najdete v tématu [NOENTRY (bez vstupního bodu)](https://msdn.microsoft.com/library/0214dd41-35ad-43ab-b892-e636e038621a).  
+   Další informace najdete v tématu [/NOENTRY (bez vstupního bodu)](https://msdn.microsoft.com/library/0214dd41-35ad-43ab-b892-e636e038621a).  
   
 - **ObjectFiles**  
   
-   Implicitní **String []** parametru.  
+   Parametr implicitního **řetězce []** .  
   
    Určuje soubory objektů, které jsou propojeny.  
   
 - **OptimizeReferences**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
    Pokud `true`, eliminuje funkce nebo data, která nejsou nikdy odkazována.  
   
-   Další informace najdete v tématu `REF` argument v [/OPT (optimalizace)](https://msdn.microsoft.com/library/8f229863-5f53-48a8-9478-243a647093ac).  
+   Další informace najdete v argumentu `REF` v [/opt (optimalizace)](https://msdn.microsoft.com/library/8f229863-5f53-48a8-9478-243a647093ac).  
   
 - **OutputFile**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
    Přepíše výchozí název a umístění programu, který vytvoří linker.  
   
-   Další informace najdete v tématu [/OUT (název výstupního souboru)](https://msdn.microsoft.com/library/976210a4-e51f-4cfb-af5e-c16344455834).  
+   Další informace naleznete v tématu [/out (název výstupního souboru)](https://msdn.microsoft.com/library/976210a4-e51f-4cfb-af5e-c16344455834).  
   
 - **PerUserRedirection**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true` a je povolen výstup registru, vynutí registru zapisuje do **HKEY_CLASSES_ROOT** přesměrovat na **HKEY_CURRENT_USER**.  
+   Pokud je povolený výstup `true` a registru, vynutí **HKEY_CLASSES_ROOT** přesměrování zápisy registru do **HKEY_CURRENT_USER**.  
   
 - **PreprocessOutput**  
   
-   Volitelné `ITaskItem[]` parametru.  
+   Volitelný parametr `ITaskItem[]`.  
   
-   Definuje pole objektů preprocesoru výstupní položky, které lze používat a, protože ho vygeneroval úlohy.  
+   Definuje pole výstupních položek preprocesoru, které mohou být spotřebovány a generovány úlohami.  
   
 - **PreventDllBinding**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, tak Bind.exe informaci, že by neměl být vázána propojený obrázek.  
+   Pokud `true`, označuje, že se má svázat. exe, že by se neměla svázat propojený obrázek.  
   
-   Další informace najdete v tématu [/ALLOWBIND (zabránit DLL vazby)](https://msdn.microsoft.com/library/30e37e24-12e4-407e-988a-39d357403598).  
+   Další informace naleznete v tématu [/ALLOWBIND (zabránění vazbě knihoven DLL)](https://msdn.microsoft.com/library/30e37e24-12e4-407e-988a-39d357403598).  
   
-- **Profile**  
+- **Profilu**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, vytvoří výstupní soubor, který lze použít s **nástroje pro měření výkonu** profileru.  
+   Pokud `true`, vytvoří výstupní soubor, který se dá použít s profilerem **Performance Tools** .  
   
-   Další informace najdete v tématu [/Profile (Profiler nástrojů výkonu)](https://msdn.microsoft.com/library/e676baa1-5063-47a3-a357-ba0d1f0d1699).  
+   Další informace najdete v tématu [/Profile (Performance Tools profiler)](https://msdn.microsoft.com/library/e676baa1-5063-47a3-a357-ba0d1f0d1699).  
   
 - **ProfileGuidedDatabase**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Určuje název souboru .pgd, který se použije k ukládání informací o spuštění programu  
+   Určuje název souboru. PGD, který se použije k uložení informací o spuštěném programu.  
   
-   Další informace najdete v tématu [/PGD (určení databáze pro optimalizace Profile-Guided)](https://msdn.microsoft.com/library/9f312498-493b-461f-886f-92652257e443).  
+   Další informace najdete v tématu [/PGD (určení databáze pro optimalizace na základě profilu)](https://msdn.microsoft.com/library/9f312498-493b-461f-886f-92652257e443).  
   
 - **ProgramDatabaseFile**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Určuje název databáze programu (PDB), který vytvoří linker.  
+   Určuje název pro databázi programu (PDB), kterou linker vytvoří.  
   
-   Další informace najdete v tématu [/pdb (použití databáze programu)](https://msdn.microsoft.com/library/d23db0ce-10cb-427a-bc60-d6b2a852723d).  
+   Další informace najdete v tématu [/PDB (použití databáze programu)](https://msdn.microsoft.com/library/d23db0ce-10cb-427a-bc60-d6b2a852723d).  
   
 - **RandomizedBaseAddress**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, generuje spustitelnou bitovou kopii, která lze náhodně změnit základ v okamžiku načtení pomocí *náhodného generování rozložení prostoru adres* (technologie ASLR) funkce systému Windows.  
+   Pokud `true`, nástroj vygeneruje spustitelnou bitovou kopii, která se dá náhodně využít při načítání, pomocí funkce ASLR ( *Address Space Layout layout* ) systému Windows.  
   
-   Další informace najdete v tématu [možnost/DynamicBase (použití adres náhodného generování rozložení prostoru)](https://msdn.microsoft.com/library/6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2).  
+   Další informace najdete v tématu [/DYNAMICBASE (použití náhodnosti rozložení adresního prostoru)](https://msdn.microsoft.com/library/6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2).  
   
 - **RegisterOutput**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
    Pokud `true`, zaregistruje primární výstup tohoto sestavení.  
   
-- **SectionAlignment**  
+- **Zarovnání oddílu**  
   
-   Volitelné **celé číslo** parametru.  
+   Volitelný **celočíselný** parametr  
   
-   Určuje zarovnání jednotlivých oddílů uvnitř lineárního adresního prostoru programu. Hodnota tohoto parametru je jednotka počet bajtů a je mocninou čísla 2.  
+   Určuje zarovnání jednotlivých oddílů v rámci lineárního adresního prostoru programu. Hodnota parametru je jednotkový počet bajtů a je mocninou dvou.  
   
    Další informace najdete v tématu [/align (zarovnání oddílů)](https://msdn.microsoft.com/library/f2f8ac24-e90e-4bea-8205-f2960a3b1740).  
   
-- **SetChecksum**  
+- **SetChecksum –**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, nastaví kontrolní součet v hlavičce souboru .exe.  
+   Pokud `true`, nastaví kontrolní součet v hlavičce souboru. exe.  
   
-   Další informace najdete v tématu [/Release (nastavení kontrolního součtu)](https://msdn.microsoft.com/library/93bcadf4-29ac-4824-914b-6997e3751d22).  
+   Další informace naleznete v tématu [/release (Nastavení kontrolního součtu)](https://msdn.microsoft.com/library/93bcadf4-29ac-4824-914b-6997e3751d22).  
   
 - **ShowProgress**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Určuje úroveň podrobností sestav průběhu pro operace propojení.  
+   Určuje podrobnosti o sestavách průběhu operace propojení.  
   
-   Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.  
+   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-  - **NotSet** - *\<none>*  
+  - **NotSet** -  *\<none>*  
   
-  - **LinkVerbose** - **/VERBOSE**  
+  - **LinkVerbose** -  **/VERBOSE**  
   
-  - **LinkVerboseLib** - **/VERBOSE:Lib**  
+  - **LinkVerboseLib** -  **/VERBOSE:Lib**  
   
-  - **LinkVerboseICF** - **/VERBOSE:ICF**  
+  - **LinkVerboseICF** -  **/VERBOSE:ICF**  
   
-  - **LinkVerboseREF** - **/VERBOSE:REF**  
+  - **LinkVerboseREF** -  **/VERBOSE:REF**  
   
-  - **LinkVerboseSAFESEH** - **/VERBOSE:SAFESEH**  
+  - **LinkVerboseSAFESEH** -  **/VERBOSE:SAFESEH**  
   
-  - **LinkVerboseCLR** - **/VERBOSE:CLR**  
+  - **LinkVerboseCLR** -  **/VERBOSE:CLR**  
   
-    Další informace najdete v tématu [verbose (Tisk zprávy o průběhu)](https://msdn.microsoft.com/library/9c347d98-4c37-4724-a39e-0983934693ab).  
+    Další informace najdete v tématu [/verbose (Tisk zpráv o průběhu)](https://msdn.microsoft.com/library/9c347d98-4c37-4724-a39e-0983934693ab).  
   
-- **Zdroje**  
+- **Prostředky**  
   
-   Vyžaduje `ITaskItem[]` parametru.  
+   Vyžaduje se `ITaskItem[]` parametr.  
   
-   Definuje pole objektů položky nástroje MSBuild zdrojových souborů, které lze používat a, protože ho vygeneroval úlohy.  
+   Definuje pole položek zdrojového souboru MSBuild, které mohou být spotřebovány a generovány úlohami.  
   
 - **SpecifySectionAttributes**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Určuje atributy oddílu. Tím se přepíše atributy, které byly nastavené při kompilaci souboru obj části.  
+   Určuje atributy oddílu. Tím dojde k přepsání atributů, které byly nastaveny při kompilaci souboru. obj pro oddíl.  
   
-   Další informace najdete v tématu [/Section (určení atributů oddílu)](https://msdn.microsoft.com/library/92b69d81-e421-462e-b46f-7d0dff9b9d16).  
+   Další informace najdete v tématu [/section (určení atributů oddílu)](https://msdn.microsoft.com/library/92b69d81-e421-462e-b46f-7d0dff9b9d16).  
   
 - **StackCommitSize**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Určuje množství fyzické paměti v každém přidělení při další paměť je přidělena.  
+   Určuje velikost fyzické paměti v každém přidělení, pokud je přidělena další paměť.  
   
-   Další informace najdete v tématu `commit` argument [/Stack (přidělení zásobníku)](https://msdn.microsoft.com/library/73283660-e4bd-47cc-b5ca-04c5d739034c).  
+   Další informace naleznete v argumentu `commit` [/Stack (přidělení zásobníku)](https://msdn.microsoft.com/library/73283660-e4bd-47cc-b5ca-04c5d739034c).  
   
 - **StackReserveSize**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Určuje, celkovou velikost zásobníku přidělenou ve virtuální paměti.  
+   Určuje celkovou velikost alokačního zásobníku ve virtuální paměti.  
   
-   Další informace najdete v tématu `reserve` argument [/Stack (přidělení zásobníku)](https://msdn.microsoft.com/library/73283660-e4bd-47cc-b5ca-04c5d739034c).  
+   Další informace naleznete v argumentu `reserve` [/Stack (přidělení zásobníku)](https://msdn.microsoft.com/library/73283660-e4bd-47cc-b5ca-04c5d739034c).  
   
 - **StripPrivateSymbols**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Vytvoří druhý soubor databáze (PDB) programu, která vynechává symboly, které nechcete k distribuci zákazníkům. Zadejte název druhý soubor PDB.  
+   Vytvoří druhý soubor programové databáze (PDB), který vynechá symboly, které nechcete distribuovat vašim zákazníkům. Zadejte název druhého souboru PDB.  
   
-   Další informace najdete v tématu [/PDBSTRIPPED (odstranění privátních symbolů)](https://msdn.microsoft.com/library/9b9e0070-6a13-4142-8180-19c003fbbd55).  
+   Další informace naleznete v tématu [/PDBSTRIPPED (proložení privátních symbolů)](https://msdn.microsoft.com/library/9b9e0070-6a13-4142-8180-19c003fbbd55).  
   
-- **Subsystém**  
+- **Provozuschopn**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
    Určuje prostředí pro spustitelný soubor.  
   
-   Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.  
+   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-  - **NotSet** - *\<none>*  
+  - **NotSet** -  *\<none>*  
   
-  - **Konzola** -   **/Subsystem: Console**  
+  - **Konzola** -  **/SUBSYSTEM: konzola**  
   
-  - **Windows** - **/SUBSYSTEM:WINDOWS**  
+  - **Windows** -  **/SUBSYSTEM:WINDOWS**  
   
-  - **Nativní** - **souboru**  
+  - **Nativní** -  **/SUBSYSTEM: Native**  
   
-  - **Aplikace EFI** - **/SUBSYSTEM:EFI_APPLICATION**  
+  - **Aplikace rozhraní EFI** -  **/SUBSYSTEM: EFI_APPLICATION**  
   
-  - **EFI Boot Service Driver** - **/SUBSYSTEM:EFI_BOOT_SERVICE_DRIVER**  
+  - **EFI Boot Service Driver** -  **/SUBSYSTEM:EFI_BOOT_SERVICE_DRIVER**  
   
-  - **PAMĚŤ ROM EFI** - **/SUBSYSTEM:EFI_ROM**  
+  - /Subsystem **EFI ROM** -  **: EFI_ROM**  
   
-  - **EFI Runtime** - **/SUBSYSTEM:EFI_RUNTIME_DRIVER**  
+  - **EFI Runtime** -  **/SUBSYSTEM:EFI_RUNTIME_DRIVER**  
   
-  - **WindowsCE** - **/SUBSYSTEM:WINDOWSCE**  
+  - **WindowsCE** -  **/SUBSYSTEM:WINDOWSCE**  
   
-  - **POSIX** - **/SUBSYSTEM:POSIX**  
+  - **POSIX** -  **/SUBSYSTEM:POSIX**  
   
     Další informace najdete v tématu [/Subsystem (určení subsystému)](https://msdn.microsoft.com/library/d7b133cf-cf22-4da8-ab46-6552702c0b9b).  
   
 - **SupportNobindOfDelayLoadedDLL**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, přikazuje linkeru, které nechcete zahrnout do finální bitové kopie s možností vazby tabulky importu adres (IAT).  
+   Pokud `true`, sdělí linkeru, aby do finální image nezahrnula tabulku importních adres (IAT) s možností vazby.  
   
-   Další informace najdete v tématu `NOBIND` argument [/delay (nastavení importu odloženého načtení)](https://msdn.microsoft.com/library/9334b332-cc58-4dae-b10f-a4c75972d50c).  
+   Další informace najdete v argumentu `NOBIND` [/Delay (nastavení importu zpožděného načtení)](https://msdn.microsoft.com/library/9334b332-cc58-4dae-b10f-a4c75972d50c).  
   
 - **SupportUnloadOfDelayLoadedDLL**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, říká odloženě zaváděné pomocnou funkci, aby podporovala explicitní uvolnění knihovny DLL.  
+   Pokud `true`, sdělí pomocnou funkci opožděného načtení, aby podporovala explicitní uvolnění knihovny DLL.  
   
-   Další informace najdete v tématu `UNLOAD` argument [/delay (nastavení importu odloženého načtení)](https://msdn.microsoft.com/library/9334b332-cc58-4dae-b10f-a4c75972d50c).  
+   Další informace najdete v argumentu `UNLOAD` [/Delay (nastavení importu zpožděného načtení)](https://msdn.microsoft.com/library/9334b332-cc58-4dae-b10f-a4c75972d50c).  
   
 - **SuppressStartupBanner**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, zabraňuje zobrazování čísel zprávu o autorských právech a verze při spuštění úlohy.  
+   Pokud `true`, zabrání zobrazení zprávy o autorských právech a číslech verze při spuštění úlohy.  
   
-   Další informace najdete v tématu [/nologo (Potlačení úvodního nápisu) (Linker)](https://msdn.microsoft.com/library/3b20dddd-eca6-4545-a331-9f70bf720197).  
+   Další informace naleznete v tématu [/nologo (potlačení úvodního nápisu při spouštění) (Linker)](https://msdn.microsoft.com/library/3b20dddd-eca6-4545-a331-9f70bf720197).  
   
 - **SwapRunFromCD**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, informuje operační systém nejprve zkopírovat linkeru výstupu do odkládacího souboru, a potom spusťte bitovou kopii z něj.  
+   Pokud `true`, sdělí operačnímu systému, aby nejprve zkopíroval výstup linkeru do odkládacího souboru, a pak z něj spusťte bitovou kopii.  
   
-   Další informace najdete v tématu `CD` argument [swaprun (Načtení výstupu Linkeru do odkládacího souboru)](https://msdn.microsoft.com/library/4a1e7f46-4399-4161-8dfc-d6a71beaf683). Další informace naleznete **SwapRunFromNET** parametru.  
+   Další informace naleznete v argumentu `CD` [/SWAPRUN (načtení výstupu linkeru do odkládacího souboru)](https://msdn.microsoft.com/library/4a1e7f46-4399-4161-8dfc-d6a71beaf683). Další informace najdete také v parametru **SwapRunFromNET** .  
   
 - **SwapRunFromNET**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, informuje operační systém nejprve zkopírovat linkeru výstupu do odkládacího souboru, a potom spusťte bitovou kopii z něj.  
+   Pokud `true`, sdělí operačnímu systému, aby nejprve zkopíroval výstup linkeru do odkládacího souboru, a pak z něj spusťte bitovou kopii.  
   
-   Další informace najdete v tématu `NET` argument [swaprun (Načtení výstupu Linkeru do odkládacího souboru)](https://msdn.microsoft.com/library/4a1e7f46-4399-4161-8dfc-d6a71beaf683). Další informace naleznete **SwapRunFromCD** parametr v této tabulce.  
+   Další informace naleznete v argumentu `NET` [/SWAPRUN (načtení výstupu linkeru do odkládacího souboru)](https://msdn.microsoft.com/library/4a1e7f46-4399-4161-8dfc-d6a71beaf683). Viz také parametr **SwapRunFromCD** v této tabulce.  
   
 - **TargetMachine**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
    Určuje cílovou platformu pro program nebo knihovnu DLL.  
   
-   Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.  
+   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-  - **NotSet** - *\<none>*  
+  - **NotSet** -  *\<none>*  
   
-  - **MachineARM** - **/MACHINE:ARM**  
+  - **MachineARM** -  **/Machine: ARM**  
   
-  - **MachineEBC** - **/MACHINE:EBC**  
+  - **MachineEBC** -  **/Machine: EBC**  
   
-  - **MachineIA64** - **/MACHINE:IA64**  
+  - **MachineIA64** -  **/Machine: ia64**  
   
-  - **MachineMIPS** - **/MACHINE:MIPS**  
+  - **MachineMIPS** -  **/Machine: MIPS**  
   
-  - **MachineMIPS16** - **/MACHINE:MIPS16**  
+  - **MachineMIPS16** -  **/MACHINE:MIPS16**  
   
-  - **MachineMIPSFPU** - **/MACHINE:MIPSFPU**  
+  - **MachineMIPSFPU** -  **/Machine: MIPSFPU**  
   
-  - **MachineMIPSFPU16** - **/MACHINE:MIPSFPU16**  
+  - **MachineMIPSFPU16** -  **/Machine: MIPSFPU16**  
   
-  - **MachineSH4** - **/MACHINE:SH4**  
+  - **MachineSH4** -  **/MACHINE:SH4**  
   
-  - **MachineTHUMB** - **/MACHINE:THUMB**  
+  - **MachineTHUMB** -  **/Machine: palec**  
   
-  - **MachineX64** - **/MACHINE:X 64**  
+  - **MachineX64** -  **/Machine: x64**  
   
-  - **MachineX86** - **/MACHINE:X 86**  
+  - **MachineX86** -  **/Machine: x86**  
   
     Další informace najdete v tématu [/Machine (určení cílové platformy)](https://msdn.microsoft.com/library/8d41bf4b-7e53-4ab9-9085-d852b08d31c2).  
   
 - **TerminalServerAware**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, nastaví příznak v poli IMAGE_OPTIONAL_HEADER dllcharacteristics v nepovinné hlavičce bitové kopie programu. Pokud je tento příznak nastaven, neprovede Terminálový Server určité změny aplikace.  
+   Pokud `true`, nastaví příznak v poli IMAGE_OPTIONAL_HEADER DllCharacteristics v volitelné hlavičce bitové kopie programu. Pokud je tento příznak nastaven, terminálový server neprovede určité změny aplikace.  
   
-   Další informace najdete v tématu [parametr/TSAWARE (vytvoření Terminálový Server aplikace s)](https://msdn.microsoft.com/library/fe1c1846-de5b-4839-b562-93fbfe36cd29).  
+   Další informace najdete v tématu [/TSAWARE (vytvoření aplikace pracující s terminálovým serverem)](https://msdn.microsoft.com/library/fe1c1846-de5b-4839-b562-93fbfe36cd29).  
   
 - **TrackerLogDirectory**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Určuje adresář protokolu sledovacího modulu.  
+   Určuje adresář protokolu sledování.  
   
 - **TreatLinkerWarningAsErrors**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, způsobí, že žádný výstupní soubor, který chcete vygenerovat, pokud linker vydá upozornění.  
+   Pokud `true`, negeneruje žádný výstupní soubor, pokud linker vygeneruje upozornění.  
   
-   Další informace najdete v tématu [/WX (zpracovávat upozornění Linkeru jako chyb)](https://msdn.microsoft.com/library/e4ba97c7-93f7-43ae-a4bb-d866790926c9).  
+   Další informace naleznete v tématu [/WX (zpracovávání upozornění linkeru jako chyby)](https://msdn.microsoft.com/library/e4ba97c7-93f7-43ae-a4bb-d866790926c9).  
   
 - **TurnOffAssemblyGeneration**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, vytvoří bitovou kopii pro aktuální výstupní soubor bez sestavení rozhraní .NET Framework.  
+   Pokud `true`, vytvoří obrázek pro aktuální výstupní soubor bez sestavení .NET Framework.  
   
-   Další informace najdete v tématu [parametr/noassembly (vytvoření modulu MSIL)](https://msdn.microsoft.com/library/3cea4e70-f451-4395-a626-1930b1b127fe).  
+   Další informace naleznete v tématu [/NOASSEMBLY (Vytvoření modulu MSIL)](https://msdn.microsoft.com/library/3cea4e70-f451-4395-a626-1930b1b127fe).  
   
 - **TypeLibraryFile**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Určuje název souboru a příponu souboru tlb. Zadejte název souboru nebo název a cesta k souboru.  
+   Určuje název souboru a příponu názvu souboru. tlb. Zadejte název souboru nebo cestu a název souboru.  
   
-   Další informace najdete v tématu [/TLBOUT (název. Soubor vyrovnávací paměti TLB)](https://msdn.microsoft.com/library/0df6d078-2e48-46c9-a1a5-02674d85dce8).  
+   Další informace najdete v tématu [/TLBOUT (název. Soubor TLB)](https://msdn.microsoft.com/library/0df6d078-2e48-46c9-a1a5-02674d85dce8).  
   
 - **TypeLibraryResourceID**  
   
-   Volitelné **celé číslo** parametru.  
+   Volitelný **celočíselný** parametr  
   
-   Určuje hodnotu zadané uživatelem pro knihovnu typů vytvoří linker. Zadejte hodnotu od 1 do 65535.  
+   Určuje uživatelem zadanou hodnotu pro knihovnu typů vytvořenou linkerem. Zadejte hodnotu od 1 do 65535.  
   
-   Další informace najdete v tématu [/TLBID (určení ID prostředku pro knihovnu typů)](https://msdn.microsoft.com/library/434b28a2-4656-4d52-ac82-8b18bf486fb2).  
+   Další informace najdete v tématu [/TLBID (určení ID prostředku pro knihovnu TypeLib)](https://msdn.microsoft.com/library/434b28a2-4656-4d52-ac82-8b18bf486fb2).  
   
 - **UACExecutionLevel**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Určuje požadovanou úroveň spuštění aplikace při spuštění v části s řízením uživatelských účtů.  
+   Určuje požadovanou úroveň spuštění aplikace v případě, že je spuštěna pomocí nástroje řízení uživatelských účtů.  
   
-   Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti příkazového řádku.  
+   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-  - **AsInvoker** - `level='asInvoker'`  
+  - **Podle volajícího** - `level='asInvoker'`  
   
   - **HighestAvailable** - `level='highestAvailable'`  
   
-  - **RequireAdministrator** - `level='requireAdministrator'`  
+  - **Vyžadovat správce** - `level='requireAdministrator'`  
   
-    Další informace najdete v tématu `level` argument [/MANIFESTUAC (vložené informace UAC v manifestu)](https://msdn.microsoft.com/library/2d243c39-fa13-493c-b56f-d0d972a1603a).  
+    Další informace naleznete v argumentu `level` [/MANIFESTUAC (vložení informací o nástroji Řízení uživatelských účtů v manifestu)](https://msdn.microsoft.com/library/2d243c39-fa13-493c-b56f-d0d972a1603a).  
   
 - **UACUIAccess**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, aplikace obchází úrovně ochrany uživatelského rozhraní a vstup na vyšší oprávnění windows na ploše; v opačném případě jednotky `false`.  
+   Pokud `true`, aplikace obchází úrovně ochrany uživatelského rozhraní a vstup jednotek do oken s vyšším oprávněním na ploše. v opačném případě `false`.  
   
-   Další informace najdete v tématu `uiAccess` argument [/MANIFESTUAC (vložené informace UAC v manifestu)](https://msdn.microsoft.com/library/2d243c39-fa13-493c-b56f-d0d972a1603a).  
+   Další informace naleznete v argumentu `uiAccess` [/MANIFESTUAC (vložení informací o nástroji Řízení uživatelských účtů v manifestu)](https://msdn.microsoft.com/library/2d243c39-fa13-493c-b56f-d0d972a1603a).  
   
 - **UseLibraryDependencyInputs**  
   
-   Volitelné **logická** parametru.  
+   Volitelný **logický** parametr.  
   
-   Pokud `true`, jsou použity vstupy nástroje librarian spíše než soubor knihovny sám při knihovny výstupy závislostí projektu se připojují.  
+   Pokud je `true`, místo samotného souboru knihovny se použijí vstupy pro nástroj Librarian, když jsou v knihovně výstupy na závislosti projektu.  
   
 - **Verze**  
   
-   Volitelné **řetězec** parametru.  
+   Volitelný **řetězcový** parametr.  
   
-   Vložil číslo verze v hlavičce souboru .exe nebo .dll. Zadejte "`major[.minor]`". `major` a `minor` argumenty jsou desetinná čísla od 0 do 65535.  
+   Vložte číslo verze do hlavičky souboru. exe nebo. dll. Zadejte "`major[.minor]`". Argumenty `major` a `minor` jsou desítková čísla od 0 do 65535.  
   
    Další informace najdete v tématu [/Version (informace o verzi)](https://msdn.microsoft.com/library/b86d0e86-dca6-4316-aee2-d863ccb9f223).  
   

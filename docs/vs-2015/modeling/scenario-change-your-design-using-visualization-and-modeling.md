@@ -17,12 +17,12 @@ caps.latest.revision: 63
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e66f8438e0c28a64d2e8705fea0ffa5e362887b0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cafc4e2a87a31603e1f8cef4174d8538be768428
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671261"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296017"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>Scénář: Změna návrhu pomocí vizualizace a modelování
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -182,9 +182,9 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
  Následující diagram činnosti popisuje postup, kdy zákazník vytvoří objednávku na webu večeře Now. V této verzi prvky komentářů identifikují role a řádky vytvářejí *plavecké dráhy*, které organizují kroky podle rolí:
 
- ![Diagram činnosti UML](../modeling/media/uml-dinnernowprocess.png "UML_DinnerNowProcess")
+ ![Diagram činností UML](../modeling/media/uml-dinnernowprocess.png "UML_DinnerNowProcess")
 
- **Diagram činnosti UML**
+ **Diagram činností UML**
 
  Následující diagram tříd popisuje entity, které se účastní procesu pořadí:
 
@@ -209,7 +209,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
  Následující diagram činnosti obsahuje nové prvky oranžová pro popis toku kroků v novém případu použití:
 
- ![Diagram činnosti UML](../modeling/media/uml-writereview.png "UML_WriteReview")
+ ![Diagram činností UML](../modeling/media/uml-writereview.png "UML_WriteReview")
 
  **Diagram činnosti UML**
 
@@ -270,7 +270,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
  Například následující diagram komponent zobrazuje novou komponentu, která je součástí komponenty webu večeře Now. Komponenta ReviewProcessing zpracovává funkce pro vytváření recenzí a zobrazují se zvýrazněné oranžová:
 
- ![Diagram komponent UML](../modeling/media/uml-internal.png "UML_Internal")
+ ![Diagram komponenty UML](../modeling/media/uml-internal.png "UML_Internal")
 
  **Diagram komponent UML**
 
@@ -291,7 +291,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
  ![Diagram vrstev integrovaného platebního systému](../modeling/media/layer-integrated-dnlucerne.png "Layer_Integrated_DNLucerne")
 
- **Diagram vrstev**
+ **Diagram vrstvy**
 
  Aby se zajistilo, že v konfliktu s návrhem nedochází při vývoji kódu, týmy používají ověřování vrstev na sestaveních, která jsou spuštěna v sestavení Team Foundation Build. Také vytvoří vlastní úlohu MSBuild pro vyžadování ověření vrstvy při jejich operacích vrácení se změnami. Používají sestavy sestavení ke shromáždění chyb ověřování.
 
@@ -363,7 +363,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
 - [Ověřování systému během vývoje](../modeling/validate-your-system-during-development.md)
 
-- [Použít správu verzí](http://go.microsoft.com/fwlink/?LinkID=525605)
+- [Použít správu verzí](https://go.microsoft.com/fwlink/?LinkID=525605)
 
 - [Sestavení aplikace](/azure/devops/pipelines/index)
 
@@ -593,7 +593,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 |Mapa kódu|Vizualizujte organizaci a vztahy v existujícím kódu.<br /><br /> Chcete-li identifikovat kandidáty na komponenty, vytvořte mapu kódu a seskupte položky podle jejich funkce v systému.<br /><br /> Další informace:<br /><br /> -   [závislosti map napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md)|
 |Sekvenční diagram|Vizualizujte posloupnost interakcí mezi komponentami nebo částmi uvnitř komponenty.<br /><br /> Chcete-li vytvořit životnost v sekvenčním diagramu ze součásti, klikněte pravým tlačítkem myši na součást a potom klikněte na možnost **vytvořit životnost**.<br /><br /> Další informace:<br /><br /> -   [sekvenčních diagramů UML: referenční](../modeling/uml-sequence-diagrams-reference.md) dokumentace<br />-   [sekvenčních diagramů UML: pokyny](../modeling/uml-sequence-diagrams-guidelines.md)|
 |Diagram tříd (UML)|Definujte rozhraní na poskytnutých nebo požadovaných portech a třídách, které implementují funkce komponent.<br /><br /> Další informace:<br /><br /> -   [diagramů tříd UML: referenční](../modeling/uml-class-diagrams-reference.md) dokumentace<br />-   [diagramů tříd UML: pokyny](../modeling/uml-class-diagrams-guidelines.md)|
-|Diagram vrstev|Popište logickou architekturu systému v souvislosti se součástmi. Použijte ověřování vrstvy, abyste se ujistili, že kód zůstává v souladu s návrhem.<br /><br /> Další informace:<br /><br /> -   [vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [diagramy vrstev: referenční](../modeling/layer-diagrams-reference.md) dokumentace<br />-   [diagramy vrstev: pokyny](../modeling/layer-diagrams-guidelines.md)<br />-   [ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)|
+|Diagram vrstvy|Popište logickou architekturu systému v souvislosti se součástmi. Použijte ověřování vrstvy, abyste se ujistili, že kód zůstává v souladu s návrhem.<br /><br /> Další informace:<br /><br /> -   [vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [diagramy vrstev: referenční](../modeling/layer-diagrams-reference.md) dokumentace<br />-   [diagramy vrstev: pokyny](../modeling/layer-diagrams-guidelines.md)<br />-   [ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)|
 |Diagram činnosti|Vizualizujte vnitřní zpracování, které komponenty provádějí v reakci na příchozí zprávy.<br /><br /> Další informace:<br /><br /> -   [diagramy činnosti UML: referenční](../modeling/uml-activity-diagrams-reference.md) dokumentace<br />-   [diagramy činnosti UML: pokyny](../modeling/uml-activity-diagrams-guidelines.md)|
 
 ### <a name="VisualizeCode"></a>Vizualizovat existující kód: mapy kódu
@@ -643,7 +643,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
      Pro rychlý přehled zkompilovaného kódu vytvořte prázdnou mapu kódu a pak přetáhněte soubory sestavení nebo binární soubory na plochu rozvržení.
 
-- Chcete-li prozkoumat konkrétní kód nebo položky řešení, použijte Průzkumník řešení k výběru položek a relací, které chcete vizualizovat. Pak můžete buď vygenerovat novou mapu, nebo přidat vybrané položky do existující mapy. Podívejte [se na téma mapování závislostí napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md).
+- Chcete-li prozkoumat konkrétní kód nebo položky řešení, použijte Průzkumník řešení k výběru položek a relací, které chcete vizualizovat. Pak můžete buď vygenerovat novou mapu, nebo přidat vybrané položky do existující mapy. Zobrazit [mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md).
 
 - Abychom vám pomohli prozkoumat mapu, uspořádejte rozložení tak, aby vyhovovalo typům úloh, které chcete provést.
 
@@ -662,7 +662,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
 |**Znázorňuje**|**Udává**|
 |-----------------|-------------------|
-|Diagram vrstev|Logická architektura systému. Použijte ověřování vrstvy, abyste se ujistili, že kód zůstává v souladu s návrhem.<br /><br /> Pro snadnější identifikaci existujících vrstev nebo zamýšlených vrstev vytvořte mapu kódu a položky související se skupinami. Chcete-li vytvořit diagram vrstvy, přečtěte si:<br /><br /> -   [vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [diagramy vrstev: pokyny](../modeling/layer-diagrams-guidelines.md)|
+|Diagram vrstvy|Logická architektura systému. Použijte ověřování vrstvy, abyste se ujistili, že kód zůstává v souladu s návrhem.<br /><br /> Pro snadnější identifikaci existujících vrstev nebo zamýšlených vrstev vytvořte mapu kódu a položky související se skupinami. Chcete-li vytvořit diagram vrstvy, přečtěte si:<br /><br /> -   [vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [diagramy vrstev: pokyny](../modeling/layer-diagrams-guidelines.md)|
 |Diagram součásti|Komponenty, jejich rozhraní a jejich vztahy.<br /><br /> Abyste mohli identifikovat komponenty, vytvořte mapu kódu a seskupte položky podle jejich funkce v systému.<br /><br /> Další informace:<br /><br /> -   [diagramů komponent UML: referenční](../modeling/uml-component-diagrams-reference.md) dokumentace<br />-   [diagramů komponent UML: pokyny](../modeling/uml-component-diagrams-guidelines.md)|
 |Diagram tříd (UML)|Třídy, jejich atributy a operace a jejich vztahy.<br /><br /> Pro usnadnění identifikace těchto prvků vytvořte diagram tříd UML, který tyto prvky zobrazuje.<br /><br /> Další informace:<br /><br /> -   [diagramů tříd UML: referenční](../modeling/uml-class-diagrams-reference.md) dokumentace<br />-   [diagramů tříd UML: pokyny](../modeling/uml-class-diagrams-guidelines.md)|
 |Diagram tříd (založený na kódu)|Existující třídy v kódu pro určitý projekt.<br /><br /> Chcete-li vizualizovat a upravit existující třídu v kódu, použijte Návrhář tříd.<br /><br /> Viz [Postupy: Přidání diagramů tříd do projektů (návrhář tříd)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md).|
@@ -697,9 +697,9 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
 - Horizontální *zprávy* reprezentují volání metod, zprávy webové služby nebo jinou komunikaci. *Výskyty spuštění* jsou svislé šedé obdélníky, které se zobrazí na životnostech a představují období, během kterých přijímající objekty zpracovávají volání.
 
-- Během *synchronní* zprávy čeká objekt odesílateli, aby ovládací prvek < \<return > > jako při běžném volání funkce. Během *asynchronní* zprávy může odesílatel pokračovat okamžitě.
+- Během *synchronní* zprávy čeká objekt odesílateli řízení <\<vrácení > > jako při běžném volání funkce. Během *asynchronní* zprávy může odesílatel pokračovat okamžitě.
 
-- K označení konstrukce objektů jinými objekty použijte < \<create > > zprávy. Mělo by se jednat o první zprávu odeslanou objektu.
+- Pomocí <\<vytvořit > > zprávy pro indikaci konstrukce objektů jinými objekty. Mělo by se jednat o první zprávu odeslanou objektu.
 
   Další informace:
 
@@ -802,7 +802,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 |Použití diagramu případu|Definujte typy, které se používají k popisu cílů a kroků v případech použití.<br /><br /> Další informace:<br /><br /> -   [Diagramy případů použití UML: referenční](../modeling/uml-use-case-diagrams-reference.md) dokumentace<br />-   [Diagramy případů použití UML: pokyny](../modeling/uml-use-case-diagrams-guidelines.md)|
 |Diagram činnosti|Definujte typy dat, která procházejí uzly objektů, vstupními kolíky, výstupními kolíky a uzly parametrů aktivity.<br /><br /> Další informace:<br /><br /> -   [diagramy činnosti UML: referenční](../modeling/uml-activity-diagrams-reference.md) dokumentace<br />-   [diagramy činnosti UML: pokyny](../modeling/uml-activity-diagrams-guidelines.md)|
 |Diagram součásti|Popisují komponenty, jejich rozhraní a jejich vztahy. Třída může také popsat kompletní komponentu.<br /><br /> Další informace:<br /><br /> -   [diagramů komponent UML: referenční](../modeling/uml-component-diagrams-reference.md) dokumentace<br />-   [diagramů komponent UML: pokyny](../modeling/uml-component-diagrams-guidelines.md)|
-|Diagram vrstev|Definujte logickou architekturu systému v souvislosti se třídami.<br /><br /> Použijte ověřování vrstvy, abyste se ujistili, že kód zůstává v souladu s návrhem.<br /><br /> Další informace:<br /><br /> -   [vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [diagramy vrstev: referenční](../modeling/layer-diagrams-reference.md) dokumentace<br />-   [diagramy vrstev: pokyny](../modeling/layer-diagrams-guidelines.md)<br />-   [ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)|
+|Diagram vrstvy|Definujte logickou architekturu systému v souvislosti se třídami.<br /><br /> Použijte ověřování vrstvy, abyste se ujistili, že kód zůstává v souladu s návrhem.<br /><br /> Další informace:<br /><br /> -   [vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [diagramy vrstev: referenční](../modeling/layer-diagrams-reference.md) dokumentace<br />-   [diagramy vrstev: pokyny](../modeling/layer-diagrams-guidelines.md)<br />-   [ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)|
 |Sekvenční diagram|Definujte typy životností a operace, parametry a návratové hodnoty pro všechny zprávy, které může životnost získat.<br /><br /> Chcete-li vytvořit životnost z typu v diagramu tříd, klikněte pravým tlačítkem na typ a pak klikněte na **vytvořit životnost**.<br /><br /> Další informace:<br /><br /> -   [sekvenčních diagramů UML: referenční](../modeling/uml-sequence-diagrams-reference.md) dokumentace<br />-   [sekvenčních diagramů UML: pokyny](../modeling/uml-sequence-diagrams-guidelines.md)|
 |Mapa kódu|Vizualizujte organizaci a vztahy v existujícím kódu.<br /><br /> Chcete-li identifikovat třídy, jejich vztahy a jejich metody, vytvořte mapu kódu, která tyto prvky zobrazí.<br /><br /> Další informace:<br /><br /> -   [závislosti map napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md)|
 
@@ -880,9 +880,9 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
 ## <a name="external-resources"></a>Externí zdroje
 
-|**Kategorií**|**Odkazy**|
+|**Kategorie**|**Odkazy**|
 |------------------|---------------|
-|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](http://go.microsoft.com/fwlink/?LinkId=184721)|
+|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://go.microsoft.com/fwlink/?LinkId=184721)|
 
 ## <a name="see-also"></a>Viz také
  [Vizualizujte kód](../modeling/visualize-code.md) [vytvoření modelů pro vaši aplikaci](../modeling/create-models-for-your-app.md) [použití modelů v procesu vývoje](../modeling/use-models-in-your-development-process.md) [použití modelů v agilním vývoji](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f) . [při vývoji](../modeling/validate-your-system-during-development.md) [rozšíříte modely a diagramy UML](../modeling/extend-uml-models-and-diagrams.md) do systému.

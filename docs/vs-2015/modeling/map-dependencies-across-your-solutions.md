@@ -29,12 +29,12 @@ caps.latest.revision: 245
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1352da002b16c736ce20a9fbaf7cdc26b258b718
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b25d23b7c65742ffddadbe178d7550dc1794414a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657615"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296330"
 ---
 # <a name="map-dependencies-across-your-solutions"></a>Mapování závislostí napříč vaším řešením
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,11 +45,11 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
  **Tady jsou některá videa**:
 
-- [Pochopení závislostí kódu pomocí vizualizace](http://go.microsoft.com/fwlink/?LinkID=252065)
+- [Pochopení závislostí kódu pomocí vizualizace](https://go.microsoft.com/fwlink/?LinkID=252065)
 
-- [Vizualizace dopadu změny](http://go.microsoft.com/fwlink/?LinkID=252068)
+- [Vizualizace dopadu změny](https://go.microsoft.com/fwlink/?LinkID=252068)
 
-- [Porozumění komplexnímu kódu pomocí map kódu](http://go.microsoft.com/fwlink/?LinkID=259869)
+- [Porozumění komplexnímu kódu pomocí map kódu](https://go.microsoft.com/fwlink/?LinkID=259869)
 
 ## <a name="GetStarted"></a>Začínáme s mapami kódu
  Pokud **chcete použít mapy kódu, budete potřebovat jednu z těchto**akcí:
@@ -105,7 +105,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
 1. Otevřete nabídku **Architektura** a vyberte možnost **Nová mapa kódu**.
 
-     \- nebo-
+     \- nebo –
 
 2. Otevřete nabídku **soubor** a zvolte položku **Nový** a zvolte možnost **soubor**.
 
@@ -307,11 +307,11 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
   Tyto problémy se mohou vyskytnout při vytváření map kódu pro jazyk C++ C a kód:
 
-|**Chybu**|**Možná příčina**|**Rozhodnutí**|
+|**Chybu**|**Možná příčina**|**Řešení**|
 |---------------|------------------------|--------------------|
 |Nepovedlo se vygenerovat mapu kódu.|V řešení nebyly úspěšně sestaveny žádné projekty.|Opravte chyby sestavení, k nimž došlo, a potom znovu vygenerujte mapu.|
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] přestane reagovat při pokusu o vygenerování mapy kódu z nabídky **Architektura** .|Soubor databáze programů (.pdb) může být poškozen.<br /><br /> Soubor .pdb ukládá informace o ladění, jako je typ, metoda a informace zdrojového souboru.|Znovu sestavte řešení a potom akci opakujte.|
-|Určitá nastavení pro databázi procházení IntelliSense jsou zakázána.|Některá nastavení IntelliSense mohou být zakázána v dialogovém okně**možnosti** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|Chcete-li tato nastavení povolit, zapněte je.<br /><br /> Viz [Možnosti, textový editor, C/C++, Upřesnit](../ide/reference/options-text-editor-c-cpp-advanced.md).|
+|Určitá nastavení pro databázi procházení IntelliSense jsou zakázána.|Některá nastavení IntelliSense mohou být zakázána v dialogovém okně **možnosti** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|Chcete-li tato nastavení povolit, zapněte je.<br /><br /> Viz [Možnosti, textový editor, C/C++, Upřesnit](../ide/reference/options-text-editor-c-cpp-advanced.md).|
 |Zpráva **neznámé metody** se zobrazí v uzlu metody.<br /><br /> K tomuto problému dochází, protože nelze vyřešit název metody.|Binární soubor nemusí mít základní tabulku přemístění.|V linkeru zapněte možnost **/fixed: No** .<br /><br /> Viz [/fixed (pevná základní adresa)](https://msdn.microsoft.com/library/929bba5e-b7d8-40ed-943e-056aa3710fc5).|
 ||Soubor databáze programů (.pdb) nemusí být vytvořen.<br /><br /> Soubor .pdb ukládá informace o ladění, jako je typ, metoda a informace zdrojového souboru.|V linkeru zapněte možnost **/Debug** .<br /><br /> Viz [/Debug (generování informací o ladění)](https://msdn.microsoft.com/library/1af389ae-3f8b-4d76-a087-1cdf861e9103).|
 ||V očekávaných umístěních nelze otevřít nebo najít soubor .pdb.|Ujistěte se, že v předpokládaném umístění existuje soubor .pdb.|
@@ -329,7 +329,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
 - Vypněte automatické přidávání nadřazených položek pomocí tlačítka **Zahrnout nadřazené** položky na panelu nástrojů mapa kódu.
 
-- Upravte soubor s mapou kódu přímo pro odebrání uzlů a propojení, které nepotřebujete. Změna mapy nemá vliv na podkladový kód. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+- Upravte soubor s mapou kódu přímo pro odebrání uzlů a propojení, které nepotřebujete. Změna mapy nemá vliv na podkladový kód. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
   ![Přeskočit sestavení a zahrnout nadřízených tlačítek](../modeling/media/codemapsfilterskipbuildicons.png "CodeMapsFilterSkipBuildIcons")
 
@@ -346,7 +346,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
  -nebo-
 
- Chcete-li uložit mapu jako součást konkrétního projektu, na panelu nástrojů mapa zvolte možnost **sdílet**, **přesunout** \<*CodeMapName* > **. dgml do**a pak zvolte projekt, na který chcete mapu Uložit.
+ Chcete-li uložit mapu jako součást konkrétního projektu, na panelu nástrojů mapa zvolte možnost **sdílet**, **přesunout** \<*CodeMapName*> **. dgml do**a pak zvolte projekt, na který chcete mapu Uložit.
 
  ![Přesunout mapu do jiného projektu](../modeling/media/codemapsmovemapmenu.png "CodeMapsMoveMapMenu")
 
@@ -373,7 +373,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
 2. Přejděte do umístění, kam chcete soubor uložit.
 
-3. Pojmenujte mapu kódu. Ujistěte se, že je pole **Uložit jako typ** nastaveno na **soubory XPS (\*. XPS)** . Klikněte na tlačítko **Uložit**.
+3. Pojmenujte mapu kódu. Ujistěte se, že je pole **Uložit jako typ** nastaveno na **soubory XPS (\*. XPS)** . Zvolte **Uložit**.
 
 ## <a name="what-else-can-i-do"></a>Co dalšího mohu udělat?
 

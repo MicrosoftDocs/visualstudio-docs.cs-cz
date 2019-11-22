@@ -15,17 +15,17 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 62f81e6a697089d7a352f652ad9f77d279faac0c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bc65e58aa5bdea786aba05236b6fa684780ccae2
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660811"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296088"
 ---
 # <a name="convert-dialog-box"></a>Dialogové okno Převést
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Dialogové okno **převést** umožňuje vybrat nástroj pro převod a vytvořit nový projekt ze starého, například vytvoření projektu [!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)] z projektu Visual Basic 6. Můžete také použít [převaděč projektu sady Visual Studio](http://go.microsoft.com/fwlink/?LinkID=246465), který je k dispozici na webu CodePlex, pro upgrade projektů vytvořených v předchozích verzích sady Visual Studio.
+Dialogové okno **převést** umožňuje vybrat nástroj pro převod a vytvořit nový projekt ze starého, například vytvoření projektu [!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)] z projektu Visual Basic 6. Můžete také použít [převaděč projektu sady Visual Studio](https://go.microsoft.com/fwlink/?LinkID=246465), který je k dispozici na webu CodePlex, pro upgrade projektů vytvořených v předchozích verzích sady Visual Studio.
 
  [!INCLUDE[note_settings_general](../../includes/note-settings-general-md.md)]
 

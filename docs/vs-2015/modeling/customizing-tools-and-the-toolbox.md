@@ -15,12 +15,12 @@ caps.latest.revision: 28
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 757297123bff107c28ced53a14dcdbb94ae56a87
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2a5e2a46a2326c123d6b7b4e85fa29908ede9fc9
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654917"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299336"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>Přizpůsobení nástrojů a panelu nástrojů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -84,15 +84,15 @@ Editor
 
 3. Nastavte vlastnost **Icon panelu nástrojů** tak, aby odkazovala na obrázek 16x16.
 
-     Pokud chcete definovat novou ikonu, vytvořte v Průzkumník řešení ve složce **Dsl\Resources** rastrový soubor. Soubor by měl obsahovat následující hodnoty vlastností: **Akce sestavení**  = **obsah**; **Kopírovat do výstupního adresáře**  = **Nekopírovat**.
+     Pokud chcete definovat novou ikonu, vytvořte v Průzkumník řešení ve složce **Dsl\Resources** rastrový soubor. Soubor by měl obsahovat následující hodnoty vlastností: **Akce sestavení** = **obsah**; **Kopírovat do výstupního adresáře** = **Nekopírovat**.
 
 4. **Pro nástroj elementu:** Nastavte vlastnost **Class** nástroje tak, aby odkazovala na konkrétní doménovou třídu, která je namapována na tvar.
 
      **Pro nástroj konektoru:** Nastavte vlastnost **Tvůrce připojení** nástroje na jednu z položek, které jsou nabízeny v rozevíracím seznamu. Tvůrci připojení se automaticky vytvoří při mapování spojnice na doménový vztah. Pokud jste v poslední době vytvořili konektor, obvykle byste vybrali přidruženého Tvůrce připojení.
 
-5. Chcete-li otestovat DSL, stiskněte klávesu F5 nebo CTRL + F5 a v experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] otevřete vzorový soubor modelu. Nový nástroj by se měl zobrazit v sadě nástrojů. Přetáhněte ho do diagramu, abyste ověřili, že vytvoří nový prvek.
+5. Chcete-li otestovat DSL, stiskněte klávesu F5 nebo CTRL + F5 a v experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]otevřete vzorový soubor modelu. Nový nástroj by se měl zobrazit v sadě nástrojů. Přetáhněte ho do diagramu, abyste ověřili, že vytvoří nový prvek.
 
-     Pokud se nástroj nezobrazí, zastavte experimentální [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. V nabídce **Start** systému Windows spusťte **resetování experimentální instance Microsoft Visual Studio 2010**. V nabídce**sestavení** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] klikněte na **znovu sestavit řešení**. Pak zkuste DSL znovu otestovat.
+     Pokud se nástroj nezobrazí, zastavte experimentální [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. V nabídce **Start** systému Windows spusťte **resetování experimentální instance Microsoft Visual Studio 2010**. V nabídce **sestavení** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]klikněte na **znovu sestavit řešení**. Pak zkuste DSL znovu otestovat.
 
 ## <a name="customizing"></a>Přizpůsobení nástrojů elementů
  Ve výchozím nastavení nástroj vytvoří jednu instanci zadané třídy, ale můžete se změnit dvěma způsoby:
@@ -170,12 +170,12 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
  Tvůrci připojení obsahují jednu nebo více direktiv propojení odkazů, které určují vztah domény a zdrojové a cílové prvky. Například v šabloně řešení toku úloh můžete zobrazit **CommentReferencesSubjectsBuilder** v **Průzkumníku DSL**. Tento Tvůrce připojení obsahuje jednu direktivu připojení propojení s názvem **CommentReferencesSubjects**, která je namapovaná na **CommentReferencesSubjects**doménového vztahu. Tato direktiva propojení odkazů obsahuje direktivu zdrojové role, která odkazuje na doménovou třídu `Comment` a cílovou direktivu role odkazující na `FlowElement` doménovou třídu.
 
 ### <a name="using-connection-builders-to-restrict-source-and-target-roles"></a>Použití tvůrců připojení k omezení zdrojových a cílových rolí
- Tvůrci připojení můžete použít k omezení výskytu určitých tříd buď ve zdrojové roli, nebo v cílové roli daného doménového vztahu. Například můžete mít třídu základní domény, která má doménový vztah k jiné doménové třídě, ale nechcete, aby všechny odvozené třídy základní třídy měly stejné role v daném vztahu. V řešení flow je k dispozici čtyři konkrétní třídy domény (**StartPoint**, **Endpoint**, **MergeBranch**a **Synchronization**), které dědí přímo z abstraktní třídy domény **FlowElement**a dvě konkrétní. doménové třídy (**Task** a **ObjectInState**), které jsou z ní nepřímo děděny. Existuje také vztah odkazu na **tok** , který převezme **FlowElement** doménové třídy v jeho zdrojové roli a cílové roli. Instance třídy domény **koncového bodu** by však neměla být zdrojem instance vztahu **toku** , ani by instance třídy **StartPoint** měla být cílem instance vztahu **toku** . Tvůrce připojení **FlowBuilder** má direktivu Connect Link s názvem **Flow** , která určuje, které třídy domény mohou hrát zdrojovou roli (**Task**, **MergeBranch**, **StartPoint**a **Synchronization**) a které může hrát cílovou roli (**MergeBranch**, **Endpoint**a **Synchronization**).
+ Tvůrci připojení můžete použít k omezení výskytu určitých tříd buď ve zdrojové roli, nebo v cílové roli daného doménového vztahu. Například můžete mít třídu základní domény, která má doménový vztah k jiné doménové třídě, ale nechcete, aby všechny odvozené třídy základní třídy měly stejné role v daném vztahu. V řešení flow je k dispozici čtyři konkrétní třídy domény (**StartPoint**, **Endpoint**, **MergeBranch**a **Synchronization**), které dědí přímo z abstraktní třídy domény **FlowElement**, a dvě konkrétní třídy domény (**úlohy** a **ObjectInState**), které z nich dědí nepřímo. Existuje také vztah odkazu na **tok** , který převezme **FlowElement** doménové třídy v jeho zdrojové roli a cílové roli. Instance třídy domény **koncového bodu** by však neměla být zdrojem instance vztahu **toku** , ani by instance třídy **StartPoint** měla být cílem instance vztahu **toku** . **FlowBuilder** Connection Builder obsahuje direktivu Connect Link s názvem **Flow** , která určuje, které třídy domény mohou hrát zdrojovou roli (**Task**, **MergeBranch**, **StartPoint**a **Synchronization**) a které mohou hrát cílovou roli **(MergeBranch**, **koncový bod**a **synchronizace**).
 
 ### <a name="connection-builders-with-multiple-link-connect-directives"></a>Tvůrci připojení s více direktivami spojení odkazů
  Do Tvůrce připojení můžete přidat více než jednu direktivu připojení propojení. To vám může pomáhat s skrytím některých složitosti doménového modelu od uživatelů a zabránit tomu, aby se **Sada nástrojů** dostala příliš zbytečně. Do jednoho Tvůrce připojení můžete přidat direktivy propojení odkazů pro několik různých doménových vztahů. Při provádění přibližně stejné funkce byste ale měli kombinovat relace domény.
 
- V řešení toku úloh se nástroj pro připojení **Flow** používá k nakreslení instancí vztahů mezi **ObjectFlow** a doménami. Tvůrce připojení **FlowBuilder** kromě výše popsané směrnice pro propojení **toků** , která je popsaná výše, obsahuje dvě direktivy Connect Link s názvem **ObjectFlow**. Tyto direktivy určují, že instance vztahu **ObjectFlow** může být vykreslená mezi instancemi doménové třídy **ObjectInState** nebo z instance **ObjectInState** do instance **úlohy**, ale ne mezi dvěma. instance **úkolu**nebo z instance **úkolu** do instance **ObjectInState**. Nicméně instance vztahu **toku** může být vykreslena mezi dvěma instancemi **úkolu**. Pokud zkompilujete a spustíte řešení toku úkolů, vidíte, že vykreslení **toku** z instance **ObjectInState** do instance **úlohy** vytvoří instanci **ObjectFlow**, ale vykreslí **tok** mezi dvěma instancemi. **úlohy** vytvoří instanci **toku**.
+ V řešení toku úloh se nástroj pro připojení **Flow** používá k nakreslení instancí vztahů mezi **ObjectFlow** a doménami. Tvůrce připojení **FlowBuilder** kromě výše popsané směrnice pro propojení **toků** , která je popsaná výše, obsahuje dvě direktivy Connect Link s názvem **ObjectFlow**. Tyto direktivy určují, že instance vztahu **ObjectFlow** může být vykreslena mezi instancemi doménové třídy **ObjectInState** nebo z instance **ObjectInState** do instance **úlohy**, ale ne mezi dvěma instancemi **úlohy**nebo z instance **úlohy** do instance **ObjectInState**. Nicméně instance vztahu **toku** může být vykreslena mezi dvěma instancemi **úkolu**. Pokud zkompilujete a spustíte řešení toku úkolů, vidíte, že při vykreslování **toku** z instance **ObjectInState** do instance **úlohy** se vytvoří instance **ObjectFlow**, ale při vykreslování **toku** mezi dvěma instancemi **úlohy** se vytvoří instance **toku**.
 
 ### <a name="custom-code-for-connection-builders"></a>Vlastní kód pro sestavování připojení
  V uživatelském rozhraní jsou čtyři zaškrtávací políčka, která definují různé typy přizpůsobení tvůrců připojení:
@@ -249,4 +249,4 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
  Pomocí vlastního kódu můžete použít omezení typu "Hard", ale měli byste zvážit, zda by uživatelé měli být schopni dočasně vytvořit neplatná připojení. Pokud by měly, můžete tato omezení upravit tak, aby se neověřilo, dokud se uživatelé nepokusí Uložit změny.
 
 ## <a name="see-also"></a>Viz také
- [Přizpůsobení vytváření a přesunu prvků](../modeling/customizing-element-creation-and-movement.md) [přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md) [: Přidání obslužné rutiny přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md) [procházení a aktualizace modelu v diagramech programového kódu](../modeling/navigating-and-updating-a-model-in-program-code.md) [Ukázka DSL](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+ [Přizpůsobení vytváření a přesunu prvků](../modeling/customizing-element-creation-and-movement.md) [přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md) [: Přidání obslužné rutiny přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md) [procházení a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)

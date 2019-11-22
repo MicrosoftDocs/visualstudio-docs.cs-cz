@@ -8,12 +8,12 @@ ms.assetid: 7b866776-f2d5-4823-8d15-919f889db26f
 caps.latest.revision: 31
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8e314b63490387b94c068e178f0d02db4822921f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1f2ac13b62dcc522626fde92b1b29cac9873edec
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672173"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301830"
 ---
 # <a name="test-windows-uwp-and-81-phone-apps-with-coded-ui-tests"></a>Testování aplikací pro UPW a aplikací pro Windows Phone 8.1 pomocí programových testů uživatelského rozhraní
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -312,7 +312,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 
 ```
 
-## <a name="q--a"></a>Otázka & A
+## <a name="q--a"></a>Dotazy a odpovědi
 
 ### <a name="q-do-i-have-to-deploy-the-windows-phone-app-in-the-emulator-in-order-to-map-ui-controls"></a>Otázka: musím v emulátoru nasadit aplikaci Windows Phone, aby bylo možné mapovat ovládací prvky uživatelského rozhraní?
  Odpověď **: Ano**, Tvůrce programového testu uživatelského rozhraní vyžaduje spuštění emulátoru a nasazení aplikace do něj. V opačném případě se zobrazí chybová zpráva oznamující, že se nenašel žádný spuštěný emulátor.
@@ -353,7 +353,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 ### <a name="q-can-i-run-a-coded-ui-test-on-my-windows-phone-app-from-the-command-line"></a>Otázka: mohu na příkazovém řádku spustit programový test uživatelského rozhraní v aplikaci Windows Phone?
  Odpověď **: Ano**, použijete soubor runsettings k určení cílového zařízení pro spuštění testu. Příklad:
 
- **VSTest. Console. exe "pathToYourCodedUITestDll"/Settings: devicetarget. runsettings**
+ **vstest.console.exe “pathToYourCodedUITestDll” /settings:devicetarget.runsettings**
 
  Vzorový soubor runsettings:
 
@@ -382,7 +382,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 |Testy řízené daty|Informace o použití externích zdrojů dat a použití atributu DataSource pro testovací metodu naleznete v tématu [testy řízené daty](../test/creating-a-data-driven-coded-ui-test.md) .|Data jsou zadána jako vložená pomocí atributu DataRow v testovací metodě. Viz [použití programových testů uživatelského rozhraní řízených daty v aplikacích Windows Phone](#TestingPhoneAppsCodedUI_DataDriven) v tomto tématu.|
 
 ## <a name="external-resources"></a>Externí zdroje
- Microsoft Visual Studio blog správy životního cyklu aplikací: [použití kódovaného uživatelského rozhraní k testování aplikací Windows Phone založených na jazyce XAML](http://blogs.msdn.com/b/visualstudioalm/archive/2014/04/05/using-coded-ui-to-test-xaml-based-windows-phone-apps.aspx?PageIndex=2#comments)
+ Microsoft Visual Studio blog správy životního cyklu aplikací: [použití kódovaného uživatelského rozhraní k testování aplikací Windows Phone založených na jazyce XAML](https://devblogs.microsoft.com/devops/using-coded-ui-to-test-xaml-based-windows-phone-apps/#comments)
 
 ## <a name="see-also"></a>Viz také
  [Použití automatizace uživatelského rozhraní k testování kódu](../test/use-ui-automation-to-test-your-code.md)

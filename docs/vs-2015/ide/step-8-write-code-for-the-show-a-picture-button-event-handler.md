@@ -9,12 +9,12 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: aaa522efe5cb69dd9334a2cc3db7fc2846b1af7a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c2c1b09d88de938ee4bc93b69b50d53c0d39006f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646901"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299997"
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>Krok 8: Zapište kód pro obslužnou rutinu události zobrazení tlačítka s obrázkem
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,7 +27,7 @@ V tomto kroku nastavíte tlačítko **Zobrazit obrázek** jako funkční:
 
   Rozhraní IDE má výkonný nástroj nazvaný IntelliSense, který vám pomůže psát kód. Při zadávání kódu IDE otevře pole s navrhovanými dokončeními pro částečná slova, která zadáte. Pokusí se určit, co chcete udělat dále, a automaticky přejde na poslední položku, kterou zvolíte ze seznamu. Můžete použít šipky nahoru a dolů pro pohyb v seznamu nebo můžete nechat zadat písmena pro zúžení voleb. Po zobrazení požadované možnosti vyberte klávesu TAB a vyberte ji. Případně můžete návrhy ignorovat, pokud nejsou potřeba.
 
-  ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-Video 4](http://go.microsoft.com/fwlink/?LinkId=205215) nebo v [kurzu 1: vytvoření prohlížeče obrázků ve C# formátu-Video 4](http://go.microsoft.com/fwlink/?LinkId=205203). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
+  ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-Video 4](https://go.microsoft.com/fwlink/?LinkId=205215) nebo v [kurzu 1: vytvoření prohlížeče obrázků ve C# formátu-Video 4](https://go.microsoft.com/fwlink/?LinkId=205203). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
 
 ### <a name="to-write-code-for-the-show-a-picture-button-event-handler"></a>Zápis kódu pro obslužnou rutinu události zobrazit tlačítko obrázku
 
@@ -37,7 +37,7 @@ V tomto kroku nastavíte tlačítko **Zobrazit obrázek** jako funkční:
 
      ![IntelliSense s Visual C&#35; Code](../ide/media/express-ifintellisense.png "Express_IfIntellisense") IntelliSense s vizuálním kódem C#
 
-3. Okno **technologie IntelliSense** by mělo zvýrazňovat slovo **if**. (Pokud ne, zadejte `f` s malými písmeny a pak.) Všimněte si, jak se *zobrazí malé pole s popisem* vedle okna **technologie IntelliSense** s popisem, **fragmentem kódu pro příkaz if**. (V Visual Basic Popis také uvádí, že se jedná o fragment, ale s mírně odlišným použitím slov.) Chcete použít tento fragment kódu, proto vyberte klávesu TAB **a vložte ji** do svého kódu. Potom znovu stiskněte klávesu TAB a použijte tak fragment **if** . (Pokud jste zvolili někde jinde a okno **IntelliSense** zmizelo, místo na **i** a znovu ho zapište a otevře se okno **IntelliSense** znovu.)
+3. Okno **technologie IntelliSense** by mělo zvýrazňovat slovo **if**. (Pokud ne, zadejte `f`s malými písmeny a pak.) Všimněte si, jak se *zobrazí malé pole s popisem* vedle okna **technologie IntelliSense** s popisem, **fragmentem kódu pro příkaz if**. (V Visual Basic Popis také uvádí, že se jedná o fragment, ale s mírně odlišným použitím slov.) Chcete použít tento fragment kódu, proto vyberte klávesu TAB **a vložte ji** do svého kódu. Potom znovu stiskněte klávesu TAB a použijte tak fragment **if** . (Pokud jste zvolili někde jinde a okno **IntelliSense** zmizelo, místo na **i** a znovu ho zapište a otevře se okno **IntelliSense** znovu.)
 
      ![&#35; ](../ide/media/express-highlighttrue.png "Express_HighlightTrue") Vizuální C# kód Visual c++ Code
 
@@ -47,7 +47,7 @@ V tomto kroku nastavíte tlačítko **Zobrazit obrázek** jako funkční:
 
     2. Otevře se okno **IntelliSense** a zobrazí se dialog **OpenFileDialog1**. Zvolte klávesu TAB a vyberte ji. (V Visual Basic začíná počátečním zakončením, takže se zobrazí dialog **OpenFileDialog1**. Ujistěte se, že je vybraná možnost **OpenFileDialog1** .)
 
-         Další informace o `OpenFileDialog` naleznete v části [OpenFileDialog](https://msdn.microsoft.com/library/system.windows.forms.openfiledialog.aspx).
+         Další informace o `OpenFileDialog`naleznete v části [OpenFileDialog](https://msdn.microsoft.com/library/system.windows.forms.openfiledialog.aspx).
 
     3. Zadejte tečku (`.`) (mnoho programátorů zavolá tuto tečku.) Vzhledem k tomu, že jste zadali tečku hned po programu **OpenFileDialog1**, otevře se okno **technologie IntelliSense** , které se vyplní všemi vlastnostmi a metodami komponenty **OpenFileDialog** . Jedná se o stejné vlastnosti, které se zobrazí v okně **vlastnosti** při výběru v Návrhář formulářů. Můžete také zvolit metody, které instruují komponentu k provádění akcí (například otevření dialogového okna).
 
@@ -78,7 +78,7 @@ V tomto kroku nastavíte tlačítko **Zobrazit obrázek** jako funkční:
 
     8. Zadejte tečku pro otevření okna hodnoty DialogResult **technologie IntelliSense** . Zadejte písmeno `O` a vyberte klávesu Tabulátor pro vložení **OK**.
 
-         Další informace o `DialogResult` najdete v tématu [DialogResult](https://msdn.microsoft.com/library/system.windows.forms.dialogresult.aspx).
+         Další informace o `DialogResult`najdete v tématu [DialogResult](https://msdn.microsoft.com/library/system.windows.forms.dialogresult.aspx).
 
         > [!NOTE]
         > První řádek kódu by měl být dokončen. V případě C#vizuálu by měl být následující.

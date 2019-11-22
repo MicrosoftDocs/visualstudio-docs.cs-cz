@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f1f8824000c56fbd74f6ca069eb0535559698bf4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2be61a066157b203e4d09ff5f5dff5340dc0ec67
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68202543"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298342"
 ---
 # <a name="debug-store-apps-in-visual-studio"></a>Ladění aplikací pro Store v sadě Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,4 +39,4 @@ Ladicí program sady Visual Studio umožňuje řídit vykonávání programu a p
 |[Aktivace událostí pozastavení a obnovení a událostí na pozadí pro Windows Store](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md)|Ladicí program se zakáže Windows procesu životního cyklu správy (PLM) události, které pozastavení, pokračování a ukončení aplikace. Můžete vyvolat tyto události z panelu nástrojů ladicího programu.<br /><br /> Úlohy na pozadí umožňují provádět důležité operace, i v případě, že aplikace je pozastavená. Ladicí program umožňuje spustit a ladit tyto úlohy na pozadí.|
 
 ## <a name="see-also"></a>Viz také
- [Ladění v sadě Visual Studio (v knihovně MSDN)](http://go.microsoft.com/fwlink/?LinkID=226896)
+ [Ladění v sadě Visual Studio (v knihovně MSDN)](https://go.microsoft.com/fwlink/?LinkID=226896)

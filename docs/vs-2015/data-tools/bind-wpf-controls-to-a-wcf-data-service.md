@@ -18,12 +18,12 @@ caps.latest.revision: 44
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 421bd778b86aa223e1e7b3a96aa3943a86588174
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a3d1aab68e3dc9f33e0b3e9f9a5665d59f6f2ddc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662514"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299416"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>Vytvoření vazby ovládacích prvků WPF k datové službě WCF
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,7 +49,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
 
-- Přístup ke spuštěné instanci SQL Server nebo SQL Server Express, ke které je připojena ukázková databáze AdventureWorksLT. Databázi AdventureWorksLT si můžete stáhnout z webu [CodePlex](http://go.microsoft.com/fwlink/?linkid=87843).
+- Přístup ke spuštěné instanci SQL Server nebo SQL Server Express, ke které je připojena ukázková databáze AdventureWorksLT. Databázi AdventureWorksLT si můžete stáhnout z webu [CodePlex](https://go.microsoft.com/fwlink/?linkid=87843).
 
   Předchozí znalosti následujících konceptů jsou také užitečné, ale nevyžadují se k dokončení tohoto postupu:
 
@@ -83,7 +83,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 6. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **Default. aspx** a vyberte **Odstranit**. Tento soubor není v tomto návodu nutný.
 
 ## <a name="create-an-entity-data-model-for-the-service"></a>Vytvoření model EDM (Entity Data Model) pro službu
- Aby bylo možné vystavit data pro aplikaci pomocí [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)], je nutné pro tuto službu definovat datový model. @No__t_0 podporuje dva typy datových modelů: entity data Models a vlastní datové modely, které jsou definovány pomocí objektů modulu CLR (Common Language Runtime), které implementují rozhraní <xref:System.Linq.IQueryable%601>. V tomto návodu vytvoříte model EDM (Entity Data Model) pro datový model.
+ Aby bylo možné vystavit data pro aplikaci pomocí [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)], je nutné pro tuto službu definovat datový model. [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] podporuje dva typy datových modelů: entity data Models a vlastní datové modely, které jsou definovány pomocí objektů modulu CLR (Common Language Runtime), které implementují rozhraní <xref:System.Linq.IQueryable%601>. V tomto návodu vytvoříte model EDM (Entity Data Model) pro datový model.
 
 #### <a name="to-create-an-entity-data-model"></a>Vytvoření model EDM (Entity Data Model)
 
@@ -91,7 +91,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
 2. V seznamu nainstalované šablony klikněte na **data**a pak vyberte položku **ADO.NET model EDM (Entity Data Model)** projektu.
 
-3. Změňte název na `AdventureWorksModel.edmx` a klikněte na **Přidat**.
+3. Změňte název na `AdventureWorksModel.edmx`a klikněte na **Přidat**.
 
      Otevře se průvodce **model EDM (Entity Data Model)** .
 
@@ -118,7 +118,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
 2. V seznamu nainstalované šablony klikněte na možnost **Web**a poté vyberte položku projektu **WCF Data Service** .
 
-3. Do pole **název** zadejte `AdventureWorksService.svc` a klikněte na **Přidat**.
+3. Do pole **název** zadejte `AdventureWorksService.svc`a klikněte na **Přidat**.
 
      Visual Studio přidá `AdventureWorksService.svc` do projektu.
 
@@ -147,11 +147,11 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
 3. Vyberte šablonu projektu **aplikace WPF** .
 
-4. Do pole **název** zadejte `AdventureWorksSalesEditor` a klikněte na **OK**.
+4. Do pole **název** zadejte `AdventureWorksSalesEditor`a klikněte na **OK**.
 
      Visual Studio přidá do řešení `AdventureWorksSalesEditor` projekt.
 
-5. V nabídce **data** klikněte na možnost **Zobrazit zdroje dat**.
+5. Na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
 
      Otevře se okno **zdroje dat** .
 
@@ -323,4 +323,4 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 - Naučte se používat okno **zdroje dat** v aplikaci Visual Studio k zobrazení souvisejících dat (tj. data v relaci nadřazený-podřízený) v ovládacích prvcích WPF. Další informace naleznete v tématu [Návod: zobrazení souvisejících dat v aplikaci WPF](../data-tools/walkthrough-displaying-related-data-in-a-wpf-application.md).
 
 ## <a name="see-also"></a>Viz také
- [Vázání ovládacích prvků WPF k datům v sadě Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md) [vázání ovládacích prvků WPF na data v nástroji Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio2.md) [BIND WPF controls to](../data-tools/bind-wpf-controls-to-a-dataset.md) [–](https://msdn.microsoft.com/library/7924cf94-c9a6-4015-afc9-f5d22b1743bb) přehled [Entity Framework přehled](https://msdn.microsoft.com/library/a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0) [WPF and Silverlight Designer](https://msdn.microsoft.com/570b7a5c-0c86-4326-a371-c9b63378fc62) [data Overview Přehled vazeb](https://msdn.microsoft.com/library/c707c95f-7811-401d-956e-2fffd019a211)
+ [Vázání ovládacích prvků WPF k datům v sadě Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md) [vázání ovládacích prvků WPF na data v nástroji Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio2.md) [BIND WPF controls to](../data-tools/bind-wpf-controls-to-a-dataset.md) [–](https://msdn.microsoft.com/library/7924cf94-c9a6-4015-afc9-f5d22b1743bb) přehled [Entity Framework přehled](https://msdn.microsoft.com/library/a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0) [WPF a Silverlight Designer](https://msdn.microsoft.com/570b7a5c-0c86-4326-a371-c9b63378fc62) Overview – [Přehled datové vazby](https://msdn.microsoft.com/library/c707c95f-7811-401d-956e-2fffd019a211)

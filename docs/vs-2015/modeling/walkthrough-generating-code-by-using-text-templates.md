@@ -12,12 +12,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 29a455194e64ee30186941cb67b014170426cce0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c2a86689fd41b7c0233db0df544082ef22c4931a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659254"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295499"
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>Návod: Vytvoření kódu pomocí textových šablon
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ Generování kódu umožňuje vytvářet kód programu, který je silného typu 
  V tomto příkladu projektu šablona čte ukázkový soubor XML a generuje třídy, které odpovídají každému typu uzlu. V kódu psané rukou můžete použít tyto třídy pro navigaci v souboru XML. Můžete také spustit aplikaci na všech ostatních souborech, které používají stejné typy uzlů. Účelem ukázkového souboru XML je poskytnout příklady všech typů uzlů, se kterými se má aplikace zabývat.
 
 > [!NOTE]
-> Aplikace [XSD. exe](http://go.microsoft.com/fwlink/?LinkId=178765), která je součástí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], může generovat třídy silného typu ze souborů XML. Zde uvedená šablona je uvedena jako příklad.
+> Aplikace [XSD. exe](https://go.microsoft.com/fwlink/?LinkId=178765), která je součástí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], může generovat třídy silného typu ze souborů XML. Zde uvedená šablona je uvedena jako příklad.
 
  Tady je ukázkový soubor:
 
@@ -418,7 +418,7 @@ namespace MyProject
   V tomto návodu je programový kód skutečně vygenerován z instance modelu, což je reprezentativní příklad souborů XML, které aplikace zpracuje. V rámci příznivějšího přístupu bude schéma XML vstupem do šablony, ve formě souboru. XSD nebo definice jazyka specifického pro doménu. Tento přístup by usnadnil, aby šablona určila vlastnosti, jako je násobnost vztahu.
 
 ## <a name="troubleshooting-the-text-template"></a>Poradce při potížích s textovou šablonou
- Pokud jste viděli transformaci šablony nebo chyby kompilace v **Seznam chyb**, nebo pokud výstupní soubor nebyl vygenerován správně, můžete řešit problémy s textovou šablonou pomocí technik popsaných v tématu [generování souborů pomocí TextTransform Nástroj](../modeling/generating-files-with-the-texttransform-utility.md).
+ Pokud jste viděli transformaci šablony nebo chyby kompilace v **Seznam chyb**, nebo pokud výstupní soubor nebyl vygenerován správně, můžete řešit problémy s textovou šablonou pomocí technik popsaných v tématu [generování souborů pomocí nástroje TextTransform](../modeling/generating-files-with-the-texttransform-utility.md).
 
 ## <a name="see-also"></a>Viz také
  Vytváření [kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md) s [psaním textové šablony T4](../modeling/writing-a-t4-text-template.md)

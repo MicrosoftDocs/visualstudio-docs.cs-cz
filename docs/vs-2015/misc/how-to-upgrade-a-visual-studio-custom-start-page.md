@@ -7,18 +7,18 @@ ms.topic: conceptual
 ms.assetid: 78342ce6-36c8-485b-a5f6-760e7a420a26
 caps.latest.revision: 8
 manager: jillfra
-ms.openlocfilehash: abe1013d37db43114f3970f12b1a0d1f08b07a4e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a7854de705a961463b1e8435e7340548cfc23bf3
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446461"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74293378"
 ---
 # <a name="how-to-upgrade-a-visual-studio-custom-start-page"></a>Postupy: Upgrade vlastní úvodní stránku sady Visual Studio
 Můžete upgradovat Visual Studio 2010 nebo Visual Studio 2012 vlastní úvodní stránku do sady Visual Studio 2015 podle pokynů uvedených níže.
 
 > [!WARNING]
-> Vlastní úvodní stránku upgradovat v tomto postupu je vytvořena s [vlastní úvodní stránky](http://visualstudiogallery.msdn.microsoft.com/f655a5dc-1a2d-4eca-b774-76c352c03b87) šablony pro Galerii Visual Studio. Úvodní stránka může mít jiné funkce, které je potřeba upgradovat.
+> Vlastní úvodní stránku upgradovat v tomto postupu je vytvořena s [vlastní úvodní stránky](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.CustomStartPageProjectTemplate) šablony pro Galerii Visual Studio. Úvodní stránka může mít jiné funkce, které je potřeba upgradovat.
 
 ### <a name="to-upgrade-a-custom-start-page-to-visual-studio-2015"></a>Vlastní úvodní stránku upgradovat na Visual Studio 2015
 

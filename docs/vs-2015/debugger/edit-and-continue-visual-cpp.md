@@ -1,5 +1,5 @@
 ---
-title: Upravit a pokračovat (Visual C++) | Dokumentace Microsoftu
+title: Upravit a pokračovat (vizuál C++) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,64 +18,64 @@ caps.latest.revision: 28
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 752454f9a52807766d6eef5b2563a7b70ca0f4dd
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: fef02f08ac635687eaaf071188ba0455c6389d9e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65697382"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301053"
 ---
 # <a name="edit-and-continue-visual-c"></a>Upravit a pokračovat (Visual C++)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete upravit a pokračovat v projektech Visual C++. Zobrazit [podporované změny kódu (C++)](../debugger/supported-code-changes-cpp.md) informace o omezení operace upravit a pokračovat.  
+V vizuálních C++ projektech můžete použít možnost upravit a pokračovat. Informace o omezeních pro úpravu a pokračování naleznete v tématu [podporované změny kóduC++()](../debugger/supported-code-changes-cpp.md) .  
   
- Od verze Visual Studio 2015 Update 1, teď můžete upravit a pokračovat v Windows Store C++ a aplikací rozhraní DirectX, protože teď podporuje **/zi** přepínač kompilátoru s **/bigobj** přepnout. Můžete také upravit a pokračovat se binární soubory zkompilované **/FASTLINK** přepnout.  
+ Počínaje verzí Visual Studio 2015 Update 1 teď můžete v aplikacích pro Windows Store C++ a aplikacích rozhraní DirectX použít příkaz Upravit a pokračovat, protože teď podporuje přepínač **/Zi** Compiler s přepínačem **/bigobj** . V případě binárních souborů kompilovaných s přepínačem **/FastLink** můžete také použít možnost upravit a pokračovat.  
   
- Dialogové okno Nový, zrušitelný čekání mezi další vylepšení Update 1 patří, a oznámení, když soubor nepodporuje operace upravit a pokračovat. Další informace o vylepšeních Update 1 najdete v tématu [vylepšení pro C++ upravit a pokračovat v aplikaci Visual Studio 2015 Update 1](http://blogs.msdn.com/b/vcblog/archive/2015/11/30/improvements-for-c-edit-and-continue-in-visual-studio-2015-update-1.aspx).  
+ Další vylepšení s aktualizací Update 1 zahrnují nové, zrušitelné dialogové okno a oznámení, když soubor nepodporuje operaci upravit a pokračovat. Další informace o vylepšeních aktualizace 1 najdete [v tématu vylepšení C++ úprav a pokračování v aktualizaci Visual Studio 2015 Update 1](https://devblogs.microsoft.com/cppblog/improvements-for-c-edit-and-continue-in-visual-studio-2015-update-1/).  
   
- [/Zo (vylepšit optimalizované ladění)](https://msdn.microsoft.com/library/eea8d89a-7fe0-4fe1-86b2-7689bbebbd7f) – možnost kompilátoru, která byla zavedena v sadě Visual Studio 2013 Update 3 přidá do souborů s příponou .pdb (symbol) Další informace pro binární soubory zkompilovány bez volby [/Od (zakázat (ladění)) ](https://msdn.microsoft.com/library/aafb762y.aspx) možnost.  
+ Možnost kompilátoru [/Zo (rozšířené optimalizované ladění)](https://msdn.microsoft.com/library/eea8d89a-7fe0-4fe1-86b2-7689bbebbd7f) , která byla představena ve službě Visual Studio 2013 Update 3, přidává další informace do souborů. pdb (symbol) pro binární soubory kompilované bez možnosti [/od (Disable (Ladit))](https://msdn.microsoft.com/library/aafb762y.aspx) .  
   
- **/Zo** zakáže operace upravit a pokračovat. Zobrazit [jak: Ladění optimalizovaného kódu](../debugger/how-to-debug-optimized-code.md).  
+ **/Zo** zakáže funkci upravit a pokračovat. Viz [How to: Debug optimalizovaného kódu](../debugger/how-to-debug-optimized-code.md).  
   
-## <a name="BKMK_Enable_or_disable_automatic_invocation_of_Edit_and_Continue"></a> Povolení nebo zakázání funkce upravit a pokračovat  
- Můžete chtít zakázat automatického volání operace upravit a pokračovat, pokud provádíte úpravy kódu, který nechcete, aby platily aktuální relace ladění. Můžete také znovu povolit automatické funkce upravit a pokračovat.  
+## <a name="BKMK_Enable_or_disable_automatic_invocation_of_Edit_and_Continue"></a>Povolit nebo zakázat úpravy a pokračovat  
+ Pokud upravujete kód, který nechcete použít během aktuální relace ladění, je vhodné zakázat automatické vyvolání funkce upravit a pokračovat. Můžete také znovu povolit automatické úpravy a pokračovat.  
   
 1. Na **nástroje** nabídce zvolte **možnosti**.  
   
-2. V **možnosti** dialogu **ladění / Obecné**.  
+2. V dialogovém okně **Možnosti** vyberte **ladění/obecné**.  
   
-3. V **upravit a pokračovat** skupině, zaškrtněte nebo zrušte zaškrtnutí **Povolit nativní editovat a pokračovat** zaškrtávací políčko.  
+3. Ve skupině **Upravit a pokračovat** zaškrtněte nebo zrušte zaškrtnutí políčka **Povolit nativní úpravu a pokračování** .  
   
-   Změna tohoto nastavení má vliv na všechny projekty, které pracujete. Není nutné znovu sestavit aplikaci po změně tohoto nastavení. Nastavení lze změnit i během ladění. Pokud vytváříte aplikaci z příkazového řádku nebo ze souboru pravidel, ale ladit v prostředí sady Visual Studio, stále můžete upravit a pokračovat Pokud nastavíte **/zi** možnost.  
+   Změna tohoto nastavení ovlivní všechny projekty, na kterých pracujete. Po změně tohoto nastavení nemusíte aplikaci znovu sestavovat. Nastavení můžete změnit i při ladění. Při sestavování aplikace z příkazového řádku nebo ze souboru pravidel, ale ladění v prostředí Visual Studio, můžete i nadále používat možnost upravit a pokračovat, pokud nastavíte možnost **/Zi** .  
   
-## <a name="BKMK_How_to_apply_code_changes_explicitly"></a> Jak explicitní použití změn kódu  
- V jazyce Visual C++ můžete použít kód změny v dva způsoby, jak upravit a pokračovat. Změny kódu lze použít implicitně, když zvolíte příkazu ke spuštění, nebo explicitně, pomocí **použít změny kódu** příkazu.  
+## <a name="BKMK_How_to_apply_code_changes_explicitly"></a>Explicitní použití změn kódu  
+ V jazyce C++Visual mohou upravit a pokračovat použít změny kódu dvěma způsoby. Změny kódu lze použít implicitně, pokud vyberete příkaz pro spuštění nebo explicitně pomocí příkazu **použít změny kódu** .  
   
- Při explicitní použití změn kódu aplikace zůstávají v režimu pozastavení – žádná spuštění.  
+ Při explicitním použití změn kódu zůstane program v režimu pozastavení – nebude provedeno žádné spuštění.  
   
-- Na explicitní, použití změn kódu na **ladění** nabídce zvolte **použít změny kódu**.  
+- Chcete-li použít změny kódu explicitně, v nabídce **ladění** vyberte možnost **použít změny kódu**.  
   
-## <a name="BKMK_How_to_stop_code_changes"></a> Postup zastavení změn kódu  
- Upravit a pokračovat je právě aplikování změn kódu, můžete zastavit operaci.  
+## <a name="BKMK_How_to_stop_code_changes"></a>Zastavení změn kódu  
+ I když je proces úpravy a pokračování v procesu aplikování změn kódu, můžete operaci zastavit.  
   
- Zastavit provádění změn kódu:  
+ Zastavení použití změn kódu:  
   
-- Na **ladění** nabídce zvolte **zastavit provádění změn kódu**.  
+- V nabídce **ladění** vyberte možnost **zastavit aplikování změn kódu**.  
   
-  Tato položka nabídky je viditelná pouze v případě, že se aplikují změny kódu.  
+  Tato položka nabídky je viditelná pouze v případě, že jsou aplikovány změny kódu.  
   
-  Pokud zvolíte tuto možnost, žádná ze změn kódu není potvrzena.  
+  Pokud zvolíte tuto možnost, není potvrzena žádná změna kódu.  
   
-## <a name="BKMK_How_to_reset_the_point_of_execution"></a> Obnovení bodu provádění  
- Některé změny kódu může způsobit bod provádění přesunout do nového umístění, pokud funkce upravit a pokračovat se vztahuje změny. Upravit a pokračovat umístí bod provádění co nejpřesněji, ale výsledky nemusí být správný ve všech případech.  
+## <a name="BKMK_How_to_reset_the_point_of_execution"></a>Postup obnovení bodu provádění  
+ Některé změny kódu můžou způsobit, že se bod spuštění přesune do nového umístění, když se změny upraví a pokračuje. Možnost upravit a pokračovat umístí místo spuštění co nejpřesněji, ale výsledky nemusí být ve všech případech správné.  
   
- V jazyce Visual C++ dialogové okno vás informuje změny bodu provádění. Ověřte, že je umístění správné předtím, než budete pokračovat v ladění. Pokud není správná, použijte **nastavit další příkaz** příkazu. Další informace najdete v tématu [nastavení dalšího příkazu ke spuštění](https://msdn.microsoft.com/library/y740d9d3.aspx#BKMK_Set_the_next_statement_to_execute).  
+ V vizuálu C++se zobrazí dialogové okno, když se změní bod provádění. Před pokračováním v ladění je vhodné ověřit, zda je umístění správné. Pokud není správný, použijte příkaz **nastavit další příkaz** . Další informace najdete v tématu [nastavení dalšího příkazu ke spuštění](https://msdn.microsoft.com/library/y740d9d3.aspx#BKMK_Set_the_next_statement_to_execute).  
   
-## <a name="BKMK_How_to_work_with_stale_code"></a> Práce se starým kódem  
- V některých případech funkce upravit a pokračovat nemůže použití změn kódu spustitelný soubor, ale možná půjde použít změny kódu později, pokud budete pokračovat, ladění. K tomu dochází při úpravě funkce, která volá aktuální funkci nebo pokud chcete přidat více než 64 bajtů nové proměnné na funkci v zásobníku volání  
+## <a name="BKMK_How_to_work_with_stale_code"></a>Jak pracovat se zastaralým kódem  
+ V některých případech nemůže příkaz Upravit a pokračovat ve spustitelném souboru okamžitě použít změny kódu, ale po pokračování v ladění může být možné použít změny kódu později. K tomu dojde, pokud upravíte funkci, která volá aktuální funkci, nebo pokud do funkce v zásobníku volání přidáte více než 64 bajtů nových proměnných.  
   
- V takových případech ladicí program pokračuje v provádění původní kód, dokud změny mohou být použity. Zastaralý kód se zobrazí jako dočasné zdrojové okno souborů v okně samostatného zdroje s názvem, jako `enc25.tmp`. Upravené zdroje i nadále zobrazovat v okně původního zdroje. Pokud se pokusíte úprava starý kód, zobrazí se zpráva s upozorněním.  
+ V takových případech ladicí program pokračuje ve spouštění původního kódu, dokud se změny nedají použít. V samostatném okně zdrojového kódu se zobrazí zastaralý kód jako dočasné okno zdrojového souboru s názvem, jako je například `enc25.tmp`. Upravovaný zdroj se nadále zobrazuje v původním okně zdrojového kódu. Pokud se pokusíte upravit zastaralý kód, zobrazí se varovná zpráva.  
   
 ## <a name="see-also"></a>Viz také  
  [Podporované změny kódu (C++)](../debugger/supported-code-changes-cpp.md)

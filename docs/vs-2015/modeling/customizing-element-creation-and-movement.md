@@ -13,12 +13,12 @@ caps.latest.revision: 38
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: aa377f657143ccc03a19d99bfc9620782bb916e7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8189330f5bc3ff5c9008b6f01ffc00af96162806
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655032"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301148"
 ---
 # <a name="customizing-element-creation-and-movement"></a>Přizpůsobení vytvoření a přesunutí elementu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -73,7 +73,7 @@ Můžete určit, že se má element přetáhnout na jiný, a to buď z panelu n�
 > [!NOTE]
 > Pokud píšete vlastní kód sloučení, bude mít vliv pouze na sloučení, která jsou provedena pomocí tohoto EMD. Pokud existují další EMDs, které sloučí stejný typ objektu nebo pokud existuje jiný vlastní kód, který vytváří tyto objekty bez použití EMD, pak nebudou ovlivněny vlastním slučovacím kódem.
 >
-> Pokud chcete zajistit, aby byl nový prvek nebo nový vztah vždy zpracován vlastním kódem, zvažte definování `AddRule` ve vztahu vkládání a `DeleteRule` třídy domény elementu. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
+> Pokud chcete zajistit, aby byl nový prvek nebo nový vztah vždy zpracován vlastním kódem, zvažte definování `AddRule` ve vztahu vkládání a `DeleteRule` třídy domény elementu. Další informace najdete v tématu [pravidla šíření změn v rámci the Model](../modeling/rules-propagate-changes-within-the-model.md).
 
 ## <a name="example-defining-an-emd-without-custom-code"></a>Příklad: definování EMD bez vlastního kódu
  Následující příklad umožňuje uživatelům vytvořit prvek a spojnici současně přetažením z panelu nástrojů na existující obrazec. V příkladu se přidá EMD do definice DSL. Před touto úpravou mohou uživatelé přetahovat nástroje do diagramu, ale ne do stávajících tvarů.
@@ -110,7 +110,7 @@ Můžete určit, že se má element přetáhnout na jiný, a to buď z panelu n�
 
       Pomocí nástroje pro navigaci cest můžete vytvořit každou cestu:
 
-   3. V části **proces sloučení vytvořením odkazů na cestách**klikněte na **\<add cesta >** .
+   3. V části **proces sloučení vytvořením odkazů na cestách**klikněte **\<přidat cestu >** .
 
    4. Klikněte na šipku rozevíracího seznamu napravo od položky seznamu. Zobrazí se stromové zobrazení.
 
@@ -191,7 +191,7 @@ Můžete určit, že se má element přetáhnout na jiný, a to buď z panelu n�
 
     ```
 
-     Tento jednoduchý příklad omezuje počet prvků, které mohou být sloučeny do nadřazeného modelu. Pro zajímavé podmínky může metoda zkontrolovat kteroukoli z vlastností a propojení přijímajícího objektu. Může také zkontrolovat vlastnosti sloučených prvků, které jsou převedené v <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>. Další informace o `ElementGroupPrototypes` najdete v tématu [přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md). Další informace o tom, jak napsat kód, který čte model, naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
+     Tento jednoduchý příklad omezuje počet prvků, které mohou být sloučeny do nadřazeného modelu. Pro zajímavé podmínky může metoda zkontrolovat kteroukoli z vlastností a propojení přijímajícího objektu. Může také zkontrolovat vlastnosti sloučených prvků, které jsou převedené v <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>. Další informace o `ElementGroupPrototypes`najdete v tématu [přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md). Další informace o tom, jak napsat kód, který čte model, naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
 6. Otestujte DSL:
 
@@ -214,7 +214,7 @@ Můžete určit, že se má element přetáhnout na jiný, a to buď z panelu n�
 
 2. Přepište metodu `MergeRelate` a volitelně metodu `MergeDisconnect`. Chcete-li to provést, musíte nastavit vlastnost **Generovat dvojitou hodnotu odvozenou** pro doménovou třídu. Váš kód může volat generovaný slučovací kód v základní třídě. Tuto možnost použijte, pokud chcete po provedení sloučení provést další operace.
 
-   Tyto přístupy mají vliv pouze na sloučení, která jsou prováděna pomocí tohoto EMD. Chcete-li ovlivnit všechny způsoby, jak lze vytvořit sloučený prvek, alternativou je definování `AddRule` v relaci vložení a `DeleteRule` ve sloučené třídě domény. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
+   Tyto přístupy mají vliv pouze na sloučení, která jsou prováděna pomocí tohoto EMD. Chcete-li ovlivnit všechny způsoby, jak lze vytvořit sloučený prvek, alternativou je definování `AddRule` v relaci vložení a `DeleteRule` ve sloučené třídě domény. Další informace najdete v tématu [pravidla šíření změn v rámci the Model](../modeling/rules-propagate-changes-within-the-model.md).
 
 #### <a name="to-override-mergerelate"></a>Přepsání MergeRelate
 
@@ -273,7 +273,7 @@ Můžete určit, že se má element přetáhnout na jiný, a to buď z panelu n�
 
 4. Zapište metody v definici částečné třídy v samostatném souboru kódu. Předchozí příklady, které jste si prohlédli dříve, by měly navrhnout, co potřebujete.
 
-   Vlastní kód sloučení nebude mít vliv na kód, který vytváří objekty a vztahy přímo, a nebude mít vliv na jiné EMDs. Chcete-li zajistit, aby byly další změny implementovány bez ohledu na to, jak je prvek vytvořen, zvažte zápis `AddRule` a místo toho `DeleteRule`. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
+   Vlastní kód sloučení nebude mít vliv na kód, který vytváří objekty a vztahy přímo, a nebude mít vliv na jiné EMDs. Chcete-li zajistit, aby byly další změny implementovány bez ohledu na to, jak je prvek vytvořen, zvažte zápis `AddRule` a místo toho `DeleteRule`. Další informace najdete v tématu [pravidla šíření změn v rámci the Model](../modeling/rules-propagate-changes-within-the-model.md).
 
 ## <a name="redirecting-a-merge-operation"></a>Přesměrování operace sloučení
  Direktiva pro přesměrování sloučení přesměruje cíl operace sloučení. Nový cíl je obvykle vkládání nadřazeného objektu počáteční cíl.
@@ -304,7 +304,7 @@ Můžete určit, že se má element přetáhnout na jiný, a to buď z panelu n�
 
      Nová cesta by měla vypadat přibližně takto:
 
-     **Komponenta ComponentHasPorts. Component/!**
+     **ComponentHasPorts.Component/!Component**
 
 9. Uložte řešení a pak šablony Transformujte kliknutím na tlačítko vpravo na panelu nástrojů **Průzkumník řešení** .
 
@@ -317,4 +317,4 @@ Můžete určit, že se má element přetáhnout na jiný, a to buď z panelu n�
      Neměl by se zobrazovat nedostupný ukazatel a měli byste být schopni vyřadit nový **vstupní port** na stávajícím. Vyberte nový **vstupní port** a přetáhněte jej na jiný bod **součásti**.
 
 ## <a name="see-also"></a>Viz také
- [Navigace v modelu a aktualizace modelu v programu Code](../modeling/navigating-and-updating-a-model-in-program-code.md) [Customization Tools a](../modeling/customizing-tools-and-the-toolbox.md) [ukázkach diagramů okruhů](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8) na panelu nástrojů
+ [Navigace a aktualizace modelu v programovém kódu](../modeling/navigating-and-updating-a-model-in-program-code.md) [přizpůsobení nástrojů a panelu nástrojů](../modeling/customizing-tools-and-the-toolbox.md)

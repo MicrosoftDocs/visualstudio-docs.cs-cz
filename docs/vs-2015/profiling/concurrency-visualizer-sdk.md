@@ -11,17 +11,17 @@ caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: eaaaacdcc5cf7e3044505f7cdb7aeb2e7e3e7078
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 33689ed44f4228411243d3b9716a2407b751d32b
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871970"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300646"
 ---
 # <a name="concurrency-visualizer-sdk"></a>SDK Vizualizéru souběžnosti
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Svůj zdrojový kód můžete instrumentovat pomocí sady Vizualizátor souběžnosti SDK pro zobrazení dalších informací v Vizualizátor souběžnosti. Můžete přidružit další data k fázím a událostem ve vašem kódu. Tyto další vizualizace se označují jako *značky*.  Úvodní návod najdete v tématu [představení sady Vizualizátor souběžnosti SDK](http://go.microsoft.com/fwlink/?LinkId=235405).
+Svůj zdrojový kód můžete instrumentovat pomocí sady Vizualizátor souběžnosti SDK pro zobrazení dalších informací v Vizualizátor souběžnosti. Můžete přidružit další data k fázím a událostem ve vašem kódu. Tyto další vizualizace se označují jako *značky*.  Úvodní návod najdete v tématu [představení sady Vizualizátor souběžnosti SDK](https://go.microsoft.com/fwlink/?LinkId=235405).
 
 ## <a name="properties"></a>Vlastnosti
  Příznaky, rozsahy a zprávy obsahují dvě vlastnosti: kategorie a důležitost. V dialogovém okně [Upřesnit nastavení](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) lze pomocí těchto vlastností filtrovat sadu zobrazených značek. Kromě toho tyto vlastnosti ovlivňují vizuální znázornění značek. Například velikost příznaků se používá k reprezentaci důležitosti. Kromě toho se k označení kategorie používá barva.
@@ -50,7 +50,7 @@ V C#jazyce Visual Basic a jiném spravovaném kódu použijte výchozího poskyt
     ```
 
 ### <a name="c"></a>C++
- V C++, vytvořte objekt [třídy marker_series](../profiling/marker-series-class.md) a použijte jej k volání funkcí.  Třída zpřístupňuje tři funkce pro generování značek, [metodu marker_series:: write_flag](../profiling/marker-series-write-flag-method.md), [metodu marker_series:: write_message](../profiling/marker-series-write-message-method.md)a [metodu marker_series:: write_alert.](../profiling/marker-series-write-alert-method.md) `marker_series`
+ V C++aplikaci vytvořte objekt [marker_series třídy](../profiling/marker-series-class.md) a použijte jej k volání funkcí.  Třída `marker_series` zpřístupňuje tři funkce pro generování značek, [metodu marker_series:: write_flag](../profiling/marker-series-write-flag-method.md), [metodu marker_series:: write_message](../profiling/marker-series-write-message-method.md)a [metodu marker_series:: write_alert](../profiling/marker-series-write-alert-method.md).
 
 ##### <a name="to-add-sdk-support-to-a-c-or-c-project"></a>Přidání podpory sady SDK do projektu C++ nebo jazyka C
 
@@ -58,7 +58,7 @@ V C#jazyce Visual Basic a jiném spravovaném kódu použijte výchozího poskyt
 
 2. Vyberte projekt, ve kterém chcete získat přístup k sadě SDK, a pak klikněte na tlačítko **Přidat sadu SDK do vybraného projektu** .
 
-3. Pro C++zadejte `cvmarkersobj.h`. Pro C přidejte `cvmarkers.h`.
+3. V C++případě přidejte `cvmarkersobj.h`. Pro C přidejte `cvmarkers.h`.
 
 4. Přidejte příkaz using do kódu.
 
@@ -66,7 +66,7 @@ V C#jazyce Visual Basic a jiném spravovaném kódu použijte výchozího poskyt
     using namespace Concurrency::diagnostic;
     ```
 
-5. Vytvořte objekt a předejte jej `span` konstruktoru. `marker_series`
+5. Vytvořte objekt `marker_series` a předejte ho do konstruktoru `span`.
 
     ```cpp
     marker_series mySeries;
@@ -84,7 +84,7 @@ V C#jazyce Visual Basic a jiném spravovaném kódu použijte výchozího poskyt
 
 #### <a name="to-use-a-new-marker-provider-in-a-c-or-c-project"></a>Použití nového poskytovatele značek v projektu C++ nebo C
 
-1. K inicializaci PCV_PROVIDER použijte funkci.`CvInitProvider` Konstruktor přijímá identifikátor GUID * a PCV_PROVIDER\*.
+1. K inicializaci PCV_PROVIDER použijte funkci `CvInitProvider`. Konstruktor přebírá GUID * a PCV_PROVIDER\*.
 
 2. Chcete-li zaregistrovat poskytovatele, otevřete dialogové okno [Upřesnit nastavení](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) . Vyberte kartu **značky** a pak klikněte na tlačítko **Přidat nového poskytovatele** . V tomto dialogovém okně zadejte identifikátor GUID, který se použil k vytvoření poskytovatele a popis poskytovatele.
 
@@ -104,7 +104,7 @@ V C#jazyce Visual Basic a jiném spravovaném kódu použijte výchozího poskyt
 
 #### <a name="to-use-a-marker-series-in-a-c-project"></a>Použití řady značek v C++ projektu
 
-1. `marker_series` Vytvořte objekt.  Z této nové řady můžete generovat události.
+1. Vytvořte objekt `marker_series`.  Z této nové řady můžete generovat události.
 
     ```scr
     marker_series series;
@@ -113,7 +113,7 @@ V C#jazyce Visual Basic a jiném spravovaném kódu použijte výchozího poskyt
 
 #### <a name="to-use-a-marker-series-in-a-c-project"></a>Použití řady značek v projektu jazyka C
 
-1. K vytvoření PCV_MARKERSERIES použijte funkci.`CvCreateMarkerSeries`
+1. K vytvoření PCV_MARKERSERIES použijte funkci `CvCreateMarkerSeries`.
 
     ```cpp
     PCV_MARKERSERIES series;

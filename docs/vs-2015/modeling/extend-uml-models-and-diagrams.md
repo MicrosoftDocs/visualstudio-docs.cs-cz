@@ -12,12 +12,12 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 69315b8a81c321d8a33583b02e9579f392d1dc65
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b8b154ccd18472d0b0bca502c78a6612aeccdda6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669600"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301045"
 ---
 # <a name="extend-uml-models-and-diagrams"></a>Rozšíření modelů a diagramů UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,15 +30,15 @@ V tomto tématu jsou shrnuty různé způsoby, kterými můžete roztáhnout ná
 
  Tým nástrojů společnosti Fabrikam přináší řadu vylepšení, která usnadňují vývojovým týmům. V následujících částech jsou popsány různé druhy rozšíření, která můžete definovat. Některé z těchto postupů můžete zkombinovat do jednoho rozšíření sady Visual Studio.
 
- Další informace najdete v tomto videu: ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo")[MSDN jak mám řady: nástroje a rozšiřitelnost UML](http://go.microsoft.com/fwlink/?LinkId=214467).
+ Další informace najdete v tomto videu: ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo")[MSDN jak mám řady: nástroje a rozšiřitelnost UML](https://go.microsoft.com/fwlink/?LinkId=214467).
 
-## <a name="Requirements"></a>Požadavků
+## <a name="Requirements"></a> Požadavky
 
 - [Sada Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 
-- [Sada Modeling SDK pro Visual Studio 2015](http://www.microsoft.com/download/details.aspx?id=48148).
+- [Sada Modeling SDK pro Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48148).
 
-## <a name="profiles"></a>Uživatelů
+## <a name="profiles"></a>Profily
  Profily umožňují definovat stereotypy a další vlastnosti prvků UML.
 
  Vývojáři nástrojů společnosti Fabrikam definují stereotypy na objektových uzlech diagramů činnosti, jako je «pásový pás» a «oddělení odregistrací». Když člen týmu vytvoří schéma pro zpracování zavazadel pomocí diagramu činnosti, může nyní nastavit stereotypy k určení toho, jaký typ zařízení každý uzel představuje. Vývojáři nástrojů definují další vlastnosti u některých stereotypů, aby mohli uživatelé zaznamenávat hodnoty, jako je kapacita dopravníkového pásu, a psaní rukou oddělení pro vrácení se změnami.
@@ -92,7 +92,7 @@ V tomto tématu jsou shrnuty různé způsoby, kterými můžete roztáhnout ná
 
  Další informace najdete v tématu [generování souborů z modelu UML](../modeling/generate-files-from-a-uml-model.md).
 
-## <a name="team-foundation-server-integration"></a>Integrace Team Foundation Server
+## <a name="team-foundation-server-integration"></a>Team Foundation Server Integration
  Pracovní položky můžete propojit s prvky modelu a přistupovat k propojeným položkám programově.
 
  Vývojáři nástrojů společnosti Fabrikam napíší nástroj, který generuje pracovní plán pro každý projekt letiště. Pracovní položky v plánu jsou propojeny s prvky modelu.
@@ -111,12 +111,12 @@ V tomto tématu jsou shrnuty různé způsoby, kterými můžete roztáhnout ná
 
 ## <a name="external-resources"></a>Externí zdroje
 
-|**Kategorií**|**Odkazy**|
+|**Kategorie**|**Odkazy**|
 |------------------|---------------|
-|**Videa**|![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN postup I série: nástroje a rozšiřitelnost UML](http://go.microsoft.com/fwlink/?LinkId=214467)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kanál 9: UML se sadou Visual Studio](http://go.microsoft.com/fwlink/?LinkId=199957)|
-|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](http://go.microsoft.com/fwlink/?LinkId=184721)|
-|**Blogy**|[Blog sady Visual Studio ALM + Team Foundation Server](http://go.microsoft.com/fwlink/?LinkID=201340)|
-|**Technické články a deníky**|[Centrum architektury MSDN](http://go.microsoft.com/fwlink/?LinkId=201343)|
+|**Videa**|![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN postup I série: nástroje a rozšiřitelnost UML](https://go.microsoft.com/fwlink/?LinkId=214467)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kanál 9: UML se sadou Visual Studio](https://go.microsoft.com/fwlink/?LinkId=199957)|
+|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://go.microsoft.com/fwlink/?LinkId=184721)|
+|**Blogy**|[Blog sady Visual Studio ALM + Team Foundation Server](https://go.microsoft.com/fwlink/?LinkID=201340)|
+|**Technické články a deníky**|[Centrum architektury MSDN](https://go.microsoft.com/fwlink/?LinkId=201343)|
 
 ## <a name="see-also"></a>Viz také
  [Vytváření modelů pro](../modeling/create-models-for-your-app.md) [Reference k rozhraní API vaší aplikace pro rozšíření modelování UML](../modeling/api-reference-for-uml-modeling-extensibility.md)

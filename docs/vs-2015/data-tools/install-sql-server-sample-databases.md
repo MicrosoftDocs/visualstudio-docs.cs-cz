@@ -9,25 +9,25 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3991d3b741162b4b1993e5359ad427c17f00321a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3915351bff74f35ceb5fc462cb29dfd2f322fb6a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651531"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299626"
 ---
 # <a name="install-sql-server-sample-databases"></a>Instalace ukázkové databáze SQL Serveru
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Ukázkové databáze jsou užitečné pro experimentování s dotazy SQL a LINQ, DataBinding, modelování Entity Framework a tak dále.  Každý databázový produkt má své vlastní ukázkové databáze. Northwind a AdventureWorks jsou dvě oblíbené SQL Server ukázkové databáze.
 
- **AdventureWorks** je aktuální ukázková databáze poskytovaná pro SQL Server Products. Můžete si ho stáhnout jako soubor. mdf ze [stránky AdventureWorks na webu CodePlex](http://msftdbprodsamples.codeplex.com/). Zde jsou k dispozici běžné a zjednodušené verze (LT) databáze. Ve většině scénářů je preferovaná verze LT, protože je méně složitá.
+ **AdventureWorks** je aktuální ukázková databáze poskytovaná pro SQL Server Products. Můžete si ho stáhnout jako soubor. mdf ze [stránky AdventureWorks na webu CodePlex](https://archive.codeplex.com/?p=msftdbprodsamples). Zde jsou k dispozici běžné a zjednodušené verze (LT) databáze. Ve většině scénářů je preferovaná verze LT, protože je méně složitá.
 
  **Northwind** je poměrně jednoduchá databáze SQL Server, která se používá po řadu let. Můžete si ho stáhnout jako soubor. bak [na stránce databáze Northwind na webu CodePlex](https://northwinddatabase.codeplex.com/). Aby se zabránilo problémům s oprávněními, rozbalte soubor do nové složky, která není ve složce uživatele.
 
 #### <a name="to-restore-a-database-from-a-bak-file-in-visual-studio"></a>Obnovení databáze ze souboru. bak v aplikaci Visual Studio
 
-1. Při zálohování databáze Microsoft SQL Server je výsledkem soubor. bak. Aby se soubor. bak mohl znovu použít jako databázový soubor, musí být *obnoven*. V hlavní nabídce vyberte **zobrazit**  > **Průzkumník objektů systému SQL Server**. Pokud ho nevidíte, možná ho budete muset nainstalovat. Přejděte na **Ovládací panely**  > **programy a funkce**, vyhledejte Microsoft Visual Studio 2015 a klikněte na tlačítko **změnit** . Když se v okně instalačního programu zobrazí seznam nainstalovaných součástí, zaškrtněte políčko **Průzkumník objektů systému SQL Server** a potom pokračujte v instalaci.
+1. Při zálohování databáze Microsoft SQL Server je výsledkem soubor. bak. Aby se soubor. bak mohl znovu použít jako databázový soubor, musí být *obnoven*. V hlavní nabídce vyberte **zobrazit** > **Průzkumník objektů systému SQL Server**. Pokud ho nevidíte, možná ho budete muset nainstalovat. Přejděte na **Ovládací panely** > **programy a funkce**, vyhledejte Microsoft Visual Studio 2015 a klikněte na tlačítko **změnit** . Když se v okně instalačního programu zobrazí seznam nainstalovaných součástí, zaškrtněte políčko **Průzkumník objektů systému SQL Server** a potom pokračujte v instalaci.
 
 2. V Průzkumník objektů systému SQL Server klikněte pravým tlačítkem na jakýkoli SQL Server databázový stroj (například LocalDB) a vyberte**Nový dotaz**.
 
@@ -41,7 +41,7 @@ Ukázkové databáze jsou užitečné pro experimentování s dotazy SQL a LINQ,
     GO
     ```
 
-     Vypište logické názvy, které se zobrazí v okně výsledků.  Pro databázi Northwind jsou tyto dva logické názvy Northwind a Northwind_log.
+     Vypište logické názvy, které se zobrazí v okně výsledků.  Pro databázi Northwind jsou dva logické názvy Northwind a Northwind_log.
 
 4. Nyní spusťte tento dotaz k vytvoření databáze. Podle potřeby nahraďte vlastní zdrojové a cílové cesty, názvy logických databází a fyzické názvy souborů pro Northwind. Ponechejte přípony souborů. mdf a. ldf.
 

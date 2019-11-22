@@ -8,12 +8,12 @@ ms.assetid: a859595f-6517-43f2-9d61-c706cb55a388
 caps.latest.revision: 25
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 31ca0fdbecf7ea3742fef60f99f2a0a25220f9cf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d9c86125d934c5165e3e8111fdd06631844ad1a6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657223"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297964"
 ---
 # <a name="using-different-web-browsers-with-coded-ui-tests"></a>Používání jiných webových prohlížečů v programových testech uživatelského rozhraní
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,19 +38,19 @@ Programové testy UI mohou automatizovat testování webových aplikací tím, �
 
   - Windows Internet Explorer 10
 
-  - V případě podporovaných verzí aplikace Mozilla Firefox a Google Chrome můžete přejít [sem](http://visualstudiogallery.msdn.microsoft.com/11cfc881-f8c9-4f96-b303-a2780156628d/) .
+  - V případě podporovaných verzí aplikace Mozilla Firefox a Google Chrome můžete přejít [sem](https://marketplace.visualstudio.com/items?itemName=AtinBansal.SeleniumcomponentsforCodedUICrossBrowserTesting) .
 
-- Nainstalujte [komponenty selen pro testování programového uživatelského rozhraní pro více prohlížečů](http://visualstudiogallery.msdn.microsoft.com/11cfc881-f8c9-4f96-b303-a2780156628d/).
+- Nainstalujte [komponenty selen pro testování programového uživatelského rozhraní pro více prohlížečů](https://marketplace.visualstudio.com/items?itemName=AtinBansal.SeleniumcomponentsforCodedUICrossBrowserTesting).
 
   **Co je podporováno ve všech webových prohlížečích?**
 
-- [Přidejte vlastní kód pro řídící funkce](http://blogs.msdn.com/b/visualstudioalm/archive/2012/12/10/coded-ui-test-configuring-search-properties-while-recording-on-internet-explorer.aspx) , jako jsou vlastnosti, hledání a čekání na přehrávání.
+- [Přidejte vlastní kód pro řídící funkce](https://devblogs.microsoft.com/devops/coded-ui-test-configuring-search-properties-while-recording-on-internet-explorer/) , jako jsou vlastnosti, hledání a čekání na přehrávání.
 
 - Automaticky otevíraná okna a dialogová okna
 
-- [Spustit základní JavaScript bez návratového typu](http://blogs.msdn.com/b/visualstudioalm/archive/2013/01/18/introducing-jscript-execution-on-internetexplorer-and-crossbrowser-in-coded-ui-test.aspx)
+- [Spustit základní JavaScript bez návratového typu](https://devblogs.microsoft.com/devops/introducing-javascript-execution-on-internetexplorer-and-crossbrowser-in-coded-ui-test/)
 
-- Prohledat odolnost (pomocí inteligentní shody) a [vylepšení výkonu](http://blogs.msdn.com/b/visualstudioalm/archive/2012/02/01/guidelines-on-improving-performance-of-coded-ui-test-playback.aspx)
+- Prohledat odolnost (pomocí inteligentní shody) a [vylepšení výkonu](https://devblogs.microsoft.com/devops/guidelines-on-improving-performance-of-coded-ui-test-playback/)
 
 ## <a name="why-should-i-use-coded-ui-tests-across-multiple-web-browser-types"></a>Proč bych měl používat programové testy UI napříč několika typy webových prohlížečů?
  Při testování webové aplikace pomocí různých typů webových prohlížečů můžete lépe emulovat zkušenosti vašich uživatelů s uživatelským rozhraním na různých prohlížečích. Aplikace může například obsahovat ovládací prvek nebo kód v aplikaci Internet Explorer, který není kompatibilní s jinými webovými prohlížeči. Spuštěním programových testů UI na různých prohlížečích můžete objevit a opravit jakýkoliv problém předtím, než ovlivní vaše zákazníky.
@@ -76,7 +76,7 @@ Programové testy UI mohou automatizovat testování webových aplikací tím, �
 3. Zvýrazněte rozšíření a klikněte na tlačítko **Stáhnout**.
 
    > [!TIP]
-   > Komponenty selenu můžete také stáhnout pro testování programového uživatelského rozhraní v různých [prohlížečích.](http://visualstudiogallery.msdn.microsoft.com/11cfc881-f8c9-4f96-b303-a2780156628d/)
+   > Komponenty selenu můžete také stáhnout pro testování programového uživatelského rozhraní v různých [prohlížečích.](https://marketplace.visualstudio.com/items?itemName=AtinBansal.SeleniumcomponentsforCodedUICrossBrowserTesting)
 
    Další informace o vytváření a používání programových testů UI naleznete v tématu vytváření programových [testů uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate).
 
@@ -113,7 +113,7 @@ Programové testy UI mohou automatizovat testování webových aplikací tím, �
 
 - ![Tip](../test/media/tip.png "Tip") Výstup můžete nakonfigurovat tak, aby zahrnoval snímky obrazovky v protokolech kódovaného uživatelského rozhraní. Chcete-li tak učinit, musíte provést některá nastavení konfigurace v souboru QTAgent32.exe.config. Ve výchozím nastavení je tento soubor nainstalován v následujícím umístění:
 
-   **C:\Program Files (x86) \Microsoft Visual Studio 11.0 \ Common7\IDE**
+   **C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE**
 
    Nastavte následující hodnoty:
 
@@ -139,17 +139,17 @@ Programové testy UI mohou automatizovat testování webových aplikací tím, �
  [Řešení potíží se selháním testů pro různé prohlížeče](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!182&authkey=!AEpS48i295B49FI)
 
 ### <a name="guidance"></a>Doprovodné materiály
- [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](http://go.microsoft.com/fwlink/?LinkID=255188)
+ [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](https://go.microsoft.com/fwlink/?LinkID=255188)
 
- [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5: automatizace systémových testů](http://go.microsoft.com/fwlink/?LinkID=255196)
+ [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5: automatizace systémových testů](https://go.microsoft.com/fwlink/?LinkID=255196)
 
 ### <a name="faq"></a>Nejčastější dotazy
- [Nejčastější dotazy k programovým testům UI – 1](http://go.microsoft.com/fwlink/?LinkID=230576)
+ [Nejčastější dotazy k programovým testům UI – 1](https://go.microsoft.com/fwlink/?LinkID=230576)
 
- [Nejčastější dotazy k programovým testům UI – 2](http://go.microsoft.com/fwlink/?LinkID=230578)
+ [Nejčastější dotazy k programovým testům UI – 2](https://go.microsoft.com/fwlink/?LinkID=230578)
 
 ### <a name="forum"></a>Fórum
- [Testování automatizace uživatelského rozhraní sady Visual Studio (včetně kódovaného uživatelského rozhraní)](http://go.microsoft.com/fwlink/?LinkID=224497)
+ [Testování automatizace uživatelského rozhraní sady Visual Studio (včetně kódovaného uživatelského rozhraní)](https://go.microsoft.com/fwlink/?LinkID=224497)
 
 ## <a name="see-also"></a>Viz také
  [Použití automatizace uživatelského rozhraní k otestování](../test/use-ui-automation-to-test-your-code.md) [Konfigurace podporovaných konfigurací a platforem pro programové testy uživatelského rozhraní a záznamy akcí při](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md) analýze programových testů uživatelského rozhraní [pomocí protokolů kódovaného testu uživatelského rozhraní](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)

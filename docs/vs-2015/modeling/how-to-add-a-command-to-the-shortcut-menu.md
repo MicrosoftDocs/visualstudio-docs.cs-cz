@@ -12,12 +12,12 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1d218f5f560a7ae2c95d7e7ae0e20002f922e257
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8d5373ae27797aa3bfe4627fb84ce393dce9e910
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72602073"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300888"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>Postupy: Přidání příkazu do místní nabídky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ Příkazy nabídky můžete přidat do jazyka DSL (Domain-Specific Language), ab
 
 3. [Metody zápisu do třídy CommandSet](#CommandSet) , aby příkaz byl viditelný a definoval, co má příkaz dělat.
 
-   Ukázky najdete na [webu sady SDK pro vizualizaci a modelování](http://go.microsoft.com/fwlink/?LinkID=185579).
+   Ukázky najdete na [webu sady SDK pro vizualizaci a modelování](https://go.microsoft.com/fwlink/?LinkID=185579).
 
 > [!NOTE]
 > Můžete také změnit chování některých existujících příkazů, jako je například vyjmout, vložit, vybrat vše a tisknout přepsáním metod v CommandSet.cs. Další informace naleznete v tématu [How to: Modify a Standard a Command nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
@@ -120,7 +120,7 @@ Příkazy nabídky můžete přidat do jazyka DSL (Domain-Specific Language), ab
 5. Nahraďte `{000...000}` identifikátorem GUID, který identifikuje vaše skupiny a položky nabídky. Chcete-li získat nový identifikátor GUID, použijte nástroj **Create GUID** v nabídce **nástroje** .
 
     > [!NOTE]
-    > Pokud přidáte více skupin nebo položek nabídky, můžete použít stejný identifikátor GUID. Je však nutné pro `IDSymbols` použít nové hodnoty.
+    > Pokud přidáte více skupin nebo položek nabídky, můžete použít stejný identifikátor GUID. Je však nutné pro `IDSymbols`použít nové hodnoty.
 
 6. V kódu, který jste zkopírovali z tohoto postupu, nahraďte všechny výskyty následujících řetězců vlastními řetězci:
 
@@ -225,7 +225,7 @@ private void OnStatusMyContextMenuCommand(object sender, EventArgs e)
 
 - `this.CurrentSelection`. Tvar, na který uživatel klikne pravým tlačítkem, je vždy zahrnut v tomto seznamu. Pokud uživatel klikne na prázdnou část diagramu, diagram je jediným členem tohoto seznamu.
 
-- `this.IsDiagramSelected()`  -  `true`, pokud uživatel klikl na prázdnou část diagramu.
+- `this.IsDiagramSelected()` - `true`, pokud uživatel klikl na prázdnou část diagramu.
 
 - `this.IsCurrentDiagramEmpty()`
 
@@ -244,7 +244,7 @@ private void OnStatusMyContextMenuCommand(object sender, EventArgs e)
 
  Pokud provedete změny prvků modelu, je nutné provést v rámci transakce. Další informace naleznete v tématu [How to: Modify a Standard a Command nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
 
- V tomto příkladu jsou `ClassShape`, `ModelClass` a `Comment` typy, které jsou definovány v DSL, která je odvozena od šablony třídy pro schéma DSL.
+ V tomto příkladu jsou `ClassShape`, `ModelClass`a `Comment` typy, které jsou definovány v DSL, která je odvozena od šablony třídy pro schéma DSL.
 
 ```
 private void OnMenuMyContextMenuCommand(object sender, EventArgs e)
@@ -360,4 +360,4 @@ protected override IList<MenuCommand> GetMenuCommands()
 - Ujistěte se, že jste odinstalovali starší verze balíčku.
 
 ## <a name="see-also"></a>Viz také
- [Psaní kódu pro přizpůsobení jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md) [Postup: Změna standardního příkazu nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md) [nasazení ukázkového jazyka specifického pro doménu](../modeling/deploying-domain-specific-language-solutions.md) [ukázkový kód: diagramy okruhů](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+ [Psaní kódu pro přizpůsobení jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md) [Postupy: Změna standardního příkazu nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md) [nasazení řešení jazyka specifického pro doménu](../modeling/deploying-domain-specific-language-solutions.md)

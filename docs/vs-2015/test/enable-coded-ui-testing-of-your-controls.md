@@ -8,12 +8,12 @@ ms.assetid: 5ef1188f-89dc-413d-801d-0efdaf9b0427
 caps.latest.revision: 24
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 920dea4e81ca2ce0c562bb6d77582fd5e3753663
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 331dabfe8e219383fdc04187482b17b9048886a9
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660587"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302582"
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>Povolení programového testování uživatelského rozhraní pro vaše ovládací prvky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,7 +46,7 @@ Váš ovládací prvek může být snáze testován, Pokud implementujete podpor
 
  ![UI&#95;přístupný](../test/media/cuit-accessible.png "CUIT_Accessible")
 
-1. Implementujte třídu, která je odvozena z <xref:System.Windows.Forms.Control.ControlAccessibleObject> a přepište vlastnost <xref:System.Windows.Forms.Control.AccessibilityObject%2A>, která vrátí objekt vaší třídy.
+1. Implementujte třídu, která je odvozena z <xref:System.Windows.Forms.Control.ControlAccessibleObject>a přepište vlastnost <xref:System.Windows.Forms.Control.AccessibilityObject%2A>, která vrátí objekt vaší třídy.
 
     ```csharp
     public partial class ChartControl : UserControl
@@ -75,7 +75,7 @@ Váš ovládací prvek může být snáze testován, Pokud implementujete podpor
 
 3. Implementujte další objekt usnadnění pro podřízený ovládací prvek a přepište vlastnost <xref:System.Windows.Forms.Control.AccessibilityObject%2A> podřízeného ovládacího prvku tak, aby vracela objekt usnadnění.
 
-4. Přepište <xref:System.Windows.Forms.AccessibleObject.Bounds%2A>, <xref:System.Windows.Forms.AccessibleObject.Name%2A>, <xref:System.Windows.Forms.AccessibleObject.Parent%2A>, <xref:System.Windows.Forms.AccessibleObject.Role%2A>, <xref:System.Windows.Forms.AccessibleObject.State%2A>, <xref:System.Windows.Forms.AccessibleObject.Navigate%2A> a <xref:System.Windows.Forms.AccessibleObject.Select%2A>ch vlastností a metod objektu přístupnosti podřízeného ovládacího prvku.
+4. Přepište <xref:System.Windows.Forms.AccessibleObject.Bounds%2A>, <xref:System.Windows.Forms.AccessibleObject.Name%2A>, <xref:System.Windows.Forms.AccessibleObject.Parent%2A>, <xref:System.Windows.Forms.AccessibleObject.Role%2A>, <xref:System.Windows.Forms.AccessibleObject.State%2A>, <xref:System.Windows.Forms.AccessibleObject.Navigate%2A>a <xref:System.Windows.Forms.AccessibleObject.Select%2A>ch vlastností a metod objektu přístupnosti podřízeného ovládacího prvku.
 
 > [!NOTE]
 > V tomto tématu se začíná ukázka přístupnosti v <xref:System.Windows.Forms.AccessibleObject> v tomto postupu a pak se na to ve zbývajících postupech vytvoří. Pokud chcete vytvořit funkční verzi ukázky přístupnosti, vytvořte konzolovou aplikaci a potom nahraďte kód v Program.cs ukázkovým kódem. Budete muset přidat odkazy na přístupnost, System. Drawing a System. Windows. Forms. Měli byste změnit **typy spolupráce pro vložení** pro přístupnost na **false** , aby se vyloučilo upozornění sestavení. Typ výstupu projektu můžete změnit na z **konzolové aplikace** na **aplikaci systému Windows** , aby se okno konzoly nezobrazovalo při spuštění aplikace.
@@ -127,7 +127,7 @@ Váš ovládací prvek může být snáze testován, Pokud implementujete podpor
     }
     ```
 
-4. Implementací názvů vlastností a popisovačů vlastností do <xref:System.Collections.Generic.Dictionary%602> implementovat zprostředkovatele vlastností.
+4. Implementací názvů vlastností a popisovačů vlastností do <xref:System.Collections.Generic.Dictionary%602>implementovat zprostředkovatele vlastností.
 
     ```csharp
     // Define a map of property descriptors for CurveLegend
@@ -536,7 +536,7 @@ Assert.AreEqual(this.AssertMethod3ExpectedValues.UIATextState, uIAText.State);
 ## <a name="external-resources"></a>Externí zdroje
 
 ### <a name="guidance"></a>Doprovodné materiály
- [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](http://go.microsoft.com/fwlink/?LinkID=255188)
+ [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](https://go.microsoft.com/fwlink/?LinkID=255188)
 
 ## <a name="see-also"></a>Viz také:
 

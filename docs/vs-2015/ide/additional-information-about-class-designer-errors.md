@@ -29,12 +29,12 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7500782a1d935c08ae95e26764c9476c63f36660
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 10eb94783abbd63ca152fbf73a544665199ba137
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72620393"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300288"
 ---
 # <a name="additional-information-about-class-designer-errors"></a>Další informace o chybách návrháře tříd
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ Návrhář tříd nesleduje umístění zdrojových souborů, takže úprava str
 
  [Práce s vizuálním C++ kódem (návrhář tříd)](../ide/working-with-visual-cpp-code-class-designer.md) obsahuje informace o řešení C++ problémů, které se zobrazují v diagramu tříd.
 
- [Fórum sady Visual Studio Návrhář tříd](http://go.microsoft.com/fwlink/?LinkId=160754) Poskytuje fórum pro otázky týkající se Návrhář tříd.
+ [Fórum sady Visual Studio Návrhář tříd](https://go.microsoft.com/fwlink/?LinkId=160754) Poskytuje fórum pro otázky týkající se Návrhář tříd.
 
 ## <a name="see-also"></a>Viz také
  [Navrhování a zobrazování tříd a typů](../ide/designing-and-viewing-classes-and-types.md)

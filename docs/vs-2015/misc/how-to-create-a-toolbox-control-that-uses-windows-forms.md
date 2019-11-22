@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Vytvoření ovládacího prvku panel nástrojů, který používá Windows Forms | Dokumentace Microsoftu'
+title: 'Postupy: vytvoření ovládacího prvku panelu nástrojů, který používá model Windows Forms | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -11,83 +11,83 @@ helpviewer_keywords:
 ms.assetid: abbd3c3c-3a6e-4539-bd6c-a5891dead234
 caps.latest.revision: 12
 manager: jillfra
-ms.openlocfilehash: 33b4d8f1932429838f701df1f6ffaaceef321c4e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 8436b8eee0193715e4ae886db18f91f7148dcb3b
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442922"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300427"
 ---
-# <a name="how-to-create-a-toolbox-control-that-uses-windows-forms"></a>Postupy: Vytvoření ovládacího prvku panel nástrojů, který používá Windows Forms
-Šablony ovládacího prvku Windows Forms panel nástrojů, který je součástí [!INCLUDE[vssdk_dev11_long](../includes/vssdk-dev11-long-md.md)] umožňuje vytvořit ovládací prvky Windows Forms, které jsou automaticky přidány do **nástrojů** při instalaci rozšíření. Toto téma ukazuje, jak použít šablonu k vytvoření **nástrojů** ovládacího prvku, které můžete distribuovat ostatním uživatelům...  
+# <a name="how-to-create-a-toolbox-control-that-uses-windows-forms"></a>Postupy: vytvoření ovládacího prvku panelu nástrojů, který používá model Windows Forms
+Šablona ovládacího prvku panelu nástrojů model Windows Forms, která je obsažena v [!INCLUDE[vssdk_dev11_long](../includes/vssdk-dev11-long-md.md)] umožňuje vytvořit model Windows Forms ovládací prvky, které jsou automaticky přidány do **sady nástrojů** při instalaci rozšíření. V tomto tématu se dozvíte, jak použít šablonu k vytvoření ovládacího prvku **sady nástrojů** , který můžete distribuovat dalším uživatelům.  
   
 > [!NOTE]
-> Stažení sady Visual Studio SDK naleznete v tématu [středisko pro vývojáře rozšiřitelnosti Visual Studio](http://go.microsoft.com/fwlink/?linkid=121964) na webové stránce MSDN.  
+> Chcete-li zjistit, jak stáhnout sadu Visual Studio SDK, přečtěte si téma [středisko pro vývojáře rozšiřitelnosti sady Visual Studio](https://go.microsoft.com/fwlink/?linkid=121964) na webu MSDN.  
   
-## <a name="creating-a-toolbox-control"></a>Vytvoření ovládacího prvku panel nástrojů  
- Pomocí šablony ovládacího prvku Windows Forms panel nástrojů pro vytvoření projektu a následně vytvořit uživatelské rozhraní (UI) v návrháři.  
+## <a name="creating-a-toolbox-control"></a>Vytvoření ovládacího prvku panelu nástrojů  
+ Pro vytvoření projektu použijte šablonu ovládacího prvku panelu nástrojů model Windows Forms a potom v Návrháři Sestavte uživatelské rozhraní (UI).  
   
-#### <a name="to-create-a-windows-forms-toolbox-control-project"></a>Vytvoření projektu ovládacího prvku Windows Forms panelu nástrojů  
+#### <a name="to-create-a-windows-forms-toolbox-control-project"></a>Vytvoření projektu ovládacího prvku model Windows Forms Toolbox  
   
-1. Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.  
+1. V nabídce **soubor** klikněte na příkaz **Nový**a potom klikněte na **projekt**.  
   
-2. V **nový projekt** dialogovém okně **nainstalované šablony**, klikněte na uzel Upřednostňovaný programovací jazyk a potom klikněte na tlačítko **rozšiřitelnost**. V seznamu typů projektů, vyberte **ovládacího prvku Windows Forms panel nástrojů**.  
+2. V dialogovém okně **Nový projekt** v části **Nainstalované šablony**klikněte na uzel pro preferovaný programovací jazyk a pak klikněte na **rozšiřitelnost**. V seznamu typů projektů vyberte **model Windows Forms ovládací prvek panelu nástrojů**.  
   
-3. V **název** zadejte název, kterou chcete použít pro projekt. Klikněte na **OK**.  
+3. Do pole **název** zadejte název, který chcete použít pro projekt. Klikněte na tlačítko **OK**.  
   
-     Visual Studio vytvoří řešení, která obsahuje uživatelského ovládacího prvku, atributu vložit ovládací prvek **nástrojů**, a manifest VSIX pro nasazení.  
+     Sada Visual Studio vytvoří řešení, které obsahuje uživatelský ovládací prvek, atribut pro vložení ovládacího prvku do **panelu nástrojů**a manifest VSIX pro nasazení.  
   
-#### <a name="to-build-the-control-ui"></a>Chcete-li vytvořit ovládací prvek uživatelského rozhraní  
+#### <a name="to-build-the-control-ui"></a>Sestavení uživatelského rozhraní ovládacího prvku  
   
-1. V **Průzkumníka řešení**, dvakrát klikněte na panel ToolboxControl.cs ho otevřete v návrháři.  
+1. V **Průzkumník řešení**poklikejte na ToolboxControl.cs a otevře se v návrháři.  
   
-2. Z **nástrojů**, všechny ovládací prvky, které chcete přetáhnout na návrhovou plochu a uspořádat je podle vašeho návrhu.  
+2. Z **panelu nástrojů**přetáhněte všechny ovládací prvky, které chcete na návrhovou plochu, a uspořádejte je podle svého návrhu.  
   
-3. V **vlastnosti** okno, nastavte veřejné vlastnosti na uživatelský ovládací prvek a podřízené ovládací prvky.  
+3. V okně **vlastnosti** nastavte veřejné vlastnosti pro uživatelský ovládací prvek a podřízené ovládací prvky.  
   
 ## <a name="coding-the-control"></a>Kódování ovládacího prvku  
- Ve výchozím nastavení, zobrazí se váš ovládací prvek v **nástrojů** jako **ToolboxControl1** v **nástrojů** skupiny položek, který má stejný název jako vaše řešení. Tyto názvy v souboru ToolboxControl.cs můžete změnit.  
+ Ve výchozím nastavení se ovládací prvek zobrazí v **panelu nástrojů** jako **ToolboxControl1** ve skupině položek **panelu nástrojů** , která má stejný název jako vaše řešení. Tyto názvy můžete změnit v souboru ToolboxControl.cs.  
   
-#### <a name="to-code-the-control"></a>Do kódu ovládacího prvku  
+#### <a name="to-code-the-control"></a>Pro kód ovládacího prvku  
   
-1. V **Průzkumníka řešení**ToolboxControl.cs pravým tlačítkem myši a potom klikněte na tlačítko **zobrazit kód** k otevření souboru v zobrazení kódu.  
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na ToolboxControl.cs a potom kliknutím na **Zobrazit kód** otevřete soubor v zobrazení kódu.  
   
-2. V definici dílčí třídě, která implementuje ovládací prvek, klikněte pravým tlačítkem na název třídy, klikněte na tlačítko **Refaktorovat**a potom klikněte na tlačítko **přejmenovat**. Změnit název třídy na název, který chcete zobrazit v **nástrojů** při instalaci ovládacího prvku.  
+2. V definici částečné třídy, která implementuje ovládací prvek, klikněte pravým tlačítkem myši na název třídy, klikněte na **Refaktorovat**a pak klikněte na **Přejmenovat**. Změňte název třídy na název, který chcete zobrazit v **sadě nástrojů** při instalaci ovládacího prvku.  
   
-3. Přímo nad definici třídy v `ProvideToolboxControl` atribut deklarace, změňte hodnotu prvního parametru na název skupiny položek, který bude hostitelem ovládacího prvku **nástrojů**.  
+3. Přímo nad definicí třídy v deklaraci atributu `ProvideToolboxControl` změňte hodnotu prvního parametru na název skupiny položek, která bude hostovat ovládací prvek v **sadě nástrojů**.  
   
-     Následující příklad ukazuje `ProvideToolboxControl` atribut a definice upravené třídy pro ovládací prvek s názvem `Counter` v `General` skupiny položek.  
+     Následující příklad ukazuje atribut `ProvideToolboxControl` a upravenou definici třídy pro ovládací prvek s názvem `Counter` ve skupině `General` položky.  
   
      [!code-csharp[ToolboxControlWinForms#07](../snippets/csharp/VS_Snippets_VSSDK/toolboxcontrolwinforms/cs/toolboxcontrol.cs#07)]  
   
-4. Implementace vlastnosti, metody a události pro ovládací prvek.  
+4. Implementujte vlastnosti, metody a události pro ovládací prvek.  
   
-## <a name="building-testing-and-deployment"></a>Sestavování, testování a nasazení  
- Stisknutím klávesy F5 projekt, který obsahuje soubor .vsix nasazení a otevře se druhé instance sady Visual Studio, který má ovládací prvek nainstalovaný v sestavení **nástrojů**.  
+## <a name="building-testing-and-deployment"></a>Sestavování, testování a nasazování  
+ Stisknutím klávesy F5 sestavíte projekt, který obsahuje soubor nasazení. vsix, a otevře druhou instanci sady Visual Studio, která má ovládací prvek nainstalovaný v **sadě nástrojů**.  
   
-#### <a name="to-build-and-test-the-control"></a>Pro vytváření a testování ovládacího prvku  
+#### <a name="to-build-and-test-the-control"></a>Sestavení a otestování ovládacího prvku  
   
 1. Stiskněte klávesu F5.  
   
-2. V nové instanci sady Visual Studio vytvořte projekt Formulářové aplikace Windows.  
+2. V nové instanci aplikace Visual Studio vytvořte projekt aplikace model Windows Forms.  
   
-3. Najít ovládací prvek ve **nástrojů** a přetáhněte jej na návrhovou plochu.  
+3. Vyhledejte ovládací prvek v **sadě nástrojů** a přetáhněte jej na návrhovou plochu.  
   
-4. V **vlastnosti** okna, ověřte, že vaše vlastnosti zobrazují podle očekávání.  
+4. V okně **vlastnosti** ověřte, zda jsou vlastnosti zobrazeny podle očekávání.  
   
-5. Přidejte kód nebo další ovládací prvky, které jsou nutné k testovací metody a události.  
+5. Přidejte jakýkoliv kód nebo další ovládací prvky, které jsou požadovány k otestování metod a událostí.  
   
-6. Stisknutím klávesy F5 spusťte aplikaci Windows Forms.  
+6. Stisknutím klávesy F5 otevřete aplikaci model Windows Forms.  
   
-7. Ověřte, že vlastnosti, metody a události ovládacího prvku se chovat dle očekávání.  
+7. Ověřte, že vlastnosti, metody a události vašeho ovládacího prvku se chovají podle očekávání.  
   
 #### <a name="to-deploy-the-control"></a>Nasazení ovládacího prvku  
   
-1. Po sestavení testovaného projektu, otevřete složku \bin\debug\ projektu v Průzkumníku souborů a vyhledejte soubor .vsix.  
+1. Po sestavení testovaného projektu otevřete složku \bin\debug\ projektu v Průzkumníku souborů a vyhledejte soubor. VSIX.  
   
-2. Nahrajte soubor .vsix k síti nebo na web.  
+2. Nahrajte soubor. vsix do sítě nebo na web.  
   
-     Pokud nahrajete soubor, který má [Visual Studio Marketplace](https://marketplace.visualstudio.com/) webové stránky, další uživatelé můžou používat **Správce rozšíření** v sadě Visual Studio najít ovládací prvek a nainstalujte ho.  
+     Pokud soubor nahrajete na [Visual Studio Marketplace](https://marketplace.visualstudio.com/) web, jiní uživatelé mohou použít **Správce rozšíření** v aplikaci Visual Studio k vyhledání ovládacího prvku a jeho instalaci.  
   
 ## <a name="see-also"></a>Viz také  
  [Vytvoření ovládacího prvku panelu nástrojů WPF](../extensibility/creating-a-wpf-toolbox-control.md)

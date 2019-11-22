@@ -11,17 +11,17 @@ caps.latest.revision: 63
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 87acbb53fd8fe5eae744aa4ef72c808da8eb6642
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 23ba1a6900559d7ee13639bb1da696127e47e536
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663478"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299271"
 ---
 # <a name="define-a-menu-command-on-a-modeling-diagram"></a>Definování příkazu nabídky v diagramu modelování
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V aplikaci Visual Studio můžete definovat další položky nabídky v místních nabídkách diagramu UML. Můžete určit, zda se příkaz nabídky zobrazí a je povolen v místní nabídce libovolného prvku v diagramu, a můžete napsat kód, který se spustí, když uživatel zvolí položku nabídky. Tato rozšíření můžete zabalit do rozšíření integrace sady Visual Studio ([VSIX](http://go.microsoft.com/fwlink/?LinkId=160780)) a distribuovat je ostatním uživatelům aplikace Visual Studio.
+V aplikaci Visual Studio můžete definovat další položky nabídky v místních nabídkách diagramu UML. Můžete určit, zda se příkaz nabídky zobrazí a je povolen v místní nabídce libovolného prvku v diagramu, a můžete napsat kód, který se spustí, když uživatel zvolí položku nabídky. Tato rozšíření můžete zabalit do rozšíření integrace sady Visual Studio ([VSIX](https://go.microsoft.com/fwlink/?LinkId=160780)) a distribuovat je ostatním uživatelům aplikace Visual Studio.
 
 ## <a name="requirements"></a>Požadavky
  Viz [požadavky](../modeling/extend-uml-models-and-diagrams.md#Requirements).
@@ -47,7 +47,7 @@ V aplikaci Visual Studio můžete definovat další položky nabídky v místní
 
 4. Otestujte příkaz nabídky stisknutím klávesy F5. Další informace naleznete v tématu [provádění příkazu nabídky](#Executing).
 
-5. Nainstalujte příkaz nabídky do jiného počítače zkopírováním souboru **bin \\ \* \\ \*. vsix** sestaveného vaším projektem. Další informace najdete v tématu [instalace a odinstalace rozšíření](#Installing).
+5. Nainstalujte příkaz nabídky do jiného počítače zkopírováním souboru **bin\\\*\\\*. vsix** sestaveného vaším projektem. Další informace najdete v tématu [instalace a odinstalace rozšíření](#Installing).
 
    Tady je alternativní postup:
 
@@ -67,12 +67,12 @@ V aplikaci Visual Studio můžete definovat další položky nabídky v místní
 
    |                                                                                                    Odkaz                                                                                                    |                                                                                                  Co vám to umožňuje                                                                                                  |
    |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |                                                                                        System. ComponentModel. složení                                                                                        |                                         Definujte komponenty pomocí [Managed Extensibility Framework (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde).                                          |
-   |                                                                                      Microsoft. VisualStudio. Uml. Interfaces                                                                                      |                                                                                        Čtení a změna vlastností prvků modelu.                                                                                         |
-   |                                                                             Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost                                                                              |                                                                                      Vytváření elementů modelu, úprava tvarů v diagramech.                                                                                       |
-   |                                                                                  Microsoft. VisualStudio. Modeling. SDK. znění                                                                                  | Definujte obslužné rutiny událostí modelu.<br /><br /> Zapouzdří řady změn do modelu. Další informace najdete v tématu [propojení aktualizací modelů UML pomocí transakcí](../modeling/link-uml-model-updates-by-using-transactions.md). |
-   |                                                            Microsoft. VisualStudio. Modeling. SDK. Diagrams. znění<br /><br /> (není vždycky nutné)                                                             |                                                                                   Přístup k dalším prvkům diagramu pro obslužné rutiny gesta.                                                                                   |
-   | Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost. vrstva<br /><br /> Vyžaduje se jenom pro příkazy v diagramech vrstev. Další informace naleznete v tématu [Rozšířené diagramy vrstev](../modeling/extend-layer-diagrams.md). |                                                                                             Definujte příkazy v diagramu vrstev.                                                                                              |
+   |                                                                                        System.ComponentModel.Composition                                                                                        |                                         Definujte komponenty pomocí [Managed Extensibility Framework (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde).                                          |
+   |                                                                                      Microsoft.VisualStudio.Uml.Interfaces                                                                                      |                                                                                        Čtení a změna vlastností prvků modelu.                                                                                         |
+   |                                                                             Microsoft.VisualStudio.ArchitectureTools.Extensibility                                                                              |                                                                                      Vytváření elementů modelu, úprava tvarů v diagramech.                                                                                       |
+   |                                                                                  Microsoft.VisualStudio.Modeling.Sdk.[version]                                                                                  | Definujte obslužné rutiny událostí modelu.<br /><br /> Zapouzdří řady změn do modelu. Další informace najdete v tématu [propojení aktualizací modelů UML pomocí transakcí](../modeling/link-uml-model-updates-by-using-transactions.md). |
+   |                                                            Microsoft.VisualStudio.Modeling.Sdk.Diagrams.[version]<br /><br /> (není vždycky nutné)                                                             |                                                                                   Přístup k dalším prvkům diagramu pro obslužné rutiny gesta.                                                                                   |
+   | Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer<br /><br /> Vyžaduje se jenom pro příkazy v diagramech vrstev. Další informace naleznete v tématu [Rozšířené diagramy vrstev](../modeling/extend-layer-diagrams.md). |                                                                                             Definujte příkazy v diagramu vrstev.                                                                                              |
 
 3. Přidejte soubor třídy do projektu a nastavte jeho obsah na následující kód.
 
@@ -160,11 +160,11 @@ V aplikaci Visual Studio můžete definovat další položky nabídky v místní
 
     3. Na kartě **assets (prostředky** ) vyberte **Nový**a v dialogovém okně nastavte:
 
-         **Typ**  = **Komponenta MEF**
+         **Typ** = **Komponenta MEF**
 
-         **Zdrojový**  = **projekt v aktuálním řešení**
+         **Zdrojový** = **projekt v aktuálním řešení**
 
-         **Projekt**  = *projektu knihovny tříd*
+         **Projekt** = *projektu knihovny tříd*
 
 ## <a name="Implementing"></a>Implementace příkazu nabídky
  Třída příkazu nabídky implementuje požadované metody pro <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension>.
@@ -172,7 +172,7 @@ V aplikaci Visual Studio můžete definovat další položky nabídky v místní
 |||
 |-|-|
 |`string Text { get; }`|Vrátí popisek položky nabídky.|
-|`void QueryStatus(IMenuCommand command);`|Volá se, když uživatel klikne pravým tlačítkem myši v diagramu.<br /><br /> Tato metoda by neměla měnit model.<br /><br /> Pomocí `DiagramContext.CurrentDiagram.SelectedShapes` určete, zda se má příkaz Zobrazit a povolit.<br /><br /> Stanovenými<br /><br /> -    `command.Visible` na `true`, pokud se příkaz musí zobrazit v nabídce, když uživatel klikne pravým tlačítkem myši v diagramu.<br />-    `command.Enabled` na `true`, pokud uživatel může kliknout na příkaz v nabídce<br />-    `command.Text` k nastavení popisku nabídky dynamicky|
+|`void QueryStatus(IMenuCommand command);`|Volá se, když uživatel klikne pravým tlačítkem myši v diagramu.<br /><br /> Tato metoda by neměla měnit model.<br /><br /> Pomocí `DiagramContext.CurrentDiagram.SelectedShapes` určete, zda se má příkaz Zobrazit a povolit.<br /><br /> Stanovenými<br /><br /> -   `command.Visible` na `true`, pokud se příkaz musí zobrazit v nabídce, když uživatel klikne pravým tlačítkem myši v diagramu.<br />-   `command.Enabled` na `true`, pokud uživatel může kliknout na příkaz v nabídce<br />-   `command.Text` k nastavení popisku nabídky dynamicky|
 |`void Execute (IMenuCommand command);`|Volá se, když uživatel klikne na položku nabídky, pokud je viditelný a povolený.|
 
 ### <a name="accessing-the-model-in-code"></a>Přístup k modelu v kódu
@@ -226,7 +226,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
-2. V experimentální [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] otevřete nebo vytvořte projekt modelování a otevřete nebo vytvořte diagram modelování. Použijte diagram, který patří k jednomu z typů, které jsou uvedeny v atributech třídy příkazu nabídky.
+2. V experimentální [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]otevřete nebo vytvořte projekt modelování a otevřete nebo vytvořte diagram modelování. Použijte diagram, který patří k jednomu z typů, které jsou uvedeny v atributech třídy příkazu nabídky.
 
 3. Otevřete místní nabídku kdekoli v diagramu. Váš příkaz by se měl zobrazit v nabídce.
 
@@ -236,7 +236,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     - Parametry atributů `Import` a `Export` jsou platné.
 
-    - Metoda `QueryStatus` nenastavuje `command`. `Enabled` nebo `Visible` pole, která chcete `false`.
+    - Metoda `QueryStatus` nenastavuje `command`.`Enabled` nebo `Visible` pole, která chcete `false`.
 
     - Typ diagramu modelu, který používáte (třída UML, sekvence a tak dále), je uveden jako jeden z atributů třídy příkazu nabídky `[ClassDesignerExtension]`, `[SequenceDesignerExtension]` a tak dále.
 
@@ -249,7 +249,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     1. V **Průzkumník řešení**v místní nabídce projektu VSIX vyberte možnost **Otevřít složku v Průzkumníku Windows**.
 
-    2. Vyhledejte soubor **bin \\ \* \\** _YourProject_ **. vsix**
+    2. Vyhledejte soubor **bin\\\*\\** _YourProject_ **. vsix**
 
 2. Zkopírujte soubor **. vsix** do cílového počítače, do kterého chcete nainstalovat rozšíření. Může to být váš vlastní počítač nebo jiný.
 
@@ -271,7 +271,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
    Zřídka se vadné rozšíření nedokáže načíst a vytvoří sestavu v okně chyb, ale nezobrazí se ve Správci rozšíření. V takovém případě můžete odebrat rozšíření odstraněním souboru z:
 
-   *% Localappdata%* **\Local\Microsoft\VisualStudio \\ [verze] \Extensions**
+   *%LocalAppData%* **\Local\Microsoft\VisualStudio\\[version]\Extensions**
 
 ## <a name="MenuExample"></a>Případě
  Následující příklad ukazuje kód pro příkaz nabídky, který bude zakódovat názvy dvou prvků v diagramu tříd. Tento kód musí být sestaven v projektu rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a nainstalován tak, jak je popsáno v předchozích částech.
@@ -363,4 +363,4 @@ namespace SwapClassNames
 ```
 
 ## <a name="see-also"></a>Viz také
- [Definování a instalace rozšíření modelování](../modeling/define-and-install-a-modeling-extension.md) [rozšíření modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md) [Definování obslužné rutiny gesta v diagramu modelování](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) [Definování vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md) definování [omezení ověření pro úpravy modelů UML](../modeling/define-validation-constraints-for-uml-models.md) [ Sekvenční diagramy UML pomocí programování rozhraní API UML](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md) [s ukázkou rozhraní API UML](../modeling/programming-with-the-uml-api.md) [– příkaz pro zarovnání obrazců v diagramu UML](http://go.microsoft.com/fwlink/?LinkID=213809)
+ [Definování a instalace rozšíření modelování](../modeling/define-and-install-a-modeling-extension.md) [rozšíření modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md) [Definování obslužné rutiny gesta v diagramu modelování](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) [Definování vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md) definování [omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md) [Úprava sekvenčních diagramů](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md) UML pomocí programování rozhraní API UML s ukázkou [rozhraní](../modeling/programming-with-the-uml-api.md) API UML [: příkaz pro zarovnání obrazců v diagramu UML](https://go.microsoft.com/fwlink/?LinkID=213809)

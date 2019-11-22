@@ -1,5 +1,5 @@
 ---
-title: 'DA0506: Maximum nesdílených bajtů přidělených pro profilovaný proces | Dokumentace Microsoftu'
+title: 'DA0506: maximální počet privátních bajtů přidělených procesu pro profilování | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,36 +13,36 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 97d1cacccc2fdd6abbd13aace1de71b28975779e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c7452e8394b6397b79c49b9b706db5ba8899351e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68158056"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74291173"
 ---
-# <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506: Maximální nesdílené bajty přidělené profilovanému procesu
+# <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506: Maximum Nesdílených bajtů přidělených pro profilovaný Proces
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Id pravidla | DA0506 |  
-| Kategorie | Sledování prostředků |  
-| Metoda profilace | Všechny |  
-| Zpráva | Tato informace byla shromážděna pouze pro informaci. Čítač nesdílených bajtů procesu měří virtuální paměť přidělené procesem, který profilujete. Hlášená hodnota je maximum pozorované přes všechny intervaly měření. |  
+ID pravidla | DA0506 |  
+| Kategorie | Monitorování prostředků |  
+| Metoda profilování | Vše |  
+| Zpráva | Tyto informace se shromáždily jenom pro informace. Čítač procesu soukromých bajtů měří virtuální paměť přidělenou procesem, který vytváříte profilování. Hodnota hlášené je maximální pozorována ve všech intervalech měření. |  
 | Typ pravidla | Informace |  
   
- Při profilování pomocí vzorkování, paměti .NET nebo metodám sporu prostředků, musíte shromáždit minimálně 10 vzorky k aktivaci tohoto pravidla.  
+ Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit aspoň 10 vzorků.  
   
 ## <a name="rule-description"></a>Popis pravidla  
- Tato zpráva znamená maximální velikost virtuální paměti, který má proces nyní přidělenu v bajtech (Nesdílené bajty). Nesdílené bajty představuje virtuální paměti umístění, které byly přiděleny procesem, který je přístupný pouze tím, že běží uvnitř procesu vlákna.  
+ Tato zpráva oznamuje maximální velikost virtuální paměti, kterou proces aktuálně přidělil v bajtech (nesdílené bajty). Soukromé bajty představují umístění virtuální paměti, která byla přidělena procesu, ke kterému lze přistupovat pouze v vláknech spuštěných uvnitř procesu.  
   
- Pro 32bitové procesy spuštěné na počítači 32bitové horní limit části privátní adresní prostor procesu je 2 GB. Použití [3 GB](http://go.microsoft.com/fwlink/?LinkId=177831) přepínač Boot.ini 32bitové procesy můžete získat až 3 GB virtuální paměti. 32bitový proces, který běží na 64bitovém počítači můžete získat až 4 GB přidělené virtuální paměti.  
+ Pro 32 procesy běžící na 32 počítači je horní limit soukromé části adresního prostoru procesu 2 GB. Pomocí přepínače Boot. ini [/3 GB](https://go.microsoft.com/fwlink/?LinkId=177831) mohou 32 procesy získat až 3 GB virtuální paměti. 32 proces, který běží na 64 počítači, může získat až 4 GB privátní virtuální paměti.  
   
- 64bitový proces, který běží na 64bitovém počítači můžete získat až do 8 TB privátní virtuální paměti.  
+ 64 proces, který běží na 64 počítači, může získat až 8 TB privátní virtuální paměti.  
   
- Hlášená hodnota je maximum přes všechny intervaly měření, ve kterých byl aktivní profilovaný proces.  
+ Nahlášená hodnota je maximální hodnota ve všech intervalech měření, ve kterých je proces profilace aktivní.  
   
- Další informace o procesu adresních prostorů, naleznete v tématu [virtuální adresní prostor](http://go.microsoft.com/fwlink/?LinkId=177832) v dokumentaci k Windows správy paměti.  
+ Další informace o adresních prostorech procesu najdete v tématu [virtuální adresní prostor](https://go.microsoft.com/fwlink/?LinkId=177832) v dokumentaci ke službě Správa paměti systému Windows.  
   
-## <a name="how-to-use-rule-data"></a>Jak používat Data pravidla  
- Použijte hlášená hodnota k porovnání výkonu různých verzí nebo sestavení programu a porozumět výkonu aplikace v různých scénářích profilování.  
+## <a name="how-to-use-rule-data"></a>Jak používat data pravidla  
+ Pomocí hlášené hodnoty můžete porovnávat výkon různých verzí nebo sestavení programu nebo porozumět výkonu aplikace v rámci různých scénářů profilace.  
   
- Maximální hodnota soukromých bajtů procesu, který se blíží limitu jak velký adresní prostor procesu můžou růst může vést ke výjimky paměti. Další informace najdete v tématu [zkoumání problémů s pamětí](http://go.microsoft.com/fwlink/?LinkID=177833) v MSDN Magazine.
+ Maximální hodnota nesdílených bajtů procesu, která se blíží omezení architektury, jak velký adresní prostor procesu může růst, může způsobit výjimky z paměti. Další informace najdete v tématu [zkoumání problémů s pamětí](https://go.microsoft.com/fwlink/?LinkID=177833) na webu MSDN Magazine.

@@ -8,12 +8,12 @@ ms.assetid: f7c25ba7-5c9c-455b-9242-701cda56f90c
 caps.latest.revision: 43
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2891a01590f2970fc2e68ea7bc2d57506b12d26b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4b4d3e7c597766c3b416a7cb637cf0e5e99f71d5
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657111"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302061"
 ---
 # <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>Návod: Vytváření, upravování a údržba programového testu UI
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
 1. V nabídce **soubor** přejděte na příkaz **Nový**a vyberte možnost **projekt**.
 
-     Zobrazí se dialogové okno **Nový projekt** .
+     Zobrazí se dialogové okno **Nový projekt**.
 
 2. V podokně **nainstalováno** rozbalte položku **Visual C#** a pak vyberte možnost **desktopová plocha systému Windows**.
 
@@ -41,7 +41,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
 6. Zvolte složku, do které bude projekt uložen. Do textového pole **umístění** zadejte název složky.
 
-7. Klikněte na **tlačítko OK**.
+7. Zvolte **OK**.
 
      WPF Designer pro sadu Visual Studio otevře a zobrazí hlavní okno MainWindow projektu.
 
@@ -49,11 +49,11 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
 9. V části **všechny ovládací prvky WPF** přetáhněte **tlačítko**, **CheckBox** a ovládací prvek **ProgressBar** na MainWindow na návrhové ploše.
 
-10. Vyberte ovládací prvek Tlačítko. V okno Vlastnosti změňte hodnotu vlastnosti **název** z \<No název > na Button1. Pak změňte hodnotu vlastnosti **obsah** z tlačítka na spustit.
+10. Vyberte ovládací prvek Tlačítko. V okno Vlastnosti změňte hodnotu vlastnosti **název** z \<bez názvu > na Button1. Pak změňte hodnotu vlastnosti **obsah** z tlačítka na spustit.
 
-11. Vyberte ovládací prvek Indikátor průběhu. V okno Vlastnosti změňte hodnotu vlastnosti **název** z \<No název > na ProgressBar1. Pak změňte hodnotu vlastnosti **Maximum** z **100** na **10000**.
+11. Vyberte ovládací prvek Indikátor průběhu. V okno Vlastnosti změňte hodnotu vlastnosti **název** z \<bez názvu > na ProgressBar1. Pak změňte hodnotu vlastnosti **Maximum** z **100** na **10000**.
 
-12. Vyberte ovládací prvek Zaškrtávací políčko. V okno Vlastnosti změňte hodnotu vlastnosti **název** z \<No název > na CheckBox1 a zrušte zaškrtnutí vlastnosti **Nepovoleno** .
+12. Vyberte ovládací prvek Zaškrtávací políčko. V okno Vlastnosti změňte hodnotu vlastnosti **název** z \<bez názvu > na možnost CheckBox1 a zrušte zaškrtnutí vlastnosti **Nepovoleno** .
 
      ![Jednoduchá aplikace WPF](../test/media/codedui-wpfapp.png "CodedUI_WPFApp")
 
@@ -118,7 +118,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
 ### <a name="create-and-run-a-coded-ui-test-for-simplewpfapp"></a>Vytvoření a spuštění programového testu uživatelského rozhraní pro aplikaci SimpleWPFApp
 
-1. Vyhledejte aplikaci aplikaci SimpleWPFApp, kterou jste vytvořili dříve. Ve výchozím nastavení se aplikace nachází v umístění C:\Users \\ < username \> \Documents\Visual Studio \<version > \Projects\SimpleWPFApp\SimpleWPFApp\bin\Debug\SimpleWPFApp.exe
+1. Vyhledejte aplikaci aplikaci SimpleWPFApp, kterou jste vytvořili dříve. Ve výchozím nastavení se aplikace nachází v umístění C:\Users\\< uživatelské jméno\>\Documents\Visual Studio \<verze > \Projects\SimpleWPFApp\SimpleWPFApp\bin\Debug\SimpleWPFApp.exe
 
 2. Vytvořte pro aplikaci SimpleWPFApp zástupce na ploše. Klikněte pravým tlačítkem na aplikaci SimpleWPFApp. exe a vyberte **Kopírovat**. Na ploše klikněte pravým tlačítkem myši a vyberte možnost **Vložit zástupce**.
 
@@ -133,7 +133,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
 5. V prostředním podokně vyberte šablonu **projektu programový test uživatelského rozhraní** .
 
-6. Klikněte na **tlačítko OK**.
+6. Zvolte **OK**.
 
      V Průzkumník řešení do vašeho řešení se přidá nový projekt programového testu UI s názvem **CodedUITestProject1** .
 
@@ -151,7 +151,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
      V případě potřeby můžete nahrávání pozastavit, například pokud se budete muset zabývat příchozí poštou.
 
-     ![Pozastavit záznam](../test/media/cuit.png "UI")
+     ![Pozastavit záznam](../test/media/cuit.png "CUIT_")
 
     > [!WARNING]
     > Budou zaznamenány všechny akce prováděné na ploše. Pozastaví nahrávání, pokud provádíte akce, které mohou vést k zahrnutí citlivých dat do záznamu.
@@ -215,7 +215,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
 7. Klikněte na tlačítko **přesunout kód** na panelu nástrojů editoru programového testu UI.
 
-8. Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že metoda bude přesunuta ze souboru UIMap.uitest do souboru UIMap.cs a že již nebude možné upravit metodu pomocí funkce Editor programového testu uživatelského rozhraní. Vyberte **Ano**.
+8. Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že metoda bude přesunuta ze souboru UIMap.uitest do souboru UIMap.cs a že již nebude možné upravit metodu pomocí funkce Editor programového testu uživatelského rozhraní. Zvolte **Ano**.
 
      Testovací metoda je odebrána ze souboru UIMap.uitest a v podokně Akce uživatelského rozhraní se již nezobrazí. Chcete-li upravit přesunutý soubor testu, otevřete soubor UIMap.cs z Průzkumníku řešení.
 
@@ -369,22 +369,22 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 ## <a name="external-resources"></a>Externí zdroje
 
 ### <a name="videos"></a>Videa
- ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kódované testy uživatelského rozhraní – podrobné-Episode1-soubor GettingStarted](http://go.microsoft.com/fwlink/?LinkID=230573)
+ ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kódované testy uživatelského rozhraní – podrobné-Episode1-soubor GettingStarted](https://go.microsoft.com/fwlink/?LinkID=230573)
 
- ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kódované testy uživatelského rozhraní – podrobné-Episode2-MaintainenceAndDebugging](http://go.microsoft.com/fwlink/?LinkID=230574)
+ ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kódované testy uživatelského rozhraní – podrobné-Episode2-MaintainenceAndDebugging](https://go.microsoft.com/fwlink/?LinkID=230574)
 
- ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kódované testy uživatelského rozhraní – podrobné-Episode3-HandCoding](http://go.microsoft.com/fwlink/?LinkID=230575)
+ ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kódované testy uživatelského rozhraní – podrobné-Episode3-HandCoding](https://go.microsoft.com/fwlink/?LinkID=230575)
 
 ### <a name="hands-on-lab"></a>Praktické cvičení
- [MSDN Virtual Lab: Úvod k vytváření programových testů UI pomocí sady Visual Studio 2010](http://go.microsoft.com/fwlink/?LinkID=22508)
+ [MSDN Virtual Lab: Úvod k vytváření programových testů UI pomocí sady Visual Studio 2010](https://go.microsoft.com/fwlink/?LinkID=22508)
 
 ### <a name="faq"></a>Nejčastější dotazy
- [Nejčastější dotazy k programovým testům UI – 1](http://go.microsoft.com/fwlink/?LinkID=230576)
+ [Nejčastější dotazy k programovým testům UI – 1](https://go.microsoft.com/fwlink/?LinkID=230576)
 
- [Nejčastější dotazy k programovým testům UI – 2](http://go.microsoft.com/fwlink/?LinkID=230578)
+ [Nejčastější dotazy k programovým testům UI – 2](https://go.microsoft.com/fwlink/?LinkID=230578)
 
 ### <a name="forum"></a>Fórum
- [Testování automatizace uživatelského rozhraní sady Visual Studio (zahrnuje CodedUI)](http://go.microsoft.com/fwlink/?LinkID=224497)
+ [Testování automatizace uživatelského rozhraní sady Visual Studio (zahrnuje CodedUI)](https://go.microsoft.com/fwlink/?LinkID=224497)
 
 ## <a name="see-also"></a>Viz také
  [Použití automatizace uživatelského rozhraní k otestování kódu](../test/use-ui-automation-to-test-your-code.md) [Začínáme pomocí](https://msdn.microsoft.com/18e61d03-b96a-4058-a166-8ec6b3f6116b) [podporovaných konfigurací a platforem pro programové testy uživatelského rozhraní a záznamů akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md) [úpravou](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md) programových testů UI pomocí editoru programových testů uživatelského rozhraní

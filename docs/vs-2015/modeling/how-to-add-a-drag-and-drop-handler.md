@@ -9,12 +9,12 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 244bfeb48a0c0a572cc58e2544cfb0f4336441c8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6ca68005f71d642650a2d9b024a16883de5eaddf
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671665"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298937"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>Postupy: Přidání obslužné rutiny operace přetažení myší
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,7 +27,7 @@ Můžete přidat obslužné rutiny pro události přetažení do DSL, aby uživa
 
 - První dva oddíly popisují alternativní metody definování obslužné rutiny gesta:
 
-  - [Definování obslužných rutin gest přepsáním metod ShapeElement](#overrideShapeElement). `OnDragDrop`, `OnDoubleClick`, `OnDragOver` a další metody lze přepsat.
+  - [Definování obslužných rutin gest přepsáním metod ShapeElement](#overrideShapeElement). `OnDragDrop`, `OnDoubleClick`, `OnDragOver`a další metody lze přepsat.
 
   - [Definování obslužných rutin gest pomocí MEF](#MEF). Tuto metodu použijte, pokud chcete, aby vývojáři třetích stran mohli definovat vlastní obslužné rutiny na DSL. Uživatelé si můžou nainstalovat rozšíření od jiných výrobců po instalaci DSL.
 
@@ -48,7 +48,7 @@ using System.Linq;
 
  V novém souboru definujte částečnou třídu pro tvar nebo třídu diagramu, která by měla reagovat na operaci přetažení. Přepište následující metody:
 
-- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragOver%2A> – Tato metoda se volá, když ukazatel myši vstoupí do tvaru během operace přetažení. Vaše metoda by měla zkontrolovat položku, kterou uživatel přetáhne, a nastavit vlastnost Effect tak, aby označovala, zda uživatel může položku na tomto obrazci vyřadit. Vlastnost efekt určuje vzhled kurzoru, zatímco je nad tímto obrazcem, a také určuje, zda bude `OnDragDrop()` volána, když uživatel uvolní tlačítko myši.
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragOver%2A>– Tato metoda se volá, když ukazatel myši vstoupí do tvaru během operace přetažení. Vaše metoda by měla zkontrolovat položku, kterou uživatel přetáhne, a nastavit vlastnost Effect tak, aby označovala, zda uživatel může položku na tomto obrazci vyřadit. Vlastnost efekt určuje vzhled kurzoru, zatímco je nad tímto obrazcem, a také určuje, zda bude `OnDragDrop()` volána, když uživatel uvolní tlačítko myši.
 
   ```csharp
   partial class MyShape // MyShape generated from DSL Definition.
@@ -136,7 +136,7 @@ using System.Linq;
 
  Chcete-li zjistit formáty, ve kterých jsou k dispozici informace o zdroji, spusťte kód v režimu ladění a nastavte zarážku na položku `OnDragOver()` nebo `CanDragDrop()`. Zkontrolujte hodnoty parametru `DiagramDragEventArgs`. Tyto informace jsou k dispozici ve dvou formách:
 
-- <xref:System.Windows.Forms.IDataObject> `Data` – Tato vlastnost přináší serializované verze zdrojových objektů, obvykle ve více než jednom formátu. Nejužitečnější funkce jsou:
+- <xref:System.Windows.Forms.IDataObject>`Data` – Tato vlastnost přináší serializované verze zdrojových objektů, obvykle ve více než jednom formátu. Nejužitečnější funkce jsou:
 
   - diagramEventArgs. data. GetDataFormats () – uvádí formáty, ve kterých lze dekódovat přetažený objekt. Pokud uživatel například přetáhne soubor z plochy, dostupné formáty obsahují název souboru ("`FileNameW`").
 
@@ -170,9 +170,9 @@ using System.Linq;
 
 1. Zpřístupněte zdrojovou DSL přístupovou pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sběrnice modelů:
 
-    1. Stáhněte a nainstalujte rozšíření sběrnice sady Visual Studio, pokud ještě není nainstalované. Další informace najdete v tématu [sada SDK pro vizualizaci a modelování](http://go.microsoft.com/fwlink/?LinkID=185579).
+    1. Stáhněte a nainstalujte rozšíření sběrnice sady Visual Studio, pokud ještě není nainstalované. Další informace najdete v tématu [Visualization and Modeling SDK](https://go.microsoft.com/fwlink/?LinkID=185579).
 
-    2. V Návrháři DSL otevřete soubor definice DSL pro zdrojovou DSL. Klikněte pravým tlačítkem myši na návrhovou plochu a pak klikněte na **povolit ModelBus**. V dialogovém okně vyberte jednu z možností.  Klikněte na tlačítko **OK**. Do řešení DSL se přidá nový projekt "ModelBus".
+    2. V Návrháři DSL otevřete soubor definice DSL pro zdrojovou DSL. Klikněte pravým tlačítkem na návrhové ploše a potom klikněte na tlačítko **povolit Modelbus**. V dialogovém okně vyberte jednu z možností.  Klikněte na tlačítko **OK**. Do řešení DSL se přidá nový projekt "ModelBus".
 
     3. Klikněte na **transformovat všechny šablony** a znovu sestavte řešení.
 

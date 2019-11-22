@@ -13,12 +13,12 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4f83fcf3ea500e0640a226b80d3d3c0e2c7ed869
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b634b11418ef2d4220dc4eb07c825b514ab5494c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655092"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301197"
 ---
 # <a name="customize-your-model-with-profiles-and-stereotypes"></a>Přizpůsobení modelu pomocí profilů a stereotypů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,4 +45,3 @@ V aplikaci Visual Studio můžete upravit standardní prvky modelu UML, jako jso
 |[Definování profilu pro rozšíření UML](../modeling/define-a-profile-to-extend-uml.md)|Můžete definovat vlastní stereotypy a nástroje, které jsou přizpůsobené vaší vlastní oblasti aplikace.<br /><br /> Pokud například vyvíjíte bankovní software, můžete definovat stereotyp «účet», který lze použít na třídy. Pak můžete použít diagramy tříd k popisu různých typů účtu a jejich vztahů.|
 |[Instalace profilu UML](../modeling/install-a-uml-profile.md)|Pokud vám někdo dal profil UML, můžete ho nainstalovat do svého počítače.|
 |[Definování vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md)|Vlastní položka sady nástrojů vám ušetří v opakovaném nastavení stereotypu pro nové prvky.|
-|[Barevné třídy UML podle stereotypu](http://code.msdn.microsoft.com/UML-Color-Classes-by-07de2b70)|Tento vzorový kód rozšiřuje diagramy UML. Automaticky nastaví barvu obrazce UML podle stereotypu prvku.|

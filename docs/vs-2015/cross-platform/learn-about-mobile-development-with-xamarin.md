@@ -1,100 +1,100 @@
 ---
-title: Další informace o vývoji mobilních aplikací s využitím kódu Xamarin | Dokumentace Microsoftu
+title: Další informace o vývoji pro mobilní zařízení pomocí Xamarin | Microsoft Docs
 ms.date: 11/15/2016
 ms.topic: conceptual
 ms.assetid: e970d936-1df4-4c0c-96e3-ef6191295882
 caps.latest.revision: 14
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: d709dc2b5262f4fbad341b0b77d45a90b138ed6f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 9924eee661f917334aed586506a107486cd5be0f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443981"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299770"
 ---
 # <a name="learn-about-mobile-development-with-xamarin"></a>Informace o vývoji pro mobilní zařízení v Xamarinu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Toto téma vás přesměruje na přehled materiál, který vám pomůže pochopit, vývoj multiplatformních mobilních aplikací s využitím kódu Xamarin. Pokud jste ještě nenainstalovali aplikaci Visual Studio a Xamarin, spusťte [nastavení a instalaci](../cross-platform/setup-and-install.md) procesu nejprve, pak se sem vraťte pro seznámení se základními tyto prostředky jsou spuštěné instalační programy.  
+Toto téma vás seznámí s přehledem materiálů, které vám pomohou pochopit vývoj mobilních aplikací pro různé platformy pomocí Xamarin. Pokud jste ještě nenainstalovali Visual Studio a Xamarin, spusťte nejprve proces [instalace a instalace](../cross-platform/setup-and-install.md) a pak se vraťte sem, abyste mohli tyto prostředky v průběhu instalačních programů používat.  
   
 > [!NOTE]
-> Pokud není uvedeno jinak, doporučujeme nejdřív čtení pouze stránky propojené přímo tady a ne pobočkách stránky. Pokud po dokončení tohoto seznamu je stále spuštěn proces instalace, můžete přejít zpět a prozkoumat další témata.  
+> Pokud není uvedeno jinak, doporučujeme nejprve číst pouze ty stránky, které jsou propojeny přímo zde, nikoli stránky dceřiných společností. Pokud proces instalace pořád běží po dokončení tohoto seznamu, můžete se vrátit a prozkoumat další témata.  
 >   
-> Také neváhejte tématech označený "Essentials" a vraťte se na témata "Dozvědět více o" později.  
+> Také si můžete prohlédnout Témata označená "Essentials" a později se vrátit k tématům "hlubší podrobně".  
   
 ## <a name="essentials-introduction-to-xamarin"></a>Základy: Úvod do Xamarin  
  *10-20 minut*  
   
-1. [Mobile Apps v sadě Visual Studio s Xamarinem](https://www.visualstudio.com/explore/xamarin-vs) (visualstudio.com) poskytuje velmi krátké doběhu primární charakteristiky Xamarin.  
+1. [Mobile Apps v aplikaci Visual Studio s Xamarin](https://www.visualstudio.com/explore/xamarin-vs) (VisualStudio.com) poskytuje velmi krátký doběhu primárních vlastností Xamarin.  
   
-2. [Vytváření Cross-Platform Mobile Apps pomocí jazyka C# a Visual Studio](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2015-Final-Release-Event/Building-cross-platform-mobile-apps-using-C-and-Visual-Studio-2015) (Channel9, 15m16s) s Xamarin evangelista, James Montemagno. První tři minuty se přehled Xamarin, za nímž následuje ukázky kódu.  
+2. [Sestavování Mobile Apps pro různé C# platformy pomocí a sady Visual Studio](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2015-Final-Release-Event/Building-cross-platform-mobile-apps-using-C-and-Visual-Studio-2015) (channel9, 15m16s) s Xamarin evangelista, James Montemagno. První tři minuty jsou přehled Xamarin, po kterém následují ukázky kódu.  
   
-## <a name="essentials-overview-of-the-visual-studio-and-xamarin-environment"></a>Základy: Přehled sady Visual Studio a Xamarin prostředí  
- *5 – 15 minutách*  
+## <a name="essentials-overview-of-the-visual-studio-and-xamarin-environment"></a>Základy: Přehled prostředí sady Visual Studio a Xamarin  
+ *5-15 minut*  
   
-- Počítači Windows pomocí sady Visual Studio a Xamarinu je, kde budete provádět většinu práce. V tomto počítači přímo sestavení Windows a aplikace pro Android a spouštění a ladění je na zařízení nebo emulátoru. Můžete také vzdáleně sestavení, spouštět a ladit aplikace pro iOS pomocí macu Visual Studio v počítači Windows můžete také připojit k iOS designer scénáře a simulátoru iOS.  
+- Počítač se systémem Windows se sadou Visual Studio a Xamarin je místo, kde provedete většinu práce. V tomto počítači přímo sestavíte aplikace pro Windows a Android a spouštíte a ladíte je na zařízení nebo emulátoru. Můžete také vzdáleně sestavovat, spouštět a ladit aplikace pro iOS přes Mac. Visual Studio na počítači s Windows se může připojit také k nástroji pro vytváření scénářů iOS a simulátoru iOS.  
   
-- Mac s Xcode a Xamarin slouží jako sestavení nebo podepisování prostředí hostitele a modulu runtime pro aplikace pro iOS. Sestavení pro iOS ze sady Visual Studio v počítači Windows se deleguje na tento počítač Mac; Při ladění aplikace pro iOS ze sady Visual Studio, běží v simulátoru iOS na Macu nebo přímo na připojené zařízení připojená k počítači Mac. V tomto případě budete pracovat s aplikací nebo v počítači Mac a mají zkušenosti s laděním v sadě Visual Studio.  
+- Mac s Xcode a Xamarin slouží jako hostitel sestavení/podepisování a běhové prostředí pro aplikace pro iOS. Sestavení pro iOS ze sady Visual Studio na počítači s Windows jsou delegovaná na tento počítač Mac. Při ladění aplikace pro iOS ze sady Visual Studio běží v simulátoru iOS na Macu nebo přímo na připojeném zařízení, které je připojené k počítači Mac. V takovém případě budete pracovat s aplikací na Macu nebo v blízkosti a máte prostředí pro ladění v aplikaci Visual Studio.  
   
-  Tyto vztahy jsou znázorněné níže, a další informace o práci s aplikacemi pro iOS na [Úvod k Xamarin.iosu pro Visual Studio](http://developer.xamarin.com/guides/ios/getting_started/installation/windows/introduction_to_xamarin_ios_for_visual_studio/) (xamarin.com).  
+  Tyto vztahy jsou uvedené níže a další informace o práci s aplikacemi pro iOS najdete v tématu [Úvod do Xamarin. iOS pro Visual Studio](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio) (Xamarin.com).  
   
-  ![Vztah mezi Windows a Mac dev počítačů v prostředí Xamarin](../cross-platform/media/crossplat-xamarin-learn-1.png "CrossPlat Xamarin další 1")  
+  ![Vztah mezi počítači se systémem Windows a Mac pro vývoj v prostředí Xamarin](../cross-platform/media/crossplat-xamarin-learn-1.png "CrossPlat Xamarin – učení 1")  
   
-## <a name="essentials-how-projects-are-structured"></a>Základy: Strukturování projektů  
- *10 – 30 minut*  
+## <a name="essentials-how-projects-are-structured"></a>Základy: jak se strukturují projekty  
+ *10-30 minut*  
   
-1. [Kód – možnosti pro sdílení obsahu](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/sharing_code_options/) (xamarin.com). Doporučujeme, abyste pomocí možnosti knihovny přenosných tříd, jako to nejlepší podporuje používání pouze rozhraní .NET API, které jsou podporovány v rámci všechny cílové platformy. Většina kódu obchodní logiky se bude nacházet v PCL, včetně přístupu k databázím, volání rozhraní REST API a volání přenosné komponent Xamarin (viz [dozvědět více o: Komponenty Xamarin](#components) na konci tohoto tématu). Společný kód uživatelského rozhraní napsané pomocí Xamarin.Forms může také nacházet v PCL.  
+1. [Sdílení možností kódu](https://docs.microsoft.com/xamarin/cross-platform/app-fundamentals/code-sharing) (Xamarin.com). Doporučujeme použít možnost knihovny přenosných tříd, protože to nejlépe podporuje jenom rozhraní .NET API podporovaná napříč všemi cílovými platformami. Většina kódu obchodní logiky se bude nacházet v PCL, včetně přístupu k databázím, volání rozhraní REST API a volání přenosných komponent Xamarin (viz [hlubší podrobně: komponenty Xamarin](#components) na konci tohoto tématu). Běžný kód uživatelského rozhraní napsaný pomocí Xamarin. Forms se může také nacházet v PCL.  
   
-2. (Volitelné) [Případová studie: Tasky](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/case_study-tasky/) (xamarin.com) popisuje některé osvědčené postupy pro návrh a struktura plně funkčních aplikací, jako je například strukturování projektu s PCL pro sdílený kód, který odděluje dat, přístup k datům a obchodní vrstvy.  
+2. Volitelné [Případová studie: tasking](https://docs.microsoft.com/xamarin/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky) (Xamarin.com), popisuje některé osvědčené postupy pro návrh a strukturu plně funkční aplikace, jako je například strukturování projektu pomocí PCL pro sdílený kód, který odděluje data, přístup k datům a obchodní vrstvy.  
   
-## <a name="essentials-native-and-xamarinforms-ui-layers"></a>Essentials: nativní a vrstvy uživatelského rozhraní Xamarin.Forms  
+## <a name="essentials-native-and-xamarinforms-ui-layers"></a>Základy: nativní a Xamarin. Forms UI vrstvy  
  *10-40 minut*  
   
- Xamarin poskytuje dva způsoby, jak vytvářet skvělé nativní aplikace: Nativní Xamarin a Xamarin.Forms.  
+ Xamarin nabízí dva způsoby vytváření skvělých nativních aplikací: Xamarin Native a Xamarin. Forms.  
   
- S nativními Xamarin napíšete samostatného kódu uživatelského rozhraní pro každou cílovou platformu: iOS, Android a Windows.  S tímto přístupem nemají přímý přístup k rozhraním API pro konkrétní platformu povolení přizpůsobené uživatelské rozhraní na jednu platformu.  Máte také úplný přístup k nativní návrháře a ovládací prvky pro jednotlivé platformy, abychom vám pomohli s vytváření příslušných uživatelského rozhraní.  
+ Pomocí Xamarin Native napíšete samostatný kód uživatelského rozhraní pro každou cílovou platformu: iOS, Android a Windows.  S tímto přístupem máte přímý přístup k rozhraním API pro konkrétní platformu, který umožňuje přizpůsobené uživatelské prostředí pro jednotlivé platformy.  Máte také úplný přístup k nativnímu návrháři a ovládacím prvkům pro každou platformu, abyste mohli vytvářet příslušné uživatelské rozhraní.  
   
- Xamarin.Forms poskytuje generalizovaný sadu rozhraní API, která umožňuje zapisovat sdílené vrstvě uživatelského rozhraní pro všechny platformy v přenosnou knihovnu tříd.  Xamarin.Forms vykresluje nativní ovládací prvky na jednotlivých cílové platformy, zajišťuje přirozený vzhled a chování.  Místo použití návrháře, s Xamarin.Forms, vytvoříte uživatelské rozhraní pomocí jazyka C# a XAML.  
+ Xamarin. Forms poskytuje obecnou sadu rozhraní API, která umožňuje napsat sdílenou vrstvu uživatelského rozhraní pro všechny platformy v přenositelné knihovně tříd.  Xamarin. Forms se vykreslí do nativních ovládacích prvků na každé cílové platformě, aby bylo možné získat nativní vzhled a chování.  Místo použití návrháře pomocí Xamarin. Forms sestavíte uživatelské rozhraní pomocí C# a XAML.  
   
- Není nutné se rozhodnout, jaký přístup se ještě před zahájením; aplikace je možné implementovat pomocí kombinace nativní Xamarin a Xamarin.Forms:  
+ Nemusíte se rozhodnout, jaký přístup se má vzít dopředu. aplikace lze implementovat pomocí kombinace nativních Xamarin i Xamarin. Forms:  
   
-- Xamarin.Forms použijte k vytvoření obrazovky pro obecné účely, které poskytují podobné možnosti a uživatelského rozhraní na platformách, jako je například přihlašovací údaje, obraťte se na formulářů a výsledky hledání.  
+- Xamarin. Forms použijte k sestavení obrazovek pro obecné účely, které poskytují podobné uživatelské rozhraní a možnosti napříč platformami, jako jsou přihlašovací údaje, formuláře kontaktů a výsledky hledání.  
   
-- Úprava uživatelského rozhraní na základě podle platformy pomocí širokou škálu možností vlastního nastavení v Xamarin.Forms. Patří mezi ně OnPlatform rozhraní API, které je možné z obou kód a XAML, vytvoření vlastního zobrazení, rozšíření existující zobrazovací jednotky a vytvoření vlastní zobrazovací jednotky.  
+- Využijte celou řadu možností přizpůsobení v Xamarin. Forms a upravte uživatelské rozhraní na bázi jednotlivých platforem. Mezi ně patří rozhraní API rozhraní inverze, které lze použít v kódu i v jazyce XAML, vytváření vlastního zobrazení, rozšíření existujícího zobrazovací jednotky a vytvoření vlastního zobrazovacího panelu.  
   
-- V případě potřeby použijte k vytváření obrazovek, které používají jedinečné funkce uživatelského rozhraní pro každou platformu, například obrazovku, která využívá nativní fotoaparátu zachycení a image práci s nativní Xamarin.  
+- V případě potřeby použijte nástroj Xamarin Native k sestavení obrazovek, které používají jedinečné funkce uživatelského rozhraní každé platformy, například obrazovku, která používá zachytávání nativní kamery a manipulaci s obrázky.  
   
-  Doporučujeme vždy začíná řešení Xamarin.Forms nastavit kód uživatelského rozhraní pro sdílení obsahu napříč platformami a pomocí možnosti přizpůsobení provést úpravy pro konkrétní platformu. Pokud budete potřebovat obrazovky zcela specifické pro platformu, můžete přidat ty samostatně pomocí nativní Xamarin.  
+  Doporučujeme vždy začít s řešením Xamarin. Forms, které umožňuje nastavit sdílení kódu uživatelského rozhraní napříč platformami, a využít možnosti vlastního nastavení k zajištění úprav specifických pro konkrétní platformu. Pokud a potřebujete obrazovky pro zcela konkrétní platformu, můžete je přidat jednotlivě pomocí Xamarin Native.  
   
   Další informace:  
   
-1. [Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/) (xamarin.com) poskytuje stručný přehled a výhody a nevýhody Xamarin.Forms oproti nativní vrstvy uživatelského rozhraní (to znamená, Xamarin.iOS a Xamarin.Android).  
+1. [Xamarin. Forms](https://docs.microsoft.com/xamarin/xamarin-forms/) (Xamarin.com) poskytuje stručný přehled a specialisty a nevýhody Xamarin. Forms vs. nativní vrstvy uživatelského rozhraní (tj. Xamarin. iOS a Xamarin. Android).  
   
-2. První tři minuty James Montemagno video [Xamarin.Forms: Nativní aplikace pro iOS, Android a Windows aplikací s využitím C# & XAML](https://channel9.msdn.com/events/Visual-Studio/Connect-event-2015/704) (Channel9, 13m3s) poskytuje další přehled a můžete pokračovat ve sledování pro ukázky.  
+2. První tři minuty z Montemagno videí [Xamarin. Forms: nativní iOS, android & aplikace pro Windows s C# & XAML](https://channel9.msdn.com/events/Visual-Studio/Connect-event-2015/704) (channel9, 13m3s) nabízí další přehled a můžete pokračovat ve sledování ukázek.  
   
-3. (Volitelné) [Úvod do Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/introduction-to-xamarin-forms/) (xamarin.com)  
+3. Volitelné [Úvod do Xamarin. Forms](https://docs.microsoft.com/xamarin/get-started/quickstarts/deepdive?pivots=windows) (Xamarin.com)  
   
-4. (Volitelné) Použití OnPlatform pro přizpůsobení v příklady [třídu zařízení](http://developer.xamarin.com/guides/xamarin-forms/platform-features/device/) dokumentaci (xamarin.com)  
+4. Volitelné Podívejte se na příklady použití možnosti-platforma pro přizpůsobení v dokumentaci [třídy zařízení](https://docs.microsoft.com/xamarin/xamarin-forms/platform/device) (Xamarin.com).  
   
-5. (Volitelné) [Různé platformy – sdílené složky uživatelského rozhraní kódu napříč mobilní platformy Xamarin.Forms](https://msdn.microsoft.com/magazine/dn904669.aspx) podle Jason Smith (Zpravodaj MSDN Magazine) jsou podrobněji popsány dále různé možnosti přizpůsobení možností v Xamarin.Forms, pro které jsou zahrnuty podrobnosti na [ Přizpůsobení ovládacích prvků na jednotlivých platformách](http://developer.xamarin.com/guides/xamarin-forms/custom-renderer/) (xamarin.com).  
+5. Volitelné [Kód uživatelského rozhraní pro sdílení napříč platformami napříč mobilními platformami pomocí Xamarin. Forms](https://msdn.microsoft.com/magazine/dn904669.aspx) podle Jason Smith (MSDN Magazine) popisuje různé možnosti přizpůsobení v Xamarin. Forms, pro které jsou podrobnosti o [Přizpůsobení ovládacích prvků na jednotlivých platformách](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/custom-renderer/) (Xamarin.com).  
   
-## <a name="deeper-dive-debugging-with-emulators"></a>Podrobnější informace: Ladění pomocí emulátorů  
- *10 až 15 minut*  
+## <a name="deeper-dive-debugging-with-emulators"></a>Hlubší podrobně: ladění pomocí emulátorů  
+ *10-15 minut*  
   
- Chcete-li ladit aplikace pro víc platforem bez nutnosti použít fyzické zařízení, budete muset použít tento příkaz:  
+ Chcete-li ladit aplikace pro různé platformy bez nutnosti používat fyzické zařízení, bude nutné použít následující:  
   
-1. **Emulátoru Androidu.** V závislosti na tom, kterou verzi Windows, který používáte doporučujeme, abyste buď Microsoft Visual Studio Emulator pro Android nebo Xamarin Playeru, které nabízejí rychlý výkon a podporu celé řady funkcí zařízení:  
+1. **Emulátor Androidu.** V závislosti na používané verzi systému Windows doporučujeme použít emulátor sady Visual Studio od společnosti Microsoft pro Android nebo Xamarin Player, jak nabízí rychlý výkon a podpora nejrůznějších funkcí zařízení:  
   
-    - **Počítače s Windows 8 +:** Důrazně doporučujeme použití společnosti Microsoft [Visual Studio Emulator for Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx), která se instaluje s aplikací Visual Studio.  [Visual Studio Emulator for Android](https://channel9.msdn.com/events/Visual-Studio/Connect-event-2015/711) video (webu Channel 9, 5m55s) poskytuje přehled a ukázka.  
+    - **Počítače se systémem Windows 8 +:** Důrazně doporučujeme používat emulátor sady [Visual Studio pro Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx), který je nainstalovaný se sadou Visual Studio.  Video [emulátor sady Visual Studio pro Android](https://channel9.msdn.com/events/Visual-Studio/Connect-event-2015/711) (channel9, 5m55s) poskytuje přehled a ukázku.  
   
-    - **Windows 7 nebo dřívější Windows/Mac OS X a systémem**: použijte [přehrávač Xamarin Android](http://developer.xamarin.com/guides/android/getting_started/installation/android-player) (xamarin.com).  
+    - **Windows 7 nebo starší/Windows běžící na Mac OS X**: použijte [Xamarin Android Player](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (Xamarin.com).  
   
-2. **Simulátor Iosu společnosti Apple.** Další informace najdete v článku [Začínáme se simulátorem Iosu](https://developer.apple.com/library/prerelease/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/GettingStartedwithiOSSimulator/GettingStartedwithiOSSimulator.html#//apple_ref/doc/uid/TP40012848-CH5-SW1) (apple.com).  
+2. **Simulátor iOS společnosti Apple.** Pokud se chcete dozvědět víc, přečtěte si [Začínáme v simulátoru iOS](https://developer.apple.com/library/prerelease/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/GettingStartedwithiOSSimulator/GettingStartedwithiOSSimulator.html#//apple_ref/doc/uid/TP40012848-CH5-SW1) (Apple.com).  
   
-3. **Emulátor Windows Phone od Microsoftu.** Další informace najdete v článku [Windows Phone emulátor pro Windows Phone 8](https://msdn.microsoft.com/library/dn632391.aspx).  
+3. **Emulátor Windows Phone Microsoftu.** Pokud se chcete dozvědět víc, přečtěte si [Windows Phone emulátor pro Windows Phone 8](https://msdn.microsoft.com/library/dn632391.aspx).  
   
-## <a name="components"></a> Podrobnější informace: Komponenty Xamarin  
+## <a name="components"></a>Hlubší podrobně: komponenty Xamarin  
  *10 minut*  
   
- Mnoho rozšířené možnosti jsou k dispozici pro aplikace Xamarin pomocí komponenty Xamarin. Můžete najít úplném katalogu, které jsou k dispozici ke stažení na [ http://components.xamarin.com/ ](http://components.xamarin.com/), která obsahuje součásti pro další ovládací prvky uživatelského rozhraní, ověřování, různých cloudových služeb, jako je například Microsoft Azure a spoustu dalších věcí.
+ K dispozici je řada rozšířených funkcí pro aplikace Xamarin prostřednictvím komponent Xamarin. Můžete najít úplný katalog dostupný ke stažení na [http://components.xamarin.com/](https://docs.microsoft.com/xamarin/cross-platform/troubleshooting/component-nuget?tabs=windows), který obsahuje komponenty pro další ovládací prvky uživatelského rozhraní, ověřování, nejrůznější cloudové služby, jako je například Microsoft Azure a mnoho dalšího.

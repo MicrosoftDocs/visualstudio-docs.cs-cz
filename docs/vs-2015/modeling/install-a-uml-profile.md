@@ -11,12 +11,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e38e89ee5572f5ba552f3b6807a3edab5012a727
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 14911cda4cfc2be5fece6005a879427c10529bbc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669594"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298913"
 ---
 # <a name="install-a-uml-profile"></a>Instalace profilu UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,7 +25,7 @@ Visual Studio můžete roztáhnout pomocí profilu UML. Profil umožňuje přida
 
  Pokud obdržíte model UML, který byl vytvořen pomocí profilů, některé vlastnosti nebudou zobrazeny, pokud nenainstalujete stejné profily.
 
- Profil je distribuován v rozšíření aplikace Visual Studio. Přípona může také obsahovat další funkce, jako například příkazy nabídky. Další informace najdete v tématu [Správa rozšíření sady Visual Studio](http://go.microsoft.com/fwlink/?LinkId=160728).
+ Profil je distribuován v rozšíření aplikace Visual Studio. Přípona může také obsahovat další funkce, jako například příkazy nabídky. Další informace najdete v tématu [Správa rozšíření sady Visual Studio](https://go.microsoft.com/fwlink/?LinkId=160728).
 
 ### <a name="to-install-a-uml-profile-on-your-computer"></a>Instalace profilu UML do počítače
 

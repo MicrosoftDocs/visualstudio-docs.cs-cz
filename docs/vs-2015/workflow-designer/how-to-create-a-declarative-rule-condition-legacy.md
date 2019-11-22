@@ -13,12 +13,12 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d3a15aad987e46edb58da3560828c70571df2227
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2dc63fc58b22792e566df91bd86cac40e3fd2e65
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663419"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297486"
 ---
 # <a name="how-to-create-a-declarative-rule-condition-legacy"></a>Postupy: vytvoření podmínky deklarativního pravidla (starší verze)
 Toto téma popisuje, jak deklarovat podmínku pravidla pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)], která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
@@ -27,17 +27,17 @@ Toto téma popisuje, jak deklarovat podmínku pravidla pomocí starší verze [!
 
  Podmínky deklarativního pravidla se používají v následujících programovací model Windows Workflow Foundationch aktivitách, které se doplňují po box:
 
-- [Aktivitou skupiny ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017)
+- [ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65017)
 
-- [IfElseBranchActivity](http://go.microsoft.com/fwlink?LinkID=65034)
+- [IfElseBranchActivity](https://go.microsoft.com/fwlink?LinkID=65034)
 
-- [Aktivita ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65039)
+- [Aktivita ReplicatorActivity](https://go.microsoft.com/fwlink?LinkID=65039)
 
-- [Aktivita typu WhileActivity](http://go.microsoft.com/fwlink?LinkID=65049)
+- [Aktivita typu WhileActivity](https://go.microsoft.com/fwlink?LinkID=65049)
 
-- [SequentialWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65040)
+- [SequentialWorkflowActivity](https://go.microsoft.com/fwlink?LinkID=65040)
 
-- [StateMachineWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65045)
+- [StateMachineWorkflowActivity](https://go.microsoft.com/fwlink?LinkID=65045)
 
 ### <a name="to-create-a-declarative-rule-condition-using-the-rule-condition-editor"></a>Vytvoření podmínky deklarativního pravidla pomocí editoru podmínek pravidla
 
@@ -64,4 +64,4 @@ Toto téma popisuje, jak deklarovat podmínku pravidla pomocí starší verze [!
      Informace o tom, jak používat dialogové okno **vybrat podmínku** , najdete v části [dialogové okno vybrat podmínku (starší verze)](../workflow-designer/select-condition-dialog-box-legacy.md).
 
 ## <a name="see-also"></a>Viz také
- [Starší aktivity pracovního postupu](../workflow-designer/legacy-workflow-activities.md) [pomocí aktivitou skupiny ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65066) s použitím aktivity [IfElseBranchActivity](http://go.microsoft.com/fwlink?LinkID=65075) pomocí aktivity [replikátoru](http://go.microsoft.com/fwlink?LinkID=65080) v dialogovém okně Editor podmínek pro pravidlo [aktivity while](http://go.microsoft.com/fwlink?LinkID=65091) [(starší verze) ](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) [Dialogové okno vybrat podmínku (starší verze)](../workflow-designer/select-condition-dialog-box-legacy.md) [s použitím podmínek v pracovních postupech](http://go.microsoft.com/fwlink?LinkID=65009)
+ [Starší aktivity pracovního postupu](../workflow-designer/legacy-workflow-activities.md) [pomocí aktivitou skupiny ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65066) s využitím [aktivity IfElseBranchActivity](https://go.microsoft.com/fwlink?LinkID=65075) pomocí aktivity [replikátoru](https://go.microsoft.com/fwlink?LinkID=65080) , která se používá v dialogovém okně Editor podmínek pro pravidlo [aktivity while](https://go.microsoft.com/fwlink?LinkID=65091) [(starší verze)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) [Vyberte možnost podmínka](../workflow-designer/select-condition-dialog-box-legacy.md) [v pracovních postupech pomocí podmínek](https://go.microsoft.com/fwlink?LinkID=65009)

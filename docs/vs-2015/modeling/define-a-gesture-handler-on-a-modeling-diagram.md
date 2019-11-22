@@ -12,17 +12,17 @@ caps.latest.revision: 36
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fbf111dbf8297994994f10b9b867e03321268679
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bf749d1073faf4cf22febafce716af36b47c6484
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654875"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299310"
 ---
 # <a name="define-a-gesture-handler-on-a-modeling-diagram"></a>Definování obslužné rutiny gest v diagramu modelování
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V aplikaci Visual Studio můžete definovat příkazy, které se mají provést, když uživatel dvakrát klikne nebo přetáhne položky do diagramu UML. Tato rozšíření můžete zabalit do rozšíření integrace sady Visual Studio ([VSIX](http://go.microsoft.com/fwlink/?LinkId=160780)) a distribuovat je ostatním uživatelům aplikace Visual Studio.
+V aplikaci Visual Studio můžete definovat příkazy, které se mají provést, když uživatel dvakrát klikne nebo přetáhne položky do diagramu UML. Tato rozšíření můžete zabalit do rozšíření integrace sady Visual Studio ([VSIX](https://go.microsoft.com/fwlink/?LinkId=160780)) a distribuovat je ostatním uživatelům aplikace Visual Studio.
 
  Pokud již existuje předdefinované chování pro typ diagramu a typ prvku, který chcete přetáhnout, pravděpodobně nebudete moci přidat nebo přepsat toto chování.
 
@@ -48,7 +48,7 @@ V aplikaci Visual Studio můžete definovat příkazy, které se mají provést,
 
 3. Stisknutím klávesy F5 otestujte obslužnou rutinu gesta. Další informace naleznete v tématu [provádění obslužné rutiny gesta](#Executing).
 
-4. Nainstalujte obslužnou rutinu gesta v jiném počítači zkopírováním souboru **bin \\ \* \\ \*. vsix** sestaveného vaším projektem. Další informace najdete v tématu [instalace a odinstalace rozšíření](#Installing).
+4. Nainstalujte obslužnou rutinu gesta v jiném počítači zkopírováním souboru **bin\\\*\\\*. vsix** sestaveného vaším projektem. Další informace najdete v tématu [instalace a odinstalace rozšíření](#Installing).
 
    Tady je alternativní postup:
 
@@ -224,11 +224,11 @@ V aplikaci Visual Studio můžete definovat příkazy, které se mají provést,
 
     3. Na kartě **assets (prostředky** ) vyberte **Nový**a v dialogovém okně nastavte:
 
-         **Typ**  = **Komponenta MEF**
+         **Typ** = **Komponenta MEF**
 
-         **Zdrojový**  = **projekt v aktuálním řešení**
+         **Zdrojový** = **projekt v aktuálním řešení**
 
-         **Projekt**  = *projektu knihovny tříd*
+         **Projekt** = *projektu knihovny tříd*
 
 ## <a name="Executing"></a>Provádění obslužné rutiny gesta
  Pro účely testování spusťte obslužnou rutinu gesta v režimu ladění.
@@ -247,7 +247,7 @@ V aplikaci Visual Studio můžete definovat příkazy, které se mají provést,
 
         `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
-2. V experimentální [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] otevřete nebo vytvořte projekt modelování a otevřete nebo vytvořte diagram modelování. Použijte diagram, který patří k jednomu z typů uvedených v atributech vaší třídy obslužné rutiny gesta.
+2. V experimentální [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]otevřete nebo vytvořte projekt modelování a otevřete nebo vytvořte diagram modelování. Použijte diagram, který patří k jednomu z typů uvedených v atributech vaší třídy obslužné rutiny gesta.
 
 3. Poklikejte na libovolné místo v diagramu. Měla by být volána obslužná rutina dvojitého kliknutí.
 
@@ -282,7 +282,7 @@ V aplikaci Visual Studio můžete definovat příkazy, které se mají provést,
 
 - `ShapeElement target`. Tvar nebo diagram, na který uživatel něco přetáhl.
 
-    `ShapeElement` je třída v implementaci, která je umístěná v nástrojích modelování UML. Aby se snížilo riziko uvedení modelu a diagramů UML do nekonzistentního stavu, doporučujeme nepoužívat metody této třídy přímo. Místo toho zabalte prvek do `IShape` a pak použijte metody popsané v tématu [zobrazení modelu UML v diagramech](../modeling/display-a-uml-model-on-diagrams.md).
+    `ShapeElement` je třída v implementaci, která je umístěná v nástrojích modelování UML. Aby se snížilo riziko uvedení modelu a diagramů UML do nekonzistentního stavu, doporučujeme nepoužívat metody této třídy přímo. Místo toho zabalte prvek do `IShape`a pak použijte metody popsané v tématu [zobrazení modelu UML v diagramech](../modeling/display-a-uml-model-on-diagrams.md).
 
   - Postup získání `IShape`:
 
@@ -317,7 +317,7 @@ V aplikaci Visual Studio můžete definovat příkazy, které se mají provést,
     System.Windows.Forms.IDataObject data = eventArgs.Data;
     ```
 
-     Prvky mnoha různých druhů můžete přetahovat do diagramu, z různých částí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nebo z plochy Windows. Různé typy prvků jsou kódovány různými způsoby v `IDataObject`. Chcete-li z něj extrahovat prvky, přečtěte si dokumentaci k příslušnému typu objektu.
+     Prvky mnoha různých druhů můžete přetahovat do diagramu, z různých částí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]nebo z plochy Windows. Různé typy prvků jsou kódovány různými způsoby v `IDataObject`. Chcete-li z něj extrahovat prvky, přečtěte si dokumentaci k příslušnému typu objektu.
 
      Pokud je zdrojový objekt prvkem UML přetaženého z Průzkumníka modelů UML nebo z jiného diagramu UML, přečtěte si téma [získání prvků modelu UML z IDataObject](../modeling/get-uml-model-elements-from-idataobject.md).
 
@@ -357,7 +357,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
     1. V **Průzkumník řešení**v místní nabídce projektu VSIX vyberte možnost **Otevřít složku v Průzkumníku Windows**.
 
-    2. Vyhledejte soubor **bin \\ \* \\** _YourProject_ **. vsix**
+    2. Vyhledejte soubor **bin\\\*\\** _YourProject_ **. vsix**
 
 2. Zkopírujte soubor **. vsix** do cílového počítače, do kterého chcete nainstalovat rozšíření. Může to být váš vlastní počítač nebo jiný.
 
@@ -379,7 +379,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
    Zřídka se vadné rozšíření nedokáže načíst a vytvoří sestavu v okně chyb, ale nezobrazí se ve Správci rozšíření. V takovém případě můžete odebrat rozšíření odstraněním souboru z:
 
-   *% Localappdata%* **\Local\Microsoft\VisualStudio \\ [verze] \Extensions**
+   *%LocalAppData%* **\Local\Microsoft\VisualStudio\\[version]\Extensions**
 
 ## <a name="DragExample"></a>Případě
  Následující příklad ukazuje, jak vytvořit životnosti v sekvenčním diagramu na základě částí a portů komponenty přetažené z diagramu komponent.

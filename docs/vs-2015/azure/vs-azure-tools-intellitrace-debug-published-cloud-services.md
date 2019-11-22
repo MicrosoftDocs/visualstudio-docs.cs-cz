@@ -1,5 +1,5 @@
 ---
-title: Ladění publikování Azure cloudové služby pomocí IntelliTrace a sady Visual Studio | Dokumentace Microsoftu
+title: Ladění publikované cloudové služby Azure pomocí sady Visual Studio a IntelliTrace | Microsoft Docs
 description: Zjistěte, jak ladění cloudové služby pomocí IntelliTrace a sady Visual Studio
 author: mikejo5000
 manager: jillfra
@@ -11,26 +11,26 @@ ms.date: 03/21/2017
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: 8cec66f4746656e1bc1f5c2aba54a442883e4fa9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 00e13c6f217c54b99dfe103b86f1e775e36fd62a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62421652"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74293539"
 ---
 # <a name="debugging-a-published-azure-cloud-service-with-visual-studio-and-intellitrace"></a>Ladění publikované cloudové služby Azure pomocí sady Visual Studio a nástroje IntelliTrace
 Pomocí nástroje IntelliTrace můžete protokolovat podrobné ladicí informace pro instanci role při spuštění v Azure. Pokud je potřeba najít příčinu problému, můžete protokoly IntelliTrace ke krokování kódu ze sady Visual Studio, jako kdyby byly spuštěné v Azure. Nástroj IntelliTrace zaznamenává v důsledku toho klíčů provádění kódu a dat prostředí, když vaše aplikace Azure běží jako cloudová služba v Azure a umožňuje přehrát zaznamenaná data ze sady Visual Studio. 
 
 Můžete použít nástroj IntelliTrace, pokud máte nainstalované Visual Studio Enterprise a vaše aplikace Azure cílí rozhraní .NET Framework 4 nebo novější. Nástroj IntelliTrace shromažďuje informace o Azure role. Virtuální počítače pro tyto role ke spuštění vždy 64bitové operační systémy.
 
-Jako alternativu můžete použít [vzdálené ladění](http://go.microsoft.com/fwlink/p/?LinkId=623041) připojit přímo do cloudové služby, na kterém běží v Azure.
+Jako alternativu můžete použít [vzdálené ladění](https://go.microsoft.com/fwlink/p/?LinkId=623041) připojit přímo do cloudové služby, na kterém běží v Azure.
 
 > [!IMPORTANT]
 > Nástroj IntelliTrace je určená pro účely ladění pouze a neměl by se používat pro produkční nasazení.
 > 
 
 ## <a name="configure-an-azure-application-for-intellitrace"></a>Konfigurace aplikace Azure pro technologii IntelliTrace
-K povolení technologie IntelliTrace pro aplikaci Azure, musíte vytvořit a publikovat aplikace z projektu sady Visual Studio v Azure. Před publikováním na Azure, je nutné nakonfigurovat nástroj IntelliTrace pro vaše aplikace Azure. Pokud publikujete aplikaci bez nástroje IntelliTrace, budete muset znovu publikujte projekt. Další informace najdete v tématu [publikování Azure cloud services projektů s použitím sady Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=623012).
+K povolení technologie IntelliTrace pro aplikaci Azure, musíte vytvořit a publikovat aplikace z projektu sady Visual Studio v Azure. Před publikováním na Azure, je nutné nakonfigurovat nástroj IntelliTrace pro vaše aplikace Azure. Pokud publikujete aplikaci bez nástroje IntelliTrace, budete muset znovu publikujte projekt. Další informace najdete v tématu [publikování Azure cloud services projektů s použitím sady Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=623012).
 
 1. Až budete připravení nasadit vaše aplikace Azure, ověřte, že váš projekt cílí sestavení jsou nastaveny na **ladění**.
 
@@ -46,7 +46,7 @@ K povolení technologie IntelliTrace pro aplikaci Azure, musíte vytvořit a pub
 
     ![Odkaz nastavení IntelliTrace](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/intellitrace-settings-link.png)
    
-1. V **nastavení IntelliTrace** dialogového okna, můžete zadat události do protokolu, jestli se má shromažďovat informace o volání, které moduly a procesy pro shromažďování protokolů pro a tom, kolik místa k přidělení na záznam. Další informace o IntelliTrace naleznete v tématu [ladění pomocí nástroje IntelliTrace](http://go.microsoft.com/fwlink/?LinkId=214468).
+1. V **nastavení IntelliTrace** dialogového okna, můžete zadat události do protokolu, jestli se má shromažďovat informace o volání, které moduly a procesy pro shromažďování protokolů pro a tom, kolik místa k přidělení na záznam. Další informace o IntelliTrace naleznete v tématu [ladění pomocí nástroje IntelliTrace](https://go.microsoft.com/fwlink/?LinkId=214468).
    
     ![Nastavení technologie IntelliTrace](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/IC519063.png)
 

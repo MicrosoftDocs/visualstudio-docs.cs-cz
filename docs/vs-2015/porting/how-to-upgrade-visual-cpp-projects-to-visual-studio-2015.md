@@ -12,14 +12,14 @@ caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
 manager: jillfra
-ms.openlocfilehash: c998433ca96c46f6a24b75aec5d3a2a95912b786
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: b33b1b47ad4c32aabe09aae5a66fe3f02aeb1487
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823296"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300381"
 ---
-# <a name="how-to-upgrade-visual-c-projects-to-visual-studio-2015"></a>Postupy: Upgrade projektů Visual C++ pro sadu Visual Studio 2015
+# <a name="how-to-upgrade-visual-c-projects-to-visual-studio-2015"></a>Postupy: Upgrade projektů ve Visual C++ na Visual Studio 2015
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Nejnovější dokumentaci pro sadu Visual Studio 2017 najdete v tématu [průvodce Visual C++ přenosem a upgradováním](https://docs.microsoft.com/cpp/porting/visual-cpp-porting-and-upgrading-guide).
@@ -51,7 +51,7 @@ Při prvním otevření projektu Visual C++, který byl vytvořen v dřívějš�
 - Pro [!INCLUDE[cppcli](../includes/cppcli-md.md)] projekty, změní TargetFrameworkVersion na .NET Framework 4.5.2.
 
 ## <a name="continuing-to-work-with-a-custom-platformtoolset"></a>Pokračovat v práci s vlastní sadou PlatformToolset
- Pokud chcete pokračovat v práci s vlastním parametrem PlatformToolset v [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)], sada nástrojů se musí nacházet v části %ProgramFiles%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ v x x86 strojově, nebo v umístění % ProgramFiles (x86)%\MSBuild\ Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ x x64 počítače. Informace o tom, jak vytvořit vlastní PlatformToolset naleznete v tématu [cílení na více verzí v nativním C++](http://go.microsoft.com/fwlink/?LinkId=248587) na blogu týmu Visual C++.
+ Pokud chcete pokračovat v práci s vlastním parametrem PlatformToolset v [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)], sada nástrojů se musí nacházet v části %ProgramFiles%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ v x x86 strojově, nebo v umístění % ProgramFiles (x86)%\MSBuild\ Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ x x64 počítače. Informace o tom, jak vytvořit vlastní PlatformToolset naleznete v tématu [cílení na více verzí v nativním C++](https://go.microsoft.com/fwlink/?LinkId=248587) na blogu týmu Visual C++.
 
 ## <a name="see-also"></a>Viz také
  [Visual C++ Průvodce přenosem a upgradem](https://msdn.microsoft.com/library/f5fbcc3d-aa72-41a6-ad9a-a706af2166fb) [přenosy, migrace a upgrade projektů sady Visual Studio](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)

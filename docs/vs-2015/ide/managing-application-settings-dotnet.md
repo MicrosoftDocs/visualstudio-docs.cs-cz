@@ -13,12 +13,12 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b37ed78f9b67d10c0bf845a5bd7340f1f38557bb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 85cc90170b2dc665bcdd5acd97860c47ef5a14c4
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651429"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74293864"
 ---
 # <a name="managing-application-settings-net"></a>Správa nastavení aplikace (.NET)
 
@@ -30,7 +30,7 @@ Nastavení aplikace nahradí dynamické vlastnosti používané v dřívějšíc
 
 Každé nastavení aplikace musí mít jedinečný název. Název může být libovolná kombinace písmen, číslic nebo podtržítka, která nesmí začínat číslicí a nesmí obsahovat mezery. Název lze změnit pomocí vlastnosti `Name`.
 
-Nastavení aplikace lze uložit jako libovolný datový typ, který lze serializovat do formátu XML, nebo má `TypeConverter`, který implementuje `ToString` / `FromString`. Nejběžnější typy jsou `String`, `Integer` a `Boolean`, ale můžete také ukládat hodnoty jako <xref:System.Drawing.Color>, <xref:System.Object> nebo jako připojovací řetězec.
+Nastavení aplikace lze uložit jako libovolný datový typ, který lze serializovat do formátu XML, nebo má `TypeConverter`, který implementuje `ToString`/`FromString`. Nejběžnější typy jsou `String`, `Integer`a `Boolean`, ale můžete také ukládat hodnoty jako <xref:System.Drawing.Color>, <xref:System.Object>nebo jako připojovací řetězec.
 
 Nastavení aplikace také obsahuje hodnotu. Hodnota je nastavena s vlastností **Value** a musí odpovídat datovému typu nastavení.
 
@@ -74,7 +74,7 @@ Návrhář nastavení nejprve vyhledá soubor Settings. Settings, který vytvá�
 
 ## <a name="accessing-or-changing-application-settings-at-run-time-in-visual-basic"></a>Přístup k nastavení aplikace nebo jejich změna v době běhu v Visual Basic
 
-V [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] projekty můžete k nastavení aplikace přistupovat v době běhu pomocí objektu `My.Settings`. Na stránce **Nastavení** klikněte na tlačítko **Zobrazit kód** a zobrazte soubor Settings. vb. Settings. vb definuje třídu `Settings`, která umožňuje zpracovávat tyto události ve třídě nastavení: <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>, <xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>, <xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded> a <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>. Všimněte si, že třída `Settings` v Settings. vb je částečná třída, která zobrazuje pouze uživatelský kód, nikoli celou generovanou třídu. Další informace o přístupu k nastavení aplikace pomocí objektu `My.Settings` najdete v tématu věnovaném [přístupu k nastavení aplikace](https://msdn.microsoft.com/library/e38d0cc7-247a-46ca-ba04-f2913f0adb2e).
+V [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] projekty můžete k nastavení aplikace přistupovat v době běhu pomocí objektu `My.Settings`. Na stránce **Nastavení** klikněte na tlačítko **Zobrazit kód** a zobrazte soubor Settings. vb. Settings. vb definuje třídu `Settings`, která umožňuje zpracovávat tyto události ve třídě nastavení: <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>, <xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>, <xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>a <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>. Všimněte si, že třída `Settings` v Settings. vb je částečná třída, která zobrazuje pouze uživatelský kód, nikoli celou generovanou třídu. Další informace o přístupu k nastavení aplikace pomocí objektu `My.Settings` najdete v tématu věnovaném [přístupu k nastavení aplikace](https://msdn.microsoft.com/library/e38d0cc7-247a-46ca-ba04-f2913f0adb2e).
 
 Hodnoty všech nastavení v uživatelském rozsahu, které uživatel změní v době běhu (například pozice formuláře), jsou uloženy v souboru User. config. Všimněte si, že výchozí hodnoty jsou pořád uložené v App. config.
 
@@ -98,7 +98,7 @@ Je také nutné explicitně volat metodu `Save` této obálkové třídy, aby by
 Properties.Settings.Default.Save();
 ```
 
-Obecné informace o přístupu k nastavení aplikace prostřednictvím třídy `Settings` najdete v tématu [Přehled nastavení aplikace](https://msdn.microsoft.com/library/0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc). Informace o iteraci v nastaveních najdete v tomto [příspěvku na fóru](http://social.msdn.microsoft.com/Forums/vstudio/40fbb470-f1e8-4a02-a4a0-9f62b54d0fc4/is-this-possible-propertiessettingsdefault?forum=csharpgeneral).
+Obecné informace o přístupu k nastavení aplikace prostřednictvím třídy `Settings` najdete v tématu [Přehled nastavení aplikace](https://msdn.microsoft.com/library/0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc). Informace o iteraci v nastaveních najdete v tomto [příspěvku na fóru](https://social.msdn.microsoft.com/Forums/en-US/40fbb470-f1e8-4a02-a4a0-9f62b54d0fc4/is-this-possible-propertiessettingsdefault?forum=csharpgeneral).
 
 ## <a name="see-also"></a>Viz také
 

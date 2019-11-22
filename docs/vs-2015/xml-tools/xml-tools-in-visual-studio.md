@@ -33,47 +33,47 @@ caps.latest.revision: 29
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 313cc11978355942bf6671cc040969c255d7e44d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3ee0cf61f8ec2787894c6f67b8ac75424246c507
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669350"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297444"
 ---
 # <a name="xml-tools-in-visual-studio"></a>Nástroje XML v sadě Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Jazyk XML (eXtensible Markup Language) (XML) * je značkovací jazyk, který poskytuje formát pro popisovaná data. To usnadňuje přesnější deklarace obsahu a smysluplnější výsledky hledání napříč různými platformami. Kromě toho umožňuje XML oddělení prezentace od dat. Například ve formátu HTML používáte značky k oznámení, že prohlížeč zobrazuje data tučně nebo kurzívou. v jazyce XML použijete značky pouze k popisu dat, jako je například název města, teplota a barometricový tlak. V jazyce XML používáte šablony stylů, jako je XSL (Extensible Stylesheet Language) a kaskádové šablony stylů (CSS) k prezentaci dat v prohlížeči. XML odděluje data z prezentace a procesu. Díky tomu můžete zobrazit a zpracovat data podle potřeby, a to použitím různých šablon stylů a aplikací.
+Kód XML (Extensible Language) * je značkovací jazyk, který poskytuje formátu pro popis data. To usnadňuje přesnější deklarace výsledků hledání obsahu a lépe vystihuje napříč různými platformami. XML navíc umožňuje oddělení prezentaci z data. Například ve formátu HTML použijete značky na prohlížeč pro zobrazení dat jako tučný nebo kurzívu; v XML použijete pouze pro popis dat, jako je například název města, teploty a tlaku barometrický značky. V XML pomocí stylů CSS jako je šablona stylů XSL (Extensible Language) a šablony stylů CSS (CSS) data můžete prezentovat tak v prohlížeči. XML data odděluje od prezentaci a procesu. To umožňuje zobrazení a zpracování dat, jak chcete, s použitím různých stylů a aplikace.
 
- XML je podmnožina jazyka SGML, která je optimalizována pro doručování přes web. Je definován konsorcium World Wide Web (W3C). Tato standardizace zaručuje, že strukturovaná data budou jednotná a nezávisle na aplikacích nebo dodavatelích.
+ XML je podmnožinou SGML, která je optimalizována pro doručení prostřednictvím webu. Je určené World Wide Web Consortium (W3C). Jazykem zaručuje, že strukturovaných dat bude jednotné a nezávislá aplikace nebo dodavatele.
 
- XML je základem mnoha funkcí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Následující seznam témat obsahuje názvy nástrojů a funkcí souvisejících s XML, které jsou nabízeny v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].
+ XML je základem mnoho funkcí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Následující téma seznam názvů nástrojů a funkcí týkajících se kód XML, který nabízí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].
 
- Další informace najdete v centru pro [vývojáře XML](http://go.microsoft.com/fwlink/?LinkID=100176), které poskytuje nejnovější dokumentaci, technické informace, soubory ke stažení, diskusní skupiny a další materiály pro vývojáře XML.
+ Další informace najdete v tématu [středisko pro vývojáře XML](https://go.microsoft.com/fwlink/?LinkID=100176), která obsahuje nejnovější dokumentaci, technických informací, soubory ke stažení, diskusní skupiny a další prostředky pro vývojáře v XML.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Práce s daty XML](../xml-tools/working-with-xml-data.md) Popisuje roli XML v způsobu, jakým jsou data zpracovávána v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+ [Práce s daty XML](../xml-tools/working-with-xml-data.md) popisuje role XML v datech způsob, jak je zpracována v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
- [Ladění XSLT](../xml-tools/debugging-xslt.md) Obsahuje odkazy na témata o používání ladicího programu sady Visual Studio k ladění XSLT.
+ [Ladění XSLT](../xml-tools/debugging-xslt.md) obsahuje odkazy na témata týkající se použití ladicího programu sady Visual Studio k ladění XSLT.
 
 ## <a name="reference"></a>Odkaz
- [Microsoft. VisualStudio. XmlEditor](http://go.microsoft.com/fwlink/?LinkID=165699) zpřístupňuje strom analýzy [editoru XML](http://go.microsoft.com/fwlink/?LinkId=228249) prostřednictvím [System. XML. Linq](http://go.microsoft.com/fwlink/?LinkId=228250) pro všechny dokumenty XML.
+ [Microsoft.VisualStudio.XmlEditor](https://go.microsoft.com/fwlink/?LinkID=165699) zpřístupňuje [editoru XML](https://go.microsoft.com/fwlink/?LinkId=228249) strom prostřednictvím analýzy [System.Xml.Linq](https://go.microsoft.com/fwlink/?LinkId=228250) pro všechny dokumenty XML.
 
- [Reference standardů XML](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401) Poskytuje informace o technologiích XML, včetně XML, definice typu dokumentu (DTD), XML Schema Definition Language (XSD) a XSLT.
+ [Reference na standardy XML](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401) poskytuje informace o XML technologií, včetně XML, dokumentu typ definice (DTD), schéma XML definice jazyk (XSD) a XSLT.
 
- <xref:System.Xml?displayProperty=fullName> popisuje třídy a další prvky, které tvoří obor názvů <xref:System.Xml> a obsahuje odkazy na podrobnější informace o každé položce.
+ <xref:System.Xml?displayProperty=fullName> Popisuje třídy a další prvky, které tvoří <xref:System.Xml> obor názvů a obsahuje odkazy na podrobnější informace o každé položky.
 
- <xref:System.Xml.Serialization?displayProperty=fullName> popisuje třídy a další prvky, které tvoří obor názvů <xref:System.Xml.Serialization> a obsahuje odkazy na podrobnější informace o každé položce.
+ <xref:System.Xml.Serialization?displayProperty=fullName> Popisuje třídy a další prvky, které tvoří <xref:System.Xml.Serialization> obor názvů a nabízí odkazy k podrobnějším informacím o jednotlivých položkách.
 
 ## <a name="related-sections"></a>Související oddíly
- [XML model DOM (Document Object Model) (DOM)](https://msdn.microsoft.com/library/b5e52844-4820-47c0-a61d-de2da33e9f54) Popisuje, jak <xref:System.Xml.XmlDocument> a jeho přidružených tříd vyhovují specifikacím podpory W3C model DOM (Document Object Model) (Core) Level 1 a Level 2 obory názvů.
+ [XML Document Object Model (DOM)](https://msdn.microsoft.com/library/b5e52844-4820-47c0-a61d-de2da33e9f54) popisuje jak <xref:System.Xml.XmlDocument> a jeho přidružených tříd v souladu s modelu objektu dokumentu W3C (Core) úrovně 1 a 2 úroveň oboru názvů podporu specifikace.
 
- [Čtení XML pomocí objektu XmlReader](https://msdn.microsoft.com/3029834c-a27e-4331-b7aa-711924062182) Popisuje, jak <xref:System.Xml.XmlReader> poskytuje neukládatelné do mezipaměti, jen pro čtení a přístup k datům XML přes datový proud XML.
+ [Čtení XML s objekt XmlReader](https://msdn.microsoft.com/3029834c-a27e-4331-b7aa-711924062182) popisuje jak <xref:System.Xml.XmlReader> poskytuje mapovaný, přesměrování pouze, jen pro čtení přístup k datům XML datový proud XML.
 
- [Zápis XML pomocí funkce XmlWriter](https://msdn.microsoft.com/ea41f72c-e1d3-4e0a-ab0f-f0eb1c27ab86) Popisuje způsob, jakým <xref:System.Xml.XmlWriter> poskytuje neukládatelné do mezipaměti, pouze před generováním datových proudů XML a pomáhá vytvářet dokumenty XML, které vyhovují standardu W3C.
+ [Zápis XML pomocí funkce XmlWriter](https://msdn.microsoft.com/ea41f72c-e1d3-4e0a-ab0f-f0eb1c27ab86) popisuje jak <xref:System.Xml.XmlWriter> poskytuje mapovaný, předávat pouze způsob, jak generovat datové proudy XML a pomáhá vytvářet dokumenty XML, které jsou v souladu se standardem W3C.
 
- [Transformace XSLT](https://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03) Popisuje, jak třída <xref:System.Xml.Xsl.XslCompiledTransform> implementuje doporučení XSLT 1,0.
+ [Transformace XSLT](https://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03) popisuje jak <xref:System.Xml.Xsl.XslCompiledTransform> třída implementuje XSLT 1.0 doporučení.
 
- [Zpracování dat XML pomocí datového modelu XPath](https://msdn.microsoft.com/library/536c6fce-1453-4654-9c72-bca54d47e081) Popisuje, jak třída <xref:System.Xml.XPath.XPathNavigator> může zpracovávat data XML uložená v <xref:System.Xml.XPath.XPathDocument> nebo objektu <xref:System.Xml.XmlDocument>. Třída <xref:System.Xml.XPath.XPathNavigator> je založena na datovém modelu XQuery 1,0 a XPath 2,0 a lze jej použít k procházení a úpravám dat XML.
+ [Zpracování dat XML pomocí modelu dat XPath](https://msdn.microsoft.com/library/536c6fce-1453-4654-9c72-bca54d47e081) popisuje jak <xref:System.Xml.XPath.XPathNavigator> třída může zpracovat XML dat uložených v <xref:System.Xml.XPath.XPathDocument> nebo <xref:System.Xml.XmlDocument> objektu. <xref:System.Xml.XPath.XPathNavigator> Třídy je založena na výraz XQuery 1.0 a modelu dat XPath 2.0 a můžete použít k procházení a úpravy dat XML.
 
- [Model objektu XML schématu (SOM)](https://msdn.microsoft.com/library/a897a599-ffd1-43f9-8807-e58c8a7194cd) Popisuje třídy, které slouží k vytváření a manipulaci se schématy XML, poskytnutím <xref:System.Xml.Schema.XmlSchema> třídy pro načtení a úpravu schématu.
+ [Schéma objektu modelu (SOM) XML](https://msdn.microsoft.com/library/a897a599-ffd1-43f9-8807-e58c8a7194cd) popisuje třídy používané pro vytváření prostředků a manipulace s schémat XML, tím, že poskytuje <xref:System.Xml.Schema.XmlSchema> třídy pro načtení a upravit schéma.

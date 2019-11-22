@@ -9,12 +9,12 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1068c87a8979b853dd27de1b35e2449d7f96eaf4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 47bcda57d4446b69096405a54e238e696df24d50
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664321"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300806"
 ---
 # <a name="keyboard-shortcuts-and-modifier-keys-in-blend"></a>Klávesové zkratky a modifikační klávesy v Blendu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,7 +33,7 @@ Klávesové zkratky můžou urychlit práci snížením akce, která by vyžadov
 
    ![](../designers/media/f147fc85-9fc5-4e8a-8039-bead80a3e595.png "f147fc85-9fc5-4E8A-8039-bead80a3e595")Klávesové zkratky, které se zobrazují vedle položek nabídky, které mají zástupce
 
-  Další informace o usnadnění a funkcích najdete v tématu [přístupnost v Microsoftu](http://go.microsoft.com/fwlink/?LinkId=75069).
+  Další informace o usnadnění a funkcích najdete v tématu [přístupnost v Microsoftu](https://go.microsoft.com/fwlink/?LinkId=75069).
 
 ## <a name="modifier-keys"></a>Modifikační klávesy
  Některé klávesové zkratky nemají přidružené položky nabídky, což znamená, že nemůžete použít uživatelské rozhraní [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] k jejich zjištění. Následující témata obsahují zástupce, které upravují chování nástrojů nebo které upravují akci, jako je například změna velikosti objektu:

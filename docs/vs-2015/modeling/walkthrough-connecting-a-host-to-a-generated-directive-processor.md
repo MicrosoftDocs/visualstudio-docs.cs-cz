@@ -12,12 +12,12 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 41023f49f1897f3e3d26d7fc57807ea98fa35f24
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 10c9c6cfa1d8553c79b710239a99f8ea9e2438e5
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659299"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301282"
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>Návod: Připojení hostitele k procesoru vygenerovaných direktiv
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,13 +38,13 @@ Můžete napsat vlastního hostitele, který zpracovává textové šablony. Zá
 - Testování vlastního hostitele s vygenerovaným procesorem direktiv.
 
 ## <a name="prerequisites"></a>Požadavky
- K definování DSL musíte mít nainstalované následující součásti:
+ Pokud chcete definovat DSL, musíte mít nainstalovaný následující komponenty:
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580)|
-|Sada SDK pro vizualizaci a modelování sady Visual Studio|[http://go.microsoft.com/fwlink/?LinkID=186128](http://go.microsoft.com/fwlink/?LinkID=186128)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://go.microsoft.com/fwlink/?LinkId=185579)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://go.microsoft.com/fwlink/?LinkId=185580)|
+|Visual Studio Visualization and Modeling SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](https://go.microsoft.com/fwlink/?LinkID=186128)|
 
  Kromě toho musíte mít vytvořenou transformaci šablony vlastní text v [návodu: Vytvoření vlastního hostitele textových šablon](../modeling/walkthrough-creating-a-custom-text-template-host.md).
 
@@ -65,12 +65,12 @@ Můžete napsat vlastního hostitele, který zpracovává textové šablony. Zá
 
      Další informace o vytváření řešení jazyka specifického pro doménu najdete v tématu [Postupy: vytvoření řešení jazyka specifického pro doménu](../modeling/how-to-create-a-domain-specific-language-solution.md).
 
-2. V nabídce **sestavení** klikněte na **Sestavit řešení**.
+2. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
    > [!IMPORTANT]
    > Tento krok vygeneruje procesor direktiv a přidá k němu klíč v registru.
 
-3. V nabídce **ladit** klikněte na **Spustit ladění**.
+3. Na **ladění** nabídky, klikněte na tlačítko **spustit ladění**.
 
     Otevře se druhá instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
@@ -95,17 +95,17 @@ Můžete napsat vlastního hostitele, který zpracovává textové šablony. Zá
 
 3. Přidejte následující odkazy:
 
-    - Microsoft. VisualStudio. Modeling. SDK. 11.0
+    - Microsoft.VisualStudio.Modeling.Sdk.11.0
 
-    - Microsoft. VisualStudio. Modeling. SDK. Diagrams. 11.0
+    - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
 
-    - Microsoft. VisualStudio. TextTemplating. 11.0
+    - Microsoft.VisualStudio.TextTemplating.11.0
 
-    - Microsoft. VisualStudio. TextTemplating. Interfaces. 11.0
+    - Microsoft.VisualStudio.TextTemplating.Interfaces.11.0
 
-    - Microsoft. VisualStudio. TextTemplating. Modelings. 11.0
+    - Microsoft.VisualStudio.TextTemplating.Modeling.11.0
 
-    - Microsoft. VisualStudio. TextTemplating. VSHost. 11.0
+    - Microsoft.VisualStudio.TextTemplating.VSHost.11.0
 
 4. V horní části Program.cs nebo Module1. vb přidejte následující řádek kódu:
 
@@ -117,7 +117,7 @@ Můžete napsat vlastního hostitele, který zpracovává textové šablony. Zá
     Imports Microsoft.Win32
     ```
 
-5. Vyhledejte kód vlastnosti `StandardAssemblyReferences` a nahraďte ji následujícím kódem:
+5. Vyhledejte kód vlastnosti `StandardAssemblyReferences`a nahraďte ji následujícím kódem:
 
     > [!NOTE]
     > V tomto kroku přidáte odkazy na sestavení, která jsou požadována generovaným procesorem direktiv, který bude váš hostitel podporovat.
@@ -153,7 +153,7 @@ Můžete napsat vlastního hostitele, který zpracovává textové šablony. Zá
     }
     ```
 
-6. Vyhledejte kód pro funkci `ResolveDirectiveProcessor` a nahraďte ji následujícím kódem:
+6. Vyhledejte kód pro funkci `ResolveDirectiveProcessor`a nahraďte ji následujícím kódem:
 
     > [!IMPORTANT]
     > Tento kód obsahuje pevně zakódované odkazy na název generovaného procesoru direktiv, ke kterému se chcete připojit. Tuto obecnější možnost si můžete snadno vytvořit. v takovém případě vyhledá všechny procesory direktiv uvedené v registru a pokusí se najít shodu. V takovém případě bude hostitel spolupracovat s jakýmkoli generovaným procesorem direktiv.
@@ -227,9 +227,9 @@ Můžete napsat vlastního hostitele, který zpracovává textové šablony. Zá
             }
     ```
 
-7. V nabídce **soubor** klikněte na **Uložit vše**.
+7. Na **souboru** nabídky, klikněte na tlačítko **Uložit vše**.
 
-8. V nabídce **sestavení** klikněte na **Sestavit řešení**.
+8. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
 ## <a name="testing-the-custom-host-with-the-directive-processor"></a>Testování vlastního hostitele pomocí procesoru direktiv
  Chcete-li otestovat vlastního hostitele textových šablon, musíte nejprve napsat textovou šablonu, která volá generovaný procesor direktiv. Pak spusťte vlastního hostitele, předejte mu název textové šablony a ověřte, zda je direktiva správně zpracována.
@@ -310,9 +310,9 @@ Můžete napsat vlastního hostitele, který zpracovává textové šablony. Zá
     #>
     ```
 
-3. V kódu Nahraďte cestu \<YOUR > cestou k souboru Sample. min z jazyka specifického pro návrh, který jste vytvořili v prvním postupu.
+3. V kódu nahraďte \<cestu > s cestou k souboru Sample. min z jazyka specifického pro návrh, který jste vytvořili v prvním postupu.
 
-4. Soubor uložte a zavřete.
+4. Uložte soubor a zavřete ho.
 
 #### <a name="to-test-the-custom-host"></a>Testování vlastního hostitele
 

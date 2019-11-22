@@ -12,12 +12,12 @@ ms.technology: vs-azure
 ms.custom: vs-azure
 ms.date: 12/16/2015
 ms.author: mlearned
-ms.openlocfilehash: 4bfda342952820b4472a1f826273a7b9075faa9a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4f84970daea03904d4642317cf6097beb07be7f1
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963962"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300183"
 ---
 # <a name="adding-mobile-services-by-using-visual-studio-connected-services"></a>Přidání Mobile Services pomocí připojených služeb sady Visual Studio
 Pomocí sady Visual Studio 2015, můžete připojit pomocí Azure Mobile Services **přidat připojenou službu** dialogového okna. Můžete připojit z jakékoli klientské aplikace C#, všechny Javascriptové aplikace nebo aplikace Cordova pro různé platformy. Když se připojíte, můžete vytvořit a přístup k datům, vytvořte vlastní rozhraní API a naplánované úlohy nebo přidat podporu pro nabízená oznámení.  Operace připojené služby přidá všechny příslušné odkazy a připojovací kód. Můžete také využít výhody integrované podpory pro ověřování s řadou oblíbených schémat identity, jako je Azure AD, Facebook, Twitter a Microsoft Accounts.
@@ -35,7 +35,7 @@ Dialogové okno připojené služby můžete použít pro připojení k Azure Mo
 * Projekty vytvořené pomocí nástrojů Visual Studio pro Apache Cordova
 
 ## <a name="connect-to-azure-mobile-services-using-the-add-connected-services-dialog"></a>Připojení k mobilním službám Azure pomocí dialogového okna připojené služby
-1. Ujistěte se, že máte účet Azure. Pokud nemáte účet Azure, můžete si zaregistrovat [bezplatnou zkušební verzi](http://go.microsoft.com/fwlink/?LinkId=518146).
+1. Ujistěte se, že máte účet Azure. Pokud nemáte účet Azure, můžete si zaregistrovat [bezplatnou zkušební verzi](https://go.microsoft.com/fwlink/?LinkId=518146).
 2. Otevřít **přidání připojené služby** dialogové okno.
 
    * Pro aplikace .NET, otevřete projekt v sadě Visual Studio, otevřete kontextovou nabídku **odkazy** uzel v Průzkumníku řešení a klikněte na tlačítko **přidat připojenou službu**
@@ -49,7 +49,7 @@ Dialogové okno připojené služby můžete použít pro připojení k Azure Mo
 
     Chcete-li vytvořit nový účet mobilních služeb:
 
-   1. Zvolte **vytvořit službu** odkaz v dolní části dialogového okna.
+   1. V dolní části dialogového okna klikněte na odkaz **vytvořit službu** .
        ![Přidat nové mobilní připojené služby](./media/vs-azure-tools-connected-services-add-mobile-services/IC797637.png)
    2. Na **vytvořit mobilní službu** dialogovém okně můžete vybrat mobilní služby back-endu JavaScriptu nebo .NET back-end mobilních služeb z **Runtime** rozevíracího seznamu.
 
@@ -65,7 +65,7 @@ Dialogové okno připojené služby můžete použít pro připojení k Azure Mo
 6. Pomocí ukázky kódu a jako vodítko, začněte psát kód pro přístup k mobilní službě.
 
 ## <a name="how-your-project-is-modified"></a>Jak se váš projekt změnil
-Jak Visual Studio změní projekt, závisí na typu projektu. C# klientských aplikací, najdete v části [co se stalo – projekty jazyka C#](http://go.microsoft.com/fwlink/p/?LinkId=513119). JavaScript klientských aplikací, najdete v části [co se stalo – projekty jazyka JavaScript](http://go.microsoft.com/fwlink/p/?LinkId=513120). Aplikace Cordova, naleznete v tématu [co se stalo – projekty Cordova](http://go.microsoft.com/fwlink/p/?LinkId=513116).
+Jak Visual Studio změní projekt, závisí na typu projektu. C# klientských aplikací, najdete v části [co se stalo – projekty jazyka C#](https://go.microsoft.com/fwlink/p/?LinkId=513119). JavaScript klientských aplikací, najdete v části [co se stalo – projekty jazyka JavaScript](https://go.microsoft.com/fwlink/p/?LinkId=513120). Aplikace Cordova, naleznete v tématu [co se stalo – projekty Cordova](https://go.microsoft.com/fwlink/p/?LinkId=513116).
 
 ## <a name="next-steps"></a>Další kroky
 Klást otázky a nechat si pomoct:

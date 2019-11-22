@@ -27,12 +27,12 @@ caps.latest.revision: 36
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 23c570e9d29c2288da32469b524c5e4d9125b097
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: d4d4b02d512480d96c501758f4cf0f1313158942
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65694912"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300557"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger"></a>Zadání symbolu (.pdb) a zdrojových souborů v ladicím programu sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -63,9 +63,9 @@ Souboru databáze (PDB) program, nazývaný také soubor symbolů, mapuje identi
 
 1. V sadě Visual Studio, otevřete **nástroje / Možnosti / ladění / symboly** stránky.
 
-    ![Nástroje &#45; možnosti &#45; ladění &#45; symboly stránky](../debugger/media/dbg-tools-options-symbols.png "DBG_Tools_Options_Symbols")
+    ![Možnosti &#45; &#45; nástrojů ladění &#45; – stránka symboly](../debugger/media/dbg-tools-options-symbols.png "DBG_Tools_Options_Symbols")
 
-2. Vyberte složku ![nástroje&#47; možnosti&#47; ladění&#47;ikonu složky symboly](../debugger/media/dbg-tools-options-foldersicon.png "DBG_Tools_Options_FoldersIcon") ikonu. Upravitelný text se zobrazí v **Symbol umístění souborů (.pdb)** pole.
+2. Vyberte složku ![možnosti&#47; &#47; nástroje pro ladění&#47;ikona ikona složky symboly ladění](../debugger/media/dbg-tools-options-foldersicon.png "DBG_Tools_Options_FoldersIcon") . Upravitelný text se zobrazí v **Symbol umístění souborů (.pdb)** pole.
 
 3. Zadejte adresu URL nebo cestu k adresáři serveru symbolů nebo umístění symbolu. Doplňování výrazů vám pomůže najít správný formát.
 
@@ -135,7 +135,7 @@ Souboru databáze (PDB) program, nazývaný také soubor symbolů, mapuje identi
 
    Při jedné z těchto událostí ladicí program zobrazí **nebyly načteny žádné symboly** stránka může pomoci najít a načíst potřebné symboly.
 
-   ![Žádné stránky načíst symboly](../debugger/media/dbg-nosymbolsloaded.png "DBG_NoSymbolsLoaded")
+   ![Na stránce nejsou načteny žádné symboly](../debugger/media/dbg-nosymbolsloaded.png "DBG_NoSymbolsLoaded")
 
 - Chcete-li změnit cesty hledání, zvolte nevybranou cestu nebo vyberte **nový** a zadejte novou cestu. Zvolte **načíst** hledání cest a načtení souboru symbolů, pokud je nalezen.
 
@@ -147,7 +147,7 @@ Souboru databáze (PDB) program, nazývaný také soubor symbolů, mapuje identi
 
 - Pokud chcete vždy zobrazit rozebrání, když nejsou nalezeny zdrojové soubory nebo soubory symbolu, zvolte **dialogové okno Možnosti** propojit a vyberte možnost **povolit ladění na úrovni adresy** a **zobrazit zpětný překlad, pokud není k dispozici zdroj**.
 
-   ![Možnosti &#47; ladění &#47; zpětný překlad Obecné možnosti](../debugger/media/dbg-options-general-disassembly-checkbox.png "DBG_Options_General_disassembly_checkbox")
+   ![Možnosti &#47; ladění &#47; Obecné možnosti zpětného překladu](../debugger/media/dbg-options-general-disassembly-checkbox.png "DBG_Options_General_disassembly_checkbox")
 
   **Změňte možnosti symbolu z místní nabídky**
 
@@ -214,7 +214,7 @@ Souboru databáze (PDB) program, nazývaný také soubor symbolů, mapuje identi
 
 2. V části **společné vlastnosti** uzlu, vyberte **zdrojové soubory ladění**.
 
-3. Klikněte na složku ![nástroje&#47; možnosti&#47; ladění&#47;ikonu složky symboly](../debugger/media/dbg-tools-options-foldersicon.png "DBG_Tools_Options_FoldersIcon") ikonu. Upravitelný text se zobrazí v **adresáře obsahujícího zdrojový kód** seznamu.
+3. Klikněte na složku ![složky&#47; možnosti&#47; nástroje&#47;pro ladění ikona ikona složky symboly ladění](../debugger/media/dbg-tools-options-foldersicon.png "DBG_Tools_Options_FoldersIcon") . Upravitelný text se zobrazí v **adresáře obsahujícího zdrojový kód** seznamu.
 
 4. Přidejte cestu, kterou chcete prohledat.
 
@@ -224,7 +224,7 @@ Souboru databáze (PDB) program, nazývaný také soubor symbolů, mapuje identi
  Pokud neexistuje žádný zdrojový kód v místním počítači nebo soubor PDB neodpovídá zdrojovému kódu, můžete použít zdrojový server k ladění aplikace. Zdrojový server přijímá požadavky na soubory a vrací skutečné soubory. Zdrojový server je spuštěn pomocí souboru knihovny DLL s názvem srcsrv.dll. Zdrojový Server přečte soubor PDB aplikace, který obsahuje odkazy na úložiště zdrojového kódu, jakož i příkazy pro načtení zdrojového kódu z úložiště. Můžete omezit, jaké příkazy mohou být provedeny ze souboru .pdb aplikace uvedením seznamu povolených příkazů v souboru s názvem srcsrv.ini, který musí být umístěn ve stejném adresáři jako soubory srcsrv.dll a devenv.exe.
 
 > [!IMPORTANT]
-> Libovolné příkazy lze vložit do souboru v souboru pdb aplikace, takže zkontrolujte, zda umístíte pouze ty, které chcete provést do souboru srcsrv.ini. Pokus o provedení příkazu mimo soubor srcsvr.ini způsobí zobrazení dialogového okna s potvrzením. Další informace najdete v tématu [upozornění zabezpečení: Ladicí program musí spustit nedůvěryhodný příkaz](../debugger/security-warning-debugger-must-execute-untrusted-command.md). Parametry příkazu nejsou ověřovány, proto buďte s důvěryhodnými příkazy opatrní. Například pokud důvěřujete souboru cmd.exe, uživateli se zlými úmysly může zadat parametry, které by z příkazu mohly udělat hrozbu.
+> Libovolné příkazy lze vložit do souboru v souboru pdb aplikace, takže zkontrolujte, zda umístíte pouze ty, které chcete provést do souboru srcsrv.ini. Pokus o provedení příkazu mimo soubor srcsvr.ini způsobí zobrazení dialogového okna s potvrzením. Další informace najdete v tématu [upozornění zabezpečení: ladicí program musí spustit nedůvěryhodný příkaz](../debugger/security-warning-debugger-must-execute-untrusted-command.md). Parametry příkazu nejsou ověřovány, proto buďte s důvěryhodnými příkazy opatrní. Například pokud důvěřujete souboru cmd.exe, uživateli se zlými úmysly může zadat parametry, které by z příkazu mohly udělat hrozbu.
 
  **Chcete-li povolit použití zdrojového serveru**
 
@@ -238,11 +238,11 @@ Souboru databáze (PDB) program, nazývaný také soubor symbolů, mapuje identi
 
 4. Vyberte **povolit podporu zdrojového serveru** zaškrtávací políčko.
 
-     ![Povolit zdrojový server možnosti](../debugger/media/dbg-options-general-enablesrcsrvr-checkbox.png "DBG_Options_General_EnableSrcSrvr_checkbox")
+     ![Povolit možnosti zdrojového serveru](../debugger/media/dbg-options-general-enablesrcsrvr-checkbox.png "DBG_Options_General_EnableSrcSrvr_checkbox")
 
 5. (Volitelné) Zvolte požadované podřízené možnosti.
 
      Všimněte si, že oba **povolit zdrojový server pro sestavení částečné důvěryhodnosti (pouze spravované)** a **vždy spouštět nedůvěryhodné příkazy ze zdrojového serveru bez zobrazení výzvy** mohou zvýšit možnost bezpečnostního rizika, které bylo uvedeno výše.
 
 ## <a name="see-also"></a>Viz také
- [.NET změny vzdáleného načítání symbolů v sadě Visual Studio 2012 a 2013](http://blogs.msdn.com/b/visualstudioalm/archive/2013/10/16/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013.aspx)
+ [.NET změny vzdáleného načítání symbolů v sadě Visual Studio 2012 a 2013](https://devblogs.microsoft.com/devops/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013/)

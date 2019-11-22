@@ -1,5 +1,5 @@
 ---
-title: Příručka správce sady Visual Studio | Dokumentace Microsoftu
+title: Příručka pro správce sady Visual Studio | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-install
@@ -13,64 +13,64 @@ caps.latest.revision: 76
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 5a84f0a037df92ff31ce66eb6692367ef1d209f6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a59f9f2cb2548d6d40670832e66d4df5c83680df
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62546658"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295913"
 ---
 # <a name="visual-studio-administrator-guide"></a>Příručka administrátora sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejnovější dokumentaci k sadě Visual Studio, najdete v článku [příručce pro správce sady Visual Studio](/visualstudio/install/visual-studio-administrator-guide).
+Nejnovější dokumentaci k sadě Visual Studio najdete v příručce pro [správce sady Visual Studio](/visualstudio/install/visual-studio-administrator-guide).
 
-Visual Studio 2015 můžete nasadit v síti, tak dlouho, dokud každý cílový počítač splňuje [minimální požadavky na instalaci](https://visualstudio.microsoft.com/vs/older-downloads/). Sdílené síťové složky můžete vytvořit spuštěním instalační soubor s přepínačem/Layout (jak je popsáno na [vytvoření v režimu Offline instalace sady Visual Studio](../install/create-an-offline-installation-of-visual-studio.md) stránky) a následným kopírováním z místního počítače do sdílené síťové složky. Pokud použijete Image ISO, můžete připojit bitovou kopii ISO a sdílet ho nebo zkopírovat bitovou kopii ISO do sdílené síťové složky.  
+Můžete nasadit Visual Studio 2015 v síti, pokud každý cílový počítač splňuje [minimální požadavky na instalaci](https://visualstudio.microsoft.com/vs/older-downloads/). Sdílenou síťovou složku můžete vytvořit spuštěním instalačního souboru s přepínačem/Layout (jak je popsáno na stránce [vytvoření offline instalace sady Visual Studio](../install/create-an-offline-installation-of-visual-studio.md) ) a následným zkopírováním z místního počítače do sdílené síťové složky. Pokud používáte ISO, můžete připojit bitovou kopii ISO a sdílet ji nebo zkopírovat bitovou kopii ISO do sdílené síťové složky.  
   
- Všimněte si, že instalace ze sdílené síťové složky "nezapomeňte" umístění zdroje, které pocházejí. To znamená, že oprava klientského počítače může být nutné se vraťte do sdílené síťové složky, které klient původně nainstalovali. Pečlivě vašemu umístění v síti tak, aby se budou přizpůsobovat dostupnému prostoru životního cyklu, které plánujete mít Visual Studio 2015 klientů se systémy ve vaší organizaci.  
+ Instalace ze sdílené síťové složky si zapamatuje zdrojové umístění, ze kterého pocházejí. To znamená, že oprava klientského počítače může být nutné se vraťte do sdílené síťové složky, které klient původně nainstalovali. Vyberte své síťové umístění pečlivě, aby odpovídalo životnosti, kterou očekáváte, aby klienti sady Visual Studio 2015 ve vaší organizaci běželi.  
   
-## <a name="detection-and-servicing-keys"></a>Detekce a obsluha klíčů  
- Detekce podklíčů v registru můžete použít k určení, zda je v počítači již nainstalován produkt Visual Studio. Automatizované nasazení můžete využít tyto klíče detekce k určení, zda to bylo nezbytné, aby bylo možné pokračovat v instalaci aplikace.  Zobrazit [zjištění požadavků na systém](../extensibility/internals/detecting-system-requirements.md)[zjištění požadavků na systém].  
+## <a name="detection-and-servicing-keys"></a>Klíče detekce a údržby  
+ Pomocí zjišťování podklíčů v registru můžete zjistit, zda je produkt Visual Studio již nainstalován v počítači. Tyto detekční klíče byste použili v automatizovaném nasazení, abyste zjistili, jestli bylo nutné pokračovat v instalaci.  Viz [zjišťování požadavků na systém](../extensibility/internals/detecting-system-requirements.md)[zjištění požadavků na systém].  
   
-## <a name="avoiding-reboots"></a>Vyhnout se restartování počítače  
- Restartování počítače můžete snížit a ujistěte se, že splňujete požadavky odpovídající sady Visual Studio před nasazením aplikace Visual Studio. Pro rozhraní .NET Framework může být nutné restartování počítačů, na kterých běží Windows 8, pokud provádíte nasazení sady Visual Studio 2015 na nich bez první instalace rozhraní .NET Framework 4.6.  
+## <a name="avoiding-reboots"></a>Zamezení restartování  
+ Můžete snížit počet restartování tím, že před nasazením sady Visual Studio splníte příslušné předpoklady sady Visual Studio. Pro .NET Framework může být nutné restartovat počítače se systémem Windows 8, pokud nasadíte aplikaci Visual Studio 2015, aniž byste nejprve nainstalovali .NET Framework 4,6.  
   
- Pro emulaci zařízení Windows a Androidem může být nutné restartování počítačů, pokud již nemáte Windows funkce, kterou technologie Hyper-V zapnutá. Pro vývoj webů budete muset restartovat počítače, pokud již nemáte funkci Windows, které webový Server zapnutý. Pro vývoj pro Office budete muset restartovat počítače, pokud již nemáte funkce Windows Foundation identifikovat Windows zapnuté. Pokud již nemáte funkci Windows, které webový Server zapnutý, až po restartování počítače. Pro vývoj pro Office budete muset restartovat počítače, pokud již nemáte funkce Windows Foundation identifikovat Windows zapnuté. Další informace o tom, jak automatizovat zjišťování a instalaci funkcí Windows, naleznete v tématu [instalaci role serveru na serveru s instalací jádra serveru systému Windows Server 2008 R2](https://technet.microsoft.com/library/ee441260(v=ws.10).aspx).  
+ Pro emulaci zařízení s Windows a Androidem může být potřeba restartovat počítače, pokud ještě nemáte zapnutou funkci Hyper-V pro Windows. V případě vývoje webu může být nutné restartovat počítače, pokud ještě nemáte webový server funkce systému Windows zapnutý. V případě vývoje pro Office může být nutné restartovat počítače, pokud ještě nemáte funkci Windows Feature Foundation, která je zapnutá. Restartujte počítače, pokud ještě nemáte webový server funkcí systému Windows zapnutý. V případě vývoje pro Office může být nutné restartovat počítače, pokud ještě nemáte funkci Windows Feature Foundation, která je zapnutá. Další informace o tom, jak automatizovat detekci a instalaci funkcí Windows, najdete v tématu [instalace role serveru na serveru s instalací jádra serveru systému Windows server 2008 R2](https://technet.microsoft.com/library/ee441260(v=ws.10).aspx).  
   
 ## <a name="error-return-codes"></a>Návratové kódy chyb  
- Následující tabulka obsahuje seznam důležitých kódů chyb. Tyto kódy chyb ve vaší službě automation můžete rozhodnout, jestli je vyžadován restart a v případě, instalace proběhla úspěšně. Pokud se zobrazí kód chyby, zvažte kroky pro řešení potíží na [instalace sady Visual Studio](../install/install-visual-studio-2015.md) stránky.  
+ V následující tabulce jsou uvedeny důležité kódy chyb. Tyto kódy chyb v automatizaci můžete použít k určení, jestli je nutné restartovat počítač a jestli se instalace úspěšně dokončila. Pokud obdržíte kód chyby, zvažte postup řešení potíží na stránce [instalace sady Visual Studio](../install/install-visual-studio-2015.md) .  
   
-|Stav instalace|Restartování není požadováno|Vyžadováno restartování|Popis|  
+|Stav instalace|Restartování není vyžadováno|Vyžadováno restartování|Popis|  
 |------------------|--------------------------|----------------------|-----------------|  
 |Úspěch|0x00000000 [0]|0x00000bc2 [3010]|Úspěšná instalace.|  
-|Blok|0x80044000 [-2147205120]|0x8004C000 [-2147172352]|Pokud uváděné pouze blok "Čeká na restartování", vrácená hodnota je hodnota nekompletní restart (0x80048bc7).|  
-|Zrušit|0x00000642 [1602]|0x80048642 [-2147187134]|Pokud je vrácena hodnota Reboot, návratový kód bude 1602.|  
-|Neúplné restart|Není k dispozici|0x80048bc7 [-2147185721]|Před pokračováním instalace je vyžadováno restartování.|  
-|selhání|0x00000643 [1603]|0x80048643 [-2147187133]|Pokud je vrácena hodnota Reboot, návratový kód je 1603.|  
+|Zablokovat|0x80044000 [-2147205120]|0x8004C000 [-2147172352]|Pokud je pouze hlášený blok "čeká na restartování", vrácená hodnota je povinná hodnota nedokončeného restartování (0x80048bc7).|  
+|Zrušit|0x00000642 [1602]|0x80048642 [-2147187134]|Po vrácení hodnoty restart je návratový kód 1602.|  
+|Nedokončeno – vyžadováno restartování|Není k dispozici|0x80048bc7 [-2147185721]|Aby mohla instalace pokračovat, je nutné restartovat počítač.|  
+|Poruše|0x00000643 [1603]|0x80048643 [-2147187133]|Po vrácení hodnoty restart je návratový kód 1603.|  
   
-## <a name="interactive-administrator-installer"></a>Instalační program interaktivní správce  
- Pokud vytváříte interaktivní instalační program na instalaci sady Visual Studio, můžete zobrazit průběh v instalačním programu sady Visual Studio. Visual Studio 2015, které instalační program je založená na open source technologie chainer XML Instalační služby systému Windows (WiX), označované také jako "pracovní tempo." Pracovní tempo technologie podporuje dva komunikační protokoly: pracovní tempo a netfx4. Krátký odkaz, najdete v tématu Popis v dokumentaci pro element ExePackage v atributu protokolu [wixtoolset.org](http://wixtoolset.org/). Přehled WiX opensourcová implementace tohoto atributu protokol může být nutný pro integraci.  
+## <a name="interactive-administrator-installer"></a>Interaktivní instalační program Správce  
+ Pokud vytváříte interaktivní instalační program na začátku instalace sady Visual Studio, můžete zobrazit průběh z instalačního programu sady Visual Studio. Instalační program sady Visual Studio 2015 je založený na technologii Open Source Instalační služba systému Windows XML (WiX) chainer, která se označuje také jako "vypálit". Technologie pro vypalování podporuje dva komunikační protokoly: vypálit a netfx4. Stručný přehled naleznete v popisu atributu Protocol v dokumentaci pro element ExePackage na [wixtoolset.org](https://wixtoolset.org/). Pro integraci může být nutná kontrola implementace WiX Open Source tohoto atributu Protocol.  
   
-## <a name="controlling-what-is-installed"></a>Řízení, co je nainstalována  
- Pokud chcete řídit, co koncový uživatel může nainstalovat, existují dvě možnosti: Správce souborů instalaci a možnosti příkazového řádku. Vyberte souboru instalace správce, pokud je vaším cílem je omezit, co koncový uživatel můžete vybrat z jejich prostředí instalačního programu sady Visual Studio. Pokud chcete vytvořit počáteční konfiguraci, ale povolit váš koncový uživatel vybrat své vlastní prostředí instalačního programu sady Visual Studio, vyberte parametry příkazového řádku.  
+## <a name="controlling-what-is-installed"></a>Řízení, co je nainstalováno  
+ Pokud chcete určit, co může koncový uživatel instalovat, máte dvě možnosti: instalace souboru správce a možnosti příkazového řádku. Pokud je vaším cílem omezit, co si koncový uživatel může vybrat z instalačního programu sady Visual Studio, vyberte soubor správce nainstalovat. Vyberte parametry příkazového řádku, pokud chcete vytvořit počáteční konfiguraci, ale umožněte koncovému uživateli zvolit si vlastní instalační program sady Visual Studio.  
   
- Další informace o souboru prostředí správce, naleznete v tématu [jak: Vytvoření a spuštění bezobslužné instalace sady Visual Studio](../install/how-to-create-and-run-an-unattended-installation-of-visual-studio.md) a [jak: Automatické použití kódů product key při nasazení sady Visual Studio](../install/how-to-automatically-apply-product-keys-when-deploying-visual-studio.md).  Další informace o řízení příkazového řádku, najdete v článku [použití parametrů příkazového řádku instalace sady Visual Studio](../install/use-command-line-parameters-to-install-visual-studio.md) stránky.  
+ Další informace o prostředí souborů správce najdete v tématu [Postup: vytvoření a spuštění bezobslužné instalace aplikace Visual Studio](../install/how-to-create-and-run-an-unattended-installation-of-visual-studio.md) a [Postup: automatické použití kódů Product Key při nasazení sady Visual Studio](../install/how-to-automatically-apply-product-keys-when-deploying-visual-studio.md).  Další informace o ovládacích prvcích příkazového řádku naleznete na stránce [použití parametrů příkazového řádku pro instalaci sady Visual Studio](../install/use-command-line-parameters-to-install-visual-studio.md) .  
   
-## <a name="specifying-customer-feedback-settings"></a>Určení nastavení zpětné vazby zákazníka  
+## <a name="specifying-customer-feedback-settings"></a>Určení nastavení zpětné vazby od zákazníka  
 
-Ve výchozím nastavení instalaci sady Visual Studio umožňuje zpětné vazby od zákazníků. Visual Studio a zakázání zpětné vazby od zákazníků v jednotlivých počítačích změnou hodnoty následujícího klíče registru na řetězec "0", můžete nakonfigurovat:  
+Ve výchozím nastavení instalaci sady Visual Studio umožňuje zpětné vazby od zákazníků. Sadu Visual Studio můžete nakonfigurovat tak, aby na jednotlivé počítače nemohly na jednotlivých počítačích změnit hodnotu následujícího klíče registru na řetězec "0":  
   
 **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\VisualStudio\SQM**  
 **OptIn**  
   
-(Třeba, změňte ho na HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\VisualStudio\SQM OptIn = "0")  
+(Například změňte na HKEY_LOCAL_MACHINE \SOFTWARE\Policies\Microsoft\VisualStudio\SQM OptIn = "0")  
   
 ## <a name="related-topics"></a>Související témata  
   
 |Téma|Popis|  
 |-----------|-----------------|  
-|[Postupy: Instalace konkrétní verze sady Visual Studio](../install/how-to-install-a-specific-release-of-visual-studio.md)|Popisuje postup instalace konkrétní konfigurace k aktuální verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|  
+|[Postupy: Instalace konkrétní verze sady Visual Studio](../install/how-to-install-a-specific-release-of-visual-studio.md)|V této části najdete popis postupu instalace konkrétních konfigurací aktuální verze [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|  
 |[Postupy: Vytvoření a spuštění bezobslužné instalace sady Visual Studio](../install/how-to-create-and-run-an-unattended-installation-of-visual-studio.md)|Popisuje postup instalace [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v bezobslužném režimu.|  
-|[Postupy: Automatické použití kódů product key při nasazení sady Visual Studio](../install/how-to-automatically-apply-product-keys-when-deploying-visual-studio.md)|Popisuje způsob použití kódů product key při nasazení do více počítačů.|  
-|[Příručka správce Help Vieweru](../ide/help-viewer-administrator-guide.md)|Poskytuje informace o tom, jak spravovat místní instalace nápovědy pro síťové prostředí, které mají nebo nemají přístup k Internetu.|  
-|[Instalace sady Visual Studio](../install/install-visual-studio-2015.md)|Poskytuje pokyny a odkazy na témata, která popisují, jak nainstalovat [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|
+|[Postupy: Automatické použití kódů Product Key při nasazení sady Visual Studio](../install/how-to-automatically-apply-product-keys-when-deploying-visual-studio.md)|Popisuje způsob použití kódů Product Key při nasazení na více počítačů.|  
+|[Příručka správce Help Vieweru](../ide/help-viewer-administrator-guide.md)|Obsahuje informace o tom, jak spravovat místní instalace aplikace Help pro síťová prostředí, která mají buď nebo nemají přístup k Internetu.|  
+|[Instalace sady Visual Studio](../install/install-visual-studio-2015.md)|Obsahuje pokyny a odkazy na témata, která popisují instalaci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|

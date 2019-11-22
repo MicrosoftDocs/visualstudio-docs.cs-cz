@@ -15,17 +15,17 @@ caps.latest.revision: 37
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7abc869ebebf4ca2ae8aa1776eaae75f1543176b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 99f2b67d264edcaab5272d0224d4450ee2e8a6f6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652262"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297156"
 ---
 # <a name="uml-component-diagrams-guidelines"></a>Diagramy komponent UML: Pokyny
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení struktury softwarového systému. Ukázku videa najdete v tématu [navrhování fyzické struktury pomocí diagramů komponent](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-6-Designing-a-Projects-Physical-Structure/).
+V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení struktury softwarového systému. Ukázku videa najdete v tématu [navrhování fyzické struktury pomocí diagramů komponent](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-6-designing-a-projects-physical-structure).
 
  Chcete-li zjistit, které verze aplikace Visual Studio tuto funkci podporují, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -82,7 +82,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení s
 
 1. Klikněte na **součást** v sadě nástrojů a potom klikněte na prázdnou část diagramu.
 
-     \- nebo-
+     \- nebo –
 
      Zkopírujte a vložte existující komponentu.
 
@@ -188,13 +188,13 @@ V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení s
 
          V **Průzkumníku modelů UML**se vytvoří nová komponenta. Toto je typ nové části.
 
-         \- nebo-
+         \- nebo –
 
          Přetáhněte existující komponentu z Průzkumníku modelů UML na nadřazenou komponentu.
 
          Nová část (3) se zobrazí uvnitř nadřazené komponenty. Jejím typem je komponenta, kterou jste přetáhli z Průzkumníku modelů UML.
 
-         \- nebo-
+         \- nebo –
 
          Klikněte pravým tlačítkem myši na součást, buď v diagramu, nebo v Průzkumníku modelů UML a pak klikněte na **Kopírovat**.
 
@@ -206,7 +206,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení s
 
     3. Do nové části můžete přidat poskytované a požadované rozhraní (4, 5). Klikněte na **poskytnuté rozhraní** nebo nástroj **požadované rozhraní** a pak klikněte do části.
 
-         \- nebo-
+         \- nebo –
 
          Přetáhněte existující rozhraní z **Průzkumníka modelů UML** na součást.
 
@@ -225,7 +225,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení s
 ### <a name="showing-the-parts-of-a-part"></a>Zobrazení částí části
  Poté, co jste rozložili komponentu na jednotlivé části, můžete rovněž rozložit jednotlivé typy částí na vlastní vnitřní části.
 
- Nejjednodušší je provést každou vrstvu rozložení v samostatném diagramu komponenty. Nejprve musíte vyhledat typ části. Například na ilustraci je jedna z částí pojmenována `DNCustomerServer` a její typ je komponenta s názvem `CustomerServer`. Tento typ můžete najít v Průzkumníku modelů UML a umístit jej do jiného diagramu. Poté můžete vytvořit její vlastní vnitřní části.
+ Nejjednodušší je provést každou vrstvu rozložení v samostatném diagramu komponenty. Nejprve musíte vyhledat typ části. Například na ilustraci je jedna z částí pojmenována `DNCustomerServer`a její typ je komponenta s názvem `CustomerServer`. Tento typ můžete najít v Průzkumníku modelů UML a umístit jej do jiného diagramu. Poté můžete vytvořit její vlastní vnitřní části.
 
 ##### <a name="to-place-a-parts-type-on-a-diagram"></a>Umístění typu části do diagramu
 
@@ -333,4 +333,4 @@ V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení s
   Název šipky závislostí lze použít k označení určitého druhu použití. Chcete-li nastavit název, klikněte pravým tlačítkem myši na šipku, klikněte na příkaz **vlastnosti**a nastavte pole **název** v okně Vlastnosti.
 
 ## <a name="see-also"></a>Viz také
- Diagramy komponent UML pro [Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md) [: odkazy](../modeling/uml-component-diagrams-reference.md) na [sekvenční diagramy UML](../modeling/uml-sequence-diagrams-reference.md) : referenční diagramy [případů použití](../modeling/uml-use-case-diagrams-reference.md) UML: referenční diagramy [tříd](../modeling/uml-class-diagrams-reference.md) UML: Referenční dokumentace [diagramů komponent UML: referenční](../modeling/uml-component-diagrams-reference.md) [dokumentace Video: návrh fyzické struktury pomocí diagramů komponent](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-6-Designing-a-Projects-Physical-Structure/)
+ [Diagramy komponent UML](../modeling/uml-component-diagrams-reference.md) pro [Úpravy modelů a diagramů](../modeling/edit-uml-models-and-diagrams.md) UML: odkazy na [sekvenční diagramy UML](../modeling/uml-sequence-diagrams-reference.md) : referenční diagramy [případů použití](../modeling/uml-use-case-diagrams-reference.md) UML: Referenční dokumentace diagramů [tříd](../modeling/uml-class-diagrams-reference.md) UML: referenční video [diagramy:](../modeling/uml-component-diagrams-reference.md) [Návrh fyzické struktury pomocí diagramů komponent](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-6-designing-a-projects-physical-structure)

@@ -15,12 +15,12 @@ caps.latest.revision: 43
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ddce137ebdf2cff0e029a1cbe8551c7437c58386
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 60813fcce28c71c91a3e0c2af9889261c8897a99
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671678"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301405"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>Postupy: Vytváření řešení jazyka specifického pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,9 +32,9 @@ Jazyk specifický pro doménu (DSL) se vytvoří pomocí specializovaného řeš
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185579](http://go.microsoft.com/fwlink/?LinkID=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](http://go.microsoft.com/fwlink/?LinkID=185580)|
-|Sada SDK pro vizualizaci a modelování sady Visual Studio|[http://go.microsoft.com/fwlink/?LinkID=185581](http://go.microsoft.com/fwlink/?LinkID=185581)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185579](https://go.microsoft.com/fwlink/?LinkID=185579)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](https://go.microsoft.com/fwlink/?LinkID=185580)|
+|Visual Studio Visualization and Modeling SDK|[http://go.microsoft.com/fwlink/?LinkID=185581](https://go.microsoft.com/fwlink/?LinkID=185581)|
 
 ## <a name="creating-a-domain-specific-language-solution"></a>Vytváření řešení jazyka specifického pro doménu
 
@@ -44,7 +44,7 @@ Jazyk specifický pro doménu (DSL) se vytvoří pomocí specializovaného řeš
 
    1. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
 
-   2. Zobrazí se dialogové okno **Nový projekt** .
+   2. Zobrazí se dialogové okno **Nový projekt**.
 
    3. V části **typy projektů**rozbalte uzel **ostatní typy projektů** a klikněte na **rozšiřitelnost**.
 
@@ -100,11 +100,11 @@ Zadejte novou příponu souboru.
 
 - Zadejte jinou příponu souboru.
 
-     \- nebo-
+     \- nebo –
 
 - Obnovte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] experimentální instance. Tím zrušíte registraci všech dříve vytvořených DSL. V nabídce **Start** klikněte na **všechny programy**, **Microsoft Visual Studio 2010 SDK**, **nástroje**a pak **na experimentální instanci Microsoft Visual Studio 2010 obnovte**. Můžete znovu sestavit jakýkoli jiný DSL, který chcete znovu použít.
 
-     \- nebo-
+     \- nebo –
 
 - Pokud je v počítači plně nainstalovaná přípona [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], která tuto příponu souboru používá, odinstalujte ji. V nabídce **nástroje** klikněte na **Správce rozšíření**.
 
@@ -127,7 +127,7 @@ Tento název se použije jako název složený z názvu vaší společnosti a pr
 
  **Použít existující klíč se silným názvem** Tuto možnost použijte, pokud chcete své DSL integrovat s jiným sestavením.
 
- Další informace o silných názvech naleznete v tématu [vytváření a používání sestavení se silným názvem](http://go.microsoft.com/fwlink/?LinkId=186073).
+ Další informace o silných názvech naleznete v tématu [vytváření a používání sestavení se silným názvem](https://go.microsoft.com/fwlink/?LinkId=186073).
 
 ## <a name="see-also"></a>Viz také
  [Definování jazyka](../modeling/how-to-define-a-domain-specific-language.md) [nástroje DSL slovníku](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa) specifického pro doménu

@@ -18,12 +18,12 @@ caps.latest.revision: 35
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 70dfaa5671f589c02560a554a6d50611c5364c82
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f0ad4ea108cb0ec3b874c7f360be2e1f0e25ef45
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651190"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299419"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>Vytvoření vazby ovládacích prvků WPF k datové sadě
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -47,7 +47,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
 
-- Přístup ke spuštěné instanci SQL Server nebo SQL Server Express, ke které je připojena ukázková databáze AdventureWorksLT. Databázi AdventureWorksLT si můžete stáhnout z webu [CodePlex](http://go.microsoft.com/fwlink/?linkid=87843).
+- Přístup ke spuštěné instanci SQL Server nebo SQL Server Express, ke které je připojena ukázková databáze AdventureWorksLT. Databázi AdventureWorksLT si můžete stáhnout z webu [CodePlex](https://go.microsoft.com/fwlink/?linkid=87843).
 
   Předchozí znalosti následujících konceptů jsou také užitečné, ale nevyžadují se k dokončení tohoto postupu:
 
@@ -79,7 +79,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
 #### <a name="to-create-a-dataset"></a>Vytvoření datové sady
 
-1. V nabídce **data** klikněte na možnost **Zobrazit zdroje dat**.
+1. Na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
 
      Otevře se okno **zdroje dat** .
 
@@ -194,7 +194,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
      Visual Studio otevře soubor kódu na pozadí a vytvoří novou `backButton_Click` obslužnou rutinu události pro událost <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.
 
-2. Upravte obslužnou rutinu události `Window_Loaded`, aby `ProductViewSource`, `AdventureWorksLTDataSet` a `AdventureWorksLTDataSetProductTableAdapter` byly mimo metodu a přístupná k celému formuláři. Deklarujete pouze ty, které mají být globální pro formulář, a přiřaďte je v rámci obslužné rutiny `Window_Loaded` události podobné následujícímu:
+2. Upravte obslužnou rutinu události `Window_Loaded`, aby `ProductViewSource`, `AdventureWorksLTDataSet`a `AdventureWorksLTDataSetProductTableAdapter` byly mimo metodu a přístupná k celému formuláři. Deklarujete pouze ty, které mají být globální pro formulář, a přiřaďte je v rámci obslužné rutiny `Window_Loaded` události podobné následujícímu:
 
      [!code-csharp[Data_WPFDATASET#1](../snippets/csharp/VS_Snippets_ProTools/data_wpfdataset/cs/mainwindow.xaml.cs#1)]
      [!code-vb[Data_WPFDATASET#1](../snippets/visualbasic/VS_Snippets_ProTools/data_wpfdataset/vb/mainwindow.xaml.vb#1)]

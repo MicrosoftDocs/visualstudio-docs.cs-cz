@@ -9,19 +9,19 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a8c261d903868df887d99c10182ed134c79c552b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 89ca4c02a1cbb1171619060b9478b5f2d3ccaa36
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671758"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295726"
 ---
 # <a name="step-5-add-controls-to-your-form"></a>Krok 5: Přidejte do svého formuláře ovládací prvky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 V tomto kroku přidáte ovládací prvky, například ovládací prvek `PictureBox` a ovládací prvek `CheckBox`, do formuláře. Pak přidáte tlačítka do formuláře.
 
- ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-video 2](http://go.microsoft.com/fwlink/?LinkId=205211) nebo v [kurzu 1: vytvoření prohlížeče obrázků ve C# videu 2](http://go.microsoft.com/fwlink/?LinkId=205200). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
+ ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-video 2](https://go.microsoft.com/fwlink/?LinkId=205211) nebo v [kurzu 1: vytvoření prohlížeče obrázků ve C# videu 2](https://go.microsoft.com/fwlink/?LinkId=205200). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
 
 ### <a name="to-add-controls-to-your-form"></a>Přidání ovládacích prvků do formuláře
 
@@ -49,7 +49,7 @@ V tomto kroku přidáte ovládací prvky, například ovládací prvek `PictureB
 
      ![Ovládací prvek TextBox s vlastností Stretch](../ide/media/express-pictureviewercheckbox.png "Express_PictureViewerCheckbox") Ovládací prvek TextBox s vlastností Stretch
 
-8. Zvolte kontejner TableLayoutPanel ve formuláři a potom přejděte do skupiny **kontejnery** v sadě nástrojů (kde jste získali svůj ovládací prvek TableLayoutPanel) a dvakrát klikněte na položku **FlowLayoutPanel** a přidejte nový ovládací prvek do poslední buňky v ovládacím prvku PictureBox (dole vpravo). Poté ukotvěte FlowLayoutPanel v kontejneru TableLayoutPanel (buď výběrem možnosti **Dock v nadřazeném kontejneru** v seznamu úkolů černého trojúhelníku FlowLayoutPanel, nebo nastavením vlastnosti **Dock** prvku FlowLayoutPanel na **vyplnit**).
+8. Zvolte kontejner TableLayoutPanel ve formuláři a potom přejděte do skupiny **kontejnery** v sadě nástrojů (kde jste získali svůj ovládací prvek TableLayoutPanel) a dvakrát klikněte na položku **FlowLayoutPanel** a přidejte nový ovládací prvek do poslední buňky v ovládacím prvku PictureBox (vpravo dole). Poté ukotvěte FlowLayoutPanel v kontejneru TableLayoutPanel (buď výběrem možnosti **Dock v nadřazeném kontejneru** v seznamu úkolů černého trojúhelníku FlowLayoutPanel, nebo nastavením vlastnosti **Dock** prvku FlowLayoutPanel na **vyplnit**).
 
     > [!NOTE]
     > FlowLayoutPanel je kontejner, který uspořádá další ovládací prvky v úhledných řádcích v daném pořadí. Když změníte velikost kontejneru FlowLayoutPanel, pokud má místo pro rozložení všech ovládacích prvků na jednom řádku, provede to. V opačném případě je uspořádá na řádcích, jeden nad druhou. K uložení čtyř tlačítek použijete FlowLayoutPanel. Pokud jsou tlačítka při přidání uspořádána po sobě, před přidáním tlačítek se ujistěte, že je vybráno FlowLayoutPanel. Ačkoliv bylo uvedeno dříve, že každá buňka může obsahovat pouze jeden ovládací prvek, pravá dolní buňka kontejneru TableLayoutPanel má čtyři ovládací prvky tlačítka. Důvodem je to, že ovládací prvek lze umístit do buňky, která obsahuje jiné ovládací prvky. Tento druh ovládacího prvku se nazývá kontejner a FlowLayoutPanel je kontejner.

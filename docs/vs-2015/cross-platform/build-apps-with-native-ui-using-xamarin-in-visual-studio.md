@@ -8,19 +8,19 @@ ms.assetid: 30f137e6-595d-4ce7-b8f5-415b07c1caa2
 caps.latest.revision: 33
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 90517c46d8fa92d58e73e976f593a1bcfbfac9b1
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 7a0284ab6b8d2e89e1c0129c2bc98fb486918f90
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263563"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297926"
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Vytváření aplikací s nativním uživatelským rozhraním pomocí Xamarinu v sadě Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and-install.md) a [ověření prostředí Xamarinu](../cross-platform/verify-your-xamarin-environment.md), tento návod ukazuje, jak vytvořit základní aplikaci Xamarin (viz dole) s nativní vrstvy uživatelského rozhraní. S nativním uživatelským rozhraním sdílený kód nachází v knihovně přenosných tříd (PCL) a jednotlivé platformy projekty obsahují definice uživatelského rozhraní.
 
- ![Aplikace Xamarin pro Android a Windows Phone](../cross-platform/media/cross-plat-xamarin-build-1.png "sestavení Xamarin různé platformy 1")
+ ![Aplikace Xamarin v Androidu a Windows Phone](../cross-platform/media/cross-plat-xamarin-build-1.png "Sestavení Xamarin pro více platy")
 
  Můžete udělat Tyhle věci na jejich vytváření:
 
@@ -37,7 +37,7 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
 > [!TIP]
 > Najdete kompletní zdrojový kód pro tento projekt v [mobile-samples úložišti na Githubu](https://github.com/xamarin/mobile-samples/tree/master/Weather).
 >
-> Pokud máte potíže nebo dochází k chybám, zveřejněte ji prosím dotazy na [forums.xamarin.com](http://forums.xamarin.com). Mnoho chyb se dají vyřešit aktualizaci na nejnovější sady SDK vyžadované Xamarin, které jsou popsány v [zpráva k vydání verze Xamarinu](https://developer.xamarin.com/) pro každou platformu.
+> Pokud máte potíže nebo dochází k chybám, zveřejněte ji prosím dotazy na [forums.xamarin.com](https://forums.xamarin.com/). Mnoho chyb se dají vyřešit aktualizaci na nejnovější sady SDK vyžadované Xamarin, které jsou popsány v [zpráva k vydání verze Xamarinu](https://developer.xamarin.com/) pro každou platformu.
 >
 > [!NOTE]
 > Dokumentaci pro vývojáře Xamarinu pro několik kurzy rychlý start a podrobné informace o části nabízí také, jak je uvedeno níže. Na těchto stránkách Ujistěte se, že je v pravém horním rohu stránky zobrazíte návody pro Visual Studio specifické pro vybraná "Visual Studio".
@@ -46,7 +46,7 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
 >
 >   - [Hello, Android](https://developer.xamarin.com/guides/android/getting_started/hello,android/) (jednoduché aplikace s jednou obrazovkou)
 >   - [Hello, Android s více obrazovkami](https://developer.xamarin.com/guides/android/getting_started/hello,android_multiscreen/) (aplikace s navigace mezi obrazovkami)
->   - [Návod s androidem fragmenty](http://developer.xamarin.com/guides/android/platform_features/fragments/fragments_walkthrough/) (používá se pro obrazovky záznamů master/detail, mimo jiné)
+>   - [Návod s androidem fragmenty](https://docs.microsoft.com/xamarin/android/platform/fragments/implementing-with-fragments/) (používá se pro obrazovky záznamů master/detail, mimo jiné)
 >   - [Hello, iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
 >   - [Hello, iOS s více obrazovkami](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS_multiscreen/)
 >   - Aplikace Xamarin s Xamarin.Forms (sdílené uživatelské rozhraní)
@@ -87,7 +87,7 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
 
    - Klikněte na tlačítko **nainstalovat**.
 
-   - ![Vyhledání a instalace balíčku Newtonsoft.Json NuGet](../cross-platform/media/crossplat-xamarin-formsguide-5.png "CrossPlat Xamarin FormsGuide 5")
+   - ![Vyhledání a instalace balíčku NuGet Newtonsoft. JSON](../cross-platform/media/crossplat-xamarin-formsguide-5.png "CrossPlat Xamarin FormsGuide 5")
 
 4. Opakováním kroků 3 najít a nainstalovat **Microsoft.Net.Http** balíčku.
 
@@ -98,7 +98,7 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
 
  Takto přidejte kód PCL pro přístup a ukládání dat z této služby weather:
 
-1. Ke spuštění této ukázky je nutné nejdřív zaregistrovat bezplatný klíč rozhraní API v [ http://openweathermap.org/appid ](http://openweathermap.org/appid).
+1. Ke spuštění této ukázky je nutné nejdřív zaregistrovat bezplatný klíč rozhraní API v [ http://openweathermap.org/appid ](https://openweathermap.org/appid).
 
 2. Klikněte pravým tlačítkem myši **WeatherApp** projektu a vyberte **Přidat > třída...** . V **přidat novou položku** dialogového okna, název souboru **Weather.cs**. Tato třída budete používat k ukládání dat ze služby data o počasí.
 
@@ -227,10 +227,10 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
 
 ### <a name="design-the-look-and-feel-of-your-app"></a>Navrhnout vzhled a chování vaší aplikace
 
-1. V **Průzkumníka řešení**, rozbalte **WeatherApp.Droid**>**prostředky**>**rozložení** složky a Otevřete **Main.axml**. Tím se otevře soubor v vizuálního návrháře. (Pokud se zobrazí chybu s jazykem Java, najdete v tomto [blogový příspěvek](http://forums.xamarin.com/discussion/32365/connection-to-the-layout-renderer-failed-in-xs-5-7-and-xamarinvs-3-9).)
+1. V **Průzkumníka řešení**, rozbalte **WeatherApp.Droid**>**prostředky**>**rozložení** složky a Otevřete **Main.axml**. Tím se otevře soubor v vizuálního návrháře. (Pokud se zobrazí chybu s jazykem Java, najdete v tomto [blogový příspěvek](https://forums.xamarin.com/discussion/32365/connection-to-the-layout-renderer-failed-in-xs-5-7-and-xamarinvs-3-9).)
 
     > [!TIP]
-    > V projektu je mnoho dalších souborů. Zkoumání jejich je nad rámec tohoto tématu, ale pokud budete chtít věnovat struktura projekt pro Android o trochu výkonnější, naleznete v tématu [podrobné informace o části 2](http://developer.xamarin.com/guides/android/getting_started/hello,android/hello,android_deepdive/) Hello Android tématu na xamarin.com.
+    > V projektu je mnoho dalších souborů. Zkoumání jejich je nad rámec tohoto tématu, ale pokud budete chtít věnovat struktura projekt pro Android o trochu výkonnější, naleznete v tématu [podrobné informace o části 2](https://docs.microsoft.com/xamarin/android/get-started/hello-android/hello-android-deepdive?pivots=windows) Hello Android tématu na xamarin.com.
 
 2. Vyberte a odstraňte výchozí tlačítko, které se zobrazí v návrháři.
 
@@ -256,9 +256,9 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
     |**stylu textu**|`bold`|
 
     > [!TIP]
-    > Všimněte si, že mnoho vlastností neobsahují rozevírací seznam hodnot, které můžete vybrat.  Může být obtížné odhadnout jaké řetězcovou hodnotu pro jakékoli dané vlastnosti. Máte nějaké návrhy, zkuste najít, název vlastnosti v [R.attr](http://developer.android.com/reference/android/R.attr.html) třídy stránky.
+    > Všimněte si, že mnoho vlastností neobsahují rozevírací seznam hodnot, které můžete vybrat.  Může být obtížné odhadnout jaké řetězcovou hodnotu pro jakékoli dané vlastnosti. Máte nějaké návrhy, zkuste najít, název vlastnosti v [R.attr](https://developer.android.com/reference/android/R.attr.html) třídy stránky.
     >
-    >  Navíc rychlé webové vyhledávání často vede na stránku [ http://stackoverflow.com/ ](http://stackoverflow.com/) kde ostatní používá stejnou vlastnost.
+    >  Navíc rychlé webové vyhledávání často vede na stránku [ http://stackoverflow.com/ ](https://stackoverflow.com/) kde ostatní používá stejnou vlastnost.
 
      Pro srovnání, pokud přejdete na **zdroj** zobrazení, byste měli vidět následující kód pro tento element:
 
@@ -450,7 +450,7 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
 
 13. Uložte soubor a přepněte do **návrhu** zobrazení. Vaše uživatelské rozhraní by měl vypadat takto:
 
-     ![Uživatelské rozhraní pro aplikace pro Android](../cross-platform/media/xamarin-androidui.png "Xamarin_AndroidUI")
+     ![Uživatelské rozhraní pro aplikaci pro Android](../cross-platform/media/xamarin-androidui.png "Xamarin_AndroidUI")
 
 14. Otevřít **MainActivity.cs** a odstraňování řádků v *OnCreate* metodu, která odkazují na výchozí tlačítko, které se odstranily starší. Až to budete mít, kód by měl vypadat takto:
 
@@ -520,7 +520,7 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
 
 3. Na zařízení nebo emulátor, zadejte platné PSČ USA do pole pro úpravy (například: 60601) a stiskněte klávesu **získat počasí**. Data o počasí v dané oblasti se pak objeví v ovládacích prvcích.
 
-     ![Počasí aplikace pro Android a Windows Phone](../cross-platform/media/xamarin-getstarted-results.png "Xamarin_GetStarted_Results")
+     ![Aplikace počasí pro Android a Windows Phone](../cross-platform/media/xamarin-getstarted-results.png "Xamarin_GetStarted_Results")
 
 > [!TIP]
 > Úplný zdrojový kód pro tento projekt je v [mobile-samples úložišti na Githubu](https://github.com/xamarin/mobile-samples/tree/master/Weather).
@@ -579,13 +579,13 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
 
  V návrhovém zobrazení by měla vaše uživatelské rozhraní vypadat takto:
 
- ![Windows Phone uživatelského rozhraní aplikace](../cross-platform/media/xamarin-winphone-finalui.png "Xamarin_WinPhone_FinalUI")
+ ![Windows Phone uživatelské rozhraní aplikace](../cross-platform/media/xamarin-winphone-finalui.png "Xamarin_WinPhone_FinalUI")
 
 ### <a name="consume-your-shared-code"></a>Používat sdílený kód
 
 1. V návrháři, vyberte **získat počasí** tlačítko.
 
-2. V **vlastnosti** okna, klikněte na tlačítko obslužné rutiny události (![obslužné rutiny událostí Visual Studio ikonu](../cross-platform/media/blend-vs-eventhandlers-icon.png "blend_VS_EventHandlers_icon")).
+2. V okně **vlastnosti** klikněte na tlačítko obslužná rutina události (![ikona obslužné rutiny událostí sady Visual Studio](../cross-platform/media/blend-vs-eventhandlers-icon.png "blend_VS_EventHandlers_icon")).
 
      Tato ikona se zobrazuje v horním rohu **vlastnosti** okna.
 
@@ -626,7 +626,7 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
 
 3. V emulátoru Windows Phone, zadejte platné PSČ USA do pole pro úpravy (například: 60601) a stiskněte klávesu **získat počasí**. Data o počasí v dané oblasti se pak objeví v ovládacích prvcích.
 
-     ![Verze běžící aplikace pro Windows](../cross-platform/media/xamarin-getstarted-results-windows.png "Xamarin_GetStarted_Results_Windows")
+     ![Verze spuštěné aplikace ve Windows](../cross-platform/media/xamarin-getstarted-results-windows.png "Xamarin_GetStarted_Results_Windows")
 
 > [!TIP]
 > Úplný zdrojový kód pro tento projekt je v [mobile-samples úložišti na Githubu](https://github.com/xamarin/mobile-samples/tree/master/Weather).
@@ -636,11 +636,11 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
 
  Tuto ukázku rozšiřte přidáním nativní uživatelské rozhraní pro iOS. To bude potřeba připojit k počítači Mac ve vaší místní síti, která má Xcode a Xamarin nainstalovat. Až to uděláte, můžete použít Návrháře iOS přímo v sadě Visual Studio. Najdete v článku [mobile-samples úložišti na Githubu](https://github.com/xamarin/mobile-samples/tree/master/Weather) pro dokončené aplikace.
 
- Také odkazovat [Hello, iOS](http://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/hello,iOS_quickstart/) návod (xamarin.com). Všimněte si, že na této stránce si být jisti, že "Visual Studio" je vybrat v pravém horním rohu stránky na xamarin.com tak, aby správnou sadu pokynů.
+ Také odkazovat [Hello, iOS](https://docs.microsoft.com/xamarin/ios/get-started/hello-ios/hello-ios-quickstart?pivots=windows) návod (xamarin.com). Všimněte si, že na této stránce si být jisti, že "Visual Studio" je vybrat v pravém horním rohu stránky na xamarin.com tak, aby správnou sadu pokynů.
 
  **Přidat kód specifický pro platformu ve sdíleném projektu**
 
- Sdílený kód v PCL je nezávislá na platformě, vzhledem k tomu, PCL kompiluje jednou a součástí každý balíček aplikace pro konkrétní platformu. Pokud chcete zapisovat sdílený kód, který používá podmíněné kompilace izolovat platformě závislého kódu, můžete použít *sdílené* projektu. Další podrobnosti najdete v tématu [možnosti sdílení kód](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/sharing_code_options/) (xamarin.com).
+ Sdílený kód v PCL je nezávislá na platformě, vzhledem k tomu, PCL kompiluje jednou a součástí každý balíček aplikace pro konkrétní platformu. Pokud chcete zapisovat sdílený kód, který používá podmíněné kompilace izolovat platformě závislého kódu, můžete použít *sdílené* projektu. Další podrobnosti najdete v tématu [možnosti sdílení kód](https://docs.microsoft.com/xamarin/cross-platform/app-fundamentals/code-sharing) (xamarin.com).
 
 ## <a name="see-also"></a>Viz také
- [Web pro vývojáře v Xamarinu](http://developer.xamarin.com/) [Windows Dev Center](https://dev.windows.com/en-us) [Swift a C# plakát rychlý odkaz](https://aka.ms/scposter)
+ [Web pro vývojáře v Xamarinu](https://docs.microsoft.com/xamarin/) [Windows Dev Center](https://dev.windows.com/en-us) [Swift a C# plakát rychlý odkaz](https://aka.ms/scposter)

@@ -1,5 +1,5 @@
 ---
-title: Funkce více ladění | Dokumentace Microsoftu
+title: Další funkce ladění | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,40 +14,40 @@ caps.latest.revision: 15
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f2e6140b10b9f0c9a540144ca70bb081ac2d3e7a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0f20d9679bb0eb726c594ab75fd7a04bc821b97d
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157458"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300537"
 ---
 # <a name="more-debugging-features"></a>Další funkce ladění
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato část obsahuje další funkce, které můžete použít v ladicím programu sady Visual Studio.  
+Tato část obsahuje další funkce, které lze použít s ladicím programem sady Visual Studio.  
   
- Seznam a tipy k usnadnění ladění rychleji a snadněji, naleznete v tématu [a tipy k ladění](http://blogs.msdn.com/b/visualstudio/archive/2015/05/22/debugging-tips-and-tricks.aspx).  
+ Seznam tipů a triky pro rychlejší a jednodušší ladění najdete v tématu [tipy a triky pro ladění](https://devblogs.microsoft.com/visualstudio/debugging-tips-and-tricks/).  
   
 ## <a name="additional-features"></a>Další funkce  
  [Kontrola vlastností XAML při ladění](../debugger/inspect-xaml-properties-while-debugging.md)  
- Popisuje použití **Live Visual Tree** a **Live Property Explorer** nástroje.  
+ Popisuje použití **živého vizuálního stromu** a nástrojů **Průzkumníka živých vlastností** .  
   
  [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)  
- Popisuje různá nastavení, budete muset nastavit na použití ladicího programu v různých kontextech.  
+ Popisuje různá nastavení, která pravděpodobně budete muset nastavit, aby používala ladicí program v různých kontextech.  
   
  [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)  
- Popisuje různé ladicích oknech a  
+ Popisuje různá okna ladění a  
   
  [Ladění za běhu](../debugger/just-in-time-debugging-in-visual-studio.md)  
- Tento článek popisuje Just-In-Time ladění, které umožňuje spustit ladicí program automaticky při programu dojde k chybě při spuštění mimo sadu Visual Studio.  
+ Popisuje ladění za běhu, které může spustit ladicí program automaticky, když dojde k chybě programu při spuštění mimo sadu Visual Studio.  
   
- [Návod: Ladění v průběhu návrhu](../debugger/walkthrough-debugging-at-design-time.md)  
- Ukazuje způsob použití příkazové okno Visual Studio ke spuštění funkce nebo podprogramu, zatímco aplikace není spuštěna. 
+ [Návod: Ladění v době návrhu](../debugger/walkthrough-debugging-at-design-time.md)  
+ Ukazuje, jak použít příkazové okno aplikace Visual Studio ke spuštění funkce nebo podprogramu, dokud vaše aplikace neběží. 
   
  [Operace Upravit a pokračovat](../debugger/edit-and-continue.md)  
- Popisuje funkci upravit a pokračovat, nástroj, který vám umožní změnit zdrojový kód, zatímco je v režimu pozastavení a tyto změny použít bez nutnosti ukončit ladicí relaci a znovu sestavit program a obsahuje pokyny k povolení nebo zakázání to funkce.  
+ Popisuje příkaz Upravit a pokračovat, který umožňuje změnit zdrojový kód, zatímco je program v režimu pozastavení, a použít tyto změny bez nutnosti ukončit ladicí relaci a znovu sestavit program a poskytuje pokyny k povolení nebo zakázání tohoto zapnut.  
   
- [Použití souborů výpisu paměti](../debugger/using-dump-files.md) popisuje soubory s výpisem paměti, včetně informací o ukládání a otevírání. Soubory s výpisem paměti obsahují snímek stavu aplikace v určitém okamžiku v čase, obvykle po zhroucení. Pokud testujete program v počítači, který nemá žádné zdrojové soubory nebo soubory PDB nainstalované, můžete uložit soubor s výpisem paměti, když dojde k chybovému ukončení a použít soubor s výpisem paměti k ladění selhání v počítači sestavení, který obsahuje zdrojové soubory a soubory PDB. 
+ [Použití souborů výpisu paměti](../debugger/using-dump-files.md) Popisuje soubory s výpisem paměti, včetně pokynů při ukládání a otevírání. Soubory výpisu paměti obsahují snímek stavu vašeho programu v určitém okamžiku, obvykle po chybě. Pokud otestujete program na počítači, který nemá nainstalované zdrojové soubory nebo soubory PDB, můžete uložit soubor s výpisem paměti, když dojde k chybě, a použít soubor s výpisem paměti k ladění selhání na sestavovacím počítači, který má zdrojové soubory a soubory PDB. 
   
  [Postupy: Obnovení skrytých příkazů ladicího programu](../debugger/how-to-restore-hidden-debugger-commands.md)  
- Popisuje, jak zviditelnit příkazy ladícího programu, které byly skryté pomocí výchozího nastavení IDE.
+ Popisuje, jak zobrazit příkazy ladicího programu, které byly skryty ve výchozím nastavení IDE.

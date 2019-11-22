@@ -25,12 +25,12 @@ caps.latest.revision: 50
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0e65f2f33d9c7b034da6b58f32280c95a96bacd7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d5884dcd3f9e3cb8f1910d2e23ec80f910ed2fc9
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651260"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300999"
 ---
 # <a name="create-uml-modeling-projects-and-diagrams"></a>Vytváření projektů a diagramů pomocí modelování UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ Modely UML vám pomůžou pochopit, diskutovat a navrhovat softwarové systémy.
  Diagramy modelování UML a diagramy vrstev mohou existovat pouze v rámci projektu modelování. Každý projekt modelování obsahuje sdílený model UML a několik diagramů UML. Každý diagram je částečný pohled na model. Model UML obsahuje všechny prvky v diagramech UML a lze jej zobrazit pomocí Průzkumníka modelů UML. Informace o modelech a jejich vztahu k diagramům najdete v tématu [Úprava modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md). Informace o projektech modelování v rámci správy verzí naleznete v tématu [Správa modelů a diagramů v rámci správy verzí](../modeling/manage-models-and-diagrams-under-version-control.md) a [Strukturování řešení modelování](../modeling/structure-your-modeling-solution.md) .
 
 > [!NOTE]
-> Je k dispozici jiný druh diagramu, diagram tříd .NET, který slouží k vizualizaci kódu programu. Další informace najdete v tématu [navrhování a zobrazování tříd a typů](http://go.microsoft.com/fwlink/?LinkId=142231).
+> Je k dispozici jiný druh diagramu, diagram tříd .NET, který slouží k vizualizaci kódu programu. Další informace najdete v tématu [navrhování a zobrazování tříd a typů](https://go.microsoft.com/fwlink/?LinkId=142231).
 
 ## <a name="CreatingModelingDiagrams"></a>Vytvoření diagramu v projektu modelování
  Chcete-li zjistit, které verze aplikace Visual Studio tuto funkci podporují, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
@@ -59,7 +59,7 @@ Modely UML vám pomůžou pochopit, diskutovat a navrhovat softwarové systémy.
 
    - Vyberte projekt modelování, který již existuje ve vašem řešení, a klikněte na tlačítko **OK**.
 
-     \- nebo-
+     \- nebo –
 
    1. Vyberte **vytvořit nový projekt modelování**a pak klikněte na **OK**.
 
@@ -80,7 +80,7 @@ Modely UML vám pomůžou pochopit, diskutovat a navrhovat softwarové systémy.
 
 2. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
-3. V dialogovém okně **Přidat novou položku-** *\<project název >* v části **šablony**klikněte na typ diagramu modelování, například **Diagram komponent UML**.
+3. V dialogovém okně **Přidat novou položku –** *\<název projektu >* v části **šablony**klikněte na typ diagramu modelování, například **Diagram komponent UML**.
 
 4. Zadejte název diagramu a pak klikněte na **Přidat**.
 
@@ -136,21 +136,21 @@ Modely UML vám pomůžou pochopit, diskutovat a navrhovat softwarové systémy.
      Diagram modelování se otevře a zobrazí se v projektu modelování.
 
     > [!NOTE]
-    > Každý diagram obsahuje dvojici souborů v systému souborů. Nevybírejte soubor, který má `.layout` rozšíření. Visual Studio také nepodporuje přidávání existujících diagramů UML do více projektů modelování. Každý soubor diagramu musí být otevřen v rámci projektu modelování, ve kterém byl vytvořen. Je to proto, že diagram UML zobrazuje zobrazení modelu, který vlastní projekt modelování.
+    > Každý diagram obsahuje dvojici souborů v systému souborů. Nevybírejte soubor, který má `.layout`rozšíření. Visual Studio také nepodporuje přidávání existujících diagramů UML do více projektů modelování. Každý soubor diagramu musí být otevřen v rámci projektu modelování, ve kterém byl vytvořen. Je to proto, že diagram UML zobrazuje zobrazení modelu, který vlastní projekt modelování.
 
 ## <a name="NonModelDiagrams"></a>Diagramy, které nevyžadují modelování projektů
  Následující typy diagramů nejsou součástí projektu modelování:
 
 - Diagramy tříd, které jsou vytvořeny jako zobrazení zdrojového kódu. Nesouvisejí s diagramy tříd UML. Další informace najdete v tématu [navrhování a zobrazování tříd a typů](../ide/designing-and-viewing-classes-and-types.md).
 
-- Mapy kódu. Podívejte [se na téma mapování závislostí napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md).
+- Mapy kódu. Zobrazit [mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md).
 
 - Diagramy, které nejsou diagramy UML nebo diagramy vrstev, například jazyky specifické pro doménu.
 
 ## <a name="TroubleshootingModelingProjects"></a>Řešení potíží s modelováním projektů a diagramů
  Následující tabulka popisuje problémy, které mohou nastat v projektech modelování nebo diagramech a jejich řešení:
 
-|**Chybu**|**Mít**|**Rozhodnutí**|
+|**Chybu**|**Mít**|**Řešení**|
 |---------------|----------------|--------------------|
 |Projekt modelování nelze otevřít nebo načíst do řešení.<br /><br /> Zobrazí se následující zpráva:<br /><br /> Jeden nebo více projektů v řešení nebylo načteno správně. Podrobnosti najdete v okno Výstup. "<br /><br /> V okně výstup se zobrazí následující zpráva:<br /><br /> "*ModelingProjectFilenameAndPath*. modelproj: Error: nerozpoznaný formát GUID"|Projekt modelování má odkazy na projekty, které mají stejný název a jsou ve stejném řešení.<br /><br /> Například vrstva je propojena s projekty, které mají stejný název a jsou ve stejném řešení.|Pomocí textového editoru otevřete soubor projektu modelování, odeberte odkazy a pak zkuste projekt modelování znovu otevřít.<br /><br /> Chcete-li se tomuto problému vyhnout, nepřidávejte odkazy na projekty, které mají stejný název. Ujistěte se, že projekty mají jedinečné názvy.|
 |V diagramech, které jsou přidány, zkopírovány nebo přetaženy na jiné projekty modelování nebo na jiná umístění v řešení, chybí prvky.<br /><br /> ani<br /><br /> Při pokusu o otevření diagramu se zobrazí následující zprávy:<br /><br /> -"Některé obrazce nebo konektory v diagramu chybí, protože jejich definice v tomto projektu neexistují. Z modelu byly odstraněny buď definice v době, kdy byl diagram zavřen, nebo byl diagram zkopírován do jiného projektu, který tyto definice neobsahuje. "<br /><br /> ani<br /><br /> – "Tento dokument je otevřen jiným projektem."|Soubor diagramu byl přidán, přetažen nebo zkopírován z projektu modelování do jiného projektu modelování nebo do jiného umístění v řešení.|Chcete-li zkopírovat soubor diagramu, vytvořte nový diagram a potom zkopírujte prvky ze zdrojového diagramu do nového diagramu.|

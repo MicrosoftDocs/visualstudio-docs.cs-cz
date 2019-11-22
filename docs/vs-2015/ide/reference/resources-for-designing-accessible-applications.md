@@ -14,17 +14,17 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5cc95418f392e3c771350428e26e1447dae3bcf5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: af300bca2b1e679eae58a92962067fcd50fea78f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665564"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297784"
 ---
 # <a name="resources-for-designing-accessible-applications"></a>Prostředky pro navržení aplikací usnadňujících přístup
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Pomocí následujících odkazů můžete najít informace o technologiích, které podporují dostupný návrh, a také tipy a příklady pro vývoj přístupných aplikací a webů s Windows. Obecné informace o usnadnění najdete online v [http://www.microsoft.com/enable/](http://www.microsoft.com/enable/).
+Pomocí následujících odkazů můžete najít informace o technologiích, které podporují dostupný návrh, a také tipy a příklady pro vývoj přístupných aplikací a webů s Windows. Obecné informace o usnadnění najdete online v [http://www.microsoft.com/enable/](https://www.microsoft.com/accessibility/).
 
 ## <a name="technologies"></a>Technik
 
@@ -54,7 +54,7 @@ Pomocí následujících odkazů můžete najít informace o technologiích, kte
 
 ### <a name="third-party-resources"></a>Prostředky třetích stran
 
-- **Iniciativa webové dostupnosti konsorcium World Wide Web (W3C)** Tento web poskytuje pokyny a techniky pro přístup k webovému vývoji pro web. Další informace najdete na webu [http://www.w3.org/WAI/GL/](http://www.w3.org/WAI/GL/).
+- **Iniciativa webové dostupnosti konsorcium World Wide Web (W3C)** Tento web poskytuje pokyny a techniky pro přístup k webovému vývoji pro web. Další informace najdete na webu [http://www.w3.org/WAI/GL/](https://www.w3.org/WAI/GL/).
 
 ## <a name="see-also"></a>Viz také
  [Funkce sady Visual Studio pro usnadnění přístupu](../../ide/reference/accessibility-features-of-visual-studio.md)

@@ -9,12 +9,12 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 26065ac7d9b92a8d9bc12f8f7843d8a0fb93f7ac
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 16a51c7fc05d51b551884f70dc514e8939962818
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669767"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296035"
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>Referenční dokumentace jazyka přímého značení grafů (DGML)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,7 +24,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
  Všimněte si, že některé verze sady Visual Studio podporují pouze podmnožinu funkcí DGML, viz [podpora verzí pro architektury a nástroje pro modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 > [!NOTE]
-> Při úpravách souboru .dgml usnadňuje technologie IntelliSense určení atributů, které jsou k dispozici pro každý prvek, a jejich hodnot. Pro určení barvy v atributu použijte názvy pro běžné barvy, například „Blue“ (modrá) nebo šestnáctkové hodnoty ARGB, jako je například „#ffa0b1c3“. Jazyk DGML používá malou podmnožinu formátů definice barev Windows Presentation Foundation (WPF). Další informace naleznete v tématu [Třída Colors](http://go.microsoft.com/fwlink/?LinkId=182345).
+> Při úpravách souboru .dgml usnadňuje technologie IntelliSense určení atributů, které jsou k dispozici pro každý prvek, a jejich hodnot. Pro určení barvy v atributu použijte názvy pro běžné barvy, například „Blue“ (modrá) nebo šestnáctkové hodnoty ARGB, jako je například „#ffa0b1c3“. Jazyk DGML používá malou podmnožinu formátů definice barev Windows Presentation Foundation (WPF). Další informace naleznete v tématu [Třída Colors](https://go.microsoft.com/fwlink/?LinkId=182345).
 
 ## <a name="DGML"></a>Syntaxe DGML
  Následující tabulka popisuje typy prvků, které jsou používány v DGML:
@@ -39,7 +39,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
    `BackgroundImage` – umístění souboru obrázku, který se má použít jako pozadí mapy.
 
-   `GraphDirection` – Pokud je mapa nastavená na rozložení stromu (`Sugiyama`), uspořádejte uzly tak, aby většina odkazů pokračovala v zadaném směru: `TopToBottom`, `BottomToTop`, `LeftToRight` nebo `RightToLeft`. Viz [Změna rozložení mapy](../modeling/browse-and-rearrange-code-maps.md#Selecting).
+   `GraphDirection` – Pokud je mapa nastavená na rozložení stromu (`Sugiyama`), uspořádejte uzly tak, aby většina odkazů pokračovala v zadaném směru: `TopToBottom`, `BottomToTop`, `LeftToRight`nebo `RightToLeft`. Viz [Změna rozložení mapy](../modeling/browse-and-rearrange-code-maps.md#Selecting).
 
    `Layout` – nastavte mapu na následující rozložení: `None`, `Sugiyama` (rozložení stromové struktury), `ForceDirected` (rychlé clustery) nebo `DependencyMatrix`. Viz [Změna rozložení mapy](../modeling/browse-and-rearrange-code-maps.md#Selecting).
 
@@ -98,7 +98,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
    `Label` – zobrazovaný název uzlu.
 
-   Atributy stylu. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Atributy stylu. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    `Category` – název kategorie, která identifikuje prvky, které sdílejí tento atribut. Další informace naleznete v tématu `<Category/>` element.
 
@@ -106,7 +106,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
    `Group` – Pokud uzel obsahuje další uzly, nastavte tento atribut na `Expanded` nebo `Collapsed` pro zobrazení nebo skrytí jeho obsahu. Musí existovat `<Link/>` element, který obsahuje atribut `Category="Contains"` a určuje nadřazený uzel jako zdrojový uzel a podřízený uzel jako cílový uzel. Viz [prvky kódu skupiny](../modeling/customize-code-maps-by-editing-the-dgml-files.md#OrganizeNodes).
 
-   `Visibility` – nastavte tento atribut na `Visible`, `Hidden` nebo `Collapsed`. Používá `System.Windows.Visibility`. Viz [Skrytí nebo zobrazení uzlů a propojení](../modeling/browse-and-rearrange-code-maps.md#HidingShowing).
+   `Visibility` – nastavte tento atribut na `Visible`, `Hidden`nebo `Collapsed`. Používá `System.Windows.Visibility`. Viz [Skrytí nebo zobrazení uzlů a propojení](../modeling/browse-and-rearrange-code-maps.md#HidingShowing).
 
    `Reference` – nastavte tento atribut tak, aby se připojovat k dokumentu nebo adrese URL. Viz [odkazování dokumentů nebo adres URL na prvky kódu a odkazy](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences).
 
@@ -163,7 +163,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
    `Label` – zobrazovaný název odkazu
 
-   Atributy stylu. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Atributy stylu. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    `Category` – název kategorie, která identifikuje prvky, které sdílejí tento atribut. Další informace naleznete v tématu `<Category/>` element.
 
@@ -220,7 +220,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
    V příkladu pro tento prvek kategorie `FailedTest` dědí svůj `Stroke` atribut z kategorie `PassedTest`. Viz "vytvoření hierarchických kategorií" v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
-   Kategorie také poskytují některé základní chování šablony, které řídí vzhled uzlů a propojení, když jsou zobrazeny na mapě. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Kategorie také poskytují některé základní chování šablony, které řídí vzhled uzlů a propojení, když jsou zobrazeny na mapě. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    Příklad:
 
@@ -311,7 +311,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 </Paths>
 ```
 
- Chcete-li odkazovat na alias z prvku v souboru. dgml, vložte `Id` elementu \<Path/> znakem dolaru ($) a závorkami (()):
+ Chcete-li odkazovat na alias z prvku v souboru. dgml, vložte `Id` \<ho prvku cesta/> znak dolaru ($) a závorky (()):
 
 ```xml
 <Nodes>

@@ -9,19 +9,19 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 124fc1027e3b5eba537341c87ae2a80ce5c325bc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a2757201f482682b8fdf26275f510984629204f6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666073"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300910"
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>Začínáme s jazyky specifickými pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Toto téma vysvětluje základní pojmy při definování a používání jazyka DSL (Domain Specific Language) vytvořeného pomocí sady Modeling SDK pro Visual Studio.
 
- Pokud s DSL začínáte, doporučujeme vám pracovat přes **testovací prostředí nástrojů DSL**, které najdete na tomto webu: [VISUALIZATON and modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128)
+ Pokud s DSL začínáte, doporučujeme vám pracovat přes **testovací prostředí nástrojů DSL**, které najdete na tomto webu: [VISUALIZATON and modeling SDK](https://go.microsoft.com/fwlink/?LinkID=186128)
 
 ## <a name="what-can-you-do-with-a-domain-specific-language"></a>K čemu slouží jazyk specifický pro doménu?
  Jazyk specifický pro doménu je notaci, obvykle grafický, který je navržený tak, aby se použil pro konkrétní účel. Naopak jazyky, jako je například UML, jsou obecné účely. V DSL můžete definovat typy prvku modelu a jejich vztahy a jak jsou uvedeny na obrazovce.
@@ -37,12 +37,12 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
  Zbytek tohoto přehledu je návod, který zavádí základní operace vytváření a používání jazyka specifického pro doménu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
 ## <a name="prerequisites"></a>Požadavky
- K definování DSL musíte mít nainstalované následující součásti:
+ Pokud chcete definovat DSL, musíte mít nainstalovaný následující komponenty:
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://go.microsoft.com/fwlink/?LinkId=185579)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://go.microsoft.com/fwlink/?LinkId=185580)|
 |Sada Modeling SDK pro Visual Studio|[Stáhnout MSDK](https://www.microsoft.com/download/details.aspx?id=48148)|
 
 ## <a name="creating-a-dsl-solution"></a>Vytvoření řešení DSL
@@ -112,9 +112,9 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
     Spustí se experimentální instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Experimentální instance přebírá své nastavení z samostatného podstromu registru, kde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření jsou registrována pro účely ladění. Běžné instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nemají přístup k rozšířením zaregistrovaným v této části.
 
-3. V experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] otevřete soubor modelu s názvem **test** z **Průzkumník řešení**.
+3. V experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]otevřete soubor modelu s názvem **test** z **Průzkumník řešení**.
 
-    \- nebo-
+    \- nebo –
 
     Klikněte pravým tlačítkem na projekt ladění, přejděte na **Přidat**a pak klikněte na **položka**. V dialogovém okně **Přidat položku** vyberte typ souboru vaší DSL.
 
@@ -141,7 +141,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
  Model můžete zobrazit jako strom v zobrazení **Průzkumníka** při úpravách modelu. Při přidávání tvarů do diagramu se prvky modelu zobrazí také v Průzkumníkovi. Průzkumník lze použít i v případě, že není k dispozici žádný diagram.
 
- Pokud Průzkumník nevidíte v instanci ladění [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], v nabídce **zobrazení** přejděte na položku **ostatní okna**a klikněte na příkaz *\<Your Language >* **Explorer**.
+ Pokud Průzkumník nevidíte v instanci ladění [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], v nabídce **zobrazení** přejděte na položku **ostatní okna**a potom klikněte na položku *\<jazyka >* **Explorer**.
 
 ### <a name="the-api-of-your-dsl"></a>Rozhraní API vaší DSL
  Vaše DSL vygeneruje rozhraní API, které umožňuje čtení a aktualizaci modelů, které jsou instancemi DSL. Jednou z aplikací rozhraní API je generování textových souborů z modelu. Další informace najdete v tématu [generování kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
@@ -158,13 +158,13 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
 ##### <a name="to-regenerate-text-files-after-you-change-the-model-file"></a>Chcete-li znovu vygenerovat textové soubory po změně souboru modelu
 
-1. V experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uložte soubor modelu.
+1. V experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]uložte soubor modelu.
 
 2. Ujistěte se, že parametr názvu souboru v každém souboru. TT odkazuje na soubor modelu, který používáte pro experimenty. Uložte soubor. tt.
 
 3. Klikněte na možnost **transformovat všechny šablony** na panelu nástrojů **Průzkumník řešení**.
 
-    \- nebo-
+    \- nebo –
 
     Klikněte pravým tlačítkem na šablony, které chcete znovu vygenerovat, a pak klikněte na **Spustit vlastní nástroj**.
 
@@ -200,7 +200,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
     2. Otevřete okno Vlastnosti a umístěte ho, aby se zobrazily současně Průzkumník DSL a vlastnosti.
 
-    3. V Průzkumníku DSL rozbalte **Editor**, **karty nástrojů**, *\<your DSL >* a pak **nástroje**.
+    3. V Průzkumníku DSL rozbalte **Editor**, **karty nástrojů**, *\<> DSL*a pak **nástroje**.
 
     4. Klikněte na **ExampleElement**. Toto je položka sady nástrojů, která se používá k vytvoření prvků.
 
@@ -218,7 +218,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
     3. Stiskněte klávesu F5. Počkejte, dokud se nezobrazí experimentální instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
-4. V řešení ladění v experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] otevřete soubor testovacího modelu. Přetáhněte prvky na ni ze sady nástrojů. Všimněte si, že se změnily popisy tlačítek a názvy typů v Průzkumníkovi DSL.
+4. V řešení ladění v experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]otevřete soubor testovacího modelu. Přetáhněte prvky na ni ze sady nástrojů. Všimněte si, že se změnily popisy tlačítek a názvy typů v Průzkumníkovi DSL.
 
 5. Uložte soubor modelu.
 
@@ -324,7 +324,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
     1. V **Průzkumníku DSL**rozbalte **Editor** a pak vyberte **karty nástrojů**.
 
-    2. Pravým tlačítkem myši klikněte na *\<your DSL >* a pak klikněte na **Přidat nový nástroj element**.
+    2. Klikněte pravým tlačítkem na *\<> DSL* a pak klikněte na **Přidat nový nástroj element**.
 
     3. Nastavte vlastnost **název** nového nástroje a vlastnost **Class** nastavte na město.
 
@@ -332,7 +332,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
 7. Vytvořte nástroj konektoru pro vytvoření propojení mezi městy a lidmi.
 
-    1. Klikněte pravým tlačítkem na *\<your DSL >* a pak klikněte na **Přidat nový nástroj konektoru**.
+    1. Klikněte pravým tlačítkem na *\<> DSL* a pak klikněte na **Přidat nový nástroj konektoru**.
 
     2. Nastavte vlastnost název nového nástroje.
 
@@ -342,7 +342,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
 8. Uložte definici DSL, klikněte na **transformovat všechny šablony**a potom stiskněte klávesu **F5**.
 
-9. V experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] otevřete soubor testovacího modelu. Pomocí nových nástrojů můžete vytvářet městy a propojení mezi městy a osobami. Všimněte si, že můžete vytvořit pouze propojení mezi správnými typy elementu.
+9. V experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]otevřete soubor testovacího modelu. Pomocí nových nástrojů můžete vytvářet městy a propojení mezi městy a osobami. Všimněte si, že můžete vytvořit pouze propojení mezi správnými typy elementu.
 
 10. Vytvořte kód, ve kterém se zobrazí město, ve kterém každý člověk bydlí. Textové šablony jsou jedno z míst, kde můžete spustit takový kód. Můžete například upravit existující soubor Sample.tt v řešení ladění tak, aby obsahoval následující kód:
 
@@ -399,4 +399,4 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 2. Znovu sestavte všechna experimentální DSL nebo jiná experimentální [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření, která chcete dál používat.
 
 ## <a name="see-also"></a>Viz také
- [Porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md) [jak definovat jazykovou](../modeling/how-to-define-a-domain-specific-language.md) [sadu Visualizaton a Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128) specifické pro doménu
+ [Porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md) [jak definovat jazykovou](../modeling/how-to-define-a-domain-specific-language.md) [sadu Visualizaton a Modeling SDK](https://go.microsoft.com/fwlink/?LinkID=186128) specifické pro doménu

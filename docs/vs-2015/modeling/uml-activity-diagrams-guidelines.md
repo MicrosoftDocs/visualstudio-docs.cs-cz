@@ -15,17 +15,17 @@ caps.latest.revision: 50
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: abcc83a301553ee0c6141502c25903ef2153258b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 692859008891439e4af3d751306bfd3ee6d351e8
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658486"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298985"
 ---
 # <a name="uml-activity-diagrams-guidelines"></a>Diagramy činnosti UML: Pokyny
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního procesu nebo softwarového algoritmu jako toku práce prostřednictvím řady akcí. Tyto akce mohou provádět osoby, softwarové komponenty nebo zařízení. Ukázku videa najdete v tématu: [zachycení obchodních pracovních postupů pomocí diagramů aktivit](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-4-Capture-Business-Workflows/).
+V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního procesu nebo softwarového algoritmu jako toku práce prostřednictvím řady akcí. Tyto akce mohou provádět osoby, softwarové komponenty nebo zařízení. Ukázku videa najdete v tématu: [zachycení obchodních pracovních postupů pomocí diagramů aktivit](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-4-capture-business-workflows).
 
  Chcete-li zjistit, které verze aplikace Visual Studio tuto funkci podporují, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -93,7 +93,7 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
 
 - V **Průzkumníku modelů UML**přetáhněte aktivitu do balíčku.
 
-     \- nebo-
+     \- nebo –
 
 - V **Průzkumníku modelů UML**klikněte pravým tlačítkem myši na aktivitu a pak klikněte na **Vyjmout**. Pak klikněte pravým tlačítkem na balíček a pak klikněte na **Vložit**.
 
@@ -398,7 +398,7 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
 
 - Připojí komentář ke vstupnímu nebo výstupnímu PIN kódu.
 
-  - Pokud chcete tento popis odlišit od obecného komentáře, můžete začít komentovat < \<**transformaci**> > nebo < \<**výběru**> >.
+  - Pokud chcete tento popis odlišit od obecného komentáře, můžete začít komentovat <\<**transformaci**> > nebo <\<**výběru**> >.
 
 - V samostatném diagramu aktivity zadejte transformaci nebo výběr podrobněji.
 
@@ -408,7 +408,7 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
 
 1. Vytvořte nový diagram aktivity, ve kterém můžete popsat transformaci nebo tok výběru.
 
-   - V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt, přejděte na **Přidat**, klikněte na **Nová položka**a pak klikněte na **Diagram aktivity**. Poskytněte diagramu vhodný název pro transformaci nebo tok výběru. Klikněte na tlačítko **Přidat**.
+   - V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt, přejděte na **Přidat**, klikněte na **Nová položka**a pak klikněte na **Diagram aktivity**. Poskytněte diagramu vhodný název pro transformaci nebo tok výběru. Klikněte na tlačítko **Add** (Přidat).
 
 2. V novém diagramu:
 
@@ -427,4 +427,4 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
    Můžete také definovat výběr pro uzel objektu a na jednotlivé vstupní a výstupní kódy PIN. Definujte aktivitu výběru jako v předchozím postupu a pak nastavte vlastnost **výběru** uzlu objektu nebo vstupní nebo výstupní PIN kód.
 
 ## <a name="see-also"></a>Viz také
- Postup [Úpravy modelů a diagramů](../modeling/edit-uml-models-and-diagrams.md) UML [sekvenčních diagramů UML: referenční](../modeling/uml-sequence-diagrams-reference.md) diagramy [komponent UML](../modeling/uml-component-diagrams-reference.md) : referenční diagramy [případů použití](../modeling/uml-use-case-diagrams-reference.md) UML: referenční diagramy [tříd](../modeling/uml-class-diagrams-reference.md) UML: Referenční dokumentace [diagramů komponent](../modeling/uml-component-diagrams-reference.md) UML: referenční [dokumentace Video: zachycení obchodních pracovních postupů pomocí diagramů činností](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-4-Capture-Business-Workflows/)
+ Diagramy sekvence UML pro [Úpravy modelů a diagramů](../modeling/edit-uml-models-and-diagrams.md) UML [: referenční diagramy](../modeling/uml-sequence-diagrams-reference.md) [komponent UML](../modeling/uml-component-diagrams-reference.md) : referenční diagramy [případů použití](../modeling/uml-use-case-diagrams-reference.md) UML: referenční diagramy [tříd](../modeling/uml-class-diagrams-reference.md) UML: Referenční dokumentace k diagramům [komponent](../modeling/uml-component-diagrams-reference.md) UML: referenční [video: zachycení obchodních pracovních postupů pomocí diagramů činnosti](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-4-capture-business-workflows)

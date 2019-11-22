@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Webový server není správně nakonfigurován. | Dokumentace Microsoftu'
+title: 'Chyba: webový server není správně nakonfigurován | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,23 +18,23 @@ caps.latest.revision: 25
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 643be465aab889b1f31e8fa75dba68261444bc31
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2f5df9fb04849fce94d1a82748f2fc88f9577667
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68203205"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297441"
 ---
-# <a name="error-the-web-server-is-not-configured-correctly"></a>Chyba: Webový server není správně nakonfigurovaný.
+# <a name="error-the-web-server-is-not-configured-correctly"></a>Chyba: Webový server není správně nakonfigurován.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Mezi možné příčiny této chyby patří:  
   
-- Došlo k pokusu o ladění aplikace .NET Web, který byl zkopírován do jiného počítače, ručně přejmenovat nebo přesunout.  
+- Při pokusu o ladění webové aplikace .NET, která byla zkopírována do jiného počítače, ručně přejmenována nebo přesunuta.  
   
-- Nemají dostatek připojení služby IIS. Další informace o nasazení webu do služby IIS najdete v tématu [vytvořit webovou stránku](http://www.iis.net/learn/get-started/getting-started-with-iis/create-a-web-site).  
+- Nemáte dostatečná připojení služby IIS. Další informace o nasazení webu do služby IIS najdete v tématu [Vytvoření](https://docs.microsoft.com/iis/get-started/getting-started-with-iis/create-a-web-site)webu.  
   
-- Pokud se pokoušíte ladit aplikaci ASP.NET, najdete [publikování do služby IIS](https://docs.asp.net/en/latest/publishing/iis.html) pokyny k nasazení ke vzdálenému počítači se službou IIS 8 nebo novější, nebo [vzdálené ladění ASP.NET ve vzdáleném počítači7.5službyIIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) pokyny k nasazení na vzdálený počítač se systémem službu IIS 7.5.  
+- Pokud se pokoušíte ladit aplikaci ASP.NET, přečtěte si téma [publikování do služby IIS](https://docs.asp.net/en/latest/publishing/iis.html) , kde najdete pokyny k nasazení do vzdáleného počítače se službou IIS 8 nebo vyšší nebo [vzdáleného ladění ASP.NET na vzdáleném počítači se službou IIS 7,5](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) , kde najdete pokyny k nasazení do vzdáleného počítače se službou IIS 7,5.  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

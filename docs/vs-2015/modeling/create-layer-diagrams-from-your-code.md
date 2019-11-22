@@ -14,12 +14,12 @@ caps.latest.revision: 64
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 138f818eab34b0b1860c7daa85f1b6814888fc9b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3e6cd77e785adb59fc8b2cf3b28724ed0efe1ae3
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652850"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300281"
 ---
 # <a name="create-layer-diagrams-from-your-code"></a>Vytváření diagramů vrstev z kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -64,7 +64,7 @@ K vizualizaci logické architektury vysoké úrovně softwarového systému vytv
 
  Chcete-li zjistit, zda propojená položka podporuje ověřování, otevřete **Průzkumníka vrstev** a Prohlédněte si vlastnost **podporuje ověření** položky. Viz [Správa odkazů na artefakty](#Managing).
 
-|**Schopn**|**Postupujte podle těchto kroků**|
+|**To**|**Postupujte podle těchto kroků**|
 |------------|----------------------------|
 |Vytvoření vrstvy pro jeden artefakt|<ol><li>Přetáhněte položku do diagramu vrstev z těchto zdrojů:<br /><br /> <ul><li>**Průzkumník řešení**<br /><br />         Přetáhnout můžete například soubory nebo projekty.</li><li>Mapy kódu<br /><br />         Viz [Mapování závislostí napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md) a [použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md).</li><li>**Zobrazení tříd** nebo **Prohlížeč objektů**</li></ul><br />     Vrstva se zobrazí v diagramu a je propojena s artefaktem.</li><li>Přejmenujte vrstvu tak, aby odrážela odpovědnosti přidruženého kódu nebo artefaktů.</li></ol> **Důležité informace:**  Přetahování binárních souborů do diagramu vrstev nepřidá automaticky své odkazy do projektu modelování. Binární soubory, které chcete ověřit, je třeba ručně přidat do projektu modelování. **Přidání binárních souborů do projektu modelování** <ol><li>V **Průzkumník řešení**otevřete místní nabídku pro projekt modelování a zvolte možnost **Přidat existující položku**.</li><li>V dialogovém okně **Přidat existující položku** vyhledejte binární soubory, vyberte je a pak zvolte **OK**.     Binární soubory se zobrazí v projektu modelování.</li><li>V **Průzkumník řešení**zvolte binární soubor, který jste přidali, a potom stisknutím klávesy **F4** otevřete okno **vlastnosti** .</li><li>V každém binárním souboru nastavte vlastnost **Akce sestavení** na hodnotu **ověřit**.</li></ol>|
 |Vytvoření jedné vrstvy pro všechny vybrané artefakty|Přetáhněte všechny artefakty do diagramu vrstev současně.<br /><br /> Vrstva se zobrazí v diagramu a je propojena se všemi artefakty.|
@@ -94,7 +94,7 @@ K vizualizaci logické architektury vysoké úrovně softwarového systému vytv
 
 2. Ke správě těchto propojení použijte následující úlohy:
 
-|**Schopn**|**V Průzkumníkovi vrstev**|
+|**To**|**V Průzkumníkovi vrstev**|
 |------------|---------------------------|
 |Odstranění propojení mezi vrstvou a artefaktem|Otevřete místní nabídku pro odkaz na artefakt a pak zvolte **Odstranit**.|
 |Přesunutí propojení z jedné vrstvy do druhé|Přetáhněte do diagramu propojení artefaktu s existující vrstvou.<br /><br /> ani<br /><br /> 1. Otevřete místní nabídku pro odkaz na artefakt a pak zvolte **Vyjmout**.<br />2. v diagramu vrstvy otevřete místní nabídku pro vrstvu a pak zvolte **Vložit**.|
@@ -115,7 +115,7 @@ K vizualizaci logické architektury vysoké úrovně softwarového systému vytv
 ## <a name="EditDependencies"></a>Úprava vrstev a závislostí pro zobrazení zamýšleného návrhu
  Chcete-li zobrazit popis změn, které máte v plánu provést v systému nebo v požadované architektuře, upravte diagram vrstev:
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**To**|**Proveďte tyto kroky**|
 |------------|-----------------------------|
 |Změna nebo omezení směru závislosti|Nastavte vlastnost **Direction** .|
 |Vytvoření nových závislostí|Použijte nástroje **závislosti** a **obousměrné závislosti** .<br /><br /> Chcete-li nakreslit více závislostí, klikněte na nástroj dvakrát. Po dokončení vyberte nástroj **ukazatel** nebo stiskněte klávesu **ESC** .|
@@ -136,4 +136,4 @@ K vizualizaci logické architektury vysoké úrovně softwarového systému vytv
 - [Nalezení potenciálních problémů pomocí analyzátorů mapy kódu](../modeling/find-potential-problems-using-code-map-analyzers.md)
 
 ## <a name="see-also"></a>Viz také
- [Video pro kanál 9: návrh a ověření vaší architektury pomocí](http://go.microsoft.com/fwlink/?LinkID=252073) diagramů vrstev diagramů vrstev [: diagramy referenčních](../modeling/layer-diagrams-reference.md) [vrstev: pokyny](../modeling/layer-diagrams-guidelines.md) [ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md) [vizualizuje kód](../modeling/visualize-code.md)
+ [Video pro kanál 9: návrh a ověření vaší architektury pomocí](https://go.microsoft.com/fwlink/?LinkID=252073) diagramů vrstev diagramů vrstev [: diagramy referenčních](../modeling/layer-diagrams-reference.md) [vrstev: pokyny](../modeling/layer-diagrams-guidelines.md) [ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md) [vizualizuje kód](../modeling/visualize-code.md)

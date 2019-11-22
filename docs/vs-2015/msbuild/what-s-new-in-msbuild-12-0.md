@@ -1,5 +1,5 @@
 ---
-title: Co&#39;nového v MSBuild 12.0 | Dokumentace Microsoftu
+title: Co&#39;je nového v MSBuild 12,0 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -9,37 +9,37 @@ caps.latest.revision: 26
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9746b156d2ec959f2ffb5bbff41b3891516d130f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9d088844a3d8c1137b762b541b0393f939cdc194
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68193614"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301288"
 ---
-# <a name="what39s-new-in-msbuild-120"></a>Co&#39;nového v MSBuild 12.0
+# <a name="what39s-new-in-msbuild-120"></a>Co&#39;je nového v MSBuild 12,0
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nástroj MSBuild je nyní nainstalován jako součást sady Visual Studio, nikoli jako součást rozhraní .NET Framework. Aktuální číslo verze nástroje MSBuild je 12.0. Pokud chcete nainstalovat nástroj MSBuild samostatně, stáhněte si instalační balíček z [MSBuild Stáhnout](http://go.microsoft.com/fwlink/?LinkId=309745).  
+Nástroj MSBuild je nyní nainstalován jako součást sady Visual Studio, nikoli jako součást .NET Framework. Aktuální číslo verze nástroje MSBuild je 12,0. Pokud chcete nástroj MSBuild nainstalovat samostatně, Stáhněte instalační balíček z nástroje [MSBuild stáhnout](https://go.microsoft.com/fwlink/?LinkId=309745).  
   
-## <a name="changed-path"></a>Změněné cesta  
- Nástroj MSBuild je nyní nainstalován přímo pod *% ProgramFiles %* – například v C:\Program Files\MSBuild\\.  
+## <a name="changed-path"></a>Změněná cesta  
+ Nástroj MSBuild je nyní nainstalován přímo pod *% ProgramFiles%* , například v adresáři C:\Program Files\MSBuild\\.  
   
 ## <a name="changed-properties"></a>Změněné vlastnosti  
- V důsledku nové číslo verze se mění následující vlastnosti nástroje MSBuild:  
+ Následující vlastnosti nástroje MSBuild se změní v důsledku nového čísla verze:  
   
-- `MSBuildToolsVersion` pro tuto verzi sady nástrojů je 12.0.  
+- `MSBuildToolsVersion` pro tuto verzi nástrojů je 12,0.  
   
-- `MSBuildToolsPath` je teď %ProgramFiles%\MSBuild\12.0\bin na 32bitové operační systémy nebo %ProgramFiles%\MSBuild\12.0\bin\amd64 v 64bitových operačních systémech.  
+- `MSBuildToolsPath` se teď%ProgramFiles%\MSBuild\12.0\bin na 32 operačních systémů nebo%ProgramFiles%\MSBuild\12.0\bin\amd64 na 64 operačních systémech.  
   
-- `ToolsVersion` hodnoty můžete najít v HKLM\SOFTWARE\Microsoft\MSBuild\ToolsVersions\12.0 pro 32bitové operační systémy nebo HKLM\SOFTWARE\Wow6432Node\Microsoft\MSBuild\ToolsVersions\12.0 pro 64bitové operační systémy.  
+- hodnoty `ToolsVersion` najdete v HKLM\SOFTWARE\Microsoft\MSBuild\ToolsVersions\12.0 pro 32 operační systémy nebo HKLM\SOFTWARE\Wow6432Node\Microsoft\MSBuild\ToolsVersions\12.0 pro 64 operační systémy.  
   
-- `SDK35ToolsPath` a `SDK40ToolsPath` vlastnosti odkazovat na rozhraní .NET Framework SDK je zabalený s touto verzí sady Visual Studio (například 8.1a pro nástroje 4.X).  
+- Vlastnosti `SDK35ToolsPath` a `SDK40ToolsPath` odkazují na sadu .NET Framework SDK, která je zabalena s touto verzí sady Visual Studio (například 8.1 A pro nástroje 4. X).  
   
 ## <a name="new-properties"></a>Nové vlastnosti  
   
-- `MSBuildFrameworkToolsPath` je nová vlastnost, která má hodnotu %windir%\Microsoft.NET\Framework\v4.0.30319 na 32bitové operační systémy nebo %windir%\Microsoft.NET\Framework64\v4.0.30319 v 64bitových operačních systémech. Toto je náhradou za `MSBuildToolsPath` , který je možné odkazovat na rozhraní .NET Framework nástroje a pomůcky.  
+- `MSBuildFrameworkToolsPath` je nová vlastnost, která má hodnotu%windir%\Microsoft.NET\Framework\v4.0.30319 v 32 operačních systémech nebo%windir%\Microsoft.NET\Framework64\v4.0.30319 v 64 operačních systémech. Toto je náhrada za `MSBuildToolsPath`, kterou lze použít k odkazování na .NET Framework nástroje a pomůcky.  
   
-- `MSBuildToolsPath` a `MSBuildFrameworkToolsPath` 32-bit ekvivalenty –`MSBuildToolsPath32` a `MSBuildFrameworkToolsPath32`–, který vždy odkazovalo na umístění, 32 bitů, bez ohledu na to, jestli je 32bitová nebo 64bitová verze nástroje MSBuild používá.
+- `MSBuildToolsPath` a `MSBuildFrameworkToolsPath` mají 32 ekvivalenty (`MSBuildToolsPath32` a `MSBuildFrameworkToolsPath32`), které vždy odkazují na 32 umístění, bez ohledu na to, jestli se používá 32-bit 64 nebo 16bitový MSBuild.
 
 ## <a name="see-also"></a>Viz také
 [MSBuild](msbuild.md)

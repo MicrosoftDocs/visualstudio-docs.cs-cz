@@ -9,12 +9,12 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9aa08d68da53f54491439da8e35c28db90f4c508
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2f68328fb243c00c43c8ef454f10ad94c7d004a4
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662662"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296780"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Práce s několika uživatelskými účty
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -23,7 +23,7 @@ Pokud máte více účtů Microsoft a/nebo pracovní nebo školní účty, můž
 
  Po přidání více účtů na jednom počítači se tato sada účtů bude pohybovat s vámi, pokud se přihlásíte k sadě Visual Studio v jiném počítači. Je důležité si uvědomit, že i když název účtu roamingu nemá, přihlašovací údaje se neshodují. Proto se při prvním pokusu o použití svých prostředků na novém počítači zobrazí výzva k zadání přihlašovacích údajů pro tyto účty.
 
- Tento návod ukazuje, jak přidat více účtů do sady Visual Studio a jak zjistit, že prostředky dostupné z těchto účtů se projeví na místech, jako je dialogové okno **Přidat připojenou službu** , **Průzkumník serveru**a **Team Explorer** .
+ Tento návod ukazuje, jak přidat více účtů do sady Visual Studio a jak zjistit, že prostředky dostupné z těchto účtů se projeví na místech, jako je dialogové okno **Přidat připojenou službu** , **Průzkumník serveru**a **Team Explorer**.
 
 #### <a name="sign-in-to-visual-studio"></a>Přihlášení k sadě Visual Studio
 
@@ -56,7 +56,7 @@ Pokud máte více účtů Microsoft a/nebo pracovní nebo školní účty, můž
 
  ![Dialog pro změnu ověřování pro ASP.NET](../ide/media/vs2015-change-authentication.png "VS2015_change_authentication")
 
- Další informace o různých typech ověřování v ASP.NET najdete v tématu [vytváření webových projektů ASP.NET v Visual Studio 2013](http://www.asp.net/visual-studio/overview/2013/creating-web-projects-in-visual-studio#orgauth) (informace o ověřování stále platí pro sadu Visual Studio 2015).
+ Další informace o různých typech ověřování v ASP.NET najdete v tématu [vytváření webových projektů ASP.NET v Visual Studio 2013](https://docs.microsoft.com/aspnet/visual-studio/overview/2013/creating-web-projects-in-visual-studio#orgauth) (informace o ověřování stále platí pro sadu Visual Studio 2015).
 
 ### <a name="access-your-visual-studio-team-services-account"></a>Přístup k účtu Visual Studio Team Services
  V hlavní nabídce vyberte možnost **Team > připojit k Team Foundation Server** a zobrazte okno **Team Explorer** . Klikněte na **Vybrat týmové projekty**a potom v poli se seznamem v části **Vybrat Team Foundation Server**by se měla zobrazit adresa URL pro váš účet Visual Studio Team Services. Když vyberete adresu URL, kterou budete přihlášeni, aniž byste museli znovu zadat svoje přihlašovací údaje.

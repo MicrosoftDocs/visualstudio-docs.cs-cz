@@ -9,12 +9,12 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e6084daea11d981477bbee6f210e1faf718b58d8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ded65e85a2ae11e96c21fdd852ea12daa4bbcdf4
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646926"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299991"
 ---
 # <a name="step-8-customize-the-quiz"></a>Krok 8: Přizpůsobení kvízu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -23,13 +23,11 @@ V poslední části tutoriálu prozkoumáte několik způsobů, jak kvíz přizp
 
 ### <a name="to-customize-the-quiz"></a>Přizpůsobení kvízu
 
-- Pokud je v kvízu ponecháno pouze pět sekund, přepněte ovládací prvek **timeLabel** na červen nastavením jeho vlastnosti **BackColor** (`timeLabel.BackColor = Color.Red;`). Resetovat barvu při překročení kvízu.
+- Pokud do konce kvízu zbývá pouze pět sekund, změňte barvu ovládacího prvku **timeLabel** na červenou nastavením jeho vlastnosti **BackColor** (`timeLabel.BackColor = Color.Red;`). Resetovat barvu při překročení kvízu.
 
 - Dejte účastníkovi kvízu nápovědu pomocí přehrání zvuku při zadání správné odpovědi do ovládacího prvku NumericUpDown. (Pro každou událost ovládacího prvku `ValueChanged()` je nutné napsat obslužnou rutinu události, která se vyvolá vždy, když účastník kvízu změní hodnotu ovládacího prvku.)
 
 ### <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
-
-- Pokud si chcete stáhnout dokončenou verzi kvízu, přečtěte si [ukázku kurz dokončení matematického kvízu](http://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 - Pokud chcete přejít k dalšímu kurzu, přečtěte si [kurz 3: vytvoření vyhovující hry](../ide/tutorial-3-create-a-matching-game.md).
 

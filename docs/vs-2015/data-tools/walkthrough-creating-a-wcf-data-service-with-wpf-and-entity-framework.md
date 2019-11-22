@@ -14,12 +14,12 @@ caps.latest.revision: 28
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f26d81c3ac80b889f90e2a729545f0db0e52fa1a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5abbb647f93c991d2de626a84e82f47e03f6f71e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660231"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299616"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>Návod: vytvoření datové služby WCF pomocí WPF a Entity Framework
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ Tento návod ukazuje, jak vytvořit jednoduchý [!INCLUDE[ss_data_service](../in
 
 - Vytvoří [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)], který představuje tabulku Customers v databázi Northwind.
 
-- Vytvořte [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)].
+- Vytvoření [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)].
 
 - Vytvořte klientskou aplikaci a přidejte odkaz na [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)].
 
@@ -45,10 +45,10 @@ Tento návod ukazuje, jak vytvořit jednoduchý [!INCLUDE[ss_data_service](../in
 
 - Ukázkovou databázi Northwind
 
-     Pokud tuto databázi ve vývojovém počítači nemáte, můžete si ji stáhnout z webu [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088). Pokyny najdete v tématu [stažení ukázkových databází](https://msdn.microsoft.com/library/ef9d69a1-9461-43fe-94bb-7c836754bcb5).
+     Pokud tuto databázi ve vývojovém počítači nemáte, můžete si ji stáhnout z webu [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=98088). Pokyny najdete v tématu [stažení ukázkových databází](https://msdn.microsoft.com/library/ef9d69a1-9461-43fe-94bb-7c836754bcb5).
 
 ## <a name="creating-the-service"></a>Vytvoření služby
- Chcete-li vytvořit [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)], přidejte webový projekt, vytvořte [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] a pak vytvořte službu z modelu.
+ Chcete-li vytvořit [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)], přidejte webový projekt, vytvořte [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)]a pak vytvořte službu z modelu.
 
  V prvním kroku přidáte webový projekt pro hostování služby.
 
@@ -72,7 +72,7 @@ Tento návod ukazuje, jak vytvořit jednoduchý [!INCLUDE[ss_data_service](../in
 
 2. V dialogovém okně **Přidat novou položku** zvolte uzel **dat** a pak zvolte položku **ADO.NET model EDM (Entity Data Model)** .
 
-3. Do textového pole **název** zadejte `NorthwindModel` a pak klikněte na tlačítko **Přidat** .
+3. Do textového pole **název** zadejte `NorthwindModel`a pak klikněte na tlačítko **Přidat** .
 
     Zobrazí se Průvodce modelem Entity Data Model.
 
@@ -94,7 +94,7 @@ Tento návod ukazuje, jak vytvořit jednoduchý [!INCLUDE[ss_data_service](../in
 7. Na stránce **Zvolte verzi** zvolte možnost **Entity Framework 5,0** a potom klikněte na tlačítko **Další** .
 
    > [!NOTE]
-   > Aby bylo možné používat nejnovější verzi Entity Framework 6 se službami WCF, bude nutné nainstalovat balíček NuGet poskytovatele WCF Data Services Entity Framework. Viz [použití WCF Data Services 5.6.0 s Entity Framework 6 +](http://blogs.msdn.com/b/odatateam/archive/2013/10/02/using-wcf-data-services-5-6-0-with-entity-framework-6.aspx).
+   > Aby bylo možné používat nejnovější verzi Entity Framework 6 se službami WCF, bude nutné nainstalovat balíček NuGet poskytovatele WCF Data Services Entity Framework. Viz [použití WCF Data Services 5.6.0 s Entity Framework 6 +](https://devblogs.microsoft.com/odata/using-wcf-data-services-5-6-0-with-entity-framework-6/).
 
 8. Na stránce **Zvolte vaše databázové objekty** rozbalte uzel **tabulky** , zaškrtněte políčko **zákazníci** a pak klikněte na tlačítko **Dokončit** .
 
@@ -108,7 +108,7 @@ Tento návod ukazuje, jak vytvořit jednoduchý [!INCLUDE[ss_data_service](../in
 
 2. V dialogovém okně **Přidat novou položku** zvolte uzel **Web** a pak zvolte položku **WCF Data Service 5,6** .
 
-3. Do textového pole **název** zadejte `NorthwindCustomers` a pak klikněte na tlačítko **Přidat** .
+3. Do textového pole **název** zadejte `NorthwindCustomers`a pak klikněte na tlačítko **Přidat** .
 
     V **editoru kódu**se zobrazí soubor NorthwindCustomers. svc.
 
@@ -146,7 +146,7 @@ Tento návod ukazuje, jak vytvořit jednoduchý [!INCLUDE[ss_data_service](../in
 
 2. V dialogovém okně **Nový projekt** rozbalte uzel **Visual Basic** nebo **Visual C#**  a zvolte uzel **Windows** a pak zvolte **model Windows Forms aplikace**.
 
-3. Do textového pole **název** zadejte `NorthwindClient` a pak klikněte na tlačítko **OK** .
+3. Do textového pole **název** zadejte `NorthwindClient`a pak klikněte na tlačítko **OK** .
 
 4. V **Průzkumník řešení**vyberte uzel projektu **NorthwindClient** .
 

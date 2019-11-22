@@ -37,19 +37,19 @@ caps.latest.revision: 60
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: da86a6cf2e561fdc7e642a76b84b4e604bec12d6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a9f20629c39bc37ca20550c3b88d8ecb2aca470f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651247"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300255"
 ---
 # <a name="create-models-for-your-app"></a>Vytváření modelů pro aplikaci
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Diagramy modelování vám pomůžou pochopit, objasnit a sdělovat nápady týkající se vašeho kódu a požadavky uživatelů, které musí váš softwarový systém podporovat. Pokud například chcete popsat a sdělit požadavky uživatelů, můžete použít jazyk UML (Unified Modeling Language) (UML) použití, činnosti, třídy a sekvenční diagramy. Chcete-li popsat a sdělit funkce systému, můžete použít diagramy komponent, tříd, aktivit a sekvenčních UML.
 
- Viz [video o kanálu 9: vylepšení architektury prostřednictvím modelování](http://go.microsoft.com/fwlink/?LinkID=252078).
+ Viz [video o kanálu 9: vylepšení architektury prostřednictvím modelování](https://go.microsoft.com/fwlink/?LinkID=252078).
 
  V této verzi můžete vytvořit následující diagramy UML:
 
@@ -73,7 +73,7 @@ Diagramy modelování vám pomůžou pochopit, objasnit a sdělovat nápady týk
 
 ## <a name="common-tasks"></a>Obecné úlohy
 
-|**Výklad**|**Hybn**|
+|**Téma**|**Úloha**|
 |---------------|--------------|
 |[Vytváření projektů a diagramů pomocí modelování UML](../modeling/create-uml-modeling-projects-and-diagrams.md)|**Vytvářejte modely** a přidejte diagramy.|
 |[Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md)|**Nakreslete diagramy** pro úpravu modelu.|
@@ -85,7 +85,7 @@ Diagramy modelování vám pomůžou pochopit, objasnit a sdělovat nápady týk
 
 ## <a name="related-tasks"></a>Související úlohy
 
-|**Výklad**|**Hybn**|
+|**Téma**|**Úloha**|
 |---------------|--------------|
 |[Vizualizace kódu](../modeling/visualize-code.md)|Vytvářejte mapy kódu a diagramy vrstev pro lepší pochopení neznámého kódu.|
 |[Modelování uživatelských požadavků](../modeling/model-user-requirements.md)|Použijte modely k objasnění potřeb uživatelů a jejich sdělování.|
@@ -96,6 +96,6 @@ Diagramy modelování vám pomůžou pochopit, objasnit a sdělovat nápady týk
 
 ## <a name="external-resources"></a>Externí zdroje
 
-|**Kategorií**|**Odkazy**|
+|**Kategorie**|**Odkazy**|
 |------------------|---------------|
-|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](http://go.microsoft.com/fwlink/?LinkId=184721)|
+|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://go.microsoft.com/fwlink/?LinkId=184721)|

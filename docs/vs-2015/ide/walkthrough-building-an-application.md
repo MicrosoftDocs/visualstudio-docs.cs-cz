@@ -9,12 +9,12 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f96909d3051e18fe3992e68b44b2948d1e23ebd6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f2d9b958dacfb35877abc9ad1e83a349e43a7af0
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670126"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296856"
 ---
 # <a name="walkthrough-building-an-application"></a>Postupy: Sestavení aplikace
 
@@ -24,7 +24,7 @@ Po dokončení tohoto návodu se seznámíte s několika možnostmi, které mů�
 
 Toto téma obsahuje následující oddíly:
 
-[Instalace ukázkové aplikace](../ide/walkthrough-building-an-application.md#BKMK_installapp)
+[Instalace ukázkové aplikace](../ide/walkthrough-building-an-application.md)
 
 [Vytvoření vlastní konfigurace sestavení](../ide/walkthrough-building-an-application.md#BKMK_CreateBuildConfig)
 
@@ -34,11 +34,7 @@ Toto téma obsahuje následující oddíly:
 
 [Zobrazit další podrobnosti o sestavení v okno Výstup](../ide/walkthrough-building-an-application.md#BKMK_outputdetails)
 
-[Vytvoření sestavení pro vydání](../ide/walkthrough-building-an-application.md#BKMK_releasebuild)
-
-## <a name="BKMK_installapp"></a>Instalace ukázkové aplikace
-
-Pomocí dialogového okna **rozšíření a aktualizace** můžete najít a nainstalovat ukázku [Úvod do vytváření aplikací WPF](http://code.msdn.microsoft.com/Introduction-to-Building-b8d16419?SRC=VSIDE) z Galerie ukázek na webu společnosti Microsoft. Galerie ukázek poskytuje celou řadu ukázkových projektů a kódu, které můžete stahovat a kontrolovat při plánování a vývoji aplikací.
+[Vytvoření sestavení pro vydání](../ide/walkthrough-building-an-application.md)
 
 #### <a name="to-install-the-sample-application"></a>Instalace ukázkové aplikace
 
@@ -74,7 +70,7 @@ Pomocí dialogového okna **rozšíření a aktualizace** můžete najít a nain
 
      ![Dialogové okno Nový projekt, ukázka Visual Basic](../ide/media/buildwalk-newprojectdlgintrotowpfsamplevb.png "BuildWalk_NewProjectdlgIntrotoWPFsampleVB")
 
-4. Klikněte na tlačítko **OK** .
+4. Zvolte **OK** tlačítko.
 
 ## <a name="BKMK_CreateBuildConfig"></a>Vytvoření vlastní konfigurace sestavení
 
@@ -100,7 +96,7 @@ Konfigurace a nastavení platformy můžete změnit nebo vytvořit pomocí dialo
 
     ![Dialogové okno Nová platforma řešení](../ide/media/buildwalk-newsolutionplatform.png "BuildWalk_NewSolutionPlatform")
 
-6. Klikněte na tlačítko **OK** .
+6. Zvolte **OK** tlačítko.
 
    Konfigurace aktivního řešení se změnila na test s aktivní platformou řešení nastavenou na x64.
 
@@ -114,7 +110,7 @@ Konfigurace a nastavení platformy můžete změnit nebo vytvořit pomocí dialo
 
 V dalším kroku sestavíte řešení s vlastní konfigurací sestavení.
 
-#### <a name="to-build-the-solution"></a>Sestavení řešení
+#### <a name="to-build-the-solution"></a>Abyste mohli sestavit řešení
 
 - Na panelu nabídek vyberte **sestavení**, **řešení sestavení**.
 
@@ -206,7 +202,7 @@ Můžete změnit, kolik informací o procesu sestavení se zobrazí v okně **v�
 
    Další informace najdete v tématu [Postup: zobrazení, uložení a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md).
 
-## <a name="BKMK_releasebuild"></a>Vytvoření sestavení pro vydání
+## <a name="create-a-release-build"></a>Vytvoření sestavení pro vydání
 
 Můžete vytvořit verzi ukázkové aplikace optimalizované pro odeslání IT. Pro Build vydaných verzí určíte, že se spustitelný soubor zkopíruje do sdílené síťové složky před tím, než se sestaví.
 
@@ -226,7 +222,7 @@ Další informace naleznete v tématu [Postupy: Změna výstupního adresáře s
 
 5. V poli **výstupní cesta sestavení** zadejte síťovou cestu.
 
-     Můžete například zadat \\ \myserver\builds.
+     Můžete například zadat \\\myserver\builds.
 
     > [!IMPORTANT]
     > Může se zobrazit okno se zprávou s upozorněním, že sdílená síťová složka, kterou jste zadali, nemusí být důvěryhodné umístění. Pokud důvěřujete umístění, které jste zadali, klikněte na tlačítko **OK** v okně se zprávou.
@@ -235,13 +231,13 @@ Další informace naleznete v tématu [Postupy: Změna výstupního adresáře s
 
      ![Příkaz Sestavit řešení v nabídce sestavení](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")
 
-#### <a name="to-specify-a-release-build-for-visual-c"></a>Chcete-li zadat sestavení pro vydání pro Visual C \#
+#### <a name="to-specify-a-release-build-for-visual-c"></a>Chcete-li zadat sestavení pro vydání pro Visual C\#
 
 1. Otevřete **Návrhář projektu**.
 
     ![Nabídka zobrazení, příkaz stránky vlastností](../ide/media/buildwalk-viewpropertypages.png "BuildWalk_ViewPropertyPages")
 
-2. Vyberte stránku **sestavení** .
+2. Zvolte **sestavení** stránky.
 
 3. V seznamu **Konfigurace** vyberte možnost **verze**.
 
@@ -249,7 +245,7 @@ Další informace naleznete v tématu [Postupy: Změna výstupního adresáře s
 
 5. V poli **výstupní cesta** zadejte síťovou cestu.
 
-    Můžete například zadat \\ \myserver\builds.
+    Můžete například zadat \\\myserver\builds.
 
    > [!IMPORTANT]
    > Může se zobrazit okno se zprávou s upozorněním, že sdílená síťová složka, kterou jste zadali, nemusí být důvěryhodné umístění. Pokud důvěřujete umístění, které jste zadali, klikněte na tlačítko **OK** v okně se zprávou.
@@ -258,7 +254,7 @@ Další informace naleznete v tématu [Postupy: Změna výstupního adresáře s
 
     ![Příkaz Sestavit řešení v nabídce sestavení](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")
 
-   Spustitelný soubor je zkopírován do síťové cesty, kterou jste zadali. Cesta by \\ \myserver\builds \\*filename*. exe.
+   Spustitelný soubor je zkopírován do síťové cesty, kterou jste zadali. Cesta by \\\myserver\builds\\*filename*. exe.
 
    Gratulujeme: úspěšně jste dokončili tento návod.
 

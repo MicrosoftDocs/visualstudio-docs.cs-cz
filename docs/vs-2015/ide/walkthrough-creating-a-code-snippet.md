@@ -16,12 +16,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f3cf8d0cfd3119113247dedf7723e02fca9634a3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 278858eb28e0db7edd2694397cc7b24f1cfec301
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662651"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296829"
 ---
 # <a name="walkthrough-creating-a-code-snippet"></a>Návod: Vytvoření fragmentu kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "72662651"
 Fragment kódu můžete vytvořit pouze s několika kroky. Vše, co potřebujete udělat, je vytvořit soubor XML, vyplnit příslušné prvky a přidat do něj svůj kód. Do kódu lze také přidat odkazy a náhradní parametry. Fragment kódu můžete přidat do instalace sady Visual Studio pomocí tlačítka importovat na Správce fragmentů kódů (**nástroje/Správce fragmentů kódů**).
 
 > [!TIP]
-> Informace o tom, jak snadněji psát fragmenty kódu, najdete na webu CodePlex, kde najdete nástroje komunity, jako je [Editor fragmentů](http://go.microsoft.com/fwlink/?LinkId=251033).
+> Informace o tom, jak snadněji psát fragmenty kódu, najdete na webu CodePlex, kde najdete nástroje komunity, jako je [Editor fragmentů](https://go.microsoft.com/fwlink/?LinkId=251033).
 
 ## <a name="snippet-template"></a>Šablona fragmentu
  Následuje základní šablona fragmentu kódu:
@@ -85,7 +85,7 @@ Fragment kódu můžete vytvořit pouze s několika kroky. Vše, co potřebujete
 
      `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippets`
 
-6. Otestujte fragment tak, že otevřete projekt Visual Basic a otevřete soubor kódu. V souboru klikněte v místní nabídce na **Vložit fragment** a pak na **Moje fragmenty kódu**. Měl by se zobrazit fragment s názvem **můj Visual Basic fragment kódu**. Poklikejte na ni.
+6. Otestujte fragment tak, že otevřete projekt Visual Basic a otevřete soubor kódu. V souboru klikněte v místní nabídce na **Vložit fragment** a pak na **Moje fragmenty kódu**. Měl by se zobrazit fragment s názvem **můj Visual Basic fragment kódu**. Poklepejte na něj.
 
 7. V kódu by se měla zobrazit `Console.WriteLine("Hello, World!")` vložená.
 

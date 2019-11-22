@@ -1,5 +1,5 @@
 ---
-title: Instalace aplikací izolovaného prostředí | Dokumentace Microsoftu
+title: Instalace aplikace izolovaného prostředí | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,57 +11,57 @@ ms.assetid: 33416226-9083-41b5-b153-10d2bf35c012
 caps.latest.revision: 41
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 60862d631d93788f10c372310da9eb3d181943ef
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a077173a0d095ee10cc1fa16da3db1f3744dafa8
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63414547"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301162"
 ---
 # <a name="installing-an-isolated-shell-application"></a>Instalace aplikací izolovaného prostředí
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-K instalaci prostředí aplikace musíte provést následující kroky.  
+Pokud chcete nainstalovat aplikaci prostředí, musíte provést následující kroky.  
   
-- Příprava vašeho řešení.  
+- Připravte své řešení.  
   
-- Vytvoření balíčku Instalační služby systému Windows (MSI) pro vaši aplikaci.  
+- Vytvořte balíček Instalační služba systému Windows (MSI) pro vaši aplikaci.  
   
-- Vytvoření nastavení zaváděcí nástroj.  
+- Vytvoření zaváděcího nástroje pro instalaci.  
   
-  Kód příkladu v tomto dokumentu se segmenty Convenience [prostředí nasazení ukázky](http://go.microsoft.com/fwlink/?LinkId=262245), kterou si můžete stáhnout z Galerie kódu na webu MSDN. Vzorek ukazuje výsledky provedení jednotlivých kroků.  
+  Celý ukázkový kód v tomto dokumentu pochází z [ukázky nasazení prostředí](https://go.microsoft.com/fwlink/?LinkId=262245), kterou si můžete stáhnout z Galerie kódu na webu MSDN. Ukázka zobrazuje výsledky provedení každého z těchto kroků.  
   
 ## <a name="prerequisites"></a>Požadavky  
- Chcete-li provádět postupy, které toto téma popisuje, musí být v počítači nainstalované následující nástroje.  
+ Chcete-li provést postupy popsané v tomto tématu, je nutné v počítači nainstalovat následující nástroje.  
   
-- Visual Studio SDK  
+- Sada Visual Studio SDK  
   
-- [Sady nástrojů XML Instalační služby systému Windows](http://go.microsoft.com/fwlink/?LinkId=82720) verze 3.6  
+- [Sada nástrojů XML Instalační služba systému Windows](https://go.microsoft.com/fwlink/?LinkId=82720) verze 3,6  
   
-  Ukázka vyžaduje také Microsoft Visualization and Modeling SDK, které vyžadují některé prostředí.  
+  Ukázka také vyžaduje sadu Microsoft vizualizace and modeling SDK, která nevyžaduje všechny prostředí.  
   
-## <a name="preparing-your-solution"></a>Příprava vašeho řešení  
- Ve výchozím prostředí šablony sestavení do balíčků VSIX, ale toto chování je určená primárně pro účely ladění. Při nasazení aplikace v jazyce Shell, musíte použít balíčky MSI umožňuje pro přístup k registru a restartování během instalace. Příprava aplikace pro nasazení MSI, proveďte následující kroky.  
+## <a name="preparing-your-solution"></a>Připravuje se vaše řešení  
+ Ve výchozím nastavení šablony prostředí sestavují balíčky VSIX, ale toto chování je určeno primárně pro účely ladění. Při nasazení aplikace prostředí je nutné použít balíčky MSI k povolení přístupu k registru a k restartování během instalace. K přípravě aplikace na nasazení MSI proveďte následující kroky.  
   
-#### <a name="to-prepare-a-shell-application-for-msi-deployment"></a>Příprava aplikace prostředí pro nasazení Instalační služby MSI  
+#### <a name="to-prepare-a-shell-application-for-msi-deployment"></a>Příprava aplikace prostředí pro nasazení MSI  
   
-1. Upravte každý soubor .vsixmanifest ve vašem řešení.  
+1. Upravte každý soubor. vsixmanifest ve vašem řešení.  
   
-     V `Identifier` element, přidejte `InstalledByMSI` elementu a `SystemComponent` prvek a nastavte jejich hodnoty na `true`.  
+     V elementu `Identifier` přidejte prvek `InstalledByMSI` a prvek `SystemComponent` a pak nastavte jejich hodnoty na `true`.  
   
-     Tyto prvky zabránit pokusu o instalaci komponenty a uživatele z jejich odinstalace s použitím instalátor VSIX **rozšíření a aktualizace** dialogové okno.  
+     Tyto prvky brání instalačnímu programu VSIX v pokusu o instalaci vašich komponent a uživatel z jeho odinstalace pomocí dialogového okna **rozšíření a aktualizace** .  
   
-2. Pro každý projekt, který obsahuje VSIX manifest upravte úlohy sestavení do výstupního obsahu do umístění, ze kterého se nainstaluje vaše MSI. Ve výstupu sestavení obsahovat VSIX manifest, ale nevytvářejte soubor VSIX.  
+2. Pro každý projekt, který obsahuje manifest VSIX, upravte úkoly sestavení pro výstup obsahu do umístění, ze kterého bude nainstalována služba MSI. Zahrňte manifest VSIX do výstupu sestavení, ale Sestavte soubor. VSIX.  
   
-## <a name="creating-an-msi-for-your-shell"></a>Vytváří se soubor MSI pro vaše prostředí  
- K vytvoření vašeho balíčku MSI, doporučujeme použít [sady nástrojů XML Instalační služby systému Windows](http://go.microsoft.com/fwlink/?LinkId=82720) protože nabízí větší flexibilitu než standardní projektu instalace.  
+## <a name="creating-an-msi-for-your-shell"></a>Vytvoření MSI pro prostředí  
+ Pro sestavení balíčku MSI doporučujeme použít [sadu nástrojů Instalační služba systému Windows XML](https://go.microsoft.com/fwlink/?LinkId=82720) , protože poskytuje větší flexibilitu než standardní projekt instalace.  
   
- V souboru Product.wxs nastavte bloky detekce a rozložení součásti prostředí.  
+ V souboru Product. wxs nastavte bloky detekce a rozložení komponent prostředí.  
   
- V souboru .reg pro vaše řešení a v ApplicationRegistry.wxs vytvořte položky registru.  
+ Pak vytvořte položky registru v souboru. reg pro vaše řešení a v ApplicationRegistry. wxs.  
   
-### <a name="detection-blocks"></a>Detekce bloky  
- Detekce bloku se skládá z `Property` prvek, který určuje předpokladem pro zjišťování a `Condition` prvek, který určuje zprávu, která vrátí, pokud není k dispozici v počítači kontrolu požadovaných součástí. Například aplikace prostředí bude vyžadovat Microsoft prostředí sady Visual Studio distribuovatelné součásti a blok zjišťování bude vypadat podobně jako následující kód.  
+### <a name="detection-blocks"></a>Bloky detekce  
+ Blok detekce se skládá z prvku `Property`, který určuje předpoklad pro detekci a `Condition` elementu, který určuje zprávu, která se má vrátit, pokud se požadovaná součást nenachází v počítači. Například vaše aplikace prostředí bude vyžadovat redistribuovatelný Microsoft Visual Studio Shell a detekční blok bude vypadat podobně jako následující kód.  
   
 ```xml  
 <Property Id="ISOSHELLSFX">  
@@ -81,11 +81,11 @@ K instalaci prostředí aplikace musíte provést následující kroky.
 ```  
   
 ### <a name="layout-of-shell-components"></a>Rozložení komponent prostředí  
- Je nutné přidat prvky k identifikaci cílové adresářovou strukturu a součástí k instalaci.  
+ Je nutné přidat prvky, které identifikují cílovou adresářovou strukturu a součásti k instalaci.  
   
-##### <a name="to-set-the-layout-of-shell-components"></a>Nastavit rozložení součásti prostředí  
+##### <a name="to-set-the-layout-of-shell-components"></a>Nastavení rozložení komponent prostředí  
   
-1. Vytvořit hierarchii `Directory` prvky představující všechny adresáře vytvořit v systému souborů na cílovém počítači, jak ukazuje následující příklad.  
+1. Vytvořte hierarchii `Directory` prvků, které reprezentují všechny adresáře, které mají být vytvořeny v systému souborů v cílovém počítači, jak ukazuje následující příklad.  
   
     ```xml  
     <Directory Id="TARGETDIR" Name="SourceDir">  
@@ -103,12 +103,12 @@ K instalaci prostředí aplikace musíte provést následující kroky.
     </Directory>  
     ```  
   
-     Tyto adresáře jsou označovány `Id` při zadané soubory, které musí být nainstalována.  
+     Na tyto adresáře se říká `Id`, když jsou zadané soubory, které se musí nainstalovat.  
   
-2. Určete součásti, které prostředí a aplikace prostředí vyžaduje jako v následujícím příkladu.  
+2. Identifikujte součásti, které prostředí a aplikace prostředí vyžadují, jak ukazuje následující příklad.  
   
     > [!NOTE]
-    > Některé prvky mohou odkazovat na definice v jiných souborech WXS.  
+    > Některé elementy můžou odkazovat na definice v jiných souborech. wxs.  
   
     ```xml  
     <Feature Id="ProductFeature" Title="$(var.ShortProductName)Shell" Level="1">  
@@ -123,7 +123,7 @@ K instalaci prostředí aplikace musíte provést následující kroky.
     </Feature>  
     ```  
   
-    1. `ComponentRef` Element odkazuje na jiný soubor WXS, který označuje soubory, které vyžaduje aktuální komponenty. Například GeneralProfile má následující definice v HelpAbout.wxs.  
+    1. Element `ComponentRef` odkazuje na jiný soubor. WXS, který identifikuje soubory, které aktuální komponenta vyžaduje. Například GeneralProfile má následující definici v HelpAbout. wxs.  
   
         ```xml  
         <Fragment Id="FragmentProfiles">  
@@ -137,9 +137,9 @@ K instalaci prostředí aplikace musíte provést následující kroky.
         </Fragment>  
         ```  
   
-         `DirectoryRef` Element určuje, kde se tyto soubory přejděte v počítači uživatele. `Directory` Element určuje, že se nainstaluje do podadresáře a pro každou `File` element představuje soubor, který je sestaven nebo, který existuje v rámci tohoto řešení a identifikuje, ve kterém tento soubor můžete najít při vytvoření souboru Instalační služby MSI.  
+         Element `DirectoryRef` určuje, kde tyto soubory přecházejí do počítače uživatele. Element `Directory` určuje, že bude nainstalován do podadresáře, a každý prvek `File` představuje soubor, který je sestaven nebo který existuje jako součást řešení, a identifikuje, kde lze tento soubor najít při vytvoření souboru MSI.  
   
-    2. `ComponentGroupRef` Element odkazuje skupina jiných součástí (nebo komponenty a skupiny součástí). Například `ComponentGroupRef` pod proměnná je definovaná následujícím způsobem v Application.wxs.  
+    2. Element `ComponentGroupRef` odkazuje na skupinu dalších komponent (nebo komponent a skupin součástí). Například `ComponentGroupRef` v rámci třídy Application je definována takto v Application. wxs.  
   
         ```xml  
         <ComponentGroup Id="ApplicationGroup">  
@@ -159,120 +159,120 @@ K instalaci prostředí aplikace musíte provést následující kroky.
         ```  
   
     > [!NOTE]
-    > Požadované závislosti pro aplikace prostředí Shell (izolovaný režim) jsou: DebuggerProxy MasterPkgDef, prostředky (hlavně soubor .winprf), aplikace a PkgDefs.  
+    > Požadované závislosti pro aplikace Shell (izolovaný režim) jsou: DebuggerProxy, MasterPkgDef, Resources (obzvláště soubor. winprf), Application a PkgDefs.  
   
 ### <a name="registry-entries"></a>Položky registru  
- Šablona projektu Shell (izolovaný režim) obsahuje *ProjectName*soubor .reg pro klíče registru na sloučení na instalaci. Tyto položky registru musí být součástí MSI pro účely čištění a instalaci. Musíte taky vytvořit odpovídající bloky registru v ApplicationRegistry.wxs.  
+ Šablona projektu prostředí (izolovaný režim) obsahuje soubor *ProjectName*. reg pro klíče registru ke sloučení při instalaci. Tyto položky registru musí být součástí MSI pro účely instalace i vyčištění. V ApplicationRegistry. WXS musíte také vytvořit vyhovující bloky registru.  
   
-##### <a name="to-integrate-registry-entries-into-the-msi"></a>K integraci položky registru do MSI  
+##### <a name="to-integrate-registry-entries-into-the-msi"></a>Integrace položek registru do MSI  
   
-1. V **přizpůsobení prostředí** složku, otevřete *ProjectName*. reg.  
+1. Ve složce **vlastního nastavení prostředí** otevřete *ProjectName*. reg.  
   
-2. Nahraďte všechny výskyty $RootFolder$ token s cestou cílový adresář instalace.  
+2. Nahraďte všechny výskyty $RootFolder $ tokenu cestou k cílovému instalačnímu adresáři.  
   
 3. Přidejte další položky registru, které vaše aplikace vyžaduje.  
   
-4. Otevřete ApplicationRegistry.wxs.  
+4. Otevřete ApplicationRegistry. wxs.  
   
-5. Pro každou položku registru v *ProjectName*.reg, přidejte odpovídající blok registru, jako následující příklady ukazují.  
+5. Pro každou položku registru v *ProjectName*. reg přidejte odpovídající blok registru, jak ukazuje následující příklad.  
   
-    |*ProjectName*.reg|ApplicationRegisty.wxs|  
+    |*ProjectName*. reg|ApplicationRegisty.wxs|  
     |-----------------------|----------------------------|  
-    |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}]<br /><br /> @="PhotoStudio DTE Object"|\<Klíče registru Id = "DteClsidRegKey" Root "HKCR" klíč = = "$(var. DteClsidRegKey) "akce ="createAndRemoveOnUninstall"><br /><br /> \<RegistryValue Type='string' Name='@' Value='$(var.ShortProductName) DTE Object' /><br /><br /> \</RegistryKey>|  
-    |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}\LocalServer32]<br /><br /> @="$RootFolder$\PhotoStudio.exe"|\<RegistryKey Id='DteLocSrv32RegKey' Root='HKCR' Key='$(var.DteClsidRegKey)\LocalServer32' Action='createAndRemoveOnUninstall'><br /><br /> \<RegistryValue Type='string' Name='@' Value='[INSTALLDIR]$(var.ShortProductName).exe' /><br /><br /> \</RegistryKey>|  
+    |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}]<br /><br /> @ = "Objekt DTE PhotoStudio"|\<RegistryKey ID = ' DteClsidRegKey ' root = ' HKCR ' klíč = ' $ (var. DteClsidRegKey) ' Action = ' createAndRemoveOnUninstall ' ><br /><br /> \<RegistryValue Type = ' řetězec ' name = ' @ ' value = ' $ (var. ShortProductName) objekt DTE '/><br /><br /> \</RegistryKey>|  
+    |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}\LocalServer32]<br /><br /> @="$RootFolder$\PhotoStudio.exe"|\<RegistryKey ID = ' DteLocSrv32RegKey ' root = ' HKCR ' klíč = ' $ (var. DteClsidRegKey) \LocalServer32 ' Action = ' createAndRemoveOnUninstall ' ><br /><br /> \<RegistryValue Type='string' Name='@' Value='[INSTALLDIR]$(var.ShortProductName).exe' /><br /><br /> \</RegistryKey>|  
   
-     V tomto příkladu překládá Var.DteClsidRegKey ke klíči registru do horního řádku. Var.ShortProductName přeloží na `PhotoStudio`.  
+     V tomto příkladu var. DteClsidRegKey převede na klíč registru v horním řádku. Var. ShortProductName se překládá na `PhotoStudio`.  
   
-## <a name="creating-a-setup-bootstrapper"></a>Vytvoření nastavení zaváděcí nástroj  
- Dokončené MSI se nainstaluje jenom v případě, že všechny požadované součásti jsou nainstalována jako první. K usnadnění činnost koncového uživatele, vytvořte instalační program, který shromažďuje a nainstaluje všechny požadované součásti před instalací aplikace. Aby se zajistilo úspěšné instalaci, proveďte tyto akce:  
+## <a name="creating-a-setup-bootstrapper"></a>Vytvoření zaváděcího nástroje pro instalaci  
+ Dokončené MSI se nainstalují jenom v případě, že se nejdřív nainstalují všechny požadované součásti. Chcete-li usnadnit činnost koncového uživatele, vytvořte instalační program, který shromáždí a nainstaluje všechny požadavky před instalací aplikace. Chcete-li zajistit úspěšnou instalaci, proveďte tyto akce:  
   
 - Vynuťte instalaci správcem.  
   
-- Zjištění, zda je nainstalována aplikace Visual Studio Shell (izolovaný režim).  
+- Zjišťuje, zda je nainstalováno prostředí sady Visual Studio (izolovaný režim).  
   
-- Spuštění prostředí pro jeden nebo oba instalační programy v pořadí.  
+- Spusťte jeden nebo oba instalační programy prostředí v daném pořadí.  
   
-- Zpracujte požadavky na restartování.  
+- Zpracování žádostí o restartování  
   
-- Spusťte vaše MSI.  
+- Spusťte soubor MSI.  
   
 ### <a name="enforcing-installation-by-administrator"></a>Vynucování instalace správcem  
- Tento postup je potřeba povolit instalační program pro přístup k požadované adresáře, jako je například \Program Files\\.  
+ Tento postup je nutný, pokud chcete instalačnímu programu povolit přístup k požadovaným adresářům, například \Program Files\\.  
   
-##### <a name="to-enforce-installation-by-administrator"></a>Vynutit instalaci správcem  
+##### <a name="to-enforce-installation-by-administrator"></a>Vynutili instalaci správcem  
   
-1. Otevřete místní nabídku pro projekt instalace a klikněte na tlačítko **vlastnosti**.  
+1. Otevřete místní nabídku projektu instalace a pak zvolte možnost **vlastnosti**.  
   
-2. V části **konfigurační vlastnosti/Linkeru/Manifest soubor**, nastavte **úroveň spuštění nástroje Řízení uživatelských účtů** k **requireAdministrator**.  
+2. V části **Vlastnosti konfigurace/linker/soubor manifestu**nastavte **úroveň spuštění nástroje řízení uživatelských účtů** na **vyžadovat správce**.  
   
-     Tato vlastnost vloží atributu, který vyžaduje, aby program spustit jako správce do vloženého souboru manifestu.  
+     Tato vlastnost vloží atribut, který vyžaduje spuštění programu jako správce, do vloženého souboru manifestu.  
   
-### <a name="detecting-shell-installations"></a>Detekce instalace prostředí  
- Pokud chcete zjistit, jestli se musí nainstalovat Visual Studio Shell (izolovaný režim), nejprve určete, zda je již nainstalován kontrolou hodnotu registru HKLM\Software\Microsoft\DevDiv\vs\Servicing\ShellVersion\isoshell\LCID\Install.  
+### <a name="detecting-shell-installations"></a>Detekce instalací prostředí  
+ Chcete-li určit, zda je nutné nainstalovat prostředí sady Visual Studio (izolovaný režim), nejprve určete, zda je již nainstalována, pomocí kontroly hodnoty registru HKLM\Software\Microsoft\DevDiv\vs\Servicing\ShellVersion\isoshell\LCID\Install.  
   
 > [!NOTE]
-> Tyto hodnoty jsou také číst detekce blok prostředí v Product.wxs.  
+> Tyto hodnoty jsou čteny také blokem detekce prostředí v produktu Product. wxs.  
   
- HKLM\Software\Microsoft\AppEnv\14.0\ShellFolder Určuje umístění, kde byl nainstalován prostředí sady Visual Studio a můžete zkontrolovat soubory.  
+ HKLM\Software\Microsoft\AppEnv\14.0\ShellFolder určuje umístění, kde byla nainstalována prostředí Visual Studio Shell, a můžete vyhledat soubory tam.  
   
- Příklad toho, jak detekce instalace prostředí, najdete v článku `GetProductDirFromReg` funkce Utilities.cpp v ukázce prostředí nasazení.  
+ Příklad, jak detekovat instalaci prostředí, najdete v ukázce nasazení prostředí v tématu `GetProductDirFromReg` funkce nástrojů. cpp.  
   
- Pokud jeden nebo oba z prostředí Visual Studio, které vyžaduje váš balíček není nainstalovaný na počítači, musíte je přidat na seznam součástí k instalaci. Příklad najdete v tématu `ComponentsPage::OnInitDialog` funkce ComponentsPage.cpp v ukázce prostředí nasazení.  
+ Pokud jeden nebo oba prostředí sady Visual Studio, které balíček vyžaduje, není v počítači nainstalováno, je nutné je přidat do seznamu součástí, které chcete nainstalovat. Příklad naleznete v tématu funkce `ComponentsPage::OnInitDialog` ComponentsPage. cpp v ukázce nasazení prostředí.  
   
-### <a name="running-the-shell-installers"></a>Spuštění instalační programy prostředí  
- Pokud chcete spustit prostředí instalační programy, volání distribuovatelné součásti Visual Studio Shell pomocí správné argumenty příkazového řádku. Minimálně je nutné použít argumenty příkazového řádku **/q/norestart /** a podívejte se pro návratový kód, chcete-li zjistit, co by měl třeba udělat jako další. Následující příklad spustí Shell (izolovaný režim) redistributable.  
+### <a name="running-the-shell-installers"></a>Spuštění instalačních programů prostředí  
+ Chcete-li spustit instalační programy prostředí, zavolejte distribuovatelné prostředí sady Visual Studio pomocí správných argumentů příkazového řádku. Aby bylo možné zjistit, co by mělo být provedeno v dalším kroku, je nutné použít argumenty příkazového řádku **/norestart/q** a sledovat návratový kód. Následující příklad spustí prostředí shell (izolovaný režim) Redistributable.  
   
 ```  
 dwResult = ExecCmd("Vs_IsoShell.exe /norestart /q", TRUE);  
 ```  
   
-### <a name="running-the-shell-language-pack-installers"></a>Spuštění instalační programy Shell Language Pack  
- Pokud zjistíte, že byly nainstalovány prostředí nebo prostředí a potřebujete pouze jazyk pack místo toho, jak ukazuje následující příklad můžete nainstalovat jazykové sady.  
+### <a name="running-the-shell-language-pack-installers"></a>Spuštění instalačních programů jazykové sady pro prostředí  
+ Pokud místo toho zjistíte, že prostředí nebo prostředí byly nainstalovány a potřebujete pouze jazykovou sadu, můžete nainstalovat jazykové sady, jak ukazuje následující příklad.  
   
 ```  
 dwResult = ExecCmd("Vs_IsoShellLP.exe /norestart /q", TRUE);  
   
 ```  
   
-### <a name="deciphering-return-values"></a>Určité návratové hodnoty  
- U některých operačních systémů instalace Visual Studio Shell (izolovaný režim) bude vyžadovat restartování. Tento stav se dají určit pomocí návratový kód volání `ExecCmd`.  
+### <a name="deciphering-return-values"></a>Dešifrování návratových hodnot  
+ V některých operačních systémech bude instalace prostředí sady Visual Studio (izolovaný režim) vyžadovat restart. Tuto podmínku lze určit pomocí návratového kódu volání `ExecCmd`.  
   
 |Návratová hodnota|Popis|  
 |------------------|-----------------|  
 |ERROR_SUCCESS|Instalace byla dokončena. Nyní můžete nainstalovat aplikaci.|  
-|ERROR_SUCCESS_REBOOT_REQUIRED|Instalace byla dokončena. Aplikaci můžete nainstalovat po restartování počítače.|  
-|3015|Probíhá instalace. Pokračování instalace vyžaduje restart počítače.|  
+|ERROR_SUCCESS_REBOOT_REQUIRED|Instalace byla dokončena. Po restartování počítače můžete aplikaci nainstalovat.|  
+|3015|Probíhá instalace. Aby bylo možné pokračovat v instalaci, je nutné restartovat počítač.|  
   
-### <a name="handling-restarts"></a>Zpracování restartování  
- Když jste spustili instalační program prostředí pomocí **/norestart /** , je zadán argument, který nebude restartovat počítač, nebo požádat o restartování počítače. Však může být vyžadováno restartování, a ujistěte se, že instalační program bude pokračovat po restartování počítače.  
+### <a name="handling-restarts"></a>Zpracování se restartuje.  
+ Při spuštění instalačního programu prostředí pomocí argumentu **/norestart** jste určili, že by nebylo možné restartovat počítač nebo požádat o restartování počítače. Může ale být nutné restartovat počítač a před restartováním počítače je nutné zajistit, že instalační program pokračuje.  
   
- Správně zpracovávat restartování, ujistěte se, že pouze jeden instalační program je sada pokračovat a správně zpracovat proces obnovení.  
+ Chcete-li správně zpracovat restart, ujistěte se, že je nastaven pouze jeden instalační program a že proces obnovení bude zpracován správně.  
   
- Pokud ERROR_SUCCESS_REBOOT_REQUIRED nebo 3015 se vrátí, váš kód by měl restart počítače, než bude instalace pokračovat.  
+ Pokud se vrátí buď ERROR_SUCCESS_REBOOT_REQUIRED nebo 3015, váš kód by měl restartovat počítač před tím, než bude instalace pokračovat.  
   
- Ke zpracování se restartuje, proveďte tyto akce:  
+ Pro zpracování restartování proveďte tyto akce:  
   
-- Nastavení registru a při spuštění Windows pokračovat instalace.  
+- Nastavte registr tak, aby se při spuštění systému Windows obnovila instalace.  
   
-- Proveďte restart double zaváděcího nástroje.  
+- Proveďte dvakrát restart zaváděcího nástroje.  
   
-- Odstraňte klíč ResumeData prostředí Instalační služby.  
+- Odstraňte ResumeData klíč instalačního programu prostředí.  
   
-- Restartujte Windows.  
+- Restartujte systém Windows.  
   
-- Obnovení počáteční cesty MSI.  
+- Resetujte počáteční cestu ke službě MSI.  
   
-### <a name="setting-the-registry-to-resume-setup-when-windows-starts"></a>Nastavení registru, aby při spuštění Windows pokračovat v instalaci  
- Klíč registru HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce\ spustí při spuštění systému s oprávněními správce a pak se vymažou. HKEY_CURRENT_USER obsahuje podobné klíč, ale běží v režimu normálního uživatele a není vhodná pro zařízení. Instalace může pokračovat vložením řetězcovou hodnotu v RunOnce klíč, který volá vaše instalační služby. Doporučujeme však volat instalační služba prostřednictvím **/restartuje** nebo podobně jako parametr, aby aplikaci oznámilo, že je obnovení místo spuštění. Můžete použít také parametry k označení, kde se v procesu instalace, což se hodí hlavně v zařízení, které mohou vyžadovat vícenásobné restartování.  
+### <a name="setting-the-registry-to-resume-setup-when-windows-starts"></a>Nastavení registru pro pokračování v instalaci při spuštění systému Windows  
+ Klíč registru HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce\ se spouští při spuštění systému s oprávněními správce a pak se vymaže. HKEY_CURRENT_USER obsahuje podobný klíč, ale běží jako normální uživatel a není vhodný pro instalaci. Instalaci můžete obnovit tak, že do klíče RunOnce vložíte řetězcovou hodnotu, která volá váš instalační program. Nicméně doporučujeme, abyste volali instalační program pomocí **/restart** nebo podobného parametru, který aplikaci upozorní, že se obnovuje, namísto spuštění. Můžete také zahrnout parametry, které označují, kde se nacházíte v procesu instalace, což je zvláště užitečné v instalacích, které mohou vyžadovat více restartování.  
   
- Následující příklad ukazuje RunOnce registru hodnotu klíče pro obnovení činnosti instalace.  
+ Následující příklad ukazuje hodnotu klíče registru RunOnce pro obnovení instalace.  
   
  `"c:\MyAppInstaller.exe /restart /SomeOtherDataFlag"`  
   
-### <a name="installing-double-restart-of-bootstrapper"></a>Instalace Double restartování zaváděcího nástroje  
- Pokud se instalační program používá přímo z RunOnce, nepůjde na plochu úplné načtení. Chcete-li k dispozici úplné uživatelské rozhraní, musíte vytvořit jiné spuštění instalačního programu a ukončení RunOnce instance.  
+### <a name="installing-double-restart-of-bootstrapper"></a>Instalace dvojitého restartování zaváděcího nástroje  
+ Pokud se instalační program používá přímo z RunOnce, plocha se nebude moct úplně načíst. Aby bylo k dispozici úplné uživatelské rozhraní, je nutné vytvořit další spuštění instalačního programu a ukončit instanci RunOnce.  
   
- Instalační program musí spustit znovu tak, aby získá správná oprávnění a se musí poskytnout dostatek informací, které vědět, kde jste přestali před restartováním počítače, jak ukazuje následující příklad.  
+ Musíte znovu spustit instalační program, aby získal správná oprávnění, a musíte mu poskytnout dostatek informací, abyste věděli, kde jste zastavili před restartováním, jak ukazuje následující příklad.  
   
 ```  
 if (_cmdLineInfo.IsRestart())  
@@ -284,16 +284,16 @@ if (_cmdLineInfo.IsRestart())
   
 ```  
   
-### <a name="deleting-the-shell-installer-resumedata-key"></a>Odstraňuje se klíč ResumeData prostředí instalačního programu  
- Instalační program prostředí nastaví klíč registru HKLM\Software\Microsoft\VisualStudio\14.0\Setup\ResumeData s daty a pokračovat v instalaci po restartování. Protože obnovení vaší aplikace, ne prostředí instalačního programu, odstraňte tento klíč registru, jako v následujícím příkladu.  
+### <a name="deleting-the-shell-installer-resumedata-key"></a>Odstraňuje se ResumeData klíč instalačního programu prostředí  
+ Instalační program prostředí nastaví klíč registru HKLM\Software\Microsoft\VisualStudio\14.0\Setup\ResumeData s daty, aby se obnovila instalace po restartování. Vzhledem k tomu, že se vaše aplikace, ne Instalační služba prostředí, obnovuje, odstraňte tento klíč registru, jak ukazuje následující příklad.  
   
 ```  
 CString resumeSetupPath(MAKEINTRESOURCE("SOFTWARE\\Microsoft\\VisualStudio\\14.0\\Setup\\ResumeData"));  
 RegDeleteKey(HKEY_LOCAL_MACHINE, resumeSetupPath);  
 ```  
   
-### <a name="restarting-windows"></a>Restartování Windows  
- Jakmile nastavíte požadované klíče registru, můžete restartovat Windows. Následující příklad popisuje vyvolání restartování příkazů pro různé operační systémy Windows.  
+### <a name="restarting-windows"></a>Restartování systému Windows  
+ Po nastavení požadovaných klíčů registru můžete restartovat systém Windows. Následující příklad vyvolá příkazy restartu pro různé operační systémy Windows.  
   
 ```  
 OSVERSIONINFO ov;  
@@ -330,8 +330,8 @@ catch(...)
   
 ```  
   
-### <a name="resetting-the-start-path-of-msi"></a>Resetuje se cesta spuštění Instalační služby MSI  
- Před restartováním aktuální adresář je umístění instalačního programu, ale po restartování, umístění bude adresáři system32. Instalační program by měl obnovit aktuální adresář před každým voláním MSI, jak ukazuje následující příklad.  
+### <a name="resetting-the-start-path-of-msi"></a>Resetování počáteční cesty MSI  
+ Před restartováním je aktuální adresář umístěním instalačního programu, ale po restartování se umístění stalo adresářem System32. Instalační program by měl obnovit aktuální adresář před každým voláním MSI, jak ukazuje následující příklad.  
   
 ```  
 CString GetSetupPath()  
@@ -350,8 +350,8 @@ CString GetSetupPath()
   
 ```  
   
-### <a name="running-the-application-msi"></a>Spuštění aplikace MSI  
- Po návratu ERROR_SUCCESS instalační program prostředí sady Visual Studio můžete spustit soubor MSI pro vaši aplikaci. Vzhledem k tomu, že instalační program poskytuje uživatelské rozhraní, spusťte váš MSI v tichém režimu (**/q**) a s protokolováním (**/L**), jak ukazuje následující příklad.  
+### <a name="running-the-application-msi"></a>Spuštění MSI aplikace  
+ Jakmile instalační program prostředí sady Visual Studio vrátí ERROR_SUCCESS, můžete pro svou aplikaci spustit MSI. Vzhledem k tomu, že instalační program poskytuje uživatelské rozhraní, spusťte soubor MSI v tichém režimu ( **/q**) a pomocí protokolování ( **/l**), jak ukazuje následující příklad.  
   
 ```cpp#  
 TCHAR temp[MAX_PATH];  
