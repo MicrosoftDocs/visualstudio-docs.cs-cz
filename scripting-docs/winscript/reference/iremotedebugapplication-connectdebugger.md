@@ -51,5 +51,5 @@ HRESULT ConnectDebugger(
  Aplikace může mít v jednom okamžiku připojen pouze jeden ladicí program. Tato metoda se nezdařila, pokud je ladicí program již připojen.  
   
 ## <a name="see-also"></a>Viz také:  
- [Iremotedebugapplication –:: getdebugger](../../winscript/reference/iremotedebugapplication-getdebugger.md)    
+ [Iremotedebugapplication –:: getdebugger](../../winscript/reference/iremotedebugapplication-getdebugger.md)   
  [IRemoteDebugApplication – rozhraní](../../winscript/reference/iremotedebugapplication-interface.md)

@@ -62,6 +62,6 @@ HRESULT CreatePropertyBrowser(
  Tato metoda vrátí prohlížeč vlastností, který zabalí VARIANTu.  
   
 ## <a name="see-also"></a>Viz také:  
- [Idebughelper –:: CreatePropertyBrowserEx](../../winscript/reference/idebughelper-createpropertybrowserex.md)    
- @No__t_1 [rozhraní idebughelper –](../../winscript/reference/idebughelper-interface.md)  
+ [Idebughelper –:: CreatePropertyBrowserEx](../../winscript/reference/idebughelper-createpropertybrowserex.md)   
+   [rozhraní idebughelper –](../../winscript/reference/idebughelper-interface.md)  
  [IDebugProperty – rozhraní](../../winscript/reference/idebugproperty-interface.md)

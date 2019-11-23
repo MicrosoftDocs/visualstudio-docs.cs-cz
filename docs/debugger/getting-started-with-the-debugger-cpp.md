@@ -21,7 +21,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 08/30/2019
 ms.locfileid: "70179820"
 ---
-# <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Naučte se C++ ladit kód pomocí sady Visual Studio.
+# <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Další informace k ladění kódu jazyka C++ pomocí sady Visual Studio
 
 Tento článek obsahuje představení funkcí v ladicím programu sady Visual Studio podrobného návodu. Pokud chcete zobrazit vyšší úroveň funkcí ladicího programu, podívejte [se na téma první pohled na ladicí program](../debugger/debugger-feature-tour.md). Pokud jste *ladění aplikace*, obvykle to znamená, že spustíte aplikaci s připojeným ladícím nástrojem. Když toto provedete, ladicí program poskytuje mnoho způsobů, jak zjistit, co kód dělá, při spuštění. Můžete procházet kódem a podívejte se na hodnoty uložené v proměnné, můžete nastavit hodinky na proměnné zobrazíte, když se změní hodnoty, můžete prozkoumat cesta provedení kódu naleznete v tématu, jestli větev kódu je spuštěná, a tak dále. Pokud je to poprvé, kterou jste se pokusili ladění kódu, můžete chtít číst [ladění pro naprosté začátečníky](../debugger/debugging-absolute-beginners.md) před provedením tohoto článku.
 
@@ -48,7 +48,7 @@ Musíte mít nainstalovanou sadu Visual Studio 2017 a **vývoj desktopových apl
 
 Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/downloads) stránku a nainstalovat zdarma.
 
-Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít do části **nástroje** > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací pomocí C++** úloh, klikněte na tlačítko **změnit**.
+Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít na **nástroje** > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací pomocí C++** úloh, klikněte na tlačítko **změnit**.
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
@@ -61,7 +61,7 @@ Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete p�
     V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně dialogového okna **Nový projekt** , v části **vizuál C++** zvolte možnost **plocha systému Windows**a potom v prostředním podokně zvolte možnost **Konzolová aplikace systému Windows**. Pak zadejte název jako **MyDbgApp** a klikněte na **OK**.
     ::: moniker-end
 
-    Pokud nevidíte šablonu projektu **Konzolová aplikace systému Windows** , přejděte do části **nástroje** > **získat nástroje a funkce**, které otevře instalační program pro Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací pomocí C++** úloh, klikněte na tlačítko **změnit**.
+    Pokud nevidíte šablonu projektu **Konzolová aplikace systému Windows** , přejděte do části **nástroje** > **získat nástroje a funkce**, které otevřou instalační program pro Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací pomocí C++** úloh, klikněte na tlačítko **změnit**.
 
     Visual Studio vytvoří projekt.
 
@@ -215,7 +215,7 @@ Většinou, klávesové zkratky tady používáme, protože je dobrým způsobem
 
      ![Můžete krokovat s vnořením kód F11](../debugger/media/get-started-f11-cpp.png "F11 Krokovat s vnořením")
 
-     Je F11 **Krokovat s vnořením** příkazu a posune jeden příkaz spuštění aplikace v čase. F11 je dobrým způsobem, jak prozkoumat provádění toku v nejvíce podrobností. (Rychlejší procházení kódu, ukážeme vám několik možností také.) Ve výchozím nastavení, ladicí program přeskočí neuživatelském kódu (Pokud potřebujete další podrobnosti, [pouze můj kód](../debugger/just-my-code.md)).
+     Je F11 **Krokovat s vnořením** příkazu a posune jeden příkaz spuštění aplikace v čase. F11 je dobrým způsobem, jak prozkoumat provádění toku v nejvíce podrobností. (K rychlejšímu přesunu kódu vám ukážeme i některé další možnosti.) Ve výchozím nastavení přeskočí ladicí program neuživatelský kód (Pokud chcete více podrobností, přečtěte si téma [pouze můj kód](../debugger/just-my-code.md)).
 
 2. Stisknutím klávesy **F10** (nebo zvolte **ladit > Krokovat s přeskočením**) několikrát, dokud ladicí program se zastaví na `Shape::Draw` volání metody a poté stiskněte klávesu **F10** ještě jednou.
 
@@ -230,7 +230,7 @@ Většinou, klávesové zkratky tady používáme, protože je dobrým způsobem
      ![Použít Run to Click funkce](../debugger/media/get-started-run-to-click-cpp.png "běžet do kliknutí")
 
    > [!NOTE]
-   > Tlačítko **Spustit pro klikněte** je dostupné od začátku v [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]. Pokud nevidíte tlačítko zelenou šipku, použijte **F11** v tomto příkladu místo toho k přechodu na správném místě ladicí program.
+   > Tlačítko **spustit do klikněte** je k dispozici od [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]. Pokud nevidíte tlačítko zelenou šipku, použijte **F11** v tomto příkladu místo toho k přechodu na správném místě ladicí program.
 
 2. Klikněte na tlačítko **běžet do kliknutí** tlačítko ![běžet do kliknutí](../debugger/media/dbg-tour-run-to-click.png "RunToClick").
 
@@ -320,7 +320,7 @@ Funkce, které umožňují kontrolovat proměnné jsou jedním z nejužitečněj
 
     Dvojitým kliknutím na řádek kódu go, podívejte se na tento zdrojový kód a také změny v aktuálním oboru kontrolován ladicím programem. Tato akce nepřesouvejte vpřed ladicí program.
 
-    Můžete také použít nabídek klikněte pravým tlačítkem **zásobník volání** okno a dělat jiné věci. Například vložení do určené funkce zarážky, ladicí program pomocí předem **spustit ke kurzoru**a zkontrolujte zdrojový kód. Další informace najdete v tématu [jak: Projděte si zásobník](../debugger/how-to-use-the-call-stack-window.md)volání.
+    Můžete také použít nabídek klikněte pravým tlačítkem **zásobník volání** okno a dělat jiné věci. Například vložení do určené funkce zarážky, ladicí program pomocí předem **spustit ke kurzoru**a zkontrolujte zdrojový kód. Další informace najdete v tématu [postupy: prozkoumání zásobník volání](../debugger/how-to-use-the-call-stack-window.md).
 
 ## <a name="change-the-execution-flow"></a>Změna toku provádění
 

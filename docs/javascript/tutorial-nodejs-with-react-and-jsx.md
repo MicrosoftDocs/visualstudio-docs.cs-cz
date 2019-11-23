@@ -26,12 +26,12 @@ Visual Studio umožňuje snadno vytvořit projekt Node. js a zkušenosti s Intel
 V tomto kurzu se naučíte:
 > [!div class="checklist"]
 > * Vytvořit projekt Node.js
-> * Přidat balíčky npm
+> * Přidání balíčků npm
 > * Přidat do aplikace kód React
 > * Transpilovat JSX
 > * Připojit ladicí program
 
-## <a name="before-you-begin"></a>Než začnete
+## <a name="before-you-begin"></a>Před zahájením
 
 Tady je stručné Nejčastější dotazy, které vám povedou k předvedeným klíčovým konceptům.
 
@@ -60,15 +60,15 @@ sada Webpack rozbalí soubory JavaScriptu tak, aby mohly běžet v prohlížeči
 * Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje Node. js.
 
     ::: moniker range=">=vs-2019"
-    Pokud jste ještě nenainstalovali Visual Studio 2019, Stáhněte si ho do sady [Visual Studio downloads](https://visualstudio.microsoft.com/downloads/)  page, abyste ho mohli zdarma nainstalovat.
+    Pokud jste ještě nenainstalovali aplikaci Visual Studio 2019, můžete ji nainstalovat zdarma na stránce  [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) .
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Pokud jste ještě nenainstalovali Visual Studio 2017, Stáhněte si ho do sady [Visual Studio downloads](https://visualstudio.microsoft.com/downloads/)  page, abyste ho mohli zdarma nainstalovat.
+    Pokud jste ještě nenainstalovali aplikaci Visual Studio 2017, můžete ji nainstalovat zdarma na stránce  [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) .
     ::: moniker-end
 
-    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít na **nástroje**  > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
+    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít na **nástroje** > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
 
-    ![Úlohy Node. js v instalačním programu VS](../ide/media/quickstart-nodejs-workload.png)
+    ![Úloha Node.js v instalačním programu VS](../ide/media/quickstart-nodejs-workload.png)
 
 * Je nutné mít nainstalovaný modul runtime Node.js.
 
@@ -80,7 +80,7 @@ sada Webpack rozbalí soubory JavaScriptu tak, aby mohly běžet v prohlížeči
 
 Nejprve vytvoříte projekt webové aplikace Node.js.
 
-1. Otevřete Visual Studio.
+1. Otevřít Visual Studio.
 
 1. Vytvořte nový projekt.
 
@@ -106,7 +106,7 @@ Nejprve vytvoříte projekt webové aplikace Node.js.
 
     (5) soubory projektu, například *Server. js* , se zobrazí pod uzlem projektu. *Server. js* je spouštěcí soubor projektu a je, proč se zobrazuje **tučně**. Spouštěcí soubor můžete nastavit tak, že kliknete pravým tlačítkem na soubor v projektu a vyberete **nastavit jako spouštěcí soubor Node. js**.
 
-## <a name="add-npm-packages"></a>Přidat balíčky npm
+## <a name="add-npm-packages"></a>Přidání balíčků npm
 
 Tato aplikace vyžaduje ke správnému fungování řadu modulů npm.
 
@@ -310,7 +310,7 @@ V předchozím postupu jste do projektu přidali *webpack-config.js*. Dále při
 
     Pokud se místo uvedeného výstupu zobrazují nějaké chyby, je potřeba je před použitím aplikace odstranit. Příčinou těchto chyb může být skutečnost, že se vaše verze balíčků npm liší od verzí používaných v tomto kurzu. Jednou možností, jak chyby odstranit, je použití přesně těch verzí, které jsou uvedené v dřívějším postupu. Pokud jsou některé z těchto verzí balíčků zastaralé a způsobují chyby, může být k odstranění chyb potřeba nainstalovat novější verze. Informace o použití *balíčku Package. JSON* k řízení verzí balíčku npm najdete v tématu [Konfigurace Package. JSON](../javascript/configure-packages-with-package-json.md).
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu a vyberte **přidat**  > **existující složku**, zvolte složku *DIST* a zvolte **možnost vybrat složku**.
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu a vyberte **přidat** > **existující složku**, zvolte složku *DIST* a zvolte **možnost vybrat složku**.
 
     Visual Studio přidá do projektu složku *dist*, která obsahuje *app-bundle.js* a *app-bundle.js.map*.
 
@@ -414,7 +414,7 @@ V tomto scénáři použijte Chrome.
 
     `msedge --remote-debugging-port=9222`
 
-    Ani
+    nebo,
 
     `chrome.exe --remote-debugging-port=9222`
     ::: moniker-end
@@ -478,7 +478,7 @@ V tomto scénáři použijte Chrome.
 5. V dialogovém okně **připojit k procesu** Získejte filtrovaný seznam instancí prohlížeče, ke kterým se můžete připojit.
 
     ::: moniker range=">=vs-2019"
-    V aplikaci Visual Studio 2019 vyberte správný ladicí program pro cílový prohlížeč, **JavaScript (Chrome)** nebo **JavaScript (Microsoft Edge-chrom)** v poli **připojit k** , do pole Filtr zadejte **Chrome** nebo **Edge** a vyfiltrujte ho. výsledky hledání
+    V aplikaci Visual Studio 2019 vyberte správný ladicí program pro cílový prohlížeč, **JavaScript (Chrome)** nebo **JavaScript (Microsoft Edge-chrom)** v poli **připojit k** , pokud chcete filtrovat výsledky hledání, zadejte v poli Filtr text **Chrome** nebo **Edge** .
     ::: moniker-end
     ::: moniker range="vs-2017"
     V aplikaci Visual Studio 2017 v poli **připojit k** vyberte **WebKit kód** , do pole Filtr zadejte **Chrome** a vyfiltrujte výsledky hledání.
@@ -521,4 +521,4 @@ V tomto scénáři použijte Chrome.
 ## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
-> [Nasazení aplikace na Linux App Service](../javascript/publish-nodejs-app-azure.md)
+> [Nasazení aplikace do služby App Service pro Linux](../javascript/publish-nodejs-app-azure.md)

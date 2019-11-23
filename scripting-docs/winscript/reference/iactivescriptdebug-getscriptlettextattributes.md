@@ -54,7 +54,7 @@ HRESULT GetScriptletTextAttributes(
   
 |Konstanta|Hodnota|Popis|  
 |--------------|-----------|-----------------|  
-|GETATTRTYPE_DEPSCAN|0x0001|Označuje, že identifikátory a operátory tečka by měly být identifikovány pomocí příznaků SOURCETEXT_ATTR_IDENTIFIER a SOURCETEXT_ATTR_MEMBERLOOKUP, v uvedeném pořadí.|  
+|GETATTRTYPE_DEPSCAN|0x0001|Označuje, že identifikátory a operátory tečka by měly být identifikovány pomocí příznaků SOURCETEXT_ATTR_IDENTIFIER a SOURCETEXT_ATTR_MEMBERLOOKUP v uvedeném pořadí.|  
 |GETATTRFLAG_THIS|0x0100|Označuje, že identifikátor pro aktuální objekt by měl být identifikován pomocí příznaku SOURCETEXT_ATTR_THIS.|  
 |GETATTRFLAG_HUMANTEXT|0x8000|Označuje, že se má označovat obsah řetězce a text komentáře pomocí příznaku SOURCETEXT_ATTR_HUMANTEXT.|  
   
@@ -74,8 +74,8 @@ HRESULT GetScriptletTextAttributes(
  Toto volání je k dispozici, protože skriptlety by měl být výrazy a může mít jinou syntaxi než blok skriptu. Pokud mají stejnou syntaxi, implementace této metody bude shodná s implementací metody `GetScriptTextAttributes`.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní iactivescriptdebug –](../../winscript/reference/iactivescriptdebug-interface.md)  
- [Iactivescriptdebug –:: GetScriptTextAttributes](../../winscript/reference/iactivescriptdebug-getscripttextattributes.md)    
- @No__t_1 [rozhraní IDebugDocumentText –](../../winscript/reference/idebugdocumenttext-interface.md)  
- [IDebugDocumentText –:: GetText](../../winscript/reference/idebugdocumenttext-gettext.md)    
+   [rozhraní iactivescriptdebug –](../../winscript/reference/iactivescriptdebug-interface.md)  
+ [IActiveScriptDebug::GetScriptTextAttributes](../../winscript/reference/iactivescriptdebug-getscripttextattributes.md)   
+ [IDebugDocumentText Interface](../../winscript/reference/idebugdocumenttext-interface.md)   
+ [IDebugDocumentText::GetText](../../winscript/reference/idebugdocumenttext-gettext.md)   
  [SOURCE_TEXT_ATTR – výčet](../../winscript/reference/source-text-attr-enumeration.md)

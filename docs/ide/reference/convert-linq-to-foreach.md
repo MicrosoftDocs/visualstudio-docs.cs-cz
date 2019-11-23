@@ -32,14 +32,14 @@ Tento refaktoring platí pro:
    > [!NOTE]
    > Tento refaktoring lze použít pouze pro převod LINQ dotazů vyjádřených syntaxí dotazu a nikoli syntaxí metody.
 
-1. Stiskněte klávesu **Ctrl** + **.** nebo klikněte na ikonu ![screwdriver Screwdriver ](../media/screwdriver-icon.png) ikonu na okraji souboru s kódem.
+1. Stisknutím klávesy **Ctrl**+ **.** nebo klikněte na ikonu Screwdriver ![Screwdriver ikony](../media/screwdriver-icon.png) na okraji souboru s kódem.
 
    ![Nabídka rychlé akce převedení LINQ na foreach](media/convert-linq-to-foreach.png)
 
 1. Vyberte **převést na foreach**. Případně můžete výběrem **Zobrazit náhled změn** otevřít dialogové okno [Náhled změn](../../ide/preview-changes.md) a pak vybrat **použít**.
 
 > [!NOTE]
-> C#Kód generovaný těmito refaktoringy používá explicitní typ nebo [var](/dotnet/csharp/language-reference/keywords/var) pro proměnnou iterace `foreach` smyčky. Typ v generovaném kódu, explicitní nebo implicitní, závisí na nastavení stylu kódu, které jsou v rozsahu. Tato konkrétní nastavení stylu kódu se konfigurují na úrovni počítače v nabídce **nástroje**  > **Možnosti**  > **textový Editor** **C#**  >   > **styl kódu** 0**Obecné** 2 **@no__t_ 14var ' předvolby**nebo na úrovni řešení v souboru [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) . Pokud změníte nastavení stylu kódu v **možnostech**, znovu otevřete soubor kódu, aby se změny projevily.
+> C#Kód generovaný těmito refaktoringy používá explicitní typ nebo [var](/dotnet/csharp/language-reference/keywords/var) pro proměnnou iterace `foreach` smyčky. Typ v generovaném kódu, explicitní nebo implicitní, závisí na nastavení stylu kódu, které jsou v rozsahu. Tato konkrétní nastavení stylu kódu jsou konfigurována na úrovni počítače v nabídce **nástroje** > **Možnosti** > **textový Editor** > **C#**  > **stylu kódu** > **Obecné** předvolby > \'**var**nebo na úrovni řešení v souboru [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) . Pokud změníte nastavení stylu kódu v **možnostech**, znovu otevřete soubor kódu, aby se změny projevily.
 
 ## <a name="see-also"></a>Viz také:
 

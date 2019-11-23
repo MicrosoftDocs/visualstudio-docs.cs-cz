@@ -37,7 +37,7 @@ ms.locfileid: "72578053"
 Můžete přizpůsobit způsob, jakým aplikace Visual Studio zobrazuje datové typy v oknech proměnných ladicího programu.  
   
 ## <a name="attributes"></a>Atributy  
- V C# a Visual Basic můžete přidat rozšíření pro vlastní data pomocí <xref:System.Diagnostics.DebuggerTypeProxyAttribute>, <xref:System.Diagnostics.DebuggerDisplayAttribute> a <xref:System.Diagnostics.DebuggerBrowsableAttribute>.  
+ V C# a Visual Basic můžete přidat rozšíření pro vlastní data pomocí <xref:System.Diagnostics.DebuggerTypeProxyAttribute>, <xref:System.Diagnostics.DebuggerDisplayAttribute>a <xref:System.Diagnostics.DebuggerBrowsableAttribute>.  
   
  V kódu [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] Visual Basic nepodporuje atribut DebuggerBrowsable. Toto omezení je odebráno v novějších verzích .NET Framework.  
   
@@ -53,7 +53,7 @@ Můžete přizpůsobit způsob, jakým aplikace Visual Studio zobrazuje datové 
  Zobrazení nativního typu lze také přizpůsobit zápisem doplňku vyhodnocení výrazu. Další informace najdete v tématu [Ukázka EEAddIn: doplněk vyhodnocovacího filtru výrazů ladění](https://msdn.microsoft.com/d4f6b068-c812-45bc-9ec0-7e0363c4bb9e).  
   
 ## <a name="see-also"></a>Viz také  
- [Použití atributu používání debuggertypeproxy](../debugger/using-debuggertypeproxy-attribute.md)    
- [Použití atributu DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md)    
- [Sledujte a QuickWatch   Windows](../debugger/watch-and-quickwatch-windows.md)  
+ [Použití atributu používání debuggertypeproxy](../debugger/using-debuggertypeproxy-attribute.md)   
+ [Použití atributu DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md)   
+ [Kukátko a Rychlé kukátko Windows](../debugger/watch-and-quickwatch-windows.md)   
  [Rozšíření ladění pomocí atributů zobrazení ladicího programu](https://msdn.microsoft.com/library/72bb7aa9-459b-42c4-9163-9312fab4c410)

@@ -62,5 +62,5 @@ HRESULT GetStatEx(
 > Tato metoda není v současnosti implementována.  
   
 ## <a name="see-also"></a>Viz také:  
- [Iactivescriptstats –:: getstat](../../winscript/reference/iactivescriptstats-getstat.md)    
+ [Iactivescriptstats –:: getstat](../../winscript/reference/iactivescriptstats-getstat.md)   
  [IActiveScriptStats – rozhraní](../../winscript/reference/iactivescriptstats-interface.md)

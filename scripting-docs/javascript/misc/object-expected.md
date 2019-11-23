@@ -22,15 +22,15 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573726"
 ---
 # <a name="object-expected"></a>Očekáván objekt
-Pokusili jste se vyvolat metodu nebo vlastnost objektu jiného typu než `Object` nebo jste předali argument jiného typu než `Object`, pokud byl vyžadován `Object`.  
+Pokusili jste se vyvolat metodu nebo vlastnost objektu jiného typu než `Object`nebo jste předali argument jiného typu než `Object`, pokud byl vyžadován `Object`.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Pro objekty typu `Object` vyvolat pouze metodu nebo vlastnost.  
+- Pro objekty typu `Object`vyvolat pouze metodu nebo vlastnost.  
   
 - Pokud dojde k chybě pro argument bez objektu, předejte objekt typu `Object`.  
   
-- Ověřte, zda je místo objektu typu `Object` vyvolána reference nedefinovaného nebo null.  
+- Ověřte, zda je místo objektu typu `Object`vyvolána reference nedefinovaného nebo null.  
   
      Například pokud se zobrazí tato chyba v myVar v následujícím kódu:  
   
@@ -47,5 +47,5 @@ Pokusili jste se vyvolat metodu nebo vlastnost objektu jiného typu než `Object
     ```  
   
 ## <a name="see-also"></a>Viz také:  
- [Objekt objektu  ](../../javascript/reference/object-object-javascript.md)  
+ [Objekt objektu ](../../javascript/reference/object-object-javascript.md)  
  [Objekty a pole](../../javascript/objects-and-arrays-javascript.md)

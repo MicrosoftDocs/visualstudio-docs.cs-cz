@@ -38,8 +38,8 @@ enum enum_APPBREAKFLAGS{APPBREAKFLAG_DEBUGGER_BLOCK= 0x00000001,APPBREAKFLAG_DEB
 |Člen|Hodnota|Popis|  
 |------------|-----------|-----------------|  
 |APPBREAKFLAG_DEBUGGER_BLOCK|0x00000001|Jazykový modul by měl být okamžitě přerušen na všech vláknech s BREAKREASON_DEBUGGER_BLOCK.|  
-|APPBREAKFLAG_DEBUGGER_HALT|0x00000002|Jazykový modul by měl být hned přerušený pomocí BREAKREASON_DEBUGGER_HALT.|  
-|APPBREAKFLAG_STEP|0x00010000|Jazykový modul by měl být okamžitě přerušen ve vlákně Stepping pomocí BREAKREASON_STEP.|  
+|APPBREAKFLAG_DEBUGGER_HALT|0x00000002|Jazykový modul by měl být okamžitě přerušený s BREAKREASON_DEBUGGER_HALT.|  
+|APPBREAKFLAG_STEP|0x00010000|Jazykový modul by měl být okamžitě přerušen ve vlákně Stepping s BREAKREASON_STEP.|  
 |APPBREAKFLAG_NESTED|0x00020000|Aplikace je ve vnořeném provádění na zarážce.|  
 |APPBREAKFLAG_STEPTYPE_SOURCE|0x00000000|Ladicí program provádí krokování na zdrojové úrovni.|  
 |APPBREAKFLAG_STEPTYPE_BYTECODE|0x00100000|Ladicí program je krokování na úrovni bajtového kódu.|  
@@ -51,5 +51,5 @@ enum enum_APPBREAKFLAGS{APPBREAKFLAG_DEBUGGER_BLOCK= 0x00000001,APPBREAKFLAG_DEB
  Některé příznaky určují, že by se měly jazykové moduly narušovat při další příležitosti, zatímco jiné příznaky určují režim krokování ladicího programu.  
   
 ## <a name="see-also"></a>Viz také:  
- [Konstanty, výčty a struktury ladicího programu aktivních skriptů](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)    
+ [Konstanty, výčty a struktury ladicího programu aktivních skriptů](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)   
  [BREAKREASON – výčet](../../winscript/reference/breakreason-enumeration.md)

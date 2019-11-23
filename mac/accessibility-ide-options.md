@@ -29,9 +29,9 @@ Kromě funkcí integrovaných přímo do macOS má Visual Studio pro Mac řadu f
 
 Je možné přizpůsobit písmo a velikost obsahu ve většině odVisual Studio pro Mac. Tady je postup:
 
-1. Přejít do sady **Visual Studio (nabídka)** @no__t předvolby-1 **... (&#8984;,)** .
+1. Přejděte do sady **Visual Studio (nabídka)**  > **Předvolby... (&#8984;,)** .
 
-1. V **nastavení předvolby**přejdete do **prostředí**@no__t – 2**písma**.
+1. V **nastavení předvolby**přejdete do **prostředí** > **písma**.
 
 1. Pro **textový editor**, **obecný text panelu**nebo **výstupní panel**vyberte tlačítko písmo a velikost.
 
@@ -44,7 +44,7 @@ Je možné přizpůsobit písmo a velikost obsahu ve většině odVisual Studio 
 
 Někteří uživatelé mohou zjistit, že výchozí barevné schéma nesplňuje požadavky na kontrast nebo barvy. Visual Studio pro Mac má řadu alternativních motivů, které může uživatel vybrat, včetně dvou motivů s vysokým kontrastem.
 
-1. Přejít do sady **Visual Studio (nabídka)** @no__t předvolby-1 **... (&#8984;,)** .
+1. Přejděte do sady **Visual Studio (nabídka)**  > **Předvolby... (&#8984;,)** .
 
 1. V **nastavení předvolby**přejít na **textový editor** > **barevný motiv**.
 

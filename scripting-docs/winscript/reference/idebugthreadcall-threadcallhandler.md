@@ -58,6 +58,6 @@ HRESULT ThreadCallHandler(
  Tato metoda zpracovává volání pro spuštění kódu ve vlákně ladicího programu.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní idebugthreadcall –](../../winscript/reference/idebugthreadcall-interface.md)  
- [IDebugApplication –:: SynchronousCallInDebuggerThread](../../winscript/reference/idebugapplication-synchronouscallindebuggerthread.md)    
+   [rozhraní idebugthreadcall –](../../winscript/reference/idebugthreadcall-interface.md)  
+ [IDebugApplication –:: SynchronousCallInDebuggerThread](../../winscript/reference/idebugapplication-synchronouscallindebuggerthread.md)   
  [IDebugApplicationThread::SynchronousCallIntoThread](../../winscript/reference/idebugapplicationthread-synchronouscallintothread.md)

@@ -54,7 +54,7 @@ HRESULT GetScriptletTextAttributes(
   
 |Konstanta|Hodnota|Popis|  
 |--------------|-----------|-----------------|  
-|GETATTRTYPE_DEPSCAN|0x0001|Identifikujte identifikátory, které mají atribut SOURCETEXT_ATTR_IDENTIFIER, a Identifikujte operátory tečka, které mají atribut SOURCETEXT_ATTR_MEMBERLOOKUP.|  
+|GETATTRTYPE_DEPSCAN|0x0001|Identifikujte identifikátory, které mají atribut SOURCETEXT_ATTR_IDENTIFIER a Identifikujte operátory tečka, které mají atribut SOURCETEXT_ATTR_MEMBERLOOKUP.|  
 |GETATTRFLAG_THIS|0x0100|Identifikujte aktuální objekt, který má atribut SOURCETEXT_ATTR_THIS.|  
 |GETATTRFLAG_HUMANTEXT|0x8000|Identifikujte obsah řetězce a text komentáře s atributem SOURCETEXT_ATTR_HUMANTEXT.|  
   
@@ -62,7 +62,7 @@ HRESULT GetScriptletTextAttributes(
  [in, out, size_is (`cch`)] Informace o barvách pro skriptletu kód.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- @No__t_0. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
@@ -71,6 +71,6 @@ HRESULT GetScriptletTextAttributes(
 ## <a name="remarks"></a>Poznámky  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní iactivescriptauthor –](../../winscript/reference/iactivescriptauthor-interface.md)  
- [Iactivescriptauthor –:: GetScriptTextAttributes](../../winscript/reference/iactivescriptauthor-getscripttextattributes.md)    
+   [rozhraní iactivescriptauthor –](../../winscript/reference/iactivescriptauthor-interface.md)  
+ [IActiveScriptAuthor::GetScriptTextAttributes](../../winscript/reference/iactivescriptauthor-getscripttextattributes.md)   
  [SOURCE_TEXT_ATTR – výčet](../../winscript/reference/source-text-attr-enumeration.md)

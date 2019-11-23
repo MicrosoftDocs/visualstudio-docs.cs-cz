@@ -48,6 +48,6 @@ HRESULT Abort();
  Tato metoda je obvykle volána v rámci vlákna ladicího programu pro zrušení operace, která nereaguje. Tato metoda způsobí, že je volána metoda `InProgressAbort` objektu `IDebugSyncOperation`.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní idebugasyncoperation –](../../winscript/reference/idebugasyncoperation-interface.md)  
- [Idebugasyncoperation –:: Start](../../winscript/reference/idebugasyncoperation-start.md)    
+   [rozhraní idebugasyncoperation –](../../winscript/reference/idebugasyncoperation-interface.md)  
+ [Idebugasyncoperation –:: Start](../../winscript/reference/idebugasyncoperation-start.md)   
  [IDebugSyncOperation::InProgressAbort](../../winscript/reference/idebugsyncoperation-inprogressabort.md)

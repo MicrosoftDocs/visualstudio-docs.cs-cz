@@ -26,7 +26,7 @@ ms.locfileid: "72647132"
 ---
 # <a name="walkthrough-create-a-code-snippet"></a>Návod: Vytvoření fragmentu kódu
 
-Fragment kódu můžete vytvořit pouze s několika kroky. Vše, co potřebujete udělat, je vytvořit soubor XML, vyplnit příslušné prvky a přidat do něj svůj kód. Volitelně můžete využít náhradní parametry a odkazy na projekt. Importujte fragment kódu do instalace sady Visual Studio pomocí tlačítka **importovat** ve **Správci fragmentů kódu** (**nástroje**  > **Správce fragmentů kódů**).
+Fragment kódu můžete vytvořit pouze s několika kroky. Vše, co potřebujete udělat, je vytvořit soubor XML, vyplnit příslušné prvky a přidat do něj svůj kód. Volitelně můžete využít náhradní parametry a odkazy na projekt. Importujte fragment kódu do instalace sady Visual Studio pomocí tlačítka **importovat** ve **Správci fragmentů kódu** (**nástroje** > **Správce fragmentů kódů**).
 
 ## <a name="snippet-template"></a>Šablona fragmentu
 
@@ -84,9 +84,9 @@ Následující kód XML je základní šablona fragmentu:
 
 ## <a name="import-a-code-snippet"></a>Import fragmentu kódu
 
-1. Fragment kódu můžete do instalace sady Visual Studio importovat pomocí **Správce fragmentů kódů**. Otevřete ho výběrem **nástrojů**  > **Správce fragmentů kódů**.
+1. Fragment kódu můžete do instalace sady Visual Studio importovat pomocí **Správce fragmentů kódů**. Otevřete ho výběrem **nástrojů** > **Správce fragmentů kódů**.
 
-2. Klikněte na tlačítko **Import** .
+2. Klikněte na tlačítko **Import**.
 
 3. Přejděte do umístění, kam jste uložili fragment kódu v předchozím postupu, vyberte jej a klikněte na tlačítko **otevřít**.
 
@@ -96,19 +96,19 @@ Následující kód XML je základní šablona fragmentu:
 
    ::: moniker range="vs-2017"
 
-   *%UserProfile%\Documents\Visual Studio 2017 \ Code Snippets\Visual C#\My fragmenty kódu* 
+   *%UserProfile%\Documents\Visual Studio 2017 \ Code Snippets\Visual C#\My fragmenty kódu*
     *%UserProfile%\Documents\Visual Studio 2017 \ Code Snippets\Visual Basic\My fragmenty kódu*
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   *%UserProfile%\Documents\Visual Studio 2019 \ Code Snippets\Visual C#\My fragmenty kódu* 
+   *%UserProfile%\Documents\Visual Studio 2019 \ Code Snippets\Visual C#\My fragmenty kódu*
     *%UserProfile%\Documents\Visual Studio 2019 \ Code Snippets\Visual Basic\My fragmenty kódu*
 
    ::: moniker-end
 
-6. Otestujte fragment tak, že otevřete C# projekt nebo Visual Basic. V editoru otevřete soubor kódu, zvolte **fragmenty**  > **Vložit fragment** z nabídky po kliknutí pravým tlačítkem myši a potom **Moje fragmenty kódu**. Měl by se zobrazit fragment nazvaný **odmocnina**. Poklikejte na ni.
+6. Otestujte fragment tak, že otevřete C# projekt nebo Visual Basic. V editoru otevřete soubor kódu, zvolte **fragmenty** > **Vložit fragment** z nabídky po kliknutí pravým tlačítkem myši a potom **Moje fragmenty kódu**. Měl by se zobrazit fragment nazvaný **odmocnina**. Poklepejte na něj.
 
    Kód fragmentu je vložen do souboru kódu.
 
@@ -116,13 +116,13 @@ Následující kód XML je základní šablona fragmentu:
 
 ::: moniker range="vs-2017"
 
-1. Pole popisu poskytují více informací o fragmentu kódu při zobrazení ve Správci fragmentů kódu. Zástupce je značka, kterou mohou uživatelé zadat pro vložení fragmentu. Upravte fragment, který jste přidali, otevřením souboru *%UserProfile%\Documents\Visual Studio 2017 \ fragmenty kódu \\ [Visual C# nebo Visual Basic] \My Code Snippet\SquareRoot.snippet*.
+1. Pole popisu poskytují více informací o fragmentu kódu při zobrazení ve Správci fragmentů kódu. Zástupce je značka, kterou mohou uživatelé zadat pro vložení fragmentu. Upravte fragment, který jste přidali, otevřením souboru *%UserProfile%\Documents\Visual Studio 2017 \ fragmenty kódu\\[Visual C# nebo Visual Basic] \My Code Snippet\SquareRoot.snippet*.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Pole popisu poskytují více informací o fragmentu kódu při zobrazení ve Správci fragmentů kódu. Zástupce je značka, kterou mohou uživatelé zadat pro vložení fragmentu. Upravte fragment, který jste přidali, otevřením souboru *%UserProfile%\Documents\Visual Studio 2019 \ Code fragmenty \\ [Visual C# nebo Visual Basic] \My Code Snippet\SquareRoot.snippet*.
+1. Pole popisu poskytují více informací o fragmentu kódu při zobrazení ve Správci fragmentů kódu. Zástupce je značka, kterou mohou uživatelé zadat pro vložení fragmentu. Upravte fragment, který jste přidali, otevřením souboru *%UserProfile%\Documents\Visual Studio 2019 \ Code fragmenty\\[Visual C# nebo Visual Basic] \My Code Snippet\SquareRoot.snippet*.
 
 ::: moniker-end
 

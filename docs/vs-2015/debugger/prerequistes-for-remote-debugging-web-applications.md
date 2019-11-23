@@ -35,5 +35,5 @@ Pomocí ladicího programu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] můžete
 - Ve výchozím nastavení se pracovní proces [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] spouští jako proces uživatele ASPNET. V důsledku toho musíte mít v počítači, na kterém [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] spouští k ladění, oprávnění správce. Název pracovního procesu [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] se liší podle scénáře ladění a verze služby IIS. Další informace najdete v tématu [Postupy: hledání názvu procesu ASP.NET](../debugger/how-to-find-the-name-of-the-aspnet-process.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Ladění aplikací ASP.NET a AJAX](../debugger/debugging-aspnet-and-ajax-applications.md)    
+ [Ladění aplikací ASP.NET a AJAX](../debugger/debugging-aspnet-and-ajax-applications.md)   
  [Požadavky na systém](../debugger/aspnet-debugging-system-requirements.md)

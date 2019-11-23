@@ -50,5 +50,5 @@ HRESULT GetDebugger(
  Tato metoda vrátí aktuální ladicí program připojený k aplikaci.  
   
 ## <a name="see-also"></a>Viz také:  
- [Iremotedebugapplication –:: ConnectDebugger](../../winscript/reference/iremotedebugapplication-connectdebugger.md)    
+ [Iremotedebugapplication –:: ConnectDebugger](../../winscript/reference/iremotedebugapplication-connectdebugger.md)   
  [IRemoteDebugApplication – rozhraní](../../winscript/reference/iremotedebugapplication-interface.md)

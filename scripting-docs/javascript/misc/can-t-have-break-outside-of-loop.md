@@ -36,5 +36,5 @@ break labelname;
   
 ## <a name="see-also"></a>Viz také:  
    [příkazu break](../../javascript/reference/break-statement-javascript.md)  
- [Řízení   toku programu](../../javascript/controlling-program-flow-javascript.md)  
+ [Řízení  toku programu](../../javascript/controlling-program-flow-javascript.md)  
  [Řešení potíží se skripty](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)

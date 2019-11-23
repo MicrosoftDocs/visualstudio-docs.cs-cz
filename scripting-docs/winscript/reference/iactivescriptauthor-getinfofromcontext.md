@@ -65,7 +65,7 @@ HRESULT GetInfoFromContext(
 |SCRIPT_CMPL_PARAMLIST|0x0004|Seznam parametrů metody volání.|  
 |SCRIPT_CMPL_GLOBALLIST|0x0008|Globální seznam.|  
   
- Typ SCRIPT_CMPL_GLOBALLIST se považuje za výchozí položku dokončení, kterou lze kombinovat pomocí operátoru OR s dalšími položkami dokončení. Modul pro vytváření skriptů se nejprve pokusí naplnit informace o typu pro ostatní položky seznamu dokončení. Pokud se to nepovede, modul naplní pro SCRIPT_CMPL_GLOBALLIST.  
+ Typ SCRIPT_CMPL_GLOBALLIST se považuje za výchozí položku dokončení, kterou lze kombinovat pomocí operátoru OR s dalšími položkami dokončení. Modul pro vytváření skriptů se nejprve pokusí naplnit informace o typu pro ostatní položky seznamu dokončení. Pokud se to nepovede, modul naplní SCRIPT_CMPL_GLOBALLIST.  
   
  `pdwListTypesProvided`  
  mimo Zadaný typ seznamu.  
@@ -103,5 +103,5 @@ HRESULT GetInfoFromContext(
 ## <a name="remarks"></a>Poznámky  
   
 ## <a name="see-also"></a>Viz také:  
-   [rozhraní IProvideMultipleClassInfo](/dotnet/api/microsoft.visualstudio.ole.interop.iprovidemultipleclassinfo)  
+ [IProvideMultipleClassInfo Interface](/dotnet/api/microsoft.visualstudio.ole.interop.iprovidemultipleclassinfo)   
  [IActiveScriptAuthor – rozhraní](../../winscript/reference/iactivescriptauthor-interface.md)

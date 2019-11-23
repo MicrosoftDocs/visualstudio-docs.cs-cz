@@ -29,6 +29,6 @@ Nezadali jste pole jako argument. Tato chyba se vztahuje pouze na metodu **Funct
 - Jako druhý argument zadejte buď `Array`, nebo objekt **arguments** .  
   
 ## <a name="see-also"></a>Viz také:  
- [Použití polí](../../javascript/advanced/using-arrays-javascript.md)    
- [Apply – metoda (Function)](../../javascript/reference/apply-method-function-javascript.md)    
+ [Použití polí](../../javascript/advanced/using-arrays-javascript.md)   
+ [Apply – metoda (Function)](../../javascript/reference/apply-method-function-javascript.md)   
  [Funkce](../../javascript/functions-javascript.md)

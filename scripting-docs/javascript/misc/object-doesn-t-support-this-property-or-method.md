@@ -33,5 +33,5 @@ Zadali jste vlastnost nebo metodu, které pro tento objekt neexistuje. Ne všech
 - Další informace najdete v dokumentaci k objektu.  
   
 ## <a name="see-also"></a>Viz také:  
- [Objekt objektu  ](../../javascript/reference/object-object-javascript.md)  
+ [Objekt objektu ](../../javascript/reference/object-object-javascript.md)  
  [JavaScript – objekty](../../javascript/reference/javascript-objects.md)

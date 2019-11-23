@@ -21,7 +21,7 @@ ms.lasthandoff: 10/28/2019
 ms.locfileid: "72985291"
 ---
 # <a name="iremotedebugapplication110getmainthread"></a>IRemoteDebugApplication110::GetMainThread
-Vrátí hlavní vlákno pro hostitele, kteří volají [SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite), v opačném případě vrátí E_FAIL.  
+Vrátí hlavní vlákno pro hostitele, kteří volají [SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite), jinak vrátí E_FAIL.  
   
 > [!IMPORTANT]
 > [Rozhraní iremotedebugapplication –](../../winscript/reference/iremotedebugapplication-interface.md) je implementováno pomocí PDM v 11.0 a větší. Nachází se v souboru activdbg100.h.  

@@ -50,5 +50,5 @@ HRESULT Attach(
  Tato metoda přidá tento uzel aplikace do stromu projektu pomocí `pdanParent` jako nadřazeného objektu. Pokud je `pdanParent` `NULL`, bude tento uzel aplikace uzlem nejvyšší úrovně.  
   
 ## <a name="see-also"></a>Viz také:  
- [IDebugApplicationNode –::D etach](../../winscript/reference/idebugapplicationnode-detach.md)    
+ [IDebugApplicationNode –::D etach](../../winscript/reference/idebugapplicationnode-detach.md)   
  [IDebugApplicationNode – rozhraní](../../winscript/reference/idebugapplicationnode-interface.md)

@@ -29,5 +29,5 @@ Pokusili jste se provést operaci na datovém členu objektu, ale člen neexistu
 - Ujistěte se, že jste zadali správný název datového členu.  
   
 ## <a name="see-also"></a>Viz také:  
- [Objekt objektu  ](../../javascript/reference/object-object-javascript.md)  
+ [Objekt objektu ](../../javascript/reference/object-object-javascript.md)  
  [Objekty a pole](../../javascript/objects-and-arrays-javascript.md)

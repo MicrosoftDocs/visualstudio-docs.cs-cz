@@ -55,7 +55,7 @@ HRESULT EnumMembers (
  Vrací platný `HRESULT`, obvykle `S_OK`.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní idebugproperty –](../../winscript/reference/idebugproperty-interface.md)  
- [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)    
- @No__t_1 [rozhraní IDebugPropertyEnumType_All](../../winscript/reference/idebugpropertyenumtype-all-interface.md)  
+   [rozhraní idebugproperty –](../../winscript/reference/idebugproperty-interface.md)  
+ [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)   
+ [Rozhraní IDebugPropertyEnumType_All](../../winscript/reference/idebugpropertyenumtype-all-interface.md)   
  [IEnumDebugPropertyInfo – rozhraní](../../winscript/reference/ienumdebugpropertyinfo-interface.md)

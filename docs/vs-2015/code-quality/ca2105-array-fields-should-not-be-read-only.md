@@ -32,7 +32,7 @@ ms.locfileid: "72666016"
 |Kategorie|Microsoft.Security|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Veřejné nebo chráněné pole, které obsahuje pole, je deklarované jen pro čtení.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -50,10 +50,10 @@ ms.locfileid: "72666016"
   Pokud jste zvolili druhý přístup, neměňte pole pomocí vlastnosti; vlastnosti, které vracejí pole nepříznivě ovlivňující výkon. Další informace najdete v tématu [CA1819: vlastnosti by neměly vracet pole](../code-quality/ca1819-properties-should-not-return-arrays.md).
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Vyloučení upozornění z tohoto pravidla se důrazně nedoporučuje. Téměř žádné scénáře nevzniká, pokud obsah pole jen pro čtení není neimportované. Pokud se jedná o tento případ s vaším scénářem, odeberte modifikátor `readonly` místo vyloučení zprávy.
+ Vyloučení upozornění z tohoto pravidla se důrazně nedoporučuje. Téměř žádné scénáře nevzniká, pokud obsah pole jen pro čtení není neimportované. Pokud se jedná o případ s vaším scénářem, odeberte modifikátor `readonly` místo vyloučení zprávy.
 
 ## <a name="example"></a>Příklad
- Tento příklad ukazuje nebezpečí porušení tohoto pravidla. První část ukazuje příklad knihovny, která má typ, `MyClassWithReadOnlyArrayField`, který obsahuje dvě pole (`grades` a `privateGrades`), která nejsou zabezpečená. Pole `grades` je veřejné, a proto je zranitelné pro libovolného volajícího. Pole `privateGrades` je privátní, ale je stále zranitelné, protože je vráceno volajícím metodou `GetPrivateGrades`. Pole `securePrivateGrades` se zveřejňuje bezpečným způsobem metodou `GetSecurePrivateGrades`. Deklarace je deklarovaná jako soukromá, aby sledovala dobré postupy návrhu. Druhá část zobrazuje kód, který mění hodnoty uložené v členech `grades` a `privateGrades`.
+ Tento příklad ukazuje nebezpečí porušení tohoto pravidla. První část ukazuje příklad knihovny, která má typ, `MyClassWithReadOnlyArrayField`, který obsahuje dvě pole (`grades` a `privateGrades`), která nejsou zabezpečená. Pole `grades` je veřejné, a proto je zranitelné pro libovolného volajícího. Pole `privateGrades` je privátní, ale je stále zranitelné, protože je vráceno volajícím metodou `GetPrivateGrades`. Pole `securePrivateGrades` je vystaveno bezpečným způsobem `GetSecurePrivateGrades` metodou. Deklarace je deklarovaná jako soukromá, aby sledovala dobré postupy návrhu. Druhá část zobrazuje kód, který mění hodnoty uložené v `grades` a `privateGrades`ch členů.
 
  Ukázková knihovna tříd se zobrazí v následujícím příkladu.
 
@@ -66,7 +66,7 @@ ms.locfileid: "72666016"
 
  Výstup z tohoto příkladu je:
 
- **Před manipulací: třídy: 90, 90, 90 privátních stupňů: 90, 90, 90 zabezpečených stupňů, 90, 90, 90** 
+ **Před manipulací: třídy: 90, 90, 90 privátních stupňů: 90, 90, 90 zabezpečených stupňů, 90, 90, 90**
 **po manipulaci: třídy: 90, 555, 90 soukromé třídy: 90, 555, 90 zabezpečených stupňů, 90, 90, 90**
 ## <a name="see-also"></a>Viz také
- <xref:System.Array?displayProperty=fullName><xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>
+ <xref:System.Array?displayProperty=fullName> <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>

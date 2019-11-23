@@ -28,7 +28,7 @@ Visual Studio pro Mac má řadu klávesových zkratek pro různé úlohy. Tyto k
 
 1. Vyberte možnost **Visual Studio (nabídka)**  > **Předvolby&#8984;(,)** .
 
-1. Přejít do **prostředí**@no__t**vazby klíčů**-1.
+1. Přejít do **prostředí** > **vazby klíčů**.
 
 1. Procházejte seznamem nebo vyhledejte zástupce nebo příkaz.
 
@@ -49,7 +49,7 @@ Visual Studio pro Mac má řadu klávesových zkratek pro různé úlohy. Tyto k
 |Interaktivně        |Vyberte ovládací prvek, který je aktuálně aktivní.         |**␣**            |
 |Interaktivně        |Vyberte výchozí ovládací prvek na obrazovce nebo dialogovém okně. |**⏎**            |
 |Přepnout tabulátory     |Přepínání mezi otevřenými soubory                      |**⌘ ⇧ [** , **⌘ ⇧]** |
-|Ladění           |Spusťte ladění.                               |**⌘⏎**           |
+|Ladit           |Spusťte ladění.                               |**⌘⏎**           |
 
 > [!TIP]
 > Zobrazit kompletní seznam klávesových [zkratek pro klávesové zkratky](keyboard-shortcuts.md).

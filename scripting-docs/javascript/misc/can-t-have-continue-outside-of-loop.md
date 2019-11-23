@@ -45,6 +45,6 @@ Pokusili jste se použít příkaz **Continue** mimo smyčku. Příkaz **Continu
   - **pro smyčku for/in** .  
   
 ## <a name="see-also"></a>Viz také:  
- [pokračovat   příkazu](../../javascript/reference/continue-statement-javascript.md)  
- [Řízení   toku programu](../../javascript/controlling-program-flow-javascript.md)  
+ [pokračovat  příkazu](../../javascript/reference/continue-statement-javascript.md)  
+ [Řízení  toku programu](../../javascript/controlling-program-flow-javascript.md)  
  [Řešení potíží se skripty](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)

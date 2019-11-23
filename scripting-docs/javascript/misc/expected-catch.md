@@ -31,5 +31,5 @@ Použili jste blok **Try** zpracování výjimek, ale nezapsali jste přidružen
 - Zkuste místo bloku **catch** použít blok **finally** .  
   
 ## <a name="see-also"></a>Viz také:  
- [zkusit... zachytit... Příkaz finally](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)    
+ [zkusit... zachytit... Příkaz finally](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)   
  [Error – objekt](../../javascript/reference/error-object-javascript.md)

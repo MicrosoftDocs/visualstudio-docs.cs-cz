@@ -56,7 +56,7 @@ HRESULT GetMemberProperties(
   
 |Hodnota|Význam|  
 |-----------|-------------|  
-|fdexPropCanGet|Člen se dá získat pomocí DISPATCH_PROPERTYGET.|  
+|fdexPropCanGet|Člen lze získat pomocí DISPATCH_PROPERTYGET.|  
 |fdexPropCannotGet|Člen nelze získat pomocí DISPATCH_PROPERTYGET.|  
 |fdexPropCanPut|Člen lze nastavit pomocí DISPATCH_PROPERTYPUT.|  
 |fdexPropCannotPut|Člen nelze nastavit pomocí DISPATCH_PROPERTYPUT.|  
@@ -65,9 +65,9 @@ HRESULT GetMemberProperties(
 |fdexPropNoSideEffects|Člen nemá žádné vedlejší účinky. Ladicí program může například bezpečně získat nebo nastavit nebo zavolat tento člen beze změny stavu laděného skriptu.|  
 |fdexPropDynamicType|Člen je dynamický a může se změnit během životnosti objektu.|  
 |fdexPropCanCall|Člen může být volán jako metoda pomocí DISPATCH_METHOD.|  
-|fdexPropCannotCall|Člen se nedá volat jako metoda pomocí DISPATCH_METHOD.|  
+|fdexPropCannotCall|Člen nelze volat jako metodu pomocí DISPATCH_METHOD.|  
 |fdexPropCanConstruct|Člen může být volán jako konstruktor pomocí DISPATCH_CONSTRUCT.|  
-|fdexPropCannotConstruct|Člen se nedá volat jako konstruktor pomocí DISPATCH_CONSTRUCT.|  
+|fdexPropCannotConstruct|Člen nelze volat jako konstruktor pomocí DISPATCH_CONSTRUCT.|  
 |fdexPropCanSourceEvents|Člen může aktivovat události.|  
 |fdexPropCannotSourceEvents|Člen nemůže vyvolat události.|  
   
@@ -97,6 +97,6 @@ BSTR bstrName;
 ```  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní IDispatchEx –](../../winscript/reference/idispatchex-interface.md)  
- [IDispatchEx –:: GetDispID](../../winscript/reference/idispatchex-getdispid.md)    
+   [rozhraní IDispatchEx –](../../winscript/reference/idispatchex-interface.md)  
+ [IDispatchEx –:: GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)

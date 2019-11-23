@@ -50,6 +50,6 @@ HRESULT RemoveStackFrameSniffer(
  Metoda `RemoveStackFrameSniffer` odebere z této aplikace zprostředkovatele výčtu rámců zásobníku.  
   
 ## <a name="see-also"></a>Viz také:  
- [IDebugApplication –:: AddStackFrameSniffer](../../winscript/reference/idebugapplication-addstackframesniffer.md)    
- @No__t_1 [rozhraní IDebugApplication –](../../winscript/reference/idebugapplication-interface.md)  
+ [IDebugApplication –:: AddStackFrameSniffer](../../winscript/reference/idebugapplication-addstackframesniffer.md)   
+   [rozhraní IDebugApplication –](../../winscript/reference/idebugapplication-interface.md)  
  [IDebugStackFrameSniffer – rozhraní](../../winscript/reference/idebugstackframesniffer-interface.md)

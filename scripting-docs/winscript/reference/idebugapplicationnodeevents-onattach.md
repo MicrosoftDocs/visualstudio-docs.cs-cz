@@ -52,6 +52,6 @@ HRESULT onAttach(
  Implementátori rozhraní `IDebugApplicationNode` vyvolávají tuto událost.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní idebugapplicationnodeevents –](../../winscript/reference/idebugapplicationnodeevents-interface.md)  
- [Idebugapplicationnodeevents –:: detach](../../winscript/reference/idebugapplicationnodeevents-ondetach.md)    
+   [rozhraní idebugapplicationnodeevents –](../../winscript/reference/idebugapplicationnodeevents-interface.md)  
+ [Idebugapplicationnodeevents –:: detach](../../winscript/reference/idebugapplicationnodeevents-ondetach.md)   
  [IDebugApplicationNode – rozhraní](../../winscript/reference/idebugapplicationnode-interface.md)

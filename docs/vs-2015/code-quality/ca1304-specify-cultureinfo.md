@@ -29,10 +29,10 @@ ms.locfileid: "72661460"
 |-|-|
 |TypeName|SpecifyCultureInfo|
 |CheckId|CA1304|
-|Kategorie|Microsoft. Globalization|
+|Kategorie|Microsoft.Globalization|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Metoda nebo konstruktor volá člen, který má přetížení, které přijímá parametr <xref:System.Globalization.CultureInfo?displayProperty=fullName> a metoda nebo konstruktor nevolá přetížení, které přijímá parametr <xref:System.Globalization.CultureInfo>. Toto pravidlo ignoruje volání následujících metod:
 
 - <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>
@@ -42,7 +42,7 @@ ms.locfileid: "72661460"
 - <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName>
 
 ## <a name="rule-description"></a>Popis pravidla
- Pokud není zadán objekt <xref:System.Globalization.CultureInfo> nebo <xref:System.IFormatProvider?displayProperty=fullName>, výchozí hodnota, která je poskytnuta přetíženým členem, nemusí mít ve všech národních prostředích požadovaný efekt. @No__t_0 členy také zvolí výchozí jazykovou verzi a formátování na základě předpokladů, které nemusí být pro váš kód správné. Chcete-li zajistit, aby kód pro vaše scénáře fungoval podle očekávání, měli byste doručovat informace specifické pro jazykovou verzi podle následujících pokynů:
+ Pokud není zadán objekt <xref:System.Globalization.CultureInfo> nebo <xref:System.IFormatProvider?displayProperty=fullName>, výchozí hodnota, která je poskytnuta přetíženým členem, nemusí mít ve všech národních prostředích požadovaný efekt. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] členy také zvolí výchozí jazykovou verzi a formátování na základě předpokladů, které nemusí být pro váš kód správné. Chcete-li zajistit, aby kód pro vaše scénáře fungoval podle očekávání, měli byste doručovat informace specifické pro jazykovou verzi podle následujících pokynů:
 
 - Pokud se hodnota zobrazí uživateli, použijte aktuální jazykovou verzi. Viz <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>.
 
@@ -66,13 +66,13 @@ ms.locfileid: "72661460"
  [!code-csharp[FxCop.Globalization.CultureInfo#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Globalization.CultureInfo/cs/FxCop.Globalization.CultureInfo.cs#1)]
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje účinek aktuální jazykové verze na výchozí <xref:System.IFormatProvider>, který je vybrán typem <xref:System.DateTime>.
+ Následující příklad ukazuje účinek aktuální jazykové verze na výchozí <xref:System.IFormatProvider>, který je vybrán pomocí typu <xref:System.DateTime>.
 
  [!code-csharp[FxCop.Globalization.IFormatProvider#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Globalization.IFormatProvider/cs/FxCop.Globalization.IFormatProvider.cs#1)]
 
  Tento příklad vytvoří následující výstup.
 
- **6/4/1900 12:15:12 PM** 
+ **6/4/1900 12:15:12 PM**
 **06/04/1900 12:15:12**
 ## <a name="related-rules"></a>Související pravidla
  [CA1305: Zadejte možnosti IFormatProvider](../code-quality/ca1305-specify-iformatprovider.md)

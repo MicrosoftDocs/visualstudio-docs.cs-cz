@@ -100,7 +100,7 @@ Po výběru šablony C# projektu a pojmenování souboru aplikace Visual Studio 
 
      ![Vyberte sadu nástrojů a otevřete tak okno panelu nástrojů.](../ide/media/csharp-toolbox-toolwindow.png)
 
-     (Pokud se nezobrazí **nástrojů** nabídka možností, lze jej otevřít z řádku nabídek. Provedete to tak, že **zobrazíte** **sadu nástrojů** > . Také můžete stisknout klávesu **Ctrl**+**Alt**+**X**.)
+     (Pokud se nezobrazí **nástrojů** nabídka možností, lze jej otevřít z řádku nabídek. Provedete to tak, že **zobrazíte** > **sadu nástrojů**. Také můžete stisknout klávesu **Ctrl**+**Alt**+**X**.)
 
 1. Vyberte ikonu **připnutí** pro ukotvení okna **panelu nástrojů** .
 
@@ -110,11 +110,11 @@ Po výběru šablony C# projektu a pojmenování souboru aplikace Visual Studio 
 
      ![Přidání tlačítka do formuláře](../ide/media/csharp-add-button-form1.png)
 
-1. V okně **vlastnosti** vyhledejte **text**, změňte název z **Button1** na `Click this` a potom stiskněte klávesu **ENTER**.
+1. V okně **vlastnosti** vyhledejte **text**, změňte název z **Button1** na `Click this`a potom stiskněte klávesu **ENTER**.
 
      ![Přidejte text pro tlačítko ve formuláři](../ide/media/vb-button-control-text.png)
 
-     (Pokud se nezobrazí **vlastnosti** okna, lze jej otevřít z řádku nabídek. Provedete to výběrem možnosti **zobrazit** > **okno vlastností**. Také můžete stisknout klávesu **F4**.)
+     (Pokud se nezobrazí **vlastnosti** okna, lze jej otevřít z řádku nabídek. Provedete to tak, že kliknete na **zobrazit** > **okno Vlastnosti**. Také můžete stisknout klávesu **F4**.)
 
 1. V **návrhu** část **vlastnosti** okna, změňte název z **Button1** k `btnClickThis`a potom stiskněte klávesu **Enter**.
 
@@ -129,7 +129,7 @@ Teď, když jsme přidali ovládací prvek tlačítko Vytvořit akci, přidáme 
 
 1. Vyberte **popisek** ovládacího prvku **nástrojů** okna a přetáhněte ji na formuláři a přetáhněte ho pod **kliknutím na tuto** tlačítko.
 
-1. V části **Návrh** nebo **(datové vazby)** v okně **vlastnosti** změňte název **Label1** na `lblHelloWorld` a potom stiskněte klávesu **ENTER**.
+1. V části **Návrh** nebo **(datové vazby)** v okně **vlastnosti** změňte název **Label1** na `lblHelloWorld`a potom stiskněte klávesu **ENTER**.
 
 ### <a name="add-code-to-the-form"></a>Přidejte kód do formuláře
 
@@ -160,7 +160,7 @@ Teď, když jsme přidali ovládací prvek tlačítko Vytvořit akci, přidáme 
 Další informace najdete v následujícím kurzu:
 
 > [!div class="nextstepaction"]
-> [Kurz: Vytvoření prohlížeče obrázků @ no__t-0
+> [Kurz: vytvoření prohlížeče obrázků](tutorial-1-create-a-picture-viewer.md)
 
 ## <a name="see-also"></a>Viz také:
 

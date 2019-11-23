@@ -29,5 +29,5 @@ Pokusili jste se vyvolat metodu **Number. prototype. ToString** nebo **Number. p
 - Pro objekty typu **Number**volejte pouze metodu **Number. prototype. ToString** nebo **Number. prototype. valueOf –** .  
   
 ## <a name="see-also"></a>Viz také:  
- [Číselná   objektu](../../javascript/reference/number-object-javascript.md)  
+ [Číselná  objektu](../../javascript/reference/number-object-javascript.md)  
  [number – vlastnost (Error)](../../javascript/reference/number-property-error-javascript.md)

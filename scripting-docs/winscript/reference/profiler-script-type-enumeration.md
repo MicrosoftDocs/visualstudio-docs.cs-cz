@@ -46,7 +46,7 @@ typedef enum {
 |PROFILER_SCRIPT_TYPE_DOM|Určuje volání do model DOM (Document Object Model) (DOM) aplikace Internet Explorer, například volání metody `document.getElementById`.|  
   
 ## <a name="see-also"></a>Viz také:  
- [Konstanty, výčty a struktury profileru aktivních skriptů](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)    
- [Iactivescriptprofilercallback –:: ScriptCompiled](../../winscript/reference/iactivescriptprofilercallback-scriptcompiled.md)    
- [Iactivescriptprofilercallback2 –:: OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md)    
+ [Konstanty, výčty a struktury profileru aktivních skriptů](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)   
+ [IActiveScriptProfilerCallback::ScriptCompiled](../../winscript/reference/iactivescriptprofilercallback-scriptcompiled.md)   
+ [IActiveScriptProfilerCallback2::OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md)   
  [IActiveScriptProfilerCallback2::OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)

@@ -47,5 +47,5 @@ HRESULT Detach();
  Tato metoda odebere tento uzel aplikace ze stromové struktury projektu.  
   
 ## <a name="see-also"></a>Viz také:  
- [IDebugApplicationNode –:: Attach](../../winscript/reference/idebugapplicationnode-attach.md)    
+ [IDebugApplicationNode –:: Attach](../../winscript/reference/idebugapplicationnode-attach.md)   
  [IDebugApplicationNode – rozhraní](../../winscript/reference/idebugapplicationnode-interface.md)

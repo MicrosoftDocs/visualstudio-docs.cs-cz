@@ -29,11 +29,11 @@ ms.locfileid: "72661440"
 |-|-|
 |TypeName|SpecifyIFormatProvider|
 |CheckId|CA1305|
-|Kategorie|Microsoft. Globalization|
+|Kategorie|Microsoft.Globalization|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>příčina
- Metoda nebo konstruktor volá jeden nebo více členů, které mají přetížení přijímající parametr <xref:System.IFormatProvider?displayProperty=fullName>, a metoda nebo konstruktor nevolá přetížení, které přijímá parametr <xref:System.IFormatProvider>. Toto pravidlo ignoruje volání [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] metod, které jsou popsány jako ignorování <xref:System.IFormatProvider> parametru a dále následující metody:
+## <a name="cause"></a>Příčina
+ Metoda nebo konstruktor volá jeden nebo více členů, které mají přetížení přijímající parametr <xref:System.IFormatProvider?displayProperty=fullName> a metoda nebo konstruktor nevolá přetížení, které přijímá parametr <xref:System.IFormatProvider>. Toto pravidlo ignoruje volání [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] metod, které jsou popsány jako ignorování <xref:System.IFormatProvider> parametru a dále následující metody:
 
 - <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>
 
@@ -42,7 +42,7 @@ ms.locfileid: "72661440"
 - <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName>
 
 ## <a name="rule-description"></a>Popis pravidla
- Pokud není zadán objekt <xref:System.Globalization.CultureInfo?displayProperty=fullName> nebo <xref:System.IFormatProvider>, výchozí hodnota, která je poskytnuta přetíženým členem, nemusí mít ve všech národních prostředích požadovaný efekt. @No__t_0 členy také zvolí výchozí jazykovou verzi a formátování na základě předpokladů, které nemusí být pro váš kód správné. Chcete-li se ujistit, že kód funguje podle očekávání pro vaše scénáře, měli byste dodávat informace specifické pro jazykovou verzi podle následujících pokynů:
+ Pokud není zadán objekt <xref:System.Globalization.CultureInfo?displayProperty=fullName> nebo <xref:System.IFormatProvider>, výchozí hodnota, která je poskytnuta přetíženým členem, nemusí mít ve všech národních prostředích požadovaný efekt. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] členy také zvolí výchozí jazykovou verzi a formátování na základě předpokladů, které nemusí být pro váš kód správné. Chcete-li se ujistit, že kód funguje podle očekávání pro vaše scénáře, měli byste dodávat informace specifické pro jazykovou verzi podle následujících pokynů:
 
 - Pokud se hodnota zobrazí uživateli, použijte aktuální jazykovou verzi. Viz <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>.
 
@@ -61,18 +61,18 @@ ms.locfileid: "72661440"
  Z tohoto pravidla je bezpečné potlačit upozornění, když je jisté, že výchozí poskytovatel jazykové verze nebo formátu je správným výběrem a kde udržovatelnost kódu není důležitou prioritou pro vývoj.
 
 ## <a name="example"></a>Příklad
- V následujícím příkladu `BadMethod` způsobí dvě porušení tohoto pravidla. `GoodMethod` opravuje první porušení předáním invariantní jazykové verze do <xref:System.String.Compare%2A> a opraví druhé porušení předáním aktuální jazykové verze do <xref:System.String.ToLower%2A>, protože `string3` je zobrazen uživateli.
+ V následujícím příkladu `BadMethod` způsobí dvě porušení tohoto pravidla. `GoodMethod` opravuje první porušení předáním invariantní jazykové verze do <xref:System.String.Compare%2A>a opraví druhé porušení předáním aktuální jazykové verze do <xref:System.String.ToLower%2A>, protože `string3` je zobrazen uživateli.
 
  [!code-csharp[FxCop.Globalization.CultureInfo#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Globalization.CultureInfo/cs/FxCop.Globalization.CultureInfo.cs#1)]
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje účinek aktuální jazykové verze na výchozí <xref:System.IFormatProvider>, který je vybrán typem <xref:System.DateTime>.
+ Následující příklad ukazuje účinek aktuální jazykové verze na výchozí <xref:System.IFormatProvider>, který je vybrán pomocí typu <xref:System.DateTime>.
 
  [!code-csharp[FxCop.Globalization.IFormatProvider#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Globalization.IFormatProvider/cs/FxCop.Globalization.IFormatProvider.cs#1)]
 
  Tento příklad vytvoří následující výstup.
 
- **6/4/1900 12:15:12 PM** 
+ **6/4/1900 12:15:12 PM**
 **06/04/1900 12:15:12**
 ## <a name="related-rules"></a>Související pravidla
  [CA1304: Zadejte možnosti CultureInfo](../code-quality/ca1304-specify-cultureinfo.md)

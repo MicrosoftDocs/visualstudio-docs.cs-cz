@@ -21,7 +21,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/18/2019
 ms.locfileid: "72576514"
 ---
-# <a name="expected-"></a>Byl očekáván příkaz ' \@ '
+# <a name="expected-"></a>Byl očekáván příkaz '\@'
 Pokusili jste se vytvořit proměnnou, která se má použít s příkazy podmíněné kompilace pomocí příkazu `@set`, ale nebyl nalezen znak " **@** " před názvem proměnné.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
@@ -33,6 +33,6 @@ Pokusili jste se vytvořit proměnnou, která se má použít s příkazy podmí
     ```  
   
 ## <a name="see-also"></a>Viz také:  
- [příkaz @set](../../javascript/reference/at-set-statement-javascript.md)    
- @No__t_1 [podmíněné kompilace](../../javascript/advanced/conditional-compilation-javascript.md)  
+ [příkaz@set](../../javascript/reference/at-set-statement-javascript.md)   
+   [podmíněné kompilace](../../javascript/advanced/conditional-compilation-javascript.md)  
  [Proměnné podmíněné kompilace](../../javascript/advanced/conditional-compilation-variables-javascript.md)

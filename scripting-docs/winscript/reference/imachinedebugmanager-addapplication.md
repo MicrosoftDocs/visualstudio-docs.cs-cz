@@ -54,6 +54,6 @@ HRESULT AddApplication(
  Tato metoda je volána správcem ladění procesu vždy, když je volána `IProcessDebugManager::AddApplication`.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní imachinedebugmanager –](../../winscript/reference/imachinedebugmanager-interface.md)  
- [Imachinedebugmanager –:: RemoveApplication](../../winscript/reference/imachinedebugmanager-removeapplication.md)    
+   [rozhraní imachinedebugmanager –](../../winscript/reference/imachinedebugmanager-interface.md)  
+ [Imachinedebugmanager –:: RemoveApplication](../../winscript/reference/imachinedebugmanager-removeapplication.md)   
  [IProcessDebugManager::AddApplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)

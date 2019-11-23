@@ -54,6 +54,6 @@ HRESULT RemoveApplication(
  Tato metoda je volána správcem ladění procesu vždy, když je volána `IProcessDebugManager::RemoveApplication`.  
   
 ## <a name="see-also"></a>Viz také:  
- [Imachinedebugmanagercookie –:: AddApplication](../../winscript/reference/imachinedebugmanagercookie-addapplication.md)    
- @No__t_1 [rozhraní imachinedebugmanagercookie –](../../winscript/reference/imachinedebugmanagercookie-interface.md)  
+ [IMachineDebugManagerCookie::AddApplication](../../winscript/reference/imachinedebugmanagercookie-addapplication.md)   
+ [IMachineDebugManagerCookie Interface](../../winscript/reference/imachinedebugmanagercookie-interface.md)   
  [IProcessDebugManager::RemoveApplication](../../winscript/reference/iprocessdebugmanager-removeapplication.md)

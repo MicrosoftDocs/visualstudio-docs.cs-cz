@@ -75,6 +75,6 @@ HRESULT hr;
 ```  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní IDispatchEx –](../../winscript/reference/idispatchex-interface.md)  
- [IDispatchEx –:: GetDispID](../../winscript/reference/idispatchex-getdispid.md)    
+   [rozhraní IDispatchEx –](../../winscript/reference/idispatchex-interface.md)  
+ [IDispatchEx –:: GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)

@@ -45,7 +45,7 @@ Tento návod znázorňuje následující úlohy:
 
 Nejprve vytvořte **prázdný projekt služby SharePoint**. Později přidáte položku **stránky aplikace** do tohoto projektu.
 
-1. Spusťte [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
 
 2. Otevřete dialogové okno **Nový projekt** , rozbalte uzel **Office/SharePoint** v jazyce, který chcete použít, a pak zvolte uzel **řešení služby SharePoint** .
 
@@ -61,7 +61,7 @@ Chcete-li vytvořit stránku aplikace, přidejte do projektu položku **stránky
 
 1. V **Průzkumník řešení**vyberte projekt **MySharePointProject** .
 
-2. Na panelu nabídek vyberte možnost **projekt**  > **Přidat novou položku**.
+2. V panelu nabídky zvolte **projektu** > **přidat novou položku**.
 
 3. V dialogovém okně **Přidat novou položku** vyberte **stránku aplikace (jenom šablona řešení farmy** ).
 
@@ -73,7 +73,7 @@ Chcete-li vytvořit stránku aplikace, přidejte do projektu položku **stránky
 
 Položka stránky aplikace umožňuje použít návrháře k přidání ovládacích prvků ASP.NET do stránky aplikace. Tento návrhář je stejný Návrhář, který se používá v aplikaci Visual Web Developer. Přidejte popisek, seznam přepínačů a tabulku do zobrazení **zdroje** návrháře a pak nastavte vlastnosti stejným způsobem jako při návrhu libovolné standardní stránky ASP.NET.
 
-1. Na panelu nabídek vyberte možnost **zobrazit**  > **Sada nástrojů**.
+1. Na panelu nabídek vyberte možnost **zobrazit** > **Sada nástrojů**.
 
 2. V uzlu standardní v **sadě nástrojů**proveďte jeden z následujících kroků:
 
@@ -154,4 +154,4 @@ Další informace o návrhu obsahu stránky SharePointu pomocí vizuálního web
 ## <a name="see-also"></a>Viz také:
 
 [Postupy: Vytvoření stránky aplikace](../sharepoint/how-to-create-an-application-page.md)
-[typu stránky _layouts aplikace](/previous-versions/office/aa979604(v=office.14))
+[_layouts typu stránky](/previous-versions/office/aa979604(v=office.14)) aplikace

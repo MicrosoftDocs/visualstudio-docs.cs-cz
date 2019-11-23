@@ -47,5 +47,5 @@ HRESULT CompleteProfilerStart();
  Volání `IActiveScriptProfilerControl2::CompleteProfilerStart` zajišťuje odeslání událostí pro funkce, které jsou již v zásobníku volání. Tuto metodu je třeba volat po zahájení profilace na jakémkoli skriptovacím stroji, který je na aktuální kartě. Metodu lze volat pro libovolný skriptovací modul.  
   
 ## <a name="see-also"></a>Viz také:  
- [Iactivescriptprofilercontrol2 –::P repareprofilerstop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md)    
+ [IActiveScriptProfilerControl2::PrepareProfilerStop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md)   
  [IActiveScriptProfilerControl2 – rozhraní](../../winscript/reference/iactivescriptprofilercontrol2-interface.md)

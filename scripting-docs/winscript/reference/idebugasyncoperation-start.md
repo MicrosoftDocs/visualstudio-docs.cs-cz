@@ -51,7 +51,7 @@ HRESULT Start(
  Tato metoda způsobí, že `IDebugSyncOperation::Execute` být asynchronně volána ve vlákně získaném z `IDebugSyncOperation::GetTargetThread`. Tato metoda by měla být volána pouze v rámci vlákna ladicího programu; v opačném případě nebude vrácena, dokud nebude operace dokončena.  
   
 ## <a name="see-also"></a>Viz také:  
- [Idebugasyncoperation –:: Abort](../../winscript/reference/idebugasyncoperation-abort.md)    
- @No__t_1 [rozhraní idebugasyncoperation –](../../winscript/reference/idebugasyncoperation-interface.md)  
- [IDebugSyncOperation –:: Execute](../../winscript/reference/idebugsyncoperation-execute.md)    
+ [Idebugasyncoperation –:: Abort](../../winscript/reference/idebugasyncoperation-abort.md)   
+   [rozhraní idebugasyncoperation –](../../winscript/reference/idebugasyncoperation-interface.md)  
+ [IDebugSyncOperation –:: Execute](../../winscript/reference/idebugsyncoperation-execute.md)   
  [IDebugSyncOperation::GetTargetThread](../../winscript/reference/idebugsyncoperation-gettargetthread.md)

@@ -69,8 +69,8 @@ HRESULT HandleRuntimeError(
 > V běhové chybě může být modul jazyka volán vláknem k provádění úkolů, jako je například zobrazení výčtu rámců zásobníku nebo vyhodnocení výrazů.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní IDebugApplication –](../../winscript/reference/idebugapplication-interface.md)  
- @No__t_1 [rozhraní IActiveScriptErrorDebug –](../../winscript/reference/iactivescripterrordebug-interface.md)  
- [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)    
- @No__t_1 [výčtu breakresumeaction –](../../winscript/reference/breakresumeaction-enumeration.md)  
+   [rozhraní IDebugApplication –](../../winscript/reference/idebugapplication-interface.md)  
+   [rozhraní IActiveScriptErrorDebug –](../../winscript/reference/iactivescripterrordebug-interface.md)  
+ [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)   
+   [výčtu breakresumeaction –](../../winscript/reference/breakresumeaction-enumeration.md)  
  [ERRORRESUMEACTION – výčet](../../winscript/reference/errorresumeaction-enumeration.md)

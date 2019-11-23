@@ -39,7 +39,7 @@ HRESULT EnumExtendedMembers(
   
 #### <a name="parameters"></a>Parametry  
  `dwFieldSpec`  
- pro Určuje konstanty EX_DBGPROP_INFO_FLAGS, které určují pole ve výčtech rozšířených vlastností ladění, které mají být vyplněny.  
+ pro Určuje EX_DBGPROP_INFO_FLAGS konstanty, které určují pole ve výčtech rozšířených vlastností ladění, které mají být vyplněny.  
   
  `nRadix`  
  pro Číselná soustava, která se má použít při interpretaci libovolných číselných informací.  
@@ -51,6 +51,6 @@ HRESULT EnumExtendedMembers(
  Vrací platný `HRESULT`, obvykle `S_OK`.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní idebugextendedproperty –](../../winscript/reference/idebugextendedproperty-interface.md)  
- [EX_DBGPROP_INFO_FLAGS](../../winscript/reference/ex-dbgprop-info-flags.md)    
+   [rozhraní idebugextendedproperty –](../../winscript/reference/idebugextendedproperty-interface.md)  
+ [EX_DBGPROP_INFO_FLAGS](../../winscript/reference/ex-dbgprop-info-flags.md)   
  [ExtendedDebugPropertyInfo – struktura](../../winscript/reference/extendeddebugpropertyinfo-structure.md)

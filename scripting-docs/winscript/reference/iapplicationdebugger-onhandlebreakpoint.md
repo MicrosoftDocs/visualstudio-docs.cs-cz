@@ -60,7 +60,7 @@ HRESULT onHandleBreakPoint(
  Aplikace zůstane pozastavena, dokud rozhraní IDE ladicího programu nevolá `IRemoteDebugApplication::ResumeFromBreakPoint`.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní iapplicationdebugger –](../../winscript/reference/iapplicationdebugger-interface.md)  
- [IDebugApplication –:: HandleBreakPoint](../../winscript/reference/idebugapplication-handlebreakpoint.md)    
- [Iremotedebugapplication –:: ResumeFromBreakPoint](../../winscript/reference/iremotedebugapplication-resumefrombreakpoint.md)    
+   [rozhraní iapplicationdebugger –](../../winscript/reference/iapplicationdebugger-interface.md)  
+ [IDebugApplication –:: HandleBreakPoint](../../winscript/reference/idebugapplication-handlebreakpoint.md)   
+ [IRemoteDebugApplication::ResumeFromBreakPoint](../../winscript/reference/iremotedebugapplication-resumefrombreakpoint.md)   
  [BREAKREASON – výčet](../../winscript/reference/breakreason-enumeration.md)

@@ -54,6 +54,6 @@ HRESULT AddStackFrameSniffer(
  Přestože jazykové moduly obvykle volají tuto metodu, aby vystavoval rámce zásobníku ladicímu programu, je možné, že další entity zpřístupňují rámce zásobníku.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní IDebugApplication –](../../winscript/reference/idebugapplication-interface.md)  
- [IDebugApplication –:: RemoveStackFrameSniffer](../../winscript/reference/idebugapplication-removestackframesniffer.md)    
+   [rozhraní IDebugApplication –](../../winscript/reference/idebugapplication-interface.md)  
+ [IDebugApplication –:: RemoveStackFrameSniffer](../../winscript/reference/idebugapplication-removestackframesniffer.md)   
  [IDebugStackFrameSniffer – rozhraní](../../winscript/reference/idebugstackframesniffer-interface.md)

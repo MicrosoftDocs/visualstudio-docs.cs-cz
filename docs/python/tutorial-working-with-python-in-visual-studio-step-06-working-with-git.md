@@ -18,9 +18,9 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/12/2019
 ms.locfileid: "72289716"
 ---
-# <a name="step-6-work-with-git"></a>Krok 6: Práce s Git
+# <a name="step-6-work-with-git"></a>Krok 6: Práce s Gitem
 
-@no__t – 0Previous krok: [Instalace balíčků a Správa prostředí pythonu](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)**
+**Předchozí krok: [nainstalujte balíčky a správa prostředí Pythonu](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)**
 
 Visual Studio poskytuje přímou integraci se místní úložiště Git a Vzdálená úložiště na služby, jako je GitHub a úložiště Azure. Integrace zahrnuje klonování úložiště, potvrzení změn a správa větví.
 
@@ -32,7 +32,7 @@ Tento článek obsahuje základní přehled vytvořit místní úložiště Git 
 
     ![Další informace se zobrazí, když najede myší na ovládací prvek Git v okně aplikace Visual Studio](media/working-with-git-01.png)
 
-1. Při vytváření nového úložiště nebo vyberte některý z ovládacích prvků Git, Visual Studio otevře **Team Exploreru** okno. (V každém okamžiku se může otevřít okno **zobrazení** > **Team Exploreru** příkazu nabídky.) Má tři hlavní podoken, které můžete přepínat mezi pomocí rozevíracího seznamu na okno **Team Exploreru** záhlaví. **Synchronizace** podokno, které poskytuje operace pro publikování, také se zobrazí, když vyberete **Push** ovládací prvek (ikonu se šipkou nahoru):
+1. Při vytváření nového úložiště nebo vyberte některý z ovládacích prvků Git, Visual Studio otevře **Team Exploreru** okno. (Okno můžete otevřít kdykoli pomocí příkazu nabídky **zobrazit** > **Team Explorer** ). Okno má tři hlavní podokna, která přepínáte pomocí rozevíracího seznamu v hlavičce **Team Explorer** . **Synchronizace** podokno, které poskytuje operace pro publikování, také se zobrazí, když vyberete **Push** ovládací prvek (ikonu se šipkou nahoru):
 
     ![Průzkumník týmových projektů v sadě Visual Studio po vytvoření místního úložiště](media/working-with-git-02.png)
 
@@ -54,7 +54,7 @@ Tento článek obsahuje základní přehled vytvořit místní úložiště Git 
 
 ## <a name="go-deeper"></a>Seznamte se blíž
 
-Krátký návod, jak vytvořit projekt ze vzdáleného úložiště Git, najdete v článku [Quickstart: Naklonujte úložiště kódu Pythonu v aplikaci Visual Studio @ no__t-0.
+Krátký návod k vytvoření projektu ze vzdáleného úložiště Git, naleznete v tématu [rychlý start: klonování úložiště kódu v Pythonu v sadě Visual Studio](quickstart-03-python-in-visual-studio-project-from-repository.md).
 
 Mnohem komplexnější kurz, včetně zpracování konfliktů při sloučení, revize kódu s žádostmi o přijetí změn, probíhá přenesení změn a vybírání změny mezi větvemi, najdete v tématu [Začínáme s Git a úložiště Azure](/azure/devops/repos/git/gitquickstart).
 

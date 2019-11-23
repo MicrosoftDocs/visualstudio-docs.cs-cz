@@ -46,7 +46,7 @@ HRESULT InvokeEx(
  Identifikuje člena. K získání identifikátoru odeslání používá `GetDispID` nebo `GetNextDispID`.  
   
  `lcid`  
- Kontext národního prostředí pro interpretaci argumentů. @No__t_0 je předán do `InvokeEx`, aby mohl objekt interpretovat své argumenty specifické pro národní prostředí.  
+ Kontext národního prostředí pro interpretaci argumentů. `lcid` je předán do `InvokeEx`, aby mohl objekt interpretovat své argumenty specifické pro národní prostředí.  
   
  `wFlags`  
  Platné hodnoty pro `wFlags` jsou:  
@@ -67,7 +67,7 @@ HRESULT InvokeEx(
  Ukazatel na strukturu obsahující matici argumentů, pole DISPID pro pojmenované argumenty a počty prvků v polích. Úplný popis struktury DISPPARAMS najdete v dokumentaci k `IDispatch`.  
   
  `pVarRes`  
- Ukazatel na umístění, kde má být výsledek uložen, nebo hodnotu null, pokud volající neočekává žádný výsledek. Tento argument je ignorován, pokud je zadán parametr DISPATCH_PROPERTYPUT nebo DISPATCH_PROPERTYPUTREF.  
+ Ukazatel na umístění, kde má být výsledek uložen, nebo hodnotu null, pokud volající neočekává žádný výsledek. Tento argument je ignorován, pokud je zadána DISPATCH_PROPERTYPUT nebo DISPATCH_PROPERTYPUTREF.  
   
  `pei`  
  Ukazatel na strukturu, která obsahuje informace o výjimce. Tato struktura by měla být vyplněna, pokud se vrátí `DISP_E_EXCEPTION`. Může mít hodnotu null. Úplný popis `EXCEPINFO` struktury najdete v dokumentaci k `IDispatch`.  
@@ -80,8 +80,8 @@ HRESULT InvokeEx(
 |||  
 |-|-|  
 |DISPATCH_CONSTRUCT|Označuje, že položka se používá jako konstruktor.|  
-|`pspCaller`|@No__t_0 umožňuje přístup k objektu službám poskytovaným volajícím. Konkrétní služby mohou být zpracovávány samotným volajícím nebo delegovany volajícímu v průběhu řetězce volání. Například pokud skriptovací stroj v prohlížeči vytvoří `InvokeEx` volání externího objektu, může objekt pomocí `pspCaller` řetězce získat služby ze skriptovacího stroje nebo prohlížeče. (Všimněte si, že řetěz volání není stejný jako řetěz pro vytváření, označovaný také jako řetěz kontejneru nebo řetězec webu. Řetěz vytvoření může být k dispozici prostřednictvím některého jiného mechanismu, například `IObjectWithSite`.)|  
-|`this` ukazatel|Když je v `wFlags` nastavená možnost DISPATCH_METHOD, může pro hodnotu this existovat "pojmenovaný parametr". Identifikátor DISPID bude DISPID_THIS a musí se jednat o první pojmenovaný parametr.|  
+|`pspCaller`|`pspCaller` umožňuje přístup k objektu službám poskytovaným volajícím. Konkrétní služby mohou být zpracovávány samotným volajícím nebo delegovany volajícímu v průběhu řetězce volání. Například pokud skriptovací stroj v prohlížeči vytvoří `InvokeEx` volání externího objektu, může objekt pomocí `pspCaller` řetězce získat služby ze skriptovacího stroje nebo prohlížeče. (Všimněte si, že řetěz volání není stejný jako řetěz pro vytváření, označovaný také jako řetěz kontejneru nebo řetězec webu. Řetěz vytvoření může být k dispozici prostřednictvím některého jiného mechanismu, například `IObjectWithSite`.)|  
+|`this` ukazatel|Pokud je DISPATCH_METHOD nastaveno v `wFlags`, může pro hodnotu this existovat "pojmenovaný parametr". Identifikátor DISPID bude DISPID_THIS a musí se jednat o první pojmenovaný parametr.|  
   
  Nepoužitý parametr `riid` v `IDispatch::Invoke` byl odebrán.  
   
@@ -137,6 +137,6 @@ VARIANT var;
 ```  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní IDispatchEx –](../../winscript/reference/idispatchex-interface.md)  
- [IDispatchEx –:: GetDispID](../../winscript/reference/idispatchex-getdispid.md)    
+   [rozhraní IDispatchEx –](../../winscript/reference/idispatchex-interface.md)  
+ [IDispatchEx –:: GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)

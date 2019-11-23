@@ -29,5 +29,5 @@ Nezahrnuli jste pravou složenou závorku, která označuje konec těla funkce, 
 - Přidejte pravou složenou závorku, která označuje konec funkce, smyčky, bloku nebo inicializátoru objektu.  
   
 ## <a name="see-also"></a>Viz také:  
- [Objekt funkce](../../javascript/reference/function-object-javascript.md)    
+ [Objekt funkce](../../javascript/reference/function-object-javascript.md)   
  [Řízení toku programu](../../javascript/controlling-program-flow-javascript.md)

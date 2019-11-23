@@ -43,5 +43,5 @@ return [ expression ];
   
 ## <a name="see-also"></a>Viz také:  
    [příkazu return](../../javascript/reference/return-statement-javascript.md)  
- [Objekt funkce](../../javascript/reference/function-object-javascript.md)    
+ [Objekt funkce](../../javascript/reference/function-object-javascript.md)   
  [caller – vlastnost (Function)](../../javascript/reference/caller-property-function-javascript.md)

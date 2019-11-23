@@ -52,6 +52,6 @@ HRESULT onRemoveChild(
  Implementátori rozhraní `IDebugApplicationNode` vyvolávají tuto událost.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní idebugapplicationnodeevents –](../../winscript/reference/idebugapplicationnodeevents-interface.md)  
- [Idebugapplicationnodeevents –:: onAddChild](../../winscript/reference/idebugapplicationnodeevents-onaddchild.md)    
+   [rozhraní idebugapplicationnodeevents –](../../winscript/reference/idebugapplicationnodeevents-interface.md)  
+ [Idebugapplicationnodeevents –:: onAddChild](../../winscript/reference/idebugapplicationnodeevents-onaddchild.md)   
  [IDebugApplicationNode – rozhraní](../../winscript/reference/idebugapplicationnode-interface.md)

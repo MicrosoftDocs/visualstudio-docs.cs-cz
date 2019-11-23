@@ -84,8 +84,8 @@ typedef struct ExtendedDebugPropertyInfo{
  `IDebugExtendedProperty` objekt odpovídající tomuto `ExtendedDebugPropertyInfo`.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [struktury debugpropertyinfo –](../../winscript/reference/debugpropertyinfo-structure.md)  
- @No__t_1 [rozhraní idebugproperty –](../../winscript/reference/idebugproperty-interface.md)  
- @No__t_1 [rozhraní idebugextendedproperty –](../../winscript/reference/idebugextendedproperty-interface.md)  
- [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)    
+   [struktury debugpropertyinfo –](../../winscript/reference/debugpropertyinfo-structure.md)  
+   [rozhraní idebugproperty –](../../winscript/reference/idebugproperty-interface.md)  
+   [rozhraní idebugextendedproperty –](../../winscript/reference/idebugextendedproperty-interface.md)  
+ [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)   
  [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)

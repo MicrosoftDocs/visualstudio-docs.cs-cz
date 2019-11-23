@@ -30,5 +30,5 @@ Pokusili jste se použít **výchozí** příkaz více než jednou v rámci př�
   
 ## <a name="see-also"></a>Viz také:  
    [příkazu switch](../../javascript/reference/switch-statement-javascript.md)  
- [Řízení   toku programu](../../javascript/controlling-program-flow-javascript.md)  
+ [Řízení  toku programu](../../javascript/controlling-program-flow-javascript.md)  
  [JavaScript – vyhrazená slova](../../javascript/reference/javascript-reserved-words.md)

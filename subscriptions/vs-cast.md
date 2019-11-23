@@ -19,7 +19,7 @@ Při migraci do cloudu potřebují vývojáři důležité poznatky o jejich sof
 Předplatitelé Visual Studio Enterprise můžou získat bezplatné předplatné, jehož součástí je jeden měsíc, abyste mohli vysílat zvýraznění až pro pět aplikací na předplatitele.
 
 ## <a name="activation-steps"></a>Kroky aktivace
-1. Přihlaste se k [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
+1. Přihlaste se k webu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 
 2. V kategorii Tools (nástroje) Najděte dlaždici výhody přetypování a klikněte na **získat kód**.
 

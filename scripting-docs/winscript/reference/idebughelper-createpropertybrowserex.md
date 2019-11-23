@@ -66,6 +66,6 @@ HRESULT CreatePropertyBrowserEx(
  Tato metoda vrátí prohlížeč vlastností, který zabalí VARIANTu a umožňuje vlastní převod hodnot VARIANT nebo typů VARTYPE na řetězce.  
   
 ## <a name="see-also"></a>Viz také:  
- [Idebughelper –:: CreatePropertyBrowser](../../winscript/reference/idebughelper-createpropertybrowser.md)    
- @No__t_1 [rozhraní idebughelper –](../../winscript/reference/idebughelper-interface.md)  
+ [Idebughelper –:: CreatePropertyBrowser](../../winscript/reference/idebughelper-createpropertybrowser.md)   
+   [rozhraní idebughelper –](../../winscript/reference/idebughelper-interface.md)  
  [IDebugProperty – rozhraní](../../winscript/reference/idebugproperty-interface.md)

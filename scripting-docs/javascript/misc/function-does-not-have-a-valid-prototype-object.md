@@ -29,5 +29,5 @@ Pokusili jste se použít **instanceof** k určení, zda byl objekt odvozen z ko
 - Zajistěte, aby vlastnost `prototype` funkce odkazovala na platný objekt [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)].  
   
 ## <a name="see-also"></a>Viz také:  
- [Objekt funkce](../../javascript/reference/function-object-javascript.md)    
+ [Objekt funkce](../../javascript/reference/function-object-javascript.md)   
  [prototype – vlastnost (Object)](../../javascript/reference/prototype-property-object-javascript.md)

@@ -100,7 +100,7 @@ Po výběru šablony projektu jazyka Visual Basic a název souboru, Visual Studi
 
      ![Klikněte na panelu nástrojů okno nástrojů](../ide/media/vb-toolbox-toolwindow.png)
 
-     (Pokud se nezobrazí **nástrojů** nabídka možností, lze jej otevřít z řádku nabídek. Provedete to tak, že **zobrazíte** **sadu nástrojů** > . Také můžete stisknout klávesu **Ctrl**+**Alt**+**X**.)
+     (Pokud se nezobrazí **nástrojů** nabídka možností, lze jej otevřít z řádku nabídek. Provedete to tak, že **zobrazíte** > **sadu nástrojů**. Také můžete stisknout klávesu **Ctrl**+**Alt**+**X**.)
 
 1. Klikněte na tlačítko **Pin** ikonu ukotvení **nástrojů** okna.
 
@@ -110,7 +110,7 @@ Po výběru šablony projektu jazyka Visual Basic a název souboru, Visual Studi
 
      ![Přidání tlačítka do formuláře](../ide/media/vb-add-a-button-to-form1.png)
 
-1. V části **vzhled** (nebo v části **písma** ) v okně **vlastnosti** zadejte `Click this` a potom stiskněte klávesu **ENTER**.
+1. V části **vzhled** (nebo v části **písma** ) v okně **vlastnosti** zadejte `Click this`a potom stiskněte klávesu **ENTER**.
 
      ![Přidejte text pro tlačítko ve formuláři](../ide/media/vb-button-control-text.png)
 
@@ -129,7 +129,7 @@ Teď, když jsme přidali ovládací prvek tlačítko Vytvořit akci, přidáme 
 
 1. Vyberte **popisek** ovládacího prvku **nástrojů** okna a přetáhněte ji na formuláři a přetáhněte ho pod **kliknutím na tuto** tlačítko.
 
-1. V části **Návrh** nebo **(datové vazby)** v okně **vlastnosti** změňte název **Label1** na `lblHelloWorld` a potom stiskněte klávesu **ENTER**.
+1. V části **Návrh** nebo **(datové vazby)** v okně **vlastnosti** změňte název **Label1** na `lblHelloWorld`a potom stiskněte klávesu **ENTER**.
 
 ### <a name="add-code-to-the-form"></a>Přidejte kód do formuláře
 
@@ -137,7 +137,7 @@ Teď, když jsme přidali ovládací prvek tlačítko Vytvořit akci, přidáme 
 
       (Alternativně můžete rozbalit **Form1.vb** v **Průzkumníka řešení**a potom klikněte na tlačítko **Form1**.)
 
-1. Do okna **Form1. vb** zadejte mezi **soukromými** a **koncovými dílčími** řádky typ nebo zadejte `lblHelloWorld.Text = "Hello World!"`, jak je znázorněno na následujícím snímku obrazovky:
+1. V okně **Form1. vb** zadejte mezi **soukromými** a **koncovými dílčími** řádky `lblHelloWorld.Text = "Hello World!"`, jak je znázorněno na následujícím snímku obrazovky:
 
      ![Přidejte kód do formuláře](../ide/media/vb-add-code-to-the-form.png)
 
@@ -160,7 +160,7 @@ Teď, když jsme přidali ovládací prvek tlačítko Vytvořit akci, přidáme 
 Další informace najdete v následujícím kurzu:
 
 > [!div class="nextstepaction"]
-> [Kurz: Vytvoření prohlížeče obrázků @ no__t-0
+> [Kurz: vytvoření prohlížeče obrázků](tutorial-1-create-a-picture-viewer.md)
 
 ## <a name="see-also"></a>Viz také:
 

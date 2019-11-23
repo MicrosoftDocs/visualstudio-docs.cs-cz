@@ -27,7 +27,7 @@ ms.locfileid: "73189597"
 ---
 # <a name="whats-new-in-visual-studio-2017"></a>Novinky v sadě Visual Studio 2017
 
-**Aktualizováno pro [verzi 15,9](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default&contextView=vs-2017)**
+**Aktualizováno pro [verzi 15.9](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default&contextView=vs-2017)**
 
 Hledáte upgrade z předchozí verze sady Visual Studio? Zde je uvedeno, co vám Visual Studio 2017 může nabídnout: nesrovnatelnou produktivitu pro jakékoli vývojové, libovolné aplikace a platformy. Pomocí sady Visual Studio 2017 můžete vyvíjet aplikace pro Android, iOS, Windows, Linux, web i Cloud. Svůj kód můžete rychle psát, snadno ladit a diagnostikovat, často testovat a bez obav vydávat. Navíc si můžete sadu Visual Studio rozšířit a přizpůsobit pomocí svých vlastních rozšíření. Používejte správu verzí, agilní a efektivní spolupráci s touto verzí!
 
@@ -42,7 +42,7 @@ Zde je rekapitulace vysoké úrovně změn, které byly provedeny od předchozí
 * **[Vývoj aplikací pro Windows](#windows-app-development)** . Použijte šablony UWP v aplikaci Visual Studio 2017 a vytvořte jeden projekt pro všechna zařízení s Windows 10 &ndash; PC, tablet, telefon, Xbox, HoloLens, Surface Hub a další.
 * **[Vývoj mobilních aplikací](#mobile-app-development)** . Proveďte inovace a získejte výsledky rychle pomocí Xamarin, který sjednocuje vaše mobilní požadavky na více platforem na jeden základní základ kódu a sadu dovedností.
 * **[Vývoj pro různé platformy](#cross-platform-development)** . Bez problémů doručovat software na libovolnou cílovou platformu. Rozšiřování procesů DevOps do SQL Server prostřednictvím nástrojů pro data Redgate a bezpečné automatizaci nasazování databází ze sady Visual Studio. Nebo pomocí .NET Core napište aplikace a knihovny, které se spouštějí nezměněné v operačních systémech Windows, Linux a macOS.
-* **[Vývoj her](#games-development)** . Pomocí Visual Studio Tools for Unity (VSTU) můžete použít Visual Studio k psaní herních a editorových skriptů v C# nástroji a pak pomocí výkonného ladicího programu vyhledat a opravit chyby.
+* **[Vývoj her](#games-development)** . S Visual Studio Tools pro Unity (VSTU) můžete použít Visual Studio napsat hru a editor skriptů v jazyce C# a pak použijte jeho výkonný ladicí program najít a opravit chyby.
 * **[Vývoj AI](#ai-development)** . Pomocí Visual Studio Tools for AI můžete využívat funkce produktivity sady Visual Studio k urychlení inovací AI. Sestavujte, testujte a nasaďte řešení pro hloubkové učení a AI, která se bezproblémově integrují s Azure Machine Learning pro robustní možnosti experimentování.
 
 > [!NOTE]
@@ -52,7 +52,7 @@ Zde jsou podrobnější informace o některých z nejvýznamnějších vylepšen
 
 ## <a name="redefined-fundamentals"></a>Předefinované základy
 
-### <a name="a-new-setup-experience"></a>Nové prostředí pro instalaci
+### <a name="a-new-setup-experience"></a>Nové prostředí instalace
 
 Visual Studio usnadňuje a urychluje instalaci jenom těch funkcí, které potřebujete, a to v případě potřeby. A odinstaluje se i čistě.
 
@@ -78,7 +78,7 @@ Další informace najdete v blogovém příspěvku o [vylepšeních dostupnosti 
 
 ## <a name="performance-and-productivity"></a>Výkon a produktivita
 
-### <a name="sign-in-across-multiple-accounts"></a>Přihlásit se přes několik účtů
+### <a name="sign-in-across-multiple-accounts"></a>Přihlaste se napříč několika účty
 
 V aplikaci Visual Studio jsme zavedli novou službu identit, která umožňuje sdílet uživatelské účty napříč Team Explorer, nástroji Azure, Microsoft Store publikování a dalšími.
 
@@ -218,7 +218,7 @@ Další informace najdete v příspěvku na blogu o [použití nového pomocník
 
 #### <a name="snapshots-and-intellitrace-step-back"></a>Snímky a IntelliTrace krok zpátky
 
-**Novinka v 15,5**: IntelliTrace krok-back automaticky převezme snímek vaší aplikace při každé události krok zarážky a ladicího programu. Zaznamenané snímky vám umožní přejít zpět na předchozí zarážky nebo kroky a zobrazit stav aplikace, stejně jako v minulosti. IntelliTraceý krok zpátky vám ušetří čas, když chcete zobrazit předchozí stav aplikace, ale nechcete znovu spustit ladění nebo znovu vytvořit požadovaný stav aplikace.
+**Novinka v 15,5**: IntelliTrace krok-back automaticky převezme snímek vaší aplikace při každé události krok zarážky a ladicího programu. Zaznamenané snímky umožňují snadno vrátit k předchozím zarážkám nebo krokům a zobrazit stav aplikace jako v minulosti. IntelliTrace zpětným krokem vám může ušetřit čas při chcete zobrazit předchozí stav aplikace, ale nebudete chtít znovu spusťte ladění nebo znovu vytvořit stav požadované aplikace.
 
 Snímky můžete procházet a zobrazovat pomocí tlačítek **krok zpět** a **krok vpřed** na panelu nástrojů **ladění** . Tato tlačítka přecházejí na události, které se zobrazí na kartě **události** v okně **diagnostické nástroje** . Krok zpět nebo dopředu události automaticky aktivuje historické ladění u vybrané události.
 
@@ -247,24 +247,24 @@ Další informace naleznete na stránce [Azure Functions Tools for Visual Studio
 
 ### <a name="debug-live-aspnet-apps-using-snappoints-and-logpoints-in-live-azure-applications"></a>Ladění živých aplikací ASP.NET pomocí snímkovací body a protokolovacích bodů v živých aplikacích Azure
 
-**Novinka v 15,5**: Snapshot Debugger pořizování snímků vašich aplikací v produkčním prostředí, když se spustí kód, který vás zajímá. Chcete-li ladicímu programu dát pokyn k pořízení snímku, nastavte snímkovací body a protokolovacích bodů ve svém kódu. Ladicí program vám umožní zobrazit přesně to, co se nepovedlo, aniž by to ovlivnilo provoz vaší produkční aplikace. Snapshot Debugger vám může výrazně zkrátit dobu potřebnou k vyřešení problémů, ke kterým dochází v produkčních prostředích.
+**Novinka v 15,5**: Snapshot Debugger pořizování snímků vašich aplikací v produkčním prostředí, když se spustí kód, který vás zajímá. Dáte pokyn, aby ladicí program k vytvoření snímku, můžete nastavit snímkovací a protokolovací body ve vašem kódu. Ladicí program umožňuje zobrazit přesně toho, co nefunguje, aniž by to ovlivnilo provozu aplikace v produkčním prostředí. Snapshot Debugger můžete výrazně zkrátit čas potřebný k vyřešení problémů, ke kterým dochází v produkčním prostředí.
 
-Kolekce snímků je k dispozici pro následující webové aplikace, které jsou spuštěny v Azure App Service:
+Shromažďování snímků je k dispozici pro následující web apps ve službě Azure App Service:
 
-* ASP.NET aplikace spuštěné v .NET Framework 4.6.1 nebo novějším.
-* ASP.NET Core aplikace běžící na rozhraní .NET Core 2,0 nebo novějším ve Windows.
+* Aplikace ASP.NET spuštěné na rozhraní .NET Framework 4.6.1 nebo novější.
+* Aplikace ASP.NET Core na .NET Core 2.0 nebo novější na Windows.
 
 Další informace najdete v tématu [ladění živých aplikací ASP.NET pomocí snímkovací body a protokolovacích bodů](../debugger/debug-live-azure-applications.md).
 
 ## <a name="windows-app-development"></a>Vývoj aplikací pro systém Windows
 
-### <a name="universal-windows-platform"></a>Univerzální platforma pro Windows
+### <a name="universal-windows-platform"></a>Univerzální platforma Windows
 
 Univerzální platforma Windows (UWP) je aplikační platforma pro Windows 10. Můžete vyvíjet aplikace pro UWP s jenom jednou sadou rozhraní API, jedním balíčkem aplikace a jedním obchodem pro všechna zařízení s Windows 10 &ndash; PC, tablet, telefon, Xbox, HoloLens, Surface Hub a další. UWP podporuje různé velikosti obrazovky a různé modely interakce, ať už se jedná o dotykové ovládání, myš a klávesnici, herní kontroler nebo pero. V jádru aplikací pro UWP je to, že uživatelé chtějí, aby byli mobilními zařízeními na všech svých zařízeních a aby chtějí používat zařízení, které je pro úkol nejpohodlnější nebo produktivní.
 
-![Univerzální platforma pro Windows](../cross-platform/media/uwp_coreextensions.png)
+![Univerzální platforma Windows](../cross-platform/media/uwp_coreextensions.png)
 
-Pokud chcete vytvořit Univerzální platforma Windows aplikaci pro zařízení C#s Windows 10 C++, vyberte preferovaný jazyk vývoje&mdash;z, Visual Basic, nebo JavaScript @ no__t_3_. Visual Studio 2017 poskytuje šablonu aplikace UWP pro každý jazyk, který umožňuje vytvořit jeden projekt pro všechna zařízení. Po dokončení práce můžete balíček aplikace vyvolat a odeslat ho Microsoft Store ze sady Visual Studio, aby bylo možné aplikaci zákazníkům na jakémkoli zařízení s Windows 10 získat na maximum.
+Pokud chcete vytvořit aplikaci Univerzální platforma Windows pro zařízení C#s Windows 10 C++, vyberte preferovaný vývojový jazyk&mdash;z, Visual Basic, nebo JavaScript&mdash;. Visual Studio 2017 poskytuje šablonu aplikace UWP pro každý jazyk, který umožňuje vytvořit jeden projekt pro všechna zařízení. Po dokončení práce můžete balíček aplikace vyvolat a odeslat ho Microsoft Store ze sady Visual Studio, aby bylo možné aplikaci zákazníkům na jakémkoli zařízení s Windows 10 získat na maximum.
 
 **Novinka ve verzi 15,5**: sada Visual Studio 2017 verze 15,5 poskytuje nejlepší podporu pro Windows 10 (10.0.16299.0) pro sadu Creators Update SDK (). Aktualizace Creators pro Windows 10 přináší také mnoho vylepšení pro vývojáře UWP. Tady jsou některé z největších změn: 
 
@@ -309,7 +309,7 @@ Další informace najdete v tématu [hardwarová akcelerace pro výkon emulátor
 
 ### <a name="visual-studio-app-center"></a>Visual Studio App Center
 
-**Novinka v 15,5**: Visual Studio App Center&mdash;, která je teď všeobecně dostupná pro aplikace pro Android, iOS, MacOS a Windows,&mdash;má vše, co potřebujete ke správě životního cyklu aplikací, včetně automatizovaných sestavení, testování na skutečných zařízeních v Cloud, distribuce na beta testery a obchody s aplikacemi a monitorování reálného využití prostřednictvím dat o chybách a analýzách. Aplikace napsané v objektivech, které jsou v cíli C#– C, SWIFT, Java,, Xamarin a reagují na nativní, jsou podporované napříč všemi funkcemi.
+**Novinka v 15,5**: Visual Studio App Center&mdash;, která je teď všeobecně dostupná pro aplikace pro Android, iOS, MacOS a Windows,&mdash;má všechno, co potřebujete ke správě životního cyklu aplikací, včetně automatizovaných buildů, testování na skutečných zařízeních v cloudu, distribuci do beta testerů a obchodů s aplikacemi a monitorování reálného využití prostřednictvím dat o chybách a analýzách. Aplikace napsané v objektivech, které jsou v cíli C#– C, SWIFT, Java,, Xamarin a reagují na nativní, jsou podporované napříč všemi funkcemi.
 
   ![Visual Studio App Center testovací prostředí](media/app-center-test-env.png)
 
@@ -354,7 +354,7 @@ Další informace najdete na stránce [Visual Studio Tools for Unity](../cross-p
 
 ## <a name="ai-development"></a>Vývoj AI
 
-### <a name="visual-studio-tools-for-ai"></a>Visual Studio Tools for AI
+### <a name="visual-studio-tools-for-ai"></a>Visual Studio Tools pro AI
 
 **Novinka v 15,5**: Využijte funkce produktivity sady Visual Studio k urychlení inovací AI ještě dnes. Používejte integrované funkce editoru kódu, jako je zvýrazňování syntaxe, IntelliSense a automatické formátování textu. V místním prostředí můžete interaktivně testovat aplikaci hloubkového učení pomocí podrobného ladění místních proměnných a modelů.
 
@@ -367,7 +367,7 @@ Další informace najdete na stránce [Visual Studio Tools for AI](../ai/about-a
 Visual Studio 2017 aktualizujeme často o nové funkce, které můžou zlepšit vývojové prostředí. Tady je rekapitulace některých našich nejvýznamnějších aktualizací, které jsou v experimentální verzi Preview:
 
 * **[Live Share](https://visualstudio.microsoft.com/services/live-share/)** nový nástroj, který umožňuje sdílet základ kódu a jeho kontext s společník a získat rychlou obousměrnou spolupráci přímo v rámci sady Visual Studio. Pomocí Live Share může společník číst, Procházet, upravovat a ladit projekt, který s nimi sdílíte, a dělat plynule a bezpečně.<br><br>Další informace najdete v části [Nejčastější dotazy k Live Share](/visualstudio/liveshare/faq).<br><br>
-* **[IntelliCode](https://visualstudio.microsoft.com/services/intellicode/)** , což je nová funkce, která vylepšuje vývoj softwaru pomocí AI a poskytuje lepší kontextové dokončování kódu, pomáhají vývojářům vytvářet kód ke vzorům a stylům jejich týmu, vyhledávat obtížně zachytávání kódu a soustředit kód. kontroluje oblasti, které jsou ve skutečnosti. <br><br>Další informace najdete v tématu [IntelliCode – Nejčastější dotazy](/visualstudio/intellicode/faq).
+* **[IntelliCode](https://visualstudio.microsoft.com/services/intellicode/)** , což je nová funkce, která vylepšuje vývoj softwaru pomocí AI a poskytuje lepší kontextové dokončování kódu, pomůže vývojářům vytvářet kód ke vzorům a stylům jejich týmu, vyhledávat obtížně zachytávání kódu a soustředit se na revize kódu v oblastech, které jsou ve skutečnosti. <br><br>Další informace najdete v tématu [IntelliCode – Nejčastější dotazy](/visualstudio/intellicode/faq).
 
 Chcete získat další informace o tom, co je jinde v sadě Works for Visual Studio 2017? Podívejte se na stránku s [plánem sady Visual Studio](/visualstudio/productinfo/vs2018-roadmap) .
 
@@ -375,7 +375,7 @@ A nezapomeňte si zaregistrovat naši nejnovější verzi, [Visual Studio 2019](
 
 ## <a name="contact-us"></a>Kontaktujte nás
 
-Proč odeslat zpětnou vazbu týmu sady Visual Studio? Vzhledem k tomu, že povedeme zpětnou vazbu zákazníků. To zahrnuje mnoho toho, co máme.
+Proč odeslat zpětnou vazbu týmu sady Visual Studio? Protože jsme vážně trvat zpětné vazby od zákazníků. To zahrnuje mnoho toho, co máme.
 
 Pokud si chcete udělat nějaké informace o tom, jak můžeme vylepšit aplikaci Visual Studio, nebo si přečtěte další informace o možnostech podpory produktu, přečtěte si prosím stránku [poslat nám svůj názor](feedback-options.md) .
 

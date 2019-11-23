@@ -46,5 +46,5 @@ HRESULT OnFunctionExitByName(
  Pro volání DOM skriptovací modul volá tuto metodu místo volání metody [iactivescriptprofilercallback –:: OnFunctionExit](../../winscript/reference/iactivescriptprofilercallback-onfunctionexit.md). Důvodem je velký počet jedinečných metod a vlastností v modelu DOM.  
   
 ## <a name="see-also"></a>Viz také:  
- [Iactivescriptprofilercallback2 –:: OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md)    
+ [IActiveScriptProfilerCallback2::OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md)   
  [IActiveScriptProfilerCallback2 – rozhraní](../../winscript/reference/iactivescriptprofilercallback2-interface.md)

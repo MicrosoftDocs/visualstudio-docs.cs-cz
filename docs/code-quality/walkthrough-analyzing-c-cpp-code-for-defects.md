@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Analýza defektů v kódu C/C++'
+title: 'Návod: Analýza kódu C/C++ na výskyt závad'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,7 +19,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72018337"
 ---
-# <a name="walkthrough-analyzing-cc-code-for-defects"></a>Návod: Analýza defektů v kódu C/C++
+# <a name="walkthrough-analyzing-cc-code-for-defects"></a>Návod: Analýza kódu C/C++ na výskyt závad
 
 Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatky v kódu pomocí nástroje Analýza kódu pro C/C++ Code.
 
@@ -65,9 +65,9 @@ Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatk
 
 2. V **Seznam chyb**dvakrát klikněte na následující upozornění:
 
-     Upozornění C6230: Implicitní přetypování mezi sémanticky odlišnými typy: používá HRESULT v logickém kontextu.
+     Upozornění C6230: implicitní přetypování mezi sémanticky odlišnými typy: používá HRESULT v logickém kontextu.
 
-     Editor kódu zobrazí řádek, který způsobil upozornění ve funkci `bool ProcessDomain()`. Toto upozornění označuje, že se v příkazu if používá HRESULT, kde se očekává logický výsledek.
+     Editor kódu zobrazuje řádek, který způsobil upozornění ve funkci `bool ProcessDomain()`. Toto upozornění označuje, že se v příkazu if používá HRESULT, kde se očekává logický výsledek.
 
 3. Opravte toto upozornění pomocí makra úspěšné. Váš kód by měl vypadat podobně jako následující kód:
 
@@ -77,7 +77,7 @@ Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatk
 
 4. V **Seznam chyb**dvakrát klikněte na následující upozornění:
 
-     Upozornění C6282: Nesprávný operátor: přiřazení k konstantě v kontextu testu. Bylo = = zamýšleno?
+     Warning C6282: nesprávný operátor: přiřazení k konstantě v kontextu testu. Bylo = = zamýšleno?
 
 5. Opravte toto upozornění pomocí testování rovnosti. Váš kód by měl vypadat podobně jako následující kód:
 
@@ -97,7 +97,7 @@ Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatk
 
      V **Seznam chyb**se teď jako chyba zobrazuje C6001.
 
-3. Opravte zbývající dvě chyby C6001 v **Seznam chyb** tím, že inicializujete `i` a `j` na hodnotu 0.
+3. Opravte zbývající dvě chyby C6001 v **Seznam chyb** inicializací `i` a `j` na 0.
 
 4. Znovu sestavte projekt CodeDefects.
 
@@ -119,7 +119,7 @@ Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatk
 
 6. V **Seznam chyb**dvakrát klikněte na následující upozornění:
 
-     Upozornění C6011: Přesměrování NULOVÉho ukazatele ' newNode '.
+     Upozornění C6011: přesměrování NULOVÉho ukazatele "newNode".
 
      Toto upozornění signalizuje selhání volajícímu, aby zkontroloval vrácenou hodnotu. V takovém případě volání **AllocateNode** může vracet hodnotu null (viz hlavičkový soubor poznámky. h pro deklaraci funkce pro AllocateNode).
 
@@ -142,7 +142,7 @@ Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatk
 
 ### <a name="to-use-source-code-annotation"></a>Použití poznámky ke zdrojovému kódu
 
-1. Zadejte do pole formální parametry a návratovou hodnotu funkce `AddTail` pomocí podmínek pre a post, jak je znázorněno v následujícím příkladu:
+1. Pomocí podmínek pre a post, jak je znázorněno v tomto příkladu, opatřit poznámkami formální parametry a návratovou hodnotu funkce `AddTail`.
 
    ```cpp
    [returnvalue:SA_Post (Null=SA_Maybe)] LinkedList* AddTail
@@ -156,7 +156,7 @@ Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatk
 
 3. V **Seznam chyb**dvakrát klikněte na následující upozornění:
 
-     Upozornění C6011: Přesměrování NULOVÉho ukazatele "Node".
+     Upozornění C6011: přesměrování NULOVÉho ukazatele "Node".
 
      Toto upozornění znamená, že uzel předaný do funkce může mít hodnotu null a označuje číslo řádku, kde bylo upozornění vyvoláno.
 
@@ -178,4 +178,5 @@ Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatk
 
 ## <a name="see-also"></a>Viz také:
 
-[Návod: Analýza spravovaného kódu pro vady kódu @ no__t-0 @ no__t-1[Analýza kódu pro CC++ /](../code-quality/code-analysis-for-c-cpp-overview.md)
+[Návod: Analýza spravovaného kódu pro chyby kódu](../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)
+[analýze kódu pro CC++ /](../code-quality/code-analysis-for-c-cpp-overview.md)

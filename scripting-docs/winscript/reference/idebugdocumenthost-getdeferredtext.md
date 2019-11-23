@@ -70,6 +70,6 @@ HRESULT GetDeferredText(
 > Tato metoda vrátí text z původního dokumentu. Hostitel nesleduje úpravy ani jiné změny v dokumentu.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní idebugdocumenthost –](../../winscript/reference/idebugdocumenthost-interface.md)  
- [Idebugdocumenthelper –:: AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)    
+   [rozhraní idebugdocumenthost –](../../winscript/reference/idebugdocumenthost-interface.md)  
+ [IDebugDocumentHelper::AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
  [SOURCE_TEXT_ATTR – výčet](../../winscript/reference/source-text-attr-enumeration.md)

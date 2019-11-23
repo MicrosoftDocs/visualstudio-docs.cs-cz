@@ -42,10 +42,10 @@ typedef DWORD SCRIPTTHREADID;
 |SCRIPTTHREADID_ALL|Hodnotu|Všechna vlákna.|  
   
 ## <a name="remarks"></a>Poznámky  
- @No__t_0 typ používá `IActiveScript::GetCurrentScriptThreadID`, `IActiveScript::GetScriptThreadID`, `IActiveScript::GetScriptThreadState` a `IActiveScript::InterruptScriptThread`, ale konstanty lze použít pouze `IActiveScript::GetScriptThreadState` a `IActiveScript::InterruptScriptThread`.  
+ `SCRIPTTHREADID` typ používá `IActiveScript::GetCurrentScriptThreadID`, `IActiveScript::GetScriptThreadID`, `IActiveScript::GetScriptThreadState`a `IActiveScript::InterruptScriptThread`, ale konstanty lze použít pouze `IActiveScript::GetScriptThreadState` a `IActiveScript::InterruptScriptThread`.  
   
 ## <a name="see-also"></a>Viz také:  
- [IActiveScript:: GetCurrentScriptThreadID](../../winscript/reference/iactivescript-getcurrentscriptthreadid.md)    
- [IActiveScript:: GetScriptThreadID](../../winscript/reference/iactivescript-getscriptthreadid.md)    
- [IActiveScript:: GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md)    
+ [IActiveScript::GetCurrentScriptThreadID](../../winscript/reference/iactivescript-getcurrentscriptthreadid.md)   
+ [IActiveScript::GetScriptThreadID](../../winscript/reference/iactivescript-getscriptthreadid.md)   
+ [IActiveScript:: GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md)   
  [IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md)

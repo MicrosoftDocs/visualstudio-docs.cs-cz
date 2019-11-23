@@ -43,7 +43,7 @@ HRESULT GetStat(
   
 |Konstanta|Hodnota|Popis|  
 |--------------|-----------|-----------------|  
-|SCRIPTSTAT_STATEMENT_COUNT|první|Vrátí počet příkazů provedených od spuštění skriptu nebo resetování statistiky.|  
+|SCRIPTSTAT_STATEMENT_COUNT|1|Vrátí počet příkazů provedených od spuštění skriptu nebo resetování statistiky.|  
   
  `pluHi`  
  mimo Vysoký 32 bitů 64 unsigned integer reprezentujících statistiku.  
@@ -62,5 +62,5 @@ HRESULT GetStat(
  Tato metoda vrátí jednu ze standardních statistik skriptu.  
   
 ## <a name="see-also"></a>Viz také:  
- [Iactivescriptstats –:: GetStatEx](../../winscript/reference/iactivescriptstats-getstatex.md)    
+ [Iactivescriptstats –:: GetStatEx](../../winscript/reference/iactivescriptstats-getstatex.md)   
  [IActiveScriptStats – rozhraní](../../winscript/reference/iactivescriptstats-interface.md)

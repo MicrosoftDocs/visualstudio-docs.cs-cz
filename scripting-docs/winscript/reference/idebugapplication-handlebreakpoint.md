@@ -59,7 +59,7 @@ HRESULT HandleBreakPoint(
  Tato metoda způsobí, že `IApplicationDebugger::onHandleBreakPoint` být volána.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní IDebugApplication –](../../winscript/reference/idebugapplication-interface.md)  
- [Iapplicationdebugger –:: onHandleBreakPoint](../../winscript/reference/iapplicationdebugger-onhandlebreakpoint.md)    
- @No__t_1 [výčtu breakreason –](../../winscript/reference/breakreason-enumeration.md)  
+   [rozhraní IDebugApplication –](../../winscript/reference/idebugapplication-interface.md)  
+ [Iapplicationdebugger –:: onHandleBreakPoint](../../winscript/reference/iapplicationdebugger-onhandlebreakpoint.md)   
+   [výčtu breakreason –](../../winscript/reference/breakreason-enumeration.md)  
  [BREAKRESUMEACTION – výčet](../../winscript/reference/breakresumeaction-enumeration.md)

@@ -31,7 +31,7 @@ Vytvořili jste odkaz na popisek, který neexistuje. Popisky lze použít k ozna
 - Zajistěte, aby všechny odkazy na štítky byly vytvořeny na jmenovky, které byly definovány v aktuálním oboru (včetně předávajících definic).  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [příkazu s popisky](../../javascript/reference/labeled-statement-javascript.md)  
+   [příkazu s popisky](../../javascript/reference/labeled-statement-javascript.md)  
    [příkazu switch](../../javascript/reference/switch-statement-javascript.md)  
    [příkazu break](../../javascript/reference/break-statement-javascript.md)  
  [continue – příkaz](../../javascript/reference/continue-statement-javascript.md)

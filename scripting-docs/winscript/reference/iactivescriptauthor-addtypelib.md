@@ -63,5 +63,5 @@ HRESULT AddTypeLib(
   
 ## <a name="see-also"></a>Viz také:  
    [rozhraní iactivescriptauthor –](../../winscript/reference/iactivescriptauthor-interface.md)  
- [Iactivescriptauthor –:: AddNamedItem](../../winscript/reference/iactivescriptauthor-addnameditem.md)    
+ [IActiveScriptAuthor::AddNamedItem](../../winscript/reference/iactivescriptauthor-addnameditem.md)   
  [LoadTypeLib](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelib)

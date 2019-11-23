@@ -50,6 +50,6 @@ HRESULT RemoveApplication(
  Tato metoda je volána správcem ladění procesu vždy, když je volána `IProcessDebugManager::RemoveApplication`.  
   
 ## <a name="see-also"></a>Viz také:  
- [Imachinedebugmanager –:: AddApplication](../../winscript/reference/imachinedebugmanager-addapplication.md)    
- @No__t_1 [rozhraní imachinedebugmanager –](../../winscript/reference/imachinedebugmanager-interface.md)  
+ [IMachineDebugManager::AddApplication](../../winscript/reference/imachinedebugmanager-addapplication.md)   
+   [rozhraní imachinedebugmanager –](../../winscript/reference/imachinedebugmanager-interface.md)  
  [IProcessDebugManager::RemoveApplication](../../winscript/reference/iprocessdebugmanager-removeapplication.md)

@@ -32,9 +32,9 @@ o.f();
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Pro objekty typu `Date` vyvolat pouze metody **Date. prototyp. ToString** nebo **Date. prototype. valueOf –** .  
+- Pro objekty typu `Date`vyvolat pouze metody **Date. prototyp. ToString** nebo **Date. prototype. valueOf –** .  
   
 ## <a name="see-also"></a>Viz také:  
- [Objekt data](../../javascript/reference/date-object-javascript.md)    
- [GETDATE – metoda (Date)](../../javascript/reference/getdate-method-date-javascript.md)    
+ [Objekt data](../../javascript/reference/date-object-javascript.md)   
+ [GETDATE – metoda (Date)](../../javascript/reference/getdate-method-date-javascript.md)   
  [Vnitřní objekty](../../javascript/intrinsic-objects-javascript.md)

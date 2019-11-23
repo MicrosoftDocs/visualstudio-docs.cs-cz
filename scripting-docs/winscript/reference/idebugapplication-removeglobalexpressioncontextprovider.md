@@ -50,5 +50,5 @@ HRESULT RemoveGlobalExpressionContextProvider(
  Metoda `RemoveGlobalExpressionContextProvider` odebere z této aplikace zprostředkovatele kontextu globálního výrazu.  
   
 ## <a name="see-also"></a>Viz také:  
- [IDebugApplication –:: AddGlobalExpressionContextProvider](../../winscript/reference/idebugapplication-addglobalexpressioncontextprovider.md)    
+ [IDebugApplication::AddGlobalExpressionContextProvider](../../winscript/reference/idebugapplication-addglobalexpressioncontextprovider.md)   
  [IDebugApplication – rozhraní](../../winscript/reference/idebugapplication-interface.md)

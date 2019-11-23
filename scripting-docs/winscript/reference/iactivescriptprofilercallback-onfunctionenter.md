@@ -47,5 +47,5 @@ HRESULT OnFunctionEnter(
  V případě volání DOM skriptovací modul volá [iactivescriptprofilercallback2 –:: OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md) namísto `IActiveScriptProfilerCallback::OnFunctionEnter`. Důvodem je velký počet jedinečných metod a vlastností v modelu DOM.  
   
 ## <a name="see-also"></a>Viz také:  
- [Iactivescriptprofilercallback –:: OnFunctionExit](../../winscript/reference/iactivescriptprofilercallback-onfunctionexit.md)    
+ [IActiveScriptProfilerCallback::OnFunctionExit](../../winscript/reference/iactivescriptprofilercallback-onfunctionexit.md)   
  [IActiveScriptProfilerCallback – rozhraní](../../winscript/reference/iactivescriptprofilercallback-interface.md)

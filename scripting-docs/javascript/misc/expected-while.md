@@ -29,5 +29,5 @@ Do `do...while` smyčky jste nezahrnuli podmínku `while`. Příkaz **do** musí
 - Jako uzavírací složenou závorku zahrňte příkaz `while` test.  
   
 ## <a name="see-also"></a>Viz také:  
- [příkaz while](../../javascript/reference/while-statement-javascript.md)    
+ [příkaz while](../../javascript/reference/while-statement-javascript.md)   
  [Řízení toku programu](../../javascript/controlling-program-flow-javascript.md)

@@ -29,5 +29,5 @@ Vytvořili jste odkaz na prvek pole, ale nezahrnuli pravou hranatou závorku. Li
 - Do výrazu, který odkazuje na prvek pole, přidejte pravou hranatou závorku.  
   
 ## <a name="see-also"></a>Viz také:  
- [Použití polí](../../javascript/advanced/using-arrays-javascript.md)    
+ [Použití polí](../../javascript/advanced/using-arrays-javascript.md)   
  [Array – objekt](../../javascript/reference/array-object-javascript.md)

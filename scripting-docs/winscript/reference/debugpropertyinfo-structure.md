@@ -61,9 +61,9 @@ typedef struct DebugPropertyInfo{
  Výčet, který určuje příznaky pro atributy vlastností ladění.  
   
  pDebugProp  
- @No__t_0 popisují informace v této `DebugPropertyInfo` struktuře.  
+ `IDebugProperty` popisují informace v této `DebugPropertyInfo` struktuře.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní idebugproperty –](../../winscript/reference/idebugproperty-interface.md)  
- [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)    
+   [rozhraní idebugproperty –](../../winscript/reference/idebugproperty-interface.md)  
+ [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)   
  [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)

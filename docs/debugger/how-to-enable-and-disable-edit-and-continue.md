@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: povolení a zákaz úprav a pokračování | Microsoft Docs'
+title: 'Postupy: povolení a zákaz operace upravit a pokračovat | Dokumentace Microsoftu'
 ms.custom: seodec18
 ms.date: 10/04/2018
 ms.topic: conceptual
@@ -33,28 +33,28 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/16/2019
 ms.locfileid: "72430532"
 ---
-# <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>Postupy: povolení a zákaz úprav a pokračování (C#, VB,) C++
+# <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>Postupy: povolení a zákaz operace upravit a pokračovat (C#, VB, C++)
 
-V dialogovém okně Možnosti sady Visual Studio můžete v době návrhu zakázat nebo povolit **možnost** **Upravit a pokračovat** . Funkce **Upravit a pokračovat** funguje pouze v sestavení ladění. Další informace najdete v tématu [Úpravy a pokračování](../debugger/edit-and-continue.md).
+Můžete zakázat nebo povolit **upravit a pokračovat** v sadě Visual Studio **možnosti** dialogové okno v době návrhu. **Upravit a pokračovat** sestavení lze použít pouze v ladění. Další informace najdete v tématu [upravit a pokračovat](../debugger/edit-and-continue.md).
 
-Pro nativní C++, příkaz **Upravit a pokračovat** vyžaduje použití možnosti `/INCREMENTAL`. Další informace o požadavcích na funkce v C++nástroji najdete v tomto [blogovém příspěvku](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/) a příkaz [UpravitC++a pokračovat ()](../debugger/edit-and-continue-visual-cpp.md).
+Pro nativní kód C++ **upravit a pokračovat** vyžaduje použití `/INCREMENTAL` možnost. Další informace o požadavcích na funkce v C++nástroji najdete v tomto [blogovém příspěvku](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/) a příkaz [UpravitC++a pokračovat ()](../debugger/edit-and-continue-visual-cpp.md).
 
-**Povolení nebo zakázání akce upravit a pokračovat:**
+**K povolení nebo zakázání funkce upravit a pokračovat:**
 
-1. Pokud se nacházíte v relaci ladění, zastavte ladění (**ladění** > **Zastavit ladění** nebo **SHIFT**+**F5**).
+1. Pokud jste v relaci ladění, zastavte ladění (**ladění** > **Zastavit ladění** nebo **Shift**+**F5**) .
 
-1. V **nabídce nástroje** >  >**Možnosti** ( **nebo ladění**@no__t-**4)** > **ladění** > **Obecné**vyberte v pravém podokně možnost **Upravit a pokračovat** .
+1. V **nástroje** > **možnosti** > (nebo **ladění** > **možnosti**) > **ladění**  >  **Obecné**vyberte **upravit a pokračovat** v pravém podokně.
 
     > [!NOTE]
-    > Pokud je povolená možnost IntelliTrace a shromáždíte obě události IntelliTrace a informace o volání, možnost upravit a pokračovat je zakázaná. Další informace najdete v tématu [IntelliTrace](../debugger/intellitrace.md).
+    > Pokud je povolená technologie IntelliTrace a shromažďovat události IntelliTrace a informace o volání, upravit a pokračovat je zakázané. Další informace najdete v tématu [IntelliTrace](../debugger/intellitrace.md).
 
-1. V C++ případě kódu se ujistěte, že je vybraná **možnost Povolit nativní úpravy a pokračovat** , a nastavte další možnosti:
+1. Pro kód jazyka C++, ujistěte se, že **Povolit nativní editovat a pokračovat** je vybraná a nastavit další možnosti:
     - **Použít změny při pokračování (jenom nativní)**
 
-      Je-li vybrána tato možnost, Visual Studio automaticky zkompiluje a použije změny kódu, když budete pokračovat v ladění ze stavu přerušení. V opačném případě můžete zvolit, aby se změny projevily pomocí **ladění** > **použít změny kódu**.
+      Pokud vybraná, Visual Studio automaticky zkompiluje a platí změn kódu, pokud budete pokračovat v ladění ze stavu pozastavení. V opačném případě můžete také použít změny pomocí **ladění** > **použít změny kódu**.
 
-    - **Upozornit na starý kód (jenom nativní)**
+    - **Upozornit na starý kód (pouze nativní)**
 
-      Pokud je tato možnost vybrána, poskytuje upozornění na zastaralý kód.
+      Pokud je vybrána, poskytuje upozornění na starý kód.
 
-1. Klikněte na tlačítko **OK**.
+1. Klikněte na **OK**.

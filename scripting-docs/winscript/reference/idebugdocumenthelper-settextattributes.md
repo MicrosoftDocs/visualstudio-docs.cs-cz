@@ -55,11 +55,11 @@ HRESULT SetTextAttributes(
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Před přidáním tohoto textu do dokumentu je tato chyba volána `SetTextAttributes` v textovém rozsahu. Chcete-li přidat text do dokumentu, zavolejte metody `AddDBCSText`, `AddUnicodeText` nebo `AddDeferredText`.  
+ Před přidáním tohoto textu do dokumentu je tato chyba volána `SetTextAttributes` v textovém rozsahu. Chcete-li přidat text do dokumentu, zavolejte metody `AddDBCSText`, `AddUnicodeText`nebo `AddDeferredText`.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní idebugdocumenthelper –](../../winscript/reference/idebugdocumenthelper-interface.md)  
- [Idebugdocumenthelper –:: AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)    
- [Idebugdocumenthelper –:: AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)    
- [Idebugdocumenthelper –:: AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)    
+   [rozhraní idebugdocumenthelper –](../../winscript/reference/idebugdocumenthelper-interface.md)  
+ [Idebugdocumenthelper –:: AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)   
+ [Idebugdocumenthelper –:: AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
+ [IDebugDocumentHelper::AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
  [SOURCE_TEXT_ATTR – výčet](../../winscript/reference/source-text-attr-enumeration.md)

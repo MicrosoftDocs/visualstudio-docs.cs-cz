@@ -36,5 +36,5 @@ var x = example();           // Try and call example as if it were a function.
 - Ujistěte se, že používáte operátor volání funkce `()` pouze k volání funkcí.  
   
 ## <a name="see-also"></a>Viz také:  
- [Objekt funkce](../../javascript/reference/function-object-javascript.md)    
+ [Objekt funkce](../../javascript/reference/function-object-javascript.md)   
  [prototype – vlastnost (Object)](../../javascript/reference/prototype-property-object-javascript.md)

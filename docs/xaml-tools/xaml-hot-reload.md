@@ -48,16 +48,16 @@ Následující ilustrace znázorňuje použití živého vizuálního stromu pro
 
 Níže jsou známá omezení pro opětovné načtení kódu XAML. Chcete-li obejít jakékoli omezení, které je třeba spustit, stačí zastavit ladicí program a operaci dokončit.
 
-|Omezené|WPF|UWP|Poznámky|
+|Omezení|WPF|UWP|Poznámky|
 |-|-|-|-|
-|Události zapojení do ovládacích prvků, když je aplikace spuštěná|Nepodporováno|Není podporováno|Viz Chyba: *zajistěte, aby došlo*k chybě události. Všimněte si, že v WPF můžete odkazovat na existující obslužnou rutinu události. V aplikacích pro UWP není odkaz na existující obslužnou rutinu události podporovaný.|
-|Vytváření objektů prostředků ve slovníku prostředků, jako jsou například v rámci stránky nebo okna vaší aplikace nebo souboru *App. XAML*|Podporováno od aktualizace Visual Studio 2019 Update 2|Podporováno|Příklad: Přidání `SolidColorBrush` do slovníku prostředků pro použití jako `StaticResource`.</br>Poznámka: statické prostředky, převaděče stylu a další elementy zapsané do slovníku prostředků mohou být použity nebo použity při použití kódu XAML Hot reloading. Nepodporují se jenom vytváření prostředků.</br> Změna vlastnosti @no__t 0 slovníku prostředků|
-|Přidání nových ovládacích prvků, tříd, oken nebo jiných souborů do projektu v době, kdy aplikace běží|Nepodporováno|Nepodporováno|Žádné|
-|Správa balíčků NuGet (přidávání/odebírání a aktualizace balíčků)|Nepodporováno|Nepodporováno|Žádné|
+|Události zapojení do ovládacích prvků, když je aplikace spuštěná|Nepodporuje se|Není podporováno|Viz Chyba: *zajistěte, aby došlo*k chybě události. Všimněte si, že v WPF můžete odkazovat na existující obslužnou rutinu události. V aplikacích pro UWP není odkaz na existující obslužnou rutinu události podporovaný.|
+|Vytváření objektů prostředků ve slovníku prostředků, jako jsou například v rámci stránky nebo okna vaší aplikace nebo souboru *App. XAML*|Podporováno od aktualizace Visual Studio 2019 Update 2|Podporuje se|Příklad: Přidání `SolidColorBrush` do slovníku prostředků pro použití jako `StaticResource`.</br>Poznámka: statické prostředky, převaděče stylu a další elementy zapsané do slovníku prostředků mohou být použity nebo použity při použití kódu XAML Hot reloading. Nepodporují se jenom vytváření prostředků.</br> Změna vlastnosti `Source` slovníku prostředků|
+|Přidání nových ovládacích prvků, tříd, oken nebo jiných souborů do projektu v době, kdy aplikace běží|Nepodporuje se|Nepodporuje se|Žádné|
+|Správa balíčků NuGet (přidávání/odebírání a aktualizace balíčků)|Nepodporuje se|Nepodporuje se|Žádné|
 |Změna datové vazby, která používá rozšíření značek {x:Bind}|Není k dispozici|Podporováno od sady Visual Studio 2019|To vyžaduje Windows 10 verze 1809 (Build 10.0.17763). Nepodporováno v aplikaci Visual Studio 2017 nebo v předchozích verzích.|
-|Změna direktiv X:UID – se nepodporuje.|Není k dispozici|Nepodporováno|Žádné|
+|Změna direktiv X:UID – se nepodporuje.|Není k dispozici|Nepodporuje se|Žádné|
 
-## <a name="error-messages"></a>Chybové zprávy
+## <a name="error-messages"></a>Chybovými zprávami
 
 Při použití kódu XAML Hot reload může docházet k následujícím chybám.
 

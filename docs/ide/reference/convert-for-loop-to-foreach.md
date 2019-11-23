@@ -43,7 +43,7 @@ Důvody, proč je vhodné převést smyčku [for](/dotnet/csharp/language-refere
 
 1. Umístěte blikající kurzor do klíčového slova `for`.
 
-1. Stiskněte klávesu **Ctrl** + **.** nebo klikněte na ikonu ![Screwdriver Screwdriver ](../media/screwdriver-icon.png) ikonu na okraji souboru s kódem.
+1. Stisknutím klávesy **Ctrl**+ **.** nebo klikněte na ikonu Screwdriver ![Screwdriver ikony](../media/screwdriver-icon.png) na okraji souboru s kódem.
 
    ![Nabídka převést na foreach](media/convert-to-foreach.png)
 
@@ -71,7 +71,7 @@ Důvody, které byste mohli chtít převést příkaz [foreach](/dotnet/csharp/l
 
 1. Umístěte blikající kurzor do klíčového slova `foreach` nebo `For Each`.
 
-1. Stiskněte klávesu **Ctrl** + **.** nebo klikněte na ikonu ![Screwdriver Screwdriver ](../media/screwdriver-icon.png) ikonu na okraji souboru s kódem.
+1. Stisknutím klávesy **Ctrl**+ **.** nebo klikněte na ikonu Screwdriver ![Screwdriver ikony](../media/screwdriver-icon.png) na okraji souboru s kódem.
 
    ![Nabídka převést na pro](media/convert-to-for.png)
 
@@ -80,7 +80,7 @@ Důvody, které byste mohli chtít převést příkaz [foreach](/dotnet/csharp/l
 1. Vzhledem k tomu, že refaktoring zavádí novou proměnnou počtu iterací, zobrazí se pole **Přejmenovat** v pravém horním rohu editoru. Chcete-li pro proměnnou zvolit jiný název, zadejte ji do pole a potom stiskněte klávesu **ENTER** nebo zvolte možnost **použít** v poli **Přejmenovat** . Pokud nechcete zvolit nový název, stiskněte klávesu **ESC** nebo vyberte **použít** k zavření pole **Přejmenovat** .
 
 > [!NOTE]
-> Pro C#kód, který vygenerovaly tyto refaktoringy, používá explicitní typ nebo [var](/dotnet/csharp/language-reference/keywords/var) pro typ položek v kolekci. Typ v generovaném kódu, explicitní nebo implicitní, závisí na nastavení stylu kódu, které jsou v rozsahu. Tato konkrétní nastavení stylu kódu se konfigurují na úrovni počítače v nabídce **nástroje**  > **Možnosti**  > **textový Editor** **C#**  >   > **styl kódu** 0**Obecné** 2 **@no__t_ 14var ' předvolby**nebo na úrovni řešení v souboru [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) . Pokud změníte nastavení stylu kódu v **možnostech**, znovu otevřete soubor kódu, aby se změny projevily.
+> Pro C#kód, který vygenerovaly tyto refaktoringy, používá explicitní typ nebo [var](/dotnet/csharp/language-reference/keywords/var) pro typ položek v kolekci. Typ v generovaném kódu, explicitní nebo implicitní, závisí na nastavení stylu kódu, které jsou v rozsahu. Tato konkrétní nastavení stylu kódu jsou konfigurována na úrovni počítače v nabídce **nástroje** > **Možnosti** > **textový Editor** > **C#**  > **stylu kódu** > **Obecné** předvolby > \'**var**nebo na úrovni řešení v souboru [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) . Pokud změníte nastavení stylu kódu v **možnostech**, znovu otevřete soubor kódu, aby se změny projevily.
 
 ## <a name="see-also"></a>Viz také:
 

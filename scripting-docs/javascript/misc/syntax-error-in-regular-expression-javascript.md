@@ -29,6 +29,6 @@ Struktura hledaného řetězce je v rozporu s jedním nebo více gramatickými p
 - Zajistěte, aby struktura vyhledávacího řetězce regulárního výrazu odpovídala syntaxi regulárního výrazu [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)].  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [objektu regulárního výrazu](../../javascript/reference/regular-expression-object-javascript.md)  
- [Syntaxe regulárního výrazu (JavaScript)](https://msdn.microsoft.com/library/1400241x)    
+   [objektu regulárního výrazu](../../javascript/reference/regular-expression-object-javascript.md)  
+ [Syntaxe regulárního výrazu (JavaScript)](https://msdn.microsoft.com/library/1400241x)   
  [compile – metoda (Regulární výraz)](../../javascript/reference/compile-method-regular-expression-javascript.md)

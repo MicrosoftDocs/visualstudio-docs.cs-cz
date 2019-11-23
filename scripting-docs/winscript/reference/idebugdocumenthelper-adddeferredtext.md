@@ -60,7 +60,7 @@ HRESULT AddDeferredText(
 > Volání `AddDeferredText` by se neměla kombinovat s voláními `AddUnicodeText` nebo `AddDBCSText`. Pokud k tomu dojde, `E_FAIL` se vrátí.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní idebugdocumenthelper –](../../winscript/reference/idebugdocumenthelper-interface.md)  
- [Idebugdocumenthelper –:: AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)    
- [Idebugdocumenthelper –:: AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)    
+   [rozhraní idebugdocumenthelper –](../../winscript/reference/idebugdocumenthelper-interface.md)  
+ [Idebugdocumenthelper –:: AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)   
+ [Idebugdocumenthelper –:: AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
  [IDebugDocumentText::GetText](../../winscript/reference/idebugdocumenttext-gettext.md)

@@ -37,8 +37,8 @@ Pokusili jste se použít proměnnou podmíněné kompilace bez prvotního zapnu
     ```  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [podmíněné kompilace](../../javascript/advanced/conditional-compilation-javascript.md)  
- @No__t_1 [proměnných podmíněné kompilace](../../javascript/advanced/conditional-compilation-variables-javascript.md)  
- [příkaz @cc_on](../../javascript/reference/at-cc-on-statement-javascript.md)    
- [příkaz @if](../../javascript/reference/at-if-statement-javascript.md)    
+   [podmíněné kompilace](../../javascript/advanced/conditional-compilation-javascript.md)  
+   [proměnných podmíněné kompilace](../../javascript/advanced/conditional-compilation-variables-javascript.md)  
+ [příkaz@cc_on](../../javascript/reference/at-cc-on-statement-javascript.md)   
+ [příkaz@if](../../javascript/reference/at-if-statement-javascript.md)   
  [@set – příkaz](../../javascript/reference/at-set-statement-javascript.md)

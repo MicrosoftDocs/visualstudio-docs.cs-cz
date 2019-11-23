@@ -50,5 +50,5 @@ HRESULT Start(
  Tato metoda zahájí vyhodnocení výrazu.  
   
 ## <a name="see-also"></a>Viz také:  
- [IDebugExpression –:: Abort](../../winscript/reference/idebugexpression-abort.md)    
+ [IDebugExpression –:: Abort](../../winscript/reference/idebugexpression-abort.md)   
  [IDebugExpression – rozhraní](../../winscript/reference/idebugexpression-interface.md)

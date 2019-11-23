@@ -21,17 +21,17 @@ ms.locfileid: "72653042"
 
 **Jaké testovací architektury Live Unit Testing podporují a jaké jsou minimální podporované verze?**
 
-Live Unit Testing pracuje se třemi oblíbenými platformami testování částí uvedenými v následující tabulce. Minimální podporovaná verze jejich adaptérů a platforem je také uvedena v tabulce. Rozhraní pro testování částí jsou dostupná z NuGet.org.
+Live Unit Testing pracuje se třemi oblíbenými platformami testování částí uvedenými v následující tabulce. Minimální podporovaná verze jejich adaptéry a rozhraní je také uvedený v tabulce. Rozhraní testování částí jsou všechny dostupné z webu NuGet.org.
 
-|Testovací rozhraní  |Minimální verze adaptéru sady Visual Studio  |Minimální verze architektury  |
+|Rozhraní pro testování  |Minimální verze aplikace Visual Studio adaptéru  |Minimální verze rozhraní Framework  |
 |---------|---------|---------|
-|xUnit.net |xUnit. Runner. VisualStudio verze 2.2.0-beta3-build1187 |xUnit 1.9.2 |
+|xUnit.net |verze 2.2.0-beta3-build1187 xunit.Runner.VisualStudio |1\.9.2 xunit |
 |NUnit |NUnit3TestAdapter verze 3.7.0 |NUnit verze 3.5.0 |
-|MSTest |MSTest. TestAdapter 1.1.4 – Preview |MSTest. TestFramework 1.0.5 – Preview |
+|MSTest |MSTest.TestAdapter 1.1.4-preview |MSTest.TestFramework 1.0.5-preview |
 
 Pokud máte starší projekty testů založené na MSTest, které odkazují na `Microsoft.VisualStudio.QualityTools.UnitTestFramework` a nechcete přejít na novější MSTest balíčky NuGet, upgradujte na Visual Studio 2019 nebo Visual Studio 2017.
 
-V některých případech může být nutné explicitně obnovit balíčky NuGet, na které odkazují projekty v řešení, aby Live Unit Testing fungovaly. Balíčky můžete obnovit buď explicitním sestavením řešení (vyberte **sestavit  >  znovu** **Sestavit řešení** z nabídky Visual Studio nejvyšší úrovně), nebo kliknutím pravým tlačítkem na řešení a výběrem možnosti **obnovit balíčky NuGet** . před povolením živého testování částí.
+V některých případech budete muset explicitně obnovit balíčky NuGet odkazované projekty v řešení v pořadí pro Live Unit Testing pro práci. Balíčky můžete obnovit buď explicitním sestavením řešení (vyberte **sestavit > znovu** **Sestavit řešení** z nabídky nejvyšší úrovně), nebo kliknutím pravým tlačítkem na řešení a výběrem možnosti **obnovit balíčky NuGet** před povolením živých jednotek testování.
 
 ## <a name="net-core-support"></a>Podpora .NET Core
 
@@ -47,7 +47,7 @@ V okně výstup (když se vybere rozevírací seznam Live Unit Testing) by vám 
 
 - Pokud balíčky NuGet odkazované projekty v řešení nebyly obnoveny, Live Unit Testing nebudou fungovat. Před zapnutím Live Unit Testing by měl tento problém vyřešit explicitní sestavení řešení nebo obnovení balíčků NuGet v řešení.
 
-- Pokud v projektech používáte testy založené na MSTest, nezapomeňte odebrat odkaz na `Microsoft.VisualStudio.QualityTools.UnitTestFramework` a přidat odkazy na nejnovější balíčky MSTest NuGet, `MSTest.TestAdapter` (vyžaduje se minimální verze 1.1.11) a `MSTest.TestFramework` (vyžaduje se minimální verze 1.1.11). . Další informace naleznete v části "podporované testovací architektury" [v článku použití Live Unit Testing v aplikaci Visual Studio](live-unit-testing.md#supported-test-frameworks) .
+- Pokud používáte testy založené na MSTest ve vašich projektech, nezapomeňte odebrat odkaz na `Microsoft.VisualStudio.QualityTools.UnitTestFramework`a přidat odkazy na nejnovější balíčky MSTest NuGet, `MSTest.TestAdapter` (vyžaduje se minimální verze 1.1.11) a `MSTest.TestFramework` (vyžaduje se minimální verze 1.1.11). Další informace naleznete v části "podporované testovací architektury" [v článku použití Live Unit Testing v aplikaci Visual Studio](live-unit-testing.md#supported-test-frameworks) .
 
 - Nejméně jeden projekt ve vašem řešení by měl mít buď odkaz na NuGet, nebo přímý odkaz na rozhraní xUnit, NUnit nebo MSTest test Framework. Tento projekt by měl také odkazovat na odpovídající balíček NuGet testovacích adaptérů sady Visual Studio. Na testovací adaptér sady Visual Studio lze také odkazovat pomocí souboru *. runsettings* . Soubor *. runsettings* musí mít položku podobně jako v následujícím příkladu:
 
@@ -75,7 +75,7 @@ V okně výstup (když se vybere rozevírací seznam Live Unit Testing) by vám 
 
 **Můžu přizpůsobit buildy Live Unit Testing?**
 
-Pokud vaše řešení vyžaduje vlastní kroky k sestavení pro instrumentaci (Live Unit Testing), které nejsou vyžadovány pro "normální" neinstrumentované sestavení, pak můžete přidat kód do projektu nebo *. soubory cílů* , které kontrolují vlastnost `BuildingForLiveUnitTesting` a provede vlastní kroky před/po sestavení. Můžete také zvolit odebrání některých kroků sestavení (například publikování nebo generování balíčků) nebo přidání kroků sestavení (například zkopírování požadavků) do Live Unit Testing sestavení na základě této vlastnosti projektu. Přizpůsobení sestavení na základě této vlastnosti nemění vaše pravidelné sestavení jakýmkoli způsobem a má vliv pouze na Live Unit Testing sestavení.
+Pokud vaše řešení vyžaduje vlastní kroky k sestavení pro instrumentaci (Live Unit Testing), které nejsou vyžadovány pro "normální" neinstrumentované sestavení, pak můžete přidat kód do projektu nebo *. soubory cílů* , které kontrolují vlastnost `BuildingForLiveUnitTesting` a provádí vlastní kroky před/po sestavení. Můžete také zvolit odebrání některých kroků sestavení (například publikování nebo generování balíčků) nebo přidání kroků sestavení (například zkopírování požadavků) do Live Unit Testing sestavení na základě této vlastnosti projektu. Přizpůsobení sestavení na základě této vlastnosti nemění vaše pravidelné sestavení jakýmkoli způsobem a má vliv pouze na Live Unit Testing sestavení.
 
 Může se například jednat o cíl, který vytváří balíčky NuGet během pravidelného sestavování. Pravděpodobně nechcete generovat balíčky NuGet po každé úpravě, kterou provedete. Proto můžete tento cíl v Live Unit Testing sestavení zakázat následujícím způsobem:  
 
@@ -128,11 +128,11 @@ Nastavte `LiveUnitTesting_BuildRoot` proměnnou prostředí na úrovni uživatel
 
 Existuje několik rozdílů:
 
-- Spuštění nebo ladění testů z okna **Průzkumníka testů** spouští běžné binární soubory, zatímco Live Unit Testing spouští instrumentované binární soubory. Pokud chcete ladit instrumentované binární soubory, přidejte [ladicí program. spustit](xref:System.Diagnostics.Debugger.Launch)  method volání v testovací metodě způsobí, že se ladicí program spustí vždy, když se spustí Tato metoda (včetně toho, kdy se spustí pomocí Live Unit testing) a pak můžete připojit a ladit instrumentované binární soubory. Ale doufáme, že je instrumentace pro většinu uživatelských scénářů transparentní a že nepotřebujete ladit instrumentované binární soubory.
+- Spuštění nebo ladění testů z okna **Průzkumníka testů** spouští běžné binární soubory, zatímco Live Unit Testing spouští instrumentované binární soubory. Pokud chcete ladit instrumentované binární soubory, přidejte [ladicí program. spustit](xref:System.Diagnostics.Debugger.Launch) volání metody v testovací metodě způsobí, že se ladicí program spustí vždy, když se spustí Tato metoda (včetně toho, kdy se spustí pomocí Live Unit testing), a pak můžete připojit a ladit instrumentované binární soubory. Ale doufáme, že je instrumentace pro většinu uživatelských scénářů transparentní a že nepotřebujete ladit instrumentované binární soubory.
 
 - Live Unit Testing nevytváří novou doménu aplikace pro spuštění testů, ale testy spouštěné z okna **Průzkumník testů** vytvoří novou doménu aplikace.
 
-- Live Unit Testing spouští testy v každém testovacím sestavení sekvenčně. V **Průzkumníku testů**můžete zvolit paralelní spuštění více testů.
+- Live Unit Testing spustí testy v každé sestavení testu postupně. V **Průzkumníku testů**můžete zvolit paralelní spuštění více testů.
 
 - Zjišťování a provádění testů v Live Unit Testing používá verzi 2 `TestPlatform`, zatímco okno **Průzkumník testů** používá verzi 1. Ve většině případů si nevšimnete rozdílu.
 
@@ -207,7 +207,7 @@ V editoru se nemusí zobrazovat ikony, pokud sestavení, na kterých Live Unit T
 
 K shromažďování podrobnějších protokolů můžete provést několik věcí:
 
-- Přejděte na **nástroje**  > **Možnosti**  > **Live Unit Testing** a změňte možnost protokolování na **verbose**. Podrobné protokolování způsobí, že se v okně **výstup** Zobrazí podrobnější protokoly.
+- Přejděte na **nástroje** > **Možnosti** > **Live Unit Testing** a změňte možnost protokolování na **verbose**. Podrobné protokolování způsobí, že se v okně **výstup** Zobrazí podrobnější protokoly.
 
 - Nastavte `LiveUnitTesting_BuildLog` proměnnou prostředí uživatele na název souboru, který chcete použít k zachycení protokolu MSBuild. Podrobné zprávy protokolu MSBuild z Live Unit Testing sestavení je možné z tohoto souboru načíst.
 

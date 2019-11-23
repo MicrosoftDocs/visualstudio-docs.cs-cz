@@ -50,5 +50,5 @@ HRESULT Attach(
  Tato metoda přidá tento dokument do stromu dokumentu pomocí `pddhParent` jako nadřazeného objektu. Pokud je `pddhParent` `NULL`, bude dokument nejvyšší úrovně.  
   
 ## <a name="see-also"></a>Viz také:  
- [Idebugdocumenthelper –::D etach](../../winscript/reference/idebugdocumenthelper-detach.md)    
+ [Idebugdocumenthelper –::D etach](../../winscript/reference/idebugdocumenthelper-detach.md)   
  [IDebugDocumentHelper – rozhraní](../../winscript/reference/idebugdocumenthelper-interface.md)

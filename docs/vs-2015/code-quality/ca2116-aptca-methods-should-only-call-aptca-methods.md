@@ -32,21 +32,21 @@ ms.locfileid: "72658683"
 |Kategorie|Microsoft.Security|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Metoda v sestavení s atributem <xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName> volá metodu v sestavení, které nemá atribut.
 
 ## <a name="rule-description"></a>Popis pravidla
  Ve výchozím nastavení jsou veřejné nebo chráněné metody v sestaveních se silnými názvy implicitně chráněny [požadavky propojení](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) pro úplný vztah důvěryhodnosti; pouze plně důvěryhodní volající mají přístup k sestavení se silným názvem. Sestavení se silným názvem označená atributem <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) nemají tuto ochranu. Atribut zakáže požadavek propojení, aby bylo sestavení přístupné volajícím, kteří nemají úplný vztah důvěryhodnosti, jako je například spouštění kódu z intranetu nebo z Internetu.
 
- Pokud je atribut APTCA přítomen v plně důvěryhodném sestavení a sestavení spustí kód v jiném sestavení, které nepovoluje částečně důvěryhodné volající, je možné zneužití zabezpečení. Pokud dvě metody `M1` a `M2` splňují následující podmínky, mohou se zlými úmysly pomocí metody `M1` obejít požadavky na odkaz implicitní úplný vztah důvěryhodnosti, který chrání `M2`:
+ Pokud je atribut APTCA přítomen v plně důvěryhodném sestavení a sestavení spustí kód v jiném sestavení, které nepovoluje částečně důvěryhodné volající, je možné zneužití zabezpečení. Pokud dvě metody `M1` a `M2` splňují následující podmínky, mohou škodliví volající použít metodu `M1` pro obejít požadavek na odkaz implicitní úplný vztah důvěryhodnosti, který chrání `M2`:
 
-- `M1` je veřejnou metodou deklarovanou v plně důvěryhodném sestavení, které má atribut APTCA.
+- `M1` je veřejná metoda deklarovaná v plně důvěryhodném sestavení, které má atribut APTCA.
 
 - `M1` volá metodu `M2` mimo sestavení `M1`.
 
-- sestavení `M2` nemá atribut APTCA a proto by neměl být spuštěn pomocí nebo jménem volajících, které jsou částečně důvěryhodné.
+- sestavení `M2`nemá atribut APTCA a proto by neměl být spuštěn pomocí nebo jménem volajících, které jsou částečně důvěryhodné.
 
-  Částečně důvěryhodný volající `X` může volat metodu `M1`, což způsobí, že `M1` zavolá `M2`. Vzhledem k tomu, že `M2` nemá atribut APTCA, jeho bezprostřední volající (`M1`) musí splňovat požadavek propojení pro úplný vztah důvěryhodnosti; `M1` má úplný vztah důvěryhodnosti, a proto splňuje tuto kontrolu. Bezpečnostní riziko je způsobeno tím, že `X` se nepodílí na splnění požadavků na propojení, které chrání `M2` od nedůvěryhodných volajících. Proto metody s atributem APTCA nesmí volat metody, které nemají atribut.
+  Částečně důvěryhodný volající `X` může volat metodu `M1`, která způsobila `M1` volání `M2`. Vzhledem k tomu, že `M2` nemá atribut APTCA, musí jeho bezprostřední volající (`M1`) splňovat požadavek propojení pro úplný vztah důvěryhodnosti; `M1` má úplný vztah důvěryhodnosti a proto splňuje tuto kontrolu. Bezpečnostní riziko je způsobeno tím, že `X` nesplňuje požadavky na odkaz, který chrání `M2` z nedůvěryhodných volajících. Proto metody s atributem APTCA nesmí volat metody, které nemají atribut.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Pokud je vyžadován atribut APCTA, použijte požadavek na ochranu metody, která volá do sestavení s úplným vztahem důvěryhodnosti. Přesná oprávnění budou záviset na funkcích, které vaše metoda zveřejňuje. Pokud je to možné, zabezpečte metodu s požadavkem na úplný vztah důvěryhodnosti, abyste zajistili, že základní funkce nebudou vystaveny částečně důvěryhodným volajícím. Pokud to není možné, vyberte sadu oprávnění, která efektivně chrání vystavené funkce. Další informace o požadavcích naleznete v tématu [Demands](https://msdn.microsoft.com/e5283e28-2366-4519-b27d-ef5c1ddc1f48).
@@ -71,8 +71,8 @@ ms.locfileid: "72658683"
 
  Tento příklad vytvoří následující výstup.
 
- **Poptávka pro úplný vztah důvěryhodnosti: požadavek se nezdařil.** **byla volána 
- ClassRequiringFullTrust. DoWork.**
+ **Požadovat pro úplný vztah důvěryhodnosti: požadavek se nezdařil.** 
+**ClassRequiringFullTrust.DoWork byla volána.**
 ## <a name="related-rules"></a>Související pravidla
  [CA2117: Typy APTCA by měly rozšířit pouze základní typy APTCA](../code-quality/ca2117-aptca-types-should-only-extend-aptca-base-types.md)
 

@@ -18,7 +18,7 @@ ms.locfileid: "72445609"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Pomocí sad pravidel určete C++ pravidla, která se mají spustit.
 
-V sadě Visual Studio můžete vytvořit a upravit vlastní *sadu pravidel* tak, aby splňovala konkrétní požadavky projektu spojené s analýzou kódu. Výchozí sady pravidel jsou uložené v `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`.
+V sadě Visual Studio můžete vytvořit a upravit vlastní *sadu pravidel* tak, aby splňovala konkrétní požadavky projektu spojené s analýzou kódu. Výchozí sady pravidel jsou uloženy v `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`.
 
 **Visual Studio 2017 verze 15,7 a novější:** Vlastní sady pravidel můžete vytvořit pomocí libovolného textového editoru a použít je v sestavách příkazového řádku bez ohledu na to, jaký systém sestavení používáte. Další informace naleznete v tématu [/analyze: RuleSet](/cpp/build/reference/analyze-code-analysis).
 
@@ -36,9 +36,9 @@ Pokud chcete vytvořit novou vlastní sadu pravidel, uložte ji pomocí nového 
 
    - Vyberte sadu pravidel, kterou chcete upravit.
 
-     \- nebo-
+     \- nebo –
 
-   - Vyberte **@no__t – 1Browse... >** k určení existující sady pravidel, která není v seznamu.
+   - Vyberte **\<Procházet... >** k určení existující sady pravidel, která není v seznamu.
 
 4. Zvolením možnosti **otevřít** zobrazte pravidla v editoru sad pravidel.
 
@@ -66,7 +66,7 @@ Pokud chcete vytvořit novou vlastní sadu pravidel, uložte ji pomocí nového 
 
 - Pokud chcete pravidla sbalit ve všech skupinách, klikněte na **Sbalit vše**.
 
-- Chcete-li změnit pole, podle kterého jsou pravidla seskupena, vyberte pole ze seznamu **Seskupit podle** . Chcete-li zobrazit Neseskupená pravidla, vyberte **\<None >** .
+- Chcete-li změnit pole, podle kterého jsou pravidla seskupena, vyberte pole ze seznamu **Seskupit podle** . Pokud chcete zobrazit Neseskupená pravidla, vyberte **\<žádná >** .
 
 - Chcete-li přidat nebo odebrat pole ve sloupcích pravidla, vyberte možnost **Možnosti sloupců**.
 
@@ -82,7 +82,7 @@ Pokud chcete vytvořit novou vlastní sadu pravidel, uložte ji pomocí nového 
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>Vytvoření sady pravidel v textovém editoru
 
-Můžete vytvořit vlastní sadu pravidel v textovém editoru, uložit ji do libovolného umístění s rozšířením @no__t 0 a použít v s možností kompilátoru [/analyze: RuleSet](/cpp/build/reference/analyze-code-analysis) .
+Můžete vytvořit vlastní sadu pravidel v textovém editoru, uložit ji do libovolného umístění s rozšířením `.ruleset` a použít v s možností kompilátoru [/analyze: RuleSet](/cpp/build/reference/analyze-code-analysis) .
 
 Následující příklad ukazuje soubor základní sady pravidel, který můžete použít jako výchozí bod:
 

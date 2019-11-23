@@ -21,7 +21,7 @@ ms.locfileid: "72603856"
 
 ### <a name="define-an-activity-delegate"></a>Definovat delegáta aktivity
 
-1. V [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] vyberte **soubor**, **Nový**, **projekt**. Na levé straně vyberte uzel **pracovního postupu** a na pravé straně šablonu **konzolové aplikace pracovního postupu** . Pojmenujte projekt (Pokud je to potřeba) a klikněte na **OK**.
+1. V [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]vyberte **soubor**, **Nový**, **projekt**. Na levé straně vyberte uzel **pracovního postupu** a na pravé straně šablonu **konzolové aplikace pracovního postupu** . Pojmenujte projekt (Pokud je to potřeba) a klikněte na **OK**.
 
 2. Klikněte pravým tlačítkem na projekt v **Průzkumník řešení** a vyberte **Přidat**, **Nová položka.** . Na levé straně vyberte uzel **pracovního postupu** a na pravé straně šablonu **aktivity** . Pojmenujte novou aktivitu **MyForEach. XAML** a klikněte na tlačítko **OK**. Aktivita se otevře v Návrháři pracovních postupů.
 
@@ -37,7 +37,7 @@ ms.locfileid: "72603856"
 
 8. Ve sloupci Typ argumentu vyberte **Vyhledat typy...**
 
-9. V prohlížeči typu zadejte **ActivityAction** do pole **název typu** . Ve stromovém zobrazení vyberte **ActivityAction \<T >** . V rozevíracím seznamu vyberte **objekt** , který se zobrazí, **\<Object >** k argumentu přiřadit typ ActivityAction.
+9. V prohlížeči typu zadejte **ActivityAction** do pole **název typu** . Ve stromovém zobrazení vyberte **ActivityAction\<t >** . Vyberte **objekt** v rozevíracím seznamu, který se zobrazí, chcete-li přiřadit typ **ActivityAction\<objekt >** k argumentu.
 
 10. Přetáhněte aktivitu <xref:System.Activities.Statements.While> z části **Flow řízení** v sadě nástrojů na plochu návrháře.
 
@@ -79,5 +79,5 @@ ms.locfileid: "72603856"
 
    Při spuštění pracovního postupu zobrazí Konzola následující:
 
-   **1** 
-   **ABC**
+   **1**
+   **abc**

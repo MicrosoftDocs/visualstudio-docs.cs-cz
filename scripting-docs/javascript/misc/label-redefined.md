@@ -29,7 +29,7 @@ Vytvořili jste nový popisek, ale přiřadili mu název existujícího popisku.
 - Zajistěte, aby všechny popisky používané v aplikacích byly jedinečné v rámci příslušných oborů.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [příkazu s popisky](../../javascript/reference/labeled-statement-javascript.md)  
+   [příkazu s popisky](../../javascript/reference/labeled-statement-javascript.md)  
    [příkazu switch](../../javascript/reference/switch-statement-javascript.md)  
    [příkazu break](../../javascript/reference/break-statement-javascript.md)  
  [continue – příkaz](../../javascript/reference/continue-statement-javascript.md)

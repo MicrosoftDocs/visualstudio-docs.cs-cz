@@ -51,6 +51,6 @@ typedef enum {
 |PROFILER_EVENT_MASK_TRACE_ALL_WITH_DOM|Profiluje všechny funkce, včetně volání do modelu DOM.|  
   
 ## <a name="see-also"></a>Viz také:  
- [Konstanty, výčty a struktury profileru aktivních skriptů](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)    
- [IActiveScriptProfilerControl:: SetProfilerEventMask](../../winscript/reference/iactivescriptprofilercontrol-setprofilereventmask.md)    
+ [Konstanty, výčty a struktury profileru aktivních skriptů](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)   
+ [IActiveScriptProfilerControl::SetProfilerEventMask](../../winscript/reference/iactivescriptprofilercontrol-setprofilereventmask.md)   
  [IActiveScriptProfilerControl::StartProfiling](../../winscript/reference/iactivescriptprofilercontrol-startprofiling.md)

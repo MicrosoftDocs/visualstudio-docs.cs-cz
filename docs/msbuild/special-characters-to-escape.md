@@ -24,9 +24,9 @@ ms.lasthandoff: 09/28/2019
 ms.locfileid: "71481954"
 ---
 # <a name="special-characters-to-escape"></a>Speciální znaky k úniku
-Speciální znaky musí být uvozeny pouze v případě, že mají zvláštní význam v kontextu, ve kterém jsou používány. Například hvězdička (*) je speciální znak pouze v atributech include a Exclude definice položky nebo volání <xref:Microsoft.Build.Tasks.CreateItem>. Ve všech ostatních případech je hvězdička považována za literální hvězdičku. Nemusíte-li v souborech projektu zacházet hvězdičkami, není to nijak poškozeno.
+Speciální znaky musí být uvozeny pouze v případě, že mají zvláštní význam v kontextu, ve kterém jsou používány. Například hvězdička (*) je speciální znak pouze v atributech include a Exclude definice položky nebo v volání <xref:Microsoft.Build.Tasks.CreateItem>. Ve všech ostatních případech je hvězdička považována za literální hvězdičku. Nemusíte-li v souborech projektu zacházet hvězdičkami, není to nijak poškozeno.
 
- Místo speciálního znaku použijte Notation% \<XX >, kde > \<xx představuje hexadecimální hodnotu znaku ASCII. Chcete-li například použít hvězdičku (*) jako literální znak, použijte hodnotu `%2A`.
+ Místo speciálního znaku použijte notaci%\<xx >, kde \<xx > představuje hexadecimální hodnotu znaku ASCII. Chcete-li například použít hvězdičku (*) jako literální znak, použijte hodnotu `%2A`.
 
  Úplný seznam speciálních znaků, které mají být uvozeny následujícím způsobem:
 
@@ -45,5 +45,5 @@ Speciální znaky musí být uvozeny pouze v případě, že mají zvláštní v
 > V některých scénářích může být nutné řídicí znaky dvojité uvozovky ("), například při použití v rámci úlohy `Exec`.
 
 ## <a name="see-also"></a>Viz také:
-- [Postupy: Sekvence speciálních znaků v MSBuild @ no__t-0
+- [Postupy: sekvence speciálních znaků v nástroji MSBuild](../msbuild/how-to-escape-special-characters-in-msbuild.md)
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)

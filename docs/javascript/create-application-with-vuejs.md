@@ -43,7 +43,7 @@ Následující nové funkce podporují Vue.js vývoj aplikací v sadě Visual St
     Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) stránku a nainstalovat zdarma.
     ::: moniker-end
 
-    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít do části **nástroje** > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
+    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít na **nástroje** > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
 
 * Chcete-li vytvořit projekt ASP.NET Core, musí mít technologie ASP.NET a web development a instalaci úlohy vývoj pro různé platformy .NET Core.
 
@@ -103,11 +103,11 @@ Chcete-li nainstalovat modul npm vue rozhraní příkazového řádku, otevřete
 1. Typ `vue init webpack client-app` a postupujte podle kroků po zobrazení výzvy na další otázky.
 
     > [!NOTE]
-    > Pro soubory *. Vue* je nutné použít k převodu rozhraní Webpack nebo podobnou architekturu pro zavaděč. TypeScript a Visual Studio neznají, jak zkompilovat soubory *. Vue* . Totéž platí pro sdružování; TypeScript neobsahuje informace o tom, `import` jak převést ES2015 moduly (to znamená a `export` příkazy) do jediného finálního souboru *. js* , který se načte v prohlížeči. V tuto akci je teď nejlepší volbou možnost Webpack. Chcete-li tento proces řídit v rámci sady Visual Studio pomocí nástroje MSBuild, je nutné začít od šablony sady Visual Studio. V současné době není k dispozici žádná šablona ASP.NET pro vývoj v Vue. js.
+    > Pro soubory *. Vue* je nutné použít k převodu rozhraní Webpack nebo podobnou architekturu pro zavaděč. TypeScript a Visual Studio neznají, jak zkompilovat soubory *. Vue* . Totéž platí pro sdružování; TypeScript neobsahuje informace o tom, jak převést ES2015 moduly (tj. příkazy `import` a `export`) do jediného finálního souboru *. js* , který se načte v prohlížeči. V tuto akci je teď nejlepší volbou možnost Webpack. Chcete-li tento proces řídit v rámci sady Visual Studio pomocí nástroje MSBuild, je nutné začít od šablony sady Visual Studio. V současné době není k dispozici žádná šablona ASP.NET pro vývoj v Vue. js.
 
 #### <a name="modify-the-webpack-configuration-to-output-the-built-files-to-wwwroot"></a>Upravit konfiguraci webpacku pro výstupní soubory sestavení do wwwroot
 
-* Otevřete soubor *./Client-App/config/index.js*a změňte `build.index` cestu a `build.assetsRoot` na Wwwroot.
+* Otevřete soubor *./Client-App/config/index.js*a změňte `build.index` a `build.assetsRoot` na cestu wwwroot:
 
     ```js
     // Template for index.html
@@ -146,7 +146,7 @@ Tyto kroky vyžadují vue – rozhraní příkazového řádku 3.0, která je ak
 
 #### <a name="configure-a-vuejs-project-for-typescript"></a>Konfigurace projektu Vue.js pro TypeScript
 
-1. Otevřete soubor *./Client-App/tsconfig.JSON* a přidejte `noEmit:true` do možností kompilátoru.
+1. Otevřete soubor *./Client-App/tsconfig.JSON* a přidejte `noEmit:true` k možnostem kompilátoru.
 
     Nastavením této možnosti byste se vyhnout, nebudou zbytečně zabírat váš projekt pokaždé, když sestavení v sadě Visual Studio.
 

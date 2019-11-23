@@ -43,6 +43,6 @@ myFunction() = 42;  // Attempting to assign the value 42 to the result of the fu
     ```  
   
 ## <a name="see-also"></a>Viz také:  
- [Objekt funkce](../../javascript/reference/function-object-javascript.md)    
- [Psaní   kódu JavaScriptu](../../javascript/writing-javascript-code.md)  
+ [Objekt funkce](../../javascript/reference/function-object-javascript.md)   
+ [Psaní  kódu JavaScriptu](../../javascript/writing-javascript-code.md)  
  [Funkce](../../javascript/functions-javascript.md)

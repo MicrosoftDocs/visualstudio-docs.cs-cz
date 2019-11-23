@@ -47,5 +47,5 @@ HRESULT Detach();
  Tato metoda odebere tento dokument ze stromu dokumentu.  
   
 ## <a name="see-also"></a>Viz také:  
- [Idebugdocumenthelper –:: Attach](../../winscript/reference/idebugdocumenthelper-attach.md)    
+ [Idebugdocumenthelper –:: Attach](../../winscript/reference/idebugdocumenthelper-attach.md)   
  [IDebugDocumentHelper – rozhraní](../../winscript/reference/idebugdocumenthelper-interface.md)

@@ -29,5 +29,5 @@ Pokusili jste se vytvořit výraz pomocí Ternární podmíněný operátor, ale
 - Vložte dvojtečku mezi druhý a třetí operandy.  
   
 ## <a name="see-also"></a>Viz také:  
- [Podmíněný (Ternární) operátor (?:)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)    
+ [Podmíněný (Ternární) operátor (?:)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)   
  [Operátory](../../javascript/operators-javascript.md)

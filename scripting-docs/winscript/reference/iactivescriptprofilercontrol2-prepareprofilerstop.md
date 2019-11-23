@@ -46,5 +46,5 @@ HRESULT PrepareProfilerStop();
  Volání `IActiveScriptProfilerControl2::PrepareProfilerStop` zajistí odeslání událostí pro funkce v zásobníku volání. Tato metoda musí být volána před zastavením profilování na jakémkoli skriptovacím stroji, který je na aktuální kartě. Metodu lze volat pro libovolný skriptovací modul.  
   
 ## <a name="see-also"></a>Viz také:  
- [Iactivescriptprofilercontrol2 –:: CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md)    
+ [IActiveScriptProfilerControl2::CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md)   
  [IActiveScriptProfilerControl2 – rozhraní](../../winscript/reference/iactivescriptprofilercontrol2-interface.md)

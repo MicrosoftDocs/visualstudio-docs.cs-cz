@@ -50,5 +50,5 @@ HRESULT RemoveApplication(
  Tato metoda odebere aplikaci ze seznamu běžící aplikace.  
   
 ## <a name="see-also"></a>Viz také:  
- [IProcessDebugManager –:: AddApplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)    
+ [IProcessDebugManager::AddApplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)   
  [IProcessDebugManager – rozhraní](../../winscript/reference/iprocessdebugmanager-interface.md)

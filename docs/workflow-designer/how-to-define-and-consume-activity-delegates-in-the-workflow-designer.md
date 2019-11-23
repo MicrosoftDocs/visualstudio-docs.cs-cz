@@ -26,7 +26,7 @@ ms.locfileid: "72650340"
    > [!NOTE]
    > Pokud nevidíte šablony projektu **pracovního postupu** , nainstalujte nejprve součást **programovací model Windows Workflow Foundation** sady Visual Studio. Podrobné pokyny najdete v tématu [instalace programovací model Windows Workflow Foundation](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation).
 
-3. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **Přidat**  > **Nová položka**. Vyberte kategorii **pracovního postupu** a potom vyberte šablonu položka **aktivity** . Pojmenujte novou aktivitu **MyForEach. XAML** a pak vyberte **OK**.
+3. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **Přidat** > **Nová položka**. Vyberte kategorii **pracovního postupu** a potom vyberte šablonu položka **aktivity** . Pojmenujte novou aktivitu **MyForEach. XAML** a pak vyberte **OK**.
 
    Aktivita se otevře v Návrháři pracovních postupů.
 
@@ -42,7 +42,7 @@ ms.locfileid: "72650340"
 
 9. Ve sloupci Typ argumentu vyberte **Vyhledat typy** .
 
-10. V prohlížeči typu zadejte **ActivityAction** do pole **název typu** . Ve stromovém zobrazení vyberte **ActivityAction \<T >** . V rozevíracím seznamu vyberte **objekt** , který se zobrazí, **\<Object >** k argumentu přiřadit typ ActivityAction.
+10. V prohlížeči typu zadejte **ActivityAction** do pole **název typu** . Ve stromovém zobrazení vyberte **ActivityAction\<t >** . Vyberte **objekt** v rozevíracím seznamu, který se zobrazí, chcete-li přiřadit typ **ActivityAction\<objekt >** k argumentu.
 
 11. Přetáhněte aktivitu <xref:System.Activities.Statements.While> z části **Flow řízení** v sadě nástrojů na plochu návrháře.
 
@@ -70,7 +70,7 @@ ms.locfileid: "72650340"
 
 ## <a name="use-the-custom-activity-in-a-workflow"></a>Použití vlastní aktivity v pracovním postupu
 
-1. Sestavte projekt stisknutím **kombinace kláves Ctrl** +**SHIFT** +**B**.
+1. Sestavte projekt stisknutím **kombinace kláves Ctrl**+**SHIFT**+**B**.
 
 2. V **Průzkumník řešení**otevřete **Workflow1. XAML** v návrháři.
 
@@ -84,5 +84,5 @@ ms.locfileid: "72650340"
 
 Při spuštění pracovního postupu zobrazí Konzola následující výstup:
 
-**1** 
-**ABC**
+**1**
+**abc**

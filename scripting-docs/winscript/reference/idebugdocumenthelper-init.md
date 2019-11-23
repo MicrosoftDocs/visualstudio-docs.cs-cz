@@ -64,6 +64,6 @@ HRESULT Init(
  Tento dokument se ve stromové struktuře nezobrazuje, dokud se nevolá `IDebugDocumentHelper::Attach`.  
   
 ## <a name="see-also"></a>Viz také:  
- [Idebugdocumenthelper –:: Attach](../../winscript/reference/idebugdocumenthelper-attach.md)    
- @No__t_1 [rozhraní idebugdocumenthelper –](../../winscript/reference/idebugdocumenthelper-interface.md)  
+ [Idebugdocumenthelper –:: Attach](../../winscript/reference/idebugdocumenthelper-attach.md)   
+   [rozhraní idebugdocumenthelper –](../../winscript/reference/idebugdocumenthelper-interface.md)  
  [TEXT_DOC_ATTR – konstanty](../../winscript/reference/text-doc-attr-constants.md)

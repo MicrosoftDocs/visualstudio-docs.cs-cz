@@ -70,6 +70,6 @@ HRESULT DefineScriptBlock(
  Metoda `DefineScriptBlock` by měla být volána po přidání textu (například pomocí metody `IDebugDocumentHelper::AddDBCSText`), ale před analýzou bloku skriptu (například pomocí metody `IActiveScriptParse ::ParseScriptText`).  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní idebugdocumenthelper –](../../winscript/reference/idebugdocumenthelper-interface.md)  
- [Idebugdocumenthelper –:: AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)    
+   [rozhraní idebugdocumenthelper –](../../winscript/reference/idebugdocumenthelper-interface.md)  
+ [Idebugdocumenthelper –:: AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
  [IDebugDocumentHelper::AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)

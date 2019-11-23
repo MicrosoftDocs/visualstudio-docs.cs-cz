@@ -19,15 +19,15 @@ ms.locfileid: "72306257"
 
 ## <a name="visual-studio-support"></a>Podpora sady Visual Studio
 
-**Q. Pracuje RTVS v OS X nebo Linux?**
+**Otázka. RTVS funguje v OS X nebo Linux?**
 
 A. RTVS je předem postavená na Visual Studio, což je implementace jenom pro Windows. Microsoft zkoumá podporu Visual Studio Code a Visual Studio pro Mac. Přečtěte si [RTVS #1295 problému](https://github.com/Microsoft/RTVS/issues/1295).
 
-**Q. Pracuje RTVS s edicemi Visual Studio Express?**
+**Otázka. RTVS spolupracuje s edicemi Visual Studio Express?**
 
 A. Ne.
 
-**Q. Můžu použít rozšíření sady Visual Studio s RTVS?**
+**Otázka: můžu použít rozšíření sady Visual Studio s RTVS?**
 
 A. Prosté. Tady je několik oblíbených pro lidi, kteří pracují s R.
 
@@ -37,31 +37,31 @@ A. Prosté. Tady je několik oblíbených pro lidi, kteří pracují s R.
 
 Další informace najdete v [Visual Studio Marketplace](https://marketplace.visualstudio.com/) .
 
-**Q. Vzhledem k tomu, že RTVS je v aplikaci Visual Studio, znamená to, že R C#lze C++ snadno použít s nástrojem, a dalšími jazyky společnosti Microsoft?**
+**Otázka. vzhledem k tomu, že RTVS je v aplikaci Visual Studio, znamená to, že R C#lze C++ snadno použít s a dalšími jazyky společnosti Microsoft?**
 
 A. Ne. RTVS je nástroj pro vývoj kódu R a používá standardní nativní překladače R. Komunikace mezi R a dalšími jazyky není v současné době podporovaná.
 
-**Q. Pracuje RTVS s národním prostředím bez angličtiny?**
+**Otázka. RTVS pracuje s národním prostředím bez angličtiny?**
 
 A. 1,0 verze RTVS je jenom v angličtině. Verze 1,1 bude lokalizována do stejné sady jazyků, jako je samotná sada Visual Studio. Mezitím použijte [anglickou jazykovou sadu pro Visual studio 2015](https://www.microsoft.com/download/details.aspx?id=48157)nebo v sadě visual Studio 2017, spusťte instalační program a vyberte angličtinu na kartě **jazykové sady** .
 
 ![Mezinárodní nastavení pro Visual Studio 2017](media/FAQ-international-settings.png)
 
-**Q. Opravdu se mi líbí aktuální nastavení sady Visual Studio, ale chci si vyzkoušet nové nastavení pro datové vědy. Co mám dělat?**
+**Otázka. mám v současnosti stejné nastavení sady Visual Studio, ale chci si vyzkoušet nové nastavení datové vědy. Co mám dělat?**
 
 A. Pomocí **nástrojů** > **Nastavení importu a exportu**uložte aktuální nastavení sady Visual Studio a pak přepněte do nastavení datové vědy. Pro obnovení uložených nastavení použijte znovu příkaz **Import a export nastavení** .
 
-**Q. Můžu svůj projekt sady Visual Studio Uložit do sdílené síťové složky?**
+**Otázka: mohu uložit projekt sady Visual Studio do sdílené síťové složky?**
 
 A. Ne, Visual Studio nepodporuje načítání projektů ze sdílené síťové složky.
 
 ## <a name="r-interpretersintegration"></a>Překladače a integrace R
 
-**Q. Jaké překladače R RTVS pracují s?**
+**Q. Jaké překladače R RTVS práci s?**
 
 A. [Cran R](https://cran.r-project.org/), [Microsoft R Client a Microsoft Machine Learning Server](/machine-learning-server/)
 
-**Q. Kde můžu stáhnout tyto překladače?**
+**Otázka. kde mohu stáhnout tyto překladače?**
 
 A. Viz [instalace](installing-r-tools-for-visual-studio.md).
 
@@ -69,17 +69,17 @@ A. Viz [instalace](installing-r-tools-for-visual-studio.md).
 
 A. R Server je dřívější název [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server).
 
-**Q. Pracuje RTVS s 32 edicemi R?**
+**Dotaz. RTVS pracuje s 32 edicemi jazyka R?**
 
 A. Ne, RTVS podporuje jenom 64 edicí R, která běží na 64 edicích Windows.
 
-**Q. Pracuje RTVS se systémem správy zdrojového kódu?**
+**Dotaz RTVS spolupracuje se systémem správy zdrojového kódu?**
 
 A. Ano, můžete použít libovolný systém správy zdrojového kódu, který je integrovaný do sady Visual Studio.
 
-**Q. Jaká jsou doporučená nastavení *gitignore* projektu RTVS?**
+**Otázka. co je doporučené nastavení *gitignore* pro projekt RTVS?**
 
-A. GitHub udržuje hlavní úložiště doporučených souborů *. gitignore* . Můžete ji vidět tady: [R. gitignore](https://github.com/github/gitignore/blob/master/R.gitignore)
+A. GitHub udržuje hlavní úložiště doporučených souborů *. gitignore* . Můžete ji zobrazit tady: [R. gitignore](https://github.com/github/gitignore/blob/master/R.gitignore)
 
 ## <a name="remote-services"></a>Vzdálené služby
 
@@ -105,12 +105,12 @@ A. Informace najdete v článku věnovaném [spuštění na vzdáleném serveru]
 
 ## <a name="rtvs-development-and-features"></a>Vývoj a funkce RTVS
 
-**Q. Funkce X chybí, ale RStudio má**
+**Otázka. funkce X chybí, ale RStudio má!**
 
 A. RStudio je fantastická a vyspělé prostředí IDE pro R, které je ve vývoji po řadu let. RTVS vyhledává všechny důležité funkce, které je třeba provést úspěšně. Pomůžete určit prioritu budoucí práce při vytváření profilů problémů na [GitHubu](https://github.com/Microsoft/RTVS/issues/).
 
-**Q. Můžu přispívat do RTVS?**
+**Otázka: můžu přispívat do RTVS?**
 
 A. Samozřejmě. Zdrojový kód bydlí na [GitHubu](https://github.com/microsoft/RTVS). Pomocí nástroje pro sledování problémů můžete odesílat chyby a komentovat ty, které už byly uloženy.
 
-Také jste připraveni přispívat k této dokumentaci @ no__t-0just vyberte v pravém horním rohu libovolné stránky příkaz **Upravit** . Komentáře k dokumentům jsou také vítá vás, které můžete přidat v dolní části každé stránky.
+Také jste připraveni přispívat k této dokumentaci&mdash;stačí vybrat v pravém horním rohu libovolné stránky příkaz **Upravit** . Komentáře k dokumentům jsou také vítá vás, které můžete přidat v dolní části každé stránky.

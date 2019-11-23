@@ -1,5 +1,5 @@
 ---
-title: 'Rychlý start: Vytvoření první aplikace v Node. js pomocí sady Visual Studio'
+title: 'Rychlý Start: použití sady Visual Studio k vytvoření první aplikace Node. js'
 description: V tomto rychlém startu vytvoříte aplikaci Node. js v aplikaci Visual Studio.
 ms.date: 06/27/2018
 ms.technology: vs-javascript
@@ -20,7 +20,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 08/30/2019
 ms.locfileid: "70180339"
 ---
-# <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>Rychlý start: Vytvoření první aplikace v Node. js pomocí sady Visual Studio
+# <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>Rychlý Start: použití sady Visual Studio k vytvoření první aplikace Node. js
 
 V této 5-10 minut Úvod do integrovaného vývojového prostředí (IDE) sady Visual Studio vytvoříte jednoduchou webovou aplikaci Node. js.
 
@@ -29,13 +29,13 @@ V této 5-10 minut Úvod do integrovaného vývojového prostředí (IDE) sady V
 * Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje Node. js.
 
     ::: moniker range=">=vs-2019"
-    Pokud jste ještě nenainstalovali Visual Studio 2019, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení](https://visualstudio.microsoft.com/downloads) pro Visual Studio.
+    Pokud jste ještě nenainstalovali aplikaci Visual Studio 2019, můžete ji nainstalovat zdarma na stránce  [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) .
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Pokud jste ještě nenainstalovali Visual Studio 2017, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) pro Visual Studio.
+    Pokud jste ještě nenainstalovali aplikaci Visual Studio 2017, můžete ji nainstalovat zdarma na stránce  [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) .
     ::: moniker-end
 
-    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít do části **nástroje** > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
+    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít na **nástroje** > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
 
     ![Úloha Node.js v instalačním programu VS](../ide/media/quickstart-nodejs-workload.png)
 
@@ -81,7 +81,7 @@ Nejprve vytvoříte projekt webové aplikace Node. js.
 
    ![Příkazový řádek Node. js](../ide/media/quickstart-nodejs-command-prompt.png)
 
-1. V souboru *Server. js* v editoru (levé podokno) zvolte `http.createServer` a pak stiskněte klávesu **F12** nebo zvolte **Přejít k definici** z místní nabídky (kliknutím pravým tlačítkem myši). Tento příkaz vás přesměruje do definice `createServer` funkce v *indexu. d. TS*.
+1. V souboru *Server. js* v editoru (levé podokno) zvolte `http.createServer` a potom stiskněte klávesu **F12** nebo zvolte **Přejít k definici** z místní nabídky (kliknutím pravým tlačítkem myši). Tento příkaz vás přesměruje do definice funkce `createServer` v *indexu. d. TS*.
 
    ![Přejít na kontextovou nabídku definice](../ide/media/quickstart-nodejs-gotodefinition.png)
 
@@ -89,11 +89,11 @@ Nejprve vytvoříte projekt webové aplikace Node. js.
 
     `res.end('Hello World\n' + res.connection.`
 
-    Když zadáte `connection.`, technologie IntelliSense poskytuje možnosti automatického dokončování položky kódu.
+    Když zadáte `connection.`, technologie IntelliSense poskytne možnosti automatického dokončování položky kódu.
 
    ![Automatické dokončování IntelliSense](../ide/media/quickstart-nodejs-intellisense.png)
 
-1. Zvolte **localPort**a potom zadejte `);` příkaz pro dokončení příkazu, aby vypadal takto:
+1. Zvolte **localPort**a potom zadejte `);` k dokončení příkazu, aby vypadal takto:
 
     `res.end('Hello World\n' + res.connection.localPort);`
 
@@ -107,7 +107,7 @@ Nejprve vytvoříte projekt webové aplikace Node. js.
 
 Blahopřejeme k dokončení tohoto rychlého startu, ve kterém jste začali s IDE sady Visual Studio a Node. js. Pokud se chcete podrobněji dohlížet na jeho funkce, pokračujte v kurzu v části obsah **kurzů** .
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
 > [Nasazení aplikace do služby App Service pro Linux](../javascript/publish-nodejs-app-azure.md)

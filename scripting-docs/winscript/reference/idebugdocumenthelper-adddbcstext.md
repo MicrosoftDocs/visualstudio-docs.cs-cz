@@ -54,6 +54,6 @@ HRESULT AddDBCSText(
 > Pokud je tato metoda volána po volání `IDebugDocumentHelper::AddDeferredText`, je vrácena `E_FAIL`.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [rozhraní idebugdocumenthelper –](../../winscript/reference/idebugdocumenthelper-interface.md)  
- [Idebugdocumenthelper –:: AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)    
+   [rozhraní idebugdocumenthelper –](../../winscript/reference/idebugdocumenthelper-interface.md)  
+ [IDebugDocumentHelper::AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
  [IDebugDocumentTextEvents – rozhraní](../../winscript/reference/idebugdocumenttextevents-interface.md)

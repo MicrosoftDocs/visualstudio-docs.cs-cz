@@ -33,6 +33,6 @@ Do kódu jste zahrnuli příkaz `throw`, který však nebyl uzavřený v rámci 
 - Pokud je výjimka znovu vyvolána, ujistěte se, že existuje další odpovídající příkaz catch.  
   
 ## <a name="see-also"></a>Viz také:  
- [Objekt Error](../../javascript/reference/error-object-javascript.md)    
+ [Objekt Error](../../javascript/reference/error-object-javascript.md)   
    [příkazu throw](../../javascript/reference/throw-statement-javascript.md)  
  [try...catch...finally – příkaz](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)
