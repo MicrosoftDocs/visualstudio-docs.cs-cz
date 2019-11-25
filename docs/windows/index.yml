@@ -1,44 +1,44 @@
 ### YamlMime:Hub
 title: Dokumentace sady Visual Studio
-summary: Naučte se používat Visual Studio k vývoji aplikací, služeb a nástrojů v jazyce podle vašeho výběru, pro vaše platformy a zařízení.
+summary: Learn how to use Visual Studio to develop applications, services, and tools in the language of your choice, for your platforms and devices.
 brand: visual-studio
 metadata:
-  title: Dokumentace k sadě Visual Studio | Microsoft Docs
+  title: Visual Studio documentation | Microsoft Docs
   titleSuffix: ''
-  description: Naučte se používat Visual Studio k vývoji aplikací, služeb a nástrojů v jazyce podle vašeho výběru, a to pro libovolnou platformu nebo zařízení.
+  description: Learn how to use Visual Studio to develop applications, services, and tools in the language of your choice, for any platform or device.
   ms.topic: hub-page
   monikerRange: '>=vs-2017'
   f1_keywords:
   - MSDNSTART
-  ms.openlocfilehash: 905fd0b3f9ad37125ae8cccd5dab30f0517d16a1
-  ms.sourcegitcommit: 890ae10c8ea3bff8306ed25b06256578dee08397
+  ms.openlocfilehash: 2b2fffb32ba16111449c2876769e70d9c687b976
+  ms.sourcegitcommit: e825d1223579b44ee2deb62baf4de0153f99242a
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 11/15/2019
-  ms.locfileid: "74119730"
+  ms.lasthandoff: 11/25/2019
+  ms.locfileid: "74474000"
 highlightedContent:
   items:
-  - title: Nastavení a instalace
+  - title: Setup and installation
     itemType: download
     url: /visualstudio/install/install-visual-studio
-  - title: Vítejte v integrovaném vývojovém prostředí sady Visual Studio
+  - title: Welcome to the Visual Studio IDE
     itemType: overview
     url: /visualstudio/ide/visual-studio-ide
   - title: Novinky v sadě Visual Studio 2019
     itemType: get-started
     url: /visualstudio/ide/whats-new-visual-studio-2019
-  - title: Zlepšení schopností vývoje
+  - title: Improve your development skills
     itemType: learn
     url: /learn/
 conceptualContent:
   title: Začínáme
   items:
-  - title: Naučte se používat Visual Studio
+  - title: Learn how to use Visual Studio
     links:
-    - text: Spustit prohlídku s asistencí
+    - text: Start a guided tour
       url: ../ide/visual-studio-ide.md
       itemType: overview
-    - text: Otevření kódu z úložiště
+    - text: Open code from a repo
       url: ../get-started/tutorial-open-project-from-repo.md
       itemType: tutorial
     - text: Psaní kódu a jeho úpravy
@@ -50,10 +50,10 @@ conceptualContent:
     - text: Ladění kódu
       itemType: tutorial
       url: ../debugger/debugger-feature-tour.md
-    - text: Testování kódu
+    - text: Test your code
       itemType: tutorial
       url: ../test/getting-started-with-unit-testing.md
-    - text: Přístup k datům místně nebo v cloudu
+    - text: Access data locally or in the cloud
       itemType: tutorial
       url: ../data-tools/create-a-sql-database-by-using-a-designer.md
   - title: Postupujte podle kurzu
@@ -78,19 +78,19 @@ conceptualContent:
       itemType: get-started
   - title: Vytvoření aplikace
     links:
-    - text: Desktopová aplikace pro Windows
+    - text: Windows desktop app
       itemType: tutorial
       url: /visualstudio/ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic
-    - text: Univerzální aplikace pro Windows
+    - text: Universal Windows app
       itemType: tutorial
       url: /visualstudio/get-started/csharp/tutorial-uwp
-    - text: Mobilní aplikace
+    - text: Mobile app
       itemType: overview
       url: /visualstudio/cross-platform/cross-platform-mobile-development-in-visual-studio
-    - text: Hra Unity
+    - text: Unity game
       itemType: tutorial
       url: /visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity
-    - text: Webová aplikace s ASP.NET Core
+    - text: Web app with ASP.NET Core
       itemType: quickstart
       url: /aspnet/core/tutorials/razor-pages/razor-pages-start
 tools:
@@ -125,48 +125,48 @@ additionalContent:
   - title: Úkoly
     items:
     - title: Vývoj
-      summary: Zápis a Správa kódu pomocí editoru kódu.
+      summary: Write and manage your code using the code editor.
       url: ../ide/index-writing-code.yml
     - title: Sestavení
-      summary: Zkompilujte a sestavte zdrojový kód.
+      summary: Compile and build your source code.
       url: ../ide/compiling-and-building-in-visual-studio.md
     - title: Ladit
-      summary: Prozkoumejte a opravte chyby ve vašem kódu.
+      summary: Investigate and fix bugs in your code.
       url: ../debugger/index.yml
     - title: Test
-      summary: Spouštějte testy na projektech.
+      summary: Run tests on your projects.
       url: ../test/improve-code-quality.md
     - title: Nasazení
-      summary: Sdílejte své aplikace a kód pomocí Nasazení webu, InstallShield, NuGet, průběžné integrace a dalších.
+      summary: Share your apps and code by using Web Deploy, InstallShield, NuGet, Continuous Integration, and more.
       url: ../deployment/index.yml
     - title: Správa verzí
       summary: Sdílejte kód pomocí technologií pro správu verzí, jako jsou Git a TFVC.
       url: /azure/devops/repos/index
     - title: DevOps
-      summary: Průběžné sestavování a uvolňování vašich aplikací v cloudu a implementace agilních postupů pomocí Azure DevOps Services.
+      summary: Continuously build and release your apps in the cloud, and implement Agile practices with Azure DevOps Services.
       url: /azure/devops
-    - title: Měření výkonu
-      summary: Identifikujte slabá místa a Optimalizujte výkon kódu pomocí diagnostických nástrojů.
+    - title: Measure performance
+      summary: Identify bottlenecks and optimize code performance by using diagnostic tools.
       url: ../profiling/index.yml
-    - title: Zvětšení
-      summary: Přidáním vlastních funkcí do integrovaného vývojového prostředí sady Visual Studio můžete zlepšit vývojové prostředí.
+    - title: Extend
+      summary: Add your own functionality to the Visual Studio IDE to improve your development experience.
       url: ../extensibility/index.md
     - title: Data
-      summary: Vytvářejte datové aplikace, které se připojují k jakékoli databázi nebo službě a kdekoli – v místním prostředí nebo cloudu.
+      summary: Create data apps that connect to any database or service, and anywhere—local or cloud.
       url: ../data-tools/accessing-data-in-visual-studio.md
     - title: Spolupráce
-      summary: Sdílejte, upravujte a ladíte kód v prostředí pro týmovou práci v reálném čase.
+      summary: Share, edit, and debug code in a collaborative, real-time environment.
       url: /visualstudio/liveshare/
-    - title: Vývoj s využitím kontejnerů
-      summary: Pomocí kontejnerů můžete izolovat modulární součásti a zlepšit škálovatelnost.
+    - title: Develop with Docker containers
+      summary: Use Docker containers to isolate modular components and improve scalability.
       url: ../containers/index.yml
   - title: Úkoly
     items:
-    - title: Web a Cloud
+    - title: Web and cloud
       links:
-      - text: Vývoj pro web
+      - text: Web development
         url: /aspnet/
-      - text: Vývoj a Správa Azure
+      - text: Azure development and management
         url: /visualstudio/azure
       - text: Python
         url: /visualstudio/python
@@ -174,37 +174,37 @@ additionalContent:
         url: /visualstudio/javascript
       - text: Ukládání a zpracování dat
         url: ../data-tools/index.md
-      - text: Vědecké zpracování dat
+      - text: Data science
         url: ../python/data-science-and-analytical-applications-workload.md
-      - text: Vývoj pro Office/SharePoint
+      - text: Office/Sharepoint development
         url: https://developer.microsoft.com/office/docs
     - title: Windows
       links:
-      - text: Vývoj pro desktopy .NET
+      - text: .NET Desktop development
         url: /dotnet/framework/develop-client-apps
-      - text: Vývoj pro univerzální platformu Windows
+      - text: Universal Windows platform development
         url: ../cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md
-      - text: Vývoj pro Windows pomocíC++
+      - text: Windows development with C++
         url: /cpp/windows/desktop-applications-visual-cpp
-    - title: Mobilní zařízení a hry
+    - title: Mobile and gaming
       links:
-      - text: Vývoj pro mobilní zařízení pomocí .NET (Xamarin)
+      - text: Mobile development with .NET (Xamarin)
         url: /xamarin/
-      - text: Vývoj her pomocí Unity
+      - text: Game development with Unity
         url: ../cross-platform/visual-studio-tools-for-unity.md
-      - text: Vývoj pro mobilní zařízení pomocí JavaScriptu
+      - text: Mobile development with JavaScript
         url: /visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017
-        note: (Pouze Visual Studio 2017 a 2015)
-      - text: Vývoj pro mobilní zařízení pomocíC++
+        note: (Visual Studio 2017 and 2015 only)
+      - text: Mobile development with C++
         url: /visualstudio/cross-platform/
-      - text: Vývoj her pomocíC++
+      - text: Game development with C++
         url: /windows/uwp/gaming/e2e
-    - title: Další sady nástrojů
+    - title: Other toolsets
       links:
       - text: Vývoj rozšíření sady Visual Studio
         url: ../extensibility/index.md
-      - text: Vývoj pro Linux pomocíC++
+      - text: Linux development with C++
         url: /cpp/linux/
-      - text: Vývoj pro různé platformy .NET Core
+      - text: .NET Core cross-platform development
         url: /dotnet/core/
-  footer: '[Blogy](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [hlášení problémů](../ide/talk-to-us.md) -  –[komunita vývojářů](https://developercommunity.visualstudio.com/spaces/8/index.html)'
+  footer: '[Blogs](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [Issue Reporting](../ide/talk-to-us.md) - [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html)'
