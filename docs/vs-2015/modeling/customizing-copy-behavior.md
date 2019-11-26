@@ -55,7 +55,7 @@ Nastavte vlastnost **rozšíření kopírování** role tak, aby se **rozšíři
  **Rychlé duplikace prvků kopírováním a vložením.** V normálním případě je položka, kterou jste právě zkopírovali, stále vybrána a nelze do ní vložit stejný typ prvku.
 Přidejte do třídy domény direktivu sloučení elementů a nastavte ji tak, aby předalo sloučení do nadřazené třídy. To bude mít stejný účinek na operace přetažení. Další informace naleznete v tématu [přizpůsobení vytváření a přesunu prvku](../modeling/customizing-element-creation-and-movement.md).
 
- \- nebo –
+ \- nebo-
 
  Před vložením prvků vyberte diagram přepsáním `ClipboardCommandSet.ProcessOnPasteCommand()`. Přidejte tento kód do vlastního souboru v projektu DslPackage:
 
@@ -80,7 +80,7 @@ partial class MyDslClipboardCommandSet
  **Vytvořte další odkazy, když uživatel vloží do vybraného cíle.** Například když je pole komentáře vloženo do prvku, je mezi nimi vytvořen odkaz.
 Přidejte direktivu sloučení elementů do cílové doménové třídy a nastavte ji pro zpracování sloučení přidáním odkazů. To bude mít stejný účinek na operace přetažení. Další informace naleznete v tématu [přizpůsobení vytváření a přesunu prvku](../modeling/customizing-element-creation-and-movement.md).
 
- \- nebo –
+ \- nebo-
 
  Přepsat `ClipboardCommandSet.ProcessOnPasteCommand()` pro vytvoření dalších odkazů po volání základní metody.
 

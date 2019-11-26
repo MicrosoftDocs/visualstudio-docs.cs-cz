@@ -29,7 +29,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
 1. V nabídce **soubor** přejděte na příkaz **Nový**a vyberte možnost **projekt**.
 
-     Zobrazí se dialogové okno **Nový projekt**.
+     Zobrazí se dialogové okno **Nový projekt** .
 
 2. V podokně **nainstalováno** rozbalte položku **Visual C#** a pak vyberte možnost **desktopová plocha systému Windows**.
 
@@ -41,7 +41,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
 6. Zvolte složku, do které bude projekt uložen. Do textového pole **umístění** zadejte název složky.
 
-7. Zvolte **OK**.
+7. Klikněte na **tlačítko OK**.
 
      WPF Designer pro sadu Visual Studio otevře a zobrazí hlavní okno MainWindow projektu.
 
@@ -133,7 +133,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
 5. V prostředním podokně vyberte šablonu **projektu programový test uživatelského rozhraní** .
 
-6. Zvolte **OK**.
+6. Klikněte na **tlačítko OK**.
 
      V Průzkumník řešení do vašeho řešení se přidá nový projekt programového testu UI s názvem **CodedUITestProject1** .
 
@@ -215,7 +215,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
 7. Klikněte na tlačítko **přesunout kód** na panelu nástrojů editoru programového testu UI.
 
-8. Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že metoda bude přesunuta ze souboru UIMap.uitest do souboru UIMap.cs a že již nebude možné upravit metodu pomocí funkce Editor programového testu uživatelského rozhraní. Zvolte **Ano**.
+8. Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že metoda bude přesunuta ze souboru UIMap.uitest do souboru UIMap.cs a že již nebude možné upravit metodu pomocí funkce Editor programového testu uživatelského rozhraní. Vyberte **Ano**.
 
      Testovací metoda je odebrána ze souboru UIMap.uitest a v podokně Akce uživatelského rozhraní se již nezobrazí. Chcete-li upravit přesunutý soubor testu, otevřete soubor UIMap.cs z Průzkumníku řešení.
 
@@ -366,7 +366,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
      Tentokrát programový test uživatelského rozhraní úspěšně dokončí všechny kroky v testu.  V okně Výsledky testů se zobrazí stav **úspěch**.
 
-## <a name="external-resources"></a>Externí zdroje
+## <a name="external-resources"></a>Externí prostředky
 
 ### <a name="videos"></a>Videa
  ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kódované testy uživatelského rozhraní – podrobné-Episode1-soubor GettingStarted](https://go.microsoft.com/fwlink/?LinkID=230573)

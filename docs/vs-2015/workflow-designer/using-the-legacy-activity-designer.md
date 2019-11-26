@@ -48,7 +48,7 @@ Toto téma popisuje, jak používat návrháře aktivit ve starších [!INCLUDE[
 
 |Vlastnost|Komentáře|
 |--------------|--------------|
-|**Název**|Název aktivity|
+|**Jméno**|Název aktivity|
 |**Základní třída**|Základní třída, ze které je odvozena aktivita. Výchozí základní třída je [SequenceActivity](https://go.microsoft.com/fwlink?LinkID=65020). V okně **vlastnosti** klikněte na tři tečky **základní třídy** **[...]** pro výběr jiné základní třídy v [dialogovém okně Procházet a vyberte možnost typ .NET (starší verze)](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box-legacy.md).|
 |**Popis**|Uživatelsky definovaný Popis aktivity.|
 |**Umožněn**|Ve výchozím nastavení nastavte na **hodnotu true** , aby se povolilo provádění a ověřování aktivity. Nastavte na **hodnotu false** , chcete-li zakázat provádění a ověřování aktivity. Informace o provádění a ověřování aktivit najdete v tématu [vývoj aktivit pracovních postupů](https://go.microsoft.com/fwlink?LinkID=65024).|

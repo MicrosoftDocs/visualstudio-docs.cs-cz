@@ -284,6 +284,6 @@ Následující tabulka uvádí data čísla a uvolnění sestavení pro Visual S
 ## <a name="see-also"></a>Viz také:
 
 * [Frekvence vydávání nových verzí sady Visual Studio](/visualstudio/productinfo/release-rhythm/)
-* [Příručka pro správce aplikace Visual Studio](visual-studio-administrator-guide.md)
+* [Příručka pro správce sady Visual Studio](visual-studio-administrator-guide.md)
 * [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
 * [Nástroje pro zjišťování a správu instancí sady Visual Studio](tools-for-managing-visual-studio-instances.md)

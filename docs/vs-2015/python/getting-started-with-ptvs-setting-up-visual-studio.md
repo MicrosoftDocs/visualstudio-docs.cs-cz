@@ -23,22 +23,22 @@ ms.locfileid: "74300503"
 
 Instalace PTVS a související knihovny je rychlá, pokud máte sadu Visual Studio. Pokud nemáte Visual Studio, můžete získat bezplatnou kopii verze profesionální kvality.
 
-Můžete sledovat tyto pokyny ve velmi krátké [videa youtube](https://www.youtube.com/watch?v=_okUV47eM5c&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=1).
+Tyto pokyny můžete sledovat ve velmi krátkém [videu YouTube](https://www.youtube.com/watch?v=_okUV47eM5c&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=1).
 
 Obecný postup je následující: instalace sady Visual Studio, nainstalujte PTVS, nainstalujte Python a data knihovny (Anaconda, zápoje) a potom nakonec Zkontrolujte instalaci.
 
-První věc, kterou budete potřebovat je sada Visual Studio. Pokud jste vývojář open source nebo jednotlivci, můžete použít Visual Studio [Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs), který je zdarma a funkční pro odborníky v oblasti. Za předpokladu, je pro classroom učení, vědecký výzkum nebo přispívání do open source projektů, můžete použít také edice Community v organizaci. Pro studenty a startupy by měl vypadat do DreamSpark a programů BizSpark zobrazíte, pokud nárok zdarma přístup nebo požádejte vašeho zaměstnavatele, jestli máte předplatné MSDN.
+První věc, kterou budete potřebovat je sada Visual Studio. Pokud jste Open Source nebo samostatný vývojář, můžete použít Visual Studio [Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs), který je zdarma a funkční pro odborníky. Za předpokladu, je pro classroom učení, vědecký výzkum nebo přispívání do open source projektů, můžete použít také edice Community v organizaci. Pro studenty a startupy by měl vypadat do DreamSpark a programů BizSpark zobrazíte, pokud nárok zdarma přístup nebo požádejte vašeho zaměstnavatele, jestli máte předplatné MSDN.
 
-Po instalaci sady Visual Studio, budete muset [nainstalovat PTVS](https://archive.codeplex.com/?p=pytools). Toto je zdarma, samostatného rozšíření, která má plně podporovaný společností Microsoft a zveřejněno byly vyvinuty v sadě příspěvky od komunity.
+Po instalaci sady Visual Studio budete muset [nainstalovat PTVS](https://archive.codeplex.com/?p=pytools). Toto je zdarma, samostatného rozšíření, která má plně podporovaný společností Microsoft a zveřejněno byly vyvinuty v sadě příspěvky od komunity.
 
-Teď je potřeba [nainstalujte Python](https://www.python.org/download/). Python je udržován komunitou a jeho Domovská stránka je python.org. Pomocí analýzy Continuum získáte bezplatnou sadu s názvem Anaconda, která má Python, a spoustu užitečných knihoven (zejména pro vědy a zpracování dat) a Enthought vytvoří podobnou sadu s názvem zápoje. Stačí nainstalovat některou z těchto produktů. Pokud si nejste jisti, která z nich, začněte tématem [Anaconda](https://www.continuum.io/downloads), která poskytuje nejaktuálnější Python a většina obtížné instalační balíčky.
+Teď je potřeba [nainstalovat Python](https://www.python.org/download/). Python je udržován komunitou a jeho Domovská stránka je python.org. Pomocí analýzy Continuum získáte bezplatnou sadu s názvem Anaconda, která má Python, a spoustu užitečných knihoven (zejména pro vědy a zpracování dat) a Enthought vytvoří podobnou sadu s názvem zápoje. Stačí nainstalovat některou z těchto produktů. Pokud si nejste jisti, který z nich máte, začněte s [Anaconda](https://www.continuum.io/downloads), který vám poskytne nejaktuálnější verzi Pythonu a většinu obtížně instalovaných balíčků.
 
 Spusťte sadu Visual Studio a ujistěte se, že všechno funguje. V nabídce zobrazení vyberte další Windows. Uvidíte položku s názvem prostředí Pythonu. Toto okno zobrazuje všechny instalace Pythonu, PTVS zjistilo a všechny balíčky, které jste nainstalovali. V okně také řídí obnovení databáze k zobrazení dokončování při úpravě kódu. Tento proces aktualizace nějakou dobu trvá, ale po dokončení PTVS můžete zobrazit další užitečné informace o balíčcích.
 
-Pokud chcete používat s nástroji PTVS IPython, postupujte podle těchto [pokyny](https://archive.codeplex.com/?p=pytools).
+Pokud chcete používat IPython s PTVS, postupujte podle těchto [pokynů](https://archive.codeplex.com/?p=pytools).
 
-Můžete sledovat tyto pokyny v krátké [videa youtube](https://www.youtube.com/watch?v=_okUV47eM5c&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=1).
+Tyto pokyny můžete sledovat v krátkém [videu YouTube](https://www.youtube.com/watch?v=_okUV47eM5c&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=1).
 
 ## <a name="see-also"></a>Viz také
 
-[Videa můžete začít a Deep Dive PTVS](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
+[PTVS Začínáme a rozsáhlá podrobně videa](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)

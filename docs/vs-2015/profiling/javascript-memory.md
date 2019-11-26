@@ -98,7 +98,7 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, které 
   
 4. Z **dostupných nástrojů**zaškrtněte políčko **paměť JavaScriptu** a pak zvolte **Spustit**.  
   
-5. Když spustíte nástroj pro analýzu paměti, může okno Řízení uživatelských účtů požádat o vaše oprávnění ke spuštění sady Visual Studio ETW. exe. Zvolte **Ano**.  
+5. Když spustíte nástroj pro analýzu paměti, může okno Řízení uživatelských účtů požádat o vaše oprávnění ke spuštění sady Visual Studio ETW. exe. Vyberte **Ano**.  
   
      V interakci s aplikací otestujete relevantní scénáře využití paměti a zobrazte graf paměti, jak je popsáno v následujících částech.  
   

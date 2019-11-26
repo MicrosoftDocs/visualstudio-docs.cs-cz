@@ -30,7 +30,7 @@ RuleId | DA0005 |
 | Zpráva | Mnohé z vašich objektů se shromažďují v paměti generace 2. |  
 | Typ zprávy | Upozornění |  
   
-## <a name="cause"></a>příčina  
+## <a name="cause"></a>Příčina  
  V uvolňování paměti 2. generace se uvolňuje velký počet paměťových objektů .NET.  
   
 ## <a name="rule-description"></a>Popis pravidla  

@@ -73,7 +73,7 @@ Můžete určit, že se má element přetáhnout na jiný, a to buď z panelu n�
 > [!NOTE]
 > Pokud píšete vlastní kód sloučení, bude mít vliv pouze na sloučení, která jsou provedena pomocí tohoto EMD. Pokud existují další EMDs, které sloučí stejný typ objektu nebo pokud existuje jiný vlastní kód, který vytváří tyto objekty bez použití EMD, pak nebudou ovlivněny vlastním slučovacím kódem.
 >
-> Pokud chcete zajistit, aby byl nový prvek nebo nový vztah vždy zpracován vlastním kódem, zvažte definování `AddRule` ve vztahu vkládání a `DeleteRule` třídy domény elementu. Další informace najdete v tématu [pravidla šíření změn v rámci the Model](../modeling/rules-propagate-changes-within-the-model.md).
+> Pokud chcete zajistit, aby byl nový prvek nebo nový vztah vždy zpracován vlastním kódem, zvažte definování `AddRule` ve vztahu vkládání a `DeleteRule` třídy domény elementu. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
 
 ## <a name="example-defining-an-emd-without-custom-code"></a>Příklad: definování EMD bez vlastního kódu
  Následující příklad umožňuje uživatelům vytvořit prvek a spojnici současně přetažením z panelu nástrojů na existující obrazec. V příkladu se přidá EMD do definice DSL. Před touto úpravou mohou uživatelé přetahovat nástroje do diagramu, ale ne do stávajících tvarů.
@@ -214,7 +214,7 @@ Můžete určit, že se má element přetáhnout na jiný, a to buď z panelu n�
 
 2. Přepište metodu `MergeRelate` a volitelně metodu `MergeDisconnect`. Chcete-li to provést, musíte nastavit vlastnost **Generovat dvojitou hodnotu odvozenou** pro doménovou třídu. Váš kód může volat generovaný slučovací kód v základní třídě. Tuto možnost použijte, pokud chcete po provedení sloučení provést další operace.
 
-   Tyto přístupy mají vliv pouze na sloučení, která jsou prováděna pomocí tohoto EMD. Chcete-li ovlivnit všechny způsoby, jak lze vytvořit sloučený prvek, alternativou je definování `AddRule` v relaci vložení a `DeleteRule` ve sloučené třídě domény. Další informace najdete v tématu [pravidla šíření změn v rámci the Model](../modeling/rules-propagate-changes-within-the-model.md).
+   Tyto přístupy mají vliv pouze na sloučení, která jsou prováděna pomocí tohoto EMD. Chcete-li ovlivnit všechny způsoby, jak lze vytvořit sloučený prvek, alternativou je definování `AddRule` v relaci vložení a `DeleteRule` ve sloučené třídě domény. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
 
 #### <a name="to-override-mergerelate"></a>Přepsání MergeRelate
 
@@ -273,7 +273,7 @@ Můžete určit, že se má element přetáhnout na jiný, a to buď z panelu n�
 
 4. Zapište metody v definici částečné třídy v samostatném souboru kódu. Předchozí příklady, které jste si prohlédli dříve, by měly navrhnout, co potřebujete.
 
-   Vlastní kód sloučení nebude mít vliv na kód, který vytváří objekty a vztahy přímo, a nebude mít vliv na jiné EMDs. Chcete-li zajistit, aby byly další změny implementovány bez ohledu na to, jak je prvek vytvořen, zvažte zápis `AddRule` a místo toho `DeleteRule`. Další informace najdete v tématu [pravidla šíření změn v rámci the Model](../modeling/rules-propagate-changes-within-the-model.md).
+   Vlastní kód sloučení nebude mít vliv na kód, který vytváří objekty a vztahy přímo, a nebude mít vliv na jiné EMDs. Chcete-li zajistit, aby byly další změny implementovány bez ohledu na to, jak je prvek vytvořen, zvažte zápis `AddRule` a místo toho `DeleteRule`. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
 
 ## <a name="redirecting-a-merge-operation"></a>Přesměrování operace sloučení
  Direktiva pro přesměrování sloučení přesměruje cíl operace sloučení. Nový cíl je obvykle vkládání nadřazeného objektu počáteční cíl.
@@ -304,7 +304,7 @@ Můžete určit, že se má element přetáhnout na jiný, a to buď z panelu n�
 
      Nová cesta by měla vypadat přibližně takto:
 
-     **ComponentHasPorts.Component/!Component**
+     **Komponenta ComponentHasPorts. Component/!**
 
 9. Uložte řešení a pak šablony Transformujte kliknutím na tlačítko vpravo na panelu nástrojů **Průzkumník řešení** .
 

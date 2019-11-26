@@ -123,7 +123,7 @@ V C#jazyce Visual Basic a jiném spravovaném kódu použijte výchozího poskyt
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Titul|Popis|
 |-----------|-----------------|
 |[Referenční dokumentace knihoven jazyka C++](../profiling/cpp-library-reference.md)|Popisuje rozhraní API Vizualizátor souběžnosti pro C++.|
 |[Referenční dokumentace knihoven jazyka C](../profiling/c-library-reference.md)|Popisuje rozhraní API Vizualizátor souběžnosti pro jazyk C.|

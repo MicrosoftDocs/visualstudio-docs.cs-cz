@@ -94,7 +94,7 @@ namespace Company.MusicLib
 ```
 
 ## <a name="using-events-to-make-undoable-adjustments-in-the-store"></a>Provedení nevratných úprav v úložišti pomocí událostí
- Události úložiště se obvykle nepoužívají pro rozšiřování změn v úložišti, protože se obslužná rutina události spustí po potvrzení transakce. Místo toho byste použili pravidlo obchodu. Další informace najdete v tématu [pravidla šíření změn v rámci the Model](../modeling/rules-propagate-changes-within-the-model.md).
+ Události úložiště se obvykle nepoužívají pro rozšiřování změn v úložišti, protože se obslužná rutina události spustí po potvrzení transakce. Místo toho byste použili pravidlo obchodu. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
 
  Můžete však použít obslužnou rutinu události k provedení dalších aktualizací úložiště, pokud chcete, aby uživatel mohl vrátit další aktualizace odděleně od původní události. Předpokládejme například, že malá písmena představují obvyklou konvenci pro názvy alb. Můžete napsat obslužnou rutinu události úložiště, která opravuje nadpis na malý případ poté, co ho uživatel zadal velkými písmeny. Ale uživatel může použít příkaz zpět k zrušení opravy a obnovení velkých písmen. Druhý příkaz zpět by odebral změnu uživatele.
 

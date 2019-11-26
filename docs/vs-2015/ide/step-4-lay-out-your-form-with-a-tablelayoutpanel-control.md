@@ -75,7 +75,7 @@ V tomto kroku přidáte ovládací prvek `TableLayoutPanel` do formuláře. Kont
 
 11. V rozevíracím seznamu **Zobrazit** v horní části okna vyberte možnost **řádky**. Nastavte **řádek1** na 90 procent a **řádek2** na 10 procent.
 
-12. Zvolte **OK** tlačítko. Váš kontejner TableLayoutPanel by teď měl mít velký horní řádek, malý dolní řádek, malý levý sloupec a velký pravý sloupec. Můžete změnit velikost řádků a sloupců v kontejneru TableLayoutPanel výběrem tableLayoutPanel1 ve formuláři a následným přetažením ohraničení jeho řádku a sloupce.
+12. Klikněte na tlačítko **OK** . Váš kontejner TableLayoutPanel by teď měl mít velký horní řádek, malý dolní řádek, malý levý sloupec a velký pravý sloupec. Můžete změnit velikost řádků a sloupců v kontejneru TableLayoutPanel výběrem tableLayoutPanel1 ve formuláři a následným přetažením ohraničení jeho řádku a sloupce.
 
      ![Form1 se změněnou velikostí kontejneru TableLayoutPanel](../ide/media/vs-formafterlayoutpanel.png "VS_FormAfterLayoutPanel") Form1 se změněnou velikostí kontejneru TableLayoutPanel
 

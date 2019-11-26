@@ -31,7 +31,7 @@ ID pravidla | DA0018 |
   
  Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit aspoň 10 vzorků.  
   
-## <a name="cause"></a>příčina  
+## <a name="cause"></a>Příčina  
  Systémová data shromážděná během procesu profilace označují, že haldy .NET Framework paměti dosáhly maximální velikosti, ke které mají spravované haldy přístup v 32m procesu. Tato maximální velikost je výchozí hodnota. Vychází z celkového množství adresního prostoru procesu, který se dá přidělit pro soukromé bajty. Hlášená hodnota je maximální zjištěná hodnota haldy během aktivního procesu profilace. Zvažte opětovné vytvoření profilace pomocí metody profilace paměti .NET a optimalizace použití spravovaných prostředků aplikací.  
   
  Pokud velikost spravovaných hald přiblíží výchozímu limitu, může být potřeba vyvolat častěji proces automatického uvolňování paměti. Tím se zvyšuje režie správy paměti.  

@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
 description: Podrobnosti o tom, jaká předplatná jsou nabízená, jaká pravidla se použijí a kolik předplatných se nabízí v programu MPN.
-ms.openlocfilehash: e32ae547327c4e51b7d49f6dffe9130afa843c49
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 8847d320ec950b6601f99875e2c35ca80105e5b4
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816564"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491666"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Předplatná sady Visual Studio nabízená partnerům v Microsoft Partner Network (MPN)
 
@@ -19,7 +19,7 @@ Partneři, kteří získají kompetenci nebo kteří si zakoupí akční Pack v 
 
 ## <a name="subscriptions-for-partners-with-an-mpn-competency"></a>Předplatná pro partnery s kompetencí MPN
 
-Když partner dostane kompetenci – na úrovni stříbra nebo Gold – partneři získají základní počet Visual Studio Enterprise předplatných. Výhoda tohoto základního přínosu se mění, pokud partner přenese aspoň jednu Gold Competency. Visual Studio Enterprise předplatné je vlastní nabídka, která zhruba odpovídá [předplatnému Visual Studio Enterprise Standard](https://visualstudio.microsoft.com/vs/pricing/), ale s některými výhodami se odebralo (řada z nich se nabízí odděleně pro partnery jako obecné výhody programu MPN). spíše než v rámci předplatných Visual Studio Enterprise nabízených prostřednictvím programu MPN).
+Když partner dostane kompetenci – na úrovni stříbra nebo Gold – partneři získají základní počet Visual Studio Enterprise předplatných. Výhoda tohoto základního přínosu se mění, pokud partner přenese aspoň jednu Gold Competency. Visual Studio Enterprise předplatné je vlastní nabídka, která zhruba odpovídá [předplatnému Visual Studio Enterprise Standard](https://visualstudio.microsoft.com/vs/pricing/), ale s některými výhodami se odebralo (řada z nich se nabízí odděleně pro partnery jako obecné výhody programu MPN, nikoli jako součást předplatných Visual Studio Enterprise nabízených prostřednictvím MPN).
 
 ### <a name="core-visual-studio-benefit-for-earning-at-least-one-competency-of-any-kind"></a>Základní výhoda sady Visual Studio pro získání alespoň jedné kompetence jakéhokoli druhu
 
@@ -57,7 +57,7 @@ Pomocí sady Action Pack získají partneři **3 Visual Studio Professional (MPN
 
 Předplatitelé Visual Studio Professional (MPN) mohou také stahovat a používat software pro vývoj, včetně edice SQL Server Developer.
 
-Předplatné Visual Studio Professional (MPN) nezahrnuje Azure DevOps Services výhody, kredity Azure DevTest individiaul, technickou podporu, školení nebo jiné výhody pro předplatitele, které jsou k dispozici v předplatných sady Visual Studio. nabídka komerčního obchodu.
+Předplatné Visual Studio Professional (MPN) nezahrnuje Azure DevOps Services výhody, Azure DevTest jednotlivý kredit, technickou podporu, školení nebo jiné výhody pro předplatitele, které jsou dostupné v předplatných sady Visual Studio, které jsou nabízeny. komerčně.
 
 ## <a name="internal-use-only-restriction"></a>Omezení jenom pro interní použití
 
@@ -73,7 +73,7 @@ V případě předplatných sady Visual Studio nabízených přes MPN se musí l
 
 - [Příručka pro správce programu MPN](https://assets.microsoft.com/en-us/Program-Administrator-Guide-to-Software-and-Online-Services-Benefits_1.pdf) – obsahuje pokyny k přiřazení předplatných sady Visual Studio zaměstnancům programu MPN.
 - [Přiřazení předplatných sady Visual Studio zaměstnancům programu MPN](manage-mpn-subscriptions.md)
-- [Podmínky použití](http://www.microsoft.com/useterms/) – předplatná sady Visual Studio nabízená přes MPN podléhají smlouvě EULA předplatných sady Visual Studio (NFR).
+- [Podmínky použití](https://www.microsoft.com/useterms/) – předplatná sady Visual Studio nabízená přes MPN podléhají smlouvě EULA předplatných sady Visual Studio (NFR).
 
 ## <a name="next-steps"></a>Další kroky
 

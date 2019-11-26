@@ -71,9 +71,9 @@ Diagramy modelování vám pomůžou pochopit, objasnit a sdělovat nápady týk
 |Mapy kódu<br /><br /> [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)<br /><br /> [Nalezení potenciálních problémů pomocí analyzátorů mapy kódu](../modeling/find-potential-problems-using-code-map-analyzers.md)|Závislosti a další vztahy v existujícím kódu|
 |Diagramy tříd generovaných kódem<br /><br /> [Práce s diagramy tříd (Návrhář tříd)](../ide/working-with-class-diagrams-class-designer.md)|Typy a jejich vztahy v kódu .NET|
 
-## <a name="common-tasks"></a>Obecné úlohy
+## <a name="common-tasks"></a>Common Tasks
 
-|**Téma**|**Úloha**|
+|**Výklad**|**Hybn**|
 |---------------|--------------|
 |[Vytváření projektů a diagramů pomocí modelování UML](../modeling/create-uml-modeling-projects-and-diagrams.md)|**Vytvářejte modely** a přidejte diagramy.|
 |[Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md)|**Nakreslete diagramy** pro úpravu modelu.|
@@ -85,7 +85,7 @@ Diagramy modelování vám pomůžou pochopit, objasnit a sdělovat nápady týk
 
 ## <a name="related-tasks"></a>Související úlohy
 
-|**Téma**|**Úloha**|
+|**Výklad**|**Hybn**|
 |---------------|--------------|
 |[Vizualizace kódu](../modeling/visualize-code.md)|Vytvářejte mapy kódu a diagramy vrstev pro lepší pochopení neznámého kódu.|
 |[Modelování uživatelských požadavků](../modeling/model-user-requirements.md)|Použijte modely k objasnění potřeb uživatelů a jejich sdělování.|
@@ -94,8 +94,8 @@ Diagramy modelování vám pomůžou pochopit, objasnit a sdělovat nápady týk
 |[Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)<br /><br /> [Používání modelů v agilním vývoji](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)|Použijte modely, které vám pomůžou pochopit a změnit svůj systém během vývoje.|
 |[Strukturování řešení modelování](../modeling/structure-your-modeling-solution.md)|Uspořádejte modely ve velkém nebo středním projektu.|
 
-## <a name="external-resources"></a>Externí zdroje
+## <a name="external-resources"></a>Externí prostředky
 
-|**Kategorie**|**Odkazy**|
+|**Kategorií**|**Odkazy**|
 |------------------|---------------|
 |**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://go.microsoft.com/fwlink/?LinkId=184721)|

@@ -21,7 +21,7 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74302756"
 ---
 # <a name="rule-set-editor-dialog-box-legacy"></a>Dialogové okno Editor sad pravidel (starší verze)
-Toto téma popisuje, jak používat dialogové okno **editor sad pravidel** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] potřeba cílit na platformu [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Toto téma popisuje, jak používat dialogové okno **editor sad pravidel** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
 
  Dialogové okno **editor sad pravidel** se používá k vytváření a úpravám [sady](https://go.microsoft.com/fwlink?LinkID=65019) sad pravidel, které jsou serializovány do souboru. Rules.
 
@@ -38,10 +38,10 @@ Toto téma popisuje, jak používat dialogové okno **editor sad pravidel** ve s
 |Prvek uživatelského rozhraní (UI)|Popis|
 |----------------|-----------------|
 |**Přidat pravidlo**|Přidá do sady pravidel novou definici pravidla.|
-|**Odstranění**|Odstraní vybrané pravidlo ze sady pravidel.|
+|**Delete**|Odstraní vybrané pravidlo ze sady pravidel.|
 |**Řetězení**|Určuje, který typ předávaného řetězení použít se sadou pravidel. K dispozici jsou tyto možnosti:<br /><br /> -   **úplné řetězení**, které určuje, že se mají použít všechny mechanismy pro dopředné řetězení: implicitní, přidávané metody a explicitní pomocí funkce **Update** .<br />-   **sekvenční**, které určuje, že se nemá používat žádný řetěz dopředné řetězení.<br />-   **pouze explicitní aktualizace**, která určuje, že se má provést pouze předávací řetěz při akcích **aktualizace** .<br /><br /> Další informace o dopřední řetězení najdete v tématu [použití aktivity sady](https://go.microsoft.com/fwlink?LinkID=65004).|
-|**Název**|Záhlaví sloupce seznamu sad pravidel Kliknutím seřadíte seznam pravidel podle názvu.|
-|**Priorita**|Záhlaví sloupce seznamu sad pravidel Kliknutím seřadíte seznam pravidel podle priority.|
+|**Jméno**|Záhlaví sloupce seznamu sad pravidel Kliknutím seřadíte seznam pravidel podle názvu.|
+|**Upřednostněn**|Záhlaví sloupce seznamu sad pravidel Kliknutím seřadíte seznam pravidel podle priority.|
 |**Nového vyhodnocení**|Záhlaví sloupce seznamu sad pravidel Kliknutím seřadíte seznam pravidel podle typu opětovného vyhodnocení.|
 |**Náhled pravidla**|Záhlaví sloupce seznamu sad pravidel Kliknutím seřadíte seznam pravidel ve verzi Preview podmínky a akcí pravidla.|
 |**Jméno:**|Zadejte název pravidla.|
@@ -51,7 +51,7 @@ Toto téma popisuje, jak používat dialogové okno **editor sad pravidel** ve s
 |**Pomocné**|Zadejte výraz pro podmínku pravidla. Informace o syntaxi výrazu naleznete v části "zadávání výrazů podmínek a akcí" na této stránce.|
 |**Pak akce:**|Zadejte výraz pro akce. Informace o syntaxi výrazu naleznete v části "zadávání výrazů podmínek a akcí" na této stránce.|
 |**Další akce:**|Zadejte výraz pro akce else. Informace o syntaxi výrazu naleznete v části "zadávání výrazů podmínek a akcí" na této stránce.|
-|**OK**|Kliknutím uložíte sadu pravidel do souboru. Rules.|
+|**Ok**|Kliknutím uložíte sadu pravidel do souboru. Rules.|
 
  Další informace o sadách pravidel najdete v tématu [použití aktivity sady](https://go.microsoft.com/fwlink?LinkID=65004).
 

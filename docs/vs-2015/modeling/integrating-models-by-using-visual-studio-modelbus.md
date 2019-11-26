@@ -19,12 +19,12 @@ ms.locfileid: "74298901"
 # <a name="integrating-models-by-using-visual-studio-modelbus"></a>Integrace modelů pomocí Visual Studio Modelbus
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ModelBus poskytuje metodu pro vytvoření propojení mezi modely a z dalších nástrojů do modelů. Je třeba propojit modely jazyka specifického pro doménu (DSL) a modelech UML. Můžete vytvořit integrovaná sada DSL.
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ModelBus poskytuje metodu pro vytváření propojení mezi modely a z jiných nástrojů do modelů. Je třeba propojit modely jazyka specifického pro doménu (DSL) a modelech UML. Můžete vytvořit integrovaná sada DSL.
 
  ModelBus umožňuje vytvářet jedinečné odkazu na model nebo na konkrétní elementu v modelu. Tento odkaz mohou být uloženy mimo model, například do prvku v jiném modelu. Až na novější příležitosti, nástroj chce získat přístup k elementu, bude infrastruktury sběrnice modelu načíst příslušný model a vraťte se element. Pokud chcete, můžete zobrazit modelu pro uživatele. Pokud soubor není přístupný v jeho předchozí umístění, ModelBus požádá uživatele o nalezení ho. Pokud uživatel vyhledá soubor, ModelBus opraví všechny odkazy na daný soubor.
 
 > [!NOTE]
-> V aktuálním [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] provádění ModelBus propojené modely musí být položky ve stejném [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení.
+> V aktuální [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] implementaci ModelBus musí být propojené modely položkami ve stejném řešení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
  Další informace a ukázky kódu najdete v tématu:
 
@@ -32,20 +32,20 @@ ms.locfileid: "74298901"
 
 - [Sada Modeling SDK pro Visual Studio](https://www.microsoft.com/download/details.aspx?id=48148)
 
-## <a name="provide"></a> Zajištění přístupu k DSL
- Před vytvořením ModelBus odkazy na model nebo jeho prvky, je nutné definovat objekt ModelBusAdapter pro DSL. Nejjednodušší způsob je použít [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření modelu Service Bus, které přidá příkazy do návrháře DSL.
+## <a name="provide"></a>Poskytnutí přístupu k DSL
+ Před vytvořením ModelBus odkazy na model nebo jeho prvky, je nutné definovat objekt ModelBusAdapter pro DSL. Nejjednodušší způsob, jak to provést, je použít rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] model bus, které přidá příkazy do návrháře DSL.
 
-### <a name="expose"></a> K vystavení definice DSL sběrnici modelu
+### <a name="expose"></a>Vystavení definice DSL pro sběrnici modelu
 
-1. Stáhněte a nainstalujte rozšíření sběrnice modelu Visual Studio, pokud jste ho už nainstalovali. Další informace najdete v tématu [Visualization and Modeling SDK](https://go.microsoft.com/fwlink/?LinkID=185579).
+1. Stáhněte a nainstalujte rozšíření sběrnice modelu Visual Studio, pokud jste ho už nainstalovali. Další informace najdete v tématu [sada SDK pro vizualizaci a modelování](https://go.microsoft.com/fwlink/?LinkID=185579).
 
-2. Otevření souboru definice DSL. Klikněte pravým tlačítkem na návrhové ploše a potom klikněte na tlačítko **povolit Modelbus**.
+2. Otevření souboru definice DSL. Klikněte pravým tlačítkem myši na návrhovou plochu a pak klikněte na **povolit ModelBus**.
 
-3. V dialogovém okně vyberte **chci zveřejnit tento DSL k ModelBus**. Obě možnosti můžete zvolit, pokud chcete tento DSL zveřejnit své modely a využívat odkazy na další DSL.
+3. V dialogovém okně vyberte možnost **chci zveřejnit tuto DSL pro ModelBus**. Obě možnosti můžete zvolit, pokud chcete tento DSL zveřejnit své modely a využívat odkazy na další DSL.
 
 4. Klikněte na tlačítko **OK**. Nový projekt "Objekt ModelBusAdapter" je přidán do řešení DSL.
 
-5. Pokud chcete získat přístup DSL z textové šablony, je třeba upravit AdapterManager.tt v novém projektu. Tento krok vynechte, pokud chcete získat přístup DSL od jiného kódu, jako je například příkazy a obslužnými rutinami událostí. Další informace najdete v tématu [pomocí Visual Studio ModelBus v textové šabloně](../modeling/using-visual-studio-modelbus-in-a-text-template.md).
+5. Pokud chcete získat přístup DSL z textové šablony, je třeba upravit AdapterManager.tt v novém projektu. Tento krok vynechte, pokud chcete získat přístup DSL od jiného kódu, jako je například příkazy a obslužnými rutinami událostí. Další informace najdete v tématu [použití Visual Studio Modelbus v textové šabloně](../modeling/using-visual-studio-modelbus-in-a-text-template.md).
 
    1. Změňte základní třídu AdapterManagerBase na [VsTextTemplatingModelingAdapterManager](/previous-versions/ee844317(v=vs.140)).
 
@@ -53,81 +53,81 @@ ms.locfileid: "74298901"
 
        `[Microsoft.VisualStudio.Modeling.Integration.HostSpecific(HostName)]`
 
-   3. Odkazy na objekt ModelBusAdapter projektu přidejte **Microsoft.VisualStudio.TextTemplating.Modeling.11.0**.
+   3. V odkazech na projekt ModelBusAdapter přidejte **Microsoft. VisualStudio. TextTemplating. modelings. 11.0**.
 
       Pokud chcete získat přístup DSL z textových šablon a od jiného kódu, budete potřebovat dva adaptéry, jeden upravený a jeden bez jakýchkoli úprav.
 
-6. Klikněte na tlačítko **Transformovat všechny šablony**.
+6. Klikněte na **transformovat všechny šablony**.
 
 7. Znovu sestavte řešení.
 
    Nyní je možné pro ModelBus otevřít instance tento DSL.
 
-   Složka `ModelBusAdapters\bin\*` obsahuje sestavení vytvořených `Dsl` projektu a `ModelBusAdapters` projektu. Pro tento DSL odkazovat z jiného DSL, měli byste importovat tato sestavení.
+   Složka `ModelBusAdapters\bin\*` obsahuje sestavení sestavená `Dsl` projektu a `ModelBusAdapters` projektu. Pro tento DSL odkazovat z jiného DSL, měli byste importovat tato sestavení.
 
 ### <a name="making-sure-that-elements-can-be-referenced"></a>Ujistěte se, že může být odkazováno elementy
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Adaptéry ModelBus pomocí identifikátoru guid elementu pro identifikaci, ve výchozím nastavení. Tyto identifikátory musí proto nastavit jako trvalý v souboru modelu.
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] adaptéry ModelBus používají identifikátor GUID elementu k jeho identifikaci ve výchozím nastavení. Tyto identifikátory musí proto nastavit jako trvalý v souboru modelu.
 
 ##### <a name="to-ensure-that-element-ids-are-persisted"></a>Chcete-li zajistit tento element jsou trvalé identifikátory
 
 1. Otevřete DslDefinition.dsl.
 
-2. V okně Průzkumník DSL, rozbalte **chování serializace Xml**, pak **Data třídy**.
+2. V Průzkumníku DSL rozbalte **chování serializace XML**a potom **data třídy**.
 
 3. Pro každou třídu, na který chcete vytvořit sběrnice modelu odkazuje:
 
-    Klikněte na uzel třídy a v okně Vlastnosti, ujistěte se, že **serializovat Id** je nastavena na `true`.
+    Klikněte na uzel třída a v okno Vlastnosti Ujistěte se, že je **ID serializace** nastaveno na hodnotu `true`.
 
    Případně pokud chcete použít k identifikaci prvků místo identifikátory GUID názvy elementů, můžete přepsat částmi generované adaptéry. Přepište následující metody ve třídě adaptér:
 
-- Přepsat `GetElementId` vrátit identifikátor, který chcete použít. Tato metoda se volá při vytváření odkazů.
+- Přepište `GetElementId` a vraťte identifikátor, který chcete použít. Tato metoda se volá při vytváření odkazů.
 
-- Přepsat `ResolveElementReference` najít správný element z odkazu sběrnice modelu.
+- Přepište `ResolveElementReference` pro vyhledání správného prvku z odkazu sběrnice modelu.
 
-## <a name="editRef"></a> Přístup k DSL z jiného DSL
+## <a name="editRef"></a>Přístup k DSL z jiné DSL
  Doménová vlastnost, která v DSL můžete ukládat odkazy na model Service bus, a můžete napsat vlastní kód, který je využívá. Můžete také umožníte uživateli vytvářet referenční informace k Service bus modelu výběrem souboru modelu a element v rámci něj.
 
- K povolení DSL použití odkazů na jiné DSL, měli byste nejprve si ho *příjemce* odkazů modelu Service bus.
+ Pokud chcete DSL povolit použití odkazů na jinou DSL, měli byste nejdřív vytvořit *uživatele* s odkazy na sběrnici modelu.
 
 #### <a name="to-enable-a-dsl-to-consume-references-to-an-exposed-dsl"></a>Chcete-li povolit DSL používat odkazy zveřejněné DSL
 
-1. V definici DSL diagramu, klikněte pravým tlačítkem na hlavní část diagramu a potom klikněte na **povolit Modelbus**.
+1. V diagramu definice DSL klikněte pravým tlačítkem myši na hlavní část diagramu a pak klikněte na **povolit ModelBus**.
 
-2. V dialogovém okně vyberte **budu chtít povolit tento model k využívání reference na sběrnici modelu**.
+2. V dialogovém okně vyberte možnost **Chci povolit tento model pro využívání odkazů na sběrnici modelu**.
 
-3. V projektu Dsl náročné DSL přidáte následující sestavení v odkazech projektu. Tato sestavení (soubory .dll) najdete v ModelBusAdapter\bin\\* adresáři vystavené DSL.
+3. V projektu Dsl náročné DSL přidáte následující sestavení v odkazech projektu. Tato sestavení (soubory. dll) najdete v adresáři ModelBusAdapter\bin\\* zveřejněné DSL.
 
-    - Vystavené DSL sestavení, například **Fabrikam.FamilyTree.Dsl.dll**
+    - Vystavené sestavení DSL, například **fabrikam. FamilyTree. DSL. dll**
 
-    - Vystavených modelu Service bus sestavení adaptéru, například **Fabrikam.FamilyTree.ModelBusAdapter.dll**
+    - Vystavené sestavení adaptéru sběrnice modelu, například **fabrikam. FamilyTree. ModelBusAdapter. dll**
 
 4. Přidejte následující sestavení .NET do odkazů projektu náročné projektu DSL.
 
-    1. **Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0.dll**
+    1. **Microsoft. VisualStudio. Modeling. SDK. Integration. 11.0. dll**
 
-    2. **Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.11.0.dll**
+    2. **Microsoft. VisualStudio. Modeling. SDK. Integration. Shell. 11.0. dll**
 
 #### <a name="to-store-a-model-bus-reference-in-a-domain-property"></a>K uložení odkazu sběrnice modelu ve vlastnosti domény
 
 1. V definici DSL náročné DSL přidejte doménová vlastnost, která do doménové třídy a nastavte její název.
 
-2. Ve vlastnostech okna, s doménovou vlastnost vybrané, nastavte **typ** k `ModelBusReference`.
+2. V okno Vlastnosti s vybranou doménovou vlastností nastavte **typ** na `ModelBusReference`.
 
    V této fázi programového kódu můžete nastavit hodnotu vlastnosti, ale je jen pro čtení v okně Vlastnosti.
 
-   Můžete povolit uživatelům nastavit vlastnost s začínáte se speciálním editorem odkaz ModelBus. Existují dvě verze tohoto editoru nebo *výběr:* jeden umožňuje uživatelům zvolit soubor modelu a druhý umožňuje uživatelům zvolit soubor modelu a element v rámci modelu.
+   Můžete povolit uživatelům nastavit vlastnost s začínáte se speciálním editorem odkaz ModelBus. Existují dvě verze tohoto editoru nebo *výběru:* jeden umožňuje uživatelům zvolit soubor modelu a druhý umožňuje uživatelům zvolit soubor modelu a prvek v modelu.
 
 #### <a name="to-allow-the-user-to-set-a-model-bus-reference-in-a-domain-property"></a>Aby uživatel mohl nastavit odkaz modelu Service Bus ve vlastnosti domény
 
-1. Klikněte pravým tlačítkem na doménovou vlastnost a potom klikněte na tlačítko **upravit ModelBusReference specifické vlastnosti**. Otevře se dialogové okno. Toto je *Výběr modelu Service Bus*.
+1. Klikněte pravým tlačítkem na doménovou vlastnost a pak klikněte na **Upravit ModelBusReference specifické vlastnosti**. Otevře se dialogové okno. Toto je *Výběr modelové sběrnice*.
 
-2. Vyberte příslušné **druh ModelBusReference**: model nebo na prvek v modelu.
+2. Vyberte vhodný **druh ModelBusReference**: k modelu nebo prvku uvnitř modelu.
 
-3. V souboru řetězec filtru dialogové okno, zadejte řetězec `Family Tree files |*.ftree`. Nahraďte příponu vystavené DSL.
+3. Do řetězce filtru dialogu souboru zadejte řetězec, například `Family Tree files |*.ftree`. Nahraďte příponu vystavené DSL.
 
 4. Pokud jste se rozhodli odkazovat na prvek v modelu, můžete přidat seznam typů, které uživatel může vybrat, například Company.FamilyTree.Person.
 
-5. Klikněte na tlačítko **OK**a potom klikněte na tlačítko **Transformovat všechny šablony** na panelu nástrojů Průzkumník řešení.
+5. Klikněte na **OK**a pak klikněte na **transformovat všechny šablony** na panelu nástrojů Průzkumníka řešení.
 
     > [!WARNING]
     > Pokud jste nevybrali platný model nebo entity, na tlačítko OK se neprojeví, i když může zobrazit povoleno.
@@ -140,10 +140,10 @@ ms.locfileid: "74298901"
 
 2. Spusťte některý z DSL v experimentálním režimu stisknutím klávesy F5 nebo CTRL + F5.
 
-3. V ladění projektu v experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], přidejte soubory, které jsou instancemi každý DSL.
+3. V projektu ladění v experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]přidejte soubory, které jsou instancemi každé DSL.
 
     > [!NOTE]
-    > [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ModelBus lze vyřešit pouze odkazy na modely, které jsou položky v rámci stejného [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení. Například nelze vytvořit odkaz na soubor modelu v jiné části systému souborů.
+    > [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ModelBus může přeložit pouze odkazy na modely, které jsou položky ve stejném řešení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Například nelze vytvořit odkaz na soubor modelu v jiné části systému souborů.
 
 4. Vytvořte některé prvky a odkazy v instanci vystavené DSL a uložte ho.
 
@@ -151,24 +151,24 @@ ms.locfileid: "74298901"
 
 6. V okně Vlastnosti klikněte dvakrát na vlastnost referenčního modelu Service bus. Otevře se dialogové okno pro výběr.
 
-7. Klikněte na tlačítko **Procházet** a vyberte instanci vystavené DSL.
+7. Klikněte na **Procházet** a vyberte instanci vystavené DSL.
 
      Při výběru se vám také umožní zvolit položku v modelu, pokud zadaný typ elementu konkrétní referenční informace k modelu Service bus.
 
 ## <a name="creating-references-in-program-code"></a>Vytváření odkazů v kódu programu
- Když chcete k uložení odkazu na model nebo jeho element v modelu, můžete vytvořit `ModelBusReference`. Existují dva typy z `ModelBusReference`: odkazy a odkazy na prvek modelu.
+ Pokud chcete uložit odkaz na model nebo prvek v modelu, vytvoříte `ModelBusReference`. Existují dva druhy `ModelBusReference`: odkazy na model a odkazy na prvky.
 
- Chcete-li vytvořit odkaz na model, je třeba AdapterManager DSL, z nichž je model instance a název souboru nebo [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] položky projektu model.
+ Chcete-li vytvořit odkaz na model, potřebujete správce DSL, který je modelem instance, a název souboru nebo [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] položku projektu modelu.
 
  Chcete-li vytvořit odkaz na element, musíte pro soubor modelu a element, který chcete odkazovat na adaptér.
 
 > [!NOTE]
-> S [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ModelBus, můžete vytvořit odkazy pouze na položky v rámci stejného [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení.
+> Pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ModelBus můžete vytvořit odkazy pouze na položky ve stejném řešení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
 ### <a name="import-the-exposed-dsl-assemblies"></a>Importovat vystavené sestavení DSL
  Používání projektu přidejte odkazy na sestavení DSL a objekt ModelBusAdapter vystavené DSL.
 
- Předpokládejme například, že chcete uložit ModelBus odkazy v elementech MusicLibrary DSL. Odkazy na ModelBus bude odkazovat na prvky FamilyTree DSL. V `Dsl` projektu MusicLibrary řešení, v uzlu odkazy, přidejte odkazy na následující sestavení:
+ Předpokládejme například, že chcete uložit ModelBus odkazy v elementech MusicLibrary DSL. Odkazy na ModelBus bude odkazovat na prvky FamilyTree DSL. V projektu `Dsl` řešení MusicLibrary přidejte v uzlu odkazy odkazy na následující sestavení:
 
 - Fabrikam.FamilyTree.Dsl.dll - vystavené DSL.
 
@@ -178,7 +178,7 @@ ms.locfileid: "74298901"
 
 - Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.11.0
 
-  Tyto sestavení lze nalézt v `ModelBusAdapters` projektu vystavené DSL v části `bin\*`.
+  Tato sestavení se dají najít v projektu `ModelBusAdapters` vystavené DSL, v části `bin\*`.
 
   V souboru kódu, kde se vytvoří odkazy budete obvykle muset importovat tyto obory názvů:
 
@@ -197,7 +197,7 @@ using System.Linq;
  Z AdapterManager můžete získat adaptér, který poskytuje přístup k jednotlivým prvkům v modelu.
 
 > [!NOTE]
-> Adaptér musí dispose po dokončení s ním. Je nejpohodlnější způsob, jak toho dosáhnout pomocí `using` příkazu. Toto dokládá následující příklad.
+> Adaptér musí dispose po dokončení s ním. Nejpohodlnější způsob, jak toho dosáhnout, je pomocí příkazu `using`. Toto dokládá následující příklad.
 
 ```
 // The file path of a model instance of the FamilyTree DSL:
@@ -233,7 +233,7 @@ using (FamilyTreeAdapter adapter =
 
 ```
 
- Pokud chcete použít `modelReference` později, můžete ho uložit v doménová vlastnost, která má typ externího `ModelBusReference`:
+ Pokud chcete mít možnost použít `modelReference` později, můžete ji uložit do doménové vlastnosti, která má `ModelBusReference`externího typu:
 
 ```
 using Transaction t = this.Store.TransactionManager
@@ -244,7 +244,7 @@ using Transaction t = this.Store.TransactionManager
 }
 ```
 
- Chcete-li povolit uživatelům upravit toto doménová vlastnost, použijte `ModelReferenceEditor` jako parametr v atributu editoru. Další informace najdete v tématu [povolit uživatelům upravit odkaz](#editRef).
+ Chcete-li uživatelům dovolit upravit tuto vlastnost domény, použijte `ModelReferenceEditor` jako parametr v atributu Editor. Další informace najdete v tématu [Povolení úprav odkazu uživatelem](#editRef).
 
 ### <a name="to-create-a-reference-to-an-element"></a>Chcete-li vytvořit odkaz na prvek
  Adaptér, který jste vytvořili pro model lze použít k vytvoření a vyřešit odkazy.
@@ -255,10 +255,10 @@ ModelBusReference personReference =
   adapter.GetElementReference(person);
 ```
 
- Pokud chcete použít `elementReference` později, můžete ho uložit v doménová vlastnost, která má typ externího `ModelBusReference`. Chcete-li povolit uživatelům upravit, použijte `ModelElementReferenceEditor` jako parametr v atributu editoru. Další informace najdete v tématu [povolit uživatelům upravit odkaz](#editRef).
+ Pokud chcete mít možnost použít `elementReference` později, můžete ji uložit do doménové vlastnosti, která má `ModelBusReference`externího typu. Chcete-li uživatelům dovolit, aby je mohli upravovat, použijte `ModelElementReferenceEditor` jako parametr v atributu Editor. Další informace najdete v tématu [Povolení úprav odkazu uživatelem](#editRef).
 
 ### <a name="resolving-references"></a>Překládají se odkazy
- Pokud máte `ModelBusReference` (MBR) můžete získat model nebo na prvek modelu, na který odkazuje. Pokud element se zobrazí v diagramu nebo v jiném zobrazení, můžete otevřít zobrazení a vyberte požadovaný prvek.
+ Pokud máte `ModelBusReference` (MBR), můžete získat model nebo prvek modelu, na který odkazuje. Pokud element se zobrazí v diagramu nebo v jiném zobrazení, můžete otevřít zobrazení a vyberte požadovaný prvek.
 
  Adaptér můžete vytvořit z MBR. Z adaptéru můžete získat kořenu modelu. Můžete také vyřešit MBRs, které odkazují na konkrétní prvky v rámci modelu.
 
@@ -298,7 +298,7 @@ using (FamilyTreeAdapter adapter =
 
 ##### <a name="to-resolve-modelbus-references-in-a-text-template"></a>Chcete-li vyřešit odkazy ModelBus v textové šabloně
 
-1. DSL, který chcete získat přístup, musí být adaptér ModelBus, která je nakonfigurovaná pro přístup k textu šablony. Další informace najdete v tématu [poskytuje přístup k DSL](#provide).
+1. DSL, který chcete získat přístup, musí být adaptér ModelBus, která je nakonfigurovaná pro přístup k textu šablony. Další informace najdete v tématu [poskytnutí přístupu k DSL](#provide).
 
 2. Obvykle které budou přistupovat k cíl DSL pomocí Service Bus odkaz modelu (MBR) uložené ve zdroji DSL. Šablony proto obsahuje směrnici zdroj DSL a navíc kód vyřešit hlavní spouštěcí záznam. Další informace o textových šablonách naleznete v tématu [generování kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md).
 
@@ -337,7 +337,7 @@ using (FamilyTreeAdapter adapter =
 
    ```
 
-   Názorný postup a další informace najdete v tématu [pomocí Visual Studio ModelBus v textové šabloně](../modeling/using-visual-studio-modelbus-in-a-text-template.md)
+   Další informace a návod najdete v tématu [použití Visual Studio Modelbus v textové šabloně](../modeling/using-visual-studio-modelbus-in-a-text-template.md) .
 
 ## <a name="serializing-a-modelbusreference"></a>Serializace ModelBusReference
  Pokud chcete uložit `ModelBusReference` (MBR) ve formě řetězce, můžete ho serializovat:
@@ -349,10 +349,10 @@ ModelBusReference elementReferenceRestored =
     modelBus.DeserializeReference(serialized, null);
 ```
 
- Hlavní spouštěcí záznam, který serializuje tímto způsobem je nezávislé na kontextu. Pokud použijete jednoduchý adaptér souborové sběrnice modelu, hlavní spouštěcí záznam obsahuje absolutní cestu k souboru. Toto je dostatečná, pokud se nikdy nepřesouvají soubory instance modelu. Ale budou se soubory modelu obvykle položky v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu. Uživatelé se očekávají, že se moct přesunout celého projektu do různých částí systému souborů. Očekávají se také budete moci pokračovat v projektu pod správou zdrojových kódů a otevřete ho v různých počítačích. Názvy cest by měly být serializovány proto relativní k umístění projektu, který obsahuje soubory.
+ Hlavní spouštěcí záznam, který serializuje tímto způsobem je nezávislé na kontextu. Pokud použijete jednoduchý adaptér souborové sběrnice modelu, hlavní spouštěcí záznam obsahuje absolutní cestu k souboru. Toto je dostatečná, pokud se nikdy nepřesouvají soubory instance modelu. Soubory modelu jsou však obvykle položky v projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Uživatelé se očekávají, že se moct přesunout celého projektu do různých částí systému souborů. Očekávají se také budete moci pokračovat v projektu pod správou zdrojových kódů a otevřete ho v různých počítačích. Názvy cest by měly být serializovány proto relativní k umístění projektu, který obsahuje soubory.
 
 ### <a name="serializing-relative-to-a-specified-file-path"></a>Serializace relativní k cestě zadaného souboru
- A `ModelBusReference` obsahuje `ReferenceContext`, což je slovník, ve kterém můžete ukládat informace, jako je cesta k souboru relativně k by měly být serializovány.
+ `ModelBusReference` obsahuje `ReferenceContext`, což je slovník, ve kterém můžete ukládat informace, například relativní cestu k souboru, do které by měl být serializován.
 
  K serializaci relativní k cestě:
 
@@ -376,15 +376,15 @@ ModelBusReference elementReferenceRestored =
 ### <a name="modelbusreferences-created-by-other-adapters"></a>Vytvoří další adaptéry ModelBusReferences
  Následující informace jsou užitečné, pokud chcete vytvořit vlastní adaptér.
 
- A `ModelBusReference` (MBR) se skládá ze dvou částí: MBR hlavičky, která je deserializovat ve sběrnici modelu a specifické pro adaptér, který zpracovává konkrétní adaptér správce. To umožňuje zadat vlastní formát serializace adaptéru. Například může odkazovat databázi spíš než soubor, nebo může ukládání dalších informací v odkazu na adaptéru. Vlastní adaptér můžete umístit další informace v `ReferenceContext`.
+ `ModelBusReference` (MBR) se skládá ze dvou částí: hlavičky hlavního spouštěcího záznamu (MBR), která je deserializovaná sběrnicí modelu, a konkrétního adaptéru, který je zpracováván konkrétní správcem adaptéru. To umožňuje zadat vlastní formát serializace adaptéru. Například může odkazovat databázi spíš než soubor, nebo může ukládání dalších informací v odkazu na adaptéru. Vlastní adaptér může do `ReferenceContext`umístit další informace.
 
  Při deserializaci MBR, je nutné zadat ReferenceContext, které jsou pak uloženy v objektu MBR. Při serializaci MBR uložené ReferenceContext používá adaptér ke generování řetězce. Deserializovaná řetězec neobsahuje všechny informace ReferenceContext. Například v jednoduchý adaptér souborové ReferenceContext obsahuje kořenovou cestu souboru, který není uložený v řetězci serializovaná MBR.
 
  Hlavní spouštěcí záznam deserializován ve dvou fázích:
 
-- `ModelBusReferencePropertySerializer` je standardní serializátoru, který se zabývá hlavičku MBR. Používá standardní DSL `SerializationContext` vlastnosti kontejneru objektů a dat, která je uložena v `ReferenceContext` pomocí klíče `ModelBusReferencePropertySerializer.ModelBusLoadContextKey`. Konkrétně se `SerializationContext` by měl obsahovat instanci `ModelBus`.
+- `ModelBusReferencePropertySerializer` je standardní serializátor, který se zabývá hlavičkou MBR. Používá standardní kontejner vlastností DSL `SerializationContext`, který je uložený v `ReferenceContext` pomocí `ModelBusReferencePropertySerializer.ModelBusLoadContextKey`Key. Konkrétně `SerializationContext` by měl obsahovat instanci `ModelBus`.
 
-- Adaptér ModelBus se zabývá adaptér konkrétní součást hlavního spouštěcího záznamu. Další informace uložené v ReferenceContext hlavního spouštěcího záznamu může použít. Jednoduchý adaptér souborové udržuje kořenové cesty k souborům pomocí klíčů `FilePathLoadContextKey` a `FilePathSaveContextKey`.
+- Adaptér ModelBus se zabývá adaptér konkrétní součást hlavního spouštěcího záznamu. Další informace uložené v ReferenceContext hlavního spouštěcího záznamu může použít. Jednoduchý adaptér založený na souboru udržuje cesty kořenových souborů pomocí klíčů `FilePathLoadContextKey` a `FilePathSaveContextKey`.
 
      Odkaz na adaptér v souboru modelu je deserializovat pouze v případě, že se používá.
 
@@ -475,19 +475,19 @@ private const string INVALID_REF_FORMAT =
 
  Rozšíření ModelBus provede tyto změny ve vašem řešení DSL.
 
- Když kliknete pravým tlačítkem na diagramem definice DSL, klikněte na tlačítko **povolit Modelbus**a pak vyberte **povolit tento DSL využívat ModelBus**:
+ Když kliknete pravým tlačítkem myši na diagram definice DSL, klikněte na **povolit ModelBus**a pak vyberte **Povolit tuto DSL pro využívání ModelBus**:
 
-- V projektu DSL se přidá odkaz na **Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0.dll**
+- V projektu DSL se přidá odkaz do **Microsoft. VisualStudio. Modeling. SDK. Integration. 11.0. dll.**
 
-- V definici DSL, se přidá odkaz na externí: `Microsoft.VisualStudio.Modeling.Integration.ModelBusReference`.
+- V definici DSL je přidán odkaz na externí typ: `Microsoft.VisualStudio.Modeling.Integration.ModelBusReference`.
 
-   Zobrazí se odkaz v **Průzkumník DSL**v části **typy domén**. Chcete-li ručně přidat odkazy na externí, klikněte pravým tlačítkem na kořenový uzel.
+   Odkaz můžete zobrazit v **Průzkumníku DSL**v části **typy domén**. Chcete-li ručně přidat odkazy na externí, klikněte pravým tlačítkem na kořenový uzel.
 
-- Přidá nový soubor šablony, **Dsl\GeneratedCode\ModelBusReferencesSerialization.tt**.
+- Přidá se nový soubor šablony, **Dsl\GeneratedCode\ModelBusReferencesSerialization.TT**.
 
-  Když nastavíte typu doménová vlastnost, která ModelBusReference a pak klikněte pravým tlačítkem na vlastnost a klikněte na **specifické vlastnosti povolit ModelBusReference**:
+  Když nastavíte typ doménové vlastnosti na ModelBusReference, kliknete pravým tlačítkem na vlastnost a kliknete na **Povolit ModelBusReference specifické vlastnosti**:
 
-- Několik atributů CLR se přidají do doménové vlastnosti. Můžete vidět v pole vlastních atributů v okně Vlastnosti. V **Dsl\GeneratedCode\DomainClasses.cs**, můžete zobrazit atributy v deklaraci vlastnosti:
+- Několik atributů CLR se přidají do doménové vlastnosti. Můžete vidět v pole vlastních atributů v okně Vlastnosti. V **Dsl\GeneratedCode\DomainClasses.cs**uvidíte atributy v deklaraci vlastnosti:
 
   ```
   [System.ComponentModel.TypeConverter(typeof(
@@ -501,13 +501,13 @@ private const string INVALID_REF_FORMAT =
     ("Choose a model file", "Target model|*.target")]
   ```
 
-  Když kliknete pravým tlačítkem myši diagramem definice DSL, klikněte na tlačítko **povolit ModelBus**a vyberte **zveřejnit tento DSL k ModelBus**:
+  Po kliknutí pravým tlačítkem na diagram definice DSL klikněte na **povolit ModelBus**a vyberte možnost **zveřejnit tuto DSL pro ModelBus**:
 
-- Nový projekt `ModelBusAdapter` je přidán do řešení.
+- Do řešení se přidá nový projekt `ModelBusAdapter`.
 
-- Odkaz na `ModelBusAdapter` se přidá do `DslPackage` projektu. `ModelBusAdapter` obsahuje odkaz na `Dsl` projektu.
+- Odkaz na `ModelBusAdapter` je přidán do projektu `DslPackage`. `ModelBusAdapter` má odkaz na projekt `Dsl`.
 
-- V **DslPackage\source.extention.tt**, `|ModelBusAdapter|` se přidá jako komponentu MEF.
+- V **DslPackage\source.extention.TT**je `|ModelBusAdapter|` přidána jako Komponenta MEF.
 
 ## <a name="see-also"></a>Viz také
- [Postupy: otevření modelu ze souboru v kódu programu](../modeling/how-to-open-a-model-from-file-in-program-code.md) [modely UML integrovat s jinými modely a nástroji](../modeling/integrate-uml-models-with-other-models-and-tools.md) [postupy: přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md) [pomocí Visual Studio ModelBus v Textové šablony](../modeling/using-visual-studio-modelbus-in-a-text-template.md)
+ [Postupy: otevření modelu ze souboru v programovém kódu](../modeling/how-to-open-a-model-from-file-in-program-code.md) [Integrace modelů UML s jinými modely a nástroji](../modeling/integrate-uml-models-with-other-models-and-tools.md) [Postupy: Přidání obslužné rutiny](../modeling/how-to-add-a-drag-and-drop-handler.md) přetažení [pomocí Visual Studio Modelbus v textové šabloně](../modeling/using-visual-studio-modelbus-in-a-text-template.md)

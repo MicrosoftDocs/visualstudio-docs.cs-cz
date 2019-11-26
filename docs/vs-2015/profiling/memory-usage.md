@@ -19,7 +19,7 @@ ms.locfileid: "74298365"
 # <a name="memory-usage"></a>Využití paměti
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Najděte nevracení paměti a neefektivní paměť při ladění pomocí nástroje pro diagnostiku **využití paměti** integrovaného ladicího programu. Umožňuje nástroj využití paměti, můžete provést jeden nebo více *snímky* spravovaný a nativní paměti haldy. Můžete shromažďovat snímky technologie .NET, nativní nebo smíšený režim (.NET a nativní) aplikace.  
+Najděte nevracení paměti a neefektivní paměť při ladění pomocí nástroje pro diagnostiku **využití paměti** integrovaného ladicího programu. Nástroj využití paměti umožňuje provést jeden nebo více *snímků* spravované a nativní haldy paměti. Můžete shromažďovat snímky technologie .NET, nativní nebo smíšený režim (.NET a nativní) aplikace.  
   
 - Jeden snímek pochopit jeho relativní dopad typů objektů na využití paměti a vyhledání kódu vaší aplikace, která používá paměť neefektivně, můžete analyzovat.  
   
@@ -29,12 +29,12 @@ Najděte nevracení paměti a neefektivní paměť při ladění pomocí nástro
   
   ![DiagnosticTools&#45;-datum1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-v-datum1")  
   
-  I když můžete shromažďovat snímky paměti v kdykoli **využití paměti** nástroj, ladicího programu sady Visual Studio můžete použít k řízení, jak vaše aplikace provádí při zkoumání problémů s výkonem. Nastavení zarážek, krokování, příkaz Pozastavit vše a další ladicí program akce pomáhá soustředit vaše vyšetřování výkonu cesty kódu, které jsou nejrelevantnější. Provedení těchto akcí v době, kdy je vaše aplikace spuštěná, může eliminovat hluk kódu, který vás zajímá, a může významně zkrátit dobu, po kterou vám pomůže diagnostikovat problém.  
+  I když můžete shromažďovat snímky paměti kdykoli v nástroji **využití paměti** , můžete použít ladicí program sady Visual Studio k řízení toho, jak se vaše aplikace spouští při zkoumání problémů s výkonem. Nastavení zarážek, krokování, příkaz Pozastavit vše a další ladicí program akce pomáhá soustředit vaše vyšetřování výkonu cesty kódu, které jsou nejrelevantnější. Provedení těchto akcí v době, kdy je vaše aplikace spuštěná, může eliminovat hluk kódu, který vás zajímá, a může významně zkrátit dobu, po kterou vám pomůže diagnostikovat problém.  
   
   Můžete také použít nástroj paměti mimo ladicí program. Zobrazit [využití paměti bez ladění](https://msdn.microsoft.com/library/8883bc5f-df86-4f84-aa2b-a21150f499b0).  
   
 > [!NOTE]
-> **Podpora vlastního alokátoru** profiler nativní paměť funguje tak, že shromažďování přidělení [trasování událostí pro Windows](https://msdn.microsoft.com/library/windows/desktop/bb968803\(v=vs.85\).aspx) data událostí, protože ho vygeneroval za běhu.  Na úrovni zdroje byly anotované alokátorů CRT a sadu Windows SDK tak, aby jejich přidělení dat se dají zachytit.  Pokud píšete vlastní přidělování, než jsou jakékoli funkce, které vracejí ukazatel na nově přidělenou paměť haldy, mohou být upraveny pomocí [__declspec](https://msdn.microsoft.com/library/832db681-e8e1-41ca-b78c-cd9d265cdb87)(přidělování), jak je vidět v tomto příkladu pro myMalloc:  
+> **Podpora vlastního přidělování** Profil nativní paměti funguje tak, že shromažďuje data události trasování událostí pro [Windows](https://msdn.microsoft.com/library/windows/desktop/bb968803\(v=vs.85\).aspx) vygenerovaná během běhu.  Na úrovni zdroje byly anotované alokátorů CRT a sadu Windows SDK tak, aby jejich přidělení dat se dají zachytit.  Pokud píšete vlastní přidělování, než jsou jakékoli funkce, které vracejí ukazatel na nově přidělenou paměť haldy, mohou být upraveny pomocí [__declspec](https://msdn.microsoft.com/library/832db681-e8e1-41ca-b78c-cd9d265cdb87)(přidělování), jak je vidět v tomto příkladu pro myMalloc:  
 >   
 > `__declspec(allocator) void* myMalloc(size_t size)`  
   
@@ -83,11 +83,11 @@ Najděte nevracení paměti a neefektivní paměť při ladění pomocí nástro
   
  ![Správa cest sestav &#45; spravovaného typu ladicího programu do kořenového adresáře](../profiling/media/dbgdiag-mem-managedtypesreport-pathstoroot.png "DBGDIAG_MEM_ManagedTypesReport_PathsToRoot")  
   
- Horní podokno zobrazuje počet a velikost typů ve snímku, včetně velikosti všech objektů, na které odkazuje typ (**celkové velikosti**).  
+ V horním podokně se zobrazuje počet a velikost typů ve snímku, včetně velikosti všech objektů, na které se odkazuje typ (**Celková velikost**).  
   
- **Cesty ke kořenu** stromu v dolním podokně zobrazí objekty, které odkazují na vybraném v horním podokně typu. Paměť pro objekt vyčistí systému uvolňování paměti rozhraní .NET Framework, pouze v případě, že byly vydány poslední typ, který na ni odkazuje.  
+ **Cesta ke kořenovému** stromu v dolním podokně zobrazuje objekty, které odkazují na typ vybraný v horním podokně. Paměť pro objekt vyčistí systému uvolňování paměti rozhraní .NET Framework, pouze v případě, že byly vydány poslední typ, který na ni odkazuje.  
   
- **Odkazované typy** Strom zobrazuje odkazy, které jsou uloženy ve vybraném v horním podokně typu.  
+ Stromová struktura **odkazovaného** typu zobrazuje odkazy, které jsou uloženy podle typu vybraného v horním podokně.  
   
  ![Zobrazení sestavy spravovaných typů eferenced](../profiling/media/dbgdiag-mem-managedtypesreport-referencedtypes.png "DBGDIAG_MEM_ManagedTypesReport_ReferencedTypes")  
   
@@ -95,36 +95,36 @@ Najděte nevracení paměti a neefektivní paměť při ladění pomocí nástro
   
  ![Zobrazení instancí](../profiling/media/dbgdiag-mem-managedtypesreport-instances.png "DBGDIAG_MEM_ManagedTypesReport_Instances")  
   
- **Instance** zobrazení instancí vybraného objektu ve snímku v horním podokně. Podokno cesty k kořenu a odkazované objekty zobrazuje objekty, které odkazují na vybranou instanci a typy, na které odkazuje vybraná instance. Když je ladicí program zastaven v místě, kde byl snímek vytvořen, můžete umístit ukazatel myši nad buňku Value a zobrazit tak hodnoty objektu v popisu tlačítka.  
+ Zobrazení **instance** zobrazuje instance vybraného objektu ve snímku v horním podokně. Podokno cesty k kořenu a odkazované objekty zobrazuje objekty, které odkazují na vybranou instanci a typy, na které odkazuje vybraná instance. Když je ladicí program zastaven v místě, kde byl snímek vytvořen, můžete umístit ukazatel myši nad buňku Value a zobrazit tak hodnoty objektu v popisu tlačítka.  
   
 ### <a name="native-type-reports"></a>Nativní typ sestavy  
  Vyberte aktuální odkaz na **nativní přidělení** nebo buňku **velikosti nativního haldy** v tabulce souhrn využití paměti okna **diagnostické nástroje** .  
   
  ![Zobrazení nativního typu](../profiling/media/dbgdiag-mem-native-typesview.png "DBGDIAG_MEM_Native_TypesView")  
   
- **Zobrazení typů** zobrazuje počet a velikost typů ve snímku.  
+ **Zobrazení typy** zobrazuje počet a velikost typů ve snímku.  
   
 - Vyberte ikonu instance (![ikona instance ve sloupci Typ objektu](../misc/media/dbg-mma-instancesicon.png "DBG_MMA_InstancesIcon")) vybraného typu pro zobrazení informací o objektech vybraného typu ve snímku.  
   
-     **Instance** zobrazení zobrazí každou instanci daného typu. Výběr instance zobrazí, které vedlo k vytvoření instance v zásobníku volání **zásobník volání přidělení** podokně.  
+     Zobrazení **instance** zobrazuje všechny instance vybraného typu. Výběr instance zobrazí zásobník volání, jehož výsledkem bylo vytvoření instance v podokně **zásobník volání přidělení** .  
   
      ![Zobrazení instancí](../profiling/media/dbgdiag-mem-native-instances.png "DBGDIAG_MEM_Native_Instances")  
   
-- Zvolte **zobrazení zásobníků** v **režim zobrazení** seznamu zobrazíte zásobník přidělení pro vybraný typ.  
+- Výběrem možnosti **zobrazení zásobníků** v seznamu **režim zobrazení** zobrazíte zásobník přidělení pro vybraný typ.  
   
      ![Zobrazení zásobníků](../profiling/media/dbgdiag-mem-native-stacksview.png "DBGDIAG_MEM_Native_StacksView")  
   
 ### <a name="change-diff-reports"></a>Změnit sestavy (rozdíl)  
   
-- Zvolte odkaz změnit v buňce souhrnnou tabulku **využití paměti** kartě **diagnostické nástroje** okna.  
+- Vyberte odkaz změnit v buňce tabulky souhrn na kartě **využití paměti** v okně **diagnostické nástroje** .  
   
    ![Zvolit změnu &#40;sestavy DIF&#41;f](../profiling/media/dbgdiag-mem-choosediffreport.png "DBGDIAG_MEM_ChooseDiffReport")  
   
-- Zvolte snímek v **porovnat** seznam spravované nebo nativní sestavy.  
+- Vyberte snímek v seznamu **porovnat se** správou nebo nativní sestavou.  
   
    ![Výběr snímku ze seznamu porovnat s](../profiling/media/dbgdiag-mem-choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")  
   
-  Sestava změn přidává sloupce (označené **(rozdíl)** ) základní sestavy, které zobrazují rozdíl mezi hodnotami základní snímek a snímek porovnání. Tady je příklad, jak může vypadat rozdílová sestava zobrazení nativního typu:  
+  Sestava změny přidá sloupce (označené jako **(diff)** ) do základní sestavy, která zobrazuje rozdíl mezi základní hodnotou snímku a snímkem porovnání. Tady je příklad, jak může vypadat rozdílová sestava zobrazení nativního typu:  
   
   ![Veiw rozdílu nativních typů](../profiling/media/dbgdiag-mem-native-typesviewdiff.png "DBGDIAG_MEM_Native_TypesViewDiff")  
   

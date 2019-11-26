@@ -21,11 +21,11 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74301463"
 ---
 # <a name="select-condition-dialog-box-legacy"></a>Dialogové okno Vybrat podmínku (starší verze)
-Toto téma popisuje, jak používat dialogové okno **vybrat podmínku** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] potřeba cílit na platformu [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Toto téma popisuje, jak používat dialogové okno **vybrat podmínku** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
 
  Dialogové okno **vybrat podmínku** slouží k výběru podmínky deklarativního pravidla, které se má přiřadit k vlastnosti podmínky aktivity. Tyto podmínky pravidla jsou zpřístupněny jako vlastnosti v následujících programovací model Windows Workflow Foundation nedostupné aktivity:
 
-- [ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65017)
+- [Aktivitou skupiny ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65017)
 
 - [IfElseBranchActivity](https://go.microsoft.com/fwlink?LinkID=65034)
 
@@ -42,9 +42,9 @@ Toto téma popisuje, jak používat dialogové okno **vybrat podmínku** ve star
 |**Nové...**|Kliknutím otevřete [dialogové okno Editor podmínek pravidla (starší verze)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) a vytvořte novou podmínku pravidla.|
 |**Upravit...**|Kliknutím otevřete [dialogové okno Editor podmínek pravidla (starší verze)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) a upravte vybranou podmínku pravidla.|
 |**Přejmenovat...**|Kliknutím otevřete dialogové okno, které slouží k přejmenování vybrané podmínky pravidla.|
-|**Odstranění**|Kliknutím odstraníte vybranou podmínku pravidla.|
+|**Delete**|Kliknutím odstraníte vybranou podmínku pravidla.|
 |**Náhled podmínky**|Zobrazí výraz podmínky pro vybranou podmínku pravidla.|
-|**OK**|Kliknutím přiřadíte podmínku vybrané pravidlo k podmínce aktivity.|
+|**Ok**|Kliknutím přiřadíte podmínku vybrané pravidlo k podmínce aktivity.|
 
  Další informace o vytváření a úpravách podmínek pravidla najdete v tématu [dialogové okno Editor podmínek pravidla (starší verze)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md).
 

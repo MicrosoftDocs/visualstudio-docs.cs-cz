@@ -6,12 +6,12 @@ manager: lank
 ms.date: 10/13/2019
 ms.topic: conceptual
 description: Přečtěte si o výhodách časopisu CODE Magazine, které jsou součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 6f120bae88a7d613873a9d350e411842904e700e
-ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
+ms.openlocfilehash: 341e21d3411afdd8402d223b455f60bcf39a4a40
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74099590"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491651"
 ---
 # <a name="code-magazine-included-in-visual-studio-subscriptions"></a>Časopis CODE Magazine zahrnutý v předplatných sady Visual Studio
 
@@ -39,7 +39,7 @@ Proces nastavení předplatného časopisu CODE Magazine je jednoduchý.  Stač�
       > ![Podrobnosti předplatného časopisu CODE Magazine](_img/vs-code-magazine/vs-code-magazine-details.png "Podrobnosti a cena předplatného")
 6. V dalším kroku budete muset zadat informace o předplatiteli a adresu pro doručení.  (Adresa pro doručování se vyžaduje i pro digitální odběry, protože podporuje plnění, výběr nabídky a procesy digitálního přístupu.)
 7. Pokud žijete mimo USA a rozhodnete, že obdržíte tištěné předplatné časopisu, můžete být požádáni o zadání fakturační adresy a platební informace, které pokrývají náklady na expedici. 
-8. Kliknutím na zaškrtávací políčko můžete vyjádřit souhlas s kódem HTML Newletter.
+8. Kliknutím na zaškrtávací políčko můžete vyjádřit souhlas s bulletinem HTML CODE.
    > [!div class="mx-imgBorder"]
    > ![Informace předplatitele CODE Magazine](_img/vs-code-magazine/vs-code-magazine-subscriber-info.png "Informace o předplatiteli a adresa pro doručení")
 9. Kliknutím na **umístit objednávku** dokončete vaše předplatné.  

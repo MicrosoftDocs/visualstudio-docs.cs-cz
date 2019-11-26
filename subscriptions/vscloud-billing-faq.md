@@ -6,22 +6,22 @@ manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
 description: Otázky fakturace pro cloudová předplatná.
-ms.openlocfilehash: 961cd646ecf0ed9c34c734292491c5f3a8e67480
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 12ff77a052e54520885642cb3cd6ed1dea31506b
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816391"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491271"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Nejčastější dotazy k fakturaci pro cloudové předplatné sady Visual Studio
 Nezapomeňte porovnat výhody [a ceny cloudového předplatného](https://visualstudio.microsoft.com/vs/pricing/) , abyste porozuměli výhodám každého předplatného sady Visual Studio, s porovnáním předplatných v cloudu a standardním prostředím, podrobnosti o výhodách pro předplatitele a další.
 
 ## <a name="general-purchasing-questions"></a>Obecné dotazy k nákupu
 ### <a name="q-can-i-buy-visual-studio-cloud-subscriptions-using-a-purchase-order"></a>Otázka: mohu koupit cloudová předplatná sady Visual Studio pomocí nákupní objednávky?
-Odpověď: ne. Všechna cloudová předplatná sady Visual Studio musí být zakoupená pomocí předplatného Azure. (Můžete si ho představit jako fakturační účet Azure.)
+Odpověď: Ne. Všechna cloudová předplatná sady Visual Studio musí být zakoupená pomocí předplatného Azure. (Můžete si ho představit jako fakturační účet Azure.)
 
 ### <a name="q-what-types-of-azure-subscriptions-can-be-used-to-buy-visual-studio-cloud-subscriptions"></a>Otázka: Jaké typy předplatných Azure je možné použít k nákupu cloudových předplatných sady Visual Studio?
-Odpověď: Většina předplatných Azure je možné použít – podporujeme předplatná Azure připojená k vašemu [smlouva Enterprise (EA)](https://azure.microsoft.com/pricing/enterprise-agreement/), předplatná Azure nastavená poskytovateli Cloud Solution Providers (CSP), předplatná Azure nastavená prostřednictvím prodejců Microsoft Open License, předplatné Azure a průběžné platby.
+Odpověď: Většina předplatných Azure je možné použít – podporujeme předplatná Azure připojená k vašemu [smlouva Enterprise (EA)](https://azure.microsoft.com/pricing/enterprise-agreement/), předplatná Azure nastavená poskytovateli Cloud Solution Providers (CSP), předplatná Azure se nastavila prostřednictvím prodejců Microsoft Open License a předplatných Azure s průběžnými platbami.
 
 Některé typy předplatných Azure, včetně [bezplatné zkušební verze Azure](https://azure.microsoft.com/pricing/free-trial/) a předplatných, která jsou součástí předplatných sady Visual Studio, se nedají použít.
 
@@ -75,13 +75,13 @@ Sleva se vztahuje také na poplatky v daném měsíčním fakturačním období.
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
 
-## <a name="other-questions"></a>Další dotazy
+## <a name="other-questions"></a>Další otázky
 ### <a name="q-can-i-use-the-monthly-azure-devtest-individual-credit-as-a-visual-studio-subscriber-to-buy-more-visual-studio-cloud-subscriptions"></a>Otázka: můžu použít měsíční kredit Azure DevTest jako předplatitele sady Visual Studio k nákupu dalších cloudových předplatných sady Visual Studio?
 Odpověď: Ne, nemůžete použít svůj [měsíční kredit Azure DevTest](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) jako předplatitele sady Visual Studio k placení za Visual Studio Marketplace nákup. Jakékoli nákupy cloudových předplatných sady Visual Studio budou Fakturovatelné na platební kartu.
 Než začnete nakupovat, budete muset [Odebrat limit útraty](https://azure.microsoft.com/pricing/spending-limits/).
 
 ### <a name="q-whats-the-difference-between-annual-and-monthly-cloud-subscriptions"></a>Otázka: Jaký je rozdíl mezi ročním a měsíčním předplatným cloudu?
-Odpověď: měsíční předplatné cloudu zahrnuje sadu Visual Studio plus použití Azure DevOps Services a TFS. Tato roční cloudová předplatná mají tuto roli moc, ale také zahrnují výhody pro předplatitele, včetně použití Windows a dalšího softwaru Microsoftu k instalaci a spuštění pro vývoj a testování, měsíční kredit Azure DevTest indiviual, který se použije pro experimentování s Azure. služby a vývoj a testování v cloudu, školení, podpora a mnoho dalšího.
+Odpověď: měsíční předplatné cloudu zahrnuje sadu Visual Studio plus použití Azure DevOps Services a TFS. Tato roční cloudová předplatná mají tuto roli moc, ale také zahrnují výhody pro předplatitele, včetně použití Windows a dalšího softwaru Microsoftu k instalaci a spuštění pro vývoj a testování, měsíční kredit Azure DevTest, který se použije pro experimentování s Azure. služby a vývoj a testování v cloudu, školení, podpora a mnoho dalšího.
 [Porovnání výhod a cen cloudových předplatných](https://visualstudio.microsoft.com/vs/pricing/)
 
 ### <a name="q-do-i-get-new-versions-of-visual-studio-if-i-buy-a-visual-studio-cloud-subscription"></a>Otázka: Chci dostávat nové verze sady Visual Studio, pokud si koupíte cloudové předplatné sady Visual Studio?

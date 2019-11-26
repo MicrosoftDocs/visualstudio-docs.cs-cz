@@ -38,10 +38,10 @@ Emulátor sady Visual Studio pro Android je desktopová aplikace, která emuluje
   
 - [Funkce, které nemůžete testovat v emulátoru](#FeaturesNonTest)  
   
-- [Informační zdroje podpory](#Support)  
+- [Prostředky podpory](#Support)  
   
 ## <a name="Installing"></a>Instalace a odinstalace  
- Instalují  
+ Instalace  
   
  Emulátor sady Visual Studio pro Android je součástí nástrojů pro různé platformy, které jsou dostupné v aplikaci Visual Studio a bude se instalovat během vlastního nastavení sady Visual Studio, když vyberete mobilní vývoj pro různé platformy, pak běžné nástroje a sady pro vývoj softwaru. a potom emulátor sady Visual Studio pro Android.  
   
@@ -103,7 +103,7 @@ Emulátor sady Visual Studio pro Android je desktopová aplikace, která emuluje
   
 - Světlost. Změna úrovně jasu emulátoru nebude vizuálně ovlivňovat způsob, jakým se zařízení zobrazuje na obrazovce.  
   
-## <a name="Support"></a> Informační zdroje podpory  
+## <a name="Support"></a>Prostředky podpory  
  Pokud hostitelský počítač splňuje požadavky na systém a narazíte na problém, která nejsou zahrnuta do tohoto průvodce odstraňováním potíží:  
   
 - Položte otázku na StackOverflow pomocí [emulátoru Androidu](https://stackoverflow.com/questions/tagged/android-emulator) a sady Visual Studio.  

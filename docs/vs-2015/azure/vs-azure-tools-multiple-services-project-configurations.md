@@ -55,7 +55,7 @@ Pokud jste už přidali koncový bod HTTPS, je ve výchozím nastavení povolen�
 
 Ve výchozím nastavení jsou pro webovou roli povoleny diagnostiky. Projekt cloudové služby Azure a účet úložiště se nastaví tak, aby používal emulátor místního úložiště. Až budete připraveni k nasazení do Azure, můžete vybrat tlačítko Tvůrce ( **...** ) a místo toho použít službu Azure Storage. Diagnostická data můžete přenést na účet úložiště na vyžádání nebo v automaticky naplánovaných intervalech. Další informace o diagnostice Azure najdete v tématu [Povolení diagnostiky v azure Cloud Services a Virtual Machines](/azure/cloud-services/cloud-services-dotnet-diagnostics).
 
-## <a name="settings-page"></a>Stránka nastavení
+## <a name="settings-page"></a>Stránka Nastavení
 
 Na stránce **Nastavení** můžete přidat nastavení do konfigurace jako páry název-hodnota. Kód spuštěný v roli může číst hodnoty nastavení konfigurace za běhu pomocí tříd poskytovaných [spravovanou knihovnou Azure](https://go.microsoft.com/fwlink?LinkID=171026), konkrétně metodou [GetConfigurationSettingValue](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.getconfigurationsettingvalue.aspx) .
 

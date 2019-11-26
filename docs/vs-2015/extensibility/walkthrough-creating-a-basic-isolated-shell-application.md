@@ -115,7 +115,7 @@ Tento návod ukazuje, jak vytvořit řešení izolovaného prostředí, přizpů
   
 2. Odkomentujte následující řádek:  
   
-     [$RootKey$\Packages\\{87569308-4813-40a0-9cd0-d7a30838ca3f}]  
+     [$RootKey $ \Packages\\{87569308-4813-40a0-9cd0-d7a30838ca3f}]  
   
 3. Znovu sestavte řešení a spusťte ladění izolovaného prostředí. Otevřete soubor XML, například \MyVSShellStub\MyVSShellStub\MyVSShellStubUI\MyVSShellStubUI.vsct. Ověřte, že klíčová slova XML v souboru nejsou zabarvení a že při zadání "<" na řádku se nepřinesou popisy XML.  
   
@@ -248,7 +248,7 @@ Tento návod ukazuje, jak vytvořit řešení izolovaného prostředí, přizpů
   
 18. V podokně **co chcete najít?** v rozevíracím seznamu vyberte **položku registru** a klikněte na **Další**.  
   
-19. V podokně **jak ho chcete vyhledat?** vyberte jako kořen registru **HKEY_LOCAL_MACHINE** . Zadejte **SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** pro 64 systémy nebo **SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** pro 32 bitové systémy a jako hodnotu registru zadejte **install** . Klikněte na **Další**.  
+19. V podokně **jak ho chcete vyhledat?** vyberte jako kořen registru **HKEY_LOCAL_MACHINE** . Zadejte **SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** pro 64 systémy nebo **SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** pro 32 bitové systémy a jako hodnotu registru zadejte **install** . Klikněte na **Další**.  
   
 20. V podokně **co chcete s hodnotou?** zadejte **Tento produkt vyžaduje instalaci sady Visual Studio 2015 Isolated Shell Redistributable.** jako text zobrazení a klikněte na tlačítko **Dokončit**.  
   

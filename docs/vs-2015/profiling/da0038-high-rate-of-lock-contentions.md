@@ -27,15 +27,15 @@ Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [DA0038: vysok
   
 |||  
 |-|-|  
-|ID pravidla|DA0038|  
+|Id pravidla|DA0038|  
 |Kategorie|Využití .NET Framework|  
 |Metoda profilace|Kontrol<br /><br /> Instrumentace<br /><br /> Paměť .NET|  
 |Zpráva|Dochází k vysoké míře sporů zámků .NET. Vyzkoumejte důvod pro tento spor zámku spuštěním profilu souběžnosti.|  
-|Typ pravidla|Informace o|  
+|Typ pravidla|Informace|  
   
  Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit alespoň 25 vzorků.  
   
-## <a name="cause"></a>příčina  
+## <a name="cause"></a>Příčina  
  Data o výkonu systému shromážděná s daty profilace znamenají, že během provádění aplikace došlo k výraznému vysokému podílu kolizí zámků. Zvažte znovu profilaci pomocí metody profilace souběžnosti, abyste zjistili příčinu sporů.  
   
 ## <a name="rule-description"></a>Popis pravidla  

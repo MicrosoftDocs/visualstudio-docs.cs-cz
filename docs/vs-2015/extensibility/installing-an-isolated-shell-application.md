@@ -178,8 +178,8 @@ Pokud chcete nainstalovat aplikaci prostředí, musíte provést následující 
   
     |*ProjectName*. reg|ApplicationRegisty.wxs|  
     |-----------------------|----------------------------|  
-    |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}]<br /><br /> @ = "Objekt DTE PhotoStudio"|\<RegistryKey ID = ' DteClsidRegKey ' root = ' HKCR ' klíč = ' $ (var. DteClsidRegKey) ' Action = ' createAndRemoveOnUninstall ' ><br /><br /> \<RegistryValue Type = ' řetězec ' name = ' @ ' value = ' $ (var. ShortProductName) objekt DTE '/><br /><br /> \</RegistryKey>|  
-    |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}\LocalServer32]<br /><br /> @="$RootFolder$\PhotoStudio.exe"|\<RegistryKey ID = ' DteLocSrv32RegKey ' root = ' HKCR ' klíč = ' $ (var. DteClsidRegKey) \LocalServer32 ' Action = ' createAndRemoveOnUninstall ' ><br /><br /> \<RegistryValue Type='string' Name='@' Value='[INSTALLDIR]$(var.ShortProductName).exe' /><br /><br /> \</RegistryKey>|  
+    |[HKEY_CLASSES_ROOT \CLSID\\{bb431796-a179-4DF7-b65d-c0df6bda7cc6}]<br /><br /> @ = "Objekt DTE PhotoStudio"|\<RegistryKey ID = ' DteClsidRegKey ' root = ' HKCR ' klíč = ' $ (var. DteClsidRegKey) ' Action = ' createAndRemoveOnUninstall ' ><br /><br /> \<RegistryValue Type = ' řetězec ' name = ' @ ' value = ' $ (var. ShortProductName) objekt DTE '/><br /><br /> \</RegistryKey >|  
+    |[HKEY_CLASSES_ROOT \CLSID\\{bb431796-a179-4DF7-b65d-c0df6bda7cc6} \LocalServer32]<br /><br /> @="$RootFolder$\PhotoStudio.exe"|\<RegistryKey ID = ' DteLocSrv32RegKey ' root = ' HKCR ' klíč = ' $ (var. DteClsidRegKey) \LocalServer32 ' Action = ' createAndRemoveOnUninstall ' ><br /><br /> \<RegistryValue Type = ' řetězec ' name = ' @ ' value = ' [INSTALLDIR] $ (var. ShortProductName). exe/><br /><br /> \</RegistryKey >|  
   
      V tomto příkladu var. DteClsidRegKey převede na klíč registru v horním řádku. Var. ShortProductName se překládá na `PhotoStudio`.  
   

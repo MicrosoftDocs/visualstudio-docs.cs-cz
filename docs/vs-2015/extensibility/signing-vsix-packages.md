@@ -46,7 +46,7 @@ Sestavení rozšíření nemusí být podepsána předtím, než mohou běžet v
   
    Například pro podepsání souborem certifikátu chráněného heslem:  
   
-   VSIXSignTool.exe sign /f \<certfile> /p \<password> \<VSIXfile>  
+   VSIXSignTool. exe Sign/f \<Soubor_certifikátu >/p \<heslo > \<VSIXfile >  
   
 ## <a name="see-also"></a>Viz také  
  [Odesílání rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md)

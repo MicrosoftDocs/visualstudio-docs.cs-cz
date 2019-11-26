@@ -74,7 +74,7 @@ V aplikaci Visual Studio můžete definovat rozšíření pro modelování diagr
 
         |||
         |-|-|
-        |**Zadejte** =|**Microsoft.VisualStudio.MefComponent**|
+        |**Zadejte** =|**Microsoft. VisualStudio. MefComponent**|
         | = **zdroje**|**Projekt v aktuálním řešení**|
         | = **projektu**|*Váš projekt knihovny tříd*|
         |**Vložit do této složky** =|*obsahovat*|
@@ -130,7 +130,7 @@ V aplikaci Visual Studio můžete definovat rozšíření pro modelování diagr
 
 #### <a name="to-uninstall-an-extension"></a>Odinstalace rozšíření
 
-1. Na **nástroje** nabídky, klikněte na tlačítko **rozšíření a aktualizace**.
+1. V nabídce **nástroje** klikněte na možnost **rozšíření a aktualizace**.
 
 2. Rozbalte položku **nainstalovaná rozšíření**.
 
@@ -138,7 +138,7 @@ V aplikaci Visual Studio můžete definovat rozšíření pro modelování diagr
 
    Zřídka se vadné rozšíření nedokáže načíst a vytvoří sestavu v okně chyb, ale nezobrazí se ve Správci rozšíření. V takovém případě můžete odebrat rozšíření odstraněním souboru z následujícího umístění, kde *% localappdata%* je obvykle *jednotka*: \Users\\*username*\AppData\Local:
 
-   *%LocalAppData%* **\Microsoft\VisualStudio\\[version]\Extensions**
+   *% Localappdata%* **\Microsoft\VisualStudio\\[verze] \Extensions**
 
 ## <a name="see-also"></a>Viz také
  [Definování profilu pro rozšiřování UML](../modeling/define-a-profile-to-extend-uml.md) [Definování vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md) definování [omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md) [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md)

@@ -271,7 +271,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
    Zřídka se vadné rozšíření nedokáže načíst a vytvoří sestavu v okně chyb, ale nezobrazí se ve Správci rozšíření. V takovém případě můžete odebrat rozšíření odstraněním souboru z:
 
-   *%LocalAppData%* **\Local\Microsoft\VisualStudio\\[version]\Extensions**
+   *% Localappdata%* **\Local\Microsoft\VisualStudio\\[verze] \Extensions**
 
 ## <a name="MenuExample"></a>Případě
  Následující příklad ukazuje kód pro příkaz nabídky, který bude zakódovat názvy dvou prvků v diagramu tříd. Tento kód musí být sestaven v projektu rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a nainstalován tak, jak je popsáno v předchozích částech.

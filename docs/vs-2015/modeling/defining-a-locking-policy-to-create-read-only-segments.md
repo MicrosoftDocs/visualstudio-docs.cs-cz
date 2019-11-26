@@ -79,14 +79,14 @@ partition.SetLocks(Locks.Delete);
 
 |Hodnota|Význam, pokud je `IsLocked(Value)` true|
 |-----------|------------------------------------------|
-|Žádný|Bez omezení.|
+|Žádné|Bez omezení.|
 |Vlastnost|Vlastnosti domény prvků nelze změnit. Toto neplatí pro vlastnosti, které jsou generovány rolí doménové třídy v relaci.|
 |Přidejte|V oddílu nebo v úložišti nelze vytvořit nové prvky a odkazy.<br /><br /> Nedá se použít pro `ModelElement`.|
 |Přesunutí|Element nelze přesunout mezi oddíly, pokud `element.IsLocked(Move)` má hodnotu true, nebo pokud má `targetPartition.IsLocked(Move)` hodnotu true.|
-|Odstranit|Element nelze odstranit, je-li tento zámek nastaven na samotném prvku nebo na některé prvky, na které by se rozšířilo odstranění, jako jsou vložené prvky a tvary.<br /><br /> Pomocí `element.CanDelete()` můžete zjistit, zda lze prvek odstranit.|
+|Odstranění|Element nelze odstranit, je-li tento zámek nastaven na samotném prvku nebo na některé prvky, na které by se rozšířilo odstranění, jako jsou vložené prvky a tvary.<br /><br /> Pomocí `element.CanDelete()` můžete zjistit, zda lze prvek odstranit.|
 |Změnit pořadí|Řazení odkazů na RolePlayer se nedá změnit.|
 |RolePlayer|Sadu odkazů, které jsou nasource v tomto prvku, nelze změnit. Například nové prvky nemohou být vloženy do tohoto elementu. To nemá vliv na odkazy, pro které je tento prvek cílem.<br /><br /> Pokud je tento prvek odkazem, nebude ovlivněn jeho zdroj a cíl.|
-|Všechny|Bitové nebo jiné hodnoty.|
+|Vše|Bitové nebo jiné hodnoty.|
 
 ## <a name="locking-policies"></a>Zásady uzamykání
  Jako autor DSL můžete definovat *zásady zamykání*. Zásady zamykání rozkládají operaci SetLocks (), aby bylo možné zabránit konkrétním zámkům v nastavení nebo pověření, aby bylo možné konkrétní zámky nastavit. Obvykle byste použili zásady uzamykání k tomu, aby uživatelům nebo vývojářům nechtěně contravening zamýšlené použití DSL, a to stejným způsobem, jakým můžete deklarovat proměnnou `private`.

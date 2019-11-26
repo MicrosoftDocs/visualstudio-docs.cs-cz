@@ -34,10 +34,10 @@ Popis problému
  Program lze spustit v prostředí sady Visual Studio bez problémů, ale při spuštění je samostatný s operačním systémem Windows, vytváří narušení přístupu. Jak mohu ladit tento problém?  
   
 ## <a name="solution"></a>Řešení  
- Nastavte [Just-in-time ladění](../debugger/just-in-time-debugging-in-visual-studio.md) možnost a spusťte svůj program samostatné, dokud dojde k narušení přístupu. Potom v **narušení přístupu** dialogové okno, můžete kliknout na **zrušit** spuštění ladicího programu.  
+ Nastavte možnost [ladění za běhu](../debugger/just-in-time-debugging-in-visual-studio.md) a spusťte program samostatně, dokud nedojde k narušení přístupu. Pak můžete v dialogovém okně **porušení přístupu** kliknutím na tlačítko **Storno** spustit ladicí program.  
   
  Podívejte se také na článek znalostní báze Q133174, jak najít, kde dochází k chybě obecné ochrany (GP). " Články znalostní báze najdete na disku CD knihovny MSDN nebo v [http://support.microsoft.com/](https://support.microsoft.com/)hledání.  
   
 ## <a name="see-also"></a>Viz také  
- [Ladění nativního kódu nejčastější dotazy](../debugger/debugging-native-code-faqs.md)   
+ [Nejčastější dotazy k ladění nativního kódu](../debugger/debugging-native-code-faqs.md)   
  [Ladění nativního kódu](../debugger/debugging-native-code.md)

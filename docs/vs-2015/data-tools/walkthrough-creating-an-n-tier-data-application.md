@@ -108,7 +108,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
 
 1. V **Průzkumník řešení**klikněte na DataAccessTier.
 
-2. Na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
+2. V nabídce **data** klikněte na možnost **Zobrazit zdroje dat**.
 
 3. V okně **zdroje dat** klikněte na tlačítko **Přidat nový zdroj dat** a spusťte **Průvodce konfigurací zdroje dat**.
 
@@ -148,7 +148,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
 
 4. V seznamu **projekt datové sady** klikněte na **DataEntityTier**.
 
-5. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+5. V nabídce **sestavení** klikněte na **Sestavit řešení**.
 
    Datová sada a objekty TableAdapter jsou rozděleny do dvou knihoven tříd projektů. Projekt, který původně obsahoval celou datovou sadu (DataAccessTier), teď obsahuje jenom objekty TableAdapter. Projekt určený ve vlastnosti **DataSet Project** (DataEntityTier) obsahuje typovou datovou sadu: NorthwindDataSet. DataSet. Designer. vb (nebo NorthwindDataSet.DataSet.Designer.cs).
 
@@ -201,7 +201,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
 
 6. Klikněte na tlačítko **Dokončit**.
 
-7. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+7. V nabídce **sestavení** klikněte na **Sestavit řešení**.
 
 ## <a name="adding-a-reference-to-the-data-entity-and-data-access-tiers-to-the-data-service"></a>Přidání odkazu na vrstvu datové entity a vrstvu přístupu k datům do datové služby
  Vzhledem k tomu, že datová služba vyžaduje informace z datové sady a objekty TableAdapter, přidejte odkazy na projekty DataEntityTier a DataAccessTier.
@@ -280,7 +280,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
     }
     ```
 
-5. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+5. V nabídce **sestavení** klikněte na **Sestavit řešení**.
 
 ## <a name="creating-a-presentation-tier-to-display-data-from-the-data-service"></a>Vytvoření prezentační vrstvy zobrazující data z datové služby
  Teď, když řešení obsahuje datovou službu, která obsahuje metody, které volají do úrovně přístupu k datům, vytvořte další projekt, který bude volat do datové služby a prezentuje data uživatelům. Pro tento návod vytvořte aplikaci model Windows Forms, Toto je prezentační vrstva aplikace v n-vrstvé aplikaci.

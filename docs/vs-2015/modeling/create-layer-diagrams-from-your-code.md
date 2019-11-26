@@ -64,7 +64,7 @@ K vizualizaci logické architektury vysoké úrovně softwarového systému vytv
 
  Chcete-li zjistit, zda propojená položka podporuje ověřování, otevřete **Průzkumníka vrstev** a Prohlédněte si vlastnost **podporuje ověření** položky. Viz [Správa odkazů na artefakty](#Managing).
 
-|**To**|**Postupujte podle těchto kroků**|
+|**Schopn**|**Postupujte podle těchto kroků**|
 |------------|----------------------------|
 |Vytvoření vrstvy pro jeden artefakt|<ol><li>Přetáhněte položku do diagramu vrstev z těchto zdrojů:<br /><br /> <ul><li>**Průzkumník řešení**<br /><br />         Přetáhnout můžete například soubory nebo projekty.</li><li>Mapy kódu<br /><br />         Viz [Mapování závislostí napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md) a [použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md).</li><li>**Zobrazení tříd** nebo **Prohlížeč objektů**</li></ul><br />     Vrstva se zobrazí v diagramu a je propojena s artefaktem.</li><li>Přejmenujte vrstvu tak, aby odrážela odpovědnosti přidruženého kódu nebo artefaktů.</li></ol> **Důležité informace:**  Přetahování binárních souborů do diagramu vrstev nepřidá automaticky své odkazy do projektu modelování. Binární soubory, které chcete ověřit, je třeba ručně přidat do projektu modelování. **Přidání binárních souborů do projektu modelování** <ol><li>V **Průzkumník řešení**otevřete místní nabídku pro projekt modelování a zvolte možnost **Přidat existující položku**.</li><li>V dialogovém okně **Přidat existující položku** vyhledejte binární soubory, vyberte je a pak zvolte **OK**.     Binární soubory se zobrazí v projektu modelování.</li><li>V **Průzkumník řešení**zvolte binární soubor, který jste přidali, a potom stisknutím klávesy **F4** otevřete okno **vlastnosti** .</li><li>V každém binárním souboru nastavte vlastnost **Akce sestavení** na hodnotu **ověřit**.</li></ol>|
 |Vytvoření jedné vrstvy pro všechny vybrané artefakty|Přetáhněte všechny artefakty do diagramu vrstev současně.<br /><br /> Vrstva se zobrazí v diagramu a je propojena se všemi artefakty.|
@@ -94,7 +94,7 @@ K vizualizaci logické architektury vysoké úrovně softwarového systému vytv
 
 2. Ke správě těchto propojení použijte následující úlohy:
 
-|**To**|**V Průzkumníkovi vrstev**|
+|**Schopn**|**V Průzkumníkovi vrstev**|
 |------------|---------------------------|
 |Odstranění propojení mezi vrstvou a artefaktem|Otevřete místní nabídku pro odkaz na artefakt a pak zvolte **Odstranit**.|
 |Přesunutí propojení z jedné vrstvy do druhé|Přetáhněte do diagramu propojení artefaktu s existující vrstvou.<br /><br /> ani<br /><br /> 1. Otevřete místní nabídku pro odkaz na artefakt a pak zvolte **Vyjmout**.<br />2. v diagramu vrstvy otevřete místní nabídku pro vrstvu a pak zvolte **Vložit**.|
@@ -115,7 +115,7 @@ K vizualizaci logické architektury vysoké úrovně softwarového systému vytv
 ## <a name="EditDependencies"></a>Úprava vrstev a závislostí pro zobrazení zamýšleného návrhu
  Chcete-li zobrazit popis změn, které máte v plánu provést v systému nebo v požadované architektuře, upravte diagram vrstev:
 
-|**To**|**Proveďte tyto kroky**|
+|**Schopn**|**Proveďte tyto kroky**|
 |------------|-----------------------------|
 |Změna nebo omezení směru závislosti|Nastavte vlastnost **Direction** .|
 |Vytvoření nových závislostí|Použijte nástroje **závislosti** a **obousměrné závislosti** .<br /><br /> Chcete-li nakreslit více závislostí, klikněte na nástroj dvakrát. Po dokončení vyberte nástroj **ukazatel** nebo stiskněte klávesu **ESC** .|

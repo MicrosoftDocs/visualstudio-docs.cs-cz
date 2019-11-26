@@ -128,9 +128,9 @@ V aplikaci Visual Studio můžete použít model, který vám pomůže pochopit 
 |Vzory návrhu<br /><br /> Konvence a metody řešení problémů s návrhem, které se používají ve všech částech návrhu|– Diagramy tříd UML popisují struktury vzoru<br />– Diagramy sekvence nebo aktivity zobrazují interakce a algoritmy.|
 |Analýza kódu<br /><br /> Z kódu lze vygenerovat několik typů diagramů.|– Sekvenční diagramy znázorňují interakci mezi objekty v kódu.<br />– Diagramy vrstev znázorňují závislosti mezi třídami. Aktualizovaný kód lze ověřit proti diagramu vrstev.<br />Diagramy tříd zobrazují třídy v kódu.|
 
-## <a name="external-resources"></a>Externí zdroje
+## <a name="external-resources"></a>Externí prostředky
 
-|**Kategorie**|**Odkazy**|
+|**Kategorií**|**Odkazy**|
 |------------------|---------------|
 |**Videa**|![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN jak mám videa: jak vytvářet a používat modely a diagramy UML (Visual Studio 2010 Ultimate)](https://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kanál 9: UML se sadou Visual Studio 2010](https://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN postup I série: nástroje a rozšiřitelnost UML (Visual Studio 2010 Ultimate)](https://go.microsoft.com/fwlink/?LinkID=214467)|
 |**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://go.microsoft.com/fwlink/?LinkId=184721)|

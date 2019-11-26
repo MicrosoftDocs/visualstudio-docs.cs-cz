@@ -59,5 +59,5 @@ Nástroj MSBuild poskytuje dobře definovaný rozšiřitelný formát XML pro vy
   
 ## <a name="see-also"></a>Viz také  
  [Referenční](../../msbuild/msbuild-reference.md)  nástroje MSBuild  
- [MSBuild](https://msdn.microsoft.com/7c49aba1-ee6c-47d8-9de1-6f29a906e20b)   
+   nástroje [MSBuild](https://msdn.microsoft.com/7c49aba1-ee6c-47d8-9de1-6f29a906e20b)  
  [Vlastní nástroje](../../extensibility/internals/custom-tools.md)

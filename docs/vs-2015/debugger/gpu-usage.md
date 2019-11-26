@@ -93,9 +93,9 @@ Pomocí nástroje využití GPU v centru pro výkon a diagnostiku sady Visual St
 |Ovládací prvek filtru|Popis|  
 |--------------------|-----------------|  
 |**Přihlášení**|Název procesu, který vás zajímá. V tomto rozevíracím seznamu jsou zahrnuty všechny procesy, které používaly GPU v relaci diagnostiky. Barva, která je přidružená k procesu v tomto rozevíracím seznamu, je barva aktivity vlákna na časových osách níže.|  
-|**vlákno**|ID vlákna, které vás zajímá. V aplikaci s více vlákny vám může pomáhat izolovat konkrétní vlákna, která patří do procesu, na který zajímáte. Události přidružené k vybranému vláknu jsou v každé časové ose zvýrazněné.|  
+|**Doporučujeme**|ID vlákna, které vás zajímá. V aplikaci s více vlákny vám může pomáhat izolovat konkrétní vlákna, která patří do procesu, na který zajímáte. Události přidružené k vybranému vláknu jsou v každé časové ose zvýrazněné.|  
 |**Otevřete**|Počet zobrazených obnovovací frekvence, **Poznámka:** některé ovladače lze nakonfigurovat tak, aby zobrazovaly více fyzických zobrazení jako jeden velký virtuální displej. V seznamu se může zobrazit jenom jedno zobrazení, i když má počítač k němu připojeno více obrazovek.|  
-|**Filtr**|Klíčová slova, která vás zajímají. Události v dolní části sestavy budou zahrnovat pouze ty, které odpovídají klíčovému slovu jako celek nebo částečně. Můžete zadat více klíčových slov tak, že je oddělíte středníkem (;).|  
+|**Filtrovací**|Klíčová slova, která vás zajímají. Události v dolní části sestavy budou zahrnovat pouze ty, které odpovídají klíčovému slovu jako celek nebo částečně. Můžete zadat více klíčových slov tak, že je oddělíte středníkem (;).|  
 |**Řazení hierarchie**|Zaškrtávací políčko, které určuje, zda hierarchie událostí – definované prostřednictvím uživatelských značek – jsou zachovány nebo ignorovány.|  
   
  Seznam událostí v dolní části sestavy využití GPU zobrazuje podrobnosti o každé události.  

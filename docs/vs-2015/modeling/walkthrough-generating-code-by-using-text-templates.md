@@ -105,7 +105,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 4. V tomto návodu pojmenujte soubor `exampleXml.xml`. Nastavte obsah souboru tak, aby byl XML zobrazený v předchozí části.
 
-   .
+   ..
 
 ### <a name="add-a-test-code-file"></a>Přidat soubor testovacího kódu
  Přidejte do C# projektu soubor a zapište do něj ukázku kódu, který chcete zapisovat. Příklad:

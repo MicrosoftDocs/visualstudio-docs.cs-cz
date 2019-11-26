@@ -46,17 +46,17 @@ Sada Visual Studio SDK vám pomůže s rozšiřováním funkcí sady Visual Stud
  Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
 ## <a name="whats-new-in-the-visual-studio-2015-sdk"></a>Co je nového v sadě Visual Studio 2015 SDK  
- Sada Visual Studio SDK obsahuje některé nové funkce, včetně žárovek a nových položek projektu, které umožňují vytvářet příkazy nabídky, okna nástrojů a rozšíření editoru pomocí balíčku VSIX. Další informace najdete v tématu [co je nového ve službě Visual Studio 2015 SDK](../extensibility/what-s-new-in-the-visual-studio-2015-sdk.md).  
+ Sada Visual Studio SDK obsahuje některé nové funkce, včetně žárovek a nových položek projektu, které umožňují vytvářet příkazy nabídky, okna nástrojů a rozšíření editoru pomocí balíčku VSIX. Další informace najdete v tématu [co je nového v sadě Visual Studio 2015 SDK](../extensibility/what-s-new-in-the-visual-studio-2015-sdk.md).  
   
 ## <a name="visual-studio-user-experience-guidelines"></a>Pravidla pro práci s uživatelským prostředím sady Visual Studio  
- Skvělé tipy k návrhu uživatelského rozhraní pro rozšíření v [Visual Studio zkušenosti uživatelů](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).  
+ V [pokynech pro uživatelské prostředí sady Visual Studio](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)získáte Skvělé tipy pro návrh uživatelského rozhraní pro vaše rozšíření.  
   
  Můžete se také seznámit s tím, jak se má vaše rozšíření na zařízeních s vysokým rozlišením DPI zobrazovat skvěle v tématu řešení [problémů s řešením dpi](../extensibility/addressing-dpi-issues2.md) .  
   
  Využijte výhod [služby image a katalogu](../extensibility/image-service-and-catalog.md) pro skvělou správu imagí a podporu vysokého rozlišení DPI.  
   
 ## <a name="finding-and-installing-existing-visual-studio-extensions"></a>Hledání a instalace existujících rozšíření sady Visual Studio  
- Rozšíření sady Visual Studio najdete v dialogovém okně **rozšíření a aktualizace** v nabídce **nástroje** . Další informace najdete v tématu [hledání a používání rozšíření sady Visual Studio](../ide/finding-and-using-visual-studio-extensions.md). V [Visual Studio Marketplace](https://marketplace.visualstudio.com/) můžete také najít rozšíření.  
+ Rozšíření sady Visual Studio najdete v dialogovém okně **rozšíření a aktualizace** v nabídce **nástroje** . Další informace najdete v tématu [vyhledání a používání rozšíření sady Visual Studio](../ide/finding-and-using-visual-studio-extensions.md). V [Visual Studio Marketplace](https://marketplace.visualstudio.com/) můžete také najít rozšíření.  
   
 ## <a name="visual-studio-sdk-reference"></a>Referenční dokumentace sady Visual Studio SDK  
  Referenční informace k rozhraní API sady Visual Studio SDK najdete v [referenčních informacích k sadě Visual Studio SDK](../extensibility/visual-studio-sdk-reference.md).  

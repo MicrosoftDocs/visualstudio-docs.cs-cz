@@ -26,7 +26,7 @@ Pomocí InstallShield omezené edice můžete vytvořit instalační soubor a di
   
 ### <a name="to-enable-installshield-limited-edition"></a>Povolení programu InstallShield limit Edition  
   
-1. V panelu nabídky zvolte **souboru**, **nový**, **projektu**.  
+1. Na panelu nabídek vyberte položku **soubor**, **Nový**, **projekt**.  
   
 2. V dialogovém okně **Nový projekt** rozbalte uzel **ostatní typy projektů** a pak zvolte uzel **nastavení a nasazení** .  
   

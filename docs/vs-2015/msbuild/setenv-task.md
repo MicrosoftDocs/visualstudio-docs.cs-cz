@@ -37,9 +37,9 @@ Nastaví nebo odstraní hodnotu zadané proměnné prostředí.
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|**Název**|Povinný parametr **řetězce**<br /><br /> Název proměnné prostředí.|  
+|**Jméno**|Povinný parametr **řetězce**<br /><br /> Název proměnné prostředí.|  
 |**OutputEnvironmentVariable**|Volitelný výstupní parametr **řetězce** .<br /><br /> Obsahuje hodnotu, která je přiřazena proměnné prostředí, která je určena parametrem **Name** .|  
-|**Prefix**|Povinný parametr `Boolean`.<br /><br /> Pokud `true`, zřetězí hodnotu parametru **Value** před hodnotu proměnné prostředí, která je určena parametrem **Name** , a poté přiřadí výsledek proměnné prostředí. Pokud `false`, přiřadí pouze hodnotu parametru **Value** proměnné prostředí.|  
+|**Směr**|Povinný parametr `Boolean`.<br /><br /> Pokud `true`, zřetězí hodnotu parametru **Value** před hodnotu proměnné prostředí, která je určena parametrem **Name** , a poté přiřadí výsledek proměnné prostředí. Pokud `false`, přiřadí pouze hodnotu parametru **Value** proměnné prostředí.|  
 |**Cílové**|Volitelný **řetězcový** parametr.<br /><br /> Určuje umístění, kde je uložena proměnná prostředí. Zadejte "`User`" nebo "`Machine`".<br /><br /> Další informace najdete v části "výčet EnvironmentVariableTarget" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .|  
 |**Hodnota**|Volitelný **řetězcový** parametr.<br /><br /> Hodnota přiřazená proměnné prostředí, která je určena parametrem **Name** Pokud je **hodnota** prázdná a proměnná existuje, proměnná se odstraní. Pokud proměnná neexistuje, nedošlo k žádné chybě, i když operaci nelze provést.<br /><br /> Další informace naleznete v části "prostředí:: SetEnvironmentVariable metoda" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .|  
   

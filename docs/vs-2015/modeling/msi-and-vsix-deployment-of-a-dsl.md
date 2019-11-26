@@ -64,7 +64,7 @@ Jazyk specifický pro doménu můžete nainstalovat na vlastní počítač nebo 
 
    Zřídka se vadné rozšíření nedokáže načíst a vytvoří sestavu v okně chyb, ale nezobrazí se ve Správci rozšíření. V takovém případě můžete odebrat rozšíření odstraněním souboru z:
 
-   *LocalAppData* **\Microsoft\VisualStudio\10.0\Extensions**
+   *Localappdata* **\Microsoft\VisualStudio\10.0\Extensions**
 
 ## <a name="msi"></a>Nasazení DSL do MSI
  Definováním souboru MSI (Instalační služba systému Windows) pro vaši DSL můžete uživatelům dovolit otevírat soubory DSL z Průzkumníka Windows. K příponě názvu souboru můžete také přidružit ikonu a krátký popis. Kromě toho může MSI nainstalovat XSD, které lze použít k ověření souborů DSL. Pokud chcete, můžete do MSI přidat další součásti, které se nainstalují současně.
@@ -93,7 +93,7 @@ Jazyk specifický pro doménu můžete nainstalovat na vlastní počítač nebo 
 
        - Popis
 
-       - Version
+       - Verze
 
    - Klikněte na uzel **Editor** a v okno Vlastnosti klikněte na **ikonu**. Nastavte hodnotu tak, aby odkazovala na soubor ikony v **DslPackage\Resources**, jako je **File. ico.**
 
@@ -105,7 +105,7 @@ Jazyk specifický pro doménu můžete nainstalovat na vlastní počítač nebo 
 
     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vytvoří soubor s názvem **CreateMsiSetupProject. vdproj**.
 
-6. V Průzkumníku Windows, zkopírujte Dsl\\\*.vdproj do nové složky s názvem instalační program.
+6. V Průzkumníku Windows zkopírujte DSL\\*. vdproj do nové složky s názvem Setup.
 
     (Pokud chcete, můžete teď vyloučit CreateMsiSetupProject.tt z vašeho projektu DSL.)
 

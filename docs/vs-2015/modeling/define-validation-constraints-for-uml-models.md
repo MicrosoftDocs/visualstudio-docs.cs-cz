@@ -394,7 +394,7 @@ context.LogError(... , usecase);
 
    Zřídka se vadné rozšíření nedokáže načíst a vytvoří sestavu v okně chyb, ale nezobrazí se ve Správci rozšíření. V takovém případě můžete odebrat rozšíření odstraněním souboru z následujícího umístění, kde *% localappdata%* je obvykle *jednotka*: \Users\\*username*\AppData\Local:
 
-   *%LocalAppData%* **\Microsoft\VisualStudio\\[version]\Extensions**
+   *% Localappdata%* **\Microsoft\VisualStudio\\[verze] \Extensions**
 
 ## <a name="Example"></a>Případě
  Tento příklad najde smyčky v relaci závislosti mezi prvky.

@@ -39,7 +39,7 @@ V tomto tématu:
 ## <a name="Display"></a>Zobrazení prvku v diagramu
  Při vytváření prvku, jako je například případ použití nebo akce, ho uživatel uvidí v Průzkumníku modelů UML, ale v diagramu se nemusí vždy automaticky zobrazovat. V některých případech je nutné napsat kód pro zobrazení. V následující tabulce jsou shrnuty alternativy.
 
-|Typ elementu|Příklad|Chcete-li toto zobrazení zobrazit, váš kód musí|
+|Typ elementu|Například|Chcete-li toto zobrazení zobrazit, váš kód musí|
 |---------------------|-----------------|-------------------------------------|
 |Třídění|`Class`<br /><br /> `Component`<br /><br /> `Actor`<br /><br /> `Use Case`|Vytvoření přidružených tvarů na zadaných diagramech. Pro jednotlivé klasifikátory můžete vytvořit libovolný počet tvarů.<br /><br /> `diagram.Display<modelElementType>`<br /><br /> `(modelElement, parentShape,`<br /><br /> `xPosition , yPosition);`<br /><br /> Nastavte `parentShape` na `null` pro tvar na nejvyšší úrovni diagramu.<br /><br /> Zobrazení jednoho obrazce v jiném:<br /><br /> `IShape<IUseCase> usecaseShape =`<br /><br /> `useCaseDiagram.Display`<br /><br /> `(useCase,`<br /><br /> `subsystemShape,`<br /><br /> `subsystemShape.XPosition + 5,`<br /><br /> `subsystemShape.YPosition + 5);` **Poznámka:** Pokud provedete zobrazení uvnitř transakce **ILinkedUndo** , metoda někdy nevrátí žádnou `IShape`. Ale tvar je správně vytvořený a je přístupný pomocí `IElement.Shapes().`|
 |Podřízená položka třídění|Atribut, operace,<br /><br /> Součást, port|Automatický – není vyžadován žádný kód.<br /><br /> Zobrazuje se jako součást nadřazeného objektu.|

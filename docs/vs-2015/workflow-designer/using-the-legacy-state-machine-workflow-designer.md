@@ -42,7 +42,7 @@ Když vytváříte nový projekt pracovního postupu stavového stroje v [!INCLU
 
 |Název sady nástrojů|Aktivita|Popis|
 |------------------|--------------|-----------------|
-|**Stav**|[StateActivity](https://go.microsoft.com/fwlink?LinkID=65042)|Představuje stav stavového stroje; může obsahovat další aktivity **StateActivity** . Další informace najdete v tématu [použití aktivity StateActivity](https://go.microsoft.com/fwlink?LinkID=65083).|
+|**State**|[StateActivity](https://go.microsoft.com/fwlink?LinkID=65042)|Představuje stav stavového stroje; může obsahovat další aktivity **StateActivity** . Další informace najdete v tématu [použití aktivity StateActivity](https://go.microsoft.com/fwlink?LinkID=65083).|
 |**SetState**|[SetStateActivity](https://go.microsoft.com/fwlink?LinkID=65041)|Určuje přechod do nového stavu. Další informace najdete v tématu [použití aktivity SetStateActivity](https://go.microsoft.com/fwlink?LinkID=65082).|
 |**StateInitialization**|[StateInitializationActivity](https://go.microsoft.com/fwlink?LinkID=65044)|Provede se při zadání stavu. může obsahovat další aktivity. Další informace najdete v tématu [použití aktivity StateInitialization](https://go.microsoft.com/fwlink?LinkID=65006).|
 |**StateFinalization**|[StateFinalizationActivity](https://go.microsoft.com/fwlink?LinkID=65043)|Provede obsažené aktivity, když opustí aktivitu [StateActivity](https://go.microsoft.com/fwlink?LinkID=65042) . Další informace najdete v tématu [použití aktivity StateFinalizationActivity](https://go.microsoft.com/fwlink?LinkID=65008).|

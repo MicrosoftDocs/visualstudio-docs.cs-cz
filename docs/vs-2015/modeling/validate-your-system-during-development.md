@@ -34,9 +34,9 @@ Visual Studio může zajistit konzistenci softwaru v souladu s požadavky uživa
 |Ujistěte **se, že váš software splňuje požadavky uživatelů**:<br /><br /> Můžete použít požadavky a modely architektury, které vám pomůžou organizovat testy vašeho systému a jeho součástí. Tento postup pomáhá zajistit, že budete testovat požadavky, které jsou důležité pro uživatele a další zúčastněné strany, a pomůže vám rychle aktualizovat testy v případě změny požadavků.|-   [vývoj testů z modelu](../modeling/develop-tests-from-a-model.md)|
 |**Ujistěte se, že váš software zůstává v souladu s zamýšleným návrhem vašeho systému:**<br /><br /> Diagramy vrstev popisují zamýšlené závislosti mezi komponentami vaší aplikace. Během vývoje můžete ověřit, zda skutečné závislosti v kódu odpovídají zamýšlenému návrhu.|-   [vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)|
 
-## <a name="external-resources"></a>Externí zdroje
+## <a name="external-resources"></a>Externí prostředky
 
-|**Kategorie**|**Odkazy**|
+|**Kategorií**|**Odkazy**|
 |------------------|---------------|
 |**Videa**|![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kanál 9: Doug 7: porozumění kódu a návrh systému pomocí sady Visual Studio 2010](https://go.microsoft.com/fwlink/?LinkId=216100)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kanál 9: architekt aplikace pomocí diagramu vrstev](https://go.microsoft.com/fwlink/?LinkID=201117)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN postup I série: jak ověřit kód pomocí diagramů vrstev](https://go.microsoft.com/fwlink/?LinkID=214405)|
 |**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://go.microsoft.com/fwlink/?LinkId=184721)|

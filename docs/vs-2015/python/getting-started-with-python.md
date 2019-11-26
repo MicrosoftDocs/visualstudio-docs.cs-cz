@@ -60,7 +60,7 @@ Následující materiály vám pomůžou začít:
 
 - [Průvodce instalací](https://github.com/Microsoft/PTVS/wiki/PTVS-Installation)    
 - [Začínáme a rozsáhlá podrobně krátká videa](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)  
-- Instalace a funkce ukázka (27 min)]( https://www.youtube.com/watch?v=JNNAOypc6Ek)  
+- Ukázka instalace a funkcí (27 min)] (https://www.youtube.com/watch?v=JNNAOypc6Ek)  
 - [Dokumentace](https://github.com/Microsoft/PTVS/wiki)  
 
 Všimněte si, že Visual Studio v současné době neposkytuje způsob vytvoření samostatného spustitelného souboru pomocí Pythonu, což v podstatě znamená program s vloženým překladačem Pythonu. V komunitě Pythonu ale existují různé způsoby, jak je popsáno v [StackOverflow](https://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency). CPython podporuje také vkládání do nativní aplikace, jak je popsáno v blogovém příspěvku [pomocí souboru ZIP](https://devblogs.microsoft.com/python/cpython-embeddable-zip-file/)s možnou vloženou do CPython.

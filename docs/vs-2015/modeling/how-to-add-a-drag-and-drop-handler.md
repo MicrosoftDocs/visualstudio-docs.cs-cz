@@ -170,9 +170,9 @@ using System.Linq;
 
 1. Zpřístupněte zdrojovou DSL přístupovou pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sběrnice modelů:
 
-    1. Stáhněte a nainstalujte rozšíření sběrnice sady Visual Studio, pokud ještě není nainstalované. Další informace najdete v tématu [Visualization and Modeling SDK](https://go.microsoft.com/fwlink/?LinkID=185579).
+    1. Stáhněte a nainstalujte rozšíření sběrnice sady Visual Studio, pokud ještě není nainstalované. Další informace najdete v tématu [sada SDK pro vizualizaci a modelování](https://go.microsoft.com/fwlink/?LinkID=185579).
 
-    2. V Návrháři DSL otevřete soubor definice DSL pro zdrojovou DSL. Klikněte pravým tlačítkem na návrhové ploše a potom klikněte na tlačítko **povolit Modelbus**. V dialogovém okně vyberte jednu z možností.  Klikněte na tlačítko **OK**. Do řešení DSL se přidá nový projekt "ModelBus".
+    2. V Návrháři DSL otevřete soubor definice DSL pro zdrojovou DSL. Klikněte pravým tlačítkem myši na návrhovou plochu a pak klikněte na **povolit ModelBus**. V dialogovém okně vyberte jednu z možností.  Klikněte na tlačítko **OK**. Do řešení DSL se přidá nový projekt "ModelBus".
 
     3. Klikněte na **transformovat všechny šablony** a znovu sestavte řešení.
 

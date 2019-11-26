@@ -92,7 +92,7 @@ IEnumerable<IBehavioredClassifier> GetRealizingClassifiers
 
 ```
 
-### <a name="dependency"></a>Závislosti
+### <a name="dependency"></a>Závislost
 
 ```
 /// Returns the elements depending on this element

@@ -59,7 +59,7 @@ Modely UML vám pomůžou pochopit, diskutovat a navrhovat softwarové systémy.
 
    - Vyberte projekt modelování, který již existuje ve vašem řešení, a klikněte na tlačítko **OK**.
 
-     \- nebo –
+     \- nebo-
 
    1. Vyberte **vytvořit nový projekt modelování**a pak klikněte na **OK**.
 
@@ -143,16 +143,16 @@ Modely UML vám pomůžou pochopit, diskutovat a navrhovat softwarové systémy.
 
 - Diagramy tříd, které jsou vytvořeny jako zobrazení zdrojového kódu. Nesouvisejí s diagramy tříd UML. Další informace najdete v tématu [navrhování a zobrazování tříd a typů](../ide/designing-and-viewing-classes-and-types.md).
 
-- Mapy kódu. Zobrazit [mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md).
+- Mapy kódu. Podívejte [se na téma mapování závislostí napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md).
 
 - Diagramy, které nejsou diagramy UML nebo diagramy vrstev, například jazyky specifické pro doménu.
 
 ## <a name="TroubleshootingModelingProjects"></a>Řešení potíží s modelováním projektů a diagramů
  Následující tabulka popisuje problémy, které mohou nastat v projektech modelování nebo diagramech a jejich řešení:
 
-|**Chybu**|**Mít**|**Řešení**|
+|**Chybu**|**Mít**|**Rozhodnutí**|
 |---------------|----------------|--------------------|
-|Projekt modelování nelze otevřít nebo načíst do řešení.<br /><br /> Zobrazí se následující zpráva:<br /><br /> Jeden nebo více projektů v řešení nebylo načteno správně. Podrobnosti najdete v okno Výstup. "<br /><br /> V okně výstup se zobrazí následující zpráva:<br /><br /> "*ModelingProjectFilenameAndPath*. modelproj: Error: nerozpoznaný formát GUID"|Projekt modelování má odkazy na projekty, které mají stejný název a jsou ve stejném řešení.<br /><br /> Například vrstva je propojena s projekty, které mají stejný název a jsou ve stejném řešení.|Pomocí textového editoru otevřete soubor projektu modelování, odeberte odkazy a pak zkuste projekt modelování znovu otevřít.<br /><br /> Chcete-li se tomuto problému vyhnout, nepřidávejte odkazy na projekty, které mají stejný název. Ujistěte se, že projekty mají jedinečné názvy.|
+|Projekt modelování nelze otevřít nebo načíst do řešení.<br /><br /> Zobrazí se zpráva s informacemi o tom, že<br /><br /> Jeden nebo více projektů v řešení nebylo načteno správně. Podrobnosti najdete v okno Výstup. "<br /><br /> V okně výstup se zobrazí následující zpráva:<br /><br /> "*ModelingProjectFilenameAndPath*. modelproj: Error: nerozpoznaný formát GUID"|Projekt modelování má odkazy na projekty, které mají stejný název a jsou ve stejném řešení.<br /><br /> Například vrstva je propojena s projekty, které mají stejný název a jsou ve stejném řešení.|Pomocí textového editoru otevřete soubor projektu modelování, odeberte odkazy a pak zkuste projekt modelování znovu otevřít.<br /><br /> Chcete-li se tomuto problému vyhnout, nepřidávejte odkazy na projekty, které mají stejný název. Ujistěte se, že projekty mají jedinečné názvy.|
 |V diagramech, které jsou přidány, zkopírovány nebo přetaženy na jiné projekty modelování nebo na jiná umístění v řešení, chybí prvky.<br /><br /> ani<br /><br /> Při pokusu o otevření diagramu se zobrazí následující zprávy:<br /><br /> -"Některé obrazce nebo konektory v diagramu chybí, protože jejich definice v tomto projektu neexistují. Z modelu byly odstraněny buď definice v době, kdy byl diagram zavřen, nebo byl diagram zkopírován do jiného projektu, který tyto definice neobsahuje. "<br /><br /> ani<br /><br /> – "Tento dokument je otevřen jiným projektem."|Soubor diagramu byl přidán, přetažen nebo zkopírován z projektu modelování do jiného projektu modelování nebo do jiného umístění v řešení.|Chcete-li zkopírovat soubor diagramu, vytvořte nový diagram a potom zkopírujte prvky ze zdrojového diagramu do nového diagramu.|
 
 ## <a name="see-also"></a>Viz také

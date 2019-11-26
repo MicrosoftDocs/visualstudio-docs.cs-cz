@@ -30,7 +30,7 @@ ID pravidla | DA0012 |
 | Zpráva | Je možné, že reflexe vyřadí nadměrné využití. Jedná se o náročnou operaci. |  
 | Typ pravidla | Upozornění |  
   
-## <a name="cause"></a>příčina  
+## <a name="cause"></a>Příčina  
  Volání metod System. Reflection, jako jsou metodu InvokeMember a GetMember nebo na metody typu, jako je MemberInvoke, jsou významným podílem dat profilování. Pokud je to možné, zvažte nahrazení těchto metod pomocí počáteční vazby na metody závislých sestavení.  
   
 ## <a name="rule-description"></a>Popis pravidla  

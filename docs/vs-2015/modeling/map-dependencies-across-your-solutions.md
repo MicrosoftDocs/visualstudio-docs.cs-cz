@@ -105,7 +105,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
 1. Otevřete nabídku **Architektura** a vyberte možnost **Nová mapa kódu**.
 
-     \- nebo –
+     \- nebo-
 
 2. Otevřete nabídku **soubor** a zvolte položku **Nový** a zvolte možnost **soubor**.
 
@@ -286,7 +286,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 ## <a name="SeeSourceHeader"></a>Zobrazit závislosti mezi zdrojovými C++ soubory C a soubory hlaviček
  Pokud chcete vytvořit více úplných map pro C++ projekty, nastavte u těchto projektů možnost Procházet informace kompilátoru ( **/fr**). Viz [/fr,/fr (Create. Soubor SBR)](https://msdn.microsoft.com/library/3fd8f88b-3924-4feb-9393-287036a28896). Jinak se objeví zpráva s dotazem, zda chcete tuto možnost nastavit. Pokud vyberete **OK**, tato možnost nastaví možnost pouze pro aktuální mapu. Můžete zvolit, že se má skrýt zpráva u všech pozdějších map. Pokud tuto zprávu skryjete, můžete ji znovu zobrazit. Nastavte následující klíč registru, který `0` nebo odstraní klíč:
 
- **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\NativeProvider : AutoEnableSbr**
+ **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\14.0\NativeProvider: AutoEnableSbr**
 
  Když otevřete řešení, které obsahuje projekty Visual C++, může trvat nějakou dobu, než se aktualizuje databáze technologie IntelliSense. Během této doby možná nebudete moci vytvořit mapy kódu pro soubory hlaviček (. h nebo `#include`), dokud nebude dokončena aktualizace databáze technologie IntelliSense. Na stavovém řádku v dolní části sady Visual Studio můžete sledovat průběh aktualizace. Chcete-li vyřešit problémy nebo zprávy, které se zobrazí, protože některá nastavení technologie IntelliSense jsou zakázaná, přečtěte si téma [řešení potíží s mapami pro C a C++ ](#Troubleshooting)
 
@@ -307,7 +307,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
   Tyto problémy se mohou vyskytnout při vytváření map kódu pro jazyk C++ C a kód:
 
-|**Chybu**|**Možná příčina**|**Řešení**|
+|**Chybu**|**Možná příčina**|**Rozhodnutí**|
 |---------------|------------------------|--------------------|
 |Nepovedlo se vygenerovat mapu kódu.|V řešení nebyly úspěšně sestaveny žádné projekty.|Opravte chyby sestavení, k nimž došlo, a potom znovu vygenerujte mapu.|
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] přestane reagovat při pokusu o vygenerování mapy kódu z nabídky **Architektura** .|Soubor databáze programů (.pdb) může být poškozen.<br /><br /> Soubor .pdb ukládá informace o ladění, jako je typ, metoda a informace zdrojového souboru.|Znovu sestavte řešení a potom akci opakujte.|
@@ -329,7 +329,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
 - Vypněte automatické přidávání nadřazených položek pomocí tlačítka **Zahrnout nadřazené** položky na panelu nástrojů mapa kódu.
 
-- Upravte soubor s mapou kódu přímo pro odebrání uzlů a propojení, které nepotřebujete. Změna mapy nemá vliv na podkladový kód. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+- Upravte soubor s mapou kódu přímo pro odebrání uzlů a propojení, které nepotřebujete. Změna mapy nemá vliv na podkladový kód. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
   ![Přeskočit sestavení a zahrnout nadřízených tlačítek](../modeling/media/codemapsfilterskipbuildicons.png "CodeMapsFilterSkipBuildIcons")
 
@@ -373,7 +373,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
 2. Přejděte do umístění, kam chcete soubor uložit.
 
-3. Pojmenujte mapu kódu. Ujistěte se, že je pole **Uložit jako typ** nastaveno na **soubory XPS (\*. XPS)** . Zvolte **Uložit**.
+3. Pojmenujte mapu kódu. Ujistěte se, že je pole **Uložit jako typ** nastaveno na **soubory XPS (\*. XPS)** . Klikněte na tlačítko **Uložit**.
 
 ## <a name="what-else-can-i-do"></a>Co dalšího mohu udělat?
 

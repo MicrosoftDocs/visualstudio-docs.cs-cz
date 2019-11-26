@@ -161,7 +161,7 @@ Automatizované testy, které zařídí vaši aplikaci prostřednictvím uživat
 
 - ![Prerequsite](../test/media/prereq.png "Požadavků ohlásila") Pokud nechcete zaznamenávat akce pro spuštění testované aplikace, musíte aplikaci spustit před výběrem ikony **záznamu** .
 
-- ![Prerequsite](../test/media/prereq.png "Požadavků ohlásila") Na konci testu proces, ve kterém je test spuštěn, je ukončen. Pokud jste aplikaci spustili v testu, aplikace se obvykle zavře.  Pokud nechcete, aby test zavřel aplikaci při ukončení, musíte do svého řešení přidat soubor. runsettings a použít možnost `KeepExecutorAliveAfterLegacyRun`. Další informace najdete v tématu [konfigurace testů jednotek s použitím souboru .runsettings](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
+- ![Prerequsite](../test/media/prereq.png "Požadavků ohlásila") Na konci testu proces, ve kterém je test spuštěn, je ukončen. Pokud jste aplikaci spustili v testu, aplikace se obvykle zavře.  Pokud nechcete, aby test zavřel aplikaci při ukončení, musíte do svého řešení přidat soubor. runsettings a použít možnost `KeepExecutorAliveAfterLegacyRun`. Další informace najdete v tématu [konfigurace testů jednotek pomocí souboru. runsettings](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
 
 - ![Prerequsite](../test/media/prereq.png "Požadavků ohlásila") Můžete přidat metodu Initialize testu identifikovanou atributem [TestInitialize], který spouští kód na začátku každé testovací metody. Například můžete spustit aplikaci z metody TestInitialize.
 
@@ -261,7 +261,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
  `<drive letter:>\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\CodedUITestBuilder.exe.config`
 
- V konfiguračním souboru změňte hodnoty `HoverKeyModifier` a `HoverKey` pro změnu přiřazení klávesnice:
+ V konfiguračním souboru změňte hodnoty pro `HoverKeyModifier` a `HoverKey` klíče pro úpravu přiřazení klávesnice:
 
 ```
 <!-- Begin : Background Recorder Settings -->
@@ -467,7 +467,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
   Programové testy uživatelského rozhraní se často používají k automatizaci ručních testů. Další pokyny naleznete v tématu [testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5: automatizace systémových testů](https://go.microsoft.com/fwlink/?LinkID=255196). Další informace o manuálních testech naleznete v [ &#91;tématu&#93; vyřazeno Vytváření manuálních testovacích případů pomocí Microsoft Test Manager](https://msdn.microsoft.com/library/9989e184-c8e4-444b-998d-a1a5ec94461e). Další informace o automatizovaných systémových testech naleznete v tématu [vytváření automatizovaných testů pomocí Microsoft Test Manager](https://msdn.microsoft.com/7b5075ee-ddfe-411d-b1d4-94283550a5d0).
 
-## <a name="external-resources"></a>Externí zdroje
+## <a name="external-resources"></a>Externí prostředky
 
 ### <a name="guidance"></a>Doprovodné materiály
 - [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 2: testování částí: testování uvnitř](https://go.microsoft.com/fwlink/?LinkID=255188)

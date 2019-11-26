@@ -30,7 +30,7 @@ ID pravidla | DA0006 |
 | Zpráva | Přepište rovnost a operátor rovnosti na hodnotových typech. |  
 | Typ messge | Upozornění |  
   
-## <a name="cause"></a>příčina  
+## <a name="cause"></a>Příčina  
  Volání metody Equals nebo operátorů rovnosti typu veřejné hodnoty jsou významným podílem dat profilování. Zvažte implementaci efektivnější metody.  
   
 ## <a name="rule-description"></a>Popis pravidla  

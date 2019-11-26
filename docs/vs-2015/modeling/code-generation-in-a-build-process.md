@@ -67,7 +67,7 @@ V souboru .vbproj nebo .csproj vyhledejte řádek podobný následujícímu:
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`
 
-\- nebo –
+\- nebo-
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`
 

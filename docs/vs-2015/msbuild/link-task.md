@@ -232,7 +232,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Další informace naleznete v tématu [/delaysign (částečné podepsání sestavení)](https://msdn.microsoft.com/library/15244d30-3ecb-492f-a408-ffe81f38de20).  
   
-- **Ovladač**  
+- **Faktorů**  
   
    Volitelný **řetězcový** parametr.  
   
@@ -240,7 +240,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnosti linkeru.  
   
-  - **NotSet** -  *\<none>*  
+  - Hodnota **NotSet** -  *\<žádná >*  
   
   - **/Driver** **ovladače** -   
   
@@ -344,7 +344,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Pokud `true`, vytvoří *soubor mapy*. Přípona názvu souboru souboru mapy je. map.  
   
-   Další informace najdete v tématu [parametr/map (generování souboru mapování)](https://msdn.microsoft.com/library/9ccce53d-4e36-43da-87b0-7603ddfdea63).  
+   Další informace najdete v tématu [/map (Generate souboru mapování)](https://msdn.microsoft.com/library/9ccce53d-4e36-43da-87b0-7603ddfdea63).  
   
 - **HeapCommitSize**  
   
@@ -452,7 +452,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
   - **Vyzvat okamžitě** -  **/errorreport: prompt**  
   
-  - **QueueForNextLogin** -  **/ERRORREPORT:QUEUE**  
+  - **QueueForNextLogin** -  **/errorreport: Queue**  
   
   - **SendErrorReport** -  **/errorreport: Send**  
   
@@ -500,7 +500,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
   - **PGUpdate**  
   
-     \- **/LTCG:PGUpdate**  
+     \- **/LTCG: PGUpdate**  
   
     Další informace naleznete v tématu [/LTCG (generování kódu při propojování)](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2).  
   
@@ -550,7 +550,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Další informace naleznete v tématu [/MIDL (určení možností příkazového řádku MIDL)](https://msdn.microsoft.com/library/22dc259e-b34c-4ed3-a380-4beb734482c1).  
   
-- **MinimumRequiredVersion**  
+- **Určovat minimumRequiredVersion**  
   
    Volitelný **řetězcový** parametr.  
   
@@ -572,7 +572,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Další informace najdete v tématu [/stub (název souboru zástupného kódu MS-DOS)](https://msdn.microsoft.com/library/65221ffe-4f9a-4a14-ac69-3cfb79b40b5f).  
   
-- **NoEntryPoint**  
+- **Parametr-EntryPoint**  
   
    Volitelný **logický** parametr.  
   
@@ -684,19 +684,19 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-  - **NotSet** -  *\<none>*  
+  - Hodnota **NotSet** -  *\<žádná >*  
   
-  - **LinkVerbose** -  **/VERBOSE**  
+  - **LinkVerbose** -  **/verbose**  
   
-  - **LinkVerboseLib** -  **/VERBOSE:Lib**  
+  - **LinkVerboseLib** -  **/verbose: lib**  
   
-  - **LinkVerboseICF** -  **/VERBOSE:ICF**  
+  - **LinkVerboseICF** -  **/verbose: ICF**  
   
-  - **LinkVerboseREF** -  **/VERBOSE:REF**  
+  - **LinkVerboseREF** -  **/verbose: ref**  
   
-  - **LinkVerboseSAFESEH** -  **/VERBOSE:SAFESEH**  
+  - **LinkVerboseSAFESEH** -  **/verbose: SAFESEH**  
   
-  - **LinkVerboseCLR** -  **/VERBOSE:CLR**  
+  - **LinkVerboseCLR** -  **/verbose: CLR**  
   
     Další informace najdete v tématu [/verbose (Tisk zpráv o průběhu)](https://msdn.microsoft.com/library/9c347d98-4c37-4724-a39e-0983934693ab).  
   
@@ -746,25 +746,25 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-  - **NotSet** -  *\<none>*  
+  - Hodnota **NotSet** -  *\<žádná >*  
   
   - **Konzola** -  **/SUBSYSTEM: konzola**  
   
-  - **Windows** -  **/SUBSYSTEM:WINDOWS**  
+  - **Windows** -  **/SUBSYSTEM: Windows**  
   
   - **Nativní** -  **/SUBSYSTEM: Native**  
   
   - **Aplikace rozhraní EFI** -  **/SUBSYSTEM: EFI_APPLICATION**  
   
-  - **EFI Boot Service Driver** -  **/SUBSYSTEM:EFI_BOOT_SERVICE_DRIVER**  
+  - **Ovladač spouštěcí služby EFI** -  **/SUBSYSTEM: EFI_BOOT_SERVICE_DRIVER**  
   
   - /Subsystem **EFI ROM** -  **: EFI_ROM**  
   
-  - **EFI Runtime** -  **/SUBSYSTEM:EFI_RUNTIME_DRIVER**  
+  - **Běhové prostředí EFI** -  **/SUBSYSTEM: EFI_RUNTIME_DRIVER**  
   
-  - **WindowsCE** -  **/SUBSYSTEM:WINDOWSCE**  
+  - **WindowsCE** -  **/SUBSYSTEM: WindowsCE**  
   
-  - **POSIX** -  **/SUBSYSTEM:POSIX**  
+  - **Posix** -  **/SUBSYSTEM: POSIX**  
   
     Další informace najdete v tématu [/Subsystem (určení subsystému)](https://msdn.microsoft.com/library/d7b133cf-cf22-4da8-ab46-6552702c0b9b).  
   
@@ -816,7 +816,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.  
   
-  - **NotSet** -  *\<none>*  
+  - Hodnota **NotSet** -  *\<žádná >*  
   
   - **MachineARM** -  **/Machine: ARM**  
   
@@ -826,13 +826,13 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
   - **MachineMIPS** -  **/Machine: MIPS**  
   
-  - **MachineMIPS16** -  **/MACHINE:MIPS16**  
+  - **MachineMIPS16** -  **/Machine: MIPS16**  
   
   - **MachineMIPSFPU** -  **/Machine: MIPSFPU**  
   
   - **MachineMIPSFPU16** -  **/Machine: MIPSFPU16**  
   
-  - **MachineSH4** -  **/MACHINE:SH4**  
+  - **MachineSH4** -  **/Machine: sh4**  
   
   - **MachineTHUMB** -  **/Machine: palec**  
   
@@ -872,7 +872,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
    Další informace naleznete v tématu [/NOASSEMBLY (Vytvoření modulu MSIL)](https://msdn.microsoft.com/library/3cea4e70-f451-4395-a626-1930b1b127fe).  
   
-- **TypeLibraryFile**  
+- **SouborKnihovnyTypů**  
   
    Volitelný **řetězcový** parametr.  
   
@@ -898,7 +898,7 @@ Zabalí nástroj vizuálního C++ linkeru, Link. exe. Nástroj Linker propojuje 
   
   - **Podle volajícího** - `level='asInvoker'`  
   
-  - **HighestAvailable** - `level='highestAvailable'`  
+  - **Nejvyšší dostupná** - `level='highestAvailable'`  
   
   - **Vyžadovat správce** - `level='requireAdministrator'`  
   

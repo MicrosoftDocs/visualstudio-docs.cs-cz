@@ -71,7 +71,7 @@ V prvku UML můžete ukládat odkazy na jiné prvky, soubory nebo objekty UML po
 
    Další informace najdete v tématu [Definování obslužné rutiny gesta v diagramu modelování](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) a [Postup: Přidání obslužné rutiny](../modeling/how-to-add-a-drag-and-drop-handler.md)přetažení myší.
 
-## <a name="samples"></a>Ukázky
+## <a name="samples"></a>Ukázky kódu
  Podívejte se prosím na vzorový kód [propojit prvky UML s diagramy nebo dalšími soubory](https://go.microsoft.com/fwlink/?LinkId=213813). Ukázka umožňuje uživatelům přetáhnout soubor na libovolný prvek UML a později otevřít soubor dvojitým kliknutím na prvek. Například můžete propojit diagram aktivity s prvkem případu použití. Ikona zobrazuje, které prvky mají odkazy.
 
  Tato ukázka kódu předvádí následující techniky:

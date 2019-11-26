@@ -6,12 +6,12 @@ manager: lank
 ms.date: 11/18/2019
 ms.topic: conceptual
 description: Seznamte se s předplatným školení Pluralsight, která jsou součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 7db7858b95ca0b78ea54cebc394c3d57de53305a
-ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
+ms.openlocfilehash: 26e9227fbd3852e4e9115e06e2882fe6358831a3
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74161954"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491290"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Výhody školení Pluralsight v předplatných sady Visual Studio
 
@@ -50,7 +50,7 @@ Následující tabulka uvádí podrobnosti o tom, jaké výhody předplatného P
 
 7. Zadejte uživatelské jméno, které jste zadali v uvítacím e-mailu, a heslo, které jste právě vytvořili, a klikněte na **Přihlásit**.
 
-8. A je to!  Teď jste připraveni začít s tisíci Pluralsight kurzy.
+8. A to je vše!  Teď jste připraveni začít s tisíci Pluralsight kurzy.
 
 ## <a name="eligibility"></a>Vznik
 
@@ -62,8 +62,8 @@ Následující tabulka uvádí podrobnosti o tom, jaké výhody předplatného P
 |         Visual Studio Professional s GitHubem Enterprise          | VL  |   3 měsíce    | Ano<sup>2</sup> |
 |              Visual Studio Test Professional (Standard)              |    VL, maloobchodní prodej     |   3 měsíce    | Ano<sup>2</sup>  |
 |                      MSDN Platforms (Standard)                       |    VL, maloobchodní prodej     |   3 měsíce    | Ano<sup>2</sup>  |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) |       Azure       | Není k dispozici |       NÁ       |
-|             Visual Studio Enterprise (NFR<sup>1</sup> )              |      Editoru      | Není k dispozici |       NÁ       |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) |       Azure       | Není k dispozici |       Není k dispozici       |
+|             Visual Studio Enterprise (NFR<sup>1</sup> )              |      Program      | Není k dispozici |       Není k dispozici       |
 ||
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), BizSpark, MCT software & Services Developer, MCT software & Service, MVP (MVP Professional), oblastní ředitel (RD), Microsoft Partner Network (MPN), FTE, představte.*
@@ -78,7 +78,7 @@ Nejste si jistí, jaké Předplatné používáte?  Pokud chcete zobrazit všech
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
 ### <a name="q-i-have-a-visual-studio-enterprise-subscription-but-i-dont-see-the-pluralsight-tile-on-the-benefits-page-whats-wrong"></a>Otázka: Mám Visual Studio Enterprise předplatné, ale na stránce s výhodami se nezobrazuje dlaždice Pluralsight. Co je?
-Odpověď: Ne všechna předplatná Visual Studio Enterprise zahrnují Pluralsight výhodu.  V tabulce [tabulky nároků](#eligibility) zjistíte, jestli je vaše předplatné opravňující.
+Odpověď: Ne všechna předplatná Visual Studio Enterprise zahrnují Pluralsight výhodu.  Ověřte v [tabulce nároků](#eligibility) , abyste viděli, jestli vaše předplatné má nárok.
 
 ### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>Otázka: Mám přístup k jakýmkoli přizpůsobeným seznamům nebo kanálům pro učení?
 Odpověď: Ano, jako předplatitel sady Visual Studio získáte přístup k expertním kanálům v rámci zvýhodnění školení Pluralsight. Tyto kanály byly speciálně vycházejí odborníky Microsoftu a jsou zaměřeny na učení v oblastech .NET, Azure, DevOps a mobility. Aktivujte svůj Pluralsight zvýhodnění prostřednictvím portálu předplatného sady Visual Studio [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) Získejte přístup k těmto kanálům na cílové stránce Pluralsight –

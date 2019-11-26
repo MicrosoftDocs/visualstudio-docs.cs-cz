@@ -113,7 +113,7 @@ Programové testy UI mohou automatizovat testování webových aplikací tím, �
 
 - ![Tip](../test/media/tip.png "Tip") Výstup můžete nakonfigurovat tak, aby zahrnoval snímky obrazovky v protokolech kódovaného uživatelského rozhraní. Chcete-li tak učinit, musíte provést některá nastavení konfigurace v souboru QTAgent32.exe.config. Ve výchozím nastavení je tento soubor nainstalován v následujícím umístění:
 
-   **C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE**
+   **C:\Program Files (x86) \Microsoft Visual Studio 11.0 \ Common7\IDE**
 
    Nastavte následující hodnoty:
 
@@ -125,7 +125,7 @@ Programové testy UI mohou automatizovat testování webových aplikací tím, �
 
     Další informace naleznete v tématu [Analýza programových testů uživatelského rozhraní pomocí protokolů kódovaného testu uživatelského rozhraní](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md).
 
-## <a name="external-resources"></a>Externí zdroje
+## <a name="external-resources"></a>Externí prostředky
 
 ### <a name="videos"></a>Videa
  [Záznam v aplikaci IE a přehrávání všude](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!183&authkey=!ANqaLtCZbtJrImU)

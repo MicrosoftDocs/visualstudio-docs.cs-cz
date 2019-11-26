@@ -19,7 +19,7 @@ ms.locfileid: "74297909"
 # <a name="network-usage"></a>Využití sítě
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio **sítě** diagnostický nástroj, který shromažďuje data o síťových operacích pomocí provádí [Windows.Web.Http API](https://msdn.microsoft.com/library/windows/apps/windows.web.http.aspx). Analýza dat vám může pomoct vyřešit problémy, jako jsou problémy přístupu a ověřování, nesprávné použití mezipaměti a špatné zobrazení a stáhnout výkonu.  
+Nástroj Diagnostika **sítě** sady Visual Studio shromažďuje data o síťových operacích provedených pomocí [rozhraní API Windows. Web. http](https://msdn.microsoft.com/library/windows/apps/windows.web.http.aspx). Analýza dat vám může pomoct vyřešit problémy, jako jsou problémy přístupu a ověřování, nesprávné použití mezipaměti a špatné zobrazení a stáhnout výkonu.  
   
  Síťový nástroj podporuje pouze aplikace pro univerzální platformu Windows. Jiné platformy nejsou v tuto chvíli nepodporuje.  
   
@@ -27,7 +27,7 @@ Visual Studio **sítě** diagnostický nástroj, který shromažďuje data o sí
 > Podrobnější popis síťového nástroje najdete v tématu [představení síťového nástroje sady Visual Studio](https://devblogs.microsoft.com/visualstudio/?m=20155).  
   
 ## <a name="collecting-network-tool-data"></a>Shromažďování dat nástroje sítě  
- Měli byste spustit **sítě** nástroj s otevřít projekt aplikace Visual Studio na počítači aplikace Visual Studio.  
+ **Síťový** nástroj byste měli spustit s otevřeným projektem sady Visual Studio na počítači se sadou Visual Studio.  
   
 1. Otevřete projekt v sadě Visual Studio.  
   
@@ -37,7 +37,7 @@ Visual Studio **sítě** diagnostický nástroj, který shromažďuje data o sí
   
     Při spouštění vaší aplikace, souhrnné zobrazení v levém podokně automaticky zobrazí seznam zachycených operace HTTP. Vyberte položku na souhrnné zobrazení zobrazíte další informace najdete v podokně podrobností v pravém podokně.  
   
-4. Zvolte **Zastavit** zavřít aplikaci.  
+4. Pokud chcete aplikaci zavřít, klikněte na tlačítko **zastavit** .  
   
    Okno sestavy by mělo vypadat přibližně takto:  
   
@@ -46,28 +46,28 @@ Visual Studio **sítě** diagnostický nástroj, který shromažďuje data o sí
 ## <a name="analyzing-data"></a>Analýza dat  
  Když vaše aplikace spuštěna, nebo i po zavření aplikace výběrem některé síťové operace zobrazí v souhrnném zobrazení můžete analyzovat zachycená data protokolu HTTP.  
   
- **Sítě** souhrnné zobrazení zobrazuje data pro každé ze síťových operací v běhu aplikace. Vyberte záhlaví sloupce seřadíte seznam a vyberte typy obsahu pro zobrazení v **Content Type** filtrovat zobrazení.  
+ Zobrazení Souhrn **sítě** zobrazuje data pro každou síťovou operaci při spuštění vaší aplikace. Vyberte záhlaví sloupce pro seřazení seznamu nebo vyberte typy obsahu, které se mají zobrazit v zobrazení filtru **typu obsahu** .  
   
- Zvolte **uložit jako HAR** vytvořte soubor JSON, které mohou být spotřebovány nástrojů třetích stran, jako je Fiddleru.  
+ Vyberte **Uložit jako Har** a vytvořte soubor JSON, který můžou využívat nástroje třetích stran, jako je Fiddler.  
   
- **Sítě** zobrazení podrobností se zobrazí další informace o síťové operace v souhrnném zobrazení.  
+ Zobrazení podrobností **sítě** zobrazí další informace o síťové operaci v souhrnném zobrazení.  
   
  ![Panel podrobností nástroje sítě](../profiling/media/network-detailsviewpane.png "NETWORK_DetailsViewPane")  
   
 |||  
 |-|-|  
 |**Záhlaví**|Informace o hlavičkách žádosti o události.|  
-|**Text**|Data datové části požadavku a odpovědi.|  
+|**Těles**|Data datové části požadavku a odpovědi.|  
 |**Parametry**|Názvy parametrů řetězce dotazu a hodnoty.|  
 |**Soubory cookie**|Data souborů cookie odpovědí a požadavků.|  
 |**Časování**|Graf fází v získávání vybrané prostředky.|  
   
- Síť **souhrnu** panel ukazuje počet síťových operací, které jsou zobrazeny v libovolném časovém okamžiku, kolik dat se přenesl, jak dlouho trvalo ke stažení je a kolik chyby (počet požadavků s odpověďmi 4xx nebo 5xx) viditelné.  
+ Panel **Souhrn** sítě zobrazuje počet síťových operací, které se zobrazují v jakémkoli okamžiku, kolik dat se přeneslo, kolik času trvalo jejich stažení a kolik chyb (požadavky s 4xx nebo 5xxmi odpověďmi) jsou viditelné.  
   
 ### <a name="analysis-tips"></a>Tipy pro analýzy  
  Tento nástroj zvýrazňuje některé oblasti, které mohou být užitečné při spuštění analýzy související se sítí:  
   
-1. Požadavky, které jsou plně obsluhovat z mezipaměti se zobrazují jako **(z mezipaměti)** v **přijaté** sloupce. To může pomoct určit, jestli používáte mezipaměti efektivně ušetříte šířku pásma uživatele, nebo zda omylem ukládání do mezipaměti odpovědi a poskytuje koncových uživatelů vaší aplikace pomocí zastaralá data.  
+1. Požadavky, které jsou plně obsluhovány z mezipaměti, jsou zobrazeny ve sloupci **Received** jako **(z mezipaměti)** . To může pomoct určit, jestli používáte mezipaměti efektivně ušetříte šířku pásma uživatele, nebo zda omylem ukládání do mezipaměti odpovědi a poskytuje koncových uživatelů vaší aplikace pomocí zastaralá data.  
   
 2. Odpovědi na chyby (4xx nebo 5xx) se zobrazí ve sloupci **výsledky** s červeným stavovým kódem a jsou zvýrazněny také na panelu souhrnu. Díky tomu je snadné sledovat chyby mezi mnoha potenciální požadavky na vaši aplikaci.  
   

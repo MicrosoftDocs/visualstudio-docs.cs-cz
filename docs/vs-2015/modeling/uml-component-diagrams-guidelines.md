@@ -82,7 +82,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení s
 
 1. Klikněte na **součást** v sadě nástrojů a potom klikněte na prázdnou část diagramu.
 
-     \- nebo –
+     \- nebo-
 
      Zkopírujte a vložte existující komponentu.
 
@@ -188,13 +188,13 @@ V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení s
 
          V **Průzkumníku modelů UML**se vytvoří nová komponenta. Toto je typ nové části.
 
-         \- nebo –
+         \- nebo-
 
          Přetáhněte existující komponentu z Průzkumníku modelů UML na nadřazenou komponentu.
 
          Nová část (3) se zobrazí uvnitř nadřazené komponenty. Jejím typem je komponenta, kterou jste přetáhli z Průzkumníku modelů UML.
 
-         \- nebo –
+         \- nebo-
 
          Klikněte pravým tlačítkem myši na součást, buď v diagramu, nebo v Průzkumníku modelů UML a pak klikněte na **Kopírovat**.
 
@@ -206,7 +206,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení s
 
     3. Do nové části můžete přidat poskytované a požadované rozhraní (4, 5). Klikněte na **poskytnuté rozhraní** nebo nástroj **požadované rozhraní** a pak klikněte do části.
 
-         \- nebo –
+         \- nebo-
 
          Přetáhněte existující rozhraní z **Průzkumníka modelů UML** na součást.
 

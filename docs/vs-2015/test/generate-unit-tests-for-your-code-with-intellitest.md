@@ -17,7 +17,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74302586"
 ---
-# <a name="generate-unit-tests-for-your-code-with-intellitest"></a>Generování testů jednotek kódu pomocí funkce IntelliTest
+# <a name="generate-unit-tests-for-your-code-with-intellitest"></a>Generování testů jednotek pro kód pomocí funkce IntelliTest
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Inteligentní testování vám umožní prozkoumat kód .NET a vygenerovat testovací data a sady testování částí. Pro každý příkaz v kódu se generuje zkušební vstup, který tento příkaz spustí. Pro každou podmíněnou větev v kódu se provede Případová analýza. Například pokud příkazy, kontrolní výrazy a všechny operace, které mohou vyvolat výjimky, jsou analyzovány. Této analýzy se generují testovací data pro parametrizovaný test části metod, vytváření testů jednotek s vysokým pokrytím kódu používá.
@@ -30,11 +30,11 @@ Inteligentní testování vám umožní prozkoumat kód .NET a vygenerovat testo
  Budete potřebovat Visual Studio Enterprise.
 
 ### <a name="explore-use-intellitest-to-explore-your-code-and-generate-unit-tests"></a>Prozkoumejte: Použití IntelliTest dá prozkoumat kód a generování testů jednotek
- Generování testů jednotek, vaše typy musí být veřejné. V opačném případě [vytvořit testy jednotek](#NoRun) první před jejich vytvořením.
+ Generování testů jednotek, vaše typy musí být veřejné. V opačném případě [Vytvořte testy jednotek](#NoRun) nejprve předtím, než je vygenerujete.
 
 1. Otevřete řešení v sadě Visual Studio. Pak otevřete soubor třídy, která obsahuje metody, které chcete testovat.
 
-2. Klikněte pravým tlačítkem v metodě v kódu a zvolte **spustit inteligentní testování** ke generování testů jednotek pro kód v metodě.
+2. Klikněte pravým tlačítkem ve vašem kódu na metodu a vyberte možnost **Spustit IntelliTest** a Generujte testy jednotek kódu v metodě.
 
      ![Klikněte&#45;pravým tlačítkem na metodu a Generujte testy jednotek.](../test/media/runpex.png "RunPEX")
 
@@ -42,7 +42,7 @@ Inteligentní testování vám umožní prozkoumat kód .NET a vygenerovat testo
 
      ![Okno výsledků průzkumu se zobrazuje s testy](../test/media/pexexplorationresults.png "PEXExplorationResults")
 
-     Generování testů jednotek pro všechny veřejné metody ve třídě, jednoduše klikněte pravým tlačítkem ve třídě, nikoli konkrétní metody. Klikněte na tlačítko **spustit inteligentní testování**. Pomocí rozevíracího seznamu v okně výsledků prozkoumání můžete zobrazit testy jednotek a vstupní data pro jednotlivé metody ve třídě.
+     Generování testů jednotek pro všechny veřejné metody ve třídě, jednoduše klikněte pravým tlačítkem ve třídě, nikoli konkrétní metody. Pak zvolte **Spustit IntelliTest**. Pomocí rozevíracího seznamu v okně výsledků prozkoumání můžete zobrazit testy jednotek a vstupní data pro jednotlivé metody ve třídě.
 
      ![Vyberte výsledky testu, které se mají zobrazit v seznamu.](../test/media/selectpextest.png "SelectPEXTest")
 
@@ -85,13 +85,13 @@ Inteligentní testování vám umožní prozkoumat kód .NET a vygenerovat testo
 ### <a name="specify-use-intellitest-to-validate-correctness-properties-that-you-specify-in-code"></a>Zadejte: IntelliTest použijte k ověření správnosti vlastnosti, které zadáte v kódu
  Zadejte obecné vztah mezi vstupy a výstupy, které chcete, aby vygenerované testy jednotek pro ověření. Tato specifikace zapouzdřena v metodě, která vypadá jako testovací metody, ale univerzálně vyjadřuje. Toto je testovací metody parametrizované jednotky a pro všechny možné vstupní hodnoty, která mohou generovat IntelliTest musí obsahovat žádné kontrolní výrazy, které provedete.
 
-## <a name="QandALink"></a> Q & A
+## <a name="QandALink"></a>Otázka & A
 
 ### <a name="q-can-you-use-intellitest-for-unmanaged-code"></a>Dotaz: lze použít pro nespravovaný kód IntelliTest?
- **Odpověď:** Ne, Intellitestu funguje jenom se spravovaným kódem.
+ **A:** Ne, IntelliTest funguje jenom se spravovaným kódem.
 
 ### <a name="q-when-does-a-generated-test-pass-or-fail"></a>Otázka: kdy generovaný test úspěšné nebo neúspěšné?
- **Odpověď:** předává jako libovolné jiné jednotky testování, pokud dojde k žádné výjimky. Selže, pokud žádné kontrolní výraz selže nebo pokud testovaný kód vyvolá neošetřenou výjimku.
+ **A:** Předává jako jakýkoliv jiný test jednotky, pokud nedošlo k výjimkám. Selže, pokud žádné kontrolní výraz selže nebo pokud testovaný kód vyvolá neošetřenou výjimku.
 
  Pokud máte test, který můžete předat, pokud jsou vyvolány některé výjimky, můžete nastavit jednu z následujících atributů na základě vašich požadavků na testovací metody, třídě testu nebo sestavení úrovně:
 
@@ -104,21 +104,21 @@ Inteligentní testování vám umožní prozkoumat kód .NET a vygenerovat testo
 - **PexAllowedExceptionFromAssemblyAttribute**
 
 ### <a name="q-can-i-add-assumptions-to-the-parameterized-unit-test"></a>Dotaz: lze přidat předpoklady pro parametrizovaný test jednotek?
- **Odpověď:** Ano, použijte k určení, které testovací data se nevyžaduje, pro testy jednotek pro konkrétní metody předpoklady. Použití <xref:Microsoft.Pex.Framework.PexAssume> třídy přidat předpoklady. Můžete například přidat předpokládá, že proměnné délky není null následujícím způsobem.
+ **A:** Ano, pomocí předpokladů určíte, která testovací data nejsou vyžadována pro testování částí konkrétní metody. K přidání předpokladů použijte třídu <xref:Microsoft.Pex.Framework.PexAssume>. Můžete například přidat předpokládá, že proměnné délky není null následujícím způsobem.
 
  `PexAssume.IsNotNull(lengths);`
 
  Pokud přidáte předpokládá a znovu spusťte IntelliTest, odeberou se testovací data, která už nejsou relevantní.
 
 ### <a name="q-can-i-add-assertions-to-the-parameterized-unit-test"></a>Dotaz: lze přidat kontrolní výrazy do parametrizovaný test jednotek?
- **Odpověď:** Ano, IntelliTest se zkontrolujte, že jsou uplatnění v příkazu ve skutečnosti správný při spuštění testů jednotek. Použití <xref:Microsoft.Pex.Framework.PexAssert> třídy nebo rozhraní API, která je součástí rozhraní pro testování přidat kontrolní výrazy kontrolního výrazu. Například můžete přidat kontrolní výraz, že dvě proměnné, které jsou stejné.
+ **A:** Ano, IntelliTest zkontroluje, že s tím, co v příkazu uplatňujete, je ve skutečnosti správné, když spustí testy jednotek. Použijte třídu <xref:Microsoft.Pex.Framework.PexAssert> nebo rozhraní API kontrolního výrazu, které jsou součástí testovacího rozhraní pro přidání kontrolních výrazů. Například můžete přidat kontrolní výraz, že dvě proměnné, které jsou stejné.
 
  `PexAssert.AreEqual(a, b);`
 
  Pokud chcete přidat kontrolní výraz a znovu spusťte IntelliTest, zkontroluje, že vaše kontrolní výraz je platný a test se nezdaří, pokud není.
 
-### <a name="NoRun"></a> Dotaz: lze generovat parametrizované testy částí bez nutnosti nejprve spuštění IntelliTest
- **Odpověď:** Ano, klikněte pravým tlačítkem na třídy nebo metody a pak zvolte **vytvořit IntelliTest**.
+### <a name="NoRun"></a>Otázka: je možné generovat parametrizované testy jednotek bez spuštění IntelliTest jako první?
+ **A:** Ano, kliknout pravým tlačítkem na třídu nebo metodu a pak zvolit **vytvořit IntelliTest**.
 
  ![Klikněte&#45;pravým tlačítkem na Editor a vyberte vytvořit IntelliTest](../test/media/pexcreateintellitest.png "PEXCreateIntelliTest")
 
@@ -127,11 +127,11 @@ Inteligentní testování vám umožní prozkoumat kód .NET a vygenerovat testo
  ![Vytvoření IntelliTest s výchozím MSTest](../test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")
 
 ### <a name="q-can-i-use-other-unit-test-frameworks-with-intellitest"></a>Otázka: Mohu použít jiné rozhraní pro testování částí s Intellitestem?
- **Odpověď:** Ano, postupujte podle těchto kroků [najít a nainstalovat jiná rozhraní Framework](../test/install-third-party-unit-test-frameworks.md). Po restartování sady Visual Studio a znovu otevřete řešení, klikněte pravým tlačítkem na třídy nebo metody a pak zvolte **vytvořit IntelliTest**. Vyberte nainstalované rozhraní tady:
+ **A:** Ano, pomocí následujícího postupu můžete [Najít a nainstalovat další architektury](../test/install-third-party-unit-test-frameworks.md). Po restartování sady Visual Studio a opětovném otevření řešení klikněte pravým tlačítkem na třídu nebo metodu a pak zvolte **vytvořit IntelliTest**. Vyberte nainstalované rozhraní tady:
 
  ![Vybrat jiné rozhraní pro testování částí pro IntelliTest](../test/media/pexcreateintellitestextensions.png "PEXCreateIntelliTestExtensions")
 
  Pak spusťte IntelliTest a vygenerujte jednotlivé testy jednotek v příslušných souborech. g.cs.
 
 ### <a name="q-can-i-learn-more-about-how-the-tests-are-generated"></a>Otázka: mohu dozvědět více o tom, jak jsou generovány testy?
- **Odpověď:** Ano, chcete-li získat základní přehled, najdete v tomto [blogový příspěvek](https://devblogs.microsoft.com/devops/intellitest-one-test-to-rule-them-all/).
+ **A:** Ano, pokud chcete získat přehled vysoké úrovně, přečtěte si tento [Blogový příspěvek](https://devblogs.microsoft.com/devops/intellitest-one-test-to-rule-them-all/).

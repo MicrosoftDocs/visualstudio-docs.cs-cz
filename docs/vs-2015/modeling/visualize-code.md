@@ -46,9 +46,9 @@ Pomocí nástrojů pro vizualizaci a modelování v aplikaci Visual Studio můž
 |**Popište návrh systému vysoké úrovně a ověřte kód pro tento návrh:**<br /><br /> Popište návrh systému vysoké úrovně a jeho zamýšlené závislosti vytvořením diagramů vrstev. Ověřte kód pro tento návrh a ujistěte se, že závislosti v kódu zůstávají v souladu s návrhem.|-   [vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [diagramy vrstev: referenční](../modeling/layer-diagrams-reference.md) dokumentace<br />-   [diagramy vrstev: pokyny](../modeling/layer-diagrams-guidelines.md)<br />-   [ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)|
 |**Komunikace s požadavky a architekturou uživatele:**<br /><br /> Vykreslením následujících diagramů UML můžete modelovat požadavky uživatelů a architekturu softwarového systému: aktivita, komponenta, třída, sekvence a případ použití.|-   [vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)<br />[požadavky uživatelů -   modelu](../modeling/model-user-requirements.md)<br />-   [modelování architektury vaší aplikace](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="external-resources"></a>Externí zdroje
+## <a name="external-resources"></a>Externí prostředky
 
-|**Kategorie**|**Odkazy**|
+|**Kategorií**|**Odkazy**|
 |------------------|---------------|
 |**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://go.microsoft.com/fwlink/?LinkId=184721)|
 |**Blogy**|[Blog sady Visual Studio ALM + Team Foundation Server](https://go.microsoft.com/fwlink/?LinkID=201340)|

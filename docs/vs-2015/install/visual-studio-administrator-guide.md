@@ -46,7 +46,7 @@ Můžete nasadit Visual Studio 2015 v síti, pokud každý cílový počítač s
 |Zablokovat|0x80044000 [-2147205120]|0x8004C000 [-2147172352]|Pokud je pouze hlášený blok "čeká na restartování", vrácená hodnota je povinná hodnota nedokončeného restartování (0x80048bc7).|  
 |Zrušit|0x00000642 [1602]|0x80048642 [-2147187134]|Po vrácení hodnoty restart je návratový kód 1602.|  
 |Nedokončeno – vyžadováno restartování|Není k dispozici|0x80048bc7 [-2147185721]|Aby mohla instalace pokračovat, je nutné restartovat počítač.|  
-|Poruše|0x00000643 [1603]|0x80048643 [-2147187133]|Po vrácení hodnoty restart je návratový kód 1603.|  
+|Nezdařilo se|0x00000643 [1603]|0x80048643 [-2147187133]|Po vrácení hodnoty restart je návratový kód 1603.|  
   
 ## <a name="interactive-administrator-installer"></a>Interaktivní instalační program Správce  
  Pokud vytváříte interaktivní instalační program na začátku instalace sady Visual Studio, můžete zobrazit průběh z instalačního programu sady Visual Studio. Instalační program sady Visual Studio 2015 je založený na technologii Open Source Instalační služba systému Windows XML (WiX) chainer, která se označuje také jako "vypálit". Technologie pro vypalování podporuje dva komunikační protokoly: vypálit a netfx4. Stručný přehled naleznete v popisu atributu Protocol v dokumentaci pro element ExePackage na [wixtoolset.org](https://wixtoolset.org/). Pro integraci může být nutná kontrola implementace WiX Open Source tohoto atributu Protocol.  
@@ -60,7 +60,7 @@ Můžete nasadit Visual Studio 2015 v síti, pokud každý cílový počítač s
 
 Ve výchozím nastavení instalaci sady Visual Studio umožňuje zpětné vazby od zákazníků. Sadu Visual Studio můžete nakonfigurovat tak, aby na jednotlivé počítače nemohly na jednotlivých počítačích změnit hodnotu následujícího klíče registru na řetězec "0":  
   
-**HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\VisualStudio\SQM**  
+**HKEY_LOCAL_MACHINE \SOFTWARE\Policies\Microsoft\VisualStudio\SQM**  
 **OptIn**  
   
 (Například změňte na HKEY_LOCAL_MACHINE \SOFTWARE\Policies\Microsoft\VisualStudio\SQM OptIn = "0")  

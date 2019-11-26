@@ -23,7 +23,7 @@ ms.locfileid: "74301126"
 # <a name="writing-a-t4-text-template"></a>Tvorba textové šablony T4
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Textová šablona obsahuje text, který z ní bude vygenerován. Například šablona, která vytvoří webovou stránku, bude obsahovat "\<> HTML..." a všechny ostatní standardní části stránky HTML. Do šablony se vkládají *řídicí bloky*, což jsou fragmenty kódu programu. Řídicí bloky poskytují různé hodnoty a umožňují, aby části textu byly podmíněné a opakované.
+Textová šablona obsahuje text, který z ní bude vygenerován. Například šablona, která vytvoří webovou stránku, bude obsahovat "\<> HTML..." a všechny ostatní standardní části stránky HTML. Vložení do šablony jsou *řídicí bloky*, které jsou fragmenty kódu programu. Řídicí bloky poskytují různé hodnoty a umožňují, aby části textu byly podmíněné a opakované.
 
  Tato struktura usnadňuje vývoj šablon, protože lze začít s prototypem generovaného souboru a postupně vkládat řídicí bloky, které změní výsledek.
 
@@ -130,7 +130,7 @@ This is hello number <#= i+1 #>: Hello!
 ```
 
 ### <a name="class-feature-control-blocks"></a>Řídicí bloky s funkcí třídy
- Řídicí blok s funkcí třídy definuje vlastnosti, metody nebo jiný kód, který by neměl být zařazen do hlavní transformace. Bloky s funkcí třídy jsou často používány pro pomocné funkce.  Obvykle jsou bloky s funkcí třídy umístěny do samostatných souborů tak, aby mohly být [zahrnuty](#Include) ve více než jedné textové šabloně.
+ Řídicí blok s funkcí třídy definuje vlastnosti, metody nebo jiný kód, který by neměl být zařazen do hlavní transformace. Bloky s funkcí třídy jsou často používány pro pomocné funkce.  Obvykle jsou bloky funkcí třídy umístěny do samostatných souborů tak, aby mohly být [zahrnuty](#Include) do více než jedné textové šablony.
 
  Řídicí bloky s funkcí třídy jsou ohraničeny pomocí symbolů `<#+ ... #>`.
 
@@ -199,11 +199,11 @@ private void WriteSquareLine(int i)
 
  Seznam maker naleznete v tématu [společná makra pro příkazy a vlastnosti sestavení](https://msdn.microsoft.com/library/239bd708-2ea9-4687-b264-043f1febf98b).
 
- Direktiva assembly nemá žádný účinek na [předzpracované textové šablony](../modeling/run-time-text-generation-with-t4-text-templates.md).
+ Direktiva Assembly nemá žádný vliv na [předzpracované textové šablony](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
  Další informace naleznete v tématu [direktiva T4 pro sestavení](../modeling/t4-assembly-directive.md).
 
-### <a name="namespaces"></a>Jmenné prostory
+### <a name="namespaces"></a>Obory názvů
  Direktiva import je stejná jako klauzule `using` v jazyce C# nebo klauzule `imports` v jazyce Visual Basic. Umožňuje odkazovat na typy v kódu bez použití plně kvalifikovaného názvu:
 
 ```
@@ -235,7 +235,7 @@ private void WriteSquareLine(int i)
 
  Existuje několik způsobů čtení zdrojového souboru.
 
- **Čtení souboru v textové šabloně** Toto je nejjednodušší způsob, jak vložit data do šablony:
+ **Přečtěte si soubor v textové šabloně**. Toto je nejjednodušší způsob, jak vložit data do šablony:
 
 ```
 <#@ import namespace="System.IO" #>
@@ -249,7 +249,7 @@ private void WriteSquareLine(int i)
  **Použijte model UML**. Lze generovat kód z modelu UML. Výhodou je, že model lze upravit jako diagram se známými notacemi. Navíc není nutné diagram navrhovat. Další informace najdete v tématu [generování souborů z modelu UML](../modeling/generate-files-from-a-uml-model.md).
 
 ### <a name="relative-file-paths-in-design-time-templates"></a>Relativní cesty k souborům v návrhových šablonách
- Pokud chcete v [návrhových textových šablonách](../modeling/design-time-code-generation-by-using-t4-text-templates.md) odkazovat na soubor v relativním umístění vzhledem k textu šablony, použijte metodu `this.Host.ResolvePath()`. Je také nutné nastavit hodnotu `hostspecific="true"` v direktivě `template`:
+ V [textové šabloně návrhu](../modeling/design-time-code-generation-by-using-t4-text-templates.md), pokud chcete odkazovat na soubor v umístění relativní vzhledem k textové šabloně, použijte `this.Host.ResolvePath()`. Je také nutné nastavit hodnotu `hostspecific="true"` v direktivě `template`:
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -267,16 +267,16 @@ Content of MyFile.txt is:
  Lze také získat další služby, které jsou poskytovány tímto hostitelem. Další informace naleznete v tématu [přístup k aplikaci Visual Studio nebo k jiným hostitelům ze šablony](https://msdn.microsoft.com/0556f20c-fef4-41a9-9597-53afab4ab9e4).
 
 ### <a name="design-time-text-templates-run-in-a-separate-appdomain"></a>Návrhové textové šablony běží v oddělené doméně AppDomain.
- Je třeba si uvědomit, že [návrhová textová šablona](../modeling/design-time-code-generation-by-using-t4-text-templates.md) běží v doméně AppDomain, která je oddělená od hlavní aplikace. Ve většině případů to není důležité, ale v některých složitých případech lze narazit na omezení. Pokud například chcete předat data do nebo ze šablony ze samostatné služby, musí tato služba poskytovat serializovatelné rozhraní API.
+ Měli byste si uvědomit, že [Textová šablona návrhu](../modeling/design-time-code-generation-by-using-t4-text-templates.md) se spouští v doméně AppDomain, která je oddělená od hlavní aplikace. Ve většině případů to není důležité, ale v některých složitých případech lze narazit na omezení. Pokud například chcete předat data do nebo ze šablony ze samostatné služby, musí tato služba poskytovat serializovatelné rozhraní API.
 
- (To neplatí u [návrhových textových šablon](../modeling/run-time-text-generation-with-t4-text-templates.md) obsahujících kód, který je sestaven společně se zbytkem kódu.)
+ (To není pravdivé pro [textovou šablonu běhu](../modeling/run-time-text-generation-with-t4-text-templates.md), která poskytuje kód kompilovaný spolu se zbytkem kódu.)
 
 ## <a name="editing-templates"></a>Úpravy šablon
- Speciální editory textových šablon lze stáhnout z online galerie správce rozšíření. V nabídce **nástroje** klikněte na **Správce rozšíření**. Klikněte na položku **Online galerie** a poté použijte nástroj pro hledání.
+ Speciální editory textových šablon lze stáhnout z online galerie správce rozšíření. V nabídce **nástroje** klikněte na **Správce rozšíření**. Klikněte na položku **Online galerie**a pak použijte nástroj pro hledání.
 
 ## <a name="related-topics"></a>Související témata
 
-|Úloha|Téma|
+|Úkol|Téma|
 |----------|-----------|
 |Vytvoření šablony|[Pokyny pro zápis textových šablon T4](../modeling/guidelines-for-writing-t4-text-templates.md)|
 |Generování textu pomocí kódu programu|[Struktura textových šablon](../modeling/writing-a-t4-text-template.md)|

@@ -21,7 +21,7 @@ ms.locfileid: "74300593"
 
 Můžete rychle začít vytvářet weby v Pythonu v Azure.  
   
- Můžete sledovat tyto pokyny ve velmi krátké [videa youtube](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6).  
+ Tyto pokyny můžete sledovat ve velmi krátkém [videu YouTube](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6).  
   
  Začněte s novým projektem... dialog a v části projekty Pythonu vyberte webový projekt láhve.  Tato šablona [láhve](http://bottlepy.org/docs/dev/index.html) je počáteční web založený na [spouštěcí architektuře](https://getbootstrap.com/).  Při vytváření projektu aplikace Visual Studio zobrazí výzvu k instalaci závislostí (v tomto případě láhev) do virtuálního prostředí.  Vzhledem k tomu, že nasazujete na web Azure, musíte přidat závislosti do virtuálního prostředí, aby bylo možné nasadit nezbytné bity pro operaci vaší lokality.  Je také nutné založit prostředí v Pythonu 2,7 nebo 3,4 32-bit.  Po vytvoření projektu stiskněte klávesu F5, aby se váš web spustil místně.  
   
@@ -31,8 +31,8 @@ Můžete rychle začít vytvářet weby v Pythonu v Azure.
   
  Jednoduché weby jsou jednoduché, ale informace o důležitějších webových aplikacích v Azure najdete v části [podrobně](https://www.youtube.com/watch?v=WG3pGmoo8nE&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=10) video a také ostatní v tomto kanálu (odkaz v pravém horním rohu stránky Začínáme nebo hluboko podrobně video), a taky dál.  
   
- Můžete sledovat tyto pokyny ve velmi krátké [videa youtube](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6).  
+ Tyto pokyny můžete sledovat ve velmi krátkém [videu YouTube](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6).  
   
 ## <a name="see-also"></a>Viz také  
    [dokumentaci k wiki](https://github.com/Microsoft/PTVS/wiki/Web-Project)  
- [Videa můžete začít a Deep Dive PTVS](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
+ [PTVS Začínáme a rozsáhlá podrobně videa](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)

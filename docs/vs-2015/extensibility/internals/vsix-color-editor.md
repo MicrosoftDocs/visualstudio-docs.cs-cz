@@ -67,7 +67,7 @@ Nástroj Editor barev rozšíření sady Visual Studio může vytvářet a uprav
   
 - Aktivní  
   
-- Termín  
+- Neaktivní  
   
 - MouseOver  
   

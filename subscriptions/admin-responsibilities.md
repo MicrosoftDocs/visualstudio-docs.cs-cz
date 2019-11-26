@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/20/2019
 ms.topic: conceptual
 description: Přečtěte si o zodpovědnostech správců předplatných.
-ms.openlocfilehash: eb5a557d19aafdd36ccf175ec4fc37e482091f80
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 5ebdc3cb2448815ee5193020808c51630c5f1c17
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68415624"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491527"
 ---
 # <a name="overview-of-administrator-responsibilities"></a>Přehled odpovědností správce
 Jako správce můžete spravovat předplatná vaší organizace.  Role správce taky zajišťuje zodpovědnost za to, že se předplatná spravují v souladu s licenčními podmínkami. V tomto článku najdete popis odpovědností, výhod a omezení role správce.
@@ -39,5 +39,5 @@ Předplatná sady Visual Studio umožňují členům vývojového týmu instalov
 Další informace o zodpovědnostech pro správce:
 - [Inventář předprodukčního prostředí](admin-inventory.md)
 - [Správa velkých týmů a externích dodavatelů](manage-teams.md)
-- [Sledování přiřazení uživatelů a objednávek procesů](assignments-orders.md)
+- [Sledování přiřazení uživatelů a zpracování objednávek](assignments-orders.md)
 - Použití [maximálního využití](maximum-usage.md) ke sledování závazků nákupu

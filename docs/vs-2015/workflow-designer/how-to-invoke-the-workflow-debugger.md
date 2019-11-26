@@ -21,7 +21,7 @@ Obecně je potřeba ladit pracovní postupy stejně jako při ladění programů
 
 - V nabídce **ladění** vyberte **připojit k procesu** a vyberte běžící hostitelský proces pro vaši instanci pracovního postupu. Tento postup je stejný jako připojení k hostitelskému procesu ve spravovaném kódu.
 
-- Stisknutím klávesy **F5** spouštění instance pracovního postupu, nebo aby kontinuálně běžely, jakmile dosáhne zarážky.
+- Stiskněte klávesu **F5** ke spuštění instance pracovního postupu nebo ke spuštění i po dosažení zarážky.
 
 - Použijte vzdálené ladění. Informace o použití vzdáleného ladění naleznete v tématu [How to: Enable Remote Debugging](https://go.microsoft.com/fwlink/?LinkId=196257).
 
@@ -30,11 +30,11 @@ Obecně je potřeba ladit pracovní postupy stejně jako při ladění programů
 
 ### <a name="stepping-through-code"></a>Krokování prostřednictvím kódu
 
-- **Krok dovnitř**: můžete krokovat s vnořením aktivity pomocí **F11**. Ladicí program do libovolné obslužné rutiny, která je definována. Pokud není definována žádná obslužná rutina, Krokovat přes aktivity nebo pomocí složených aktivit, které obsahují další aktivity, přejdete na první spouštěné aktivity.
+- **Krok**dovnitř: můžete krokovat s aktivitou pomocí **klávesy F11**. Ladicí program do libovolné obslužné rutiny, která je definována. Pokud není definována žádná obslužná rutina, Krokovat přes aktivity nebo pomocí složených aktivit, které obsahují další aktivity, přejdete na první spouštěné aktivity.
 
 - **Krok ven:** Můžete krokovat s aktivitou pomocí **SHIFT + F11**. Krokování mimo aktivitu spouští aktuální aktivitu a jejich na stejné úrovni aktivity do konce. Ladicí program zastaví se na nadřazený prvek aktuální aktivity. Při procházení z obslužné rutiny kód, ladicí program přeruší na aktivitu, ke kterému je přidružené obslužnou rutinu.
 
-- **Krokovat s přeskočením**: můžete krokovat přes aktivity pomocí **F10**. Při krokování nad složenou aktivitou se ladicí program ukončí u prvního spustitelného prvku složené aktivity. Při rozkrokování mimo nesložené, například <xref:System.Activities.Statements.Assign> aktivity, ladicí program spustí aktivitu a její přidružené obslužné rutiny a přeruší na další aktivitu. Pokud je spuštěná aktivita poslední podřízená aktivita v složené aktivitě, potom po provedení dojde k přerušení ladicího programu u nadřazené aktivity.
+- **Krok za krokem**: můžete krokovat aktivitu pomocí **F10**. Při krokování nad složenou aktivitou se ladicí program ukončí u prvního spustitelného prvku složené aktivity. Při rozkrokování mimo nesložené, například <xref:System.Activities.Statements.Assign> aktivity, ladicí program spustí aktivitu a její přidružené obslužné rutiny a přeruší na další aktivitu. Pokud je spuštěná aktivita poslední podřízená aktivita v složené aktivitě, potom po provedení dojde k přerušení ladicího programu u nadřazené aktivity.
 
 ### <a name="debugging-with-f5"></a>Ladění pomocí F5
 

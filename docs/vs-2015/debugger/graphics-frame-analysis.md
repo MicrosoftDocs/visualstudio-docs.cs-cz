@@ -74,14 +74,14 @@ Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio m
 ### <a name="timeline-and-summary-table"></a>Časová osa a Souhrnná tabulka  
  Ve výchozím nastavení se zobrazuje časová osa a tabulka souhrnů a ostatní oddíly jsou sbalené.  
   
-#### <a name="timeline"></a>Včasnost  
+#### <a name="timeline"></a>Časová osa  
  Časová osa zobrazuje přehled časování volání vytažení vzhledem k jinému typu. Vzhledem k tomu, že větší pruhy odpovídají delší době kreslení, můžete je použít k rychlému vyhledání nejdražších volání vykreslování v rámci rámce. Když zachycený snímek obsahuje velký počet volání remíz, vícenásobná volání vykreslování jsou kombinována do jednoho panelu, jehož délka je součet těchto volání vykreslování.  
   
  ![Časová osa ukazuje&#45;náklady na volání remíz.](../debugger/media/pix-frame-analysis-timeline.png "pix_frame_analysis_timeline")  
   
  Můžete si ponechit ukazatel na panelu a zjistit, která událost nakresleného volání odpovídá pruhu. Výběr pruhu způsobí, že se seznam událostí synchronizuje s touto událostí.  
   
-#### <a name="table"></a>Tabulka  
+#### <a name="table"></a>Table  
  Tabulka s čísly pod časovou osou zobrazuje relativní výkon jednotlivých variant vykreslování pro každé volání remíz s ohledem na výchozí vykreslování vaší aplikace. Každý sloupec zobrazuje jinou variantu vykreslování a každý řádek představuje jiné volání remízy, které je identifikované ve sloupci nejvíce vlevo; odsud můžete sledovat odkaz na událost v okně seznam událostí grafiky.  
   
  ![Tabulka souhrnu zobrazuje různé varients.](../debugger/media/pix-frame-analysis-summary.png "pix_frame_analysis_summary")  
@@ -190,7 +190,7 @@ Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio m
 |**Velikost zobrazení 1x1**|Zmenší rozměry zobrazení na všech cílech vykreslování na 1x1 pixelů.<br /><br /> Další informace najdete v tématu [varianta velikosti zobrazení 1x1](../debugger/1x1-viewport-size-variant.md) .|  
 |**0x MSAA**|Zakáže multi-Sample anti-aliasing (MSAA) pro všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0x/2x/4x varianty rozhraní MSAA](../debugger/0x-2x-4x-msaa-variants.md) .|  
 |**2x MSAA**|Povoluje 2x multi-Sample anti-aliasing (MSAA) pro všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0x/2x/4x varianty rozhraní MSAA](../debugger/0x-2x-4x-msaa-variants.md) .|  
-|**4x MSAA**|Povoluje 4x multi-Sample anti-aliasing (MSAA) pro všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0x/2x/4x varianty rozhraní MSAA](../debugger/0x-2x-4x-msaa-variants.md) .|  
+|**4x 4x**|Povoluje 4x multi-Sample anti-aliasing (MSAA) pro všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0x/2x/4x varianty rozhraní MSAA](../debugger/0x-2x-4x-msaa-variants.md) .|  
 |**Filtrování textury bodu**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_MIP_POINT` (filtrování textury bodu) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
 |**Varianty filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_LINEAR_MIP_POINT` (filtrování textury varianty) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
 |**Trilineárního filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_MIP_LINEAR` (filtrování textury trilineárního) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  

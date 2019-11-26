@@ -21,11 +21,11 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74302847"
 ---
 # <a name="rule-condition-editor-dialog-box-legacy"></a>Dialogové okno Editor podmínek pravidla (starší verze)
-Toto téma popisuje, jak používat dialogové okno **Editor podmínek pravidla** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] potřeba cílit na platformu [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Toto téma popisuje, jak používat dialogové okno **Editor podmínek pravidla** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
 
  Podmínky deklarativního pravidla můžete vytvořit a upravit pomocí dialogového okna **Editor podmínek pravidla** . Tyto podmínky pravidla jsou zpřístupněny jako vlastnosti v následujících programovací model Windows Workflow Foundation nedostupné aktivity:
 
-- [ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65017)
+- [Aktivitou skupiny ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65017)
 
 - [IfElseBranchActivity](https://go.microsoft.com/fwlink?LinkID=65034)
 
@@ -44,7 +44,7 @@ Toto téma popisuje, jak používat dialogové okno **Editor podmínek pravidla*
 |Prvek uživatelského rozhraní (UI)|Popis|
 |----------------|-----------------|
 |**Pomocné**|Zadejte výraz pro podmínku pravidla.|
-|**OK**|Kliknutím uložíte podmínku pravidla.|
+|**Ok**|Kliknutím uložíte podmínku pravidla.|
 
 ## <a name="entering-condition-expressions"></a>Vstupní výrazy podmínky
  Výrazy podmínky jsou zadány jako text. Tuto možnost můžete zadat **.** do editoru pro odkaz na pole, vlastnosti a metody použité v pracovním postupu pomocí nabídky podobné technologií IntelliSense. Případně můžete zadat název člena pracovního postupu přímo. Do podmínky můžete přidat logické operátory, jako například a, nebo, nikoli. Můžete také přidat predikáty. Predikát je binární operátor a dva operandy. Podporované binární operátory jsou **==** , **>** , **\<** , **>=** a **<=** . Podporované operandy jsou konstantní hodnota, Aritmetická funkce a obor veřejných členů.

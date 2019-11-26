@@ -1,71 +1,71 @@
 ---
-title: Windows Developer Account Benefit in Visual Studio Subscriptions | Microsoft Docs
+title: Výhody účtu vývojáře pro Windows v předplatných sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 11/18/2019
 ms.topic: conceptual
-description: Learn about the Windows Developer Account included with your Visual Studio subscription.
-ms.openlocfilehash: 662dc6d911903a4c0d2c0a77382647639bb25d07
-ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
+description: Seznamte se s vývojářským účtem Windows, který je součástí vašeho předplatného sady Visual Studio.
+ms.openlocfilehash: 7ba77979c47d61cd230351a352d85baa7c1eae9a
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74174120"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491279"
 ---
-# <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Windows Developer account in Visual Studio subscriptions
-Your Windows Developer Account, included with selected Visual Studio subscription, lets you submit free and paid Windows apps to the Windows Store.
+# <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Vývojářský účet pro Windows v předplatných sady Visual Studio
+Váš účet pro vývojáře ve Windows, který je součástí vybraného předplatného sady Visual Studio, umožňuje odeslat bezplatné a placené aplikace pro Windows do Windows Storu.
 
-## <a name="activation-steps"></a>Activation steps
-To use your Windows Developer Account, you’ll need to set up an account or sign in using an existing account.
+## <a name="activation-steps"></a>Kroky aktivace
+Pokud chcete použít svůj účet vývojářů pro Windows, budete muset nastavit účet nebo se přihlásit pomocí existujícího účtu.
 
-We recommend that you create a "private" browser window for this process.  For example, in Google Chrome, create a new "incongnito" window.  In Internet Explorer, create a new "InPrivate" window.
+Pro tento proces doporučujeme vytvořit okno prohlížeče "soukromé".  Například v Google Chrome vytvořte nové okno "anonymním".  V Internet Exploreru vytvořte nové okno InPrivate.
 
-1. Sign in to [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
-2. Locate the Windows Developer Account tile in the Tools section and click on the **Get Code** link at the bottom of the benefit tile.  Copy the code to your clipboard, then click **Activate**.
+1. Přihlaste se k [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
+2. V části nástroje Najděte dlaždici účet pro vývojáře Windows a klikněte na odkaz **získat kód** v dolní části dlaždice výhody.  Zkopírujte kód do schránky a pak klikněte na **aktivovat**.
    > [!div class="mx-imgBorder"]
-   > ![Windows Developer Benefit Tile](_img/vs-windows-dev/vs-windows-dev-tile.png)
-3. On the [https://developer.microsoft.com](https://developer.microsoft.com) site you can begin the registration process.  Click **Sign up** to continue.
+   > ![dlaždici výhody vývojářů v systému Windows](_img/vs-windows-dev/vs-windows-dev-tile.png)
+3. Na webu [https://developer.microsoft.com](https://developer.microsoft.com) můžete zahájit proces registrace.  Pokračujte kliknutím na **zaregistrovat** .
    > [!div class="mx-imgBorder"]
-   > ![Windows Developer Benefit Registration](_img/vs-windows-dev/vs-windows-dev-register1-cropped.png)
-4. Sign in to your subscription.  If you have multiple accounts, choose the one associated with your Enterprise subscription.
-0. Enter your email address, select your preferred language, and click **Save**.
-5. On the next page, select the country or region where you live or where your business is located, and then click **Next**.
-6. Select **Individual** as your account type.
-7. Create your publisher display name.  This will be the unique name your customers will see associated with your apps, add-ins, and services.
-8. Provide your contact information and preferred email language, then click **Next**.
-9. You may be asked to verify your password.  Enter it and click **Sign in**.
-10. On the Registration – Payment page, paste the code you copied earlier into the Promo Code field.  The page will update to show that *no payment is required*.  Click **Next**.
-11. Review your account information, review the App Developer Agreement, and click the checkbox to indicate your acceptance of the terms and conditions.  Then click **Finish**.
-12. Click **Go to dashboard** to begin using your Windows Developer Account!
+   > ![registraci výhody vývojářů pro Windows](_img/vs-windows-dev/vs-windows-dev-register1-cropped.png)
+4. Přihlaste se ke svému předplatnému.  Pokud máte více účtů, vyberte účet přidružený k vašemu firemnímu předplatnému.
+0. Zadejte svou e-mailovou adresu, vyberte preferovaný jazyk a klikněte na **Uložit**.
+5. Na další stránce vyberte zemi nebo oblast, kde žijete, nebo kde se nachází vaše podnikání, a potom klikněte na **Další**.
+6. Jako typ účtu vyberte **jednotlivce** .
+7. Vytvořte zobrazované jméno vydavatele.  Bude to jedinečný název, který se zákazníkům zobrazí v souvislosti s vašimi aplikacemi, doplňky a službami.
+8. Zadejte kontaktní informace a preferovaný e-mailový jazyk a pak klikněte na **Další**.
+9. Může se zobrazit výzva k ověření hesla.  Zadejte ho a klikněte na **Přihlásit se**.
+10. Na stránce registrace – platba vložte kód, který jste zkopírovali dříve do pole propagační kód.  Stránka se aktualizuje a ukáže, že *není potřeba žádná platba*.  Klikněte na **Další**.
+11. Projděte si informace o účtu, přečtěte si smlouvu pro vývojáře aplikace a kliknutím na zaškrtávací políčko označíte, že souhlasíte s podmínkami a ujednáními.  Pak klikněte na **Dokončit**.
+12. Kliknutím na **Přejít na řídicí panel** můžete začít používat vývojářský účet pro Windows.
 
-## <a name="eligibility"></a>Eligibility
-| Subscription Level                                                 |     Kanály                                            | Benefit                                                          | Renewable?    |
+## <a name="eligibility"></a>Vznik
+| Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail,  selected NFR<sup>1</sup> | Included       |  Ano|
-| Visual Studio Enterprise with GitHub Enterprise   | VL  | Included       |  Ano|
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Included                                                            |Ano|
-| Visual Studio Professional with GitHub Enterprise | VL                                        | Included                                                            |Ano|
-| Visual Studio Test Professional (Standard)                         | VL, Retail                                              | Not available                                            |  NA|
-| MSDN Platforms (Standard)                                          | VL, Retail                                              |  Not available                                            |  NA|
-| Visual Studio Enterprise, Visual Studio Professional (monthly cloud) | Azure                                       | Not available                                                           |NA|
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | Zahrnuje       |  Ano|
+| Visual Studio Enterprise s GitHubem Enterprise   | VL  | Zahrnuje       |  Ano|
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Zahrnuje                                                            |Ano|
+| Visual Studio Professional s GitHubem Enterprise | VL                                        | Zahrnuje                                                            |Ano|
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                            |  Není k dispozici|
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              |  Není k dispozici                                            |  Není k dispozici|
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |Není k dispozici|
 ||
 
-<sup>1</sup>  *Includes:  Not for Resale (NFR), FTE, Visual Studio Industry Partner (VSIP), BizSpark, MCT Software & Services Developer. Excludes:  Microsoft Partner Network (MPN), Imagine, Most Valuable Professional (MVP), Regional Director (RD), MCT Software & Services.*
+<sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), FTE, Visual Studio Industry Partner (VSIP), BizSpark, MCT software & Services Developer. Nezahrnuje se: Microsoft Partner Network (MPN), Představte si předužitečnější profesionální specialista (MVP), oblastní ředitel (RD), MCT software & Services.*
 
 > [!NOTE]
-> Microsoft no longer offers Visual Studio Professional Annual subscriptions and Visual Studio Enterprise Annual subscriptions in Cloud Subscriptions. There will be no change to existing customers experience and ability to renew, increase, decrease, or cancel their subscriptions. New customers are encouraged to go to [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) to explore different options to purchase Visual Studio.
+> Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
 
-Not sure which subscription you're using?  Connect to [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) to see all the subscriptions assigned to your email address. If you don't see all your subscriptions, you may have one or more assigned to a different email address.  You'll need to sign in with that email address to see those subscriptions.
+Nejste si jistí, jaké Předplatné používáte?  Pokud chcete zobrazit všechna předplatná přiřazená k vaší e-mailové adrese, připojte se k [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) . Pokud nevidíte všechna Vaše předplatná, může být jedna nebo více přiřazená k jiné e-mailové adrese.  K zobrazení těchto předplatných se budete muset přihlásit pomocí této e-mailové adresy.
 
-## <a name="support-resources"></a>Support resources
-- Need help with using your Windows Developer account?  Check out the [support](https://developer.microsoft.com/windows/support) resources on the [Windows Dev Center](https://developer.microsoft.com/windows).
+## <a name="support-resources"></a>Prostředky podpory
+- Potřebujete pomoci s používáním vašeho účtu Windows Developer?  Projděte si materiály [podpory](https://developer.microsoft.com/windows/support) na stránce [Windows Dev Center](https://developer.microsoft.com/windows).
 - [Vývoj pro Windows](/windows/)
-- For assistance with sales, subscriptions, accounts and billing for Visual Studio Subscriptions, contact Visual Studio [Subscriptions Support](https://visualstudio.microsoft.com/subscriptions/support/).
-- Have a question about Visual Studio IDE, Azure DevOps Services or other Visual Studio products or services?  Visit [Visual Studio Support](https://visualstudio.microsoft.com/support/).
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
+- Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="next-steps"></a>Další kroky
-Be sure to activate these great benefits to make the most of your Visual Studio subscription:
+Nezapomeňte tyto skvělé výhody aktivovat, abyste mohli využít maximum vašeho předplatného sady Visual Studio:
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
 - [Individuální kredit v Azure DevTest](vs-azure.md)

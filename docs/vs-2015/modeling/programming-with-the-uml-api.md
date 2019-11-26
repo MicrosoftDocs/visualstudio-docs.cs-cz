@@ -51,9 +51,9 @@ Rozhraní API UML sady Visual Studio umožňuje psát kód pro vytváření, čt
 ## <a name="the-api-assemblies"></a>Sestavení rozhraní API
  Tato tabulka shrnuje sestavení, která poskytují rozšiřitelnost pro nástroje UML, a obory názvů, které se doporučuje použít.
 
-|Assembly|Jmenné prostory|Poskytuje přístup k:|
+|Assembly|Obory názvů|Poskytuje přístup k:|
 |--------------|----------------|-------------------------|
-|Microsoft.VisualStudio.Uml.Interfaces|Všem|Typy UML.|
+|Microsoft.VisualStudio.Uml.Interfaces|(vše)|Typy UML.|
 |Microsoft.VisualStudio.ArchitectureTools.Extensibility|Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost. UML|[Metody vytváření](../modeling/create-elements-and-relationships-in-uml-models.md)|
 ||Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation|[Diagramy a obrazce](../modeling/display-a-uml-model-on-diagrams.md)|
 ||Microsoft.VisualStudio.ArchitectureTools.Extensibility|[Projekt modelování](../modeling/read-a-uml-model-in-program-code.md)|

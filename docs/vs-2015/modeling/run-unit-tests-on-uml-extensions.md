@@ -19,7 +19,7 @@ ms.locfileid: "74292547"
 # <a name="run-unit-tests-on-uml-extensions"></a>Spouštění testování částí v rozšířeních UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Abychom vám pomohli udržet kód v průběhu po sobě jdoucích změn, doporučujeme napsat testy jednotek a provádět je v rámci běžného procesu sestavení. Další informace najdete v tématu [svůj kód testu jednotek](../test/unit-test-your-code.md). Chcete-li nastavit testy pro rozšíření modelování sady Visual Studio, budete potřebovat některé klíčové informace. Souhrn:
+Abychom vám pomohli udržet kód v průběhu po sobě jdoucích změn, doporučujeme napsat testy jednotek a provádět je v rámci běžného procesu sestavení. Další informace najdete v tématu [testování částí kódu](../test/unit-test-your-code.md). Chcete-li nastavit testy pro rozšíření modelování sady Visual Studio, budete potřebovat některé klíčové informace. Souhrn:
 
 - [Nastavení testu jednotek pro rozšíření VSIX](#Host)
 
@@ -57,7 +57,7 @@ Abychom vám pomohli udržet kód v průběhu po sobě jdoucích změn, doporuč
 
     1. **Projekt rozšíření UML.** Obvykle to vytvoříte pomocí šablon projektů pro příkazy, gesta nebo ověřování. Například viz [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
 
-    2. **Projekt testování částí.** Další informace najdete v tématu [svůj kód testu jednotek](../test/unit-test-your-code.md).
+    2. **Projekt testování částí.** Další informace najdete v tématu [testování částí kódu](../test/unit-test-your-code.md).
 
 2. Vytvořte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení, které obsahuje projekt modelování UML. Toto řešení budete používat jako počáteční stav vašich testů. Mělo by být oddělené od řešení, ve kterém zapisujete rozšíření UML a testy jednotek. Další informace najdete v tématu [vytváření projektů a diagramů modelování UML](../modeling/create-uml-modeling-projects-and-diagrams.md).
 
@@ -80,17 +80,17 @@ Abychom vám pomohli udržet kód v průběhu po sobě jdoucích změn, doporuč
 
     - *Váš projekt rozšíření UML*
 
-    - **EnvDTE.dll**
+    - **EnvDTE. dll**
 
-    - **Microsoft.VisualStudio.ArchitectureTools.Extensibility.dll**
+    - **Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost. dll**
 
-    - **Microsoft.VisualStudio.ComponentModelHost.dll**
+    - **Microsoft. VisualStudio. ComponentModelHost. dll**
 
-    - **Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll**
+    - **Microsoft. VisualStudio. QualityTools. UnitTestFramework. dll**
 
-    - **Microsoft.VisualStudio.Uml.Interfaces.dll**
+    - **Microsoft. VisualStudio. Uml. Interfaces. dll**
 
-    - **Microsoft.VSSDK.TestHostFramework.dll**
+    - **Microsoft. VSSDK. TestHostFramework. dll**
 
 6. Prefixujte atribut `[HostType("VS IDE")]` ke každé testovací metodě, včetně inicializačních metod.
 

@@ -113,7 +113,7 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
 
 - Jak je znázorněno v příkladu, `<bmp fileName="…"/>` pro ikonu panelu nástrojů a `<value>string</value>` pro ostatní položky.
 
-  \- nebo –
+  \- nebo-
 
 - `<resource fileName="Resources.dll"`
 
@@ -129,7 +129,7 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
 |---------------|-------------|
 |displayName|Název položky sady nástrojů|
 |tabName|Karta panelu nástrojů, na které se má položka zobrazit Pro tento typ diagramu můžete zadat buď název regulární karty, nebo samostatný název.|
-|obrázek|Umístění souboru rastrového obrázku ( **. bmp**), který musí mít výšku a šířku 16 a barevnou hloubku 24 bitů.|
+|image|Umístění souboru rastrového obrázku ( **. bmp**), který musí mít výšku a šířku 16 a barevnou hloubku 24 bitů.|
 |f1Keyword|Klíčové slovo, které vyhledává téma nápovědy.|
 |okna|Popis tlačítka pro tento nástroj|
 
@@ -151,7 +151,7 @@ Chcete-li usnadnit vytváření prvku nebo skupiny prvků podle vzoru, který č
 
 3. Otevřete existující projekt rozšíření aplikace Visual Studio.
 
-     \- nebo –
+     \- nebo-
 
      Definujte nový projekt rozšíření sady Visual Studio.
 

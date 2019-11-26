@@ -51,7 +51,7 @@ Tento dokument popisuje nástroje pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Titul|Popis|
 |-----------|-----------------|
 |[Práce s texturami a obrázky](../designers/working-with-textures-and-images.md)|Popisuje, jak použít [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pro práci s obrázky a texturami.|
 |[Práce se 3D modely](../designers/working-with-3-d-models.md)|Popisuje, jak používat [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pro práci s 3D modely.|

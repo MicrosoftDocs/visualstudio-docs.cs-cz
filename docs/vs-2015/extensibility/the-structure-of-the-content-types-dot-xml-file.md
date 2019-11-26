@@ -68,13 +68,13 @@ Obsahuje informace o typech obsahu v balíčku VSIX. Sada Visual Studio použív
   
 |Linka|ContentType|  
 |---------------|-----------------|  
-|txt|Text/prostý|  
-|pkgdef|Text/prostý|  
+|txt|text/plain|  
+|pkgdef|text/plain|  
 |xml|text/xml|  
 |vsixmanifest|text/xml|  
 |htm nebo HTML|text/html|  
 |rtf|aplikace/RTF|  
-|pdf|aplikace/PDF|  
+|pdf|application/pdf|  
 |ve|obrázek/GIF|  
 |jpg nebo JPEG|Obrázek/jpg|  
 |TIFF|obrázek/TIFF|  

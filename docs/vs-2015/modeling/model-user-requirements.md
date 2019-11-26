@@ -48,7 +48,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 > [!NOTE]
 > V těchto tématech "systém" znamená systém nebo aplikaci, kterou vyvíjíte. Může se jednat o velkou kolekci mnoha softwarových a hardwarových komponent. nebo jedna aplikace; nebo softwarová součást v rámci většího systému. V každém případě model požadavků popisuje chování, které je viditelné mimo váš systém bez ohledu na to, jestli jde o uživatelské rozhraní nebo rozhraní API.
 
-## <a name="common-tasks"></a>Obecné úlohy
+## <a name="common-tasks"></a>Common Tasks
  Můžete vytvořit několik různých zobrazení požadavků uživatelů.  Každé zobrazení poskytuje konkrétní typ informací.  Když vytváříte tato zobrazení, je nejlepší je často přesunout z jedné do druhé. Můžete začít z libovolného zobrazení.
 
 |Diagram nebo dokument|Jak popisuje model požadavků|Section|
@@ -87,7 +87,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
   Další informace najdete v následujících tématech:
 
-|Další informace|Číst|
+|Další informace|Pro čtení|
 |--------------------|----------|
 |Podrobnější informace o tom, jak vytvořit případy použití|[Diagramy případů použití UML: Pokyny](../modeling/uml-use-case-diagrams-guidelines.md)|
 |Prvky v diagramu případu použití|[Diagramy případů použití UML: Referenční dokumentace](../modeling/uml-use-case-diagrams-reference.md)|
@@ -132,7 +132,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
   Další informace najdete v následujících tématech:
 
-|Další informace|Číst|
+|Další informace|Pro čtení|
 |--------------------|----------|
 |Podrobnější informace o hledání tříd požadavků|[Diagramy tříd UML: Pokyny](../modeling/uml-class-diagrams-guidelines.md)|
 |Prvky v diagramu koncepční třídy|[Diagramy tříd UML: Referenční dokumentace](../modeling/uml-class-diagrams-reference.md)|
@@ -155,14 +155,14 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
  Další informace najdete v následujících tématech:
 
-|Další informace|Číst|
+|Další informace|Pro čtení|
 |--------------------|----------|
 |Podrobnější informace o hledání a záznamu statických obchodních pravidel|[Diagramy tříd UML: Pokyny](../modeling/uml-class-diagrams-guidelines.md)|
 |Prvky v diagramu koncepční třídy|[Diagramy tříd UML: Referenční dokumentace](../modeling/uml-class-diagrams-reference.md)|
 |Postup vývoje kódu, který dodržuje obchodní pravidla|[Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)|
 
 ## <a name="QoSRequirements"></a>Popisující požadavky na službu Quality of Service
- Existuje několik kategorií požadavků na kvalitu služeb. Jsou to tyto:
+ Existuje několik kategorií požadavků na kvalitu služeb. Mezi tyto typy patří:
 
 - Výkon
 
@@ -180,7 +180,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
   Další informace najdete v následujících tématech:
 
-|Další informace|Číst|
+|Další informace|Pro čtení|
 |--------------------|----------|
 |Připojení dalších dokumentů k případům použití|[Propojení případu použití s dokumenty a diagramy](../modeling/link-a-use-case-to-documents-and-diagrams.md)|
 |Postup vývoje kódu, který dodržuje požadavky na kvalitu služeb|[Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)|
@@ -200,7 +200,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
  Další informace najdete v následujících tématech:
 
-|Další informace|Číst|
+|Další informace|Pro čtení|
 |--------------------|----------|
 |Další informace o tom, jak definovat pracovní toky|[Diagramy činnosti UML: Pokyny](../modeling/uml-activity-diagrams-guidelines.md)|
 |Prvky v diagramu činnosti|[Diagramy činnosti UML: Referenční dokumentace](../modeling/uml-activity-diagrams-reference.md)|
@@ -217,7 +217,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
  Další informace najdete v následujících tématech:
 
-|Další informace|Číst|
+|Další informace|Pro čtení|
 |--------------------|----------|
 |Další informace o tom, jak definovat interakce|[Sekvenční diagramy UML: Pokyny](../modeling/uml-sequence-diagrams-guidelines.md)|
 |Prvky v sekvenčním diagramu|[Sekvenční diagramy UML: Referenční dokumentace](../modeling/uml-sequence-diagrams-reference.md)|

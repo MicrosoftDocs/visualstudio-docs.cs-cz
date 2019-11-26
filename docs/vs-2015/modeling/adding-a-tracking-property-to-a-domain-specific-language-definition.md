@@ -722,9 +722,9 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
 
 #### <a name="to-exercise-the-language"></a>Postup při cvičení jazyka
 
-1. Na **sestavení** nabídky, klikněte na tlačítko **znovu sestavit řešení**.
+1. V nabídce **sestavení** klikněte na příkaz **znovu sestavit řešení**.
 
-2. Na **ladění** nabídky, klikněte na tlačítko **spustit ladění**.
+2. V nabídce **ladit** klikněte na **Spustit ladění**.
 
      Experimentální sestavení [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] otevře **ladicí** řešení, které obsahuje prázdný testovací soubor.
 
@@ -760,5 +760,5 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
  Pokud plánujete použít více než jednu vlastnost sledování nebo implementovat vlastnosti sledování ve více než jedné DSL, můžete vytvořit textovou šablonu, která generuje společný kód pro podporu jednotlivých vlastností sledování. Další informace o textových šablonách naleznete v tématu [Code Generation and T4 text Templates](../modeling/code-generation-and-t4-text-templates.md).
 
 ## <a name="see-also"></a>Viz také
- <xref:Microsoft.VisualStudio.Modeling.Design.TrackingPropertyDescriptor> <xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>
+ <xref:Microsoft.VisualStudio.Modeling.Design.TrackingPropertyDescriptor><xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>
  [Definování jazyka specifického pro doménu](../modeling/how-to-define-a-domain-specific-language.md) [Postupy: vytvoření řešení jazyka](../modeling/how-to-create-a-domain-specific-language-solution.md) specifického pro doménu [: postup přizpůsobení definice jazyka specifického pro doménu](../misc/walkthrough-customizing-the-domain-specific-language-definition.md)

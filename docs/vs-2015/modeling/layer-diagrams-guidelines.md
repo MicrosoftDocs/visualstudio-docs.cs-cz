@@ -96,7 +96,7 @@ Popište architekturu vaší aplikace na vysoké úrovni tím, že vytvoříte *
 ## <a name="EditArchitecture"></a>Úprava vrstev a závislostí pro zobrazení zamýšleného návrhu
  Chcete-li popsat změny, které plánujete udělat v systému nebo zamýšlené architektuře, použijte následující postup k úpravě diagramu vrstev. Můžete také zvážit provedení některých změn refaktoringu pro zlepšení struktury kódu před jeho rozšířením. Viz [vylepšení struktury kódu](#Improving).
 
-|**To**|**Proveďte tyto kroky**|
+|**Schopn**|**Proveďte tyto kroky**|
 |------------|-----------------------------|
 |Odstranit závislost, která neexistuje|Klikněte na závislost a potom stiskněte **Delete**.|
 |Změna nebo omezení směru závislosti|Nastavte vlastnost **Direction** .|

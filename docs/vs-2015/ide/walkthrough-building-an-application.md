@@ -70,7 +70,7 @@ Toto téma obsahuje následující oddíly:
 
      ![Dialogové okno Nový projekt, ukázka Visual Basic](../ide/media/buildwalk-newprojectdlgintrotowpfsamplevb.png "BuildWalk_NewProjectdlgIntrotoWPFsampleVB")
 
-4. Zvolte **OK** tlačítko.
+4. Klikněte na tlačítko **OK** .
 
 ## <a name="BKMK_CreateBuildConfig"></a>Vytvoření vlastní konfigurace sestavení
 
@@ -96,7 +96,7 @@ Konfigurace a nastavení platformy můžete změnit nebo vytvořit pomocí dialo
 
     ![Dialogové okno Nová platforma řešení](../ide/media/buildwalk-newsolutionplatform.png "BuildWalk_NewSolutionPlatform")
 
-6. Zvolte **OK** tlačítko.
+6. Klikněte na tlačítko **OK** .
 
    Konfigurace aktivního řešení se změnila na test s aktivní platformou řešení nastavenou na x64.
 
@@ -237,7 +237,7 @@ Další informace naleznete v tématu [Postupy: Změna výstupního adresáře s
 
     ![Nabídka zobrazení, příkaz stránky vlastností](../ide/media/buildwalk-viewpropertypages.png "BuildWalk_ViewPropertyPages")
 
-2. Zvolte **sestavení** stránky.
+2. Vyberte stránku **sestavení** .
 
 3. V seznamu **Konfigurace** vyberte možnost **verze**.
 

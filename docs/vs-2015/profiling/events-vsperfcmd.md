@@ -50,7 +50,7 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
  **Přihlášení**  
  Zpracování událostí  
   
- **vlákno**  
+ **Doporučujeme**  
  Události vlákna  
   
  **Obrázek**  
@@ -59,7 +59,7 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
  **Disk**  
  Události v/v disku  
   
- **File**  
+ **Souborů**  
  Vstupně výstupní události souboru  
   
  **Hardfault**  

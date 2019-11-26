@@ -58,7 +58,7 @@ V aplikaci Visual Studio můžete použít *Diagram vrstev* k vizualizaci logick
 |**Automatického**|**Element**|**Popis**|
 |---------------|-----------------|---------------------|
 |1|**Vrstvení**|Logická skupina fyzických artefaktů ve vašem systému. Tyto artefakty mohou být obory názvů, projekty, třídy, metody a tak dále.<br /><br /> Chcete-li zobrazit artefakty, které jsou propojeny s vrstvou, otevřete místní nabídku pro vrstvu a pak zvolte možnost **Zobrazit odkazy** a otevřete **Průzkumníka vrstev**.<br /><br /> Další informace naleznete v tématu [Průzkumník vrstev](#Explorer).<br /><br /> -   **zakázané závislosti oboru názvů** – určuje, že artefakty přidružené k této vrstvě nemůžou záviset na zadaných oborech názvů.<br />-   **zakázané obory názvů** – určuje, že artefakty přidružené k této vrstvě nesmí patřit do zadaných oborů názvů.<br />-   **požadované obory názvů** – určuje, že artefakty přidružené k této vrstvě musí patřit do jednoho ze zadaných oborů názvů.|
-|2|**Závislost**|Označuje, že jedna vrstva může použít funkci v jiné vrstvě, ale ne naopak.<br /><br /> -   **směr** – určuje směr závislosti.|
+|2|**Závislosti**|Označuje, že jedna vrstva může použít funkci v jiné vrstvě, ale ne naopak.<br /><br /> -   **směr** – určuje směr závislosti.|
 |3|**Obousměrná závislost**|Označuje, že jedna vrstva může používat funkci v jiné vrstvě a naopak.<br /><br /> -   **směr** – určuje směr závislosti.|
 |4|**Vytvořena**|Slouží k přidání obecných poznámek do diagramu nebo prvků v diagramu.|
 |5|**Odkaz na komentář**|Slouží k propojení komentářů s prvky v diagramu.|

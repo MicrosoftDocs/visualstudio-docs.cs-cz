@@ -32,17 +32,17 @@ Publish-WebApplicationWebSite
 -Verbose
 ```
 
-## <a name="configuration"></a>Konfigurace
+## <a name="configuration"></a>Konfiguraci
 Cesta ke konfiguračnímu souboru JSON, který popisuje podrobnosti nasazení.
 
 | Parametr | Výchozí hodnota |
 | --- | --- |
 | Aliasy |žádná |
-| Povinné? |true |
+| Požadováno? |true |
 | Pozice |pojmenované |
 | Výchozí hodnota |žádná |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ## <a name="subscriptionname"></a>SubscriptionName
 Název předplatného Azure, ve kterém chcete vytvořit web.
@@ -50,11 +50,11 @@ Název předplatného Azure, ve kterém chcete vytvořit web.
 | Parametr | Výchozí hodnota |
 | --- | --- |
 | Aliasy |žádná |
-| Povinné? |false |
+| Požadováno? |false (nepravda) |
 | Pozice |pojmenované |
 | Výchozí hodnota |žádná |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ## <a name="webdeploypackage"></a>WebDeployPackage
 Cesta k balíčku pro nasazení webu, který má být publikován na webu. Tento balíček můžete vytvořit pomocí Průvodce publikováním webu v aplikaci Visual Studio. Další informace najdete v tématu [Začínáme s Azure Cloud Services a ASP.NET](https://go.microsoft.com/fwlink/p/?LinkID=623089).
@@ -62,11 +62,11 @@ Cesta k balíčku pro nasazení webu, který má být publikován na webu. Tento
 | Parametr | Výchozí hodnota |
 | --- | --- |
 | Aliasy |žádná |
-| Povinné? |false |
+| Požadováno? |false (nepravda) |
 | Pozice |pojmenované |
 | Výchozí hodnota |žádná |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ## <a name="databaseserverpassword"></a>DatabaseServerPassword
 Uživatelské jméno a heslo pro databázi SQL v Azure.
@@ -74,11 +74,11 @@ Uživatelské jméno a heslo pro databázi SQL v Azure.
 | Parametr | Výchozí hodnota |
 | --- | --- |
 | Aliasy |žádná |
-| Povinné? |false |
+| Požadováno? |false (nepravda) |
 | Pozice |pojmenované |
 | Výchozí hodnota |žádná |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ## <a name="sendhostmessagestooutput"></a>SendHostMessagesToOutput
 Pokud je nastaveno na true, vytiskněte zprávy ze skriptu do výstupního datového proudu.
@@ -86,11 +86,11 @@ Pokud je nastaveno na true, vytiskněte zprávy ze skriptu do výstupního datov
 | Parametr | Výchozí hodnota |
 | --- | --- |
 | Aliasy |žádná |
-| Povinné? |false |
+| Požadováno? |false (nepravda) |
 | Pozice |pojmenované |
-| Výchozí hodnota |false |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Výchozí hodnota |false (nepravda) |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ## <a name="remarks"></a>Poznámky
 Úplné vysvětlení způsobu použití skriptu k vytváření vývojových a testovacích prostředí najdete v tématu [použití skriptů prostředí Windows PowerShell pro publikování do vývojových a testovacích prostředí](vs-azure-tools-publishing-using-powershell-scripts.md).

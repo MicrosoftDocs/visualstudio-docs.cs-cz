@@ -36,7 +36,7 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
   
 - Soubor. iTrace z jednoho z těchto zdrojů:  
   
-    |**Zdroj**|**Si**|  
+    |**Zdrojová**|**Si**|  
     |----------------|-------------|  
     |IntelliTrace relace v Visual Studio Enterprise (ale ne edice Professional nebo Community)|[Funkce IntelliTrace](../debugger/intellitrace-features.md)|  
     |Testovací relace v Microsoft Test Manager. Tím se soubor. iTrace připojí k pracovní položce Team Foundation Server.|[Shromažďování více diagnostických dat v ručních testech](https://msdn.microsoft.com/library/bb5a2cc0-84f5-4dfe-9560-ca3d313aefd2)|  
@@ -55,13 +55,13 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
   
 - Dvakrát klikněte na soubor. iTrace mimo aplikaci Visual Studio nebo ho otevřete v rámci sady Visual Studio.  
   
-     \- nebo –  
+     \- nebo-  
   
 - Pokud je soubor. iTrace připojen k pracovní položce Team Foundation Server, postupujte podle těchto kroků v pracovní položce:  
   
   - V části **všechny odkazy**vyhledejte soubor. iTrace. Otevřete ji.  
 
-    \- nebo –  
+    \- nebo-  
 
   - V části **reprodukci kroky**klikněte na odkaz **IntelliTrace** .  
   
@@ -141,9 +141,9 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
   
      Nyní můžete zkontrolovat další zaznamenané hodnoty, zásobník volání nebo použít okno **IntelliTrace** pro [pohyb zpět nebo vpřed "v čase" mezi ostatními zaznamenanými událostmi](../debugger/intellitrace.md), souvisejícím kódem a hodnotami zaznamenanými v těchto okamžicích v čase.  
   
-    |**Sloupec**|**Zobrazuje**|  
+    |**Kolo**|**Zobrazuje**|  
     |----------------|-------------------|  
-    |**Typ**|Typ rozhraní .NET výjimky|  
+    |**Textový**|Typ rozhraní .NET výjimky|  
     |**Nejnovější zpráva** pro seskupené výjimky nebo **zprávy** pro neseskupené výjimky|Zpráva poskytnutá výjimkou|  
     |**Počet** pro seskupené výjimky|Počet, kolikrát byla výjimka vyvolána|  
     |**ID vlákna** pro neseskupené výjimky|ID vlákna, které vyvolalo výjimku|  
@@ -189,11 +189,11 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
   
     |**Pole IntelliTrace**|**Pole SharePoint ULS**|  
     |----------------------------|------------------------------|  
-    |**ID**|**ID události**|  
-    |**Úroveň**|**Úroveň**|  
+    |**Účet**|**ID události**|  
+    |**Obsah**|**Obsah**|  
     |**ID kategorie**|**ID kategorie**|  
-    |**Kategorie**|**Kategorie**|  
-    |**Oblast**|**Produktu**|  
+    |**Kategorií**|**Kategorií**|  
+    |**Místo**|**Produktu**|  
     |**Output**|**Zpráva**|  
     |**ID korelace**|**ID korelace**|  
   
@@ -222,10 +222,10 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
   
    Data vlákna vytvořená uživatelem mohou být užitečnější než vlákna, která server vytváří a spravuje pro webové aplikace hostované službou IIS.  
   
-|**Sloupec**|**Zobrazuje**|  
+|**Kolo**|**Zobrazuje**|  
 |----------------|-------------------|  
-|**ID**|Číslo ID vlákna|  
-|**Název**|Název vlákna. Nepojmenovaná vlákna se zobrazí jako "\<bez názvu >".|  
+|**ÚČET**|Číslo ID vlákna|  
+|**Jméno**|Název vlákna. Nepojmenovaná vlákna se zobrazí jako "\<bez názvu >".|  
 |**Čas spuštění**|Čas vytvoření vlákna|  
 |**Čas ukončení**|Čas, kdy bylo vlákno dokončeno|  
   
@@ -242,7 +242,7 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
   
      Když existují testovací data, IntelliTrace se pokusí přeložit přidružené sestavení Team Foundation Server, které bylo použito k provedení testovacího běhu. Pokud je sestavení nalezeno, přidružené symboly pro aplikaci budou automaticky vyřešeny.  
   
-|**Pole**|**Zobrazuje**|  
+|**Dílčí**|**Zobrazuje**|  
 |---------------|-------------------|  
 |**Testovací relace**|Testovací relace, které byly zaznamenány. Obvykle je k dispozici pouze jeden. Tento seznam je prázdný, pokud byla testovací data vytvořena pomocí manuálního průzkumného testu.|  
 |**Testovací případ**|Testovací případy z vybrané testovací relace. Tento seznam je prázdný, pokud byla testovací data vytvořena pomocí manuálního průzkumného testu.|  
@@ -254,7 +254,7 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
 ### <a name="Modules"></a>Aktualizuj  
  V této části jsou uvedeny moduly, které jsou načteny cílovým procesem. Moduly se zobrazí v pořadí, v jakém byly načteny.  
   
-|**Sloupec**|**Zobrazuje**|  
+|**Kolo**|**Zobrazuje**|  
 |----------------|-------------------|  
 |**Název modulu**|Název souboru modulu|  
 |**Cesta k modulu**|Místo na disku, kde se modul načetl|  
@@ -269,7 +269,7 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
   
  [IntelliTrace](../debugger/intellitrace.md)  
   
-#### <a name="forums"></a>Diskuzní fóra  
+#### <a name="forums"></a>Fóra  
  [Ladicí program sady Visual Studio](https://go.microsoft.com/fwlink/?LinkId=262263)  
   
 #### <a name="guidance"></a>Doprovodné materiály  

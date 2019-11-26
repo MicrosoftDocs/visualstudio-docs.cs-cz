@@ -36,4 +36,4 @@ Nástroj pro analýzu kódu v sadě Visual Studio prozkoumá váš kód pro sadu
 |||
 |-|-|
 |[Analýza kódu v knihovně MSDN](https://go.microsoft.com/fwlink/?LinkID=227580)|Najdete další informace o použití analýzy kódu v sadě Visual Studio Ultimate, Visual Studio Premium a Visual Studio Professional.|
-|[Blog týmu analysis kódu MSDN](https://go.microsoft.com/fwlink/?LinkId=227200)|Najdete další informace, včetně technické papírů a ukázky na blogu týmu analýzy kódu.|
+|[Blog týmu analýzy kódu na webu MSDN](https://go.microsoft.com/fwlink/?LinkId=227200)|Najdete další informace, včetně technické papírů a ukázky na blogu týmu analýzy kódu.|
