@@ -45,7 +45,7 @@ Při nasazení důvěryhodných aplikací můžete nakonfigurovat klientské po�
   
 3. Z příkazového řádku v klientských počítačích spusťte následující příkaz:  
   
-     **certmgr.exe -add certificate.cer -c -s -r localMachine TrustedPublisher**  
+     **certmgr. exe – přidání certifikátu. cer-c-s-r localMachine TrustedPublisher**  
   
 ### <a name="to-add-a-certificate-to-the-trusted-publishers-store-under-a-different-root"></a>Přidání certifikátu do úložiště důvěryhodných vydavatelů pod jiným kořenem  
   
@@ -55,9 +55,9 @@ Při nasazení důvěryhodných aplikací můžete nakonfigurovat klientské po�
   
 3. Z příkazového řádku v klientských počítačích spusťte následující příkaz:  
   
-     **certmgr.exe -add good.cer -c -s -r localMachine Root**  
+     **certmgr. exe – přidat dobrý soubor. cer-c-s-r localMachine root**  
   
-     **certmgr.exe -add good.cer -c -s -r localMachine TrustedPublisher**  
+     **certmgr. exe – přidat dobrý soubor. cer-c-s-r localMachine TrustedPublisher**  
   
 ## <a name="see-also"></a>Viz také  
  [Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)   

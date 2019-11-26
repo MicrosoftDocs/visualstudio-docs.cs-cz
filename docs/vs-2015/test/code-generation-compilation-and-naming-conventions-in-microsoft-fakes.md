@@ -24,7 +24,7 @@ Toto téma popisuje možnosti a problémy v případě napodobeniny generování
 
 - Visual Studio Enterprise
 
-## <a name="BKMK_In_this_topic"></a> V tomto tématu
+## <a name="BKMK_In_this_topic"></a>V tomto tématu
  [Generování a kompilace kódu](#BKMK_Code_generation_and_compilation)
 
 - [Konfigurace generování kódu pro](#BKMK_Configuring_code_generation_of_stubs) zástupné procedury • [filtrování typů](#BKMK_Type_filtering) • [podkládá konkrétní třídy a virtuální metody](#BKMK_Stubbing_concrete_classes_and_virtual_methods) • [interní typy • interní typy](#BKMK_Internal_types) • [optimalizace časů sestavení](#BKMK_Optimizing_build_times) • [zamezení konfliktu názvů sestavení](#BKMK_Avoiding_assembly_name_clashing)
@@ -74,23 +74,23 @@ Toto téma popisuje možnosti a problémy v případě napodobeniny generování
 
 - Filtry jsou malá a velká písmena ve výchozím nastavení; filtry provádějí porovnání podřetězců:
 
-     `el` odpovídá "hello"
+     `el` odpovídá "Hello"
 
 - Přidáním `!` na konec filtru se dá přesně rozlišovat velká a malá písmena:
 
-     `el!` neodpovídá "hello"
+     `el!` neodpovídá "Hello"
 
-     `hello!` odpovídá "hello"
+     `hello!` odpovídá "Hello"
 
 - Přidání `*` na konec filtru bude odpovídat předponě řetězce:
 
-     `el*` neodpovídá "hello"
+     `el*` neodpovídá "Hello"
 
-     `he*` odpovídá "hello"
+     `he*` odpovídá "Hello"
 
 - Několik filtrů ve středníkem oddělený seznam zkombinují je vyhodnoceno jako disjunkce:
 
-     `el;wo` odpovídá "hello" a "world"
+     `el;wo` odpovídá "Hello" a "World"
 
 ### <a name="BKMK_Stubbing_concrete_classes_and_virtual_methods"></a>Podkládá konkrétní třídy a virtuální metody
  Ve výchozím nastavení jsou zástupné typy generovány pro všechny nezapečetěné třídy. Je možné omezit typy zástupných procedur na abstraktní třídy prostřednictvím konfiguračního souboru. napodobeniny:
@@ -110,7 +110,7 @@ Toto téma popisuje možnosti a problémy v případě napodobeniny generování
 ```
 
 ### <a name="BKMK_Internal_types"></a>Interní typy
- Generátor falešného kódu bude generovat typy překrytí a typy zástupných procedur pro typy, které jsou viditelné pro vygenerované napodobeniny sestavení. Chcete-li zviditelnit vnitřní typy překrytého sestavení pro falešné a testovací sestavení, přidejte <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atributy do kódu překrytého sestavení, které dává viditelnost generovanému falešnému sestavení a testovacímu sestavení. Tady je příklad:
+ Generátor falešného kódu bude generovat typy překrytí a typy zástupných procedur pro typy, které jsou viditelné pro vygenerované napodobeniny sestavení. Chcete-li zajistit, aby se interní typy překryté sestavení zobrazovaly jako falešné a vaše testovací sestavení, přidejte <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atributy do kódu sestavení překryté, který poskytuje viditelnost vygenerovaného falešného sestavení a testovacího sestavení. Tady je příklad:
 
 ```csharp
 // FileSystem\AssemblyInfo.cs
@@ -118,7 +118,7 @@ Toto téma popisuje možnosti a problémy v případě napodobeniny generování
 [assembly: InternalsVisibleTo("FileSystem.Tests")]
 ```
 
- **Vnitřní typy v sestaveních se silným názvem**
+ **Interní typy v silně pojmenovaných sestaveních**
 
  Pokud je sestavení překryté silně pojmenované a chcete mít přístup k interním typům sestavení:
 
@@ -136,13 +136,13 @@ Toto téma popisuje možnosti a problémy v případě napodobeniny generování
 
   Pokud je sestavení překryté silně pojmenované, rozhraní napodobeniny automaticky silně podepíše vygenerované napodobeniny sestavení. Můžete nastavit silný podpis testovacího sestavení. Viz [vytváření a používání sestavení se silným názvem](https://msdn.microsoft.com/library/ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9).
 
-  Rámec falešného kódu používá stejný klíč k podepsání všech generovaných sestavení, takže tento fragment kódu můžete použít jako výchozí bod přidat **InternalsVisibleTo** atribut pro falešné sestavení pro váš překrytý kód sestavení.
+  Rozhraní falešného rozhraní používá stejný klíč k podepsání všech generovaných sestavení, takže tento fragment lze použít jako výchozí bod pro přidání atributu **InternalsVisibleTo** pro falešné sestavení do vašeho kódu sestavení překryté.
 
 ```csharp
 [assembly: InternalsVisibleTo("FileSystem.Fakes, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e92decb949446f688ab9f6973436c535bf50acd1fd580495aae3f875aa4e4f663ca77908c63b7f0996977cb98fcfdb35e05aa2c842002703cad835473caac5ef14107e3a7fae01120a96558785f48319f66daabc862872b2c53f5ac11fa335c0165e202b4c011334c7bc8f4c4e570cf255190f4e3e2cbc9137ca57cb687947bc")]
 ```
 
- Můžete zadat jiný veřejný klíč pro sestavení Fakes, například klíč jste vytvořili pro překryté sestavení, zadáním úplné cesty k **.snk** soubor, který obsahuje alternativní klíč jako `KeyFile` hodnotu v atributu `Fakes` \\ `Compilation` elementu **.fakes** souboru. Příklad:
+ Můžete zadat jiný veřejný klíč pro sestavení falešného kódu, jako je klíč, který jste vytvořili pro sestavení překryté, zadáním úplné cesty k souboru **. snk** , který obsahuje alternativní klíč jako hodnotu atributu `KeyFile` v `Fakes`\\`Compilation` prvku souboru **. napodobeniny** . Příklad:
 
 ```xml
 <-- FileSystem.Fakes.fakes -->
@@ -152,7 +152,7 @@ Toto téma popisuje možnosti a problémy v případě napodobeniny generování
 
 ```
 
- Potom je nutné použít veřejný klíč náhradního **.snk** soubor jako druhý parametr atributu InternalVisibleTo pro sestavení Fakes v kódu překrytého sestavení:
+ Pak je nutné použít veřejný klíč alternativního souboru **. snk** jako druhý parametr atributu InternalVisibleTo pro sestavení napodobeniny v překryté kódu sestavení:
 
 ```csharp
 // FileSystem\AssemblyInfo.cs
@@ -162,7 +162,7 @@ Toto téma popisuje možnosti a problémy v případě napodobeniny generování
     PublicKey=<Test_assembly_public_key>)]
 ```
 
- V příkladu výše hodnoty `Alternate_public_key` a `Test_assembly_public_key` může být stejný.
+ V příkladu výše mohou být hodnoty `Alternate_public_key` a `Test_assembly_public_key` stejné.
 
 ### <a name="BKMK_Optimizing_build_times"></a>Optimalizace časů sestavení
  Kompilace falešných sestavení může podstatně prodloužit dobu sestavení. Dobu sestavení lze minimalizovat generováním falešných sestavení pro systémová sestavení technologie .NET a sestavení třetích stran v odděleném centralizovaném projektu. Protože tato sestavení se jen zřídka mění na svém počítači, můžete využít tyto vygenerované napodobeniny sestavení v jiných projektech.
@@ -208,7 +208,7 @@ attribute of the Assembly element in the .fakes:
 
 - . Napodobeniny přípona se přidá do oboru názvů.
 
-   Například `System.Fakes` obor názvů obsahuje typy překrytí oboru názvu System.
+   Například obor názvů `System.Fakes` obsahuje překrytí typů systémového oboru názvů.
 
 - Soubor Global.Fakes obsahuje překrývající typ prázdného oboru názvů.
 
@@ -222,41 +222,41 @@ attribute of the Assembly element in the .fakes:
 
    Například typ StubIExample je provizorním typem typu IExample.
 
-  **Argumenty typů a vnořené struktury typů**
+  **Argumenty typu a struktury vnořeného typu**
 
 - Argumenty obecného typu jsou zkopírovány.
 
 - Vnořené struktury typů zkopírovány pro typy překrytí.
 
 ### <a name="BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions"></a>Zásady pro pojmenovávání vlastností delegáta nebo pole delegáta zástupných procedur
- **Základní pravidla** pro pojmenovávání polí, počínaje prázdným názvem:
+ **Základní pravidla** pro pojmenovávání polí od prázdného názvu:
 
 - Je připojen název metody.
 
 - Pokud je název metody explicitní implementací rozhraní, jsou odstraněny tečky.
 
-- Pokud metody je obecný, `Of` *n* připojen kde *n* je počet argumentů obecné metodě.
+- Pokud je metoda obecná, `Of`*n* se připojí, kde *n* je počet argumentů obecných metod.
 
   **Speciální názvy metod** , jako je například getter nebo setter vlastnosti, jsou ošetřeny, jak je popsáno v následující tabulce.
 
 |Pokud je metoda...|Příklad|Připojený název metody|
 |-------------------|-------------|--------------------------|
-|A **konstruktor**|`.ctor`|`Constructor`|
+|**Konstruktor**|`.ctor`|`Constructor`|
 |Statický **konstruktor**|`.cctor`|`StaticConstructor`|
-|**Přistupující objekt** metodou název se skládá ze dvou částí oddělených "_" (například gettery vlastností)|*kind_name* (běžné velikosti písmen, ale nevynucený podle ECMA)|*NameKind*, kde obě části byly velkými písmeny a Prohodit|
-||Metoda getter vlastnosti `Prop`|`PropGet`|
-||Metoda setter vlastnosti `Prop`|`PropSet`|
+|**Přistupující objekt** s názvem metody složený ze dvou částí oddělených znakem "_" (například getter vlastnosti)|*kind_name* (běžný případ, ale neuplatňuje ECMA)|*NameKind*, kde byly obě části velkými a prohozeny|
+||Getter `Prop` vlastnosti|`PropGet`|
+||Metoda setter `Prop` vlastností|`PropSet`|
 ||Přidavač událostí|`Add`|
 ||Odstraňovač událostí|`Remove`|
-|**Operátor** skládá ze dvou částí|`op_name`|`NameOp`|
+|**Operátor** složený ze dvou částí|`op_name`|`NameOp`|
 |Například: + – operátor|`op_Add`|`AddOp`|
-|Pro **operátor převodu**, návratový typ přidán.|`T op_Implicit`|`ImplicitOpT`|
+|Pro **operátor převodu**je připojen návratový typ.|`T op_Implicit`|`ImplicitOpT`|
 
  **Poznámky**
 
-- **Gettery a settery indexerů** je zacházeno podobně jako na vlastnost. Výchozí název indexeru je `Item`.
+- **Metody getter a setter indexerů** jsou zpracovány podobně jako vlastnost. Výchozí název indexeru je `Item`.
 
-- **Typ parametru** názvy jsou transformovány a spojeny.
+- Názvy **typů parametrů** jsou transformované a zřetězené.
 
 - **Návratový typ** je ignorován, pokud neexistuje nejednoznačnost přetížení. V takovém případě se návratový typ připojí na konci názvu.
 
@@ -264,16 +264,16 @@ attribute of the Assembly element in the .fakes:
 
 |Zadaný|Připojený řetězec je...|
 |-----------|-------------------------|
-|A **typu**`T`|T<br /><br /> Obor názvů, vnořené struktury a obecné tiky jsou vynechány.|
+|**Typ**`T`|T<br /><br /> Obor názvů, vnořené struktury a obecné tiky jsou vynechány.|
 |**Výstupní parametr**`out T`|`TOut`|
-|A **parametr ref** `ref T`|`TRef`|
+|**Parametr ref** `ref T`|`TRef`|
 |**Typ pole**`T[]`|`TArray`|
-|A **vícerozměrné pole** typu `T[ , , ]`|`T3`|
-|A **ukazatel** typu `T*`|`TPtr`|
-|A **obecného typu**`T<R1, …>`|`TOfR1`|
-|A **argument obecného typu** `!i` typu `C<TType>`|`Ti`|
-|A **argument obecné metody** `!!i` metody `M<MMethod>`|`Mi`|
-|A **vnořený typ**`N.T`|`N` je připojeno, pak `T`|
+|Typ multidimenzionálního **pole** `T[ , , ]`|`T3`|
+|Typ **ukazatele** `T*`|`TPtr`|
+|`T<R1, …>` **obecného typu**|`TOfR1`|
+|**Argument obecného typu**`!i` typu `C<TType>`|`Ti`|
+|**Argument obecné metody**`!!i` metody `M<MMethod>`|`Mi`|
+|`N.T` **vnořeného typu**|je připojen `N` a pak `T`|
 
 ### <a name="BKMK_Recursive_rules"></a>Rekurzivní pravidla
  Následující pravidla jsou aplikována rekurzivně:

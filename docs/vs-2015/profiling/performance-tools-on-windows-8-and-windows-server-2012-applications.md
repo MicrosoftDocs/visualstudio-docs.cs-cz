@@ -24,7 +24,7 @@ Rozšířené funkce zabezpečení v systému Windows 8 a Windows Server 2012 vy
 > [!NOTE]
 > Nástroje výkonu pro jiné podporované verze systému Windows (Windows 7, Windows Server 2008 R2) se nezměnily.  
   
-## <a name="BKMK_In_this_topic"></a> V tomto tématu  
+## <a name="BKMK_In_this_topic"></a>V tomto tématu  
  [Shromažďování dat z aplikací pro Windows Store z integrovaného vývojového prostředí sady Visual Studio](#BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE)  
   
  [Shromažďování dat z aplikací běžících na desktopu Windows 8 nebo na Windows Serveru 2012 z integrovaného vývojového prostředí (IDE) sady Visual Studio](#BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE)  

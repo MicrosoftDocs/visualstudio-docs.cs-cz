@@ -114,7 +114,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
 3. V experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]otevřete soubor modelu s názvem **test** z **Průzkumník řešení**.
 
-    \- nebo –
+    \- nebo-
 
     Klikněte pravým tlačítkem na projekt ladění, přejděte na **Přidat**a pak klikněte na **položka**. V dialogovém okně **Přidat položku** vyberte typ souboru vaší DSL.
 
@@ -164,7 +164,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
 3. Klikněte na možnost **transformovat všechny šablony** na panelu nástrojů **Průzkumník řešení**.
 
-    \- nebo –
+    \- nebo-
 
     Klikněte pravým tlačítkem na šablony, které chcete znovu vygenerovat, a pak klikněte na **Spustit vlastní nástroj**.
 

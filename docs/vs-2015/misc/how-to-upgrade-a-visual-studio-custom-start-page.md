@@ -18,13 +18,13 @@ ms.locfileid: "74293378"
 Můžete upgradovat Visual Studio 2010 nebo Visual Studio 2012 vlastní úvodní stránku do sady Visual Studio 2015 podle pokynů uvedených níže.
 
 > [!WARNING]
-> Vlastní úvodní stránku upgradovat v tomto postupu je vytvořena s [vlastní úvodní stránky](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.CustomStartPageProjectTemplate) šablony pro Galerii Visual Studio. Úvodní stránka může mít jiné funkce, které je potřeba upgradovat.
+> Stránka vlastní zahájení upgradováná v tomto postupu je ta vytvořená pomocí šablony [vlastní úvodní stránky](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.CustomStartPageProjectTemplate) v galerii sady Visual Studio. Úvodní stránka může mít jiné funkce, které je potřeba upgradovat.
 
 ### <a name="to-upgrade-a-custom-start-page-to-visual-studio-2015"></a>Vlastní úvodní stránku upgradovat na Visual Studio 2015
 
-1. Ujistěte se, že jsou nainstalované Visual Studio 2015 a Visual Studio 2015 SDK. Můžete si stáhnout VSSDK z [Microsoft Visual Studio 2013 SDK](https://my.visualstudio.com/Downloads?pid=1436).
+1. Ujistěte se, že jsou nainstalované Visual Studio 2015 a Visual Studio 2015 SDK. VSSDK si můžete stáhnout z [SDK Microsoft Visual Studio 2013](https://my.visualstudio.com/Downloads?pid=1436).
 
-2. Otevřete svůj projekt vlastní šablony. Zobrazí se zpráva s upozorněním, že projekt je třeba upgradovat. Klikněte na tlačítko **OK** a počkat na dokončení.
+2. Otevřete svůj projekt vlastní šablony. Zobrazí se zpráva s upozorněním, že projekt je třeba upgradovat. Klikněte na **OK** a počkejte na dokončení upgradu.
 
 3. Ve vlastnostech projektu pro projekt úvodní stránky a řízení projektu, ujistěte se, že Cílová architektura, která je minimálně rozhraní .NET Framework 4.5.
 
@@ -52,4 +52,4 @@ Můžete upgradovat Visual Studio 2010 nebo Visual Studio 2012 vlastní úvodní
         xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"
         ```
 
-7. Otevřete MyControl.xaml a změňte odkaz na obor názvů `xmlns:vs="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.11.0"` k `xmlns:vs="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"` .
+7. Otevřete MyControl. XAML a změňte referenční obor názvů `xmlns:vs="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.11.0"` na `xmlns:vs="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"`.

@@ -27,7 +27,7 @@ ms.locfileid: "74290111"
   
  **Požadavky**  
   
-- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
+- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)][!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
   Můžete vytvořit **relaci výkonu** spuštěním **Průvodce výkonem** nebo ručním vytvořením relace. Po vytvoření **relace výkonu** se v **prohlížeč výkonu** zobrazí **relace výkonu** .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "74290111"
 ## <a name="general"></a>Obecné  
  Tato nastavení umožňují vybrat metodu profilace, přidat kolekci objektů rozhraní .NET a data o životnosti a zadat výchozí umístění sestavy a zásady vytváření názvů.  
   
- Další informace naleznete v tématu:  
+ Další informace naleznete v tématu:  
   
  [Postupy: Výběr metod shromažďování](../profiling/how-to-choose-collection-methods.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "74290111"
   
  [Postupy: Nastavení možností názvu souboru s údaji o výkonu](../profiling/how-to-set-performance-data-file-name-options.md)  
   
-## <a name="launch"></a>Spuštění  
+## <a name="launch"></a>Spustit  
  Tato nastavení umožňují vybrat ze seznamu binárních souborů a zadat pořadí spouštění binárních souborů.  
   
  Další informace najdete v tématu [Postupy: Určení binárního souboru, který se má spustit.](../profiling/how-to-specify-the-binary-to-start.md)  
@@ -66,7 +66,7 @@ ms.locfileid: "74290111"
   
   Další informace najdete v tématu [Postupy: výběr událostí vzorkování.](../profiling/how-to-choose-sampling-events.md)  
   
-## <a name="binary"></a>binární  
+## <a name="binary"></a>Binární hodnota  
  Tato nastavení umožňují určit, zda chcete přemístit instrumentované binární soubory do jiného umístění. Pokud například vytváříte profilaci my. DLL a rozhodnete se, že nechcete přemístit instrumentované binární soubory, vytvoří se záložní kopie souboru my. DLL s názvem My. orig. DLL. Následně se my. DLL upraví vložením sond pro shromažďování dat. Pokud se rozhodnete přemístit instrumentované binární soubory, původní binární soubor se nepřejmenuje a instrumentované binární soubory se zkopírují do zadaného umístění pro použití během instrumentace.  
   
  Další informace najdete v tématu [Postupy: Určení binárního souboru, který se má spustit.](../profiling/how-to-specify-the-binary-to-start.md)  
@@ -77,7 +77,7 @@ ms.locfileid: "74290111"
 ## <a name="instrumentation"></a>Instrumentace  
  Tato nastavení umožňují shromažďovat údaje o výkonu pro kód JScript na [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] webové stránky a určovat události **před instrumentací** a **po** instrumentaci, které chcete provést před nebo po procesu instrumentace.  
   
- Další informace naleznete v tématu:  
+ Další informace naleznete v tématu:  
   
  [Postupy: Profilace kódu JavaScript ve webových stránkách](../profiling/how-to-profile-javascript-code-in-web-pages.md)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "74290111"
 ## <a name="windows-events"></a>Události systému Windows  
  Během profilace můžete shromažďovat data z poskytovatelů trasování událostí. Data můžete zobrazit pomocí `/calltrace` možnost nástroje příkazového řádku VSPerfReport. exe. Další informace o trasování událostí pro Windows (ETW) najdete v tématu věnovaném [trasování událostí](https://go.microsoft.com/fwlink/?linkid=90752).  
   
- Další informace naleznete v tématu:  
+ Další informace naleznete v tématu:  
   
  [Postupy: Shromažďování dat Trasování událostí pro Windows](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "74290111"
 ## <a name="advanced"></a>Upřesnit  
  Tato nastavení umožňují přidat možnosti do procesu instrumentace zadáním jedné nebo více možností nástroje pro profilaci [VSInstr](../profiling/vsinstr.md) příkazového řádku. Můžete také zadat verzi společného modulu runtime k profilaci, když aplikace používá více než jednu verzi.  
   
- Další informace naleznete v tématu:  
+ Další informace naleznete v tématu:  
   
  [Postupy: Určení modulu runtime .NET Framework](../profiling/how-to-specify-the-dotnet-framework-runtime.md)  
   

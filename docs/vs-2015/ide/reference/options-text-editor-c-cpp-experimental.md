@@ -28,7 +28,7 @@ Změnou těchto možností můžete změnit chování související s technologi
  Tyto funkce jsou k dispozici v instalaci sady Visual Studio 2015 Update 1 RC.
 
 > [!NOTE]
-> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Zobrazit [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Viz [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ## <a name="browsingnavigation"></a>Procházení/navigace
  **Povolit nový databázový stroj** To by mělo automaticky zrychlit naplnění databáze a zrychlit všechny operace databáze (bez ztráty přesnosti) pro operace, jako je například **Přejít k definici** a **Najít všechny odkazy**. (Stačí zavřít a znovu otevřít řešení, aby se změny projevily. není nutné restartovat Visual Studio.)

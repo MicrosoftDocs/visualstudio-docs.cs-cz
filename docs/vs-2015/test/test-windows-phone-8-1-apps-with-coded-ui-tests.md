@@ -353,7 +353,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 ### <a name="q-can-i-run-a-coded-ui-test-on-my-windows-phone-app-from-the-command-line"></a>Otázka: mohu na příkazovém řádku spustit programový test uživatelského rozhraní v aplikaci Windows Phone?
  Odpověď **: Ano**, použijete soubor runsettings k určení cílového zařízení pro spuštění testu. Příklad:
 
- **vstest.console.exe “pathToYourCodedUITestDll” /settings:devicetarget.runsettings**
+ **VSTest. Console. exe "pathToYourCodedUITestDll"/Settings: devicetarget. runsettings**
 
  Vzorový soubor runsettings:
 
@@ -377,7 +377,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 |Cíl pro spuštěné testy|Místní nebo vzdálený počítač. Vzdálené počítače lze zadat při použití automatizovaného testovacího případu pro spuštění testů. Viz [Automatizace testovacího případu v Microsoft Test Manager](https://msdn.microsoft.com/library/4e02568b-9cde-47cc-b41c-82726c177e42).|Emulátor nebo zařízení. Viz, [Q: lze provádět testy pouze v emulátoru, nebo je možné použít také fyzické zařízení?](#TestingPhoneAppsCodedUI_EmulatorDevice) v tomto tématu.|
 |Spustit z příkazového řádku|Soubor nastavení není pro určení cíle vyžadován.|Pro určení cíle se vyžaduje soubor runsettings.|
 |Specializované třídy pro ovládací prvky prostředí|[DirectUIControl](/previous-versions/dn248208(v=vs.140))|<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl>|
-|Ovládací prvek WebView v aplikaci XAML|Podporováno, pokud používáte specializované třídy HTML * pro interakci s prvky jazyka HTML. Viz <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>.|Není podporováno.|
+|Ovládací prvek WebView v aplikaci XAML|Podporováno, pokud používáte specializované třídy HTML * pro interakci s prvky jazyka HTML. Podívejte se na téma <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>.|Není podporováno.|
 |Spouštění automatizovaných testů z MTM|Doložen.|Není podporováno.|
 |Testy řízené daty|Informace o použití externích zdrojů dat a použití atributu DataSource pro testovací metodu naleznete v tématu [testy řízené daty](../test/creating-a-data-driven-coded-ui-test.md) .|Data jsou zadána jako vložená pomocí atributu DataRow v testovací metodě. Viz [použití programových testů uživatelského rozhraní řízených daty v aplikacích Windows Phone](#TestingPhoneAppsCodedUI_DataDriven) v tomto tématu.|
 

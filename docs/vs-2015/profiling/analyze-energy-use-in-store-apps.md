@@ -92,7 +92,7 @@ if (performance && performance.mark) {
 2. Zvolte **Spotřeba energie** a pak zvolte **Spustit**.  
   
     > [!NOTE]
-    > Když spustíte Profiler **spotřeby energie** , může se zobrazit okno **řízení uživatelských účtů** požadující vaše oprávnění ke spuštění VsEtwCollector. exe. Zvolte **Ano**.  
+    > Když spustíte Profiler **spotřeby energie** , může se zobrazit okno **řízení uživatelských účtů** požadující vaše oprávnění ke spuštění VsEtwCollector. exe. Vyberte **Ano**.  
   
 3. Spusťte v aplikaci shromažďování dat.  
   

@@ -32,7 +32,7 @@ V tomto tématu jsou shrnuty různé způsoby, kterými můžete roztáhnout ná
 
  Další informace najdete v tomto videu: ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo")[MSDN jak mám řady: nástroje a rozšiřitelnost UML](https://go.microsoft.com/fwlink/?LinkId=214467).
 
-## <a name="Requirements"></a> Požadavky
+## <a name="Requirements"></a>Požadavků
 
 - [Sada Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 
@@ -109,9 +109,9 @@ V tomto tématu jsou shrnuty různé způsoby, kterými můžete roztáhnout ná
 ## <a name="domain-specific-languages"></a>Jazyky specifické pro doménu
  Pokud často používáte konkrétní typ modelu, může být užitečné vytvořit jazyk specifický pro doménu. To se dá udělat tak, aby lépe vyhovovalo vašim obchodním potřebám, než je model UML, ale vyžaduje více úsilí při jejich sestavování a údržbě. Další informace najdete v tématu [MODELING SDK for Visual Studio – jazyky specifické pro doménu](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md).
 
-## <a name="external-resources"></a>Externí zdroje
+## <a name="external-resources"></a>Externí prostředky
 
-|**Kategorie**|**Odkazy**|
+|**Kategorií**|**Odkazy**|
 |------------------|---------------|
 |**Videa**|![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN postup I série: nástroje a rozšiřitelnost UML](https://go.microsoft.com/fwlink/?LinkId=214467)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [kanál 9: UML se sadou Visual Studio](https://go.microsoft.com/fwlink/?LinkId=199957)|
 |**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://go.microsoft.com/fwlink/?LinkId=184721)|

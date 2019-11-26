@@ -65,12 +65,12 @@ Můžete napsat vlastního hostitele, který zpracovává textové šablony. Zá
 
      Další informace o vytváření řešení jazyka specifického pro doménu najdete v tématu [Postupy: vytvoření řešení jazyka specifického pro doménu](../modeling/how-to-create-a-domain-specific-language-solution.md).
 
-2. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+2. V nabídce **sestavení** klikněte na **Sestavit řešení**.
 
    > [!IMPORTANT]
    > Tento krok vygeneruje procesor direktiv a přidá k němu klíč v registru.
 
-3. Na **ladění** nabídky, klikněte na tlačítko **spustit ladění**.
+3. V nabídce **ladit** klikněte na **Spustit ladění**.
 
     Otevře se druhá instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
@@ -227,9 +227,9 @@ Můžete napsat vlastního hostitele, který zpracovává textové šablony. Zá
             }
     ```
 
-7. Na **souboru** nabídky, klikněte na tlačítko **Uložit vše**.
+7. V nabídce **soubor** klikněte na **Uložit vše**.
 
-8. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+8. V nabídce **sestavení** klikněte na **Sestavit řešení**.
 
 ## <a name="testing-the-custom-host-with-the-directive-processor"></a>Testování vlastního hostitele pomocí procesoru direktiv
  Chcete-li otestovat vlastního hostitele textových šablon, musíte nejprve napsat textovou šablonu, která volá generovaný procesor direktiv. Pak spusťte vlastního hostitele, předejte mu název textové šablony a ověřte, zda je direktiva správně zpracována.

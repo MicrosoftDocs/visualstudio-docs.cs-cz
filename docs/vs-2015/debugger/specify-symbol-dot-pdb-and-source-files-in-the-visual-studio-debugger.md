@@ -41,9 +41,9 @@ Souboru databáze (PDB) program, nazývaný také soubor symbolů, mapuje identi
 
  Při ladění projektu v integrovaném vývojovém prostředí sady Visual Studio ví ladicí program výchozí umístění pro soubory .pdb a zdrojové pro váš kód. Pokud chcete ladit kód mimo váš zdrojový kód projektu, jako je volání systému Windows nebo kódu třetí strany, musíte určit umístění souboru PDB (a volitelně zdrojových souborů z externího kódu) a tyto soubory musí přesně odpovídat spustitelným souborům sestavení.
 
- Před Visual Studio 2012 při ladění spravovaného kódu na vzdáleném zařízení nutné vložit soubory symbolů ve vzdáleném počítači. To již neplatí. Všechny soubory symbolů musí být umístěny v místním počítači nebo v umístění zadaném **nástroje / Možnosti / ladění / symboly** stránky.
+ Před Visual Studio 2012 při ladění spravovaného kódu na vzdáleném zařízení nutné vložit soubory symbolů ve vzdáleném počítači. To již neplatí. Všechny soubory symbolů musí být umístěny v místním počítači nebo v umístění zadaném na stránce **Nástroje/možnosti/ladění/symboly** .
 
-## <a name="BKMK_Find_symbol___pdb__files"></a> Pokud ladicí program vyhledává soubory PDB
+## <a name="BKMK_Find_symbol___pdb__files"></a>Kde ladicí program vyhledává soubory PDB
 
 1. Umístění, které je zadáno uvnitř knihovny DLL nebo spustitelného souboru.
 
@@ -55,38 +55,38 @@ Souboru databáze (PDB) program, nazývaný také soubor symbolů, mapuje identi
 
 4. Všechny zadané servery sítě, Internetu nebo místních symbolů a umístění, například server Microsoft symbol, pokud je povolen.
 
-### <a name="BKMK_Why_do_symbol_files_need_to_exactly_match_the_executable_files_"></a> Proč soubory symbolů musí přesně odpovídat spustitelným souborům?
- Ladicí program načte pouze soubor PDB pro spustitelný soubor, který přesně odpovídá souboru .pdb vytvořeném, když byl sestaven spustitelný soubor (to znamená, že PDB musí být originál nebo kopie původního souboru .pdb). Vzhledem k tomu, že kompilátor je optimalizován pro rychlost kompilace, kromě svého hlavního úkolu vytvoření správného a efektivního kódu, se může změnit rozložení skutečného spustitelného souboru i v případě, že nedošlo ke změně samotného kódu. Další informace najdete v části [proč sada Visual Studio vyžaduje soubory symbolů ladicího programu shodovaly binárním souborům, se kterými byly vytvořeny?](https://blogs.msdn.microsoft.com/jimgries/2007/07/06/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with/).
+### <a name="BKMK_Why_do_symbol_files_need_to_exactly_match_the_executable_files_"></a>Proč soubory symbolů musí přesně odpovídat spustitelným souborům?
+ Ladicí program načte pouze soubor PDB pro spustitelný soubor, který přesně odpovídá souboru .pdb vytvořeném, když byl sestaven spustitelný soubor (to znamená, že PDB musí být originál nebo kopie původního souboru .pdb). Vzhledem k tomu, že kompilátor je optimalizován pro rychlost kompilace, kromě svého hlavního úkolu vytvoření správného a efektivního kódu, se může změnit rozložení skutečného spustitelného souboru i v případě, že nedošlo ke změně samotného kódu. Další informace najdete v tématu [Proč Visual Studio vyžaduje soubory symbolů ladicího programu, aby přesně odpovídaly binárním souborům, se kterými byly vytvořeny?](https://blogs.msdn.microsoft.com/jimgries/2007/07/06/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with/).
 
-### <a name="BKMK_Specify_symbol_locations_and_loading_behavior"></a> Zadejte umístění symbolu a chování načítání
- Při ladění projektu v integrovaném vývojovém prostředí VS ladicí program automaticky načte soubory symbolů, které jsou umístěny v adresáři projektu. Můžete zadat alternativní cesty hledání a servery symbolů pro společnost Microsoft, Windows nebo komponenty třetích stran v **nástroje / Možnosti / ladění / symboly**. Můžete také určit konkrétní moduly, které má ladicí program automaticky načíst symboly pro. A můžete potom změnit tato nastavení ručně při aktivním ladění.
+### <a name="BKMK_Specify_symbol_locations_and_loading_behavior"></a>Zadejte umístění symbolu a chování načítání
+ Při ladění projektu v integrovaném vývojovém prostředí VS ladicí program automaticky načte soubory symbolů, které jsou umístěny v adresáři projektu. Můžete zadat alternativní cesty hledání a servery symbolů pro Microsoft, Windows nebo komponenty třetích stran v **nabídce Nástroje/možnosti/ladění/symboly**. Můžete také zadat konkrétní moduly, pro které má ladicí program automaticky načíst symboly. A můžete potom změnit tato nastavení ručně při aktivním ladění.
 
-1. V sadě Visual Studio, otevřete **nástroje / Možnosti / ladění / symboly** stránky.
+1. V aplikaci Visual Studio otevřete stránku **Nástroje/možnosti/ladění/symboly** .
 
     ![Možnosti &#45; &#45; nástrojů ladění &#45; – stránka symboly](../debugger/media/dbg-tools-options-symbols.png "DBG_Tools_Options_Symbols")
 
-2. Vyberte složku ![možnosti&#47; &#47; nástroje pro ladění&#47;ikona ikona složky symboly ladění](../debugger/media/dbg-tools-options-foldersicon.png "DBG_Tools_Options_FoldersIcon") . Upravitelný text se zobrazí v **Symbol umístění souborů (.pdb)** pole.
+2. Vyberte složku ![možnosti&#47; &#47; nástroje pro ladění&#47;ikona ikona složky symboly ladění](../debugger/media/dbg-tools-options-foldersicon.png "DBG_Tools_Options_FoldersIcon") . Upravitelný text se zobrazí v poli **umístění souborů symbolů (. pdb)** .
 
 3. Zadejte adresu URL nebo cestu k adresáři serveru symbolů nebo umístění symbolu. Doplňování výrazů vám pomůže najít správný formát.
 
-4. Chcete-li zlepšit výkon při načítání zadejte cestu k místnímu adresáři, kam lze zkopírovat symboly podle serverů symbolů v **mezipaměti symbolů v tomto adresáři** místní adresář, do něhož lze symboly zkopírovat.
+4. Pokud chcete zlepšit výkon při načítání symbolů, zadejte místní adresář, ve kterém se symboly dají zkopírovat pomocí symbolových serverů v poli **symboly mezipaměti v tomto adresáři** do místního adresáře, do kterého se symboly dají zkopírovat.
 
    > [!NOTE]
    > Neumísťujte mezipaměť symbolu do chráněné složky (například C:\Windows nebo některé z jejích podsložek). Místo toho použijte složku pro čtení i zápis.
 
-   **Zadejte chování načítání symbolu**
+   **Určit chování načítání symbolů**
 
-   Můžete určit soubory, které mají být načteny automaticky z **Symbol umístění souborů (.pdb)** umístění pole při zahájení ladění. Soubory se symboly v adresáři projektu jsou vždy načteny.
+   Můžete určit soubory, které mají být načteny automaticky z umístění pole **umístění souborů symbolů (. pdb)** při spuštění ladění. Soubory se symboly v adresáři projektu jsou vždy načteny.
 
-5. Zvolte **všechny moduly, kromě vyloučených** k načtení všech symbolů pro všechny moduly, kromě těch, které určíte při výběru možnosti **zadat vyloučené moduly** odkaz.
+5. Zvolte **všechny moduly, pokud vyloučené nejsou** pro načtení všech symbolů pro všechny moduly kromě těch, které určíte, když zvolíte odkaz **zadat vyloučené moduly** .
 
-6. Zvolte **pouze určité moduly** možnost a klikněte na tlačítko **určit moduly** pro uvedení seznamu modulů, které soubory, které chcete načíst automaticky symbolů. Soubory symbolů pro ostatní moduly jsou ignorovány.
+6. Zvolte možnost **pouze zadané moduly** a pak zvolte možnost **zadat moduly** a uveďte moduly, které soubory symbolů, které chcete načíst automaticky. Soubory symbolů pro ostatní moduly jsou ignorovány.
 
-   **Zadejte další možnosti symbolu.**
+   **Zadat další možnosti symbolu**
 
-   Můžete také nastavit následující možnosti na **nástroje / Možnosti / ladění / symboly** stránky:
+   Na stránce **Nástroje/možnosti/ladění/symboly** můžete také nastavit následující možnosti:
 
-   **Varovat, pokud žádné symboly při spuštění (pouze nativní)**
+   **Upozornit, pokud při spuštění nejsou žádné symboly (jenom nativní)**
 
    Vyberete-li tuto možnost, zobrazí se dialogové okno upozornění při pokusu o ladění programu, pro které ladicí program neobsahuje žádné symbolické informace.
 
@@ -94,31 +94,31 @@ Souboru databáze (PDB) program, nazývaný také soubor symbolů, mapuje identi
 
    Při výběru načte exportní tabulky knihovny DLL. Symbolické informace z tabulky exportu knihovny DLL mohou být užitečné, pokud pracujete se zprávami systému Windows, postupy systému Windows (WindowProcs), objekty COM nebo zařazování nebo libovolnou knihovnou DLL pro kterou nemáte symboly. Informace o exportu knihovny DLL pro čtení zahrnují nadměrné zatížení. Proto tato možnost je ve výchozím nastavení vypnuta.
 
-   Chcete-li zjistit, jaké symboly jsou k dispozici v exportní tabulce knihovny DLL, použijte `dumpbin /exports`. Symboly jsou k dispozici pro všechny 32bitové systémové knihovny DLL. V článku `dumpbin /exports` výstupu uvidíte přesný název funkce, včetně jiných než alfanumerických znaků. To je užitečné pro nastavení zarážky na funkci. Názvy funkcí z tabulky exportu knihovny DLL se mohou jinde v ladícím programu zobrazit ořezané. Volání jsou uvedena v pořadí volání s aktuální funkcí (nejhlouběji vnořených) nahoře. Další informace najdete v tématu [dumpbin/EXPORTS](https://msdn.microsoft.com/library/2971ab7e-4ee6-478b-9c85-cda42a4ce1bf).
+   Chcete-li zjistit, jaké symboly jsou k dispozici v exportní tabulce knihovny DLL, použijte `dumpbin /exports`. Symboly jsou k dispozici pro všechny 32bitové systémové knihovny DLL. Po přečtení výstupu `dumpbin /exports` můžete zobrazit přesný název funkce, včetně jiných než alfanumerických znaků. To je užitečné pro nastavení zarážky na funkci. Názvy funkcí z tabulky exportu knihovny DLL se mohou jinde v ladícím programu zobrazit ořezané. Volání jsou uvedena v pořadí volání s aktuální funkcí (nejhlouběji vnořených) nahoře. Další informace najdete v tématu [DUMPBIN/EXPORTS](https://msdn.microsoft.com/library/2971ab7e-4ee6-478b-9c85-cda42a4ce1bf).
 
-### <a name="BKMK_Use_symbol_servers_to_find_symbol_files_not_on_your_local_machine"></a> Použít servery symbolů ke hledání souborů symbolů nenainstalovaných v místním počítači
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] může stáhnout soubory symbolu ladění ze serverů symbolů, které implementují protokol symsrv. [Visual Studio Team Foundation Server](https://msdn.microsoft.com/library/bd6977ca-e30a-491a-a153-671d81222ce6) a [ladění nástroje pro Windows](https://msdn.microsoft.com/library/windows/hardware/ff551063\(v=VS.85\).aspx) jsou dva nástroje, které implementují servery symbolů. Zadejte symbolové servery k použitím v VS **možnosti** dialogové okno.
+### <a name="BKMK_Use_symbol_servers_to_find_symbol_files_not_on_your_local_machine"></a>Servery symbolů použijte k nalezení souborů symbolů, které nejsou na vašem místním počítači.
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] mohou stahovat soubory se symboly ladění ze serverů symbolů, které implementují protokol symsrv. [Visual Studio Team Foundation Server](https://msdn.microsoft.com/library/bd6977ca-e30a-491a-a153-671d81222ce6) a [Nástroje pro ladění pro Windows](https://msdn.microsoft.com/library/windows/hardware/ff551063\(v=VS.85\).aspx) jsou dva nástroje, které můžou implementovat servery symbolů. V dialogovém okně **Možnosti** vs určíte, aby se servery symbolů používaly.
 
  Mezi servery se symboly, které můžete použít, patří:
 
- **Veřejné symbolové servery společnosti Microsoft**
+ **Veřejné servery se symboly Microsoftu**
 
- Pokud chcete ladit selhání, ke kterému dojde během volání systémové knihovny DLL nebo knihovny třetí strany, budete často potřebovat systémové soubory .pdb, které obsahují symboly pro soubory DLL, EXE a ovladače zařízení v systému Windows. Tyto symboly můžete získat na veřejných serverech symbolů společnosti Microsoft. Veřejné symbolové servery společnosti Microsoft poskytuje symboly pro operační systémy Windows společně s MDAC, IIS, ISA a [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].
+ Pokud chcete ladit selhání, ke kterému dojde během volání systémové knihovny DLL nebo knihovny třetí strany, budete často potřebovat systémové soubory .pdb, které obsahují symboly pro soubory DLL, EXE a ovladače zařízení v systému Windows. Tyto symboly můžete získat na veřejných serverech symbolů společnosti Microsoft. Veřejné symbolové servery společnosti Microsoft poskytují kromě MDAC, IIS, ISA a [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]symboly pro operační systémy Windows.
 
- Pokud chcete použít servery symbolů společnosti Microsoft, zvolte **možnosti a nastavení** na **ladění** nabídky a klikněte na tlačítko **symboly**. Vyberte **Microsoft Symbol Servers**.
+ Chcete-li použít Microsoft Symbol Servers, zvolte **Možnosti a nastavení** v nabídce **ladění** a potom zvolte **symboly**. Vyberte **Microsoft Symbol Servers**.
 
- **Servery se symboly v interní síti nebo na místním počítači**
+ **Servery symbolů v interní síti nebo v místním počítači**
 
- Váš tým nebo společnost může vytvořit servery symbolů pro vaše vlastní produkty jako mezipaměť pro symboly z externích zdrojů. Symbolový server můžete mít na vlastním počítači. Můžete zadat umístění serverů symbolů jako adresu URL nebo cestu na **ladění**/**symboly** stránku **dialogové okno Možnosti**.
+ Váš tým nebo společnost může vytvořit servery symbolů pro vaše vlastní produkty jako mezipaměť pro symboly z externích zdrojů. Symbolový server můžete mít na vlastním počítači. Můžete zadat umístění serverů symbolů jako adresu URL nebo jako cestu na stránce **ladění**/**symboly** **dialogového okna Možnosti**vs.
 
- **Servery symbolů jiných výrobců**
+ **Servery symbolů třetích stran**
 
- Jiní zprostředkovatelé aplikací a knihoven systému Windows mohou poskytovat přístup k symbolovému serveru na internetu. Také zadejte adresu URL těchto serverů symbolů **ladění**/**symboly** stránky,
+ Jiní zprostředkovatelé aplikací a knihoven systému Windows mohou poskytovat přístup k symbolovému serveru na internetu. Adresu URL těchto symbolových serverů zadáte také na stránce **ladění**/**symboly** .
 
 > [!NOTE]
 > Pokud používáte symbolový server jiný než veřejné symbolové servery společnosti Microsoft, přesvědčte se, zda symbolový server a jeho cesty jsou důvěryhodné. Vzhledem k tomu, že soubory se symboly mohou obsahovat libovolný spustitelný kód, můžete se vystavit bezpečnostním hrozbám.
 
-### <a name="BKMK_Find_and_load_symbols_while_debugging"></a> Najít a načíst symboly při ladění
+### <a name="BKMK_Find_and_load_symbols_while_debugging"></a>Najít a načíst symboly při ladění
  V každém okamžiku, kdy je ladicí program v režimu pozastavení, můžete načíst symboly pro modul, který byl dříve vyloučen možnostmi ladicího programu nebo které kompilátor nemůže najít. Symboly můžete načíst z místních nabídek oken Zásobník volání, Moduly, Lokální, Automatické a Všechna kukátka. Pokud ladicí program se přeruší v kódu, který nemá symbol nebo zdrojové soubory k dispozici, zobrazí se okno dokumentu. Zde naleznete informace o chybějících souborech a provedení akcí k jejich vyhledání a načtení.
 
  **Hledání symbolů se stránkami dokumentu nebyly načteny žádné symboly**
@@ -133,116 +133,116 @@ Souboru databáze (PDB) program, nazývaný také soubor symbolů, mapuje identi
 
 4. Změna zásobníku dvojitým kliknutím na snímek v okně Zásobník volání.
 
-   Při jedné z těchto událostí ladicí program zobrazí **nebyly načteny žádné symboly** stránka může pomoci najít a načíst potřebné symboly.
+   Když dojde k jedné z těchto událostí, ladicí program zobrazí stránku **nejsou načteny žádné symboly** , které vám pomůžou najít a načíst potřebné symboly.
 
    ![Na stránce nejsou načteny žádné symboly](../debugger/media/dbg-nosymbolsloaded.png "DBG_NoSymbolsLoaded")
 
-- Chcete-li změnit cesty hledání, zvolte nevybranou cestu nebo vyberte **nový** a zadejte novou cestu. Zvolte **načíst** hledání cest a načtení souboru symbolů, pokud je nalezen.
+- Chcete-li změnit cesty hledání, zvolte nevybranou cestu nebo zvolte možnost **nové** a zadejte novou cestu. Vyberte **načíst** , chcete-li znovu vyhledat cesty a načíst soubor symbolů, pokud je nalezen.
 
-- Zvolte **Procházet a vyhledat**_název spustitelného souboru_ **...**  pro přepsání jakékoli volby symbolu a opakujte hledání cesty. Pokud je nalezen soubor symbolů, bude načten, nebo se zobrazí Průzkumník souborů, kde můžete soubor symbolu vybrat ručně.
+- Klikněte na **Procházet a vyhledejte**_název spustitelného souboru_ **...** , abyste popsali všechny možnosti symbolu, a opakujte cesty pro hledání. Pokud je nalezen soubor symbolů, bude načten, nebo se zobrazí Průzkumník souborů, kde můžete soubor symbolu vybrat ručně.
 
-- Zvolte **změnit nastavení symbolů...**  zobrazíte **ladění** / **symboly** stránky v dialogovém okně Možnosti VS.
+- Vyberte **změnit nastavení symbolů...** pro zobrazení stránky / **symboly** **ladění** v dialogovém okně Možnosti vs.
 
-- Zvolte **zobrazit zpětný překlad** chcete zobrazit rozebrání v novém okně jednou.
+- Vyberte **Zobrazit zpětný překlad** pro jednorázové zobrazení zpětného překladu v novém okně.
 
-- Pokud chcete vždy zobrazit rozebrání, když nejsou nalezeny zdrojové soubory nebo soubory symbolu, zvolte **dialogové okno Možnosti** propojit a vyberte možnost **povolit ladění na úrovni adresy** a **zobrazit zpětný překlad, pokud není k dispozici zdroj**.
+- Chcete-li vždy zobrazit zpětný překlad, pokud nejsou nalezeny zdrojové soubory nebo soubory symbolů, zvolte odkaz **dialogové okno Možnosti** a vyberte možnost **Povolit ladění na úrovni adresy** a **Zobrazit zpětný překlad, pokud není k dispozici zdroj**.
 
    ![Možnosti &#47; ladění &#47; Obecné možnosti zpětného překladu](../debugger/media/dbg-options-general-disassembly-checkbox.png "DBG_Options_General_disassembly_checkbox")
 
-  **Změňte možnosti symbolu z místní nabídky**
+  **Změna možností symbolu z místní nabídky**
 
   Při práci v režimu pozastavení můžete najít a načíst symboly pro položky, které jsou zobrazeny v oknech Zásobník volání, Moduly, Lokální, Automatické a všech oknech Kukátka. V okně vyberte položku, otevřete místní nabídku a zvolte jednu z následujících možností:
 
 |Možnost|Popis|
 |------------|-----------------|
-|**Načtení symbolů**|Pokusí se načíst symboly z umístění zadaného na **ladění** / **symboly** stránku **možnosti** dialogové okno. Pokud nelze najít soubor symbolů, spustí se Průzkumník souborů, takže můžete určit nové umístění pro hledání.|
-|**Informace o načítání symbolů**|Představuje informace, které vykazují umístění načteného souboru se symbolem nebo prohledávána umístění, pokud ladicí program nemůže najít soubor.|
-|**Nastavení symbolů...**|Otevře **ladění** / **symboly** stránku **možnosti** dialogové okno.|
+|**Načíst symboly**|Pokusí se načíst symboly z umístění zadaných na stránce **ladění** / **symboly** dialogového okna **Možnosti** . Pokud nelze najít soubor symbolů, spustí se Průzkumník souborů, takže můžete určit nové umístění pro hledání.|
+|**Informace o načtení symbolů**|Představuje informace, které vykazují umístění načteného souboru se symbolem nebo prohledávána umístění, pokud ladicí program nemůže najít soubor.|
+|**Nastavení symbolu...**|Otevře stránku **ladění** / **symboly** dialogového okna **Možnosti** vs.|
 |**Vždy načítat automaticky**|Přidá soubor symbolů do seznamu souborů, které jsou automaticky načteny pomocí ladicího programu.|
 
-### <a name="BKMK_Set_compiler_options_for_symbol_files"></a> Nastavit možnosti kompilátoru pro soubory symbolů
- Při sestavení projektu z rozhraní IDE VS a použití standardní **ladění** konfigurace sestavení, C++ a spravované kompilátory odpovídající soubory symbolů pro váš kód vytvořit. Můžete také nastavit možnosti kompilátoru na příkazovém řádku k vytvoření souborů symbolů.
+### <a name="BKMK_Set_compiler_options_for_symbol_files"></a>Nastavit možnosti kompilátoru pro soubory symbolů
+ Při sestavování projektu z rozhraní IDE VS a použití standardní konfigurace **ladění** sestavení vytvoří kompilátor C++ a spravované kompilátory odpovídající soubory symbolů pro váš kód. Můžete také nastavit možnosti kompilátoru na příkazovém řádku k vytvoření souborů symbolů.
 
- **Možnosti jazyka C++**
+ **C++nastavení**
 
- Soubor databáze programu (PDB) uchovává informace o ladění a stavu projektu, které umožňují přírůstkové propojení konfigurace ladění programu. Soubor PDB je vytvořen při sestavení s [příznakem/zi nebo /Zi](https://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8) (pro C/C++).
+ Soubor databáze programu (PDB) uchovává informace o ladění a stavu projektu, které umožňují přírůstkové propojení konfigurace ladění programu. Soubor PDB se vytvoří při sestavení pomocí [/Zi nebo/Zi](https://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8) (pro C/C++).
 
- V [!INCLUDE[vcprvc](../includes/vcprvc-md.md)], [/Fd](https://msdn.microsoft.com/library/3977a9ed-f0ac-45df-bf06-01cedd2ba85a) možnost pojmenuje soubor .pdb vytvořený kompilátorem. Při vytváření projektu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pomocí průvodců **/Fd** je možnost nastavená na vytvoření souboru .pdb s názvem *projektu*.pdb.
+ V [!INCLUDE[vcprvc](../includes/vcprvc-md.md)]pojmenovává možnost [/FD](https://msdn.microsoft.com/library/3977a9ed-f0ac-45df-bf06-01cedd2ba85a) soubor. pdb vytvořený kompilátorem. Při vytváření projektu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pomocí průvodců je možnost **/FD** nastavena na vytvoření souboru. pdb s názvem *Project*. pdb.
 
- Pokud vytváříte aplikaci C/C++ pomocí souboru pravidel a zadáte **/zi** nebo **/zi** bez **/Fd**, skončíte se dvěma soubory PDB:
+ Pokud sestavíte C/C++ aplikace pomocí souboru pravidel a zadáte **/Zi** nebo **/Zi** bez **/FD**, skončíte se dvěma soubory PDB:
 
-- VC*x*.pdb, kde *x* představuje verzi jazyka Visual C++, například VC11.pdb. Tento soubor obsahuje všechny informace o ladění pro jednotlivé soubory OBJ a je umístěn ve stejném adresáři jako soubor pravidel projektu.
+- VC*x*. pdb, kde *x* představuje verzi vizuálu C++, například VC11. pdb. Tento soubor obsahuje všechny informace o ladění pro jednotlivé soubory OBJ a je umístěn ve stejném adresáři jako soubor pravidel projektu.
 
 - Project.pdb tento soubor uchovává všechny informace o ladění pro soubor the.exe. Pro jazyk C/C++ je umístěn v podadresáři \debug.
 
-  Pokaždé, když se vytvoří soubor s příponou OBJ, kompilátor C/C++ sloučí informace o ladění do VC*x*.pdb. Vložené informace obsahují informace o typu, ale neobsahují informace o symbolu, jako jsou definice funkce. Ano, i když každý zdrojový soubor obsahuje společné soubory hlaviček, jako \<windows.h >, funkce typedefs z těchto záhlaví jsou uloženy pouze jednou, namísto do každého souboru OBJ.
+  Pokaždé, když vytvoří soubor OBJ, C/C++ Compiler sloučí informace o ladění do VC*x*. pdb. Vložené informace obsahují informace o typu, ale neobsahují informace o symbolu, jako jsou definice funkce. Takže i když každý zdrojový soubor obsahuje společné hlavičkové soubory, například \<Windows. h >, definice typedef z těchto hlaviček se ukládají pouze jednou, nikoli v každém souboru OBJ.
 
-  Linker vytvoří project.pdb, který obsahuje informace o ladění souboru EXE v projektu. Soubor project.pdb obsahuje úplné informace o ladění, včetně funkčních prototypů, nejen informace o typu uvedené v VC*x*.pdb. Oba soubory PDB umožňují přírůstkové aktualizace. Linker také vloží cestu k souboru .pdb ve vytvořeném souboru .exe nebo .dll.
+  Linker vytvoří project.pdb, který obsahuje informace o ladění souboru EXE v projektu. Soubor Project. pdb obsahuje úplné informace o ladění, včetně prototypů funkcí, nikoli jenom informace o typu nalezené v VC*x*. pdb. Oba soubory PDB umožňují přírůstkové aktualizace. Linker také vloží cestu k souboru .pdb ve vytvořeném souboru .exe nebo .dll.
 
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Ladicí program používá cestu k souboru .pdb v souboru EXE nebo DLL k vyhledání souboru project.pdb. Pokud ladicí program nemůže najít soubor PDB na tomto místě nebo je-li cesta neplatná (například, pokud byl projekt přesunut do jiného počítače), ladicí program hledá cestu, která obsahuje soubor EXE, cesty symbolů zadané v **možnosti** Dialogové okno (**ladění** složce **symboly** uzlu). Ladicí program nenačte soubor .pdb, který neodpovídá laděnému spustitelnému souboru. Pokud ladicí program nemůže najít soubor .pdb **najít symboly** se zobrazí dialogové okno, které umožňuje hledat symboly nebo přidat další umístění pro cestu hledání.
+  Ladicí program [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] používá cestu k souboru. pdb v souboru EXE nebo DLL k vyhledání souboru Project. pdb. Pokud ladicí program nemůže najít soubor PDB na tomto místě nebo je-li cesta neplatná (například pokud byl projekt přesunut do jiného počítače), ladicí program hledá cestu, která obsahuje soubor EXE, cesty symbolů zadané v dialogovém okně **Možnosti** (složka**ladění** , uzel **symboly** ). Ladicí program nenačte soubor .pdb, který neodpovídá laděnému spustitelnému souboru. Pokud ladicí program nemůže najít soubor PDB, zobrazí se dialogové okno **Najít symboly** , které umožňuje hledat symboly nebo přidat další umístění do cesty pro hledání.
 
-  **Možnosti rozhraní .NET framework**
+  **Možnosti .NET Framework**
 
-  Soubor databáze programu (PDB) uchovává informace o ladění a stavu projektu, které umožňují přírůstkové propojení konfigurace ladění programu. Soubor PDB je vytvořen při sestavení s **/debug**. Můžete vytvářet aplikace pomocí **/Debug: Full** nebo **/debug:pdbonly**. Sestavování s **/Debug: Full** generuje laditelný kód. Sestavování s **/debug:pdbonly** generuje soubory PDB ale negeneruje `DebuggableAttribute` , který instruuje kompilátor JIT, že je k dispozici informace o ladění. Použití **/debug:pdbonly** Pokud chcete generovat soubory .pdb pro sestavení pro vydání, které nemá být laditelná. Další informace najdete v tématu [/Debug (možnosti kompilátoru C#)](https://msdn.microsoft.com/library/e2b48c07-01bc-45cc-a52c-92e9085eb969) nebo [/Debug (Visual Basic)](https://msdn.microsoft.com/library/c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2).
+  Soubor databáze programu (PDB) uchovává informace o ladění a stavu projektu, které umožňují přírůstkové propojení konfigurace ladění programu. Při sestavování pomocí **/Debug**se vytvoří soubor. pdb. Můžete vytvářet aplikace pomocí **/debug: Full** nebo **/debug: pdbonly**. Sestavování pomocí **/debug: Full** generuje laditelné kódy. Sestavení pomocí **/debug: pdbonly** generuje soubory PDB, ale negeneruje `DebuggableAttribute`, který oznamuje kompilátoru JIT, že jsou k dispozici informace o ladění. Použijte **/debug: pdbonly** , pokud chcete generovat soubory. PDB pro sestavení vydaných verzí, které nechcete ladit. Další informace naleznete v tématu [/Debug (C# možnosti kompilátoru)](https://msdn.microsoft.com/library/e2b48c07-01bc-45cc-a52c-92e9085eb969) nebo [/Debug (Visual Basic)](https://msdn.microsoft.com/library/c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2).
 
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Ladicí program používá cestu k souboru .pdb v souboru EXE nebo DLL k vyhledání souboru project.pdb. Pokud ladicí program nemůže najít soubor PDB na tomto místě nebo je-li cesta neplatná, ladicí program hledá cestu, která obsahuje soubor EXE, a poté cesty symbolů zadané v **možnosti** dialogové okno. Tato cesta je obvykle **ladění** složky **symboly** uzlu. Ladicí program nenačte soubor .pdb, který neodpovídá laděnému spustitelnému souboru. Pokud ladicí program nemůže najít soubor .pdb **najít symboly** se zobrazí dialogové okno, které umožňuje hledat symboly nebo přidat další umístění pro cestu hledání.
+  Ladicí program [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] používá cestu k souboru. pdb v souboru EXE nebo DLL k vyhledání souboru Project. pdb. Pokud ladicí program nemůže najít soubor PDB na tomto místě nebo je-li cesta neplatná, ladicí program hledá cestu, která obsahuje soubor EXE, a poté cesty symbolů zadané v dialogovém okně **Možnosti** . Tato cesta je obvykle složka **ladění** v uzlu **symboly** . Ladicí program nenačte soubor .pdb, který neodpovídá laděnému spustitelnému souboru. Pokud ladicí program nemůže najít soubor PDB, zobrazí se dialogové okno **Najít symboly** , které umožňuje hledat symboly nebo přidat další umístění do cesty pro hledání.
 
   **Webové aplikace**
 
   Konfigurační soubor aplikace (Web.config) musí být nastaven na režim ladění. Režim ladění způsobí, že technologie ASP.NET generuje dynamicky generované soubory a umožňuje ladicímu program připojit k aplikaci technologie ASP.NET. VS tuto hodnotu nastaví automaticky při spuštění ladění, pokud jste vytvořili projekt ze šablony webových projektů.
 
-## <a name="BKMK_Find_source_files"></a> Najít zdrojové soubory
+## <a name="BKMK_Find_source_files"></a>Najít zdrojové soubory
 
-### <a name="BKMK_Where_the_debugger_searches_for_source_files"></a> Pokud ladicí program vyhledává zdrojové soubory
+### <a name="BKMK_Where_the_debugger_searches_for_source_files"></a>Kde ladicí program vyhledává zdrojové soubory
  Ladicí program vyhledá zdrojové soubory v následujících umístěních:
 
 1. Soubory, které jsou otevřeny v integrovaném vývojovém prostředí Visual Studio instance, které spustilo ladicí program.
 
 2. Soubory v řešení, která je otevřená v instanci aplikace Visual Studio.
 
-3. Adresáře, které jsou určené v **společné vlastnosti** / **zdrojové soubory ladění** stránku vlastností řešení. (V **Průzkumníka řešení**, vyberte uzel řešení, klikněte pravým tlačítkem a vyberte **vlastnosti**. )
+3. Adresáře, které jsou zadány na stránce **Obecné vlastnosti** / **zdrojové soubory ladění** ve vlastnostech řešení. (V **Průzkumník řešení**vyberte uzel řešení, klikněte pravým tlačítkem myši a vyberte **vlastnosti**. )
 
 4. Zdrojové informace o souboru .pdb modulu. To může být umístění zdrojového souboru, když modul byl vytvořen, nebo to může být příkaz na zdrojový server.
 
-### <a name="BKMK_Find_and_load_source_files_with_the_No_Source___No_Symbols_Loaded_pages"></a> Najít a načíst zdrojové soubory s žádný zdrojový / nebyly načteny žádné symboly stránky
- Pokud ladicí program přeruší provádění v místě, kde není k dispozici zdrojový soubor, zobrazí **nenačten žádný zdroj** nebo **nebyly načteny žádné symboly** stránek, které vám mohou pomoci najít zdrojový soubor. **Nebyly načteny žádné symboly** se zobrazí, když ladicí program nemůže najít soubor symbolů (PDB) pro spustitelný soubor a dokončit tak hledání. Stránka Žádné symboly poskytuje možnosti pro vyhledání souboru. Pokud je soubor PDB nalezen po spuštění jedné z možností a ladicí program může načíst zdrojový soubor pomocí informací v souboru symbolů, zobrazí se zdroj. V opačném případě **nenačten žádný zdroj** se zobrazí stránka s popisem problému. Na stránce se zobrazí odkazy s možnostmi, které umožňují provádět akce, které mohou problém vyřešit.
+### <a name="BKMK_Find_and_load_source_files_with_the_No_Source___No_Symbols_Loaded_pages"></a>Vyhledání a načtení zdrojových souborů se stránkami žádný zdroj/nebyly načteny žádné symboly
+ Pokud ladicí program přeruší provádění v místě, kde není k dispozici zdrojový soubor, zobrazí se stránky **není načten žádný zdroj** nebo **nebyly načteny žádné symboly** , které vám pomohou najít zdrojový soubor. **Nejsou načteny žádné symboly** se zobrazí, pokud ladicí program nemůže najít soubor symbolů (. pdb) pro spustitelný soubor pro dokončení hledání. Stránka Žádné symboly poskytuje možnosti pro vyhledání souboru. Pokud je soubor PDB nalezen po spuštění jedné z možností a ladicí program může načíst zdrojový soubor pomocí informací v souboru symbolů, zobrazí se zdroj. V opačném případě se zobrazí stránka **bez načteného zdroje** , která popisuje problém. Na stránce se zobrazí odkazy s možnostmi, které umožňují provádět akce, které mohou problém vyřešit.
 
-### <a name="BKMK_Add_source_file_search_paths_to_a_solution"></a> Přidat cesty hledání zdrojového souboru do řešení
+### <a name="BKMK_Add_source_file_search_paths_to_a_solution"></a>Přidat cesty hledání zdrojového souboru do řešení
  Můžete určit síť nebo místní adresáře pro hledání zdrojových souborů.
 
-1. V Průzkumníku řešení vyberte řešení a klikněte na tlačítko **vlastnosti** z místní nabídky.
+1. Vyberte řešení v Průzkumník řešení a pak v místní nabídce zvolte **vlastnosti** .
 
-2. V části **společné vlastnosti** uzlu, vyberte **zdrojové soubory ladění**.
+2. V uzlu **společné vlastnosti** vyberte možnost **Ladit zdrojové soubory**.
 
-3. Klikněte na složku ![složky&#47; možnosti&#47; nástroje&#47;pro ladění ikona ikona složky symboly ladění](../debugger/media/dbg-tools-options-foldersicon.png "DBG_Tools_Options_FoldersIcon") . Upravitelný text se zobrazí v **adresáře obsahujícího zdrojový kód** seznamu.
+3. Klikněte na složku ![složky&#47; možnosti&#47; nástroje&#47;pro ladění ikona ikona složky symboly ladění](../debugger/media/dbg-tools-options-foldersicon.png "DBG_Tools_Options_FoldersIcon") . Upravitelný text se zobrazí v seznamu **adresáře obsahujícího zdrojový kód** .
 
 4. Přidejte cestu, kterou chcete prohledat.
 
    Všimněte si, že je prohledán pouze zadaný adresář. Je nutné přidat položky pro všechny podadresáře, které chcete prohledávat.
 
-### <a name="BKMK_Use_source_servers"></a> Použití zdrojových serverů
+### <a name="BKMK_Use_source_servers"></a>Použít zdrojové servery
  Pokud neexistuje žádný zdrojový kód v místním počítači nebo soubor PDB neodpovídá zdrojovému kódu, můžete použít zdrojový server k ladění aplikace. Zdrojový server přijímá požadavky na soubory a vrací skutečné soubory. Zdrojový server je spuštěn pomocí souboru knihovny DLL s názvem srcsrv.dll. Zdrojový Server přečte soubor PDB aplikace, který obsahuje odkazy na úložiště zdrojového kódu, jakož i příkazy pro načtení zdrojového kódu z úložiště. Můžete omezit, jaké příkazy mohou být provedeny ze souboru .pdb aplikace uvedením seznamu povolených příkazů v souboru s názvem srcsrv.ini, který musí být umístěn ve stejném adresáři jako soubory srcsrv.dll a devenv.exe.
 
 > [!IMPORTANT]
-> Libovolné příkazy lze vložit do souboru v souboru pdb aplikace, takže zkontrolujte, zda umístíte pouze ty, které chcete provést do souboru srcsrv.ini. Pokus o provedení příkazu mimo soubor srcsvr.ini způsobí zobrazení dialogového okna s potvrzením. Další informace najdete v tématu [upozornění zabezpečení: ladicí program musí spustit nedůvěryhodný příkaz](../debugger/security-warning-debugger-must-execute-untrusted-command.md). Parametry příkazu nejsou ověřovány, proto buďte s důvěryhodnými příkazy opatrní. Například pokud důvěřujete souboru cmd.exe, uživateli se zlými úmysly může zadat parametry, které by z příkazu mohly udělat hrozbu.
+> Libovolné příkazy lze vložit do souboru v souboru pdb aplikace, takže zkontrolujte, zda umístíte pouze ty, které chcete provést do souboru srcsrv.ini. Pokus o provedení příkazu mimo soubor srcsvr.ini způsobí zobrazení dialogového okna s potvrzením. Další informace najdete v tématu [Upozornění zabezpečení: ladicí program musí spustit nedůvěryhodný příkaz](../debugger/security-warning-debugger-must-execute-untrusted-command.md). Parametry příkazu nejsou ověřovány, proto buďte s důvěryhodnými příkazy opatrní. Například pokud důvěřujete souboru cmd.exe, uživateli se zlými úmysly může zadat parametry, které by z příkazu mohly udělat hrozbu.
 
- **Chcete-li povolit použití zdrojového serveru**
+ **Povolení použití zdrojového serveru**
 
 1. Ujistěte se, že jsou dodrženy bezpečnostní opatření popsané v předchozí části.
 
-2. Na **nástroje** nabídce zvolte **možnosti**.
+2. V nabídce **nástroje** klikněte na příkaz **Možnosti**.
 
-     **Možnosti** zobrazí se dialogové okno.
+     Zobrazí se dialogové okno **Možnosti** .
 
-3. V **ladění** uzlu, vyberte **Obecné**.
+3. V uzlu **ladění** vyberte **Obecné**.
 
-4. Vyberte **povolit podporu zdrojového serveru** zaškrtávací políčko.
+4. Zaškrtněte políčko **Povolit podporu zdrojového serveru** .
 
      ![Povolit možnosti zdrojového serveru](../debugger/media/dbg-options-general-enablesrcsrvr-checkbox.png "DBG_Options_General_EnableSrcSrvr_checkbox")
 
 5. (Volitelné) Zvolte požadované podřízené možnosti.
 
-     Všimněte si, že oba **povolit zdrojový server pro sestavení částečné důvěryhodnosti (pouze spravované)** a **vždy spouštět nedůvěryhodné příkazy ze zdrojového serveru bez zobrazení výzvy** mohou zvýšit možnost bezpečnostního rizika, které bylo uvedeno výše.
+     Počítejte s tím, že možnost **Povolení zdrojového serveru pro částečně důvěryhodná sestavení (pouze spravované)** a **vždy spouštět nedůvěryhodné příkazy zdrojového serveru bez zobrazení výzvy** může zvýšit rizika zabezpečení popsaná výše.
 
 ## <a name="see-also"></a>Viz také
- [.NET změny vzdáleného načítání symbolů v sadě Visual Studio 2012 a 2013](https://devblogs.microsoft.com/devops/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013/)
+ [Změny vzdáleného načítání symbolů .NET v prostředí Visual Studio 2012 a 2013](https://devblogs.microsoft.com/devops/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013/)

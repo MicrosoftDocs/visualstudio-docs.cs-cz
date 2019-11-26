@@ -90,7 +90,7 @@ End Function
 
  Vložení rozhraní používá následující pravidlo:
 
-- Kód jakékoli součásti aplikace by nikdy neměl explicitně odkazovat na třídu v jiné součásti, deklarace nebo v `new` příkazu. Místo toho by měly být proměnné a parametry deklarovány pomocí rozhraní. Instance součástí by měly by vytvořeny pouze kontejnerem součásti.
+- Kód jakékoli komponenty aplikace by nikdy neměl explicitně odkazovat na třídu v jiné komponentě, a to buď v deklaraci, nebo v příkazu `new`. Místo toho by měly být proměnné a parametry deklarovány pomocí rozhraní. Instance součástí by měly by vytvořeny pouze kontejnerem součásti.
 
    „Součást“ v tomto případě představuje třídu nebo skupinu tříd, které společně vyvíjíte a aktualizujete. Součást obvykle představuje kód v jednom projektu sady Visual Studio. Není příliš důležité oddělit třídy v rámci jedné součásti, protože jsou aktualizovány ve stejnou dobu.
 
@@ -159,7 +159,7 @@ analyzer = new StockAnalyzer(new StockFeed())
 
 2. Vyberte sestavení, které obsahuje definice rozhraní, pro které chcete vytvořit zástupné procedury.
 
-3. V místní nabídce zvolte **přidat napodobeniny sestavení**.
+3. V místní nabídce vyberte možnost **Přidat napodobeniny sestavení**.
 
 ### <a name="WriteTest"></a>Napište svůj test pomocí zástupných procedur
 
@@ -219,7 +219,7 @@ End Class
 
 ```
 
- Zvláštní část kouzla tady je třída `StubIStockFeed`. Pro každý veřejný typ v odkazovaném sestavení generuje mechanismus rozhraní Microsoft Fakes zástupnou třídu. Název zástupné třídy je odvozený od názvu rozhraní s "`Fakes.Stub`" jako předponu a připojenými parametry názvů typu.
+ Speciální část Magic je `StubIStockFeed`třídy. Pro každý veřejný typ v odkazovaném sestavení generuje mechanismus rozhraní Microsoft Fakes zástupnou třídu. Název třídy zástupné procedury je odvozen z názvu rozhraní, s "`Fakes.Stub`" jako předponu a s připojenými názvy typů parametrů.
 
  Zástupné procedury jsou také generovány pro mechanismy získání a nastavení vlastností, pro události a pro obecné metody.
 
@@ -304,7 +304,7 @@ End Class
 ## <a name="BKMK_Stub_basics"></a>Zástupné procedury pro různé druhy členů typu
 
 ### <a name="BKMK_Methods"></a>Způsobů
- Jak je popsáno v příkladu, mohou být metody zastoupeny připojením delegáta k instanci zástupné třídy. Název typu zástupné procedury je odvozen z názvu metody a parametrů. Mějme například následující `IMyInterface` rozhraní a metoda `MyMethod`:
+ Jak je popsáno v příkladu, mohou být metody zastoupeny připojením delegáta k instanci zástupné třídy. Název typu zástupné procedury je odvozen z názvu metody a parametrů. Například s ohledem na následující `IMyInterface` rozhraní a `MyMethod`metody:
 
 ```csharp
 // application under test
@@ -314,7 +314,7 @@ interface IMyInterface
 }
 ```
 
- Připojíme zástupnou proceduru k `MyMethod` , která vždy vrátí 1:
+ K `MyMethod`, který vždycky vrátí hodnotu 1, připojíme zástupnou proceduru:
 
 ```csharp
 // unit test code
@@ -323,10 +323,10 @@ interface IMyInterface
 
 ```
 
- Pokud neposkytnete zástupnou proceduru pro funkci, vygeneruje rozhraní Fakes funkci, která vrátí výchozí hodnotu návratového typu. Pro čísla, výchozí hodnota je 0, a pro typy tříd je `null` (C#) nebo `Nothing` (Visual Basic).
+ Pokud neposkytnete zástupnou proceduru pro funkci, vygeneruje rozhraní Fakes funkci, která vrátí výchozí hodnotu návratového typu. Pro čísla je výchozí hodnota 0 a pro typy tříd je to `null` (C#) nebo `Nothing` (Visual Basic).
 
 ### <a name="BKMK_Properties"></a>Vlastnosti
- Funkce pro nastavení a získání vlastnosti jsou vystaveny jako samostatní delegáti a mohou být samostatně zastoupeny. Představme si třeba, `Value` vlastnost `IMyInterface`:
+ Funkce pro nastavení a získání vlastnosti jsou vystaveny jako samostatní delegáti a mohou být samostatně zastoupeny. Zvažte například vlastnost `Value` `IMyInterface`:
 
 ```csharp
 // code under test
@@ -337,7 +337,7 @@ interface IMyInterface
 
 ```
 
- Doporučujeme připojit delegáty k metody getter a setter `Value` pro simulaci automatické vlastnosti:
+ Připravujeme delegáty pro metodu getter a setter `Value` pro simulaci automatické vlastnosti:
 
 ```csharp
 // unit test code
@@ -361,7 +361,7 @@ interface IWithEvents
 }
 ```
 
- Aby se vyvolala `Changed` událost, jednoduše vyvolat delegáta zálohování:
+ Pokud chcete vyvolat událost `Changed`, jednoduše vyvolá delegovaného delegáta:
 
 ```csharp
 // unit test code
@@ -397,7 +397,7 @@ public void TestGetValue()
 }
 ```
 
- Pokud kód volat `GetValue<T>` s kteroukoli další instancí, by zástupná procedura jednoduše volala chování.
+ Pokud byl kód volán `GetValue<T>` s jakoukoliv jinou instancí, by zástupná procedura jednoduše volala chování.
 
 ### <a name="BKMK_Partial_stubs"></a>Zástupné procedury virtuálních tříd
  V předchozích příkladech byly zástupné procedury vytvořeny z rozhraní. Můžete také vygenerovat zástupné procedury z třídy, která má virtuální nebo abstraktní členy. Příklad:
@@ -424,7 +424,7 @@ public void TestGetValue()
 
 ```
 
- Pokud nezadáte delegáta pro virtuální metodu, může rozhraní Fakes zadat buď výchozí chování, nebo může volat metodu v základní třídě. Chcete-li volat základní metodu, nastavte `CallBase` vlastnost:
+ Pokud nezadáte delegáta pro virtuální metodu, může rozhraní Fakes zadat buď výchozí chování, nebo může volat metodu v základní třídě. Chcete-li vyvolat základní metodu, nastavte vlastnost `CallBase`:
 
 ```csharp
 // unit test code
@@ -448,9 +448,9 @@ Assert.AreEqual(43,stub.DoVirtual(1));
 2. Zapečetěné třídy nebo statické metody nemohou být zastoupeny, protože jsou typy zástupných procedur závislé na odbavení virtuální metody. V takových případech použijte typy překrytí, jak je popsáno v tématu [použití překrytí k izolaci aplikace od jiných sestavení pro testování částí](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md) .
 
 ## <a name="BKMK_Changing_the_default_behavior_of_stubs"></a>Změna výchozího chování zástupných procedur
- Každý generovaný typ zástupné procedury obsahuje instanci `IStubBehavior` rozhraní (až `IStub.InstanceBehavior` vlastnost). Chování je voláno pokaždé, když klient volá člen bez připojeného vlastního delegáta. Pokud chování nebylo nastaveno, bude používat instanci vrácenou `StubsBehaviors.Current` vlastnost. Ve výchozím nastavení, vrátí tato vlastnost chování, které se vyvolá `NotImplementedException` výjimky.
+ Každý generovaný typ stub obsahuje instanci rozhraní `IStubBehavior` (prostřednictvím vlastnosti `IStub.InstanceBehavior`). Chování je voláno pokaždé, když klient volá člen bez připojeného vlastního delegáta. Pokud chování nebylo nastaveno, bude použita instance vrácená vlastností `StubsBehaviors.Current`. Ve výchozím nastavení tato vlastnost vrací chování, které vyvolá výjimku `NotImplementedException`.
 
- Chování můžete kdykoli změnit tak, že nastavíte `InstanceBehavior` vlastnost na jakékoli zástupné instanci. Například následující fragment kódu změní chování, které nic nedělá nebo vrací výchozí hodnotu návratového typu: `default(T)`:
+ Chování lze kdykoli změnit nastavením vlastnosti `InstanceBehavior` u jakékoli instance zástupné procedury. Například následující fragment kódu změní chování, které nedělá nic nebo vrátí výchozí hodnotu návratového typu: `default(T)`:
 
 ```csharp
 // unit test code
@@ -459,7 +459,7 @@ var stub = new StubIFileSystem();
 stub.InstanceBehavior = StubsBehaviors.DefaultValue;
 ```
 
- Chování lze také změnit globálně pro všechny zástupné objekty, pro které nebyla chování nastaveno nastavením `StubsBehaviors.Current` vlastnost:
+ Chování lze také globálně změnit pro všechny objekty se zástupnými procedurami, pro které nebylo nastaveno chování nastavením vlastnosti `StubsBehaviors.Current`:
 
 ```csharp
 // unit test code

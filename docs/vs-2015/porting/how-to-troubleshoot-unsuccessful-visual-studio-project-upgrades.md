@@ -28,23 +28,23 @@ ms.locfileid: "74300355"
 # <a name="how-to-troubleshoot-unsuccessful-visual-studio-project-upgrades"></a>Postupy: Řešení potíží spojených s neúspěšným upgradem projektu sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Někdy Visual Studio nemůže převést plně projektu ze starší verze [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Pokud se určitý problém nelze vyřešit pomocí tipů v následujících částech, bude pravděpodobně možné na další informace naleznete na následující článek knihovny TechNet [Wiki: portál vývoj](https://go.microsoft.com/fwlink/?LinkId=254808).
+Může se stát, že Visual Studio nemůže plně převést projekt ze starší verze [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Pokud tipy v následujících částech nevyřeší váš konkrétní problém, může být možné najít další informace na [wikiwebu TechNet: vývojový portál](https://go.microsoft.com/fwlink/?LinkId=254808).
 
 ## <a name="the-project-does-not-run-because-files-are-not-found"></a>Projekt se nespustí, protože nebyly nalezeny soubory
- Soubor projektu obsahuje soubor pevně zakódované cesty, který [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] používá ke spuštění projektu při stisknutí klávesy F5. Tyto cesty mohou být umístění devenv.exe a další požadované soubory. V upgradované verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], cesty tyto soubory byly změněny.
+ Soubor projektu obsahuje pevně zakódované cesty k souborům, které [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] používá ke spuštění projektu po stisknutí klávesy F5. Tyto cesty mohou být umístění devenv.exe a další požadované soubory. V upgradovaných verzích [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]mohly být změny cest těchto souborů změněny.
 
 #### <a name="to-resolve-incorrect-file-paths"></a>Chcete-li vyřešit nesprávné cesty k souborům
 
 1. V textovém editoru otevřete soubor projektu.
 
-2. Vyhledání cesty k souborům, které může být nesprávný, zejména těch, které obsahují [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] číslo verze.
+2. Vyhledat cesty k souborům, které mohou být nesprávné, zejména ty, které obsahují číslo verze [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
 3. Úprava cesty k souboru tak, aby ukazovaly na novou cíle.
 
 ## <a name="the-project-does-not-build-because-references-are-not-valid"></a>Projekt sestavit, protože odkazy nejsou platné
- Při upgradu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], může také být upgradu [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] verze. Pokud váš projekt obsahuje odkazy, které jsou zrušeny ve verzi novější [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] verze, se nemůže vyřešit správně. To je zvláště pravděpodobné odkazy, které zahrnují číslo verze, například `Microsoft.VisualStudio.Shell.Interop.8.0`.
+ Pokud upgradujete [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], můžete také upgradovat [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] verzi. Pokud váš projekt obsahuje odkazy, které byly v novější verzi [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] ukončeny, nemusí se vyřešit správně. To je obzvláště nejspíš u odkazů, které obsahují čísla verzí, například `Microsoft.VisualStudio.Shell.Interop.8.0`.
 
- Pokud váš kód obsahuje mnoho neplatné odkazy, nejjednodušším řešením může být pomocí funkce cílení na více platforem [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] cílit na starší verzi [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].
+ Pokud má váš kód mnoho neplatných odkazů, nejjednodušší řešení může být použití funkce cílení na více verzí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] k cílení na starší verzi [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].
 
 #### <a name="to-resolve-incorrect-references"></a>Chcete-li vyřešit nesprávné odkazy
 
@@ -52,9 +52,9 @@ Někdy Visual Studio nemůže převést plně projektu ze starší verze [!INCLU
 
 2. Otevřete vlastnosti projektu.
 
-3. Vyberte správné **Cílová architektura** hodnotu. Alternativně můžete změnit hodnotu `<TargetFrameworkVersion>` element přímo v souboru projektu.
+3. Vyberte správnou **cílovou hodnotu rozhraní .NET Framework** . Alternativně můžete hodnotu prvku `<TargetFrameworkVersion>` upravit přímo v souboru projektu.
 
-   Pokud chcete, aby projektu pro spuštění v upgradovaný [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] verze, musíte aktualizovat odkazy na projekt a aktualizujte také některé `Imports` nebo `Using` příkazy, které volají odkazy. Pokud váš projekt je načten v integrovaném vývojovém prostředí, můžete aktualizovat odkazy pomocí **Průzkumníka řešení** nebo **správce odkazů** dialogové okno.
+   Chcete-li, aby byl projekt spuštěn v inovované verzi [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], je nutné aktualizovat odkazy pro projekt a také aktualizovat všechny `Imports` nebo `Using` příkazy, které volají odkazy. Pokud se váš projekt načte v integrovaném vývojovém prostředí (IDE), můžete aktualizovat odkazy pomocí **Průzkumník řešení** nebo dialogového okna **Správce odkazů** .
 
 ## <a name="see-also"></a>Viz také
- [/ Upgrade (devenv.exe)](../ide/reference/upgrade-devenv-exe.md) [převod na technologii ASP.NET 4](https://msdn.microsoft.com/library/790147c6-36c1-41b5-a52d-30b9ccd2bd10)
+ [/Upgrade (devenv. exe)](../ide/reference/upgrade-devenv-exe.md) [převod na ASP.NET 4](https://msdn.microsoft.com/library/790147c6-36c1-41b5-a52d-30b9ccd2bd10)

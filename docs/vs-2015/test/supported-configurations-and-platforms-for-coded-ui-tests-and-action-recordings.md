@@ -31,7 +31,7 @@ Podporované konfigurace a platformy pro programové testy uživatelského rozhr
 
 ## <a name="supported-configurations"></a>Podporované konfigurace
 
-|Konfigurace|Podporováno|
+|Konfiguraci|Podporováno|
 |-------------------|---------------|
 |Operační systémy:|[!INCLUDE[win7](../includes/win7-md.md)]<br /><br /> [!INCLUDE[winsvr08_r2](../includes/winsvr08-r2-md.md)]<br /><br /> [!INCLUDE[win8](../includes/win8-md.md)]<br /><br /> Windows 10|
 |Podpora 32bitové/64bitové verze|32-bitový systém Windows, na kterém běží 32-bit [!INCLUDE[TCMext](../includes/tcmext-md.md)], může testovat 32-bitové aplikace.<br /><br /> 64-bitový systém Windows, na kterém běží 32-bit [!INCLUDE[TCMext](../includes/tcmext-md.md)], může testovat aplikace s 32-bit WOW, které mají uživatelské rozhraní synchronizace. n.<br /><br /> 64-bitový systém Windows, na kterém běží 32-bit [!INCLUDE[TCMext](../includes/tcmext-md.md)], může testovat 64 model Windows Forms a aplikace WPF, které nemají k dispozici synchronizaci uživatelského rozhraní.|

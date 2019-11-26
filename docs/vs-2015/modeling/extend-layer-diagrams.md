@@ -34,7 +34,7 @@ Můžete napsat kód pro vytváření a aktualizaci diagramů vrstev a k ověře
 
 - [Ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)
 
-## <a name="prereqs"></a> Požadavky
+## <a name="prereqs"></a>Požadavků
  V počítači, na kterém chcete vyvíjet rozšíření vrstev, je nutné mít nainstalované následující:
 
 - Visual Studio

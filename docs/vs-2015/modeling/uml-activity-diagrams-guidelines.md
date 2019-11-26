@@ -93,7 +93,7 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
 
 - V **Průzkumníku modelů UML**přetáhněte aktivitu do balíčku.
 
-     \- nebo –
+     \- nebo-
 
 - V **Průzkumníku modelů UML**klikněte pravým tlačítkem myši na aktivitu a pak klikněte na **Vyjmout**. Pak klikněte pravým tlačítkem na balíček a pak klikněte na **Vložit**.
 
@@ -408,7 +408,7 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
 
 1. Vytvořte nový diagram aktivity, ve kterém můžete popsat transformaci nebo tok výběru.
 
-   - V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt, přejděte na **Přidat**, klikněte na **Nová položka**a pak klikněte na **Diagram aktivity**. Poskytněte diagramu vhodný název pro transformaci nebo tok výběru. Klikněte na tlačítko **Add** (Přidat).
+   - V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt, přejděte na **Přidat**, klikněte na **Nová položka**a pak klikněte na **Diagram aktivity**. Poskytněte diagramu vhodný název pro transformaci nebo tok výběru. Klikněte na tlačítko **Přidat**.
 
 2. V novém diagramu:
 

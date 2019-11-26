@@ -21,7 +21,7 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74301447"
 ---
 # <a name="select-rule-set-dialog-box-legacy"></a>Dialogové okno Vybrat sadu pravidel (starší verze)
-Toto téma popisuje, jak používat dialogové okno **vybrat sadu pravidel** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] potřeba cílit na platformu [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Toto téma popisuje, jak používat dialogové okno **vybrat sadu pravidel** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
 
  Dialogové okno **vybrat sadu pravidel** se používá k výběru sady pravidel, kterou můžete použít s aktivitou [sady](https://go.microsoft.com/fwlink?LinkID=65019) . Informace o tom, jak získat přístup k dialogovému oknu **vybrat sadu pravidel** , naleznete v tématu [How to: Create a sady Rule Set (starší verze)](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md).
 
@@ -32,9 +32,9 @@ Toto téma popisuje, jak používat dialogové okno **vybrat sadu pravidel** ve 
 |**Nové...**|Kliknutím otevřete [dialogové okno editor sad pravidel (zastaralé)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) a vytvořte novou podmínku pravidla.|
 |**Upravit...**|Kliknutím otevřete [dialogové okno editor sad pravidel (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) , ve kterém můžete upravit vybranou podmínku pravidla.|
 |**Přejmenovat...**|Kliknutím otevřete dialogové okno, které slouží k přejmenování vybrané sady pravidel.|
-|**Odstranění**|Kliknutím odstraníte vybranou sadu pravidel.|
+|**Delete**|Kliknutím odstraníte vybranou sadu pravidel.|
 |**Sada pravidel Preview**|Zobrazí pravidla ve vybrané sadě pravidel.|
-|**OK**|Kliknutím přiřadíte vybranou sadu pravidel k aktivitě **sady** .|
+|**Ok**|Kliknutím přiřadíte vybranou sadu pravidel k aktivitě **sady** .|
 
  Další informace o tom, jak vytvářet a upravovat sady pravidel, najdete v tématu [dialogové okno editor sad pravidel (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md).
 

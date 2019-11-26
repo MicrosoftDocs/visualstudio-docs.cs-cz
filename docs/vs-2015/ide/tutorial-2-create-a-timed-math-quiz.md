@@ -19,7 +19,7 @@ ms.locfileid: "74299864"
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>Tutoriál 2: Vytvoření matematického kvízu s časovým limitem
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V tomto kurzu sestavíte kvíz, ve kterém musí příjemce kvízu odpovědět na čtyři náhodné aritmetické úlohy v určeném čase. Získáte informace o následujících postupech:
+V tomto kurzu sestavíte kvíz, ve kterém musí příjemce kvízu odpovědět na čtyři náhodné aritmetické úlohy v určeném čase. Získáte informace o těchto tématech:
 
 - Generujte náhodná čísla pomocí třídy `Random`.
 
@@ -38,7 +38,7 @@ V tomto kurzu sestavíte kvíz, ve kterém musí příjemce kvízu odpovědět n
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Titul|Popis|
 |-----------|-----------------|
 |[Krok 1: Vytvořte projekt a přidejte do svého formuláře popisky](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)|Začněte tím, že vytvoříte projekt, změníte vlastnosti a přidáte `Label` ovládací prvky.|
 |[Krok 2: Vytvořte náhodný problém s přidáním](../ide/step-2-create-a-random-addition-problem.md)|Vytvořte problém sčítání a použijte třídu `Random` pro generování náhodných čísel.|

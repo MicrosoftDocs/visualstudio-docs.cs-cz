@@ -98,7 +98,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
    `Label` – zobrazovaný název uzlu.
 
-   Atributy stylu. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Atributy stylu. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    `Category` – název kategorie, která identifikuje prvky, které sdílejí tento atribut. Další informace naleznete v tématu `<Category/>` element.
 
@@ -163,7 +163,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
    `Label` – zobrazovaný název odkazu
 
-   Atributy stylu. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Atributy stylu. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    `Category` – název kategorie, která identifikuje prvky, které sdílejí tento atribut. Další informace naleznete v tématu `<Category/>` element.
 
@@ -220,7 +220,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
    V příkladu pro tento prvek kategorie `FailedTest` dědí svůj `Stroke` atribut z kategorie `PassedTest`. Viz "vytvoření hierarchických kategorií" v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
-   Kategorie také poskytují některé základní chování šablony, které řídí vzhled uzlů a propojení, když jsou zobrazeny na mapě. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Kategorie také poskytují některé základní chování šablony, které řídí vzhled uzlů a propojení, když jsou zobrazeny na mapě. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    Příklad:
 

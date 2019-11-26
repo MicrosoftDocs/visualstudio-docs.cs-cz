@@ -48,23 +48,23 @@ K přidání ovládacích prvků a dalších položek do projektu lze použít s
 
  Můžete změnit uspořádání položek na kartě panelu nástrojů nebo přidat vlastní karty a položky pomocí následujících příkazů v místní nabídce:
 
-- **Přejmenovat položku** – přejmenuje na vybranou položku.
+- **Přejmenovat položku** – Přejmenuje vybranou položku.
 
-- **Zobrazit všechny** -zobrazí všechny možné ovládací prvky (nikoli pouze ty, které se vztahují k aktuální návrháře).
+- **Zobrazit vše** – zobrazí všechny možné ovládací prvky (nikoli pouze ty, které se vztahují k aktuálnímu návrháři).
 
-- **Zobrazení seznamu** – zobrazuje ovládací prvky v svislé seznamu. Pokud není zaškrtnuto, zobrazí ovládací prvky vodorovně.
+- **Zobrazení seznamu** – zobrazí ovládací prvky ve svislém seznamu. Pokud není zaškrtnuto, zobrazí ovládací prvky vodorovně.
 
-- **Výběr položek** -otevře **zvolit položky nástrojů** dialogové okno tak, aby můžete určit položky, které se zobrazují v **nástrojů**. Můžete zobrazit nebo skrýt položku zaškrtnutím nebo zrušením zaškrtnutí jejího políčka.
+- **Zvolit položky** – otevře dialogové okno **zvolit položky sady nástrojů** , ve kterém můžete určit položky, které se zobrazí v **sadě nástrojů**. Můžete zobrazit nebo skrýt položku zaškrtnutím nebo zrušením zaškrtnutí jejího políčka.
 
-- **Řadit položky podle abecedy** -Seřadí položky podle názvu.
+- **Seřadit položky abecedně** – Seřadí položky podle názvu.
 
 - **Resetovat panel nástrojů** – obnoví výchozí nastavení a položky sady nástrojů.
 
 - **Přidat tabulátor** – přidá novou kartu panelu nástrojů.
 
-- **Přesunout nahoru** – Přesune vybrané položky nahoru.
+- **Nahoru – přesune** vybranou položku nahoru.
 
-- **Přesunout dolů** – Přesune vybrané položky dolů.
+- **Přesunout dolů** – Přesune vybranou položku dolů.
 
 ## <a name="creating-and-distributing-custom-toolbox-controls"></a>Vytváření a distribuce vlastních ovládacích prvků panelu nástrojů
  Vlastní ovládací prvek sady nástrojů lze vytvořit buď Visual Basic nebo vizuál C#, a můžete začít se šablonou projektu založenou na [Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) nebo [model Windows Forms](../misc/how-to-create-a-toolbox-control-that-uses-windows-forms.md). Potom můžete svůj ovládací prvek distribuovat do ostatními týmu nebo ho publikovat na webu pomocí [instalačního programu ovládacích prvků sady nástrojů](http://www.unicode.org/versions/Unicode5.2.0/ch04.pdf).

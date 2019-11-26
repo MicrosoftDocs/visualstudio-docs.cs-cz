@@ -40,7 +40,7 @@ Můžete ladit C++ kód, který je spuštěn na grafické jednotce procesoru (GP
 - V **Průzkumník řešení**v místní nabídce projektu vyberte možnost **vlastnosti**. V dialogovém okně **stránky vlastností** vyberte možnost **ladění**a pak vyberte možnost **GPU pouze** v seznamu **Typ ladicího programu** .  
   
 ## <a name="launching-and-attaching-to-applications"></a>Spouštění a připojování k aplikacím  
- Pomocí příkazů ladění sady Visual Studio můžete spustit a zastavit ladění GPU. Další informace najdete v tématu [procházení kódu s ladicím programem](../debugger/navigating-through-code-with-the-debugger.md). Také je možné připojit ladicí program GPU ke spuštěnému procesu, ale pouze v případě, že tento proces spustí kód GPU. Další informace najdete v tématu [připojení k běžící procesy](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
+ Pomocí příkazů ladění sady Visual Studio můžete spustit a zastavit ladění GPU. Další informace naleznete v tématu [navigace prostřednictvím kódu pomocí ladicího programu](../debugger/navigating-through-code-with-the-debugger.md). Také je možné připojit ladicí program GPU ke spuštěnému procesu, ale pouze v případě, že tento proces spustí kód GPU. Další informace najdete v tématu [připojení ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
   
 ## <a name="run-current-tile-to-cursor-and-run-to-cursor"></a>Spustit aktuální dlaždici ke kurzoru a spustit ke kurzoru  
  Při ladění na GPU máte dvě možnosti, jak spustit do umístění kurzoru. Příkazy pro obě možnosti jsou k dispozici v místní nabídce editoru kódu.  
@@ -50,7 +50,7 @@ Můžete ladit C++ kód, který je spuštěn na grafické jednotce procesoru (GP
 2. Příkaz **Spustit aktuální dlaždici ke kurzoru** spustí vaši aplikaci, dokud všechna vlákna v aktuální dlaždici nedosáhne kurzoru a potom se přeruší.  
   
 ## <a name="debugging-windows"></a>Okna ladění  
- Pomocí některých oken ladění můžete prozkoumat, opatřit příznakem a zablokovat vlákna GPU. Další informace naleznete v tématu:  
+ Pomocí některých oken ladění můžete prozkoumat, opatřit příznakem a zablokovat vlákna GPU. Další informace naleznete v tématu:  
   
 - [Použití okna Paralelní zásobníky](../debugger/using-the-parallel-stacks-window.md)  
   
@@ -74,7 +74,7 @@ Můžete ladit C++ kód, který je spuštěn na grafické jednotce procesoru (GP
  Podmíněné zarážky v kódu GPU jsou podporované, ale ne každý výraz se dá na zařízení vyhodnotit. Pokud výraz nejde vyhodnotit na zařízení, vyhodnotí se v ladicím programu. Ladicí program může běžet pomaleji než zařízení.  
   
 ### <a name="error-there-is-a-configuration-issue-with-the-selected-debugging-accelerator-type"></a>Chyba: došlo k potížím s konfigurací vybraného typu akcelerátoru ladění.  
- K této chybě dochází, pokud dojde k nekonzistenci mezi nastavením projektu a konfigurací počítače, na kterém ladíte. Další informace najdete v tématu [nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md).  
+ K této chybě dochází, pokud dojde k nekonzistenci mezi nastavením projektu a konfigurací počítače, na kterém ladíte. Další informace naleznete v tématu [nastavení projektu pro konfiguraci C++ ladění](../debugger/project-settings-for-a-cpp-debug-configuration.md).  
   
 ### <a name="error-the-debug-driver-for-the-selected-debugging-accelerator-type-is-not-installed-on-the-target-machine"></a>Chyba: ovladač ladění pro vybraný typ akcelerátoru ladění není v cílovém počítači nainstalován.  
  K této chybě dochází, pokud provádíte ladění na vzdáleném počítači. Ladicí program nemůže určit, do kdy spustit, zda jsou ovladače nainstalovány na vzdáleném počítači. Ovladače jsou k dispozici od výrobce grafické karty.  
@@ -84,5 +84,5 @@ Můžete ladit C++ kód, který je spuštěn na grafické jednotce procesoru (GP
   
 ## <a name="see-also"></a>Viz také  
  [Návod: ladění aplikace C++ amp](https://msdn.microsoft.com/library/40e92ecc-f6ba-411c-960c-b3047b854fb5)   
- [Nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
+ [Nastavení projektu pro konfiguraci C++ ladění](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
  [Spuštění ladění GPU v aplikaci Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=255381)

@@ -28,13 +28,13 @@ Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [DA0001: pou
   
 |||  
 |-|-|  
-|ID pravidla|DA0001|  
+|Id pravidla|DA0001|  
 |Kategorie|Využití .NET Framework|  
 |Metody profilace|Kontrol<br /><br /> Instrumentace|  
 |Zpráva|Zvažte použití StringBuilder pro zřetězení řetězců.|  
 |Typ zprávy|Upozornění|  
   
-## <a name="cause"></a>příčina  
+## <a name="cause"></a>Příčina  
  Volání System. String. Concat představují významnou část dat profilování. Zvažte použití třídy <xref:System.Text.StringBuilder> pro vytváření řetězců z více segmentů.  
   
 ## <a name="rule-description"></a>Popis pravidla  

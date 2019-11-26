@@ -27,7 +27,7 @@ Obrázky, videa a zvukové klipy přidávají do aplikace vizuální odvolání.
 
  Tato videa vám můžou při vkládání obrázků, videí a zvukových klipů do aplikace.
 
-|Úloha|Podívejte se na krátké video|
+|Úkol|Podívejte se na krátké video|
 |----------|-------------------------|
 |Importovat soubor Adobe FXG|![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [FXG import Preview v Blendu](https://www.bing.com/videos/search?q=blend%20import%20FXG%20file&qs=n&form=QBVR&pq=blend%20import%20fxg%20file&sc=0-13&sp=-1&sk=#view=detail&mid=3C733B0B50A43166C55C3C733B0B50A43166C55C)|
 |Import souboru aplikace Adobe Illustrator|![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Import souboru aplikace Adobe Illustrator (AI) do nástroje Blend](https://www.bing.com/videos/search?q=add%20illustrator%20file%20to%20blend&qs=n&form=QBVR&pq=add%20illustrator%20file%20to%20blend&sc=0-0&sp=-1&sk=#view=detail&mid=FDB1B25D4DEB69D24515FDB1B25D4DEB69D24515)|

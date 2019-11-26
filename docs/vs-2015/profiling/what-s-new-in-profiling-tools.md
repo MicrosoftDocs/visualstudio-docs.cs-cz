@@ -22,7 +22,7 @@ ms.locfileid: "74300626"
 # <a name="what39s-new-in-profiling-tools"></a>Co&#39;je nového v nástroje pro profilaci
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Informace o všechno, co je nového ve Visual Studio 2015 Update 1 ladění a Diagnostika, naleznete v tématu [Visual Studio 2015 Update 1 zpráva k vydání verze](https://www.visualstudio.com/news/vs2015-update1-vs#debug).  
+Informace o všech novinkách v ladění a diagnostice sady Visual Studio 2015 Update 1 najdete v [poznámkách k verzi sady Visual studio 2015 Update 1](https://www.visualstudio.com/news/vs2015-update1-vs#debug).  
   
  Informace o všeho, co je nového v tématu ladění a Diagnostika sady Visual Studio 2015, najdete v [poznámkách k verzi sady Visual studio 2015](https://www.visualstudio.com/news/vs2015-vs#Debug).  
   

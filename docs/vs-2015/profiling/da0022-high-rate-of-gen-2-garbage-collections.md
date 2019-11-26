@@ -31,7 +31,7 @@ ID pravidla | DA0022 |
   
  Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit aspoň 10 vzorků.  
   
-## <a name="cause"></a>příčina  
+## <a name="cause"></a>Příčina  
  Údaje o výkonu systému, které byly shromážděny během profilace, naznačují, že významný podíl objektů paměťového for.NET Framework byl v generaci paměti 2 kolekce v porovnání s generace paměti 0 a 1. generace uvolňován.  
   
 ## <a name="rule-description"></a>Popis pravidla  

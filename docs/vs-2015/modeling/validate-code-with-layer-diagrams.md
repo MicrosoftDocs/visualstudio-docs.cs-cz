@@ -153,7 +153,7 @@ Abyste se ujistili, že kód není v konfliktu s jeho návrhem, ověřte kód po
 
   Pomocí těchto úloh můžete spravovat chyby ověřování v okně **Seznam chyb** :
 
-|**To**|**Postupujte podle těchto kroků**|
+|**Schopn**|**Postupujte podle těchto kroků**|
 |------------|----------------------------|
 |Potlačení vybraných chyb během ověřování|Klikněte pravým tlačítkem myši na jednu nebo více vybraných chyb, přejděte na položku **Spravovat chyby ověřování**a potom klikněte na **potlačit chyby**.<br /><br /> Potlačené chyby se zobrazují s přeškrtnutím. Při příštím spuštění ověřování se tyto chyby nezobrazí.<br /><br /> Potlačené chyby jsou sledovány v souboru .suppressions pro odpovídající soubor diagramu vrstev.|
 |Ukončení potlačování vybraných chyb|Klikněte pravým tlačítkem myši na potlačit chybu nebo chyby, přejděte na položku **Spravovat chyby ověřování**a potom klikněte na možnost **ukončit potlačení chyb**.<br /><br /> Vybrané potlačené chyby se při příštím spuštění ověřování zobrazí.|
@@ -171,7 +171,7 @@ Abyste se ujistili, že kód není v konfliktu s jeho návrhem, ověřte kód po
 <ValidateArchitecture>true</ValidateArchitecture>
 ```
 
- \- nebo –
+ \- nebo-
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt modelování, který obsahuje diagram vrstvy nebo diagramy, a poté klikněte na možnost **vlastnosti**.
 
@@ -210,7 +210,7 @@ Abyste se ujistili, že kód není v konfliktu s jeho návrhem, ověřte kód po
 ## <a name="TroubleshootingValidation"></a>Řešení potíží s ověřováním vrstev
  Následující tabulka popisuje problémy s ověřením vrstvy a jejich řešení. Tyto problémy se liší od chyb, které vzniknou z konfliktů mezi kódem a návrhem. Další informace o těchto chybách naleznete v tématu [pochopení a vyřešení chyb ověřování vrstvy](#UnderstandingValidationErrors).
 
-|**Chybu**|**Možná příčina**|**Řešení**|
+|**Chybu**|**Možná příčina**|**Rozhodnutí**|
 |---------------|------------------------|--------------------|
 |Chyby ověřování se nezobrazí podle očekávání.|Ověřování nefunguje v diagramech vrstev, které jsou zkopírovány z jiných diagramů vrstev v Průzkumníku řešení a jsou ve stejném projektu modelování. Diagramy vrstev, které se tímto způsobem zkopírují, obsahují stejné odkazy jako původní diagram vrstev.|Přidejte do projektu modelování nový diagram vrstev.<br /><br /> Zkopírujte prvky ze zdrojového diagramu vrstev do nového diagramu.|
 
@@ -225,7 +225,7 @@ Abyste se ujistili, že kód není v konfliktu s jeho návrhem, ověřte kód po
 
   Následující oddíl popisuje syntaxi, která se u těchto chyb používá, vysvětluje význam těchto chyb a navrhne, jak je vyřešit nebo spravovat.
 
-|**Syntaxe**|**Popis**|
+|**Syntaktick**|**Popis**|
 |----------------|---------------------|
 |*ArtifactN*(*ArtifactTypeN*)|*ArtifactN* je artefakt, který je spojen s vrstvou v diagramu vrstev.<br /><br /> *ArtifactTypeN* je typ *ArtifactN*, například **Třída** nebo **Metoda**, například:<br /><br /> MySolution.MyProject.MyClass.MyMethod(Method)|
 |*NamespaceNameN*|Název oboru názvů.|

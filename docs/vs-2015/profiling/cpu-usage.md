@@ -16,7 +16,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74300754"
 ---
-# <a name="cpu-usage"></a>Využití procesoru
+# <a name="cpu-usage"></a>Využití CPU
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Pokud potřebujete prozkoumat problémy s výkonem ve vaší aplikaci, je dobrým místem, kde začít, je porozumění tomu, jak využívá procesor. Nástroj **využití CPU** vám ukáže, kde CPU stráví čas prováděním kódu Visual C++, Visual C#webový Basic a JavaScript Code.  
@@ -59,10 +59,10 @@ Pokud potřebujete prozkoumat problémy s výkonem ve vaší aplikaci, je dobrý
   
 ## <a name="analyze-the-cpu-usage-report"></a>Analýza sestavy využití procesoru  
   
-### <a name="BKMK_The_CPU_Usage_call_tree"></a> Využití procesoru strom volání  
+### <a name="BKMK_The_CPU_Usage_call_tree"></a>Strom volání využití CPU  
  Chcete-li začít pochopit informace o stromu volání, vyberte segment `GetMaxNumberButton_Click` a podívejte se na podrobnosti o stromu volání.  
   
-#### <a name="BKMK_Call_tree_structure"></a> Struktura stromu volání  
+#### <a name="BKMK_Call_tree_structure"></a>Stromová struktura volání  
  ![GetMaxNumberButton&#95;kliknout na strom volání](../profiling/media/cpu-use-wt-getmaxnumbercalltree-annotated.png "CPU_USE_WT_GetMaxNumberCallTree_annotated")  
   
 |||  
@@ -110,6 +110,6 @@ Pokud potřebujete prozkoumat problémy s výkonem ve vaší aplikaci, je dobrý
   
 - `MainPage::GetMaxNumberAsyncButton_Click` je velmi málo; spravuje seznam hodnot úkolů, vypočítá maximum výsledků a zobrazí výstup.  
   
-- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext` ukazuje aktivit potřebných k naplánování a spuštění 48 úkoly, které obalují volání `GetNumberAsync`.  
+- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext` zobrazuje aktivitu nutnou k naplánování a spuštění úloh 48, které zabalí volání do `GetNumberAsync`.  
   
 - `MainPage::<GetNumberAsync>b__b` zobrazuje aktivitu úloh, které volají `GetNumber`.

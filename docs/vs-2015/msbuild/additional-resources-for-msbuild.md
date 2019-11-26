@@ -37,10 +37,10 @@ Následující weby a fóra vám můžou při práci s [!INCLUDE[vstecmsbuild](.
  [Blog týmu MSBuild](https://go.microsoft.com/fwlink/?LinkId=65846)  
  Obsahuje informace, odkazy a aktualizace, které jsou zapsány produktem [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]ového týmu.  
   
- [Visual Studio MSBuild Forum](https://go.microsoft.com/fwlink/?LinkId=48931)  
+ [Fórum Visual Studio MSBuild](https://go.microsoft.com/fwlink/?LinkId=48931)  
  Komunitní fórum vyhrazené pro [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)].  
   
 ## <a name="see-also"></a>Viz také  
- [MSBuild](msbuild.md)   
+   nástroje [MSBuild](msbuild.md)  
    [koncepce nástroje MSBuild](../msbuild/msbuild-concepts.md)  
  [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)

@@ -114,7 +114,7 @@ Pomocí analyzátoru spravované paměti sady Visual Studio Najděte nevracení 
   
 - **Count** zobrazuje počet instancí typu ve snímku.  
   
-- **Velikost (bajty)** je velikost všech instancí typu s výjimkou velikosti objektů, na které jsou odkazy uloženy. Rozhraní  
+- **Velikost (bajty)** je velikost všech instancí typu s výjimkou velikosti objektů, na které jsou odkazy uloženy. Použitím parametru  
   
 - **Celková velikost (bajty)** zahrnuje velikosti odkazovaných objektů.  
   
@@ -129,7 +129,7 @@ Pomocí analyzátoru spravované paměti sady Visual Studio Najděte nevracení 
   
    ![Hodnoty instancí v popisku dat](../misc/media/dbg-mma-instancevaluesindatatip.png "DBG_MMA_InstanceValuesInDataTip")  
   
-- **Velikost (bajty)** je velikost objektu s výjimkou velikosti objektů, na které obsahuje odkazy. Rozhraní  
+- **Velikost (bajty)** je velikost objektu s výjimkou velikosti objektů, na které obsahuje odkazy. Použitím parametru  
   
 - **Celková velikost (bajty)** zahrnuje velikosti odkazovaných objektů.  
   

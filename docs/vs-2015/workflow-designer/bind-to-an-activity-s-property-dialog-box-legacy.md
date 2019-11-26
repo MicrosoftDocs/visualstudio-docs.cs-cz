@@ -21,7 +21,7 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74301020"
 ---
 # <a name="bind-to-an-activity39s-property-dialog-box-legacy"></a>Vytvoření vazby k dialogovému oknu aktivity&#39;s vlastností (starší verze)
-Toto téma popisuje, jak používat dialogové okno **vazba na vlastnost aktivity** ve starším [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] potřeba cílit na platformu [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Toto téma popisuje, jak používat dialogové okno **vazba na vlastnost aktivity** ve starším [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
 
  Typ instance vlastnosti závislosti může být vázán na veřejnou vlastnost nebo událost jiné aktivity. Další informace o vytváření vazeb aktivit najdete v tématu [použití vlastností závislosti](https://go.microsoft.com/fwlink?LinkID=65007).
 

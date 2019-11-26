@@ -20,15 +20,15 @@ ms.locfileid: "74299926"
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete přejít v sadě Visual Studio snadněji pomocí zástupců v tomto tématu. Další obecné informace najdete v tématu [klávesové zkratky v sadě Visual Studio](default-keyboard-shortcuts-in-visual-studio.md). Informace o tom, jak optimalizovat pro usnadnění přístupu sady Visual Studio najdete v tématu [a tipy k přístupnosti](../ide/reference/accessibility-tips-and-tricks.md).
+Můžete přejít v sadě Visual Studio snadněji pomocí zástupců v tomto tématu. Obecnější informace naleznete v tématu [klávesové zkratky v aplikaci Visual Studio](default-keyboard-shortcuts-in-visual-studio.md). Informace o tom, jak optimalizovat aplikaci Visual Studio pro usnadnění přístupu, najdete v tématu [tipy a triky pro usnadnění](../ide/reference/accessibility-tips-and-tricks.md).
 
 - [Správa oken](../ide/tips-and-tricks-for-visual-studio.md#BKMK_WindowMgmt)
 
-- [Zkratky používané v okně](../ide/tips-and-tricks-for-visual-studio.md#BKMK_WindowShortcuts)
+- [Zástupci oken](../ide/tips-and-tricks-for-visual-studio.md#BKMK_WindowShortcuts)
 
-- [Hledání Visual Studio](../ide/tips-and-tricks-for-visual-studio.md#BKMK_Search)
+- [Hledání v aplikaci Visual Studio](../ide/tips-and-tricks-for-visual-studio.md#BKMK_Search)
 
-- [Editor najít](../ide/tips-and-tricks-for-visual-studio.md#BKMK_EditorFind)
+- [Hledání editoru](../ide/tips-and-tricks-for-visual-studio.md#BKMK_EditorFind)
 
 - [Editor kódu](../ide/tips-and-tricks-for-visual-studio.md#BKMK_CodeEditor)
 
@@ -38,7 +38,7 @@ Můžete přejít v sadě Visual Studio snadněji pomocí zástupců v tomto té
 
 - [Správa životního cyklu aplikací](../ide/tips-and-tricks-for-visual-studio.md#BKMK_ALM)
 
-## <a name="BKMK_WindowMgmt"></a> Správa oken
+## <a name="BKMK_WindowMgmt"></a>Správa oken
 
 |||
 |-|-|
@@ -49,7 +49,7 @@ Můžete přejít v sadě Visual Studio snadněji pomocí zástupců v tomto té
 |Zobrazit seznam otevřených souborů|Ctrl + Alt + Šipka dolů|
 |Zobrazit všechny Windows s plovoucí desetinnou čárkou|Ctrl+Shift+M|
 
-## <a name="BKMK_WindowShortcuts"></a> Zkratky používané v okně
+## <a name="BKMK_WindowShortcuts"></a>Zástupci oken
 
 |||
 |-|-|
@@ -59,17 +59,17 @@ Můžete přejít v sadě Visual Studio snadněji pomocí zástupců v tomto té
 |Spustit novou instanci|Win+Shift+n|
 |Přepínání mezi Windows|Win + n|
 
-## <a name="BKMK_Search"></a> Hledání Visual Studio
+## <a name="BKMK_Search"></a>Hledání v aplikaci Visual Studio
 
 |||
 |-|-|
 |Hledání v Průzkumníkovi řešení|Ctrl+;|
 |Umístit fokus do vyhledávacího pole v okně libovolného nástroje|ALT +' Pokud má okno nástroje fokus|
 |Snadné spuštění|Ctrl+Q|
-|Výsledky v rozsahu snadného spuštění|- @opt Možnosti<br />- @cmd Příkazy<br />- @mru Naposledy použitých<br />- @doc Otevřených dokumentech|
+|Výsledky v rozsahu snadného spuštění|-@opt možnosti<br />– @cmd příkazy<br />– @mru naposledy použité<br />-@doc otevřít dokumenty|
 |Hledání v možnostech nástrojů|CTRL + E|
 
-## <a name="BKMK_EditorFind"></a> Editor najít
+## <a name="BKMK_EditorFind"></a>Hledání editoru
 
 |||
 |-|-|
@@ -84,7 +84,7 @@ Můžete přejít v sadě Visual Studio snadněji pomocí zástupců v tomto té
 |Najít v souborech|Ctrl+Shift+F|
 |Nahradit v souborech|Ctrl+Shift+H|
 
-## <a name="BKMK_CodeEditor"></a> Editor kódu
+## <a name="BKMK_CodeEditor"></a>Editor kódu
 
 |||
 |-|-|
@@ -109,7 +109,7 @@ Můžete přejít v sadě Visual Studio snadněji pomocí zástupců v tomto té
 |Navigace mezi více výsledky operace Peek|F8 a Shift+F8|
 |Přepnout mezi oknem editoru kódu a oknem Náhled definice|Shift+Esc|
 
-## <a name="BKMK_Toolbars"></a> Panely nástrojů
+## <a name="BKMK_Toolbars"></a>Představuje
 
 |||
 |-|-|
@@ -137,12 +137,12 @@ Můžete přejít v sadě Visual Studio snadněji pomocí zástupců v tomto té
 |Vymazání mezipaměti příkazového podokna|> kompatibilní se specifikací|
 |Tisk hodnoty příkazového podokna|?varname|
 
-## <a name="BKMK_ALM"></a> Správa životního cyklu aplikací
+## <a name="BKMK_ALM"></a>Správa životního cyklu aplikací
 
-Zobrazit [klávesové zkratky: Visual Studio Online a TFS web portal a Průzkumník týmových projektů](/azure/devops/project/navigation/keyboard-shortcuts?view=vsts).
+Viz [klávesové zkratky: Visual Studio Online, webový portál TFS a Team Explorer](/azure/devops/project/navigation/keyboard-shortcuts?view=vsts).
 
 ## <a name="see-also"></a>Viz také
 
-- [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/)
-- [Blog Visual Studio tipů a triků](https://blogs.msdn.microsoft.com/zainnab/)
-- [Visual Studio Toolbox na webu Channel 9](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox)
+- [Blog sady Visual Studio](https://devblogs.microsoft.com/visualstudio/)
+- [Blog s tipy a triky pro Visual Studio](https://blogs.msdn.microsoft.com/zainnab/)
+- [Sada nástrojů sady Visual Studio na kanálu 9](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox)

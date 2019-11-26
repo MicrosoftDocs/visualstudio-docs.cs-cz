@@ -182,9 +182,9 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
  Následující diagram činnosti popisuje postup, kdy zákazník vytvoří objednávku na webu večeře Now. V této verzi prvky komentářů identifikují role a řádky vytvářejí *plavecké dráhy*, které organizují kroky podle rolí:
 
- ![Diagram činností UML](../modeling/media/uml-dinnernowprocess.png "UML_DinnerNowProcess")
+ ![Diagram činnosti UML](../modeling/media/uml-dinnernowprocess.png "UML_DinnerNowProcess")
 
- **Diagram činností UML**
+ **Diagram činnosti UML**
 
  Následující diagram tříd popisuje entity, které se účastní procesu pořadí:
 
@@ -209,7 +209,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
  Následující diagram činnosti obsahuje nové prvky oranžová pro popis toku kroků v novém případu použití:
 
- ![Diagram činností UML](../modeling/media/uml-writereview.png "UML_WriteReview")
+ ![Diagram činnosti UML](../modeling/media/uml-writereview.png "UML_WriteReview")
 
  **Diagram činnosti UML**
 
@@ -270,7 +270,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
  Například následující diagram komponent zobrazuje novou komponentu, která je součástí komponenty webu večeře Now. Komponenta ReviewProcessing zpracovává funkce pro vytváření recenzí a zobrazují se zvýrazněné oranžová:
 
- ![Diagram komponenty UML](../modeling/media/uml-internal.png "UML_Internal")
+ ![Diagram komponent UML](../modeling/media/uml-internal.png "UML_Internal")
 
  **Diagram komponent UML**
 
@@ -291,7 +291,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
  ![Diagram vrstev integrovaného platebního systému](../modeling/media/layer-integrated-dnlucerne.png "Layer_Integrated_DNLucerne")
 
- **Diagram vrstvy**
+ **Diagram vrstev**
 
  Aby se zajistilo, že v konfliktu s návrhem nedochází při vývoji kódu, týmy používají ověřování vrstev na sestaveních, která jsou spuštěna v sestavení Team Foundation Build. Také vytvoří vlastní úlohu MSBuild pro vyžadování ověření vrstvy při jejich operacích vrácení se změnami. Používají sestavy sestavení ke shromáždění chyb ověřování.
 
@@ -643,7 +643,7 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 
      Pro rychlý přehled zkompilovaného kódu vytvořte prázdnou mapu kódu a pak přetáhněte soubory sestavení nebo binární soubory na plochu rozvržení.
 
-- Chcete-li prozkoumat konkrétní kód nebo položky řešení, použijte Průzkumník řešení k výběru položek a relací, které chcete vizualizovat. Pak můžete buď vygenerovat novou mapu, nebo přidat vybrané položky do existující mapy. Zobrazit [mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md).
+- Chcete-li prozkoumat konkrétní kód nebo položky řešení, použijte Průzkumník řešení k výběru položek a relací, které chcete vizualizovat. Pak můžete buď vygenerovat novou mapu, nebo přidat vybrané položky do existující mapy. Podívejte [se na téma mapování závislostí napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md).
 
 - Abychom vám pomohli prozkoumat mapu, uspořádejte rozložení tak, aby vyhovovalo typům úloh, které chcete provést.
 
@@ -878,9 +878,9 @@ Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomo
 |Mapa kódu|Vizualizujte organizaci a vztahy v existujícím kódu.<br /><br /> Chcete-li vytvořit vrstvy, vygenerujte mapu kódu a pak položky na mapě seskupte jako potenciální vrstvy. Přetáhněte skupiny z mapy do diagramu vrstev.<br /><br /> Další informace:<br /><br /> -   [závislosti map napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md)<br />-   [procházení a změna uspořádání map kódu](../modeling/browse-and-rearrange-code-maps.md)|
 |Diagram součásti|Popisují komponenty, jejich rozhraní a jejich vztahy.<br /><br /> Chcete-li vizualizovat vrstvy, vytvořte diagram komponent, který popisuje funkčnost různých komponent systému.<br /><br /> Další informace:<br /><br /> -   [diagramů komponent UML: referenční](../modeling/uml-component-diagrams-reference.md) dokumentace<br />-   [diagramů komponent UML: pokyny](../modeling/uml-component-diagrams-guidelines.md)|
 
-## <a name="external-resources"></a>Externí zdroje
+## <a name="external-resources"></a>Externí prostředky
 
-|**Kategorie**|**Odkazy**|
+|**Kategorií**|**Odkazy**|
 |------------------|---------------|
 |**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://go.microsoft.com/fwlink/?LinkId=184721)|
 

@@ -140,7 +140,7 @@ Model UML můžete vytvořit a upravit pomocí zobrazení poskytovaných několi
 
    - Stiskněte klávesu **CTRL** a přesuňte konec.
 
-     \- nebo –
+     \- nebo-
 
    - Klikněte pravým tlačítkem na konektor a pak klikněte na **znovu připojit**.
 
@@ -158,11 +158,11 @@ Model UML můžete vytvořit a upravit pomocí zobrazení poskytovaných několi
 
 - Stisknutím a podržením klávesy **CTRL** při otočení kolečka myši.
 
-     \- nebo –
+     \- nebo-
 
 - Stiskněte a podržte **kombinaci kláves CTRL + SHIFT**a potom klikněte na levé nebo pravé tlačítko myši.
 
-     \- nebo –
+     \- nebo-
 
 - Na panelu nástrojů **Návrháře architektury** klikněte na znaménko plus ( **+** ) nebo mínus ( **-** ) nebo vyberte úroveň přiblížení.
 
@@ -173,7 +173,7 @@ Model UML můžete vytvořit a upravit pomocí zobrazení poskytovaných několi
 
 1. Stiskněte **kombinaci kláves CTRL + F**.
 
-     \- nebo –
+     \- nebo-
 
      V nabídce **Upravit** přejděte na **Najít a nahradit**a pak klikněte na **Rychlé hledání**.
 
@@ -282,7 +282,7 @@ Model UML můžete vytvořit a upravit pomocí zobrazení poskytovaných několi
 
 - Klikněte pravým tlačítkem na prvek v diagramu a pak klikněte na **Odebrat z diagramu**.
 
-  \- nebo –
+  \- nebo-
 
 - Klikněte na prvek v diagramu a potom stiskněte klávesu **Delete** .
 

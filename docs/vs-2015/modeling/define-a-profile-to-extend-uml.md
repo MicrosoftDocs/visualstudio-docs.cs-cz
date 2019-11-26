@@ -105,7 +105,7 @@ Můžete definovat *profil UML* pro přizpůsobení standardních prvků modelu 
 
 5. Na stránce **assets (prostředky** ) přidejte řádek popisující profil:
 
-   - Klikněte na možnost **Nové**. Nastavte pole v dialogovém okně **Přidat nový prostředek** následujícím způsobem.
+   - Klikněte na **Nový**. Nastavte pole v dialogovém okně **Přidat nový prostředek** následujícím způsobem.
 
    - Nastavit **typ** na `Microsoft.VisualStudio.UmlProfile`
 
@@ -222,7 +222,7 @@ Můžete definovat *profil UML* pro přizpůsobení standardních prvků modelu 
 ## <a name="Schema"></a>Struktura profilu
  Soubor XSD pro profily UML najdete v následující ukázce: [Nastavení stereotypů a profilů XSD](https://go.microsoft.com/fwlink/?LinkID=213811). Pro usnadnění úprav souborů profilu nainstalujte `.xsd` soubor v nástroji:
 
- **%ProgramFiles%\Microsoft Visual Studio [version]\Xml\Schemas**
+ **%ProgramFiles%\Microsoft Visual Studio [verze] \Xml\Schemas**
 
  V této části se C# jako příklad používá profil. Úplnou definici profilu najdete v tématu:
 
@@ -349,7 +349,7 @@ Musíte vybrat profil v balíčku nebo modelu. Stereotypy se pak zobrazí na prv
 
 3. Zajistěte, aby byla syntaxe popsaná zde, a jak je znázorněno v části _jednotka_ **: \Program Files\Microsoft Visual Studio [Version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\UmlProfiles\\** .
 
-4. Odinstalujte poškozenou příponu. Na **nástroje** nabídky, klikněte na tlačítko **rozšíření a aktualizace**.
+4. Odinstalujte poškozenou příponu. V nabídce **nástroje** klikněte na možnost **rozšíření a aktualizace**.
 
    - Pokud se rozšíření nezobrazí, podívejte se na další položku.
 

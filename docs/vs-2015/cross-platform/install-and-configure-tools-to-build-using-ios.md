@@ -28,7 +28,7 @@ Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platfo
   
  Jakmile nainstalujete nástroje pro sestavení pomocí iOS, přečtěte si toto téma, kde najdete způsoby, jak rychle nakonfigurovat a aktualizovat vzdáleného agenta pro vývoj pro iOS v aplikaci Visual Studio a na Macu.  
   
- [Požadavky](#Prerequisites)  
+ [Požadovaný](#Prerequisites)  
   
  [Instalace vzdáleného agenta pro iOS](#Install)  
   
@@ -42,7 +42,7 @@ Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platfo
   
  [Konfigurace vzdáleného agenta na Macu](#ConfigureMac)  
   
-## <a name="Prerequisites"></a> Požadavky  
+## <a name="Prerequisites"></a>Požadovaný  
  Pokud chcete nainstalovat a používat vzdáleného agenta pro vývoj kódu pro iOS, musíte nejdřív splnit tyto požadavky:  
   
 - Počítač Mac se systémem OS X Mavericks nebo novějším  

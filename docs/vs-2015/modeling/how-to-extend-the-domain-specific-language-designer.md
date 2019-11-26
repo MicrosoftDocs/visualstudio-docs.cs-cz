@@ -71,7 +71,7 @@ Můžete nastavit rozšíření pro návrháře, který použijete k úpravám d
 
  Chcete-li nasadit rozšíření do hlavního [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]a do jiných počítačů, postupujte podle následujících kroků:
 
-1. V projektu VSIX v přihrádce najít instalační soubor VSIX\\*\*\\\*.VSIX
+1. Vyhledejte instalační soubor VSIX v projektu VSIX v přihrádce\\*\\\*. vsix
 
 2. Zkopírujte tento soubor do cílového počítače a potom v Průzkumníku Windows (nebo v Průzkumníku souborů) poklikejte na něj.
 

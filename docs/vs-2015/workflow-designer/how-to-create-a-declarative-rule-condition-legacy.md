@@ -27,7 +27,7 @@ Toto téma popisuje, jak deklarovat podmínku pravidla pomocí starší verze [!
 
  Podmínky deklarativního pravidla se používají v následujících programovací model Windows Workflow Foundationch aktivitách, které se doplňují po box:
 
-- [ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65017)
+- [Aktivitou skupiny ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65017)
 
 - [IfElseBranchActivity](https://go.microsoft.com/fwlink?LinkID=65034)
 

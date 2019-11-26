@@ -420,7 +420,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
 3. Pokud chcete upravit obsah, přetáhněte existující případy použití do nebo ven z subsystému.
 
-   \- nebo –
+   \- nebo-
 
    Chcete-li vytvořit nový případ použití přímo v podsystému, klikněte na panelu nástrojů na možnost **použít případ** a pak klikněte na možnost uvnitř subsystému.
 

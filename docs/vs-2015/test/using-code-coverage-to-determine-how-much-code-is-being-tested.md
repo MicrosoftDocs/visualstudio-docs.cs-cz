@@ -271,7 +271,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
      V nabídce **Start** systému Windows vyberte **všechny programy**, **Microsoft Visual Studio**, **Visual Studio Tools** **Developer Command Prompt**.
 
-2. Spusťte:
+2. Spustit:
 
      `vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage`
 

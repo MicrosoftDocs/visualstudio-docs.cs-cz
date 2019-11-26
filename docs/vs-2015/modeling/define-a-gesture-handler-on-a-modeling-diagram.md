@@ -379,7 +379,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
    Zřídka se vadné rozšíření nedokáže načíst a vytvoří sestavu v okně chyb, ale nezobrazí se ve Správci rozšíření. V takovém případě můžete odebrat rozšíření odstraněním souboru z:
 
-   *%LocalAppData%* **\Local\Microsoft\VisualStudio\\[version]\Extensions**
+   *% Localappdata%* **\Local\Microsoft\VisualStudio\\[verze] \Extensions**
 
 ## <a name="DragExample"></a>Případě
  Následující příklad ukazuje, jak vytvořit životnosti v sekvenčním diagramu na základě částí a portů komponenty přetažené z diagramu komponent.

@@ -31,7 +31,7 @@ ms.locfileid: "74300600"
 Projekty jsou logické kontejnery pro všechno, co je potřeba k sestavení aplikace. Když vytváříte projekt výběrem možnosti  **&#124; soubor nový &#124; projekt** z hlavní nabídky, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vytvoří řešení, které ho bude obsahovat. V případě potřeby můžete do řešení přidat další nové nebo existující projekty. Můžete vytvořit projekty z existujících souborů kódu a můžete vytvořit dočasné projekty (pouze .NET), které budou odstraněny, až budete s nimi hotovi.
 
 > [!NOTE]
-> Popisy v tomto tématu jsou založeny na Visual Studio Community edition. Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch zde popsaných v závislosti na vašem nastavení nebo verzi systému Visual Studio. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Popisy v tomto tématu jsou založeny na Visual Studio Community edition. Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch zde popsaných v závislosti na vašem nastavení nebo verzi systému Visual Studio. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ## <a name="create-a-project-from-an-installed-project-template"></a>Vytvoření projektu z nainstalované šablony projektu
  **Soubor &#124; nový &#124; projekt** z hlavní nabídky k vytvoření dialogového okna Nový projekt. V levém podokně v části  **&#124; nespravované šablony** zvolte programovací jazyk a platformu nebo technologii a pak vyberte z dostupných šablon v prostředním podokně.
@@ -48,7 +48,7 @@ Projekty jsou logické kontejnery pro všechno, co je potřeba k sestavení apli
  Při práci s dočasnými projekty můžete vytvořit a experimentovat s projektem .NET bez určení umístění na disku. Při vytváření projektu stačí vybrat typ projektu a šablonu a zadat název v dialogovém okně **Nový projekt** . Kdykoli při práci s dočasným projektem, můžete ho uložit, nebo ho můžete zahodit.
 
 ## <a name="create-a-net-project-that-targets-a-specific-version-of-the-net-framework"></a>Vytvořit projekt .NET, který cílí na konkrétní verzi rozhraní .NET Framework
- Pomocí rozevírací nabídky verze **rozhraní .NET Framework** v horní části dialogového okna **Nový projekt** lze vytvořit projekt, který bude mít starší verzi rozhraní .NET Framework. Před výběrem šablony projektu nastavte tuto hodnotu, protože v seznamu se zobrazí pouze šablony kompatibilní s tímto .NET Framework verzí.
+ Můžete vytvořit projekt, který bude cílit na starší verze .NET Framework pomocí rozevírací nabídky **.NET Framework** verze v horní části dialogového okna **Nový projekt** . Před výběrem šablony projektu nastavte tuto hodnotu, protože v seznamu se zobrazí pouze šablony kompatibilní s tímto .NET Framework verzí.
 
  Musíte mít ve svém systému nainstalovaný .NET Framework 3,5 pro přístup k verzím rozhraní starším než 4,0.
 
@@ -69,9 +69,9 @@ Projekty jsou logické kontejnery pro všechno, co je potřeba k sestavení apli
 
 #### <a name="to-create-an-empty-solution"></a>Vytvoření prázdného řešení
 
-1. V nabídce **Soubor** klikněte na příkaz **Nový**, a potom na **Nový projekt**.
+1. V nabídce **soubor** klikněte na příkaz **Nový** a potom klikněte na **Nový projekt**.
 
-2. V levém podokně vyberte položku **Nainstalováno**, vyberte možnost **Ostatní typy projektů**, a potom z rozbaleného seznamu vyberte možnost **Řešení sady Visual Studio**.
+2. V levém podokně vyberte **nainstalovat**, vyberte **jiné typy projektů**a potom v rozbaleném seznamu vyberte **řešení sady Visual Studio** .
 
 3. V prostředním podokně vyberte **prázdné řešení**.
 
@@ -87,7 +87,7 @@ Projekty jsou logické kontejnery pro všechno, co je potřeba k sestavení apli
 
 ##### <a name="to-delete-a-solution"></a>Odstranění řešení
 
-1. V **Průzkumníku řešení** klikněte pravým tlačítkem myši na řešení, které chcete odstranit a vyberte možnost **Otevřít složku v Průzkumníku souborů**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na řešení, které chcete odstranit, a vyberte možnost **Otevřít složku v Průzkumníku souborů**.
 
 2. V Průzkumníku souborů přejděte o jednu úroveň výše.
 

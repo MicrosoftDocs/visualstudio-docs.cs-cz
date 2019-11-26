@@ -27,7 +27,7 @@ V průběhu přehrávání programového testu uživatelského rozhraní můžet
 > [!TIP]
 > Můžete také přidat prodlevy před akcemi pomocí editoru programového testu UI. Další informace naleznete v tématu [How to: vložení zpoždění před akcí uživatelského rozhraní pomocí editoru programového testu UI](https://msdn.microsoft.com/library/509f8ef7-e105-4049-b11b-d64549e055b0).
 
- **UITestControl.WaitForControlXXX() Methods**
+ **Metody UITestControl. WaitForControlXXX ()**
 
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlReady%2A>
 

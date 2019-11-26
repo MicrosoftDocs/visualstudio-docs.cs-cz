@@ -63,15 +63,15 @@ Stereotyp můžete přidat do prvku modelu UML a opatřit ho pomocí specializov
 
     - V diagramu tříd UML klikněte na nástroj pro prvek a potom klikněte dovnitř balíčku v diagramu.
 
-         \- nebo –
+         \- nebo-
 
     - V Průzkumníku modelů UML klikněte pravým tlačítkem na balíček, přejděte na **Přidat**a potom klikněte na typ prvku.
 
-         \- nebo –
+         \- nebo-
 
     - V Průzkumníku modelů UML přetáhněte existující prvek do balíčku.
 
-         \- nebo –
+         \- nebo-
 
     - Propojte diagram s balíčkem a potom v diagramu vytvořte prvky.
 

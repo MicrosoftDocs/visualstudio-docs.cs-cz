@@ -29,7 +29,7 @@ V této části se dozvíte, jak nainstalovat Visual Studio Tools for Unity a na
   
 - Verze sady **Visual Studio** , která podporuje rozšíření, jako je Visual Studio Community, Professional, Premium nebo Enterprise. Visual Studio Community si můžete zdarma stáhnout.  
   
-     [Stáhněte si Visual Studio Community](https://www.visualstudio.com/downloads/download-visual-studio-vs)  
+     [Stáhnout Visual Studio Community](https://www.visualstudio.com/downloads/download-visual-studio-vs)  
   
 - Verze **Unity** 4.0.0 nebo vyšší; **Unity** verze 5.2.0 nebo vyšší, abyste mohli využít integrovanou podporu pro Visual Studio Tools for Unity verze 2,1 nebo vyšší.  
   

@@ -44,7 +44,7 @@ Jazyk specifický pro doménu (DSL) se vytvoří pomocí specializovaného řeš
 
    1. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
 
-   2. Zobrazí se dialogové okno **Nový projekt**.
+   2. Zobrazí se dialogové okno **Nový projekt** .
 
    3. V části **typy projektů**rozbalte uzel **ostatní typy projektů** a klikněte na **rozšiřitelnost**.
 
@@ -100,11 +100,11 @@ Zadejte novou příponu souboru.
 
 - Zadejte jinou příponu souboru.
 
-     \- nebo –
+     \- nebo-
 
 - Obnovte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] experimentální instance. Tím zrušíte registraci všech dříve vytvořených DSL. V nabídce **Start** klikněte na **všechny programy**, **Microsoft Visual Studio 2010 SDK**, **nástroje**a pak **na experimentální instanci Microsoft Visual Studio 2010 obnovte**. Můžete znovu sestavit jakýkoli jiný DSL, který chcete znovu použít.
 
-     \- nebo –
+     \- nebo-
 
 - Pokud je v počítači plně nainstalovaná přípona [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], která tuto příponu souboru používá, odinstalujte ji. V nabídce **nástroje** klikněte na **Správce rozšíření**.
 

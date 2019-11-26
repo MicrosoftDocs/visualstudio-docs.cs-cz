@@ -23,7 +23,7 @@ V poslední části tutoriálu prozkoumáte několik způsobů, jak kvíz přizp
 
 ### <a name="to-customize-the-quiz"></a>Přizpůsobení kvízu
 
-- Pokud do konce kvízu zbývá pouze pět sekund, změňte barvu ovládacího prvku **timeLabel** na červenou nastavením jeho vlastnosti **BackColor** (`timeLabel.BackColor = Color.Red;`). Resetovat barvu při překročení kvízu.
+- Pokud je v kvízu ponecháno pouze pět sekund, přepněte ovládací prvek **timeLabel** na červen nastavením jeho vlastnosti **BackColor** (`timeLabel.BackColor = Color.Red;`). Resetovat barvu při překročení kvízu.
 
 - Dejte účastníkovi kvízu nápovědu pomocí přehrání zvuku při zadání správné odpovědi do ovládacího prvku NumericUpDown. (Pro každou událost ovládacího prvku `ValueChanged()` je nutné napsat obslužnou rutinu události, která se vyvolá vždy, když účastník kvízu změní hodnotu ovládacího prvku.)
 

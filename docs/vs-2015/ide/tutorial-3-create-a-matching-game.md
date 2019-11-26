@@ -19,7 +19,7 @@ ms.locfileid: "74299858"
 # <a name="tutorial-3-create-a-matching-game"></a>Kurz 3: vytvoření porovnávací hry
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V tomto tutoriálu vytvoříte porovnávací hru, ve které hráč musí porovnat dvojice skrytých ikon. Získáte informace o následujících postupech:
+V tomto tutoriálu vytvoříte porovnávací hru, ve které hráč musí porovnat dvojice skrytých ikon. Získáte informace o těchto tématech:
 
 - Ukládat objekty, jako jsou ikony, do objektu `List`.
 
@@ -42,7 +42,7 @@ V tomto tutoriálu vytvoříte porovnávací hru, ve které hráč musí porovna
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Titul|Popis|
 |-----------|-----------------|
 |[Krok 1: Vytvořte projekt a přidejte do svého formuláře tabulku](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)|Začněte vytvořením projektu a přidáním ovládacího prvku `TableLayoutPanel`, abyste zachovali správné zarovnání ovládacích prvků.|
 |[Krok 2: Přidejte náhodný objekt a seznam ikon](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)|Chcete-li vytvořit seznam ikon, přidejte objekt `Random` a objekt `List`.|

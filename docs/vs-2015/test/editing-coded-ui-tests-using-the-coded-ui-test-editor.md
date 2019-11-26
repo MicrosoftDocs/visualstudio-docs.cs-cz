@@ -118,7 +118,7 @@ Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor p
  *Co dalšího mám vědět?*
  **Důležité problémy**
 
-- ![](../test/media/caution.gif "Upozornění") **Upozornění** na ikonu upozornění: Pokud rozdělíte metodu, je třeba upravit jakýkoli kód, který volá existující metodu, aby také volal novou metodu, kterou vytváříte, pokud stále chcete tyto akce uživatelského rozhraní zahrnout. Při rozdělení metody se zobrazí dialogové okno Microsoft Visual Studio. Upozorňuje vás, že je nutné upravit jakýkoli kód, který volá existující metodu pro volání nové metody, kterou vytváříte. Zvolte **Ano**.
+- ![](../test/media/caution.gif "Upozornění") **Upozornění** na ikonu upozornění: Pokud rozdělíte metodu, je třeba upravit jakýkoli kód, který volá existující metodu, aby také volal novou metodu, kterou vytváříte, pokud stále chcete tyto akce uživatelského rozhraní zahrnout. Při rozdělení metody se zobrazí dialogové okno Microsoft Visual Studio. Upozorňuje vás, že je nutné upravit jakýkoli kód, který volá existující metodu pro volání nové metody, kterou vytváříte. Vyberte **Ano**.
 
   **Tip**
 
@@ -130,7 +130,7 @@ Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor p
 
    Otevřete místní nabídku pro novou testovací metodu a vyberte možnost **Přejmenovat**.
 
-   Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že je nutné upravit jakýkoli kód, který odkazuje na metodu. Zvolte **Ano**.
+   Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že je nutné upravit jakýkoli kód, který odkazuje na metodu. Vyberte **Ano**.
 
 ## <a name="CodedUITestEditor_MoveMethods"></a>Přesunutí testovací metody do souboru UIMap, aby se usnadnilo přizpůsobení
  Pokud určíte, že jedna z vašich zkušebních metod v programovém testu UI vyžaduje vlastní kód, je nutné ji přesunout do souboru UIMap.cs nebo UIMap. vb. V opačném případě bude váš kód při každém překompilování kódovaného testu uživatelského rozhraní přepsán. Pokud tuto metodu nepřesunete, váš vlastní kód se přepíše pokaždé, když je test znovu zkompilován.
@@ -142,7 +142,7 @@ Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor p
  *Co dalšího mám vědět?*
  **Důležité problémy**
 
-- ![](../test/media/caution.gif "Upozornění") **Upozornění** na ikonu upozornění: Pokud jste přepnuli metodu, nemůžete ji již upravovat pomocí editoru programového testu UI. Musíte přidat vlastní kód a spravovat jej pomocí Editoru kódu. Při přesunutí metody se zobrazí dialogové okno Microsoft Visual Studio. Upozorňuje vás, že metoda bude přesunuta ze souboru UIMap. UITest do souboru UIMap.cs nebo UIMap. vb a že již nebudete moci upravovat metodu pomocí editoru programového testu uživatelského rozhraní. Zvolte **Ano**.
+- ![](../test/media/caution.gif "Upozornění") **Upozornění** na ikonu upozornění: Pokud jste přepnuli metodu, nemůžete ji již upravovat pomocí editoru programového testu UI. Musíte přidat vlastní kód a spravovat jej pomocí Editoru kódu. Při přesunutí metody se zobrazí dialogové okno Microsoft Visual Studio. Upozorňuje vás, že metoda bude přesunuta ze souboru UIMap. UITest do souboru UIMap.cs nebo UIMap. vb a že již nebudete moci upravovat metodu pomocí editoru programového testu uživatelského rozhraní. Vyberte **Ano**.
 
   **Tip**
 

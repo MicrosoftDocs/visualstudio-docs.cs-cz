@@ -43,7 +43,7 @@ POZNÁMKA:]
   
 ## <a name="related-topics"></a>Související témata  
   
-|Název|Popis|  
+|Titul|Popis|  
 |-----------|-----------------|  
 |[Zobrazení využití](../profiling/utilization-view.md)|Popisuje, jak zobrazit a analyzovat činnost systému napříč všemi procesory.|  
 |[Zobrazení vláken](../profiling/threads-view-parallel-performance.md)|Popisuje, jak analyzovat interakce mezi vlákny v programu.|  

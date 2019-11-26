@@ -94,7 +94,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
     |-----------|--------------------------|  
     |**Podpisy**|**/char podepsané**|  
     |**Celé**|**/char bez znaménka**|  
-    |**Ascii**|**/char ascii7**|  
+    |**Abecední**|**/char ascii7**|  
   
      Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/char** v části "Reference příkazového řádku MIDL".  
   
@@ -116,9 +116,9 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**Žádné**|**/Error None**|  
+    |**NTato**|**/Error None**|  
     |**EnableCustom**|**/Error**|  
-    |**Vše**|**/Error All**|  
+    |**Všem**|**/Error All**|  
   
      Další informace naleznete v možnosti **/Error** v tématu Referenční příručka příkazového řádku MIDL na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
   
@@ -172,7 +172,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**Žádné**|**/Client žádné**|  
+    |**NTato**|**/Client žádné**|  
     |**Metrik**|**/Client zástupná procedura**|  
   
      Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/Client** v části "Reference příkazového řádku MIDL".  
@@ -187,7 +187,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**Žádné**|**/Server žádné**|  
+    |**NTato**|**/Server žádné**|  
     |**Metrik**|**/Server – zástupná procedura**|  
   
      Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/Server** v tématu Reference příkazového řádku MIDL.  
@@ -288,7 +288,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/sstub** v části "Reference příkazového řádku MIDL". Viz také parametr **ClientStubFile** v této tabulce.  
   
-- **Zdroj**  
+- **Zdrojová**  
   
      Vyžaduje se `ITaskItem[]` parametr.  
   
@@ -305,10 +305,10 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
     |**NotSet**|*\<žádné >*|  
-    |**1**|**/Zp1**|  
-    |**2**|**/Zp2**|  
+    |**první**|**/Zp1**|  
+    |**odst**|**/Zp2**|  
     |**4**|**/Zp4**|  
-    |**8**|**/Zp8**|  
+    |**8**|**/ZP8**|  
   
      Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/zp** v části "Reference příkazového řádku MIDL". Možnost **/zp** je ekvivalentní možnosti **/Pack** a starší možnosti **/align** .  
   
@@ -339,9 +339,9 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
     |**NotSet**|*\<žádné >*|  
-    |**Win32**|**/ENV Win32**|  
+    |**Chyb**|**/ENV Win32**|  
     |**Procesor**|**/ENV ia64**|  
-    |**X64**|**/env x64**|  
+    |**Platformě**|**/ENV x64**|  
   
      Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/ENV** v části "Reference příkazového řádku MIDL".  
   
@@ -366,7 +366,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Další informace naleznete v možnostech **/newtlb** a **/oldtlb** v tématu "MIDL příkazového řádku Reference" na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
   
-- **TypeLibraryName**  
+- **Názevknihovnytypů**  
   
      Volitelný **řetězcový** parametr.  
   
@@ -390,7 +390,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Další informace naleznete v možnostech **/Robust** a **/no_robust** v části "referenční příručka příkazového řádku" MIDL "na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) .  
   
-- **WarnAsError**  
+- **Warnaserror –**  
   
      Volitelný parametr `Boolean`.  
   
@@ -410,10 +410,10 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**0**|**/W0**|  
-    |**1**|**/W1**|  
-    |**2**|**/W2**|  
-    |**3**|**/W3**|  
+    |**0,8**|**/W0**|  
+    |**první**|**/W1**|  
+    |**odst**|**/W2**|  
+    |**1**|**/W3**|  
     |**4**|**/W4**|  
   
      Další informace naleznete na webu [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) v možnosti **/w** v části "Reference k příkazovému řádku" MIDL. Viz také parametr **warnaserror –** v této tabulce.  

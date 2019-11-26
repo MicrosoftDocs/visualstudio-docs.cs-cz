@@ -256,7 +256,7 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
 visibility attribute-name : Type
 ```
 
- \- nebo –
+ \- nebo-
 
 ```
 visibility operation-name (parameter1 : Type1, ...) : Type
@@ -346,7 +346,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
 - **Agregace**. Zobrazí se ve tvaru kosočtverce na jednom konci spojnice. Tím lze naznačit, že instance agregačních rolí vlastní nebo obsahují instance jiných.
 
-- **Is Navigable**. Pokud je hodnota true pouze u jedné role, zobrazí se v jejím směru šipka. Toto lze použít k indikaci směru spojení a databázových relací v softwaru.
+- **Je naviguje**. Pokud je hodnota true pouze u jedné role, zobrazí se v jejím směru šipka. Toto lze použít k indikaci směru spojení a databázových relací v softwaru.
 
   Úplné podrobnosti o těchto a dalších vlastnostech naleznete v tématu [Vlastnosti přidružení v diagramech tříd UML](../modeling/properties-of-associations-on-uml-class-diagrams.md).
 
@@ -367,7 +367,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
 - Vztah *generalizace* mezi specializovaným typem a obecným typem
 
-   \- nebo –
+   \- nebo-
 
 - Vztah *realizace* mezi třídou a rozhraním, které implementuje.
 
@@ -422,7 +422,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
     Zobrazí se dialogové okno **Editor kolekce parametrů šablony** .
 
-4. Zvolte **přidat**.
+4. Klikněte na tlačítko **Přidat**.
 
 5. Nastavte vlastnost název na název parametru pro typ šablony, například `Key`.
 

@@ -25,7 +25,7 @@ ms.locfileid: "74300468"
 |Kategorie|Microsoft.Security|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Při navrhování rozhraní API odvozeného z XMLDocument a XMLTextReader nezapomeňte <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A>.  Použití nezabezpečených instancí DTDProcessing při odkazování na zdroje externích entit nebo jejich překládání na nezabezpečené hodnoty v XML může vést k odhalení informací.
 
 ## <a name="rule-description"></a>Popis pravidla
