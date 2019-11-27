@@ -30,8 +30,8 @@ Následující logické operátory jsou podporovány pro všechny typy vlastnost
 | Logický operátor | Popis | Příklad řetězce filtru |
 | --- | --- | --- |
 | přepínače |Rovno |Město EQ – Redmond |
-| gt |Větší než |Cena gt 20 |
-| GE |Větší nebo rovno |Cena GE 10 |
+| gt |Je větší než |Cena gt 20 |
+| GE |Je větší nebo rovno |Cena GE 10 |
 | lt |Je menší než |Cena lt 20 |
 | osoby |Menší nebo rovno |Cena Le 100 |
 | d |Nerovná se |Město ne Londýn |

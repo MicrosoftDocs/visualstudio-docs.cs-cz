@@ -79,7 +79,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
 #### <a name="to-create-a-dataset"></a>Vytvoření datové sady
 
-1. Na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
+1. V nabídce **data** klikněte na možnost **Zobrazit zdroje dat**.
 
      Otevře se okno **zdroje dat** .
 

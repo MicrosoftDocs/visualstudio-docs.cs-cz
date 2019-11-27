@@ -47,7 +47,7 @@ Při publikování aplikace Azure můžete provést jednu z následujících úl
 
    b. V dialogovém okně **balíček aplikace Azure** zvolte konfiguraci služby, pro kterou chcete vytvořit balíček, a pak zvolte konfiguraci sestavení.
 
-   c. Volitelné Pokud chcete zapnout službu Vzdálená plocha pro cloudovou službu po jejím publikování, vyberte **Povolit vzdálenou plochu pro všechny role**a pak vyberte **Nastavení** a nakonfigurujte přihlašovací údaje vzdálené plochy. Další informace najdete v tématu [povolit připojení ke vzdálené ploše pro roli v cloudových službách Azure pomocí sady Visual Studio](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
+   c. Volitelné Pokud chcete zapnout službu Vzdálená plocha pro cloudovou službu po jejím publikování, vyberte **Povolit vzdálenou plochu pro všechny role**a pak vyberte **Nastavení** a nakonfigurujte přihlašovací údaje vzdálené plochy. Další informace najdete v tématu [povolení připojení ke vzdálené ploše pro roli v Azure Cloud Services pomocí sady Visual Studio](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
 
       Pokud chcete po publikování cloudové služby ladit, zapněte vzdálené ladění tak, že vyberete **Povolit vzdálený ladicí program pro všechny role**.
 

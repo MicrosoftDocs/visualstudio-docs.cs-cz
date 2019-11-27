@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Organize and edit code in Visual Studio
-summary: Learn about working with code projects, using code editor features, and maintaining consistent code style.
+title: Organizování a úpravy kódu v aplikaci Visual Studio
+summary: Další informace o práci s projekty kódu, použití funkcí editoru kódu a zachování konzistentního stylu kódu.
 metadata:
-  title: Code editor features
-  description: Learn about code editing features in Visual Studio.
+  title: Funkce editoru kódu
+  description: Přečtěte si o funkcích pro úpravu kódu v aplikaci Visual Studio.
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
   ms.topic: landing-page
@@ -17,7 +17,7 @@ metadata:
   ms.lasthandoff: 11/22/2019
   ms.locfileid: "74316445"
 landingContent:
-- title: Open or create a project
+- title: Otevřete nebo vytvořte projekt
   linkLists:
   - linkListType: tutorial
     links:
@@ -27,37 +27,37 @@ landingContent:
       url: ../get-started/tutorial-open-project-from-repo.md
   - linkListType: how-to-guide
     links:
-    - text: Use Visual Studio without projects or solutions
+    - text: Použití sady Visual Studio bez projektů nebo řešení
       url: develop-code-in-visual-studio-without-projects-or-solutions.md
-- title: Use editing features
+- title: Použití funkcí pro úpravy
   linkLists:
   - linkListType: overview
     links:
-    - text: Use the code editor
+    - text: Použití editoru kódu
       url: writing-code-in-the-code-and-text-editor.md
-    - text: Navigate code
+    - text: Navigace v kódu
       url: navigating-code.md
     - text: Generování a oprava kódu
       url: code-generation-in-visual-studio.md
-    - text: Use IntelliSense for code completion
+    - text: Použití IntelliSense k dokončování kódu
       url: using-intellisense.md
-    - text: Manage code style preferences
+    - text: Spravovat předvolby stylu kódu
       url: code-styles-and-code-cleanup.md
     - text: Analýza kódu
       url: ../code-quality/roslyn-analyzers-overview.md
     - text: IntelliCode
       url: /visualstudio/intellicode/intellicode-visual-studio
-- title: Get started with programming languages
+- title: Začínáme s programovacími jazyky
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Get started with C# and ASP.NET Core in Visual Studio
+    - text: Začínáme s C# a ASP.NET Core v aplikaci Visual Studio
       url: tutorial-csharp-aspnet-core.md
-    - text: Create a C++ console app in Visual Studio
+    - text: Vytvoření C++ konzolové aplikace v aplikaci Visual Studio
       url: /cpp/get-started/tutorial-console-cpp
-    - text: Get started with Python in Visual Studio
+    - text: Začínáme s Pythonem v aplikaci Visual Studio
       url: quickstart-python.md
-    - text: Create a console app with Visual Basic
+    - text: Vytvoření konzolové aplikace pomocí jazyka Visual Basic
       url: quickstart-visual-basic-console.md
-    - text: Create a web app with Node.js
+    - text: Vytvoření webové aplikace s využitím Node.js
       url: quickstart-nodejs.md

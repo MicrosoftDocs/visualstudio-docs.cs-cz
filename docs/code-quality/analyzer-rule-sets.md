@@ -10,16 +10,16 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d40e88f123f397cfc77fe44757c2f72305390302
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a2cf385aaf24db2172a61ddbe7ecf77dcbe40f3c
+ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606549"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74537774"
 ---
 # <a name="enable-a-category-of-rules"></a>Povolení kategorie pravidel
 
-Balíčky analyzátoru můžou zahrnovat předdefinované soubory [EditorConfig](use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file) a [sady pravidel](using-rule-sets-to-group-code-analysis-rules.md) , které usnadňují a usnadňují povolování kategorií pravidel, jako jsou pravidla zabezpečení nebo návrhu. Balíček [Microsoft. CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) NuGet Analyzer zahrnuje obě sady pravidel (počínaje verzí 2.6.2) a soubory EditorConfig (počínaje verzí 2.9.5). Povolením konkrétní kategorie pravidel můžete identifikovat cílené problémy a konkrétní podmínky.
+Balíčky analyzátoru můžou zahrnovat předdefinované soubory [EditorConfig](use-roslyn-analyzers.md#rule-severity) a [sady pravidel](using-rule-sets-to-group-code-analysis-rules.md) , které usnadňují a usnadňují povolování kategorií pravidel, jako jsou pravidla zabezpečení nebo návrhu. Balíček [Microsoft. CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) NuGet Analyzer zahrnuje obě sady pravidel (počínaje verzí 2.6.2) a soubory EditorConfig (počínaje verzí 2.9.5). Povolením konkrétní kategorie pravidel můžete identifikovat cílené problémy a konkrétní podmínky.
 
 > [!NOTE]
 > Povolení pravidel analyzátoru a nastavení jejich závažnosti pomocí souboru EditorConfig se podporuje počínaje verzí Visual Studio 2019 verze 16,3.
@@ -31,14 +31,14 @@ Balíček NuGet pro FxCop Analyzer obsahuje předdefinované sady pravidel a sou
 - Návrh
 - Dokumentace
 - Globalizace
-- Interoperabilita
+- Vzájemná funkční spolupráce
 - Udržovatelnost
-- Ming
+- pojmenování
 - Výkon
 - Portovaná z FxCop
 - Spolehlivost
 - Zabezpečení
-- Použití
+- Využití
 
 Každá z těchto kategorií pravidel má EditorConfig nebo soubor sady pravidel:
 
@@ -53,13 +53,13 @@ Každá z těchto kategorií pravidel má EditorConfig nebo soubor sady pravidel
 
 ## <a name="predefined-editorconfig-files"></a>Předdefinované soubory EditorConfig
 
-Předdefinované soubory EditorConfig pro balíček Microsoft. CodeAnalysis. FxCopAnalyzers Analyzer jsou umístěné v souboru *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers \\ \<version \> \editorconfig* adresář. Například soubor EditorConfig, který povolí všechna pravidla zabezpečení, se nachází v *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers \\ \<version \> \editorconfig\securityrulesenabled \\. editorconfig*.
+Předdefinované soubory EditorConfig pro balíček Microsoft. CodeAnalysis. FxCopAnalyzers Analyzer jsou umístěné v adresáři *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<verze\>\editorconfig* . Například soubor EditorConfig, který povolí všechna pravidla zabezpečení, se nachází v *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<verze\>\editorconfig\SecurityRulesEnabled\\. EditorConfig*.
 
 Zkopírujte zvolený soubor. editorconfig do kořenového adresáře vašeho projektu.
 
 ## <a name="predefined-rule-sets"></a>Předdefinované sady pravidel
 
-Předdefinované soubory sady pravidel pro balíček Microsoft. CodeAnalysis. FxCopAnalyzers Analyzer jsou umístěné v souboru *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers \\ \<version \> \rulesets* službě. Například soubor sady pravidel pro povolení všech pravidel zabezpečení je umístěný v *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers \\ \<version \> \rulesets\securityrulesenabled.ruleset*.
+Předdefinované soubory sady pravidel pro balíček Microsoft. CodeAnalysis. FxCopAnalyzers Analyzer jsou umístěné v adresáři *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<verze\>\rulesets* . Například soubor sady pravidel, který povolí všechna pravidla zabezpečení, se nachází v *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<verze\>\rulesets\SecurityRulesEnabled.ruleset*.
 
 Zkopírujte jednu nebo více sad pravidel a vložte je do adresáře, který obsahuje projekt aplikace Visual Studio, nebo přímo do **Průzkumník řešení**.
 

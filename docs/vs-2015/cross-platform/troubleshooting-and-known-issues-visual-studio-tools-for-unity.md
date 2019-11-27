@@ -60,9 +60,9 @@ V této části vám najít řešení běžných potíží s nástroji Visual St
   
 1. Otevřete novou instanci sady Visual Studio.  
   
-2. Otevřete dialogu připojit k procesu. V nové instanci sady Visual Studio, v hlavní nabídce zvolte **ladění**, **připojit k procesu**.  
+2. Otevřete dialogu připojit k procesu. V hlavní nabídce v nové instanci aplikace Visual Studio vyberte možnost **ladit**, **připojit k procesu**.  
   
-3. Připojte ladicí modul k zmrazené instanci sady Visual Studio. V **připojit k procesu** dialogového okna, vyberte zmrazené instanci sady Visual Studio z **procesy k dispozici** tabulku a pak zvolte **připojit** tlačítko.  
+3. Připojte ladicí modul k zmrazené instanci sady Visual Studio. V dialogovém okně **připojit k procesu** vyberte zmrazenou instanci sady Visual Studio z tabulky **Dostupné procesy** a pak klikněte na tlačítko **připojit** .  
   
 4. Pozastavte ladicí program. V nové instanci aplikace Visual Studio v hlavní nabídce zvolte možnost **ladit**, **přerušit vše** nebo pouze stiskněte **kombinaci kláves CTRL + ALT + BREAK**.  
   
@@ -72,6 +72,6 @@ V této části vám najít řešení běžných potíží s nástroji Visual St
    Debug.ListCallStack /AllThreads /ShowExternalCode  
    ```  
   
-    Možná budete muset provést **příkaz** okno viditelné první. V sadě Visual Studio, zvolte v hlavní nabídce **zobrazení**, **ostatní Windows**, **příkazové okno**.  
+    Může být nutné okno **příkazového** řádku zviditelnit jako první. V aplikaci Visual Studio v hlavní nabídce vyberte možnost **zobrazení**, **ostatní**okna, **příkazové okno**.  
   
-6. Nakonec odešlete výpisu vlákna do [ vstusp@microsoft.com ](mailto:vstusp@microsoft.com), spolu s popis co jste dělali při začal být zmrazené sady Visual Studio.
+6. Nakonec pošlete výpis vlákna [vstusp@microsoft.com](mailto:vstusp@microsoft.com)společně s popisem toho, co jste dělali při zmrazení sady Visual Studio.

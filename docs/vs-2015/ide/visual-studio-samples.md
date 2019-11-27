@@ -21,24 +21,24 @@ ms.locfileid: "74296844"
 # <a name="visual-studio-samples"></a>Ukázky sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ukázky sady Visual Studio můžete najít na [galerie kódů MSDN](https://go.microsoft.com/fwlink/?LinkID=127810) webu.
+Ukázky sady Visual Studio můžete najít na webu [Galerie kódu na webu MSDN](https://go.microsoft.com/fwlink/?LinkID=127810) .
 
- Můžete použít **nový projekt** dialogové okno k prohlížení ukázek. (Chcete-li otevřít dialogové okno, v řádku nabídek zvolte **souboru**, **nový**, **projektu**.)
+ K vyhledání ukázek můžete použít dialogové okno **Nový projekt** . (Chcete-li otevřít dialogové okno, na panelu nabídek vyberte položku **soubor**, **Nový**, **projekt**.)
 
 ## <a name="finding-samples"></a>Vyhledávání vzorků
  Tady jsou některá další místa pro hledání příkladů.
 
 |Oblast|Popis|
 |----------|-----------------|
-|[Ukázky střediska pro vývojáře Windows](https://go.microsoft.com/fwlink/?LinkID=255278)|Ukazuje, jak vyvíjet [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] aplikace.|
-|[.NET framework – ukázky](https://msdn.microsoft.com/177055f8-4a1f-43e7-aee6-995c196079b1)|Ukazuje různé aspekty [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] v C# a Visual Basic.|
-|[Ukázky C#](https://docs.microsoft.com/samples/browse/?languages=csharp)|Ukazuje, jak používat různé funkce jazyka C#.|
-|[Ukázky jazyka Visual Basic](https://docs.microsoft.com/samples/browse/?languages=vb)|Ukazuje, jak používat různé funkce jazyka Visual Basic.|
+|[Ukázky centra pro vývojáře pro Windows](https://go.microsoft.com/fwlink/?LinkID=255278)|Ukazuje, jak vyvíjet aplikace [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)].|
+|[Ukázky .NET Framework](https://msdn.microsoft.com/177055f8-4a1f-43e7-aee6-995c196079b1)|Zobrazuje různé aspekty [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] v C# a Visual Basic.|
+|[C#Vzory](https://docs.microsoft.com/samples/browse/?languages=csharp)|Ukazuje, jak používat různé funkce jazyka C#.|
+|[Ukázky Visual Basic](https://docs.microsoft.com/samples/browse/?languages=vb)|Ukazuje, jak používat různé funkce jazyka Visual Basic.|
 |[Ukázky F#](https://docs.microsoft.com/samples/browse/?languages=fsharp)|Ukazuje, jak používat různé funkce F#.|
-|[Ukázky jazyka JavaScript](https://docs.microsoft.com/samples/browse/?languages=javascript)|Ukazuje, jak používat různé funkce v jazyce JavaScript.|
-|[C++ – ukázky](https://docs.microsoft.com/samples/browse/?languages=cpp)|Ukazuje, jak používat různé funkce v jazyce C++.|
+|[Ukázky JavaScriptu](https://docs.microsoft.com/samples/browse/?languages=javascript)|Ukazuje, jak používat různé funkce v jazyce JavaScript.|
+|[C++Vzory](https://docs.microsoft.com/samples/browse/?languages=cpp)|Ukazuje, jak používat různé funkce v jazyce C++.|
 |[Ukázky rozhraní DirectX](https://docs.microsoft.com/samples/browse/?products=xbox)|Ukazuje, jak použít rozhraní DirectX.|
-|[Ukázky vývoje pro systém Office](https://docs.microsoft.com/samples/browse/?products=office)|Ukazuje, jak používat vývojářské nástroje pro Office v sadě Visual Studio. Aktuální ukázky najdete v tématu [MSDN Developer Samples: Učte se prostřednictvím kódu](https://go.microsoft.com/fwlink/?LinkID=248199).|
+|[Ukázky vývoje pro systém Office](https://docs.microsoft.com/samples/browse/?products=office)|Ukazuje, jak používat vývojářské nástroje pro Office v sadě Visual Studio. Nejaktuálnější ukázky najdete v tématu ukázky pro [vývojáře MSDN: Naučte se kód](https://go.microsoft.com/fwlink/?LinkID=248199).|
 |[Ukázky VSSDK](https://aka.ms/vs2015sdksamples)|Ukazuje, jak rozšíření sady Visual Studio.|
 
 ## <a name="see-also"></a>Viz také

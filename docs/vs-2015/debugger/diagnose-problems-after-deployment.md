@@ -39,7 +39,7 @@ Chcete-li diagnostikovat problémy ve webové aplikaci ASP.NET po nasazení pomo
 ### <a name="AutomatedBuild"></a>Vytvoření manifestu sestavení pro automatizované sestavení pomocí Team Foundation Server  
  Použijte tyto kroky, pokud používáte Správa verzí Team Foundation nebo Git.  
   
-#### <a name="TFS2013"></a> Team Foundation Server 2013  
+#### <a name="TFS2013"></a>Team Foundation Server 2013  
  Nastavte definici sestavení pro přidání umístění zdroje, sestavení a symbolů do manifestu sestavení (soubor BuildInfo. config). Sestavení Team Foundation Build automaticky vytvoří tento soubor a umístí ho do výstupní složky vašeho projektu.  
   
 1. [Upravte definici sestavení nebo vytvořte novou definici sestavení.](https://msdn.microsoft.com/library/1c2eca2d-9a65-477e-9b23-0678ff7882ee)  
@@ -60,7 +60,7 @@ Chcete-li diagnostikovat problémy ve webové aplikaci ASP.NET po nasazení pomo
   
 4. Přidejte tento argument MSBuild pro zahrnutí serveru TFS a umístění symbolů do souboru manifestu sestavení:  
   
-    **/p:IncludeServerNameInBuildInfo=True**  
+    **/p: IncludeServerNameInBuildInfo = true**  
   
     Kdokoli, kdo má přístup k vašemu webovému serveru, uvidí tato umístění v manifestu sestavení. Ujistěte se, že je váš zdrojový server zabezpečený.  
   
@@ -93,13 +93,13 @@ Chcete-li diagnostikovat problémy ve webové aplikaci ASP.NET po nasazení pomo
   
 3. Do definice sestavení přidejte následující argumenty nástroje MSBuild:  
   
-   - **/p:VisualStudioVersion=12.0**  
+   - **/p: VisualStudioVersion = 12.0**  
   
-   - **/p:MSBuildAssemblyVersion=12.0**  
+   - **/p: MSBuildAssemblyVersion = 12.0**  
   
-   - **/tv:12.0**  
+   - **/TV: 12.0**  
   
-   - **/p:IncludeServerNameInBuildInfo=True**  
+   - **/p: IncludeServerNameInBuildInfo = true**  
   
    - **/p: BuildSymbolStorePath =** \<*cesta ke symbolům*>  
   
@@ -137,9 +137,9 @@ Chcete-li diagnostikovat problémy ve webové aplikaci ASP.NET po nasazení pomo
 ### <a name="MSBuild"></a>Vytvoření manifestu sestavení pro ruční sestavení pomocí nástroje MSBuild. exe  
  Přidejte tyto argumenty sestavení při spuštění sestavení:  
   
- **/p:GenerateBuildInfoConfigFile=True**  
+ **/p: GenerateBuildInfoConfigFile = true**  
   
- **/p:IncludeServerNameInBuildInfo=True**  
+ **/p: IncludeServerNameInBuildInfo = true**  
   
  **/p: BuildSymbolStorePath =** \<*cesta ke symbolům*>  
   
@@ -230,7 +230,7 @@ Chcete-li diagnostikovat problémy ve webové aplikaci ASP.NET po nasazení pomo
   
      ![Mapování zásobníku volání při ladění](../debugger/media/ffr-itsummarypageperformancedebuggermap.png "FFR_ITSummaryPagePerformanceDebuggerMap")  
   
-### <a name="FAQ"></a> Q & A  
+### <a name="FAQ"></a>Otázka & A  
   
 #### <a name="WhyInclude"></a>Otázka: Proč zahrnout informace o projektu, správě zdrojového kódu, sestavení a symbolech pomocí moje verze?  
  Visual Studio používá tyto informace k nalezení odpovídajícího řešení a zdroje pro vydanou verzi, kterou se pokoušíte ladit. Po otevření protokolu IntelliTrace a výběru události pro spuštění ladění používá Visual Studio symboly k vyhledání a zobrazení kódu, kde k události došlo. Pak se můžete podívat na hodnoty, které se zaznamenaly, a přesunout vpřed nebo zpět prostřednictvím provádění kódu.  
@@ -246,7 +246,7 @@ Chcete-li diagnostikovat problémy ve webové aplikaci ASP.NET po nasazení pomo
   
 3. Ujistěte se, že soubor obsahuje požadované informace:  
   
-- **ProjectName**  
+- **Názevprojektu**  
   
    Název projektu v aplikaci Visual Studio. Příklad:  
   
@@ -258,7 +258,7 @@ Chcete-li diagnostikovat problémy ve webové aplikaci ASP.NET po nasazení pomo
   
 - Informace o vašem systému správy zdrojů a těchto požadovaných vlastnostech:  
   
-  - **TFS**  
+  - **SKONČIL**  
   
     - **ProjectCollectionUri**: identifikátor URI pro váš Team Foundation Server a kolekci projektů  
   
@@ -316,7 +316,7 @@ Chcete-li diagnostikovat problémy ve webové aplikaci ASP.NET po nasazení pomo
   
     Příklad:  
   
-  - **TFS**  
+  - **SKONČIL**  
   
     ```  
     <Build type="TeamBuild">  

@@ -89,7 +89,7 @@ int main()
   
 **1 >------sestavení bylo zahájeno: projekt: CoreCheckExample, konfigurace: ladění Win32--**  
 **----**  
-**1>  CoreCheckExample.cpp**  
+**1 > CoreCheckExample. cpp**  
 **1 > CoreCheckExample. vcxproj – > C:\Users\username\documents\visual Studio 2015 \ P**  
 **rojects\CoreCheckExample\Debug\CoreCheckExample.exe**  
 **1 > CoreCheckExample. vcxproj – > C:\Users\username\documents\visual Studio 2015 \ P**  
@@ -97,7 +97,7 @@ int main()
 **c:\users\username\documents\visual Studio 2015 \ projects\corecheckexample\coreche**  
 **ckexample\corecheckexample.cpp (6): upozornění C26494: Proměnná ' ARR ' je uninitializ**  
 **Ed. vždy Inicializujte objekt. (typ. 5: https://go.microsoft.com/fwlink/p/?Link**  
-**ID=620421)**  
+**ID = 620421)**  
 **c:\users\username\documents\visual Studio 2015 \ projects\corecheckexample\coreche**  
 **ckexample\corecheckexample.cpp (7): upozornění C26485: výraz ' ARR ': žádné pole**  
 **ukazatel Decay. (Bounds. 3: https://go.microsoft.com/fwlink/p/?LinkID=620415)**  

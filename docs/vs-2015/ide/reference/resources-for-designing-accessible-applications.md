@@ -26,7 +26,7 @@ ms.locfileid: "74297784"
 
 Pomocí následujících odkazů můžete najít informace o technologiích, které podporují dostupný návrh, a také tipy a příklady pro vývoj přístupných aplikací a webů s Windows. Obecné informace o usnadnění najdete online v [http://www.microsoft.com/enable/](https://www.microsoft.com/accessibility/).
 
-## <a name="technologies"></a>Technik
+## <a name="technologies"></a>Technologie
 
 - **Microsoft Active Accessibility** Technologie založená na modelu COM, která vylepšuje způsob, jakým pomůcky usnadnění fungují s aplikacemi spuštěnými v systému Microsoft Windows. Poskytuje dynamické knihovny, které jsou součástí operačního systému, a také rozhraní modelu COM a programovací prvky aplikace, které poskytují spolehlivé metody pro odhalení informací o prvcích uživatelského rozhraní. Další informace najdete na webu [https://msdn.microsoft.com/library/windows/desktop/dd373592(v=vs.85).aspx](https://msdn.microsoft.com/library/windows/desktop/dd373592\(v=vs.85\).aspx).
 

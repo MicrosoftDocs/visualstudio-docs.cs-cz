@@ -30,15 +30,15 @@ Emulátor služby Azure Compute simuluje a běží v místním prostředí, tak�
 
 ### <a name="to-debug-your-cloud-service-on-your-local-computer"></a>Ladění cloudové služby na místním počítači
 
-1. V panelu nabídky zvolte **ladění**, **spustit ladění** pro spuštění vašeho projektu cloudové služby Azure. Jako alternativu můžete stisknutím klávesy F5. Zobrazí se vám zpráva, která se spouští emulátoru Compute. Po spuštění emulátoru, na ikonu na hlavním panelu systému potvrdí ji.
+1. Na panelu nabídek vyberte možnost **ladit**, **Spustit ladění** a spusťte projekt cloudové služby Azure. Jako alternativu můžete stisknutím klávesy F5. Zobrazí se vám zpráva, která se spouští emulátoru Compute. Po spuštění emulátoru, na ikonu na hlavním panelu systému potvrdí ji.
 
     ![Emulátor Azure na hlavním panelu systému](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC783828.png)
 
-2. Zobrazení uživatelského rozhraní pro emulátor služby výpočty tak, že otevřete místní nabídku pro Azure ikonu v oznamovací oblasti a pak vyberte **zobrazit Uživatelském prostředí emulátoru výpočtů**.
+2. Zobrazte uživatelské rozhraní pro emulátor služby COMPUTE tak, že otevřete místní nabídku ikony Azure v oznamovací oblasti a pak vyberete **Zobrazit uživatelské rozhraní emulátoru výpočtů**.
 
     V levém podokně uživatelském rozhraní zobrazeny služby, které jsou aktuálně nasazené na emulátor služby výpočty a instance rolí, které každá služba je spuštěna. Můžete vybrat služby nebo role k zobrazení životní cyklus, protokolování a diagnostické informace v pravém podokně. Je-li zaměřit na horní okraj zahrnuté okna, roztáhne a vyplní v pravém podokně.
 
-3. Krok přes aplikaci tak, že vyberete příkazy na **ladění** nabídky a nastavení zarážek v kódu. Krocích v ladicím programu aplikace se zobrazí aktuální stav aplikace aktualizují podokna. Při zastavení ladění, nasazení aplikace, které se odstraní. Pokud vaše aplikace obsahuje webové role a nastavíte vlastnost po spuštění akce spuštění webového prohlížeče, Visual Studio spustí webovou aplikaci v prohlížeči. Pokud změníte počet instancí role v konfiguraci služby, musíte zastavit cloudovou službu a pak znovu spusťte ladění, takže můžete ladit tyto nové instance role.
+3. Proveďte krokování aplikace výběrem příkazů v nabídce **ladění** a nastavením zarážek ve vašem kódu. Krocích v ladicím programu aplikace se zobrazí aktuální stav aplikace aktualizují podokna. Při zastavení ladění, nasazení aplikace, které se odstraní. Pokud vaše aplikace obsahuje webové role a nastavíte vlastnost po spuštění akce spuštění webového prohlížeče, Visual Studio spustí webovou aplikaci v prohlížeči. Pokud změníte počet instancí role v konfiguraci služby, musíte zastavit cloudovou službu a pak znovu spusťte ladění, takže můžete ladit tyto nové instance role.
 
     > [!NOTE]
     > Když zastavíte nebo ladíte službu, místní emulátor služby COMPUTE a emulátor úložiště se nezastaví. Musíte explicitně zastavit z oznamovací oblasti.
@@ -50,19 +50,19 @@ Ladění cloudové služby ze vzdáleného počítače, je nutné povolit tuto f
 Pokud povolíte vzdálené ladění pro cloudovou službu, není je důvodem sníženého výkonu nebo účtovat další poplatky. Nepoužívejte vzdáleného ladění na služby v produkčním prostředí, protože klienti, kteří používají službu může být nepříznivě ovlivněn.
 
 > [!NOTE]
-> Když publikujete do cloudového ze sady Visual Studio, můžete povolit **IntelliTrace** pro všechny role v dané služby, které jsou cíleny na rozhraní .NET Framework 4 nebo .NET Framework 4.5. S použitím **IntelliTrace**, můžete zkoumat události, ke kterým došlo v minulosti v instanci role a reprodukovat kontextu v čase. Zobrazit [ladění publikované cloudové služby pomocí nástroje IntelliTrace a sady Visual Studio](https://go.microsoft.com/fwlink/?LinkID=623016) a [pomocí IntelliTrace](https://msdn.microsoft.com/library/dd264915.aspx).
+> Když publikujete cloudovou službu ze sady Visual Studio, můžete povolit **IntelliTrace** pro jakékoli role v této službě, které cílí na .NET Framework 4 nebo .NET Framework 4,5. Pomocí **IntelliTrace**můžete prošetřit události, k nimž došlo v instanci role v minulosti, a vytvořit kontext z tohoto času. Viz [Ladění publikované cloudové služby pomocí IntelliTrace a sady Visual Studio](https://go.microsoft.com/fwlink/?LinkID=623016) a [použití IntelliTrace](https://msdn.microsoft.com/library/dd264915.aspx).
 
 ### <a name="to-enable-remote-debugging-for-a-cloud-service"></a>Jak aktivovat vzdálené ladění pro cloudovou službu
 
 1. Otevřete místní nabídku pro projekt Azure a pak vyberte **publikovat**.
 
-2. Vyberte **pracovní** prostředí a **ladění** konfigurace.
+2. Vyberte **pracovní** prostředí a konfiguraci **ladění** .
 
     Toto je jenom. Můžete se rozhodnout spustit testovací prostředí v produkčním prostředí. Pokud povolíte vzdálené ladění v produkčním prostředí ale může ovlivnit nepříznivě uživatele. Můžete vybrat konfiguraci vydané verze, ale konfiguraci ladění, umožňuje ladění snazší.
 
     ![Vyberte konfiguraci ladění](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746717.gif)
 
-3. Obvyklým postupem ale vybrat **povolit vzdálený ladicí program pro všechny role** zaškrtávací políčko na **Upřesnit nastavení** kartu.
+3. Postupujte podle obvyklých kroků, ale zaškrtněte políčko **Povolit vzdálený ladicí program pro všechny role** na kartě **Upřesnit nastavení** .
 
     ![Konfigurace ladění](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746718.gif)
 
@@ -70,24 +70,24 @@ Pokud povolíte vzdálené ladění pro cloudovou službu, není je důvodem sn�
 
 1. V Průzkumníku serveru rozbalte uzel pro cloudovou službu.
 
-2. Otevřete místní nabídku pro danou roli nebo instanci role, ke kterému chcete připojit a pak vyberte **připojit ladicí program**.
+2. Otevřete místní nabídku role nebo instance role, ke které se chcete připojit, a pak vyberte **připojit ladicí program**.
 
     Pokud ladíte roli, ladicí program sady Visual Studio připojí k každou instanci této role. Ladicí program přeruší na zarážku pro první instanci role, který spouští tento řádek kódu a splňuje všechny podmínky této zarážky. Pokud ladíte instance, ladicí program připojí jenom pro tuto instanci a zalomení na zarážku pouze v případě této konkrétní instance spouští tento řádek kódu a splňuje podmínky k zarážce.
 
     ![Připojit ladicí program](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746719.gif)
 
-3. Po ladicí program připojí k instanci, ladění obvyklým způsobem. Ladicí program automaticky připojí k procesu vhodného hostitele pro vaši roli. V závislosti na tom, co je role ladicí program připojí k w3wp.exe, WaWorkerHost.exe nebo WaIISHost.exe. Pokud chcete ověřit proces, ke kterému je připojen ladicí program, rozbalte uzel instance v Průzkumníku serveru. Zobrazit [infrastruktura rolí Azure](https://blogs.msdn.microsoft.com/kwill/2011/05/05/windows-azure-role-architecture/) Další informace o Azure zpracují.
+3. Po ladicí program připojí k instanci, ladění obvyklým způsobem. Ladicí program automaticky připojí k procesu vhodného hostitele pro vaši roli. V závislosti na tom, co je role ladicí program připojí k w3wp.exe, WaWorkerHost.exe nebo WaIISHost.exe. Pokud chcete ověřit proces, ke kterému je připojen ladicí program, rozbalte uzel instance v Průzkumníku serveru. Další informace o procesech Azure najdete v tématu [Architektura rolí Azure](https://blogs.msdn.microsoft.com/kwill/2011/05/05/windows-azure-role-architecture/) .
 
     ![Vyberte typ kódu – dialogové okno](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-4. Pokud chcete identifikovat procesy, ke kterým je připojen ladicí program, otevřete procesy dialogové okno, v řádku nabídek, výběrem ladění, Windows, procesy. (Klávesnice: Ctrl + Alt + Z) Chcete-li odpojit konkrétní proces, otevřete místní nabídku a vyberte **odpojení procesu**. Nebo, vyhledejte uzel instance v Průzkumníku serveru, vyhledejte proces, otevřete místní nabídku a vyberte **odpojení procesu**.
+4. Pokud chcete identifikovat procesy, ke kterým je připojen ladicí program, otevřete procesy dialogové okno, v řádku nabídek, výběrem ladění, Windows, procesy. (Klávesnice: CTRL + ALT + Z) Chcete-li odpojit určitý proces, otevřete místní nabídku a vyberte možnost **Odpojit proces**. Nebo vyhledejte uzel instance v Průzkumník serveru, najděte proces, otevřete místní nabídku a pak vyberte **Odpojit proces**.
 
     ![Ladění procesů](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC690787.gif)
 
 > [!WARNING]
 > Vyhněte se dlouho zastaví na zarážkách při vzdáleném ladění. Azure považuje proces, který se zastaví po dobu delší než několik minut, než jako reagovat a zastaví odesílání provozu do této instance. Chcete-li zrušit příliš dlouho, odpojí se od procesu msvsmon.exe.
 
-Chcete-li odpojit ladicí program od všech procesů v instanci nebo roli, otevřete místní nabídku pro danou roli nebo instanci, kterou ladíte a pak vyberte **odpojit ladicí program**.
+Pokud chcete odpojit ladicí program od všech procesů ve vaší instanci nebo roli, otevřete místní nabídku pro roli nebo instanci, kterou ladíte, a pak vyberte **Odpojit ladicí program**.
 
 ## <a name="limitations-of-remote-debugging-in-azure"></a>Omezení pro vzdálené ladění v Azure
 
@@ -111,7 +111,7 @@ Můžete ladit programy, které běží na virtuálních počítačích Azure s 
 
 1. V Průzkumníku serveru rozbalte uzel virtuální počítače a vyberte uzel virtuální počítač, který chcete ladit.
 
-2. Otevřete kontextovou nabídku a vyberte **povolit ladění**. Když se zobrazí výzva, pokud jste si jisti, zda chcete povolit ladění na virtuálním počítači, vyberte **Ano**.
+2. Otevřete kontextovou nabídku a vyberte možnost **Povolit ladění**. Pokud se zobrazí dotaz, jestli chcete povolit ladění na virtuálním počítači, vyberte **Ano**.
 
     Vzdálené ladění rozšíření Azure nainstaluje na virtuálním počítači pro povolení ladění.
 
@@ -119,17 +119,17 @@ Můžete ladit programy, které běží na virtuálních počítačích Azure s 
 
     ![Protokol aktivit Azure](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746721.png)
 
-3. Po dokončení instalace vzdáleného ladění rozšíření, otevřete místní nabídku virtuálního počítače a vyberte **připojit ladicí program...**
+3. Po dokončení instalace rozšíření vzdáleného ladění otevřete místní nabídku virtuálního počítače a vyberte **připojit ladicí program...**
 
     Azure načte seznam procesů na virtuálním počítači a zobrazí je v připojit k procesu – dialogové okno.
 
     ![Připojení příkazu ladicího programu](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746722.png)
 
-4. V **připojit k procesu** dialogu **vyberte** omezit výsledky seznamu zobrazíte jen typy kódu, který chcete ladit. Můžete ladit 32bitové nebo 64bitové spravovaného kódu a nativního kódu.
+4. V dialogovém okně **připojit k procesu** vyberte **Vybrat** , chcete-li omezit seznam výsledků tak, aby se zobrazily pouze typy kódu, který chcete ladit. Můžete ladit 32bitové nebo 64bitové spravovaného kódu a nativního kódu.
 
     ![Vyberte typ kódu – dialogové okno](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-5. Vyberte procesy, které chcete ladit na virtuálním počítači a potom vyberte **připojit**. Můžete například procesu w3wp.exe kdybys chtěla ladění webových aplikací na virtuálním počítači. Zobrazit [ladění jednoho nebo více procesů v sadě Visual Studio](https://msdn.microsoft.com/library/jj919165.aspx) a [infrastruktura rolí Azure](https://blogs.msdn.microsoft.com/kwill/2011/05/05/windows-azure-role-architecture/) Další informace.
+5. Vyberte procesy, které chcete na virtuálním počítači ladit, a pak vyberte **připojit**. Můžete například procesu w3wp.exe kdybys chtěla ladění webových aplikací na virtuálním počítači. Další informace najdete v tématu [ladění jednoho nebo více procesů v aplikaci Visual Studio a v](https://msdn.microsoft.com/library/jj919165.aspx) [architektuře rolí Azure](https://blogs.msdn.microsoft.com/kwill/2011/05/05/windows-azure-role-architecture/) .
 
 ## <a name="create-a-web-project-and-a-virtual-machine-for-debugging"></a>Vytvoření webového projektu a virtuálního počítače pro ladění
 
@@ -141,16 +141,16 @@ Projekty aplikace Visual Studio ASP.NET nabízejí možnost vytvoření virtuál
 
 1. V sadě Visual Studio vytvořte novou webovou aplikaci ASP.NET.
 
-2. V dialogovém okně Nový projekt ASP.NET, v části Azure zvolte **virtuální počítač** v rozevíracím seznamu. Nechte **vytvořit vzdálené prostředky** zaškrtnuté políčko. Vyberte **OK** pokračovat.
+2. V dialogovém okně Nový projekt ASP.NET v části Azure v rozevíracím seznamu vyberte **virtuální počítač** . Ponechejte zaškrtnuté políčko **vytvořit vzdálené prostředky** . Pokračujte výběrem **OK** .
 
-    **Vytvoření virtuálního počítače v Azure** zobrazí se dialogové okno.
+    Zobrazí se dialogové okno **vytvořit virtuální počítač v Azure** .
 
     ![Vytvořit dialogové okno projektu ASP.NET pro web](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746723.png)
 
     > [!NOTE]
     > Pokud ještě nejste přihlášení, zobrazí se výzva, abyste se přihlásili ke svému účtu Azure.
 
-3. Vyberte různá nastavení pro virtuální počítač a pak vyberte **OK**. Zobrazit [virtuálních počítačů](https://go.microsoft.com/fwlink/?LinkId=623033) Další informace.
+3. Vyberte různá nastavení virtuálního počítače a pak vyberte **OK**. Další informace najdete v tématu [Virtual Machines](https://go.microsoft.com/fwlink/?LinkId=623033) .
 
     Název, který zadáte pro název DNS bude název virtuálního počítače.
 
@@ -160,7 +160,7 @@ Projekty aplikace Visual Studio ASP.NET nabízejí možnost vytvoření virtuál
 
 4. Po konfiguraci virtuálního počítače v Průzkumníku serveru vyberte uzlu virtuálního počítače.
 
-5. Otevřete kontextovou nabídku a vyberte **povolit ladění**. Když se zobrazí výzva, pokud jste si jisti, zda chcete povolit ladění na virtuálním počítači, vyberte **Ano**.
+5. Otevřete kontextovou nabídku a vyberte možnost **Povolit ladění**. Pokud se zobrazí dotaz, jestli chcete povolit ladění na virtuálním počítači, vyberte **Ano**.
 
     Vzdálené ladění rozšíření Azure nainstaluje do virtuálního počítače pro povolení ladění.
 
@@ -168,26 +168,26 @@ Projekty aplikace Visual Studio ASP.NET nabízejí možnost vytvoření virtuál
 
     ![Protokol aktivit Azure](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746721.png)
 
-6. Publikování projektu, jak je uvedeno v [postupy: nasazení webového projektu pomocí publikování jedním kliknutím v sadě Visual Studio](https://msdn.microsoft.com/library/dd465337.aspx). Vzhledem k tomu, který chcete ladit na virtuálním počítači, na **nastavení** stránku **Publikovat Web** průvodce, vyberte **ladění** jako konfiguraci. Tím zajistíte, že kód symboly jsou k dispozici při ladění.
+6. Publikujte projekt tak, jak je uvedeno v tématu [Postupy: nasazení webového projektu pomocí publikování jedním kliknutím v aplikaci Visual Studio](https://msdn.microsoft.com/library/dd465337.aspx). Vzhledem k tomu, že chcete ladit na virtuálním počítači, vyberte na stránce **Nastavení** v průvodci **publikováním webu** možnost **ladit** jako konfiguraci. Tím zajistíte, že kód symboly jsou k dispozici při ladění.
 
     ![Nastavení publikování](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718349.png)
 
-7. V **možností publikování souboru**vyberte **odebrat další soubory v cílovém umístění** Pokud projekt již byl nasazen na dřívější čas.
+7. V **možnostech publikování souboru**vyberte možnost **odebrat další soubory v cílovém umístění** , pokud již projekt byl nasazen v dřívějším čase.
 
-8. Po dokončení publikuje projektu, v místní nabídce virtuálního počítače v Průzkumníku serveru vyberte **připojit ladicí program...**
+8. Po publikování projektu vyberte v místní nabídce virtuálního počítače v Průzkumník serveru **připojit ladicí program...**
 
     Azure načte seznam procesů na virtuálním počítači a zobrazí je v připojit k procesu – dialogové okno.
 
     ![Připojení příkazu ladicího programu](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746722.png)
 
-9. V **připojit k procesu** dialogu **vyberte** omezit výsledky seznamu zobrazíte jen typy kódu, který chcete ladit. Můžete ladit 32bitové nebo 64bitové spravovaného kódu a nativního kódu.
+9. V dialogovém okně **připojit k procesu** vyberte **Vybrat** , chcete-li omezit seznam výsledků tak, aby se zobrazily pouze typy kódu, který chcete ladit. Můžete ladit 32bitové nebo 64bitové spravovaného kódu a nativního kódu.
 
     ![Vyberte typ kódu – dialogové okno](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-10. Vyberte procesy, které chcete ladit na virtuálním počítači a potom vyberte **připojit**. Můžete například procesu w3wp.exe kdybys chtěla ladění webových aplikací na virtuálním počítači. Zobrazit [ladění jednoho nebo více procesů v sadě Visual Studio](https://msdn.microsoft.com/library/jj919165.aspx) Další informace.
+10. Vyberte procesy, které chcete na virtuálním počítači ladit, a pak vyberte **připojit**. Můžete například procesu w3wp.exe kdybys chtěla ladění webových aplikací na virtuálním počítači. Další informace najdete v tématu [ladění jednoho nebo více procesů v aplikaci Visual Studio](https://msdn.microsoft.com/library/jj919165.aspx) .
 
 ## <a name="next-steps"></a>Další kroky
 
-* Pomocí **IntelliTrace** můžete shromažďovat protokol volání a událostí ze serveru vydaných verzí. Zobrazit [ladění publikované cloudové služby pomocí nástroje IntelliTrace a sady Visual Studio](https://go.microsoft.com/fwlink/?LinkID=623016).
+* Pomocí **IntelliTrace** můžete shromažďovat protokol volání a událostí ze serveru vydaných verzí. Viz [Ladění publikované cloudové služby pomocí IntelliTrace a sady Visual Studio](https://go.microsoft.com/fwlink/?LinkID=623016).
 
-* Použití **Azure Diagnostics** můžete protokolovat podrobné informace z spouštění kódu v rámci rolí, zda role běží ve vývojovém prostředí nebo v Azure. Zobrazit [shromažďování dat protokolování pomocí diagnostiky Azure](https://go.microsoft.com/fwlink/p/?LinkId=400450).
+* Pomocí **Azure Diagnostics** můžete protokolovat podrobné informace z kódu spuštěného v rámci rolí, ať už role běží ve vývojovém prostředí nebo v Azure. Viz [shromažďování dat protokolování pomocí Azure Diagnostics](https://go.microsoft.com/fwlink/p/?LinkId=400450).

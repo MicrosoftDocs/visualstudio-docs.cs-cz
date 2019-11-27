@@ -45,7 +45,7 @@ Tento článek popisuje, jak lze použít [!INCLUDE[vsprvs](../includes/vsprvs-m
     |3D modely|**MeshContentTask (. targets;. props)**|
     |Shadery|**ShaderGraphContentTask (. targets;. props)**|
 
-3. Zvolte **OK** tlačítko.
+3. Klikněte na tlačítko **OK** .
 
 ## <a name="including-assets-in-your-build"></a>Zahrnutí prostředků do sestavení
  Teď, když váš projekt ví o různých druzích 3D prostředků, které chcete použít, je dalším krokem sdělit, které soubory jsou 3D prostředky a jaké druhy prostředků jsou.
@@ -61,7 +61,7 @@ Tento článek popisuje, jak lze použít [!INCLUDE[vsprvs](../includes/vsprvs-m
    > [!IMPORTANT]
    > Ve výchozím nastavení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] předpokládá, že mnoho druhů obrázkových souborů by měly být zařazeny do kategorií pomocí typu položky **Obrázek** , který je integrovaný do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Proto je třeba změnit vlastnost **typ položky** každého obrázku, který chcete zpracovat pomocí kanálu obsahu obrázku. Další typy zdrojových souborů kanálu obsahu pro 3D modely a grafiku vizuálního shaderu jsou ve výchozím nastavení správného **typu položky**.
 
-4. Zvolte **OK** tlačítko.
+4. Klikněte na tlačítko **OK** .
 
    Tady jsou tři typy položek kanálu obsahu a jejich přidružené zdrojové a výstupní typy souborů.
 
@@ -82,7 +82,7 @@ Tento článek popisuje, jak lze použít [!INCLUDE[vsprvs](../includes/vsprvs-m
 
 3. V části **Vlastnosti konfigurace**vyberte uzel Content Pipeline, například **kanál obsahu obrázku** pro prostředky textury a image – a potom v mřížce vlastností nastavte vlastnosti na příslušné hodnoty. Pokud například chcete generovat mipmapy pro prostředek textury v čase sestavení, nastavte vlastnost **Generovat MIPS** na **Ano**.
 
-4. Zvolte **OK** tlačítko.
+4. Klikněte na tlačítko **OK** .
 
 ### <a name="image-content-pipeline-configuration"></a>Konfigurace kanálu obsahu obrázku
  Použijete-li nástroj pro vytváření textur obsahu k sestavení prostředků textury, lze texturu zkomprimovat různými způsoby, označit, zda mají být v době sestavení generovány úrovně MIP, a změnit název výstupního souboru.
@@ -200,7 +200,7 @@ cbuffer MiscVars : register(b3)
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Titul|Popis|
 |-----------|-----------------|
 |[Postupy: Export textury obsahující mipmapy](../designers/how-to-export-a-texture-that-contains-mipmaps.md)|Popisuje, jak pomocí kanálu obsahu obrázku exportovat texturu obsahující předpočítané mipmapy.|
 |[Postupy: Export textury s přednásobeným alfa](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md)|Popisuje způsob použití kanálu obsahu obrázku k exportu textury, která obsahuje předem vynásobené hodnoty alfa.|

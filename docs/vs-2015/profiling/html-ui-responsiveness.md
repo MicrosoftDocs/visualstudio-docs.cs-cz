@@ -65,7 +65,7 @@ Toto téma popisuje, jak v aplikacích izolovat problémy s výkonem pomocí pro
   
 3. Z **dostupných nástrojů**vyberte možnost **odezva uživatelského rozhraní HTML**a pak zvolte možnost **Spustit**.  
   
-4. Když spustíte Profiler odezvy uživatelského rozhraní, může okno Řízení uživatelských účtů požádat o vaše oprávnění ke spuštění sady Visual Studio ETW. exe. Zvolte **Ano**.  
+4. Když spustíte Profiler odezvy uživatelského rozhraní, může okno Řízení uživatelských účtů požádat o vaše oprávnění ke spuštění sady Visual Studio ETW. exe. Vyberte **Ano**.  
   
      V interakci s aplikací otestujete relevantní scénář výkonu. Podrobný pracovní postup najdete v tématu [izolování problému s odezvou uživatelského rozhraní](#Workflow) a [izolování problému s vizuální propustností](#IsolateVisualThroughput).  
   
@@ -316,7 +316,7 @@ if (performance.mark && performance.measure) {
   
 - **Prostředí.** Označuje dobu strávenou analýzou a spuštěním JavaScriptu. To zahrnuje události modelu DOM, časovače, vyhodnocení skriptu a práci s rámcem animace. Zahrnuje kód uživatele i knihovny.  
   
-- **GC.** Označuje dobu strávenou uvolňováním paměti.  
+- **Lokátor.** Označuje dobu strávenou uvolňováním paměti.  
   
 - **Používání stylů.** Označuje dobu strávenou analýzou šablon stylů CSS a výpočtem prezentace a rozložení prvku.  
   

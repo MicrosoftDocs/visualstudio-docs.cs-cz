@@ -25,7 +25,7 @@ Při vytváření prohlížeče obrázků je prvním krokem vytvoření projektu
 
 ### <a name="to-create-a-windows-forms-application-project"></a>Vytvoření projektu aplikace model Windows Forms
 
-1. V panelu nabídky zvolte **souboru**, **nový**, **projektu**. Dialogové okno by mělo vypadat takto.
+1. Na panelu nabídek vyberte položku **soubor**, **Nový**, **projekt**. Dialogové okno by mělo vypadat takto.
 
      ![Dialog Nový projekt](../ide/media/newprojectdialogcallouts.png "NewProjectDialogCallouts") Nový projekt – dialogové okno
 

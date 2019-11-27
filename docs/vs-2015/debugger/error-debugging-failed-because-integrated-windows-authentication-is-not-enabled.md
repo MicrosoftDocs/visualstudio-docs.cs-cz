@@ -61,7 +61,7 @@ Ověření uživatele, který požádalo o ladění, se zabránilo chybou ověř
   
 10. Kliknutím na tlačítko **OK** zavřete dialogové okno **metody ověřování** .  
   
-11. Kliknutím na tlačítko **OK** zavřete dialogové okno **vlastnosti** .  
+11. Kliknutím na **OK** zavřete dialogové okno **Vlastnosti**.  
   
 12. Zavřete okno **Internetová informační služba** .  
   
@@ -77,7 +77,7 @@ Ověření uživatele, který požádalo o ladění, se zabránilo chybou ověř
   
          Zobrazí se dialogové okno uživatel Access Control a zobrazí výzvu k pokračování oprávnění.  
   
-    3. Klikněte na **Pokračovat**.  
+    3. Klikněte na **pokračovat**.  
   
          Zobrazí se dialogové okno funkce systému Windows.  
   

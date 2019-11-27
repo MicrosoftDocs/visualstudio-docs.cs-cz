@@ -150,7 +150,7 @@ Výjimkou je údaj o chybovém stavu, ke které dojde při spuštění programu.
   
 3. Toto nastavení můžete změnit buď pro konkrétní výjimku (vyberte výjimku, kliknete pravým tlačítkem myši a vyberete/zrušíte výběr **pokračovat, pokud je neošetřeno v uživatelském kódu**), nebo pro celou kategorii výjimek (například všechny výjimky modulu CLR (Common Language Runtime)).  
   
-   Například webové aplikace ASP.NET zpracovávají výjimky jejich převodem na stavový kód HTTP 500 ([zpracování výjimek v rozhraní ASP.NET API](https://docs.microsoft.com/aspnet/web-api/overview/error-handling/exception-handling)), které vám nemusí pomáhat určit zdroj výjimky. V následujícím příkladu kód uživatele provede volání `String.Format()` , které vyvolá <xref:System.FormatException>. Provádění přeruší následujícím způsobem:  
+   Například webové aplikace ASP.NET zpracovávají výjimky jejich převodem na stavový kód HTTP 500 ([zpracování výjimek v rozhraní ASP.NET API](https://docs.microsoft.com/aspnet/web-api/overview/error-handling/exception-handling)), které vám nemusí pomáhat určit zdroj výjimky. V následujícím příkladu kód uživatele provede volání `String.Format()`, které vyvolá <xref:System.FormatException>. Provádění přeruší následujícím způsobem:  
   
    ![unhanlded výjimky na&#45;uživateli](../debugger/media/exceptionunhandledbyuser.png "ExceptionUnhandledByUser")  
   
@@ -166,7 +166,7 @@ Výjimkou je údaj o chybovém stavu, ke které dojde při spuštění programu.
   
  Nastavení výjimek jsou trvalá v souboru. suo řešení, takže se vztahují na konkrétní řešení. V rámci řešení nemůžete znovu použít specifická nastavení výjimek. V tomto okamžiku jsou trvalé pouze přidané výjimky; odstraněné výjimky nejsou. Jinými slovy, můžete přidat výjimku, zavřít a znovu otevřít řešení a výjimka bude i nadále. Ale pokud odstraníte výjimku a zavřete a znova otevřete řešení, se znovu zobrazí výjimka.  
   
- **Nastavení výjimek** okna podporuje výjimek obecného typu v jazyce C#, ale ne v jazyce Visual Basic. Na přerušení na jako `MyNamespace.GenericException<T>`, je nutné přidat výjimku jako **MyNamespace.GenericException'1**. To znamená, že pokud jste vytvořili výjimku, například:  
+ Okno **nastavení výjimky** podporuje typy obecných výjimek v, C# ale ne v Visual Basic. Pro přerušení na výjimkách, jako je `MyNamespace.GenericException<T>`, je nutné přidat výjimku jako **MyNamespace. GenericException ' 1**. To znamená, že pokud jste vytvořili výjimku, například:  
   
 ```csharp  
 public class GenericException<T> : Exception  

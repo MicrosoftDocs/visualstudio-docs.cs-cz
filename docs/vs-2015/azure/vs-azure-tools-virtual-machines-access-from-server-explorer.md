@@ -30,7 +30,7 @@ Pokud máte virtuální počítače hostované v Azure, můžete k nim přistupo
    | --- | --- |
    | Název DNS |Adresa URL s internetovou adresou virtuálního počítače |
    | Prostředí |U virtuálního počítače je hodnota této vlastnosti vždy produkční. |
-   | Name |Název virtuálního počítače. |
+   | Název |Název virtuálního počítače. |
    | Velikost |Velikost virtuálního počítače, která odráží množství paměti a místa na disku, které je k dispozici. Další informace najdete v tématu [velikosti virtuálních počítačů](https://docs.microsoft.com/azure/cloud-services/cloud-services-sizes-specs). |
    | Stav |Mezi hodnoty patří spuštění, spuštění, zastavení, zastavení a načítání stavu. Pokud se zobrazí stav načítání, aktuální stav je neznámý. Hodnoty této vlastnosti se liší od hodnot používaných v [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040). |
    | SubscriptionID |ID předplatného pro váš účet Azure. Tyto informace o [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040) můžete zobrazit zobrazením vlastností předplatného. |
@@ -39,7 +39,7 @@ Pokud máte virtuální počítače hostované v Azure, můžete k nim přistupo
 
    | Vlastnost | Popis |
    | --- | --- |
-   | Name |Identifikátor koncového bodu. |
+   | Název |Identifikátor koncového bodu. |
    | Privátní port |Port pro interní přístup k síti vaší aplikace |
    | Protocol (Protokol) |Protokol, který používá transportní vrstva pro tento koncový bod, buď TCP, nebo UDP. |
    | Veřejný port |Port, který se používá pro veřejný přístup k vaší aplikaci. |

@@ -32,7 +32,7 @@ Tento návod ukazuje, jak vytvořit jednoduchý [!INCLUDE[ss_data_service](../in
 
 - Vytvoří [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)], který představuje tabulku Customers v databázi Northwind.
 
-- Vytvoření [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)].
+- Vytvořte [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)].
 
 - Vytvořte klientskou aplikaci a přidejte odkaz na [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)].
 

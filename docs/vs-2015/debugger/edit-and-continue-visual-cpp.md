@@ -41,7 +41,7 @@ V vizuálních C++ projektech můžete použít možnost upravit a pokračovat. 
 ## <a name="BKMK_Enable_or_disable_automatic_invocation_of_Edit_and_Continue"></a>Povolit nebo zakázat úpravy a pokračovat  
  Pokud upravujete kód, který nechcete použít během aktuální relace ladění, je vhodné zakázat automatické vyvolání funkce upravit a pokračovat. Můžete také znovu povolit automatické úpravy a pokračovat.  
   
-1. Na **nástroje** nabídce zvolte **možnosti**.  
+1. V nabídce **nástroje** klikněte na příkaz **Možnosti**.  
   
 2. V dialogovém okně **Možnosti** vyberte **ladění/obecné**.  
   

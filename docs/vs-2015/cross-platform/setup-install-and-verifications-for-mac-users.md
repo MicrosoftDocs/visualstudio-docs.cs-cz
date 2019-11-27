@@ -6,12 +6,12 @@ ms.assetid: 22725520-59ba-4f6f-80e4-097b1287a34b
 caps.latest.revision: 14
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 14da8fab1b3190d77951298ac7d1a130c85f6135
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 703ee752a9f16f0abc5e4813707890a6d17947af
+ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297716"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74538942"
 ---
 # <a name="setup-install-and-verifications-for-mac-users"></a>Nastavení, instalace a ověření pro uživatele počítačů Mac
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,7 +48,7 @@ Toto téma je určeno pro vývojáře, kteří pracují hlavně na Macu, který 
   
 3. Stáhněte a nainstalujte Xamarin podle pokynů v tématu [instalace a konfigurace Xamarin. iOS](https://docs.microsoft.com/xamarin/ios/get-started/installation/mac) (Xamarin.com).  
   
-4. Po dokončení instalace Xamarin na počítačích s Windows i Mac postupujte podle pokynů v tématu [připojení k počítači Mac pomocí XMA](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/?pivots=windows#Connecting_to_the_Mac_Using_XMA) (Xamarin.com), abyste mohli pracovat s iOS a Mac ze sady Visual Studio v počítači s Windows.  
+4. Po dokončení instalace Xamarin na počítačích s Windows i Mac postupujte podle pokynů v tématu [připojení k počítači Mac pomocí XMA](/xamarin/ios/get-started/installation/windows/connecting-to-mac) (Xamarin.com), abyste mohli pracovat s iOS a Mac ze sady Visual Studio v počítači s Windows.  
   
 ## <a name="windows"></a>Nastavení systému Windows v paralelních prostředích (Visual Studio a Xamarin)  
   
@@ -75,7 +75,7 @@ Toto téma je určeno pro vývojáře, kteří pracují hlavně na Macu, který 
     > [!NOTE]
     > Nezapomeňte aktualizovat Xamarin na verzi 4.0.3.214 nebo vyšší, aby nedocházelo k problémům s předchozími licencemi Xamarin.  Pokud se pokusíte vyhledat aktualizace a zobrazit chybu v nástrojích pro vytváření sestavení společnosti Microsoft, podívejte se do vlákna na [fórech Xamarin](https://forums.xamarin.com/discussion/69015/xamarin-update-on-vs-2013-says-i-need-the-build-tools-for-vs-2015).
   
-6. Po dokončení instalace Xamarin na počítačích s Windows i Mac postupujte podle pokynů v tématu [připojení k počítači Mac pomocí XMA](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/?pivots=windows#Connecting_to_the_Mac_Using_XMA) (Xamarin.com), abyste mohli pracovat se systémem iOS ze sady Visual Studio.  
+6. Po dokončení instalace Xamarin na počítačích s Windows i Mac postupujte podle pokynů v tématu [připojení k počítači Mac pomocí XMA](/xamarin/ios/get-started/installation/windows/connecting-to-mac) (Xamarin.com), abyste mohli pracovat se systémem iOS ze sady Visual Studio.  
   
 ## <a name="verify"></a>Ověření prostředí  
  Až se instalační programy dokončí, věnujte několik minut, aby se ověřilo, že všechno je připravené na vývoj pro Xamarin.  
@@ -116,7 +116,7 @@ Toto téma je určeno pro vývojáře, kteří pracují hlavně na Macu, který 
   
    **iOS**  
   
-4. Ujistěte se, že je váš počítač Mac k dispozici v síti a spárovaný se sadou Visual Studio, jak je popsáno v tématu [připojení k počítači Mac pomocí XMA](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/?pivots=windows#Connecting_to_the_Mac_Using_XMA) (Xamarin.com).  
+4. Ujistěte se, že je váš počítač Mac k dispozici v síti a spárovaný se sadou Visual Studio, jak je popsáno v tématu [připojení k počítači Mac pomocí XMA](/xamarin/ios/get-started/installation/windows/connecting-to-mac) (Xamarin.com).  
   
 5. Podle pokynů v tématu [Vytvoření iOS](https://github.com/xamarin/docs-archive/tree/master/Recipes/ios/general/projects/create_an_ios_project) (Xamarin.com) ověřte vytvoření projektu iOS.  
   

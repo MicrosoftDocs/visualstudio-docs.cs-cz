@@ -312,13 +312,13 @@ some F# code
 
    - Pro 32 operační systémy:
 
-      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.1\Partner<em>\\<namespace\></em>
+      HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Help\v2.1\Partner<em>\\< oboru názvů\></em>
 
       "umístění" = "offline"
 
    - Pro 64 operační systémy:
 
-      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Partner<em>\\<namespace\></em>
+      HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Partner<em>\\< oboru názvů\></em>
 
       "umístění" = "offline"
 
@@ -448,7 +448,7 @@ some F# code
 |ViewColorizedText|Zobrazit barevné barvy|
 |CombinedVBTabDisplayLanguage|Visual Basic (ukázka)|
 |VBDeclaration|Deklarace|
-|VBUsage|Použití|
+|VBUsage|Využití|
 |Funkce:|**Zpětná vazba, zápatí a logo**|
 |Použije|Poskytněte řízení zpětné vazby zákazníkovi, aby vám poskytl zpětnou vazbu k aktuálnímu tématu prostřednictvím e-mailu.  Text copyrightu pro obsah  Definice loga.|
 |**Element**|**Hodnota (tyto řetězce lze upravit tak, aby splňovala požadavky na přijetí obsahu.)**|
@@ -467,7 +467,7 @@ some F# code
 |MT_QualityNonEditable|Tento článek byl přeložen ručně. Pokud máte připojení k Internetu, zvolte "zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem.|
 |MT_BetaContents|Tento článek byl STROJOVĚ PŘELOŽEN pro předběžnou verzi. Pokud máte připojení k Internetu, zvolte "zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem.|
 |MT_BetaRecycledContents|Tento článek byl ručně přeložen pro předběžnou verzi. Pokud máte připojení k Internetu, zvolte "zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem.|
-|Funkce:|**LinkTable**|
+|Funkce:|**Propojování**|
 |Použije|Podpora pro online odkazy na témata|
 |**Element**|**Hodnota**|
 |LinkTableTitle|Propojit tabulku|
@@ -512,7 +512,7 @@ some F# code
 |HomePageHelpSettingsText|\<p > aktuálním nastavením je místní nápovědě. V aplikaci Help Viewer je zobrazen obsah, který jste nainstalovali v počítači.\<br/> Chcete-li změnit zdroj obsahu aplikace, v řádku nabídek sady Visual Studio vyberte možnost \<rozpětí Style = "{0}" > nápovědě, nastavte předvolby pro\</span >.\<br/>\</p >|
 |Megabajt|MB|
 
- **branding.js**
+ **Branding. js**
 
  Soubor Branding. js obsahuje jazyk JavaScript, který je používán v aplikaci Visual Studio Help Viewer prvky branding.  Níže je uveden seznam prvků brandingu a podpůrná funkce JavaScriptu.  Všechny řetězce, které mají být lokalizovány pro tento soubor, jsou definovány v části "lokalizovatelné řetězce" v horní části tohoto souboru.  Soubor ICL byl vytvořen pro řetězce Loc v souboru brandinging. js.
 
@@ -555,7 +555,7 @@ some F# code
 
 ||||
 |-|-|-|
-|**File**|**Použití**|**Zobrazený zdroj obsahu**|
+|**Souborů**|**Použije**|**Zobrazený zdroj obsahu**|
 |Domovská stránka. htm|Toto je stránka, která zobrazuje aktuálně nainstalovaný obsah a všechny další zprávy, které jsou vhodné k tomu, aby uživatel mohl o svém obsahu prezentovat.  Tento soubor obsahuje další atribut meta data "Microsoft.Help.Id" content = "-1", který tento obsah umístí na začátek místního obsahu obsahu.||
 ||< META_HOME_PAGE_TITLE_ADD/>|Branding. XML, tag \<HomePageTitle >|
 ||< HOME_PAGE_INTRODUCTION_SECTION_ADD/>|Branding. XML, tag \<HomePageIntroduction >|
@@ -590,7 +590,7 @@ some F# code
 
 ||||
 |-|-|-|
-|**File**|**Použití**|**Příklady**|
+|**Souborů**|**Použije**|**Příklady**|
 |Vymazat. gif|Slouží k vykreslení sbalitelné oblasti.||
 |footer_slice.gif|Prezentace zápatí||
 |info_icon.gif|Používá se při zobrazování informací.|Právní omezení|

@@ -69,7 +69,7 @@ V aplikaci Visual Studio můžete shromažďovat diagnostická data pro role, kt
 ### <a name="to-turn-on-diagnostics-in-visual-studio-before-deployment"></a>Zapnutí diagnostiky v aplikaci Visual Studio před nasazením
 
 1. V místní nabídce role vyberte možnost **vlastnosti**. V dialogovém okně **vlastnosti** role vyberte kartu **Konfigurace** .
-2. V **diagnostiky** části, ujistěte se, že **povolit diagnostiku** je zaškrtnuto políčko.
+2. V části **Diagnostika** se ujistěte, že je zaškrtnuté políčko **Povolit diagnostiku** .
 
     ![Přístup k možnosti Povolit diagnostiku](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796660.png)
 3. Chcete-li zadat účet úložiště pro diagnostická data, vyberte tlačítko se třemi tečkami (...).

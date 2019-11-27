@@ -49,5 +49,5 @@ V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]jsou k dispozici dvě části pro 
  Když se spustí lokalizovaná aplikace, její vzhled je určen dvěma hodnotami kultury. ( *Jazyková verze* je sada informací o uživatelských preferencích souvisejících s jazykem, prostředím a kulturním konvencím uživatele.) Nastavení jazykové verze uživatelského rozhraní určuje, které prostředky budou načteny. Jazyková verze uživatelského rozhraní je nastavena jako `UICulture` v souborech Web. config a direktivách stránky a <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> v kódu Visual Basic C# nebo vizuálu. Nastavení jazykové verze určuje formátování hodnot, jako jsou data, čísla, měna a tak dále. Jazyková verze je nastavena jako `Culture` v souborech Web. config a direktivách stránky <xref:System.Globalization.CultureInfo.CurrentCulture%2A> v kódu Visual Basic nebo C# vizuálu.
 
 ## <a name="see-also"></a>Viz také
- <xref:System.Globalization> <xref:System.Resources>
+ <xref:System.Globalization><xref:System.Resources>
  [Globalizace a lokalizace zabezpečení aplikací](../ide/globalizing-and-localizing-applications.md) [a lokalizovaných satelitních sestavení](../ide/security-and-localized-satellite-assemblies.md)

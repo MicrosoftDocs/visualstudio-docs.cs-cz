@@ -5,107 +5,107 @@ ms.topic: reference
 ms.author: kaelli
 author: KathrynEE
 ms.manager: jillfra
-ms.openlocfilehash: 6a7c1e9d0f5e8b8ef48a033d58038818d2d620e5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b1a956579b527de9df9d24bd09dda6ae48eff961
+ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945071"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74538572"
 ---
 # <a name="team-explorer-reference"></a>Referenční dokumentace Team Explorer
 
-Tento článek obsahuje odkazy na články Azure DevOps o různých funkcích **Team Exploreru**.
+Tento článek obsahuje odkazy na články Azure DevOps o různých funkcích v **Team Explorer**.
 
-Použití **Team Exploreru** panel nástrojů koordinovat své úsilí kódu s ostatními členy týmu k vývoji projektu a ke správě práce, která je přiřazena vám, vašemu týmu nebo projekty. **Team Explorer** propojí aplikaci Visual Studio pro úložiště Git a Githubu, Team Foundation verze ovládacího prvku (TFVC) úložiště a projektech hostovaných ve službě [Azure DevOps služby](/azure/devops/user-guide/what-is-azure-devops-services) nebo na místě [Azure DevOps Server](/tfs/index) (dříve označované jako TFS). Můžete spravovat zdrojový kód, pracovní položky a sestavení.
+Použijte okno **Team Explorer** Tool k koordinaci vašeho kódu s ostatními členy týmu pro vývoj projektu a ke správě práce, která je přiřazena vám, vašemu týmu nebo vašim projektům. **Team Explorer** připojuje sadu Visual Studio k úložištím Git a GitHubu, úložištím správy verzí Team Foundation (TFVC) a projektům hostovaným v [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) nebo v místní [Azure DevOps Server](/azure/devops/index-all) (dříve označované jako TFS). Můžete spravovat zdrojový kód, pracovní položky a sestavení.
 
 ## <a name="home-page"></a>Domovská stránka
 
-Až [připojit se k projektu](../connect-team-project.md) v **Průzkumník týmových projektů**, budou dostupné v následujících odkazů **projektu** části:
+Po [připojení k projektu](../connect-team-project.md) v **Team Explorer**jsou v části **projektu** k dispozici následující odkazy:
 
-- [Klonování úložiště](/azure/devops/repos/git/clone)
+- [Klonovat úložiště](/azure/devops/repos/git/clone)
 - [Webový portál](/azure/devops/project/navigation/index)
 - [Panel úloh](/azure/devops/boards/sprints/task-board)
 
-**Domů** stránka má v závislosti na tom, zda jste připojeni k různým funkcím [Git](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio) nebo [Team Foundation verze ovládacího prvku (TFVC)](/azure/devops/repos/tfvc/overview) úložiště.
+Na **domovské** stránce jsou různé funkce v závislosti na tom, jestli jste připojení k úložišti [Git](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio) nebo [Správa verzí Team Foundation (TFVC)](/azure/devops/repos/tfvc/overview) .
 
 > [!TIP]
-> Porovnání dvou verzí systémů pro správu najdete v tématu [zvolte správné správy verzí pro projekt (Azure DevOps)](/azure/devops/repos/tfvc/comparison-git-tfvc).
+> Porovnání dvou systémů správy verzí najdete v tématu [Volba správného ovládacího prvku verze pro váš projekt (Azure DevOps)](/azure/devops/repos/tfvc/comparison-git-tfvc).
 
-| **Domů** stránka s Git | **Domů** stránka s TFVC |
+| **Domovská** Stránka s Git | **Domovská** Stránka s TFVC |
 | - | - |
-| ![Team Explorer Domovská stránka s Git ve službě Visual Studio 2019](media/team-explorer-reference/team-explorer-git.png) | ![Team Explorer Domovská stránka s TFVC v sadě Visual Studio](media/team-explorer-reference/team-explorer-tfvc.png) |
+| ![Team Explorer Domovská stránka s Git ve službě Visual Studio 2019](media/team-explorer-reference/team-explorer-git.png) | ![Team Explorer domovské stránky s TFVC v aplikaci Visual Studio](media/team-explorer-reference/team-explorer-tfvc.png) |
 
 ## <a name="changes-page-git"></a>Stránka změn (Git)
 
-Zobrazit [uložení práce s potvrzeními](/azure/devops/repos/git/commits).
+Viz [Uložit práci s potvrzeními](/azure/devops/repos/git/commits).
 
 ## <a name="branches-page-git"></a>Stránku větve (Git)
 
-Zobrazit [vytvoření práce ve větvích](/azure/devops/repos/git/branches).
+Viz [vytvořit práci v větvích](/azure/devops/repos/git/branches).
 
 ## <a name="pull-requests-page-git"></a>Stránka žádosti o přijetí změn (Git)
 
-Zobrazit [revize kódu pomocí žádosti o přijetí změn](/azure/devops/repos/git/pullrequest).
+Viz téma [Revize kódu s žádostmi o](/azure/devops/repos/git/pullrequest)přijetí změn.
 
 ## <a name="sync-page-git"></a>Stránka synchronizace (Git)
 
-Zobrazit [aktualizace kódu pomocí načítání a vyžadování](/azure/devops/repos/git/pulling).
+Viz [kód aktualizace pomocí načtení a vyžádání](/azure/devops/repos/git/pulling).
 
 ## <a name="tags-page-git"></a>Stránka značky (Git)
 
-Zobrazit [práci se značkami Git](/azure/devops/repos/git/git-tags).
+Viz [práce s značkami Git](/azure/devops/repos/git/git-tags).
 
 ## <a name="my-work-page-tfvc"></a>Stránka má práce (TFVC)
 
-Zobrazit [pozastavení/obnovení práce](/azure/devops/repos/tfvc/suspend-your-work-manage-your-shelvesets) a [revize kódu](/azure/devops/repos/tfvc/day-life-alm-developer-suspend-work-fix-bug-conduct-code-review).
+Viz [Pozastavení/obnovení práce](/azure/devops/repos/tfvc/suspend-your-work-manage-your-shelvesets) a [Revize kódu](/azure/devops/repos/tfvc/day-life-alm-developer-suspend-work-fix-bug-conduct-code-review).
 
 ## <a name="pending-changes-page-tfvc"></a>Čeká na stránce změny (TFVC)
 
-Zobrazit [Správa nedokončených změn](/azure/devops/repos/tfvc/develop-code-manage-pending-changes), [najít sady odložených změn](/azure/devops/repos/tfvc/suspend-your-work-manage-your-shelvesets), a [řešení konfliktů](/azure/devops/repos/tfvc/resolve-team-foundation-version-control-conflicts).
+Viz téma [Správa nedokončených změn](/azure/devops/repos/tfvc/develop-code-manage-pending-changes), [hledání sad odložených](/azure/devops/repos/tfvc/suspend-your-work-manage-your-shelvesets)změn a [řešení konfliktů](/azure/devops/repos/tfvc/resolve-team-foundation-version-control-conflicts).
 
 ## <a name="source-control-explorer-page-tfvc"></a>Stránka Průzkumník správy zdrojového (TFVC)
 
-Zobrazit [Add/zobrazit soubory a složky](/azure/devops/repos/tfvc/add-files-server).
+Viz téma [Přidání/zobrazení souborů a složek](/azure/devops/repos/tfvc/add-files-server).
 
 ## <a name="work-items-page"></a>Stránky pracovních položek
 
-**Pracovní položky** stránce vám umožňují vidět [pracovní položku](/azure/devops/boards/work-items/about-work-items) dotazy. Další informace:
+Stránka **pracovní položky** vám umožní zobrazit dotazy na [pracovní položky](/azure/devops/boards/work-items/about-work-items) . Další informace:
 
-- [Přidání pracovních položek](/azure/devops/boards/backlogs/add-work-items)
-- [Použití editoru dotazů k zobrazení a Správa dotazů](/azure/devops/boards/queries/using-queries)
-- [Uspořádání složek dotazů a nastavení oprávnění pro dotaz](/azure/devops/boards/queries/set-query-permissions)
+- [Přidat pracovní položky](/azure/devops/boards/backlogs/add-work-items)
+- [Použití Editoru dotazů k vypsání a správě dotazů](/azure/devops/boards/queries/using-queries)
+- [Uspořádání složek dotazů a nastavení oprávnění pro dotazy](/azure/devops/boards/queries/set-query-permissions)
 - [Otevřít dotaz v aplikaci Excel](/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel)
 - [Otevřít dotaz v projektu](/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project)
-- [Seznam výsledků dotazu e-mailovou aplikaci Outlook](/azure/devops/boards/queries/share-plans)
-- [Vytvoření sestavy z dotazu v aplikaci Excel](/azure/devops/report/excel/create-status-and-trend-excel-reports) (pouze TFS)
+- [Seznam výsledků e-mailových dotazů pomocí Outlooku](/azure/devops/boards/queries/share-plans)
+- [Vytváření sestav z dotazu v aplikaci Excel](/azure/devops/report/excel/create-status-and-trend-excel-reports) (pouze TFS)
 
 ::: moniker range=">= vs-2019"
 
 > [!NOTE]
-> Je tu nový [prostředí pracovních položek](/azure/devops/boards/work-items/set-work-item-experience-vs) v aplikaci Visual Studio 2019. Informace o zobrazení pracovních položek v aplikaci Visual Studio 2019 najdete v tématu [zobrazení a přidání pracovních položek](/azure/devops/boards/work-items/view-add-work-items).
+> V aplikaci Visual Studio 2019 se nachází nové [prostředí pracovní položky](/azure/devops/boards/work-items/set-work-item-experience-vs) . Informace o zobrazení pracovních položek v aplikaci Visual Studio 2019 naleznete v tématu [zobrazení a přidání pracovních položek](/azure/devops/boards/work-items/view-add-work-items).
 
 ::: moniker-end
 
 ## <a name="builds-page"></a>Stránka sestavení
 
-**Sestavení** umožňuje stránky se zobrazí definice sestavení pro projekt.
+Stránka **sestavení** vám umožní zobrazit definice sestavení pro projekt.
 
 Další informace:
 
-- [Vytvořte kanály pro sestavování](/azure/devops/pipelines/tasks/index)
-- [Zobrazit a spravovat sestavení](/azure/devops/pipelines/overview)
-- [Spravovat frontu sestavení](/azure/devops/pipelines/agents/pools-queues)
-- [Instalace nástroje pro průběžné doručování (CD) pro Visual Studio](/azure/devops/pipelines/apps/cd/azure/aspnet-core-to-acr#install-continuous-delivery-cd-tools-for-visual-studio-2017)
-- [Konfiguraci a provádění průběžné doručování (CD) pro vaši aplikaci](/azure/devops/pipelines/apps/cd/azure/aspnet-core-to-acr#configure-and-execute-continuous-delivery-cd-for-your-app)
+- [Vytváření kanálů sestavení](/azure/devops/pipelines/tasks/index)
+- [Zobrazení a správa sestavení](/azure/devops/pipelines/overview)
+- [Správa fronty sestavení](/azure/devops/pipelines/agents/pools-queues)
+- [Nainstalovat nástroje pro průběžné doručování (CD) pro Visual Studio](/azure/devops/pipelines/apps/cd/azure/aspnet-core-to-acr#install-continuous-delivery-cd-tools-for-visual-studio-2017)
+- [Konfigurace a spuštění průběžného doručování (CD) pro vaši aplikaci](/azure/devops/pipelines/apps/cd/azure/aspnet-core-to-acr#configure-and-execute-continuous-delivery-cd-for-your-app)
 
-## <a name="settings-page"></a>Stránka nastavení
+## <a name="settings-page"></a>Stránka Nastavení
 
-**Nastavení** stránka umožňuje konfigurovat funkce pro správu pro projekt nebo kolekci projektů. Naleznete v následujících článcích:
+Stránka **Nastavení** umožňuje nakonfigurovat funkce pro správu projektu nebo kolekce projektů. Viz následující články:
 
 | Projekt | Kolekce projektů | Ostatní |
 | - | - | - |
-| [Zabezpečení, členství ve skupině](/azure/devops/organizations/security/set-project-collection-level-permissions)<br/>[Zabezpečení, správy zdrojového kódu (TFVC)](/azure/devops/organizations/security/set-git-tfvc-repository-permissions)<br/>[Oblasti pracovní položky](/azure/devops/organizations/settings/set-area-paths)<br/>[Iterace pracovních položek](/azure/devops/organizations/settings/set-iteration-paths-sprints)<br/>[Nastavení portálu](/azure/devops/report/sharepoint-dashboards/configure-or-add-a-project-portal)<br/>[Upozornění projektu](/azure/devops/notifications/howto-manage-team-notifications) | [Zabezpečení, členství ve skupině](/azure/devops/organizations/security/set-project-collection-level-permissions)<br/>[Správy zdrojového kódu (TFVC)](/azure/devops/repos/tfvc/decide-between-using-local-server-workspace)<br/>[Správce šablon procesů](/azure/devops/boards/work-items/guidance/manage-process-templates) | [Globální nastavení Git](/azure/devops/repos/git/git-config)<br/>[Nastavení úložiště Git](/azure/devops/repos/git/git-config) |
+| [Zabezpečení, členství ve skupinách](/azure/devops/organizations/security/set-project-collection-level-permissions)<br/>[Zabezpečení, Správa zdrojového kódu (TFVC)](/azure/devops/organizations/security/set-git-tfvc-repository-permissions)<br/>[Oblasti pracovních položek](/azure/devops/organizations/settings/set-area-paths)<br/>[Iterace pracovních položek](/azure/devops/organizations/settings/set-iteration-paths-sprints)<br/>[Nastavení portálu](/azure/devops/report/sharepoint-dashboards/configure-or-add-a-project-portal)<br/>[Výstrahy projektu](/azure/devops/notifications/howto-manage-team-notifications) | [Zabezpečení, členství ve skupinách](/azure/devops/organizations/security/set-project-collection-level-permissions)<br/>[Správa zdrojového kódu (TFVC)](/azure/devops/repos/tfvc/decide-between-using-local-server-workspace)<br/>[Správce šablon procesů](/azure/devops/boards/work-items/guidance/manage-process-templates) | [Globální nastavení Gitu](/azure/devops/repos/git/git-config)<br/>[Nastavení úložiště Git](/azure/devops/repos/git/git-config) |
 
 ## <a name="see-also"></a>Viz také:
 
-- [Připojte se k projektům v Průzkumníku týmových projektů](../../ide/connect-team-project.md)
+- [Připojení k projektům v Team Explorer](../../ide/connect-team-project.md)

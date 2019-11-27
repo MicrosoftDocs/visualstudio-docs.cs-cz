@@ -29,7 +29,7 @@ Karta **HTML** v sadě nástrojů poskytuje komponenty, které jsou užitečné 
 
  Chcete-li vytvořit instanci nástroje na kartě **HTML** , buď poklikejte na nástroj a přidejte ho do dokumentu v aktuálním místě vložení, nebo ho vyberte a přetáhněte ho na požadovanou pozici na ploše pro úpravy.
 
-## <a name="tasks"></a>Úkoly
+## <a name="tasks"></a>Úlohy
 
 - [Postupy: Správa okna nástrojů](https://msdn.microsoft.com/a022c3fe-298c-4a59-a48f-b050da90ebc2)
 

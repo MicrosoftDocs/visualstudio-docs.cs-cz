@@ -29,7 +29,7 @@ Vizuál C++ pro vývoj mobilních aplikací pro různé platformy] (https://go.m
  [Nainstalovat nástroje pro iOS](#InstallForiOS)   
  [Ruční instalace nebo aktualizace závislostí](#ThirdParty)  
   
-## <a name="Requirements"></a> Požadavky  
+## <a name="Requirements"></a>Požadavků  
   
 - Požadavky na instalaci najdete v tématu [požadavky na systém pro Visual Studio 2015](https://www.visualstudio.com/visual-studio-2015-system-requirements-vs).  
   

@@ -25,7 +25,7 @@ Při vytváření projektu Azure v sadě Azure SDK 2,3 nebo novější se automa
 
 1. Vytvořte nebo otevřete v sadě Visual Studio projekt cloudové služby Azure.
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a v místní nabídce vyberte **vlastnosti**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a v místní nabídce vyberte možnost **vlastnosti**.
 
 1. Na stránkách vlastností projektů vyberte kartu **Web** .
 

@@ -37,16 +37,16 @@ Při použití Správa verzí Team Foundation (TFVC) můžete vytvořit zásady 
 > [!IMPORTANT]
 > Chcete-li použít zásady vracení se změnami, musíte být připojeni k [!INCLUDE[vststfsLong](../includes/vststfslong-md.md)].
 
-## <a name="common-tasks"></a>Obecné úlohy
+## <a name="common-tasks"></a>Common Tasks
 
-|Úloha|Podpůrný obsah|
+|Úkol|Podpůrný obsah|
 |----------|------------------------|
 |**Vytváření a používání zásad vrácení se změnami:** Zásady vrácení se změnami se vytvářejí pomocí nastavení týmového projektu [!INCLUDE[esprscc](../includes/esprscc-md.md)].|[Nastavení a vymáhání bran kvality](https://msdn.microsoft.com/library/bdc5666e-6cf0-45b2-a0a1-133c3f61e852)|
 |**Vytvoření a použití zásad vrácení se změnami analýzy kódu:** Můžete zvolit ze standardní sady pravidel analýzy kódu nebo můžete vytvořit vlastní sadu.|[Vytváření a používání zásad vrácení se změnami Analýzy kódu](../code-quality/creating-and-using-code-analysis-check-in-policies.md)|
 
 ## <a name="related-tasks"></a>Související úlohy
 
-|Úloha|Podpůrný obsah|
+|Úkol|Podpůrný obsah|
 |----------|------------------------|
 |**Nastavení vývojového prostředí:** Předtím, než budete moci vytvořit nebo upravit kód, je nutné nastavit vývojové a testovací prostředí pomocí příslušného zdrojového kódu. Pokud pracujete s databázemi, musíte mít také přístup k jejich reprezentaci v režimu offline.|[Nastavení vývojových prostředí](https://msdn.microsoft.com/7b686610-d379-4ca0-9608-73ef0e576e3a)|
 |**Použití analýzy kódu ve vývojovém procesu:** Členové týmu spouštějí analýzu kódu na svých vývojových počítačích. V aplikaci Visual Studio můžou vývojáři konfigurovat a spouštět analýzy kódu pro jednotlivé projekty kódu, zobrazovat a analyzovat problémy zjištěné spuštěním a vytvářet pracovní položky pro upozornění.|[Analýza kvality aplikace](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)|

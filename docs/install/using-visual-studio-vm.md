@@ -1,7 +1,7 @@
 ---
-title: Using Visual Studio on an Azure Virtual Machine
+title: Pomocí sady Visual Studio na virtuálním počítači Azure
 titleSuffix: ''
-description: Learn how to use Visual Studio on an Azure Virtual Machine
+description: Zjistěte, jak pomocí sady Visual Studio na virtuálním počítači Azure
 ms.date: 09/24/2019
 ms.custom: seodec18
 ms.topic: conceptual
@@ -24,40 +24,40 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74174145"
 ---
-# <a id="top"> </a> Visual Studio images on Azure
+# <a id="top"></a> Image sady Visual Studio v Azure
 
-Using Visual Studio in a preconfigured Azure virtual machine (VM) is a quick, easy way to go from nothing to an up-and-running development environment. System images with different Visual Studio configurations are available in the [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/category/compute?filters=virtual-machine-images%3Bmicrosoft%3Bwindows&page=1&subcategories=application-infrastructure).
+Pomocí sady Visual Studio v předkonfigurovaném Azure virtuální počítač (VM) je rychlý a snadný způsob, jak přejít od ničeho nahoru a spuštění vývojové prostředí. Systémové image s různými konfiguracemi sady Visual Studio jsou k dispozici v [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/category/compute?filters=virtual-machine-images%3Bmicrosoft%3Bwindows&page=1&subcategories=application-infrastructure).
 
-New to Azure? [Create a free Azure account](https://azure.microsoft.com/free).
+Zatím Azure neznáte? [Vytvořte si bezplatný účet Azure](https://azure.microsoft.com/free).
 
-## <a name="what-configurations-and-versions-are-available"></a>What configurations and versions are available?
+## <a name="what-configurations-and-versions-are-available"></a>Jaké konfigurace a verze jsou k dispozici?
 
-Images for the most recent major versions, Visual Studio 2019, Visual Studio 2017 and Visual Studio 2015, can be found in the Azure Marketplace.  For each released major version, you see the originally "released to web" (RTW) version and the latest updated versions.  Each of these versions offers the Visual Studio Enterprise and the Visual Studio Community editions.  These images are updated at least every month to include the latest Visual Studio and Windows updates.  While the names of the images remain the same, each image's description includes the installed product version and the image's "as of" date.
+Obrázky pro nejaktuálnější hlavní verze, Visual Studio 2019, Visual Studio 2017 a Visual Studio 2015, najdete v Azure Marketplace.  U každé vydané hlavní verze se zobrazí původní verze "vydáno do webu" (RTW) a nejnovější aktualizované verze.  Každá z těchto verzí nabízí edice Visual Studio Community a Visual Studio Enterprise.  Tyto Image jsou aktualizovány alespoň každý měsíc zahrnout nejnovější aktualizace sady Visual Studio a Windows.  Názvy imagí budou i nadále stejná, obsahuje popis každého obrázku nainstalovaný produkt verze a "k" datu image.
 
-| Release version                                                                                                                                          | Editions              |    Product version    |
+| Prodejní verze                                                                                                                                          | Edice              |    Verze produktu    |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------:|:-----------------------:|
-| [Visual Studio 2019: Latest (Version 16.3)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019latest?tab=Overview) | Enterprise, Community | Version 16.3.9    |
-| [Visual Studio 2019: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019?tab=Overview)                         | Enterprise            | Version 16.0.9    |
-| [Visual Studio 2017: Latest (Version 15.9)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)           | Enterprise, Community | Version 15.9.17   |
-| [Visual Studio 2017: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)                             | Enterprise, Community | Version 15.0.27   |
-| [Visual Studio 2015: Latest (Update 3)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)               | Enterprise, Community | Version 14.0.25431.01 |
+| [Visual Studio 2019: nejnovější (verze 16,3)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019latest?tab=Overview) | Organizace, Community | 16.3.9 verze    |
+| [Visual Studio 2019: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019?tab=Overview)                         | Enterprise            | 16.0.9 verze    |
+| [Visual Studio 2017: nejnovější (verze 15,9)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)           | Organizace, Community | 15.9.17 verze   |
+| [Visual Studio 2017: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)                             | Organizace, Community | 15.0.27 verze   |
+| [Visual Studio 2015: nejnovější (aktualizace 3)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)               | Organizace, Community | Verze 14.0.25431.01 |
 
 > [!NOTE]
-> In accordance with Microsoft servicing policy, the originally released (RTW) version of Visual Studio 2015 has expired for servicing. Visual Studio 2015 Update 3 is the only remaining version offered for the Visual Studio 2015 product line.
+> V souladu s Microsoft zásady obsluhy původně vydaná verze (RTW) sady Visual Studio 2015 vypršela pro obsluhu. Visual Studio 2015 Update 3 je jediný zbývající verze nabízí pro produktovou řadu Visual Studio 2015.
 
-For more information, see the [Visual Studio Servicing Policy](/visualstudio/productinfo/vs-servicing-vs).
+Další informace najdete v tématu [zásady údržby sady Visual Studio](/visualstudio/productinfo/vs-servicing-vs).
 
-## <a name="what-features-are-installed"></a>What features are installed?
+## <a name="what-features-are-installed"></a>Jaké funkce jsou nainstalovány?
 
-Each image contains the recommended feature set for that Visual Studio edition. Generally, the installation includes:
+Každý image obsahuje funkci doporučené nastavení pro tuto verzi sady Visual Studio. Obecně platí že instalační program obsahuje:
 
-* All available workloads, including each workload’s recommended optional components
-* .NET 4.6.2 and .NET 4.7 SDKs, Targeting Packs, and Developer Tools
+* Všechny dostupné úlohy, včetně Každá úloha doporučuje volitelné součásti
+* .NET 4.6.2 a .NET 4.7 vývojářské nástroje, sady SDK a sady Targeting Pack
 * Visual F#
-* GitHub Extension for Visual Studio
-* LINQ to SQL Tools
+* Rozšíření GitHub pro Visual Studio
+* Nástroje LINQ to SQL
 
-We use the following command line to install Visual Studio when building the images:
+Můžeme použít následující příkazový řádek instalace sady Visual Studio při sestavování imagí:
 
 ```shell
     vs_enterprise.exe --allWorkloads --includeRecommended --passive ^
@@ -71,11 +71,11 @@ We use the following command line to install Visual Studio when building the ima
        --add Microsoft.VisualStudio.Component.LinqToSql
 ```
 
-If the images don't include a Visual Studio feature that you require, provide feedback through the feedback tool in the upper-right corner of the page.
+Pokud Image nezahrnují funkce sady Visual Studio, kterou požadujete, poskytnou zpětnou vazbu prostřednictvím nástroje pro zpětnou vazbu v pravém horním rohu stránky.
 
-## <a name="what-size-vm-should-i-choose"></a>What size VM should I choose?
+## <a name="what-size-vm-should-i-choose"></a>Jaké velikosti virtuálních počítačů zvolte
 
-Azure offers a full range of virtual machine sizes. Because Visual Studio is a powerful, multi-threaded application, you want a VM size that includes at least two processors and 7 GB of memory. We recommend the following VM sizes for the Visual Studio images:
+Azure nabízí celou řadu velikostí virtuálních počítačů. Visual Studio je výkonný Vícevláknová aplikace, chcete, aby velikost virtuálního počítače, který obsahuje alespoň dva procesory a 7 GB paměti. Doporučujeme následující velikosti virtuálních počítačů pro bitové kopie sady Visual Studio:
 
 * Standard_D2_v3
 * Standard_D2s_v3
@@ -85,41 +85,41 @@ Azure offers a full range of virtual machine sizes. Because Visual Studio is a p
 * Standard_D2S_v2
 * Standard_D3_v2
 
-For more information on the latest machine sizes, see [Sizes for Windows virtual machines in Azure](/azure/virtual-machines/windows/sizes).
+Další informace o nejnovějších velikostech počítačů najdete v tématu [velikosti virtuálních počítačů s Windows v Azure](/azure/virtual-machines/windows/sizes).
 
-With Azure, you can rebalance your initial choice by resizing the VM. You can either provision a new VM with a more appropriate size, or resize your existing VM to different underlying hardware. For more information, see [Resize a Windows VM](/azure/virtual-machines/windows/resize-vm).
+S Azure můžete obnovit rovnováhu zvoleného počáteční změnou velikosti virtuálního počítače. Můžete zřídit nový virtuální počítač s více odpovídající velikost, nebo změňte velikost existujícího virtuálního počítače na jiný základní hardware. Další informace najdete v tématu [Změna velikosti virtuálního počítače s Windows](/azure/virtual-machines/windows/resize-vm).
 
-## <a name="after-the-vm-is-running-whats-next"></a>After the VM is running, what's next?
+## <a name="after-the-vm-is-running-whats-next"></a>Jakmile je virtuální počítač spuštěný, co se chystá?
 
-Visual Studio follows the “bring your own license” model in Azure. As with an installation on proprietary hardware, one of the first steps is licensing your Visual Studio installation. To unlock Visual Studio, either:
-- Sign in with a Microsoft account that’s associated with a Visual Studio subscription
-- Unlock Visual Studio with the product key that came with your initial purchase
+Visual Studio se řídí modelem "používání vlastní licence" v Azure. Stejně jako u instalace na speciální hardware, jednu z prvních kroků je licencování instalaci sady Visual Studio. Visual Studio, buď odemknout:
+- Přihlaste se pomocí účtu Microsoft, který je spojen s předplatným Visual Studia
+- Odemknout pomocí kódu product key, které byly dodány s počátečním nákupu sady Visual Studio
 
-For more information, see [Sign in to Visual Studio](../ide/signing-in-to-visual-studio.md) and [How to unlock Visual Studio](../ide/how-to-unlock-visual-studio.md).
+Další informace najdete v tématu [přihlášení do sady Visual Studio](../ide/signing-in-to-visual-studio.md) a [o tom, jak odemknout Visual Studio](../ide/how-to-unlock-visual-studio.md).
 
-## <a name="how-do-i-save-the-development-vm-for-future-or-team-use"></a>How do I save the development VM for future or team use?
+## <a name="how-do-i-save-the-development-vm-for-future-or-team-use"></a>Jak můžu uložit vývojový virtuální počítač pro budoucnost nebo tým použít?
 
-The spectrum of development environments is huge, and there’s real cost associated with building out the more complex environments. Regardless of your environment’s configuration, you can save, or capture, your configured VM as a "base image" for future use or for other members of your team. Then, when booting a new VM, you provision it from the base image rather than the Azure Marketplace image.
+Celé spektrum od vývojových prostředích je obrovský a je skutečné náklady spojené s vytvoření složitější prostředí. Bez ohledu na konfiguraci vašeho prostředí můžete uložit nebo zachytit virtuální počítač nakonfigurovaný jako "základní image" pro budoucí použití nebo pro ostatní členy týmu. Potom při dalším spuštění nového virtuálního počítače, můžete zřídit ze základní image místo image Azure Marketplace.
 
-A quick summary: Use the System Preparation tool (Sysprep) and shut down the running VM, and then capture *(Figure 1)* the VM as an image through the UI in the Azure portal. Azure saves the `.vhd` file that contains the image in the storage account of your choosing. The new image then shows up as an Image resource in your subscription’s list of resources.
+Rychlý přehled: použijte nástroj pro přípravu systému (Sysprep) a vypněte běžící virtuální počítač a potom Zachyťte *(obrázek 1)* virtuální počítač jako Image prostřednictvím uživatelského rozhraní v Azure Portal. Azure uloží soubor `.vhd`, který obsahuje obrázek v účtu úložiště, který zvolíte. Nová bitová kopie se potom zobrazí jako prostředek obrázku v seznamu prostředků vašeho předplatného.
 
-![Capture an image through the Azure portal’s UI](media/capture-vm.png)
+![Zachycení image prostřednictvím uživatelského rozhraní Azure Portal](media/capture-vm.png)
 
-*(Figure 1) Capture an image through the Azure portal’s UI.*
+*(Obrázek 1) Zachytit image prostřednictvím uživatelského rozhraní Azure Portal.*
 
-For more information, see [Create a managed image of a generalized VM in Azure](/azure/virtual-machines/windows/capture-image-resource).
+Další informace najdete v tématu [Vytvoření spravované image zobecněného virtuálního počítače v Azure](/azure/virtual-machines/windows/capture-image-resource).
 
 > [!IMPORTANT]
-> Don’t forget to use Sysprep to prepare the VM. If you miss that step, Azure can't provision a VM from the image.
+> Nezapomeňte pomocí programu Sysprep k přípravě virtuálního počítače. Pokud tento krok přeskočíte, Azure nemůže zřídit virtuální počítač z bitové kopie.
 
 > [!NOTE]
-> You still incur some cost for storage of the images, but that incremental cost can be insignificant compared to the overhead costs to rebuild the VM from scratch for each team member who needs one. For instance, it costs a few dollars to create and store a 127-GB image for a month that's reusable by your entire team. However, these costs are insignificant compared to hours each employee invests to build out and validate a properly configured dev box for their individual use.
+> I za náklady pro úložiště bitových kopií, ale, že může být neplatné dodatečných nákladů ve srovnání s režijní náklady k opětovnému sestavení virtuálních počítačů od začátku pro každého člena týmu, kteří potřebují jeden. Například to stojí za pár dolarů k vytvoření a uložení image 127 GB po dobu jednoho měsíce, který je opakovaně použitelné celý tým. Tyto náklady jsou však nevýznamné ve srovnání s hodin, po které jednotliví zaměstnanci investuje do sestavení a ověření správně nakonfigurovanou vývojovém pro vlastní použití.
 
-Additionally, your development tasks or technologies might need more scale, like varieties of development configurations and multiple machine configurations. You can use Azure DevTest Labs to create _recipes_ that automate construction of your "golden image." You can also use DevTest Labs to manage policies for your team’s running VMs. [Using Azure DevTest Labs for developers](/azure/devtest-lab/devtest-lab-developer-lab) is the best source for more information on DevTest Labs.
+Kromě toho vaše úkoly vývoje nebo technologie může být nutné další škálování, jako jsou typy konfigurací vývoje a konfigurací s více počítači. Azure DevTest Labs můžete použít k vytvoření _recepty_ , které automatizují konstrukci "zlatých imagí". DevTest Labs můžete také použít ke správě zásad pro váš tým spuštěných virtuálních počítačů. Pro další informace o DevTest Labs je nejvhodnějším zdrojem [použití Azure DevTest Labs pro vývojáře](/azure/devtest-lab/devtest-lab-developer-lab) .
 
 ## <a name="next-steps"></a>Další kroky
 
-Now that you know about the preconfigured Visual Studio images, the next step is to create a new VM:
+Teď už víte o předem nakonfigurovaným imagím sady Visual Studio, dalším krokem je vytvoření nového virtuálního počítače:
 
-* [Create a VM through the Azure portal](/azure/virtual-machines/windows/quick-create-portal)
-* [Windows Virtual Machines overview](/azure/virtual-machines/windows/overview)
+* [Vytvoření virtuálního počítače pomocí Azure Portal](/azure/virtual-machines/windows/quick-create-portal)
+* [Přehled Windows Virtual Machines](/azure/virtual-machines/windows/overview)

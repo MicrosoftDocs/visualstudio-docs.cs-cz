@@ -31,7 +31,7 @@ Tady je postup, jak upgradovat rozšíření.
   
 2. Po dokončení upgradu změňte cestu k externímu programu na novou verzi nástroje devenv. exe. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a pak zvolte **vlastnosti**. Na kartě **ladění** vyhledejte textové pole podle **spuštění externího programu** a změňte cestu k souboru devenv. exe na cestu sady Visual Studio 2015, která by měla vypadat přibližně takto:  
   
-     **%ProgramFiles%\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe**  
+     **%ProgramFiles%\Microsoft Visual Studio 14.0 \ Common7\IDE\devenv.exe**  
   
 3. Přidejte odkaz na Microsoft. VisualStudio. Shell. 14.0. dll. (Klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a zvolte možnost **Přidat nebo odkaz**. Vyberte kartu **rozšíření** a pak zkontrolujte **Microsoft. VisualStudio. Shell. 14.0**.)  
   

@@ -110,7 +110,7 @@ V Návrhář XAML je *tvar* přesně to, co byste očekávali. Například: obd�
 |-|-|-|-|
 |![](../designers/media/b1-1.png "B1_1")|Dva obrazce před kombinováním|![](../designers/media/b1-4.png "B1_4")|Krývají|
 |![](../designers/media/b1-2.png "B1_2")|Toho|![](../designers/media/b1-5.png "B1_5")|Vyloučit překryv|
-|![](../designers/media/b1-3.png "B1_3")|Rozdělovací|![](../designers/media/b1-6.png "B1_6")|Odečten|
+|![](../designers/media/b1-3.png "B1_3")|Rozdělovací|![](../designers/media/b1-6.png "B1_6")|Odebrat|
 
  **Podívejte se na krátké video:** ![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [pracujících s cestami: kombinování cest](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195).
 

@@ -1,5 +1,4 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+## YamlMime:Landing
 title: Nástroje kontejneru v sadě Visual Studio
 metadata:
   title: Dokumentace k dockeru kontejneru vývojové nástroje
@@ -9,116 +8,64 @@ metadata:
   ms.prod: visual-studio-windows
   ms.technology: vs-azure
   ms.topic: landing-page
-  ms.date: 02/15/2019
+  ms.date: 11/25/2019
   ms.author: ghogen
-sections:
-  - title: ''
-    items:
-      - type: paragraph
-        text: Prozkoumejte nástroje Docker a Kubernetes a služeb Azure ke správě kontejnerových vývojových projektů.
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: container-tools.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_docker.svg'
-            title: 'Rychlý start: Docker v sadě Visual Studio'
-          - href: tutorial-multicontainer.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_docker.svg'
-            title: Vícekontejnerových aplikací pomocí Docker Compose
-          - href: /visualstudio/install/build-tools-container
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_build.svg'
-            title: Spuštění nástroje pro vytváření v kontejneru
-          - href: tutorial-kubernetes-tools.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_kubernetes.svg'
-            title: Visual Studio Tools for Kubernetes
-  - title: .NET Core
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: /dotnet/core/docker/intro-net-docker
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_NETcore.svg'
-            title: Úvod k .NET a Dockeru
-          - href: /dotnet/core/docker/docker-basics-dotnet-core
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_docker.svg'
-            title: Základy Dockeru
-          - href: /dotnet/core/docker/building-net-docker-images
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_build.svg'
-            title: Sestavit Image Dockeru
-          - href: /aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_web.svg'
-            title: ASP.NET Container Tools
-          - href: 'https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker'
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_azure.svg'
-            title: Nasazení do služby Azure Container Registry
-          - href: /dotnet/standard/containerized-lifecycle-architecture/
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_architecture.svg'
-            title: Průvodce architekturou Mikroslužeb
-  - title: Azure
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: /azure/aks
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/azure/media/index/ContainerService.svg'
-            title: Azure Kubernetes Service (AKS)
-          - href: /azure/dev-spaces
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/azure/media/index/AzureDevSpaceController_50x.svg'
-            title: Azure Dev mezery
-          - href: /azure/container-instances/container-instances-tutorial-prepare-app
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/azure/media/index/ContainerInstances.svg'
-            title: Azure Container Instances
-          - href: /azure/container-registry/
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/azure/media/index/container-registry.svg'
-            title: Azure Container Registry
-          - href: /azure/docker
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_docker.svg'
-            title: Docker v Azure
-  - title: Videa
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: 'https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111'
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_video.svg'
-            title: 'Kanál 9: Vývoj pro docker'
+landingContent:
+  - title: O nasazení
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Nástroje kontejneru v aplikaci Visual Studio
+            url: overview.md
+  - title: Začínáme
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Docker v sadě Visual Studio
+            url: container-tools.md
+          - text: Spuštění nástrojů sestavení v kontejneru
+            url: /visualstudio/install/build-tools-container
+          - text: Visual Studio Tools for Kubernetes
+            url: tutorial-kubernetes-tools.md
+  - title: Vývoj kontejnerových aplikací
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Aplikace s více kontejnery s Docker Compose
+            url: tutorial-multicontainer.md
+          - text: Aplikace reaguje. js v kontejneru
+            url: container-tools-react.md
+          - text: Ladění aplikací Docker
+            url: edit-and-refresh.md
+  - title: Nasazení kontejnerů Docker
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Nasadit do Azure Container Registry
+            url: hosting-web-apps-in-docker.md
+          - text: Nasazení do Azure App Service
+            url: deploy-app-service.md
+          - text: Nasazení do Docker Hubu
+            url: deploy-docker-hub.md
+  - title: Úlohy vývoje kontejneru
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: 'Postupy: konfigurace prostředí sestavení a ladění'
+            url: container-build.md
+          - text: 'Postupy: zobrazení a diagnostika kontejnerů'
+            url: view-and-diagnose-containers.md
+          - text: 'Postupy: řešení potíží s nástroji pro vývoj kontejnerů'
+            url: troubleshooting-docker-errors.md
+  - title: Nastavení nástrojů kontejneru
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Nastavení spuštění kontejneru
+            url: container-launch-settings.md
+          - text: Vlastnosti MSBuild kontejneru
+            url: container-msbuild-properties.md
+          - text: Docker Compose vlastnosti MSBuild
+            url: docker-compose-properties.md
+          - text: Konfigurace nástrojů kontejneru
+            url: container-tools-configure.md

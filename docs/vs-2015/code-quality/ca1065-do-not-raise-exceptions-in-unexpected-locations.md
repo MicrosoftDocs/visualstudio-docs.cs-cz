@@ -32,7 +32,7 @@ ms.locfileid: "74295943"
 |Kategorie|Microsoft.Design|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Metoda, u které není předpokládáno vyvolání výjimky, vyvolá výjimku.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -98,7 +98,7 @@ ms.locfileid: "74295943"
 
 - <xref:System.Object.GetHashCode%2A>
 
-- [M:IEqualityComparer.GetHashCode(T)](https://go.microsoft.com/fwlink/?LinkId=113477)
+- [M:IEqualityComparer.GetHashCode (T)](https://go.microsoft.com/fwlink/?LinkId=113477)
 
   **GetHashCode** by měla vždycky vracet hodnotu. V opačném případě můžete ztratit položky v zatřiďovací tabulce.
 

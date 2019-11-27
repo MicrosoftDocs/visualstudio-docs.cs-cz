@@ -109,21 +109,21 @@ Dialogové okno **Správce odkazů** můžete použít k přidání a správě o
 
   - Další adresáře projektu ve stejném řešení. (Tato sestavení můžete najít pomocí karty **projekty** .)
 
-    \- nebo –
+    \- nebo-
 
 - Nastavte klíč registru, který určuje umístění sestavení, která se mají zobrazit:
 
    Pro 32 operační systém přidejte jeden z následujících klíčů registru.
 
-  - [HKEY_CURRENT_USER\SOFTWARE\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"
+  - [HKEY_CURRENT_USER \SOFTWARE\Microsoft\\. NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies] @ = "*AssemblyLocation*"
 
-  - [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"
+  - [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\\. NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies] @ = "*AssemblyLocation*"
 
     Pro 64 operační systém přidejte jeden z následujících klíčů registru do 32 podregistru.
 
-  - [HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"
+  - [HKEY_CURRENT_USER \SOFTWARE\Wow6432Node\Microsoft\\. NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies] @ = "*AssemblyLocation*"
 
-  - [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"
+  - [HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\\. NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies] @ = "*AssemblyLocation*"
 
     *VersionMinimum* je nejnižší .NET Framework verze, která se vztahuje. Pokud je *VersionMinimum* v 3.0, složky zadané v AssemblyFoldersEx platí pro projekty, které cílí na .NET Framework 3,0 a novější.
 
@@ -209,7 +209,7 @@ Dialogové okno **Správce odkazů** můžete použít k přidání a správě o
     > [!NOTE]
     > Pokud tuto vlastnost přidáte, může být sestavení pomalejší.
 
-## <a name="recent"></a>Nedávné
+## <a name="recent"></a>Poslední
  Kartu Nedávné podporují karty Sestavení, COM, Windows a Procházet. Tato karta obsahuje seznam součástí, které byly v poslední době přidány do projektu.
 
 ## <a name="search"></a>Hledat

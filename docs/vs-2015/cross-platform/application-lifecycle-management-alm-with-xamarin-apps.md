@@ -86,7 +86,7 @@ Xamarin umožňuje vytvářet mobilní aplikace pro různé platformy, které c�
 |Plánování testů, vytváření testovacích případů a organizování testovacích sad|Ano||  
 |Manuální testování|Ano||  
 |Test Manager (testy záznamů a přehrávání)|Ano|Zařízení se systémem Windows a emulátory systému Android pouze ze sady Visual Studio. Záznam pro všechna zařízení je možné použít v programu [Xamarin test](https://www.xamarin.com/test-cloud/recorder)Record.|  
-|Pokrytí kódu|není k dispozici||  
+|Pokrytí kódu|neuvedeno||  
 |[Testování částí kódu](../test/unit-test-your-code.md)|Ano|Pro cíle Windows a Androidu je možné použít integrované nástroje MSTest. Pro spuštění testů jednotek v systémech Windows, Android a iOS doporučuje Xamarin doporučit NUnit. Viz [konfigurace TFS pro Xamarin](https://docs.microsoft.com/azure/devops/repos/tfvc/overview?view=azure-devops) (Web Xamarin).|  
 |[Použití automatizace uživatelského rozhraní k testování kódu](../test/use-ui-automation-to-test-your-code.md)|Pouze Windows|Zapisovač testu uživatelského rozhraní sady Visual Studio je pouze Windows. Pro všechny platformy si přečtěte téma [Xamarin test](https://www.xamarin.com/test-cloud/recorder)Record.|  
   

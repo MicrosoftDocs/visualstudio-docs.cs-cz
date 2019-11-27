@@ -75,7 +75,7 @@ Fragment kódu můžete vytvořit pouze s několika kroky. Vše, co potřebujete
 
 1. Do instalace sady Visual Studio můžete přidat vlastní fragmenty pomocí Správce fragmentů kódů. Otevřete Správce fragmentů kódů (**nástroje/Správce fragmentů kódů**).
 
-2. Klikněte na tlačítko **Import** .
+2. Klikněte na tlačítko **Import**.
 
 3. Přejděte do umístění, kam jste uložili fragment kódu v předchozím postupu, vyberte jej a klikněte na tlačítko **otevřít**.
 

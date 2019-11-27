@@ -33,7 +33,7 @@ S živými analyzátory kódu založenými na projektech v aplikaci Visual Studi
 
 [Úvod do několika rozhovorů analyzátorů a jejich prohlídka](https://channel9.msdn.com/Events/dotnetConf/2015/NET-Compiler-Platform-Roslyn-Analyzers-and-the-Rise-of-Code-Aware-Libraries)
 
-## <a name="other-resources"></a>Další zdroje
+## <a name="other-resources"></a>Další prostředky
 [Další dokumentace na webu GitHub OSS](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)
 
 [Pravidla FxCop implementovaná pomocí analyzátorů Roslyn na GitHubu](https://github.com/dotnet/roslyn/tree/master/src/Diagnostics/FxCop)

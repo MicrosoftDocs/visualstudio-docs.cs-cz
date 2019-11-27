@@ -102,7 +102,7 @@ Aby se analyzátor zobrazil správně v uživatelském rozhraní sady Visual Stu
 internal const string Category = "Naming";
 ```
 
-Změna `"Naming"` k `"API Guidance"`.
+Změňte `"Naming"` na `"API Guidance"`.
 
 Dále vyhledejte a otevřete v projektu soubor Resources. resx pomocí **Průzkumník řešení**. Můžete vložit popis pro svůj analyzátor, název atd. Můžete změnit hodnotu pro všechny z nich na `“Don’t use ImmutableArray<T> constructor”` pro teď. Můžete vložit argumenty formátování řetězce do řetězce ({0}, {1}atd.) a později při volání `Diagnostic.Create()`můžete dodat pole parametrů argumentů, které mají být předány.
 

@@ -91,13 +91,13 @@ ms.locfileid: "74297116"
 
      3. Spusťte soubor IntelliTraceCollector. exe. Tím se extrahuje soubor IntelliTraceCollection. cab.
 
-        \- nebo –
+        \- nebo-
 
    - **Instalační složka sady Visual Studio**:
 
      1. Zkopírujte IntelliTraceCollection. cab z následující složky:
 
-          **..\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\IntelliTrace\12.0.0**
+          **.. \Microsoft Visual Studio 12.0 \ Common7\IDE\CommonExtensions\Microsoft\IntelliTrace\12.0.0**
 
      2. Vložte IntelliTraceCollection. cab do adresáře kolektoru, například: **C:\IntelliTraceCollector**
 
@@ -120,7 +120,7 @@ ms.locfileid: "74297116"
 
 2. Pomocí příkazu Windows **Icacls** udělte správci serveru úplná oprávnění k adresáři kolektoru. Příklad:
 
-     `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\AdministratorID>* `":F`
+     `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\AdministratorID >* `":F`
 
 3. Shromažďování dat pro webovou aplikaci nebo aplikaci služby SharePoint:
 
@@ -128,7 +128,7 @@ ms.locfileid: "74297116"
 
          Příklad:
 
-         `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\UserID>* `":F`
+         `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\UserID >* `":F`
 
     2. Udělte fondu aplikací oprávnění ke čtení a spouštění aplikace SharePoint pro adresář sběrače.
 
@@ -156,9 +156,9 @@ ms.locfileid: "74297116"
 
         2. Vyberte jeden z následujících kroků:
 
-            - V 64 operačních systémech otevřete místní nabídku **prostředí Windows PowerShell**. Zvolte **spustit jako správce**.
+            - V 64 operačních systémech otevřete místní nabídku **prostředí Windows PowerShell**. Vyberte **Spustit jako správce**.
 
-            - V 32 operačních systémech otevřete místní nabídku **prostředí Windows PowerShell (x86)** . Zvolte **spustit jako správce**.
+            - V 32 operačních systémech otevřete místní nabídku **prostředí Windows PowerShell (x86)** . Vyberte **Spustit jako správce**.
 
     2. V příkazovém okně PowerShellu použijte příkaz **Import-Module** pro import **Microsoft. VisualStudio. IntelliTrace. PowerShell. dll**.
 
@@ -206,7 +206,7 @@ ms.locfileid: "74297116"
 
      5. Do pole **Zadejte názvy objektů k výběru** přidejte fond aplikací pro webovou aplikaci nebo aplikaci služby SharePoint.
 
-     6. Pro překlad názvu vyberte možnost **kontrolovat názvy** . Zvolte **OK**.
+     6. Pro překlad názvu vyberte možnost **kontrolovat názvy** . Klikněte na **tlačítko OK**.
 
      7. Ujistěte se, že fond aplikací má **oprávnění Úplné řízení**.
 
@@ -214,7 +214,7 @@ ms.locfileid: "74297116"
 
 1. Pokud chcete začít shromažďovat data, otevřete okno příkazového řádku PowerShellu jako správce a pak spusťte tento příkaz:
 
-     `Start-IntelliTraceCollection` `"` *\<ApplicationPool>* `"` *\<PathToCollectionPlan>* *\<FullPathToITraceFileDirectory>*
+     `Start-IntelliTraceCollection` `"` *\<ApplicationPool >* `"` *\<PathToCollectionPlan >* *\<FullPathToITraceFileDirectory >*
 
     > [!IMPORTANT]
     > Po spuštění tohoto příkazu zadejte **Y** a potvrďte tak, že chcete začít shromažďovat data.
@@ -256,7 +256,7 @@ ms.locfileid: "74297116"
 
 1. Pokud chcete spustit aplikaci a shromažďovat data ve stejnou dobu, použijte tuto syntaxi:
 
-     *\<FullPathToIntelliTraceCollectorExecutable>* `\IntelliTraceSC.exe launch /cp:` *\<PathToCollectionPlan>* `/f:` *\<FullPathToITraceFileDirectoryAndFileName>* *\<PathToAppExecutableFileAndFileName>*
+     *\<FullPathToIntelliTraceCollectorExecutable >* `\IntelliTraceSC.exe launch /cp:` *\<PathToCollectionPlan >* `/f:` *\<FullPathToITraceFileDirectoryAndFileName >* *\<PathToAppExecutableFileAndFileName >*
 
      Například pro shromažďování dat z aplikace s názvem **MyApp**:
 
@@ -397,9 +397,9 @@ ms.locfileid: "74297116"
 
  [Optimalizace kolekce IntelliTrace na produkčních serverech](https://go.microsoft.com/fwlink/?LinkId=255233)
 
- [Visual Studio ALM + TFS Blog](https://go.microsoft.com/fwlink/?LinkID=201340)
+ [Blog sady Visual Studio ALM + TFS](https://go.microsoft.com/fwlink/?LinkID=201340)
 
-### <a name="forums"></a>Diskuzní fóra
+### <a name="forums"></a>Fóra
  [Ladicí program sady Visual Studio](https://go.microsoft.com/fwlink/?LinkId=262263)
 
 ### <a name="videos"></a>Videa

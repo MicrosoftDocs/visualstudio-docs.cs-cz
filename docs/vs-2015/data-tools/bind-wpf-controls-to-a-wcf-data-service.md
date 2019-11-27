@@ -151,7 +151,7 @@ V tomto návodu vytvoříte aplikaci WPF, která obsahuje ovládací prvky váza
 
      Visual Studio přidá do řešení `AdventureWorksSalesEditor` projekt.
 
-5. Na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
+5. V nabídce **data** klikněte na možnost **Zobrazit zdroje dat**.
 
      Otevře se okno **zdroje dat** .
 

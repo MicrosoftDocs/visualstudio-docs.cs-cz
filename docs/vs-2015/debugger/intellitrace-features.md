@@ -109,7 +109,7 @@ IntelliTrace můžete použít k zaznamenání událostí a metod volání do va
   
  [IntelliTrace samostatnou kolekci a fondy aplikací spuštěné v rámci účtů Active Directory](https://devblogs.microsoft.com/devops/intellitrace-standalone-collector-and-application-pools-running-under-active-directory-accounts/)  
   
-## <a name="forums"></a>Diskuzní fóra  
+## <a name="forums"></a>Fóra  
  [Ladicí program sady Visual Studio](https://go.microsoft.com/fwlink/?LinkId=262263)  
   
 ## <a name="videos"></a>Videa  

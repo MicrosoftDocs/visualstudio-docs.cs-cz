@@ -12,12 +12,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 378a5965f8ca9e9cc2d1c7214180e99f080d7873
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bec6c997a73d0b163ec0857ddd3a3380f26793bf
+ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72630964"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74538533"
 ---
 # <a name="codeindex-command"></a>CodeIndex – – příkaz
 
@@ -52,15 +52,15 @@ TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /
 |**/listLargeFiles [/FileCount:** `FileCount` **/minSize:** `MinSize`]|Zobrazuje zadaný počet souborů, které přesahují zadanou velikost v KB. Pak můžete použít možnost **/ignorelist** k vyloučení těchto souborů z indexování.|
 |**/reindexAll**|Vymažte dříve indexovaná data a znovu spusťte indexování.|
 |**/destroyCodeIndex [/noPrompt]**|Odstraňte index kódu a odeberte všechna indexovaná data. Nevyžaduje potvrzení, pokud použijete možnost **/NoPrompt** .|
-|**/temporaryDataSizeLimit**: [zobrazení &#124; < `SizeInGBs` > &#124; zakázat]|Určuje, kolik dočasných dat, která CodeLens vytvoří při zpracování sad změn. Výchozí limit je 2 GB.<br /><br /> -   **zobrazení**: Zobrazit omezení aktuální velikosti.<br />-    `SizeInGBs`: Změňte limit velikosti.<br />-   **Zakázat**: odebrat omezení velikosti.<br /><br /> Toto omezení je zaškrtnuto před tím, než CodeLens zpracuje novou sadu změn. Pokud dočasná data překročí tento limit, CodeLens pozastaví zpracování minulých sad změn, nikoli nových. CodeLens restartuje zpracování po vyčištění dat a klesne pod tento limit. Automatické čištění se spustí jednou denně. To znamená, že dočasná data mohou překročit tento limit, dokud nebude spuštěno čištění.|
-|**/indexHistoryPeriod**: [zobrazit &#124; všechny &#124; < `NumberOfMonths` >]|Určuje, jak dlouho se má indexovat historie změn indexovat. To má vliv na to, kolik historie CodeLens ukazuje. Výchozí limit je 12 měsíců. To znamená, že CodeLens zobrazuje historii změn jenom za posledních 12 měsíců.<br /><br /> -   **zobrazení**: zobrazí aktuální počet měsíců.<br />-   **All**: indexovat veškerou historii změn.<br />-    `NumberOfMonths`: změňte počet měsíců použitých k indexování historie změn.|
+|**/temporaryDataSizeLimit**: [zobrazení &#124; <`SizeInGBs`> &#124; zakázat]|Určuje, kolik dočasných dat, která CodeLens vytvoří při zpracování sad změn. Výchozí limit je 2 GB.<br /><br /> -   **zobrazení**: Zobrazit omezení aktuální velikosti.<br />-   `SizeInGBs`: Změňte limit velikosti.<br />-   **Zakázat**: odebrat omezení velikosti.<br /><br /> Toto omezení je zaškrtnuto před tím, než CodeLens zpracuje novou sadu změn. Pokud dočasná data překročí tento limit, CodeLens pozastaví zpracování minulých sad změn, nikoli nových. CodeLens restartuje zpracování po vyčištění dat a klesne pod tento limit. Automatické čištění se spustí jednou denně. To znamená, že dočasná data mohou překročit tento limit, dokud nebude spuštěno čištění.|
+|**/indexHistoryPeriod**: [zobrazit &#124; všechny &#124; <`NumberOfMonths`>]|Určuje, jak dlouho se má indexovat historie změn indexovat. To má vliv na to, kolik historie CodeLens ukazuje. Výchozí limit je 12 měsíců. To znamená, že CodeLens zobrazuje historii změn jenom za posledních 12 měsíců.<br /><br /> -   **zobrazení**: zobrazí aktuální počet měsíců.<br />-   **All**: indexovat veškerou historii změn.<br />-   `NumberOfMonths`: změňte počet měsíců použitých k indexování historie změn.|
 |**/CollectionName:** `CollectionName`|Určuje název kolekce projektu, na které se má spustit příkaz **CodeIndex –** . Vyžaduje se, pokud nepoužíváte **/CollectionID**.|
 |**/collectionId:** `CollectionId`|Určuje identifikační číslo kolekce projektu, na které se má spustit příkaz **CodeIndex –** . Vyžaduje se, pokud nepoužíváte **/CollectionName**.|
 
 ## <a name="examples"></a>Příklady
 
 > [!NOTE]
-> Ukázkové společnosti, organizace, produkty, názvy domén, e-mailové adresy, loga, osoby, místa a události použité v ukázkách jsou smyšlené.  Žádná spojitost se skutečnou společností, organizací, produktem, názvem domény, e-mailovou adresou, logem, osobou, místem a událostmi není zamýšlená nebo by se měla odvodit.
+> Příklady společností, organizací, produktů, názvů domén, e-mailových adres, log, osob, míst a událostí použité v ukázkách jsou smyšlené.  Žádná spojitost se skutečnou společností, organizací, produktem, názvem domény, e-mailovou adresou, logem, osobou, místem a událostmi není zamýšlená nebo by se měla odvodit.
 
 Chcete-li zobrazit stav a konfiguraci indexování kódu:
 
@@ -125,4 +125,4 @@ TFSConfig CodeIndex /destroyCodeIndex /collectionName:"Fabrikam Website"
 ## <a name="see-also"></a>Viz také:
 
 - [Nalezení změn kódu a další historie pomocí CodeLensu](../ide/find-code-changes-and-other-history-with-codelens.md)
-- [Správa konfigurace serveru pomocí příkazu TFSConfig](/tfs/server/ref/command-line/tfsconfig-cmd)
+- [Správa konfigurace serveru pomocí příkazu TFSConfig](/azure/devops/server/command-line/tfsconfig-cmd)

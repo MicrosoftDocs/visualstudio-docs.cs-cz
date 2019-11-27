@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Code analysis in Visual Studio
-summary: Visual Studio provides several different tools to analyze and improve code quality.
+title: Analýza kódu v aplikaci Visual Studio
+summary: Visual Studio poskytuje několik různých nástrojů pro analýzu a vylepšení kvality kódu.
 metadata:
-  title: Code analyzers
-  description: Learn how Visual Studio can help you analyze code quality.
+  title: Analyzátory kódu
+  description: Přečtěte si, jak vám může Visual Studio při analýze kvality kódu.
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
   ms.topic: landing-page
@@ -12,26 +12,26 @@ metadata:
   ms.date: 10/15/2019
   ms.openlocfilehash: 45be3779e7ed8a625d9029c8eb03a69374c43ae8
   ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: cs-CZ
   ms.lasthandoff: 11/22/2019
   ms.locfileid: "74316360"
 landingContent:
-- title: Analyze C and C++ code
+- title: Analýza jazyka C C++ a kódu
   linkLists:
   - linkListType: overview
     links:
-    - text: Analyze C and C++ code
+    - text: Analýza jazyka C C++ a kódu
       url: code-analysis-for-c-cpp-overview.md
   - linkListType: reference
     links:
-    - text: C++ code analysis warnings
+    - text: C++upozornění analýzy kódu
       url: code-analysis-for-c-cpp-warnings.md
-- title: Analyze managed code quality
+- title: Analýza kvality spravovaného kódu
   linkLists:
   - linkListType: overview
     links:
-    - text: Source analysis
+    - text: Zdrojová analýza
       url: roslyn-analyzers-overview.md
     - text: Starší verze analýzy
       url: static-code-analysis-for-managed-code-overview.md
@@ -45,15 +45,15 @@ landingContent:
       url: install-fxcop-analyzers.md
   - linkListType: reference
     links:
-    - text: Managed code analysis warnings
+    - text: Upozornění analýzy spravovaného kódu
       url: code-analysis-for-managed-code-warnings.md
-- title: Analyze managed code style
+- title: Analýza spravovaného stylu kódu
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Analyze code style
+    - text: Analyzovat styl kódu
       url: ../ide/create-portable-custom-editor-options.md
-- title: Measure code complexity
+- title: Měření složitosti kódu
   linkLists:
   - linkListType: concept
     links:
