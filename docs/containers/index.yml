@@ -1,8 +1,8 @@
 ## YamlMime:Landing
 title: Nástroje kontejneru v sadě Visual Studio
 metadata:
-  title: Dokumentace k dockeru kontejneru vývojové nástroje
-  description: 'Zjistěte, jak k vytváření a správě kontejnerových aplikací a služeb. Získejte dokumentaci, ukázkový kód, kurzy a další.'
+  title: Dokumentace k nástrojům pro vývoj kontejnerů Docker
+  description: 'Naučte se vytvářet a spravovat aplikace a služby založené na kontejnerech. Získejte dokumentaci, ukázkový kód, kurzy a další.'
   author: ghogen
   manager: jillfra
   ms.prod: visual-studio-windows

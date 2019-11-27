@@ -48,13 +48,13 @@ Po dokončení pořadí předplatného se zobrazí stránka s potvrzením, včet
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Ne          |
-| Visual Studio Enterprise s GitHubem Enterprise   | VL| K dispozici       |  Ne          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | K dispozici                                                            |  Ne          |
-| Visual Studio Professional s GitHubem Enterprise | VL                                      | K dispozici                                                            |  Ne          |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici                                             |  Ne          |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici                                              |  Ne          |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | Není k dispozici |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | Dostupné       |  Ne          |
+| Visual Studio Enterprise s GitHubem Enterprise   | VL| Dostupné       |  Ne          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Dostupné                                                            |  Ne          |
+| Visual Studio Professional s GitHubem Enterprise | VL                                      | Dostupné                                                            |  Ne          |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Dostupné                                             |  Ne          |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Dostupné                                              |  Ne          |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | NEUŽÍVÁ SE. |
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), FTE, BizSpark, Představte si prémii.  Nezahrnuje se: Microsoft Partner Network (MPN), MCT (MVP), oblastní ředitel (RD), software & Services Developer, MCT software & Services, Představte si.*
 

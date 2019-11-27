@@ -120,7 +120,7 @@ V indikátorech na úrovni souborů v dolní části okna Najděte změny pro ce
 
 Chcete-li získat další informace o změně, klikněte pravým tlačítkem myši na danou položku. V závislosti na tom, zda používáte TFVC nebo Git, existují možnosti pro porovnání verzí souboru, zobrazení podrobností a sledování sady změn, získání vybrané verze souboru a odeslání e-mailu autorovi této změny. Některé z těchto podrobností se zobrazí v **Team Explorer**.
 
-Můžete také zjistit, kdo změnil kód v průběhu času. To může pomoct najít vzory ve změnách vašeho týmu a posoudit jejich dopad.
+Můžete také zjistit, kdo změnil kód v průběhu času. To vám může pomáhat najít vzorce ve změnách týmu a posoudit jejich dopad.
 
 ![CodeLens: Zobrazení historie změn kódu jako grafu](../ide/media/codelens.png)
 
@@ -246,7 +246,7 @@ Chcete-li použít klávesnici k výběru indikátorů, stiskněte a podržte kl
 > [!NOTE]
 > Chcete **-li vybrat indikátor kontrol** , stiskněte klávesu **ALT** a použijte klávesu šipka vlevo a vpravo k navigaci.
 
-## <a name="q--a"></a>Dotazy a odpovědi
+## <a name="q--a"></a>Otázka & A
 
 ### <a name="q-how-do-i-turn-codelens-off-or-on-or-choose-which-indicators-to-see"></a>Otázka: Návody CodeLens vypnout nebo zapnout nebo vyberte indikátory, které chcete zobrazit?
 

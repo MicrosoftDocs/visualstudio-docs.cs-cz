@@ -97,12 +97,12 @@ Jakmile se cyklus vývoje a ladění aplikace dokončí, můžete vytvořit prov
 1. Vyberte **vytvořit novou Azure Container Registry** a klikněte na **publikovat**.
 1. Do pole **vytvořit nový Azure Container Registry**zadejte požadované hodnoty.
 
-    | Nastavení      | Navrhovaná hodnota  | Popis                                |
+    | Nastavením      | Navrhovaná hodnota  | Popis                                |
     | ------------ |  ------- | -------------------------------------------------- |
     | **Předpona DNS** | Globálně jedinečný název | Název, který jedinečně identifikuje váš registr kontejneru. |
     | **Formě** | Výběr předplatného | Předplatné Azure, které se má použít. |
-    | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Název skupiny prostředků, ve které se má vytvořit registr kontejneru Pokud chcete vytvořit novou skupinu prostředků, vyberte možnost **nové** .|
-    | **[SKLADOVÉ](https://docs.microsoft.com/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
+    | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | mojeSkupinaProstředků |  Název skupiny prostředků, ve které se má vytvořit registr kontejneru Pokud chcete vytvořit novou skupinu prostředků, vyberte možnost **nové** .|
+    | **[SKLADOVÉ](https://docs.microsoft.com/azure/container-registry/container-registry-skus)** | Standardní | Úroveň služby registru kontejneru  |
     | **Umístění registru** | Umístění, které je blízko vás | Vyberte umístění v [oblasti](https://azure.microsoft.com/regions/) poblíž nebo v blízkosti jiných služeb, které budou používat váš registr kontejneru. |
 
     ![Dialog pro vytváření Azure Container Registry v aplikaci Visual Studio][0]

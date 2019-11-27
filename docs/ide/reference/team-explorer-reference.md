@@ -1,5 +1,5 @@
 ---
-title: Referenční dokumentace Team Explorer
+title: Referenční dokumentace k Team Exploreru
 ms.date: 12/04/2018
 ms.topic: reference
 ms.author: kaelli
@@ -12,7 +12,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/26/2019
 ms.locfileid: "74538572"
 ---
-# <a name="team-explorer-reference"></a>Referenční dokumentace Team Explorer
+# <a name="team-explorer-reference"></a>Referenční dokumentace k Team Exploreru
 
 Tento článek obsahuje odkazy na články Azure DevOps o různých funkcích v **Team Explorer**.
 
@@ -33,17 +33,17 @@ Na **domovské** stránce jsou různé funkce v závislosti na tom, jestli jste 
 
 | **Domovská** Stránka s Git | **Domovská** Stránka s TFVC |
 | - | - |
-| ![Team Explorer Domovská stránka s Git ve službě Visual Studio 2019](media/team-explorer-reference/team-explorer-git.png) | ![Team Explorer domovské stránky s TFVC v aplikaci Visual Studio](media/team-explorer-reference/team-explorer-tfvc.png) |
+| ![Team Explorer domovskou stránku pomocí Gitu v aplikaci Visual Studio 2019](media/team-explorer-reference/team-explorer-git.png) | ![Team Explorer domovské stránky s TFVC v aplikaci Visual Studio](media/team-explorer-reference/team-explorer-tfvc.png) |
 
-## <a name="changes-page-git"></a>Stránka změn (Git)
+## <a name="changes-page-git"></a>Stránka změny (Git)
 
 Viz [Uložit práci s potvrzeními](/azure/devops/repos/git/commits).
 
-## <a name="branches-page-git"></a>Stránku větve (Git)
+## <a name="branches-page-git"></a>Stránka větve (Git)
 
 Viz [vytvořit práci v větvích](/azure/devops/repos/git/branches).
 
-## <a name="pull-requests-page-git"></a>Stránka žádosti o přijetí změn (Git)
+## <a name="pull-requests-page-git"></a>Stránka žádostí o přijetí změn (Git)
 
 Viz téma [Revize kódu s žádostmi o](/azure/devops/repos/git/pullrequest)přijetí změn.
 
@@ -51,7 +51,7 @@ Viz téma [Revize kódu s žádostmi o](/azure/devops/repos/git/pullrequest)při
 
 Viz [kód aktualizace pomocí načtení a vyžádání](/azure/devops/repos/git/pulling).
 
-## <a name="tags-page-git"></a>Stránka značky (Git)
+## <a name="tags-page-git"></a>Stránka značek (Git)
 
 Viz [práce s značkami Git](/azure/devops/repos/git/git-tags).
 
@@ -59,15 +59,15 @@ Viz [práce s značkami Git](/azure/devops/repos/git/git-tags).
 
 Viz [Pozastavení/obnovení práce](/azure/devops/repos/tfvc/suspend-your-work-manage-your-shelvesets) a [Revize kódu](/azure/devops/repos/tfvc/day-life-alm-developer-suspend-work-fix-bug-conduct-code-review).
 
-## <a name="pending-changes-page-tfvc"></a>Čeká na stránce změny (TFVC)
+## <a name="pending-changes-page-tfvc"></a>Stránka nedokončené změny (TFVC)
 
 Viz téma [Správa nedokončených změn](/azure/devops/repos/tfvc/develop-code-manage-pending-changes), [hledání sad odložených](/azure/devops/repos/tfvc/suspend-your-work-manage-your-shelvesets)změn a [řešení konfliktů](/azure/devops/repos/tfvc/resolve-team-foundation-version-control-conflicts).
 
-## <a name="source-control-explorer-page-tfvc"></a>Stránka Průzkumník správy zdrojového (TFVC)
+## <a name="source-control-explorer-page-tfvc"></a>Stránka Průzkumník správy zdrojových souborů (TFVC)
 
 Viz téma [Přidání/zobrazení souborů a složek](/azure/devops/repos/tfvc/add-files-server).
 
-## <a name="work-items-page"></a>Stránky pracovních položek
+## <a name="work-items-page"></a>Stránka pracovní položky
 
 Stránka **pracovní položky** vám umožní zobrazit dotazy na [pracovní položky](/azure/devops/boards/work-items/about-work-items) . Další informace:
 
@@ -98,11 +98,11 @@ Další informace:
 - [Nainstalovat nástroje pro průběžné doručování (CD) pro Visual Studio](/azure/devops/pipelines/apps/cd/azure/aspnet-core-to-acr#install-continuous-delivery-cd-tools-for-visual-studio-2017)
 - [Konfigurace a spuštění průběžného doručování (CD) pro vaši aplikaci](/azure/devops/pipelines/apps/cd/azure/aspnet-core-to-acr#configure-and-execute-continuous-delivery-cd-for-your-app)
 
-## <a name="settings-page"></a>Stránka Nastavení
+## <a name="settings-page"></a>Stránka nastavení
 
-Stránka **Nastavení** umožňuje nakonfigurovat funkce pro správu projektu nebo kolekce projektů. Viz následující články:
+Stránka **Nastavení** umožňuje nakonfigurovat funkce pro správu projektu nebo kolekce projektů. Přečtěte si následující články:
 
-| Projekt | Kolekce projektů | Ostatní |
+| Projekt | Kolekce projektů | Další |
 | - | - | - |
 | [Zabezpečení, členství ve skupinách](/azure/devops/organizations/security/set-project-collection-level-permissions)<br/>[Zabezpečení, Správa zdrojového kódu (TFVC)](/azure/devops/organizations/security/set-git-tfvc-repository-permissions)<br/>[Oblasti pracovních položek](/azure/devops/organizations/settings/set-area-paths)<br/>[Iterace pracovních položek](/azure/devops/organizations/settings/set-iteration-paths-sprints)<br/>[Nastavení portálu](/azure/devops/report/sharepoint-dashboards/configure-or-add-a-project-portal)<br/>[Výstrahy projektu](/azure/devops/notifications/howto-manage-team-notifications) | [Zabezpečení, členství ve skupinách](/azure/devops/organizations/security/set-project-collection-level-permissions)<br/>[Správa zdrojového kódu (TFVC)](/azure/devops/repos/tfvc/decide-between-using-local-server-workspace)<br/>[Správce šablon procesů](/azure/devops/boards/work-items/guidance/manage-process-templates) | [Globální nastavení Gitu](/azure/devops/repos/git/git-config)<br/>[Nastavení úložiště Git](/azure/devops/repos/git/git-config) |
 

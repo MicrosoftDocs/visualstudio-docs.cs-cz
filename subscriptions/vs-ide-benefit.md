@@ -41,7 +41,7 @@ Stažení integrovaného vývojového prostředí (IDE):
    > [!div class="mx-imgBorder"]
    > ![přizpůsobení Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-customize-install-cropped.png)
 
-10. Klikněte na **Nainstalovat**.
+10. Klikněte na **nainstalovat**.
 
 11. Po dokončení instalace budete mít možnost upravit instalaci nebo spustit aplikaci Visual Studio.  Začněte tím, že kliknete na **Spustit** .  Pokud máte nainstalované více verzí, budou uvedeny v seznamu.
     > [!div class="mx-imgBorder"]
@@ -61,12 +61,12 @@ Stažení integrovaného vývojového prostředí (IDE):
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (standardní, měsíční Cloud)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Ano          |
-| Visual Studio Enterprise s GitHubem Enterprise   | VL | K dispozici       |  Ano          |
-| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | K dispozici                                                            |  Ano          |
-| Visual Studio Professional s GitHubem Enterprise | VL   | K dispozici              |  Ano          |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici                                             |  Ano         |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  Není k dispozici          |
+| Visual Studio Enterprise (standardní, měsíční Cloud)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | Dostupné       |  Ano          |
+| Visual Studio Enterprise s GitHubem Enterprise   | VL | Dostupné       |  Ano          |
+| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | Dostupné                                                            |  Ano          |
+| Visual Studio Professional s GitHubem Enterprise | VL   | Dostupné              |  Ano          |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Dostupné                                             |  Ano         |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  NEUŽÍVÁ SE.          |
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), ekvivalent, MCT software & Services Developer, BizSpark, představte, MVP (MVP), regionální ředitel (RD).  Nezahrnuje se: MCT software & služby.*
 

@@ -125,7 +125,7 @@ Visual Studio obsahuje mnoho refaktoringů, akcí generování kódu a oprav kó
 
 Mezi oblíbené rychlé opravy a refaktoringy patří:
 
-- Přejmenovat
+- přejmenování
 - extrahování metody
 - Změnit podpis metody
 - Generovat konstruktor
@@ -160,8 +160,8 @@ Visual Studio obsahuje mnoho funkcí, které vám pomůžou vyhledávat a [Proch
 | Přejít k implementaci | **Ctrl**+**F12** | Pomocí možnosti přejít k definici na klíčovém slově `override` můžete přejít k přepsanému členu. |
 | Přejít k definici | **F12** nebo **CTRL**+**klikněte na**| Když kliknete na tlačítko Přejít na definici, stiskněte klávesu **CTRL** |
 | Náhled definice | **Alt**+**F12** | Vložené zobrazení definice |
-| Vizualizér struktur | Šedá, tečkované – čáry mezi závorkami | Zobrazení struktury kódu najeďte myší |
-| Navigace do dekompilovaných sestav | **F12** nebo **CTRL**+**klikněte na** | Povolením funkce přejděte na externí zdroj (dekompilovaný s ILSpy). **nástroje** > **Možnosti** > **textový editor** **C#**  >  > **Pokročilé** > **Povolit navigaci na dekompilované zdroje**. |
+| Vizualizér struktury | Šedá, tečkované – čáry mezi závorkami | Zobrazení struktury kódu najeďte myší |
+| Navigace do dekompilovaných sestavení | **F12** nebo **CTRL**+**klikněte na** | Povolením funkce přejděte na externí zdroj (dekompilovaný s ILSpy). **nástroje** > **Možnosti** > **textový editor** **C#**  >  > **Pokročilé** > **Povolit navigaci na dekompilované zdroje**. |
 
 ![Přejít na vše a najít všechny odkazy](../ide/media/VSIDE_Productivity_Navigation.png)
 

@@ -35,20 +35,20 @@ Pro tento proces doporučujeme vytvořit okno prohlížeče "soukromé".  Např�
 7. Vytvořte zobrazované jméno vydavatele.  Bude to jedinečný název, který se zákazníkům zobrazí v souvislosti s vašimi aplikacemi, doplňky a službami.
 8. Zadejte kontaktní informace a preferovaný e-mailový jazyk a pak klikněte na **Další**.
 9. Může se zobrazit výzva k ověření hesla.  Zadejte ho a klikněte na **Přihlásit se**.
-10. Na stránce registrace – platba vložte kód, který jste zkopírovali dříve do pole propagační kód.  Stránka se aktualizuje a ukáže, že *není potřeba žádná platba*.  Klikněte na **Další**.
+10. Na stránce registrace – platba vložte kód, který jste zkopírovali dříve do pole propagační kód.  Stránka se aktualizuje a ukáže, že *není potřeba žádná platba*.  Klikněte na tlačítko **Další**.
 11. Projděte si informace o účtu, přečtěte si smlouvu pro vývojáře aplikace a kliknutím na zaškrtávací políčko označíte, že souhlasíte s podmínkami a ujednáními.  Pak klikněte na **Dokončit**.
 12. Kliknutím na **Přejít na řídicí panel** můžete začít používat vývojářský účet pro Windows.
 
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | Zahrnuje       |  Ano|
-| Visual Studio Enterprise s GitHubem Enterprise   | VL  | Zahrnuje       |  Ano|
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Zahrnuje                                                            |Ano|
-| Visual Studio Professional s GitHubem Enterprise | VL                                        | Zahrnuje                                                            |Ano|
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                            |  Není k dispozici|
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              |  Není k dispozici                                            |  Není k dispozici|
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |Není k dispozici|
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | Zahrnuto       |  Ano|
+| Visual Studio Enterprise s GitHubem Enterprise   | VL  | Zahrnuto       |  Ano|
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Zahrnuto                                                            |Ano|
+| Visual Studio Professional s GitHubem Enterprise | VL                                        | Zahrnuto                                                            |Ano|
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                            |  NÁ|
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              |  Není k dispozici                                            |  NÁ|
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |NÁ|
 ||
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), FTE, Visual Studio Industry Partner (VSIP), BizSpark, MCT software & Services Developer. Nezahrnuje se: Microsoft Partner Network (MPN), Představte si předužitečnější profesionální specialista (MVP), oblastní ředitel (RD), MCT software & Services.*

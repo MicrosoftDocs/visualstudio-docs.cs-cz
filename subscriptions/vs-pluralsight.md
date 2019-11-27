@@ -50,7 +50,7 @@ Následující tabulka uvádí podrobnosti o tom, jaké výhody předplatného P
 
 7. Zadejte uživatelské jméno, které jste zadali v uvítacím e-mailu, a heslo, které jste právě vytvořili, a klikněte na **Přihlásit**.
 
-8. A to je vše!  Teď jste připraveni začít s tisíci Pluralsight kurzy.
+8. A je to!  Teď jste připraveni začít s tisíci Pluralsight kurzy.
 
 ## <a name="eligibility"></a>Vznik
 
@@ -62,8 +62,8 @@ Následující tabulka uvádí podrobnosti o tom, jaké výhody předplatného P
 |         Visual Studio Professional s GitHubem Enterprise          | VL  |   3 měsíce    | Ano<sup>2</sup> |
 |              Visual Studio Test Professional (Standard)              |    VL, maloobchodní prodej     |   3 měsíce    | Ano<sup>2</sup>  |
 |                      MSDN Platforms (Standard)                       |    VL, maloobchodní prodej     |   3 měsíce    | Ano<sup>2</sup>  |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) |       Azure       | Není k dispozici |       Není k dispozici       |
-|             Visual Studio Enterprise (NFR<sup>1</sup> )              |      Program      | Není k dispozici |       Není k dispozici       |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) |       Azure       | Není k dispozici |       NÁ       |
+|             Visual Studio Enterprise (NFR<sup>1</sup> )              |      Editoru      | Není k dispozici |       NÁ       |
 ||
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), BizSpark, MCT software & Services Developer, MCT software & Service, MVP (MVP Professional), oblastní ředitel (RD), Microsoft Partner Network (MPN), FTE, představte.*

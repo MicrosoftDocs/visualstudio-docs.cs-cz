@@ -31,14 +31,14 @@ Balíček NuGet pro FxCop Analyzer obsahuje předdefinované sady pravidel a sou
 - Návrh
 - Dokumentace
 - Globalizace
-- Vzájemná funkční spolupráce
+- Interoperabilita
 - Udržovatelnost
-- pojmenování
+- Ming
 - Výkon
 - Portovaná z FxCop
 - Spolehlivost
-- Zabezpečení
-- Využití
+- Zabezpečení –
+- Použití
 
 Každá z těchto kategorií pravidel má EditorConfig nebo soubor sady pravidel:
 
