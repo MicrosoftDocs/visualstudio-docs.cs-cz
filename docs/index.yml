@@ -16,7 +16,7 @@ metadata:
   hide_bc: true
   ms.openlocfilehash: b36b1835f38a4ce6fe46d72935dc8cfc144561c3
   ms.sourcegitcommit: 890ae10c8ea3bff8306ed25b06256578dee08397
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: cs-CZ
   ms.lasthandoff: 11/15/2019
   ms.locfileid: "74118930"
@@ -61,7 +61,7 @@ productDirectory:
     - url: https://docs.microsoft.com/appcenter
       text: Dokumentace
     - url: https://visualstudio.microsoft.com/app-center/
-      text: Bran
+      text: Portál
   - title: Předplatná sady Visual Studio
     imageSrc: ./media/vs-subscription-temp.svg
     links:
@@ -70,6 +70,6 @@ productDirectory:
     - url: https://visualstudio.microsoft.com/subscriptions
       text: Informace o visualstudio.com
     - url: https://my.visualstudio.com
-      text: Bran
+      text: Portál
     - url: https://manage.visualstudio.com
       text: Správa
