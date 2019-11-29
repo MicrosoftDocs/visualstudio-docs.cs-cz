@@ -1410,6 +1410,8 @@
         - name: Nahlášení problémových stavů a nejčastější dotazy
           displayName: Developer Community
           href: ide/report-a-problem.md
+        - name: Zvýšení pravděpodobnosti vyřešení problému s výkonem
+          href: ide/how-to-increase-chances-of-performance-issue-being-fixed.md
         - name: Vytváření minimálních výpisů pro proces sady Visual Studio se všemi zásobníky volání
           displayName: Create minidumps with call stacks
           href: ide/report-a-problem-minidumps.md

@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 11/20/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 6b96f23bc7bcd7e6d970025b23f89f572d07daf1
-ms.sourcegitcommit: e825d1223579b44ee2deb62baf4de0153f99242a
+ms.openlocfilehash: a2f837ba264a12391786f584cf2698e19250fb2e
+ms.sourcegitcommit: 6336c387388707da94a91060dc3f34d4cfdc0a7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74473987"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74549957"
 ---
 # <a name="build-and-debug-containerized-apps-using-visual-studio-or-the-command-line"></a>Sestavování a ladění kontejnerových aplikací pomocí sady Visual Studio nebo příkazového řádku
 
@@ -60,27 +60,9 @@ ENTRYPOINT ["dotnet", "WebApplication43.dll"]
 
 Poslední fáze se znovu spustí z `base`a obsahuje `COPY --from=publish` ke zkopírování publikovaného výstupu do finální image. Tento proces umožňuje, aby poslední obrázek byl menší, protože nemusí zahrnovat všechny nástroje sestavení, které byly v `sdk` imagi.
 
-## <a name="faster-builds-for-the-debug-configuration"></a>Rychlejší sestavení pro konfiguraci ladění
-
-K dispozici je několik optimalizací, které aplikace Visual Studio provede s výkonem procesu sestavení pro kontejnerové projekty. Proces sestavení pro aplikace s možností vytvoření kontejnerů není jednoduchý, stejně jako v souladu s postupem popsaným v souboru Dockerfile. Sestavování v kontejneru je mnohem pomalejší než sestavování na místním počítači.  Takže když sestavíte v konfiguraci **ladění** , Visual Studio ve skutečnosti vytvoří vaše projekty na místním počítači a pak nasdílí výstupní složku do kontejneru pomocí připojení svazku. Sestavení s touto optimalizací povoleno se označuje jako sestavení *rychlého* režimu.
-
-V **rychlém** režimu volá Visual Studio `docker build` s argumentem, který instruuje Docker pro sestavení pouze `base` fáze.  Visual Studio zpracovává zbytek procesu bez ohledu na obsah souboru Dockerfile. Takže při úpravách souboru Dockerfile, jako je například přizpůsobení prostředí kontejneru nebo instalace dalších závislostí, byste měli do první fáze umístit své změny.  Nespustí se žádné vlastní kroky, které jsou umístěné ve fázích `build`, `publish`nebo `final` souboru Dockerfile.
-
-Tato optimalizace výkonu nastane pouze při sestavení v konfiguraci **ladění** . V konfiguraci **vydání** se sestavení objeví v kontejneru, jak je uvedeno v souboru Dockerfile.
-
-Pokud chcete zakázat optimalizaci výkonu a sestavení jako souboru Dockerfile, pak nastavte vlastnost **ContainerDevelopmentMode** na hodnotu **Regular** v souboru projektu následujícím způsobem:
-
-```xml
-<PropertyGroup>
-   <ContainerDevelopmentMode>Regular</ContainerDevelopmentMode>
-</PropertyGroup>
-```
-
-Chcete-li obnovit optimalizaci výkonu, odeberte vlastnost ze souboru projektu.
-
 ## <a name="building-from-the-command-line"></a>Sestavování z příkazového řádku
 
-K sestavování z příkazového řádku můžete použít `docker build` nebo `MSBuild`.
+Pokud chcete sestavit mimo sadu Visual Studio, můžete použít `docker build` nebo `MSBuild` k sestavení z příkazového řádku.
 
 ### <a name="docker-build"></a>sestavení Docker
 
@@ -100,7 +82,7 @@ Pokud chcete vytvořit image pro jeden projekt kontejneru Docker, můžete použ
 MSBuild MyProject.csproj /t:ContainerBuild /p:Configuration=Release
 ```
 
-Při sestavování řešení z integrovaného vývojového prostředí (IDE) sady Visual Studio uvidíte výstup podobný tomu, co vidíte v okně **výstup** . Vždy použít `/p:Configuration=Release`, protože v případech, kdy aplikace Visual Studio používá optimalizaci sestavení s více fázemi, výsledky při sestavování konfigurace **ladění** nemusí být očekávaným způsobem.
+Při sestavování řešení z integrovaného vývojového prostředí (IDE) sady Visual Studio uvidíte výstup podobný tomu, co vidíte v okně **výstup** . Vždy použít `/p:Configuration=Release`, protože v případech, kdy aplikace Visual Studio používá optimalizaci sestavení s více fázemi, výsledky při sestavování konfigurace **ladění** nemusí být očekávaným způsobem. Viz [ladění](#debugging).
 
 Pokud používáte projekt Docker Compose, použijte příkaz k sestavení imagí:
 
@@ -110,7 +92,7 @@ msbuild /p:SolutionPath=<solution-name>.sln /p:Configuration=Release docker-comp
 
 ## <a name="project-warmup"></a>Zahřívání projektu
 
-Jedná se o posloupnost kroků, ke kterým dochází, když je vybraný profil Docker pro projekt (to znamená, když se načte projekt nebo je přidána podpora Docker), aby se zlepšil výkon následného spuštění (**F5** nebo **CTRL**+**F5**). Tato možnost se dá konfigurovat v nabídce **nástroje** > **Možnosti** > **nástroje kontejneru**. Zde jsou úkoly, které běží na pozadí:
+*Zahřívání projektu* odkazuje na řadu kroků, ke kterým dochází, když je vybrán profil Docker pro projekt (tj. když je načten projekt nebo je přidána podpora Docker) za účelem zlepšení výkonu následných spuštění (**F5** nebo **CTRL**+**F5**). Tato možnost se dá konfigurovat v nabídce **nástroje** > **Možnosti** > **nástroje kontejneru**. Zde jsou úkoly, které běží na pozadí:
 
 - Ověřte, že je nainstalovaný a spuštěný dokovací počítač.
 - Ujistěte se, že je Docker Desktop nastavený na stejný operační systém jako projekt.
@@ -162,6 +144,22 @@ Další informace o použití protokolu SSL s ASP.NET Core aplikacemi v kontejne
 
 ## <a name="debugging"></a>Ladění
 
+Při sestavování konfigurace **ladění** je k dispozici několik optimalizací, které aplikace Visual Studio provede s výkonem procesu sestavení pro kontejnerové projekty. Proces sestavení pro aplikace s možností vytvoření kontejnerů není jednoduchý, stejně jako v souladu s postupem popsaným v souboru Dockerfile. Sestavování v kontejneru je mnohem pomalejší než sestavování na místním počítači.  Takže když sestavíte v konfiguraci **ladění** , Visual Studio ve skutečnosti vytvoří vaše projekty na místním počítači a pak nasdílí výstupní složku do kontejneru pomocí připojení svazku. Sestavení s touto optimalizací povoleno se označuje jako sestavení *rychlého* režimu.
+
+V **rychlém** režimu volá Visual Studio `docker build` s argumentem, který instruuje Docker pro sestavení pouze `base` fáze.  Visual Studio zpracovává zbytek procesu bez ohledu na obsah souboru Dockerfile. Takže při úpravách souboru Dockerfile, jako je například přizpůsobení prostředí kontejneru nebo instalace dalších závislostí, byste měli do první fáze umístit své změny.  Nespustí se žádné vlastní kroky, které jsou umístěné ve fázích `build`, `publish`nebo `final` souboru Dockerfile.
+
+Tato optimalizace výkonu nastane pouze při sestavení v konfiguraci **ladění** . V konfiguraci **vydání** se sestavení objeví v kontejneru, jak je uvedeno v souboru Dockerfile.
+
+Pokud chcete zakázat optimalizaci výkonu a sestavení jako souboru Dockerfile, pak nastavte vlastnost **ContainerDevelopmentMode** na hodnotu **Regular** v souboru projektu následujícím způsobem:
+
+```xml
+<PropertyGroup>
+   <ContainerDevelopmentMode>Regular</ContainerDevelopmentMode>
+</PropertyGroup>
+```
+
+Chcete-li obnovit optimalizaci výkonu, odeberte vlastnost ze souboru projektu.
+
  Při spuštění ladění (**F5**) se znovu použije dřív spuštěný kontejner, pokud je to možné. Pokud nechcete znovu použít předchozí kontejner, můžete použít příkazy pro opětovné **sestavení** nebo **Vyčištění** v aplikaci Visual Studio k vynucení použití nového kontejneru v aplikaci Visual Studio.
 
 Proces spuštění ladicího programu závisí na typu projektu a operačního systému kontejneru:
@@ -182,9 +180,8 @@ Visual Studio používá vlastní vstupní bod kontejneru v závislosti na typu 
 |-|-|
 | **Kontejnery platformy Linux** | Vstupním bodem je `tail -f /dev/null`, což je nekonečná čekání na udržení běhu kontejneru. Když se aplikace spustí prostřednictvím ladicího programu, je to ladicí program, který zodpovídá za spuštění aplikace (tj. `dotnet webapp.dll`). Pokud se spustí bez ladění, nástroj spustí `docker exec -i {containerId} dotnet webapp.dll` pro spuštění aplikace.|
 | **Kontejnery Windows**| Vstupní bod je podobný `C:\remote_debugger\x64\msvsmon.exe /noauth /anyuser /silent /nostatus`, který spouští ladicí program, takže naslouchá připojení. Totéž platí, že ladicí program spustí aplikaci a příkaz `docker exec` při spuštění bez ladění. U .NET Frameworkch webových aplikací se vstupní bod mírně liší, kde se do příkazu přidá `ServiceMonitor`.|
-  
-> [!NOTE]
-> Vstupní bod kontejneru lze upravit pouze v projektech Docker – vytváření, nikoli v projektech s jedním kontejnerem.
+
+Vstupní bod kontejneru lze upravit pouze v projektech Docker – vytváření, nikoli v projektech s jedním kontejnerem.
 
 ## <a name="next-steps"></a>Další kroky
 

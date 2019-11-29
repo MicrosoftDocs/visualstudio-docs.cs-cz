@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0a16f9501b9ce1e7c69eaa8f2460a50affd6d579
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 1d7c7ada277d9b9f7259b8ab07d93c48294b252c
+ms.sourcegitcommit: 6336c387388707da94a91060dc3f34d4cfdc0a7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888716"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74549967"
 ---
 # <a name="install-build-tools-into-a-container"></a>Instalace nástrojů sestavení do kontejneru
 
@@ -134,6 +134,9 @@ Následující příklad souboru Dockerfile uložte do nového souboru na disku.
    > Informace o podporovaných verzích operačních systémů, ve kterých verzích operačního systému hostitele a [známých problémech pro kontejnery](build-tools-container-issues.md) pro známé problémy najdete v tématu [Kompatibilita verzí kontejnerů Windows](/virtualization/windowscontainers/deploy-containers/version-compatibility) .
 
    ::: moniker-end
+   
+   > [!NOTE]
+   > Kód chyby `3010` se používá k indikaci úspěšnosti s požadovaným restartováním. Další informace najdete v tématu [chybové zprávy programu Msiexec. exe](/windows/win32/msi/error-codes) .
 
 1. V tomto adresáři spusťte následující příkaz.
 
