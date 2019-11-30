@@ -14,33 +14,35 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b3f9763fd670495de9ae4ef8b35a282d644ffe4d
-ms.sourcegitcommit: 7eb2fb21805d92f085126f3a820ac274f2216b4e
+ms.openlocfilehash: 8d45461c7dab250cd43d7a25d8693658c7b8e164
+ms.sourcegitcommit: 3ba2968a4b44643482aadad4d50e1a55bb36b136
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67328392"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74566986"
 ---
-# <a name="walkthrough-create-your-first-document-level-customization-for-excel"></a>Návod: Vytvoření prvního přizpůsobení na úrovni dokumentu pro Excel
-  Tento úvodní názorný postup ukazuje, jak k vytvoření přizpůsobení na úrovni dokumentu pro aplikaci Microsoft Office Excel. Funkce, které vytvoříte v tento druh řešení jsou k dispozici pouze při otevření konkrétní sešitu. Nelze použít přizpůsobení úrovni dokumentu provést změny celou aplikaci, například zobrazení novou kartu pásu karet při otevření libovolné sešitu.
+# <a name="walkthrough-create-your-first-document-level-customization-for-excel"></a>Návod: vytvoření prvního přizpůsobení na úrovni dokumentu pro Excel
+
+  V tomto úvodním návodu se dozvíte, jak vytvořit přizpůsobení na úrovni dokumentu pro systém Microsoft Office Excel. Funkce, které vytvoříte v tomto druhu řešení, jsou k dispozici pouze v případě, že je otevřen konkrétní sešit. Přizpůsobení na úrovni dokumentu nemůžete použít k provádění změn v rámci aplikace, například zobrazení nové karty na pásu karet, když je otevřen libovolný sešit.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
  Tento návod znázorňuje následující úlohy:
 
-- Vytvoření projektu sešitu aplikace Excel.
+- Vytváření projektu excelového sešitu.
 
-- Přidání textu do listu, která je hostována v návrháři aplikace Visual Studio.
+- Přidání textu do listu, který je hostován v návrháři sady Visual Studio.
 
-- Psaní kódu, který se používá k přidání text do přizpůsobené listu, při otevření modelu objektů aplikace Excel.
+- Psaní kódu, který používá objektový model aplikace Excel k přidání textu do přizpůsobeného listu při jeho otevření.
 
-- Vytváření a spouštění projektů a otestovat ho.
+- Sestavení a spuštění projektu pro otestování.
 
-- Čištění dokončený projekt k odstranění nepotřebných sestavení souborů a nastavení zabezpečení z vývojového počítače.
+- Vyčištění dokončeného projektu pro odebrání zbytečných souborů sestavení a nastavení zabezpečení z vývojového počítače.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
 ## <a name="prerequisites"></a>Požadavky
+
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -49,130 +51,145 @@ ms.locfileid: "67328392"
 
 ## <a name="create-the-project"></a>Vytvoření projektu
 
-### <a name="to-create-a-new-excel-workbook-project-in-visual-studio"></a>Chcete-li vytvořit nový projekt sešitu aplikace Excel v sadě Visual Studio
+### <a name="to-create-a-new-excel-workbook-project-in-visual-studio"></a>Vytvoření nového projektu excelového sešitu v aplikaci Visual Studio
 
-1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+1. Spusťte [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
 
-2. Na **souboru** nabídky, přejděte k **nový**a potom klikněte na tlačítko **projektu**.
+2. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
+::: moniker range="vs-2017"
+3. V podokně šablony rozbalte položku **Visual C#**  nebo **Visual Basic**a potom rozbalte položku **Office/SharePoint**.
 
-3. V podokně šablony rozbalte **Visual C#** nebo **jazyka Visual Basic**a potom rozbalte **Office/SharePoint**.
+4. V rozbaleném uzlu **Office/SharePoint** vyberte uzel **doplňky VSTO** .
 
-4. V rozbalených **Office/SharePoint** uzlu, vyberte **Office Add-ins** uzlu.
+5. V seznamu šablon projektu vyberte projekt Excel VSTO pro sešit.
 
-5. V seznamu šablon projektu vyberte projekt doplňku VSTO pro Excel.
+6. Do pole **název** zadejte **FirstWorkbookCustomization**.
 
-6. V **název** zadejte **FirstWorkbookCustomization**.
+7. Klikněte na tlačítko **OK**.
 
-7. Klikněte na **OK**.
+8. V **průvodci Visual Studio Tools for Office projektu**vyberte **vytvořit nový dokument** a klikněte na **OK**.
+::: moniker-end
+::: moniker range=">=vs-2019"
+3. V dialogovém okně **vytvořit nový projekt** vyberte projekt **SEŠITU aplikace Excel VSTO** .
 
-    **Visual Studio Tools for Office Project Wizard** otevře.
+     [!INCLUDE[new-project-dialog-search](../vsto/includes/new-project-dialog-search-md.md)]
 
-8. Vyberte **vytvoříte nový textový dokument**a klikněte na tlačítko **OK**.
+4. Klikněte na tlačítko **Další**.
 
-   - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvoří **FirstWorkbookCustomization** projektu a přidá následující soubory do projektu.
+5. Do pole **název** v dialogu **Konfigurovat nový projekt** zadejte **FirstWorkbookCustomization** a klikněte na **vytvořit**.
 
-   - *FirstWorkbookCustomization*.xlsx – představuje Excelový sešit v projektu. Obsahuje všechny listy a grafy.
+6. V **průvodci Visual Studio Tools for Office projektu**vyberte **vytvořit nový dokument** a klikněte na **OK**.
+::: moniker-end
+   - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvoří projekt **FirstWorkbookCustomization** a do projektu přidá následující soubory.
 
-   - List1 ( *.vb* soubor v jazyce Visual Basic nebo *.cs* souboru pro jazyk Visual C#)-list, který poskytuje návrhová plocha a kód pro první listu v sešitu. Další informace najdete v tématu [hostitelská položka Worksheet](../vsto/worksheet-host-item.md).
+   - *FirstWorkbookCustomization*. xlsx – představuje excelový sešit v projektu. Obsahuje všechny listy a grafy.
 
-   - List2 ( *.vb* soubor v jazyce Visual Basic nebo *.cs* souboru pro jazyk Visual C#)-list, který poskytuje návrhová plocha a kód pro druhý listu v sešitu.
+   - List1 (soubor *. vb* pro Visual Basic nebo soubor *. cs* pro Visual C#) – list, který poskytuje návrhovou plochu a kód pro první list v sešitu. Další informace najdete v tématu [položka hostitele na listu](../vsto/worksheet-host-item.md).
 
-   - Sheet3 – ( *.vb* soubor v jazyce Visual Basic nebo *.cs* souboru pro jazyk Visual C#)-list, který poskytuje návrhová plocha a kód pro třetí listu v sešitu.
+   - List2 (soubor *. vb* pro Visual Basic nebo soubor *. cs* pro Visual C#) – list, který poskytuje návrhovou plochu a kód pro druhý list v sešitu.
 
-   - ThisWorkbook ( *.vb* soubor v jazyce Visual Basic nebo *.cs* souboru pro jazyk Visual C#) – obsahuje návrhová plocha a kód pro přizpůsobení na úrovni sešitu. Další informace najdete v tématu [hostitelská položka Workbook](../vsto/workbook-host-item.md).
+   - Sheet3 (soubor *. vb* pro soubor Visual Basic nebo *. cs* pro Visual C#) – list, který poskytuje návrhovou plochu a kód pro třetí list v sešitu.
 
-     Soubor kódu List1 je automaticky otevřít v návrháři.
+   - ThisWorkbook (soubor *. vb* pro Visual Basic nebo soubor *. cs* pro Visual C#) – obsahuje návrhovou plochu a kód pro přizpůsobení na úrovni sešitu. Další informace najdete v tématu [položka hostitele sešitu](../vsto/workbook-host-item.md).
 
-## <a name="close-and-reopen-worksheets-in-the-designer"></a>Zavřete a znovu otevřete listů v Návrháři
- Pokud úmyslně nebo neúmyslně zavření sešitu nebo listu v Návrháři při vývoji projektu, můžete ho znovu otevřít.
+     Soubor kódu List1 se automaticky otevře v návrháři.
 
-### <a name="to-close-and-reopen-a-worksheet-in-the-designer"></a>Zavřít a znovu otevřít sešit v Návrháři
+## <a name="close-and-reopen-worksheets-in-the-designer"></a>Zavření a opětovné otevření listů v Návrháři
 
-1. Sešit zavřete kliknutím **Zavřít** tlačítko (X) pro okna návrháře.
+ Pokud záměrně nebo omylem zavřete sešit nebo list v Návrháři během vývoje projektu, můžete ho znovu otevřít.
 
-2. V **Průzkumníka řešení**, klikněte pravým tlačítkem myši **List1** soubor kódu a klikněte na tlačítko **Návrhář zobrazení**.
+### <a name="to-close-and-reopen-a-worksheet-in-the-designer"></a>Zavření a opětovné otevření listu v Návrháři
 
-     \- nebo –
+1. Zavřete sešit kliknutím na tlačítko **Zavřít** (X) v okně návrháře.
 
-     V **Průzkumníka řešení**, dvakrát klikněte **List1** soubor kódu.
+2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na soubor s kódem **List1** a klikněte na tlačítko **Návrhář zobrazení**.
 
-## <a name="add-text-to-a-worksheet-in-the-designer"></a>Přidejte text do listu v Návrháři
- Uživatelské rozhraní (UI) můžete navrhnout vaše přizpůsobení tak, že upravíte list, který je otevřen v návrháři. Můžete například přidat text do buněk, použít ve vzorcích nebo přidat ovládací prvky aplikace Excel. Další informace o tom, jak používat návrháře, naleznete v tématu [projektech pro systém Office v prostředí sady Visual Studio](../vsto/office-projects-in-the-visual-studio-environment.md).
+     \- nebo-
 
-### <a name="to-add-text-to-a-worksheet-by-using-the-designer"></a>Chcete-li přidat text do listu pomocí návrháře
+     V **Průzkumník řešení**dvakrát klikněte na soubor s kódem **List1** .
 
-1. V listu, který je otevřen v Návrháři vyberte buňku **A1**a potom zadejte následující text.
+## <a name="add-text-to-a-worksheet-in-the-designer"></a>Přidání textu do listu v Návrháři
 
-     **Tento text byl přidán s použitím návrháře.**
+ Můžete navrhnout uživatelské rozhraní (UI) vlastního nastavení úpravou listu, který je otevřen v návrháři. Například můžete přidat text do buněk, použít vzorce nebo přidat ovládací prvky aplikace Excel. Další informace o použití návrháře naleznete [v tématu projekty sady Office v prostředí Visual Studio](../vsto/office-projects-in-the-visual-studio-environment.md).
+
+### <a name="to-add-text-to-a-worksheet-by-using-the-designer"></a>Přidání textu do listu pomocí návrháře
+
+1. Na listu, který je otevřen v návrháři, vyberte buňku **a1**a zadejte následující text.
+
+     **Tento text byl přidán pomocí návrháře.**
 
 > [!WARNING]
-> Pokud přidáte tento řádek textu do buňky **A2**, se přepíše jiným kódem v tomto příkladu.
+> Pokud přidáte tento řádek textu do buňky **a2**, bude v tomto příkladu přepsán jiným kódem.
 
-## <a name="add-text-to-a-worksheet-programmatically"></a>Přidejte text do listu prostřednictvím kódu programu
- V dalším kroku přidejte kód do souboru kódu List1. Nový kód používá objektový model aplikace Excel k přidání druhý řádek textu do sešitu. Ve výchozím nastavení List1 soubor kódu obsahuje následující generovaného kódu:
+## <a name="add-text-to-a-worksheet-programmatically"></a>Přidání textu do listu prostřednictvím kódu programu
 
-- Částečnou definici `Sheet1` třída, která představuje programovací model list a poskytuje přístup k objektovému modelu Excelu. Další informace najdete [hostitelská položka Worksheet](../vsto/worksheet-host-item.md) a [přehled modelu objektů aplikace Word](../vsto/word-object-model-overview.md). Zbývající část `Sheet1` třída je definována v souboru skryté kódu, který byste neměli měnit.
+ Dále přidejte kód do souboru kódu List1. Nový kód používá objektový model aplikace Excel k přidání druhého řádku textu do sešitu. Ve výchozím nastavení soubor s kódem List1 obsahuje následující generovaný kód:
 
-- `Sheet1_Startup` a `Sheet1_Shutdown` obslužných rutin událostí. Tyto obslužné rutiny událostí jsou volány při Excel načte a uvolní vaše vlastní nastavení. Pomocí těchto obslužných rutin událostí k inicializaci přizpůsobením při spuštění a chcete vyčistit prostředky využívané třídou vaše vlastní nastavení, když je uvolněn. Další informace najdete v tématu [události v projektech pro systém Office](../vsto/events-in-office-projects.md).
+- Částečná definice `Sheet1` třídy, která představuje programovací model listu a poskytuje přístup k objektovému modelu Excelu. Další informace najdete v článku Přehled [hostitelského](../vsto/worksheet-host-item.md) a [objektového modelu aplikace Word](../vsto/word-object-model-overview.md). Zbytek `Sheet1` třídy je definován ve skrytém souboru kódu, který byste neměli upravovat.
 
-### <a name="to-add-a-second-line-of-text-to-the-worksheet-by-using-code"></a>Chcete-li přidat druhý řádek textu do listu s použitím kódu
+- Obslužné rutiny událostí `Sheet1_Startup` a `Sheet1_Shutdown`. Tyto obslužné rutiny události jsou volány, když aplikace Excel načte a uvolní vaše přizpůsobení. Tyto obslužné rutiny událostí použijte k inicializaci vlastního nastavení po jeho načtení a k vyčištění prostředků používaných vaším přizpůsobením při jeho uvolnění. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **List1**a potom klikněte na tlačítko **zobrazit kód**.
+### <a name="to-add-a-second-line-of-text-to-the-worksheet-by-using-code"></a>Přidání druhého řádku textu do listu pomocí kódu
 
-     V sadě Visual Studio otevře soubor kódu.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na **List1**a pak klikněte na **Zobrazit kód**.
 
-2. Nahradit `Sheet1_Startup` obslužné rutiny události s následujícím kódem. Po otevření List1 tento kód přidá druhý řádek textu do listu.
+     Soubor kódu se otevře v aplikaci Visual Studio.
+
+2. `Sheet1_Startup` obslužnou rutinu události nahraďte následujícím kódem. Při otevření List1 přidá tento kód druhý řádek textu do listu.
 
      [!code-csharp[Trin_ExcelWorkbookTutorial#1](../vsto/codesnippet/CSharp/Trin_ExcelWorkbookTutorial/Sheet1.cs#1)]
      [!code-vb[Trin_ExcelWorkbookTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ExcelWorkbookTutorial/Sheet1.vb#1)]
 
 ## <a name="test-the-project"></a>Testování projektu
 
-### <a name="to-test-your-workbook"></a>K otestování vašeho sešitu
+### <a name="to-test-your-workbook"></a>Test sešitu
 
-1. Stisknutím klávesy **F5** sestavení a spuštění projektu.
+1. Stisknutím klávesy **F5** Sestavte a spusťte projekt.
 
-     Při sestavování projektu kód je zkompilován do sestavení, který je přidružený sešit. Visual Studio vloží kopii sešitu a sestavení ve výstupní složce sestavení pro projekt, a nakonfiguruje nastavení zabezpečení na vývojovém počítači povolit vlastní nastavení pro spuštění. Další informace najdete v tématu [řešení pro systém Office sestavení](../vsto/building-office-solutions.md).
+     Při sestavování projektu je kód zkompilován do sestavení, které je přidruženo k sešitu. Visual Studio vloží kopii sešitu a sestavení do výstupní složky sestavení pro projekt a nakonfiguruje nastavení zabezpečení na vývojovém počítači, aby bylo možné vlastní nastavení spustit. Další informace najdete v tématu [sestavování řešení pro systém Office](../vsto/building-office-solutions.md).
 
-2. V sešitu ověřte, že vidíte následující text.
+2. V sešitu ověřte, zda se zobrazí následující text.
 
-     **Tento text byl přidán s použitím návrháře.**
+     **Tento text byl přidán pomocí návrháře.**
 
-     **Tento text byl přidán s použitím kódu.**
+     **Tento text byl přidán pomocí kódu.**
 
-3. Zavření sešitu.
+3. Zavřete sešit.
 
-## <a name="clean-up-the-project"></a>Vyčistěte projekt
- Po dokončení vývoje projektu, byste měli odebrat soubory ve výstupní složce sestavení a nastavení zabezpečení vytvořeného procesem sestavení.
+## <a name="clean-up-the-project"></a>Vyčištění projektu
 
-### <a name="to-clean-up-the-completed-project-on-your-development-computer"></a>Chcete-li vyčistit dokončený projekt na vašem vývojovém počítači
+ Po dokončení vývoje projektu byste měli odebrat soubory z výstupní složky sestavení a nastavení zabezpečení, které vytvořil proces sestavení.
 
-1. V sadě Visual Studio na **sestavení** nabídky, klikněte na tlačítko **Vyčistit řešení**.
+### <a name="to-clean-up-the-completed-project-on-your-development-computer"></a>Vyčištění dokončeného projektu ve vývojovém počítači
+
+1. V aplikaci Visual Studio v nabídce **sestavení** klikněte na možnost **Vyčistit řešení**.
 
 ## <a name="next-steps"></a>Další kroky
- Teď, když jste vytvořili základní přizpůsobení úrovni dokumentu pro Excel, můžete další informace o tom, jak vyvíjet vlastní nastavení v těchto tématech:
 
-- Obecné programování úkolů, které můžete provádět v přizpůsobeních na úrovni dokumentu: [Programování přizpůsobení na úrovni dokumentu](../vsto/programming-document-level-customizations.md).
+ Teď, když jste vytvořili základní přizpůsobení na úrovni dokumentu pro Excel, si můžete přečíst další informace o vývoji vlastních nastavení z těchto témat:
 
-- Úkoly programování, které jsou specifické pro přizpůsobení na úrovni dokumentu pro Excel: [Řešení pro Excel](../vsto/excel-solutions.md).
+- Obecné programovací úkoly, které můžete provádět v přizpůsobení na úrovni dokumentu: [přizpůsobení na úrovni dokumentu programu](../vsto/programming-document-level-customizations.md).
 
-- Použití objektového modelu Excelu: [Přehled modelu objektů aplikace Excel](../vsto/excel-object-model-overview.md).
+- Úkoly programování, které jsou specifické pro přizpůsobení na úrovni dokumentu v aplikaci Excel: [řešení aplikace Excel](../vsto/excel-solutions.md).
 
-- Přizpůsobení uživatelského rozhraní Excel například přidat vlastní kartu na pás karet nebo vytvořením vlastní podokna akcí: [Přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization.md).
+- Pomocí objektového modelu aplikace Excel: [Přehled modelu objektů aplikace Excel](../vsto/excel-object-model-overview.md).
 
-- Provádění úloh, které nejsou možné pomocí objektového modelu Excelu (například hostování spravované ovládací prvky v dokumentech a vazba ovládacích prvků aplikace Excel k datům s použitím Windows Forms pomocí rozšířených objektů aplikace Excel, poskytuje nástroje pro vývoj pro Office v sadě Visual Studio datový model vazby): [Automatizace aplikace Excel s použitím rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md).
+- Přizpůsobení uživatelského rozhraní aplikace Excel, například přidáním vlastní karty na pás karet nebo vytvořením vlastního podokna akcí: [přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization.md).
 
-- Sestavování a ladění přizpůsobení úrovni dokumentu pro aplikaci Excel: [Vytváření řešení pro systém Office](../vsto/building-office-solutions.md).
+- Použití rozšířených objektů aplikace Excel poskytovaných vývojářskými nástroji Office v sadě Visual Studio k provádění úloh, které není možné pomocí modelu objektu aplikace Excel (například hostování spravovaných ovládacích prvků na dokumentech a vazba ovládacích prvků aplikace Excel na data pomocí modelu model Windows Forms datové vazby): [Automatizujte aplikaci Excel pomocí rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md).
 
-- Nasazení přizpůsobení úrovni dokumentu pro aplikaci Excel: [Nasazení řešení Office](../vsto/deploying-an-office-solution.md).
+- Sestavování a ladění přizpůsobení na úrovni dokumentu pro aplikaci Excel: [sestavování řešení pro systém Office](../vsto/building-office-solutions.md).
+
+- Nasazení přizpůsobení na úrovni dokumentu pro Excel: [nasaďte řešení pro Office](../vsto/deploying-an-office-solution.md).
 
 ## <a name="see-also"></a>Viz také:
-- [Přehled vývoje řešení pro Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
-- [Řešení pro aplikaci Excel](../vsto/excel-solutions.md)
-- [Programování přizpůsobení na úrovni dokumentu](../vsto/programming-document-level-customizations.md)
+
+- [Přehled &#40;vývoje řešení pro systém Office VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+- [Řešení pro Excel](../vsto/excel-solutions.md)
+- [Přizpůsobení na úrovni dokumentu programu](../vsto/programming-document-level-customizations.md)
 - [Přehled modelu objektů aplikace Excel](../vsto/excel-object-model-overview.md)
-- [Automatizace aplikace Excel s použitím rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
+- [Automatizace Excelu pomocí rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
 - [Přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization.md)
-- [Vytváření řešení pro systém Office](../vsto/building-office-solutions.md)
-- [Nasazení řešení Office](../vsto/deploying-an-office-solution.md)
+- [Sestavování řešení pro systém Office](../vsto/building-office-solutions.md)
+- [Nasazení řešení pro systém Office](../vsto/deploying-an-office-solution.md)
 - [Přehled šablon projektů Office](../vsto/office-project-templates-overview.md)
