@@ -6,16 +6,16 @@ ms.author: ghogen
 ms.date: 11/20/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: a2f837ba264a12391786f584cf2698e19250fb2e
-ms.sourcegitcommit: 6336c387388707da94a91060dc3f34d4cfdc0a7b
+ms.openlocfilehash: e1b2f332563503dcb4d63faf301000db83eed5ea
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74549957"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706822"
 ---
-# <a name="build-and-debug-containerized-apps-using-visual-studio-or-the-command-line"></a>Sestavování a ladění kontejnerových aplikací pomocí sady Visual Studio nebo příkazového řádku
+# <a name="how-visual-studio-builds-containerized-apps"></a>Jak Visual Studio vytváří kontejnery aplikací
 
-Ať už vytváříte z integrovaného vývojového prostředí sady Visual Studio, nebo nastavíte sestavení příkazového řádku, musíte znát, jak sestavení sady Visual Studio používá souboru Dockerfile k sestavení vašich projektů.  Z důvodů výkonu aplikace Visual Studio dodržuje zvláštní proces pro kontejnerové aplikace. Porozumění způsobu sestavení projektů v aplikaci Visual Studio je obzvláště důležité při přizpůsobení procesu sestavení úpravou souboru Dockerfile.
+Ať už vytváříte z integrovaného vývojového prostředí sady Visual Studio, nebo nastavíte sestavení příkazového řádku, musíte znát, jak Visual Studio používá souboru Dockerfile k sestavení vašich projektů.  Z důvodů výkonu aplikace Visual Studio dodržuje zvláštní proces pro kontejnerové aplikace. Porozumění způsobu sestavení projektů v aplikaci Visual Studio je obzvláště důležité při přizpůsobení procesu sestavení úpravou souboru Dockerfile.
 
 Když Visual Studio sestaví projekt, který nepoužívá kontejnery Docker, vyvolá nástroj MSBuild na místním počítači a vygeneruje výstupní soubory ve složce (obvykle `bin`) v místní složce řešení. Pro kontejnerový projekt ale proces sestavení vezme v úvahu pokyny souboru Dockerfile pro vytvoření kontejnerové aplikace. Souboru Dockerfile, který používá Visual Studio, je rozdělené do několika fází. Tento proces spoléhá na funkci *buildu s více fázemi* Docker.
 
@@ -84,7 +84,7 @@ MSBuild MyProject.csproj /t:ContainerBuild /p:Configuration=Release
 
 Při sestavování řešení z integrovaného vývojového prostředí (IDE) sady Visual Studio uvidíte výstup podobný tomu, co vidíte v okně **výstup** . Vždy použít `/p:Configuration=Release`, protože v případech, kdy aplikace Visual Studio používá optimalizaci sestavení s více fázemi, výsledky při sestavování konfigurace **ladění** nemusí být očekávaným způsobem. Viz [ladění](#debugging).
 
-Pokud používáte projekt Docker Compose, použijte příkaz k sestavení imagí:
+Pokud používáte projekt Docker Compose, použijte tento příkaz k sestavení imagí:
 
 ```cmd
 msbuild /p:SolutionPath=<solution-name>.sln /p:Configuration=Release docker-compose.dcproj
@@ -99,7 +99,7 @@ msbuild /p:SolutionPath=<solution-name>.sln /p:Configuration=Release docker-comp
 - Napraví obrázky v první fázi souboru Dockerfile (fáze `base` ve většině fázemi).  
 - Sestavte souboru Dockerfile a spusťte kontejner.
 
-Zahřívání bude k dispozici pouze v **rychlém** režimu, takže spuštěný kontejner bude mít připojený svazek složky aplikace a jakékoli změny v aplikaci by neměly mít za následek zrušení platnosti kontejneru. Tím se zlepší výkon ladění významně a zkrátí čekací doba pro dlouhotrvající úlohy, jako je například přijímání velkých imagí.
+Zahřívání bude k dispozici pouze v **rychlém** režimu, takže v běžícím kontejneru bude k dispozici složka aplikace připojená ke svazku. To znamená, že jakékoli změny aplikace nebudou mít za následek zrušení platnosti kontejneru. Tím se zlepší výkon ladění významně a zkrátí čekací doba pro dlouhotrvající úlohy, jako je například přijímání velkých imagí.
 
 ## <a name="volume-mapping"></a>Mapování svazků
 

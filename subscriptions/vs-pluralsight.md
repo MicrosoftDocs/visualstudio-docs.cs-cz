@@ -6,12 +6,12 @@ manager: lank
 ms.date: 11/18/2019
 ms.topic: conceptual
 description: Seznamte se s předplatným školení Pluralsight, která jsou součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 26e9227fbd3852e4e9115e06e2882fe6358831a3
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 2e57d3b1ede0320cdf0766e3b4ab64d67b16b808
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491290"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74707001"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Výhody školení Pluralsight v předplatných sady Visual Studio
 
@@ -83,14 +83,14 @@ Odpověď: Ne všechna předplatná Visual Studio Enterprise zahrnují Pluralsig
 ### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>Otázka: Mám přístup k jakýmkoli přizpůsobeným seznamům nebo kanálům pro učení?
 Odpověď: Ano, jako předplatitel sady Visual Studio získáte přístup k expertním kanálům v rámci zvýhodnění školení Pluralsight. Tyto kanály byly speciálně vycházejí odborníky Microsoftu a jsou zaměřeny na učení v oblastech .NET, Azure, DevOps a mobility. Aktivujte svůj Pluralsight zvýhodnění prostřednictvím portálu předplatného sady Visual Studio [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) Získejte přístup k těmto kanálům na cílové stránce Pluralsight –
 
-• Scott Hanselmann (.NET, Azure) – [http://go.pluralsight.com/scott-hanselman](http://go.pluralsight.com/scott-hanselman)
+• Scott Hanselmann (.NET, Azure) – [https://go.pluralsight.com/scott-hanselman](https://go.pluralsight.com/scott-hanselman)
 
-• Donovan Brown (DevOps) – [http://go.pluralsight.com/donovan-brown](http://go.pluralsight.com/donovan-brown)
+• Donovan Brown (DevOps) – [https://go.pluralsight.com/donovan-brown](https://go.pluralsight.com/donovan-brown)
 
-• James Montemagno (mobility) – [http://go.pluralsight.com/james-montemagno](http://go.pluralsight.com/james-montemagno)
+• James Montemagno (mobility) – [https://go.pluralsight.com/james-montemagno](https://go.pluralsight.com/james-montemagno)
 
 ### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>Otázka: co se stane, když se moje Předplatné Pluralsight vyčerpá?
-Odpověď: na konci bezplatného předplatného Pluralsight se můžete rozhodnout koupit předplatné přímo z Pluralsight.  Zajistěte si prosím všechny podrobnosti od [Pluralsight](http://www.pluralsight.com) .
+Odpověď: na konci bezplatného předplatného Pluralsight se můžete rozhodnout koupit předplatné přímo z Pluralsight.  Zajistěte si prosím všechny podrobnosti od [Pluralsight](https://www.pluralsight.com) .
 
 ## <a name="support-resources"></a>Prostředky podpory
 - [Pluralsight Help Center](https://help.pluralsight.com/help) poskytuje pomoc při přebírání Pluralsightch kurzů nebo používání webu Pluralsight.
@@ -98,6 +98,6 @@ Odpověď: na konci bezplatného předplatného Pluralsight se můžete rozhodno
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="next-steps"></a>Další kroky
-Po vytvoření účtu budete připraveni začít s školeními.  Přejděte na [https://www.pluralsight.com](http://www.pluralsight.com) a klepněte na **Přihlásit se v** pravém horním rohu stránky a začněte nový kurz, nebo se vraťte k kurzu, který už probíhá.
+Po vytvoření účtu budete připraveni začít s školeními.  Přejděte na [https://www.pluralsight.com](https://www.pluralsight.com) a klepněte na **Přihlásit se v** pravém horním rohu stránky a začněte nový kurz, nebo se vraťte k kurzu, který už probíhá.
 
 Využijte svůj vlastní vývojový prostor pro vývoj tím, že aktivujete svůj [jednotlivý kredit Azure DevTest](vs-azure.md). 

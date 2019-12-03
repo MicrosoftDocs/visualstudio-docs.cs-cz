@@ -1,17 +1,17 @@
 ---
-title: Využijte výhod DataCamp ve vybraných předplatných sady Visual Studio a Rozšiřte své dovednosti v oblasti datových věd ještě dnes. | Dokumenty Microsoft
+title: Využijte výhod DataCamp ve vybraných předplatných sady Visual Studio a Rozšiřte své dovednosti v oblasti datových věd ještě dnes. | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 11/13/2019
 ms.topic: conceptual
 description: Přečtěte si o předplatném DataCamp, které je součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: ea889814373fa7c970e905bb4a845d5ca67c92e7
-ms.sourcegitcommit: 6f25855de9db455e6d38bc105057d2ed1e7454b9
+ms.openlocfilehash: 4ddfe064539a2ff572a7c89b89d618dff84f63a0
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199880"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706884"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Zvýhodněné školení DataCamp v předplatných sady Visual Studio
 Opravňující předplatná sady Visual Studio zahrnují předplatná pro DataCamp.  Pomocí datacampu se můžete seznámit se všemi dovednostmi pro datové vědy, které potřebujete z pohodlí vašeho prohlížeče. Získáte výběr, kdy a co se naučíte. Výukové datové vědy je snazší než kdy dřív, a to bez softwaru pro instalaci a žádné speciální požadavky na hardware.
@@ -50,7 +50,7 @@ Opravňující předplatná sady Visual Studio zahrnují předplatná pro DataCa
    > [!div class="mx-imgBorder"]
    > Začínáme ![DataCamp](_img/vs-datacamp/vs-datacamp-getting-started.png)
 
-Můžete kdykoli zastavit a pokračovat v školení v další relaci.  Stačí navštívit [http://www.datacamp.com](http://www.datacamp.com)a přihlásit se.  Zobrazí se řídicí panel, ve kterém můžete pokračovat v školení, kde jste pozastavili. Jednoduše klikněte na tlačítko **pokračovat v sledování**.
+Můžete kdykoli zastavit a pokračovat v školení v další relaci.  Stačí navštívit [https://www.datacamp.com](https://www.datacamp.com)a přihlásit se.  Zobrazí se řídicí panel, ve kterém můžete pokračovat v školení, kde jste pozastavili. Jednoduše klikněte na tlačítko **pokračovat v sledování**.
 
 > [!div class="mx-imgBorder"]
 > Pokračování ve školení ![DataCamp](_img/vs-datacamp/vs-datacamp-continue-training.png)
@@ -64,8 +64,8 @@ Můžete kdykoli zastavit a pokračovat v školení v další relaci.  Stačí n
 | Visual Studio Professional s GitHubem Enterprise| VL | tři měsíce                                                            |  Ne.  Dostupné jenom pro nové předplatitele           |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | tři měsíce                                             |  Ne.  Dostupné jenom pro nové předplatitele           |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | tři měsíce                                              |  Ne.  Dostupné jenom pro nové předplatitele           |
-| Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | Není k dispozici |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | Není k dispozici |
+| Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | NEUŽÍVÁ SE. |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | NEUŽÍVÁ SE. |
 
 <sup>1</sup>*zahrnuje: Not for Reprodej (NFR), FTE, (MVP), oblastní ředitel (RD), Microsoft Partner Network (MPN), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark, představte* si
 

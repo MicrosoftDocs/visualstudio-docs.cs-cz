@@ -6,16 +6,16 @@ manager: lank
 ms.date: 07/17/2019
 ms.topic: conceptual
 description: Přečtěte si, jak využít předplatná sady Visual Studio na maximum.
-ms.openlocfilehash: dcbcbc9c11dc5c695a1ca2ed523ad982ff18f5c5
-ms.sourcegitcommit: 9fc8b144d4ed1c46aba87c0b7e1d24454e0eea9d
+ms.openlocfilehash: a8a58cd3fca2443ca84db712cbd2a356351d4499
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68493361"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706974"
 ---
 # <a name="managing-subscriptions"></a>Správa předplatných
 
-[Portál](https://my.visualstudio.com) pro předplatitele sady Visual Studio nabízí možnost spravovat všechna předplatná a členství v programu na jednom místě. V profilu můžete provádět změny, využívat všechny výhody, které jsou součástí vašich předplatných, a rychle a snadno přepínat mezi předplatnými.
+[Portál pro předplatitele](https://my.visualstudio.com) sady Visual Studio nabízí možnost spravovat všechna předplatná a členství v programu na jednom místě. V profilu můžete provádět změny, využívat všechny výhody, které jsou součástí vašich předplatných, a rychle a snadno přepínat mezi předplatnými.
 
 ## <a name="managing-multiple-subscriptions"></a>Správa více předplatných
 
@@ -25,26 +25,26 @@ Portál předplatných sady Visual Studio spojuje všechna předplatná a progra
 
 Na stránce výhody se používané předplatné výrazně zobrazuje v modré hlavičce. Zobrazuje se také v pravém horním rohu stránky.
 > [!div class="mx-imgBorder"]
-> ![Aktivní předplatné](_img/manage-vs-subscriptions/current-subscription-cropped.png)
+> ![aktivní předplatné](_img/manage-vs-subscriptions/current-subscription-cropped.png)
 
 ### <a name="to-switch-between-subscriptions-you-can"></a>K přepínání mezi předplatnými můžete:
 
 - V pravém horním rohu klikněte na rozevírací nabídku a vyberte předplatné ze seznamu.
 - Klikněte na kartu předplatná a potom klikněte na požadované předplatné.
   > [!div class="mx-imgBorder"]
-  > ![Přepínání předplatných](_img/manage-vs-subscriptions/change-subscription-resized.png)
+  > ![přepínání předplatných](_img/manage-vs-subscriptions/change-subscription-resized.png)
 
 ### <a name="if-your-subscription-is-not-visible"></a>Pokud vaše předplatné není viditelné...
 
 - Je možné, že vypršela platnost. Na portálu odběratele se zobrazí jenom aktivní předplatná.
-- Může být přidružena k jiné e-mailové adrese. Pokud se například přihlásíte k předplatnému Visual Studio Professional pomocí svého pracovního nebo školního e-mailu a zadáte Visual Studio Dev Essentials členství s účtem Microsoft, zobrazí se vám jenom předplatné odpovídající e-mailové adrese. slouží k přihlášení k portálu odběratele. Pokud se chcete podívat na jiné předplatné, budete se muset odhlásit a pak se přihlásit pomocí jiné e-mailové adresy.
+- Může být přidružena k jiné e-mailové adrese. Pokud se například přihlásíte k předplatnému Visual Studio Professional pomocí svého pracovního nebo školního e-mailu a zadáte Visual Studio Dev Essentials členství s účtem Microsoft, zobrazí se jenom předplatné odpovídající e-mailové adrese, kterou jste použili k přihlášení na portál odběratele. Pokud se chcete podívat na jiné předplatné, budete se muset odhlásit a pak se přihlásit pomocí jiné e-mailové adresy.
 - Pokud vaše společnost nakupuje předplatné prostřednictvím multilicenčního produktu, váš správce vám pravděpodobně nepřiřadil předplatné nebo mohl vaše předplatné přiřadit jinému uživateli.
 
 ## <a name="renewing-my-subscriptions"></a>Obnovují se moje předplatná
 
 **Standardní předplatná**
-- Microsoft Store: Pokud jste si zakoupili předplatné z [Microsoft Store](http://www.microsoft.com/store), můžete ho také obnovit.
-- Volume License:  Pokud vaše společnost kupuje předplatné prostřednictvím multilicenční licence, správce by měl požádat prodejce, aby obnovil vaše předplatné.
+- Microsoft Store: Pokud jste si zakoupili předplatné z [Microsoft Store](https://www.microsoft.com/store), můžete ho také obnovit.
+- Multilicence: Pokud vaše společnost kupuje předplatné prostřednictvím multilicenční licence, váš správce by měl požádat prodejce, aby obnovil vaše předplatné.
 
 **Cloudová předplatná:**  Cloudová předplatná není nutné obnovovat. Dokud se předplatné zaplatí, zůstane aktivní.
 
@@ -75,10 +75,10 @@ V profilu můžete snadno změnit kontaktní informace a předvolby.
 5. Kliknutím na tlačítko **zpět** v prohlížeči se vraťte na stránku výhody.
 
 ### <a name="setting-communications-preferences"></a>Nastavení předvoleb komunikace
-Pokud chcete dostávat pravidelné aktualizace vašeho předplatného a výhod, včetně bulletinu měsíčních předplatných sady Visual Studio, [aktualizujte předvolby](https://app.vsaex.visualstudio.com/me?workflowID=devprogram&tab=edit) zaškrtnutím políčka pro předplatná sady Visual Studio v profilu sady Visual Studio. . Tyto předvolby můžete kdykoli změnit a zrušit odběr. 
+Pokud chcete dostávat periodické aktualizace o vašem předplatném a výhodách, včetně bulletinu měsíčních předplatných sady Visual Studio, [aktualizujte předvolby](https://app.vsaex.visualstudio.com/me?workflowID=devprogram&tab=edit) zaškrtnutím políčka u předplatných sady Visual Studio v profilu sady Visual Studio. Tyto předvolby můžete kdykoli změnit a zrušit odběr. 
 
    > [!div class="mx-imgBorder"]
-   > ![Nastavení předvoleb](_img/manage-vs-subscriptions/change-prefs.png)
+   > Předvolby ![nastavení](_img/manage-vs-subscriptions/change-prefs.png)
    
 ### <a name="linking-my-subscription-to-existing-azure-devops-services-or-azure-subscriptions"></a>Propojení předplatného s existujícím předplatným Azure DevOps Services nebo Azure
 Pokud se přihlašujete k předplatnému pomocí osobního účet Microsoft (MSA) a máte předplatné, které zahrnuje Azure DevOps Services nebo Microsoft Azure pomocí pracovního nebo školního účtu spravovaného službou Azure, můžete propojit tyto dva odběry. Nazývá se to "alternativní účet" a umožňuje dál používat MSA pro přihlášení k vašemu předplatnému a přitom mít přístup k existujícím prostředkům Azure, Azure DevOps Services nebo IDE, které jsou přidružené k vašim školním nebo pracovním účtům.
@@ -92,12 +92,12 @@ Postup přidání alternativního účtu:
 3. V části **související odkazy**vyberte **Přidat alternativní účet**.
 4. Zadejte svoji e-mailovou adresu pracovního/školního účtu a klikněte na **Přidat**.
 
-Po přidání alternativního účtu ho můžete kdykoli aktualizovat nebo odebrat tak, že kliknete na kartu předplatná  a zvolíte příslušnou možnost v části **související odkazy** .
+Po přidání alternativního účtu ho můžete kdykoli aktualizovat nebo odebrat tak, že kliknete na kartu **předplatná** a zvolíte příslušnou možnost v části **související odkazy** .
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
-### <a name="q-if-i-do-not-renew-my-subscription-how-long-will-microsoft-keep-my-data"></a>Č Pokud moje předplatné neobnovím, jak dlouho bude Microsoft uchovávat moje data?
-O: V závislosti na nákupním kanálu společnost Microsoft udržuje zákaznická data různě dlouhou dobu.
+### <a name="q-if-i-do-not-renew-my-subscription-how-long-will-microsoft-keep-my-data"></a>Otázka: Pokud moje předplatné neobnovím, jak dlouho bude společnost Microsoft uchovávat moje data?
+Odpověď: v závislosti na nákupním kanálu udržuje společnost Microsoft zákaznická data různě dlouhou dobu.
 
 | Kanál                                                | Doba trvání (dny) |
 |--------------------------------------------------------|-----------------|

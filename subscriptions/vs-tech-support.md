@@ -6,12 +6,12 @@ manager: lank
 ms.date: 11/18/2019
 ms.topic: conceptual
 description: Naučte se aktivovat výhody technické podpory, které jsou součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: f88cf221f47f2b8aa89a733a4794e424ac938261
-ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
+ms.openlocfilehash: f7c1353e9f9759b91a7d83d8296a036bb5b80dd7
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74161965"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706984"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Aktivace a používání výhod technické podpory v předplatných sady Visual Studio
 Výhoda technické podpory v rámci předplatných sady Visual Studio je určena pro řešení problémů s opravou chyb v **neprodukčních prostředích** pro produkty, které jsou stále ve fázi běžné podpory [životního cyklu podpory](https://support.microsoft.com/lifecycle/search). Visual Studio Enterprise standardní a roční cloudová předplatná obdrží čtyři incidenty, zatímco Visual Studio Professional standardní a roční předplatné cloudu obdrží dvě incidenty až po dobu 1 roku od aktivace výhod. Aktivace výhody musí nastat, když je předplatné aktuální.
@@ -54,7 +54,7 @@ Popisy na úrovni produktu: Rozšiřte **nedostupné plány podpory**. Pokud uvi
 > Pokud chcete aktivovat svůj účet podpory v jiném jazyce než v angličtině, vyberte ze [seznamu](https://support.microsoft.com/help/14084/activate-support-contract)zemi.
 
 ## <a name="how-to-submit-an-incident-using-your-benefit"></a>Jak odeslat incident pomocí výhody
-Po nastavení **ID kontraktu** a **přístupového ID** můžete použít ho k odeslání incidentu technické podpory [online](http://support.microsoft.com/oas/) (vyžaduje se přihlášení), nebo prostřednictvím [Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) , nebo voláním čísla technické podpory pro vaši zemi. Pokud odešlete svůj incident online, máte možnost mít k dispozici podpora Microsoftu Professional na zpětné volání.
+Po nastavení **ID kontraktu** a **přístupového ID** můžete použít ho k odeslání incidentu technické podpory [online](https://support.microsoft.com/oas/) (vyžaduje se přihlášení), nebo prostřednictvím [Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) , nebo voláním čísla technické podpory pro vaši zemi. Pokud odešlete svůj incident online, máte možnost mít k dispozici podpora Microsoftu Professional na zpětné volání.
 
 ### <a name="already-have-your-contract-id-and-access-id-associated-with-the-account-used-to-sign-in-to-submit-a-tech-support-incident-online"></a>Už máte ID a ID smlouvy přidružené k účtu, který jste použili k přihlášení, abyste mohli odeslat incident technické podpory online?
 Při odesílání incidentu online se nejprve zobrazí výzva k přihlášení. Přihlaste se pomocí účtu, který znáte, k ID kontraktu a ID přístupu. Vaše stávající zvýhodněný plán podpory přidružený k vašemu účtu se zobrazí v kroku 3 v pracovním postupu podpory. Jednoduše vyberte tento plán a pokračujte v odesílání svého případu. Incidenty můžete odeslat až do limitu uvedeného v plánu nebo do data vypršení platnosti plánu, podle toho, co nastane dřív. Jakmile se zbývající incidenty zobrazí jako "0" nebo pokud váš plán skončí, nebude už aktivní.

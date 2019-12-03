@@ -1,28 +1,28 @@
 ---
-title: Používání portálu pro http://my.visualstudio.com předplatitele | Microsoft Docs
+title: Použití portálu pro předplatitele – https://my.visualstudio.com | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 07/19/2019
 ms.topic: conceptual
 description: Přečtěte si o plném rozsahu výhod, které máte k dispozici na portálu předplatných sady Visual Studio.
-ms.openlocfilehash: 5ca5d3a2dcdf04e54159c746b93368b7d56be0da
-ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
+ms.openlocfilehash: 7f1d3654aa49b53a1bb8543c28f6edb517c265bf
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095313"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74705832"
 ---
 # <a name="using-the-subscriber-portal---myvisualstudiocom"></a>Použití portálu pro předplatitele – my.visualstudio.com
 
-Portál předplatných sady Visual [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)Studio je váš prostředek typu vše v jednom, který vám umožní využít celou škálu výhod poskytovaných prostřednictvím předplatného sady Visual Studio.
+Portál předplatných sady Visual Studio, [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs), je váš prostředek typu vše v jednom, který vám umožní využít celou škálu výhod poskytovaných prostřednictvím předplatného sady Visual Studio.
 
 Portál vyžaduje, abyste se přihlásili pomocí identity přidružené k vašemu předplatnému.  Může to být váš účet Microsoft (MSA) nebo e-mailová adresa, kterou vám poskytla organizace, jako je váš zaměstnavatel nebo škola.  Přečtěte si informace o [přihlášení](signing-in.md).
 
 Portál je uspořádaný na šest stránkách.  Každá stránka poskytuje přístup k různým produktům nebo službám, které jsou součástí vašeho předplatného.  Šest stránek jsou výhody, soubory ke stažení, kódy Product Key, odběry, podpora a tržiště.
 
 ## <a name="benefitshttpsmyvisualstudiocombenefitswtmc_idomsftdocs"></a>[Výhodnější](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
-Nástroje a služby, které jsou součástí vašeho předplatného, se zobrazí na stránce výhody jako "dlaždice".  Ne všechny výhody jsou součástí všech předplatných. Dlaždice jsou seskupené do tří kategorií:  Nástroje, profesionální vývoj a podpora.  
+Nástroje a služby, které jsou součástí vašeho předplatného, se zobrazí na stránce výhody jako "dlaždice".  Ne všechny výhody jsou součástí všech předplatných. Dlaždice jsou rozdělené do tří kategorií: nástroje, profesionální vývoj a podpora.  
 
 ### <a name="tools"></a>Nástroje
 Kategorie nástroje je místo, kde najdete základní vývojové nástroje, jako je Visual Studio IDE, Azure DevOps a také nástroje poskytované našimi partnery.  Uvidíte také služby, jako je Azure a Visual Studio App Center.
@@ -53,4 +53,4 @@ Kromě individuálních výhod, které najdete v kategorii podpora na stránce v
 Potřebujete prodloužit platnost cloudového předplatného sady Visual Studio?  Chcete stáhnout nejnovější rozšíření pro produktovou řadu Visual Studio?  Marketplace pomáhá uživatelům najít rozšíření, nástroje a služby, které poskytují Azure DevOps, Azure DevOps Server a Visual Studio Code ještě lepší. Můžete se dokonce stát vydavatelem a publikovat vlastní rozšíření na webu Marketplace.
 
 ## <a name="next-steps"></a>Další kroky
-Přihlaste se na portál [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) a podívejte se na svoje výhody.  Další informace o přihlašování k portálu získáte také pomocí [účtu Microsoft](sign-in-msa.md) (MSA), svého [pracovního nebo školního účtu](sign-in-work.md)a dokonce svého [účtu GitHub](sign-in-github.md). 
+Přihlaste se k portálu na adrese [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) a podívejte se na svoje výhody.  Další informace o přihlašování k portálu získáte také pomocí [účtu Microsoft](sign-in-msa.md) (MSA), svého [pracovního nebo školního účtu](sign-in-work.md)a dokonce svého [účtu GitHub](sign-in-github.md). 
