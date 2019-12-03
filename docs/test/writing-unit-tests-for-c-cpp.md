@@ -8,12 +8,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 824b928c9f89b98f9026059b824fce84969bf69a
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 69b4f38ae43bacd5324b30a3970047b39c32fe99
+ms.sourcegitcommit: 669fc9e397476d7a1d2cda5999710d415f7d6e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189104"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74688861"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Zápis testů jednotek pro C/C++ v aplikaci Visual Studio
 
@@ -79,7 +79,7 @@ Chcete-li povolit testovací kód pro přístup k funkcím projektu, který má 
 
 ### <a name="link-to-object-or-library-files"></a>Odkaz na soubory objektů nebo knihoven
 
-Pokud kód testu neexportuje funkce, které chcete otestovat, můžete přidat výstupní soubory. obj nebo. lib do závislostí testovacího projektu. Viz [propojení testů s objekty nebo soubory knihovny](how-to-use-microsoft-test-framework-for-cpp.md).
+Pokud kód testu neexportuje funkce, které chcete otestovat, můžete přidat výstupní soubory. obj nebo. lib do závislostí testovacího projektu. Viz [propojení testů s objekty nebo soubory knihovny](/visualstudio/test/how-to-use-microsoft-test-framework-for-cpp#same_project).
 
 ### <a name="add-include-directives-for-header-files"></a>Přidat direktivy #include pro hlavičkové soubory
 
@@ -87,7 +87,7 @@ Dále v souboru *. cpp* testu jednotky přidejte direktivu `#include` pro všech
 
 ![Přidat direktivy include](media/cpp-add-includes-test-project.png)
 
-Chcete-li se vyhnout nutnosti zadávat úplnou cestu do každého příkazu include ve zdrojovém souboru, můžete přidat požadované složky v **projektu** > **vlastnosti** > **C/C++**  > **Obecné** > **Další zahrnutí Adresáře**.
+Chcete-li se vyhnout nutnosti zadávat úplnou cestu do každého příkazu include ve zdrojovém souboru, můžete přidat požadované složky v **projektu** > **vlastnosti** > **C/C++**  > **Obecné** > **Další adresáře include**.
 
 ### <a name="write-test-methods"></a>Zápis testovacích metod
 
@@ -100,7 +100,7 @@ Soubor *. cpp* v testovacím projektu má zástupnou třídu a metodu definovano
 
 TEST_CLASS a TEST_METHOD jsou součástí [nativního testovacího rozhraní společnosti Microsoft](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md). **Průzkumník testů** zjišťuje testovací metody v jiných podporovaných rozhraních podobným způsobem.
 
-TEST_METHOD vrací typ void. Chcete-li vytvořit výsledek testu, použijte statické metody ve třídě `Assert` k otestování skutečných výsledků oproti očekávání. V následujícím příkladu Předpokládejme, že `MyClass` má konstruktor, který přebírá `std::string`. Můžeme otestovat, že konstruktor inicializuje třídu podle očekávání, například takto:
+TEST_METHOD vrátí typ void. Chcete-li vytvořit výsledek testu, použijte statické metody ve třídě `Assert` k otestování skutečných výsledků oproti očekávání. V následujícím příkladu Předpokládejme, že `MyClass` má konstruktor, který přebírá `std::string`. Můžeme otestovat, že konstruktor inicializuje třídu podle očekávání, například takto:
 
 ```cpp
 TEST_METHOD(TestClassInit)
