@@ -1,5 +1,5 @@
 ---
-title: 'DA0003: Počet ukázek jádra | Dokumentace Microsoftu'
+title: 'DA0003: mnoho ukázek jádra | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,36 +11,37 @@ ms.assetid: c1f46f77-eb95-42e5-b340-d86bc9de41b4
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cd12b4944da36e480aa44f312b44133c657365f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 69cd81943641e4e0585a67127c70d35a601a5396
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970677"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777735"
 ---
-# <a name="da0003-many-kernel-samples"></a>DA0003: Velký počet vzorků jádra
+# <a name="da0003-many-kernel-samples"></a>DA0003: Vysoký počet ukázek jádra
 
 |||
 |-|-|
 |Id pravidla|DA0003|
-|Kategorie|Použití nástroje pro profilaci|
-|Metod profilace|Vzorkování|
-|Zpráva|Máte vysoký podíl vzorků v režimu jádra. To může znamenat velký objem vstupně-výstupních operací aktivity nebo vysokou míru přepínání kontextu. Zvažte profilaci vaší aplikace znovu pomocí režimu instrumentace.|
-|Typ pravidla|Informace o|
+|Kategorie|Využití Nástroje pro profilaci|
+|Metody profilace|Kontrol|
+|Zpráva|V režimu jádra máte vysokou část ukázek. To může znamenat velký objem vstupně-výstupních aktivit nebo vysoké míry přepínání kontextu. Zvažte možnost profilování aplikace znovu pomocí režimu instrumentace.|
+|Typ pravidla|Informace o nástroji|
 
-## <a name="cause"></a>Příčina
- Podstatnou část ukázky zásobníku volání, které byly shromážděny pro aplikaci se spouští v režimu jádra. Zvažte profilaci vaší aplikace pomocí různých metod profilace.
+## <a name="cause"></a>příčina
+ Významný podíl ukázek zásobníku volání, které byly shromážděny pro aplikaci, byly spuštěny v režimu jádra. Zvažte profilaci aplikace pomocí jiné metody profilace.
 
 ## <a name="rule-description"></a>Popis pravidla
- Ve Windows lze kód spustit v režimu jádra nebo v uživatelském režimu. (V režimu jádra zkratka privilegovaném režimu.) Pouze nižší úrovně systému kódu, jako jsou ovladače zařízení, se spustí v režimu jádra. Aplikace v uživatelském režimu, můžete přejít do režimu jádra k provádění vstupně-výstupních operací, počkejte podproces nebo proces synchronizace primitiv, nebo proveďte volání systému.
+ V systému Windows lze kód spustit buď v režimu jádra, nebo v uživatelském režimu. (Režim jádra se označuje taky jako privilegovaný režim.) V režimu jádra je spuštěn pouze systémový kód nižší úrovně, jako je například ovladač zařízení. Aplikace v uživatelském režimu se může převést do režimu jádra, aby prováděla vstupně-výstupní operace, aby se čekalo na prvky synchronizace vlákna nebo procesu, nebo do systémových volání.
 
- Vzorkování je nejúčinnější, když se profilování aplikací, které tráví většinu svého času věnovat práci v uživatelském režimu. Počet vzorků, které byly získány při spouštění aplikace v režimu jádra, které můžete určit časté vstupně-výstupních operací nebo mohou signalizovat tohoto kontextu, ve kterém dochází k přepínači. Ani jeden z těchto operací můžete prozkoumat pomocí metody vzorkování. Pokud příliš mnoho vzorky režimu jádra jsou odebrány, vzorkování dat nemusí obsahovat dostatek uživatelského režimu vzorků statisticky významná.
+ Vzorkování je nejúčinnější při profilování aplikací, které tráví většinu času při práci v uživatelském režimu. Počet vzorků, které byly shromážděny při spuštění aplikace v režimu jádra, může označovat časté vstupně-výstupní operace nebo může indikovat, že dojde k přepnutí kontextu. Ani jednu z těchto operací nelze prozkoumat pomocí metody vzorkování. Pokud jsou odebírány příliš mnoho vzorků režimu jádra, data vzorkování nemusí obsahovat dostatek vzorků uživatelského režimu, aby byly statisticky důležité.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Zvažte profilaci vaší aplikace znovu pomocí jedné z následujících možností:
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
+ Zvažte možnost profilování aplikace znovu pomocí jedné z následujících možností:
 
-- Profilu pomocí metody instrumentace.
+- Profilujte pomocí metody instrumentace.
 
-- Zvyšte vzorkovací frekvenci se pokouší shromažďovat další ukázky v uživatelském režimu.
+- Zvyšte vzorkovací frekvenci a pokuste se shromáždit další ukázky v uživatelském režimu.

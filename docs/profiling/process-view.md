@@ -1,5 +1,5 @@
 ---
-title: Zobrazení procesů | Dokumentace Microsoftu
+title: Zobrazení procesů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,33 +14,34 @@ ms.assetid: 6d4e2a5d-9f17-4ece-a6f1-75836e1fc382
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a68a2a9f0ca96b943c0b09da5c60268963bc6a7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: da3097c276557238e6f5b521f6f7d3231434cd10
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62973666"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772173"
 ---
 # <a name="process-view"></a>Zobrazení procesů
-Proces zobrazení profilovacích dat pro procesy a vlákna, které byly spuštěny během spuštění profilování.
+Zobrazení procesu zobrazuje data profilování pro procesy a vlákna, které byly provedeny během procesu profilace.
 
- Procesy jsou seřazeny podle názvu. Vlákna jsou uvedené jako podřízené uzly procesu, který je vytvořil. Vlákna jsou pojmenovány podle funkce, který spustil vlákno nebo popisek **[ntdll.dll]** Pokud nejsou k dispozici žádné symboly.
+ Procesy jsou uvedené podle názvu. Vlákna jsou uvedena jako podřízené uzly procesu, který je vytvořil. Vlákna jsou pojmenována funkcí, která spustila vlákno nebo popiskem **[Ntdll. dll]** , pokud nejsou k dispozici žádné symboly.
 
- Přidejte nebo odeberte sloupce, klikněte pravým tlačítkem v zobrazení a pak vyberte **Přidat/odebrat sloupce**. Kromě toho můžete seřadit data kliknutím na název sloupce. Další informace najdete v tématu [jak: Přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md).
+ Chcete-li přidat nebo odebrat sloupce, klikněte pravým tlačítkem myši v zobrazení a vyberte možnost **Přidat nebo odebrat sloupce**. Data můžete také seřadit kliknutím na název sloupce. Další informace najdete v tématu [Postup: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md).
 
- Sloupce zobrazení procesu jsou stejné pro data, která je generována pomocí metody odběru vzorků a instrumentace a pro data, která obsahuje data paměti .NET. Následující tabulka popisuje hodnot sloupců.
+ Sloupce zobrazení procesu jsou stejné pro data generovaná pomocí metod vzorkování a instrumentace a pro data, která obsahují data paměti .NET. V následující tabulce jsou popsány hodnoty sloupců.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Jedinečné ID**|Profiler vygenerovat identifikátor, který je jedinečný na příslušný proces nebo vlákno.|
-|**ID**|Systémem generovaných identifikátor procesu nebo vlákna.|
-|**Název**|Název procesu nebo vlákna.|
-|**Čas zahájení**|Počet milisekund nebo cyklů procesoru od začátku profilace do začátku procesu nebo vlákna.|
-|**Koncový čas**|Počet milisekund nebo cyklů procesoru od začátku profilace do konce procesu nebo vlákna.|
+|**Jedinečné ID**|Identifikátor generovaný profilerem, který je jedinečný pro proces nebo vlákno.|
+|**ÚČET**|Systémem generovaný identifikátor procesu nebo vlákna.|
+|**Jméno**|Název procesu nebo vlákna.|
+|**Čas zahájení**|Počet milisekund nebo procesorů od začátku profilace po začátek procesu nebo vlákna.|
+|**Čas ukončení**|Počet milisekund nebo procesorů od začátku profilace po konec procesu nebo vlákna.|
 
 ## <a name="see-also"></a>Viz také:
-- [Zobrazení dat metod vzorkování](../profiling/profiler-sampling-method-data-views.md)
+- [Zobrazení dat metody vzorkování](../profiling/profiler-sampling-method-data-views.md)
 - [Zobrazení dat metody instrumentace](../profiling/instrumentation-method-data-views.md)
 - [Zobrazení dat paměti .NET](../profiling/dotnet-memory-data-views.md)

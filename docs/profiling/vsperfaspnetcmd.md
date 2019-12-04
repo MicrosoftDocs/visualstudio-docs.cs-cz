@@ -1,5 +1,5 @@
 ---
-title: Příkaz VSPerfASPNetCmd | Dokumentace Microsoftu
+title: VSPerfASPNetCmd | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,35 +9,36 @@ ms.assetid: f9e9f895-57bb-41e8-8bd1-cdaa738ec220
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a6415734a1ea161c7baea26d2abde6d5390ce12
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8c9bf465b4da7f305e97a18099a7e27db8eab6b4
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62581184"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778008"
 ---
 # <a name="vsperfaspnetcmd"></a>VSPerfASPNetCmd
-**VSPerfASPNetCmd.exe** nástroj příkazového řádku vám umožní profilu technologie ASP.Net webové servery bez nutnosti nastavit proměnné prostředí nebo restartovat počítač. Použití **VSPerfASPNetCmd.exe** místo [VSPerfCmd](../profiling/vsperfcmd.md) Pokud profilujete webů ASP.NET a není nutné další funkce poskytovaná modulem **VSPerfCmd**. Další informace o **VSPerfASPNetCmd**, naleznete v tématu [profilace pohotová webových stránek pomocí VSPerfASPNETCmd](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md). **Příkaz VSPerfASPNetCmd** je upřednostňovaný příkazového řádku nástroje pro použití při použití samostatného profileru Profilovat webu ASP.NET.
+Nástroj příkazového řádku **VSPerfASPNETCmd. exe** umožňuje profilovat weby ASP.NET, aniž byste museli nastavovat proměnné prostředí nebo restartovat počítač. Když vytváříte profilování ASP.NET websites a nepotřebujete další funkce, které poskytuje **VSPerfCmd**, použijte **VSPerfASPNETCmd. exe** místo [VSPerfCmd](../profiling/vsperfcmd.md) . Další informace o **VSPerfASPNETCmd**najdete v tématu [rychlé profilování webu pomocí VSPerfASPNETCmd](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md). **VSPerfASPNETCmd** je preferovaný nástroj příkazového řádku, který se použije při použití samostatného profileru k profilování webu ASP.NET.
 
 ## <a name="syntax"></a>Syntaxe
- **vsperfaspnetcmd** [/*Options*] *Website*
+ **VSPerfASPNETCmd** [/*Možnosti*] *Web*
 
 ## <a name="options"></a>Možnosti
 
 |Možnost|Popis|
 |------------|-----------------|
-|**/ Ukázkové** nebo **/s**|Profily webu pomocí metody vzorkování. **/ Ukázkové** je výchozí metodou. / Ukázkové nelze použít s **/Trace**.|
-|**/ Trasování** nebo **/t**|Profily webu pomocí metody instrumentace. / Trasování nelze použít s **/Sample**.|
-|**Či na disku paměti**[**:**`Type`] nebo **/m**[**:**{**a**&#124;**l**}]|Profily přidělení paměti a volitelně profily správu životnosti objektů (uvolnění paměti). **/ Paměti** jde použít s vzorkování nebo metody instrumentace.<br /><br /> *Typ* může být jedna z následujících akcí:<br /><br /> -   **přidělení** (nebo **a**) shromažďuje jenom data přidělení paměti.<br />-   **Doba života** (nebo **l**) shromažďuje data o přidělování a objekt životním cyklu paměti.<br /><br /> Výchozí hodnota `Type` je **přidělení**.|
-|**/ Tip** nebo **/i**|Přidá podrobné žádosti ASP.NET a informace o volání ADO.NET data profilace. **/ Tip** jde použít s vzorkování nebo instrumentace metody a je možné s **Memory** možnost.|
-|**/ Output:** `File` nebo   **/o:**`File`|Určuje cestu a název souboru dat profilování (. *Vsp*) soubor.|
-|**/ NoWait** nebo **/n**|Vrátí příkaz výzva okamžitě tak, aby další příkazy lze použít v okně příkazového řádku. Je nutné zadat **příkaz VSPerfASPNETCmd/Shutdown** na samostatný příkazový řádek vypnout profilování.|
-|**/PackSymbols**[:{**on**&#124;**off**}or   **/p**[:{**on**&#124;**off**}|Vloží symboly (názvy funkce a parametrů, atd.) v profilaci dat (. *Vsp*) soubor.|
-|**/ Shutdown:** `Website`nebo   **/d:**`Website`|Zapne profilaci vypnout. Použijte parametr příkazového řádku po použití **/nowait** možnosti spuštění profilace, nebo pokud profiler neočekávaně ukončí. Zadejte stejnou adresu url, kterou jste použili v původním **VSPerfASPNETCmd** příkazu.|
-|`Website`|Adresu url webu, který má být profilována.|
+|**/Sample** nebo **/s**|Na webu profily pomocí metody vzorkování. **/Sample** je výchozí metoda. /Sample nelze použít s **/Trace**.|
+|**/Trace** nebo **/t**|Na webu profily pomocí metody instrumentace. /Trace nelze použít s **/Sample**.|
+|**/Memory**[ **:** `Type`] nebo **/m**[ **:** {**a**&#124;**l**}]|Profily – přidělení paměti a volitelné profily životnosti objektů (uvolňování paměti). **/Memory** se dá použít s metodou vzorkování nebo instrumentace.<br /><br /> *Typ* může být jeden z následujících:<br /><br /> **přidělení** -    **(nebo)** shromažďuje pouze data o přidělování paměti.<br />-   **Doba života** (nebo **l**) shromažďuje data o přidělování paměti a životnosti objektů.<br /><br /> Výchozí `Type` je **přidělení**.|
+|**/Tip** nebo **/i**|Přidá podrobné informace o žádosti ASP.NET a informace o volání ADO.NET do dat profilace. **/Tip** se dá použít s metodou vzorkování nebo instrumentace a dá se použít s možností **/Memory** .|
+|**/Output:** `File` nebo **/o:** `File`|Určuje cestu a název souboru dat profilování (. *VSP*) soubor.|
+|**/Nowait** nebo **/n**|Vrátí příkazový řádek okamžitě, aby bylo možné použít další příkazy v okně příkazového řádku. Chcete-li zapnout profilování, je nutné zadat **VSPerfASPNETCmd/Shutdown** na samostatném příkazovém řádku.|
+|**/PackSymbols**[: {**on**&#124;**off**} nebo **/p**[ **: {** &#124;**off**}|Vloží symboly (funkce a názvy parametrů atd.) do dat profilace (. *VSP*) soubor.|
+|**/Shutdown:** `Website`nebo **/d:** `Website`|Zapne profilaci. Použijte jako jedinou možnost na příkazovém řádku po použití možnosti **/nowait** ke spuštění profilování nebo pokud profiler neočekávaně skončí. Zadejte stejnou adresu URL, jakou jste použili v původním příkazu **VSPerfASPNETCmd** .|
+|`Website`|Adresa URL webu, který se má profilovat|
 
 ## <a name="see-also"></a>Viz také:
-- [Pohotová profilace stránek pomocí VSPerfASPNETCmd webových](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md)
-- [Webové aplikace ASP.NET profilu](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Rychlé profilování webu pomocí VSPerfASPNETCmd](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md)
+- [ASP.NET webové aplikace Profile](../profiling/command-line-profiling-of-aspnet-web-applications.md)

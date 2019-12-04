@@ -10,24 +10,25 @@ ms.assetid: 32c612ea-d077-44ba-8e6f-3a96333bad00
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cff41d3ff03efd70eb876531a2d7b8602d3f8796
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: b905b0de69110f5f7cd684deb6fe6c5955bb4b0c
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72910161"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777400"
 ---
 # <a name="da0505-average-private-bytes-allocated-for-the-process-being-profiled"></a>DA0505: Průměr Nesdílených bajtů přidělených pro profilovaný Proces
 
 |||
 |-|-|
-|ID pravidla|DA0505|
+|Id pravidla|DA0505|
 |Kategorie|Správa prostředků|
-|Metoda profilace|Všechny|
+|Metoda profilace|Vše|
 |Zpráva|Tyto informace se shromáždily jenom pro informace. Čítač procesu soukromých bajtů měří virtuální paměť přidělenou procesem, který vytváříte profilování. Hodnota hlášené je průměr vypočítaný ve všech intervalech měření.|
-|Typ pravidla|Informace o|
+|Typ pravidla|Informace o nástroji|
 
  Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit aspoň 10 vzorků.
 

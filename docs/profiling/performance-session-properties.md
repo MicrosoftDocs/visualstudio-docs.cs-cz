@@ -9,14 +9,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c8a5058d52684ec08e13641953c789c244f2fa9
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 1b3bafa976c8e57f468a3f3f59a3b6b19308fd1b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72910150"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772199"
 ---
 # <a name="performance-session-properties"></a>Vlastnosti výkonnostní relace
 
@@ -32,7 +33,7 @@ Relace výkonu má následující stránky vlastností:
 
 Tato nastavení umožňují vybrat metodu profilace, přidat kolekci objektů rozhraní .NET a data o životnosti a zadat výchozí umístění sestavy a zásady vytváření názvů.
 
-Další informace naleznete v tématu:
+Další informace najdete v části .
 
 [Postupy: Výběr metod shromažďování](../profiling/how-to-choose-collection-methods.md)
 
@@ -40,7 +41,7 @@ Další informace naleznete v tématu:
 
 - [Postupy: Nastavení možností názvu datového souboru výkonu](../profiling/how-to-set-performance-data-file-name-options.md)
 
-## <a name="launch"></a>Spuštění
+## <a name="launch"></a>Spustit
 
 Tato nastavení umožňují vybrat ze seznamu binárních souborů a zadat pořadí spouštění binárních souborů.
 
@@ -71,7 +72,7 @@ Další informace najdete v tématu [shromažďování dat interakce vrstev](../
 
 Tato nastavení umožňují shromažďovat údaje o výkonu pro kód JScript na [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webové stránky a určovat události **před instrumentací** a **po** instrumentaci, které chcete provést před nebo po procesu instrumentace.
 
-Další informace naleznete v tématu:
+Další informace najdete v části .
 
 [Postupy: profilování kódu JavaScriptu na webových stránkách](../profiling/how-to-profile-javascript-code-in-web-pages.md)
 
@@ -87,7 +88,7 @@ Další informace najdete v tématu [Postup: shromažďování dat ČÍTAČŮ pr
 
 Během profilace můžete shromažďovat data z poskytovatelů trasování událostí. Data můžete zobrazit pomocí `/calltrace` možnost nástroje příkazového řádku *VSPerfReport. exe* . Další informace o trasování událostí pro Windows (ETW) najdete v tématu věnovaném [trasování událostí](/windows/win32/etw/about-event-tracing).
 
-Další informace naleznete v tématu:
+Další informace najdete v části .
 
 [Postupy: Shromažďování dat trasování událostí pro Windows](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
 
@@ -103,7 +104,7 @@ Tato možnost umožňuje shromažďovat data z čítačů sledování výkonu sy
 
 Tato nastavení umožňují přidat možnosti do procesu instrumentace zadáním jedné nebo více možností nástroje pro profilaci [VSInstr](../profiling/vsinstr.md) příkazového řádku. Můžete také zadat verzi společného modulu runtime k profilaci, když aplikace používá více než jednu verzi.
 
-Další informace naleznete v tématu:
+Další informace najdete v části .
 
 [Postupy: Určení modulu runtime .NET Framework](../profiling/how-to-specify-the-dotnet-framework-runtime.md)
 

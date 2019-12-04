@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Omezení instrumentace na konkrétní knihovny DLL | Dokumentace Microsoftu'
+title: 'Postupy: omezení instrumentace na konkrétní knihovny DLL | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,67 +7,68 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b39689219b113343162aa0e814cfa68e2422f08d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 066262a3fae35e82904b011165813e9dd75d9987
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62980912"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778814"
 ---
-# <a name="how-to-limit-instrumentation-to-specific-dlls"></a>Postupy: Omezení instrumentace na konkrétní knihovny DLL
+# <a name="how-to-limit-instrumentation-to-specific-dlls"></a>Postupy: omezení instrumentace na konkrétní knihovny DLL
 
-Pomocí metody profilace instrumentace můžete omezit shromažďování dat profilování na jeden nebo více knihovny DLL v aplikaci. Chcete-li Profilovat jeden nebo více knihoven DLL v aplikaci, vytvoříte relace výkonu, která zahrnuje. *dll* soubory jako cíle. Můžete určit knihovny DLL, které chcete do profilu jako projekty v řešení sady Visual Studio nebo jako nezávislé binární soubory.
+Pomocí metody profilace instrumentace můžete omezit shromažďování dat profilování na jednu nebo více knihoven DLL v aplikaci. Chcete-li profilovat jednu nebo více knihoven DLL v aplikaci, vytvořte relaci výkonu, která zahrnuje. soubory *DLL* jako cíle. Můžete určit knihovny DLL, které chcete profilovat jako projekty v řešení aplikace Visual Studio nebo jako nezávislé binární soubory.
 
-## <a name="to-limit-instrumentation-to-specific-dlls-in-a-visual-studio-solution"></a>K omezení instrumentace na konkrétní knihovny DLL v řešení sady Visual Studio
+## <a name="to-limit-instrumentation-to-specific-dlls-in-a-visual-studio-solution"></a>Omezení instrumentace na konkrétní knihovny DLL v řešení sady Visual Studio
 
-1. Otevřete řešení, které obsahuje knihovnu DLL v sadě Visual Studio.
+1. Otevřete řešení, které obsahuje knihovnu DLL v aplikaci Visual Studio.
 
-2. Na **analyzovat** nabídce vyberte možnost **spustit Průvodce výkonem**.
+2. V nabídce **analyzovat** vyberte možnost **Spustit Průvodce výkonem**.
 
-3. Zvolte **instrumentace** jako metodu profilace a pak klikněte na tlačítko **Další**.
+3. Jako metodu profilace zvolte **instrumentace** a pak klikněte na **Další**.
 
-4. Z **které z následujících dostupných cílů chcete profil?**, vyberte název. *Knihovna DLL* projektu a pak klikněte na tlačítko **Další**.
+4. Z **toho, který z následujících dostupných cílů chcete profilovat?** vyberte název. projekt *knihovny DLL* a potom klikněte na tlačítko **Další**.
 
-5. Klikněte na tlačítko **Dokončit** ukončíte průvodce a zobrazí novou relaci výkonu v **prohlížeč výkonu** okna.
+5. Kliknutím na tlačítko **Dokončit** ukončíte průvodce a zobrazíte novou relaci výkonu v okně **prohlížeč výkonu** .
 
-6. Klikněte pravým tlačítkem na **cíle** a pak vyberte **přidat cílový projekt**.
+6. Klikněte pravým tlačítkem na **cíle** a pak vyberte **Přidat cílový projekt**.
 
-7. Z **přidat cílový projekt** vyberte spustitelný projekt, který chcete použít k knihovny DLL.
+7. V seznamu **Přidat cílový projekt** vyberte spustitelný projekt, který chcete použít pro cvičení knihovny DLL.
 
-     Volitelné. Můžete přidat všechny projekty knihovny DLL, které chcete do profilu.
+     Volitelné. Můžete přidat všechny projekty knihoven DLL, které chcete profilovat.
 
-8. Zabránění shromažďování dat pro přidání projektu, klikněte pravým tlačítkem na název projektu a poté zrušte zaškrtnutí **instrumentace** zaškrtávací políčko.
+8. Chcete-li zabránit shromažďování dat pro přidaný projekt, klikněte pravým tlačítkem myši na název projektu a poté zrušte zaškrtnutí políčka **instrumentace** .
 
-## <a name="to-specify-specific-dlls-to-profile-as-independent-binaries"></a>Chcete-li určit konkrétní knihovny DLL do profilu jako nezávislé binárních souborů
+## <a name="to-specify-specific-dlls-to-profile-as-independent-binaries"></a>Určení specifických knihoven DLL pro profilování jako nezávislých binárních souborů
 
-1. Otevřít Visual Studio.
+1. Otevřete Visual Studio.
 
-2. Na **analyzovat** nabídce vyberte možnost **spustit Průvodce výkonem**.
+2. V nabídce **analyzovat** vyberte možnost **Spustit Průvodce výkonem**.
 
-3. Z **které z následujících dostupných cílů chcete profil**, vyberte **Profilovat dynamickou knihovnu (. Knihovny DLL)** a potom klikněte na tlačítko **Další**.
+3. Z **toho, který z následujících dostupných cílů byste chtěli profilovat**, vyberte **profil knihovny DLL (. DLL)** a poté klikněte na tlačítko **Další**.
 
 4. Na druhé stránce průvodce proveďte následující kroky:
 
-    - Zadejte název a cesta k souboru. *dll* soubor, který chcete profil v **cesta ke knihovně Dll**. Můžete také kliknout na tlačítko se třemi tečkami (...) a vyhledejte soubor v **dynamické knihovny DLL do profilu** dialogové okno. Všimněte si, že je nutné zadat kopii. *dll* soubor, který se spustí spustitelný soubor (. *soubor exe*) soubor, který vyberete dále.
+    - Zadejte cestu a název souboru. soubor *DLL* , který chcete profilovat v **cestě knihovny DLL**. Můžete také kliknout na tlačítko se třemi tečkami (...) a vyhledat soubor v dialogovém okně **Knihovna dynamického propojení do profilu** . Všimněte si, že je nutné zadat kopii. soubor *DLL* , který bude spuštěn spustitelným souborem (. *soubor exe*), který vyberete další.
 
-    - Zadejte cestu a název spustitelného souboru (. *soubor exe*) soubor, který se budou uplatňovat. *dll* v **cesta ke spustitelnému souboru**. Můžete také kliknout na tlačítko se třemi tečkami (...) a vyhledejte soubor v **spustitelný soubor ke spuštění** dialogové okno.
+    - Zadejte cestu a název souboru spustitelného souboru (. *exe*), který bude vyvolávat. *Knihovna DLL* v **cestě ke spustitelnému souboru**. Můžete také kliknout na tlačítko se třemi tečkami (...) a vyhledat soubor v dialogovém okně **spustitelného souboru, který se má spustit** .
 
-    - Volitelné. Zadejte jakékoli argumenty příkazového řádku, které chcete předat do spustitelného souboru v **argumenty příkazového řádku**. V případě potřeby zadejte pracovní adresář pro aplikaci v **pracovní adresář**.
+    - Volitelné. Zadejte argumenty příkazového řádku, které chcete předat spustitelnému souboru v **argumentech příkazového řádku**. V případě potřeby zadejte pracovní adresář pro aplikaci v **pracovním adresáři**.
 
-    - Klikněte na **Další**.
+    - Klikněte na tlačítko **Další**.
 
-5. Zvolte **instrumentace** jako metodu profilace a pak klikněte na tlačítko **Další**.
+5. Jako metodu profilace zvolte **instrumentace** a pak klikněte na **Další**.
 
-6. Klikněte na tlačítko **Dokončit** ukončíte průvodce a zobrazí novou relaci výkonu v **prohlížeč výkonu** okna.
+6. Kliknutím na tlačítko **Dokončit** ukončíte průvodce a zobrazíte novou relaci výkonu v okně **prohlížeč výkonu** .
 
-7. Volitelné. Abyste mohli přidat další. *dll* soubory, klikněte pravým tlačítkem na **cíle** a pak vyberte **přidat cílový binární**. Vyberte soubory z **přidat cílový binární** dialogové okno.
+7. Volitelné. Pro přidání dalších. soubory *DLL* , klikněte pravým tlačítkem na **cíle** a pak vyberte **Přidat cílový binární soubor**. Vyberte soubory z dialogového okna **Přidat cílový binární soubor** .
 
     > [!NOTE]
-    > Nezadávejte spustitelný soubor (. *soubor exe*) soubor, který zpracovává knihovny DLL.
+    > Nezadávejte spustitelný soubor (. *exe*) soubor, který vykonává knihovny DLL.
 
 ## <a name="see-also"></a>Viz také:
 
-[Sběr dat řídit](../profiling/controlling-data-collection.md)
-[jak: Omezení instrumentace na konkrétní funkce](../profiling/how-to-limit-instrumentation-to-specific-functions.md)
+[Řízení shromažďování dat](../profiling/controlling-data-collection.md)
+[Postupy: omezení instrumentace na konkrétní funkce](../profiling/how-to-limit-instrumentation-to-specific-functions.md)

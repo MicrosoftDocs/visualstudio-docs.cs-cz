@@ -1,5 +1,5 @@
 ---
-title: Filtr zobrazení sestav výkonu | Dokumentace Microsoftu
+title: Filtr zobrazení sestav výkonu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,32 +9,33 @@ ms.assetid: 35f89d86-4683-4db1-aa0c-ae0ce65fa524
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ae4c5281386cb43d4dddb55db8578aea7515dce1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9a5642a8e153a4dfc7705d91d933397b6f8acb37
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793978"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778451"
 ---
 # <a name="performance-report-view-filter"></a>Filtr zobrazení sestav výkonu
-**Filtr zobrazení sestav Profiler** se nachází v horní části okna **sestavu výkonu** okna. Pokud ho nevidíte, klikněte na tlačítko **zobrazit filtr** tlačítko.
+Okno **filtru zobrazení sestav profileru** se nachází v horní části okna **sestavy výkonu** . Pokud ho nevidíte, klikněte na tlačítko **Zobrazit filtr** .
 
- Můžete upravit každou klauzuli filtru pro upřesnění výsledků. Tyto sloupce jsou k dispozici v Tvůrce filtru.
+ Pro upřesnění výsledků můžete upravit každou klauzuli filtru. V Tvůrci filtru jsou k dispozici následující sloupce.
 
-|Filtrovat položky|Popis|
+|Filtrovat položku|Popis|
 |-----------------|-----------------|
-|A/nebo|Zvolte **a** Pokud tuto klauzuli i další klauzule musí být hodnota true pro odpovídat výsledek. Zvolte **nebo** Pokud tuto klauzuli nebo další klauzule může být hodnota true pro odpovídat výsledek.|
-|Pole|Vyberte pole pro použití v klauzuli filtru ze seznamu datových polí, které jsou k dispozici v aktuálním souboru sestavy.|
-|Operátor|Vyberte operátor, který určuje vztah, který chcete, aby mezi pole a hodnotu.<br /><br /> = Rovná se<br /><br /> <> Nerovná se<br /><br /> < Menší než<br /><br /> > Větší než<br /><br /> < = menší než nebo rovno<br /><br /> > = je větší než nebo rovno|
-|Value|Vyberte nebo zadejte hledaná hodnota. Některá pole jsou uvedeny dostupné hodnoty pro pole.|
+|A/nebo|Vyberte **a** Pokud má tato klauzule a další klauzule hodnotu true, aby odpovídaly výsledku. Vyberte **nebo** Pokud má tato klauzule nebo další klauzule hodnotu true, aby odpovídaly výsledku.|
+|Pole|Vyberte pole, které chcete použít v klauzuli Filter, ze seznamu datových polí, která jsou k dispozici v aktuálním souboru sestavy.|
+|Operátor|Vyberte operátor, který určuje vztah, který chcete mezi polem a hodnotou.<br /><br /> = Equals<br /><br /> < > nerovná se<br /><br /> < Menší než<br /><br /> > Větší než<br /><br /> < = menší než nebo rovno<br /><br /> > = větší než nebo rovno|
+|Hodnota|Vyberte nebo zadejte hodnotu, která se má hledat. Některá pole uvádějí dostupné hodnoty pro pole.|
 
- Klauzulí filtru můžete přidat, dokud si myslíte, že filtr získáte nejlepší výsledky. Klikněte na tlačítko **spustit filtr** použijte filtr do datového souboru.
+ Klauzule filtru můžete přidat, dokud nebudete mít pocit, že vám filtr poskytne nejlepší výsledky. Kliknutím na **Spustit filtr** použijete filtr pro datový soubor.
 
- Z **značky** zobrazení sestavy můžete vygenerovat klauzulí filtru k omezení dat v zobrazeních sestav o datech, která se shromažďují mezi dvěma značkami. Vyberte značky, které chcete počáteční a koncové sestavy dat, klikněte pravým tlačítkem a vyberte buď **přidat filtr na značky** nebo **přidat filtr na časová razítka**. Oba filtry omezují data v aktuální datový soubor do stejné značky span; **Přidat filtr na značky** lze použít u jiných souborů .vsp.
+ Ze zobrazení **značek značky** můžete generovat klauzule filtru k omezení dat v zobrazeních sestavy na data, která jsou shromažďována mezi dvěma značkami. Vyberte značky, které chcete spustit a ukončit data sestavy, potom klikněte pravým tlačítkem myši a vyberte možnost **Přidat filtr do značek** nebo **Přidat filtr na časová razítka**. Oba filtry omezují data v aktuálním datovém souboru do stejného rozsahu. **Přidání filtru do značek** lze použít pro jiné soubory. vsp.
 
- Pokud chcete filtr uložit, klikněte na tlačítko **Exportovat filtr** na **Sestava výkonu** nástrojů a potom zadejte umístění a název. *vspf* souboru. Chcete-li načíst dříve uložený filtr, klikněte na tlačítko **filtru importu** a vyhledejte soubor uložený filtr. Filtr souborů lze také filtrovat datových souborů na počítačích, které mají samostatné nástroje pro profilaci nainstalované. Další informace najdete v tématu [VSPerfReport](../profiling/vsperfreport.md).
+ Filtr uložíte tak, že kliknete na tlačítko **Exportovat filtr** na panelu nástrojů **Sestava výkonu** a pak zadáte umístění a název souboru pro. soubor *vspf* Pokud chcete načíst dříve uložený filtr, klikněte na **importovat filtr** a vyhledejte uložený soubor filtru. Filtrovat soubory lze také použít k filtrování datových souborů v počítačích, ve kterých je nainstalován samostatný Nástroje pro profilaci. Další informace najdete v tématu [VSPerfReport](../profiling/vsperfreport.md).
 
 ## <a name="see-also"></a>Viz také:
 - [Analýza dat nástrojů pro měření výkonu](../profiling/analyzing-performance-tools-data.md)

@@ -1,5 +1,5 @@
 ---
-title: 'DA0013: Vysoké použití String.Split nebo String.Substring | Dokumentace Microsoftu'
+title: 'DA0013: vysoké použití String. Split nebo String. substring | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,32 +14,33 @@ ms.assetid: f501f423-bef9-4e08-bf96-c9ac9957e5a2
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 83ddc7462b703ef28a52b531aa379b46198516df
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d42469ac5236a41eda96af5d1fe896a5ed84a321
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62936467"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779400"
 ---
-# <a name="da0013-high-usage-of-stringsplit-or-stringsubstring"></a>DA0013: Vysoký výskyt použití String.Split nebo String.Substring
+# <a name="da0013-high-usage-of-stringsplit-or-stringsubstring"></a>DA0013: Vysoké použití String.Split nebo String.Substring
 
 |||
 |-|-|
 |Id pravidla|DA0013|
-|Kategorie|Informace o používání rozhraní .NET framework|
-|Metod profilace|Vzorkování|
-|Zpráva|Zvažte snížení použití funkcí String.Split a String.Substring.|
+|Kategorie|Pokyny k použití .NET Framework|
+|Metody profilace|Kontrol|
+|Zpráva|Zvažte snížení využití funkcí String. Split a String. substring.|
 |Typ pravidla|Upozornění|
 
-## <a name="cause"></a>Příčina
- Volání metody System.String.Split nebo System.String.Substring jsou podstatnou část dat profilování. Zvažte použití System.String.IndexOf nebo System.String.IndexOfAny Pokud testujete existenci podřetězce v řetězci.
+## <a name="cause"></a>příčina
+ Volání metod System. String. Split nebo System. String. substring představují významnou část dat profilace. Zvažte použití System. String. IndexOf nebo System. String. IndexOfAny, pokud testujete existenci podřetězce v řetězci.
 
 ## <a name="rule-description"></a>Popis pravidla
- Metoda Split funguje na objekt řetězce a vrátí nové pole řetězců obsahující podřetězců původní. Funkce přiděluje paměť pro vrácený objekt pole a přiděluje nový objekt řetězce pro každý prvek pole, které nalezne. Substr – metoda podobně funguje na objekt řetězce a vrátí nový řetězec, který je ekvivalentní k požadovaný dílčí řetězec.
+ Metoda Split pracuje na objektu String a vrací nové pole řetězců, které obsahuje podřetězce originálu. Funkce přiděluje paměť pro vrácený objekt Array a přidělí objekt New String pro každý prvek pole, který najde. Podobně metoda substr funguje na objektu String a vrátí nový řetězec, který je ekvivalentní požadovanému podřetězci.
 
- Pokud Správa přidělování paměti je velmi důležité ve vaší aplikaci, zvažte použití metody String.Split a String.Substr alternativy. Metoda IndexOf nebo IndexOfAny například můžete použít k vyhledání konkrétní podřetězce v rámci znak řetězec bez vytvoření nové instance třídy řetězec.
+ Pokud je Správa přidělení paměti ve vaší aplikaci kritická, zvažte použití alternativ pro metody String. Split a String. substr. Například můžete použít metodu IndexOf nebo IndexOfAny k vyhledání konkrétního podřetězce v rámci řetězce znaků bez vytvoření nové instance třídy String.
 
-## <a name="how-to-investigate-a-warning"></a>Zkoumání upozornění
- Dvakrát klikněte na tuto zprávu najdete v **seznam chyb** okno a přejděte [zobrazení podrobností funkce](../profiling/function-details-view.md) odběru vzorků data profilu. Zkontrolujte volání funkcí najít v částech programu, které se používají nejvíce často System.String.Split nebo System.String.Substr metody. Pokud je to možné použijte metodu IndexOf nebo IndexOfAny vyhledání konkrétní podřetězce v rámci znak řetězec bez vytvoření nové instance třídy řetězec.
+## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění
+ Dvakrát klikněte na zprávu v okně **Seznam chyb** , abyste přešli na [zobrazení podrobností o funkcích](../profiling/function-details-view.md) profilu vzorkování. Zkontrolujte volání funkcí a vyhledejte části programu, které usnadňují použití metod System. String. Split nebo System. String. substr. Pokud je to možné, použijte metodu IndexOf nebo IndexOfAny k vyhledání konkrétního podřetězce v rámci řetězce znaků bez vytvoření nové instance třídy String.

@@ -1,5 +1,5 @@
 ---
-title: Porozumění hodnotám dat vzorkování | Dokumentace Microsoftu
+title: Porozumění hodnotám dat vzorkování | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,48 +8,49 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f2668d5b60fba429613975cc24e751dbe07f87b7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 289f92deaceca32a44249ed77c17187743a34fa4
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830863"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778047"
 ---
-# <a name="understand-sampling-data-values"></a>Vysvětlení hodnotám dat vzorkování
+# <a name="understand-sampling-data-values"></a>Porozumění hodnotám dat vzorkování
 
-*Vzorkování* metoda profilování nástroje sady Visual Studio profilace přerušuje procesor počítače v nastavených intervalech a shromažďuje zásobník volání funkce. A *zásobníku volání* je dynamické strukturu, která uchovává informace o funkcích, které jsou spuštěny na procesor.
+Metoda profilování *vzorkování* sady Visual Studio nástroje pro profilaci přerušuje procesor počítače v nastavených intervalech a shromáždí zásobník volání funkce. *Zásobník volání* je dynamická struktura, která ukládá informace o funkcích, které jsou spuštěny na procesoru.
 
-Profiler analýza určí, zda procesor spouští kód v cílovém procesu. Pokud procesor není spouštění kódu v cílovém procesu, se zahodí vzorku.
+Analýza profileru určuje, zda procesor spouští kód v cílovém procesu. Pokud procesor neprovádí kód v cílovém procesu, je ukázka zahozena.
 
-Pokud procesor spouští cílový kód, profiler zvýší čítače vzorků pro každou funkci v zásobníku volání. V době, která je vzorek odebírán jenom jednu funkci v zásobníku volání je právě spouští kód. Další funkce v zásobníku jsou nadřazené položky v hierarchii volání funkce, která čekají na své děti se vraťte.
+Pokud procesor provádí cílový kód, Profiler zvýší počty vzorků pro každou funkci v zásobníku volání. V době, kdy je provedena ukázka, je aktuálně spuštěna pouze jedna funkce v zásobníku volání. Ostatní funkce v zásobníku jsou rodiče v hierarchii volání funkcí, které čekají na vrácení jejich podřízených objektů.
 
-Pro událost vzorku, profiler přírůstky *exkluzivní* počet funkce, která se právě probíhá jeho pokynů vzorků. Protože exkluzivní ukázky je také součástí celkové (*včetně*) ukázky funkce, včetně ukázkové počet aktuálně aktivních funkce se také zvýší.
+V případě ukázkové události Profiler zvýší počet *exkluzivních* vzorků funkce, ve které aktuálně probíhá zpracování instrukcí. Vzhledem k tomu, že exkluzivní vzorek je také součástí celkových (*včetně*) vzorků funkce, je také zvýšen celkový počet vzorků aktuálně aktivní funkce.
 
- Profiler zvýší počet vzorků včetně všech funkcí v zásobníku volání.
+ Profiler zvýší celkový počet vzorků všech ostatních funkcí v zásobníku volání.
 
-## <a name="inclusive-samples"></a>Celkových vzorků
+## <a name="inclusive-samples"></a>Vzorky včetně
 
-Celkový počet vzorků, které byly shromážděny během spuštění funkce cíl.
+Celkový počet vzorků, které jsou shromažďovány během provádění cílové funkce.
 
-To zahrnuje ukázky, které byly shromážděny během přímé provádění kódu funkce a ukázky, které byly shromážděny během spuštění funkce podřízený, které jsou volány cílová funkce.
+To zahrnuje ukázky, které jsou shromažďovány během přímého provádění kódu funkce a ukázky, které jsou shromažďovány během provádění podřízených funkcí, které jsou volány cílovou funkcí.
 
-## <a name="exclusive-samples"></a>Výhradní vzorky
+## <a name="exclusive-samples"></a>Exkluzivní vzorky
 
-Počet vzorků, které byly shromážděny během spouštění s přímým přístupem pokyny cílová funkce.
+Počet vzorků, které jsou shromážděny při přímém provádění instrukcí cílové funkce.
 
-Výhradní vzorky nezahrnují ukázky, které byly shromážděny během spuštění funkce, které jsou volány cílová funkce.
+Exkluzivní vzorky nezahrnují vzorky, které jsou shromažďovány během spouštění funkcí, které jsou volány cílovou funkcí.
 
 ## <a name="inclusive-percent"></a>Celkové procento
 
-Procento celkový počet celkových vzorků při spuštění profilace, které jsou celkových vzorků rozsah funkce nebo data.
+Procentuální podíl celkového počtu zahrnutých vzorků v průběhu profilace, včetně vzorků funkcí nebo rozsahu dat.
 
-## <a name="exclusive-percent"></a>Výhradní procent
+## <a name="exclusive-percent"></a>Exkluzivní procento
 
-Procento z celkového počtu výhradních vzorků při spuštění profilace, které jsou exkluzivní vzorky rozsah funkce nebo data.
+Procentuální podíl celkového počtu exkluzivních vzorků v průběhu profilace, které jsou exkluzivními ukázkami funkce nebo rozsahu dat.
 
 ## <a name="see-also"></a>Viz také:
 
-[Postupy: Výběr metod kolekcí](../profiling/how-to-choose-collection-methods.md)
-[dat nástrojů pro analýzy výkonu](../profiling/analyzing-performance-tools-data.md)
+[Postupy: výběr metod kolekce](../profiling/how-to-choose-collection-methods.md)
+[Analýza dat nástrojů výkonu](../profiling/analyzing-performance-tools-data.md)

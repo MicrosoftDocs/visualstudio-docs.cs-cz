@@ -1,24 +1,25 @@
 ---
-title: Stav | Dokumentace Microsoftu
+title: Stav | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ba656fa4-ef9d-4d8c-a3b6-739c3b5d23ae
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 25f452dcb473abf87d8992f36f5326973937e85e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bf5e0fdf478e067f61b1d0e259cb1624380e4f02
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967869"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778242"
 ---
 # <a name="status"></a>Stav
-*VSPerfCmd.exe* **stav** možnost zobrazí informace o stavu profileru a všechny procesy, které jsou právě profilována.
+Možnost **stav** *VSPerfCmd. exe* zobrazuje informace o stavu profileru a všech procesech, které jsou právě profilované.
 
- **Stav** možnost musí být zadán v příkazovém řádku jedinou možností. Profiler je nutné inicializovat s *VSPerfCmd.exe* **Start** možnost před zobrazením libovolný stav.
+ Možnost **stavu** musí být jedinou možností zadanou v příkazovém řádku. Předtím, než se dá zobrazit libovolný stav, musí se Profiler inicializovat pomocí možnosti **Spustit** *VSPerfCmd. exe* .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,36 +31,36 @@ VSPerfCmd.exe /Status
  Žádné
 
 ## <a name="remarks"></a>Poznámky
- **Stav** možnost se zobrazí následující informace o stavu pro profiler.
+ Možnost **stav** zobrazuje pro Profiler následující informace o stavu.
 
- **Název výstupního souboru** cestu a název souboru aktuálního souboru dat profilování.
+ **Název výstupního souboru** Cesta a název souboru aktuálního datového souboru profileru.
 
- **Režim kolekce** UKÁZKOVÝ nebo trasování
+ **Režim shromažďování** Ukázka nebo trasování
 
- **Maximum procesů** maximální počet procesů, které jde Profilovat najednou a počet aktuálně aktivních procesů.
+ **Maximální počet procesů** Maximální počet procesů, které lze profilovat najednou, a počet aktuálně aktivních procesů.
 
- **Maximální počet vláken** maximální počet vláken, které jde Profilovat najednou.
+ **Maximální počet vláken** Maximální počet vláken, která lze profilovat najednou.
 
- **Počet vyrovnávacích pamětí** počet vyrovnávacích pamětí vyhrazený pro zápis dat profilování.
+ **Počet vyrovnávacích pamětí** Počet vyrovnávacích pamětí vyhrazených pro zápis dat profilování.
 
- **Velikost vyrovnávací paměti** velikost v bajtech vyrovnávací paměti.
+ **Velikost vyrovnávacích pamětí** Velikost vyrovnávací paměti v bajtech.
 
- **Stav** možnost se zobrazí následující informace o stavu pro každý proces, který je právě profilována.
+ Možnost **stav** zobrazuje následující informace o stavu pro každý proces, který je právě profilace.
 
- **Proces** název profilovaný proces.
+ **Zpracování** Název profilované procesu.
 
- **ID procesu** systémový identifikátor procesu.
+ **ID procesu** Systémový identifikátor procesu
 
- **Počet vláken** počtu vláken aktuálně spouští.
+ **Počet vláken** Počet aktuálně prováděných vláken.
 
- **Počet operací Spustit/Zastavit** primární interní profiler počet řízení shromažďování dat pro tento proces. Počet musí být rovna jedné shromažďovat data. Počet operací spustit/zastavit lze ovládat pomocí rozhraní API profileru a možnosti, VSPerfCmd **GlobalOn**, **GlobalOff**, **ProcessOn**, **ProcessOff**, **ThreadOn**, a **ThreadOff**.
+ **Spustit/zastavit počet** Počet primárních vnitřních profilerů pro řízení shromažďování dat pro tento proces. Aby bylo možné shromažďovat data, musí být počet rovno jedné. Na počet spuštění/zastavení se můžou manipulovat pomocí rozhraní API profileru a možností VSPerfCmd **GlobalOn**, **globaloff**, **ProcessOn**, **ProcessOff**, **ThreadOn**a **ThreadOff**.
 
- **Počet operací Pozastavit/Pokračovat** sekundární interní profiler počet řízení shromažďování dat pro tento proces. Počet musí být menší než nebo rovna hodnotě nula, pokud chcete shromažďovat data. **Pozastavit/Pokračovat** počet může být používán pouze rozhraní API profileru.
+ **Počet pozastavení/obnovení** Sekundární interní profilerový počet pro řízení shromažďování dat pro tento proces. Pro shromažďování dat musí být počet menší nebo roven nule. Počet operací **pozastavit/pokračovat** může být manipulován pouze pomocí rozhraní API profileru.
 
- **Uživatelé s přístupovými oprávněními k monitoru** obsahuje seznam uživatelů, kteří mají přístup k profileru. Další uživatelé lze udělit přístup pomocí VSPerfCmd.exe **správce** možnost
+ **Uživatelé s přístupovými právy k monitorování** Zobrazuje jména uživatelů, kteří mají přístup k profileru. Dalším uživatelům se dá udělit přístup pomocí možnosti **správce** VSPerfCmd. exe.
 
 ## <a name="see-also"></a>Viz také:
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Samostatné aplikace profilu](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Webové aplikace ASP.NET profilu](../profiling/command-line-profiling-of-aspnet-web-applications.md)
-- [Profil služby](../profiling/command-line-profiling-of-services.md)
+- [Profilovat samostatné aplikace](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [ASP.NET webové aplikace Profile](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Profilovací služby](../profiling/command-line-profiling-of-services.md)

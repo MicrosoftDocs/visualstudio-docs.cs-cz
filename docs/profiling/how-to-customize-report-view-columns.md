@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přizpůsobení sloupců zobrazení sestavy | Dokumentace Microsoftu'
+title: 'Postupy: přizpůsobení sloupců zobrazení sestavy | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,17 +11,18 @@ ms.assetid: cb6f6d30-52a5-4d92-ab07-1d5ddb67884c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e5fd58603e287de31fab35375e9441f9113fb025
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6a297e6bfbed5023db97cabd370679b0de6caaab
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62973926"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778970"
 ---
-# <a name="how-to-customize-report-view-columns"></a>Postupy: Přizpůsobení sloupců zobrazení sestavy
-Nástroje pro sledování výkonu v aplikaci Visual Studio Team System Development Edition jsou plně integrované do integrovaného vývojového prostředí (IDE) pro zajištění integrované uživatelské prostředí. V následujícím seznamu je zástupce zobrazení, které je možné přizpůsobit pomocí přidání, odebrání a změna uspořádání sloupců:
+# <a name="how-to-customize-report-view-columns"></a>Postupy: přizpůsobení sloupců zobrazení sestavy
+Nástroje pro sledování výkonu v nástroji Visual Studio Team System Development Edition jsou plně integrované do integrovaného vývojového prostředí (IDE), aby poskytovaly bezproblémové uživatelské prostředí. Následující seznam představuje zástupce zobrazení, která lze přizpůsobit přidáním, odebráním a změnou uspořádání sloupců:
 
 - [Zobrazení modulů](../profiling/modules-view.md)
 
@@ -43,16 +44,16 @@ Nástroje pro sledování výkonu v aplikaci Visual Studio Team System Developme
 
 - [Zobrazení procesů](../profiling/process-view.md)
 
-### <a name="to-customize-a-report-view"></a>Přizpůsobení zobrazení sestav
+### <a name="to-customize-a-report-view"></a>Přizpůsobení zobrazení sestavy
 
 1. Otevřete zobrazení sestavy.
 
-2. Klikněte pravým tlačítkem na povrch zobrazení sestavy a pak klikněte na tlačítko **Přidat/odebrat sloupce**.
+2. Klikněte pravým tlačítkem myši na plochu zobrazení sestavy a potom klikněte na tlačítko **Přidat nebo odebrat sloupce**.
 
-     **Přidat/odebrat sloupce** zobrazí se dialogové okno.
+     Zobrazí se dialogové okno **Přidat nebo odebrat sloupce** .
 
 3. Vyberte sloupce, které chcete přidat.
 
-4. Klikněte na tlačítko se šipkou můžete změnit pořadí sloupců.
+4. Chcete-li změnit pořadí sloupců, klikněte na tlačítko se šipkou.
 
-5. Klikněte na **OK**.
+5. Klikněte na tlačítko **OK**.

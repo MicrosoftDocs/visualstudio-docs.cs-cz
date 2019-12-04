@@ -1,5 +1,5 @@
 ---
-title: Zobrazení přidělení paměti .NET | Dokumentace Microsoftu
+title: Zobrazení alokace paměti .NET | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,46 +13,47 @@ ms.assetid: 01eb876e-c413-4516-977b-4f896929e8a6
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e6bead46c52ed2bc33572e0eacc6f3f0219e72e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ce16f65947fd69b5a54e564ba6bec061bc68e328
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970093"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777374"
 ---
 # <a name="net-memory-allocations-view"></a>Přidělení paměti .NET – zobrazení
-Zobrazení přidělení jsou uvedeny typy, které byly vytvořeny během spuštění profilování. Každý typ je kořenový uzel stromu volání, která zobrazuje cesty spuštění funkce, z kterých vzniklo přidělení typu.
+Zobrazení přidělení zobrazuje seznam typů, které byly vytvořeny během profilace. Každý typ je kořenový uzel stromu volání, který zobrazuje cesty provádění funkce, jejichž výsledkem je přidělení typu.
 
- V typu řádku dat zobrazí celkový počet objektů typu, které byly vytvořeny během spuštění profilování a celkový počet bajtů přidělených pro objekty daného typu. Zahrnuté a výhradní hodnoty pro typ jsou vždy stejné.
+ Data v řádku typu zobrazují celkový počet objektů typu, které byly vytvořeny během profilace, a celkový počet bajtů přidělených pro objekty daného typu. Zahrnuté a exkluzivní hodnoty pro typ jsou vždycky stejné.
 
-- Celkové hodnoty jsou pro objekty vytvořené v instancích funkci a její podřízené funkce, které byly volány nadřazené funkce ve stromu volání.
+- Hodnoty včetně jsou pro objekty vytvořené v instancích funkce a jejích podřízených funkcích, které byly volány nadřazenou funkcí ve stromu volání.
 
-- Výhradní hodnoty jsou pro objekty, které byly vytvořeny přímo pomocí funkce, když byly volány nadřazené funkce. Objekty vytvořené v podřízených funkce nejsou zahrnuty.
+- Exkluzivní hodnoty jsou pro objekty, které byly vytvořeny přímo funkcí při volání nadřazené funkce. Objekty vytvořené v podřízených funkcích nejsou zahrnuty.
 
-  Data pro funkce zobrazuje počet objektů vytvořených a počet bajtů přidělených pro objekty tohoto nadřazeného typu.
+  Data pro funkci zobrazují počet vytvořených objektů a počet bajtů přidělených pro objekty nadřazeného typu.
 
-## <a name="highlight-the-execution-hot-path"></a>Zvýrazněte provádění kritickou cestu
- Můžete najít cestu provádění volání stromu, který vytvořili většinu objektů z nadřazeného typu.
+## <a name="highlight-the-execution-hot-path"></a>Zvýraznit cestu k vykonání za běhu
+ Můžete najít cestu spuštění stromu volání, která vytvořila většinu objektů nadřazeného typu.
 
-- Zobrazení Nejaktivnější cesty, klikněte pravým tlačítkem na typ nebo funkci a pak klikněte na **rozbalit kritickou cestu**.
+- Chcete-li zobrazit nejvíce aktivních cest, klikněte pravým tlačítkem myši na typ nebo funkci a potom klikněte na **položku Rozbalit**kritickou cestu.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Název**|Název přiděleného typu nebo funkce.|
-|**ID procesu**|ID procesu (PID) běhu profilování.|
+|**Jméno**|Název přiděleného typu nebo funkce.|
+|**ID procesu**|ID procesu (PID) pro spuštění profilace.|
 |**Název procesu**|Název procesu.|
-|**Název modulu**|Název modulu, který obsahuje tento typ nebo funkce.|
-|**Cesta modulu**|Cesta k napadenému modulu, který obsahuje tento typ nebo funkce.|
-|**Zdrojový soubor**|Zdrojový soubor, který obsahuje definici pro typ nebo funkce.|
+|**Název modulu**|Název modulu obsahujícího typ nebo funkci.|
+|**Cesta k modulu**|Cesta modulu obsahujícího typ nebo funkci.|
+|**Zdrojový soubor**|Zdrojový soubor, který obsahuje definici pro typ nebo funkci.|
 |**Číslo řádku funkce**|Číslo řádku začátku této definice typu nebo funkce ve zdrojovém souboru.|
-|**Úroveň**|Označuje, zda data pro typ nebo funkce.|
-|**Celkově přidělení**|-Pro funkci, celkový počet objektů nadřazeného typu, které byly vytvořeny pomocí funkce. Toto číslo zahrnuje objekty vytvořené v podřízených funkce.<br />-Pro typ, celkový počet instancí tohoto typu, které byly vytvořeny.|
-|**% Celkových přidělení**|-Pro funkci, procento všechny objekty vytvořené během spuštění profilování, které byly celkových přidělení nadřazený typ funkce.<br />-Pro typ procento z celkového počtu objektů, které byly vytvořeny v profilování, která se instance daného typu.|
-|**Výhradní přidělení**|-Pro funkci, počet objektů, které se vytvořily při provádění funkce přímo v horní části zásobníku volání. Toto číslo nezahrnuje objekty vytvořené v podřízených funkce.<br />-Pro typ, celkový počet instancí tohoto typu, které byly vytvořeny.|
-|**% Výhradních přidělení**|-Pro funkci, procento všechny objekty vytvořené během spuštění profilování, které byly výhradních přidělení nadřazený typ funkce.<br />-Pro typ procento z celkového počtu objektů, které byly vytvořeny v profilování, která se instance daného typu.|
-|**Celkově bajtů**|-Pro funkci, počet bajtů paměti, které byly přiděleny pomocí funkce pro objekty tohoto nadřazeného typu. Toto číslo zahrnuje paměti, která byla přidělena pomocí její podřízené funkce.<br />-Pro typ, celkový počet bajtů, která byla přidělena v Profilování pro instance daného typu.|
-|**% Celkových bajtů**|-Pro určitou funkci procento všech paměti přidělené v profilování, která se celkově přidělení nadřazený typ funkce.<br />-Pro typ, procento všech paměti přidělené v profilování, která byla přidělena pro instance daného typu.|
-|**Výhradní bajty**|-Pro funkci, počet bajtů paměti, které byly přiděleny pomocí funkce pro objekty tohoto nadřazeného typu. Toto číslo nezahrnuje paměti, která byla přidělena pomocí její podřízené funkce.<br />-Pro typ celkový počet bajtů, které byly přiděleny v profilaci spouštět pro instance daného typu.|
-|**% Výhradních bajtů**|-Pro určitou funkci procento všech paměti přidělené v profilování, která byla výhradních přidělení nadřazený typ funkce.<br />-Pro typ, procento všech paměti přidělené v profilování, která byla přidělena pro instance daného typu.|
+|**Obsah**|Označuje, zda jsou data pro typ nebo funkci.|
+|**Celkové alokace**|– Pro funkci celkový počet objektů nadřazeného typu, které byly vytvořeny funkcí. Toto číslo zahrnuje objekty vytvořené v podřízených funkcích.<br />– Pro typ je to celkový počet instancí tohoto typu, které byly vytvořeny.|
+|**% Celkových přidělení**|– Pro funkci je procento všech objektů vytvořených v průběhu profilace, které byly součástí této funkce, včetně přidělení nadřazeného typu.<br />– Pro typ se jedná o procentuální podíl celkového počtu objektů, které byly vytvořeny v profilování, které byly instance daného typu.|
+|**Exkluzivní přidělení**|– Pro funkci je počet objektů, které byly vytvořeny v době, kdy byla funkce přímo spuštěna v horní části zásobníku volání. Toto číslo nezahrnuje objekty vytvořené v podřízených funkcích.<br />– Pro typ je to celkový počet instancí tohoto typu, které byly vytvořeny.|
+|**% Exkluzivní alokace**|– Pro funkci je procento všech objektů vytvořených v rámci profilace spuštěno jako exkluzivní přidělení nadřazeného typu pomocí funkce.<br />– Pro typ se jedná o procentuální podíl celkového počtu objektů, které byly vytvořeny v profilování, které byly instance daného typu.|
+|**Včetně bajtů**|– Pro funkci počet bajtů paměti, které byly přiděleny funkcí pro objekty nadřazeného typu. Toto číslo zahrnuje paměť, která byla přidělena jeho podřízenými funkcemi.<br />– Pro typ je celkový počet bajtů, které byly přiděleny při spuštění profilování pro instance daného typu.|
+|**% Celkových bajtů**|– Pro funkci je procento celé paměti přidělené při spuštění profilování, které je součástí této funkce, včetně přidělení nadřazeného typu.<br />– Pro typ je procento celé paměti přidělené při spuštění profilování, které bylo přiděleno pro instance daného typu.|
+|**Exkluzivní počet bajtů**|– Pro funkci počet bajtů paměti, které byly přiděleny funkcí pro objekty nadřazeného typu. Toto číslo nezahrnuje paměť, která byla přidělena jeho podřízenými funkcemi.<br />– Pro typ je celkový počet bajtů, které byly přiděleny při spuštění profilování pro instance daného typu.|
+|**% Exkluzivních bajtů**|– Pro funkci je procento celé paměti přidělené při spuštění profilování, které bylo funkcí exkluzivní pro přidělení nadřazeného typu.<br />– Pro typ je procento celé paměti přidělené při spuštění profilování, které bylo přiděleno pro instance daného typu.|

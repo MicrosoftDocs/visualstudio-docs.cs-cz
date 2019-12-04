@@ -1,5 +1,5 @@
 ---
-title: Shromažďování dat interakce vrstev | Dokumentace Microsoftu
+title: Shromažďují se data interakce vrstev | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,38 +12,39 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fcdab1fcb776a729d00a143dfc318053b74c5cf5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e01259fdd23e60a1408addc10a6af3a12479c9f2
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831499"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772815"
 ---
 # <a name="collect-tier-interaction-data"></a>Shromažďování dat interakce vrstev
 
-Profilování interakce vrstev poskytuje další informace o spuštění s úspěšností funkce víceúrovňových aplikací, které komunikují s databázemi prostřednictvím služeb ADO.NET. Data se shromažďují pouze pro synchronní volání.
+Profilace interakce vrstev poskytuje další informace o době spuštění funkcí vícevrstvých aplikací, které komunikují s databázemi prostřednictvím služby ADO.NET Services. Data jsou shromažďována pouze pro volání synchronních funkcí.
 
-**Visual Studio editions**
+**Edice sady Visual Studio**
 
-Data profilace interakce vrstev lze shromažďovat pomocí libovolné edice sady Visual Studio. Nicméně data profilace interakce vrstev lze zobrazit pouze v sadě Visual Studio Enterprise.
+Data profilování interakce vrstev je možné shromažďovat pomocí libovolné edice sady Visual Studio. Data profilování interakce vrstev ale můžete zobrazit jenom v Visual Studio Enterprise.
 
 **Windows 8 a Windows Server 2012**
 
-Ke shromažďování dat interakce vrstev v aplikacích klasické pracovní plochy systému Windows 8 a Windows Server 2012 aplikace, musíte použít metody instrumentace. Nelze shromažďování dat interakce vrstev pro aplikace pro UPW. Zobrazit [nástroje pro výkon v aplikacích Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md). Dat interakce vrstev můžete zahrnout všechny metody profilování na ostatní podporované verze systému Windows.
+K shromažďování dat interakce vrstev v aplikacích pro stolní počítače se systémem Windows 8 a Windows Server 2012 je nutné použít metodu instrumentace. Nemůžete shromažďovat data interakce vrstev pro aplikace pro UWP. Podívejte [se na nástroje pro sledování výkonu v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md). Data interakce vrstev můžete zahrnout do všech metod profilování v jiné podporované verzi systému Windows.
 
-**Průvodce výkonu**
+**Průvodce výkonem**
 
-Z důvodu chyby v Průvodci výkonu je nutné přidat možnost kolekce dat interakce vrstvy do běhu profilování z prohlížeče výkonu. Musíte také přidat projekt, spustitelný soubor nebo web na cílový uzel prohlížeč výkonu.
+Z důvodu chyby v průvodci výkonem je nutné přidat možnost shromažďování dat interakce vrstev ke spuštění profilace z Prohlížeč výkonu. Také je nutné přidat projekt, spustitelný soubor nebo web do cílového uzlu Prohlížeč výkonu.
 
-## <a name="to-add-tier-interaction-data-to-a-profiling-run-by-using-the-performance-session-property-pages"></a>Přidání dat interakce vrstev pro profilování pomocí stránky vlastností relace výkonu
+## <a name="to-add-tier-interaction-data-to-a-profiling-run-by-using-the-performance-session-property-pages"></a>Přidání dat interakce vrstev do profilace spouštěné pomocí stránek vlastností relace výkonu
 
-1. V Průzkumníku výkonu, zvolte **vlastnosti** v místní nabídce.
+1. V Prohlížeč výkonu v místní nabídce vyberte možnost **vlastnosti** .
 
-2. Vyberte **interakce vrstev** stránce a potom zkontrolujte **povolit profilaci interakce vrstev** zaškrtávací políčko.
+2. Vyberte stránku **interakce vrstev** a zaškrtněte políčko **Povolit profilaci interakce vrstev** .
 
-3. V prohlížeči výkonu, vyberte **cíle** uzel a pak zadejte projekt, spustitelný soubor nebo web, který chcete Profilovat.
+3. V Prohlížeč výkonu vyberte uzel **cíle** a pak určete projekt, spustitelný soubor nebo web, který chcete profilovat.
 
 ## <a name="see-also"></a>Viz také:
 

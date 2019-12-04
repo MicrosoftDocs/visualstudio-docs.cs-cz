@@ -2,7 +2,7 @@
 title: Novinky v sadě Visual Studio 2019
 titleSuffix: ''
 description: Seznamte se s novými funkcemi v aplikaci Visual Studio 2019.
-ms.date: 09/24/2019
+ms.date: 12/03/2019
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,16 +15,16 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 5871e782ee84e49762d26a925380ad481e3623d1
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: eb4282941af9dff8619cb15510399b2e37e0c718
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211328"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777907"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novinky v sadě Visual Studio 2019
 
-**Aktualizováno pro [verzi 16,3](/visualstudio/releases/2019/release-notes/)**
+**Aktualizováno pro [verzi 16,4](/visualstudio/releases/2019/release-notes/)**
 
 >[!div class="button"]
 >[Stáhněte si Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
@@ -33,13 +33,13 @@ V rámci sady Visual Studio 2019 získáte špičkové nástroje a služby pro v
 
 Tady je nejdůležitější rekapitulace, co je nového:
 
-* **[Vývoj](#develop)** : Zlepšení výkonu, okamžitého vyčištění kódu a lepších výsledků hledání vám umožní soustředit se na výkon a zvýšit produktivitu.
-* **[Spolupráce](#collaborate)** : Využijte přirozenou spolupráci pomocí pracovního postupu Git-First, úprav a ladění v reálném čase a revizí kódu přímo v aplikaci Visual Studio.
-* **[Ladění](#debug)** : Zvýrazněte a přejděte na konkrétní hodnoty, optimalizujte využití paměti a proveďte automatické snímky provádění vaší aplikace.
+* **[Vývoj](#develop)** : zlepšení výkonu, okamžitého vyčištění kódu a lepších výsledků hledání díky lepšímu vývoji a produktivitě.
+* **[Spolupráce](#collaborate)** : Využijte přirozenou spolupráci pomocí pracovního postupu Git-First, úpravy a ladění v reálném čase a revize kódu přímo v aplikaci Visual Studio.
+* **[Ladění](#debug)** : zvýrazněte a přejděte na konkrétní hodnoty, optimalizujte využití paměti a proveďte automatické snímky provádění vaší aplikace.
 
 Úplný seznam všeho, co je v této verzi nové, najdete v [poznámkách k verzi](/visualstudio/releases/2019/release-notes/).
 
-## <a name="develop"></a>Vývoj
+## <a name="develop"></a>Vyvinout
 
 Podívejte se na následující video, kde se dozvíte víc o tom, jak můžete ušetřit čas pomocí nových funkcí. <br><br>*Délka videa: 3,00 minut*
 
@@ -63,7 +63,7 @@ Jednoduše volejte refaktoring stisknutím **kombinace kláves CTRL +.** a vyber
 
 ### <a name="intellicode"></a>IntelliCode
 
-[Visual Studio IntelliCode](/visualstudio/intellicode/) vylepšuje úsilí při vývoji softwaru pomocí umělé Intelligence (AI). IntelliCode vlaky napříč 2 000 open source projektů na GitHubu&mdash;každý s více než 100 hvězdičkami&mdash;, aby vygenerovala doporučení.
+[Visual Studio IntelliCode](/visualstudio/intellicode/) vylepšuje úsilí při vývoji softwaru pomocí umělé Intelligence (AI). IntelliCode vlaky napříč 2 000 open source projektů na GitHubu&mdash;každý s více než 100 hvězdiček&mdash;vygenerování doporučení.
 
 ![Animace IntelliCode ve Visual Studiu 2019](media/vs-2019/IntelliCode.gif)
 
@@ -104,13 +104,13 @@ Další informace najdete v blogovém příspěvku o [lepším prostředí pro v
 
 ### <a name="test-explorer"></a>Průzkumník testů
 
-**Novinka v 16,2**: Aktualizovali jsme Průzkumníka testů, aby poskytoval lepší zacházení s velkými testovacími sadami, jednodušším filtrováním, více zjistitelnými příkazy, zobrazeními seznamu skladeb a přizpůsobitelnými sloupci, které vám umožní doladit informace o tom, jaké informace o testu se zobrazí.
+**Novinka v 16,2**: Aktualizovali jsme Průzkumníka testů, abychom zajistili lepší zacházení s velkými testovacími sadami, jednodušším filtrováním, více zjistitelnými příkazy, zobrazeními seznamu skladeb na kartách a přizpůsobitelnými sloupci, které vám umožní doladit informace o tom, jaké informace o testu se zobrazují.
 
    ![Snímek obrazovky, který zobrazuje vylepšení uživatelského rozhraní v Průzkumníku testů](media/vs-2019/test-explorer-ui.png)
 
 ### <a name="net-core"></a>.NET Core
 
-**Novinka v 16,3**: Zahrnuli jsme podporu pro .NET Core 3,0. Pro různé platformy, open source&mdash;a plně podporované Microsoftem. 
+**Novinka v 16,3**: zahrnuli jsme podporu pro .net Core 3,0. Pro různé platformy Open Source&mdash;a plně podporované Microsoftem.
 
 Další informace najdete v příspěvku na blogu o [.NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/) .
 
@@ -132,7 +132,7 @@ Okno Start nabízí několik možností, jak rychle získat kód. Umístili jsme
 
 Okno Start také obsahuje možnosti pro otevření projektu nebo řešení, otevření místní složky nebo vytvoření nového projektu.
 
-Další informace naleznete v [tématu Get to Code: Jak jsme navrhli nový Blogový příspěvek pro](https://devblogs.microsoft.com/visualstudio/get-to-code-how-we-designed-the-new-visual-studio-start-window/) úvodní okno sady Visual Studio.
+Další informace najdete v tématu [získání kódu: jak jsme navrhli nový Blogový příspěvek pro úvodní okno sady Visual Studio](https://devblogs.microsoft.com/visualstudio/get-to-code-how-we-designed-the-new-visual-studio-start-window/) .
 
 ### <a name="live-share"></a>Live Share
 
@@ -178,7 +178,7 @@ Můžete také formátovat, jak se hodnota zobrazuje v oknech kukátko, místní
 
    ![Funkce New okno Kukátko a Format Values v aplikaci Visual Studio 2019](media/search-watch-window.png)
 
-Další informace najdete v tématu [rozšířené v aplikaci Visual Studio 2019: V příspěvku na blogu sledování, automatických a místních hodnot Windows](https://devblogs.microsoft.com/visualstudio/enhanced-in-visual-studio-2019-search-for-objects-and-properties-in-the-watch-autos-and-locals-windows/) vyhledejte objekty a vlastnosti.
+Další informace najdete v tématu [Vylepšená v aplikaci Visual Studio 2019: hledání objektů a vlastností v příspěvku na blogu sledování, automatické hodnoty a místní hodnoty v systému Windows](https://devblogs.microsoft.com/visualstudio/enhanced-in-visual-studio-2019-search-for-objects-and-properties-in-the-watch-autos-and-locals-windows/) .
 
 ### <a name="snapshot-debugger"></a>Snapshot Debugger
 
@@ -186,15 +186,21 @@ Získejte snímek provádění vaší aplikace v cloudu, abyste viděli přesně
 
    ![Animace, která zobrazuje Snapshot Debugger v aplikaci Visual Studio 2019 Enterprise](media/vs-2019/snapshot-debugger.gif)
 
-Přidali jsme podporu pro cílení aplikací ASP.NET (základní a desktopové), které běží na virtuálním počítači Azure. A přidali jsme podporu pro aplikace, které běží ve službě Azure Kubernetes. Snapshot Debugger můžete výrazně zkrátit čas potřebný k vyřešení problémů, ke kterým dochází v produkčním prostředí.
+Přidali jsme podporu pro cílení aplikací ASP.NET (základní a desktopové), které běží na virtuálním počítači Azure. A přidali jsme podporu pro aplikace, které běží ve službě Azure Kubernetes. Snapshot Debugger vám může výrazně zkrátit dobu potřebnou k vyřešení problémů, ke kterým dochází v produkčních prostředích.
 
 Další informace najdete v článku [ladění živých ASP.NET aplikací Azure pomocí stránky Snapshot Debugger](../debugger/debug-live-azure-applications.md) a na blogovém příspěvku [pro Visual Studio Enterprise 2019 s časem zavedení](https://devblogs.microsoft.com/visualstudio/introducing-time-travel-debugging-for-visual-studio-enterprise-2019/) .
 
 ### <a name="microsoft-edge-insider-support"></a>Podpora prohlížeče Microsoft Edge Insider
 
-**Novinka v 16,2**: Můžete nastavit zarážku v aplikaci JavaScriptu a spustit relaci ladění pomocí prohlížeče [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) . Když to uděláte, Visual Studio otevře nové okno prohlížeče s povoleným laděním, které pak můžete použít ke krokování v aplikaci JavaScript aplikace v sadě Visual Studio.
+**Novinka v 16,2**: můžete nastavit zarážku v aplikaci JavaScriptu a spustit ladicí relaci pomocí prohlížeče [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) . Když to uděláte, Visual Studio otevře nové okno prohlížeče s povoleným laděním, které pak můžete použít ke krokování v aplikaci JavaScript aplikace v sadě Visual Studio.
 
    ![Snímek obrazovky, který zobrazuje vykreslování kódu JavaScriptu v prohlížeči](media/vs-2019/edge-chromium-breakpoint.png)
+
+### <a name="pinnable-properties-tool"></a>Nástroj Pinnable Properties
+
+**Novinka v 16,4**: teď je snazší identifikovat objekty podle jejich vlastností při ladění pomocí nového nástroje Pinnable Properties. Stačí umístit ukazatel myši na vlastnost, kterou chcete zobrazit v okně ladicího programu okna Kukátko, automatické hodnoty a místní hodnoty, klikněte na ikonu připnutí a okamžitě zobrazte informace, které hledáte v horní části okna.
+
+   ![Animace, která ukazuje, jak připnout vlastnosti v ladicím programu sady Visual Studio pomocí nástroje Pinnable Properties Tool](media/vs-2019/debugger-pinnable-properties.gif)
 
 ## <a name="whats-next"></a>Co dál
 
@@ -204,7 +210,7 @@ Chcete získat další informace o tom, co je jinde v sadě Works for Visual Stu
 
 ## <a name="give-us-feedback"></a>Sdělte nám svůj názor
 
-Proč odeslat zpětnou vazbu týmu sady Visual Studio? Protože jsme vážně trvat zpětné vazby od zákazníků. To zahrnuje mnoho toho, co máme.
+Proč odeslat zpětnou vazbu týmu sady Visual Studio? Vzhledem k tomu, že povedeme zpětnou vazbu zákazníků. To zahrnuje mnoho toho, co máme.
 
 * Pokud si chcete udělat nějaký návrh, jak můžeme vylepšit aplikaci Visual Studio, můžete k tomu použít nástroj [navrhnout funkci](suggest-a-feature.md) .
 

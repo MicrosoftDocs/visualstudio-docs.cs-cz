@@ -14,25 +14,26 @@ ms.assetid: ae3e198a-b994-4ecb-a633-dec98bd4fd45
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c70e30a8c8367678c6df156e8ea3a5b76889e468
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.openlocfilehash: 90752fd8e34769530f1b95dd439a46c71fe985a0
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128274"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779828"
 ---
 # <a name="analyze-performance-tools-data"></a>Analýza dat nástrojů pro měření výkonu
-Sestavy o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] výkonu nástroje pro profilaci umožňují zobrazit a analyzovat problémy s výkonem aplikací. V této části najdete přehled sestav výkonu a zobrazení, která lze použít k prohlédnutí údajů o výkonu.
+Sestavy o výkonu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci umožňují zobrazit a analyzovat problémy s výkonem aplikací. V této části najdete přehled sestav výkonu a zobrazení, která lze použít k prohlédnutí údajů o výkonu.
 
-## <a name="common-tasks"></a>Běžné úkoly
+## <a name="common-tasks"></a>Běžné úlohy
 
 |Úloha|Související obsah|
 |----------|---------------------|
-|**K rychlé identifikaci problémů použijte pravidla výkonu:** Nástroje pro profilaci pravidla výkonu identifikují běžné problémy a umožňují snadno přejít ke zdrojovému kódu, který tento problém obsahuje. Podrobná témata nápovědy mohou často navrhovat řešení.|-   [Použití pravidel výkonu k analýze dat](../profiling/using-performance-rules-to-analyze-data.md)|
-|**Porozumění podrobnostem zobrazení sestav:** Nástroje pro profilaci zobrazení sestav poskytují agregovaná data o výkonu pro procesy, vlákna, moduly a funkce pro spuštění profilace. Zobrazená data závisí na metodě profilování, která byla použita ke shromažďování dat.|-   [Zobrazení sestav výkonu](../profiling/performance-report-views.md)|
-|**Konfigurace, řazení a filtrování zobrazení sestavy:** Můžete určit a objednat sloupce dat, které se mají zobrazit v sestavě, seřadit řádky sestavy a filtrovat data tak, aby zahrnovala pouze zadaný časový segment.|-   [Přizpůsobení zobrazení sestav nástrojů pro výkon](../profiling/customizing-performance-tools-report-views.md)|
+|**K rychlé identifikaci problémů použijte pravidla výkonu:** Nástroje pro profilaci pravidla výkonu identifikují běžné problémy a umožňují snadno přejít ke zdrojovému kódu, který tento problém obsahuje. Podrobná témata nápovědy mohou často navrhovat řešení.|-   [použít pravidla výkonu k analýze dat](../profiling/using-performance-rules-to-analyze-data.md)|
+|**Porozumění podrobnostem zobrazení sestav:** Nástroje pro profilaci zobrazení sestav poskytují agregovaná data o výkonu pro procesy, vlákna, moduly a funkce pro spuštění profilace. Zobrazená data závisí na metodě profilování, která byla použita ke shromažďování dat.|-   [zobrazení sestav výkonu](../profiling/performance-report-views.md)|
+|**Konfigurace, řazení a filtrování zobrazení sestavy:** Můžete určit a objednat sloupce dat, které se mají zobrazit v sestavě, seřadit řádky sestavy a filtrovat data tak, aby zahrnovala pouze zadaný časový segment.|-   [přizpůsobení zobrazení sestav nástrojů pro sledování výkonu](../profiling/customizing-performance-tools-report-views.md)|
 
 ## <a name="related-sections"></a>Související oddíly
 - [Porovnání datových souborů výkonu](../profiling/comparing-performance-data-files.md)
@@ -42,4 +43,4 @@ Sestavy o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] výkonu nás
 ## <a name="see-also"></a>Viz také:
 - [Prohlížeč výkonu](../profiling/performance-explorer.md)
 - [Profilace v sadě Visual Studio](../profiling/index.yml)
-- [Nejdřív se podívejte na nástroje pro profilaci](../profiling/profiling-feature-tour.md)
+- [První pohled na nástroje pro profilaci](../profiling/profiling-feature-tour.md)

@@ -1,54 +1,43 @@
 ---
-title: Určení cesty k profilování nástroje příkazového řádku nástroje | Dokumentace Microsoftu
+title: Určení cesty pro Nástroje pro profilaci nástrojů příkazového řádku | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 7047bf18-5779-4f6e-872c-66e2fc47c969
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 48ac65ef8fb7a67783a3c9c5a9652accf86821fc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 087407f511c038a369694beca8a9fe4ecc2ff7b7
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979832"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74771570"
 ---
-# <a name="specify-the-path-to-profiling-tools-command-line-tools"></a>Zadejte cestu k nástrojům příkazového řádku pro profilaci
+# <a name="specify-the-path-to-profiling-tools-command-line-tools"></a>Zadejte cestu k nástrojům příkazového řádku nástrojů pro profilaci
 
-Cesta k [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] příkazového řádku nástrojů pro profilaci není přidán do proměnné prostředí PATH. Na 32bitových počítačích nástroje jsou v jednom adresáři. Existují 32bitové a 64bitové verze nástrojů pro profilaci na 64bitových počítačích.
+Do proměnné prostředí PATH se nepřidala cesta k nástrojům příkazového řádku [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci. Na 32 počítačů se nástroje nacházejí v jednom adresáři. K dispozici jsou 32 a 64 bitové verze nástrojů pro profilaci v počítačích s 64.
 
-## <a name="32-bit-computers"></a>32bitových počítačích
-::: moniker range=">=vs-2019"
- Pro nativní kód profileru sady Visual Studio rozhraní API jsou v *VSPerf.dll*. Soubor hlaviček *VSPerf.h*a knihovnu importu *VSPerf.lib*, jsou umístěny v *Microsoft Visual Studio\2019\Team nástroje Tools\PerfSDK* adresář.
-::: moniker-end
-::: moniker range="vs-2017"
- Pro nativní kód profileru sady Visual Studio rozhraní API jsou v *VSPerf.dll*. Soubor hlaviček *VSPerf.h*a knihovnu importu *VSPerf.lib*, jsou umístěny v *Microsoft Visual Studio\2017\Team nástroje Tools\PerfSDK* adresář.
-::: moniker-end
-
- Pro spravovaný kód, okna profilování rozhraní API jsou v *Microsoft.VisualStudio.Profiler.dll*. Tato knihovna DLL se nachází v *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools* adresáře.
-
-## <a name="64-bit-computers"></a>64bitové počítače
-
-Na 64bitových počítačích zadejte cestu podle cílové platformy profilované aplikace.
-
-::: moniker range=">=vs-2019"
-- Pro 32bitové aplikace je výchozí adresář nástrojů profilování:
-
-     (nativní) *Microsoft Visual Studio\2019\Team nástroje Tools\PerfSDK* (spravované) *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools*
-
-- Pro 64bitové aplikace je výchozí adresář nástrojů profilování:
-
-     (nativní) *Microsoft Visual Studio\2019\Team nástroje Tools\x64\PerfSDK* (spravované) *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\x64*
-::: moniker-end
+## <a name="32-bit-computers"></a>32 – bitové počítače
 
 ::: moniker range="vs-2017"
-- Pro 32bitové aplikace je výchozí adresář nástrojů profilování:
+ V případě nativního kódu jsou rozhraní API profileru sady Visual Studio v *knihovně VSPerf. dll*. Hlavičkový soubor, *VSPerf. h*a knihovna importů *VSPerf. lib*, jsou umístěny v adresáři *Microsoft Visual Studio\2017\Team Tools\Performance Tools\PerfSDK* .
+::: moniker-end
 
-     (nativní) *Microsoft Visual Studio\2017\Team nástroje Tools\PerfSDK* (spravované) *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools*
+ Pro spravovaný kód jsou rozhraní API profileru v *knihovně Microsoft. VisualStudio. Profiler. dll*. Tato knihovna DLL se nachází v adresáři *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools* .
 
-- Pro 64bitové aplikace je výchozí adresář nástrojů profilování:
+## <a name="64-bit-computers"></a>64 – bitové počítače
 
-     (nativní) *Microsoft Visual Studio\2017\Team nástroje Tools\x64\PerfSDK* (spravované) *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\x64*
+Na 64 počítačů zadejte cestu podle cílové platformy profilované aplikace.
+
+::: moniker range="vs-2017"
+- Pro 32 aplikací je výchozím adresářem nástrojů profileru:
+
+     nativní *Microsoft Visual Studio\2017\Team Tools\Performance Tools\PerfSDK* (Managed) *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools*
+
+- Pro 64 aplikací je výchozím adresářem nástrojů profileru:
+
+     nativní *Microsoft Visual Studio\2017\Team Tools\Performance Tools\x64\PerfSDK* (Managed) *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\x64*
 ::: moniker-end

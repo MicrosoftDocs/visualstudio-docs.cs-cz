@@ -1,5 +1,5 @@
 ---
-title: Zobrazení interakce vrstvy | Dokumentace Microsoftu
+title: Zobrazení interakce vrstev | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,20 +7,21 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 510fca63f57189aa86c11dd6afbc1ddfe894a597
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 96b5fed31238fbc0e46d9982080b3acb1082e9f9
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62973378"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778125"
 ---
 # <a name="tier-interaction-views"></a>Zobrazení interakce vrstvy
 
-Profilování interakce vrstev poskytuje další informace o spuštění s úspěšností funkcí ve víceúrovňových aplikací, které komunikují s databázemi prostřednictvím [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)]. Data se shromažďují pouze pro synchronní volání. Dat interakce vrstev můžete zahrnout všechny metody profilování.
+Profilace interakce vrstev poskytuje další informace o době spuštění funkcí v vícevrstvých aplikacích, které komunikují s databázemi prostřednictvím [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)]. Data jsou shromažďována pouze pro volání synchronních funkcí. Data interakce vrstev můžete zahrnout do všech metod profilace.
 
-Zobrazení interakce vrstev jsou k dispozici pouze v sadě Visual Studio Enterprise.
+Zobrazení interakce vrstev jsou k dispozici pouze v Visual Studio Enterprise.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 

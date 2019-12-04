@@ -6,14 +6,15 @@ ms.assetid: 8aa067bb-e8bf-4081-aff0-cfbcf65934a0
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e35c21306d2e90cdf55d3d18972fd21c702b300
-ms.sourcegitcommit: 669fc9e397476d7a1d2cda5999710d415f7d6e4f
+ms.openlocfilehash: 3b4c4230ca2539b55f57990b90ae33d1f53726dc
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74688844"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778723"
 ---
 # <a name="how-to-specify-symbol-file-locations-from-the-command-line"></a>Postupy: určení umístění souborů symbolů z příkazového řádku
 Chcete-li zobrazit informace o symbolech, jako jsou názvy funkcí a čísla řádků, nástroj příkazového řádku VSPerfReport vyžaduje přístup k symbolu (. *PDB*) soubory profilované komponenty a systémové soubory systému Windows. Soubory symbolů se vytvoří, když je komponenta zkompilována. Další informace najdete v tématu [VSPerfReport](../profiling/vsperfreport.md). VSPerfReport automaticky hledá v těchto umístěních soubory symbolů:

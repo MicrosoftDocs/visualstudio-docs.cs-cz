@@ -1,5 +1,5 @@
 ---
-title: 'DA0008: Shromážděno málo vzorků | Dokumentace Microsoftu'
+title: 'DA0008: shromážděno málo ukázek | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,30 +11,31 @@ ms.assetid: 8a5b78aa-7b3d-476c-a47d-abfaff3fae7c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b33193f30edd19ef18ead5cf15f2e41d352f4d4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 15f8eeb370a3f1e61981e0e936704d33f6b44bbd
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62936615"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779438"
 ---
-# <a name="da0008-few-samples-collected"></a>DA0008: Shromážděno málo vzorků
+# <a name="da0008-few-samples-collected"></a>DA0008: Shromážděno málo ukázek
 
 |||
 |-|-|
 |Id pravidla|DA0008|
-|Kategorie|Použití nástroje pro profilaci|
-|Metoda profilace|Vzorkování|
-|Zpráva|Nebyly shromážděny vzorky jenom pár. Zvažte delší spuštění nebo rychlejší vzorkovací frekvenci pro více významné výsledky.|
-|Typ pravidla|Informace o|
+|Kategorie|Využití Nástroje pro profilaci|
+|Metoda profilace|Kontrol|
+|Zpráva|Bylo shromážděno pouze několik ukázek. Zvažte delší spuštění nebo rychlejší vzorkovací frekvenci pro důležitější výsledky.|
+|Typ pravidla|Informace o nástroji|
 
-## <a name="cause"></a>Příčina
- Při spuštění profilace nebyly shromážděny vzorky jenom pár.
+## <a name="cause"></a>příčina
+ Při spuštění profilace bylo shromážděno pouze několik ukázek.
 
 ## <a name="rule-description"></a>Popis pravidla
- Při použití metody vzorkování mají shromažďovat statisticky významná počet vzorků, abyste měli jistotu, že data představují chování skutečný program. Chcete-li minimalizovat chyby vzorkování, doporučujeme shromáždit alespoň 1000 vzorky chování při spuštění programu instrukce. Pokud shromažďujete není dostatek ukázky, které můžete omyl, při analýze dat profilace.
+ Při použití metody vzorkování byste měli shromáždit statisticky významný počet vzorků, abyste se ujistili, že data představují skutečné chování programu. Chcete-li minimalizovat chyby vzorkování, měli byste se pokusit shromáždit alespoň 1000 vzorků chování při spuštění instrukcí programu. Pokud neshromáždíte dostatek ukázek, můžete při analýze dat profilace být zauváděna do kódu.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Vezměte v úvahu profilování už spuštění aplikace nebo rychlejší vzorkovací frekvenci použití za účelem získání výsledků statisticky významná. Informace o tom, jak se změna míry vzorkování v sadě Visual Studio IDE najdete v tématu [jak: Výběr událostí vzorkování](../profiling/how-to-choose-sampling-events.md). Další informace o tom, jak změnit vzorkovací frekvenci při použití nástroje pro profilaci příkazového řádku najdete v tématu [časovače](../profiling/timer.md) v [VSPerfCmd](../profiling/vsperfcmd.md) odkaz.
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
+ Vezměte v úvahu profilaci delšího spuštění aplikace nebo pomocí rychlejšího vzorkovacího kurzu Získejte statisticky významné výsledky. Informace o tom, jak změnit vzorkovací frekvenci v integrovaném vývojovém prostředí sady Visual Studio, naleznete v tématu [How to: zvolit události vzorkování](../profiling/how-to-choose-sampling-events.md). Další informace o tom, jak změnit vzorkovací frekvenci při použití příkazového řádku Nástroje pro profilaci, najdete v tématu [Timer](../profiling/timer.md) v odkazu [VSPerfCmd](../profiling/vsperfcmd.md) .

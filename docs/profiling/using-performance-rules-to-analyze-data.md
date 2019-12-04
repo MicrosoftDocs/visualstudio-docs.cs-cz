@@ -6,14 +6,15 @@ ms.assetid: 1deed23e-b31b-4714-982f-08ceebfc3096
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: bc0c1b5245817a8946b1ccbd0fb244b3f0608c6e
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: f5af6b366a1181187c23327449ade8e03e30107f
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189328"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778060"
 ---
 # <a name="use-performance-rules-to-analyze-data"></a>Použití pravidel výkonu k analýze dat
 Upozornění na výkon [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci indikují problémy v profilované aplikaci, která může zpomalit spuštění programu. Upozornění mohou také indikovat, že možná budete muset změnit metody kolekce a shromažďovat tak užitečnější data. Upozornění na výkon se generují automaticky v relaci profilace. Při otevření datového souboru profilování v aplikaci Visual Studio se v okně **Seznam chyb** zobrazí upozornění. V okně **Seznam chyb** můžete najít zdrojový kód problému a můžete zobrazit podrobné informace o chybě, například informace o tom, jak tento problém vyřešit. Můžete také zakázat upozornění, u kterých nejste zajímat.

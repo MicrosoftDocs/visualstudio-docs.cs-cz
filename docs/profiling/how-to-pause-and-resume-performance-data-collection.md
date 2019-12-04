@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Pozastavit a obnovit shromažďování údajů o výkonu | Dokumentace Microsoftu'
+title: 'Postupy: pozastavení a obnovení shromažďování dat o výkonu | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,35 +8,36 @@ ms.assetid: b8e76363-65cd-424d-8173-3e2b5f54203b
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 281631332692d249ea30e747fa4a0fd69ca110f4
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 3b6190dbc4545836e5fa7ea1b1ff6c5bfc3b2403
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825670"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778788"
 ---
-# <a name="how-to-pause-and-resume-performance-data-collection"></a>Postupy: Pozastavení a opětovné spuštění shromažďování dat o výkonu
+# <a name="how-to-pause-and-resume-performance-data-collection"></a>Postupy: pozastavení a obnovení shromažďování údajů o výkonu
 Z okna stránky relace profilování můžete interaktivně ovládat shromažďování dat profilování.
 
  Řízení shromažďování dat umožňuje zmenšit velikost souboru dat profilování a shromažďovat data pouze pro operace, které vás zajímají. Profilování lze pozastavit a obnovit vícekrát během relace výkonu.
 
- ![Stránce relace profilování](../profiling/media/prof_profilingsessionpage.png "PROF_ProfilingSessionPage")
+ ![Stránka relace profilování](../profiling/media/prof_profilingsessionpage.png "PROF_ProfilingSessionPage")
 
 > [!NOTE]
-> Můžete také spustit relaci výkonu s pozastaveným profilováním a poté pokračovat v profilování v pozdějším bodě provádění programu. Spustit výkon pozastaveným profilováním, vyberte relaci profilace **spustit analýzu výkonu s Pozastaveným** příkaz **ladění** nabídky.
+> Můžete také spustit relaci výkonu s pozastaveným profilováním a poté pokračovat v profilování v pozdějším bodě provádění programu. Chcete-li spustit relaci výkonu s pozastaveným profilací, v nabídce **ladění** vyberte příkaz **Spustit analýzu výkonu s pozastaveným profilací** .
 
 ### <a name="to-pause--resume-or-stop-profiling"></a>Pozastavení, obnovení nebo zastavení profilování
 
 - Na stránce relace profilování:
 
-  - Zvolte **pozastavit shromažďování** pro shromažďování dat pozastavit.
+  - Pro pozastavení sběru dat vyberte **pozastavit shromažďování** .
 
-  - Zvolte **opět spustit shromažďování** chcete restartovat shromažďování dat poté, co bylo pozastaveno.
+  - Kliknutím na možnost **pokračovat v kolekci** restartujte shromažďování dat poté, co bylo pozastaveno.
 
-  - Zvolte **zastavení profilování** ukončit relaci profilování a generování sestav.
+  - Chcete-li ukončit relaci profilování a generovat sestavy, klikněte na tlačítko **zastavit profilaci** .
 
 ## <a name="see-also"></a>Viz také:
 - [Řízení shromažďování dat](../profiling/controlling-data-collection.md)
-- [Postupy: Spuštění a ukončení shromažďování dat o výkonu](../profiling/how-to-start-and-end-performance-data-collection.md)
+- [Postupy: Zahájení a ukončení shromažďování dat o výkonu](../profiling/how-to-start-and-end-performance-data-collection.md)

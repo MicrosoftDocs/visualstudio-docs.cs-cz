@@ -1,29 +1,30 @@
 ---
-title: Odpojit | Dokumentace Microsoftu
+title: Odpojit | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: d9d1b52c-7f28-467d-b1e0-512afc4e46c9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a28551656c7cb47185713a6246479ef2bd96325
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 0b151e3ede34d0c8fa3a863d7a4e7474431ae6f4
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446820"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777387"
 ---
 # <a name="detach"></a>Odpojit
-VSPerfCmd.exe **odpojit** možnost odpojí profiler z konkrétních procesů nebo všechny procesy, pokud nejsou zadány žádné. Profilace musí byly inicializovány pomocí metody vzorkování.
+Možnost **Odpojit** VSPerfCmd. exe odpojí Profiler od zadaných procesů nebo všech procesů, pokud nejsou zadány žádné. Profilování je nutné inicializovat pomocí metody vzorkování.
 
- Profilace, který byl spuštěn s buď **spuštění** nebo **připojit** možnosti můžete odpojit s **odpojit**. Profiler může být reattched pomocí dalších **připojit** příkazy.
+ Profilace, která byla spuštěna buď pomocí **spuštění** , nebo možností **připojení** , lze odpojit pomocí možnosti **Odpojit**. Profiler se dá reattched pomocí dalších příkazů **připojit** .
 
- **Odpojit** nezavře soubor dat profilování. Použití **vypnutí** možnost ukončení profilace a uzavře soubor dat.
+ Při **odpojení** se soubor dat profilování nezavře. Pro ukončení profilování a zavření datového souboru použijte možnost **vypnutí** .
 
 > [!NOTE]
-> Pokud **Start** s byl zadán příkaz **Crosssession** možnost, všechna volání do **VSPerfCmd /Attach** nebo **VSPerfCmd/Detach** musí také zadejte **Crosssession**.
+> Pokud byla možnost **Start** zadána s možností **CrossSession** , musí být jakákoli volání **VSPerfCmd/attach** nebo **VSPerfCmd/detach** také určovat **CrossSession**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,21 +33,21 @@ VSPerfCmd.exe /Detach[:PIDs|ProcessNames]
 ```
 
 #### <a name="parameters"></a>Parametry
- `PIDs|ProcessNames` `PID` -Identifikátorem číselného systému jeden nebo více procesů.
+ `PIDs|ProcessNames` `PID` – číselná systémová identifikátorem jednoho nebo více procesů.
 
- `ProcessNames` -Název procesu. Pokud běží více instancí procesu pojmenované, jsou výsledky nepředvídatelné.
+ `ProcessNames` – název procesu. Pokud je spuštěno více instancí pojmenovaného procesu, výsledky mohou být nepředvídatelné.
 
- Více procesů oddělujte čárkami.
+ Více procesů oddělte čárkami.
 
- Pokud není zadán žádný proces, je profiler odpojen od všech profilovaných procesů.
+ Pokud není zadán žádný proces, Profiler je odpojen od všech profilování procesu.
 
 ## <a name="valid-options"></a>Platné možnosti
- Následující **VSPerfCmd** možnosti lze kombinovat s **připojit** možnost v jednom příkazovém řádku.
+ Následující možnosti **VSPerfCmd** lze kombinovat s možností **připojit** na jednom příkazovém řádku.
 
- **Crosssession** umožňuje profilování aplikace v relacích než přihlašovací relace. Požadováno pokud **Start** s byl zadán příkaz **Crosssession** možnost.
+ **CrossSession** Povoluje profilování aplikací v jiných relacích než v přihlašovací relaci. Vyžaduje se, pokud byla zadána možnost **Start** s možností **CrossSession** .
 
 ## <a name="example"></a>Příklad
- V tomto příkladu **odpojit** příkaz pozastaví, profilace a **vypnutí** příkaz zavření souboru dat profilování.
+ V tomto příkladu příkaz **Odpojit** pozastaví profilaci a příkaz pro **vypnutí** zavře datový soubor profileru.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp
@@ -58,6 +59,6 @@ VSPerfCmd.exe /Shutdown
 
 ## <a name="see-also"></a>Viz také:
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Samostatné aplikace profilu](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Webové aplikace ASP.NET profilu](../profiling/command-line-profiling-of-aspnet-web-applications.md)
-- [Profil služby](../profiling/command-line-profiling-of-services.md)
+- [Profilovat samostatné aplikace](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [ASP.NET webové aplikace Profile](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Profilovací služby](../profiling/command-line-profiling-of-services.md)

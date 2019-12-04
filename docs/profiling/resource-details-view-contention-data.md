@@ -10,19 +10,20 @@ ms.assetid: a4ecfe1c-abbc-4fb3-9ab2-34de50486901
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6328ea53c90b5a5a7ba50fde5a00e29fadacaaa7
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: e66432fd2f5d8b1532bece9d76e7dfc2a261e4b7
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924523"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74771587"
 ---
 # <a name="resource-details-view---contention-data"></a>Zobrazení podrobností o prostředku – data kolizí
 Zobrazení Podrobnosti o prostředku představuje graf časové osy blokujících událostí, které byly způsobeny kolizí přes vybraný prostředek. K blokující události dojde, když je vlákno nuceno pozastavit provádění, protože jiné vlákno má zamčený přístup k prostředku.
 
- Toto zobrazení představuje časovou osu spuštění každého vlákna jako vodorovný pruh a představuje každou blokující událost jako svislou čáru na časové ose vlákna. V případě potřeby můžete zvětšit část časové osy a zobrazit jednotlivé události. Chcete-li zobrazit cestu spuštění (zásobník volání) funkcí, které vedly k události, klikněte na panel událostí. Funkce se zobrazí v okně **zásobník volání** . Pokud je zdrojový kód funkce k dispozici, můžete kliknout na název funkce a upravit zdrojový soubor v rozhraní pro [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+ Toto zobrazení představuje časovou osu spuštění každého vlákna jako vodorovný pruh a představuje každou blokující událost jako svislou čáru na časové ose vlákna. V případě potřeby můžete zvětšit část časové osy a zobrazit jednotlivé události. Chcete-li zobrazit cestu spuštění (zásobník volání) funkcí, které vedly k události, klikněte na panel událostí. Funkce se zobrazí v okně **zásobník volání** . Pokud je zdrojový kód funkce k dispozici, můžete kliknout na název funkce a upravit tak zdrojový soubor v rozhraní pro [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
 
 ## <a name="procedures"></a>Procedury
 

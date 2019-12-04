@@ -6,19 +6,20 @@ ms.assetid: f9732480-287f-40f1-a4ff-b112e143b940
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 479f7e1cbd85c0421497020ae1fc108154ca639a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fffcab1d841840c15957e8dae0ff0f87b20de28d
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968311"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74771598"
 ---
 # <a name="targetclr"></a>TargetCLR
-**TargetCLR** Určuje verzi common language runtime (CLR) do profilu je do aplikace načtena více než jedna verze modulu CLR.
+Možnost **TargetCLR** určuje verzi modulu CLR (Common Language Runtime), která má být profilovaná v případě, že je do aplikace načtena více než jedna verze modulu CLR.
 
- Ve výchozím nastavení [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástrojů pro profilaci sady cílit na první verzi modulu CLR, který je načten aplikací.
+ Ve výchozím nastavení [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci cílem první verze modulu CLR, který je načten aplikací.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,17 +28,17 @@ VSPerfCmd.exe {/Launch:AppName | /Attach:PID} /TargetCLR[:ClrVersion] [Options]
 ```
 
 #### <a name="parameters"></a>Parametry
- `ClrVersion` Číslo verze modulu CLR. Použijte formát verze **vN.N.NNNNN**.
+ `ClrVersion` číslo verze modulu CLR. Použijte formát verze **vn. N. NNNNN**.
 
 ## <a name="required-options"></a>Požadované možnosti
- **TargetCLR** možnost se dá použít jenom s **spuštění** nebo **připojit** možnosti.
+ Možnost **TargetCLR** lze použít pouze s možnostmi **Spustit** nebo **připojit** .
 
- **Spuštění:** `AppName` Zadaná aplikace spustí a začne profilu.
+ **Spustit:** `AppName` spustí zadanou aplikaci a začne profilovat.
 
- **Připojení:** `PID` Spuštění profilu určeného procesu.
+ **Připojit:** `PID` spustí profilování zadaného procesu.
 
 ## <a name="example"></a>Příklad
- V tomto příkladu se používá možnost TargetCLR abyste měli jistotu, že je modul CLR verze 4.0.11003 profilována.
+ V tomto příkladu se používá možnost TargetCLR k ujištění, že soubor CLR verze 4.0.11003 je profilování.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp

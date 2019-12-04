@@ -6,109 +6,110 @@ ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 459b495ea6f440a670c9a257566b19a1bc8756dd
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 04dcf800074476b285a07e36db5a85fa3a366585
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439649"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779126"
 ---
-# <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-memory-data-by-using-the-command-line"></a>Postupy: Připojení profileru k samostatné aplikaci .NET Framework ke shromažďování dat paměti pomocí příkazového řádku
+# <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-memory-data-by-using-the-command-line"></a>Postupy: Připojení profileru k .NET Framework samostatné aplikaci ke shromažďování dat paměti pomocí příkazového řádku
 
-Tento článek popisuje, jak používat Visual Studio nástroje příkazového řádku nástroje pro profilaci k připojení profileru k běžící samostatné (klientské) aplikaci rozhraní .NET Framework a shromažďování dat paměti.
+Tento článek popisuje, jak pomocí nástrojů příkazového řádku sady Visual Studio Nástroje pro profilaci připojit profiler ke spuštěné .NET Framework samostatné (klientské) aplikace a shromažďovat data o paměti.
 
 > [!NOTE]
-> Chcete-li získat cestu k nástrojů pro profilaci, naleznete v tématu [zadejte cestu k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). Na 64bitových počítačích jsou k dispozici 64bitové i 32bitové verze nástrojů. Použití nástroje příkazového řádku profileru, musíte přidat cestu k nástrojům do proměnné prostředí PATH v okně příkazového řádku nebo ho přidejte do příkazu samého.
+> Postup získání cesty k nástrojům pro profilaci najdete v tématu [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). Na 64 počítačích jsou k dispozici i 64 32 a 32bitové verze nástrojů. Chcete-li použít nástroje příkazového řádku profileru, je nutné přidat cestu k nástrojům do proměnné prostředí PATH v okně příkazového řádku nebo je přidat do samotného příkazu.
 
-Připojit k aplikaci rozhraní .NET Framework a shromažďovat paměťová data, je nutné použít [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) nástroj k inicializaci příslušných proměnných prostředí před spuštěním cílové aplikace. Když je profiler připojen k aplikaci, můžete *VSPerfCmd.exe* má pozastavit a obnovit sběr dat. nástroj.
+Chcete-li se připojit k aplikaci .NET Framework a shromažďovat data paměti, je nutné použít nástroj [VSPerfCLREnv. cmd](../profiling/vsperfclrenv.md) k inicializaci příslušných proměnných prostředí před spuštěním cílové aplikace. Když je profiler připojen k aplikaci, můžete k pozastavení a obnovení sběru dat použít nástroj *VSPerfCmd. exe* .
 
-Chcete-li ukončit relaci profilování, musí být profiler odpojen od všech profilovaných procesů a profiler musí být explicitně vypnut. Ve většině případů doporučujeme na konci relace vyčistit proměnné prostředí profilování.
+Chcete-li ukončit relaci profilování, musí být profiler odpojen od všech profilových procesů a Profiler musí být explicitně vypnut. Ve většině případů doporučujeme na konci relace vymazat proměnné prostředí pro profilování.
 
 ## <a name="attach-the-profiler"></a>Připojení profileru
 
-### <a name="to-attach-the-profiler-to-a-running-net-framework-application"></a>Připojení profileru k běžící aplikaci rozhraní .NET Framework
+### <a name="to-attach-the-profiler-to-a-running-net-framework-application"></a>Připojení profileru k běžící .NET Framework aplikaci
 
 1. Otevřete okno příkazového řádku.
 
-2. Inicializujte proměnné prostředí profilování. Typ:
+2. Inicializujte proměnné prostředí pro profilování. Typ:
 
-     **Vsperfclrenv –** {**/samplegc** &#124; **/samplegclife**} [**/samplelineoff**]
+     **VSPerfCLREnv** { **/samplegc** &#124; **/samplegclife**} [ **/samplelineoff**]
 
-    - **/Samplegc** a **/samplegclife** možnosti určují, jestli se má shromažďovat pouze data o přidělování paměti nebo získat informace o přidělování paměti a životnosti objektů. Musí být zadána pouze jedna možnost.
+    - Možnosti **/samplegc** a **/samplegclife** určují, zda mají být shromažďována pouze data o přidělování paměti nebo jak shromažďovat data o životnosti objektů. Je nutné zadat pouze jednu možnost.
 
         |Možnost|Popisy|
         |------------|------------------|
-        |**/samplegc**|Shromážděte pouze data o přidělování paměti.|
-        |**/samplegclife**|Shromážděte o přidělování paměti a životnosti objektů.|
+        |**/samplegc**|Shromažďovat pouze data o přidělování paměti.|
+        |**/samplegclife**|Shromážděte jak přidělování paměti, tak data o životnosti objektů.|
 
-    - **/Samplelineoff** možnost zakáže kolekci čísel datového řádku zdrojového kódu.
+    - Možnost **/samplelineoff** zakáže shromažďování dat o číslech řádků zdrojového kódu.
 
 3. Spusťte profiler. Typ:
 
-     **/Start:sample VSPerfCmd/output:** `OutputFile` [`Options`]
+     **VSPerfCmd/Start: Sample/output:** `OutputFile` [`Options`]
 
-   - [/Start](../profiling/start.md)**: Ukázka** možnost inicializuje profiler.
+   - Možnost [/Start](../profiling/start.md) **: Sample** inicializuje Profiler.
 
-   - [/Output](../profiling/output.md)**:** `OutputFile` možnost je vyžadována s **/start**. `OutputFile` Určuje název a umístění souboru dat profilování (.vsp).
+   - Parametr [/Output](../profiling/output.md) **:** `OutputFile` je vyžadován s parametrem **/Start**. `OutputFile` Určuje název a umístění souboru dat profilování (. vsp).
 
-     Můžete použít některý z těchto možností s **/start:sample** možnost.
+     Pomocí možnosti **/Start: Sample** můžete použít kteroukoli z následujících možností.
 
      | Možnost | Popis |
      | - | - |
-     | [/ User](../profiling/user-vsperfcmd.md) **:**[`Domain`**\\**]`UserName` | Určuje doménu a uživatelské jméno účtu vlastnícího profilovaný proces. Tato možnost je vyžadována, pouze pokud je proces spuštěn pod jiným než přihlášeným uživatelem. Vlastník procesu je uvedena ve sloupci uživatelské jméno na záložce procesy ve Správci úloh Windows. |
-     | [/ crosssession &#124; protokolovacímu](../profiling/crosssession.md) | Umožňuje profilování procesů v jiných relacích. Tato možnost je vyžadována, pokud je aplikace spuštěna v jiné relaci. Relace je vypsán ve sloupci ID relace na záložce procesy ve Správci úloh Windows. **Protokolovacímu** může být zadán jako zkratka pro **/crosssession**. |
-     | [/wincounter](../profiling/wincounter.md) **:** `WinCounterPath` | Určuje čítač výkonu Windows má být shromážděn během profilování. |
-     | [/automark](../profiling/automark.md) **:** `Interval` | Použití s **/wincounter** pouze. Určuje počet milisekund mezi událostmi sběru čítače výkonu Windows. Výchozí hodnota je 500 ms. |
+     | [/User](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | Určuje doménu a uživatelské jméno účtu, který vlastní profilový proces. Tato možnost je vyžadována, pouze pokud je proces spuštěn jako uživatel jiný než přihlášený uživatel. Vlastník procesu je uveden ve sloupci uživatelské jméno na kartě procesy ve Správci úloh systému Windows. |
+     | [/CrossSession &#124; /cs](../profiling/crosssession.md) | Umožňuje profilování procesů v jiných relacích. Tato možnost je vyžadována, pokud aplikace běží v jiné relaci. Vypsán relace je uvedena ve sloupci ID relace na kartě procesy ve Správci úloh systému Windows. **/Cs** lze zadat jako zkratku pro **/CrossSession**. |
+     | [/WinCounter](../profiling/wincounter.md) **:** `WinCounterPath` | Určuje čítač výkonu systému Windows, který má být shromážděn během profilace. |
+     | [/AutoMark](../profiling/automark.md) **:** `Interval` | Používejte pouze s **/WinCounter** . Určuje počet milisekund mezi událostmi shromažďování čítačů výkonu systému Windows. Výchozí hodnota je 500 ms. |
 
-4. V případě potřeby spusťte cílovou aplikaci standardním způsobem.
+4. V případě potřeby spusťte cílovou aplikaci obvyklým způsobem.
 
-5. Připojení profileru k cílové aplikaci. Typ:
+5. Připojte profiler k cílové aplikaci. Typ:
 
-     **Nástroj VSPerfCmd**[/ attach](../profiling/attach.md) **:**{`PID`&#124;`ProcName`} [[targetclr](../profiling/targetclr.md)**:**`Version`]  
+     **VSPerfCmd**[/Attach](../profiling/attach.md) **:** {`PID`&#124;`ProcName`} [[/targetclr](../profiling/targetclr.md) **:** `Version`]
 
-    - `PID` Určuje ID procesu cílové aplikace. `ProcessName` Určuje název procesu. Všimněte si, že pokud zadáte `ProcessName` a běží víc procesů, které mají stejný název, výsledky nepředvídatelné. ID všech spuštěných procesů lze zobrazit ve Správci úloh Windows.
+    - `PID` Určuje ID procesu cílové aplikace. `ProcessName` Určuje název procesu. Všimněte si, že pokud zadáte `ProcessName` a více procesů, které mají stejný název, mohou být výsledky nepředvídatelné. ID procesů všech spuštěných procesů můžete zobrazit ve Správci úloh systému Windows.
 
-    - **targetclr:** `Version` Určuje verzi modulu common language runtime (CLR) do profilu je do aplikace načtena více než jedna verze modulu runtime. Volitelné.
+    - **/targetclr:** `Version` určuje verzi modulu CLR (Common Language Runtime), která má být profilovaná v případě, že je do aplikace načtena více než jedna verze modulu runtime. Volitelné.
 
 ## <a name="control-data-collection"></a>Řízení shromažďování dat
 
-Pokud je cílová aplikace spuštěna, lze sběr dat řídit spouštěním či pozastavováním zápisu dat do souboru s použitím *VSPerfCmd.exe* možnosti. Řízení sběru dat umožňuje shromažďovat data pro určitou část provádění programu, například spouštění či ukončování aplikace.
+Je-li cílová aplikace spuštěna, lze sběr dat řídit spuštěním a zastavením zápisu dat do souboru pomocí možností *VSPerfCmd. exe* . Řízení sběru dat umožňuje shromažďovat data pro určitou část provádění programu, například spouštění nebo ukončování aplikace.
 
 ### <a name="to-start-and-stop-data-collection"></a>Spuštění a zastavení shromažďování dat
 
-- Následující páry možností spouští a zastavují sběr dat. Každou možnost zadejte na samostatný příkazový řádek. Sběr dat lze zapnout a vypnout několikrát.
+- Následující páry možností spouští a zastavují sběr dat. Každou možnost zadejte na samostatný příkazový řádek. Shromažďování dat můžete zapnout a vypnout několikrát.
 
     |Možnost|Popis|
     |------------|-----------------|
-    |[globalon /globaloff](../profiling/globalon-and-globaloff.md)|Spustí (**globalon**) nebo zastaví (**/globaloff**) sběr dat pro všechny procesy.|
-    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|Spustí (**/processon**) nebo zastaví (**/processoff**) sběr dat pro proces, který je určen `PID`.|
-    |[/ attach](../profiling/attach.md) **:**{`PID`&#124;`ProcName`} [/ detach](../profiling/detach.md)[**:**{`PID`&#124;`ProcName`}]|**/ attach** spustí sběr dat pro proces určený pomocí `PID` nebo názvem procesu (ProcName). **/ detach** zastaví sběr dat pro zadaný proces nebo pro všechny procesy, pokud konkrétní proces není zadán.|
+    |[/GlobalOn/globaloff](../profiling/globalon-and-globaloff.md)|Spustí ( **/GlobalOn**) nebo zastaví shromažďování dat ( **/globaloff**) pro všechny procesy.|
+    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [/ProcessOff](../profiling/processon-and-processoff.md) **:** `PID`|Spustí ( **/ProcessOn**) nebo zastaví sběrdat pro proces určený `PID`.|
+    |[/Attach](../profiling/attach.md) **:** {`PID`&#124;`ProcName`} [/detach](../profiling/detach.md)[ **:** {`PID`&#124;`ProcName`}]|**/Attach** začne shromažďovat data pro proces určený `PID` nebo názvem procesu (ProcName). **/detach** zastaví sběr dat pro zadaný proces nebo pro všechny procesy, pokud není zadán konkrétní proces.|
 
-## <a name="end-the-profiling-session"></a>Ukončit relaci profilování
+## <a name="end-the-profiling-session"></a>Ukončení relace profilování
 
-Chcete-li ukončit relaci profilování, musí být profiler odpojen od všech profilovaných procesů a profiler musí být explicitně vypnut. Je-li odpojit profiler od aplikace profilované za použití metody vzorkování ukončením aplikace nebo zavoláním **VSPerfCmd / detach** možnost. Poté je zapotřebí zavolat **VSPerfCmd/Shutdown** možnost se profiler vypne a uzavře soubor dat profilování. **VSPerfClrEnv / off** příkaz vymaže proměnné prostředí profilování.
+Chcete-li ukončit relaci profilování, musí být profiler odpojen od všech profilových procesů a Profiler musí být explicitně vypnut. Profiler můžete odpojit od aplikace, která byla profilovaná pomocí metody vzorkování, ukončením aplikace nebo zavoláním možnosti **VSPerfCmd/detach** . Pak zavoláte možnost **VSPerfCmd/shutdown** pro vypnutí profileru a zavření souboru dat profilování. Příkaz **VSPerfCLREnv/off.** vymaže proměnné prostředí profilování.
 
-### <a name="to-end-a-profiling-session"></a>Chcete-li ukončit relaci profilování
+### <a name="to-end-a-profiling-session"></a>Ukončení relace profilování
 
-1. Proveďte jeden z následujících kroků-li odpojit profiler od cílové aplikace:
+1. Chcete-li odpojit Profiler od cílové aplikace, proveďte jeden z následujících kroků:
 
-    - Typ **VSPerfCmd / odpojení**
+    - Typ **VSPerfCmd/detach**
 
          -nebo-
 
-    - Ukončete cílovou aplikaci.
+    - Zavřete cílovou aplikaci.
 
 2. Vypněte profiler. Typ:
 
-     **Nástroj VSPerfCmd** [ /Shutdown](../profiling/shutdown.md)
+     **VSPerfCmd**  [/shutdown](../profiling/shutdown.md)
 
-3. (Volitelné) Vyčistěte proměnné prostředí profilování. Typ:
+3. Volitelné Vymažte proměnné prostředí profilování. Typ:
 
-     **Nástroj VSPerfCmd / vypnuté**
+     **VSPerfCmd/off.**
 
 ## <a name="see-also"></a>Viz také:
 
-[Profilování samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)
+[Profilovat samostatné aplikace](../profiling/command-line-profiling-of-stand-alone-applications.md)
 [zobrazení dat paměti .NET](../profiling/dotnet-memory-data-views.md)

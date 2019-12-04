@@ -1,5 +1,5 @@
 ---
-title: Připojení profileru k aplikaci .NET ke shromažďování dat souběžnosti | Dokumentace Microsoftu
+title: Připojení profileru k aplikaci .NET ke shromažďování dat souběžnosti | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -7,81 +7,82 @@ ms.assetid: fdd41576-797e-4312-8520-fee7bb767e4a
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9b4703b2dd86056b2c79b8e50f8169a0b9fd9648
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f44213bf7356d499f852b53335698c701bf03eb7
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431532"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779152"
 ---
-# <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-concurrency-data-by-using-the-command-line"></a>Postupy: Připojení profileru k samostatné aplikaci .NET Framework ke shromažďování dat souběžnosti pomocí příkazového řádku
-Tento článek popisuje způsob použití [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] příkazového řádku nástrojů pro profilaci k připojení profileru k běžící samostatné (klientské) aplikaci rozhraní .NET Framework a shromažďování dat souběžnosti procesů a vláken.
+# <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-concurrency-data-by-using-the-command-line"></a>Postupy: Připojení profileru k .NET Framework samostatné aplikace ke shromažďování dat souběžnosti pomocí příkazového řádku
+Tento článek popisuje, jak pomocí nástrojů příkazového řádku [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci připojit profiler ke spuštěné .NET Framework samostatné (klientské) aplikaci a shromažďovat data o procesech a souběžnosti vláken.
 
 > [!NOTE]
-> Chcete-li získat cestu k nástrojů pro profilaci, naleznete v tématu [názorný postup: Použití rozhraní API profileru](../profiling/walkthrough-using-profiler-apis.md). Na 64bitových počítačích jsou k dispozici 64bitové i 32bitové verze nástrojů. Použití nástroje příkazového řádku profileru, musíte přidat cestu k nástrojům do proměnné prostředí PATH v okně příkazového řádku nebo ho přidejte do příkazu samého. Další informace najdete v tématu [zadejte cestu k nástroji příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
+> Informace o tom, jak získat cestu k nástrojům pro profilaci, najdete v tématu [Návod: použití rozhraní API profileru](../profiling/walkthrough-using-profiler-apis.md). Na 64 počítačích jsou k dispozici i 64 32 a 32bitové verze nástrojů. Chcete-li použít nástroje příkazového řádku profileru, je nutné přidat cestu k nástrojům do proměnné prostředí PATH v okně příkazového řádku nebo je přidat do samotného příkazu. Další informace najdete v tématu [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
 
- Zatímco je profiler připojen k aplikaci, lze pozastavit a obnovit sběr dat. Chcete-li ukončit relaci profilování, musí profiler již připojen k aplikaci a Profiler musí být explicitně vypnut.
+ I když je profiler připojen k aplikaci, můžete pozastavit a obnovit shromažďování dat. Chcete-li ukončit relaci profilování, nesmí být profiler již připojen k aplikaci a musí být explicitně vypnut.
 
 ## <a name="attach-the-profiler"></a>Připojení profileru
 
-#### <a name="to-attach-the-profiler-to-a-running-net-framework-application"></a>Připojení profileru k běžící aplikaci rozhraní .NET Framework
+#### <a name="to-attach-the-profiler-to-a-running-net-framework-application"></a>Připojení profileru k běžící .NET Framework aplikaci
 
 1. Otevřete okno příkazového řádku.
 
 2. Spusťte profiler. Typ:
 
-     [Nástroj VSPerfCmd](../profiling/vsperfcmd.md) **/start:concurrency/output:** `OutputFile` [`Options`]
+     [VSPerfCmd](../profiling/vsperfcmd.md) **/Start:/Output pro Concurrency** : `OutputFile` [`Options`]
 
-     [/Output](../profiling/output.md)**:** `OutputFile` možnost je vyžadována s **/start**. `OutputFile` Určuje název a umístění souboru dat profilování (.vsp).
+     Parametr [/Output](../profiling/output.md) **:** `OutputFile` je vyžadován s parametrem **/Start**. `OutputFile` Určuje název a umístění souboru dat profilování (. vsp).
 
-     Můžete použít některý z těchto možností s **/start:concurrency** možnost.
+     Pomocí možnosti **/Start: Concurrency** můžete použít kteroukoli z následujících možností.
 
     |Možnost|Popis|
     |------------|-----------------|
-    |[/wincounter](../profiling/wincounter.md) **:** `WinCounterPath`|Určuje čítač výkonu Windows má být shromážděn během profilování.|
-    |[/automark](../profiling/automark.md) **:** `Interval`|Použití s **/wincounter** pouze. Určuje počet milisekund mezi událostmi sběru čítače výkonu Windows. Výchozí hodnota je 500 ms.|
-    |[/Events](../profiling/events-vsperfcmd.md) **:** `Config`|Určuje událost trasování událostí pro Windows (ETW) má být shromážděn během profilování. Události trasování událostí pro Windows jsou shromážděny v samostatném (ETL) soubor.|
+    |[/WinCounter](../profiling/wincounter.md) **:** `WinCounterPath`|Určuje čítač výkonu systému Windows, který má být shromážděn během profilace.|
+    |[/AutoMark](../profiling/automark.md) **:** `Interval`|Používejte pouze s **/WinCounter** . Určuje počet milisekund mezi událostmi shromažďování čítačů výkonu systému Windows. Výchozí hodnota je 500 ms.|
+    |[/events](../profiling/events-vsperfcmd.md) **:** `Config`|Určuje událost trasování událostí pro Windows (ETW), která se má shromáždit během profilace. Události ETW jsou shromažďovány v samostatném souboru (. ETL).|
 
-3. Spusťte cílovou aplikaci standardním způsobem.
+3. Spusťte cílovou aplikaci obvyklým způsobem.
 
-4. Připojení profileru k cílové aplikaci. Typ:
+4. Připojte profiler k cílové aplikaci. Typ:
 
-     **Nástroj VSPerfCmd / připojit:** `PID` [**/lineoff**] [**targetclr:**`Version`]
+     **VSPerfCmd/attach:** `PID` [ **/LineOff**] [ **/targetclr:** `Version`]
 
-    - `PID` Určuje ID procesu cílové aplikace. ID všech spuštěných procesů lze zobrazit ve Správci úloh Windows.
+    - `PID` Určuje ID procesu cílové aplikace. ID procesů všech spuštěných procesů můžete zobrazit ve Správci úloh systému Windows.
 
-    - [/ lineoff](../profiling/lineoff.md) zakáže kolekci čísel datového řádku.
+    - [/LineOff](../profiling/lineoff.md) zakáže shromažďování dat o číslech řádků.
 
-    - [targetclr](../profiling/targetclr.md) **:** `Version` Určuje verzi modulu common language runtime (CLR) do profilu je do aplikace načtena více než jedna verze modulu runtime. Volitelné.
+    - [/targetclr](../profiling/targetclr.md) **:** `Version` určuje verzi modulu CLR (Common Language Runtime), která má být profilovaná v případě, že je do aplikace načtena více než jedna verze modulu runtime. Volitelné.
 
 ## <a name="control-data-collection"></a>Řízení shromažďování dat
- Dokud je cílová aplikace spuštěna, lze sběr dat řídit spouštěním či pozastavováním zápisu dat do souboru s použitím *VSPerfCmd.exe* možnosti. Řízení sběru dat umožňuje shromažďovat data pro určitou část provádění programu, například spouštění či ukončování aplikace.
+ I když je cílová aplikace spuštěná, můžete řídit shromažďování dat spuštěním a zastavením zápisu dat do souboru pomocí možností *VSPerfCmd. exe* . Řízení sběru dat umožňuje shromažďovat data pro určitou část provádění programu, například spouštění nebo ukončování aplikace.
 
 #### <a name="to-start-and-stop-data-collection"></a>Spuštění a zastavení shromažďování dat
 
-- Následující páry *VSPerfCmd.exe* možností spouští a zastavují sběr dat. Každou možnost zadejte na samostatný příkazový řádek. Sběr dat lze zapnout a vypnout několikrát.
+- Následující páry možností *VSPerfCmd. exe* spouští a zastavují sběr dat. Každou možnost zadejte na samostatný příkazový řádek. Shromažďování dat můžete zapnout a vypnout několikrát.
 
     |Možnost|Popis|
     |------------|-----------------|
-    |[globalon /globaloff](../profiling/globalon-and-globaloff.md)|Spustí (**globalon**) nebo zastaví (**/globaloff**) sběr dat pro všechny procesy.|
-    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|Spustí (**/processon**) nebo zastaví (**/processoff**) sběr dat pro proces určený identifikátorem procesu (`PID`).|
-    |[/ attach](../profiling/attach.md) **:**{`PID`&#124;`ProcName`} [/ detach](../profiling/detach.md)[**:**{`PID`&#124;`ProcName`}]|**/ attach** spustí sběr dat pro proces určený identifikátorem procesu (`PID`) nebo názvem procesu (ProcName). **/ detach** zastaví sběr dat pro zadaný proces nebo pro všechny procesy, pokud konkrétní proces není zadán.|
+    |[/GlobalOn/globaloff](../profiling/globalon-and-globaloff.md)|Spustí ( **/GlobalOn**) nebo zastaví shromažďování dat ( **/globaloff**) pro všechny procesy.|
+    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [/ProcessOff](../profiling/processon-and-processoff.md) **:** `PID`|Spustí ( **/ProcessOn**) nebo zastaví sběrdat pro proces určený identifikátorem procesu (`PID`).|
+    |[/Attach](../profiling/attach.md) **:** {`PID`&#124;`ProcName`} [/detach](../profiling/detach.md)[ **:** {`PID`&#124;`ProcName`}]|**/Attach** spustí shromažďování dat pro proces určený identifikátorem procesu (`PID`) nebo názvem procesu (ProcName). **/detach** zastaví sběr dat pro zadaný proces nebo pro všechny procesy, pokud není zadán konkrétní proces.|
 
-## <a name="end-the-profiling-session"></a>Ukončit relaci profilování
- Chcete-li ukončit relaci profilování, profiler nesmí pokračovat ve shromažďování dat. Zastavit shromažďování dat od aplikace profilované za použití metody souběžnosti jejím ukončením nebo vyvoláním **VSPerfCmd / detach** možnost. Poté je zapotřebí vyvolat **VSPerfCmd/Shutdown** možnost profiler vypne a uzavře soubor dat profilování. **VSPerfClrEnv / off** příkaz vymaže proměnné prostředí profilování.
+## <a name="end-the-profiling-session"></a>Ukončení relace profilování
+ Chcete-li ukončit relaci profilování, profiler nesmí shromažďovat data. Shromažďování dat z aplikace profilované s metodou souběžnosti můžete zastavit ukončením aplikace nebo vyvoláním možnosti **VSPerfCmd/detach** . Potom vyvoláte možnost **VSPerfCmd/shutdown** pro vypnutí profileru a zavření souboru dat profilování. Příkaz **VSPerfCLREnv/off.** vymaže proměnné prostředí profilování.
 
-#### <a name="to-end-a-profiling-session"></a>Chcete-li ukončit relaci profilování
+#### <a name="to-end-a-profiling-session"></a>Ukončení relace profilování
 
-1. Proveďte jednu z následujících-li odpojit profiler od cílové aplikace.
+1. Chcete-li odpojit Profiler od cílové aplikace, proveďte jeden z následujících postupů.
 
-    - Typ **VSPerfCmd / odpojení**
+    - Typ **VSPerfCmd/detach**
 
          -nebo-
 
-    - Ukončete cílovou aplikaci.
+    - Zavřete cílovou aplikaci.
 
 2. Vypněte profiler. Typ:
 
-     Nástroj VSPerfCmd [ /Shutdown](../profiling/shutdown.md)
+     VSPerfCmd[/shutdown](../profiling/shutdown.md)

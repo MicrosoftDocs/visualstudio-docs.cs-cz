@@ -1,24 +1,25 @@
 ---
-title: Označit | Dokumentace Microsoftu
+title: Označit | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1d72cef3-bb09-4bbb-8864-6ea0ab623ff9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 440401f8c46a3920fce6c8e0d29f630a24103f65
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4bf89469c4137052247b5a1fdfee7f8dc694fbcc
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62999983"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74773991"
 ---
 # <a name="mark"></a>Označení
-*VSPerfCmd.exe* **označit** možnost vloží informace o zadaném do souboru dat profilování. Značky mohou být uvedeny v samostatných sestav VSPerfReport nebo v zobrazení sestav značky profilování uživatelského rozhraní. **Označit** slouží k určení počátečního a koncového bodu v filtry sestav a zobrazení.
+Možnost **označení** *VSPerfCmd. exe* vloží zadané informace do souboru dat profilování. Značka může být uvedena v samostatné sestavě VSPerfReport nebo v zobrazení zprávy pro uživatelské rozhraní profileru. **Značku** lze použít k určení počátečních a koncových bodů v filtrech sestav a zobrazení.
 
- **Označit** možnost musí být zadán v příkazovém řádku jedinou možností.
+ Možnost **Mark** musí být jedinou možností zadanou v příkazovém řádku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,12 +28,12 @@ VSPerfCmd.exe /Mark:MarkID,[MarkName]
 ```
 
 #### <a name="parameters"></a>Parametry
- `MarkID` Uživatelem definované číslo, které je uvedené jako ID značky v zobrazení profileru a sestavy. `MarkID` nemusí být jedinečný.
+ `MarkID` uživatelsky definované celé číslo, které je uvedeno jako ID značky v zobrazeních a sestavách profileru. `MarkID` nemusí být jedinečný.
 
- `MarkName` (Volitelné) Uživatelem definovaný řetězec, který je uveden jako název značky v zobrazení profileru a sestavy. Pokud `MarkName` není zadán, pole název značky označit seznam je prázdný. Uzavření řetězců, které obsahují mezery nebo lomítka ("/") do uvozovek.
+ `MarkName` (volitelné) uživatelem definovaný řetězec, který je uveden jako název značky v zobrazeních a sestavách profileru. Není-li zadán `MarkName`, je pole název značky v seznamu značek prázdné. Uzavřete řetězce, které obsahují mezery nebo lomítka ("/") v uvozovkách.
 
 ## <a name="example"></a>Příklad
- V tomto příkladu vloží značku s ID 123 a název značky "TestMark".
+ Tento příklad vloží značku s ID 123 a názvem "TestMark".
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp
@@ -42,6 +43,6 @@ VSPerfCmd.exe /Mark:123,TestMark
 
 ## <a name="see-also"></a>Viz také:
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Samostatné aplikace profilu](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Webové aplikace ASP.NET profilu](../profiling/command-line-profiling-of-aspnet-web-applications.md)
-- [Profil služby](../profiling/command-line-profiling-of-services.md)
+- [Profilovat samostatné aplikace](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [ASP.NET webové aplikace Profile](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Profilovací služby](../profiling/command-line-profiling-of-services.md)

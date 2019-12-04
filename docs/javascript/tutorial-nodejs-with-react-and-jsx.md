@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 2f14a5f2255f7ba1b077ead60147a6df407970fc
-ms.sourcegitcommit: f9f389e72787de30eb869a55ef7725a10a4011f0
+ms.openlocfilehash: 321e8271806f8f9e2983e82db010cd2ffb49a3ee
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73636558"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777943"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>Kurz: Vytvoření aplikace Node.js a React v sadě Visual Studio
 
@@ -26,12 +26,12 @@ Visual Studio umožňuje snadno vytvořit projekt Node. js a zkušenosti s Intel
 V tomto kurzu se naučíte:
 > [!div class="checklist"]
 > * Vytvořit projekt Node.js
-> * Přidání balíčků npm
+> * Přidat balíčky npm
 > * Přidat do aplikace kód React
 > * Transpilovat JSX
 > * Připojit ladicí program
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Tady je stručné Nejčastější dotazy, které vám povedou k předvedeným klíčovým konceptům.
 
@@ -68,7 +68,7 @@ sada Webpack rozbalí soubory JavaScriptu tak, aby mohly běžet v prohlížeči
 
     Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít na **nástroje** > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
 
-    ![Úloha Node.js v instalačním programu VS](../ide/media/quickstart-nodejs-workload.png)
+    ![Úlohy Node. js v instalačním programu VS](../ide/media/quickstart-nodejs-workload.png)
 
 * Je nutné mít nainstalovaný modul runtime Node.js.
 
@@ -80,7 +80,7 @@ sada Webpack rozbalí soubory JavaScriptu tak, aby mohly běžet v prohlížeči
 
 Nejprve vytvoříte projekt webové aplikace Node.js.
 
-1. Otevřít Visual Studio.
+1. Otevřete Visual Studio.
 
 1. Vytvořte nový projekt.
 
@@ -106,7 +106,7 @@ Nejprve vytvoříte projekt webové aplikace Node.js.
 
     (5) soubory projektu, například *Server. js* , se zobrazí pod uzlem projektu. *Server. js* je spouštěcí soubor projektu a je, proč se zobrazuje **tučně**. Spouštěcí soubor můžete nastavit tak, že kliknete pravým tlačítkem na soubor v projektu a vyberete **nastavit jako spouštěcí soubor Node. js**.
 
-## <a name="add-npm-packages"></a>Přidání balíčků npm
+## <a name="add-npm-packages"></a>Přidat balíčky npm
 
 Tato aplikace vyžaduje ke správnému fungování řadu modulů npm.
 
@@ -400,6 +400,10 @@ V tomto scénáři použijte Chrome.
    Jiné instance prohlížeče můžou zabránit otevírání prohlížeče s povoleným laděním. (Rozšíření prohlížeče můžou běžet a bránit úplnému režimu ladění, takže možná budete muset otevřít Správce úloh a najít neočekávané instance Chromu.)
 
    ::: moniker range=">=vs-2019"
+   V případě Microsoft Edge (chrom) vypněte také všechny instance aplikace Chrome. Vzhledem k tomu, že oba prohlížeče sdílí základní kód Chromu, dává to nejlepší výsledky.
+   ::: moniker-end
+
+   ::: moniker range=">=vs-2019"
    V případě Microsoft Edge (chrom) vypněte také všechny instance aplikace Chrome. Vzhledem k tomu, že oba prohlížeče používají základ kódu Chromu, dává to nejlepší výsledky.
    ::: moniker-end
 
@@ -414,7 +418,7 @@ V tomto scénáři použijte Chrome.
 
     `msedge --remote-debugging-port=9222`
 
-    nebo,
+    ani
 
     `chrome.exe --remote-debugging-port=9222`
     ::: moniker-end
@@ -478,7 +482,7 @@ V tomto scénáři použijte Chrome.
 5. V dialogovém okně **připojit k procesu** Získejte filtrovaný seznam instancí prohlížeče, ke kterým se můžete připojit.
 
     ::: moniker range=">=vs-2019"
-    V aplikaci Visual Studio 2019 vyberte správný ladicí program pro cílový prohlížeč, **JavaScript (Chrome)** nebo **JavaScript (Microsoft Edge-chrom)** v poli **připojit k** , pokud chcete filtrovat výsledky hledání, zadejte v poli Filtr text **Chrome** nebo **Edge** .
+    V aplikaci Visual Studio 2019 vyberte správný ladicí program pro cílový prohlížeč, **JavaScript (Chrome)** nebo **JavaScript (Microsoft Edge-chrom)** v poli **připojit k** , do pole Filtr zadejte **Chrome** nebo **Edge** a vyfiltrujte ho. výsledky hledání
     ::: moniker-end
     ::: moniker range="vs-2017"
     V aplikaci Visual Studio 2017 v poli **připojit k** vyberte **WebKit kód** , do pole Filtr zadejte **Chrome** a vyfiltrujte výsledky hledání.
@@ -513,7 +517,6 @@ V tomto scénáři použijte Chrome.
       * Zavřeli jste všechny instance prohlížeče, včetně rozšíření Chrome (pomocí Správce úloh), abyste mohli spustit prohlížeč v režimu ladění. Ujistěte se, že jste spustili prohlížeč v režimu ladění.
 
       * Ujistěte se, že váš zdrojový soubor mapování obsahuje odkaz na *./app.TSX* a ne *Webpack:///./app.TSX*, což brání ladicímu programu sady Visual Studio v umístění *App. TSX*.
-
        Případně, pokud potřebujete přerušit kód v souboru *App. TSX* a nemůžete to provést, zkuste použít příkaz `debugger;` v *App. TSX*nebo nastavit zarážky v sadě Chrome vývojářské nástroje (nebo v nástrojích F12 pro Microsoft Edge) místo toho.
 
    * Pokud potřebujete přerušit kód v souboru *App-Bundle. js* a nemůžete ho provést, odeberte zdrojový soubor mapování *App-Bundle. js. map*.
@@ -521,4 +524,4 @@ V tomto scénáři použijte Chrome.
 ## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
-> [Nasazení aplikace do služby App Service pro Linux](../javascript/publish-nodejs-app-azure.md)
+> [Nasazení aplikace na Linux App Service](../javascript/publish-nodejs-app-azure.md)

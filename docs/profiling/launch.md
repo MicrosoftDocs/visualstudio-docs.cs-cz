@@ -1,24 +1,25 @@
 ---
-title: Spuštění | Dokumentace Microsoftu
+title: Spustit | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f81bde5c-3394-4b79-a315-c2f6491689b3
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c105f5176948271c832330f01d0d03d270e69a97
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9834c10c58fb343de0707fa0b805586a6cdebcb3
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62995318"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778606"
 ---
-# <a name="launch"></a>Spuštění
-**Spuštění** možnost spuštění pomocí metody vzorkování profileru a také začne zadané aplikace.
+# <a name="launch"></a>Spustit
+Možnost **spuštění** spustí Profiler pomocí metody vzorkování a spustí také zadanou aplikaci.
 
- Použít **spuštění** možnost, je nutné zadat **ukázka** metoda ve **Start** možnost.
+ Chcete-li použít možnost **spuštění** , je nutné zadat **ukázkovou** metodu v možnosti **Spustit** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,45 +28,45 @@ VSPerfCmd.exe /Launch:AppName [Options]
 ```
 
 #### <a name="parameters"></a>Parametry
- `AppName` Název aplikace spustit. Úplné a částečné cesty z aktuálního adresáře. jsou podporovány.
+ `AppName` název aplikace, která se má spustit. Jsou podporovány úplné a částečné cesty z aktuálního adresáře.
 
 ## <a name="valid-options"></a>Platné možnosti
- Následující možnosti VSPerfCmd je možné kombinovat s **spuštění** možnost v jednom příkazovém řádku.
+ Následující možnosti VSPerfCmd lze kombinovat s možností **spuštění** na jednom příkazovém řádku.
 
- **Spusťte:** `Method` Inicializuje relaci příkazového řádku profileru a nastaví zadané metodě profilování.
+ **Start:** `Method` inicializuje relaci profileru příkazového řádku a nastaví určenou metodu profilace.
 
- **GlobalOn** a **GlobalOff** obnoví (**GlobalOn**) nebo pozastavení (**GlobalOff**) profilace, ale nemá na konci relace profilování.
+ **GlobalOn** a **globaloff** obnoví profilování (**GlobalOn**) nebo pozastaví (**globaloff**), ale neukončí relaci profilování.
 
- **ProcessOn:** `PID` a **ProcessOff**:`PID` Obnoví (**ProcessOn**) nebo pozastavení (**ProcessOff**) profilace pro zadaný proces.
+ **ProcessOn:** `PID` a **ProcessOff**`PID`: obnovování (**ProcessOn**) nebo pozastavení (**ProcessOff**) profilování pro zadaný proces.
 
- **TargetCLR** určuje verze nástroje rozhraní .NET Framework CLR Common Language Runtime () do profilu, když více než jedna verze je načten do relace profilování. Ve výchozím nastavení je Profilovat první načtené verze.
+ **TargetCLR** Určuje verzi modulu .NET Framework Common Language Runtime (CLR), která má být profilovaná v případě, že je v relaci profilace načtena více než jedna verze. Ve výchozím nastavení je první načtená verze profilovaná.
 
-## <a name="exclusive-options"></a>Výhradní možnosti
- Tyto možnosti lze použít pouze s **spuštění** možnost.
+## <a name="exclusive-options"></a>Exkluzivní možnosti
+ Následující možnosti lze použít pouze s možností **spuštění** .
 
- **Konzola** spustí zadaný aplikace příkazového řádku v novém okně.
+ **Konzola** nástroje Spustí zadanou aplikaci příkazového řádku v novém okně.
 
- **Argumenty:** `ArgList` Určuje seznam argumentů pro předání do aplikace.
+ **Args:** `ArgList` určuje seznam argumentů, které se mají předat aplikaci.
 
- **LineOff** zakazuje shromažďování dat profilování úrovně řádku.
+ **LineOff** Zakáže shromažďování dat profilace na úrovni řádků.
 
 ## <a name="sampling-options"></a>Možnosti vzorkování
- Na lze zadat jedno z následujících možností interval vzorkování **spuštění** příkazového řádku. Výchozí interval vzorkování je 10 000 000 hodinových cyklů procesoru.
+ Na příkazovém řádku pro **spuštění** lze zadat jednu z následujících možností intervalu vzorkování. Výchozí interval vzorkování je 10 000 000 hodinových cyklů procesoru.
 
- **Časovač**[**:**`Cycles`]**PF**[**:**`Events`]**Sys**[**:**`Events`] **Čítač**[**:**`Name`,`Reload`,`FriendlyName`]**GC**[:**přidělení** &#124;  **Doba života**] Určuje počet a typ intervalu vzorkování.
+ **Timer**[ **:** `Cycles`]**PF**[ **:** `Events`]**sys**[ **:** `Events`]**čítač**[ **:** `Name`,`Reload`,`FriendlyName`]**GC**[:&#124;**Doba**přidělení] Určuje počet a typ intervalu vzorkování.
 
-- **Časovač** – ukázky každý `Cycles` procesoru nepřerušených hodinových cyklů. Pokud `Cycles` není zadán, 10 000 000 cykly se používají.
+- **Timer** – ukázky každých `Cycles` nezastavených cyklů hodin procesoru. Pokud není zadán `Cycles`, budou použity cykly 10 000 000.
 
-- **PF** – ukázky každý `Events` chyby stránek. Pokud `Events` není zadán, 10 chyby stránek.
+- **PF** – ukázky každé chyby stránky `Events`. Pokud není zadaný `Events`, 10 chyb stránky.
 
-- **Sys** – ukázky každý `Events` volání do operačního systému. Pokud `Events` není zadán, 10 volání systému se používají.
+- **Sys** – ukázky každé `Events` volání do operačního systému. Pokud není zadaný `Events`, použijí se 10 volání systému.
 
-- **Čítač** – ukázky každý `Reload` počet výkon procesoru čítač určené `Name`. Volitelně můžete `FriendlyName` můžete zadejte řetězec, který se použije jako záhlaví sloupce v sestavy profileru.
+- **Counter** -Samples každých `Reload` počet ČÍTAČŮ výkonu procesoru určených `Name`. Volitelně můžete `FriendlyName` zadat řetězec, který se použije jako záhlaví sloupce v sestavách profileru.
 
-- **Uvolňování paměti** – data paměti .NET shromažďuje. Ve výchozím nastavení (**přidělení**), data se shromažďují v každé události přidělení paměti. Když **životnost** parametr zadán, data se shromažďují také na všechny události uvolňování paměti kolekce.
+- **GC** – shromažďuje data paměti .NET. Ve výchozím nastavení (**přidělení**) se data shromažďují při každé události přidělení paměti. Při zadání parametru **životnosti** se data shromažďují také při každé události uvolňování paměti.
 
 ## <a name="example"></a>Příklad
- Tento příklad ukazuje použití **spuštění** ke spuštění aplikace.
+ Tento příklad ukazuje použití **spuštění** pro spuštění aplikace.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp
@@ -74,6 +75,6 @@ VSPerfCmd.exe /Launch:TestApp.exe
 
 ## <a name="see-also"></a>Viz také:
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Samostatné aplikace profilu](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Webové aplikace ASP.NET profilu](../profiling/command-line-profiling-of-aspnet-web-applications.md)
-- [Profil služby](../profiling/command-line-profiling-of-services.md)
+- [Profilovat samostatné aplikace](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [ASP.NET webové aplikace Profile](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Profilovací služby](../profiling/command-line-profiling-of-services.md)

@@ -10,20 +10,21 @@ ms.assetid: 5a9fc57d-9097-413b-af0c-8726b1a57048
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6185b080967c83be827e34baddfe5b37554398ff
-ms.sourcegitcommit: bb5425b9c6d8fd7135d9584c2963831754071347
+ms.openlocfilehash: f64f717bf87fb4636c7c2f4e6f11a08236d08ada
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024689"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779360"
 ---
 # <a name="da0039-very-high-rate-of-lock-contentions"></a>DA0039: velmi vysoká míra kolizí zámků
 
 |||
 |-|-|
-|ID pravidla|DA0039|
+|Id pravidla|DA0039|
 |Kategorie|Využití .NET Framework|
 |Metody profilace|Kontrol<br /><br /> Instrumentace<br /><br /> Paměť .NET|
 |Zpráva|Dochází k velmi vysoké míře sporů zámků .NET. Vyzkoumejte důvod pro tento spor zámku spuštěním profilu souběžnosti.|

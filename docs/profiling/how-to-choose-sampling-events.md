@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Výběr událostí vzorkování | Dokumentace Microsoftu'
+title: 'Postupy: výběr událostí vzorkování | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,51 +16,52 @@ ms.assetid: ce7cb734-80ac-4930-a4ef-e24395e1cc07
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9dac636beeab5188c7958232d46cf3fe4a4b5f32
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 82462ae5052150da7761dfcd855e5339e1b7d821
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439507"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779048"
 ---
-# <a name="how-to-choose-sampling-events"></a>Postupy: Výběr událostí vzorkování
-Ve výchozím nastavení [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástrojů pro profilaci sady shromažďuje údaje o výkonu v intervalu, který je zadán jako počet cyklů procesoru, které jsou používány profilovaný proces. Výchozí počet cyklů v intervalu je 10 000 000, což je na 1 počítači gv přibližně na 0,01 sekund. Počet cyklů v intervalu můžete změnit, a můžete změnit událost vzorku. Následující ukázkové události jsou k dispozici:
+# <a name="how-to-choose-sampling-events"></a>Postupy: výběr událostí vzorkování
+Ve výchozím nastavení [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci shromažďuje údaje o výkonu v intervalu zadaném jako počet cyklů procesoru používaných profilací procesu. Výchozí počet cyklů v intervalu je 10 000 000, což je přibližně 0,01 sekund na 1 GH počítači. Můžete změnit počet cyklů v intervalu a můžete změnit ukázkovou událost. K dispozici jsou následující ukázkové události:
 
-- Hodinových cyklů - problémů vázané na procesor.
+- Hodinové cykly – pro problémy vázané na procesor.
 
-- Chyby stránek – pro problémy související s pamětí.
+- Chyby stránky – pro problémy související s pamětí.
 
-- Systémová volání - I O souvisejícím s/problémů.
+- Volání systému – pro problémy související s vstupně-výstupními operacemi.
 
-- Čítač výkonu – čítače CPU pro problémy výkonu na nízké úrovni.
+- Čítač výkonu – čítače procesoru pro problémy s výkonem nízké úrovně.
 
 > [!IMPORTANT]
-> Pokud pomocí metody vzorkování se shromažďování dat paměti .NET (přidělení správu životnosti objektů nebo obojí), jsou ignorovány všechny zadané uživatelem vzorkování událostí a přidělení paměti odpovídající události kolekce paměti nebo obojí, se používá ke shromažďování dat.
+> Pokud shromažďujete data paměti .NET (přidělení nebo životnost objektů nebo obojí) pomocí metody vzorkování, všechny události vzorkování zadané uživatelem jsou ignorovány a příslušné přidělení paměti nebo události uvolňování paměti nebo obojí jsou použity ke shromažďování dat.
 
-### <a name="to-select-a-sample-event"></a>Vybrat událost vzorku
+### <a name="to-select-a-sample-event"></a>Výběr události vzorku
 
-1. V **prohlížeč výkonu**, klikněte pravým tlačítkem na relaci výkonu a pak klikněte na tlačítko **vlastnosti**.
+1. V **prohlížeč výkonu**klikněte pravým tlačítkem na relaci výkonu a pak klikněte na **vlastnosti**.
 
-2. V **stránky vlastností**, klikněte na tlačítko **vzorkování** vlastnosti.
+2. Na **stránkách vlastností**klikněte na vlastnosti **vzorkování** .
 
-3. Z **událost vzorku** rozevíracího seznamu vyberte událost vzorku, kterou chcete použít pro profilování aplikace.
+3. V rozevíracím seznamu **událost vzorku** vyberte událost vzorku, kterou chcete použít k profilování aplikace.
 
     > [!NOTE]
-    > **Dostupných čítačů výkonu** jsou povolené jenom v případě, že vyberete **čítač výkonu** z **událost vzorku** rozevíracího seznamu.
+    > **Dostupné čítače výkonu** jsou povoleny pouze v případě, že v rozevíracím seznamu **událost vzorku** vyberete **čítač výkonu** .
 
-4. Pokud vyberete **čítač výkonu**, vyberte konkrétní čítač procesoru z **dostupných čítačů výkonu** ovládací prvek zobrazení stromové struktury.
+4. Pokud vyberete **čítač výkonu**, vyberte konkrétní čítač CPU z ovládacího prvku stromové zobrazení **čítače výkonu k dispozici** .
 
-    - Hodnoty čítačů **události přenositelnosti** uzlu jsou k dispozici na všech typech procesory.
+    - Čítače v uzlu **přenosné události** jsou k dispozici na všech typech procesorů.
 
-    - Hodnoty čítačů **události platformy** uzlu jsou specifické pro procesor na aktuálním počítači a nemusí být k dispozici na jiných typů procesory.
+    - Čítače v uzlu **události platformy** jsou specifické pro procesor v aktuálním počítači a nemusí být k dispozici na jiných typech procesorů.
 
-5. Když vyberete událost vzorku, výchozí hodnota intervalu vzorkování se zobrazí v **interval vzorkování** textového pole. V případě potřeby můžete zadat hodnotu, která má v textovém poli.
+5. Když vyberete událost vzorku, v textovém poli **interval vzorkování** se zobrazí výchozí hodnota interval vzorkování. V případě potřeby můžete do textového pole zadat hodnotu, kterou požadujete.
 
 ## <a name="see-also"></a>Viz také:
 - [Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)
-- [Postupy: Výběr metod kolekcí](../profiling/how-to-choose-collection-methods.md)
+- [Postupy: Výběr metod shromažďování](../profiling/how-to-choose-collection-methods.md)
 - [Čítače procesoru a systému Windows](../profiling/cpu-and-windows-counters.md)
-- [Vysvětlení hodnotám dat vzorkování](../profiling/understanding-sampling-data-values.md)
+- [Porozumění hodnotám dat vzorkování](../profiling/understanding-sampling-data-values.md)
 - [Profil z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)

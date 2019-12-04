@@ -1,5 +1,5 @@
 ---
-title: Zobrazení stromu volání – Data instrumentace | Dokumentace Microsoftu
+title: Zobrazení stromu volání – data instrumentace | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,82 +8,83 @@ ms.assetid: 306bd176-0ce9-4a10-89ca-20b043d37d4e
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a838a511c5f37a00ed2331d2376b395f399e65d2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7497f455ad3868f53758555aa28d305b6068e30d
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62777317"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74773508"
 ---
 # <a name="call-tree-view---instrumentation-data"></a>Zobrazení stromu volání – data instrumentace
-Hodnoty pro funkci ve stromu volání označuje datum a čas pro instance funkce, které byly volány nadřazené funkce ve stromu volání. Procentní hodnoty se počítá srovnáním hodnoty jsou funkce instance celkový uplynulý celkový čas všech funkcí během spuštění profilování.
+Hodnoty pro funkci ve stromu volání označují čas pro instance funkce, které byly volány nadřazenou funkcí ve stromu volání. Procentuální hodnoty se vypočtou porovnáním hodnoty instancí funkcí s celkovým celkovým počtem uplynulých úplných funkcí v průběhu profilace.
 
 ## <a name="general"></a>Obecné
- Obecné sloupce rozpoznat funkci zobrazení řádku.
+ Obecné sloupce identifikují funkci v řádku zobrazení.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Název funkce**|Název funkce.|
-|**Adresa funkce**|Adresa funkce.|
+|**Název funkce**|Název funkce|
+|**Adresa funkce**|Adresa funkce|
 |**Číslo řádku funkce**|Číslo řádku začátku této funkce ve zdrojovém souboru.|
-|**Počet volání**|Celkový počet volání provedených touto funkcí.|
-|**Zdrojový soubor**|Zdrojový soubor, který obsahuje definici pro tuto funkci.|
+|**Počet volání**|Celkový počet volání, která byla provedena u této funkce.|
+|**Zdrojový soubor**|Zdrojový soubor obsahující definici této funkce|
 |**Název modulu**|Název modulu, který obsahuje funkci.|
-|**Cesta modulu**|Cesta k napadenému modulu, který obsahuje funkci.|
-|**ID procesu**|ID procesu (PID) běhu profilování.|
-|**Název procesu**|Název, který je přiřazen k procesu.|
-|**Výhradní čas režie**|Časová náročnost této funkce, která způsobila instrumentace. Režie byla odečtena od vylučuje všechny časy.|
-|**Celkový čas režie**|Časová náročnost této funkce a její podřízené funkce, která způsobila instrumentace. Test zatížení byla odečtena od fiskálního (včetně).|
-|**Úroveň**|Hloubka funkce ve stromu volání. Pouze v [VSPerfReport](../profiling/vsperfreport.md) příkazového řádku sestavy.|
+|**Cesta k modulu**|Cesta modulu, který obsahuje funkci.|
+|**ID procesu**|ID procesu (PID) pro spuštění profilace.|
+|**Název procesu**|Název, který je přiřazen procesu.|
+|**Výhradní čas režie testu**|Časová režie této funkce, která byla způsobena instrumentací. Režie testu byla odečtena od všech výhradních časů.|
+|**Čas celkové režie testu**|Časová režie této funkce a jejích podřízených funkcí, které byly způsobeny instrumentací. Režie testu byla odečtena od všech celkových časů.|
+|**Obsah**|Hloubka funkce ve stromu volání. Pouze v sestavách příkazového řádku [VSPerfReport](../profiling/vsperfreport.md) .|
 
-## <a name="elapsed-inclusive-values"></a>Uplynulý včetně hodnoty
- Uplynulý včetně hodnoty označuje datum a čas v zásobníku volání instance funkce, které byly volány nadřazené funkce ve stromu volání. Čas obsahuje čas, který byl stráven v podřízené funkce, které volal funkci a ve volání do operačního systému, například vstupně výstupní operace a přepnutí kontextu.
+## <a name="elapsed-inclusive-values"></a>Uplynulé celkové hodnoty
+ Uplynulé celkové hodnoty udávají čas v zásobníku volání těch instancí funkce, které byly volány nadřazenou funkcí ve stromu volání. Čas zahrnuje čas strávený v podřízených funkcích, které byly volány funkcí a v voláních do operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Uplynulý celkový čas**|Celkový uplynulý celkový čas všechna volání této funkce v tomto kontextu.|
-|**% Uplynulého celkového času**|Procento celkového uplynulý celkový čas, který běhu profilování se využilo na celkový uplynulý celkový čas této funkce v tomto kontextu.|
-|**Průměrný uplynulý celkový čas**|Průměr uplynulý celkový čas volání této funkce v tomto kontextu.|
-|**Maximální uplynulý celkový čas**|Maximální uplynulý celkový čas volání této funkce v tomto kontextu.|
+|**Uplynulý celkový čas**|Celkový uplynulý celkový čas všech volání této funkce v tomto kontextu.|
+|**% Uplynulého celkového času**|Procento celkového uplynulého celkového času běhu profilace, které bylo v tomto kontextu stráveno celkovým uplynulým časem této funkce.|
+|**Průměrný uplynulý celkový čas**|Průměrný uplynulý celkový čas volání této funkce v tomto kontextu.|
+|**Maximální uplynulý celkový čas**|Maximální uplynulý celková doba volání této funkce v tomto kontextu.|
 |**Minimální uplynulý celkový čas**|Minimální uplynulý celkový čas volání této funkce v tomto kontextu.|
 
-## <a name="elapsed-exclusive-values"></a>Uplynulý výhradní hodnoty
- Uplynulý výhradní hodnoty označuje datum a čas, že byly tyto instance funkce, které byly volány nadřazené funkce ve stromu volání spouštění kódu v těle funkce; To znamená, když funkce byla v horní části zásobníku volání. Čas zahrnuje čas ve volání do operačního systému, například vstupně výstupní operace a přepnutí kontextu. Čas, ale nezahrnuje čas, který byl stráven v podřízené funkce, které byly volány funkce.
+## <a name="elapsed-exclusive-values"></a>Uplynulé výhradní hodnoty
+ Uplynulé exkluzivní hodnoty označují čas, kdy tyto instance funkce, které byly volány nadřazenou funkcí ve stromu volání, prováděly kód v těle funkce; To znamená, že pokud byla funkce v horní části zásobníku volání. Čas zahrnuje čas volání do operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace. Čas však neobsahuje čas, který byl stráven v podřízených funkcích, které byly volány funkcí.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Uplynulý výhradní čas**|Celkový uplynulý výhradní čas všechna volání této funkce v tomto kontextu.|
-|**% Uplynulého výhradního času**|Procento celkového uplynulý výhradní čas, který běhu profilování se využilo na celkový uplynulý výhradní čas této funkce v tomto kontextu.|
-|**Průměrný uplynulý výhradní čas**|Průměr uplynulý výhradní čas volání této funkce v tomto kontextu.|
+|**Uplynulý výhradní čas**|Celkový uplynulý výhradní čas všech volání této funkce v tomto kontextu.|
+|**% Uplynulého výhradního času**|Procento celkového uplynulého výhradního času spuštění profilování, které bylo v tomto kontextu stráveno celkovým neúplným časem této funkce.|
+|**Průměrný uplynulý výhradní čas**|Průměrný uplynulý výhradní čas volání této funkce v tomto kontextu.|
 |**Maximální uplynulý výhradní čas**|Maximální uplynulý výhradní čas volání této funkce v tomto kontextu.|
 |**Minimální uplynulý výhradní čas**|Minimální uplynulý výhradní čas volání této funkce v tomto kontextu.|
 
-## <a name="application-inclusive-values"></a>Aplikace (včetně) hodnot
- Aplikace (včetně) hodnot označuje datum a čas, které byly instancí funkce, které byly volány nadřazené funkce ve stromu volání zásobníku volání. Čas nezahrnuje čas, který byl stráven ve volání do operačního systému, například vstupně výstupní operace a přepnutí kontextu, čas však neobsahuje čas, který byl stráven v podřízené funkce, které byly volány funkce.
+## <a name="application-inclusive-values"></a>Hodnoty zahrnující aplikace
+ Hodnoty zahrnující aplikace označují čas, kdy instance funkce, které byly volány nadřazenou funkcí ve stromu volání, byly v zásobníku volání. Čas nezahrnuje čas strávený voláním operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace, ale čas zahrnuje čas strávený v podřízených funkcích, které byly volány funkcí.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Celkový čas aplikace**|Celkový čas aplikace celkový počet všech volání této funkce v tomto kontextu.|
-|**% Celkového času aplikace**|Procento celkového uplynulý celkový čas, který běhu profilování se využilo na celkový čas celkový aplikace této funkce v tomto kontextu.|
-|**Průměrný celkový čas aplikace**|Celkový čas průměrná aplikace volání této funkce v tomto kontextu.|
-|**Maximální celkový čas aplikace**|Celkový čas aplikace maximální volání této funkce v tomto kontextu.|
-|**Minimální celkový čas aplikace**|Celkový čas aplikace minimální volání této funkce v tomto kontextu.|
+|**Celková doba aplikace**|Celková celková doba všech volání této funkce v tomto kontextu aplikace|
+|**% Celkového času aplikace**|Procento celkového uplynulého celkového času běhu profilace, které bylo v tomto kontextu stráveno v celkovém čase aplikace této funkce.|
+|**Průměrná doba aplikace (celková)**|Průměrná doba použití volání této funkce v tomto kontextu.|
+|**Maximální celková doba aplikace**|Maximální doba volání této funkce v tomto kontextu (včetně celkového počtu aplikací).|
+|**Minimální celková doba aplikace**|Minimální doba trvání volání této funkce v tomto kontextu (včetně celkového počtu aplikací).|
 
-## <a name="application-exclusive-values"></a>Výhradní hodnoty aplikace
- Výhradní hodnoty, které aplikaci označuje datum a čas, že tyto instance funkce, které byly volány nadřazené funkce ve stromu volání byly přímo spouštění kódu v těle funkce; To znamená, když funkce byla v horní části zásobníku volání. Čas nezahrnuje čas, který byl stráven ve volání do operačního systému, například vstupně výstupní operace a přepnutí kontextu. Také nezahrnuje čas, který byl stráven v podřízené funkce, které byly volány funkce.
+## <a name="application-exclusive-values"></a>Exkluzivní hodnoty aplikací
+ Hodnoty exkluzivní pro aplikace označují dobu, po kterou tyto instance funkce, které byly volány nadřazenou funkcí ve stromu volání, přímo spouštějí kód v těle funkce; To znamená, že pokud byla funkce v horní části zásobníku volání. Čas neobsahuje čas strávený voláním operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace. Nezahrnuje také čas strávený v podřízených funkcích, které byly volány funkcí.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Výhradní čas aplikace**|Výhradní čas aplikace celkový počet všech volání této funkce v tomto kontextu.|
-|**% Výhradního času aplikace**|Procento celkového uplynulý výhradní čas, který běhu profilování se využilo na výhradní čas aplikace celkový této funkce v tomto kontextu.|
-|**Průměrný výhradní čas aplikace**|Výhradní čas aplikace průměrné volání této funkce v tomto kontextu.|
-|**Maximální výhradní čas aplikace**|Výhradní čas aplikace maximální volání této funkce v tomto kontextu.|
-|**Minimální výhradní čas aplikace**|Výhradní čas aplikace minimální volání této funkce v tomto kontextu.|
+|**Výhradní čas aplikace**|Celková celková doba aplikace pro všechna volání této funkce v tomto kontextu.|
+|**% Výhradního času aplikace**|Procento celkového uplynulého výhradního času spuštění profilování, které bylo v tomto kontextu stráveno v celkovém čase aplikace této funkce.|
+|**Průměrný výhradní čas aplikace**|Průměrná doba použití pro volání této funkce v tomto kontextu.|
+|**Maximální výhradní čas aplikace**|Maximální výhradní čas aplikace pro volání této funkce v tomto kontextu.|
+|**Minimální výhradní čas aplikace**|Minimální výhradní čas aplikace pro volání této funkce v tomto kontextu.|
 
 ## <a name="see-also"></a>Viz také:
-- [Postupy: Přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)
+- [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)
 - [Zobrazení stromu volání](../profiling/call-tree-view-sampling-data.md)
 - [Zobrazení stromu volání – instrumentace](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)
-- [Strom volání zobrazení – vzorkování](../profiling/call-tree-view-dotnet-memory-sampling-data.md)
+- [Zobrazení stromu volání – vzorkování](../profiling/call-tree-view-dotnet-memory-sampling-data.md)

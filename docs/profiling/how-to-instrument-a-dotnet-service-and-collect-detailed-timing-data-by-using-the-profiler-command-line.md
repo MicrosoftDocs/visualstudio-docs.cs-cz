@@ -1,111 +1,112 @@
 ---
-title: 'Profiler příkazový řádek: Instrumentace služby rozhraní .NET, získání podrobností časování'
+title: 'Příkazový řádek profileru: instrumentace služby .NET, získání podrobných informací o časování'
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4f3e03a35719e6dd1cbfa7514a304539dc4f0ca1
-ms.sourcegitcommit: 91c7f1b525e0c22d938bc4080ba4ceac2483474f
+ms.openlocfilehash: af801d2b30c48deb1a88800f67ff4d3efef412b4
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67032058"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778892"
 ---
-# <a name="how-to-instrument-a-net-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line"></a>Postupy: Instrumentace služby .NET a shromažďování podrobných dat časování pomocí příkazového řádku profileru
+# <a name="how-to-instrument-a-net-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line"></a>Postupy: instrumentace služby .NET a shromažďování podrobných dat časování pomocí příkazového řádku profileru
 
-Tento článek popisuje, jak pomocí Visual Studio nástroje příkazového řádku nástroje pro profilaci instrumentace služby rozhraní .NET Framework a shromažďování podrobných dat časování.
+Tento článek popisuje, jak pomocí nástrojů příkazového řádku sady Visual Studio Nástroje pro profilaci instrumentovat službu .NET Framework a shromažďovat podrobná data časování.
 
 > [!NOTE]
-> Metodou instrumentace nelze Profilovat službu, je-li nelze po spuštění počítače restartovat službu, například Služba spouštěná pouze spolu s operačním systémem.
+> Pomocí metody instrumentace nelze profilovat službu, pokud po spuštění počítače nelze službu restartovat. taková služba se spustí pouze při spuštění operačního systému.
 >
-> Chcete-li získat cestu k nástrojů pro profilaci, naleznete v tématu [zadejte cestu k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). Na 64bitových počítačích jsou k dispozici 64bitové i 32bitové verze nástrojů. Použití nástroje příkazového řádku profileru, musíte přidat cestu k nástrojům do proměnné prostředí PATH v okně příkazového řádku nebo ho přidejte do příkazu samého.
+> Postup získání cesty k nástrojům pro profilaci najdete v tématu [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). Na 64 počítačích jsou k dispozici i 64 32 a 32bitové verze nástrojů. Chcete-li použít nástroje příkazového řádku profileru, je nutné přidat cestu k nástrojům do proměnné prostředí PATH v okně příkazového řádku nebo je přidat do samotného příkazu.
 >
-> Přidání dat interakce vrstvy do běhu profilování vyžaduje zvláštní procedury s nástroji pro profilaci příkazového řádku. Zobrazit [shromažďování dat interakce vrstev](../profiling/adding-tier-interaction-data-from-the-command-line.md).
+> Přidání dat interakce vrstev do běhu profilování vyžaduje konkrétní postupy s nástroji pro profilaci z příkazového řádku. Viz [shromáždění dat interakce vrstev](../profiling/adding-tier-interaction-data-from-the-command-line.md).
 
-Ke shromažďování podrobných dat časování pomocí metody instrumentace služby rozhraní .NET Framework, můžete použít [VSInstr.exe](../profiling/vsinstr.md) Nástroj generuje instrumentovanou verzi komponenty. Pak nahradíte neinstrumentovanou verzi služby instrumentovanou verzí, a ujistěte se, že je služba nastavena na Manuální spuštění. Můžete použít [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) nástroj k inicializaci globálních proměnných prostředí profilování a poté restartujte hostitelský počítač. Potom spusťte profiler.
+Chcete-li shromažďovat podrobná data časování z .NET Framework služby pomocí metody instrumentace, použijte nástroj [VSInstr. exe](../profiling/vsinstr.md) ke generování instrumentované verze součásti. Potom nahraďte neinstrumentované verze služby pomocí instrumentované verze a ujistěte se, že je služba nakonfigurovaná tak, aby se spouštěla ručně. Použijte nástroj [VSPerfCLREnv. cmd](../profiling/vsperfclrenv.md) pro inicializaci globálních proměnných profilování a pak restartujte hostitelský počítač. Pak spustíte Profiler.
 
-Když je služba spuštěna, data o časování jsou automaticky shromažďována do datového souboru. Můžete pozastavit a obnovit sběr dat. během relace profilování.
+Po spuštění služby se data časování automaticky shromažďují do datového souboru. Během relace profilace můžete shromažďování dat pozastavit a obnovit.
 
-Chcete-li ukončit relaci profilování, vypněte službu a explicitně vypněte profiler. Ve většině případů doporučujeme na konci relace vyčistit proměnné prostředí profilování.
+Chcete-li ukončit relaci profilování, vypněte službu a pak explicitně vypněte profiler. Ve většině případů doporučujeme na konci relace vymazat proměnné prostředí pro profilování.
 
-## <a name="start-the-application-with-the-profiler"></a>Spuštění aplikace s profilerem
+## <a name="start-the-application-with-the-profiler"></a>Spuštění aplikace pomocí profileru
 
 1. Otevřete okno příkazového řádku.
 
-2. Použití **VSInstr** Nástroj generuje instrumentovanou verzi binárního souboru služby.
+2. Pomocí nástroje **VSInstr** vygenerujte instrumentované verze binárního souboru služby.
 
-3. Nahraďte původní binární soubor instrumentovanou verzí. Ve Windows správce řízení služeb, ujistěte se, že služby Typ spouštění je nastaven na ručně.
+3. Nahraďte původní binární soubor pomocí instrumentované verze. Ve Správci řízení služeb systému Windows se ujistěte, že typ spuštění služby je nastaven na ruční.
 
-4. Inicializace proměnných prostředí profilování rozhraní .NET Framework. Zadejte:
+4. Inicializace proměnných prostředí profilování rozhraní .NET Framework. Typ:
 
-     **VSPerfClrEnv /globaltraceon**
+     **VSPerfClrEnv/globaltraceon**
 
 5. Restartujte počítač.
 
 6. Otevřete okno příkazového řádku.
 
-7. Spusťte profiler. Zadejte:
+7. Spusťte profiler. Typ:
 
-     **VSPerfCmd /start:trace /output:** `OutputFile` [`Options`]
+     **VSPerfCmd/Start: Trace/output:** `OutputFile` [`Options`]
 
-   - [/Start](../profiling/start.md) **: trasování** možnost inicializuje profiler.
+   - Možnost [/Start](../profiling/start.md) **: Trace** inicializuje Profiler.
 
-   - [/Output](../profiling/output.md) **:** `OutputFile` možnost je vyžadována s **/start**. `OutputFile` Určuje název a umístění dat profilování (. *Vsp*) soubor.
+   - Parametr [/Output](../profiling/output.md) **:** `OutputFile` je vyžadován s parametrem **/Start**. `OutputFile` Určuje název a umístění dat profilace (. *VSP*) soubor.
 
-     Můžete použít některou z následujících možností s **/start:trace** možnost.
+     S možností **/Start: Trace** můžete použít jednu z následujících možností.
 
      > [!NOTE]
-     > **/User** a **/crosssession** možnosti jsou obvykle vyžadovány pro profilovací služby.
+     > Pro služby profilování jsou obvykle vyžadovány možnosti **/User** a **/CrossSession** .
 
      | Možnost | Popis |
      | - | - |
-     | [/ User](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | Určuje doménu a uživatelské jméno účtu vlastnícího profilovaný proces. Tato možnost je vyžadována, pouze pokud je proces spuštěn pod jiným než přihlášeným uživatelem. Vlastník procesu je uveden v **uživatelské jméno** sloupec **procesy** karty ve Správci úloh Windows. |
-     | [/ crosssession](../profiling/crosssession.md) | Umožňuje profilování procesů v jiných relacích. Tato možnost je vyžadována, pokud je aplikace spuštěna v jiné relaci. ID je uvedeno v relaci **ID relace** sloupec na **procesy** karty ve Správci úloh Windows. **Protokolovacímu** může být zadán jako zkratka pro **/crosssession**. |
-     | [/waitstart](../profiling/waitstart.md)[ **:** `Interval`] | Určuje počet sekund čekání na inicializaci předtím, než je vrácena chyba profileru. Pokud `Interval` není zadán, čeká profiler neomezeně dlouho. Ve výchozím nastavení **/start** vrátí hodnotu okamžitě. |
-     | [/globaloff](../profiling/globalon-and-globaloff.md) | Chcete-li spustit profiler s shromažďování dat pozastaveno, přidejte **/globaloff** umožňuje **/start** příkazového řádku. Použití **globalon** obnovu profilování provedete. |
-     | [/ Čítač](../profiling/counter.md) **:** `Config` | Shromažďuje informace z čítače výkonu procesoru zadaného v konfiguraci. Informace čítače se přidají do dat shromážděných při každé události profilování. |
-     | [/wincounter](../profiling/wincounter.md) **:** `WinCounterPath` | Určuje čítač výkonu Windows má být shromážděn během profilování. |
-     | [/automark](../profiling/automark.md) **:** `Interval` | Použití s **/wincounter** pouze. Určuje počet milisekund mezi událostmi sběru čítače výkonu Windows. Výchozí hodnota je 500 ms. |
-     | [/Events](../profiling/events-vsperfcmd.md) **:** `Config` | Určuje událost trasování událostí pro Windows (ETW) má být shromážděn během profilování. Události trasování událostí pro Windows jsou shromážděny v samostatném (. *ETL*) soubor. |
+     | [/User](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | Určuje doménu a uživatelské jméno účtu, který vlastní profilový proces. Tato možnost je vyžadována, pouze pokud je proces spuštěn jako jiný uživatel než přihlášený uživatel. Vlastník procesu je uveden ve sloupci **uživatelské jméno** na kartě **procesy** ve Správci úloh systému Windows. |
+     | [/CrossSession](../profiling/crosssession.md) | Umožňuje profilování procesů v jiných relacích. Tato možnost je vyžadována, pokud aplikace běží v jiné relaci. ID relace je uvedeno ve sloupci **ID relace** na kartě **procesy** ve Správci úloh systému Windows. **/Cs** lze zadat jako zkratku pro **/CrossSession**. |
+     | [/waitstart](../profiling/waitstart.md)[ **:** `Interval`] | Určuje počet sekund, po který se má čekat na inicializaci profileru, než vrátí chybu. Pokud není zadaný `Interval`, Profiler počká neomezenou dobu. Ve výchozím nastavení funkce **/Start** vrátí hodnotu hned. |
+     | [/globaloff](../profiling/globalon-and-globaloff.md) | Chcete-li spustit Profiler s pozastaveným shromažďováním dat, přidejte možnost **/globaloff** do příkazového řádku **/Start** . Obnovte profilování pomocí **/GlobalOn** . |
+     | [/Counter](../profiling/counter.md) **:** `Config` | Shromažďuje informace z čítače výkonu procesoru určeného v konfiguraci. Informace čítače jsou přidány do shromažďovaných dat v každé události profilace. |
+     | [/WinCounter](../profiling/wincounter.md) **:** `WinCounterPath` | Určuje čítač výkonu systému Windows, který má být shromážděn během profilace. |
+     | [/AutoMark](../profiling/automark.md) **:** `Interval` | Používejte pouze s **/WinCounter** . Určuje počet milisekund mezi událostmi shromažďování čítačů výkonu systému Windows. Výchozí hodnota je 500 ms. |
+     | [/events](../profiling/events-vsperfcmd.md) **:** `Config` | Určuje událost trasování událostí pro Windows (ETW), která se má shromáždit během profilace. Události ETW jsou shromažďovány samostatně (. *ETL*). |
 
-8. Spusťte službu z modulu snap-in Správce řízení služeb Windows.
+8. Spusťte službu ve Správci řízení služeb systému Windows.
 
 ## <a name="control-data-collection"></a>Řízení shromažďování dat
 
-Pokud je služba spuštěna, můžete použít *VSPerfCmd.exe* možnosti spuštění a zastavení zápisu dat do datového souboru profilování. Řízení sběru dat umožňuje shromažďovat data pro určitou část provádění programu, například spouštění či ukončování služby.
+Když je služba spuštěná, můžete použít možnosti *VSPerfCmd. exe* pro spuštění a zastavení zápisu dat do datového souboru profileru. Řízení sběru dat umožňuje shromažďovat data pro určitou část provádění programu, například spouštění nebo ukončování služby.
 
-- Následující páry **VSPerfCmd** možností spouští a zastavují sběr dat. Každou možnost zadejte na samostatný příkazový řádek. Sběr dat lze zapnout a vypnout několikrát.
+- Následující páry možností **VSPerfCmd** spouští a zastavují sběr dat. Každou možnost zadejte na samostatný příkazový řádek. Shromažďování dat můžete zapnout a vypnout několikrát.
 
     |Možnost|Popis|
     |------------|-----------------|
-    |[globalon /globaloff](../profiling/globalon-and-globaloff.md)|Spustí (**globalon**) nebo zastaví ( **/globaloff**) sběr dat pro všechny procesy.|
-    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|Spustí ( **/processon**) nebo zastaví ( **/processoff**) sběr dat pro proces určený identifikátorem procesu (`PID`).|
-    |[/threadon](../profiling/threadon-and-threadoff.md) **:** `TID` [/threadoff](../profiling/threadon-and-threadoff.md) **:** `TID`|Spustí ( **/threadon**) nebo zastaví ( **/threadoff**) sběr dat pro vlákno určené pomocí ID vlákna (`TID`).|
+    |[/GlobalOn/globaloff](../profiling/globalon-and-globaloff.md)|Spustí ( **/GlobalOn**) nebo zastaví shromažďování dat ( **/globaloff**) pro všechny procesy.|
+    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [/ProcessOff](../profiling/processon-and-processoff.md) **:** `PID`|Spustí ( **/ProcessOn**) nebo zastaví sběrdat pro proces určený identifikátorem procesu (`PID`).|
+    |[/ThreadOn](../profiling/threadon-and-threadoff.md) **:** `TID` [/ThreadOff](../profiling/threadon-and-threadoff.md) **:** `TID`|Spustí ( **/ThreadOn**) nebo zastaví shromažďování dat ( **/ThreadOff**) pro vlákno určené ID vlákna (`TID`).|
 
-## <a name="end-the-profiling-session"></a>Ukončit relaci profilování
+## <a name="end-the-profiling-session"></a>Ukončení relace profilování
 
-Chcete-li ukončit relaci profilování, zastavte službu, která je spuštěna instrumentovaná komponenta a následně zavolat **VSPerfCmd** [/Shutdown](../profiling/shutdown.md) možnost profiler vypne a uzavře soubor dat profilování. **VSPerfClrEnv /globaloff** příkaz vymaže proměnné prostředí profilování.
+Chcete-li ukončit relaci profilování, zastavte službu, ve které je spuštěna instrumentovaná součást, a poté zavolejte možnost **VSPerfCmd** [/shutdown](../profiling/shutdown.md) , vypněte profiler a zavřete soubor dat profilování. Příkaz **VSPerfCLREnv/globaloff** vymaže proměnné prostředí profilování.
 
-Po restartování počítače-li použít nové nastavení prostředí.
+Chcete-li použít nové nastavení prostředí, je nutné restartovat počítač.
 
-1. Zastavte službu ze Správce řízení služeb.
+1. Zastavte službu ve Správci řízení služeb.
 
 2. Vypněte profiler. Typ:
 
-     **/ Shutdown VSPerfCmd**
+     **VSPerfCmd/shutdown**
 
-3. Po dokončení veškerého profilování vyčistěte proměnné prostředí profilování. Zadejte:
+3. Po dokončení všech profilování vymažte proměnné prostředí profilování. Typ:
 
-     **Vsperfclrenv – /globaloff**
+     **VSPerfClrEnv/globaloff**
 
-4. Nahraďte instrumentovaný modul původní. V případě potřeby znovu nakonfigurujte typ spouštění služby.
+4. Nahraďte instrumentované modul původní. V případě potřeby překonfigurujte typ spouštění služby.
 
 5. Restartujte počítač.
 
 ## <a name="see-also"></a>Viz také:
 
-[Profil služby](../profiling/command-line-profiling-of-services.md)
-[zobrazení dat metody instrumentace](../profiling/instrumentation-method-data-views.md)
+Zobrazení dat [služby profile](../profiling/command-line-profiling-of-services.md)
+[instrumentace](../profiling/instrumentation-method-data-views.md)

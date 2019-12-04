@@ -1,5 +1,5 @@
 ---
-title: PROFILE_CURRENTID | Dokumentace Microsoftu
+title: PROFILE_CURRENTID | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,27 +8,28 @@ ms.assetid: 55ccf665-a05e-48c3-adf7-7714c0a9aaef
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 747922bf52bee18b20aeba95f7d549c890afceea
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 63b44bee152acbf5529acfcadaa49a19e9feb52b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62972431"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778359"
 ---
-# <a name="profilecurrentid"></a>PROFILE_CURRENTID
-PROFILE_CURRENTID vrátí ID vlákna nebo ID procesu, ve volání funkce NameProfile StartProfile, StopProfile, SuspendProfile a ResumeProfile pseudo token. Použijte ho, aby funkce, který má použít pro aktuální vlákno nebo proces, nikoli konkrétně uvedené jeden.
+# <a name="profile_currentid"></a>PROFILE_CURRENTID
+PROFILE_CURRENTID vrátí pseudo token pro ID vlákna nebo ID procesu ve volání funkce NameProfile, StartProfile, StopProfile, SuspendProfile a ResumeProfile. Použijte jej k tomu, aby funkce pracovala na aktuálním vlákně nebo procesu, nikoli konkrétně.
 
 ## <a name="example"></a>Příklad
- PROFILE_CURRENTID je definována v *VSPerf.h* jako:
+ PROFILE_CURRENTID je definována v *VSPerf. h* jako:
 
 ```cpp
 static const unsigned int PROFILE_CURRENTID = (unsigned int)-1;
 ```
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje PROFILE_CURRENTID. V příkladu se používá jako parametr určující aktuální vlákno ve volání PROFILE_CURRENTID [StartProfile](../profiling/startprofile.md) funkce.
+ Následující příklad ukazuje PROFILE_CURRENTID. Příklad používá PROFILE_CURRENTID jako parametr identifikující aktuální vlákno ve volání funkce [StartProfile](../profiling/startprofile.md) .
 
 ```cpp
 void ExerciseProfileCurrentID()
@@ -58,7 +59,7 @@ void ExerciseProfileCurrentID()
 ```
 
 ## <a name="see-also"></a>Viz také:
-- [Visual Studio profiler API reference (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)
+- [Referenční dokumentace rozhraní API pro Visual Studio Profiler (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)
 - [NameProfile](../profiling/nameprofile.md)
 - [ResumeProfile](../profiling/resumeprofile.md)
 - [StartProfile](../profiling/startprofile.md)

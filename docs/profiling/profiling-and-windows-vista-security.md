@@ -1,5 +1,5 @@
 ---
-title: Profilace a zabezpečení Windows Vista | Dokumentace Microsoftu
+title: Profilace a zabezpečení systému Windows Vista | Microsoft Docs
 ms.date: 11/02/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,43 +9,44 @@ ms.assetid: 842112fc-b886-4801-8cd7-a25b314b0393
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 091961f3425714c0dc5ddabfac847c76339ab064
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2a74862d59fe402cbfd9e6bfa804d62ca4c8310b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62994941"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778372"
 ---
 # <a name="profiling-and-windows-vista-security"></a>Profilace a zabezpečení systému Windows Vista
 
-V závislosti na tom [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)] přístupová oprávnění uživatelů nastavení, které správce má k dispozici, individuální uživatel může mít oprávnění zabezpečení, chcete-li Profilovat procesy v tomto počítači. Následující příklady znázorňují možné rozdíly mezi uživateli:
+V závislosti na nastavení uživatelských oprávnění pro přístup k [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)], která správce počítače zpřístupnil, může mít jednotliví uživatelé oprávnění zabezpečení k profilování procesu na tomto počítači. Následující příklady ilustrují možné rozdíly mezi uživateli:
 
-- Někteří uživatelé mohou přístup k rozšířeným funkcím profilace, pokud správce nastavil ovladač a spouštění služby.
+- Někteří uživatelé mají přístup k pokročilým funkcím profilování, když správce nastavil ovladač a službu tak, aby se spouštěly.
 
-- Uživatelé domény mohou přistupovat k pouze profilace vzorku.
+- Uživatelé domény mohou přistupovat pouze ke vzorové profilaci.
 
-- Někteří uživatelé mohou odepřít přístup k profilaci a všem ostatním uživatelům.
+- Někteří uživatelé můžou odepřít přístup k profilaci všem ostatním uživatelům.
 
-  Další informace najdete v tématu Možnosti správce v [VSPerfCmd](../profiling/vsperfcmd.md).
+  Další informace najdete v tématu možnosti správy v [VSPerfCmd](../profiling/vsperfcmd.md).
 
-## <a name="cross-session-profiling"></a>Profilace mezi relacemi
+## <a name="cross-session-profiling"></a>Profilace mezi jednotlivými relacemi
 
-*Mezi relacemi profilace* je schopnost Profilovat proces, na kterém běží v relaci jiného uživatele. Například většina služeb spuštěné v relaci 0, a uživatelé nemůžou spouštět přímo v relaci 0. S použitím **připojit k procesu** tlačítko na panelu nástrojů prohlížeče výkonu nebo `/attach` – možnost nástroje VSPerfCmd příkazového řádku, můžete provádět profilaci většina procesů v různých uživatelských relací.
+Profilování *mezi jednotlivými relacemi* je schopnost profilovat proces, který běží v jiné uživatelské relaci. Například většina služeb běží v relaci 0 a uživatelé nemůžou běžet přímo v relaci 0. Pomocí tlačítka **připojit k procesu** na panelu nástrojů Prohlížeč výkonu nebo `/attach` možnosti nástroje příkazového řádku VSPerfCmd můžete profilovat většinu procesů v různých uživatelských relacích.
 
-Zobrazí se seznam procesů, které jsou k dispozici nastavením možností profilace viditelnost napříč procesy. Tyto možnosti jsou dostupné v **připojit k procesu** okno, které se zobrazí, když vyberete **připojit k procesu**:
+Můžete zobrazit seznam procesů, které jsou k dispozici, nastavením možností viditelnosti mezi procesy. Tyto možnosti jsou k dispozici v okně **připojit k procesu** , které se zobrazí po výběru možnosti **připojit k procesu**:
 
 - **Zobrazit procesy všech uživatelů**
 
-  Pokud není vybraná tato možnost, v seznamu zobrazí pouze procesy, které jsou vlastněny aktuálního uživatele. V opačném případě se v seznamu zobrazí procesy všech uživatelů.
+  Pokud tato možnost není vybraná, zobrazí se v seznamu jenom procesy vlastněné aktuálním uživatelem. V opačném případě se v seznamu zobrazí procesy všech uživatelů.
 
 - **Zobrazit procesy ve všech relacích**
 
-  Pokud není vybraná tato možnost, v seznamu zobrazí procesy v aktuální relaci. V opačném případě se v seznamu zobrazí procesy ve všech relacích.
+  Pokud tato možnost není vybraná, zobrazí se v seznamu procesy v aktuální relaci. V opačném případě se v seznamu zobrazí procesy ve všech relacích.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Přehledy](../profiling/overviews-performance-tools.md)
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Postupy: Připojit ke spuštěnému procesu](/previous-versions/visualstudio/visual-studio-2010/c6wf8e4z\(v\=vs.100\))
+- [Postupy: připojení ke spuštěnému procesu](/previous-versions/visualstudio/visual-studio-2010/c6wf8e4z\(v\=vs.100\))

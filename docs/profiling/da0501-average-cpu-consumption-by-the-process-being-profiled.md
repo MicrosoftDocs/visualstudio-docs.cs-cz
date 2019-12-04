@@ -1,5 +1,5 @@
 ---
-title: 'DA0501: Průměr spotřeby procesoru profilovaným procesem. | Dokumenty Microsoft'
+title: 'DA0501: Průměr Spotřeby procesoru profilovaným Procesem. | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,29 +10,30 @@ ms.assetid: b01946b4-75e3-47d5-a1a1-cebfae66a3af
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f3b9ed2a0a27c3be992f6dadd2a6f18c1f8df9bd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d9835ad1965d1fd9a31113117eeb07ed62fd8ec4
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62936087"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777460"
 ---
-# <a name="da0501-average-cpu-consumption-by-the-process-being-profiled"></a>DA0501: Průměr spotřeby procesoru profilovaným procesem.
+# <a name="da0501-average-cpu-consumption-by-the-process-being-profiled"></a>DA0501: Průměrná spotřeba procesoru procesem profilace.
 
 |||
 |-|-|
 |Id pravidla|DA501|
-|Kategorie|Sledování prostředků|
-|Metoda profilace|Všechny|
-|Zpráva|Průměr spotřeby procesoru profilovaným procesem.|
-|Typ pravidla|Informace o|
+|Kategorie|Monitorování prostředků|
+|Metoda profilace|Vše|
+|Zpráva|Průměrná spotřeba procesoru profilovaným procesem|
+|Typ pravidla|Informace o nástroji|
 
- Při profilování pomocí vzorkování, paměti .NET nebo metodám sporu prostředků, musíte shromáždit minimálně 10 vzorky k aktivaci tohoto pravidla.
+ Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit aspoň 10 vzorků.
 
 ## <a name="rule-description"></a>Popis pravidla
- Tato zpráva znamená procentuální hodnotu času, který byl procesor zaneprázdněný, provádění instrukcí z aplikace. Hlášená hodnota je průměrem přes všechny intervaly měření, ve kterých byl aktivní profilovaný proces. Hodnota může být větší než 100 % na počítači s více než jeden procesor.
+ Tato zpráva oznamuje procento času, po který procesor byl zaneprázdněn prováděním pokynů z aplikace. Vykazovaná hodnota je průměr ve všech intervalech měření, v nichž byl proces profilace aktivní. Hodnota Value může být větší než 100% na počítači s více než jedním procesorem.
 
 ## <a name="how-to-use-rule-data"></a>Jak používat data pravidla
- Hodnota pravidla použijte k porovnání výkonu různých verzí nebo sestavení tohoto programu nebo porozumět výkonu aplikace v rámci různých testovacích scénářů.
+ Použijte hodnotu pravidla pro porovnání výkonu různých verzí nebo sestavení programu nebo pro pochopení výkonu aplikace v různých testovacích scénářích.

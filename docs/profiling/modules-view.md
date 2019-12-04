@@ -1,5 +1,5 @@
 ---
-title: Zobrazení modulů | Dokumentace Microsoftu
+title: Zobrazení modulů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,27 +12,28 @@ ms.assetid: 4314a404-2120-425b-be42-180cd4bac840
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 89b3e7492e0f5155dd1c36f0140f6a1ad11db027
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 89d9146b3f724b4883f21a43689a495eef252777
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829967"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778515"
 ---
 # <a name="modules-view"></a>Zobrazení modulů
-Zobrazení modulů seznam modulů dat profilování. Každý modul je kořenový uzel hierarchického stromu. Profilované funkce modulu jsou uvedeny pod uzlem modulu. Pokud data profilace byla shromážděna pomocí metody odběru vzorků, informace o řádku je uvedena pod uzel funkce a data ukazatel instrukce je uvedena pod uzlem řádku.
+V zobrazení modulů jsou uvedeny moduly dat profilování. Každý modul je kořenovým uzlem hierarchického stromu. Profilované funkce modulu jsou uvedeny pod uzlem modulu. Pokud byla data profilace shromážděna pomocí metody vzorkování, jsou informace o řádku uvedeny pod uzlem funkce a data ukazatele instrukcí jsou uvedena pod uzlem line.
 
- Rozbalit nebo sbalit název modulu pro zobrazení nebo zobrazení dat výkonu modulu zavřít.
+ Rozbalte nebo sbalte název modulu pro zobrazení nebo zavření zobrazení dat výkonu modulu.
 
- Přidejte nebo odeberte sloupce, klikněte pravým tlačítkem v okně sestavy a pak vyberte **Přidat/odebrat sloupce**. Data lze seřadit klepnutím na název sloupce. Další informace najdete v tématu [jak: Přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md).
+ Chcete-li přidat nebo odebrat sloupce, klikněte pravým tlačítkem myši v okně sestavy a vyberte možnost **Přidat nebo odebrat sloupce**. Data můžete seřadit kliknutím na název sloupce. Další informace najdete v tématu [Postup: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md).
 
- Sloupce, které jsou k dispozici v zobrazení modulů závisí na metodě profilování (vzorkování nebo instrumentace), která byla použita pro sběr dat a zda shromáždění dat paměti .NET v profilaci spouštět.
+ Sloupce, které jsou k dispozici v zobrazení modulů, závisí na metodě profilace (vzorkování nebo instrumentace), která byla použita ke shromažďování dat a zda byla data paměti .NET shromažďována při spuštění profilace.
 
 ## <a name="see-also"></a>Viz také:
 - [Zobrazení modulů](../profiling/modules-view-sampling-data.md)
 - [Zobrazení modulů](../profiling/modules-view-instrumentation-data.md)
 - [Zobrazení modulů – instrumentace](../profiling/modules-view-dotnet-memory-instrumentation-data.md)
-- [Moduly zobrazení – vzorkování](../profiling/modules-view-dotnet-memory-sampling-data.md)
+- [Zobrazení modulů – vzorkování](../profiling/modules-view-dotnet-memory-sampling-data.md)
 - [Zobrazení modulů](../profiling/modules-view-contention-data.md)

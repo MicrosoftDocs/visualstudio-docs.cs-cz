@@ -1,5 +1,5 @@
 ---
-title: Principy metody kolekce výkonu | Dokumentace Microsoftu
+title: Porozumění metodám shromažďování informací o výkonu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -9,33 +9,34 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 018c71be69efa7b68f08cb0d320633b82be9832d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ad451c6146593713b02901ac43423c76174d0684
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62821224"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778086"
 ---
-# <a name="understand-performance-collection-methods"></a>Vysvětlení metody kolekce výkonu
+# <a name="understand-performance-collection-methods"></a>Vysvětlení metod shromažďování výkonu
 
 Nástroje pro profilaci sady Visual Studio poskytují pět metod, které můžete použít pro shromažďování dat o výkonu. Toto téma popisuje různé metody a předkládá návrhy některých situací, ve kterých mohou být použity konkrétní metody shromažďování dat.
 
 > [!NOTE]
-> Rozšířené funkce zabezpečení v systému Windows 8 a Windows Server 2012 vyžadují významné změny ve způsobu, jakým profiler systému Visual Studio na těchto platformách shromažďuje data. U aplikací pro UPW také vyžadují nové techniky kolekce. Zobrazit [nástroje pro výkon v aplikacích Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
+> Rozšířené funkce zabezpečení ve Windows 8 a Windows Serveru 2012 vyžadují významné změny ve způsobu, jakým Profiler sady Visual Studio shromažďuje data na těchto platformách. Aplikace pro UWP také vyžadují nové techniky shromažďování. Podívejte [se na nástroje pro sledování výkonu v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 
 |Metoda|Popis|
 |------------|-----------------|
-|[Vzorkování](#sampling)|Shromažďuje statistická data o práci provedené aplikací.|
+|[Kontrol](#sampling)|Shromažďuje statistická data o práci provedené aplikací.|
 |[Instrumentace](#instrumentation)|Shromažďuje podrobné informace o časování jednotlivých volání funkce.|
 |[Souběžnost](#concurrency)|Shromažďuje podrobné informace o vícevláknových aplikacích.|
 |[Paměť .NET](#net-memory)|Shromažďuje podrobné informace o přidělování a uvolňování paměti .NET.|
-|[Interakce vrstev](#tier-interaction)|Shromažďuje informace o synchronních voláních funkcí rozhraní ADO.NET na databázi SQL Server.<br /><br /> Profilování interakce vrstev lze shromažďovat pomocí libovolné edice sady Visual Studio. Nicméně data profilace interakce vrstev lze zobrazit pouze v sadě Visual Studio Enterprise.|
+|[Interakce vrstev](#tier-interaction)|Shromažďuje informace o synchronních voláních funkcí rozhraní ADO.NET na databázi SQL Server.<br /><br /> Profilace interakce vrstev se dá shromáždit pomocí libovolné edice sady Visual Studio. Data profilování interakce vrstev ale můžete zobrazit jenom v Visual Studio Enterprise.|
 
-Pomocí některé z metod profilace můžete shromažďovat další data, například čítače výkonu softwaru a hardwaru. Další informace najdete v tématu [shromažďování dalších dat o výkonu](../profiling/collecting-additional-performance-data.md).
+Pomocí některé z metod profilace můžete shromažďovat další data, například čítače výkonu softwaru a hardwaru. Další informace najdete v tématu [shromažďování dalších údajů o výkonu](../profiling/collecting-additional-performance-data.md).
 
-## <a name="sampling"></a>Vzorkování
+## <a name="sampling"></a>Kontrol
 
 Metoda profilování vzorkování shromažďuje statistická data o práci, kterou aplikace provede během spuštění profilace. Metoda vzorkování je nenáročná a má malý vliv na provádění metod aplikace.
 
@@ -50,9 +51,9 @@ Ve výchozím nastavení profiler nastaví interval vzorkování na cykly proces
 
 [Shromažďování statistik výkonu pomocí vzorkování](../profiling/collecting-performance-statistics-by-using-sampling.md)
 
-[Vysvětlení hodnotám dat vzorkování](../profiling/understanding-sampling-data-values.md)
+[Porozumění hodnotám dat vzorkování](../profiling/understanding-sampling-data-values.md)
 
-[Zobrazení dat metod vzorku](../profiling/profiler-sampling-method-data-views.md)
+[Ukázka zobrazení dat metody](../profiling/profiler-sampling-method-data-views.md)
 
 ## <a name="instrumentation"></a>Instrumentace
 
@@ -73,7 +74,7 @@ Metoda instrumentace vkládá kód do binárního souboru, který zachycuje info
 
 Pomocí metod instrumentace můžete také shromažďovat čítače výkonu procesoru i softwaru.
 
-[Vysvětlení hodnotám dat instrumentace](../profiling/understanding-instrumentation-data-values.md)
+[Porozumění hodnotám dat instrumentace](../profiling/understanding-instrumentation-data-values.md)
 
 [Shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-by-using-instrumentation.md)
 
@@ -87,11 +88,11 @@ Profilace souběžnosti shromažďuje informace o aplikacích s více vlákny.
 
 - Vizualizátor souběžnosti zobrazí grafické informace, které lze použít k vyhledání problémových míst výkonu, nízkého využití procesoru, kolize vlákna, migrace vlákna, zpoždění synchronizace, míst překrytí vstupu-výstupu a dalších informací. Pokud je to možné, odkazuje grafický výstup na data zásobníku volání a zdrojového kódu. Data vizualizace souběžnosti můžete shromažďovat pouze pro aplikace příkazového řádku a aplikace pro systém Windows.
 
-[Vysvětlení hodnotám dat kolizí prostředku](../profiling/understanding-resource-contention-data-values.md)
+[Porozumění hodnotám dat kolizí prostředků](../profiling/understanding-resource-contention-data-values.md)
 
 [Shromažďování dat o souběžnosti vláken a procesů](../profiling/collecting-thread-and-process-concurrency-data.md)
 
-[Zobrazení dat kolizí prostředku](../profiling/resource-contention-data-views.md)
+[Zobrazení dat kolizí prostředků](../profiling/resource-contention-data-views.md)
 
 [Vizualizér souběžnosti](../profiling/concurrency-visualizer.md)
 
@@ -111,7 +112,7 @@ Profilování paměti .NET lze použít v režimu vzorkování nebo instrumenta
 
 - Při spuštění profilování paměti .NET v režimu instrumentace budou podrobné informace o časování shromážděny společně s výhradními i zahrnutými hodnotami přidělení.
 
-[Vysvětlení paměť přidělení a objekt hodnotám životnosti](../profiling/understanding-memory-allocation-and-object-lifetime-data-values.md)
+[Principy přidělování paměti a hodnot dat životnosti objektů](../profiling/understanding-memory-allocation-and-object-lifetime-data-values.md)
 
 [Shromažďování dat o alokaci paměti a době platnosti objektů .NET](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)
 
@@ -121,7 +122,7 @@ Profilování paměti .NET lze použít v režimu vzorkování nebo instrumenta
 
 Profilování interakce vrstev přidá do datového souboru profilování informace o synchronních voláních [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] mezi stránkou [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] nebo jinou aplikací a databází [!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)]. Data obsahují počet a čas volání a maximální a minimální časy. Data interakce vrstev lze přidat mezi data profilace, která jsou shromážděna metodami vzorkování, instrumentace, paměti .NET nebo souběžnosti.
 
-![Profil dat interakce vrstvy](../profiling/media/tierinteraction_profilingtools.png "TierInteraction_ProfilingTools")
+![Data profilu interakce vrstev](../profiling/media/tierinteraction_profilingtools.png "TierInteraction_ProfilingTools")
 
 Data interakce vrstev, která jsou shromážděna nástroji pro profilaci
 
@@ -131,5 +132,5 @@ Data interakce vrstev, která jsou shromážděna nástroji pro profilaci
 
 ## <a name="see-also"></a>Viz také:
 
-[Postupy: Shromažďování dat o výkonu pro webový server](../profiling/how-to-collect-performance-data-for-a-web-site.md)
-[příručka začátečníka profilací výkonu](../profiling/beginners-guide-to-performance-profiling.md)
+[Postupy: shromažďování údajů o výkonu pro web](../profiling/how-to-collect-performance-data-for-a-web-site.md)
+[příručce pro začátečníky k profilaci výkonu](../profiling/beginners-guide-to-performance-profiling.md)

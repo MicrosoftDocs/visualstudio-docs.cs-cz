@@ -1,35 +1,36 @@
 ---
-title: 'Postupy: Vytvoření sestavy porovnání Profiler z příkazového řádku | Dokumentace Microsoftu'
+title: 'Postupy: Vytvoření sestavy porovnání profileru z příkazového řádku | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 00548d16-eb5b-46f7-8a65-862f98a43831
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 11a3850073068cf280901a6948565329e83f4629
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d0328e04067770f8837d10d532abb67d16c65e50
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62973939"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74776424"
 ---
 # <a name="how-to-create-a-profiler-comparison-report-from-a-command-prompt"></a>Postupy: Vytvoření sestavy porovnání profileru z příkazového řádku
-Můžete generovat [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástrojů pro profilaci sady sestav, který porovnává data o výkonu ze dvou dat profilování (. *Vsp* nebo. *vsps*) soubory. Sestava ukazuje rozdíly, regrese výkonu a vylepšení, ke kterým došlo v jedné relaci profilace na druhý. Hodnoty v sestavě obsahují rozdílů nebo změny, od základních hodnot v prvním souboru, který určíte. Touto položkou delta se počítá tak, že určíte rozdíl mezi původní hodnotu, která je základní hodnota a hodnota výsledku z nové analýzy. Porovnání dat profiler může být založen na funkce v kódu, moduly v aplikaci, řádky, ukazatele na instrukce (IP) a typy.
+Můžete vygenerovat sestavu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci, která porovná údaje o výkonu dvou profilových dat (. *VSP* /or. *vsps*) spis. Tato sestava obsahuje rozdíly, regrese výkonu a vylepšení, k nimž došlo z jedné relace profilování na druhou. Hodnoty v sestavě prezentují rozdíl nebo změnu od základů prvního souboru, který zadáte. Tato rozdílová hodnota je počítána určením rozdílu mezi starou hodnotou, která je základní hodnotou, a výslednou hodnotou z nové analýzy. Porovnání dat profileru může být založeno na funkcích v kódu, modulech aplikace, řádcích, ukazateli instrukcí (IP) a typech.
 
- Pro výčet identifikátorů porovnání kategorií a pole, zadejte na příkazovém řádku následující:
+ K vypsání identifikátorů kategorií porovnání a polí zadejte následující příkazový řádek:
 
- **VSPerfReport/querydifftables***VspFileName1* *VspFileName2*
+ **VSPerfReport/querydifftables**  *VspFileName1* *VspFileName2*
 
- Použijte následující syntaxi pro vytvoření sestavy porovnání:
+ K vytvoření sestavy porovnání použijte následující syntax:
 
- **VSPerfReport /diff**  `VspFileName1` *VspFileName2* [ **/** `Options`]
+ **VSPerfReport diff**`VspFileName1` *VspFileName2* [ **/** `Options`]
 
- Z následující tabulky můžete přidat možnosti **VSPerfReport/diff** příkazového řádku.
+ Do příkazového řádku **VSPerfReport diff** můžete přidat možnosti z následující tabulky.
 
 |Možnost|Popis|
 |------------|-----------------|
-|**DiffThreshold:** [*hodnotu*]|Rozdíl ignorujte, pokud byl pod tuto procentuální prahovou hodnotu. Také se nezobrazí nová data s hodnotami, které jsou pod touto prahovou hodnotou.|
-|**DiffTable:** *TableName*|Pomocí této tabulce můžete porovnat soubory. Ve výchozím nastavení se používá tabulka funkcí. Zadejte identifikátor, který je uveden v **VSPerfReport/querydifftables**.|
-|**DiffColumn:** *Názevsloupce*|Tento sloupec slouží k porovnání hodnoty. Ve výchozím nastavení se používá sloupec procent výhradních vzorků. Zadejte identifikátor, který je uveden v **VSPerfReport/querydifftables**.|
+|**DiffThreshold:** [*hodnota*]|Ignoruje rozdíl, pokud je pod touto procentuální prahovou hodnotou. Navíc se nezobrazí nová data s hodnotami, které jsou pod touto prahovou hodnotou.|
+|**Diff:** *TableName*|Pomocí této tabulky můžete porovnat soubory. Ve výchozím nastavení se používá tabulka Functions. Zadejte identifikátor, který je uveden v **VSPerfReport/querydifftables**.|
+|**DiffColumn:** *ColumnName*|Pomocí tohoto sloupce můžete porovnat hodnoty. Ve výchozím nastavení se používá sloupec s hodnotou výhradní vzorky. Zadejte identifikátor, který je uveden v **VSPerfReport/querydifftables**.|

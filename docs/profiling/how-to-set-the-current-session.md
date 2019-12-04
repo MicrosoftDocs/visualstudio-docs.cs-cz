@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Nastavení aktuální relace | Dokumentace Microsoftu'
+title: 'Postupy: nastavení aktuální relace | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,30 +13,31 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ad917a67ab03a4cb6c1e265ec2dafcbe6e2ee421
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 70f33888be5097d2682133cda363099bb815c5b0
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62823566"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778749"
 ---
-# <a name="how-to-set-the-current-session"></a>Postupy: Nastavení aktuální relace
+# <a name="how-to-set-the-current-session"></a>Postupy: nastavení aktuální relace
 
-Můžete otevřít více výkonnostních relací v **prohlížeč výkonu**a pak můžete vybrat jednu z vidět výkonnostní relace nastavit jako aktuální relaci.
+V **prohlížeč výkonu**můžete otevřít více relací výkonu a pak můžete vybrat jednu z viditelných relací výkonu, které chcete nastavit jako aktuální relaci.
 
-Po nastavení relace jako aktuální relaci, kliknutím na **spuštění** na **prohlížeč výkonu** nástrojů se spustí aktuální relaci profilace.
+Jakmile nastavíte relaci jako aktuální, po kliknutí na tlačítko **Spustit** na panelu nástrojů **prohlížeč výkonu** se spustí profilace aktuální relace.
 
-## <a name="to-set-current-performance-session"></a>Nastavení aktuální výkonnostní relace
+## <a name="to-set-current-performance-session"></a>Nastavení aktuální relace výkonu
 
-- V **prohlížeč výkonu**, klikněte pravým tlačítkem na relaci výkonu a pak klikněte na tlačítko **nastavit jako aktuální relaci**.
+- V **prohlížeč výkonu**klikněte pravým tlačítkem myši na výkonnostní relaci a pak klikněte na **nastavit jako aktuální relaci**.
 
-     Název relace se zobrazí tučným písmem.
+     Název relace se zobrazí tučně.
 
 ## <a name="see-also"></a>Viz také:
 
-[Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)
-[okno Prohlížeč výkonu](../profiling/performance-explorer-window.md)
-[vlastnosti relace výkonu](../profiling/performance-session-properties.md) 
- [ Přehled výkonnostní relace](../profiling/performance-session-overview.md)
+[Konfigurace relací výkonu](../profiling/configuring-performance-sessions.md)
+[prohlížeč výkonu okně](../profiling/performance-explorer-window.md)
+[Vlastnosti výkonnostní relace](../profiling/performance-session-properties.md)
+[Přehled relace výkonu](../profiling/performance-session-overview.md)

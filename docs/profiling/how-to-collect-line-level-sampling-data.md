@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Shromažďování dat vzorkování na úrovni řádků | Dokumentace Microsoftu'
+title: 'Postupy: shromažďování dat vzorkování na úrovni řádků | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,52 +8,53 @@ ms.assetid: 44803aad-dd39-4c2e-9209-d35185d44983
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e447b0b15a7a541567932a72dffd7abfc9851e7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f64040c9180a152650de16b23276ab0e65cc9ead
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834585"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74776355"
 ---
-# <a name="how-to-collect-line-level-sampling-data"></a>Postupy: Shromažďování dat vzorkování na úrovni řádků
-Vzorkování na úrovni řádku je schopnost profiler k určení, kde v kódu funkce náročnou na procesor, jako je například funkce, která má vysokou exkluzivní vzorky procesoru trávit většinu času.
+# <a name="how-to-collect-line-level-sampling-data"></a>Postupy: shromažďování dat vzorkování na úrovni řádků
+Vzorkování na úrovni řádků je schopnost profileru určit, kde v kódu funkce náročné na procesor, jako je například funkce, která má vysoce exkluzivní ukázky, musí procesor strávit nejvíc času.
 
 ## <a name="overview"></a>Přehled
- Pro vzorkování na úrovni řádku, profiler vás program zásobník volání v nastavených intervalech a agreguje výsledky. Tyto výsledky ukazují, jaký instrukce procesoru byla spuštěna při ukázky byly provedeny. K identifikaci řádků kódu a ukazatel instrukce (IP) se pak analyzuje shromážděná data o výhradních vzorků.
+ Pro vzorkování na úrovni řádků Profiler provede v nastavených intervalech zásobník volání programu a agreguje tyto výsledky. Tyto výsledky zobrazují informace o tom, jaké pokyny byl procesor spuštěn při pořízení vzorků. Shromážděná data o exkluzivních ukázkách se pak analyzují, aby identifikovala řádky kódu a ukazatel na instrukce (IP).
 
- Vzorkování na úrovni řádků funguje i pro spravované i nativní kód. Sestavy o výkonu, které se zobrazit tato data zahrnují zobrazení řádků a zobrazení modulů.
+ Vzorkování na úrovni řádků funguje pro spravovaný i nativní kód. Sestavy výkonu, které zobrazují tato data, zahrnují zobrazení řádků a zobrazení modulů.
 
- Informace o znacích begin/end není k dispozici pro nativní kód. Víceřádkové příkazy řádek začít informace není k dispozici pro nativní kód; je k dispozici pouze informace o ukončení řádku.
+ Pro nativní kód nejsou k dispozici informace o počátečním/koncovém znaku. Pro víceřádkové příkazy nejsou k dispozici informace o zahájení řádku pro nativní kód; k dispozici jsou pouze informace o koncích řádků.
 
-### <a name="available-data"></a>K dispozici data
- K dispozici vzorkování na úrovni řádku dat obsahuje následující informace:
+### <a name="available-data"></a>Dostupná data
+ Dostupná data vzorkování na úrovni řádků obsahují následující informace:
 
-- Název funkce.
+- Název funkce
 
-- Adresa funkce.
+- Adresa funkce
 
-- Začněte řádky – číslo řádku vzorky kódu.
+- Řádky začínající číslem řádku s ukázkovým kódem.
 
-- Konec řádku – koncové číslo řádku zdroje. Toto je obecně stejná jako "Řádku begin" data s výjimkou případů, kdy jeden příkaz program zahrnuje více řádky zdrojového kódu.
+- Koncový řádek koncového čísla řádku To je obvykle stejné jako při "řádku begin" data kromě případů, kdy jeden program zahrnuje více řádků zdrojového kódu.
 
-- Znaky begin - začátek sloupec agregační vzorku. Obvykle se jedná 0 s výjimkou případů, kdy jeden řádek obsahuje více příkazů programu.
+- Znaky začátku – počáteční sloupec agregované ukázky. Obvykle se jedná o 0 s výjimkou případů, kdy jeden řádek obsahuje více příkazů programu.
 
-- Koncový znak - poslední sloupec agregační vzorku.
+- Koncový sloupec znaků – konečný vzorek agregace
 
-- IP adresa – adresa, kde agregované vzorku (pouze zobrazení IP).
+- IP adresa, na které se provedla agregovaná ukázka (jenom zobrazení IP).
 
-  V **moduly** zobrazit, pokud je funkce Statistika na úrovni řádku, statistiky jsou vnořené v rámci jednotlivých funkcí. Kromě toho se zobrazí statistika na úrovni IP, které jsou vnořené v každém řádku.
+  V zobrazení **modulů** , pokud funkce obsahuje statistiku na úrovni řádků, statistika je vnořena do každé funkce. Kromě toho se zobrazí statistiky na úrovni protokolu IP, které jsou vnořené pod každým řádkem.
 
-### <a name="turn-off-line-level-sampling-for-managed-code"></a>Vypnutí vzorkování na úrovni řádku pro spravovaný kód
- Vzorkování na úrovni řádku je ve výchozím nastavení zapnutá. Můžete vypnout shromažďování dat na úrovni řádku pro spravovaný kód pomocí jedné z následujících příkazů:
+### <a name="turn-off-line-level-sampling-for-managed-code"></a>Vypnout vzorkování na úrovni řádků pro spravovaný kód
+ Ve výchozím nastavení je vzorkování na úrovni řádků zapnuté. Shromažďování dat na úrovni řádků pro spravovaný kód můžete vypnout pomocí jednoho z následujících příkazů:
 
-- Před profilací, zadejte **VSPerfCLREnv /samplelineoff**. Tímto je ovlivněn aplikací a služeb.
+- Před profilací zadejte **VSPerfCLREnv/samplelineoff**. To má vliv na aplikace i služby.
 
-     – nebo –
+     ani
 
-- Při spuštění aplikace, zadejte **VSPerfCmd/lineoff \<ostatních argumentů >**.
+- Při spouštění aplikace zadejte **VSPerfCmd/lineoff \<jiné argumenty >** .
 
 ## <a name="see-also"></a>Viz také:
 - [Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)

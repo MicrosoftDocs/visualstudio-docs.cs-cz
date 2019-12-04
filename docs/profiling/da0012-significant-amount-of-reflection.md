@@ -11,20 +11,21 @@ ms.assetid: c92a1d76-21fa-426e-8b1b-a3c08e9bcbca
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6257ce96e139e173fca804221b495f7467fc6b20
-ms.sourcegitcommit: bb5425b9c6d8fd7135d9584c2963831754071347
+ms.openlocfilehash: 1c1b96e9a73b488ba9c9920e8ea43e27f78f67ed
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024641"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777670"
 ---
 # <a name="da0012-significant-amount-of-reflection"></a>DA0012: Vysoký objem odrazů
 
 |||
 |-|-|
-|ID pravidla|DA0012|
+|Id pravidla|DA0012|
 |Kategorie|Využití .NET Framework|
 |Metody profilace|Kontrol|
 |Zpráva|Je možné, že reflexe vyřadí nadměrné využití. Tato operace je náročná.|

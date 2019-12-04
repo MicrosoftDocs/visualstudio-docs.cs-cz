@@ -1,5 +1,5 @@
 ---
-title: Okno Prohlížeč výkonu | Dokumentace Microsoftu
+title: Prohlížeč výkonu okno | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,47 +10,48 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c8ffa5340ceaa00adb5e86100d8e58c307f41d40
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a365892f606da90c608e43b7ccce73b902ec0e98
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794431"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772436"
 ---
 # <a name="performance-explorer-window"></a>Okno Prohlížeč výkonu
 
-**Prohlížeč výkonu** okno v integrovaném vývojovém prostředí sady Visual Studio umožňuje konfiguraci a spuštění relace výkonu pomocí nástrojů profilování Visual Studio. Pokud je potřeba otevřít okno, postupujte podle pokynů v [začátečníky Průvodce profilací výkonu](../profiling/beginners-guide-to-cpu-sampling.md).
+Okno **prohlížeč výkonu** v integrovaném vývojovém prostředí sady Visual Studio umožňuje konfigurovat a spouštět relace výkonu pomocí nástroje pro profilaci sady Visual Studio. Pokud potřebujete okno otevřít, postupujte podle pokynů v [příručce pro začátečníky a profilování výkonu](../profiling/beginners-guide-to-cpu-sampling.md).
 
-## <a name="performance-explorer-toolbar"></a>Panel nástrojů Průzkumník výkonu
+## <a name="performance-explorer-toolbar"></a>Panel nástrojů Prohlížeč výkonu
 
-Tyto možnosti jsou k dispozici na **prohlížeč výkonu** nástrojů:
+Na panelu nástrojů **prohlížeč výkonu** jsou k dispozici následující možnosti:
 
-- **Spustit Průvodce výkonem** -zobrazí Průvodce výkonu a přidat novou relaci výkonu v okně Průzkumník výkonu.
+- **Spustit Průvodce výkonem** – zobrazí Průvodce výkonem, který přidá novou relaci výkonu do okna Prohlížeč výkonu.
 
-- **Novou relaci výkonu** – přidá prázdný výkonnostní relaci v okně Průzkumník výkonu.
+- **Nová výkonnostní relace** – přidá do okna Prohlížeč výkonu prázdnou relaci výkonu.
 
-- **Spuštění** – **spuštění** příkaz seznamu umožňuje spustit cílovou aplikaci, která má, okamžitě povolená profilace (**spustit s nástrojem pro profilaci**) nebo pozastavené (profilací **Pozastaví spuštění profilací**).
+- **Spustit** – seznam **spouštěcích** tlačítek umožňuje spustit cílovou aplikaci, která má okamžitě povolené profilování (**Spustit s profilací**), nebo s pozastaveným profilací (**Spustit s pozastaveným profilací**).
 
-- **Metoda** – Určuje, jestli je metodu relace profilace vzorkování nebo instrumentace.
+- **Metoda** – určuje, jestli je metoda profilování relace vzorkování nebo instrumentace.
 
-- **Zastavit** – okamžitě ukončí cílové aplikace a profiler.
+- **Zastavit** – okamžitě ukončí cílovou aplikaci a Profiler.
 
-- **Attach/Detach** – zobrazí **připojit Profiler k procesu** dialogové okno Vybrat spuštěný proces, ke kterému chcete připojit profiler.
+- **Připojit nebo odpojit** – zobrazí dialogové okno **Připojit profiler k procesu** pro výběr běžícího procesu, ke kterému se má připojit Profiler.
 
 ## <a name="performance-explorer-window"></a>Okno Prohlížeč výkonu
 
-**Prohlížeč výkonu** okno obsahuje ovládací prvek stromu, který zobrazuje binární soubory a soubory data sestav z jednoho nebo více výkonnostních relací.
+Okno **prohlížeč výkonu** obsahuje ovládací prvek stromové struktury, který zobrazuje binární soubory a soubory sestav s daty jedné nebo více relací výkonu.
 
-- **Název relace** – kořenový adresář ovládacího prvku strom obsahuje název relace. Klikněte pravým tlačítkem na název relace, můžete nastavit vlastnosti relace nebo spustit cílovou aplikaci a profiler.
+- **Název relace** – kořen ovládacího prvku stromu obsahuje název relace. Klikněte pravým tlačítkem myši na název relace a nastavte vlastnosti relace nebo spusťte cílovou aplikaci a Profiler.
 
-- **Cíle** -zobrazí názvy binárních souborů, které se má být profilována v relaci. Klikněte pravým tlačítkem na **cíle** s přidáváním a odebíráním binární soubor, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projektu nebo Web. Klikněte pravým tlačítkem na název cílového nastavení vlastností pro jednotlivé binárního souboru.
+- **Cíle** – zobrazí názvy binárních souborů, které se mají profilovat v relaci. Kliknutím pravým tlačítkem myši na možnost **cíle** můžete přidat nebo odebrat binární, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projekt nebo Web. Klikněte pravým tlačítkem myši na název cíle a nastavte vlastnosti pro jednotlivé binární soubory.
 
-- **Sestavy** – zobrazuje názvy souborů dat profileru, které jsou generovány pro relaci. Klikněte pravým tlačítkem na **sestavy** můžete přidat existující sestavy nebo porovnání dvou souborů dat profileru. Klikněte pravým tlačítkem na název sestavy, čímž otevřete, odebrat nebo exportovat datového souboru profilování.
+- **Sestavy** – zobrazí názvy datových souborů profileru, které jsou generovány pro relaci. Kliknutím pravým tlačítkem myši na **sestavy** můžete přidat existující sestavu nebo porovnat dva datové soubory profileru. Kliknutím pravým tlačítkem myši na název sestavy otevřete, odeberete nebo vyexportujete datový soubor profileru.
 
 ## <a name="see-also"></a>Viz také:
 
 [Přehledy](../profiling/overviews-performance-tools.md)
-[konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)
-[řízení sběru dat](../profiling/controlling-data-collection.md)
+[konfiguraci relací výkonu](../profiling/configuring-performance-sessions.md)
+[řízení shromažďování dat](../profiling/controlling-data-collection.md)

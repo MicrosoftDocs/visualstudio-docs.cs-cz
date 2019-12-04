@@ -1,5 +1,5 @@
 ---
-title: 'DA0026: Čas zpracování procesoru jádra nadměrné | Dokumentace Microsoftu'
+title: 'DA0026: nadměrné zpracování času procesoru jádra | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,32 +10,33 @@ ms.assetid: 4cfc8a29-b29b-4a72-b386-03d8856fdf8a
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 906d24513982917a455fb7fc59940446c89dae45
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2c8b4cb63eb4647ddab4220ed6729894fe8a456f
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62936381"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777486"
 ---
 # <a name="da0026-excessive-kernel-cpu-time-processing"></a>DA0026: Nadměrný čas zpracování procesoru jádra
 
 |||
 |-|-|
 |Id pravidla|TODO|
-|Kategorie|Použití nástroje pro profilaci|
-|Metoda profilace|Vzorkování|
-|Zpráva|Bylo měřeno relativně vysoké množství času procesoru režimu jádra. Zvažte prošetření zdroje s povoleným vzorkováním SysCall.|
-|Typ pravidla|Informace o|
+|Kategorie|Využití Nástroje pro profilaci|
+|Metoda profilace|Kontrol|
+|Zpráva|Bylo měřeno relativně vysoké množství času procesoru režimu jádra. Zvažte šetření zdroje s povoleným vzorkováním SysCall.|
+|Typ pravidla|Informace o nástroji|
 
- Při profilování pomocí vzorkování, paměti .NET nebo metodám sporu prostředků, musíte shromáždit minimálně 10 vzorky k aktivaci tohoto pravidla.
+ Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit aspoň 10 vzorků.
 
-## <a name="cause"></a>Příčina
- Čas procesoru poměr, který se spustil v režimu jádra překročil množství času strávené v uživatelském režimu. Zvažte profilaci znovu a vzorkování počet volání systému (syscalls) a zjistěte příčinu časy spuštění režimu jádra vysoká.
+## <a name="cause"></a>příčina
+ Poměrná doba procesoru spuštěná v režimu jádra překročila dobu trvání v uživatelském režimu. Zvažte znovu profilaci a vzorkování počtu systémových volání (voláním) a určete příčinu vysoké doby spuštění režimu jádra.
 
 ## <a name="rule-description"></a>Popis pravidla
- Relativně vysoký podíl času stráveného aplikace při spuštění režimu jádra pravděpodobně vyžadovat další šetření. Aplikace v uživatelském režimu přejde do režimu jádra k provádění vstupně-výstupních operací, počkejte podproces nebo proces synchronizace primitiv, nebo proveďte volání systému. Můžete prozkoumat typy systémových volání aplikace provádí a které funkce, které jsou zodpovědné za je, když vyberete možnost shromažďovat zásobníky volání ukázka podle systémových volání.
+ Poměrně vysoký podíl času, který aplikace strávila při provádění režimu jádra, může mít za následek další šetření. Aplikace v uživatelském režimu přejde do režimu jádra, aby prováděla vstupně-výstupní operace, aby bylo možné čekat na primitivní prvky synchronizace vlákna nebo procesu, nebo provést systémové volání. Můžete prozkoumat typy systémových volání, která aplikace zajišťuje, a funkce, které jsou pro ně zodpovědné, když vyberete možnost shromažďování ukázkových zásobníků volání na základě volání systému.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li prozkoumat typy systémových volání, které vaše aplikace odešle, spusťte profil znovu a vyberte možnost shromažďovat vzorky podle systémových volání. Zobrazit [jak: Výběr událostí vzorkování](../profiling/how-to-choose-sampling-events.md) Pokud používáte nástroje pro profilaci zevnitř rozhraní IDE pro další informace. Pokud používáte nástroje pro profilaci z příkazového řádku, najdete v článku **ukázkový možnosti intervalu** část [VSPerfCmd](../profiling/vsperfcmd.md) článek v referenční dokumentace nástrojů příkazového řádku nástrojů pro profilaci sady.
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
+ Chcete-li prozkoumat typy systémových volání, které aplikace vytváří, spusťte profil znovu a vyberte možnost shromažďování vzorků na základě volání systému. Další informace najdete v tématu [Postupy: výběr událostí vzorkování](../profiling/how-to-choose-sampling-events.md) , pokud používáte nástroje pro profilaci v integrovaném vývojovém prostředí (IDE). Pokud používáte nástroje pro profilaci z příkazového řádku, přečtěte si část **Možnosti intervalu vzorkování** v článku [VSPerfCmd](../profiling/vsperfcmd.md) v tématu Referenční informace o nástrojích příkazového řádku pro nástroje pro profilaci.

@@ -1,22 +1,23 @@
 ---
-title: Konzoly | Dokumentace Microsoftu
+title: Konzola | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e825ba66-1383-46ad-8712-396bc9c14036
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 74a5cecbdf3bba942c888a5cde3d49236047f4ee
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6ec56665b546f962e8b3f4fd35460715390aee30
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62553185"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777813"
 ---
 # <a name="console"></a>Konzola
-VSPerfCmd.exe **konzoly** možnost spustí aplikaci, která zadané v novém okně příkazového řádku. **Konzola** jde použít jenom s příkazu vsperfcmd proveďte **spuštění** možnost. Pokud aplikace není aplikace pomocí příkazového řádku **konzoly** nemá žádný vliv.
+Možnost **konzoly** VSPerfCmd. exe spustí zadanou aplikaci v novém okně příkazového řádku. **Konzolu** lze použít pouze s možností **spuštění** VSPerfCmd. Pokud aplikace není aplikace příkazového řádku, **Konzola** nemá žádný vliv.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,15 +26,15 @@ VSPerfCmd.exe /Launch:AppName /Console
 ```
 
 #### <a name="parameters"></a>Parametry
- Žádný
+ Žádné
 
 ## <a name="required-options"></a>Požadované možnosti
- **Konzola** lze zadat pouze na příkazovém řádku, který také obsahuje **spuštění** možnost.
+ **Konzolu** lze zadat pouze v příkazovém řádku, který obsahuje také možnost **spuštění** .
 
- **Spuštění:** `AppName` Spuštění profileru a aplikace určené `AppName`.
+ **Spustit:** `AppName` spustí Profiler a aplikaci určenou v `AppName`.
 
 ## <a name="see-also"></a>Viz také:
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Samostatné aplikace profilu](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Webové aplikace ASP.NET profilu](../profiling/command-line-profiling-of-aspnet-web-applications.md)
-- [Profil služby](../profiling/command-line-profiling-of-services.md)
+- [Profilovat samostatné aplikace](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [ASP.NET webové aplikace Profile](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Profilovací služby](../profiling/command-line-profiling-of-services.md)

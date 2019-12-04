@@ -1,5 +1,5 @@
 ---
-title: StartProfile | Dokumentace Microsoftu
+title: StartProfile | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,17 +8,18 @@ ms.assetid: 1761311d-c9d5-48f5-b1f8-b3605829940a
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: be5f748f4baa102bda16752904347954f97fea27
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9ff4b4973bff395cea6b73219a2098543ee6819e
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62980197"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778255"
 ---
 # <a name="startprofile"></a>StartProfile
-`StartProfile` Funkce nastaví čítač na hodnotu 1 (zapnuto) pro zadanou úroveň profilování.
+Funkce `StartProfile` nastaví čítač na 1 (zapnuto) pro zadanou úroveň profilace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,46 +32,46 @@ PROFILE_COMMAND_STATUS PROFILERAPI StartProfile(
 #### <a name="parameters"></a>Parametry
  `Level`
 
- Informuje o úrovni profil, ke které výkonu shromažďování dat lze použít. Následující **PROFILE_CONTROL_LEVEL** enumerátory lze použít k označení jednu ze tří úrovní výkonu, které lze použít shromažďování dat:
+ Označuje úroveň profilu, na kterou lze použít shromažďování dat výkonu. Následující výčty **PROFILE_CONTROL_LEVEL** lze použít k označení jedné ze tří úrovní, na kterou lze použít shromažďování dat výkonu:
 
-|Enumerátor|Popis|
+|Čítače|Popis|
 |----------------|-----------------|
-|PROFILE_GLOBALLEVEL|Globální nastavení úrovně má vliv na všechny procesy a vlákna při spuštění profilace.|
-|PROFILE_PROCESSLEVEL|Nastavení úrovně procesu ovlivňuje všechna vlákna, které jsou součástí určeného procesu.|
-|PROFILE_THREADLEVEL|Vlákno profilace nastavení úrovně má vliv na zadaný podproces.|
+|PROFILE_GLOBALLEVEL|Nastavení globální úrovně má vliv na všechny procesy a vlákna v rámci procesu profilace.|
+|PROFILE_PROCESSLEVEL|Nastavení úrovně procesu ovlivňuje všechna vlákna, která jsou součástí zadaného procesu.|
+|PROFILE_THREADLEVEL|Nastavení úrovně profilace vlákna má vliv na zadané vlákno.|
 
  `dwId`
 
- Identifikátor procesu nebo vlákna generované systémem.
+ Proces nebo identifikátor vlákna generovaný systémem.
 
-## <a name="property-valuereturn-value"></a>Vlastnost hodnota nebo návratová hodnota
- Funkce označuje úspěch nebo neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Návratová hodnota může být jeden z následujících akcí:
+## <a name="property-valuereturn-value"></a>Hodnota nebo návratová hodnota vlastnosti
+ Funkce označuje úspěch nebo neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Návratová hodnota může být jedna z následujících:
 
-|Enumerátor|Popis|
+|Čítače|Popis|
 |----------------|-----------------|
-|PROFILE_ERROR_ID_NOEXIST|Profilace ID prvku neexistuje.|
-|PROFILE_ERROR_LEVEL_NOEXIST|Profilace Zadaná úroveň neexistuje.|
-|PROFILE_ERROR_MODE_NEVER|Režimu profilace byla nastavena na nikdy, když byla volána funkce.|
-|PROFILE_ERROR_NOT_YET_IMPLEMENTED|Profilace volání funkce, profilace úroveň nebo kombinací volání a úroveň není dosud implementována.|
+|PROFILE_ERROR_ID_NOEXIST|ID elementu profilace neexistuje.|
+|PROFILE_ERROR_LEVEL_NOEXIST|Zadaná úroveň profilace neexistuje.|
+|PROFILE_ERROR_MODE_NEVER|Režim profilace byl nastaven na hodnotu nikdy při volání funkce.|
+|PROFILE_ERROR_NOT_YET_IMPLEMENTED|Volání funkce profilování, úroveň profilace nebo kombinace volání a úrovně ještě není naimplementované.|
 |PROFILE_OK|Volání bylo úspěšné.|
 
 ## <a name="remarks"></a>Poznámky
- StartProfile a StopProfile stav spuštění/zastavení profilování úrovně ovládacích prvků. Spustit/Zastavit výchozí hodnota je 1. Počáteční hodnotu můžete změnit v registru. Každé volání StartProfile nastaví operací spustit/zastavit na 1; každé volání StopProfile ji nastaví na hodnotu 0.
+ StartProfile a StopProfile řídí stav spuštění/zastavení pro úroveň profilace. Výchozí hodnota spustit/zastavit je 1. Počáteční hodnota může být v registru změněna. Každé volání StartProfile sady se spustí/zastaví na 1. každé volání StopProfile nastaví na hodnotu 0.
 
- Při spuštění/zastavení je větší než 0, je stav operací spustit/zastavit na úrovni ON. Když je menší než nebo rovno 0, stav spuštění/zastavení je vypnuto.
+ Když je spuštění/zastavení větší než 0, je stav spuštění/zastavení pro úroveň ZAPNUTo. Pokud je menší nebo rovno 0, je stav spuštění/zastavení VYPNUTý.
 
- Po spuštění/zastavení stavu a stavu pozastavení/obnovení se i na profilování stav úrovně je ON. Pro vlákno bude profilována, procesu globální, a úrovni stavy vláken pro vlákno musí být dále.
+ Když je stav spuštění/zastavení i stav pozastavení/obnovení ZAPNUTý, stav profilace pro úroveň je ZAPNUTo. Aby bylo vlákno profilování, musí být pro vlákno ZAPNUTé globální stavy, procesy a úrovně vláken.
 
-## <a name="net-framework-equivalent"></a>Ekvivalent .NET framework
- *Microsoft.VisualStudio.Profiler.dll*
+## <a name="net-framework-equivalent"></a>Ekvivalent .NET Framework
+ *Microsoft. VisualStudio. Profiler. dll*
 
 ## <a name="function-information"></a>Informace o funkci
- Záhlaví: Deklarované v *VSPerf.h*
+ Hlavička: deklaruje se v *VSPerf. h*
 
- Knihovna importů: *VSPerf.lib*
+ Knihovna importu: *VSPerf. lib*
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje StartProfile volání funkce.
+ Následující příklad ilustruje volání funkce StartProfile.
 
 ```cpp
 void ExerciseStartProfile()
@@ -107,4 +108,4 @@ void ExerciseStartProfile()
 ```
 
 ## <a name="see-also"></a>Viz také:
-- [Visual Studio profiler API reference (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)
+- [Referenční dokumentace rozhraní API pro Visual Studio Profiler (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)

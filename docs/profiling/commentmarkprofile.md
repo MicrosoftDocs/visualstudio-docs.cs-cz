@@ -1,5 +1,5 @@
 ---
-title: CommentMarkProfile | Dokumentace Microsoftu
+title: CommentMarkProfile | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,17 +9,18 @@ ms.assetid: 33ccff45-c33a-4672-b41f-5b317b848cd1
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 897ff07f78301553812f6855f3aa4bdb556a650e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: d45bab6b909fffa107158236d9050632f114c530
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440195"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772781"
 ---
 # <a name="commentmarkprofile"></a>CommentMarkProfile
-`CommentMarkProfile` Funkce vloží značku číselné a textový řetězec v. *Vsp* souboru. Pro značky a komentáře, které má být vložen, profilování pro vlákna, které obsahuje `CommentMarkProfile` funkce musí být dále.
+Funkce `CommentMarkProfile` vloží číselnou značku a textový řetězec do. soubor *VSP* . Pro značku a komentář, které mají být vloženy, se musí nacházet profilace vlákna obsahujícího funkci `CommentMarkProfile`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,46 +33,46 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 #### <a name="parameters"></a>Parametry
  `lMarker`
 
- Číselné značky pro vložení. Značky musí být větší než nebo rovna 0 (nula).
+ Číselná značka, která se má vložit Značka musí být větší než nebo rovna 0 (nula).
 
  `szComment`
 
- Ukazatel na textový řetězec pro vložení. Řetězec musí být kratší než 256 znaků včetně ukončovacího znaku NULL.
+ Ukazatel na textový řetězec, který chcete vložit. Řetězec musí být kratší než 256 znaků, včetně ukončovacího znaku NULL.
 
-## <a name="property-valuereturn-value"></a>Vlastnost hodnota nebo návratová hodnota
- Funkce označuje úspěch nebo neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Návratová hodnota může být jeden z následujících akcí:
+## <a name="property-valuereturn-value"></a>Hodnota nebo návratová hodnota vlastnosti
+ Funkce označuje úspěch nebo neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Návratová hodnota může být jedna z následujících:
 
-|Enumerátor|Popis|
+|Čítače|Popis|
 |----------------|-----------------|
-|MARK_ERROR_MARKER_RESERVED|Parametr je menší než nebo rovna 0. Tyto hodnoty jsou vyhrazené. Nejsou zaznamenána značky a komentáře.|
-|MARK_ERROR_MODE_NEVER|Režimu profilace byla nastavena na nikdy, když byla volána funkce. Nejsou zaznamenána značky a komentáře.|
-|MARK_ERROR_MODE_OFF|Režimu profilace byl nastaven na hodnotu OFF, když byla volána funkce. Nejsou zaznamenána značky a komentáře.|
-|MARK_ERROR_NO_SUPPORT|Bez podpory označení v tomto kontextu. Nejsou zaznamenána značky a komentáře.|
-|MARK_ERROR_OUTOFMEMORY|Paměť není k dispozici k zaznamenání události. Nejsou zaznamenána značky a komentáře.|
-|MARK_TEXTTOOLONG|Řetězec překračuje maximum 256 znaků. Komentář řetězce zkráceny a značky a komentáře se zaznamenávají.|
-|MARK_OK|MARK_OK je vrácena, čímž indikuje úspěšné provedení.|
+|MARK_ERROR_MARKER_RESERVED|Parametr je menší nebo roven 0. Tyto hodnoty jsou rezervované. Značka a komentář nejsou zaznamenávány.|
+|MARK_ERROR_MODE_NEVER|Režim profilace byl nastaven na hodnotu nikdy při volání funkce. Značka a komentář nejsou zaznamenávány.|
+|MARK_ERROR_MODE_OFF|Režim profilace byl nastaven na hodnotu OFF při volání funkce. Značka a komentář nejsou zaznamenávány.|
+|MARK_ERROR_NO_SUPPORT|V tomto kontextu není podporována žádná podpora značek. Značka a komentář nejsou zaznamenávány.|
+|MARK_ERROR_OUTOFMEMORY|Paměť nebyla k dispozici pro záznam události. Značka a komentář nejsou zaznamenávány.|
+|MARK_TEXTTOOLONG|Řetězec překračuje maximální 256 znaků. Řetězec komentáře je zkrácen a je zaznamenána značka a komentář.|
+|MARK_OK|MARK_OK je vráceno pro indikaci úspěchu.|
 
 ## <a name="remarks"></a>Poznámky
- Profilace stav podprocesu, který obsahuje funkci profilu značky musí být na při značky a komentáře vložení pomocí příkazu nástroje VSInstr značky nebo s využitím functions (CommentMarkAtProfile, CommentMarkProfile nebo MarkProfile).
+ Stav profilace vlákna obsahujícího profil značky musí být zapnutý, pokud jsou značky a komentáře vložené pomocí příkazu VSInstr Mark nebo with Functions (CommentMarkAtProfile, CommentMarkProfile nebo MarkProfile).
 
- Profil značky jsou globální v oboru. Například profil značky vložení v jednom vlákně slouží k označení začátku nebo konci segmentu dat v jakékoli vlákno v. *vsp* souboru.
+ Značky profilu jsou v oboru globální. Například značka Profile vložená v jednom vlákně může být použita k označení začátku nebo konce datového segmentu v jakémkoli vlákně v. soubor *VSP* .
 
 > [!IMPORTANT]
-> Metoda CommentMarkProfile jde použít jenom s instrumentací.
+> Metodu CommentMarkProfile lze použít pouze s instrumentací.
 
-## <a name="net-framework-equivalent"></a>Ekvivalent .NET framework
- Microsoft.VisualStudio.Profiler.dll
+## <a name="net-framework-equivalent"></a>Ekvivalent .NET Framework
+ Microsoft. VisualStudio. Profiler. dll
 
 ## <a name="function-information"></a>Informace o funkci
 
 |||
 |-|-|
-|**Header**|Zahrnout VSPerf.h|
-|**Knihovna**|Použití VSPerf.lib|
+|**Hlaviček**|Zahrnout VSPerf. h|
+|**Knihovna**|Použití VSPerf. lib|
 |**Unicode**|Implementováno jako `CommentMarkProfileW` (Unicode) a `CommentMarkProfileA` (ANSI).|
 
 ## <a name="example"></a>Příklad
- Následující kód znázorňuje volání funkce CommentMarkProfile. V příkladu se předpokládá použití maker řetězec Win32 a Unicode kompilátoru nastavení k určení, zda kód volá [!INCLUDE[vcpransi](../profiling/includes/vcpransi_md.md)] volání funkce.
+ Následující kód ilustruje volání funkce CommentMarkProfile. Příklad předpokládá použití maker řetězců Win32 a nastavení kompilátoru Unicode k určení, zda kód volá [!INCLUDE[vcpransi](../profiling/includes/vcpransi_md.md)] volání funkce.
 
 ```cpp
 void ExerciseCommentMarkProfile()
@@ -110,4 +111,4 @@ void ExerciseCommentMarkProfile()
 ```
 
 ## <a name="see-also"></a>Viz také:
-- [Visual Studio profiler API reference (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)
+- [Referenční dokumentace rozhraní API pro Visual Studio Profiler (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)

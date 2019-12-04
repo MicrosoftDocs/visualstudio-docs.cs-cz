@@ -10,24 +10,25 @@ ms.assetid: ebf5d9b3-a1ac-4688-8f0f-39a85f4dd15f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fd4cf83315965d55b97ac19d4c7d88739f932c2
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 36350b59a3d70f8553fddc5f58bf5c79716fa3aa
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911975"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777657"
 ---
 # <a name="da0021-high-rate-of-gen-1-garbage-collections"></a>DA0021: Vysoká míra 1. generace uvolňování pamětí
 
 |||
 |-|-|
-|ID pravidla|DA0021|
+|Id pravidla|DA0021|
 |Kategorie|Využití .NET Framework|
-|Metody profilace|Všechny|
+|Metody profilace|Vše|
 |Zpráva|Dochází k poměrně vysoké míře pro uvolňování paměti 1. generace. Pokud je podle návrhu většina datových struktur programu přidělená a trvalá po dlouhou dobu, není to obvykle problém. Nicméně, pokud je toto chování nezamýšlené, vaše aplikace může Připnutí objektů. Pokud si nejste jistí, můžete shromáždit údaje o přidělení paměti .NET a informace o životnosti objektů, abyste pochopili, jaký model přidělení paměti vaše aplikace používá.|
-|Typ pravidla|Informace o|
+|Typ pravidla|Informace o nástroji|
 
  Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit aspoň 10 vzorků.
 

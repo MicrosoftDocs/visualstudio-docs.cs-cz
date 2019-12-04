@@ -10,24 +10,25 @@ ms.assetid: e9c43554-9a85-4d98-9fa4-3b19986e7b62
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a94ddcc7c6c3ee176b6c873a40af834d0f264ef
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 7600e65beb3035fac6d5ea58b25f6965d681f83a
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911922"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779308"
 ---
 # <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506: Maximum Nesdílených bajtů přidělených pro profilovaný Proces
 
 |||
 |-|-|
-|ID pravidla|DA0506|
+|Id pravidla|DA0506|
 |Kategorie|Monitorování prostředků|
-|Metoda profilace|Všechny|
+|Metoda profilace|Vše|
 |Zpráva|Tyto informace se shromáždily jenom pro informace. Čítač procesu soukromých bajtů měří virtuální paměť přidělenou procesem, který vytváříte profilování. Hodnota hlášené je maximální pozorována ve všech intervalech měření.|
-|Typ pravidla|Informace o|
+|Typ pravidla|Informace o nástroji|
 
  Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit aspoň 10 vzorků.
 

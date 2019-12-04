@@ -11,20 +11,21 @@ ms.assetid: 4d85bdd6-b571-47e0-afd6-ba3764e4eed5
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 805fa62b003559eb92c0531b0f4df7133cf0cdf5
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 9e097d6d8c9a7b82fac53fd37951644eb7eb5e59
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911992"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779529"
 ---
 # <a name="da0006-override-equals-for-value-types"></a>DA0006: Přepište Equals() pro hodnoty
 
 |||
 |-|-|
-|ID pravidla|DA0006|
+|Id pravidla|DA0006|
 |Kategorie|Využití .NET Framework|
 |Metody Profiiling|Kontrol|
 |Zpráva|Přepište rovnost a operátor rovnosti na hodnotových typech.|

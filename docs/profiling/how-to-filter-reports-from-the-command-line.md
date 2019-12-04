@@ -1,29 +1,30 @@
 ---
-title: 'Postupy: Filtrování sestav z příkazového řádku | Dokumentace Microsoftu'
+title: 'Postupy: filtrování sestav z příkazového řádku | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 6e9b140f-b44f-4a5c-bd65-d868ddc94023
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c90ca0bea8126308b1260258044cece53218fb3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1bd6462f9159a2926c6dfa45dcadff860cce9ca1
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62973783"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778931"
 ---
-# <a name="how-to-filter-reports-from-the-command-line"></a>Postupy: Filtrování sestav z příkazového řádku
-Pomocí možností **VSPerfReport** příkazu, můžete filtrovat sestavy k segmentu určený čas souboru dat profilování nebo omezit data na jeden nebo více procesů nebo vláken. Další informace o tomto příkazu najdete v tématu [VSPerfReport](../profiling/vsperfreport.md).
+# <a name="how-to-filter-reports-from-the-command-line"></a>Postupy: filtrování sestav z příkazového řádku
+Pomocí možností pro příkaz **VSPerfReport** můžete filtrovat sestavy na konkrétní časové segmenty souboru dat profilování nebo omezit data na jeden nebo více procesů nebo vláken. Další informace o tomto příkazu najdete v tématu [VSPerfReport](../profiling/vsperfreport.md).
 
 |Možnosti|Popis|
 |-------------|-----------------|
-|**StartTime:**[*hodnotu*]|Zobrazit pouze data shromážděná za hodnotou (v milisekundách).|
-|**EndTime:**[*hodnotu*]|Zobrazit pouze data shromážděná před hodnotou (v milisekundách).|
-|**FilterFile:** `VSPFFile`|Určuje umístění souboru filtru, který byl vytvořen **sestavu výkonu Visual Studio** okna.|
-|**MsFilter:**[*StartTime,Duration*]|Zobrazit pouze data od `StartTime` až do délky `Duration` (v milisekundách).|
-|**Proces:**[*Pid*]|Zobrazit pouze data ze zadaného procesu.|
-|**Vlákna:**[*Idvlákna*]|Zobrazit pouze data ze zadaného vlákna.|
-|**Vlákna:**[*Idvlákna, Idprocesu*]|Zobrazit pouze data ze zadaného vlákna, která souvisí se zadaným procesem.|
+|**Čas_spuštění:** [*hodnota*]|Zobrazit pouze data shromážděná po hodnotě (v milisekundách)|
+|**Čas_ukončení:** [*hodnota*]|Zobrazit pouze data shromážděná před hodnotou (v milisekundách)|
+|**FilterFile:** `VSPFFile`|Určuje umístění souboru filtru, který byl vygenerován z okna **Sestava výkonu sady Visual Studio** .|
+|**MsFilter:** [*čas_spuštění, Duration*]|Zobrazit pouze data z `StartTime` až do délky `Duration` (v milisekundách)|
+|**Proces:** [*PID*]|Zobrazit pouze data ze zadaného procesu.|
+|**Vlákno:** [*IDvlákna*]|Zobrazit pouze data ze zadaného vlákna.|
+|**Vlákno:** [*IDvlákna, ProcessID*]|Zobrazit pouze data ze zadaného vlákna, která jsou přidružena k zadanému procesu.|

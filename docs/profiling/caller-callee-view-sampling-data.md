@@ -1,5 +1,5 @@
 ---
-title: Volající – zobrazení volaný – vzorkování dat | Dokumentace Microsoftu
+title: Zobrazení Volající/Volaný – data vzorkování | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,45 +9,46 @@ ms.assetid: 28e85ed5-1512-4b59-bb84-138a2abca7dd
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b8f1d0cd651eac9f6f05acccd233d1741e624f5e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 008aa6bd9402cde760ffc61a613aba778c8ec96f
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63405889"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74773267"
 ---
-# <a name="callercallee-view---sampling-data"></a>Zobrazení volající/volaný – vzorkování dat
-Zobrazení volající/volaný zobrazí profilování informace pro vybrané funkce a jeho funkce pro nadřazené a podřízené. Zobrazení volající/volaný obsahuje tři mřížky.
+# <a name="callercallee-view---sampling-data"></a>Zobrazení Volající/Volaný – data vzorkování
+Zobrazení volající/volaný zobrazí informace o profilování vybrané funkce a jejích nadřazených a podřízených funkcí. Zobrazení volající/volaný obsahuje tři mřížky.
 
- **Aktuální funkce** se zobrazí v mřížce střední který ukazuje profilování informace pro vybrané funkce. Hodnoty zahrnují všechny vzorky volání funkce.
+ **Aktuální funkce** se zobrazí v prostřední mřížce a zobrazí informace o profilování pro vybranou funkci. Hodnoty zahrnují všechna ukázková volání funkce.
 
- **Funkce, které volaly aktuální funkcí** se zobrazí v hlavní mřížky a funkce na hodnoty vybrané – funkce (aktuální) ukazuje jednotlivé příspěvky volající (nadřazené).
+ **Funkce, které se nazývají aktuální funkce** , se zobrazí v horní mřížce a zobrazují jednotlivé příspěvky volajícího (nadřazeného) funkce na hodnoty vybrané (aktuální) funkce.
 
- **Funkce, které byly volány aktuální funkcí** se zobrazí v mřížce dolů který ukazuje profilace informace pro volaných (podřízený) funkce vybrané funkce, pokud podřízený funkce byla volána aktuální funkce.
+ **Funkce, které byly volány aktuální funkcí** , jsou zobrazeny v dolní mřížce a zobrazují informace o profilech pro volané (podřízené) funkce vybrané funkce, pokud byla podřízená funkce volána aktuální funkcí.
 
 > [!NOTE]
-> Rozšířené funkce zabezpečení v systému Windows 8 a Windows Server 2012 vyžadují významné změny ve způsobu, jakým profiler systému Visual Studio na těchto platformách shromažďuje data. U aplikací pro UPW také vyžadují nové techniky kolekce. Zobrazit [nástroje pro výkon v aplikacích Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
+> Rozšířené funkce zabezpečení ve Windows 8 a Windows Serveru 2012 vyžadují významné změny ve způsobu, jakým Profiler sady Visual Studio shromažďuje data na těchto platformách. Aplikace pro UWP také vyžadují nové techniky shromažďování. Podívejte [se na nástroje pro sledování výkonu v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**ID procesu**|ID procesu (PID) běhu profilování.|
+|**ID procesu**|ID procesu (PID) pro spuštění profilace.|
 |**Název procesu**|Název procesu.|
 |**Název modulu**|Název modulu, který obsahuje funkci.|
-|**Cesta modulu**|Cesta k napadenému modulu, který obsahuje funkci.|
-|**Zdrojový soubor**|Zdrojový soubor, který obsahuje definici pro tuto funkci.|
+|**Cesta k modulu**|Cesta modulu, který obsahuje funkci.|
+|**Zdrojový soubor**|Zdrojový soubor obsahující definici této funkce|
 |**Název funkce**|Plně kvalifikovaný název funkce.|
 |**Číslo řádku funkce**|Číslo řádku začátku této funkce ve zdrojovém souboru.|
-|**Adresa funkce**|Adresa funkce.|
-|**Typ**|Kontext funkce:<br /><br /> -   **0** -aktuální funkce<br />-   **1** – funkce, která volá aktuální funkci<br />-   **2** – funkce, která volá aktuální funkci|
-|**Název kořenové funkce**|Název aktuální funkce.|
-|**Celkových vzorků**|-Pro aktuální funkci Počet vzorků, které byly shromážděny, i když tato funkce nebo jeden z jeho podřízených funkce byla spuštěna.<br />-Pro volající funkci, počet celkových vzorků aktuální funkce, které byly shromážděny při volání této funkce aktuální funkce.<br />-Pro volaných funkce Počet celkových vzorků této funkce, které byly shromážděny při volání této funkce aktuální funkce.|
-|**% Celkových vzorků**|Procento všechny ukázky v profilování, které byly celkových vzorků této funkce.|
-|**Výhradní vzorky**|-Pro aktuální funkci Počet vzorků v profilování, které byly shromážděny když tato funkce byla spuštěna přímo; To znamená, když tato funkce byla v horní části zásobníku volání. Ukázky, které jsou shromažďovány, když spouštíte podřízené funkce této funkce nejsou v exkluzivitou zahrnuty.<br />-Pro volající funkci, počet výhradních vzorků aktuální funkce, které byly shromážděny při volání této funkce aktuální funkce.<br />-Pro volaných funkce počet výhradních vzorků této funkce, které byly shromážděny při volání této funkce aktuální funkce.|
-|**% Výhradních vzorků**|Procento všechny ukázky v profilování, které byly výhradních vzorků této funkce.|
+|**Adresa funkce**|Adresa funkce|
+|**Textový**|Kontext funkce:<br /><br /> -   **0** – aktuální funkce<br />-   **1** – funkce, která volá aktuální funkci<br />-   **2** – funkce, která je volána aktuální funkcí|
+|**Název kořenové funkce**|Název aktuální funkce|
+|**Vzorky včetně**|– Pro aktuální funkci byl zjištěn počet vzorků, které byly shromážděny i v případě, že byla spuštěna tato funkce nebo jedna z jejích podřízených funkcí.<br />– Pro funkci volání, Počet zahrnutých vzorků aktuální funkce, které byly shromážděny v případě, že tato funkce se nazývá aktuální funkce.<br />– Pro funkci volaný se jedná o počet zahrnutých vzorků této funkce, které byly shromážděny, když je tato funkce volána aktuální funkce.|
+|**% Včetně vzorků**|Procentuální podíl všech vzorků v průběhu profilace, které byly zahrnuté do vzorků této funkce.|
+|**Exkluzivní vzorky**|– Pro aktuální funkci počet vzorků v běhu profilace, které byly shromážděny při přímém spuštění této funkce; To znamená, že pokud tato funkce byla v horní části zásobníku volání. Vzorky shromážděné při provádění podřízených funkcí této funkce se nepočítají ve výhradních počtech.<br />– Pro funkci volajícího se jedná o počet exkluzivních vzorků aktuální funkce, které byly shromážděny, když tato funkce volá aktuální funkci.<br />– Pro funkci volaného se jedná o počet exkluzivních vzorků této funkce, které byly shromážděny, když je tato funkce volána aktuální funkce.|
+|**% Exkluzivních vzorků**|Procentuální podíl všech vzorků v rámci profilace spuštění, které byly exkluzivními ukázkami této funkce.|
 
 ## <a name="see-also"></a>Viz také:
-- [Zobrazení volající/volaný – data vzorkování paměti .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)
-- [Zobrazení volající/volaný – data instrumentace paměti .NET](../profiling/caller-callee-view-net-memory-instrumentation-data.md)
-- [Zobrazení volající/volaný – data instrumentace](../profiling/caller-callee-view-instrumentation-data.md)
+- [Zobrazení Volající/Volaný – data vzorkování paměti .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)
+- [Zobrazení Volající/Volaný – data instrumentace paměti .NET](../profiling/caller-callee-view-net-memory-instrumentation-data.md)
+- [Zobrazení Volající/Volaný – data instrumentace](../profiling/caller-callee-view-instrumentation-data.md)

@@ -5,14 +5,15 @@ ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: bb5442d12899436076f6b60e8fd7e807b19e4f82
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 3938e7dc1b3ec33c8a4cf74b6957067bbdfd6185
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189334"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778424"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Nástroje pro výkon v aplikacích pro Windows 8 a Windows Server 2012
 
@@ -109,7 +110,7 @@ Je nutné přidat možnost shromažďování dat interakce vrstev ke spuštění
 
 **Shromažďování dat s tipem na vzdáleném počítači**
 
-Pokud chcete shromažďovat data interakce vrstev na vzdáleném počítači, musíte zkopírovat **\_\_profileru a** _\<platformy >_ **\_** souboru\<_jazyka_ **. exe** z *%VSINSTALLDIR%\Team Tools\Performance složka Tools\Setups* počítače sady Visual Studio ke vzdálenému počítači a nainstalujte ji. Nástroje pro profilaci nelze použít v balíčku pro stažení [vzdáleného ladění](../debugger/remote-debugging.md) .
+Chcete-li shromáždit data interakce vrstev na vzdáleném počítači, je nutné zkopírovat sadu **vs\_profiler\_** _\<Platform >_ **\_** souboru\<_Language >_ **. exe** ze složky *Tools\Setups Tools\Performance* počítače sady Visual Studio do vzdáleného počítače a nainstalovat jej. Nástroje pro profilaci nelze použít v balíčku pro stažení [vzdáleného ladění](../debugger/remote-debugging.md) .
 
 K shromažďování dat profilace můžete použít [VSPerfCmd](../profiling/vsperfcmd.md) nebo [VSPerfASPNETCmd](../profiling/vsperfaspnetcmd.md) .
 

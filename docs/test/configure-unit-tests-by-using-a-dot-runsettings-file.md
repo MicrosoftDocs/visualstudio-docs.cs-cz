@@ -1,18 +1,18 @@
 ---
 title: Konfigurace testů jednotek pomocí souboru. runsettings
-ms.date: 06/14/2019
+ms.date: 10/03/2019
 ms.topic: conceptual
 ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 author: jillre
-ms.openlocfilehash: 22fe1de176819807c5cd60d746f381e325601799
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: aba7ea1c26d38db2f845b2e743aae7a3d90d4d53
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665144"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74771484"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Konfigurace testů jednotek pomocí souboru *. runsettings*
 
@@ -38,11 +38,52 @@ Soubor se zobrazí v nabídce nastavení testu a můžete ho vybrat nebo zrušit
 
 ::: moniker range=">=vs-2019"
 
-Chcete-li v integrovaném vývojovém prostředí zadat soubor s parametry spuštění, vyberte možnost **Test**  > **Vyberte soubor nastavení**. Vyhledejte a vyberte soubor *. runsettings* .
+#### <a name="visual-studio-2019-version-163-and-earlier"></a>Visual Studio 2019 verze 16,3 a starší
+
+Chcete-li v integrovaném vývojovém prostředí zadat soubor s parametry spuštění, vyberte možnost **Test** > **Vyberte soubor nastavení**. Vyhledejte a vyberte soubor *. runsettings* .
 
 ![Výběr nabídky soubor nastavení testu v aplikaci Visual Studio 2019](media/vs-2019/select-settings-file.png)
 
 Soubor se zobrazí v nabídce Test a můžete ho vybrat nebo zrušit jeho výběr. Když vyberete možnost **Analyzovat pokrytí kódu**, soubor parametrů běhu se použije vždy.
+
+#### <a name="visual-studio-2019-version-164-and-later"></a>Visual Studio 2019 verze 16,4 a novější
+
+Existují tři způsoby určení souboru parametrů běhu v aplikaci Visual Studio 2019 verze 16,4 a novější:
+
+- Přidejte do projektu vlastnost sestavení v souboru projektu nebo v souboru. Build. props. Soubor parametrů běhu pro projekt je určen vlastností **RunSettingsFilePath**. 
+
+    - Nastavení běhu na úrovni projektu je aktuálně podporováno v C#projektech, VB C++, a F# .
+    - Soubor zadaný pro projekt přepíše jakékoli jiné soubory parametrů spuštění, které jsou zadány v řešení.
+
+    Příklad zadání souboru *. runsettings* pro projekt:
+    
+    ```xml
+    <Project Sdk="Microsoft.NET.Sdk">
+      <PropertyGroup>
+        <RunSettingsFilePath>$(SolutionDir)\example.runsettings</RunSettingsFilePath>
+      </PropertyGroup>
+      ...
+    </Project>
+    ```
+
+- V kořenovém adresáři vašeho řešení umístěte soubor parametrů běhu s názvem ". runsettings".
+
+  Pokud je povoleno automatické zjišťování souborů parametrů běhu, nastavení v tomto souboru se aplikují ve všech testech běhu. Automatickou detekci souborů runsettings můžete zapnout ze dvou míst:
+  
+    - **Nástroje** > **možnosti** > **test** > **Automatické rozpoznávání souborů runsettings**
+
+      ![Možnost automaticky rozpoznat soubor runsettings v aplikaci Visual Studio 2019](media/vs-2019/auto-detect-runsettings-tools-window.png)
+      
+    - **Test** > **konfigurace parametrů spuštění** > **Automatické rozpoznávání souborů runsettings**
+    
+      ![Nabídka souboru automatické detekce runsettings v aplikaci Visual Studio 2019](media/vs-2019/auto-detect-runsettings-menu.png)
+
+- V integrovaném vývojovém prostředí vyberte **Test** > **konfigurace parametrů spuštění** > **Vyberte soubor**s příponou runsettings a pak vyberte soubor *. runsettings* .
+
+   ![Výběr nabídky souboru runsettings pro test řešení v aplikaci Visual Studio 2019](media/vs-2019/select-solution-settings-file.png)
+      
+   - Tento soubor přepíše soubor ". runsettings" v kořenovém adresáři řešení, pokud existuje a je použit pro všechny testy, které jsou spuštěny.  
+   - Tento výběr souboru se zachovává jenom místně. 
 
 ::: moniker-end
 
@@ -70,7 +111,7 @@ Chcete-li spustit testy z příkazového řádku, použijte *VSTest. Console. ex
    vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage /Settings:CodeCoverage.runsettings
    ```
 
-   or
+   nebo
 
    ```cmd
    vstest.console.exe --settings:test.runsettings test.dll
@@ -91,13 +132,13 @@ K přizpůsobení testů pomocí souboru *. runsettings* použijte následujíc�
 
 ::: moniker range="vs-2017"
 
-3. V nabídce **test** zvolte možnost **nastavení testu**  > **Vybrat soubor s nastavením testu**. Přejděte k souboru *. runsettings* , který jste vytvořili, a pak vyberte **OK**.
+3. V nabídce **test** zvolte možnost **nastavení testu** > **Vybrat soubor s nastavením testu**. Přejděte k souboru *. runsettings* , který jste vytvořili, a pak vyberte **OK**.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. Chcete-li vybrat soubor s parametry spuštění, zvolte možnost **Test**  > **Vyberte soubor nastavení**. Přejděte k souboru *. runsettings* , který jste vytvořili, a pak vyberte **OK**.
+3. Chcete-li vybrat soubor s parametry spuštění, zvolte možnost **Test** > **Vyberte soubor nastavení**. Přejděte k souboru *. runsettings* , který jste vytvořili, a pak vyberte **OK**.
 
 ::: moniker-end
 
@@ -215,7 +256,7 @@ Element **RunConfiguration** může obsahovat následující prvky:
 |**TargetPlatform**|x86|x86, x64|
 |**TreatTestAdapterErrorsAsWarnings**|false|false, true|
 |**TestAdaptersPaths**||Jedna nebo více cest k adresáři, kde se nachází TestAdapters|
-|**MaxCpuCount**|první|Toto nastavení řídí stupeň paralelního provádění testů při spuštění testů jednotek pomocí dostupných jader v počítači. Spouštěcí modul testů začíná v každém dostupném jádru jako odlišný proces a poskytuje každému jádru kontejner s testy ke spuštění. Kontejner může být sestavením, knihovnou DLL nebo relevantním artefaktem. Kontejner testů je jednotka plánování. V každém kontejneru jsou testy spouštěny podle testovacího rozhraní. Pokud existuje mnoho kontejnerů, poté, jak procesy dokončí testy v kontejneru, získají další dostupný kontejner.<br /><br />MaxCpuCount může být:<br /><br />n, kde 1 < = n < = počet jader: spustí se až n procesů.<br /><br />n, kde n = jakákoli jiná hodnota: počet spuštěných procesů může být až na počet dostupných jader.|
+|**MaxCpuCount**|1|Toto nastavení řídí stupeň paralelního provádění testů při spuštění testů jednotek pomocí dostupných jader v počítači. Spouštěcí modul testů začíná v každém dostupném jádru jako odlišný proces a poskytuje každému jádru kontejner s testy ke spuštění. Kontejner může být sestavením, knihovnou DLL nebo relevantním artefaktem. Kontejner testů je jednotka plánování. V každém kontejneru jsou testy spouštěny podle testovacího rozhraní. Pokud existuje mnoho kontejnerů, poté, jak procesy dokončí testy v kontejneru, získají další dostupný kontejner.<br /><br />MaxCpuCount může být:<br /><br />n, kde 1 < = n < = počet jader: spustí se až n procesů.<br /><br />n, kde n = jakákoli jiná hodnota: počet spuštěných procesů může být až na počet dostupných jader.|
 |**TestSessionTimeout**||Umožňuje uživatelům ukončit relaci testu, když překročí zadaný časový limit. Nastavení časového limitu zajistí, že prostředky jsou dobře spotřebované a testovací relace jsou omezené na nastavený čas. Nastavení je k dispozici v **aplikaci Visual Studio 2017 verze 15,5** a novější.|
 
 ### <a name="diagnostic-data-adapters-data-collectors"></a>Adaptéry diagnostických dat (sběrače dat)

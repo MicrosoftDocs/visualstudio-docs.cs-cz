@@ -1,27 +1,28 @@
 ---
-title: 'Postupy: Filtrování zobrazení sestav ze souhrnné časové osy | Dokumentace Microsoftu'
+title: 'Postupy: filtrování zobrazení sestav ze souhrnné časové osy | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 056b10a0-952b-4790-89e0-02aebe902e87
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 57065a7b258e8f9a2491332250cb38919bcb7910
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 191e54189677abc7d89d5f50064ceda6f2669f03
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62973796"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778944"
 ---
-# <a name="how-to-filter-report-views-from-the-summary-timeline"></a>Postupy: Filtrování zobrazení sestav ze souhrnné časové osy
-Můžete filtrovat data, která se zobrazí v sestavách výkonu tak, že zadáte čas segment v časové osy grafu souhrnné zobrazení. Při filtrování sestavy se mají zahrnout jenom časového úseku, který jste zadali reanalyzed soubor dat profilování.
+# <a name="how-to-filter-report-views-from-the-summary-timeline"></a>Postupy: filtrování zobrazení sestav ze souhrnné časové osy
+Data zobrazená v sestavách výkonu můžete filtrovat zadáním časového segmentu v grafu časové osy zobrazení souhrnu. Při filtrování sestav se soubor dat profilování znovu analyzuje tak, aby obsahoval pouze zadaný časový segment.
 
-### <a name="to-filter-a-profiling-report-from-the-summary-timeline-graph"></a>Chcete-li filtrovat sestavy pro profilaci ze souhrnné časové osy grafu
+### <a name="to-filter-a-profiling-report-from-the-summary-timeline-graph"></a>Filtrování sestavy profilace z grafu časové osy souhrnu
 
-1. Souhrnné zobrazení časové osy grafu bod na časové ose klikněte a přetáhněte myší na jiný bod na časové ose.
+1. V grafu časové osy zobrazení souhrnu klikněte na bod na časové ose a přetáhněte myší na jiný bod na časové ose.
 
-     Oblasti, která jste zadali, je označeno šedou barvou.
+     Oblast, kterou jste zadali, je šedá.
 
-2. Klikněte na tlačítko **filtrovat podle výběru**.
+2. Klikněte na **filtrovat podle výběru**.

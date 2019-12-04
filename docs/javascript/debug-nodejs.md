@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 0405488f6f456f22711498e81789881ffc5a0a8a
-ms.sourcegitcommit: 308a2bdbea81df78bffc3a01afce4ab13131fabc
+ms.openlocfilehash: 95693261cebf26bb740861795f7faf5c56503daf
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73912994"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777930"
 ---
 # <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>Ladění JavaScriptu nebo aplikace TypeScriptu v aplikaci Visual Studio
 
@@ -33,7 +33,7 @@ Pomocí sady Visual Studio můžete ladit kód JavaScript a TypeScript. Můžete
 
     Zarážky jsou základní a nejjednodušší funkcí spolehlivého ladění. Zarážka určuje, kde má Visual Studio spuštěný kód pozastavit, abyste mohli zkontrolovat hodnoty proměnných či chování paměti, nebo abyste zjistili, jestli se nějaká větev kódu spouští.
 
-1. Pokud chcete aplikaci spustit, stiskněte klávesu **F5** **(ladění**  > **Spustit ladění**).
+1. Pokud chcete aplikaci spustit, stiskněte klávesu **F5** **(ladění** > **Spustit ladění**).
 
     Ladicí program se pozastaví na zarážce, kterou jste nastavili (aktuální příkaz je označený žlutě). Teď můžete stav aplikace zkontrolovat tak, že přesunete ukazatel myši nad proměnné v aktuálním rozsahu a použijete okna ladicího programu, například okna **Místní hodnoty** a **Kukátko**.
 
@@ -111,7 +111,7 @@ Chcete-li připojit ladicí program ze sady Visual Studio a zarážky volání v
 
     Chcete-li najít konkrétní kód v souboru s předaným souborem, použijte **kombinaci kláves Ctrl**+**F** (**upravit** > **Najít a nahradit** > **Rychlé hledání**).
 
-    Pro kód na straně klienta pro volání zarážky v souboru TypeScript nebo souboru JSX obvykle vyžaduje použití [zdrojových mapování](#generate_source_maps). Zdrojové mapování musí být správně nakonfigurované, aby podporovalo ladění v aplikaci Visual Studio.
+    Pro kód na straně klienta pro volání zarážky v souboru TypeScript, *. Vue*nebo souboru JSX obvykle vyžaduje použití [zdrojových mapování](#generate_source_maps). Zdrojové mapování musí být správně nakonfigurované, aby podporovalo ladění v aplikaci Visual Studio.
 
 2. Vyberte cílový prohlížeč jako cíl ladění v aplikaci Visual Studio a potom stiskněte **klávesu Ctrl**+**F5** (**ladění** > **Spustit bez ladění**) pro spuštění aplikace v prohlížeči.
 
@@ -127,7 +127,6 @@ Chcete-li připojit ladicí program ze sady Visual Studio a zarážky volání v
     > Od aplikace Visual Studio 2017 se po prvním připojení k procesu pomocí následujícího postupu můžete rychle znovu připojit ke stejnému procesu výběrem možnosti **ladit** > znovu **připojit k procesu**.
 
 4. V dialogovém okně **připojit k procesu** Získejte filtrovaný seznam instancí prohlížeče, ke kterým se můžete připojit.
-
     ::: moniker range=">=vs-2019"
     V aplikaci Visual Studio 2019 vyberte správný ladicí program pro cílový prohlížeč, **JavaScript (Chrome)** nebo **JavaScript (Microsoft Edge-chrom)** v poli **připojit k** , do pole Filtr zadejte **Chrome** nebo **Edge** a vyfiltrujte ho. výsledky hledání
     ::: moniker-end
@@ -268,7 +267,7 @@ V souborech vygenerovaných pomocí syntaxe Razor (cshtml, VBHTML) ale nemůžet
    Pro Chrome použijte **Průzkumník řešení > dokumentů skriptů > YourPageName**.
 
     > [!NOTE]
-    > Pokud používáte Chrome, může se zobrazit zpráva **žádný zdroj není k dispozici mezi \<script > značek**. To je v pořádku, stačí pokračovat v ladění.
+    > Když použijete Chrome, může se zobrazit zpráva **žádný zdroj není k dispozici mezi značkami \<> skriptu**. To je v pořádku, stačí pokračovat v ladění.
 
    ::: moniker range=">=vs-2019"
    Pro Microsoft Edge (chrom) použijte stejný postup jako Chrome.

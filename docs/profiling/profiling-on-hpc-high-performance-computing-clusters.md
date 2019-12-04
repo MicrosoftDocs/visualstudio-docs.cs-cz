@@ -17,14 +17,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 867350c1a786971a25256bbe8f60ac2bfca14a19
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: f2d3949194dedab6d7e7ea2faa1aea304d889bc4
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72910328"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772117"
 ---
 # <a name="profile-on-hpc-high-performance-computing-clusters"></a>Profilování v clusterech HPC (High Performance Computing)
 
@@ -53,8 +54,8 @@ Chcete-li vytvořit profil na výpočetním uzlu HPC, je nutné provést násled
 | | |
 |------------------| - |
 | *Hlavnímu uzlu* | Název hlavního uzlu clusteru |
-| *%FxPath%* | Cesta k instalačnímu programu .NET Framework 4. V instalačním médiu sady Visual Studio je cesta: WCU\dotNetFramework\dotNetFx40_Full_x86_x64.exe |
-| *%ProfilerPath%* | Cesta k samostatné verzi instalačního programu Nástroje pro profilaci. V instalačním médiu sady Visual Studio je cesta: Standalone Profiler\x64\vs_profiler.exe |
+| *%FxPath%* | Cesta k instalačnímu programu .NET Framework 4. V instalačním médiu sady Visual Studio je cesta: WCU\dotNetFramework\ dotNetFx40_Full_x86_x64. exe |
+| *%ProfilerPath%* | Cesta k samostatné verzi instalačního programu Nástroje pro profilaci. V instalačním médiu sady Visual Studio je cesta: Standalone Profiler\x64\ vs_profiler. exe |
 
 ## <a name="profile-on-an-hpc-compute-node"></a>Profil na výpočetním uzlu HPC
 

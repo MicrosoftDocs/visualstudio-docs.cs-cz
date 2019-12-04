@@ -1,5 +1,5 @@
 ---
-title: Podrobnosti zobrazení vláknu – Data kolizí | Dokumentace Microsoftu
+title: Zobrazení podrobností o vláknu – data kolizí | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,52 +10,53 @@ ms.assetid: 874c3b1c-88d8-479a-bb35-1291d9aa8e67
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 76adb2a5355800889939afd41075c261270b02aa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 679fd9fd039fa903f5df5a479fa4f0e119bb7a9c
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968051"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778164"
 ---
-# <a name="thread-details-view---contention-data"></a>Podrobnosti zobrazení – data kolizí vláken
-Zobrazení podrobností vláken představuje graf časové osy blokujících událostí ve vybrané vláknu spuštění profilování, které byly způsobeny kolizí nad prostředky. Blokování události dojde, když vlákno je nucen k pozastavení provádění, protože jiné vlákno má uzamčený přístup k prostředku.
+# <a name="thread-details-view---contention-data"></a>Zobrazení podrobností o vláknu – data kolizí
+Zobrazení podrobností o vlákně prezentuje graf časové osy blokujících událostí ve vybraném vláknu procesu profilace, které byly způsobeny kolizími přes prostředky. K blokující události dojde, když je vlákno nuceno pozastavit provádění, protože jiné vlákno má zamčený přístup k prostředku.
 
- Toto zobrazení představuje na časové ose provádění vlákna jako vodorovný pruh a blokujících událostí jako svislý pruh na vodorovné ose pro vlákno. V případě potřeby můžete přiblížit na části časové osy a zobrazte jednotlivé události. Chcete-li zobrazit postupu provádění funkcí, které vedly k události, klikněte na panelu události. Funkce se zobrazí v **zásobník volání** okna. Pokud zdrojový kód funkce je k dispozici, můžete kliknout na její název upravit zdrojový soubor v integrovaném vývojovém prostředí sady Visual Studio.
+ Toto zobrazení představuje časovou osu spuštění vlákna jako vodorovný pruh a blokující události jako svislé pruhy na vodorovné ose pro vlákno. V případě potřeby můžete přiblížit část časové osy a zobrazit jednotlivé události. Chcete-li zobrazit cestu spuštění funkcí, které vedly k události, klikněte na panel událostí. Funkce se zobrazí v okně **zásobník volání** . Pokud je zdrojový kód funkce k dispozici, můžete kliknout na název funkce a upravit zdrojový soubor v integrovaném vývojovém prostředí sady Visual Studio.
 
-## <a name="navigate-the-timeline"></a>Přejděte na časové ose
+## <a name="navigate-the-timeline"></a>Přejít na časovou osu
 
-#### <a name="to-zoom-in-on-a-timeline-segment"></a>Přiblížit na segment časové osy
+#### <a name="to-zoom-in-on-a-timeline-segment"></a>Přiblížení segmentu časové osy
 
-- Klikněte a tažením ukazatele myši a vyberte oblast na časové ose.
+- Kliknutím a přetažením ukazatele myši vyberte oblast časové osy.
 
-     Když uvolníte tlačítko myši, přiblížení zobrazení vybraného časového úseku. Postup přiblížení podrobněji, můžete opakovat. Posuvníku na posuvníku čas představuje relativní velikost časového úseku, který se zobrazí v zobrazení.
+     Když uvolníte myš, zobrazení se zvětší na vybraný časový segment. Tento postup můžete opakovat a podrobněji tak zvětšit. Posuvník v časovém posuvníku znázorňuje relativní velikost časového segmentu, který je zobrazen v zobrazení.
 
-#### <a name="to-zoom-out-on-a-timeline"></a>Chcete-li oddálení časové osy
+#### <a name="to-zoom-out-on-a-timeline"></a>Přiblížení na časovou osu
 
-- Klikněte na tlačítko **Oddálit** se vraťte na předchozí úroveň přiblížení.
+- Kliknutím na **oddálit** se vrátíte k předchozí úrovni přiblížení.
 
-- Klikněte na tlačítko **přiblížení resetování** zobrazíte celý časové osy v zobrazení.
+- Kliknutím na tlačítko **obnovit obnovení** zobrazíte celou časovou osu v zobrazení.
 
-#### <a name="to-view-the-call-stack-of-an-event"></a>Chcete-li zobrazit zásobník volání události
+#### <a name="to-view-the-call-stack-of-an-event"></a>Zobrazení zásobníku volání události
 
-- Časová osa grafu klikněte na svislý pruh, který představuje událost.
+- V grafu časové osy klikněte na svislou čáru, která představuje událost.
 
-#### <a name="to-view-or-edit-the-source-code-of-a-function-in-the-call-stack"></a>Chcete-li zobrazit nebo upravit zdrojový kód funkce v zásobníku volání
+#### <a name="to-view-or-edit-the-source-code-of-a-function-in-the-call-stack"></a>Zobrazení nebo úpravy zdrojového kódu funkce v zásobníku volání
 
-- V **zásobník volání** okna, klikněte na název funkce.
+- V okně **zásobník volání** klikněte na název funkce.
 
   Zdrojový kód funkce musí být součástí aktuálního projektu.
 
-#### <a name="to-view-the-contention-events-of-a-resource-in-all-threads-in-the-profiling-run"></a>Chcete-li zobrazit kolizní události z prostředku ve všech vláknech při spuštění profilace
+#### <a name="to-view-the-contention-events-of-a-resource-in-all-threads-in-the-profiling-run"></a>Zobrazení událostí kolizí prostředku ve všech vláknech při spuštění profilace
 
-- Časová osa grafu klikněte na název nebo ID prostředku.
+- V grafu časové osy klikněte na název nebo ID prostředku.
 
-     [Zobrazení podrobností o prostředku](../profiling/resource-details-view-contention-data.md) se zobrazí pro vybraný prostředek.
+     Zobrazí se [zobrazení Podrobnosti o prostředku](../profiling/resource-details-view-contention-data.md) pro vybraný prostředek.
 
-#### <a name="to-view-the-thread-contention-data-in-the-processes-window"></a>Chcete-li zobrazit data kolize vlákna v okně procesy
+#### <a name="to-view-the-thread-contention-data-in-the-processes-window"></a>Zobrazení dat kolizí vlákna v okně procesy
 
-- Časová osa grafu, klikněte na tlačítko **celkový**.
+- V grafu časové osy klikněte na **celkem**.
 
-     [Zobrazení procesu](../profiling/process-view-contention-data.md) se zobrazí s vláknem vybrali.
+     [Zobrazení procesu](../profiling/process-view-contention-data.md) se zobrazí s vybraným vláknem.
