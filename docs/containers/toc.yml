@@ -36,7 +36,7 @@
           href: container-tools-configure.md
     - name: Koncepty
       items:
-        - name: Vytváření kontejnerizovaných aplikací
+        - name: Jak Visual Studio vytváří kontejnerizované aplikace
           href: container-build.md
     - name: Poradce při potížích
       href: troubleshooting-docker-errors.md
