@@ -1,12 +1,12 @@
 ---
-title: ID pracovního vytížení a komponenta Visual Studio Test Agent
+title: Zatížení a ID komponent testovacího agenta sady Visual Studio
 titleSuffix: ''
 description: Pomocí sady Visual Studio vytížení a komponenta ID spuštění automatizovaných testů a zátěžové testy vzdáleně
 keywords: ''
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.date: 05/22/2019
+ms.date: 12/03/2019
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 55aea29b-1066-4e5a-aa99-fc87d4efb6d5
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 65444764ad01d7383b5bb512cd157c7a0cee8795
-ms.sourcegitcommit: cd21b38eefdea2cdefb53e68e7a30b868e78dd6b
+ms.openlocfilehash: 2f82487ee45b171f9150057416678fb64b4207f9
+ms.sourcegitcommit: af9bbf9116a63c0631ff2f4f3a878564aa63cd8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66037298"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74797281"
 ---
-# <a name="visual-studio-test-agent-component-directory"></a>Visual Studio Test Agent součástí adresáře
+# <a name="visual-studio-test-agent-component-directory"></a>Adresář komponenty Visual Studio Test Agent
 
 [!INCLUDE[workloads-components-universal-header_md](includes/workloads-components-universal-header_md.md)]
 

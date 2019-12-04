@@ -6,26 +6,26 @@ keywords: ''
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.date: 09/23/2019
+ms.date: 12/03/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: deac2e490e61dca190cc821b02af0a6213f5620f
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 5517f67481e45c8a441c88be4f6de2edc55bc2c6
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71210179"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74795974"
 ---
 ## <a name="test-controller"></a>Kontroler testů
 
-**ÚČET** Microsoft.VisualStudio.Workload.TestController
+**ID:** Microsoft.VisualStudio.Workload.TestController
 
-**Popis:** Rozdělení automatizovaných testů mezi více počítačů
+**Popis:** rozdělení automatizovaných testů mezi více počítačů
 
 ### <a name="components-included-by-this-workload"></a>Pomocí této úlohy zahrnuté komponenty
 
-ID součásti | Název | Version | Typ závislosti
+ID součásti | Name | Version | Typ závislosti
 --- | --- | --- | ---
 Microsoft.VisualStudio.ComponentGroup.TestTools.TestController | Základní funkce Kontroleru testů | 16.0.28315.86 | Požadováno
 
@@ -33,6 +33,6 @@ Microsoft.VisualStudio.ComponentGroup.TestTools.TestController | Základní funk
 
 Toto jsou komponenty, které nejsou zahrnuty u jakékoli úlohy, ale může vybrat jako jednotlivých komponent.
 
-ID součásti | Název | Version
+ID součásti | Name | Version
 --- | --- | ---
 není k dispozici | není k dispozici | není k dispozici

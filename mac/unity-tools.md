@@ -3,14 +3,14 @@ title: Visual Studio for Mac Tools for Unity
 description: Představení Visual Studio Tools for Unity rozšíření
 author: therealjohn
 ms.author: johmil
-ms.date: 06/18/2019
+ms.date: 10/25/2019
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: 98a34df9960ca95edbaf6b9c5ae91d7cd4e06568
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: c411ae1730c2bd9b4f92729a8480d7fa399d0894
+ms.sourcegitcommit: af9bbf9116a63c0631ff2f4f3a878564aa63cd8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67691858"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74797242"
 ---
 # <a name="visual-studio-for-mac-tools-for-unity"></a>Visual Studio for Mac Tools for Unity
 
@@ -21,7 +21,7 @@ Visual Studio for Mac Tools for Unity je bezplatné rozšíření sady Visual St
 Integrace Unity spadá mimo pole v sadě Visual Studio pro Mac a Visual Studio pro Mac od Unity 2018.1, je výchozí C# integrované vývojové prostředí pro projekty Unity.
 
 > [!NOTE]
-> Tyto informace jsou pro Visual Studio pro Mac integrovaného vývojového prostředí. Visual Studio Code najdete v části [Tato příručka](https://code.visualstudio.com/docs/other/unity) Další informace.
+> Tyto informace jsou pro Visual Studio pro Mac IDE. Informace o Visual Studio Code najdete v [této příručce](https://code.visualstudio.com/docs/other/unity) .
 
 ## <a name="overview"></a>Přehled
 
@@ -47,6 +47,12 @@ Visual Studio for Mac Tools for Unity podporuje všechny [ladění](using-vsmac-
 ### <a name="powerful-refactoring-and-context-actions"></a>Výkonné Refaktoring a kontext akce
 
 Vytvářejte další použitelné kód s využitím rychlé nabídky a klávesové zkratky pro [přejmenování, refaktoring a kontextu akce](refactoring.md).
+
+### <a name="roslyn-diagnostics-and-quick-fixes-for-unity"></a>Diagnostika Roslyn a rychlé opravy pro Unity
+
+Pište lepší kód, který zachycuje osvědčené postupy s využitím hloubkového porozumění projektů Unity Visual Studio pro Mac. 
+
+![Porovnání řetězců refaktoringu pro Mac s CompareTag](media/using-vsmac-tools-unity-image9.png)
 
 ### <a name="browse-and-add-new-files"></a>Procházet a přidávat nové soubory
 

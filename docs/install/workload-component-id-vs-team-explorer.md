@@ -1,12 +1,12 @@
 ---
-title: ID pracovního vytížení a komponenta Visual Studio Team Explorer
+title: Sady Visual Studio Team Explorer úlohy a ID komponent
 titleSuffix: ''
 description: Pomocí ID pracovního vytížení a komponenta Visual Studio poskytuje integrované testovací nástroje pro všeobecně testery
 keywords: ''
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.date: 05/22/2019
+ms.date: 12/03/2019
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: c6ef9a3b-d13d-49b4-9faa-51fa06b21e1f
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: f2ffd7b021e3ca3a699acfb136c14e8b53c9a87d
-ms.sourcegitcommit: cd21b38eefdea2cdefb53e68e7a30b868e78dd6b
+ms.openlocfilehash: a7667c5ad4a1b6de7427d00ef6a9591dc84c04f3
+ms.sourcegitcommit: af9bbf9116a63c0631ff2f4f3a878564aa63cd8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66037486"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74797319"
 ---
-# <a name="visual-studio-team-explorer-component-directory"></a>Visual Studio Team Explorer součástí adresáře
+# <a name="visual-studio-team-explorer-component-directory"></a>Adresář součástí sady Visual Studio Team Explorer
 
 [!INCLUDE[workloads-components-universal-header_md](includes/workloads-components-universal-header_md.md)]
 

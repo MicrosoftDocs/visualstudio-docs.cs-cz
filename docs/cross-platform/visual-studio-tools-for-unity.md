@@ -1,7 +1,7 @@
 ---
-title: Visual Studio Tools for Unity | Microsoft Docs
+title: Visual Studio Tools for Unity | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 10/25/2019
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: 6cabc626-5310-4622-a743-210a9abb5535
@@ -10,47 +10,53 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: d04f197b9114f87c0ebdfa54088d41a958d4584a
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: 9789c400ee01bc986bbdf72c509f7a1841c5f300
+ms.sourcegitcommit: af9bbf9116a63c0631ff2f4f3a878564aa63cd8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777692"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74797128"
 ---
 # <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity
 
 ![Visual Studio Tools for Unity](media/vstu_header.png)
 
-Visual Studio Tools for Unity je bezplatné rozšíření sady Visual Studio, které aplikaci Visual Studio přepíná na výkonný nástroj pro vývoj her a aplikací pro různé platformy pomocí Unity.
+Visual Studio Tools for Unity je bezplatné rozšíření sady Visual Studio, který převede Visual Studio na výkonné nástroje pro vývoj her pro různé platformy a aplikace pomocí Unity.
 
-I když je Editor Unity skvělý pro navýšení hry do hry, nemůžete do něj napsat svůj kód. Pomocí Visual Studio Tools for Unity můžete známé funkce pro úpravy kódu, ladění a produktivitu sady Visual Studio k vytvoření editorů a herních skriptů pro váš projekt Unity pomocí C#a můžete je ladit pomocí výkonného ladění sady Visual Studio. vestavěn.
+Nástroje Unity editor jsou skvělé pro sestavení herní svět, nelze při psaní kódu v ní. Pomocí Visual Studio Tools for Unity, můžete používat známé funkce pro úpravu kódu, ladění a produktivitu sady Visual Studio k vytvoření editoru a skriptů her pro Unity projektu pomocí jazyka C#, a můžete ladit pomocí sady Visual Studio výkonné ladění Možnosti.
 
-Ale Visual Studio Tools for Unity je víc než to. má také rozsáhlou integraci s editorem Unity, takže strávíte méně času přepínáním zpátky a zpátky, abyste mohli provádět jednoduché úkoly, nabízí vylepšení pro zvýšení produktivity specifické pro Unity a přináší dokumentaci k Unity na dosah ruky.
+Visual Studio Tools for Unity je větší než který; ale také je těsně integrovaná s Unity editoru tak, že budete trávit méně času přepnutí vpřed a zpět na provádět jednoduché úlohy, poskytuje vylepšení produktivity specifické pro Unity a umístí v dokumentaci k Unity na dosah ruky.
 
 ## <a name="overview"></a>Přehled
 
-Přehled výhod používání sady Visual Studio pro vývoj Unity najdete na stránce [sestavení her Unity se sadou Visual Studio](https://visualstudio.microsoft.com/vs/unity-tools/) , které vám pomůžou s dig hlouběji v klíčových funkcích Visual Studio Tools for Unity:
+Přejděte [vytváření her Unity pomocí sady Visual Studio](https://visualstudio.microsoft.com/vs/unity-tools/) stránce přehled výhod pomocí sady Visual Studio pro vývoj pro Unity, nebo můžete dál pod podrobnější informace o klíčových funkcí sady Visual Studio Tools for Unity:
 
-### <a name="compatible-with-visual-studio-community-and-bundled-with-unity"></a>Kompatibilní se sadou Visual Studio Community a dodávané s Unity
+### <a name="compatible-with-visual-studio-community-and-bundled-with-unity"></a>Kompatibilní s Visual Studio Community a jako součást balíčku s Unity
 
-Sada [Visual Studio Community](https://visualstudio.microsoft.com/) je k dispozici zdarma a v rámci sady Unity se nainstalují instalace od Unity 2018,1. Další informace najdete v úvodní [dokumentaci](getting-started-with-visual-studio-tools-for-unity.md) k Visual Studio Tools for Unity.
+[Visual Studio Community](https://visualstudio.microsoft.com/) je k dispozici zdarma a je součástí Unity nainstaluje počínaje Unity 2018.1. V tématu Visual Studio Tools for Unity [dokumentace Začínáme](getting-started-with-visual-studio-tools-for-unity.md) Další informace.
 
-### <a name="intellisense-for-unity-messages"></a>IntelliSense pro zprávy Unity
+### <a name="intellisense-for-unity-messages"></a>Technologie IntelliSense pro zprávy Unity
 
-Technologie IntelliSense – dokončování kódu usnadňuje a snadno [implementuje zprávy rozhraní API Unity](using-visual-studio-tools-for-unity.md#intellisense-for-unity-api-messages) , jako je `OnCollisionEnter`, včetně jejich parametrů.
+Dokončování kódu IntelliSense můžete rychle a snadno [implementovat zprávy Unity API](using-visual-studio-tools-for-unity.md#intellisense-for-unity-api-messages) jako `OnCollisionEnter`, včetně jejich parametry.
 
-### <a name="superior-debugging"></a>Vynikající ladění
+### <a name="superior-debugging"></a>Nadřazené ladění
 
-Visual Studio Tools for Unity podporuje robustní funkce [ladění](using-visual-studio-tools-for-unity.md#unity-debugging) , které očekáváte od sady Visual Studio:
+Visual Studio Tools for Unity podporuje robustní [ladění](using-visual-studio-tools-for-unity.md#unity-debugging) funkce, které očekáváte, že ze sady Visual Studio:
 
-* Nastavte zarážky, včetně podmíněných zarážek.
-* Vyhodnotit složité výrazy v okno Kukátko.
-* Zkontrolujte a upravte hodnotu proměnných a argumentů.
-* Přechod k podrobnostem o komplexních objektech a datových strukturách.
+* Nastavit zarážky, včetně podmíněné zarážky.
+* Vyhodnocujte složité výrazy v okně kukátko.
+* Kontrola a změny hodnotu proměnné a argumenty.
+* K podrobnostem složité objekty a datových struktur.
 
-### <a name="visual-studio-for-mac-tools-for-unity"></a>Visual Studio pro Mac Tools for Unity
+### <a name="roslyn-diagnostics-and-quick-fixes-for-unity"></a>Diagnostika Roslyn a rychlé opravy pro Unity
 
-Visual Studio pro Mac také podporuje projekty Unity. Další informace najdete v dokumentaci k [nástroji Visual Studio pro Mac Tools for Unity](/visualstudio/mac/unity-tools).
+Pište lepší kód, který zachycuje osvědčené postupy s obsáhlým porozuměním projektům Unity v nástroji Visual Studio.
+
+![Porovnání řetězců refaktoringu v porovnání s CompareTag](media/unity-diagnostics.png)
+
+### <a name="visual-studio-for-mac-tools-for-unity"></a>Visual Studio for Mac Tools for Unity
+
+Visual Studio for Mac podporuje také projektů Unity. Další informace najdete v tématu [Visual Studio for Mac Tools pro Unity dokumentaci](/visualstudio/mac/unity-tools).
 
 ## <a name="next-steps"></a>Další kroky
 

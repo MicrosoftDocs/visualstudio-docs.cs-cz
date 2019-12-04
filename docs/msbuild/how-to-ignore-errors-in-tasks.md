@@ -9,12 +9,12 @@ ms.assetid: e2f1ca4f-787b-44bd-bc64-81a036025e96
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: abd907e86a451ca035d44d9a12084c7b84acd1ed
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: d84292592183d11e5d9ee4fc2febac6679e2a73b
+ms.sourcegitcommit: af9bbf9116a63c0631ff2f4f3a878564aa63cd8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74777891"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74797219"
 ---
 # <a name="how-to-ignore-errors-in-tasks"></a>Postupy: ignorování chyb v úlohách
 Někdy je vhodné, aby bylo sestavení odolné vůči chybám v určitých úlohách. Pokud tyto nekritické úkoly selžou, chcete, aby sestavení pokračovalo, protože stále může vytvořit požadovaný výstup. Například pokud projekt používá úlohu `SendMail` k odeslání e-mailové zprávy po sestavení každé součásti, může být vhodné, aby sestavení bylo přijatelné i v případě, že poštovní servery nejsou k dispozici a nelze odeslat stavové zprávy. Nebo například pokud jsou během sestavení obvykle smazány mezilehlé soubory, může být vhodné, aby sestavení bylo přijatelné i v případě, že tyto soubory nelze odstranit.
@@ -38,7 +38,7 @@ Výchozí hodnota `ContinueOnError` je `ErrorAndStop`. Pokud nastavíte atribut 
 
 Použijte atribut `ContinueOnError` úlohy. Příklad:
 
-```c#
+```xml
 <Delete Files="@(Files)" ContinueOnError="WarnAndContinue"/>
 ```
 

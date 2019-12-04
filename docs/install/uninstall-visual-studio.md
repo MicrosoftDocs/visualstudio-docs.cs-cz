@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 9e9212bc5dda2ea69f685077eb2cbe86470d4064
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: d15a20adeb3203687e4d940635551c33774953a5
+ms.sourcegitcommit: c222052906362bf1a3762ec4d4623170e4e06702
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681355"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74809664"
 ---
 # <a name="uninstall-visual-studio"></a>Odinstalace sady Visual Studio
 
@@ -36,7 +36,7 @@ Tato stránka vás provede odinstalací sady Visual Studio, naší integrované 
 
      Například na počítači s aktualizací Windows 10 pro výročí nebo novější verzi vyberte **Start** a přejděte k písmenu **v**, kde je uvedený jako **instalační program pro Visual Studio**.
 
-     ![Instalační program sady Visual Studio](media/vs2017-locate-the-visual-studio-installer.PNG "vyhledejte instalační program sady Microsoft Visual Studio")
+     ![Instalační program pro Visual Studio](media/locate-the-visual-studio-installer.png "Vyhledání instalačního programu Microsoft Visual Studio")
 
    > [!NOTE]
    > V některých počítačích může instalační program sady Visual Studio uvedené pod písmenem **"M"** jako **instalační program Visual Studio**.<br/><br/> Alternativně můžete najít instalační program sady Visual Studio v následujícím umístění: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
@@ -67,7 +67,7 @@ Pokud chcete úplně odebrat všechny instalace sady Visual Studio 2017 a Instal
 
      Například v počítači se systémem Windows 10, vyberte **Start**a poté přejděte k označení **V**, kde je hodnota uvedena jako **instalační program sady Visual Studio**.
 
-     ![Otevřete instalační program pro Visual Studio](media/vs-2019/vs-installer-windows-start.png "Otevřete instalační program pro Visual Studio")
+     ![Otevřete Instalační program pro Visual Studio](media/vs-2019/vs-installer-windows-start.png "Otevřete Instalační program pro Visual Studio")
 
      > [!NOTE]
      > Instalační program pro Visual Studio můžete najít také v následujícím umístění:

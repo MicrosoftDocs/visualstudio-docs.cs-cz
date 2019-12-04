@@ -1,12 +1,12 @@
 ---
-title: ID pracovního vytížení a komponenta Visual Studio Professional
+title: Visual Studio Professional úlohy a ID komponent
 titleSuffix: ''
 description: Použití pracovního vytížení a komponenta ID pro instalaci sady Visual Studio pomocí příkazového řádku nebo v závislosti na VSIX manifest
 keywords: ''
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.date: 05/22/2019
+ms.date: 12/03/2019
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 5719032b-2c2e-416e-a281-a4573ec74e38
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: f66af6b269aa0efd9d780243702b651090953e3c
-ms.sourcegitcommit: cd21b38eefdea2cdefb53e68e7a30b868e78dd6b
+ms.openlocfilehash: 48410a40518fdd1d94b8415987b04f76de4cc0b3
+ms.sourcegitcommit: af9bbf9116a63c0631ff2f4f3a878564aa63cd8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66037548"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74797274"
 ---
-# <a name="visual-studio-professional-component-directory"></a>Složka komponenty Visual Studio Professional
+# <a name="visual-studio-professional-component-directory"></a>Visual Studio Professional adresář součástí
 
 [!INCLUDE[workloads-components-universal-header_md](includes/workloads-components-universal-header_md.md)]
 
