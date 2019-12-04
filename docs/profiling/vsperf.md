@@ -1,60 +1,61 @@
 ---
-title: VSPerf | Dokumentace Microsoftu
+title: VSPerf | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b5854e62-279e-4850-bfeb-0c6ef82f4805
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: baea4215ac3424bbf8d9d2acc713aac80e273d1b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 051c983920ddc80909d721e569c5efb5ecd33a7c
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822869"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779932"
 ---
 # <a name="vsperf"></a>VSPerf
-Použití **VsPerf** nástroj příkazového řádku:
+Nástroj příkazového řádku **VsPerf** použijte k těmto akcím:
 
-1. Profilování aplikací UPW z příkazového řádku sady Visual Studio na něm není nainstalované na zařízení.
+1. Profilujte aplikace pro UWP z příkazového řádku, když v zařízení není nainstalovaná aplikace Visual Studio.
 
-2. Profil aplikace klasické pracovní plochy systému Windows 8 a Windows Server 2012 využívajících metoda profilování vzorkování.
+2. Profilujte aplikace pro stolní počítače s Windows 8 a aplikace Windows Serveru 2012 pomocí metody profilování vzorkování.
 
-   Další informace o možnostech profilování, naleznete v tématu [nástroje pro výkon v aplikacích Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
+   Další informace o možnostech profilace najdete v tématu [Nástroje pro sledování výkonu v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 
-## <a name="uwp-apps-only"></a>V aplikacích pro UWP
- Tyto možnosti platí pouze pro aplikace UWP.
-
-|||
-|-|-|
-|**/app:{AppName}**|Spuštění profileru a čeká na konkrétní aplikaci, která se má spustit z nabídky Start.<br /><br /> Spustit `vsperf /listapps` Chcete-li zobrazit aplikaci název a PackageFullName nainstalovaných aplikací.|
-|**/package:{PackageFullName}**|Spuštění profileru a čeká na konkrétní aplikaci, která se má spustit z nabídky Start.<br /><br /> Spustit `vsperf /listapps` Chcete-li zobrazit aplikaci název a PackageFullName nainstalovaných aplikací.|
-|**/js**|Vyžaduje se pro profilování aplikací jazyka JavaScript.<br /><br /> Shromažďování dat výkonu z aplikací jazyka JavaScript.<br /><br /> Pouze pomocí/Package nebo / připojit.|
-|**/noclr**|Volitelné. Neshromažďují dat CLR.<br /><br /> Pouze pomocí/Package nebo / připojit.<br /><br /> Optimalizace, se vyřeší žádné spravované symboly.|
-|**/listapps**|Vypsání seznamu instalovaných názvů aplikací a PackageFullNames.|
-
-## <a name="windows-8-desktop-applications-and-windows-server-2012-applications-only"></a>Aplikace klasické pracovní plochy systému Windows 8 a pouze aplikace systému Windows Server 2012
- Tyto možnosti nelze použít u aplikací pro UWP.
+## <a name="uwp-apps-only"></a>Jenom aplikace pro UWP
+ Tyto možnosti se vztahují jenom na aplikace pro UWP.
 
 |||
 |-|-|
-|**/ spuštění: {spustitelný soubor}**|Spustí a začne profilace zadaný spustitelný soubor.|
-|**/ args: {ExecutableArguments}**|Určuje argumenty příkazového řádku k předání **/spuštění** cíl.|
-|**/ Console**|Spuštění **/spuštění** cíl v nové příkazové okno.|
+|**/App: {AppName}**|Spustí Profiler a počká na spuštění zadané aplikace z nabídky Start.<br /><br /> Pokud chcete zobrazit název aplikace a PackageFullName nainstalovaných aplikací, spusťte `vsperf /listapps`.|
+|**/Package: {PackageFullName}**|Spustí Profiler a počká na spuštění zadané aplikace z nabídky Start.<br /><br /> Pokud chcete zobrazit název aplikace a PackageFullName nainstalovaných aplikací, spusťte `vsperf /listapps`.|
+|**/js**|Vyžaduje se pro profilování aplikací JavaScriptu.<br /><br /> Shromažďovat údaje o výkonu z aplikací JavaScript<br /><br /> Používá se jenom s/Package nebo/Attach.|
+|**/noclr**|Volitelné. Neshromažďovat data CLR.<br /><br /> Používá se jenom s/Package nebo/Attach.<br /><br /> Optimalizace, žádné spravované symboly nebudou vyřešeny.|
+|**/listapps**|Vypíše názvy nainstalovaných aplikací a PackageFullNames.|
+
+## <a name="windows-8-desktop-applications-and-windows-server-2012-applications-only"></a>Aplikace pro stolní počítače se systémem Windows 8 a Windows Server 2012
+ Tyto možnosti nefungují v aplikacích pro UWP.
+
+|||
+|-|-|
+|**/Lauch: {executable}**|Spustí a začne profilování zadaného spustitelného souboru.|
+|**/args: {ExecutableArguments}**|Určuje argumenty příkazového řádku pro předání cíle **/Lauch** .|
+|**/Console**|Spustí cíl **/Lauch** v novém příkazovém okně.|
 
 ## <a name="all-applications"></a>Všechny aplikace
- Tato možnost platí pro všechny aplikace systému Windows 8 nebo Windows Server 2012.
+ Tato možnost se vztahuje na všechny aplikace systému Windows 8 nebo Windows Server 2012.
 
 |||
 |-|-|
-|**/ připojit: {PID&#124;ProcessName} [, PID&#124;ProcessName]...**|Shromažďuje data z konkrétních procesů.<br /><br /> Pomocí Správce úloh můžete zobrazit id procesu (PID) a názvy spuštěných aplikací procesu.|
-|**/ file:{ReportName}**|Volitelné. Určuje výstupní soubor (přepíše existující soubor).<br /><br /> Pouze pomocí/Package nebo / připojit.|
-|**/pause**|Shromažďování dat pozastavit.|
-|**/Resume**|Opět spustit shromažďování data.|
-|**/stop**|Zastavit shromažďování dat a ukončit cílových procesů.|
-|**/ detach**|Zastavit shromažďování dat, ale nechat pokračovat ke spuštění cílových procesů.|
+|**/Attach: {PID&#124;Process} [, PID&#124;procesu]...**|Shromažďuje data ze zadaných procesů.<br /><br /> Pomocí Správce úloh můžete zobrazit ID procesu (PID) a zpracovat názvy spuštěných aplikací.|
+|**/File: {Report}**|Volitelné. Určuje výstupní soubor (přepíše existující soubor).<br /><br /> Používá se jenom s/Package nebo/Attach.|
+|**/Pause**|Pozastavení sběru dat.|
+|**/Resume**|Obnovte shromažďování dat.|
+|**/stop**|Zastavení shromažďování dat a ukončení cílových procesů.|
+|**/detach**|Zastavte shromažďování dat, ale umožněte cílovým procesům pokračovat v běhu.|
 |**/status**|Zobrazit stav profileru.|
 
 ## <a name="see-also"></a>Viz také:

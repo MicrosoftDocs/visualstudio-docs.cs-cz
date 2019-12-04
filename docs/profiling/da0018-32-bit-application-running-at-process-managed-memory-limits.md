@@ -10,20 +10,21 @@ ms.assetid: 98eb2d96-f92f-42f9-915c-e5ac2330ffbf
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: cadf5f605b78dd82ddf205ecfb5b0beded92a59f
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: d7bebd25f499131b4beda109ebb9ac468c2435b1
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72910521"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74780062"
 ---
 # <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018:32-bitová aplikace spuštěná v limitech paměti spravovaného procesu
 
 |||
 |-|-|
-|ID pravidla|DA0018|
+|Id pravidla|DA0018|
 |Kategorie|Využití Nástroje pro profilaci|
 |Metoda profilace|Kontrol|
 |Zpráva|Přidělení spravované paměti se blíží výchozímu limitu pro 32 proces. Vaše aplikace může být vázaná na paměť.|
@@ -46,7 +47,7 @@ ms.locfileid: "72910521"
  Vzhledem k tomu, že celková velikost spravovaných hald se blíží k výchozímu limitu, režie správy paměti obvykle roste na místo, kde může začít ovlivňovat odezvu a škálovatelnost aplikace.
 
 ## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění
- Dvojitým kliknutím na zprávu v okně Seznam chyb přejdete do zobrazení [značky](../profiling/marks-view.md) . Vyhledá **paměť .NET CLR\\počet bajtů ve všech haldách** a sloupcích **# celkem potvrzených bajtů** . Určete, zda existují konkrétní fáze provádění programu, kde je přidělení spravované paměti těžší než jiné fáze. Porovnejte hodnoty hodnot **# bajtů ve všech haldách** se sazbou uvolňování paměti hlášené v **paměti .NET CLR\\# z kolekcí 0. generace**, **paměti .NET CLR\\# z kolekcí generace 1**a **\\paměti .NET CLR. # z Sloupce kolekcí Gen 2** k určení, jestli je vzor přidělení spravované paměti ovlivněný počtem uvolnění paměti.
+ Dvojitým kliknutím na zprávu v okně Seznam chyb přejdete do zobrazení [značky](../profiling/marks-view.md) . Vyhledá **paměť .NET CLR\\počet bajtů ve všech haldách** a sloupcích **# celkem potvrzených bajtů** . Určete, zda existují konkrétní fáze provádění programu, kde je přidělení spravované paměti těžší než jiné fáze. Porovnejte hodnoty hodnot **# bajtů ve všech haldách** s frekvencí uvolňování paměti hlášené v **paměti .NET CLR\\# z kolekcí s hodnotou 1.0**, **\\počet kolekcí 1. generace**a **.NET CLR\\# ze sloupců kolekcí 2** . generace, abyste zjistili, jestli je vzor přidělení spravované paměti ovlivněný sazbou paměti při uvolňování paměti.
 
  V aplikaci .NET Framework modul CLR (Common Language Runtime) omezuje celkovou velikost spravovaných hald na méně než jednu polovinu maximální velikosti privátní oblasti v adresním prostoru procesu. Pro 32 procesy běžící na 32 počítači představuje 2 GB horní limit soukromé části adresního prostoru procesu. Vzhledem k tomu, že celková velikost spravovaných hald začíná pro přístup k jejímu výchozímu limitu, může dojít ke zvýšení režie správy paměti a snížení výkonu aplikace.
 

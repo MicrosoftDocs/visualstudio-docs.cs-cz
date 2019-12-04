@@ -12,14 +12,15 @@ ms.assetid: 47512bc9-a8e9-4628-883a-d9888edab786
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 259b4089e4a54dbde4cc8b30a3da2899ad37a85a
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: f1a0cba29caeda01de1154430af7a0d94bcfc2a5
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189294"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779945"
 ---
 # <a name="vsinstr-warnings"></a>Upozornění VSInstr
 V následující tabulce jsou uvedena upozornění vydaná nástrojem *VSInstr. exe* . Pomocí možnosti neupozorňovat spolu s čísly upozornění můžete potlačit zobrazování upozornění.
@@ -35,8 +36,8 @@ V následující tabulce jsou uvedena upozornění vydaná nástrojem *VSInstr. 
 |**VSP2005**|Vnitřní chyba instrumentace \<text chyby ><br /><br /> Toto upozornění je vydáno, pokud instrumentaci nelze provést. Zkontrolujte text chyby a určete, zda může být opraven.|
 |**VSP2006**|Nelze najít soubor PDB pro \<název ><br /><br /> K tomuto upozornění dochází, pokud soubor PDB v cestě pro hledání neexistuje nebo se neshoduje s binárním souborem.|
 |**VSP2007**|\<filename > neobsahuje žádný instrumentující kód.<br /><br /> Toto upozornění se vydá, pokud jsou všechny funkce v binárním souboru vyloučené nebo pokud zadaný soubor obsahuje pouze prostředky.|
-|**VSP2008**|Nelze získat atributy zabezpečení z \<název >. Kód chyby \<kód ><br /><br /> K tomuto upozornění dochází, pokud uživatel nemá oprávnění READ_DAC. Během procesu instrumentace se Profiler pokusí zachovat původní seznam DACL pro binární soubor. Vzhledem k tomu, že je původní binární soubor nahrazen novým binárním souborem, je nutné zkopírovat seznam DACL z původního binárního souboru a použít ho na nový binární soubor. To může selhat, pokud uživatel nemá přístup READ_DAC k původnímu binárnímu souboru.|
-|**VSP2009**|Nelze nastavit atributy zabezpečení pro \<název >. Kód chyby \<číslo chyby ><br /><br /> K tomuto upozornění dochází, pokud uživatel nemá oprávnění WRITE_DAC. Během procesu instrumentace se Profiler pokusí zachovat původní seznam DACL pro binární soubor. Vzhledem k tomu, že je původní binární soubor nahrazen novým binárním souborem, je nutné zkopírovat seznam DACL z původního binárního souboru a použít ho na nový binární soubor. To může selhat, pokud uživatel nemá přístup WRITE_DAC k novému binárnímu souboru.|
+|**VSP2008**|Nelze získat atributy zabezpečení z \<název >. Kód chyby \<kód ><br /><br /> K tomuto upozornění dochází, pokud uživatel nemá oprávnění READ_DAC. Během procesu instrumentace se Profiler pokusí zachovat původní seznam DACL pro binární soubor. Vzhledem k tomu, že je původní binární soubor nahrazen novým binárním souborem, je nutné zkopírovat seznam DACL z původního binárního souboru a použít ho na nový binární soubor. To může selhat, pokud uživatel nemá READ_DAC přístup k původnímu binárnímu souboru.|
+|**VSP2009**|Nelze nastavit atributy zabezpečení pro \<název >. Kód chyby \<číslo chyby ><br /><br /> K tomuto upozornění dochází, pokud uživatel nemá oprávnění WRITE_DAC. Během procesu instrumentace se Profiler pokusí zachovat původní seznam DACL pro binární soubor. Vzhledem k tomu, že je původní binární soubor nahrazen novým binárním souborem, je nutné zkopírovat seznam DACL z původního binárního souboru a použít ho na nový binární soubor. To může selhat, pokud uživatel nemá WRITE_DAC přístup k novému binárnímu souboru.|
 |**VSP2010**|Pro instrumentaci se konkrétně neberou žádné funkce, protože možnosti-INCLUDE/-EXCLUDE nejsou k dispozici.|
 |**VSP2011**|Include/Exclude funcspec \<název > neodpovídá žádným funkcím.|
 |**VSP2012**|Obrázek neobsahuje žádný kód, který by bylo možné instrumentovat pro pokrytí kódu.<br /><br /> Profiler neinstrumentuje následující typ kódu:<br /><br /> – Statické funkce CRT<br />-Spravované metody s atributem NonUserCodeAttribute<br />-Spravované metody s atributem DebuggerHiddenAttribute neovlivňuje<br />– Bloky MASM<br /><br /> Toto upozornění je generováno, pokud po tomto filtrování není ponechán žádný kód.|

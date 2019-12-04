@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Používání rozhraní API profileru | Microsoft Docs'
+title: 'Návod: použití rozhraní API profileru | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,18 +9,19 @@ ms.assetid: c2ae0b3e-a0ca-4967-b4df-e319008f520e
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 203952f712fb3b28b93d570f99e6d36f56b5f2b5
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 81071a44b51b1441782b25741126873fc720ed7b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870279"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779880"
 ---
 # <a name="walkthrough-using-profiler-apis"></a>Návod: Použití rozhraní API profileru
 
-Návod používá C# aplikaci k předvedení, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] jak používat rozhraní nástroje pro profilaci API. K omezení množství dat shromážděných během profilace instrumentace budete používat rozhraní API profileru.
+Návod používá C# aplikaci k demonstraci způsobu použití rozhraní api [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástroje pro profilaci. K omezení množství dat shromážděných během profilace instrumentace budete používat rozhraní API profileru.
 
  Kroky v tomto návodu se obecně vztahují na jazyk C/C++ aplikace. Pro každý jazyk bude nutné odpovídajícím způsobem nakonfigurovat prostředí sestavení.
 
@@ -30,9 +31,6 @@ Návod používá C# aplikaci k předvedení, [!INCLUDE[vsprvs](../code-quality/
 
  Profiler sady Visual Studio umožňuje omezit shromažďování dat. Tento názorný postup nabízí příklad, jak omezit shromažďování dat pomocí rozhraní API profileru. Profiler sady Visual Studio poskytuje rozhraní API pro řízení shromažďování dat v rámci aplikace.
 
- ::: moniker range=">=vs-2019"
- V případě nativního kódu jsou rozhraní API profileru sady Visual Studio v *knihovně VSPerf. dll*. Hlavičkový soubor, *VSPerf. h*a knihovna importů *VSPerf. lib*, jsou umístěny v adresáři *Microsoft Visual Studio\2019\Team Tools\Performance Tools\PerfSDK* .  Pro 64-bitové aplikace je to složka *Microsoft Visual Studio\2019\Team Tools\Performance Tools\x64\PerfSDK*
- ::: moniker-end
  ::: moniker range="vs-2017"
  V případě nativního kódu jsou rozhraní API profileru sady Visual Studio v *knihovně VSPerf. dll*. Hlavičkový soubor, *VSPerf. h*a knihovna importů *VSPerf. lib*, jsou umístěny v adresáři *Microsoft Visual Studio\2017\Team Tools\Performance Tools\PerfSDK* .  Pro 64-bitové aplikace je to složka *Microsoft Visual Studio\2017\Team Tools\Performance Tools\x64\PerfSDK*
  ::: moniker-end
@@ -42,9 +40,9 @@ Návod používá C# aplikaci k předvedení, [!INCLUDE[vsprvs](../code-quality/
 ## <a name="prerequisites"></a>Požadavky
  Tento návod předpokládá, že vaše volba vývojového prostředí je nakonfigurovaná tak, aby podporovala ladění a vzorkování. Následující témata obsahují přehled těchto požadavků:
 
-- [Postupy: Zvolit metody shromažďování](../profiling/how-to-choose-collection-methods.md)
+- [Postupy: Výběr metod shromažďování](../profiling/how-to-choose-collection-methods.md)
 
-- [Postupy: Referenční informace o symbolech Windows](../profiling/how-to-reference-windows-symbol-information.md)
+- [Postupy: Odkazování na informace o symbolech Windows](../profiling/how-to-reference-windows-symbol-information.md)
 
  Ve výchozím nastavení, když je profiler spuštěný, Profiler shromáždí data na globální úrovni. Následující kód na začátku programu zapne globální profilování.
 
@@ -126,7 +124,7 @@ DataCollection.CurrentId);
 
 #### <a name="to-collect-and-view-data-in-the-visual-studio-ide"></a>Shromažďování a zobrazování dat v integrovaném vývojovém prostředí sady Visual Studio
 
-1. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Otevřete integrované vývojové prostředí (IDE). V nabídce **analyzovat** přejděte na **Profiler**a pak vyberte **Nová výkonnostní relace**.
+1. Otevřete [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí (IDE). V nabídce **analyzovat** přejděte na **Profiler**a pak vyberte **Nová výkonnostní relace**.
 
 2. Přidejte kompilovaný binární soubor do seznamu **cílů** v okně **prohlížeč výkonu** . Klikněte pravým tlačítkem na možnost **cíle**a pak vyberte **Přidat cílový binární soubor**. V dialogovém okně **Přidat cílový binární soubor** vyhledejte binární soubor a klikněte na tlačítko **otevřít**.
 
@@ -152,17 +150,17 @@ DataCollection.CurrentId);
 
 2. Chcete-li nastavit profil spravované aplikace, zadejte následující příkaz pro nastavení příslušných proměnných prostředí:
 
-     **VsPerfCLREnv /traceon**
+     **VsPerfCLREnv/TRACEON**
 
-3. Zadejte následující příkaz: **VSInstr \<filename>.exe**
+3. Zadejte následující příkaz: **VSInstr \<filename >. exe**
 
 4. Zadejte následující příkaz: **VSPerfCmd/Start: Trace/output:\<filename >. vsp**
 
-5. Zadejte následující příkaz: **Nástroj VSPerfCmd /globaloff**
+5. Zadejte následující příkaz: **VSPerfCmd/globaloff**
 
 6. Spusťte program.
 
-7. Zadejte následující příkaz: **/ Shutdown VSPerfCmd**
+7. Zadejte následující příkaz: **VSPerfCmd/shutdown**
 
 8. Zadejte následující příkaz: **VSPerfReport/calltrace:\<filename >. vsp**
 
