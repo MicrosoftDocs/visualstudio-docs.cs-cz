@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bef87392ca9e08e38950f5e3eed53223dd38bd00
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 740968740306bed4c2cf52191c4ff661b6247bd0
+ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180240"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74830011"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>Kurz: Vytvoření jednoduché C# konzolové aplikace v aplikaci Visual Studio
 
@@ -47,7 +47,7 @@ Začněte tím, že C# vytvoříte projekt aplikace. Typ projektu se dodává se
 1. Otevřete Visual Studio 2017.
 
 2. V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
-   (Případně stiskněte **kombinaci kláves CTRL**+**SHIFT**+**N**).
+   (Případně stiskněte **kombinaci kláves Ctrl**+**SHIFT**+**N**).
 
 3. V levém podokně dialogového okna **Nový projekt** rozbalte položku **C#** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)** . Pak pojmenujte ***kalkulačku***souborů.
 
@@ -57,7 +57,7 @@ Začněte tím, že C# vytvoříte projekt aplikace. Typ projektu se dodává se
 
 Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete ji získat přidáním úlohy **vývoje .NET Core pro různé platformy** . Tady je způsob.
 
-#### <a name="option-1-use-the-new-project-dialog-box"></a>Možnost 1: Použití dialogového okna Nový projekt
+#### <a name="option-1-use-the-new-project-dialog-box"></a>Možnost 1: použití dialogového okna Nový projekt
 
 1. V levém podokně dialogového okna **Nový projekt** vyberte odkaz **otevřít instalační program pro Visual Studio** .
 
@@ -67,9 +67,9 @@ Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete
 
    ![Úlohy vývoje .NET Core pro různé platformy v Instalační program pro Visual Studio](./media/dot-net-core-xplat-dev-workload.png)
 
-#### <a name="option-2-use-the-tools-menu-bar"></a>Možnost 2: Použití panelu nabídek nástrojů
+#### <a name="option-2-use-the-tools-menu-bar"></a>Možnost 2: použití panelu nabídky nástroje
 
-1. Zrušte z dialogového okna **Nový projekt** a v horním řádku nabídky vyberte **nástroje** > **získat nástroje a funkce**.
+1. Zrušte výběr dialogového okna **Nový projekt** a v horním řádku nabídky vyberte **nástroje** > **získat nástroje a funkce**.
 
 1. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
 
@@ -100,7 +100,7 @@ Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete
    >
    > Potom klikněte na tlačítko **Upravit** v instalační program pro Visual Studio. Může se zobrazit výzva k uložení práce; Pokud ano, udělejte to. V dalším kroku vyberte **pokračovat** a nainstalujte úlohu. Pak se vraťte ke kroku 2 v tomto postupu "[Vytvoření projektu](#create-a-project)".
 
-1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte kalkulačku do pole **název projektu** . Pak zvolte **vytvořit**.
+1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte *kalkulačku* do pole **název projektu** . Pak zvolte **vytvořit**.
 
    ![v okně Konfigurovat nový projekt pojmenujte svůj projekt Kalkulačka.](./media/vs-2019/csharp-name-your-calculator-project.png)
 
@@ -112,7 +112,7 @@ Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete
 
 Nejprve prozkoumáme některé základní celočíselné matematické výrazy C#v. Pak přidáme kód pro vytvoření základní kalkulačky. Potom budeme ladit aplikaci, abychom našli a opravili chyby. A nakonec kód Vylepšete, aby bylo efektivnější.
 
-### <a name="explore-integer-math"></a>Prozkoumat celočíselné matematické
+### <a name="explore-integer-math"></a>Seznámení s matematikou celých čísel
 
 Pojďme začít s některými základní celočíselnou matematickou C#v.
 
@@ -136,7 +136,7 @@ Pojďme začít s některými základní celočíselnou matematickou C#v.
 
     ![Animace celočíselného matematického kódu, který zobrazuje funkci automatického dokončování IntelliSense v integrovaném vývojovém prostředí sady Visual Studio](./media/integer-math-intellisense.gif)
 
-1. Zvolte **kalkulačku** pro spuštění programu nebo stiskněte klávesu **F5**.
+1. Zvolte zelené tlačítko **Start** vedle **kalkulačky** a sestavte a spusťte program, nebo stiskněte klávesu **F5**.
 
    ![Kliknutím na tlačítko kalkulačky spusťte aplikaci z panelu nástrojů.](./media/csharp-console-calculator-button.png)
 
@@ -144,7 +144,7 @@ Pojďme začít s některými základní celočíselnou matematickou C#v.
 
     ![Okno konzoly zobrazující výsledky typu Integer Math](./media/csharp-console-integer-math.png)
 
-1. **(Volitelné)** Chcete-li změnit výsledek, můžete změnit operátor. Například `+` můžete změnit operátor `-` `int c = a + b;` v řádku kódu na pro odčítání, `*` pro násobení nebo `/` pro dělení. Pak se při spuštění programu změní i výsledek.
+1. **(Volitelné)** Chcete-li změnit výsledek, můžete změnit operátor. Můžete například změnit operátor `+` v řádku `int c = a + b;` kódu na `-` pro odčítání, `*` pro násobení nebo `/` pro dělení. Pak se při spuštění programu změní i výsledek.
 
 1. Zavřete okno konzoly.
 
@@ -238,11 +238,11 @@ Jak je znázorněno na následujícím snímku obrazovky, pokud aplikaci spoušt
 
 Pojďme kód opravit tak, aby zpracovává desetinná místa.
 
-1. Stisknutím **kombinace kláves CTRL** + **F** otevřete ovládací prvek **Najít a nahradit** .
+1. Stisknutím **kombinace kláves Ctrl** + **F** otevřete ovládací prvek **Najít a nahradit** .
 
-1. Změňte všechny instance `int` proměnné na `float`.
+1. Změňte každou instanci `int` proměnné na `float`.
 
-   Ujistěte se, že jste přepnuli rozlišovat **velikost písmen** (**ALT**+**C**) a **odpovídá celému slovu** (**ALT**+**W**) v ovládacím prvku **Najít a nahradit** .
+   Ujistěte se, že jste přepnuli rozlišovat **velikost písmen** (**ALT**+**C**), a v ovládacím prvku **Najít a nahradit** **odpovídá celému slovu** (**ALT**+**W**).
 
     ![Animace ovládacího prvku Find a Replace ukazující, jak změnit proměnnou int na float](./media/find-replace-control-animation.gif)
 
@@ -254,7 +254,7 @@ Pojďme kód opravit tak, aby zpracovává desetinná místa.
 
 Aplikace ale produkuje jenom desítkový výsledek. Pojďme udělat ještě několik vylepšení kódu, aby mohla aplikace vypočítat desetinná místa.
 
-1. Použijte ovládací **prvek najít a nahradit** (**CTRL** + **F**) ke změně `float` každé instance proměnné na `double`a ke změně každé instance `Convert.ToInt32` metody na `Convert.ToDouble`.
+1. Pomocí ovládacího prvku **find a Replace** (**CTRL** + **F**) změňte všechny instance `float` proměnné na `double`a změňte každou instanci `Convert.ToInt32` metody na `Convert.ToDouble`.
 
 1. Spusťte aplikaci kalkulačky a číslo **42,5** vydělte číslem **119,75**.
 
@@ -283,7 +283,7 @@ Když se pokusíte dělit číslo nulou, aplikace konzoly se zablokuje. Visual S
 
 Pojďme změnit kód pro zpracování této chyby.
 
-1. Odstraňte kód, který se zobrazí přímo `case "d":` mezi a komentář, který `// Wait for the user to respond before closing`říká.
+1. Odstraňte kód, který se zobrazí přímo mezi `case "d":`, a komentářem, který říká `// Wait for the user to respond before closing`.
 
 1. Nahraďte ji následujícím kódem:
 
@@ -299,11 +299,11 @@ Pojďme změnit kód pro zpracování této chyby.
         }
     ```
 
-   Po přidání kódu by část s `switch` příkazem měla vypadat podobně jako na následujícím snímku obrazovky:
+   Po přidání kódu by část s příkazem `switch` měla vypadat podobně jako na následujícím snímku obrazovky:
 
    ![Revidovaný oddíl Switch v editoru kódu sady Visual Studio](./media/csharp-console-calculator-switch-code.png)
 
-Když teď číslo vydělíte nulou, aplikace si vyžádá další číslo. Ještě lepší: Neukončí dotaz, dokud nezadáte číslo jiné než nula.
+Když teď číslo vydělíte nulou, aplikace si vyžádá další číslo. Ještě lepší: přestane zobrazovat výzvy, dokud nezadáte číslo jiné než nula.
 
    ![V editoru kódu sady Visual Studio se zobrazí chyba dělení nulou.](./media/csharp-console-calculator-dividebyzero.png)
 
@@ -317,11 +317,11 @@ Abychom mohli tuto chybu opravit, musíme kód, který jsme předtím zadali, Re
 
 #### <a name="revise-the-code"></a>Revize kódu
 
-Místo toho, aby se `program` při zpracování veškerého kódu spoléhá na třídu, rozdělíme naši aplikaci na dvě `Calculator` třídy `Program`: a.
+Místo toho, aby se při zpracování veškerého kódu spoléhá na třídu `program`, rozdělíme naši aplikaci na dvě třídy: `Calculator` a `Program`.
 
-Třída zpracuje hromadnou práci výpočtu `Program` a třída zpracuje uživatelské rozhraní a zachytávání chyb. `Calculator`
+Třída `Calculator` zpracuje hromadnou práci výpočtu a `Program` třída zpracuje uživatelské rozhraní a zachytávání chyb.
 
-Pojďme začít.
+Pustíme se do toho.
 
 1. Odstraňte vše *za* následujícím blokem kódu:
 
@@ -334,7 +334,7 @@ Pojďme začít.
 
     ```
 
-1. Dále přidejte novou `Calculator` třídu následujícím způsobem:
+1. Dále přidejte novou třídu `Calculator` následujícím způsobem:
 
     ```csharp
     class Calculator
@@ -466,7 +466,7 @@ Pojďme začít.
 
    ![Zavření podokna výstup v aplikaci Visual Studio](./media/csharp-calculator-close-output-pane.png)
 
-1. V aplikaci Visual Studio uložte aplikaci stisknutím **kombinace kláves CTRL +** +.
+1. V aplikaci Visual Studio stiskněte **Ctrl**+**s** a uložte svoji aplikaci.
 
 1. Zavřete Visual Studio.
 

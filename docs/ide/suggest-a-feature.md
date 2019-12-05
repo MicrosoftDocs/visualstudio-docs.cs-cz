@@ -1,6 +1,6 @@
 ---
 title: Navržení funkce
-description: Popisuje návrhy jsou na komunity vývojářů, jak provádět návrh a použití návrhy společností Microsoft v Znovunačtení sady Visual Studio.
+description: V této části najdete popis návrhů na komunitu vývojářů, o tom, jak vytvořit návrh a jak jsou návrhy využívány Microsoftem v mapě provozu sady Visual Studio.
 ms.date: 12/17/2018
 ms.topic: conceptual
 author: seaniyer
@@ -8,40 +8,40 @@ ms.author: seiyer
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4da08c2a7fed28b7f4ca75770682673bf58e30c3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3af6d0b7b9f211fb9d0aa0a4b9a96b618081b89e
+ms.sourcegitcommit: 2148f3fd69569d8ec54fd21a66370932ce610ce4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62950994"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74853513"
 ---
-# <a name="overview-suggest-a-feature"></a>Přehled: Navrhnout funkci
+# <a name="suggest-a-feature-for-visual-studio"></a>Navrhnout funkci pro sadu Visual Studio
 
-Zavedli jsme nové prostředí pro návrhy na funkce spolu s aktuálním možnost nahlásit potíže [komunity vývojářů v aplikaci Visual Studio](https://developercommunity.visualstudio.com). Toto je nový způsob, jakým lze oprávněn spolupracovat přímo s pracovního postupu vytváření sady Visual Studio.
+Zavedli jsme nové prostředí pro navrhování funkcí společně s aktuální možností hlášení problémů na [komunitě vývojářů sady Visual Studio](https://developercommunity.visualstudio.com). Toto je nový způsob, jakým lze oprávněn spolupracovat přímo s pracovního postupu vytváření sady Visual Studio.
 
-![Navrhnout funkci tlačítko na komunity vývojářů](media/suggest-a-feature/suggest-feature-button.png)
+![Navrhnout tlačítko funkce na komunitě vývojářů](media/suggest-a-feature/suggest-feature-button.png)
 
-Návrh funkci přímo ze sady Visual Studio můžete také spustit výběrem **poslat návrh** z **poskytnout zpětnou vazbu** ikonu v horní části napravo od hlavního okna sady Visual Studio:
+Můžete také začít návrh funkcí přímo ze sady Visual Studio tak, že v pravém horním rohu okna aplikace Visual Studio kliknete na možnost **poskytnout návrh** z ikony pro **poskytnutí zpětné vazby** .
 
-![Návrh nabídky v sadě Visual Studio](media/suggest-a-feature/provide-suggestion.png)
+![Poskytnutí nabídky návrhů v aplikaci Visual Studio](media/suggest-a-feature/provide-suggestion.png)
 
-Výběr **poslat návrh** vás přesměruje na [komunity vývojářů](https://developercommunity.visualstudio.com), ve kterém můžete zadat svůj návrh.
+Zvolíte-li možnost **poskytnout návrh** , přejdete na [komunitu vývojářů](https://developercommunity.visualstudio.com), kde můžete zadat svůj návrh.
 
 ## <a name="user-voice"></a>User Voice
 
-Až doteď navrhl uživatelům aplikace Visual Studio nové nápady týkající se funkcí na User Voice. Přidáním *navrhnout funkci* funkce, které komunity vývojářů, všechny vaše názory pro tým produktu Visual Studio je teď na jednom místě.
+Předtím, než se teď uživatelé sady Visual Studio navrhli o nové nápady na funkce na uživatelském hlasu. Přidáním funkce *navrhnout určitou funkci* do komunity vývojářů se teď všechny vaše názory na produktový tým Visual studia zobrazí na jednom místě.
 
-Byl proveden webu User Voice jen pro čtení. Se můžete podívat zpět jako je třeba pro kontext, ale všechny nové funkce návrhy by měly být předloženy na komunity vývojářů.
+Webový hlas uživatele byl vytvořen jen pro čtení. Můžete se podívat, jak budete potřebovat pro kontext, ale všechny nové návrhy na funkce by se měly odeslat na komunitu vývojářů.
 
-Počáteční sadu nápady z fóru User Voice jsme migrovali do komunity vývojářů. Migrace byla provedena podle dopadu komunity zpětnou vazbu a naše priority plán produktu. Pokud jste čekali zobrazíte tady návrh, který jsme si asi nevšimli, můžete ho přidat do komunity vývojářů.
+Do komunity vývojářů jsme migrovali úvodní sadu nápadů z uživatelského hlasového fóra. Migrace byla provedena podle dopadu komunity zpětnou vazbu a naše priority plán produktu. Pokud jste čekali zobrazíte tady návrh, který jsme si asi nevšimli, můžete ho přidat do komunity vývojářů.
 
 ## <a name="votes"></a>Hlasy
 
-Hlasování systému v komunitě vývojářů se liší od User Voice. A udržovat tak integritu počty hlas komunity vývojářů a vyhněte se zkosení hlasů, jsme výrazně zobrazit počty hlas User Voice jako značku vedle jednotlivých funkcí návrh. I další hlasovat o doporučeních v rozšířené komunity vývojářů, vaše nové počty hlasování se zobrazí samostatně z počty hlas User Voice.
+Hlasovací systém v komunitě vývojářů se liší od uživatelského hlasu. A udržovat tak integritu počty hlas komunity vývojářů a vyhněte se zkosení hlasů, jsme výrazně zobrazit počty hlas User Voice jako značku vedle jednotlivých funkcí návrh. I další hlasovat o doporučeních v rozšířené komunity vývojářů, vaše nové počty hlasování se zobrazí samostatně z počty hlas User Voice.
 
 ## <a name="suggestion-status"></a>Stav návrhu
 
-Po odeslání návrh funkce stavy určit, kde je váš příspěvek funkce v jeho životní cyklus. Vzít v úvahu vaše zpětná vazba a přesuňte ho podél pracovního postupu, můžeme ji označit odpovídající stavu. Různé stavy, které jsou spojené s návrhy funkcí jsou zde uvedeny, spolu s popis jejich významu a Barva ukazatele.
+Po odeslání návrh funkce stavy určit, kde je váš příspěvek funkce v jeho životní cyklus. Vzít v úvahu vaše zpětná vazba a přesuňte ho podél pracovního postupu, můžeme ji označit odpovídající stavu. Tady jsou uvedeny různé stavy přidružené k návrhům funkcí, včetně popisu jejich významu a indikátorů barev.
 
 ![Nový stav doporučení týkající se komunity vývojářů](../ide/media/SuggestStates/New.jpg)
 
@@ -129,4 +129,4 @@ Doba odezvy závisí na stavu, ve kterém vaše zpětná vazba nachází. Přeč
 
 ## <a name="see-also"></a>Viz také:
 
-- [Představujeme 'navrhnout funkci"v komunitě vývojářů (blog sady Visual Studio)](https://devblogs.microsoft.com/visualstudio/introducing-suggest-a-feature-in-developer-community/?utm_source=vs_developer_news&utm_medium=referral)
+- [Představujeme "navrhnout funkci" ve komunitě vývojářů (blog sady Visual Studio)](https://devblogs.microsoft.com/visualstudio/introducing-suggest-a-feature-in-developer-community/?utm_source=vs_developer_news&utm_medium=referral)

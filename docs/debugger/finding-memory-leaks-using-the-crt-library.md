@@ -1,5 +1,5 @@
 ---
-title: Vyhledání nevrácené paměti pomocí knihovny CRT | Dokumentace Microsoftu
+title: Vyhledání nevrácené paměti pomocí knihovny CRT | Microsoft Docs
 ms.date: 10/04/2018
 ms.topic: conceptual
 dev_langs:
@@ -29,24 +29,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e7fdfedbb2f632bdb0fcaa05c7f0fb282a8fcd2b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: eb2729dcaf0da41c0adac24b0e1909a6d2697eb6
+ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62849966"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74829947"
 ---
 # <a name="find-memory-leaks-with-the-crt-library"></a>Hledání nevrácené paměti pomocí knihovny CRT
 
-Nevracení paměti jsou mezi na maximum a současně lákavé obtížné zjistit chyby v aplikacích jazyka C/C++. Výsledek z neschopnost správně zrušit přidělení paměti, která byla dříve přidělena nevracení paměti. Malé přetečení paměti, nemohou být zpočátku, ale v čase, může způsobit příznaky od sníženého výkonu k chybám při spuštění aplikace nedostatek paměti. Unikající aplikaci, která spotřebovává všechnu dostupnou paměť může způsobit zhroucení jiné aplikace, což vytvoří zmatek, která aplikace je zodpovědný. Dokonce i neškodné nevracení paměti může znamenat další problémy, které by měly být opraveny.
+Nevracení paměti je mezi nejrozšířenějšími a nezjistitelnými chybami v C/C++ aplikacích. Nevracení paměti vedlo k selhání při správném uvolnění paměti, která byla dříve přidělena. Je možné, že se neprojeví nevracení paměti, ale v průběhu času může docházet ke zhroucení příznaků od špatného výkonu po selhání aplikace v případě, že dojde k nedostatku paměti. Nevrácení aplikace, která používá veškerou dostupnou paměť, může způsobit zhroucení jiných aplikací a nejasnosti, jakou zodpovídá aplikace. Dokonce neškodné neškodné nevracení paměti může poukazovat na další problémy, které by se měly opravit.
 
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Ladicího programu a knihovny Run-time jazyka C (CRT) vám umožňují zjišťování a identifikaci nevracení paměti.
+ Ladicí program [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a Knihovna CRT (C Run-Time Library) vám může pomáhat detekovat a identifikovat nevracení paměti.
 
-## <a name="enable-memory-leak-detection"></a>Povolení rozpoznávání nevracení paměti
+## <a name="enable-memory-leak-detection"></a>Povolit detekci nevracení paměti
 
-Primární nástroje pro zjištění nevracení paměti jsou ladicí program jazyka C/C++ a C Run-time Library (CRT) ladicí funkce haldy.
+Primární nástroje pro zjišťování nevracení paměti jsou funkce haldy laděníC++ c/Debugger a Knihovna CRT (c Runtime Library).
 
-Pokud chcete povolit všechny funkce ladění haldy, vložte následující příkazy v programu C++, v uvedeném pořadí:
+Chcete-li povolit všechny funkce ladění haldy, zahrňte do C++ programu následující příkazy v uvedeném pořadí:
 
 ```cpp
 #define _CRTDBG_MAP_ALLOC
@@ -54,25 +54,25 @@ Pokud chcete povolit všechny funkce ladění haldy, vložte následující př�
 #include <crtdbg.h>
 ```
 
-`#define` Příkaz mapuje základní verze funkcí haldy CRT pro korespondující verzi ladicího. Pokud vynecháte `#define` prohlášení, bude výpis paměti [méně podrobné](#interpret-the-memory-leak-report).
+Prohlášení `#define` mapuje základní verze funkcí haldy CRT pro korespondující verzi ladicího programu. Pokud necháte příkaz `#define`, výpis nevracení paměti bude [méně podrobný](#interpret-the-memory-leak-report).
 
-Včetně *souboru crtdbg.h* mapuje `malloc` a `free` funkce na jejich ladicí verze [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg) a [_free_dbg –](/cpp/c-runtime-library/reference/free-dbg), které sledují paměti přidělování a navracení zpět. Toto mapování se vyskytuje pouze v sestavení ladění, které mají `_DEBUG`. Verze sestavení používají běžné `malloc` a `free` funkce.
+Včetně *souboru Crtdbg. h* mapuje funkce `malloc` a `free` na jejich ladicí verze [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg) a [_free_dbg](/cpp/c-runtime-library/reference/free-dbg), které sledují přidělování a navracení paměti. Toto mapování se vyskytuje pouze v sestavení ladění, která mají `_DEBUG`. Verze sestavení používají běžné funkce `malloc` a `free`.
 
-Po povolení funkce ladění haldy pomocí předchozích příkazů, umístěte volání [_CrtDumpMemoryLeaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks) před bodem ukončení aplikaci pro zobrazení sestava nevracení paměti při ukončení aplikace.
+Po povolení funkcí ladění haldy pomocí předchozích příkazů umístěte volání [_CrtDumpMemoryLeaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks) před bodem ukončení aplikace, aby při ukončení aplikace zobrazila zprávu o nevracení paměti.
 
 ```cpp
 _CrtDumpMemoryLeaks();
 ```
 
-Pokud vaše aplikace obsahuje několik výstupů, není nutné ručně umístit `_CrtDumpMemoryLeaks` v každém bodu vstupu. Způsobí automatické volání `_CrtDumpMemoryLeaks` v každém bodu ukončení uskutečňovat volání `_CrtSetDbgFlag` na začátku aplikace s využitím bitová pole zde uvedená:
+Pokud vaše aplikace obsahuje několik ukončení, nemusíte ručně umístit `_CrtDumpMemoryLeaks` do každého bodu ukončení. Chcete-li způsobit automatické volání `_CrtDumpMemoryLeaks` v každém bodě ukončení, umístěte volání do `_CrtSetDbgFlag` na začátku vaší aplikace s bitovými poli zobrazenými zde:
 
 ```cpp
 _CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
 ```
 
-Ve výchozím nastavení `_CrtDumpMemoryLeaks` výstupy sestava nevracení paměti **ladění** podokně **výstup** okna. Pokud používáte knihovnu, knihovna může obnovit výstup do jiného umístění.
+Ve výchozím nastavení `_CrtDumpMemoryLeaks` výstup sestavy nevracení paměti do podokna **ladění** okna **výstup** . Používáte-li knihovnu, knihovna může obnovit výstup do jiného umístění.
 
-Můžete použít `_CrtSetReportMode` k přesměrování sestavy do jiného umístění nebo zpět **výstup** okna, jak je znázorněno zde:
+Můžete použít `_CrtSetReportMode` k přesměrování sestavy do jiného umístění nebo zpět do okna **výstup** , jak je znázorněno zde:
 
 ```cpp
 _CrtSetReportMode( _CRT_ERROR, _CRTDBG_MODE_DEBUG );
@@ -80,7 +80,7 @@ _CrtSetReportMode( _CRT_ERROR, _CRTDBG_MODE_DEBUG );
 
 ## <a name="interpret-the-memory-leak-report"></a>Interpretace sestavy nevracení paměti
 
-Pokud vaše aplikace nedefinuje `_CRTDBG_MAP_ALLOC`, [_CrtDumpMemoryLeaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks) zobrazí sestava nevracení paměti, bude vypadat takto:
+Pokud vaše aplikace nedefinuje `_CRTDBG_MAP_ALLOC`, [_CrtDumpMemoryLeaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks) zobrazí sestavu nevracení paměti, která vypadá takto:
 
 ```cmd
 Detected memory leaks!
@@ -90,7 +90,7 @@ Dumping objects ->
 Object dump complete.
 ```
 
-Pokud vaše aplikace definuje `_CRTDBG_MAP_ALLOC`, sestava nevracení paměti vypadá jako:
+Pokud vaše aplikace definuje `_CRTDBG_MAP_ALLOC`, vypadá sestava nevracení paměti takto:
 
 ```cmd
 Detected memory leaks!
@@ -101,23 +101,23 @@ normal block at 0x00780E80, 64 bytes long.
 Object dump complete.
 ```
 
-Druhá sestava zobrazuje název souboru a číslo řádku, kde je nevrácená paměť nejprve přidělena.
+Druhá sestava zobrazuje název souboru a číslo řádku, ve kterém je nevrácená paměť nejprve přidělena.
 
-Určuje, jestli můžete definovat `_CRTDBG_MAP_ALLOC`, sestava nevracení paměti:
+Bez ohledu na to, zda `_CRTDBG_MAP_ALLOC`definujete, se zobrazí zpráva o nevracení paměti:
 
-- Číslo přidělení paměti, což je `18` v příkladu
-- Typ bloku `normal` v příkladu.
-- Umístění paměti v šestnáctkové soustavě `0x00780E80` v příkladu.
+- Číslo přidělení paměti, které je `18` v příkladu
+- Typ bloku, `normal` v příkladu.
+- Umístění v šestnáctkové paměti `0x00780E80` v příkladu.
 - Velikost bloku, `64 bytes` v příkladu.
-- Prvních 16 bajtů dat v bloku, v šestnáctkovém formátu.
+- Prvních 16 bajtů dat v bloku, v šestnáctkovém tvaru.
 
-Typy bloků paměti jsou *normální*, *klienta*, nebo *CRT*. A *Normální blok* je běžné přidělené programem paměti. A *klientský blok* je speciální typ bloku paměti používaný programy MFC pro objekty, které vyžadují destruktor. MFC `new` operátor vytvoří normální blok nebo blok klienta, v závislosti na vytvářený objekt.
+Typy bloků paměti jsou *normální*, *klient*nebo *CRT*. *Normální blok* je běžná paměť přidělená vaším programem. *Klientský blok* je speciální typ bloku paměti, který používají programy MFC pro objekty, které vyžadují destruktor. Operátor MFC `new` vytvoří normální blok nebo blok klienta, vhodný pro vytvářený objekt.
 
-A *blok CRT* je přidělen knihovnou CRT pro její vlastní použití. Knihovna CRT zpracovává navracení zpět pro tyto bloky, takže CRT bloky se nezobrazí v sestavě nevracení paměti pouze v případě závažných problémů s knihovnou CRT.
+*Blok CRT* je přidělen knihovnou CRT pro vlastní použití. Knihovna CRT zpracovává dealokaci pro tyto bloky, takže se bloky CRT nebudou zobrazovat v sestavě nevracení paměti, pokud neexistují vážné problémy s knihovnou CRT.
 
-Existují dva další typy paměťových bloků, které se nikdy objeví v sestavách nevracení paměti. A *volný blok* je paměť, která byla uvolněna, takže podle definice není úniku. *Blok ignore* je paměť, která jste explicitně označena pro vyloučení ze sestavy nevracení paměti.
+Existují dva další typy paměťových bloků, které se nikdy objeví v sestavách nevracení paměti. *Bezplatný blok* je paměť, která byla uvolněna, takže podle definice nedojde k úniku. *Blok Ignore* je paměť, která je výslovně označena pro vyloučení ze sestavy nevracení paměti.
 
-Předchozí techniky identifikaci nevracení paměti pro paměť přidělenou pomocí standardní CRT `malloc` funkce. Pokud váš program přiděluje paměť pomocí jazyka C++ `new` operátoru, ale uvidíte pouze název souboru a číslo řádku kde `operator new` volání `_malloc_dbg` v sestavě nevracení paměti. Pokud chcete vytvořit další užitečné sestavy nevracení paměti, můžete napsat – makro takto hlášení řádku, který provedl přidělení paměti:
+Předchozí postupy identifikují nevracení paměti přidělené paměti pomocí standardní funkce CRT `malloc`. Pokud program přiděluje paměť pomocí operátoru C++ `new`, může se ale zobrazit jenom název souboru a číslo řádku, kde `operator new` zavolá `_malloc_dbg` v sestavě nevracení paměti. Chcete-li vytvořit užitečnější sestavu nevracení paměti, můžete napsat makro, jako je například následující, aby se nahlásil řádek, který přidělení provedl:
 
 ```cpp
 #ifdef _DEBUG
@@ -129,7 +129,7 @@ Předchozí techniky identifikaci nevracení paměti pro paměť přidělenou po
 #endif
 ```
 
-Teď můžete nahradit `new` operátorem pomocí `DBG_NEW` – makro ve vašem kódu. V ladicím buildu `DBG_NEW` používá přetížení globální `operator new` , která přijímá další parametry pro typ bloku, souboru a číslo řádku. Přetížení `new` volání `_malloc_dbg` zaznamenávat dodatečné informace. Sestavy nevracení paměti zobrazit název souboru a číslo řádku, kde byly přiděleny uniklé objekty. Verze sestavení stále používá výchozí `new`. Tady je příklad techniky:
+Nyní můžete nahradit operátor `new` pomocí makra `DBG_NEW` ve vašem kódu. V sestavení ladění používá `DBG_NEW` přetížení globálních `operator new`, které přebírají další parametry pro typ bloku, soubor a číslo řádku. Přetížení `new` volá `_malloc_dbg`, aby se poznamenaly Další informace. Sestavy nevracení paměti zobrazují název souboru a číslo řádku, kde byly nevrácené objekty přiděleny. Sestavení vydaných verzí stále používají výchozí `new`. Tady je příklad techniky:
 
 ```cpp
 // debug_new.cpp
@@ -159,7 +159,7 @@ void main() {
 }
 ```
 
-Při spuštění tohoto kódu v sadě Visual Studio ladicího programu, volání `_CrtDumpMemoryLeaks` generuje sestavy v **výstup** okno, které vypadá podobně jako:
+Při spuštění tohoto kódu v ladicím programu sady Visual Studio, volání `_CrtDumpMemoryLeaks` generuje sestavu v okně **výstup** , která vypadá podobně jako:
 
 ```Output
 Detected memory leaks!
@@ -170,36 +170,38 @@ c:\users\username\documents\projects\debug_new\debug_new.cpp(20) : {75}
 Object dump complete.
 ```
 
-Tento výstup sestav, že uniklé přidělení se týkalo na řádku 20 *debug_new.cpp*.
+Tento výstup hlásí, že nevrácené přidělení bylo na řádku 20 *DEBUG_NEW. cpp*.
 
 >[!NOTE]
->Nedoporučujeme vytvářet preprocesorové makro s názvem `new`, nebo žádné další klíčové slovo jazyka.
+>Nedoporučujeme vytvářet makro preprocesoru s názvem `new`nebo jakékoli jiné klíčové slovo jazyka.
 
-## <a name="set-breakpoints-on-a-memory-allocation-number"></a>Nastavení zarážek na číslo přidělení paměti
+## <a name="set-breakpoints-on-a-memory-allocation-number"></a>Nastavení zarážek pro číslo přidělení paměti
 
-Číslo přidělení paměti označuje, kdy byl přidělen blok nevrácené paměti. Například blok s číslem přidělení paměti 18 je 18. blok paměti přidělené během spuštění aplikace. Sestava CRT počítá všechny alokace bloku paměti během spuštění, včetně přidělení podle knihovny CRT a dalších knihoven, jako je například knihovny MFC. Paměť přidělení bloku číslo 18 proto pravděpodobně není 18. blok paměti přidělený vaším kódem.
+Číslo přidělení paměti označuje, kdy byl přidělen blok nevrácené paměti. Blok s číslem přidělení paměti 18 je například 18 blok paměti přidělený během spuštění aplikace. Sestava CRT počítá všechna přidělení bloků paměti během spuštění, včetně přidělení pomocí knihovny CRT a dalších knihoven, jako je například MFC. Proto blok přidělení paměti číslo 18 pravděpodobně není 18 blok paměti přidělený vaším kódem.
 
-Chcete-li nastavit zarážku na přidělení paměti můžete použít číslo přidělení.
+Chcete-li nastavit zarážku na přidělení paměti, můžete použít číslo přidělení.
 
-**Nastavení zarážku přidělení paměti používání okna kukátka:**
+**Nastavení zarážky přidělení paměti pomocí okno Kukátko:**
 
-1. Nastavit zarážku v okolí spuštění aplikace a spusťte ladění.
+1. Nastavte zarážku poblíž začátku aplikace a spusťte ladění.
 
-1. Při aplikaci pozastavení na zarážce, otevřete **Watch** okna tak, že vyberete **ladění** > **Windows** > **kukátko 1** (nebo **sledovat 2**, **podívejte se na 3**, nebo **podívejte se 4**).
+1. Když aplikace pozastaví na zarážce, otevřete okno **kukátka** tak, že vyberete možnost **ladění** > **Windows** > **kukátko 1** (nebo **Sledujte 2**, **Sledujte 3**nebo **Sledujte 4**).
 
-1. V **Watch** okno, zadejte `_crtBreakAlloc` v **název** sloupce.
+1. V okně **kukátko** zadejte `_crtBreakAlloc` do sloupce **název** .
 
-   Pokud používáte vícevláknovou DLL verzi knihovny CRT (možnost/MD), přidejte operátor kontextu: `{,,ucrtbased.dll}_crtBreakAlloc`
+   Pokud používáte vícevláknovou DLL verzi knihovny CRT (možnost/MD), přidejte kontextový operátor: `{,,ucrtbased.dll}_crtBreakAlloc`
+   
+   Ujistěte se, že jsou načteny symboly ladění. Jinak `_crtBreakAlloc` bude hlášena jako *neidentifikovaný*.
 
 1. Stisknutím klávesy **zadejte**.
 
-   Ladicí program vyhodnotí volání a výsledek umístí do **hodnotu** sloupce. Tato hodnota bude **-1** Pokud jste nenastavili žádné zarážky na přidělení paměti.
+   Ladicí program vyhodnotí volání a umístí výsledek do sloupce **Value (hodnota** ). Tato hodnota bude **-1** , pokud jste nenastavili žádné zarážky při přidělování paměti.
 
-1. V **hodnotu** sloupce, nahraďte hodnotu číslem přidělení pro přidělení paměti, kde chcete přerušení ladicího programu.
+1. Ve sloupci **hodnota** nahraďte hodnotu číslem přidělení přidělení paměti, kde má být ladicí program přerušen.
 
-Po nastavení zarážky na číslo přidělení paměti, pokračujte v ladění. Ujistěte se, že ke spuštění za stejných podmínek, takže nedojde ke změně číslo přidělení paměti. Když se program zasekne při přidělení zadané paměti, použijte **zásobník volání** okno a dalších oknech ladicího programu k určení podmínek, za kterých byla přidělena paměť. Potom můžete pokračovat v provádění a sledovat, co se stane objektu a zjistit, proč není dealokován správně.
+Po nastavení zarážky pro číslo přidělení paměti pokračujte v ladění. Ujistěte se, že je spuštěný za stejných podmínek, takže se nemění číslo přidělení paměti. Když je program rozdělen do zadaného přidělení paměti, použijte okno **zásobník volání** a další okna ladicího programu k určení podmínek, za kterých byla paměť přidělena. Pak můžete pokračovat v provádění, abyste zjistili, co se stane s objektem, a zjistit, proč není správně uvolněn.
 
-Nastavením zarážky data objektu může být také užitečné. Další informace najdete v tématu [pomocí zarážek](../debugger/using-breakpoints.md).
+Nastavením zarážky data objektu může být také užitečné. Další informace najdete v tématu [použití zarážek](../debugger/using-breakpoints.md).
 
 Můžete také nastavit zarážky přidělení paměti v kódu. Můžete nastavit:
 
@@ -214,22 +216,22 @@ _CrtSetBreakAlloc(18);
 ```
 
 ## <a name="compare-memory-states"></a>Porovnání stavů paměti
- Jiná metoda vyhledání přetečení paměti zahrnuje pořizování snímků stavu paměti aplikace na klíčových místech. Pořídit snímek stavu paměti v daném místě ve vaší aplikaci, vytvořte `_CrtMemState` struktury a předáním `_CrtMemCheckpoint` funkce.
+ Jiná metoda vyhledání přetečení paměti zahrnuje pořizování snímků stavu paměti aplikace na klíčových místech. Chcete-li pořídit snímek stavu paměti v daném bodě aplikace, vytvořte strukturu `_CrtMemState` a předejte ji do funkce `_CrtMemCheckpoint`.
 
 ```cpp
 _CrtMemState s1;
 _CrtMemCheckpoint( &s1 );
 ```
 
-`_CrtMemCheckpoint` Funkce vyplní strukturu pomocí snímku aktuálního stavu paměti.
+Funkce `_CrtMemCheckpoint` vyplní strukturu pomocí snímku aktuálního stavu paměti.
 
-Výstup obsahu `_CrtMemState` struktury, předejte strukturu `_ CrtMemDumpStatistics` funkce:
+Chcete-li vytvořit výstup obsahu `_CrtMemState` struktury, předejte strukturu do funkce `_ CrtMemDumpStatistics`:
 
 ```cpp
 _CrtMemDumpStatistics( &s1 );
 ```
 
-`_ CrtMemDumpStatistics` Vytvoří výstup výpisu stavu paměti, bude vypadat takto:
+`_ CrtMemDumpStatistics` vypíše výpis stavu paměti, který vypadá takto:
 
 ```cmd
 0 bytes in 0 Free Blocks.
@@ -241,7 +243,7 @@ Largest number used: 3071 bytes.
 Total allocations: 3764 bytes.
 ```
 
-Pokud chcete zjistit, zda došlo k nevracení paměti v části kódu, můžete pořizovat snímky stavu paměti před a po části a pak použít `_ CrtMemDifference` k porovnání dvou stavů:
+Chcete-li zjistit, zda došlo k nevracení paměti v části kódu, můžete pořizovat snímky stavu paměti před a po části a pak použít `_ CrtMemDifference` k porovnání dvou stavů:
 
 ```cpp
 _CrtMemCheckpoint( &s1 );
@@ -252,12 +254,12 @@ if ( _CrtMemDifference( &s3, &s1, &s2) )
    _CrtMemDumpStatistics( &s3 );
 ```
 
-`_CrtMemDifference` porovnává stavy paměti `s1` a `s2` a vrací rozdíl v (`s3`), který je rozdíl mezi `s1` a `s2`.
+`_CrtMemDifference` porovná stavy paměti `s1` a `s2` a vrátí výsledek v (`s3`), který je rozdíl mezi `s1`ou a `s2`.
 
-Jedna z technik pro vyhledání nevrácené paměti začíná umístěním `_CrtMemCheckpoint` volání na začátku a na konci vaší aplikace, pak pomocí `_CrtMemDifference` jak porovnat výsledky. Pokud `_CrtMemDifference` vykazuje nevracení paměti, můžete přidat další `_CrtMemCheckpoint` volání a rozdělit program pomocí binárního vyhledávání, dokud jste samostatný zdroj nevracení paměti.
+Jedna z technik pro vyhledání nevrácené paměti začíná vložením `_CrtMemCheckpoint` volání na začátku a na konci vaší aplikace a následným použitím `_CrtMemDifference` k porovnání výsledků. Pokud `_CrtMemDifference` zobrazuje nevracení paměti, můžete přidat další `_CrtMemCheckpoint` volání k rozdělení programu pomocí binárního vyhledávání, dokud nebudete mít nezávisle na zdroji nevrácené.
 
-## <a name="false-positives"></a>Počet falešně pozitivních výsledků
- `_CrtDumpMemoryLeaks` můžete poskytnout nepravdivé údaje o nevracení paměti, pokud knihovnu označuje interní přidělení jako normální bloky místo CRT bloky a bloky klienta. V takovém případě `_CrtDumpMemoryLeaks` nemůže zjistit rozdíl mezi přiděleními uživatelů a vnitřními přiděleními knihovny. Pokud globální destruktory pro přidělení knihovny běží i po okamžiku, kdy zavoláte `_CrtDumpMemoryLeaks`, každé vnitřní přidělení knihovny se hlásí jako nevracení paměti. Verze dříve, než může způsobit, že Visual Studio .NET Standard Template Library `_CrtDumpMemoryLeaks` hlášení takový počet falešně pozitivních výsledků.
+## <a name="false-positives"></a>Falešný poplach
+ `_CrtDumpMemoryLeaks` může poskytnout falešně indikaci nevracení paměti, pokud se v knihovně místo bloků CRT nebo klientských bloků označí interní přidělování jako normální bloky. V takovém případě funkce `_CrtDumpMemoryLeaks` nemůže zjistit rozdíl mezi přiděleními uživatelů a vnitřními přiděleními knihovny. Pokud globální destruktory pro přidělení knihovny běží i po okamžiku, kdy zavoláte funkci `_CrtDumpMemoryLeaks`, každé vnitřní přidělení knihovny bude hlášeno jako nenavrácení paměti. Verze standardní knihovny šablon starší než Visual Studio .NET mohou způsobit, `_CrtDumpMemoryLeaks` nahlásit falešně pozitivní výsledky.
 
 ## <a name="see-also"></a>Viz také:
 - [Podrobnosti haldy ladění CRT](../debugger/crt-debug-heap-details.md)

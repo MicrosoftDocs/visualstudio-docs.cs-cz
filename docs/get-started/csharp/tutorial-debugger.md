@@ -1,5 +1,5 @@
 ---
-title: 'Kurz: Ladicí C# kód'
+title: 'Kurz: ladění C# kódu'
 description: Zjistěte, jak ke spuštění ladicího programu sady Visual Studio, krokovat kód a kontrolovat data.
 ms.custom: debug-experiment, seodec18, get-started
 ms.date: 11/27/2018
@@ -15,14 +15,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 98238aeee0662f61e8edc3b1f155dafd09e2301a
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 1c7237d8d8bf66273078049a41a3193af0026792
+ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180446"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74830027"
 ---
-# <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Naučte se C# ladit kód pomocí sady Visual Studio.
+# <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Zjistěte, jak ladit C# kódu pomocí sady Visual Studio
 
 Tento článek obsahuje představení funkcí v ladicím programu sady Visual Studio podrobného návodu. Pokud chcete zobrazit vyšší úroveň funkcí ladicího programu, podívejte [se na téma první pohled na ladicí program](../../debugger/debugger-feature-tour.md). Pokud jste *ladění aplikace*, obvykle to znamená, že spustíte aplikaci s připojeným ladícím nástrojem. Když toto provedete, ladicí program poskytuje mnoho způsobů, jak zjistit, co kód dělá, při spuštění. Můžete procházet kódem a podívejte se na hodnoty uložené v proměnné, můžete nastavit hodinky na proměnné zobrazíte, když se změní hodnoty, můžete prozkoumat cesta provedení kódu naleznete v tématu, jestli větev kódu je spuštěná, a tak dále. Pokud je to poprvé, kterou jste se pokusili ladění kódu, můžete chtít číst [ladění pro naprosté začátečníky](../../debugger/debugging-absolute-beginners.md) před provedením tohoto článku.
 
@@ -61,31 +61,28 @@ Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory k
 
 ::: moniker-end
 
-Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít do části **nástroje** > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací .NET** úloh, klikněte na tlačítko **změnit**.
+Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít na **nástroje** > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací .NET** úloh, klikněte na tlačítko **změnit**.
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
 1. Otevřít Visual Studio.
 
     ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **kombinace kláves CTRL + Q** otevřete vyhledávací pole, zadejte příkaz **Konzola**, zvolte možnost **šablony**a zvolte možnost **vytvořit nový projekt aplikace konzoly (.NET Framework)** . V dialogovém okně, které se zobrazí, zadejte název, jako je například **Get-Started**, a pak zvolte **vytvořit**.
+    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **kombinace kláves CTRL + Q** otevřete vyhledávací pole, zadejte příkaz **Konzola**, zvolte možnost **šablony**a zvolte možnost **vytvořit nový projekt aplikace konzoly (.NET Core)** nebo **vytvořte nový projekt Konzolová aplikace (.NET Framework)** . V dialogovém okně, které se zobrazí, zadejte název, jako je například **Get-Started**, a pak zvolte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
     V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně dialogového okna **Nový projekt** , v části **vizuál C#** zvolte **Windows Desktop**a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)** . Pak zadejte název, jako je například **Get-Started-Debugging** a klikněte na **OK**.
     ::: moniker-end
 
-    Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Framework)** , přejděte do části **nástroje** > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací .NET** úloh, klikněte na tlačítko **změnit**.
+    Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Framework)** , přejděte do části **nástroje** > **získat nástroje a funkce...** , který otevře instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací .NET** úloh, klikněte na tlačítko **změnit**.
 
     Visual Studio vytvoří projekt.
 
-1. V *Program.cs*, nahraďte následující kód
+1. V *program.cs*nahraďte veškerý výchozí kód.
 
     ```csharp
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+    // ...
 
     namespace get_started_debugging
     {
@@ -185,7 +182,7 @@ Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete p�
 
 ## <a name="start-the-debugger"></a>Spuštění ladicího programu!
 
-1. Stisknutím klávesy **F5** (**ladit > Spustit ladění**) nebo **spustit ladění** tlačítko ![spustit ladění](../../debugger/media/dbg-tour-start-debugging.png "spustit ladění ") na panelu nástrojů ladění.
+1. Stiskněte klávesu **F5** (**ladění > Spustit ladění**) nebo klikněte na tlačítko **Spustit** ladění ![Spustit ladění](../../debugger/media/dbg-tour-start-debugging.png "Spustit ladění") na panelu nástrojů ladění.
 
      **F5** spustí aplikaci se ladicí program připojen k aplikaci zpracování, ale v tuto chvíli jsme neprovedli nic zvláštního prozkoumat kód. Proto pouze načítání aplikace a zobrazí výstup konzoly.
 
@@ -200,7 +197,7 @@ Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete p�
 
      V tomto kurzu vytvoříme podrobněji podíváme na tuto aplikaci pomocí ladicího programu a získejte funkce, podívejte se na ladicí program.
 
-2. Zastavení ladicího programu stisknutím klávesy red stop ![Zastavit ladění](../../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") tlačítko.
+2. Ukončete ladicí program stisknutím tlačítka červené zastavení ![Zastavit ladění](../../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") .
 
 ## <a name="set-a-breakpoint-and-start-the-debugger"></a>Nastavte zarážku a spuštění ladicího programu
 
@@ -212,7 +209,7 @@ Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete p�
 
     Zarážky jsou základní a nejjednodušší funkcí spolehlivého ladění. Zarážka určuje, kde má Visual Studio spuštěný kód pozastavit, abyste mohli zkontrolovat hodnoty proměnných či chování paměti, nebo abyste zjistili, jestli se nějaká větev kódu spouští.
 
-2. Stiskněte klávesu **F5** nebo tlačítko **Spustit ladění** ![Spustit]ladění(../../debugger/media/dbg-tour-start-debugging.png "Spustit ladění"), aplikace se spustí a ladicí program se spustí na řádek kódu, kde jste nastavili zarážku.
+2. Stiskněte klávesu **F5** nebo tlačítko **Spustit ladění** ![Spustit ladění](../../debugger/media/dbg-tour-start-debugging.png "Spustit ladění"), spustí se aplikace a ladicí program se spustí na řádek kódu, kde jste nastavili zarážku.
 
     ![Nastavte a použijte zarážku](../csharp/media/get-started-set-breakpoint.gif)
 
@@ -228,30 +225,30 @@ Většinou, klávesové zkratky tady používáme, protože je dobrým způsobem
 
 1. Během pozastavení v `shape.Draw` volání metody `Main` metody, stiskněte klávesu **F11** (nebo zvolte **ladění > Krokovat s vnořením**) pro přechod do kódu pro `Rectangle` třídy.
 
-     ![Můžete krokovat s vnořením kód F11](../csharp/media/get-started-f11.png "F11 Krokovat s vnořením")
+     ![Krokovat s vnořením kódu pomocí klávesy F11](../csharp/media/get-started-f11.png "F11 Krokovat s vnořením")
 
-     Je F11 **Krokovat s vnořením** příkazu a posune jeden příkaz spuštění aplikace v čase. F11 je dobrým způsobem, jak prozkoumat provádění toku v nejvíce podrobností. (Rychlejší procházení kódu, ukážeme vám několik možností také.) Ve výchozím nastavení, ladicí program přeskočí neuživatelském kódu (Pokud potřebujete další podrobnosti, [pouze můj kód](../../debugger/just-my-code.md)).
+     Je F11 **Krokovat s vnořením** příkazu a posune jeden příkaz spuštění aplikace v čase. F11 je dobrým způsobem, jak prozkoumat provádění toku v nejvíce podrobností. (K rychlejšímu přesunu kódu vám ukážeme i některé další možnosti.) Ve výchozím nastavení přeskočí ladicí program neuživatelský kód (Pokud chcete více podrobností, přečtěte si téma [pouze můj kód](../../debugger/just-my-code.md)).
 
 2. Stisknutím klávesy **F10** (nebo zvolte **ladit > Krokovat s přeskočením**) několikrát, dokud ladicí program se zastaví na `base.Draw` volání metody a poté stiskněte klávesu **F10** ještě jednou.
 
-     ![F10 můžete krokovat s přeskočením kód](../csharp/media/get-started-step-over.png "F10 Krokovat s přeskočením")
+     ![Pro krokování kódu použijte F10](../csharp/media/get-started-step-over.png "F10 krok přes")
 
-     Všimněte si, že tento čas, který ladicí program Nekrokovat s vnořením do `Draw` metody základní třídy (`Shape`). **F10** přejde ladicí program bez krokování do funkce nebo metody v kódu vaší aplikace (kód stále provádí). Stiskem klávesy **F10** ve `base.Draw` volání metody (místo **klávesy F11**) jsme přeskočili na implementační kód pro `base.Draw` (což možná není zajímatme hned teď).
+     Všimněte si, že tento čas, který ladicí program Nekrokovat s vnořením do `Draw` metody základní třídy (`Shape`). **F10** přejde ladicí program bez krokování do funkce nebo metody v kódu vaší aplikace (kód stále provádí). Stisknutím klávesy **F10** ve volání metody `base.Draw` (namísto **klávesy F11**) přeskočíme na implementační kód pro `base.Draw` (což by mohlo být v současnosti nedotčeno).
 
 ## <a name="navigate-code-using-run-to-click"></a>Vyhledání kódu pomocí běžet do kliknutí
 
-1. V editoru kódu, přejděte dolů a najeďte myší `Console.WriteLine` metoda ve `Triangle` třídy do zelené **běžet do kliknutí** tlačítko ![běžet do kliknutí](../../debugger/media/dbg-tour-run-to-click.png "RunToClick")se zobrazí na levé straně. V popisu tlačítka se zobrazí text spustit provádění na tomto místě.
+1. V editoru kódu se posuňte dolů a najeďte myší na `Console.WriteLine`ovou metodu ve třídě `Triangle`, dokud se na tlačítko, které se zobrazí na levé straně, ![klikne](../../debugger/media/dbg-tour-run-to-click.png "RunToClick") na tlačítko zeleného **spuštění** , které se spustí. V popisu tlačítka se zobrazí text spustit provádění na tomto místě.
 
-     ![Použít Run to Click funkce](../csharp/media/get-started-run-to-click.png "běžet do kliknutí")
+     ![Použití funkce spustit pro kliknutí](../csharp/media/get-started-run-to-click.png "Běžet do kliknutí")
 
    > [!NOTE]
    > **Běžet do kliknutí** je novinkou systémů tlačítko [!include[vs_dev15](../../misc/includes/vs_dev15_md.md)]. Pokud nevidíte tlačítko zelenou šipku, použijte **F11** v tomto příkladu místo toho k přechodu na správném místě ladicí program.
 
-2. Klikněte na tlačítko **běžet do kliknutí** tlačítko ![běžet do kliknutí](../../debugger/media/dbg-tour-run-to-click.png "RunToClick").
+2. Kliknutím na tlačítko **Spustit pro** klikněte na tlačítko ![Spustit](../../debugger/media/dbg-tour-run-to-click.png "RunToClick").
 
     Pomocí tohoto tlačítka je podobné nastavení dočasné zarážky. **Běžet do kliknutí** je užitečné pro rychlé navigace v rámci viditelné oblasti kódu aplikace (můžete kliknout na jakékoli otevření souboru).
 
-    Ladicí program přejde `Console.WriteLine` implementace metody pro `Triangle` třídy.
+    Ladicí program přejde `Console.WriteLine` implementace metody pro `Triangle` třídy. (Pokud ladicí program nejprve pozastaví na zarážce, kterou jste nastavili dříve, pomocí **příkazu spustit znovu spusťte** ladicí program na `Console.WriteLine`.)
 
     Během pozastavení, si všimnete překlep! Je zadáno chybně výstupu "Kreslení trangle". Jsme tady ho můžou opravit při spuštění aplikace v ladicím programu.
 
@@ -272,11 +269,11 @@ Většinou, klávesové zkratky tady používáme, protože je dobrým způsobem
 
      Tento příkaz pokračuje v provádění aplikace (a přejde ladicí program) až do aktuálního funkce vrátí.
 
-     Měli byste se vrátit `foreach` smyčky v `Main` – metoda.
+     Měli byste se vrátit `foreach` smyčky v `Main` – metoda. Pokud ne, stiskněte klávesu **Shift** + **F11** ještě jednou.
 
 ## <a name="restart-your-app-quickly"></a>Rychlé restartování aplikace
 
-Klikněte na tlačítko **restartovat** ![restartovat aplikaci](../../debugger/media/dbg-tour-restart.png "RestartApp") tlačítko na panelu nástrojů ladění (**Ctrl** + **Shift**   +  **F5**).
+Klikněte na tlačítko **restartovat** ![aplikaci](../../debugger/media/dbg-tour-restart.png "RestartApp") na panelu nástrojů ladění (**CTRL** + **SHIFT** + **F5**).
 
 Když stisknete klávesu **restartovat**, šetří čas a zastavuje se aplikace a restartování ladicího programu. Ladicí program pozastaví na první zarážce, kterou dosáhnete spuštěním kódu.
 
@@ -294,7 +291,7 @@ Funkce, které umožňují kontrolovat proměnné jsou jedním z nejužitečněj
 
 1. Najeďte myší tvar objektu znovu ale tentokrát uvidíte, že máte nového objektu s typem `Triangle`.
 
-     ![Zobrazení datového tipu](../csharp/media/get-started-data-tip.gif "zobrazení popisu dat.")
+     ![Zobrazit Tip pro data](../csharp/media/get-started-data-tip.gif "Zobrazit Tip pro data")
 
     Často při ladění, chcete rychle zkontrolovat hodnoty vlastností pro proměnné, chcete-li zobrazit, jestli jsou jejich ukládání hodnoty, které očekáváte, že je pro uložení, a datových tipech jsou dobrým způsobem, jak to udělat.
 
@@ -306,7 +303,7 @@ Funkce, které umožňují kontrolovat proměnné jsou jedním z nejužitečněj
 
 1. Rozbalte `shapes` objektu.
 
-     ![Kontrolovat proměnné v okně Automatické hodnoty](../csharp/media/get-started-autos-window.png "okno Automatické hodnoty")
+     ![Kontrola proměnných v okně Automatické hodnoty](../csharp/media/get-started-autos-window.png "Okno Automatické hodnoty")
 
     V **automatické hodnoty** okně se zobrazí proměnné a jejich aktuální hodnoty. **Automatické hodnoty** okně se zobrazí všechny proměnné používané v aktuálním řádkem nebo předchozí řádku (v dokumentaci pro konkrétní jazyk chování).
 
@@ -330,7 +327,7 @@ Funkce, které umožňují kontrolovat proměnné jsou jedním z nejužitečněj
 
 2. Klikněte na tlačítko **F11** několikrát, dokud se nezobrazí pozastavení v ladicím programu `Base.Draw` metodu `Triangle` třídy v editoru kódu. Podívejte se na **zásobník volání** okna.
 
-    ![Prozkoumat zásobník volání](../csharp/media/get-started-call-stack.png "ExamineCallStack")
+    ![Kontrola zásobníku volání](../csharp/media/get-started-call-stack.png "ExamineCallStack")
 
     **Zásobník volání** okno zobrazuje pořadí, ve kterém jsou získávání volány metody a funkce. Na horní zobrazený řádek zobrazuje aktuální funkci ( `Triangle.Draw` metody v této aplikaci). Druhý řádek ukazuje, že `Triangle.Draw` byla volána `Main` metody a tak dále.
 
@@ -341,7 +338,7 @@ Funkce, které umožňují kontrolovat proměnné jsou jedním z nejužitečněj
 
     Dvojitým kliknutím na řádek kódu go, podívejte se na tento zdrojový kód a také změny v aktuálním oboru kontrolován ladicím programem. Tato akce nepřesouvejte vpřed ladicí program.
 
-    Můžete také použít nabídek klikněte pravým tlačítkem **zásobník volání** okno a dělat jiné věci. Například vložení do určené funkce zarážky, ladicí program pomocí předem **spustit ke kurzoru**a zkontrolujte zdrojový kód. Další informace najdete v tématu [jak: Projděte si zásobník](../../debugger/how-to-use-the-call-stack-window.md)volání.
+    Můžete také použít nabídek klikněte pravým tlačítkem **zásobník volání** okno a dělat jiné věci. Například vložení do určené funkce zarážky, ladicí program pomocí předem **spustit ke kurzoru**a zkontrolujte zdrojový kód. Další informace najdete v tématu [postupy: prozkoumání zásobník volání](../../debugger/how-to-use-the-call-stack-window.md).
 
 ## <a name="change-the-execution-flow"></a>Změna toku provádění
 

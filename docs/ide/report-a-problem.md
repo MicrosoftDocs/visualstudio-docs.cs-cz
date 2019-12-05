@@ -1,5 +1,5 @@
 ---
-title: Nahlášení problému
+title: 'Nahlášení problému: stavy a nejčastější dotazy'
 description: Poskytuje přehled o nástroji nahlásit problém a obsahuje stavy a definice problémů.
 ms.date: 11/15/2018
 ms.custom: seodec18
@@ -9,14 +9,14 @@ ms.author: seiyer
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 519c7f233866bf71bb342d4f740b3e0a90a4ba72
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: d024e28d696a60a9fc77c290283382dcd0e0ede8
+ms.sourcegitcommit: 2148f3fd69569d8ec54fd21a66370932ce610ce4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925987"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74853500"
 ---
-# <a name="overview-report-a-problem"></a>Přehled: Nahlášení problému
+# <a name="report-a-problem-states-and-faq"></a>Nahlášení problému: stavy a nejčastější dotazy
 
 Nástroj ohlásit problém umožňuje komunitě vývojářů sady Visual Studio odesílat problémy. Každá z vašich sestav problémů se stává pracovní položkou v našem jádrovém systému, který vám umožní přímo se zapojit do našich produktových týmů a pomoct tak identifikovat a vyřešit ovlivněné problémy. Vaše zpětná vazba odeslaná s bohatými diagnostickými informacemi je důležitá pro zlepšení produktové řady Visual Studio. Opravdu si vybereme čas k nahlášení problémů.
 
