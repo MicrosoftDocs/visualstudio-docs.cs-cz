@@ -11,20 +11,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0024716875dce7e81567d60a6e61069be64ec185
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: eb66615abbd7124fd6b781598bd8eb28ea34756d
+ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911460"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74903862"
 ---
 # <a name="disable-the-just-in-time-debugger"></a>Zakázání ladicího programu pro ladění za běhu
 
 Dialogové okno ladicí program za běhu se může otevřít, když dojde k chybě ve spuštěné aplikaci a zabránit tomu, aby aplikace pokračovala.
 
-Program pro ladění za běhu vám dává možnost spustit Visual Studio, aby se chyba mohla ladit. Pro zobrazení podrobných informací o chybě nebo pokusu o ladění je nutné mít nainstalovanou [aplikaci Visual Studio](https://visualstudio.microsoft.com/) nebo jiný vybraný ladicí program.
+Program pro ladění za běhu vám dává možnost spustit Visual Studio, aby se chyba mohla ladit. Pro zobrazení podrobných informací o chybě nebo pokusu o ladění je nutné mít nainstalovanou aplikaci Visual Studio nebo jiný vybraný ladicí program.
 
-Pokud jste uživatelem sady Visual Studio a chcete se pokusit ladit chybu, přečtěte si téma [ladění pomocí ladicího programu za běhu](../debugger/debug-using-the-just-in-time-debugger.md). Pokud nemůžete opravit chybu, nebo chcete zachovat otevření ladicího programu za běhu, můžete [z aplikace Visual Studio zakázat ladění za](debug-using-the-just-in-time-debugger.md#BKMK_Enabling)běhu.
+Pokud už jste uživatelem sady Visual Studio a chcete se pokusit ladit chybu, přečtěte si téma [ladění pomocí ladicího programu za běhu](../debugger/debug-using-the-just-in-time-debugger.md). Pokud nemůžete opravit chybu, nebo chcete zachovat otevření ladicího programu za běhu, můžete [z aplikace Visual Studio zakázat ladění za](debug-using-the-just-in-time-debugger.md#BKMK_Enabling)běhu.
 
 Pokud máte nainstalovanou aplikaci Visual Studio, ale už ji neuděláte, možná budete muset v [registru Windows zakázat ladění za běhu](debug-using-the-just-in-time-debugger.md#disable-just-in-time-debugging-from-the-windows-registry).
 

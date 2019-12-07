@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d8cd119ab39939de6562adcb962679874d528283
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ea3d2a1e82e92473859fef29754fbb831cf3685b
+ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929364"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74904041"
 ---
 # <a name="watch-variables-with-watch-windows-and-quickwatch"></a>Podívejte se na proměnných s oknech kukátka a Rychlé kukátko
 
@@ -30,7 +30,7 @@ Při ladění, můžete použít **Watch** windows a **QuickWatch** sledovat pro
 
 **Sledování** windows můžete zobrazit několika proměnných v době během ladění. **QuickWatch** dialogové okno zobrazí jednu proměnnou najednou a musí být uzavřeny předtím, než můžete pokračovat v ladění.
 
-Pokud je to poprvé, kterou jste se pokusili ladění kódu, můžete chtít číst [ladění pro naprosté začátečníky](../debugger/debugging-absolute-beginners.md) a [nástroje a techniky ladění](../debugger/write-better-code-with-visual-studio.md) před provedením tohoto článku.
+Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprostou začátečníky](../debugger/debugging-absolute-beginners.md) a [techniky a nástroje pro ladění](../debugger/write-better-code-with-visual-studio.md) .
 
 ## <a name="observe-variables-with-a-watch-window"></a>Sledujte proměnné okno kukátka
 
@@ -68,7 +68,7 @@ int main()
 
 1. V **Watch** okna, vyberte prázdný řádek a proměnné typu `a`. Totéž proveďte pro `b` a `c`.
 
-   ![Sledujte proměnné](../debugger/media/watchvariables.png "WatchVariables")
+   ![Sledovat proměnné](../debugger/media/watchvariables.png "WatchVariables")
 
 1. Pokračovat v ladění tak, že vyberete **ladění** > **Krokovat s vnořením** nebo stiskněte **F11** podle potřeby k přechodu. Hodnoty proměnné ve **Watch** okno změnit, protože iteraci `for` smyčky.
 
@@ -84,24 +84,35 @@ Libovolný platný výraz rozpoznán v ladicím programu v můžete sledovat **W
 
 Například kód v předchozí části, můžete získat průměrem tří hodnot tak, že zadáte `(a + b + c) / 3` v **Watch** okno:
 
-![Výraz Watch](../debugger/media/watchexpression.png "výraz Watch")
+![Výraz kukátka](../debugger/media/watchexpression.png "Výraz kukátka")
 
 Pravidla pro vyhodnocování výrazů v **Watch** okna jsou obvykle stejné jako pravidla pro vyhodnocování výrazů v kódu jazyka. Pokud výraz obsahuje chybu syntaxe, očekávejte ke stejné chybě kompilátoru stejně jako v editoru kódu. Například máte překlep v předcházejícího výrazu vytváří tuto chybu **Watch** okno:
 
-![Podívejte se na Chyba výrazu](../debugger/media/watchexpressionerror.png "sledovat Chyba výrazu")
+![Chyba kukátka výrazu](../debugger/media/watchexpressionerror.png "Chyba kukátka výrazu")
 
 Kruh s ikonou dvě vlnovky se může vyskytovat **Watch** okno. Tato ikona znamená, že ladicí program nevyhodnocuje výraz z důvodu možných závislosti mezi vlákny. Vyhodnocení kódu vyžaduje další vlákna ve vaší aplikaci dočasně spustit, ale vzhledem k tomu, že jste v režimu přerušení, jsou obvykle Zastavit všechna vlákna ve vaší aplikaci. Umožňuje spustit dočasně jiných vláken může mít neočekávané účinky na stav aplikace a ladicí program může ignorovat události, například zarážky a výjimky na tato vlákna.
 
 ::: moniker range=">= vs-2019" 
-## <a name="search-in-the-watch-window"></a>Hledání v okně kukátko
+## <a name="search-in-the-watch-window"></a>Hledat v okno Kukátko
 
-Můžete hledat klíčová slova v název, hodnotu a typ sloupců **Watch** okna pomocí panelu hledání nad každé okno. Stiskněte ENTER nebo vyberte jednu ze šipek provést hledání. Pokud chcete zrušit probíhající hledání, vyberte ikonu "x" na vyhledávacím panelu.
+Klíčová slova můžete hledat ve sloupcích název, hodnota a typ okna **kukátka** pomocí panelu hledání nad každým oknem. Pro spuštění hledání stiskněte klávesu ENTER nebo vyberte jednu ze šipek. Probíhající hledání zrušíte tak, že na panelu hledání vyberete ikonu "x".
 
-Použijte šipku vlevo a vpravo (Shift + F3 a F3, v uvedeném pořadí) přecházet mezi nalezených shod.
+Použijte šipky vlevo a vpravo (SHIFT + F3 a F3) k navigaci mezi nalezenými shodami.
 
-![Hledání v okně kukátko](../debugger/media/ee-search-watch.png "hledání v okně kukátko")
+![Hledat v okně kukátka](../debugger/media/ee-search-watch.png "Hledat v okně kukátka")
 
-Aby hledání víc nebo míň důkladné, použijte **hledání hlubší** rozevírací seznam v horní části **Watch** okno a vybrat, kolik úrovní do hloubky, kterou chcete vyhledat do vnořené objekty. 
+Chcete-li prohledávat více nebo méně důkladné výsledky, použijte rozevírací seznam **Hledat** v horní části okna **kukátka** a vyberte, kolik úrovní na hloubku chcete prohledávat vnořené objekty. 
+
+## <a name="pin-properties-in-the-watch-window"></a>Připnout vlastnosti v okno Kukátko
+
+>[!NOTE]
+> Tato funkce je podporována v rozhraní .NET Core 3,0 nebo vyšším.
+
+Pomocí nástroje **Pinnable Properties** můžete rychle zkontrolovat objekty podle jejich vlastností v okno kukátko.  Chcete-li použít tento nástroj, najeďte myší na vlastnost a vyberte ikonu připnutí, která se zobrazí, nebo klikněte pravým tlačítkem myši a v výsledné místní nabídce vyberte možnost **připnout člena jako oblíbenou** .  Tato vlastnost se zobrazí v horní části seznamu vlastností objektu a název vlastnosti a hodnota se zobrazí ve sloupci **hodnota** .  Chcete-li odebrat vlastnost, vyberte ikonu připnutí znovu nebo v místní nabídce vyberte možnost **odepnout člen jako oblíbenou** .
+
+![Připnout vlastnosti v okno Kukátko](../debugger/media/basic-pin-watch.gif "Připnout vlastnosti v okno Kukátko")
+
+Můžete také přepínat názvy vlastností a odfiltrovat připnuté vlastnosti při zobrazení seznamu vlastností objektu v okno kukátko.  Obě možnosti získáte tak, že vyberete tlačítka na panelu nástrojů nad oknem kukátko.
 
 ::: moniker-end
 
@@ -138,7 +149,7 @@ Demonstruje použití na ikonu aktualizace:
 
 1. Spusťte ladění. **Watch** okno zobrazuje něco jako následující zpráva:
 
-   ![Aktualizovat Watch](../debugger/media/refreshwatch.png "aktualizovat Watch")
+   ![Aktualizovat kukátko](../debugger/media/refreshwatch.png "Aktualizovat kukátko")
 
 1. Pokud chcete aktualizovat hodnotu, vyberte ikonu aktualizace nebo stisknutím klávesy MEZERNÍK. Ladicí program přehodnotí výraz.
 
@@ -210,7 +221,7 @@ Chcete zjistit název `Person` v `DoSomething()` metodu, můžete přidat odkaz 
 
 1. V **lokální** okna, klikněte pravým tlačítkem na `Person` proměnné a vyberte **Ujistěte se, ID objektu**.
 
-   Měli byste vidět znak dolaru (**$**) plus číslo v **lokální** okna, která je ID objektu.
+   Měli byste vidět znak dolaru ( **$** ) plus číslo v **lokální** okna, která je ID objektu.
 
 1. Přidat ID objektu **Watch** okna tak, že kliknete pravým tlačítkem ID objektu a vyberete **Přidat kukátko**.
 
@@ -279,11 +290,11 @@ Sledovat `a` proměnné
 
    **QuickWatch** se zobrazí dialogové okno. `a` Proměnná je v **výraz** pole s **hodnotu** z **1**.
 
-   ![Rychlé kukátko proměnné](../debugger/media/quickwatchvariable.png "proměnné QuickWatch")
+   ![QuickWatch – proměnná](../debugger/media/quickwatchvariable.png "QuickWatch – proměnná")
 
 1. Vyhodnotit výraz, který používá proměnné, zadejte výraz `a + b` v **výraz** a vyberte **přehodnotit**.
 
-   ![Výraz QuickWatch](../debugger/media/quickwatchexpression.png "výrazu v QuickWatch")
+   ![Výraz QuickWatch](../debugger/media/quickwatchexpression.png "Výraz QuickWatch")
 
 1. Přidání proměnné nebo výrazu z **QuickWatch** k **Watch** okně **Přidat kukátko**.
 
@@ -293,6 +304,6 @@ Sledovat `a` proměnné
 
 ## <a name="see-also"></a>Viz také:
 - [Co je ladění?](../debugger/what-is-debugging.md)
-- [Nástroje a techniky ladění](../debugger/write-better-code-with-visual-studio.md)
+- [Techniky a nástroje ladění](../debugger/write-better-code-with-visual-studio.md)
 - [První pohled na ladění](../debugger/debugger-feature-tour.md)
 - [Okno ladicího programu](../debugger/debugger-windows.md)

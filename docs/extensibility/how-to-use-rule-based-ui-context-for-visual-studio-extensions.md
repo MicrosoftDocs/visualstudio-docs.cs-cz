@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Použití kontextu uživatelského rozhraní založeného na pravidlech pro rozšíření sady Visual Studio | Microsoft Docs'
+title: 'Postupy: použití kontextu uživatelského rozhraní založeného na pravidlech pro rozšíření sady Visual Studio | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 8dd2cd1d-d8ba-49b9-870a-45acf3a3259d
@@ -7,14 +7,14 @@ author: madskristensen
 ms.author: madsk
 ms.workload:
 - vssdk
-ms.openlocfilehash: fd7e091192e0111a9dcf0997af8316daef364adb
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 2abe9938d4c3212f29b8591727d731e99e47929c
+ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252331"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74904004"
 ---
-# <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>Postupy: Použití kontextu uživatelského rozhraní založeného na pravidlech pro rozšíření sady Visual Studio
+# <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>Postupy: použití kontextu uživatelského rozhraní založeného na pravidlech pro rozšíření sady Visual Studio
 
 Visual Studio umožňuje načítání rozšíření VSPackages při některých dobře známé <xref:Microsoft.VisualStudio.Shell.UIContext>s aktivují. Tyto kontexty UI nejsou ale jemně odstupňované, což nechává autorům rozšíření žádnou volbu, ale k výběru dostupného kontextu uživatelského rozhraní, který se aktivuje předtím, než to opravdu požadovalo, aby VSPackage mohl načíst. Seznam dobře známé uživatelské rozhraní kontextech najdete v tématu <xref:Microsoft.VisualStudio.Shell.KnownUIContexts>.
 
@@ -45,7 +45,7 @@ Kontext uživatelského rozhraní založeného na pravidlech lze použít různ�
    public const string UIContextGuid = "8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B";
    ```
 
-    Pro atributy přidejte následující hodnoty: (Podrobnosti o těchto atributech budou vysvětleny později)
+    V případě atributů přidejte následující hodnoty: (podrobnosti o těchto atributech budou vysvětleny později)
 
    ```csharp
    [ProvideAutoLoad(TestPackage.UIContextGuid)]
@@ -80,7 +80,7 @@ Kontext uživatelského rozhraní založeného na pravidlech lze použít různ�
    <GuidSymbol name="UIContextGuid" value="{8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B}" />
    ```
 
-    Nyní budou příkazy kontextové nabídky pro  *\*soubory. config* viditelné pouze v případě, že je vybraná položka v Průzkumníku řešení soubor *. config* a balíček nebude načten, dokud jeden z těchto příkazů není vybrán.
+    Nyní budou příkazy místní nabídky pro soubory *\*. config* viditelné pouze v případě, že je vybraná položka v Průzkumníku řešení soubor *. config* a balíček nebude načten, dokud není vybrán některý z těchto příkazů.
 
    Dále pomocí ladicího programu potvrďte, že se balíček načte jenom v případě, že ho očekáváte. Chcete-li ladit TestPackage:
 
@@ -90,7 +90,7 @@ Kontext uživatelského rozhraní založeného na pravidlech lze použít různ�
 
 7. Vytvoření projektu nebo některou aplikaci otevřete.
 
-8. Vyberte libovolný soubor s příponou jinou než *. config*. By neměl být zarážka dosažena.
+8. Vyberte libovolný soubor s příponou jinou než *. config*. Zarážka by neměla být přístupná.
 
 9. Vyberte soubor *App. config* .
 
@@ -136,12 +136,12 @@ Tady jsou různé typy podmínek, které jsou podporovány:
 |UserSettingsStoreQuery:\<dotaz >|dotaz představuje úplnou cestu do úložiště uživatelských nastavení, která se musí vyhodnotit na nenulovou hodnotu. Dotaz je rozdělit na "kolekce" a "propertyName" za poslední lomítko.|
 |ConfigSettingsStoreQuery:\<dotaz >|dotaz představuje úplnou cestu do úložiště nastavení konfigurace, která se musí vyhodnotit na nenulovou hodnotu. Dotaz je rozdělit na "kolekce" a "propertyName" za poslední lomítko.|
 |ActiveProjectFlavor:\<projectTypeGuid >|Výraz bude mít hodnotu true, pokaždé, když je aktuálně vybraného projektu flavored (souhrn) a má flavor odpovídající danému projektu typu GUID.|
-|ActiveEditorContentType:\<contentType >|Termín se být pravdivá, když je vybraný dokument s daným typem obsahu textového editoru.|
+|ActiveEditorContentType:\<contentType >|Termín se být pravdivá, když je vybraný dokument s daným typem obsahu textového editoru. Poznámka: při přejmenování vybraného dokumentu se tento termín neaktualizuje, dokud se soubor nezavře a znovu neotevře.|
 |ActiveProjectCapability:\<výrazu >|Podmínka je pravdivá, pokud aktivní možnosti projektu odpovídají poskytnutému výrazu. Výraz může být něco jako VB &#124; CSharp.|
 |SolutionHasProjectCapability:\<výrazu >|Podobně jako výše, ale termín je true, pokud řešení obsahuje načtený projekt, který odpovídá výrazu.|
 |SolutionHasProjectFlavor:\<projectTypeGuid >|Výraz bude mít hodnotu true, vždy, když řešení obsahuje projekt, který je flavored (souhrn) a má flavor odpovídající danému projektu typu GUID.|
-|ProjectAddedItem:\<vzor >| Podmínka je pravdivá, pokud je do projektu v soluion, který je otevřen, přidán soubor odpovídající "vzoru".|
-|ActiveProjectOutputType:\<element outputType >|Podmínka je pravdivá, pokud typ výstupu pro aktivní projekt přesně odpovídá.  Element outputType může být celé číslo nebo <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROJOUTPUTTYPE> typ.|
+|ProjectAddedItem: > vzor\<| Podmínka je pravdivá, pokud je do projektu v soluion, který je otevřen, přidán soubor odpovídající "vzoru".|
+|ActiveProjectOutputType:\<outputType >|Podmínka je pravdivá, pokud typ výstupu pro aktivní projekt přesně odpovídá.  Element outputType může být celé číslo nebo typ <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROJOUTPUTTYPE>.|
 |ActiveProjectBuildProperty:\<buildProperty>=\<regex>|Podmínka je pravdivá, pokud aktivní projekt má zadanou vlastnost sestavení a hodnota vlastnosti odpovídá poskytnutému filtru Regex. Podrobnější informace o vlastnostech sestavení naleznete [v tématu trvalá data v souborech projektu MSBuild](internals/persisting-data-in-the-msbuild-project-file.md) .|
 |SolutionHasProjectBuildProperty:\<buildProperty>=\<regex>|Podmínka je pravdivá, pokud má řešení načtený projekt se zadanou vlastností buildu a hodnotou vlastnosti se shoduje s poskytnutým filtrem Regex.|
 

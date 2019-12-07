@@ -5,12 +5,12 @@ author: seaniyer
 ms.author: seiyer
 ms.date: 11/19/2019
 ms.topic: reference
-ms.openlocfilehash: d61e7f47fde06c12b6b133ced76e5a8d72d220b0
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 3bf61c1ecbed5a3da1fe7ec0bcf9c6d4b7580b8d
+ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74528432"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74903991"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Jak zvýšit pravděpodobnost vyřešeného problému s výkonem
 
@@ -116,9 +116,9 @@ Jak je popsáno v odpovídající části týkající se havárií, pro problém
 **Neznámá neodezva**
 
 Pokud je nereagující manifest sám nepředvídatelným způsobem, spusťte na dalším výskytu novou instanci sady Visual Studio a nahlaste problém z této instance.
-Na [obrazovce Record (záznam)](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019#record-a-repro)nezapomeňte vybrat relaci sady Visual Studio, která se přestala reagovat.
+Na [obrazovce záznam](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019#record-a-repro)nezapomeňte vybrat relaci sady Visual Studio, která neodpovídá.
 
-Pokud byla instance sady Visual Studio, která se přestala reagovat, spuštěna v režimu správce, pak by se druhá instance musela spustit také v režimu správce.
+Pokud je instance sady Visual Studio, která nereaguje, spuštěna v režimu správce, pak by se druhá instance musela spustit také v režimu správce.
 
 >[!NOTE] 
 > Nejužitečnější **Váš názor:** V tomto případě je nejužitečnou zpětnou vazbou výpis paměti zachycený v době nereagující.
@@ -177,5 +177,5 @@ Ve většině scénářů jsou pro většinu scénářů dostačující možnost
 * [Možnosti zpětné vazby v aplikaci Visual Studio](../ide/feedback-options.md)
 * [Nahlášení problému s Visual Studio pro Mac](/visualstudio/mac/report-a-problem)
 * [Nahlásit problém sC++](/cpp/how-to-report-a-problem-with-the-visual-cpp-toolset)
-* [Komunita vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/)
+* [Visual Studio Developer Community](https://developercommunity.visualstudio.com/)
 * [Soukromí dat komunity vývojářů](developer-community-privacy.md)

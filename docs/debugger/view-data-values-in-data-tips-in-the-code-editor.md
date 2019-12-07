@@ -18,16 +18,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a4674dec4b15f608eb25ffaf62c97efcc2363ab
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f121c7aadb605e6eb87089556ddaf1b1f4999dbb
+ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929982"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74903878"
 ---
 # <a name="view-data-values-in-datatips-in-the-code-editor"></a>Zobrazení hodnot dat v datových tipech v editoru kódu
 
-DataTips poskytují pohodlný způsob, jak zobrazit informace o proměnných ve svém programu během ladění. DataTips fungovat pouze v režimu pozastavení a pouze s proměnnými, které jsou v aktuálním oboru spuštění. Pokud je to poprvé, kterou jste se pokusili ladění kódu, můžete chtít číst [ladění pro naprosté začátečníky](../debugger/debugging-absolute-beginners.md) a [nástroje a techniky ladění](../debugger/write-better-code-with-visual-studio.md) před provedením tohoto článku.
+DataTips poskytují pohodlný způsob, jak zobrazit informace o proměnných ve svém programu během ladění. DataTips fungovat pouze v režimu pozastavení a pouze s proměnnými, které jsou v aktuálním oboru spuštění. Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprostou začátečníky](../debugger/debugging-absolute-beginners.md) a [techniky a nástroje pro ladění](../debugger/write-better-code-with-visual-studio.md) .
 
 ## <a name="work-with-datatips"></a>Práce s DataTips
 
@@ -46,7 +46,7 @@ Aby DataTip transparentní zobrazíte kód, který je pod ním při DataTip, sti
 
 Pokud chcete připnout DataTip tak, aby zůstane otevřený, vyberte na ikonu připínáčku **připojit ke zdroji** ikonu.
 
-![Připnout DataTip](../debugger/media/dbg-tips-data-tips-pinned.png "připnout DataTip")
+![Připnout DataTip](../debugger/media/dbg-tips-data-tips-pinned.png "PIN kód DataTip")
 
 Připnuté DataTip můžete přesunout přetažením kolem okna kódu. Ikoně připínáčku se zobrazí ve hřbetu vedle řádku, který DataTip je připnutá k.
 
@@ -84,7 +84,7 @@ Používání tipů DataTips rozbalte pole, struktury nebo objektu pro zobrazen�
 
 Rozbalte objekt v datovém tipu zobrazíte jeho prvky, najeďte myší na šipky rozbalte před názvy položek zobrazení prvků ve formuláři stromu. Připnuté DataTip, vyberte **+** před proměnnou název a potom rozbalte stromovou strukturu.
 
-![Rozbalte DataTip](../debugger/media/dbg-tour-data-tips.png "rozbalte DataTip")
+![Rozbalení DataTip](../debugger/media/dbg-tour-data-tips.png "Rozbalení DataTip")
 
 Chcete-li přesunout nahoru a dolů v rozšířené zobrazení, můžete použít myši nebo klávesy se šipkami na klávesnici.
 
@@ -94,11 +94,26 @@ Můžete také připnout rozbalené položky do definovaného datového tipu uk�
 
 Upravte hodnotu proměnné nebo element v DataTip, vyberte hodnotu, zadejte novou hodnotu a stiskněte klávesu **Enter**. Výběr je zakázaný pro hodnoty jen pro čtení.
 
+::: moniker range=">= vs-2019"
+
+## <a name="pin-properties-in-datatips-supported-in-visual-studio-2019-version-164-preview-3-or-higher"></a>Vlastnosti PIN kódu v datových tipech (podporované ve verzi Visual Studio 2019 verze 16,4 Preview 3 nebo vyšší)
+
+> [!NOTE]
+> Tato funkce je podporovaná pro .NET Core 3,0 nebo vyšší.
+
+V datatipech můžete pomocí nástroje **Pinnable Properties** rychle zkontrolovat objekty podle jejich vlastností.  Chcete-li použít tento nástroj, najeďte myší na vlastnost a vyberte ikonu připnutí, která se zobrazí, nebo klikněte pravým tlačítkem myši a v výsledné místní nabídce vyberte možnost **připnout člena jako oblíbenou** .  Tato vlastnost se zobrazí v horní části seznamu vlastností objektu a název vlastnosti a hodnota se zobrazí v pravém sloupci DataTip.  Chcete-li odebrat vlastnost, vyberte ikonu připnutí znovu nebo v místní nabídce vyberte možnost **odepnout člen jako oblíbenou** .
+
+![Připnutí vlastnosti v DataTip](../debugger/media/basic-pin-datatip.gif "Připnutí vlastnosti v DataTip")
+
+Při zobrazení seznamu vlastností objektu v DataTip můžete také přepínat názvy vlastností a odfiltrovat připnuté vlastnosti.  Přístup k některé možnosti získáte tak, že kliknete pravým tlačítkem myši na řádek obsahující vlastnost a vyberete možnost **Zobrazit pouze připnuté členy** nebo **Skrýt připnuté názvy členů v možnostech hodnot** v místní nabídce.
+
+::: moniker-end
+
 ## <a name="visualize-complex-data-types"></a>Vizualizujte komplexních datových typů
 
 Ikony lupy vedle proměnné nebo element v datovém tipu znamená, že jedna nebo více [vizualizéry](../debugger/create-custom-visualizers-of-data.md), například [Vizualizátor textu](../debugger/string-visualizer-dialog-box.md), jsou k dispozici pro proměnnou. Vizualizéry zobrazení informací lépe vystihuje, někdy grafické způsobem.
 
-Chcete-li zobrazit element pomocí výchozí vizualizér pro typ dat, vyberte ikonu lupy ![Vizualizéru ikonu](../debugger/media/dbg-tips-visualizer-icon.png "Vizualizéru ikonu"). Vyberte šipku vedle ikony lupy vyberte ze seznamu vizualizéry datového typu.
+Chcete-li zobrazit prvek s použitím výchozího Vizualizér pro datový typ, vyberte ![ikonu](../debugger/media/dbg-tips-visualizer-icon.png "Ikona Vizualizátoru")lupy ikona zvětšovacího skla. Vyberte šipku vedle ikony lupy vyberte ze seznamu vizualizéry datového typu.
 
 ## <a name="add-a-variable-to-a-watch-window"></a>Přidání proměnné okno kukátka
 
@@ -124,7 +139,7 @@ Exportovat DataTips do souboru XML, který můžete sdílet nebo upravovat pomoc
 
 ## <a name="see-also"></a>Viz také:
 - [Co je ladění?](../debugger/what-is-debugging.md)
-- [Nástroje a techniky ladění](../debugger/write-better-code-with-visual-studio.md)
+- [Techniky a nástroje ladění](../debugger/write-better-code-with-visual-studio.md)
 - [První pohled na ladění](../debugger/debugger-feature-tour.md)
 - [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)
 - [Okna Kukátko a Rychlé kukátko](../debugger/watch-and-quickwatch-windows.md)
