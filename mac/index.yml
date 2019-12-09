@@ -1,127 +1,161 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Dokumentace k sadě Visual Studio 2019 for Mac
+### YamlMime:Hub
+title: Dokumentace k sadě Visual Studio pro Mac
+summary: Přečtěte si, jak v sadě Visual Studio pro Mac vyvíjet aplikace a hry pro iOS, Android a web pomocí .NET.
+brand: visual-studio
 metadata:
-  description: V tomto článku se seznámíte s funkcemi Visual Studio pro Mac.
+  title: Dokumentace k sadě Visual Studio pro Mac | Microsoft Docs
+  description: Tento článek představuje funkce sady Visual Studio pro Mac.
   author: asb3993
   ms.author: amburns
-  ms.date: 08/08/2019
-  ms.topic: landing-page
-  ms.prod: visual-studio-mac
-  ms.technology: vs-ide-general
-sections:
-  - title: Začínáme s Visual Studio pro Mac
+  ms.date: 09/18/2019
+  ms.topic: hub-page
+  ms.openlocfilehash: a5fbbf15cc9d753ef5c47a584ac25a9ca7ef7ca8
+  ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74829950"
+highlightedContent:
+  items:
+  - title: Instalace sady Visual Studio pro Mac
+    itemType: download
+    url: ~/installation.md
+  - title: Prohlídka sady Visual Studio pro Mac
+    itemType: overview
+    url: ~/ide-tour.md
+  - title: Zpráva k vydání verze sady Visual Studio pro Mac
+    itemType: whats-new
+    url: https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes
+  - title: Zlepšete své schopnosti při vývoji
+    itemType: learn
+    url: /learn/
+productDirectory:
+  title: Co je možné sestavovat?
+  items:
+  - title: ASP.NET Core
+    imageSrc: https://docs.microsoft.com/media/logos/logo_NETcore.svg
+    links:
+    - url: ~/net-core-support.md
+      text: Podpora platformy .NET Core
+    - url: ~/asp-net-core.md
+      text: Začínáme s platformou .NET Core
+    - url: https://docs.microsoft.com/aspnet/core/?view=aspnetcore-2.1#build-web-apis-and-web-ui-using-aspnet-core-mvc
+      text: Dokumentace k ASP.NET
+  - title: Azure
+    imageSrc: https://docs.microsoft.com/media/logos/logo_azure.svg
+    links:
+    - url: ~/azure-functions.md
+      text: Úvod do Azure Functions
+    - url: ~/azure-functions-lab.md
+      text: Kurz Azure Functions
+  - title: Unity
+    imageSrc: https://docs.microsoft.com/media/logos/logo_unity.svg
+    links:
+    - url: ~/unity-tools.md
+      text: Přehled platformy Unity
+    - url: ~/setup-vsmac-tools-unity.md
+      text: Nastavení platformy Unity a sady Visual Studio pro Mac
+    - url: ~/unity-walkthrough.md
+      text: Začínáme s tvorbou her pomocí platformy Unity
+  - title: Xamarin
+    imageSrc: https://docs.microsoft.com/media/logos/logo_xamarin.svg
+    links:
+    - url: ~/xamarin.md
+      text: Vývoj mobilních aplikací v jazyce Xamarin v sadě Visual Studio pro Mac
+    - url: https://docs.microsoft.com/xamarin/cross-platform/get-started/introduction-to-mobile-development
+      text: Co je Xamarin?
+    - url: https://docs.microsoft.com/xamarin/get-started/quickstarts/single-page?pivots=macos
+      text: Začínáme s Xamarinem
+tools:
+  title: Jazyky
+  summary: V sadě Visual Studio pro Mac můžete psát kód v jazyce C#, F#, Razor, HTML5, CSS, Javascript a Typescript, XAML a XML.
+  items:
+  - title: C#
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Csharp.svg
+    url: /dotnet/csharp
+  - title: F#
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Fsharp.svg
+    url: /dotnet/fsharp
+  - title: JavaScript
+    imageSrc: https://docs.microsoft.com/media/logos/logo_js.svg
+    url: ~/javascript.md
+  - title: TypeScript
+    imageSrc: https://docs.microsoft.com/media/logos/logo_TS.svg
+    url: ~/javascript.md
+  - title: HTML/Razor
+    imageSrc: https://docs.microsoft.com/media/logos/logo_html5.svg
+    url: ~/razor.md
+conceptualContent:
+  title: Začínáme
+  items:
+  - title: Začínáme se sadou Visual Studio pro Mac
+    links:
+    - url: ~/ide-tour.md
+      itemType: overview
+      text: Prohlídka integrovaného vývojového prostředí (IDE)
+    - url: ~/version-control.md
+      itemType: overview
+      text: Otevření kódu z úložiště
+    - url: ~/projects-and-solutions.md
+      itemType: overview
+      text: Práce s projekty a řešeními
+    - url: ~/source-editor.md
+      itemType: overview
+      text: Psaní kódu
+    - url: ~/debugging.md
+      itemType: overview
+      text: Ladění kódu
+    - url: ~/compiling-and-building.md
+      itemType: overview
+      text: Kompilace a sestavení projektů
+    - url: ~/install-preview.md
+      itemType: download
+      text: Instalace verze Preview
+    - url: ~/update.md
+      itemType: download
+      text: Aktualizace integrovaného vývojového prostředí (IDE)
+  - title: Přizpůsobení vlastním požadavkům
+    links:
+    - url: ~/signing-in.md
+      itemType: get-started
+      text: Přihlášení
+    - url: ~/customizing-the-ide.md
+      itemType: get-started
+      text: Přizpůsobení integrovaného vývojového prostředí
+    - url: ~/keyboard-shortcuts.md
+      itemType: get-started
+      text: Používání klávesových zkratek
+    - url: ~/editorconfig.md
+      itemType: get-started
+      text: Nastavení souboru EditorConfig
+  - title: Další informace
+    links:
+    - url: https://visualstudio.microsoft.com/vs/support/mac/
+      itemType: reference
+      text: Podpora pro sadu Visual Studio pro Mac – nejčastější dotazy
+    - url: https://visualstudio.microsoft.com/vs/pricing/
+      itemType: reference
+      text: Ceny a předplatná
+    - url: https://visualstudio.microsoft.com/vs/compare/
+      itemType: reference
+      text: Srovnání edicí
+    - url: https://my.visualstudio.com/Downloads?q=Visual%20Studio%20for%20Mac
+      itemType: reference
+      text: Přístup pro předplatitele 
+additionalContent:
+  sections:
+  - title: Úkoly
     items:
-      - type: paragraph
-        text: Nainstalujte a získejte informace o integrovaném vývojovém prostředí (IDE) Visual Studio pro Mac.
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: ~/installation.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            title: Instalace sady Visual Studio pro Mac
-          - href: ~/ide-tour.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_vs-mac.svg'
-            title: Tour Visual Studio for Mac
-          - href: 'https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes'
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_whats-new.svg'
-            title: Zpráva k vydání verze sady Visual Studio pro Mac
-  - title: Jaké aplikace můžu sestavit?
-    items:
-      - type: paragraph
-        text: 'Díky Visual Studio pro Mac můžete vytvářet weby pomocí ASP.NET Core a aplikací pomocí .NET Core, her s Unity a Mobile Apps pro Android a iOS pomocí Xamarin. Azure je možné začlenit do všech aplikací.'
-      - type: list
-        style: icon48
-        items:
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_NETcore.svg'
-            text: ASP.NET Core
-            href: ~/asp-net-core.md
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_azure.svg'
-            text: Azure
-            href: ~/azure-workload.md
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_unity.svg'
-            text: Unity
-            href: ~/unity-tools.md
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_xamarin.svg'
-            text: Xamarin
-            href: /xamarin/
-  - title: Jaké jazyky můžu použít?
-    items:
-      - type: paragraph
-        text: 'Pomocí Visual Studio pro Mac můžete zapisovat do C#, F#, Razor, HTML5, CSS, JavaScript a TypeScript, XAML a XML.'
-      - type: list
-        style: icon48
-        items:
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_Csharp.svg'
-            text: 'C#'
-            href: /dotnet/csharp/
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_Fsharp.svg'
-            text: 'F#'
-            href: /dotnet/fsharp/
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_js.svg'
-            text: JavaScript
-            href: ~/javascript.md
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_TS.svg'
-            text: TypeScript
-            href: ~/javascript.md
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_html5.svg'
-            text: HTML/Razor
-            href: ~/razor.md
-  - title: Psaní kódu pomocí Visual Studio pro Mac
-    items:
-      - type: paragraph
-        text: 'Přečtěte si další informace o použití sady Visual Studio k psaní, kompilování, ladění a ukládání vašeho kódu.'
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: ~/source-editor.md
-            html: '<p>IntelliSense, refaktoring a zvýrazňování syntaxe pro oblíbený jazyk.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-edit.svg'
-            title: Psaní kódu
-          - href: ~/compiling-and-building.md
-            html: <p>Nakonfigurujte kompilátor a sestavte svoji aplikaci.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_build.svg'
-            title: Kompilace a sestavení
-          - href: ~/debugging.md
-            html: '<p>Spusťte aplikaci v ladicím programu, abyste mohli prozkoumat problémy.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_debug.svg'
-            title: Ladění
-          - href: ~/version-control.md
-            html: '<p>Přístup k úložištím zdrojů Azure DevOps, Git nebo subverze</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_pull-request.svg'
-            title: Správa verzí
-  - title: Potřebuji další podrobnější informace
-    items:
-      - type: paragraph
-        text: Odkazy na další užitečný obsah
-      - type: list
-        style: unordered
-        items:
-          - html: '<a href="https://visualstudio.microsoft.com/vs/support/mac/">Podpora Visual Studio pro Mac – Nejčastější dotazy</a>'
-          - html: '<a href="https://visualstudio.microsoft.com/vs/pricing/">Ceny a odběry</a>'
-          - html: '<a href="https://visualstudio.microsoft.com/vs/compare/">Porovnat edice</a>'
-          - html: '<a href="https://my.visualstudio.com/Downloads?q=Visual%20Studio%20for%20Mac">Přístup pro předplatitele (včetně starších souborů ke stažení)</a>'
-          - html: '<a href="https://code.visualstudio.com">Visual Studio Code</a>'
+    - title: Vývoj
+      summary: Intellisense, refaktoring a zvýraznění syntaxe pro váš oblíbený jazyk
+      url: ~/source-editor.md
+    - title: Sestavení
+      summary: Konfigurace kompilátoru a sestavení aplikace
+      url: ~/compiling-and-building.md
+    - title: Ladit
+      summary: Spuštění aplikace v ladicím programu za účelem prozkoumání problémů
+      url: ~/debugging.md
+    - title: Správa verzí
+      summary: Sdílení kódu pomocí technologií pro správu verzí, jako jsou Git a Subversion
+      url: ~/version-control.md
+  footer: '[Blogy](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/visualstudiomac) - [Hlášení problémů](~/report-a-problem.md) - [Developer Community](https://developercommunity.visualstudio.com/content/problem/post.html?space=41)'

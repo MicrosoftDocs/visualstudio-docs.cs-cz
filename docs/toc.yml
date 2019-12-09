@@ -1403,28 +1403,6 @@
           href: 'https://visualstudio.microsoft.com/license-terms/'
         - name: Životní cyklus podpory a aktualizace
           href: /visualstudio/productinfo/vs-servicing-vs/
-    - name: Hlášení problémů
-      items:
-        - name: Postup nahlášení problému v sadě Visual Studio
-          href: ide/how-to-report-a-problem-with-visual-studio.md
-        - name: Nahlášení problémových stavů a nejčastější dotazy
-          displayName: Developer Community
-          href: ide/report-a-problem.md
-        - name: Zvýšení pravděpodobnosti vyřešení problému s výkonem
-          href: ide/how-to-increase-chances-of-performance-issue-being-fixed.md
-        - name: Vytváření minimálních výpisů pro proces sady Visual Studio se všemi zásobníky volání
-          displayName: Create minidumps with call stacks
-          href: ide/report-a-problem-minidumps.md
-        - name: Vytváření protokolů k problémům s MSBuild
-          displayName: Create logs for MSBuild problems
-          href: ide/msbuild-logs.md
-        - name: Shromažďování trasovacích protokolů ETL pomocí nástroje PerfView
-          displayName: ETL trace with PerfView
-          href: ide/report-a-problem-perfview.md
-    - name: Navrhnout funkci pro sadu Visual Studio
-      href: ide/suggest-a-feature.md
-    - name: Ochrana osobních údajů komunity vývojářů
-      href: ide/developer-community-privacy.md
     - name: Program Zlepšování softwaru a služeb na základě zkušeností uživatelů
       items:
         - name: Přehled
@@ -1434,6 +1412,25 @@
           href: ide/diagnostic-data-collection.md
     - name: Prostředky pro odstraňování chyb integrovaného vývojového prostředí (IDE)
       href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
-    - name: Zpětná vazba
-      displayName: Feedback
+- name: Váš názor
+  items:
+    - name: Přehled
       href: ide/feedback-options.md
+    - name: Nahlášení problému
+      items:
+        - name: Jak nahlásit problém
+          href: ide/how-to-report-a-problem-with-visual-studio.md
+        - name: Nahlášení problémových stavů a nejčastější dotazy
+          href: ide/report-a-problem.md
+        - name: Urychlení opravy problémů s výkonem
+          href: ide/how-to-increase-chances-of-performance-issue-being-fixed.md
+        - name: Vytváření minimálních výpisů pomocí zásobníku volání
+          href: ide/report-a-problem-minidumps.md
+        - name: Vytváření protokolů k problémům s MSBuild
+          href: ide/msbuild-logs.md
+        - name: Shromažďování trasovacích protokolů ETL pomocí nástroje PerfView
+          href: ide/report-a-problem-perfview.md
+    - name: Navržení funkce
+      href: ide/suggest-a-feature.md
+    - name: Ochrana osobních údajů komunity vývojářů
+      href: ide/developer-community-privacy.md
