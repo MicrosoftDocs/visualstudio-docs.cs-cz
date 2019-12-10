@@ -46,6 +46,8 @@
           href: using-breakpoints.md
         - name: Řešení potíží se zarážkami
           href: troubleshooting-breakpoints.md
+        - name: 'Řešení potíží s datovými zarážkami v C#'
+          href: troubleshoot-data-breakpoint-errors.md
     - name: Kontrola dat
       items:
         - name: Kontrola dat v oknech ladicího programu

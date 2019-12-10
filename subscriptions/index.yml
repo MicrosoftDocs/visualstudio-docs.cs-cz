@@ -1,0 +1,118 @@
+### YamlMime:Hub
+title: Dokumentace k předplatným sady Visual Studio
+summary: K výhodám předplatných sady Visual Studio patří přístup k vývojářským nástrojům, cloudovým službám a softwaru, školením a podpoře potřeb pro vývoj a testování.
+brand: visual-studio
+metadata:
+  title: Předplatná sady Visual Studio
+  description: Předplatná sady Visual Studio jsou komplexní sadou prostředků, které vám umožní vytvářet, nasazovat a spravovat skvělé aplikace pro vaše preferované platformy a zařízení, včetně platforem Windows, iOS, Android a Linux. K výhodám předplatných patří přístup k vývojářským nástrojům, cloudovým službám a softwaru, školením a podpoře potřeb pro vývoj a testování.
+  ms.topic: hub-page
+  author: evanwindom
+  ms.author: lank
+  manager: lank
+  ms.date: 12/04/2019
+  ms.openlocfilehash: bde855a1550f304df07c22262d7cb07094b5bc9e
+  ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 12/06/2019
+  ms.locfileid: "74883848"
+highlightedContent:
+  items:
+  - title: Novinky v předplatných sady Visual Studio
+    itemType: whats-new
+    url: ~/whats-new-in-subscriptions.md
+  - title: Jak používat portál pro předplatitele
+    itemType: how-to-guide
+    url: ~/using-the-subscriber-portal.md
+  - title: Jak používat portál pro správce
+    itemType: how-to-guide
+    url: ~/using-admin-portal.md
+conceptualContent:
+  title: Začínáme
+  items:
+  - title: Využívání výhod
+    links:
+    - text: Kredit Azure
+      url: ~/vs-azure.md
+      itemType: get-started
+    - text: Software ke stažení
+      url: ~/software-download-list.md
+      itemType: get-started
+    footerLink:
+      url: ~/vs-azure.md
+      text: Další informace
+  - title: Oblíbené zdroje
+    links:
+    - text: Porovnání možností a cen
+      url: https://visualstudio.microsoft.com/vs/pricing
+      itemType: overview
+    - text: Podpora správy a předplatných sady Visual Studio
+      url: https://visualstudio.microsoft.com/support/support-overview-vs
+      itemType: overview
+  - title: Přístup k portálu předplatných
+    links:
+    - text: Předplatitelé
+      url: https://my.visualstudio.com/
+      itemType: get-started
+    - text: Správci
+      url: https://manage.visualstudio.com/
+      itemType: get-started
+tools:
+  title: Dostupné produkty
+  summary: 'Toto jsou jenom některé z produktů, které jsou dostupné prostřednictvím předplatných sady Visual Studio:'
+  items:
+  - title: Azure
+    imageSrc: https://docs.microsoft.com/media/logos/logo_azure.svg
+    url: /azure/
+  - title: Visual Studio – sada IDE
+    imageSrc: https://docs.microsoft.com/media/logos/logo_vs-ide.svg
+    url: /visualstudio/windows/
+  - title: Azure DevOps Services
+    imageSrc: https://docs.microsoft.com/media/logos/logo_vs-team-services.svg
+    url: /azure/devops/
+  - title: Visual Studio Code
+    imageSrc: https://docs.microsoft.com/media/logos/logo_vs-code.svg
+    url: https://code.visualstudio.com/docs
+  - title: Visual Studio for Mac
+    imageSrc: https://docs.microsoft.com/media/logos/logo_vs-mac.svg
+    url: /visualstudio/mac/
+  - title: Visual Studio App Center
+    imageSrc: https://docs.microsoft.com/media/logos/logo_vs-mobile-center.svg
+    url: /appcenter/
+additionalContent:
+  sections:
+  - title: Podrobnosti o výhodách
+    summary: 'Vaše předplatné může zahrnovat tyto výhody:'
+    items:
+    - title: Vývojářské nástroje
+      links:
+      - text: Visual Studio
+        url: ~/vs-ide-benefit.md
+        note: (včetně sady Visual Studio pro Mac)
+    - title: Cloud Services
+      links:
+      - text: Vývoj/testování Azure
+        url: ~/vs-azure-payg.md
+      - text: Visual Studio App Center
+        url: ~/vs-visual-studio-app-center.md
+      - text: Azure DevOps Server a licence CAL
+        url: ~/vs-vsts.md
+      - text: Předplatné pro vývojáře pro Office 365
+        url: ~/vs-office-dev.md
+      - text: Vývojářský účet pro Windows
+        url: ~/vs-windows-dev.md
+    - title: Školení a podpora
+      links:
+      - text: LinkedIn Premium
+        url: ~/vs-linkedin-learning.md
+        note: (obchod, technologie a kreativita)
+      - text: Pluralsight
+        url: ~/vs-pluralsight.md
+        note: (cloud, návrh, mobilita a data)
+      - text: DataCamp
+        url: ~/vs-datacamp.md
+        note: (datové vědy a umělá inteligence)
+      - text: Incidenty profesionální technické podpory Microsoftu
+        url: ~/vs-tech-support.md
+      - text: Komunita Azure
+        url: ~/vs-azure-community.md
