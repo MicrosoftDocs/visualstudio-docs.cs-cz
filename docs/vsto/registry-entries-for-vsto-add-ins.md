@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 243766d78f25491f465a712b37dc5fab16c8a985
-ms.sourcegitcommit: 916bbe1d77c9253424daa86c71c40f5e1ec74400
+ms.openlocfilehash: 464820258e5c20474d74f92eb108344deccc49f1
+ms.sourcegitcommit: 0a8855572c6c88f4b2ece232c04aa124fbd9cec3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74945074"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955046"
 ---
 # <a name="registry-entries-for-vsto-add-ins"></a>Položky registru pro doplňky VSTO
   Pokud nasazujete doplňky VSTO vytvořené pomocí sady Visual Studio, musíte vytvořit konkrétní sadu položek registru. Tyto položky registru obsahují informace, které umožní aplikaci systém Microsoft Office vyhledat a načíst doplněk VSTO.
@@ -50,7 +50,7 @@ ms.locfileid: "74945074"
  Pokud použijete ClickOnce k nasazení doplňku VSTO, doplněk VSTO se dá zaregistrovat jenom pro aktuálního uživatele. To je způsobeno tím, že ClickOnce podporuje pouze vytváření klíčů v rámci **HKEY_CURRENT_USER**. Pokud chcete zaregistrovat doplněk VSTO pro všechny uživatele v počítači, musíte k nasazení doplňku VSTO použít Instalační služba systému Windows. Další informace o těchto typech nasazení naleznete v tématu [nasazení řešení pro systém Office pomocí technologie ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md) a [nasazení řešení pro systém Office pomocí Instalační služba systému Windows](../vsto/deploying-an-office-solution-by-using-windows-installer.md).
 
 ## <a name="registry-entries"></a>Položky registru
- Požadované položky registru doplňku VSTO jsou umístěné v následujících klíčích registru, kde se *kořen* **HKEY_CURRENT_USER** nebo **HKEY_LOCAL_MACHINE** v závislosti na tom, jestli je instalace vázaná na uživatele nebo na počítač.
+ Požadované položky registru doplňku VSTO jsou umístěné v následujících klíčích registru, kde se *kořen* **HKEY_CURRENT_USER** nebo **HKEY_LOCAL_MACHINE** v závislosti na tom, jestli je instalace pro aktuálního uživatele nebo pro všechny uživatele.
 
 |Aplikace Office|Konfigurační cesta|
 |------------------|------------------|
@@ -58,7 +58,9 @@ ms.locfileid: "74945074"
 |Všechny ostatní|*Root*\Software\Microsoft\Office\\*název aplikace Office*\Addins\\*ID doplňku*|
 
 > [!NOTE]
-> Pokud instalační program cílí na 64 bitových oken, měl by obsahovat dvě položky registru, jednu pod *kořenovou*\Software\Microsoft a jednu pod *kořenovou*podregistru \Software\\**wow6432node**\Microsoft.  Důvodem je, že uživatelé můžou na počítači používat 32 nebo 64 bitové verze systému Office.
+> Pokud instalační služba cílí na všechny uživatele v 64 Windows, doporučujeme, aby obsahovala dvě položky registru, jednu pod HKEY_LOCAL_MACHINE \Software\Microsoft a jednu v podregistru HKEY_LOCAL_MACHINE \Software\\**Wow6432Node**\Microsoft. Důvodem je, že uživatelé můžou na počítači používat 32 nebo 64 bitové verze systému Office.
+>
+>Pokud instalační program cílí na aktuálního uživatele, není nutné ho instalovat do WOW6432Node, protože je sdílená cesta HKEY_CURRENT_USER \Software.
 >
 >Další informace najdete v části [32 a 64 data aplikace v registru](https://docs.microsoft.com/windows/win32/sysinfo/32-bit-and-64-bit-application-data-in-the-registry) .
 

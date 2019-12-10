@@ -1,52 +1,52 @@
 ---
-title: Řešení potíží
-description: Běžné problémy a řešení pro Visual Studio pro Mac.
+title: Řešení problémů
+description: Běžné problémy a řešení pro Visual Studio pro Mac uživatele.
 ms.topic: troubleshooting
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: CE860D79-E29E-4B93-B094-BE74B35FC1C2
-ms.openlocfilehash: 3a5ea59e6f98891cd113ccad9a74038ca52cccf8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6073e0bf2a601bf5183798a1df4fd835d0b93427
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62987019"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985161"
 ---
-# <a name="troubleshooting"></a>Poradce při potížích
+# <a name="troubleshooting"></a>Odstraňování problémů
 
-## <a name="viewing-logs-in-visual-studio-for-mac"></a>Zobrazení protokolů v sadě Visual Studio pro Mac
+## <a name="viewing-logs-in-visual-studio-for-mac"></a>Zobrazení protokolů v Visual Studio pro Mac
 
-Protokoly můžete najít tak, že přejdete na **Nápověda > otevřít adresář protokolu** položku nabídky, jak je znázorněno níže:
+Protokoly najdete tak, že přejdete do nabídky > Otevřete položku v nabídce **adresář protokolu** , jak je znázorněno níže:
 
-![Otevřete položku nabídky adresář protokolu](media/troubleshooting-image1.png)
+![Otevřít položku nabídky adresáře protokolu](media/troubleshooting-image1.png)
 
-## <a name="viewing-exceptions"></a>Zobrazení výjimky
+## <a name="viewing-exceptions"></a>Zobrazení výjimek
 
-Při zachycení výjimky, zobrazí se bublinu výjimky. Chcete-li zobrazit další podrobnosti, vyberte **zobrazit podrobnosti o** tlačítka:
+Při zachycení výjimky se zobrazí bublina výjimky. Pokud chcete zobrazit další podrobnosti, vyberte tlačítko **Zobrazit podrobnosti** :
 
 ![Zobrazit další podrobnosti o výjimce](media/troubleshooting-image2.png)
 
-Zobrazí se **zobrazit podrobnosti** dialogového okna, poskytuje další informace týkající se výjimky:
+Tím se zobrazí dialogové okno **Zobrazit podrobnosti** , ve kterém najdete další informace týkající se výjimky:
 
-![Dialogové okno pro zobrazení podrobností](media/troubleshooting-image3.png)
+![Zobrazit dialog podrobností](media/troubleshooting-image3.png)
 
-Důležité části dialogového okna, která jsou číslována výše jsou podrobně popsány v níže:
+Důležité části dialogu, které jsou očíslovány nahoře, jsou podrobněji popsány níže:
 
-1. Typ výjimky, které zobrazuje úplný název typu výjimky, která je sledována.
-2. Zpráva výjimky zobrazena hodnota vlastnost zprávy tohoto objektu výjimky.
-3. Vnitřní typ výjimky, které zobrazuje úplný název typu výjimky pro aktuálně vybranou výjimku ve stromovém zobrazení vnitřní výjimka
-4. Zpráva o vnitřní výjimce zobrazí hodnotu vlastnosti zprávy vybranou výjimku ve stromovém zobrazení vnitřní výjimka.
-5. Zobrazení trasování zásobníku. To lze sbalit pomocí šipky zpřístupnění a obsahuje položky rámce zásobníku.
-6. Příklad položky neuživatelský kód.
-7. Příklad položky kódu uživatele.
-8. Zobrazení vlastností, které zobrazuje všechny vlastnosti a pole výjimky. To lze sbalit pomocí šipky zpřístupnění.
-9. Stromové zobrazení popisu vnitřní výjimky. V tomto zobrazení pomocí klávesnice šipky nahoru/dolů nebo pomocí myši nebo trackpadu vyberte vnitřní výjimky.
-10. Ve výchozím nastavení, je nastavené na co **ladit jenom kód projektu** nastavena možnost v nastavení ladicího programu. Zaškrtnutím tohoto políčka vám umožní všechny neuživatelský kód sbalit do jednoho řádku v stacktrace.
-11. Tlačítka kopírování zkopírujete `exception.ToString()` výstup do schránky.
+1. Typ výjimky, která zobrazuje úplný název typu výjimky, který je pozorován.
+2. Zpráva o výjimce, která zobrazuje hodnotu vlastnosti zprávy objektu Exception.
+3. Typ vnitřní výjimky, který zobrazuje úplný název typu výjimky pro aktuálně vybranou výjimku v zobrazení stromu vnitřní výjimky.
+4. Zpráva o vnitřní výjimce zobrazuje hodnotu vlastnosti zpráva vybrané výjimky v zobrazení stromu vnitřních výjimek.
+5. Zobrazení trasování zásobníku. Dá se sbalit pomocí šipky oznámení a obsahuje položky rámců zásobníku.
+6. Příklad neuživatelových záznamů kódu.
+7. Příklad záznamů uživatelského kódu.
+8. Zobrazení vlastností, které zobrazuje všechny vlastnosti a pole výjimky. Dá se sbalit pomocí šipky pro zveřejnění.
+9. Zobrazení stromu vnitřních výjimek. V tomto zobrazení vyberte vnitřní výjimky pomocí šipek nahoru a dolů nebo pomocí myši nebo trackpadu.
+10. Ve výchozím nastavení je tato možnost nastavena na hodnotu možnosti **ladit pouze kód projektu** v nastavení ladicího programu. Zaškrtnutí tohoto políčka umožní, aby se všechny neuživatelský kód v trasování zásobníku sbalovat na jeden řádek.
+11. Tlačítko pro kopírování ke zkopírování výstupu `exception.ToString()` do schránky.
 
-Všimněte si, že některé z těchto oddílů se zobrazují pouze pokud výjimka obsahuje vnitřní výjimku.
+Všimněte si, že některé z těchto oddílů jsou viditelné pouze v případě, že výjimka má vnitřní výjimku.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Prostředky pro odstraňování chyb integrovaného vývojového prostředí (Visual Studio na Windows)](/visualstudio/ide/reference/resources-for-troubleshooting-integrated-development-environment-errors)
+- [Prostředky pro řešení potíží s chybami IDE (Visual Studio ve Windows)](/visualstudio/ide/reference/resources-for-troubleshooting-integrated-development-environment-errors)

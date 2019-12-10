@@ -18,12 +18,12 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 79570fe403c12c89860a67683456a3d6ca3d3f01
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: de26054894783df283d38223a59741c0500d0bc5
+ms.sourcegitcommit: 0a8855572c6c88f4b2ece232c04aa124fbd9cec3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189597"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955033"
 ---
 # <a name="whats-new-in-visual-studio-2017"></a>Novinky v sadě Visual Studio 2017
 
@@ -192,9 +192,9 @@ Aktualizovali jsme navigační prostředí, abychom vám pomohli získat od A do
 
 Další informace o nových funkcích produktivity naleznete v příspěvku na blogu [Visual Studio 2017: produktivita, výkon a partneři](https://devblogs.microsoft.com/visualstudio/visual-studio-2017-productivity-performance-and-partners/) .
 
-### <a name="visual-c"></a>Visual C++
+### <a name="visual-c"></a>Visual C++ –
 
-V aplikaci Visual Studio uvidíte několik vylepšení, jako je například distribuce C++ základních pokynů se sadou Visual Studio, aktualizace kompilátoru přidáním vylepšené podpory pro c++ 11 a C++ funkce a přidání a aktualizace funkcí v C++ Knihovna. Vylepšili jsme také výkon C++ IDE, instalační úlohy a další.
+V aplikaci Visual Studio uvidíte několik vylepšení, jako je například distribuce C++ základních pokynů se sadou Visual Studio, aktualizace kompilátoru přidáním vylepšené podpory pro c++ 11 a C++ funkce a přidání a aktualizace funkcí v C++ knihovnách. Vylepšili jsme také výkon C++ IDE, instalační úlohy a další.
 
 Také jsme opravili více než 250 chyb a nahlásili problémy v kompilátoru a nástrojích, mnoho odeslaných zákazníky prostřednictvím [komunity vývojářů C++pro ](https://developercommunity.visualstudio.com/spaces/62/index.html "Komunita vývojářů proC++").
 
@@ -258,11 +258,11 @@ Další informace najdete v tématu [ladění živých aplikací ASP.NET pomocí
 
 ## <a name="windows-app-development"></a>Vývoj aplikací pro systém Windows
 
-### <a name="universal-windows-platform"></a>Univerzální platforma Windows
+### <a name="universal-windows-platform"></a>Univerzální platforma pro Windows
 
 Univerzální platforma Windows (UWP) je aplikační platforma pro Windows 10. Můžete vyvíjet aplikace pro UWP s jenom jednou sadou rozhraní API, jedním balíčkem aplikace a jedním obchodem pro všechna zařízení s Windows 10 &ndash; PC, tablet, telefon, Xbox, HoloLens, Surface Hub a další. UWP podporuje různé velikosti obrazovky a různé modely interakce, ať už se jedná o dotykové ovládání, myš a klávesnici, herní kontroler nebo pero. V jádru aplikací pro UWP je to, že uživatelé chtějí, aby byli mobilními zařízeními na všech svých zařízeních a aby chtějí používat zařízení, které je pro úkol nejpohodlnější nebo produktivní.
 
-![Univerzální platforma Windows](../cross-platform/media/uwp_coreextensions.png)
+![Univerzální platforma pro Windows](../cross-platform/media/uwp_coreextensions.png)
 
 Pokud chcete vytvořit aplikaci Univerzální platforma Windows pro zařízení C#s Windows 10 C++, vyberte preferovaný vývojový jazyk&mdash;z, Visual Basic, nebo JavaScript&mdash;. Visual Studio 2017 poskytuje šablonu aplikace UWP pro každý jazyk, který umožňuje vytvořit jeden projekt pro všechna zařízení. Po dokončení práce můžete balíček aplikace vyvolat a odeslat ho Microsoft Store ze sady Visual Studio, aby bylo možné aplikaci zákazníkům na jakémkoli zařízení s Windows 10 získat na maximum.
 
@@ -317,7 +317,7 @@ Další informace najdete v [úvodu App Center: sestavování, testování, dist
 
 ## <a name="cross-platform-development"></a>Vývoj pro různé platformy
 
-### <a name="redgate-data-tools"></a>Nástroje pro data Redgate
+### <a name="redgate-data-tools"></a>Datové nástroje Redgate
 
 Pro rozšiřování funkcí DevOps na vývoj databází SQL Server jsou nyní dostupné nástroje Redgate Data Tools v aplikaci Visual Studio.
 
@@ -354,7 +354,7 @@ Další informace najdete na stránce [Visual Studio Tools for Unity](../cross-p
 
 ## <a name="ai-development"></a>Vývoj AI
 
-### <a name="visual-studio-tools-for-ai"></a>Visual Studio Tools pro AI
+### <a name="visual-studio-tools-for-ai"></a>Visual Studio Tools for AI
 
 **Novinka v 15,5**: Využijte funkce produktivity sady Visual Studio k urychlení inovací AI ještě dnes. Používejte integrované funkce editoru kódu, jako je zvýrazňování syntaxe, IntelliSense a automatické formátování textu. V místním prostředí můžete interaktivně testovat aplikaci hloubkového učení pomocí podrobného ladění místních proměnných a modelů.
 
@@ -362,7 +362,7 @@ Další informace najdete na stránce [Visual Studio Tools for Unity](../cross-p
 
 Další informace najdete na stránce [Visual Studio Tools for AI](../ai/about-ai-tools.md) .
 
-## <a name="whats-next"></a>Co dál
+## <a name="whats-next"></a>A co dál?
 
 Visual Studio 2017 aktualizujeme často o nové funkce, které můžou zlepšit vývojové prostředí. Tady je rekapitulace některých našich nejvýznamnějších aktualizací, které jsou v experimentální verzi Preview:
 
@@ -389,6 +389,6 @@ V některých případech není zpráva dostatečně velká, aby mohla předáva
 * [Novinky v sadě Visual Studio 2017 SDK](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md)
 * [Co je nového v jazyce VisualC++](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
 * [Co je nového v jazyce C#](/dotnet/csharp/whats-new)
-* [Co je nového pro Team Foundation Server](/tfs/server/whats-new?view=vsts)
+* [Co je nového pro Team Foundation Server](/azure/devops/server/whats-new)
 * [Co je nového v Visual Studio pro Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)
 * [Co je nového v aplikaci Visual Studio 2019](whats-new-visual-studio-2019.md)

@@ -1,77 +1,77 @@
 ---
 title: Připojené služby
-description: Přidání úložiště dat Azure, ověřování a nabízená oznámení do mobilní aplikace ze sady Visual Studio pro Mac
+description: Přidání služby Azure Data Storage, ověřování a nabízených oznámení do mobilních aplikací v rámci Visual Studio pro Mac
 ms.assetid: 41CB62FF-0F39-4CE8-8917-6A77F058719F
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 11/06/2018
-ms.openlocfilehash: 7f3cf8ce9e82310a8fe2f6ab9542d3d575a30f5b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 241820de009a5118869583bbe228ecb0604f9001
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62932248"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985286"
 ---
-# <a name="connected-services-walkthrough"></a>Názorný postup připojené služby
+# <a name="connected-services-walkthrough"></a>Návod k připojeným službám
 
-Připojené služby pracovního postupu přináší pracovními postupy Azure portal do sady Visual Studio pro Mac, takže není nutné opustit váš projekt na přidání služeb.
+Pracovní postup připojených služeb přináší Azure Portal pracovní postup do Visual Studio pro Mac, takže nemusíte mít projekt v přidávání služeb.
 
-Tento návod ukazuje, jak přidat službu back-endu Azure, která přináší datové úložiště v cloudu, ověřování a odesílání nabízených oznámení do aplikace Xamarin.Forms Přenosná knihovna tříd (PCL) napříč platformami.
+Tento návod ukazuje, jak přidat službu back-endu Azure, která přináší cloudové úložiště dat, ověřování a nabízená oznámení v aplikaci Xamarin. Forms s přenosnou knihovnou tříd (PCL) pro více platforem.
 
-1. Začněte tím, že poklikáte na **připojené služby** uzlu v řešení, kterým se zobrazí **Galerie služby**.
-  Toto je seznam všech dostupných služeb pro typ aplikace. Vyberte službu (například **mobilní back-end pomocí služby Azure App Service**) kliknutím na ni.
+1. Začněte tím, že dvakrát kliknete na uzel **připojené služby** v řešení, které přináší **galerii služeb**.
+  Toto je seznam všech dostupných služeb pro typ aplikace. Kliknutím na položku vyberte službu (například **mobilní back-end s Azure App Service**).
 
-    [![Uzel připojených služeb v sadě Visual Studio pro Mac](media/connected-services-image001-sml.png "uzel připojené služby v sadě Visual Studio pro Mac")](media/connected-services-image001.png#lightbox)
+    [![Uzel připojených služeb v Visual Studio pro Mac](media/connected-services-image001-sml.png "Uzel připojených služeb v Visual Studio pro Mac")](media/connected-services-image001.png#lightbox)
 
-2. Stránka Podrobnosti služby obsahuje popis služeb a závislosti a nainstalovat.
-  Klikněte na tlačítko **přidat** tlačítko pro přidání závislosti na aplikaci:
+2. Stránka Podrobnosti služby obsahuje popis služby a závislosti, které mají být nainstalovány.
+  Kliknutím na tlačítko **Přidat** přidáte závislosti do aplikace:
 
-    [![Mobilní back-end s využitím Azure](media/connected-services-image002-sml.png "mobilní back-end s využitím Azure")](media/connected-services-image002.png#lightbox)
+    [![Mobilní back-end s Azure](media/connected-services-image002-sml.png "Mobilní back-end s Azure")](media/connected-services-image002.png#lightbox)
 
-3. Závislostí je potřeba přidat PCL a specifické pro platformu projekty pracovat.
-  Vyberte zaškrtávací políčka pro přidání služby do jakéhokoliv projektu, který bude na něj odkazovat (přímo nebo nepřímo):
+3. Aby fungovaly, je nutné přidat závislosti do projektů PCL i pro konkrétní platformu.
+  Zaškrtněte políčka pro přidání služby do každého projektu, který bude odkazovat na něj (buď přímo, nebo nepřímo):
 
-    [![Zkontrolujte všechny projekty, které by měly odkazovat službu](media/connected-services-image003-sml.png "zkontrolovat všechny projekty, které by měly odkazovat služby")](media/connected-services-image003.png#lightbox)
+    [![Zkontroluje všechny projekty, které by měly odkazovat na službu.](media/connected-services-image003-sml.png "Zkontroluje všechny projekty, které by měly odkazovat na službu.")](media/connected-services-image003.png#lightbox)
 
-4. Zvolte **přijmout** na **přijetí licence** dialogová okna pro balíčky NuGet.
-  Můžou existovat dva dialogová okna tak, aby přijímal, jeden MobileClient a závislosti a druhý pro SQLiteStore, které jsou požadovány pro synchronizaci dat offline:
+4. V dialogových oknech **přijetí licence** pro balíčky NuGet vyberte **přijmout** .
+  Můžou existovat dvě dialogová okna, která se dají přijmout, jedna pro MobileClient a závislosti a druhá pro SQLiteStore, která se vyžaduje pro synchronizaci offline dat:
 
-    [![Přijměte licenční smlouvy](media/connected-services-image004-sml.png "přijetí licenční smlouvy")](media/connected-services-image004.png#lightbox)
+    [![Přijmout licenční smlouvy](media/connected-services-image004-sml.png "Přijmout licenční smlouvy")](media/connected-services-image004.png#lightbox)
 
-    ![Okno přijetí licence](media/connected-services-image005.png "okno přijetí licence")
+    ![Okno přijetí licence](media/connected-services-image005.png "Okno přijetí licence")
 
-5. Po přidání jsou závislosti, budete vyzváni k přihlášení pomocí účtu, který chcete použít ke komunikaci s Azure.
-  Pokud již jste přihlášeni pomocí účtu Microsoft ID, Visual Studio pro Mac se pokusí načíst vaše předplatná Azure a všechny aplikace služby k nim má přiřazené. Pokud nemáte žádné předplatné, můžete přidat pomocí registrace bezplatné zkušební verze nebo zakoupení plánu předplatného na webu Azure Portal.
+5. Po přidání závislostí se zobrazí výzva, abyste se přihlásili pomocí účtu, který chcete použít ke komunikaci s Azure.
+  Pokud jste už přihlášení pomocí ID Microsoftu, Visual Studio pro Mac se pokusí načíst vaše předplatná Azure a všechny služby App Service, které jsou k nim přidružené. Pokud nemáte žádná předplatná, můžete si ji přidat tak, že se zaregistrujete k bezplatné zkušební verzi nebo si koupíte plán předplatného v Azure Portal.
 
-6. Vyberte ze seznamu služby app service. Tato hodnota se vyplní kód šablony pro `MobileServiceClient` objekt s odpovídající adresy URL služby app Service v Azure:
+6. Vyberte ze seznamu službu App Service. Tím se naplní kód šablony `MobileServiceClient` objektu odpovídající adresou URL služby App Service v Azure:
 
-    [![Vyberte službu app service ze seznamu](media/connected-services-image006-sml.png "vyberte ze seznamu službu app service")](media/connected-services-image006.png#lightbox)
+    [![Vybrat App Service ze seznamu](media/connected-services-image006-sml.png "Vybrat App Service ze seznamu")](media/connected-services-image006.png#lightbox)
 
-    Pokud nejsou žádné služby uvedené, klikněte na tlačítko **nový** tlačítko (viz krok 9.)
+    Pokud nejsou uvedené žádné služby, klikněte na tlačítko **Nový** (viz krok 9.)
 
-7. Zkopírujte kód šablony pro `MobileServiceClient` do PCL. Umístění souboru není důležité, tak dlouho, dokud existuje pouze jedna instance.
-  Doporučený postup je vytvořit `AzureService` třídu, která zpracovává všechny Azure interakce a používá `MobileServiceClient`:
+7. Zkopírujte kód šablony `MobileServiceClient` do PCL. Umístění souboru není důležité, pokud je k dispozici pouze jedna instance.
+  Doporučený postup je vytvořit třídu `AzureService`, která zpracovává všechny interakce Azure a používá `MobileServiceClient`:
 
-    ![Zkopírujte do přístupový bod konfigurace kód](media/connected-services-image007.png "zkopírujte config kód do aplikace")
+    ![Kopírovat konfigurační kód do přístupového bodu](media/connected-services-image007.png "Kopírovat konfigurační kód do aplikace")
 
-8. Postupujte podle dokumentace v **další kroky** k přidání offline synchronizace dat, ověřování a nabízená oznámení do vaší aplikace:
+8. Podle dokumentace v části **Další kroky** přidejte data, offline synchronizaci, ověřování a nabízená oznámení do vaší aplikace:
 
-    [![Projít další kroky pokyny](media/connected-services-image008-sml.png "projít pokyny pro další kroky")](media/connected-services-image008.png#lightbox)
+    [![Projděte si pokyny k dalším krokům.](media/connected-services-image008-sml.png "Projděte si pokyny k dalším krokům.")](media/connected-services-image008.png#lightbox)
 
-9. Pokud nemáte žádné existující aplikační služby, můžete vytvořit nové služby od sady Visual Studio pro Mac.
-  Klikněte na tlačítko **nový** tlačítko v levé dolní části seznamu služeb otevřete **novou službu App Service** dialogové okno:
+9. Pokud nemáte žádné existující služby App Services, můžete v rámci Visual Studio pro Mac vytvořit nové služby.
+  Kliknutím na tlačítko **Nový** v levém dolním rohu seznamu služby otevřete dialogové okno **Nový App Service** :
 
-    [![Vytvořit novou službu app service v sadě Visual Studio pro Mac](media/connected-services-image009-sml.png "vytvořit novou službu app service v sadě Visual Studio pro Mac")](media/connected-services-image009.png#lightbox)
+    [![Vytvoření nové služby App Service v Visual Studio pro Mac](media/connected-services-image009-sml.png "Vytvoření nové služby App Service v Visual Studio pro Mac")](media/connected-services-image009.png#lightbox)
 
 Nová služba vyžaduje následující parametry:
 
-- **Název služby App service** – jedinečný název nebo id plánu.
-- **Předplatné** – předplatné chcete použít k platbám za službu
-- **Skupina prostředků** – způsob, jak nebo uspořádání všech vašich prostředků Azure pro projekt. Možnost použít existující nebo vytvořte novou. Pokud je toto první služby Azure, vytvořte novou.
-- **Plánování služby** – Určuje umístění a náklady na všechny prostředky, které ji používají. Možnost použít existující nebo vytvořte novou. Pokud je toto první služby Azure, použijte výchozí hodnotu nebo vytvořte novou úroveň free (F1).
+- **Název služby App Service** – jedinečný název nebo ID pro plán
+- **Předplatné** – předplatné, které chcete použít pro platbu za službu
+- **Skupina prostředků** – způsob nebo uspořádání všech prostředků Azure pro projekt. Možnost použít existující nebo vytvořit novou. Pokud je to vaše první služba Azure, vytvořte novou.
+- **Plán služeb** – určuje umístění a náklady na všechny prostředky, které ho používají. Možnost použít existující nebo vytvořit novou. Pokud je to vaše první služba Azure, použijte výchozí jednu nebo vytvořte novou v bezplatné úrovni (F1).
 
-Přejděte [dokumentace k Mobile apps](/azure/app-service-mobile/) Další informace.
+Další informace najdete v [dokumentaci k mobilním aplikacím](/azure/app-service-mobile/) .
 
 ## <a name="see-also"></a>Viz také:
 
-- [Připojené služby (Visual Studio na Windows)](/visualstudio/azure/vs-azure-tools-connected-services-storage)
+- [Připojené služby (Visual Studio ve Windows)](/visualstudio/azure/vs-azure-tools-connected-services-storage)

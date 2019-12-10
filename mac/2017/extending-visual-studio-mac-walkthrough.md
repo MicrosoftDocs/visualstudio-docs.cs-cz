@@ -1,46 +1,46 @@
 ---
-title: Rozšíření sady Visual Studio pro Mac návodu
-author: conceptdev
-ms.author: crdun
+title: Rozšíření Visual Studio pro Macho návodu
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 04/14/2017
 ms.technology: vs-ide-sdk
 ms.assetid: 7D00512B-9688-4D8D-87A7-F04F207E3D02
-ms.openlocfilehash: cbf0d99bd87b31484b6c74e9a6d67ac88dc5ba99
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c5b3b759b32acfc86b4b584b3f3d52298c138a2c
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62998532"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985036"
 ---
-# <a name="extending-visual-studio-for-mac-walkthrough"></a>Rozšíření sady Visual Studio pro Mac návodu
+# <a name="extending-visual-studio-for-mac-walkthrough"></a>Rozšíření Visual Studio pro Macho návodu
 
-Toto téma vás provede vytváření [jednoduché rozšíření balíčku](https://github.com/mjh4/AddIns/tree/master/DateInserter). Balíček rozšíření vytvoří nový příkaz v sadě Visual Studio pro Mac úpravy nabídky, které umožní uživateli vkládat do otevřete textový dokument aktuální datum a čas.
+Toto téma vás provede vytvořením [jednoduchého balíčku rozšíření](https://github.com/mjh4/AddIns/tree/master/DateInserter). Balíček rozšíření vytvoří nový příkaz v nabídce úprav Visual Studio pro Mac, která umožňuje uživateli vložit aktuální datum a čas do otevřeného textového dokumentu.
 
-Tento příklad používá Tvůrce Add-in. Doplněk tvůrce vytvoří novou šablonu projektu a naplní ji požadovaných souborů pro balíček naše vlastní rozšíření.
+Tento příklad používá tvůrce doplňku. Tvůrce doplňku vytvoří novou šablonu projektu a naplní ji požadovanými soubory pro náš vlastní balíček rozšíření.
 
-1. Začněte tím, že spuštění sady Visual Studio pro Mac, pokud již není otevřen:
+1. Začněte spuštěním Visual Studio pro Mac, pokud už není otevřený:
 
-   ![Visual Studio for Mac Screenshot](media/extending-visual-studio-mac-addin3.png)
+   ![Snímek obrazovky Visual Studio pro Mac](media/extending-visual-studio-mac-addin3.png)
 
-2. Nainstalujte _balíček rozšíření Maker Add-in_ pomocí Správce rozšíření. V nabídce sady Visual Studio zvolte **rozšíření...** :
+2. Nainstalujte _balíček rozšíření doplňku tvůrce doplňku_ pomocí Správce rozšíření. V nabídce sady Visual Studio vyberte možnost **rozšíření...** :
 
    ![Karta Správce doplňků](media/extending-visual-studio-mac-addin4.png)
 
-3. Přejděte na kartu galerie a typ `Addin Maker` do panelu hledání v pravé horní části. Vyberte doplněk Tvůrce kategorii vývoj Add-in a klikněte na <kbd>nainstalovat</kbd>. Pokud není nic se zobrazí, stiskněte tlačítko Aktualizovat a hledat znovu:
+3. Přejděte na kartu Galerie a zadejte `Addin Maker` do pravého horního panelu hledání. V kategorii vývoje doplňku vyberte možnost tvůrce doplňku a klikněte na <kbd>nainstalovat</kbd>. Pokud se nic neobjeví, zkuste znovu spustit aktualizaci a prohledat:
 
-   ![Addin Manager](media/extending-visual-studio-mac-addin5.png)
+   ![Správce doplňků](media/extending-visual-studio-mac-addin5.png)
 
-4. Teď, když je nainstalován doplněk tvůrce, můžete začít vytvářet balíček rozšíření. Začněte vytvořením nového řešení.
+4. Teď, když je doplněk AddIn maker nainstalovaný, můžete začít sestavovat balíček rozšíření. Začněte vytvořením nového řešení.
 
-5. Z **dialogového okna nové řešení**, zvolte **jiných > Různé > Obecné > Xamarin Studio doplněk > C#** šablony a na následující obrazovce zadejte název nové řešení `DateInserter`:
+5. V **dialogovém okně nové řešení**vyberte **Další > různé > Obecné > Xamarin Studio AddIn > C#**  Template a na následující obrazovce zadejte nové řešení `DateInserter`:
 
-   ![Vytvoření nového řešení](media/extending-visual-studio-mac-addin7New.png)
+   ![Vytváření nového řešení](media/extending-visual-studio-mac-addin7New.png)
 
-6. Visual Studio pro Mac se vyplní nové řešení:
+6. V Visual Studio pro Mac se naplní nové řešení:
 
-   ![Mají údaj vyplněný řešení](media/extending-visual-studio-mac-addin8.png)
+   ![Vyplněné řešení](media/extending-visual-studio-mac-addin8.png)
 
-7. Odebrat kód šablony v `Manifest.addin.xml` a nahraďte následujícím kódem:
+7. Odeberte kód šablony v `Manifest.addin.xml` a nahraďte ji následujícím kódem:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -57,11 +57,11 @@ Tento příklad používá Tvůrce Add-in. Doplněk tvůrce vytvoří novou šab
       </ExtensionModel>
    ```
 
-8. Teď budete muset nastavit soubory, které se nakonec postará vkládání data a času v textovém editoru. Klikněte pravým tlačítkem na uzel projektu a přidejte nový soubor. Vyberte **Obecné > prázdná třída** a pojmenujte nový soubor *InsertDateHandler*:
+8. Nyní je třeba nastavit soubory, které budou nakonec zpracovávat data a čas do textového editoru. Klikněte pravým tlačítkem myši na uzel projektu a přidejte nový soubor. Vyberte **obecné > prázdnou třídu** a pojmenujte nový soubor *InsertDateHandler*:
 
-   ![Vložit datum obslužné rutiny](media/extending-visual-studio-mac-addin9.png)
+   ![Obslužná rutina data vložení](media/extending-visual-studio-mac-addin9.png)
 
-9. Odebereme kód šablony z `InsertDateHandler.cs` a nahraďte ho následujícím kódem:
+9. Pojďme z `InsertDateHandler.cs` odebrat kód šablony a nahradit ho následujícím kódem:
 
    ```cs
    using MonoDevelop.Components.Commands;
@@ -86,13 +86,13 @@ Tento příklad používá Tvůrce Add-in. Doplněk tvůrce vytvoří novou šab
    }
    ```
 
-   Později budete rozšiřováním tyto dvě metody zástupný symbol.
+   Tyto dvě zástupné metody rozšíříme později.
 
-10. Klikněte pravým tlačítkem na **DateInserter** projektu a vyberte **Přidat > Nový soubor**. Vyberte **Obecné > prázdný výčet**a potom zadejte název nového souboru *DateInserterCommands*:
+10. Klikněte pravým tlačítkem na projekt **DateInserter** a vyberte **Přidat > nový soubor**. Vyberte **obecné > prázdný výčet**a potom zadejte název nového souboru *DateInserterCommands*:
 
     ![DateInserterCommands](media/extending-visual-studio-mac-addin10.png)
 
-11. Přidat `InsertDate` příkaz jako nový výčet v `DateInserterCommands.cs` souboru:
+11. Přidejte příkaz `InsertDate` jako nový výčet v souboru `DateInserterCommands.cs`:
 
     ``` cs
     using System;
@@ -106,13 +106,13 @@ Tento příklad používá Tvůrce Add-in. Doplněk tvůrce vytvoří novou šab
     }
     ```
 
-12. V tomto okamžiku byste měli mít funkční rozšíření balíčku. Otestovat tak uložení práce a spuštění aplikace. Rozhraní IDE spustí novou instanci sady Visual Studio for Mac pomocí nového balíčku rozšíření nainstalované. Pokud přejdete **nabídky Upravit**, uvidíte, že Visual Studio for Mac obsahuje nový parametr s názvem **vložit datum**, jak je znázorněno v následujícím snímku obrazovky:
+12. V tomto okamžiku byste měli mít funkční balíček rozšíření. Můžete ho otestovat uložením práce a spuštěním aplikace. Rozhraní IDE spustí novou instanci Visual Studio pro Mac s nainstalovaným novým balíčkem rozšíření. Pokud přejdete do **nabídky upravit**, uvidíte, že Visual Studio pro Mac má novou možnost s názvem **Vložit datum**, jak je znázorněno na následujícím snímku obrazovky:
 
-    ![Vložit datum příkaz](media/extending-visual-studio-mac-addin11.png)
+    ![Vložit datum – příkaz](media/extending-visual-studio-mac-addin11.png)
 
-    Všimněte si, že v nabídce vyberete vložit datum nemá žádný účinek, jako má aktuální implementace jenom metody zástupný symbol.
+    Všimněte si, že výběr možnosti Vložit datum z nabídky nemá žádný účinek, protože aktuální implementace má pouze zástupné metody.
 
-13. Rozhraní je na místě pro balíček rozšíření, a je čas na psaní kódu, která je základem vkládání datum. Nejprve, ujistěte se, že **příkazu Insert datum** je povolená pouze, když uživatel textu otevřete soubor tak, že nahradíte `Update` metoda ve `InsertDateHandler.cs` následujícím kódem:
+13. Rozhraní je pro balíček rozšíření zavedeno a je čas napsat kód, který splňuje datum vložení. Nejprve se ujistěte, že je **příkaz Vložit datum** povolen pouze v případě, že má uživatel otevřený textový soubor nahrazením metody `Update` v `InsertDateHandler.cs` následujícím kódem:
 
     ```cs
     protected override void Update(CommandInfo info)
@@ -121,7 +121,7 @@ Tento příklad používá Tvůrce Add-in. Doplněk tvůrce vytvoří novou šab
     }
     ```
 
-14. Aktualizace příkazu `Run` metoda vložit datum a čas s následujícím kódem:
+14. Aktualizujte metodu `Run` příkazu pro vložení data a času s následujícím kódem:
 
     ``` cs
     protected override void Run () {
@@ -132,10 +132,10 @@ Tento příklad používá Tvůrce Add-in. Doplněk tvůrce vytvoří novou šab
     }
     ```
 
-15. Můžeme spustit a konečně, náš balíček rozšíření a otestovat ho. V nové instanci sady Visual Studio pro Mac, vyberte **Upravit > Vložit datum**. Aktuální datum a čas bude vložena na naše stříška, jak je znázorněno v následujícím snímku obrazovky:
+15. Nakonec spustíme náš balíček rozšíření, abychom ho otestovali. V nové instanci Visual Studio pro Mac vyberte **upravit > datum vložení**. Aktuální datum a čas jsou vloženy do našeho blikajícího kurzoru, jak je znázorněno na snímku obrazovky níže:
 
-    ![Vložit datum – snímek obrazovky](media/extending-visual-studio-mac-addin12.png)
+    ![Snímek obrazovky pro vložení data](media/extending-visual-studio-mac-addin12.png)
 
 ## <a name="see-also"></a>Viz také:
 
-- [Vytvořit své první rozšíření (Visual Studio na Windows)](/visualstudio/extensibility/extensibility-hello-world)
+- [Vytvoření prvního rozšíření (Visual Studio ve Windows)](/visualstudio/extensibility/extensibility-hello-world)

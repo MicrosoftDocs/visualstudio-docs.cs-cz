@@ -1,17 +1,17 @@
 ---
 title: EditorConfig
 description: Použití souboru editorconfig k povolení konzistentních stylů pro kódování projektů v Visual Studio pro Mac.
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 26A0DE31-2FBF-4E1B-99FB-083111AA1680
-ms.openlocfilehash: 8132a7f92986b853ffc2b20b93d0db34f7ac1880
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: be8f508a0055d4cd7cbacf1c728e6d73c8b281f7
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73715890"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984716"
 ---
 # <a name="creating-and-editing-a-custom-editorconfig-file"></a>Vytvoření a úprava vlastního souboru EditorConfig
 

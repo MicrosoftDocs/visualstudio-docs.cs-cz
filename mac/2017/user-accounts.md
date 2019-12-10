@@ -1,24 +1,24 @@
 ---
 title: Uživatelské účty
-description: Informace o přihlášení k sadě Visual Studio pro Mac a povolení předplatná v sadě Visual Studio pro Mac
-author: conceptdev
-ms.author: crdun
+description: Informace o přihlášení k Visual Studio pro Mac a povolení předplatných v Visual Studio pro Mac
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 17AB4F31-4921-4B4E-8D9D-95FB84294521
-ms.openlocfilehash: 71233b609f2e68935b71e3044a9b6ec0f59091bb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c612e1afab79e507838f8294b71d45348e8b5e46
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62986721"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984790"
 ---
 # <a name="user-accounts"></a>Uživatelské účty
 
-Jakmile jste stáhli a nainstalovali aplikaci Visual Studio pro Mac, musíte se přihlásit k aktivaci předplatného získal přístup všech funkcí nástroje Visual Studio pro Mac.
+Po stažení a instalaci Visual Studio pro Mac se musíte přihlásit, abyste mohli aktivovat své předplatné, abyste získali přístup ke všem funkcím Visual Studio pro Mac.
 
-Při podepisování se změnami, povolte přístup ke všem službám, které jsou přidružené k účtu uživatele, stejně jako všechny účty, které jsou propojeny k tomuto účtu. Nastavení účtu se zpřístupní, bez ohledu na to pomocí sady Visual Studio. Můžete nakonfigurovat úroveň oprávnění na konkrétní instanci aplikace Visual Studio pro jednotlivé uživatele.
+Když se přihlásíte, povolíte přístup ke všem službám přidruženým k vašemu uživatelskému účtu a všem účtům, které jsou k tomuto účtu propojené. Nastavení vašeho účtu vám umožní roaming bez ohledu na to, kde používáte Visual Studio. Můžete nakonfigurovat úrovně oprávnění pro konkrétní instanci sady Visual Studio pro jednotlivé uživatele.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-* [Přihlášení k sadě Visual Studio pro Mac](signing-in.md)
+* [Přihlášení k Visual Studio pro Mac](signing-in.md)
 * [Povolení předplatného](enable-subscription.md)

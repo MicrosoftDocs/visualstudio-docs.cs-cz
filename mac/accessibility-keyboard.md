@@ -2,15 +2,15 @@
 title: Navigace na klávesnici v Visual Studio pro Mac
 description: Použití Visual Studio pro Mac s příkazy klávesnice
 author: alanjclark
-ms.author: alcl
+ms.author: dominicn
 ms.date: 09/23/2019
 ms.assetid: EF574E49-0465-4973-BE67-286DA20B8836
-ms.openlocfilehash: aad28b9cf9c697b05d43f2869ec8327ea6294b4f
-ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
+ms.openlocfilehash: 74c3fddad7c7db8f5f190dcc94f08a36ddf3cd54
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71342354"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985091"
 ---
 # <a name="keyboard-navigation-in-visual-studio-for-mac"></a>Navigace na klávesnici v Visual Studio pro Mac
 

@@ -1,17 +1,17 @@
 ---
 title: Začínáme s vytvářením her v Unity
 description: Začínáme s Unity a Visual Studio pro Mac
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/20/2019
 ms.technology: vs-ide-general
 ms.assetid: D07FA43B-9D18-4DFA-8343-CD538FAD84DB
-ms.openlocfilehash: ff8fe1b2b4efe7ff91d3b363c58183be534a1441
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.openlocfilehash: c25df777a9af10859c70741a78c880a57c6f5b8e
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108430"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984791"
 ---
 # <a name="getting-started-building-games-with-unity-in-visual-studio-for-mac"></a>Začínáme s vytvářením her v Unity v Visual Studio pro Mac
 
@@ -27,13 +27,13 @@ Visual Studio pro Mac Tools for Unity je bezplatné rozšíření instalované s
 ## <a name="prerequisites"></a>Požadavky
 
 - Visual Studio for Mac ([https://www.visualstudio.com/vs/mac](https://www.visualstudio.com/vs/visual-studio-mac))
-- Unity 5.6.1 Personal Edition nebo vyšší ([https://store.unity.com](https://store.unity.com/), vyžaduje spuštění účtu Unity.com)
+- Unity 5.6.1 Personal Edition nebo vyšší ([https://store.unity.com](https://store.unity.com/)vyžaduje, aby se spouštěl účet Unity.com)
 
 ## <a name="intended-audience"></a>Zamýšlená cílová skupina
 
 Toto testovací prostředí je určené pro vývojáře, kteří jsou C#obeznámeni s, přestože se nepožaduje důkladné prostředí.
 
-## <a name="task-1-creating-a-basic-unity-project"></a>Úkol 1: Vytváří se základní projekt Unity.
+## <a name="task-1-creating-a-basic-unity-project"></a>Úloha 1: Vytvoření základního projektu Unity
 
 1. Spusťte **Unity**. Přihlaste se, pokud je požadováno.
 
@@ -73,7 +73,7 @@ Toto testovací prostředí je určené pro vývojáře, kteří jsou C#obeznám
 
     ![zobrazit kontextovou akci vyhledávacího kontextu](media/unity-image8.png)
 
-12. Projekty obsahují **prostředky**, **knihovny**, **ProjectSettings**a **dočasné** složky, jak vidíte. Pouze ten, který se zobrazí v rozhraní, je složka assets . Složka **Library (knihovna** ) je místní mezipaměť pro importované prostředky; obsahuje všechna metadata pro prostředky. Složka **ProjectSettings** ukládá nastavení, která můžete konfigurovat. Dočasná složka se používá pro dočasné soubory z mono a Unity během procesu sestavení. Existuje také soubor řešení, který můžete otevřít v Visual Studio pro Mac (**UnityLab. sln** ).
+12. Projekty obsahují **prostředky**, **knihovny**, **ProjectSettings**a **dočasné** složky, jak vidíte. Pouze ten, který se zobrazí v rozhraní, je složka **assets** . Složka **Library (knihovna** ) je místní mezipaměť pro importované prostředky; obsahuje všechna metadata pro prostředky. Složka **ProjectSettings** ukládá nastavení, která můžete konfigurovat. Dočasná **Složka se používá pro dočasné soubory** z mono a Unity během procesu sestavení. Existuje také soubor řešení, který můžete otevřít v Visual Studio pro Mac (**UnityLab. sln** ).
 
     ![assety ve Finderu](media/unity-image9.png)
 
@@ -103,7 +103,7 @@ Toto testovací prostředí je určené pro vývojáře, kteří jsou C#obeznám
 
     ![označení objektu Player](media/unity-image15.png)
 
-20. V zobrazení **scény** přesuňte objekt Player pryč z objektu Enemy podél osy z pomocí myši. Podél osy Z můžete pohybovat výběrem a přetažením datové krychle podle červeného panelu směrem k **modré** čáře. Vzhledem k tomu, že datová krychle žije v prostorovém prostoru, ale dá se pokaždé přetáhnout jenom na 2D ose, na které táhnete, je obzvláště důležitá.
+20. V zobrazení **scény** přesuňte objekt Player pryč z objektu Enemy podél osy z pomocí myši. Podél osy Z můžete pohybovat výběrem a přetažením datové krychle podle **červeného** panelu směrem k **modré** čáře. Vzhledem k tomu, že datová krychle žije v prostorovém prostoru, ale dá se pokaždé přetáhnout jenom na 2D ose, na které táhnete, je obzvláště důležitá.
 
     ![zobrazení scény znázorňující krychli](media/unity-image16.png)
 
@@ -111,13 +111,13 @@ Toto testovací prostředí je určené pro vývojáře, kteří jsou C#obeznám
 
     ![Přesunutí jedné krychle podél osy](media/unity-image17.png)
 
-22. Nyní můžete přidat nějaký kód, který bude řídit logiku Enemy tak, aby vykonává hráč. Klikněte pravým tlačítkem na složku assets ( **prostředky** ) na panelu **projektu** a vyberte **Vytvořit > C# skript**.
+22. Nyní můžete přidat nějaký kód, který bude řídit logiku Enemy tak, aby vykonává hráč. Klikněte pravým tlačítkem na složku **assets (prostředky** ) na panelu **projektu** a vyberte **Vytvořit > C# skript**.
 
     ![C#akce kontextu skriptu](media/unity-image18.png)
 
 23. Pojmenujte C# nový skript **"EnemyAI"** .
 
-    ![C#pravidel](media/unity-image19.png)
+    ![Skript jazyka C#](media/unity-image19.png)
 
 24. Chcete-li připojit skripty k herním objektům, přetáhněte nově vytvořený skript do objektu **Enemy** v podokně **hierarchie** . Objekt bude nyní používat chování z tohoto skriptu.
 
@@ -125,7 +125,7 @@ Toto testovací prostředí je určené pro vývojáře, kteří jsou C#obeznám
 
 25. Vyberte **soubor > Uložit scény** a uložte aktuální scénu. Pojmenujte ho **"MyScene"** .
 
-## <a name="task-2-working-with-visual-studio-for-mac-tools-for-unity"></a>Úkol 2: Práce s nástroji Visual Studio pro Mac Tools for Unity
+## <a name="task-2-working-with-visual-studio-for-mac-tools-for-unity"></a>Úkol 2: práce s nástroji pro Visual Studio pro Mac pro Unity
 
 1. Nejlepším způsobem, jak kód C# upravit, je použít Visual Studio pro Mac. Můžete nakonfigurovat Unity pro použití Visual Studio pro Mac jako výchozí obslužné rutiny. Vyberte možnost **předvolby > Unity**.
 
@@ -189,7 +189,7 @@ Toto testovací prostředí je určené pro vývojáře, kteří jsou C#obeznám
 
 9. Uložte změny do skriptu Enemy v **Visual Studio pro Mac**.
 
-## <a name="task-3-debugging-the-unity-project"></a>Úkol 3: Ladění projektu Unity
+## <a name="task-3-debugging-the-unity-project"></a>Úkol 3: ladění projektu Unity
 
 1. Nastavte zarážku na prvním řádku kódu v metodě **Start** . Můžete buď kliknout na okraj editoru na cílovém řádku, nebo umístit kurzor na řádek a stisknout klávesu **F9**.
 
@@ -247,7 +247,7 @@ Toto testovací prostředí je určené pro vývojáře, kteří jsou C#obeznám
 
     ![zastavuje se relace ladění v Visual Studio pro Mac](media/unity-image37.png)
 
-## <a name="task-4-exploring-unity-features-in-visual-studio-for-mac"></a>Úloha 4: Zkoumání funkcí Unity v Visual Studio pro Mac
+## <a name="task-4-exploring-unity-features-in-visual-studio-for-mac"></a>Úloha 4: zkoumání funkcí Unity v Visual Studio pro Mac
 
 1. Visual Studio pro Mac poskytuje rychlý přístup k dokumentaci Unity v editoru kódu. Umístěte kurzor někam do symbolu **Vector3** v rámci metody **Update** a stiskněte klávesu **⌘ Command + '** .
 
@@ -257,7 +257,7 @@ Toto testovací prostředí je určené pro vývojáře, kteří jsou C#obeznám
 
     ![Otevře se okno prohlížeče s dokumentací](media/unity-image39.png)
 
-3. Visual Studio pro Mac také poskytuje některým pomocníkům k rychlému vytváření tříd chování Unity. Z **Průzkumník řešení**klikněte pravým tlačítkem na assety a vyberte **Přidat > Nový MonoBehaviour**.
+3. Visual Studio pro Mac také poskytuje některým pomocníkům k rychlému vytváření tříd chování Unity. Z **Průzkumník řešení**klikněte pravým tlačítkem na **assety** a vyberte **Přidat > Nový MonoBehaviour**.
 
     ![Nová akce kontextu MonoBehaviour](media/unity-image40.png)
 
@@ -275,12 +275,12 @@ Toto testovací prostředí je určené pro vývojáře, kteří jsou C#obeznám
 
 7. Formát souboru shaderu získá plnou barvu a zpracování písma, aby bylo snazší ho číst a pochopit.
 
-    ![zvýrazňování syntaxe](media/unity-image44.png)
+    ![zvýraznění syntaxe](media/unity-image44.png)
 
 8. Vraťte se do **Unity**. Uvidíte, že protože Visual Studio pro Mac pracuje se stejným systémem projektu, změny provedené na obou místech se automaticky synchronizují s druhým. Teď je snadné použít pro úkol nejlepší nástroj.
 
     ![panel Asset Unity](media/unity-image45.png)
 
-## <a name="summary"></a>Souhrn
+## <a name="summary"></a>Přehled
 
-V tomto testovacím prostředí jste se naučili, jak začít vytvářet hry s Unity a Visual Studio pro Mac. Další [https://unity3d.com/learn](https://unity3d.com/learn) informace o Unity najdete v tématu.
+V tomto testovacím prostředí jste se naučili, jak začít vytvářet hry s Unity a Visual Studio pro Mac. Další informace o Unity najdete v tématu [https://unity3d.com/learn](https://unity3d.com/learn) .

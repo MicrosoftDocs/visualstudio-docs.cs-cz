@@ -1,41 +1,41 @@
 ---
 title: Program Zlepšování softwaru a služeb na základě zkušeností uživatelů pro Visual Studio
-description: Zjistěte, jak spravovat nastavení ochrany osobních údajů v sadě Visual Studio pro Mac.
-author: conceptdev
-ms.author: crdun
+description: Přečtěte si, jak spravovat nastavení ochrany osobních údajů v Visual Studio pro Mac.
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/22/2018
 ms.assetid: 6F2ECF5A-E195-4890-8399-12A88C7D62FD
-ms.openlocfilehash: ba9257acf5c9d68aad5bbbab9ee6cec41f8e77d9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5e8fa7f740275f416f80827276d74be1f05b0e21
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62986571"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984744"
 ---
 # <a name="visual-studio-customer-experience-improvement-program"></a>Program Zlepšování softwaru a služeb na základě zkušeností uživatelů pro Visual Studio
 
-Visual Studio zákazníka prostředí pro zlepšování programu (VSCEIP) je navržená tak, aby pomohl Microsoftu, vylepšení sady Visual Studio pro Mac v čase program. Tento program shromažďuje informace o hardwaru počítače a jak ostatní používají Visual Studio pro Mac, aniž by to ovlivnilo uživatele ve své úkoly v počítači. Shromažďované informace pomáhají společnosti Microsoft určit funkce, které ke zlepšení. Tento článek popisuje, jak aktivování nebo zrušení VSCEIP.
+Visual Studio program Zlepšování softwaru a služeb na základě zkušeností uživatelů (VSCEIP) je program navržený tak, aby pomohla Microsoftu vylepšit Visual Studio pro Mac v průběhu času. Tento program shromažďuje informace o hardwaru počítače a o tom, jak uživatelé používají Visual Studio pro Mac, aniž by museli přerušovat uživatele ve svých úkolech v počítači. Shromážděné informace pomáhají společnosti Microsoft určit, které funkce se mají zlepšit. Tento článek popisuje, jak vyjádřit nebo odhlásit z VSCEIP.
 
-Další informace o údajích shromažďovaných, zpracovávaných a přenášených podle VSCEIP, naleznete v tématu [prohlášení o ochraně osobních údajů Microsoft](https://privacy.microsoft.com/privacystatement).
+Další informace o informacích shromažďovaných, zpracovávaných nebo odeslaných službou VSCEIP naleznete v tématu [prohlášení o zásadách ochrany osobních údajů společnosti Microsoft](https://privacy.microsoft.com/privacystatement).
 
-## <a name="choice-and-control-over-the-visual-studio-customer-experience-improvement-program"></a>Volba a řízení programu zlepšování zkušeností zákazníků Visual Studio
+## <a name="choice-and-control-over-the-visual-studio-customer-experience-improvement-program"></a>Možnost volby a kontroly nad program Zlepšování softwaru a služeb na základě zkušeností uživatelů sady Visual Studio
 
-VSCEIP je ve výchozím nastavení zapnutá. Můžete ji vypnout nebo zpět na, podle pokynů uvedených níže.
+VSCEIP je ve výchozím nastavení zapnutý. Můžete ho zase zapnout nebo znovu spustit podle následujících pokynů.
 
-1. Otevřít Visual Studio pro Mac.
+1. Otevřete Visual Studio pro Mac.
 
-1. Na panelu nabídek zvolte **sady Visual Studio > Předvolby > Další > zpětnou vazbu**.
+1. V řádku nabídek vyberte možnost **Visual Studio > předvolby > jiné > zpětnou vazbu**.
 
-1. Vyberte vaši volbu pro účast:
+1. Vyberte svou předvolbu pro účast:
 
-    ![Vyberte přepínač tak, aby odrážely vaši volbu účasti](media/visual-studio-experience-improvement-program-image1.png)
+    ![Vyberte přepínač, který bude odpovídat předvolbě vaší účasti.](media/visual-studio-experience-improvement-program-image1.png)
 
 [!INCLUDE [GDPR-related guidance](../../docs/misc/includes/gdpr-hybrid-note.md)]
 
 ## <a name="see-also"></a>Viz také:
 
-* [Programu zlepšování zkušeností zákazníků (Visual Studio na Windows)](/visualstudio/ide/visual-studio-experience-improvement-program)
-* [Systémem generovaných protokolech shromažďovaných sady Visual Studio (ve Windows)](/visualstudio/ide/diagnostic-data-collection)
-* [Postup ohlášení problému se sadou Visual Studio pro Mac](report-a-problem.md)
+* [Program Zlepšování softwaru a služeb na základě zkušeností uživatelů (Visual Studio ve Windows)](/visualstudio/ide/visual-studio-experience-improvement-program)
+* [Systémem generované protokoly shromážděné aplikací Visual Studio (ve Windows)](/visualstudio/ide/diagnostic-data-collection)
+* [Jak ohlásit problém s Visual Studio pro Mac](report-a-problem.md)
 * [Visual Studio for Mac Developer Community](https://developercommunity.visualstudio.com/spaces/41/index.html)
-* [Prohlášení o ochraně osobních údajů společnosti Microsoft](https://privacy.microsoft.com/privacystatement)
+* [Prohlášení společnosti Microsoft o zásadách ochrany osobních údajů](https://privacy.microsoft.com/privacystatement)

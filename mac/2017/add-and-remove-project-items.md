@@ -1,44 +1,44 @@
 ---
 title: Přidávání a odebírání projektových položek
-description: Tento dokument popisuje, jak přidávat a odebírat položky projektu v sadě Visual Studio pro Mac
-author: conceptdev
-ms.author: crdun
+description: Tento dokument popisuje, jak přidat a odebrat položky projektu v Visual Studio pro Mac
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 4071689D-1C21-42D7-8963-550E7BCB4B67
-ms.openlocfilehash: dc37b3a376b99c39d4216ba0ae2b05d707d11484
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 94bb56fba0b90f29c291bc2c4b95976810dd21c6
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62933322"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74983616"
 ---
 # <a name="adding-and-removing-project-items"></a>Přidávání a odebírání projektových položek
 
-Můžete přidat nové položky projektu do projektu kliknutím pravým tlačítkem na uzel projektu v **oblasti řešení** a přejdete do **Přidat > Nový soubor**:
+Kliknutím pravým tlačítkem myši na uzel projektu v **oblast řešení** můžete do projektu přidat nové položky projektu a **Přidat > nový soubor**:
 
 ![Přidat novou položku projektu](media/add-and-remove-project-items-image1.png)
 
-Zobrazí dialogové okno Nový soubor, který obsahuje soubor šablony založené na typu aplikace, kterou vytváříte kromě výchozích šablon, jako je například prázdné třídy nebo prázdný výčty. Například pokud vytváříte aplikace pro iOS, můžete vybrat **scénáře** vytvořit nový prázdný soubor scénáře:
+Tím se zobrazí dialogové okno Nový soubor, které poskytuje šablony souborů na základě typu aplikace, kterou vytváříte, spolu s výchozími šablonami, jako jsou prázdné třídy nebo prázdné výčty. Pokud například píšete aplikaci pro iOS, můžete vybrat **scénář** a vytvořit nový prázdný soubor scénáře:
 
-![Přidat nový prázdný scénář v Iosu](media/add-and-remove-project-items-image2.png)
+![Přidání nového prázdného scénáře v iOS](media/add-and-remove-project-items-image2.png)
 
-## <a name="adding-existing-files"></a>Přidání existujících souborů
+## <a name="adding-existing-files"></a>Přidávání existujících souborů
 
-Můžete přidat existující soubory do svého projektu tak, že kliknete pravým tlačítkem na uzel projektu a vyberete **Přidat > Přidat soubory...** . Můžete také přidat celou složku, vyberte **Přidat > Přidat existující složku...** . Zobrazí se prohlížeč souborů, které umožňuje hledat systému pro požadovanou položku Přidat.
+Existující soubory můžete do projektu přidat tak, že kliknete pravým tlačítkem na uzel projektu a vyberete **přidat > přidat soubory...** . Pokud chcete přidat celou složku, vyberte **přidat > přidat existující složku...** . Tím se zobrazí prohlížeč souborů, ve kterém můžete v systému vyhledat požadovanou položku, která se má přidat.
 
 ## <a name="removing-items"></a>Odebírání položek
 
-Chcete-li odebrat položku z aktuálního projektu, klikněte pravým tlačítkem na položku a vyberte **odebrat**
+Chcete-li odebrat položku z aktuálního projektu, klikněte na položku pravým tlačítkem myši a vyberte možnost **Odebrat** .
 
 ![Odebrat položku](media/add-and-remove-project-items-image3.png)
 
-Zobrazí se dialogové okno Odstranit položky. Vyberte jednu z možností a odebrat z projektu:
+Tím se zobrazí dialogové okno Odstranit položku. Vyberte jednu z možností, jak ji odebrat z projektu:
 
-![Odstranit položky dialogového okna](media/add-and-remove-project-items-image4.png)
+![Dialog odstranit položku](media/add-and-remove-project-items-image4.png)
 
 * **Odstranit** – odebere položku z projektu a z disku.
-* **Odebrat z projektu** – odebere položku z projektu, ale neodebere se z disku
+* **Odebrat z projektu** – odebere položku z projektu, ale neodebere ji z disku.
 
 ## <a name="see-also"></a>Viz také:
 
-* [Řešení a projekty v sadě Visual Studio (ve Windows)](/visualstudio/ide/solutions-and-projects-in-visual-studio)
+* [Řešení a projekty v aplikaci Visual Studio (ve Windows)](/visualstudio/ide/solutions-and-projects-in-visual-studio)

@@ -1,17 +1,17 @@
 ---
 title: Aktualizace Visual Studio pro Mac
 description: Pokyny pro aktualizaci Visual Studio pro Mac a přístup k vydaným verzím Preview
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: DB8DC9FE-FF21-4061-8A96-3F9FC08A4F8F
-ms.openlocfilehash: 383bf38b26b4961df61dca2a1bf1d4efda335d81
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: ccfcf04816727800501dada64e73d6ce35876674
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211495"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984551"
 ---
 # <a name="update-visual-studio-for-mac"></a>Aktualizovat Visual Studio pro Mac
 
@@ -22,7 +22,7 @@ Visual Studio pro Mac poskytuje dva kanály pro získání těchto nejnovější
 * **Stabilní** – poskytuje důkladně testované aktualizace. Tento kanál se doporučuje pro nejlepší vývojové prostředí.
 * **Preview** – poskytuje dřívější přístup k aktualizacím, které jsou kandidáty na vydání v stabilním kanálu. Tyto verze nemusí být spolehlivé pro každodenní použití.
 
-## <a name="checking-for-updates"></a>Hledají se aktualizace.
+## <a name="checking-for-updates"></a>Kontrola aktualizací
 
 Pomocí pole pro aktualizaci sady **Visual Studio** můžete kontrolovat nové aktualizace, měnit kanály a stahovat a instalovat aktualizace.
 
@@ -52,7 +52,7 @@ Chcete-li zahájit instalaci aktualizací, vyberte tlačítko **restartovat a na
 
 V závislosti na součástech, které je potřeba nainstalovat, možná budete muset přijmout další licence nebo zadat uživatelské jméno a heslo správce počítače.
 
-## <a name="troubleshooting"></a>Poradce při potížích
+## <a name="troubleshooting"></a>Odstraňování problémů
 
 Pokud máte problémy s nástrojem aktualizace, zkuste postupovat podle kroků v průvodci [odstraňováním potíží](updater-troubleshooting.md) s nástrojem aktualizace.
 

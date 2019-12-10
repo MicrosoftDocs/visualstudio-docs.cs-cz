@@ -1,23 +1,23 @@
 ---
 title: Visual Studio for Mac Tour
 description: Visual Studio pro Mac poskytuje integrované vývojové prostředí pro sestavování aplikací .NET na macOS, včetně ASP.NET Core webů a projektů Xamarin pro iOS, Android, Mac a Xamarin. Forms.
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 09/18/2019
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
-ms.openlocfilehash: 60691ef47b3a3dfdb2fa1148507697a27a99ef7b
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 6d2f0f891f704d3762bc0967da466960ee5170ee
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71213734"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984701"
 ---
 # <a name="visual-studio-2019-for-mac-tour"></a>Visual Studio 2019 for Mac tour
 
 Visual Studio pro Mac je _integrované vývojové prostředí_ .NET na Macu, které se dá použít k úpravám, ladění a sestavování kódu a publikování aplikace. Kromě očekávaných funkcí, jako je standardní editor a ladicí program, Visual Studio pro Mac zahrnuje kompilátory, nástroje pro dokončování kódu, grafické návrháře a správu zdrojového kódu pro usnadnění procesu vývoje softwaru.
 
-Visual Studio pro Mac podporuje mnoho stejných typů souborů jako jejich protějšky v systému Windows, například `.csproj` `.fsproj`soubory, nebo `.sln` , a podporuje funkce, jako je například EditorConfig, což znamená, že můžete použít integrované vývojové prostředí (IDE), které pro vás vyhovuje nejlépe.
+Visual Studio pro Mac podporuje mnoho stejných typů souborů jako jejich protějšky v systému Windows, například `.csproj`, `.fsproj`nebo soubory `.sln`, a podporuje funkce, jako je EditorConfig, což znamená, že můžete použít integrované vývojové prostředí (IDE), které pro vás vyhovuje nejlépe.
 Vytvoření, otevření a vývoj aplikace bude známé prostředí pro kohokoli, kdo dřív používal aplikaci Visual Studio ve Windows. Navíc Visual Studio pro Mac využívá spoustu výkonných nástrojů, které jejich protějšky v systému Windows poskytují takové výkonné integrované vývojové prostředí (IDE). Platforma kompilátoru Roslyn se používá pro refaktoring a IntelliSense. Systém projektu a modul sestavení používají MSBuild a jeho zdrojový editor používá stejný základ jako Visual Studio ve Windows. Používá stejné moduly ladicího programu pro aplikace Xamarin a .NET Core a stejné návrháře pro Xamarin. iOS a Xamarin. Android.
 
 ## <a name="what-can-i-do-in-visual-studio-for-mac"></a>Co můžu v Visual Studio pro Mac
@@ -108,7 +108,7 @@ To přináší některé z následujících funkcí:
 * Aktualizované uživatelské rozhraní technologie IntelliSense
 * Vylepšené hledání a nahrazování
 * Podpora fragmentů kódu 
-* Formátovat výběr
+* Formátování výběru
 * Vložené lightbulbs
 
 Další informace o použití editoru zdrojového kódu v Visual Studio pro Mac naleznete v dokumentaci ke [zdrojovému editoru](/visualstudio/mac/source-editor) .
@@ -119,7 +119,7 @@ Pokud chcete, aby se karty zobrazovaly stále, můžete je využít k jejich př
 
 ## <a name="refactoring"></a>Refaktoring
 
-Visual Studio pro Mac poskytuje dva užitečné způsoby refaktorování kódu: Akce kontextu a zdrojová analýza. Další informace o těchto možnostech si můžete přečíst v článku [refaktoringu](/visualstudio/mac/refactoring) .
+Visual Studio pro Mac poskytuje dva užitečné způsoby refaktorování kódu: kontextové akce a zdrojová analýza. Další informace o těchto možnostech si můžete přečíst v článku [refaktoringu](/visualstudio/mac/refactoring) .
 
 ## <a name="debugging"></a>Ladění
 

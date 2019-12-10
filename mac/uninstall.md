@@ -1,17 +1,17 @@
 ---
 title: Odinstalace Visual Studio pro Mac
 description: Pokyny k odinstalaci Visual Studio pro Mac a souvisejících nástrojů
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: 7d86e5abbb25d8c348f550d28618aae614725471
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 58c4395e1569f6ca444a8b1fdcd2b8906d3fdb75
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211519"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984063"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Odinstalace Visual Studio pro Mac
 
@@ -144,7 +144,7 @@ sudo rm -rf /Library/Frameworks/Xamarin.Android.framework
 Android SDK se vyžaduje pro vývoj aplikací pro Android. Pokud chcete úplně odebrat všechny části Android SDK, najděte soubor na **~/Library/Developer/Xamarin/** a přesuňte ho do **koše**.
 
 > [!WARNING]
-> Měli byste si uvědomit, že podpisové klíče Androidu, které jsou vygenerovány Visual Studio pro Mac, jsou umístěny v `~/Library/Developer/Xamarin/Keystore`. Ujistěte se, že je budete patřičně zálohovali, nebo neodstraňujte tento adresář, pokud chcete uchovávat úložiště klíčů.
+> Je třeba si uvědomit, že podpisové klíče Androidu, které jsou generovány Visual Studio pro Mac, jsou umístěny v `~/Library/Developer/Xamarin/Keystore`. Ujistěte se, že je budete patřičně zálohovali, nebo neodstraňujte tento adresář, pokud chcete uchovávat úložiště klíčů.
 
 Java SDK (JDK) není nutné odinstalovat, protože už je předem zabalená jako součást Mac OS X/macOS.
 
@@ -199,10 +199,10 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 Pro starší verze je nutné ručně odebrat následující artefakty:
 
-* Odstranit aplikaci sešitů na`"/Applications/Xamarin Workbooks.app"`
-* Odstranit aplikaci Inspector na`"Applications/Xamarin Inspector.app"`
-* Odstraňte doplňky: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` a`"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-* Odstraňte inspektor a podpůrné soubory zde: `/Library/Frameworks/Xamarin.Interactive.framework` a`/Library/Frameworks/Xamarin.Inspector.framework`
+* Odstranění aplikace sešity na `"/Applications/Xamarin Workbooks.app"`
+* Odstraňte aplikaci Inspector na `"Applications/Xamarin Inspector.app"`
+* Odstranit doplňky: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` a `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
+* Sem odstraňte inspektor a podpůrné soubory: `/Library/Frameworks/Xamarin.Interactive.framework` a `/Library/Frameworks/Xamarin.Inspector.framework`
 
 ## <a name="uninstall-the-xamarin-profiler"></a>Odinstalace Xamarin Profiler
 

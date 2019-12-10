@@ -1,17 +1,17 @@
 ---
 title: Úvod do Azure Functions
 description: Použití služby Azure Functions v Visual Studio pro Mac.
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
-ms.openlocfilehash: 6755f6fd681dac87741b9de6a8d1fcd123a8ad9b
-ms.sourcegitcommit: bb5425b9c6d8fd7135d9584c2963831754071347
+ms.openlocfilehash: 85e66711c8bfe65319bf6af90ce0452478c4b7f8
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024703"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74983469"
 ---
 # <a name="introduction-to-azure-functions"></a>Úvod do Azure Functions
 
@@ -68,7 +68,7 @@ Díky podpoře Azure Functions v Visual Studio pro Mac můžete testovat a ladit
 
     Zkopírujte adresu URL z výstupu.
 
-3. Vložte adresu URL požadavku HTTP do adresního řádku prohlížeče. Přidejte řetězec dotazu `?name=<yourname>` na konec adresy URL a spusťte požadavek. Následující obrázek ukazuje odpověď v prohlížeči na místní požadavek GET vrácený funkcí:
+3. Vložte adresu URL pro požadavek HTTP do panelu adresy prohlížeče. Přidejte řetězec dotazu `?name=<yourname>` na konec adresy URL a spusťte požadavek. Následující obrázek ukazuje odpověď v prohlížeči na místní požadavek GET vrácený funkcí:
 
     ![požadavek HTTP v prohlížeči](media/azure-functions-httpreq.png)
 
@@ -95,21 +95,21 @@ Výše uvedený postup můžete použít k přidání dalších funkcí do proje
 3. V dialogovém okně **publikovat do Azure App Service** můžete buď vybrat existující službu App Service, nebo vytvořit novou, kliknutím na **Nový**.
 4. V dialogovém okně **vytvořit nový App Service** zadejte nastavení: ![možnosti publikovat do Azure](media/azure-functions-image7.png)
 
-    |Nastavením  |Popis  |
+    |Nastavení  |Popis  |
     |---------|---------|
     |**Název App Service**|Globálně jedinečný název, který identifikuje vaši novou aplikaci Function App.|
-    |**Formě**|Předplatné Azure, které se má použít.|
-    |**[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)**|Název skupiny prostředků, ve které se má vytvořit aplikace Function App Pokud chcete vytvořit novou skupinu prostředků, vyberte **+** .|
+    |**Předplatné**|Předplatné Azure, které se má použít.|
+    |**[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)**|Název skupiny prostředků, ve které chcete vytvořit aplikaci funkcí Pokud chcete vytvořit novou skupinu prostředků, vyberte **+** .|
     |**[Plán služby](/azure/azure-functions/functions-scale)**|Vyberte existující plán nebo vytvořte vlastní plán. Vyberte umístění v oblasti poblíž nebo v blízkosti jiných služeb, ke kterým máte přístup.|
 
     > [!CAUTION]
     > Ve verzi 7,6 Visual Studio pro Mac došlo k chybě, která způsobí, že publikování selže s chybou zřizování, pokud se pokusíte vytvořit vlastní plán služby s **cenami** nastavenou na možnost **Spotřeba**. Tato akce bude opravena v příští verzi služby.
 
-5. Kliknutím na **Další** vytvořte účet úložiště. Modul runtime Functions vyžaduje účet služby Azure Storage. Kliknutím na **vlastní** vytvořte účet úložiště pro obecné účely nebo použijte existující:
+5. Kliknutím na **Další** vytvořte účet úložiště. Modul runtime Functions vyžaduje účet úložiště Azure. Kliknutím na **vlastní** vytvořte účet úložiště pro obecné účely nebo použijte existující:
 
     ![Možnost publikování do nabídky Azure](media/azure-functions-image8.png)
 
-6. Kliknutím na **vytvořit** vytvoříte aplikaci funkcí a související prostředky v Azure s těmito nastaveními a nasadíte svůj kód projektu funkce.
+6. Kliknutím na **Vytvořit** vytvořte aplikaci funkce a související prostředky v Azure a nasaďte kód projektu funkce.
 
 7. Můžete být vyzváni k zadání dialogového okna během publikování, které vás informují o verzi funkcí Update v Azure. Klikněte na **Ano**:
 
@@ -118,7 +118,7 @@ Výše uvedený postup můžete použít k přidání dalších funkcí do proje
 > [!CAUTION]
 > Došlo k chybě ve verzi 7,6 Visual Studio pro Mac, kde `FUNCTIONS_EXTENSION_VERSION` není správně nastavený na "beta", což znamená, že se funkce nemusí spustit. Pokud to chcete opravit, přečtěte si [nastavení aplikace Function App](#function-app-settings) a nastavte `FUNCTIONS_EXTENSION_VERSION` z "-1" na "beta".
 
-## <a name="function-app-settings"></a>Nastavení aplikace Function App
+## <a name="function-app-settings"></a>Nastavení aplikace funkcí
 
 Všechna nastavení, která jste přidali v Local. Settings. JSON, se musí taky přidat do aplikace Function App v Azure. Tato nastavení nejsou nahrána automaticky při publikování projektu.
 
@@ -144,7 +144,7 @@ Je možné, že budete muset nastavit jedno z důležitých nastavení `FUNCTION
 
 - **Http** – aktivovat provádění kódu pomocí požadavku HTTP K dispozici jsou explicitní šablony pro následující aktivační události protokolu HTTP:
   - Aktivační událost http
-  - Http získat CRUD
+  - Http GET CRUD
   - Http POST – Metoda CRUD
   - Aktivační událost http s parametry
 
@@ -156,7 +156,7 @@ Je možné, že budete muset nastavit jedno z důležitých nastavení `FUNCTION
 
 - **Obecný Webhook** – jedná se o jednoduchou funkci, která se spustí pokaždé, když přijme žádost od libovolné služby, která podporuje Webhooky. Další informace najdete v [článku Azure Functions na obecných webhookech](/azure/azure-functions/functions-create-generic-webhook-triggered-function).
 
-- **Orchestrace trvalých funkcí** – Durable Functions umožňuje psát stavové funkce v prostředí bez serveru. Rozšíření pro vás spravuje stav, kontrolní body a restarty. Další informace najdete v průvodci funkcemi Azure na [trvalých funkcích](/azure/azure-functions/durable-functions-overview).
+- **Orchestrace trvalých funkcí** – Durable Functions umožňuje psát stavové funkce v prostředí bez serveru. Toto rozšíření za vás spravuje stav, kontrolní body a restartování. Další informace najdete v průvodci funkcemi Azure na [trvalých funkcích](/azure/azure-functions/durable-functions-overview).
 
 - **Změna velikosti obrázku** – Tato funkce vytvoří obrázky se změněnou velikostí pokaždé, když se do kontejneru přidá objekt BLOB. Šablona používá cestu a připojovací řetězec pro aktivační událost, malý výstup obrázku a střední výstup obrázku.
 

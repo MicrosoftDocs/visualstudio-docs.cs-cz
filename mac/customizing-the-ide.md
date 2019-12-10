@@ -2,16 +2,16 @@
 title: Přizpůsobení integrovaného vývojového prostředí (IDE)
 description: Visual Studio pro Mac lze přizpůsobit různými způsoby a umožnit tak uživatelům vyvíjet aplikace v prostředí, které splňuje požadavky jejich efektivity i estetickosti. V tomto článku se seznámíte s různými způsoby, Visual Studio pro Mac je můžete přizpůsobit podle svých potřeb.
 author: alanjclark
-ms.author: alcl
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: F7C2A28C-0759-4E0D-A28E-B72D5AB73DB6
 ms.custom: video
-ms.openlocfilehash: fa1e2924e810f9e37f28d5becdfd8d46243b76fe
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: d35cd7ebc5534cd49f18db794b5fdeb5f62f4758
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71213737"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984204"
 ---
 # <a name="customizing-the-ide"></a>Přizpůsobení integrovaného vývojového prostředí (IDE)
 
@@ -30,11 +30,11 @@ Můžete přepnout motivy v Visual Studio pro Mac tak, že přejdete do části 
 Visual Studio pro Mac je lokalizována v následujících 14 jazycích, což umožňuje přístup k více vývojářům:
 
 * Čínština – Čína
-* Čínština – Tchaj-wan
+* Čínština (Tchaj-wan)
 * Čeština
 * Francouzština
 * Němčina
-* Angličtina
+* angličtina
 * Italština
 * Japonština
 * Korejština
@@ -44,7 +44,7 @@ Visual Studio pro Mac je lokalizována v následujících 14 jazycích, což umo
 * Španělština
 * Turečtina
 
-Pokud chcete změnit jazyk zobrazený v Visual Studio pro Mac, přejděte do složky **Visual Studio > předvolby > prostředí > vizuálního stylu** a vyberte požadovaný jazyk z rozevíracího seznamu **jazyk uživatelského rozhraní** , jak je znázorněno v následujícím seznamu. obrazu
+Pokud chcete změnit jazyk zobrazený v Visual Studio pro Mac, přejděte do části **Visual Studio > předvolby > prostředí > vizuálního stylu** a vyberte požadovaný jazyk v rozevíracím seznamu **jazyk uživatelského rozhraní** , jak je znázorněno na následujícím obrázku:
 
 ![Výběr jazyka](media/customizing-the-ide-image11a.png)
 
@@ -76,7 +76,7 @@ Tyto vazby je možné nastavit i při počátečním nastavení Visual Studio pr
 
 ## <a name="workspace-layout"></a>Rozložení pracovního prostoru
 
-Pracovní prostor Visual Studio pro Mac se skládá z oblasti hlavního dokumentu (obvykle editor, plochu návrháře nebo soubor možností), které jsou obklopeny bezplatnými *panely* , které obsahují užitečné informace pro přístup k souborům aplikace, testování a tém.
+Pracovní prostor Visual Studio pro Mac se skládá z oblasti hlavního dokumentu (obvykle editor, plochu návrháře nebo soubor možností), které jsou obklopeny bezplatnými *panely* , které obsahují užitečné informace pro přístup a správu souborů aplikace, testování a ladění.
 
  ![Rozložení pracovního prostoru](media/customizing-the-ide-image1a.png)
 

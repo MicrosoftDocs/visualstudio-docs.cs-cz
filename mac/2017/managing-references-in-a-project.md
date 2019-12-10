@@ -1,49 +1,49 @@
 ---
 title: Správa odkazů v projektu
-description: Tento článek popisuje, jak Správa odkazů v projektu v sadě Visual Studio pro Mac
-author: conceptdev
-ms.author: crdun
+description: Tento článek popisuje, jak spravovat odkazy v projektu v Visual Studio pro Mac
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 4AD51385-B0A8-4BA7-B2D4-BF2BD167A142
-ms.openlocfilehash: 54e07d3c170859405ef584b884547dad335788f3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f9925954083c7fe64ad29c7cfed618a84d7a6386
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62997212"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984858"
 ---
 # <a name="managing-references-in-a-project"></a>Správa odkazů v projektu
 
-Visual Studio for Mac obsahuje dva prostředky přidáte další odkazy do projektu:
+Visual Studio pro Mac poskytuje dva způsoby přidávání dalších odkazů do projektu:
 
 ![Odkazy na projekty](media/projects-and-solutions-image10.png)
 
 Toto jsou:
 
-* Odkazy
-* Balíčky Nuget (přidané prostřednictvím složku Packages)
+* Reference
+* Balíčky NuGet (přidáno prostřednictvím složky Packages)
 
-Kromě toho odkazů na webové a nativní odkazy můžete také přidat do jakéhokoli projektu.
+Kromě toho lze do libovolného projektu přidat také webové odkazy a nativní odkazy.
 
 ## <a name="assembly-references"></a>Odkazy na sestavení
 
-Každé platformě Xamarin se dodává s více než deseti sestavení. Ne všechny tyto balíčky sestavení je odkazováno v projektu ve výchozím nastavení.
+Každá architektura v rámci platformy Xamarin je dodávána s více než deseti sestaveními. Ve výchozím nastavení nejsou v projektu odkazovány všechny tyto balíčky sestavení.
 
-Chcete-li upravit balíčky, které je odkazováno v projektu, použijte **upravit odkazy** dialogové okno, které lze zobrazit dvojitým kliknutím na odkazy na složku, nebo výběrem **upravit odkazy** na jeho kontextu Nabídka Akce:
+Chcete-li upravit balíčky, které jsou odkazovány v projektu, použijte dialogové okno **Upravit odkazy** , které lze zobrazit dvojitým kliknutím na složku odkazy, nebo výběrem možnosti **Upravit odkazy** v rámci jejich kontextové nabídky:
 
 ![Dialogové okno odkazy na sestavení](media/projects-and-solutions-image11.png)
 
-Informace o sestavení dostupných pro každé rozhraní, Xamarin, najdete [dostupných sestavení](https://developer.xamarin.com/guides/cross-platform/advanced/available-assemblies/) průvodce.
+Informace o sestaveních dostupných pro každé rozhraní Xamarin Framework naleznete v průvodci [dostupnými sestaveními](https://developer.xamarin.com/guides/cross-platform/advanced/available-assemblies/) .
 
 ## <a name="nuget"></a>NuGet
 
-Správce balíčků NuGet je nejoblíbenější Správce balíčků pro vývoj na platformě .NET. Visual Studio pro Mac podpora NuGet umožňuje vyhledat balíčky k přidání do projektu.
+NuGet je nejoblíbenější správce balíčků pro vývoj pro .NET. Podpora NuGet Visual Studio pro Mac umožňuje vyhledat balíčky, které se mají přidat do projektu.
 
-Chcete-li to provést, klikněte pravým tlačítkem na **balíčku** složky v oblasti řešení a vyberte možnost přidat balíčky.
+Provedete to tak, že kliknete pravým tlačítkem na složku **balíčku** v oblast řešení a vyberete Přidat balíčky.
 
-Další informace o použití balíčku NuGet je součástí [balíček včetně NuGet ve vašem projektu](nuget-walkthrough.md) návodu.
+Další informace o použití balíčku NuGet najdete v návodu [zahrnutí balíčku NuGet v projektu](nuget-walkthrough.md) .
 
 ## <a name="see-also"></a>Viz také:
 
-- [Správa odkazů (Visual Studio na Windows)](/visualstudio/ide/managing-references-in-a-project)
-- [Přidání odkazů pomocí nástroje NuGet a sady extension SDK (Visual Studio na Windows)](/visualstudio/ide/adding-references-using-nuget-versus-an-extension-sdk)
+- [Správa odkazů (Visual Studio ve Windows)](/visualstudio/ide/managing-references-in-a-project)
+- [Přidání odkazů pomocí NuGet oproti sadě SDK rozšíření (Visual Studio ve Windows)](/visualstudio/ide/adding-references-using-nuget-versus-an-extension-sdk)

@@ -1,51 +1,51 @@
 ---
 title: Správa vlastností projektů a řešení
-description: Tento článek popisuje, jak Správa vlastností projektů a řešení v sadě Visual Studio pro Mac
-author: conceptdev
-ms.author: crdun
+description: V tomto článku se dozvíte, jak spravovat vlastnosti projektů a řešení v Visual Studio pro Mac
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 75247EB8-323A-4AFD-A451-6703A03D5D1F
-ms.openlocfilehash: 8d6a45f8cdd46483dda5ef252a6235e7eb2f0a04
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 514792804515541b7e4f64359a08e9c6093c5018
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62997177"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985264"
 ---
 # <a name="managing-project-and-solution-properties"></a>Správa vlastností projektů a řešení
 
-## <a name="project-options"></a>Možnosti projektu
+## <a name="project-options"></a>Možnosti projektů
 
-Možnosti projektu jsou specifická pro každý projekt a ovlivnit jak napsané, vytvoření a spuštění projektu. Tím se liší od sady Visual Studio pro Mac Předvolby (který nastaví možnosti specifické pro uživatele) a možnosti řešení (které nastavení možností pro celé řešení). Možnosti projektu jsou uloženy v souboru projektu (.csproj) tak, aby ostatní vývojáři můžete sestavit a spustit projekt správně. Možnosti určitého projektu umožňuje celá řada vývojářů pro práci na stejný dokument bez negativního vlivu formátování souboru.
+Možnosti projektu jsou specifické pro každý projekt a mají vliv na to, jak je projekt napsán, sestaven a spuštěn. To má na rozdíl od Visual Studio pro Mac předvolby (které nastaví možnosti specifické pro uživatele) a možnosti řešení (které nastaví možnosti pro celé řešení). Možnosti projektu jsou uloženy v souboru projektu (. csproj), aby ostatní vývojáři mohli správně sestavit a spustit projekt. S konkrétními možnostmi projektu může mnoho vývojářů pracovat na stejném dokumentu bez narušení formátování souboru.
 
-Chcete-li otevřít panel Možnosti projektu v sadě Visual Studio pro Mac, dvakrát klikněte na název projektu, nebo klikněte pravým tlačítkem na otevřete kontextovou nabídku a vyberte **možnosti**:
+Chcete-li otevřít možnosti projektu v Visual Studio pro Mac, poklikejte na název projektu, nebo kliknutím pravým tlačítkem otevřete místní nabídku a vyberte možnost **Možnosti**:
 
-![V kontextové nabídce](media/projects-and-solutions-image2.png)
+![Možnost v místní nabídce](media/projects-and-solutions-image2.png)
 
-Upravit možnosti zahrnují možnosti, jak sestavit, spusťte a nastavte zdrojový kód a správou verzí.
+Možnosti úprav obsahují možnosti pro sestavování, spouštění a nastavování zdrojového kódu a správy verzí.
 
 Možnosti projektu jsou uspořádány do pěti různých kategorií:
 
-* **Obecné** – informace o projektu, jako je název, popis a výchozí Namespace jsou nastaveny, společně s umístěním projektu.
-* **Sestavení** – to umožňuje vývojářům nastavení nebo změna PCL profily pro přenosné knihovny tříd. Umožňuje také pro vlastní příkazy, konfigurace a možnosti kompilátoru, která se má nastavit. Název a cesta k sestavení výstupu můžete nastavit také zde.
-* **Spustit** – díky tomu můžete vytvořit vlastní konfigurace spuštění na základě jednotlivých projektů.
-* **Zdrojový kód** – toto umožňuje řídit formátování mnoha různých typů souborů a zásady vytváření názvů. Můžete vytvořit také zásady vytváření názvů a výchozí styly záhlaví tady.
-* **Správa verzí** – díky tomu můžete upravit styl zprávy potvrzení změn, při použití správy verzí s projektem.
+* **Obecné** – informace o projektu, jako je název, popis a výchozí obor názvů, jsou zde nastaveny společně s umístěním projektu.
+* **Sestavení** – umožňuje vývojářům nastavovat nebo měnit profily PCL pro přenosné knihovny tříd. Umožňuje také nastavit vlastní příkazy, konfigurace, možnosti kompilátoru. Výstupní cestu a název sestavení lze také nastavit zde.
+* **Spustit** – umožňuje vytvářet vlastní konfigurace spuštění na základě jednotlivých projektů.
+* **Zdrojový kód** – umožňuje řídit formátování mnoha různých typů souborů a konvencí pojmenování. Tady můžete také nastavit zásady pojmenování a výchozí styly záhlaví.
+* Správa **verzí** – umožňuje upravit styl zprávy potvrzení při použití správy verzí s vaším projektem.
 
-Každý projekt může obsahovat možnosti určitého projektu, v závislosti na platformě. Například projekt Xamarin.Android, jako je ten, který je znázorněn na následujícím obrázku má možnosti týkající se Androidu sestavení (například možnosti linkeru) a aplikací (například oprávnění):
+Každý projekt může obsahovat konkrétní možnosti projektu v závislosti na platformě. Například projekt Xamarin. Android, podobně jako ten, který je znázorněný na následujícím obrázku, obsahuje možnosti týkající se sestavení pro Android (například možnosti linkeru) a aplikace (například oprávnění):
 
 ![Možnosti projektu pro Android](media/projects-and-solutions-image5.png)
 
-Xamarin.iOS má možnosti týkající se k podepsání sady prostředků – například požadovaný zřizovací profil:
+Xamarin. iOS obsahuje možnosti týkající se podepisování sady, jako je třeba požadovaný zřizovací profil, který se má použít:
 
-![iOS možnosti projektu](media/projects-and-solutions-image6.png)
+![Možnosti projektu iOS](media/projects-and-solutions-image6.png)
 
 ## <a name="solution-options"></a>Možnosti řešení
 
-Možnosti řešení jsou podobné možnosti projektu, ale zahrnují oboru celé řešení. Poskytují způsob, jak nastavit informace o autorovi, nastavení, kód formátování styly a správu verzí, sestavení a umožňují pro způsob, jak přiřadit spouštěný projekt v řešení.  V dialogovém okně Možnosti řešení je přístupný z **Projekt > Možnosti řešení** položku nabídky z **možnosti** položka kontextové nabídky na řešení v oblasti řešení nebo poklikáním na Řešení v oblasti řešení:
+Možnosti řešení jsou jako možnosti projektu, ale zahrnují rozsah celých řešení. Poskytují způsob, jak nastavit informace o autorech, nastavení sestavení, styly formátování kódu a správu verzí a umožňují způsob přiřazení spouštěného projektu v řešení.  K dialogovému oknu možnosti řešení lze přistupovat z položky nabídky **nastavení projektu > možnosti** , z kontextové nabídky **Možnosti** v řešení na panelu řešení nebo dvojím kliknutím na řešení v oblast řešení:
 
 ![Možnosti řešení](media/projects-and-solutions-image7.png)
 
 ## <a name="see-also"></a>Viz také:
 
-* [Správa vlastností projektů a řešení (Visual Studio na Windows)](/visualstudio/ide/managing-project-and-solution-properties)
+* [Správa vlastností projektu a řešení (Visual Studio ve Windows)](/visualstudio/ide/managing-project-and-solution-properties)

@@ -3,23 +3,23 @@ title: Instalace a použití Visual Studio pro Mac za bránou firewall nebo prox
 description: Tento dokument obsahuje seznam hostitelů, které musí být v bráně firewall povolené, aby bylo možné Visual Studio pro Mac (a jeho zatížení, včetně Xamarin) pro práci v podnikovém prostředí.
 ms.topic: troubleshooting
 ms.assetid: 79C0F1A3-0C13-4E55-A820-1138A4082B77
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 09/18/2019
-ms.openlocfilehash: 3c5fce37b7cb26ef9aeceaba700e72e79e809d7d
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 717eb9cd58f213c3d2c31a18c546a83ab8feb645
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71213634"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984031"
 ---
 # <a name="install-and-use-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>Instalace a použití Visual Studio pro Mac za bránou firewall nebo proxy server
 
 Pokud vy nebo vaše organizace používáte bezpečnostní opatření, jako je brána firewall nebo proxy server, pak jsou domény, které byste mohli chtít přidat do seznamu povolených portů, a porty a protokoly, které byste mohli chtít otevřít, abyste měli k dispozici nejlepší prostředí při instalaci a používání služby VIS Protokolování přístupu uživatele Studio pro Mac a služby Azure.
 
-- [**Nainstalovat Visual Studio pro Mac**](#install-visual-studio-for-mac): Tyto tabulky obsahují domény, které musí umožňovat připojení, abyste měli přístup ke všem funkcím a úlohám Visual Studio pro Mac.
+- [**Instalace Visual Studio pro Mac**](#install-visual-studio-for-mac): tyto tabulky obsahují domény, které musí umožňovat připojení, abyste měli přístup ke všem funkcím a úlohám Visual Studio pro Mac.
 
-- [**Použít Visual Studio pro Mac**](#use-visual-studio-for-mac): Tyto tabulky obsahují domény, které musí umožňovat připojení, abyste měli přístup k souvisejícím funkcím.
+- [**Použití Visual Studio pro Mac**](#use-visual-studio-for-mac): tyto tabulky obsahují domény, které musí umožňovat připojení, abyste měli přístup k souvisejícím funkcím.
 
 ## <a name="install-visual-studio-for-mac"></a>Instalace sady Visual Studio pro Mac
 
@@ -27,9 +27,9 @@ Vzhledem k tomu, že instalační program Visual Studio pro Mac stahuje z různ�
 
 ### <a name="microsoft-domains"></a>Microsoft domains
 
-| Domény| Účel |
+| Doména| Účel |
 | ----------------------------------- |---------------------------|
-| *.live.com| Správa přihlašovacích údajů |
+| *.live.com| Správa pověření |
 | app.vssps.visualstudio.com| Metadata instalačního programu|
 | vortex.data.microsoft.com | Chybové hlášení chyb a chyb |
 | az667904.vo.msecnd.net| Chybové hlášení chyb a chyb |
@@ -40,7 +40,7 @@ Vzhledem k tomu, že instalační program Visual Studio pro Mac stahuje z různ�
 | developer.xamarin.com | Instalační balíčky|
 | static.xamarin.com | Instalační balíčky|
 | dl.xamarin.com | Instalační balíčky|
-| dc.services.visualstudio.com| Hlášení o selhání |
+| dc.services.visualstudio.com| Oznamování chyb |
 
 ### <a name="third-party-domains"></a>Domény třetích stran
 
@@ -56,7 +56,7 @@ Abyste se ujistili, že máte přístup ke všem funkcím, které potřebujete v
 
 ### <a name="general"></a>Obecné
 
-| Doména | Port (y)|Účel|
+| Doména | Port(y)|Účel|
 | ----------------------|------------------|------------------|
 | go.microsoft.com | 80/443|Překlad adresy URL Microsoftu |
 | vsstartpage.blob.core.windows.net| 80/443| Data počáteční stránky|
@@ -67,16 +67,16 @@ Abyste se ujistili, že máte přístup ke všem funkcím, které potřebujete v
 
 ### <a name="identity"></a>Identita
 
-| Doména | Port (y)|Účel|
+| Doména | Port(y)|Účel|
 | ----------------------|------------------|------------------|
 | login.microsoftonline.com | 80/443| Zprostředkovatel identity|
 | secure.aadcdn.microsoftonline-p.com | 80/443|Zprostředkovatel identity|
-| dc.services.visualstudio.com| 80/443|Hlášení o selhání|
+| dc.services.visualstudio.com| 80/443|Oznamování chyb|
 | management.azure.com|80/443| Rozhraní API služeb Azure |
 
 ### <a name="nuget"></a>NuGet
 
-| Doména | Port (y)|Účel|
+| Doména | Port(y)|Účel|
 | ----------------------|------------------|------------------|
 | api.nuget.org | 80/443|NuGet API|
 | secure.aadcdn.microsoftonline-p.com |80/443| Zprostředkovatel identity|

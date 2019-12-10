@@ -1,17 +1,17 @@
 ---
 title: Zahrnutí balíčku NuGet do projektu
 description: Tento dokument popisuje, jak zahrnout balíček NuGet do projektu Xamarin. Provede vás tím, že najde a stáhne balíček a také zavádí funkce integrace IDE.
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 04/14/2017
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
 ms.custom: video
-ms.openlocfilehash: 154f779ee8b622c9ee66a753a23e9627f9d443c0
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: 728a225f4a1d14af986039cae7cb2fc8a493ecc9
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73715175"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74983301"
 ---
 # <a name="include-a-nuget-package-in-your-project"></a>Zahrnutí balíčku NuGet do projektu
 

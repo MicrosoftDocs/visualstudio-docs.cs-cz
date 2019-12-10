@@ -1,93 +1,93 @@
 ---
-title: Instalace a používání sady Visual Studio pro Mac za bránou firewall nebo proxy serverem
-description: Tento dokument obsahuje seznam hostitelů, které musí být povoleno v bráně firewall umožníte softwaru Visual Studio pro Mac (a její úlohy, včetně Xamarinu) pro práci v podnikovém prostředí.
+title: Instalace a použití Visual Studio pro Mac za bránou firewall nebo proxy server
+description: Tento dokument obsahuje seznam hostitelů, které musí být v bráně firewall povolené, aby bylo možné Visual Studio pro Mac (a jeho zatížení, včetně Xamarin) pro práci v podnikovém prostředí.
 ms.topic: troubleshooting
 ms.assetid: 79C0F1A3-0C13-4E55-A820-1138A4082B77
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 10/23/2018
-ms.openlocfilehash: 446baf89dacfe7b742e3da3307711435495c8da4
-ms.sourcegitcommit: 91c7f1b525e0c22d938bc4080ba4ceac2483474f
+ms.openlocfilehash: 738c5277ca6a669a834635f5c626e0cbabd7a7ef
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67033194"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984940"
 ---
-# <a name="install-and-use-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>Instalace a používání sady Visual Studio pro Mac za bránou firewall nebo proxy serverem
+# <a name="install-and-use-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>Instalace a použití Visual Studio pro Mac za bránou firewall nebo proxy server
 
-Pokud vy nebo vaše organizace používá bezpečnostní opatření, jako je například Brána firewall nebo proxy server, pak jsou domény může být vhodné přidat do "seznamu povolených" a porty a protokoly, které může být vhodné a otevřete tak, abyste měli co nejlepších výsledků při instalaci a použití vztahu Protokolování přístupu uživatele Studio pro Mac a služby Azure.
+Pokud vy nebo vaše organizace používáte bezpečnostní opatření, jako je brána firewall nebo proxy server, pak jsou domény, které byste mohli chtít přidat do seznamu povolených portů, a porty a protokoly, které byste mohli chtít otevřít, abyste měli k dispozici nejlepší prostředí při instalaci a používání služby VIS Protokolování přístupu uživatele Studio pro Mac a služby Azure.
 
-- [**Install Visual Studio for Mac**](#install-visual-studio-for-mac): Tyto tabulky obsahují domény, které musí umožňovat připojení, abyste měli přístup ke všem funkcím a úlohy sady Visual Studio pro Mac.
+- [**Instalace Visual Studio pro Mac**](#install-visual-studio-for-mac): tyto tabulky obsahují domény, které musí umožňovat připojení, abyste měli přístup ke všem funkcím a úlohám Visual Studio pro Mac.
 
-- [**Pomocí sady Visual Studio pro Mac**](#use-visual-studio-for-mac): Tyto tabulky obsahují domény, které musí umožňovat připojení, abyste měli přístup k související funkce.
+- [**Použití Visual Studio pro Mac**](#use-visual-studio-for-mac): tyto tabulky obsahují domény, které musí umožňovat připojení, abyste měli přístup k souvisejícím funkcím.
 
 ## <a name="install-visual-studio-for-mac"></a>Instalace sady Visual Studio pro Mac
 
-Vzhledem k tomu, že Visual Studio pro Mac – instalační program stáhne z různých domén a stáhněte si servery, tady jsou domén a adres URL, které chcete přidat jako důvěryhodné ve vašich konfiguracích.
+Vzhledem k tomu, že instalační program Visual Studio pro Mac stahuje z různých domén a stahuje servery, tady jsou domény a adresy URL, které můžete chtít přidat jako důvěryhodné ve vašich konfiguracích.
 
 ### <a name="microsoft-domains"></a>Microsoft domains
 
-| Domény| Účel |
+| Doména| Účel |
 | ----------------------------------- |---------------------------|
-| *.live.com| Správa přihlašovacích údajů |
-| app.vssps.visualstudio.com| Instalační program metadat|
-| vortex.data.microsoft.com | O chybách a hlášení chyb |
-| az667904.vo.msecnd.net| O chybách a hlášení chyb |
-| xamarin.com | Instalační program metadat|
+| *.live.com| Správa pověření |
+| app.vssps.visualstudio.com| Metadata instalačního programu|
+| vortex.data.microsoft.com | Chybové hlášení chyb a chyb |
+| az667904.vo.msecnd.net| Chybové hlášení chyb a chyb |
+| xamarin.com | Metadata instalačního programu|
 | xampubdl.blob.core.windows.net| Instalační balíčky|
 | download.visualstudio.microsoft.com | Instalační balíčky|
 | xamarin.azureedge.net | Instalační balíčky|
 | developer.xamarin.com | Instalační balíčky|
 | dc.services.visualstudio.com| Oznamování chyb |
 
-### <a name="third-party-domains"></a>Domény třetí strany
+### <a name="third-party-domains"></a>Domény třetích stran
 
 | Doména| Účel |
 | --------------------------|-------------------------|
 | dl.google.com | Android SDK |
 | download.oracle.com | Java SDK|
-| api.apple-cloudkit.com| Zabezpečení služeb Apple |
+| api.apple-cloudkit.com| Služby Apple Security |
 
-## <a name="use-visual-studio-for-mac"></a>Pomocí sady Visual Studio pro Mac
+## <a name="use-visual-studio-for-mac"></a>Použít Visual Studio pro Mac
 
-Pokud chcete mít jistotu, že máte přístup pro všechny funkce, které potřebujete v sadě Visual Studio pro Mac během za proxy nebo brány firewall, doporučujeme přidat následující porty a domény do seznamu Povolené přístupu.
+Abyste se ujistili, že máte přístup ke všem funkcím, které potřebujete v Visual Studio pro Mac za proxy serverem nebo bránou firewall, doporučujeme přidat následující domény a porty do seznamu povolených přístupů.
 
 ### <a name="general"></a>Obecné
 
-| Doména | Port(y) pro|Účel|
+| Doména | Port(y)|Účel|
 | ----------------------|------------------|------------------|
-| go.microsoft.com | 80/443|Adresa URL služby Microsoft řešení |
-| vsstartpage.blob.core.windows.net| 80/443| Data úvodní stránky|
-| software.xamarin.com |  80/443|Aktualizační službu|
+| go.microsoft.com | 80/443|Překlad adresy URL Microsoftu |
+| vsstartpage.blob.core.windows.net| 80/443| Data počáteční stránky|
+| software.xamarin.com |  80/443|Aktualizační služba|
 | addins.monodevelop.com | 80/443| Služby rozšíření |
 | visualstudio-devdiv-c2s.msedge.net | 80/443| Experimentální funkce a oznámení |
 | targetednotifications.azurewebsites.net|  80/443| Slouží k filtrování globální seznam oznámení do seznamu, který se vztahuje pouze na konkrétní typy počítačů nebo použití scénáře|
 
 ### <a name="identity"></a>Identita
 
-| Doména | Port(y) pro|Účel|
+| Doména | Port(y)|Účel|
 | ----------------------|------------------|------------------|
 | login.microsoftonline.com | 80/443| Zprostředkovatel identity|
 | secure.aadcdn.microsoftonline-p.com | 80/443|Zprostředkovatel identity|
 | dc.services.visualstudio.com| 80/443|Oznamování chyb|
-| management.azure.com|80/443| Azure Services API |
+| management.azure.com|80/443| Rozhraní API služeb Azure |
 
 ### <a name="nuget"></a>NuGet
 
-| Doména | Port(y) pro|Účel|
+| Doména | Port(y)|Účel|
 | ----------------------|------------------|------------------|
 | api.nuget.org | 80/443|NuGet API|
 | secure.aadcdn.microsoftonline-p.com |80/443| Zprostředkovatel identity|
 
-### <a name="android-projects"></a>Projekty Android
+### <a name="android-projects"></a>Projekty pro Android
 
 | Doména| Účel|
 | ------------------------------------|------------------------------------|
-| time.android.com| Čas serveru pro emulátor Androidu |
-| connectivitycheck.gstatic.com | Připojení k emulátoru Androidu|
-| cloudconfig.googleapis.com| Rozhraní API a emulátor pro Android|
+| time.android.com| Časový server pro Android Emulator |
+| connectivitycheck.gstatic.com | Připojení pro Android Emulator|
+| cloudconfig.googleapis.com| Rozhraní API pro Android Emulator|
 
 ## <a name="see-also"></a>Viz také:
 
-- [Instalace a používání sady Visual Studio 2017 a služeb Azure za bránou firewall nebo proxy serverem](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server)
-- [Řešení potíží s obdobným problémům ve Windows](/visualstudio/install/troubleshooting-network-related-errors-in-visual-studio)
+- [Instalace a použití služeb Visual Studio 2017 a Azure za bránou firewall nebo proxy server](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server)
+- [Řešení podobných potíží ve Windows](/visualstudio/install/troubleshooting-network-related-errors-in-visual-studio)

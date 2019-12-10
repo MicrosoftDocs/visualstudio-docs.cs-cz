@@ -1,22 +1,22 @@
 ---
 title: Nastavení úložiště Subversion
-description: Pomocí dílčích verzí v sadě Visual Studio pro Mac.
-author: conceptdev
-ms.author: crdun
+description: Použití podverze v Visual Studio pro Mac.
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 0D58FB37-530E-495B-BED6-FD499477A9B6
-ms.openlocfilehash: 7dfb5c645125afc1485c1422909e52741507b327
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7133ffd01d8f384efa91d95bc8ea05aa75b7dd0d
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62988242"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985227"
 ---
-# <a name="set-up-a-subversion-repository"></a>Nastavení úložiště Subversion
+# <a name="set-up-a-subversion-repository"></a>Nastavení úložiště podverze
 
-Subversion je centralizovaná _systém správy verzí_, což znamená, že je jeden server, který obsahuje všechny soubory a revize, kteří uživatelé sjednotit, zkontrolujte všechny verze všech souborů. Když soubory jsou rezervovány ze vzdáleného úložiště Subversion, uživatel získá snímek úložiště v tomto okamžiku v čase.
+Podverze je centralizovaný _systém správy verzí_, což znamená, že existuje jeden server, který obsahuje všechny soubory a revize, ze kterých mohou uživatelé rezervovat jakoukoli verzi libovolného souboru. Když jsou soubory rezervovány ze vzdáleného úložiště podverze, uživatel získá snímek úložiště v daném časovém okamžiku.
 
-Pro účely vaší verzí Subversion, musíte nainstalovat na svém počítači. A zkontrolujte, zda se dílčí verze je nainstalována váš počítač, v terminálu zadejte následující příkaz:
+Chcete-li použít podverzi správy verzí, je nutné ji nainstalovat do počítače. Pokud chcete zjistit, jestli je v počítači nainstalovaná dílčí verze, použijte v terminálu tento příkaz:
 
 ```bash
 svn --version
@@ -24,37 +24,37 @@ svn --version
 
 Tento příkaz vrátí číslo verze.
 
-Pokud ještě nemáte nainstalovaný Subversion, po instalaci je nejjednodušší způsob, jak ho získat _příkazového řádku nástroje Xcode_. Pomocí následujícího příkazu nainstalujte nástroje příkazového řádku Xcode a Subversion.
+Pokud není podverze ještě nainstalovaná, nejjednodušší způsob, jak ji získat, je nainstalovat _nástroje příkazového řádku Xcode_. Pomocí následujícího příkazu nainstalujte nástroje příkazového řádku Xcode a dílčí verzi.
 
 ```bash
 xcode-select --install
 ```
 
-Jakmile dílčí verze je nainstalovaná na počítači, použijte následující kroky před publikováním projektu v SVN.
+Po instalaci dílčí verze na váš počítač použijte následující postup k publikování projektu v SVN.
 
-1. Vytvořte online volného úložiště SVN. V tomto příkladu [Assembla](https://app.assembla.com/) byl použit. Po vytvoření adresy URL, poskytneme vám, který se použije pro připojení k úložišti:
+1. Vytvořte bezplatné úložiště SVN online. V tomto příkladu se použil [Assembla](https://app.assembla.com/) . Po vytvoření se poskytne adresa URL, která se použije pro připojení k úložišti:
 
-    ![Zkopírujte adresu URL SVN](media/version-control-subversion1-sml.png)
+    ![zkopírovat adresu URL SVN](media/version-control-subversion1-sml.png)
 
-2. Otevření nebo vytvoření sady Visual Studio pro Mac projektu.
+2. Otevřete nebo vytvořte projekt Visual Studio pro Mac.
 
-3. Klikněte pravým tlačítkem myši na projekt a vyberte **verzí > Publikovat ve správě verzí...** :
+3. Klikněte pravým tlačítkem na projekt a vyberte možnost Správa **verzí > publikovat ve správě verzí...** :
 
     ![Spustit publikování projektu](media/version-control-subversion2.png)
 
-4. V **připojit k úložišti** kartu, vyberte možnost **Subversion** shora rozevíracího seznamu.
+4. Na kartě **připojit k úložišti** vyberte v horním rozevíracím seznamu **podverzi** .
 
-5. Zadejte adresu URL z kroku 1. Po zadání adresy URL v ostatních polích se vyplní ve výchozím nastavení:
+5. Zadejte adresu URL z kroku 1. Po zadání adresy URL se ve výchozím nastavení vyplní ostatní pole:
 
-    ![Vybrat úložiště a zadejte podrobnosti dialogového okna](media/version-control-subversion3.png)
+    ![Výběr úložiště a zadání podrobností – dialogové okno](media/version-control-subversion3.png)
 
-7. Klikněte na tlačítko **OK** a pak to potvrďte klepnutím **publikovat**.
+7. Klikněte na **OK** a potvrďte stisknutím tlačítka **publikovat**.
 
-7. Pokud se zobrazí výzva, zadejte svoje přihlašovací údaje pro lokality, na kterém jste vytvořili úložiště, jak je znázorněno níže:
+7. Pokud se zobrazí výzva, zadejte přihlašovací údaje pro web, na kterém jste úložiště vytvořili, jak je znázorněno níže:
 
-    ![Zadání přihlašovacích údajů úložiště subversion](media/version-control-subversion5.png)
+    ![Zadání přihlašovacích údajů pro úložiště podverze](media/version-control-subversion5.png)
 
-8. Všechny příkazy správy verzí k dispozici, teď by se zobrazovat v nabídce Řízení verze.
+8. Všechny dostupné příkazy správy verzí by nyní měly být viditelné v nabídce správy verzí.
 
 ## <a name="see-also"></a>Viz také:
 

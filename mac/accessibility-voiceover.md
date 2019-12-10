@@ -2,21 +2,21 @@
 title: Použití VoiceOver s Visual Studio pro Mac
 description: Použití macOS VoiceOver navigace s Visual Studio pro Mac
 author: alanjclark
-ms.author: alcl
+ms.author: dominicn
 ms.date: 09/23/2019
 ms.assetid: 590C325D-AAD0-4889-B1DB-A1090BBFBE89
-ms.openlocfilehash: 0645d0f00445c70d8d6b768063b3e9be219a0a83
-ms.sourcegitcommit: 528178a304e66c0cb7ab98b493fe3c409f87493a
+ms.openlocfilehash: 8f5cfc4c05ed3911370782185475b23112207c62
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274406"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985076"
 ---
 # <a name="using-voiceover-with-visual-studio-for-mac"></a>Použití VoiceOver s Visual Studio pro Mac
 
 Uživatelé, kteří vyžadují čtečku obrazovky, budou využívat macOS VoiceOver. Visual Studio pro Mac je přístupná pomocí běžných příkazů VoiceOver.
 
-## <a name="how-to-enable-and-use-voiceover"></a>Postupy: Povolení a použití VoiceOver
+## <a name="how-to-enable-and-use-voiceover"></a>Postupy: povolení a použití VoiceOver
 
 Povolení nebo zakázání VoiceOver stisknutím klávesy  **&#8984;F5**
 
@@ -28,8 +28,8 @@ Tady je seznam některých běžných příkazů VoiceOver pro Visual Studio pro
 
 |Funkce|Popis|Zástupce|
 |-------|-----------|--------|
-|Navigace|Přejít na všechny prvky uživatelského rozhraní|**VO →**, **VO ←**|
-|Navigace|Krok dovnitř nebo ven z prvků uživatelského rozhraní|**VO ⇧ ↓**, **VO ⇧ ↑**|
+|Navigovat|Přejít na všechny prvky uživatelského rozhraní|**vo →**, **vo ←**|
+|Navigovat|Krok dovnitř nebo ven z prvků uživatelského rozhraní|**vo ⇧ ↓**, **vo ⇧ ↑**|
 |Interaktivně|Výběr nebo interakce s ovládacím prvkem v rámci fokusu|**VO ␣**|
 |Interaktivně|Interakce s panelem nabídek Visual Studio pro Mac|**VO M**|
 

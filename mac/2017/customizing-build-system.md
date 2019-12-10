@@ -1,42 +1,42 @@
 ---
 title: Přizpůsobení sestavovacího systému
-description: Tento článek je stručný úvod do MSBuild sestavovací systém používá sada Visual Studio pro Mac
-author: conceptdev
-ms.author: crdun
+description: Tento článek je stručný úvod do systému sestavení MSBuild, který používá Visual Studio pro Mac
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 04/14/2017
 ms.assetid: 6958B102-8527-4B40-BC65-3505DB63F9D3
-ms.openlocfilehash: 0c2a4590b15faa2573ccab3ff51ff5cd54e177ca
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 97416ef126ee77f9955d8fa486d7bb7e2ceb725e
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62932816"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74983446"
 ---
-# <a name="customizing-the-build-system"></a>Přizpůsobení procesu sestavení
+# <a name="customizing-the-build-system"></a>Přizpůsobení systému sestavení
 
-Nástroj MSBuild je modul sestavení s vyvinutý microsoftem, který umožňuje vytváření primárně aplikací .NET. Mono framework obsahuje také vlastní implementace společnosti Microsoft Build Engine, volá **xbuild**. Ale xbuild byla ukončena používat MSBuild na všechny operační systémy.
+MSBuild je modul sestavení vyvinutý společností Microsoft, který umožňuje vytvářet hlavně aplikace .NET. Rozhraní mono má také svou vlastní implementaci modulu sestavení společnosti Microsoft s názvem **xbuild**. Xbuild se ale postupně vyvolala za použití nástroje MSBuild na všech operačních systémech.
 
-**Nástroj MSBuild** slouží především pro jako systém sestavení pro projekty v sadě Visual Studio pro Mac.
+Nástroj **MSBuild** se primárně používá pro jako systém sestavení pro projekty v Visual Studio pro Mac.
 
-Nástroj MSBuild funguje tak, že trvá sadu vstupů, jako je například zdrojové soubory a přemění je na výstupů, jako je například spustitelné soubory. Tento výstup dosahuje vyvoláním nástrojů, jako je kompilátor.
+Nástroj MSBuild funguje tak, že převezme sadu vstupů, například zdrojové soubory, a transformuje je na výstupy, jako jsou spustitelné soubory. Tento výstup dosahuje vyvoláním nástrojů, jako je například kompilátor.
 
 ## <a name="msbuild-file"></a>Soubor MSBuild
 
-Nástroj MSBuild používá soubor XML s názvem souboru projektu, který definuje *položky* , které jsou součástí vašeho projektu (například obrázek prostředky) a *vlastnosti* potřebné k sestavení projektu. Tento soubor projektu bude mít vždy příponu souboru končí na `proj`, jako například `.csproj` pro projekty jazyka C#.
+Nástroj MSBuild používá soubor XML, který se označuje jako soubor projektu, který definuje *položky* , které jsou součástí projektu (například prostředky obrázku), a *vlastnosti* potřebné k sestavení projektu. Tento soubor projektu bude mít vždy příponu souboru končící `proj`, například `.csproj` pro C# projekty.
 
-### <a name="viewing-the-msbuild-file"></a>V souboru nástroje MSBuild
+### <a name="viewing-the-msbuild-file"></a>Zobrazení souboru MSBuild
 
-Vyhledejte soubor MSBuild tak, že kliknete pravým tlačítkem na název projektu a vyberete **zobrazit ve Finderu**. V okně hledání se zobrazí všechny soubory a složky, které jsou spojené s projektem, včetně `.csproj` souboru, jak je znázorněno na následujícím obrázku:
+Vyhledejte soubor MSBuild kliknutím pravým tlačítkem myši na název projektu a výběrem možnosti **Zobrazit ve Finderu**. V okně Finder se zobrazí všechny soubory a složky, které souvisejí s vaším projektem, včetně souboru `.csproj`, jak je znázorněno na následujícím obrázku:
 
-![umístění souboru csproj ve Finderu.](media/customizing-build-system-image1.png)
+![umístění csproj ve Finderu](media/customizing-build-system-image1.png)
 
-Chcete-li zobrazit `.csproj` na nové kartě v sadě Visual Studio pro Mac, klikněte pravým tlačítkem na název vašeho projektu a přejděte do **nástroje > Upravit soubor**:
+Chcete-li zobrazit `.csproj` na nové kartě v Visual Studio pro Mac, klikněte pravým tlačítkem myši na název projektu a přejděte do části **nástroje > upravit soubor**:
 
-![otevření v editoru zdrojového kódu csproj](media/customizing-build-system-image2.png)
+![otevření csproj v editoru zdrojového kódu](media/customizing-build-system-image2.png)
 
-### <a name="composition-of-the-msbuild-file"></a>Složení soubor MSBuild
+### <a name="composition-of-the-msbuild-file"></a>Složení souboru MSBuild
 
-Všechny soubory MSBuild obsahují vyžadovaný kořenový `Project` prvek, například takto:
+Všechny soubory MSBuild obsahují povinný kořenový element `Project`, například takto:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -44,25 +44,25 @@ Všechny soubory MSBuild obsahují vyžadovaný kořenový `Project` prvek, nap�
 </Project>
 ```
 
-Obvykle se také importovat projekt `.targets` souboru. Tento soubor obsahuje celou řadu pravidla, která popisují, jak zpracovat a různé soubory sestavení. Import se obvykle zobrazují směrem k dolní části vašeho `proj` souborů a pro projekty jazyka C# vypadat přibližně takto:
+Projekt obvykle také naimportuje soubor `.targets`. Tento soubor obsahuje mnoho pravidel, která popisují postup zpracování a sestavení různých souborů. Import obvykle se zobrazí v dolní části souboru `proj` a v případě C# projektů vypadá nějak takto:
 
 ```xml
 <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 ```
 
-Soubor cílů je jiný soubor MSBuild. Tento soubor obsahuje kód MSBuild, který je opakovaně použitelné ve více projektů. Například `Microsoft.CSharp.targets` soubor, který se nachází v adresáři reprezentována `MSBuildBinPath` vlastnost (nebo proměnné), obsahuje logiku pro tvorbu sestavení C# od zdrojové soubory jazyka C#.
+Soubor cílů je jiný soubor MSBuild. Tento soubor obsahuje kód MSBuild, který je možné použít více projekty. Například `Microsoft.CSharp.targets` soubor, který je nalezen v adresáři reprezentovaný vlastností `MSBuildBinPath` (nebo proměnná), obsahuje logiku pro sestavení C# sestavení ze C# zdrojových souborů.
 
 ### <a name="items-and-properties"></a>Položky a vlastnosti
 
-Existují dva základní datové typy v nástroji MSBuild: *položky* a *vlastnosti*, které jsou vysvětlené podrobněji v následujících částech.
+V nástroji MSBuild existují dva základní datové typy: *položky* a *vlastnosti*, které jsou podrobněji vysvětleny v následujících oddílech.
 
 #### <a name="properties"></a>Vlastnosti
 
-Vlastnosti jsou páry klíč/hodnota, které se používají k ukládání nastavení, která ovlivňují kompilace, jako jsou možnosti kompilátoru.
+Vlastnosti jsou páry klíč/hodnota, které se používají k ukládání nastavení, která ovlivňují kompilaci, jako jsou například možnosti kompilátoru.
 
-Jsou nastavené pomocí PropertyGroup a může obsahovat libovolný počet PropertiesGroups, který může obsahovat libovolný počet vlastností.
+Jsou nastaveny pomocí skupiny vlastností a mohou obsahovat libovolný počet PropertiesGroups, který může obsahovat libovolný počet vlastností.
 
-PropertyGroup pro jednoduchou konzolovou aplikaci může například vypadat jako následující kód XML:
+Například vlastnost pro jednoduchou konzolovou aplikaci může vypadat jako v následujícím kódu XML:
 
 ```xml
 <PropertyGroup>
@@ -76,15 +76,15 @@ PropertyGroup pro jednoduchou konzolovou aplikaci může například vypadat jak
 </PropertyGroup>
 ```
 
-Vlastnosti lze odkazovat z výrazů pomocí `$()` syntaxe. Například `$(Foo)` se vyhodnotí jako hodnotu `Foo` vlastnost. Pokud nebyla nastavena vlastnost, se vyhodnotí jako prázdný řetězec, bez jakékoli chyby.
+Na vlastnosti lze odkazovat z výrazů pomocí syntaxe `$()`. Například `$(Foo)` bude vyhodnocen jako hodnota vlastnosti `Foo`. Pokud vlastnost nebyla nastavena, vyhodnotí se jako prázdný řetězec bez jakékoli chyby.
 
 #### <a name="items"></a>Položky
 
-Položky poskytují způsob řešení problémů s vstupy do systému sestavení, jako jsou uvedeny nebo nastaví a obvykle představují soubory. Každá položka má položku *typ*, položku *specifikace*a volitelné libovolného *metadat*. Všimněte si, že nástroj MSBuild nepracuje na jednotlivé položky trvá u všech položek zadaný typ označuje položku *nastavení*
+Položky poskytují způsob, jak řešit vstupy do systému sestavení jako seznamy nebo sady a obvykle představují soubory. Každá položka má *typ*položky, *specifikaci*položky a volitelná libovolná *metadata*. Všimněte si, že nástroj MSBuild nefunguje na jednotlivých položkách, přebírá všechny položky daného typu označované jako *sada* položek.
 
-Položky jsou vytvořeny prohlášením `ItemGroup`. Může existovat libovolný počet ItemGroups, který může obsahovat libovolný počet položek.
+Položky jsou vytvořeny deklarací `ItemGroup`. Může existovat libovolný počet ItemGroups, který může obsahovat libovolný počet položek.
 
-Například následující fragment kódu vytvoří spuštění obrazovky pro iOS. Spusťte obrazovky obsahují typ sestavení `BundleResource`, s specifikace jako cestu k bitové kopii:
+Například následující fragment kódu vytvoří obrazovky pro spuštění iOS. Spouštěcí obrazovky mají typ sestavení `BundleResource`se specifikací jako cesta k imagi:
 
 ```xml
  <ItemGroup>
@@ -97,11 +97,11 @@ Například následující fragment kódu vytvoří spuštění obrazovky pro iO
   </ItemGroup>
  ```
 
- Položku sady lze odkazovat z výrazů pomocí `@()` syntaxe. Například `@(BundleResource)` se vyhodnotí jako sada BundleResource položky, což znamená, že všechny položky BundleResource. Pokud neexistují žádné položky tohoto typu, bude prázdný, bez jakékoli chyby.
+ Na sady položek lze odkazovat z výrazů pomocí syntaxe `@()`. Například `@(BundleResource)` bude vyhodnocen jako sada položek BundleResource, což znamená všechny položky BundleResource. Pokud žádné položky tohoto typu neexistují, bude prázdná bez jakékoli chyby.
 
-## <a name="resources-for-learning-msbuild"></a>Zdroje informací nástroje MSBuild
+## <a name="resources-for-learning-msbuild"></a>Materiály k nástrojům MSBuild pro učení
 
-Další informace o nástroji MSBuild podrobněji lze použít v následujících zdrojích:
+Následující prostředky lze použít pro další informace o nástroji MSBuild podrobněji:
 
 * [Přehled nástroje MSBuild](/visualstudio/msbuild/msbuild)
 * [Koncepty nástroje MSBuild](/visualstudio/msbuild/msbuild-concepts)

@@ -1,46 +1,46 @@
 ---
-title: Kurz – vytvoření více kontejnerů aplikace pomocí Docker Compose
-description: Zjistěte, jak spravovat více než jednoho kontejneru a komunikaci mezi nimi v sadě Visual Studio pro Mac
-author: asb3993
-ms.author: amburns
+title: Kurz – vytvoření aplikace s více kontejnery pomocí Docker Compose
+description: Naučte se spravovat více než jeden kontejner a komunikovat mezi nimi v Visual Studio pro Mac
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 06/17/2019
-ms.openlocfilehash: 7570788b50a83d9a74657408d4f38fbce21bd1c3
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: 487945399252ca3627d625e3572637b5b2af2916
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67691710"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74983953"
 ---
-# <a name="create-a-multi-container-app-with-docker-compose"></a>Vytvoření více kontejnerů aplikace pomocí Docker Compose
+# <a name="create-a-multi-container-app-with-docker-compose"></a>Vytvoření aplikace s více kontejnery pomocí Docker Compose
 
-V tomto kurzu se naučíte spravovat více než jednoho kontejneru a komunikaci mezi nimi používáte Docker Compose v sadě Visual Studio pro Mac.
+V tomto kurzu se naučíte spravovat více než jeden kontejner a mezi nimi komunikovat při použití Docker Compose v Visual Studio pro Mac.
 
 ## <a name="prerequisites"></a>Požadavky
 
-* [Desktop dockeru](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
+* [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 * [Visual Studio for Mac 2019](https://visualstudio.microsoft.com/vs/mac)
 
-## <a name="create-an-aspnet-core-web-application-and-add-docker-support"></a>Vytvořit webovou aplikaci ASP.NET Core a přidání podpory Dockeru
+## <a name="create-an-aspnet-core-web-application-and-add-docker-support"></a>Vytvoření webové aplikace ASP.NET Core a přidání podpory Docker
 
-1. Vytvořit nové řešení tak, že přejdete do **soubor > Nový řešení**.
-1. V části **.NET Core > aplikace** zvolte **webovou aplikaci** šablony: ![Vytvoření nové aplikace ASP.NET](media/docker-quickstart-1.png)
-1. Vyberte cílovou architekturu. V tomto příkladu budeme používat .NET Core 2.2: ![Nastavení cílové architektury](media/docker-quickstart-2.png)
-1. Zadejte podrobnosti o projektu, jako je například název projektu (_DockerDemoFrontEnd_ v tomto příkladu) a název řešení (_DockerDemo_). Vytvořený projekt obsahuje všechny základní informace, které potřebujete k sestavení a spuštění webu technologie ASP.NET Core.
-1. V oblasti řešení klikněte pravým tlačítkem na projekt DockerDemoFrontEnd a vyberte **Add > Add Docker Support**: ![Přidání podpory dockeru](media/docker-quickstart-3.png)
+1. Nové řešení můžete vytvořit tak, že na **soubor > nové řešení**.
+1. V části **aplikace .NET Core >** vyberte šablonu **webové aplikace** : ![vytvoření nové aplikace ASP.NET](media/docker-quickstart-1.png)
+1. Vyberte cílovou architekturu. V tomto příkladu použijeme .NET Core 2,2: ![nastavit cílovou architekturu](media/docker-quickstart-2.png)
+1. Zadejte podrobnosti projektu, jako je například název projektu (_DockerDemoFrontEnd_ v tomto příkladu) a název řešení (_DockerDemo_). Vytvořený projekt obsahuje všechny základy, které potřebujete k vytvoření a spuštění webu ASP.NET Core.
+1. V Oblast řešení klikněte pravým tlačítkem na projekt DockerDemoFrontEnd a vyberte **přidat > přidat podporu Docker**: ![přidat podporu docker](media/docker-quickstart-3.png)
 
-Visual Studio pro Mac automaticky přidá nový projekt do řešení volá **docker-compose** a přidejte **soubor Dockerfile** do existujícího projektu.
+Visual Studio pro Mac automaticky přidá nový projekt do vašeho řešení s názvem **Docker-** **souboru Dockerfile** a přidá do existujícího projektu.
 
-## <a name="create-an-aspnet-core-web-api-and-add-docker-support"></a>Vytvoření webového rozhraní API ASP.NET Core a přidání podpory Dockeru
+## <a name="create-an-aspnet-core-web-api-and-add-docker-support"></a>Vytvoření webového rozhraní API ASP.NET Core a přidání podpory Docker
 
-Dále vytvoříme druhý projekt, který bude sloužit jako naše back-endového rozhraní API. **Rozhraní API pro .NET Core** šablona obsahuje kontroler, který umožňuje zpracovávat požadavky RESTful.
+V dalším kroku vytvoříme druhý projekt, který bude fungovat jako naše rozhraní API back-endu. Šablona rozhraní **.NET Core API** zahrnuje kontroler, který nám umožňuje zpracovávat požadavky RESTful.
 
-1. Přidat nový projekt do stávajícího řešení tak, že kliknete pravým tlačítkem na řešení a zvolíte **Přidat > Přidat nový projekt**.
-1. V části **.NET Core > aplikace** zvolte **API** šablony.
-1. Vyberte cílovou architekturu. V tomto příkladu budeme používat .NET Core 2.2
-1. Zadejte podrobnosti o projektu, jako je například název projektu (_DockerDemoAPI_ v tomto příkladu).
-1. Po vytvoření, přejděte na oblasti řešení a projektu DockerDemoAPI klikněte pravým tlačítkem myši a vyberte **Add > Add Docker Support**.
+1. Kliknutím pravým tlačítkem na řešení a zvolením **přidat > přidat nový projekt**přidejte nový projekt do existujícího řešení.
+1. V části **aplikace .NET Core >** vyberte šablonu **rozhraní API** .
+1. Vyberte cílovou architekturu. V tomto příkladu použijeme .NET Core 2,2.
+1. Zadejte podrobnosti projektu, jako je například název projektu (_DockerDemoAPI_ v tomto příkladu).
+1. Po vytvoření přejděte na Oblast řešení a klikněte pravým tlačítkem na projekt DockerDemoAPI a vyberte **přidat > přidat podporu Docker**.
 
-**Docker-compose.yml** soubor **docker-compose** projekt se automaticky aktualizují zahrnout projekt rozhraní API spolu s existující projekt webové aplikace. Když jsme sestavit a spustit **docker-compose** projektu, každý z těchto projektů se nasadí do samostatného kontejneru Dockeru.
+Soubor **Docker-Compose. yml** v projektu **Docker-** se automaticky aktualizuje tak, aby zahrnoval projekt rozhraní API spolu s existujícím projektem webové aplikace. Když sestavíte a spustíte projekt **Docker-** Build, každý z těchto projektů se nasadí do samostatného kontejneru Docker.
 
 ```
 version: '3.4'
@@ -61,9 +61,9 @@ services:
 
 ## <a name="integrate-the-two-containers"></a>Integrace dvou kontejnerů
 
-Teď máme dva projekty ASP.NET v našich řešení a jsou nakonfigurovány s podporou Dockeru. Dále je potřeba přidat nějaký kód!
+V našem řešení teď máme dva projekty ASP.NET a obě jsou nakonfigurované s podporou Docker. Dál je potřeba přidat nějaký kód!
 
-1. V `DockerDemoFrontEnd` projekt, otevřete *Index.cshtml.cs* soubor a nahradit `OnGet` metodu s následujícím kódem:
+1. V projektu `DockerDemoFrontEnd` otevřete soubor *index.cshtml.cs* a nahraďte `OnGet` metodu následujícím kódem:
 
    ```csharp
     public async Task OnGet()
@@ -81,7 +81,7 @@ Teď máme dva projekty ASP.NET v našich řešení a jsou nakonfigurovány s po
     }
    ```
 
-1. V *Index.cshtml* přidejte řádek pro zobrazení `ViewData["Message"]` tak, že soubor bude vypadat jako v následujícím kódu:
+1. V souboru *index. cshtml* přidejte řádek, který se zobrazí `ViewData["Message"]` tak, aby soubor vypadal jako následující kód:
 
       ```cshtml
       @page
@@ -97,7 +97,7 @@ Teď máme dva projekty ASP.NET v našich řešení a jsou nakonfigurovány s po
       </div>
       ```
 
-1. Teď v projektu webového rozhraní API, přidejte kód do kontroleru hodnoty chcete přizpůsobit zprávu o vrácená rozhraním API pro volání, které jste přidali z *webfrontend*:
+1. Nyní v projektu webového rozhraní API přidejte kód do řadiče hodnot a upravte zprávu vrácenou rozhraním API pro volání, které jste přidali ze služby *webendu*:
 
       ```csharp
         // GET api/values/5
@@ -108,6 +108,6 @@ Teď máme dva projekty ASP.NET v našich řešení a jsou nakonfigurovány s po
         }
       ```
 
-1. Nastavte `docker-compose` projekt jako spouštěný projekt, přejděte na **spuštění > Spustit ladění**. Pokud je vše nastaveno správně, zobrazí zprávu "Hello z webfrontend a webová rozhraní API (s hodnotou 1).":
+1. Nastavte projekt `docker-compose` jako spouštěný projekt a přejít na **spuštění > spustit ladění**. Pokud je všechno správně nakonfigurované, zobrazí se zpráva Hello z webendu a WebApi (s hodnotou 1). ":
 
-![Řešení kontejnerů dockeru s více spuštění](media/docker-multicontainer-debug.png)
+![Řešení Docker multi Container je spuštěné](media/docker-multicontainer-debug.png)

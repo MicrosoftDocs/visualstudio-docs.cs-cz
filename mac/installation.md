@@ -1,18 +1,18 @@
 ---
 title: Instalace sady Visual Studio 2019 pro Mac
 description: Pokyny k instalaci sady Visual Studio 2019 pro Mac a další součásti, které jsou potřeba pro vývoj pro různé platformy.
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
-ms.openlocfilehash: 1ace600f9c4582e99c6fa324cb9dcc61593d3d97
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: dd6afc69c2a7e513358c69eafeacb49fcb06dd52
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73716778"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74983977"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>Instalace sady Visual Studio 2019 pro Mac
 
@@ -37,7 +37,7 @@ Pro sestavování aplikací Xamarin pro iOS nebo macOS budete také potřebovat:
 
     [![kliknutím na velkou šipku spusťte instalaci.](media/install-installer-sml.png)](media/install-installer.png#lightbox)
 
-3. Je možné, že se zobrazí upozornění na aplikaci, která se stahuje z Internetu. Klikněte na **otevřít**.
+3. Je možné, že se zobrazí upozornění na aplikaci, která se stahuje z Internetu. Klikněte na tlačítko **otevřít**.
 4. Počkejte, než instalační program zkontroluje váš systém:
 
     [![instalační program zkontroluje nainstalované součásti systému.](media/install-checking-sml.png)](media/install-checking.png#lightbox)
@@ -53,14 +53,14 @@ Pro sestavování aplikací Xamarin pro iOS nebo macOS budete také potřebovat:
    Pokud nechcete instalovat všechny platformy, použijte Průvodce níže, který vám pomůže určit, které platformy se mají nainstalovat:
 
 
-|Typ aplikace  |Cílové  |Výběr  |Poznámky  |
+|Typ aplikace  |Cíl  |Výběr  |Poznámky  |
 |---------|---------|---------|---------|
 |**Aplikace používající Xamarin**| Xamarin.Forms|Výběr platforem **Android** a **iOS** |Budete muset nainstalovat [ **Xcode**](https://developer.apple.com/xcode/) |
-||jenom iOS|Vybrat platformu **iOS**|Budete muset nainstalovat [ **Xcode**](https://developer.apple.com/xcode/)|
-||Jenom Android|Vybrat platformu pro **Android**|Všimněte si, že byste také měli vybrat relevantní závislosti.|
+||Jenom iOS|Vybrat platformu **iOS**|Budete muset nainstalovat [ **Xcode**](https://developer.apple.com/xcode/)|
+||Jen Android|Vybrat platformu pro **Android**|Všimněte si, že byste také měli vybrat relevantní závislosti.|
 ||Jenom Mac|Vybrat platformu **MacOS (kakao)**|Budete muset nainstalovat [ **Xcode**](https://developer.apple.com/xcode/)|
 |**Aplikace .NET Core**|         |Vyberte platformu **.NET Core** .|         |
-|**ASP.NET Core webové aplikace**|         |Vyberte platformu **.NET Core** .|         |
+|**Webové aplikace ASP.NET Core**|         |Vyberte platformu **.NET Core** .|         |
 |**Azure Functions**|         |Vyberte platformu **.NET Core** .|         |
 |**Vývoj her v Unity pro různé platformy**|         |Kromě Visual Studio pro Mac nemusíte instalovat žádné další platformy.| Další informace o instalaci rozšíření Unity najdete v [Průvodci nastavením Unity](/visualstudio/mac/setup-vsmac-tools-unity) .|
 

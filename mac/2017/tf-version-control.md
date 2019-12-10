@@ -1,17 +1,17 @@
 ---
-title: Správa verzí Team Foundation (TFVC)
+title: TFVC (Team Foundation Version Control)
 description: Připojení z Visual Studio pro Mac k Team Foundation Server/Azure DevOps s Správa verzí Team Foundation (TFVC).
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 06/25/2019
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
-ms.openlocfilehash: e45f80ab1a5aab4969b01a2fddcfd88d9dc4eff7
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: b7b160d58cead031a0eece2a522501d8c2060bd2
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73716132"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985196"
 ---
 # <a name="connecting-to-team-foundation-version-control"></a>Připojování k Správa verzí Team Foundation
 
@@ -116,7 +116,7 @@ Pokud chcete získat další informace o uvedených příkazech nebo jiných, m�
 
 V galerii rozšíření Visual Studio pro Mac existuje rozšíření pro řízení verzí Team Foundation, které nabízí omezené podpory pro připojení k TFVC. Toto rozšíření se nepodporuje a má několik známých problémů, takže se při jeho použití může lišit vaše prostředí.
 
-Pokud chcete nainstalovat rozšíření, spusťte Visual Studio pro Mac a vyberte nabídku **rozšíření pro Visual Studio >** . Na kartě **Galerie** vyberte možnost správa **verzí > Správa verzí Team Foundation pro TFS a Azure DevOps** a klikněte na **nainstalovat...** :
+Pokud chcete nainstalovat rozšíření, spusťte Visual Studio pro Mac a vyberte nabídku **rozšíření pro Visual Studio >** . V **Galerie** kartu, vyberte možnost **verzí > správy verzí Team Foundation serveru TFS a Azure DevOps** a klikněte na tlačítko **instalace...** :
 
 ![Správce rozšíření](media/tfvc-install.png)
 
@@ -130,7 +130,7 @@ Stisknutím tlačítka **nainstalovat** v dalším dialogovém okně odinstalujt
 
 ### <a name="using-the-extension"></a>Použití rozšíření
 
-Po instalaci rozšíření vyberte **řízení verze > TFS/Azure DevOps > otevřít ze vzdáleného úložiště...** položka nabídky.
+Po instalaci rozšíření, vyberte **verzí > TFS/Azure DevOps > Otevřít ze vzdáleného úložiště...** položky nabídky.
 
 ![Položka nabídky pro otevření rozšíření](media/tfvc-source-control-explorer-devops.png)
 
@@ -236,7 +236,7 @@ Po nastavení pracovního prostoru ho můžete změnit nebo odebrat kliknutím n
 
 K ověření pomocí serveru můžete použít následující možnosti:
 
-- OAuth
+- Oauth
 - Základní
 - NTLM
 

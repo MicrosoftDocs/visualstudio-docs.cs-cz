@@ -1,106 +1,106 @@
 ---
 title: Práce s úložištěm Git
-description: Pomocí Git ve Visual Studio pro Mac.
-author: conceptdev
-ms.author: crdun
+description: Použití Gitu v Visual Studio pro Mac.
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 852B6A9D-AEFA-4EF4-A5DD-94A506019D20
 ms.custom: video
-ms.openlocfilehash: 2d18ef3d693c3906c1312cfecb8da605c6a27226
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: 33148c5202251525504864f26177da4497b5fabe
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67692970"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74983569"
 ---
 # <a name="working-with-git"></a>Práce s úložištěm Git
 
-Git je distribuovaný systém správy verzí, který umožňuje týmům pracovat současně na stejném dokumenty. To znamená, že je centrálního serveru, který obsahuje všechny soubory, ale pokud úložiště je rezervován z tohoto centrální zdroje, je v místním počítači klonovat celé úložiště.
+Git je distribuovaný systém správy verzí, který umožňuje týmům současně pracovat na stejných dokumentech. To znamená, že je k dispozici centrální server, který obsahuje všechny soubory, ale v případě, že je úložiště rezervováno z tohoto centrálního zdroje, je celé úložiště naklonováno na místní počítač.
 
-Následující části prozkoumá, jak lze použít Git pro správu verzí v sadě Visual Studio pro Mac.
+V následujících částech se dozvíte, jak se Git dá použít pro správu verzí v Visual Studio pro Mac.
 
-## <a name="git-version-control-menu"></a>Nabídka řízení verzí Git
+## <a name="git-version-control-menu"></a>Nabídka správy verzí Git
 
-Následující obrázek ukazuje možnosti poskytovaný sadou Visual Studio for Mac pomocí položky nabídky správy verzí:
+Následující obrázek znázorňuje možnosti poskytované Visual Studio pro Mac položkou nabídky správy verzí:
 
-![Položka nabídky ovládací prvek verze](media/version-control-gitVersionControlMenu.png)
+![Položka nabídky správy verzí](media/version-control-gitVersionControlMenu.png)
 
-## <a name="push-and-pull"></a>Nabízená a vyžádaná instalace
+## <a name="push-and-pull"></a>Vložení a vyžádání
 
-Odesílání a stahování jsou dvě nejběžnější akce v rámci Git. Pokud chcete synchronizovat změny provedené jinými uživateli do vzdáleného úložiště, musíte **o přijetí změn** z něj. To se provádí v sadě Visual Studio pro Mac tak, že vyberete **verzí > aktualizace řešení**.
+Doručování a přijímání je dvě z nejčastěji používaných akcí v rámci Gitu. Pokud chcete synchronizovat změny provedené jinými uživateli na vzdáleném úložišti, musíte si je **vyžádat** . To se provádí v Visual Studio pro Mac tak, že vyberete možnost Správa **verzí > aktualizace řešení**.
 
-Po aktualizaci souborů, zkontrolovat a potvrzené je, pak musíte **Push** do vzdáleného úložiště umožňuje ostatním přístup k provedené změny. To se provádí v sadě Visual Studio pro Mac tak, že vyberete **verzí > Push změny**. To bude zobrazení dialogu, abyste mohli zobrazit potvrzené změny a vyberte této větve vložíte do:
+Po aktualizaci souborů, jejich Zkontrolování a potvrzení je musíte **Odeslat** do vzdáleného úložiště a umožnit tak ostatním uživatelům přístup k vašim změnám. To se provádí v Visual Studio pro Mac tím, že vyberete **řízení verze > nabízených změn**. Tím se zobrazí dialogové okno pro vložení, které vám umožní zobrazit potvrzené změny a vybrat větev, do které se má vložit:
 
-![Dialogové okno zobrazující větve se zapsat do](media/version-control-gitPush.png)
+![Dialog zobrazující větev, do které se má zapisovat](media/version-control-gitPush.png)
 
-Můžete také potvrďte a odešlete změny ve stejnou dobu, přes dialogové okno potvrzení:
+Změny můžete také potvrdit a nasdílet současně pomocí dialogového okna potvrzení:
 
-![Možnost ukazující, jak potvrďte a odešlete ve stejnou dobu.](media/version-control-commitPush.png)
+![Možnost ukazující, jak provést současně zápis a nabízené oznámení.](media/version-control-commitPush.png)
 
-## <a name="blame-log-and-merge"></a>Příčin, protokolu a slučování
+## <a name="blame-log-and-merge"></a>Viny, log a Merge
 
-V dolní části okna je pět záložek, které se zobrazí, jak je znázorněno níže:
+V dolní části okna se zobrazí pět karet, jak je znázorněno níže:
 
-![Verze ovládacího prvku karty](media/version-control-gitTabs.png)
+![Karty správy verzí](media/version-control-gitTabs.png)
 
-Tyto rutiny umožňují následující akce:
+Tyto akce umožňují následující akce:
 
-* **Zdroj** -zobrazí souboru zdrojového kódu.
-* **Změny** -zobrazí změny v kódu mezi místním souborem a základního souboru. Můžete také porovnat různé verze souboru z různých hodnot hash:
+* **Source** – zobrazí soubor zdrojového kódu.
+* **Změny** – zobrazí změnu kódu mezi místním souborem a základním souborem. Můžete také porovnat různé verze souboru z různých hodnot hash:
 
     ![Karta změny](media/version-control-gitChange.png)
 
-* **Jedná se o výsledek** -zobrazí uživatelské jméno uživatele spojené s každou část kódu.
-* **Protokol** -zobrazí všechny potvrzení změn, časy, kalendářní data, zprávy a uživatele, kteří jsou zodpovědní za soubor:
+* **Viny** – zobrazí uživatelské jméno uživatele přidruženého k jednotlivým oddílům kódu.
+* **Log** – zobrazí všechna potvrzení, časy, kalendářní data, zprávy a uživatele zodpovědné za daný soubor:
 
-    ![Karta protokolu](media/version-control-gitLog.png)
+    ![Karta protokol](media/version-control-gitLog.png)
 
-* **Sloučení** – to je možné, pokud máte konfliktu při slučování při práci. Zobrazí vizuální znázornění změny, které vás a ostatní vývojáři a díky tomu můžete kombinovat čistě oba oddíly kódu.
+* **Sloučení** – Tato možnost se dá použít, pokud při potvrzování práce dojde ke konfliktu sloučení. Zobrazuje vizuální znázornění změn provedených vámi a dalším vývojářem, což umožňuje čistě kombinovat oddíly kódu.
 
 ## <a name="switching-branches"></a>Přepínání větví
 
-Ve výchozím nastavení, se nazývá první větev vytvořená v úložišti **hlavní** větve. Není technicky nic jiného mezi hlavní větve a jakékoli jiné, ale hlavní větev je ten, který je nejčastěji považovat za v vývojové týmy "live" nebo "produkční" větve.
+Ve výchozím nastavení se první větev vytvořená v úložišti nazývá **Hlavní** větev. Mezi hlavní větví a žádnou jinou není nic jiného, ale hlavní větev je ta, která se nejčastěji domnívá ve vývojových týmech jako "živá" nebo "produkční" větev.
 
-Nezávislé řádku vývoje mohou vytvořit větvení Master (nebo jakékoli větve, k tomuto účelu). To poskytuje novou verzi hlavní větve v bodě v čase, umožňující vývoj bez ohledu na jejich, co je "live". Použití větví tímto způsobem se často používá pro funkce ve vývoji softwaru
+Nezávislá čára vývoje se dá vytvořit pomocí větvení mimo hlavní (nebo jakoukoli jinou větev). To poskytuje novou verzi hlavní větve v určitém časovém okamžiku, což umožňuje vývoj nezávisle na tom, co je Live. Použití větví tímto způsobem se často používá k funkcím vývoje softwaru.
 
-Uživatelé můžou vytvářet libovolný počet větví, jako jsou pro každé úložiště, ale doporučuje se, že po jejich dokončení pomocí větev, odstraní se tak zachovat úložiště uspořádané.
+Uživatelé můžou pro každé úložiště vytvořit libovolný počet větví, ale doporučuje se, aby po dokončení používání větve ho odstranili, aby se úložiště zachovalo.
 
-Větve jsou zobrazeny v sadě Visual Studio pro Mac tak, že přejdete do **verzí > Spravovat větve a vzdálené větve...** :
+Větve se zobrazují v Visual Studio pro Mac procházením **správy verzí > správě větví a vzdálených...** :
 
-![Zobrazit větve](media/version-control-gitBranch2.png)
+![Zobrazení větví](media/version-control-gitBranch2.png)
 
-Přepnout na jinou větev tak, že ji vyberete v seznamu a stisknutím klávesy **přepnout na větev** tlačítko.
+Přepněte na jinou větev tak, že ji vyberete v seznamu a stisknete tlačítko **Přepnout na větev** .
 
-Chcete-li vytvořit novou větev vyberte **nový** tlačítko v dialogu konfigurace úložiště Git. Zadejte nový název větve:
+Pokud chcete vytvořit novou větev, vyberte v dialogovém okně konfigurace úložiště Git tlačítko **Nový** . Zadejte název nové větve:
 
 ![Vytvořit novou větev](media/version-control-gitBranch.png)
 
-Můžete také nastavit vzdálené větve vašeho _sledování_ větve. Další informace o sledování větví ve [dokumentace pro Git](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches#Tracking-Branches).
+Můžete také nastavit vzdálenou větev na _sledovací_ větev. Přečtěte si další informace o sledovacích větvích v [dokumentaci k Gitu](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches#Tracking-Branches).
 
-Zobrazit aktuální větve v oblasti řešení, vedle názvu projektu:
+Zobrazit aktuální větev v Oblast řešení vedle názvu projektu:
 
- ![Aktuální větve, které jsou zobrazeny v oblasti řešení](media/version-control-gitBranchName.png)
+ ![Aktuální větev zobrazená na panelu řešení](media/version-control-gitBranchName.png)
 
-## <a name="reviewing-and-committing"></a>Kontrola a potvrzení
+## <a name="reviewing-and-committing"></a>Kontrola a potvrzování
 
-Zkontrolovat změny v souborech, použít změny, viny, protokol a sloučit kartách na jednotlivých dokumentů, které jsou znázorněné výše v tomto tématu.
+Chcete-li zkontrolovat změny v souborech, použijte karty změny, viny, protokol a sloučení u každého dokumentu, který je znázorněn dříve v tomto tématu.
 
-Zkontrolujte všechny změny ve vašem projektu tak, že přejdete na **verzí > řešení zkontrolujte a potvrďte změny** položky nabídky:
+Zkontrolujte všechny změny v projektu, a to tak, že přejdete na **řízení verze > revize řešení a potvrzení** položky nabídky:
 
-![Zobrazení revize kódu](media/version-control-gitReviewCommit.png)
+![Zkontrolovat zobrazení kódu](media/version-control-gitReviewCommit.png)
 
-To umožňuje zobrazení všech změn v každém souboru projektu se možnost vrátit zpět, vytvořit opravu nebo použití.
+To umožňuje zobrazení všech změn v každém souboru projektu s možností vrácení, vytvoření opravy nebo potvrzení změn.
 
-Chcete-li zapsat soubor do vzdáleného úložiště, stiskněte **potvrzení**, zadejte zprávu potvrzení a potvrďte tlačítkem potvrzení:
+Pokud chcete soubor potvrdit do vzdáleného úložiště, stiskněte **Potvrdit**, zadejte potvrzovací zprávu a potvrďte tlačítko Potvrdit:
 
-![Potvrzují se soubor](media/version-control-gitCommit.png)
+![Potvrzení souboru](media/version-control-gitCommit.png)
 
-Jakmile máte potvrzené změny, jejich doručování do vzdáleného úložiště, chcete-li umožnit dalším uživatelům k jejich zobrazení.
+Jakmile provedete změny, nahrajte je do vzdáleného úložiště a umožněte ostatním uživatelům, aby je viděli.
 
-## <a name="related-video"></a>Související videa
+## <a name="related-video"></a>Související video
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Manage-Projects-with-Git/player]
 
 ## <a name="see-also"></a>Viz také:
 
-* [Sdílení kódu pomocí sady Visual Studio 2017 a Azure úložišť Git](/azure/devops/repos/git/share-your-code-in-git-vs-2017)
+* [Sdílejte kód se sadou Visual Studio 2017 a Azure Repos Git](/azure/devops/repos/git/share-your-code-in-git-vs-2017)
