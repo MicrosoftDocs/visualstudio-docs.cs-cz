@@ -2,13 +2,13 @@
 documentType: LandingData
 title: Ukázky Visual Studio pro Mac
 metadata:
-  description: 'Ukázkové aplikace, které pracují s Visual Studio pro Mac.'
-  author: asb3993
-  ms.author: amburns
+  description: 'Ukázkové aplikace, které pracují se sadou Visual Studio pro Mac.'
+  author: heiligerdankgesang
+  ms.author: dominicn
   ms.date: 07/31/2019
   ms.topic: sample
 abstract:
-  description: 'Ukázky pro aplikace a ukázky kódu Xamarin, které vám pomůžou začít sestavovat projekty pomocí Visual Studio pro Mac.'
+  description: 'Ukázky aplikací Xamarin a příklady kódu, které vám pomůžou začít vytvářet projekty pomocí sady Visual Studio pro Mac.'
 sections:
   - title: Xamarin.Forms
     items:
@@ -125,7 +125,7 @@ sections:
               href: 'https://docs.microsoft.com/samples/browse/?products=aspnet-core'
             title: Všechny ukázky ASP.NET Core
           - href: 'https://docs.microsoft.com/samples/browse/?products=dotnet-core'
-            html: 'Kompletní sada ukázkových aplikací .NET Core a ukázek kódu. Všimněte si, že některé z těchto ukázek mají požadavky specifické pro systém Windows, a proto se nespustí v Visual Studio pro Mac'
+            html: 'Kompletní sada ukázkových aplikací .NET Core a ukázek kódu. Všimněte si, že některé z těchto ukázek mají požadavky specifické pro Windows, a proto je nelze spustit v sadě Visual Studio pro Mac'
             image:
               src: ../media/samples/sample-download.svg
               href: 'https://docs.microsoft.com/samples/browse/?products=dotnet-core'

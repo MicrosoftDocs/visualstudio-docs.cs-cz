@@ -1,19 +1,19 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: Visual Studio pro Mac dokumentace
+title: Dokumentace k sadě Visual Studio pro Mac
 metadata:
-  description: Tento článek obsahuje představení funkcí sady Visual Studio 2017 for Mac.
-  author: conceptdev
-  ms.author: crdun
+  description: V tomto článku se seznámíte s funkcemi sady Visual Studio 2017 pro Mac.
+  author: heiligerdankgesang
+  ms.author: dominicn
   ms.date: 02/06/2019
   ms.topic: landing-page
   ms.prod: visual-studio-mac
   ms.technology: vs-ide-general
 sections:
-  - title: Začínáme s Visual Studio pro Mac
+  - title: Začínáme se sadou Visual Studio pro Mac
     items:
       - type: paragraph
-        text: Instalace a další informace o sadě Visual Studio pro Mac integrované vývojové prostředí (IDE).
+        text: Nainstalujte a získejte informace o integrovaném vývojovém prostředí (IDE) sady Visual Studio pro Mac.
       - type: list
         style: cards
         className: cardsM
@@ -28,11 +28,11 @@ sections:
             html: <p></p>
             image:
               src: 'https://docs.microsoft.com/media/logos/logo_vs-mac.svg'
-            title: Tour Visual Studio for Mac
-  - title: Jaké aplikace lze vytvořit?
+            title: Prohlídka sady Visual Studio pro Mac
+  - title: Jaké aplikace můžu sestavit?
     items:
       - type: paragraph
-        text: 'Pomocí sady Visual Studio for Mac můžete vytvářet weby pomocí ASP.NET Core a aplikace s využitím .NET Core, hry s Unity a mobilní aplikace pro Android a iOS pomocí Xamarinu. Azure můžete začlenit do vašich aplikací.'
+        text: 'Díky sadě Visual Studio pro Mac můžete vytvářet weby pomocí ASP.NET Core a aplikace pomocí .NET Core, dále hry s využitím Unity a mobilní aplikace pro Android a iOS v prostředí Xamarin. Do všech vašich aplikací je možné začlenit Azure.'
       - type: list
         style: icon48
         items:
@@ -55,7 +55,7 @@ sections:
   - title: Jaké jazyky můžu použít?
     items:
       - type: paragraph
-        text: 'Pomocí sady Visual Studio for Mac můžete psát v C#, F#, Razor, HTML5, CSS, Javascript a Typescript, XAML a XML.'
+        text: 'V sadě Visual Studio pro Mac můžete psát kód v jazyce C#, F#, Razor, HTML5, CSS, Javascript a Typescript, XAML a XML.'
       - type: list
         style: icon48
         items:
@@ -79,32 +79,32 @@ sections:
               src: 'https://docs.microsoft.com/media/logos/logo_html5.svg'
             text: HTML/Razor
             href: razor.md
-  - title: Vytvářejte kód s využitím sady Visual Studio pro Mac
+  - title: Psaní kódu pomocí Visual Studio pro Mac
     items:
       - type: paragraph
-        text: 'Další informace o používání sady Visual Studio k psaní, kompilace, ladění a uložit svůj kód.'
+        text: 'Přečtěte si další informace o použití sady Visual Studio k psaní, kompilování, ladění a ukládání vašeho kódu.'
       - type: list
         style: cards
         className: cardsM
         columns: 3
         items:
           - href: source-editor.md
-            html: '<p>Technologie IntelliSense, refaktoring a zvýraznění syntaxe pro svůj oblíbený jazyk.</p>'
+            html: '<p>Intellisense, refaktoring a zvýraznění syntaxe pro váš oblíbený jazyk</p>'
             image:
               src: 'https://docs.microsoft.com/media/common/i_code-edit.svg'
             title: Psaní kódu
           - href: compiling-and-building.md
-            html: <p>Konfigurovat váš kompilátor a sestavení aplikace.</p>
+            html: <p>Konfigurace kompilátoru a sestavení aplikace</p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_build.svg'
             title: Kompilace a sestavení
           - href: debugging.md
-            html: <p>Spusťte aplikaci v ladicím programu k prozkoumání problémů.</p>
+            html: <p>Spuštění aplikace v ladicím programu za účelem prozkoumání problémů</p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_debug.svg'
             title: Ladit
           - href: version-control.md
-            html: '<p>Přístup k Azure DevOps, Git nebo Subversion zdrojového úložiště.</p>'
+            html: '<p>Získejte přístup ke zdrojovým úložištím Azure DevOps, Git nebo Subversion.</p>'
             image:
               src: 'https://docs.microsoft.com/media/common/i_pull-request.svg'
             title: Správa verzí
